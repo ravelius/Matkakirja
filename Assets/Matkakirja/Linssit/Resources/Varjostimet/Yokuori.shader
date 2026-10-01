@@ -53,6 +53,11 @@ Shader "Matkakirja/Linssit/Yokuori"
         _Kuu("Kuun suunta (xyz) ja valaistu osuus (w)", Vector) = (0, 0, 1, 0)
         _KuuVoima("Kuunvalon voimakkuus (0 = pois)", Float) = 0.35
         _TaivasHeijastus("Taivaan Fresnel-heijastus vesiltä (0 = pois)", Float) = 0.3
+        _ValotT00("Tarkat valot länsi-ylä", 2D) = "black" {}
+        _ValotT10("Tarkat valot itä-ylä", 2D) = "black" {}
+        _ValotT01("Tarkat valot länsi-ala", 2D) = "black" {}
+        _ValotT11("Tarkat valot itä-ala", 2D) = "black" {}
+        _TarkatOn("Tarkat valot käytössä (0/1)", Float) = 0
     }
     SubShader
     {
@@ -74,6 +79,7 @@ Shader "Matkakirja/Linssit/Yokuori"
             TEXTURE2D(_ValotEu); SAMPLER(sampler_ValotEu);
             TEXTURE2D(_ValotMaa); SAMPLER(sampler_ValotMaa);
             TEXTURE2D(_Pilvet); SAMPLER(sampler_Pilvet);
+            TEXTURE2D(_ValotT00); TEXTURE2D(_ValotT10); TEXTURE2D(_ValotT01); TEXTURE2D(_ValotT11); SAMPLER(sampler_ValotT00);
             CBUFFER_START(UnityPerMaterial)
                 half _Peitto;
                 half4 _Vari;
@@ -83,7 +89,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float _R, _Litistys, _Valot, _MaaVoima, _Kiilto, _Aalto;
                 half _Varjo, _YoVesi;
                 float _PilvetOn, _PilviPeitto, _Karsinta;
-                float _PilviVarjo, _PilviKorkeus, _KuuVoima, _TaivasHeijastus;
+                float _PilviVarjo, _PilviKorkeus, _KuuVoima, _TaivasHeijastus, _TarkatOn;
                 float4 _Kuu;
             CBUFFER_END
 
@@ -163,10 +169,22 @@ Shader "Matkakirja/Linssit/Yokuori"
                 half euPaino = (half)saturate(min(min(eu.x, 1.0 - eu.x), min(eu.y, 1.0 - eu.y)) / 0.03);
                 half2 sMaa = SAMPLE_TEXTURE2D(_ValotMaa, sampler_ValotMaa, uvMaa).rg;
                 half2 sEu = SAMPLE_TEXTURE2D(_ValotEu, sampler_ValotEu, float2(saturate(eu.x), 1.0 - saturate(eu.y))).rg;
+                // Tarkat Euroopan valot (Black Marble 2016 500 m, 2 × 2 -tiilet): sama rajaus, tiili puolikkaista.
+                if (_TarkatOn > 0.5 && euPaino > 0.0h)
+                {
+                    float2 e = saturate(eu);
+                    float2 tt = e * 2.0;
+                    float2 tuv = float2(frac(min(tt.x, 1.9999)), 1.0 - frac(min(tt.y, 1.9999)));
+                    half2 rg;   // R = valot, G = vesi (GSHHG, tarkempi kuin 2048²:n vesimaski)
+                    if (tt.x < 1.0) rg = tt.y < 1.0 ? SAMPLE_TEXTURE2D(_ValotT00, sampler_ValotT00, tuv).rg : SAMPLE_TEXTURE2D(_ValotT01, sampler_ValotT00, tuv).rg;
+                    else            rg = tt.y < 1.0 ? SAMPLE_TEXTURE2D(_ValotT10, sampler_ValotT00, tuv).rg : SAMPLE_TEXTURE2D(_ValotT11, sampler_ValotT00, tuv).rg;
+                    sEu = rg;
+                }
                 half l = lerp(sMaa.r * (half)_MaaVoima, sEu.r, euPaino);
                 half vesi = lerp(sMaa.g, sEu.g, euPaino);
                 l = l * l * (half)0.6 + l * (half)0.4;                   // kuvan sRGB-sävy lähemmäs lineaarista, himmeät vaimeammiksi
-                half3 savy = lerp(half3(1.0, 0.52, 0.2), half3(1.0, 0.88, 0.7), saturate(l * 1.6h));
+                // Sävy NASA-vertailusta (30.9., ISS037-E-18864): himmeät natriumin oranssit, ytimet kellanvalkoiset (ennen valkoisempi).
+                half3 savy = lerp(half3(1.0, 0.46, 0.14), half3(1.0, 0.80, 0.52), saturate(l * 1.4h));
                 // Päivän pilvet peittävät valot ja heijastuksen (tasakulmainen, v = 0 etelässä; LOD 0: ei saumaa ±180°:ssa).
                 float pilviA = SAMPLE_TEXTURE2D_LOD(_Pilvet, sampler_Pilvet, float2(lon / 6.2831853 + 0.5, lat / 3.1415927 + 0.5), 0).a;
                 // Pilvipeiton säädin kuten Pilvet.shader: karsitut pilvet eivät himmennä kaupunkien valoja.

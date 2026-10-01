@@ -30,7 +30,8 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         _Moni("Monisironnan osuus", Float) = 0.25
         _MieG("Mie g", Float) = 0.8
         _Hehku("Ilmahehku", Float) = 0.12
-        _HehkuVari("Ilmahehkun sävy", Color) = (0.55, 0.95, 0.5, 1)
+        _KaariVoima("Horisontin kaaren kerroin (kuvaputki, 1 = ennallaan)", Float) = 1
+        _HehkuVari("Ilmahehkun sävy", Color) = (0.62, 0.9, 0.42, 1)
         _Lapinakyvyys("Transmittanssi-LUT", 2D) = "white" {}
         _Debug("Vianetsintä (0 = pois, 1 = T, 2 = matka/tulo, 3 = LUT)", Float) = 0
     }
@@ -38,7 +39,7 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
         CBUFFER_START(UnityPerMaterial)
-            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku, _Debug;
+            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku, _Debug, _KaariVoima;
             float4 _Keskus, _Akseli, _Aurinko, _HehkuVari;
         CBUFFER_END
         TEXTURE2D(_Lapinakyvyys); SAMPLER(sampler_Lapinakyvyys);
@@ -154,11 +155,15 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                 float3 d = normalize(Pallolle(i.maailma - _WorldSpaceCameraPos));
                 float3 s = normalize(_Aurinko.xyz);
                 float t0, t1, g0, g1;
-                if (!Leikkaa(o, d, _R + _Ylaraja, t0, t1) || t1 <= 0) discard;
+                // Verkko on 120 km:ssä (Avaruus.KaarenKorkeus): sironta 100 km:n kuoressa, ilmahehkun helma sen yläpuolella
+                // (Linssiseppä 2:n iltakuvat 1.10.: hylkäys 100 km:ssä katkaisi helman terävästi harmaaksi kuoreksi).
+                if (!Leikkaa(o, d, _R + 120000.0, t0, t1) || t1 <= 0) discard;
+                float a0 = 0, a1 = 0;
+                bool ilmassa = Leikkaa(o, d, _R + _Ylaraja, a0, a1) && a1 > 0;
                 bool maa = Leikkaa(o, d, _R, g0, g1) && g0 > 0;
-                float alku = max(0, t0), loppu = maa ? g0 : t1;
-                int N = maa ? 16 : 20;
-                float ds = (loppu - alku) / N;
+                float alku = max(0, a0), loppu = maa ? g0 : a1;
+                int N = !ilmassa ? 0 : maa ? 16 : 20;
+                float ds = (loppu - alku) / max(N, 1);
 
                 float c = dot(d, s);
                 float pr = 3.0 / (16.0 * PI) * (1.0 + c * c);
@@ -192,11 +197,14 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                 float yo = 1.0 - smoothstep(-0.105, 0.0, dot(normalize(lahin), s));
                 // Pehmeä vyö (Päätoimittaja 30.9.: terävä viiva): σ 9 km ja leveämpi heikko helma, kirkkaus vaihtelee hieman
                 // sivuamispisteen suunnan mukaan (hitaat aallot, ± 25 %), kuten ISS:n yökuvissa.
+                // Kuvaputken kaari (Linssiseppä 1.10., Päätoimittaja: julisteen wau-tekijä): vain maan ohi kulkevat säteet, liuku
+                // 0–20 km:n sivuamiskorkeudella, jottei horisonttiin tule saumaa. 1 = ennallaan (livenäkymä).
+                L *= lerp(1.0, _KaariVoima, smoothstep(0.0, 20000.0, hmin) * (maa ? 0.0 : 1.0));
                 float dh = hmin - 95000.0;
                 float3 nl = normalize(lahin);
                 float aalto = 0.75 + 0.25 * sin(nl.x * 23.0 + nl.y * 17.0) * sin(nl.z * 29.0 - nl.x * 11.0);
-                float hehku = (exp(-dh * dh / (9000.0 * 9000.0)) + 0.35 * exp(-dh * dh / (22000.0 * 22000.0))) * 0.75 * aalto
-                    * _Hehku * yo * (maa ? 0.0 : 1.0);
+                float hehku = (exp(-dh * dh / (14000.0 * 14000.0)) + 0.4 * exp(-dh * dh / (35000.0 * 35000.0))) * 0.5 * aalto
+                    * _Hehku * yo * (maa ? 0.0 : 1.0) * (1.0 - smoothstep(105000.0, 118000.0, hmin));
                 L += _HehkuVari.rgb * hehku;
 
                 float alfa = 1.0 - dot(T, float3(1.0, 1.0, 1.0) / 3.0);

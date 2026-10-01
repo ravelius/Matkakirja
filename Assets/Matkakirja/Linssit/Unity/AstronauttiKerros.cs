@@ -230,7 +230,7 @@ namespace Matkakirja.Natiivi
             yokuori?.PilvienPeitto(pilvienPeitto);
         }
 
-        float pilvienPeitto, pilviValoAika;
+        float pilvienPeitto, pilviValoAika, valotusAika;
 
         /// <summary>
         /// KYYDIN SÄÄTIMET (omistaja 28.9. TF 1.0.39 -kaappaus: "Pilvet peittävät aika paljon. Voisiko olla säädin pilvipeitolle
@@ -349,7 +349,8 @@ namespace Matkakirja.Natiivi
             if (tila != KyydinTila.Kauko && revontulet == null) revontulet = Revontulet.Luo(georeferenssi);
             revontulet?.Nayta(tila != KyydinTila.Kauko);
             tahtienPeitto = tila == KyydinTila.Kauko ? 1f
-                : kyydinTaivas != null && kyydinTaivas.TahdetValmiit && !KyydinTaivas.Pois ? 0f : 0.3f;
+                : kyydinTaivas != null && kyydinTaivas.TahdetValmiit && !KyydinTaivas.Pois ? 0f
+                : Avaruus.Kuvaputki ? 0f : 0.3f;   // kuvaputkessa ei satunnaisia tähtiä (Päätoimittaja 1.10.)
             if (tila == KyydinTila.Ikkuna && cupola == null) cupola = CupolaKerros.Luo(kamera, georeferenssi);
             PaivitaKuukaudenPinta(tila != KyydinTila.Kauko);
             CupolaAani.Tila(tila == KyydinTila.Ikkuna); // Pelikoodari: Cupolan humina ja NASA:n radiosilmukka
@@ -379,8 +380,107 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<int, bool> kuukausiAmparissa = new Dictionary<int, bool>();
         int kuukausiLisatty = -1, kuukausiKokeillaan = -1;
 
+        /// <summary>
+        /// EUROOPAN S2-MOSAIIKKI KYYDISSÄ (Linssiseppä 2, 1.10.2026; suunnitelma docs/raportit/s2-mosaiikki-astronautin-kameraan-
+        /// suunnitelma-20261001.md, Päätoimittaja hyväksyi, Natiiviseppä kuittasi lisäysversiona): Karttasepän Sentinel-2-mosaiikki
+        /// (z6–z10, ~76 m/px) BMNG:n päällä Euroopan alueella. Paikat: linssin reliefi pois kyydin ajaksi, BMNG paikkaan 1 (alfa 1),
+        /// S2 paikkaan 2 rajatulla jaolla (KarttaKerrokset.RasterinJako: Yokuorin alue z6-sarakkeet 27–39 × rivit 13–25, juuri 13 × 13),
+        /// muuten Cesium pyytäisi laattoja koko maailmasta eikä tarkentuisi. Ämpäriosoite kulkee Laattapalvelimen kautta (UusiKerros →
+        /// Paikallinen), välimuistin S2-alikatto 200 Mt. Kevyt laite (Kyytipino.KevytLaite): enintään z9. Kyydin päättyessä reliefi
+        /// palaa. A/B `astro kyyti s2 0|1`, testiosoite `astro kyyti s2 url <{docs}/… | pois>`.
+        /// </summary>
+        public const string S2Juuri = "https://media.matkakirja.app/" + Laattapalvelin.S2Polku + "/v1/";
+        public const string S2Kerros = "astronautti-s2";
+        /// <summary>
+        /// Kevyt laite S2:lle (Natiivisepän ehto 1.10.): Kyytipino.KevytLaite (≤ iPhone 15 Pro) tai muisti ≤ 6144 Mt → z9, karkeampi
+        /// näyttövirhe ja pienempi välimuisti. Testikomento `astro kyyti s2kevyt 0|1|auto` (null = automaattinen).
+        /// </summary>
+        public static bool? S2KevytPakotettu;
+        public static bool S2Kevyt => S2KevytPakotettu ?? (Matkakirja.Linssit.Kyytipino.KevytLaite || SystemInfo.systemMemorySize <= 6144);
+        public const int S2ValimuistiMt = 384, S2ValimuistiKevytMt = 192;
+        public static bool S2Kaytossa = true;   // ämpäri v1 valmis 1.10. 15.55 (Karttaseppä); S2 aina kyydissä Euroopassa, s2 0 = A/B
+        public static string S2Osoite;
+        const double S2W = -28.125, S2E = 45.0, S2N = 72.395704, S2S = 31.952162;
+        const int S2Rx = 13, S2Ry = 13, S2MaxTaso = 4;
+        bool s2Lisatty, reliefPoissa;
+
+        void PaivitaS2(bool kyydissa)
+        {
+            var kk = KarttaKerrokset.Instanssi;
+            if (kk == null) return;
+            bool halutaan = kyydissa && S2Kaytossa && kuukausiLisatty > 0;
+            AsetaS2Savy();
+            if (halutaan == s2Lisatty) return;
+            if (halutaan)
+            {
+                kk.PoistaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros);
+                reliefPoissa = true;
+                // BMNG paikkaan 1 (alle): poisto ja uudelleenlisäys, alfa 1 (reliefiä ei ole alla).
+                kk.PoistaRasteri(KuukausiKerros);
+                kk.LisaaRasteri(KuukausiKerros, KuukaudenPintaJuuri + kuukausiLisatty.ToString("00") + "/{z}/{x}/{reverseY}.jpg",
+                    CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, KuukaudenPintaMaxTaso, 1f);
+                kuukausiAlfaAsetettu = 1f;
+                string url = (S2Osoite ?? S2Juuri + "{z}/{x}/{reverseY}.jpg").Replace("{docs}", "file://" + Application.persistentDataPath);
+                bool kevyt = S2Kevyt;
+                int maxTaso = kevyt ? S2MaxTaso - 1 : S2MaxTaso;
+                // Muistiraja laiteluokan mukaan (Natiivisepän ehto 1.10.: iPad +480 Mt GPU:n puolella → kevyille ≤ +250 Mt).
+                s2Lisatty = kk.LisaaRasteri(S2Kerros, url, CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, maxTaso, 1f) != null
+                    && kk.RasterinMuisti(S2Kerros, kevyt ? 4f : 2f, kevyt ? 1024 : 2048, (kevyt ? 8L : 16L) * 1024 * 1024)
+                    && kk.RasterinJako(S2Kerros, S2W, S2S, S2E, S2N, S2Rx, S2Ry);
+                long valimuisti = s2Lisatty ? kk.PallonValimuisti((kevyt ? S2ValimuistiKevytMt : S2ValimuistiMt) * 1024L * 1024) : -1;
+                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: S2 {(s2Lisatty ? "päällä" : "ei mahtunut")} (z{6}–z{6 + maxTaso}) {url}; " +
+                    $"laite {(kevyt ? "kevyt" : "täysi")} (muisti {SystemInfo.systemMemorySize} Mt, {SystemInfo.deviceModel}), " +
+                    $"pallon välimuisti {valimuisti / 1048576} Mt, S2 näyttövirhe {(kevyt ? 4 : 2)}, tekstuuri {(kevyt ? 1024 : 2048)}");
+                if (!s2Lisatty) S2Kaytossa = false;   // ei yritetä joka sekunti uudelleen
+            }
+            else
+            {
+                kk.PoistaRasteri(S2Kerros);
+                s2Lisatty = false;
+                kk.PallonValimuisti(null);
+                if (reliefPoissa)
+                {
+                    // Alkuperäinen järjestys: reliefi paikkaan 1 ja BMNG sen päälle paikkaan 2 (lisätään seuraavalla kierroksella).
+                    // Ilman tätä kesken kyydin `s2 0` antoi reliefille S2:n paikan 2 BMNG:n päältä täydellä alfalla
+                    // (S2-esitodennus 1.10.: Egypti reliefin korkeusväreissä). Kyydin päättyessä BMNG on jo poistettu.
+                    kk.PoistaRasteri(KuukausiKerros);
+                    kuukausiLisatty = -1;
+                    kk.LisaaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros, Matkakirja.Linssit.Astronautti.AstronauttiLinssi.ReliefinSarja(),
+                        CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, Matkakirja.Linssit.Topografia.ReliefiMaxTaso, 1f);
+                    reliefPoissa = false;
+                }
+                kuukausiAlfaAsetettu = -1f;
+                Debug.Log("MATKAKIRJA linssit: kyydin pinta: S2 pois, reliefi palautettu");
+            }
+            AsetaS2Savy();
+        }
+
+        /// <summary>S2-sävy (Kyytipino.S2, varjostimen _s2Savy) seuraa S2-kerrosta: päällä vain, kun S2 on pinnalla.</summary>
+        void AsetaS2Savy()
+        {
+            if (Matkakirja.Linssit.Kyytipino.S2 == s2Lisatty) return;
+            Matkakirja.Linssit.Kyytipino.S2 = s2Lisatty;
+            Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
+            AsetaS2Reuna(s2Lisatty);
+        }
+
+        static readonly int S2ReunaId = Shader.PropertyToID("_s2Reuna");
+
+        /// <summary>
+        /// S2-kerroksen pehmeä reuna (Päätoimittaja 1.10.: 45°E- ja 32°N-saumat): tileset-varjostin liu'uttaa paikan 2 painon nollaan
+        /// suorakulmion (länsi, etelä, itä, pohjoinen) 1,5°:n reunalla; nolla = pois, jolloin muut paikan 2 kerrokset ennallaan.
+        /// </summary>
+        static void AsetaS2Reuna(bool paalla) => Shader.SetGlobalVector(S2ReunaId,
+            paalla ? new Vector4((float)S2W, (float)S2S, (float)S2E, (float)S2N) : Vector4.zero);
+
         /// <summary>Kutsutaan joka Kyyti-kutsulla (tietorivi sekunnin välein): kuukauden vaihtuessa kerros vaihtuu.</summary>
         void PaivitaKuukaudenPinta(bool kyydissa)
+        {
+            PaivitaKuukaudenPintaBmng(kyydissa);
+            PaivitaS2(kyydissa);
+        }
+
+        void PaivitaKuukaudenPintaBmng(bool kyydissa)
         {
             var kk = KarttaKerrokset.Instanssi;
             if (kk == null) return;
@@ -393,8 +493,9 @@ namespace Matkakirja.Natiivi
             if (kuukausi > 0 && !kuukausiAmparissa[kuukausi]) kuukausi = -1;
             if (kuukausi == kuukausiLisatty)
             {
-                if (kuukausi > 0 && kuukausiAlfaAsetettu != KuukaudenAlfa && kk.RasterinAlfa(KuukausiKerros, KuukaudenAlfa) >= 0)
-                    kuukausiAlfaAsetettu = KuukaudenAlfa;
+                float alfa = s2Lisatty ? 1f : KuukaudenAlfa;
+                if (kuukausi > 0 && kuukausiAlfaAsetettu != alfa && kk.RasterinAlfa(KuukausiKerros, alfa) >= 0)
+                    kuukausiAlfaAsetettu = alfa;
                 return;
             }
             kuukausiAlfaAsetettu = -1f;
@@ -449,6 +550,7 @@ namespace Matkakirja.Natiivi
         {
             CupolaAani.LinssiPois(); // Pelikoodari: Cupolan äänikerrokset pois linssin mukana
             Matkakirja.Linssit.Kyytipino.Paivita(kamera, false);
+            Matkakirja.Linssit.IssSiluetti.Paivita(kamera, georeferenssi, false);
             if (cupola != null) Destroy(cupola.gameObject);
             KyytiKasittelija?.Invoke(KyydinTila.Kauko, 0, 0, false, default);
             AvausKasittelija?.Invoke(AvauksenVaihe.Pois);
@@ -518,7 +620,18 @@ namespace Matkakirja.Natiivi
         void LateUpdate()
         {
             if (kamera == null) return;
+            // Automaattivalotukseen auringon korkeus kameran alapisteessä (maan keskipiste georeferenssin origossa).
+            if (kyyti != KyydinTila.Kauko && georeferenssi != null && Time.unscaledTime - valotusAika > 0.5f)
+            {
+                valotusAika = Time.unscaledTime;
+                var gtv = georeferenssi.transform;
+                Vector3 keski = gtv.TransformPoint((Vector3)(Unity.Mathematics.float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(Unity.Mathematics.double3.zero));
+                Vector3 au = gtv.TransformDirection((Vector3)(Unity.Mathematics.float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(
+                    Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()))).normalized;
+                Matkakirja.Linssit.Kyytipino.AurinkoSin = Vector3.Dot((kamera.transform.position - keski).normalized, au);
+            }
             Matkakirja.Linssit.Kyytipino.Paivita(kamera, kyyti != KyydinTila.Kauko);
+            Matkakirja.Linssit.IssSiluetti.Paivita(kamera, georeferenssi, kyyti != KyydinTila.Kauko && AstronauttiLinssi.Vertailu.HasValue);
             nimijono.Aja();
             taivas?.Paivita(Time.unscaledDeltaTime, tahtienPeitto);
             var kt = kamera.transform;
@@ -535,7 +648,10 @@ namespace Matkakirja.Natiivi
                 Vector3 kohti = kt.position - paikka;
                 float etaisyys = kohti.magnitude;
                 // Ikkunassa, kohteen yllä ja ulkona silmä on asemassa: havaintopisteet eivät kuulu näkymään (webissä piilossa koko kyydin ajan).
-                bool edessa = kyyti != KyydinTila.Ikkuna && kyyti != KyydinTila.Kohde && kyyti != KyydinTila.Ulkona
+                // Valokuvauskulmassa (astro kyyti vertailu, ISS-kamera) kuva on puhdas: ei havaintopisteitä.
+                bool edessa = !Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu.HasValue   // NASA-vertailussa ei merkkejä
+                    && kyyti != KyydinTila.Ikkuna && kyyti != KyydinTila.Kohde && kyyti != KyydinTila.Ulkona
+                    && !AstronauttiLinssi.Vertailu.HasValue
                     && Vector3.Dot(gt.TransformDirection(p.normaali), kohti / etaisyys) > 0.05f;
                 if (p.juuri.gameObject.activeSelf != edessa) p.juuri.gameObject.SetActive(edessa);
                 if (!edessa) continue;
@@ -728,9 +844,21 @@ namespace Matkakirja.Natiivi
             return m;
         }
 
+        void OnDisable()
+        {
+            // Kartta ei peri S2-sävyä (Natiivisepän ehto 1.10.): varjostimen globaali pois, kun kerros ei ole käytössä.
+            Matkakirja.Linssit.Kyytipino.S2 = false;
+            Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
+            AsetaS2Reuna(false);
+        }
+
         void OnDestroy()
         {
+            Matkakirja.Linssit.Kyytipino.S2 = false;
+            Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
+            AsetaS2Reuna(false);
             if (kuukausiLisatty >= 0) KarttaKerrokset.Instanssi?.PoistaRasteri(KuukausiKerros);
+            if (s2Lisatty) { KarttaKerrokset.Instanssi?.PoistaRasteri(S2Kerros); KarttaKerrokset.Instanssi?.PallonValimuisti(null); }
             if (kierto != null) kierto.Napautettu -= Napautus;
             if (taivas != null) Destroy(taivas.gameObject);
             if (pilvet != null) Destroy(pilvet.gameObject);

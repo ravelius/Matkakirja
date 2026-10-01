@@ -44,6 +44,18 @@
         },
         {
             "m_Id": "be23e37720b14002af558e031df46a89"
+        },
+        {
+            "m_Id": "e2e35695f0e2476ca4609b36084ff512"
+        },
+        {
+            "m_Id": "1aebd40aa97f430881fd50a5f260057f"
+        },
+        {
+            "m_Id": "299571b940014cb2b64ecbc5327d83fa"
+        },
+        {
+            "m_Id": "6d8afb113e42431695307bec14fae472"
         }
     ],
     "m_Keywords": [],
@@ -131,6 +143,18 @@
         },
         {
             "m_Id": "3fde2d56d41247db8e6f3de45bacd81f"
+        },
+        {
+            "m_Id": "e461e68146a343ef9d69d6a6324e9949"
+        },
+        {
+            "m_Id": "b12455b6d6d74022aa53f415c619d37a"
+        },
+        {
+            "m_Id": "edca9ceffcf644c0bf3a225341de4446"
+        },
+        {
+            "m_Id": "b33f322eb9ca4923af8e0a01898b336a"
         }
     ],
     "m_GroupDatas": [],
@@ -575,6 +599,62 @@
                     "m_Id": "ffca4bdf2b7747fc9b1b8bbafc880606"
                 },
                 "m_SlotId": 14
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "e461e68146a343ef9d69d6a6324e9949"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "ffca4bdf2b7747fc9b1b8bbafc880606"
+                },
+                "m_SlotId": 15
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "b12455b6d6d74022aa53f415c619d37a"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "ffca4bdf2b7747fc9b1b8bbafc880606"
+                },
+                "m_SlotId": 16
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "edca9ceffcf644c0bf3a225341de4446"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "ffca4bdf2b7747fc9b1b8bbafc880606"
+                },
+                "m_SlotId": 17
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "b33f322eb9ca4923af8e0a01898b336a"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "ffca4bdf2b7747fc9b1b8bbafc880606"
+                },
+                "m_SlotId": 18
             }
         }
     ],
@@ -2000,6 +2080,18 @@
         },
         {
             "m_Id": "be23e37720b14002af558e031df46a89"
+        },
+        {
+            "m_Id": "e2e35695f0e2476ca4609b36084ff512"
+        },
+        {
+            "m_Id": "1aebd40aa97f430881fd50a5f260057f"
+        },
+        {
+            "m_Id": "299571b940014cb2b64ecbc5327d83fa"
+        },
+        {
+            "m_Id": "6d8afb113e42431695307bec14fae472"
         }
     ]
 }
@@ -2448,6 +2540,18 @@
         },
         {
             "m_Id": "1d7f9dcada5747acb332b3a453a83689"
+        },
+        {
+            "m_Id": "42b393631485443f9a5053d00adf8f6b"
+        },
+        {
+            "m_Id": "b6c1be1e7a5f43c99886d387fa5f9115"
+        },
+        {
+            "m_Id": "33550031201a407abb282057d0501b84"
+        },
+        {
+            "m_Id": "c08f50b5adcc47e3a83a1de43333c244"
         }
     ],
     "synonyms": [
@@ -2463,7 +2567,7 @@
     "m_SourceType": 1,
     "m_FunctionName": "MatkakirjaSekoitus",
     "m_FunctionSource": "",
-    "m_FunctionBody": "float4 s = nayte;\nfloat dr = length(ddx(ouv)) + length(ddy(ouv));\nfloat z = log2(max(dr, 1e-12)) - (varaVari.a - 64.0);\nz = (z > -64.0 && z < 64.0) ? z : 64.0;\nbool varaOk = varaVari.a > 0.5;\nif (vara > 4.5) s = s.a < 0.5 ? float4(1.0, 0.0, 1.0, 1.0) : !varaOk ? float4(0.0, 0.0, 1.0, 1.0)\n    : z <= varaTaso ? float4(1.0, 0.0, 0.0, 1.0) : float4(1.0 - saturate((z - 2.0) / 6.0), 1.0, 0.0, 1.0);\nelse if (vara > 3.5 || (vara > 0.5 && vara < 1.5))\n{\n    // Z2 fallback when the raster is missing, when the raster used is itself at level <= varaTaso (the\n    // fallback is then never worse), or when the raster UV is outside [0,1] (clamp would smear an edge texel).\n    bool ulkona = any(ouv < -0.002) || any(ouv > 1.002);\n    bool karkea = varaTaso > 0.0 && z <= varaTaso;\n    if ((s.a < 0.5 || ulkona || karkea) && varaOk) s = float4(varaVari.rgb, 1.0);\n}\nelse if (vara > 2.5) s = s.a < 0.5 ? float4(1.0, 0.0, 1.0, 1.0) : float4(0.0, 1.0, 0.0, 1.0);\nelse if (vara > 1.5) { if (s.a < 0.5) s = float4(1.0, 0.0, 1.0, 1.0); }\nif (kynnys < 0.0) s = float4(0.0, 1.0, 1.0, s.a);\nelse if (kynnys > 0.0)\n{\n    float3 g = pow(max(s.rgb, 1e-5), 0.4545);\n    float3 p = pow(max(base.rgb, 1e-5), 0.4545);\n    float luma = dot(g, float3(0.2126, 0.7152, 0.0722));\n    float meri = (1.0 - smoothstep(kynnys * 0.8, kynnys, luma)) * smoothstep(0.02, 0.08, g.b - g.r);\n    float bathy = smoothstep(0.02, 0.08, p.b - p.r);\n    s.rgb = lerp(s.rgb, lerp(meriVari.rgb, base.rgb, bathy.xxx), meri.xxx);\n}\nfloat peitto = 1.0;\n// Veil reveal (living map, Varitaso.Paljastus): radial dry-out from the arrival city with a noisy edge.\nif (paljastusReuna.w > 0.5)\n{\n    float3 kn = normalize(pos.xyz - keski.xyz);\n    float c = length(kn - paljastus.xyz);\n    float3 q = kn * paljastusReuna.z;\n    float kohina = sin(q.x + 1.7 * sin(q.y * 1.3)) * sin(q.y * 1.1 + 1.3 * sin(q.z * 1.7))\n        + 0.5 * sin(q.z * 2.3 + 1.1 * sin(q.x * 2.9));\n    float w = max(paljastusReuna.x, 1e-6);\n    peitto = smoothstep(paljastus.w - 0.5 * w, paljastus.w + 0.5 * w, c + kohina * paljastusReuna.y);\n}\nulos = lerp(base, s, (s.a * alfa * peitto).xxxx);\n"
+    "m_FunctionBody": "float4 s = nayte;\nfloat dr = length(ddx(ouv)) + length(ddy(ouv));\nfloat z = log2(max(dr, 1e-12)) - (varaVari.a - 64.0);\nz = (z > -64.0 && z < 64.0) ? z : 64.0;\nbool varaOk = varaVari.a > 0.5;\nif (vara > 4.5) s = s.a < 0.5 ? float4(1.0, 0.0, 1.0, 1.0) : !varaOk ? float4(0.0, 0.0, 1.0, 1.0)\n    : z <= varaTaso ? float4(1.0, 0.0, 0.0, 1.0) : float4(1.0 - saturate((z - 2.0) / 6.0), 1.0, 0.0, 1.0);\nelse if (vara > 3.5 || (vara > 0.5 && vara < 1.5))\n{\n    // Z2 fallback when the raster is missing, when the raster used is itself at level <= varaTaso (the\n    // fallback is then never worse), or when the raster UV is outside [0,1] (clamp would smear an edge texel).\n    bool ulkona = any(ouv < -0.002) || any(ouv > 1.002);\n    bool karkea = varaTaso > 0.0 && z <= varaTaso;\n    if ((s.a < 0.5 || ulkona || karkea) && varaOk) s = float4(varaVari.rgb, 1.0);\n}\nelse if (vara > 2.5) s = s.a < 0.5 ? float4(1.0, 0.0, 1.0, 1.0) : float4(0.0, 1.0, 0.0, 1.0);\nelse if (vara > 1.5) { if (s.a < 0.5) s = float4(1.0, 0.0, 1.0, 1.0); }\nif (kynnys < 0.0) s = float4(0.0, 1.0, 1.0, s.a);\nelse if (kynnys > 0.0)\n{\n    float3 g = pow(max(s.rgb, 1e-5), 0.4545);\n    float3 p = pow(max(base.rgb, 1e-5), 0.4545);\n    float luma = dot(g, float3(0.2126, 0.7152, 0.0722));\n    float meri = (1.0 - smoothstep(kynnys * 0.8, kynnys, luma)) * smoothstep(0.02, 0.08, g.b - g.r);\n    float bathy = smoothstep(0.02, 0.08, p.b - p.r);\n    s.rgb = lerp(s.rgb, lerp(meriVari.rgb, base.rgb, bathy.xxx), meri.xxx);\n}\nfloat peitto = 1.0;\n// Veil reveal (living map, Varitaso.Paljastus): radial dry-out from the arrival city with a noisy edge.\nif (paljastusReuna.w > 0.5)\n{\n    float3 kn = normalize(pos.xyz - keski.xyz);\n    float c = length(kn - paljastus.xyz);\n    float3 q = kn * paljastusReuna.z;\n    float kohina = sin(q.x + 1.7 * sin(q.y * 1.3)) * sin(q.y * 1.1 + 1.3 * sin(q.z * 1.7))\n        + 0.5 * sin(q.z * 2.3 + 1.1 * sin(q.x * 2.9));\n    float w = max(paljastusReuna.x, 1e-6);\n    peitto = smoothstep(paljastus.w - 0.5 * w, paljastus.w + 0.5 * w, c + kohina * paljastusReuna.y);\n}\n// S2 edge (Linssiseppa 1.10.2026, AstronauttiKerros.PaivitaS2): s2Reuna = (west, south, east, north) in degrees; the slot\n// weight fades to 0 over 1.5 deg inside the rectangle, so the Sentinel-2 mosaic blends into BMNG and clamped edge texels\n// outside it never show. north = 0 -> off (other layers in this slot unchanged).\nif (s2Reuna.w != 0.0)\n{\n    float3 rn = normalize(pos.xyz - keski.xyz);\n    float rlat = degrees(asin(clamp(dot(rn, akseli.xyz), -1.0, 1.0)));\n    float rlon = degrees(atan2(dot(rn, ita.xyz), dot(rn, nolla.xyz)));\n    peitto *= smoothstep(s2Reuna.x, s2Reuna.x + 1.5, rlon) * (1.0 - smoothstep(s2Reuna.z - 1.5, s2Reuna.z, rlon))\n            * smoothstep(s2Reuna.y, s2Reuna.y + 1.5, rlat) * (1.0 - smoothstep(s2Reuna.w - 1.5, s2Reuna.w, rlat));\n}\nulos = lerp(base, s, (s.a * alfa * peitto).xxxx);\n"
 }
 
 {
@@ -3531,6 +3635,454 @@
     "m_ObjectId": "69b5964c5998414e957e7d87358cdd96",
     "m_Id": 0,
     "m_DisplayName": "pos",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "42b393631485443f9a5053d00adf8f6b",
+    "m_Id": 15,
+    "m_DisplayName": "akseli",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "akseli",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector4ShaderProperty",
+    "m_ObjectId": "e2e35695f0e2476ca4609b36084ff512",
+    "m_Guid": {
+        "m_GuidSerialized": "e1b4f7a0-d2f3-4e45-8a91-a2b3c4d5e6f7"
+    },
+    "m_Name": "akseli",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "akseli",
+    "m_DefaultReferenceName": "_akseli",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "e461e68146a343ef9d69d6a6324e9949",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 900.0,
+            "y": 580.0,
+            "width": 120.0,
+            "height": 34.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "fa04bc188d5047bd9c307416d382b9f5"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "e2e35695f0e2476ca4609b36084ff512"
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "fa04bc188d5047bd9c307416d382b9f5",
+    "m_Id": 0,
+    "m_DisplayName": "akseli",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "b6c1be1e7a5f43c99886d387fa5f9115",
+    "m_Id": 16,
+    "m_DisplayName": "nolla",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "nolla",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector4ShaderProperty",
+    "m_ObjectId": "1aebd40aa97f430881fd50a5f260057f",
+    "m_Guid": {
+        "m_GuidSerialized": "f2c5a8b1-e3a4-4f56-9ba2-b3c4d5e6f708"
+    },
+    "m_Name": "nolla",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "nolla",
+    "m_DefaultReferenceName": "_nolla",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "b12455b6d6d74022aa53f415c619d37a",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 900.0,
+            "y": 640.0,
+            "width": 120.0,
+            "height": 34.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "ae35d01de50a43a4a15751c15ce7754c"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "1aebd40aa97f430881fd50a5f260057f"
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "ae35d01de50a43a4a15751c15ce7754c",
+    "m_Id": 0,
+    "m_DisplayName": "nolla",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "33550031201a407abb282057d0501b84",
+    "m_Id": 17,
+    "m_DisplayName": "ita",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "ita",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector4ShaderProperty",
+    "m_ObjectId": "299571b940014cb2b64ecbc5327d83fa",
+    "m_Guid": {
+        "m_GuidSerialized": "a3d6b9c2-f4b5-4a67-8cb3-c4d5e6f70819"
+    },
+    "m_Name": "ita",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "ita",
+    "m_DefaultReferenceName": "_ita",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "edca9ceffcf644c0bf3a225341de4446",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 900.0,
+            "y": 700.0,
+            "width": 120.0,
+            "height": 34.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "6c0ec4a8fd314eca8a443df20535e2b0"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "299571b940014cb2b64ecbc5327d83fa"
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "6c0ec4a8fd314eca8a443df20535e2b0",
+    "m_Id": 0,
+    "m_DisplayName": "ita",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "c08f50b5adcc47e3a83a1de43333c244",
+    "m_Id": 18,
+    "m_DisplayName": "s2Reuna",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "s2Reuna",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector4ShaderProperty",
+    "m_ObjectId": "6d8afb113e42431695307bec14fae472",
+    "m_Guid": {
+        "m_GuidSerialized": "b4e7cad3-a5c6-4b78-9dc4-d5e6f708192a"
+    },
+    "m_Name": "s2Reuna",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "s2Reuna",
+    "m_DefaultReferenceName": "_s2Reuna",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "b33f322eb9ca4923af8e0a01898b336a",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 900.0,
+            "y": 760.0,
+            "width": 120.0,
+            "height": 34.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "181c1e47b9fc4843a79f31a43c5b233f"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "6d8afb113e42431695307bec14fae472"
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "181c1e47b9fc4843a79f31a43c5b233f",
+    "m_Id": 0,
+    "m_DisplayName": "s2Reuna",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

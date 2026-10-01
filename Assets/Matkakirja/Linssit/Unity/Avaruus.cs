@@ -47,13 +47,26 @@ namespace Matkakirja.Natiivi
         /// Fotorealismi osa 1 (30.9.2026): fysikaalinen ilmakehä (Ilmakeha2.shader, Rayleigh + Mie + otsoni, transmittanssi-LUT)
         /// Ilmakaaren analyyttisen kaaren ja usvan tilalle. A/B `astro kyyti ilmakeha2 0|1`.
         /// </summary>
-        public static bool Ilmakeha2 = false;   // junassa pois, kunnes ilmakehävika on korjattu (Päätoimittaja 30.9.)
+        public static bool Ilmakeha2 = true;   // oletuksena päällä (Päätoimittaja 1.10.; LUT-passin vika korjattu c15426c9)
         /// <summary>
         /// Auringon valaistus HDR:nä (Ilmakeha2 _Voima). 4,5 = BMNG-maan kirkkaus vastaa albedoa ~0,1 (maa ~0,07 lineaarisena
         /// auringon 57°:ssä); Pythonin rinnakkaislaskenta 30.9.: nadirissa usva (0,02, 0,04, 0,10), reunalla 10 km:ssä
         /// (0,25, 0,27, 0,45) ja ekstinktio 89 %. Säädetään NASA-vertailusta (A/B `astro kyyti ilmavoima <x>`).
+        /// Yksi arvo koko pallolle (Päätoimittaja 1.10.: ilmakehä sama kaikkialla, myös S2:n ja vuodenaikojen välillä): 2,5 —
+        /// S2-vertailu (ISS067-E-286475, 3,5 ylivalotti ja sinersi S2:n) ja Egyptin BMNG (ISS028-E-14970: sävyero NASAan 4 % vs
+        /// 11 % 3,5:llä). Aiemmin 30.9. (foto5) 3,5, kun 4,5 sinersi maan liikaa.
         /// </summary>
-        public static float IlmanVoima = 4.5f;
+        public static float IlmanVoima = 2.5f;
+        /// <summary>
+        /// Horisontin kaaren kerroin kuvaputkessa (Päätoimittaja 1.10. Linssiseppä 2:n kautta: julisteen suurin wau-tekijä):
+        /// Ilmakeha2 _KaariVoima vain, kun <see cref="Kuvaputki"/> on päällä; livenäkymässä aina 1. A/B `astro kyyti kaarivoima x`.
+        /// </summary>
+        public static float KuvanKaariVoima = 1f;
+        /// <summary>Kuvaputki päällä: valokuvauskulma (AstronauttiLinssi.Vertailu) tai pelaajan ISS-kamera (IssKameraKuva asettaa).</summary>
+        public static bool KuvaputkiAsetettu;
+        public static bool Kuvaputki => KuvaputkiAsetettu || Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu.HasValue;
+        /// <summary>Monisironnan osuus (Ilmakeha2 _Moni): 0,45 paksuntaa horisontin sinistä reunavyötä (0,25 oli ohut ja himmeä).</summary>
+        public static float IlmanMoni = 0.3f;   // NASA-vertailu vaakana 30.9. (foto6): 0,45 sinersi päivän maan ja vaalensi meren
         Mesh kuori, kaariKuori;
         float peitto, kyyti, kyytiTavoite, aurinkoPaivitetty = -10f;
         DateTime aurinkoUtc;
@@ -242,7 +255,7 @@ namespace Matkakirja.Natiivi
             var m = uusi ? kaari2 : kaari;
             if (kaariPiirto.sharedMaterial != m) kaariPiirto.sharedMaterial = m;
             if (uusi && lapinakyvyys != null && !lapinakyvyys.IsCreated()) { lapinakyvyys.Create(); Graphics.Blit(null, lapinakyvyys, kaari2, 0); }
-            if (uusi) { kaari2.SetFloat("_Peitto", kyyti); kaari2.SetFloat("_Voima", IlmanVoima); kaari2.SetFloat("_Hehku", HehkuPois ? 0f : IlmahehkunVoima); }
+            if (uusi) { kaari2.SetFloat("_Peitto", kyyti); kaari2.SetFloat("_Voima", IlmanVoima); kaari2.SetFloat("_Moni", IlmanMoni); kaari2.SetFloat("_Hehku", HehkuPois ? 0f : IlmahehkunVoima); kaari2.SetFloat("_KaariVoima", Kuvaputki ? KuvanKaariVoima : 1f); }
             kaari.SetFloat("_Peitto", kyyti);
             // Ilmahehku himmeämmäksi ja ohuemmaksi (laite cl4 28.9.: 0,32 piirsi kirkkaan vihreän viivan; ISS:n yökuvissa se on
             // ohut ja himmeä kellanvihreä kerros): voimakkuus 0,12, σ 4,5 km, sävy (0,55, 0,95, 0,5).

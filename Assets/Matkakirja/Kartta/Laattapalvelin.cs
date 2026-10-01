@@ -83,6 +83,9 @@ namespace Matkakirja
         public int rinnakkain = 12;
         [Tooltip("Välimuistin yläraja megatavuina; käynnistyksessä karsitaan vanhimmat 75 %:iin (offline-kansio ei kuulu tähän).")]
         public int valimuistiMt = 600;
+        /// <summary>Astronautin kameran S2-mosaiikin ämpäripolku ja alikatto (AstronauttiKerros.S2Juuri, karsitaan ensin).</summary>
+        public const string S2Polku = "linssit/astronautin-kamera/s2-eurooppa";
+        public const int S2ValimuistiMt = 200;
 
         TcpListener[] kuuntelijat;
         /// <summary>Kuuntelijoiden luokat (portti-indeksi laskureille), samassa järjestyksessä kuin <see cref="kuuntelijat"/>.</summary>
@@ -669,7 +672,10 @@ namespace Matkakirja
                 OhjaaCesium();
                 AvaaPaketti();
                 long raja = (long)valimuistiMt * 1048576;
-                _ = Task.Run(() => Karsi(valimuisti, raja));
+                // S2-mosaiikin alikatto (Linssiseppä 2, Natiivisepän ehto 1.10.2026): astronautin kameran S2-laatat karsitaan ensin
+                // 200 Mt:iin, jotta ne eivät syrjäytä pohjalaattoja yhteisestä 600 Mt:n välimuistista.
+                string s2 = Path.Combine(valimuisti, S2Polku.Replace('/', Path.DirectorySeparatorChar));
+                _ = Task.Run(() => { if (Directory.Exists(s2)) Karsi(s2, (long)S2ValimuistiMt * 1048576); Karsi(valimuisti, raja); });
             }
             catch (Exception e)
             {

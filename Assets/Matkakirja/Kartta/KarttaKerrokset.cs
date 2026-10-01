@@ -564,6 +564,9 @@ namespace Matkakirja
                 k.enabled = false;
             }
             k.materialKey = avain;
+            k.specifyTilingScheme = false;   // kierrätetty kerros voi tulla rajatusta jaosta (RasterinJako)
+            // ja muistirajoista (RasterinMuisti): Cesiumin oletukset takaisin.
+            k.maximumScreenSpaceError = 2f; k.maximumTextureSize = 2048; k.subTileCacheBytes = 16L * 1024 * 1024;
             k.templateUrl = Laattapalvelin.Paikallinen(url);
             k.projection = projektio;
             k.minimumLevel = min;
@@ -1830,6 +1833,50 @@ namespace Matkakirja
         /// 1 tai 2, jonka LisaaRasteri antoi): 0 = pohja näkyy läpi, 1 = rasteri kokonaan. Palauttaa paikan tai −1, jos
         /// avainta ei ole. Paikan alfa palautuu 1:een, kun rasteri poistetaan (seuraava käyttäjä saa täyden alfan).
         /// </summary>
+        /// <summary>
+        /// ISS-kamera (Linssiseppä 2, 30.9.2026): rasterille oma, alueeseen rajattu laattajako (Cesiumin specifyTilingScheme),
+        /// jotta paikallinen aluepaketti ei pyydä laattoja muualta (Helsinki-loki: tuhansia 404:iä z3–z6, eikä tarkempia tasoja
+        /// pyydetty lainkaan). Suorakulmio asteina, juurilaattoja rx × ry; tasot alkavat tästä juuresta (URL {z} = taso sen alla).
+        /// </summary>
+        public bool RasterinJako(string avain, double w, double s, double e, double n, int rx, int ry)
+        {
+            if (!rasterit.TryGetValue(avain, out var r) || r.kerros == null) return false;
+            var k = r.kerros;
+            k.enabled = false;
+            k.specifyTilingScheme = true;
+            k.rectangleWest = w; k.rectangleSouth = s; k.rectangleEast = e; k.rectangleNorth = n;
+            k.rootTilesX = rx; k.rootTilesY = ry;
+            k.enabled = true;
+            return true;
+        }
+
+        /// <summary>
+        /// Rasterin muistiraja (S2-mosaiikki kyydissä, Natiivisepän ehto 1.10.2026): näytön virhe (suurempi = karkeampi), suurin
+        /// tekstuuri ja alitiilivälimuisti. Aseta ennen RasterinJakoa (se kytkee kerroksen uudelleen, jolloin arvot tulevat voimaan);
+        /// kierrätys palauttaa Cesiumin oletukset (UusiKerros).
+        /// </summary>
+        public bool RasterinMuisti(string avain, float nayttovirhe, int tekstuuri, long aliValimuisti)
+        {
+            if (!rasterit.TryGetValue(avain, out var r) || r.kerros == null) return false;
+            r.kerros.maximumScreenSpaceError = nayttovirhe; r.kerros.maximumTextureSize = tekstuuri; r.kerros.subTileCacheBytes = aliValimuisti;
+            return true;
+        }
+
+        long palloValimuistiOletus = -1;
+
+        /// <summary>
+        /// Pallon tilesetin välimuisti (maximumCachedBytes) kyydin S2:n ajaksi laiteluokan mukaan (Natiivisepän ehto 1.10.2026);
+        /// null = palautus alkuperäiseen. Palauttaa käytössä olevan arvon.
+        /// </summary>
+        public long PallonValimuisti(long? tavua)
+        {
+            if (pallo == null) return -1;
+            if (palloValimuistiOletus < 0) palloValimuistiOletus = pallo.maximumCachedBytes;
+            long tavoite = tavua ?? palloValimuistiOletus;
+            if (pallo.maximumCachedBytes != tavoite) pallo.maximumCachedBytes = tavoite;
+            return tavoite;
+        }
+
         public int RasterinAlfa(string avain, float alfa)
         {
             if (avain == null || !rasterit.TryGetValue(avain, out var r) || r.kerros == null) return -1;

@@ -7,6 +7,7 @@
 // koska URP karsii käännöksestä variantit, joita mikään mukana oleva profiili ei käytä.
 // Kevennys vain ≤ iPhone 15 Pro (omistajan linja: täysi laatu muille): bloom pois. A/B `astro kyyti savytys 0|1`,
 // `astro kyyti valotus <EV>`, `astro kyyti bloom 0|1`.
+// ISS-kamera (Linssiseppä 2, 30.9.): filmirae ja polttovälin vinjetti samaan profiiliin, oletuksena pois, `astro kyyti filmi 0|1`.
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -15,15 +16,55 @@ namespace Matkakirja.Linssit
 {
     public static class Kyytipino
     {
-        /// <summary>Oletuksena pois junassa, kunnes fotorealismi on hyväksytty (Päätoimittaja 30.9.).</summary>
-        public static bool Pois = true;
+        /// <summary>Oletuksena päällä (Päätoimittaja 1.10.: fotorealismi junaan koko pallolle S2-erässä; 30.9.–1.10. pois).</summary>
+        public static bool Pois = false;
         /// <summary>Valotus (EV): ACES tummentaa keskisävyjä noin 0,8:aan, joten lähtötaso +0,5 (säädetään NASA-vertailusta).</summary>
         public static float Valotus = 0.5f;
+        /// <summary>
+        /// Automaattivalotus auringon mukaan (Linssiseppä 2:n Helsinki-kuva 30.9.: aurinko 9° → noin 1 EV alivalottunut): kamera
+        /// valottaa maan kirkkauden mukaan kuten astronautin kamera. Lisä = 1,1 EV × (0,5 − sin korkeus) / 0,5, kun aurinko on
+        /// 0…30° kameran alla olevassa pisteessä; yöllä +0,3 (kaupunkien valot), hämärässä liuku. A/B `astro kyyti autovalotus 0|1`.
+        /// </summary>
+        public static bool AutoValotus = true;
+        static float autoLisa;
+        /// <summary>Auringon korkeuden sini kameran alapisteessä (AstronauttiKerros joka kehys; NaN = ei tiedossa).</summary>
+        public static float AurinkoSin = float.NaN;
+        static float AutoLisa(float s)
+        {
+            if (float.IsNaN(s)) return 0f;
+            float paiva = 1.1f * Mathf.Clamp01((0.5f - s) / 0.5f);
+            return s >= 0f ? paiva : Mathf.Lerp(0.3f, 1.1f, Mathf.Clamp01((s + 0.1f) / 0.1f));
+        }
+        /// <summary>
+        /// S2-PINNAN SÄVYTYS (Linssiseppä 1.10.2026, S2-suunnitelma): Euroopan Sentinel-2 on BMNG:tä vaaleampi, sinisempi ja
+        /// litteämpi kuin NASA ISS067-E-286475 (RGB 74/91/102, hajonta 27 vs NASA 66/77/82, 45). Kun S2 on kyydin pinnalla
+        /// (<see cref="S2"/>, AstronauttiKerros.PaivitaS2), tileset-varjostin sävyttää perusvärin (kontrasti %, kylläisyys %,
+        /// lämpö: + = punaisempi, vähemmän sinistä) VAIN S2-suorakulmiossa 1,5°:n pehmeällä reunalla (globaali _s2Savy,
+        /// <see cref="AsetaS2Savy"/>). Päätoimittaja 1.10.: koko ruudun värisäätö sävytti myös BMNG-alueet (Egypti) ja jätti
+        /// 32°N:n sauman. A/B `astro kyyti s2savy <kontrasti> <kylläisyys> <lämpö>`; arvot NASA-vertailusta.
+        /// </summary>
+        public static bool S2;
+        public static float S2Kontrasti = 100f, S2Kyllaisyys = -10f, S2Lampo = 1f;   // albedossa (varjostin) 1.10. E-ajo: ero NASAan 54 → 39
+        static readonly int S2SavyId = Shader.PropertyToID("_s2Savy");
+
+        /// <summary>
+        /// Tileset-varjostimen S2-sävy (_s2Savy = kontrasti, kylläisyys, lämpö, paino): paino 1 vain, kun S2 on pinnalla, muuten 0,
+        /// jolloin kartta ei peri sävyä (AstronauttiKerros: S2:n vaihtuessa, kyydistä poistuttaessa ja OnDestroy; s2savy-komento).
+        /// </summary>
+        public static void AsetaS2Savy() => Shader.SetGlobalVector(S2SavyId, S2SavyArvo(S2, S2Kontrasti, S2Kyllaisyys, S2Lampo));
+
+        /// <summary>Globaalin arvo (testattava ilman Unityä): paino w = 1 vain S2:n ollessa päällä.</summary>
+        public static Vector4 S2SavyArvo(bool s2, float kontrasti, float kyllaisyys, float lampo) =>
+            s2 ? new Vector4(kontrasti, kyllaisyys, lampo, 1f) : Vector4.zero;
         public static bool BloomPois;
+        /// <summary>Filmirae ja vinjetti (ISS-kameran valokuvatuntu), oletuksena pois.</summary>
+        public static bool Filmi;
 
         static Volume volyymi;
         static ColorAdjustments vari;
         static Bloom hehku;
+        static FilmGrain rae;
+        static Vignette vinjetti;
         static bool paalla, haettu;
 
         /// <summary>Kevyt laite: iPhone, jonka mallitunnus on ≤ iPhone16,x (iPhone 15 Pro ja vanhemmat).</summary>
@@ -54,9 +95,14 @@ namespace Matkakirja.Linssit
             // Filmipino tai muu voi kytkeä jälkikäsittelyn pois kesken kyydin: palautetaan.
             var d = kamera.GetUniversalAdditionalCameraData();
             if (d != null && !d.renderPostProcessing) d.renderPostProcessing = true;
-            if (vari != null && !Mathf.Approximately(vari.postExposure.value, Valotus)) vari.postExposure.Override(Valotus);
+            // Automaattivalotus liukuu 1 EV/s, ettei valotus hypi kelauksessa.
+            autoLisa = Mathf.MoveTowards(autoLisa, AutoValotus ? AutoLisa(AurinkoSin) : 0f, Time.unscaledDeltaTime);
+            float ev = Valotus + autoLisa;
+            if (vari != null && Mathf.Abs(vari.postExposure.value - ev) > 0.005f) vari.postExposure.Override(ev);
             bool bloom = !BloomPois && !KevytLaite;
             if (hehku != null && hehku.active != bloom) hehku.active = bloom;
+            if (rae != null && rae.active != Filmi) rae.active = Filmi;
+            if (vinjetti != null && vinjetti.active != Filmi) vinjetti.active = Filmi;
         }
 
         static bool Hae()
@@ -76,11 +122,13 @@ namespace Matkakirja.Linssit
             // Ajonaikainen kopio (profile): valotuksen säätö ei kirjoita assetiin editorissa.
             volyymi.profile.TryGet(out vari);
             volyymi.profile.TryGet(out hehku);
+            volyymi.profile.TryGet(out rae);
+            volyymi.profile.TryGet(out vinjetti);
             return true;
         }
 
         public static string Tila() =>
-            $"kyytipino {(paalla ? "päällä" : "pois")}, valotus {Valotus:+0.0;-0.0} EV, bloom {(hehku != null && hehku.active ? "päällä" : "pois")}"
+            $"kyytipino {(paalla ? "päällä" : "pois")}, valotus {Valotus:+0.0;-0.0} EV + auto {autoLisa:+0.00;-0.00} (sin {AurinkoSin:0.00}), bloom {(hehku != null && hehku.active ? "päällä" : "pois")}, filmi {(Filmi ? "päällä" : "pois")}, s2 {(S2 ? "päällä" : "pois")} sävy {S2Kontrasti:0}/{S2Kyllaisyys:0}/{S2Lampo:0.0}"
             + (KevytLaite ? " (kevyt laite)" : "");
     }
 }

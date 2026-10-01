@@ -1673,6 +1673,8 @@ namespace Matkakirja.Natiivi
                                 Yokuori.ValojenOsuus = Mathf.Clamp01(osuus);
                         }
                         else if (a == "kiilto" && osat.Length > 3) Yokuori.KiiltoPois = osat[3] == "0"; // A/B auringon heijastus
+                        else if (a == "kiiltovoima" && osat.Length > 3) { Yokuori.KiillonVoima = (float)Luku(osat[3]); Kirjaa($"astro kiiltovoima {Yokuori.KiillonVoima:0.0}"); }
+                        else if (a == "aalto" && osat.Length > 3) { Yokuori.Aallokko = (float)Luku(osat[3]); Kirjaa($"astro aalto {Yokuori.Aallokko:0.000}"); }
                         else if (a == "varjo" && osat.Length > 3) Yokuori.VarjoPois = osat[3] == "0";   // A/B päiväpuolen varjostus
                         else if (a == "hehku" && osat.Length > 3) Avaruus.HehkuPois = osat[3] == "0";    // A/B hämärä ja ilmahehku
                         else if (a == "taivas" && osat.Length > 3) { KyydinTaivas.Pois = osat[3] == "0"; KyydinTaivas.VarjoPakko = osat[3] == "2"; } // A/B oikeat tähdet ja Kuu; 2 = ISS varjossa
@@ -1706,6 +1708,12 @@ namespace Matkakirja.Natiivi
                             AstronauttiKerros.KuukaudenAlfa = Mathf.Clamp01(kkAlfa);                        // 4a: a<0–1> BMNG:n alfa
                         else if (a == "kuukausi" && osat.Length > 3) AstronauttiKerros.KuukaudenPintaPois = osat[3] == "0"; // 4a
                         else if (a == "kello" && osat.Length > 3) Kirjaa("astro kyyti kello: " + KyydinKello(osat[3]));
+                        else if (a == "yovalot" && osat.Length > 3)   // tarkat yövalot: juuri-URL | pois (fotorealismi 30.9.)
+                        {
+                            Matkakirja.Natiivi.Yokuori.TarkatValotJuuri = osat[3] == "pois" ? null : osat[3];
+                            FindAnyObjectByType<Matkakirja.Natiivi.Yokuori>()?.LataaTarkat();
+                            Kirjaa("astro kyyti yovalot: " + (Matkakirja.Natiivi.Yokuori.TarkatValotJuuri ?? "pois"));
+                        }
                         else if (a == "fresnel" && osat.Length > 3) Matkakirja.Natiivi.Yokuori.TaivasHeijastusPois = osat[3] == "0";   // fotorealismi 2
                         else if (a == "pilvivalo" && osat.Length > 3) Matkakirja.Natiivi.Pilvikuori.ValoPois = osat[3] == "0";   // fotorealismi 3
                         else if (a == "pilvivarjo" && osat.Length > 3) Matkakirja.Natiivi.Yokuori.PilviVarjoPois = osat[3] == "0";   // fotorealismi 3
@@ -1713,10 +1721,63 @@ namespace Matkakirja.Natiivi
                         else if (a == "ilmatila")
                             Kirjaa("astro " + Matkakirja.Natiivi.Avaruus.Tila(osat.Length > 4 && osat[3] == "debug" ? (float?)Luku(osat[4]) : null));
                         else if (a == "ilmakeha2" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.Ilmakeha2 = osat[3] != "0";   // A/B fotorealismi osa 1
-                        else if (a == "ilmavoima" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.IlmanVoima = (float)Luku(osat[3]);
+                        else if (a == "kaarivoima" && osat.Length > 3) { Matkakirja.Natiivi.Avaruus.KuvanKaariVoima = (float)Luku(osat[3]); Kirjaa($"astro kaarivoima {Matkakirja.Natiivi.Avaruus.KuvanKaariVoima:0.00} (kuvaputki {Matkakirja.Natiivi.Avaruus.Kuvaputki})"); }
+                        else if (a == "ilmavoima" && osat.Length > 3) { Matkakirja.Natiivi.Avaruus.IlmanVoima = (float)Luku(osat[3]); Kirjaa($"astro ilmavoima {Matkakirja.Natiivi.Avaruus.IlmanVoima:0.0}"); }
+                        else if (a == "ilmamoni" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.IlmanMoni = (float)Luku(osat[3]);
                         else if (a == "savytys" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Pois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
+                        else if (a == "autovalotus" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.AutoValotus = osat[3] != "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
+                        else if (a == "s2savy" && osat.Length > 5)
+                        {
+                            Matkakirja.Linssit.Kyytipino.S2Kontrasti = (float)Luku(osat[3]);
+                            Matkakirja.Linssit.Kyytipino.S2Kyllaisyys = (float)Luku(osat[4]);
+                            Matkakirja.Linssit.Kyytipino.S2Lampo = (float)Luku(osat[5]);
+                            Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
+                            Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila());
+                        }
                         else if (a == "valotus" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Valotus = (float)Luku(osat[3]); Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
                         else if (a == "bloom" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.BloomPois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
+                        else if (a == "filmi" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Filmi = osat[3] != "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }   // ISS-kamera
+                        else if (a == "siluetti" && osat.Length > 3)   // ISS-kamera: siluetti 0|1, siluetti asettelu x y kulma leveys pituus
+                        {
+                            if (osat[3] == "asettelu" && osat.Length > 8)
+                            {
+                                Matkakirja.Linssit.IssSiluetti.Asettelu = new Vector4((float)Luku(osat[4]), (float)Luku(osat[5]), (float)Luku(osat[6]), (float)Luku(osat[7]));
+                                Matkakirja.Linssit.IssSiluetti.Pituus = (float)Luku(osat[8]);
+                            }
+                            else Matkakirja.Linssit.IssSiluetti.Paalla = osat[3] != "0";
+                            Kirjaa("astro kyyti " + Matkakirja.Linssit.IssSiluetti.Tila());
+                        }
+                        else if (a == "s2kevyt" && osat.Length > 3)   // S2:n laiteluokka (Natiivisepän ehto 1.10.): 0|1|auto, vaihto s2 0 → 1
+                        {
+                            AstronauttiKerros.S2KevytPakotettu = osat[3] == "auto" ? null : osat[3] != "0";
+                            Kirjaa($"astro s2kevyt {(AstronauttiKerros.S2KevytPakotettu.HasValue ? (AstronauttiKerros.S2KevytPakotettu.Value ? "kevyt" : "täysi") : "auto")} → {(AstronauttiKerros.S2Kevyt ? "kevyt" : "täysi")}");
+                        }
+                        else if (a == "s2" && osat.Length > 3)   // Euroopan S2-mosaiikki kyydissä (AstronauttiKerros.PaivitaS2)
+                        {
+                            if (osat[3] == "url" && osat.Length > 4) AstronauttiKerros.S2Osoite = osat[4] == "pois" ? null : osat[4];
+                            else AstronauttiKerros.S2Kaytossa = osat[3] != "0";
+                            Kirjaa($"astro kyyti s2 {(AstronauttiKerros.S2Kaytossa ? "päällä" : "pois")}, osoite {AstronauttiKerros.S2Osoite ?? AstronauttiKerros.S2Juuri}");
+                        }
+                        else if (a == "pinta" && osat.Length > 3)   // ISS-kamera: pinta 1|2 <url {z}/{x}/{y}> <min> <max>, pinta pois (kuukausi 0 ensin: kaksi paikkaa)
+                        {
+                            var pintaKerrokset = KarttaKerrokset.Instanssi;
+                            if (pintaKerrokset == null) Kirjaa("astro kyyti pinta: ei karttakerroksia");
+                            else if (osat[3] == "pois") { pintaKerrokset.PoistaRasteri("iss-pinta-1"); pintaKerrokset.PoistaRasteri("iss-pinta-2"); Kirjaa("astro kyyti pinta pois"); }
+                            // Linssin oma reliefi pois (BMNG peittää sen kyydissä): kaksi paikkaa vapautuu BMNG:lle alle ja pinnalle päälle.
+                            else if (osat[3] == "pohja") { pintaKerrokset.PoistaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros); Kirjaa("astro kyyti pinta: linssin reliefi pois"); }
+                            else if (osat.Length > 6)
+                            {
+                                string pintaAvain = "iss-pinta-" + osat[3];
+                                // {docs} = sovelluksen Documents (laatat devicectl:llä laitteelle, file://).
+                                string pintaUrl = osat[4].Replace("{docs}", "file://" + Application.persistentDataPath);
+                                string pintaTulos = pintaKerrokset.LisaaRasteri(pintaAvain, pintaUrl, CesiumUrlTemplateRasterOverlayProjection.WebMercator,
+                                    (int)Luku(osat[5]), (int)Luku(osat[6]), 1f);
+                                // Valinnainen rajattu jako: … W S E N rx ry (KarttaKerrokset.RasterinJako).
+                                bool jaettu = pintaTulos != null && osat.Length > 12 && pintaKerrokset.RasterinJako(pintaAvain,
+                                    Luku(osat[7]), Luku(osat[8]), Luku(osat[9]), Luku(osat[10]), (int)Luku(osat[11]), (int)Luku(osat[12]));
+                                Kirjaa($"astro kyyti pinta {pintaAvain}: {(pintaTulos != null ? "lisätty" : "ei mahdu")}{(jaettu ? " (rajattu jako)" : "")} {pintaUrl} z{osat[5]}–{osat[6]}");
+                            }
+                        }
                         else if (a == "vertailu" && osat.Length > 3)
                             Kirjaa("astro kyyti vertailu: " + KyydinVertailu(osat.Skip(3).ToArray()));
                         else if (a == "yohon")   // kuvapari (30.9.): kelaa seuraavaan hetkeen, jolloin aurinko on alapisteessä ≥ 15° horisontin alla
@@ -1952,6 +2013,7 @@ namespace Matkakirja.Natiivi
             {
                 Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu = null;
                 Matkakirja.Linssit.Iss.IssNyt.Simu.AsetaSiirto(TimeSpan.Zero);
+                Matkakirja.Natiivi.Pulu.Hae().Nayta(true);
                 return "pois";
             }
             var ic = System.Globalization.CultureInfo.InvariantCulture;
@@ -1961,6 +2023,7 @@ namespace Matkakirja.Natiivi
             double f = D(5);
             Matkakirja.Linssit.Astronautti.AstronauttiLinssi.VertailuKentta = 2 * Math.Atan(12.0 / Math.Max(8, f)) * 180 / Math.PI;
             Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu = k;
+            Matkakirja.Natiivi.Pulu.Hae().Nayta(false);   // vertailukuvassa ei Pulua (30.9.)
             if (DateTime.TryParse(a[6], ic, System.Globalization.DateTimeStyles.AdjustToUniversal | System.Globalization.DateTimeStyles.AssumeUniversal, out var utc))
                 Matkakirja.Linssit.Iss.IssNyt.Simu.AsetaSiirto(utc - DateTime.UtcNow);
             return $"{k}, kenttä {Matkakirja.Linssit.Astronautti.AstronauttiLinssi.VertailuKentta:0.0}°, hetki {Matkakirja.Linssit.Iss.IssNyt.Kello():yyyy-MM-dd HH:mm:ss} UTC";
