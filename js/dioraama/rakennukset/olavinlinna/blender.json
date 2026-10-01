@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "8ccd7b1617fae021",
-  "kansio": "dioraama/olavinlinna/blender/8ccd7b1617fae021/",
+  "hash": "e65efefa8e7a6d34",
+  "kansio": "dioraama/olavinlinna/blender/e65efefa8e7a6d34/",
   "tiedostot": [
     {
       "polku": "kirjasto/materiaali/graniittilohkomuuri/graniittilohkomuuri_diff.jpg",
@@ -449,6 +449,16 @@
       "tavuja": 1113317
     },
     {
+      "polku": "ymparisto/aluskasvit-4x4.astcm",
+      "sha256": "23a193aa57271ec28e12675a61db878435ea89e24f335a0009a710fdd7edd6e1",
+      "tavuja": 873888
+    },
+    {
+      "polku": "ymparisto/aluskasvit-hamara-4x4.astcm",
+      "sha256": "acae6a59223bf3f1b8ff902598962455b8107723743bd60e009735fe0f645ef6",
+      "tavuja": 873888
+    },
+    {
       "polku": "ymparisto/aluskasvit-hamara.png",
       "sha256": "5b4fd8710c578ea33021c9e7764e1be48aac5ba3fbaa86d20fe2ba13d684bf15",
       "tavuja": 393407
@@ -469,9 +479,19 @@
       "tavuja": 424194
     },
     {
+      "polku": "ymparisto/horisontti-1k-4x4.astcm",
+      "sha256": "7fc57bf838f5fa3c659a6e0d66402905414cc2149f1be9778bb8e343605a4f63",
+      "tavuja": 1398144
+    },
+    {
       "polku": "ymparisto/horisontti-1k.jpg",
       "sha256": "7b989e89c701bca1fc958d4aaee3be790e2122803c79d72ad693755913998bbe",
       "tavuja": 126526
+    },
+    {
+      "polku": "ymparisto/horisontti-hamara-1k-4x4.astcm",
+      "sha256": "e99e41a557fa811eba11723d384d55b82389001c327642fb51cedb72de7c5d4b",
+      "tavuja": 1398144
     },
     {
       "polku": "ymparisto/horisontti-hamara-1k.jpg",
@@ -544,9 +564,24 @@
       "tavuja": 995727
     },
     {
+      "polku": "ymparisto/puukortit-4x4.astcm",
+      "sha256": "02a958fc2bbf1158178e2f6cfbd31fb5d48598a5bbc9f5d3c1f88b08ec59b2a2",
+      "tavuja": 11184864
+    },
+    {
+      "polku": "ymparisto/puukortit-hamara-4x4.astcm",
+      "sha256": "0c39901ff744c018239a0222cfdf5ab4480ff6ac3b81d6f71b9ad0a49727b2f5",
+      "tavuja": 11184864
+    },
+    {
       "polku": "ymparisto/puukortit-hamara.png",
       "sha256": "fd65d0ed3ff4697ef599464082078ed0d49ba263e5db230114ee29f2ba4aeeb8",
       "tavuja": 3548119
+    },
+    {
+      "polku": "ymparisto/puukortit-normaali-4x4.astcm",
+      "sha256": "645eb758c6159fb9332944a02c74529de0d056c3672417be7381be3f7b2533d1",
+      "tavuja": 11184864
     },
     {
       "polku": "ymparisto/puukortit-normaali.png",
@@ -589,9 +624,19 @@
       "tavuja": 97951
     },
     {
+      "polku": "ymparisto/taivas-2k-4x4.astcm",
+      "sha256": "734ea6280b9611b95a5d203d1cf60aefe640997ac1c61a569ed566eff68490c3",
+      "tavuja": 2796256
+    },
+    {
       "polku": "ymparisto/taivas-2k.jpg",
       "sha256": "7ea8a1ea5f4d250162ec6da1ec3d3875c6a9de67dac3f8bbf3c64da9fb5197f9",
       "tavuja": 150103
+    },
+    {
+      "polku": "ymparisto/taivas-hamara-2k-4x4.astcm",
+      "sha256": "08eb40be547520d11b1d59a775129f98119f601ce7212939b552659366e0e282",
+      "tavuja": 2796256
     },
     {
       "polku": "ymparisto/taivas-hamara-2k.jpg",
