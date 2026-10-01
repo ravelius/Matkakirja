@@ -13,6 +13,11 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2516, teksti: 'Pillerivalikko PANEELI-pohjalla (#3804)' },
+  { v: 2515, teksti: 'Tyylikirja: tilavärit, lomakekenttä, peitto.pan… (#3805)' },
+  { v: 2514, teksti: 'Maakuntien toinen kuva: LTU, LUX, LVA, MDA (#3803)' },
+  { v: 2513, teksti: 'Olavinlinna: detalji- ja maastokerroksille ASTC… (#3806)' },
+  { v: 2512, teksti: 'Loki ja Raamattu: 1.10. päätökset mainiin (#3802)' },
   { v: 2511, teksti: 'PANEELI-pohja webiin: luoPohjaPaneeli + Paneeli… (#3801)' },
   { v: 2510, teksti: 'Maakuntien toinen kuva: HUN, IRL, ISL, ITA (#3797)' },
   { v: 2509, teksti: 'Ihmisen matka: kahden kuvan nostokortti ja Pulu… (#3775)' },
