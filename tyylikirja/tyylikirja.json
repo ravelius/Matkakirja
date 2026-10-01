@@ -112,7 +112,7 @@
     "kuva": { "hero-kortti": "2:1", "hero-arkki": "3:2", "upotus": "4:3", "upotus-leveys": 40, "galleria-korkeus": 64 }
   },
   "liike": {
-    "_selite": "ms. Mikään avaus tai sulku ei ylitä maksimia (UI-pohjat kohta 6). Käyrät webin cubic-bezier; natiivi Ponnahdus.cs käyttää samaa sisaan-käyrää.",
+    "_selite": "ms. Mikään UI-siirtymä (avaus, sulku, siirto, ponnahdus) ei ylitä maksimia (UI-pohjat kohta 6); ei koske jatkuvia sisältöanimaatioita kuten matkamittaria, kartan liikettä tai linssien omaa liikettä (omistaja 1.10.2026 klo 11.37). Käyrät webin cubic-bezier; natiivi Ponnahdus.cs käyttää samaa sisaan-käyrää.",
     "avaus": 220,
     "sulku": 200,
     "liuku": 240,
