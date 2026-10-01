@@ -10,10 +10,12 @@
 
 /* ── Yhteiset tekstiportaat (typografia 7 porrasta) ───────────────────────── */
 
-.tk-kapiteeli {
+.tk-kapiteeli,
+.tk-kortti .tk-kapiteeli, .tk-nostokortti .tk-kapiteeli {
   margin: 0 0 var(--tk-vali-xs);
   font-family: var(--font-type);
   font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--tk-muste-pehmea);
@@ -29,7 +31,8 @@
   background: var(--tk-piste, var(--tk-toiminto));
   vertical-align: 0.05em;
 }
-.tk-otsikko {
+.tk-otsikko,
+.tk-kortti .tk-otsikko, .tk-nostokortti .tk-otsikko {
   margin: 0 0 var(--tk-vali-xs);
   font-family: var(--font-luku);
   font-size: var(--tk-koko-otsikko);
@@ -37,14 +40,16 @@
   line-height: 1.2;
   color: var(--tk-muste);
 }
-.tk-apuri {
+.tk-apuri,
+.tk-kortti .tk-apuri, .tk-nostokortti .tk-apuri {
   margin: 0 0 var(--tk-vali-s);
   font-family: var(--font-luku);
   font-size: var(--tk-koko-apuri);
   font-style: italic;
   color: var(--tk-muste-pehmea);
 }
-.tk-leipa {
+.tk-leipa,
+.tk-kortti .tk-leipa, .tk-nostokortti .tk-leipa {
   margin: 0 0 var(--tk-vali-s);
   font-family: var(--font-luku);
   font-size: var(--tk-koko-leipa);
@@ -289,6 +294,19 @@
 .tk-kortti .tk-nappi { flex: 0 1 auto; }
 .tk-kortti .tk-napit--pysty { flex-direction: column; align-items: stretch; }
 .tk-kortti .tk-napit--pysty .tk-nappi { flex: none; text-align: left; font-family: var(--font-luku); font-size: var(--tk-koko-leipa); }
+
+/* ── KORTTI puettuna olemassa olevaan <dialog>-korttiin (apuraha ym.; sama tapa kuin natiivissa) ─────────────────── */
+
+.dialog .dialog-card.tk-kortti {
+  max-width: var(--tk-leveys-kortti);
+  border-radius: var(--tk-kulma-kortti);
+  padding: var(--tk-vali-l) var(--tk-vali-l) var(--tk-vali-m);
+}
+.tk-lista { margin: 0 0 var(--tk-vali-s); padding-left: var(--tk-vali-l); }
+.tk-lista li + li { margin-top: var(--tk-vali-xs); }
+.tk-kortti .tk-kapiteeli { margin-top: var(--tk-vali-m); }
+.tk-nappi--levea { display: block; width: 100%; margin-top: var(--tk-vali-m); }
+.tk-kortti > .periaate-linkit { margin: var(--tk-vali-s) 0; text-align: left; }
 
 /* ── Esikatselu (tyylikirjasivu): pohja paikallaan virrassa, ei kiinnitettynä ───────────────── */
 
