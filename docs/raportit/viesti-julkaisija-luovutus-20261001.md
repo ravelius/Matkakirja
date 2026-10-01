@@ -1,4 +1,4 @@
-# Julkaisijan luovutus 1.10.2026 klo 06.0x (viikkokiintiö 95 %)
+# Julkaisijan luovutus 1.10.2026 klo 07.3x (viikkokiintiö 95 %)
 
 Päivän kaikki vuorot: /Users/Shared/Claude/julkaisija-tyokalut/vuorot-20260928.txt (loppuosa).
 Pidossa: /Users/Shared/Claude/julkaisija-tyokalut/pidossa.txt.
@@ -15,25 +15,17 @@ Pidossa: /Users/Shared/Claude/julkaisija-tyokalut/pidossa.txt.
 - Kaava: muutoslokirivi PR:nä mainiin (tarkista MERGEABLE CLEAN) → `gh workflow run proto3d-testflight.yml
   --ref main -f vie_unitysta=true -f versio=1.1 -f ordinaali=NN -f proto_ref=SHA -f build_numero=NN
   -f sisainen_ryhma=false` → `gh workflow run testflight-ulkoinen.yml --ref main -f build_numero=NN`.
-- **Sisäinen testiryhmä puuttuu**: TF 85:n ajossa /v1/apps/{id}/betaGroups ei palauttanut isInternalGroup-
-  ryhmää (82:lla "Beta testaajat" löytyi). Siksi 86→ ajettu `sisainen_ryhma=false`. TF 85:n laskuri ja
-  yömerkki korjattu käsin (proto-3d/lokit/testflight-ordinaali.txt, yo-testflight-viimeisin.txt).
-  testflight-sisainen.yml -diagnoosi ESTYI luokittimeen [Permission Grant] → omistaja tarkistaa ASC:sta
-  tai antaa luvan. Ryhmiä ei ole muutettu.
+- Sisäinen testiryhmä: TF 85:n ajossa ryhmää ei löytynyt (ohimenevä API-vastaus). testflight-sisainen.yml
+  build 91 (omistajan lupa 07.3x): "Beta testaajat" on olemassa, kaikki buildit automaattisesti, omistaja
+  ryhmässä. Jatkossa TF ilman `-f sisainen_ryhma=false` (oletus true).
 
-## Olavinlinnan osoitin (EI vaihdettu — odottaa omistajaa)
+## Olavinlinnan osoitin
 
-- Nykyinen osoitin 65e2535be38cc19d. Osoitin-dispatch (`vie-dioraama.yml -f osoitin=true`) ESTYI
-  Julkaisijan sessiossa luokittimeen [Production Deploy] → omistaja ajaa itse tai antaa luvan uudelleen.
-- Ehto (Päätoimittaja, pidossa.txt): TF 90 julki + Siirtoseppä kuitannut **mainin kärjen** paketin.
-  osoitin=true rakentaa aina mainin kärjestä, ei tiettyä hashia.
-- Kuitattu: 19f1ff3246be7386 (v18 + lähimaasto v3c) juna 90 .appilla, 0 virhettä.
-- #3759 (v19) mergetty 05.57 (main 22bf2c6c6) → **osoitinkohde 02987940f6567fd2** (v19 + v3c + taivas,
-  blender 74cbb16a1214441f 127/127). **KUITATTU 06.0x** juna 90 .appilla (0 virhettä). Odottaa vain omistajan osoitinkomentoa.
-- **LINNAN JÄÄDYTYS PÄÄLLÄ** (Päätoimittaja 06.0x): lippu /Users/Shared/Claude/julkaisija-tyokalut/linna-jaadytys;
-  jonoon.sh ohittaa js/dioraama/, tools/dioraama/rakenna*, blender.json -PR:t. **#3763 (puukortit v3,
-  ca2cb680a, blender 90c024a12714e713) PIDOSSA** — ei etusija-seuraava.txt:ssä. Kun omistaja on ajanut
-  osoittimen: `rm linna-jaadytys` ja `echo 3763 >> etusija-seuraava.txt` (puukortit seuraavalle osoitinkierrokselle).
+- **Vaihdettu 07.29** omistajan suoralla luvalla → 02987940f6567fd2 (v19 + v3c + taivas; ajo 36815257246,
+  julkinen uusin.json vahvistettu). Siirtoseppä todentaa TF 91 .appilla 07.3x.
+- Linnan jäädytys purettu; #3763 (puukortit v3) junassa → seuraava osoitinkierros: hash vie-dioraaman
+  lokista → Siirtosepän kuittaus → omistajan lupa → `gh workflow run vie-dioraama.yml --ref main
+  -f rakennus=olavinlinna -f kuiva=false -f osoitin=true` (rakentaa mainin kärjestä).
 
 ## Web-juna
 
@@ -53,6 +45,4 @@ Pidossa: /Users/Shared/Claude/julkaisija-tyokalut/pidossa.txt.
 
 ## Omistajalle odottaa
 
-1. Olavinlinnan osoitin (komento vie-dioraama osoitin=true) — Päätoimittaja antaa luvan kuittauksen jälkeen.
-2. Sisäisen testiryhmän tarkistus ASC:ssa.
-4. #3734 (.claude/settings.json hook) pidossa: omistajan suora lupa.
+- #3734 (viestirajahook) mergelupa omistajalta 07.3x → junassa #3763:n jälkeen.
