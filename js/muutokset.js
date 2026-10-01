@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2481, teksti: 'Olavinlinnan lähimaasto v3c: splat-maasto, pien… (#3755)' },
   { v: 2480, teksti: 'Pulu: kortin aihe kysymyksen mukana, kun täkyno… (#3730)' },
   { v: 2479, teksti: 'Olavinlinna kuori v18 (#3746)' },
   { v: 2478, teksti: 'Lukijan ElevenLabs-äänet: isoisä (#3739)' },
