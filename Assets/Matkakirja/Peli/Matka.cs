@@ -443,6 +443,9 @@ namespace Matkakirja.Peli
         /// peli eivät kirjaa. Palauttaa (pituus, palkkio) tai null (sama päivä, ei kirjausta).
         /// Päivä annetaan aina ulkoa: pelilogiikka ei lue kelloa.
         /// </summary>
+        /// <summary>Pelikehyksen (Peli/Pelit/Pelikehys.cs) tapahtumarivi matkan lokiin (laji "peli": pelattu lautapeli).</summary>
+        public void KirjaaTapahtuma(string laji, string teksti) => Tapahtui?.Invoke(laji, teksti);
+
         public (int Pituus, int Palkkio)? KirjaaPelipaiva(string paivays, Pelaaja p = null)
         {
             p ??= P;
