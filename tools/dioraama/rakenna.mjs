@@ -382,6 +382,8 @@ export function lisaaBlender(rakennusJson, blender) {
           nor: B(Y(`maasto/${k.lahde}_nor_gl_1k.jpg`)), toisto_m: k.toisto_m })),
       };
     }
+    // Puukorttien normaalikartta (v3, Siirtoseppä 1.10.: tangenttiavaruus, OpenGL), jos viety.
+    if (on.has(Y('puukortit-normaali.png'))) rakennusJson.ymparisto.puukortit_normaali = B(Y('puukortit-normaali.png'));
     // Taivas (Siirtosepän pyyntö 1.10.): välikuvien Poly Haven -taivaat LDR-equirectinä (AgX, 2048 × 1024). u = 0 osoittaa
     // atsimuuttiin taivas_suunta (270 = länsi) ja u kasvaa myötäpäivään; kuvan alapuolisko on HDRI:n synteettistä maata.
     if (['taivas-2k.jpg', 'taivas-hamara-2k.jpg'].every((p) => on.has(Y(p)))) {

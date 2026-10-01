@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "74cbb16a1214441f",
-  "kansio": "dioraama/olavinlinna/blender/74cbb16a1214441f/",
+  "hash": "90c024a12714e713",
+  "kansio": "dioraama/olavinlinna/blender/90c024a12714e713/",
   "tiedostot": [
     {
       "polku": "kirjasto/materiaali/graniittilohkomuuri/graniittilohkomuuri_diff.jpg",
@@ -545,23 +545,28 @@
     },
     {
       "polku": "ymparisto/puukortit-hamara.png",
-      "sha256": "aabf96882832979edda1162627b33057ee54f75c6edd39aafe242e47adff1444",
-      "tavuja": 1939548
+      "sha256": "fd65d0ed3ff4697ef599464082078ed0d49ba263e5db230114ee29f2ba4aeeb8",
+      "tavuja": 3548119
+    },
+    {
+      "polku": "ymparisto/puukortit-normaali.png",
+      "sha256": "15934af412d0486546bc1694fd6e2e4e09e4f5e365e6c8164d78bc1f7b637e1a",
+      "tavuja": 2839243
     },
     {
       "polku": "ymparisto/puukortit.json",
-      "sha256": "56d70f984552c7419e251e45320a63e0431a4c0814cfc42fc44012ef0936f2be",
-      "tavuja": 1039
+      "sha256": "02810ccac828cb1c7e61c3cb17a661e102ea588d130b5bcb7ee29a30334dba58",
+      "tavuja": 3058
     },
     {
       "polku": "ymparisto/puukortit.png",
-      "sha256": "26cbc0b4adc4b83827842e6bb66dbf2f7a628b8dd488b8d26685929b1a49bff3",
-      "tavuja": 2209466
+      "sha256": "0bb53673226e945d209da7ca2e81600d46bb53a6b46fa8357c20d652d7222ac2",
+      "tavuja": 3952985
     },
     {
       "polku": "ymparisto/puut.json",
-      "sha256": "871382df0c383f58ae7aa198243fed79aea78d1b8326e98d1815a01d8bbf8a68",
-      "tavuja": 4243799
+      "sha256": "51f4d01b22374ff572b3eae7bcd96426a2e17d01f74dbb6b8cddc33a044d20e0",
+      "tavuja": 4502145
     },
     {
       "polku": "ymparisto/splat-0.png",
