@@ -79,6 +79,7 @@
   background: var(--tk-reunus);
 }
 .tk-kuva--hero img { aspect-ratio: 2 / 1; }
+.tk-kuva--suurennettava img { cursor: zoom-in; }
 .tk-kuva--upotus {
   float: right;
   width: var(--tk-kuva-upotus-leveys);

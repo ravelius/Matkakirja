@@ -3,7 +3,7 @@
  *
  *   KorttiData { yla, otsikko, alaotsikko, kappaleet[{otsikko, teksti, korostus, lista[]}],
  *                kuvat[{url, rooli: hero|upotus|galleria, kuvateksti, lahde, rajaus}],
- *                napit[{teksti, tyyppi: toiminto|ensisijainen|haamu, toiminto}], lahde, teema }
+ *                napit[{teksti, tyyppi: toiminto|ensisijainen|haamu, toiminto}], lahde, pulu{kysymykset[]}, teema }
  *
  * Sama JSON-muoto webille ja natiiville (apurahan esittely.json on lähes tämä). Data ei sisällä mittoja: pohja
  * päättää asettelun. Kuvien roolit päätellään määrästä, jos niitä ei anneta (kuvasäännöt): 1 = hero,
@@ -64,6 +64,8 @@ export function tarkistaKorttiData(d, { teema = 'paperi' } = {}) {
     kuvat,
     napit,
     lahde: pohjaTeksti(d.lahde),
+    // Pulun kysymykset (Kysy-nappi avaa chatin näillä siruilla; valmis vastaus annetaan chatissa).
+    pulu: { kysymykset: (Array.isArray(d.pulu?.kysymykset) ? d.pulu.kysymykset : []).map(pohjaTeksti).filter(Boolean) },
     teema: POHJA_TEEMAT.includes(d.teema) ? d.teema : teema,
   };
 }

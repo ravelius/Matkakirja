@@ -41,7 +41,7 @@ function pohjaSolmu(tagi, luokka, teksti) {
   return e;
 }
 
-function pohjaKuva(kuva, luokka) {
+function pohjaKuva(kuva, luokka, kuvaAuki = null, indeksi = 0) {
   const kehys = pohjaSolmu('figure', `tk-kuva ${luokka}`);
   const img = document.createElement('img');
   img.src = kuva.url;
@@ -49,6 +49,11 @@ function pohjaKuva(kuva, luokka) {
   img.loading = 'lazy';
   img.decoding = 'async';
   if (kuva.rajaus) img.style.objectPosition = kuva.rajaus;
+  // Napautus avaa suurennoksen (pinnan oma kuvaselain), jos pinta antaa sen.
+  if (kuvaAuki) {
+    kehys.classList.add('tk-kuva--suurennettava');
+    img.addEventListener('click', (e) => { e.stopPropagation(); kuvaAuki(kuva, indeksi, img); });
+  }
   kehys.appendChild(img);
   if (kuva.kuvateksti) kehys.appendChild(pohjaSolmu('figcaption', 'tk-kuvateksti', kuva.kuvateksti));
   return kehys;
@@ -62,7 +67,7 @@ export function pohjaSisalto(isa, d, { kuvaAuki = null } = {}) {
   const hero = d.kuvat.find((k) => k.rooli === 'hero');
   const upotus = d.kuvat.find((k) => k.rooli === 'upotus');
   const galleria = d.kuvat.filter((k) => k.rooli === 'galleria');
-  if (hero) isa.appendChild(pohjaKuva(hero, 'tk-kuva--hero'));
+  if (hero) isa.appendChild(pohjaKuva(hero, 'tk-kuva--hero', kuvaAuki, d.kuvat.indexOf(hero)));
   else if (d.otsikko) isa.appendChild(pohjaSolmu('hr', 'tk-viiva'));
   if (galleria.length) {
     const nauha = pohjaSolmu('div', 'tk-galleria');
@@ -75,14 +80,14 @@ export function pohjaSisalto(isa, d, { kuvaAuki = null } = {}) {
       img.alt = '';
       img.loading = 'lazy';
       b.appendChild(img);
-      b.addEventListener('click', () => kuvaAuki?.(k, i));
+      b.addEventListener('click', () => kuvaAuki?.(k, d.kuvat.indexOf(k), b.querySelector('img')));
       nauha.appendChild(b);
     });
     isa.appendChild(nauha);
   }
   // Runko pitää upotuksen sisällään; teksti kiertää sen (kuvasääntö 2 kuvaa).
   const runko = pohjaSolmu('div', 'tk-runko');
-  if (upotus) runko.appendChild(pohjaKuva(upotus, 'tk-kuva--upotus'));
+  if (upotus) runko.appendChild(pohjaKuva(upotus, 'tk-kuva--upotus', kuvaAuki, d.kuvat.indexOf(upotus)));
   for (const k of d.kappaleet) {
     if (k.otsikko) runko.appendChild(pohjaSolmu('h3', 'tk-valiotsikko', k.otsikko));
     if (k.teksti) runko.appendChild(pohjaSolmu('p', `tk-leipa${k.korostus ? ' tk-leipa--korostus' : ''}`, k.teksti));
