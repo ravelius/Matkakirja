@@ -176,7 +176,7 @@ Tekstit on kirjoitettu kuunneltaviksi: lyhyet virkkeet, ei sulkeita, lyhenteitä
 
 **Sokrates · n. 470–399 eaa.** (26 merkkiä)
 
-Muoto: ristiviittaus olemassa oleviin teksteihin ("n. 570–522 eaa.", "Solon (630–560 eaa.)"), joissa käytetään ajatusviivaa (–), "n." epävarmoille vuosille ja "eaa." lopussa. Sokrateen syntymävuosi on 470 tai 469 eaa., joten "n." on perusteltu; kuolinvuosi 399 on varma. Nimirivin erottimena "·" on omasi pyynnön mukainen; jos pelin tyyli käyttää sulkeita ("Sokrates (n. 470–399 eaa.)"), vaihda.
+Muoto vastaa olemassa olevia tekstejä ("n. 570–522 eaa.", "Solon (630–560 eaa.)"), joissa käytetään ajatusviivaa (–), "n." epävarmoille vuosille ja "eaa." lopussa. Sokrateen syntymävuosi on 470 tai 469 eaa., joten "n." on perusteltu; kuolinvuosi 399 on varma. Nimirivin erottimena "·" on Päätoimittajan pyynnön mukainen; jos pelin tyyli käyttää sulkeita ("Sokrates (n. 470–399 eaa.)"), vaihda.
 
 ### 7.2 Kolme kierrosta
 
@@ -240,7 +240,7 @@ Haettu Wikimedia Commonsin hakurajapinnasta (lisenssikentät lueteltu sanatarkas
 **Hylätyt:**
 - IMSLP, University of Chicago Orchestra -esitys: CC BY-NC-ND 3.0 → NC ja ND, ei käy.
 - Internet Archive, Eugene Ormandy / Philadelphia Orchestra (LP): kaupallinen levytys, ei vapaa.
-- File:Strauss "Also Sprach Zarathustra" ending.wav: vain *lopun* pätkä (Public domain), ei aurinkoisen alun fanfaari.
+- File:Strauss "Also Sprach Zarathustra" ending.wav: vain *lopun* pätkä (Public domain), ei alun fanfaari.
 
 **Lähteet (musiikki):**
 - Commons, hakurajapinta: <https://commons.wikimedia.org/wiki/File:Also_Sprach_Zarathustra_-_Einleitung.ogg>, <https://commons.wikimedia.org/wiki/File:Richard_Strauss_-_Also_Sprach_Zarathustra.ogg> (lisenssikentät luettu rajapinnasta)
