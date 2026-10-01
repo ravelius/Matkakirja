@@ -9,6 +9,7 @@ Kytke Remote Control päälle (set_remote_control self). Session id on ennallaan
 
 Tilanne 06.3x: viikkokiintiö 95 % (get_usage). **97 %:ssa** tee muistin viikkoraja-97-siirtoprompti-kaava: roolit pushaavat luovutuksen
 (useimmat jo tehty 06.0x–06.2x) ja lopettavat, päivitä siirtoprompti-20261001.md:n roolitaulukko (haara ja SHA), anna omistajalle
-kohdan 1 aloitusviesti koodilohkona ja pysäytä sessiot. Omistajalle on annettu TOIMI TARVITAAN: linnan osoitinkomento (lupa annettu,
-paketti 02987940f6567fd2 kuitattu, #3763 pidossa) ja TF:n sisäisen ryhmän tarkistus. Jos saat nollauksen jälkeen vanhoja viestejä,
+kohdan 1 aloitusviesti koodilohkona ja pysäytä sessiot. Linnan osoitin vaihdettiin 07.29 → 02987940f6567fd2 (Julkaisija, omistajan
+luvalla; jäädytys purettu, #3763 junan etusijalla); Siirtoseppä todentaa puhtaalla asennuksella. Omistajalla auki: TF:n sisäisen
+ryhmän tarkistus. Jos saat nollauksen jälkeen vanhoja viestejä,
 ne on jo käsitelty. Tarkista get_usage noin 10 vuoron välein ja nollaa itsesi 65 %:ssa.

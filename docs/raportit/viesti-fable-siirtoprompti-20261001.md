@@ -14,13 +14,11 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 > levyn-vapautus-mergetyt-worktreet). Luo roolisessiot kohdan 3 taulukon mukaan, lähetä kullekin aloitusviesti, kytke oma
 > Remote Control päälle ja jatka kohdan 2 jonosta.
 
-## 2. Tila ja jono (1.10. klo 06.1x)
+## 2. Tila ja jono (1.10. klo 06.1x, päivitetty 07.3x)
 
-1. **Linnan osoitin, LUPA ANNETTU 06.2x (omistajan toimi, kun TF 90 näkyy hänellä):**
-   `gh workflow run vie-dioraama.yml --repo ravelius/Matkakirja --ref main -f rakennus=olavinlinna -f kuiva=false -f osoitin=true`.
-   Kuitattu paketti 02987940f6567fd2 (v19 + v3c + taivas, main 22bf2c6c6) junan 90 .appilla, 0 virhettä. Linnan jäädytys on päällä
-   (#3763 puukortit pidossa, Julkaisijan pidossa.txt), joten mainin kärki tuottaa tämän paketin. Kun omistaja on ajanut komennon:
-   todenna osoitin puhtaalla asennuksella, vapauta jäädytys ja vie #3763 seuraavaan osoitinkierrokseen.
+1. **Linnan osoitin VAIHDETTU 07.29** → 02987940f6567fd2 (v19 + v3c + taivas, main 22bf2c6c6; Julkaisija omistajan luvalla,
+   ajo 36815257246, julkinen uusin.json vahvistettu). Jäädytys purettu, #3763 puukortit junan etusijalla (seuraava osoitinkierros).
+   Siirtoseppä todentaa osoittimen puhtaalla asennuksella (pyyntö 07.3x); odota kuittausrivi.
 2. **TF:n sisäinen ryhmä:** 85:n ajossa ASC ei palauttanut yhtään isInternalGroup-ryhmää (82:lla "Beta testaajat", automaattijako).
    testflight-sisainen.yml estyi Julkaisijan luokittimeen. Omistaja tarkistaa ASC:stä tai sallii ajon Julkaisijan sessiossa.
 3. **TF:** 84 sisäinen, 85, 86–91 Arvioijat-ryhmässä ja beta-arviossa (julkinen linkki). 89 = äänimikseri (omistajan 5 rivin ohje
@@ -40,14 +38,14 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 | Rooli | Checkout | Haara | Malli | Kärki |
 |---|---|---|---|---|
 | Postivahti | Matkakirja-posti | postivahti | Sonnet, medium | kierto 10 min, viikkoraja 94/97 %, levy |
-| Julkaisija | Matkakirja-julkaisija | julkaisija-luovutus-20260928 | Opus, high | osoitinehto, #3759/#3760, TF 90, sisäinen ryhmä |
+| Julkaisija | Matkakirja-julkaisija | julkaisija-luovutus-20260928 | Opus, high | #3763 puukortit junan etusijalla, TF 91 beta-arviossa, sisäinen ryhmä |
 | Natiiviseppä | Matkakirja-3d-selvittaja | selvittaja-3d-luovutus | Opus, high | juna 91; S2-lisäysversio ehdoin |
 | Natiivi-UI | Matkakirja-natiivi-ui | natiivi-ui-luovutus-m | Opus, high | pelaajan näkymän todennus ilman kehittäjätilaa |
 | Pelikoodari | Matkakirja-pelikoodari | pelikoodari-tyo-20260923 | Opus, high | Pulun TF-todennukset (kartan paperiteema, Ihmisen matka) |
 | Linssiseppä | Matkakirja-linssiseppa | linssiseppa-tyo-20260923 | Opus, high | pallokorjaus 06822cb9; S2-sävytys (23e40639) S2-erän mukana |
 | Linssiseppä 2 | Matkakirja-linssiseppa-2 | linssiseppa2-tyo-20260928 | Opus, high | S2-kyyti, muistimittaus iPadilla |
 | Linnanrakentaja | Matkakirja-linnanrakentaja | linnanrakentaja-tyo-20260929 | Opus, high | puukortit v3 PR, seuraava laatuaskel |
-| Siirtoseppä | Matkakirja-siirtoseppa | siirtoseppa-luovutus | Opus, high | mainin kärjen paketin kuittaus osoitinta varten |
+| Siirtoseppä | Matkakirja-siirtoseppa | siirtoseppa-luovutus | Opus, high | osoittimen 02987940 todennus puhtaalla asennuksella |
 | Karttaseppä | Matkakirja-karttaseppa | karttaseppa-tyo-20260922 | Opus, high | S2 2026-10-01b (polttovahti), vienti ämpäriin |
 | Sisältökirjuri | Matkakirja-sisaltokirjuri | sisalto-pelikatalogi-20260927 | Sonnet, high | kuva2 A (konflikti), D, E, F |
 | Laitetestaaja | Matkakirja-laitetestaaja | laitetestaaja-savukierros-b13 | Sonnet, high | savukkeet pyynnöstä |
