@@ -44,3 +44,4 @@ UI-siirtymiä. Suunnitelma ja säännöt: `ui-pohjat-kartoitus-20261001.md`. Sä
 - Webin `--kulta` on määrittelemätön (var(--kulta, #eab84e) / #d9a13b / ilman varaa): Pelikoodari yhtenäistää KORTTI-siirrossa.
 - Kuollut koodi (taikalasit-nappi, Muut-paneeli, .mk-minipuluKortti*, USS-tuplat) poistetaan kunkin pinnan siirrossa.
 - Pohjagalleria (`ui pohjat`) Akropolis-datalla (web js/pohjat/tyylikirja-sivu.js TKS_PERUS, TKS_KUVAT) savukkeen kuvaregressioon.
+- Tyylitiedostojen jako (Pelikoodari 2.10., hyväksytty): web css/pohjat/<pohja>.css + css/pohjat/pinnat/<pinta>.css kiinteällä latauslistalla; natiivi samoin nimin UI/Resources/MatkakirjaUI/Pohjat/*.uss (Matkakirja.uss:n loppuun lisätyt pohjaosiot aiheuttavat junakonflikteja). Oma PR ilman ulkoasumuutoksia, kuvavertailu 0 px.
