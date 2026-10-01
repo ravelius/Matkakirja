@@ -96,3 +96,37 @@ Huom: skannauksen tarkkuus näkyy lähikuvassa (poski) pehmeänä pintana; se on
 - Ääni (lukija, musiikki) tulee erikseen; kierrokset 2–3 ja Pulun kysymykset (UI) eivät kuulu videoon.
 
 ![v5: intro 1–3, Rembrandt + nimi, kysymys](kuvat/sokrates-20261001/sokrates-v5-ruudut.jpg)
+
+## v6 (omistaja 23.0x) ja v7 (omistaja 23.1x)
+- v6: kaikki ajot Bezier-käyrillä (AUTO_CLAMPED), intron leikkaukset CONSTANT; 38a 25 % hitaammin (340 ruutua);
+  kierto ±22° ja sivuliuku ±8 mm jatkuvat tekstin yli; lähderivin jälkeen 12 s pito lukijalle.
+- v7: intron leikkaukset osuvat musiikkiin. Valoa kohti kasvoja tullut otos on poistettu.
+  - Leikkauskohdat: trumpetit (13,48 s ja 14,88 s), sointu (16,92 s) ja patarummut (20,84 s ja 21,60 s).
+  - Musiikki hyppää loppusointuun (60,6 s), joka osuu Rembrandt-otokseen nimen kanssa.
+  - Syväterävyys on pois, ja kipsin pinnassa on hieno kuvio (Poly Haven grey_plaster_02, Rob Tuytel, CC0;
+    korkeuskartta kuhmuna laatikkoprojektiolla, toisto noin 3,5 cm). Reaaliajassa sama kartta toimii
+    triplanar-detaljinormaalina.
+
+### Musiikki (`tools/linssit/blender/sokrates_aani.sh`)
+| Osa | Teos ja esitys | Lisenssi | Lähde |
+|---|---|---|---|
+| Intro | R. Strauss: Also sprach Zarathustra, Sascha Ende (filmmusic.io) | CC BY 4.0 | Commons: Sascha_Ende_-_Also_Sprach_Zarathustra_(feat._Richard_Strauss)_(cc-by)_(filmmusic).mp3 |
+| Mietelauseet | E. Satie: Gymnopédie nro 1, Robin Alciatore, piano (Musopen) | PD | Commons: Erik_Satie_-_gymnopedies_-_la_1_ere._lent_et_douloureux.ogg |
+
+Tekijämaininta: *"Also Sprach Zarathustra" – Sascha Ende (feat. Richard Strauss), CC BY 4.0, filmmusic.io.*
+Tahtikohdat mitattiin äänen energian nousuista (koko kaista, alle 120 Hz ja 700 Hz:n oktaavikaista).
+
+### Luenta (omistajan lupa 23.1x; tekstit sanatarkasti)
+Resepti on sama kuin `tools/generoi-luennat.mjs`:ssä: Viisas Kertoja (Sz0tRTEpybtDJ9ru2kgD), eleven_v3,
+/v1/text-to-dialogue, mp3_44100_192, stability 0.5, lopputauko 1,0 s. Työkalu on `tools/linssit/sokrates_luennat.mjs`,
+ja tiedostot ovat kansiossa `/Users/Shared/Claude/proto-3d/_lahteet/sokrates/luennat/` (ääni ei kuulu repoon).
+
+| Pätkä | Merkkejä | Otot | Kesto |
+|---|---|---|---|
+| a (38a) | 52 | 1 | 3,6 s |
+| b (sotilas) | 189 | 1 | 15,5 s |
+| c (21d) | 38 | 1 | 3,0 s |
+| d (oraakkeli) | 174 | 1 | 13,0 s |
+| e (Kriton 49b) | 36 | 1 | 2,5 s |
+| f (tuomio) | 224 | 1 | 18,6 s |
+| **Yhteensä** | **713** | **6** | |

@@ -12,6 +12,7 @@ from mathutils import Vector
 A = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
 STL = '/Users/Shared/Claude/proto-3d/_lahteet/smk/KAS635/smk-inv-635.stl'
 KORKEUS = 0.51                       # museon mitta (cm → m); skannauksen yksiköt ovat mielivaltaiset
+PH = '/Users/Shared/Claude/proto-3d/_lahteet/polyhaven'   # CC0-tekstuurit (v7: grey_plaster_02)
 GOBO_LEV, GOBO_KORK = 0.172, 0.129     # gobon ala projisointietäisyydellä (m), kuvasuhde 4:3 kuten sokrates_gobo.py
 
 
@@ -756,3 +757,102 @@ if '--v6' in A:
         sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
         bpy.ops.render.render(write_still=True)
     print('SOKRATES: v6 valmis', ULOS)
+
+
+# ---------- mallikuva v7 (omistajan päätökset 1.10. 23.1x): musiikkiin leikattu intro, terävä pinta, luenta ----------
+# - Intron leikkaukset osuvat Zarathustran (Sascha Ende, CC BY 4.0) trumpetteihin, sointuun ja patarumpuihin;
+#   musiikki 13,0–22,4 s → hyppy loppusointuun 60,5 s: suuri sointu tulee Rembrandt-otokseen nimen kanssa.
+#   Valoa kohti kasvoja tullut otos on poistettu (omistaja: "ei toiminut").
+# - Terävä pinta: syväterävyys pois; kipsin hieno pintakuvio (Poly Haven grey_plaster_02, Rob Tuytel, CC0, korkeus
+#   kuhmuna laatikkoprojektiolla ~3,5 cm:n toistolla; reaaliajassa sama kartta triplanar-detaljinormaalina).
+# - Kierros 1: 38a nauhana + a-luenta, sitten pito + b-luenta. Ääni kootaan erikseen (sokrates_aani.sh).
+V7_OTOKSET = (  # (ruutu, kameran paikka, katsepiste, polttoväli mm); ruutu = musiikin isku (30 r/s, alku 13,0 s)
+    (1, (0.62, -0.10, 0.38), (0.0, -0.10, 0.38), 50),      # rumpujen pohjasävel: profiili vastavalossa
+    (15, (0.26, -0.30, 0.72), (0.0, -0.09, 0.40), 35),     # trumpetti 1 (13,48 s): ylhäältä otsan yli
+    (57, (-0.05, -0.36, 0.13), (0.0, -0.10, 0.36), 28),    # trumpetti 2 (14,88 s): parran alta kohti nenää
+    (119, (0.30, -0.27, 0.47), (0.0, -0.11, 0.43), 50),    # sointu (16,92 s): otsan rypyt valon puolelta
+    (236, (0.30, -0.34, 0.42), (0.03, -0.10, 0.38), 50),   # patarumpu (20,84 s): silmä ja kulmakaari
+    (259, (0.30, -0.36, 0.22), (0.02, -0.11, 0.30), 50),   # patarumpu (21,60 s): parta ja suu
+    (282, (-0.30, -1.02, 0.40), (-0.06, -0.06, 0.36), 35), # loppusointu (60,6 s): Rembrandt + nimi
+)
+V7_VALO = ((1, (0.55, 0.85, 0.30)), (119, (0.9, 0.55, 0.35)), (236, (1.0, -0.05, 0.6)), (259, (0.85, -0.45, 0.75)),
+           (282, (0.70, -0.70, 0.85)))
+V7_LAHESTY = (462, 555)       # nimi 282–372, kysymys 373–461
+V7_PROJ = (555, 900)          # 38a; a-luenta alkaa 600; lähderivi 902–950
+V7_KAARI_LOPPU = 965
+V7_PITO = 1450                # b-luenta alkaa 960 (15,5 s)
+V7_RENDER = list(range(1, 283)) + list(range(V7_LAHESTY[0], V7_KAARI_LOPPU + 1)) + [V7_PITO]
+
+
+def _kipsin_pinta(o):
+    """Kipsin hieno pintakuvio: grey_plaster_02-korkeus laatikkoprojektiolla kuhmuna (ei vaadi UV:ta)."""
+    m = o.data.materials[0]; nt = m.node_tree; b = nt.nodes['Principled BSDF']
+    tc = nt.nodes.new('ShaderNodeTexCoord'); mp = nt.nodes.new('ShaderNodeMapping'); mp.inputs['Scale'].default_value = (28.5,) * 3
+    nt.links.new(tc.outputs['Object'], mp.inputs['Vector'])
+    t = nt.nodes.new('ShaderNodeTexImage'); t.projection = 'BOX'; t.projection_blend = 0.25
+    t.image = bpy.data.images.load(os.path.join(PH, 'grey_plaster_02', 'grey_plaster_02_disp_2k.png'))
+    t.image.colorspace_settings.name = 'Non-Color'; nt.links.new(mp.outputs['Vector'], t.inputs['Vector'])
+    bu = nt.nodes.new('ShaderNodeBump'); bu.inputs['Strength'].default_value = 0.35; bu.inputs['Distance'].default_value = 0.0006
+    nt.links.new(t.outputs['Color'], bu.inputs['Height']); nt.links.new(bu.outputs['Normal'], b.inputs['Normal'])
+
+
+if '--v7' in A:
+    from mathutils import Matrix
+    i = A.index('--v7'); GOBOT, ULOS = A[i + 1], A[i + 2]; os.makedirs(ULOS, exist_ok=True)
+    i = A.index('--koko'); LEV, KORK = int(A[i + 1]), int(A[i + 2])
+    N = int(A[A.index('--naytteita') + 1]) if '--naytteita' in A else 16
+    RUUDUT = [int(v) for v in A[A.index('--ruudut') + 1].split(',')] if '--ruudut' in A else None
+    o = rakenna(N); sc = bpy.context.scene; _kipsin_pinta(o)
+    for nimi in ('sivu', 'reuna', 'tayte'):
+        bpy.data.objects[nimi].hide_render = True
+    taytto = bpy.data.lights.new('taytto', 'AREA'); taytto.energy = 0.25; taytto.size = 1.5
+    to = bpy.data.objects.new('taytto', taytto); sc.collection.objects.link(to); to.location = (-1.2, -1.0, 0.4); kohdista(to, PAA)
+    aur = bpy.data.lights.new('aurinko', 'SPOT'); aur.spot_size = math.radians(60); aur.spot_blend = 0.3
+    aur.shadow_soft_size = 0.012; aur.color = (1.0, 0.95, 0.88); aur.energy = 95
+    ao = bpy.data.objects.new('aurinko', aur); sc.collection.objects.link(ao)
+    for r, s_ in V7_VALO:
+        ao.location = PAA + Vector(s_).normalized() * 1.3; kohdista(ao, PAA)
+        ao.keyframe_insert('location', frame=r); ao.keyframe_insert('rotation_euler', frame=r)
+    for r, v in ((V7_LAHESTY[0], 95), (V7_PROJ[0], 38)):
+        aur.energy = v; aur.keyframe_insert('energy', frame=r)
+    p, n = osuma(-0.005, 0.418)
+    v4_projektori('tykki-otsa', p, (n + Vector((-0.40, -0.15, -0.30))).normalized(), 0.6, 0.075,
+                  os.path.join(GOBOT, 'nauha-otsa.png'), 0.016, (V7_PROJ[0] + 5, V7_PROJ[1] - 5), 70.0)
+    c, t, u = lentoasento(p, n, kulma=55, matka=0.11)
+    cd = bpy.data.cameras.new('k'); cd.sensor_fit = 'VERTICAL'; cd.sensor_height = 24; cd.clip_start = 0.003
+    cam = bpy.data.objects.new('k', cd); sc.collection.objects.link(cam); sc.camera = cam
+    tahtain = bpy.data.objects.new('tahtain', None); sc.collection.objects.link(tahtain)
+    tc = cam.constraints.new('TRACK_TO'); tc.target = tahtain; tc.track_axis = 'TRACK_NEGATIVE_Z'; tc.up_axis = 'UP_Y'
+    cd.dof.use_dof = False                                   # omistaja 23.1x: pinta terävänä tekstin ympärillä
+    tavat = {}
+    def avain(r, c_, q_, mm, tapa):
+        cam.location, tahtain.location, cd.lens = Vector(c_), Vector(q_), mm
+        for ob, ominaisuus in ((cam, 'location'), (tahtain, 'location'), (cd, 'lens')):
+            ob.keyframe_insert(ominaisuus, frame=r)
+        tavat[r] = tapa
+    for r, c_, q_, mm in V7_OTOKSET:
+        avain(r, c_, q_, mm, 'CONSTANT')
+    rem = V7_OTOKSET[-1]
+    avain(V7_LAHESTY[0], rem[1], rem[2], rem[3], 'BEZIER')
+    for osuus in (0.0, 1.0):
+        r = V7_LAHESTY[1] + round((V7_KAARI_LOPPU - V7_LAHESTY[1]) * osuus)
+        kierto = Matrix.Rotation(math.radians(-V6_KIERTO + 2 * V6_KIERTO * osuus), 3, n)
+        liuku = t * (-V6_LIUKU + 2 * V6_LIUKU * osuus)
+        avain(r, p + kierto @ (c - p) + liuku, p + liuku * 0.5, V3B_LINSSI, 'BEZIER')
+    avain(V7_PITO, cam.location.copy(), tahtain.location.copy(), V3B_LINSSI, 'BEZIER')
+    for idb in (cam, tahtain, cd):
+        act = idb.animation_data.action; kayrat = []
+        for kerros in getattr(act, 'layers', []):
+            for kaista in kerros.strips:
+                for cb in kaista.channelbags: kayrat += list(cb.fcurves)
+        for fc in kayrat:
+            for kp in fc.keyframe_points:
+                kp.interpolation = tavat.get(int(round(kp.co.x)), 'BEZIER')
+                kp.handle_left_type = kp.handle_right_type = 'AUTO_CLAMPED'
+            fc.update()
+    sc.frame_start, sc.frame_end = 1, V7_PITO; sc.render.fps = 30
+    sc.render.resolution_x, sc.render.resolution_y = LEV, KORK; sc.render.resolution_percentage = 100
+    for ruutu in (RUUDUT or V7_RENDER):
+        sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
+        bpy.ops.render.render(write_still=True)
+    print('SOKRATES: v7 valmis', ULOS)
