@@ -46,7 +46,7 @@ namespace Matkakirja.Natiivi
     }
 
     /// <summary>
-    /// NOSTOKORTTI-pohjan vetokahva (KAPEA): ylös laajentaa, alas sulkee, napautus vaihtaa korkeutta. Kuten kartan
+    /// NOSTOKORTTI-pohjan vetokahva (KAPEA): ylös laajentaa, alas pienentää laajennetun ja sulkee muuten, napautus vaihtaa korkeutta. Kuten kartan
     /// nostokortissa (Nostokortti.EleAlkoi/KahvaIrti, todennettu laitteella): painallus ja irrotus mitataan KORTILLA
     /// TrickleDown-vaiheessa ennen lapsia, vyöhyke on kortin koko yläreuna (28 pt), ja kortti kaappaa osoittimen, jotta
     /// kortin ulkopuolelle päättyvä veto ylös tulee perille. (Ennen kahvan oma 120 × 26 pt elementti, joka ei saanut
@@ -84,7 +84,8 @@ namespace Matkakirja.Natiivi
                 e.StopPropagation();
                 float dy = e.position.y - alku.y;
                 UnityEngine.Debug.Log($"MATKAKIRJA ui vetokahva: dy {dy:0}");
-                if (dy > Alas) { sulje(); return; }
+                // NOSTOKORTTI kohta 2 (omistaja 1.10. 11.17): laajennetusta alasveto palaa ensin 45 %:iin, vasta siitä sulkee.
+                if (dy > Alas) { if (laajennettu()) laajenna(false); else sulje(); return; }
                 if (dy < -Ylos) laajenna(true);
                 else if (UnityEngine.Mathf.Abs(dy) < Napautus) laajenna(!laajennettu());
             }, UnityEngine.UIElements.TrickleDown.TrickleDown);
