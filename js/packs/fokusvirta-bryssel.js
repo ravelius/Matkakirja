@@ -42,6 +42,8 @@ export const FOKUSVIRTA_BRYSSEL = {
       + 'Kulman takana pronssinen poika tekee tarpeensa suihkulähteeseen, ja '
       + 'koko kaupunki pitää sitä pyhänä. Ostin pitsiä, jota täällä kehrätään '
       + 'kuin hämähäkit kilpaa.',
+    /* LUENTA (tekstit kirjoitettu 30.9.2026; ääntä EI ole generoitu, omistajan lupa vaaditaan). */
+    luenta: "[curious] Bryssel, kesäkuussa 1873. Kaupunki on juuri haudannut jokensa: Senne katettiin kivellä, ja päälle vedettiin bulevardi, jolla herrasväki kävelee kuin joki ei olisi koskaan haissutkaan. [warmly] Grand-Placen kullatut kiltatalot kiiltävät sateen jälkeen kuin avattu korulipas. [excited] Kulman takana pronssinen poika tekee tarpeensa suihkulähteeseen, ja koko kaupunki pitää sitä pyhänä. Ostin pitsiä, jota täällä kehrätään kuin hämähäkit kilpaa.",
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

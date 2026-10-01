@@ -41,6 +41,8 @@ export const FOKUSVIRTA_KOSICE = {
       + 'kuin tori, ja sen keskellä kultainen Immaculata muistuttaa rutosta, '
       + 'jonka kaupunki selätti. Kapakassa juodaan tokajia ja puhutaan kolmea '
       + 'kieltä samassa lauseessa.',
+    /* LUENTA (tekstit kirjoitettu 30.9.2026; ääntä EI ole generoitu, omistajan lupa vaaditaan). */
+    luenta: "[curious] Kassa (Košice), lokakuussa 1873. Juna toi minut Krakovasta vuorten läpi, ja Karpaatit jäivät taakse kuin kynnys. Pyhän Elisabetin tuomiokirkko on niin suuri, että kaupunki tuntuu rakennetun sen ympärille; kivi on kulunut, mutta tornit seisovat. [softly] Pääkatu on leveä kuin tori, ja sen keskellä kultainen Immaculata muistuttaa rutosta, jonka kaupunki selätti. [warmly] Kapakassa juodaan tokajia ja puhutaan kolmea kieltä samassa lauseessa.",
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
