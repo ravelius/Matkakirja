@@ -1,8 +1,48 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "410eaf99f75d79be",
-  "kansio": "dioraama/olavinlinna/blender/410eaf99f75d79be/",
+  "hash": "ae007b5d7789880a",
+  "kansio": "dioraama/olavinlinna/blender/ae007b5d7789880a/",
   "tiedostot": [
+    {
+      "polku": "kirjasto/materiaali/graniittilohkomuuri/graniittilohkomuuri_diff.jpg",
+      "sha256": "35615ed619b14ab8991205e887a24cadcf8edffdf15b36b153421604b9ba29ce",
+      "tavuja": 2382913
+    },
+    {
+      "polku": "kirjasto/materiaali/graniittilohkomuuri/graniittilohkomuuri_nor_gl.jpg",
+      "sha256": "ce7935ef7b418a7e20ade08311443deb0b30a0f77559879780bba2e2e07f5a44",
+      "tavuja": 3578159
+    },
+    {
+      "polku": "kirjasto/materiaali/kallio/kallio_diff.jpg",
+      "sha256": "f2ec7a10c6cb929653278e00dcfb0e7e07aea178136a37eac7478d2b9cdd5e96",
+      "tavuja": 4010129
+    },
+    {
+      "polku": "kirjasto/materiaali/kallio/kallio_nor_gl.jpg",
+      "sha256": "89b28336282a07492080a20725d18c7649ae69b1d8e10187ffe143c804bd6d2c",
+      "tavuja": 4844348
+    },
+    {
+      "polku": "kirjasto/materiaali/kivilaatta/kivilaatta_diff.jpg",
+      "sha256": "bf405e4e8a2d720976f710c4bb6de7734bc0bea613657e6c9362d3716418cc51",
+      "tavuja": 3569941
+    },
+    {
+      "polku": "kirjasto/materiaali/kivilaatta/kivilaatta_nor_gl.jpg",
+      "sha256": "b4c84fd11853cceab87aa1d9e5fbe5699e12993bc2abbf06908a35b0dbf0c548",
+      "tavuja": 3947495
+    },
+    {
+      "polku": "kirjasto/materiaali/paanukatto/paanukatto_diff.jpg",
+      "sha256": "880583ff7508599b1dd6e83a6c70604120ad35f7ad187b1e98457c1a9d7b54ed",
+      "tavuja": 1388588
+    },
+    {
+      "polku": "kirjasto/materiaali/paanukatto/paanukatto_nor_gl.jpg",
+      "sha256": "2e2dbd57a8a1a09936b2a92373408c7658033966ffee25eddfe98b5988491da3",
+      "tavuja": 1750511
+    },
     {
       "polku": "tilat/fatabuuri.glb",
       "sha256": "2504fa1cbcbccc9b160f0c65055524bac10c7bfc3dd134a4f0e4b719c03e9840",
@@ -44,49 +84,69 @@
       "tavuja": 541700
     },
     {
+      "polku": "ulkokuori/hybridi/kuori-materiaali-2k.png",
+      "sha256": "ce186e19fd683715a2cfb80237215e3a9e72ee4e8d33a3535bc3ba8d8b5289e8",
+      "tavuja": 4394079
+    },
+    {
       "polku": "ulkokuori/ulkokuori-2k-4x4.astcm",
-      "sha256": "b197210cfc069fb422316b00c5386bc2d284f0c85b5bc436a80965b95eed36b4",
+      "sha256": "f21e10a3d61adca7b007d67d1c4704e6943f52a4c85c7f048317c9f60fcf52dc",
       "tavuja": 5592448
     },
     {
       "polku": "ulkokuori/ulkokuori-4k-4x4.astcm",
-      "sha256": "bb681bf254408ff1812da33ee44dff368f0a0d3cad90258bf54da686c3acccbc",
+      "sha256": "1ac6685cea4bb7f1856e405b07c678b0283eed95fd8b7161d10aae4f2e3aee39",
       "tavuja": 22369664
     },
     {
+      "polku": "ulkokuori/ulkokuori-8k-4x4.astcm",
+      "sha256": "ed52d9480131f9a13c34b3ad9f57ac37e9184b957d752e565178120fa620e20a",
+      "tavuja": 89478528
+    },
+    {
       "polku": "ulkokuori/ulkokuori-hamara-2k-4x4.astcm",
-      "sha256": "3390cd94d04d9160d1af354893274739b7d49a7e32067c99c39cef36c65fb347",
+      "sha256": "7766ea76d2d5c2ef0047b193d62b70638002917dd391646d8ee4dc59d8808293",
       "tavuja": 5592448
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-2k.jpg",
-      "sha256": "aeecb8586aa77352e95a1e82c7c49621c2769742f72d84e8fa19e4a68700857a",
-      "tavuja": 910364
+      "sha256": "4556a96b15682a07e02a02eb61b8716eba1d2a41d562c51336317c731d6c479a",
+      "tavuja": 1368703
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k-4x4.astcm",
-      "sha256": "82ec9faeb081f0de9973b6cc9ff66c0e8e6366aebb3b2313af5c9a26d2205ad9",
+      "sha256": "cd87ec4dc4e39be961de0eb062cab2c597d53037c856c6820a6b66dd6d900da3",
       "tavuja": 22369664
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k.jpg",
-      "sha256": "03f0d75d9b8fec307588eb0e41ac5769427416bfc4f21c2cf060ceec476f8e9c",
-      "tavuja": 2935821
+      "sha256": "6babb9f62145d47004e23ca991a0be1758cfdf624efe121240037847b1de193b",
+      "tavuja": 4876968
+    },
+    {
+      "polku": "ulkokuori/ulkokuori-hamara-8k-4x4.astcm",
+      "sha256": "cf68158d610778d8c3210fad47d4af72aa9a4da68be36983bec816d77f054492",
+      "tavuja": 89478528
+    },
+    {
+      "polku": "ulkokuori/ulkokuori-hamara-8k.jpg",
+      "sha256": "3107e102b9a70daedee0ab78951817348eb5aa01e03b026c8408ea22d5b5930b",
+      "tavuja": 15224516
     },
     {
       "polku": "ulkokuori/ulkokuori_huippu.glb",
-      "sha256": "597eac70e58b793345b2c5d6dd2f2fca82e698d4b544c8fb5cb6d5ee3ff09e3a",
-      "tavuja": 66585168
+      "sha256": "cdd0b332105af242023f99a8ae069748a2bb6f2cfed7e17ef1b45f0cbec4bf83",
+      "tavuja": 71450008
     },
     {
       "polku": "ulkokuori/ulkokuori_kevyt.glb",
-      "sha256": "8ba8925a7ca4586a47cc6d532a0107c1b989c0061b9ce5dabc333200e8d78ec6",
-      "tavuja": 12703668
+      "sha256": "0ba3195b7b4d493cd33b76aeeff0978cfd2fc23baa2ce75869e2efd991ca2302",
+      "tavuja": 13069720
     },
     {
       "polku": "ulkokuori/ulkokuori_normaali.glb",
-      "sha256": "c8ab3ea2e7741a658a1bd4202e6d692260b7d7a65449cf3346292dde6ac871af",
-      "tavuja": 32862676
+      "sha256": "92b08eae528858cff8da3442741886d5922ce7bde0bb24c66ac0df4ec83e12fa",
+      "tavuja": 33450616
     },
     {
       "polku": "valot/fatabuuri-2k-4x4.astcm",

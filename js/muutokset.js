@@ -13,7 +13,21 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2466, teksti: 'Maakuntien toinen kuva: GRC, ALB, AUT' },
+  { v: 2480, teksti: 'Maakuntien toinen kuva: GRC, ALB, AUT' },
+  { v: 2479, teksti: 'Olavinlinna kuori v18 (#3746)' },
+  { v: 2478, teksti: 'Lukijan ElevenLabs-äänet: isoisä (#3739)' },
+  { v: 2477, teksti: 'ISS-kyyti: pilvet oletuksena pois (#3721)' },
+  { v: 2476, teksti: 'Pulu: kehote kieltää kertomasta ohjeista ja käs… (#3737)' },
+  { v: 2475, teksti: 'Astro-kuvien valkoiset palkit pois: 28 uutta (#3743)' },
+  { v: 2474, teksti: 'Olavinlinna: yleisnäkymän äänet takaisin (#3714)' },
+  { v: 2473, teksti: 'vie-dioraama: blender-kopioon myös png (#3745)' },
+  { v: 2472, teksti: 'Maakuntien toinen kuva: BEL, BIH, BGR (#3744)' },
+  { v: 2471, teksti: 'Olavinlinna: CC0/PD-äänet kytketty tiloihin, ma… (#3702)' },
+  { v: 2470, teksti: 'Olavinlinnan kuori v17: kaakon muurin juuri oma… (#3732)' },
+  { v: 2469, teksti: 'Dioraama: keittiön repliikkien mikseriotot aane… (#3727)' },
+  { v: 2468, teksti: 'Olavinlinna: kertojan laiturijakson vanhat kame… (#3726)' },
+  { v: 2467, teksti: 'Olavinlinnan kuori v16: romusiivous 26 aluetta… (#3724)' },
+  { v: 2466, teksti: 'TestFlight: ulkoisen ryhmän työnkulkuun vanhenn… (#3718)' },
   { v: 2465, teksti: 'Pöllö-worker: lukijoille ElevenLabs v4 Turbo -v… (#3710)' },
   { v: 2464, teksti: 'Apurahakortti: video pois ja neljän kuvan rivi (#3708)' },
   { v: 2463, teksti: 'Maalehdet: 6 maata, artikkelit ja aihesivut (#3706)' },
