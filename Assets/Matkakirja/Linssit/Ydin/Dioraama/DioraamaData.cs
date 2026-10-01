@@ -480,6 +480,9 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Paketin muoto 1.10. (rakenna.mjs): puukortit = atlas-png ja puukortit_tiedot = json; aluskasvit.atlas = png ja
         /// aluskasvit.kortit = json. Vanha muoto (json suoraan puukortit/atlas-kentässä, png sen "atlas"-avaimesta) toimii yhä.</summary>
         public string PuukortitTiedot, AluskasvitKortit;
+        /// <summary>Puukorttien tangenttiavaruuden normaalikartta (puukortit v3, #3763: OpenGL, kortin tasossa, sama atlasjako
+        /// kuin puukortit); null = tasainen kortti.</summary>
+        public string PuukortitNormaali;
         /// <summary>Taivas equirect-kuvana (Linnanrakentajan Poly Haven -HDRI sävykartoitettuna): päivä, hämärä ja
         /// atsimuutti (°), johon kuvan u = 0 osoittaa; null = liukuväri.</summary>
         public string Taivas, TaivasHamara;
@@ -618,7 +621,7 @@ namespace Matkakirja.Linssit.Dioraama
                 {
                     Huippu = MiniJson.Teksti(ymp, "huippu"), Normaali = MiniJson.Teksti(ymp, "normaali"), Kevyt = MiniJson.Teksti(ymp, "kevyt"),
                     OrtoHuippu = MiniJson.Teksti(orto, "huippu"), OrtoNormaali = MiniJson.Teksti(orto, "normaali"), OrtoKevyt = MiniJson.Teksti(orto, "kevyt"),
-                    Puut = MiniJson.Teksti(ymp, "puut"), Puukortit = MiniJson.Teksti(ymp, "puukortit"), PuukortitTiedot = MiniJson.Teksti(ymp, "puukortit_tiedot"),
+                    Puut = MiniJson.Teksti(ymp, "puut"), Puukortit = MiniJson.Teksti(ymp, "puukortit"), PuukortitTiedot = MiniJson.Teksti(ymp, "puukortit_tiedot"), PuukortitNormaali = MiniJson.Teksti(ymp, "puukortit_normaali"),
                     Horisontti = MiniJson.Teksti(ymp, "horisontti"), HorisonttiKuva = MiniJson.Teksti(ymp, "horisontti_kuva"),
                     SyvyysKuva = MiniJson.Teksti(syv, "kuva"),
                 };
