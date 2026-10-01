@@ -1,0 +1,18 @@
+// Pillerivalikon Linssit-näkymä PANEELI-pohjalla (Natiivi-UI 1.10.2026, 2. erä A): vain ulkoasu, tokeneista.
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+
+const CSS = readFileSync(new URL('../css/pohjat.css', import.meta.url), 'utf8');
+
+test('kokoelmanäkymien kehysmuuttujat paperiarvoiksi puetussa valikossa', () => {
+  assert.match(CSS, /\.paavalikko\.tk-paneeli--paikallaan \{\n {2}--ink-light: var\(--tk-muste\);\n {2}--accent: var\(--tk-korostus\);/);
+});
+
+test('Linssit: rivi 38, päällä kapiteelina, valittu pergamentilla ja toimintoreunuksella, väliotsikko viivalla', () => {
+  assert.match(CSS, /#pilleri-linssit-nakyma \.kokoelma-rivi \{[\s\S]*?min-height: var\(--tk-nappi-korkeus\);/);
+  assert.match(CSS, /#pilleri-linssit-nakyma \.kokoelma-rivi\.aktiivinen::after \{[\s\S]*?color: var\(--tk-korostus\);/);
+  assert.match(CSS, /#pilleri-linssit-nakyma \.kokoelma-rivi\.esikatselu \{[\s\S]*?background: var\(--tk-pergamentti\);/);
+  assert.match(CSS, /#pilleri-linssit-nakyma \.kokoelma-otsikko \{[\s\S]*?border-bottom: 1px solid var\(--tk-reunus\);/);
+  assert.match(CSS, /#pilleri-linssit-nakyma \.kokoelma-esikatselu-selite \{[\s\S]*?font-style: italic;/);
+});
