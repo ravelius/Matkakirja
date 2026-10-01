@@ -9747,3 +9747,7 @@ Omistaja valitsi Linssisepän kokeilusta (haara linssiseppa/cupola-iso-ikkuna, k
 ## OMISTAJA: KÄÄNNÖSPALVELUUN .DS_STORE-SIIVOUS JA YKSI UUSINTA (1.10.2026) (1.10.2026 klo 17.04)
 
 Omistaja hyväksyi jaetun käännöspalvelun (proto-3d/tyokalut/proto-kaanna.sh) muutoksen: kun IosSimulaattori-vaihe kaatuu virheeseen "Directory not empty", sim.log tallennetaan, Build-kansioiden .DS_Store-tiedostot siivotaan ja käännös uusitaan kerran. Tiedostot syntyvät koodaus-tilillä macOS:n Finder-välimuistista (kansiokoot), eivät NAS:sta eivätkä omistajan tililtä. Muutos tehdään varmuuskopiolla (*.ennen-dsstore-uusinta-20261001) ja atomisella vaihdolla (Natiiviseppä). Lupa koskee vain tätä muutosta.
+
+## OMISTAJA: VISA KORTTI-POHJAAN VERSIO B, LOMAKEKENTTÄPOHJA OK (1.10.2026) (1.10.2026 klo 17.06)
+
+Omistaja valitsi Pelikoodarin mallista (visa-lomake-ehdotus.png) visalle version B: KORTTI-pohja, jossa tiimalasi säilyy pohjan poikkeuksena kortin kulmassa. Kapiteeli KAUPUNKI · PULMA, kysymys otsikkona, vastaukset pystynapeina, oljenkorret TOIMINTO-napeina ja 50:50-napin hinta (80 p) näkyvissä. Tyylikirjaan lisätään roolit onnistuminen #2f6b3f ja virhe #b03a2b (visan nykyiset värit). Lomakekenttä (tk-kentta) hyväksyttiin uudeksi pohjaosaksi, ja lomakkeen ensisijainen nappi on tk-nappi--ensisijainen. Toteutus web (Pelikoodari) ja natiivi (Natiivi-UI), kukin omana peruttavana PR:nään kuvaparin kanssa.
