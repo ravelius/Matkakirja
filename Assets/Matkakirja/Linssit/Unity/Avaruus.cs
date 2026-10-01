@@ -57,6 +57,14 @@ namespace Matkakirja.Natiivi
         /// 11 % 3,5:llä). Aiemmin 30.9. (foto5) 3,5, kun 4,5 sinersi maan liikaa.
         /// </summary>
         public static float IlmanVoima = 2.5f;
+        /// <summary>
+        /// Horisontin kaaren kerroin kuvaputkessa (Päätoimittaja 1.10. Linssiseppä 2:n kautta: julisteen suurin wau-tekijä):
+        /// Ilmakeha2 _KaariVoima vain, kun <see cref="Kuvaputki"/> on päällä; livenäkymässä aina 1. A/B `astro kyyti kaarivoima x`.
+        /// </summary>
+        public static float KuvanKaariVoima = 1f;
+        /// <summary>Kuvaputki päällä: valokuvauskulma (AstronauttiLinssi.Vertailu) tai pelaajan ISS-kamera (IssKameraKuva asettaa).</summary>
+        public static bool KuvaputkiAsetettu;
+        public static bool Kuvaputki => KuvaputkiAsetettu || Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu.HasValue;
         /// <summary>Monisironnan osuus (Ilmakeha2 _Moni): 0,45 paksuntaa horisontin sinistä reunavyötä (0,25 oli ohut ja himmeä).</summary>
         public static float IlmanMoni = 0.3f;   // NASA-vertailu vaakana 30.9. (foto6): 0,45 sinersi päivän maan ja vaalensi meren
         Mesh kuori, kaariKuori;
@@ -247,7 +255,7 @@ namespace Matkakirja.Natiivi
             var m = uusi ? kaari2 : kaari;
             if (kaariPiirto.sharedMaterial != m) kaariPiirto.sharedMaterial = m;
             if (uusi && lapinakyvyys != null && !lapinakyvyys.IsCreated()) { lapinakyvyys.Create(); Graphics.Blit(null, lapinakyvyys, kaari2, 0); }
-            if (uusi) { kaari2.SetFloat("_Peitto", kyyti); kaari2.SetFloat("_Voima", IlmanVoima); kaari2.SetFloat("_Moni", IlmanMoni); kaari2.SetFloat("_Hehku", HehkuPois ? 0f : IlmahehkunVoima); }
+            if (uusi) { kaari2.SetFloat("_Peitto", kyyti); kaari2.SetFloat("_Voima", IlmanVoima); kaari2.SetFloat("_Moni", IlmanMoni); kaari2.SetFloat("_Hehku", HehkuPois ? 0f : IlmahehkunVoima); kaari2.SetFloat("_KaariVoima", Kuvaputki ? KuvanKaariVoima : 1f); }
             kaari.SetFloat("_Peitto", kyyti);
             // Ilmahehku himmeämmäksi ja ohuemmaksi (laite cl4 28.9.: 0,32 piirsi kirkkaan vihreän viivan; ISS:n yökuvissa se on
             // ohut ja himmeä kellanvihreä kerros): voimakkuus 0,12, σ 4,5 km, sävy (0,55, 0,95, 0,5).

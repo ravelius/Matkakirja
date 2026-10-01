@@ -30,6 +30,7 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         _Moni("Monisironnan osuus", Float) = 0.25
         _MieG("Mie g", Float) = 0.8
         _Hehku("Ilmahehku", Float) = 0.12
+        _KaariVoima("Horisontin kaaren kerroin (kuvaputki, 1 = ennallaan)", Float) = 1
         _HehkuVari("Ilmahehkun sävy", Color) = (0.62, 0.9, 0.42, 1)
         _Lapinakyvyys("Transmittanssi-LUT", 2D) = "white" {}
         _Debug("Vianetsintä (0 = pois, 1 = T, 2 = matka/tulo, 3 = LUT)", Float) = 0
@@ -38,7 +39,7 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
         CBUFFER_START(UnityPerMaterial)
-            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku, _Debug;
+            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku, _Debug, _KaariVoima;
             float4 _Keskus, _Akseli, _Aurinko, _HehkuVari;
         CBUFFER_END
         TEXTURE2D(_Lapinakyvyys); SAMPLER(sampler_Lapinakyvyys);
@@ -192,6 +193,9 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                 float yo = 1.0 - smoothstep(-0.105, 0.0, dot(normalize(lahin), s));
                 // Pehmeä vyö (Päätoimittaja 30.9.: terävä viiva): σ 9 km ja leveämpi heikko helma, kirkkaus vaihtelee hieman
                 // sivuamispisteen suunnan mukaan (hitaat aallot, ± 25 %), kuten ISS:n yökuvissa.
+                // Kuvaputken kaari (Linssiseppä 1.10., Päätoimittaja: julisteen wau-tekijä): vain maan ohi kulkevat säteet, liuku
+                // 0–20 km:n sivuamiskorkeudella, jottei horisonttiin tule saumaa. 1 = ennallaan (livenäkymä).
+                L *= lerp(1.0, _KaariVoima, smoothstep(0.0, 20000.0, hmin) * (maa ? 0.0 : 1.0));
                 float dh = hmin - 95000.0;
                 float3 nl = normalize(lahin);
                 float aalto = 0.75 + 0.25 * sin(nl.x * 23.0 + nl.y * 17.0) * sin(nl.z * 29.0 - nl.x * 11.0);

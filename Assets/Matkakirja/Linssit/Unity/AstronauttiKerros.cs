@@ -348,7 +348,8 @@ namespace Matkakirja.Natiivi
             if (tila != KyydinTila.Kauko && revontulet == null) revontulet = Revontulet.Luo(georeferenssi);
             revontulet?.Nayta(tila != KyydinTila.Kauko);
             tahtienPeitto = tila == KyydinTila.Kauko ? 1f
-                : kyydinTaivas != null && kyydinTaivas.TahdetValmiit && !KyydinTaivas.Pois ? 0f : 0.3f;
+                : kyydinTaivas != null && kyydinTaivas.TahdetValmiit && !KyydinTaivas.Pois ? 0f
+                : Avaruus.Kuvaputki ? 0f : 0.3f;   // kuvaputkessa ei satunnaisia tähtiä (Päätoimittaja 1.10.)
             if (tila == KyydinTila.Ikkuna && cupola == null) cupola = CupolaKerros.Luo(kamera, georeferenssi);
             PaivitaKuukaudenPinta(tila != KyydinTila.Kauko);
             KyytiKasittelija?.Invoke(tila, korkeusKm, nopeusKmh, arvio, aika);

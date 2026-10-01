@@ -226,8 +226,9 @@ namespace Matkakirja.Natiivi
                 tahtiMat.SetVector(IdKiertoX, ex);
                 tahtiMat.SetVector(IdKiertoY, ey);
                 tahtiMat.SetVector(IdKiertoZ, Z);
-                // Päivällä valotus on auringon mukaan: tähdet lähes poissa (Päätoimittaja 30.9.: päivällä yhtä paljon kuin yöllä).
-                tahtiMat.SetFloat(IdPeitto, varjossa || VarjoPakko ? 1f : 0.04f);
+                // Päivällä valotus on auringon mukaan: tähdet lähes poissa (Päätoimittaja 30.9.: päivällä yhtä paljon kuin yöllä);
+                // kuvaputkessa päivällä tasan 0 (Päätoimittaja 1.10.: ei tähtiä päiväkuviin).
+                tahtiMat.SetFloat(IdPeitto, varjossa || VarjoPakko ? 1f : Matkakirja.Natiivi.Avaruus.Kuvaputki ? 0f : 0.04f);
             }
 
             var kuu = Kuu.Suunta(jd);
