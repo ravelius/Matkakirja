@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2531, teksti: 'Peruskartta 2026-09-30: raeton, ohuet joet, Perekop pois' },
+  { v: 2531, teksti: 'Periaatteet-ikkuna KORTTI-pohjalla (#3800)' },
   { v: 2530, teksti: 'Voitto- ja loppukortti KORTTI-pohjalla (#3798)' },
   { v: 2529, teksti: 'Astronautin kamera: AUTO-kierto, otsikkona pelk… (#3817)' },
   { v: 2528, teksti: 'Palautekortti KORTTI-pohjalla (#3796)' },
