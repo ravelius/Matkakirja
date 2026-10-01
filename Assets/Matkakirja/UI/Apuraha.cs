@@ -146,7 +146,7 @@ namespace Matkakirja.Natiivi
             var h = Rakenne.El("mk-himmennys mk-himmennys--tumma", juuri);
             h.style.display = DisplayStyle.None;
             h.RegisterCallback<PointerDownEvent>(ev => { if (ev.target == h) Sulje(); });
-            var kortti = new Kortti("mk-tietoja mk-apuraha");
+            var kortti = new Kortti("mk-tietoja mk-apuraha", pohja: true); // KORTTI-pohja (web #3795)
             h.Add(kortti);
             vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-tietoja__vieritys");
@@ -174,7 +174,7 @@ namespace Matkakirja.Natiivi
                     // Kaikki linssit heti, myös kokeilut, ilman pisteitä ja muuta kehittäjätilaa (LinssiOhjain.AvaaEsittelylinssit).
                     Button b = null;
                     void Valmis() { b.Q<Label>().text = k.NappiValmis; b.SetEnabled(false); }
-                    b = Rakenne.Nappi(k.NappiTeksti, "mk-nappi--haamu mk-apuraha__toiminto", () =>
+                    b = Rakenne.Nappi(k.NappiTeksti, "mk-nappi--toiminto mk-apuraha__toiminto", () =>
                     {
                         LinssiOhjain.AvaaEsittelylinssit();
                         Kaynti.Laheta("esittelylinssit");
@@ -212,7 +212,7 @@ namespace Matkakirja.Natiivi
             }
             kortti.Sisus.Add(vieritys);
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Nappi("Takaisin", "mk-nappi--haamu", Sulje, napit), Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(Rakenne.Nappi("Takaisin", "mk-nappi--toiminto", Sulje, napit), Kirjasin.KoneLihava);
             return h;
         }
 
