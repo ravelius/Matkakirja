@@ -1,4 +1,4 @@
-# Julkaisijan luovutus 1.10.2026 klo 07.3x (viikkokiintiö 95 %)
+# Julkaisijan luovutus 1.10.2026 klo 07.5x (TILINVAIHTO)
 
 Päivän kaikki vuorot: /Users/Shared/Claude/julkaisija-tyokalut/vuorot-20260928.txt (loppuosa).
 Pidossa: /Users/Shared/Claude/julkaisija-tyokalut/pidossa.txt.
@@ -23,17 +23,27 @@ Pidossa: /Users/Shared/Claude/julkaisija-tyokalut/pidossa.txt.
 
 - **Vaihdettu 07.29** omistajan suoralla luvalla → 02987940f6567fd2 (v19 + v3c + taivas; ajo 36815257246,
   julkinen uusin.json vahvistettu). Siirtoseppä todentaa TF 91 .appilla 07.3x.
-- Linnan jäädytys purettu; #3763 (puukortit v3) junassa → seuraava osoitinkierros: hash vie-dioraaman
+- Linnan jäädytys purettu; #3763 (puukortit v3) MERGETTY 07.4x; sen vie-dioraama-ajo 36817070107 oli
+  kesken tilinvaihdossa → hash: `gh run view 36817070107 --log | grep '\*\*olavinlinna'`. Seuraava osoitinkierros: hash vie-dioraaman
   lokista → Siirtosepän kuittaus → omistajan lupa → `gh workflow run vie-dioraama.yml --ref main
   -f rakennus=olavinlinna -f kuiva=false -f osoitin=true` (rakentaa mainin kärjestä).
 
-## Web-juna
+## Web-juna (tilinvaihdossa 07.53)
 
-- ketju-etusija8.sh (pid 2154): ennen jokaista PR:ää ajetaan etusija-seuraava.txt:n PR:t (linnan
-  rebasetut PR:t lisätään sinne: `echo NNNN >> julkaisija-tyokalut/etusija-seuraava.txt`), sitten
-  3723 3733 3738 3731 3735. ketju-3754.sh odottaa etusija8:n loppumista (#3754 maakuntakuvat C).
+- Ajossa **#3734** (viestirajahook, omistajan mergelupa 07.3x; ajojono.sh 3734). #3763 ja #3735 mergetty.
+- Taustalla jatkavat (nohup, eivät riipu sessiosta): ketju-etusija8.sh (pid 2154; etusija-seuraava.txt on
+  tyhjä, lista käyty → päättyy #3734:n jälkeen) ja ketju-3754.sh (pid 2192; ajaa #3754 maakuntakuvat C
+  etusija8:n jälkeen). Haltuunotto: `pgrep -fl "ketju-|ajojono.sh"`, lokit julkaisija-tyokalut/ketju-*.out;
+  merge-ilmoitukset: #3734 → Päätoimittaja, #3754 → Sisältökirjuri ("on mainissa").
+- Uusi PR junaan: `nohup zsh julkaisija-tyokalut/jonoon.sh NNNN &` tai `echo NNNN >> etusija-seuraava.txt`
+  jos etusija8 vielä käynnissä. jonoon.sh:ssa linna-jaadytys-tarkistus (passiivinen ilman lippua).
 - Squash-merge rikkoo toisiinsa pohjautuvat linnan PR:t → aina rebase uutena haarana ennen ajoa.
-- Mergetty yöllä mm. #3730, #3737 (Pöllö julkaistu), #3739, #3745, #3746 (v18), #3748, #3755.
+
+## Natiivi
+
+- Juna 92: Siirtosepän ensilatauserä **894d16a4** (maasto 23,1 → 10,8 s, kuori 12,1 → 8,3 s) menee Natiivisepän
+  kautta. Kun BUILD 92 PASS → muutosloki + TF (oletus sisainen_ryhma) + testflight-ulkoinen.
+- Session omat taustavahdit (TF/ulkoinen) loppuivat; ei ajastuksia (loop/cron/Monitor) käynnissä.
 
 ## Vuorot
 

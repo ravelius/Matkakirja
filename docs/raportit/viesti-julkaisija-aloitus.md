@@ -1,4 +1,4 @@
-# Julkaisijan aloitusviesti (1.10.2026 klo 05.5x, viikkokiintiö 95 %)
+# Julkaisijan aloitusviesti (1.10.2026 klo 07.5x, tilinvaihto)
 
 Olet Julkaisija, checkout /Users/Shared/Claude/Matkakirja-julkaisija. Lue luovutus suoraan origin-haarasta:
 `git fetch origin && git show origin/julkaisija-luovutus-20260928:docs/raportit/viesti-julkaisija-luovutus-20261001.md`.
@@ -9,10 +9,10 @@ Fable = "Päätoimittaja (Opus, xhigh)". Viestit Fablelle vain valmis erä, jumi
 kuittaa aloitus yhdellä rivillä (malli + id).
 
 Ensimmäisenä:
-1. **Olavinlinnan kuittaus**: onko #3759 mergetty (`gh pr view 3759`)? Jos on, hash vie-dioraama-ajon
-   lokista (`gh run list --workflow vie-dioraama.yml --limit 2`, `gh run view ID --log | grep olavinlinna`)
-   → Siirtosepälle kuittaukseen ja Päätoimittajalle. Osoitinta EI vaihdeta itse (omistaja).
-2. **Web-juna**: `pgrep -fl "ketju-|ajojono.sh"`, etusija-seuraava.txt, pidossa.txt.
-3. **Vuorot**: käännöslukko /tmp/matkakirja-kaannospalvelu.lukko/kuka, `xcrun simctl list devices booted`.
-   Roolit pyytävät "NYT"-vuoroa; 1 simulaattori kerrallaan, muisti ≥ 50 %; linna ja ISS ensin.
-4. **TF**: jokainen PASS-build → muutosloki + TF (`-f sisainen_ryhma=false`) + testflight-ulkoinen.
+1. **Web-juna**: `pgrep -fl "ketju-|ajojono.sh"` — #3734 (viestirajahook) oli ajossa 07.53, sitten ketju-3754
+   (#3754 maakuntakuvat C). Ilmoita mergestä: #3734 → Päätoimittaja, #3754 → Sisältökirjuri.
+2. **Olavinlinna**: osoitin = 02987940f6567fd2 (vaihdettu 07.29, todennettu). Puukortit #3763 mergetty →
+   hash ajosta 36817070107 → Siirtoseppä kuittaa → omistajan lupa → osoitin=true (seuraava kierros).
+3. **Juna 92**: Siirtosepän ensilatauserä 894d16a4 Natiivisepän kautta → BUILD 92 → muutosloki + TF + ulkoinen.
+4. **Vuorot**: käännöslukko /tmp/matkakirja-kaannospalvelu.lukko/kuka, `xcrun simctl list devices booted`.
+   1 simulaattori kerrallaan, muisti ≥ 50 %, uninstall + shutdown; linna ja ISS ensin; juna/TF ennen testikäännöksiä.
