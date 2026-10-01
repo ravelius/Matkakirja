@@ -9787,3 +9787,7 @@ Omistaja 1.10.2026 klo 19.0x edellisen päätöksen perään sanatarkasti: 'Mutt
 ## PÄÄTOIMITTAJA: NOSTOKORTIN LUENTA EI AVAA MATKAKIRJAKORTTIA — KORTTI PYSYY LAPPUNA (1.10.2026) (1.10.2026 klo 18.58)
 
 Natiivi-UI 1.10. klo 19.1x: nostoselain ja AUTO valmiit ja merge-pyynnössä (kuvapari proto-3d/lokit/natiivi-ui-pohjat/parit-mr/nostoselain-mallit-vs-natiivi.jpg); visa B natiivina käännösjonossa (pohja-visa cd55dccc). Havainto: AUTO-luenta (ja jo nyt nostokortin kaiutin) avaa joka nostolla kartan matkakirjakortin (esim. Ateenan teksti), koska kortti aukeaa aina kertojan puhuessa (luentavahti 30.9.). Päätoimittajan linjaus (ilmeinen, luentavahdin tarkoitus = näyttää luettava teksti): kun luetaan nostokortin tekstiä (AUTO tai kaiutin), matkakirjakortti pysyy lappuna; se avautuu vain, kun kertoja lukee matkakirjan omaa tekstiä.
+
+## OMISTAJA (KORTTI): LINNAN OSOITIN PAKETTIIN 2d0bde8dfb083ec7 (v22 + DETALJI/MAASTO-ASTC) (1.10.2026) (1.10.2026 klo 19.35)
+
+Siirtoseppä mittasi iPad Development 5238055d:llä (ruudut linnan jälkeen): ENNEN 4014 >50 ms 11/11, >100 ms 6/5, suurin 208/192 ms; JÄLKEEN 2d0bde8dfb083ec7 >50 ms 7, >100 ms 0, suurin 92 ms (yksi kelpo kierros, toinen tulossa); linnan ensikuva 7,0 s kylmällä verkolla; paketti kuitattu puhtaaksi (TF 103 puheet soivat, TF 91 varapolku OK). v23-kuori jätettiin pois kahden regression takia (hämärän soihtusuorakaide, katon punainen laikku), v24 tulossa. Omistaja valitsi kortilla klo 19.3x 'Ota käyttöön' → Julkaisija vaihtaa linnan osoittimen pakettiin 2d0bde8dfb083ec7 (peruttavissa vaihtamalla takaisin).
