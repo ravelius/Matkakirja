@@ -9707,3 +9707,7 @@ Omistaja hyväksyi Natiivi-UI:n ehdotuksen (docs/raportit/ui-pohjat-kartoitus-20
 ## UI-POHJAT TARKENNUS: 250 MS KOSKEE SIIRTYMIÄ (omistaja 1.10.2026) (1.10.2026 klo 11.37)
 
 Omistaja kysyi vuosiluvun matkamittarista, miksi sen pitäisi mahtua 250 ms:iin, kun numerot rullaavat koko esityksen ajan. Tarkennus: UI-pohjien kohta 6 (animaatiot ≤ 250 ms) koskee käyttöliittymän siirtymiä (avautuminen, sulkeutuminen, siirto, ponnahdus), ei jatkuvia sisältöanimaatioita kuten matkamittaria, kartan liikettä tai linssien omaa liikettä. Samalla omistaja hyväksyi Ihmisen matkan vuosiluvun matkamittarin natiiviin webin mukaisena: numeroruudut, pystyrullaus, liike-epäterävyys ja webin ajoitus (asetaMatkamittari). Toteuttaa Pelikoodari.
+
+## OMISTAJA: PALLOPOLTON 2026-09-30 VIENTI ÄMPÄRIIN (1.10.2026) (1.10.2026 klo 12.01)
+
+Omistaja antoi luvan viedä valmiin pallopolton 2026-09-30 (raeton, GEOGLOWS-joet koe-d-säännöin, Perekop pois, pohja z0–z10 + syvä z9–z10, pallo 577 838 laattaa) ämpäriin deltana 27-sarjaa vasten heti, ennen kuvapareja. Vienti ei näy pelaajille. Osoittimen vaihtoon (PALLO_LAATTAVERSIO-PR + vaihda-pyramidi-osoitin) tarvitaan erillinen lupa sen jälkeen, kun omistaja on nähnyt kuvaparit 27 vs 30 (Wien, Rooma, Moskova, Rovaniemi, Tukholma, Berliini, Bukarest; z8 + z10; kerma p060) noin klo 13.
