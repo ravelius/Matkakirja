@@ -9859,3 +9859,7 @@ Omistaja kokeili 1.10.2026 klo 21.5x–22.0x sinetin paikkoja (tasaus sinetin re
 ## OMISTAJA: YKSI AJATUS YHDESSÄ PAIKASSA, KOKO LAUSE KULKEE NAUHANA; VAIN KIRJAIMET, HIDAS KIERTO (1.10.2026) (1.10.2026 klo 22.11)
 
 Omistaja 1.10.2026 klo 22.1x Sokrates v3 -ruuduista sanatarkasti: 'Yksi ajatus pitää olla siinä yhdessä paikassa. Teksti voi siis kulkea samassa paikassa ja pelaaja voi lukea sen koko lauseen liikkuvasta tekstistä. Ota projisoinnista taustan vuoto pois, jätä vain kirjaimet jotka liikkuvat kasvojen pinnalla. Kamera voi hyvin hitaasti samaan aikaan orbit panoroida. Saitko kiinni?' → Linja (korvaa 21.33/21.53/21.58 pilkkomisen): jokainen ajatus kulkee kokonaisena nauhana yhden pinta-alueen yli lukunopeudella; vain valaisevat kirjaimet (ei projektorin kehystä, haloa, keilaa eikä pölyä); kamera kiertää hitaasti lähellä abstraktia pintaa; seuraava ajatus uudessa kohdassa kameran liu'un jälkeen; lähderivi vasta lauseen jälkeen. Linnanrakentaja v4 (3 stilliä + video ~20 s: 38a otsalla, siirtymä, 21d poskella).
+
+## OMISTAJA: HEIJASTETUISSA KIRJAIMISSA SAA OLLA PROJEKTORIN EPÄTÄYDELLISYYTTÄ (CA) (1.10.2026) (1.10.2026 klo 22.13)
+
+Omistaja 1.10.2026 klo 22.1x sanatarkasti: 'Tekstissä saa itsessään olla projektorin epätäydellisyyttä esim CA' → kirjaimissa hento kromaattinen aberraatio (kasvaa projektion reunoja kohti) ja tarkennuksen pehmeys syvyyden mukaan; vain kirjaimissa, taustavuoto pysyy poissa (22.11). Linnanrakentaja v4 ja myöhemmin Linssisepän varjostin.
