@@ -25,6 +25,7 @@ const SHELL = [
   './css/sahke.css',
   './js/muutokset.js',
   './js/main.js',
+  './js/visa-pohja.js',
   './js/ui.js',
   './js/pelaajanakyma.js',
   './js/siirtokoreografia.js',
