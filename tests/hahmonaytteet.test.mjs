@@ -29,3 +29,13 @@ test('malli ja muoto ovat omistajan linjaus (eleven_v4, 192 kbit/s), avaimet vai
   assert.match(wf, /ELEVEN_API_KEY: \$\{\{ secrets\.ELEVEN_API_KEY \}\}/);
   assert.doesNotMatch(readFileSync(new URL('../tools/hahmonaytteet.mjs', import.meta.url), 'utf8'), /console\.log\([^)]*API_KEY/);
 });
+
+test('generoi: valinnainen malli (v3 kertojalle) ja stability tarkistetaan', () => {
+  const pohja = { hahmo: 'Kertoja', ab: 'A', voice_id: 'Sz0tRTEpybtDJ9ru2kgD', teksti: 'Olavinlinna nousee kalliosaarelta.' };
+  const t = tarkistaGeneroi({ lupa: 'testi 1.10.', naytteet: [{ ...pohja, malli: 'eleven_v3', stability: 0.5 }] });
+  assert.equal(t.naytteet[0].malli, 'eleven_v3');
+  assert.equal(t.naytteet[0].stability, 0.5);
+  assert.equal(tarkistaGeneroi({ lupa: 'testi 1.10.', naytteet: [pohja] }).naytteet[0].malli, 'eleven_v4');
+  assert.throws(() => tarkistaGeneroi({ lupa: 'testi 1.10.', naytteet: [{ ...pohja, malli: 'eleven_v2' }] }), /malli/);
+  assert.throws(() => tarkistaGeneroi({ lupa: 'testi 1.10.', naytteet: [{ ...pohja, stability: 2 }] }), /stability/);
+});

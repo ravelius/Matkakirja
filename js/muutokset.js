@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2490, teksti: 'Olavinlinna: kaikki puheet äänineen + 5 tekstik… (#3742)' },
   { v: 2489, teksti: 'Viestirajan muistutushook: SendMessagen epäonni… (#3734)' },
   { v: 2488, teksti: 'Olavinlinnan puukortit v3: oksarakenne, 3 muunn… (#3763)' },
   { v: 2487, teksti: 'Raamattu: pariteettimuutokset vain omistajan lu… (#3735)' },
