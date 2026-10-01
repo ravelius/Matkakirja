@@ -8370,6 +8370,8 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
 }
 
 .apuraha-teksti + .apuraha-teksti { margin-top: 0.6rem; }
+/* Korostettu kappale (esittely.json "korostus": true, omistaja 1.10.2026): lihavoitu, sama koko. */
+.apuraha-teksti--korostus { font-weight: 700; }
 
 .apuraha-lista {
   margin: 0.2rem 0 0;

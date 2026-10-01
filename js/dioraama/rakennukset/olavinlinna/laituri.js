@@ -9,9 +9,9 @@ const TAULU = {
   // Sisältökirjurin tarkistus 30.9. (docs/raportit/sisaltokirjuri-olavinlinna-era5-tarkistus-20260930.md). L1–L3
   tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Riihisaarta sanottiin 1550-luvulla Kavassisaareksi; linnan veneet kelluivat sen rannassa.', lahde: 'Suomen meriarkeologinen seura: Sisävesihylyt; Savonlinna: Riihisaaren historiaa' },
-    { teksti: 'Linnalla oli 1550-luvulla peräti yhdeksän suurta venettä, kavassia.', lahde: 'Suomen meriarkeologinen seura: Sisävesihylyt' },
-    { teksti: 'Rakennusaikana proomuja suojasi 12–15 haarniskoin ja miekoin varustettua miestä.', lahde: 'Savon historia: Olavinlinnan suojassa' },
+    { aani: 'laituri-kohta-0', teksti: 'Riihisaarta sanottiin 1550-luvulla Kavassisaareksi; linnan veneet kelluivat sen rannassa.', lahde: 'Suomen meriarkeologinen seura: Sisävesihylyt; Savonlinna: Riihisaaren historiaa' },
+    { aani: 'laituri-kohta-1', teksti: 'Linnalla oli 1550-luvulla peräti yhdeksän suurta venettä, kavassia.', lahde: 'Suomen meriarkeologinen seura: Sisävesihylyt' },
+    { aani: 'laituri-kohta-2', teksti: 'Rakennusaikana proomuja suojasi 12–15 haarniskoin ja miekoin varustettua miestä.', lahde: 'Savon historia: Olavinlinnan suojassa' },
   ],
 };
 
@@ -93,20 +93,20 @@ const HAHMOT = [
     id: 'soutaja', henkilo: 'soutaja-1500', paikka: [-16.5, -7.1, 40.0], suunta: 200, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
-      { id: 'soutaja-1', teksti: 'Kivi ja kalkki tulevat vesitse, eivät jalan. Ilman venettä muuri ei nousisi.' },
-      { id: 'soutaja-2', teksti: 'Virta vie, jos airosta päästää. Terva pitää veden ulkona, muu on sitkeyttä.' },
+      { id: 'soutaja-1', aani: 'laituri-soutaja-1', teksti: 'Kivi ja kalkki tulevat vesitse, eivät jalan. Ilman venettä muuri ei nousisi.' },
+      { id: 'soutaja-2', aani: 'laituri-soutaja-2', teksti: 'Virta vie, jos airosta päästää. Terva pitää veden ulkona, muu on sitkeyttä.' },
     ],
-    reaktio: { id: 'pulu-soutaja-r1', teksti: 'Pelkillä airoilla! Nykyään tämän taittaisi moottorivene, mutta ei se olisi yhtä komeaa.' },
+    reaktio: { id: 'pulu-soutaja-r1', aani: 'laituri-pulu-soutaja-r1', teksti: 'Pelkillä airoilla! Nykyään tämän taittaisi moottorivene, mutta ei se olisi yhtä komeaa.' },
   },
   {
     id: 'renki', henkilo: 'renki-1500', paikka: [-18.6, KANSI_Y, 39.8], suunta: 270, peilattu: false,
     silmukka: 'kanto', heraa: 2, lyhty: true, // elävä linna: lyhty käteen (natiivi 1.0.57 lukee hahmolta)
     reitti: { pisteet: [[-18.7, KANSI_Y, 39.9], [-19.5, KANSI_Y, 37.8], [-19.5, KANSI_Y, 34.2], [-19.5, KANSI_Y, 37.8], [-18.7, KANSI_Y, 39.9]], nopeus: 0.9, tauko: 1.2 },
     repliikit: [
-      { id: 'renki-1', teksti: 'Monta porrasta ylös. Lasken askeleita, ettei tarvitse laskea säkkejä.' },
-      { id: 'renki-2', teksti: 'Proomua vahtivat haarniskamiehet, minua vain selkäkipu. Kivi painaa, kalkki pölyää.' },
+      { id: 'renki-1', aani: 'laituri-renki-1', teksti: 'Monta porrasta ylös. Lasken askeleita, ettei tarvitse laskea säkkejä.' },
+      { id: 'renki-2', aani: 'laituri-renki-2', teksti: 'Proomua vahtivat haarniskamiehet, minua vain selkäkipu. Kivi painaa, kalkki pölyää.' },
     ],
-    reaktio: { id: 'pulu-renki-r1', teksti: 'Renki laskee askelia. Minä lasken siiveniskuja – kaksi, ja olen jo ylhäällä.' },
+    reaktio: { id: 'pulu-renki-r1', aani: 'laituri-pulu-renki-r1', teksti: 'Renki laskee askelia. Minä lasken siiveniskuja – kaksi, ja olen jo ylhäällä.' },
   },
 ];
 
@@ -120,13 +120,13 @@ export const TILA = {
   // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
   // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
   kuunnelma: [
-    { id: 'laituri-k1', puhuja: 'soutaja', nimi: 'Soutaja', aani: null,
+    { id: 'laituri-k1', puhuja: 'soutaja', nimi: 'Soutaja', aani: 'laituri-k1',
       teksti: 'Kaikki tulee vesitse: kivi, kalkki, kala ja vouti. Ilman venettä tämä linna olisi pelkkä kivikasa saaressa.' },
-    { id: 'laituri-k2', puhuja: 'renki', nimi: 'Renki', aani: null,
+    { id: 'laituri-k2', puhuja: 'renki', nimi: 'Renki', aani: 'laituri-k2',
       teksti: 'Isoisä souti kiveä, kun linnaa rakennettiin. Proomuissa istui toista kymmentä haarniskamiestä vahdissa.' },
-    { id: 'laituri-k3', puhuja: 'soutaja', nimi: 'Soutaja', aani: null,
+    { id: 'laituri-k3', puhuja: 'soutaja', nimi: 'Soutaja', aani: 'laituri-k3',
       teksti: 'Ja tänään vouti kysyi, onko joku vienyt jotain veneellä yli salmen. Kukaan ei ole vienyt mitään – paitsi minun hermoni.' },
-    { id: 'laituri-k4', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+    { id: 'laituri-k4', puhuja: 'pulu', nimi: 'Pulu', aani: 'laituri-k4',
       teksti: 'Myöhemmin, 1550-luvulla, linnalla oli peräti yhdeksän suurta venettä, kavassia, ja Riihisaarta kutsuttiin Kavassisaareksi. Airoilla, ilman moottoria!' },
   ],
   kohdistettava: true,
@@ -142,9 +142,9 @@ export const TILA = {
   kamera: { kohde: [-19.8, -6.2, 39.3], atsimuutti: 200, korkeus: 24, etaisyys: 14.5, fov: 38, aukko: 0.8 },
   kierto: { atsimuutti: [-40, 40], korkeus: [10, 50], etaisyys: [0.6, 1.5] },
   kameraPysty: { kohde: [-19.5, -9.2, 39.5], atsimuutti: 200, korkeus: 26, etaisyys: 32, fov: 38, aukko: 0.8 },
-  pulu: { laskeutuminen: [-21.0, -5.35, 35.2], taulupuoli: 'oikea',
-    // Pulun kertomus (napautus reunakuvasta), tekstit v1 Päätoimittajalta; ääni vasta omistajan luvalla.
-    teksti: 'Linna on saarella, joten kaikki tuli vesitse. 1550-luvulla linnalla oli peräti yhdeksän suurta venettä, kavassia, ja niiden kotirantaa Riihisaarta kutsuttiin Kavassisaareksi. Rakennusaikana kiveä ja kalkkia kuljettavia proomuja suojasi 12–15 haarniskoitua miestä.', aani: null },
+  pulu: { aani: 'laituri-pulu', laskeutuminen: [-21.0, -5.35, 35.2], taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v1 Päätoimittajalta; ääni 1.10.2026 (omistajan lupa 30.9. klo 23.4x).
+    teksti: 'Linna on saarella, joten kaikki tuli vesitse. 1550-luvulla linnalla oli peräti yhdeksän suurta venettä, kavassia, ja niiden kotirantaa Riihisaarta kutsuttiin Kavassisaareksi. Rakennusaikana kiveä ja kalkkia kuljettavia proomuja suojasi 12–15 haarniskoitua miestä.' },
   taulu: TAULU,
   // Elävä linna (29.9.): kohde paalun lyhdyssä; kannella kävelee lyhdyllinen renki (hahmot[]).
   elava: { kohde: [-17.82, -4.03, 36], sade: 6 },

@@ -17678,7 +17678,7 @@ export class UI {
 
     for (const k of esittely.kappaleet) {
       if (k.otsikko) kortti.appendChild(html('h3', 'periaate-valiotsikko', k.otsikko));
-      if (k.teksti) kortti.appendChild(html('p', 'periaate-teksti apuraha-teksti', k.teksti));
+      if (k.teksti) kortti.appendChild(html('p', `periaate-teksti apuraha-teksti${k.korostus ? ' apuraha-teksti--korostus' : ''}`, k.teksti));
       if (k.lista?.length) {
         const ol = html('ol', 'apuraha-lista');
         for (const r of k.lista) ol.appendChild(html('li', null, r));
