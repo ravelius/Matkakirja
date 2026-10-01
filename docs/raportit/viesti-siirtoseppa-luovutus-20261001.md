@@ -1,4 +1,4 @@
-# Siirtosepän luovutus 1.10.2026 klo 05.2x (Opus)
+# Siirtosepän luovutus 1.10.2026 klo 05.5x (Opus)
 
 ## Tila yhdellä silmäyksellä
 
@@ -8,7 +8,13 @@
 - **Osoitin** yhä 65e2535be38cc19d. Kuitattu puhtaalla asennuksella: v17 ad021da8b8e1a93e, v18 98691896e7bf76b8
   (omistajan lupa Julkaisijalla). Päätoimittaja: osoitin ympäristöpakettiin vasta kun 3a28322a on TF 90:ssä, sitten
   kuitataan silloisen mainin kärjen paketti (v19 + v3c + puukortit todennäköisesti).
-- Varakuittaus 19f1ff3246be7386 (v18 + v3c): tiedostot 23/23 OK, natiivi 87–89 ei lue sen muotoa → odottaa 3a28322a-käännöstä.
+- **Juna 1.1 (90) = 27c449e4** (sis. 3a28322a + aluskasvit), savuke PASS.
+- **19f1ff3246be7386 (v18 + lähimaasto v3c) KUITATTU** juna 90 .appilla (lokit/siirtoseppa-ymparisto-kuittaus-90/):
+  maasto 4 lohkoa, splat, 25k puuta, 20k aluskasvia, aitat maalla, virheitä 0. Osoitin vasta TF 90 julki + omistajan lupa.
+- **Seuraava osoitinkohde: v19-paketti** (#3759 mainissa; Julkaisija antaa hashin ~06.00). Kuittaa juna 90 .appilla:
+  `HASH=<hash> APP=/Users/Shared/Claude/proto-3d/lokit/juna-1.1.90-27c449e4/Matkakirja3D.app L=…/siirtoseppa-v19-kuittaus
+  zsh scratchpad/ajo-ymparisto-kuittaus.sh` → tarkista M4 (puulaituri vesiportilla, ponttonisilta poissa), M0 (taivas-
+  kuva, ei liukuväri), M1/M2 (aitat maalla), virheitä 0. Puukortit #3763 pidossa.
 
 ## Proto-worktreet ja haarat
 
@@ -36,8 +42,8 @@
 
 ## Avoimet
 
-1. Käännös linna-vesi 3a28322a (Julkaisijan jono, NYT KÄÄNNÖS) + F989814A 5 min: `HASH=19f1ff3246be7386` kuittaus.
-2. TF 90:n jälkeen: mainin kärjen ympäristöpaketin puhdas asennus → kuittaus Julkaisijalle ja Päätoimittajalle.
+1. v19-paketin kuittaus (yllä) → yksi rivi Päätoimittajalle ja Julkaisijalle.
+2. Worktree proto-siirtoseppa-kertoja voi poistaa (kaikki junassa 85); proto-siirtoseppa-vesi jää (linna-vesi = juna 90).
 3. Puukortit v3 (Linnanrakentaja): rajapinta sovittu — puut.json 7. sarake muunnos, `muunnokset[laji][muunnos]` →
    `kortit[nimi]`, atlas 2048 × 4096 (POT!), valinnainen `puukortit_normaali` (TBN-valo DioraamaPuu-varjostimeen).
    Lisää puihin myös UV-reunus 2 tekseliä (Linssiseppä 2:n aluskasvilöydös: solurajalta näyte → viivat).
