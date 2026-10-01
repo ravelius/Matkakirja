@@ -346,7 +346,11 @@ export function lisaaBlender(rakennusJson, blender) {
     rakennusJson.ulkokuori.detalji = {
       maski: B('ulkokuori/hybridi/kuori-materiaali-2k.png'), voimakkuus: 0.8, normaali: 0.7,
       kanavat: DETALJI.map((id) => ({ id, diff: B(kp(id, 'diff.jpg')), nor: B(kp(id, 'nor_gl.jpg')),
-        toisto_m: kirjasto[`materiaali/${id}`].toisto_m })),
+        toisto_m: kirjasto[`materiaali/${id}`].toisto_m,
+        // ASTC (Siirtoseppä 1.10.: ei runtime-pakkausta) + keski = diff-kuvan lineaarinen luminanssi (0,299/0,587/0,114),
+        // jonka natiivi ennen laski GetPixelsillä; vain jos .astcm on viety (keski_luminanssi.py → lahteet.json).
+        ...(on.has(kp(id, 'diff-4x4.astcm')) && on.has(kp(id, 'nor_gl-4x4.astcm'))
+          ? { diff_astc: B(kp(id, 'diff-4x4.astcm')), nor_astc: B(kp(id, 'nor_gl-4x4.astcm')), keski: kirjasto[`materiaali/${id}`].keski } : {}) })),
     };
   }
   // Ympäristö (laatusuunnitelman vaihe 5, aikakerros n1500; Siirtosepän kenttänimet 1.10.): Kyrönsalmen maasto
@@ -379,7 +383,10 @@ export function lisaaBlender(rakennusJson, blender) {
         alue: MAA.alue, lahi_m: MAA.lahi_m,
         maski: [B(Y('splat-0.png')), B(Y('splat-1.png'))], maski_normaali: B(Y('splat-normaali-0.png')),
         kerrokset: MAA.kerrokset.map((k) => ({ id: k.id, diff: B(Y(`maasto/${k.lahde}_diff_1k.jpg`)),
-          nor: B(Y(`maasto/${k.lahde}_nor_gl_1k.jpg`)), toisto_m: k.toisto_m })),
+          nor: B(Y(`maasto/${k.lahde}_nor_gl_1k.jpg`)), toisto_m: k.toisto_m,
+          // ASTC + keski (lineaarinen luminanssi 0,2126/0,7152/0,0722, ymparisto-maasto.json), vain jos .astcm on viety.
+          ...([`maasto/${k.lahde}_diff_1k-4x4.astcm`, `maasto/${k.lahde}_nor_gl_1k-4x4.astcm`].every((p) => on.has(Y(p)))
+            ? { diff_astc: B(Y(`maasto/${k.lahde}_diff_1k-4x4.astcm`)), nor_astc: B(Y(`maasto/${k.lahde}_nor_gl_1k-4x4.astcm`)), keski: k.keski } : {}) })),
       };
     }
     // Puukorttien normaalikartta (v3, Siirtoseppä 1.10.: tangenttiavaruus, OpenGL), jos viety.
