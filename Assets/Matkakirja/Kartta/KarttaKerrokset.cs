@@ -336,7 +336,7 @@ namespace Matkakirja
         /// Rakennus.LaattaUrl (aiemmin erillinen 23a-rajaton-sarja). Z0–Z9 kuten pohja (Rakennus.LaattaMaxTaso).
         /// </summary>
         public const string SileaUrl =
-            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-27-pohja-20260927/{z}/{x}/{reverseY}.jpg";
+            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-30-pohja-20260930/{z}/{x}/{reverseY}.jpg";
         /// <summary>Sileän pohjan syvin taso (= Rakennus.LaattaMaxTaso; Editor-luokkaa ei voi viitata ajossa).</summary>
         public const int SileaMaxTaso = 9;
 
