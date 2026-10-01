@@ -485,7 +485,8 @@ namespace Matkakirja.Natiivi
                 case "lehti": if (toiminnot?.LueLehti == null) return "ei lehteä"; LueLehti(); return null;
                 case "opas": if (opas == null) return "ei turisti-infoa"; AvaaOpas(); return null;
                 case "sulje": Sulje(); return null;
-                default: return "ui avauskortti <id> [kartta | lehti | opas | sulje]";
+                case "laajenna": case "pienenna": laajennettu = mita == "laajenna"; Mitoita(); return null; // vetokahva
+                default: return "ui avauskortti <id> [kartta | lehti | opas | sulje | laajenna | pienenna]";
             }
         }
     }
