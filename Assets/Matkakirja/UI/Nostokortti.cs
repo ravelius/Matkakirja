@@ -306,7 +306,8 @@ namespace Matkakirja.Natiivi
             kortti.EnableInClassList("mk-nosto--kohde", n.Laji == NostoLaji.Kohde);
             VapautaPaikka();
             Mitoita();
-            if (n.Kuvat.Count > 0) Vaihe1(); else Vaihe2();
+            // Kohdekortti (omistaja 1.10.2026 kokeiluun, loki f344f1034): suoraan koko korttiin ilman kuva edellä -vaihetta.
+            if (n.Kuvat.Count > 0 && n.Laji != NostoLaji.Kohde) Vaihe1(); else Vaihe2();
             AvaaKerros();
             EsihaeLuennanAlku(n);
         }
@@ -630,6 +631,7 @@ namespace Matkakirja.Natiivi
 
         void Vaihe1()
         {
+            PoistaToimintorivi();
             sisus.Clear();
             napit.Clear();
             napit["lisaa"] = Vaihe2;
@@ -664,6 +666,7 @@ namespace Matkakirja.Natiivi
                 // Kortti pysyy vaiheen 1 yläreunassa, kunnes Korjaa on mitannut uuden asettelun (ei keskitystä välissä).
                 kiinteaYla = kerros.resolvedStyle.paddingTop;
             }
+            PoistaToimintorivi();
             sisus.Clear();
             napit.Clear();
             sisus.scrollOffset = Vector2.zero;
@@ -750,13 +753,8 @@ namespace Matkakirja.Natiivi
             }
             if (n.Laji == NostoLaji.Kohde)
             {
-                KysyPululta(sisus, n);
-                foreach (var (nappi, url) in n.Kierrokset)
-                {
-                    string u = url;
-                    var b = Rakenne.Nappi(nappi.ToUpperInvariant() + " ›", "mk-nosto__kierros", () => Application.OpenURL(u), sisus);
-                    Kirjasimet.Aseta(b, Kirjasin.Kone);
-                }
+                // Kysymykset ja kierros siirtyivät alareunan toimintoriville (Kysy · Visa · Kierros · Lehti).
+                Toimintorivi(n);
                 if (n.LeikekirjaValo != null) Leikekirja(sisus, n);
                 // Reaktiot kortin loppuun: tunniste on kohteen oma id (web kohdeReaktioTunniste).
                 Reaktiot.Piirra(sisus, Reaktiot.KohdeAvain(n.Id), n.Otsikko);
@@ -819,6 +817,58 @@ namespace Matkakirja.Natiivi
         /// Web piirraNostonKysymykset / piirraKohdeKysymykset: napautus kysyy pululta. Löydös 136 (omistaja, build 16):
         /// kortti jää taustalle auki ja chat aukeaa sen päälle (UiNakymat.ChatinKerros); kortin luenta pysähtyy.
         /// </summary>
+        // --- NOSTOKORTTI-pohjan toimintorivi (kohdekortti, omistaja 1.10.2026 kokeiluun) ---------------------
+
+        VisualElement toimintorivi;
+
+        void PoistaToimintorivi()
+        {
+            toimintorivi?.RemoveFromHierarchy();
+            toimintorivi = null;
+            kortti.RemoveFromClassList("mk-nosto--toiminnot");
+        }
+
+        /// <summary>
+        /// Kiinteä alarivi (ei vierity): Kysy (Pulun chat kortin aiheella ja valmiilla kysymyksillä), Visa (lukijan kysymys
+        /// näkyviin, kortti laajenee), Kierros (ensimmäinen kierros), Lehti (kaupungin tai maan lehti; ensisijainen).
+        /// Puuttuva kohde jättää napin pois.
+        /// </summary>
+        void Toimintorivi(Nosto n)
+        {
+            toimintorivi = Rakenne.El("mk-nosto__toiminnot", kortti, PickingMode.Ignore);
+            kortti.AddToClassList("mk-nosto--toiminnot");
+            void Nappi(string nimi, string teksti, Action a, bool ensisijainen = false)
+            {
+                var b = Rakenne.Nappi(teksti, "mk-nosto__toiminto" + (ensisijainen ? " mk-nappi--kulta" : ""), a, toimintorivi);
+                Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
+                napit[nimi] = a;
+            }
+            Nappi("kysy", "Kysy", () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.AvaaKortista(PuluChat.NostonAihe(n), n.Kysymykset); });
+            if (n.Visa != null)
+                Nappi("visa", "Visa", () =>
+                {
+                    laajennettu = true; Pystypaikka();
+                    var v = sisus.contentContainer.Q(className: "mk-nosto__visa");
+                    if (v != null) sisus.schedule.Execute(() => sisus.ScrollTo(v)).ExecuteLater(30);
+                });
+            if (n.Kierrokset.Count > 0) { string u = n.Kierrokset[0].Item2; Nappi("kierros", "Kierros", () => Application.OpenURL(u)); }
+            var lehti = LehtiToiminto(n);
+            if (lehti != null) Nappi("lehti", "Lehti", lehti, true);
+        }
+
+        /// <summary>Kaupungin lehti (noston kaupunki) tai maan lehti (noston maa); null = ei lehteä.</summary>
+        static Action LehtiToiminto(Nosto n)
+        {
+            var ui = UiNakymat.Hae();
+            if (ui == null) return null;
+            var o = PeliOhjain.Instanssi;
+            if (!string.IsNullOrEmpty(n.Kaupunki))
+                return () => { ui.Nostokortti.Sulje(); if (o == null || o.LueLehti(n.Kaupunki) != null) ui.Lehti.Nayta(LehtiLaji.Kaupunki, n.Kaupunki); };
+            if (!string.IsNullOrEmpty(n.Iso))
+                return () => { ui.Nostokortti.Sulje(); if (o == null || o.LueMaalehti(n.Iso, null) != null) ui.Lehti.Nayta(LehtiLaji.Maa, n.Iso); };
+            return null;
+        }
+
         void KysyPululta(VisualElement isa, Nosto n)
         {
             if (n.Kysymykset.Count == 0) return;

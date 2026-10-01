@@ -2259,3 +2259,41 @@
     height: 26px;
     margin-left: -60px;
 }
+
+/* NOSTOKORTTI-pohjan toimintorivi (kohdekortti, omistaja 1.10.2026 kokeiluun): kiinteä alarivi Kysy · Visa · Kierros · Lehti,
+   napit 38 pt (TOIMINTO-tyyppi; Lehti ensisijainen kulta), sisältö vierii sen alla. */
+.mk-nosto--toiminnot {
+    padding-bottom: 62px;
+}
+
+.mk-nosto__toiminnot {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    flex-direction: row;
+    padding: var(--tk-vali-s) var(--tk-vali-m) var(--tk-vali-m) var(--tk-vali-m);
+    border-top-width: 1px;
+    border-color: var(--tk-paperi-reunus);
+    background-color: var(--tk-paperi-pinta);
+    border-bottom-left-radius: var(--tk-kulma-kortti);
+    border-bottom-right-radius: var(--tk-kulma-kortti);
+}
+
+.mk-nosto__toiminto {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-height: var(--tk-nappi-korkeus);
+    margin: 0 3px;
+    padding: 0 4px;
+    border-radius: var(--tk-kulma-nappi);
+    border-color: var(--tk-paperi-reunus);
+    background-color: initial; /* läpinäkyvä (oletus), ei mk-nappin paneeliväriä */
+    color: var(--tk-paperi-muste);
+    font-size: var(--tk-koko-apuri);
+}
+
+.mk-nosto__toiminto.mk-nappi--kulta {
+    background-color: var(--tk-paperi-toiminto);
+    border-color: var(--accent-dark);
+}
