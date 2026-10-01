@@ -32,6 +32,31 @@ namespace Matkakirja.Natiivi
         public static int MuistissaKpl => muisti.Count;
 
         static readonly Dictionary<string, Texture2D> muisti = new Dictionary<string, Texture2D>();
+
+        /*
+         * OTSAKKEET OSOITTEEN ETULIITTEELLÄ (Pelikoodari 1.10.2026, tietoturvakorjaus): Lukijoilta-liitteen kuvat
+         * tarvitsevat kuratointiavaimen, joka oli URL-kyselyssä (?avain=) ja päätyi palvelinlokeihin. Nyt kutsuja
+         * rekisteröi etuliitteelle otsakkeen tuottajan; arvo luetaan pyynnön hetkellä eikä tallennu tänne.
+         */
+        static readonly Dictionary<string, Func<(string Nimi, string Arvo)>> otsakkeet = new Dictionary<string, Func<(string, string)>>();
+
+        /// <summary>Lisää otsakkeen kaikkiin kuvahakuihin, joiden osoite alkaa etuliitteellä (null = poista).</summary>
+        public static void AsetaOtsake(string etuliite, Func<(string Nimi, string Arvo)> tuottaja)
+        {
+            if (string.IsNullOrEmpty(etuliite)) return;
+            if (tuottaja == null) otsakkeet.Remove(etuliite); else otsakkeet[etuliite] = tuottaja;
+        }
+
+        static UnityWebRequest Otsakkeet(UnityWebRequest q, string url)
+        {
+            foreach (var (etuliite, tuottaja) in otsakkeet)
+            {
+                if (url == null || !url.StartsWith(etuliite, StringComparison.Ordinal)) continue;
+                var (nimi, arvo) = tuottaja();
+                if (!string.IsNullOrEmpty(nimi) && !string.IsNullOrEmpty(arvo)) q.SetRequestHeader(nimi, arvo);
+            }
+            return q;
+        }
         static readonly Dictionary<string, long> tavut = new Dictionary<string, long>();
         static readonly LinkedList<string> jarjestys = new LinkedList<string>();
         static readonly Dictionary<string, List<Action<Texture2D>>> kesken = new Dictionary<string, List<Action<Texture2D>>>();
@@ -115,7 +140,7 @@ namespace Matkakirja.Natiivi
         static IEnumerator EsilataaLevylle(string url, string levy, Taso taso)
         {
             byte[] tavut = null;
-            yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(url); q.timeout = 30; return q; }, taso, "kuva",
+            yield return Esilataaja.Hae(() => { var q = Otsakkeet(UnityWebRequest.Get(url), url); q.timeout = 30; return q; }, taso, "kuva",
                 p => { if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data; }, avain: url);
             esiladataan.Remove(url);
             if (tavut == null || tavut.Length < 16) yield break;
@@ -368,7 +393,7 @@ namespace Matkakirja.Natiivi
                 string reitti = reitit[i];
                 Texture2D saatu = null;
                 byte[] tavut = null;
-                yield return Esilataaja.Hae(() => { var q = UnityWebRequestTexture.GetTexture(reitti, true); q.timeout = 20; return q; }, Taso.Nakyva, "kuva", p =>
+                yield return Esilataaja.Hae(() => { var q = Otsakkeet(UnityWebRequestTexture.GetTexture(reitti, true), reitti); q.timeout = 20; return q; }, Taso.Nakyva, "kuva", p =>
                 {
                     if (p.result != UnityWebRequest.Result.Success) return;
                     saatu = DownloadHandlerTexture.GetContent(p);
@@ -443,7 +468,7 @@ namespace Matkakirja.Natiivi
             for (int i = 0; (tavut == null || tavut.Length < 16) && i < reitit.Length; i++)
             {
                 string reitti = reitit[i];
-                yield return Esilataaja.Hae(() => { var q = UnityWebRequest.Get(reitti); q.timeout = 20; return q; }, Taso.Nakyva, "kuva",
+                yield return Esilataaja.Hae(() => { var q = Otsakkeet(UnityWebRequest.Get(reitti), reitti); q.timeout = 20; return q; }, Taso.Nakyva, "kuva",
                     p => { if (p.result == UnityWebRequest.Result.Success) { tavut = p.downloadHandler.data; verkosta = true; } });
             }
             if (tavut == null || tavut.Length < 16) { valmis(null); yield break; }
