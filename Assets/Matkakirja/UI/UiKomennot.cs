@@ -135,6 +135,7 @@
 //                                             nipistys ilman Macia (pikselit, UIKitin suunta, osoitin yläkulmasta)
 //   ui nappain vasen|oikea|ylos|alas|esc     näppäimistökerros (Nappaimisto): selaa, vierittää, sulkee kuin fyysinen näppäin
 //   ui mikseri [tila]|auki|kiinni|demo|demo pois  kehittäjän mikseripaneeli (linnan ja Cupolan kaiut; demo = lähde ilman ääntä)
+//   ui pelaaja 1|0                            pelaajan näkymä Debugissa: kehittäjätila pakolla pois (Asetukset.PakotaPelaaja)
 //   ui kierto vaaka|pysty|auto                näytön suunta (Screen.orientation); simulaattorin vaakakuvat ilman Simulator.appia
 //   ui chat [kysymys]                         pulun keskustelu auki / kysy (lehti tai nähtävyysjuttu auki → "Ehdota tallennettavaksi")
 //   ui matkamuisto <id>                       matkamuiston löytö kuten dioraamasta (voudin-sinetti); tila lokiin
@@ -783,6 +784,11 @@ namespace Matkakirja.Natiivi
                     Kirjaa("mikseri: " + mp.Kuvaus);
                     return null;
                 }
+                case "pelaaja":
+                    // Pelaajan näkymä Debugissa (Asetukset.PakotaPelaaja): ui pelaaja 1|0.
+                    Asetukset.PakotaPelaaja = loput.Trim() != "0";
+                    Kirjaa($"pelaaja: kehittäjätila {(Asetukset.Kehittaja ? "päällä" : "pois")} (pakotettu pelaaja {Asetukset.PakotaPelaaja})");
+                    return null;
                 case "kierto":
                     Screen.orientation = loput == "vaaka" ? ScreenOrientation.LandscapeLeft
                         : loput == "pysty" ? ScreenOrientation.Portrait : ScreenOrientation.AutoRotation;
