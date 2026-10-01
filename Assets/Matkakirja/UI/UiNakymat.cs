@@ -868,6 +868,7 @@ namespace Matkakirja.Natiivi
             Minipopup.SuljeAuki();
             Pikkuseloste.Sulje();
             Vahvistus.Sulje();
+            MyllyNakyma.SuljeJosAuki();
             Matkavalinta.Piilota();
             Matkavalinta.PiilotaHeitto();
             Kaupunkikortti.Piilota();

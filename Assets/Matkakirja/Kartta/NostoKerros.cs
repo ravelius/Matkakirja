@@ -225,6 +225,22 @@ namespace Matkakirja
         public static float NimionReunaPeitto = 0.65f, NimionReunaLeveys = 0.05f, NimionPohjaPeitto = 0f;
 
         readonly Dictionary<string, List<Nosto>> maittain = new Dictionary<string, List<Nosto>>();
+
+        static readonly List<Nosto> eiNostoja = new List<Nosto>();
+
+        /// <summary>Maan kaikki nostot datan järjestyksessä (Natiivi-UI:n nostoselain, omistaja 1.10.2026); tyhjä, jos ei dataa.</summary>
+        public IReadOnlyList<Nosto> MaanNostot(string iso) =>
+            iso != null && maittain.TryGetValue(iso, out var l) ? l : eiNostoja;
+
+        /// <summary>Nosto valon id:llä (karttavalot `id`) kaikista maista, tai null.</summary>
+        public Nosto NostoIdlla(string id)
+        {
+            if (string.IsNullOrEmpty(id)) return null;
+            foreach (var l in maittain.Values)
+                foreach (var s in l)
+                    if (s.Id == id) return s;
+            return null;
+        }
         readonly Dictionary<string, double4> bboxit = new Dictionary<string, double4>(); // länsi, etelä, itä, pohjoinen
         readonly Dictionary<string, string> maanNimet = new Dictionary<string, string>(); // ISO3 → nimi (maan niminen kaupunki)
         readonly List<Nosto> naytettavat = new List<Nosto>();

@@ -12,6 +12,7 @@ Shader "Matkakirja/Linssit/DioraamaPuu"
         _Raja ("Alfaraja", Range(0, 1)) = 0.45
         _Normaali ("Puukorttien normaalikartta", 2D) = "bump" {}
         _NormaaliPaalla ("Normaalikartta käytössä", Float) = 0
+        _HivutusAlku ("Häivytyksen alku (_Time.y)", Float) = -10
     }
     SubShader
     {
@@ -40,6 +41,7 @@ Shader "Matkakirja/Linssit/DioraamaPuu"
                 float4 _Kuva_ST;
                 half _Raja;
                 half _NormaaliPaalla;
+                float _HivutusAlku;
             CBUFFER_END
 
             // uv0 = atlas, uv1.x = korkeus kortissa 0 (juuri) … 1 (latva), COLOR.r = kirkkausvaihtelu, COLOR.g = tuulen vaihe.
@@ -63,7 +65,10 @@ Shader "Matkakirja/Linssit/DioraamaPuu"
             half4 frag(Vali i) : SV_Target
             {
                 half4 t = SAMPLE_TEXTURE2D(_Kuva, sampler_Kuva, i.uv);
-                clip(t.a - _Raja);
+                // Ensilataus v2: 0,5 s:n häivytys näkyviin — alfaraja laskee 1 → _Raja, joten latvukset täyttyvät
+                // tiheimmästä kohdasta reunoille eivätkä pompahda (ei läpinäkyvyyttä, ei lajittelua).
+                half raja = lerp(1.0h, _Raja, (half)saturate((_Time.y - _HivutusAlku) * 2.0));
+                clip(t.a - raja);
                 half3 vari = t.rgb * i.valo.x;
                 if (_NormaaliPaalla > 0.5h)
                 {

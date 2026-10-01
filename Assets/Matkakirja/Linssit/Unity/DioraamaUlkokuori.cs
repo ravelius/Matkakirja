@@ -130,13 +130,25 @@ namespace Matkakirja.Natiivi
                 if (oma != kerta) yield break;
                 if (koottu == null) { kirjaa?.Invoke($"poikki: kuori {taso} virhe: {virhe}"); continue; }
 
+                // Ensilataus v2 (1.10.): raskaat pääsäikeen vaiheet omiin ruutuihinsa (DioraamaRuutu); kevyt taso (linnan
+                // ensikuva) ilman välitaukoja, jottei se myöhästy.
+                bool tauot = taso != Laatu.Kevyt;
+                float r0 = DioraamaRuutu.Alku();
                 var mesh = new Mesh { name = "Ulkokuori:" + taso, indexFormat = IndexFormat.UInt32 };
                 mesh.SetVertices(koottu.Paikat);
                 mesh.SetUVs(0, koottu.Uv);
+                DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} kärjet", r0);
+                if (tauot) { yield return null; if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; } }
+                r0 = DioraamaRuutu.Alku();
                 mesh.SetNormals(koottu.Normaalit);
                 mesh.SetTriangles(koottu.Kolmiot, 0);
                 mesh.RecalculateBounds();
+                DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} kolmiot", r0);
+                if (tauot) { yield return null; if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; } }
+                r0 = DioraamaRuutu.Alku();
                 mesh.UploadMeshData(true); // kärjet vain GPU:lle, CPU-kopio vapautuu
+                DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} mesh-lataus", r0);
+                if (tauot) yield return null;
 
                 // ASTC-mipketju (tekstuurit.<taso>) ensin: 4×4 on laadultaan lähes JPEG (PSNR ≈ 40 dB) ja jää GPU:lle
                 // pakattuna; puuttuva tai tukematon → glb:n JPEG ja Compress kuten ennen.
@@ -147,7 +159,13 @@ namespace Matkakirja.Natiivi
                     byte[] astcTavut = null;
                     yield return DioraamaLevyvalimuisti.Hae(url(astc), 300, t => astcTavut = t); // 8k-atlas 89 Mt
                     if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
-                    kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out string syy);
+                    // Puhelimessa huipputason 8k-atlas 4k:na (ylin mip ohitetaan; iPad ja Mac 8k), kuten maaston orto.
+                    bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
+                    r0 = DioraamaRuutu.Alku();
+                    kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out string syy, TextureWrapMode.Clamp, puhelin && taso == Laatu.Huippu ? 1 : 0);
+                    DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} ASTC", r0);
+                    DioraamaRuutu.Gpu(kirjaa, kuva);
+                    if (kuva != null && tauot) yield return null;
                     if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(astcTavut == null ? "ei latautunut" : syy)}), JPEG varalla");
                 }
                 if (kuva == null && hamara && !string.IsNullOrEmpty(JpgHamara(taso)))
@@ -162,9 +180,16 @@ namespace Matkakirja.Natiivi
                 {
                     kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
                     { name = "Ulkokuori:" + taso, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 4 };
-                    if (kuva.LoadImage(koottu.Kuva, false)) kuva.Compress(true);
+                    r0 = DioraamaRuutu.Alku();
+                    if (kuva.LoadImage(koottu.Kuva, false))
+                    {
+                        DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} LoadImage", r0);
+                        if (tauot) yield return null;
+                        r0 = DioraamaRuutu.Alku(); kuva.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} Compress", r0);
+                        if (tauot) yield return null;
+                    }
                     else { UnityEngine.Object.Destroy(kuva); kuva = null; kirjaa?.Invoke($"poikki: kuori {taso} tekstuuri ei jäsentynyt"); }
-                    if (kuva != null) kuva.Apply(false, true); // tekstuuri vain GPU:lle
+                    if (kuva != null) { kuva.Apply(false, true); DioraamaRuutu.Gpu(kirjaa, kuva); if (tauot) yield return null; } // tekstuuri vain GPU:lle
                 }
                 if (oma != kerta) { UnityEngine.Object.Destroy(mesh); if (kuva != null) UnityEngine.Object.Destroy(kuva); yield break; }
 
@@ -210,13 +235,28 @@ namespace Matkakirja.Natiivi
             for (int c = 0; c < 4; c++)
             {
                 var (diff, nor, toistoM) = c < d.Kanavat.Count ? d.Kanavat[c] : (null, null, 2.0);
+                var (diffAstc, norAstc, keskiData) = c < d.KanavatAstc.Count ? d.KanavatAstc[c] : (null, null, (double?)null);
                 toisto[c] = (float)Math.Max(0.2, toistoM);
+                // Ensilataus v2 (iPad Dev 1.10.: runtime-Compress odotti grafiikkasäiettä 100–170 ms): ASTC + datan keski ensin.
+                Texture2D dkAstc = null, nkAstc = null;
+                if (keskiData.HasValue)
+                {
+                    yield return DioraamaYmparisto.LataaAstc(diffAstc, "Detalji:diff" + c, false, TextureWrapMode.Repeat, url, kirjaa, null, t => dkAstc = t);
+                    if (oma != kerta) yield break;
+                    if (dkAstc != null) { keski[c] = Mathf.Max(0.05f, (float)keskiData.Value); detaljiKuvat.Add(dkAstc); }
+                }
+                if (DioraamaLaatu.Taysi)
+                {
+                    yield return DioraamaYmparisto.LataaAstc(norAstc, "Detalji:nor" + c, true, TextureWrapMode.Repeat, url, kirjaa, null, t => nkAstc = t);
+                    if (oma != kerta) yield break;
+                    if (nkAstc != null) detaljiKuvat.Add(nkAstc);
+                }
                 byte[] dt = null, nt = null;
-                if (diff != null) yield return DioraamaLevyvalimuisti.Hae(url(diff), 120, t => dt = t);
-                if (nor != null && DioraamaLaatu.Taysi) yield return DioraamaLevyvalimuisti.Hae(url(nor), 120, t => nt = t);
+                if (dkAstc == null && diff != null) yield return DioraamaLevyvalimuisti.Hae(url(diff), 120, t => dt = t);
+                if (nkAstc == null && nor != null && DioraamaLaatu.Taysi) yield return DioraamaLevyvalimuisti.Hae(url(nor), 120, t => nt = t);
                 if (oma != kerta) yield break;
-                var dk = Kuva(dt, false, "Detalji:diff" + c, false);
-                if (dk != null)
+                var dk = dkAstc ?? Kuva(dt, false, "Detalji:diff" + c, false);
+                if (dk != null && dkAstc == null)
                 {
                     // Keskikirkkaus pienimmästä mip-tasosta ennen pakkausta (kirkkaussuhteen nimittäjä).
                     var p = dk.GetPixels(dk.mipmapCount - 1);
@@ -227,8 +267,8 @@ namespace Matkakirja.Natiivi
                     dk.Compress(true); dk.Apply(false, true);
                     detaljiKuvat.Add(dk);
                 }
-                var nk = Kuva(nt, true, "Detalji:nor" + c, true);
-                if (nk != null) { nk.Apply(false, true); detaljiKuvat.Add(nk); }
+                var nk = nkAstc ?? Kuva(nt, true, "Detalji:nor" + c, true);
+                if (nk != null && nkAstc == null) { nk.Apply(false, true); detaljiKuvat.Add(nk); }
                 Shader.SetGlobalTexture(IdDetaljiDiff[c], dk != null ? (Texture)dk : Texture2D.grayTexture);
                 Shader.SetGlobalTexture(IdDetaljiNor[c], nk != null ? (Texture)nk : Texture2D.normalTexture);
                 yield return null;

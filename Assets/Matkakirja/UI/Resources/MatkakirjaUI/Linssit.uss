@@ -2746,17 +2746,34 @@
  * .ihmisen-nostokortti. Tumma paperi palkin alla vasemmalla, enintään 384 px.
  * ------------------------------------------------------------------------ */
 .mk-ihmisnosto {
+    /* NOSTOKORTTI-pohja TUMMA (web #3789): paikka koodista (IhmisenNostokortti.Paikka), värit tyylikirjasta. */
     position: absolute;
-    left: 18px;
-    width: 384px;
-    max-width: 90%;
-    max-height: 72%;
-    padding: 13px 16px 16px 16px;
+    padding: 22px var(--tk-vali-l) var(--tk-vali-l) var(--tk-vali-l);
     border-width: 1px;
-    border-color: rgba(217, 161, 59, 0.38);
-    border-radius: 12px;
-    background-color: #201a14;
-    color: #f1e6d0;
+    border-color: var(--tk-tumma-reunus);
+    border-radius: var(--tk-kulma-kortti);
+    background-color: var(--tk-tumma-pinta);
+    color: var(--tk-tumma-muste);
+}
+
+/* Toimintorivi tummassa teemassa (NOSTOKORTTI-pohja). */
+.mk-ihmisnosto .mk-nosto__toiminnot {
+    border-color: var(--tk-tumma-reunus);
+    background-color: var(--tk-tumma-pinta);
+}
+
+.mk-ihmisnosto .mk-nosto__toiminto {
+    border-color: var(--tk-tumma-reunus);
+    color: var(--tk-tumma-muste);
+}
+
+.mk-ihmisnosto .mk-nosto__toiminto.mk-nappi--kulta {
+    background-color: var(--tk-tumma-toiminto);
+    color: var(--tk-paperi-muste);
+}
+
+.mk-ihmisnosto .mk-nosto__kahva {
+    background-color: var(--tk-tumma-reunus);
 }
 
 .mk-ihmisnosto__vieritys {
@@ -2799,16 +2816,17 @@
 }
 
 .mk-ihmisnosto__ajoitusteksti {
-    font-size: 11.5px;
+    font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 8.7px; /* web 1px */
-    color: #c9a15a;
+    white-space: normal;
+    color: var(--tk-tumma-korostus);
 }
 
 .mk-ihmisnosto__otsikko {
-    margin: 2px 32px 2px 0;
-    font-size: 17px;
+    margin: 2px 0 6px 0;
+    font-size: var(--tk-koko-otsikko);
     white-space: normal;
-    color: #f1e6d0;
+    color: var(--tk-tumma-muste);
 }
 
 .mk-ihmisnosto__paikka {
@@ -4102,4 +4120,51 @@
     letter-spacing: 0;
     -unity-font-style: bold;
     -unity-text-align: middle-center;
+}
+
+/* PANEELI (LASI): linssin hampurilainen (omistaja 1.10.2026, web #3810; LinssiValikko). Lasipinta ja -reunus, kulma kortti;
+ * Poistu ja Aloita alusta TOIMINTO-riveinä 38 pt, viiva, kytkimet KYTKIN-riveinä (tila kapiteelina, päällä korostusvärillä). */
+.mk-linssivalikko.mk-linssivalikko--pohja {
+    min-width: 240px;
+    padding: var(--tk-vali-s);
+    border-color: var(--tk-lasi-reunus);
+    border-radius: var(--tk-kulma-kortti);
+    background-color: var(--tk-lasi-pinta);
+}
+
+.mk-linssivalikko--pohja .mk-linssivalikko__kohta {
+    min-height: var(--tk-nappi-korkeus);
+    margin: 0 0 var(--tk-vali-xs) 0;
+    padding: 0 var(--tk-vali-m);
+    border-radius: var(--tk-kulma-nappi);
+    color: var(--tk-lasi-muste);
+}
+
+.mk-linssivalikko--pohja .mk-linssivalikko__komento {
+    border-color: var(--tk-lasi-reunus);
+}
+
+.mk-linssivalikko--pohja .mk-linssivalikko__kohta .mk-nappi__teksti,
+.mk-linssivalikko--pohja .mk-linssivalikko__nimi {
+    font-size: var(--tk-koko-leipa);
+    letter-spacing: 0;
+    color: var(--tk-lasi-muste);
+}
+
+.mk-linssivalikko__viiva {
+    height: 1px;
+    margin: var(--tk-vali-xs) 0 var(--tk-vali-s) 0;
+    background-color: var(--tk-lasi-reunus);
+}
+
+.mk-linssivalikko--pohja .mk-linssivalikko__tila {
+    margin-left: var(--tk-vali-m);
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 7.69px; /* web 0.12em */
+    opacity: 1;
+    color: var(--tk-lasi-muste-pehmea);
+}
+
+.mk-linssivalikko--pohja .mk-linssivalikko__kytkin.mk-valittu .mk-linssivalikko__tila {
+    color: var(--tk-lasi-korostus);
 }

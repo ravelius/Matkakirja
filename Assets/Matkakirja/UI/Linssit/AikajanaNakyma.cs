@@ -219,6 +219,9 @@ namespace Matkakirja.Natiivi
             LinssiKysymykset.AvoinNosto = () => tila == Tila.Ihminen ? nostokortti.Auki : null;
             // Kortin tila tutkimusvaiheen muistiin (web tallennaMuisti: kortti auki / kiinni).
             nostokortti.Muuttui += () => LinssiUi.IhmisenMatka?.Tutkimus?.KorttiAuki(nostokortti.Auki);
+            // NOSTOKORTTI-pohja: löytökuva (juurikerroksessa kortin yläpuolella) piiloon kortin ajaksi, ettei se peitä kortin
+            // kapiteelia ja otsikkoa (käsitesti 953fe5bb); kortti näyttää saman kuvan heroina.
+            nostokortti.Muuttui += () => kertomuskuva.style.visibility = nostokortti.Auki != null ? Visibility.Hidden : StyleKeyword.Null;
             // Virtanapit palkkiin kellon ja ohjainten väliin (web .aikajana.kertomus .ihmisen-vananapit margin 0 auto).
             tutkimus = new IhmisenTutkimusNakyma(kerros, ylarivi, 2, nostokortti);
             // Virtanappien rivi tulee ja menee tutkimusvaiheen mukana: saaririvin korkeus uudelleen (löydös 74).
@@ -556,6 +559,7 @@ namespace Matkakirja.Natiivi
                 && musta.style.display.value != DisplayStyle.Flex;
             aikaselain.Nayta(nakyy, kerros.Reunat(LinssiUi.Kerros).w);
             kertomus.style.bottom = nakyy && !kertomus.ClassListContains("mk-keskella") ? aikaselain.Korkeus + 11 : StyleKeyword.Null;
+            nostokortti.Ala = nakyy ? aikaselain.Korkeus + 11 : 0f; // NOSTOKORTTI-pohja: kortti aikaselaimen yläpuolelle
         }
 
         // --- tila ------------------------------------------------------------------------
@@ -1597,7 +1601,8 @@ namespace Matkakirja.Natiivi
                 var a = alue.Value;
                 float aw = a.width * jw, ah = a.height * jh;
                 float kw = Mathf.Min(aw, ah * 1.5f), kh = Mathf.Round(kw / 1.5f);
-                kertomuskuva.style.visibility = Visibility.Visible;
+                // Nostokortti auki: kuva pysyy piilossa (Muuttui piilotti sen, mutta tämä joka ruudun asettelu palautti sen; savuke 106).
+                kertomuskuva.style.visibility = nostokortti.Auki != null ? Visibility.Hidden : Visibility.Visible;
                 kertomuskuva.style.width = Mathf.Round(kw);
                 kertomuskuva.style.height = kh;
                 kertomuskuva.style.left = Mathf.Round(a.x * jw + (aw - kw) / 2f);
@@ -1611,7 +1616,7 @@ namespace Matkakirja.Natiivi
             float leveys = juuri.resolvedStyle.width;
             if (float.IsNaN(leveys) || leveys <= 0) return;
             float w = Mathf.Min(leveys * 0.66f, 560f), h = Mathf.Round(w * 2f / 3f);
-            kertomuskuva.style.visibility = Visibility.Visible;
+            kertomuskuva.style.visibility = nostokortti.Auki != null ? Visibility.Hidden : Visibility.Visible;
             kertomuskuva.style.width = w;
             kertomuskuva.style.height = h;
             kertomuskuva.style.left = p.x - w / 2f;
@@ -1863,6 +1868,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Testikomento: ihmisen matkan osat ilman linssiä (aloitus|musta|valot|jakso i|kuva i|loppu).</summary>
+        /// <summary>Testikomento ui linssi matka veto …: Ihmisen matkan nostokortin vetokahva.</summary>
+        public string TestaaIhmisnostoVeto(string suunta) => nostokortti.TestiVeto(suunta);
+
         public string TestaaIhminen(string mita, int i)
         {
             Ala(Tila.Ihminen);
