@@ -11,3 +11,6 @@
 
 # Laattapaketti (tyokalut/laattapaketti.mjs, LaattapakettiRakennus): ei gitiin, ei LFS:ää; Build/ on jo ohitettu.
 /Assets/StreamingAssets/laattapaketti.bin*
+
+# Kyytipino.asset (Rakennus.KyytipinoProfiili luo sen jokaisessa käännöksessä; ladataan Resourcesista nimellä, ei GUID-viittauksia).
+/Assets/Matkakirja/Linssit/Resources/Kyytipino.asset*
