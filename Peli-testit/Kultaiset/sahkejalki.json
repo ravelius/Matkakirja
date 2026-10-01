@@ -8,54 +8,54 @@
   "adjektiivit": [
    "Utelias",
    "Höyryävä",
-   "Vaitelias",
-   "Ripeä",
-   "Uskalias",
-   "Verkkainen",
-   "Tarkkanäköinen",
-   "Kärsivällinen",
-   "Salaperäinen",
-   "Kohtelias",
-   "Sitkeä",
-   "Valpas",
    "Rohkea",
-   "Huolellinen",
-   "Levoton",
-   "Sinnikäs",
-   "Oivaltava",
-   "Vakaa",
-   "Nokkela",
-   "Hiljainen",
-   "Iloinen",
+   "Salaperäinen",
+   "Vaitelias",
+   "Sitkeä",
+   "Nokinen",
+   "Tarkkasilmäinen",
+   "Kärsivällinen",
+   "Vikkelä",
+   "Tyyni",
+   "Uljas",
+   "Ovela",
+   "Väsymätön",
+   "Hajamielinen",
+   "Ripeä",
+   "Ponteva",
+   "Verkkainen",
    "Peloton",
-   "Tarmokas",
-   "Viisas"
+   "Juhlallinen",
+   "Kohtelias",
+   "Räiskyvä",
+   "Vankka",
+   "Iloinen"
   ],
   "substantiivit": [
    "Ilves",
    "Majakka",
    "Kompassi",
-   "Näätä",
-   "Höyrylaiva",
+   "Hylje",
    "Kurki",
-   "Lennätin",
-   "Ahma",
-   "Kiikari",
-   "Peltosirkku",
-   "Postivaunu",
-   "Saukko",
-   "Tiimalasi",
-   "Kärppä",
-   "Kartturi",
-   "Merikotka",
+   "Höyryveturi",
    "Ankkuri",
-   "Mursu",
-   "Karavaani",
-   "Naali",
+   "Näätä",
+   "Merikotka",
    "Sekstantti",
-   "Haikara",
-   "Matkalaukku",
-   "Sorsa"
+   "Karhu",
+   "Priki",
+   "Karttapallo",
+   "Susi",
+   "Peura",
+   "Lyhty",
+   "Kirjekyyhky",
+   "Taskukello",
+   "Saukko",
+   "Huuhkaja",
+   "Postivaunu",
+   "Kiikari",
+   "Mursu",
+   "Villihanhi"
   ],
   "saatteet": [
    "Sähke sinulle. Luin sen jo matkalla.",
@@ -168,155 +168,155 @@
    {
     "montako": 3,
     "nimet": [
-     "Tarkkanäköinen Majakka",
-     "Oivaltava Karavaani",
-     "Tarmokas Haikara"
+     "Nokinen Majakka",
+     "Ponteva Saukko",
+     "Vankka Kiikari"
     ]
    },
    {
     "montako": 3,
     "nimet": [
-     "Iloinen Kurki",
-     "Kohtelias Kärppä",
-     "Sinnikäs Sorsa"
+     "Kohtelias Höyryveturi",
+     "Vikkelä Susi",
+     "Ripeä Villihanhi"
     ]
    },
    {
     "montako": 3,
     "nimet": [
-     "Valpas Lennätin",
-     "Nokkela Sekstantti",
-     "Levoton Matkalaukku"
+     "Uljas Ankkuri",
+     "Peloton Postivaunu",
+     "Hajamielinen Mursu"
     ]
    },
    {
     "montako": 3,
     "nimet": [
-     "Hiljainen Mursu",
-     "Valpas Naali",
-     "Tarkkanäköinen Postivaunu"
+     "Juhlallinen Taskukello",
+     "Uljas Huuhkaja",
+     "Nokinen Karhu"
     ]
    },
    {
     "montako": 3,
     "nimet": [
-     "Sitkeä Kärppä",
-     "Vakaa Naali",
-     "Ripeä Kartturi"
+     "Tyyni Susi",
+     "Verkkainen Huuhkaja",
+     "Salaperäinen Peura"
     ]
    },
    {
     "montako": 3,
     "nimet": [
-     "Salaperäinen Ankkuri",
-     "Vaitelias Sekstantti",
-     "Tarkkanäköinen Höyrylaiva"
+     "Kärsivällinen Kirjekyyhky",
+     "Rohkea Postivaunu",
+     "Nokinen Kurki"
     ]
    },
    {
     "montako": 3,
     "nimet": [
-     "Huolellinen Karavaani",
-     "Levoton Kartturi",
-     "Hiljainen Mursu"
+     "Väsymätön Saukko",
+     "Hajamielinen Peura",
+     "Juhlallinen Taskukello"
     ]
    },
    {
     "montako": 3,
     "nimet": [
-     "Uskalias Sekstantti",
-     "Ripeä Saukko",
-     "Nokkela Kartturi"
+     "Vaitelias Postivaunu",
+     "Salaperäinen Priki",
+     "Peloton Peura"
     ]
    },
    {
     "montako": 3,
     "nimet": [
-     "Tarkkanäköinen Ankkuri",
-     "Vakaa Saukko",
-     "Nokkela Matkalaukku"
+     "Nokinen Kirjekyyhky",
+     "Verkkainen Priki",
+     "Peloton Mursu"
     ]
    },
    {
     "montako": 3,
     "nimet": [
-     "Vaitelias Matkalaukku",
-     "Levoton Haikara",
-     "Hiljainen Näätä"
+     "Rohkea Mursu",
+     "Hajamielinen Kiikari",
+     "Juhlallinen Hylje"
     ]
    },
    {
     "montako": 3,
     "nimet": [
-     "Tarmokas Merikotka",
-     "Rohkea Haikara",
-     "Tarmokas Tiimalasi"
+     "Vankka Lyhty",
+     "Ovela Kiikari",
+     "Vankka Karttapallo"
     ]
    },
    {
     "montako": 3,
     "nimet": [
-     "Ripeä Kompassi",
-     "Vaitelias Lennätin",
-     "Utelias Mursu"
+     "Salaperäinen Kompassi",
+     "Rohkea Ankkuri",
+     "Utelias Taskukello"
     ]
    },
    {
     "montako": 1,
     "nimet": [
-     "Rohkea Naali"
+     "Ovela Huuhkaja"
     ]
    },
    {
     "montako": 40,
     "nimet": [
-     "Verkkainen Kiikari",
-     "Hiljainen Saukko",
-     "Sitkeä Näätä",
+     "Sitkeä Merikotka",
+     "Juhlallinen Priki",
+     "Tyyni Hylje",
+     "Rohkea Karhu",
+     "Verkkainen Lyhty",
+     "Utelias Lyhty",
+     "Hajamielinen Kompassi",
+     "Iloinen Taskukello",
+     "Hajamielinen Ilves",
      "Vaitelias Postivaunu",
-     "Vakaa Merikotka",
-     "Utelias Merikotka",
-     "Levoton Kompassi",
-     "Viisas Mursu",
-     "Levoton Ilves",
-     "Uskalias Sekstantti",
-     "Viisas Peltosirkku",
-     "Kohtelias Saukko",
-     "Tarmokas Kompassi",
-     "Rohkea Kartturi",
-     "Valpas Postivaunu",
-     "Nokkela Mursu",
-     "Ripeä Ilves",
-     "Verkkainen Ankkuri",
-     "Hiljainen Postivaunu",
-     "Sinnikäs Ahma",
-     "Tarkkanäköinen Kiikari",
-     "Iloinen Merikotka",
-     "Sitkeä Naali",
-     "Kohtelias Tiimalasi",
-     "Viisas Kompassi",
-     "Levoton Kärppä",
-     "Kohtelias Lennätin",
-     "Peloton Kartturi",
-     "Ripeä Ahma",
-     "Vaitelias Kompassi",
-     "Kärsivällinen Tiimalasi",
-     "Huolellinen Matkalaukku",
-     "Utelias Naali",
-     "Peloton Höyrylaiva",
-     "Valpas Saukko",
-     "Valpas Tiimalasi",
-     "Peloton Ahma",
-     "Oivaltava Kartturi",
-     "Tarmokas Naali"
+     "Iloinen Sekstantti",
+     "Vikkelä Priki",
+     "Vankka Kompassi",
+     "Ovela Peura",
+     "Uljas Karhu",
+     "Peloton Taskukello",
+     "Salaperäinen Ilves",
+     "Sitkeä Kirjekyyhky",
+     "Juhlallinen Karhu",
+     "Ripeä Näätä",
+     "Nokinen Merikotka",
+     "Kohtelias Lyhty",
+     "Tyyni Huuhkaja",
+     "Vikkelä Karttapallo",
+     "Iloinen Kompassi",
+     "Hajamielinen Susi",
+     "Vikkelä Ankkuri",
+     "Räiskyvä Peura",
+     "Salaperäinen Näätä",
+     "Rohkea Kompassi",
+     "Tarkkasilmäinen Karttapallo",
+     "Väsymätön Mursu",
+     "Utelias Huuhkaja",
+     "Räiskyvä Kurki",
+     "Uljas Priki",
+     "Uljas Karttapallo",
+     "Räiskyvä Näätä",
+     "Ponteva Peura",
+     "Vankka Huuhkaja"
     ]
    },
    {
     "montako": 3,
     "nimet": [
-     "Hiljainen Sorsa",
+     "Juhlallinen Villihanhi",
      "Utelias Ilves",
-     "Viisas Sekstantti"
+     "Iloinen Postivaunu"
     ]
    }
   ]
