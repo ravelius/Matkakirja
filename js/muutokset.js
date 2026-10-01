@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2515, teksti: 'Tyylikirja: tilavärit, lomakekenttä, peitto.pan… (#3805)' },
   { v: 2514, teksti: 'Maakuntien toinen kuva: LTU, LUX, LVA, MDA (#3803)' },
   { v: 2513, teksti: 'Olavinlinna: detalji- ja maastokerroksille ASTC… (#3806)' },
   { v: 2512, teksti: 'Loki ja Raamattu: 1.10. päätökset mainiin (#3802)' },
