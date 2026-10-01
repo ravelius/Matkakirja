@@ -67,8 +67,8 @@ namespace Matkakirja.Natiivi
             tiedot.style.display = aarteet.style.display = pohja.style.display = runko.style.display = asetukset.style.display = DisplayStyle.None;
 
             esikatselu = Rakenne.El("mk-linssivalitsin__esikatselu", turva);
-            Rakenne.Tausta(esikatselu, Kuviot.PergamenttiVaalea);
-            esikatselu.Add(new KarheaKehys { Sade = 10, Paksuus = 1.2f });
+            // PANEELI-pohja (omistaja 1.10.2026, web #3804): paperipinta ja pergamenttirengas tokeneista (Linssit.uss "PANEELI").
+            esikatselu.AddToClassList("mk-paneeli--pohja");
             Kirjasimet.Aseta(esikatselu, Kirjasin.Kone);
             var esiVieritys = new ScrollView(ScrollViewMode.Vertical);
             esiVieritys.AddToClassList("mk-linssivalitsin__esivieritys");
