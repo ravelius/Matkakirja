@@ -89,7 +89,8 @@ namespace Matkakirja.Linssit.IssKamera
         {
             // Tarkin haettu taso voittaa: tasot tarkimmasta karkeimpaan, jokaisella kaikki ruudut järjestyksessä (laitekoe 4:
             // ruutu kerrallaan -silmukka otti edellisen ruudun karkean tason toisen lehden haun jäljiltä → laatan muotoisia
-            // eri tarkkuuden ja eri päivän kaistoja). Nodata (0,0,0) → seuraava ruutu samalla tasolla.
+            // eri tarkkuuden ja eri päivän kaistoja). Nodata (0,0,0) → seuraava ruutu samalla tasolla. Päällekkäiset ruudut
+            // sekoitetaan reunalla painoin (saumapehmennys, eri päivien kuvat).
             r = g = b = 0;
             int lkm = d.Ruudut.Count, tasoja = 0;
             for (int k = 0; k < lkm; k++) tasoja = Math.Max(tasoja, d.Ruudut[k].otsake.Tasot.Count);
@@ -102,7 +103,9 @@ namespace Matkakirja.Linssit.IssKamera
             }
             if (alku == int.MaxValue) return false;
             (double e, double n)[] utm = null;
+            double sr = 0, sg = 0, sb = 0, summa = 0, jaljella = 1;
             for (int taso = alku; taso < tasoja; taso++)
+            {
                 for (int k = 0; k < lkm; k++)
                 {
                     var (ru, o) = d.Ruudut[k];
@@ -116,11 +119,23 @@ namespace Matkakirja.Linssit.IssKamera
                     if (fx < 0 || fy < 0 || fx >= t.Leveys - 1 || fy >= t.Korkeus - 1) continue;   // ruudun ulkopuolella
                     int ix = (int)fx, iy = (int)fy; double ax = fx - ix, ay = fy - iy;
                     if (!Pikselit(d, ru.Tunnus, t, taso, ix, iy, out var p00, out var p10, out var p01, out var p11)) continue;   // ei haettu
-                    if (Musta(p00) && Musta(p10) && Musta(p01) && Musta(p11)) continue;   // nodata
-                    r = Seka(p00.r, p10.r, p01.r, p11.r, ax, ay); g = Seka(p00.g, p10.g, p01.g, p11.g, ax, ay); b = Seka(p00.b, p10.b, p01.b, p11.b, ax, ay);
-                    return true;
+                    if (Musta(p00) || Musta(p10) || Musta(p01) || Musta(p11)) continue;   // nodata (myös reunapikseli)
+                    double cr = (p00.r * (1 - ax) + p10.r * ax) * (1 - ay) + (p01.r * (1 - ax) + p11.r * ax) * ay;
+                    double cg = (p00.g * (1 - ax) + p10.g * ax) * (1 - ay) + (p01.g * (1 - ax) + p11.g * ax) * ay;
+                    double cb = (p00.b * (1 - ax) + p10.b * ax) * (1 - ay) + (p01.b * (1 - ax) + p11.b * ax) * ay;
+                    // Saumapehmennys: paino kasvaa ruudun UTM-reunasta sisään 4 km:n matkalla; ruudun keskellä ensimmäinen voittaa.
+                    double koko = o.Tasot[0].Leveys * o.PikseliM;
+                    double reuna = Math.Min(Math.Min(e - o.Ita0, o.Ita0 + koko - e), Math.Min(o.Pohjoinen0 - n, n - (o.Pohjoinen0 - koko)));
+                    double paino = Math.Max(0.02, Math.Min(1, reuna / 4000));
+                    sr += cr * paino * jaljella; sg += cg * paino * jaljella; sb += cb * paino * jaljella; summa += paino * jaljella;
+                    jaljella *= 1 - paino;
+                    if (jaljella < 0.02) break;
                 }
-            return false;
+                if (summa > 0) break;   // tällä tasolla dataa: ei karkeampaa
+            }
+            if (summa <= 0) return false;
+            r = (byte)Math.Min(255, Math.Round(sr / summa)); g = (byte)Math.Min(255, Math.Round(sg / summa)); b = (byte)Math.Min(255, Math.Round(sb / summa));
+            return true;
         }
 
         static bool Musta((byte r, byte g, byte b) p) => p.r == 0 && p.g == 0 && p.b == 0;
