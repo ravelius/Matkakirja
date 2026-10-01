@@ -4121,3 +4121,50 @@
     -unity-font-style: bold;
     -unity-text-align: middle-center;
 }
+
+/* PANEELI (LASI): linssin hampurilainen (omistaja 1.10.2026, web #3810; LinssiValikko). Lasipinta ja -reunus, kulma kortti;
+ * Poistu ja Aloita alusta TOIMINTO-riveinä 38 pt, viiva, kytkimet KYTKIN-riveinä (tila kapiteelina, päällä korostusvärillä). */
+.mk-linssivalikko.mk-linssivalikko--pohja {
+    min-width: 240px;
+    padding: var(--tk-vali-s);
+    border-color: var(--tk-lasi-reunus);
+    border-radius: var(--tk-kulma-kortti);
+    background-color: var(--tk-lasi-pinta);
+}
+
+.mk-linssivalikko--pohja .mk-linssivalikko__kohta {
+    min-height: var(--tk-nappi-korkeus);
+    margin: 0 0 var(--tk-vali-xs) 0;
+    padding: 0 var(--tk-vali-m);
+    border-radius: var(--tk-kulma-nappi);
+    color: var(--tk-lasi-muste);
+}
+
+.mk-linssivalikko--pohja .mk-linssivalikko__komento {
+    border-color: var(--tk-lasi-reunus);
+}
+
+.mk-linssivalikko--pohja .mk-linssivalikko__kohta .mk-nappi__teksti,
+.mk-linssivalikko--pohja .mk-linssivalikko__nimi {
+    font-size: var(--tk-koko-leipa);
+    letter-spacing: 0;
+    color: var(--tk-lasi-muste);
+}
+
+.mk-linssivalikko__viiva {
+    height: 1px;
+    margin: var(--tk-vali-xs) 0 var(--tk-vali-s) 0;
+    background-color: var(--tk-lasi-reunus);
+}
+
+.mk-linssivalikko--pohja .mk-linssivalikko__tila {
+    margin-left: var(--tk-vali-m);
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 7.69px; /* web 0.12em */
+    opacity: 1;
+    color: var(--tk-lasi-muste-pehmea);
+}
+
+.mk-linssivalikko--pohja .mk-linssivalikko__kytkin.mk-valittu .mk-linssivalikko__tila {
+    color: var(--tk-lasi-korostus);
+}
