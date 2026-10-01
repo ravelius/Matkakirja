@@ -303,11 +303,16 @@ def teksti(s, txt, x, y, z, koko, mat='maali_valkoinen', tasaus='CENTER', valist
 
 # v3 (omistaja 1.10.): KUUKAUSI-nuppi on vuodenaikanuppi, OMA PAIKKA -vipu korvattu KUVAA-painikkeella (LENNÄ-pohja).
 # Avaimet ('kuukausi') pysyvät, ettei Linssisepän ankkureita tarvitse nimetä uudelleen; 'oma' → 'kuvaa'.
-OTSIKOT = {'nopeus': 'NOPEUS', 'pilvet': 'PILVET', 'kuukausi': 'VUODENAIKA', 'kohde': 'KOHDE', 'kuvaa': 'KUVAA',
-           'poistu': 'POISTU'}
+# v4 (omistaja 1.10.): vuorokausinuppi VUODENAJAN rinnalle (sama nuppimalli), seitsemän moduulia; otsikko VUOROKAUSI
+# (Päätoimittaja: VUOROKAUDENAIKA ei mahtunut puhelimelle samalla fontilla).
+OTSIKOT = {'nopeus': 'NOPEUS', 'pilvet': 'PILVET', 'kuukausi': 'VUODENAIKA', 'vuorokausi': 'VUOROKAUSI',
+           'kohde': 'KOHDE', 'kuvaa': 'KUVAA', 'poistu': 'POISTU'}
+NUPIT = ('pilvet', 'kuukausi', 'vuorokausi')
+PAINIKKEET = ('kohde', 'kuvaa', 'poistu')
 PAINIKE_LEGENDA = {'kohde': 'LENNÄ', 'kuvaa': 'KUVAA', 'poistu': 'POISTU'}
 OTSIKKO_KOKO, ASTEIKKO_KOKO = 7.2, 5.0
 KIERTO_K = 0.8   # NOPEUS-kiertokytkimen mittakaava (v1: 1.0 ylitti ryhmäkehyksen)
+NOPEUS_ASENNOT = (-48, -16, 16, 48)  # v4: ±60/±20 → kapeampaan kehykseen ("1000×" osui viivaan), merkit ja osoitin samoissa
 
 
 # ---------------------------------------------------------------- pohja: konsolin runko (keski X:ssä tasainen)
@@ -365,8 +370,8 @@ def kierto():
     r.sylinteri(0, 0, 0, 0.8, 21.5, 'grafiitti', n=48, viiste=0.3, osat=1)
     r.sylinteri(0, 0, 0.8, 2.4, 20.0, 'teras', r2=19.2, n=48, viiste=0.5, osat=2)      # asteikkorengas
     r.sylinteri(0, 0, 2.4, 2.6, 14.6, 'kumi', n=48)
-    pitkat = [math.radians(k) for k in (-60, -20, 20, 60)]
-    lyhyet = [math.radians(k) for k in range(-80, 81, 10) if k not in (-60, -20, 20, 60)]
+    pitkat = [math.radians(k) for k in NOPEUS_ASENNOT]
+    lyhyet = [math.radians(k) for k in range(-64, 65, 8) if k not in NOPEUS_ASENNOT]
     sateittain(r, 17.4, pitkat, (0.55, 3.0, 0.3), 2.45, 'maali_musta')
     sateittain(r, 17.8, lyhyet, (0.35, 1.4, 0.3), 2.45, 'maali_musta')
     n = Solmu('kierto_nuppi')     # ISS:n harmaa kartiomainen nuppi, uritettu, valkoinen osoitin +Y
@@ -527,8 +532,9 @@ def rakenna(T, G, rungot=True):
     """T = pöydän leveys, G = kytkinryhmän leveys (keskellä). Palauttaa {'pohja': [...], 'ryhma': [...],
     'osat': {nimi: [...]}, 'paikat': {nimi: (x, y, ...)}, 'valot': {nimi: [(x, y, z)]}} pöydän koordinaateissa (pt)."""
     g0 = (T - G) / 2
-    askel = G / 6
-    kx = [g0 + askel * (i + 0.5) for i in range(6)]
+    askel = G / len(OTSIKOT)
+    kx = [g0 + askel * (i + 0.5) for i in range(len(OTSIKOT))]
+    raja = g0 + askel * (1 + len(NUPIT))  # vasen ryhmä: NOPEUS + nupit, oikea: painikkeet
     tulos = {'pohja': [], 'ryhma': [], 'osat': {}, 'paikat': {}, 'valot': {}}
     tulos['pohja'] += [paaty('paneeli_vasen', -1).valmis((PAATY, 0, 0)),
                        keski().valmis((PAATY, 0, 0), (T - 2 * PAATY, 1, 1)),
@@ -538,8 +544,8 @@ def rakenna(T, G, rungot=True):
     ku = kupu(T, G, g0)
     reuna = 7.0
     moduuli(ku, g0 + reuna, g0 + G - reuna, 124, 154)
-    moduuli(ku, g0 + reuna, g0 + G / 2 - 2, 42, 120)
-    moduuli(ku, g0 + G / 2 + 2, g0 + G - reuna, 42, 120)
+    moduuli(ku, g0 + reuna, raja - 2, 42, 120)
+    moduuli(ku, raja + 2, g0 + G - reuna, 42, 120)
     lev = min(44.0, askel - 16)
     for x, (avain, otsikko) in zip(kx, OTSIKOT.items()):   # ryhmäkehys, otsikko katkoksessa, legendalevy (arvokenttä)
         kp = askel / 2 - (8 if askel > 80 else 4)
@@ -547,7 +553,7 @@ def rakenna(T, G, rungot=True):
         tulos['paikat'][f'{avain}-otsikko'] = (x, 116.2, round(w + 4.4, 2), 8.0)
         ryhmakehys(ku, x - kp, x + kp, 60, 116.6, aukko=(x - w / 2 - 2.2, x + w / 2 + 2.2))
         legendalevy(ku, x, 51.5, lev)
-    for k, txt in zip((-60, -20, 20, 60), ('LIVE', '10×', '100×', '1000×')):   # NOPEUS-asteikko
+    for k, txt in zip(NOPEUS_ASENNOT, ('LIVE', '10×', '100×', '1000×')):   # NOPEUS-asteikko
         a_ = math.radians(k)
         r_ = (24.0 if abs(k) < 40 else 25.5) * KIERTO_K + 1.2
         teksti(ku, txt, kx[0] + r_ * math.sin(a_), RIVI2 + r_ * math.cos(a_) - 0.6, PINTA, ASTEIKKO_KOKO - 0.4)
@@ -571,18 +577,18 @@ def rakenna(T, G, rungot=True):
     k3 = (KIERTO_K,) * 3   # v2: kytkin kehyksensä sisään (Päätoimittaja 30.9.)
     tulos['ryhma'].append(kr.valmis((kx[0], RIVI2, PINTA), k3))
     tulos['osat']['nopeus'] = [kn.valmis((kx[0], RIVI2, PINTA), k3)]
-    for j, nimi in ((1, 'pilvet'), (2, 'kuukausi')):
+    for j, nimi in enumerate(NUPIT, 1):
         nr, nk = nuppi()
         nr.nimi, nk.nimi = f'nuppi_runko_{nimi}', f'nuppi_korkki_{nimi}'
         tulos['ryhma'].append(nr.valmis((kx[j], RIVI2, PINTA)))
         tulos['osat'][nimi] = [nk.valmis((kx[j], RIVI2, PINTA))]
-    for j, nimi in ((3, 'kohde'), (4, 'kuvaa'), (5, 'poistu')):
+    for j, nimi in enumerate(PAINIKKEET, 1 + len(NUPIT)):
         pr, pk = painike()
         pr.nimi, pk.nimi = f'painike_runko_{nimi}', f'painike_kansi_{nimi}'
         painikkeen_legenda(pk, PAINIKE_LEGENDA[nimi])
         tulos['ryhma'].append(pr.valmis((kx[j], RIVI2, PINTA)))
         tulos['osat'][nimi] = [pk.valmis((kx[j], RIVI2, PINTA))]
-    for nimi, j in (('nopeus', 0), ('pilvet', 1), ('kuukausi', 2), ('kohde', 3), ('kuvaa', 4), ('poistu', 5)):
+    for j, nimi in enumerate(OTSIKOT):
         tulos['paikat'][nimi] = (kx[j], RIVI2, 48, 48)
         tulos['paikat'][f'{nimi}-levy'] = (kx[j], 51.5, lev, 9.0)
     tulos['paikat']['live-otsikko'] = (lx, RIVI1, 22.0, 34.0)
