@@ -64,7 +64,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Painallus sulki selaimen paneelin: sama napautus ei sulje korttia.</summary>
         bool selainSulki;
         // NOSTOKORTTI-POHJA (UI-pohjat, omistaja 1.10.2026): KAPEA = alareunaan, korkeus ≤ Peitto.Max % (laajennettuna
-        // Peitto.Laajennettu %); KESKI/LEVEÄ = sivukortti oikeaan reunaan. Vetokahva: ylös laajentaa, alas sulkee.
+        // Peitto.Laajennettu %); KESKI/LEVEÄ = sivukortti oikeaan reunaan. Vetokahva: ylös laajentaa, alas pienentää laajennetun ja sulkee muuten.
         readonly VisualElement kahva;
         bool laajennettu, kahvaVeto;
         Vector2 kahvaAlku;
@@ -235,13 +235,13 @@ namespace Matkakirja.Natiivi
             void Paina()
             {
                 if (string.IsNullOrEmpty(nappi)) { tulos?.Invoke(null); return; }
-                // Vetokahva (NOSTOKORTTI-pohja): laajenna = veto ylös, pienenna = takaisin 45 %:iin, kahva-alas = sulku.
+                // Vetokahva (NOSTOKORTTI-pohja): laajenna = veto ylös, pienenna = takaisin 45 %:iin, kahva-alas = veto alas (laajennettu → 45 %, muuten sulku).
                 if (nappi == "laajenna" || nappi == "pienenna")
                 {
                     if (nappi == "laajenna" && kortti.ClassListContains("mk-nosto--esittely")) Vaihe2();
                     laajennettu = nappi == "laajenna"; Pystypaikka(); tulos?.Invoke(null); return;
                 }
-                if (nappi == "kahva-alas") { Sulje(); tulos?.Invoke(null); return; }
+                if (nappi == "kahva-alas") { if (laajennettu) { laajennettu = false; Pystypaikka(); } else Sulje(); tulos?.Invoke(null); return; }
                 // Nostoselain ja AUTO (Nostoselain.Testaa).
                 if (nappi.StartsWith("selain") || nappi == "auto" || nappi == "auto-pois" || nappi == "siirto" || nappi == "pysayta")
                 { tulos?.Invoke(selain.Testaa(nappi)); return; }
@@ -421,13 +421,15 @@ namespace Matkakirja.Natiivi
             kahva.style.display = kapea ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
-        /// <summary>Vetokahvan irrotus: ylös laajentaa (vaiheesta 1 koko korttiin), alas sulkee, napautus vaihtaa korkeutta.</summary>
+        /// <summary>Vetokahvan irrotus: ylös laajentaa (vaiheesta 1 koko korttiin), alas pienentää laajennetun ja sulkee muuten, napautus vaihtaa korkeutta.</summary>
         void KahvaIrti(PointerUpEvent e)
         {
             if (!kahvaVeto) return;
             kahvaVeto = false;
             if (kortti.HasPointerCapture(e.pointerId)) kortti.ReleasePointer(e.pointerId);
             float dy = e.position.y - kahvaAlku.y;
+            // NOSTOKORTTI kohta 2 (omistaja 1.10. 11.17, web pohjat.js): laajennetusta alasveto palaa ensin 45 %:iin.
+            if (dy > KahvaAlas && laajennettu) { laajennettu = false; Pystypaikka(); return; }
             if (dy > KahvaAlas) { Aanet.PulunTehoste("paper"); Sulje(); return; }
             bool laajenna = dy < -KahvaYlos || (Mathf.Abs(dy) < Napautuskynnys && !laajennettu);
             if (laajenna && kortti.ClassListContains("mk-nosto--esittely")) { Vaihe2(); return; } // Vaihe2 laajentaa
