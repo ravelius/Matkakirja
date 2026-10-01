@@ -9863,3 +9863,7 @@ Omistaja 1.10.2026 klo 22.1x Sokrates v3 -ruuduista sanatarkasti: 'Yksi ajatus p
 ## OMISTAJA: HEIJASTETUISSA KIRJAIMISSA SAA OLLA PROJEKTORIN EPÄTÄYDELLISYYTTÄ (CA) (1.10.2026) (1.10.2026 klo 22.13)
 
 Omistaja 1.10.2026 klo 22.1x sanatarkasti: 'Tekstissä saa itsessään olla projektorin epätäydellisyyttä esim CA' → kirjaimissa hento kromaattinen aberraatio (kasvaa projektion reunoja kohti) ja tarkennuksen pehmeys syvyyden mukaan; vain kirjaimissa, taustavuoto pysyy poissa (22.11). Linnanrakentaja v4 ja myöhemmin Linssisepän varjostin.
+
+## OMISTAJA (KORTTI): OLAVINLINNAN KUORI v24 KÄYTTÖÖN AAMUN iPAD-MITTAUKSEN EHDOLLA (1.10.2026) (1.10.2026 klo 22.19)
+
+Julkaisija mergesi #3812 (kuori v24, v2520) 22.06, ja paketti 52197409fe9d6669 kuitattiin puhtaaksi (Siirtoseppä 22.16: TF 110 puheet soivat, 404: 0, virheitä 0, TF 91 varapolku OK, ei regressiota v22 → v24). Omistaja valitsi kortilla 1.10.2026 klo 22.2x 'Ota käyttöön (Suositus)' → Julkaisija vaihtaa linnan osoittimen pakettiin 52197409fe9d6669 aamulla heti, kun Siirtosepän iPad Dev -mittaus on vähintään yhtä sujuva kuin nykyinen 2d0bde8dfb083ec7 (>50 ms 7, >100 ms 0, suurin 92 ms); huonompi tulos → luvut Päätoimittajalle ennen vaihtoa. Peruttavissa vaihtamalla takaisin.
