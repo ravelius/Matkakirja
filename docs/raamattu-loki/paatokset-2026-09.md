@@ -9743,3 +9743,7 @@ Omistajan ehdotus, Päätoimittaja suosittelee: VUODENAIKA-valitsimen rinnalle V
 ## OMISTAJA: CUPOLAN IKKUNA ISOMMAKSI — VAAKA 2,0, PYSTY 1,25 (1.10.2026) (1.10.2026 klo 17.03)
 
 Omistaja valitsi Linssisepän kokeilusta (haara linssiseppa/cupola-iso-ikkuna, koonti-cupola-vuorokausi-ikkuna.jpg) Cupolan ikkunan suurennokseksi vaakatilassa 2,0, jolloin aukko täyttää leveyden lähes reunasta reunaan, ja pystytilassa 1,25. Kytkinpöytä ei peitä maata enempää kuin ennen. iPadin arvo vastaavalla periaatteella Linssisepän ehdotuksesta. Toteuttaa Linssiseppä, merge seuraavaan junaan.
+
+## OMISTAJA: KÄÄNNÖSPALVELUUN .DS_STORE-SIIVOUS JA YKSI UUSINTA (1.10.2026) (1.10.2026 klo 17.04)
+
+Omistaja hyväksyi jaetun käännöspalvelun (proto-3d/tyokalut/proto-kaanna.sh) muutoksen: kun IosSimulaattori-vaihe kaatuu virheeseen "Directory not empty", sim.log tallennetaan, Build-kansioiden .DS_Store-tiedostot siivotaan ja käännös uusitaan kerran. Tiedostot syntyvät koodaus-tilillä macOS:n Finder-välimuistista (kansiokoot), eivät NAS:sta eivätkä omistajan tililtä. Muutos tehdään varmuuskopiolla (*.ennen-dsstore-uusinta-20261001) ja atomisella vaihdolla (Natiiviseppä). Lupa koskee vain tätä muutosta.
