@@ -2703,7 +2703,7 @@
   },
   {
    "metodi": "GET",
-   "polku": "/retkikunta/tila?koodi=ABC234&jasenId=j+1%2B%2F%C3%A4&avain=k%26%3D%3F%C3%B6%7E*._-",
+   "polku": "/retkikunta/tila?koodi=ABC234&jasenId=j+1%2B%2F%C3%A4",
    "runko": null
   },
   {

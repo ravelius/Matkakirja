@@ -2790,6 +2790,7 @@
 }
 
 .mk-ihmisnosto__pilkku {
+    flex-shrink: 0; /* web flex: none: pitkä aikarivi ei puristu pistettä pois (savuke 95, Omo Kibish) */
     width: 9px;
     height: 9px;
     margin-right: 6px;
