@@ -45,6 +45,7 @@ if '--siivoa' in a:
     _k = next(im for im in bpy.data.images if 'diffuse' in im.name)
     kuori_siivous.siivoa(o, _k)
     kuori_siivous.tallenna_kuva(_k, os.path.join(ULOS, 'tekstuuri_siivottu.png'))
+    kuori_siivous.tallenna_maski(os.path.join(ULOS, 'siivousmaski.png'))
 
 # Tekstuuri: 4k alkuperäinen LOD0:lle, 2k muille (JPEG vientiin).
 kuva = next(im for im in bpy.data.images if 'diffuse' in im.name)

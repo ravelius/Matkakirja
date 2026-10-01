@@ -32,6 +32,7 @@ const RESEPTIT = new Set([
   'hakapyssy', 'ruutitynnyri', 'pelilauta', 'pulpetti', 'kirja', 'koysikieppi', 'airot', 'verkko', 'kello',
   'jalkajousi', 'nuolitynnyri',
   'sinettisormus', 'kaiverrus', // Voudin sinetti 29.9.
+  'hirsiaitta', 'venevaja', // Ympäristö n1500 1.10. (reseptit-rannat.mjs)
   'kangaspakka', 'vaatepino', 'vaateorsi', // Fatabuuri vaateaitaksi 29.9.
   // Tunnelma 29.9. (tunnelma.js): lyhty tolpassa.
   'lyhty',
@@ -423,7 +424,9 @@ test('Olavinlinna: kertoja 4 jaksoa (≤ 3 virkettä, ≤ 240 merkkiä), kamera,
   for (const x of j) {
     assert.ok(x.teksti.length <= 240, `${x.id}: ${x.teksti.length} merkkiä`);
     assert.ok((x.teksti.match(/[.!?](\s|$)/g) ?? []).length <= 3, `${x.id}: yli 3 virkettä`);
-    for (const k of [x.kamera, x.kameraPysty]) assert.ok(Array.isArray(k?.kohde) && k.kohde.length === 3 && k.etaisyys > 0, x.id);
+    // Tila-jakso (laituri) käyttää tilan omaa kameraa (natiivi, Siirtoseppä 1.1 (75)); muilla jaksoilla oma kamera.
+    const kamerat = x.tila ? [RAKENNUS.tilat.find((t) => t.id === x.tila)?.kamera] : [x.kamera, x.kameraPysty];
+    for (const k of kamerat) assert.ok(Array.isArray(k?.kohde) && k.kohde.length === 3 && k.etaisyys > 0, x.id);
     assert.ok(AANET[x.aani], `${x.id}: ääni pankissa`);
     assert.ok(x.kesto_s >= AANET[x.aani].kesto_s + 0.5, `${x.id}: jakso kestää äänen ajan`);
   }
@@ -481,4 +484,17 @@ test('Olavinlinna: kertojan jakson valinnainen tila viittaa olemassa olevaan koh
   const tilat = new Set(RAKENNUS.tilat.filter((t) => t.kohdistettava).map((t) => t.id));
   for (const j of RAKENNUS.kertoja.jaksot) if (j.tila !== undefined) assert.ok(tilat.has(j.tila), `${j.id}: tila ${j.tila}`);
   assert.equal(RAKENNUS.kertoja.jaksot.find((j) => j.id === 'laituri').tila, 'laituri');
+});
+
+// Mikseritilan otot (Pelikoodari 30.9.): keittiön kuudella repliikillä kuiva/kaiku/kaikuPitka median juuresta ('/').
+test('AANET: keittiön repliikkien mikseriotot ovat median juuren polkuja, muilla äänillä ei kenttiä', () => {
+  const ottajat = ['kokki-1', 'kokki-2', 'apulainen-1', 'apulainen-2', 'vesipoika-1', 'vesipoika-2'];
+  for (const [id, a] of Object.entries(AANET)) {
+    const kentat = ['kuiva', 'kaiku', 'kaikuPitka'].filter((k) => a[k] !== undefined);
+    if (!ottajat.includes(id)) { assert.deepEqual(kentat, [], id); continue; }
+    const v = id.startsWith('apulainen') ? 'v2' : 'v1';  // apulaisen uusi ääni (omistaja, #3740)
+    assert.equal(a.kuiva, `/aanet/mikseri/${v}/${id}.kuiva.mp3`);
+    assert.equal(a.kaiku, `/aanet/mikseri/${v}/${id}.kaiku.mp3`);
+    assert.equal(a.kaikuPitka, `/aanet/mikseri/${v}/${id}.kaiku-pitka.mp3`);
+  }
 });

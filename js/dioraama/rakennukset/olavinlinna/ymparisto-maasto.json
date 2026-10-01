@@ -1,0 +1,44 @@
+{
+ "alue": [
+  -800.0,
+  -800.0,
+  800.0,
+  800.0
+ ],
+ "koko": 2048,
+ "pikseli_m": 0.78125,
+ "lahi_m": 400,
+ "huom": "alue [minX, minZ, maxX, maxZ] = Blender [minX, minY, maxX, maxY]; kuvan rivi 0 = maxY (pohjoinen), sarake 0 = minX. splat-0 RGBA = kerrokset 0–3, splat-1 RG = 4–5 (yhteissumma 255); splat-normaali-0 (1024²) = 0+4, 1, 2+5, 3.",
+ "kerrokset": [
+  {
+   "id": "kallio",
+   "lahde": "mossy_rock",
+   "toisto_m": 3.0
+  },
+  {
+   "id": "varpukangas",
+   "lahde": "forest_leaves_02",
+   "toisto_m": 3.0
+  },
+  {
+   "id": "niitty",
+   "lahde": "forrest_ground_01",
+   "toisto_m": 2.0
+  },
+  {
+   "id": "neulaset",
+   "lahde": "forrest_ground_03",
+   "toisto_m": 2.0
+  },
+  {
+   "id": "rantakivikko",
+   "lahde": "dry_river_pebbles",
+   "toisto_m": 2.0
+  },
+  {
+   "id": "hiekka",
+   "lahde": "coast_sand_04",
+   "toisto_m": 3.94
+  }
+ ]
+}

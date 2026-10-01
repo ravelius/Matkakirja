@@ -1,0 +1,6 @@
+{
+ "huom": "Linnakirjaston sijainti ämpärissä (docs/raportit/linnakirjasto-20260930.md). Ensimmäinen erä kulkee Olavinlinnan Blender-viennin mukana (omistaja 30.9.2026); oma vie-kirjasto.sh + kirjasto/<hash>/ myöhemmin.",
+ "hash": "7c470d2e110344eb",
+ "kansio": "dioraama/olavinlinna/blender/7c470d2e110344eb/kirjasto/",
+ "sisalto": ["materiaali/graniittilohkomuuri", "materiaali/paanukatto", "materiaali/kivilaatta", "materiaali/kallio"]
+}
