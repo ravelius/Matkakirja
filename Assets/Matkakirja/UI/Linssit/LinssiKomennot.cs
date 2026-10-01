@@ -147,6 +147,9 @@ namespace Matkakirja.Natiivi
                 case "keksinnot":
                     return l.Aikajana.TestaaKeksinnot(a1.Length > 0 ? a1 : "pysakki", Luku(a1 == "pysakki" || a1 == "valinaytos" ? a2 : a1, a1 == "valinaytos" ? -1 : 0));
                 case "matka":
+                    // "matka nosto <n> [kysy <k>]": löydön nostokortti (ja k:s kysymys → Pulun chat), ks. TestaaIhminen.
+                    if (a1 == "nosto" && osat.Length > 4 && osat[3] == "kysy")
+                        return l.Aikajana.TestaaIhminen("nosto", Luku(a2, 0) + 1000 * (Luku(osat[4], 0) + 1));
                     return l.Aikajana.TestaaIhminen(a1.Length > 0 ? a1 : "jakso", Luku(a2, 0));
                 case "radio":
                 {
