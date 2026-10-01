@@ -112,7 +112,11 @@ namespace Matkakirja.Natiivi
                 lappu.style.backgroundColor = Kuviot.Vari(r.Vari ?? "#888888");
                 Rakenne.Teksti(r.Teksti ?? "", "mk-linssiselite__teksti", rivi);
             }
-            AsetaPieni(pieni);
+            // Omistaja 30.9.2026 klo 23.1x (pariteetti 3): värien selite auki 3 s linssin avauksessa, sitten nimilapuksi;
+            // napautus avaa sen uudelleen (Kutista). Pelaajan oma napautus kesken perii ajastimen.
+            kutistus?.Pause();
+            AsetaPieni(false);
+            kutistus = kortti.schedule.Execute(() => AsetaPieni(true)).StartingIn(AukiMs);
             Nakyvissa = true;
             Asettele();
             Rakenne.Nayta(kortti, true, 320);
@@ -125,10 +129,13 @@ namespace Matkakirja.Natiivi
             Rakenne.Nayta(kortti, false, 220);
         }
 
-        void Kutista() => AsetaPieni(!pieni);
+        const long AukiMs = 3000;
+        IVisualElementScheduledItem kutistus;
+
+        void Kutista() { kutistus?.Pause(); AsetaPieni(!pieni); }
 
         /// <summary>Testikomento (ui linssi selite auki|kiinni): kortti avattuna tai kutistettuna.</summary>
-        public void Avaa(bool auki) => AsetaPieni(!auki);
+        public void Avaa(bool auki) { kutistus?.Pause(); AsetaPieni(!auki); }
 
         void AsetaPieni(bool p)
         {

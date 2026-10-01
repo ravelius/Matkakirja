@@ -944,7 +944,8 @@ namespace Matkakirja.Natiivi
                 case "kutsu":
                     // ui kutsu [napauta]: avauskortin kutsuminiatyyrin tila / napautus.
                     if (loput == "napauta") return ui.Kutsu.Napauta();
-                    Kirjaa("kutsu " + (ui.Kutsu.Nakyy ? "näkyy " + ui.Kutsu.Laatikko : "piilossa") + ", nostojen kerroin " + ui.Nostot.Karttakerroin.ToString("0.00", CultureInfo.InvariantCulture));
+                    Kirjaa("kutsu " + (ui.Kutsu.Nakyy ? "näkyy " + ui.Kutsu.Laatikko : "piilossa") + ", nostojen kerroin " + ui.Nostot.Karttakerroin.ToString("0.00", CultureInfo.InvariantCulture)
+                        + ", maan näkymässä " + (Object.FindAnyObjectByType<PalloKierto>()?.MaanNakymassa ?? false));
                     return null;
                 case "avauskortti":
                 {
