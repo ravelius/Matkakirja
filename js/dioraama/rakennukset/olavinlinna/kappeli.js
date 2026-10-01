@@ -13,9 +13,9 @@ const TAULU = {
   tila: 'tarkistettu',
   kohdat: [
     // Sisältökirjuri 30.9. (5684d5d81): vuosiluku 1499 ja "ainutlaatuinen" ilman lähdettä → korjattu.
-    { teksti: 'Kappeli on Kirkkotornin kolmannessa kerroksessa, ja sen seinää kiertää kaksitoista vihkimäristiä.', lahde: 'Finna M012:RHO217939:34; Wikipedia: Olavinlinna; Apu: Suomen keskiaikaiset kivilinnat 6/6' },
-    { teksti: 'Seinän pieni aukko on hagioskooppi: rikolliset ja sairaat seurasivat messua sen kautta.', lahde: 'Finna M012:RHO217939:34; Wikipedia: Olavinlinna; Apu: Suomen keskiaikaiset kivilinnat 6/6' },
-    { teksti: 'Kattomaalausten jäänteistä erottaa vielä lehti- ja kukkakuvioita sekä vaakunoita.', lahde: 'Kansallismuseo: Pyhä Olavi' },
+    { aani: 'kappeli-kohta-0', teksti: 'Kappeli on Kirkkotornin kolmannessa kerroksessa, ja sen seinää kiertää kaksitoista vihkimäristiä.', lahde: 'Finna M012:RHO217939:34; Wikipedia: Olavinlinna; Apu: Suomen keskiaikaiset kivilinnat 6/6' },
+    { aani: 'kappeli-kohta-1', teksti: 'Seinän pieni aukko on hagioskooppi: rikolliset ja sairaat seurasivat messua sen kautta.', lahde: 'Finna M012:RHO217939:34; Wikipedia: Olavinlinna; Apu: Suomen keskiaikaiset kivilinnat 6/6' },
+    { aani: 'kappeli-kohta-2', teksti: 'Kattomaalausten jäänteistä erottaa vielä lehti- ja kukkakuvioita sekä vaakunoita.', lahde: 'Kansallismuseo: Pyhä Olavi' },
   ],
 };
 
@@ -106,19 +106,19 @@ const KAPPELI_HAHMOT = [
     id: 'kappalainen', henkilo: 'kappalainen-1500', paikka: [3.35, LATTIA, -20.8], suunta: 90, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
-      { id: 'kappalainen-1', teksti: 'Dominus vobiscum. Herra olkoon teidän kanssanne – ja ääni alas, jos sallitte.' },
-      { id: 'kappalainen-2', teksti: 'Vahakynttilä on kallis, siksi ne palavat vain messun ajan, eivät päivän mittaa.' },
+      { id: 'kappalainen-1', aani: 'kappeli-kappalainen-1', teksti: 'Dominus vobiscum. Herra olkoon teidän kanssanne – ja ääni alas, jos sallitte.' },
+      { id: 'kappalainen-2', aani: 'kappeli-kappalainen-2', teksti: 'Vahakynttilä on kallis, siksi ne palavat vain messun ajan, eivät päivän mittaa.' },
     ],
-    reaktio: { id: 'pulu-kappalainen-r1', teksti: 'Latinaa! En ymmärrä sanaakaan, mutta kaiku tekee siitä aivan taivaallista.' },
+    reaktio: { id: 'pulu-kappalainen-r1', aani: 'kappeli-pulu-kappalainen-r1', teksti: 'Latinaa! En ymmärrä sanaakaan, mutta kaiku tekee siitä aivan taivaallista.' },
   },
   {
     id: 'vouti', henkilo: 'vouti-1500', paikka: [-0.3, LATTIA, -18.3], suunta: 90, peilattu: false,
     silmukka: 'idle', heraa: 2, reitti: null,
     repliikit: [
-      { id: 'vouti-1', teksti: 'Kaksitoista ristiä seinällä, yksi jokaista apostolia kohti. Lasken ne aina.' },
-      { id: 'vouti-2', teksti: 'Tuosta pienestä aukosta sairaat ja kirkottamattomat kuulevat messun ulkopuolelta.' },
+      { id: 'vouti-1', aani: 'kappeli-vouti-1', teksti: 'Kaksitoista ristiä seinällä, yksi jokaista apostolia kohti. Lasken ne aina.' },
+      { id: 'vouti-2', aani: 'kappeli-vouti-2', teksti: 'Tuosta pienestä aukosta sairaat ja kirkottamattomat kuulevat messun ulkopuolelta.' },
     ],
-    reaktio: { id: 'pulu-vouti-r1', teksti: 'Pieni aukko, suuri kuulumisen tarve. Nykyään sama tehdään suoratoistona.' },
+    reaktio: { id: 'pulu-vouti-r1', aani: 'kappeli-pulu-vouti-r1', teksti: 'Pieni aukko, suuri kuulumisen tarve. Nykyään sama tehdään suoratoistona.' },
   },
 ];
 
@@ -132,15 +132,15 @@ export const TILA = {
   // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
   // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
   kuunnelma: [
-    { id: 'kappeli-k1', puhuja: 'kappalainen', nimi: 'Pappi', aani: null,
-      teksti: 'Dominus vobiscum… Voudin herra, iltarukous alkaa, ja te seisotte käytävällä kuin kadonnutta lammasta etsien.' },
-    { id: 'kappeli-k2', puhuja: 'vouti', nimi: 'Vouti', aani: null,
+    { id: 'kappeli-k1', puhuja: 'kappalainen', nimi: 'Pappi', aani: 'kappeli-k1',
+      teksti: 'Dominus vobiscum… Herra vouti, iltarukous alkaa, ja te seisotte käytävällä kuin kadonnutta lammasta etsien.' },
+    { id: 'kappeli-k2', puhuja: 'vouti', nimi: 'Vouti', aani: 'kappeli-k2',
       teksti: 'Anteeksi, isä. En etsi mitään. Laskin vain vihkimäristit – kaksitoista, niin kuin aina.' },
-    { id: 'kappeli-k3', puhuja: 'kappalainen', nimi: 'Pappi', aani: null,
+    { id: 'kappeli-k3', puhuja: 'kappalainen', nimi: 'Pappi', aani: 'kappeli-k3',
       teksti: 'Laskekaa mieluummin syntinne. Ja siirtykää: tuon pienen aukon takana sairaat odottavat näkevänsä alttarin.' },
-    { id: 'kappeli-k4', puhuja: 'vouti', nimi: 'Vouti', huom: 'hiljaa', aani: null,
+    { id: 'kappeli-k4', puhuja: 'vouti', nimi: 'Vouti', huom: 'hiljaa', aani: 'kappeli-k4',
       teksti: 'Fatabuurin avain… missä minä sitä pitelinkään?' },
-    { id: 'kappeli-k5', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+    { id: 'kappeli-k5', puhuja: 'pulu', nimi: 'Pulu', aani: 'kappeli-k5',
       teksti: 'Reikä seinässä messun seuraamiseen – Suomessa harvinaista herkkua. Ja voudilta näyttää puuttuvan muutakin kuin hartautta.' },
   ],
   kohdistettava: true,
@@ -159,9 +159,9 @@ export const TILA = {
   },
   kierto: { atsimuutti: [-40, 40], korkeus: [8, 45], etaisyys: [0.7, 1.4] },
   // Pulu pulpetin yläreunalle (30.9.): penkin selkänojalla se peitti vihjeen 2 kaiverruksen pystykuvassa (x 0,33 vs 0,30).
-  pulu: { laskeutuminen: [PULPETTI[0], LATTIA + 1.12, PULPETTI[2] + 0.05], taulupuoli: 'oikea',
-    // Pulun kertomus (napautus reunakuvasta), tekstit v2 Päätoimittajalta (Sisältökirjuri 30.9.); ääni vasta omistajan luvalla.
-    teksti: 'Kappeli on Kirkkotornin kolmannessa kerroksessa, ja sen seinää kiertää kaksitoista vihkimäristiä. Katossa on säilynyt katkelmia maalauksista, muun muassa lehti- ja kukkakuvioita ja vaakunoita. Seinän pieni aukko on hagioskooppi, josta rikolliset ja sairaat seurasivat messua – Suomessa harvinainen ratkaisu.', aani: null },
+  pulu: { aani: 'kappeli-pulu', laskeutuminen: [PULPETTI[0], LATTIA + 1.12, PULPETTI[2] + 0.05], taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v2 Päätoimittajalta (Sisältökirjuri 30.9.); ääni 1.10.2026 (omistajan lupa 30.9. klo 23.4x).
+    teksti: 'Kappeli on Kirkkotornin kolmannessa kerroksessa, ja sen seinää kiertää kaksitoista vihkimäristiä. Katossa on säilynyt katkelmia maalauksista, muun muassa lehti- ja kukkakuvioita ja vaakunoita. Seinän pieni aukko on hagioskooppi, josta rikolliset ja sairaat seurasivat messua – Suomessa harvinainen ratkaisu.' },
   taulu: TAULU,
   // Elävä linna (29.9.): Kirkkotornin kylki kappelin kerroksessa kameran puolella (kynttilänvalo ikkunoissa).
   elava: { kohde: [1.9, 11.5, -12.8], sade: 6 },
