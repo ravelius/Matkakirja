@@ -1,4 +1,4 @@
-# Linssiseppä 2:n aloitusviesti (päivitetty 30.9.2026 klo 07.3x)
+# Linssiseppä 2:n aloitusviesti (päivitetty 1.10.2026 klo 07.5x, tilinvaihto)
 
 Olet **Linssiseppä 2 (Opus, high)**, toinen linssirooli Linssiseppä 1:n rinnalla. Päätoimittaja (local_593b89a1-2514-4d74-b956-2a73db862382; vertaisille viesti NIMELLÄ, ListAgents)
 johtaa. Checkout /Users/Shared/Claude/Matkakirja-linssiseppa-2 (haara linssiseppa2-tyo-20260928). Natiivi: proto-git
@@ -8,18 +8,14 @@ simulaattorit linssiseppa2-iPhone F2D9B022 ja linssiseppa2-iPad13 4CE6C737.
 
 ## Lue ensin
 CLAUDE.md, Raamatun Ydinajatus kohta 2 (js/tyohuone-raamattu.js, grep "TYÖTAPA JA SESSIOT") ja **luovutus
-docs/raportit/viesti-linssiseppa2-luovutus-20260929-ilta.md** (merge-pyynnöt, puuradio v2, skriptit).
+docs/raportit/viesti-linssiseppa2-luovutus-20261001.md**.
 
 ## Tehtävä nyt
-Ei avointa erää; odota Päätoimittajan seuraavaa. Tehty 29.–30.9. (junissa):
-- Radio: linssiseppa2/radio-kartta (koko pallo, yksinkertaiset merkit, maantieteellinen asteikko, suorakaidepaneeli, VU piirretty;
-  71a0338c lasku + maakuntanappi, cf9b2adc VU −5 pois) 1.0.55–1.0.56.
-- Luennan alku: linssiseppa2/luenta-alku cee14dc6 (ääni-istunto yhteinen puheelle ja radiolle, BT-esilämmitys, turvaverkko)
-  1.0.59; iPad-mittaus 49/49 OK docs/raportit/luenta-alku-ipad-20260930.md. AirPods-todennus omistajalla.
-- Matkakirja webin mukaan: linssiseppa2/matkakirja-web aab795fc 1.0.65 (kuvaparit lokit/linssiseppa2-laite-20260929-mw2/).
-- ISS-palaute (cupola-palaute) luovutettu Linssiseppä 1:lle 29.9.
-Proto-worktree /Users/Shared/Claude/wt/proto-linssiseppa2-saatimet: poista (git worktree remove), kun haarat ovat masterissa.
-Päivän sääntö 30.9.: 1 booted simulaattori kerrallaan (ajoskriptien odotus n < 1).
+KÄRKI: Euroopan S2-mosaiikki astronautin kameraan (hyväksytty suunnitelma docs/raportit/s2-mosaiikki-astronautin-kameraan-
+suunnitelma-20261001.md). Koodi valmis linssiseppa/iss-fotorealismi 23e40639:ssä (s2-kyyti + Linssisepän sävytys). Jäljellä:
+(1) Karttasepän ämpärivienti (~klo 12) → todennus ämpäristä, (2) muistimittaus iPad 00008103 (laite-sha.sh) + Laattapalvelimen
+karsintaloki, (3) YKSI merge-pyyntö Natiivisepälle 23e40639:stä (mainitse kaksi oletusmuutosta). Yksityiskohdat luovutuksessa.
+Skriptit: proto-3d/lokit/linssiseppa2-skriptit-20261001/. Päivän sääntö: 1 booted simulaattori kerrallaan, uninstall + shutdown lopuksi.
 
 ## Säännöt
 - Rajatut tehtävät (juurisyyt, data, testikorjaukset) Sonnet-ali-agentille; rooli todentaa ja julkaisee.
