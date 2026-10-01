@@ -429,10 +429,20 @@ namespace Matkakirja.Natiivi
                     return "mylly: asema " + peli.Asema();
                 case "napauta" when o.Length >= 2: Napautus(int.Parse(o[1])); return "mylly: " + vuoroRivi.text;
                 case "tulos" when o.Length >= 2: if (!Auki) Avaa(); Lopeta(int.Parse(o[1])); return "mylly: tulos " + o[1];
+                case "kohtaaminen":
+                {
+                    // ui mylly kohtaaminen [kaupunki]: kohtaamiskortti kuten tehtävänapista (oletus pelaajan kaupunki).
+                    var ohjain = PeliOhjain.Instanssi; var m = ohjain != null ? ohjain.Matka : null;
+                    string id = o.Length > 1 ? o[1] : m?.Tila.Pelaaja.Sijainti.Kaupunki;
+                    if (m == null || id == null || !m.Verkko.Kaupungit.TryGetValue(id, out var kaup)) return "mylly: ei kaupunkia " + id;
+                    if (!(Peliluettelo.Kaupungille(kaup) is (PeliKuvaus peli, PeliMaa maa))) return "mylly: ei pelin maa " + kaup.Maa;
+                    Kohtaaminen(peli, maa, kaup.Nimi);
+                    return $"mylly: kohtaaminen {maa.MaanNimi} · {kaup.Nimi}";
+                }
                 case "tila": return Auki ? $"mylly: {peli?.Asema()} vuoro {peli?.Vuorossa} | {vuoroRivi.text}" : "mylly: kiinni";
                 case "sulje": Sulje(); return "mylly: suljettu";
             }
-            return "mylly: tuntematon (valinta | peli <taso> | asema <24> <k0> <k1> <vuoro> | napauta <n> | tulos <0|1|-1|-2> | tila | sulje)";
+            return "mylly: tuntematon (valinta | kohtaaminen [kaupunki] | peli <taso> | asema <24> <k0> <k1> <vuoro> | napauta <n> | tulos <0|1|-1|-2> | tila | sulje)";
         }
     }
 
