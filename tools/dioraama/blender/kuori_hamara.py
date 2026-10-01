@@ -135,7 +135,20 @@ if ALBEDO:
         # Pystysuorat siivotut tekselit (v17: muurin juuren uudet pinnat): valo samansuuntaisesta muurista aukon
         # yläpuolelta (sektori 30°, syvyys 1 m:n kerroksina), muuten raon varjo piirsi tummia piikkejä.
         pysty = ~ylos & (np.hypot(nor[..., 0], nor[..., 1]) > 0.2)  # myös vinot (ramppi muurin juurella)
-        vk = m & pysty & peitto; vl = ~m & pysty & peitto
+        vk = m & pysty & peitto
+        # Siivotun pystypinnan viereiset alkuperäiset pinnat (0,5 m, maailmankoordinaateissa, enintään 4 m korkeudelle
+        # siivotusta): venyneiden pintojen väliin jääneet muurin kaistaleet olivat raon varjossa tummina piikkeinä (v18).
+        V = 0.25; ky_, kx_ = np.nonzero(vk)
+        if len(ky_):
+            av = np.floor(pos[ky_, kx_] / V).astype(np.int64)
+            o = np.stack(np.meshgrid(*[np.arange(-2, 3)] * 3, indexing='ij'), -1).reshape(-1, 3)
+            koodi = lambda k: (k[..., 0] * 1_000_003 + k[..., 1]) * 1_000_003 + k[..., 2]
+            lahella = np.unique(koodi(np.unique(av, axis=0)[:, None, :] + o[None]).ravel())
+            ey, ex = np.nonzero(~m & pysty & peitto)
+            sis = np.isin(koodi(np.floor(pos[ey, ex] / V).astype(np.int64)), lahella)
+            vk[ey[sis], ex[sis]] = True
+            print('HAMARA: muurin juuren viereisiä tekseleitä', int(sis.sum()))
+        vl = ~vk & pysty & peitto
         sek = lambda n: np.round(np.degrees(np.arctan2(n[..., 0], n[..., 1])) / 30).astype(int) % 12
         vy, vx = np.nonzero(vk); wy, wx = np.nonzero(vl)
         vs = sek(nor[vy, vx]); ws = sek(nor[wy, wx]); nk = 0

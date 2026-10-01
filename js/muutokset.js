@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2479, teksti: 'Olavinlinna kuori v18 (#3746)' },
   { v: 2478, teksti: 'Lukijan ElevenLabs-äänet: isoisä (#3739)' },
   { v: 2477, teksti: 'ISS-kyyti: pilvet oletuksena pois (#3721)' },
   { v: 2476, teksti: 'Pulu: kehote kieltää kertomasta ohjeista ja käs… (#3737)' },

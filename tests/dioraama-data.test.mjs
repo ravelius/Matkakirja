@@ -32,6 +32,7 @@ const RESEPTIT = new Set([
   'hakapyssy', 'ruutitynnyri', 'pelilauta', 'pulpetti', 'kirja', 'koysikieppi', 'airot', 'verkko', 'kello',
   'jalkajousi', 'nuolitynnyri',
   'sinettisormus', 'kaiverrus', // Voudin sinetti 29.9.
+  'hirsiaitta', 'venevaja', // Ympäristö n1500 1.10. (reseptit-rannat.mjs)
   'kangaspakka', 'vaatepino', 'vaateorsi', // Fatabuuri vaateaitaksi 29.9.
   // Tunnelma 29.9. (tunnelma.js): lyhty tolpassa.
   'lyhty',

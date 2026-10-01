@@ -13,6 +13,20 @@ from kuori_orto import ortokuva, kloonaa, paluu, reunat, seinapaikka
 
 def _laatikko(x0, x1, y0, y1): return [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]
 
+
+def _laajenna(p, d):
+    """Monikulmio d m ulospäin (kärjet kulman puolittajaa pitkin; kiertosuunnasta riippumatta)."""
+    q = np.asarray(p, float); n = len(q); ala = 0.5 * np.sum(q[:, 0] * np.roll(q[:, 1], -1) - np.roll(q[:, 0], -1) * q[:, 1])
+    ulos = []
+    for i in range(n):
+        a, b, c = q[i - 1], q[i], q[(i + 1) % n]
+        n1 = np.array([b[1] - a[1], a[0] - b[0]]); n2 = np.array([c[1] - b[1], b[0] - c[0]])
+        n1 /= np.linalg.norm(n1); n2 /= np.linalg.norm(n2)
+        if ala < 0: n1, n2 = -n1, -n2  # vastapäivään oikea normaali osoittaa ulos, myötäpäivään sisään
+        m = n1 + n2; m /= max(np.linalg.norm(m), 1e-9); k = d / max(float(m @ n1), 0.3)
+        ulos.append(tuple((b + m * k).round(3)))
+    return ulos
+
 # (nimi, monikulmio, korkeus, ryhmä[, maa]): alueen vertexit, jotka ovat alle `korkeus` m paikallisesta maanpinnasta, litistetään
 # maahan; korkeus rajataan romun mukaan, jotta muurit ja katot alueen reunalla säilyvät. Ryhmän alueet täytetään yhtenä
 # (yhteinen reunarengas: varjot ja sävyt jatkuvat alueelta toiselle). Valinnainen `maa` (m): maanpinta on tason
@@ -47,8 +61,10 @@ ALUEET = [
     # Koillisbastionin piha (maa −5,5): suursäkit ja valkoinen laatikko tornin juurella.
     ('saekit_bastioni', [(53.0, 37.7), (56.8, 38.2), (58.7, 39.1), (58.7, 41.5), (56.5, 41.6), (53.6, 40.9)], 2.0, 'koillisbastioni', -5.55),
     # Kaakon kenttä: musta puuaitaus kahdella katoksella, koppi, tynnyrit, renkaat ja lava, kaksi henkilönostinta.
-    ('aitaus_kopit_nostimet', [(42.6, -25.8), (45.9, -28.0), (52.2, -24.6), (54.0, -22.2), (56.7, -22.3), (60.3, -21.2),
-                               (60.3, -18.8), (49.5, -14.9), (48.5, -16.2), (46.8, -20.1), (43.3, -25.3)], 4.0, 'kaakko', -5.45),
+    # v18: 1 m laajemmaksi muurin juureen asti (muurin juuren suoja pitää muurin): juurelle jääneet nostimen ja aidan
+    # sirpaleet ovat nyt alueella.
+    ('aitaus_kopit_nostimet', _laajenna([(42.6, -25.8), (45.9, -28.0), (52.2, -24.6), (54.0, -22.2), (56.7, -22.3), (60.3, -21.2),
+                               (60.3, -18.8), (49.5, -14.9), (48.5, -16.2), (46.8, -20.1), (43.3, -25.3)], 1.0), 4.0, 'kaakko', -5.45),
     ('ovi_kentalla', _laatikko(49.5, 53.8, -26.4, -23.8), 1.0, 'kaakko', -5.6),  # v16b: aitauksen ovi rajan päällä
     ('lankut_ja_lava_kaakko', [(38.6, -32.9), (44.8, -32.9), (44.8, -29.6), (40.5, -27.6), (38.6, -27.6)], 1.5, 'kaakko', -5.7),
     # Etelä: kärry eteläportaiden vieressä.
@@ -193,7 +209,7 @@ def siivoa_np(co, tv, uv, rgb, log=print):
         # Geometria: alueiden maanläheiset vertexit maahan (kukin oman korkeusrajansa mukaan).
         lahi = np.flatnonzero((co[:, 0] > pk[:, 0].min() - 3) & (co[:, 0] < pk[:, 0].max() + 3) & (co[:, 1] > pk[:, 1].min() - 3) & (co[:, 1] < pk[:, 1].max() + 3))
         gk = np.zeros(len(co), np.float32); gk[lahi] = g(co[lahi, :2])
-        Kr = np.zeros(len(tv), bool); venyneet = np.zeros(len(tv), bool)
+        Kr = np.zeros(len(tv), bool); venyneet = np.zeros(len(tv), bool); juuret = np.zeros(len(tv), bool)
         for nimi, p, korkeus, maa in osat:
             alue = sisalla(co[:, :2], p)
             suoja = np.zeros(len(co), bool)
@@ -221,11 +237,17 @@ def siivoa_np(co, tv, uv, rgb, log=print):
             if tapa == 'poista': poista |= ven
             if tapa == 'paikkaa': venyneet |= ven
             if tapa == 'tayta': taytto |= ven
+            if tapa in ('paikkaa', 'tayta') and suoja.any():
+                # Muurin juurelle suojan takia pystyyn jääneet romun sirpaleet (nostimen ja aidan palat): alhaalla olevat
+                # pinnat, joissa on suojattu kärki, maalataan muurin kivellä (v18; hämärässä ne näkyivät tummina piikkeinä).
+                matala = (co[tv, 2] < gk[tv] + korkeus + 1.0).all(1)
+                juuret |= suoja[tv].any(1) & matala & alue[tv].any(1) & ~ven
             # Maalataan kaikki alueen maanpinnan kolmiot (myös urat) ja painetut; venyneitä ei (muurin vieri jää ennalleen).
             maassa = alue[tv].all(1) & (np.abs(co[tv, 2] - gk[tv]) < ALAVARA + 0.05).all(1)
             Kr |= (maassa | siirr[tv].any(1)) & ~ven
             log(f'SIIVOUS: {nimi}: {int(alue.sum())} vertexiä alueella, {int(siirr.sum())} painettu maahan '
                 f'(dz keskim. {float((zv[siirr]-gk[siirr]).mean()) if siirr.any() else 0:.2f} m), venyneitä {int(ven.sum())} ({tapa}), muurin juuria {int(suoja.sum())}')
+        venyneet |= juuret & ~taytto
         if venyneet.any():
             Ms, vaaka = seinapaikka(co, tv, uvp, rgb, np.flatnonzero(venyneet), log=log)
             Kr[vaaka] = True; M_kaikki |= Ms; K_kaikki.append(np.setdiff1d(np.flatnonzero(venyneet), vaaka))
