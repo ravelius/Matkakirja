@@ -83,3 +83,16 @@ Huom: skannauksen tarkkuus näkyy lähikuvassa (poski) pehmeänä pintana; se on
   (tekee myös `-sumea.png`-parin).
 
 ![v4: kaukaa, otsa 38a, lähderivi, poski 21d](kuvat/sokrates-20261001/sokrates-v4-ruudut.jpg)
+
+## Mallikuva v5 (omistajan kohtaussuunnitelma 1.10. 22.3x): intro, nimi, kysymys, projisointi
+- INTRO 7 s: kuusi otosta, 1,2 s kukin, suorina leikkauksina eri kuvakulmista (profiili vastavalossa, ylhäältä otsan
+  yli, parran alta, silmä ja kulmakaari, parta ja suu, kolme neljäsosaa ylhäältä). Kasvot näkyvät jokaisessa
+  otoksessa. Kova "aurinko" kiertää takaa oikealle ja eteen, joten varjot väistyvät otos otokselta.
+- Viimeinen otos on Rembrandt-valossa: avainvalo 45° sivulta ja ylhäältä, ja varjopuolen poskella näkyy valokolmio.
+  Kasvot ovat oikealla, ja vasemmalle tulee "SOKRATES" ja "n. 470–399 eaa." (Iowan Old Style). Sen tilalle tulee
+  kysymys "Miten pitäisi elää?" (`sokrates_nimi.py`).
+- Sitten kamera liukuu otsalle, ja 38a kulkee kuten v4: vain kirjaimet, CA ja tarkennuksen pehmeys. Projisoinnin
+  ajan avainvalo himmenee. Lopuksi 38a:n lähderivi.
+- Ääni (lukija, musiikki) tulee erikseen; kierrokset 2–3 ja Pulun kysymykset (UI) eivät kuulu videoon.
+
+![v5: intro 1–3, Rembrandt + nimi, kysymys](kuvat/sokrates-20261001/sokrates-v5-ruudut.jpg)

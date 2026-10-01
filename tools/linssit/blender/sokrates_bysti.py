@@ -591,3 +591,91 @@ if '--v4' in A:
         sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
         bpy.ops.render.render(write_still=True)
     print('SOKRATES: v4 valmis', ULOS)
+
+
+# ---------- mallikuva v5 (omistajan kohtaussuunnitelma 1.10. 22.3x): intro, nimi, kysymys, projisointi ----------
+# INTRO: kova valo kiertää takaa kuin aurinko ja kääntyy vähitellen kohtisuoremmaksi; kamera leikkaa suoraan
+# yllättäviin kuvakulmiin (~1,2 s/otos), kasvot näkyvät aina jostain kulmasta. Viimeinen otos: Rembrandt-valo
+# (avainvalo 45° sivulta ja ylhäältä, valokolmio varjopuolen poskella), nimi ja vuodet → kysymys (jälkikäsittely),
+# sitten kamera liukuu otsalle ja 38a kulkee kuten v4.
+#   Blender -b -P sokrates_bysti.py -- --v5 <gobot> <ulos> --koko L K [--naytteita 16] [--ruudut ...]
+PAA = Vector((0.0, -0.06, 0.38))
+V5_OTOKSET = (  # (ruutu, kameran paikka, katsepiste, polttoväli mm) — kasvot näkyvät jokaisessa otoksessa
+    (1, (0.62, -0.10, 0.38), (0.0, -0.10, 0.38), 50),      # puhdas profiili oikealta: vastavalo piirtää nenän ja kulmat
+    (37, (0.26, -0.30, 0.72), (0.0, -0.09, 0.40), 35),     # ylhäältä oikealta otsan yli kohti kasvoja
+    (73, (-0.05, -0.36, 0.13), (0.0, -0.10, 0.36), 28),    # alhaalta parran alta kohti nenää
+    (109, (0.30, -0.34, 0.42), (0.03, -0.10, 0.38), 50),   # silmä ja kulmakaari valon puolelta
+    (145, (0.30, -0.36, 0.22), (0.02, -0.11, 0.30), 50),   # parta ja suu oikealta alaviistosta
+    (181, (0.48, -0.30, 0.60), (0.0, -0.08, 0.38), 50),    # kolme neljäsosaa ylhäältä oikealta
+    (217, (-0.30, -1.02, 0.40), (-0.06, -0.06, 0.36), 35), # Rembrandt: kasvot kokonaan oikealla, nimi vasemmalle
+)
+V5_VALO = (  # (ruutu, valon suunta päästä) — takaa oikealta → oikealle → edestä oikealta ylhäältä (Rembrandt)
+    (1, (0.55, 0.85, 0.30)), (60, (0.9, 0.55, 0.35)), (120, (1.0, -0.05, 0.6)), (180, (0.8, -0.55, 0.8)),
+    (217, (0.70, -0.70, 0.85)),   # Rembrandt: 45° sivulta ja ylhäältä, valokolmio varjopuolen poskella
+)
+V5_NIMI, V5_KYSYMYS, V5_LAHESTY = (217, 306), (307, 396), (397, 445)
+V5_PROJ = (445, 700)          # 38a otsalla; lähderivi 702–747 (jälkikäsittely)
+V5_LOPPU = 747
+
+
+if '--v5' in A:
+    from mathutils import Matrix
+    i = A.index('--v5'); GOBOT, ULOS = A[i + 1], A[i + 2]; os.makedirs(ULOS, exist_ok=True)
+    i = A.index('--koko'); LEV, KORK = int(A[i + 1]), int(A[i + 2])
+    N = int(A[A.index('--naytteita') + 1]) if '--naytteita' in A else 16
+    RUUDUT = [int(v) for v in A[A.index('--ruudut') + 1].split(',')] if '--ruudut' in A else None
+    o = rakenna(N); sc = bpy.context.scene; _kipsin_rakenne(o)
+    for nimi in ('sivu', 'reuna', 'tayte'):
+        bpy.data.objects[nimi].hide_render = True          # vain yksi kova "aurinko" + hyvin heikko täyte
+    taytto = bpy.data.lights.new('taytto', 'AREA'); taytto.energy = 0.25; taytto.size = 1.5
+    to = bpy.data.objects.new('taytto', taytto); sc.collection.objects.link(to); to.location = (-1.2, -1.0, 0.4); kohdista(to, PAA)
+    aur = bpy.data.lights.new('aurinko', 'SPOT'); aur.spot_size = math.radians(60); aur.spot_blend = 0.3
+    aur.shadow_soft_size = 0.012; aur.color = (1.0, 0.95, 0.88); aur.energy = 95
+    ao = bpy.data.objects.new('aurinko', aur); sc.collection.objects.link(ao)
+    for r, s_ in V5_VALO:
+        ao.location = PAA + Vector(s_).normalized() * 1.3; kohdista(ao, PAA)
+        ao.keyframe_insert('location', frame=r); ao.keyframe_insert('rotation_euler', frame=r)
+    # projisoinnin aikana avainvalo himmenee, jotta kirjaimet erottuvat
+    for r, v in ((V5_LAHESTY[0], 95), (V5_PROJ[0], 38)):
+        aur.energy = v; aur.keyframe_insert('energy', frame=r)
+    p, n = osuma(-0.005, 0.418)
+    v4_projektori('tykki-otsa', p, (n + Vector((-0.40, -0.15, -0.30))).normalized(), 0.6, 0.075,
+                  os.path.join(GOBOT, 'nauha-otsa.png'), 0.016, (V5_PROJ[0] + 5, V5_PROJ[1] - 5), 70.0)
+    c, t, u = lentoasento(p, n, kulma=55, matka=0.11)
+    cd = bpy.data.cameras.new('k'); cd.sensor_fit = 'VERTICAL'; cd.sensor_height = 24; cd.clip_start = 0.003
+    cam = bpy.data.objects.new('k', cd); sc.collection.objects.link(cam); sc.camera = cam
+    tahtain = bpy.data.objects.new('tahtain', None); sc.collection.objects.link(tahtain)
+    tc = cam.constraints.new('TRACK_TO'); tc.target = tahtain; tc.track_axis = 'TRACK_NEGATIVE_Z'; tc.up_axis = 'UP_Y'
+    cd.dof.use_dof = True; cd.dof.focus_object = tahtain; cd.dof.aperture_fstop = 16
+    def avain(r, c_, q_, mm, tapa):
+        cam.location, tahtain.location, cd.lens = Vector(c_), Vector(q_), mm
+        for ob, ominaisuus in ((cam, 'location'), (tahtain, 'location'), (cd, 'lens')):
+            ob.keyframe_insert(ominaisuus, frame=r)
+        avaimet_tapa.append((r, tapa))
+    avaimet_tapa = []
+    for r, c_, q_, mm in V5_OTOKSET:
+        avain(r, c_, q_, mm, 'CONSTANT')                     # leikkaus, ei panorointia
+    rem = V5_OTOKSET[-1]
+    avain(V5_LAHESTY[0], rem[1], rem[2], rem[3], 'BEZIER')   # Rembrandt pysyy nimen ja kysymyksen ajan
+    for k in range(6):                                       # lähestyminen ja hidas orbit kuten v4
+        r = V5_PROJ[0] + (V5_PROJ[1] + 45 - V5_PROJ[0]) * k // 5
+        kierto = Matrix.Rotation(math.radians(-V4_KIERTO + 2 * V4_KIERTO * k / 5), 3, n)
+        avain(r, p + kierto @ (c - p), p, V3B_LINSSI, 'BEZIER')
+    # interpolaatio: leikkaukset CONSTANT, muuten pehmeä
+    tavat = dict(avaimet_tapa)
+    for idb in (cam, tahtain, cd):
+        ad = idb.animation_data
+        act = ad.action if ad else None
+        kayrat = getattr(act, 'fcurves', None) or []
+        if not kayrat and act is not None:                  # Blender 5: kerrostettu toiminto
+            for kerros in getattr(act, 'layers', []):
+                for kaista in kerros.strips:
+                    for kp_ in kaista.channelbags: kayrat = list(kayrat) + list(kp_.fcurves)
+        for fc in kayrat:
+            for kp in fc.keyframe_points: kp.interpolation = tavat.get(int(round(kp.co.x)), 'BEZIER')
+    sc.frame_start, sc.frame_end = 1, V5_LOPPU; sc.render.fps = 30
+    sc.render.resolution_x, sc.render.resolution_y = LEV, KORK; sc.render.resolution_percentage = 100
+    for ruutu in (RUUDUT or range(sc.frame_start, sc.frame_end + 1)):
+        sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
+        bpy.ops.render.render(write_still=True)
+    print('SOKRATES: v5 valmis', ULOS)
