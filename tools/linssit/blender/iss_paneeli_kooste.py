@@ -57,9 +57,9 @@ ryhma = lue('ryhma')
 rx = (W - ryhma.shape[1]) // 2
 over(kangas, ryhma, rx, 0)
 oletus = {'nopeus': 'nopeus-0', 'pilvet': 'nuppi-00', 'kuukausi': 'nuppi-00', 'kohde': 'kohde-ylos',
-          'poistu': 'poistu-ylos', 'vipu': 'vipu-alas', 'kaari': 'kaari-0'}
-paikka = {'nopeus': 'nopeus', 'pilvet': 'pilvet', 'kuukausi': 'kuukausi', 'kohde': 'kohde', 'poistu': 'poistu',
-          'vipu': 'oma', 'kaari': 'oma'}
+          'kuvaa': 'kuvaa-ylos', 'poistu': 'poistu-ylos'}
+paikka = {'nopeus': 'nopeus', 'pilvet': 'pilvet', 'kuukausi': 'kuukausi', 'kohde': 'kohde', 'kuvaa': 'kuvaa',
+          'poistu': 'poistu'}
 for osa, kuva in oletus.items():
     kuva = TILA.get(osa, kuva)
     o = tiedot['osat'][kuva]

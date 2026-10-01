@@ -301,9 +301,11 @@ def teksti(s, txt, x, y, z, koko, mat='maali_valkoinen', tasaus='CENTER', valist
     return leveys
 
 
-OTSIKOT = {'nopeus': 'NOPEUS', 'pilvet': 'PILVET', 'kuukausi': 'KUUKAUSI', 'kohde': 'KOHDE', 'oma': 'OMA PAIKKA',
+# v3 (omistaja 1.10.): KUUKAUSI-nuppi on vuodenaikanuppi, OMA PAIKKA -vipu korvattu KUVAA-painikkeella (LENNÄ-pohja).
+# Avaimet ('kuukausi') pysyvät, ettei Linssisepän ankkureita tarvitse nimetä uudelleen; 'oma' → 'kuvaa'.
+OTSIKOT = {'nopeus': 'NOPEUS', 'pilvet': 'PILVET', 'kuukausi': 'VUODENAIKA', 'kohde': 'KOHDE', 'kuvaa': 'KUVAA',
            'poistu': 'POISTU'}
-PAINIKE_LEGENDA = {'kohde': 'LENNÄ', 'poistu': 'POISTU'}
+PAINIKE_LEGENDA = {'kohde': 'LENNÄ', 'kuvaa': 'KUVAA', 'poistu': 'POISTU'}
 OTSIKKO_KOKO, ASTEIKKO_KOKO = 7.2, 5.0
 KIERTO_K = 0.8   # NOPEUS-kiertokytkimen mittakaava (v1: 1.0 ylitti ryhmäkehyksen)
 
@@ -574,23 +576,16 @@ def rakenna(T, G, rungot=True):
         nr.nimi, nk.nimi = f'nuppi_runko_{nimi}', f'nuppi_korkki_{nimi}'
         tulos['ryhma'].append(nr.valmis((kx[j], RIVI2, PINTA)))
         tulos['osat'][nimi] = [nk.valmis((kx[j], RIVI2, PINTA))]
-    for j, nimi in ((3, 'kohde'), (5, 'poistu')):
+    for j, nimi in ((3, 'kohde'), (4, 'kuvaa'), (5, 'poistu')):
         pr, pk = painike()
         pr.nimi, pk.nimi = f'painike_runko_{nimi}', f'painike_kansi_{nimi}'
         painikkeen_legenda(pk, PAINIKE_LEGENDA[nimi])
         tulos['ryhma'].append(pr.valmis((kx[j], RIVI2, PINTA)))
         tulos['osat'][nimi] = [pk.valmis((kx[j], RIVI2, PINTA))]
-    vr, vv, vc = vipu()
-    tulos['ryhma'].append(vr.valmis((kx[4], RIVI2, PINTA)))
-    tulos['osat']['vipu'] = [vv.valmis((kx[4], RIVI2, PINTA + 6.0))]
-    tulos['osat']['kaari'] = [vc.valmis((kx[4], RIVI2, PINTA + 4.4))]
-    kaanna(tulos['osat']['vipu'][0], VIPU_ALAS)
-    kaanna(tulos['osat']['kaari'][0], KAARI_KIINNI)
-    for nimi, j in (('nopeus', 0), ('pilvet', 1), ('kuukausi', 2), ('kohde', 3), ('oma', 4), ('poistu', 5)):
+    for nimi, j in (('nopeus', 0), ('pilvet', 1), ('kuukausi', 2), ('kohde', 3), ('kuvaa', 4), ('poistu', 5)):
         tulos['paikat'][nimi] = (kx[j], RIVI2, 48, 48)
         tulos['paikat'][f'{nimi}-levy'] = (kx[j], 51.5, lev, 9.0)
     tulos['paikat']['live-otsikko'] = (lx, RIVI1, 22.0, 34.0)
-    tulos['paikat']['oma-kaari'] = (kx[4], RIVI2 + 6, 30.0, 40.0)
     sw = min(14.0, g0)
     tulos['paikat']['ryhma'] = (g0 - sw, g0 + G + sw)
     tulos['paikat']['kupu'] = (g0 + G / 2, 102.0, G + 2 * sw, 132.0)
