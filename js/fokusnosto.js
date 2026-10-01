@@ -1727,6 +1727,13 @@ export function nostonIso(nosto) {
   return nostonIsoHakemisto.get(nosto.id) ?? null;
 }
 
+/** Noston otsikko ja teksti pulun kontekstiin (js/pollo.js kokoaKonteksti kohde). */
+export function nostonAihe(nosto) {
+  if (!nosto?.otsikko) return null;
+  const teksti = [nosto.ingressi, nosto.teksti].filter(Boolean).join(' ');
+  return { otsake: 'Kortti, josta pelaaja kysyy', nimi: nosto.otsikko, tyyppi: null, teksti: teksti || null };
+}
+
 function piirraNostonKysymykset(ui, sisalto, nosto) {
   const kysymykset = (Array.isArray(nosto.kysymykset) ? nosto.kysymykset : [])
     .map((k) => String(k ?? '').trim()).filter(Boolean).slice(0, 3);
@@ -1752,7 +1759,9 @@ function piirraNostonKysymykset(ui, sisalto, nosto) {
     nappi.addEventListener('click', (tapahtuma) => {
       tapahtuma.stopPropagation();
       suljeNostonKortti(ui);
-      polloKysy(kysymys);
+      // Kortti sulkeutuu ennen kysymystä: aihe kulkee kysymyksen mukana
+      // (js/pollo.js lueNakyma aihe; omistajan löydös 30.9.2026).
+      polloKysy(kysymys, { aihe: nostonAihe(nosto) });
     });
     rivi.appendChild(nappi);
   }
