@@ -1756,7 +1756,8 @@ namespace Matkakirja.Natiivi
                         else if (a == "filmi" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Filmi = osat[3] != "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }   // ISS-kamera
                         else if (a == "siluetti" && osat.Length > 3)   // ISS-kamera: siluetti 0|1, siluetti asettelu x y kulma leveys pituus
                         {
-                            if (osat[3] == "asettelu" && osat.Length > 8)
+                            if (osat[3] == "sumeus" && osat.Length > 4) Matkakirja.Linssit.IssSiluetti.Sumeus = (float)Luku(osat[4]);   // 400 mm:n etualan bokeh
+                            else if (osat[3] == "asettelu" && osat.Length > 8)
                             {
                                 Matkakirja.Linssit.IssSiluetti.Asettelu = new Vector4((float)Luku(osat[4]), (float)Luku(osat[5]), (float)Luku(osat[6]), (float)Luku(osat[7]));
                                 Matkakirja.Linssit.IssSiluetti.Pituus = (float)Luku(osat[8]);

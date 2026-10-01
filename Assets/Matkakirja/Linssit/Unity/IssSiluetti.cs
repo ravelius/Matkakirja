@@ -16,9 +16,11 @@ namespace Matkakirja.Linssit
         public static bool Paalla;
         public static Vector4 Asettelu = new Vector4(-0.1f, -0.05f, 22f, 0.08f);
         public static float Pituus = 0.5f;
+        /// <summary>Reunan pehmeys (varjostimen _Sumeus, oletus 0,006). 400 mm:n etualan bokeh (omistaja 1.10.): ~0,05–0,08.</summary>
+        public static float Sumeus = 0.006f;
 
         static readonly int IdPeitto = Shader.PropertyToID("_Peitto"), IdRuutu = Shader.PropertyToID("_Ruutu"),
-            IdAurinko = Shader.PropertyToID("_AurinkoRuutu"), IdAsettelu = Shader.PropertyToID("_Asettelu"), IdPituus = Shader.PropertyToID("_Pituus");
+            IdAurinko = Shader.PropertyToID("_AurinkoRuutu"), IdAsettelu = Shader.PropertyToID("_Asettelu"), IdPituus = Shader.PropertyToID("_Pituus"), IdSumeus = Shader.PropertyToID("_Sumeus");
         static Transform nelio;
         static Material materiaali;
         static Camera kohdeKamera;
@@ -36,6 +38,7 @@ namespace Matkakirja.Linssit
             kohdeKamera = kamera;
             materiaali.SetVector(IdAsettelu, Asettelu);
             materiaali.SetFloat(IdPituus, Pituus);
+            materiaali.SetFloat(IdSumeus, Sumeus);
             materiaali.SetFloat(IdPeitto, 1f);
             if (g != null)
             {

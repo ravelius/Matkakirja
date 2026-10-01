@@ -330,12 +330,21 @@ namespace Matkakirja.Natiivi
             double km = Math.Sqrt(Math.Pow(kk.Paikka.x - pinta.x, 2) + Math.Pow(kk.Paikka.y - pinta.y, 2) + Math.Pow(kk.Paikka.z - pinta.z, 2)) / 1000;
             var iss = (Lat: iLat, Lon: iLon);
             var keski = naytteet.OrderBy(n => Math.Abs(n.Sx - 24) + Math.Abs(n.Sy - 18)).First();
-            double mm = 12 / Math.Tan(kk.PystykenttaAst * Math.PI / 360);
+            // Polttoväli kinokoossa: kennon lyhyt sivu 24 mm; pystykuvassa pystysivu 24 · H / W (4:5 → 30 mm).
+            double pysty = kk.Leveys >= kk.Korkeus ? 24 : 24.0 * kk.Korkeus / kk.Leveys;
+            double mm = pysty / 2 / Math.Tan(kk.PystykenttaAst * Math.PI / 360);
+            var kp = Kuvasuunnitelma.Ecef(keski.Lat, keski.Lon);
+            double etaisyys = Math.Sqrt(Math.Pow(kk.Paikka.x - kp.x, 2) + Math.Pow(kk.Paikka.y - kp.y, 2) + Math.Pow(kk.Paikka.z - kp.z, 2)) / 1000;
+            // Valotus (omistaja 1.10.: julisteen "400 mm · f/8 · 1/1000 s · ISO 200"): malli Valotus.cs, pelaajan säätö kompensaationa.
+            var (aukko, aika, iso) = Valotus.Laske(mm, etaisyys, korkeus, Matkakirja.Linssit.Kyytipino.Valotus - 0.5f);
             var ic = System.Globalization.CultureInfo.InvariantCulture;
             var kuvat = ruudut.Select(r => ehdokkaat.First(x => x.Tunnus == r.Tunnus).Valinnat[0]).Select(v => $"\"{v.Id}\"");
-            return string.Format(ic, "{{\"id\":\"{0}\",\"utc\":\"{1:yyyy-MM-ddTHH:mm:ssZ}\",\"muoto\":\"{2}\",\"iss\":{{\"lat\":{3:0.000},\"lon\":{4:0.000},\"km\":{5:0.0},\"kmh\":{6:0}}}," +
-                "\"keskipiste\":{{\"lat\":{7:0.000},\"lon\":{8:0.000}}},\"mm\":{9:0},\"aurinko\":{{\"az\":{10:0},\"korkeus\":{11:0.0}}},\"lahde\":\"Contains modified Copernicus Sentinel data\",\"s2\":[{12}],\"mt\":{13:0.0}}}",
-                id, utc, muoto, iss.Lat, iss.Lon, km, IssNyt.NopeusKmh(km), keski.Lat, keski.Lon, mm, az, korkeus, string.Join(",", kuvat), tavut / 1e6);
+            return string.Format(ic, "{{\"id\":\"{0}\",\"aika_utc\":\"{1:yyyy-MM-ddTHH:mm:ssZ}\",\"muoto\":\"{2}\",\"leveys\":{14},\"korkeus\":{15}," +
+                "\"iss\":{{\"lat\":{3:0.000},\"lon\":{4:0.000}}},\"korkeus_km\":{5:0.0},\"nopeus_kmh\":{6:0},\"etaisyys_km\":{16:0}," +
+                "\"kohde\":{{\"lat\":{7:0.000},\"lon\":{8:0.000},\"x\":{17:0},\"y\":{18:0}}},\"polttovali\":{9:0},\"aukko\":\"{19}\",\"aika\":\"{20}\",\"iso\":{21}," +
+                "\"aurinko_deg\":{11:0.0},\"aurinko_az\":{10:0},\"lahde\":\"Contains modified Copernicus Sentinel data\",\"s2\":[{12}],\"mt\":{13:0.0}}}",
+                id, utc, muoto, iss.Lat, iss.Lon, km, IssNyt.NopeusKmh(km), keski.Lat, keski.Lon, mm, az, korkeus, string.Join(",", kuvat), tavut / 1e6,
+                kk.Leveys, kk.Korkeus, etaisyys, kk.Leveys / 2.0, kk.Korkeus / 2.0, Valotus.AukkoTeksti(aukko), Valotus.AikaTeksti(aika), iso);
         }
     }
 }
