@@ -4652,3 +4652,14 @@
     padding: 0 var(--tk-vali-m);
     background-color: var(--tk-paperi-toiminto);
 }
+
+/* KORTTI-pohja: napit pystyriviin, kun nimi ei mahdu vierekkäin (web #3798 .tk-napit--pysty). */
+.mk-kortti__napit--pysty {
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.mk-kortti__napit--pysty > .mk-nappi {
+    margin-left: 0;
+    margin-top: var(--tk-vali-s);
+}
