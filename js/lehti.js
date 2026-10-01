@@ -14,7 +14,7 @@
 import { hiljennaAmbienssi } from './ambience-stream.js';
 import {
   asetaEhdotusAvain, ehdotusAika, ehdotusAvain, ehdotusKaytossa,
-  ehdotusKuvaOsoite, haeEhdotukset, haeProTuottajat, lisaaProTuottaja,
+  avainOtsakkeet, ehdotusKuvaOsoite, haeEhdotukset, haeProTuottajat, lisaaProTuottaja,
   paataProProfiili, proKuvaOsoite,
 } from './ehdotukset.js';
 import { fokusVisanKehys } from './fokustehtavat.js';
@@ -1478,7 +1478,8 @@ function proSivut(ui, tuottajat, avain) {
       },
       ...(t.profiili?.kuva ? [{
         otsikko: 'Profiilikuva',
-        kuvaUrl: proKuvaOsoite(t.tekijaId, avain),
+        kuvaUrl: proKuvaOsoite(t.tekijaId),
+        kuvaOtsakkeet: avainOtsakkeet(avain),
         selite: t.profiili.kuva.tiedosto,
         teksti: '',
       }] : []),
@@ -1662,7 +1663,8 @@ function lukijoiltaSivut(ehdotukset, avain) {
       { otsikko: e.sivu || 'Ehdotus', teksti: lukijoiltaTiedot(e) },
       ...(e.kuvat ?? []).map((kuva, j) => ({
         otsikko: `Kuva ${j + 1}`,
-        kuvaUrl: ehdotusKuvaOsoite(e.kansio, kuva.tiedosto, avain),
+        kuvaUrl: ehdotusKuvaOsoite(e.kansio, kuva.tiedosto),
+        kuvaOtsakkeet: avainOtsakkeet(avain),
         selite: kuva.tiedosto,
         teksti: '',
       })),

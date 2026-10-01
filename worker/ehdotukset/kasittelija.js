@@ -17,9 +17,11 @@
  *   POST /laheta               julkinen, CORS vain pelin originille
  *                              (pro-tuottajan materiaali kulkee samaa
  *                              reittiä sähköposti + koodi mukanaan)
- *   GET  /lista?avain=…        vain avaimella (metat, uusin ensin)
- *   GET  /kohde/<polku>?avain= vain avaimella (kuvan nouto)
- *   PUT  /kommentti?avain=…    vain avaimella (kuratointi)
+ *   GET  /lista                vain avaimella (metat, uusin ensin)
+ *   GET  /kohde/<polku>        vain avaimella (kuvan nouto)
+ *   PUT  /kommentti            vain avaimella (kuratointi)
+ *   Avain otsakkeessa x-matkakirja-avain (1.10.2026); ?avain= kelpaa
+ *   siirtymän ajan, mutta se jää lokeihin (ks. avainKelpaa).
  *
  * PRO-SISÄLLÖNTUOTTAJAT (/pro-… ja /tekija/…) ovat saman workerin
  * jatke omassa moduulissaan: worker/ehdotukset/pro.js. Reititys on
@@ -153,7 +155,7 @@ export function sallittuNatiivi(otsakkeet, lista = NATIIVIT_OLETUS) {
 function korsOtsakkeet(origin, sallitut) {
   const otsakkeet = {
     'access-control-allow-methods': 'GET, POST, PUT, OPTIONS',
-    'access-control-allow-headers': 'content-type',
+    'access-control-allow-headers': `content-type, ${AVAIN_OTSAKE}`,
     'access-control-max-age': '86400',
     vary: 'Origin',
   };
@@ -428,8 +430,18 @@ async function laheta(pyynto, env, kors, apurit) {
  * Avaimelliset reitit
  * ------------------------------------------------------------------ */
 
-function avainKelpaa(url, env) {
-  return vertaaSalaisuus(url.searchParams.get('avain') ?? '', env?.EHDOTUS_AVAIN ?? '');
+/*
+ * AVAIN OTSAKKEESSA (Päätoimittaja 1.10.2026, tietoturvakorjaus): kysely-
+ * parametri ?avain= päätyi palvelin- ja välityslokeihin osoitteen mukana.
+ * Asiakkaat (web js/ehdotukset.js, js/reaktiot.js, natiivi Lukijoilta.cs)
+ * lähettävät avaimen otsakkeessa. Kysely kelpaa vielä siirtymän ajan
+ * (vanhat TF-buildit); poistetaan, kun uusi natiivi on testiryhmällä.
+ */
+export const AVAIN_OTSAKE = 'x-matkakirja-avain';
+
+function avainKelpaa(pyynto, url, env) {
+  const annettu = pyynto?.headers?.get?.(AVAIN_OTSAKE) || url.searchParams.get('avain') || '';
+  return vertaaSalaisuus(annettu, env?.EHDOTUS_AVAIN ?? '');
 }
 
 async function lista(env, kors) {
@@ -624,7 +636,7 @@ export async function kasittele(pyynto, env, apurit = {}) {
    * kumpaakaan — se ei sisällä sähköpostia eikä koodia.
    */
   if (proPolku(url.pathname)) {
-    if (proOmistajanPolku(url.pathname) && !avainKelpaa(url, env)) {
+    if (proOmistajanPolku(url.pathname) && !avainKelpaa(pyynto, url, env)) {
       return vastaa({ virhe: 'Avain puuttuu tai ei kelpaa' }, { status: 401, ...kors });
     }
     if (proSelaimenPolku(url.pathname) && !pelaajanPortti()) {
@@ -650,7 +662,7 @@ export async function kasittele(pyynto, env, apurit = {}) {
    */
   if (reaktioPolku(url.pathname)) {
     const omistajan = reaktioOmistajanPolku(url.pathname);
-    if (omistajan && !avainKelpaa(url, env)) {
+    if (omistajan && !avainKelpaa(pyynto, url, env)) {
       return vastaa({ virhe: 'Avain puuttuu tai ei kelpaa' }, { status: 401, ...kors });
     }
     if (!omistajan && !pelaajanPortti()) {
@@ -679,7 +691,7 @@ export async function kasittele(pyynto, env, apurit = {}) {
   const avaimellinen = url.pathname === '/lista' || url.pathname === '/kommentti'
     || url.pathname.startsWith('/kohde/');
   if (avaimellinen) {
-    if (!avainKelpaa(url, env)) {
+    if (!avainKelpaa(pyynto, url, env)) {
       return vastaa({ virhe: 'Avain puuttuu tai ei kelpaa' }, { status: 401, ...kors });
     }
     if (!env.EHDOTUKSET) {
