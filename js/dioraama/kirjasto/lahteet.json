@@ -28,7 +28,8 @@
     "sha256": "ce7935ef7b418a7e20ade08311443deb0b30a0f77559879780bba2e2e07f5a44",
     "tavuja": 3578159
    }
-  ]
+  ],
+  "keski": 0.2544
  },
  "materiaali/kalkkirappaus": {
   "nimi": "White Rough Plaster",
@@ -88,7 +89,8 @@
     "sha256": "89b28336282a07492080a20725d18c7649ae69b1d8e10187ffe143c804bd6d2c",
     "tavuja": 4844348
    }
-  ]
+  ],
+  "keski": 0.05979
  },
  "materiaali/kivilaatta": {
   "nimi": "Grey Stone Path",
@@ -118,7 +120,8 @@
     "sha256": "b4c84fd11853cceab87aa1d9e5fbe5699e12993bc2abbf06908a35b0dbf0c548",
     "tavuja": 3947495
    }
-  ]
+  ],
+  "keski": 0.10225
  },
  "materiaali/kuparikatto": {
   "nimi": "Metal 058 C",
@@ -240,7 +243,8 @@
     "sha256": "2e2dbd57a8a1a09936b2a92373408c7658033966ffee25eddfe98b5988491da3",
     "tavuja": 1750511
    }
-  ]
+  ],
+  "keski": 0.10676
  },
  "materiaali/rauta": {
   "nimi": "Rusty Metal 04",
