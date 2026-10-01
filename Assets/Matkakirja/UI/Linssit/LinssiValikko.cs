@@ -51,7 +51,9 @@ namespace Matkakirja.Natiivi
             Nappi = Rakenne.Nappi(null, "mk-aikajana-nappi mk-linssivalikko__nappi", Vaihda, null, Ikonit.Valikko);
             Nappi.tooltip = "Valikko";
 
-            valikko = Rakenne.El("mk-linssivalikko", kerros.Turva(LinssiUi.Kerros));
+            // Kerroksen juureen (ei turva-alueeseen): ylärivi on juuressa turvan jälkeen ja peitti valikon yläosan (Poistu) — avaus
+            // tuo valikon sen päälle (f4f47679-todennus 1.10.2026). Paikka lasketaan napista (Asettele), joten turvaa ei tarvita.
+            valikko = Rakenne.El("mk-linssivalikko", kerros.Juuri(LinssiUi.Kerros));
             valikko.style.display = DisplayStyle.None;
             // PANEELI (LASI), omistaja 1.10.2026, web #3810: tasainen lasipinta tokeneista (ei yläpalkin kuviota), komennot
             // TOIMINTO-riveinä, viiva, kytkimet KYTKIN-riveinä (tila kapiteelina). Tyylit Linssit.uss "PANEELI (LASI)".
