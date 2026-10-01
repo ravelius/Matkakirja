@@ -24,7 +24,7 @@ Lue:
 
 **Järjestys:** luovutus -20261001. Kuvanäkymä-erät ovat junassa (86, 88). Auki: S2-erä Linssiseppä 2:n kanssa (sävytys
 valmis haarassa linssiseppa/iss-fotorealismi 23e40639, merge muistimittauksen jälkeen) ja fotorealismin junaan vienti
-(odottaa Päätoimittajan OK:ta). Ajoja ei ole käynnissä. Seuraava erä tulee Päätoimittajalta.
+(Päätoimittajan OK 1.10.: samassa S2-erässä Linssiseppä 2:n muistimittauksen jälkeen). Ajoja ei ole käynnissä. Seuraava erä tulee Päätoimittajalta.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).

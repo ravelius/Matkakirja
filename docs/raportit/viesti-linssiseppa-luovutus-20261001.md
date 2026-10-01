@@ -35,8 +35,10 @@ Luovuttaa: Linssiseppä (Opus, high) → seuraava Linssiseppä-sessio. Edellinen
    (vain kun S2 on pinnalla, Kyytipino.S2): kontrasti 30, kylläisyys −10, lämpö 1, Ilmakeha2:n auringon voima 2,5 (BMNG-alueilla
    3,5). Oletuksia ei ole kuvattu uudella käännöksellä (arvot = mitattu variantti v3); tarkistus käy Linssiseppä 2:n ajossa.
    Kuvat ja mittaus: `proto-3d/lokit/linssiseppa-s2-savytys-20261001/` (NASA | BMNG | S2 | S2 + sävytys; ero NASAan 53 / 79 / 28).
-2. **Fotorealismin junaan vienti** (iss-fotorealismi) odottaa Päätoimittajan OK:ta; se muuttaa ilmahehkun ja valojen sävyn
-   oletuksia, Natiiviseppä tietää.
+2. **Fotorealismin junaan vienti: Päätoimittaja antoi OK:n 1.10. klo 06.** Koko iss-fotorealismi 23e40639 menee junaan S2-erän
+   mukana Linssiseppä 2:n yhdessä merge-pyynnössä, kun hänen muistimittauksensa iPadilla 00008103 on tehty (Natiivisepän ehto).
+   Ilman kytkintä muuttuu kaksi oletusta: ilmahehkun nauha ja kaupunkivalojen sävy. Älä liikuta kärkeä; jos liikutat, kerro
+   uusi SHA Linssiseppä 2:lle.
 3. Laitteen tarkat ms per osa `astro kyyti katto30 0` -tilassa (iPad 00008103, muistiehto) — myöhemmin.
 
 Agentteja ei ole käynnissä. Taustaskriptit valmiit; simulaattorit D0D2CD1E ja 903C2B91 sammutettu, appi poistettu.
