@@ -10,10 +10,12 @@
 
 /* ── Yhteiset tekstiportaat (typografia 7 porrasta) ───────────────────────── */
 
-.tk-kapiteeli {
+.tk-kapiteeli,
+.tk-kortti .tk-kapiteeli, .tk-nostokortti .tk-kapiteeli {
   margin: 0 0 var(--tk-vali-xs);
   font-family: var(--font-type);
   font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--tk-muste-pehmea);
@@ -29,7 +31,8 @@
   background: var(--tk-piste, var(--tk-toiminto));
   vertical-align: 0.05em;
 }
-.tk-otsikko {
+.tk-otsikko,
+.tk-kortti .tk-otsikko, .tk-nostokortti .tk-otsikko {
   margin: 0 0 var(--tk-vali-xs);
   font-family: var(--font-luku);
   font-size: var(--tk-koko-otsikko);
@@ -37,14 +40,16 @@
   line-height: 1.2;
   color: var(--tk-muste);
 }
-.tk-apuri {
+.tk-apuri,
+.tk-kortti .tk-apuri, .tk-nostokortti .tk-apuri {
   margin: 0 0 var(--tk-vali-s);
   font-family: var(--font-luku);
   font-size: var(--tk-koko-apuri);
   font-style: italic;
   color: var(--tk-muste-pehmea);
 }
-.tk-leipa {
+.tk-leipa,
+.tk-kortti .tk-leipa, .tk-nostokortti .tk-leipa {
   margin: 0 0 var(--tk-vali-s);
   font-family: var(--font-luku);
   font-size: var(--tk-koko-leipa);
@@ -290,6 +295,19 @@
 .tk-kortti .tk-napit--pysty { flex-direction: column; align-items: stretch; }
 .tk-kortti .tk-napit--pysty .tk-nappi { flex: none; text-align: left; font-family: var(--font-luku); font-size: var(--tk-koko-leipa); }
 
+/* ── KORTTI puettuna olemassa olevaan <dialog>-korttiin (apuraha ym.; sama tapa kuin natiivissa) ─────────────────── */
+
+.dialog .dialog-card.tk-kortti {
+  max-width: var(--tk-leveys-kortti);
+  border-radius: var(--tk-kulma-kortti);
+  padding: var(--tk-vali-l) var(--tk-vali-l) var(--tk-vali-m);
+}
+.tk-lista { margin: 0 0 var(--tk-vali-s); padding-left: var(--tk-vali-l); }
+.tk-lista li + li { margin-top: var(--tk-vali-xs); }
+.tk-kortti .tk-kapiteeli { margin-top: var(--tk-vali-m); }
+.tk-nappi--levea { display: block; width: 100%; margin-top: var(--tk-vali-m); }
+.tk-kortti > .periaate-linkit { margin: var(--tk-vali-s) 0; text-align: left; }
+
 /* ── Esikatselu (tyylikirjasivu): pohja paikallaan virrassa, ei kiinnitettynä ───────────────── */
 
 .tk-esikatselu .tk-nostokortti,
@@ -430,3 +448,203 @@
   font-size: var(--tk-koko-kapiteeli);
   letter-spacing: 0.08em;
 }
+
+/* ── PANEELI puettuna pillerivalikkoon (#paavalikko, js/pilleri-paneeli.js; peruttava ?paneeli=vanha) ─────────── */
+
+/* Paikka pohjan omalla kiinteällä asemoinnilla: yläpalkin toimintorivin alla oikeassa reunassa (js asettaa ankkurin). */
+.paavalikko.tk-paneeli--paikallaan {
+  z-index: 60;
+  display: block;
+  width: min(var(--tk-leveys-paneeli), 100vw - var(--tk-vali-xl));
+  padding: var(--tk-vali-m) var(--tk-vali-m) var(--tk-vali-s);
+  /* Vanhat alinäkymät (tiedot, Aarteet, Linssit) lukevat kehyksen muuttujia: paperin arvot pohjan tokeneista. */
+  --ink: var(--tk-muste);
+  --muted: var(--tk-muste-pehmea);
+  --line: var(--tk-reunus);
+  --panel: var(--tk-pinta);
+}
+.paavalikko.tk-paneeli--paikallaan[hidden] { display: none; }
+.tk-paneeli--paikallaan .pilleri-alanakyma, .tk-paneeli--paikallaan #pilleri-paanakyma { display: block; }
+.tk-paneeli--paikallaan .pilleri-alanakyma[hidden], .tk-paneeli--paikallaan #pilleri-paanakyma[hidden] { display: none; }
+.tk-paneeli--paikallaan .tk-paneeli__ryhmaotsikko:first-child { margin-top: 0 !important; }
+.tk-paneeli--paikallaan .tk-paneeli__ryhma + .tk-paneeli__ryhma,
+.tk-paneeli--paikallaan .tk-paneeli__ryhma + .tk-paneeli__erotin + .tk-paneeli__ryhma { margin-top: var(--tk-vali-m); }
+/* Vanhan kytkimen tila (aria-checked) ajaa päällä-asun samoin kuin pohjan oma kytkin. */
+.tk-paneeli-rivi--kytkin[aria-checked="true"] {
+  border-color: var(--tk-toiminto);
+  background: color-mix(in srgb, var(--tk-toiminto) 22%, transparent);
+}
+.tk-paneeli-rivi--kytkin[aria-checked="true"] .tk-paneeli-rivi__tila { color: var(--tk-korostus); font-weight: 700; }
+/* Kolme kytkintä vierekkäin: väri kertoo tilan, PÄÄLLÄ/POIS-sana ei mahdu kolmanneksen levyiseen soluun. */
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin { gap: var(--tk-vali-xs); padding: 0 var(--tk-vali-xs); }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin .tk-paneeli-rivi__tila { display: none; }
+/* Natiivin tapa (Natiivi-UI): nimi pienenee yhden portaan (14 → 12), ja koska Äänimaisema ei silti mahdu
+   puhelimen kolmanneksen soluun, ikoni ja nimi menevät kahdelle riville (ikoni jää aina, nimeä ei lyhennetä). */
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin { flex-direction: column; gap: 0; padding-top: var(--tk-vali-xs); padding-bottom: var(--tk-vali-xs); }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin .tk-paneeli-rivi__nimi { flex: none; font-size: var(--tk-koko-kapiteeli); }
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin[aria-checked="true"] + .tk-paneeli-rivi { border-left-color: var(--tk-toiminto); }
+/* Säädin: vanha rivi (nimi, liuku, arvo) kahdelle riville kuten pohjan SÄÄDIN. */
+.aanivoima.tk-paneeli-rivi--saadin {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "nimi arvo" "liuku liuku";
+  row-gap: var(--tk-vali-xs);
+  min-height: 0;
+}
+.aanivoima.tk-paneeli-rivi--saadin .aanivoima-nimi { grid-area: nimi; color: var(--tk-muste); font: inherit; }
+.aanivoima.tk-paneeli-rivi--saadin .aanivoima-liuku { grid-area: liuku; width: 100%; margin: 0; accent-color: var(--tk-toiminto); }
+.aanivoima.tk-paneeli-rivi--saadin .aanivoima-arvo {
+  grid-area: arvo;
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+.tk-paneeli--paikallaan .tk-paneeli__alarivi { align-items: center; }
+.tk-paneeli--paikallaan .tk-paneeli__alarivi button { color: inherit; font-size: var(--tk-koko-kapiteeli); }
+/* Vanha `.paavalikko button` (0,1,1) nollaisi reunuksen, kulman ja välit: pohjan rivi samalla tarkkuudella. */
+.paavalikko.tk-paneeli .tk-paneeli-rivi {
+  padding: 0 var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  background: transparent;
+}
+.paavalikko.tk-paneeli .tk-paneeli-rivi--toiminto { border-color: var(--tk-muste-pehmea); }
+.paavalikko.tk-paneeli .tk-paneeli-rivi--saadin { padding: var(--tk-vali-s) var(--tk-vali-m); }
+.paavalikko.tk-paneeli .tk-paneeli-rivi:hover:not([aria-checked="true"]) { background: transparent; }
+.paavalikko.tk-paneeli .tk-paneeli-rivi--kytkin[aria-checked="true"] {
+  border-color: var(--tk-toiminto);
+  background: color-mix(in srgb, var(--tk-toiminto) 22%, transparent);
+}
+.paavalikko.tk-paneeli .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi { padding: 0 var(--tk-vali-xs); border: 0; border-radius: 0; }
+.paavalikko.tk-paneeli .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi + .tk-paneeli-rivi { border-left: 1px solid var(--tk-muste-pehmea); }
+/* Alinäkymän otsikko on kapiteeli (vanha h2-sääntö teki siitä kultaisen). */
+.paavalikko.tk-paneeli .tk-paneeli__yla .tk-kapiteeli {
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+/* Matka-alinäkymä: otsikko on jo ylärivillä, joten tietojen oma Matka-nimiö ja yläviiva jäävät pois. */
+#pilleri-matka-nakyma .pilleri-tiedot { margin-top: 0; padding-top: 0; border-top: 0; }
+#pilleri-matka-nakyma .pilleri-tiedot > .passport-count:first-child { display: none; }
+
+/* ── KORTTI/visa, versio B (omistaja 1.10.2026; js/visa-pohja.js, peruttava ?kortti=vanha) ─────────────────────── */
+/* Pohjan poikkeukset (tyylikirja.json pohjat._poikkeukset): tiimalasi kulmassa ja 50:50-napin hinta (80 p). */
+
+.dialog.quiz .dialog-card.tk-visa {
+  max-width: var(--tk-leveys-kortti);
+  border-radius: var(--tk-kulma-kortti);
+  padding: var(--tk-vali-l) var(--tk-vali-l) var(--tk-vali-m);
+}
+/* Ylärivi: kapiteeli vasemmalla, tiimalasi ja sekunnit oikealla; otsikon alaviiva pohjan reunuksella. */
+.tk-visa .quiz-head { margin-bottom: var(--tk-vali-s); padding-bottom: var(--tk-vali-s); border-bottom: 1px solid var(--tk-reunus); }
+.tk-visa .quiz-badge, .tk-visa .quiz-city {
+  padding: 0;
+  border: 0;
+  transform: none;
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.tk-visa .quiz-seconds { color: var(--tk-muste); font-family: var(--font-type); font-size: var(--tk-koko-apuri); }
+/* Kysymys väliotsikkoportaalla, luku-kirjasimella. */
+.tk-visa .quiz-question {
+  margin: var(--tk-vali-s) 0 var(--tk-vali-m);
+  color: var(--tk-muste);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-valiotsikko);
+  font-weight: 700;
+  line-height: 1.3;
+}
+.tk-visa .quiz-kohtaaminen, .tk-visa .quiz-isoisa-teksti, .tk-visa .quiz-selite {
+  color: var(--tk-muste);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-leipa);
+}
+.tk-visa .quiz-hint-text { color: var(--tk-muste-pehmea); font-family: var(--font-luku); font-size: var(--tk-koko-apuri); }
+/* Vastaukset: pohjan pystyrivi (TOIMINTO-napit allekkain), kirjain kapiteelina ilman ympyrää. */
+.tk-visa .quiz-options { grid-template-columns: minmax(0, 1fr); gap: var(--tk-vali-xs); }
+.tk-visa .quiz-option {
+  min-height: var(--tk-nappi-korkeus);
+  padding: var(--tk-vali-xs) var(--tk-vali-m);
+  gap: var(--tk-vali-s);
+  border: 1px solid var(--tk-reunus) !important;
+  border-radius: var(--tk-kulma-nappi) !important;
+  background: transparent !important;
+  box-shadow: none;
+  transform: none !important;
+  color: var(--tk-muste);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-leipa);
+  font-weight: 400;
+  text-align: left;
+}
+.tk-visa .quiz-option .letter {
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+}
+.tk-visa .quiz-option.correct {
+  border-color: var(--tk-tila-onnistuminen) !important;
+  background: color-mix(in srgb, var(--tk-tila-onnistuminen) 16%, transparent) !important;
+  color: var(--tk-tila-onnistuminen);
+  font-weight: 700;
+}
+.tk-visa .quiz-option.correct .letter { color: var(--tk-tila-onnistuminen); }
+.tk-visa .quiz-option.wrong {
+  border-color: var(--tk-tila-virhe) !important;
+  background: color-mix(in srgb, var(--tk-tila-virhe) 12%, transparent) !important;
+  color: var(--tk-tila-virhe);
+  text-decoration-color: var(--tk-tila-virhe);
+}
+.tk-visa .quiz-option.wrong .letter { color: var(--tk-tila-virhe); }
+/* Tulos: ei laatikkoa; tuomio tilavärillä, selitys leipänä. */
+.tk-visa .quiz-result {
+  margin: var(--tk-vali-m) 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--tk-muste);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-leipa);
+}
+.tk-visa .quiz-result.wrong .quiz-verdict { color: var(--tk-tila-virhe); }
+.tk-visa .quiz-result.right .quiz-verdict { color: var(--tk-tila-onnistuminen); }
+.tk-visa .quiz-verdict { font-family: var(--font-luku); font-size: var(--tk-koko-leipa); font-weight: 700; letter-spacing: 0; }
+.tk-visa .quiz-result .muted, .tk-visa .quiz-lukko { color: var(--tk-muste-pehmea); }
+/* Napit: oljenkorret TOIMINTO (hinta näkyy nimessä), Jatka ja Aloita peli ensisijaisena. */
+.tk-visa menu { justify-content: flex-end; gap: var(--tk-vali-s); margin-top: var(--tk-vali-m); }
+.tk-visa menu button, .tk-visa .quiz-aloita {
+  height: var(--tk-nappi-korkeus);
+  min-height: 0;
+  padding: 0 var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus) !important;
+  border-radius: var(--tk-kulma-nappi) !important;
+  background: transparent !important;
+  box-shadow: none;
+  color: var(--tk-muste) !important;
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.tk-visa menu button.primary, .tk-visa .quiz-aloita {
+  border-color: var(--tk-toiminto) !important;
+  background: var(--tk-toiminto) !important;
+  color: var(--tk-paperi-muste) !important;
+}
+.tk-visa .quiz-aloita { width: 100%; margin: var(--tk-vali-s) 0 var(--tk-vali-m); }
+.tk-visa .quiz-kohtaaminen-kuva { border-radius: var(--tk-kulma-pieni); }
