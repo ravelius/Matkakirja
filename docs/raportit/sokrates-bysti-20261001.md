@@ -52,3 +52,17 @@ pystykuvan leveydestä.
 `sokrates_bysti.py --v2 <gobot> <ulos> --koko L K [--ruudut 1,90,160,230]`, ja gobot tehdään komennolla
 `sokrates_gobo.py <ulos> --fontti iowan "rivi" ...`. Video: `docs/raportit/kuvat/sokrates-20261001/sokrates-v2-kameraajo.mp4`.
 Huom: skannauksen tarkkuus näkyy lähikuvassa (poski) pehmeänä pintana; se on 2 M kolmion STL:n raja, ei renderöinnin.
+
+## Mallikuva v3 (omistaja 1.10. 21.5x): videotykki jättiläiskasvoilla
+- Teksti on aina yksin ruudussa. Alussa näkyy koko bysti ilman tekstiä. Kamera sukeltaa pinnan lähelle (18 mm,
+  matala viisto kulma, syväterävyys f/11), jolloin otsan rypyt, kulmakaari ja nenänvarsi näyttävät vuoristolta.
+- Jokaisella pinnalla on oma projektorinsa vinosti vasemmalta alta. Tekstinauha vierii pinnan poikki noin 3 s ja
+  taipuu harjanteiden mukaan. Projektorin heikko musta taso (kehys) pysyy paikallaan. Valo on lämmin valkoinen,
+  ja kirjainten ympärillä on halo. Keilan pöly näkyy vain projektorin palaessa.
+- Järjestys: otsa → poski → rinta (aataminomena jää parran alle). Lopuksi kamera vetäytyy koko bystiin, ja koko
+  lause tulee alareunaan kreikan lähderivin kanssa.
+- `sokrates_bysti.py --v3b <gobot> <ulos> --koko L K`; gobot: `sokrates_gobo.py kehys.png --kehys` ja
+  `sokrates_gobo.py nauha-<pinta>.png --fontti iowan --nauha "teksti"`. Projektorin solmupuu (staattinen kehys +
+  vierivä nauha, perspektiivijako valon suunnasta) on suora malli Linssisepän reaaliaikaiselle varjostimelle.
+
+![v3: kaukaa, otsa, poski, rinta, loppu](kuvat/sokrates-20261001/sokrates-v3-ruudut.jpg)

@@ -5,13 +5,14 @@ import sys
 from PIL import Image, ImageDraw, ImageFont
 
 SISAAN, ULOS, MERKINTA = sys.argv[1], sys.argv[2], sys.argv[3]
+NAKYVYYS = float(sys.argv[4]) if len(sys.argv) > 4 else 1.0   # v3-videon häivytys
 SUOMI = 'Tutkimaton elämä ei ole elämisen arvoinen ihmiselle.'   # Sisältökirjurin suomennos (v2)
 KREIKKA = 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'
 LAHDE = 'Platon, Puolustuspuhe 38a'
 BASKERVILLE = '/System/Library/Fonts/Supplemental/Baskerville.ttc'
 IOWAN = '/System/Library/Fonts/Supplemental/Iowan Old Style.ttc'
 
-im = Image.open(SISAAN).convert('RGBA'); L, K = im.size; lyhyt = min(L, K)
+im = Image.open(SISAAN).convert('RGBA'); alkup = im.copy(); L, K = im.size; lyhyt = min(L, K)
 # liukuma alareunaan: läpinäkyvä → 85 % tausta
 liuku = Image.new('RGBA', im.size, (0, 0, 0, 0)); d = ImageDraw.Draw(liuku); alku = int(K * 0.74)
 for y in range(alku, K):
@@ -31,4 +32,5 @@ d.text((L / 2, y + koko * 1.05), LAHDE, font=Fi, fill=(150, 146, 140, 255), anch
 # merkintä vasempaan yläkulmaan
 Fm = ImageFont.truetype('/System/Library/Fonts/Supplemental/Arial.ttf', int(lyhyt * 0.022))
 d.text((int(lyhyt * 0.03), int(lyhyt * 0.03)), MERKINTA, font=Fm, fill=(150, 150, 150, 255))
+im = Image.blend(alkup, im, NAKYVYYS) if NAKYVYYS < 1 else im
 im.convert('RGB').save(ULOS, quality=88); print('TEKSTI', ULOS)

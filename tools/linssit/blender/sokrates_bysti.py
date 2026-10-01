@@ -248,3 +248,234 @@ if '--v2' in A:
         sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
         bpy.ops.render.render(write_still=True)
     print('SOKRATES: v2 valmis', ULOS)
+
+
+# ---------- mallikuva v3 (omistaja 1.10. 21.5x): videotykki jättiläiskasvoilla, yksi teksti kerrallaan ----------
+# - Projektori vinosti (vasemmalta alta) → kirjaimet taipuvat ryppyjen, kulmakaarten ja nenänvarren mukaan, kuopissa
+#   tummempi, kipsin rakenne näkyy läpi. Gobo 16:9 (sokrates_gobo.py --tykki): halo + musta taso, lineaarisena.
+# - Osat syttyvät kameran saapuessa (0,5 s) ja sammuvat ennen seuraavaa: otsa → poski → rinta → vetäytyminen.
+# - Jättiläisen mittakaava: 24 mm lähellä pintaa, matala kulma; hento keila (tilavuuskartio) ja pölyhiukkaset keilassa.
+#   Blender -b -P sokrates_bysti.py -- --v3 <gobot> <ulos> --koko L K [--naytteita 24] [--ruudut ...]
+V3_PINNAT = (  # nimi, säde (x, z), tekstin leveys pinnalla (m), projektorin suunta normaaliin lisättynä
+    ('otsa', (-0.008, 0.440), 0.092, (-0.35, -0.20, -0.30)),
+    ('poski', (-0.052, 0.350), 0.056, (-0.55, -0.15, -0.40)),
+    ('rinta', (0.0, 0.110), 0.095, (-0.55, -0.15, -0.40)),
+)
+#        ruutu, kameran paikka
+V3_AIKA = ((1, 'koko'), (30, 'koko'), (80, 'otsa'), (135, 'otsa'), (180, 'poski'), (235, 'poski'),
+           (280, 'rinta'), (335, 'rinta'), (375, 'loppu'), (420, 'loppu'))
+V3_VALOT = {'otsa': (80, 125), 'poski': (180, 225), 'rinta': (280, 325)}    # syttyy alusta 15 r, sammuu lopusta 10 r
+V3_LINSSI = 24
+
+
+def _sammuta_paalle(o, alku, loppu, voima):
+    for r, v in ((1, 0), (alku, 0), (alku + 15, voima), (loppu, voima), (loppu + 10, 0)):
+        o.data.energy = v; o.data.keyframe_insert('energy', frame=r)
+
+
+def _keila(nimi, karki, kohde, sade, tiheys=0.35):
+    """Hento valokeila: tilavuuskartio projektorista pinnalle (näkyy vain spotin valossa)."""
+    import bmesh
+    v = Vector(kohde) - Vector(karki); L = v.length
+    bm = bmesh.new(); bmesh.ops.create_cone(bm, cap_ends=True, segments=32, radius1=0.0005, radius2=sade, depth=L)
+    me = bpy.data.meshes.new(nimi); bm.to_mesh(me); bm.free()
+    o = bpy.data.objects.new(nimi, me); bpy.context.scene.collection.objects.link(o)
+    o.location = (Vector(karki) + Vector(kohde)) / 2; o.rotation_euler = v.to_track_quat('Z', 'Y').to_euler()
+    m = bpy.data.materials.new(nimi); m.use_nodes = True; nt = m.node_tree; nt.nodes.clear()
+    pv = nt.nodes.new('ShaderNodeVolumePrincipled'); pv.inputs['Density'].default_value = tiheys
+    pv.inputs['Anisotropy'].default_value = 0.55
+    out = nt.nodes.new('ShaderNodeOutputMaterial'); nt.links.new(pv.outputs['Volume'], out.inputs['Volume'])
+    me.materials.append(m); o.visible_shadow = False
+    return o
+
+
+def _polya(kohde, suunta, maara, rnd, nakyvissa):
+    """Pölyhiukkaset kohteen edessä; näkyvissä vain oman projektorin palaessa (muuten sivuvalo valaisisi ne)."""
+    m = bpy.data.materials.new('poly'); m.use_nodes = True; b = m.node_tree.nodes['Principled BSDF']
+    b.inputs['Base Color'].default_value = (0.9, 0.88, 0.85, 1); b.inputs['Roughness'].default_value = 1.0
+    me = bpy.data.meshes.new('hiukkanen'); import bmesh; bm = bmesh.new()
+    bmesh.ops.create_icosphere(bm, subdivisions=1, radius=0.00014); bm.to_mesh(me); bm.free(); me.materials.append(m)
+    for i in range(maara):
+        t = rnd.uniform(0.01, 0.09)          # vain pinnan lähellä: kameran edessä hiukkanen näkyisi läiskänä
+        p = Vector(kohde) + suunta * t + Vector((rnd.uniform(-1, 1), rnd.uniform(-1, 1), rnd.uniform(-1, 1))) * (0.015 + t * 0.3)
+        o = bpy.data.objects.new('poly', me); bpy.context.scene.collection.objects.link(o); o.location = p
+        o.visible_shadow = False
+        for r, nakyy in ((1, False), (nakyvissa[0], True), (nakyvissa[1] + 10, False)):
+            o.hide_render = not nakyy; o.keyframe_insert('hide_render', frame=r)
+
+
+def _kipsin_rakenne(o):
+    """Kipsin hieno huokoisuus kuhmuna (näkyy kirjainten läpi lähikuvassa)."""
+    m = o.data.materials[0]; nt = m.node_tree; b = nt.nodes['Principled BSDF']
+    tc = nt.nodes.new('ShaderNodeTexCoord'); no = nt.nodes.new('ShaderNodeTexNoise')
+    no.inputs['Scale'].default_value = 900; no.inputs['Detail'].default_value = 6; no.inputs['Roughness'].default_value = 0.7
+    nt.links.new(tc.outputs['Object'], no.inputs['Vector'])
+    bu = nt.nodes.new('ShaderNodeBump'); bu.inputs['Strength'].default_value = 0.12; bu.inputs['Distance'].default_value = 0.0004
+    nt.links.new(no.outputs['Fac'], bu.inputs['Height']); nt.links.new(bu.outputs['Normal'], b.inputs['Normal'])
+
+
+if '--v3' in A:
+    import random
+    i = A.index('--v3'); GOBOT, ULOS = A[i + 1], A[i + 2]; os.makedirs(ULOS, exist_ok=True)
+    i = A.index('--koko'); LEV, KORK = int(A[i + 1]), int(A[i + 2])
+    N = int(A[A.index('--naytteita') + 1]) if '--naytteita' in A else 24
+    RUUDUT = [int(v) for v in A[A.index('--ruudut') + 1].split(',')] if '--ruudut' in A else None
+    o = rakenna(N); sc = bpy.context.scene; _kipsin_rakenne(o); rnd = random.Random(38)
+    sc.cycles.volume_bounces = 0; sc.cycles.volume_step_rate = 4.0
+    eteen = Vector((-0.12, -1.0, 0.07)).normalized()
+    vaaka = 24 * LEV / KORK                                   # pystykuvan vaakakenttä (mm)
+    kohteet = {}
+    osumat = {nimi: osuma(x, z) for nimi, (x, z), *_ in V3_PINNAT}   # ennen keiloja ja pölyä (säde osuisi niihin)
+    for nimi, (x, z), lev, vino in V3_PINNAT:
+        p, n = osumat[nimi]
+        # projektori vinosti vasemmalta alta (n. 30–35°); kamera matalalta, lähellä projektorin akselia
+        pr_suunta = (n + Vector(vino)).normalized()
+        gobo = os.path.join(GOBOT, f'gobo-{nimi}.png')
+        pj = projektori(gobo, p, etaisyys=0.75, voima=1.0, lev=lev / 0.62, suunta=pr_suunta, nimi=f'tykki-{nimi}', pehmeys=0.0)
+        pj.data.color = (1.0, 0.93, 0.80)
+        for nd in pj.data.node_tree.nodes:
+            if nd.type == 'TEX_IMAGE': nd.image.colorspace_settings.name = 'Non-Color'
+        _sammuta_paalle(pj, *V3_VALOT[nimi], 55.0)
+        keila = _keila(f'keila-{nimi}', pj.location, p, lev / 0.62 * 0.75)
+        for r, nakyy in ((1, False), (V3_VALOT[nimi][0], True), (V3_VALOT[nimi][1] + 10, False)):
+            keila.hide_render = not nakyy; keila.keyframe_insert('hide_render', frame=r)
+        _polya(p, pr_suunta, 220, rnd, V3_VALOT[nimi])
+        kam_suunta = (n + Vector((-0.25, -0.2, -0.55))).normalized()
+        d = lev * 1.3 * V3_LINSSI / vaaka
+        kohteet[nimi] = (p + kam_suunta * d, p + Vector((0, 0, 0.004)))
+        print('SOKRATES v3: pinta', nimi, tuple(round(v, 3) for v in p), 'kamera', round(d, 3), 'm')
+    kohde_koko = Vector((0.0, -0.03, 0.20)); kohteet['koko'] = (kohde_koko + eteen * 0.95, kohde_koko)
+    kohde_loppu = Vector((0.0, -0.05, 0.30)); kohteet['loppu'] = (kohde_loppu + (eteen + Vector((0, 0, -0.25))).normalized() * 0.62, kohde_loppu)
+    cd = bpy.data.cameras.new('k'); cd.lens = V3_LINSSI; cd.sensor_fit = 'VERTICAL'; cd.sensor_height = 24; cd.clip_start = 0.01
+    cam = bpy.data.objects.new('k', cd); sc.collection.objects.link(cam); sc.camera = cam
+    tahtain = bpy.data.objects.new('tahtain', None); sc.collection.objects.link(tahtain)
+    tc = cam.constraints.new('TRACK_TO'); tc.target = tahtain; tc.track_axis = 'TRACK_NEGATIVE_Z'; tc.up_axis = 'UP_Y'
+    for ruutu, nimi in V3_AIKA:
+        cam.location, tahtain.location = kohteet[nimi]
+        cam.keyframe_insert('location', frame=ruutu); tahtain.keyframe_insert('location', frame=ruutu)
+    sc.frame_start, sc.frame_end = 1, V3_AIKA[-1][0]; sc.render.fps = 30
+    sc.render.resolution_x, sc.render.resolution_y = LEV, KORK; sc.render.resolution_percentage = 100
+    for ruutu in (RUUDUT or range(sc.frame_start, sc.frame_end + 1)):
+        sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
+        bpy.ops.render.render(write_still=True)
+    print('SOKRATES: v3 valmis', ULOS)
+
+
+# ---------- mallikuva v3b (omistaja 1.10. 21.5x, tarkennus): ilmakuva vuoristosta, vierivä teksti ----------
+# Kamera sukeltaa pinnan lähelle ja liitää matalassa viistossa kulmassa (kasvot eivät näytä kasvoilta); projektorin
+# tekstinauha vierii pinnan poikki (~3 s) ja taipuu harjanteiden ja laaksojen mukaan; musta taso (kehys) pysyy paikallaan.
+# Yksi teksti kerrallaan: otsa → poski → rinta; lopuksi vetäytyminen koko bystiin (teksti alareunaan jälkikäsittelyssä).
+#   Blender -b -P sokrates_bysti.py -- --v3b <gobot> <ulos> --koko L K [--naytteita 16] [--ruudut ...]
+V3B_PINNAT = (  # nimi, säde (x, z), nauhan korkeus pinnalla (m), projektorin vinous normaaliin, kehyksen leveys (m),
+               # kameran kulma pintaan (°): otsa jyrkemmin, koska kupoli kaartuu pois ja teksti jäisi horisonttiin
+    ('otsa', (-0.005, 0.418), 0.015, (-0.40, -0.15, -0.30), 0.07, 55),
+    ('poski', (-0.055, 0.352), 0.012, (-0.55, -0.15, -0.30), 0.06, 38),
+    ('rinta', (0.0, 0.115), 0.017, (-0.50, -0.15, -0.35), 0.08, 35),
+)
+V3B_LINSSI = 18
+V3B_LENTO = {'otsa': (80, 160), 'poski': (195, 285), 'rinta': (320, 395)}
+V3B_LOPPU = 485              # vetäytyminen 395→440, loppuun pysähdys; teksti alareunaan 445→460 (jälkikäsittely)
+
+
+def vieriva_projektori(nimi, p, suunta, etaisyys, kehys_lev, kehys_kuva, nauha_kuva, nauha_kork, ruudut, voima):
+    """Spotti: staattinen musta taso (kehys) + vierivä tekstinauha; siirto animoituna (Value-solmu)."""
+    kk = bpy.data.images.load(kehys_kuva); nk = bpy.data.images.load(nauha_kuva)
+    for k in (kk, nk): k.colorspace_settings.name = 'Non-Color'
+    kehys_kork = kehys_lev * kk.size[1] / kk.size[0]; nauha_lev = nauha_kork * nk.size[0] / nk.size[1]
+    d = bpy.data.lights.new(nimi, 'SPOT'); d.spot_blend = 0.0; d.shadow_soft_size = 0.0
+    d.spot_size = 2.4 * math.atan(kehys_lev / 2 / etaisyys); d.color = (1.0, 0.93, 0.80); d.use_nodes = True
+    nt = d.node_tree; nt.nodes.clear()
+    tc = nt.nodes.new('ShaderNodeTexCoord'); sx = nt.nodes.new('ShaderNodeSeparateXYZ'); nt.links.new(tc.outputs['Normal'], sx.inputs['Vector'])
+    z = nt.nodes.new('ShaderNodeMath'); z.operation = 'MULTIPLY'; z.inputs[1].default_value = -1.0; nt.links.new(sx.outputs['Z'], z.inputs[0])
+    def jaa(akseli):
+        j = nt.nodes.new('ShaderNodeMath'); j.operation = 'DIVIDE'
+        nt.links.new(sx.outputs[akseli], j.inputs[0]); nt.links.new(z.outputs['Value'], j.inputs[1]); return j.outputs['Value']
+    jx, jy = jaa('X'), jaa('Y')
+    def kerro_lisaa(sis, k, c):
+        m = nt.nodes.new('ShaderNodeMath'); m.operation = 'MULTIPLY_ADD'; m.inputs[1].default_value = k; m.inputs[2].default_value = c
+        nt.links.new(sis, m.inputs[0]); return m.outputs['Value']
+    def kuva(img, u, v):
+        yh = nt.nodes.new('ShaderNodeCombineXYZ'); nt.links.new(u, yh.inputs['X']); nt.links.new(v, yh.inputs['Y'])
+        t = nt.nodes.new('ShaderNodeTexImage'); t.image = img; t.extension = 'CLIP'; nt.links.new(yh.outputs['Vector'], t.inputs['Vector'])
+        return t.outputs['Color']
+    kehys = kuva(kk, kerro_lisaa(jx, etaisyys / kehys_lev, 0.5), kerro_lisaa(jy, etaisyys / kehys_kork, 0.5))
+    siirto = nt.nodes.new('ShaderNodeValue'); siirto.name = 'siirto'
+    ux = nt.nodes.new('ShaderNodeMath'); ux.operation = 'ADD'
+    nt.links.new(kerro_lisaa(jx, etaisyys / nauha_lev, 0.5), ux.inputs[0]); nt.links.new(siirto.outputs['Value'], ux.inputs[1])
+    nauha = kuva(nk, ux.outputs['Value'], kerro_lisaa(jy, etaisyys / nauha_kork, 0.5))
+    # nauha näkyy vain kehyksen sisällä (videotykin kuva-ala)
+    sis = nt.nodes.new('ShaderNodeMath'); sis.operation = 'GREATER_THAN'; sis.inputs[1].default_value = 0.0
+    nt.links.new(kehys, sis.inputs[0])
+    nm = nt.nodes.new('ShaderNodeMath'); nm.operation = 'MULTIPLY'; nt.links.new(nauha, nm.inputs[0]); nt.links.new(sis.outputs['Value'], nm.inputs[1])
+    summa = nt.nodes.new('ShaderNodeMath'); summa.operation = 'ADD'; nt.links.new(nm.outputs['Value'], summa.inputs[0]); nt.links.new(kehys, summa.inputs[1])
+    em = nt.nodes.new('ShaderNodeEmission'); nt.links.new(summa.outputs['Value'], em.inputs['Strength'])
+    out = nt.nodes.new('ShaderNodeOutputLight'); nt.links.new(em.outputs['Emission'], out.inputs['Surface'])
+    o = bpy.data.objects.new(nimi, d); bpy.context.scene.collection.objects.link(o)
+    o.location = Vector(p) + suunta.normalized() * etaisyys; kohdista(o, p)
+    alku, loppu = ruudut; s0 = 0.5 + kehys_lev / 2 / nauha_lev
+    sv = siirto.outputs['Value']
+    for r, v in ((alku + 4, -s0), (loppu - 4, s0)):
+        sv.default_value = v; sv.keyframe_insert('default_value', frame=r)
+    for r, v in ((1, 0), (alku, 0), (alku + 6, voima), (loppu - 6, voima), (loppu, 0)):
+        d.energy = v; d.keyframe_insert('energy', frame=r)
+    for fc in (d.node_tree.animation_data.action.fcurves if d.node_tree.animation_data and hasattr(d.node_tree.animation_data.action, 'fcurves') else []):
+        for kp in fc.keyframe_points: kp.interpolation = 'LINEAR'
+    return o
+
+
+def lentoasento(p, n, kulma=38, matka=0.09):
+    """Kamera pinnan alapuolelta katsoen ylös pintaa pitkin (kirjaimet pystyssä), matalassa kulmassa; nostetaan,
+    jos pinta peittää näkymän."""
+    zk = Vector((0, 0, 1)); u = (zk - n * zk.dot(n)).normalized(); t = u.cross(n).normalized()
+    a = math.radians(kulma); f = (u * math.cos(a) - n * math.sin(a)).normalized()
+    dg = bpy.context.evaluated_depsgraph_get()
+    for _ in range(8):
+        c = p - f * matka
+        osui, q, *_ = bpy.context.scene.ray_cast(dg, c, (p - c).normalized(), distance=(p - c).length - 0.004)
+        if not osui: break
+        a += math.radians(6); f = (u * math.cos(a) - n * math.sin(a)).normalized()
+    return c, t, u
+
+
+if '--v3b' in A:
+    import random
+    i = A.index('--v3b'); GOBOT, ULOS = A[i + 1], A[i + 2]; os.makedirs(ULOS, exist_ok=True)
+    i = A.index('--koko'); LEV, KORK = int(A[i + 1]), int(A[i + 2])
+    N = int(A[A.index('--naytteita') + 1]) if '--naytteita' in A else 16
+    RUUDUT = [int(v) for v in A[A.index('--ruudut') + 1].split(',')] if '--ruudut' in A else None
+    o = rakenna(N); sc = bpy.context.scene; _kipsin_rakenne(o); rnd = random.Random(38)
+    osumat = {nimi: osuma(x, z) for nimi, (x, z), *_ in V3B_PINNAT}
+    eteen = Vector((-0.12, -1.0, 0.07)).normalized()
+    avaimet = []                       # (ruutu, kameran paikka, katsepiste)
+    kohde_koko = Vector((0.0, -0.03, 0.22)); avaimet += [(1, kohde_koko + eteen * 0.80, kohde_koko), (45, kohde_koko + eteen * 0.72, kohde_koko)]
+    edellinen = None
+    for nimi, (x, z), nauha_kork, vino, kehys_lev, kulma in V3B_PINNAT:
+        p, n = osumat[nimi]; alku, loppu = V3B_LENTO[nimi]
+        pr_suunta = (n + Vector(vino)).normalized()
+        vieriva_projektori(f'tykki-{nimi}', p, pr_suunta, 0.6, kehys_lev, os.path.join(GOBOT, 'kehys.png'),
+                           os.path.join(GOBOT, f'nauha-{nimi}.png'), nauha_kork, (alku, loppu), 70.0)
+        _polya(p, pr_suunta, 60, rnd, (alku, loppu))
+        c, t, u = lentoasento(p, n, kulma=kulma)
+        siirtyma = t * 0.012 + u * 0.006
+        if edellinen is not None:      # siirtymä nostettuna pinnasta irti (ei läpi nenän tai parran)
+            ec, ep, en = edellinen; keski_p = (ep + p) / 2; keski_n = (en + n).normalized()
+            avaimet.append(((avaimet[-1][0] + alku) // 2, keski_p + keski_n * 0.16, keski_p))
+        avaimet += [(alku, c - siirtyma, p - siirtyma), (loppu, c + siirtyma, p + siirtyma)]
+        edellinen = (c, p, n)
+        print('SOKRATES v3b: pinta', nimi, tuple(round(v, 3) for v in p), 'kamera', tuple(round(v, 3) for v in c))
+    kohde_loppu = Vector((0.0, -0.04, 0.27))
+    avaimet += [(440, kohde_loppu + eteen * 0.62, kohde_loppu), (V3B_LOPPU, kohde_loppu + eteen * 0.66, kohde_loppu)]
+    cd = bpy.data.cameras.new('k'); cd.lens = V3B_LINSSI; cd.sensor_fit = 'VERTICAL'; cd.sensor_height = 24; cd.clip_start = 0.003
+    cam = bpy.data.objects.new('k', cd); sc.collection.objects.link(cam); sc.camera = cam
+    tahtain = bpy.data.objects.new('tahtain', None); sc.collection.objects.link(tahtain)
+    tc = cam.constraints.new('TRACK_TO'); tc.target = tahtain; tc.track_axis = 'TRACK_NEGATIVE_Z'; tc.up_axis = 'UP_Y'
+    cd.dof.use_dof = True; cd.dof.focus_object = tahtain; cd.dof.aperture_fstop = 11
+    for ruutu, c, q in avaimet:
+        cam.location, tahtain.location = c, q
+        cam.keyframe_insert('location', frame=ruutu); tahtain.keyframe_insert('location', frame=ruutu)
+    sc.frame_start, sc.frame_end = 1, V3B_LOPPU; sc.render.fps = 30
+    sc.render.resolution_x, sc.render.resolution_y = LEV, KORK; sc.render.resolution_percentage = 100
+    for ruutu in (RUUDUT or range(sc.frame_start, sc.frame_end + 1)):
+        sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
+        bpy.ops.render.render(write_still=True)
+    print('SOKRATES: v3b valmis', ULOS)
