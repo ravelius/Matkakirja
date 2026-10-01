@@ -1601,7 +1601,8 @@ namespace Matkakirja.Natiivi
                 var a = alue.Value;
                 float aw = a.width * jw, ah = a.height * jh;
                 float kw = Mathf.Min(aw, ah * 1.5f), kh = Mathf.Round(kw / 1.5f);
-                kertomuskuva.style.visibility = Visibility.Visible;
+                // Nostokortti auki: kuva pysyy piilossa (Muuttui piilotti sen, mutta tämä joka ruudun asettelu palautti sen; savuke 106).
+                kertomuskuva.style.visibility = nostokortti.Auki != null ? Visibility.Hidden : Visibility.Visible;
                 kertomuskuva.style.width = Mathf.Round(kw);
                 kertomuskuva.style.height = kh;
                 kertomuskuva.style.left = Mathf.Round(a.x * jw + (aw - kw) / 2f);
@@ -1615,7 +1616,7 @@ namespace Matkakirja.Natiivi
             float leveys = juuri.resolvedStyle.width;
             if (float.IsNaN(leveys) || leveys <= 0) return;
             float w = Mathf.Min(leveys * 0.66f, 560f), h = Mathf.Round(w * 2f / 3f);
-            kertomuskuva.style.visibility = Visibility.Visible;
+            kertomuskuva.style.visibility = nostokortti.Auki != null ? Visibility.Hidden : Visibility.Visible;
             kertomuskuva.style.width = w;
             kertomuskuva.style.height = h;
             kertomuskuva.style.left = p.x - w / 2f;
@@ -1867,6 +1868,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Testikomento: ihmisen matkan osat ilman linssiä (aloitus|musta|valot|jakso i|kuva i|loppu).</summary>
+        /// <summary>Testikomento ui linssi matka veto …: Ihmisen matkan nostokortin vetokahva.</summary>
+        public string TestaaIhmisnostoVeto(string suunta) => nostokortti.TestiVeto(suunta);
+
         public string TestaaIhminen(string mita, int i)
         {
             Ala(Tila.Ihminen);

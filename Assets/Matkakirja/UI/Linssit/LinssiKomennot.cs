@@ -29,7 +29,7 @@
 //                                         verkkoyhteysrivillä
 //   ui linssi maa [ISO3]                  maatietojen maakyltti (oletus ITA; napautus avaa maalehden)
 //   ui linssi keksinnot [esittely|pysakki i|valinaytos [i]|loppu]
-//   ui linssi matka [aloitus|musta|valot|jakso i|kuva i|loppu]
+//   ui linssi matka [aloitus|musta|valot|jakso i|kuva i|loppu|nosto n [kysy k]|veto laajenna|pienenna|alas]
 //   ui linssi radio [hiljaa|viritys|soi|linkki|virhe|pois]  maailmanradion kotelo keksityllä
 //                                         RadioTilalla (oletus soi; asteikon nimi ajaa virityssarjan).
 //                                         TESTIKUORI: ei avaa linssiä rekisteriin (oikea radio: linssi radio)
@@ -150,6 +150,8 @@ namespace Matkakirja.Natiivi
                     // "matka nosto <n> [kysy <k>]": löydön nostokortti (ja k:s kysymys → Pulun chat), ks. TestaaIhminen.
                     // "matka pois": testitilasta ulos (savuke 94: ilman tätä "pois" putosi jakso-oletukseen ja ruutu jäi mustaksi).
                     if (a1 == "pois") { l.Aikajana.Pois(); return "ihmisen matka: testitila pois"; }
+                    // "matka veto laajenna|pienenna|alas": auki olevan nostokortin vetokahva (savuke 106).
+                    if (a1 == "veto") return l.Aikajana.TestaaIhmisnostoVeto(a2);
                     if (a1 == "nosto" && osat.Length > 4 && osat[3] == "kysy")
                         return l.Aikajana.TestaaIhminen("nosto", Luku(a2, 0) + 1000 * (Luku(osat[4], 0) + 1));
                     return l.Aikajana.TestaaIhminen(a1.Length > 0 ? a1 : "jakso", Luku(a2, 0));

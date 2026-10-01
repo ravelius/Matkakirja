@@ -266,6 +266,18 @@ namespace Matkakirja.Natiivi
         Loytopaikka paikka;
 
         /// <summary>Testi (linssi matka nosto &lt;n&gt; kysy &lt;k&gt;): toimintorivin Kysy (k &lt; 0) tai Lue lisää (k = 99).</summary>
+        /// <summary>Testikomento ui linssi matka veto laajenna|pienenna|alas: kuin vetokahvan veto (savuke 106: ui nostonappi koskee
+        /// vain kartan nostokorttia).</summary>
+        public string TestiVeto(string suunta)
+        {
+            if (Auki == null) return "ihmisen matkan nostokortti ei ole auki";
+            if (suunta == "alas") { Sulje(); return "kahva alas: suljettu"; }
+            if (suunta != "laajenna" && suunta != "pienenna") return "ui linssi matka veto laajenna|pienenna|alas";
+            laajennettu = suunta == "laajenna";
+            Paikka();
+            return (laajennettu ? "laajennettu" : "pienennetty") + ", korkeus enintään " + kortti.style.maxHeight.value.value;
+        }
+
         public string TestiKysy(int n)
         {
             if (toimintorivi == null) return "ei toimintoriviä";
