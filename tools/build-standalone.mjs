@@ -784,6 +784,9 @@ const MODULES = [
   'js/pulu-paneelin-ylla.js',
   'js/livia-eleet.js',
   'js/pollo.js',
+  // UI-pohjat (NOSTOKORTTI, KORTTI): ennen moduuleja, jotka avaavat pinnan pohjalla.
+  'js/pohjat/korttidata.js',
+  'js/pohjat/pohjat.js',
   /*
    * Livian ääni ennen Livian kuplia: js/livia.js soittaa repliikin
    * äänen kuplan ilmestyessä (omistaja 6.9.2026). Moduuli tuo vain
