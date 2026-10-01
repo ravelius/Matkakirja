@@ -374,6 +374,7 @@ namespace Matkakirja.Natiivi
                 {
                     periaateOtsikko.text = MiniJson.Teksti(p, "otsikko") ?? periaateOtsikko.text;
                     periaateVieritys.Clear();
+                    bool karki = true;
                     foreach (var x in osat)
                     {
                         var o = Rakenne.Olio(x);
@@ -381,7 +382,10 @@ namespace Matkakirja.Natiivi
                         if (MiniJson.Teksti(o, "otsikko") is string ot)
                             Kirjasimet.Aseta(Rakenne.Teksti(ot.ToUpperInvariant(), "mk-tietoja__otsikko", periaateVieritys), Kirjasin.Kone);
                         if (MiniJson.Teksti(o, "teksti") is string te)
-                            Rakenne.Teksti(te, "mk-kortti__teksti mk-aloitus__periaate", periaateVieritys);
+                        {
+                            var l = Rakenne.Teksti(te, "mk-kortti__teksti mk-aloitus__periaate", periaateVieritys);
+                            if (karki) { karki = false; Kirjasimet.Aseta(l, Kirjasin.LukuLihava); } // kärki korostuksena (web #3800)
+                        }
                     }
                     // Linkki ja palautelohko säilyvät paketin tekstien jälkeen (web: ennen oikeusriviä).
                     if (periaateLinkki != null) periaateVieritys.Add(periaateLinkki);
@@ -1028,17 +1032,19 @@ namespace Matkakirja.Natiivi
             var h = Rakenne.El("mk-himmennys mk-himmennys--tumma", isa);
             h.style.display = DisplayStyle.None;
             h.RegisterCallback<PointerDownEvent>(e => { if (e.target == h) Rakenne.Nayta(h, false, 250); });
-            var kortti = new Kortti("mk-tietoja");
+            var kortti = new Kortti("mk-tietoja mk-periaatteet", pohja: true); // KORTTI-pohja (web #3800)
             h.Add(kortti);
             var o = Rakenne.Teksti("Oppiminen on hauskaa", "mk-kortti__otsikko", kortti.Sisus);
-            Kirjasimet.Aseta(o, Kirjasin.LukuLihava);
+            Kirjasimet.Aseta(o, Tyylikirja.Kirjain.Otsikko);
             periaateOtsikko = o;
             var v = new ScrollView(ScrollViewMode.Vertical);
             periaateVieritys = v;
             v.AddToClassList("mk-tietoja__vieritys");
             v.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Sisus.Add(v);
-            void K(string t) => Rakenne.Teksti(t, "mk-kortti__teksti mk-aloitus__periaate", v);
+            // Kärki (ensimmäinen kappale) korostuksena (web #3800); väliotsikot kapiteeleja (USS .mk-periaatteet).
+            bool karki = true;
+            void K(string t) { var l = Rakenne.Teksti(t, "mk-kortti__teksti mk-aloitus__periaate", v); if (karki) { karki = false; Kirjasimet.Aseta(l, Kirjasin.LukuLihava); } }
             void O(string t) { var l = Rakenne.Teksti(t.ToUpperInvariant(), "mk-tietoja__otsikko", v); Kirjasimet.Aseta(l, Kirjasin.Kone); }
             K("Matkakirja ja unohdettu aarre on seikkailupeli, jonka sivutuotteena opitaan — "
                 + "ei oppikirja, johon on liimattu noppa. Pelin pitää olla "
@@ -1081,9 +1087,9 @@ namespace Matkakirja.Natiivi
             periaateLinkki = gh;
             // Web periaatePalaute: palautelohko linkin jälkeen (lomake: PalauteLomake.cs).
             periaatePalaute = PalauteLomake.PeriaateLohko(v, UiKerros.Traileri);
-            Kirjasimet.Aseta(Rakenne.Teksti("© Visuaaliviestinnän Instituutti Tampere Oy", "mk-aloitus__oikeudet", v), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti("© Visuaaliviestinnän Instituutti Tampere Oy", "mk-aloitus__oikeudet", v), Tyylikirja.Kirjain.Apuri);
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-            var sulje = Rakenne.Nappi("Takaisin", "mk-nappi--haamu", () => Rakenne.Nayta(h, false, 250), napit);
+            var sulje = Rakenne.Nappi("Takaisin", "mk-nappi--toiminto", () => Rakenne.Nayta(h, false, 250), napit);
             Kirjasimet.Aseta(sulje, Kirjasin.KoneLihava);
             return h;
         }

@@ -4671,3 +4671,17 @@
     padding-top: 0;
     border-top-width: 0;
 }
+
+/* Periaatteet KORTTI-pohjassa (web #3800): väliotsikot kapiteeleja ilman viivaa, oikeusrivi apurina. */
+.mk-periaatteet .mk-tietoja__otsikko {
+    margin-top: var(--tk-vali-m);
+    padding-top: 0;
+    border-top-width: 0;
+    font-size: var(--tk-koko-kapiteeli);
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-periaatteet .mk-aloitus__oikeudet {
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-paperi-muste-pehmea);
+}
