@@ -4,10 +4,11 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20260929.md`](viesti-pelikoodari-luovutus-20260929.md) (29.9. klo 16.1x, tilinvaihto): KÄRKI
-   webin matkalaukkunahka iPhone-yläpalkkiin (worktree pelikoodari-ylapalkki-nahka, kärki df49af37d = WIP, luovutuksen osio 0:
-   keskivyöhykeväitteet pois, kuvat uusiksi, main + versio, PR); #3622 ja #3624 mergetty; auki #3627 (Liiku) ja #3611 (Sisältökirjuri). Rajatut tehtävät Sonnet-ali-agenteille, rooli todentaa ja julkaisee. Päätoimittaja =
-   "Päätoimittaja (Opus, xhigh)". Edellinen: `viesti-pelikoodari-luovutus-20260928-b.md`.
+   [`viesti-pelikoodari-luovutus-20261001.md`](viesti-pelikoodari-luovutus-20261001.md) (1.10. n. 05.30, kiintiö 95 %): KÄRKI
+   Pulun TF-todennukset (Ihmisen matkan kysymys ilman valmista vastausta → chat; kartan chat paperilla linssin jälkeen) ja
+   äänimikseri TF 89:ssä (laitetodennus, kun keittiön kaikustemmit ovat ämpärissä; omistajan Tallenna-JSON → poltto).
+   Web-PR:t #3742, #3740, #3731, #3723, #3730 auki. Päätoimittaja = "Päätoimittaja (Opus, xhigh)". Edellinen:
+   `viesti-pelikoodari-luovutus-20260929.md`.
    - Roolit NIMELLÄ; Julkaisijalle vastaus viestin `from`-osoitteeseen. Kun viestiraja täyttyy, `docs/raportit/posti-pelikoodari-<pvm>.md` + push.
    - Worktreet enintään 3 (levy): poista `tools/uusi-worktree.sh --poista` heti kun haara on pushattu eikä sitä tarvita.
 3. Merge-pyynnöt ja tilaukset: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-maisemakompressori.md`
