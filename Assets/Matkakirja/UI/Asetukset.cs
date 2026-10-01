@@ -43,8 +43,15 @@ namespace Matkakirja.Natiivi
 #if MATKAKIRJA_APPSTORE
         public static bool Kehittaja => false;
 #else
-        public static bool Kehittaja => Debug.isDebugBuild || PlayerPrefs.GetString(KehittajaAvain, "") == "1";
+        public static bool Kehittaja => !PakotaPelaaja && (Debug.isDebugBuild || PlayerPrefs.GetString(KehittajaAvain, "") == "1");
 #endif
+
+        /// <summary>
+        /// Testi (ui pelaaja 1|0, Päätoimittaja 1.10.): pelaajan näkymä myös Debug-käännöksessä, jossa kehittäjätila on muuten
+        /// aina päällä — kehittäjän napit ja tekstit (mikseri, "Kuori: auto") todennetaan piilossa simulaattorissa ilman TF:ää.
+        /// Ei tallennu (istunnon ajan).
+        /// </summary>
+        public static bool PakotaPelaaja;
 
         /// <summary>
         /// Pöllön kehittäjäkoodi chatin x-pollo-kehittaja-otsakkeeseen (Fable 24.9.: ei koskaan kovakoodattuna eikä
