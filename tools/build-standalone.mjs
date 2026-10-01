@@ -1177,6 +1177,7 @@ const STYLES = [
   'css/saapumistraileri.css',
   'css/fokuskohteet.css',
   'css/fokusnosto.css',
+  'css/pohjat.css',
   'css/kuvasarja.css',
   // Sähkepinta on osa peruspeliä (js/ui.js ja js/main.js tuovat
   // js/sahke.js:n), eikä css/styles.css sisällä yhtään sahke-sääntöä.
