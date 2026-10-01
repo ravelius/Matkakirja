@@ -971,6 +971,8 @@ const MODULES = [
    * päivityskutsun). Se tuo valojen koneiston, symbolikirjaston,
    * mapartin, ui-apurit ja peukalolevyn — kaikki jo yllä.
    */
+  // PANEELI-lippu ja pillerivalikon puku: ennen js/karttaselite.js:ää (sama lippu) ja js/main.js:ää.
+  'js/pilleri-paneeli.js',
   'js/karttaselite.js',
   'js/vakasikoni.js',
   'js/ylapalkki-vaaka.js',
@@ -1134,8 +1136,6 @@ const MODULES = [
   // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
   'js/kehittaja-pikatie.js',
   'js/lehtikuori.js',
-  // Pillerivalikko PANEELI-pohjalla: js/main.js puee #paavalikon käynnistyksessä.
-  'js/pilleri-paneeli.js',
   'js/main.js',
 ];
 
