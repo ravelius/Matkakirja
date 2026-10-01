@@ -85,6 +85,7 @@ namespace Matkakirja.Natiivi
             var i = Varmista();
             i.cupolassa = cupolassa;
             i.Aseta();
+            AaniMikseri.CupolaTila(cupolassa); // kehittäjän mikseri Cupolassa (Pelikoodari)
         }
 
         /// <summary>Astronautin kamera auki (AstronauttiKerros.Avaus): humina kaikissa linssin näkymissä.</summary>
@@ -115,6 +116,7 @@ namespace Matkakirja.Natiivi
             if (!instanssi.paalla) return;
             instanssi.paalla = false;
             instanssi.Lopeta();
+            AaniMikseri.CupolaTila(false);
         }
 
         void Kaynnista()
