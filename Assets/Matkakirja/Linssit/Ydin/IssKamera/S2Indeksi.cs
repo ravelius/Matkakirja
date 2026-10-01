@@ -22,7 +22,8 @@ namespace Matkakirja.Linssit.IssKamera
 
         /// <summary>Valinta k (0 = paras) kuvasuunnitelman ruuduksi.</summary>
         public S2Ruutu Ruutu(int k = 0) => k < Valinnat.Count
-            ? new S2Ruutu { Tunnus = Tunnus, Url = Valinnat[k].Tci, W = W, S = S, E = E, N = N, Nodata = Valinnat[k].Nodata } : null;
+            ? new S2Ruutu { Tunnus = k == 0 ? Tunnus : Tunnus + "#" + k, Url = Valinnat[k].Tci, Scl = Valinnat[k].Scl, Valinta = k,
+                W = W, S = S, E = E, N = N, Nodata = Valinnat[k].Nodata } : null;
     }
 
     public sealed class S2Indeksi

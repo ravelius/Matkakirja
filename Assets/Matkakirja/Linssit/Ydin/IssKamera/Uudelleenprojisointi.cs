@@ -28,6 +28,32 @@ namespace Matkakirja.Linssit.IssKamera
         long purettuTavut;
         /// <summary>TCI-tavu → näyttötavu (256 arvoa); null = sellaisenaan.</summary>
         public byte[] Lut;
+        /// <summary>
+        /// SCL-otsakkeet ruuduittain (tunnus → otsake); SCL-laatat Pakatut-taulussa avaimella ("&lt;tunnus&gt;|scl", taso, tx, ty).
+        /// Pilvimaski (Päätoimittaja 1.10.: S2:n omat kumpupilvet maahan painettuina läikkinä): luokat 3 (pilven varjo), 8, 9
+        /// (pilvi) ja 10 (ohut cirrus) ohitetaan, jolloin pikseli tulee seuraavasta ruudusta tai varakuvasta.
+        /// </summary>
+        public readonly Dictionary<string, CogOtsake> Scl = new Dictionary<string, CogOtsake>();
+
+        /// <summary>Onko UTM-pisteessä (e, n) ruudun SCL:n mukaan pilvi tai pilven varjo (ei haettu → ei).</summary>
+        public bool Pilvinen(string tunnus, int vyohyke, double e, double n, double metria)
+        {
+            if (!Scl.TryGetValue(tunnus, out var o)) return false;
+            int taso = o.TasoResoluutiolle(metria);
+            var t = o.Tasot[taso]; double pm = o.TasonPikseliM(taso);
+            int x = (int)((e - o.Ita0) / pm), y = (int)((o.Pohjoinen0 - n) / pm);
+            if (x < 0 || y < 0 || x >= t.Leveys || y >= t.Korkeus) return false;
+            for (int tt = taso; tt < o.Tasot.Count; tt++)
+            {
+                var tn = o.Tasot[tt]; double pn = o.TasonPikseliM(tt);
+                int xx = (int)((e - o.Ita0) / pn), yy = (int)((o.Pohjoinen0 - n) / pn);
+                var l = Hae((tunnus + "|scl", tt, xx / tn.LaattaL, yy / tn.LaattaK));
+                if (l == null) continue;
+                byte c = l[(yy % tn.LaattaK) * tn.LaattaL + xx % tn.LaattaL];
+                return c == 3 || c == 8 || c == 9 || c == 10;
+            }
+            return false;
+        }
 
         /// <summary>Purettu laatta tai null (ei haettu).</summary>
         public byte[] Hae((string tunnus, int taso, int tx, int ty) avain)
@@ -120,6 +146,7 @@ namespace Matkakirja.Linssit.IssKamera
                     int ix = (int)fx, iy = (int)fy; double ax = fx - ix, ay = fy - iy;
                     if (!Pikselit(d, ru.Tunnus, t, taso, ix, iy, out var p00, out var p10, out var p01, out var p11)) continue;   // ei haettu
                     if (Musta(p00) || Musta(p10) || Musta(p01) || Musta(p11)) continue;   // nodata (myös reunapikseli)
+                    if (d.Pilvinen(ru.Tunnus, ru.Vyohyke, e, n, pm)) continue;   // S2:n oma pilvi tai sen varjo → seuraava / varakuva
                     double cr = (p00.r * (1 - ax) + p10.r * ax) * (1 - ay) + (p01.r * (1 - ax) + p11.r * ax) * ay;
                     double cg = (p00.g * (1 - ax) + p10.g * ax) * (1 - ay) + (p01.g * (1 - ax) + p11.g * ax) * ay;
                     double cb = (p00.b * (1 - ax) + p10.b * ax) * (1 - ay) + (p01.b * (1 - ax) + p11.b * ax) * ay;

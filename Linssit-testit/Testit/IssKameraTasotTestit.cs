@@ -39,6 +39,39 @@ namespace Matkakirja.Linssit.Testit
                     var (a, len) = o.Tasot[taso].Alue(tx, tyy); tavut += len;
                     ty.Data.Pakatut[(ru.Tunnus, taso, tx, tyy)] = (o.Tasot[taso], Curl(ru.Url, a, len));
                 }
+            // Pilvimaski kuten laitteella (PILVIMASKI=1): SCL ensisijaisille, pilviset lehdet, varakuva (valinta 1) niille.
+            if (Environment.GetEnvironmentVariable("PILVIMASKI") == "1")
+            {
+                void HaeScl(S2Ruutu ru, Func<(int, int, int), bool> suodin)
+                {
+                    if (string.IsNullOrEmpty(ru.Scl)) return;
+                    var so = CogOtsake.Jasenna(Curl(ru.Scl, 0, 16384)); ty.Data.Scl[ru.Tunnus] = so;
+                    foreach (var (taso, tx, tyy) in ty.HaettavatLaatat(ru, so, suodin))
+                    {
+                        var (a, len) = so.Tasot[taso].Alue(tx, tyy); tavut += len;
+                        ty.Data.Pakatut[(ru.Tunnus + "|scl", taso, tx, tyy)] = (so.Tasot[taso], Curl(ru.Scl, a, len));
+                    }
+                }
+                foreach (var (ru, _) in ty.Data.Ruudut.ToList()) HaeScl(ru, null);
+                var pilviset = ty.PilvisetLehdet();
+                int varoja = 0;
+                foreach (var (ru, _) in ty.Data.Ruudut.Where(r => r.ruutu.Valinta == 0).ToList())
+                {
+                    var vara = x.Ruudut.TryGetValue(ru.Mgrs, out var ir) ? ir.Ruutu(1) : null;
+                    if (vara == null) continue;
+                    var vo = CogOtsake.Jasenna(Curl(vara.Url, 0, 16384)); ty.Data.Ruudut.Add((vara, vo));
+                    var tarve = ty.HaettavatLaatat(vara, vo, l => pilviset.Contains(l));
+                    if (tarve.Count == 0) { ty.Data.Ruudut.RemoveAt(ty.Data.Ruudut.Count - 1); continue; }
+                    varoja++;
+                    foreach (var (taso, tx, tyy) in tarve)
+                    {
+                        var (a, len) = vo.Tasot[taso].Alue(tx, tyy); tavut += len;
+                        ty.Data.Pakatut[(vara.Tunnus, taso, tx, tyy)] = (vo.Tasot[taso], Curl(vara.Url, a, len));
+                    }
+                    HaeScl(vara, l => pilviset.Contains(l));
+                }
+                Console.WriteLine($"  pilvimaski: {pilviset.Count} pilvistä lehteä, {varoja} varakuvaa");
+            }
             var tilastot = new ConcurrentDictionary<int, long[]>();
             var tasolla = ty.Laatat.Where(l => l.z == TASO).ToList();
             int x0 = tasolla.Min(l => l.x), x1 = tasolla.Max(l => l.x), y0 = tasolla.Min(l => l.y), y1 = tasolla.Max(l => l.y);

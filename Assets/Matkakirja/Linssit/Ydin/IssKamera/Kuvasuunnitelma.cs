@@ -25,7 +25,13 @@ namespace Matkakirja.Linssit.IssKamera
         public double W, S, E, N;
         /// <summary>Valinnan nodata-osuus (%, indeksistä): > 0,5 → ruutu ei voi yksin kattaa lehteä (rataleveyden reuna).</summary>
         public double Nodata;
+        /// <summary>SCL-COG (luokitus, 20 m) pilvimaskiin; null = ei maskia.</summary>
+        public string Scl;
+        /// <summary>Valinnan järjestys indeksissä (0 = paras, 1–2 varakuvat); varakuvan tunnus on "&lt;MGRS&gt;#k".</summary>
+        public int Valinta;
         public int Vyohyke => Utm.Vyohyke(Tunnus);
+        /// <summary>MGRS-tunnus ilman varakuvan päätettä.</summary>
+        public string Mgrs => Tunnus.Split('#')[0];
     }
 
     public struct Nayte

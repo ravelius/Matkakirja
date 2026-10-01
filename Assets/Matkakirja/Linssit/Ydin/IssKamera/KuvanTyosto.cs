@@ -109,22 +109,50 @@ namespace Matkakirja.Linssit.IssKamera
         /// sisarukset täydellä tarkkuudella +56 Mt, ilman dataa isätasot täyttöä).</summary>
         HashSet<(int, int, int)> nakyvat;
 
-        public HashSet<(int taso, int tx, int ty)> HaettavatLaatat(S2Ruutu ru, CogOtsake o)
+        /// <summary>
+        /// Näkymän lehdet, joissa jonkin ruudun SCL näyttää pilveä tai pilven varjoa (8 × 8 näytettä per lehti): niille haetaan
+        /// varakuva (valinta 1), jonka pikselit täyttävät maskatut kohdat.
+        /// </summary>
+        public HashSet<(int z, int x, int y)> PilvisetLehdet()
+        {
+            var r = new HashSet<(int, int, int)>();
+            foreach (var (z, x, y) in Lehdet())
+            {
+                if (nakyvat != null && !nakyvat.Contains((z, x, y))) continue;
+                double m = Uudelleenprojisointi.PikseliM(z, Uudelleenprojisointi.Pikseli(z, x, y, 128, 128).lat);
+                bool pilvi = false;
+                for (int i = 0; i < 8 && !pilvi; i++) for (int j = 0; j < 8 && !pilvi; j++)
+                {
+                    var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, i * 32 + 16, j * 32 + 16);
+                    foreach (var (ru, o) in Data.Ruudut)
+                    {
+                        if (ru.Valinta > 0 || lo < ru.W || lo > ru.E || la < ru.S || la > ru.N) continue;
+                        var (e, n) = Utm.Eteen(la, lo, ru.Vyohyke);
+                        if (Data.Pilvinen(ru.Tunnus, ru.Vyohyke, e, n, m)) { pilvi = true; break; }
+                    }
+                }
+                if (pilvi) r.Add((z, x, y));
+            }
+            return r;
+        }
+
+        public HashSet<(int taso, int tx, int ty)> HaettavatLaatat(S2Ruutu ru, CogOtsake o, Func<(int z, int x, int y), bool> suodin = null)
         {
             var r = new HashSet<(int, int, int)>(); int v = ru.Vyohyke;
             foreach (var (z, x, y) in Lehdet())
             {
+                if (suodin != null && !suodin((z, x, y))) continue;
                 bool sisarus = nakyvat != null && !nakyvat.Contains((z, x, y));   // näkymän ulkopuolinen sisarus: vain karkein taso
                 var (n0, w0) = Uudelleenprojisointi.Pikseli(z, x, y, 0, 0); var (s0, e0) = Uudelleenprojisointi.Pikseli(z, x, y, 256, 256);
                 if (e0 < ru.W || w0 > ru.E || n0 < ru.S || s0 > ru.N) continue;
                 if (Mosaiikki != null && MosaiikinLaatta(z, x, y) && Mosaiikki(z, x, y) != null) continue;   // kaukoalue mosaiikista (haettu)
-                if (Ensisijainen)
+                if (Ensisijainen && ru.Valinta == 0)   // varakuva haetaan aina suodatetuille lehdille
                 {
                     // Ensimmäinen ruutu (Data.Ruudut-järjestys), joka kattaa lehden kokonaan, ottaa sen; muut ohittavat.
                     S2Ruutu oma = null;
                     // Vain aukoton valinta (nodata ≤ 0,5 %) voi ottaa lehden yksin (laitekoe 3: rataleveyden reunan aukot jäivät
                     // täytöksi, kun ensisijaisella ruudulla oli nodataa).
-                    foreach (var (r2, o2) in Data.Ruudut) if (r2.Nodata <= 0.5 && Kattaa(r2, o2, z, x, y)) { oma = r2; break; }
+                    foreach (var (r2, o2) in Data.Ruudut) if (r2.Valinta == 0 && r2.Nodata <= 0.5 && Kattaa(r2, o2, z, x, y)) { oma = r2; break; }
                     if (oma != null && oma != ru) continue;
                 }
                 int taso = sisarus ? o.Tasot.Count - 1 : o.TasoResoluutiolle(Uudelleenprojisointi.PikseliM(z, (n0 + s0) / 2) * TasoKerroin);
