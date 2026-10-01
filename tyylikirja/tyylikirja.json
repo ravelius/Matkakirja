@@ -31,7 +31,7 @@
     "kerma": "#faf4d6"
   },
   "teemat": {
-    "_selite": "UI-pohjien kolme teemaa (+ linssin avaruuslasi). Teeman valitsee konteksti, ei pinta. Jokaisessa teemassa muste ja muste-pehmea ≥ 4,5:1 pintaa vasten (tests/tyylikirja.test.mjs).",
+    "_selite": "UI-pohjien kolme teemaa (+ linssin avaruuslasi). Teeman valitsee konteksti, ei pinta. Värit webin nykyisistä pinnoista; ei saavutettavuusperusteisia näkyviä muutoksia (omistajan Ydinajatus).",
     "paperi": {
       "pinta": "#f5f0e2",
       "pergamentti": "#ecd8ae",
