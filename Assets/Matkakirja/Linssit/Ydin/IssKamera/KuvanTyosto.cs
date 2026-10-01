@@ -233,6 +233,8 @@ namespace Matkakirja.Linssit.IssKamera
                     var (pa, pk, pv) = Pilvet.Nayte(la, lo);
                     int q = j * (G + 1) + i; a[q] = (float)pa; kk[q] = (float)pk; v[q] = (float)pv;
                 }
+            var (laK, _) = Uudelleenprojisointi.Pikseli(z, x, y, 128, 128);
+            bool lahi = Uudelleenprojisointi.PikseliM(z, laK) <= 40;   // 400 mm: pilvien reunat pikselikohtaisesti
             for (int py = 0; py < 256; py++)
                 for (int px = 0; px < 256; px++)
                 {
@@ -241,7 +243,9 @@ namespace Matkakirja.Linssit.IssKamera
                     float gx = px * G / 256f, gy = py * G / 256f; int ix = Math.Min(G - 1, (int)gx), iy = Math.Min(G - 1, (int)gy);
                     float tx = gx - ix, ty = gy - iy;
                     float H(float[] f) { int q = iy * (G + 1) + ix; return (f[q] * (1 - tx) + f[q + 1] * tx) * (1 - ty) + (f[q + G + 1] * (1 - tx) + f[q + G + 2] * tx) * ty; }
-                    float al = H(a), ki = H(kk), va = H(v);
+                    float al, ki, va = H(v);
+                    if (lahi) { var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, px + 0.5, py + 0.5); var (pa, pk) = Pilvet.Lahi(la, lo); al = (float)pa; ki = (float)pk; }
+                    else { al = H(a); ki = H(kk); }
                     for (int c = 0; c < 3; c++)
                     {
                         float pohja = rgba[o + c] * (1 - va), pilvi = 246f * ki * (c == 0 ? 1f : c == 1 ? 0.975f : 0.94f);

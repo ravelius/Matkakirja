@@ -69,6 +69,24 @@ namespace Matkakirja.Linssit.IssKamera
             return (alfa, kirkkaus, varjo * VarjonVoima);
         }
 
+        /// <summary>
+        /// Lähikuvan pilvi (400 mm, laatan pikseli ≤ 40 m; laitekoe 2: pilvet pehmeinä möykkyinä): alfa ja kirkkaus pikselikohtaisesti
+        /// kahdella lisäoktaavilla (200 m ja 80 m) — kumpupilven reunan kukkakaalirakenne ja kirkkaat huiput; varjo hilasta.
+        /// </summary>
+        public (double alfa, double kirkkaus) Lahi(double lat, double lon)
+        {
+            var (x, y) = Metrit(lat, lon);
+            double d0 = Tiheys(x, y, lat, lon);
+            if (d0 < -1.2) return (0, 1);   // kaukana pilvestä: lisäoktaavit eivät nosta kynnyksen yli
+            double yksi = Kohina(x / 200, y / 200, 31), kaksi = Kohina(x / 80, y / 80, 32);
+            double d = d0 + 0.22 * yksi + 0.10 * kaksi;
+            double alfa = Askel(-0.05, 0.30, d) * 0.97;
+            double az = AurinkoAz * Math.PI / 180, sx = Math.Sin(az), sy = Math.Cos(az);
+            double dk = Tiheys(x + sx * 380, y + sy * 380, lat, lon) + 0.22 * Kohina((x + sx * 120) / 200, (y + sy * 120) / 200, 31);
+            double kirkkaus = Math.Max(0.66, Math.Min(1.0, 0.96 - 0.45 * (dk - d) + 0.04 * kaksi));
+            return (alfa, kirkkaus);
+        }
+
         double Tiheys(double x, double y, double lat, double lon, bool hieno = true)
         {
             double ranta = MaaOsuus == null ? 1 : Askel(0.80, 0.97, MaaOsuus(lat, lon));
