@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2523, teksti: 'Ihmisen matkan nostokortti NOSTOKORTTI-pohjalla (#3789)' },
   { v: 2522, teksti: 'Kohdekortti NOSTOKORTTI-pohjalla (#3788)' },
   { v: 2521, teksti: 'Loki: 1.10. illan päätökset mainiin (#3814)' },
   { v: 2520, teksti: 'Olavinlinna kuori v24: venyneet tekstuurialueet… (#3812)' },
