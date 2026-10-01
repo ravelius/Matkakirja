@@ -17,6 +17,10 @@ Yön päätökset ja tilat lokissa docs/raamattu-loki/paatokset-2026-09.md (grep
    Komento kokoaa paketin mainin kärjestä. **Omistajalle sanottu: aja vasta Päätoimittajan luvalla.** Julkaisija ajaa kuivan paketin klo 06.45
    (mainissa silloin #3746 v18 + #3755 v3c + #3756 v19 + puukortit, jos ehtivät), ja Siirtoseppä kuittaa sen puhtaalla asennuksella → anna lupa.
    Siirtoseppä kuittasi jo v18:n (98691896e7bf76b8), joten v17 ohitetaan.
+   **Komento ei osaa osoittaa hashiin, vaan rakentaa mainin kärjestä.** Siksi klo 06.45 jälkeen linnan pakettiin vaikuttavat PR:t
+   (dioraama/olavinlinna, blender.json, rakenna.mjs) ovat Julkaisijalla pidossa, kunnes omistaja on ajanut osoittimen.
+   #3755 (v3c) mergettiin 05.11, ja paketti 19f1ff3246be7386 (v18 + v3c) on varakuittauksessa. Jos #3756 (v19) tai #3758 (puukortit)
+   ehtii ennen 06.45:tä, kuitataan 06.45:n kuiva paketti.
 2. **TF:n sisäinen ryhmä**: 85:n ajossa ASC ei palauttanut yhtään isInternalGroup-ryhmää (82:lla "Beta testaajat", automaattijako päällä).
    Julkaisijan testflight-sisainen.yml estyi luokittimeen. Omistaja tarkistaa ASC:stä tai sallii ajon Julkaisijan sessiossa.
 
