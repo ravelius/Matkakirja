@@ -1176,7 +1176,8 @@
 .mk-aikajana-paneeli__vuosi {
     font-size: 11.5px;
     letter-spacing: 10.43px; /* web 1.2px */
-    color: #6b4d1c;
+    /* UI-pohjat: #6b4d1c tummalla #201a14 oli 2,2:1; tumman teeman pehmeä muste ≥ 4,5:1 (tyylikirja). */
+    color: var(--tk-tumma-muste-pehmea);
 }
 
 .mk-aikajana-paneeli__otsikko {
