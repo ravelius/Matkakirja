@@ -56,6 +56,8 @@ function pohjaKuva(kuva, luokka, kuvaAuki = null, indeksi = 0) {
   }
   kehys.appendChild(img);
   if (kuva.kuvateksti) kehys.appendChild(pohjaSolmu('figcaption', 'tk-kuvateksti', kuva.kuvateksti));
+  // Kuvan tekijä ja lisenssi kuvan alle (CC BY vaatii maininnan siellä, missä kuva näkyy).
+  if (kuva.lahde) kehys.appendChild(pohjaSolmu('div', 'tk-lahde', kuva.lahde));
   return kehys;
 }
 
@@ -164,6 +166,9 @@ export function luoPohjaNostokortti(data, {
   const el = pohjaSolmu('section', `tk-nostokortti tk-teema-${teema ?? d.teema} tk-piilossa`);
   el.setAttribute('role', 'dialog');
   el.setAttribute('aria-label', d.otsikko || d.yla || 'Nosto');
+  // Kortin painallus ei kuulu kartalle (kartan napautus sulkisi kortin ennen napin klikkausta): sama kuin vanhoilla
+  // korteilla. Oma ohinapautus kuuntelee dokumenttia kaappausvaiheessa, joten tämä ei estä sitä.
+  el.addEventListener('pointerdown', (e) => e.stopPropagation());
   const kahva = pohjaSolmu('button', 'tk-nostokortti__kahva');
   kahva.type = 'button';
   kahva.setAttribute('aria-label', 'Laajenna tai pienennä');

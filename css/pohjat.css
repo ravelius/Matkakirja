@@ -278,6 +278,8 @@
 .tk-kortti--mini { max-width: var(--tk-leveys-minipopup); }
 .tk-kortti-tausta.tk-piilossa .tk-kortti { transform: scale(0.96); }
 .tk-kortti .tk-otsikko { padding-bottom: var(--tk-vali-xs); border-bottom: 1px solid var(--tk-reunus); }
+/* Otsikon alaviiva riittää: kuvaton kortti ei saa toista viivaa. */
+.tk-kortti .tk-viiva { display: none; }
 .tk-kortti .tk-napit {
   justify-content: flex-end;
   margin-top: var(--tk-vali-m);
