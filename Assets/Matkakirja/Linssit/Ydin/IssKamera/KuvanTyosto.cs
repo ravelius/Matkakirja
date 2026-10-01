@@ -4,6 +4,7 @@
 // S2 (Uudelleenprojisointi) + pilvet (Pilvikentta 32 × 32 -hilassa, bilineaarisesti ylös; pilvet ovat ≥ 500 m:n piirteitä).
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Matkakirja.Linssit.IssKamera
 {
@@ -57,6 +58,13 @@ namespace Matkakirja.Linssit.IssKamera
             // Juurijaon ulkopuolelle jäävät tasot kuuluvat silti juureen (esivanhempi on aina juurijoukossa).
             W = X0 * 360.0 / (1 << JuuriZ) - 180; E = (X0 + Rx) * 360.0 / (1 << JuuriZ) - 180;
             N = LaatanLat(JuuriZ, Y0); S = LaatanLat(JuuriZ, Y0 + Ry);
+            // Täysi neliöpuu (laitekoe 5: Cesium piirtää myös isälaattoja; isä, jolta puuttui lapsia, projisoitiin hakematta
+            // jääneestä datasta → tummia kaistoja): kaikki juuret ja jokaisen laatan sisarukset, jolloin jokainen isä kootaan
+            // neljästä lapsestaan ja sisarukset saavat oman datansa lehtinä.
+            nakyvat = new HashSet<(int, int, int)>(Laatat);
+            for (int x = X0; x < X0 + Rx; x++) for (int y = Y0; y < Y0 + Ry; y++) Laatat.Add((JuuriZ, x, y));
+            foreach (var (z, x, y) in Laatat.ToList())
+                if (z > JuuriZ) { int bx = x & ~1, by = y & ~1; Laatat.Add((z, bx, by)); Laatat.Add((z, bx + 1, by)); Laatat.Add((z, bx, by + 1)); Laatat.Add((z, bx + 1, by + 1)); }
         }
 
         /// <summary>Lehtilaatat: joukon laatat, joilla ei ole lapsia joukossa (niiden data haetaan, isät kootaan lapsista).</summary>
@@ -97,11 +105,16 @@ namespace Matkakirja.Linssit.IssKamera
             return true;
         }
 
+        /// <summary>Näkymän laatat ennen sisarusten täydennystä: näille näkymän tarkkuus, sisaruksille karkein taso (tasotesti 1.10.:
+        /// sisarukset täydellä tarkkuudella +56 Mt, ilman dataa isätasot täyttöä).</summary>
+        HashSet<(int, int, int)> nakyvat;
+
         public HashSet<(int taso, int tx, int ty)> HaettavatLaatat(S2Ruutu ru, CogOtsake o)
         {
             var r = new HashSet<(int, int, int)>(); int v = ru.Vyohyke;
             foreach (var (z, x, y) in Lehdet())
             {
+                bool sisarus = nakyvat != null && !nakyvat.Contains((z, x, y));   // näkymän ulkopuolinen sisarus: vain karkein taso
                 var (n0, w0) = Uudelleenprojisointi.Pikseli(z, x, y, 0, 0); var (s0, e0) = Uudelleenprojisointi.Pikseli(z, x, y, 256, 256);
                 if (e0 < ru.W || w0 > ru.E || n0 < ru.S || s0 > ru.N) continue;
                 if (Mosaiikki != null && MosaiikinLaatta(z, x, y) && Mosaiikki(z, x, y) != null) continue;   // kaukoalue mosaiikista (haettu)
@@ -114,7 +127,7 @@ namespace Matkakirja.Linssit.IssKamera
                     foreach (var (r2, o2) in Data.Ruudut) if (r2.Nodata <= 0.5 && Kattaa(r2, o2, z, x, y)) { oma = r2; break; }
                     if (oma != null && oma != ru) continue;
                 }
-                int taso = o.TasoResoluutiolle(Uudelleenprojisointi.PikseliM(z, (n0 + s0) / 2) * TasoKerroin);
+                int taso = sisarus ? o.Tasot.Count - 1 : o.TasoResoluutiolle(Uudelleenprojisointi.PikseliM(z, (n0 + s0) / 2) * TasoKerroin);
                 var t = o.Tasot[taso]; double pm = o.TasonPikseliM(taso);
                 double xmin = double.MaxValue, xmax = double.MinValue, ymin = double.MaxValue, ymax = double.MinValue;
                 for (int i = 0; i <= 2; i++) for (int j = 0; j <= 2; j++)
@@ -129,6 +142,41 @@ namespace Matkakirja.Linssit.IssKamera
                 for (int tx = tx0; tx <= tx1; tx++) for (int ty = ty0; ty <= ty1; ty++) r.Add((taso, tx, ty));
             }
             return r;
+        }
+
+        /// <summary>
+        /// Koko laattajoukko tasoittain tarkimmasta juureen: lehti piirretään datasta (Piirra), isä kootaan lapsistaan, avomeri
+        /// (ei S2-dataa) täytetään merivärillä. kirjoita(laatta, rgba) kutsutaan rinnakkain säikeistä; edistyminen laattoina.
+        /// </summary>
+        public void PiirraKaikki(Action<(int z, int x, int y), byte[]> kirjoita, int ytimia, byte[] meri, Action<int> edistyminen = null)
+        {
+            var nelj = new System.Collections.Concurrent.ConcurrentDictionary<(int, int, int), byte[]>();
+            int tehty = 0;
+            foreach (var taso in Laatat.GroupBy(l => l.z).OrderByDescending(g => g.Key))
+            {
+                var seuraavat = new System.Collections.Concurrent.ConcurrentDictionary<(int, int, int), byte[]>();
+                System.Threading.Tasks.Parallel.ForEach(taso, new System.Threading.Tasks.ParallelOptions { MaxDegreeOfParallelism = Math.Max(1, ytimia) }, l =>
+                {
+                    var rgba = new byte[256 * 256 * 4];
+                    var lapset = new byte[4][]; bool kaikki = true;
+                    for (int k = 0; k < 4; k++) if (!nelj.TryGetValue((l.z + 1, 2 * l.x + k % 2, 2 * l.y + k / 2), out lapset[k])) kaikki = false;
+                    if (kaikki) Kokoa(lapset, rgba);
+                    else
+                    {
+                        Piirra(l.z, l.x, l.y, rgba);
+                        for (int k = 0; k < 4; k++) if (lapset[k] != null)
+                        {
+                            int ox = (k % 2) * 128, oy = (k / 2) * 128;
+                            for (int y = 0; y < 128; y++) Buffer.BlockCopy(lapset[k], y * 512, rgba, ((oy + y) * 256 + ox) * 4, 512);
+                        }
+                    }
+                    for (int i = 0; i < rgba.Length; i += 4) if (rgba[i + 3] == 0) { rgba[i] = meri[0]; rgba[i + 1] = meri[1]; rgba[i + 2] = meri[2]; rgba[i + 3] = 254; }
+                    seuraavat[l] = Puolita(rgba);
+                    kirjoita(l, rgba);
+                    edistyminen?.Invoke(System.Threading.Interlocked.Increment(ref tehty));
+                });
+                nelj = seuraavat;
+            }
         }
 
         /// <summary>RGBA 256² → neljännes 128² (2 × 2 -keskiarvo) isälaatan koontiin.</summary>
@@ -217,9 +265,13 @@ namespace Matkakirja.Linssit.IssKamera
         /// puretun RGBA:n tai null (ei haettu / alueen ulkopuolella → COG).
         /// </summary>
         public Func<int, int, int, byte[]> Mosaiikki;
-        public const int MosaiikkiMaxZ = 10, MosaiikkiX0 = 27, MosaiikkiY0 = 13, MosaiikkiKoko = 13;
+        public const int MosaiikkiMaxZ = 11, MosaiikkiX0 = 27, MosaiikkiY0 = 13, MosaiikkiKoko = 13;
 
-        /// <summary>Kuuluuko lehti mosaiikille (z ≤ 10 ja mosaiikin 13 × 13 z6-lohkon sisällä).</summary>
+        /// <summary>
+        /// Kuuluuko lehti mosaiikille (z ≤ 11 ja mosaiikin 13 × 13 z6-lohkon sisällä). z11-lehti tehdään z10-isän neljänneksestä
+        /// 2 × suurennettuna: lehti on Cesiumin varalta tasoa tarkempi kuin näkymä vaatii (laitekoe 5: 50 mm:n z11-lehdet COG:sta
+        /// 193 Mt → mosaiikista ~10 Mt).
+        /// </summary>
         public static bool MosaiikinLaatta(int z, int x, int y)
         {
             if (z > MosaiikkiMaxZ || z < JuuriZ) return false;

@@ -138,10 +138,13 @@ namespace Matkakirja.Natiivi
                 // jotta COG-haku ohittaa vain onnistuneet (404 tai mosaiikin ulkopuolella → COG).
                 var mosaiikki = new Dictionary<(int, int, int), byte[]>();
                 var mlista = ty.Lehdet().Where(l => KuvanTyosto.MosaiikinLaatta(l.z, l.x, l.y)).ToList();
+                // Lähdelaatat: z ≤ 10 sellaisenaan, z11 = z10-isä (neljännes 2 × suurennettuna).
+                var lahteet = mlista.Select(l => l.z > 10 ? (z: 10, x: l.x >> 1, y: l.y >> 1) : l).Distinct().ToList();
+                var lahde = new Dictionary<(int, int, int), byte[]>();
                 long mtavut = 0;
-                for (int i0 = 0; i0 < mlista.Count; i0 += 16)
+                for (int i0 = 0; i0 < lahteet.Count; i0 += 16)
                 {
-                    var era = mlista.Skip(i0).Take(16).Select(l => (l, q: UnityWebRequest.Get(AstronauttiKerros.S2Juuri + KuvanTyosto.MosaiikinPolku(l.z, l.x, l.y)))).ToList();
+                    var era = lahteet.Skip(i0).Take(16).Select(l => (l, q: UnityWebRequest.Get(AstronauttiKerros.S2Juuri + KuvanTyosto.MosaiikinPolku(l.z, l.x, l.y)))).ToList();
                     foreach (var (_, q) in era) q.SendWebRequest();
                     while (era.Any(x => !x.q.isDone)) yield return null;
                     var tex = new Texture2D(2, 2, TextureFormat.RGBA32, false);
@@ -157,15 +160,32 @@ namespace Matkakirja.Natiivi
                                     var c = px[(255 - yy) * 256 + xx]; int o = (yy * 256 + xx) * 4;
                                     rgba[o] = c.r; rgba[o + 1] = c.g; rgba[o + 2] = c.b; rgba[o + 3] = 255;
                                 }
-                            mosaiikki[l] = rgba;
+                            lahde[l] = rgba;
                         }
                         q.Dispose();
                     }
                     Destroy(tex);
-                    Edistyminen = 0.1f * (i0 + era.Count) / Math.Max(1, mlista.Count);
+                    Edistyminen = 0.1f * (i0 + era.Count) / Math.Max(1, lahteet.Count);
+                }
+                foreach (var l in mlista)
+                {
+                    if (l.z <= 10) { if (lahde.TryGetValue(l, out var m)) mosaiikki[l] = m; continue; }
+                    if (!lahde.TryGetValue((10, l.x >> 1, l.y >> 1), out var isa)) continue;
+                    int qx = (l.x & 1) * 128, qy = (l.y & 1) * 128; var r2 = new byte[256 * 256 * 4];
+                    for (int yy = 0; yy < 256; yy++)
+                        for (int xx = 0; xx < 256; xx++)
+                        {
+                            float fx = Math.Min(254.999f, qx + (xx + 0.5f) / 2 - 0.5f), fy = Math.Min(254.999f, qy + (yy + 0.5f) / 2 - 0.5f);
+                            fx = Math.Max(0, fx); fy = Math.Max(0, fy); int ix = (int)fx, iy = (int)fy; float ax = fx - ix, ay = fy - iy;
+                            int o = (yy * 256 + xx) * 4, a00 = (iy * 256 + ix) * 4, a10 = a00 + 4, a01 = a00 + 1024, a11 = a01 + 4;
+                            for (int c = 0; c < 3; c++)
+                                r2[o + c] = (byte)((isa[a00 + c] * (1 - ax) + isa[a10 + c] * ax) * (1 - ay) + (isa[a01 + c] * (1 - ax) + isa[a11 + c] * ax) * ay + 0.5f);
+                            r2[o + 3] = 255;
+                        }
+                    mosaiikki[l] = r2;
                 }
                 if (mosaiikki.Count > 0) ty.Mosaiikki = (z, x, y) => mosaiikki.TryGetValue((z, x, y), out var m) ? m : null;
-                Loki($"mosaiikki {mosaiikki.Count}/{mlista.Count} lehteä, {mtavut / 1e6:0.0} Mt");
+                Loki($"mosaiikki {mosaiikki.Count}/{mlista.Count} lehteä ({lahde.Count} laattaa), {mtavut / 1e6:0.0} Mt");
 
                 // 4) laatat: TCI näkymän tasoilta, SCL karkeimmalta tasolta
                 var haku = new List<(string url, CogTaso taso, long alku, long pit, Action<byte[]> valmis)>();
@@ -224,38 +244,14 @@ namespace Matkakirja.Natiivi
                 // Avomeri (ei S2-ruutua): TCI:n tyypillinen meri tci_lutin läpi, ettei täyttö erotu tummana kaistana (laitekoe 2).
                 byte[] meri = { 14, 22, 30 };
                 if (ty.Data.Lut != null) for (int c = 0; c < 3; c++) meri[c] = ty.Data.Lut[meri[c]];
-                // Tasot tarkimmasta juureen: lehti piirretään datasta, isä kootaan lapsistaan (sama sisältö ja pilvet kaikilla tasoilla).
-                var nelj = new ConcurrentDictionary<(int, int, int), byte[]>();
-                var tyot = Task.Run(() =>
+                // Tasot tarkimmasta juureen (KuvanTyosto.PiirraKaikki): lehti datasta, isä lapsistaan.
+                var tyot = Task.Run(() => ty.PiirraKaikki((l, rgba) =>
                 {
-                    foreach (var taso in lista.GroupBy(l => l.z).OrderByDescending(g => g.Key))
-                    {
-                        var seuraavat = new ConcurrentDictionary<(int, int, int), byte[]>();
-                        Parallel.ForEach(taso, new ParallelOptions { MaxDegreeOfParallelism = ytimia }, l =>
-                        {
-                            var rgba = new byte[256 * 256 * 4];
-                            var lapset = new byte[4][]; bool kaikki = true;
-                            for (int k = 0; k < 4; k++) if (!nelj.TryGetValue((l.z + 1, 2 * l.x + k % 2, 2 * l.y + k / 2), out lapset[k])) kaikki = false;
-                            if (kaikki) KuvanTyosto.Kokoa(lapset, rgba);
-                            else
-                            {
-                                ty.Piirra(l.z, l.x, l.y, rgba);
-                                for (int k = 0; k < 4; k++) if (lapset[k] != null)   // osa lapsista: niiden neljännekset päälle
-                                {
-                                    int ox = (k % 2) * 128, oy = (k / 2) * 128;
-                                    for (int y = 0; y < 128; y++) Buffer.BlockCopy(lapset[k], y * 512, rgba, ((oy + y) * 256 + ox) * 4, 512);
-                                }
-                            }
-                            for (int i = 0; i < rgba.Length; i += 4) if (rgba[i + 3] == 0) { rgba[i] = meri[0]; rgba[i + 1] = meri[1]; rgba[i + 2] = meri[2]; rgba[i + 3] = 255; }
-                            seuraavat[l] = KuvanTyosto.Puolita(rgba);
-                            var png = ImageConversion.EncodeArrayToPNG(rgba, UnityEngine.Experimental.Rendering.GraphicsFormat.R8G8B8A8_SRGB, 256, 256);
-                            var polku = Path.Combine(laatat, ty.Polku(l.z, l.x, l.y) + ".png");
-                            Directory.CreateDirectory(Path.GetDirectoryName(polku)); File.WriteAllBytes(polku, png);
-                            System.Threading.Interlocked.Increment(ref kirjoitettu);
-                        });
-                        nelj = seuraavat;
-                    }
-                });
+                    for (int i = 3; i < rgba.Length; i += 4) rgba[i] = 255;   // täyttö merkitty alfalla 254 → kuvaan läpinäkymättömänä
+                    var png = ImageConversion.EncodeArrayToPNG(rgba, UnityEngine.Experimental.Rendering.GraphicsFormat.R8G8B8A8_SRGB, 256, 256);
+                    var polku = Path.Combine(laatat, ty.Polku(l.z, l.x, l.y) + ".png");
+                    Directory.CreateDirectory(Path.GetDirectoryName(polku)); File.WriteAllBytes(polku, png);
+                }, ytimia, meri, n => kirjoitettu = n));
                 while (!tyot.IsCompleted) { Edistyminen = 0.6f + 0.25f * kirjoitettu / Math.Max(1, lista.Count); yield return null; }
                 if (tyot.IsFaulted) { Loki("työstö: " + tyot.Exception?.GetBaseException().Message); yield break; }
                 int zmax = lista.Max(l => l.z);
