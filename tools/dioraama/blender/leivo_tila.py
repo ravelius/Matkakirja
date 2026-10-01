@@ -185,6 +185,7 @@ MATERIAALIT = {
     'rappaus': dict(vari=srgb('#cdbfa6'), kuvio='kohina', mittakaava=6, kumpu=0.08, karheus=0.95, vaihtelu=0.12),
     'lankku': dict(vari=srgb('#6e4c30'), kuvio='puu', mittakaava=3, kumpu=0.1, karheus=0.7),
     'puu': dict(vari=srgb('#5d402a'), kuvio='puu', mittakaava=5, kumpu=0.1, karheus=0.7),
+    'hirsi': dict(vari=srgb('#6f6a61'), kuvio='puu', mittakaava=4, kumpu=0.12, karheus=0.85),  # harmaantunut hirsi (n1500)
     'metalli': dict(vari=srgb('#3b3836'), metalli=0.85, karheus=0.45, mittakaava=12),
     'rauta': dict(vari=srgb('#2f2c2a'), metalli=0.9, karheus=0.5, mittakaava=12),
     'kupari': dict(vari=srgb('#9a5a36'), metalli=0.95, karheus=0.35, mittakaava=10),
@@ -231,6 +232,16 @@ HAMARA = '--hamara' in argv  # iltahämärä (tunnelma 29.9.): matala oranssi au
 if HAMARA:
     tausta.inputs['Color'].default_value = (*srgb('#34466e'), 1); tausta.inputs['Strength'].default_value = 0.45
     a = dict(a, voima=0.3, vari='#ff9a5c', korkeus=4)
+# --tavoite (1.10., ympäristö n1500): sama hämärän taivas kuin kuoren ja maaston leivonnassa (kuori_hamara.py --tavoite):
+# vanha tumma taivas jätti linnasta kauempana olevat rekvisiitat (rannan aitat) mustiksi.
+TAVOITE = HAMARA and '--tavoite' in argv
+if TAVOITE:
+    st = maailma.node_tree.nodes.new('ShaderNodeTexSky'); st.sky_type = 'MULTIPLE_SCATTERING'
+    st.sun_elevation = math.radians(-1.5); st.sun_rotation = math.radians(225 - 90); st.air_density = 1.2
+    if hasattr(st, 'aerosol_density'): st.aerosol_density = 2.5
+    maailma.node_tree.links.new(st.outputs['Color'], tausta.inputs['Color']); tausta.inputs['Strength'].default_value = 0.9
+    sc.view_settings.view_transform = 'AgX'; sc.view_settings.look = 'AgX - Medium High Contrast'; sc.view_settings.exposure = 0.6
+    a = dict(a, voima=0.0)
 aur = bpy.data.lights.new('aurinko', 'SUN'); aur.energy = 2.2 * a.get('voima', 1.5)
 aur.color = srgb(a.get('vari', '#ffd29a')); aur.angle = math.radians(1.5)
 ao = bpy.data.objects.new('aurinko', aur); sc.collection.objects.link(ao)

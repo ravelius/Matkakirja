@@ -505,7 +505,7 @@ export function nimiElementti(d) {
   const g = document.createElementNS(SVG, 'g');
   g.setAttribute('class', 'pallolauta-nimi-siirto');
   const teksti = document.createElementNS(SVG, 'text');
-  teksti.setAttribute('class', 'karttanimi karttanimi-kaupunki');
+  teksti.setAttribute('class', `karttanimi karttanimi-kaupunki${d.oma ? ' karttanimi-oma' : ''}`);
   teksti.style.fontFamily = KARTTANIMI_FONTTI;
   g.appendChild(teksti);
   svg.appendChild(g);
@@ -533,6 +533,7 @@ export function asetteleNimi(el, d) {
   maare('text-anchor', d.ank);
   maare('font-variant', d.tyylitys);
   maare('letter-spacing', d.vali);
+  teksti.classList.toggle('karttanimi-oma', !!d.oma);
   if (teksti.textContent !== d.teksti) teksti.textContent = d.teksti;
 }
 
@@ -904,6 +905,8 @@ export function luoNimet({
         laji: 'nimi',
         id: n.c.id,
         teksti: n.c.nimi,
+        // Pelaajan oma kaupunki pitää entisen musteen (.karttanimi-oma).
+        oma: n.c.id === oma,
         lat: e.lat,
         lng: e.lng,
         dx: n.dx,
