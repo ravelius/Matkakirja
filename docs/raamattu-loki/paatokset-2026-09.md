@@ -9783,3 +9783,7 @@ Linnanrakentajan Ranskan kartoitus valmistui (docs/raportit/linna-ranska-kartoit
 ## OMISTAJA: ALLYMES MUISTIIN SEURAAVAKSI LINNAKSI (1.10.2026) (1.10.2026 klo 18.56)
 
 Omistaja 1.10.2026 klo 19.0x edellisen päätöksen perään sanatarkasti: 'Mutta säilytetään muistissa, että tuo olisi hyvä seuraava kohde.' → Château des Allymes (VirtualPhoto3D, CC BY 4.0, docs/raportit/linna-ranska-kartoitus-20261001.md) on Poikkileikkaus-linssin seuraava linna, kun nykyiset työt ovat valmiit; Päätoimittaja ehdottaa sitä silloin omistajalle.
+
+## PÄÄTOIMITTAJA: NOSTOKORTIN LUENTA EI AVAA MATKAKIRJAKORTTIA — KORTTI PYSYY LAPPUNA (1.10.2026) (1.10.2026 klo 18.58)
+
+Natiivi-UI 1.10. klo 19.1x: nostoselain ja AUTO valmiit ja merge-pyynnössä (kuvapari proto-3d/lokit/natiivi-ui-pohjat/parit-mr/nostoselain-mallit-vs-natiivi.jpg); visa B natiivina käännösjonossa (pohja-visa cd55dccc). Havainto: AUTO-luenta (ja jo nyt nostokortin kaiutin) avaa joka nostolla kartan matkakirjakortin (esim. Ateenan teksti), koska kortti aukeaa aina kertojan puhuessa (luentavahti 30.9.). Päätoimittajan linjaus (ilmeinen, luentavahdin tarkoitus = näyttää luettava teksti): kun luetaan nostokortin tekstiä (AUTO tai kaiutin), matkakirjakortti pysyy lappuna; se avautuu vain, kun kertoja lukee matkakirjan omaa tekstiä.
