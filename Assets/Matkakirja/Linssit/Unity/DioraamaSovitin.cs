@@ -709,6 +709,19 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: kamera " + (pakotettuKamera.HasValue ? $"{pakotettuKamera.Value.Atsimuutti:F0}° {pakotettuKamera.Value.Korkeus:F0}° {pakotettuKamera.Value.Etaisyys:F0} m" : "pois"));
                 return;
             }
+            // "poikki aluskasvit 0|1": linnan aluskasvit piiloon/näkyviin (Linssiseppä 2, 1.10., kuvapari samasta kohdasta).
+            if (mita == "aluskasvit")
+            {
+                if (arvo == "lajit" && osat.Length > 3)
+                {
+                    DioraamaAluskasvit.VainLajit = osat[3] == "kaikki" ? null
+                        : new HashSet<int>(System.Linq.Enumerable.Where(System.Linq.Enumerable.Select(osat[3].Split(','), x => int.TryParse(x, out int n) ? n : -1), n => n >= 0));
+                    o.Kirjaa($"poikki: aluskasvit lajit {osat[3]} (seuraava lataus)"); return;
+                }
+                if (arvo == "osat" && osat.Length > 3) { DioraamaAluskasvit.Osiin = osat[3] != "0"; o.Kirjaa($"poikki: aluskasvit osiin {DioraamaAluskasvit.Osiin} (seuraava lataus)"); return; }
+                o.Kirjaa("poikki: " + DioraamaAluskasvit.Kytke(arvo != "0"));
+                return;
+            }
             // "poikki vesi [heijastus 0|1|auto]": järven planaariheijastus (Boat Attack -vesi, 1.10.2026) ja ympäristön tila.
             if (mita == "vesi")
             {
