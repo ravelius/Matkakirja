@@ -448,6 +448,8 @@ const MODULES = [
   'js/linssit/rekisteri.js',
   // Apurahan kortti ja esittelylinssien avain (omistus.js ja ui.js tuovat).
   'js/apuraha.js',
+  // PANEELI-pohjan tietomalli: ennen js/pohjat/pohjat.js:ää, joka tuo sen.
+  'js/pohjat/paneelidata.js',
   'js/linssit/omistus.js',
   'js/linssit/aarteet.js',
   'js/packs/valokuvat-paikalliset.js',
