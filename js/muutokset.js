@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2503, teksti: 'ISS-kytkinpöytä v3: KUVAA-painike ja VUODENAIKA… (#3773)' },
   { v: 2502, teksti: 'Tyylikirja: tyylikirja.json tyylien ainoaksi lä… (#3780)' },
   { v: 2501, teksti: 'Maakuntien toinen kuva: DEU, DNK, ESP, EST (#3778)' },
   { v: 2500, teksti: 'Pariteettikuvat: Ihmisen matkan nostokortti tek… (#3768)' },
