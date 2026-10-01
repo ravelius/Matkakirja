@@ -165,3 +165,84 @@ Huom.: sitaatin sanamuoto Wikipedian mukaan on "Did I not say that thundering Xa
 6. **Sitaatti viimeisistä sanoista** on suomennos Fowlerin englannista ("we owe a cock to Aesculapius. Pay it and do not neglect it"); kreikka *Faidon* 118a: "ὦ Κρίτων, τῷ Ἀσκληπιῷ ὀφείλομεν ἀλεκτρυόνα· ἀλλὰ ἀπόδοτε καὶ μὴ ἀμελήσητε" — kreikkalaista tekstiä en tässä erikseen lukenut Perseuksesta, joten se on muististani; älä käytä kreikkaa ennen tarkistusta.
 7. **Pituus ~1 100 merkkiä** on historia-nostojen ylärajalla (Q3 ~1 030); jos lappu halutaan tiiviimmäksi, pudota *Sotilas*-tapahtumasta Alkibiades ja jää yhdeksi lauseeksi.
 8. **Otsikko** "Sokrateen elämä" on "[Nimi]n elämä" -pohja; muille ajattelijoille tapahtumat täytyy tarkistaa samalla lähdekurilla.
+
+## 7. Sokrateen kohtaus (omistajan kohtaussuunnitelma 1.10. klo 22.3x)
+
+Kulku: intro → nimi ja elinvuodet → kysymys "Miten pitäisi elää?" → kolme kierrosta (lukija lukee mietelauseen, kertoo sitten elämänkokemuksen) → Pulun viisi kysymystä.
+Tekstit on kirjoitettu kuunneltaviksi: lyhyet virkkeet, ei sulkeita, lyhenteitä eikä numeroita sanoina kuin vuosiluvussa 399 eaa. Elämänkokemukset ovat 3. persoonassa, lukijan äänellä kerrottuna; 13+: ei yksityiskohtaista kuolinkuvausta.
+Ääntä ei ole generoitu; luvun merkkimäärät alla omistajan lupapyyntöä varten.
+
+### 7.1 Nimi ja elinvuodet
+
+**Sokrates · n. 470–399 eaa.** (26 merkkiä)
+
+Muoto: ristiviittaus olemassa oleviin teksteihin ("n. 570–522 eaa.", "Solon (630–560 eaa.)"), joissa käytetään ajatusviivaa (–), "n." epävarmoille vuosille ja "eaa." lopussa. Sokrateen syntymävuosi on 470 tai 469 eaa., joten "n." on perusteltu; kuolinvuosi 399 on varma. Nimirivin erottimena "·" on omasi pyynnön mukainen; jos pelin tyyli käyttää sulkeita ("Sokrates (n. 470–399 eaa.)"), vaihda.
+
+### 7.2 Kolme kierrosta
+
+Mietelause lukijan luettavaksi (Platonin mukaan, ks. osio 2); elämänkokemus heti perään.
+
+**Kierros 1**
+Mietelause (Puolustuspuhe 21d): *Mitä en tiedä, en luulekaan tietäväni.* (38 merkkiä)
+Elämänkokemus: *Ystävä Khairefon kysyi Delfoin oraakkelilta, onko kukaan Sokratesta viisaampi. Oraakkeli vastasi, ettei ole. Sokrates ihmetteli vastausta ja lähti kysymään ateenalaisilta viisailta, mitä he oikeasti tiesivät.* (208 merkkiä)
+Lähteet: Platon, *Puolustuspuhe* 21a (Khairefon, oraakkeli, "ei ketään viisaampaa"; Perseus), jatko 21b–22a (Sokrates ihmettelee ja lähtee tutkimaan; tuttu tapahtumakulku, kohtaa en avannut erikseen — ks. varaus 2 osiossa 6).
+
+**Kierros 2**
+Mietelause (Puolustuspuhe 38a): *Tutkimaton elämä ei ole elämisen arvoinen ihmiselle.* (52 merkkiä)
+Elämänkokemus: *Sokrates taisteli sotilaana monessa taistelussa. Platonin kertomuksen mukaan hän käveli talvella jäällä paljain jaloin ja seisoi kerran aamusta seuraavaan aamuun paikallaan ajatuksiinsa vaipuneena. Taistelussa hän pelasti haavoittuneen Alkibiadeen.* (248 merkkiä)
+Lähteet: Platon, *Puolustuspuhe* 28e (palvelus Potidaiassa, Amfipoliksessa ja Delionissa; Perseus); Platon, *Symposion* 220b–e (paljain jaloin jäällä, seisoi aamuun, Alkibiadeen pelastus; Alkibiadeen puheenvuoro dialogissa — siksi "Platonin kertomuksen mukaan"; tarkistus ja varaus osiossa 6).
+
+**Kierros 3**
+Mietelause (Kriton 49b): *Vääryyttä ei siis saa tehdä koskaan.* (36 merkkiä)
+Elämänkokemus: *Vuonna 399 eaa. Sokrates tuomittiin kuolemaan jumalattomuudesta ja nuorison turmelemisesta. Ystävät tarjosivat hänelle keinoa paeta vankilasta, mutta hän kieltäytyi. Hän perusteli, ettei vääryyttä saa vastata vääryydellä.* (221 merkkiä)
+Lähteet: Socrates, Wikipedia (tuomio 399 eaa., syytteet, tarjottu pakoa, kieltäytyi); Platon, *Kriton* 49b (Perseus: "οὐδαμῶς ἄρα δεῖ ἀδικεῖν", "οὐδὲ ἀδικούμενον ἄρα ἀνταδικεῖν" — vääryyttä ei vastata vääryydellä).
+Huom.: kuolemaa ei kuvata; viimeisiä sanoja ja myrkkykatkoa ei käytetä tässä kohtauksessa.
+
+### 7.3 Pulun viisi kysymystä
+
+Pulun kysymyspohjan mukaisia (nostokorttien käsinkirjoitetut kysymykset ovat 30–50 merkin yhden virkkeen kysymyksiä):
+
+1. Ajattelu: **Mitä sokraattinen kysyminen tarkoittaa?** (39)
+2. Ajattelu: **Mitä Sokrates tarkoitti tietämättömyydellään?** (45)
+3. Henkilökohtainen elämä: **Millaista Sokrateen arki Ateenassa oli?** (39)
+4. Vaikutus filosofiaan: **Miten Sokrates vaikutti Platoniin ja filosofiaan?** (49)
+5. Vaikutus yleiseen ajatteluun: **Missä sokraattinen kysyminen näkyy nykyään?** (43)
+
+(Yhteensä 215 merkkiä; ne ovat tekstiä, eivät lukijan puhetta.)
+
+### 7.4 Lukijan tekstien merkkimäärä (ääntä EI generoida)
+
+| Osa | Merkkiä (välilyönteineen) |
+|---|---|
+| Nimi ja elinvuodet | 26 |
+| Kysymys "Miten pitäisi elää?" | 19 |
+| Kolme mietelausetta | 38 + 52 + 36 = 126 |
+| Kolme elämänkokemusta | 208 + 248 + 221 = 677 |
+| **Yhteensä (nimi + kysymys + kierrokset)** | **848** |
+
+Pelkät kierrokset (mietelauseet + elämänkokemukset): 803 merkkiä. Pulun kysymykset (215 merkkiä) ovat Pulun chat-tekstiä eivätkä kuulu tähän. Ääntä ei ole generoitu; ääniluvan pyytäminen (palvelu, tekstit sanatarkasti, merkkimäärä/hinta) tulee omistajalle Raamatun UUSIA ÄÄNIÄ -säännön mukaan.
+
+### 7.5 Musiikki: Straussin *Also sprach Zarathustra* (Einleitung / Sonnenaufgang), VAPAAT levytykset
+
+Haettu Wikimedia Commonsin hakurajapinnasta (lisenssikentät lueteltu sanatarkasti), ende.app:sta ja classicals.de:stä. EI NC- eikä ND-lisenssejä; EI vuoden 1968 elokuvan 2001 levytystä (MacLeodin kuvaus mainitsee elokuvan vain säveltäjän teoksen käytön yhteydessä; levytys on MacLeodin oma).
+**Sävellyksen oikeudet:** Richard Strauss kuoli 1949, joten teos on ollut vapaa EU:ssa ja useimmissa maissa 1.1.2020 alkaen (Sascha Enden kuvaus; hän huomauttaa, että Straussin teokset ovat yhä suojattuja joissain maissa, erityisesti Ranskassa, Espanjassa ja Kolumbiassa). Peli on Euroopassa; ennen julkaisua kannattaa varmistaa Ranska/Espanja, jos peliä jaetaan sinne.
+**Laatuarvio:** kuuntelematta (en ole ladannut tiedostoja); arvio teknisistä tiedoista (bittinopeus, kesto, tiedostokoko) ja kuvauksista.
+
+| # | Levytys | Tekijä | Lisenssi (sanatarkasti) | Kesto | Tekniset tiedot | Laatuarvio |
+|---|---|---|---|---|---|---|
+| A | **File:Also Sprach Zarathustra - Einleitung.ogg** (Commons; krediitti incompetech.com, 2010) | Kevin MacLeod | **CC BY 3.0** — "Creative Commons Attribution 3.0" (<https://creativecommons.org/licenses/by/3.0>); Commons: attribuutio vaaditaan | 86 s (1:26) | OGG, 4,3 Mt (≈ 400 kbit/s) | Hyvä pakkaus; sävellys MacLeodin oma tulkinta (kuvaus: "Introduction (sunrise)"); soittimien alkuperä (ihmisorkesteri vai näytteet) ei tiedossa — kuuntele ennen valintaa |
+| B | **File:Richard Strauss - Also Sprach Zarathustra.ogg** (Commons; Free Music Archive, 2011) | Kevin MacLeod (incompetech.com) | **CC BY 3.0** — "Creative Commons Attribution 3.0" | 86 s (1:26) | OGG, 0,54 Mt (≈ 50 kbit/s) | Sama sävelkulku kuin A mutta matala bittinopeus → heikompi; A parempi |
+| C | **File:Sascha Ende - Also Sprach Zarathustra (feat. Richard Strauss) (cc-by) (filmmusic).mp3** (Commons; ende.app/en/song/5730) | Sascha Ende | **CC BY 4.0** — "Creative Commons Attribution 4.0" (<https://creativecommons.org/licenses/by/4.0>); ende.app: "Free, commercial use included"; vaaditaan attribuutio | 92 s (1:32) | MP3, 320 kbit/s, 3,7 Mt | Orkesterisovitus (ende.app: täysi orkesteri, vaskipuhaltimet, jouset, patarummut); 320 kbit/s on hyvä lähtö jälkikoodaukselle |
+| D | **File:Richard Strauss - Also Sprach Zarathustra - Phillip Milman - Lud and Schlatts Musical Emporium.wav** (Commons; classicals.de/strauss-zarathustra) | Kapellimestarina Philip Milman, rahoittajina Ludwig Ahgren ja Jschlatt (Commons: "Conducted by Philip Milman and funded by Ludwig Ahgren and Jschlatt") | **Commons: CC BY 3.0** — "Creative Commons Attribution 3.0"; **classicals.de: CC BY 4.0** — "You must give appropriate credit, provide a link to the website, and indicate if changes were made" (suositeltu krediitti: www.classicals.de) | ≈ 108 s (1:48; laskettu 31 Mt / 2 304 kbit/s) | WAV, 31 Mt, 2 304 kbit/s (48 kHz/24-bit stereo-luokkaa; pakkaamaton) | Pakkaamaton lähde: paras jälkikoodausta varten; kapellimestari mainittu, orkesterin tai tekniikan tietoa ei löytynyt. Lisenssiero (3.0 vs 4.0) tarkistettava; molemmat sallivat kaupallisen käytön attribuutiolla |
+
+**Suositus (kuuntelematta):** D (pakkaamaton, kapellimestarilla) jos äänen kuuntelu vahvistaa laadun, muuten C (320 kbit/s, selkeä CC BY 4.0, ende.app antaa liittymän pelikäyttöön); A on Päätoimittajan mainitsema Kevin MacLeod, mutta bittinopeuserolla B on A:ta heikompi. Kaikissa vaaditaan attribuutio: tekijä, lisenssin nimi ja linkki. Lisenssien tulee olla näkyvissä Tekijätiedoissa (MATKAKIRJA-logo → "Tietoja").
+
+**Hylätyt:**
+- IMSLP, University of Chicago Orchestra -esitys: CC BY-NC-ND 3.0 → NC ja ND, ei käy.
+- Internet Archive, Eugene Ormandy / Philadelphia Orchestra (LP): kaupallinen levytys, ei vapaa.
+- File:Strauss "Also Sprach Zarathustra" ending.wav: vain *lopun* pätkä (Public domain), ei aurinkoisen alun fanfaari.
+
+**Lähteet (musiikki):**
+- Commons, hakurajapinta: <https://commons.wikimedia.org/wiki/File:Also_Sprach_Zarathustra_-_Einleitung.ogg>, <https://commons.wikimedia.org/wiki/File:Richard_Strauss_-_Also_Sprach_Zarathustra.ogg> (lisenssikentät luettu rajapinnasta)
+- ende.app: <https://ende.app/en/song/5730-also-sprach-zarathustra-feat-richard-strauss>
+- classicals.de: <https://www.classicals.de/strauss-zarathustra>
