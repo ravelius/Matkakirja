@@ -460,6 +460,8 @@
 /* Kolme kytkintä vierekkäin: väri kertoo tilan, PÄÄLLÄ/POIS-sana ei mahdu kolmanneksen levyiseen soluun. */
 .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin { gap: var(--tk-vali-xs); padding: 0 var(--tk-vali-xs); }
 .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin .tk-paneeli-rivi__tila { display: none; }
+/* Natiivin tapa (Natiivi-UI): nimi pienenee yhden portaan (14 → 12) ennen lyhentämistä, ikoni jää aina. */
+.tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin .tk-paneeli-rivi__nimi { font-size: var(--tk-koko-kapiteeli); }
 .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi--kytkin[aria-checked="true"] + .tk-paneeli-rivi { border-left-color: var(--tk-toiminto); }
 /* Säädin: vanha rivi (nimi, liuku, arvo) kahdelle riville kuten pohjan SÄÄDIN. */
 .aanivoima.tk-paneeli-rivi--saadin {
