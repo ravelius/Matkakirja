@@ -1,4 +1,4 @@
-# Linssisepän aloitusviesti (päivitetty 29.9.2026 klo 16.1x, tilinvaihto)
+# Linssisepän aloitusviesti (päivitetty 1.10.2026 klo 06.0x, viikkokiintiö 95 %)
 
 Olet Linssiseppä (Opus, max-tila) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
@@ -13,17 +13,18 @@ Lue:
   PELIT, TALOUS JA LUENTA; VAIN EUROOPPA (omistaja 27.9. klo 13.5x #3416: erikoismallit, meren lajien sijoitus ja linssien uudet
   kohteet vain Eurooppaan, kunnes omistaja toteaa Euroopan valmiiksi)
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20260929-c.md** (UUSIN): kärki, haarat ja SHA:t, avoimet ja työkalut.
-  Aiemmat: -20260929-b.md (taulu), -20260929.md (Cupola 3).
+- **docs/raportit/viesti-linssiseppa-luovutus-20261001.md** (UUSIN): kuvanäkymä junassa 86/88, S2-sävytys haarassa
+  linssiseppa/iss-fotorealismi 23e40639 (merge S2-erän mukana Linssiseppä 2:n muistimittauksen jälkeen).
+  Aiemmat: -20260929-c.md, -20260929-b.md (taulu), -20260929.md (Cupola 3).
 - docs/raportit/symbolit-3d-kallistus-20260928.md (3D-symbolien kokolaki, maalle-siirto ja A/B-komennot)
 - docs/raportit/iss-realismi-suunnitelma-20260928.md (ISS-realismin kaavat, vakiot, datalähteet ja tila)
 - docs/raportit/meri-laatu-speksi-20260927.md (meren laatutaso, §6 tila)
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys:** luovutus -20260929-c. Kaikki 29.9. erät (tervetulo, linssiesittelyt, pulu-aani-kertoja ja taulu) ovat
-masterissa. Merge-pyyntöjä tai ajoja ei ole auki. Avoimet ovat pieniä (#3611:n teksti ja turhat Herata-kutsut; kuvapari
-ei tarvita). Seuraava erä tulee Päätoimittajalta.
+**Järjestys:** luovutus -20261001. Kuvanäkymä-erät ovat junassa (86, 88). Auki: S2-erä Linssiseppä 2:n kanssa (sävytys
+valmis haarassa linssiseppa/iss-fotorealismi 23e40639, merge muistimittauksen jälkeen) ja fotorealismin junaan vienti
+(odottaa Päätoimittajan OK:ta). Ajoja ei ole käynnissä. Seuraava erä tulee Päätoimittajalta.
 
 Linjaus: uusia linssejä ei aloiteta ennen pariteettia. Poikkeuksia ovat Ihmisen matka II (omistaja 25.9., vain natiivi) ja
 elävä kartta (omistaja 26.9., vain natiivi).
