@@ -17835,6 +17835,16 @@ export class UI {
     sulje.type = 'button';
     sulje.addEventListener('click', () => lappu.close());
     kortti.appendChild(sulje);
+    // KORTTI-pohja (peruttava ?kortti=vanha): kärki korostettuna, lähde- ja oikeusrivit apurina; palautelomake
+    // pitää kenttiensä tyylit (kenttäpohja odottaa omistajan päätöstä).
+    if (korttiPohjalla()) {
+      for (const e of kortti.querySelectorAll('.periaate-teksti')) {
+        e.className = e.classList.contains('periaate-liput') ? 'tk-apuri'
+          : `tk-leipa${e.classList.contains('kärki') ? ' tk-leipa--korostus' : ''}`;
+      }
+      oikeudet.className = 'tk-apuri';
+      puePohjaKortiksi(kortti, { otsikko, sulje });
+    }
 
     lappu.addEventListener('close', () => lappu.remove());
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
