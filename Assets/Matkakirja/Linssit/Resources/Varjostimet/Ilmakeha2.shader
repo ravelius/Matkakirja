@@ -31,6 +31,9 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         _MieG("Mie g", Float) = 0.8
         _Hehku("Ilmahehku", Float) = 0.12
         _KaariVoima("Horisontin kaaren kerroin (kuvaputki, 1 = ennallaan)", Float) = 1
+        _HrKerroin("Rayleighin skaalakorkeuden kerroin näkymän säteelle (kuvaputki, 1 = ennallaan)", Float) = 1
+        _SiniKerroin("Rayleigh-sironnan sinisyys (kuvaputki, 1 = ennallaan)", Float) = 1
+        _UtuKerroin("Maan ilmaperspektiivi horisonttia kohti (kuvaputki, 1 = ennallaan)", Float) = 1
         _HehkuVari("Ilmahehkun sävy", Color) = (0.62, 0.9, 0.42, 1)
         _Lapinakyvyys("Transmittanssi-LUT", 2D) = "white" {}
         _Debug("Vianetsintä (0 = pois, 1 = T, 2 = matka/tulo, 3 = LUT)", Float) = 0
@@ -39,7 +42,7 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
         CBUFFER_START(UnityPerMaterial)
-            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku, _Debug, _KaariVoima;
+            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku, _Debug, _KaariVoima, _HrKerroin, _SiniKerroin, _UtuKerroin;
             float4 _Keskus, _Akseli, _Aurinko, _HehkuVari;
         CBUFFER_END
         TEXTURE2D(_Lapinakyvyys); SAMPLER(sampler_Lapinakyvyys);
@@ -177,8 +180,12 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                     float r = length(p);
                     float h = r - _R;
                     float3 tih = Tiheys(h);
+                    // KUVAPUTKEN KAARI (Linssiseppä 2 / omistaja 1.10. 19.5x: "yhtä sininen ja voimakas kaari kuin Cupola-mallikuvassa"):
+                    // paksumpi Rayleigh-kerros näkymän säteelle (HR · k; auringon läpinäkyvyys-LUT ennallaan) ja syvempi sininen
+                    // sironnassa (punainen / √k, sininen · k; ekstinktio ennallaan, jottei kaari tummu). 1 = ennallaan.
+                    tih.x = exp(-h / (HR * _HrKerroin));
                     float3 sigmaT = Ekstinktio(tih);
-                    float3 sR = BetaR * tih.x, sM = BetaMs * tih.y;
+                    float3 sR = BetaR * float3(rsqrt(max(_SiniKerroin, 0.05)), 1.0, _SiniKerroin) * tih.x, sM = BetaMs * tih.y;
                     float mus = dot(p / r, s);
                     float3 aurinko = AurinkoPisteeseen(h, mus);
                     // Monisironta (Hillaire ψ_ms karkeasti): isotrooppinen osuus auringon valosta, hämärässä himmenee.
@@ -189,6 +196,13 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                     T *= askelT;
                 }
                 L *= _Voima;
+                // Ilmaperspektiivi (kuvaputki): maahan osuvan säteen sironta voimistuu loivassa kulmassa, jolloin maa sinertyy
+                // horisonttia kohti; kohtisuoraan alas ennallaan.
+                if (maa && _UtuKerroin != 1.0)
+                {
+                    float kulma = saturate(-dot(d, normalize(o + d * g0)));
+                    L *= lerp(_UtuKerroin, 1.0, smoothstep(0.0, 0.6, kulma));
+                }
 
                 // Ilmahehku yöllä (95 km, σ 4,5 km) säteen lähimmällä korkeudella, kuten Ilmakaaressa.
                 float tl = -dot(o, d);

@@ -62,6 +62,12 @@ namespace Matkakirja.Natiivi
         /// Ilmakeha2 _KaariVoima vain, kun <see cref="Kuvaputki"/> on päällä; livenäkymässä aina 1. A/B `astro kyyti kaarivoima x`.
         /// </summary>
         public static float KuvanKaariVoima = 1f;
+        /// <summary>
+        /// Kuvaputken kaaren säätimet (Linssiseppä 2:n pyyntö 1.10. 19.5x, omistajan Cupola-mallikuvan kaari): Rayleighin
+        /// skaalakorkeuden kerroin, sironnan sinisyys ja maan ilmaperspektiivi. Vain <see cref="Kuvaputki"/>; livenä aina 1.
+        /// Komennot `astro kyyti kaarihr|kaarisini|utu x`.
+        /// </summary>
+        public static float KuvanHrKerroin = 1f, KuvanSiniKerroin = 1f, KuvanUtuKerroin = 1f;
         /// <summary>Kuvaputki päällä: valokuvauskulma (AstronauttiLinssi.Vertailu) tai pelaajan ISS-kamera (IssKameraKuva asettaa).</summary>
         public static bool KuvaputkiAsetettu;
         public static bool Kuvaputki => KuvaputkiAsetettu || Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu.HasValue;
@@ -255,7 +261,9 @@ namespace Matkakirja.Natiivi
             var m = uusi ? kaari2 : kaari;
             if (kaariPiirto.sharedMaterial != m) kaariPiirto.sharedMaterial = m;
             if (uusi && lapinakyvyys != null && !lapinakyvyys.IsCreated()) { lapinakyvyys.Create(); Graphics.Blit(null, lapinakyvyys, kaari2, 0); }
-            if (uusi) { kaari2.SetFloat("_Peitto", kyyti); kaari2.SetFloat("_Voima", IlmanVoima); kaari2.SetFloat("_Moni", IlmanMoni); kaari2.SetFloat("_Hehku", HehkuPois ? 0f : IlmahehkunVoima); kaari2.SetFloat("_KaariVoima", Kuvaputki ? KuvanKaariVoima : 1f); }
+            if (uusi) { kaari2.SetFloat("_Peitto", kyyti); kaari2.SetFloat("_Voima", IlmanVoima); kaari2.SetFloat("_Moni", IlmanMoni); kaari2.SetFloat("_Hehku", HehkuPois ? 0f : IlmahehkunVoima); kaari2.SetFloat("_KaariVoima", Kuvaputki ? KuvanKaariVoima : 1f);
+                kaari2.SetFloat("_HrKerroin", Kuvaputki ? KuvanHrKerroin : 1f); kaari2.SetFloat("_SiniKerroin", Kuvaputki ? KuvanSiniKerroin : 1f);
+                kaari2.SetFloat("_UtuKerroin", Kuvaputki ? KuvanUtuKerroin : 1f); }
             kaari.SetFloat("_Peitto", kyyti);
             // Ilmahehku himmeämmäksi ja ohuemmaksi (laite cl4 28.9.: 0,32 piirsi kirkkaan vihreän viivan; ISS:n yökuvissa se on
             // ohut ja himmeä kellanvihreä kerros): voimakkuus 0,12, σ 4,5 km, sävy (0,55, 0,95, 0,5).

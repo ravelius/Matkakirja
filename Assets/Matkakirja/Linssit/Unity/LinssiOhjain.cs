@@ -1722,6 +1722,16 @@ namespace Matkakirja.Natiivi
                             Kirjaa("astro " + Matkakirja.Natiivi.Avaruus.Tila(osat.Length > 4 && osat[3] == "debug" ? (float?)Luku(osat[4]) : null));
                         else if (a == "ilmakeha2" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.Ilmakeha2 = osat[3] != "0";   // A/B fotorealismi osa 1
                         else if (a == "kaarivoima" && osat.Length > 3) { Matkakirja.Natiivi.Avaruus.KuvanKaariVoima = (float)Luku(osat[3]); Kirjaa($"astro kaarivoima {Matkakirja.Natiivi.Avaruus.KuvanKaariVoima:0.00} (kuvaputki {Matkakirja.Natiivi.Avaruus.Kuvaputki})"); }
+                        else if ((a == "kaarihr" || a == "kaarisini" || a == "utu") && osat.Length > 3)
+                        {
+                            // Kuvaputken kaaren säätimet (Ilmakeha2 _HrKerroin / _SiniKerroin / _UtuKerroin; 1 = ennallaan).
+                            float x = (float)Luku(osat[3]);
+                            if (a == "kaarihr") Matkakirja.Natiivi.Avaruus.KuvanHrKerroin = x;
+                            else if (a == "kaarisini") Matkakirja.Natiivi.Avaruus.KuvanSiniKerroin = x;
+                            else Matkakirja.Natiivi.Avaruus.KuvanUtuKerroin = x;
+                            Kirjaa($"astro kaari hr {Matkakirja.Natiivi.Avaruus.KuvanHrKerroin:0.00} sini {Matkakirja.Natiivi.Avaruus.KuvanSiniKerroin:0.00} "
+                                   + $"utu {Matkakirja.Natiivi.Avaruus.KuvanUtuKerroin:0.00} (kuvaputki {Matkakirja.Natiivi.Avaruus.Kuvaputki})");
+                        }
                         else if (a == "ilmavoima" && osat.Length > 3) { Matkakirja.Natiivi.Avaruus.IlmanVoima = (float)Luku(osat[3]); Kirjaa($"astro ilmavoima {Matkakirja.Natiivi.Avaruus.IlmanVoima:0.0}"); }
                         else if (a == "ilmamoni" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.IlmanMoni = (float)Luku(osat[3]);
                         else if (a == "savytys" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Pois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
