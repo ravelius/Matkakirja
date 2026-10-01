@@ -18,6 +18,8 @@ import { tarkistaKorttiData } from './korttidata.js';
 
 const POHJA_TYYLIN_TUNNUS = 'pohjat-tyyli';
 const POHJA_VETO_PX = 40;
+/** Kortin jatkeet, joiden napautus ei ole ohinapautus: Pulun chat ja -nappi sekä pohjan KORTTI (esim. visa). */
+const POHJA_EI_OHINAPAUTUS = '.pollo-paneeli, .pollo-nappi, .tk-kortti-tausta';
 /** Avoimet pohjat avausjärjestyksessä: Esc sulkee ylimmän (yksi sulkupino). */
 const pohjaPino = [];
 
@@ -217,7 +219,9 @@ export function luoPohjaNostokortti(data, {
     },
   };
   function ohi(e) {
-    if (!el.contains(e.target)) pohja.sulje();
+    // Pulun chat ja muut pohjat ovat kortin jatke (Kysy avaa chatin kortin päälle): niiden napautus ei sulje korttia.
+    if (el.contains(e.target) || e.target?.closest?.(POHJA_EI_OHINAPAUTUS)) return;
+    pohja.sulje();
   }
   // Veto: ylös laajentaa, alas pienentää tai sulkee (kahva; KAPEA-luokassa näkyvissä).
   let alkuY = null;
