@@ -9727,3 +9727,7 @@ Omistaja otti käyttöön Pelikoodarin mallin mukaisen kohdekortin, mutta haluaa
 ## OMISTAJA: KARTTA OK, 30-SARJA KÄYTTÖÖN VIENNIN JÄLKEEN (1.10.2026) (1.10.2026 klo 12.41)
 
 Omistaja hyväksyi kuvaparien (27 vs 30, z8 ja z10) jälkeen pallopolton 2026-09-30 käyttöönoton (raeton, uudet joet, Krimin korjaus). Kulku: kun vienti on valmis (ajo-20260930/delta/vienti.log), Karttaseppä tekee osoitin-PR:n (PALLO_LAATTAVERSIO, PALLO_LAATTAPERUS = '2026-09-27-pohja-20260927' ja sw.js LAATTAKANSIO_PERUS) Julkaisijan junaan, ja sen jälkeen vaihdetaan pyramidin osoitin ämpärissä. Jos luokitin estää osoittimen vaihdon, omistaja ajaa sen Run-rivillä. Natiivi (natiiviseppa/sarja-20260930: pohja 30 deltana ja kerma 2026-09-30-p060) menee seuraavaan TF-junaan, joka lähtee Applen päivärajan takia arviolta 2.10. Sitä ennen web ja natiivi eroavat enintään vuorokauden.
+
+## OMISTAJA: ISS-KAMERAN HAKU ENINTÄÄN ~100 MT KUVAA KOHDEN (1.10.2026) (1.10.2026 klo 12.43)
+
+Omistaja hyväksyi 400 mm:n lähikuvalle tarkimman 10 m:n datan (~50 Mt) ja nosti ISS-kameran kuvakohtaisen hakurajan aiemmasta ~40 Mt:stä enintään ~100 Mt:hen, kun laatu sitä vaatii. Tavoite on silti pienin haku, joka ei näy laadussa: 50 mm hakee kaukaiset alueet S2-mosaiikista (~10–20 Mt) ja 400 mm 10 m:n datasta päällekkäisyydet karsittuna. Toteuttaa Linssiseppä 2.
