@@ -152,7 +152,7 @@ namespace Matkakirja.Natiivi
             vieritys.AddToClassList("mk-tietoja__vieritys");
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             var o = Rakenne.Teksti(e.Otsikko, "mk-kortti__otsikko mk-apuraha__otsikko", vieritys);
-            Kirjasimet.Aseta(o, Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(o, Tyylikirja.Kirjain.Otsikko); // KORTTI-pohja: otsikko kuten muissa korteissa
             if (e.Alaotsikko.Length > 0)
                 Kirjasimet.Aseta(Rakenne.Teksti(e.Alaotsikko, "mk-apuraha__alaotsikko", vieritys), Kirjasin.LukuKursiivi);
             foreach (var k in e.Kappaleet)
