@@ -1,11 +1,32 @@
-# Siirtosepän luovutus 1.10.2026 klo 08.0x (Opus) — tilinvaihto
+# Siirtosepän luovutus 1.10.2026 klo 16.3x (Opus 5.5) — päivitys
 
 ## JONON KÄRKI
 
-1. **Merge-pyyntö Natiivisepälle: linna-vesi 894d16a4 (nopea ensilataus) on junassa 1.1 (92) = juna/b13 b24c0702**
-   (Päätoimittaja hyväksyi: maasto 23,1 → 10,8 s). Seuraa BUILD 92:n savuke; aja tarvittaessa
-   `tyokalut/siirtoseppa-ajot/ajo-ensilataus.sh` 92:n .appilla (APP=… L=…) ja vertaa lokit/siirtoseppa-ensilataus2-*.
-2. Puukortit #3763 (pidossa): natiivin puukortit v3 -lukija ennen paketin kuittausta (kohta "Avoimet" 3).
+1. **Ensilataus v2, viimeinen vaihe (Päätoimittaja: "ei yhtään runtime-pakkausta linnassa", mittari ruudut > 50 ms
+   ennen/jälkeen):** natiivi valmis haarassa `siirtoseppa/linna-vesi` **5238055d** (proto-worktree
+   /Users/Shared/Claude/wt/proto-siirtoseppa-vesi). Odottaa Linnanrakentajan kuori v23 -pakettia, jossa
+   `ulkokuori.detalji.kanavat[].{diff_astc,nor_astc,keski}` ja `ymparisto.maasto.kerrokset[].{diff_astc,nor_astc,keski}`
+   (hash ~18.30–19 Päätoimittajan kuittauksen jälkeen). Sitten: Julkaisija järjestää iPadin → Natiiviseppä asentaa
+   Development 5238055d → `HASH=<v23> KYNNYS=50 ajo-ipad-ensilataus.sh siirtoseppa-ipad-dev50-jalkeen 2`.
+   ENNEN (4014, sama käännös): linnan jälkeen > 50 ms 11/11, > 100 ms 6/5, suurin 208/192 ms
+   (lokit/siirtoseppa-ipad-dev50-ennen). Jos jälkeen ≤ ~100 ms kaikki: merge-pyyntö Natiivisepälle (linna-vesi
+   894d16a4 → 5238055d: ensilataus v2, DioraamaLuvut, ASTC-lukijat), + paketin kuittaus TF 98+ ja osoitin.
+2. **Linnan osoitin = 4014a5746df3838c** (täysi puhepaketti, PR #3785 rakenna.mjs kerää puheet), vaihdettu 12.57,
+   todennettu tuotannosta TF 98:lla (lokit/siirtoseppa-osoitin-4014), kertojan puheet soivat.
+
+## Tämän päivän tulokset (1.10.)
+
+- Puukortit v3: paketti 136f kuitattu ja osoitin; natiivin lukija 4fe3094a junassa 93.
+- Linnan puheet: kertojan jakson kesto ≥ puhe + 0,5 s ja https-peilin äänet juuresta (linna-puheet 2ebe8493, juna 94).
+- Ensilataus v2 (linna-vesi): e03887a2 ruutujako + renderöijä päälle valmiina + puiden häivytys + puhelimen
+  kuori-4k (ylin mip ohi); d3c2a49b GPU-loki ruutunumerolla; f01a3e39 DioraamaLuvut (puut.json/aluskasvit ilman
+  MiniJsonia); 93b246e1/d1d7e6b1 ASTC-lukija (puukortit, normaali, horisontti, taivas, aluskasvit); 5238055d detalji
+  + maanpinta ASTC + esikatselu kevyen ASTC-ortosta. iPad-tulokset lokit/siirtoseppa-ipad-*.
+- Juurisyyt iPad Developmentilla: LoadImage-purku + pakkaamaton GPU-lähetys (puut) ja Texture2D.Compress, joka
+  odottaa grafiikkasäiettä 100–170 ms 8k-latausten aikana (detalji, maanpinta).
+- Skriptit (proto-3d/tyokalut/siirtoseppa-ajot/): ajo-ipad-ensilataus.sh (HASH, KYNNYS), ajo-ensilataus-piikit.sh,
+  ajo-ensilataus-abab.sh, ajo-ymparisto-kuittaus.sh (+ puheet/404-rivit), ajo-tuotanto-osoitin.sh; kaikissa
+  APP-tarkistus (juna-.appit poistuvat lokeista: käytä uusinta juna-1.1.NN-*).
 
 ## Tila yhdellä silmäyksellä
 
