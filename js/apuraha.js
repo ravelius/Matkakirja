@@ -34,14 +34,12 @@ export function tarkistaApuraha(d) {
       lista: Array.isArray(k.lista) ? k.lista.map(web).filter((r) => typeof r === 'string') : k.lista,
     }));
   const kuvat = (Array.isArray(d.kuvat) ? d.kuvat : []).filter((k) => k && typeof k.tiedosto === 'string');
-  const video = d.video && typeof d.video.url === 'string' ? d.video : null;
   return {
     nappi: d.nappi.trim(),
     otsikko: d.otsikko,
     alaotsikko: typeof d.alaotsikko === 'string' ? d.alaotsikko : '',
     kappaleet,
     kuvat,
-    video,
     webHuomautus: typeof d.webHuomautus === 'string' ? d.webHuomautus : '',
   };
 }

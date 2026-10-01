@@ -1,0 +1,922 @@
+{
+ "_selite": "Astronautin kameran kuvien palkkitarkistus (tools/astro-palkki.mjs). palkki=true: NASAn alkuperäisessä oli valkoinen tunnuspalkki, rajattu kopio omassa ämpärissä (rajattu = versiokansio linssit/astronautin-kamera/<kansio>/; 20260921 = vanha juurikansio). Uusi havainto lisätään aineistoon vasta, kun sen id on tässä.",
+ "tarkistettu": "2026-10-01",
+ "havainnot": {
+  "STS062-85-021": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "STS066-117-014": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "STS099-706-090": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "STS099-753-032": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "STS100-716-176": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss002e5693": {
+   "palkki": true,
+   "rajattu": "20260921"
+  },
+  "iss002e7758": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss005e11203": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss005e19024": {
+   "palkki": true,
+   "rajattu": "20260921"
+  },
+  "iss005e21295": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss007e08259": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss007e14361": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss009e09985": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss009e15488": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss010e05266": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss010e12917": {
+   "palkki": true,
+   "rajattu": "20260921"
+  },
+  "iss010e13029": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss010e13393": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss010e17563": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss011e09504": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss011e12148": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss012e06456": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss012e06469": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss012e09639": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss012e18779": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss013e44847": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss013e54243": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss013e62714": {
+   "palkki": true,
+   "rajattu": "20260921"
+  },
+  "iss013e65526": {
+   "palkki": true,
+   "rajattu": "20260921"
+  },
+  "iss013e77351": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss013e77377": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss014e08138": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss014e08744": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss014e15732": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss014e17165": {
+   "palkki": true,
+   "rajattu": "20260921"
+  },
+  "iss014e17346": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss014e18950": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss015e05624": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss015e08920": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss015e29867": {
+   "palkki": true,
+   "rajattu": "20260921"
+  },
+  "iss016e010784": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss016e010894": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss016e012047": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss016e019394": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss017e005037": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss017e005351": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss018e025705": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss018e038182": {
+   "palkki": true,
+   "rajattu": "20260921"
+  },
+  "iss019e007720": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss020e009048": {
+   "palkki": true,
+   "rajattu": "20260921"
+  },
+  "iss021e015243": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss021e026475": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss022e019513": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss023e027737": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss023e029806": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss023e035670": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss024e011914": {
+   "palkki": true,
+   "rajattu": "20260921"
+  },
+  "iss025e005259": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss025e009858": {
+   "palkki": true,
+   "rajattu": "20260921"
+  },
+  "iss026e006255": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss026e016287": {
+   "palkki": true,
+   "rajattu": "20260921"
+  },
+  "iss027e034290": {
+   "palkki": true,
+   "rajattu": "20261001"
+  },
+  "iss029e037915": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss030e005456": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss030e009271": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss030e010008": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss030e015896": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss030e035487": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss030e059398": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss030e091253": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss030e234965": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss031e006398": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss032e009123": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss032e017547": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss033e007873": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss033e019822": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss033e020288": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss034e005496": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss034e027139": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss034e052297": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss036e009390": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss036e010628": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss036e035663": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss037e004654": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss037e005104": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss037e015757": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss037e018864": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss038e005515": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss038e023651": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss038e038300": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss039e001640": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss039e017228": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss040e008209": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss040e011868": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss040e016570": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss053e180184": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss053e239527": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss055e020372": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss055e070297": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss055e071030": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss055e073720": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss056e032828": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss056e096830": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss056e098062": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss057e051419": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss057e105411": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss058e002206": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss058e005276": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss058e010623": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss059e019410": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss059e059149": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss061e004613": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss061e006435": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss062e078990": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss062e152575": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss063e081907": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss064e002258": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss064e003722": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss064e005231": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss064e016772": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss064e024089": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss064e024687": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss064e026423": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss064e029480": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss064e038871": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss065e009427": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss065e030820": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss066e091560": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss066e110899": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss067e010622": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss067e035819": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss067e149915": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss068e004262": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss068e006657": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss068e040596": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss069e000859": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss069e003192": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss069e004768": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss069e005471": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss070e005997": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss070e030773": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss070e034694": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss070e064005": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss070e086805": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss070e098385": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss070e108427": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e041651": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e046021": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e046421": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e073568": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e132461": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e206529": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e217183": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e218069": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e230722": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e345427": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e378497": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e449837": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e488058": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e582470": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss071e615200": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss072e399613": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss072e404551": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss072e444944": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss072e447465": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss072e451060": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss072e519264": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss072e645691": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss072e757257": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss072e757318": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss072e757452": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss072e789833": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0075943": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0078538": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0080182": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0118628": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0247372": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0256896": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0285002": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0343840": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0420617": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0425936": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0511487": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0513927": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0513936": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0515117": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0604445": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0686324": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0763866": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0818427": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0865636": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0879542": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0918643": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0919979": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0982063": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e1044643": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e1197819": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0043697": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0044445": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0149572": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0208832": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0208838": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0315889": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0316083": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0320315": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0405029": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0459342": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0492148": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0573516": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0603570": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0603632": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0760459": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0814815": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0825692": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss075e0001471": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "s40-75-003": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "sts048-73-000q": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "sts059-213-019": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "sts059-90-098": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "sts059-l22-140": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "sts060-83-016": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "sts060-94-072": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "sts066-114-031": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "sts066-92-013": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "sts067-722a-053": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "sts068-243-076": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "sts083-747-033": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "sts093-709-051": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "sts093-717-066": {
+   "palkki": false,
+   "rajattu": null
+  }
+ }
+}
