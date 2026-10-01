@@ -225,7 +225,7 @@ namespace Matkakirja.Natiivi
             Vector3 ex = X * c - Y * s, ey = X * s + Y * c;
 
             // Aurinko ja ISS:n varjo (kamera ~ ISS): sylinterivarjo ECEF:ssä.
-            var aur = Aurinko.AurinkoEcef(utc);
+            var aur = Aurinko.AurinkoEcef(IssNyt.AurinkoKello());   // vuorokaudenaika: aurinko omasta kellostaan, tähdet ja Kuu oikeassa ajassa
             Vector3 aurMaailma = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(aur)).normalized;
             var kameraEcef = g.TransformUnityPositionToEarthCenteredEarthFixed((float3)gt.InverseTransformPoint(kamera.transform.position));
             double d = math.dot(kameraEcef, aur);

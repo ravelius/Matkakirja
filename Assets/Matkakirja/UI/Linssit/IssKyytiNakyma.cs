@@ -305,7 +305,7 @@ namespace Matkakirja.Natiivi
             tieto = Rakenne.Teksti("", "mk-isskyyti__teksti", pilleri);
             live.pickingMode = PickingMode.Ignore; tieto.pickingMode = PickingMode.Ignore;
             // Lukeman napautus nopeutettuna = Palaa LIVE (poimittava vain nopeutettuna).
-            pilleri.AddManipulator(new Clickable(() => { if (nopeutettu) Linssi()?.AsetaNopeus(1); }));
+            pilleri.AddManipulator(new Clickable(PalaaLive));
 
             var valit = Rakenne.El("mk-isskyyti__valilehdet", ohjaimet);
             runko = Rakenne.El("mk-isskyyti__runko", ohjaimet);
@@ -365,7 +365,7 @@ namespace Matkakirja.Natiivi
                 v => { AstronauttiKerros.PilvienMaara = v; PaivitaSaatimet(); },
                 AsetaKausi,
                 VaihdaLista, Kuvaa, Poistu,
-                () => { if (nopeutettu) Linssi()?.AsetaNopeus(1); });
+                PalaaLive);
             PaivitaPoydat(KyydinTila.Kauko);
             juuri.RegisterCallback<GeometryChangedEvent>(_ =>
             {
@@ -496,6 +496,18 @@ namespace Matkakirja.Natiivi
             void Perassa() { OmaSijaintiHaku.Valmis -= Perassa; LennaOmaan(); }
             OmaSijaintiHaku.Valmis += Perassa;
             OmaSijaintiHaku.Aloita();
+        }
+
+        /// <summary>
+        /// LIVE (omistaja 1.10.): oikea UTC-aika ja ISS:n todellinen paikka (nopeutus pois), kuluva vuodenaika ja aurinko oikeassa
+        /// ajassa — vuodenaika- ja vuorokaudenaikavalinnat nollataan.
+        /// </summary>
+        void PalaaLive()
+        {
+            if (nopeutettu) Linssi()?.AsetaNopeus(1);
+            AstronauttiKerros.KuukausiPakotettu = 0;
+            Vuorokausi.Valittu = null;
+            PaivitaSaatimet();
         }
 
         /// <summary>Vuodenaika nupista tai liukusäätimestä (0–3): nykyinen kausi = ei pakotusta, muuten kauden edustava kuukausi.</summary>

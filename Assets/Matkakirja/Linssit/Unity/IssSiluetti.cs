@@ -45,7 +45,7 @@ namespace Matkakirja.Linssit
                 // Aurinko kameran koordinaateissa (w = 1: siluetti on aina auringossa tai sen reunalla kuvaushetkellä).
                 var gt = g.transform;
                 Vector3 a = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(
-                    global::Matkakirja.Aurinko.AurinkoEcef(Iss.IssNyt.Kello()))).normalized;
+                    global::Matkakirja.Aurinko.AurinkoEcef(Iss.IssNyt.AurinkoKello()))).normalized;
                 Vector3 k = kamera.transform.InverseTransformDirection(a);
                 materiaali.SetVector(IdAurinko, new Vector4(k.x, k.y, k.z, 1f));
             }

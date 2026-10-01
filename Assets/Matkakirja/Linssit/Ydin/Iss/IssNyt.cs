@@ -32,6 +32,23 @@ namespace Matkakirja.Linssit.Iss
         /// <summary>UTC-kello: simuloitu aika, jota rata, aurinko, kaari, yökuori ja taivas lukevat (testit korvaavat).</summary>
         public static Func<DateTime> Kello = () => Simu.Nyt();
 
+        /// <summary>
+        /// Auringon kello (vuorokaudenaika, omistaja 1.10.2026): Kello() + siirto, joka pitää valitun aamun, päivän, illan tai yön
+        /// ISS:n alapisteessä (Vuorokausi); LIVE = Kello(). Aurinkoa käyttävät kerrokset (valaistus, ilmakehä, yökuori, Cupola)
+        /// lukevat tätä, rata, Kuu ja tähdet Kelloa. Välimuisti hetken mukaan: SGP4 kerran hetkeä kohden, vaikka kutsujia on monta.
+        /// </summary>
+        public static DateTime AurinkoKello()
+        {
+            var t = Kello();
+            if (!Vuorokausi.Valittu.HasValue) return t;
+            if (t == aurinkoT && Vuorokausi.Valittu == aurinkoV) return aurinkoTulos;
+            var p = Paikka(t);
+            aurinkoT = t; aurinkoV = Vuorokausi.Valittu; aurinkoTulos = Vuorokausi.AurinkoAika(t, p.Lat, p.Lon);
+            return aurinkoTulos;
+        }
+        static DateTime aurinkoT, aurinkoTulos;
+        static int? aurinkoV;
+
         public static Tle Tle => tle;
         /// <summary>Kasvaa, kun TLE vaihtuu (kutsuja laskee maajäljen uudelleen).</summary>
         public static int Versio { get; private set; }

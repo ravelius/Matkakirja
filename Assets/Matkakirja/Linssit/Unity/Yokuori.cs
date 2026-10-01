@@ -281,7 +281,7 @@ namespace Matkakirja.Natiivi
             // Aurinko liikkuu 0,25°/min: suunta kerran sekunnissa riittää (vain piirrettäessä). Myös sekunnin välein simuloitua
             // aikaa (web kaari.aseta): nopeutettuna (1000×: 4°/s) päivitys on joka kehys, eikä terminaattori hypi.
             if (!piirto.enabled) return;
-            var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
+            var utc = Matkakirja.Linssit.Iss.IssNyt.AurinkoKello();   // vuorokaudenaika: auringon kello
             if (Time.unscaledTime - paivitetty < 1f && Math.Abs((utc - aurinkoUtc).TotalSeconds) < 1) return;
             paivitetty = Time.unscaledTime;
             aurinkoUtc = utc;

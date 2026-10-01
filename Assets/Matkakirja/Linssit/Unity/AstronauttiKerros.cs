@@ -219,7 +219,7 @@ namespace Matkakirja.Natiivi
                 pilviValoAika = Time.unscaledTime;
                 var gt = georeferenssi.transform;
                 var au = gt.TransformDirection((Vector3)(Unity.Mathematics.float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(
-                    Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()))).normalized;
+                    Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.AurinkoKello()))).normalized;
                 pilvet.Valaistus(1f, au, pilvet.transform.position);
             }
             else if (pilvet != null && kyyti == KyydinTila.Kauko && pilviValoAika > 0f) { pilvet.Valaistus(0f, Vector3.forward, Vector3.zero); pilviValoAika = 0f; }
@@ -639,7 +639,7 @@ namespace Matkakirja.Natiivi
                 var gtv = georeferenssi.transform;
                 Vector3 keski = gtv.TransformPoint((Vector3)(Unity.Mathematics.float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(Unity.Mathematics.double3.zero));
                 Vector3 au = gtv.TransformDirection((Vector3)(Unity.Mathematics.float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(
-                    Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()))).normalized;
+                    Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.AurinkoKello()))).normalized;
                 Matkakirja.Linssit.Kyytipino.AurinkoSin = Vector3.Dot((kamera.transform.position - keski).normalized, au);
             }
             Matkakirja.Linssit.Kyytipino.Paivita(kamera, kyyti != KyydinTila.Kauko);

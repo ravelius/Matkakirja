@@ -1745,6 +1745,13 @@ namespace Matkakirja.Natiivi
                         else if (a == "ilmamoni" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.IlmanMoni = (float)Luku(osat[3]);
                         else if (a == "savytys" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Pois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
                         else if (a == "autovalotus" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.AutoValotus = osat[3] != "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
+                        else if (a == "vuorokausi" && osat.Length > 3)   // vuorokaudenaika (omistaja 1.10.): aamu|paiva|ilta|yo|live
+                        {
+                            int i = Array.IndexOf(new[] { "aamu", "paiva", "ilta", "yo" }, osat[3]);
+                            Matkakirja.Linssit.Iss.Vuorokausi.Valittu = i >= 0 ? i : null;
+                            var t = Matkakirja.Linssit.Iss.IssNyt.Kello();
+                            Kirjaa($"astro vuorokausi {(i >= 0 ? Matkakirja.Linssit.Iss.Vuorokausi.Nimet[i] : "LIVE")}, aurinko {(Matkakirja.Linssit.Iss.IssNyt.AurinkoKello() - t).TotalHours:+0.00;-0.00} h");
+                        }
                         else if (a == "s2savy" && osat.Length > 5)
                         {
                             Matkakirja.Linssit.Kyytipino.S2Kontrasti = (float)Luku(osat[3]);

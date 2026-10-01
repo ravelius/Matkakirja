@@ -279,7 +279,7 @@ namespace Matkakirja.Natiivi
             kaari.SetFloat("_HamaraVoima", HehkuPois ? 0f : 1f);
             if (!nakyy) return;
             // Kerran sekunnissa ja sekunnin välein simuloitua aikaa (web kaari.aseta): nopeutettuna joka kehys.
-            var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
+            var utc = Matkakirja.Linssit.Iss.IssNyt.AurinkoKello();   // vuorokaudenaika: auringon kello
             if (Time.unscaledTime - aurinkoPaivitetty < 1f && Math.Abs((utc - aurinkoUtc).TotalSeconds) < 1) return;
             // Keskipiste, napa-akseli ja aurinko maailmassa (georeferenssi voi liikkua); aurinko liikkuu 0,25°/min.
             aurinkoPaivitetty = Time.unscaledTime;
