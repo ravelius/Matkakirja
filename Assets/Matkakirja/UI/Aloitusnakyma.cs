@@ -1115,6 +1115,7 @@ namespace Matkakirja.Natiivi
     /// </summary>
     public sealed class Huipennus
     {
+        VisualElement napit;
         // Kaanon: docs/moduulit/huipennus-teksti.md (Fable 23.9.2026; myöhemmin paketin kautta).
         const string Otsikko = "Aarnin luettelo on täynnä";
         const string Teksti =
@@ -1142,24 +1143,23 @@ namespace Matkakirja.Natiivi
         {
             himmennys = Rakenne.El("mk-himmennys mk-himmennys--tumma", kerros.Juuri(UiKerros.Valikot));
             himmennys.style.display = DisplayStyle.None;
-            var kortti = new Kortti("mk-huipennus");
+            var kortti = new Kortti("mk-huipennus", pohja: true); // KORTTI-pohja (web #3798): voitto- ja loppukortti
             himmennys.Add(kortti);
             kortti.Sisus.Add(Aloitusnakyma.Merkki("mk-huipennus__merkki"));
             otsikko = Rakenne.Teksti(Otsikko, "mk-kortti__otsikko mk-huipennus__otsikko", kortti.Sisus);
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
             teksti = Rakenne.Teksti("", "mk-kortti__teksti", kortti.Sisus);
-            var napit = Rakenne.El("mk-kortti__napit mk-huipennus__napit", kortti.Sisus, PickingMode.Ignore);
+            napit = Rakenne.El("mk-kortti__napit mk-huipennus__napit", kortti.Sisus, PickingMode.Ignore);
             // Voitossa "Jatka vaeltamista" (sulkee); loppukortissa "Jatka viimeisestä tallennuksesta" (web winner-roam).
-            jatka = Rakenne.Nappi("Jatka vaeltamista", "mk-nappi--haamu", () => { var j = jatkaPainettu; Sulje(); j?.Invoke(); }, napit, Ikonit.Viiva["kompassi"]);
+            jatka = Rakenne.Nappi("Jatka vaeltamista", "mk-nappi--toiminto", () => { var j = jatkaPainettu; Sulje(); j?.Invoke(); }, napit, Ikonit.Viiva["kompassi"]);
             jatkaTeksti = jatka.Q<Label>(className: "mk-nappi__teksti");
             Kirjasimet.Aseta(jatka, Kirjasin.Kone);
             // "Jaa matka" (web #winner-jaa, paivitaJakonappi): vain kun jakoarkki on saatavilla (iOS-laite),
             // muualla nappia ei ole lainkaan. Teksti web natiiviMatkaTeksti = MatkanYhteenveto.Teksti.
-            jaa = Rakenne.Nappi("Jaa matka", "mk-nappi--haamu", () => { if (jaettava != null) Jakaminen.JaaTeksti(jaettava); }, napit, JaaIkoni);
+            jaa = Rakenne.Nappi("Jaa matka", "mk-nappi--toiminto", () => { if (jaettava != null) Jakaminen.JaaTeksti(jaettava); }, napit, JaaIkoni);
             Kirjasimet.Aseta(jaa, Kirjasin.Kone);
             jaa.style.display = Jakaminen.Saatavilla ? DisplayStyle.Flex : DisplayStyle.None;
             var uusi = Rakenne.Nappi("Uusi peli", "mk-nappi--kulta", () => { Sulje(); uusiMatka?.Invoke(); }, napit);
-            Rakenne.Tausta(uusi, Kuviot.Kulta);
             Kirjasimet.Aseta(uusi, Kirjasin.KoneLihava);
         }
 
@@ -1168,6 +1168,7 @@ namespace Matkakirja.Natiivi
             otsikko.text = Otsikko;
             jatkaTeksti.text = "Jatka vaeltamista";
             jatka.style.display = DisplayStyle.Flex;
+            napit.RemoveFromClassList("mk-kortti__napit--pysty");
             jatkaPainettu = null;
             Avaa(Teksti
                 .Replace("{paivat}", (yv?.Paivat ?? 0).ToString())
@@ -1184,6 +1185,8 @@ namespace Matkakirja.Natiivi
             otsikko.text = "Matka päättyi";
             jatkaTeksti.text = "Jatka viimeisestä tallennuksesta";
             this.jatka.style.display = jatka != null ? DisplayStyle.Flex : DisplayStyle.None;
+            // KORTTI-pohja (web #3798): pitkä nimi ei mahdu vierekkäin → napit pystyriviksi, nimeä ei lyhennetä.
+            napit.EnableInClassList("mk-kortti__napit--pysty", jatka != null);
             jatkaPainettu = jatka;
             Avaa(loppuTeksti, jaettava, uusiMatka);
         }

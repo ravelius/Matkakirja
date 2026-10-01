@@ -195,7 +195,7 @@ namespace Matkakirja.Natiivi
             himmennys = Rakenne.El("mk-himmennys mk-himmennys--tumma", kerros.Juuri(UiKerros.Valikot));
             himmennys.style.display = DisplayStyle.None;
             himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
-            var kortti = new Kortti("mk-tietoja mk-palaute-ikkuna");
+            var kortti = new Kortti("mk-tietoja mk-palaute-ikkuna", pohja: true); // KORTTI-pohja (web #3796): vain kuori; kentät ennallaan
             himmennys.Add(kortti);
             var otsikko = Rakenne.Teksti("Kerro mitä huomasit", "mk-kortti__otsikko", kortti.Sisus);
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
@@ -205,7 +205,7 @@ namespace Matkakirja.Natiivi
             vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Sisus.Add(vieritys);
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
-            var takaisin = Rakenne.Nappi("Takaisin peliin", "mk-nappi--haamu", Sulje, napit);
+            var takaisin = Rakenne.Nappi("Takaisin peliin", "mk-nappi--toiminto", Sulje, napit);
             Kirjasimet.Aseta(takaisin, Kirjasin.KoneLihava);
         }
 
