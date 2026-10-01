@@ -24,7 +24,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Kivilaji: ei heiluntaa eikä juuri–latva-varjostusta.</summary>
         const string Kivi = "kivi";
         static readonly int IdKuva = Shader.PropertyToID("_Kuva");
-        static MeshRenderer piirto;
+        static readonly List<MeshRenderer> piirrot = new List<MeshRenderer>();
+        /// <summary>Mesh osiin alle 65 536 kärjen (oletus); false = yksi UInt32-mesh (A/B viivavian rajaukseen).</summary>
+        public static bool Osiin = true;
         /// <summary>A/B kuvapariin (`poikki aluskasvit 0|1`): aluskasvit piiloon tai näkyviin lataamatta uudelleen.</summary>
         public static bool Pois;
 
@@ -32,8 +34,8 @@ namespace Matkakirja.Natiivi
         public static string Kytke(bool paalla)
         {
             Pois = !paalla;
-            if (piirto != null) piirto.enabled = paalla;
-            return $"aluskasvit {(paalla ? "näkyvissä" : "piilossa")}{(piirto == null ? " (ei ladattu)" : "")}";
+            foreach (var r in piirrot) if (r != null) r.enabled = paalla;
+            return $"aluskasvit {(paalla ? "näkyvissä" : "piilossa")}, {piirrot.Count} osaa{(Osiin ? "" : " (yksi mesh)")}";
         }
 
         sealed class Kortti { public float U0, U1, V0, V1, KorttiPerKoko = 1.9f, LeveysPerKorkeus = 1f; public bool Kivi; }
@@ -159,21 +161,34 @@ namespace Matkakirja.Natiivi
             var mat = new Material(varjostin) { name = "Ymparisto:aluskasvit" };
             mat.SetTexture(IdKuva, atlas);
             luodut.Add(mat);
-            var mesh = new Mesh { name = "Ymparisto:aluskasvit", indexFormat = IndexFormat.UInt32 };
-            mesh.SetVertices(p); mesh.SetUVs(0, uv0); mesh.SetUVs(1, uv1); mesh.SetColors(v); mesh.SetTriangles(kolmiot, 0);
-            mesh.RecalculateBounds();
-            mesh.UploadMeshData(true);
-            luodut.Add(mesh);
-            var go = new GameObject("Ymparisto:aluskasvit") { layer = DioraamaNayttamo.Kerros };
-            go.transform.SetParent(isa, false);
-            go.AddComponent<MeshFilter>().sharedMesh = mesh;
-            var rr = go.AddComponent<MeshRenderer>();
-            rr.sharedMaterial = mat;
-            rr.shadowCastingMode = ShadowCastingMode.Off;
-            rr.receiveShadows = false;
-            rr.enabled = !Pois;
-            piirto = rr;
-            kirjaa?.Invoke($"poikki: ympäristö: aluskasvit {kasveja} ({kolmiot.Length / 3} kolmiota, {atlas.width}×{atlas.height} {atlas.format}), {Time.realtimeSinceStartup - alku:F1} s");
+            // Osiin (oletus): enintään 16 000 korttia (64 000 kärkeä) per mesh, 16-bittiset indeksit; huipputasolla 3 piirtokutsua.
+            // Laite 1.10. (v3b, huippu, 160 000 kärkeä yhdessä UInt32-meshissä): kaksi pitkää risteävää viivaa maan tasolla, kuin
+            // kolmio olisi osunut väärään kärkeen. A/B `poikki aluskasvit osat 0|1` (seuraavassa latauksessa).
+            int korttejaYht = kolmiot.Length / 6, perOsa = Osiin ? 16000 : korttejaYht;
+            piirrot.Clear();
+            for (int alkuK = 0; alkuK < korttejaYht; alkuK += perOsa)
+            {
+                int kpl = Math.Min(perOsa, korttejaYht - alkuK), v0 = alkuK * 4, nv = kpl * 4;
+                var osaP = new Vector3[nv]; var osaUv0 = new Vector2[nv]; var osaUv1 = new Vector2[nv]; var osaV = new Color32[nv];
+                Array.Copy(p, v0, osaP, 0, nv); Array.Copy(uv0, v0, osaUv0, 0, nv); Array.Copy(uv1, v0, osaUv1, 0, nv); Array.Copy(v, v0, osaV, 0, nv);
+                var osaK = new int[kpl * 6];
+                for (int t = 0; t < osaK.Length; t++) osaK[t] = kolmiot[alkuK * 6 + t] - v0;
+                var mesh = new Mesh { name = "Ymparisto:aluskasvit", indexFormat = nv > 65535 ? IndexFormat.UInt32 : IndexFormat.UInt16 };
+                mesh.SetVertices(osaP); mesh.SetUVs(0, osaUv0); mesh.SetUVs(1, osaUv1); mesh.SetColors(osaV); mesh.SetTriangles(osaK, 0);
+                mesh.RecalculateBounds();
+                mesh.UploadMeshData(true);
+                luodut.Add(mesh);
+                var go = new GameObject("Ymparisto:aluskasvit") { layer = DioraamaNayttamo.Kerros };
+                go.transform.SetParent(isa, false);
+                go.AddComponent<MeshFilter>().sharedMesh = mesh;
+                var rr = go.AddComponent<MeshRenderer>();
+                rr.sharedMaterial = mat;
+                rr.shadowCastingMode = ShadowCastingMode.Off;
+                rr.receiveShadows = false;
+                rr.enabled = !Pois;
+                piirrot.Add(rr);
+            }
+            kirjaa?.Invoke($"poikki: ympäristö: aluskasvit {kasveja} ({kolmiot.Length / 3} kolmiota, {piirrot.Count} osaa, {atlas.width}×{atlas.height} {atlas.format}), {Time.realtimeSinceStartup - alku:F1} s");
         }
     }
 }

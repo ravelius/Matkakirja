@@ -712,6 +712,7 @@ namespace Matkakirja.Natiivi
             // "poikki aluskasvit 0|1": linnan aluskasvit piiloon/näkyviin (Linssiseppä 2, 1.10., kuvapari samasta kohdasta).
             if (mita == "aluskasvit")
             {
+                if (arvo == "osat" && osat.Length > 3) { DioraamaAluskasvit.Osiin = osat[3] != "0"; o.Kirjaa($"poikki: aluskasvit osiin {DioraamaAluskasvit.Osiin} (seuraava lataus)"); return; }
                 o.Kirjaa("poikki: " + DioraamaAluskasvit.Kytke(arvo != "0"));
                 return;
             }
