@@ -1648,6 +1648,8 @@ namespace Matkakirja.Natiivi
                                 Yokuori.ValojenOsuus = Mathf.Clamp01(osuus);
                         }
                         else if (a == "kiilto" && osat.Length > 3) Yokuori.KiiltoPois = osat[3] == "0"; // A/B auringon heijastus
+                        else if (a == "kiiltovoima" && osat.Length > 3) { Yokuori.KiillonVoima = (float)Luku(osat[3]); Kirjaa($"astro kiiltovoima {Yokuori.KiillonVoima:0.0}"); }
+                        else if (a == "aalto" && osat.Length > 3) { Yokuori.Aallokko = (float)Luku(osat[3]); Kirjaa($"astro aalto {Yokuori.Aallokko:0.000}"); }
                         else if (a == "varjo" && osat.Length > 3) Yokuori.VarjoPois = osat[3] == "0";   // A/B päiväpuolen varjostus
                         else if (a == "hehku" && osat.Length > 3) Avaruus.HehkuPois = osat[3] == "0";    // A/B hämärä ja ilmahehku
                         else if (a == "taivas" && osat.Length > 3) { KyydinTaivas.Pois = osat[3] == "0"; KyydinTaivas.VarjoPakko = osat[3] == "2"; } // A/B oikeat tähdet ja Kuu; 2 = ISS varjossa

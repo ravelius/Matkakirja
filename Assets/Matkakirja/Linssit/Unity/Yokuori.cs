@@ -46,7 +46,10 @@ namespace Matkakirja.Natiivi
         public static float ValojenOsuus = 1f;
         /// <summary>A/B (`astro kyyti kiilto 0|1`, `astro kyyti varjo 0|1`): heijastus ja päiväpuolen varjostus pois.</summary>
         public static bool KiiltoPois, VarjoPois;
-        public const float KiillonVoima = 6f, VarjonVoima = 0.55f;
+        public const float VarjonVoima = 0.55f;
+        /// <summary>Kiillon voima ja aallokon kaltevuus σ² (A/B `astro kyyti kiiltovoima x`, `astro kyyti aalto x`; Linssiseppä 2:n
+        /// juliste 1.10.: matalan auringon heijastuspolun reuna näytti ylivalottuneena pystysuoralta seinältä).</summary>
+        public static float KiillonVoima = 6f, Aallokko = 0.02f;
         Texture2D valotEu, valotMaa;
         readonly Texture2D[] tarkat = new Texture2D[4];
         /// <summary>
@@ -291,6 +294,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector(IdIta, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 1, 0))).normalized);
             materiaali.SetFloat(IdValot, ValotPois || valotEu == null && valotMaa == null ? 0f : ValojenVoima * ValojenOsuus);
             materiaali.SetFloat(IdKiilto, KiiltoPois ? 0f : KiillonVoima);
+            materiaali.SetFloat("_Aalto", Aallokko);
             materiaali.SetFloat(IdVarjo, VarjoPois ? 0f : VarjonVoima);
             // Fotorealismi 3–4 (30.9.): pilvien varjot ja kuunvalo.
             materiaali.SetFloat("_PilviVarjo", PilviVarjoPois ? 0f : PilviVarjonVoima);
