@@ -475,3 +475,6 @@ echo "ui ylapalkki napautus" > ui-komento.txt  # takaisin
   rasteriPohja-URL), mutta pelin sisältä ei löytynyt reittiä "Pallo"-maailmankarttanäkymään (etusivun
   sumennettu tausta lienee sama näkymä, mutta terävänä sitä ei tavoitettu).
 - A (kylmä verho -uusinta rauhallisemmassa kuormassa): ei uusittu.
+
+## Ihmisen matka -testikomennot (Pelikoodari 1.10.)
+`ui linssi matka <x>` (esim. `nosto 20`) käynnistää testitilan ilman linssiä; `matka pois` EI ole alikomento. Poistu `ui linssi pois` / `ui linssi sulje`, ei `ui linssi matka pois` (jättää mustan intro-ruudun).
