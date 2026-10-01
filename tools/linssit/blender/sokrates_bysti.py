@@ -40,17 +40,24 @@ def kohdista(o, kohde):
     o.rotation_euler = (Vector(kohde) - o.location).to_track_quat('-Z', 'Y').to_euler()
 
 
-def projektori(gobo, kohde, etaisyys=1.6, voima=260.0):
-    """Spottivalo gobokuvalla: valon suunta (valon avaruudessa, −Z eteen) → kuvan uv perspektiivijaolla."""
-    d = bpy.data.lights.new('projektori', 'SPOT'); d.spot_size = math.radians(30); d.spot_blend = 0.0
-    d.shadow_soft_size = 0.002; d.energy = voima; d.color = (1.0, 0.95, 0.86); d.use_nodes = True
+def projektori(gobo, kohde, etaisyys=1.6, voima=260.0, lev=None, suunta=None, nimi='projektori', pehmeys=0.002):
+    """Spottivalo gobokuvalla: valon suunta (valon avaruudessa, −Z eteen) → kuvan uv perspektiivijaolla.
+    lev: tekstin leveys kohteessa (m), korkeus kuvasuhteesta; suunta: kohteesta projektoriin (oletus edestä)."""
+    kuva_ = bpy.data.images.load(gobo)
+    if lev is None:
+        ala_l, ala_k = GOBO_LEV, GOBO_KORK
+    else:
+        ala_l, ala_k = lev, lev * kuva_.size[1] / kuva_.size[0]
+    d = bpy.data.lights.new(nimi, 'SPOT'); d.spot_blend = 0.0
+    d.spot_size = min(math.radians(170), 2.4 * math.atan(max(ala_l, ala_k) / 2 / etaisyys))
+    d.shadow_soft_size = pehmeys; d.energy = voima; d.color = (1.0, 0.95, 0.86); d.use_nodes = True
     nt = d.node_tree; nt.nodes.clear()
     tc = nt.nodes.new('ShaderNodeTexCoord'); sx = nt.nodes.new('ShaderNodeSeparateXYZ')
     nt.links.new(tc.outputs['Normal'], sx.inputs['Vector'])
     z = nt.nodes.new('ShaderNodeMath'); z.operation = 'MULTIPLY'; z.inputs[1].default_value = -1.0
     nt.links.new(sx.outputs['Z'], z.inputs[0])
     uv = []
-    for akseli, ala in (('X', GOBO_LEV), ('Y', GOBO_KORK)):
+    for akseli, ala in (('X', ala_l), ('Y', ala_k)):
         jako = nt.nodes.new('ShaderNodeMath'); jako.operation = 'DIVIDE'
         nt.links.new(sx.outputs[akseli], jako.inputs[0]); nt.links.new(z.outputs['Value'], jako.inputs[1])
         kerto = nt.nodes.new('ShaderNodeMath'); kerto.operation = 'MULTIPLY_ADD'
@@ -58,13 +65,13 @@ def projektori(gobo, kohde, etaisyys=1.6, voima=260.0):
         nt.links.new(jako.outputs['Value'], kerto.inputs[0]); uv.append(kerto)
     yh = nt.nodes.new('ShaderNodeCombineXYZ')
     nt.links.new(uv[0].outputs['Value'], yh.inputs['X']); nt.links.new(uv[1].outputs['Value'], yh.inputs['Y'])
-    kuva = nt.nodes.new('ShaderNodeTexImage'); kuva.image = bpy.data.images.load(gobo); kuva.extension = 'CLIP'
+    kuva = nt.nodes.new('ShaderNodeTexImage'); kuva.image = kuva_; kuva.extension = 'CLIP'
     nt.links.new(yh.outputs['Vector'], kuva.inputs['Vector'])
     em = nt.nodes.new('ShaderNodeEmission'); nt.links.new(kuva.outputs['Color'], em.inputs['Strength'])
     em.inputs['Color'].default_value = (1, 1, 1, 1)
     out = nt.nodes.new('ShaderNodeOutputLight'); nt.links.new(em.outputs['Emission'], out.inputs['Surface'])
-    o = bpy.data.objects.new('projektori', d); bpy.context.scene.collection.objects.link(o)
-    suunta = Vector((0.0, -1.0, 0.08)).normalized()
+    o = bpy.data.objects.new(nimi, d); bpy.context.scene.collection.objects.link(o)
+    suunta = (suunta or Vector((0.0, -1.0, 0.08))).normalized()
     o.location = Vector(kohde) + suunta * etaisyys; kohdista(o, kohde)
     return o
 
@@ -187,3 +194,57 @@ if '--lod' in A:
             b.inputs['Base Color'].default_value = (0.86, 0.85, 0.82, 1); b.inputs['Roughness'].default_value = 0.62
             c.data.materials.clear(); c.data.materials.append(m)
         _vie(c, os.path.join(ULOS, f'sokrates-{nimi}.glb')); print('SOKRATES: vienti', nimi)
+
+
+# ---------- mallikuva v2 (omistaja 1.10. 21.4x): suomennos pinnoittain + kamera-ajo ----------
+# Lause jaetaan pinnoille, kukin oma projektorinsa pinnan normaalin suunnasta (teksti seuraa pinnan muotoa):
+#   "Tutkimaton elämä" otsalle, "ei ole elämisen / arvoinen" vasemmalle (katsojasta) poskelle, "ihmiselle" rinnalle
+#   (aataminomena jää parran alle). Kamera: kokonaiskuva → otsa → poski → rinta, jokainen osa lähikuvana luettava.
+#   Blender -b -P sokrates_bysti.py -- --v2 <gobokansio> <ulos-kansio> --koko <L> <K> [--naytteita 16] [--ruudut 1,90,160]
+PINNAT = (  # nimi, säteen (x, z) edestä, tekstin leveys kohteessa (m), sivusuunnan painotus normaaliin
+    ('otsa', (0.0, 0.438), 0.118, 0.6),
+    ('poski', (-0.052, 0.350), 0.056, 0.7),
+    ('rinta', (0.0, 0.110), 0.100, 0.5),
+)
+AIKA = ((1, 'koko'), (24, 'koko'), (75, 'otsa'), (100, 'otsa'), (145, 'poski'), (170, 'poski'), (215, 'rinta'), (240, 'rinta'))
+
+
+def osuma(x, z):
+    dg = bpy.context.evaluated_depsgraph_get()
+    osui, p, n, *_ = bpy.context.scene.ray_cast(dg, Vector((x, -2, z)), Vector((0, 1, 0)))
+    return p, n
+
+
+if '--v2' in A:
+    i = A.index('--v2'); GOBOT, ULOS = A[i + 1], A[i + 2]; os.makedirs(ULOS, exist_ok=True)
+    i = A.index('--koko'); LEV, KORK = int(A[i + 1]), int(A[i + 2])
+    N = int(A[A.index('--naytteita') + 1]) if '--naytteita' in A else 16
+    RUUDUT = [int(v) for v in A[A.index('--ruudut') + 1].split(',')] if '--ruudut' in A else None
+    o = rakenna(N); sc = bpy.context.scene; eteen = Vector((-0.12, -1.0, 0.07)).normalized()
+    kohteet = {}
+    for nimi, (x, z), lev, paino in PINNAT:
+        p, n = osuma(x, z); suunta = (n * paino + Vector((0, -1, 0.05)) * (1 - paino)).normalized()
+        projektori(os.path.join(GOBOT, f'gobo-{nimi}.png'), p, etaisyys=0.8, voima=60.0, lev=lev, suunta=suunta,
+                   nimi=f'projektori-{nimi}', pehmeys=0.0)   # pistevalo: valon koko sumentaisi pienen tekstin
+        # kamera: kuvan leveys ≈ 1,35 × tekstin leveys (85 mm, pystykuvan vaakakenttä = 24 mm · L/K)
+        d = lev * 1.35 * 85 / (24 * LEV / KORK)
+        kam_suunta = (suunta + eteen).normalized()
+        kohteet[nimi] = (p + kam_suunta * d, p)
+        print('SOKRATES: pinta', nimi, tuple(round(v, 3) for v in p), 'kamera', round(d, 2), 'm')
+    kohde_koko = Vector((0.0, -0.03, 0.20)); kohteet['koko'] = (kohde_koko + eteen * 2.95, kohde_koko)
+    cd = bpy.data.cameras.new('k'); cd.lens = 85; cd.sensor_fit = 'VERTICAL'; cd.sensor_height = 24; cd.clip_start = 0.02
+    cam = bpy.data.objects.new('k', cd); sc.collection.objects.link(cam); sc.camera = cam
+    tahtain = bpy.data.objects.new('tahtain', None); sc.collection.objects.link(tahtain)
+    tc = cam.constraints.new('TRACK_TO'); tc.target = tahtain; tc.track_axis = 'TRACK_NEGATIVE_Z'; tc.up_axis = 'UP_Y'
+    for ruutu, nimi in AIKA:
+        cam.location, tahtain.location = kohteet[nimi]
+        cam.keyframe_insert('location', frame=ruutu); tahtain.keyframe_insert('location', frame=ruutu)
+    for ob in (cam, tahtain):   # pehmeät kiihdytykset ja jarrutukset
+        for fc in ob.animation_data.action.fcurves if hasattr(ob.animation_data.action, 'fcurves') else []:
+            for kp in fc.keyframe_points: kp.interpolation = 'BEZIER'; kp.easing = 'EASE_IN_OUT'
+    sc.frame_start, sc.frame_end = 1, AIKA[-1][0]; sc.render.fps = 30
+    sc.render.resolution_x, sc.render.resolution_y = LEV, KORK; sc.render.resolution_percentage = 100
+    for ruutu in (RUUDUT or range(sc.frame_start, sc.frame_end + 1)):
+        sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
+        bpy.ops.render.render(write_still=True)
+    print('SOKRATES: v2 valmis', ULOS)

@@ -34,3 +34,21 @@ lukufontilla (Iowan Old Style).
 ![Laatutasot L0, L1, L2 ja symboli tuotuina GLB:stä takaisin Blenderiin](kuvat/sokrates-20261001/laatutasot.png)
 
 GLB-koot: L0 9,6 Mt, L1 2,8 Mt, L2 1,9 Mt, symboli 55 kt. Gobo mukana kansiossa: `sokrates-gobo-apologia-38a.png`.
+
+## Mallikuva v2 (omistajan palaute 1.10. 21.4x)
+Kasvoille heijastetaan suomennos ("Tutkimaton elämä ei ole elämisen arvoinen ihmiselle", Sisältökirjurin käännös)
+pinnoittain, ja jokaisella osalla on oma projektorinsa pinnan normaalin suunnasta:
+- "Tutkimaton elämä" otsalle
+- "ei ole elämisen / arvoinen" vasemmalle poskelle (katsojasta)
+- "ihmiselle" rinnalle, koska aataminomena jää tässä hermassa parran alle
+
+Teksti on pelin lukufonttia (Iowan Old Style, lihavoitu). Projektorit ovat pistevaloja, koska valon koko sumentaisi
+pienen tekstin. Kreikka näkyy vain pienenä lähderivinä suomennoksen alla. Kamera-ajo kestää 8 s (30 fps):
+kokonaiskuva → otsa → poski → rinta, ja jokainen lähikuva on mitoitettu niin, että tekstin leveys on noin 75 % iPhonen
+pystykuvan leveydestä.
+
+![v2: kaukaa, puolivälistä (otsa), läheltä (poski ja rinta)](kuvat/sokrates-20261001/sokrates-v2-ruudut.jpg)
+
+`sokrates_bysti.py --v2 <gobot> <ulos> --koko L K [--ruudut 1,90,160,230]`, ja gobot tehdään komennolla
+`sokrates_gobo.py <ulos> --fontti iowan "rivi" ...`. Video: `docs/raportit/kuvat/sokrates-20261001/sokrates-v2-kameraajo.mp4`.
+Huom: skannauksen tarkkuus näkyy lähikuvassa (poski) pehmeänä pintana; se on 2 M kolmion STL:n raja, ei renderöinnin.
