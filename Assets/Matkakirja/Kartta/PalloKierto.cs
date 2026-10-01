@@ -1303,8 +1303,14 @@ namespace Matkakirja
             }
         }
 
-        /// <summary>Kamera maan saapumisnäkymän korkeudella tai lähempänä (maan rajat voimassa; Kutsuminiatyyri).</summary>
-        public bool MaanNakymassa => maanLaatikko.HasValue && maanKatto > 0 && korkeus <= maanKatto * 1.05;
+        /// <summary>
+        /// Kamera maan saapumisnäkymän korkeudella tai lähempänä (Kutsuminiatyyri). Aloituslennon saapuminen ei aseta maan
+        /// rajoja (maaRajaus false, web siirto.js), joten myös viimeisin saapumisnäkymän korkeus kelpaa (40e13f5d-ajo: kerroin
+        /// 0,52, maan rajat puuttuivat ja merkki jäi piiloon).
+        /// </summary>
+        public bool MaanNakymassa => (maanLaatikko.HasValue && maanKatto > 0 && korkeus <= maanKatto * 1.05)
+            || (saapumisKorkeus > 0 && korkeus <= saapumisKorkeus * 1.1);
+        double saapumisKorkeus;
 
         /// <summary>Eleen loitonnuksen katto metreinä: maan katto, jos rajat ovat voimassa, muuten koko pallo.</summary>
         double EleKatto() => !linssinKatto.HasValue && RajatVoimassa && maanKatto > 0 ? math.clamp(maanKatto, MinKorkeus(), MaxKorkeus()) : MaxKorkeus();
@@ -1435,6 +1441,7 @@ namespace Matkakirja
         {
             var t = SaapumisNakyma(maa, lat, lon, maaRajaus);
             AsetaMaanRajat(t, lon, maa);
+            saapumisKorkeus = t.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius();
             PaataSaapuminen(true);
             Aja(t.Lat, t.Lon, t.Korkeus * CesiumWgs84Ellipsoid.GetMaximumRadius(), kestoS, () =>
             {
