@@ -114,3 +114,54 @@ loppuun tulee pulumainen yhteenveto tai pieni kommentti. Pronominit kokonaisina 
 6. **Vuoro 6** sisältää sitaatin 21d ("Platonin mukaan") Pulun suussa; jos sitaatit halutaan vain 3D-kasvoille, rivi voi pudottaa lainauksen pois.
 7. **Valintataulu** vuorossa 1 (A–D), vuorossa 3 (A–C) ja vuorossa 5 (A–D) on ehdotus; jos kortti tukee vain kahta vaihtoehtoa, jätä A ja B.
 8. Pulu-rivien pituus (60–80 sanaa) on tavoite; jos näkymä tarvitsee lyhyempää, jokainen vuoro tiivistyy keskiosaan (kirjakielinen osuus) ilman alustusta, mutta silloin kaava ei täyty.
+
+## 6. Lappu "Sokrateen elämä" (nostokortin mittainen; otsikko vaihtuu ajattelijan mukaan)
+
+Pituus ~1 100 merkkiä (vertailu: olemassa olevien nostojen mediaani ~520, historia-nostot Q3 ~1 030, ks. docs/raportit/nostotekstit-fra-20260920.md).
+Muoto: otsikko + 6 lyhyttä tapahtumaa + yksi rivi siitä, ettei Sokrates kirjoittanut mitään. Lähde on jokaisella tapahtumalla (alla taulukossa);
+Platonin kuvaamat kohdat on merkitty "Platonin mukaan". Kohderyhmä 13+ ja aikuiset: ei yksityiskohtaisia kuolinkuvauksia, ei kommentoitua väkivaltaa.
+
+**Sokrateen elämä**
+
+**Kivenhakkaajan poika.** Sokrates syntyi Ateenassa vuonna 470 tai 469 eaa. kivenhakkaaja Sofroniskoksen ja kätilö Fainaretan poikana.
+
+**Sotilas.** Peloponnesolaissodassa hän taisteli raskaana jalkaväkimiehenä Potidaiassa, Amfipoliksessa ja Delionissa. Platonin *Pidoissa* nuori Alkibiades kertoo, että Sokrates käveli talvella jäällä paljain jaloin, seisoi yön yli paikallaan ajatuksissaan ja pelasti hänet taistelussa.
+
+**Delfoin oraakkeli.** Ystävä Khairefon kysyi Delfoin oraakkelilta, onko kukaan Sokratesta viisaampi, ja pyhättö vastasi, ettei ole. Sokrates ryhtyi sen jälkeen kysymään ateenalaisilta viisailta, mitä he oikeasti tiesivät.
+
+**Oikeudenkäynti.** Vuonna 399 eaa. kolme ateenalaista syytti häntä jumalattomuudesta ja nuorison turmelemisesta, ja tuomaristo julisti hänet syylliseksi ja tuomitsi hänet kuolemaan.
+
+**Pakeneminen kielletty.** Ystävät tarjosivat hänelle keinoa paeta vankilasta, mutta hän kieltäytyi: Platonin *Kritonissa* hän sanoo, ettei vääryyttä saa tehdä koskaan, ei edes vääryyden vastaukseksi.
+
+**Viimeiset sanat.** Hän joi myrkkykatkon ja käveli, kunnes jalat tuntuivat raskailta, ja makasi sitten selälleen. Platonin mukaan hänen viimeiset sanansa olivat: "Kriton, olemme velkaa kukon Asklepiokselle. Maksa velka äläkä unohda."
+
+*Sokrates ei kirjoittanut itse mitään; kaikki, mitä hänestä tiedetään, tulee Platonilta, Ksenofonilta ja Aristofanekselta.*
+
+### Lähde jokaiselle tapahtumalle
+
+| Tapahtuma | Lähde | Huomio |
+|---|---|---|
+| Syntymä, vanhemmat | Socrates, Wikipedia (<https://en.wikipedia.org/wiki/Socrates>): "born in 470 or 469 BC to Sophroniscus and Phaenarete, a stoneworker and a midwife" | Ei muuta lähdettä haettu |
+| Sotapalvelus | Platon, *Apologia* 28e (Potidaia, Amfipolis, Delion; "jäin paikalleni"), Perseus; Wikipedia (Potidaia 432, Amfipolis 422) | Delionin vuosi jätetty pois (en varmentanut) |
+| Paljain jaloin jäällä, seisoi yön yli, pelasti Alkibiadeen | Platon, *Symposion* 220b (jää, paljain jaloin), 220c–d (seisoi aamuun, rukous Auringolle) ja 220d–e (taistelu, Alkibiadeen palkinto/pelastus), Perseus; Wikipedia vahvistaa, että Platon kuvaa Sokrateen pelastavan Alkibiadeen Potidaiassa | Tapahtuma on **Alkibiadeen puheenvuoro Platonin dialogissa**, siis Platonin kuvaus, ei kaikilta osin varmistettu historia → kortissa "Platonin *Pidoissa* … kertoo". 220d–e:n rescue-lause varmennettu Wikipedian kautta, ei Perseuksen tekstistä suoraan |
+| Delfoin oraakkeli | Platon, *Apologia* 21a, Perseus (Khairefon kysyi, Pythia vastasi ettei ole viisaampaa) | Sokrateen reaktio (kysyi viisailta) on *Apologia* 21b–22a, jota en erikseen avannut |
+| Oikeudenkäynti 399 eaa. | Wikipedia (syyttäjät Meletos, Anytos, Lykon; syytteet; syyllinen enemmistöpäätöksellä; kuolemantuomio); Platon, *Apologia* (syytteet) | Tuomariston kokoa ja ääniä en maininnut, koska ne ovat myöhäisiä lähteitä |
+| Kieltäytyi pakenemasta | Wikipedia ("friends … offered an opportunity to escape, which he declined"); Platon, *Kriton* 49b, Perseus ("οὐδαμῶς ἄρα δεῖ ἀδικεῖν", "οὐδὲ ἀδικούμενον ἄρα ἀνταδικεῖν") | Perseus 49b luettu suoraan |
+| Myrkkykatko ja viimeiset sanat | Platon, *Faidon* 117e–118a, Perseus ("Crito, we owe a cock to Aesculapius. Pay it and do not neglect it."; jalat raskaat, makasi selälleen) | Kuolemantapa (myrkky) myös Wikipedia; kuvaus rajattu lempeään |
+| Ei kirjoittanut mitään | Wikipedia ("authored no writings"; Platon, Ksenofon, Aristofanes) | – |
+
+### Valinnainen 7. tapahtuma "kerrotaan" (myöhäinen anekdootti)
+
+Jos halutaan hurjempi/hauskempi rivi: **Kerrotaan**, että hänen vaimonsa Ksantippe kaatoi kerran vettä hänen päälleen riidan päätteeksi, ja Sokrates vain naurahti: "Enkö sanonut, että ukkosen jälkeen tulee sade?" Lähde: Diogenes Laertios (myöhäinen, 200-luvulta jaa.), Wikipedian (Xanthippe) mukaan tarina esiintyy "useissa antiikin lähteissä" ja siitä tuli myöhemmin suosittu aihe taiteessa; Platon kuvaa Ksantippen vain *Faidonissa* (60a), jossa hän itkee vankilassa ja Sokrates pyytää viemään hänet kotiin. Ksenofon kuvaa hänet tylymmäksi. Suositus: ota anekdootti mukaan vain "kerrotaan"-merkinnällä tai jätä pois; en ottanut sitä lappuun.
+Huom.: sitaatin sanamuoto Wikipedian mukaan on "Did I not say that thundering Xanthippe also makes water?" — vedenkaadon tarkka sanamuoto vaihtelee lähteittäin, joten tässä on ajatuksen mukainen suomennos; tarkka latinalainen/kreikkalainen sanamuoto tarkistamatta.
+
+### Varaukset (lappu)
+
+1. **Alkibiadeen kertomus** (jää, paljain jaloin, yön yli seisominen, pelastus) on Platonin dialogin hahmon puhetta; kortissa se on merkitty Platonin *Pitojen* kertomaksi. Wikipedia vahvistaa pelastuksen Platonin kuvauksena, mutta 220d–e:n tarkkaa tekstiä en saanut auki, vain 220b ja 220d:n alun.
+2. **Delfoin oraakkeli:** kortti kertoo vain 21a:n (kysymys + vastaus) ja tiivistää seuraavan ("kysyi viisailta"), joka on tunnettu tapahtumakulku (*Apologia* 21b–23b), mutta sitä en avannut erikseen.
+3. **Oikeudenkäynnin yksityiskohdat** (tuomariston koko ~501, äänestysluvut ~280/221, syytteiden tarkka kirjaus) ovat myöhäisiä lähteitä (esim. Diogenes Laertios) tai tarkistamatta; kortissa on vain Wikipedian ja *Apologian* vahvistama minimi. Jos halutaan lisää, tarvitaan lähde (esim. Platon, *Apologia* 36a: "jos 30 ääntä olisi vaihtanut puolta").
+4. **Delion:** Apologia 28e mainitsee Delionin, mutta Wikipedia mainitsee vain "retreat of Delium"; vuosi (424 eaa.) jätetty pois, koska en saanut sitä auki.
+5. **Kuolinkuvaus** on lempeä (jalat painuvat raskaiksi, makaa selällään); *Faidonin* tarkempi kuvaus tuntohäviön etenemisestä on jätetty pois 13+ kohderyhmän vuoksi.
+6. **Sitaatti viimeisistä sanoista** on suomennos Fowlerin englannista ("we owe a cock to Aesculapius. Pay it and do not neglect it"); kreikka *Faidon* 118a: "ὦ Κρίτων, τῷ Ἀσκληπιῷ ὀφείλομεν ἀλεκτρυόνα· ἀλλὰ ἀπόδοτε καὶ μὴ ἀμελήσητε" — kreikkalaista tekstiä en tässä erikseen lukenut Perseuksesta, joten se on muististani; älä käytä kreikkaa ennen tarkistusta.
+7. **Pituus ~1 100 merkkiä** on historia-nostojen ylärajalla (Q3 ~1 030); jos lappu halutaan tiiviimmäksi, pudota *Sotilas*-tapahtumasta Alkibiades ja jää yhdeksi lauseeksi.
+8. **Otsikko** "Sokrateen elämä" on "[Nimi]n elämä" -pohja; muille ajattelijoille tapahtumat täytyy tarkistaa samalla lähdekurilla.
