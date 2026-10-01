@@ -1722,6 +1722,11 @@ namespace Matkakirja.Natiivi
                             else Matkakirja.Linssit.IssSiluetti.Paalla = osat[3] != "0";
                             Kirjaa("astro kyyti " + Matkakirja.Linssit.IssSiluetti.Tila());
                         }
+                        else if (a == "s2kevyt" && osat.Length > 3)   // S2:n laiteluokka (Natiivisepän ehto 1.10.): 0|1|auto, vaihto s2 0 → 1
+                        {
+                            AstronauttiKerros.S2KevytPakotettu = osat[3] == "auto" ? null : osat[3] != "0";
+                            Kirjaa($"astro s2kevyt {(AstronauttiKerros.S2KevytPakotettu.HasValue ? (AstronauttiKerros.S2KevytPakotettu.Value ? "kevyt" : "täysi") : "auto")} → {(AstronauttiKerros.S2Kevyt ? "kevyt" : "täysi")}");
+                        }
                         else if (a == "s2" && osat.Length > 3)   // Euroopan S2-mosaiikki kyydissä (AstronauttiKerros.PaivitaS2)
                         {
                             if (osat[3] == "url" && osat.Length > 4) AstronauttiKerros.S2Osoite = osat[4] == "pois" ? null : osat[4];

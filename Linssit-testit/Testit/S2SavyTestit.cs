@@ -55,6 +55,23 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi]
+        static void MuistirajaLaiteluokanMukaan()
+        {
+            // Natiivisepän ehdot 1.10.: kevyt (≤ iPhone 15 Pro tai ≤ 6144 Mt) z9 + karkeampi rasteri, pallon välimuisti 192/384 Mt
+            // S2:n ajaksi ja palautus; kierrätetty kerros saa Cesiumin oletukset takaisin.
+            var s = Kerros;
+            Oleta.Tosi(s.Contains("SystemInfo.systemMemorySize <= 6144"), "kevyt muistin mukaan");
+            Oleta.Tosi(s.Contains("S2ValimuistiMt = 384, S2ValimuistiKevytMt = 192"), "välimuistit 384 / 192 Mt");
+            var p = Metodi(s, "void PaivitaS2(bool kyydissa)");
+            Oleta.Tosi(p.Contains("kk.RasterinMuisti(S2Kerros") && p.Contains("kk.PallonValimuisti((kevyt"), "S2 lisätään muistirajoin");
+            Oleta.Tosi(p.Contains("kk.PallonValimuisti(null);"), "S2:n poistuessa välimuisti palautuu");
+            Oleta.Tosi(Metodi(s, "void OnDestroy()").Contains("PallonValimuisti(null)"), "OnDestroy palauttaa välimuistin");
+            var kk = Lue("Assets/Matkakirja/Kartta/KarttaKerrokset.cs");
+            Oleta.Tosi(kk.Contains("k.maximumScreenSpaceError = 2f; k.maximumTextureSize = 2048; k.subTileCacheBytes = 16L * 1024 * 1024;"),
+                "UusiKerros palauttaa rasterin oletukset");
+        }
+
+        [Testi]
         static void VarjostinSyotteetJaMaski()
         {
             var py = Lue("Assets/Matkakirja/Shaders/Cesium/Lahde~/tee_tileset.py");

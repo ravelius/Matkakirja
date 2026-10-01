@@ -565,6 +565,8 @@ namespace Matkakirja
             }
             k.materialKey = avain;
             k.specifyTilingScheme = false;   // kierrätetty kerros voi tulla rajatusta jaosta (RasterinJako)
+            // ja muistirajoista (RasterinMuisti): Cesiumin oletukset takaisin.
+            k.maximumScreenSpaceError = 2f; k.maximumTextureSize = 2048; k.subTileCacheBytes = 16L * 1024 * 1024;
             k.templateUrl = Laattapalvelin.Paikallinen(url);
             k.projection = projektio;
             k.minimumLevel = min;
@@ -1846,6 +1848,33 @@ namespace Matkakirja
             k.rootTilesX = rx; k.rootTilesY = ry;
             k.enabled = true;
             return true;
+        }
+
+        /// <summary>
+        /// Rasterin muistiraja (S2-mosaiikki kyydissä, Natiivisepän ehto 1.10.2026): näytön virhe (suurempi = karkeampi), suurin
+        /// tekstuuri ja alitiilivälimuisti. Aseta ennen RasterinJakoa (se kytkee kerroksen uudelleen, jolloin arvot tulevat voimaan);
+        /// kierrätys palauttaa Cesiumin oletukset (UusiKerros).
+        /// </summary>
+        public bool RasterinMuisti(string avain, float nayttovirhe, int tekstuuri, long aliValimuisti)
+        {
+            if (!rasterit.TryGetValue(avain, out var r) || r.kerros == null) return false;
+            r.kerros.maximumScreenSpaceError = nayttovirhe; r.kerros.maximumTextureSize = tekstuuri; r.kerros.subTileCacheBytes = aliValimuisti;
+            return true;
+        }
+
+        long palloValimuistiOletus = -1;
+
+        /// <summary>
+        /// Pallon tilesetin välimuisti (maximumCachedBytes) kyydin S2:n ajaksi laiteluokan mukaan (Natiivisepän ehto 1.10.2026);
+        /// null = palautus alkuperäiseen. Palauttaa käytössä olevan arvon.
+        /// </summary>
+        public long PallonValimuisti(long? tavua)
+        {
+            if (pallo == null) return -1;
+            if (palloValimuistiOletus < 0) palloValimuistiOletus = pallo.maximumCachedBytes;
+            long tavoite = tavua ?? palloValimuistiOletus;
+            if (pallo.maximumCachedBytes != tavoite) pallo.maximumCachedBytes = tavoite;
+            return tavoite;
         }
 
         public int RasterinAlfa(string avain, float alfa)

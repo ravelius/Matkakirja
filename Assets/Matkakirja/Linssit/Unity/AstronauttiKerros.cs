@@ -389,6 +389,13 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public const string S2Juuri = "https://media.matkakirja.app/" + Laattapalvelin.S2Polku + "/v1/";
         public const string S2Kerros = "astronautti-s2";
+        /// <summary>
+        /// Kevyt laite S2:lle (Natiivisepän ehto 1.10.): Kyytipino.KevytLaite (≤ iPhone 15 Pro) tai muisti ≤ 6144 Mt → z9, karkeampi
+        /// näyttövirhe ja pienempi välimuisti. Testikomento `astro kyyti s2kevyt 0|1|auto` (null = automaattinen).
+        /// </summary>
+        public static bool? S2KevytPakotettu;
+        public static bool S2Kevyt => S2KevytPakotettu ?? (Matkakirja.Linssit.Kyytipino.KevytLaite || SystemInfo.systemMemorySize <= 6144);
+        public const int S2ValimuistiMt = 384, S2ValimuistiKevytMt = 192;
         public static bool S2Kaytossa = true;   // ämpäri v1 valmis 1.10. 15.55 (Karttaseppä); S2 aina kyydissä Euroopassa, s2 0 = A/B
         public static string S2Osoite;
         const double S2W = -28.125, S2E = 45.0, S2N = 72.395704, S2S = 31.952162;
@@ -412,16 +419,23 @@ namespace Matkakirja.Natiivi
                     CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, KuukaudenPintaMaxTaso, 1f);
                 kuukausiAlfaAsetettu = 1f;
                 string url = (S2Osoite ?? S2Juuri + "{z}/{x}/{reverseY}.jpg").Replace("{docs}", "file://" + Application.persistentDataPath);
-                int maxTaso = Matkakirja.Linssit.Kyytipino.KevytLaite ? S2MaxTaso - 1 : S2MaxTaso;
+                bool kevyt = S2Kevyt;
+                int maxTaso = kevyt ? S2MaxTaso - 1 : S2MaxTaso;
+                // Muistiraja laiteluokan mukaan (Natiivisepän ehto 1.10.: iPad +480 Mt GPU:n puolella → kevyille ≤ +250 Mt).
                 s2Lisatty = kk.LisaaRasteri(S2Kerros, url, CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, maxTaso, 1f) != null
+                    && kk.RasterinMuisti(S2Kerros, kevyt ? 4f : 2f, kevyt ? 1024 : 2048, (kevyt ? 8L : 16L) * 1024 * 1024)
                     && kk.RasterinJako(S2Kerros, S2W, S2S, S2E, S2N, S2Rx, S2Ry);
-                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: S2 {(s2Lisatty ? "päällä" : "ei mahtunut")} (z{6}–z{6 + maxTaso}) {url}");
+                long valimuisti = s2Lisatty ? kk.PallonValimuisti((kevyt ? S2ValimuistiKevytMt : S2ValimuistiMt) * 1024L * 1024) : -1;
+                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: S2 {(s2Lisatty ? "päällä" : "ei mahtunut")} (z{6}–z{6 + maxTaso}) {url}; " +
+                    $"laite {(kevyt ? "kevyt" : "täysi")} (muisti {SystemInfo.systemMemorySize} Mt, {SystemInfo.deviceModel}), " +
+                    $"pallon välimuisti {valimuisti / 1048576} Mt, S2 näyttövirhe {(kevyt ? 4 : 2)}, tekstuuri {(kevyt ? 1024 : 2048)}");
                 if (!s2Lisatty) S2Kaytossa = false;   // ei yritetä joka sekunti uudelleen
             }
             else
             {
                 kk.PoistaRasteri(S2Kerros);
                 s2Lisatty = false;
+                kk.PallonValimuisti(null);
                 if (reliefPoissa)
                 {
                     // Alkuperäinen järjestys: reliefi paikkaan 1 ja BMNG sen päälle paikkaan 2 (lisätään seuraavalla kierroksella).
@@ -841,7 +855,7 @@ namespace Matkakirja.Natiivi
             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
             AsetaS2Reuna(false);
             if (kuukausiLisatty >= 0) KarttaKerrokset.Instanssi?.PoistaRasteri(KuukausiKerros);
-            if (s2Lisatty) KarttaKerrokset.Instanssi?.PoistaRasteri(S2Kerros);
+            if (s2Lisatty) { KarttaKerrokset.Instanssi?.PoistaRasteri(S2Kerros); KarttaKerrokset.Instanssi?.PallonValimuisti(null); }
             if (kierto != null) kierto.Napautettu -= Napautus;
             if (taivas != null) Destroy(taivas.gameObject);
             if (pilvet != null) Destroy(pilvet.gameObject);
