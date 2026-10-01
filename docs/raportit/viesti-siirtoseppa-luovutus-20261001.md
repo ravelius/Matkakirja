@@ -1,4 +1,11 @@
-# Siirtosepän luovutus 1.10.2026 klo 08.0x (Opus)
+# Siirtosepän luovutus 1.10.2026 klo 08.0x (Opus) — tilinvaihto
+
+## JONON KÄRKI
+
+1. **Merge-pyyntö Natiivisepälle: linna-vesi 894d16a4 (nopea ensilataus) on junassa 1.1 (92) = juna/b13 b24c0702**
+   (Päätoimittaja hyväksyi: maasto 23,1 → 10,8 s). Seuraa BUILD 92:n savuke; aja tarvittaessa
+   `tyokalut/siirtoseppa-ajot/ajo-ensilataus.sh` 92:n .appilla (APP=… L=…) ja vertaa lokit/siirtoseppa-ensilataus2-*.
+2. Puukortit #3763 (pidossa): natiivin puukortit v3 -lukija ennen paketin kuittausta (kohta "Avoimet" 3).
 
 ## Tila yhdellä silmäyksellä
 
