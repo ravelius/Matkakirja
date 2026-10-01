@@ -30,3 +30,7 @@ lukufontilla (Iowan Old Style).
 - `--lod`: L0 noin 200 k kolmiota ja normaalikartta 2048, joka on leivottu 2 M:n skannauksesta; L1 noin 50 k
   (1024); L2 noin 12 k (1024); karttasymboli noin 3 k. Kaikki GLB:inä kansioon
   `/Users/Shared/Claude/proto-3d/_valmiit/sokrates-bysti/v1/`.
+
+![Laatutasot L0, L1, L2 ja symboli tuotuina GLB:stä takaisin Blenderiin](kuvat/sokrates-20261001/laatutasot.png)
+
+GLB-koot: L0 9,6 Mt, L1 2,8 Mt, L2 1,9 Mt, symboli 55 kt. Gobo mukana kansiossa: `sokrates-gobo-apologia-38a.png`.
