@@ -406,6 +406,7 @@ namespace Matkakirja.Natiivi
         {
             if (!kahvaVeto) return;
             kahvaVeto = false;
+            if (kortti.HasPointerCapture(e.pointerId)) kortti.ReleasePointer(e.pointerId);
             float dy = e.position.y - kahvaAlku.y;
             if (dy > KahvaAlas) { Aanet.PulunTehoste("paper"); Sulje(); return; }
             bool laajenna = dy < -KahvaYlos || (Mathf.Abs(dy) < Napautuskynnys && !laajennettu);
@@ -483,6 +484,9 @@ namespace Matkakirja.Natiivi
             var kr = kortti.worldBound;
             kahvaVeto = e.position.y - kr.y < KahvaVyohyke && kr.Contains(e.position);
             kahvaAlku = e.position;
+            // Veto ylös vie sormen kortin ulkopuolelle: kaappaus, jotta irrotus tulee kortille (savuke 99: touch_path ylös ei
+            // laajentanut, irrotus osui kerrokseen).
+            if (kahvaVeto) kortti.CapturePointer(e.pointerId);
             eleAlku = e.position;
             eleAika = Time.unscaledTime * 1000f;
             // Painalluksen kohde päätetään alussa: nappi (LISÄÄ, lukijan kaiutin/valikko), kenttä, kuva tai linkki ei sulje korttia,
