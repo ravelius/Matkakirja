@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 1.10. 06:49:** Levy 47 Gi (52→47; hälytys < 45 lähellä → kierros 10 min), wt/ 31 (raja 20), muisti 79 % vapaa, kuorma 17/11/18, sim 0, työtilat ok. Viikko 95 % (97 % ilmoitus tulossa). 5 h 20 %. PÄÄTOIMITTAJA on käynnistynyt itse nollauksen jälkeen (konteksti 10 %, 149 viestiä, idle; aloitusviestiä ei tarvita). Kävijälaskuri: 06.33 n=6, seuraava ~07.33. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
+
 **Päivitetty 1.10. 06:33:** PÄÄTOIMITTAJA NOLLATTU ~06.2x (sessio tyhjä/idle; aloitusviesti EI lähtenyt, SendMessage estynyt 15 → posti-tiedosto + käyttäjälle). Levy 52 Gi (49→52), wt/ 31 (raja 20), muisti 80 % vapaa, kuorma 36/28/37, sim 0, työtilat ok. Viikko 95 % (97 % ilmoitus tulossa). 5 h 20 %. Kävijälaskuri 06.33: n=6 (ennallaan; US 3 tänään, apurahakortti 3 yht.), seuraava ~07.33. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
 
 **Päivitetty 1.10. 06:04:** Levy 49 Gi (46→49), wt/ 30 (raja 20; laski 46→30: siivous käynnissä), muisti 79 % vapaa, kuorma 80/78/100, sim 0, työtilat ok. Viikko 95 % (94 % ilmoitettu; seuraava 97 %). 5 h 19 %. Konteksti: Päätoimittaja 64 % (60 % ilmoitettu; seuraava 70 %). Kävijälaskuri: 05.36 n=6, seuraava ~06.36. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
