@@ -19,8 +19,8 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 1. **Linnan osoitin VAIHDETTU 07.29** → 02987940f6567fd2 (v19 + v3c + taivas, main 22bf2c6c6; Julkaisija omistajan luvalla,
    ajo 36815257246, julkinen uusin.json vahvistettu). Jäädytys purettu, #3763 puukortit junan etusijalla (seuraava osoitinkierros).
    Siirtoseppä todentaa osoittimen puhtaalla asennuksella (pyyntö 07.3x); odota kuittausrivi.
-2. **TF:n sisäinen ryhmä:** 85:n ajossa ASC ei palauttanut yhtään isInternalGroup-ryhmää (82:lla "Beta testaajat", automaattijako).
-   testflight-sisainen.yml estyi Julkaisijan luokittimeen. Omistaja tarkistaa ASC:stä tai sallii ajon Julkaisijan sessiossa.
+2. **TF:n sisäinen ryhmä KUNNOSSA (07.4x):** "Beta testaajat" on olemassa (automaattijako, omistaja ryhmässä, build 91 käsitelty);
+   TF 85:n virhe oli ohimenevä, TF menee taas oletuksella. Omistajan luvalla 07.35: testflight-sisainen.yml ajettu, #3734 junassa #3763:n jälkeen.
 3. **TF:** 84 sisäinen, 85, 86–91 Arvioijat-ryhmässä ja beta-arviossa (julkinen linkki). 89 = äänimikseri (omistajan 5 rivin ohje
    chatissa); mikserinapin piilotus ilman kehittäjätilaa todennettu savukkeessa 91 (`ui pelaaja 1`). **1.1 (91)** 23041f6f
    (Pulun turva-alue, Natiivi-UI a8503697) ladattu 06.35, Arvioijat-ryhmään ja beta-arvioon 06.39 (Julkaisija).
@@ -38,7 +38,7 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 | Rooli | Checkout | Haara | Malli | Kärki |
 |---|---|---|---|---|
 | Postivahti | Matkakirja-posti | postivahti | Sonnet, medium | kierto 10 min, viikkoraja 94/97 %, levy |
-| Julkaisija | Matkakirja-julkaisija | julkaisija-luovutus-20260928 | Opus, high | #3763 puukortit junan etusijalla, TF 91 beta-arviossa, sisäinen ryhmä |
+| Julkaisija | Matkakirja-julkaisija | julkaisija-luovutus-20260928 | Opus, high | juna: #3763 puukortit → #3734 viestirajahook; TF 91 beta-arviossa |
 | Natiiviseppä | Matkakirja-3d-selvittaja | selvittaja-3d-luovutus | Opus, high | juna 91; S2-lisäysversio ehdoin |
 | Natiivi-UI | Matkakirja-natiivi-ui | natiivi-ui-luovutus-m | Opus, high | pelaajan näkymän todennus ilman kehittäjätilaa |
 | Pelikoodari | Matkakirja-pelikoodari | pelikoodari-tyo-20260923 | Opus, high | Pulun TF-todennukset (kartan paperiteema, Ihmisen matka) |
