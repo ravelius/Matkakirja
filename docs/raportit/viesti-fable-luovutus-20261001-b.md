@@ -19,8 +19,10 @@ Yön päätökset ja tilat lokissa docs/raamattu-loki/paatokset-2026-09.md (grep
    Siirtoseppä kuittasi jo v18:n (98691896e7bf76b8), joten v17 ohitetaan.
    **Komento ei osaa osoittaa hashiin, vaan rakentaa mainin kärjestä.** Siksi klo 06.45 jälkeen linnan pakettiin vaikuttavat PR:t
    (dioraama/olavinlinna, blender.json, rakenna.mjs) ovat Julkaisijalla pidossa, kunnes omistaja on ajanut osoittimen.
-   #3755 (v3c) mergettiin 05.11, ja paketti 19f1ff3246be7386 (v18 + v3c) on varakuittauksessa. Jos #3756 (v19) tai #3758 (puukortit)
-   ehtii ennen 06.45:tä, kuitataan 06.45:n kuiva paketti.
+   #3755 (v3c) mergettiin 05.11 (paketti 19f1ff3246be7386). **PÄIVITYS 05.3x: osoitin vasta TF 90:n jälkeen.** Siirtosepän esitarkistus:
+   ympäristöpaketin kenttämuoto (puukortit png + puukortit_tiedot, orto .astcm, aluskasvit.kortit) on eri kuin natiivit 87–89 lukevat,
+   joten ne näyttäisivät maaston ilman puita ja 2k-ortolla. Lukijakorjaus 3a28322a menee junaan 90. Jäädytys 06.45 ja kuiva-ajo peruttu.
+   Kun TF 90 sisältää 3a28322a:n, Siirtoseppä kuittaa silloisen mainin kärjen paketin, ja vasta sitten omistajalle annetaan lupa.
 2. **TF:n sisäinen ryhmä**: 85:n ajossa ASC ei palauttanut yhtään isInternalGroup-ryhmää (82:lla "Beta testaajat", automaattijako päällä).
    Julkaisijan testflight-sisainen.yml estyi luokittimeen. Omistaja tarkistaa ASC:stä tai sallii ajon Julkaisijan sessiossa.
 
