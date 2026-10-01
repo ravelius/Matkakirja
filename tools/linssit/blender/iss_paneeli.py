@@ -303,14 +303,16 @@ def teksti(s, txt, x, y, z, koko, mat='maali_valkoinen', tasaus='CENTER', valist
 
 # v3 (omistaja 1.10.): KUUKAUSI-nuppi on vuodenaikanuppi, OMA PAIKKA -vipu korvattu KUVAA-painikkeella (LENNÄ-pohja).
 # Avaimet ('kuukausi') pysyvät, ettei Linssisepän ankkureita tarvitse nimetä uudelleen; 'oma' → 'kuvaa'.
-# v4 (omistaja 1.10.): VUOROKAUDENAIKA-nuppi VUODENAJAN rinnalle (sama nuppimalli), seitsemän moduulia.
-OTSIKOT = {'nopeus': 'NOPEUS', 'pilvet': 'PILVET', 'kuukausi': 'VUODENAIKA', 'vuorokausi': 'VUOROKAUDENAIKA',
+# v4 (omistaja 1.10.): vuorokausinuppi VUODENAJAN rinnalle (sama nuppimalli), seitsemän moduulia; otsikko VUOROKAUSI
+# (Päätoimittaja: VUOROKAUDENAIKA ei mahtunut puhelimelle samalla fontilla).
+OTSIKOT = {'nopeus': 'NOPEUS', 'pilvet': 'PILVET', 'kuukausi': 'VUODENAIKA', 'vuorokausi': 'VUOROKAUSI',
            'kohde': 'KOHDE', 'kuvaa': 'KUVAA', 'poistu': 'POISTU'}
 NUPIT = ('pilvet', 'kuukausi', 'vuorokausi')
 PAINIKKEET = ('kohde', 'kuvaa', 'poistu')
 PAINIKE_LEGENDA = {'kohde': 'LENNÄ', 'kuvaa': 'KUVAA', 'poistu': 'POISTU'}
 OTSIKKO_KOKO, ASTEIKKO_KOKO = 7.2, 5.0
 KIERTO_K = 0.8   # NOPEUS-kiertokytkimen mittakaava (v1: 1.0 ylitti ryhmäkehyksen)
+NOPEUS_ASENNOT = (-48, -16, 16, 48)  # v4: ±60/±20 → kapeampaan kehykseen ("1000×" osui viivaan), merkit ja osoitin samoissa
 
 
 # ---------------------------------------------------------------- pohja: konsolin runko (keski X:ssä tasainen)
@@ -368,8 +370,8 @@ def kierto():
     r.sylinteri(0, 0, 0, 0.8, 21.5, 'grafiitti', n=48, viiste=0.3, osat=1)
     r.sylinteri(0, 0, 0.8, 2.4, 20.0, 'teras', r2=19.2, n=48, viiste=0.5, osat=2)      # asteikkorengas
     r.sylinteri(0, 0, 2.4, 2.6, 14.6, 'kumi', n=48)
-    pitkat = [math.radians(k) for k in (-60, -20, 20, 60)]
-    lyhyet = [math.radians(k) for k in range(-80, 81, 10) if k not in (-60, -20, 20, 60)]
+    pitkat = [math.radians(k) for k in NOPEUS_ASENNOT]
+    lyhyet = [math.radians(k) for k in range(-64, 65, 8) if k not in NOPEUS_ASENNOT]
     sateittain(r, 17.4, pitkat, (0.55, 3.0, 0.3), 2.45, 'maali_musta')
     sateittain(r, 17.8, lyhyet, (0.35, 1.4, 0.3), 2.45, 'maali_musta')
     n = Solmu('kierto_nuppi')     # ISS:n harmaa kartiomainen nuppi, uritettu, valkoinen osoitin +Y
@@ -551,7 +553,7 @@ def rakenna(T, G, rungot=True):
         tulos['paikat'][f'{avain}-otsikko'] = (x, 116.2, round(w + 4.4, 2), 8.0)
         ryhmakehys(ku, x - kp, x + kp, 60, 116.6, aukko=(x - w / 2 - 2.2, x + w / 2 + 2.2))
         legendalevy(ku, x, 51.5, lev)
-    for k, txt in zip((-60, -20, 20, 60), ('LIVE', '10×', '100×', '1000×')):   # NOPEUS-asteikko
+    for k, txt in zip(NOPEUS_ASENNOT, ('LIVE', '10×', '100×', '1000×')):   # NOPEUS-asteikko
         a_ = math.radians(k)
         r_ = (24.0 if abs(k) < 40 else 25.5) * KIERTO_K + 1.2
         teksti(ku, txt, kx[0] + r_ * math.sin(a_), RIVI2 + r_ * math.cos(a_) - 0.6, PINTA, ASTEIKKO_KOKO - 0.4)

@@ -269,7 +269,7 @@ if '--testi' in ARGS:
 
 # ---------------------------------------------------------------- täysi sarja (kerrossopimus Linssisepän kanssa 30.9.)
 ASETTELUT = {'puhelin': (402.0, 378.0, 3), 'tabletti': (560.0 + 2 * ip.PAATY, 560.0, 2)}
-NOPEUS_KULMAT = (-60, -20, 20, 60)
+NOPEUS_KULMAT = ip.NOPEUS_ASENNOT
 NUPPI_ASKEL = 15
 KAARI_ASENNOT = 6
 VALOVARIT = {'vihrea': (0.25, 1.0, 0.4), 'meripihka': (1.0, 0.55, 0.12), 'valkoinen': (1.0, 0.95, 0.85)}
