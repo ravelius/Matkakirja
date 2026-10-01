@@ -628,6 +628,9 @@ namespace Matkakirja.Editori
             }
         }
 
+        /// <summary>Burstin EditorPrefs-avain (Jobs/Burst/Enable Compilation).</summary>
+        const string BurstPref = "BurstCompilation";
+
         static void Kaanna(string kansio, BuildOptions lisat = BuildOptions.None)
         {
             if (!File.Exists(PalloKohtaus)) LuoPallo();
@@ -645,6 +648,17 @@ namespace Matkakirja.Editori
             };
             // Release-käännös oletuksena: Development-tila hidastaa ja näyttää kehityskonsolin.
             EditorUserBuildSettings.development = (lisat & BuildOptions.Development) != 0;
+            // Editorin oma Burst-JIT linkittää macOS-bundleja ja kaatuu linkkeriin (AotLinkerException, ~10 joka
+            // käännöksessä); BuildPlayerin alkuun osuva virhe teki käännöksestä Failed (VIKA 28.9.–1.10., virheitä 1–2).
+            // Batchmodessa JIT pois käännöksen ajaksi. Pelaajan AOT (lib_burst_generated) ei käytä tätä asetusta.
+            // Asetin tallentaa EditorPrefsiin, joten koneen editorien arvo palautetaan heti.
+            var burstPref = EditorPrefs.GetBool(BurstPref, true);
+            if (Application.isBatchMode && Unity.Burst.BurstCompiler.Options.EnableBurstCompilation)
+            {
+                Unity.Burst.BurstCompiler.Options.EnableBurstCompilation = false;
+                EditorPrefs.SetBool(BurstPref, burstPref);
+                Debug.Log("MATKAKIRJA: editorin Burst-JIT pois käännöksen ajaksi");
+            }
             var raportti = BuildPipeline.BuildPlayer(asetukset);
             var s = raportti.summary;
             Debug.Log($"MATKAKIRJA: käännös {s.result}, {s.totalTime.TotalSeconds:F0} s, virheitä {s.totalErrors}, {kansio}");
