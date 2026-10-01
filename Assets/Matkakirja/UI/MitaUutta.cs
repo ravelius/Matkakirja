@@ -51,7 +51,7 @@ namespace Matkakirja.Natiivi
         {
             this.avaaKehittaja = avaaKehittaja;
             (himmennys, lista) = Dialogi(kerros.Juuri(UiKerros.Valikot), "Mitä uutta", out var napit);
-            var kehittaja = Rakenne.Nappi("Kehittäjä", "mk-nappi--haamu", () => { Sulje(); this.avaaKehittaja?.Invoke(); }, napit);
+            var kehittaja = Rakenne.Nappi("Kehittäjä", "mk-nappi--toiminto", () => { Sulje(); this.avaaKehittaja?.Invoke(); }, napit);
             kehittaja.tooltip = "Kehittäjätila";
             if (avaaKehittaja == null) kehittaja.style.display = DisplayStyle.None;
             Nappi(napit, "Sulje", Sulje);
@@ -65,9 +65,9 @@ namespace Matkakirja.Natiivi
         {
             var h = Rakenne.El("mk-himmennys mk-himmennys--tumma", isa);
             h.style.display = DisplayStyle.None;
-            var kortti = new Kortti("mk-tietoja mk-muutokset");
+            var kortti = new Kortti("mk-tietoja mk-muutokset", pohja: true); // KORTTI-pohja (web #3799)
             h.Add(kortti);
-            Kirjasimet.Aseta(Rakenne.Teksti(otsikko, "mk-kortti__otsikko", kortti.Sisus), Kirjasin.LukuLihava);
+            Kirjasimet.Aseta(Rakenne.Teksti(otsikko, "mk-kortti__otsikko", kortti.Sisus), Tyylikirja.Kirjain.Otsikko);
             var vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-tietoja__vieritys");
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
@@ -86,8 +86,7 @@ namespace Matkakirja.Natiivi
 
         static void Nappi(VisualElement napit, string teksti, Action painettu)
         {
-            var n = Rakenne.Nappi(teksti, "mk-nappi--kulta", painettu, napit);
-            Rakenne.Tausta(n, Kuviot.Kulta);
+            var n = Rakenne.Nappi(teksti, "mk-nappi--toiminto", painettu, napit);
             Kirjasimet.Aseta(n, Kirjasin.KoneLihava);
         }
 
@@ -106,8 +105,9 @@ namespace Matkakirja.Natiivi
             {
                 if (i++ >= enintaan) break;
                 var rivi = Rakenne.El("mk-muutos", lista, PickingMode.Ignore);
+                // Versio kapiteelina, rivin jatko alkaa tekstin kohdalta (web #3799).
                 var v = Rakenne.Teksti(r.Otsake ?? "v" + Nakyva(r.Versio), "mk-muutos__versio", rivi);
-                Kirjasimet.Aseta(v, Kirjasin.KoneLihava);
+                Kirjasimet.Aseta(v, Tyylikirja.Kirjain.Kapiteeli);
                 var t = Rakenne.Teksti(string.IsNullOrEmpty(r.Paiva) ? r.Teksti : r.Teksti + " (" + r.Paiva + ")", "mk-muutos__teksti", rivi);
                 Kirjasimet.Aseta(t, Kirjasin.Luku);
             }
