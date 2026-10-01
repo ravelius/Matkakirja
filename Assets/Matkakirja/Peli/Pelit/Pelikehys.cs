@@ -132,7 +132,10 @@ namespace Matkakirja.Peli.Pelit
 
         public static int Rahapalkkio(PeliTulos t, PelinTalous talous) => Palkitaan(t, talous) ? talous.Voittopalkkio : 0;
 
-        public static bool Vihje(PeliTulos t, PelinTalous talous) => talous.VihjeVoitosta && Palkitaan(t, talous);
+        /// <summary>Aarnin vihje: botin voitosta millä tahansa tasolla, KERRAN per peli (Päätoimittaja 1.10.2026, loki);
+        /// jo saatu = pelaajalla on jo tämän pelin (PeliId) vihje. Kaveripeli kirjataan matkakirjaan ja pelipäiväksi,
+        /// mutta ei palkitse.</summary>
+        public static bool Vihje(PeliTulos t, PelinTalous talous, bool joSaatu = false) => !joSaatu && talous.VihjeVoitosta && Palkitaan(t, talous);
 
         public static string VastustajanNimi(Vastustaja v) => v switch
         {

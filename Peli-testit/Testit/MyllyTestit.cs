@@ -233,6 +233,8 @@ namespace Matkakirja.Peli.Testit
             var t = new PeliTulos { PeliId = "DEU-2", Nimi = "Mylly", PaikallinenNimi = "Mühle", Paikka = "Leipzig", Vastustaja = Vastustaja.BottiNormaali, Voittaja = 0, Siirtoja = 31, Paiva = "2026-10-01" };
             var talous = PelinTalous.IlmainenVihjeella;
             Oleta.Tosi(Pelikehys.Vihje(t, talous), "botin voitto → vihje");
+            Oleta.Tosi(!Pelikehys.Vihje(t, talous, joSaatu: true), "vihje kerran per peli");
+            Oleta.Tosi(Pelikehys.Vihje(new PeliTulos { Vastustaja = Vastustaja.BottiHelppo, Voittaja = 0 }, talous), "myös helppo botti");
             Oleta.Sama(0, Pelikehys.Rahapalkkio(t, talous), "mylly: ei rahaa");
             Oleta.Sama("Mylly (Mühle), Leipzig: voitit botin (normaali) 31 siirrossa.", Pelikehys.Matkakirjarivi(t));
             var kaveri = new PeliTulos { Nimi = "Mylly", Vastustaja = Vastustaja.Kaveri, Voittaja = 0, Siirtoja = 40 };
