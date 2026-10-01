@@ -39,6 +39,9 @@ Luovuttaa: Linssiseppä (Opus, high) → seuraava Linssiseppä-sessio. Edellinen
    mukana Linssiseppä 2:n yhdessä merge-pyynnössä, kun hänen muistimittauksensa iPadilla 00008103 on tehty (Natiivisepän ehto).
    Ilman kytkintä muuttuu kaksi oletusta: ilmahehkun nauha ja kaupunkivalojen sävy. Älä liikuta kärkeä; jos liikutat, kerro
    uusi SHA Linssiseppä 2:lle.
+   **Kun erä on TF:ssä:** tee yövertailu NASA ISS037-E-18864 -kuvaa vasten (Italia yöllä, `ajo-nasa.sh`-kulma
+   `astro kyyti vertailu 31.3 20.1 413 41.3 14.6 50 2013-10-23T19:20:01`, iPhone vaakana, 3:2-rajaus) TF-käännöksellä ja liitä
+   se Päätoimittajalle omistajaa varten (Päätoimittaja 1.10. klo 06: "älä erota", A/B:t pois, kaksi oletusmuutosta OK).
 3. Laitteen tarkat ms per osa `astro kyyti katto30 0` -tilassa (iPad 00008103, muistiehto) — myöhemmin.
 
 Agentteja ei ole käynnissä. Taustaskriptit valmiit; simulaattorit D0D2CD1E ja 903C2B91 sammutettu, appi poistettu.
