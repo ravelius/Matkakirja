@@ -4664,3 +4664,158 @@
     margin-left: 0;
     margin-top: var(--tk-vali-s);
 }
+
+/* LAUTAPELIN POHJA (omistaja 1.10.2026, Päätoimittajan loki b3e273d72; Mylly ensimmäisenä, UI/Pelit/MyllyNakyma.cs):
+   PELI = KUVANÄKYMÄ (lauta kuvan paikalla, himmennys-kuva, ✕ 44 pt) + PANEELI (PAPERI-pergamentti 350 pt / KAPEA laudan alla);
+   valinta ja tulos = KORTTI-pohja. Vain tyylikirjan muuttujat. */
+.mk-peli {
+    background-color: var(--tk-himmennys-kuva);
+    padding: 0;
+}
+
+.mk-peli__lauta {
+    position: absolute;
+    border-width: 1px;
+    border-color: var(--tk-paperi-reunus);
+    border-radius: var(--tk-kulma-kortti);
+    background-color: var(--tk-paperi-pergamentti);
+}
+
+.mk-peli__sulje {
+    position: absolute;
+    width: var(--tk-nappi-osuma);
+    height: var(--tk-nappi-osuma);
+    min-height: var(--tk-nappi-osuma);
+    padding: 0;
+    border-width: 1px;
+    border-radius: var(--tk-kulma-pilleri);
+    border-color: var(--tk-tumma-reunus);
+    background-color: var(--tk-tumma-pinta);
+    color: var(--tk-tumma-muste);
+    justify-content: center;
+}
+
+.mk-peli__sulje > .mk-nappi__teksti {
+    font-size: var(--tk-koko-valiotsikko);
+    -unity-text-align: middle-center;
+}
+
+.mk-peli__paneeli {
+    position: absolute;
+    padding: var(--tk-vali-l);
+    border-width: 1px;
+    border-radius: var(--tk-kulma-kortti);
+    border-color: var(--tk-paperi-reunus);
+    background-color: var(--tk-paperi-pergamentti);
+    color: var(--tk-paperi-muste);
+}
+
+.mk-peli__vuoro {
+    margin-bottom: var(--tk-vali-s);
+    padding-left: var(--tk-vali-s);
+    border-left-width: 4px;
+    border-color: var(--tk-paperi-toiminto);
+    font-size: var(--tk-koko-leipa);
+    white-space: normal;
+    color: var(--tk-paperi-muste);
+}
+
+.mk-peli__rivi {
+    flex-direction: row;
+    align-items: center;
+    min-height: var(--tk-nappi-korkeus);
+    border-top-width: 1px;
+    border-color: var(--tk-paperi-reunus);
+}
+
+.mk-peli__rivi-nimi {
+    flex-grow: 1;
+    margin-left: var(--tk-vali-s);
+    font-size: var(--tk-koko-leipa);
+    color: var(--tk-paperi-muste);
+}
+
+.mk-peli__lukema {
+    font-size: var(--tk-koko-kapiteeli);
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-peli__merkki {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+    border-radius: var(--tk-kulma-pilleri);
+    border-color: var(--tk-paperi-muste);
+}
+
+.mk-peli__merkki--vaalea {
+    background-color: var(--tk-paperi-pinta);
+}
+
+.mk-peli__merkki--tumma {
+    background-color: var(--tk-paperi-muste);
+}
+
+.mk-peli__ohje {
+    margin-top: var(--tk-vali-xs);
+    font-size: var(--tk-koko-apuri);
+    white-space: normal;
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-peli__kortti .mk-kortti__alaotsikko {
+    margin-bottom: var(--tk-vali-s);
+}
+
+.mk-peli__valiotsikko {
+    margin: var(--tk-vali-m) 0 var(--tk-vali-xs) 0;
+    font-size: var(--tk-koko-valiotsikko);
+    color: var(--tk-paperi-korostus);
+}
+
+.mk-peli__kytkinryhma {
+    flex-direction: row;
+    margin-bottom: var(--tk-vali-s);
+}
+
+.mk-peli__kytkin {
+    flex-grow: 1;
+    flex-basis: 0;
+    justify-content: center;
+    min-height: var(--tk-nappi-korkeus);
+    margin: 0;
+    padding: 0 var(--tk-vali-s);
+    border-width: 1px;
+    border-radius: 0;
+    border-color: var(--tk-paperi-reunus);
+    background-color: initial;
+    color: var(--tk-paperi-muste);
+}
+
+.mk-peli__kytkin > .mk-nappi__teksti {
+    font-size: var(--tk-koko-leipa);
+    -unity-text-align: middle-center;
+}
+
+.mk-peli__kytkin:first-child {
+    border-top-left-radius: var(--tk-kulma-nappi);
+    border-bottom-left-radius: var(--tk-kulma-nappi);
+}
+
+.mk-peli__kytkin:last-child {
+    border-top-right-radius: var(--tk-kulma-nappi);
+    border-bottom-right-radius: var(--tk-kulma-nappi);
+}
+
+.mk-peli__kytkin.mk-valittu {
+    background-color: var(--tk-paperi-toiminto);
+}
+
+.mk-peli__palkkio {
+    font-size: var(--tk-koko-valiotsikko);
+    color: var(--tk-paperi-korostus);
+}
+
+.mk-peli__kirjattu {
+    margin-top: var(--tk-vali-s);
+}

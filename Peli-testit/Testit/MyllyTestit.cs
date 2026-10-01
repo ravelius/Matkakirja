@@ -249,11 +249,14 @@ namespace Matkakirja.Peli.Testit
             var m = Matka.Luo(ValeVerkko.Pieni(), new Satunnainen(1), "Fogg", "ala");
             m.AloitaVuoro();
             int alku = m.Tila.Pelaaja.Raha;
+            var rivit = new List<string>();
+            m.Tapahtui += (laji, teksti) => { if (laji == "peli") rivit.Add(teksti); };
             var raha = PelinTalous.Minipeli;
             var t = new PeliTulos { Nimi = "Mylly", Vastustaja = Vastustaja.BottiNormaali, Voittaja = 0, Siirtoja = 20, Paiva = "2026-10-01" };
             var (streak, palkkio) = Pelikehys.Kirjaa(m, t, raha);
             Oleta.Tosi(streak.HasValue && streak.Value.Pituus == 1, "pelattu peli = pelipäivän teko");
             Oleta.Sama(60, palkkio);
+            Oleta.Sama("Mylly: voitit botin (normaali) 20 siirrossa.", rivit.FirstOrDefault(), "matkakirjan rivi");
             Oleta.Sama(alku + 60, m.Tila.Pelaaja.Raha);
             Oleta.Tosi(Pelikehys.Kirjaa(m, t, raha).Streak == null, "sama päivä ei kirjaa pelipäivää uudelleen");
             // Kaveripeli: pelipäivä kyllä (uusi päivä), raha ei.

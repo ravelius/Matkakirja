@@ -98,6 +98,14 @@ namespace Matkakirja.Peli.Pelit
             return m;
         }
 
+        /// <summary>Kopio ilman historiaa (botin haku taustasäikeessä: näkymän peli ei muutu haun aikana).</summary>
+        public Mylly Kopio()
+        {
+            var k = Asemasta(Asema(), kadessa[0], kadessa[1], vuoro);
+            k.ilmanPoistoa = ilmanPoistoa;
+            return k;
+        }
+
         /// <summary>Asema samassa muodossa kuin Asemasta (24 merkkiä).</summary>
         public string Asema()
         {

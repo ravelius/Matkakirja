@@ -516,6 +516,7 @@ namespace Matkakirja.Natiivi
                 case "valikko" when loput == "asetukset" || loput == "matka": return "=" + ui.Linssit.Valitsin.TestaaNakyma(loput, -1);
                 case "valikko" when System.Enum.TryParse(loput, true, out Paavalikko.Osa osa): ui.Valikko.AvaaOsa(osa); return null;
                 case "vahvistus": ui.Valikko.KysyUusiPeli(); return null; // KORTTI-pohja: uuden pelin vahvistus (ei vahvista)
+                case "mylly": return "=" + MyllyNakyma.Hae().Komento(loput); // lautapelin pohja (Mylly, Siirtoseppä 1.10.)
                 case "valikko": ui.Valikko.Sulje(); ui.Linssit.Valitsin.Avaa(); return null;
                 case "asetukset": ui.Aanentasot.Avaa(); return null;
                 case "sulje": ui.SuljeKaikki(); return null;
