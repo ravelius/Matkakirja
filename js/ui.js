@@ -2331,6 +2331,43 @@ function puePohjaKortiksi(kortti, { otsikko = null, sulje = null } = {}) {
   if (sulje) sulje.className = 'tk-nappi tk-nappi--haamu tk-nappi--levea';
 }
 
+/**
+ * index.html:n kiinteä dialogi (otsikko, kappaleet, toimintorivi) KORTIKSI kerran: luokat vaihtuvat, mutta
+ * tunnisteet ja kuuntelijat pysyvät. `apuri` ja `korostus` ovat valitsimia kappaleille, jotka saavat apuri- tai
+ * korostusportaan; muut kappaleet ovat leipää. Ensisijainen nappi on kulta, haamu haamu ja muut TOIMINTO.
+ */
+function puePohjaDialogiksi(dialogi, { apuri = '', korostus = '' } = {}) {
+  const kortti = dialogi?.querySelector('.dialog-card');
+  if (!kortti || dialogi.dataset.pohja) return;
+  dialogi.dataset.pohja = 'kortti';
+  puePohjaKortiksi(kortti, { otsikko: kortti.querySelector('h2') });
+  for (const e of kortti.querySelectorAll('p')) {
+    if (apuri && e.matches(apuri)) e.className = 'tk-apuri';
+    else e.className = `tk-leipa${korostus && e.matches(korostus) ? ' tk-leipa--korostus' : ''}`;
+  }
+  for (const rivi of kortti.querySelectorAll('.dialog-actions, menu')) rivi.className = 'tk-napit';
+  for (const b of kortti.querySelectorAll('.tk-napit button')) {
+    const tyyppi = b.classList.contains('primary') ? ' tk-nappi--ensisijainen' : b.classList.contains('ghost') ? ' tk-nappi--haamu' : '';
+    b.className = `tk-nappi${tyyppi}`;
+  }
+}
+
+/** Puetun dialogin toimintorivi pystyyn, jos jokin näkyvä nimi ei mahdu vierekkäin (pohjan pystyrivi, ei lyhennystä). */
+function sovitaPohjaNapit(dialogi) {
+  if (!dialogi?.dataset.pohja) return;
+  // Pohjien tyylitiedosto latautuu ensimmäisellä kerralla taustalla: mitataan vasta sen jälkeen.
+  const tyyli = document.querySelector('link[rel="stylesheet"][href$="pohjat.css"]');
+  if (tyyli && !tyyli.sheet) {
+    tyyli.addEventListener('load', () => sovitaPohjaNapit(dialogi), { once: true });
+    return;
+  }
+  for (const rivi of dialogi.querySelectorAll('.tk-napit')) {
+    rivi.classList.remove('tk-napit--pysty');
+    const ylittyy = [...rivi.querySelectorAll('.tk-nappi')].some((b) => !b.hidden && b.scrollWidth > b.clientWidth + 1);
+    rivi.classList.toggle('tk-napit--pysty', ylittyy);
+  }
+}
+
 export class UI {
   constructor(game, { onNewGame, onChange, onJatkaTurvasta = null, turvaOlemassa = null }) {
     this.game = game;
@@ -19866,7 +19903,10 @@ export class UI {
     // Läpipeluu on saavutus vasta voitossa — ei vaellustilan välietapissa.
     natiiviSaavutus(NATIIVI_SAAVUTUKSET.lapipeluu);
     this.paivitaJakonappi();
+    // KORTTI-pohja (peruttava ?kortti=vanha); sama dialogi palvelee loppukorttia.
+    if (korttiPohjalla()) puePohjaDialogiksi(this.winnerDialog);
     if (!this.winnerDialog.open) this.winnerDialog.showModal();
+    sovitaPohjaNapit(this.winnerDialog);
   }
 
   /**
@@ -19900,7 +19940,9 @@ export class UI {
       this.onJatkaTurvasta?.();
     };
     this.paivitaJakonappi();
+    if (korttiPohjalla()) puePohjaDialogiksi(this.winnerDialog);
     if (!this.winnerDialog.open) this.winnerDialog.showModal();
+    sovitaPohjaNapit(this.winnerDialog);
   }
 
   /**
