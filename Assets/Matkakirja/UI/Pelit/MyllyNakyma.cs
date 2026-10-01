@@ -251,6 +251,7 @@ namespace Matkakirja.Natiivi
         void Tee(MyllySiirto s)
         {
             peli.Tee(s);
+            lauta.Animoi(s, peli.Nappula(s.Mihin));
             valittu = poistoKohde = poistoLahde = -1;
             Aanet.Tehoste("click");
             Paivita();
@@ -276,6 +277,7 @@ namespace Matkakirja.Natiivi
                 if (tehtava.IsFaulted) { Debug.LogError("MATKAKIRJA mylly: botti " + tehtava.Exception); yield break; }
                 var s = tehtava.Result;
                 peli.Tee(s);
+                lauta.Animoi(s, peli.Nappula(s.Mihin));
                 Aanet.Tehoste(s.Poista >= 0 ? "wrong" : "click", 0.8f);
                 Paivita();
                 TarkistaLoppu();
@@ -454,6 +456,20 @@ namespace Matkakirja.Natiivi
         Mylly peli;
         int valittu = -1, poistoKohde = -1, poistoLahde = -1, viimeisin = -1;
         readonly List<int> kohteet = new List<int>(), poistettavat = new List<int>();
+        // Siirron animaatio (Päätoimittaja 1.10.: liuku ≤ 250 ms, poistossa lyhyt häivytys): Tyylikirja.Kesto.Liuku ja Sulku.
+        MyllySiirto? anim; int animOmistaja; float animAlku = -1f;
+        static float LiukuS => Tyylikirja.Kesto.Liuku / 1000f;
+        static float HaivytysS => Tyylikirja.Kesto.Sulku / 1000f;
+        float AnimT(float kesto) => anim.HasValue ? Mathf.Clamp01((Time.realtimeSinceStartup - animAlku) / kesto) : 1f;
+        static float Pehmea(float t) => 1f - (1f - t) * (1f - t) * (1f - t); // ulos-hidastuva (vrt. tyylikirjan sisaan-käyrä)
+
+        /// <summary>Käynnistää siirron animaation: liuku lähteestä kohteeseen (asetus: kasvu paikalleen) ja poistetun häivytys.</summary>
+        public void Animoi(MyllySiirto s, int omistaja)
+        {
+            anim = s; animOmistaja = omistaja; animAlku = Time.realtimeSinceStartup;
+            float loppu = animAlku + Mathf.Max(LiukuS, HaivytysS) + 0.02f;
+            schedule.Execute(MarkDirtyRepaint).Every(16).Until(() => { if (Time.realtimeSinceStartup <= loppu) return false; anim = null; MarkDirtyRepaint(); return true; });
+        }
 
         public MyllyLauta(Action<int> napautettu)
         {
@@ -528,9 +544,11 @@ namespace Matkakirja.Natiivi
             foreach (int k in kohteet) Ympyra(p, Kohta(k), sade * 0.45f, null, kulta, sade * 0.12f);
             if (peli == null) return;
 
+            float tl = Pehmea(AnimT(LiukuS)), th = AnimT(HaivytysS);
             for (int a = 0; a < Mylly.Pisteita; a++)
             {
                 int o = peli.Nappula(a);
+                if (anim.HasValue && a == anim.Value.Mihin && tl < 1f) continue; // piirretään liukuvana alla
                 bool siirtyy = a == poistoLahde;
                 if (o < 0 && a != poistoKohde) continue;
                 if (siirtyy) continue; // nappula on jo siirtymässä poistoKohteeseen
@@ -540,6 +558,26 @@ namespace Matkakirja.Natiivi
                 Ympyra(p, Kohta(a), sade, o == 0 ? pinta : muste, o == 0 ? muste : pehmea, sade * 0.1f);
                 Ympyra(p, Kohta(a), sade * 0.62f, null, o == 0 ? reunus : pehmea, sade * 0.06f);
                 if (a == viimeisin) Ympyra(p, Kohta(a), sade * 0.2f, kulta, null, 0);
+            }
+            if (anim.HasValue)
+            {
+                var am = anim.Value;
+                // Poistettu nappula häivyy pois (vastustajan väri).
+                if (am.Poista >= 0 && th < 1f)
+                {
+                    int v = 1 - animOmistaja;
+                    Color tayte = v == 0 ? pinta : muste, reuna = v == 0 ? muste : pehmea;
+                    tayte.a = reuna.a = 1f - th;
+                    Ympyra(p, Kohta(am.Poista), sade * (1f + 0.15f * th), tayte, reuna, sade * 0.1f);
+                }
+                // Liukuva (siirto/lento) tai kasvava (asetus) nappula.
+                if (tl < 1f)
+                {
+                    var paikka = am.Mista >= 0 ? Vector2.Lerp(Kohta(am.Mista), Kohta(am.Mihin), tl) : Kohta(am.Mihin);
+                    float rr = am.Mista >= 0 ? sade : sade * (0.7f + 0.3f * tl);
+                    Ympyra(p, paikka, rr, animOmistaja == 0 ? pinta : muste, animOmistaja == 0 ? muste : pehmea, sade * 0.1f);
+                    Ympyra(p, paikka, rr * 0.62f, null, animOmistaja == 0 ? reunus : pehmea, sade * 0.06f);
+                }
             }
         }
 
