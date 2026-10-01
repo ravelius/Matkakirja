@@ -53,7 +53,11 @@ k1 = kohina(24); k2 = kohina(6); kk = 0.7 * k1 + 0.3 * k2
 s = lambda x, a, b: np.clip((x - a) / (b - a), 0, 1)  # pehmeä askel
 et_linna = np.hypot(X, Y)
 w = np.zeros((6, N, N), np.float32)
-w[0] = np.maximum(kal.astype(np.float32) * 0.85, s(rinne + 4 * kk, 18, 28))                         # kallio
+# v3b (1.10.): MML:n kallioalueilla kasvaa männikköä; metsän alla kallio vain laikkuina (sammal ja varvut päällä).
+# Ennen kallio oli 100 % myös puiden alla, ja sen harmaa sävy oli natiivissa lähes järven väri ("puut vedessä").
+metsa_k = s(lat, 3, 8)
+kallio_laikku = s(0.7 * kohina(8) + 0.3 * k2, 0.3, 1.2)
+w[0] = np.maximum(kal.astype(np.float32) * (0.85 * (1 - metsa_k) + 0.55 * metsa_k * kallio_laikku), s(rinne + 4 * kk, 18, 28))  # kallio
 w[4] = s(4.0 - et_vesi + 1.2 * k2, 0, 2.5) * (1 - s(rinne, 25, 35))                                 # rantakivikko
 w[5] = w[4] * s(5 - rinne, 0, 3) * s(0.6 - H, 0, 0.4) * s(kk, -0.2, 0.6)                             # hiekka (loiva, matala)
 w[4] *= 1 - w[5]
@@ -67,7 +71,7 @@ if os.path.exists(os.path.join(K, 'kohouma.npz')):  # v3: kalliokerros kallion k
     _g = np.load(os.path.join(K, 'kohouma.npz')); _kp = _g['kallio'].astype(np.float32) / 255; _kr = float(_g['res'])
     jx = np.clip(((X - float(_g['x0'])) / _kr).round().astype(int), 0, _kp.shape[1] - 1); jy = np.clip(((float(_g['y0']) - Y) / _kr).round().astype(int), 0, _kp.shape[0] - 1)
     sis_ = (np.abs(X) < float(_g['lahi'])) & (np.abs(Y) < float(_g['lahi']))
-    w[0] = np.maximum(w[0], np.where(sis_, _kp[jy, jx], avoin * s(k3 + 0.3 * k2, 1.3, 1.8)))
+    w[0] = np.maximum(w[0], np.where(sis_, _kp[jy, jx] * (1 - metsa_k * (1 - kallio_laikku)), avoin * s(k3 + 0.3 * k2, 1.3, 1.8)))
 else: w[0] = np.maximum(w[0], avoin * s(k3 + 0.3 * k2, 1.3, 1.8))  # v2: avokalliota niityn keskellä
 for i in (1, 2, 3): w[i] *= 1 - np.maximum(w[0], np.maximum(w[4], w[5]))
 vesi = ~maa  # veden alla: pohja kivikkoa rannan lähellä (< 6 m), sitten hiekkaa (näkyy veden läpi matalikossa)

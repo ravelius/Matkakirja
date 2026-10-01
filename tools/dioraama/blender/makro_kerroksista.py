@@ -44,7 +44,10 @@ ix = np.clip(((a[0] + (np.arange(n) + 0.5) * (a[2] - a[0]) / n) + SADE).astype(i
 lat = C[iy][:, ix].astype(np.float32); q = np.pad(lat, 3, mode='edge'); lat = sum(q[a_:a_ + n, b_:b_ + n] for a_ in range(0, 7, 3) for b_ in range(0, 7, 3)) / 9
 avoin = 1 - np.clip((lat - 3) / 5, 0, 1)
 t = (t * avoin)[..., None]
-kerros = kerros * 0.75  # ylhäältä katsottuna pinta tummempi kuin lähikuvatekstuurin keskiarvo (varjot, kosteus)
+# ylhäältä katsottuna pinta tummempi kuin lähikuvatekstuurin keskiarvo (varjot, kosteus); kallio v3b: jäkälä ja
+# rapautunut graniitti vaaleina (0,95), ettei harmaa kallio sekoitu järven väriin (natiivi 1.10.)
+kerroin = np.full(len(keski), 0.75, np.float32); kerroin[0] = 0.95
+kerros = w @ (keski * kerroin[:, None])
 uusi = kerros * (1 + 0.15 * (vaihtelu - 1))[..., None]  # v3: ilmakuvan laikut puolitettu (tummat läiskät lähellä)
 tulos = osa * (1 - t) + np.clip(uusi, 0, 1) * t
 kuva = np.asarray(im).copy(); kuva[r0:r1, c0:c1] = (tulos * 255).round().astype(np.uint8)
