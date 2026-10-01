@@ -311,6 +311,27 @@
 .tk-kortti .tk-otsikko[tabindex="-1"]:focus { outline: none; }
 /* Otsikon alaviiva riittää: lomakkeen ensimmäinen katkoviiva olisi toinen viiva sen alla. */
 .tk-kortti .tk-otsikko + .periaate-lomake > :first-child { margin-top: var(--tk-vali-s); padding-top: 0; border-top: none; }
+/* Vanha `.dialog button` (0,1,1) ohittaisi napin pinnan, reunuksen ja kulman: sama pohja dialogin sisällä. */
+.dialog .tk-kortti .tk-nappi,
+.dialog .tk-kortti .tk-nappi:hover:not(:disabled) {
+  background: transparent;
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  color: var(--tk-muste);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.dialog .tk-kortti .tk-nappi--ensisijainen,
+.dialog .tk-kortti .tk-nappi--ensisijainen:hover:not(:disabled) {
+  border-color: var(--tk-toiminto);
+  background: var(--tk-toiminto);
+  color: var(--tk-paperi-muste);
+}
+.dialog .tk-kortti .tk-nappi--haamu,
+.dialog .tk-kortti .tk-nappi--haamu:hover:not(:disabled) { border-color: transparent; }
+/* Ikoninappi (voittokortin Jatka vaeltamista): ikoni ja teksti rinnakkain pohjan välillä. */
+.tk-kortti .tk-nappi:has(.viiva-ikoni) { display: inline-flex; align-items: center; justify-content: center; gap: var(--tk-vali-xs); }
+.tk-kortti .tk-napit--pysty .tk-nappi:has(.viiva-ikoni) { display: flex; justify-content: flex-start; }
 
 /* ── Esikatselu (tyylikirjasivu): pohja paikallaan virrassa, ei kiinnitettynä ───────────────── */
 
