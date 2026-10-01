@@ -128,13 +128,18 @@ namespace Matkakirja.Natiivi
                 paneeli.style.borderTopColor = reuna; paneeli.style.borderBottomColor = reuna;
                 paneeli.style.borderLeftColor = reuna; paneeli.style.borderRightColor = reuna;
             }
-            bool uusi = tunnus != linssiTunnus;
             linssiTunnus = tunnus;
             linssiAuki = UiNakymat.Olemassa && UiNakymat.Hae().Linssit?.Auki != null;
             avataanLinssiin = true;
             if (!Auki) Avaa(false);
             avataanLinssiin = false;
-            if (uusi) NaytaKohteenValmiit(valmiit);
+            // Napeissa vain nykyisen kohteen kysymykset (Päätoimittaja 1.10.: kartan jatkot ja ehdotukset näkyivät Etnan
+            // rinnalla). Historia jää vieritettäväksi yläpuolelle; uudet napit ovat lopussa, ja virta vierii niihin.
+            PoistaSirut();
+            NaytaKohteenValmiit(valmiit);
+            // Ilman kohteen kysymyksiä avaus silti uusimpaan viestiin.
+            if (valmiit == null || valmiit.Count == 0)
+                virta.schedule.Execute(() => virta.scrollOffset = new Vector2(0f, Mathf.Max(0f, virta.contentContainer.layout.height - virta.contentViewport.layout.height))).ExecuteLater(30);
             Asettele();
         }
 
