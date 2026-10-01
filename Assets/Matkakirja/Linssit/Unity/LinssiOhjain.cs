@@ -1802,6 +1802,7 @@ namespace Matkakirja.Natiivi
                             if (osat.Length > 3 && osat[3] == "tila") Kirjaa($"astro kyyti kuvaa: {Matkakirja.Natiivi.IssKameraKuva.Tila} {Matkakirja.Natiivi.IssKameraKuva.Edistyminen:P0} {Matkakirja.Natiivi.IssKameraKuva.ViimeisinKuva}");
                             else if (osat.Length > 4 && osat[3] == "laatat") Matkakirja.Natiivi.IssKameraKuva.SailytaLaatat = osat[4] != "0";
                             else if (osat.Length > 4 && osat[3] == "odotus") Matkakirja.Natiivi.IssKameraKuva.LisaOdotus = (float)Luku(osat[4]);
+                            else if (osat.Length > 4 && osat[3] == "sini") Matkakirja.Natiivi.IssKameraKuva.MaanSini = (float)Luku(osat[4]);
                             else if (osat.Length > 4 && osat[3] == "sarja") Matkakirja.Natiivi.IssKameraKuva.Sarja = (int)Luku(osat[4]);
                             else Kirjaa("astro kyyti kuvaa: " + (Matkakirja.Natiivi.IssKameraKuva.Hae().Laukaise(osat.Length > 3 ? osat[3] : "4:5",
                                 osat.Length > 4 ? (int)Luku(osat[4]) : 3240) ? "laukaistu" : "ei laukaistu (käynnissä tai ei kyytiä)"));

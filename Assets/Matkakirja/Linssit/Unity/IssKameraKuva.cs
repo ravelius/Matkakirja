@@ -36,6 +36,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Lisäodotus (s) latauksen tasaannuttua ennen kaappausta (laitekoe 5: 400 mm:n z14-kaistat; ComputeLoadProgress
         /// ei ilmeisesti laske rasterilatauksia). Testikomento `astro kyyti kuvaa odotus <s>`.</summary>
         public static float LisaOdotus = 8f;
+        /// <summary>Maan ja meren kylläinen sininen kaukana (KuvanTyosto.MaanSini; 0 = pois). Testikomento `astro kyyti kuvaa sini <x>`.</summary>
+        public static float MaanSini = 0f;
         /// <summary>Testi: lisäkuvia 10 s:n välein kaappauksen jälkeen (id-1.jpg …), `astro kyyti kuvaa sarja <n>`.</summary>
         public static int Sarja;
         const int Rinnakkain = 8;
@@ -272,7 +274,7 @@ namespace Matkakirja.Natiivi
                     if (scl.TryGetValue(ru.Tunnus, out var so)) ty.LisaaMaamaski(ru, so, (x, y) => sclPuretut.TryGetValue((ru.Tunnus, x, y), out var l) ? l : null);
                 var (az, korkeus) = AurinkoPisteessa(utc, naytteet.Average(n => n.Lat), naytteet.Average(n => n.Lon));
                 ty.Pilvet = new Pilvikentta { MaaOsuus = ty.MaaOsuus, AurinkoAz = az, AurinkoKorkeus = korkeus }.Kalibroi();
-                ty.Kamera = kk.Paikka;   // pilvipeitto kasvaa etäisyyden mukaan (Cupola-mallikuva)
+                ty.MaanSini = MaanSini; ty.Kamera = kk.Paikka;   // pilvipeitto kasvaa etäisyyden mukaan (Cupola-mallikuva)
                 var lista = ty.Laatat.ToList(); int kirjoitettu = 0;
                 int ytimia = Math.Max(1, SystemInfo.processorCount - 1);   // vain pääsäikeessä (laitekoe 1.10.: säikeessä poikkeus)
                 // Avomeri (ei S2-ruutua): TCI:n tyypillinen meri tci_lutin läpi, ettei täyttö erotu tummana kaistana (laitekoe 2).

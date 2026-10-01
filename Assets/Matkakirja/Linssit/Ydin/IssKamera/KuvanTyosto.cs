@@ -15,6 +15,12 @@ namespace Matkakirja.Linssit.IssKamera
         public Pilvikentta Pilvet;
         /// <summary>Kameran paikka ECEF (m); pilvipeitto kasvaa etäisyyden mukaan (null = kerroin 1).</summary>
         public (double x, double y, double z)? Kamera;
+        /// <summary>
+        /// Maan ja meren kylläinen sininen kaukana (Päätoimittaja 1.10. 20.3x omistajan Cupola-mallikuvasta: "maa ja meri syvän
+        /// kylläisen sinisiä, ei maitomaisia; valkoiset pysyvät valkoisina"): pohjan värit siirtyvät sinistä kohti ennen pilviä,
+        /// paino etäisyydestä kuten pilvien kaukokentät (peittoK 1 → 1,85). Ilmakehän utu lisää valoa myös pilviin, tämä ei. 0 = pois.
+        /// </summary>
+        public double MaanSini;
 
         /// <summary>
         /// Pilvipeiton kerroin etäisyydestä (omistaja 1.10. 19.5x Cupola-mallikuvasta: "pilvikenttiä horisonttiin asti, valkoisen ja
@@ -336,13 +342,15 @@ namespace Matkakirja.Linssit.IssKamera
             if (m != null) { Buffer.BlockCopy(m, 0, rgba, 0, 256 * 256 * 4); peitto = 256 * 256; }
             else peitto = Uudelleenprojisointi.Laatta(Data, z, x, y, rgba);
             if (Pilvet == null) return peitto;
-            const int G = 32; var a = new float[(G + 1) * (G + 1)]; var kk = new float[a.Length]; var v = new float[a.Length];
+            const int G = 32; var a = new float[(G + 1) * (G + 1)]; var kk = new float[a.Length]; var v = new float[a.Length]; var sv = new float[a.Length];
             for (int j = 0; j <= G; j++)
                 for (int i = 0; i <= G; i++)
                 {
                     var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, i * 256.0 / G, j * 256.0 / G);
-                    var (pa, pk, pv) = Pilvet.Nayte(la, lo, PeittoK(la, lo));
+                    double pK = PeittoK(la, lo);
+                    var (pa, pk, pv) = Pilvet.Nayte(la, lo, pK);
                     int q = j * (G + 1) + i; a[q] = (float)pa; kk[q] = (float)pk; v[q] = (float)pv;
+                    double t = Math.Max(0, Math.Min(1, (pK - 1.0) / 0.85)); sv[q] = (float)(MaanSini * t * t * (3 - 2 * t));
                 }
             var (laK, _) = Uudelleenprojisointi.Pikseli(z, x, y, 128, 128);
             double pm = Uudelleenprojisointi.PikseliM(z, laK);
@@ -360,6 +368,15 @@ namespace Matkakirja.Linssit.IssKamera
                     if (lahi) { var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, px + 0.5, py + 0.5); var (pa, pk) = Pilvet.Lahi(la, lo, PeittoK(la, lo)); al = (float)pa; ki = (float)pk; }
                     else { al = H(a); ki = H(kk); }
                     al *= haivytys;
+                    float si = MaanSini > 0 ? Math.Min(1f, H(sv)) : 0f;
+                    if (si > 0)
+                    {
+                        // syvä sininen: punainen ja vihreä vaimenevat, sininen nousee pohjan kirkkauden mukaan (tummat pinnat tummansinisiksi)
+                        float r0 = rgba[o], g0 = rgba[o + 1], b0 = rgba[o + 2], lum = 0.3f * r0 + 0.55f * g0 + 0.15f * b0;
+                        rgba[o] = (byte)(r0 * (1 - 0.55f * si) + 0.5f);
+                        rgba[o + 1] = (byte)(g0 * (1 - 0.30f * si) + 0.5f);
+                        rgba[o + 2] = (byte)Math.Min(255f, b0 * (1 - 0.2f * si) + (lum * 0.9f + 18f) * si + 0.5f);
+                    }
                     for (int c = 0; c < 3; c++)
                     {
                         float pohja = rgba[o + c] * (1 - va), pilvi = 246f * ki * (c == 0 ? 1f : c == 1 ? 0.975f : 0.94f);
