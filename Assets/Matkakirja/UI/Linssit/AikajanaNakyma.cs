@@ -260,6 +260,9 @@ namespace Matkakirja.Natiivi
             kertomus.style.display = DisplayStyle.None;
             kertomusLaatikko = Rakenne.El("mk-aikajana-kertomus__laatikko", kertomus, PickingMode.Ignore);
             kertomusTeksti = Rakenne.Teksti("", "mk-aikajana-kertomus__teksti", kertomusLaatikko);
+            // Nostokortti peittää tekstityksen (web .ihmisen-nostokortti z-index 9, tekstityksellä ei z-indexiä; omistaja
+            // 1.10.2026 klo 09.2x): tekstitys kortin taakse, näkyy taas kortin sulkeuduttua.
+            kertomus.PlaceBehind(nostokortti.El);
             // Ruudun leveys vaihtui (kierto): laatikon leveys ja tasapaino uudelleen.
             kertomus.RegisterCallback<GeometryChangedEvent>(e =>
             {
