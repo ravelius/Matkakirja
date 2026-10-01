@@ -1,7 +1,7 @@
 # Laitetestaajan luovutus 1.10.2026 klo 06.0x (viikkokiintiö 95 %, Päätoimittajan käsky)
 
-Haara `laitetestaaja-savukierros-b13`. Kärki = tämän tiedoston commit (savukierros 1.1 (90) -commit **a6cf6f404** on
-sitä edellinen). Ei avoimia PR:jä (rooli committaa raportit suoraan omaan haaraansa). Repossa on muiden roolien
+Haara `laitetestaaja-savukierros-b13`. Kärki = tämän päivityksen commit (savukierros 1.1 (91) -commit **1a83547d7** on
+sitä edellinen). Uusi tili: ei ajastuksia (loop/cron/Monitor) käynnissä tästä sessiosta. Ei avoimia PR:jä (rooli committaa raportit suoraan omaan haaraansa). Repossa on muiden roolien
 untracked-tiedostoja (`tools/.natiivi-ui-*.mjs`, `tulokset/`, `docs/raportit/kuvat/vuosi-ndvi-thessalia-koe-20260928.png`)
 — älä koske.
 
@@ -10,15 +10,16 @@ iPad `3B4CDACB-CCBE-42EC-809D-FB4D0B43CC7D` (tarkista `xcrun simctl list devices
 PRB-välimuisti poistettu molemmista 30.9./1.10. (levyhälytys); ilmaantuu uudelleen, poista vain sammutetusta omasta
 (`.../data/Library/Application Support/PRBPosterExtensionDataStore`, EI erasea).
 
-## Viimeisin valmis kierros: 1.1 (90) 27c449e4 — PASS
-Olavinlinna (järvi, taivas, kuori; aluskasveja ei ilman ympäristöpakettia), regressio, mikseri, ISS/Cupola/EVA.
-Raportti `docs/raportit/savukierros-1190-20261001.md`. Kaikki 1.1 (76) … (90) -kierrokset raportoitu:
+## Viimeisin valmis kierros: 1.1 (91) f42339ca — PASS (tilinvaihto 1.10. klo 07.5x)
+Pulun turva-alue vaakana, `ui pelaaja 1/0` (mikserinappi + Kuori piilossa/takaisin linnassa ja Cupolassa — ratkaisi 89:n
+"ilman kehittäjätilaa" -kohdan), kuunnelma→`poikki yleis` ei jätä kaistaletta, regressio.
+Raportti `docs/raportit/savukierros-1191-20261001.md` (commit 1a83547d7). Edellinen: 1.1 (90) `savukierros-1190-20261001.md`.
+Kaikki 1.1 (76) … (91) -kierrokset raportoitu:
 `savukierros-11NN-2026093x/2026100x.md`, Natiiviseppä ja Julkaisija kuitattu aina. Avoimet "todentamatta"-kohdat:
 - 1.1 (83): kaupungit ilman luentakuvia (Ohita) — Ljubljana ei luentaa lainkaan, Bryssel/Valletta eivät tavoitettavissa
   `matka`-komennolla (1.1 (85)); tarvitaan toimiva kaupunki+kulkutapa.
 - 1.1 (88): Pulun Ihmisen matka -reitti, maakuntakortin kuvaselaus/minikarttaanimaatio, Ateenan kuvamerkki maanäkymässä.
-- 1.1 (89): mikserinapin piilotus ilman kehittäjätilaa — Debug-käännös on aina kehittäjätilassa (Asetukset.Kehittaja =
-  Debug.isDebugBuild), todennettava TF:ssä.
+- 1.1 (89) mikserinapin piilotus: RATKAISTU 1.1 (91):ssä `ui pelaaja 1` -komennolla.
 - Luennan 1,3 s lappuviive ja reittihahmojen kävelyn luontevuus (1.1 (85)) — kehysväli/tumma yö esti arvioinnin.
 
 ## Tämä sessio: protokolla tiivistettynä

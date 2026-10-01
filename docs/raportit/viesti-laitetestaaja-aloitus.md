@@ -8,7 +8,7 @@ tästä jos epäselvää).
 
 ## PÄIVITYS 1.10.2026 klo 06.0x — LUE TÄMÄ ENSIN (viikkokiintiö 95 %, Päätoimittajan käsky)
 - **docs/raportit/viesti-laitetestaaja-luovutus-20261001.md** on uusin luovutus (kärki, avoimet kohdat, protokolla tiivistettynä).
-  Viimeisin savukierros: 1.1 (90) 27c449e4 PASS (`savukierros-1190-20261001.md`); kaikki 1.1 (76)…(90) raportoitu.
+  Viimeisin savukierros: 1.1 (91) f42339ca PASS (`savukierros-1191-20261001.md`); kaikki 1.1 (76)…(91) raportoitu. TILINVAIHTO 1.10. klo 07.5x.
 - Ääni: pelin mykistys oletuksena; `aani mykistys 0` vain mittauksen ajan; Macin oletusulostuloon ei koskaan (alla oleva
   30.9. klo 16.2x -ohje voimassa).
 - Odota Natiiviseppän tarkistuslista + Julkaisijan "LAITE NYT"; yksi simulaattori kerrallaan; sammuta kierroksen jälkeen.
