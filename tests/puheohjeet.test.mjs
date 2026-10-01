@@ -104,3 +104,59 @@ test('Pulun striimiääni ElevenLabs v4 Turbolla: tagit, moottori ja reitti (omi
   assert.equal(kutsut[0].runko.text, 'Kas. <break time="0.4s" /> Pulu puhuu.');
   assert.match(kutsut[1].osoite, /api\.x\.ai/, 'kertoja pysyy xAI:lla');
 });
+
+test('Lukijat ElevenLabs v4 Turbolla: moottorivalinta, äänilista ja päiväkatto (omistaja 30.9.2026)', async () => {
+  const worker = await import('../tools/pollo/worker.js');
+  const { LUKIJA_ELEVEN_AANET, LUKIJA_ELEVEN_OLETUS, LUKIJA_ELEVEN_MALLI, lukijaElevenPyydetty } = worker;
+  assert.equal(LUKIJA_ELEVEN_MALLI, 'eleven_v4_turbo');
+  assert.ok(Object.keys(LUKIJA_ELEVEN_AANET).length >= 15 && Object.keys(LUKIJA_ELEVEN_AANET).length <= 25);
+  assert.equal(Object.keys(LUKIJA_ELEVEN_AANET)[0], LUKIJA_ELEVEN_OLETUS, 'oletus (isoisä) listan ensimmäisenä');
+  assert.equal(worker.LUKIJA_ELEVEN_MALLIT[LUKIJA_ELEVEN_OLETUS], 'eleven_v3', 'isoisä v3:lla');
+  assert.ok(Object.hasOwn(LUKIJA_ELEVEN_AANET, LUKIJA_ELEVEN_OLETUS));
+  assert.equal(lukijaElevenPyydetty({ ELEVEN_API_KEY: 'k' }, 'merkinnat', { moottori: 'eleven' }, true), true);
+  assert.equal(lukijaElevenPyydetty({ ELEVEN_API_KEY: 'k' }, 'merkinnat', { moottori: 'eleven' }, false), false, 'ilman kehittäjäkoodia xAI');
+  assert.equal(lukijaElevenPyydetty({ ELEVEN_API_KEY: 'k' }, 'merkinnat', {}, true), false, 'oletus xAI');
+  assert.equal(lukijaElevenPyydetty({}, 'merkinnat', { moottori: 'eleven' }, true), false, 'ilman avainta xAI');
+  assert.equal(lukijaElevenPyydetty({ ELEVEN_API_KEY: 'k' }, 'pollo', { moottori: 'eleven' }, true), false, 'Pulu omalla reitillään');
+
+  const kutsut = [];
+  const alkuperainen = globalThis.fetch;
+  globalThis.fetch = async (osoite, asetukset) => {
+    kutsut.push({ osoite: String(osoite), runko: JSON.parse(asetukset.body) });
+    return new Response(new Uint8Array([0xff, 0xf3, 0x44, 0xc4]), { status: 200, headers: { 'content-type': 'audio/mpeg' } });
+  };
+  const kvData = new Map();
+  const kv = { get: async (a) => kvData.get(a) ?? null, put: async (a, v) => { kvData.set(a, v); } };
+  const env = { ELEVEN_API_KEY: 'e', XAI_API_KEY: 'x', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KV: kv, ELEVEN_LUKIJA_PAIVARAJA: '60', POLLO_KEHITTAJAKOODI: 'salainen' };
+  const aani = Object.keys(LUKIJA_ELEVEN_AANET).find((a) => a !== LUKIJA_ELEVEN_OLETUS);
+  const pyynto = (runko, koodi = 'salainen') => worker.default.fetch(new Request('https://pollo.example/', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'cf-connecting-ip': '203.0.113.9',
+      ...(koodi ? { 'x-pollo-kehittaja': koodi } : {}) },
+    body: JSON.stringify({ tehtava: 'puhe', persoona: 'merkinnat', ...runko }),
+  }), env, {});
+  try {
+    const ilman = await pyynto({ teksti: 'Ilman koodia.', moottori: 'eleven' }, null);
+    assert.equal(ilman.headers.get('x-puhe-moottori'), 'xai', 'ilman kehittäjäkoodia ei maksullista moottoria');
+    const a = await pyynto({ teksti: 'Marathonin tasanko. [pause] Kumpu.', moottori: 'eleven', aani });
+    assert.equal(a.headers.get('x-puhe-moottori'), 'eleven');
+    const isoisa = await pyynto({ teksti: 'Isoisä.', moottori: 'eleven' });
+    assert.equal(isoisa.headers.get('x-puhe-moottori'), 'eleven', 'oletusääni (isoisä)');
+    const b = await pyynto({ teksti: 'Toinen pala, joka ylittää katon.', moottori: 'eleven' });
+    assert.equal(b.headers.get('x-puhe-moottori'), 'xai', 'päiväkatto täynnä → xAI');
+    const c = await pyynto({ teksti: 'Tavallinen luenta.' });
+    assert.equal(c.headers.get('x-puhe-moottori'), 'xai', 'ilman moottorivalintaa xAI');
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
+  assert.match(kutsut[0].osoite, /api\.x\.ai/, 'ilman koodia xAI');
+  assert.match(kutsut[1].osoite, new RegExp(`api\\.elevenlabs\\.io/v1/text-to-speech/${aani}/stream`));
+  assert.equal(kutsut[1].runko.model_id, 'eleven_v4_turbo');
+  assert.equal(kutsut[1].runko.text, 'Marathonin tasanko. <break time="0.4s" /> Kumpu.');
+  assert.match(kutsut[2].osoite, new RegExp(`api\\.elevenlabs\\.io/v1/text-to-speech/${LUKIJA_ELEVEN_OLETUS}/stream`));
+  assert.equal(kutsut[2].runko.model_id, 'eleven_v3', 'isoisän ääni vanhemmalla mallilla (omistaja 30.9. klo 23.5x)');
+  assert.match(kutsut[3].osoite, /api\.x\.ai/);
+  assert.match(kutsut[4].osoite, /api\.x\.ai/);
+  const laskuri = [...kvData.entries()].find(([k]) => k.startsWith('eleven:lukija:p:'));
+  assert.ok(laskuri && Number(laskuri[1]) > 0, 'globaali eleven-laskuri kasvoi');
+});

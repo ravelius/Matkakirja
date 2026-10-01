@@ -73,7 +73,7 @@
  * enää käytetä.
  */
 
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { laskeKierros } from '../js/linssit/astronautin-kierros.js';
 import { kierrosLohko } from './laske-astronautin-kierros.mjs';
 import { dirname, join } from 'node:path';
@@ -94,10 +94,32 @@ export const KUVASIVU = 'https://images.nasa.gov/details/';
  * NASAn alkuperäiset, palkilliset osoitteet.
  */
 const OMA_AMPARI = 'https://media.matkakirja.app/linssit/astronautin-kamera/';
-export const KUVAPOIKKEUKSET = new Set([
+/*
+ * VERSIOKANSIOT: rajatut kuvat ovat immutable-välimuistissa, joten jokainen
+ * uusi rajausera menee omaan kansioonsa (ei ylikirjoitusta). '' = vanha
+ * juurikansio (20.–21.9.2026, 12 havaintoa); '20261001/' = omistajan
+ * tilaus 30.9.2026 (Everglades ISS015E08920), kaikki loput palkilliset.
+ * Kirjanpito: tools/astro-palkit-tarkistetut.json; uuden kuvan tarkistus:
+ * tools/astro-palkki.mjs (tests/astro-palkki.test.mjs vaatii, että jokainen
+ * aineiston havainto on tarkistettu).
+ */
+const VANHAT_POIKKEUKSET = [
   'iss005e19024', 'iss013e62714', 'iss020e009048', 'iss014e17165',
   'iss025e009858', 'iss002e5693', 'iss010e12917', 'iss026e016287',
-  'iss024e011914', 'iss013e65526', 'iss015e29867', 'iss018e038182',
+  'iss024e011914', 'iss013e65526', 'iss015e29867', 'iss018e038182'
+];
+const UUDET_20261001 = [
+  'iss002e7758', 'iss005e11203', 'iss007e08259', 'iss007e14361',
+  'iss010e13393', 'iss012e06469', 'iss013e77351', 'iss013e77377',
+  'iss014e08138', 'iss014e08744', 'iss014e15732', 'iss014e17346',
+  'iss015e05624', 'iss015e08920', 'iss016e010784', 'iss016e010894',
+  'iss017e005037', 'iss017e005351', 'iss019e007720', 'iss021e015243',
+  'iss021e026475', 'iss022e019513', 'iss023e027737', 'iss023e029806',
+  'iss023e035670', 'iss025e005259', 'iss026e006255', 'iss027e034290',
+];
+export const KUVAPOIKKEUKSET = new Map([
+  ...VANHAT_POIKKEUKSET.map((id) => [id, '']),
+  ...UUDET_20261001.map((id) => [id, '20261001/']),
 ]);
 
 /**
@@ -3064,8 +3086,8 @@ export async function haeKuva({ id, teksti }) {
     retkikunta: retkikunta(id),
     kuvaaja: d.photographer || null,
     mitat: iso?.width && iso?.height ? [iso.width, iso.height] : null,
-    kuva: KUVAPOIKKEUKSET.has(id) ? `${OMA_AMPARI}${id}~large.jpg` : https(kuva),
-    pikku: KUVAPOIKKEUKSET.has(id) ? `${OMA_AMPARI}${id}~small.jpg` : https(pikku),
+    kuva: KUVAPOIKKEUKSET.has(id) ? `${OMA_AMPARI}${KUVAPOIKKEUKSET.get(id)}${id}~large.jpg` : https(kuva),
+    pikku: KUVAPOIKKEUKSET.has(id) ? `${OMA_AMPARI}${KUVAPOIKKEUKSET.get(id)}${id}~small.jpg` : https(pikku),
     sivu: `${KUVASIVU}${id}`,
   };
 }
@@ -3098,6 +3120,19 @@ async function main() {
       havainnot,
     });
     process.stdout.write(`  ${k.tunnus}: ${havainnot.length} kuvaa, oletus ${oletus}\n`);
+  }
+
+  // PALKKITARKISTUS (omistaja 30.9.2026): jokainen kuva on tarkistettava
+  // tools/astro-palkki.mjs:llä ja kirjattava tools/astro-palkit-tarkistetut.json
+  // ennen kuin se pääsee aineistoon. Palkilliset kuvat rajataan ja lisätään
+  // KUVAPOIKKEUKSET-karttaan.
+  const tarkistetut = JSON.parse(readFileSync(join(JUURI, 'tools/astro-palkit-tarkistetut.json'), 'utf8')).havainnot;
+  const tarkistamatta = kohteet.flatMap((k) => k.havainnot).map((h) => h.id).filter((id) => !(id in tarkistetut));
+  if (tarkistamatta.length) {
+    throw new Error(`Palkkitarkistus puuttuu: ${tarkistamatta.join(', ')}. Aja node tools/astro-palkki.mjs tarkista <kuvat> ja kirjaa tulos tools/astro-palkit-tarkistetut.json:iin.`);
+  }
+  for (const id of KUVAPOIKKEUKSET.keys()) {
+    if (!tarkistetut[id]?.palkki) throw new Error(`${id}: KUVAPOIKKEUKSET-poikkeus ilman palkki-kirjausta`);
   }
 
   const paiva = new Date().toISOString().slice(0, 10);
