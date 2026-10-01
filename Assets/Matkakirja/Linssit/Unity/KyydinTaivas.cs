@@ -41,9 +41,9 @@ namespace Matkakirja.Natiivi
 
         CesiumGeoreference g;
         Camera kamera;
-        Material tahtiMat, kuuMat;
+        Material tahtiMat, kuuMat, aurinkoMat;
         Mesh tahtiMesh, kuuMesh;
-        MeshRenderer tahtiPiirto, kuuPiirto;
+        MeshRenderer tahtiPiirto, kuuPiirto, aurinkoPiirto;
         bool nakyy;
         // Diagnostiikka (laite taivas1–3 28.9.: oikeita tähtiä ei näkynyt edes pakotetussa varjossa): suunnat ja magnitudit.
         Vector3[] tahtiSuunnat = Array.Empty<Vector3>();
@@ -70,6 +70,13 @@ namespace Matkakirja.Natiivi
             // GameObject-piirtäjät Graphics.DrawMeshin sijaan (laite taivas1–3: DrawMeshillä kamerakohtaisesti piirretyt tähdet
             // ja Kuu eivät näkyneet, satunnainen GameObject-tähtikenttä näkyi; elävän kerroksen tilat vaihtavat pääkameran).
             t.kuuPiirto = Piirtaja(go.transform, "KyydinKuu", t.kuuMesh, t.kuuMat);
+            // Aurinko vain kuvaputkessa (Linssiseppä 1.10., juliste "aurinko horisontin reunalla"); sama neliö kuin Kuulla.
+            var aurinko = Resources.Load<Shader>("Varjostimet/KyydinAurinko");
+            if (aurinko != null)
+            {
+                t.aurinkoMat = new Material(aurinko) { name = "KyydinAurinko" };
+                t.aurinkoPiirto = Piirtaja(go.transform, "KyydinAurinko", t.kuuMesh, t.aurinkoMat);
+            }
             t.StartCoroutine(t.HaeTahdet());
             return t;
         }
@@ -201,6 +208,7 @@ namespace Matkakirja.Natiivi
             bool paalla = nakyy && !Pois && kamera != null && g != null;
             if (tahtiPiirto != null) tahtiPiirto.enabled = paalla;
             if (kuuPiirto != null) kuuPiirto.enabled = paalla;
+            if (aurinkoPiirto != null) aurinkoPiirto.enabled = paalla && Matkakirja.Natiivi.Avaruus.Kuvaputki;
             if (!paalla) return;
             var utc = IssNyt.Kello();
             double jd = Aika.Jd(utc);
@@ -236,6 +244,7 @@ namespace Matkakirja.Natiivi
             Vector3 kuuMaailma = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(
                 new double3(kuuEcef.x, kuuEcef.y, kuuEcef.z))).normalized;
             kuuMat.SetVector(IdSuunta, kuuMaailma);
+            if (aurinkoMat != null) aurinkoMat.SetVector(IdSuunta, aurMaailma);
             kuuMat.SetVector(IdAurinko, aurMaailma);
             kuuMat.SetFloat(IdKoko, Mathf.Tan(KuunKulma * 0.5f * Mathf.Deg2Rad));
             if (Time.unscaledTime >= seuraavaLoki) { seuraavaLoki = Time.unscaledTime + 10f; Kirjaa(ex, ey, Z, kuuMaailma, varjossa); }
@@ -267,6 +276,7 @@ namespace Matkakirja.Natiivi
             if (kuuMesh != null) Destroy(kuuMesh);
             if (tahtiMat != null) Destroy(tahtiMat);
             if (kuuMat != null) Destroy(kuuMat);
+            if (aurinkoMat != null) Destroy(aurinkoMat);
         }
     }
 }
