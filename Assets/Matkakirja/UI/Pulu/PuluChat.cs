@@ -155,7 +155,7 @@ namespace Matkakirja.Natiivi
             foreach (var e in virta.Query(className: "mk-chat__kohdevalmiit").ToList()) e.RemoveFromHierarchy();
         }
 
-        void NaytaKohteenValmiit(IReadOnlyList<string> valmiit)
+        void NaytaKohteenValmiit(IReadOnlyList<string> valmiit, Aihe aihe = null)
         {
             foreach (var e in virta.Query(className: "mk-chat__kohdevalmiit").ToList()) e.RemoveFromHierarchy();
             if (valmiit == null || valmiit.Count == 0) return;
@@ -163,7 +163,7 @@ namespace Matkakirja.Natiivi
             foreach (var q in valmiit)
             {
                 string kysymys = q;
-                Kirjasimet.Aseta(Rakenne.Nappi(kysymys, "mk-chat__siru", () => Kysy(kysymys), ryhma), Kirjasin.Kone);
+                Kirjasimet.Aseta(Rakenne.Nappi(kysymys, "mk-chat__siru", () => Kysy(kysymys, aihe: aihe), ryhma), Kirjasin.Kone);
             }
             Vierita(ryhma);
         }
@@ -352,6 +352,18 @@ namespace Matkakirja.Natiivi
         public void Vaihda() { if (Auki) Sulje(); else Avaa(); }
 
         public void Avaa() => Avaa(true);
+
+        /// <summary>
+        /// NOSTOKORTTI-pohjan Kysy-nappi (omistaja 1.10.2026, kohdekortti kokeiluun, loki f344f1034): chat aukeaa kortin
+        /// aiheella, ja kortin valmiit kysymykset ovat siruina (kysyminen kortin aiheen kanssa). Ei ehdotushakua.
+        /// </summary>
+        public void AvaaKortista(Aihe aihe, IReadOnlyList<string> valmiit)
+        {
+            Avaa(false);
+            PoistaSirut();
+            NaytaKohteenValmiit(valmiit, aihe);
+            Asettele();
+        }
 
         /// <param name="ehdotukset">false = avaus kysymyksen takia (Kysy): ei rinnakkaista ehdotushakua, joka hidasti
         /// vastausta (iPad 28.9.: ensimmäinen virke 12 s, kun chat avattiin kysymyksellä; iPhone auki olleena 5 s)</param>
