@@ -115,8 +115,9 @@ VENYMA = 0.5    # venynyt kolmio: kärki painui yli tämän ja toinen kärki jä
 # pilkotaan ja saavat oman UV:n atlaksen vapaasta tilasta, sitten sama maalaus; kuori_tayte).
 RYHMAT = {'piha': 'poista', 'lounas': 'jata', 'koillinen': 'paikkaa', 'koillinen_kansi': 'paikkaa', 'itaportas': 'paikkaa', 'kaakko': 'tayta', 'koillisbastioni': 'poista',
           'lansipiha': 'poista', 'etela': 'poista', 'itabastioni': 'poista', 'ita_harja': 'poista', 'etela_katto': 'poista',
-          'etela_alakatto': 'poista', 'vene': 'poista', 'ponttoni': 'jata'}
-VEDEN_ALLE = {'ponttoni', 'vene'}  # ryhmät, joiden pinta painuu kokonaan vedenpinnan alle: geometria vain, ei maalausta
+          'etela_alakatto': 'poista', 'vene': 'poista', 'ponttoni': 'paikkaa'}
+VEDEN_ALLE = {'ponttoni', 'vene'}
+VEDEN_ALLE_SYVYYS = 0.3  # painuma tason (vedenpinnan) alle näissä ryhmissä  # ryhmät, joiden pinta painuu kokonaan vedenpinnan alle: geometria vain, ei maalausta
 
 
 def siivoa(o, kuva, log=print):
@@ -226,6 +227,7 @@ def siivoa_np(co, tv, uv, rgb, log=print):
             suoja = np.zeros(len(co), bool)
             if maa is not None:  # tason maa alueelle ja 3 m:n vyöhykkeelle (venymätesti) tason ylä- ja yläpuolella
                 t = tasot[nimi](co[lahi, :2])
+                if ryhma in VEDEN_ALLE: t = np.full_like(t, maa)  # vedenpinnan alle tasan (sovitettu taso jäi −6,9:ään, 1.10.)
                 oma = alue[lahi] | ((co[lahi, 2] > t - 0.5) & (etaisyys(co[lahi, :2], p) < 3.0))
                 gk[lahi[oma]] = t[oma]
                 # Muurin juuri säilyy: kärki, jonka 0,25 m:n pystysarakkeessa pinta jatkuu yli korkeusrajan (linnan muuri
@@ -242,7 +244,8 @@ def siivoa_np(co, tv, uv, rgb, log=print):
             siirr = tas & (co[:, 2] > gk + DZ)
             zv = co[:, 2].copy(); co[tas, 2] = gk[tas]
             # Painettu romu 5 cm maanpinnan alle: päällekkäiset pinnat eivät varjosta toisiaan leivonnassa (hämärä 29.9.).
-            co[siirr, 2] = gk[siirr] - PAINUMA
+            co[siirr, 2] = gk[siirr] - (VEDEN_ALLE_SYVYYS if ryhma in VEDEN_ALLE else PAINUMA)
+            if ryhma in VEDEN_ALLE: co[tas, 2] = gk[tas] - VEDEN_ALLE_SYVYYS  # myös maan tasolle jääneet (−7,0 välkkyi veden kanssa)
             ylhaalla = np.zeros(len(co), bool); ylhaalla[lahi] = ~tas[lahi] & (co[lahi, 2] - gk[lahi] > VENYMA)
             ven = ((zv - co[:, 2])[tv] > VENYMA).any(1) & ylhaalla[tv].any(1)
             if tapa == 'poista': poista |= ven
@@ -259,7 +262,7 @@ def siivoa_np(co, tv, uv, rgb, log=print):
             log(f'SIIVOUS: {nimi}: {int(alue.sum())} vertexiä alueella, {int(siirr.sum())} painettu maahan '
                 f'(dz keskim. {float((zv[siirr]-gk[siirr]).mean()) if siirr.any() else 0:.2f} m), venyneitä {int(ven.sum())} ({tapa}), muurin juuria {int(suoja.sum())}')
         venyneet |= juuret & ~taytto
-        if venyneet.any() and tayt is not None:
+        if venyneet.any():  # v19: myös veden alle painuvien ryhmien verhot maalataan muurin kivellä
             Ms, vaaka = seinapaikka(co, tv, uvp, rgb, np.flatnonzero(venyneet), log=log)
             Kr[vaaka] = True; M_kaikki |= Ms; K_kaikki.append(np.setdiff1d(np.flatnonzero(venyneet), vaaka))
         K = np.flatnonzero(Kr & ~poista)
