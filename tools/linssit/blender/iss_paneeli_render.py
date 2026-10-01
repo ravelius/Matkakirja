@@ -379,7 +379,7 @@ def sarja(nimi, T, G, S):
         ob.rotation_euler = (0, math.radians(i * NUPPI_ASKEL), 0)
         tiedot['osat'][f'nuppi-{i:02d}'] = osa_kuva(f'nuppi-{i:02d}', [ob], x, y, 44)
     ob.rotation_euler = (0, 0, 0)
-    for nappi in ('kohde', 'poistu'):   # kannessa oma legenda (LENNÄ / POISTU)
+    for nappi in ('kohde', 'kuvaa', 'poistu'):   # kannessa oma legenda (LENNÄ / KUVAA / POISTU)
         ob = t['osat'][nappi][0]
         x, y = t['paikat'][nappi][:2]
         z0 = ob.location.y
@@ -387,19 +387,8 @@ def sarja(nimi, T, G, S):
             ob.location.y = z0 + dz
             tiedot['osat'][f'{nappi}-{tila}'] = osa_kuva(f'{nappi}-{tila}', [ob], x, y, 42)
         ob.location.y = z0
-    vv, vc = t['osat']['vipu'][0], t['osat']['kaari'][0]
-    x, y = t['paikat']['oma'][:2]
-    vc.hide_render = True
-    for tila, k in (('ylos', ip.VIPU_YLOS), ('alas', ip.VIPU_ALAS)):
-        ip.kaanna(vv, k)
-        tiedot['osat'][f'vipu-{tila}'] = osa_kuva(f'vipu-{tila}', [vv], x, y + 4, 52)
-    ip.kaanna(vv, ip.VIPU_ALAS)
-    for i in range(KAARI_ASENNOT):
-        ip.kaanna(vc, ip.KAARI_KIINNI + (ip.KAARI_AUKI - ip.KAARI_KIINNI) * i / (KAARI_ASENNOT - 1))
-        tiedot['osat'][f'kaari-{i}'] = osa_kuva(f'kaari-{i}', [vc], x, y + 4, 60)
-    ip.kaanna(vc, ip.KAARI_KIINNI)
     tiedot['osat_kaytto'] = {'nopeus': 'nopeus-0…3 (LIVE, 10×, 100×, 1000×)', 'pilvet_kuukausi': 'nuppi-00…23, 15°/askel',
-                             'kohde_poistu': 'kohde-ylos/alas, poistu-ylos/alas', 'oma': 'vipu-ylos/alas + kaari-0 (kiinni) … 5 (auki)'}
+                             'kohde_kuvaa_poistu': 'kohde-ylos/alas, kuvaa-ylos/alas, poistu-ylos/alas'}
 
     # 4) valot: puolikoko, kaikki kappaleet näkyvissä (perusasennot), vain yksi valo kerrallaan
     nakyvyys(kamera=t['pohja'] + t['ryhma'] + osat)
@@ -408,11 +397,14 @@ def sarja(nimi, T, G, S):
     lx, ly = t['paikat']['live'][:2]
     kx, ky = t['paikat']['kohde'][:2]
     px, py = t['paikat']['poistu'][:2]
+    ux, uy = t['paikat']['kuvaa'][:2]
     lasi = kopioi_materiaali(kaikki, 'valo', 'valo_paalla')
     leg_k = kopioi_materiaali(t['osat']['kohde'], 'legenda_painike', 'legenda_kohde')
     leg_p = kopioi_materiaali(t['osat']['poistu'], 'legenda_painike', 'legenda_poistu')
+    leg_u = kopioi_materiaali(t['osat']['kuvaa'], 'legenda_painike', 'legenda_kuvaa')
     tek_k = kopioi_materiaali(t['osat']['kohde'], 'legenda_teksti', 'legenda_teksti_kohde')
     tek_p = kopioi_materiaali(t['osat']['poistu'], 'legenda_teksti', 'legenda_teksti_poistu')
+    tek_u = kopioi_materiaali(t['osat']['kuvaa'], 'legenda_teksti', 'legenda_teksti_kuvaa')
     levyt = kopioi_materiaali(kaikki, 'legendalevy', 'legendalevy_paalla')
     lyhty = kopioi_materiaali(kaikki, 'valolista', 'valolista_paalla')
     tiedot['valot'] = {}
@@ -431,7 +423,8 @@ def sarja(nimi, T, G, S):
     for vari in ('vihrea', 'meripihka'):
         valo(f'live-{vari}', [valaisin('live', lx, ly, ip.PINTA + 8, VALOVARIT[vari], 8000, 4.0)],
              [(lasi, VALOVARIT[vari], 4.0)], 4, 0.6)
-    for tunnus, (xx, yy), leg, tek in (('kohde', (kx, ky), leg_k, tek_k), ('poistu', (px, py), leg_p, tek_p)):
+    for tunnus, (xx, yy), leg, tek in (('kohde', (kx, ky), leg_k, tek_k), ('kuvaa', (ux, uy), leg_u, tek_u),
+                                       ('poistu', (px, py), leg_p, tek_p)):
         valo(tunnus, [valaisin(tunnus, xx, yy, ip.PINTA + 10, (0.55, 1.0, 0.6), 30000, 10.0)],
              [(leg, (0.55, 1.0, 0.6), 1.1), (tek, (0.55, 1.0, 0.6), 0.9)], 5, 0.5)
     for vari in ('valkoinen', 'meripihka'):
