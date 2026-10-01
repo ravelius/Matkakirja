@@ -21,6 +21,11 @@ namespace Matkakirja.Linssit.IssKamera
         /// paino etäisyydestä kuten pilvien kaukokentät (peittoK 1 → 1,85). Ilmakehän utu lisää valoa myös pilviin, tämä ei. 0 = pois.
         /// </summary>
         public double MaanSini;
+        /// <summary>
+        /// Auringon suunta ECEF-yksikkövektorina (null = ei yötä): yöpuolella pilvikentät häivytetään (aurinko −8° … −3°), koska
+        /// yökuoren tummennus jätti valkoiset kentät harmaiksi läiskiksi (kiertoratanousu 1.10.: ISS:n yökuvissa pilvet ovat tummia).
+        /// </summary>
+        public (double x, double y, double z)? AurinkoEcef;
 
         /// <summary>
         /// Pilvipeiton kerroin etäisyydestä (omistaja 1.10. 19.5x Cupola-mallikuvasta: "pilvikenttiä horisonttiin asti, valkoisen ja
@@ -351,6 +356,13 @@ namespace Matkakirja.Linssit.IssKamera
                     var (pa, pk, pv) = Pilvet.Nayte(la, lo, pK);
                     int q = j * (G + 1) + i; a[q] = (float)pa; kk[q] = (float)pk; v[q] = (float)pv;
                     double t = Math.Max(0, Math.Min(1, (pK - 1.0) / 0.85)); sv[q] = (float)(MaanSini * t * t * (3 - 2 * t));
+                    if (AurinkoEcef is var (sx, sy, sz))
+                    {
+                        double fl = la * Math.PI / 180, ll = lo * Math.PI / 180;
+                        double sinK = Math.Cos(fl) * Math.Cos(ll) * sx + Math.Cos(fl) * Math.Sin(ll) * sy + Math.Sin(fl) * sz;
+                        double yo = Math.Max(0, Math.Min(1, (sinK + 0.139) / 0.087)); yo = yo * yo * (3 - 2 * yo);   // −8° … −3°
+                        a[q] *= (float)yo; v[q] *= (float)yo;
+                    }
                 }
             var (laK, _) = Uudelleenprojisointi.Pikseli(z, x, y, 128, 128);
             double pm = Uudelleenprojisointi.PikseliM(z, laK);

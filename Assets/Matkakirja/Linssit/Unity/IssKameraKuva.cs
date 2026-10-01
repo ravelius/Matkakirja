@@ -38,6 +38,8 @@ namespace Matkakirja.Natiivi
         public static float LisaOdotus = 8f;
         /// <summary>Maan ja meren kylläinen sininen kaukana (KuvanTyosto.MaanSini; 0 = pois). Testikomento `astro kyyti kuvaa sini <x>`.</summary>
         public static float MaanSini = 1f;
+        /// <summary>Kiertoratanousun kerroin (Avaruus.KuvanNousu = kerroin × läheisyys maan reunaan). Testikomento `astro kyyti kuvaa nousu <x>`.</summary>
+        public static float NousuKerroin = 1f;
 
         /// <summary>
         /// Kuvan kaari ja utu (omistaja/Päätoimittaja 1.10. 21.3x, lopullinen3 0b69f6d2, Cupola-mallikuva): kaari 6, Rayleigh-kerros 1,5,
@@ -105,6 +107,12 @@ namespace Matkakirja.Natiivi
                 var t = kamera.transform; var p0 = Pos(t.position); var f = Suu(t.forward); var r = Suu(t.right); var u = Suu(t.up);
                 var kk = new KuvaKamera { Paikka = (p0.x, p0.y, p0.z), Katse = (f.x, f.y, f.z), Oikea = (r.x, r.y, r.z), Ylos = (u.x, u.y, u.z),
                     PystykenttaAst = kamera.fieldOfView, Leveys = W, Korkeus = H };
+                // Kiertoratanousu (Päätoimittaja 1.10. 21.5x): aurinko kameran paikasta katsottuna lähellä maan reunaa → värjäytymä,
+                // suurempi flare, hämärän valo ja linssiheijastukset; täysi ±1,5°:n sisällä, pois 5°:ssa.
+                var aEcef = math.normalize(global::Matkakirja.Aurinko.AurinkoEcef(utc));
+                double reunaSuht = Math.Asin(math.dot(aEcef, math.normalize(p0))) * 180 / Math.PI + Math.Acos(6371000.0 / math.length(p0)) * 180 / Math.PI;
+                double nl = Math.Max(0, Math.Min(1, (5 - Math.Abs(reunaSuht)) / 3.5));
+                Avaruus.KuvanNousu = (float)(NousuKerroin * nl * nl * (3 - 2 * nl));
                 var naytteet = Kuvasuunnitelma.Naytteet(kk);
                 if (naytteet.Count == 0) { Loki("näkymässä ei maata"); yield break; }
                 Tila = "indeksi"; Loki($"laukaisu {id} {muoto} {W}×{H}, kenttä {kamera.fieldOfView:0.0}°, {naytteet.Count} solua, {utc:yyyy-MM-dd HH:mm:ss} UTC");
@@ -292,7 +300,7 @@ namespace Matkakirja.Natiivi
                     if (scl.TryGetValue(ru.Tunnus, out var so)) ty.LisaaMaamaski(ru, so, (x, y) => sclPuretut.TryGetValue((ru.Tunnus, x, y), out var l) ? l : null);
                 var (az, korkeus) = AurinkoPisteessa(utc, naytteet.Average(n => n.Lat), naytteet.Average(n => n.Lon));
                 ty.Pilvet = new Pilvikentta { MaaOsuus = ty.MaaOsuus, AurinkoAz = az, AurinkoKorkeus = korkeus }.Kalibroi();
-                ty.MaanSini = MaanSini; ty.Kamera = kk.Paikka;   // pilvipeitto kasvaa etäisyyden mukaan (Cupola-mallikuva)
+                ty.MaanSini = MaanSini; ty.Kamera = kk.Paikka; ty.AurinkoEcef = (aEcef.x, aEcef.y, aEcef.z);   // pilvipeitto kasvaa etäisyyden mukaan (Cupola-mallikuva)
                 var lista = ty.Laatat.ToList(); int kirjoitettu = 0;
                 int ytimia = Math.Max(1, SystemInfo.processorCount - 1);   // vain pääsäikeessä (laitekoe 1.10.: säikeessä poikkeus)
                 // Avomeri (ei S2-ruutua): TCI:n tyypillinen meri tci_lutin läpi, ettei täyttö erotu tummana kaistana (laitekoe 2).
@@ -346,6 +354,7 @@ namespace Matkakirja.Natiivi
                     if (lukija.hasError) { Loki("luku epäonnistui"); yield break; }
                     var kuva = new Texture2D(W, H, TextureFormat.RGBA32, false);
                     kuva.LoadRawTextureData(lukija.GetData<byte>()); kuva.Apply(false);
+                    if (Avaruus.KuvanNousu > 0.01f) Heijastukset(kuva, kamera, W, H, Avaruus.KuvanNousu);
                     var j = kuva.EncodeToJPG(93); Destroy(kuva);
                     if (k == 0) jpg = j; else { File.WriteAllBytes(Path.Combine(albumi, $"{id}-{k}.jpg"), j); Loki($"sarjakuva {k} (+{10 * k} s)"); }
                 }
@@ -360,6 +369,7 @@ namespace Matkakirja.Natiivi
                 if (rt != null) { kamera.targetTexture = null; kamera.ResetAspect(); rt.Release(); Destroy(rt); }
                 AstronauttiKerros.KuvanPinta = null;
                 Avaruus.KuvaputkiAsetettu = false;
+                Avaruus.KuvanNousu = 0f;
                 if (kaariAsetettu) AsetaKaari(1f, 1f, 1f, 1f, 1f, 0f);
                 IssNyt.Simu.AsetaKerroin(kerroin0 > 0 ? kerroin0 : 1);
                 if (!SailytaLaatat) try { if (Directory.Exists(laatat)) Directory.Delete(laatat, true); } catch { }
@@ -401,6 +411,57 @@ namespace Matkakirja.Natiivi
             var q = UnityWebRequest.Get(url);
             q.SetRequestHeader("Range", $"bytes={alku}-{alku + pit - 1}");
             return q;
+        }
+
+        /// <summary>
+        /// Linssiheijastukset ja auringon hehku kuvaan (kiertoratanousu, Päätoimittaja 1.10. 21.5x: "hehku/bloom, säteet ja muutama
+        /// heijastusläiskä kuvan halki"): lämmin hehku auringon ympärille ja heijastusläiskät auringosta kuvan keskipisteen kautta
+        /// vastakkaiselle puolelle. Voimakkuus auringon näkyvyydestä (kiekon pikselien kirkkaus) × voima. Rivi 0 = alin (Unity).
+        /// </summary>
+        static void Heijastukset(Texture2D kuva, Camera kamera, int W, int H, float voima)
+        {
+            var v = kamera.WorldToViewportPoint(kamera.transform.position + KyydinTaivas.AurinkoMaailma * 1.0e6f);
+            if (v.z <= 0) return;
+            float sx = v.x * W, sy = v.y * H;
+            if (sx < -0.5f * W || sx > 1.5f * W || sy < -0.5f * H || sy > 1.5f * H) return;
+            var px = kuva.GetPixelData<Color32>(0);
+            // näkyvyys: kirkkain 5 × 5 -näyte kiekon ympäriltä (kaaren takana osittain → himmeämpi)
+            float nako = 0;
+            for (int j = -2; j <= 2; j++)
+                for (int i = -2; i <= 2; i++)
+                {
+                    int x = (int)sx + i * 4, y = (int)sy + j * 4;
+                    if (x < 0 || y < 0 || x >= W || y >= H) continue;
+                    var c = px[y * W + x]; nako = Math.Max(nako, (c.r + c.g + c.b) / 765f);
+                }
+            float k = voima * Mathf.Clamp01((nako - 0.5f) / 0.4f);
+            if (k <= 0.01f) return;
+            float cx = W * 0.5f, cy = H * 0.5f;
+            void Lisaa(float x0, float y0, float sade, Color vari, float teho, bool rengas)
+            {
+                int ax = Math.Max(0, (int)(x0 - sade)), bx = Math.Min(W - 1, (int)(x0 + sade)), ay = Math.Max(0, (int)(y0 - sade)), by = Math.Min(H - 1, (int)(y0 + sade));
+                for (int y = ay; y <= by; y++)
+                    for (int x = ax; x <= bx; x++)
+                    {
+                        float d = Mathf.Sqrt((x - x0) * (x - x0) + (y - y0) * (y - y0)) / sade;
+                        if (d >= 1) continue;
+                        float w = rengas ? Mathf.Exp(-(d - 0.85f) * (d - 0.85f) / 0.004f) : Mathf.SmoothStep(1f, 0f, d) * (0.6f + 0.4f * d);
+                        if (rengas == false && sade > 0.2f * H) w = Mathf.Exp(-d * 6f) + 0.25f * Mathf.Exp(-d * 2f) * (1 - d);
+                        w *= teho * k * 255f;
+                        int o = y * W + x; var c = px[o];
+                        px[o] = new Color32((byte)Math.Min(255, c.r + vari.r * w), (byte)Math.Min(255, c.g + vari.g * w), (byte)Math.Min(255, c.b + vari.b * w), 255);
+                    }
+            }
+            // hehku (bloom) auringon ympärille: lämmin, laaja
+            Lisaa(sx, sy, 0.45f * H, new Color(1f, 0.72f, 0.42f), 0.55f, false);
+            // heijastusläiskät akselilla aurinko → keskipiste → vastapuoli (f = 0 aurinko, 1 keskipiste)
+            (float f, float r, Color c, float t, bool rg)[] haamut =
+            {
+                (0.45f, 0.016f, new Color(1f, 0.75f, 0.4f), 0.22f, false), (0.8f, 0.045f, new Color(0.45f, 0.85f, 0.75f), 0.07f, false),
+                (1.25f, 0.026f, new Color(0.75f, 0.5f, 1f), 0.12f, false), (1.55f, 0.085f, new Color(0.5f, 0.9f, 0.6f), 0.06f, true),
+                (1.9f, 0.02f, new Color(1f, 0.6f, 0.3f), 0.16f, false), (2.2f, 0.05f, new Color(0.6f, 0.75f, 1f), 0.05f, false),
+            };
+            foreach (var hm in haamut) Lisaa(sx + (cx - sx) * hm.f, sy + (cy - sy) * hm.f, hm.r * H, hm.c, hm.t, hm.rg);
         }
 
         /// <summary>Auringon atsimuutti (pohjoisesta myötäpäivään) ja korkeus (astetta) pisteessä hetkellä utc.</summary>

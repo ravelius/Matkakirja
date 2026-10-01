@@ -1722,6 +1722,7 @@ namespace Matkakirja.Natiivi
                             Kirjaa("astro " + Matkakirja.Natiivi.Avaruus.Tila(osat.Length > 4 && osat[3] == "debug" ? (float?)Luku(osat[4]) : null));
                         else if (a == "ilmakeha2" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.Ilmakeha2 = osat[3] != "0";   // A/B fotorealismi osa 1
                         else if (a == "kaarivoima" && osat.Length > 3) { Matkakirja.Natiivi.Avaruus.KuvanKaariVoima = (float)Luku(osat[3]); Kirjaa($"astro kaarivoima {Matkakirja.Natiivi.Avaruus.KuvanKaariVoima:0.00} (kuvaputki {Matkakirja.Natiivi.Avaruus.Kuvaputki})"); }
+                        else if (a == "nousu" && osat.Length > 3) { Matkakirja.Natiivi.Avaruus.KuvanNousu = (float)Luku(osat[3]); Kirjaa($"astro nousu {Matkakirja.Natiivi.Avaruus.KuvanNousu:0.00}"); }
                         else if ((a == "kaariydin" || a == "kaarisyva") && osat.Length > 3)
                         {
                             // Kaaren ydin (1 = ennallaan) ja syvänsininen hehku (0 = pois), Ilmakeha2 _KaariYdin / _KaariSyva.
@@ -1803,6 +1804,7 @@ namespace Matkakirja.Natiivi
                             else if (osat.Length > 4 && osat[3] == "laatat") Matkakirja.Natiivi.IssKameraKuva.SailytaLaatat = osat[4] != "0";
                             else if (osat.Length > 4 && osat[3] == "odotus") Matkakirja.Natiivi.IssKameraKuva.LisaOdotus = (float)Luku(osat[4]);
                             else if (osat.Length > 4 && osat[3] == "sini") Matkakirja.Natiivi.IssKameraKuva.MaanSini = (float)Luku(osat[4]);
+                            else if (osat.Length > 4 && osat[3] == "nousu") Matkakirja.Natiivi.IssKameraKuva.NousuKerroin = (float)Luku(osat[4]);
                             else if (osat.Length > 4 && osat[3] == "sarja") Matkakirja.Natiivi.IssKameraKuva.Sarja = (int)Luku(osat[4]);
                             else Kirjaa("astro kyyti kuvaa: " + (Matkakirja.Natiivi.IssKameraKuva.Hae().Laukaise(osat.Length > 3 ? osat[3] : "4:5",
                                 osat.Length > 4 ? (int)Luku(osat[4]) : 3240) ? "laukaistu" : "ei laukaistu (käynnissä tai ei kyytiä)"));

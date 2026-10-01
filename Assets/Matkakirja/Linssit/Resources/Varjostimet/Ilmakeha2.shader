@@ -35,6 +35,7 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         _SiniKerroin("Rayleigh-sironnan sinisyys (kuvaputki, 1 = ennallaan)", Float) = 1
         _UtuKerroin("Maan ilmaperspektiivi horisonttia kohti (kuvaputki, 1 = ennallaan)", Float) = 1
         _KaariYdin("Kaaren ytimen (0–5 km) ja maan reunan kerroin suhteessa kaarivoimaan (kuvaputki, kun _KaariSyva > 0)", Float) = 1
+        _NousuVoima("Kiertoratanousun värjäytymä auringon ympärillä (kuvaputki, 0 = pois)", Float) = 0
         _KaariSyva("Syvänsininen hehku ytimen yllä 5–45 km; > 0 ottaa kaaren muodon käyttöön (kuvaputki, 0 = pois)", Float) = 0
         _HehkuVari("Ilmahehkun sävy", Color) = (0.62, 0.9, 0.42, 1)
         _Lapinakyvyys("Transmittanssi-LUT", 2D) = "white" {}
@@ -44,7 +45,7 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
         CBUFFER_START(UnityPerMaterial)
-            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku, _Debug, _KaariVoima, _HrKerroin, _SiniKerroin, _UtuKerroin, _KaariYdin, _KaariSyva;
+            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku, _Debug, _KaariVoima, _HrKerroin, _SiniKerroin, _UtuKerroin, _KaariYdin, _KaariSyva, _NousuVoima;
             float4 _Keskus, _Akseli, _Aurinko, _HehkuVari;
         CBUFFER_END
         TEXTURE2D(_Lapinakyvyys); SAMPLER(sampler_Lapinakyvyys);
@@ -240,6 +241,19 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                     L *= lerp(float3(1.0, 1.0, 1.0), float3(0.7, 0.92, 1.0), max(ydin, reuna));
                     float vyo = smoothstep(3500.0, 7000.0, hs) * (1.0 - smoothstep(30000.0, 55000.0, hs));
                     L *= lerp(float3(1.0, 1.0, 1.0), float3(0.35, 0.8, 1.0) * (1.0 + _KaariSyva), vyo);
+                }
+                // Kiertoratanousu (Päätoimittaja 1.10. 21.5x, omistaja: "aurinko värjäsi paljon enemmän ympäristöä ja ilmakehää"):
+                // auringon ympärillä leveä oranssi–kulta–punainen vyö kaaren alaosassa (sivuamiskorkeus 0–25 km, myös maata hipovat
+                // säteet), haalenee kaarta pitkin sivuille (kulma auringosta σ 17°, häntä σ 43°); sen yllä sininen jää. 0 = pois.
+                if (_NousuVoima > 0.0)
+                {
+                    float kulmaA = acos(clamp(dot(d, s), -1.0, 1.0));
+                    float wA = exp(-kulmaA * kulmaA / (2.0 * 0.30 * 0.30)) + 0.35 * exp(-kulmaA * kulmaA / (2.0 * 0.75 * 0.75));
+                    float hsN = maa ? 0.0 : hmin;
+                    float pohja = maa ? 1.0 - smoothstep(0.0, 0.08, saturate(-dot(d, normalize(o + d * g0)))) : 1.0 - smoothstep(12000.0, 32000.0, hmin);
+                    float3 savyN = lerp(float3(1.0, 0.26, 0.05), float3(1.0, 0.70, 0.28), smoothstep(1500.0, 12000.0, hsN));
+                    float wN = wA * pohja * _NousuVoima;
+                    L = L * lerp(float3(1.0, 1.0, 1.0), float3(1.0, 0.7, 0.45), saturate(wN)) + savyN * wN * 1.4;
                 }
                 float dh = hmin - 95000.0;
                 float3 nl = normalize(lahin);

@@ -306,6 +306,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector("_Kuu", new Vector4(kd.x, kd.y, kd.z, (float)Matkakirja.Linssit.Iss.Kuu.Vaihe(jd).valaistu));
             materiaali.SetFloat("_KuuVoima", KuunvaloPois ? 0f : KuunvalonVoima);
             materiaali.SetFloat("_TaivasHeijastus", TaivasHeijastusPois ? 0f : 0.3f);
+            materiaali.SetFloat("_AamuVoima", Matkakirja.Natiivi.Avaruus.Kuvaputki ? Matkakirja.Natiivi.Avaruus.KuvanNousu : 0f);
         }
 
         /// <summary>Fotorealismi osa 3: pilvien varjot maahan (A/B `astro kyyti pilvivarjo 0|1`); korkeus = kyydin pilvikuori 8 km.</summary>

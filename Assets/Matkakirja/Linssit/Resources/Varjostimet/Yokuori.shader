@@ -27,6 +27,7 @@ Shader "Matkakirja/Linssit/Yokuori"
     Properties
     {
         _Peitto("Yön peitto", Range(0, 1)) = 0.82
+        _AamuVoima("Hämärän lämmin valo terminaattorissa (kuvaputken kiertoratanousu, 0 = pois)", Float) = 0
         _Vari("Yön väri", Color) = (0.012, 0.02, 0.05, 1)
         _Aurinko("Auringon suunta (maailma)", Vector) = (0, 0, 1, 0)
         _Keskus("Maan keskipiste (maailma)", Vector) = (0, 0, 0, 0)
@@ -91,6 +92,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float _PilvetOn, _PilviPeitto, _Karsinta;
                 float _PilviVarjo, _PilviKorkeus, _KuuVoima, _TaivasHeijastus, _TarkatOn;
                 float4 _Kuu;
+                float _AamuVoima;
             CBUFFER_END
 
             // Pallotilan piste → (pituus, leveys) radiaaneina (ellipsoidille ja geodeettiseksi kuten valojen haussa).
@@ -232,6 +234,15 @@ Shader "Matkakirja/Linssit/Yokuori"
                 half lisaPilvi = pilvi * (half)osuu * yoKuori * saturate(_YoVesi - a) * saturate(1.0h - 2.0h * kuuValo);
                 c += _Vari.rgb * lisaPilvi;
                 a += lisaPilvi;
+                // Kiertoratanousu (Päätoimittaja 1.10. 21.5x): terminaattorin lähellä (auringon korkeus −5° … +1°, huippu −1,5°)
+                // maa ja pilvien huiput saavat lämmintä hämärän valoa, joten terminaattori erottuu horisontin lähellä. 0 = pois.
+                if (_AamuVoima > 0.0 && osuu > 0.5)
+                {
+                    float sk = dot(normalize(p), aur);
+                    half kaista = (half)(smoothstep(-0.087, -0.026, sk) * (1.0 - smoothstep(-0.010, 0.017, sk)));
+                    c += half3(1.0h, 0.42h, 0.13h) * kaista * (half)(_AamuVoima * 0.35) * (0.4h + 0.6h * (1.0h - 0.85h * pilvi) + 1.2h * pilvi);
+                    a *= 1.0h - 0.35h * kaista * (half)saturate(_AamuVoima);
+                }
                 return half4(c, a);
             }
             ENDHLSL
