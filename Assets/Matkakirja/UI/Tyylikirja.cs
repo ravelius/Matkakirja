@@ -1,12 +1,12 @@
 // TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi).
-// ÄLÄ MUOKKAA KÄSIN. lähde 7437b9fd7b20. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
+// ÄLÄ MUOKKAA KÄSIN. lähde 5044f938a363. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class Tyylikirja
     {
-        public const string Lahde = "7437b9fd7b20";
+        public const string Lahde = "5044f938a363";
 
         public static class Kehys
         {
@@ -49,6 +49,27 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 Tumma = new Color32(14, 9, 4, 184);
             public static readonly Color32 Kevyt = new Color32(14, 9, 4, 89);
             public static readonly Color32 Kuva = new Color32(14, 9, 4, 235);
+        }
+
+        public static class Tila
+        {
+            public static readonly Color32 Onnistuminen = new Color32(47, 107, 63, 255);
+            public static readonly Color32 Virhe = new Color32(176, 58, 43, 255);
+        }
+
+        public static class Kentta
+        {
+            public const float Korkeus = 44f;
+            public const float Alue = 88f;
+            public const float Kulma = 10f;
+            public const float ValiPysty = 8f;
+            public const float ValiVaaka = 12f;
+            public const float Koko = 16f;
+            public static readonly Color32 Pinta = new Color32(245, 240, 226, 255);
+            public static readonly Color32 Reunus = new Color32(70, 51, 31, 77);
+            public static readonly Color32 Fokus = new Color32(217, 161, 59, 255);
+            public static readonly Color32 Muste = new Color32(33, 29, 24, 255);
+            public static readonly Color32 Vihje = new Color32(92, 74, 50, 255);
         }
 
         public static class Koko
@@ -116,6 +137,7 @@ namespace Matkakirja.Natiivi
             public const float Ohjain = 25f;
             public const float Kamera = 20f;
             public const float Laajennettu = 85f;
+            public const float Paneeli = 70f;
         }
 
         public static class Kuva
@@ -146,6 +168,6 @@ namespace Matkakirja.Natiivi
             public static readonly (string Perhe, string Tyyli)[] Kauno = { ("Snell Roundhand", "Regular"), ("Savoye LET", "Plain"), ("Bradley Hand", "Bold") };
         }
 
-        public static readonly string[] Pohjat = { "NOSTOKORTTI", "LUKUARKKI", "KORTTI", "PANEELI", "KUVANÄKYMÄ", "LINSSIN OHJAIN", "PULU", "EDISTYMINEN" };
+        public static readonly string[] Pohjat = { "NOSTOKORTTI", "LUKUARKKI", "KORTTI", "PANEELI", "KUVANÄKYMÄ", "LINSSIN OHJAIN", "PULU", "EDISTYMINEN", "KENTTÄ", "LAUTAPELI" };
     }
 }
