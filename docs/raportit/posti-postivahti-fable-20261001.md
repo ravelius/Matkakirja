@@ -32,3 +32,7 @@ Uusi kävijä 1.10. (ensimmäinen 00:46 UTC): US, ios, apurahakortin avauksia t�
 ## 06.33 — PÄÄTOIMITTAJAN NOLLAUS TOTEUTUI, AMIUN ALOITUSVIESTI EI LÄHTENYT
 Sessio local_593b89a1-… on tyhjä ja idle (list_events 0 viestiä). Aloitusviesti ("Lue docs/raportit/viesti-fable-aloitus.md haarasta claude/bold-ride-vow4ki ja toimi sen mukaan.") EI lähtenyt (SendMessage estynyt, 15). Lue se käsin / lähetä omalta puoleltasi.
 Tila: levy 52 Gi, wt/ 31 (raja 20), muisti 80 %, kuorma 36. Kävijälaskuri 06.33: n=6 ennallaan (1.10. US 3, apurahakortti 1.10. 1, yht. 3). Viikkoraja 95 % (97 %:n ilmoitus tulossa). Hook OK, #3734 auki.
+
+## 07.33 — KÄVIJÄLASKURI 6→9 + esittelylinssi + apurahakortti 4
+- 1.10.: 6 kävijää (US 6, ios 6; ensimmäinen 00:46 UTC; +3 klo 06.33 jälkeen), apurahakortin avauksia 1.10. 4 (+3; yht. 6 = 2 + 4), ESITTELYLINSSIT 1 (ensimmäinen kerta!). Yhteensä n=9 (30.9.: FI 1 + US 2; 1.10.: US 6).
+- Viikkoraja 96 % (97 %:n ilmoitus lähellä). Levy 49 Gi, wt/ 31 (raja 20), muisti 79 %, kuorma 44. Päätoimittajan konteksti 12 %. Hook OK, #3734 auki. SendMessage estynyt (15).
