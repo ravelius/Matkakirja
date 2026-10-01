@@ -79,14 +79,22 @@ namespace Matkakirja.Natiivi
 
         static string Q(string s) => UnityWebRequest.EscapeURL(s ?? "").Replace("+", "%20");
 
+        /// <summary>Workerin avainotsake (worker/ehdotukset/kasittelija.js AVAIN_OTSAKE).</summary>
+        const string AvainOtsake = "x-matkakirja-avain";
+
+        /// <summary>Lukijoilta- ja pro-kuvat (Kuvat.Hae) saavat avaimen otsakkeena; arvo luetaan haun hetkellä.</summary>
+        static void KuvienOtsake() => Kuvat.AsetaOtsake(Osoite + "/", () => (AvainOtsake, Avain));
+
         // --- verkko (web omistajanKutsu) ------------------------------------------------------------
 
         struct Vastaus { public bool Ok; public string Virhe; public Dictionary<string, object> Data; }
 
         static IEnumerator Kutsu(string polku, string metodi, string runko, Action<Vastaus> valmis)
         {
-            string erotin = polku.Contains("?") ? "&" : "?";
-            using var r = new UnityWebRequest(Osoite + polku + erotin + "avain=" + Q(Avain), metodi) { downloadHandler = new DownloadHandlerBuffer() };
+            // Avain otsakkeessa, ei osoitteessa (1.10.2026, tietoturvakorjaus: ?avain= jäi palvelinlokeihin; web
+            // js/ehdotukset.js avainOtsakkeet, worker AVAIN_OTSAKE).
+            using var r = new UnityWebRequest(Osoite + polku, metodi) { downloadHandler = new DownloadHandlerBuffer() };
+            r.SetRequestHeader(AvainOtsake, Avain);
             if (runko != null)
             {
                 r.uploadHandler = new UploadHandlerRaw(System.Text.Encoding.UTF8.GetBytes(runko));
@@ -162,6 +170,7 @@ namespace Matkakirja.Natiivi
 
         static IEnumerator Hae()
         {
+            KuvienOtsake();
             Vastaus ehdotukset = default, tuottajat = default, reaktiot = default;
             // Pro-lista ja reaktiot eivät saa viedä ehdotuksia mukanaan (vanha worker ei tunne reittejä: 404).
             var k1 = UiKerros.Hae().StartCoroutine(Kutsu("/lista", "GET", null, v => ehdotukset = v));
@@ -255,7 +264,7 @@ namespace Matkakirja.Natiivi
                 foreach (var kuva in Lista(e, "kuvat"))
                 {
                     string tiedosto = T(kuva, "tiedosto");
-                    nostot.Add(Kuva($"Kuva {++j}", $"{Osoite}/kohde/{Q(T(e, "kansio") + "/" + tiedosto)}?avain={Q(Avain)}", tiedosto));
+                    nostot.Add(Kuva($"Kuva {++j}", $"{Osoite}/kohde/{Q(T(e, "kansio") + "/" + tiedosto)}", tiedosto));
                 }
                 yield return Sivu($"{Aika(T(e, "aikaleima"))} · {(string.IsNullOrEmpty(T(e, "nimimerkki")) ? "Nimetön" : T(e, "nimimerkki"))}", nostot.ToArray());
             }
@@ -418,7 +427,7 @@ namespace Matkakirja.Natiivi
                     new LehtiNosto { Otsikko = nimi, Teksti = ProTiedot(t), Lisa = profiili != null ? (Action<VisualElement>)(isa => ProNapit(isa, t)) : null },
                 };
                 if (Rakenne.Olio(MiniJson.Kentta(profiili, "kuva")) is Dictionary<string, object> kuva)
-                    nostot.Add(Kuva("Profiilikuva", $"{Osoite}/pro-kuva/{Q(T(t, "tekijaId"))}?avain={Q(Avain)}", T(kuva, "tiedosto")));
+                    nostot.Add(Kuva("Profiilikuva", $"{Osoite}/pro-kuva/{Q(T(t, "tekijaId"))}", T(kuva, "tiedosto")));
                 yield return Sivu($"{nimi} · {ProTila(T(t, "tila"))}", nostot.ToArray());
             }
         }
