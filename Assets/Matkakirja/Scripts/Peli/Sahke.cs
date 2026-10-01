@@ -66,23 +66,24 @@ namespace Matkakirja.Natiivi
     // NIMIMERKIT, KOODI JA POHJAT (puhtaat funktiot)
     // =====================================================================
 
-    /// <summary>Nimimerkkigeneraattori (web SAHKE_ADJEKTIIVIT × SAHKE_SUBSTANTIIVIT; listat ovat osa workerin rajapintaa).</summary>
+    /// <summary>Nimimerkkigeneraattori (web SAHKE_ADJEKTIIVIT × SAHKE_SUBSTANTIIVIT = worker/sahke/nimimerkit.js samassa järjestyksessä;
+    /// 1.10.2026 listat korjattiin workerin mukaisiksi, koska worker hylkäsi osan arvotuista nimistä).</summary>
     public static class SahkeNimet
     {
         public static readonly IReadOnlyList<string> Adjektiivit = new[]
         {
-            "Utelias", "Höyryävä", "Vaitelias", "Ripeä", "Uskalias", "Verkkainen",
-            "Tarkkanäköinen", "Kärsivällinen", "Salaperäinen", "Kohtelias", "Sitkeä", "Valpas",
-            "Rohkea", "Huolellinen", "Levoton", "Sinnikäs", "Oivaltava", "Vakaa",
-            "Nokkela", "Hiljainen", "Iloinen", "Peloton", "Tarmokas", "Viisas",
+            "Utelias", "Höyryävä", "Rohkea", "Salaperäinen", "Vaitelias", "Sitkeä",
+            "Nokinen", "Tarkkasilmäinen", "Kärsivällinen", "Vikkelä", "Tyyni", "Uljas",
+            "Ovela", "Väsymätön", "Hajamielinen", "Ripeä", "Ponteva", "Verkkainen",
+            "Peloton", "Juhlallinen", "Kohtelias", "Räiskyvä", "Vankka", "Iloinen",
         };
 
         public static readonly IReadOnlyList<string> Substantiivit = new[]
         {
-            "Ilves", "Majakka", "Kompassi", "Näätä", "Höyrylaiva", "Kurki",
-            "Lennätin", "Ahma", "Kiikari", "Peltosirkku", "Postivaunu", "Saukko",
-            "Tiimalasi", "Kärppä", "Kartturi", "Merikotka", "Ankkuri", "Mursu",
-            "Karavaani", "Naali", "Sekstantti", "Haikara", "Matkalaukku", "Sorsa",
+            "Ilves", "Majakka", "Kompassi", "Hylje", "Kurki", "Höyryveturi",
+            "Ankkuri", "Näätä", "Merikotka", "Sekstantti", "Karhu", "Priki",
+            "Karttapallo", "Susi", "Peura", "Lyhty", "Kirjekyyhky", "Taskukello",
+            "Saukko", "Huuhkaja", "Postivaunu", "Kiikari", "Mursu", "Villihanhi",
         };
 
         /// <summary>Web sahkeArvoNimi. <paramref name="satunnainen"/> = Math.random (arvo väliltä [0, 1)).</summary>
