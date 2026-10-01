@@ -57,6 +57,9 @@ namespace Matkakirja.Natiivi
             Nappi(napit, "Sulje", Sulje);
 
             // Päivitysilmoitus kaiken päälle (myös aloitusnäkymän, joka on Traileri-kerroksessa).
+            // Esc sulkee (UI-pohjat: yksi sulkupino; savuke 1102). Päivitysilmoitus on päällimmäisenä, joten korkeampi prioriteetti.
+            Nappaimisto.Rekisteroi("mitauutta", 55, () => Auki, null, null, Sulje);
+            Nappaimisto.Rekisteroi("paivittyi", 56, () => paivitys != null && paivitys.style.display == DisplayStyle.Flex, null, null, SuljePaivitys);
             (paivitys, paivitysLista) = Dialogi(kerros.Juuri(UiKerros.Traileri), "Peli päivittyi", out var pnapit);
             Nappi(pnapit, "Jatka", SuljePaivitys);
         }
