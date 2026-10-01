@@ -5039,7 +5039,7 @@ class Aikajana {
    * `heti` asettaa ne paikoilleen ilman liikettä (avaus, alustus,
    * prefers-reduced-motion).
    */
-  naytaVuosi(vuosi, heti = false) {
+  naytaVuosi(vuosi, heti = false, { kay = null } = {}) {
     const paikka = this.reducedMotion ? Math.floor(Math.max(0, vuosi)) : Math.max(0, vuosi);
     // Kellon paikka → lukema (asteikko: vuosiluku tai vuosia sitten).
     const arvo = Math.max(0, this.asteikko.lukema(paikka));
@@ -5082,7 +5082,7 @@ class Aikajana {
       });
       if (vaihtui) this.kellonSelite(teksti);
     }
-    this.sumennaKello(arvo, heti);
+    this.sumennaKello(arvo, heti, kay);
     // Ääni vain elävästä vaihdosta: avaus ja alustus ovat `heti`,
     // ja pysäytetty kello on hiljainen (kortista toiseen kelaus myös).
     // Vuosiluvun vaihdos NAKSAHTAA; kohahdus kuuluu keksinnölle
@@ -5099,16 +5099,28 @@ class Aikajana {
    * ja reduced motion pyyhkivät sumun, jotta pysäytetty mittari on
    * aina terävä.
    */
-  sumennaKello(arvo, heti = false) {
+  sumennaKello(arvo, heti = false, kay = null) {
     const edellinen = this.kellonEdellinen;
-    this.kellonEdellinen = { arvo };
-    if (!this.kaynnissa || heti || this.reducedMotion || !edellinen) {
+    const nyt = performance.now();
+    this.kellonEdellinen = { arvo, aika: nyt };
+    /*
+     * IHMISEN MATKAN ESITYS KÄY OMALLA SILMUKALLAAN (omistaja 1.10.2026: "webissä on myös se liike-epäterävyys";
+     * mitattu: esityksen aikana --sumu oli 0, koska aikajanan oma `kaynnissa` on esityksessä epätosi). Esitys
+     * kertoo kellon käyvän (`kay`), ja kehysväli mitataan kutsujen väliltä samalla 200 ms:n katolla kuin
+     * aikajanan kehys. Jos kutsuja ei tule (tauko), ajastin terävöittää rullat.
+     */
+    const kayko = kay ?? this.kaynnissa;
+    clearTimeout(this.sumunNollaus);
+    if (!kayko || heti || this.reducedMotion || !edellinen) {
       sumennaRullat(this.rullat, 0, { nollaa: true });
       return;
     }
-    const dt = (this.kellonDt ?? 0) / 1000;
+    // Aikajanan oma kehys antaa välinsä (kellonDt); esityksen silmukka ei kulje sen kautta, joten sen väli mitataan.
+    const oma = kay == null && this.kaynnissa;
+    const dt = (oma ? (this.kellonDt ?? 0) : Math.min(200, nyt - (edellinen.aika ?? nyt))) / 1000;
     if (!(dt > 0)) { sumennaRullat(this.rullat, 0, { nollaa: true }); return; }
     sumennaRullat(this.rullat, (arvo - edellinen.arvo) / dt);
+    if (kay) this.sumunNollaus = setTimeout(() => sumennaRullat(this.rullat, 0, { nollaa: true }), 250);
   }
 
   /**
