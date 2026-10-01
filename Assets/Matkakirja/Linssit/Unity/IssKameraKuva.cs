@@ -103,7 +103,7 @@ namespace Matkakirja.Natiivi
 
                 // 3) otsakkeet (TCI ja SCL)
                 Tila = "otsakkeet";
-                var ty = new KuvanTyosto(); ty.Data.Lut = indeksi.Lut;
+                var ty = new KuvanTyosto { Ensisijainen = true }; ty.Data.Lut = indeksi.Lut;   // päällekkäiset S2-ruudut kerran (400 mm 86 → 51 Mt)
                 var tci = new Dictionary<string, CogOtsake>(); var scl = new Dictionary<string, CogOtsake>();
                 var sclUrl = ehdokkaat.ToDictionary(x => x.Tunnus, x => x.Valinnat[0].Scl);
                 var otsakepyynnot = new List<(string tunnus, bool onScl, UnityWebRequest q)>();

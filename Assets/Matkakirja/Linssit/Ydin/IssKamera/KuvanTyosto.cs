@@ -73,6 +73,16 @@ namespace Matkakirja.Linssit.IssKamera
         /// COG-laatat ruudulle lehtilaattojen alueesta (laitekoe 2, 1.10.: solupohjainen haku jätti Mercator-laattojen reunoille
         /// aukkoja → tummat kaistat): jokainen lehti tasolla, jonka pikseli ≤ lehden pikseli, rajaus 9 reunapisteestä.
         /// </summary>
+        /// <summary>
+        /// Datan säästö (Päätoimittaja 1.10.: 50 mm ~40 Mt): TasoKerroin kertoo lehden pikselikoon ennen COG-tason valintaa
+        /// (lehti on Cesiumin varalta yhtä tasoa tarkempi kuin näkymä vaatii, joten 2 = näkymän oma tarkkuus), ja Ensisijainen
+        /// hakee lehden vain ruudusta, joka kattaa sen kokonaan (S2-ruudut menevät ~10 km päällekkäin; reunalehdet kaikista).
+        /// </summary>
+        public double TasoKerroin = 1;
+        public bool Ensisijainen;
+
+        bool Kattaa(S2Ruutu ru, double w, double s, double e, double n) => w > ru.W && e < ru.E && s > ru.S && n < ru.N;
+
         public HashSet<(int taso, int tx, int ty)> HaettavatLaatat(S2Ruutu ru, CogOtsake o)
         {
             var r = new HashSet<(int, int, int)>(); int v = ru.Vyohyke;
@@ -80,7 +90,14 @@ namespace Matkakirja.Linssit.IssKamera
             {
                 var (n0, w0) = Uudelleenprojisointi.Pikseli(z, x, y, 0, 0); var (s0, e0) = Uudelleenprojisointi.Pikseli(z, x, y, 256, 256);
                 if (e0 < ru.W || w0 > ru.E || n0 < ru.S || s0 > ru.N) continue;
-                int taso = o.TasoResoluutiolle(Uudelleenprojisointi.PikseliM(z, (n0 + s0) / 2));
+                if (Ensisijainen)
+                {
+                    // Ensimmäinen ruutu (Data.Ruudut-järjestys), joka kattaa lehden kokonaan, ottaa sen; muut ohittavat.
+                    S2Ruutu oma = null;
+                    foreach (var (r2, _) in Data.Ruudut) if (Kattaa(r2, w0, s0, e0, n0)) { oma = r2; break; }
+                    if (oma != null && oma != ru) continue;
+                }
+                int taso = o.TasoResoluutiolle(Uudelleenprojisointi.PikseliM(z, (n0 + s0) / 2) * TasoKerroin);
                 var t = o.Tasot[taso]; double pm = o.TasonPikseliM(taso);
                 double xmin = double.MaxValue, xmax = double.MinValue, ymin = double.MaxValue, ymax = double.MinValue;
                 for (int i = 0; i <= 2; i++) for (int j = 0; j <= 2; j++)
