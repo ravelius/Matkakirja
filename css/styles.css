@@ -69,7 +69,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 3c58dedaa6f3 */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 5044f938a363 */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -134,6 +134,19 @@ body.paivittyy .app { visibility: hidden; }
   --tk-himmennys-tumma: rgba(14, 9, 4, 0.72);
   --tk-himmennys-kevyt: rgba(14, 9, 4, 0.35);
   --tk-himmennys-kuva: rgba(14, 9, 4, 0.92);
+  --tk-tila-onnistuminen: #2f6b3f;
+  --tk-tila-virhe: #b03a2b;
+  --tk-kentta-korkeus: 44px;
+  --tk-kentta-alue: 88px;
+  --tk-kentta-kulma: 10px;
+  --tk-kentta-vali-pysty: 8px;
+  --tk-kentta-vali-vaaka: 12px;
+  --tk-kentta-koko: 16px;
+  --tk-kentta-pinta: #f5f0e2;
+  --tk-kentta-reunus: rgba(70, 51, 31, 0.3);
+  --tk-kentta-fokus: #d9a13b;
+  --tk-kentta-muste: #211d18;
+  --tk-kentta-vihje: #5c4a32;
   --tk-koko-kapiteeli: 12px;
   --tk-koko-apuri: 14px;
   --tk-koko-leipa: 16px;
@@ -166,6 +179,7 @@ body.paivittyy .app { visibility: hidden; }
   --tk-peitto-ohjain: 25%;
   --tk-peitto-kamera: 20%;
   --tk-peitto-laajennettu: 85%;
+  --tk-peitto-paneeli: 70%;
   --tk-kuva-upotus-leveys: 40%;
   --tk-kuva-galleria-korkeus: 64px;
 }

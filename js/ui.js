@@ -18344,7 +18344,7 @@ export class UI {
    * #3605:n (Siirtosepän avausanimaatio) jälkeen tämä kutsuu sen sijaan
    * animoiAvaus/haamuSulku-funktioita.
    *
-   * @param {'paa'|'linssit'|'aarteet'} nakyma
+   * @param {'paa'|'linssit'|'aarteet'|'matka'|'asetukset'} nakyma
    * @param {{animoi?: boolean}} [asetukset] animoi=false ohittaa liikkeen
    *   (paneelin oma avaus/sulku hoitaa sen jo silloin)
    */
@@ -18355,6 +18355,9 @@ export class UI {
       paa: this.pilleriPaanakyma,
       linssit: this.pilleriLinssitNakyma,
       aarteet: this.pilleriAarteetNakyma,
+      // PANEELI-pohjan alinäkymät (js/pilleri-paneeli.js luo ne; vanhassa valikossa niitä ei ole).
+      matka: document.getElementById('pilleri-matka-nakyma'),
+      asetukset: document.getElementById('pilleri-asetukset-nakyma'),
     };
     for (const [nimi, el] of Object.entries(kasvot)) {
       if (el) el.hidden = nimi !== nakyma;
