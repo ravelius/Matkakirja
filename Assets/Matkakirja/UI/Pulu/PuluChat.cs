@@ -419,6 +419,27 @@ namespace Matkakirja.Natiivi
         /// Chat avautuu kortin päälle (UiNakymat.ChatinKerros), ja jatkokysymykset kulkevat kortin aiheella, kunnes chat
         /// suljetaan (keskustelunAihe).
         /// </summary>
+        /// <summary>
+        /// NOSTOKORTTI-pohjan Kysy-nappi kortille, jonka kysymyksillä on valmiit vastaukset (maakuntakortti, web #3791):
+        /// chat aukeaa, kysymykset siruina; sirun napautus näyttää valmiin vastauksen ilman mallikutsua (VastaaValmiilla).
+        /// </summary>
+        public void AvaaValmiilla(Aihe aihe, IReadOnlyList<(string Q, string A)> kysymykset)
+        {
+            if (!Auki) Avaa(false);
+            PoistaSirut();
+            if (kysymykset != null && kysymykset.Count > 0)
+            {
+                var ryhma = Rakenne.El("mk-chat__sirut mk-chat__kohdevalmiit", virta, PickingMode.Ignore);
+                foreach (var (q, a) in kysymykset)
+                {
+                    string kysymys = q, vastaus = a;
+                    Kirjasimet.Aseta(Rakenne.Nappi(kysymys, "mk-chat__siru", () => VastaaValmiilla(kysymys, vastaus, aihe), ryhma), Kirjasin.Kone);
+                }
+                Vierita(ryhma);
+            }
+            Asettele();
+        }
+
         public void VastaaValmiilla(string kysymys, string vastaus, Aihe aihe)
         {
             kysymys = (kysymys ?? "").Trim();
