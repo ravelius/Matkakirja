@@ -399,7 +399,7 @@ namespace Matkakirja.Natiivi
             var kk = KarttaKerrokset.Instanssi;
             if (kk == null) return;
             bool halutaan = kyydissa && S2Kaytossa && kuukausiLisatty > 0;
-            Matkakirja.Linssit.Kyytipino.S2 = s2Lisatty;   // S2-pinnan sävytys vain, kun S2 on pinnalla
+            AsetaS2Savy();
             if (halutaan == s2Lisatty) return;
             if (halutaan)
             {
@@ -435,6 +435,15 @@ namespace Matkakirja.Natiivi
                 kuukausiAlfaAsetettu = -1f;
                 Debug.Log("MATKAKIRJA linssit: kyydin pinta: S2 pois, reliefi palautettu");
             }
+            AsetaS2Savy();
+        }
+
+        /// <summary>S2-sävy (Kyytipino.S2, varjostimen _s2Savy) seuraa S2-kerrosta: päällä vain, kun S2 on pinnalla.</summary>
+        void AsetaS2Savy()
+        {
+            if (Matkakirja.Linssit.Kyytipino.S2 == s2Lisatty) return;
+            Matkakirja.Linssit.Kyytipino.S2 = s2Lisatty;
+            Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
         }
 
         /// <summary>Kutsutaan joka Kyyti-kutsulla (tietorivi sekunnin välein): kuukauden vaihtuessa kerros vaihtuu.</summary>
@@ -807,8 +816,17 @@ namespace Matkakirja.Natiivi
             return m;
         }
 
+        void OnDisable()
+        {
+            // Kartta ei peri S2-sävyä (Natiivisepän ehto 1.10.): varjostimen globaali pois, kun kerros ei ole käytössä.
+            Matkakirja.Linssit.Kyytipino.S2 = false;
+            Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
+        }
+
         void OnDestroy()
         {
+            Matkakirja.Linssit.Kyytipino.S2 = false;
+            Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
             if (kuukausiLisatty >= 0) KarttaKerrokset.Instanssi?.PoistaRasteri(KuukausiKerros);
             if (s2Lisatty) KarttaKerrokset.Instanssi?.PoistaRasteri(S2Kerros);
             if (kierto != null) kierto.Napautettu -= Napautus;

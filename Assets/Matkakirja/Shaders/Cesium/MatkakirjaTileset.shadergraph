@@ -206,6 +206,9 @@
         },
         {
             "m_Id": "1543265c50af4a4391ba21c708e114d1"
+        },
+        {
+            "m_Id": "9a398274422b4a9aa8deb1b3ef0e9ce2"
         }
     ],
     "m_Keywords": [],
@@ -698,6 +701,18 @@
         },
         {
             "m_Id": "d81bf238e047431d8274500abfb9378b"
+        },
+        {
+            "m_Id": "dfe24d3555ab4113b185aca117b48192"
+        },
+        {
+            "m_Id": "e00eae1a53af497a8d958cb563b893aa"
+        },
+        {
+            "m_Id": "4fdde77f910044eb8714a6c98eb97ba1"
+        },
+        {
+            "m_Id": "282764e13c07422ca1d1b5385b6acf74"
         }
     ],
     "m_GroupDatas": [
@@ -3136,6 +3151,62 @@
                     "m_Id": "b3cb0ccc0766422ea110966d984c2ffe"
                 },
                 "m_SlotId": 20
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "dfe24d3555ab4113b185aca117b48192"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "b3cb0ccc0766422ea110966d984c2ffe"
+                },
+                "m_SlotId": 27
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "e00eae1a53af497a8d958cb563b893aa"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "b3cb0ccc0766422ea110966d984c2ffe"
+                },
+                "m_SlotId": 28
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "4fdde77f910044eb8714a6c98eb97ba1"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "b3cb0ccc0766422ea110966d984c2ffe"
+                },
+                "m_SlotId": 29
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "282764e13c07422ca1d1b5385b6acf74"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "b3cb0ccc0766422ea110966d984c2ffe"
+                },
+                "m_SlotId": 30
             }
         }
     ],
@@ -8312,6 +8383,9 @@
         },
         {
             "m_Id": "1543265c50af4a4391ba21c708e114d1"
+        },
+        {
+            "m_Id": "9a398274422b4a9aa8deb1b3ef0e9ce2"
         }
     ]
 }
@@ -19083,6 +19157,18 @@
         },
         {
             "m_Id": "6a08c88199324f96a334136143d7f855"
+        },
+        {
+            "m_Id": "124848b9f0c14b32a29d989a3cadf27c"
+        },
+        {
+            "m_Id": "58c7bf9e43944e248284a61902e86ce3"
+        },
+        {
+            "m_Id": "da93227251964808aec878d0e3cdf9d0"
+        },
+        {
+            "m_Id": "a49ddc1ae20a446aa701ac05c0ccb33d"
         }
     ],
     "synonyms": [
@@ -19098,7 +19184,7 @@
     "m_SourceType": 1,
     "m_FunctionName": "RadioHamara",
     "m_FunctionSource": "",
-    "m_FunctionBody": "// Base map tone (owner 27.9.2026 17.2x, Kartta/Pohjasavy.cs): pohjaSavy.x = contrast change around the paper tone 0.78\n// (0 = as before, -0.3 = softer), pohjaSavy.y = black lift towards white 0..1 ('milky'); in sRGB space.\nfloat3 pv = vari.rgb;\nbool savyOn = pohjaSavy.x != 0.0 || pohjaSavy.y != 0.0;\nbool patinaOn = pohjaRae.x > 0.0 || pohjaPatina.x > 0.0 || pohjaPatina.y > 0.0 || pohjaPatina.z > 0.0;\nif (savyOn || patinaOn)\n{\n    float3 sv = pow(max(pv, 1e-6), 0.4545);\n    if (savyOn)\n    {\n        sv = (sv - 0.78) * (1.0 + pohjaSavy.x) + 0.78;   // pivot at the parchment tone: softer darks, paper unchanged\n        sv = sv + saturate(pohjaSavy.y) * (1.0 - sv);\n    }\n    if (patinaOn)\n    {\n        // GRAIN AND PATINA (owner 27.9.2026 23.4x via Fable, Kartta/Pohjapatina.cs): preview of the burn's paper passes\n        // (tools/patina.mjs: r *= k, g *= k (1 - 0.35 l), b *= k (1 - l) in sRGB) on top of the burnt tiles. Static and\n        // bound to the map surface (pn = geocentric direction), never animated: resting frames stay identical.\n        float3 pn = normalize(pos - keski.xyz);\n        float kk = 1.0, ll = 0.0;\n        // RAE: per-pixel grain +-0.15 v and a 2.4-pixel nub +-0.11 v (PAPERI rae/raeKarkea: v 0.5 = 'taysi' 0.072/0.054,\n        // burn now 0.027/0.020), cell = pixel footprint x size\n        // (pohjaRae.y px); two power-of-two octaves cross-faded so zooming never slides the grain.\n        if (pohjaRae.x > 0.0)\n        {\n            float jalki = max(max(length(ddx(pn)), length(ddy(pn))), 1e-9);\n            float rL = log2(jalki * max(0.5, pohjaRae.y));\n            float rB = floor(rL), rT = rL - rB;\n            float g[2], nub[2];\n            [unroll] for (int o = 0; o < 2; o++)\n            {\n                float3 q = pn / exp2(rB + o);\n                float3 h3 = frac(floor(q) * 0.1031 + 0.37 * o);\n                h3 += dot(h3, h3.zyx + 31.32);\n                g[o] = frac((h3.x + h3.y) * h3.z) - 0.5;\n                float3 qk = q / 2.4, i0 = floor(qk), f = frac(qk), u = f * f * (3.0 - 2.0 * f);\n                float vn = 0.0;\n                [unroll] for (int c = 0; c < 8; c++)\n                {\n                    float3 d = float3(c & 1, (c >> 1) & 1, (c >> 2) & 1);\n                    float3 p3 = frac((i0 + d) * 0.1031 + 0.71 * o);\n                    p3 += dot(p3, p3.zyx + 31.32);\n                    float3 w = lerp(1.0 - u, u, d);\n                    vn += frac((p3.x + p3.y) * p3.z) * w.x * w.y * w.z;\n                }\n                nub[o] = vn - 0.5;\n            }\n            float norm = rsqrt((1.0 - rT) * (1.0 - rT) + rT * rT);   // cross-fade keeps the contrast\n            float v = saturate(pohjaRae.x);\n            kk += (lerp(g[0], g[1], rT) * 0.15 + lerp(nub[0], nub[1], rT) * 0.11) * norm * v;\n        }\n        // TAHRAT: aging blotches in world coordinates (IKAANTYMINEN: 3-octave value noise, 7.8 deg = 870 km base cell,\n        // darker and warmer where positive), strength 0.15 x slider (burn now 0.055).\n        if (pohjaPatina.x > 0.0)\n        {\n            float fb = 0.0, amp = 1.0, sum = 0.0;\n            [unroll] for (int o = 0; o < 3; o++)\n            {\n                float3 qk = pn / (0.136 * exp2(-o)), i0 = floor(qk), f = frac(qk), u = f * f * (3.0 - 2.0 * f);\n                float vn = 0.0;\n                [unroll] for (int c = 0; c < 8; c++)\n                {\n                    float3 d = float3(c & 1, (c >> 1) & 1, (c >> 2) & 1);\n                    float3 p3 = frac((i0 + d) * 0.1031 + 0.53 * o + 0.19);\n                    p3 += dot(p3, p3.zyx + 31.32);\n                    float3 w = lerp(1.0 - u, u, d);\n                    vn += frac((p3.x + p3.y) * p3.z) * w.x * w.y * w.z;\n                }\n                fb += amp * vn; sum += amp; amp *= 0.5;\n            }\n            float laikku = fb / sum - 0.5, tv = 0.15 * saturate(pohjaPatina.x);\n            kk -= tv * laikku;\n            ll += tv * 0.40 * max(0.0, laikku);\n        }\n        // KELLASTUMINEN: yellowing (warmth) and fading towards the parchment white.\n        float ke = saturate(pohjaPatina.y);\n        sv = lerp(sv, float3(0.98, 0.95, 0.85), 0.25 * ke);\n        ll += 0.30 * ke;\n        // REUNATUMMENNUS: screen vignette (VINJETTI: exponent 2.4, warmth 0.4), strength 0.35 x slider.\n        if (pohjaPatina.z > 0.0)\n        {\n            float rr = length((ruutu.xy - 0.5) * 2.0) * 0.70710678;\n            float vv = pow(saturate(rr), 2.4) * 0.35 * saturate(pohjaPatina.z);\n            kk -= vv;\n            ll += vv * 0.4;\n        }\n        sv = float3(sv.r * kk, sv.g * kk * (1.0 - 0.35 * ll), sv.b * kk * (1.0 - ll));\n    }\n    pv = pow(saturate(sv), 2.2);\n}\nvariOut = pv * (1.0 - saturate(tummuus)); emisOut = emis;\n// Spotlight (Ihmisen matka II, KarttaKerrokset.Valokeila): the globe outside one or two beams dims by keilaHamaryys;\n// chord |n - k| against chord limits (acos-free, precise in float even for small beams); brighter beam wins.\n// Applied to the base colour only, before the radio dusk: emission (night lights, ground glow) never dims.\nfloat kh = saturate(keilaHamaryys);\nif (kh > 0.0 || keilaRajat.y > 0.0 || keilaRajat.w > 0.0)\n{\n    float3 kn = normalize(pos - keski.xyz);\n    float k0 = (1.0 - smoothstep(keila0.w, max(keilaRajat.x, keila0.w + 1e-6), length(kn - keila0.xyz))) * saturate(keilaRajat.y);\n    float k1 = (1.0 - smoothstep(keila1.w, max(keilaRajat.z, keila1.w + 1e-6), length(kn - keila1.xyz))) * saturate(keilaRajat.w);\n    float3 ksavy = k0 >= k1 ? lerp(float3(1.0, 1.0, 1.0), keila0Vari.rgb, k0) : lerp(float3(1.0, 1.0, 1.0), keila1Vari.rgb, k1);\n    float3 kpohja = variOut;\n    variOut = kpohja * lerp(1.0 - 0.95 * kh, 1.0, max(k0, k1)) * ksavy;\n    emisOut += kpohja * (keila0Vari.rgb * (keila0Vari.a * k0 * k0) + keila1Vari.rgb * (keila1Vari.a * k1 * k1));\n}\nfloat h = saturate(hamara);\nif (h > 0.0)\n{\n    float3 ham = variOut * float3(0.18, 0.17, 0.24) + float3(0.006, 0.006, 0.016);\n    variOut = lerp(variOut, ham, h);\n}\n// Day and night (opening flight v3f, owner 28.9.2026; Kartta/Paivanvalo.cs): aurinko.xyz = sun direction in world space,\n// aurinko.w = strength 0..1 (0 = off). yo = night weight over the civil twilight band (sun elevation -6..+2 deg at the\n// pixel; n = normalize(pos - keski.xyz) as in the spotlight). The night side darkens like the radio dusk (base colour\n// only, coastlines stay faintly readable) and the night lights below glow with weight max(h, yo).\nfloat yo = 0.0;\nif (aurinko.w > 0.0)\n{\n    float3 an = normalize(pos - keski.xyz);\n    yo = (1.0 - smoothstep(-0.105, 0.035, dot(an, aurinko.xyz))) * saturate(aurinko.w);\n    float3 yv = variOut * float3(0.22, 0.22, 0.32) + float3(0.008, 0.010, 0.026);\n    variOut = lerp(variOut, yv, yo);\n}\nfloat hv = max(h, yo);\n// Ground glow around the selected mast (b12d: was too faint): bright core 1.3 f^2 plus a long linear tail 0.45 f,\n// lighting the unshaded paper (coastlines and relief stay readable) with a floor so dark sea glows too.\nif (maavalo.w > 0.0)\n{\n    float f = saturate(1.0 - length(pos - maavalo.xyz) / maavalo.w);\n    emisOut += maavaloVari.rgb * (1.3 * f * f + 0.45 * f) * (vari.rgb * 1.6 + 0.12);\n}\n// Night lights (NASA Black Marble, plan ch. 3): yovalot.x = raster slot 1/2 (0 = off), y = strength, z = 1 when the\n// burn is pre-filtered. The slot's blend weight is 0 (RadioMastot), so the black tile never covers the map; the same\n// texture is sampled here like CesiumRasterOverlay (uv = texCoord[index] * ts.zw + ts.xy, v flipped) and added as\n// emission after the dusk (the dusk darkens the base colour, not the lights). yonValot.xyz = selected mast,\n// yonValot.w = local boost (full within 60 km, fading out by 230 km).\nint yp = (int)(yovalot.x + 0.5);\nint yi = (int)((yp == 2 ? _overlayTextureCoordinateIndex_2 : _overlayTextureCoordinateIndex_1) + 0.5);\nfloat4 yts = yp == 2 ? _overlayTranslationAndScale_2 : _overlayTranslationAndScale_1;\nfloat2 ytc[4] = { tc0, tc1, tc2, tc3 };\nfloat2 yuv = ytc[clamp(yi, 0, 3)] * yts.zw + yts.xy;\nyuv.y = 1.0 - yuv.y;\nfloat2 ydx = ddx(yuv), ydy = ddy(yuv);\nif ((yp == 1 || yp == 2) && yovalot.y > 0.0 && hv > 0.0)\n{\n    float4 yn;\n    if (yp == 2) yn = SAMPLE_TEXTURE2D_GRAD(_overlayTexture_2, sampler_overlayTexture_2, yuv, ydx, ydy);\n    else yn = SAMPLE_TEXTURE2D_GRAD(_overlayTexture_1, sampler_overlayTexture_1, yuv, ydx, ydy);\n    float3 yg = pow(max(yn.rgb, 1e-5), 0.4545);   // sRGB texture, linear sample -> sRGB values for the thresholds\n    float yw = yovalot.z > 0.5 ? dot(yg, float3(0.2126, 0.7152, 0.0722))\n        : saturate((yg.r - 0.188235) / 0.666667) * saturate((yg.r - yg.b + 0.039216) / 0.156863);\n    yw *= yn.a;   // tile not loaded yet: Cesium's default black (0,0,0,0)\n    float ylahi = (1.0 - smoothstep(60000.0, 230000.0, length(pos - yonValot.xyz))) * saturate(yonValot.w);\n    float3 yvalo = yw * yovalot.y * (0.5 + 0.5 * ylahi) * float3(1.05, 0.82, 0.52);\n    emisOut += pow(max(yvalo, 1e-6), 2.2) * hv;\n}\n"
+    "m_FunctionBody": "// Base map tone (owner 27.9.2026 17.2x, Kartta/Pohjasavy.cs): pohjaSavy.x = contrast change around the paper tone 0.78\n// (0 = as before, -0.3 = softer), pohjaSavy.y = black lift towards white 0..1 ('milky'); in sRGB space.\nfloat3 pv = vari.rgb;\n// S2 TONE (Linssiseppa 1.10.2026, AstronauttiKerros.PaivitaS2 / Kyytipino.AsetaS2Savy): the Sentinel-2 Europe mosaic is\n// graded towards NASA ISS photos only inside its rectangle (lon -28..45, lat 31.95..72.4) with a soft 1.5 deg edge, so\n// the rest of the globe (BMNG) keeps its colours. s2Savy = (contrast %, saturation %, warmth, weight); w = 0 -> unchanged.\nif (s2Savy.w > 0.0)\n{\n    float3 sn = normalize(pos - keski.xyz);\n    float slat = degrees(asin(clamp(dot(sn, akseli.xyz), -1.0, 1.0)));\n    float slon = degrees(atan2(dot(sn, ita.xyz), dot(sn, nolla.xyz)));\n    float sm = smoothstep(-28.0, -26.5, slon) * (1.0 - smoothstep(43.5, 45.0, slon))\n             * smoothstep(31.95, 33.45, slat) * (1.0 - smoothstep(70.9, 72.4, slat)) * saturate(s2Savy.w);\n    float3 sg = pow(max(pv, 1e-6), 0.4545);\n    sg = (sg - 0.46) * (1.0 + s2Savy.x * 0.01) + 0.46;   // contrast around mid grey (as URP ColorAdjustments)\n    sg = lerp(dot(sg, float3(0.2126, 0.7152, 0.0722)).xxx, sg, 1.0 + s2Savy.y * 0.01);   // saturation\n    sg *= float3(1.0 + 0.06 * s2Savy.z, 1.0, 1.0 - 0.10 * s2Savy.z);   // warmth: redder, less blue\n    pv = lerp(pv, pow(saturate(sg), 2.2), sm);\n}\nbool savyOn = pohjaSavy.x != 0.0 || pohjaSavy.y != 0.0;\nbool patinaOn = pohjaRae.x > 0.0 || pohjaPatina.x > 0.0 || pohjaPatina.y > 0.0 || pohjaPatina.z > 0.0;\nif (savyOn || patinaOn)\n{\n    float3 sv = pow(max(pv, 1e-6), 0.4545);\n    if (savyOn)\n    {\n        sv = (sv - 0.78) * (1.0 + pohjaSavy.x) + 0.78;   // pivot at the parchment tone: softer darks, paper unchanged\n        sv = sv + saturate(pohjaSavy.y) * (1.0 - sv);\n    }\n    if (patinaOn)\n    {\n        // GRAIN AND PATINA (owner 27.9.2026 23.4x via Fable, Kartta/Pohjapatina.cs): preview of the burn's paper passes\n        // (tools/patina.mjs: r *= k, g *= k (1 - 0.35 l), b *= k (1 - l) in sRGB) on top of the burnt tiles. Static and\n        // bound to the map surface (pn = geocentric direction), never animated: resting frames stay identical.\n        float3 pn = normalize(pos - keski.xyz);\n        float kk = 1.0, ll = 0.0;\n        // RAE: per-pixel grain +-0.15 v and a 2.4-pixel nub +-0.11 v (PAPERI rae/raeKarkea: v 0.5 = 'taysi' 0.072/0.054,\n        // burn now 0.027/0.020), cell = pixel footprint x size\n        // (pohjaRae.y px); two power-of-two octaves cross-faded so zooming never slides the grain.\n        if (pohjaRae.x > 0.0)\n        {\n            float jalki = max(max(length(ddx(pn)), length(ddy(pn))), 1e-9);\n            float rL = log2(jalki * max(0.5, pohjaRae.y));\n            float rB = floor(rL), rT = rL - rB;\n            float g[2], nub[2];\n            [unroll] for (int o = 0; o < 2; o++)\n            {\n                float3 q = pn / exp2(rB + o);\n                float3 h3 = frac(floor(q) * 0.1031 + 0.37 * o);\n                h3 += dot(h3, h3.zyx + 31.32);\n                g[o] = frac((h3.x + h3.y) * h3.z) - 0.5;\n                float3 qk = q / 2.4, i0 = floor(qk), f = frac(qk), u = f * f * (3.0 - 2.0 * f);\n                float vn = 0.0;\n                [unroll] for (int c = 0; c < 8; c++)\n                {\n                    float3 d = float3(c & 1, (c >> 1) & 1, (c >> 2) & 1);\n                    float3 p3 = frac((i0 + d) * 0.1031 + 0.71 * o);\n                    p3 += dot(p3, p3.zyx + 31.32);\n                    float3 w = lerp(1.0 - u, u, d);\n                    vn += frac((p3.x + p3.y) * p3.z) * w.x * w.y * w.z;\n                }\n                nub[o] = vn - 0.5;\n            }\n            float norm = rsqrt((1.0 - rT) * (1.0 - rT) + rT * rT);   // cross-fade keeps the contrast\n            float v = saturate(pohjaRae.x);\n            kk += (lerp(g[0], g[1], rT) * 0.15 + lerp(nub[0], nub[1], rT) * 0.11) * norm * v;\n        }\n        // TAHRAT: aging blotches in world coordinates (IKAANTYMINEN: 3-octave value noise, 7.8 deg = 870 km base cell,\n        // darker and warmer where positive), strength 0.15 x slider (burn now 0.055).\n        if (pohjaPatina.x > 0.0)\n        {\n            float fb = 0.0, amp = 1.0, sum = 0.0;\n            [unroll] for (int o = 0; o < 3; o++)\n            {\n                float3 qk = pn / (0.136 * exp2(-o)), i0 = floor(qk), f = frac(qk), u = f * f * (3.0 - 2.0 * f);\n                float vn = 0.0;\n                [unroll] for (int c = 0; c < 8; c++)\n                {\n                    float3 d = float3(c & 1, (c >> 1) & 1, (c >> 2) & 1);\n                    float3 p3 = frac((i0 + d) * 0.1031 + 0.53 * o + 0.19);\n                    p3 += dot(p3, p3.zyx + 31.32);\n                    float3 w = lerp(1.0 - u, u, d);\n                    vn += frac((p3.x + p3.y) * p3.z) * w.x * w.y * w.z;\n                }\n                fb += amp * vn; sum += amp; amp *= 0.5;\n            }\n            float laikku = fb / sum - 0.5, tv = 0.15 * saturate(pohjaPatina.x);\n            kk -= tv * laikku;\n            ll += tv * 0.40 * max(0.0, laikku);\n        }\n        // KELLASTUMINEN: yellowing (warmth) and fading towards the parchment white.\n        float ke = saturate(pohjaPatina.y);\n        sv = lerp(sv, float3(0.98, 0.95, 0.85), 0.25 * ke);\n        ll += 0.30 * ke;\n        // REUNATUMMENNUS: screen vignette (VINJETTI: exponent 2.4, warmth 0.4), strength 0.35 x slider.\n        if (pohjaPatina.z > 0.0)\n        {\n            float rr = length((ruutu.xy - 0.5) * 2.0) * 0.70710678;\n            float vv = pow(saturate(rr), 2.4) * 0.35 * saturate(pohjaPatina.z);\n            kk -= vv;\n            ll += vv * 0.4;\n        }\n        sv = float3(sv.r * kk, sv.g * kk * (1.0 - 0.35 * ll), sv.b * kk * (1.0 - ll));\n    }\n    pv = pow(saturate(sv), 2.2);\n}\nvariOut = pv * (1.0 - saturate(tummuus)); emisOut = emis;\n// Spotlight (Ihmisen matka II, KarttaKerrokset.Valokeila): the globe outside one or two beams dims by keilaHamaryys;\n// chord |n - k| against chord limits (acos-free, precise in float even for small beams); brighter beam wins.\n// Applied to the base colour only, before the radio dusk: emission (night lights, ground glow) never dims.\nfloat kh = saturate(keilaHamaryys);\nif (kh > 0.0 || keilaRajat.y > 0.0 || keilaRajat.w > 0.0)\n{\n    float3 kn = normalize(pos - keski.xyz);\n    float k0 = (1.0 - smoothstep(keila0.w, max(keilaRajat.x, keila0.w + 1e-6), length(kn - keila0.xyz))) * saturate(keilaRajat.y);\n    float k1 = (1.0 - smoothstep(keila1.w, max(keilaRajat.z, keila1.w + 1e-6), length(kn - keila1.xyz))) * saturate(keilaRajat.w);\n    float3 ksavy = k0 >= k1 ? lerp(float3(1.0, 1.0, 1.0), keila0Vari.rgb, k0) : lerp(float3(1.0, 1.0, 1.0), keila1Vari.rgb, k1);\n    float3 kpohja = variOut;\n    variOut = kpohja * lerp(1.0 - 0.95 * kh, 1.0, max(k0, k1)) * ksavy;\n    emisOut += kpohja * (keila0Vari.rgb * (keila0Vari.a * k0 * k0) + keila1Vari.rgb * (keila1Vari.a * k1 * k1));\n}\nfloat h = saturate(hamara);\nif (h > 0.0)\n{\n    float3 ham = variOut * float3(0.18, 0.17, 0.24) + float3(0.006, 0.006, 0.016);\n    variOut = lerp(variOut, ham, h);\n}\n// Day and night (opening flight v3f, owner 28.9.2026; Kartta/Paivanvalo.cs): aurinko.xyz = sun direction in world space,\n// aurinko.w = strength 0..1 (0 = off). yo = night weight over the civil twilight band (sun elevation -6..+2 deg at the\n// pixel; n = normalize(pos - keski.xyz) as in the spotlight). The night side darkens like the radio dusk (base colour\n// only, coastlines stay faintly readable) and the night lights below glow with weight max(h, yo).\nfloat yo = 0.0;\nif (aurinko.w > 0.0)\n{\n    float3 an = normalize(pos - keski.xyz);\n    yo = (1.0 - smoothstep(-0.105, 0.035, dot(an, aurinko.xyz))) * saturate(aurinko.w);\n    float3 yv = variOut * float3(0.22, 0.22, 0.32) + float3(0.008, 0.010, 0.026);\n    variOut = lerp(variOut, yv, yo);\n}\nfloat hv = max(h, yo);\n// Ground glow around the selected mast (b12d: was too faint): bright core 1.3 f^2 plus a long linear tail 0.45 f,\n// lighting the unshaded paper (coastlines and relief stay readable) with a floor so dark sea glows too.\nif (maavalo.w > 0.0)\n{\n    float f = saturate(1.0 - length(pos - maavalo.xyz) / maavalo.w);\n    emisOut += maavaloVari.rgb * (1.3 * f * f + 0.45 * f) * (vari.rgb * 1.6 + 0.12);\n}\n// Night lights (NASA Black Marble, plan ch. 3): yovalot.x = raster slot 1/2 (0 = off), y = strength, z = 1 when the\n// burn is pre-filtered. The slot's blend weight is 0 (RadioMastot), so the black tile never covers the map; the same\n// texture is sampled here like CesiumRasterOverlay (uv = texCoord[index] * ts.zw + ts.xy, v flipped) and added as\n// emission after the dusk (the dusk darkens the base colour, not the lights). yonValot.xyz = selected mast,\n// yonValot.w = local boost (full within 60 km, fading out by 230 km).\nint yp = (int)(yovalot.x + 0.5);\nint yi = (int)((yp == 2 ? _overlayTextureCoordinateIndex_2 : _overlayTextureCoordinateIndex_1) + 0.5);\nfloat4 yts = yp == 2 ? _overlayTranslationAndScale_2 : _overlayTranslationAndScale_1;\nfloat2 ytc[4] = { tc0, tc1, tc2, tc3 };\nfloat2 yuv = ytc[clamp(yi, 0, 3)] * yts.zw + yts.xy;\nyuv.y = 1.0 - yuv.y;\nfloat2 ydx = ddx(yuv), ydy = ddy(yuv);\nif ((yp == 1 || yp == 2) && yovalot.y > 0.0 && hv > 0.0)\n{\n    float4 yn;\n    if (yp == 2) yn = SAMPLE_TEXTURE2D_GRAD(_overlayTexture_2, sampler_overlayTexture_2, yuv, ydx, ydy);\n    else yn = SAMPLE_TEXTURE2D_GRAD(_overlayTexture_1, sampler_overlayTexture_1, yuv, ydx, ydy);\n    float3 yg = pow(max(yn.rgb, 1e-5), 0.4545);   // sRGB texture, linear sample -> sRGB values for the thresholds\n    float yw = yovalot.z > 0.5 ? dot(yg, float3(0.2126, 0.7152, 0.0722))\n        : saturate((yg.r - 0.188235) / 0.666667) * saturate((yg.r - yg.b + 0.039216) / 0.156863);\n    yw *= yn.a;   // tile not loaded yet: Cesium's default black (0,0,0,0)\n    float ylahi = (1.0 - smoothstep(60000.0, 230000.0, length(pos - yonValot.xyz))) * saturate(yonValot.w);\n    float3 yvalo = yw * yovalot.y * (0.5 + 0.5 * ylahi) * float3(1.05, 0.82, 0.52);\n    emisOut += pow(max(yvalo, 1e-6), 2.2) * hv;\n}\n"
 }
 
 {
@@ -21079,6 +21165,373 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
     "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector4ShaderProperty",
+    "m_ObjectId": "9a398274422b4a9aa8deb1b3ef0e9ce2",
+    "m_Guid": {
+        "m_GuidSerialized": "6fae5677-bdcf-4268-a505-c14b0234c75f"
+    },
+    "m_Name": "s2Savy",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "s2Savy",
+    "m_DefaultReferenceName": "_s2Savy",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": false,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": true,
+    "hlslDeclarationOverride": 1,
+    "m_Hidden": false,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "dfe24d3555ab4113b185aca117b48192",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 2040.80029296875,
+            "y": 2256.3999633789062,
+            "width": 208.0,
+            "height": 120.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "d8ac9dfc427d4b7c93d87d36b3df0075"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": false,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "9a398274422b4a9aa8deb1b3ef0e9ce2"
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "d8ac9dfc427d4b7c93d87d36b3df0075",
+    "m_Id": 0,
+    "m_DisplayName": "s2Savy",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "e00eae1a53af497a8d958cb563b893aa",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 2040.80029296875,
+            "y": 2316.3999633789062,
+            "width": 208.0,
+            "height": 120.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "f945a256659844e8841ab0576724da8e"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": false,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "8b52bd66875447298a5c71d32cbadb9c"
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "f945a256659844e8841ab0576724da8e",
+    "m_Id": 0,
+    "m_DisplayName": "maaAkseli",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "4fdde77f910044eb8714a6c98eb97ba1",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 2040.80029296875,
+            "y": 2376.3999633789062,
+            "width": 208.0,
+            "height": 120.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "c6a0154414f24eacb256684b1e50adc7"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": false,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "dedb0c82b91341b1a4e0eb20b91f2d82"
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "c6a0154414f24eacb256684b1e50adc7",
+    "m_Id": 0,
+    "m_DisplayName": "maaNolla",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "282764e13c07422ca1d1b5385b6acf74",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 2040.80029296875,
+            "y": 2436.3999633789062,
+            "width": 208.0,
+            "height": 120.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "66d9805d323844f8ab3131aac7325530"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": false,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "ba327d1a73de4306b111447373826333"
+    }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "66d9805d323844f8ab3131aac7325530",
+    "m_Id": 0,
+    "m_DisplayName": "maaIta",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "124848b9f0c14b32a29d989a3cadf27c",
+    "m_Id": 27,
+    "m_DisplayName": "s2Savy",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "s2Savy",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "58c7bf9e43944e248284a61902e86ce3",
+    "m_Id": 28,
+    "m_DisplayName": "akseli",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "akseli",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "da93227251964808aec878d0e3cdf9d0",
+    "m_Id": 29,
+    "m_DisplayName": "nolla",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "nolla",
+    "m_StageCapability": 2,
+    "m_Value": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_DefaultValue": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+    },
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector4MaterialSlot",
+    "m_ObjectId": "a49ddc1ae20a446aa701ac05c0ccb33d",
+    "m_Id": 30,
+    "m_DisplayName": "ita",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "ita",
+    "m_StageCapability": 2,
     "m_Value": {
         "x": 0.0,
         "y": 0.0,

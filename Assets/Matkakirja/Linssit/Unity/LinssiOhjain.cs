@@ -1704,6 +1704,7 @@ namespace Matkakirja.Natiivi
                             Matkakirja.Linssit.Kyytipino.S2Kontrasti = (float)Luku(osat[3]);
                             Matkakirja.Linssit.Kyytipino.S2Kyllaisyys = (float)Luku(osat[4]);
                             Matkakirja.Linssit.Kyytipino.S2Lampo = (float)Luku(osat[5]);
+                            Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
                             Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila());
                         }
                         else if (a == "valotus" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Valotus = (float)Luku(osat[3]); Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }

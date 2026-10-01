@@ -38,12 +38,24 @@ namespace Matkakirja.Linssit
         /// <summary>
         /// S2-PINNAN SÄVYTYS (Linssiseppä 1.10.2026, S2-suunnitelma): Euroopan Sentinel-2 on BMNG:tä vaaleampi, sinisempi ja
         /// litteämpi kuin NASA ISS067-E-286475 (RGB 74/91/102, hajonta 27 vs NASA 66/77/82, 45). Kun S2 on kyydin pinnalla
-        /// (<see cref="S2"/>, AstronauttiKerros.PaivitaS2), värisäätöön kontrasti, kylläisyys ja lämpö (värisuodin: + = punaisempi,
-        /// vähemmän sinistä). A/B `astro kyyti s2savy <kontrasti> <kylläisyys> <lämpö>`; arvot NASA-vertailusta.
+        /// (<see cref="S2"/>, AstronauttiKerros.PaivitaS2), tileset-varjostin sävyttää perusvärin (kontrasti %, kylläisyys %,
+        /// lämpö: + = punaisempi, vähemmän sinistä) VAIN S2-suorakulmiossa 1,5°:n pehmeällä reunalla (globaali _s2Savy,
+        /// <see cref="AsetaS2Savy"/>). Päätoimittaja 1.10.: koko ruudun värisäätö sävytti myös BMNG-alueet (Egypti) ja jätti
+        /// 32°N:n sauman. A/B `astro kyyti s2savy <kontrasti> <kylläisyys> <lämpö>`; arvot NASA-vertailusta.
         /// </summary>
         public static bool S2;
         public static float S2Kontrasti = 30f, S2Kyllaisyys = -10f, S2Lampo = 1f;   // NASA-vertailu 1.10. v3 (ero 79 → 28)
-        static Color Suodin(float lampo) => new Color(1f + 0.06f * lampo, 1f, 1f - 0.10f * lampo);
+        static readonly int S2SavyId = Shader.PropertyToID("_s2Savy");
+
+        /// <summary>
+        /// Tileset-varjostimen S2-sävy (_s2Savy = kontrasti, kylläisyys, lämpö, paino): paino 1 vain, kun S2 on pinnalla, muuten 0,
+        /// jolloin kartta ei peri sävyä (AstronauttiKerros: S2:n vaihtuessa, kyydistä poistuttaessa ja OnDestroy; s2savy-komento).
+        /// </summary>
+        public static void AsetaS2Savy() => Shader.SetGlobalVector(S2SavyId, S2SavyArvo(S2, S2Kontrasti, S2Kyllaisyys, S2Lampo));
+
+        /// <summary>Globaalin arvo (testattava ilman Unityä): paino w = 1 vain S2:n ollessa päällä.</summary>
+        public static Vector4 S2SavyArvo(bool s2, float kontrasti, float kyllaisyys, float lampo) =>
+            s2 ? new Vector4(kontrasti, kyllaisyys, lampo, 1f) : Vector4.zero;
         public static bool BloomPois;
         /// <summary>Filmirae ja vinjetti (ISS-kameran valokuvatuntu), oletuksena pois.</summary>
         public static bool Filmi;
@@ -87,14 +99,6 @@ namespace Matkakirja.Linssit
             autoLisa = Mathf.MoveTowards(autoLisa, AutoValotus ? AutoLisa(AurinkoSin) : 0f, Time.unscaledDeltaTime);
             float ev = Valotus + autoLisa;
             if (vari != null && Mathf.Abs(vari.postExposure.value - ev) > 0.005f) vari.postExposure.Override(ev);
-            if (vari != null)
-            {
-                float kon = S2 ? S2Kontrasti : 0f, kyl = S2 ? S2Kyllaisyys : 0f;
-                var suodin = S2 ? Suodin(S2Lampo) : Color.white;
-                if (Mathf.Abs(vari.contrast.value - kon) > 0.05f) vari.contrast.Override(kon);
-                if (Mathf.Abs(vari.saturation.value - kyl) > 0.05f) vari.saturation.Override(kyl);
-                if (vari.colorFilter.value != suodin) vari.colorFilter.Override(suodin);
-            }
             bool bloom = !BloomPois && !KevytLaite;
             if (hehku != null && hehku.active != bloom) hehku.active = bloom;
             if (rae != null && rae.active != Filmi) rae.active = Filmi;
