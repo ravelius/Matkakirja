@@ -106,19 +106,29 @@ namespace Matkakirja.Natiivi
                 var tci = new Dictionary<string, CogOtsake>(); var scl = new Dictionary<string, CogOtsake>();
                 var sclUrl = ehdokkaat.ToDictionary(x => x.Tunnus, x => x.Valinnat[0].Scl);
                 var otsakepyynnot = new List<(string tunnus, bool onScl, UnityWebRequest q)>();
-                foreach (var ru in ruudut)
+                // Otsake ~4 kt (TCI) / ~4 kt (SCL): ensin 16 kt, puskurin ulkopuolelle jääneet uudelleen 64 kt:lla (50 mm: 172 ruutua).
+                foreach (int koko in new[] { 16384, 65536 })
                 {
-                    otsakepyynnot.Add((ru.Tunnus, false, Alue(ru.Url, 0, 65536)));
-                    if (!string.IsNullOrEmpty(sclUrl[ru.Tunnus])) otsakepyynnot.Add((ru.Tunnus, true, Alue(sclUrl[ru.Tunnus], 0, 65536)));
-                }
-                foreach (var (_, _, q) in otsakepyynnot) q.SendWebRequest();
-                while (otsakepyynnot.Any(x => !x.q.isDone)) yield return null;
-                foreach (var (tunnus, onScl, q) in otsakepyynnot)
-                {
-                    if (q.result == UnityWebRequest.Result.Success)
-                        try { (onScl ? scl : tci)[tunnus] = CogOtsake.Jasenna(q.downloadHandler.data); } catch (Exception x) { Loki($"otsake {tunnus}: {x.Message}"); }
-                    else Loki($"otsake {tunnus}{(onScl ? " SCL" : "")}: {q.error}");
-                    q.Dispose();
+                    otsakepyynnot.Clear();
+                    foreach (var ru in ruudut)
+                    {
+                        if (!tci.ContainsKey(ru.Tunnus)) otsakepyynnot.Add((ru.Tunnus, false, Alue(ru.Url, 0, koko)));
+                        if (!scl.ContainsKey(ru.Tunnus) && !string.IsNullOrEmpty(sclUrl[ru.Tunnus])) otsakepyynnot.Add((ru.Tunnus, true, Alue(sclUrl[ru.Tunnus], 0, koko)));
+                    }
+                    for (int i0 = 0; i0 < otsakepyynnot.Count; i0 += 24)   // enintään 24 rinnakkain
+                    {
+                        var era = otsakepyynnot.Skip(i0).Take(24).ToList();
+                        foreach (var (_, _, q) in era) q.SendWebRequest();
+                        while (era.Any(x => !x.q.isDone)) yield return null;
+                    }
+                    foreach (var (tunnus, onScl, q) in otsakepyynnot)
+                    {
+                        if (q.result == UnityWebRequest.Result.Success)
+                            try { (onScl ? scl : tci)[tunnus] = CogOtsake.Jasenna(q.downloadHandler.data); }
+                            catch (Exception x) { if (koko > 16384) Loki($"otsake {tunnus}: {x.Message}"); }
+                        else Loki($"otsake {tunnus}{(onScl ? " SCL" : "")}: {q.error}");
+                        q.Dispose();
+                    }
                 }
                 foreach (var ru in ruudut) if (tci.TryGetValue(ru.Tunnus, out var o)) ty.Data.Ruudut.Add((ru, o));
 
