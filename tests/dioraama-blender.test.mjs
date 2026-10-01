@@ -157,3 +157,26 @@ test('ympäristön lähimaasto ja aluskasvit: mukana vain jos tiedostot ovat ble
   const nor = kopio(RAKENNUS); lisaaBlender(nor, { ...B, tiedostot: [...perus, ...t(Y), ...t(['puukortit-normaali.png'])] });
   assert.match(nor.ymparisto.puukortit_normaali, /puukortit-normaali\.png$/);
 });
+
+test('ympäristön ASTC-mipketjut (ensilataus v2): *_astc vain jos .astcm viety, png/jpg-kentät jäävät', () => {
+  const MAA = JSON.parse(readFileSync(new URL('../js/dioraama/rakennukset/olavinlinna/ymparisto-maasto.json', import.meta.url), 'utf8'));
+  const Y = ['ymparisto_huippu.glb', 'ymparisto_normaali.glb', 'ymparisto_kevyt.glb', 'puut.json', 'puukortit.png',
+    'puukortit-hamara.png', 'puukortit.json', 'horisontti.glb', 'horisontti-1k.jpg', 'horisontti-hamara-1k.jpg', 'syvyys.png',
+    ...['8k', '4k', '2k'].flatMap((k) => [`ymparisto-${k}-4x4.astcm`, `ymparisto-hamara-${k}-4x4.astcm`]),
+    'splat-0.png', 'splat-1.png', 'splat-normaali-0.png', ...MAA.kerrokset.flatMap((k) => [`maasto/${k.lahde}_diff_1k.jpg`, `maasto/${k.lahde}_nor_gl_1k.jpg`]),
+    'aluskasvit.png', 'aluskasvit-hamara.png', 'aluskasvit.json', 'aluskasvit-lista.json', 'puukortit-normaali.png',
+    'taivas-2k.jpg', 'taivas-hamara-2k.jpg'];
+  const A = ['puukortit', 'puukortit-hamara', 'puukortit-normaali', 'horisontti-1k', 'horisontti-hamara-1k', 'taivas-2k',
+    'taivas-hamara-2k', 'aluskasvit', 'aluskasvit-hamara'].map((n) => `${n}-4x4.astcm`);
+  const t = (l) => l.map((p) => ({ polku: `ymparisto/${p}`, sha256: 'd'.repeat(64), tavuja: 1 }));
+  const perus = B.tiedostot.filter((x) => !x.polku.startsWith('ymparisto/'));
+  const ilman = kopio(RAKENNUS); lisaaBlender(ilman, { ...B, tiedostot: [...perus, ...t(Y)] });
+  assert.ok(!ilman.ymparisto.puukortit_astc && !ilman.ymparisto.taivas_astc && !ilman.ymparisto.aluskasvit.atlas_astc);
+  const y = (() => { const r = kopio(RAKENNUS); lisaaBlender(r, { ...B, tiedostot: [...perus, ...t(Y), ...t(A)] }); return r.ymparisto; })();
+  assert.match(y.puukortit, /puukortit\.png$/); assert.match(y.puukortit_astc, /puukortit-4x4\.astcm$/);
+  assert.match(y.hamara.puukortit_astc, /puukortit-hamara-4x4\.astcm$/);
+  assert.match(y.puukortit_normaali_astc, /puukortit-normaali-4x4\.astcm$/);
+  assert.match(y.horisontti_kuva_astc, /horisontti-1k-4x4\.astcm$/); assert.match(y.hamara.horisontti_kuva_astc, /horisontti-hamara-1k-4x4\.astcm$/);
+  assert.match(y.taivas_astc, /taivas-2k-4x4\.astcm$/); assert.match(y.taivas_hamara_astc, /taivas-hamara-2k-4x4\.astcm$/);
+  assert.match(y.aluskasvit.atlas_astc, /aluskasvit-4x4\.astcm$/); assert.match(y.aluskasvit.atlas_hamara_astc, /aluskasvit-hamara-4x4\.astcm$/);
+});

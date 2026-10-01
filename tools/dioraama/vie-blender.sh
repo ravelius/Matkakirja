@@ -79,6 +79,11 @@ if [ -f "$LAHDE/ymparisto/ymparisto_huippu.glb" ]; then
   if [ -f "$LAHDE/ymparisto/taivas-2k.jpg" ] && [ -f "$LAHDE/ymparisto/taivas-hamara-2k.jpg" ]; then
     lisaa ymparisto/taivas-2k.jpg ymparisto/taivas-2k.jpg; lisaa ymparisto/taivas-hamara-2k.jpg ymparisto/taivas-hamara-2k.jpg
   fi
+  # ASTC-mipketjut kuville (Siirtoseppä 1.10., ensilataus v2), jos lähteessä; png/jpg jäävät rinnalle.
+  for f in puukortit puukortit-hamara puukortit-normaali horisontti-1k horisontti-hamara-1k taivas-2k taivas-hamara-2k \
+           aluskasvit aluskasvit-hamara; do
+    [ -f "$LAHDE/ymparisto/$f-4x4.astcm" ] && lisaa "ymparisto/$f-4x4.astcm" "ymparisto/$f-4x4.astcm"
+  done
 fi
 for g in "$LAHDE"/tilat/*.glb; do
   id=${g:t:r}; lisaa "tilat/$id.glb" "tilat/$id.glb"
