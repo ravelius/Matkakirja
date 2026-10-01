@@ -13,7 +13,11 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2520, teksti: 'Maakuntien toinen kuva: NOR, POL, PRT' },
+  { v: 2524, teksti: 'Maakuntakortti NOSTOKORTTI-pohjalla (#3791)' },
+  { v: 2523, teksti: 'Ihmisen matkan nostokortti NOSTOKORTTI-pohjalla (#3789)' },
+  { v: 2522, teksti: 'Kohdekortti NOSTOKORTTI-pohjalla (#3788)' },
+  { v: 2521, teksti: 'Loki: 1.10. illan päätökset mainiin (#3814)' },
+  { v: 2520, teksti: 'Olavinlinna kuori v24: venyneet tekstuurialueet… (#3812)' },
   { v: 2519, teksti: 'Maakuntien toinen kuva: MKD, MLT, MNE, NLD (#3813)' },
   { v: 2518, teksti: 'Visa KORTTI-pohjalla, versio B (#3807)' },
   { v: 2517, teksti: 'Apurahakortti KORTTI-pohjalla (#3795)' },
