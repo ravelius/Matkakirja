@@ -679,3 +679,80 @@ if '--v5' in A:
         sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
         bpy.ops.render.render(write_still=True)
     print('SOKRATES: v5 valmis', ULOS)
+
+
+# ---------- mallikuva v6 (omistaja 1.10. 23.0x): pehmeät ajot, hitaampi teksti, eläväisempi kamera ----------
+# Kuten v5 (intro-leikkaukset → Rembrandt + nimi → kysymys → 38a otsalla → lähderivi), mutta:
+# - kaikki ajot Bezier-käyrillä, AUTO_CLAMPED-kahvat → nopeus kasvaa ja hidastuu luontevasti (leikkaukset CONSTANT)
+# - tekstinauha 25 % hitaammin (v5: 255 ruutua → 340)
+# - tekstin aikana kierto ±22° ja sivuliuku ±8 mm (kolme avainta, jatkuva nopeus)
+# - 38a:n ja lähderivin jälkeen 12 s paikallaan ilman projisointia (lukijan elämänkertomus)
+V6_LAHESTY = (396, 490)
+V6_PROJ = (490, 835)            # 38a 345 ruutua; lähderivi 837–885 (jälkikäsittely)
+V6_KAARI_LOPPU = 900            # kierto jatkuu tekstin yli ja hidastuu pysähdykseen lähderivin aikana
+V6_PITO = 1250                  # 12 s pito lähderivin jälkeen; renderöidään yksi ruutu, kooste monistaa sen
+V6_KIERTO, V6_LIUKU = 22, 0.008
+
+
+if '--v6' in A:
+    from mathutils import Matrix
+    i = A.index('--v6'); GOBOT, ULOS = A[i + 1], A[i + 2]; os.makedirs(ULOS, exist_ok=True)
+    i = A.index('--koko'); LEV, KORK = int(A[i + 1]), int(A[i + 2])
+    N = int(A[A.index('--naytteita') + 1]) if '--naytteita' in A else 16
+    RUUDUT = [int(v) for v in A[A.index('--ruudut') + 1].split(',')] if '--ruudut' in A else None
+    o = rakenna(N); sc = bpy.context.scene; _kipsin_rakenne(o)
+    for nimi in ('sivu', 'reuna', 'tayte'):
+        bpy.data.objects[nimi].hide_render = True
+    taytto = bpy.data.lights.new('taytto', 'AREA'); taytto.energy = 0.25; taytto.size = 1.5
+    to = bpy.data.objects.new('taytto', taytto); sc.collection.objects.link(to); to.location = (-1.2, -1.0, 0.4); kohdista(to, PAA)
+    aur = bpy.data.lights.new('aurinko', 'SPOT'); aur.spot_size = math.radians(60); aur.spot_blend = 0.3
+    aur.shadow_soft_size = 0.012; aur.color = (1.0, 0.95, 0.88); aur.energy = 95
+    ao = bpy.data.objects.new('aurinko', aur); sc.collection.objects.link(ao)
+    for r, s_ in V5_VALO:
+        ao.location = PAA + Vector(s_).normalized() * 1.3; kohdista(ao, PAA)
+        ao.keyframe_insert('location', frame=r); ao.keyframe_insert('rotation_euler', frame=r)
+    for r, v in ((V6_LAHESTY[0], 95), (V6_PROJ[0], 38)):
+        aur.energy = v; aur.keyframe_insert('energy', frame=r)
+    p, n = osuma(-0.005, 0.418)
+    v4_projektori('tykki-otsa', p, (n + Vector((-0.40, -0.15, -0.30))).normalized(), 0.6, 0.075,
+                  os.path.join(GOBOT, 'nauha-otsa.png'), 0.016, (V6_PROJ[0] + 5, V6_PROJ[1] - 5), 70.0)
+    c, t, u = lentoasento(p, n, kulma=55, matka=0.11)
+    cd = bpy.data.cameras.new('k'); cd.sensor_fit = 'VERTICAL'; cd.sensor_height = 24; cd.clip_start = 0.003
+    cam = bpy.data.objects.new('k', cd); sc.collection.objects.link(cam); sc.camera = cam
+    tahtain = bpy.data.objects.new('tahtain', None); sc.collection.objects.link(tahtain)
+    tc = cam.constraints.new('TRACK_TO'); tc.target = tahtain; tc.track_axis = 'TRACK_NEGATIVE_Z'; tc.up_axis = 'UP_Y'
+    cd.dof.use_dof = True; cd.dof.focus_object = tahtain; cd.dof.aperture_fstop = 16
+    tavat = {}
+    def avain(r, c_, q_, mm, tapa):
+        cam.location, tahtain.location, cd.lens = Vector(c_), Vector(q_), mm
+        for ob, ominaisuus in ((cam, 'location'), (tahtain, 'location'), (cd, 'lens')):
+            ob.keyframe_insert(ominaisuus, frame=r)
+        tavat[r] = tapa
+    for r, c_, q_, mm in V5_OTOKSET:
+        avain(r, c_, q_, mm, 'CONSTANT')                     # intron leikkaukset
+    rem = V5_OTOKSET[-1]
+    avain(V6_LAHESTY[0], rem[1], rem[2], rem[3], 'BEZIER')   # Rembrandt pysyy; lähestyminen alkaa pehmeästi
+    for k, osuus in enumerate((0.0, 1.0)):                   # kierto + sivuliuku: alku ja loppu (yksi jatkuva kaari)
+        r = V6_PROJ[0] + round((V6_KAARI_LOPPU - V6_PROJ[0]) * osuus)
+        kierto = Matrix.Rotation(math.radians(-V6_KIERTO + 2 * V6_KIERTO * osuus), 3, n)
+        liuku = t * (-V6_LIUKU + 2 * V6_LIUKU * osuus)
+        avain(r, p + kierto @ (c - p) + liuku, p + liuku * 0.5, V3B_LINSSI, 'BEZIER')
+    loppu_c, loppu_q = cam.location.copy(), tahtain.location.copy()
+    avain(V6_PITO, loppu_c, loppu_q, V3B_LINSSI, 'BEZIER')    # pito: sama asento → pysähtyy pehmeästi
+    for idb in (cam, tahtain, cd):
+        act = idb.animation_data.action; kayrat = []
+        for kerros in getattr(act, 'layers', []):
+            for kaista in kerros.strips:
+                for cb in kaista.channelbags: kayrat += list(cb.fcurves)
+        kayrat += list(getattr(act, 'fcurves', []) or [])
+        for fc in kayrat:
+            for kp in fc.keyframe_points:
+                kp.interpolation = tavat.get(int(round(kp.co.x)), 'BEZIER')
+                kp.handle_left_type = kp.handle_right_type = 'AUTO_CLAMPED'
+            fc.update()
+    sc.frame_start, sc.frame_end = 1, V6_PITO; sc.render.fps = 30
+    sc.render.resolution_x, sc.render.resolution_y = LEV, KORK; sc.render.resolution_percentage = 100
+    for ruutu in (RUUDUT or list(range(sc.frame_start, V6_KAARI_LOPPU + 1)) + [V6_PITO]):
+        sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
+        bpy.ops.render.render(write_still=True)
+    print('SOKRATES: v6 valmis', ULOS)
