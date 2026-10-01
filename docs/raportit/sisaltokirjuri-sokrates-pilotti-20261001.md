@@ -125,17 +125,17 @@ Platonin kuvaamat kohdat on merkitty "Platonin mukaan". Kohderyhmä 13+ ja aikui
 
 **Kivenhakkaajan poika.** Sokrates syntyi Ateenassa vuonna 470 tai 469 eaa. kivenhakkaaja Sofroniskoksen ja kätilö Fainaretan poikana.
 
-**Sotilas.** Peloponnesolaissodassa hän taisteli raskaana jalkaväkimiehenä Potidaiassa, Amfipoliksessa ja Delionissa. Platonin *Pidoissa* nuori Alkibiades kertoo, että Sokrates käveli talvella jäällä paljain jaloin, seisoi yön yli paikallaan ajatuksissaan ja pelasti hänet taistelussa.
+**Sotilas.** Peloponnesolaissodassa hän taisteli raskaana jalkaväkimiehenä Potidaiassa, Amfipoliksessa ja Delionissa. Platonin *Pidoissa* Alkibiades kertoo, että Sokrates käveli talvella jäällä paljain jaloin, seisoi kerran aamusta seuraavaan aamuun paikallaan ajatuksiinsa vaipuneena ja pelasti haavoittuneen Alkibiadeen taistelussa.
 
-**Delfoin oraakkeli.** Ystävä Khairefon kysyi Delfoin oraakkelilta, onko kukaan Sokratesta viisaampi, ja pyhättö vastasi, ettei ole. Sokrates ryhtyi sen jälkeen kysymään ateenalaisilta viisailta, mitä he oikeasti tiesivät.
+**Delfoin oraakkeli.** Ystävä Khairefon kysyi Delfoin oraakkelilta, onko kukaan Sokratesta viisaampi. Oraakkeli vastasi, ettei ole. Sokrates ryhtyi sen jälkeen kysymään ateenalaisilta viisailta, mitä he oikeasti tiesivät.
 
 **Oikeudenkäynti.** Vuonna 399 eaa. kolme ateenalaista syytti häntä jumalattomuudesta ja nuorison turmelemisesta, ja tuomaristo julisti hänet syylliseksi ja tuomitsi hänet kuolemaan.
 
-**Pakeneminen kielletty.** Ystävät tarjosivat hänelle keinoa paeta vankilasta, mutta hän kieltäytyi: Platonin *Kritonissa* hän sanoo, ettei vääryyttä saa tehdä koskaan, ei edes vääryyden vastaukseksi.
+**Ei pakoa.** Ystävät tarjosivat hänelle keinoa paeta vankilasta, mutta hän kieltäytyi: Platonin *Kritonissa* hän sanoo, ettei vääryyttä saa tehdä koskaan, ei edes vääryyden vastaukseksi.
 
-**Viimeiset sanat.** Hän joi myrkkykatkon ja käveli, kunnes jalat tuntuivat raskailta, ja makasi sitten selälleen. Platonin mukaan hänen viimeiset sanansa olivat: "Kriton, olemme velkaa kukon Asklepiokselle. Maksa velka äläkä unohda."
+**Viimeiset sanat.** Hän joi maljallisen myrkkykatkoa, käveli, kunnes jalat tuntuivat raskailta, ja asettui sitten makuulle. Platonin mukaan hänen viimeiset sanansa olivat: "Kriton, olemme Asklepiokselle kukon velkaa. Maksakaa se, älkää unohtako."
 
-*Sokrates ei kirjoittanut itse mitään; kaikki, mitä hänestä tiedetään, tulee Platonilta, Ksenofonilta ja Aristofanekselta.*
+*Sokrates ei kirjoittanut itse mitään. Lähes kaikki, mitä hänestä tiedetään, tulee Platonilta, Ksenofonilta ja Aristofanekselta; myös Aristoteles kertoo hänestä, mutta toisen käden tietoon perustuen.*
 
 ### Lähde jokaiselle tapahtumalle
 
@@ -148,7 +148,7 @@ Platonin kuvaamat kohdat on merkitty "Platonin mukaan". Kohderyhmä 13+ ja aikui
 | Oikeudenkäynti 399 eaa. | Wikipedia (syyttäjät Meletos, Anytos, Lykon; syytteet; syyllinen enemmistöpäätöksellä; kuolemantuomio); Platon, *Apologia* (syytteet) | Tuomariston kokoa ja ääniä en maininnut, koska ne ovat myöhäisiä lähteitä |
 | Kieltäytyi pakenemasta | Wikipedia ("friends … offered an opportunity to escape, which he declined"); Platon, *Kriton* 49b, Perseus ("οὐδαμῶς ἄρα δεῖ ἀδικεῖν", "οὐδὲ ἀδικούμενον ἄρα ἀνταδικεῖν") | Perseus 49b luettu suoraan |
 | Myrkkykatko ja viimeiset sanat | Platon, *Faidon* 117e–118a, Perseus ("Crito, we owe a cock to Aesculapius. Pay it and do not neglect it."; jalat raskaat, makasi selälleen) | Kuolemantapa (myrkky) myös Wikipedia; kuvaus rajattu lempeään |
-| Ei kirjoittanut mitään | Wikipedia ("authored no writings"; Platon, Ksenofon, Aristofanes) | – |
+| Ei kirjoittanut mitään | Wikipedia ("authored no writings"; Platon, Ksenofon, Aristofanes) | Aristoteles toisen käden lähteenä (Päätoimittajan lisäys 1.10.) |
 
 ### Valinnainen 7. tapahtuma "kerrotaan" (myöhäinen anekdootti)
 
@@ -157,7 +157,7 @@ Huom.: sitaatin sanamuoto Wikipedian mukaan on "Did I not say that thundering Xa
 
 ### Varaukset (lappu)
 
-1. **Alkibiadeen kertomus** (jää, paljain jaloin, yön yli seisominen, pelastus) on Platonin dialogin hahmon puhetta; kortissa se on merkitty Platonin *Pitojen* kertomaksi. Wikipedia vahvistaa pelastuksen Platonin kuvauksena, mutta 220d–e:n tarkkaa tekstiä en saanut auki, vain 220b ja 220d:n alun.
+1. **Alkibiadeen kertomus** (jää, paljain jaloin, aamusta aamuun seisominen, haavoittuneen Alkibiadeen pelastus; Symp. 220c–e) on Platonin dialogin hahmon puhetta; kortissa se on merkitty Platonin *Pitojen* kertomaksi. Wikipedia vahvistaa pelastuksen Platonin kuvauksena, mutta 220d–e:n tarkkaa tekstiä en saanut auki, vain 220b ja 220d:n alun.
 2. **Delfoin oraakkeli:** kortti kertoo vain 21a:n (kysymys + vastaus) ja tiivistää seuraavan ("kysyi viisailta"), joka on tunnettu tapahtumakulku (*Apologia* 21b–23b), mutta sitä en avannut erikseen.
 3. **Oikeudenkäynnin yksityiskohdat** (tuomariston koko ~501, äänestysluvut ~280/221, syytteiden tarkka kirjaus) ovat myöhäisiä lähteitä (esim. Diogenes Laertios) tai tarkistamatta; kortissa on vain Wikipedian ja *Apologian* vahvistama minimi. Jos halutaan lisää, tarvitaan lähde (esim. Platon, *Apologia* 36a: "jos 30 ääntä olisi vaihtanut puolta").
 4. **Delion:** Apologia 28e mainitsee Delionin, mutta Wikipedia mainitsee vain "retreat of Delium"; vuosi (424 eaa.) jätetty pois, koska en saanut sitä auki.
