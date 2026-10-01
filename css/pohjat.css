@@ -717,3 +717,63 @@
   font-weight: 400;
   letter-spacing: 0.1em;
 }
+
+/* ── NOSTOKORTTI-osa AUTO (js/pohjat/auto.js; natiivi Nostoselain.cs, malli 23) ───────────────────────────────────
+   Kytkin "● AUTO" pillerinä; päällä toimintovärillä. Siirtolappu TUMMA "Seuraava: <nimi> 3 s · Pysäytä" palkilla. */
+
+.tk-auto {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--tk-vali-xs);
+  height: var(--tk-nappi-korkeus);
+  padding: 0 var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-pilleri);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tk-auto::after { content: ''; position: absolute; inset: calc((var(--tk-nappi-korkeus) - var(--tk-nappi-osuma)) / 2) 0; }
+.tk-auto__piste { width: var(--tk-vali-s); height: var(--tk-vali-s); border-radius: 50%; background: currentColor; opacity: 0.45; }
+.tk-auto[aria-pressed="true"] { border-color: var(--tk-toiminto); background: var(--tk-toiminto); color: var(--tk-paperi-muste); }
+.tk-auto[aria-pressed="true"] .tk-auto__piste { opacity: 1; }
+.tk-auto:focus-visible { outline: 2px solid var(--tk-toiminto); outline-offset: 2px; }
+
+.tk-auto-lappu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--tk-vali-m);
+  box-sizing: border-box;
+  padding: var(--tk-vali-s) var(--tk-vali-s) var(--tk-vali-s) var(--tk-vali-l);
+  overflow: hidden;
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  box-shadow: 0 10px 30px var(--tk-himmennys-kevyt);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-leipa);
+}
+.tk-auto-lappu[hidden] { display: none; }
+.tk-auto-lappu__teksti { flex: 1 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.tk-auto-lappu__aika { flex: none; margin-left: calc(var(--tk-vali-m) * -1 + var(--tk-vali-xs)); color: var(--tk-korostus); font-weight: 700; }
+.tk-auto-lappu .tk-auto-lappu__pysayta {
+  flex: none;
+  border-color: var(--tk-toiminto);
+  color: var(--tk-korostus);
+}
+.tk-auto-lappu__palkki {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0;
+  background: var(--tk-toiminto);
+}
