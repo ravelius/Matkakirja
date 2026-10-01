@@ -73,6 +73,7 @@ def korjaa(o, kuva, log=print):
     M, jaljelle = tasopaikka(co, tv, uvp, rgb, V, log=log)
     from mathutils.kdtree import KDTree
     kp = co[tv].mean(1); onV = np.zeros(len(tv), bool); onV[V] = True
+    nrm = np.cross(co[tv[:, 1]] - co[tv[:, 0]], co[tv[:, 2]] - co[tv[:, 0]]); nrm /= np.maximum(np.linalg.norm(nrm, axis=1, keepdims=True), 1e-12)
     kd = KDTree(len(kp))
     for i, p in enumerate(kp): kd.insert(p, i)
     kd.balance()
@@ -88,7 +89,9 @@ def korjaa(o, kuva, log=print):
         maal = M[ys, xs]
         oma = rgb[ys[maal], xs[maal]].mean(0) if maal.any() else None
         lah = np.array([j for _, j, _ in kd.find_n(kp[i], 40) if j != i])
-        lah = lah[(~onV[lah]) | (np.isin(lah, V))]
+        # vain samansuuntaiset naapurit (v23-koe: vaakakaton paikka sai viereisen punatiiliseinän mediaanin)
+        sama = lah[np.abs(nrm[lah] @ nrm[i]) > 0.7]
+        lah = sama if len(sama) >= 5 else lah
         t2, y2, x2, _ = bary_rasteri(uvp[lah], H, W)
         hyva = M[y2, x2] | ~onV[lah[t2]]
         if not hyva.any(): continue
