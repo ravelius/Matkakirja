@@ -305,12 +305,12 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Fotorealismi osa 3: pilvien varjot maahan (A/B `astro kyyti pilvivarjo 0|1`); korkeus = kyydin pilvikuori 8 km.</summary>
-        public static bool PilviVarjoPois = true;   // junassa pois (fotorealismi A/B)
+        public static bool PilviVarjoPois = false;   // fotorealismi oletuksena päällä (Päätoimittaja 1.10.)
         public static float PilviVarjonVoima = 0.5f, PilviKorkeusM = 8000f;
         /// <summary>Fotorealismi osa 4: kuunvalo yöpuolelle ja pilviin (A/B `astro kyyti kuunvalo 0|1`).</summary>
-        public static bool KuunvaloPois = true;   // junassa pois (fotorealismi A/B)
+        public static bool KuunvaloPois = false;   // fotorealismi oletuksena päällä (Päätoimittaja 1.10.)
         /// <summary>Fotorealismi osa 2: taivaan Fresnel-heijastus vesiltä (A/B `astro kyyti fresnel 0|1`).</summary>
-        public static bool TaivasHeijastusPois = true;   // junassa pois (fotorealismi A/B)
+        public static bool TaivasHeijastusPois = false;   // fotorealismi oletuksena päällä (Päätoimittaja 1.10.)
         public static float KuunvalonVoima = 0.35f;
 
         void OnDestroy()

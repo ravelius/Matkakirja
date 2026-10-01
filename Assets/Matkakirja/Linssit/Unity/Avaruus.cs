@@ -47,7 +47,7 @@ namespace Matkakirja.Natiivi
         /// Fotorealismi osa 1 (30.9.2026): fysikaalinen ilmakehä (Ilmakeha2.shader, Rayleigh + Mie + otsoni, transmittanssi-LUT)
         /// Ilmakaaren analyyttisen kaaren ja usvan tilalle. A/B `astro kyyti ilmakeha2 0|1`.
         /// </summary>
-        public static bool Ilmakeha2 = false;   // junassa pois, kunnes ilmakehävika on korjattu (Päätoimittaja 30.9.)
+        public static bool Ilmakeha2 = true;   // oletuksena päällä (Päätoimittaja 1.10.; LUT-passin vika korjattu c15426c9)
         /// <summary>
         /// Auringon valaistus HDR:nä (Ilmakeha2 _Voima). 4,5 = BMNG-maan kirkkaus vastaa albedoa ~0,1 (maa ~0,07 lineaarisena
         /// auringon 57°:ssä); Pythonin rinnakkaislaskenta 30.9.: nadirissa usva (0,02, 0,04, 0,10), reunalla 10 km:ssä
