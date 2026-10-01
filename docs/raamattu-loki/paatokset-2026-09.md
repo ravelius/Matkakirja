@@ -9731,3 +9731,7 @@ Omistaja hyväksyi kuvaparien (27 vs 30, z8 ja z10) jälkeen pallopolton 2026-09
 ## OMISTAJA: ISS-KAMERAN HAKU ENINTÄÄN ~100 MT KUVAA KOHDEN (1.10.2026) (1.10.2026 klo 12.43)
 
 Omistaja hyväksyi 400 mm:n lähikuvalle tarkimman 10 m:n datan (~50 Mt) ja nosti ISS-kameran kuvakohtaisen hakurajan aiemmasta ~40 Mt:stä enintään ~100 Mt:hen, kun laatu sitä vaatii. Tavoite on silti pienin haku, joka ei näy laadussa: 50 mm hakee kaukaiset alueet S2-mosaiikista (~10–20 Mt) ja 400 mm 10 m:n datasta päällekkäisyydet karsittuna. Toteuttaa Linssiseppä 2.
+
+## OMISTAJA: MAAPALLO OK — S2 KOKO ISS-NÄKYMÄÄN, POLTOT TÄYSILLÄ MAANANTAIHIN (1.10.2026) (1.10.2026 klo 13.22)
+
+Omistaja ei tarvitse konetta ennen maanantaita 5.10. ja pyytää polttamaan nyt kaiken mahdollisen, kunhan muu kehitystyö ei hidastu liikaa. Linjaus: 1) ISS-näkymän Sentinel-2-mosaiikki tehdään koko maailmaan vaiheittain Euroopan viennin jälkeen: Pohjois-Afrikka ja Lähi-itä → Amerikka, Aasia ja Australia → tropiikki viimeisenä. Napa-alueita ei tehdä. Perustelu: ISS on suurimman osan ajasta Euroopan ulkopuolella, ja linssit ovat koko maailmaa (VAIN EUROOPPA koskee karttaa ja sisältöä, ei linssejä). 2) S2-indeksi (ISS-kamera) laajennetaan samoille alueille. 3) Muut poltot Karttasepän listalta Päätoimittajan hyväksynnällä; pelin kartan uudet alueet vain Eurooppaan. Kaikki ajetaan nice -n 15, ja käännökset, simulaattorit ja Blender menevät edelle. Vienti ämpäriin jatkuu omistajan Run-rivein, kunnes sallinta on kunnossa.
