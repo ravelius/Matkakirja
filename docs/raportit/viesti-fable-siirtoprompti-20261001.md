@@ -18,7 +18,7 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 
 1. **Linnan osoitin VAIHDETTU 07.29** → 02987940f6567fd2 (v19 + v3c + taivas, main 22bf2c6c6; Julkaisija omistajan luvalla,
    ajo 36815257246, julkinen uusin.json vahvistettu). Jäädytys purettu, #3763 puukortit junan etusijalla (seuraava osoitinkierros).
-   Siirtoseppä todentaa osoittimen puhtaalla asennuksella (pyyntö 07.3x); odota kuittausrivi.
+   **TODENNETTU 07.3x** (Siirtoseppä): TF 91 .app, puhdas asennus ilman peiliä, 0 virhettä; kuva /Users/Shared/Claude/proto-3d/lokit/siirtoseppa-osoitin-02987940/. Ensilataus 93 s (8k-orto ~90 Mt) → Siirtosepän erä: nopea ensilataus puhelimella.
 2. **TF:n sisäinen ryhmä KUNNOSSA (07.4x):** "Beta testaajat" on olemassa (automaattijako, omistaja ryhmässä, build 91 käsitelty);
    TF 85:n virhe oli ohimenevä, TF menee taas oletuksella. Omistajan luvalla 07.35: testflight-sisainen.yml ajettu, #3734 junassa #3763:n jälkeen.
 3. **TF:** 84 sisäinen, 85, 86–91 Arvioijat-ryhmässä ja beta-arviossa (julkinen linkki). 89 = äänimikseri (omistajan 5 rivin ohje
@@ -45,7 +45,7 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 | Linssiseppä | Matkakirja-linssiseppa | linssiseppa-tyo-20260923 | Opus, high | pallokorjaus 06822cb9; S2-sävytys (23e40639) S2-erän mukana |
 | Linssiseppä 2 | Matkakirja-linssiseppa-2 | linssiseppa2-tyo-20260928 | Opus, high | S2-kyyti, muistimittaus iPadilla |
 | Linnanrakentaja | Matkakirja-linnanrakentaja | linnanrakentaja-tyo-20260929 | Opus, high | puukortit v3 PR, seuraava laatuaskel |
-| Siirtoseppä | Matkakirja-siirtoseppa | siirtoseppa-luovutus | Opus, high | osoittimen 02987940 todennus puhtaalla asennuksella |
+| Siirtoseppä | Matkakirja-siirtoseppa | siirtoseppa-luovutus | Opus, high | linnan ensilataus nopeaksi puhelimella (93 s; yksi suositus, kuvapari) |
 | Karttaseppä | Matkakirja-karttaseppa | karttaseppa-tyo-20260922 | Opus, high | S2 2026-10-01b (polttovahti), vienti ämpäriin |
 | Sisältökirjuri | Matkakirja-sisaltokirjuri | sisalto-pelikatalogi-20260927 | Sonnet, high | kuva2 A (konflikti), D, E, F |
 | Laitetestaaja | Matkakirja-laitetestaaja | laitetestaaja-savukierros-b13 | Sonnet, high | savukkeet pyynnöstä |
