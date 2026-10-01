@@ -2,6 +2,26 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (86)",
+   "paiva": "2026-10-01",
+   "teksti": "Astronautin kameran kuvissa on uusi pehmeä tausta ja sijaintipallo, joka näyttää kohteen paikan maapallolla."
+  },
+  {
+   "versio": "1.1 (85)",
+   "paiva": "2026-10-01",
+   "teksti": "Ohita näkyy koko luennon ajan, ja luennon jälkeen matkakirjan kortti pienenee lapuksi."
+  },
+  {
+   "versio": "1.1 (84)",
+   "paiva": "2026-10-01",
+   "teksti": "Avaruusasemalla kuuluu nyt aseman humina ja Cupolassa avaruuskävelyn radio, ja Pulu pukeutuu avaruuspukuun."
+  },
+  {
+   "versio": "1.1 (82)",
+   "paiva": "2026-09-30",
+   "teksti": "Macilla ohjauslevyn veto liukuu luontevasti, ja lehteä voi selata nuolinäppäimillä."
+  },
+  {
    "versio": "1.1 (81)",
    "paiva": "2026-09-30",
    "teksti": "Pulu vastaa kysymyksiin kortin aiheesta, eikä pelikello peitä linssiä tai Tietoja-korttia."
