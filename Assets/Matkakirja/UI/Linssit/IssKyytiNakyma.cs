@@ -214,6 +214,9 @@ namespace Matkakirja.Natiivi
         /// ajelehdus puolitetaan (4 pt, 0,25°): liike ei paljasta kuvan reunoja, ja ikkuna pysyy pyöreänä.
         /// </summary>
         const float Cupola3Yli = 1.04f, Cupola3Ajelehdus = 0.5f;
+        /// <summary>KOKEILU (omistaja 1.10. Päätoimittajan kautta, ei mergeä ennen valintaa): isompi Cupolan ikkuna-aukko, kehyksen
+        /// suurennos z (0 = oletus 1,04). Taustan maa on koko ruudun kokoinen, joten suurempi z näyttää enemmän maata. `astro kyyti ikkuna z`.</summary>
+        public static float IkkunanSuurennos;
         /// <summary>Kuvan reunan vara (pt) keskitetyssä rajauksessa: ajelehdus 3,5–4 pt + kallistus ja skaala.</summary>
         const float Cupola3Vara = 8f;
         readonly float[] cupola3Painot = new float[3];
@@ -971,7 +974,7 @@ namespace Matkakirja.Natiivi
             // siirtyy laatikon sisällä cover-ylijäämän verran (taustakuva leikataan laatikkoon, cl19) ja loput laatikon siirtona.
             if (cupola3)
             {
-                z = Cupola3Yli; kuvanYlareuna = 0f;
+                z = IkkunanSuurennos > 0f ? IkkunanSuurennos : Cupola3Yli; kuvanYlareuna = 0f;
                 bool ipad = IssKuvakulma.Cupola3Kuva(Screen.width, Screen.height).ipad;
                 var d = IssKuvakulma.Cupola3Rajaus(W, H, ipad, Ohjaamo3Kulma, z, Cupola3Vara);
                 var (kl, kk) = IssKuvakulma.Cupola3Koko(ipad);

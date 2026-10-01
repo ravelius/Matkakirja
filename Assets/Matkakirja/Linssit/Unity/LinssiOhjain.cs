@@ -1650,6 +1650,11 @@ namespace Matkakirja.Natiivi
                             Matkakirja.Natiivi.IssKyytiNakyma.Ohjaamo3Sarja = osat[3] == "3terava" ? "" : osat[3] == "3pehmea" ? "pehmea" : "pehmea-umpi";
                         }
                         // Läpikuulon kontrollikoe (Natiiviseppä 28.9.): kehys pelkkänä mustana taustana ilman kuvaa.
+                        else if (a == "ikkuna" && osat.Length > 3)   // KOKEILU 1.10.: Cupolan ikkunan suurennos (0 = oletus)
+                        {
+                            Matkakirja.Natiivi.IssKyytiNakyma.IkkunanSuurennos = (float)Luku(osat[3]);
+                            Kirjaa($"astro ikkuna {Matkakirja.Natiivi.IssKyytiNakyma.IkkunanSuurennos:0.00}");
+                        }
                         else if (a == "kehysmusta" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.KehysMustana = osat[3] != "0";
                         else if (a == "paiva" && osat.Length > 3) Matkakirja.Linssit.Astronautti.AstronauttiLinssi.CupolaPaivanvaloon = osat[3] != "0"; // A/B (30.9.)
                         else if (a == "horisonttikulma" && osat.Length > 3) Matkakirja.Linssit.Iss.IssKuvakulma.Horisonttikulma = osat[3] != "0"; // A/B (30.9.)
