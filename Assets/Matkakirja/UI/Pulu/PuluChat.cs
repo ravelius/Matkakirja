@@ -119,7 +119,13 @@ namespace Matkakirja.Natiivi
             {
                 Linssissa = true;
                 paneeli.AddToClassList("mk-chat--linssi");
-                paneeli.style.backgroundImage = StyleKeyword.None; // paperikohina pois lasiteemasta
+                // Paperiarkki (Kuviot.AsetaArkki) asettaa taustan inline-tyylinä, joka ohittaa USS:n: lasiteema myös inlinenä
+                // (1.10. simulaattorikuva: vaalea teksti paperilla).
+                paneeli.style.backgroundImage = StyleKeyword.None;
+                paneeli.style.backgroundColor = new Color(4f / 255f, 12f / 255f, 9f / 255f, 0.9f);
+                var reuna = new Color(93f / 255f, 1f, 168f / 255f, 0.28f);
+                paneeli.style.borderTopColor = reuna; paneeli.style.borderBottomColor = reuna;
+                paneeli.style.borderLeftColor = reuna; paneeli.style.borderRightColor = reuna;
             }
             bool uusi = tunnus != linssiTunnus;
             linssiTunnus = tunnus;
@@ -134,6 +140,8 @@ namespace Matkakirja.Natiivi
             Linssissa = false;
             linssiAnkkuri = null;
             paneeli.RemoveFromClassList("mk-chat--linssi");
+            paneeli.style.borderTopColor = StyleKeyword.Null; paneeli.style.borderBottomColor = StyleKeyword.Null;
+            paneeli.style.borderLeftColor = StyleKeyword.Null; paneeli.style.borderRightColor = StyleKeyword.Null;
             Kuviot.AsetaArkki(paneeli);
             foreach (var e in virta.Query(className: "mk-chat__kohdevalmiit").ToList()) e.RemoveFromHierarchy();
         }
