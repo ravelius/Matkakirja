@@ -57,6 +57,12 @@ namespace Matkakirja.Natiivi
         readonly Kuvasuurennos suurennos;
         readonly ScrollView sisus;
         readonly KortinLukija lukija;
+        // NOSTOSELAIN ja AUTO (omistaja 1.10.2026, mallit 20 + 22 + 23): ‹ [Nostot ▾] › kahvan alla, AUTO lukijan rivillä.
+        readonly Nostoselain selain;
+        /// <summary>Auki olevan kortin valo (selaimen nykyinen).</summary>
+        string valo;
+        /// <summary>Painallus sulki selaimen paneelin: sama napautus ei sulje korttia.</summary>
+        bool selainSulki;
         // NOSTOKORTTI-POHJA (UI-pohjat, omistaja 1.10.2026): KAPEA = alareunaan, korkeus ≤ Peitto.Max % (laajennettuna
         // Peitto.Laajennettu %); KESKI/LEVEÄ = sivukortti oikeaan reunaan. Vetokahva: ylös laajentaa, alas sulkee.
         readonly VisualElement kahva;
@@ -89,7 +95,8 @@ namespace Matkakirja.Natiivi
         public string Kuvaus => nosto == null ? null
             : nosto.Laji + " · " + nosto.Luokka + " · " + nosto.Otsikko
               + (nosto.LeikekirjaValo != null ? " · leikekirja " + nosto.LeikekirjaValo : "")
-              + (nosto.KohdeId != null ? " · kartalla " + nosto.KohdeId : "");
+              + (nosto.KohdeId != null ? " · kartalla " + nosto.KohdeId : "")
+              + " · " + selain.Kuvaus;
 
         public Nostokortti(UiKerros ui)
         {
@@ -105,7 +112,11 @@ namespace Matkakirja.Natiivi
             sisus.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Add(sisus);
             // Luennan säätimet (omistaja 27.9. klo 09.3x, web #3388): ratas + kaiutin (tauko/jatko, VU).
-            lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija mk-nosto__lukija--kiinni", saatimet: true, rajaus: () => kortti.worldBound);
+            lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija mk-nosto__lukija--kiinni", saatimet: true, rajaus: () => kortti.worldBound,
+                loppui: LuentaLoppui);
+            selain = new Nostoselain(kortti, sisus, id => Avaa(id), AutoVaihtui);
+            selain.LisaaAuto(lukija.Juuri);
+            lukija.Juuri.RegisterCallback<GeometryChangedEvent>(_ => SijoitaLukija());
             // Napit näkyvät heti (omistaja 28.9.2026, TF 1.0.34, Korintin kanava): kiinni kortissa, ei vierityksessä.
             sisus.verticalScroller.valueChanged += _ => SijoitaLukija();
             Kirjasimet.Aseta(kortti, Kirjasin.Luku);
@@ -128,7 +139,7 @@ namespace Matkakirja.Natiivi
             // Löydös 137: UI Toolkitin ScrollView tökki kosketuksella (sama mittaus kuin lehdessä, löydös 51: heitto
             // liukui kolmanneksen Safarin matkasta); sama oma pystyvieritys kuin lehdellä. Kortin isä kuuntelee
             // TrickleDown-vaiheessa, joten vaakapyyhkäisy jää kuvasarjalle (KuvaSelaus) ja napautus napeille.
-            Kosketusvieritys.Liita(kortti, () => kahvaVeto ? null : sisus);
+            Kosketusvieritys.Liita(kortti, () => kahvaVeto ? null : selain.Vierittava ?? sisus);
             Nappaimisto.Rekisteroi("nostokortti", 60, () => Auki, null, null, Sulje); // Esc sulkee (UI-pohjat: yksi sulkupino)
 
             suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true }; // löydökset 102 ja 150
@@ -199,6 +210,7 @@ namespace Matkakirja.Natiivi
             {
                 VerkkoOdotus.Loppu(odotus, "lisakaupunki");
                 napit.Clear();
+                valo = valoId;
                 NaytaLisakaupunki(lk);
                 MittaaAvaus(valoId, v);
                 KirjaaLoyto(valoId);
@@ -210,7 +222,7 @@ namespace Matkakirja.Natiivi
             VerkkoOdotus.Loppu(odotus, v != versio ? "ohitettu" : n == null ? "ei sisältöä" : null);
             if (v != versio) yield break;
             if (n == null) Debug.Log("MATKAKIRJA ui nostot: ei sisältöä valolle " + valoId);
-            else { Nayta(n); MittaaAvaus(valoId, v); KirjaaLoyto(valoId); }
+            else { valo = valoId; Nayta(n); MittaaAvaus(valoId, v); KirjaaLoyto(valoId); }
             jalkeen?.Invoke(n != null);
         }
 
@@ -230,6 +242,9 @@ namespace Matkakirja.Natiivi
                     laajennettu = nappi == "laajenna"; Pystypaikka(); tulos?.Invoke(null); return;
                 }
                 if (nappi == "kahva-alas") { Sulje(); tulos?.Invoke(null); return; }
+                // Nostoselain ja AUTO (Nostoselain.Testaa).
+                if (nappi.StartsWith("selain") || nappi == "auto" || nappi == "auto-pois" || nappi == "siirto" || nappi == "pysayta")
+                { tulos?.Invoke(selain.Testaa(nappi)); return; }
                 if (nappi != "lisaa" && kortti.ClassListContains("mk-nosto--esittely")) Vaihe2();
                 // Kaiutin (luennan mittaus): kuin napautus, ei kortin oma nappi.
                 if (nappi == "kaiutin") { lukija.Paina(); tulos?.Invoke(null); return; }
@@ -289,6 +304,7 @@ namespace Matkakirja.Natiivi
             laajennettu = false;
             kahvaVeto = false;
             lukija.Pysayta();
+            selain.Sulje();
             Puhe.Instanssi?.PeruEsihaku(alunEsihaku);
             alunEsihaku = null;
             Rakenne.PiilotaHaivyttaen(kerros, 200);
@@ -307,9 +323,12 @@ namespace Matkakirja.Natiivi
             VapautaPaikka();
             Mitoita();
             // Kohdekortti (omistaja 1.10.2026 kokeiluun, loki f344f1034): suoraan koko korttiin ilman kuva edellä -vaihetta.
-            if (n.Kuvat.Count > 0 && n.Laji != NostoLaji.Kohde) Vaihe1(); else Vaihe2();
+            // AUTO: suoraan koko korttiin ja luentaan (kuva edellä -vaihe ohitetaan).
+            if (n.Kuvat.Count > 0 && n.Laji != NostoLaji.Kohde && !Nostoselain.Auto) Vaihe1(); else Vaihe2();
             AvaaKerros();
             EsihaeLuennanAlku(n);
+            selain.Paivita(valo);
+            if (Nostoselain.Auto) AutoLue();
         }
 
         string alunEsihaku;
@@ -490,6 +509,7 @@ namespace Matkakirja.Natiivi
             if (kahvaVeto) kortti.CapturePointer(e.pointerId);
             eleAlku = e.position;
             eleAika = Time.unscaledTime * 1000f;
+            selainSulki = !kahvaVeto && selain.OhiPainallus(e.position);
             // Painalluksen kohde päätetään alussa: nappi (LISÄÄ, lukijan kaiutin/valikko), kenttä, kuva tai linkki ei sulje korttia,
             // vaikka napin toiminto muuttaa asettelua ja nostosta syntyvä ClickEvent osuu sen jälkeen korttiin (1.0.39-savuke,
             // Laitetestaaja: lukijan napautus sulki kortin; LISÄÄ-napautus sulki kortin FB234D08:lla).
@@ -539,6 +559,7 @@ namespace Matkakirja.Natiivi
             ohitettu = null;
             if (((Vector2)e.position - eleAlku).magnitude >= Napautuskynnys || Time.unscaledTime * 1000f - eleAika > NapautusMs) return;
             var kohde = Poimi(e.position, e.target as VisualElement);
+            if (selainSulki || selain.Sisaltaa(kohde)) { selainSulki = false; return; }
             if (ohi != null && ohi.panel != null && (kohde == ohi || ohi.Contains(kohde)))
             {
                 Debug.Log($"MATKAKIRJA ui nostokortti: vanhentunut kohde {(e.target as VisualElement)?.GetType().Name}, painetaan {string.Join(".", ohi.GetClasses())}");
@@ -611,6 +632,7 @@ namespace Matkakirja.Natiivi
                 foreach (var k in Kappaleet(lk.NostoTeksti)) Rakenne.Teksti(Riviva(k), "mk-nosto__teksti", sisus);
             }
             AvaaKerros();
+            selain.Paivita(valo);
         }
 
         // --- vaihe 1: kuva edellä ------------------------------------------------------------
@@ -782,9 +804,33 @@ namespace Matkakirja.Natiivi
             float s = sisus.scrollOffset.y;
             float x = Mathf.Round(r.x - k.x - kortti.resolvedStyle.borderLeftWidth);
             float y = Mathf.Round(r.y - k.y - kortti.resolvedStyle.borderTopWidth + s);
+            // AUTO levittää lukijan riviä: paikkavaraus ylärivillä saman levyiseksi (USS 65,4 = ≡ + kaiutin).
+            float w = j.resolvedStyle.width;
+            if (w > 0f && !float.IsNaN(w) && Mathf.Abs(lukijaPaikka.resolvedStyle.width - w) > 0.5f) lukijaPaikka.style.width = w;
             if (j.resolvedStyle.left != x) j.style.left = x;
             if (j.resolvedStyle.top != y) j.style.top = y;
             j.EnableInClassList("mk-nosto__lukija--irti", s > 1f);
+        }
+
+        /// <summary>Luenta loppui omia aikojaan: AUTO siirtyy seuraavaan nostoon 3 s:n laskurilla (Nostoselain).</summary>
+        void LuentaLoppui()
+        {
+            if (Auki && Nostoselain.Auto) selain.AloitaSiirto();
+        }
+
+        /// <summary>AUTO kytkettiin: auki oleva kortti koko korttiin ja luentaan; pois kytkettäessä luenta jatkuu.</summary>
+        void AutoVaihtui()
+        {
+            if (!Auki || !Nostoselain.Auto || nosto == null) return;
+            if (kortti.ClassListContains("mk-nosto--esittely")) Vaihe2();
+            AutoLue();
+        }
+
+        /// <summary>AUTO: luenta alkaa, kun vaiheen 2 asettelu on valmis (kaiuttimen painallus; jo luettaessa ei mitään).</summary>
+        void AutoLue()
+        {
+            int v = versio;
+            kortti.schedule.Execute(() => { if (v == versio && Auki && Nostoselain.Auto && !lukija.Lukee) lukija.Paina(); }).StartingIn(300);
         }
 
         static VisualElement Ylarivi(VisualElement isa, Nosto n)
