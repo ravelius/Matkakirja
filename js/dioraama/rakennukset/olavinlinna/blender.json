@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "646dae45fd9500be",
-  "kansio": "dioraama/olavinlinna/blender/646dae45fd9500be/",
+  "hash": "5b3ebabc6b0ec1af",
+  "kansio": "dioraama/olavinlinna/blender/5b3ebabc6b0ec1af/",
   "tiedostot": [
     {
       "polku": "kirjasto/materiaali/graniittilohkomuuri/graniittilohkomuuri_diff.jpg",
@@ -105,33 +105,33 @@
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-2k-4x4.astcm",
-      "sha256": "5218181043ce7810e470b91c3ad7a4131b68c20690206b9c7c18444a06d4c5eb",
+      "sha256": "4a3149edc40e1cdd52af487bb014e71dbf255617017aae59c743e1f56de54015",
       "tavuja": 5592448
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-2k.jpg",
-      "sha256": "923100555ad4beffa8e85999283fc9c4718f2bbb3bd5b205b602fbad6d38d53c",
-      "tavuja": 1418154
+      "sha256": "aee026727e924e1f865afef6875ce4a3a5b2a0d26bab26f81f5b0351bdf92316",
+      "tavuja": 1386845
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k-4x4.astcm",
-      "sha256": "a9227c3d1e2f69bdd5acc0fba5d4e7e068ceb5e6dc31644426786ce2b13bf2aa",
+      "sha256": "ef6fda64f4832d3e7e950ff023a6ee1e882042a79da1cffe3de5ede79dc912cc",
       "tavuja": 22369664
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k.jpg",
-      "sha256": "5f9a9e55debfa31951966d140394f7be4f2d1c25b3492e0c80c4e25f62daf756",
-      "tavuja": 5049757
+      "sha256": "762dae333301feb518c441a49b7184af37ea752c90c745e2e9ccb431502218aa",
+      "tavuja": 4992299
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-8k-4x4.astcm",
-      "sha256": "41ba33d5931ce04e032c3b39eb02f140324e8654d115217272f40402d5376846",
+      "sha256": "c70e0a413884adb10ff2513f22ce943ea9972f48f0fb3143500614715c0b5cce",
       "tavuja": 89478528
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-8k.jpg",
-      "sha256": "d91c7d37c3fe93278affc15302916de0857d3d9b26a913e34f19ef4883924793",
-      "tavuja": 15771321
+      "sha256": "1be8a5e2fd6ee8e9ec728cdb6c87ceb9068460669bad81625dc50de1bd51055a",
+      "tavuja": 15643507
     },
     {
       "polku": "ulkokuori/ulkokuori_huippu.glb",
