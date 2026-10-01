@@ -20,8 +20,31 @@ namespace Matkakirja.Natiivi
         public const double SumuMax = 0.7;
         public const double SumunKynnys = 0.04;
         public const double SumunTasoitus = 0.35;
-        static readonly float[] KopioSiirto = { -0.33f, 0.33f, -0.66f, 0.66f, -1f, 1f };
-        static readonly float[] KopioPeitto = { 0.45f, 0.45f, 0.32f, 0.32f, 0.20f, 0.20f };
+        /*
+         * SUMUN NÄYTTEET (Päätoimittaja 1.10.2026: "ei monivalotukselta"). Webin kuusi text-shadow-kopiota (±0,33/0,66/1 em,
+         * 45/32/20 %) pehmenevät varjon sumennussäteellä yhtenäiseksi juovaksi; UI Toolkitin teksti ei sumene, joten sama
+         * juova tehdään tiheämmillä näytteillä: 12 kopiota tasavälein ±1/6 … ±1 em, peitto laskee lineaarisesti samaa
+         * profiilia (0,52 − 0,33 × etäisyys) ja skaalataan niin, että kummankin puolen yhteispeitto on webin 0,97.
+         */
+        static readonly float[] KopioSiirto = LuoSiirrot();
+        static readonly float[] KopioPeitto = LuoPeitot();
+
+        static float[] LuoSiirrot()
+        {
+            var t = new float[12];
+            for (int k = 1; k <= 6; k++) { t[2 * k - 2] = -k / 6f; t[2 * k - 1] = k / 6f; }
+            return t;
+        }
+
+        static float[] LuoPeitot()
+        {
+            var t = new float[12];
+            float summa = 0f;
+            for (int k = 1; k <= 6; k++) summa += 0.52f - 0.33f * (k / 6f);
+            float skaala = 0.97f / summa;
+            for (int k = 1; k <= 6; k++) t[2 * k - 2] = t[2 * k - 1] = (0.52f - 0.33f * (k / 6f)) * skaala;
+            return t;
+        }
 
         sealed class Rivi
         {
