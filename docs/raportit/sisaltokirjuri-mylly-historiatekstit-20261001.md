@@ -82,7 +82,7 @@ Jokaiselle laudalle 2–3 lausetta: mikä aito esikuva on, missä se nyt on, mil
 Lauta perustuu yleiseen 1800-luvun saksalaiseen Mühle-lautaan: kolme sisäkkäistä neliötä, joita yhdistävät viivat. Se ei kopioi yhtä tiettyä esinettä, vaan tyypillistä kotien ja majatalojen pelilautaa.
 
 **Katedraali 1300-luku — alkuperä**
-Esikuvana ovat englantilaisten katedraalien ristikäytävien kivipenkkeihin raaputetut keskiaikaiset pelilaudat, joita on Canterburyssä, Gloucesterissa, Norwichissa, Salisburyssä ja Westminster Abbeyssa. Ne ovat yhä paikoillaan ristikäytävissä; Gloucesterin laudat on tehnyt lähteen mukaan munkit, noviisit ja lauluopit vapaa-aikanaan. Laudat on tehty kuopista viivojen sijaan, eikä vinorivi tuonut voittoa.
+Esikuvana ovat englantilaisten katedraalien ristikäytävien kivipenkkeihin raaputetut keskiaikaiset pelilaudat, joita on Canterburyssä, Gloucesterissa, Norwichissa, Salisburyssä ja Westminster Abbeyssa. Ne ovat yhä paikoillaan ristikäytävissä; Gloucesterin laudat ovat lähteen mukaan munkkien, noviisien ja laulupoikien vapaa-ajan jälkiä. Laudat on tehty kuopista viivojen sijaan, eikä vinorivi tuonut voittoa.
 
 **Viikinkilaiva noin 900 — alkuperä**
 Esikuvana on Gokstadin laivahaudasta Norjasta löytynyt puinen pelilauta ja yksi sarvesta tehty pelinappula. Laudan toisella puolella on 13×13 ruutua (hnefatafl) ja toisella mylly; haudan laiva on rakennettu noin vuonna 890 kaadetuista puista, ja kaivaukset tehtiin vuonna 1880. Lauta on Oslon yliopiston Kulttuurihistoriallisen museon kokoelmissa; laudasta on säilynyt vain osa, eikä siinä ole merkintöjä, jotka tunnistaisivat sen peliksi epäilyksettä, joten tulkinta perustuu sen kokoon ja muotoon.
@@ -93,7 +93,7 @@ Esikuvana on Gokstadin laivahaudasta Norjasta löytynyt puinen pelilauta ja yksi
 - "Avautuu, kun voitat vaikean botin"
 
 ### Lisälähteet (osiot 4–5)
-- Gloucester Cathedral cloisters, The Association of English Cathedrals: <https://englishcathedrals.co.uk/latest-news/fan-vaulting-cloisters-gloucester-cathedral/> (laudat ristikäytävän penkissä, munkit/noviisit/lauluopit; ristikäytävän viuhkaholvi 1350–1390-luvuilta)
+- Gloucester Cathedral cloisters, The Association of English Cathedrals: <https://englishcathedrals.co.uk/latest-news/fan-vaulting-cloisters-gloucester-cathedral/> (laudat ristikäytävän penkissä, munkit/noviisit/laulupojat; ristikäytävän viuhkaholvi 1350–1390-luvuilta)
 - Nine men's morris, Wikipedia (laudat Canterburyssä, Gloucesterissa, Norwichissa, Salisburyssä, Westminster Abbeyssa; kuopat viivojen sijaan; Chester): <https://en.wikipedia.org/wiki/Nine_men%27s_morris>
 - Tafl games, Wikipedia (Gokstadin lauta: 13×13 / mylly toisella puolella, sarvinappula): <https://en.wikipedia.org/wiki/Tafl_games>; Hnefatafl, Wikipedia: <https://en.wikipedia.org/wiki/Hnefatafl>
 - Gokstad ship, Wikipedia (puut kaadettu noin 890, kaivaus 1880): <https://en.wikipedia.org/wiki/Gokstad_ship>
