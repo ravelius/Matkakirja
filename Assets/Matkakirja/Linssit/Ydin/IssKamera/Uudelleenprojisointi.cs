@@ -10,13 +10,39 @@ using System.Collections.Generic;
 
 namespace Matkakirja.Linssit.IssKamera
 {
-    /// <summary>Laukaisun data: ruutujen otsakkeet ja puretut laatat (RGB, LaattaL × LaattaK × 3).</summary>
+    /// <summary>
+    /// Laukaisun data: ruutujen otsakkeet ja laatat. Laatat ovat joko valmiiksi purettuina (Laatat, RGB LaattaL × LaattaK × 3)
+    /// tai pakattuina (Pakatut), jolloin ne puretaan tarvittaessa rajattuun välimuistiin (laitekoe 1.10.: 50 mm:n kuvassa 877
+    /// laattaa = ~0,7 Gt purettuna, ~80 Mt pakattuina). Säieturvallinen piirrolle rinnakkain.
+    /// </summary>
     public sealed class KuvaData
     {
         public readonly List<(S2Ruutu ruutu, CogOtsake otsake)> Ruudut = new List<(S2Ruutu, CogOtsake)>();
         public readonly Dictionary<(string tunnus, int taso, int tx, int ty), byte[]> Laatat = new Dictionary<(string, int, int, int), byte[]>();
+        public readonly System.Collections.Concurrent.ConcurrentDictionary<(string tunnus, int taso, int tx, int ty), (CogTaso taso, byte[] pakattu)> Pakatut =
+            new System.Collections.Concurrent.ConcurrentDictionary<(string, int, int, int), (CogTaso, byte[])>();
+        /// <summary>Purettujen välimuistin katto tavuina (ylitys tyhjentää välimuistin; käytössä olevat taulukot säilyvät kutsujilla).</summary>
+        public long Valimuistikatto = 200L * 1024 * 1024;
+        readonly System.Collections.Concurrent.ConcurrentDictionary<(string, int, int, int), byte[]> purettu =
+            new System.Collections.Concurrent.ConcurrentDictionary<(string, int, int, int), byte[]>();
+        long purettuTavut;
         /// <summary>TCI-tavu → näyttötavu (256 arvoa); null = sellaisenaan.</summary>
         public byte[] Lut;
+
+        /// <summary>Purettu laatta tai null (ei haettu).</summary>
+        public byte[] Hae((string tunnus, int taso, int tx, int ty) avain)
+        {
+            if (Laatat.TryGetValue(avain, out var l)) return l;
+            if (purettu.TryGetValue(avain, out l)) return l;
+            if (!Pakatut.TryGetValue(avain, out var p)) return null;
+            l = CogOtsake.PuraLaatta(p.taso, p.pakattu);
+            if (System.Threading.Interlocked.Add(ref purettuTavut, l.Length) > Valimuistikatto)
+            {
+                purettu.Clear(); System.Threading.Interlocked.Exchange(ref purettuTavut, l.Length);
+            }
+            purettu[avain] = l;
+            return l;
+        }
     }
 
     public static class Uudelleenprojisointi
@@ -98,7 +124,8 @@ namespace Matkakirja.Linssit.IssKamera
         static bool Lue(KuvaData d, string tunnus, CogTaso t, int taso, int x, int y, out (byte r, byte g, byte b) p)
         {
             p = default;
-            if (!d.Laatat.TryGetValue((tunnus, taso, x / t.LaattaL, y / t.LaattaK), out var l)) return false;
+            var l = d.Hae((tunnus, taso, x / t.LaattaL, y / t.LaattaK));
+            if (l == null) return false;
             int i = ((y % t.LaattaK) * t.LaattaL + x % t.LaattaL) * 3;
             p = (l[i], l[i + 1], l[i + 2]);
             return true;

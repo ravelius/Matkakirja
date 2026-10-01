@@ -134,12 +134,11 @@ namespace Matkakirja.Natiivi
 
                 // 4) laatat: TCI näkymän tasoilta, SCL karkeimmalta tasolta
                 var haku = new List<(string url, CogTaso taso, long alku, long pit, Action<byte[]> valmis)>();
-                var purettu = new ConcurrentDictionary<(string, int, int, int), byte[]>();
                 foreach (var (ru, o) in ty.Data.Ruudut)
                     foreach (var (taso, tx, tyy) in Kuvasuunnitelma.Laatat(ru, o, naytteet))
                     {
                         var (alku, pit) = o.Tasot[taso].Alue(tx, tyy); var avain = (ru.Tunnus, taso, tx, tyy); var tt = o.Tasot[taso];
-                        haku.Add((ru.Url, tt, alku, pit, d => purettu[avain] = CogOtsake.PuraLaatta(tt, d)));
+                        haku.Add((ru.Url, tt, alku, pit, d => ty.Data.Pakatut[avain] = (tt, d)));   // puretaan piirrossa (Valimuistikatto)
                     }
                 var sclPuretut = new ConcurrentDictionary<(string, int, int), byte[]>();
                 foreach (var ru in ruudut)
@@ -177,7 +176,6 @@ namespace Matkakirja.Natiivi
                     Edistyminen = 0.6f * saatu / Math.Max(1, tavut);
                 }
                 while (purku.Any(x => !x.IsCompleted)) yield return null;
-                foreach (var kv in purettu) ty.Data.Laatat[kv.Key] = kv.Value;
                 Loki($"haettu {saatu / 1e6:0.0} Mt, virheitä {virheet}, {kello.ElapsedMilliseconds / 1000.0:0.0} s");
 
                 // 5) maamaski, pilvet ja laatat levylle
