@@ -192,14 +192,30 @@ namespace Matkakirja.Natiivi
                 if (mosaiikki.Count > 0) ty.Mosaiikki = (z, x, y) => mosaiikki.TryGetValue((z, x, y), out var m) ? m : null;
                 Loki($"mosaiikki {mosaiikki.Count}/{mlista.Count} lehteä ({lahde.Count} laattaa), {mtavut / 1e6:0.0} Mt");
 
-                // 4) laatat: TCI näkymän tasoilta, SCL karkeimmalta tasolta
-                var haku = new List<(string url, CogTaso taso, long alku, long pit, Action<byte[]> valmis)>();
-                foreach (var (ru, o) in ty.Data.Ruudut)
-                    foreach (var (taso, tx, tyy) in ty.HaettavatLaatat(ru, o))
+                // 4) laatat: TCI näkymän tasoilta, SCL näkymän tasoilta (pilvimaski) ja karkeimmalta tasolta (maamaski)
+                var haku = new List<(string url, long alku, long pit, Action<byte[]> valmis)>();
+                void LisaaTci(S2Ruutu ru, CogOtsake o, Func<(int z, int x, int y), bool> suodin)
+                {
+                    foreach (var (taso, tx, tyy) in ty.HaettavatLaatat(ru, o, suodin))
                     {
                         var (alku, pit) = o.Tasot[taso].Alue(tx, tyy); var avain = (ru.Tunnus, taso, tx, tyy); var tt = o.Tasot[taso];
-                        haku.Add((ru.Url, tt, alku, pit, d => ty.Data.Pakatut[avain] = (tt, d)));   // puretaan piirrossa (Valimuistikatto)
+                        haku.Add((ru.Url, alku, pit, d => ty.Data.Pakatut[avain] = (tt, d)));   // puretaan piirrossa (Valimuistikatto)
                     }
+                }
+                void LisaaScl(S2Ruutu ru, CogOtsake so, Func<(int z, int x, int y), bool> suodin)
+                {
+                    ty.Data.Scl[ru.Tunnus] = so;
+                    foreach (var (taso, tx, tyy) in ty.HaettavatLaatat(ru, so, suodin))
+                    {
+                        var (alku, pit) = so.Tasot[taso].Alue(tx, tyy); var avain = (ru.Tunnus + "|scl", taso, tx, tyy); var tt = so.Tasot[taso];
+                        haku.Add((ru.Scl, alku, pit, d => ty.Data.Pakatut[avain] = (tt, d)));
+                    }
+                }
+                foreach (var (ru, o) in ty.Data.Ruudut.ToList())
+                {
+                    LisaaTci(ru, o, null);
+                    if (scl.TryGetValue(ru.Tunnus, out var so)) { ru.Scl ??= sclUrl[ru.Tunnus]; LisaaScl(ru, so, null); }
+                }
                 var sclPuretut = new ConcurrentDictionary<(string, int, int), byte[]>();
                 foreach (var ru in ruudut)
                 {
@@ -208,35 +224,47 @@ namespace Matkakirja.Natiivi
                     for (int x = 0; x < st.LaattojaX; x++) for (int y = 0; y < st.LaattojaY; y++)
                     {
                         var (alku, pit) = st.Alue(x, y); var avain = (ru.Tunnus, x, y);
-                        haku.Add((su, st, alku, pit, d => sclPuretut[avain] = CogOtsake.PuraLaatta(st, d)));
+                        haku.Add((su, alku, pit, d => sclPuretut[avain] = CogOtsake.PuraLaatta(st, d)));
                     }
                 }
-                long tavut = haku.Sum(x => x.pit), saatu = 0; int virheet = 0;
-                Tila = "haku"; Loki($"haku {haku.Count} laattaa, {tavut / 1e6:0.0} Mt");
-                var kesken = new List<(UnityWebRequest q, int i)>(); var purku = new List<Task>(); int seuraava = 0;
-                while (seuraava < haku.Count || kesken.Count > 0)
+                var tila = new long[3];   // saatu, virheet, kokonais
+                Tila = "haku"; Loki($"haku {haku.Count} laattaa, {haku.Sum(x => x.pit) / 1e6:0.0} Mt");
+                yield return Lataa(haku, tila);
+
+                // 4b) S2:n omat pilvet (SCL 3/8/9/10): varakuva (valinta 1) vain pilvisille lehdille (Päätoimittaja 1.10.)
+                var pilviset = ty.PilvisetLehdet();
+                if (pilviset.Count > 0)
                 {
-                    while (kesken.Count < Rinnakkain && seuraava < haku.Count)
+                    var varat = new List<(S2Ruutu vara, UnityWebRequest tq, UnityWebRequest sq)>();
+                    foreach (var (ru, _) in ty.Data.Ruudut.Where(r => r.ruutu.Valinta == 0).ToList())
                     {
-                        var h = haku[seuraava]; var q = Alue(h.url, h.alku, h.pit); q.SendWebRequest(); kesken.Add((q, seuraava++));
+                        var vara = indeksi.Ruudut.TryGetValue(ru.Mgrs, out var ir) ? ir.Ruutu(1) : null;
+                        if (vara == null) continue;
+                        varat.Add((vara, Alue(vara.Url, 0, 16384), string.IsNullOrEmpty(vara.Scl) ? null : Alue(vara.Scl, 0, 16384)));
                     }
-                    yield return null;
-                    for (int k = kesken.Count - 1; k >= 0; k--)
+                    foreach (var v in varat) { v.tq.SendWebRequest(); v.sq?.SendWebRequest(); }
+                    while (varat.Any(v => !v.tq.isDone || (v.sq != null && !v.sq.isDone))) yield return null;
+                    haku.Clear(); int varoja = 0;
+                    foreach (var (vara, tq, sq) in varat)
                     {
-                        var (q, i) = kesken[k]; if (!q.isDone) continue;
-                        kesken.RemoveAt(k);
-                        if (q.result == UnityWebRequest.Result.Success)
+                        try
                         {
-                            var data = q.downloadHandler.data; var valmis = haku[i].valmis; saatu += data.Length;
-                            purku.Add(Task.Run(() => { try { valmis(data); } catch (Exception x) { Debug.LogWarning("iss-kamera purku: " + x.Message); } }));
+                            if (tq.result != UnityWebRequest.Result.Success) continue;
+                            var vo = CogOtsake.Jasenna(tq.downloadHandler.data);
+                            ty.Data.Ruudut.Add((vara, vo));
+                            int ennen = haku.Count; LisaaTci(vara, vo, l => pilviset.Contains(l));
+                            if (haku.Count == ennen) { ty.Data.Ruudut.RemoveAt(ty.Data.Ruudut.Count - 1); continue; }
+                            varoja++;
+                            if (sq != null && sq.result == UnityWebRequest.Result.Success) LisaaScl(vara, CogOtsake.Jasenna(sq.downloadHandler.data), l => pilviset.Contains(l));
                         }
-                        else virheet++;
-                        q.Dispose();
+                        catch (Exception x) { Loki($"varakuva {vara.Tunnus}: {x.Message}"); }
+                        finally { tq.Dispose(); sq?.Dispose(); }
                     }
-                    Edistyminen = 0.6f * saatu / Math.Max(1, tavut);
+                    Loki($"pilvimaski: {pilviset.Count} pilvistä lehteä, {varoja} varakuvaa, {haku.Sum(x => x.pit) / 1e6:0.0} Mt");
+                    if (haku.Count > 0) yield return Lataa(haku, tila);
                 }
-                while (purku.Any(x => !x.IsCompleted)) yield return null;
-                Loki($"haettu {saatu / 1e6:0.0} Mt, virheitä {virheet}, {kello.ElapsedMilliseconds / 1000.0:0.0} s");
+                long saatu = tila[0];
+                Loki($"haettu {saatu / 1e6:0.0} Mt, virheitä {tila[1]}, {kello.ElapsedMilliseconds / 1000.0:0.0} s");
 
                 // 5) maamaski, pilvet ja laatat levylle
                 Tila = "työstö";
@@ -311,6 +339,35 @@ namespace Matkakirja.Natiivi
                 if (!SailytaLaatat) try { if (Directory.Exists(laatat)) Directory.Delete(laatat, true); } catch { }
                 Tila = "valmis"; kaynnissa = false;
             }
+        }
+
+        /// <summary>Range-haut enintään Rinnakkain kerrallaan, purku säikeissä; tila: [0] saatu, [1] virheet.</summary>
+        IEnumerator Lataa(List<(string url, long alku, long pit, Action<byte[]> valmis)> haku, long[] tila)
+        {
+            long tavut = haku.Sum(x => x.pit), tama = 0;
+            var kesken = new List<(UnityWebRequest q, int i)>(); var purku = new List<Task>(); int seuraava = 0;
+            while (seuraava < haku.Count || kesken.Count > 0)
+            {
+                while (kesken.Count < Rinnakkain && seuraava < haku.Count)
+                {
+                    var h = haku[seuraava]; var q = Alue(h.url, h.alku, h.pit); q.SendWebRequest(); kesken.Add((q, seuraava++));
+                }
+                yield return null;
+                for (int k = kesken.Count - 1; k >= 0; k--)
+                {
+                    var (q, i) = kesken[k]; if (!q.isDone) continue;
+                    kesken.RemoveAt(k);
+                    if (q.result == UnityWebRequest.Result.Success)
+                    {
+                        var data = q.downloadHandler.data; var valmis = haku[i].valmis; tila[0] += data.Length; tama += data.Length;
+                        purku.Add(Task.Run(() => { try { valmis(data); } catch (Exception x) { Debug.LogWarning("iss-kamera purku: " + x.Message); } }));
+                    }
+                    else tila[1]++;
+                    q.Dispose();
+                }
+                Edistyminen = 0.6f * tama / Math.Max(1, tavut);
+            }
+            while (purku.Any(x => !x.IsCompleted)) yield return null;
         }
 
         static UnityWebRequest Alue(string url, long alku, long pit)
