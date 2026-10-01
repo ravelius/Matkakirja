@@ -13,7 +13,7 @@ Lue:
   PELIT, TALOUS JA LUENTA; VAIN EUROOPPA (omistaja 27.9. klo 13.5x #3416: erikoismallit, meren lajien sijoitus ja linssien uudet
   kohteet vain Eurooppaan, kunnes omistaja toteaa Euroopan valmiiksi)
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20261001-b.md** (UUSIN, päivä 1.10.: S2-erä b82606cb odottaa ämpäriä, vuodenaika-3); aamu: viesti-linssiseppa-luovutus-20261001.md: kuvanäkymä junassa 86/88, S2-sävytys haarassa
+- **docs/raportit/viesti-linssiseppa-luovutus-20261001-b.md** (UUSIN, 1.10. 17.3x: S2-erä 683ce774 merge-pyynnössä, vuodenaika-3 ja cupola-iso-ikkuna junajonossa); aamu: viesti-linssiseppa-luovutus-20261001.md: kuvanäkymä junassa 86/88, S2-sävytys haarassa
   linssiseppa/iss-fotorealismi 23e40639 (merge S2-erän mukana Linssiseppä 2:n muistimittauksen jälkeen).
   Aiemmat: -20260929-c.md, -20260929-b.md (taulu), -20260929.md (Cupola 3).
 - docs/raportit/symbolit-3d-kallistus-20260928.md (3D-symbolien kokolaki, maalle-siirto ja A/B-komennot)

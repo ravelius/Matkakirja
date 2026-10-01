@@ -1,9 +1,16 @@
-# Linssisepän luovutus 1.10.2026 klo 14.3x (päivä)
+# Linssisepän luovutus 1.10.2026 klo 14.3x (päivä), päivitetty 17.3x
 
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001.md` (aamu). Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
-## Proto-haarat (proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto, worktree wt/proto-linssiseppa-iss-hionta)
+## Päivitys 17.3x
+- **S2-erä merge-pyynnössä Natiivisepällä:** linssiseppa/iss-fotorealismi = 683ce774 (S2Kaytossa = true, muistiraja laiteluokan mukaan).
+  Pyyntö: proto-3d/lokit/linssiseppa-muisti-ikkuna-20261001/merge-pyynto-s2.md. iPad 00008103: fps 30, +480 Mt (kuitattu).
+- Junajono: S2-erä → linssiseppa2/iss-kamera-kuva → linssiseppa/iss-vuodenaika-3 = eb08b05c (sis. vuorokausi + kyydin aurinko,
+  Natiivisepän OK Kartta/Aurinko.cs) → linssiseppa/cupola-iso-ikkuna = 359e65e4 (omistajan valinta: iPhone 2,0/1,25, iPad 1,45/1,25).
+- Seuraavaksi: lähikuvan yövalot pisteiksi (Päätoimittaja). Avoin: kiillon pystyleikkaus.
+
+## Proto-haarat (tila 14.3x) (proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto, worktree wt/proto-linssiseppa-iss-hionta)
 
 | Haara | Kärki | Sisältö | Tila |
 |---|---|---|---|
