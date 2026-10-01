@@ -13,7 +13,10 @@ namespace Matkakirja.Natiivi
         public static Texture2D Lue(byte[] t, string nimi, TextureWrapMode kaari = TextureWrapMode.Clamp) => Lue(t, nimi, out _, kaari);
 
         /// <summary>Kuten yllä; syy kertoo lokiin, miksi ASTC:tä ei käytetty (laite ei tue / otsake / koko).</summary>
-        public static Texture2D Lue(byte[] t, string nimi, out string syy, TextureWrapMode kaari = TextureWrapMode.Clamp)
+        /// <param name="ohita">Ylimpiä mip-tasoja ohitetaan (ensilataus v2, 1.10.: puhelimessa kuoren 8k-atlas → 4k samoilla UV:illä,
+        /// neljännes GPU-latauksesta ja muistista).</param>
+        /// <param name="lineaarinen">Normaalikartat (ei sRGB-muunnosta).</param>
+        public static Texture2D Lue(byte[] t, string nimi, out string syy, TextureWrapMode kaari = TextureWrapMode.Clamp, int ohita = 0, bool lineaarinen = false)
         {
             syy = null;
             if (t == null || t.Length < 32 || t[0] != 0x13 || t[1] != 0xab || t[2] != 0xa1 || t[3] != 0x5c) { syy = "otsake"; return null; }
@@ -33,11 +36,18 @@ namespace Matkakirja.Natiivi
                 if (x == 1 && y == 1) break;
             }
             if (t.Length - 16 != tavuja) { syy = $"koko {t.Length - 16} ≠ {tavuja}"; return null; }
-            var kuva = new Texture2D(w, h, muoto, tasoja, false)
+            long siirto = 0;
+            for (ohita = Math.Min(ohita, tasoja - 1); ohita > 0 && w > 1024; ohita--)
+            {
+                long taso = (long)((w + bx - 1) / bx) * ((h + by - 1) / by) * 16;
+                siirto += taso; tavuja -= taso; tasoja--;
+                w = Math.Max(1, w / 2); h = Math.Max(1, h / 2);
+            }
+            var kuva = new Texture2D(w, h, muoto, tasoja, lineaarinen)
             { name = nimi, filterMode = FilterMode.Trilinear, wrapMode = kaari, anisoLevel = 4 };
             // Suoraan ladatusta puskurista otsakkeen jälkeen (8k-atlas 89 Mt: erillinen kopio tuplasi huippumuistin).
             var kahva = System.Runtime.InteropServices.GCHandle.Alloc(t, System.Runtime.InteropServices.GCHandleType.Pinned);
-            try { kuva.LoadRawTextureData(kahva.AddrOfPinnedObject() + 16, (int)tavuja); }
+            try { kuva.LoadRawTextureData(kahva.AddrOfPinnedObject() + 16 + (int)siirto, (int)tavuja); }
             finally { kahva.Free(); }
             kuva.Apply(false, true);
             return kuva;

@@ -84,8 +84,10 @@ namespace Matkakirja.Natiivi
                 while (!kuoriValmis() && Time.realtimeSinceStartup - odotus < 25f) { if (oma != kerta) yield break; yield return null; }
                 kirjaa?.Invoke($"poikki: ympäristö: kuori valmis, lataus alkaa {Time.realtimeSinceStartup - alku:F1} s");
             }
-            string taivasKuva = DioraamaValot.TunnelmaTaivas < 0.99f && !string.IsNullOrEmpty(y.TaivasHamara) ? y.TaivasHamara : y.Taivas;
-            if (!string.IsNullOrEmpty(taivasKuva)) yield return LataaTaivas(taivasKuva, (float)y.TaivasSuunta, url, kirjaa, oma);
+            bool hamaraTaivas = DioraamaValot.TunnelmaTaivas < 0.99f && !string.IsNullOrEmpty(y.TaivasHamara);
+            string taivasKuva = hamaraTaivas ? y.TaivasHamara : y.Taivas;
+            string taivasAstc = hamaraTaivas ? y.TaivasHamaraAstc : y.TaivasAstc;
+            if (!string.IsNullOrEmpty(taivasKuva)) yield return LataaTaivas(taivasKuva, (float)y.TaivasSuunta, url, kirjaa, oma, taivasAstc);
             if (oma != kerta) yield break;
             Tila = "vesi";
 
@@ -102,11 +104,13 @@ namespace Matkakirja.Natiivi
                 : taso == DioraamaUlkokuori.Laatu.Normaali ? y.OrtoNormaali : y.OrtoKevyt;
             var esikatselu = new List<UnityEngine.Object>();
             bool porrastus = taso != DioraamaUlkokuori.Laatu.Kevyt && !string.IsNullOrEmpty(y.Kevyt) && y.Kevyt != maasto;
-            if (porrastus) yield return LataaMalli("maasto-esikatselu", y.Kevyt, null, url, kirjaa, oma, null, DioraamaUlkokuori.Laatu.Kevyt, esikatselu);
+            // Ensilataus v2: esikatselun kuva kevyen tason ASTC-ortosta (ei runtime-pakkausta); tukematon → glb:n kuva.
+            string esiOrto = y.OrtoKevyt != null && y.OrtoKevyt.EndsWith(".astcm", StringComparison.OrdinalIgnoreCase) ? y.OrtoKevyt : null;
+            if (porrastus) yield return LataaMalli("maasto-esikatselu", y.Kevyt, esiOrto, url, kirjaa, oma, null, DioraamaUlkokuori.Laatu.Kevyt, esikatselu);
             else if (!string.IsNullOrEmpty(maasto)) yield return LataaMalli("maasto", maasto, orto, url, kirjaa, oma, y.Maasto, taso);
             if (oma != kerta) yield break;
             kirjaa?.Invoke($"poikki: ympäristö: ensimmäinen maasto näkyvissä {Time.realtimeSinceStartup - alku:F1} s");
-            if (!string.IsNullOrEmpty(y.Horisontti)) yield return LataaMalli("horisontti", y.Horisontti, y.HorisonttiKuva, url, kirjaa, oma);
+            if (!string.IsNullOrEmpty(y.Horisontti)) yield return LataaMalli("horisontti", y.Horisontti, y.HorisonttiKuva, url, kirjaa, oma, astc: y.HorisonttiKuvaAstc);
             if (oma != kerta) yield break;
             if (!string.IsNullOrEmpty(y.Puut) && !string.IsNullOrEmpty(y.PuukortitTiedot ?? y.Puukortit)) yield return LataaPuut(y, taso, url, kirjaa, oma);
             if (oma != kerta) yield break;
@@ -169,7 +173,11 @@ namespace Matkakirja.Natiivi
             yield return DioraamaLevyvalimuisti.Hae(url(y.SyvyysKuva), 60, t => tavut = t);
             if (oma != kerta || tavut == null) { if (tavut == null) kirjaa?.Invoke("poikki: ympäristö: syvyyskartta ei latautunut (vakiosyvyys)"); yield break; }
             var raaka = new Texture2D(2, 2, TextureFormat.RGBA32, false, true);
+            float r0 = DioraamaRuutu.Alku();
             if (!raaka.LoadImage(tavut, false)) { UnityEngine.Object.Destroy(raaka); kirjaa?.Invoke("poikki: ympäristö: syvyyskartta ei jäsentynyt"); yield break; }
+            DioraamaRuutu.Kirjaa(kirjaa, "syvyys LoadImage", r0);
+            yield return null;
+            if (oma != kerta) { UnityEngine.Object.Destroy(raaka); yield break; }
             // Harmaa PNG voi latautua Alpha8:na: arvo luetaan kanavasta, jossa se on, ja talletetaan R8:ksi (neljännes muistia).
             var p = raaka.GetPixels32();
             bool alfa = raaka.format == TextureFormat.Alpha8;
@@ -178,9 +186,10 @@ namespace Matkakirja.Natiivi
             var syv = new Texture2D(raaka.width, raaka.height, TextureFormat.R8, false, true)
             { name = "Ymparisto:syvyys", wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
             syv.SetPixelData(r8, 0);
-            syv.Apply(false, true);
+            syv.Apply(false, true); DioraamaRuutu.Gpu(kirjaa, syv);
             UnityEngine.Object.Destroy(raaka);
             luodut.Add(syv);
+            yield return null;
             vesiMat?.SetTexture(IdSyvyys, syv);
             double koko = syv.width * y.SyvyysPikseliM;
             // Kuvan vasen yläkulma on (origoX, origoY) Blenderissä = Unityn (x, z); tekstuurin v = 0 on kuvan alareuna.
@@ -340,15 +349,54 @@ namespace Matkakirja.Natiivi
             r.receiveShadows = false;
         }
 
-        IEnumerator LataaTaivas(string polku, float suunta, Func<string, string> url, Action<string> kirjaa, int oma)
+        /// <summary>Ensilataus v2: valmiiksi pakattu ASTC-mipketju (.astcm) suoraan GPU:lle (ei purkua eikä pakkausta).
+        /// tulos(null), jos polkua ei ole, lataus epäonnistui tai laite ei tue ASTC:tä (simulaattori) → kutsuja käyttää png/jpg:tä.</summary>
+        internal static IEnumerator LataaAstc(string polku, string nimi, bool lineaarinen, TextureWrapMode kaari, Func<string, string> url,
+            Action<string> kirjaa, List<UnityEngine.Object> luodut, Action<Texture2D> tulos)
         {
+            if (string.IsNullOrEmpty(polku)) { tulos(null); yield break; }
+            // Tukematon laite (simulaattori): ei turhaa latausta, suoraan png/jpg.
+            if (!SystemInfo.SupportsTextureFormat(TextureFormat.ASTC_4x4)) { tulos(null); yield break; }
+            byte[] tavut = null;
+            yield return DioraamaLevyvalimuisti.Hae(url(polku), 120, b => tavut = b);
+            if (tavut == null) { kirjaa?.Invoke($"poikki: ympäristö: {nimi} ASTC ei latautunut, png/jpg varalla"); tulos(null); yield break; }
+            float r0 = DioraamaRuutu.Alku();
+            var k = DioraamaAstc.Lue(tavut, nimi + ":astc", out string syy, kaari, 0, lineaarinen);
+            DioraamaRuutu.Kirjaa(kirjaa, nimi + " ASTC", r0);
+            if (k == null) { kirjaa?.Invoke($"poikki: ympäristö: {nimi} ASTC ei käytössä ({syy}), png/jpg varalla"); tulos(null); yield break; }
+            luodut?.Add(k);
+            DioraamaRuutu.Gpu(kirjaa, k);
+            yield return null; // GPU-lataus omassa ruudussaan
+            tulos(k);
+        }
+
+        IEnumerator LataaTaivas(string polku, float suunta, Func<string, string> url, Action<string> kirjaa, int oma, string astc = null)
+        {
+            Texture2D valmis = null;
+            yield return LataaAstc(astc, "Ymparisto:taivas", false, TextureWrapMode.Repeat, url, kirjaa, luodut, t => valmis = t);
+            if (oma != kerta || taivasMat == null) yield break;
+            if (valmis != null)
+            {
+                valmis.filterMode = FilterMode.Trilinear;
+                taivasMat.SetTexture(IdTaivasKuva, valmis);
+                taivasSuunta = suunta;
+                kirjaa?.Invoke($"poikki: ympäristö: taivas {valmis.width}×{valmis.height} ASTC");
+                yield break;
+            }
             byte[] tavut = null;
             yield return DioraamaLevyvalimuisti.Hae(url(polku), 60, b => tavut = b);
             if (oma != kerta || taivasMat == null) yield break;
             var k = new Texture2D(2, 2, TextureFormat.RGBA32, false, false) { name = "Ymparisto:taivas", wrapMode = TextureWrapMode.Repeat, filterMode = FilterMode.Bilinear };
+            float r0 = DioraamaRuutu.Alku();
             if (tavut == null || !k.LoadImage(tavut, false)) { UnityEngine.Object.Destroy(k); kirjaa?.Invoke("poikki: ympäristö: taivas ei latautunut, liukuväri"); yield break; }
-            k.Compress(true); k.Apply(false, true);
+            DioraamaRuutu.Kirjaa(kirjaa, "taivas LoadImage", r0);
             luodut.Add(k);
+            yield return null;
+            r0 = DioraamaRuutu.Alku(); k.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "taivas Compress", r0);
+            yield return null;
+            k.Apply(false, true); DioraamaRuutu.Gpu(kirjaa, k);
+            yield return null; // GPU-lataus omassa ruudussaan ennen kuin kuva vaihtuu liukuvärin tilalle
+            if (oma != kerta || taivasMat == null) yield break;
             taivasMat.SetTexture(IdTaivasKuva, k);
             taivasSuunta = suunta;
             kirjaa?.Invoke($"poikki: ympäristö: taivas {k.width}×{k.height}");
@@ -357,7 +405,8 @@ namespace Matkakirja.Natiivi
         // --- MAASTO JA HORISONTTI -------------------------------------------------------------------------------------
 
         IEnumerator LataaMalli(string nimi, string polku, string kuvaPolku, Func<string, string> url, Action<string> kirjaa, int oma,
-            MaastoKerrokset splat = null, DioraamaUlkokuori.Laatu taso = DioraamaUlkokuori.Laatu.Kevyt, List<UnityEngine.Object> kohteet = null)
+            MaastoKerrokset splat = null, DioraamaUlkokuori.Laatu taso = DioraamaUlkokuori.Laatu.Kevyt, List<UnityEngine.Object> kohteet = null,
+            string astc = null)
         {
             byte[] tavut = null;
             float alku = Time.realtimeSinceStartup;
@@ -370,8 +419,16 @@ namespace Matkakirja.Natiivi
             if (oma != kerta) yield break;
             if (malli == null) { kirjaa?.Invoke($"poikki: ympäristö: {nimi} virhe: {virhe}"); yield break; }
 
+            Texture2D kuva = null;
+            // Ensilataus v2: erillinen ASTC-kenttä (horisontti_kuva_astc) ensin; tukematon → kuvaPolku (jpg) kuten ennen.
+            if (!string.IsNullOrEmpty(astc))
+            {
+                yield return LataaAstc(astc, "Ymparisto:" + nimi, false, TextureWrapMode.Clamp, url, kirjaa, luodut, t => kuva = t);
+                if (oma != kerta) yield break;
+                if (kuva != null) kohteet?.Add(kuva);
+            }
             byte[] kuvaTavut = null;
-            if (!string.IsNullOrEmpty(kuvaPolku)) yield return DioraamaLevyvalimuisti.Hae(url(kuvaPolku), 120, t => kuvaTavut = t);
+            if (kuva == null && !string.IsNullOrEmpty(kuvaPolku)) yield return DioraamaLevyvalimuisti.Hae(url(kuvaPolku), 120, t => kuvaTavut = t);
             if (oma != kerta) yield break;
             // KAIKKI mesh-solmut (1.10. juurisyy: Osat on vain ensimmäisen mesh-solmun osat, ja huippu- ja normaalitason
             // maasto on 2 × 2 lohkoa omina solmuinaan → kolme lohkoa puuttui, ja aitat ja rannat jäivät veden alle).
@@ -381,14 +438,15 @@ namespace Matkakirja.Natiivi
                 foreach (var o in solmu.Osat)
                     osat.Add((o, solmu.Vanhempi < 0 ? new Vector3(solmu.Translation[0], solmu.Translation[1], solmu.Translation[2]) : Vector3.zero));
             if (osat.Count == 0) foreach (var o in malli.Osat) osat.Add((o, Vector3.zero));
-            if (kuvaTavut == null) foreach (var (o, _) in osat) if (o.Kuva >= 0 && o.Kuva < malli.Kuvat.Count) { kuvaTavut = malli.Kuvat[o.Kuva]; break; }
-            Texture2D kuva = null;
+            if (kuva == null && kuvaTavut == null) foreach (var (o, _) in osat) if (o.Kuva >= 0 && o.Kuva < malli.Kuvat.Count) { kuvaTavut = malli.Kuvat[o.Kuva]; break; }
             // Paketin orto voi olla ASTC (.astcm, kuten kuoressa): laite käyttää sitä suoraan; tukematon (simulaattori) →
             // glb:n upotettu JPEG.
-            if (kuvaTavut != null && kuvaPolku != null && kuvaPolku.EndsWith(".astcm", StringComparison.OrdinalIgnoreCase))
+            if (kuva == null && kuvaTavut != null && kuvaPolku != null && kuvaPolku.EndsWith(".astcm", StringComparison.OrdinalIgnoreCase))
             {
+                float a0 = DioraamaRuutu.Alku();
                 kuva = DioraamaAstc.Lue(kuvaTavut, "Ymparisto:" + nimi + ":astc", out string syy);
-                if (kuva != null) { luodut.Add(kuva); kohteet?.Add(kuva); }
+                DioraamaRuutu.Kirjaa(kirjaa, nimi + " ASTC", a0);
+                if (kuva != null) { luodut.Add(kuva); kohteet?.Add(kuva); DioraamaRuutu.Gpu(kirjaa, kuva); yield return null; }
                 else
                 {
                     kirjaa?.Invoke($"poikki: ympäristö: {nimi} ASTC ei käytössä ({syy}), glb:n kuva");
@@ -400,8 +458,19 @@ namespace Matkakirja.Natiivi
             {
                 kuva = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
                 { name = "Ymparisto:" + nimi, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 4 };
-                if (kuva.LoadImage(kuvaTavut, false)) { kuva.Compress(true); kuva.Apply(true, true); luodut.Add(kuva); kohteet?.Add(kuva); }
+                float r0 = DioraamaRuutu.Alku();
+                if (kuva.LoadImage(kuvaTavut, false))
+                {
+                    luodut.Add(kuva); kohteet?.Add(kuva);
+                    DioraamaRuutu.Kirjaa(kirjaa, nimi + " LoadImage", r0);
+                    yield return null;
+                    r0 = DioraamaRuutu.Alku(); kuva.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, nimi + " Compress", r0);
+                    yield return null;
+                    kuva.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, kuva);
+                    yield return null;
+                }
                 else { UnityEngine.Object.Destroy(kuva); kuva = null; }
+                if (oma != kerta) yield break;
             }
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaMaasto");
             if (varjostin == null) { kirjaa?.Invoke("poikki: ympäristö: DioraamaMaasto-varjostin puuttuu"); yield break; }
@@ -410,6 +479,7 @@ namespace Matkakirja.Natiivi
             luodut.Add(mat);
             kohteet?.Add(mat);
             int kolmiot = 0;
+            var piirrot = new List<Renderer>(); // päälle vasta kun kaikki lohkot, kuva ja maanpinta ovat GPU:lla
             foreach (var (o, siirto) in osat)
             {
                 int n = o.Paikat.Length / 3;
@@ -427,6 +497,8 @@ namespace Matkakirja.Natiivi
                 luodut.Add(mesh);
                 kohteet?.Add(mesh);
                 kolmiot += o.Kolmiot.Length / 3;
+                yield return null; // yksi lohko (≈ 100 k kolmiota) per ruutu
+                if (oma != kerta) yield break;
                 var t = new GameObject("Ymparisto:" + nimi) { layer = DioraamaNayttamo.Kerros };
                 kohteet?.Add(t);
                 t.transform.SetParent(go.transform, false);
@@ -435,10 +507,14 @@ namespace Matkakirja.Natiivi
                 r.sharedMaterial = mat;
                 r.shadowCastingMode = ShadowCastingMode.Off;
                 r.receiveShadows = false;
+                r.enabled = false;
+                piirrot.Add(r);
             }
             kirjaa?.Invoke($"poikki: ympäristö: {nimi} {osat.Count} lohkoa, {kolmiot} kolmiota, " +
                            $"{(kuva != null ? kuva.width + "² " + kuva.format : "ei kuvaa")}, {Time.realtimeSinceStartup - alku:F1} s");
             if (splat != null && taso != DioraamaUlkokuori.Laatu.Kevyt) yield return LataaSplat(mat, splat, taso, url, kirjaa, oma);
+            if (oma != kerta) yield break;
+            foreach (var r in piirrot) if (r != null) r.enabled = true;
         }
 
         // --- MAANPINNAN KERROKSET (splat) -----------------------------------------------------------------------------
@@ -464,7 +540,9 @@ namespace Matkakirja.Natiivi
                 byte[] t = null;
                 yield return DioraamaLevyvalimuisti.Hae(url(maskit[i]), 60, b => t = b);
                 if (oma != kerta) yield break;
-                var mk = Kuva(t, true, "Ymparisto:splat-maski" + i, false, out _);
+                Texture2D mk = null;
+                yield return Kuva(t, true, "Ymparisto:splat-maski" + i, false, kirjaa, (kt, _) => mk = kt);
+                if (oma != kerta) yield break;
                 if (mk == null) { kirjaa?.Invoke($"poikki: ympäristö: splat-maski {i} ei latautunut, pelkkä ilmakuva"); yield break; }
                 mk.wrapMode = TextureWrapMode.Clamp;
                 mat.SetTexture(i == 0 ? "_SplatMaski0" : "_SplatMaski1", mk);
@@ -473,14 +551,40 @@ namespace Matkakirja.Natiivi
             for (int k = 0; k < kerroksia; k++)
             {
                 var (id, diff, nor, toistoM) = s.Kerrokset[k];
-                byte[] d = null, n = null;
-                yield return DioraamaLevyvalimuisti.Hae(url(diff), 60, b => d = b);
-                if (huippu && !string.IsNullOrEmpty(nor)) yield return DioraamaLevyvalimuisti.Hae(url(nor), 60, b => n = b);
-                if (oma != kerta) yield break;
-                var dk = Kuva(d, false, "Ymparisto:splat-" + id, true, out float kirkkaus);
+                // Ensilataus v2 (iPad Dev 1.10.: runtime-Compress odotti grafiikkasäiettä 100–170 ms): ASTC + datan keski ensin.
+                var (diffAstc, norAstc, keskiData) = k < s.KerroksetAstc.Count ? s.KerroksetAstc[k] : (null, null, (double?)null);
+                Texture2D dk = null; float kirkkaus = 0.5f;
+                if (keskiData.HasValue)
+                {
+                    yield return LataaAstc(diffAstc, "Ymparisto:splat-" + id, false, TextureWrapMode.Repeat, url, kirjaa, luodut, t => dk = t);
+                    if (oma != kerta) yield break;
+                    if (dk != null) kirkkaus = (float)keskiData.Value;
+                }
+                if (dk == null)
+                {
+                    byte[] d = null;
+                    yield return DioraamaLevyvalimuisti.Hae(url(diff), 60, b => d = b);
+                    if (oma != kerta) yield break;
+                    yield return Kuva(d, false, "Ymparisto:splat-" + id, true, kirjaa, (kt, b) => { dk = kt; kirkkaus = b; });
+                    if (oma != kerta) yield break;
+                }
                 if (dk == null) { kirjaa?.Invoke($"poikki: ympäristö: kerros {id} ei latautunut, pelkkä ilmakuva"); yield break; }
                 mat.SetTexture("_SplatDiff" + k, dk);
-                if (n != null) { var nk = Kuva(n, true, "Ymparisto:splat-nor-" + id, false, out _); if (nk != null) mat.SetTexture("_SplatNor" + k, nk); }
+                if (huippu)
+                {
+                    Texture2D nk = null;
+                    yield return LataaAstc(norAstc, "Ymparisto:splat-nor-" + id, true, TextureWrapMode.Repeat, url, kirjaa, luodut, t => nk = t);
+                    if (oma != kerta) yield break;
+                    if (nk == null && !string.IsNullOrEmpty(nor))
+                    {
+                        byte[] n = null;
+                        yield return DioraamaLevyvalimuisti.Hae(url(nor), 60, b => n = b);
+                        if (oma != kerta) yield break;
+                        yield return Kuva(n, true, "Ymparisto:splat-nor-" + id, false, kirjaa, (kk, _) => nk = kk);
+                        if (oma != kerta) yield break;
+                    }
+                    if (nk != null) mat.SetTexture("_SplatNor" + k, nk);
+                }
                 toisto[k] = 1f / Mathf.Max(0.1f, (float)toistoM);
                 keski[k] = 1f / Mathf.Max(0.05f, kirkkaus);
                 yield return null;
@@ -496,27 +600,37 @@ namespace Matkakirja.Natiivi
 
         /// <summary>JPEG/PNG → pakattu mip-tekstuuri (linear = normaalit/maskit). kirkkaus = keskimääräinen luminanssi
         /// (lineaarinen, 16² mipistä) ennen pakkausta; maskia ei pakata (painojen tarkkuus).</summary>
-        Texture2D Kuva(byte[] tavut, bool lineaarinen, string nimi, bool pakkaa, out float kirkkaus)
+        /// Ensilataus v2: LoadImage, Compress ja Apply kukin omassa ruudussaan; tulos(tekstuuri | null, kirkkaus).
+        IEnumerator Kuva(byte[] tavut, bool lineaarinen, string nimi, bool pakkaa, Action<string> kirjaa, Action<Texture2D, float> tulos)
         {
-            kirkkaus = 0.5f;
-            if (tavut == null) return null;
+            float kirkkaus = 0.5f;
+            if (tavut == null) { tulos(null, kirkkaus); yield break; }
             var t = new Texture2D(2, 2, TextureFormat.RGBA32, true, lineaarinen)
             { name = nimi, filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Repeat, anisoLevel = 4 };
-            if (!t.LoadImage(tavut, false)) { UnityEngine.Object.Destroy(t); return null; }
+            float r0 = DioraamaRuutu.Alku();
+            if (!t.LoadImage(tavut, false)) { UnityEngine.Object.Destroy(t); tulos(null, kirkkaus); yield break; }
+            luodut.Add(t);
             int mip = Mathf.Max(0, t.mipmapCount - 5);
             var px = t.GetPixels(mip);
             double summa = 0;
             foreach (var c in px) summa += 0.2126 * c.linear.r + 0.7152 * c.linear.g + 0.0722 * c.linear.b;
             if (px.Length > 0) kirkkaus = (float)(summa / px.Length);
-            if (pakkaa || lineaarinen && !nimi.Contains("maski")) t.Compress(true);
-            t.Apply(true, true);
-            luodut.Add(t);
-            return t;
+            DioraamaRuutu.Kirjaa(kirjaa, nimi + " LoadImage", r0);
+            yield return null;
+            if (pakkaa || lineaarinen && !nimi.Contains("maski"))
+            {
+                r0 = DioraamaRuutu.Alku(); t.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, nimi + " Compress", r0);
+                yield return null;
+            }
+            t.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, t);
+            yield return null;
+            tulos(t, kirkkaus);
         }
 
         // --- PUUT -----------------------------------------------------------------------------------------------------
 
         static readonly int IdPuuNormaali = Shader.PropertyToID("_Normaali"), IdPuuNormaaliPaalla = Shader.PropertyToID("_NormaaliPaalla");
+        internal static readonly int IdHivutusAlku = Shader.PropertyToID("_HivutusAlku");
         sealed class Kortti { public float U0, U1, V0, V1, KorttiPerPuu = 1.04f, LeveysPerKorkeus = 0.5f; }
 
         IEnumerator LataaPuut(Ymparisto y, DioraamaUlkokuori.Laatu taso, Func<string, string> url, Action<string> kirjaa, int oma)
@@ -531,9 +645,16 @@ namespace Matkakirja.Natiivi
             try { atlasNimi = MiniJson.Teksti(MiniJson.ObjektiTaiNull(MiniJson.Jasenna(System.Text.Encoding.UTF8.GetString(kortitJson))), "atlas"); } catch { }
             string kansio = tiedot.Contains("/") ? tiedot.Substring(0, tiedot.LastIndexOf('/') + 1) : "";
             string atlasPolku = y.PuukortitTiedot != null && !string.IsNullOrEmpty(y.Puukortit) ? y.Puukortit : kansio + (atlasNimi ?? "puukortit.png");
-            yield return DioraamaLevyvalimuisti.Hae(url(atlasPolku), 60, t => atlasTavut = t);
+            // Ensilataus v2: ASTC-atlas (puukortit_astc) ensin; tukematon/puuttuu → png kuten ennen.
+            Texture2D atlasAstc = null;
+            yield return LataaAstc(y.PuukortitAstc, "Ymparisto:puukortit", false, TextureWrapMode.Clamp, url, kirjaa, luodut, t => atlasAstc = t);
             if (oma != kerta) yield break;
-            if (atlasTavut == null) { kirjaa?.Invoke("poikki: ympäristö: puukorttien atlas ei latautunut"); yield break; }
+            if (atlasAstc == null)
+            {
+                yield return DioraamaLevyvalimuisti.Hae(url(atlasPolku), 60, t => atlasTavut = t);
+                if (oma != kerta) yield break;
+                if (atlasTavut == null) { kirjaa?.Invoke("poikki: ympäristö: puukorttien atlas ei latautunut"); yield break; }
+            }
 
             float alku = Time.realtimeSinceStartup;
             Vector3[] p = null; Vector2[] uv0 = null, uv1 = null; Vector4[] tan = null; Color32[] v = null; int[] kolmiot = null; string virhe = null; int puita = 0;
@@ -579,23 +700,24 @@ namespace Matkakirja.Natiivi
                                 if (lista.Count > 0) lajiKortit[li] = lista;
                             }
 
-                    var pj = MiniJson.ObjektiTaiNull(MiniJson.Jasenna(System.Text.Encoding.UTF8.GetString(puutJson)));
-                    var rivit = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(pj, "puut"));
-                    var tasot = MiniJson.ObjektiTaiNull(MiniJson.Kentta(pj, "tasot"));
+                    const int L = 7; // x, y, z_maa, korkeus, latvus_r, laji, muunnos
+                    var puut = DioraamaLuvut.Rivit(puutJson, "puut", L, out var sar, out int riveja) ?? new float[0];
+                    var tasot = DioraamaLuvut.Objekti(puutJson, "tasot");
                     string tasoNimi = taso == DioraamaUlkokuori.Laatu.Huippu ? "huippu" : taso == DioraamaUlkokuori.Laatu.Normaali ? "normaali" : "kevyt";
                     int oletus = taso == DioraamaUlkokuori.Laatu.Huippu ? 25000 : taso == DioraamaUlkokuori.Laatu.Normaali ? 10000 : 3500;
-                    int n = Math.Min(rivit.Count, (int)(MiniJson.Luku(tasot, tasoNimi) ?? oletus));
+                    int n = Math.Min(riveja, (int)(MiniJson.Luku(tasot, tasoNimi) ?? oletus));
                     p = new Vector3[n * 8]; uv0 = new Vector2[n * 8]; uv1 = new Vector2[n * 8]; tan = new Vector4[n * 8]; v = new Color32[n * 8]; kolmiot = new int[n * 12];
                     int k0 = 0;
                     for (int i = 0; i < n; i++)
                     {
-                        if (!(rivit[i] is List<object> r) || r.Count < 6) continue;
-                        float bx = (float)(double)r[0], by = (float)(double)r[1], bz = (float)(double)r[2], kork = (float)(double)r[3];
-                        int laji = (int)(double)r[5];
+                        if (sar[i] < 6) continue;
+                        int o0 = i * L;
+                        float bx = puut[o0], by = puut[o0 + 1], bz = puut[o0 + 2], kork = puut[o0 + 3];
+                        int laji = (int)puut[o0 + 5];
                         if (!lajiKortit.TryGetValue(laji, out var vaihtoehdot) && !lajiKortit.TryGetValue(0, out vaihtoehdot)) continue;
                         uint hsh = (uint)(i * 2654435761u) ^ (uint)(bx * 73856093f) ^ (uint)(by * 19349663f);
-                        var kortti = r.Count >= 7 && r[6] is double md && lajiMuunnokset.TryGetValue(laji, out var mlista)
-                            ? mlista[Math.Max(0, (int)md) % mlista.Count]
+                        var kortti = sar[i] >= 7 && !float.IsNaN(puut[o0 + 6]) && lajiMuunnokset.TryGetValue(laji, out var mlista)
+                            ? mlista[Math.Max(0, (int)puut[o0 + 6]) % mlista.Count]
                             : vaihtoehdot[(int)(hsh % (uint)vaihtoehdot.Count)];
                         float korkeus = kork * kortti.KorttiPerPuu, puoli = korkeus * kortti.LeveysPerKorkeus * 0.5f;
                         float kulma = (hsh >> 8) % 360 * Mathf.Deg2Rad;
@@ -631,12 +753,24 @@ namespace Matkakirja.Natiivi
             if (oma != kerta) yield break;
             if (p == null || p.Length == 0) { kirjaa?.Invoke($"poikki: ympäristö: puut virhe: {virhe ?? "ei puita"}"); yield break; }
 
-            var atlas = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
-            { name = "Ymparisto:puukortit", filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 2 };
-            if (!atlas.LoadImage(atlasTavut, false)) { UnityEngine.Object.Destroy(atlas); kirjaa?.Invoke("poikki: ympäristö: puukorttien atlas ei jäsentynyt"); yield break; }
-            atlas.Compress(true);
-            atlas.Apply(true, true);
-            luodut.Add(atlas);
+            float r0;
+            var atlas = atlasAstc;
+            if (atlas != null) atlas.anisoLevel = 2;
+            else
+            {
+                atlas = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
+                { name = "Ymparisto:puukortit", filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 2 };
+                r0 = DioraamaRuutu.Alku();
+                if (!atlas.LoadImage(atlasTavut, false)) { UnityEngine.Object.Destroy(atlas); kirjaa?.Invoke("poikki: ympäristö: puukorttien atlas ei jäsentynyt"); yield break; }
+                luodut.Add(atlas);
+                DioraamaRuutu.Kirjaa(kirjaa, "puukortit LoadImage", r0);
+                yield return null;
+                r0 = DioraamaRuutu.Alku(); atlas.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "puukortit Compress", r0);
+                yield return null;
+                atlas.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, atlas);
+                yield return null;
+                if (oma != kerta) yield break;
+            }
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaPuu");
             if (varjostin == null) { kirjaa?.Invoke("poikki: ympäristö: DioraamaPuu-varjostin puuttuu"); yield break; }
             var mat = new Material(varjostin) { name = "Ymparisto:puut" };
@@ -644,18 +778,37 @@ namespace Matkakirja.Natiivi
             luodut.Add(mat);
             // Normaalikartta (v3) vain normaali/huippu-tasolla: kevyellä tasolla tasainen kortti riittää (lataus ja muisti).
             string normaaliTila = "ei";
-            if (!string.IsNullOrEmpty(y.PuukortitNormaali) && taso != DioraamaUlkokuori.Laatu.Kevyt)
+            Texture2D normAstc = null;
+            if (!string.IsNullOrEmpty(y.PuukortitNormaaliAstc) && taso != DioraamaUlkokuori.Laatu.Kevyt)
+            {
+                yield return LataaAstc(y.PuukortitNormaaliAstc, "Ymparisto:puukortit-normaali", true, TextureWrapMode.Clamp, url, kirjaa, luodut, t => normAstc = t);
+                if (oma != kerta) yield break;
+                if (normAstc != null && normAstc.width == atlas.width && normAstc.height == atlas.height)
+                {
+                    mat.SetTexture(IdPuuNormaali, normAstc);
+                    mat.SetFloat(IdPuuNormaaliPaalla, 1);
+                    normaaliTila = $"{normAstc.width}×{normAstc.height} ASTC";
+                }
+                else normAstc = null;
+            }
+            if (normAstc == null && !string.IsNullOrEmpty(y.PuukortitNormaali) && taso != DioraamaUlkokuori.Laatu.Kevyt)
             {
                 byte[] normTavut = null;
                 yield return DioraamaLevyvalimuisti.Hae(url(y.PuukortitNormaali), 60, t => normTavut = t);
                 if (oma != kerta) yield break;
                 var norm = new Texture2D(2, 2, TextureFormat.RGBA32, true, true)
                 { name = "Ymparisto:puukortit-normaali", filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 2 };
+                r0 = DioraamaRuutu.Alku();
                 if (normTavut != null && norm.LoadImage(normTavut, false) && norm.width == atlas.width && norm.height == atlas.height)
                 {
-                    norm.Compress(true);
-                    norm.Apply(true, true);
                     luodut.Add(norm);
+                    DioraamaRuutu.Kirjaa(kirjaa, "puukortit-normaali LoadImage", r0);
+                    yield return null;
+                    r0 = DioraamaRuutu.Alku(); norm.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "puukortit-normaali Compress", r0);
+                    yield return null;
+                    norm.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, norm);
+                    yield return null;
+                    if (oma != kerta) yield break;
                     mat.SetTexture(IdPuuNormaali, norm);
                     mat.SetFloat(IdPuuNormaaliPaalla, 1);
                     normaaliTila = $"{norm.width}×{norm.height}";
@@ -667,6 +820,9 @@ namespace Matkakirja.Natiivi
             mesh.RecalculateBounds();
             mesh.UploadMeshData(true);
             luodut.Add(mesh);
+            yield return null;
+            if (oma != kerta) yield break;
+            mat.SetFloat(IdHivutusAlku, Time.timeSinceLevelLoad); // DioraamaPuu: alfaraja laskee 0,5 s:ssa → puut kasvavat näkyviin
             var t = new GameObject("Ymparisto:puut") { layer = DioraamaNayttamo.Kerros };
             t.transform.SetParent(go.transform, false);
             t.AddComponent<MeshFilter>().sharedMesh = mesh;
@@ -687,6 +843,120 @@ namespace Matkakirja.Natiivi
             luodut.Clear();
             if (go != null) UnityEngine.Object.Destroy(go);
             go = null; vesiGo = null; vesiRenderer = null; vesiMat = null; heijastusKamera = null; taivasGo = null; taivasMat = null;
+        }
+    }
+
+    /// <summary>ENSILATAUS v2 (Päätoimittaja 1.10.2026: "kun linna on näkyvissä, yksikään ruutu ei kestä yli ~100 ms"):
+    /// pääsäikeen raskaat vaiheet (LoadImage, Compress, Apply = GPU-lataus, mesh-lataus) tehdään kukin omassa ruudussaan
+    /// (kutsuja tekee yield return null väliin), ja yli 40 ms:n vaihe kirjataan lokiin ("poikki: raskas …"), jotta laite-
+    /// mittaus näyttää jäljelle jääneet piikit.</summary>
+    internal static class DioraamaRuutu
+    {
+        public static float Alku() => Time.realtimeSinceStartup;
+        public static void Kirjaa(Action<string> kirjaa, string vaihe, float alku)
+        {
+            float ms = (Time.realtimeSinceStartup - alku) * 1000f;
+            if (ms > 40f) kirjaa?.Invoke($"poikki: raskas {vaihe} {ms:F0} ms (ruutu {Time.frameCount})");
+        }
+        /// <summary>GPU-lataus (Apply) lokiin ruutunumerolla: laitemittauksen piikit kohdistuvat tekstuuriin.</summary>
+        public static void Gpu(Action<string> kirjaa, Texture t)
+        {
+            if (t != null) kirjaa?.Invoke($"poikki: gpu {t.name} {t.width}×{t.height} {t.graphicsFormat} (ruutu {Time.frameCount})");
+        }
+    }
+
+    /// <summary>ENSILATAUS v2 (iPad-mittaus 1.10.: puiden vaiheessa 100–220 ms:n ruutuja): puut.json (4,5 Mt, ~65 000 riviä) ja
+    /// aluskasvien lista jäsennettiin MiniJsonilla, joka loi riviä kohden listan ja laatikoidut luvut (~1 M oliota) →
+    /// roskienkeruu pysäytti myös pääsäikeen. Tämä lukee numerotaulukon suoraan tavuista tasaiseen float-taulukkoon.</summary>
+    internal static class DioraamaLuvut
+    {
+        /// <summary>Taulukko avaimen <paramref name="avain"/> alla: [[a, b, …], …] → rivit × leveys (puuttuva = NaN) ja rivin
+        /// sarakemäärä. null, jos avainta ei löydy.</summary>
+        public static float[] Rivit(byte[] j, string avain, int leveys, out int[] sarakkeet, out int rivit)
+        {
+            sarakkeet = null; rivit = 0;
+            int p = Etsi(j, "\"" + avain + "\"", 0);
+            if (p < 0) return null;
+            while (p < j.Length && j[p] != (byte)'[') p++;
+            p++;
+            var arvot = new List<float>(1 << 16); var maarat = new List<int>(1 << 14);
+            while (p < j.Length)
+            {
+                byte c = j[p];
+                if (c == (byte)']') break;
+                if (c != (byte)'[') { p++; continue; }
+                p++;
+                int n = 0;
+                while (p < j.Length && j[p] != (byte)']')
+                {
+                    c = j[p];
+                    if (c == (byte)'-' || c == (byte)'+' || c == (byte)'.' || (c >= (byte)'0' && c <= (byte)'9'))
+                    {
+                        float v = Luku(j, ref p);
+                        if (n < leveys) arvot.Add(v);
+                        n++;
+                    }
+                    else if (c == (byte)'n') { if (n < leveys) arvot.Add(float.NaN); n++; p += 4; } // null
+                    else p++;
+                }
+                for (int k = n; k < leveys; k++) arvot.Add(float.NaN);
+                maarat.Add(Math.Min(n, leveys));
+                p++;
+            }
+            rivit = maarat.Count; sarakkeet = maarat.ToArray();
+            return arvot.ToArray();
+        }
+
+        /// <summary>Pieni objekti avaimen alla (esim. "tasot") MiniJsonilla ilman koko tiedoston jäsennystä.</summary>
+        public static Dictionary<string, object> Objekti(byte[] j, string avain)
+        {
+            int p = Etsi(j, "\"" + avain + "\"", 0);
+            if (p < 0) return null;
+            while (p < j.Length && j[p] != (byte)'{') { if (j[p] == (byte)'[' || j[p] == (byte)',') return null; p++; }
+            int alku = p, syvyys = 0;
+            for (; p < j.Length; p++)
+            {
+                if (j[p] == (byte)'{') syvyys++;
+                else if (j[p] == (byte)'}' && --syvyys == 0) break;
+            }
+            if (p >= j.Length) return null;
+            try { return MiniJson.ObjektiTaiNull(MiniJson.Jasenna(System.Text.Encoding.UTF8.GetString(j, alku, p - alku + 1))); } catch { return null; }
+        }
+
+        static int Etsi(byte[] j, string s, int alku)
+        {
+            var b = System.Text.Encoding.UTF8.GetBytes(s);
+            for (int i = alku; i <= j.Length - b.Length; i++)
+            {
+                int k = 0;
+                while (k < b.Length && j[i + k] == b[k]) k++;
+                if (k == b.Length) return i + b.Length;
+            }
+            return -1;
+        }
+
+        static float Luku(byte[] j, ref int p)
+        {
+            bool neg = false;
+            if (j[p] == (byte)'-') { neg = true; p++; } else if (j[p] == (byte)'+') p++;
+            double v = 0, jako = 1;
+            while (p < j.Length && j[p] >= (byte)'0' && j[p] <= (byte)'9') v = v * 10 + (j[p++] - (byte)'0');
+            if (p < j.Length && j[p] == (byte)'.')
+            {
+                p++;
+                while (p < j.Length && j[p] >= (byte)'0' && j[p] <= (byte)'9') { v = v * 10 + (j[p++] - (byte)'0'); jako *= 10; }
+            }
+            v /= jako;
+            if (p < j.Length && (j[p] == (byte)'e' || j[p] == (byte)'E'))
+            {
+                p++;
+                bool eneg = false;
+                if (p < j.Length && (j[p] == (byte)'-' || j[p] == (byte)'+')) eneg = j[p++] == (byte)'-';
+                int e = 0;
+                while (p < j.Length && j[p] >= (byte)'0' && j[p] <= (byte)'9') e = e * 10 + (j[p++] - (byte)'0');
+                v *= Math.Pow(10, eneg ? -e : e);
+            }
+            return (float)(neg ? -v : v);
         }
     }
 }
