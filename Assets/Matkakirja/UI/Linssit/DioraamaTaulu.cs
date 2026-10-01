@@ -366,6 +366,8 @@ namespace Matkakirja.Natiivi
             // näyttää linnan pulu.teksti-kuplan, jos sellainen on.
             if (nakyma.KohdeTila == null && rakennus.Kertoja != null && rakennus.Kertoja.Count > 0)
             {
+                // Tilasta palattaessa kuunnelma loppuu (dccb82a5: keittiön kaistale jäi yleisnäkymään).
+                LopetaKuunnelma();
                 for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
                 lauta.style.display = DisplayStyle.None;
                 float ph2 = juuri.layout.height; if (float.IsNaN(ph2) || ph2 <= 0) ph2 = Screen.height;
