@@ -87,24 +87,39 @@ namespace Matkakirja.Linssit.IssKamera
         /// <summary>Bilineaarinen näyte ensimmäisestä ruudusta, jolla on dataa pisteessä (karkein riittävä haettu taso).</summary>
         public static bool Nayte(KuvaData d, double lat, double lon, double metria, out byte r, out byte g, out byte b)
         {
+            // Tarkin haettu taso voittaa: tasot tarkimmasta karkeimpaan, jokaisella kaikki ruudut järjestyksessä (laitekoe 4:
+            // ruutu kerrallaan -silmukka otti edellisen ruudun karkean tason toisen lehden haun jäljiltä → laatan muotoisia
+            // eri tarkkuuden ja eri päivän kaistoja). Nodata (0,0,0) → seuraava ruutu samalla tasolla.
             r = g = b = 0;
-            foreach (var (ru, o) in d.Ruudut)
+            int lkm = d.Ruudut.Count, tasoja = 0;
+            for (int k = 0; k < lkm; k++) tasoja = Math.Max(tasoja, d.Ruudut[k].otsake.Tasot.Count);
+            int alku = int.MaxValue;
+            for (int k = 0; k < lkm; k++)
             {
+                var (ru, o) = d.Ruudut[k];
                 if (lon < ru.W || lon > ru.E || lat < ru.S || lat > ru.N) continue;
-                var (e, n) = Utm.Eteen(lat, lon, ru.Vyohyke);
-                for (int taso = o.TasoResoluutiolle(metria); taso < o.Tasot.Count; taso++)
+                alku = Math.Min(alku, o.TasoResoluutiolle(metria));
+            }
+            if (alku == int.MaxValue) return false;
+            (double e, double n)[] utm = null;
+            for (int taso = alku; taso < tasoja; taso++)
+                for (int k = 0; k < lkm; k++)
                 {
+                    var (ru, o) = d.Ruudut[k];
+                    if (taso >= o.Tasot.Count || lon < ru.W || lon > ru.E || lat < ru.S || lat > ru.N) continue;
+                    utm ??= new (double, double)[lkm];
+                    if (utm[k].e == 0 && utm[k].n == 0) utm[k] = Utm.Eteen(lat, lon, ru.Vyohyke);
+                    var (e, n) = utm[k];
                     double pm = o.TasonPikseliM(taso);
                     double fx = (e - o.Ita0) / pm - 0.5, fy = (o.Pohjoinen0 - n) / pm - 0.5;
                     var t = o.Tasot[taso];
-                    if (fx < 0 || fy < 0 || fx >= t.Leveys - 1 || fy >= t.Korkeus - 1) break;   // ruudun ulkopuolella
+                    if (fx < 0 || fy < 0 || fx >= t.Leveys - 1 || fy >= t.Korkeus - 1) continue;   // ruudun ulkopuolella
                     int ix = (int)fx, iy = (int)fy; double ax = fx - ix, ay = fy - iy;
-                    if (!Pikselit(d, ru.Tunnus, t, taso, ix, iy, out var p00, out var p10, out var p01, out var p11)) continue;   // ei haettu → karkeampi
-                    if (Musta(p00) && Musta(p10) && Musta(p01) && Musta(p11)) break;   // nodata → seuraava ruutu
+                    if (!Pikselit(d, ru.Tunnus, t, taso, ix, iy, out var p00, out var p10, out var p01, out var p11)) continue;   // ei haettu
+                    if (Musta(p00) && Musta(p10) && Musta(p01) && Musta(p11)) continue;   // nodata
                     r = Seka(p00.r, p10.r, p01.r, p11.r, ax, ay); g = Seka(p00.g, p10.g, p01.g, p11.g, ax, ay); b = Seka(p00.b, p10.b, p01.b, p11.b, ax, ay);
                     return true;
                 }
-            }
             return false;
         }
 

@@ -22,7 +22,7 @@ namespace Matkakirja.Linssit.Testit
             var ip = Environment.GetEnvironmentVariable("INDEKSI_JSON"); var ppm = Environment.GetEnvironmentVariable("AUKKO_PPM");
             if (string.IsNullOrEmpty(ip) || string.IsNullOrEmpty(ppm)) return;
             var x = S2Indeksi.Jasenna(File.ReadAllText(ip));
-            var k = IssKameraSuunnitelmaTestit.Kamera(57.51, 25.81, 420, 60.17, 24.94, 320, 4096);
+            var k = IssKameraSuunnitelmaTestit.Kamera(57.51, 25.81, 420, 60.17, 24.94, 320, 4096); k.Korkeus = 5120;   // laitteen 4:5 pysty
             var n = Kuvasuunnitelma.Naytteet(k);
             double w = n.Min(q => q.LonMin), s = n.Min(q => q.LatMin), e = n.Max(q => q.LonMax), nn = n.Max(q => q.LatMax);
             var ruudut = Kuvasuunnitelma.Ruudut(n, x.Alueella(w, s, e, nn).Select(q => q.Ruutu())).Keys.ToList();
@@ -37,16 +37,32 @@ namespace Matkakirja.Linssit.Testit
                     ty.Data.Pakatut[(ru.Tunnus, taso, tx, tyy)] = (o.Tasot[taso], Curl(ru.Url, a, len));
                 }
             var lehdet = ty.Lehdet(); int zmax = lehdet.Max(l => l.z); var huiput = lehdet.Where(l => l.z == zmax).ToList();
-            int x0 = huiput.Min(l => l.x), x1 = huiput.Max(l => l.x), y0 = huiput.Min(l => l.y), y1 = huiput.Max(l => l.y);
-            int W = (x1 - x0 + 1) * 64, H = (y1 - y0 + 1) * 64; var kuva = new byte[W * H * 3]; var rgba = new byte[256 * 256 * 4];
+            // Kaikki lehtitasot: aukot tasoittain (laitekoe 4: kaistat, vaikka z14-lehdissä 0 %).
+            foreach (var g in lehdet.GroupBy(l => l.z).OrderBy(g => g.Key))
+            {
+                long au = 0, kk2 = 0; var r2 = new byte[256 * 256 * 4];
+                foreach (var (z2, x2, y2) in g) { Uudelleenprojisointi.Laatta(ty.Data, z2, x2, y2, r2); for (int i = 3; i < r2.Length; i += 16) { kk2++; if (r2[i] == 0) au++; } }
+                Console.WriteLine($"    z{g.Key}: {g.Count()} lehteä, aukkoja {100.0 * au / Math.Max(1, kk2):0.00} %");
+            }
+            // Kooste kaikista lehdistä z12-pohjalle (64 px / z12-laatta): kukin lehti piirretään omalla tasollaan ja skaalataan,
+            // jolloin eri tasojen/ruutujen sävyerot näkyvät kaistoina kuten Cesiumissa.
+            const int ZK = 12, P = 128; double sk = P / 256.0;
+            int x0 = int.MaxValue, x1 = int.MinValue, y0 = int.MaxValue, y1 = int.MinValue;
+            foreach (var (z, xx, yy) in lehdet) { int sh = z - ZK; int ax = sh >= 0 ? xx >> sh : xx << -sh, ay = sh >= 0 ? yy >> sh : yy << -sh; x0 = Math.Min(x0, ax); x1 = Math.Max(x1, ax); y0 = Math.Min(y0, ay); y1 = Math.Max(y1, ay); }
+            int W = (x1 - x0 + 1) * P, H = (y1 - y0 + 1) * P; var kuva = new byte[W * H * 3]; var rgba = new byte[256 * 256 * 4];
             long aukot = 0, kaikki = 0;
-            foreach (var (z, xx, yy) in huiput)
+            foreach (var (z, xx, yy) in lehdet)
             {
                 Uudelleenprojisointi.Laatta(ty.Data, z, xx, yy, rgba);
-                for (int py = 0; py < 64; py++) for (int px = 0; px < 64; px++)
+                double koko = P * Math.Pow(2, ZK - z);                    // lehden koko koosteessa (px)
+                double ox = (xx * koko) - x0 * P, oy = (yy * koko) - y0 * P;
+                int n2 = Math.Max(1, (int)Math.Round(koko));
+                for (int py = 0; py < n2; py++) for (int px = 0; px < n2; px++)
                 {
-                    int o = ((py * 4) * 256 + px * 4) * 4; kaikki++; if (rgba[o + 3] == 0) aukot++;
-                    for (int c = 0; c < 3; c++) kuva[(((yy - y0) * 64 + py) * W + (xx - x0) * 64 + px) * 3 + c] = rgba[o + 3] == 0 ? (byte)(c == 0 ? 255 : 0) : rgba[o + c];
+                    int sx = Math.Min(255, (int)(px * 256.0 / koko)), sy = Math.Min(255, (int)(py * 256.0 / koko));
+                    int X = (int)(ox + px), Y = (int)(oy + py); if (X < 0 || Y < 0 || X >= W || Y >= H) continue;
+                    int o = (sy * 256 + sx) * 4; kaikki++; if (rgba[o + 3] == 0) aukot++;
+                    for (int c = 0; c < 3; c++) kuva[(Y * W + X) * 3 + c] = rgba[o + 3] == 0 ? (byte)(c == 0 ? 255 : 0) : rgba[o + c];
                 }
             }
             Console.WriteLine($"  400 mm: {ty.Data.Ruudut.Count} ruutua ({string.Join(" ", ty.Data.Ruudut.Select(r => $"{r.ruutu.Tunnus}:{r.ruutu.Nodata:0}%"))}), haku {tavut / 1e6:0.0} Mt, z{zmax}-lehtiä {huiput.Count}, aukkoja {100.0 * aukot / kaikki:0.00} %");

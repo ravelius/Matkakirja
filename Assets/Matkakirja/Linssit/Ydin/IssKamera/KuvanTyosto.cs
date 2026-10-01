@@ -82,14 +82,19 @@ namespace Matkakirja.Linssit.IssKamera
         public bool Ensisijainen;
 
         /// <summary>
-        /// Kattaako ruutu lehden kokonaan. Indeksin bbox on UTM-neliön lat/lon-kehys, joka on todellista aluetta laajempi
-        /// (neliö on kiertynyt vyöhykkeen reunalla), joten reunasta jätetään 1,5 % marginaali (aukkotesti 1.10.: vino aukkoviiva
-        /// vyöhykkeiden 34/35 rajalla).
+        /// Kattaako ruutu lehden kokonaan: lehden 9 reunapistettä ruudun UTM-neliön sisällä (otsakkeen origo ja koko) 500 m:n
+        /// marginaalilla. Indeksin bbox on neliön lat/lon-kehys ja todellista laajempi (koostetesti 1.10.: aukkoja 0,66–1,5 %).
         /// </summary>
-        bool Kattaa(S2Ruutu ru, double w, double s, double e, double n)
+        static bool Kattaa(S2Ruutu ru, CogOtsake o, int z, int x, int y)
         {
-            double mx = (ru.E - ru.W) * 0.015, my = (ru.N - ru.S) * 0.015;
-            return w > ru.W + mx && e < ru.E - mx && s > ru.S + my && n < ru.N - my;
+            double koko = o.Tasot[0].Leveys * o.PikseliM, m = 500;
+            for (int i = 0; i <= 2; i++) for (int j = 0; j <= 2; j++)
+            {
+                var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, i * 128, j * 128);
+                var (e, n) = Utm.Eteen(la, lo, ru.Vyohyke);
+                if (e < o.Ita0 + m || e > o.Ita0 + koko - m || n > o.Pohjoinen0 - m || n < o.Pohjoinen0 - koko + m) return false;
+            }
+            return true;
         }
 
         public HashSet<(int taso, int tx, int ty)> HaettavatLaatat(S2Ruutu ru, CogOtsake o)
@@ -106,7 +111,7 @@ namespace Matkakirja.Linssit.IssKamera
                     S2Ruutu oma = null;
                     // Vain aukoton valinta (nodata ≤ 0,5 %) voi ottaa lehden yksin (laitekoe 3: rataleveyden reunan aukot jäivät
                     // täytöksi, kun ensisijaisella ruudulla oli nodataa).
-                    foreach (var (r2, _) in Data.Ruudut) if (r2.Nodata <= 0.5 && Kattaa(r2, w0, s0, e0, n0)) { oma = r2; break; }
+                    foreach (var (r2, o2) in Data.Ruudut) if (r2.Nodata <= 0.5 && Kattaa(r2, o2, z, x, y)) { oma = r2; break; }
                     if (oma != null && oma != ru) continue;
                 }
                 int taso = o.TasoResoluutiolle(Uudelleenprojisointi.PikseliM(z, (n0 + s0) / 2) * TasoKerroin);
