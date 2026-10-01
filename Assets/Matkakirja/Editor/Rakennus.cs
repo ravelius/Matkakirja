@@ -640,6 +640,18 @@ namespace Matkakirja.Editori
 
         /// <summary>Burstin EditorPrefs-avain (Jobs/Burst/Enable Compilation).</summary>
         const string BurstPref = "BurstCompilation";
+        /// <summary>Käännöksen ajaksi pois kytketyn Burst-asetuksen alkuperäinen arvo (1/0); poistetaan palautuksessa.</summary>
+        const string BurstPalautusMerkki = "Library/matkakirja-burst-palautus.txt";
+
+        /// <summary>Jos käännös kaatui Burst pois kytkettynä, palautetaan koneen editorien asetus seuraavassa käynnistyksessä.</summary>
+        [InitializeOnLoadMethod]
+        static void BurstPalautus()
+        {
+            if (!File.Exists(BurstPalautusMerkki) || BuildPipeline.isBuildingPlayer) return;
+            EditorPrefs.SetBool(BurstPref, File.ReadAllText(BurstPalautusMerkki).Trim() != "0");
+            File.Delete(BurstPalautusMerkki);
+            Debug.Log("MATKAKIRJA: editorin Burst-asetus palautettu kaatuneen käännöksen jäljiltä");
+        }
 
         static void Kaanna(string kansio, BuildOptions lisat = BuildOptions.None)
         {
@@ -661,15 +673,28 @@ namespace Matkakirja.Editori
             // Editorin oma Burst-JIT linkittää macOS-bundleja ja kaatuu linkkeriin (AotLinkerException, ~10 joka
             // käännöksessä); BuildPlayerin alkuun osuva virhe teki käännöksestä Failed (VIKA 28.9.–1.10., virheitä 1–2).
             // Batchmodessa JIT pois käännöksen ajaksi. Pelaajan AOT (lib_burst_generated) ei käytä tätä asetusta.
-            // Asetin tallentaa EditorPrefsiin, joten koneen editorien arvo palautetaan heti.
-            var burstPref = EditorPrefs.GetBool(BurstPref, true);
-            if (Application.isBatchMode && Unity.Burst.BurstCompiler.Options.EnableBurstCompilation)
+            // Asetus tallentuu EditorPrefsiin, ja BuildPlayerin domain reload lukee sen sieltä uudelleen (juna 106 1.10.2026:
+            // heti palautettu arvo kytki JIT:n takaisin kesken käännöksen, virheitä 6) → pois koko BuildPlayerin ajan ja
+            // palautus sen jälkeen. Kaatumisen varalle palautusmerkki, jonka BurstPalautus lukee seuraavassa käynnistyksessä.
+            bool burstPois = Application.isBatchMode && Unity.Burst.BurstCompiler.Options.EnableBurstCompilation;
+            bool burstPref = EditorPrefs.GetBool(BurstPref, true);
+            if (burstPois)
             {
+                File.WriteAllText(BurstPalautusMerkki, burstPref ? "1" : "0");
                 Unity.Burst.BurstCompiler.Options.EnableBurstCompilation = false;
-                EditorPrefs.SetBool(BurstPref, burstPref);
+                EditorPrefs.SetBool(BurstPref, false);
                 Debug.Log("MATKAKIRJA: editorin Burst-JIT pois käännöksen ajaksi");
             }
-            var raportti = BuildPipeline.BuildPlayer(asetukset);
+            BuildReport raportti;
+            try { raportti = BuildPipeline.BuildPlayer(asetukset); }
+            finally
+            {
+                if (burstPois)
+                {
+                    EditorPrefs.SetBool(BurstPref, burstPref);
+                    File.Delete(BurstPalautusMerkki);
+                }
+            }
             var s = raportti.summary;
             Debug.Log($"MATKAKIRJA: käännös {s.result}, {s.totalTime.TotalSeconds:F0} s, virheitä {s.totalErrors}, {kansio}");
             if (s.result != BuildResult.Succeeded)
