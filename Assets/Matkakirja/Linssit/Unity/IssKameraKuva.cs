@@ -33,6 +33,11 @@ namespace Matkakirja.Natiivi
         public static string ViimeisinKuva;
         /// <summary>Testissä laatat jäävät talteen (iss-kamera/laatat-<id>).</summary>
         public static bool SailytaLaatat;
+        /// <summary>Lisäodotus (s) latauksen tasaannuttua ennen kaappausta (laitekoe 5: 400 mm:n z14-kaistat; ComputeLoadProgress
+        /// ei ilmeisesti laske rasterilatauksia). Testikomento `astro kyyti kuvaa odotus <s>`.</summary>
+        public static float LisaOdotus = 8f;
+        /// <summary>Testi: lisäkuvia 10 s:n välein kaappauksen jälkeen (id-1.jpg …), `astro kyyti kuvaa sarja <n>`.</summary>
+        public static int Sarja;
         const int Rinnakkain = 8;
         static IssKameraKuva olio;
         bool kaynnissa;
@@ -275,14 +280,22 @@ namespace Matkakirja.Natiivi
                     else vakaa = -1;
                     yield return null;
                 }
-                yield return new WaitForEndOfFrame();
-                var lukija = AsyncGPUReadback.Request(rt, 0, TextureFormat.RGBA32);
-                while (!lukija.done) yield return null;
-                if (lukija.hasError) { Loki("luku epäonnistui"); yield break; }
-                var kuva = new Texture2D(W, H, TextureFormat.RGBA32, false);
-                kuva.LoadRawTextureData(lukija.GetData<byte>()); kuva.Apply(false);
-                var jpg = kuva.EncodeToJPG(93); Destroy(kuva);
+                Loki($"lataus tasaantui {Time.realtimeSinceStartup - alku2:0.0} s, pallo {(pallo != null ? pallo.ComputeLoadProgress() : 0):0.0} %, lisäodotus {LisaOdotus:0} s");
+                yield return new WaitForSecondsRealtime(LisaOdotus);
                 string albumi = Path.Combine(Application.persistentDataPath, "iss-albumi"); Directory.CreateDirectory(albumi);
+                byte[] jpg = null;
+                for (int k = 0; k <= Sarja; k++)
+                {
+                    if (k > 0) yield return new WaitForSecondsRealtime(10f);
+                    yield return new WaitForEndOfFrame();
+                    var lukija = AsyncGPUReadback.Request(rt, 0, TextureFormat.RGBA32);
+                    while (!lukija.done) yield return null;
+                    if (lukija.hasError) { Loki("luku epäonnistui"); yield break; }
+                    var kuva = new Texture2D(W, H, TextureFormat.RGBA32, false);
+                    kuva.LoadRawTextureData(lukija.GetData<byte>()); kuva.Apply(false);
+                    var j = kuva.EncodeToJPG(93); Destroy(kuva);
+                    if (k == 0) jpg = j; else { File.WriteAllBytes(Path.Combine(albumi, $"{id}-{k}.jpg"), j); Loki($"sarjakuva {k} (+{10 * k} s)"); }
+                }
                 ViimeisinKuva = Path.Combine(albumi, id + ".jpg");
                 File.WriteAllBytes(ViimeisinKuva, jpg);
                 File.WriteAllText(Path.ChangeExtension(ViimeisinKuva, ".json"), Tiedot(id, utc, kk, naytteet, muoto, az, korkeus, ruudut, ehdokkaat, saatu));
