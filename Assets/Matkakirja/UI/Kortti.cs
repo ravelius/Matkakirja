@@ -18,18 +18,24 @@ namespace Matkakirja.Natiivi
         public readonly VisualElement Sisus;
         readonly VisualElement varjo, kehys;
 
-        public Kortti(string luokka = null)
+        /// <param name="pohja">KORTTI-pohja (UI-pohjat, web #3793): paperipinta, pergamenttirengas 4 pt, ohut reunus, kulma 12;
+        /// ei pergamenttikuviota eikä katkoviivaa. Pinnat siirtyvät pohjaan yksi kerrallaan (oma haara kullekin).</param>
+        public Kortti(string luokka = null, bool pohja = false)
         {
             AddToClassList("mk-kortti-kehys");
             Rakenne.Luokat(this, luokka);
             pickingMode = PickingMode.Ignore;
 
             varjo = Rakenne.El("mk-kortti__varjo", this, PickingMode.Ignore);
-            kehys = new Katkoviiva();
-            kehys.AddToClassList("mk-kortti__katkoviiva");
-            Add(kehys);
+            if (!pohja)
+            {
+                kehys = new Katkoviiva();
+                kehys.AddToClassList("mk-kortti__katkoviiva");
+                Add(kehys);
+            }
             Sisus = Rakenne.El("mk-kortti", this);
-            Rakenne.Tausta(Sisus, Kuviot.Pergamentti);
+            if (pohja) { AddToClassList("mk-kortti-kehys--pohja"); Sisus.AddToClassList("mk-kortti--pohja"); }
+            else Rakenne.Tausta(Sisus, Kuviot.Pergamentti);
             Kirjasimet.Aseta(Sisus, Kirjasin.Luku);
         }
 
