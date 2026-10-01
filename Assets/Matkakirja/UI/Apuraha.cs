@@ -24,7 +24,7 @@ namespace Matkakirja.Natiivi
         public const string Osoite = Sivusto + "assets/apuraha/esittely.json";
         const string Muisti = "matkakirja-apuraha-esittely";
 
-        public sealed class Kappale { public string Otsikko, Teksti, LinkkiTeksti, LinkkiUrl, NappiTeksti, NappiValmis, Toiminto; public List<string> Lista = new List<string>(); }
+        public sealed class Kappale { public string Otsikko, Teksti, LinkkiTeksti, LinkkiUrl, NappiTeksti, NappiValmis, Toiminto; public bool Korostus; public List<string> Lista = new List<string>(); }
         public sealed class Kuva { public string Url, Teksti; public float RajausX = 50f, RajausY = 20f; }
         public sealed class Esittely
         {
@@ -48,7 +48,8 @@ namespace Matkakirja.Natiivi
             {
                 var o = Rakenne.Olio(ko);
                 if (o == null) continue;
-                var k = new Kappale { Otsikko = S(o, "otsikko"), Teksti = S(o, "teksti") };
+                // "korostus": true = kappaleen teksti lihavoituna, sama koko (omistaja 1.10.2026).
+                var k = new Kappale { Otsikko = S(o, "otsikko"), Teksti = S(o, "teksti"), Korostus = MiniJson.Totuus(o, "korostus") };
                 var lista = Rakenne.Lista(o.TryGetValue("lista", out var lv) ? lv : null);
                 // Rivi on teksti tai {teksti, webTeksti}; natiivi näyttää teksti-kentän (webTeksti on selaimen versio).
                 if (lista != null) foreach (var r in lista) { var rt = r as string ?? S(Rakenne.Olio(r), "teksti"); if (rt != null) k.Lista.Add(rt); }
@@ -157,7 +158,11 @@ namespace Matkakirja.Natiivi
             foreach (var k in e.Kappaleet)
             {
                 if (k.Otsikko != null) Kirjasimet.Aseta(Rakenne.Teksti(k.Otsikko.ToUpperInvariant(), "mk-apuraha__valiotsikko", vieritys), Kirjasin.Kone);
-                if (k.Teksti != null) Rakenne.Teksti(k.Teksti, "mk-kortti__teksti mk-apuraha__teksti", vieritys);
+                if (k.Teksti != null)
+                {
+                    var t = Rakenne.Teksti(k.Teksti, "mk-kortti__teksti mk-apuraha__teksti", vieritys);
+                    if (k.Korostus) Kirjasimet.Aseta(t, Kirjasin.LukuLihava);
+                }
                 for (int i = 0; i < k.Lista.Count; i++)
                 {
                     var rivi = Rakenne.El("mk-apuraha__rivi", vieritys, PickingMode.Ignore);

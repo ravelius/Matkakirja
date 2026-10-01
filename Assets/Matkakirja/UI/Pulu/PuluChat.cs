@@ -1386,7 +1386,11 @@ namespace Matkakirja.Natiivi
                     if (k.MaaNimi != null) sb.Append("\nMaa, jossa pelaaja on: ").Append(k.MaaNimi);
                 }
                 sb.Append("\nMatkapäivä: ").Append(o.Matka.Tila.Paiva());
-                sb.Append("\nNäkymä: ").Append(o.LehtiAuki ? "kaupunkilehti" : o.KorttiKaupunki != null ? "kaupunkikortti: " + (UiSisalto.Kaupunki(o.KorttiKaupunki)?.Nimi ?? o.KorttiKaupunki) : "kartta");
+                // Avoin linssi kartan tilalle (web pollo.js avoinLinssi, Päätoimittaja 1.10.2026): Ihmisen matkan aikana
+                // näkymä oli "kartta". Lehti ja kortti voittavat linssin kuten webissä.
+                var linssi = linssit?.Auki?.Tiedot;
+                string pohja = linssi != null ? "linssi auki: " + (string.IsNullOrWhiteSpace(linssi.Nimi) ? linssi.Id : linssi.Nimi.Trim()) : "kartta";
+                sb.Append("\nNäkymä: ").Append(o.LehtiAuki ? "kaupunkilehti" : o.KorttiKaupunki != null ? "kaupunkikortti: " + (UiSisalto.Kaupunki(o.KorttiKaupunki)?.Nimi ?? o.KorttiKaupunki) : pohja);
             }
             // Kortin aihe (web kokoaKonteksti kohde) vain kysymyksen omassa pyynnössä (aineisto != null), ei ehdotuksissa.
             var aihe = aineisto != null ? kysymyksenAihe : null;
