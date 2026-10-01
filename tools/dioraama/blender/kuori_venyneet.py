@@ -43,6 +43,13 @@ def korjaa(o, kuva, log=print):
     ven = ok & (tih < KYNNYS * med) & (a3 > MIN_ALA) & (P[:, :, 2].max(1) > VESIRAJA)
     log(f'VENYNEET: mediaani {med:.0f} tekseliä/m², venyneitä {int(ven.sum())} kolmiota, {a3[ven].sum():.1f} m²')
     if not ven.any(): return 0
+    # alkuperäinen väri venyneen kolmion omasta (venyneestä) tekstuurista: jälkimaalauksen vertailuväri (v24: naapurien
+    # mediaani toi vaakakatolle viereisen tiilimuurin harjan punaisen)
+    pix0 = np.empty(W * H * 4, np.float32); kuva.pixels.foreach_get(pix0); pix0 = pix0.reshape(H, W, 4)[..., :3]
+    bw = np.array([[1, 1, 1], [4, 1, 1], [1, 4, 1], [1, 1, 4], [2, 2, 1], [2, 1, 2], [1, 2, 2]], np.float32); bw /= bw.sum(1, keepdims=True)
+    vi = np.flatnonzero(ven); pts = np.einsum('kj,ijc->ikc', bw, q[vi])  # (n, 7, 2) pikseleinä
+    px_ = np.clip(pts.astype(int), 0, [W - 1, H - 1])
+    VANHA_KP = P[vi].mean(1); VANHA_VARI = pix0[px_[..., 1], px_[..., 0]].mean(1); del pix0
     bm = bmesh.new(); bm.from_mesh(me)
     lay = bm.faces.layers.int.get('tayte') or bm.faces.layers.int.new('tayte'); bm.faces.ensure_lookup_table()
     for f in bm.faces: f[lay] = 0
@@ -77,6 +84,9 @@ def korjaa(o, kuva, log=print):
     kd = KDTree(len(kp))
     for i, p in enumerate(kp): kd.insert(p, i)
     kd.balance()
+    vkd = KDTree(len(VANHA_KP))
+    for j, p_ in enumerate(VANHA_KP): vkd.insert(p_, j)
+    vkd.balance()
     ti_, ys_, xs_, _ = bary_rasteri(uvp[V], H, W)  # täytteen pikselit kolmioittain
     jarj = np.argsort(ti_, kind='stable'); ti_, ys_, xs_ = ti_[jarj], ys_[jarj], xs_[jarj]
     raja = np.searchsorted(ti_, np.arange(len(V) + 1))
@@ -96,6 +106,8 @@ def korjaa(o, kuva, log=print):
         hyva = M[y2, x2] | ~onV[lah[t2]]
         if not hyva.any(): continue
         viite = np.median(rgb[y2[hyva], x2[hyva]], 0)
+        _, jv, dv = vkd.find(kp[i])
+        if dv < 1.0: viite = VANHA_VARI[jv]  # oma alkuperäinen väri ensisijaisesti
         if oma is None or not (0.6 < Lk(oma) / max(Lk(viite), 1e-3) < 1.7):
             y0, y1 = max(ys.min() - 2, 0), min(ys.max() + 3, H); x0, x1 = max(xs.min() - 2, 0), min(xs.max() + 3, W)
             loc = np.zeros((y1 - y0, x1 - x0), bool); loc[ys - y0, xs - x0] = True; loc = laajenna(loc, 2)

@@ -176,8 +176,9 @@ if ALBEDO:
                         keski.append((c_ + 0.5) * 0.5); arvot.append(np.median(L[wy[ls][ok], wx[ls][ok], :3], 0))
                 if not keski: continue
                 keski = np.array(keski); arvot = np.array(arvot)
-                for j in range(3):
-                    L[vy[ks][kk], vx[ks][kk], j] = np.interp(kp[kk, 0], keski, arvot[:, j])
+                for j in range(3):  # v24 (1.10.): vain vaalentaa — raon varjo nousee, mutta soihdun hehku jää
+                    # (v23: lounaisbastionin tayta-tekselit maskissa → soihdun alapuolelle tumma suorakaide)
+                    L[vy[ks][kk], vx[ks][kk], j] = np.maximum(L[vy[ks][kk], vx[ks][kk], j], np.interp(kp[kk, 0], keski, arvot[:, j]))
                 nk += len(kk)
         kuva.pixels.foreach_set(L.ravel()); kuva.update()
         print('HAMARA: tasoitettu', int(kohde.sum()), 'vaakatekseliä ja', nk, 'pystytekseliä')
