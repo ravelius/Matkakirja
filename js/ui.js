@@ -194,6 +194,7 @@ import { otsikkoAvain, piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.j
  */
 import { paivitaSahke, retkikuntaOsio } from './sahke.js';
 import { avaaEsittelylinssit, esittelylinssitAuki, lataaApuraha } from './apuraha.js';
+import { pohjatLataaTyyli } from './pohjat/pohjat.js';
 import { lahetaKaynti } from './kaynti.js';
 // Kävijälaskurin versio: sama APP_VERSION-teksti kuin versiorivillä (#app-version), luetaan sivulta.
 const APURAHA_VERSIO = () => globalThis.document?.getElementById('app-version')?.textContent ?? '';
@@ -2299,6 +2300,36 @@ const RAHATTOMUUS_SELITE_MS = 7000;
 
 /** Rahattomuuspalkin punaiset lohkot: viimeiset 18 h (3 × 6 h), omistaja 27.9.2026. */
 export const RAHATTOMUUS_PUNAISIA = 3;
+
+/*
+ * KORTTI-POHJA OLEMASSA OLEVAAN DIALOGIIN (UI-pohjat, omistaja 1.10.2026; sama tapa kuin natiivissa: kortti puetaan
+ * tyylikirjan KORTIKSI, rakenne ja kuvarivi säilyvät). Peruttavissa: ?kortti=vanha (localStorage matkakirja-kortti).
+ */
+const KORTTI_POHJA = true;
+export function korttiPohjalla() {
+  try {
+    const valinta = new URLSearchParams(globalThis.location?.search ?? '').get('kortti')
+      ?? globalThis.localStorage?.getItem('matkakirja-kortti');
+    if (valinta === 'vanha') return false;
+    if (valinta === 'pohja') return true;
+  } catch { /* yksityinen selaus */ }
+  return KORTTI_POHJA;
+}
+
+/** Dialogin kortti KORTTI-pohjan luokkiin: otsikko 21, kapiteeli 12, leipä 16, napit 38 (toiminto / haamu). */
+function puePohjaKortiksi(kortti, { otsikko = null, sulje = null } = {}) {
+  pohjatLataaTyyli();
+  kortti.classList.add('tk-kortti', 'tk-teema-paperi');
+  if (otsikko) otsikko.className = 'tk-otsikko';
+  for (const e of kortti.querySelectorAll('.apuraha-alaotsikko')) e.className = 'tk-apuri';
+  for (const e of kortti.querySelectorAll('.periaate-valiotsikko')) e.className = 'tk-kapiteeli';
+  for (const e of kortti.querySelectorAll('.apuraha-teksti')) {
+    e.className = `tk-leipa${e.classList.contains('apuraha-teksti--korostus') ? ' tk-leipa--korostus' : ''}`;
+  }
+  for (const e of kortti.querySelectorAll('.apuraha-lista')) e.className = 'tk-leipa tk-lista';
+  for (const e of kortti.querySelectorAll('.apuraha-toiminto')) e.className = 'tk-nappi tk-nappi--toiminto';
+  if (sulje) sulje.className = 'tk-nappi tk-nappi--haamu tk-nappi--levea';
+}
 
 export class UI {
   constructor(game, { onNewGame, onChange, onJatkaTurvasta = null, turvaOlemassa = null }) {
@@ -17739,6 +17770,7 @@ export class UI {
     sulje.addEventListener('click', () => lappu.close());
     kortti.appendChild(sulje);
 
+    if (korttiPohjalla()) puePohjaKortiksi(kortti, { otsikko, sulje });
     lappu.addEventListener('close', () => { lappu.remove(); if (this.apurahaDialog === lappu) this.apurahaDialog = null; });
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
     document.body.appendChild(lappu);
