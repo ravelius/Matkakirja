@@ -156,6 +156,7 @@ Näkymää ilman todennusta ei voi lisätä, koska moduuli kaatuu latautuessaan.
 | linssi-<id> | Jokainen aktiivinen linssi (js/linssit/rekisteri.js) | `player.linssit.push(id)`, `ui.valitseLinssi(id)` |
 | linssi-selite | Linssin selite (topografia) | `.linssi-selite` |
 | linssi-ihmisen-matka-kaynnissa | Ihmisen matka Käynnistä-napin jälkeen: esitys ensimmäisessä jaksossa (Afrikka), yläpalkki näkyvissä, pallo liikkeellä (noin 13 s avausjakso odotetaan ehdolla) | `ui.valitseLinssi('ihmisen-matka')` + `.aikajana-avaus-nappi`, todennus `ui.aikajana.esitys.tila()` (kaynnissa, indeksi ≥ 1, palkki näkyy, aloituskortti poissa) |
+| linssi-ihmisen-nosto-tekstitys | Ihmisen matka: avausjakson tekstitys ("… Ei kukaan heistäkään tiennyt.") näkyvissä ja Jebel Irhoudin nostokortti auki, esitys tauolla (natiivin tekstitys–kortti-pariteetti 1.10.) | `.aikajana-avaus-nappi`, tekstityksen odotus, `ui.nostokortti.avaa('jebel-irhoud')`; todennus `ui.nostokortti.auki()` |
 | linssi-karuselli | Ihmisen matka: palkki ja korttikaruselli | `.aikajana-avaus-nappi` |
 | liiku | Kulkutapaliuska | `ui.liukuAuki = true` |
 | noppa / noppa-siirtolista | Liftauksen noppa / siirtovaiheen kohteet | Liiku → Liftaus |

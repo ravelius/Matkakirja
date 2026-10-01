@@ -13,6 +13,12 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2504, teksti: 'UI-pohjat webiin, vaihe 1: NOSTOKORTTI ja KORTT… (#3782)' },
+  { v: 2503, teksti: 'ISS-kytkinpöytä v3: KUVAA-painike ja VUODENAIKA… (#3773)' },
+  { v: 2502, teksti: 'Tyylikirja: tyylikirja.json tyylien ainoaksi lä… (#3780)' },
+  { v: 2501, teksti: 'Maakuntien toinen kuva: DEU, DNK, ESP, EST (#3778)' },
+  { v: 2500, teksti: 'Pariteettikuvat: Ihmisen matkan nostokortti tek… (#3768)' },
+  { v: 2499, teksti: 'Cupolan ääni: aseman humina ja NASA:n avaruus–m… (#3723)' },
   { v: 2498, teksti: 'Raamattu: UI-pohjat ja tyylimäärittelyt sitovik… (#3770)' },
   { v: 2497, teksti: 'rakenna.mjs: linnan puheet aanet-pankkiin (#3785)' },
   { v: 2496, teksti: 'Tietoturva: Sähkeen jäsenavain otsakkeeseen (#3779)' },
