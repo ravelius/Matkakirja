@@ -600,10 +600,6 @@
     -unity-background-scale-mode: scale-to-fit;
 }
 
-/* HERO 2:1 (NOSTOKORTTI-pohja): kuva täyttää kehyksen ja rajautuu. */
-.mk-nosto__kuva--hero {
-    -unity-background-scale-mode: scale-and-crop;
-}
 
 .mk-selite-rivi__nimi {
     flex-grow: 1;
@@ -1268,6 +1264,11 @@
     right: 0;
     bottom: 0;
     -unity-background-scale-mode: scale-to-fit;
+}
+
+/* HERO 2:1 (NOSTOKORTTI-pohja): kuva täyttää kehyksen ja rajautuu. */
+.mk-nosto__kuva--hero {
+    -unity-background-scale-mode: scale-and-crop;
 }
 
 /* Web .nostokuva-selite (mitattu 24.9. b11): Iowan 13,44 px, rgba(33, 29, 24, 0.82), keskitetty, yllä 5,6 px.
