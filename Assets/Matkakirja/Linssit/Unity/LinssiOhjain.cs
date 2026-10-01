@@ -1795,6 +1795,14 @@ namespace Matkakirja.Natiivi
                                 Kirjaa($"astro kyyti pinta {pintaAvain}: {(pintaTulos != null ? "lisätty" : "ei mahdu")}{(jaettu ? " (rajattu jako)" : "")} {pintaUrl} z{osat[5]}–{osat[6]}");
                             }
                         }
+                        // ISS-kamera, pelaajan kuva (omistaja 1.10.): kuvaa [4:5|9:16|4:3] [leveys], kuvaa tila, kuvaa laatat 0|1 (säilytys)
+                        else if (a == "kuvaa")
+                        {
+                            if (osat.Length > 3 && osat[3] == "tila") Kirjaa($"astro kyyti kuvaa: {Matkakirja.Natiivi.IssKameraKuva.Tila} {Matkakirja.Natiivi.IssKameraKuva.Edistyminen:P0} {Matkakirja.Natiivi.IssKameraKuva.ViimeisinKuva}");
+                            else if (osat.Length > 4 && osat[3] == "laatat") Matkakirja.Natiivi.IssKameraKuva.SailytaLaatat = osat[4] != "0";
+                            else Kirjaa("astro kyyti kuvaa: " + (Matkakirja.Natiivi.IssKameraKuva.Hae().Laukaise(osat.Length > 3 ? osat[3] : "4:5",
+                                osat.Length > 4 ? (int)Luku(osat[4]) : 3240) ? "laukaistu" : "ei laukaistu (käynnissä tai ei kyytiä)"));
+                        }
                         else if (a == "vertailu" && osat.Length > 3)
                             Kirjaa("astro kyyti vertailu: " + KyydinVertailu(osat.Skip(3).ToArray()));
                         else if (a == "yohon")   // kuvapari (30.9.): kelaa seuraavaan hetkeen, jolloin aurinko on alapisteessä ≥ 15° horisontin alla

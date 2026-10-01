@@ -403,35 +403,53 @@ namespace Matkakirja.Natiivi
         const double S2W = -28.125, S2E = 45.0, S2N = 72.395704, S2S = 31.952162;
         const int S2Rx = 13, S2Ry = 13, S2MaxTaso = 4;
         bool s2Lisatty, reliefPoissa;
+        string s2Url;
+
+        /// <summary>
+        /// ISS-KAMERA, PELAAJAN KUVA (omistaja 1.10.2026): laukaisun työstetyt Sentinel-2-laatat (IssKameraKuva, file://) S2:n
+        /// paikalle omalla rajatulla jaollaan kuvan ajaksi; null = tavallinen S2 (tai ei mitään). Paikat kuten S2:lla.
+        /// </summary>
+        public struct Pinta { public string Url; public double W, S, E, N; public int Rx, Ry, MaxTaso; }
+        public static Pinta? KuvanPinta;
 
         void PaivitaS2(bool kyydissa)
         {
             var kk = KarttaKerrokset.Instanssi;
             if (kk == null) return;
-            bool halutaan = kyydissa && S2Kaytossa && kuukausiLisatty > 0;
+            var kuvan = KuvanPinta;
+            bool halutaan = kyydissa && (S2Kaytossa || kuvan.HasValue) && kuukausiLisatty > 0;
+            string haluttu = kuvan?.Url ?? (S2Osoite ?? S2Juuri + "{z}/{x}/{reverseY}.jpg");
+            // Kuvan pinta tulee tai poistuu kesken S2:n: vaihdetaan vain S2-kerros (reliefi ja BMNG pysyvät paikoillaan).
+            if (halutaan && s2Lisatty && haluttu != s2Url) { kk.PoistaRasteri(S2Kerros); s2Lisatty = false; }
             AsetaS2Savy();
             if (halutaan == s2Lisatty) return;
             if (halutaan)
             {
-                kk.PoistaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros);
-                reliefPoissa = true;
-                // BMNG paikkaan 1 (alle): poisto ja uudelleenlisäys, alfa 1 (reliefiä ei ole alla).
-                kk.PoistaRasteri(KuukausiKerros);
-                kk.LisaaRasteri(KuukausiKerros, KuukaudenPintaJuuri + kuukausiLisatty.ToString("00") + "/{z}/{x}/{reverseY}.jpg",
-                    CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, KuukaudenPintaMaxTaso, 1f);
-                kuukausiAlfaAsetettu = 1f;
-                string url = (S2Osoite ?? S2Juuri + "{z}/{x}/{reverseY}.jpg").Replace("{docs}", "file://" + Application.persistentDataPath);
-                bool kevyt = S2Kevyt;
-                int maxTaso = kevyt ? S2MaxTaso - 1 : S2MaxTaso;
-                // Muistiraja laiteluokan mukaan (Natiivisepän ehto 1.10.: iPad +480 Mt GPU:n puolella → kevyille ≤ +250 Mt).
+                if (!reliefPoissa)
+                {
+                    kk.PoistaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros);
+                    reliefPoissa = true;
+                    // BMNG paikkaan 1 (alle): poisto ja uudelleenlisäys, alfa 1 (reliefiä ei ole alla).
+                    kk.PoistaRasteri(KuukausiKerros);
+                    kk.LisaaRasteri(KuukausiKerros, KuukaudenPintaJuuri + kuukausiLisatty.ToString("00") + "/{z}/{x}/{reverseY}.jpg",
+                        CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, KuukaudenPintaMaxTaso, 1f);
+                    kuukausiAlfaAsetettu = 1f;
+                }
+                string url = haluttu.Replace("{docs}", "file://" + Application.persistentDataPath);
+                // Kuvan pinta (ISS-kamera) aina täydellä laadulla; muuten muistiraja laiteluokan mukaan (Natiivisepän ehto 1.10.:
+                // iPad +480 Mt GPU:n puolella → kevyille ≤ +250 Mt).
+                bool kevyt = !kuvan.HasValue && S2Kevyt;
+                int maxTaso = kuvan?.MaxTaso ?? (kevyt ? S2MaxTaso - 1 : S2MaxTaso);
                 s2Lisatty = kk.LisaaRasteri(S2Kerros, url, CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, maxTaso, 1f) != null
                     && kk.RasterinMuisti(S2Kerros, kevyt ? 4f : 2f, kevyt ? 1024 : 2048, (kevyt ? 8L : 16L) * 1024 * 1024)
-                    && kk.RasterinJako(S2Kerros, S2W, S2S, S2E, S2N, S2Rx, S2Ry);
+                    && (kuvan.HasValue ? kk.RasterinJako(S2Kerros, kuvan.Value.W, kuvan.Value.S, kuvan.Value.E, kuvan.Value.N, kuvan.Value.Rx, kuvan.Value.Ry)
+                                       : kk.RasterinJako(S2Kerros, S2W, S2S, S2E, S2N, S2Rx, S2Ry));
+                s2Url = haluttu;
                 long valimuisti = s2Lisatty ? kk.PallonValimuisti((kevyt ? S2ValimuistiKevytMt : S2ValimuistiMt) * 1024L * 1024) : -1;
-                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: S2 {(s2Lisatty ? "päällä" : "ei mahtunut")} (z{6}–z{6 + maxTaso}) {url}; " +
+                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: {(kuvan.HasValue ? "kuvan pinta" : "S2")} {(s2Lisatty ? "päällä" : "ei mahtunut")} (z{6}–z{6 + maxTaso}) {url}; " +
                     $"laite {(kevyt ? "kevyt" : "täysi")} (muisti {SystemInfo.systemMemorySize} Mt, {SystemInfo.deviceModel}), " +
                     $"pallon välimuisti {valimuisti / 1048576} Mt, S2 näyttövirhe {(kevyt ? 4 : 2)}, tekstuuri {(kevyt ? 1024 : 2048)}");
-                if (!s2Lisatty) S2Kaytossa = false;   // ei yritetä joka sekunti uudelleen
+                if (!s2Lisatty && !kuvan.HasValue) S2Kaytossa = false;   // ei yritetä joka sekunti uudelleen
             }
             else
             {
