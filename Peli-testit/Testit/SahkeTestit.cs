@@ -13,11 +13,13 @@ namespace Matkakirja.Peli.Testit
     sealed class ValeSahke : ISahkeYhteys
     {
         public readonly List<(string Metodi, string Polku, string Runko)> Kutsut = new List<(string, string, string)>();
+        public readonly List<string> Avaimet = new List<string>();
         public Func<string, string, SahkeVastaus> Vastaa;
 
-        public void Kutsu(string metodi, string polku, string runko, Action<SahkeVastaus> valmis)
+        public void Kutsu(string metodi, string polku, string runko, string avain, Action<SahkeVastaus> valmis)
         {
             Kutsut.Add((metodi, polku, runko));
+            Avaimet.Add(avain);
             valmis(Vastaa?.Invoke(metodi, polku) ?? SahkeVastaus.Katkos());
         }
     }
@@ -274,6 +276,8 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama(muodot[1], vale.Kutsut[1], "liity");
             var t = new RetkikuntaTunnus { Koodi = "ABC234", JasenId = "j 1+/ä", Avain = "k&=?ö~*._-", Nimimerkki = "Utelias Ilves" };
             Oleta.Sama(muodot[2].Item2, Sahkepinta.TilaPolku(t), "tila");
+            // 1.10.2026: jäsenavain otsakkeessa (SahkeVakiot.AvainOtsake), ei osoitteessa palvelinlokeihin.
+            Oleta.Tosi(!Sahkepinta.TilaPolku(t).Contains("avain="), "tila: avain ei osoitteessa");
             Oleta.Sama(muodot[3].Item3, Sahkepinta.SahkeRunko(t, "vinkki-vesi", "tukholma"), "sähke");
             Oleta.Sama(muodot[4].Item3, Sahkepinta.ApupyyntoRunko(t, "apu-x1", "Mikä \"laiva\" nousi\nmerestä?\u0001", new[] { "Vasa", "Kronan\\", "Titanic" }), "apu/kysy");
             Oleta.Sama(muodot[5].Item3, Sahkepinta.VeikkausRunko(t, "apu-x1", 2), "apu/vastaa");
