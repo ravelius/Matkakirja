@@ -1118,6 +1118,8 @@ const MODULES = [
   'js/pelaajanakyma.js',
   'js/kokoelmanakyma.js',
   'js/pilleri-animaatio.js',
+  // Visa KORTTI-pohjalla (versio B): js/ui.js puee #quiz-dialogin.
+  'js/visa-pohja.js',
   'js/ui.js',
 
   'js/muutokset.js',

@@ -13,32 +13,38 @@
   {
    "id": "kallio",
    "lahde": "mossy_rock",
-   "toisto_m": 3.0
+   "toisto_m": 3.0,
+   "keski": 0.15575
   },
   {
    "id": "varpukangas",
    "lahde": "forest_leaves_02",
-   "toisto_m": 3.0
+   "toisto_m": 3.0,
+   "keski": 0.19461
   },
   {
    "id": "niitty",
    "lahde": "forrest_ground_01",
-   "toisto_m": 2.0
+   "toisto_m": 2.0,
+   "keski": 0.24821
   },
   {
    "id": "neulaset",
    "lahde": "forrest_ground_03",
-   "toisto_m": 2.0
+   "toisto_m": 2.0,
+   "keski": 0.24705
   },
   {
    "id": "rantakivikko",
    "lahde": "dry_river_pebbles",
-   "toisto_m": 2.0
+   "toisto_m": 2.0,
+   "keski": 0.17223
   },
   {
    "id": "hiekka",
    "lahde": "coast_sand_04",
-   "toisto_m": 3.94
+   "toisto_m": 3.94,
+   "keski": 0.09561
   }
  ]
 }

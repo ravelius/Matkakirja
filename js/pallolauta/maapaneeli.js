@@ -1442,8 +1442,14 @@ export function luoMaapaneeli({
    * hoitaa kohteen kuten ennen. Nykyluvut-rivit (sijat-auki) kuuluvat
    * samaan joukkoon, samoin lippu ja radiovalo.
    */
+  /*
+   * PEITETTY KOHTA EI OLE KORTIN KOHTA (UI-pohjat 1.10.2026): alareunan NOSTOKORTTI ja KORTTI-taustan himmennys
+   * peittävät kartussin. Ilman tätä tarkistusta kortin napin napautus osui laatikkotestissä kartussiin, joka söi sen.
+   */
+  const peitetty = (x, y) => Boolean(document.elementFromPoint?.(x, y)?.closest?.('.tk-nostokortti, .tk-kortti-tausta'));
   const kortinKohta = (x, y) => {
     if (!el?.isConnected || !tila || sailio?.hidden) return false;
+    if (peitetty(x, y)) return false;
     const kortti = el.querySelector('.maapaneeli-kortti');
     if (!kortti) return false;
     const osat = [
@@ -1469,6 +1475,7 @@ export function luoMaapaneeli({
   };
   const napautus = (e) => {
     if (!el?.isConnected || !tila || sailio?.hidden) return;
+    if (peitetty(e.clientX, e.clientY)) return;
     const kortti = el.querySelector('.maapaneeli-kortti');
     if (!kortti) return;
     // Näppäimistön Enter osuu nappiin itseensä: nappi hoitaa oman clickinsä.
