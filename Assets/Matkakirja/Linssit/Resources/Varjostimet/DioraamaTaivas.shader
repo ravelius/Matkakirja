@@ -51,7 +51,9 @@ Shader "Matkakirja/Linssit/DioraamaTaivas"
                 float3 d = normalize(i.suunta);
                 if (_TaivasParam.x > 0.5)
                 {
-                    float u = atan2(d.x, d.z) / (2 * PI) + 0.5 + _TaivasParam.y;
+                    // Kompassiatsimuutti a = atan2(itä, pohjoinen); Linnanrakentajan kuvissa a = suunta + 360·u (u kasvaa
+                    // myötäpäivään), joten u = (a − suunta) / 360 (_TaivasParam.y = −suunta/360, toisto kiertää).
+                    float u = atan2(d.x, d.z) / (2 * PI) + _TaivasParam.y;
                     float v = asin(clamp(d.y, -1, 1)) / PI + 0.5;
                     return half4(SAMPLE_TEXTURE2D_LOD(_TaivasKuva, sampler_TaivasKuva, float2(u, max(v, 0.5)), 0).rgb, 1);
                 }

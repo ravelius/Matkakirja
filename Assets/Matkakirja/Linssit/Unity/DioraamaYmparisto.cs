@@ -345,7 +345,15 @@ namespace Matkakirja.Natiivi
             byte[] kuvaTavut = null;
             if (!string.IsNullOrEmpty(kuvaPolku)) yield return DioraamaLevyvalimuisti.Hae(url(kuvaPolku), 120, t => kuvaTavut = t);
             if (oma != kerta) yield break;
-            if (kuvaTavut == null) foreach (var o in malli.Osat) if (o.Kuva >= 0 && o.Kuva < malli.Kuvat.Count) { kuvaTavut = malli.Kuvat[o.Kuva]; break; }
+            // KAIKKI mesh-solmut (1.10. juurisyy: Osat on vain ensimmäisen mesh-solmun osat, ja huippu- ja normaalitason
+            // maasto on 2 × 2 lohkoa omina solmuinaan → kolme lohkoa puuttui, ja aitat ja rannat jäivät veden alle).
+            // Lohkosolmuilla ei ole muunnoksia; mahdollinen translaatio (jo Unity-kehyksessä) lisätään paikkoihin.
+            var osat = new List<(GlbOsa osa, Vector3 siirto)>();
+            foreach (var solmu in malli.Solmut)
+                foreach (var o in solmu.Osat)
+                    osat.Add((o, solmu.Vanhempi < 0 ? new Vector3(solmu.Translation[0], solmu.Translation[1], solmu.Translation[2]) : Vector3.zero));
+            if (osat.Count == 0) foreach (var o in malli.Osat) osat.Add((o, Vector3.zero));
+            if (kuvaTavut == null) foreach (var (o, _) in osat) if (o.Kuva >= 0 && o.Kuva < malli.Kuvat.Count) { kuvaTavut = malli.Kuvat[o.Kuva]; break; }
             Texture2D kuva = null;
             if (kuvaTavut != null)
             {
@@ -360,13 +368,13 @@ namespace Matkakirja.Natiivi
             if (kuva != null) mat.SetTexture(IdKuva, kuva);
             luodut.Add(mat);
             int kolmiot = 0;
-            foreach (var o in malli.Osat)
+            foreach (var (o, siirto) in osat)
             {
                 int n = o.Paikat.Length / 3;
                 var p = new Vector3[n]; var uv = new Vector2[n]; var nr = new Vector3[n];
                 for (int i = 0; i < n; i++)
                 {
-                    p[i] = new Vector3(o.Paikat[i * 3], o.Paikat[i * 3 + 1], o.Paikat[i * 3 + 2]);
+                    p[i] = new Vector3(o.Paikat[i * 3], o.Paikat[i * 3 + 1], o.Paikat[i * 3 + 2]) + siirto;
                     nr[i] = o.Normaalit != null && o.Normaalit.Length >= (i + 1) * 3 ? new Vector3(o.Normaalit[i * 3], o.Normaalit[i * 3 + 1], o.Normaalit[i * 3 + 2]) : Vector3.up;
                     uv[i] = o.Uv != null && o.Uv.Length >= (i + 1) * 2 ? new Vector2(o.Uv[i * 2], 1f - o.Uv[i * 2 + 1]) : Vector2.zero;
                 }
@@ -384,7 +392,7 @@ namespace Matkakirja.Natiivi
                 r.shadowCastingMode = ShadowCastingMode.Off;
                 r.receiveShadows = false;
             }
-            kirjaa?.Invoke($"poikki: ympäristö: {nimi} {malli.Osat.Count} lohkoa, {kolmiot} kolmiota, " +
+            kirjaa?.Invoke($"poikki: ympäristö: {nimi} {osat.Count} lohkoa, {kolmiot} kolmiota, " +
                            $"{(kuva != null ? kuva.width + "² " + kuva.format : "ei kuvaa")}, {Time.realtimeSinceStartup - alku:F1} s");
             if (splat != null && taso != DioraamaUlkokuori.Laatu.Kevyt) yield return LataaSplat(mat, splat, taso, url, kirjaa, oma);
         }
