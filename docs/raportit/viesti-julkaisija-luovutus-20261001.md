@@ -1,4 +1,4 @@
-# Julkaisijan luovutus 1.10.2026 klo 05.5x (viikkokiintiö 95 %)
+# Julkaisijan luovutus 1.10.2026 klo 06.0x (viikkokiintiö 95 %)
 
 Päivän kaikki vuorot: /Users/Shared/Claude/julkaisija-tyokalut/vuorot-20260928.txt (loppuosa).
 Pidossa: /Users/Shared/Claude/julkaisija-tyokalut/pidossa.txt.
@@ -26,11 +26,12 @@ Pidossa: /Users/Shared/Claude/julkaisija-tyokalut/pidossa.txt.
 - Ehto (Päätoimittaja, pidossa.txt): TF 90 julki + Siirtoseppä kuitannut **mainin kärjen** paketin.
   osoitin=true rakentaa aina mainin kärjestä, ei tiettyä hashia.
 - Kuitattu: 19f1ff3246be7386 (v18 + lähimaasto v3c) juna 90 .appilla, 0 virhettä.
-- Kesken: **#3759** (v19 + taivas, kärki 82e055e0b) junan valmistelussa 05.4x. Sen mergen jälkeen
-  vie-dioraama tulostaa uuden hashin lokiin (#3748) → Siirtoseppä kuittaa → hash Päätoimittajalle.
-  **#3760** (puukortit v3) rebasetaan #3759:n jälkeen (Linnanrakentaja), ehtii samaan jos ennen kuittausta.
-  Sen jälkeen linnan PR:t pidossa: `touch /Users/Shared/Claude/julkaisija-tyokalut/linna-jaadytys`
-  (jonoon.sh ohittaa js/dioraama/, tools/dioraama/rakenna*, blender.json -PR:t); poista lippu osoittimen jälkeen.
+- #3759 (v19) mergetty 05.57 (main 22bf2c6c6) → **osoitinkohde 02987940f6567fd2** (v19 + v3c + taivas,
+  blender 74cbb16a1214441f 127/127). Siirtoseppä kuittaa sen juna 90 .appilla 06.0x (katso vuorot-loki).
+- **LINNAN JÄÄDYTYS PÄÄLLÄ** (Päätoimittaja 06.0x): lippu /Users/Shared/Claude/julkaisija-tyokalut/linna-jaadytys;
+  jonoon.sh ohittaa js/dioraama/, tools/dioraama/rakenna*, blender.json -PR:t. **#3763 (puukortit v3,
+  ca2cb680a, blender 90c024a12714e713) PIDOSSA** — ei etusija-seuraava.txt:ssä. Kun omistaja on ajanut
+  osoittimen: `rm linna-jaadytys` ja `echo 3763 >> etusija-seuraava.txt` (puukortit seuraavalle osoitinkierrokselle).
 
 ## Web-juna
 
