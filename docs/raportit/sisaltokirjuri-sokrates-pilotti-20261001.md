@@ -274,3 +274,21 @@ Levytys: St Matthew's Choir, kapellimestari Phiroz Dalal, johtaja Dawn Slaughter
 - IMSLP, Bruckner Symphony No. 7 (HSO München -levytyksen lisenssi): <https://imslp.org/wiki/Symphony_No.7_in_E_major,_WAB_107_(Bruckner,_Anton)>
 - Commons, Reinhold Behringer, Mahler Symphony 1: <https://commons.wikimedia.org/wiki/File:Mahler_Symphony1_Movement1_VPO.ogg>
 - Commons, Mahler Symphony No.4 European Archive (esimerkki "Public domain" -perustelusta): <https://commons.wikimedia.org/wiki/File:Mahler_Symphony_No.4_in_G_major_1._Badachtig_Nicht_ellen_(Mahler)_European_Archive.ogg>
+
+### 7.7 Haydn Dalal: mittaus ja lisenssin peruste (omistajan lupa ladata annettu chatissa 1.10.)
+
+Ladattu scratchpadiin (ei committoitu): kappale 1 (3,04 Mt) ja kappale 2 (1,55 Mt), Commons-OGG:t. Mitattu ffmpegillä: RMS-taso 0,5 s:n askelin (aresample 22 050 Hz, astats). OGG Vorbis, 44,1 kHz, stereo, 96 kbit/s nimellinen (kappale 2).
+Linkit: <https://commons.wikimedia.org/wiki/File:Haydn_-_The_Creation_(Dalal)_-_1_The_Representation_of_Chaos.oga> ja <https://commons.wikimedia.org/wiki/File:Haydn_-_The_Creation_(Dalal)_-_2_In_the_beginning.oga>.
+
+**Aikakoodit (mitattu tasohypyistä; kuuntelematta, joten äänen sisältö perustuu tasokäyrään ja Haydnin partituurin tuttuun rakenteeseen):**
+- **Kappale 2 "In the beginning" (157 s):** hiljainen tasapaino ~ −50 dB (resitatiivi) → **hyppy 1:57–2:01: tasolla −50,0 → −21,0 dB kohdassa 2:01,5 (121,5 s)**, huippu −15,3 dB kohdassa 2:03,5 (123,5 s), kuoro-orkesteri-iskun jälkeen vaimeneva lasku −16 → −27 dB noin 2:17:ään (137 s). Tämä on **"Und es ward Licht" / "And there was light" -sointu: alkaa 2:01,5 ja soi vahvana ~15 s**. Ehdotus 5–10 s:n introksi: **1:58,0–2:08,0** (3,5 s hiljaista valmistelua → iskevä sointu → ensimmäiset 6,5 s sointua).
+- **Kappale 1 "The Representation of Chaos" (308 s):** hiljainen alku (−74 dB ensimmäiset 2 s), ensimmäinen ääni **0:03 (−56 → −32 dB)**, sitten pitkä hiljainen/tutiseva jakso; kovimmat kohdat (kaaoksen jyrinä): **3:48 (−39,7 → −24,8 dB)** ja **3:55–4:00 (huippu −23 dB kohdassa 3:55,5)**. Introksi "jyrinä": **3:53–4:03** (isku ja jyrinä 10 s); kappaleen alkuosa (0:03–0:08) on hiljainen ja salaperäinen.
+- Yhdistelmä intro: ensin kaaos 3:53–3:58 (kappale 1) → valosointu 2:01,5 (kappale 2); tarvitsee leikkaus- ja ristiin häivytys kahdesta tiedostosta; äänileikkeet pitää tehdä vasta omistajan hyväksynnän jälkeen.
+
+**Laulun kieli:** englanti. Perusteet: Commons-kuvaus "From Haydn's Creation, English version."; kappaleiden nimet ovat englanniksi ("In the beginning", "And there was light" = "Und es ward Licht" Luomisen nro 2:n päätös); archive.org-sivu: "Live recording of Haydn - Creation." Kielen *kuuntelua* ei tehty.
+
+**Lisenssin peruste (archive.org: <https://archive.org/details/HaydnCreation>):**
+- Esittäjä: **St Matthews Choir**, kapellimestari **Phiroz Dalal**, johtaja **Dawn Slaughter**; **nauhoittanut (taped by) Ron Keefe**. Live-tallenne, esitys/tallenne **20.3.2010**; ladattu archive.orgiin **23.4.2010**; lataaja **David.Benny**; arkistosivun viittaus: www.smce.org.uk; paikkaa ei mainita.
+- Lisenssi archive.orgissa: "Public Domain" ja Creative Commonsin Public Domain -kuvake.
+- Commons: tiedoston 2 sivu sanoo "This work has been released into the public domain by its author, Ron Keefe. This applies worldwide."; kappaleella 1 UsageTerms "Creative Commons Public Domain Dedication".
+- **Peruste: nauhoittaja Ron Keefe on julkaissut tallenteen maailmanlaajuisesti public domainiin (CC PD -luovutus).** Tämä kattaa hänen tallenteensa oikeuden; **EPÄVARMA:** ei käy ilmi, onko kuoron, kapellimestarin tai solistien esittäjien suostumus saatu (esitysoikeudet) eikä se, onko lataaja David.Benny kuoron edustaja. Haydn kuoli 1809, joten sävellys on vapaa. Suositus: merkitään **"peruste epävarma: nauhoittajan CC PD -luovutus, esittäjien suostumus ei dokumentoitu"** ja kysytään tarvittaessa kuorolta (www.smce.org.uk) vahvistus ennen julkaisua, tai käytetään vain, jos omistaja hyväksyy riskin.
