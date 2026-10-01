@@ -483,6 +483,10 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Puukorttien tangenttiavaruuden normaalikartta (puukortit v3, #3763: OpenGL, kortin tasossa, sama atlasjako
         /// kuin puukortit); null = tasainen kortti.</summary>
         public string PuukortitNormaali;
+        /// <summary>Ensilataus v2 (Päätoimittaja 1.10.2026): valmiiksi pakatut ASTC-mipketjut (.astcm, astc-mip.swift) —
+        /// laite lataa ne suoraan GPU:lle ilman PNG/JPEG-purkua ja pakkausta; png/jpg-kentät jäävät simulaattorin ja
+        /// vanhojen natiivien varalle. null = ei ASTC:tä.</summary>
+        public string PuukortitAstc, PuukortitNormaaliAstc, HorisonttiKuvaAstc, TaivasAstc, TaivasHamaraAstc, AluskasvitAtlasAstc;
         /// <summary>Taivas equirect-kuvana (Linnanrakentajan Poly Haven -HDRI sävykartoitettuna): päivä, hämärä ja
         /// atsimuutti (°), johon kuvan u = 0 osoittaa; null = liukuväri.</summary>
         public string Taivas, TaivasHamara;
@@ -622,6 +626,8 @@ namespace Matkakirja.Linssit.Dioraama
                     Huippu = MiniJson.Teksti(ymp, "huippu"), Normaali = MiniJson.Teksti(ymp, "normaali"), Kevyt = MiniJson.Teksti(ymp, "kevyt"),
                     OrtoHuippu = MiniJson.Teksti(orto, "huippu"), OrtoNormaali = MiniJson.Teksti(orto, "normaali"), OrtoKevyt = MiniJson.Teksti(orto, "kevyt"),
                     Puut = MiniJson.Teksti(ymp, "puut"), Puukortit = MiniJson.Teksti(ymp, "puukortit"), PuukortitTiedot = MiniJson.Teksti(ymp, "puukortit_tiedot"), PuukortitNormaali = MiniJson.Teksti(ymp, "puukortit_normaali"),
+                    PuukortitAstc = MiniJson.Teksti(ymp, "puukortit_astc"), PuukortitNormaaliAstc = MiniJson.Teksti(ymp, "puukortit_normaali_astc"),
+                    HorisonttiKuvaAstc = MiniJson.Teksti(ymp, "horisontti_kuva_astc"),
                     Horisontti = MiniJson.Teksti(ymp, "horisontti"), HorisonttiKuva = MiniJson.Teksti(ymp, "horisontti_kuva"),
                     SyvyysKuva = MiniJson.Teksti(syv, "kuva"),
                 };
@@ -648,8 +654,11 @@ namespace Matkakirja.Linssit.Dioraama
                 y.AluskasvitAtlas = MiniJson.Teksti(alus, "atlas");
                 y.AluskasvitLista = MiniJson.Teksti(alus, "lista");
                 y.AluskasvitKortit = MiniJson.Teksti(alus, "kortit");
+                y.AluskasvitAtlasAstc = MiniJson.Teksti(alus, "atlas_astc");
                 y.Taivas = MiniJson.Teksti(ymp, "taivas");
                 y.TaivasHamara = MiniJson.Teksti(ymp, "taivas_hamara");
+                y.TaivasAstc = MiniJson.Teksti(ymp, "taivas_astc");
+                y.TaivasHamaraAstc = MiniJson.Teksti(ymp, "taivas_hamara_astc");
                 y.TaivasSuunta = MiniJson.Luku(ymp, "taivas_suunta") ?? 0;
                 r.Ymparisto = y;
             }

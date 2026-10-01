@@ -62,13 +62,20 @@ namespace Matkakirja.Natiivi
             string atlasNimi = null;
             try { atlasNimi = MiniJson.Teksti(MiniJson.ObjektiTaiNull(MiniJson.Jasenna(System.Text.Encoding.UTF8.GetString(atlasJson))), "atlas"); } catch { }
             string kansio = tiedot.Contains("/") ? tiedot.Substring(0, tiedot.LastIndexOf('/') + 1) : "";
-            yield return DioraamaLevyvalimuisti.Hae(url(y.AluskasvitKortit != null ? y.AluskasvitAtlas : kansio + (atlasNimi ?? "aluskasvit.png")), 60, t => atlasTavut = t);
+            // Ensilataus v2: ASTC-atlas (aluskasvit.atlas_astc) ensin, png varalla (simulaattori, vanha paketti).
+            Texture2D atlasAstc = null;
+            yield return DioraamaYmparisto.LataaAstc(y.AluskasvitAtlasAstc, "Ymparisto:aluskasvit", false, TextureWrapMode.Clamp, url, kirjaa, luodut, t => atlasAstc = t);
             if (!voimassa()) yield break;
-            if (atlasTavut == null) { kirjaa?.Invoke("poikki: ympäristö: aluskasvien atlas ei latautunut"); yield break; }
+            if (atlasAstc == null)
+            {
+                yield return DioraamaLevyvalimuisti.Hae(url(y.AluskasvitKortit != null ? y.AluskasvitAtlas : kansio + (atlasNimi ?? "aluskasvit.png")), 60, t => atlasTavut = t);
+                if (!voimassa()) yield break;
+                if (atlasTavut == null) { kirjaa?.Invoke("poikki: ympäristö: aluskasvien atlas ei latautunut"); yield break; }
+            }
 
             // Atlaksen koko PNG-otsakkeesta (IHDR: leveys tavuissa 16–19, korkeus 20–23) UV-reunusta varten.
-            int atlasL = 1280, atlasK = 512;
-            if (atlasTavut.Length > 24 && atlasTavut[1] == 'P' && atlasTavut[2] == 'N' && atlasTavut[3] == 'G')
+            int atlasL = atlasAstc != null ? atlasAstc.width : 1280, atlasK = atlasAstc != null ? atlasAstc.height : 512;
+            if (atlasAstc == null && atlasTavut.Length > 24 && atlasTavut[1] == 'P' && atlasTavut[2] == 'N' && atlasTavut[3] == 'G')
             {
                 atlasL = atlasTavut[16] << 24 | atlasTavut[17] << 16 | atlasTavut[18] << 8 | atlasTavut[19];
                 atlasK = atlasTavut[20] << 24 | atlasTavut[21] << 16 | atlasTavut[22] << 8 | atlasTavut[23];
@@ -166,20 +173,24 @@ namespace Matkakirja.Natiivi
             if (!voimassa()) yield break;
             if (p == null || p.Length == 0) { kirjaa?.Invoke($"poikki: ympäristö: aluskasvit virhe: {virhe ?? "ei kasveja"}"); yield break; }
 
-            var atlas = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
-            { name = "Ymparisto:aluskasvit", filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 2 };
-            float r0 = DioraamaRuutu.Alku();
-            if (!atlas.LoadImage(atlasTavut, false)) { UnityEngine.Object.Destroy(atlas); kirjaa?.Invoke("poikki: ympäristö: aluskasvien atlas ei jäsentynyt"); yield break; }
-            luodut.Add(atlas);
-            DioraamaRuutu.Kirjaa(kirjaa, "aluskasvit LoadImage", r0);
-            yield return null; // ensilataus v2: raskaat vaiheet omiin ruutuihinsa (DioraamaRuutu)
-            // ETC/ASTC-pakkaus vaatii mip-tasoilta 4:n monikerrat: 1280 × 512 -atlas (5 × 2 solua) ei kelpaa (laite 1.10.: "mip level 7
-            // with dimensions 10×4"), joten pakataan vain kahden potenssin atlas. Pakkaamaton 1280 × 512 on ~3,5 Mt mipeineen.
-            bool pot = Mathf.IsPowerOfTwo(atlas.width) && Mathf.IsPowerOfTwo(atlas.height);
-            if (pot) { r0 = DioraamaRuutu.Alku(); atlas.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "aluskasvit Compress", r0); yield return null; }
-            atlas.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, atlas);
-            yield return null;
-            if (!voimassa()) yield break;
+            var atlas = atlasAstc;
+            if (atlas == null)
+            {
+                atlas = new Texture2D(2, 2, TextureFormat.RGBA32, true, false)
+                { name = "Ymparisto:aluskasvit", filterMode = FilterMode.Trilinear, wrapMode = TextureWrapMode.Clamp, anisoLevel = 2 };
+                float r0 = DioraamaRuutu.Alku();
+                if (!atlas.LoadImage(atlasTavut, false)) { UnityEngine.Object.Destroy(atlas); kirjaa?.Invoke("poikki: ympäristö: aluskasvien atlas ei jäsentynyt"); yield break; }
+                luodut.Add(atlas);
+                DioraamaRuutu.Kirjaa(kirjaa, "aluskasvit LoadImage", r0);
+                yield return null; // ensilataus v2: raskaat vaiheet omiin ruutuihinsa (DioraamaRuutu)
+                // ETC/ASTC-pakkaus vaatii mip-tasoilta 4:n monikerrat: 1280 × 512 -atlas (5 × 2 solua) ei kelpaa (laite 1.10.: "mip level 7
+                // with dimensions 10×4"), joten pakataan vain kahden potenssin atlas. Pakkaamaton 1280 × 512 on ~3,5 Mt mipeineen.
+                bool pot = Mathf.IsPowerOfTwo(atlas.width) && Mathf.IsPowerOfTwo(atlas.height);
+                if (pot) { r0 = DioraamaRuutu.Alku(); atlas.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "aluskasvit Compress", r0); yield return null; }
+                atlas.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, atlas);
+                yield return null;
+                if (!voimassa()) yield break;
+            }
             var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaPuu");
             if (varjostin == null) { kirjaa?.Invoke("poikki: ympäristö: DioraamaPuu-varjostin puuttuu (aluskasvit)"); yield break; }
             var mat = new Material(varjostin) { name = "Ymparisto:aluskasvit" };

@@ -15,7 +15,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Kuten yllä; syy kertoo lokiin, miksi ASTC:tä ei käytetty (laite ei tue / otsake / koko).</summary>
         /// <param name="ohita">Ylimpiä mip-tasoja ohitetaan (ensilataus v2, 1.10.: puhelimessa kuoren 8k-atlas → 4k samoilla UV:illä,
         /// neljännes GPU-latauksesta ja muistista).</param>
-        public static Texture2D Lue(byte[] t, string nimi, out string syy, TextureWrapMode kaari = TextureWrapMode.Clamp, int ohita = 0)
+        /// <param name="lineaarinen">Normaalikartat (ei sRGB-muunnosta).</param>
+        public static Texture2D Lue(byte[] t, string nimi, out string syy, TextureWrapMode kaari = TextureWrapMode.Clamp, int ohita = 0, bool lineaarinen = false)
         {
             syy = null;
             if (t == null || t.Length < 32 || t[0] != 0x13 || t[1] != 0xab || t[2] != 0xa1 || t[3] != 0x5c) { syy = "otsake"; return null; }
@@ -42,7 +43,7 @@ namespace Matkakirja.Natiivi
                 siirto += taso; tavuja -= taso; tasoja--;
                 w = Math.Max(1, w / 2); h = Math.Max(1, h / 2);
             }
-            var kuva = new Texture2D(w, h, muoto, tasoja, false)
+            var kuva = new Texture2D(w, h, muoto, tasoja, lineaarinen)
             { name = nimi, filterMode = FilterMode.Trilinear, wrapMode = kaari, anisoLevel = 4 };
             // Suoraan ladatusta puskurista otsakkeen jälkeen (8k-atlas 89 Mt: erillinen kopio tuplasi huippumuistin).
             var kahva = System.Runtime.InteropServices.GCHandle.Alloc(t, System.Runtime.InteropServices.GCHandleType.Pinned);
