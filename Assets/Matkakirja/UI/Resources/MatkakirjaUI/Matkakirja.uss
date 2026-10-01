@@ -3789,16 +3789,17 @@
     max-width: 96px;
     white-space: normal;
     margin-right: 8px;
-    font-size: 14px;
-    color: #46331f;
+    font-size: var(--tk-koko-kapiteeli);
+    padding-top: 3px;
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 .mk-muutos__teksti {
     flex-shrink: 1;
     flex-grow: 1;
-    font-size: 15px;
+    font-size: var(--tk-koko-leipa);
     white-space: normal;
-    color: #3a2a1a;
+    color: var(--tk-paperi-muste);
 }
 
 /* --- REAKTIOT (Reaktiot.cs; web .reaktiorivi, .reaktionappi, .reaktio-*) ------------------- */
