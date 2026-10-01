@@ -423,6 +423,11 @@ namespace Matkakirja.Natiivi
                 s2Lisatty = false;
                 if (reliefPoissa)
                 {
+                    // Alkuperäinen järjestys: reliefi paikkaan 1 ja BMNG sen päälle paikkaan 2 (lisätään seuraavalla kierroksella).
+                    // Ilman tätä kesken kyydin `s2 0` antoi reliefille S2:n paikan 2 BMNG:n päältä täydellä alfalla
+                    // (S2-esitodennus 1.10.: Egypti reliefin korkeusväreissä). Kyydin päättyessä BMNG on jo poistettu.
+                    kk.PoistaRasteri(KuukausiKerros);
+                    kuukausiLisatty = -1;
                     kk.LisaaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros, Matkakirja.Linssit.Astronautti.AstronauttiLinssi.ReliefinSarja(),
                         CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, Matkakirja.Linssit.Topografia.ReliefiMaxTaso, 1f);
                     reliefPoissa = false;
