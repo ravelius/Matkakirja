@@ -34,8 +34,8 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         _HrKerroin("Rayleighin skaalakorkeuden kerroin näkymän säteelle (kuvaputki, 1 = ennallaan)", Float) = 1
         _SiniKerroin("Rayleigh-sironnan sinisyys (kuvaputki, 1 = ennallaan)", Float) = 1
         _UtuKerroin("Maan ilmaperspektiivi horisonttia kohti (kuvaputki, 1 = ennallaan)", Float) = 1
-        _KaariYdin("Kaaren valkoisen ytimen kerroin 0–12 km (kuvaputki, 1 = ennallaan)", Float) = 1
-        _KaariSyva("Syvänsininen hehku ytimen yllä 12–45 km (kuvaputki, 0 = pois)", Float) = 0
+        _KaariYdin("Kaaren ytimen (0–5 km) ja maan reunan kerroin suhteessa kaarivoimaan (kuvaputki, kun _KaariSyva > 0)", Float) = 1
+        _KaariSyva("Syvänsininen hehku ytimen yllä 5–45 km; > 0 ottaa kaaren muodon käyttöön (kuvaputki, 0 = pois)", Float) = 0
         _HehkuVari("Ilmahehkun sävy", Color) = (0.62, 0.9, 0.42, 1)
         _Lapinakyvyys("Transmittanssi-LUT", 2D) = "white" {}
         _Debug("Vianetsintä (0 = pois, 1 = T, 2 = matka/tulo, 3 = LUT)", Float) = 0
@@ -220,16 +220,26 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                 // Kuvaputken kaari (Linssiseppä 1.10., Päätoimittaja: julisteen wau-tekijä): vain maan ohi kulkevat säteet, liuku
                 // 0–20 km:n sivuamiskorkeudella, jottei horisonttiin tule saumaa. 1 = ennallaan (livenäkymä).
                 L *= lerp(1.0, _KaariVoima, smoothstep(0.0, 20000.0, hmin) * (maa ? 0.0 : 1.0));
-                // Kaaren muoto (Päätoimittaja 1.10. 20.3x, omistajan mallikuva: "ohut, erittäin kirkas sinivalkoinen viiva ja sen yllä
-                // kapea syvänsininen hehku, joka häipyy mustaan"): ytimen (sivuamiskorkeus 0–12 km, myös maan reunaa hipovat säteet)
-                // valkoista vähemmän ja sen yllä 12–45 km sininen voimistuu, punainen vaimenee. 1 / 0 = ennallaan.
-                if (_KaariYdin != 1.0 || _KaariSyva > 0.0)
+                // Kaaren muoto (Päätoimittaja 1.10. 20.3x ja 21.1x, omistajan mallikuva: "ohut, erittäin kirkas sinivalkoinen viiva ja
+                // sen yllä kapea syvänsininen hehku, joka häipyy mustaan; siirtymä maahan jatkuva ja kirkas"). Päällä, kun _KaariSyva > 0:
+                //  - kerroin ei laske 1:een maan reunaa kohti (yllä oleva liuku 0–20 km jätti tumman violetin vyön ytimen ja maan väliin),
+                //    ja maata hipovat säteet (kulma < 0,06) saavat saman kertoimen liukuen → kirkas jatkuva siirtymä maahan;
+                //  - ydin 0–~5 km (_KaariYdin), sen punainen vaimenee (pitkän matkan punertuma näkyi violettina);
+                //  - 5–45 km sininen voimistuu ja punainen/vihreä vaimenevat, jolloin valkoinen jää ohueksi viivaksi.
+                if (_KaariSyva > 0.0)
                 {
+                    float kulmaM = maa ? saturate(-dot(d, normalize(o + d * g0))) : 0.0;
                     float hs = maa ? 0.0 : hmin;
-                    float ydin = (1.0 - smoothstep(6000.0, 14000.0, hs)) * (maa ? 1.0 - smoothstep(0.0, 0.03, saturate(-dot(d, normalize(o + d * g0)))) : 1.0);
-                    L *= lerp(1.0, _KaariYdin, ydin);
-                    float vyo = smoothstep(8000.0, 16000.0, hs) * (1.0 - smoothstep(30000.0, 55000.0, hs));
-                    L *= lerp(float3(1.0, 1.0, 1.0), float3(0.35, 0.8, 1.0) * (1.0 + _KaariSyva), vyo * saturate(_KaariSyva * 4.0));
+                    float reuna = maa ? 1.0 - smoothstep(0.0, 0.06, kulmaM) : 0.0;
+                    float kerroin = _KaariVoima * _KaariYdin * (maa ? 1.5 : 1.0);
+                    float nyt = maa ? 1.0 : lerp(1.0, _KaariVoima, smoothstep(0.0, 20000.0, hmin));
+                    float ydin = 1.0 - smoothstep(3000.0, 6000.0, hs);
+                    // korvaa yllä tehdyn liukuvan kertoimen: ytimessä ja maata hipovissa kerroin, muualla ennallaan
+                    float tavoite = maa ? lerp(1.0, kerroin, reuna) : lerp(_KaariVoima, kerroin, ydin);
+                    L *= tavoite / max(nyt, 1e-3);
+                    L *= lerp(float3(1.0, 1.0, 1.0), float3(0.7, 0.92, 1.0), max(ydin, reuna));
+                    float vyo = smoothstep(3500.0, 7000.0, hs) * (1.0 - smoothstep(30000.0, 55000.0, hs));
+                    L *= lerp(float3(1.0, 1.0, 1.0), float3(0.35, 0.8, 1.0) * (1.0 + _KaariSyva), vyo);
                 }
                 float dh = hmin - 95000.0;
                 float3 nl = normalize(lahin);
