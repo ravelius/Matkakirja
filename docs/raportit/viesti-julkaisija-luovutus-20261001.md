@@ -27,7 +27,7 @@ Pidossa: /Users/Shared/Claude/julkaisija-tyokalut/pidossa.txt.
   osoitin=true rakentaa aina mainin kärjestä, ei tiettyä hashia.
 - Kuitattu: 19f1ff3246be7386 (v18 + lähimaasto v3c) juna 90 .appilla, 0 virhettä.
 - #3759 (v19) mergetty 05.57 (main 22bf2c6c6) → **osoitinkohde 02987940f6567fd2** (v19 + v3c + taivas,
-  blender 74cbb16a1214441f 127/127). Siirtoseppä kuittaa sen juna 90 .appilla 06.0x (katso vuorot-loki).
+  blender 74cbb16a1214441f 127/127). **KUITATTU 06.0x** juna 90 .appilla (0 virhettä). Odottaa vain omistajan osoitinkomentoa.
 - **LINNAN JÄÄDYTYS PÄÄLLÄ** (Päätoimittaja 06.0x): lippu /Users/Shared/Claude/julkaisija-tyokalut/linna-jaadytys;
   jonoon.sh ohittaa js/dioraama/, tools/dioraama/rakenna*, blender.json -PR:t. **#3763 (puukortit v3,
   ca2cb680a, blender 90c024a12714e713) PIDOSSA** — ei etusija-seuraava.txt:ssä. Kun omistaja on ajanut
