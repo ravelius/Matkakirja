@@ -16,12 +16,11 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 
 ## 2. Tila ja jono (1.10. klo 06.1x)
 
-1. **Linnan osoitin (omistajan toimi, vain Päätoimittajan luvalla):**
-   `gh workflow run vie-dioraama.yml --repo ravelius/Matkakirja -f rakennus=olavinlinna -f kuiva=false -f osoitin=true`.
-   Komento rakentaa paketin mainin kärjestä. Ehdot: TF 1.1 (90) on sisäisillä testaajilla (sisältää lukijakorjauksen 3a28322a),
-   ja Siirtoseppä on kuitannut mainin kärjen paketin puhtaalla asennuksella. 19f1ff3246be7386 (v18 + v3c) on kuitattu, mutta #3759
-   (v19 + taivas) mergeytyy sen päälle, joten kuittaa uusin kärki (Julkaisija antaa hashin). Sen jälkeen linnan pakettiin vaikuttavat
-   PR:t ovat pidossa (Julkaisijan pidossa.txt), kunnes osoitin on ajettu.
+1. **Linnan osoitin, LUPA ANNETTU 06.2x (omistajan toimi, kun TF 90 näkyy hänellä):**
+   `gh workflow run vie-dioraama.yml --repo ravelius/Matkakirja --ref main -f rakennus=olavinlinna -f kuiva=false -f osoitin=true`.
+   Kuitattu paketti 02987940f6567fd2 (v19 + v3c + taivas, main 22bf2c6c6) junan 90 .appilla, 0 virhettä. Linnan jäädytys on päällä
+   (#3763 puukortit pidossa, Julkaisijan pidossa.txt), joten mainin kärki tuottaa tämän paketin. Kun omistaja on ajanut komennon:
+   todenna osoitin puhtaalla asennuksella, vapauta jäädytys ja vie #3763 seuraavaan osoitinkierrokseen.
 2. **TF:n sisäinen ryhmä:** 85:n ajossa ASC ei palauttanut yhtään isInternalGroup-ryhmää (82:lla "Beta testaajat", automaattijako).
    testflight-sisainen.yml estyi Julkaisijan luokittimeen. Omistaja tarkistaa ASC:stä tai sallii ajon Julkaisijan sessiossa.
 3. **TF:** 84 sisäinen, 85, 86–90 Arvioijat-ryhmässä ja beta-arviossa (julkinen linkki). 89 = äänimikseri (omistajan 5 rivin ohje
