@@ -79,14 +79,18 @@
     "virhe": "#b03a2b"
   },
   "kentta": {
-    "_selite": "LOMAKEKENTTÄ (tk-kentta, uusi pohjaosa, omistaja 1.10.2026): tekstikenttä, alue ja valinta lomakkeissa (palaute, sähke). ALUSTAVAT arvot: Pelikoodari vahvistaa webin kenttätyylistä ennen käyttöä; korkeus = napin korkeus.",
-    "korkeus": 38,
-    "kulma": 8,
-    "pinta": "#fffaf0",
+    "_selite": "LOMAKEKENTTÄ (tk-kentta, uusi pohjaosa, omistaja 1.10.2026; arvot omistajan mallikuvasta, Pelikoodari): tekstikenttä, alue ja valinta lomakkeissa. Korkeus = osuma-ala, alue 2 × korkeus; teksti Luku 16, vihje kursiivina.",
+    "korkeus": 44,
+    "alue": 88,
+    "kulma": 10,
+    "vali-pysty": 8,
+    "vali-vaaka": 12,
+    "koko": 16,
+    "pinta": "#f5f0e2",
     "reunus": "rgba(70, 51, 31, 0.3)",
     "fokus": "#d9a13b",
     "muste": "#211d18",
-    "vihje": "rgba(33, 29, 24, 0.55)"
+    "vihje": "#5c4a32"
   },
   "typografia": {
     "_selite": "Seitsemän porrasta (pt). LEVEÄ- ja KESKI-luokassa portaat leipa…arkki +2 (leveaLisa). Kirjasin = natiivin Kirjasin-enum ja webin fonttipino.",
@@ -123,7 +127,7 @@
     "kulma": { "pieni": 6, "nappi": 10, "kortti": 12, "pilleri": 999 },
     "nappi": { "korkeus": 38, "osuma": 44, "laukaisin": 64 },
     "leveys": { "kapea": 600, "levea": 940, "kortti": 420, "minipopup": 320, "paneeli": 350, "sivukortti": 400, "lukupalsta": 640, "lehti": 960 },
-    "peitto": { "max": 45, "ohjain": 25, "kamera": 20, "laajennettu": 85 },
+    "peitto": { "max": 45, "ohjain": 25, "kamera": 20, "laajennettu": 85, "paneeli": 70 },
     "kuva": { "hero-kortti": "2:1", "hero-arkki": "3:2", "upotus": "4:3", "upotus-leveys": 40, "galleria-korkeus": 64 }
   },
   "liike": {
