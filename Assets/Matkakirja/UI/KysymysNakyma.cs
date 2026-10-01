@@ -43,6 +43,15 @@ namespace Matkakirja.Natiivi
     public sealed class KysymysNakyma : IKysymysNakyma
     {
         const string Kirjaimet = "ABCDEFGH";
+
+        /// <summary>
+        /// VISA KORTTI-POHJALLA, versio B (omistaja 1.10.2026, web #3807 js/visa-pohja.js): paperikortti, ylärivillä kapiteeli
+        /// ja tiimalasi + sekunnit (pohjan poikkeus), kysymys väliotsikkona, vastaukset TOIMINTO-riveinä allekkain (kirjain
+        /// kapiteelina ilman ympyrää), oikein/väärin tilaväreillä, tulos ilman laatikkoa, oljenkorret TOIMINTO (hinta nimessä),
+        /// Jatka ja Aloita peli ensisijaisina. false = vanha pergamenttivisa (web ?kortti=vanha). Luetaan rakentajassa.
+        /// </summary>
+        public static bool Pohjalla = true;
+        readonly bool pohja;
         const float ViestiKestoS = 3.5f;
 
         readonly UiKerros kerros;
@@ -94,7 +103,8 @@ namespace Matkakirja.Natiivi
             himmennys = Rakenne.El("mk-himmennys mk-himmennys--tumma", juuri);
             himmennys.style.display = DisplayStyle.None;
 
-            kortti = new Kortti("mk-kysymys");
+            pohja = Pohjalla;
+            kortti = new Kortti(pohja ? "mk-kysymys mk-kysymys--pohja" : "mk-kysymys", pohja);
             himmennys.Add(kortti);
             // UI-pariteetti iPad (b21-ui-ipad rivi 16): webin puhelinsäännöt (@media max-width: 560px) vain kapealla;
             // leveämmällä dialogi enintään 620 px ja vaihtoehdot 2 × 2 (.dialog, .quiz-options).
@@ -109,14 +119,14 @@ namespace Matkakirja.Natiivi
             paa = Rakenne.El("mk-kysymys__paa", sisus, PickingMode.Ignore);
             var paateksti = Rakenne.El("mk-kysymys__paateksti", paa, PickingMode.Ignore);
             leima = Rakenne.Teksti("", "mk-kysymys__leima", paateksti);
-            Kirjasimet.Aseta(leima, Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(leima, pohja ? Kirjasin.Kone : Kirjasin.KoneLihava);
             kaupunki = Rakenne.Teksti("", "mk-kysymys__kaupunki", paateksti);
-            Kirjasimet.Aseta(kaupunki, Kirjasin.LukuKursiivi);
+            Kirjasimet.Aseta(kaupunki, pohja ? Kirjasin.Kone : Kirjasin.LukuKursiivi);
             aika = Rakenne.El("mk-kysymys__aika", paa, PickingMode.Ignore);
             tiimalasi = new Tiimalasi();
             aika.Add(tiimalasi);
             sekunnit = Rakenne.Teksti("", "mk-kysymys__sekunnit", aika);
-            Kirjasimet.Aseta(sekunnit, Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(sekunnit, pohja ? Kirjasin.Kone : Kirjasin.KoneLihava);
 
             // --- vierivä sisältö ---
             vieritys = new ScrollView(ScrollViewMode.Vertical);
@@ -288,7 +298,7 @@ namespace Matkakirja.Natiivi
             leima.style.display = leimaTeksti == null ? DisplayStyle.None : DisplayStyle.Flex;
             // Kohtaamisen yrityslaskuri otsikkoriville (web: "Kaupunki — kohtaaminen · yritys 1/2").
             string yritys = d.Yritys.HasValue && d.Yrityksia.HasValue ? $" · yritys {d.Yritys}/{d.Yrityksia}" : "";
-            kaupunki.text = (d.Otsikko ?? "") + yritys;
+            kaupunki.text = pohja ? ((d.Otsikko ?? "") + yritys).ToUpperInvariant() : (d.Otsikko ?? "") + yritys;
 
             // Tiimalasi vain vastaamattomassa, aikarajallisessa kysymyksessä (pulmassa ei kelloa,
             // tervehdyssivulla aika ei kulu).
@@ -333,7 +343,7 @@ namespace Matkakirja.Natiivi
 
             var kysymys = Rakenne.Teksti(d.Kysymys ?? "", "mk-kysymys__kysymys", s);
             kysymys.enableRichText = false;
-            Kirjasimet.Aseta(kysymys, Kirjasin.Kone);
+            Kirjasimet.Aseta(kysymys, pohja ? Kirjasin.LukuLihava : Kirjasin.Kone);
 
             // Ostettu vihje ja ohjaimen huomautus samalla lapulla (web quiz-hint-text).
             // Rosvon kaksintaistelu on poistettu pelistä (kaanon 25.8.2026).
@@ -492,6 +502,8 @@ namespace Matkakirja.Natiivi
                 b.AddToClassList(i % 2 == 0 ? "mk-kysymys__vaihtoehto--pariton" : "mk-kysymys__vaihtoehto--parillinen");
                 if (oikea) b.AddToClassList("mk-kysymys__vaihtoehto--oikea");
                 if (vaara) b.AddToClassList("mk-kysymys__vaihtoehto--vaara");
+                // KORTTI-pohja: tilavärin pohja 16 % (oikein) / 12 % (väärin) omana kerroksenaan (USS:ssä ei color-mixiä).
+                if (pohja && (oikea || vaara)) Rakenne.El("mk-kysymys__tilapohja", b, PickingMode.Ignore);
                 if (pois) b.AddToClassList("mk-kysymys__vaihtoehto--pois");
                 // Kaverin veikkaus on korostus, ei vastaus: kaikki napit pysyvät auki.
                 if (!d.Vastattu && d.KaveriapuKortti?.VeikattuIndeksi == i) b.AddToClassList("mk-kysymys__vaihtoehto--veikattu");
@@ -512,12 +524,12 @@ namespace Matkakirja.Natiivi
                     rivi = Rakenne.El("mk-kysymys__vaihtoehtorivi", b, PickingMode.Ignore);
                 }
                 var kirjain = Rakenne.Teksti(Kirjaimet[Mathf.Min(i, Kirjaimet.Length - 1)].ToString(), "mk-kysymys__kirjain", rivi);
-                Kirjasimet.Aseta(kirjain, Kirjasin.KoneLihava);
+                Kirjasimet.Aseta(kirjain, pohja ? Kirjasin.Kone : Kirjasin.KoneLihava);
                 string teksti = d.Vaihtoehdot[i] ?? "";
                 // Väärä valinta ja 50:50:n poistama yliviivataan (text-decoration: line-through).
                 var l = Rakenne.Teksti(vaara || pois ? "<s>" + teksti.Replace("<", "‹") + "</s>" : teksti, "mk-kysymys__vaihtoehtoteksti", rivi);
                 l.enableRichText = vaara || pois;
-                Kirjasimet.Aseta(l, Kirjasin.Kone);
+                Kirjasimet.Aseta(l, pohja ? (oikea ? Kirjasin.LukuLihava : Kirjasin.Luku) : Kirjasin.Kone);
 
                 // option-in: vaihtoehdot liukuvat esiin porrastetusti, kun ne tulevat ensi kerran näkyviin.
                 if (liuku)
@@ -533,7 +545,7 @@ namespace Matkakirja.Natiivi
         {
             var laatikko = TulosLaatikko(d, s);
             string tuomio = d.AikaLoppui ? "Aika loppui!" : d.Oikein ? "Oikein!" : "Väärin.";
-            Kirjasimet.Aseta(Rakenne.Teksti(tuomio, "mk-kysymys__tuomio", laatikko), Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(Rakenne.Teksti(tuomio, "mk-kysymys__tuomio", laatikko), pohja ? Kirjasin.LukuLihava : Kirjasin.KoneLihava);
             // Kätkön sulkeutuminen näkyy jo tuomiossa (web lukkoRivi).
             foreach (var rivi in Rivit(d.Loyto))
                 if (rivi.StartsWith("Kätkö sulkeutui")) Ohje(laatikko, rivi);
@@ -685,7 +697,7 @@ namespace Matkakirja.Natiivi
                 // "Aloita peli" / "Yritä viimeistä kertaa": näkyviin, kun tervehdys on kirjoitettu.
                 aloitaNappi = Rakenne.Nappi(string.IsNullOrEmpty(d.AloitaTeksti) ? "Aloita peli" : d.AloitaTeksti,
                     "mk-nappi--kulta mk-kysymys__jatka mk-kysymys__aloita", () => Teko(toiminnot?.Aloita), napit);
-                Rakenne.Tausta(aloitaNappi, Kuviot.Pysty("dialogi-kulta", Kuviot.Vari("#e9c169"), Kuviot.Vari("#d3a03c")));
+                if (!pohja) Rakenne.Tausta(aloitaNappi, Kuviot.Pysty("dialogi-kulta", Kuviot.Vari("#e9c169"), Kuviot.Vari("#d3a03c")));
                 Kirjasimet.Aseta(aloitaNappi, Kirjasin.KoneLihava);
                 aloitaNappi.style.display = DisplayStyle.None;
             }
@@ -721,7 +733,7 @@ namespace Matkakirja.Natiivi
             {
                 var j = Rakenne.Nappi(string.IsNullOrEmpty(d.JatkaTeksti) ? "Jatka" : d.JatkaTeksti, "mk-nappi--kulta mk-kysymys__jatka",
                     () => Teko(toiminnot?.Jatka), napit);
-                Rakenne.Tausta(j, Kuviot.Pysty("dialogi-kulta", Kuviot.Vari("#e9c169"), Kuviot.Vari("#d3a03c")));
+                if (!pohja) Rakenne.Tausta(j, Kuviot.Pysty("dialogi-kulta", Kuviot.Vari("#e9c169"), Kuviot.Vari("#d3a03c")));
                 Kirjasimet.Aseta(j, Kirjasin.KoneLihava);
             }
             napit.style.display = napit.childCount > 0 ? DisplayStyle.Flex : DisplayStyle.None;
