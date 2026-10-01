@@ -28,3 +28,7 @@ Uusi kävijä 1.10. (ensimmäinen 00:46 UTC): US, ios, apurahakortin avauksia t�
 - VIIKKORAJA 94 % (ilmoitusraja saavutettu; reset 5.10. 23.00 UTC). 97 %:n raja lähestyy.
 - PÄÄTOIMITTAJAN KONTEKSTI 60 % (ilmoitusraja saavutettu).
 - Levy 48 Gi (51→48), wt/ 46 (raja 20), kuorma 306, muisti 76 % vapaa. Hook OK, #3734 auki. SendMessage estynyt (14).
+
+## 06.33 — PÄÄTOIMITTAJAN NOLLAUS TOTEUTUI, AMIUN ALOITUSVIESTI EI LÄHTENYT
+Sessio local_593b89a1-… on tyhjä ja idle (list_events 0 viestiä). Aloitusviesti ("Lue docs/raportit/viesti-fable-aloitus.md haarasta claude/bold-ride-vow4ki ja toimi sen mukaan.") EI lähtenyt (SendMessage estynyt, 15). Lue se käsin / lähetä omalta puoleltasi.
+Tila: levy 52 Gi, wt/ 31 (raja 20), muisti 80 %, kuorma 36. Kävijälaskuri 06.33: n=6 ennallaan (1.10. US 3, apurahakortti 1.10. 1, yht. 3). Viikkoraja 95 % (97 %:n ilmoitus tulossa). Hook OK, #3734 auki.
