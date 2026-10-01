@@ -56,15 +56,15 @@ over(kangas, lue('pohja-oikea'), W - paaty, 0)
 ryhma = lue('ryhma')
 rx = (W - ryhma.shape[1]) // 2
 over(kangas, ryhma, rx, 0)
-oletus = {'nopeus': 'nopeus-0', 'pilvet': 'nuppi-00', 'kuukausi': 'nuppi-00', 'kohde': 'kohde-ylos',
+oletus = {'nopeus': 'nopeus-0', 'pilvet': 'nuppi-00', 'kuukausi': 'nuppi-00', 'vuorokausi': 'nuppi-00', 'kohde': 'kohde-ylos',
           'kuvaa': 'kuvaa-ylos', 'poistu': 'poistu-ylos'}
-paikka = {'nopeus': 'nopeus', 'pilvet': 'pilvet', 'kuukausi': 'kuukausi', 'kohde': 'kohde', 'kuvaa': 'kuvaa',
+paikka = {'nopeus': 'nopeus', 'pilvet': 'pilvet', 'kuukausi': 'kuukausi', 'vuorokausi': 'vuorokausi', 'kohde': 'kohde', 'kuvaa': 'kuvaa',
           'poistu': 'poistu'}
 for osa, kuva in oletus.items():
     kuva = TILA.get(osa, kuva)
     o = tiedot['osat'][kuva]
     # osakuva on renderöity osan omalle paikalle (keski_pt); sama kuva käy toiselle paikalle siirtämällä ankkuria
-    lahde = {'kuukausi': 'pilvet'}.get(osa, paikka[osa])
+    lahde = {'kuukausi': 'pilvet', 'vuorokausi': 'pilvet'}.get(osa, paikka[osa])
     dx = tiedot['laatikot'][paikka[osa]]['keski_pt'][0] - tiedot['laatikot'][lahde]['keski_pt'][0]
     img = lue(f'osa-{kuva}')
     over(kangas, img, rx + round((o['keski_pt'][0] + dx - o['koko_pt'][0] / 2) * S),

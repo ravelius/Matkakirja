@@ -108,7 +108,7 @@
     "kulma": { "pieni": 6, "nappi": 10, "kortti": 12, "pilleri": 999 },
     "nappi": { "korkeus": 38, "osuma": 44, "laukaisin": 64 },
     "leveys": { "kapea": 600, "levea": 940, "kortti": 420, "minipopup": 320, "paneeli": 350, "sivukortti": 400, "lukupalsta": 640, "lehti": 960 },
-    "peitto": { "max": 45, "ohjain": 25, "kamera": 20, "laajennettu": 85 },
+    "peitto": { "max": 45, "ohjain": 25, "kamera": 20, "laajennettu": 85, "paneeli": 70 },
     "kuva": { "hero-kortti": "2:1", "hero-arkki": "3:2", "upotus": "4:3", "upotus-leveys": 40, "galleria-korkeus": 64 }
   },
   "liike": {

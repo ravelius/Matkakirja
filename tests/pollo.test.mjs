@@ -422,6 +422,19 @@ test('lueNakyma astronautin kamerassa: ei kaupunkia, maata eikä matkapäivää'
   assert.ok(!kuvassa.includes('Doha'), kuvassa);
 });
 
+// Avoin linssi näkymärivillä (Päätoimittaja 1.10.2026): Ihmisen matkassa ei enää "kartta".
+test('lueNakyma avoimessa linssissä: "linssi auki: <nimi>", lehti voittaa', () => {
+  const doc = teeDoc({ lehti: teeLehti({ auki: false }) });
+  const ui = { linssiValittu: 'ihmisen-matka', linssiTuki: { kaikki: [{ tunnus: 'ihmisen-matka', nimi: 'Ihmisen matka' }] } };
+  const linssissa = lueNakyma({ game: teeGame(), ui, doc });
+  assert.ok(linssissa.includes('Näkymä: linssi auki: Ihmisen matka'), linssissa);
+  assert.ok(!linssissa.includes('Näkymä: kartta'), linssissa);
+  // Ilman ladattua linssilistaa tunnus kelpaa nimeksi.
+  assert.ok(lueNakyma({ game: teeGame(), ui: { linssiValittu: 'radio' }, doc }).includes('Näkymä: linssi auki: radio'));
+  const lehdessa = lueNakyma({ game: teeGame(), ui, doc: teeDoc({ lehti: teeLehti({ auki: true }) }) });
+  assert.ok(lehdessa.includes('Näkymä: kaupungin lehti auki'), lehdessa);
+});
+
 test('lueNakyma kartalla: ei lehtitekstiä, ei kaatumista ilman peliä', () => {
   const kartalla = lueNakyma({ game: teeGame(), doc: teeDoc({ lehti: teeLehti({ auki: false }) }) });
   assert.ok(kartalla.includes('Näkymä: kartta'));
