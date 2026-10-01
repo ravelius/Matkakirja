@@ -382,6 +382,11 @@ export function lisaaBlender(rakennusJson, blender) {
           nor: B(Y(`maasto/${k.lahde}_nor_gl_1k.jpg`)), toisto_m: k.toisto_m })),
       };
     }
+    // Taivas (Siirtosepän pyyntö 1.10.): välikuvien Poly Haven -taivaat LDR-equirectinä (AgX, 2048 × 1024). u = 0 osoittaa
+    // atsimuuttiin taivas_suunta (270 = länsi) ja u kasvaa myötäpäivään; kuvan alapuolisko on HDRI:n synteettistä maata.
+    if (['taivas-2k.jpg', 'taivas-hamara-2k.jpg'].every((p) => on.has(Y(p)))) {
+      Object.assign(rakennusJson.ymparisto, { taivas: B(Y('taivas-2k.jpg')), taivas_hamara: B(Y('taivas-hamara-2k.jpg')), taivas_suunta: 270 });
+    }
     if (['aluskasvit.png', 'aluskasvit-hamara.png', 'aluskasvit.json', 'aluskasvit-lista.json'].every((p) => on.has(Y(p)))) {
       rakennusJson.ymparisto.aluskasvit = { atlas: B(Y('aluskasvit.png')), atlas_hamara: B(Y('aluskasvit-hamara.png')),
         kortit: B(Y('aluskasvit.json')), lista: B(Y('aluskasvit-lista.json')) };

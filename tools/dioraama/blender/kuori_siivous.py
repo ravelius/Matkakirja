@@ -80,6 +80,16 @@ ALUEET = [
     ('kohdevalo_sorakatto', _laatikko(63.4, 65.6, -2.2, -0.6), 0.8, 'itabastioni'),
     # Portin edustan moottorivene (v16b, Päätoimittaja): painetaan vedenpinnan (−7) alle, pelin vesi peittää.
     ('moottorivene', _laatikko(-67.9, -64.1, -16.5, -12.9), 1.2, 'vene', -7.0),
+    # v19 (Päätoimittaja 1.10., aikakerros n1500): nykyinen ponttonisilta, sen kellukkeet ja portin teräsluiska pois;
+    # tilalle laituri.js:n puulaituri suoraan vesiportilta. Raja kulkee 0,75 m kallion ja muurin juuren ulkopuolella
+    # (kuoren ylhäältä säteillä mitattu kallioviiva 1.10.) ja 0,3 m ennen portin ovea (luiskan tolpat mukaan); kaiteet (≤ 2,6 m vedestä)
+    # mukaan. Kaikki painuu vedenpinnan alle (maa −7,0); venyneet reunakolmiot jäävät verhoksi kallion juurelle.
+    ('ponttonisilta', [(-100.0, 3.0), (-80.5, 3.0), (-79.0, 1.0), (-76.3, -2.0), (-72.0, -5.0), (-67.5, -8.0),
+                       (-63.3, -10.0), (-61.5, -12.0), (-60.3, -13.0), (-59.0, -14.0), (-58.6, -15.2), (-55.0, -15.2),
+                       (-54.3, -18.0), (-53.0, -19.0), (-52.3, -21.0), (-52.3, -22.0), (-53.5, -24.0), (-54.5, -26.0),
+                       (-56.0, -28.0), (-56.5, -30.0), (-56.3, -33.0), (-55.8, -36.0), (-100.0, -36.0)], 2.6, 'ponttoni', -7.0),
+    # v19: luoteiskärjen moottorivene ja keltainen merkkipaalu (kallio alkaa y < 12,6 ja x > −70)
+    ('vene_ja_merkki_luode', [(-82.0, 12.8), (-71.5, 12.8), (-70.5, 14.5), (-70.5, 19.5), (-82.0, 19.5)], 3.0, 'ponttoni', -7.0),
     # Korkeat kannet (maakenttä putoaisi alapihalle, siksi kiinteä taso): itämuurin harjan kävelykansi 12 m,
     # eteläinen yläkansi 5,7 m ja alakatto 2,8 m.
     ('ita_harja_telineet', [(40.6, 34.5), (41.5, 30.0), (44.9, 24.0), (46.3, 20.0), (49.4, 14.4), (51.2, 9.5),
@@ -107,7 +117,9 @@ VENYMA = 0.5    # venynyt kolmio: kärki painui yli tämän ja toinen kärki jä
 # pilkotaan ja saavat oman UV:n atlaksen vapaasta tilasta, sitten sama maalaus; kuori_tayte).
 RYHMAT = {'piha': 'poista', 'lounas': 'jata', 'koillinen': 'paikkaa', 'koillinen_kansi': 'paikkaa', 'itaportas': 'paikkaa', 'kaakko': 'tayta', 'koillisbastioni': 'poista',
           'lansipiha': 'poista', 'etela': 'poista', 'itabastioni': 'poista', 'ita_harja': 'poista', 'etela_katto': 'poista',
-          'etela_alakatto': 'poista', 'vene': 'poista'}
+          'etela_alakatto': 'poista', 'vene': 'poista', 'ponttoni': 'paikkaa'}
+VEDEN_ALLE = {'ponttoni', 'vene'}
+VEDEN_ALLE_SYVYYS = 0.3  # painuma tason (vedenpinnan) alle näissä ryhmissä  # ryhmät, joiden pinta painuu kokonaan vedenpinnan alle: geometria vain, ei maalausta
 
 
 def siivoa(o, kuva, log=print):
@@ -205,7 +217,9 @@ def siivoa_np(co, tv, uv, rgb, log=print):
         P = laajenna(oma.reshape(Hg, Wg), int(0.3 / RES)); muut = laajenna(muut.reshape(Hg, Wg), int(PUHDAS_VALI / RES))
         puhdas = maa & ~muut & ~laajenna(P, int((PUHDAS_VALI_KANSI if kansi else PUHDAS_VALI) / RES))
         rengas = maa & ~muut & laajenna(P, int(2.5 / RES)) & ~P
-        tayt = kloonaa(orto, puhdas, P, RES, rengas, askel_m=1.0 if kansi else 3.0)  # kapea kansi: 6 m:n ikkuna ei mahdu
+        # Veden alle painuva ryhmä (v19 ponttonisilta): ei maalausta, pinta jää vedenpinnan alle eikä ympärillä ole maata
+        # kloonauslähteeksi (kloonaa() kaatui tyhjään renkaaseen 1.10.).
+        tayt = None if ryhma in VEDEN_ALLE else kloonaa(orto, puhdas, P, RES, rengas, askel_m=1.0 if kansi else 3.0)  # kapea kansi: 6 m:n ikkuna ei mahdu
         # Geometria: alueiden maanläheiset vertexit maahan (kukin oman korkeusrajansa mukaan).
         lahi = np.flatnonzero((co[:, 0] > pk[:, 0].min() - 3) & (co[:, 0] < pk[:, 0].max() + 3) & (co[:, 1] > pk[:, 1].min() - 3) & (co[:, 1] < pk[:, 1].max() + 3))
         gk = np.zeros(len(co), np.float32); gk[lahi] = g(co[lahi, :2])
@@ -215,6 +229,7 @@ def siivoa_np(co, tv, uv, rgb, log=print):
             suoja = np.zeros(len(co), bool)
             if maa is not None:  # tason maa alueelle ja 3 m:n vyöhykkeelle (venymätesti) tason ylä- ja yläpuolella
                 t = tasot[nimi](co[lahi, :2])
+                if ryhma in VEDEN_ALLE: t = np.full_like(t, maa)  # vedenpinnan alle tasan (sovitettu taso jäi −6,9:ään, 1.10.)
                 oma = alue[lahi] | ((co[lahi, 2] > t - 0.5) & (etaisyys(co[lahi, :2], p) < 3.0))
                 gk[lahi[oma]] = t[oma]
                 # Muurin juuri säilyy: kärki, jonka 0,25 m:n pystysarakkeessa pinta jatkuu yli korkeusrajan (linnan muuri
@@ -231,7 +246,8 @@ def siivoa_np(co, tv, uv, rgb, log=print):
             siirr = tas & (co[:, 2] > gk + DZ)
             zv = co[:, 2].copy(); co[tas, 2] = gk[tas]
             # Painettu romu 5 cm maanpinnan alle: päällekkäiset pinnat eivät varjosta toisiaan leivonnassa (hämärä 29.9.).
-            co[siirr, 2] = gk[siirr] - PAINUMA
+            co[siirr, 2] = gk[siirr] - (VEDEN_ALLE_SYVYYS if ryhma in VEDEN_ALLE else PAINUMA)
+            if ryhma in VEDEN_ALLE: co[tas, 2] = gk[tas] - VEDEN_ALLE_SYVYYS  # myös maan tasolle jääneet (−7,0 välkkyi veden kanssa)
             ylhaalla = np.zeros(len(co), bool); ylhaalla[lahi] = ~tas[lahi] & (co[lahi, 2] - gk[lahi] > VENYMA)
             ven = ((zv - co[:, 2])[tv] > VENYMA).any(1) & ylhaalla[tv].any(1)
             if tapa == 'poista': poista |= ven
@@ -248,13 +264,13 @@ def siivoa_np(co, tv, uv, rgb, log=print):
             log(f'SIIVOUS: {nimi}: {int(alue.sum())} vertexiä alueella, {int(siirr.sum())} painettu maahan '
                 f'(dz keskim. {float((zv[siirr]-gk[siirr]).mean()) if siirr.any() else 0:.2f} m), venyneitä {int(ven.sum())} ({tapa}), muurin juuria {int(suoja.sum())}')
         venyneet |= juuret & ~taytto
-        if venyneet.any():
+        if venyneet.any():  # v19: myös veden alle painuvien ryhmien verhot maalataan muurin kivellä
             Ms, vaaka = seinapaikka(co, tv, uvp, rgb, np.flatnonzero(venyneet), log=log)
             Kr[vaaka] = True; M_kaikki |= Ms; K_kaikki.append(np.setdiff1d(np.flatnonzero(venyneet), vaaka))
         K = np.flatnonzero(Kr & ~poista)
-        M = paluu(rgb, co, tv, uvp, K, tayt, lo, RES)
+        M = paluu(rgb, co, tv, uvp, K, tayt, lo, RES) if tayt is not None else np.zeros((H, W), bool)
         M_kaikki |= M; K_kaikki.append(K)
-        if os.environ.get('KUORI_DEBUG'):
+        if os.environ.get('KUORI_DEBUG') and tayt is not None:
             np.savez_compressed(os.environ['KUORI_DEBUG'] + f'_{ryhma}.npz', orto=orto.astype(np.float16), tayt=tayt.astype(np.float16), puhdas=puhdas, P=P, lo=lo)
         log(f'SIIVOUS: ryhmä {ryhma}: {len(K)} pintaa maalattu, puhdasta maata {puhdas.mean():.2f}, tekseleitä {int(M.sum())}')
     sauma = reunat(rgb, uvp, M_kaikki, np.concatenate(K_kaikki), LAAJENNUS)

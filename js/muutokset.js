@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2483, teksti: 'Luentatekstit: 5 kaupunkia, ei ääntä' },
+  { v: 2483, teksti: 'Olavinlinna v19: ponttonisilta pois kuoresta, p… (#3759)' },
   { v: 2482, teksti: 'TestFlight: Unity-askeleen virhepolku palauttaa… (#3720)' },
   { v: 2481, teksti: 'Olavinlinnan lähimaasto v3c: splat-maasto, pien… (#3755)' },
   { v: 2480, teksti: 'Pulu: kortin aihe kysymyksen mukana, kun täkyno… (#3730)' },
