@@ -9,7 +9,9 @@ Pidossa: /Users/Shared/Claude/julkaisija-tyokalut/pidossa.txt.
   (ANOTHER_BUILD_IN_REVIEW → uusi yritys 30 min välein; aina uusin build).
 - **TF 90** = proto master f89c5c79 (juna 12baf580, käännös 27c449e4), ladattu 05.52, beta-arvio 05.55.
   Sisältää Siirtosepän lukijakorjauksen 3a28322a (linnan ympäristöpaketin uusi muoto).
-- Juna 91: ei pyyntöjä (Natiiviseppä 05.4x).
+- **TF 91** = proto master 23041f6f (juna a84f649c, käännös f42339ca: Pulu turva-alue + pelaajan näkymä),
+  ladattu 06.35, beta-arvio 06.39. Savuke 91 todensi mikserinapin piilotuksen ilman kehittäjätilaa (89:n TF-kohta).
+- Juna 92: ei pyyntöjä (Natiiviseppä 06.3x).
 - Kaava: muutoslokirivi PR:nä mainiin (tarkista MERGEABLE CLEAN) → `gh workflow run proto3d-testflight.yml
   --ref main -f vie_unitysta=true -f versio=1.1 -f ordinaali=NN -f proto_ref=SHA -f build_numero=NN
   -f sisainen_ryhma=false` → `gh workflow run testflight-ulkoinen.yml --ref main -f build_numero=NN`.
@@ -53,5 +55,4 @@ Pidossa: /Users/Shared/Claude/julkaisija-tyokalut/pidossa.txt.
 
 1. Olavinlinnan osoitin (komento vie-dioraama osoitin=true) — Päätoimittaja antaa luvan kuittauksen jälkeen.
 2. Sisäisen testiryhmän tarkistus ASC:ssa.
-3. TF 89: mikserinappi ei saa näkyä ilman kehittäjätilaa.
 4. #3734 (.claude/settings.json hook) pidossa: omistajan suora lupa.
