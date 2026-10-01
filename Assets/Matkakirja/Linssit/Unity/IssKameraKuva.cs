@@ -188,7 +188,8 @@ namespace Matkakirja.Natiivi
                 var (az, korkeus) = AurinkoPisteessa(utc, naytteet.Average(n => n.Lat), naytteet.Average(n => n.Lon));
                 ty.Pilvet = new Pilvikentta { MaaOsuus = ty.MaaOsuus, AurinkoAz = az, AurinkoKorkeus = korkeus }.Kalibroi();
                 var lista = ty.Laatat.ToList(); int kirjoitettu = 0;
-                var tyot = Task.Run(() => Parallel.ForEach(lista, new ParallelOptions { MaxDegreeOfParallelism = Math.Max(1, SystemInfo.processorCount - 1) }, l =>
+                int ytimia = Math.Max(1, SystemInfo.processorCount - 1);   // vain pääsäikeessä (laitekoe 1.10.: säikeessä poikkeus)
+                var tyot = Task.Run(() => Parallel.ForEach(lista, new ParallelOptions { MaxDegreeOfParallelism = ytimia }, l =>
                 {
                     var rgba = new byte[256 * 256 * 4];
                     ty.Piirra(l.z, l.x, l.y, rgba);
