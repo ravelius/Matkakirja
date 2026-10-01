@@ -1,7 +1,7 @@
 # Siirtoprompti tilinvaihtoa varten (Päätoimittaja 1.10.2026, viikkokiintiö 97 %)
 
 Omistajan sääntö (29.9.): viikkoraja 97 % → roolit pushaavat luovutuksen ja aloitusviestin, sessiot pysäytetään, siirtoprompti omistajalle.
-**Tämä vaihto: omistaja käski 1.10. klo 07.5x (viikko 95 %) lopettaa sessiot.** Kaikki 12 roolia käskettiin pushaamaan ja lopettamaan 07.5x.
+**Tämä vaihto: omistaja käski 1.10. klo 07.5x (viikko 95 %) lopettaa sessiot.** Kaikki 12 roolia pushasivat luovutuksen ja aloitusviestin 07.5x (SHA:t kohdan 3 taulukossa); vanhan tilin sessiot ovat pysähdyksissä 07.56.
 Tarkempi tila: docs/raportit/viesti-fable-luovutus-20261001-b.md (sama haara). Päätökset: docs/raamattu-loki/paatokset-2026-09.md (grep "1.10.2026").
 
 ## 1. Ensimmäinen viesti uuden tilin Päätoimittaja-sessioon
@@ -38,16 +38,16 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 
 | Rooli | Checkout | Haara | Malli | Kärki |
 |---|---|---|---|---|
-| Postivahti | Matkakirja-posti | postivahti | Sonnet, medium | kierto 10 min, viikkoraja 94/97 %, levy |
+| Postivahti | Matkakirja-posti | postivahti | Sonnet, medium | **5815bde56** · postikierto lopetettu 07.54; kierto 10 min, viikkoraja 94/97 %, levy |
 | Julkaisija | Matkakirja-julkaisija | julkaisija-luovutus-20260928 | Opus, high | **ccaf2b286** · juna: #3734 ajossa, taustaketjut etusija8 ja 3754 jatkavat; TF 91 beta-arviossa |
 | Natiiviseppä | Matkakirja-3d-selvittaja | selvittaja-3d-luovutus | Opus, high | **e4bd9057a** · master = BUILD 91 23041f6f; juna 92 = juna/b13 b24c0702 (ensilataus 894d16a4) auki, kääntämättä |
 | Natiivi-UI | Matkakirja-natiivi-ui | natiivi-ui-luovutus-m | Opus, high | **769f8a27a** · ei ajastuksia, ei worktreetä |
-| Pelikoodari | Matkakirja-pelikoodari | pelikoodari-tyo-20260923 | Opus, high | Pulun TF-todennukset (kartan paperiteema, Ihmisen matka) |
+| Pelikoodari | Matkakirja-pelikoodari | pelikoodari-tyo-20260923 | Opus, high | **0d9bc81c1** · Pulun TF-todennukset (kartan paperiteema, Ihmisen matka) |
 | Linssiseppä | Matkakirja-linssiseppa | linssiseppa-tyo-20260923 | Opus, high | **fc6b91a18** · pallokorjaus 06822cb9; S2-sävytys (23e40639) S2-erän mukana |
-| Linssiseppä 2 | Matkakirja-linssiseppa-2 | linssiseppa2-tyo-20260928 | Opus, high | S2-kyyti, muistimittaus iPadilla |
+| Linssiseppä 2 | Matkakirja-linssiseppa-2 | linssiseppa2-tyo-20260928 | Opus, high | **fd432a421** · S2-kyyti, muistimittaus iPadilla |
 | Linnanrakentaja | Matkakirja-linnanrakentaja | linnanrakentaja-tyo-20260929 | Opus, high | **2d40b8261** · #3763 puukortit junassa; seuraava laatuaskel |
 | Siirtoseppä | Matkakirja-siirtoseppa | siirtoseppa-luovutus | Opus, high | **3b82c045f** · ensilataus 894d16a4 junassa 92 |
-| Karttaseppä | Matkakirja-karttaseppa | karttaseppa-tyo-20260922 | Opus, high | S2 2026-10-01b (polttovahti), vienti ämpäriin |
+| Karttaseppä | Matkakirja-karttaseppa | karttaseppa-tyo-20260922 | Opus, high | **d5768e592** · pallo ja S2 2026-10-01b jatkuvat polttovahti v5g:n alla ilman sessiota (PID 89273, 46985); vienti ämpäriin |
 | Sisältökirjuri | Matkakirja-sisaltokirjuri | sisalto-pelikatalogi-20260927 | Sonnet, high | **3969981c5** · kuva2 A (konflikti), D, E, F |
 | Laitetestaaja | Matkakirja-laitetestaaja | laitetestaaja-savukierros-b13 | Sonnet, high | **0d5918c3b** · savuke 1.1 (91) PASS; simulaattorit sammutettu |
 
