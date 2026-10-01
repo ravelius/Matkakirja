@@ -685,3 +685,14 @@ test('ilman tietokantaa worker kertoo sen eikä kaadu', async () => {
   );
   assert.equal(vastaus.status, 503);
 });
+
+// Asiakkaan sanalistat = workerin sanalistat (1.10.2026: lista oli erkaantunut, ja worker hylkäsi osan arvotuista
+// nimistä "Nimimerkki ei ole sanalistoilta"; natiivi Sahke.cs kopioi webin listat kultaisen jäljen kautta).
+test('js/sahke.js:n nimimerkkisanat ovat täsmälleen workerin listat samassa järjestyksessä', async () => {
+  const { readFileSync } = await import('node:fs');
+  const { ADJEKTIIVIT, SUBSTANTIIVIT } = await import('../worker/sahke/nimimerkit.js');
+  const koodi = readFileSync(new URL('../js/sahke.js', import.meta.url), 'utf8');
+  const lista = (nimi) => [...koodi.match(new RegExp(`const ${nimi} = \\[([\\s\\S]*?)\\];`))[1].matchAll(/'([^']+)'/g)].map((m) => m[1]);
+  assert.deepEqual(lista('SAHKE_ADJEKTIIVIT'), [...ADJEKTIIVIT]);
+  assert.deepEqual(lista('SAHKE_SUBSTANTIIVIT'), [...SUBSTANTIIVIT]);
+});
