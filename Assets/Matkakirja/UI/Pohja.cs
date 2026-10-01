@@ -57,20 +57,23 @@ namespace Matkakirja.Natiivi
         public readonly UnityEngine.UIElements.VisualElement Juuri;
         UnityEngine.Vector2 alku;
         int id = -1;
-        const float Ylos = 20f, Alas = 40f, Napautus = 6f, Vyohyke = 28f;
+        // Osuma-ala 44 pt (savuke 110: laajennetun kortin kahva ei osunut): Yli pt kortin yläpuolelle (kahvan oma alue, Pohja
+        // .mk-vetokahva) ja Vyohyke pt sisään.
+        public const float Ylos = 20f, Alas = 40f, Napautus = 6f, Vyohyke = 28f, Yli = 16f;
 
         /// <summary>Kahvan veto käynnissä (kortin oma vieritys ja napautus väistävät).</summary>
         public bool Vetaa => id >= 0;
 
         public Vetokahva(UnityEngine.UIElements.VisualElement kortti, System.Action<bool> laajenna, System.Action sulje, System.Func<bool> laajennettu)
         {
-            Juuri = Rakenne.El("mk-vetokahva", kortti, UnityEngine.UIElements.PickingMode.Ignore);
+            // Kahvan alue on poimittava: kortin yläpuolinen osa (Yli) tuo painalluksen kortille (TrickleDown alla).
+            Juuri = Rakenne.El("mk-vetokahva", kortti);
             Rakenne.El("mk-nosto__kahva", Juuri, UnityEngine.UIElements.PickingMode.Ignore);
             kortti.RegisterCallback<UnityEngine.UIElements.PointerDownEvent>(e =>
             {
                 var r = kortti.worldBound;
                 if (id >= 0 || Juuri.resolvedStyle.display == UnityEngine.UIElements.DisplayStyle.None
-                    || !r.Contains(e.position) || e.position.y - r.y >= Vyohyke) return;
+                    || e.position.x < r.xMin || e.position.x > r.xMax || e.position.y < r.y - Yli || e.position.y - r.y >= Vyohyke) return;
                 id = e.pointerId;
                 alku = e.position;
                 // Ei StopPropagationia (kuten Nostokortti): yläreunan nappi saa painalluksen ja vie kaappauksen (CaptureOut → ei vetoa).

@@ -65,7 +65,7 @@ namespace Matkakirja.Natiivi
         bool selainSulki;
         // NOSTOKORTTI-POHJA (UI-pohjat, omistaja 1.10.2026): KAPEA = alareunaan, korkeus ≤ Peitto.Max % (laajennettuna
         // Peitto.Laajennettu %); KESKI/LEVEÄ = sivukortti oikeaan reunaan. Vetokahva: ylös laajentaa, alas pienentää laajennetun ja sulkee muuten.
-        readonly VisualElement kahva;
+        readonly VisualElement kahva, kahvaAlue;
         bool laajennettu, kahvaVeto;
         Vector2 kahvaAlku;
         const float KahvaVyohyke = 28f, KahvaYlos = 20f, KahvaAlas = 40f;
@@ -105,6 +105,8 @@ namespace Matkakirja.Natiivi
             // Kohde poimitaan itse (Poimi): vanhentunut kohde kortin kohdalla ei sulje korttia himmennyksestä.
             kerros.RegisterCallback<PointerDownEvent>(e => { if (e.target == kerros && Poimi(e.position, kerros) == kerros) Sulje(); });
             kortti = Rakenne.El("mk-nosto", kerros);
+            // Osuma-ala kortin yläpuolelle (savuke 110): poimittava kaista, jonka painallus tulee kortille (EleAlkoi).
+            kahvaAlue = Rakenne.El("mk-vetokahva mk-nosto__vetoalue", kortti);
             kahva = Rakenne.El("mk-nosto__kahva", kortti, PickingMode.Ignore);
             sisus = new ScrollView(ScrollViewMode.Vertical);
             sisus.AddToClassList("mk-nosto__sisus");
@@ -419,6 +421,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             bool kapea = Pohja.NostokortinPaikka(kerros, kortti, laajennettu);
             kahva.style.display = kapea ? DisplayStyle.Flex : DisplayStyle.None;
+            kahvaAlue.style.display = kahva.style.display;
         }
 
         /// <summary>Vetokahvan irrotus: ylös laajentaa (vaiheesta 1 koko korttiin), alas pienentää laajennetun ja sulkee muuten, napautus vaihtaa korkeutta.</summary>
@@ -504,7 +507,7 @@ namespace Matkakirja.Natiivi
             odottavaVieritys = -1f;
             kuvaEnnen = null;
             var kr = kortti.worldBound;
-            kahvaVeto = e.position.y - kr.y < KahvaVyohyke && kr.Contains(e.position);
+            kahvaVeto = e.position.y - kr.y < KahvaVyohyke && e.position.y >= kr.y - Vetokahva.Yli && e.position.x >= kr.xMin && e.position.x <= kr.xMax;
             kahvaAlku = e.position;
             // Veto ylös vie sormen kortin ulkopuolelle: kaappaus, jotta irrotus tulee kortille (savuke 99: touch_path ylös ei
             // laajentanut, irrotus osui kerrokseen).
