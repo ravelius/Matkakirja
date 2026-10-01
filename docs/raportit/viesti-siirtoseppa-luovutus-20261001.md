@@ -13,7 +13,7 @@
   maasto 4 lohkoa, splat, 25k puuta, 20k aluskasvia, aitat maalla, virheitä 0. Osoitin vasta TF 90 julki + omistajan lupa.
 - **Seuraava osoitinkohde: v19-paketti** (#3759 mainissa; Julkaisija antaa hashin ~06.00). Kuittaa juna 90 .appilla:
   `HASH=<hash> APP=/Users/Shared/Claude/proto-3d/lokit/juna-1.1.90-27c449e4/Matkakirja3D.app L=…/siirtoseppa-v19-kuittaus
-  zsh scratchpad/ajo-ymparisto-kuittaus.sh` → tarkista M4 (puulaituri vesiportilla, ponttonisilta poissa), M0 (taivas-
+  zsh /Users/Shared/Claude/proto-3d/tyokalut/siirtoseppa-ajot/ajo-ymparisto-kuittaus.sh` → tarkista M4 (puulaituri vesiportilla, ponttonisilta poissa), M0 (taivas-
   kuva, ei liukuväri), M1/M2 (aitat maalla), virheitä 0. Puukortit #3763 pidossa.
 
 ## Proto-worktreet ja haarat
@@ -32,7 +32,7 @@
 - Kehittäjä: `poikki kamera <atsimuutti> <korkeus> <etäisyys> [fov] [x y z]` (kohde dioraaman koordinaateissa:
   z = −Blender y), `poikki vesi [heijastus 0|1|auto | siirto <m>]`, `poikki aluskasvit 0|1|osat|lajit`.
 
-## Skriptit (scratchpad, kopioi tarvittaessa)
+## Skriptit: /Users/Shared/Claude/proto-3d/tyokalut/siirtoseppa-ajot/
 
 - `ajo-ymparisto-kuittaus.sh` (HASH=… APP=… L=…): puhdas asennus https-paketista, kulmat taivas, aitat viisto,
   vesi −20 m (todistaa maan), aurinkoon, vesiportti/laituri (v19), laituri-tila; virhelaskenta ilman ääniä.
