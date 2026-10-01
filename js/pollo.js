@@ -7581,6 +7581,21 @@ export function kysyPollolta(valinta) {
  *   käytettävissä (peliä ei ole, pöllöä ei ole löydetty, tai edellinen
  *   vastaus on kesken) — kutsuja saa jättää sen huomiotta.
  */
+/**
+ * CHAT AUKI KYSYMYSEHDOTUKSIN (UI-pohjat 1.10.2026: NOSTOKORTIN Kysy-nappi). Paneeli avautuu, ja kortin kysymykset
+ * näkyvät ehdotussiruina (sama naytaEhdotukset kuin jatkokysymyksillä); pelaaja valitsee itse. Epätosi, jos pulua ei
+ * ole käytettävissä (kuten polloKysy).
+ * @param {string[]} kysymykset
+ */
+export function polloEhdota(kysymykset = []) {
+  const pollo = nykyinenPollo;
+  if (!pollo || !pollo.nakyyko()) return false;
+  if (!pollo.auki) pollo.avaa();
+  const lista = (Array.isArray(kysymykset) ? kysymykset : []).map((k) => String(k ?? '').trim()).filter(Boolean);
+  if (lista.length && !pollo.kesken) pollo.naytaEhdotukset(lista);
+  return true;
+}
+
 export function polloKysy(kysymys, { aihe = null } = {}) {
   const pollo = nykyinenPollo;
   if (!pollo) return false;
