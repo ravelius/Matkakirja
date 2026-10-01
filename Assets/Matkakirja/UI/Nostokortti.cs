@@ -397,21 +397,7 @@ namespace Matkakirja.Natiivi
         void Pystypaikka()
         {
             if (!Auki) return;
-            var t = UiKerros.Hae().Reunat(UiKerros.Valikot);
-            float kh = kerros.layout.height, kw = kerros.layout.width;
-            if (float.IsNaN(kh) || kh <= 0 || float.IsNaN(kw) || kw <= 0) return;
-            float m = Tyylikirja.Vali.M;
-            bool kapea = Pohja.Leveys(kw - t.x - t.z) == Pohja.Luokka.Kapea;
-            // KAPEA: alareunaan, kartta näkyy yläpuolella; KESKI/LEVEÄ: oikeaan reunaan yläpalkin alta alas.
-            kerros.style.justifyContent = kapea ? Justify.FlexEnd : Justify.FlexStart;
-            kerros.style.alignItems = kapea ? Align.Center : Align.FlexEnd;
-            kerros.style.paddingTop = Mathf.Round(t.y + m);
-            kerros.style.paddingBottom = Mathf.Round(t.w + m);
-            kerros.style.paddingRight = Mathf.Round(t.z + m);
-            kerros.style.paddingLeft = Mathf.Round(t.x + m);
-            float tila = kh - t.y - t.w - 2f * m;
-            float mh = kapea ? Mathf.Min(tila, Mathf.Round(kh * (laajennettu ? Tyylikirja.Peitto.Laajennettu : Tyylikirja.Peitto.Max) / 100f)) : tila;
-            if (kortti.resolvedStyle.maxHeight.value != mh) kortti.style.maxHeight = mh;
+            bool kapea = Pohja.NostokortinPaikka(kerros, kortti, laajennettu);
             kahva.style.display = kapea ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
