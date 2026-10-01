@@ -389,7 +389,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public const string S2Juuri = "https://media.matkakirja.app/" + Laattapalvelin.S2Polku + "/v1/";
         public const string S2Kerros = "astronautti-s2";
-        public static bool S2Kaytossa;
+        public static bool S2Kaytossa = true;   // ämpäri v1 valmis 1.10. 15.55 (Karttaseppä); S2 aina kyydissä Euroopassa, s2 0 = A/B
         public static string S2Osoite;
         const double S2W = -28.125, S2E = 45.0, S2N = 72.395704, S2S = 31.952162;
         const int S2Rx = 13, S2Ry = 13, S2MaxTaso = 4;
