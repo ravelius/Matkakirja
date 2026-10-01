@@ -62,7 +62,7 @@ namespace Matkakirja.Natiivi
 
         public DioraamaYmparisto(Transform juuri) { this.juuri = juuri; }
 
-        public IEnumerator Lataa(Ymparisto y, float vesiTaso, Func<string, string> url, Action<string> kirjaa)
+        public IEnumerator Lataa(Ymparisto y, float vesiTaso, Func<string, string> url, Action<string> kirjaa, Func<bool> kuoriValmis = null)
         {
             Tyhjenna();
             if (y == null) yield break;
@@ -75,6 +75,15 @@ namespace Matkakirja.Natiivi
             LuoVesi();
             LuoTaivas();
             var taso = DioraamaUlkokuori.Valittu;
+            // Linna ensin (1.10. mittaus: ympäristön lataukset kilpailivat kuoren kanssa, kuoren kevyt taso 11 → 23 s):
+            // järvi ja taivaskupoli ovat heti, mutta ympäristön tiedostot haetaan vasta kun kuoren kevyt taso on valmis
+            // (enintään 25 s odotus).
+            if (kuoriValmis != null)
+            {
+                float odotus = Time.realtimeSinceStartup;
+                while (!kuoriValmis() && Time.realtimeSinceStartup - odotus < 25f) { if (oma != kerta) yield break; yield return null; }
+                kirjaa?.Invoke($"poikki: ympäristö: kuori valmis, lataus alkaa {Time.realtimeSinceStartup - alku:F1} s");
+            }
             string taivasKuva = DioraamaValot.TunnelmaTaivas < 0.99f && !string.IsNullOrEmpty(y.TaivasHamara) ? y.TaivasHamara : y.Taivas;
             if (!string.IsNullOrEmpty(taivasKuva)) yield return LataaTaivas(taivasKuva, (float)y.TaivasSuunta, url, kirjaa, oma);
             if (oma != kerta) yield break;
