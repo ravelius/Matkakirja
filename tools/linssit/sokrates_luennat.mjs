@@ -5,7 +5,7 @@
  * Ääni ei kuulu repoon: ulos /Users/Shared/Claude/proto-3d/_lahteet/sokrates/luennat/<id>-otto<N>.mp3 + kuitti.json.
  *
  * Käyttö:  source ~/.zshrc >/dev/null 2>&1; node tools/linssit/sokrates_luennat.mjs [--vain a,b] [--otto 1]
- *          node tools/linssit/sokrates_luennat.mjs --dry-run
+ *          node tools/linssit/sokrates_luennat.mjs --dry-run [--kohde sokrates|marcus]
  * Avain luetaan ympäristöstä (ELEVEN_API_KEY); sitä ei tulosteta eikä tallenneta.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -13,7 +13,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 const AANI = 'Sz0tRTEpybtDJ9ru2kgD';   // Viisas Kertoja
 const MALLI = 'eleven_v3', OUTPUT_FORMAT = 'mp3_44100_192', STABILITY = 0.5, LOPPUTAUKO = ' <break time="1.0s" />';
 
-export const PATKAT = {
+const SOKRATES = {
   a: 'Tutkimaton elämä ei ole elämisen arvoinen ihmiselle.',
   b: 'Platonin mukaan sotilas Sokrates käveli talvella jäällä paljain jaloin ja seisoi kerran aamusta seuraavaan aamuun ajatuksiinsa vaipuneena. Taistelussa hän pelasti haavoittuneen Alkibiadeen.',
   c: 'Mitä en tiedä, en luulekaan tietäväni.',
@@ -21,7 +21,20 @@ export const PATKAT = {
   e: 'Vääryyttä ei siis saa tehdä koskaan.',
   f: 'Vuonna 399 ennen ajanlaskun alkua Sokrates tuomittiin kuolemaan jumalattomuudesta ja nuorison turmelemisesta. Ystävät tarjosivat hänelle pakotietä vankilasta, mutta hän kieltäytyi, koska vääryyttä ei saa vastata vääryydellä.',
 };
-const ULOS = '/Users/Shared/Claude/proto-3d/_lahteet/sokrates/luennat';
+// Marcus Aurelius (omistajan äänilupa 2.10. klo 07.2x, tekstit sanatarkasti, 757 merkkiä)
+const MARCUS = {
+  a: 'Älä enää puhu siitä, millainen hyvän ihmisen pitäisi olla. Ole sellainen.',
+  b: 'Rooman keisari Marcus Aurelius kirjoitti sotaretkillä muistiinpanoja vain itselleen, kreikaksi. Osa niistä syntyi kvadien maassa Granuan varrella, osa Carnuntumissa Tonavan rannalla.',
+  c: 'Ole kuin niemi, johon aallot lyövät lakkaamatta. Se pysyy paikallaan, ja kuohuva vesi tyyntyy sen ympärillä.',
+  d: 'Marcuksen hallituskaudella Antoninuksen rutto tappoi arvioiden mukaan viidestä kymmeneen miljoonaa ihmistä. Hänen kanssakeisarinsa Lucius Verus kuoli vuonna 169, mahdollisesti ruttoon.',
+  e: 'Tee, sano ja ajattele kaikki niin, kuin voisit jo nyt lähteä elämästä.',
+  f: 'Marcus kuoli sotaretkellä Tonavan rajalla vuonna 180. Vallan peri hänen poikansa Commodus, joka myöhemmin taisteli gladiaattorina areenalla.',
+};
+const KOHTEET = { sokrates: [SOKRATES, '/Users/Shared/Claude/proto-3d/_lahteet/sokrates/luennat'],
+                  marcus: [MARCUS, '/Users/Shared/Claude/proto-3d/_lahteet/marcus-aurelius/luennat'] };
+const A0 = process.argv.slice(2);
+const [PATKAT, ULOS] = KOHTEET[A0.includes('--kohde') ? A0[A0.indexOf('--kohde') + 1] : 'sokrates'];
+export { PATKAT };
 const A = process.argv.slice(2);
 const arvo = (lippu, oletus) => (A.includes(lippu) ? A[A.indexOf(lippu) + 1] : oletus);
 const vain = arvo('--vain', Object.keys(PATKAT).join(',')).split(',');
