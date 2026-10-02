@@ -1,0 +1,153 @@
+/* AJATTELIJAT-LINSSI (pinta; Linssiseppä 2, 2.10.2026; web css/pohjat/pinnat/ajattelija.css ja js/linssit/ajattelija.js):
+ * KUVANÄKYMÄ-pohja, teema tumma (juuren tk-teema-tumma), ✕ lämmin lasi (Pohjat/kuvanakyma.uss + tk-teema-lasi). Kuvan päällä
+ * nimi ja elinvuodet, kysymys sekä päälauseen lähderivi (lähderivin tumma liukuväri piirretään 3D-näyttämössä). Näkyvyys tulee
+ * aikajanalta (AjattelijatSovitin.Tekstit → opacity ruuduittain), joten tässä ei ole siirtymiä. Lopussa elämä-lappu
+ * (NOSTOKORTTI-pohjan tumma teema: paikka ja vetokahva koodista, AjattelijaNakyma.Paikka) ja PULU-kulma.
+ * Valinta käyttää KORTTI-pohjaa sellaisenaan (Pohjat/kortti.uss). VAIN --tk-*-tokenit. */
+.mk-ajattelija {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--tk-pinta);
+    color: var(--tk-muste);
+}
+
+.mk-ajattelija__kuva {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mk-ajattelija__turva {
+    position: absolute;
+}
+
+/* Nimi ja kysymys: vasen reuna 6 %, alareuna 42 %:n korkeudella (web top 42 % + translateY(−100 %)). */
+.mk-ajattelija__teksti {
+    position: absolute;
+    left: 6%;
+    bottom: 58%;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+.mk-ajattelija__nimi {
+    margin: 0;
+    padding: 0;
+    font-size: var(--tk-koko-arkki);
+    letter-spacing: 13px; /* web 0.13em */
+    color: var(--tk-muste);
+}
+
+.mk-ajattelija__vuodet {
+    margin: var(--tk-vali-xs) 0 0 0;
+    padding: 0;
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-muste-pehmea);
+}
+
+.mk-ajattelija__kysymys {
+    right: 6%;
+    font-size: var(--tk-koko-arkki);
+    white-space: normal;
+    color: var(--tk-muste);
+}
+
+/* Lähderivi alareunassa keskellä turva-alueen yläpuolella (web padding xl l xl + safe-area). */
+.mk-ajattelija__lahde {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: var(--tk-vali-xl) var(--tk-vali-l) var(--tk-vali-xl) var(--tk-vali-l);
+    align-items: center;
+    opacity: 0;
+}
+
+.mk-ajattelija__kreikka {
+    margin: 0;
+    padding: 0;
+    font-size: var(--tk-koko-apuri);
+    white-space: normal;
+    -unity-text-align: upper-center;
+    color: var(--tk-muste);
+}
+
+.mk-ajattelija__viite {
+    margin: var(--tk-vali-xs) 0 0 0;
+    padding: 0;
+    font-size: var(--tk-koko-kapiteeli);
+    white-space: normal;
+    -unity-text-align: upper-center;
+    color: var(--tk-muste-pehmea);
+}
+
+/* Elämä-lappu: NOSTOKORTTI-pohja teemalla tumma (lapun tk-teema-tumma; mitat kuten Linssit.uss .mk-ihmisnosto). */
+.mk-ajattelija-lappu {
+    position: absolute;
+    padding: var(--tk-vali-xl) var(--tk-vali-l) var(--tk-vali-l) var(--tk-vali-l);
+    border-width: 1px;
+    border-color: var(--tk-reunus);
+    border-radius: var(--tk-kulma-kortti);
+    background-color: var(--tk-pinta);
+    color: var(--tk-muste);
+}
+
+.mk-ajattelija-lappu .mk-nosto__kahva {
+    background-color: var(--tk-reunus);
+}
+
+.mk-ajattelija-lappu__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-ajattelija-lappu__yla {
+    margin: 0 0 var(--tk-vali-xs) 0;
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 12px; /* web 0.12em */
+    color: var(--tk-muste-pehmea);
+}
+
+.mk-ajattelija-lappu__otsikko {
+    margin: 0 0 var(--tk-vali-s) 0;
+    padding-bottom: var(--tk-vali-s);
+    border-bottom-width: 1px;
+    border-color: var(--tk-reunus);
+    font-size: var(--tk-koko-otsikko);
+    white-space: normal;
+    color: var(--tk-muste);
+}
+
+.mk-ajattelija-lappu__valiotsikko {
+    margin: var(--tk-vali-m) 0 var(--tk-vali-xs) 0;
+    font-size: var(--tk-koko-valiotsikko);
+    white-space: normal;
+    color: var(--tk-korostus);
+}
+
+.mk-ajattelija-lappu__teksti {
+    margin: 0 0 var(--tk-vali-s) 0;
+    font-size: var(--tk-koko-leipa);
+    white-space: normal;
+    color: var(--tk-muste);
+}
+
+/* PULU-kulma (web .tk-pulukulma): oikea alakulma; lapun ollessa auki bottom koodista (lapun yläreunaan). */
+.mk-ajattelija__pulu {
+    position: absolute;
+    right: var(--tk-vali-m);
+    bottom: var(--tk-vali-m);
+    align-items: flex-end;
+}
+
+.mk-ajattelija__pulunappi {
+    min-width: var(--tk-nappi-osuma);
+    min-height: var(--tk-nappi-osuma);
+    align-items: center;
+    justify-content: flex-end;
+}
