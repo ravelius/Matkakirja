@@ -14,7 +14,6 @@ import { SOKRATES } from './ajattelija-sokrates.js';
 import { MARCUS } from './ajattelija-marcus.js';
 import { piirraAtlas, lisaaProjektorit, asetaProjektori, lisaaKipsinPinta } from './ajattelija-projektori.js';
 import { pohjatLataaTyyli, luoPohjaKuvanakyma, luoPohjaNostokortti } from '../pohjat/pohjat.js';
-import { luoPohjaPulu } from '../pohjat/pulu.js';
 
 const R2 = 'https://media.matkakirja.app/';
 export const AJATTELIJA_KIRJASTO = `${R2}vendor/three-gltf-r185.min.js`;
@@ -480,20 +479,24 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       lappu.avaa();
     }
     if (!a.pulunKysymykset?.length) return;
-    pulu = luoPohjaPulu({ luokka: 'tk', teema: 'lasi', aihe: a.nimi, kysymykset: a.pulunKysymykset });
-    pohja.el.appendChild(pulu.kulma);
-    if (lappu && typeof ResizeObserver === 'function') {
-      // Kortti mahtuu lapun ja ✕:n väliin: ✕ (44 pt + 12 + turva-alue) jää aina näkyviin.
-      lapunVahti = new ResizeObserver(() => {
-        if (!lappu?.auki) return;
-        const korkeus = lappu.el.getBoundingClientRect().height;
-        pulu.kulma.style.bottom = `${Math.round(korkeus + 12)}px`;
-        const ylaRaja = pohja.sulku.getBoundingClientRect().bottom + 12;
-        const tila = pohja.el.clientHeight - korkeus - 12 - pulu.nappi.getBoundingClientRect().height - 8 - ylaRaja;
-        pulu.kulma.style.setProperty('--tk-pulu-tila', `${Math.max(120, Math.round(tila))}px`);
-      });
-      lapunVahti.observe(lappu.el);
-    }
+    // PULU laiskasti (minipulu ja Pulun kortti vasta lopussa; yhden tiedoston versio ei niputa linssiä eikä sen ketjua).
+    import('../pohjat/pulu.js').then(({ luoPohjaPulu }) => {
+      if (!pohja.el.isConnected) return;
+      pulu = luoPohjaPulu({ luokka: 'tk', teema: 'lasi', aihe: a.nimi, kysymykset: a.pulunKysymykset });
+      pohja.el.appendChild(pulu.kulma);
+      if (lappu && typeof ResizeObserver === 'function') {
+        // Kortti mahtuu lapun ja ✕:n väliin: ✕ (44 pt + 12 + turva-alue) jää aina näkyviin.
+        lapunVahti = new ResizeObserver(() => {
+          if (!lappu?.auki) return;
+          const korkeus = lappu.el.getBoundingClientRect().height;
+          pulu.kulma.style.bottom = `${Math.round(korkeus + 12)}px`;
+          const ylaRaja = pohja.sulku.getBoundingClientRect().bottom + 12;
+          const tila = pohja.el.clientHeight - korkeus - 12 - pulu.nappi.getBoundingClientRect().height - 8 - ylaRaja;
+          pulu.kulma.style.setProperty('--tk-pulu-tila', `${Math.max(120, Math.round(tila))}px`);
+        });
+        lapunVahti.observe(lappu.el);
+      }
+    }).catch((syy) => console.warn('ajattelija: PULU', syy));
   }
   function asetaGlobaali(G) {
     if (G <= pr0.loppu) asetaPrologi(Math.max(1, G));

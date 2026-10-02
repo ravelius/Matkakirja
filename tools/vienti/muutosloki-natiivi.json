@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (120)",
+   "paiva": "2026-10-02",
+   "teksti": "Astronautin kameran kilpi kertoo, miksi kuvaa ei voi ottaa, esimerkiksi meren yllä. Pulun keskustelu on yhtenäisessä lasiasussa, ja Olavinlinna latautuu sujuvammin."
+  },
+  {
    "versio": "1.1 (118)",
    "paiva": "2026-10-02",
    "teksti": "Astronautin kamerassa ISS:n napautus vie suoraan Cupolan ikkunaan, ja Pulun taulusta pääsee takaisin Cupolaan. Myllyssä on paperinen paneeli ja pehmennetty tausta."
