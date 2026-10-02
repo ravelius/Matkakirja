@@ -44,11 +44,11 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 | Julkaisija | Matkakirja-julkaisija | julkaisija-luovutus-20260928 | Opus, high | **44d8d414a** · web-juna ja TF 8/12, aamuun 2 |
 | Natiiviseppä | Matkakirja-3d-selvittaja | selvittaja-3d-luovutus | Opus, high | **1dabb46f5** · juna 130 |
 | Natiivi-UI | Matkakirja-natiivi-ui | natiivi-ui-luovutus-m | Opus, high | **b8d52344f** · d00c7f8b + 5cfe7253 käännös kesken, linssilista web #3878 |
-| Pelikoodari | Matkakirja-pelikoodari | pelikoodari-tyo-20260923 | Opus, high | __PELIKOODARI__ · webin Topografia + astro, sitten ajattelijat 2–3 |
+| Pelikoodari | Matkakirja-pelikoodari | pelikoodari-tyo-20260923 | Opus, high | **7cca600e9** · astro B1, B2 ja B4 PR:ssä #3879 (koko testisarja ajamatta), B3 vain natiivi; webin Topografian hampurilainen aloittamatta; kuvaparit proto-3d/lokit/pelikoodari-astro-20261002/ |
 | Linssiseppä | Matkakirja-linssiseppa | linssiseppa-tyo-20260923 | Opus, high | **1b11057e8** · Topografian hampurilainen d99f62c5 merge-pyynnössä |
 | Linssiseppä 2 | Matkakirja-linssiseppa-2 | linssiseppa2-tyo-20260928 | Opus, high | **edfc220db** · astro/ISS-erä |
 | Linnanrakentaja | Matkakirja-linnanrakentaja | linnanrakentaja-tyo-20260929 | Opus, high | **2de3e39c7** · erä 1b odottaa pelikuvia |
-| Siirtoseppä | Matkakirja-siirtoseppa | siirtoseppa-luovutus | Opus, high | __SIIRTOSEPPA__ · jalkavarjo ja hahmojen pelikuvat |
+| Siirtoseppä | Matkakirja-siirtoseppa | siirtoseppa-luovutus | Opus, high | **309ae5622** · jalkavarjo ja hahmojen pelikuvat |
 | Karttaseppä | Matkakirja-karttaseppa | karttaseppa-tyo-20260922 | Opus, high | **3cdcfae7b** · S2-ketju irrotettuna |
 | Sisältökirjuri | Matkakirja-sisaltokirjuri | sisalto-pelikatalogi-20260927 | Sonnet, high | **8e2fa5f36** · #3850 (kuva2 K) nyt MERGEABLE (0942a1d91), Julkaisija voi ottaa junaan |
 | Laitetestaaja | Matkakirja-laitetestaaja | laitetestaaja-savukierros-b13 | Sonnet, high | **8f3d5e0a0** · simulaattorit sammutettu |
