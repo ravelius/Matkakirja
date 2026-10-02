@@ -1,0 +1,112 @@
+/* GALLERIA-pohja (tyylikirja pohjat.GALLERIA, omistaja 2.10.2026 klo 15.5x, web #3860; malli julistegalleria .julistegalleria-*):
+ * PANEELI paperi, otsikkorivi kapiteeli + laskuri ja ✕ OHJAUSNAPPI, osiot kapiteelina laskureineen, ruudukko
+ * galleria.sarake / galleria.vali (Rakenne.Ruudukko), vedos kehyksellä ja nimi alla, lukossa katkoviivakehys.
+ * Käyttäjät: Julisteet (Galleriat.cs Julistegalleria), sitten ISS-kameran ja astronauttien kuvat. VAIN --tk-*-tokenit. */
+.mk-galleria-huntu {
+    background-color: var(--tk-himmennys-kevyt);
+}
+
+.mk-galleria {
+    width: 94%;
+    max-width: 760px;
+    max-height: 88%;
+    padding: var(--tk-vali-s) var(--tk-vali-m) var(--tk-vali-l) var(--tk-vali-m);
+    border-width: 1px;
+    border-color: var(--tk-reunus);
+    border-radius: var(--tk-kulma-kortti);
+    background-color: var(--tk-pinta);
+    color: var(--tk-muste);
+}
+
+.mk-galleria__yla {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: var(--tk-vali-xs);
+    padding: var(--tk-vali-xs) 0 var(--tk-vali-xs) 0;
+    border-bottom-width: 1px;
+    border-color: var(--tk-reunus);
+}
+
+.mk-galleria__otsikko {
+    margin-right: var(--tk-vali-s);
+    font-size: var(--tk-koko-leipa);
+    letter-spacing: 10px; /* web 1.6px */
+    color: var(--tk-muste);
+}
+
+.mk-galleria__luku {
+    font-size: var(--tk-koko-kapiteeli);
+    color: var(--tk-muste-pehmea);
+}
+
+.mk-galleria__yla .mk-ohjausnappi {
+    margin-left: auto;
+}
+
+.mk-galleria__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-galleria__ryhma {
+    margin: var(--tk-vali-m) 0 var(--tk-vali-xs) 0;
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 9.17px; /* web 1.1px */
+    color: var(--tk-muste-pehmea);
+}
+
+.mk-galleria__vedos {
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 0;
+    padding: 0;
+    border-width: 0;
+    border-radius: 0;
+    background-color: initial;
+}
+
+.mk-galleria__kuva {
+    border-width: 1px;
+    border-color: var(--tk-muste-pehmea);
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-galleria__nimi {
+    margin-top: var(--tk-vali-xs);
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 3px; /* web 0.3px */
+    white-space: normal;
+    -unity-text-align: upper-center;
+    color: var(--tk-muste-pehmea);
+}
+
+.mk-galleria__vedos--lukossa {
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-galleria__kysymys {
+    font-size: var(--tk-koko-leipa);
+    color: var(--tk-muste);
+}
+
+.mk-katkokehys {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: var(--tk-reunus);
+}
+
+.mk-galleria__kuva .mk-katkokehys {
+    display: none;
+}
+
+.mk-galleria__vedos--kuvaton .mk-galleria__kuva {
+    border-width: 0;
+}
+
+.mk-galleria__vedos--kuvaton .mk-galleria__kuva .mk-katkokehys {
+    display: flex;
+}
