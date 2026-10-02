@@ -98,3 +98,12 @@ test('omistajan v9-palaute: prologi ilman kehää, Zarathustra koko kohtaus vaim
 test('kaikukuvat ovat positiivisia (omistaja 2.10.2026 klo 11.13): sotilas v2 ilman kääntöä', () => {
   assert.equal(SOKRATES.kaiku.kuva, 'ajattelijat/sokrates/v1/kaiku-sotilas-v2.png');
 });
+
+test('PULU kierroksen lopussa: pohja, lämmin lasi, viisi kysymystä, kortti lapun ja ✕:n välissä', () => {
+  const js = lue('../js/linssit/ajattelija.js');
+  assert.match(js, /luoPohjaPulu\(\{ luokka: 'tk', teema: 'lasi', aihe: a\.nimi, kysymykset: a\.pulunKysymykset \}\)/);
+  assert.match(js, /pulu\.kulma\.style\.setProperty\('--tk-pulu-tila'/);
+  assert.match(js, /pulu\?\.tuhoa\(\);/);
+  assert.match(lue('../js/pohjat/pohjat.js'), /const POHJA_EI_OHINAPAUTUS = '[^']*\.tk-pulukulma/);
+  assert.match(lue('../css/pohjat/pulu.css'), /max-height: min\(62vh, 500px, var\(--tk-pulu-tila, 100vh\)\);/);
+});

@@ -13,6 +13,7 @@
 import { SOKRATES } from './ajattelija-sokrates.js';
 import { piirraAtlas, lisaaProjektorit, asetaProjektori, lisaaKipsinPinta } from './ajattelija-projektori.js';
 import { pohjatLataaTyyli, luoPohjaKuvanakyma, luoPohjaNostokortti } from '../pohjat/pohjat.js';
+import { luoPohjaPulu } from '../pohjat/pulu.js';
 
 const R2 = 'https://media.matkakirja.app/';
 export const AJATTELIJA_KIRJASTO = `${R2}vendor/three-gltf-r185.min.js`;
@@ -420,13 +421,35 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   let aaniSoi = false;
   /** Globaali ruutu G: 1–120 prologi, sen jälkeen kierros (r = G − 120). */
   // Kierroksen lopussa "Sokrateen elämä" -lappu NOSTOKORTTI-pohjalla (teema tumma) KUVANÄKYMÄN sisällä.
+  // Samalla PULU (osa CHAT, js/pohjat/pulu.js; Päätoimittaja 2.10.2026): minipulu ja viisi kysymystä, isännän teema
+  // lasi (lämmin linssi, Natiivi-UI). Kulma nousee lapun yläpuolelle, kun lappu on auki (molemmat ovat alareunassa).
   let lappu = null;
+  let pulu = null;
+  let lapunVahti = null;
   function avaaLappu() {
     if (lappu) return;
-    lappu = luoPohjaNostokortti({ yla: a.nimi, otsikko: a.elama.otsikko, kappaleet: a.elama.kappaleet }, { teema: 'tumma' });
-    if (!lappu) return;
-    pohja.el.appendChild(lappu.el);
-    lappu.avaa();
+    lappu = luoPohjaNostokortti({ yla: a.nimi, otsikko: a.elama.otsikko, kappaleet: a.elama.kappaleet }, {
+      teema: 'tumma',
+      sulje: () => { if (pulu) { pulu.kulma.style.bottom = ''; pulu.kulma.style.removeProperty('--tk-pulu-tila'); } },
+    });
+    if (lappu) {
+      pohja.el.appendChild(lappu.el);
+      lappu.avaa();
+    }
+    pulu = luoPohjaPulu({ luokka: 'tk', teema: 'lasi', aihe: a.nimi, kysymykset: a.pulunKysymykset });
+    pohja.el.appendChild(pulu.kulma);
+    if (lappu && typeof ResizeObserver === 'function') {
+      // Kortti mahtuu lapun ja ✕:n väliin: ✕ (44 pt + 12 + turva-alue) jää aina näkyviin.
+      lapunVahti = new ResizeObserver(() => {
+        if (!lappu?.auki) return;
+        const korkeus = lappu.el.getBoundingClientRect().height;
+        pulu.kulma.style.bottom = `${Math.round(korkeus + 12)}px`;
+        const ylaRaja = pohja.sulku.getBoundingClientRect().bottom + 12;
+        const tila = pohja.el.clientHeight - korkeus - 12 - pulu.nappi.getBoundingClientRect().height - 8 - ylaRaja;
+        pulu.kulma.style.setProperty('--tk-pulu-tila', `${Math.max(120, Math.round(tila))}px`);
+      });
+      lapunVahti.observe(lappu.el);
+    }
   }
   function asetaGlobaali(G) {
     if (G <= pr0.loppu) asetaPrologi(Math.max(1, G));
@@ -510,6 +533,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     kokoVahti.disconnect();
     pohja.sulje();
     for (const x of [aani, musiikkiAani]) { x.pause(); x.src = ''; }
+    lapunVahti?.disconnect();
+    pulu?.tuhoa();
     renderoija.dispose();
     atlas.dispose();
     detalji.dispose();
