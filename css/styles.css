@@ -69,7 +69,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde b85b7c5eb88a */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 7e566755ea1c */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -131,6 +131,13 @@ body.paivittyy .app { visibility: hidden; }
   --tk-lasi-avaruus-korostus: #5dffa8;
   --tk-lasi-avaruus-reunus: rgba(93, 255, 168, 0.28);
   --tk-lasi-avaruus-toiminto: #5dffa8;
+  --tk-harmaa-pinta: rgba(130, 130, 130, 0.42);
+  --tk-harmaa-pinta-peitto: #828282;
+  --tk-harmaa-muste: #e0e0e0;
+  --tk-harmaa-muste-pehmea: #bdbdbd;
+  --tk-harmaa-korostus: #ffffff;
+  --tk-harmaa-reunus: #aaaaaa;
+  --tk-harmaa-toiminto: rgba(170, 170, 170, 0.55);
   --tk-himmennys-tumma: rgba(14, 9, 4, 0.72);
   --tk-himmennys-kevyt: rgba(14, 9, 4, 0.35);
   --tk-himmennys-kuva: rgba(14, 9, 4, 0.92);
@@ -167,6 +174,8 @@ body.paivittyy .app { visibility: hidden; }
   --tk-nappi-korkeus: 38px;
   --tk-nappi-osuma: 44px;
   --tk-nappi-laukaisin: 64px;
+  --tk-nappi-ohjaus: 40px;
+  --tk-nappi-ohjaus-kuvake: 22px;
   --tk-leveys-kapea: 600px;
   --tk-leveys-levea: 940px;
   --tk-leveys-kortti: 420px;
@@ -217,6 +226,15 @@ body.paivittyy .app { visibility: hidden; }
   --tk-korostus: var(--tk-lasi-avaruus-korostus);
   --tk-reunus: var(--tk-lasi-avaruus-reunus);
   --tk-toiminto: var(--tk-lasi-avaruus-toiminto);
+}
+.tk-teema-harmaa {
+  --tk-pinta: var(--tk-harmaa-pinta);
+  --tk-pinta-peitto: var(--tk-harmaa-pinta-peitto);
+  --tk-muste: var(--tk-harmaa-muste);
+  --tk-muste-pehmea: var(--tk-harmaa-muste-pehmea);
+  --tk-korostus: var(--tk-harmaa-korostus);
+  --tk-reunus: var(--tk-harmaa-reunus);
+  --tk-toiminto: var(--tk-harmaa-toiminto);
 }
 /* TYYLIKIRJA LOPPU */
 
