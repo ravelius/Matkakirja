@@ -1,4 +1,4 @@
-# Linnanrakentajan luovutus 2.10.2026 klo 18.3x (päivitys 20.3x) (Opus high; tilin viikkoraja lähellä)
+# Linnanrakentajan luovutus 2.10.2026 klo 18.3x (päivitys 21.xx) (Opus high; tilin viikkoraja lähellä)
 
 ## Kärki nyt: linnan väki skinnatuiksi hahmoiksi (omistaja 18.0x, polku (a))
 - Omistaja: "haluan ne valmiit mallit joiden päälle vain vaihdetaan vaatteet ... tärkeintä mahdollisimman sulava liike".
@@ -24,6 +24,11 @@
   LAHTEET.md, era1.sh) → Päätoimittajan tarkistukseen; OK:n jälkeen peilipaketti: kopioi glb:t `olavinlinna-blender-v26/hahmot/`,
   lisää henkilöt `js/dioraama/hahmot-skin.json`:iin (skaala = henkilot.js pituus / json pituus_m), vie-blender + vie-dioraama
   (osoitin=false) haarasta linnanrakentaja-linna-skin; keittiön ja kierreportaiden reitit korjattava (todo-testit).
+- **Päivitys 21.xx:** Päätoimittaja hyväksyi erän 1 (kaavut/esiliinat puuttuvat = paketin raja); kampaukset aikakauteen
+  (huput: talonpoika, renki, vesipoika, apulainen; muut Hair_Buzzed; värit tasaiset). Kaikki 16 esiintymää peilissä
+  **5de728bc349cc54a** (blender 916731d7) haarassa linnanrakentaja-linna-skin; keittiön ja kierreportaiden reitit korjattu
+  (reittitesti ilman todo:ta). Siirtoseppä kuvaa iPhonella jalkavarjon kanssa → pelikuvat Päätoimittajalle → omistaja.
+  Omistajalle EI Blender-kokoelmia, vain pelikuvia. Erän ajo: `tools/dioraama/blender/hahmot_era1.sh`.
 - **Webin AnimationMixer on Linnanrakentajan** (Päätoimittaja 2.10.), mutta VASTA kun omistaja on hyväksynyt natiivin vartijavideon.
 - AUKI: kolmiobudjetti (32 k/hahmo → LOD 8–10 k
   tarvittaessa); muut hahmot (talonpoika/renki/vesipoika/kokki = Peasant, naiset Female_Peasant), katselu- ja kääntöleikkeitä ei
