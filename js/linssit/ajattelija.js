@@ -16,6 +16,8 @@ import { piirraAtlas, lisaaProjektorit, asetaProjektori, lisaaKipsinPinta } from
 import { pohjatLataaTyyli, luoPohjaKuvanakyma, luoPohjaNostokortti } from '../pohjat/pohjat.js';
 
 const R2 = 'https://media.matkakirja.app/';
+/** Prologin kytkimen napsahdus, yhteinen kaikille ajattelijoille (ämpärissä 2.10.2026). */
+export const AJATTELIJA_KYTKIN = 'ajattelijat/yhteiset/v1/kytkin-kaiku.mp3';
 export const AJATTELIJA_KIRJASTO = `${R2}vendor/three-gltf-r185.min.js`;
 /*
  * AJATTELIJAT OVAT DATAA (Päätoimittaja 2.10.2026): uusi ajattelija = uusi js/linssit/ajattelija-<nimi>.js samalla
@@ -71,6 +73,23 @@ export function b2t(THREE, [x, y, z]) { return new THREE.Vector3(x, z, -y); }
 
 /** Pystykenttä asteina Blenderin pystysensorista (24 mm) ja polttovälistä. */
 export function kenttaMm(mm) { return 2 * Math.atan(12 / mm) * 180 / Math.PI; }
+
+/**
+ * Taustavirran omat fontit (OFL, `tiedosto` ämpärissä) FontFacella ennen atlaksen piirtoa. Puuttuva tai hidas fontti ei
+ * estä kohtausta: 4 s:n katto, ja selain käyttää perheen varafonttia (serif).
+ */
+export async function lataaAjattelijaFontit(a, nimet) {
+  if (typeof FontFace !== 'function' || !globalThis.document?.fonts) return;
+  const tarvitaan = [...new Set(nimet)].map((n) => a.fontit?.[n]).filter((f) => f?.tiedosto);
+  const lataukset = tarvitaan.map(async (f) => {
+    const perhe = f.perhe.split(',')[0].replace(/"/g, '').trim();
+    if ([...document.fonts].some((ff) => ff.family.replace(/"/g, '') === perhe)) return;
+    const ff = new FontFace(perhe, `url(${R2}${f.tiedosto})`);
+    document.fonts.add(await ff.load());
+  });
+  const katto = new Promise((ok) => { setTimeout(ok, 4000); });
+  await Promise.race([Promise.allSettled(lataukset), katto]);
+}
 
 /** Toistettava satunnaisluku (mulberry32): sama siemen → sama taustavirta joka avauksella. */
 function ajattelijaSiemenluku(siemen) {
@@ -220,6 +239,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   // Rivien kirkkaus päälauseeseen nähden: Blenderin AgX puristaa kirkkaan päälauseen, webin AgX vähemmän (v10-kuva).
   const RIVIT = Number(haku.get('rivit')) || 0.75;
   const fontti = (nimi) => a.fontit[nimi] ?? a.fontit.iowan;
+  await lataaAjattelijaFontit(a, tv.rivit.map(([, f]) => f));
   // Päälause: kirjaimet 1,15 × gobon mittasuhde (mitattu v10-kuvasta: v10:n päälausegobo oli väljempi kuin v4:n).
   const { kangas, paikat } = piirraAtlas([
     { teksti: lause.fi, fontti: fontti('iowan').perhe, paino: fontti('iowan').paino, korkeus: 192, sumea: true, emOsuus: 1.15 },
@@ -457,6 +477,10 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   const musiikkiAani = new Audio(`${R2}${a.aani.musiikki}`);
   musiikkiAani.preload = 'auto';
   musiikkiAani.onerror = () => { musiikkiAani.dataset.puuttuu = '1'; };
+  // Prologin kytkimen napsahdus ruudussa pr0.kytkin (Linnanrakentaja 2.10.2026: kaksi Kenney CC0 -iskua ja hallin kaiku).
+  const kytkinAani = new Audio(`${R2}${AJATTELIJA_KYTKIN}`);
+  kytkinAani.preload = 'auto';
+  let kytkinSoi = false;
   let aaniSoi = false;
   /** Globaali ruutu G: 1–120 prologi, sen jälkeen kierros (r = G − 120). */
   // Kierroksen lopussa "Sokrateen elämä" -lappu NOSTOKORTTI-pohjalla (teema tumma) KUVANÄKYMÄN sisällä.
@@ -545,6 +569,10 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       }
       if (aaniEsto) aaniSoi = true;   // ei ääntä (ei eleen jälkeen avattu): kello jatkuu ajastimella
     }
+    if (!kytkinSoi && ruutuOhitus == null && G >= pr0.kytkin && G < pr0.loppu) {
+      kytkinSoi = true;
+      kytkinAani.play().catch(() => {});
+    }
     asetaGlobaali(G);
     renderoija.render(kohtaus, kamera);
     requestAnimationFrame(kierros);
@@ -579,7 +607,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     clearInterval(mittariAjastin);
     kokoVahti.disconnect();
     pohja.sulje();
-    for (const x of [aani, musiikkiAani]) { x.pause(); x.src = ''; }
+    for (const x of [aani, musiikkiAani, kytkinAani]) { x.pause(); x.src = ''; }
     lapunVahti?.disconnect();
     pulu?.tuhoa();
     renderoija.dispose();

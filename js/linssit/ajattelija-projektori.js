@@ -25,9 +25,15 @@ export function piirraAtlas(rivit, doc = document) {
   const paikat = [];
   let y = 0;
   for (const r of rivit) {
-    const em = Math.round(r.korkeus * NAUHA_EM * (r.emOsuus ?? 1));
+    let em = Math.round(r.korkeus * NAUHA_EM * (r.emOsuus ?? 1));
     mitta.font = `${r.paino ?? 'bold'} ${em}px ${r.fontti}`;
-    const tekstiLev = Math.ceil(mitta.measureText(r.teksti).width);
+    let tekstiLev = Math.ceil(mitta.measureText(r.teksti).width);
+    // Pitkä toistorivi (esim. Apologia 38a kokonaan) pienennetään mahtumaan yhteen laattaan väleineen.
+    if (r.toisto && tekstiLev + 3 * em > ATLAS_LEVEYS) {
+      em = Math.floor(em * ATLAS_LEVEYS / (tekstiLev + 3 * em));
+      mitta.font = `${r.paino ?? 'bold'} ${em}px ${r.fontti}`;
+      tekstiLev = Math.ceil(mitta.measureText(r.teksti).width);
+    }
     if (r.toisto) {
       // TOISTORIVI TÄYTTÄÄ ATLAKSEN LEVEYDEN kokonaisilla laatoilla (laatta = teksti + väli): näytteenotin
       // kääriä (RepeatWrapping) jatkuvalla u:lla, joten saumassa ei ole fract()-hyppyä eikä mip-viivaa.
