@@ -80,6 +80,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Puomin alin kohta EVA-kerroksen alareunasta (pt; siirrosta riippumaton, joten Pulu laskee paikkansa suoraan).</summary>
         public float VarrenAlinEvasta { get; internal set; } = float.NaN;
 
+        /// <summary>Kypärän (visiirin) keskipiste EVA-kerroksen alareunasta (pt), robottikädessä; Pulu sijoittaa sillä kypärän korkeuden.</summary>
+        public float KyparaEvasta { get; internal set; } = float.NaN;
+
         /// <summary>EVA-kerroksen alareuna paneelin pisteinä nykyisessä asettelussa.</summary>
         public float EvaAla => eva.worldBound.yMax;
         static bool kyparaHaussa;
@@ -499,6 +502,11 @@ namespace Matkakirja.Natiivi
                 }
                 kuva.VarrenAlin = Mathf.Max(Alin(NivelY), Alin(PaaY));
                 kuva.VarrenAlinEvasta = kuva.VarrenAlin - worldBound.yMax;
+                {
+                    float dx = 113.5f - 113, dy = 258.5f - 300;   // visiirin soikion keskipiste (Soikio), keinunta mukana
+                    var kp = m.Kuvaa(new Vector2(113 + dx * ca - dy * sa, 300 + dx * sa + dy * ca + Nosto));
+                    kuva.KyparaEvasta = this.LocalToWorld(kp).y - worldBound.yMax;
+                }
                 kuva.VarrenAlinVersio++;
                 Kuva(evaKuvat[1], 304, 1f, true, varjo);                 // perus varjokuvana
                 // Kasvovalo ensin ja kasvot sen päälle (Päätoimittajan kuvatarkistus 2.10.: valo peitti silmät ja nokan, visiirissä

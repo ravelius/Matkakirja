@@ -232,7 +232,7 @@ namespace Matkakirja.Natiivi
         {
             float h = alue.panel != null ? alue.panel.visualTree.layout.height : float.NaN;
             return $"robotti {kuva.RobottiNakyy}, AlaVara {AlaVara:0.0}, raja y {h - AlaVara:0.0}, puomin alin y {kuva.VarrenAlin:0.0} "
-                + $"(piirto {kuva.VarrenAlinVersio}), korjaus {robottiKorjaus:0.0}, bottom {alue.resolvedStyle.bottom:0.0}, wb {alue.worldBound}";
+                + $"(piirto {kuva.VarrenAlinVersio}), kypärä y {kuva.EvaAla + kuva.KyparaEvasta:0.0} ({(kuva.EvaAla + kuva.KyparaEvasta) / h * 100f:0} %), korjaus {robottiKorjaus:0.0}, bottom {alue.resolvedStyle.bottom:0.0}, wb {alue.worldBound}";
         }
 
         bool robottiAseteltu;
@@ -257,6 +257,14 @@ namespace Matkakirja.Natiivi
             kuva.VarrenEste = VarrenEste;
             float alaRaja = VarrenEste.HasValue ? reunat.w + 8f : Mathf.Max(reunat.w + 8f, AlaVara);
             float perus = alaRaja + (RobottiAlin - 304f) * RobottiSkaala;
+            // Nousevalla puomilla (vaaka) kypärän keskipiste KyparaKorkeus-kohtaan ruudun korkeudesta (Päätoimittaja 3.10.: omistajan
+            // "Pulu vasempaan alareunaan", kypärä 72–78 %), kuitenkin niin, että puomin kyynärpää jää 8 pt ruudun alareunan yläpuolelle.
+            if (VarrenEste.HasValue && !float.IsNaN(kuva.KyparaEvasta) && !float.IsNaN(kuva.VarrenAlinEvasta) && alue.panel != null
+                && !float.IsNaN(alue.worldBound.yMax))
+            {
+                float h = alue.panel.visualTree.layout.height, e = kuva.EvaAla - alue.worldBound.yMax;
+                perus = Mathf.Max(h * (1f - KyparaKorkeus) + kuva.KyparaEvasta + e, 8f + kuva.VarrenAlinEvasta + e);
+            }
             // ISS-kyydissä puomin piirretty alin kohta (LiviaKuva) AlaVaran rajalle eli 6 pt pöydän yläreunan yläpuolelle. Etäisyys
             // alueen alareunasta puomin alimpaan kohtaan ei riipu Pulun paikasta, joten tarvittava alareuna lasketaan suoraan
             // (palautesilmukka heilui yhden piirron viiveellä 4 ↔ 41 pt, kuva 78c03213). Nousevalla puomilla väli hoidetaan nousulla.
@@ -289,6 +297,9 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Vaakatilan este robottikäden puomille (pienen paneelin vasen yläkulma, paneelin pisteinä); null = Pulu AlaVaran yllä.</summary>
         public Vector2? VarrenEste { get; set; }
+
+        /// <summary>Kypärän keskipisteen korkeus ruudun yläreunasta (osuus) nousevan puomin tilassa.</summary>
+        const float KyparaKorkeus = 0.74f;
 
         bool haivytetty;
 
