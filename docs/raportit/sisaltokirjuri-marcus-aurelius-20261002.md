@@ -80,3 +80,38 @@ Pulun kysymykset (194 merkkiä) ovat Pulun chat-tekstiä eivätkä kuulu tähän
 - **4.49 tarkistettu:** kreikka täsmää Päätoimittajan antamaan sanatarkasti (Wikisource: "Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται˙ ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος"; Perseus-viite hakutuloksessa). Suomennos ei poikkea olennaisesti. Pieni tiivistys: *τὰ φλεγμήναντα τοῦ ὕδατος* on "veden kuohuva/turvonnut osa", suomennoksessa "vesi"; täsmällisempi: "ja kuohuva vesi tyyntyy sen ympärillä" (valinnainen). Numerointiero: Perseus/Leopold 4.49, Wikisource/Farquharson 4.48.
 - **Dio tarkistettu:** Cassius Dio 73(72).17–22: Commodus esiintyi gladiaattorina (17.2, 19.2), Dio itse läsnä (18.3, 19.4). Päätoimittajan lause "joka myöhemmin taisteli gladiaattorina areenalla" on lähteen mukainen. Lähde kirjattu kierrokselle 3.
 - Mietelause 2 on nyt 15 sanaa (aiemmin 12); mietelauseet ovat edelleen yli Sokrateen 8 sanan rajan.
+
+## 8. Musiikki: Beethoven 7 (Allegretto) ja Goldberg-aaria (Päätoimittajan toive 2.10.)
+
+Haku: Commonsin rajapinta, Internet Archiven hakurajapinta ja verkkohaku; tiedostoja EI ladattu (ei lupaa tähän erään; aikakoodit mittaamatta). Kriteerit: CC0 / PD / CC BY, ei NC / ND / SA.
+
+### 8.1 Beethoven, sinfonia nro 7, 2. osa (Allegretto), orkesterilla
+
+**Musopenin Czech National Symphony Orchestra -levytystä (2012) en löytänyt varmennettuna:**
+- Musopenin sivu (<https://musopen.org/music/2569-symphony-no-7-in-a-major-op-92/>) palautti minulle 403, joten en voinut lukea levytyslistaa enkä lisenssiä.
+- Commonsista ei löydy Beethoven 7 -orkesterilevytystä Musopenilta (haut: "Beethoven Symphony No. 7 Czech National Symphony Orchestra", "Beethoven Symphony 7 Musopen" ym.).
+- Internet Archiven hakurajapinta (creator "musopen" + title "beethoven") antoi 0 tulosta; "collection:musopen-kickstarter" 0 tulosta.
+- Wikipedia (Musopen): Kickstarter-levytykset 2012 (Czech Philharmonic / "Musopen Symphony Orchestra") listaa Beethovenin **3.** sinfonian, Brahmsin neljä sinfoniaa, Schubertin pianosonaatit jne.; **Beethovenin 7. sinfoniaa ei mainita**, eikä lisenssin sanamuotoa (CC0 vai PD) kerrota. Hakutuloksessa Musopenin sivu mainitaan, mutta Czech National Symphony -levytystä ei näy.
+- **Johtopäätös: Musopen-versiota ei voi vahvistaa** (olemassaolo ja lisenssi tarkistettava Musopenin sivulta selaimella; sivu estää automaattihaun).
+
+**Muut löydetyt vaihtoehdot:**
+| Levytys | Lisenssi | Soitin | Arvio |
+|---|---|---|---|
+| **File:JOHN MICHEL CELLO-BEETHOVEN SYMPHONY 7 Allegretto.ogg**, <https://commons.wikimedia.org/wiki/File:JOHN_MICHEL_CELLO-BEETHOVEN_SYMPHONY_7_Allegretto.ogg> | **CC BY-SA 3.0** (660 s) | sello-sovitus (John Michel) | **SA → ei kelpaa kriteereihin**; Päätoimittaja mainitsi varalle, mutta SA pakottaisi julkaisemaan äänen jatkojalosteet samalla lisenssillä; lisäksi vain sello, ei orkesteria |
+| **Stokowski / Philadelphia Orchestra, 1927** (Victor 6670-74), Internet Archive: <https://archive.org/details/BeethovenSymphonyNo.7_807> | **Public Domain Mark 1.0** (<http://creativecommons.org/publicdomain/mark/1.0/>); siirto Bob Varney, ladattu 10.12.2010; OGG Vorbis + VBR MP3, osat erikseen | Täysi orkesteri (historiallinen) | Oikea orkesteri, peruste vahva: levytetty 6., 15. ja 25.4.1927 → yli 95 vuotta vanha (EU/US PD); **äänenlaatu historiallinen (1927, mono, kohinaa)**; aikakoodit mittaamatta. Arkistosivun kuvaus: "Beethoven: Symphony #7 in A major, Op. 92" (neljä osaa: vivace, allegretto, presto meno assai, allegro con brio) |
+| Ed Chang, "Beethoven - Symphony 7, Op.92 (Electric Rock Band Arrangement)" (archive.org) | **CC BY 3.0** (<http://creativecommons.org/licenses/by/3.0/>) | rock-yhtye | ei orkesteri, ei sovi |
+
+**Suositus:** jos oikea orkesteri on välttämätön ja Musopen ei varmennu, **Stokowski 1927** on ainoa löytämäni vapaa orkesteriversio, mutta äänenlaatu on historiallinen. Muutoin vaihtoehto: kysy omistajalta, riittääkö vanha levytys, tai tilaa/etsi uusi vapaa levytys (esim. Musopenin sivulta selaimella, Internet Archiven Musopen-kokoelmat tai classicals.de, jonka lisenssit vaihtelevat levytyksittäin: CC PDM / CC BY / CC BY-NC).
+**Aikakoodit:** en voinut mitata ilman latausta. Pyydän lupaa ladata Stokowskin Allegretto (OGG, osa 2) mittaamista varten, kunhan Päätoimittaja vahvistaa kandidaatin; musiikillisesti avaussointu on yksi puhallinsointu (a-molli, kuudennen asteen sointu), jonka jälkeen alkaa alempien jousien rytmi-ostinato (pitkä–lyhyt–lyhyt–pitkä–pitkä) ja teema alkaa selloilla ja alttoviuluilla noin sykäys myöhemmin (tarkka aikakoodi mittaamatta).
+
+### 8.2 Goldberg-muunnelmien aaria — Kimiko Ishizaka, Open Goldberg Variations
+
+Lisenssi sanatarkasti: **"CC0"** — Commons: UsageTerms **"Creative Commons Zero, Public Domain Dedication"**, lisenssi-URL <http://creativecommons.org/publicdomain/zero/1.0/deed.en> (CC0 1.0 Universal); attribuutio ei vaadittu.
+- **Suositus:** **File:Kimiko Ishizaka - 01 - Aria.ogg**, <https://commons.wikimedia.org/wiki/File:Kimiko_Ishizaka_-_01_-_Aria.ogg> — **kesto 299,5 s (4:59,5)**, OGG Vorbis, 5,7 Mt (≈ 152 kbit/s), ladattu Commonsiin 29.5.2012, "Aria by Kimiko Ishizaka".
+- Sama taiteilija, korkeampi laatu: **File:Goldberg Variations BWV 988 01 Aria.flac**, <https://commons.wikimedia.org/wiki/File:Goldberg_Variations_BWV_988_01_Aria.flac> — FLAC, 82 Mt (≈ 2 183 kbit/s, häviötön), CC0 (UsageTerms "Creative Commons Zero, Public Domain Dedication"), krediitti "Open Goldberg Variations", 28.5.2012. Ja **MP3 320 kbit/s**: <https://commons.wikimedia.org/wiki/File:Kimiko_Ishizaka_-_J.S._Bach-_-Open-_Goldberg_Variations,_BWV_988_(Piano)_-_01_Aria.mp3>, 12,1 Mt, CC0.
+- **Lisäksi** (sama aaria, kappaleen toisto lopussa): File:Kimiko Ishizaka - 32 - Aria da Capo Fine.ogg, 170 s, CC0.
+- **Laatuarvio:** tunnettu, laadukas studiotallenne (Open Goldberg Variations -hankkeen virallinen levytys); kuuntelematta tässä kuitenkin. Bachin (k. 1750) sävellys on vapaa kaikkialla.
+- Huom.: Commonsin tiedosto "Goldberg Variations 01 Aria.ogg" on sama levytys, mutta lisenssi on merkitty vain "Public domain" (kesto 299,5 s); suosittelen CC0-merkittyä "Kimiko Ishizaka - 01 - Aria.ogg".
+
+### 8.3 Päätettävää Päätoimittajalle
+(a) Goldberg Aria: Ishizakan CC0 OGG — hyväksytäänkö? (b) Beethoven: hyväksytäänkö Stokowski 1927 (PDM, historiallinen laatu), vai etsitäänkö uusi vapaa orkesterilevytys (Musopen selaimella tarkistettavaksi)? (c) Lupa ladata Stokowskin Allegretto (osa 2) mittaamista varten.
