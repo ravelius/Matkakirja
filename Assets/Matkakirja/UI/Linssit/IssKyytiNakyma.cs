@@ -366,7 +366,7 @@ namespace Matkakirja.Natiivi
             PaivitaPaneeli();
             OmaSijaintiHaku.Valmis += () => { if (omaNappi != null) omaNappi.Q<Label>(className: "mk-nappi__teksti").text = OmaSijaintiHaku.Rivi(); };
 
-            var sulku = Rakenne.Nappi("×", "mk-astrokuva__sulku", Poistu, turva);
+            var sulku = Rakenne.Nappi("×", "mk-kuvanakyma__sulku tk-teema-lasi-avaruus", /* KUVANÄKYMÄ-pohja: ✕ LASI-avaruus */ Poistu, turva);
             sulku.tooltip = "Pois kyydistä";
             sulkuVanha = sulku;
             poyta = new IssKytkinpoyta(turva,
