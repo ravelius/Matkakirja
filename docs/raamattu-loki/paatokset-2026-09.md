@@ -10207,3 +10207,7 @@ Omistaja 2.10.2026 klo 22.3x Macin iPad-sovelluksen kuvakaappauksella (Sarajevo)
 ## OMISTAJA: IPHONEN VAAKATILAN YLÄPALKKI VÄÄRIN (2.10.2026) (2.10.2026 klo 22.16)
 
 Omistaja 2.10.2026 klo 22.3x TF 129:n kuvakaappauksella (iPhone vaaka, Bulgaria) sanatarkasti: 'Iphone vaaka tilassa palkki väärin'. Havainto: saaren leikkaus piirtyy yläreunan keskelle, vaikka vaakatilassa saari on vasemmalla, ja tikkaussauma kulkee logon alarivin ja pillerin läpi. Aiemmat linjaukset: 24.9. palkki piiloutuu vaakamuodossa oletuksena, ja 29.9. puhelimen pillerivalikossa ei ole ☰:ta. Korjaus on uuden tilin ensimmäinen Natiivi-UI-erä ennen junaa 130 (siirtoprompti kohta 2.0), ja kuva pystystä ja vaakatilasta tarkistetaan ennen omistajaa.
+
+## OMISTAJA: UUDEN TILIN VIIKKORAJA 99 % (tili vaihtui 2.10.2026 klo 22.3x) (2.10.2026 klo 22.30)
+
+Omistaja 2.10. klo 22.4x Päätoimittajan kortilla (vaihtoehdot 90, 95 ja 97 %) vastasi: '99'. Uuden tilin viikko (Weekly · all models) nollautuu pe 9.10. klo 08.00, ja käyttö oli tilinvaihdossa 0 %. Postivahti hälyttää 96 %:ssa (valmistelu: roolit päivittävät luovutuksensa, työ jatkuu) ja 99 %:ssa (siirto: roolit pushaavat luovutuksen ja aloitusviestin ja lopettavat, irrotetut taustaajot saavat jatkua; Päätoimittaja kirjoittaa siirtopromptin ja antaa sen omistajalle koodilohkona). Kaava: muisti viikkoraja-97-siirtoprompti. Samalla omistaja vaihtoi roolisessiot ohitustilaan (Bypass permissions).
