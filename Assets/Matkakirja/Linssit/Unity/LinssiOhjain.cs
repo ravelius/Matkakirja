@@ -2237,9 +2237,33 @@ namespace Matkakirja.Natiivi
         internal void Kirjaa(string teksti)
         {
             using var _ = KirjaaMerkki.Auto();
-            Debug.Log("MATKAKIRJA linssit: " + teksti);
-            try { File.AppendAllText(lokiPolku, $"{Aika:F2} {teksti}\n"); } catch (IOException) { }
+            // Linnan avautuessa (iPad 2.10.) Kirjaa vei piikkiruuduissa 12–15 ms: Development-käännöksen pinonjäljet ja
+            // synkroninen tiedostokirjoitus. Rivi ilman pinonjälkeä, tiedostoon taustasäikeessä järjestyksessä.
+            Debug.LogFormat(LogType.Log, LogOption.NoStacktrace, null, "{0}", "MATKAKIRJA linssit: " + teksti);
+            string polku = lokiPolku;
+            lock (lokiJono)
+            {
+                lokiJono.Append(Aika.ToString("F2")).Append(' ').Append(teksti).Append('\n');
+                if (lokiKirjoittaa) return;
+                lokiKirjoittaa = true;
+            }
+            System.Threading.Tasks.Task.Run(() =>
+            {
+                while (true)
+                {
+                    string pala;
+                    lock (lokiJono)
+                    {
+                        if (lokiJono.Length == 0) { lokiKirjoittaa = false; return; }
+                        pala = lokiJono.ToString(); lokiJono.Clear();
+                    }
+                    try { File.AppendAllText(polku, pala); } catch (IOException) { }
+                }
+            });
         }
+
+        static readonly System.Text.StringBuilder lokiJono = new System.Text.StringBuilder();
+        static bool lokiKirjoittaa;
 
         // ── Kerrokset ─────────────────────────────────────────────────────
 
