@@ -22,6 +22,7 @@
 // piirtyy linssin paneelin päälle; paikka lasketaan napista avatessa.
 // Napautus valikon ja napin ohi sulkee (web ulkopuolella-kuuntelija).
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -65,7 +66,36 @@ namespace Matkakirja.Natiivi
             Rakenne.El("mk-linssivalikko__viiva", valikko, PickingMode.Ignore);
             kertoja = Kytkinrivi(Kytkin.Kertoja, "Kertoja");
             musiikki = Kytkinrivi(Kytkin.Musiikki, "Taustamusiikki");
-            // Löydös 147 (omistaja, build 17): Ihmisen matka II:n CC-nappi pois yläriviltä, tilalle kytkin "Tekstitys".
+            tekstitys = Tekstitysrivi();
+            kerros.JokaRuutu += TarkistaOhiNapautus;
+        }
+
+        /// <summary>
+        /// OHJAUSNAPPI-valikko (omistaja 2.10.2026 klo 14.44: linssin kaikki kuvakenapit yhteen hampurilaiseen oikeaan yläkulmaan):
+        /// linssin omat valinnat, viiva, Kertoja ja Taustamusiikki, viiva ja viimeisenä <paramref name="sulkuNimi"/>. Nappi on
+        /// OHJAUSNAPPI-neliö (harmaa); kutsuja sijoittaa sen ohjausryhmään.
+        /// </summary>
+        public LinssiValikko(UiKerros kerros, IEnumerable<(string Nimi, Action Teko)> valinnat, string sulkuNimi, Action sulje)
+        {
+            poistu = sulje;
+            Nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", Vaihda, null, "harmaa");
+            valikko = Rakenne.El("mk-linssivalikko mk-linssivalikko--pohja", kerros.Juuri(LinssiUi.Kerros));
+            valikko.style.display = DisplayStyle.None;
+            Kirjasimet.Aseta(valikko, Kirjasin.Luku);
+            bool omia = false;
+            foreach (var (nimi, teko) in valinnat) { Komento(nimi, teko); omia = true; }
+            if (omia) Rakenne.El("mk-linssivalikko__viiva", valikko, PickingMode.Ignore);
+            kertoja = Kytkinrivi(Kytkin.Kertoja, "Kertoja");
+            musiikki = Kytkinrivi(Kytkin.Musiikki, "Taustamusiikki");
+            tekstitys = Tekstitysrivi();
+            Rakenne.El("mk-linssivalikko__viiva", valikko, PickingMode.Ignore);
+            Komento(sulkuNimi, () => poistu?.Invoke());
+            kerros.JokaRuutu += TarkistaOhiNapautus;
+        }
+
+        /// <summary>Löydös 147 (omistaja, build 17): Ihmisen matka II:n CC-nappi pois yläriviltä, tilalle kytkin "Tekstitys".</summary>
+        (Button Rivi, Label Tila) Tekstitysrivi()
+        {
             var tb = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__kytkin", () =>
             {
                 if (tekstitysTila == null) return;
@@ -74,11 +104,10 @@ namespace Matkakirja.Natiivi
                 Sulje();
             }, valikko);
             Rakenne.Teksti("Tekstitys", "mk-linssivalikko__nimi", tb);
-            tekstitys = (tb, Rakenne.Teksti("", "mk-linssivalikko__tila", tb));
-            Kirjasimet.Aseta(tekstitys.Tila, Kirjasin.KoneBold);
+            var tila = Rakenne.Teksti("", "mk-linssivalikko__tila", tb);
+            Kirjasimet.Aseta(tila, Kirjasin.KoneBold);
             tb.style.display = DisplayStyle.None;
-
-            kerros.JokaRuutu += TarkistaOhiNapautus;
+            return (tb, tila);
         }
 
         /// <summary>Komento: yksi teko ja valikko kiinni.</summary>
