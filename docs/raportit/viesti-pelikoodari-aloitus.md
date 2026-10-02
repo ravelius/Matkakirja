@@ -4,11 +4,10 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20261001.md`](viesti-pelikoodari-luovutus-20261001.md) (1.10. n. 05.30, kiintiö 95 %): KÄRKI
-   Pulun TF-todennukset (Ihmisen matkan kysymys ilman valmista vastausta → chat; kartan chat paperilla linssin jälkeen) ja
-   äänimikseri TF 89:ssä (laitetodennus, kun keittiön kaikustemmit ovat ämpärissä; omistajan Tallenna-JSON → poltto).
-   Web-PR:t #3742, #3740, #3731, #3723, #3730 auki. Päätoimittaja = "Päätoimittaja (Opus, xhigh)". Edellinen:
-   `viesti-pelikoodari-luovutus-20260929.md`.
+   [`viesti-pelikoodari-luovutus-20261002.md`](viesti-pelikoodari-luovutus-20261002.md) (2.10. klo 22.1x, kiintiö 92 %):
+   KÄRKI omistajan palaute 21.3x webiin: Astronautin kamera (haara `pelikoodari-astro-hiljaa` valmis, PR + kuvaparit
+   puuttuvat) ja Topografia-linssin hampurilainen (aloittamatta). Junassa #3865, #3870, #3875, #3877. Edellinen:
+   `viesti-pelikoodari-luovutus-20261001.md`.
    - Roolit NIMELLÄ; Julkaisijalle vastaus viestin `from`-osoitteeseen. Kun viestiraja täyttyy, `docs/raportit/posti-pelikoodari-<pvm>.md` + push.
    - Worktreet enintään 3 (levy): poista `tools/uusi-worktree.sh --poista` heti kun haara on pushattu eikä sitä tarvita.
 3. Merge-pyynnöt ja tilaukset: `/Users/Shared/Claude/proto-3d/lokit/merge-pyynto-pelikoodari-maisemakompressori.md`
