@@ -19,10 +19,10 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
         {
             Name "Forward"
             Tags { "LightMode" = "UniversalForward" }
-            // Värille tavallinen sekoitus, alfakanava ennallaan (Zero One): dioraaman kuva yhdistetään alfansa kautta, ja
-            // SrcAlpha/OneMinusSrcAlpha laski alfaa varjon kohdalla, jolloin tausta kumosi tummennuksen (savuke 21.10: peitto 1
-            // näkyi, < 1 ei lainkaan).
-            Blend SrcAlpha OneMinusSrcAlpha, Zero One
+            // Kertova sekoitus (klassinen kontaktivarjo): lattia × lerp(1, väri, peitto), lähtöalfa aina 1 ja kuvan alfa
+            // ennallaan. Savukkeet 21.03–21.20: alfasekoituksella levy ei piirtynyt lainkaan, kun lähtöalfa < 1 (peitto 1
+            // näkyi, 0,6–0,7 ei muuttanut pikseleitä).
+            Blend DstColor Zero, Zero One
             ZWrite Off
             ZTest [_ZTest]
             Cull Off
@@ -61,7 +61,7 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
                 float r = length(i.uv);
                 // Tasainen ydin jalkojen alla (r < 0,35) ja pehmeä smoothstep-lasku reunalle (kartan maakontaktin renkaat).
                 float a = _VarjoVari.a * (1.0 - smoothstep(0.35, 1.0, r));
-                return half4((half3)_VarjoVari.rgb, (half)a);
+                return half4((half3)lerp(float3(1.0, 1.0, 1.0), _VarjoVari.rgb, a), 1.0h);
             }
             ENDHLSL
         }
