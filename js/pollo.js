@@ -1468,7 +1468,7 @@ export function puluRealtimeKoeNakyvissa({
 
 /** Koenapin teksti kussakin tilassa. */
 export const REALTIME_NAPPI_TEKSTIT = Object.freeze({
-  valmis: 'Puhu Pululle (koe)',
+  valmis: 'Live',   // omistaja 2.10.2026 klo 16.0x (ennen "Puhu Pululle (koe)")
   yhdistaa: 'Yhdistän Puluun…',
   kuuntelee: 'Kuuntelen — lopeta',
   puhuu: 'Pulu puhuu — lopeta',
@@ -3111,7 +3111,7 @@ export class Pollo {
    * @returns {boolean} näkyikö kupla.
    */
   naytaAvauskupla(teksti, {
-    lennahda = false, kuittaus = null, muotokuva = false, ohita = false,
+    lennahda = false, kuittaus = null, muotokuva = false, ohita = false, vainKuva = false,
   } = {}) {
     if (!teksti) return false;
     /*
@@ -3146,7 +3146,14 @@ export class Pollo {
       kuva.decoding = 'async';
       kuva.addEventListener('error', () => { kuva.hidden = true; }, { once: true });
       kuvapaikka.appendChild(kuva);
-      kupla.append(kuvapaikka, puhe);
+      // vainKuva: repliikki kuuluu äänenä, joten kuplaan jää vain muotokuva kuvakehyksenä (Päätoimittaja 2.10.2026:
+      // "puhe äänenä, ei kuplina" — kuva on sisältöä, jota ääni ei kerro, puhuttu teksti ei).
+      if (vainKuva) {
+        kupla.classList.add('pollo-vihje-vain-kuva');
+        kupla.append(kuvapaikka);
+      } else {
+        kupla.append(kuvapaikka, puhe);
+      }
     } else {
       kupla.appendChild(puhe);
     }

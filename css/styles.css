@@ -1,6 +1,27 @@
 /* Matkakirja ja unohdettu aarre — sovelluskehys (tumma pähkinäpuu) ja aarrekartta (pergamentti). */
 
 /*
+ * £-MERKKI SELKEÄLLÄ SERIFILLÄ (omistaja ja Päätoimittaja 2.10.2026: American Typewriterin £ näytti koukulta ja
+ * "−£20" luettiin "−&20"; tyylikirja fontit.punta, Natiivi-UI #3860). Vain U+00A3 tästä kasvosta, jokaisen
+ * fonttipinon alussa (tyylikirja.json fontit.web). Iowan on Applen järjestelmäfontti eikä upotettavissa, joten
+ * ketju jatkuu muiden alustojen serifeihin (Windows Georgia/Palatino/Cambria, Android Noto Serif, Linux DejaVu).
+ */
+@font-face {
+  font-family: "Matkakirja Punta";
+  /* local() vaatii kasvon koko nimen tai PostScript-nimen (mitattu Chromiumilla 2.10.2026: pelkkä "Iowan Old Style"
+     tai "Charter" ei löydy, "Iowan Old Style Roman" ja "Charter Roman" löytyvät). */
+  src: local("Iowan Old Style Roman"), local("IowanOldStyle-Roman"), local("Iowan Old Style"),
+    local("Charter Roman"), local("Charter-Roman"), local("Georgia"), local("Palatino Linotype"),
+    local("Palatino-Roman"), local("Cambria"), local("Noto Serif"), local("NotoSerif-Regular"),
+    local("DejaVu Serif"), local("Times New Roman"),
+    /* Viimeinen vara (Android ilman Noto Serifiä, Linux): 2,7 kt:n osajoukko Gentium Plussasta, vain U+00A3,
+       sisäiset nimet "Matkakirja Punta" (OFL:n varattu nimi). Upotettu data-URI:na (toimii myös yhden tiedoston
+       versiossa); lähdetiedosto ja lisenssi assets/fontit/matkakirja-punta.woff2 + OFL-matkakirja-punta.txt. */
+    url("data:font/woff2;base64,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") format("woff2");
+  unicode-range: U+00A3;
+}
+
+/*
  * hidden-attribuutin pitää voittaa aina. Selaimen oletus on display: none,
  * mutta mikä tahansa myöhempi display-sääntö (flex, grid, block) kumoaa sen,
  * jolloin piilotettu elementti jää näkyviin. Tämä sääntö tekee attribuutista
@@ -69,7 +90,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde cca43639f785 */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 96e2af66a2f5 */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -98,12 +119,12 @@ body.paivittyy .app { visibility: hidden; }
   --liike-sisaan: cubic-bezier(0.22, 0.9, 0.24, 1);
   --liike-pehmea: cubic-bezier(0.45, 0, 0.2, 1);
   --liike-ulos: cubic-bezier(0.4, 0, 1, 1);
-  --font-type: "American Typewriter", "Courier Prime", "Courier New", Courier, monospace;
-  --font-luku: "Iowan Old Style", Charter, "Palatino Linotype", Palatino,
+  --font-type: "Matkakirja Punta", "American Typewriter", "Courier Prime", "Courier New", Courier, monospace;
+  --font-luku: "Matkakirja Punta", "Iowan Old Style", Charter, "Palatino Linotype", Palatino,
     Georgia, "Times New Roman", serif;
-  --font-kauno: "Snell Roundhand", "Savoye LET", "Bradley Hand",
+  --font-kauno: "Matkakirja Punta", "Snell Roundhand", "Savoye LET", "Bradley Hand",
     "Segoe Script", "Comic Sans MS", cursive;
-  --font-atlas: "Liberation Serif", "Times New Roman", Times, serif;
+  --font-atlas: "Matkakirja Punta", "Liberation Serif", "Times New Roman", Times, serif;
   --tk-paperi-pinta: #f5f0e2;
   --tk-paperi-pergamentti: #ecd8ae;
   --tk-paperi-muste: #211d18;
@@ -530,20 +551,26 @@ button, .brand, .turn-pill, .fact-card h2 {
  * napautettavalta.
  */
 .turn-pill {
+  --pilleri-vali: 0.45rem;   /* päivän ja rahan väli ("1 pv £400") */
   flex: 0 1 auto;
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: var(--pilleri-vali);
   font-size: 0.9rem;
   padding: 0.25rem 0.7rem;
+  /*
+   * AIEMPI ULKOASU (tumma täyttö, ohut reuna) PYÖRISTETTYNÄ SUORAKULMIONA (omistaja 2.10.2026 klo 17.3x: "palauta
+   * pillerin aiempi ulkoasu, muuta vain tekstisisältö"; EI OVAALEJA 15.05). Teksti "1 pv · £400" ilman kuvaketta,
+   * joten pilleri on tekstin levyinen.
+   */
   border-radius: var(--tk-kulma-nappi);
   background: var(--panel);
   border: 1px solid var(--line);
+  color: inherit;
   min-width: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: inherit;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
@@ -553,7 +580,7 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 .turn-pill .laukku-ikoni {
   display: inline-flex;
-  color: var(--muted);
+  color: inherit;   /* täysin peittävä samalla musteella kuin teksti (Natiivi-UI) */
 }
 .turn-pill .laukku-ikoni svg {
   width: 15px;
@@ -642,13 +669,16 @@ button, .brand, .turn-pill, .fact-card h2 {
   font-variant-numeric: tabular-nums;
 }
 
-/* "1 pv · 400 £" (omistaja 2.10.2026 klo 15.1x): päivä ensin, piste kassan edessä. */
-.turn-pill .clock + .kassa::before {
-  content: '·';
-  margin-right: 0.45rem;
-  color: var(--muted);
-  font-weight: 400;
+/*
+ * PWA (koti-valikosta avattu, yläpalkki tilapalkin alla): pillerin oikea yläkulma vähintään yhtä kauas näytön
+ * kaaresta kuin logo vasemmasta kaaresta (omistaja 2.10.2026 klo 17.0x). Pilleri on logoa korkeampi, joten sen kulma
+ * on lähempänä kaarta: lisäväli oikealle.
+ */
+@media (display-mode: standalone) {
+  .turn-pill { margin-right: var(--tk-vali-s); }
 }
+
+/* "1 pv £400" (omistaja 2.10.2026 klo 18.1x): päivä ja raha ilman väli-pistettä; väli on pillerin flex-väli. */
 
 /* Ajan eteneminen välähtää kevyesti kullalla, jotta pelaaja huomaa
  * vilkaista päivämäärää. Yksi rauhallinen hengähdys, ei vilkutusta. */
@@ -10925,7 +10955,7 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    * 5,7vw on entisen tekstilogon mitta: 390 pikselin ruudulla se on
    * 22 px, eli tarkalleen se korkeus, joka logolla oli ennen.
    */
-  .turn-pill { font-size: 0.78rem; padding: 0.2rem 0.5rem; gap: 0.3rem; }
+  .turn-pill { --pilleri-vali: 0.3rem; font-size: 0.78rem; padding: 0.2rem 0.5rem; }
   .topbar-actions { gap: 0.15rem; }
   /*
    * Kosketuskohteet isommiksi puhelimessa.
@@ -22449,6 +22479,12 @@ body.lento-kesken .pollo-nappi.pollo-ilmestyy {
 
 .pollo-vihje-puhe { min-width: 0; }
 
+/* Äänen kanssa kuplaan jää vain muotokuva kuvakehyksenä; repliikki kuuluu (Päätoimittaja 2.10.2026). */
+.pollo-vihje-muotokuva.pollo-vihje-vain-kuva {
+  grid-template-columns: clamp(4.5rem, 24vw, 5.6rem);
+  width: auto;
+}
+
 @media (max-width: 340px) {
   .pollo-vihje-muotokuva {
     grid-template-columns: 4.35rem minmax(0, 1fr);
@@ -23781,10 +23817,19 @@ body[data-mode] .actions .pollo-paneeli button.pollo-mikki.kuuntelee {
 
 .pollo-sanelu-tila:empty { display: none; }
 
-/* Pulun äänikeskustelun koenappi (vain kehittäjätilassa, js/pulu-realtime.js): alarivin .pollo-nappula
-   näppäimistön ja mikrofonin rinnalla (omistaja 2.10.2026 klo 13.53; ei ovaalia). */
-button.pollo-realtime-koe { flex: 2 1 0; font: inherit; font-size: 0.8rem; line-height: 1.2; }
-button.pollo-realtime-koe.paalla { border-color: var(--pollo-korostus); background: var(--pollo-paperi-2); }
+/* Pulun äänikeskustelun koenappi (vain kehittäjätilassa, js/pulu-realtime.js). */
+.pollo-realtime-koe {
+  align-self: center;
+  padding: 0.25rem 0.7rem;
+  border: 1px dashed var(--pollo-muste-himmea);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--pollo-muste-himmea);
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.pollo-realtime-koe.paalla { border-style: solid; color: inherit; }
 .pollo-realtime-koe[hidden] { display: none; }
 
 .pollo-rivi { display: flex; gap: 0.35rem; }

@@ -5937,9 +5937,9 @@ function piirraSahkePullat(ui, city, data, kohde) {
     const avain = sahkePullaAvain(tehtava, 'vinkki');
     pullaOstosnappi(ui, kotelo, {
       hinta: SAHKE_PULLA_VINKKI_HINTA,
-      teksti: `Osta ${nimi} Livialle (${SAHKE_PULLA_VINKKI_HINTA}\u00a0£) — vinkki`,
-      varmistus: `Varmista: ${nimi} Livialle, ${SAHKE_PULLA_VINKKI_HINTA}\u00a0£`,
-      koyha: `Kassa ei riitä: ${nimi} ${SAHKE_PULLA_VINKKI_HINTA}\u00a0£`,
+      teksti: `Osta ${nimi} Livialle (£${SAHKE_PULLA_VINKKI_HINTA}) — vinkki`,
+      varmistus: `Varmista: ${nimi} Livialle, £${SAHKE_PULLA_VINKKI_HINTA}`,
+      koyha: `Kassa ei riitä: ${nimi} £${SAHKE_PULLA_VINKKI_HINTA}`,
       kelluke: `${nimi} Livialle`,
       tehty: `Livia sai kokonaisen pullan (${nimi}) ja sanoi vinkkinsä.`,
       ostettu: ui.game.pullaOstettu?.(avain) === true,
@@ -5976,9 +5976,9 @@ function piirraSahkePullat(ui, city, data, kohde) {
   const ostettuJo = ui.game.pullaOstettu?.(avain) === true;
   pullaOstosnappi(ui, kotelo, {
     hinta: SAHKE_PULLA_LINKKI_HINTA,
-    teksti: `Osta puolikas ${nimi} (${SAHKE_PULLA_LINKKI_HINTA}\u00a0£) — suora linkki`,
-    varmistus: `Varmista: puolikas ${nimi}, ${SAHKE_PULLA_LINKKI_HINTA}\u00a0£`,
-    koyha: `Kassa ei riitä: puolikas ${nimi} ${SAHKE_PULLA_LINKKI_HINTA}\u00a0£`,
+    teksti: `Osta puolikas ${nimi} (£${SAHKE_PULLA_LINKKI_HINTA}) — suora linkki`,
+    varmistus: `Varmista: puolikas ${nimi}, £${SAHKE_PULLA_LINKKI_HINTA}`,
+    koyha: `Kassa ei riitä: puolikas ${nimi} £${SAHKE_PULLA_LINKKI_HINTA}`,
     kelluke: `puolikas ${nimi} Livialle`,
     tehty: `Livia sai puolikkaan pullan (${nimi}) ja näytti linkin.`,
     ostettu: ostettuJo,
@@ -6374,7 +6374,7 @@ function piirraSahketehtava(ui, city, data, kohde) {
    * palkkion juuri siitä.
    */
   kohde.appendChild(html('p', 'fokusvirta-varoitus fokusvirta-sahkemaksu',
-    `Sähkeen palkkio nyt ${sahkePalkkio(ohi, tehtava.palkkio ?? SAHKE_PALKKIO)} puntaa. `
+    `Sähkeen palkkio nyt £${sahkePalkkio(ohi, tehtava.palkkio ?? SAHKE_PALKKIO)}. `
     + 'Jokainen ohilyönti pienentää sitä — mutta aarre ei lukitu koskaan.'));
 
   /*
@@ -6990,6 +6990,19 @@ function polloKuplasarja(ui, city, kentta, kuplat, i = 0) {
  * kuluteta ennen kuin kupla oikeasti näkyy: pöllönappi voi olla
  * piilossa, ja silloin vinkki kuuluu yhä ensi kerralle.
  */
+/**
+ * Lehden näkyvä elementti, jonka OMA tekstisolmu sisältää avainsanan (js/ilme.js korostaSana ympyröi vain suoria
+ * tekstisolmuja). null, jos sanaa ei lehdessä ole — silloin vinkki näyttää pelkän ympyröidyn avainsanan kuplassa.
+ */
+export function lehdenAvainsana(lehti, sana) {
+  if (!lehti?.querySelectorAll || !sana) return null;
+  for (const el of lehti.querySelectorAll('p, h1, h2, h3, h4, li, span, em, strong')) {
+    if (el.closest?.('[hidden]')) continue;
+    if ([...el.childNodes].some((solmu) => solmu.nodeType === 3 && solmu.data.includes(sana))) return el;
+  }
+  return null;
+}
+
 export function fokusvirtaLehtivinkki(ui, city) {
   if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return false;
   if (!city || !fokusvirtaSisalto(ui, city)) return false;
@@ -7003,16 +7016,34 @@ export function fokusvirtaLehtivinkki(ui, city) {
     // myöhästynyt kupla ilman kärkeä jää silloin näyttämättä, eikä
     // kertalippu kulu.
     if (ui.dead || !polloNappi()) return;
-    if (!naytaPolloKupla(ui, LIVIAN_LEHTIVINKKI)) return;
-    merkitseLehtivinkkiNahdyksi();
-    // Avainsana kynällä ympyröitynä (js/ilme.js); ilman kirjastoa pelkkä lause.
-    korostaSana(ui.fokusvirtaKortti?.querySelector('.fokusvirta-vinkkiteksti'),
-      LIVIAN_LEHTIVINKIN_SANA, { tyyppi: 'circle', kesto: 700, tayte: [2, 4] });
-    // Vinkki on pulun repliikki kuten muutkin: sama soitin, sama
-    // kytkin, ja puuttuva tai vanhentunut äänite on hiljainen.
-    // POIKKEUS "puhe äänenä, ei kuplana" -sääntöön (omistaja 14.09): vinkki on opastus, jonka avainsana ympyröidään
-    // kuplassa, joten kupla jää myös äänen kanssa (Päätoimittajalle).
-    soitaLivianAani(ui, 'lehtivinkki', 0, { teksti: LIVIAN_LEHTIVINKKI });
+    /*
+     * PUHE ÄÄNENÄ, EI KUPLANA (omistaja 2.10.2026 klo 14.09; Päätoimittajan tarkennus): vinkki on pulun repliikki
+     * kuten muutkin. Äänen kanssa puhuttua lausetta ei näytetä: avainsana ympyröidään kynällä lehteen
+     * itseensä (lehdenAvainsana), ja jos sitä ei lehdessä ole, kuplaan jää pelkkä ympyröity avainsana. Ilman ääntä
+     * (mykistys, puuttuva tai katkennut äänite) kupla koko lauseella kuten ennen.
+     */
+    // Avainsana kynällä ympyröitynä (js/ilme.js); ilman kirjastoa pelkkä teksti.
+    const ympyroi = (isa) => korostaSana(isa, LIVIAN_LEHTIVINKIN_SANA, { tyyppi: 'circle', kesto: 700, tayte: [2, 4] });
+    const kuplaan = (teksti) => {
+      if (!naytaPolloKupla(ui, teksti)) return false;
+      merkitseLehtivinkkiNahdyksi();
+      ympyroi(ui.fokusvirtaKortti?.querySelector('.fokusvirta-vinkkiteksti'));
+      return true;
+    };
+    puhuTaiKupla(
+      () => soitaLivianAani(ui, 'lehtivinkki', 0, { teksti: LIVIAN_LEHTIVINKKI }),
+      () => kuplaan(LIVIAN_LEHTIVINKKI),
+      {
+        ilmanKuplaa: () => {
+          polloPuheIlmanKuplaa(LIVIAN_LEHTIVINKKI);
+          const lehdessa = lehdenAvainsana(ui.arrivalDialog, LIVIAN_LEHTIVINKIN_SANA);
+          if (!lehdessa) return kuplaan(LIVIAN_LEHTIVINKIN_SANA);
+          merkitseLehtivinkkiNahdyksi();
+          ympyroi(lehdessa);
+          return true;
+        },
+      },
+    );
   }, LEHTIVINKKI_VIIVE_MS);
   return true;
 }
