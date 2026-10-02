@@ -2,7 +2,7 @@
   "_ohje": "TYYLIKIRJA (omistaja 1.10.2026, UI-pohjat kohta 7): pelin tyylien AINOA LÄHDE webille ja natiiville. Muokkaa vain tätä ja aja `node tools/tyylikirja.mjs` (web: css/styles.css:n generoitu lohko) ja `node tools/tyylikirja.mjs --natiivi <proto-git>` (Tyylikirja.uss, Tyylikirja.cs, tyylikirja.json-kopio). Raportti: docs/raportit/ui-pohjat-kartoitus-20261001.md. Uusi pinta käyttää vain näitä arvoja ja pohjia; puuttuva arvo → kysymys Päätoimittajalle.",
   "versio": 1,
   "kehys": {
-    "_selite": "Sovelluksen kehyksen ja kartan värit. Nimet ovat samat kuin ennen (css/styles.css :root ja Matkakirja.uss :root), joten mikään käyttöpaikka ei muutu.",
+    "_selite": "Sovelluksen kehyksen ja kartan värit. konjakki = yläpalkin pillerinappi oranssinruskeana konjakkinahkana (omistaja 2.10.2026 klo 15.0x ja 16.0x), konjakki-reuna sen leikkausreuna. Nimet ovat samat kuin ennen (css/styles.css :root ja Matkakirja.uss :root), joten mikään käyttöpaikka ei muutu.",
     "_vainNatiivi": ["kulta", "rivi-tausta"],
     "_vainNatiiviSyy": "Webissä --kulta on määrittelemätön (käyttöpaikat var(--kulta, #eab84e), var(--kulta, #d9a13b) ja ilman varaa); määrittely muuttaisi niitä. Yhtenäistetään KORTTI-pohjan siirrossa.",
     "bg": "#1d1610",
@@ -17,7 +17,9 @@
     "danger": "#ff9b8a",
     "rivi-tausta": "rgba(53, 39, 26, 0.55)",
     "overlay-card": "rgba(46, 33, 20, 0.88)",
-    "overlay-line": "rgba(217, 161, 59, 0.45)"
+    "overlay-line": "rgba(217, 161, 59, 0.45)",
+    "konjakki": "#9a4e1c",
+    "konjakki-reuna": "#5a2d12"
   },
   "kartta": {
     "_selite": "Kartan paperi ja muste. raja-muste: maiden rajojen yksi sävy (karttauudistuksen PÄÄTÖKSET 15 kohta 3, 14.9.2026); kerma: kartan vaalein paperi (PÄÄTÖKSET 4 ja 7). Perustelut css/styles.css:n kommenteissa.",

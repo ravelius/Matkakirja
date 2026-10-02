@@ -69,7 +69,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 922fb883fd15 */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 157539c23503 */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -82,6 +82,8 @@ body.paivittyy .app { visibility: hidden; }
   --danger: #ff9b8a;
   --overlay-card: rgba(46, 33, 20, 0.88);
   --overlay-line: rgba(217, 161, 59, 0.45);
+  --konjakki: #9a4e1c;
+  --konjakki-reuna: #5a2d12;
   --paper: #efdcb4;
   --paper-dark: #dcc08f;
   --map-ink: #46331f;
