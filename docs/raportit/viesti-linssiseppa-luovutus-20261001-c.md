@@ -19,6 +19,11 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
   natiivi + web (iss-realismi-kerrokset.js r. 143) — HYVÄKSYTTY JA TEHTY: natiivi linssiseppa/kiilto-ilmakeha 797aac22
   (käännös 5c292cbe) merge-pyynnössä Natiivisepällä; web PR #3844 (Pelikoodari hyväksyi, CI vihreä). Kuvaparit
   lokit/linssiseppa-kiilto-ilmakeha-20261002/{natiivi,web}-vanha-uusi.png; web-harness scratchpad kiilto-web.mjs.
+- LINSSIT-KARTTANAPPI (omistaja 18.3x, web #3859): linssiseppa/linssit-karttanappi 3b05a9d4 merge-pyynnössä junaan 128 (V2:n kanssa);
+  simulaattori 2eaab97a PASS, kuvapari lokit/linssiseppa-linssitnappi-20261002.
+- KIPSIPÄÄT KARTTAOBJEKTEINA (omistaja 16.4x/16.5x, web #3866): linssiseppa/erikoisnostot-3 2b1bffa1 (karttapiste, kipsi webin arvoin,
+  varjo pään siluetista: siirto 0,24, mittakaava 0,85, sumennus 1,0, peitto 0,26; valo ylhäältä kuten web). KESKEN: kuvaus ja
+  omistajan ennen|jälkeen-pari (ajo-kipsipaat-kartta.sh), sitten merge-pyyntö junaan 128. Varjodiagnoosi: ui erikoisnostot varjokuva.
 - PULU VÄISTÄÄ KIPSIPÄÄN: linssiseppa/erikoisnostot-2 1ba9ac42 (Pulu.cs Alareuna + Erikoisnostot.NakyvaAlue) merge-pyynnössä junaan 126;
   omistajan kuvat lokit/linssiseppa-kipsipaat-omistaja-20261002/omistaja-kipsipaat-{kiinni,auki}.png (ajo-kipsipaat-omistaja.sh).
 - KIPSIPÄÄT JUNASSA 125 (cf3ffcf1) ja todennettu iPhonella 16.19 (lokit/linssiseppa-erikoisnostot-juna125-iphone): näkyvät, reunaehto,
