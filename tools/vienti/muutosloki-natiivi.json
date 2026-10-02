@@ -2,9 +2,9 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
-   "versio": "1.1 (130)",
-   "paiva": "2026-10-02",
-   "teksti": "Yläpalkki on matalampi ja vie vähemmän tilaa kartalta, ja se toimii nyt oikein myös puhelimen vaakatilassa."
+   "versio": "1.1 (131)",
+   "paiva": "2026-10-03",
+   "teksti": "Puhelimen vaakatilassa yläpalkki on poissa, ja ☰ avaa valikon. Kokoelmat aukeavat omaan ikkunaansa, ja Topografia-linssin nimipilleri on nyt valikkonappi. Astronautin kyydissä säätöpaneelin voi pienentää, ja Pulu kulkee robottikädessä."
   },
   {
    "versio": "1.1 (129)",
