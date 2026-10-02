@@ -14,17 +14,18 @@ Worktree /Users/Shared/Claude/wt/proto-linssiseppa2-astro (BUILD 129 = e204abbe:
 | 3 | Sijaintipallo 120/160 pt, iPhone vaaka ruudun vasempaan reunaan 8 pt | fbba7320 | kuvattu pysty; vaaka kuvaamatta |
 | 7 | Cupola 3 -kehys +20 % (puhelin 2,4/1,5, tabletti 1,75/1,5) | fbba7320 | todennettu |
 | 1, 6, 10 | Robottikäden Pulu vasempaan alakulmaan 60 %, varjokuva, kasvot näkyvät (visiirin soikio), varsi vaakaan oikean reunan yli; Cupolassa kehyksen päällä ja pöydän yläpuolella | 85a8d4b7 + da145b3e | da145b3e KÄÄNTÄMÄTTÄ: todenna seuraavalla simulla (kasvot, varsi reunaan, Pulu ei pöydän päällä) |
-| 8, 9 | ISS-säätöpaneeli pieni (vain mittaririvi ~55 %) ↔ suuri (2 riviä 4+3, ~2×, tekstit ≥ 11 pt, 240 ms, ohinapautus pienentää); POISTU ×-merkki + POISTU-alateksti, erottuva | Opus-ali-agentti työssä (ei commitoitu) | agentin raportti → tarkista, unity-tarkistus, commit |
+| 8, 9 | ISS-säätöpaneeli pieni (vain mittaririvi) ↔ suuri (2 riviä 4+3, ~2×, tekstit ≥ 11 pt, 240 ms, ohinapautus pienentää); POISTU ×-merkki + POISTU-alateksti | 43bac2ff | KÄÄNTÄMÄTTÄ: käännä da145b3e:n kanssa, kuvaa pysty+vaaka |
 
 Päätoimittajan hyväksymät tulkinnat: 6/10 molempiin näkymiin, alus = ISS kuvan ulkopuolella oikealla; 9 erottuva (ei
 huomaamattomampi), Codexin punainen/varoitustila jos on, ei uutta tyyliä; 8 kuten yllä.
 Kohdat 2–5 koskevat myös webiä: Pelikoodari tekee samat arvot (sovittu 21.4x). Kuvat merkinnöin Päätoimittajalle erä kerrallaan.
 Skriptit: proto-3d/lokit/linssiseppa2-skriptit-20261001/astro-nykytila.sh (APP, OUT; pysty + vaaka 14 kuvaa).
 Nykytila: lokit/linssiseppa2-astro-nykytila-20261002 (+ nykytila-merkinnat.png), korjaus: lokit/linssiseppa2-astro-korjaus-20261002.
-TILINVAIHDON HETKELLÄ: paneelin (8–9) Opus-ali-agentin keskeneräiset muutokset ovat COMMITOIMATTA worktreessä
-(IssKytkinpoyta.cs, mahdollisesti IssKytkimet.cs / IssPaneeliKuvat.cs / LinssiOhjain.cs `astro kyyti paneeli pieni|suuri|tila`); 22.1x ne
-eivät kääntyneet (Liita, ajo, Nayta, Laske, Suuri, nyky, LaskeAlueet puuttuivat). Aloita: `git -C /Users/Shared/Claude/wt/proto-linssiseppa2-astro
-status`, lue diff ja joko viimeistele (spesifi yllä) tai `git stash push -u -m linssiseppa2-paneeli-wip` ja tee alusta.
+PANEELI (8–9) COMMITOITU 43bac2ff (agentti valmistui tilinvaihdon jälkeen; unity-tarkistus 0, Linssit 572/572, pohjavahti ok),
+KÄÄNTÄMÄTTÄ JA KUVAAMATTA. Pieni ~230 × 32 pt (vain mittari); suuri: pysty 2 riviä (iPhone 397 × 336 pt, 42 %), vaaka 1 rivi
+(iPhone 476 × 160 pt, 45 %); tekstit iPhonella 11 pt. Testit `astro kyyti paneeli pieni|suuri|tila`. Tarkistettavaa kuvasta: leikkaussaumat,
+9-slice-venytys, ×-merkin punainen (Tyylikirja.Tila.Virhe; Päätoimittaja ratkaisee onko uusi tyyli), alalappu aina POISTU (näkymän nimi ei
+enää näy), PALAA LIVE pienenä 2 napautusta, "EI KUVAUSPAIKKAA" ~7 pt. Codexin sarjassa ei ole punaista/varoitustilaa.
 Valmiina: Natiivisepälle merge-pyyntö haarasta, kun 8–9 ja kuvat ovat Päätoimittajalla kuitattuina.
 
 ## 2. Ajattelijat natiivissa (valmis, junissa)
