@@ -188,6 +188,10 @@
       "kuvake": "24-ruudukon viivakuvake kokoa nappi.ohjaus-kuvake, viiva 1,75, ei tekstimerkkejä (×, ‹)",
       "ryhma": "yksi ohjausryhmä näkymää kohden oikeaan yläkulmaan turva-alueen sisään: ‹ ensin, näkymän toiminnot, ✕ viimeisenä; väli vali.s; puhelimessa pystyssä enintään 4, loput valikkoon",
       "ulkopuolella": "sisällön omat ohjaimet (kuvan ‹ › -reunakaistat, vetokahva, liukusäätimet) ja Pulu; paneelin sisäinen ‹ Takaisin pysyy tekstinä",
+      "linssivalikot": {
+        "_selite": "linssin hampurilaisvalikko: OHJAUSNAPPI-neliö (harmaa, kuvake valikko) ✕:n paikalla oikeassa yläkulmassa, lista LINSSIN VALIKKO -pohjalla; rivit ylhäältä alas, Sulje linssi viimeisenä; kartalta poistuvat vastaavat napit ja ✕ (omistaja 2.10.2026 klo 21.3x, ensimmäinen käyttäjä Topografia; muut linssit linssivalikot.md:n mukaan omistajan päätöksellä)",
+        "topografia": ["Korkeustasot", "Sulje linssi"]
+      },
       "_selite": "kaikki kuvakenapit yhtenäisiksi neliöiksi ja yhteen ryhmään (omistaja 2.10.2026 klo 14.16; linnassa yksi hampurilaisvalikko klo 14.44; Päätoimittajan päätökset 15.1x). Malli taikalasinappi (#linssi-btn)."
     },
     "ERIKOISNOSTOT": {

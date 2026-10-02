@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2571, teksti: 'Tyylikirja: linssien hampurilaislista' },
   { v: 2569, teksti: 'Kipsipäät: pisteet irti nimistä ja korteista, p… (#3874)' },
   { v: 2568, teksti: 'Valikko V2: väliviivat pois paitsi alin, Untuvi… (#3875)' },
   { v: 2567, teksti: 'Raha £N proosassa, konjakkipilleri, £-glyfi, Pu… (#3864)' },
