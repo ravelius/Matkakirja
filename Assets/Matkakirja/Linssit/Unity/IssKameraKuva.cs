@@ -308,6 +308,8 @@ namespace Matkakirja.Natiivi
                 int ytimia = Math.Max(1, SystemInfo.processorCount - 1);   // vain pääsäikeessä (laitekoe 1.10.: säikeessä poikkeus)
                 // Avomeri (ei S2-ruutua): TCI:n tyypillinen meri tci_lutin läpi, ettei täyttö erotu tummana kaistana (laitekoe 2).
                 byte[] meri = { 14, 22, 30 };
+                // Vesi tasoitetaan merenväriin (Ateena 8648c410: eri päivien meri suorina ruuturajoina), rannikon matala vesi 25 % jää.
+                ty.Data.VesiTasoitus = 0.75; ty.Data.Meri = (byte[])meri.Clone();
                 if (ty.Data.Lut != null) for (int c = 0; c < 3; c++) meri[c] = ty.Data.Lut[meri[c]];
                 // Tasot tarkimmasta juureen (KuvanTyosto.PiirraKaikki): lehti datasta, isä lapsistaan.
                 var tyot = Task.Run(() => ty.PiirraKaikki((l, rgba) =>

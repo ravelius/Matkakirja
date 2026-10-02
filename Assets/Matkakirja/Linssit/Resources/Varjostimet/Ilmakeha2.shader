@@ -254,6 +254,10 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                     float3 savyN = lerp(float3(1.0, 0.26, 0.05), float3(1.0, 0.70, 0.28), smoothstep(1500.0, 12000.0, hsN));
                     float wN = wA * pohja * _NousuVoima;
                     L = L * lerp(float3(1.0, 1.0, 1.0), float3(1.0, 0.7, 0.45), saturate(wN)) + savyN * wN * 1.4;
+                    // Kaukana auringosta reunan oma punertuma viilenee (laite 8648c410: oranssi vyö oli koko leveydeltä tasainen,
+                    // koska sivuavan säteen punertuma kerrottiin kaarivoimalla); näin oranssi keskittyy auringon ympärille.
+                    float kaukana = (1.0 - saturate(wA * 1.5)) * pohja * saturate(_NousuVoima);
+                    L *= lerp(float3(1.0, 1.0, 1.0), float3(0.5, 0.78, 1.05), kaukana);
                 }
                 float dh = hmin - 95000.0;
                 float3 nl = normalize(lahin);

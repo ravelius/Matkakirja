@@ -35,24 +35,37 @@ namespace Matkakirja.Linssit.IssKamera
         /// </summary>
         public readonly Dictionary<string, CogOtsake> Scl = new Dictionary<string, CogOtsake>();
 
+        /// <summary>
+        /// Vesipikselien tasoitus merenväriin (0 = pois): Ateenan julisteessa (8648c410) eri päivien S2-ruutujen meri (aallokko,
+        /// kiilto, sameus) erottui suorina ruuturajoina. SCL-luokan 6 (vesi) pikseli sekoitetaan Meri-väriin (TCI ennen lutia).
+        /// </summary>
+        public double VesiTasoitus;
+        public byte[] Meri = { 14, 22, 30 };
+
         /// <summary>Onko UTM-pisteessä (e, n) ruudun SCL:n mukaan pilvi tai pilven varjo (ei haettu → ei).</summary>
         public bool Pilvinen(string tunnus, int vyohyke, double e, double n, double metria)
         {
-            if (!Scl.TryGetValue(tunnus, out var o)) return false;
+            byte c = SclLuokka(tunnus, e, n, metria);
+            return c == 3 || c == 8 || c == 9 || c == 10;
+        }
+
+        /// <summary>SCL-luokka UTM-pisteessä (e, n); 255 = ei haettu.</summary>
+        public byte SclLuokka(string tunnus, double e, double n, double metria)
+        {
+            if (!Scl.TryGetValue(tunnus, out var o)) return 255;
             int taso = o.TasoResoluutiolle(metria);
             var t = o.Tasot[taso]; double pm = o.TasonPikseliM(taso);
             int x = (int)((e - o.Ita0) / pm), y = (int)((o.Pohjoinen0 - n) / pm);
-            if (x < 0 || y < 0 || x >= t.Leveys || y >= t.Korkeus) return false;
+            if (x < 0 || y < 0 || x >= t.Leveys || y >= t.Korkeus) return 255;
             for (int tt = taso; tt < o.Tasot.Count; tt++)
             {
                 var tn = o.Tasot[tt]; double pn = o.TasonPikseliM(tt);
                 int xx = (int)((e - o.Ita0) / pn), yy = (int)((o.Pohjoinen0 - n) / pn);
                 var l = Hae((tunnus + "|scl", tt, xx / tn.LaattaL, yy / tn.LaattaK));
                 if (l == null) continue;
-                byte c = l[(yy % tn.LaattaK) * tn.LaattaL + xx % tn.LaattaL];
-                return c == 3 || c == 8 || c == 9 || c == 10;
+                return l[(yy % tn.LaattaK) * tn.LaattaL + xx % tn.LaattaL];
             }
-            return false;
+            return 255;
         }
 
         /// <summary>Purettu laatta tai null (ei haettu).</summary>
@@ -146,10 +159,16 @@ namespace Matkakirja.Linssit.IssKamera
                     int ix = (int)fx, iy = (int)fy; double ax = fx - ix, ay = fy - iy;
                     if (!Pikselit(d, ru.Tunnus, t, taso, ix, iy, out var p00, out var p10, out var p01, out var p11)) continue;   // ei haettu
                     if (Musta(p00) || Musta(p10) || Musta(p01) || Musta(p11)) continue;   // nodata (myös reunapikseli)
-                    if (d.Pilvinen(ru.Tunnus, ru.Vyohyke, e, n, pm)) continue;   // S2:n oma pilvi tai sen varjo → seuraava / varakuva
+                    byte luokka = d.SclLuokka(ru.Tunnus, e, n, pm);
+                    if (luokka == 3 || luokka == 8 || luokka == 9 || luokka == 10) continue;   // S2:n oma pilvi tai sen varjo → seuraava / varakuva
                     double cr = (p00.r * (1 - ax) + p10.r * ax) * (1 - ay) + (p01.r * (1 - ax) + p11.r * ax) * ay;
                     double cg = (p00.g * (1 - ax) + p10.g * ax) * (1 - ay) + (p01.g * (1 - ax) + p11.g * ax) * ay;
                     double cb = (p00.b * (1 - ax) + p10.b * ax) * (1 - ay) + (p01.b * (1 - ax) + p11.b * ax) * ay;
+                    if (luokka == 6 && d.VesiTasoitus > 0)
+                    {
+                        double w = d.VesiTasoitus;
+                        cr += (d.Meri[0] - cr) * w; cg += (d.Meri[1] - cg) * w; cb += (d.Meri[2] - cb) * w;
+                    }
                     // Saumapehmennys: paino kasvaa ruudun UTM-reunasta sisään 4 km:n matkalla; ruudun keskellä ensimmäinen voittaa.
                     double koko = o.Tasot[0].Leveys * o.PikseliM;
                     double reuna = Math.Min(Math.Min(e - o.Ita0, o.Ita0 + koko - e), Math.Min(o.Pohjoinen0 - n, n - (o.Pohjoinen0 - koko)));
