@@ -8,7 +8,9 @@ NAKYVYYS = float(sys.argv[4]) if len(sys.argv) > 4 else 1.0
 MERKINTA = sys.argv[5] if len(sys.argv) > 5 else ''
 LAHTEET = {'38a': ('ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ', 'Platon, Puolustuspuhe 38a'),   # Sisältökirjuri 1.10.
            '21d': ('ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι', 'Platon, Puolustuspuhe 21d'),
-           '49b': ('οὐδαμῶς ἄρα δεῖ ἀδικεῖν', 'Platon, Kriton 49b')}
+           '49b': ('οὐδαμῶς ἄρα δεῖ ἀδικεῖν', 'Platon, Kriton 49b'),
+           # Marcus Aurelius (Sisältökirjuri 2.10.: Wikisource, Farquharson 1944; Perseus)
+           'm10.16': ('Μηκέθ᾽ ὅλως περὶ τοῦ οἷόν τινα εἶναι τὸν ἀγαθὸν ἄνδρα διαλέγεσθαι, ἀλλὰ εἶναι τοιοῦτον.', 'Marcus Aurelius, Itselleen 10.16')}
 KREIKKA, VIITE = LAHTEET[KOHTA]
 im = Image.open(SISAAN).convert('RGBA'); L, K = im.size; lyhyt = min(L, K)
 kerros = Image.new('RGBA', im.size, (0, 0, 0, 0)); d = ImageDraw.Draw(kerros); alku = int(K * 0.84)
@@ -16,6 +18,8 @@ for y in range(alku, K):
     d.line([(0, y), (L, y)], fill=(8, 8, 11, int(170 * ((y - alku) / (K - alku)) ** 1.2)))
 koko = int(lyhyt * 0.036)
 Fk = ImageFont.truetype('/System/Library/Fonts/Supplemental/Baskerville.ttc', koko)
+while Fk.getlength(KREIKKA) > L * 0.92 and koko > 8:   # pitkä kreikka (esim. Marcus 10.16) mahtuu leveyteen
+    koko -= 1; Fk = ImageFont.truetype('/System/Library/Fonts/Supplemental/Baskerville.ttc', koko)
 Fv = ImageFont.truetype('/System/Library/Fonts/Supplemental/Iowan Old Style.ttc', int(koko * 0.85), index=2)
 y = K - int(lyhyt * 0.13)
 d.text((L / 2, y), KREIKKA, font=Fk, fill=(205, 200, 190, 255), anchor='mm')

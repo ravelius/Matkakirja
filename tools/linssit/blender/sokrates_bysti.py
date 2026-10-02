@@ -789,6 +789,16 @@ V7_VALO = ((1, (0.55, 0.85, 0.30)), (119, (0.9, 0.55, 0.35)), (236, (1.0, -0.05,
 if KOHDE == 'marcus':   # tuuheat kiharat ja parta varjostavat enemmän → aurinko alkaa sivummalta, jotta kasvot näkyvät
     V7_VALO = ((1, (0.85, 0.45, 0.35)), (119, (1.0, 0.15, 0.45)), (236, (1.0, -0.25, 0.6)), (259, (0.85, -0.5, 0.75)),
                (282, (0.70, -0.70, 0.85)))
+if '--otokset' in A:   # muu ajattelija/musiikki: leikkausruudut annetaan (viimeinen = Rembrandt, oltava 282); valot skaalataan
+    _uudet = [int(v) for v in A[A.index('--otokset') + 1].split(',')]
+    _vanhat = [o_[0] for o_ in V7_OTOKSET]
+    assert len(_uudet) == len(_vanhat) and _uudet[-1] == _vanhat[-1], 'otokset: sama määrä, Rembrandt ruudussa 282'
+    def _kuvaa(r):
+        for (a0, b0), (a1, b1) in zip(zip(_vanhat, _vanhat[1:]), zip(_uudet, _uudet[1:])):
+            if a0 <= r <= b0: return round(a1 + (r - a0) * (b1 - a1) / max(b0 - a0, 1))
+        return r
+    V7_OTOKSET = tuple((u_, c_, q_, mm_) for u_, (_, c_, q_, mm_) in zip(_uudet, V7_OTOKSET))
+    V7_VALO = tuple((_kuvaa(r_), s_) for r_, s_ in V7_VALO)
 V7_LAHESTY = (462, 555)       # nimi 282–372, kysymys 373–461
 V7_PROJ = (555, 900)          # 38a; a-luenta alkaa 600; lähderivi 902–950
 V7_KAARI_LOPPU = 965
