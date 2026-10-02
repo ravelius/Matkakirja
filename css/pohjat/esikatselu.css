@@ -1,0 +1,24 @@
+/*
+ * ESIKATSELU: tyylikirjasivun pohjat paikallaan virrassa (pohjien jälkeen, ohittaa niiden asemoinnin).
+ * Osa UI-pohjien tyylejä (css/pohjat/, latausjärjestys js/pohjat/tyylit.js POHJAT_TYYLIT: tokenit → pohjat →
+ * pinnat). VAIN --tk-*-tokenit ja .tk-teema-*-luokat (tyylikirja/tyylikirja.json → tools/tyylikirja.mjs).
+ */
+
+/* ── Esikatselu (tyylikirjasivu): pohja paikallaan virrassa, ei kiinnitettynä ───────────────── */
+
+.tk-esikatselu .tk-nostokortti,
+.tk-esikatselu .tk-kortti-tausta {
+  position: relative;
+  inset: auto;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  z-index: auto;
+}
+.tk-esikatselu .tk-nostokortti { width: 100%; max-height: 420px; }
+.tk-esikatselu .tk-kortti-tausta { min-height: 260px; border-radius: var(--tk-kulma-kortti); }
+
+@media (prefers-reduced-motion: reduce) {
+  .tk-nostokortti, .tk-kortti, .tk-kortti-tausta { transition: none; }
+}

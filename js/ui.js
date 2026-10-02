@@ -1,6 +1,7 @@
 // Käyttöliittymä: aarrekartan piirto, ohjauspaneeli, tietovisa ja bottien ohjaus.
 
 import { pixelOf, pointAlong, posKey } from './rules.js';
+import { visaPohjalla, pueVisaKortiksi } from './visa-pohja.js';
 import {
   ENNAKKOZOOMIN_MS, ENNAKON_ASKELIA, ENNAKON_HENGAHDYS_MS, ENNAKON_JATKOT, HYPYN_TAUKO_MS,
   NAPPULAN_LAHDON_VIIVE_MS, SAATON_PEHMENNYS, SAATON_VAHIN_OSUUS, SAATON_VAHIN_PX,
@@ -194,6 +195,7 @@ import { otsikkoAvain, piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.j
  */
 import { paivitaSahke, retkikuntaOsio } from './sahke.js';
 import { avaaEsittelylinssit, esittelylinssitAuki, lataaApuraha } from './apuraha.js';
+import { pohjatLataaTyyli } from './pohjat/pohjat.js';
 import { lahetaKaynti } from './kaynti.js';
 // Kävijälaskurin versio: sama APP_VERSION-teksti kuin versiorivillä (#app-version), luetaan sivulta.
 const APURAHA_VERSIO = () => globalThis.document?.getElementById('app-version')?.textContent ?? '';
@@ -2300,6 +2302,99 @@ const RAHATTOMUUS_SELITE_MS = 7000;
 /** Rahattomuuspalkin punaiset lohkot: viimeiset 18 h (3 × 6 h), omistaja 27.9.2026. */
 export const RAHATTOMUUS_PUNAISIA = 3;
 
+/*
+ * KORTTI-POHJA OLEMASSA OLEVAAN DIALOGIIN (UI-pohjat, omistaja 1.10.2026; sama tapa kuin natiivissa: kortti puetaan
+ * tyylikirjan KORTIKSI, rakenne ja kuvarivi säilyvät). Peruttavissa: ?kortti=vanha (localStorage matkakirja-kortti).
+ */
+const KORTTI_POHJA = true;
+export function korttiPohjalla() {
+  try {
+    const valinta = new URLSearchParams(globalThis.location?.search ?? '').get('kortti')
+      ?? globalThis.localStorage?.getItem('matkakirja-kortti');
+    if (valinta === 'vanha') return false;
+    if (valinta === 'pohja') return true;
+  } catch { /* yksityinen selaus */ }
+  return KORTTI_POHJA;
+}
+
+/** Dialogin kortti KORTTI-pohjan luokkiin: otsikko 21, kapiteeli 12, leipä 16, napit 38 (toiminto / haamu). */
+function puePohjaKortiksi(kortti, { otsikko = null, sulje = null } = {}) {
+  pohjatLataaTyyli();
+  kortti.classList.add('tk-kortti', 'tk-teema-paperi');
+  if (otsikko) otsikko.className = 'tk-otsikko';
+  for (const e of kortti.querySelectorAll('.apuraha-alaotsikko')) e.className = 'tk-apuri';
+  for (const e of kortti.querySelectorAll('.periaate-valiotsikko')) e.className = 'tk-kapiteeli';
+  for (const e of kortti.querySelectorAll('.apuraha-teksti')) {
+    e.className = `tk-leipa${e.classList.contains('apuraha-teksti--korostus') ? ' tk-leipa--korostus' : ''}`;
+  }
+  for (const e of kortti.querySelectorAll('.apuraha-lista')) e.className = 'tk-leipa tk-lista';
+  for (const e of kortti.querySelectorAll('.apuraha-toiminto')) e.className = 'tk-nappi tk-nappi--toiminto';
+  if (sulje) sulje.className = 'tk-nappi tk-nappi--haamu tk-nappi--levea';
+}
+
+/**
+ * index.html:n kiinteä dialogi (otsikko, kappaleet, listat, toimintorivi) KORTIKSI kerran: luokat vaihtuvat, mutta
+ * tunnisteet ja kuuntelijat pysyvät. Kortti on `.dialog-card`, tai dialogi itse, jos kehystä ei ole (muutosloki).
+ * `apuri` ja `korostus` ovat valitsimia kappaleille, jotka saavat apuri- tai korostusportaan; muut kappaleet ovat
+ * leipää. `sulje` on rivin ulkopuolinen sulkunappi (levea haamu). Ensisijainen nappi on kulta, haamu haamu ja muut
+ * TOIMINTO. Muutoslokin versionumero on kapiteeli rivin alussa.
+ */
+export function puePohjaDialogiksi(dialogi, { apuri = '', korostus = '', sulje = '' } = {}) {
+  if (!dialogi || dialogi.dataset.pohja) return;
+  const kortti = dialogi.querySelector('.dialog-card') ?? dialogi;
+  dialogi.dataset.pohja = 'kortti';
+  puePohjaKortiksi(kortti, { otsikko: kortti.querySelector('h2'), sulje: sulje ? kortti.querySelector(sulje) : null });
+  for (const e of kortti.querySelectorAll('p')) {
+    if (apuri && e.matches(apuri)) e.className = 'tk-apuri';
+    else e.className = `tk-leipa${korostus && e.matches(korostus) ? ' tk-leipa--korostus' : ''}`;
+  }
+  for (const e of kortti.querySelectorAll('ol, ul')) {
+    e.className = `tk-leipa tk-lista${e.querySelector('.muutos-versio') ? ' tk-lista--loki' : ''}`;
+  }
+  for (const e of kortti.querySelectorAll('.muutos-versio')) e.className = 'tk-kapiteeli';
+  for (const rivi of kortti.querySelectorAll('.dialog-actions, menu, .muutokset-toiminnot')) rivi.className = 'tk-napit';
+  for (const b of kortti.querySelectorAll('.tk-napit button')) {
+    const tyyppi = b.classList.contains('primary') ? ' tk-nappi--ensisijainen' : b.classList.contains('ghost') ? ' tk-nappi--haamu' : '';
+    b.className = `tk-nappi${tyyppi}`;
+  }
+}
+
+/** Puetun dialogin toimintorivi pystyyn, jos jokin näkyvä nimi ei mahdu vierekkäin (pohjan pystyrivi, ei lyhennystä). */
+function sovitaPohjaNapit(dialogi) {
+  if (!dialogi?.dataset.pohja) return;
+  // Pohjien tyylitiedostot latautuvat ensimmäisellä kerralla taustalla: mitataan vasta niiden jälkeen.
+  const tyyli = [...document.querySelectorAll('link[data-pohjat]')].find((l) => !l.sheet);
+  if (tyyli) {
+    tyyli.addEventListener('load', () => sovitaPohjaNapit(dialogi), { once: true });
+    return;
+  }
+  for (const rivi of dialogi.querySelectorAll('.tk-napit')) {
+    rivi.classList.remove('tk-napit--pysty');
+    const ylittyy = [...rivi.querySelectorAll('.tk-nappi')].some((b) => !b.hidden && b.scrollWidth > b.clientWidth + 1);
+    rivi.classList.toggle('tk-napit--pysty', ylittyy);
+  }
+}
+
+/**
+ * Lomake KENTTÄ-pohjaosalle (omistaja 1.10.2026: "lomake ok"): kentät tk-kentta, ensisijainen nappi kulta koko
+ * leveydeltä, muut napit TOIMINTO, kappaleet leipää ja avattavat otsikot kapiteeleja. Luokat, joihin js nojaa
+ * (.sahke-nimi, .periaate-laheta, .pro-rasti), säilyvät.
+ */
+function pueLomakePohjalle(isa) {
+  for (const e of isa.querySelectorAll('input:not([type=checkbox]):not([type=radio]):not([type=file]):not([type=hidden]), textarea, select')) {
+    e.classList.remove('periaate-kentta');
+    e.classList.add('tk-kentta');
+  }
+  for (const b of isa.querySelectorAll('button')) {
+    if (b.classList.contains('seloste-nappi')) continue;
+    const ensisijainen = b.classList.contains('primary');
+    b.classList.remove('primary', 'ghost');
+    b.classList.add('tk-nappi', ensisijainen ? 'tk-nappi--ensisijainen' : 'tk-nappi--toiminto');
+  }
+  for (const p of isa.querySelectorAll('p')) if (!/tk-/.test(p.className)) p.classList.add('tk-leipa');
+  for (const s of isa.querySelectorAll('summary')) s.classList.add('tk-kapiteeli');
+}
+
 export class UI {
   constructor(game, { onNewGame, onChange, onJatkaTurvasta = null, turvaOlemassa = null }) {
     this.game = game;
@@ -2888,6 +2983,8 @@ export class UI {
 
     this.winnerDialog = document.getElementById('winner-dialog');
     this.quizDialog = document.getElementById('quiz-dialog');
+    // Visa KORTTI-pohjalla, versio B (peruttava ?kortti=vanha; js/visa-pohja.js).
+    if (visaPohjalla()) pueVisaKortiksi(this.quizDialog);
     this.quizCity = document.getElementById('quiz-city');
     this.quizQuestion = document.getElementById('quiz-question');
     // Kohtaamisen tervehdys kysymyksen yllä (js/packs/kohtaamiset.js).
@@ -17739,6 +17836,7 @@ export class UI {
     sulje.addEventListener('click', () => lappu.close());
     kortti.appendChild(sulje);
 
+    if (korttiPohjalla()) puePohjaKortiksi(kortti, { otsikko, sulje });
     lappu.addEventListener('close', () => { lappu.remove(); if (this.apurahaDialog === lappu) this.apurahaDialog = null; });
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
     document.body.appendChild(lappu);
@@ -17803,6 +17901,16 @@ export class UI {
     sulje.type = 'button';
     sulje.addEventListener('click', () => lappu.close());
     kortti.appendChild(sulje);
+    // KORTTI-pohja (peruttava ?kortti=vanha): kärki korostettuna, lähde- ja oikeusrivit apurina; palautelomake
+    // pitää kenttiensä tyylit (kenttäpohja odottaa omistajan päätöstä).
+    if (korttiPohjalla()) {
+      for (const e of kortti.querySelectorAll('.periaate-teksti')) {
+        e.className = e.classList.contains('periaate-liput') ? 'tk-apuri'
+          : `tk-leipa${e.classList.contains('kärki') ? ' tk-leipa--korostus' : ''}`;
+      }
+      oikeudet.className = 'tk-apuri';
+      puePohjaKortiksi(kortti, { otsikko, sulje });
+    }
 
     lappu.addEventListener('close', () => lappu.remove());
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
@@ -18008,6 +18116,11 @@ export class UI {
     sulje.type = 'button';
     sulje.addEventListener('click', () => lappu.close());
     kortti.appendChild(sulje);
+    // KORTTI-pohja ja lomake KENTTÄ-pohjaosalle (peruttava ?kortti=vanha).
+    if (korttiPohjalla()) {
+      puePohjaKortiksi(kortti, { otsikko, sulje });
+      pueLomakePohjalle(kortti.querySelector('.periaate-lomake') ?? kortti);
+    }
 
     lappu.addEventListener('close', () => lappu.remove());
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
@@ -18310,7 +18423,7 @@ export class UI {
    * #3605:n (Siirtosepän avausanimaatio) jälkeen tämä kutsuu sen sijaan
    * animoiAvaus/haamuSulku-funktioita.
    *
-   * @param {'paa'|'linssit'|'aarteet'} nakyma
+   * @param {'paa'|'linssit'|'aarteet'|'matka'|'asetukset'} nakyma
    * @param {{animoi?: boolean}} [asetukset] animoi=false ohittaa liikkeen
    *   (paneelin oma avaus/sulku hoitaa sen jo silloin)
    */
@@ -18321,6 +18434,9 @@ export class UI {
       paa: this.pilleriPaanakyma,
       linssit: this.pilleriLinssitNakyma,
       aarteet: this.pilleriAarteetNakyma,
+      // PANEELI-pohjan alinäkymät (js/pilleri-paneeli.js luo ne; vanhassa valikossa niitä ei ole).
+      matka: document.getElementById('pilleri-matka-nakyma'),
+      asetukset: document.getElementById('pilleri-asetukset-nakyma'),
     };
     for (const [nimi, el] of Object.entries(kasvot)) {
       if (el) el.hidden = nimi !== nakyma;
@@ -19834,7 +19950,10 @@ export class UI {
     // Läpipeluu on saavutus vasta voitossa — ei vaellustilan välietapissa.
     natiiviSaavutus(NATIIVI_SAAVUTUKSET.lapipeluu);
     this.paivitaJakonappi();
+    // KORTTI-pohja (peruttava ?kortti=vanha); sama dialogi palvelee loppukorttia.
+    if (korttiPohjalla()) puePohjaDialogiksi(this.winnerDialog);
     if (!this.winnerDialog.open) this.winnerDialog.showModal();
+    sovitaPohjaNapit(this.winnerDialog);
   }
 
   /**
@@ -19868,7 +19987,9 @@ export class UI {
       this.onJatkaTurvasta?.();
     };
     this.paivitaJakonappi();
+    if (korttiPohjalla()) puePohjaDialogiksi(this.winnerDialog);
     if (!this.winnerDialog.open) this.winnerDialog.showModal();
+    sovitaPohjaNapit(this.winnerDialog);
   }
 
   /**

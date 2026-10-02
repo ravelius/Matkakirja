@@ -1,12 +1,13 @@
-// UI-pohjat webissä (omistaja 1.10.2026): KorttiData-malli, kuvasäännöt ja pohjasäännön vahti (css/pohjat.css
+// UI-pohjat webissä (omistaja 1.10.2026): KorttiData-malli, kuvasäännöt ja pohjasäännön vahti (css/pohjat/
 // käyttää vain tyylikirjan tokeneita; uusi väri tai koko pohjien ulkopuolelta → punainen, UI-pohjat kohta 8).
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { tarkistaKorttiData, pohjaKuvienRoolit } from '../js/pohjat/korttidata.js';
+import { pohjatCss } from './pohjat-css.mjs';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
-const CSS = lue('../css/pohjat.css');
+const CSS = pohjatCss();
 const POHJAT = lue('../js/pohjat/pohjat.js');
 
 test('kuvasäännöt: 1 hero, 2 hero + upotus, 3+ hero + galleria', () => {
@@ -34,7 +35,7 @@ test('KorttiData siistitään: tyhjä hylätään, teksti kappaleeksi, napit tyy
   assert.equal(tarkistaKorttiData({ otsikko: 'x', teema: 'neon' }).teema, 'paperi');
 });
 
-test('pohjasäännön vahti: css/pohjat.css ilman omia värejä, kokoja tai kestoja', () => {
+test('pohjasäännön vahti: css/pohjat/*.css ilman omia värejä, kokoja tai kestoja', () => {
   const ilmanKommentteja = CSS.replace(/\/\*[\s\S]*?\*\//g, '');
   assert.ok(!/#[0-9a-f]{3,8}\b/i.test(ilmanKommentteja), 'heksaväri pohjissa: lisää se tyylikirja.json:iin');
   assert.ok(!/rgba?\(/i.test(ilmanKommentteja), 'rgb-väri pohjissa: lisää se tyylikirja.json:iin');
@@ -57,7 +58,8 @@ test('NOSTOKORTTI ilman ✕:ää, sulku Esc + veto + ohinapautus; KORTTI modaali
 });
 
 test('pohjat on kytketty sivuun, välimuistiin ja nippuun', () => {
-  assert.match(lue('../sw.js'), /'\.\/css\/pohjat\.css'/);
-  assert.match(lue('../tools/build-standalone.mjs'), /'css\/pohjat\.css'/);
+  // Tyylitiedostojen lista (js/pohjat/tyylit.js) tarkistetaan tests/pohjat-tyylit.test.mjs:ssä.
+  assert.match(lue('../sw.js'), /'\.\/css\/pohjat\/perus\.css'/);
+  assert.match(lue('../tools/build-standalone.mjs'), /'css\/pohjat\/perus\.css'/);
   assert.match(lue('../tyylikirja.html'), /js\/pohjat\/tyylikirja-sivu\.js/);
 });
