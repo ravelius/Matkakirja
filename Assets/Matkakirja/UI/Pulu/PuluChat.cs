@@ -224,7 +224,6 @@ namespace Matkakirja.Natiivi
             // (näppäimistö 1, mikrofoni 2; kaiutin siirtyi ylärivin lukijaan 29.9.2026). Sanelutilassa kirjoitusrivi on piilossa.
             var syote = Rakenne.El("mk-chat__syote", paneeli, PickingMode.Ignore);
             saneluTila = Rakenne.Teksti("", "mk-chat__sanelutila", syote);
-            realtime = new PuluRealtimeNappi(syote, Viesti, () => Konteksti(), LopetaSanelu);
             var rivi = Rakenne.El("mk-chat__rivi", syote, PickingMode.Ignore);
             lomake = rivi;
             kentta = new TextField { maxLength = KysymysKatto };
@@ -241,6 +240,9 @@ namespace Matkakirja.Natiivi
             mikkiIkoni = Rakenne.Ikoni(MikkiIkoni, "mk-ikoni", mikki);
             lopetaIkoni = Rakenne.Ikoni(PysaytysIkoni, "mk-ikoni", mikki);
             lopetaTeksti = Rakenne.Teksti("Lopeta", "mk-chat__mikkiteksti", mikki);
+            // Puhu Pululle alarivillä näppäimistön ja mikrofonin rinnalla samalla tyylillä (omistaja 2.10.2026 klo 13.53: "puhu pululle
+            // nappi pitäisi olla samalla rivillä kahden alimmaisen napin kanssa samalla tyylillä"; web #3849).
+            realtime = new PuluRealtimeNappi(nappirivi, Viesti, () => Konteksti(), LopetaSanelu);
             MerkitseMikki(false);
             sanelussa = Sanelu.Saatavilla; // web: tila = saneluTuettu() ? 'sanelu' : 'kirjoitus'
             NaytaSyote();

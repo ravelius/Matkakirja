@@ -20,7 +20,9 @@ namespace Matkakirja.Natiivi
         public static PuluRealtimeNappi Nykyinen { get; private set; }
 
         /// <summary>Web puluRealtimeKoeNakyvissa: kehittäjätila ja pöllön kehittäjäkoodi.</summary>
-        public static bool Nakyvissa => Asetukset.Kehittaja && !string.IsNullOrEmpty(Asetukset.PolloKoodi);
+        public static bool Nakyvissa => PakotaNakyviin || Asetukset.Kehittaja && !string.IsNullOrEmpty(Asetukset.PolloKoodi);
+        /// <summary>Kuvaparin testikomento `ui chat realtime-nappi`: nappi näkyviin ilman Pöllön koodia (ei yhteyttä).</summary>
+        public static bool PakotaNakyviin;
 
         readonly Button nappi;
         readonly Label teksti;
@@ -33,12 +35,13 @@ namespace Matkakirja.Natiivi
         /// <param name="viesti">PuluChat.Viesti(luokka, teksti): kupla virtaan ja vieritys</param>
         /// <param name="konteksti">PuluChat.Konteksti(): sama pelin konteksti kuin chatissa (web this.konteksti())</param>
         /// <param name="lopetaSanelu">PuluChat.LopetaSanelu (web vaihdaRealtime: sanelu pois ensin)</param>
+        /// <param name="isa">Chatin alarivi (näppäimistön ja mikrofonin rinnalla, omistaja 2.10.2026 klo 13.53; web #3849).</param>
         public PuluRealtimeNappi(VisualElement isa, Func<string, string, Label> viesti, Func<string> konteksti, Action lopetaSanelu)
         {
             this.viesti = viesti;
             this.konteksti = konteksti;
             this.lopetaSanelu = lopetaSanelu;
-            nappi = Rakenne.Nappi(PuluRealtimeLogiikka.NappiTeksti(RealtimeTila.Valmis), "mk-chat__realtime", Vaihda, isa);
+            nappi = Rakenne.Nappi(PuluRealtimeLogiikka.NappiTeksti(RealtimeTila.Valmis), "mk-chat__nappula mk-chat__realtime", Vaihda, isa);
             teksti = nappi.Q<Label>(className: "mk-nappi__teksti");
             var rt = PuluRealtime.Hae();
             rt.TilaMuuttui += Merkitse;

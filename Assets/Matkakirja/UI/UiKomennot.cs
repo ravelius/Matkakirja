@@ -623,6 +623,7 @@ namespace Matkakirja.Natiivi
                             "testi", new List<string> { "Mitä tässä näkyy?" }, loput.Substring(6).Trim());
                         return null;
                     }
+                    if (loput == "realtime-nappi") { PuluRealtimeNappi.PakotaNakyviin = true; ui.Chat.Avaa(); PuluRealtimeNappi.Nykyinen?.PaivitaNakyvyys(); return null; }
                     if (loput == "aani") { Kirjaa("ui chat aani: " + (ui.Chat.VaihdaAaniTesti() ? "päällä" : "pois")); return null; }
                     if (loput == "lukija" || loput == "lukija valikko") { ui.Chat.Avaa(); Kirjaa("ui chat lukija: " + ui.Chat.LukijaTesti(loput == "lukija valikko")); return null; }
                     // Puhekeskustelu (web #3546): saneltu kysymys ilman mikrofonia, tila + viive, mikin napautus.
