@@ -142,7 +142,7 @@ namespace Matkakirja.Natiivi
                 Avaruus.KuvanNousu = (float)(NousuKerroin * nl * nl * (3 - 2 * nl));
                 var naytteet = Kuvasuunnitelma.Naytteet(kk);
                 if (naytteet.Count == 0) { Loki("näkymässä ei maata"); yield break; }
-                Tila = "indeksi"; Loki($"laukaisu {id} {muoto} {W}×{H}, kenttä {kamera.fieldOfView:0.0}°, {naytteet.Count} solua, {utc:yyyy-MM-dd HH:mm:ss} UTC");
+                Tila = "indeksi"; Loki($"laukaisu {id} {muoto} {W}×{H}, kenttä {kamera.fieldOfView:0.0}°, {naytteet.Count} solua, {utc:yyyy-MM-dd HH:mm:ss} UTC, vapaata {VapaaMuistiMt()} Mt");
 
                 // 2) indeksi
                 S2Indeksi indeksi = null;
