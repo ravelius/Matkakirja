@@ -508,6 +508,11 @@ namespace Matkakirja.Natiivi
             var tyhjat = rakennus3D.Tyhjat(tila.Id);
             if (tyhjat.Count > 0 && rakennus3D.Tilat.TryGetValue(tila.Id, out var tilaGo) && tilaGo != null)
             {
+                // Kukin liekki kerran (2.10.2026): glb:n liekki:-solmut korvaavat tilan JSON-liekit (sama kohta, piirtyi kahdesti).
+                int solmuja = 0;
+                foreach (var t in tyhjat) if (t.Laji == "liekki") solmuja++;
+                int pois = solmuja > 0 ? nayttamo?.Liekit?.PoistaJsonLiekit(tila.Id) ?? 0 : 0;
+                if (pois > 0) o.Kirjaa($"poikki: {tila.Id} liekit glb:n {solmuja} liekki:-solmusta, JSON-liekit {pois} pois");
                 foreach (var t in tyhjat)
                     if (t.Laji == "liekki") nayttamo?.Liekit?.LisaaTyhja(tila.Id, t, tilaGo.transform.TransformPoint(t.Paikka), o.Kirjaa);
                 nayttamo?.Savu?.LisaaTila(tila.Id, tilaGo.transform, tyhjat, o.Kirjaa);
