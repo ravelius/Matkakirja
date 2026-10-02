@@ -1298,7 +1298,8 @@ export function luoIssKyytiNakyma({
       ui.ylilentoRivi.textContent = `${k.nimi}: ei ylilentoa 48 tunnin sisällä`;
       return null;
     }
-    if (kyyti.tila !== TILA.seuranta) napauta();
+    // Kehittäjälipulla kelaus seurannasta; muuten pysytään Cupolassa (ISS:n rinnalla pois pelistä 2.10.2026).
+    if (kyyti.seuranta && kyyti.tila !== TILA.seuranta) napauta();
     const oma = { ...y, tunnus: k.tunnus, nimi: k.nimi, kohde: k, perilla: false, id: null };
     ylilento = oma;
     oma.id = simu.kelaaHetkeen(y.ms, {

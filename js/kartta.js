@@ -3156,7 +3156,7 @@ export class Kartta extends NukkuvaKartta {
     // (omistaja 10.9.2026).
     const KELLUVA_UI = '.fokusvirta-kortti, .fokusvirta-kupla, .fokuszoom, '
       + '.fokusvirta-luentakuva, '
-      + '.fokus-maataulu, .fokuskohde-popup, .aikajana-ilmio';
+      + '.fokus-maataulu, .fokuskohde-popup, .tk-nostokortti:not(.tk-piilossa), .aikajana-ilmio';
     /** Alkaako ele kartan päällä kelluvalta pinnalta? */
     const kelluvaltaPinnalta = (e) => Boolean(e?.target?.closest?.(KELLUVA_UI));
 

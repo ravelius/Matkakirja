@@ -115,6 +115,10 @@ test('natiivin vakiot varjostimissa (ilmahehku 0,12 σ 4,5 km, yön vesi 0,96, k
   assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /lapi = 1\.0 - 0\.85 \* pilvi/);
   assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /yo\(ng\) \* osuu \* lapi/);
   assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /uKiilto \* lapi/);
+  // Kiillon ilmakehän läpäisy (Kasten–Young, τ RGB 0,15/0,20/0,33) kuten natiivin Yokuori.shader (2.10.2026).
+  assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /0\.50572 \* pow\(degrees\(asin\(s\)\) \+ 6\.07995, -1\.6364\)/);
+  assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /exp\(-vec3\(0\.15, 0\.20, 0\.33\) \* \(ilmamassa\(nl\) \+ ilmamassa\(nv\)\)\)/);
+  assert.doesNotMatch(VARJOSTIMET.YOKUORI_FRAGMENT, /kiiltoVari/);
   assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /pilvi = uPilvetOn \* uPilviPeitto \*/);
   assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /lisaPilvi = pilvi \* osuu \* yoKuori \* clamp\(uYoVesi - a/);
   assert.equal(YOKUORI.valot, 0.96, 'kaupunkien valot 60 % (omistaja 28.9.)');

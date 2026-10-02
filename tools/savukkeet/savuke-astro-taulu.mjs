@@ -17,7 +17,7 @@
  *      taulun; pelin chatti ei aukea.
  *   4. ISS:n sisälle → kyyti ikkunaan (Cupola) ≤ 10 s; Pulun napautus
  *      kyydissä avaa taulun, ja ISS:n sisälle on valittuna.
- *   5. ISS:n rinnalla → seuranta; Astronauttien kuvat → kyydistä pois ja
+ *   5. Ei ISS:n rinnalla -riviä (omistaja 2.10.2026); Astronauttien kuvat → kyydistä pois ja
  *      lähimmän kohteen kuva auki; Maapallo → kuva kiinni, kaukonäkymä.
  *   6. Toinen avaus: ei tervetuloa, taulu heti paljastuksen jälkeen.
  *   7. Ei sivuvirheitä.
@@ -311,8 +311,8 @@ for (const laite of ['iphone', 'ipad']) {
   vaadi(n('1. taulu tulee ≤ 2 s tervetulon jälkeen'), jakso.viiveMs !== null && jakso.viiveMs <= 2000, `${jakso.viiveMs} ms`);
   await s.waitForTimeout(400);
   let t = await taulunTila(s);
-  vaadi(n('1. taulu näkyy, Maapallo valittuna, neljä moodiriviä'),
-    t.nakyy && t.rivit.map((r) => r.tunnus).join() === 'pallo,iss-rinnalla,iss-sisalle,kuvat'
+  vaadi(n('1. taulu näkyy, Maapallo valittuna, kolme moodiriviä (ei ISS:n rinnalla)'),
+    t.nakyy && t.rivit.map((r) => r.tunnus).join() === 'pallo,iss-sisalle,kuvat'
       && t.rivit.find((r) => r.valittu)?.tunnus === 'pallo',
     JSON.stringify({ rivit: t.rivit, opacity: t.opacity, kuplia: t.kuplia, anim: t.anim, luokat: t.luokat, ohita: t.ohita }));
   vaadi(n('1. tervetulon kuplat eivät jää taulun alle'), t.kuplia === 0, `${t.kuplia}`);
@@ -363,17 +363,15 @@ for (const laite of ['iphone', 'ipad']) {
     `taulu ${JSON.stringify(t.laatikko)} pulu ${JSON.stringify(t.pulu)}`);
   await kuva(s, `astro-taulu-${laite}-4-taulu-kyydissa`);
 
-  /* ISS:n rinnalla → seuranta. */
-  await valitseRivi(s, 'iss-rinnalla');
-  const seurantaan = await odota(s, () => {
-    const m = window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.kyytiMoodi?.();
-    return m?.tila === 'seuranta' && !m.siirtyy;
-  }, null, 8000);
-  vaadi(n('5. ISS:n rinnalla → seuranta'), seurantaan);
+  /* ISS:n rinnalla poistettu (omistaja 2.10.2026): kyyti ei käy seurannassa missään vaiheessa. */
+  const eiSeurantaa = await s.evaluate(() => window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.kyytiMoodi?.()?.tila !== 'seuranta');
+  vaadi(n('5. ei seurantatilaa'), eiSeurantaa);
 
-  /* Astronauttien kuvat → pois kyydistä ja kuva auki. */
-  await napautaPulua(s);
-  await s.waitForTimeout(250);
+  /* Astronauttien kuvat → pois kyydistä ja kuva auki. Taulu on vaiheen 4 jäljiltä auki (ei enää rinnalla-valintaa välissä). */
+  if (!(await taulunTila(s)).nakyy) {
+    await napautaPulua(s);
+    await s.waitForTimeout(250);
+  }
   await valitseRivi(s, 'kuvat');
   const kuviin = await odota(s, () => document.body.classList.contains('satelliitti-kuva-auki')
     && !window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.kyydissa?.(), null, 10000);
@@ -491,8 +489,8 @@ for (const laite of ['iphone', 'ipad']) {
   });
   await s.waitForTimeout(500);
   const issJalkeen = await taulunTila(s);
-  vaadi(n('10. taulu auki → napautus ISS:n viereen vie kyytiin'),
-    ennenIss.nakyy && !issNapautus.tauluAlla && issJalkeen.kyyti?.tila === 'seuranta',
+  vaadi(n('10. taulu auki → napautus ISS:n viereen vie suoraan Cupolaan'),
+    ennenIss.nakyy && !issNapautus.tauluAlla && issJalkeen.kyyti?.tila === 'ikkuna',
     JSON.stringify({ tauluAuki: ennenIss.nakyy, paikka: ennenIss.paikka, taulu: ennenIss.laatikko, ...issNapautus, kyyti: issJalkeen.kyyti }));
   await s.evaluate(() => window.matkakirja.ui.pallolinssi.kahva.avaruus.poistuKyydista());
   await odota(s, () => !window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.kyydissa?.(), null, 10000);

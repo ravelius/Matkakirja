@@ -1,0 +1,64 @@
+/*
+ * AJATTELIJAT-LINSSI (pinta KUVANÄKYMÄ-pohjalla, teema tumma; js/linssit/ajattelija.js). Videon päälle nimi ja
+ * elinvuodet, kysymys sekä päälauseen lähderivi Blender-mallin mukaan (sokrates_nimi.py: vasen reuna kasvojen
+ * korkeudella, harvennettu versaali; sokrates_lahde.py: kreikka ja viite alareunassa liukuvärin päällä).
+ * Näkyvyys tulee aikajanalta (opacity JS:stä ruuduittain), joten tässä ei ole siirtymiä.
+ * VAIN --tk-*-tokenit (tyylikirja/tyylikirja.json → tools/tyylikirja.mjs).
+ */
+
+.ajattelija-teksti {
+  position: absolute;
+  left: 6%;
+  top: 42%;
+  transform: translateY(-100%);
+  margin: 0;
+  color: var(--tk-muste);
+  font-family: var(--font-luku);
+  opacity: 0;
+  pointer-events: none;
+}
+.ajattelija-nimi {
+  font-size: var(--tk-koko-arkki);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+.ajattelija-vuodet {
+  display: block;
+  margin-top: var(--tk-vali-xs);
+  color: var(--tk-muste-pehmea);
+  font-size: var(--tk-koko-apuri);
+  font-style: italic;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.ajattelija-kysymys {
+  font-size: var(--tk-koko-arkki);
+  font-style: italic;
+  line-height: 1.25;
+}
+.ajattelija-lahde {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: var(--tk-vali-xl) var(--tk-vali-l) calc(var(--tk-vali-xl) + env(safe-area-inset-bottom, 0px));
+  background: linear-gradient(to bottom, transparent, var(--tk-himmennys-tumma));
+  font-family: var(--font-luku);
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+}
+.ajattelija-lahde__kreikka {
+  display: block;
+  color: var(--tk-muste);
+  font-size: var(--tk-koko-apuri);
+}
+.ajattelija-lahde__viite {
+  display: block;
+  margin-top: var(--tk-vali-xs);
+  color: var(--tk-muste-pehmea);
+  font-size: var(--tk-koko-kapiteeli);
+  font-style: italic;
+}

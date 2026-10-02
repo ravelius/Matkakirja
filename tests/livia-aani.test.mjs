@@ -731,7 +731,7 @@ test('paljastus äänitetään sillä variantilla, jonka peli soittaa', () => {
 test('js/livia.js soittaa jokaisen kuplan äänen', () => {
   const livia = lue('../js/livia.js');
   assert.match(livia,
-    /import \{\n\s*livianKuplanAjastin, pysaytaLivianAani, soitaLivianAani,\n\} from '\.\/liviapuhe\.js';/);
+    /import \{\n\s*livianKuplanAjastin, puhuTaiKupla, pysaytaLivianAani, soitaLivianAani,\n\} from '\.\/liviapuhe\.js';/);
   /*
    * ÄÄNITE KAANONIN NUMEROLLA, EI SARJAN PAIKALLA (7.9.2026). Kun
    * lähtökohteita on useita, "vasta yhden reitin" -kupla jätetään
@@ -740,17 +740,16 @@ test('js/livia.js soittaa jokaisen kuplan äänen', () => {
    * mukana, jotta vanhentunut äänite jää hiljaiseksi, ja soitin otetaan
    * talteen, jotta kupla odottaa puheen loppuun.
    */
-  assert.match(livia, /const aani = soitaLivianAani\(ui, 'avaus', rivi\.indeksi, \{ teksti \}\);/);
+  // PUHE ÄÄNENÄ, EI KUPLANA (omistaja 2.10.2026 klo 14.09): äänite ensin, kupla vain varalla (puhuTaiKupla).
+  assert.match(livia, /\(\) => soitaLivianAani\(ui, 'avaus', rivi\.indeksi, \{ teksti \}\),\n\s*\(\) => kupla\(\),/);
   assert.match(livia, /export function livianAvausSarja\(kohteita = ETUSIVUN_KOHTEET\.size\)/);
   assert.match(livia,
     /\.filter\(\(\{ indeksi \}\) => kohteita <= 1 \|\| indeksi !== LIVIAN_YHDEN_REITIN_KUPLA\)/);
   assert.match(livia,
-    /const aani = soitaLivianAani\(ui, 'paljastus', i, \{ \.\.\.variantti, teksti \}\);/);
-  assert.match(livia, /soitaLivianAani\(ui, 'mannerivihje', 0, \{ teksti: MANNERIVIHJE \}\);/);
-  // Kupla ensin, ääni sen jälkeen: äänen soitto on kuplan
-  // onnistumisen jälkeisellä polulla.
-  assert.ok(livia.indexOf('const nakyi = polloAvauskupla')
-    < livia.indexOf("soitaLivianAani(ui, 'avaus', rivi.indeksi"));
+    /\(\) => soitaLivianAani\(ui, 'paljastus', i, \{ \.\.\.variantti, teksti \}\),/);
+  assert.match(livia, /\(\) => soitaLivianAani\(ui, 'mannerivihje', 0, \{ teksti: MANNERIVIHJE \}\),/);
+  // Muotokuvarepliikki (Viisas Pöllö): äänen kanssa kuplaan jää vain muotokuva (Päätoimittaja 2.10.2026).
+  assert.match(livia, /ilmanKuplaa: \(\) => \(muotokuva \? kupla\(true\) : polloPuheIlmanKuplaa\(teksti\)\)/);
   // KUPLA ODOTTAA PUHEEN LOPPUUN: avaussarjan ajastin lukee soittimen
   // keston eikä pelkkää tekstin pituutta.
   assert.match(livia, /avausAjastin = livianKuplanAjastin\(\n\s*lukuaika\(teksti\), aani,/);
@@ -770,7 +769,7 @@ test('mannerivihje ja avaus käyttävät samoja repliikkejä kuin äänitteet', 
 test('js/fokusvirta.js soittaa Euroopan kaupunkien repliikit kupla kerrallaan', () => {
   const virta = lue('../js/fokusvirta.js');
   assert.match(virta,
-    /livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu,\n\s*livianKuplanAika, livianKuplanAjastin, livianKuplat, pysaytaLivianAani,\n\s*soitaLivianAani, soitaLivianKaupunkiAani,\n\} from '\.\/liviapuhe\.js';/);
+    /livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu,\n\s*livianKuplanAika, livianKuplanAjastin, livianKuplat, puhuTaiKupla, pysaytaLivianAani,\n\s*soitaLivianAani, soitaLivianKaupunkiAani,\n\} from '\.\/liviapuhe\.js';/);
   /*
    * YKSI KUPLA = YKSI ÄÄNITIEDOSTO (omistaja 7.9.2026). Kutsupaikat
    * eivät enää soita kenttää kerran, vaan antavat puheenvuorolle
@@ -791,7 +790,7 @@ test('js/fokusvirta.js soittaa Euroopan kaupunkien repliikit kupla kerrallaan', 
   // Paluu on kuplasarja samassa paikassa (polloKuplasarja).
   assert.match(virta, /polloKuplasarja\(ui, city, 'paluu',/);
   assert.match(virta,
-    /const aani = soitaLivianKaupunkiAani\(ui, city\?\.id, kentta, \{ kupla: i, teksti \}\);/);
+    /\(\) => soitaLivianKaupunkiAani\(ui, city\?\.id, kentta, \{ kupla: i, teksti \}\),/);
   // Johdanto ja odotus kulkevat sähkesaatteen kautta: kenttä välitetään
   // sinne nimenä ja saate soittaa sen.
   assert.match(virta, /sahkeSaateKuplaan\(ui, city, avain, tehtava\.johdanto \?\? '', 'johdanto'\)/);
@@ -848,10 +847,11 @@ test('js/fokusvirta.js soittaa Euroopan kaupunkien repliikit kupla kerrallaan', 
   const pollo = lue('../js/pollo.js');
   assert.match(pollo, /naytaPuheenvuoro\(osat, \{[\s\S]{0,200}aani = null,/);
   assert.match(pollo, /tila\.viive[\s\S]{0,120}PUHEENVUORON_VIIVE_ALA/);
-  // Kupla ensin, ääni sen jälkeen — myös jatko-osissa.
-  assert.match(pollo, /const aaniKahva = nakyi \? \(aani\?\.\(0, palat\[0\]\) \?\? null\) : null;/);
+  // PUHE ÄÄNENÄ, EI KUPLANA (omistaja 2.10.2026 klo 14.09): ääni ensin (puheTaiKupla), kupla vain varalla.
+  assert.match(pollo, /const \{ nakyi, aaniKahva \} = this\.puheTaiKupla\(palat\[0\], 0, aani, \{/);
+  assert.match(pollo, /puheTaiKupla\(teksti, i, aani, kuplanAsetukset\) \{[\s\S]{0,400}const audio = voiPuhua \? \(aani\(i, teksti\) \?\? null\) : null;/);
   assert.match(pollo,
-    /nyt\.aaniKahva = osaNakyi \? \(nyt\.aani\?\.\(i, nyt\.palat\[i\]\) \?\? null\) : null;/);
+    /nyt\.aaniKahva = this\.puheTaiKupla\(nyt\.palat\[i\], i, nyt\.aani, \{/);
   // Soittimen kahva kulkee rytmille, ja odotus venyy uudella kierroksella.
   assert.match(pollo, /tila\.viive\(edellinen, tila\.aaniKahva\)/);
   assert.match(pollo, /if \(viive > kulunut && kierros < 2\)/);

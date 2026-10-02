@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2544';
+const CACHE = 'matkakirja-2026-09-21.2570';
 const SHELL = [
   './',
   './index.html',
@@ -20,6 +20,9 @@ const SHELL = [
   './css/pohjat/paneeli.css',
   './css/pohjat/kentta.css',
   './css/pohjat/auto.css',
+  './css/pohjat/kuvanakyma.css',
+  './css/pohjat/pulu.css',
+  './css/pohjat/erikoisnostot.css',
   './css/pohjat/esikatselu.css',
   './css/pohjat/pinnat/dialogit.css',
   './css/pohjat/pinnat/pillerivalikko.css',
@@ -27,6 +30,7 @@ const SHELL = [
   './css/pohjat/pinnat/karttaselite.css',
   './css/pohjat/pinnat/linssin-valikko.css',
   './css/pohjat/pinnat/linssivalitsin.css',
+  './css/pohjat/pinnat/ajattelija.css',
   // Nosto aukeaa kuva edellä (js/nostokuva.js lataa tyylinsä itse).
   './css/nostokuva.css',
   './css/kuvasarja.css',
@@ -399,6 +403,12 @@ const SHELL = [
   './js/pallonimiot-gl.js',
   './js/linssit/rekisteri.js',
   './js/linssit/aarteet.js',
+  './js/linssit/ajattelija.js',
+  './js/linssit/ajattelijat.js',
+  './js/linssit/ajattelija-projektori.js',
+  './js/linssit/ajattelija-sokrates.js',
+  './js/linssit/ajattelija-marcus.js',
+  './js/ajattelijapaat.js',
   './js/linssit/omistus.js',
   './js/linssit/pallo.js',
   './js/linssit/pistenaytto.js',
@@ -913,6 +923,7 @@ const SHELL = [
   './assets/linssit/hiomassa.svg',
   './assets/varusteet/varuste-maatiedot.jpg',
   './assets/varusteet/varuste-radio.jpg',
+  './assets/varusteet/varuste-ajattelijat.jpg',   // kehittäjälinssi: kartan pään GLB-render (väliaikainen)
   // Keksinnöt ja Ihmisen matka saivat omat kuvakkeensa 7.9.2026; ilman
   // näitä matkalaukun ruutu putoaisi viivakuvakkeeseen juuri offlinessa.
   './assets/varusteet/varuste-keksinnot.jpg',

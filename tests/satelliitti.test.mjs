@@ -1217,8 +1217,12 @@ test('minipulu kelluu valokuvan oikeassa alakulmassa astronautti-Pulun rinnalla'
    * oikeassa alareunassa näkyvillä"*. Minipulu on kortin oma opas,
    * vaikka pelin Pulu näkyy samalla kartalla astronauttiasussa.
    */
-  assert.match(lahde, /import \{ luoMinipulu \} from '\.\.\/minipulu\.js'/);
-  assert.match(lahde, /luoMinipulu\(pulunappi, \{ koko: 'auto', suunta: 'vasen' \}\)/);
+  // Minipulu ja chatti ovat PULU-pohja (js/pohjat/pulu.js, Päätoimittaja 2.10.2026); satelliitti antaa etuliitteen.
+  const pulu = lue('../js/pohjat/pulu.js');
+  assert.match(lahde, /import \{ luoPohjaPulu \} from '\.\.\/pohjat\/pulu\.js'/);
+  assert.match(lahde, /luoPohjaPulu\(\{ luokka: 'satelliitti', aihe: kohde\.nimi, kysymykset: haeAstronautinKysymykset\(kohde\.tunnus\) \}\)/);
+  assert.match(pulu, /import \{ luoMinipulu \} from '\.\.\/minipulu\.js'/);
+  assert.match(pulu, /luoMinipulu\(pulunappi, \{ koko: 'auto', suunta: 'vasen' \}\)/);
   assert.match(tyyli, /\.satelliitti-pulukulma \{[\s\S]*position: absolute;[\s\S]*right: 12px;[\s\S]*bottom: calc\(12px \+ env\(safe-area-inset-bottom, 0px\)\)/);
   /*
    * EI YMPYRÄÄ PULUN YMPÄRILLÄ (omistaja 16.9.2026: *"saisiko pulun
@@ -1237,7 +1241,8 @@ test('minipulu kelluu valokuvan oikeassa alakulmassa astronautti-Pulun rinnalla'
   // Pienoiskuvat ovat vasemmassa alakulmassa ja enintään puolet leveydestä.
   assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*max-width: 50%/);
   // Hahmo puretaan kortin mukana: rAF ja kuuntelijat eivät jää elämään.
-  assert.match(lahde, /minipulu\?\.tuhoa\?\.\(\)/);
+  assert.match(pulu, /minipulu\?\.tuhoa\?\.\(\)/);
+  assert.match(lahde, /pulu\.tuhoa\(\);/);
 });
 
 test('minipulun napautus avaa pulun NORMAALIN chatin ehdotuksineen', async () => {
@@ -1257,23 +1262,24 @@ test('minipulun napautus avaa pulun NORMAALIN chatin ehdotuksineen', async () =>
    * ole enää satelliitti.js:n käytössä).
    */
   assert.doesNotMatch(lahde, /haeAstronautinVastaus/);
-  assert.match(lahde, /const vastaaKysymykseen = \(kysymys, painike\) => \{[\s\S]*?lahetaKysymys\(kysymys\);/);
-  assert.match(lahde, /lahetaKysymys\(pulunKentta\.value\)/);
+  const pulu = lue('../js/pohjat/pulu.js');
+  assert.match(pulu, /const vastaaKysymykseen = \(kysymys, painike\) => \{[\s\S]*?lahetaKysymys\(kysymys\);/);
+  assert.match(pulu, /lahetaKysymys\(pulunKentta\.value\)/);
   // Teksti ladotaan tekstisolmuna, ei innerHTML:nä.
-  assert.match(lahde, /kupla\.replaceChildren\(document\.createTextNode\(String\(teksti/);
+  assert.match(pulu, /kupla\.replaceChildren\(document\.createTextNode\(String\(teksti/);
   // Vapaa kenttä + lähetysnappi, ja kysymys menee SAMAA reittiä kuin kartalla.
-  assert.match(lahde, /html\('input', 'satelliitti-pulu-kentta'\)/);
-  assert.match(lahde, /polloUlkoinenKysymys\(teksti, \{/);
-  assert.match(lahde, /pulunSyote\.addEventListener\('submit'/);
+  assert.match(pulu, /html\('input', `\$\{L\}-pulu-kentta`\)/);
+  assert.match(pulu, /polloUlkoinenKysymys\(teksti, \{/);
+  assert.match(pulu, /pulunSyote\.addEventListener\('submit'/);
   // Striimin palat kirjoittuvat samaan kuplaan, ja hahmo reagoi.
-  assert.match(lahde, /onPala: \(kertynyt\) => \{/);
-  assert.match(lahde, /minipulu\?\.reagoi\?\.\(\)/);
+  assert.match(pulu, /onPala: \(kertynyt\) => \{/);
+  assert.match(pulu, /minipulu\?\.reagoi\?\.\(\)/);
   // Yksi pyyntö kerrallaan: lähetysnappi on lukossa vastauksen ajan.
-  assert.match(lahde, /pulunLaheta\.disabled = true;/);
+  assert.match(pulu, /pulunLaheta\.disabled = true;/);
   const kysymys = haeAstronautinKysymykset('etna')[0];
   assert.ok(haeAstronautinVastaus('etna', kysymys).vastaus.length > 0);
   // Kortti sulkeutuu X:stä ja kohteen vaihdosta (koko näkymä puretaan).
-  assert.match(lahde, /pulunSulku\.addEventListener\('click'/);
+  assert.match(pulu, /pulunSulku\.addEventListener\('click'/);
   assert.match(tyyli, /\.satelliitti-pulukortti\[hidden\] \{ display: none; \}/);
   // Chatti on tummalla pohjalla ja kentän fontti 16 px (iOS ei zoomaa).
   assert.match(tyyli, /\.satelliitti-pulu-kentta \{[\s\S]*font-size: 16px/);
@@ -1341,7 +1347,7 @@ test('selite avautuu pienennettynä ja vinkkaa kerran kohdetta kohti', () => {
   // Pelaajan ele voittaa vinkin ja JÄTTÄÄ selitteen auki.
   assert.match(lahde, /if \(lopetaVinkki\(\)\) \{ asetaSelite\(false\); return; \}/);
   // Ajastin ei jää elämään suljetun näkymän yli.
-  assert.match(lahde, /minipulu = null;\n    \/\* Vinkkiajastin ei saa herätä suljetun näkymän päälle\. \*\/\n    lopetaVinkki\(\);/);
+  assert.match(lahde, /pulu\.tuhoa\(\);\n    \/\* Vinkkiajastin ei saa herätä suljetun näkymän päälle\. \*\/\n    lopetaVinkki\(\);/);
 });
 
 test('selitteen otsikkorivi on linssin vihreä, maa-osa harmaa', () => {
