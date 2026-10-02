@@ -1,4 +1,4 @@
-# Linnanrakentajan luovutus 2.10.2026 klo 18.3x (Opus high; tilin viikkoraja lähellä)
+# Linnanrakentajan luovutus 2.10.2026 klo 18.3x (päivitys 18.4x) (Opus high; tilin viikkoraja lähellä)
 
 ## Kärki nyt: linnan väki skinnatuiksi hahmoiksi (omistaja 18.0x, polku (a))
 - Omistaja: "haluan ne valmiit mallit joiden päälle vain vaihdetaan vaatteet ... tärkeintä mahdollisimman sulava liike".
@@ -9,7 +9,12 @@
   Lähteet: `proto-3d/_lahteet/quaternius-{ubc,asut,ual}/` (+ T_Ranger_vartija.png). Asut Standard-paketissa: Peasant ja Ranger (m/n).
 - **Siirtoseppä** tekee natiivin: DioraamaGlb skin + oma sekoitin (crossFade 0,25 s, timeScale = nopeus × kesto / sykli),
   haara `siirtoseppa/linna-skin`; iPhone-video Päätoimittajalle ennen kuin kaikki 17 vaihdetaan.
-- AUKI: webin AnimationMixer (Pelikoodari vai Linnanrakentaja, Päätoimittaja päättää); kolmiobudjetti (32 k/hahmo → LOD 8–10 k
+- **Päivitys 18.4x:** vartija v2 `_valmiit/vartija-skin/v2` (8 988 kolmiota, vain perusväri 512; Siirtosepän budjetti 8–10 k).
+  Peilipaketti **b116ad23cc81bcab** (blender 6293384c, ei osoitinta) haarasta `linnanrakentaja-linna-skin` (ei PR:ää):
+  `henkilot[id].malli3d.skin` = rakenna.mjs lisaaBlender + `js/dioraama/hahmot-skin.json`, vie-blender.sh vie `hahmot/*.glb`
+  (lähde `_valmiit/olavinlinna-blender-v26/hahmot/<henkilo>.glb`). Siirtoseppä kuvaa Muurinharjan vartijan iPhonella.
+- **Webin AnimationMixer on Linnanrakentajan** (Päätoimittaja 2.10.), mutta VASTA kun omistaja on hyväksynyt natiivin vartijavideon.
+- AUKI: kolmiobudjetti (32 k/hahmo → LOD 8–10 k
   tarvittaessa); muut hahmot (talonpoika/renki/vesipoika/kokki = Peasant, naiset Female_Peasant), katselu- ja kääntöleikkeitä ei
   UAL Standardissa (katselu = idle, kääntö juurikiertona). (b+)-suunnitelma (16 nivelen spline) on LOPETETTU.
 
