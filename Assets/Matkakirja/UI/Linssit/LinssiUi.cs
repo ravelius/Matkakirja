@@ -368,9 +368,12 @@ namespace Matkakirja.Natiivi
         /// Sulkupilleri näkyy, kun linssi on auki eikä sitä peitä kuvanäkymä tai vertailuarkki
         /// eikä korvaa aikajanan hampurilainen (sen "Poistu").
         /// </summary>
-        void PaivitaSulku()
+        internal void PaivitaSulku()
         {
-            bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa && !valitsinAuki;
+            // Linnassa ✕ korvautuu valikon "Sulje linna" -rivillä (omistaja 2.10. 14.44, LinnaValikko). Ajattelijat käyttävät
+            // linssien yhteistä sulkua (0f703701), joten niille ei ole omaa ehtoa.
+            bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa && !valitsinAuki
+                         && !(Dioraama != null && Dioraama.Kytketty);
             sulje.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (nakyy && !sulkuNakyi) Kutista();
             else if (!nakyy) { kutistus?.Pause(); kutistus = null; }
