@@ -91,6 +91,8 @@
  * ÄÄNET: kevyt kytkinrivi ilman yhteistä kehystä ja väliviivoja; ikoni ja nimi samalla rivillä samaa kokoa; päällä =
  * pehmeä pergamenttitäyttö ilman tummaa reunaa. MATKA ja PELI: luettelorivit (ikoni, nimi yhdellä koolla, nuoli),
  * ohut viiva välissä. Uusi peli hillittynä tekstinappina alimpana. Ei kapseleita (EI OVAALEJA 2.10.). */
+/* Kapeampi valikko (omistaja 15.0x): minipopupin leveys; puhelimella ilmaa molemmille reunoille. */
+.paavalikko.tk-paneeli--v2.tk-paneeli--paikallaan { width: min(var(--tk-leveys-minipopup), 100vw - 2 * var(--tk-vali-xl)); }
 .paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma--vierekkain { gap: var(--tk-vali-xs); border: 0; border-radius: 0; overflow: visible; }
 .paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi,
 .paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma--vierekkain .tk-paneeli-rivi + .tk-paneeli-rivi {
