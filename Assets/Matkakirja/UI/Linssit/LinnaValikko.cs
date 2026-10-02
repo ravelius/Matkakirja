@@ -161,7 +161,8 @@ namespace Matkakirja.Natiivi
                     break;
                 case Nakyma.Lahteet:
                     Takaisin("Lähteet");
-                    var vieritys = new ScrollView(ScrollViewMode.Vertical);
+                    var vieritys = new ScrollView(ScrollViewMode.Vertical)
+                    { verticalScrollerVisibility = ScrollerVisibility.Hidden, horizontalScrollerVisibility = ScrollerVisibility.Hidden };
                     vieritys.style.maxHeight = Length.Percent(60);
                     valikko.Add(vieritys);
                     foreach (var l in Lahteet())
