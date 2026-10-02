@@ -48,7 +48,8 @@ namespace Matkakirja.Linssit.Astronautti
         public const double ReliefinSaturaatio = 0.8;
         public const double PilvienSade = 1.01, PilvienPeittoHuippu = 0.9, PilvienKiertoAstettaMin = 0.5;
         public const double PilvienTaysi = 0.65, PilvienNolla = 0.25;
-        public const double SumunKauko = 1.3, SumunKaukoPeitto = 0.15, SumunKeski = 0.6, SumunKeskiPeitto = 0.62, SumunLahi = 0.22;
+        // Sumu puolitettu (omistaja 2.10. 21.3x "liikaa sumua", web SUMUN_KESKI_PEITTO 0,62 → 0,31 ja SUMUN_KAUKO_PEITTO 0,15 → 0,08).
+        public const double SumunKauko = 1.3, SumunKaukoPeitto = 0.08, SumunKeski = 0.6, SumunKeskiPeitto = 0.31, SumunLahi = 0.22;
         public const double NimionVali = 11, NimioidenRako = 2, YtimenEste = 6, LadonnanValiMs = 120;
         public const double OsumaSadePx = 44;
 
