@@ -1,5 +1,8 @@
 # Linnanrakentajan luovutus 2.10.2026 klo 18.3x (LOPULLINEN 22.2x, tilinvaihto) (Opus high; tilin viikkoraja lähellä)
 
+## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
+## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
+
 ## SEURAAVA ASKEL (tilinvaihto 22.2x)
 0c. **23.2x:** irralliset liekit (fatabuuri/keittiö/laituri) = tunnelman JSON-liekit, joita natiivi ei leikkaa (vain tyhja:-liekit);
    rakenna.mjs jättää kohdistamattoman tilan liekit pois (1bb745076, testi dioraama-blender). Kaikkien liekkien alla teline 0–5 cm
