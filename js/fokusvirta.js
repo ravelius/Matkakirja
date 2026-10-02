@@ -151,7 +151,7 @@ import {
  */
 import {
   livianAanenKesto, livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu,
-  livianKuplanAika, livianKuplanAjastin, livianKuplat, pysaytaLivianAani,
+  livianKuplanAika, livianKuplanAjastin, livianKuplat, puhuTaiKupla, pysaytaLivianAani,
   soitaLivianAani, soitaLivianKaupunkiAani,
 } from './liviapuhe.js';
 import { aaniKuuluu, luennanLoppuun, stopDiaryVoice } from './luenta.js';
@@ -164,6 +164,7 @@ import {
   POLLO_KEHITTAJA_OTSAKE,
   arvoMietinta,
   polloPuheenvuoro,
+  polloPuheIlmanKuplaa,
   polloVihje,
 } from './pollo.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
@@ -6956,8 +6957,14 @@ function naytaPolloKupla(ui, teksti, { luokka = '' } = {}) {
 function polloKuplasarja(ui, city, kentta, kuplat, i = 0) {
   const teksti = kuplat[i];
   if (!teksti) return false;
-  if (!naytaPolloKupla(ui, teksti)) return false;
-  const aani = soitaLivianKaupunkiAani(ui, city?.id, kentta, { kupla: i, teksti });
+  // PUHE ÄÄNENÄ, EI KUPLANA (omistaja 2.10.2026 klo 14.09): äänite ensin, kupla vain jos ääntä ei tule. Sarja
+  // etenee äänen kestoon sidotulla ajastimella (alla), joten kuplaa ei tarvita.
+  const { audio: aani, kupla } = puhuTaiKupla(
+    () => soitaLivianKaupunkiAani(ui, city?.id, kentta, { kupla: i, teksti }),
+    () => naytaPolloKupla(ui, teksti),
+    { ilmanKuplaa: () => polloPuheIlmanKuplaa(teksti) },
+  );
+  if (!kupla) return false;
   if (i + 1 < kuplat.length) {
     clearTimeout(ui.polloKuplasarjaAjastin);
     // KUPLA ODOTTAA PUHEEN LOPPUUN (js/liviapuhe.js livianKuplanAjastin).
@@ -7003,6 +7010,8 @@ export function fokusvirtaLehtivinkki(ui, city) {
       LIVIAN_LEHTIVINKIN_SANA, { tyyppi: 'circle', kesto: 700, tayte: [2, 4] });
     // Vinkki on pulun repliikki kuten muutkin: sama soitin, sama
     // kytkin, ja puuttuva tai vanhentunut äänite on hiljainen.
+    // POIKKEUS "puhe äänenä, ei kuplana" -sääntöön (omistaja 14.09): vinkki on opastus, jonka avainsana ympyröidään
+    // kuplassa, joten kupla jää myös äänen kanssa (Päätoimittajalle).
     soitaLivianAani(ui, 'lehtivinkki', 0, { teksti: LIVIAN_LEHTIVINKKI });
   }, LEHTIVINKKI_VIIVE_MS);
   return true;
