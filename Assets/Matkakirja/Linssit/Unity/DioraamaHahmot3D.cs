@@ -239,7 +239,7 @@ namespace Matkakirja.Natiivi
         /// lattiat eivät ota reaaliaikaista varjoa vastaan, joten JOKAISEN 3D-hahmon (skinnattu ja nivelhahmo, kävelijä ja
         /// seisoja) juuren alle tulee pehmeä levy, joka liikkuu ja kääntyy hahmon mukana. Periaate kuten kartan symbolimallien
         /// maakontaktissa (Symbolimallit.Rakentaja PohjaVerkko): peitto keskellä, pehmeä lasku reunalle.</summary>
-        const float VarjoSade = 0.36f, VarjoNosto = 0.012f;
+        const float VarjoSade = 0.55f, VarjoNosto = 0.012f;
         static Mesh varjoVerkko;
         static Material varjoMateriaali;
 
@@ -680,8 +680,8 @@ namespace Matkakirja.Natiivi
             {
                 // varjokoe: punainen, täysi peitto, syvyystesti pois (näkyykö levy lainkaan); varjo: takaisin oletukseen.
                 bool koe = mita == "varjokoe";
-                varjoMateriaali.SetColor("_Vari", koe ? Color.red : new Color(0.06f, 0.045f, 0.03f, 1f));
-                varjoMateriaali.SetFloat("_Peitto", koe ? 1f : 0.5f);
+                varjoMateriaali.SetColor("_Vari", koe ? Color.red : new Color(0.02f, 0.015f, 0.01f, 1f));
+                varjoMateriaali.SetFloat("_Peitto", koe ? 1f : 0.7f);
                 varjoMateriaali.SetFloat("_ZTest", (float)(koe ? UnityEngine.Rendering.CompareFunction.Always : UnityEngine.Rendering.CompareFunction.LessEqual));
             }
             int varjoja = 0; string varjoY = "";

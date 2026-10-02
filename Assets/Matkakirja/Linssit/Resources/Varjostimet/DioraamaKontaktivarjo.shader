@@ -8,8 +8,8 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
 {
     Properties
     {
-        _Vari("Varjon väri", Color) = (0.06, 0.045, 0.03, 1)
-        _Peitto("Peitto keskellä", Range(0, 1)) = 0.5
+        _Vari("Varjon väri", Color) = (0.02, 0.015, 0.01, 1)
+        _Peitto("Peitto keskellä", Range(0, 1)) = 0.7
         [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("Syvyystesti (testikomento: Always)", Float) = 4
     }
     SubShader
@@ -53,8 +53,9 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
             half4 frag(Vali i) : SV_Target
             {
                 half r = (half)length(i.uv);
-                half a = _Peitto * (1.0h - smoothstep(0.0h, 1.0h, r));
-                return half4(_Vari.rgb, a * a / max(_Peitto, 0.001h));
+                // Tasainen ydin jalkojen alla (r < 0,35) ja pehmeä smoothstep-lasku reunalle (kartan maakontaktin renkaat).
+                half a = _Peitto * (1.0h - smoothstep(0.35h, 1.0h, r));
+                return half4(_Vari.rgb, a);
             }
             ENDHLSL
         }
