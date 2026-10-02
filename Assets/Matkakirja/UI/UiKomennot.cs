@@ -1204,6 +1204,13 @@ namespace Matkakirja.Natiivi
                     ui.Kartuscha.Testaa(ks[0].Length > 0 ? ks[0].ToUpperInvariant() : "ITA", ks.Length > 1 && ks[1] == "auki");
                     return null;
                 }
+                case "erikoisnostot":
+                {
+                    // "ui erikoisnostot [tila|napauta <i>]": ajattelijan pää kartuutsin lipun alla (kehittäjätila).
+                    var en = loput.Split(' ');
+                    if (en[0] == "napauta") return "=" + ui.Erikoisnostot.Napauta(en.Length > 1 && int.TryParse(en[1], out int ei) ? ei : 0);
+                    return "=" + ui.Erikoisnostot.Tila();
+                }
                 case "kortti":
                 {
                     // "ui kortti <id> oma": oman kaupungin rivit (Tutki, Mannerlento) Liiku-rivin sijaan.

@@ -1,0 +1,22 @@
+/* ERIKOISNOSTOT (pinta; omistaja 2.10.2026 klo 12.34, web css/pohjat/erikoisnostot.css #3843, tyylikirja.json pohjat.ERIKOISNOSTOT):
+ * sarake kartuutsin lipun alla kartuutsin rungon vieressä (UI/Erikoisnostot.cs asemoi). Osa PÄÄ: ajattelijan 3D-pää läpinäkyvällä
+ * taustalla kuten minipulu, ilman kehystä; osuma ≥ 44; nimi vain VoiceOverille. Enintään 3 allekkain. VAIN --tk-*-tokenit. */
+.mk-erikoisnostot {
+    position: absolute;
+    flex-direction: column;
+}
+
+.mk-erikoisnosto-paa {
+    width: var(--tk-nappi-laukaisin);
+    height: var(--tk-nappi-laukaisin);
+    min-width: var(--tk-nappi-osuma);
+    min-height: var(--tk-nappi-osuma);
+    margin: var(--tk-vali-s) 0 0 0;
+    padding: 0;
+    border-width: 0;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-erikoisnosto-paa--ensimmainen {
+    margin-top: 0;
+}
