@@ -54,5 +54,14 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(MoodinAskel.Ei, PulunTaulu.Askel(AstroMoodi.Seuranta, false, KyydinTila.Ikkuna, false), "ei tietä seurantaan");
             Oleta.Sama(MoodinAskel.Napauta, PulunTaulu.Askel(AstroMoodi.Ikkuna, false, KyydinTila.Kohde, false), "kohteen yltä Cupolaan");
         }
+
+        // Savuke 1117: avaruuskävelyltä "ISS:n sisälle" jäi luukkunäkymään (ilmalukossa kyyti on Ikkuna → askelkone luuli olevansa perillä).
+        [Testi] static void KavelyltaTaulustaCupolaan()
+        {
+            Oleta.Sama(MoodinAskel.LopetaKavely, PulunTaulu.Askel(AstroMoodi.Ikkuna, false, KyydinTila.Ikkuna, false, true), "ilmalukosta");
+            Oleta.Sama(MoodinAskel.LopetaKavely, PulunTaulu.Askel(AstroMoodi.Ikkuna, false, KyydinTila.Ulkona, false, true), "ulkoa");
+            Oleta.Sama(MoodinAskel.Perilla, PulunTaulu.Askel(AstroMoodi.Ikkuna, false, KyydinTila.Ikkuna, false, false), "Cupolassa");
+            Oleta.Sama(MoodinAskel.Poistu, PulunTaulu.Askel(AstroMoodi.Pallo, false, KyydinTila.Ulkona, false, true), "maapalloon Poistu lopettaa kävelyn");
+        }
     }
 }
