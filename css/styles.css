@@ -530,10 +530,11 @@ button, .brand, .turn-pill, .fact-card h2 {
  * napautettavalta.
  */
 .turn-pill {
+  --pilleri-vali: 0.45rem;   /* sama väli pisteen molemmin puolin (flex-väli ja pisteen marginaali) */
   flex: 0 1 auto;
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: var(--pilleri-vali);
   font-size: 0.9rem;
   padding: 0.25rem 0.7rem;
   /*
@@ -662,7 +663,7 @@ button, .brand, .turn-pill, .fact-card h2 {
 /* "1 pv · £400" (omistaja 2.10.2026 klo 15.1x): päivä ensin, piste kassan edessä. */
 .turn-pill .clock + .kassa::before {
   content: '·';
-  margin-right: 0.45rem;
+  margin-right: var(--pilleri-vali);
   color: inherit;
   font-weight: 400;
 }
@@ -10942,7 +10943,7 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    * 5,7vw on entisen tekstilogon mitta: 390 pikselin ruudulla se on
    * 22 px, eli tarkalleen se korkeus, joka logolla oli ennen.
    */
-  .turn-pill { font-size: 0.78rem; padding: 0.2rem 0.5rem; gap: 0.3rem; }
+  .turn-pill { --pilleri-vali: 0.3rem; font-size: 0.78rem; padding: 0.2rem 0.5rem; }
   .topbar-actions { gap: 0.15rem; }
   /*
    * Kosketuskohteet isommiksi puhelimessa.
