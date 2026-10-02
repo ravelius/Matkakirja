@@ -313,6 +313,9 @@ namespace Matkakirja.Natiivi
 
         // --- sijoitus -------------------------------------------------------------------
 
+        /// <summary>Linssin ✕:n alareuna turva-alueen yläreunasta + väli (LinssiUi.Asettele astronautin tilassa: top 12, rengas 34).</summary>
+        const float SulkuVara = 12f + 34f + 8f;
+
         void Sijoita(bool vainYlos)
         {
             float W = juuri.layout.width, H = juuri.layout.height;
@@ -331,8 +334,9 @@ namespace Matkakirja.Natiivi
             var l = UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>();
             if (l != null && l.IssRuudulla(out var px) && Screen.width > 0 && Screen.height > 0)
                 vaista.Add(PulunTaulu.IssAlue(px.x * W / Screen.width, (Screen.height - px.y) * H / Screen.height));
-            // Ylin sallittu yläreuna: turva-alue ja kyydissä lukemarivi (LIVE · ISS …, noin 44 pt) sen alla.
-            float ylaMin = kerros.Reunat(LinssiUi.Kerros).y + (Linssi()?.Kyydissa == true ? 52f : PulunTaulu.YlaMin);
+            // Ylin sallittu yläreuna: turva-alue ja kyydissä lukemarivi (LIVE · ISS …, noin 44 pt) sen alla. Aina vähintään linssin
+            // harmaan ✕:n alapuolella (12 + 34 + 8 pt; Natiivisepän savuke 1121: taulun oma ✕ jäi linssin ✕:n alle).
+            float ylaMin = kerros.Reunat(LinssiUi.Kerros).y + Mathf.Max(Linssi()?.Kyydissa == true ? 52f : PulunTaulu.YlaMin, SulkuVara);
             var valittu = PulunTaulu.Sijoita(pulu.Value, W, H, w, h, vaista, vainYlos ? paikka : null, ala, ylaMin);
             paikka = valittu.Nimi;
             ala = valittu.Ala;
