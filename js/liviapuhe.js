@@ -1627,6 +1627,34 @@ export function pysaytaLivianAani(ui, { haivyta = true } = {}) {
 }
 
 /**
+ * PUHE ÄÄNENÄ, EI KUPLANA (omistaja 2.10.2026 klo 14.09): kun repliikki kuuluu äänenä, sitä ei näytetä puhekuplana.
+ * Teksti näkyy vain, jos sitä ei puhuta (ei äänitettä, Kertoja pois, Pulun liuku nollassa, kertoja puhuu, radio).
+ *
+ * `soita()` on kutsupaikan oma soitin (soitaLivianAani / -KaupunkiAani / -LinssiAani), joka palauttaa null aina,
+ * kun ääni ei soisi — silloin kupla näytetään heti kuten ennen. Kun ääni lähtee, kuplan tilalla on `ilmanKuplaa()`
+ * (chat-loki ja puhe-ele, js/pollo.js polloPuheIlmanKuplaa). Jos ääni ei käynnisty `varaMs`:ssä (lataus jumissa,
+ * selain esti toiston) tai lataus kaatuu, kupla näytetään varalta, ettei repliikki katoa.
+ *
+ * @param {() => HTMLAudioElement|null} soita
+ * @param {() => any} kupla kuplan luonti (palauttaa kutsupaikan oman arvon)
+ * @param {{ilmanKuplaa?: () => any, varaMs?: number}} [asetukset]
+ * @returns {{audio: HTMLAudioElement|null, kupla: any}} kupla = kuplan arvo, tai true kun puhe korvasi kuplan
+ */
+export function puhuTaiKupla(soita, kupla, { ilmanKuplaa = null, varaMs = 1500 } = {}) {
+  const audio = soita?.() ?? null;
+  if (!audio) return { audio: null, kupla: kupla() };
+  try { ilmanKuplaa?.(); } catch { /* ele ja loki ovat koristeita */ }
+  let varalla = false;
+  const vara = () => { if (varalla) return; varalla = true; kupla(); };
+  audio.addEventListener?.('error', vara, { once: true });
+  const ajastin = setTimeout(() => {
+    if (!audio.ended && !(audio.currentTime > 0)) vara();
+  }, varaMs);
+  audio.addEventListener?.('playing', () => clearTimeout(ajastin), { once: true });
+  return { audio, kupla: true };
+}
+
+/**
  * Soittaa yhden Livian repliikin. Kutsutaan kuplan ilmestyessä
  * (js/livia.js) — kupla on aina ensin, ääni seuraa sitä.
  *

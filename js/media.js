@@ -327,6 +327,15 @@ export function julisteUrl(tiedosto) {
   return `${PEILI_JUURI}${JULISTE_ALIPOLKU}${tiedosto}`;
 }
 
+/**
+ * Julisteen pikkukuva gallerian ruudukkoon: `tuotanto/tuot-x.png` → `tuotanto/pieni/tuot-x.jpg` (360 px JPEG,
+ * Päätoimittaja 2.10.2026: täysikokoiset PNG:t olivat ~4 Mt kukin). Kutsuja käyttää julisteUrl:ää varana.
+ */
+export function julistePieniUrl(tiedosto) {
+  const i = tiedosto.lastIndexOf('/');
+  return julisteUrl(`${tiedosto.slice(0, i + 1)}pieni/${tiedosto.slice(i + 1).replace(/\.png$/i, '.jpg')}`);
+}
+
 /*
  * LAATTAPYRAMIDI (30.8.2026): maailmanlaajuinen esirenderöity kartta
  * laattoina (tools/generoi-laattapyramidi.mjs, js/laattapyramidi.js).
