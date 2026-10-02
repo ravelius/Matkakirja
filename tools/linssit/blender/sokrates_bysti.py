@@ -905,6 +905,34 @@ def kiertopiste(nimi, kohde, k, ruudut, voima, kansio, ala, korkeudet, siemen):
         tausta_rivi(f'{nimi}-{i_}', p_, suunta, 0.6, ala, os.path.join(kansio, f), kork, kulma, v_m, nopeus, kirkkaus, ruudut, voima)
 
 
+PAAN_PROJEKTORIT = (  # v10 (omistaja 2.10. 08.4x): taustavirta koko pään alueelle — (kohde, suunta kohteesta, ala m, rivejä)
+    ((0.0, -0.10, 0.33), (0.0, -1.0, 0.10), 0.30, 7),     # kasvot ja parta edestä
+    ((0.0, -0.02, 0.47), (0.0, -0.55, 1.0), 0.30, 7),     # päälaki ja otsa ylhäältä
+    ((-0.09, -0.04, 0.38), (-1.0, -0.35, 0.15), 0.22, 3),  # vasen ohimo ja poski
+    ((0.09, -0.04, 0.38), (1.0, -0.35, 0.15), 0.22, 3),    # oikea ohimo ja poski
+)   # yhteensä 20 riviä (omistaja 2.10. 08.3x: 18 kreikaksi + 2 suomeksi, puolet kumpaankin suuntaan)
+
+
+def paan_virta(nimi, ruudut, voima, kansio, korkeudet, siemen, etaisyys=0.9):
+    """v10: 15 taustariviä koko päähän (päälaki, otsa, ohimot, posket, parta). Rivit jaetaan projektoreille ja
+    levitetään tasaisin välein projektorin kuva-alan korkeudelle (ei aukkoja); jokaisella oma nopeus (selvästi eri
+    tahdit), suunta, kulma ja koko; vaakasuunnassa luuppaavat saumattomasti (REPEAT)."""
+    import random as _r
+    rnd = _r.Random(siemen); tiedostot = sorted(f for f in os.listdir(kansio) if f.startswith('tausta-') and 'sumea' not in f)
+    nopeudet = [0.0007 * 1.18 ** k for k in range(len(tiedostot))]; rnd.shuffle(nopeudet)
+    i_ = 0
+    for kohde, suunta, ala, rivit in PAAN_PROJEKTORIT:
+        for k in range(rivit):
+            if i_ >= len(tiedostot): return
+            f = tiedostot[i_]; kork = rnd.choice(korkeudet); kirkkaus = rnd.uniform(0.10, 0.28)
+            if '-fi-' in f:
+                kork = rnd.choice(sorted(korkeudet)[:2]); kirkkaus = rnd.uniform(0.08, 0.13)
+            v_m = (-0.4 + 0.8 * (k + 0.5) / rivit) * ala + rnd.uniform(-0.01, 0.01)
+            tausta_rivi(f'{nimi}-{i_}', Vector(kohde), Vector(suunta).normalized(), etaisyys, ala, os.path.join(kansio, f),
+                        kork, rnd.uniform(-7, 7), v_m, nopeudet[i_] * (1 if i_ % 2 else -1), kirkkaus, ruudut, voima * 3.0)   # puolet kumpaankin suuntaan
+            i_ += 1
+
+
 def syke_kaikuun(valo, ikkuna, voima, syke, askel=2):
     """v10: kaikukuvan "VU-mittari" (omistaja 2.10. 08.3x): voima = häivytyskäyrä × Satien verhokäyrä (1 ± 0,15).
     Häivytys 45 ruutua sisään ja ulos kuten kaiku_projektori; avaimet joka toinen ruutu."""
