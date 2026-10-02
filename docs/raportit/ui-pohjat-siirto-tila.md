@@ -22,6 +22,7 @@ UI-siirtymiä. Suunnitelma ja säännöt: `ui-pohjat-kartoitus-20261001.md`. Sä
 | KENTTÄ-pohjaosa | #3808 lomakekenttä + palautelomake (Pelikoodari) | `pohja-kentta` b1058f04 (KORTTI-lomakkeissa; työhuone ennallaan) | käännösjonossa visan kanssa |
 | Juna 108–109 (1.10. ilta) | – | 108: ihmiskortti-3 b5337960 (löytökuva piiloon joka ruudun asettelussakin). 109: vetokahva kortin tasolle 3dc8648b (käsiveto toimii, 58afbe5b), linssivalikko LASI b50952f5 + z c4bcc9a4, visa B cd55dccc (+ tyylikirja-3), lappu-nostoluennassa 7b48749d, kentta-2 afddd9f1 | todennettu iPhone 17 (f4f47679, 58afbe5b) |
 | Ilta 1.10. 21.2x | #3804 pillerivalikko, #3811 linssivalitsin (Pelikoodari) | `kahva-kaksivaihe` 2732fcee (NOSTOKORTTI kohta 2: laajennetusta alasveto ensin 45 %:iin), `pohja-pillerivalikko` ca234f4b (PANEELI PAPERI: pillerivalikko, Muut, esikatselu; linssivalitsimen PÄÄLLÄ nimen alle kapeassa) | todennettu 77f7667f, merge-pyynnössä |
+| Aamu 2.10. | #3820 css-jako, #3788 kohdekortti pysyväksi (omistaja 07.1x) | `uss-jako` dd4bb096 (Pohjat/*.uss + Pinnat, UI pikselilleen sama 26 näkymässä), `kohdekortti-napit` 240eaafe (Kysy vain kysymyksillä, Lehti = leikekirjanosto) merge-pyynnössä; `kohdekortti-visa` 467577c4 (Visa omaksi KORTTI-ikkunaksi) käännösjonossa | todennettu 12cc432d / fad7c64a |
 
 ## Pinnat pohjiin (natiivi)
 
