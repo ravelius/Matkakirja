@@ -371,7 +371,7 @@ namespace Matkakirja.Natiivi
             Kartuscha = new Kartuscha(kerros);
             Kartuscha.AukiMuuttui += auki => Matkavalinta?.VaistaLiiku(auki);
             MaakuntaNimet = new MaakuntanimetKartalla(kerros, Kartuscha);
-            Erikoisnostot = new Erikoisnostot(kerros, Kartuscha);   // ajattelijan pää lipun alla (kehittäjätila, web #3843)
+            Erikoisnostot = new Erikoisnostot(kerros, Kartuscha);   // ajattelijoiden kipsipäät karttaobjekteina (kehittäjätila, web #3866)
             Karttaselite = new Karttaselite(kerros);
             OfflineTila = new OfflineTilaUi(kerros, Tilarivi, () => { Valikko.Sulje(); Aanentasot.Avaa(); });
             Matkakirja = new Matkakirjakortti(kerros);

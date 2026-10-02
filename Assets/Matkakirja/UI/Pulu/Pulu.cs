@@ -143,12 +143,12 @@ namespace Matkakirja.Natiivi
             var kartuscha = ui.Kartuscha?.AukiKortti;
             if (kartuscha != null && kartuscha.panel != null && kartuscha.worldBound.height > 0)
                 korkein = Mathf.Max(korkein, kartuscha.panel.visualTree.layout.height - kartuscha.worldBound.yMin + 8f);
-            // Ajattelijan kipsipää kartuutsin vieressä (ERIKOISNOSTOT, Päätoimittaja 2.10.2026: pulun jalat jäivät pään päälle):
-            // kun sarake osuu vaakasuunnassa pulun kohdalle, pulu nousee sen yläpuolelle kuten avatun kartuutsin kohdalla.
-            var paat = ui.Erikoisnostot?.NakyvaAlue;
-            if (paat.HasValue && alue.panel != null && alue.worldBound.width > 0
-                && paat.Value.xMax > alue.worldBound.xMin && paat.Value.xMin < alue.worldBound.xMax)
-                korkein = Mathf.Max(korkein, alue.panel.visualTree.layout.height - paat.Value.yMin + 8f);
+            // Ajattelijan kipsipää (ERIKOISNOSTOT, Päätoimittaja 2.10.2026; web #3866 pulu-vaistettava): kun pää on pulun
+            // kohdalla tai sen alla, pulu nousee sen yläpuolelle kuten avatun kartuutsin kohdalla.
+            if (ui.Erikoisnostot != null && alue.panel != null && alue.worldBound.width > 0)
+                foreach (var paa in ui.Erikoisnostot.NakyvaAlueet())
+                    if (paa.xMax > alue.worldBound.xMin && paa.xMin < alue.worldBound.xMax && paa.yMax > alue.worldBound.yMin - 40f)
+                        korkein = Mathf.Max(korkein, alue.panel.visualTree.layout.height - paa.yMin + 8f);
             // Maapallon vuosi -linssin paneeli alareunassa: sama hyppy sen yläpuolelle.
             var vuosi = ui.Linssit?.Vuosi?.Paneeli;
             if (vuosi != null && vuosi.panel != null && ui.Linssit.Vuosi.Nakyvissa && vuosi.worldBound.height > 0)

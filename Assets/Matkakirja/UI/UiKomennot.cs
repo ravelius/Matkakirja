@@ -1215,9 +1215,12 @@ namespace Matkakirja.Natiivi
                 }
                 case "erikoisnostot":
                 {
-                    // "ui erikoisnostot [tila|napauta <i>]": ajattelijan pää kartuutsin lipun alla (kehittäjätila).
+                    // "ui erikoisnostot [tila|napauta <i>|kipsi r g b]": ajattelijoiden kipsipäät kartalla (kehittäjätila).
                     var en = loput.Split(' ');
                     if (en[0] == "napauta") return "=" + ui.Erikoisnostot.Napauta(en.Length > 1 && int.TryParse(en[1], out int ei) ? ei : 0);
+                    if (en[0] == "varjokuva" || en[0] == "varjo") return "=" + ui.Erikoisnostot.Varjo(en);
+                    if (en[0] == "kipsi" && en.Length > 3)
+                        return "=" + ui.Erikoisnostot.Saato(en[0], float.Parse(en[1], CultureInfo.InvariantCulture), float.Parse(en[2], CultureInfo.InvariantCulture), float.Parse(en[3], CultureInfo.InvariantCulture));
                     return "=" + ui.Erikoisnostot.Tila();
                 }
                 case "linssitnappi":

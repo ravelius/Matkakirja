@@ -1,13 +1,17 @@
-// AJATTELIJOIDEN 3D-PÄÄT ERIKOISNOSTOIHIN (Linssiseppä 2.10.2026; omistaja 2.10. klo 12.34 vaihtoehto B, web #3843
-// js/ajattelijapaat.js luoPaanPiirtaja on malli). Pää ladataan ämpäristä (ajattelijat/kartta/v1/<tunnus>-kartta.glb, Linnanrakentaja
+// AJATTELIJOIDEN KIPSIPÄÄT KARTALLA (Linssiseppä 2.10.2026; omistaja 2.10. klo 12.34, 16.4x ja 16.5x; web #3866
+// js/ajattelijapaat.js luoPaanPiirtaja ja KIPSI_KARTALLA ovat malli). Pää ladataan ämpäristä (ajattelijat/kartta/v1/<tunnus>-kartta.glb, Linnanrakentaja
 // _valmiit/ajattelijat-kartta/v1: yksi verkko, kipsiväri + normaalikartta 512 px, glTF Y ylös, kasvot +Z, pivot kaulan juuressa)
 // ja piirretään omalla kameralla RenderTextureen, jonka UI/Erikoisnostot.cs näyttää PÄÄ-napissa. (UI-kansiossa, koska
 // Kartta-kokoonpano ei näe AjattelijatSovitinta.)
 //
-//  - Kehys: DioraamaGlb (unityyn) peilaa z:n, joten kasvot ovat −Z:ssa ja kamera on webin (0, 0,13, 0,72) peilikuvassa
-//    (0, 0,13, −0,72), katse (0, 0,12, 0), fov 30. Webin kierto (x −12°, y kääntö, XYZ-järjestys) peilattuna: x +12°, y −kääntö.
+//  - Kehys: DioraamaGlb (unityyn) peilaa z:n, joten kasvot ovat −Z:ssa ja kamera on webin (0, 0,12, 0,72 × 1,5) peilikuvassa
+//    (0, 0,12, −1,08), katse (0, 0,12, 0), fov 30; kangas 1,5 × pää varjolle. Webin kierto (x −12°, y kääntö, XYZ) peilattuna:
+//    x +12°, y −kääntö.
+//  - Varjo paperille (web ShadowMaterial 0,1 pään takana, peitto 0,26): pään oma siluetti (RenderTexturen alfa) siirrettynä
+//    valoa vastaan ja pienennettynä paperin syvyyden perspektiivillä, sumennettuna (AjattelijaVarjo.shader), näytetään pään alla
+//    (Varjo). Verkon projektio tasolle (kerros 14, simulaattori 8a201be6) jäi webiä pienemmäksi, joten siitä luovuttiin.
 //  - Valo: annetaan webin tapaan kameran koordinaateissa (x oikea, y ylös, z kohti katsojaa) ja muunnetaan maailmaan.
-//  - Oma kerros 13 (vapaa: 8 Elava, 9 dioraama, 10 pieni liike, 11 taivas, 12 sijaintipallo); muut kamerat eivät piirrä sitä.
+//  - Oma kerros 13 (8 Elava, 9 dioraama, 10 pieni liike, 11 taivas, 12 sijaintipallo); muut kamerat eivät piirrä sitä.
 //  - Piirto vain pyydettäessä: kamera päällä kaksi ruutua ja RenderTexture säilyttää kuvan (kuten Sijaintipallo).
 using System;
 using System.Collections;
@@ -25,12 +29,14 @@ namespace Matkakirja.Natiivi
     public sealed class AjattelijaPaa
     {
         public AjattelijaData Data;
-        public RenderTexture Kuva;
+        public RenderTexture Kuva, Varjo;
         public bool Valmis;
         public string Virhe;
         internal GameObject Juuri, Malli;
         internal Camera Kamera;
-        internal Material Materiaali;
+        internal Material Materiaali, VarjoMat;
+        internal RenderTexture Vali;
+        internal Vector2 ValoXY;
         internal Texture2D Vari, Normaali;
         internal Mesh Verkko;
         internal int PiirtoKehyksia;
@@ -43,9 +49,18 @@ namespace Matkakirja.Natiivi
     public static class AjattelijaPaat
     {
         public const int Kerros = 13;
-        const float KameraZ = -0.72f, KameraY = 0.13f, KatseY = 0.12f, Fov = 30f;
+        /// <summary>Kipsin sävykerroin (web KIPSI_KARTALLA.savy); A/B `ui erikoisnostot kipsi r g b`.</summary>
+        public static Vector4 Savy = new Vector4(1.0f, 1.03f, 1.1f, 0f);
+        /// <summary>
+        /// Web KIPSI_KARTALLA.varjo peitto 0,26; siluetin siirto (osuus kankaasta) ja mittakaava vastaavat webin paperia 0,1 pään
+        /// takana valon korkeudella 58° (webin kuvasta: varjo ~27 % pään korkeudesta leuan alle); sumennuksen askel tekseleinä.
+        /// A/B `ui erikoisnostot varjo peitto sumennus siirto mittakaava`.
+        /// </summary>
+        public static float VarjoPeitto = 0.26f, VarjoSumennus = 1.0f, VarjoSiirto = 0.24f, VarjoMittakaava = 0.85f;
+        const float Kangas = 1.5f, KameraZ = -0.72f * Kangas, KameraY = 0.12f, KatseY = 0.12f, Fov = 30f;
+        const int MaskiPx = 96;
         static int seuraava;
-        static Shader varjostin;
+        static Shader varjostin, varjoVarjostin;
 
         static string Kansio => Path.Combine(Application.persistentDataPath, "ajattelijat-kartta");
 
@@ -54,7 +69,8 @@ namespace Matkakirja.Natiivi
         {
             var p = new AjattelijaPaa { Data = a };
             varjostin ??= Resources.Load<Shader>("AjattelijaPaa");
-            if (varjostin == null) { p.Virhe = "varjostin puuttuu"; return p; }
+            varjoVarjostin ??= Resources.Load<Shader>("AjattelijaVarjo");
+            if (varjostin == null || varjoVarjostin == null) { p.Virhe = "varjostin puuttuu"; return p; }
             int i = seuraava++;
             p.Juuri = new GameObject("AjattelijaPaa:" + a.Tunnus);
             UnityEngine.Object.DontDestroyOnLoad(p.Juuri);
@@ -80,6 +96,11 @@ namespace Matkakirja.Natiivi
             var d = k.GetUniversalAdditionalCameraData();
             if (d != null) { d.renderPostProcessing = false; d.renderShadows = false; d.requiresDepthTexture = false; d.requiresColorTexture = false; }
             k.enabled = false;
+            // Varjo: pään siluetista sumennettuna (Askel) → Varjo (näytetään pään alla).
+            p.Vali = new RenderTexture(MaskiPx, MaskiPx, 0, RenderTextureFormat.ARGB32) { name = "AjattelijaVarjoVali", hideFlags = HideFlags.HideAndDontSave };
+            p.Varjo = new RenderTexture(MaskiPx, MaskiPx, 0, RenderTextureFormat.ARGB32) { name = "AjattelijaVarjo:" + a.Tunnus, hideFlags = HideFlags.HideAndDontSave };
+            p.Vali.Create(); p.Varjo.Create();
+            p.VarjoMat = new Material(varjoVarjostin) { name = "AjattelijaVarjo:" + a.Tunnus };
             foreach (var c in Camera.allCameras) if (c != k) c.cullingMask &= ~(1 << Kerros);
             ajaja.StartCoroutine(Lataa(p));
             return p;
@@ -176,8 +197,11 @@ namespace Matkakirja.Natiivi
             var t = p.Juuri.transform;
             // Webin XYZ-järjestys (Rx · Ry) peilattuna: x +12°, y −kääntö.
             p.Malli.transform.localRotation = Quaternion.AngleAxis(ErikoisnostoMitat.KallistusAste, Vector3.right) * Quaternion.AngleAxis(-kaanto, Vector3.up);
-            var maailma = p.Kamera.transform.TransformDirection(new Vector3(valoKamerassa.x, valoKamerassa.y, -valoKamerassa.z));
-            p.Materiaali.SetVector("_Valo", maailma.normalized);
+            var maailma = p.Kamera.transform.TransformDirection(new Vector3(valoKamerassa.x, valoKamerassa.y, -valoKamerassa.z)).normalized;
+            p.Materiaali.SetVector("_Valo", maailma);
+            p.Materiaali.SetVector("_Savy", Savy);
+            float xy = Mathf.Sqrt(valoKamerassa.x * valoKamerassa.x + valoKamerassa.y * valoKamerassa.y);
+            p.ValoXY = xy > 1e-3f ? new Vector2(valoKamerassa.x / xy, valoKamerassa.y / xy) : Vector2.up;
             p.Kamera.enabled = true;
             p.PiirtoKehyksia = 2;
         }
@@ -186,7 +210,40 @@ namespace Matkakirja.Natiivi
         public static void Askel(AjattelijaPaa p)
         {
             if (p?.Kamera == null || !p.Kamera.enabled) return;
+            // Edellisen ruudun pää on piirretty: siluetti siirrettynä valoa vastaan, sumennus vaaka + pysty (viimeisellä peitto).
+            float a = VarjoSumennus / MaskiPx;
+            p.VarjoMat.SetFloat("_Peitto", 0f);
+            p.VarjoMat.SetVector("_Siirto", new Vector4(-p.ValoXY.x * VarjoSiirto, -p.ValoXY.y * VarjoSiirto, 0f, 0f));
+            p.VarjoMat.SetFloat("_Mittakaava", VarjoMittakaava);
+            p.VarjoMat.SetVector("_Suunta", new Vector4(a, 0f, 0f, 0f));
+            Graphics.Blit(p.Kuva, p.Vali, p.VarjoMat, 1);
+            p.VarjoMat.SetFloat("_Peitto", VarjoPeitto);
+            p.VarjoMat.SetVector("_Siirto", Vector4.zero);
+            p.VarjoMat.SetFloat("_Mittakaava", 1f);
+            p.VarjoMat.SetVector("_Suunta", new Vector4(0f, a, 0f, 0f));
+            Graphics.Blit(p.Vali, p.Varjo, p.VarjoMat, 1);
             if (p.PiirtoKehyksia-- <= 0) p.Kamera.enabled = false;
+        }
+
+        /// <summary>Diagnostiikka `ui erikoisnostot varjokuva`: maski ja varjo PNG:ksi Documentsiin, alfan summa ja maksimi.</summary>
+        public static string VarjoKuva(AjattelijaPaa p)
+        {
+            if (p?.Varjo == null) return "ei varjoa";
+            string Tallenna(RenderTexture rt, string nimi)
+            {
+                var vanha = RenderTexture.active;
+                RenderTexture.active = rt;
+                var t = new Texture2D(rt.width, rt.height, TextureFormat.RGBA32, false);
+                t.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
+                t.Apply(false);
+                RenderTexture.active = vanha;
+                double summa = 0; float maks = 0;
+                foreach (var c in t.GetPixels32()) { summa += c.a; maks = Mathf.Max(maks, c.a); }
+                File.WriteAllBytes(Path.Combine(Application.persistentDataPath, "varjo-" + nimi + "-" + p.Data.Tunnus + ".png"), t.EncodeToPNG());
+                UnityEngine.Object.Destroy(t);
+                return $"{nimi} alfa summa {summa / 255:0} maks {maks:0}";
+            }
+            return Tallenna(p.Kuva, "paa") + ", " + Tallenna(p.Varjo, "varjo");
         }
 
         public static void Pura(AjattelijaPaa p)
@@ -194,7 +251,9 @@ namespace Matkakirja.Natiivi
             if (p == null || p.Purettu) return;
             p.Purettu = true;
             if (p.Kamera != null) p.Kamera.targetTexture = null;
-            if (p.Kuva != null) { p.Kuva.Release(); UnityEngine.Object.Destroy(p.Kuva); }
+            foreach (var rt in new[] { p.Kuva, p.Varjo, p.Vali })
+                if (rt != null) { rt.Release(); UnityEngine.Object.Destroy(rt); }
+            if (p.VarjoMat != null) UnityEngine.Object.Destroy(p.VarjoMat);
             if (p.Juuri != null) UnityEngine.Object.Destroy(p.Juuri);
             if (p.Materiaali != null) UnityEngine.Object.Destroy(p.Materiaali);
             if (p.Verkko != null) UnityEngine.Object.Destroy(p.Verkko);

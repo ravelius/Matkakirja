@@ -7,20 +7,16 @@ namespace Matkakirja
     /// js/ajattelijapaat.js on malli). Puhdas geometria (ei UnityEngineä), testit Kartta-testit/Testit/ErikoisnostotTestit.cs;
     /// käyttö UI/Erikoisnostot.cs ja UI/AjattelijaPaat.cs.
     ///
-    ///  - PAIKKA (web sarakkeenPaikka): sarake roikkuu lipun alla (väli 8) kartuutsin oikean reunan ulkopuolella. Kartuutsi
-    ///    on ruudun alareunassa, joten jos sarake ei mahdu lipun alle, se nousee niin, että alareuna on kartuutsin alareunan
-    ///    tasalla (puhelin: pää kartuutsin vieressä). Ruudun koordinaatit, y alas kuten webin getBoundingClientRect.
-    ///    REUNAEHTO (Päätoimittajan OK 2.10.2026, webiin samoin): jos sarake ei mahdu vaakasuunnassa (puhelimella avattu
-    ///    kartuutsi on lähes ruudun levyinen, webissä pää jäi 12 px:ää lukuun ottamatta ruudun ulkopuolelle), se nousee
-    ///    kartuutsin yläpuolelle oikeaan reunaan: x = oikea reuna − 64 − 8, y = kartuutsin yläreuna − korkeus − 8.
+    ///  - PAIKKA (web #3866 paanRuutupaikka, omistaja 16.5x: pää on karttaobjekti kiinteässä karttapisteessä): napin
+    ///    keskipiste x = pisteen x, y = pisteen y − 0,35 × 64 (pää seisoo pisteen päällä); piilossa, kun piste on yli pään
+    ///    verran ruudun ulkopuolella. Ruudun koordinaatit, y alas.
     ///  - KÄÄNTÖ (web kaantoKeskustaa): nenä kohti näkymän keskustaa enintään 30° (+ = katsojan oikealle).
     ///  - HEILAHDUS (web HEILAHDUS): kartan pituusasteen muutos korkeudella jaettuna potkaisee jousta (jousi 0,12,
     ///    vaimennus 0,82, kerroin 1,4, korkeus vähintään 0,05 maan sädettä).
     /// </summary>
     public static class ErikoisnostoMitat
     {
-        public const float KaantoAste = 30f, KallistusAste = 12f, Vali = 8f, PaaPt = 64f;
-        public const int Enintaan = 3;
+        public const float KaantoAste = 30f, KallistusAste = 12f, PaaPt = 64f;
         public const double Jousi = 0.12, Vaimennus = 0.82, Kerroin = 1.4, KorkeusMin = 0.05;
 
         /// <summary>Nenän kääntö (aste) kohti keskustaa: pään keskikohta x suhteessa ruudun leveyteen, ±30°.</summary>
@@ -31,24 +27,13 @@ namespace Matkakirja
             return s * KaantoAste;
         }
 
-        /// <summary>
-        /// Sarakkeen vasen yläkulma (ruutu, y alas): lipun alla kartuutsin oikean reunan ulkopuolella; <paramref name="mahtuu"/>
-        /// = mahtuiko lipun alle (muuten alareuna kartuutsin alareunan tasalla, ei ruudun yläreunan yli).
-        /// </summary>
-        public static (float X, float Y) SarakkeenPaikka(float lippuVasen, float lippuAla, float kortinOikea, float kortinAla,
-            float korkeus, out bool mahtuu) =>
-            SarakkeenPaikka(lippuVasen, lippuAla, kortinOikea, float.NaN, kortinAla, korkeus, float.PositiveInfinity, out mahtuu, out _);
-
-        /// <summary>Kuten yllä, ja reunaehto: ei mahdu oikean reunan sisään → kartuutsin yläpuolelle oikeaan reunaan (<paramref name="ylla"/>).</summary>
-        public static (float X, float Y) SarakkeenPaikka(float lippuVasen, float lippuAla, float kortinOikea, float kortinYla, float kortinAla,
-            float korkeus, float oikeaReuna, out bool mahtuu, out bool ylla)
+        /// <summary>Pään keskipiste ruudulla karttapisteestä (x, y alas); false = yli pään verran ruudun ulkopuolella.</summary>
+        public static bool PaanRuutupaikka(float pisteX, float pisteY, float leveys, float korkeus, out float x, out float y)
         {
-            float alle = lippuAla + Vali;
-            mahtuu = alle + korkeus <= kortinAla;
-            float x = Math.Max(lippuVasen, kortinOikea + Vali);
-            ylla = x + PaaPt + Vali > oikeaReuna && !float.IsNaN(kortinYla);   // web #3857: x + 64 + 8 > ruutu
-            if (ylla) return (oikeaReuna - PaaPt - Vali, Math.Max(0f, kortinYla - korkeus - Vali));
-            return (x, mahtuu ? alle : Math.Max(0f, kortinAla - korkeus));
+            x = pisteX;
+            y = pisteY - PaaPt * 0.35f;
+            if (float.IsNaN(x) || float.IsNaN(y)) return false;
+            return !(x < -PaaPt || y < -PaaPt || x > leveys + PaaPt || y > korkeus + PaaPt);
         }
 
         /// <summary>Pituusasteen muutos (aste, kääritty ±180) jaettuna korkeudella maan säteinä (vähintään 0,05).</summary>
