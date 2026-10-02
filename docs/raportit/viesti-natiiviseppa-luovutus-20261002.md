@@ -2,20 +2,23 @@
 
 Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen: -20261001-b.md (käytännöt voimassa, ellei tässä toisin).
 
-## TILA HETI (päivitetty 14.5x)
+## TILA HETI (päivitetty 15.3x)
 
-- **proto master 3f17a0e6 = BUILD 123** (juna 2b2f7adf, käännös 266fb417). juna/b13 = 2b2f7adf. Ei avoimia junia eikä
-  natiiviseppa-worktreeitä. TF 116, 118 ja 120 ladattu 2.10.; seuraava TF = uusin puhdas BUILD.
-- BUILD 122 19060a07 (harmaa ✕, kiilto, kilven maakynnys), BUILD 123 (linna-piikit-2, linna-puhevuoro).
-- Avoinna Siirtosepällä: puhevuoron katkaisu Pulun chatin / luennan / Ihmisen matka -kertojan kanssa ja tekstilaatikon
-  piilotus (savuke 1123 osittain) → korjaukset juna 124:ään. Muurinharjan porras = vanha maastodatan löydös (Linnanrakentaja),
-  ei 120:n regressio. Natiivi-UI: pohjavahti --kirjaa; ✕ neliöksi (omistaja 14.16) tulossa. Cupolassa ei ✕:ää (tarkoitettu).
-- Laitekäännökset tänään: laite-dev-{badf0d9a,be5bd3d4,90840152,29c84ce2,db3ed117}, laite-rel-{f7e91fcc,84b8556b,22dfaccb,
-  f5c48ad4,c476ad0c} (lokit/).
+- **proto master 9df72166 = BUILD 124** (juna 46540fa3, käännös f70d6994; nostorivi + linna-puhevuoro-2). TF 116, 118, 120
+  ladattu; TF 123 vietiin 15.04; Päätoimittaja: VIE 124 (SHA Julkaisijalla).
+- **Juna 125 koottu ja testattu, ei avattu**: worktree /Users/Shared/Claude/wt/proto-natiiviseppa-j124, haara
+  natiiviseppa/juna-124-koe = cc387301 = 46540fa3 + linssiseppa2/ajattelijat ea76da0b (Päätoimittajan OK, vain
+  kehittäjätilassa; reunavalo 3× kirkkaampi korjataan erikseen). Testit 0/436/387/568, pohjavahti ok (70). NYT pyydetty
+  Julkaisijalta TF 124 -viennin jälkeen.
+- **Juna 126 odottaa**: siirtoseppa/linna-puhevuoro-3 1bb7df6d (Pulun PCM katkaisee linnan puheen; merge-pyyntö simun
+  jälkeen). Laitetestaajan tekstilaatikkotesti: `kehittaja 1` → `linssi poikkileikkaus` → odota "erillinen puhe linna-kertoja"
+  (laatikko ei näy) → Kertoja pois -tilassa `poikki saapuminen alusta` (laatikko näkyy).
+- **Odottaa webiä**: natiivi-ui/ohjausnappi 01c0d8d1 + siirtoseppa/linna-valikko f45bf78a → kun web #3854 on mainissa.
+- Natiivi-UI: pohjavahti --kirjaa (1 pienentynyt). LS2: Ajattelijoiden reunavalo. Linnanrakentaja: Muurinharjan porras (vanha).
 
 ## TÄNÄÄN (2.10.) TEHDYT BUILDIT
 
-111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259 · 120 8fd12e83 · 122 19060a07 · 123 3f17a0e6.
+111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259 · 120 8fd12e83 · 122 19060a07 · 123 3f17a0e6 · 124 9df72166.
 Ohitetut: 112 (Lehti ei avannut leikekirjaa: täkynoston id puuttui kokoelmadatasta), 115 (ISS-kuva raidallinen +
 22dfaccb signal 11: RGB24 luettiin Color32:na), 117 (paluu avaruuskävelyltä Cupolaan ei toiminut), 121 (✕ avaruuslasi).
 
