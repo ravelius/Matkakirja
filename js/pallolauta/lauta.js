@@ -1385,8 +1385,11 @@ export function pallonAsteet(kohta) {
  */
 let uudelleenrakennuksia = 0;
 
-/** Avoinna oleva kelluva kortti (nielu: sulkeva napautus ei avaa uutta). */
-const KORTTIVALITSIN = '.fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros,'
+/**
+ * Avoinna oleva kelluva kortti (nielu: sulkeva napautus ei avaa uutta). NOSTOKORTTI-pohjan kortti (kohdekortti
+ * 2.10.2026) lasketaan vain auki ollessaan: suljettu pohja voi jäädä DOMiin tk-piilossa-luokalla.
+ */
+const KORTTIVALITSIN = '.fokuskohde-popup, .tk-nostokortti:not(.tk-piilossa), .elaintaky-kerros, .skandaali-kerros, .hetki-kerros,'
   + ' .fokusnosto-kerros, .syvennys-kerros, .minipopup, .kaupunkipopup';
 
 /**
