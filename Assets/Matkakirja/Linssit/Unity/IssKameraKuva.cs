@@ -74,7 +74,15 @@ namespace Matkakirja.Natiivi
 #if UNITY_IOS && !UNITY_EDITOR
         [System.Runtime.InteropServices.DllImport("__Internal")] static extern ulong os_proc_available_memory();
         /// <summary>Prosessin käytettävissä oleva muisti (Mt) ennen jetsam-rajaa (iOS 13+); muualla tai rajatta −1.</summary>
-        public static long VapaaMuistiMt() { ulong v = os_proc_available_memory(); return v == 0 ? -1 : (long)(v / (1024 * 1024)); }   // 0 = ei rajaa (simulaattori)
+        public static long VapaaMuistiMt()
+        {
+            ulong v = os_proc_available_memory();
+            // Simulaattorissa jetsam-rajaa ei ole (0 → −1 = ei rajaa); laitteella 0 = muisti lopussa → pienin leveys (Natiiviseppä 2.10.).
+            if (v == 0) return Simulaattori ? -1 : 0;
+            return (long)(v / (1024 * 1024));
+        }
+        static bool Simulaattori => System.Environment.GetEnvironmentVariable("SIMULATOR_DEVICE_NAME") != null
+            || SystemInfo.deviceModel == "arm64" || SystemInfo.deviceModel == "x86_64";
 #else
         public static long VapaaMuistiMt() => -1;
 #endif
