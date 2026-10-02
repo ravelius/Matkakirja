@@ -1159,7 +1159,7 @@ namespace Matkakirja.Natiivi
         {
             if (!sivut.HasValue) { sivutPilleriLeveys = float.NaN; return; }
             var v = sivut.Value;
-            float logoKeski = (KaariX(v.R, v.RiviKeski) + v.KehaVasen) / 2f;
+            float logoKeski = (KaariX(v.R, v.SaariKeski) + v.KehaVasen) / 2f; // logo on saaren keskilinjalla (KeskitaPystyyn, 18.4x)
             palkki.style.paddingLeft = Mathf.Max(v.VasenPerus * 0.5f, logoKeski - v.LogoLeveys / 2f);
             float pw = pilleri.layout.width;
             if (float.IsNaN(pw) || pw <= 0f) { palkki.style.paddingRight = v.OikeaPerus; return; }
