@@ -267,11 +267,6 @@ namespace Matkakirja.Natiivi
                 robottiKorjaus = Mathf.Clamp(AlaVara + d - perus, 0f, 80f);
             }
             alue.style.bottom = perus + robottiKorjaus;
-            {
-                float d = kuva.VarrenAlinEvasta + (kuva.EvaAla - alue.worldBound.yMax);
-                robottiKorjaus = Mathf.Clamp(AlaVara + d - perus, 0f, 80f);
-            }
-            alue.style.bottom = perus + robottiKorjaus;
             alue.style.transformOrigin = new TransformOrigin(Length.Percent(0), Length.Percent(100));
             alue.style.scale = new Scale(new Vector2(RobottiSkaala, RobottiSkaala));
         }
