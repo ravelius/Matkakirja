@@ -71,6 +71,8 @@ namespace Matkakirja
     ///   lento v3 aloitusrata 0|1  aloituslento AloituslennonRadalla (1, oletus: napautusnäkymästä lähikuvaan, nousu matkanäkymään,
     ///                             lasku) tai lento v3:n lähestymisotoksena (0); PlayerPrefs matkakirja-aloitusrata
     ///   lento v3 ilma 0|1         aloituslennon vanat ja linnut (AloituslennonIlma; 1 oletus, ei muisteta)
+    ///   lentopeli aloita [kaupunki] | pois | kaasu tyhja|talous|matka|taysi | auto 0|1 | sauva x y | irti | vapaa 0|1 | tauko 0|1 | tila
+    ///                             lentopelin vaihe 1 -proto (Nappula.Lentopeli.cs, ydin Lentopeli.cs)
     ///   kamerareitti paalle|pois  lennon oikea kamera 0,1 s:n näytteinä lokiin lennon lopussa (nopeus m/s, kulmanopeus °/s,
     ///                             HYPPY/KULMAHYPPY = muutos yli 3 × ympäröivien keskiarvo; löydös 120, LennonKamerareitti)
     ///   piste <id> lat lon [lukittu] | piste pois <id>   pelin karttapiste (vihreä)
@@ -697,6 +699,27 @@ namespace Matkakirja
                     else if (o.Length > 3 && o[2] == "ilma") AloituslennonIlma.Paalla = o[3] == "1" || o[3] == "paalle";
                     Debug.Log(Nappula.LentoV3Kuvaus() + $", aloitusrata {(Nappula.Aloitusrata ? 1 : 0)}, ilma {(AloituslennonIlma.Paalla ? 1 : 0)}");
                     break;
+                case "lentopeli":
+                {
+                    // lentopeli aloita [kaupunki] | pois | kaasu tyhja|talous|matka|taysi | auto 0|1 | sauva x y | irti | vapaa 0|1 | tila
+                    // (Nappula.Lentopeli.cs, vaihe 1 -proto)
+                    var np = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.nappula : null;
+                    var lp = Nappula.Lentopelissa;
+                    string a = o.Length > 1 ? o[1] : "tila";
+                    if (a == "aloita" && (np == null || !np.AloitaLentopeli(o.Length > 2 ? o[2] : "ateena")))
+                        Debug.LogWarning("MATKAKIRJA lentopeli: ei voitu aloittaa (lento kesken tai tuntematon kaupunki)");
+                    else if (lp != null && a == "pois") lp.Lopeta();
+                    else if (lp != null && a == "kaasu" && o.Length > 2)
+                        lp.Kaasu = o[2] == "tyhja" ? Lentopeli.Kaasu.Tyhjakaynti : o[2] == "talous" ? Lentopeli.Kaasu.Talous
+                            : o[2] == "taysi" ? Lentopeli.Kaasu.Taysi : Lentopeli.Kaasu.Matka;
+                    else if (lp != null && a == "auto") lp.Autopilotti = o.Length < 3 || o[2] == "1";
+                    else if (lp != null && a == "sauva" && o.Length > 3) lp.KomentoSauva = (D(2), D(3));
+                    else if (lp != null && a == "irti") lp.KomentoSauva = null;
+                    else if (lp != null && a == "vapaa") lp.Vapaa = o.Length < 3 || o[2] == "1";
+                    else if (lp != null && a == "tauko") lp.Tauko = o.Length < 3 || o[2] == "1";
+                    Debug.Log(Nappula.LentopeliKuvaus());
+                    break;
+                }
                 case "paivanvalo":
                     // paivanvalo 0|1|auto|tila (v3f: päivän ja yön raja ja yövalot; 1 = päällä myös valinnan ja lennon ulkopuolella)
                     if (o.Length > 1 && (o[1] == "1" || o[1] == "paalle")) Paivanvalo.Pakota = true;

@@ -212,6 +212,23 @@ namespace Matkakirja
         bool linssiNimet;
 
         /// <summary>
+        /// LENTOPELI (Linssiseppä 1.10.2026): nostot ja niiden nimiöt pois lennon ajan, koska UI-kerroksen merkit piirtyvät koneen
+        /// päälle (Päätoimittajan löydökset 5ac7d518 ja 032ba522: nimiöt, sitten kuvake koneen vieressä; 2.10. "piilota koko
+        /// lennon ajaksi"). Palaavat lennon päättyessä (Nappula.LpPurku).
+        /// </summary>
+        public static bool LentopeliPiilottaa
+        {
+            get => lentopeliPiilottaa;
+            set
+            {
+                if (lentopeliPiilottaa == value) return;
+                lentopeliPiilottaa = value;
+                if (Instanssi != null) Instanssi.muuttui = Instanssi.nakymaMuuttui = true;
+            }
+        }
+        static bool lentopeliPiilottaa;
+
+        /// <summary>
         /// NIMIÖN MUSTE LINEAARISESSA SEKOITUKSESSA (löydös 125, mitattu proto-3d/lokit/nostot-125): web latoo nimiön
         /// canvasille sRGB-sekoituksella, natiivin UI Toolkit sekoittaa SDF-reunan lineaarisesti, jolloin sama
         /// kattavuus a näyttää vaaleammalta ja viiva ohuemmalta (Ateena avauslennon jälkeen, nimiö 4,4 px: mustetta
@@ -495,6 +512,7 @@ namespace Matkakirja
                 // pisteiksi ilman nimiöitä, kunnes maan lehti täyttää näkymän (NostoSaannot.LehtiNakyvissa).
                 nimet = linssiNimet || LehtiNakyvissa(bb, nakyvaLeveys, nakyvaKorkeus);
             }
+            if (LentopeliPiilottaa) nimet = false;   // lentopeli: nimiöt eivät piirry koneen päälle (merkit jäävät)
             if (nimet != NimetNakyvat) { NimetNakyvat = nimet; muuttui = true; }
 
             // Lähizoomin mitta ja kartan mittakerroin (web uloimmanOsuus ja nostonKarttakerroin).
@@ -511,7 +529,8 @@ namespace Matkakirja
             bool porttiAuki = linssiNimet || Nakyvissa || (pysahtyi >= 0 && Time.unscaledTime - pysahtyi >= porttiViive);
 
             // Aloitusportissa (PalloKierto.PorttiSumea) ei nostoja: UI piirtäisi ne terävinä sumean pallon päälle.
-            bool nakyvissa = maa != null && Osuus >= vahinOsuus && porttiAuki && !PalloKierto.PorttiSumea;
+            // Lentopeli (Päätoimittaja 2.10.): nostot kokonaan pois lennon ajan (pelin oma näkymä, kuvake osui koneen viereen).
+            bool nakyvissa = maa != null && Osuus >= vahinOsuus && porttiAuki && !PalloKierto.PorttiSumea && !LentopeliPiilottaa;
             if (nakyvissa != Nakyvissa)
             {
                 Nakyvissa = nakyvissa;

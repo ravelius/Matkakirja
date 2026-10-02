@@ -22,3 +22,4 @@
 @import url("Pohjat/Pinnat/pillerivalikko.uss");
 @import url("Pohjat/Pinnat/linssin-valikko.uss");
 @import url("Pohjat/Pinnat/linssivalitsin.uss");
+@import url("Pohjat/Pinnat/lentopeli.uss");
