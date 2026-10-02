@@ -25,12 +25,20 @@ export function piirraAtlas(rivit, doc = document) {
   const paikat = [];
   let y = 0;
   for (const r of rivit) {
-    const em = Math.round(r.korkeus * NAUHA_EM);
+    const em = Math.round(r.korkeus * NAUHA_EM * (r.emOsuus ?? 1));
     mitta.font = `${r.paino ?? 'bold'} ${em}px ${r.fontti}`;
     const tekstiLev = Math.ceil(mitta.measureText(r.teksti).width);
-    const reuna = r.toisto ? Math.round(em * 1.5) : Math.round(em * 0.85 + tekstiLev * 0.06);
-    const lev = Math.min(ATLAS_LEVEYS, tekstiLev + 2 * reuna);
-    paikat.push({ ...r, em, lev, y, uMax: lev / ATLAS_LEVEYS, reuna });
+    if (r.toisto) {
+      // TOISTORIVI TÄYTTÄÄ ATLAKSEN LEVEYDEN kokonaisilla laatoilla (laatta = teksti + väli): näytteenotin
+      // kääriä (RepeatWrapping) jatkuvalla u:lla, joten saumassa ei ole fract()-hyppyä eikä mip-viivaa.
+      const toistoja = Math.max(1, Math.floor(ATLAS_LEVEYS / (tekstiLev + 3 * em)));
+      const lev = ATLAS_LEVEYS / toistoja;
+      paikat.push({ ...r, em, lev, y, uMax: 1 / toistoja, toistoja, reuna: (lev - tekstiLev) / 2 });
+    } else {
+      const reuna = Math.round(em * 0.85 + tekstiLev * 0.06);
+      const lev = Math.min(ATLAS_LEVEYS, tekstiLev + 2 * reuna);
+      paikat.push({ ...r, em, lev, y, uMax: lev / ATLAS_LEVEYS, reuna });
+    }
     y += (r.korkeus + ATLAS_VALI) * (r.sumea ? 2 : 1);
   }
   kangas.width = ATLAS_LEVEYS;
@@ -46,8 +54,7 @@ export function piirraAtlas(rivit, doc = document) {
       c.save();
       c.beginPath(); c.rect(0, yla, p.lev, p.korkeus); c.clip();
       c.filter = `blur(${sumeus}px)`;
-      // Toistuva rivi piirretään myös kerran lev:n jälkeen, jotta sauma on saumaton.
-      for (const dx of p.toisto ? [0, -p.lev] : [0]) c.fillText(p.teksti, p.reuna + dx, yla + p.korkeus / 2);
+      for (let n = 0; n < (p.toistoja ?? 1); n += 1) c.fillText(p.teksti, p.reuna + n * p.lev, yla + p.korkeus / 2);
       c.restore();
     };
     // Projektorin pehmeys: GaussianBlur 2 px 220 px:n kirjaimissa; sumea pari nauhan korkeus / 40.
@@ -71,6 +78,8 @@ export function lisaaProjektorit(THREE, materiaali, atlasTekstuuri) {
     pE: { value: Array.from({ length: N }, () => new THREE.Vector4()) },
     pF: { value: Array.from({ length: N }, () => new THREE.Vector4()) },
     pVari: { value: new THREE.Color(1, 1, 1) },
+    pKaiku: { value: null },
+    pKaikuVari: { value: new THREE.Color(1, 1, 1) },
   };
   materiaali.onBeforeCompile = (shader) => {
     Object.assign(shader.uniforms, uniformit);
@@ -90,8 +99,10 @@ uniform vec4 pB[P_ENINTAAN]; // cos kulma, sin kulma, pystysiirto vM, voima
 uniform vec4 pC[P_ENINTAAN]; // atlas v0, v1 (terävä), v0, v1 (sumea; = terävä, jos ei sumeaa)
 uniform vec4 pD[P_ENINTAAN]; // uMax, ca, syvyys, toisto (0 = CLIP, 1 = REPEAT)
 uniform vec4 pE[P_ENINTAAN]; // projektorin paikka (maailma), keilan cos ulkoreuna
-uniform vec4 pF[P_ENINTAAN]; // keilan cos sisäreuna, keskitys (0,5 päälause, 0 rivi)
+uniform vec4 pF[P_ENINTAAN]; // keilan cos sisäreuna, keskitys (0,5 päälause, 0 rivi), kaiku (1 = kaikukuva)
 uniform vec3 pVari;
+uniform sampler2D pKaiku;     // kaikukuva (v8): harmaasävy, valoa vain sisällössä
+uniform vec3 pKaikuVari;      // seepia
 float pNayte(int i, float jx, float jy, float sk, float sumeus) {
   vec4 a = pA[i]; vec4 b = pB[i]; vec4 c = pC[i]; vec4 d = pD[i];
   float x = jx * a.x * sk, y = jy * a.x * sk;
@@ -101,8 +112,14 @@ float pNayte(int i, float jx, float jy, float sk, float sumeus) {
   // Rivin reunat häivytetään: kirjaimet ovat keskellä (v 0,3–0,7), ja loivassa kulmassa korkeat mip-tasot
   // toisivat muuten viereisen atlasrivin palasia katkoviivaksi.
   float reuna = smoothstep(0.0, 0.15, v) * smoothstep(1.0, 0.85, v);
-  if (d.w < 0.5) { if (u <= 0.0 || u >= 1.0) return 0.0; } else { u = fract(u); }
-  float au = u * d.x;
+  if (d.w < 0.5 && (u <= 0.0 || u >= 1.0)) return 0.0;
+  // Kaikukuva: valoa vain sisällössä (sokrates_kaiku.py). Matalat sävyt kynnystetään pois (webin AgX nostaa niitä
+  // Blenderiä enemmän, jolloin kuva-ala erottui suorakaiteena), ja reunat häivytetään.
+  if (pF[i].z > 0.5) {
+    float reunaK = smoothstep(0.0, 0.08, u) * smoothstep(1.0, 0.92, u) * smoothstep(0.0, 0.08, v) * smoothstep(1.0, 0.92, v);
+    return smoothstep(0.08, 0.9, texture2D(pKaiku, vec2(u, 1.0 - v)).r) * reunaK;
+  }
+  float au = u * d.x;   // toistorivi: jatkuva u, atlas kääritään (RepeatWrapping)
   float terava = texture2D(pAtlas, vec2(au, mix(c.x, c.y, 1.0 - v)), -0.75).r;
   if (sumeus <= 0.0) return terava * reuna;
   float sumea = texture2D(pAtlas, vec2(au, mix(c.z, c.w, 1.0 - v))).r;
@@ -126,9 +143,9 @@ vec3 projektoriValo(vec3 nW) {
     vec3 t = ca > 0.0
       ? vec3(pNayte(i, jx, jy, 1.0 + ca, sumeus), pNayte(i, jx, jy, 1.0, sumeus), pNayte(i, jx, jy, 1.0 - ca, sumeus))
       : vec3(pNayte(i, jx, jy, 1.0, sumeus));
-    summa += t * (pB[i].w * keila * nl / (r * r));
+    summa += t * (pF[i].z > 0.5 ? pKaikuVari : pVari) * (pB[i].w * keila * nl / (r * r));
   }
-  return summa * pVari;
+  return summa;
 }`)
       .replace('#include <lights_fragment_end>', `#include <lights_fragment_end>
 reflectedLight.directDiffuse += BRDF_Lambert(diffuseColor.rgb) * projektoriValo(inverseTransformDirection(normal, viewMatrix));`);
@@ -140,7 +157,7 @@ reflectedLight.directDiffuse += BRDF_Lambert(diffuseColor.rgb) * projektoriValo(
 /** Asettaa projektorin i: paikka ja kohde (three-koordinaatit), atlasrivi, mitat ja voima. */
 export function asetaProjektori(THREE, u, i, {
   paikka, kohde, etaisyys, nauhaKork, rivi, sumeaRivi = null, ala, blend = 0.45, kulma = 0, vM = 0, voima = 0,
-  siirto = 0, ca = 0, syvyys = 0, toisto = false, atlasKorkeus,
+  siirto = 0, ca = 0, syvyys = 0, toisto = false, atlasKorkeus, kaiku = null,
 }) {
   const kamera = new THREE.PerspectiveCamera();
   kamera.position.copy(paikka);
@@ -148,17 +165,57 @@ export function asetaProjektori(THREE, u, i, {
   kamera.lookAt(kohde);
   kamera.updateMatrixWorld(true);
   u.pNakyma.value[i].copy(kamera.matrixWorldInverse);
+  // Kaikukuva: rivi = { lev, korkeus } kuvan pikseleinä, nauhaKork = kuvan korkeus metreinä (lev × K / L).
   const nauhaLev = nauhaKork * rivi.lev / rivi.korkeus;
   u.pA.value[i].set(etaisyys, nauhaLev, nauhaKork, siirto);
   u.pB.value[i].set(Math.cos(kulma), Math.sin(kulma), vM, voima);
   const s = sumeaRivi ?? rivi;
-  const v0 = rivi.y / atlasKorkeus, v1 = (rivi.y + rivi.korkeus) / atlasKorkeus;
+  const v0 = (rivi.y ?? 0) / atlasKorkeus, v1 = ((rivi.y ?? 0) + rivi.korkeus) / atlasKorkeus;
   const sv0 = (s === rivi && rivi.sumea ? rivi.y + rivi.korkeus + 16 : s.y) / atlasKorkeus;
   u.pC.value[i].set(v0, v1, rivi.sumea ? sv0 : v0, rivi.sumea ? sv0 + rivi.korkeus / atlasKorkeus : v1);
-  u.pD.value[i].set(rivi.uMax, ca, syvyys, toisto ? 1 : 0);
+  u.pD.value[i].set(rivi.uMax ?? 1, ca, syvyys, toisto ? 1 : 0);
   // Blender: spot_size = 2,4·atan(ala / 2 / etäisyys) koko kulmana, spot_blend reunan pehmeys.
   const puoli = 1.2 * Math.atan(ala / 2 / etaisyys);
   u.pE.value[i].set(paikka.x, paikka.y, paikka.z, Math.cos(puoli));
-  u.pF.value[i].set(Math.cos(puoli * (1 - blend)), toisto ? 0 : 0.5, 0, 0);
+  u.pF.value[i].set(Math.cos(puoli * (1 - blend)), toisto ? 0 : 0.5, kaiku ? 1 : 0, 0);
   return { nauhaLev };
+}
+
+/*
+ * KIPSIN TERÄVÄ PINTA (omistajan v9-palaute 2.10.2026 klo 10.3x: "pinta muuttuu vieläkin muovisemman näköiseksi";
+ * Blender v10 --terava). Normaalikartta mip-biasilla −0,75 (lähikuvassa ei pehmennä) ja kaksitasoinen triplanar-
+ * mikronormaali kipsikuviosta (Poly Haven grey_plaster_02, Rob Tuytel, CC0): toistot 28,5 ja 95 / m, voimat 0,6 ja 0,35
+ * kuten Blenderin bump-solmuissa. Onteloiden AO jää pois (reaaliajassa raskas). Ketjuttuu projektorien onBeforeCompileen.
+ */
+export const KIPSI_TOISTOT = [28.5, 95.0];
+export const KIPSI_VOIMAT = [0.6, 0.35];
+export function lisaaKipsinPinta(THREE, materiaali, detalji) {
+  const edellinen = materiaali.onBeforeCompile;
+  const uniformit = { pDetalji: { value: detalji } };
+  materiaali.onBeforeCompile = (shader, renderoija) => {
+    edellinen?.(shader, renderoija);
+    Object.assign(shader.uniforms, uniformit);
+    const [t1, t2] = KIPSI_TOISTOT, [v1, v2] = KIPSI_VOIMAT;
+    const pala = THREE.ShaderChunk.normal_fragment_maps
+      .replace('texture2D( normalMap, vNormalMapUv )', 'texture2D( normalMap, vNormalMapUv, -0.75 )');
+    shader.fragmentShader = shader.fragmentShader
+      .replace('uniform vec3 pVari;', `uniform vec3 pVari;
+uniform sampler2D pDetalji;
+vec3 kipsiTaso(vec3 p, vec3 w) {
+  vec3 x = texture2D(pDetalji, p.zy).xyz * 2.0 - 1.0;
+  vec3 y = texture2D(pDetalji, p.xz).xyz * 2.0 - 1.0;
+  vec3 z = texture2D(pDetalji, p.xy).xyz * 2.0 - 1.0;
+  return w.x * vec3(0.0, x.y, x.x) + w.y * vec3(y.x, 0.0, y.y) + w.z * vec3(z.x, z.y, 0.0);
+}`)
+      .replace('#include <normal_fragment_maps>', `${pala}
+{
+  vec3 nW = inverseTransformDirection(normal, viewMatrix);
+  vec3 w = pow(abs(nW), vec3(4.0));
+  w /= (w.x + w.y + w.z);
+  vec3 d = kipsiTaso(vMaailma * ${t1.toFixed(1)}, w) * ${v1.toFixed(2)} + kipsiTaso(vMaailma * ${t2.toFixed(1)}, w) * ${v2.toFixed(2)};
+  normal = normalize((viewMatrix * vec4(normalize(nW + d), 0.0)).xyz);
+}`);
+  };
+  materiaali.customProgramCacheKey = () => 'ajattelija-projektori-kipsi';
+  return uniformit;
 }

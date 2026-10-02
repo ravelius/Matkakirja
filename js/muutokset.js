@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2548, teksti: 'Ajattelijat-linssi, vaiheet 2–4: Sokrateen kier… (#3833)' },
   { v: 2547, teksti: 'ISS:n rinnalla pois pelistä: napautus vie suora… (#3834)' },
   { v: 2546, teksti: 'Korttivahdit tuntevat NOSTOKORTTI-pohjan kohdek… (#3827)' },
   { v: 2545, teksti: 'PULU-pohja (#3831)' },
