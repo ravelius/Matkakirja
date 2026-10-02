@@ -136,7 +136,10 @@ namespace Matkakirja.Natiivi
             string n = (r.Nimi ?? (r.Pulu ? "Pulu" : r.Puhuja ?? "")).ToUpperInvariant();
             nimi.text = string.IsNullOrEmpty(r.Huom) ? n : n + " <i>· " + r.Huom + "</i>";
             nimi.style.color = r.Pulu ? PuluNimiVari : NimiVari;
-            teksti.text = r.Teksti ?? "";
+            // Omistaja 2.10. 14.1x (loki 14.09): ääneen puhuttua riviä ei näytetä tekstinä; puhujan nimi jää (ja napautus ohittaa).
+            bool aaneen = !string.IsNullOrEmpty(r.Aani) && DioraamaAanet.Puhutaan(r.Aani);
+            teksti.text = aaneen ? "" : r.Teksti ?? "";
+            teksti.style.display = aaneen ? DisplayStyle.None : DisplayStyle.Flex;
             Kirjasimet.Aseta(teksti, r.Pulu ? Kirjasin.LukuKursiivi : Kirjasin.Luku);
             s.display = DisplayStyle.Flex;
             s.opacity = 1f;

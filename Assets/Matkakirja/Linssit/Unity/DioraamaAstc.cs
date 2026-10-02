@@ -45,6 +45,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kehittäjän vertailu ("poikki kaistat 0|1"): null/true = isot (≥ 4096) tekstuurit kaistoina.</summary>
         public static bool? KaistatPakotettu;
         const int KaistaTavuja = 8 << 20, KaistaRaja = 4096;
+        static int budjettiRuutu = -1, budjettiTavut;
 
         /// <summary>Iso ASTC-mipketju GPU:lle kaistoina: kohde luodaan ilman latausta (DontUploadUponCreate) ja täytetään
         /// pienistä väliaikaisista tekstuureista Graphics.CopyTexture-kopioina, enintään ~8 Mt ruudussa. Pienet tekstuurit,
@@ -81,6 +82,11 @@ namespace Matkakirja.Natiivi
                     int rivit = Math.Min(kaistaRiveja, lh - r0);
                     bool koko = rivit == lh;
                     int kh = koko ? mh : rivit * d.By;
+                    // Yhteinen ruutubudjetti kaikille samaan aikaan latautuville (valoatlakset, kuori, maasto): enintään ~8 Mt/ruutu.
+                    int tavut = (int)(rivit * rivi);
+                    while (budjettiRuutu == Time.frameCount && budjettiTavut > 0 && budjettiTavut + tavut > KaistaTavuja) yield return null;
+                    if (budjettiRuutu != Time.frameCount) { budjettiRuutu = Time.frameCount; budjettiTavut = 0; }
+                    budjettiTavut += tavut;
                     var kaista = new Texture2D(mw, kh, gf, 1, TextureCreationFlags.DontInitializePixels) { name = nimi + ":kaista" };
                     kaista.LoadRawTextureData(t.GetSubArray((int)(o + r0 * rivi), (int)(rivit * rivi)));
                     kaista.Apply(false, true);
@@ -89,7 +95,7 @@ namespace Matkakirja.Natiivi
                     UnityEngine.Object.Destroy(kaista);
                     DioraamaRuutu.Ladattu();
                     if (m == 0 || koko) DioraamaRuutu.Tapahtuma($"kaista {nimi} m{m} y{r0 * d.By}");
-                    ruudussa += (int)(rivit * rivi);
+                    ruudussa += tavut;
                     if (ruudussa >= KaistaTavuja) { ruudussa = 0; yield return null; }
                 }
                 o += rivi * lh;
