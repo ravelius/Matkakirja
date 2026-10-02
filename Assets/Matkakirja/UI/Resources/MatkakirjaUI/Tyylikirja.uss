@@ -1,5 +1,5 @@
 /* TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi);
- * ÄLÄ MUOKKAA KÄSIN. lähde 217ed2ed6633. Tuodaan ensimmäisenä (Matkakirja.tss). */
+ * ÄLÄ MUOKKAA KÄSIN. lähde 2f3d71225e0c. Tuodaan ensimmäisenä (Matkakirja.tss). */
 
 :root {
     --bg: #1d1610;
@@ -15,6 +15,8 @@
     --rivi-tausta: rgba(53, 39, 26, 0.55);
     --overlay-card: rgba(46, 33, 20, 0.88);
     --overlay-line: rgba(217, 161, 59, 0.45);
+    --pilleri-nappi: #725625;
+    --pilleri-nappi-reuna: #4a3818;
     --paper: #efdcb4;
     --paper-dark: #dcc08f;
     --map-ink: #46331f;
@@ -99,6 +101,8 @@
     --tk-nappi-laukaisin: 64px;
     --tk-nappi-ohjaus: 40px;
     --tk-nappi-ohjaus-kuvake: 22px;
+    --tk-galleria-sarake: 92px;
+    --tk-galleria-vali: 10px;
     --tk-leveys-kapea: 600px;
     --tk-leveys-levea: 940px;
     --tk-leveys-kortti: 420px;

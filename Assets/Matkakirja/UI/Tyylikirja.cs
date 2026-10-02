@@ -1,12 +1,12 @@
 // TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi).
-// ÄLÄ MUOKKAA KÄSIN. lähde 217ed2ed6633. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
+// ÄLÄ MUOKKAA KÄSIN. lähde 2f3d71225e0c. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class Tyylikirja
     {
-        public const string Lahde = "217ed2ed6633";
+        public const string Lahde = "2f3d71225e0c";
 
         public static class Kehys
         {
@@ -23,6 +23,8 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 RiviTausta = new Color32(53, 39, 26, 140);
             public static readonly Color32 OverlayCard = new Color32(46, 33, 20, 224);
             public static readonly Color32 OverlayLine = new Color32(217, 161, 59, 115);
+            public static readonly Color32 PilleriNappi = new Color32(114, 86, 37, 255);
+            public static readonly Color32 PilleriNappiReuna = new Color32(74, 56, 24, 255);
             public static readonly Color32 Paper = new Color32(239, 220, 180, 255);
             public static readonly Color32 PaperDark = new Color32(220, 192, 143, 255);
             public static readonly Color32 MapInk = new Color32(70, 51, 31, 255);
@@ -122,6 +124,12 @@ namespace Matkakirja.Natiivi
             public const float OhjausKuvake = 22f;
         }
 
+        public static class Galleria
+        {
+            public const float Sarake = 92f;
+            public const float Vali = 10f;
+        }
+
         public static class Leveys
         {
             public const float Kapea = 600f;
@@ -171,6 +179,6 @@ namespace Matkakirja.Natiivi
             public static readonly (string Perhe, string Tyyli)[] Kauno = { ("Snell Roundhand", "Regular"), ("Savoye LET", "Plain"), ("Bradley Hand", "Bold") };
         }
 
-        public static readonly string[] Pohjat = { "NOSTOKORTTI", "LUKUARKKI", "KORTTI", "PANEELI", "KUVANÄKYMÄ", "LINSSIN OHJAIN", "PULU", "EDISTYMINEN", "KENTTÄ", "LAUTAPELI", "OHJAUSNAPPI" };
+        public static readonly string[] Pohjat = { "NOSTOKORTTI", "LUKUARKKI", "KORTTI", "PANEELI", "KUVANÄKYMÄ", "LINSSIN OHJAIN", "PULU", "EDISTYMINEN", "KENTTÄ", "LAUTAPELI", "GALLERIA", "OHJAUSNAPPI", "ERIKOISNOSTOT" };
     }
 }
