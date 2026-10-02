@@ -11,7 +11,7 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void NappiTekstitOvatWebin()
         {
             // js/pollo.js REALTIME_NAPPI_TEKSTIT
-            Oleta.Sama("Puhu Pululle (koe)", PuluRealtimeLogiikka.NappiTeksti(RealtimeTila.Valmis));
+            Oleta.Sama("Live", PuluRealtimeLogiikka.NappiTeksti(RealtimeTila.Valmis));
             Oleta.Sama("Yhdistän Puluun…", PuluRealtimeLogiikka.NappiTeksti(RealtimeTila.Yhdistaa));
             Oleta.Sama("Kuuntelen — lopeta", PuluRealtimeLogiikka.NappiTeksti(RealtimeTila.Kuuntelee));
             Oleta.Sama("Pulu puhuu — lopeta", PuluRealtimeLogiikka.NappiTeksti(RealtimeTila.Puhuu));
