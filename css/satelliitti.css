@@ -835,6 +835,7 @@ body.satelliitti-kuva-auki .astro-sumu { visibility: hidden; }
   bottom: calc(12px + env(safe-area-inset-bottom, 0px));
   z-index: 5;
   display: flex;
+  align-items: center;
   gap: 14px;
   transform: translateX(-50%);
 }
@@ -1966,17 +1967,10 @@ body.satelliitti-kyyti .astro-nakymat-nappi { z-index: 49; }
 }
 
 /*
- * AUTO (omistaja 2.10.2026; NOSTOKORTTI-pohjan osa AUTO, js/pohjat/auto.js): kytkin vasempaan alakulmaan ‹ ›:n
- * riville (‹ › pysyvät keskellä), siirtolappu niiden yläpuolelle koko leveydelle. AUTOn aikana otsikkona on pelkkä
- * kohteen nimi (seutu pois).
+ * AUTO (omistaja 2.10.2026; NOSTOKORTTI-pohjan osa AUTO, js/pohjat/auto.js): kytkin ‹ ›:n ryhmässä alhaalla keskellä
+ * ("AUTO ‹ ›", Päätoimittaja 2.10.2026: vasemmassa alakulmassa se peitti pikkukuvanauhan), siirtolappu rivin
+ * yläpuolelle koko leveydelle. AUTOn aikana otsikkona on pelkkä kohteen nimi (seutu pois).
  */
-.satelliitti-autokulma {
-  position: absolute;
-  left: var(--tk-vali-m);
-  bottom: calc(var(--tk-vali-m) + env(safe-area-inset-bottom, 0px));
-  z-index: 5;
-}
-.satelliitti-autokulma[hidden] { display: none; }
 .satelliitti-autolappu {
   position: absolute;
   left: var(--tk-vali-m);

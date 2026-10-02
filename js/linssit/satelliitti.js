@@ -903,15 +903,16 @@ function avaaHavaintokortti({
    * pohjan osa AUTO (js/pohjat/auto.js, sama kuin natiivin nostoselaimessa): kertoja lukee leipätekstin, 3 s:n lappu
    * ja seuraava kohde maailmankierroksen järjestyksessä (sama kuin ›). AUTOn aikana selite pysyy minimoituna ja
    * otsikkona on pelkkä kohteen nimi. Pelaajan napautus, nipistys tai nuoli pysäyttää AUTOn.
+   * Kytkin on ‹ ›:n ryhmässä alhaalla keskellä ("AUTO ‹ ›", Päätoimittaja 2.10.2026): vasemmassa alakulmassa se
+   * peitti pikkukuvanauhan, kun kohteella on monta kuvaa.
    */
   pohjatLataaTyyli();
   const autoKytkin = luoAutoKytkin({ muuttui: (paalle) => autoMuuttui(paalle) });
   const autoSiirto = luoAutoSiirto({ pysaytetty: () => autoMuuttui(false) });
-  const autoKulma = html('div', 'satelliitti-autokulma tk-teema-lasi-avaruus');
-  autoKulma.append(autoKytkin.el);
-  autoKulma.hidden = kohdenapit.hidden;
+  kohdenapit.classList.add('tk-teema-lasi-avaruus');
+  kohdenapit.prepend(autoKytkin.el);
   autoSiirto.el.classList.add('satelliitti-autolappu');
-  const autoKaytossa = () => autoPaalla() && !autoKulma.hidden;
+  const autoKaytossa = () => autoPaalla() && !kohdenapit.hidden;
   function naytaAutoTila() {
     const paalla = autoKaytossa();
     katselu.classList.toggle('satelliitti-auto-paalla', paalla);
@@ -934,7 +935,7 @@ function avaaHavaintokortti({
   }
   // Pelaajan napautus, nipistys tai rulla kuvalla pysäyttää AUTOn (kytkin ja lappu eivät).
   const pysaytaAuto = (e) => {
-    if (!autoKaytossa() || autoKulma.contains(e.target) || autoSiirto.el.contains(e.target)) return;
+    if (!autoKaytossa() || autoKytkin.el.contains(e.target) || autoSiirto.el.contains(e.target)) return;
     asetaAuto(false);
     autoMuuttui(false);
   };
@@ -1243,7 +1244,7 @@ function avaaHavaintokortti({
   pulunSulku.addEventListener('click', (e) => { e.stopPropagation(); naytaPulukortti(false); });
   pulukulma.append(pulukortti, pulunappi);
 
-  katselu.append(lava, selite, kulma, nauha, kohdenapit, pulukulma, autoKulma, autoSiirto.el);
+  katselu.append(lava, selite, kulma, nauha, kohdenapit, pulukulma, autoSiirto.el);
   katselu.addEventListener('pointerdown', pysaytaAuto, true);
   katselu.addEventListener('wheel', pysaytaAuto, true);
   document.body.appendChild(katselu);
