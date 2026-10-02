@@ -67,7 +67,7 @@ const TAULU = {
 // takaisin alas (reitti sulkeutuu alkupisteeseen kuten keittiön vesipojalla). Laskettu reseptit-linna.mjs:n
 // kierrePiste-kaavalla (sadeSisa 3,6, sadeUlko 5,45, 1,5 kierrosta, alkukulma 176) + palikan sijoitus maailmaan.
 const KIRJURI_YLOS = [
-  [-30.13, 5.17, -15.48], [-33.93, 6.6, -17.76], [-33.95, 8.02, -22.2], [-30.17, 9.45, -24.52],
+  [-30.13, 5.17, -15.48], [-33.8, 6.6, -17.76], // 2.10.: −33,93 → −33,8 (pulpetti 0,48 m) [-33.95, 8.02, -22.2], [-30.17, 9.45, -24.52],
   [-26.22, 10.87, -22.49], [-25.91, 12.3, -18.06], [-29.54, 13.72, -15.5], [-33.61, 15.15, -17.27],
   [-34.21, 16.57, -21.67], [-30.76, 18, -24.46],
 ];

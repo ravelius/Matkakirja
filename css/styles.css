@@ -5694,6 +5694,10 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
 .linssi-selite[data-corner='tr'] { top: 0.5rem; right: 0.5rem; }
 .linssi-selite[data-corner='bl'] { bottom: 0.9rem; left: 0.5rem; }
 .linssi-selite[data-corner='br'] { bottom: 0.9rem; right: 0.5rem; }
+/* Hampurilaisen linssillä (js/ui.js piirraLinssinHampurilainen) oikea ylänurkka alkaa napin alta, ja kortti on piilossa,
+   kunnes valikon kytkin avaa sen. */
+.linssi-selite.valikossa[data-corner='tr'] { top: calc(var(--tk-vali-s) * 2 + var(--tk-nappi-ohjaus)); }
+.linssi-selite.valikossa[hidden] { display: none; }
 
 .linssi-selite h2 {
   margin: 0 0 0.35rem;
@@ -26829,8 +26833,8 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
    * yläreunasta (top: 0 perussäännössä, myös kiinni). Nappi jää sen alle —
    * sulku hoidetaan levyn omalla ✕-napilla, kartan napautuksella tai
    * Escapella, joten napin ei tarvitse olla tavoitettavissa sillä
-   * välin (sama poikkeus kuin ylapalkki-vaaka.js:n ja tämän napin
-   * välillä, css/styles.css `body.ylapalkki-auki .karttaselite`).
+   * välin (sama kaava kuin vaakatilan päävalikolla, joka avautuu
+   * kartan hampurilaisen päälle, js/ylapalkki-vaaka.js).
    */
   transform: none;
   opacity: 1;
@@ -29236,29 +29240,43 @@ body.aikajana-palkki-auki .ylapalkki-nappi { display: none; }
    */
   .app { grid-template-rows: minmax(0, 1fr); }
 
+  /*
+   * EI YLÄPALKKIA (omistaja 2.10.2026 klo 23.07, Raamatun loki "VAAKATILASSA EI YLÄPALKKIA"): palkki on poissa eikä
+   * sitä voi avata. Solmu jää DOM:iin vain päävalikon (#paavalikko, PANEELI-pohjan position: fixed) isännäksi:
+   * palkki on nollakorkuinen ja näkymätön, ja vain paneeli näkyy. Ei transformia eikä suodinta: ne tekisivät
+   * palkista kiinteän paneelin asemointilaatikon. Pinossa Pulun ja kartan nappien päällä (valikko piirtyy niiden päälle).
+   */
   .topbar {
     position: absolute;
-    top: env(safe-area-inset-top);
-    left: env(safe-area-inset-left);
-    right: env(safe-area-inset-right);
-    /*
-     * Suljettuna palkki liukuu ylös oman korkeutensa verran ja on
-     * poissa myös näppäimistöltä ja ruudunlukijalta. Näkyvyyden
-     * siirtymä viivästetään liu'un loppuun, jotta liuku ehtii näkyä
-     * ennen katoamista — sama tapa kuin karttaselitteen levyllä.
-     */
-    transform: translateY(-100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    overflow: visible;
     visibility: hidden;
-    /* Kartan omien nappien (z-index 6) ja kuplien yläpuolelle. */
-    z-index: 30;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-    transition: transform 0.18s ease, visibility 0s linear 0.18s;
+    pointer-events: none;
+    box-shadow: none;
+    z-index: 70;
   }
-
-  body.ylapalkki-auki .topbar {
-    transform: translateY(0);
+  .topbar .paavalikko {
     visibility: visible;
-    transition: transform 0.18s ease, visibility 0s;
+    pointer-events: auto;
+  }
+  /* Paneelin oikea reuna täsmälleen napin oikeaan reunaan (js/pilleri-paneeli.js asemoi; ei pohjan vähimmäisväliä). */
+  .paavalikko.tk-paneeli--paikallaan { right: var(--tk-paneeli-oikea, 0px); }
+  /*
+   * VALIKKO PULUN PÄÄLLÄ (omistaja 2.10.2026 klo 23.07 kohta 3). Pulun hahmo piirtyy bodyn omalle pinnalle
+   * (.livia-kasvot-pinta.livia-lentonayttamo, fixed z 39), joka on .app:n pinokontekstin yläpuolella; valikko ei voi
+   * nousta sen yli. Hahmo ja kupla väistyvät siis auki olevan valikon ajaksi samalla keinolla kuin lennossa
+   * (visibility: livia-eleet ei piirrä piilossa). js/ylapalkki-vaaka.js kirjoittaa luokan paneelin tilasta.
+   */
+  body.paavalikko-auki .livia-kasvot-pinta,
+  body.paavalikko-auki .pollo-vihje {
+    visibility: hidden;
+    pointer-events: none;
   }
 
   /*
@@ -29301,23 +29319,6 @@ body.aikajana-palkki-auki .ylapalkki-nappi { display: none; }
   }
 
   .karttaselite { right: 2.95rem; }
-
-  /*
-   * AUKI OLEVA PALKKI KORVAA KARTAN NURKAN. Napit istuvat täsmälleen
-   * palkin alla, ja mitattuna niiden alareuna pilkotti palkin alta
-   * muutaman pikselin verran — huolimattoman näköinen sauma. Ne
-   * väistyvät auki-tilassa kokonaan: palkki suljetaan omistajan
-   * säännön mukaan napauttamalla sen ulkopuolelta, joten kummankaan
-   * napin ei tarvitse olla tavoitettavissa sillä välin.
-   */
-  body.ylapalkki-auki .ylapalkki-nappi,
-  body.ylapalkki-auki .karttaselite {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .ylapalkki-nappi,
-  .karttaselite { transition: opacity 0.18s ease; }
 }
 
 /*

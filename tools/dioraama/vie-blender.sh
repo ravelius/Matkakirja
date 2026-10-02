@@ -88,6 +88,8 @@ if [ -f "$LAHDE/ymparisto/ymparisto_huippu.glb" ]; then
     if [ -f "$LAHDE/ymparisto/$f-4x4.astcm" ]; then lisaa "ymparisto/$f-4x4.astcm" "ymparisto/$f-4x4.astcm"; fi
   done
 fi
+# Skinnatut hahmot (omistaja 2.10. 18.0x, Quaternius CC0; tools/dioraama/blender/hahmo_skin.py): hahmot/<henkilo>.glb, jos lähteessä.
+for f in "$LAHDE"/hahmot/*.glb(N); do lisaa "hahmot/${f:t}" "hahmot/${f:t}"; done
 for g in "$LAHDE"/tilat/*.glb; do
   id=${g:t:r}; lisaa "tilat/$id.glb" "tilat/$id.glb"
   for v in "" "-hamara"; do

@@ -327,6 +327,13 @@ export function lisaaBlender(rakennusJson, blender) {
   const on8k = on.has('ulkokuori/ulkokuori-8k-4x4.astcm') && on.has('ulkokuori/ulkokuori-hamara-8k-4x4.astcm')
     && on.has('ulkokuori/ulkokuori-hamara-8k.jpg');
   const tasot = { huippu: on8k ? '8k' : '4k', normaali: '4k', kevyt: '2k' };
+  // Skinnatut hahmot (omistaja 2.10. 18.0x): blender/hahmot/<henkilo>.glb + js/dioraama/hahmot-skin.json → henkilot[id].malli3d.skin
+  // (natiivi: DioraamaGlb skin + sekoitin; nivelhahmo malli3d.glb jää varalle). Vain henkilöille, joiden glb on viety.
+  const SKIN = JSON.parse(readFileSync(new URL('../../js/dioraama/hahmot-skin.json', import.meta.url), 'utf8'));
+  for (const [id, h] of Object.entries(rakennusJson.henkilot || {})) {
+    if (!SKIN[id] || !on.has(`hahmot/${id}.glb`) || !h.malli3d) continue;
+    h.malli3d = { ...h.malli3d, skin: { glb: B(`hahmot/${id}.glb`), ...SKIN[id] } };
+  }
   rakennusJson.tunnelma = 'hamara';
   rakennusJson.ulkokuori = {
     ...Object.fromEntries(Object.keys(tasot).map((t) => [t, B(`ulkokuori/ulkokuori_${t}.glb`)])),
@@ -426,6 +433,10 @@ export function lisaaBlender(rakennusJson, blender) {
   for (const t of rakennusJson.tilat) {
     const g = on.get(`tilat/${t.id}.glb`);
     t.glb = { tiedosto: B(`tilat/${t.id}.glb`), sha256: g.sha256, tavuja: g.tavuja };
+    // Kohdistamaton tila (tunnelma; erä 1b, Päätoimittaja 2.10. 23.xx): liekit tulevat leivotun glb:n liekki:-tyhjistä,
+    // jotka natiivi leikkaa leikkauskäytävästä telineidensä kanssa. JSON-liekit jäivät näkyviin ilman telinettä
+    // (fatabuuri, keittiö, laituri: liekki "tyhjässä"), joten ne jätetään pois paketista.
+    if (t.kohdistettava === false) delete t.liekit;
     if (on.has(`valot/${t.id}.jpg`)) {
       t.valoatlas = atlas(t.id, '');
       if (on.has(`valot/${t.id}-hamara.jpg`)) t.valoatlas.hamara = atlas(t.id, '-hamara');
