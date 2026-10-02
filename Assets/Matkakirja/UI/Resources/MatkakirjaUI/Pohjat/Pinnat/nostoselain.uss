@@ -57,6 +57,8 @@
 
 .mk-nostoselain__ylarivipaikka .mk-nosto__ylarivi-teksti {
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .mk-nostoselain--kapea .mk-nostoselain__ylarivipaikka .mk-nosto__ylarivi-teksti {

@@ -66,8 +66,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Ylärivin kohta noston kategorialle ja lukijan napeille (näkyy, kun selain näkyy).</summary>
         public readonly VisualElement Ylarivipaikka;
         public bool Nakyvissa => rivi.style.display != DisplayStyle.None;
-        /// <summary>Tätä kapeammalla rivillä (pt) kategoriasta näkyy vain symboli: ‹ NOSTOT ▾ › + HISTORIA + ≡ kaiutin + AUTO ≈ 395 pt.</summary>
-        const float KapeaRivi = 400f;
+        /// <summary>Tätä kapeammalla rivillä (pt) kategoriasta näkyy vain symboli (puhelin ~340 pt; iPadin kortti ~390 pt,
+        /// jossa pitkä kategoria lyhenee …-merkillä).</summary>
+        const float KapeaRivi = 360f;
 
         public Nostoselain(VisualElement kortti, VisualElement ennen, Action<string> avaa, Action autoVaihtui)
         {
