@@ -16,10 +16,12 @@ test('AUTO-osa: sama asetus kuin lehden jatkuvalla luennalla ja natiivissa, siir
   assert.match(CSS, /\.tk-auto\[aria-pressed="true"\] \{ border-color: var\(--tk-toiminto\);/);
 });
 
-test('luennan loputtua AUTO siirtyy seuraavaan kohteeseen samalla polulla kuin ›, vain tuoreimmasta luennasta', () => {
+test('luennan loputtua AUTO siirtyy hiljaa seuraavaan kohteeseen samalla polulla kuin ›, vain tuoreimmasta luennasta', () => {
   const runko = SATELLIITTI.slice(SATELLIITTI.indexOf('function luentaLoppui('), SATELLIITTI.indexOf('// Pelaajan napautus, nipistys'));
   assert.match(runko, /if \(vuoro !== luentaVuoro \|\| !katselu\.isConnected \|\| !autoKaytossa\(\)\) return;/);
-  assert.match(runko, /autoSiirto\.aloita\(seuraava\.nimi, \(\) => \{ if \(katselu\.isConnected && autoKaytossa\(\)\) vaihdaKohde\(1\); \}\);/);
+  // Ei Seuraava/Pysäytä-lappua (omistaja 2.10.2026): siirto tapahtuu hiljaa luennan jälkeen.
+  assert.match(runko, /siirtoAjastin = setTimeout\(\(\) => \{ if \(katselu\.isConnected && autoKaytossa\(\)\) vaihdaKohde\(1\); \}, POHJA_AUTO_SIIRTO_MS\);/);
+  assert.doesNotMatch(SATELLIITTI, /autoSiirto\.aloita/);
 });
 
 test('pelaajan napautus, nipistys, rulla tai nuoli pysäyttää AUTOn; AUTOssa otsikko on pelkkä nimi', () => {
