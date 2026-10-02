@@ -237,7 +237,7 @@ namespace Matkakirja.Natiivi
                     }
                 }
             }
-            if (valit.Count >= 600) valit.RemoveAt(0);
+            if (valit.Count >= 3600) valit.RemoveAt(0);   // koko kierros (~53 s) 60 r/s
             valit.Add(Time.unscaledDeltaTime * 1000f);
             var (prologi, r, loppu) = AjattelijaAikajana.Globaali(a, g);
             nayttamo.Aseta(prologi, r);
@@ -293,7 +293,7 @@ namespace Matkakirja.Natiivi
             if (valit.Count == 0) return "ei ruutuja";
             var j = valit.OrderBy(v => v).ToList();
             float P(float q) => j[Math.Min(j.Count - 1, (int)(q * j.Count))];
-            return $"fps {1000f / j.Average():F1} p50 {P(0.5f):F1} p95 {P(0.95f):F1} ms, >33 ms {j.Count(v => v > 33.4f)}/{j.Count}";
+            return $"fps {1000f / j.Average():F1} p50 {P(0.5f):F1} p95 {P(0.95f):F1} pahin {j[j.Count - 1]:F1} ms, >33 ms {j.Count(v => v > 33.4f)}/{j.Count}";
         }
 
         /// <summary>Testikomento "ajattelija …" (LinssiOhjain.Suorita).</summary>
