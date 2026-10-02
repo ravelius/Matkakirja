@@ -2375,6 +2375,26 @@ function sovitaPohjaNapit(dialogi) {
   }
 }
 
+/**
+ * Lomake KENTTÄ-pohjaosalle (omistaja 1.10.2026: "lomake ok"): kentät tk-kentta, ensisijainen nappi kulta koko
+ * leveydeltä, muut napit TOIMINTO, kappaleet leipää ja avattavat otsikot kapiteeleja. Luokat, joihin js nojaa
+ * (.sahke-nimi, .periaate-laheta, .pro-rasti), säilyvät.
+ */
+function pueLomakePohjalle(isa) {
+  for (const e of isa.querySelectorAll('input:not([type=checkbox]):not([type=radio]):not([type=file]):not([type=hidden]), textarea, select')) {
+    e.classList.remove('periaate-kentta');
+    e.classList.add('tk-kentta');
+  }
+  for (const b of isa.querySelectorAll('button')) {
+    if (b.classList.contains('seloste-nappi')) continue;
+    const ensisijainen = b.classList.contains('primary');
+    b.classList.remove('primary', 'ghost');
+    b.classList.add('tk-nappi', ensisijainen ? 'tk-nappi--ensisijainen' : 'tk-nappi--toiminto');
+  }
+  for (const p of isa.querySelectorAll('p')) if (!/tk-/.test(p.className)) p.classList.add('tk-leipa');
+  for (const s of isa.querySelectorAll('summary')) s.classList.add('tk-kapiteeli');
+}
+
 export class UI {
   constructor(game, { onNewGame, onChange, onJatkaTurvasta = null, turvaOlemassa = null }) {
     this.game = game;
@@ -18096,8 +18116,11 @@ export class UI {
     sulje.type = 'button';
     sulje.addEventListener('click', () => lappu.close());
     kortti.appendChild(sulje);
-    // KORTTI-pohja (peruttava ?kortti=vanha); lomakekentät pitävät omat tyylinsä.
-    if (korttiPohjalla()) puePohjaKortiksi(kortti, { otsikko, sulje });
+    // KORTTI-pohja ja lomake KENTTÄ-pohjaosalle (peruttava ?kortti=vanha).
+    if (korttiPohjalla()) {
+      puePohjaKortiksi(kortti, { otsikko, sulje });
+      pueLomakePohjalle(kortti.querySelector('.periaate-lomake') ?? kortti);
+    }
 
     lappu.addEventListener('close', () => lappu.remove());
     lappu.addEventListener('click', (e) => { if (e.target === lappu) lappu.close(); });
