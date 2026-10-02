@@ -28,7 +28,8 @@
 // Liu'ut 140 + 160 ms; pieni liike pois: suora vaihto.
 // AUTO (omistaja 2.10.2026, Hongkongin kaappaus: "Automaattinen kohteen vaihto olisi tässä kiva."; web satelliitti.js PR #3817):
 // NOSTOKORTTI-pohjan osa AUTO samalla asetuksella kuin nostoselaimen AUTO (Nostoselain.Auto, PlayerPrefs matkakirja-lukija-auto).
-// Kytkin "● AUTO" vasempaan alakulmaan ‹ ›:n riville (LASI-AVARUUS), TUMMA lappu "Seuraava: <nimi> 3 s · Pysäytä" sen yläpuolelle.
+// Kytkin "● AUTO" ‹ ›:n ryhmään alhaalle keskelle (LASI-AVARUUS; Päätoimittaja 2.10.), TUMMA lappu "Seuraava: <nimi> 3 s · Pysäytä"
+// rivin yläpuolelle.
 // AUTOn aikana selite pysyy minimoituna, otsikkona on pelkkä kohteen nimi, ja kertoja lukee leipätekstin (vaikka Kertoja olisi
 // pois); luennan jälkeen 3 s ja seuraava kohde AstronauttiKierroksen järjestyksessä. Pelaajan kosketus (muu kuin kytkin tai
 // lappu) pysäyttää AUTOn.
@@ -150,8 +151,10 @@ namespace Matkakirja.Natiivi
                 n.RegisterCallback<PointerCaptureOutEvent>(_ => { n.userData = null; n.MarkDirtyRepaint(); });
             }
 
-            // AUTO: kytkin vasempaan alakulmaan ‹ ›:n riville, siirtolappu sen yläpuolelle koko leveydelle (web .satelliitti-autokulma).
-            autoKulma = Rakenne.El("mk-astrokuva__autokulma tk-teema-lasi-avaruus", turva, PickingMode.Ignore);
+            // AUTO: kytkin ‹ ›:n ryhmään alhaalle keskelle "AUTO ‹ ›" (Päätoimittaja 2.10.: vasemmassa alakulmassa pilleri osui
+            // pikkukuvanauhaan; natiivissa vasemmalla on myös minipallo), siirtolappu rivin yläpuolelle koko leveydelle.
+            autoKulma = Rakenne.El("mk-astrokuva__autokulma tk-teema-lasi-avaruus", null, PickingMode.Ignore);
+            kohdeNapit.Insert(0, autoKulma);
             autoNappi = Rakenne.Nappi(null, "mk-astrokuva__auto", () => AsetaAuto(!Nostoselain.Auto), autoKulma);
             Rakenne.El("mk-astrokuva__autopiste", autoNappi, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("AUTO", "mk-nappi__teksti mk-astrokuva__autoteksti", autoNappi), Kirjasin.KoneBold);
@@ -525,6 +528,7 @@ namespace Matkakirja.Natiivi
         {
             bool nakyy = !Vanha && kohdeNapit.style.display != DisplayStyle.None;
             autoKulma.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            RajaaNauha();
             autoNappi.EnableInClassList("mk-valittu", Nostoselain.Auto);
             bool paalla = Nostoselain.Auto && nakyy;
             juuri.EnableInClassList("mk-astrokuva--auto", paalla);
@@ -868,7 +872,10 @@ namespace Matkakirja.Natiivi
         {
             if (kohdeNapit.style.display == DisplayStyle.None || float.IsNaN(turvaLeveys)) { nauha.style.maxWidth = Length.Percent(50); return; }
             const float NappienPuolikas = 52f, Vasen = 12f, Vali = 8f, Pikkukuva = 42f;
-            nauha.style.maxWidth = Mathf.Max(Pikkukuva, turvaLeveys / 2f - NappienPuolikas - Vasen - Vali);
+            // AUTO ‹ ›:n ryhmässä (Päätoimittaja 2.10.) levittää ryhmää vasemmalle puolella omasta leveydestään (+ 8 pt:n väli).
+            float auto = autoKulma.style.display == DisplayStyle.None ? 0f
+                : (autoKulma.layout.width > 0f ? autoKulma.layout.width : 76f) + 8f;
+            nauha.style.maxWidth = Mathf.Max(Pikkukuva, turvaLeveys / 2f - NappienPuolikas - auto / 2f - Vasen - Vali);
         }
 
         /// <summary>Reunavyöhyke: −1 vasen, +1 oikea, 0 keskiosa (lavan leveydestä ulommat <see cref="ReunaOsuus"/>).</summary>
