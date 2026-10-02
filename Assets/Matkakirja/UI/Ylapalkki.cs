@@ -317,7 +317,7 @@ namespace Matkakirja.Natiivi
                 pilleri.AddToClassList("mk-pilleri--paiva-ensin");
             }
             pilleri.style.display = DisplayStyle.None;
-            pilleri.RegisterCallback<GeometryChangedEvent>(_ => { KeskitaPilleri(); SovitaPilleri(); PilleriMuuttui?.Invoke(); });
+            pilleri.RegisterCallback<GeometryChangedEvent>(_ => { KeskitaPilleri(); VahvistaKulmavali(); SovitaPilleri(); PilleriMuuttui?.Invoke(); });
 
             napit = Rakenne.El("mk-ylapalkki__napit", palkki, PickingMode.Ignore);
             Ratas = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Ratas);
@@ -405,8 +405,8 @@ namespace Matkakirja.Natiivi
                 palkki.style.backgroundSize = new BackgroundSize(IpadNahkaLeveys, IpadNahkaKorkeus);
                 var logoIpad = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/logo-kohopainatus-ipad");
                 if (logoIpad != null) { logo.style.backgroundImage = new StyleBackground(logoIpad); logoSuhde = 283f / 82f; }
-                // Omistaja 2.10.2026 klo 15.0x: konjakkinappi myös iPadilla (ei kohopainettua ovaalia).
-                pilleri.AddToClassList("mk-pilleri--konjakki");
+                // Omistaja 2.10.2026 klo 15.0x ja 17.0x: pillerinappi myös iPadilla (ei kohopainettua ovaalia, ei laukkukuvaketta).
+                PuePilleriNappi();
                 return;
             }
             var varjo = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/keski-varjo");
@@ -418,8 +418,18 @@ namespace Matkakirja.Natiivi
             }
             var logoNahka = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/logo-kohopainatus");
             if (logoNahka != null) { logo.style.backgroundImage = new StyleBackground(logoNahka); logoSuhde = 326f / 95f; }
-            // Omistaja 2.10.2026 klo 15.0x: pilleri napin näköiseksi, nahasta erottuva konjakinruskea (ei kohopainettua ovaalia).
-            pilleri.AddToClassList("mk-pilleri--konjakki");
+            // Omistaja 2.10.2026 klo 15.0x: pilleri napin näköiseksi, nahasta erottuva sävy (ei kohopainettua ovaalia).
+            PuePilleriNappi();
+        }
+
+        /// <summary>
+        /// PILLERINAPPI (omistaja 2.10.2026 klo 15.0x ja 17.0x): tyylikirjan pilleri-nappi-sävy (paperi.korostus hillitympänä),
+        /// laukkukuvake pois ja pilleri vain tekstin "1 pv · £400" levyinen.
+        /// </summary>
+        void PuePilleriNappi()
+        {
+            pilleri.AddToClassList("mk-pilleri--nappi");
+            pilleri.Q(className: "mk-ikoni")?.RemoveFromHierarchy();
         }
 
         /// <summary>Logon kuvasuhde (kultalogo 4:1, kohopainatus 326 × 95).</summary>
@@ -616,7 +626,11 @@ namespace Matkakirja.Natiivi
                 // kuin logo vasemmalla; kulmakaaren vara lasketaan nostetusta yläreunasta.
                 KeskitaPilleri();
                 float oikeaVara = Mathf.Max(r.z + 8f * yksikko, KulmaVara(yla - alemmas, rivi / 2f, kulmaR, KulmaMarginaali * yksikko));
-                oikeaVara = Mathf.Max(oikeaVara, vasenReuna);
+                // Omistaja 17.0x: pillerin lähimmän pisteen etäisyys näytön kaareen ≥ logon etäisyys vasempaan kaareen (VahvistaKulmavali
+                // mittaa asettelun jälkeen ja lisää tarvittaessa oikeaa väliä).
+                oikeaVaraPerus = oikeaVara;
+                naytonKulmaR = kulmaR;
+                oikeaVara += kulmaLisa;
                 float oikeaReuna = P(Screen.width / pp, 0f).x - oikeaVara;
                 palkki.style.paddingLeft = vasenReuna;
                 palkki.style.paddingRight = oikeaVara;
@@ -1133,6 +1147,35 @@ namespace Matkakirja.Natiivi
         /// saari y 14 pt (sama korkeus 36,3 pt), joten rivin laskennallinen sijainti ei riitä: siirto lasketaan pillerin
         /// todellisesta paikasta suhteessa saaren keskikohtaan (palkin koordinaatit) ja korjataan marginaalilla.
         /// </summary>
+        float oikeaVaraPerus = float.NaN, naytonKulmaR, kulmaLisa;
+
+        /// <summary>
+        /// Pillerin oikean yläkulman lähin piste näytön pyöristettyyn kulmaan vähintään yhtä kaukana kuin logon vasen yläkulma
+        /// vasempaan kaareen (omistaja 2.10.2026 klo 17.0x: mitataan lähimmästä pisteestä, ei suorasta reunasta). Pillerin kulma on
+        /// kulma-napin säteinen kaari; logo on suorakulmio. Lisä oikeaan väliin kasvaa mittauksen mukaan (GeometryChanged).
+        /// </summary>
+        void VahvistaKulmavali()
+        {
+            if (float.IsNaN(oikeaVaraPerus) || naytonKulmaR <= 0f || !PilleriOikealla) return;
+            var p0 = palkki.worldBound;
+            var lb = logo.worldBound;
+            var pb = pilleri.worldBound;
+            if (float.IsNaN(lb.width) || float.IsNaN(pb.width) || pb.width <= 0f || lb.width <= 0f) return;
+            float R = naytonKulmaR, W = p0.width;
+            var logoKulma = new Vector2(lb.xMin - p0.xMin, lb.yMin - p0.yMin);
+            float dLogo = logoKulma.x < R && logoKulma.y < R
+                ? R - Vector2.Distance(logoKulma, new Vector2(R, R)) : Mathf.Min(logoKulma.x, logoKulma.y);
+            float rho = pilleri.resolvedStyle.borderTopRightRadius;
+            if (float.IsNaN(rho)) rho = 0f;
+            var c = new Vector2(pb.xMax - p0.xMin - rho, pb.yMin - p0.yMin + rho);
+            float dPilleri = c.x > W - R && c.y < R
+                ? R - Vector2.Distance(c, new Vector2(W - R, R)) - rho : W - (pb.xMax - p0.xMin);
+            float ero = dLogo - dPilleri;
+            if (Mathf.Abs(ero) < 0.25f) return;
+            kulmaLisa = Mathf.Max(0f, kulmaLisa + ero);
+            palkki.style.paddingRight = oikeaVaraPerus + kulmaLisa;
+        }
+
         void KeskitaPilleri()
         {
             var saari = tikkausSaari;

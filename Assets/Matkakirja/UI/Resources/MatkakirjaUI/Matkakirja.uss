@@ -4538,7 +4538,7 @@
 
 /* Omistaja 2.10.2026 klo 15.1x: pilleri yhdellä rivillä "1 pv · £400". */
 .mk-pilleri--lyhyt {
-    padding-left: var(--tk-vali-s);
+    padding-left: var(--tk-vali-m);
     padding-right: var(--tk-vali-m);
 }
 
@@ -4556,20 +4556,18 @@
     margin-left: var(--tk-vali-xs);
 }
 
-/* KONJAKKINAPPI (omistaja 2.10.2026 klo 15.0x ja 16.0x: "hieman oranssin ruskea", konjakkinahka, ei sinapinkeltainen):
-   tyylikirjan konjakki pohjana, konjakki-reuna leikkausreunana, kermainen muste; laukkukuvake täydellä musteella
-   (ei haalea); kulma-nappi (ei ovaalia). */
-.mk-pilleri.mk-pilleri--konjakki {
+/* PILLERINAPPI (omistaja 2.10.2026 klo 15.0x ja 17.0x): tyylikirjan pilleri-nappi (paperi.korostus hillitympänä) ja
+   pilleri-nappi-reuna, kermainen muste; ei laukkukuvaketta (Ylapalkki.PuePilleriNappi), kulma-nappi (ei ovaalia). */
+.mk-pilleri.mk-pilleri--nappi {
     border-width: 1px;
-    border-color: var(--konjakki-reuna);
-    background-color: var(--konjakki);
+    border-color: var(--pilleri-nappi-reuna);
+    background-color: var(--pilleri-nappi);
     color: var(--tk-tumma-muste);
 }
 
-.mk-pilleri--konjakki .mk-pilleri__raha,
-.mk-pilleri--konjakki .mk-pilleri__kello,
-.mk-pilleri--konjakki .mk-pilleri__punta,
-.mk-ylapalkki .mk-pilleri.mk-pilleri--konjakki > .mk-ikoni {
+.mk-pilleri--nappi .mk-pilleri__raha,
+.mk-pilleri--nappi .mk-pilleri__kello,
+.mk-pilleri--nappi .mk-pilleri__punta {
     color: var(--tk-tumma-muste);
     opacity: 1;
 }
