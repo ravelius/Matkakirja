@@ -19,6 +19,8 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
   natiivi + web (iss-realismi-kerrokset.js r. 143) — HYVÄKSYTTY JA TEHTY: natiivi linssiseppa/kiilto-ilmakeha 797aac22
   (käännös 5c292cbe) merge-pyynnössä Natiivisepällä; web PR #3844 (Pelikoodari hyväksyi, CI vihreä). Kuvaparit
   lokit/linssiseppa-kiilto-ilmakeha-20261002/{natiivi,web}-vanha-uusi.png; web-harness scratchpad kiilto-web.mjs.
+- PULU VÄISTÄÄ KIPSIPÄÄN: linssiseppa/erikoisnostot-2 1ba9ac42 (Pulu.cs Alareuna + Erikoisnostot.NakyvaAlue) merge-pyynnössä junaan 126;
+  omistajan kuvat lokit/linssiseppa-kipsipaat-omistaja-20261002/omistaja-kipsipaat-{kiinni,auki}.png (ajo-kipsipaat-omistaja.sh).
 - KIPSIPÄÄT JUNASSA 125 (cf3ffcf1) ja todennettu iPhonella 16.19 (lokit/linssiseppa-erikoisnostot-juna125-iphone): näkyvät, reunaehto,
   napautus avaa Ajattelijat-linssin; sävy kuten web. Avoin: minipulun jalat pään päällä (pulun väistö, omistaja kysytty Päätoimittajalta).
 - ERIKOISNOSTOT TEHTY (2.10. 16.0x): linssiseppa/erikoisnostot ea412b26 (BUILD 123 + LS2 ajattelijat d817c141) merge-pyynnössä
