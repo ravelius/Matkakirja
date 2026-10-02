@@ -56,3 +56,19 @@ pilleri keskelle saaren ja kaaren väliin ja samalle korkeudelle.
 - Levy 57 Gt (raja 45): siivosin 4 worktreetä ja 92 yli 48 h lokikansiota 18.4x.
 - Vahinkocommit-vaara: älä käytä `git commit -a` (.claude/settings.local.json on muutettu).
 - Kuvien merkintäfontissa ei ole ☰-merkkiä (näkyy laatikkona): käytä tekstiä.
+
+## Päivitys klo 19.4x (juuri ennen nollausta; RC kytketty pois tyhjennystä varten — kytke päälle)
+
+- **TF 128 127:n sijaan** (hyväksytty): juna 5e78c8a0 = 127 + valikko V2 ILMAN Linssit-riviä + natiivin Linssit-karttanappi (myös
+  vaakatilassa) + kipsipäät karttaobjekteina; savuke 1128b PASS. Natiiviseppä tekee BUILDin, Julkaisija vie (→ 7/12).
+- **Tarkistettava ENNEN omistajaa** (suurennos, välit, keskilinjat):
+  1. Natiivi-UI: yläpalkki `proto-3d/lokit/natiivi-ui-pohjat/omistajalle-20261002-ylapalkki-valikko/14-ylapalkki-B-pilleri123-keskitetty-iphone17-7e218ee5.png`
+     (logo + pilleri saaren keskilinjalla) → omistajalle kortilla (OK → seuraavaan junaan). Nostoselaimen kuva tulee ~20.10.
+  2. Siirtoseppä: vartija v3 `proto-3d/lokit/siirtoseppa-skin3/vartija-v3-kavely-rajattu.mp4` (+ video-ruudut.png): reitti padan ja
+     seisojan edestä, asu harmaanruskea → omistajalle (OK → Linnanrakentaja tekee muut 16, Siirtoseppä moottorin junaan).
+  3. Linssiseppä: kipsipää natiivissa `proto-3d/lokit/linssiseppa-kipsipaat-kartta-20261002/omistaja-kreikka-ennen-jalkeen.png` ja
+     `omistaja-italia-ennen-jalkeen.png`. LÖYDÖS: Roomassa Marcuksen piste (42,4 N 13,1 E) jää Rooman kutsukortin alle → Pelikoodari
+     siirtää pistettä datassa (ei estä 128:aa). Natiivin varjo hieman webiä vaaleampi; säädetään, jos omistaja haluaa.
+- Pelikoodari: #3869 (kuplapoikkeukset: muotokuva kuvakehyksenä, ympyröity avainsana; mykistettynä koko teksti) ja #3870 (GALLERIA
+  webiin, Julisteet ensimmäisenä) valmiita → Julkaisijan junaan. Seuraavaksi ajattelijoiden kierrokset 2–3, kunnes Natiivi-UI:n
+  linssien hampurilaislista tulee.
