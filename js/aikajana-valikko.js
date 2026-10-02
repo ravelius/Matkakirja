@@ -52,6 +52,8 @@ import { asetaMusiikkiPaalla, musiikkiPaalla } from './musiikkivalitsin.js';
 import { pysaytaLinssiluenta } from './linssipuhe.js';
 import { vaiennaAanikytkimella } from './lukija.js';
 import { animoiAvaus, haamuSulku } from './avausanimaatio.js';
+import { paneeliPohjalla } from './pilleri-paneeli.js';
+import { pohjatLataaTyyli } from './pohjat/pohjat.js';
 
 /** Pudotusvalikon tunnus (aria-controls, js/ui-apurit.js VALIKKOKERROKSET). */
 export const VALIKON_TUNNUS = 'aikajana-valikko';
@@ -98,7 +100,7 @@ function viivaIkoni() {
  *   auki/avaa/sulje/vaihda/paivita/pura
  */
 export function luoLinssivalikko({
-  ui = null, onPoistu = null, onAlusta = null, onMusiikki = null,
+  ui = null, onPoistu = null, onAlusta = null, onMusiikki = null, teema = 'lasi',
 } = {}) {
   const kotelo = solmu('div', 'aikajana-valikko-kotelo');
   const nappi = solmu('button', `aikajana-nappi ${VALIKON_NAPPI_LUOKKA}`);
@@ -115,6 +117,15 @@ export function luoLinssivalikko({
   valikko.setAttribute('role', 'menu');
   valikko.setAttribute('aria-label', 'Linssin valikko');
   valikko.hidden = true;
+  /*
+   * PANEELI (LASI) -pohja (Natiivi-UI 1.10.2026, PANEELIN 2. erä): vain ulkoasu; järjestys (omistaja 8.9.) ja sulku
+   * ennallaan. ISS-linssissä teema on lasi-avaruus. Peruttava ?paneeli=vanha (js/pilleri-paneeli.js).
+   */
+  const pohjalla = paneeliPohjalla();
+  if (pohjalla) {
+    pohjatLataaTyyli();
+    kotelo.classList.add('tk-paneeli-linssivalikko', `tk-teema-${teema}`);
+  }
 
   const auki = () => !valikko.hidden;
   const sulje = () => {
@@ -171,6 +182,8 @@ export function luoLinssivalikko({
   const poistuNappi = komento('aikajana-valikko-poistu', 'Poistu', () => onPoistu?.());
   // 2. Aloita alusta — entinen ↺.
   const alustaNappi = komento('aikajana-valikko-alusta', 'Aloita alusta', () => onAlusta?.());
+  // Toimintojen ja kytkinten väliin 1 px viiva (PANEELIN erotin).
+  if (pohjalla) valikko.appendChild(solmu('div', 'tk-paneeli__erotin'));
   /*
    * 3. Kertoja. Pois kesken luennan tarkoittaa hiljaisuutta HETI eikä
    * lauseen lopusta: linssin luenta pysäytetään samalla kahvalla kuin

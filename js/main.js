@@ -3,7 +3,7 @@
 import { MUUTOKSET } from './muutokset.js';
 import { asetaKehittajanKerroin, kehittajanKerroin } from './kehittajan-voimat.js';
 import { Game } from './game.js';
-import { UI } from './ui.js';
+import { UI, korttiPohjalla, puePohjaDialogiksi } from './ui.js';
 import { paneeliPohjalla, puePilleriPaneeliksi } from './pilleri-paneeli.js';
 import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
@@ -174,7 +174,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2528';
+const APP_VERSION = '2026-09-21.2534';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1503,6 +1503,8 @@ function avaaMuutokset() {
     for (const m of MUUTOKSET) muutoksetLista.appendChild(muutosRivi(m));
     lokiRakennettu = true;
   }
+  // KORTTI-pohja (peruttava ?kortti=vanha), kun lista on rakennettu.
+  if (korttiPohjalla()) puePohjaDialogiksi(muutoksetDialog, { sulje: '#muutokset-sulje' });
   muutoksetDialog.showModal();
 }
 
@@ -1987,6 +1989,7 @@ if (paivitysTapahtui && edellinenVersio && !katseluPack && !suoraanKartallePaall
   paivitysDialog.addEventListener('click', (e) => {
     if (e.target === paivitysDialog) paivitysDialog.close();
   });
+  if (korttiPohjalla()) puePohjaDialogiksi(paivitysDialog, { sulje: '#paivitys-sulje' });
   paivitysDialog.showModal();
 }
 
