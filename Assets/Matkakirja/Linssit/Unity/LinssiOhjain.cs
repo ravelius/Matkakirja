@@ -2105,6 +2105,16 @@ namespace Matkakirja.Natiivi
                 if (loyto == null) return "ei yöylitystä Euroopan yllä 24 vrk:n sisällä";
                 siirto = loyto.Value.AddSeconds(30) - nyt;
             }
+            else if (arvo == "paiva-eurooppa")
+            {
+                // Päivä Euroopan yllä (ISS-kameran KUVAA Cupolasta, Linssiseppä 2 / savuke 1116: ISS oli Tyynenmeren tai Aasian yllä):
+                // alapiste lat 43–56, lon −5…25 ja aurinko yli 25°; varalla väljempi (lat 38–60, lon −10…30, yli 15°).
+                var nyt = DateTime.UtcNow;
+                var loyto = HaeKyydinHetki(nyt, 72, 20, (t, lat, lon) => lat >= 43 && lat <= 56 && lon >= -5 && lon <= 25 && AurinkoKorkeus(t, lat, lon) > 25)
+                    ?? HaeKyydinHetki(nyt, 24 * 7, 20, (t, lat, lon) => lat >= 38 && lat <= 60 && lon >= -10 && lon <= 30 && AurinkoKorkeus(t, lat, lon) > 15);
+                if (loyto == null) return "ei päiväylitystä Euroopan yllä 7 vrk:n sisällä";
+                siirto = loyto.Value.AddSeconds(30) - nyt;
+            }
             else if (arvo == "hamara")
             {
                 // Iltahämärä Euroopan yllä kohti yötä (alapisteessä aurinko +2…+6° ja laskee): kamera katsoo eteenpäin
@@ -2227,9 +2237,33 @@ namespace Matkakirja.Natiivi
         internal void Kirjaa(string teksti)
         {
             using var _ = KirjaaMerkki.Auto();
-            Debug.Log("MATKAKIRJA linssit: " + teksti);
-            try { File.AppendAllText(lokiPolku, $"{Aika:F2} {teksti}\n"); } catch (IOException) { }
+            // Linnan avautuessa (iPad 2.10.) Kirjaa vei piikkiruuduissa 12–15 ms: Development-käännöksen pinonjäljet ja
+            // synkroninen tiedostokirjoitus. Rivi ilman pinonjälkeä, tiedostoon taustasäikeessä järjestyksessä.
+            Debug.LogFormat(LogType.Log, LogOption.NoStacktrace, null, "{0}", "MATKAKIRJA linssit: " + teksti);
+            string polku = lokiPolku;
+            lock (lokiJono)
+            {
+                lokiJono.Append(Aika.ToString("F2")).Append(' ').Append(teksti).Append('\n');
+                if (lokiKirjoittaa) return;
+                lokiKirjoittaa = true;
+            }
+            System.Threading.Tasks.Task.Run(() =>
+            {
+                while (true)
+                {
+                    string pala;
+                    lock (lokiJono)
+                    {
+                        if (lokiJono.Length == 0) { lokiKirjoittaa = false; return; }
+                        pala = lokiJono.ToString(); lokiJono.Clear();
+                    }
+                    try { File.AppendAllText(polku, pala); } catch (IOException) { }
+                }
+            });
         }
+
+        static readonly System.Text.StringBuilder lokiJono = new System.Text.StringBuilder();
+        static bool lokiKirjoittaa;
 
         // ── Kerrokset ─────────────────────────────────────────────────────
 

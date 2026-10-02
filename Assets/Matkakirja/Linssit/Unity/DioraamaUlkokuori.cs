@@ -146,7 +146,7 @@ namespace Matkakirja.Natiivi
                 DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} kolmiot", r0);
                 if (tauot) { yield return null; if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; } }
                 r0 = DioraamaRuutu.Alku();
-                mesh.UploadMeshData(true); // kärjet vain GPU:lle, CPU-kopio vapautuu
+                mesh.UploadMeshData(true); DioraamaRuutu.Mesh(kirjaa, mesh); // kärjet vain GPU:lle, CPU-kopio vapautuu
                 DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} mesh-lataus", r0);
                 if (tauot) yield return null;
 
@@ -156,17 +156,23 @@ namespace Matkakirja.Natiivi
                 string astc = AstcPolku(taso);
                 if (!string.IsNullOrEmpty(astc))
                 {
-                    byte[] astcTavut = null;
-                    yield return DioraamaLevyvalimuisti.Hae(url(astc), 300, t => astcTavut = t); // 8k-atlas 89 Mt
-                    if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
+                    var astcTavut = default(Unity.Collections.NativeArray<byte>); // natiivimuistiin (linnan piikit 2.10.)
+                    yield return DioraamaLevyvalimuisti.HaeNatiivi(url(astc), 300, t => astcTavut = t); // 8k-atlas 89 Mt
+                    if (oma != kerta) { if (astcTavut.IsCreated) astcTavut.Dispose(); UnityEngine.Object.Destroy(mesh); yield break; }
                     // Puhelimessa huipputason 8k-atlas 4k:na (ylin mip ohitetaan; iPad ja Mac 8k), kuten maaston orto.
                     bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
                     r0 = DioraamaRuutu.Alku();
-                    kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out string syy, TextureWrapMode.Clamp, puhelin && taso == Laatu.Huippu ? 1 : 0);
+                    string syy; bool ladattiin = astcTavut.IsCreated;
+                    // 8k-atlas kaistoina useaan ruutuun (linnan piikit 2.10.: kertalataus 64–100 ms renderisäikeessä).
+                    Texture2D kk = null; syy = null;
+                    try { yield return DioraamaAstc.LueKaistoina(astcTavut, "Ulkokuori:" + taso + ":astc", TextureWrapMode.Clamp, puhelin && taso == Laatu.Huippu ? 1 : 0, false, (k, s) => { kk = k; syy = s; }); }
+                    finally { if (ladattiin) astcTavut.Dispose(); }
+                    kuva = kk;
+                    if (oma != kerta) { if (kuva != null) UnityEngine.Object.Destroy(kuva); UnityEngine.Object.Destroy(mesh); yield break; }
                     DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} ASTC", r0);
                     DioraamaRuutu.Gpu(kirjaa, kuva);
                     if (kuva != null && tauot) yield return null;
-                    if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(astcTavut == null ? "ei latautunut" : syy)}), JPEG varalla");
+                    if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(!ladattiin ? "ei latautunut" : syy)}), JPEG varalla");
                 }
                 if (kuva == null && hamara && !string.IsNullOrEmpty(JpgHamara(taso)))
                 {
@@ -450,6 +456,7 @@ namespace Matkakirja.Natiivi
         {
 
             int i = (int)taso;
+            DioraamaRuutu.Tapahtuma($"kuori {taso} käyttöön");
             PoistaTaso(i);
             var m = new Material(varjostin) { name = "Ulkokuori:" + taso };
             if (kuva != null) m.SetTexture(IdKuva, kuva);

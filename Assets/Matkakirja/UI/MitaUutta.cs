@@ -144,6 +144,13 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static Func<string> BuildNumero;
 
+        /// <summary>CFBundleVersion tai null (valikon alarivi kehittäjätilassa, omistaja 2.10.).</summary>
+        public static string Build()
+        {
+            try { var b = BuildNumero?.Invoke(); return string.IsNullOrEmpty(b) ? null : b; }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui build-numero: " + e.Message); return null; }
+        }
+
         /// <summary>Versio + build (Fable 24.9.: myös pelkkä build-numeron vaihto 1.0.0 (2) → (3) on päivitys).</summary>
         static string VersioJaBuild()
         {

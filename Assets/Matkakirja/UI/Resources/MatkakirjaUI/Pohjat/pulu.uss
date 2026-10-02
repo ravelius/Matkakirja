@@ -1,0 +1,50 @@
+/* PULU-pohja, osa CHAT (web #3831 css/pohjat/pulu.css; tyylikirja pohjat.PULU teemat paperi, lasi, lasi-avaruus).
+ * Teema isännältä: kartalla paperi (Pulu.uss), linssissä linssin lasi. Avaruuslasi (ISS, satelliitti, astronautin kamera)
+ * on Pulu.uss:n .mk-chat--linssi; tämä tiedosto tuo LÄMPIMÄN LASIN (PuluChat.AvaaLinssissa teema "lasi", esim. Sokrates)
+ * samaan rakenteeseen tyylikirjan lasitokeneilla. Ei ✕:ää: sulku Pulun napautuksella ja ohinapautuksella. */
+.mk-chat.mk-chat--linssi.mk-chat--lasi {
+    border-color: var(--tk-lasi-reunus);
+    background-color: var(--tk-lasi-pinta);
+    color: var(--tk-lasi-muste);
+}
+
+.mk-chat--lasi .mk-chat__viesti,
+.mk-chat--lasi .mk-chat__livia,
+.mk-chat--lasi .mk-chat__kentta {
+    color: var(--tk-lasi-muste);
+}
+
+.mk-chat--lasi .mk-chat__pelaaja {
+    background-color: var(--tk-lasi-pinta-peitto);
+    color: var(--tk-lasi-muste);
+}
+
+.mk-chat--lasi .mk-chat__odottaa,
+.mk-chat--lasi .mk-chat__paikkarivi {
+    color: var(--tk-lasi-muste-pehmea);
+}
+
+.mk-chat--lasi .mk-chat__siru {
+    border-color: var(--tk-lasi-reunus);
+    background-color: initial;
+    color: var(--tk-lasi-korostus);
+}
+
+.mk-chat--lasi .mk-chat__ikoninappi,
+.mk-chat--lasi .mk-lukija,
+.mk-chat--lasi .mk-chat__nappula,
+.mk-chat--lasi .mk-chat__laheta {
+    color: var(--tk-lasi-korostus);
+    -unity-background-image-tint-color: var(--tk-lasi-korostus);
+}
+
+.mk-chat--lasi .mk-chat__nappula,
+.mk-chat--lasi .mk-chat__kentta,
+.mk-chat--lasi .mk-chat__laheta {
+    background-color: initial;
+    border-color: var(--tk-lasi-reunus);
+}
+
+.mk-chat--lasi .mk-chat__syote {
+    border-color: var(--tk-lasi-reunus);
+}

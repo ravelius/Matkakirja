@@ -1,0 +1,49 @@
+/* OHJAUSNAPPI-pohja (omistaja 2.10.2026 klo 14.16: kaikki kuvakenapit yhtenäisiksi neliöiksi pyöristetyin kulmin ja näkymän napit
+ * yhteen ohjausryhmään). EHDOTUS, kokeena lipun takana (`ui ohjausnapit 1`, OhjausryhmaKoe) ennen omistajan OK:ta.
+ * Malli: olemassa oleva taikalasinappi (web #linssi-btn, natiivi .mk-linssiNappi 40 × 40, pyöristetty neliö).
+ *   näkyvä 40 × 40 pt, osuma-ala 44 pt (Kosketusnappi laajentaa), kulma --tk-kulma-nappi, kuvake 22 pt viivalla 1,75 (web VIIVA_IKONIT)
+ *   ryhmä: vaakarivi oikeaan yläkulmaan turva-alueen sisään, väli --tk-vali-s; järjestys ‹ → näkymän säätimet → ✕ viimeisenä oikealla
+ *   teema elementin tk-teema-*-luokasta (paperi, lasi, lasi-avaruus); --harmaa = 16.9. harmaa (valokuvan, 3D:n ja avaruuden päällä).
+ * VAIN --tk-*-tokenit; harmaa poikkeus samoin arvoin kuin Pohjat/kuvanakyma.uss. */
+.mk-ohjausryhma {
+    position: absolute;
+    top: var(--tk-vali-s);
+    right: var(--tk-vali-s);
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-ohjausnappi {
+    width: 40px;
+    height: 40px;
+    min-height: 40px;
+    margin: 0 0 0 var(--tk-vali-s);
+    padding: 0;
+    border-width: 1px;
+    border-radius: var(--tk-kulma-nappi);
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta);
+    color: var(--tk-muste);
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-ohjausnappi > .mk-ikoni {
+    width: 22px;
+    height: 22px;
+    margin-right: 0;
+}
+
+.mk-ohjausnappi:active {
+    border-color: var(--tk-korostus);
+}
+
+.mk-ohjausnappi--harmaa {
+    border-color: rgb(170, 170, 170);
+    background-color: rgba(130, 130, 130, 0.42);
+    color: rgb(224, 224, 224);
+}
+
+.mk-ohjausnappi--harmaa:active {
+    background-color: rgba(170, 170, 170, 0.55);
+}

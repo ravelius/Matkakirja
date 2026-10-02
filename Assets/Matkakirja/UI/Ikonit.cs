@@ -43,6 +43,8 @@ namespace Matkakirja.Natiivi
         // js/lehti.js avaaSisallysvalikko: "Palaa kartalle" -napin nuoli.
         // js/ui.js .flight-eteen (Ohita lento -nuoli, aloituslennon Ohita-nappi, löydös 83).
         public const string OhitaLento = "<path d=\"M8 5 L15 12 L8 19\"/>";
+        /// <summary>OHJAUSNAPPI ‹ takaisin: pelkkä kulma (sama viiva kuin NuoliOikea peilattuna).</summary>
+        public const string Takaisin = "<path d=\"M15 5.5 8.5 12 15 18.5\"/>";
         public const string Paluu = "<path d=\"M13.5 5.5 7 12l6.5 6.5\"/><path d=\"M7 12h10.5\"/>";
 
         // js/maalehti.js naytaMaaTunnusluvut IKONIT (15 × 15 viewBox: SvgIkoni.Ruutu = 15).

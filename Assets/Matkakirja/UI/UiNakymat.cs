@@ -218,7 +218,9 @@ namespace Matkakirja.Natiivi
             v.AarteetData = () => PeliOhjain.Instanssi?.Laukku();
             Matkalaukku.Upota(v.TiedotKohde);
             v.Avautuu += Matkalaukku.PaivitaTiedot;
-            v.LisaVersio(() => "v" + Application.version + (Asetukset.Kehittaja ? " · kehittäjä" : ""), Valikko.MitaUutta.Avaa);
+            // Kehittäjätilassa build-numero (CFBundleVersion) suluissa versionumeron perässä (omistaja 2.10.): "v1.1 (120) · kehittäjä".
+            v.LisaVersio(() => "v" + Application.version
+                + (Asetukset.Kehittaja ? (MitaUutta.Build() is string b ? " (" + b + ")" : "") + " · kehittäjä" : ""), Valikko.MitaUutta.Avaa);
         }
 
         /// <summary>

@@ -19,14 +19,17 @@ namespace Matkakirja.Natiivi
 {
     public static class KehysPiikit
     {
-        const int Katto = 1200, Karki = 12;
-        // Pelisilmukan vaiheet ja UI Toolkitin päämerkit ensin, jottei katto rajaa niitä pois.
-        static readonly Regex Ensin = new Regex("^(PlayerLoop|Initialization|EarlyUpdate|FixedUpdate|PreUpdate|Update|PreLateUpdate|PostLateUpdate|UIElements|UIR|GC)",
+        const int Katto = 1200, Karki = 20;
+        // Pelisilmukan vaiheet ja UI Toolkitin päämerkit ensin, jottei katto rajaa niitä pois. Linnan piikit (2.10.): myös
+        // skriptien omat merkit ("Luokka.Update() [Invoke]", korutiinit), jotta 70 ms:n BehaviourUpdate kohdistuu luokkaan.
+        static readonly Regex Ensin = new Regex("^(PlayerLoop|Initialization|EarlyUpdate|FixedUpdate|PreUpdate|Update|PreLateUpdate|PostLateUpdate|UIElements|UIR|GC)|\\[(Invoke|Coroutine)",
             RegexOptions.CultureInvariant);
         static readonly Regex Suodatin = new Regex(
-            "UI|UIR|Panel|Layout|Text|Font|Style|Visual|Update|Script|Coroutine|GC|Load|Shader|Texture|Upload|Render|Cesium|Camera|Audio|Animation|Gfx|Semaphore|WaitFor",
+            "UI|UIR|Panel|Layout|Text|Font|Style|Visual|Update|Script|Coroutine|GC|Load|Shader|Texture|Upload|Render|Cesium|Camera|Audio|Animation|Gfx|Semaphore|WaitFor|Invoke",
             RegexOptions.CultureInvariant);
 
+        /// <summary>Lisätieto piikkiriville ruutunumerolla (esim. viimeisimmät GPU-lataukset); null = ei mitään.</summary>
+        public static Func<int, string> Lisatieto;
         static readonly List<(string Nimi, ProfilerRecorder Mittari)> mittarit = new List<(string, ProfilerRecorder)>();
         static float loppu, kynnys;
         static int piikkeja;
@@ -68,6 +71,9 @@ namespace Matkakirja.Natiivi
             foreach (var (nimi, ms) in raskaat)
                 sb.Append(' ').Append(nimi).Append(' ').Append(ms.ToString("0.0", CultureInfo.InvariantCulture)).Append(';');
             if (raskaat.Count == 0) sb.Append(" (ei arvoja: " + mittarit.Count(m => m.Mittari.Valid && m.Mittari.IsRunning) + "/" + mittarit.Count + " mittaria käynnissä)");
+            // Linnan piikit (2.10.): mitä raskasta tapahtui tässä ja edellisissä ruuduissa (DioraamaRuutu-tapahtumat).
+            var lisa = Lisatieto?.Invoke(Time.frameCount - 1);
+            if (!string.IsNullOrEmpty(lisa)) sb.Append(" | ").Append(lisa);
             Debug.Log(sb.ToString());
         }
 

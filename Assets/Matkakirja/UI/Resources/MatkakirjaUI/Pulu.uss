@@ -75,7 +75,7 @@
     border-color: rgba(122, 85, 20, 0.32);
     border-radius: 9.6px;
     background-color: #f4e7ca;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
     opacity: 0;
     translate: 0 8px;
     transition-property: opacity, translate;
@@ -134,7 +134,7 @@
 
 .mk-kupla__ohita > .mk-nappi__teksti {
     font-size: 12.48px;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
     letter-spacing: 0;
 }
 
@@ -209,8 +209,8 @@
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.32);
     border-radius: 8px;
-    background-color: #f5f0e2;
-    color: #211d18;
+    background-color: var(--tk-paperi-pinta);
+    color: var(--tk-paperi-muste);
 }
 
 .mk-pulukuva__kuva {
@@ -233,10 +233,10 @@
     min-height: 0;
     padding: 5.6px 11.2px;
     border-width: 1px;
-    border-color: #7a5514;
+    border-color: var(--tk-paperi-korostus);
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0);
-    color: #7a5514;
+    color: var(--tk-paperi-korostus);
     font-size: 13.1px;
 }
 
@@ -270,7 +270,7 @@
     --line: rgba(122, 85, 20, 0.32);
     --ink-light: #46331f;   /* web --map-ink */
     --muted: #8a6c46;       /* web --map-ink-soft */
-    --accent: #7a5514;
+    --accent: var(--tk-paperi-korostus);
     -unity-background-image-tint-color: rgb(255, 255, 255);
     -unity-background-scale-mode: stretch-to-fill;
 }
@@ -666,16 +666,16 @@
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.32);
     border-radius: 12px;
-    background-color: #f5f0e2;
-    color: #211d18;
+    background-color: var(--tk-paperi-pinta);
+    color: var(--tk-paperi-muste);
     /* Avaus ja sulku: Ponnahdus (PuluChat.Avaa/Sulje), web pollo.js animoiAvaus 220/200 ms. */
 }
 
 /* LINSSITILA (omistaja 30.9.2026 klo 23.5x: "tee pululle aina samat napit kaikkialle peliin"): sama chat, teemana entisen
    minipulun kortin tumma lasi ja vihreä reuna (Linssit.uss .mk-minipuluKortti). Napit ja järjestys ennallaan. */
 .mk-chat.mk-chat--linssi {
-    border-color: rgba(93, 255, 168, 0.28);
-    background-color: rgba(4, 12, 9, 0.9);
+    border-color: var(--tk-lasi-avaruus-reunus);
+    background-color: var(--tk-lasi-avaruus-pinta);
     color: #eafff3;
 }
 
@@ -697,15 +697,15 @@
 .mk-chat--linssi .mk-chat__siru {
     border-color: rgba(93, 255, 168, 0.4);
     background-color: rgba(93, 255, 168, 0.08);
-    color: #5dffa8;
+    color: var(--tk-lasi-avaruus-korostus);
 }
 
 .mk-chat--linssi .mk-chat__ikoninappi,
 .mk-chat--linssi .mk-lukija,
 .mk-chat--linssi .mk-chat__nappula,
 .mk-chat--linssi .mk-chat__laheta {
-    color: #5dffa8;
-    -unity-background-image-tint-color: #5dffa8;
+    color: var(--tk-lasi-avaruus-korostus);
+    -unity-background-image-tint-color: var(--tk-lasi-avaruus-korostus);
 }
 
 .mk-chat--linssi .mk-chat__kentta {
@@ -752,7 +752,7 @@
     padding: 5.6px 8px;
     border-radius: 8px;
     background-color: #ece2c8;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
     font-size: 13.6px;
 }
 
@@ -781,7 +781,7 @@
     border-color: rgba(122, 85, 20, 0.45);
     border-radius: 16px;
     background-color: rgba(0, 0, 0, 0);
-    color: #7a5514;
+    color: var(--tk-paperi-korostus);
 }
 
 .mk-chat__siru:active {
@@ -815,7 +815,7 @@
     border-color: rgba(122, 85, 20, 0.35);
     border-radius: 10px;
     background-color: #fffaf0;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
 }
 
 .mk-chat__laheta {
@@ -826,7 +826,7 @@
     margin-left: 4px;
     border-color: rgba(122, 85, 20, 0.45);
     background-color: rgba(0, 0, 0, 0);
-    color: #7a5514;
+    color: var(--tk-paperi-korostus);
 }
 
 .mk-chat__laheta .mk-nappi__teksti {
@@ -1001,7 +1001,7 @@
     padding: 0;
     border-width: 0;
     background-color: rgba(0, 0, 0, 0);
-    color: #7a5514;
+    color: var(--tk-paperi-korostus);
     justify-content: center;
     align-items: center;
 }
@@ -1033,7 +1033,7 @@
     border-color: rgba(70, 51, 31, 0.3);
     border-radius: 12px;
     background-color: #efe5cf;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
 }
 
 .mk-chat__poimintanappi .mk-nappi__teksti {
@@ -1046,7 +1046,7 @@
 
 .mk-chat__poimintatila {
     font-size: 11.5px;
-    color: #211d18;
+    color: var(--tk-paperi-muste);
     opacity: 0.8;
 }
 
@@ -1097,11 +1097,11 @@
 }
 
 .mk-chat__realtime--paalla {
-    border-color: #211d18;
+    border-color: var(--tk-paperi-muste);
 }
 
 .mk-chat__realtime--paalla .mk-nappi__teksti {
-    color: #211d18;
+    color: var(--tk-paperi-muste);
 }
 
 .mk-chat__nappirivi {
@@ -1121,8 +1121,8 @@
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.45);
     border-radius: 8px;
-    background-color: #f5f0e2;
-    color: #7a5514;
+    background-color: var(--tk-paperi-pinta);
+    color: var(--tk-paperi-korostus);
 }
 
 .mk-chat__nappula > .mk-ikoni {
@@ -1137,8 +1137,8 @@
 }
 
 .mk-chat__mikki--kuuntelee {
-    background-color: #7a5514;
-    border-color: #7a5514;
+    background-color: var(--tk-paperi-korostus);
+    border-color: var(--tk-paperi-korostus);
     color: #f7f1e2;
 }
 
@@ -1216,7 +1216,7 @@
 
 .mk-minipopup__poista .mk-nappi__teksti {
     font-size: 12.5px;
-    color: #7a5514;
+    color: var(--tk-paperi-korostus);
 }
 
 /* Linssin valmis vastaus ja sen lähderivi (web .pollo-valmisvastaus, .pollo-valmislahteet). */
@@ -1243,7 +1243,7 @@
 
 .mk-chat__valmislinkki .mk-nappi__teksti {
     font-size: 12px;
-    color: #7a5514;
+    color: var(--tk-paperi-korostus);
 }
 
 /* iPhonen kaupunkipilleri (löydös 20): rahapillerin (.mk-ylapalkki--kelluva .mk-pilleri) alla samaa tyyliä. */

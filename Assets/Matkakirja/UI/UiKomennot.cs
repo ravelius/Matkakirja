@@ -613,6 +613,14 @@ namespace Matkakirja.Natiivi
                 }
                 case "chat":
                     if (loput == "ehdota") { ui.Chat.Avaa(); ui.Chat.EhdotaSisaltoa(); return null; }
+                    // PULU-pohjan linssiteemat ilman linssiä (kuvapari): "ui chat teema lasi|lasi-avaruus", oikeaan alakulmaan.
+                    if (loput.StartsWith("teema "))
+                    {
+                        var juuri = UiKerros.Hae().Juuri(UiKerros.Valikot);
+                        ui.Chat.AvaaLinssissa(() => juuri == null ? default : new Rect(juuri.layout.width - 80, juuri.layout.height - 120, 60, 60),
+                            "testi", new List<string> { "Mitä tässä näkyy?" }, loput.Substring(6).Trim());
+                        return null;
+                    }
                     if (loput == "aani") { Kirjaa("ui chat aani: " + (ui.Chat.VaihdaAaniTesti() ? "päällä" : "pois")); return null; }
                     if (loput == "lukija" || loput == "lukija valikko") { ui.Chat.Avaa(); Kirjaa("ui chat lukija: " + ui.Chat.LukijaTesti(loput == "lukija valikko")); return null; }
                     // Puhekeskustelu (web #3546): saneltu kysymys ilman mikrofonia, tila + viive, mikin napautus.
@@ -774,6 +782,10 @@ namespace Matkakirja.Natiivi
                     // Näppäimistökerros (Nappaimisto): ui nappain vasen|oikea|ylos|alas|esc (kuin fyysinen näppäin).
                     Kirjaa("nappain: " + Nappaimisto.Paina(loput.Trim()));
                     return null;
+                case "ohjausnapit":
+                    // OHJAUSNAPPI-koe (omistaja 2.10. klo 14.16): ui ohjausnapit 1|0.
+                    OhjausryhmaKoe.Paalla = loput.Trim() != "0";
+                    return "=ohjausnapit " + (OhjausryhmaKoe.Paalla ? "päällä" : "pois");
                 case "mikseri":
                 {
                     // Kehittäjän mikseripaneeli (MikseriPaneeli): ui mikseri [tila] | auki | kiinni | demo | demo pois.
