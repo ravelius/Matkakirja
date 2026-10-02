@@ -2,13 +2,15 @@
 
 Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen: -20261001-b.md (käytännöt voimassa, ellei tässä toisin).
 
-## TILA HETI (päivitetty 21.2x)
+## TILA HETI (päivitetty 22.0x, viikkoraja 92 %)
 
 - **proto master e204abbe = BUILD 129** (juna 0b5c8d87, käännös 745d8ff0): yläpalkki-tikkaus-2, nostorivi-2, valikko-v2-siisti,
   erikoisnostot-3 54358623, nimet-maakunta b39cd1da (ROOMA-hyppy), linna-skin b126d548. TF 128 ladattu 20.03 (7/12); TF 129
   (8/12) ~22.05. Illalla vielä 1–2 latausta (9–10); 11–12 säästetään 3.10. aamuun ennen 12.30.
 - Ei avoimia junia eikä natiiviseppa-worktreeitä. Lokeissa vain uusin juna-kopio (juna-1.1.129-745d8ff0).
-- Juna 130 tulossa: Siirtosepän varjokorjaus 0592decd (simu ~21.50).
+- Juna 130 tulossa: Siirtosepän varjokorjaus 0592decd (simu ~21.50, merge-pyyntöä ei vielä tullut 22.07).
+- Viikkoraja 92 % 22.06; 95 %:ssa (~23.30) lopullinen luovutus ja lopetus (Päätoimittajan ohje). Seuraava Natiiviseppä
+  jatkaa tästä tilasta: kokoa juna 130 BUILD 129:n (juna/b13 0b5c8d87) päälle worktreessä, testit testit-j111.sh-pohjalla.
 
 ## TÄNÄÄN (2.10.) TEHDYT BUILDIT
 
