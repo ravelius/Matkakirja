@@ -113,6 +113,7 @@
     "leveaLisa": 2
   },
   "fontit": {
+    "punta": { "kirjasin": "Luku", "vali": 1, "_selite": "£-merkki aina Luku-kirjasimella (Iowan Old Style) ja 1 pt:n väli numeroon, myös Kone-teksteissä: American Typewriterin £ näytti koukulta ja '−£20' luettiin '−&20' (omistaja ja Päätoimittaja 2.10.2026). Web: @font-face 'Matkakirja Punta' src: local('Iowan Old Style Roman'), local('IowanOldStyle-Roman'), local('Iowan Old Style'), local('Charter Roman'), local('Charter-Roman'), local('Georgia'), local('Palatino Linotype'), local('Palatino-Roman'), local('Cambria'), local('Noto Serif'), local('NotoSerif-Regular'), local('DejaVu Serif'), local('Times New Roman') (local() vaatii kasvon koko nimen tai PostScript-nimen, Pelikoodari mittasi Chromiumilla; Iowan on Applen järjestelmäfontti eikä upotettavissa), unicode-range U+00A3, jokaisen fonttipinon alkuun. Natiivi: £ omana Luku-tekstinään (Ylapalkki.AsetaRahaTeksti; muut näytöt samalla apurilla)." },
     "_selite": "web = CSS-pino (sama kuin ennen), natiivi = Kirjasimet.cs:n ehdokkaat (perhe, tyyli) järjestyksessä.",
     "web": {
       "font-type": "\"American Typewriter\", \"Courier Prime\", \"Courier New\", Courier, monospace",
@@ -131,10 +132,11 @@
     }
   },
   "mitat": {
-    "_selite": "pt (web px). vali = välien asteikko; kulma = border-radius; nappi = kolme nappityyppiä 38 pt, osuma-ala aina ≥ 44 pt; nappi.ohjaus = OHJAUSNAPPI-neliö (kuvake ohjaus-kuvake).",
+    "_selite": "pt (web px). vali = välien asteikko; kulma = border-radius; nappi = kolme nappityyppiä 38 pt, osuma-ala aina ≥ 44 pt; nappi.ohjaus = OHJAUSNAPPI-neliö (kuvake ohjaus-kuvake); galleria = GALLERIA-ruudukon sarakkeen vähimmäisleveys ja väli.",
     "vali": { "xs": 4, "s": 8, "m": 12, "l": 16, "xl": 24 },
     "kulma": { "pieni": 6, "nappi": 10, "kortti": 12, "pilleri": 999 },
-    "nappi": { "korkeus": 38, "osuma": 44, "laukaisin": 64, "ohjaus": 40, "ohjaus-kuvake": 22 },
+    "nappi": { "korkeus": 38, "osuma": 44, "laukaisin": 64, "ohjaus": 40, "ohjaus-kuvake": 22, "ohjaus-iso": 56 },
+    "galleria": { "sarake": 92, "vali": 10 },
     "leveys": { "kapea": 600, "levea": 940, "kortti": 420, "minipopup": 320, "paneeli": 350, "sivukortti": 400, "lukupalsta": 640, "lehti": 960 },
     "peitto": { "max": 45, "ohjain": 25, "kamera": 20, "laajennettu": 85, "paneeli": 70 },
     "kuva": { "hero-kortti": "2:1", "hero-arkki": "3:2", "upotus": "4:3", "upotus-leveys": 40, "galleria-korkeus": 64 }
@@ -168,9 +170,21 @@
       "osat": { "tilapaneeli": { "pohja": "PANEELI", "teemat": ["tumma"] }, "aloituskortti": { "pohja": "KORTTI", "teemat": ["paperi"] }, "tuloskortti": { "pohja": "KORTTI", "teemat": ["paperi"] } },
       "_selite": "lautapelien pohja (omistaja 1.10.2026, loki b3e273d72; Siirtosepän Mylly-malli). Lauta ilman taustaa, sumennettu tausta ja tumma tilapaneeli: omistaja 2.10.2026 klo 08.2x (Myllystä)"
     },
+    "GALLERIA": {
+      "teemat": ["paperi"],
+      "koostuu": ["PANEELI (ikkuna)", "OHJAUSNAPPI (✕ otsikkorivillä)", "KUVANÄKYMÄ (napautus)"],
+      "otsikko": "kapiteeli + laskuri (esim. JULISTEET 116/116) muste-pehmeänä; rivi pysyy ylhäällä vierittäessä, alla ohut reunus-viiva",
+      "osiot": "osion otsikko kapiteelina laskureineen (EUROOPPA 44/44), osioiden väli vali.m",
+      "ruudukko": "sarakkeita niin monta kuin galleria.sarake (92) mahtuu, väli galleria.vali (10); puhelimessa pystyssä 3",
+      "vedos": "kuva käyttäjän suhteella (juliste 2:3, ISS- ja astronauttikuvat 3:2), rajaus cover, 1 pt reuna muste-pehmeä; nimi alla keskitettynä kapiteeli-koossa enintään 2 riviä",
+      "lukossa": "sama ruutu ohuella reunus-kehyksellä ja himmeällä pohjalla, ei kuvaa eikä nimeä (ruutu ei katoa)",
+      "napautus": "avaa KUVANÄKYMÄN saman osion kuvista; veto alas ja ✕ sulkevat",
+      "kayttajat": ["Julisteet", "ISS-kameran kuvat", "Astronauttien kuvat"],
+      "_selite": "kuvakokoelmien pohja (omistaja 2.10.2026 klo 15.5x, loki 022276d61); malli vanha julistegalleria (.julistegalleria*, mitat sieltä)."
+    },
     "OHJAUSNAPPI": {
       "teemat": ["harmaa", "paperi", "lasi", "lasi-avaruus"],
-      "koko": "nappi.ohjaus neliönä, kulma kulma.nappi, reuna 1 pt, osuma-ala nappi.osuma",
+      "koko": "nappi.ohjaus neliönä, kulma kulma.nappi, reuna 1 pt, osuma-ala nappi.osuma; iso = nappi.ohjaus-iso (56) kuvasisällölle, esim. linnan pienoiskartta (omistaja 2.10.2026 klo 17.4x)",
       "kuvake": "24-ruudukon viivakuvake kokoa nappi.ohjaus-kuvake, viiva 1,75, ei tekstimerkkejä (×, ‹)",
       "ryhma": "yksi ohjausryhmä näkymää kohden oikeaan yläkulmaan turva-alueen sisään: ‹ ensin, näkymän toiminnot, ✕ viimeisenä; väli vali.s; puhelimessa pystyssä enintään 4, loput valikkoon",
       "ulkopuolella": "sisällön omat ohjaimet (kuvan ‹ › -reunakaistat, vetokahva, liukusäätimet) ja Pulu; paneelin sisäinen ‹ Takaisin pysyy tekstinä",
