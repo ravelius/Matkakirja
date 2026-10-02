@@ -103,7 +103,9 @@
 
 /* .mk-nappi > .mk-ikoni antoi ▾:lle 7 px oikean marginaalin: NOSTOT ▾ ei ollut ‹ ›:n keskellä (Päätoimittaja 20.0x). */
 .mk-nostoselain__avaaja > .mk-nostoselain__avaajaikoni {
-    margin-right: 0;
+    /* ▾-piirroksen muste päättyy 11/16 laatikosta: oikea tyhjä 5 pt tasataan, jotta näkyvät välit N:n vasemmalla ja ▾:n
+     * oikealla ovat samat (Päätoimittaja 20.1x: 13 vs 27 px @3x). */
+    margin-right: -4.67px;
 }
 
 .mk-nostoselain__avaaja.mk-valittu {
