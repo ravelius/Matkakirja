@@ -5,7 +5,7 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
 
 ## TILA 2.10. KLO 22.1x (viikkoraja 92 %)
 - TOPOGRAFIAN HAMPURILAINEN (omistaja 21.3x): linssiseppa/topografia-hampurilainen d99f62c5 (BUILD 129 e204abbe:n päällä)
-  MERGE-PYYNNÖSSÄ Natiivisepällä. Topografiassa ✕-pilleri ja nimilappu pois; tilalle OHJAUSNAPPI (LinssiValikko-pohja,
+  JUNA 130:N KOOSTUMUKSESSA (Natiiviseppä 22.1x, tilinvaihto: seuraava Natiiviseppä kokoaa). Topografiassa ✕-pilleri ja nimilappu pois; tilalle OHJAUSNAPPI (LinssiValikko-pohja,
   aanet:false): Korkeustasot (selite auki/kiinni) + Sulje linssi; kartan pikkuselite piilossa (LinssiSelite.PieniPiiloon).
   Komento `ui linssi topovalikko [auki|korkeustasot]`. Simu 22.06 PASS oikealla tapilla, kuvapari
   proto-3d/lokit/linssiseppa-topografia-20261002/kuvapari-topografia.png lähetetty Päätoimittajalle.
