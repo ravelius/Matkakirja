@@ -959,6 +959,9 @@ if '--v7' in A:
     if '--vinjetti' in A:
         # omistaja 2.10. 08.4x: kova spotti pehmeällä reunahäivytyksellä pään ympärille → kaula noin 1 EV ja sokkeli
         # noin 2 EV tummempia, pään reunat liukuvat hämärään (lähikuvat pään keskellä ennallaan)
+        # Kova valo kulkee pään kautta rintaa kohti, joten kulmavinjetti ei erota rintaa päästä; siksi keila on
+        # leveä ja täysin pehmeä (omistaja 08.4x: 30–35°), ja kaulan, rinnan ja sokkelin pystysuuntainen tummennus
+        # tehdään jälkikäsittelyssä (sokrates_vinjetti.py, sokkeli noin 1,5 EV ilman rajaa).
         aur.spot_size = math.radians(float(A[A.index('--vinjetti') + 1])); aur.spot_blend = 1.0
     ao = bpy.data.objects.new('aurinko', aur); sc.collection.objects.link(ao)
     tahtays = PAA + Vector((0, 0, 0.05)) if '--vinjetti' in A else PAA   # vinjetti: keila pään keskelle, ei kaulaan
