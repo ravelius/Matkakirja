@@ -17,7 +17,37 @@ import { luoPohjaPulu } from '../pohjat/pulu.js';
 
 const R2 = 'https://media.matkakirja.app/';
 export const AJATTELIJA_KIRJASTO = `${R2}vendor/three-gltf-r185.min.js`;
+/*
+ * AJATTELIJAT OVAT DATAA (Päätoimittaja 2.10.2026): uusi ajattelija = uusi js/linssit/ajattelija-<nimi>.js samalla
+ * rakenteella kuin SOKRATES + rivi tähän rekisteriin; ?ajattelija=<nimi> avaa sen. Moottori ei tunne yhtäkään ajattelijaa
+ * nimeltä. tarkistaAjattelija() vaatii kentät (tests/ajattelija.test.mjs ajaa sen jokaiselle rekisterin ajattelijalle).
+ */
 export const AJATTELIJAT = Object.freeze({ sokrates: SOKRATES });
+
+/** Puuttuvat pakolliset kentät (tyhjä lista = kelpaa). */
+export function tarkistaAjattelija(a) {
+  const puuttuu = [];
+  const vaadi = (ehto, nimi) => { if (!ehto) puuttuu.push(nimi); };
+  vaadi(a && typeof a.tunnus === 'string', 'tunnus');
+  if (!a) return puuttuu;
+  for (const k of ['nimi', 'vuodet', 'kysymys', 'malli', 'kipsi']) vaadi(typeof a[k] === 'string' && a[k], k);
+  for (const k of ['paa', 'tausta', 'linssi', 'kierto', 'liuku', 'ca', 'syvyys']) vaadi(a[k] != null, k);
+  vaadi(a.avainvalo?.suunta && a.avainvalo?.tahtays, 'avainvalo');
+  vaadi(a.otokset?.rembrandt?.paikka, 'otokset.rembrandt');
+  const lause = a.paalauseet?.[a.kierros?.paalause];
+  vaadi(lause?.fi && lause?.el && lause?.viite && lause?.sade && lause?.vino, 'kierros.paalause → paalauseet');
+  for (const k of ['nimi', 'kysymys', 'lahesty', 'vieritys', 'lahde', 'kaariLoppu', 'kaiku', 'pito']) vaadi(a.ajat?.[k] != null, `ajat.${k}`);
+  vaadi(a.prologi?.valot?.length, 'prologi');
+  vaadi(a.intro?.otokset?.length && a.intro?.valo?.length, 'intro');
+  vaadi(a.taustavirta?.rivit?.length && a.taustavirta?.projektorit?.length, 'taustavirta');
+  vaadi(a.fontit?.iowan, 'fontit.iowan');
+  vaadi(a.kaiku?.kuva && a.kaiku?.kamera, 'kaiku');
+  vaadi(a.elama?.otsikko && a.elama?.kappaleet?.length, 'elama');
+  vaadi(Array.isArray(a.pulunKysymykset) && a.pulunKysymykset.length, 'pulunKysymykset');
+  vaadi(a.aani?.puhe && a.aani?.musiikki && a.syke, 'aani');
+  vaadi(a.tykki?.vari, 'tykki');
+  return puuttuu;
+}
 const RUUTUA_S = 30;   // Blender-mallin ruudut
 
 let kolmeLupaus = null;
@@ -96,6 +126,8 @@ export function lentoasento(THREE, mesh, p, n, kulma = 38, matka = 0.09) {
 export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = null, sulkeutui = null } = {}) {
   const a = AJATTELIJAT[tunnus];
   if (!a) return null;
+  const puuttuu = tarkistaAjattelija(a);
+  if (puuttuu.length) { console.warn('ajattelija: puuttuvat kentät', tunnus, puuttuu); return null; }
   const THREE = await lataaKolme();
   const { GLTFLoader } = THREE;
 
@@ -180,7 +212,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   kohtaus.add(valo, valo.target);
 
   // Päälause 38a videotykkinä otsalla.
-  const lause = a.paalauseet['38a'];
+  const lause = a.paalauseet[a.kierros.paalause];
   lahdeEl.textContent = lause.el;
   lahdeViite.textContent = lause.viite;
   const tv = a.taustavirta;

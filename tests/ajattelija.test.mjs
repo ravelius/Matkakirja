@@ -107,3 +107,14 @@ test('PULU kierroksen lopussa: pohja, lämmin lasi, viisi kysymystä, kortti lap
   assert.match(lue('../js/pohjat/pohjat.js'), /const POHJA_EI_OHINAPAUTUS = '[^']*\.tk-pulukulma/);
   assert.match(lue('../css/pohjat/pulu.css'), /max-height: min\(62vh, 500px, var\(--tk-pulu-tila, 100vh\)\);/);
 });
+
+test('ajattelijat ovat dataa: jokainen rekisterin ajattelija kelpaa, moottori ei tunne nimiä', async () => {
+  const { tarkistaAjattelija } = await import('../js/linssit/ajattelija.js');
+  for (const [tunnus, a] of Object.entries(AJATTELIJAT)) {
+    assert.deepEqual(tarkistaAjattelija(a), [], `${tunnus}: puuttuvat kentät`);
+    assert.equal(a.tunnus, tunnus);
+  }
+  assert.ok(tarkistaAjattelija({ tunnus: 'x' }).length > 5, 'tyhjä data ei kelpaa');
+  const moottori = lue('../js/linssit/ajattelija.js').replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, '');
+  assert.doesNotMatch(moottori.replace(/import \{ SOKRATES \}[^\n]*\n|sokrates: SOKRATES/g, ''), /38a|sokrates|Sokrates/);
+});
