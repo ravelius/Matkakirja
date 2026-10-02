@@ -111,6 +111,13 @@ namespace Matkakirja.Linssit.Dioraama
         public Dictionary<string, string> Varit = new Dictionary<string, string>();
         public string Esine;
         public string Glb;
+        /// <summary>SKINNATTU MALLI (Siirtoseppä 2.10.2026, omistaja loki 59b9df127): silmukka → GLB:n animations[].name
+        /// ("leikkeet"); puuttuva silmukka = samanniminen leike. Tyhjä = ei leikekarttaa.</summary>
+        public Dictionary<string, string> Leikkeet = new Dictionary<string, string>();
+        /// <summary>Matka metreinä yhden kävelyleikkeen kierroksen aikana ("kavely_sykli_m"); 0 = luonnollinen nopeus.</summary>
+        public double KavelySykliM;
+        /// <summary>Mallin mittakaava ("skaala", oletus 1).</summary>
+        public double Skaala = 1;
     }
 
     /// <summary>Yksi liikesilmukka LIIKKEET-pankista (era 2b, kohta 4 "3D-HAHMOT"); JS-pari
@@ -1143,6 +1150,10 @@ namespace Matkakirja.Linssit.Dioraama
                 Esiliina = MiniJson.Teksti(vaatteet, "esiliina"), Paahine = MiniJson.Teksti(vaatteet, "paahine") };
             foreach (var pari in MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "varit")) ?? new Dictionary<string, object>())
                 if (pari.Value is string vari) m.Varit[pari.Key] = vari;
+            foreach (var pari in MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "leikkeet")) ?? new Dictionary<string, object>())
+                if (pari.Value is string leike) m.Leikkeet[pari.Key] = leike;
+            m.KavelySykliM = MiniJson.Luku(o, "kavely_sykli_m") ?? 0;
+            m.Skaala = MiniJson.Luku(o, "skaala") ?? 1;
             return m;
         }
 

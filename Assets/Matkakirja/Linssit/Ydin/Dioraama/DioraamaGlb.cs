@@ -524,12 +524,21 @@ namespace Matkakirja.Linssit.Dioraama
             }
 
             /// <summary>COLOR_0: UNSIGNED_BYTE normalized VEC4 (kohta 3) → raa'at tavut RGBA sellaisinaan. LINNA: myös
-            /// Blenderin UNSIGNED_SHORT normalized VEC4 (yläbitit tavuiksi).</summary>
+            /// Blenderin UNSIGNED_SHORT normalized VEC4 (yläbitit tavuiksi) ja float VEC3/VEC4 (skinnatut hahmot).</summary>
             byte[] ColorVec(Dictionary<string, object> attr, string nimi)
             {
                 var i = MiniJson.Luku(attr, nimi);
                 if (!i.HasValue) return null;
                 var (alku, askel, maara, komponentit, tyyppi, normalisoitu) = Accessor((int)i.Value);
+                if (tyyppi == 5126 && (komponentit == 3 || komponentit == 4))
+                {
+                    // Skinnattujen hahmojen Blender-vienti: float VEC3/VEC4 (0–1) → tavut, alfa 255 VEC3:lle.
+                    var f = new byte[maara * 4];
+                    for (int q = 0; q < maara; q++)
+                        for (int c = 0; c < 4; c++)
+                            f[q * 4 + c] = c < komponentit ? (byte)Math.Round(Math.Clamp(BitConverter.ToSingle(b, alku + q * askel + c * 4), 0f, 1f) * 255f) : (byte)255;
+                    return f;
+                }
                 if ((tyyppi != 5121 && tyyppi != 5123) || komponentit != 4 || !normalisoitu) throw new DioraamaGlbVirhe(nimi + " ei ole normalisoitu UNSIGNED_BYTE/SHORT VEC4");
                 var t = new byte[maara * 4];
                 for (int q = 0; q < maara; q++)
