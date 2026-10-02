@@ -106,10 +106,12 @@ namespace Matkakirja.Natiivi
         /// </summary>
         bool SijoitaKulmaan(VisualElement isa, ref float koko)
         {
-            var juuri = isa.panel.visualTree.layout;
-            var wb = isa.worldBound;
-            if (!(juuri.width > 0f) || !(juuri.height > 0f) || float.IsNaN(wb.xMin)) return false;
-            float pp = Screen.height / juuri.height;
+            // Layout eikä worldBound: kuvanäkymän avausanimaatio (skaala) siirsi worldBoundia, ja pallo jäi 31 pt reunan yli (kuva
+            // a8f0939c). Isä (turva-alue) on ruudun kokoisen näkymän lapsi, joten sen layout antaa turva-alueen reunat.
+            var ruutu = isa.parent != null ? isa.parent.layout : isa.panel.visualTree.layout;
+            var lo = isa.layout;
+            if (!(ruutu.width > 0f) || !(ruutu.height > 0f) || float.IsNaN(lo.xMin)) return false;
+            float pp = Screen.height / ruutu.height;
             // Saaren alareuna (pt ylhäältä) niiltä loviilta, jotka ovat pallon vaakakaistalla (Screen.cutouts: pikselit, origo alhaalla).
             float saariAla = 0f;
             foreach (var c in Screen.cutouts)
@@ -119,11 +121,11 @@ namespace Matkakirja.Natiivi
             {
                 a = KulmaVali(koko * 0.5f);
                 // Saaren alle: pallon yläreuna (ruudun alareunasta a + koko) vähintään 8 pt saaren alapuolelle.
-                float tila = juuri.height - saariAla - VaakaReuna - a;
+                float tila = ruutu.height - saariAla - VaakaReuna - a;
                 if (saariAla <= 0f || koko <= tila) break;
                 koko = Mathf.Max(MinKokoPt, tila);
             }
-            float vasen = a - wb.xMin, ala = a - (juuri.height - wb.yMax);
+            float vasen = a - lo.xMin, ala = a - (ruutu.height - lo.yMax);
             el.style.left = vasen; el.style.bottom = ala;
             el.style.width = koko; el.style.height = koko;
             NauhanVasen = vasen + koko + VaakaReuna;
