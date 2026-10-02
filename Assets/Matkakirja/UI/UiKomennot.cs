@@ -174,6 +174,8 @@
 //   ui linssi vertailu FIN SWE [ITA JPN]      vertailuarkki näillä mailla + maakäyrät (latautuu|verkko = tilat)
 //   ui linssi valikko [keksinnot|matka] [kiinni|alusta]  linssin hampurilaisvalikko aikajanan ylärivissä
 //   ui linssi varusteet [id|ei] [paalla]      laukun Varusteet: esikatselu + Aktivoi esimerkkilinsseillä
+//   ui ajattelija tila|valitse <n>|pulu|sulje  Ajattelijat-linssin näkymä (AjattelijaNakyma; linssi auki: linssi ajattelijat):
+//                                             tila = näkyvät osat worldBoundeineen, valitse = valintakortin n:s nappi (1 = ens.)
 //   kuva nimi                                 Documents/ui-nimi.png (koko ruutu)
 //   odota s                                   seuraava rivi s sekunnin päästä
 using System.Collections.Generic;
@@ -1202,6 +1204,13 @@ namespace Matkakirja.Natiivi
                     ui.Kartuscha.Testaa(ks[0].Length > 0 ? ks[0].ToUpperInvariant() : "ITA", ks.Length > 1 && ks[1] == "auki");
                     return null;
                 }
+                case "erikoisnostot":
+                {
+                    // "ui erikoisnostot [tila|napauta <i>]": ajattelijan pää kartuutsin lipun alla (kehittäjätila).
+                    var en = loput.Split(' ');
+                    if (en[0] == "napauta") return "=" + ui.Erikoisnostot.Napauta(en.Length > 1 && int.TryParse(en[1], out int ei) ? ei : 0);
+                    return "=" + ui.Erikoisnostot.Tila();
+                }
                 case "kortti":
                 {
                     // "ui kortti <id> oma": oman kaupungin rivit (Tutki, Mannerlento) Liiku-rivin sijaan.
@@ -1227,6 +1236,9 @@ namespace Matkakirja.Natiivi
                 case "paalle": UiKerros.Hae().Nayta(true); return null;
                 case "livia": return Livia(loput);
                 case "linssi": return LinssiKomennot.Aja(ui, loput);
+                // Ajattelijat-linssin näkymä (AjattelijaNakyma): ui ajattelija tila | valitse <n> (1 = ensimmäinen) | pulu | sulje;
+                // rivit lokiin etuliitteellä "MATKAKIRJA ui ajattelija:". Linssi avataan Linssisepän komennolla "linssi ajattelijat".
+                case "ajattelija": return ui.Linssit.Ajattelija.Komento(loput);
                 case "osuma":
                 {
                     var xy = loput.Split(' ');
