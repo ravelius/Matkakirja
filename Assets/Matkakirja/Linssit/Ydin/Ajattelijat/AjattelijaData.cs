@@ -120,6 +120,8 @@ namespace Matkakirja.Linssit.Ajattelijat
         public string ElamaOtsikko;
         public List<AjattelijaKappale> Elama = new List<AjattelijaKappale>();
         public List<string> PulunKysymykset = new List<string>();
+        /// <summary>Kartan pää (web #3843 kartta.maa ISO3 ja kartta.glb); null = ei karttapäätä.</summary>
+        public string KarttaMaa, KarttaGlb;
 
         /// <summary>Webin tarkistaAjattelija: puuttuvat pakolliset kentät (tyhjä = kelpaa). Natiivin lisäys: atlas.</summary>
         public static List<string> Tarkista(Dictionary<string, object> a)
@@ -259,6 +261,8 @@ namespace Matkakirja.Linssit.Ajattelijat
             foreach (var x in MiniJson.TaulukkoTaiTyhja(K(a, "pulunKysymykset"))) if (x is string s) d.PulunKysymykset.Add(s);
             var aani = O(a, "aani");
             d.Puhe = T(aani, "puhe"); d.Musiikki = T(aani, "musiikki");
+            var kartta = O(a, "kartta");
+            d.KarttaMaa = T(kartta, "maa"); d.KarttaGlb = T(kartta, "glb");
             return d;
         }
 

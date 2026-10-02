@@ -57,7 +57,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Linssi auki (valinta tai kohtaus).</summary>
         public static bool AukiNyt { get; private set; }
         /// <summary>Valittavat ajattelijat (Resources/Ajattelijat, järjestys tiedostonimen mukaan).</summary>
-        public static IReadOnlyList<AjattelijaData> Ajattelijat => lista;
+        public static IReadOnlyList<AjattelijaData> Ajattelijat { get { LueAjattelijat(); return lista; } }
         /// <summary>Kohtauksen ajattelija; null = valinta näkyvissä.</summary>
         public static AjattelijaData Valittu { get; private set; }
         /// <summary>Kohtaus on pidossa (kierroksen loppu): lappu ja PULU auki.</summary>
@@ -69,6 +69,18 @@ namespace Matkakirja.Natiivi
         public static event Action Muuttui;
 
         public static void Valitse(string tunnus) => Instanssi?.AloitaKohtaus(tunnus);
+        /// <summary>
+        /// Avaa ajattelijan suoraan (kartan pää, Linssisepän ERIKOISNOSTOT; web avaaAjattelija(tunnus)): linssi auki ilman
+        /// valintaa ja kohtaus alkuun. false = tuntematon tunnus tai linssi ei ole saatavilla (ei kehittäjätilaa).
+        /// </summary>
+        public static bool AvaaAjattelija(string tunnus)
+        {
+            if (Ajattelijat.All(a => a.Tunnus != tunnus)) return false;
+            var r = LinssiOhjain.Rekisteri;
+            if (!AukiNyt && (r == null || !r.Valitse(AjattelijatTiedot.Id) || !AukiNyt)) return false;
+            Instanssi?.AloitaKohtaus(tunnus);
+            return Valittu?.Tunnus == tunnus;
+        }
         /// <summary>Linssi kiinni (✕, veto alas, valinnan peruutus): kartta takaisin.</summary>
         public static void PyydaSulku() { if (AukiNyt) LinssiOhjain.Rekisteri?.Sulje(); }
 
