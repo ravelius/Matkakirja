@@ -159,6 +159,15 @@ namespace Matkakirja.Natiivi
         {
             var t = new Texture2D(2, 2, TextureFormat.RGBA32, mipit, true) { name = "Ajattelija:" + nimi };
             if (!t.LoadImage(tavut, false)) { Destroy(t); return null; }
+            // LoadImage ei säilytä lineaarisuutta (A/B 2.10.: kipsin mikronormaali sRGB-purettuna vinoutti normaalit ja kirkasti
+            // reunavalon ~3×): data kopioidaan lineaariseen tekstuuriin (normaalikartat, kipsi, kaiku ja atlas ovat dataa, web NoColorSpace).
+            if (t.isDataSRGB)
+            {
+                var l = new Texture2D(t.width, t.height, t.format, mipit, true) { name = t.name };
+                l.SetPixelData(t.GetPixelData<byte>(0), 0);
+                Destroy(t);
+                t = l;
+            }
             if (!yksiKanava || t.format == TextureFormat.R8 || t.format == TextureFormat.Alpha8)
             {
                 t.Apply(mipit, true);
@@ -599,8 +608,8 @@ namespace Matkakirja.Natiivi
 
         public string Kuvaus() =>
             $"näyttämö {(kuva != null ? $"{kuva.width}×{kuva.height}" : "-")}, malli {(malliValmis ? $"{mesh.vertexCount} kärkeä" : "ei")}"
-            + $", normaali {(normaali != null ? normaali.format.ToString() : "-")}, atlas {(atlas != null ? $"{atlas.width}×{atlas.height} {atlas.format}" : "-")}"
-            + $", kipsi {(kipsi != null ? "ok" : "-")}, kaiku {(kaiku != null ? $"{kaiku.width}×{kaiku.height}" : "-")}, syke {syke?.Count ?? 0}"
+            + $", normaali {(normaali != null ? $"{normaali.format}{(normaali.isDataSRGB ? " sRGB" : " lin")}" : "-")}, atlas {(atlas != null ? $"{atlas.width}×{atlas.height} {atlas.format}" : "-")}"
+            + $", kipsi {(kipsi != null ? (kipsi.isDataSRGB ? "sRGB" : "lin") : "-")}, kaiku {(kaiku != null ? $"{kaiku.width}×{kaiku.height}" : "-")}, syke {syke?.Count ?? 0}"
             + $", tykkejä {pMaara}{(Virhe != null ? ", virhe " + Virhe : "")}";
 
         public void Tuhoa()
