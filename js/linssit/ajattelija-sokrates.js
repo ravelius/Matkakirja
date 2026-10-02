@@ -17,6 +17,8 @@ export const SOKRATES = Object.freeze({
   kysymys: 'Miten pitäisi elää?',
   // GLB: proto-3d/_valmiit/sokrates-bysti/v1 (SMK KAS635, PDM 1.0; Scan the World / SMK). L1 ~50 k kolmiota + normaalikartta.
   malli: 'ajattelijat/sokrates/v1/sokrates-L1.glb',
+  // Kipsin mikronormaali (Poly Haven grey_plaster_02 nor_gl, Rob Tuytel, CC0; 1024 px).
+  kipsi: 'ajattelijat/yhteiset/kipsi-nor-1k.jpg',
   korkeus: 0.51,
   // Pään keskipiste (PAA) ja avainvalo (v7 "aurinko"): kova spotti 1,3 m:n päässä, viimeinen V7_VALO-suunta = Rembrandt.
   paa: [0.0, -0.06, 0.38],
@@ -47,16 +49,14 @@ export const SOKRATES = Object.freeze({
   },
   /*
    * PROLOGI (omistaja 2.10. 08.5x; kaikkien ajattelijoiden vakioaloitus, sokrates_bysti.py --prologi): 0–1 s pimeää →
-   * kytkin napsahtaa → takavalo ja reunavalot syttyvät hehkulangan tavoin (t^2,2 ja pieni värähdys) → siluetti
-   * hehkuvaa levyä vasten → leikkaus introon. 120 ruutua.
+   * kytkin napsahtaa → reunavalot syttyvät hehkulangan tavoin (t^2,2 ja pieni värähdys) → leikkaus introon. 120 ruutua.
+   * Omistaja 2.10. klo 10.3x (v9-palaute): ei taustavaloa eikä kehää, vain ääriviivavalo (levy ja takavalo pois).
    */
   prologi: {
     kytkin: 30, taysi: 58, loppu: 120,
     kamera: { paikka: [-0.22, -1.15, 0.34], katse: [0.0, -0.04, 0.30], mm: 35 },
-    levy: { paikka: [0, 0.9, 0.4], vari: 0.20 },
     vari: [1.0, 0.86, 0.66],
     valot: [
-      { paikka: [0.0, 0.30, 0.40], kohde: [0.0, 0.9, 0.42], teho: 9, keila: 70, blend: 1.0 },      // kehä levyllä pään takana
       { paikka: [-0.30, 0.55, 0.42], kohde: [0.0, -0.06, 0.42], teho: 45, keila: 26, blend: 0.45 }, // reunavalo vasemmalta takaa
       { paikka: [0.30, 0.55, 0.42], kohde: [0.0, -0.06, 0.42], teho: 45, keila: 26, blend: 0.45 },  // reunavalo oikealta takaa
     ],
@@ -84,11 +84,6 @@ export const SOKRATES = Object.freeze({
     tayte: { osuus: 0.10, suunta: [-0.65, -0.25, 0.7], vari: [0.90, 0.94, 1.0], keila: 45, blend: 0.7 },
   },
   /*
-   * Ääniraita kahtena (tools/ajattelija-aaniraita.mjs): pääraita = Satie + luennat, kierroksen kello; intro = intron
-   * musiikki 0–21 s, vaihdettavissa ilman uutta ajoitusta (Strauss on suojattu Espanjassa 2029 loppuun; omistajan
-   * päätös musiikista kesken 2.10.2026). Puuttuva intro jättää vain intron hiljaiseksi.
-   */
-  /*
    * LAPPU "Sokrateen elämä" (NOSTOKORTTI, teema tumma) kierroksen lopussa. Teksti: Sisältökirjuri, docs/raportit/
    * sisaltokirjuri-sokrates-pilotti-20261001.md osio 6 (haara sisalto-pelikatalogi-20260927), Päätoimittajan korjauksin;
    * lähteet osion taulukossa. Omistajan OK lapulle puuttuu 2.10.2026: vain kehityslipun takana.
@@ -113,8 +108,13 @@ export const SOKRATES = Object.freeze({
     'Miten Sokrates vaikutti Platoniin ja filosofiaan?',
     'Missä sokraattinen kysyminen näkyy nykyään?',
   ],
-  aani: { paa: 'ajattelijat/sokrates/v1/kierros1-paa.mp3', intro: 'ajattelijat/sokrates/v1/kierros1-intro.mp3' },
-  syke: 'ajattelijat/sokrates/v1/syke-satie.json',
+  /*
+   * Ääniraita kahtena (tools/ajattelija-aaniraita.mjs): puhe = luennat, kierroksen KELLO; musiikki = Zarathustra koko
+   * kohtauksen ajan, loppusoinnun urkupohja silmukkana ja vaimennus tekstien ja luentojen alla (omistajan v9-palaute
+   * 2.10.2026 klo 10.3x; "Zarathustra kaikille", Sascha Ende CC BY 4.0). Musiikki on vaihdettavissa ilman uutta ajoitusta.
+   */
+  aani: { puhe: 'ajattelijat/sokrates/v1/kierros1-puhe.mp3', musiikki: 'ajattelijat/sokrates/v1/kierros1-musiikki.mp3' },
+  syke: 'ajattelijat/sokrates/v1/syke-musiikki.json',   // sokrates_syke.py musiikkiraidasta (1 ± 0,15)
   /*
    * TAUSTAVIRTA (v10, omistaja 2.10. 08.2x–08.4x; sokrates_bysti.py paan_virta + tausta_rivi): 20 henkeä
    * tekstiriviä koko pään yli viidestä projektorista; jokaisella oma tahti (0,0007 × 1,18^k uv/ruutu, sekoitettuna),

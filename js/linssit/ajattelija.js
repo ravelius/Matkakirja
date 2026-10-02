@@ -11,7 +11,7 @@
  * latausta), samaan selaimen välimuistiin kuin pallon kirjasto (js/pallo.js PALLO_KIRJASTO).
  */
 import { SOKRATES } from './ajattelija-sokrates.js';
-import { piirraAtlas, lisaaProjektorit, asetaProjektori } from './ajattelija-projektori.js';
+import { piirraAtlas, lisaaProjektorit, asetaProjektori, lisaaKipsinPinta } from './ajattelija-projektori.js';
 import { pohjatLataaTyyli, luoPohjaKuvanakyma, luoPohjaNostokortti } from '../pohjat/pohjat.js';
 
 const R2 = 'https://media.matkakirja.app/';
@@ -142,7 +142,9 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   const kohtaus = new THREE.Scene();
   // Blenderin maailma 0,012 (lineaarinen) näkyy AgX:n jälkeen lähes mustana (#0b0c10 mallikuvissa); tausta
   // piirretään suoraan näyttöväriin, ja maailman valo on heikko täyte (varjopuoli ei ole täysin musta).
-  kohtaus.background = new THREE.Color().setRGB(11 / 255, 12 / 255, 16 / 255, THREE.SRGBColorSpace);
+  const taustaVari = new THREE.Color().setRGB(11 / 255, 12 / 255, 16 / 255, THREE.SRGBColorSpace);
+  const mustaVari = new THREE.Color(0, 0, 0);   // prologi: maailma 0 (Blender --prologi), vain ääriviivavalo
+  kohtaus.background = taustaVari;
   const haku = new URLSearchParams(location.search);
   const TAYTE = Number(haku.get('tayte')) || 0.12;
   const maailma = new THREE.HemisphereLight(new THREE.Color(0.9, 0.92, 1.0), new THREE.Color(0.25, 0.25, 0.28), TAYTE);
@@ -196,6 +198,13 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   atlas.minFilter = THREE.LinearMipmapLinearFilter;
   atlas.wrapS = THREE.RepeatWrapping;   // toistorivit (päälause rajataan varjostimessa)
   const u = lisaaProjektorit(THREE, mat, atlas);
+  // Terävä kipsi (v9-palaute): normaalikartan anisotropia ja mikronormaali (lataus taustalla; ilman sitä pinta on GLB:n).
+  if (mat.normalMap) mat.normalMap.anisotropy = renderoija.capabilities.getMaxAnisotropy();
+  const detalji = new THREE.TextureLoader().load(`${R2}${a.kipsi}`);
+  detalji.wrapS = detalji.wrapT = THREE.RepeatWrapping;
+  detalji.colorSpace = THREE.NoColorSpace;
+  detalji.anisotropy = renderoija.capabilities.getMaxAnisotropy();
+  lisaaKipsinPinta(THREE, mat, detalji);
   u.pVari.value.setRGB(...a.tykki.vari);
   const os = osuma(THREE, mesh, lause.sade);
   const tykinSuunta = os.n.clone().add(b2t(THREE, lause.vino)).normalize();
@@ -251,12 +260,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   const T = a.ajat;
   const W = AVAIN / 95;   // Blenderin wateista three.js:n voimaksi (aurinko 95 W = AVAIN)
 
-  // PROLOGI: levy pään takana, takavalo ja kaksi reunavaloa (ei varjoja), kiinteä kamera.
+  // PROLOGI: kaksi reunavaloa takaa (ääriviivavalo; ei varjoja eikä taustaa), kiinteä kamera.
   const pr0 = a.prologi;
-  const levy = new THREE.Mesh(new THREE.PlaneGeometry(4, 4),
-    new THREE.MeshStandardMaterial({ color: new THREE.Color(pr0.levy.vari, pr0.levy.vari * 0.95, pr0.levy.vari * 0.9), roughness: 1 }));
-  levy.position.copy(b2t(THREE, pr0.levy.paikka));   // tasonormaali +z (three) = −y (Blender): kohti bystiä ja kameraa
-  kohtaus.add(levy);
   const prologiValot = pr0.valot.map((v) => {
     const s = new THREE.SpotLight(new THREE.Color(...pr0.vari), 0, 0, v.keila / 2 * Math.PI / 180, v.blend, 2);
     s.position.copy(b2t(THREE, v.paikka));
@@ -324,7 +329,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   function asetaPrologi(p) {
     const h = hehku(p);
     for (const v of prologiValot) v.s.intensity = v.teho * h;
-    levy.visible = true;
+    kohtaus.background = mustaVari;
     valo.intensity = 0;
     maailma.intensity = 0;
     kaikuTayte.intensity = 0;
@@ -337,7 +342,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   /** Kierroksen 1 ruutu r (1–1450; Blender v7–v10). */
   function asetaRuutu(r) {
     for (const v of prologiValot) v.s.intensity = 0;
-    levy.visible = false;
+    kohtaus.background = taustaVari;
     let paikka, katse, mm;
     if (r < T.nimi[0]) {
       let o = otokset[0];
@@ -390,11 +395,11 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   }
 
   // Ääniraita on kierroksen kello (luennat ja leikkaukset osuvat musiikkiin); prologi kulkee omalla kellollaan.
-  const aani = new Audio(`${R2}${a.aani.paa}`);
+  const aani = new Audio(`${R2}${a.aani.puhe}`);
   aani.preload = 'auto';
-  const introAani = new Audio(`${R2}${a.aani.intro}`);
-  introAani.preload = 'auto';
-  introAani.onerror = () => { introAani.dataset.puuttuu = '1'; };
+  const musiikkiAani = new Audio(`${R2}${a.aani.musiikki}`);
+  musiikkiAani.preload = 'auto';
+  musiikkiAani.onerror = () => { musiikkiAani.dataset.puuttuu = '1'; };
   let aaniSoi = false;
   /** Globaali ruutu G: 1–120 prologi, sen jälkeen kierros (r = G − 120). */
   // Kierroksen lopussa "Sokrateen elämä" -lappu NOSTOKORTTI-pohjalla (teema tumma) KUVANÄKYMÄN sisällä.
@@ -438,9 +443,9 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     if (ruutuOhitus != null) G = ruutuOhitus;
     else if (aaniSoi && !aani.paused) {
       G = pr0.loppu + aani.currentTime * RUUTUA_S;
-      // Intro seuraa pääraitaa (yli 0,12 s:n ero korjataan); loppuu 21 s:ssa itsestään.
-      if (!introAani.dataset.puuttuu && !introAani.ended && Math.abs(introAani.currentTime - aani.currentTime) > 0.12
-        && aani.currentTime < introAani.duration) introAani.currentTime = aani.currentTime;
+      // Musiikki seuraa puheraitaa (yli 0,12 s:n ero korjataan).
+      if (!musiikkiAani.dataset.puuttuu && !musiikkiAani.ended && Math.abs(musiikkiAani.currentTime - aani.currentTime) > 0.12
+        && aani.currentTime < musiikkiAani.duration) musiikkiAani.currentTime = aani.currentTime;
     }
     else {
       G = (nyt - alku) / 1000 * RUUTUA_S;
@@ -448,8 +453,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
         aaniSoi = true;
         aani.currentTime = (G - pr0.loppu) / RUUTUA_S;
         aani.play().catch(() => { aaniSoi = false; aaniEsto = true; });
-        introAani.currentTime = aani.currentTime;
-        introAani.play().catch(() => {});
+        musiikkiAani.currentTime = aani.currentTime;
+        musiikkiAani.play().catch(() => {});
       }
       if (aaniEsto) aaniSoi = true;   // ei ääntä (ei eleen jälkeen avattu): kello jatkuu ajastimella
     }
@@ -487,9 +492,10 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     clearInterval(mittariAjastin);
     kokoVahti.disconnect();
     pohja.sulje();
-    for (const x of [aani, introAani]) { x.pause(); x.src = ''; }
+    for (const x of [aani, musiikkiAani]) { x.pause(); x.src = ''; }
     renderoija.dispose();
     atlas.dispose();
+    detalji.dispose();
     kaiku?.dispose();
     pohja.el.remove();
     sulkeutui?.();
@@ -504,7 +510,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     /** Testeille: avaa lappu heti. */
     lappu: () => avaaLappu(),
     /** Testeille: ääniraitojen tila (kello = pääraita). */
-    aanitila: () => ({ paa: aani.currentTime, intro: introAani.currentTime, soi: !aani.paused, introSoi: !introAani.paused }),
+    aanitila: () => ({ puhe: aani.currentTime, musiikki: musiikkiAani.currentTime, soi: !aani.paused, musiikkiSoi: !musiikkiAani.paused }),
   };
   globalThis.matkakirjaAjattelija = kahva;
   return kahva;

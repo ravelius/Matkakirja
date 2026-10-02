@@ -175,3 +175,42 @@ export function asetaProjektori(THREE, u, i, {
   u.pF.value[i].set(Math.cos(puoli * (1 - blend)), toisto ? 0 : 0.5, kaiku ? 1 : 0, 0);
   return { nauhaLev };
 }
+
+/*
+ * KIPSIN TERÄVÄ PINTA (omistajan v9-palaute 2.10.2026 klo 10.3x: "pinta muuttuu vieläkin muovisemman näköiseksi";
+ * Blender v10 --terava). Normaalikartta mip-biasilla −0,75 (lähikuvassa ei pehmennä) ja kaksitasoinen triplanar-
+ * mikronormaali kipsikuviosta (Poly Haven grey_plaster_02, Rob Tuytel, CC0): toistot 28,5 ja 95 / m, voimat 0,6 ja 0,35
+ * kuten Blenderin bump-solmuissa. Onteloiden AO jää pois (reaaliajassa raskas). Ketjuttuu projektorien onBeforeCompileen.
+ */
+export const KIPSI_TOISTOT = [28.5, 95.0];
+export const KIPSI_VOIMAT = [0.6, 0.35];
+export function lisaaKipsinPinta(THREE, materiaali, detalji) {
+  const edellinen = materiaali.onBeforeCompile;
+  const uniformit = { pDetalji: { value: detalji } };
+  materiaali.onBeforeCompile = (shader, renderoija) => {
+    edellinen?.(shader, renderoija);
+    Object.assign(shader.uniforms, uniformit);
+    const [t1, t2] = KIPSI_TOISTOT, [v1, v2] = KIPSI_VOIMAT;
+    const pala = THREE.ShaderChunk.normal_fragment_maps
+      .replace('texture2D( normalMap, vNormalMapUv )', 'texture2D( normalMap, vNormalMapUv, -0.75 )');
+    shader.fragmentShader = shader.fragmentShader
+      .replace('uniform vec3 pVari;', `uniform vec3 pVari;
+uniform sampler2D pDetalji;
+vec3 kipsiTaso(vec3 p, vec3 w) {
+  vec3 x = texture2D(pDetalji, p.zy).xyz * 2.0 - 1.0;
+  vec3 y = texture2D(pDetalji, p.xz).xyz * 2.0 - 1.0;
+  vec3 z = texture2D(pDetalji, p.xy).xyz * 2.0 - 1.0;
+  return w.x * vec3(0.0, x.y, x.x) + w.y * vec3(y.x, 0.0, y.y) + w.z * vec3(z.x, z.y, 0.0);
+}`)
+      .replace('#include <normal_fragment_maps>', `${pala}
+{
+  vec3 nW = inverseTransformDirection(normal, viewMatrix);
+  vec3 w = pow(abs(nW), vec3(4.0));
+  w /= (w.x + w.y + w.z);
+  vec3 d = kipsiTaso(vMaailma * ${t1.toFixed(1)}, w) * ${v1.toFixed(2)} + kipsiTaso(vMaailma * ${t2.toFixed(1)}, w) * ${v2.toFixed(2)};
+  normal = normalize((viewMatrix * vec4(normalize(nW + d), 0.0)).xyz);
+}`);
+  };
+  materiaali.customProgramCacheKey = () => 'ajattelija-projektori-kipsi';
+  return uniformit;
+}

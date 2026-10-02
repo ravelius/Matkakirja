@@ -48,7 +48,7 @@ test('projektori on valoa pinnalla: lisäys diffuusiin valoon, ei emissioon', ()
 test('vaihe 3: prologi, intron leikkaukset, nimi ja kysymys, kaiku ja ääniraita kellona (Blender v7–v10)', () => {
   const pr = SOKRATES.prologi;
   assert.deepEqual([pr.kytkin, pr.taysi, pr.loppu], [30, 58, 120]);
-  assert.equal(pr.valot.length, 3);
+  assert.equal(pr.valot.length, 2);   // v9-palaute: vain reunavalot
   assert.deepEqual(SOKRATES.intro.otokset.map(([r]) => r), [1, 15, 57, 119, 236, 259]);
   assert.deepEqual(SOKRATES.ajat.nimi, [282, 372]);
   assert.deepEqual(SOKRATES.ajat.kysymys, [373, 461]);
@@ -60,7 +60,6 @@ test('vaihe 3: prologi, intron leikkaukset, nimi ja kysymys, kaiku ja äänirait
   assert.deepEqual(SOKRATES.kaiku.savy, [1.0, 0.78, 0.52]);
   const js = lue('../js/linssit/ajattelija.js');
   assert.match(js, /G = pr0\.loppu \+ aani\.currentTime \* RUUTUA_S/, 'pääraita on kierroksen kello');
-  assert.doesNotMatch(lue('../js/linssit/ajattelija-sokrates.js'), /kierros1\.mp3/, 'Straussin sisältävä yhdistelmäraita poistettu ämpäristä');
   assert.match(js, /return e\.suunta\.clone\(\);/, 'auringon avaimia ei saa muuttaa paikallaan');
   const css = lue('../css/pohjat/pinnat/ajattelija.css');
   assert.doesNotMatch(css, /#[0-9a-f]{3,6}\b|rgba?\(|\d+ms/i, 'pinnassa vain tokenit');
@@ -80,4 +79,18 @@ test('vaihe 4: KUVANÄKYMÄ-pohja (✕ lasia, veto alas, Esc), lappu NOSTOKORTTI
   assert.match(css, /width: var\(--tk-nappi-osuma\);/);
   assert.match(css, /border-radius: var\(--tk-kulma-pilleri\);/);
   assert.doesNotMatch(css, /#[0-9a-f]{3,6}\b|rgba?\(|\d+ms/i);
+});
+
+test('omistajan v9-palaute: prologi ilman kehää, Zarathustra koko kohtaus vaimennettuna, terävä kipsi', () => {
+  assert.ok(!SOKRATES.prologi.levy, 'prologissa ei taustalevyä');
+  assert.ok(SOKRATES.prologi.valot.every((v) => v.keila <= 30), 'vain kapeat reunavalot');
+  assert.deepEqual(Object.keys(SOKRATES.aani), ['puhe', 'musiikki']);
+  const tyokalu = lue('../tools/ajattelija-aaniraita.mjs');
+  assert.match(tyokalu, /const VAIMENNUS = \{ alku: 17\.5, taso: 0\.25, ramppi: 1\.2 \};/);
+  assert.match(tyokalu, /lowpass=f=\$\{URKU_HZ\}/);
+  assert.doesNotMatch(tyokalu, /gymnopedie/i, 'Satie pois');
+  const pr = lue('../js/linssit/ajattelija-projektori.js');
+  assert.match(pr, /texture2D\( normalMap, vNormalMapUv, -0\.75 \)/);
+  assert.match(pr, /export const KIPSI_TOISTOT = \[28\.5, 95\.0\];/);
+  assert.match(lue('../js/linssit/ajattelija.js'), /kohtaus\.background = mustaVari;/);
 });
