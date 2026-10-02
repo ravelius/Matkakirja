@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 2.10.2026 klo 18.3x)
+# Linnanrakentajan aloitusviesti (päivitetty 2.10.2026 klo 22.1x)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -13,12 +13,13 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
    venyneet), kuoriputken irrotettu ajo, vientilähteet, juurisyyt. Edellinen `…-20261001.md`.
 3. Muistitiedosto `linnanrakentaja-tila-20261001.md` (Fablen muistikansio) on sama tila tiivistettynä.
 
-## Kärki 2.10. klo 18.3x
+## Kärki 2.10. klo 22.1x
 
-- Linnan väki skinnatuiksi (omistaja 18.0x): vartija v1 Siirtosepällä (`_valmiit/vartija-skin/v1`), seuraavaksi muut 16 hahmoa
-  `tools/dioraama/blender/hahmo_skin.py`:llä Siirtosepän iPhone-videon ja Päätoimittajan OK:n jälkeen.
-- PR #3851 (linnan ASTC-alfa, tuotannossa jo) junassa. Ajattelijat odottavat omistajaa (Marcuksen intro, seuraava ajattelija).
-- Pitkät ajot perl fork+setsid; heredocit lainattuina; älä kirjoita `cat > tiedosto` ilman heredocia (jäi odottamaan syötettä 2.10.).
+- Linnan väki skinnattuina (omistaja 18.0x/20.1x): kaikki 11 henkilöä `_valmiit/linna-hahmot/v1` (tools/dioraama/blender/hahmot_era1.sh),
+  peili **275a276538ace40a** haarassa `linnanrakentaja-linna-skin` (worktree /Users/Shared/Claude/wt/linnanrakentaja-linna-skin, ei PR:ää).
+  Odottaa Siirtosepän iPhone-kuvia (jalkavarjo) → Päätoimittaja → omistaja. Sen jälkeen osoitin + webin AnimationMixer (sinun).
+- Omistajalle vain pelikuvia (ei Blender-kokoelmia). Ajattelijat odottavat omistajaa (Marcuksen intro, seuraava ajattelija).
+- Pitkät ajot perl fork+setsid; heredocit lainattuina; vie-blender.sh vaatii `source ~/.zshrc` (R2-avaimet).
 
 ## Säännöt, jotka opittiin
 
