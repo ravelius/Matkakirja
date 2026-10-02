@@ -17,9 +17,12 @@ namespace Matkakirja.Natiivi
     {
         public const int Kerros = 12;
         public static bool Paalla = true;
-        /// <summary>Koko (pt): puhelimella 94, tabletilla 125 (omistaja: "pienen maapallon"; 2.10. "Pieni karttapallo vähän
-        /// isompana" → noin 30 % isommaksi kuin 72 / 96).</summary>
-        static float KokoPt => UiKerros.Tabletti ? 125f : 94f;
+        /// <summary>Koko (pt): puhelimella 120, tabletilla 160 (omistaja: "pienen maapallon"; 2.10. "Pieni karttapallo vähän
+        /// isompana" → 94 / 125; 2.10. 21.3x "Maapallokuvake suuremmaksi" → +28 %).</summary>
+        static float KokoPt => UiKerros.Tabletti ? 160f : 120f;
+        /// <summary>iPhonen vaakatilassa pallo ruudun vasempaan alakulmaan turva-alueen ulkopuolelle (omistaja 2.10. 21.3x
+        /// "siirtyy selvästi enemmän vasempaan alakulmaan"): kuva on keskellä, ja sen vasemmalla puolella on vapaa kaistale.</summary>
+        const float VaakaReuna = 8f;
         const float KestoS = 0.7f, Sade = 1000f;
         const float Vasen = 12f, Alas = 62f, Rako = 6f, MinKokoPt = 62f;   // min 48 → 62 (+30 %, omistaja 2.10.)
         const string PintaJuuri = "https://media.matkakirja.app/julisteet/pallo/bmng/";
@@ -75,10 +78,16 @@ namespace Matkakirja.Natiivi
         {
             if (float.IsNaN(isanKorkeus) || isanKorkeus <= 0f || kuva.width <= 0f) return;
             float koko = KokoPt;
+            var isa = el.parent;
+            float isanLeveys = isa != null ? isa.layout.width : 0f;
+            // iPhone vaaka: vasen reuna ruudun reunasta (turva-alueen vasen kaistale mukaan), alareuna ennallaan nauhan yläpuolella.
+            bool puhelinVaaka = !UiKerros.Tabletti && isanLeveys > isanKorkeus;
+            float vasen = puhelinVaaka && isa != null && !float.IsNaN(isa.layout.x) ? VaakaReuna - isa.layout.x : Vasen;
+            el.style.left = vasen;
             float yla = isanKorkeus - Alas - koko;
             bool samallaKorkeudella = kuva.yMax > yla && kuva.yMin < isanKorkeus - Alas;
-            if (samallaKorkeudella && kuva.xMin < Vasen + koko + Rako)
-                koko = Mathf.Clamp(kuva.xMin - Vasen - Rako, MinKokoPt, KokoPt);
+            if (samallaKorkeudella && kuva.xMin < vasen + koko + Rako)
+                koko = Mathf.Clamp(kuva.xMin - vasen - Rako, MinKokoPt, KokoPt);
             el.style.width = koko; el.style.height = koko;
         }
 

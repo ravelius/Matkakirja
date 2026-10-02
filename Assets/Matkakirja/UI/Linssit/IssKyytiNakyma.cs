@@ -220,7 +220,8 @@ namespace Matkakirja.Natiivi
         /// Taustan maa on koko ruudun kokoinen, joten suurempi z näyttää enemmän maata. Testikomento `astro kyyti ikkuna z` (0 = oletus).
         /// </summary>
         public static float IkkunanSuurennos;
-        public const float IkkunaPuhelinVaaka = 2f, IkkunaPuhelinPysty = 1.25f, IkkunaTablettiVaaka = 1.45f, IkkunaTablettiPysty = 1.25f;
+        // Omistaja 2.10. 21.3x "kamera zoomaa enemmän sisäänpäin, jolloin ikkuna kasvaa": +20 % (2,0 / 1,25 / 1,45 / 1,25 →).
+        public const float IkkunaPuhelinVaaka = 2.4f, IkkunaPuhelinPysty = 1.5f, IkkunaTablettiVaaka = 1.75f, IkkunaTablettiPysty = 1.5f;
         static float IkkunanOletus(float w, float h, bool ipad) =>
             w > h ? (ipad ? IkkunaTablettiVaaka : IkkunaPuhelinVaaka) : (ipad ? IkkunaTablettiPysty : IkkunaPuhelinPysty);
         /// <summary>Kuvan reunan vara (pt) keskitetyssä rajauksessa: ajelehdus 3,5–4 pt + kallistus ja skaala.</summary>
