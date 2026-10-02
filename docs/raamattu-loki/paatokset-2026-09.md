@@ -10075,3 +10075,7 @@ Omistaja 2.10.2026 klo 15.5x sanatarkasti: 'kipsit pitää ehtiä seuraavaan bui
 ## OMISTAJA: PULUN CHATIN 'PUHU PULULLE (KOE)' -NAPPI → 'LIVE' (2.10.2026) (2.10.2026 klo 16.13)
 
 Omistaja 2.10.2026 klo 16.1x Puhu-alarivin kuvan (natiivi 48d46ea7) jälkeen, sanatarkasti: 'vaihda puhu pululle (koe) tekstiksi pelkkä "live"'. Päätös: Pulun chatin alarivin puhenapin teksti on 'Live' (iso alkukirjain kuten pelin muissa napeissa), webissä ja natiivissa. Pelikoodari tekee webin samassa erässä rahan ja valikon 15.1x-lisäysten kanssa, Natiivi-UI natiivin haarassa natiivi-ui/pulu-puhu. Samalla Päätoimittaja palautti yläpalkkikuvan (tikkaus ei vastaa alareunan tikkausreunaa, saaren leikkausreuna puuttuu, pilleri koskettaa näytön kulmaa ja on 5 pt saaren keskilinjan alapuolella, £-glyfi epäselvä, sävy sinapinkeltainen) Natiivi-UI:lle korjattavaksi ennen uutta kuvaa.
+
+## TARKENNUS: DYNAMIC ISLANDIN TIKKAUS SAMANKESKISEKSI JA TIIVIIMMIKSI, NOIN 2 PT (2.10.2026) (2.10.2026 klo 16.16)
+
+Omistaja 2.10.2026 klo 16.1x yläpalkkikuvasta (natiivi 48d46ea7), sanatarkasti: 'se tikkaus oli enemmän irti ylhäältä kuin alhaalta ja saisi olla enemmän kiinni saaressa'. Päätoimittaja mittasi kuvasta (@3x) välit saareen: ylhäällä 4,7 pt, alhaalla 2,3 pt ja sivuilla 4 pt. Päätös: tikkauskehä on samankeskinen saaren todellisen kehyksen kanssa laitemallin mukaan, ja väli on sama joka puolella, noin 2 pt. Natiivi-UI mittaa välit ennen uutta kuvaa (±1 px @3x).
