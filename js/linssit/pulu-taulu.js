@@ -119,11 +119,12 @@ export const PULUN_PAIKKA_MS = 700;
  * paluulento kaukonäkymään, jolloin kyydin tila on jo 'kauko').
  *
  * @param {object} k kahvat (ks. luoAstroTaulu)
- * @returns {'pallo'|'seuranta'|'ikkuna'|'kuvat'}
+ * @returns {'pallo'|'seuranta'|'ikkuna'|'kavely'|'kuvat'}
  */
 export function nykyinenMoodi(k) {
   if (k?.kuvaAuki?.()) return 'kuvat';
   const m = kyytiMoodi(k);
+  if (m?.kavely && m.kavely !== 'ei') return 'kavely';
   if (m?.tila === 'seuranta') return 'seuranta';
   if (m?.tila === 'ikkuna' || m?.tila === 'kohde') return 'ikkuna';
   return 'pallo';
@@ -150,6 +151,15 @@ export const ASTRO_TAULUN_RIVIT = Object.freeze([
   Object.freeze({
     tunnus: 'iss-sisalle', moodi: 'ikkuna',
     otsikko: 'ISS:n sisälle', selite: 'Cupolan ikkunasta alas',
+    saatavilla: onKyyti,
+  }),
+  /*
+   * AVARUUSKÄVELY (omistaja 29.9.2026: avataan Pulun taulusta; Päätoimittaja 2.10.: webiin pariteettiin, natiivi
+   * AstronautinNakyma.cs:67 malli): ilmalukkoon Cupolasta, ulos kaiteelle ja auringonnousu (js/linssit/iss-kavely.js).
+   */
+  Object.freeze({
+    tunnus: 'avaruuskavely', moodi: 'kavely',
+    otsikko: 'Avaruuskävely', selite: 'Ulos kaiteelle katsomaan auringonnousua',
     saatavilla: onKyyti,
   }),
   Object.freeze({
@@ -180,6 +190,15 @@ export function moodinAskel(tavoite, { kuva = false, kyyti = null } = {}) {
   const t = kyyti?.tila ?? 'kauko';
   const siirtyy = Boolean(kyyti?.siirtyy);
   const kyydissa = t !== 'kauko' || siirtyy;
+  const kavelee = Boolean(kyyti?.kavely) && kyyti.kavely !== 'ei';
+  if (tavoite === 'kavely') {
+    if (kavelee) return 'perilla';
+    if (!kyyti) return 'ei';
+    if (siirtyy) return 'odota';
+    return t === 'ikkuna' ? 'aloitaKavely' : 'napauta'; // ensin Cupolaan (kauko tai kohde → ikkuna)
+  }
+  // Kävelyn aikana muut ISS-moodit lopettavat kävelyn (sisään Cupolaan); pallo ja kuvat poistuvat kyydistä.
+  if (kavelee && (tavoite === 'ikkuna' || tavoite === 'seuranta')) return 'lopetaKavely';
   if (tavoite === 'pallo') {
     if (!kyydissa) return 'perilla';
     if (t === 'kauko') return 'odota'; // paluulento kesken
@@ -607,6 +626,8 @@ export function luoAstroTaulu({
       if (toimi === 'suljeKuva') suljeKuva();
       else if (toimi === 'poistu') avaruus?.poistuKyydista?.();
       else if (toimi === 'napauta') avaruus?.napautaIss?.();
+      else if (toimi === 'aloitaKavely') avaruus?.aloitaKavely?.();
+      else if (toimi === 'lopetaKavely') avaruus?.lopetaKavely?.();
       else if (toimi === 'avaaKuva') avaaKuva();
     } catch { /* toimi epäonnistui: seuraava kierros tai katto ratkaisee */ }
   };

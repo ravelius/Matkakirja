@@ -158,3 +158,45 @@ test('kyyti: Ulkona-tila (katse 30° alas, kenttä 70°, ulos 4 s, sisään 2 s 
   r = kyyti.paivita(200 + SISAAN_S, ISS, 50);
   assert.equal(r.kentta, IKKUNAN_KENTTA);
 });
+
+/* ---------- näkymä (js/linssit/iss-kavely-nakyma.js): puhtaat osat ---------- */
+import {
+  animaatio, kansi, kavelyVariantti, vaiheenTehoste, hengittaa, metallinSavy, RAJAUKSET, VARIANTIT, ULKO, LUKKO,
+  LUUKKU_S, ETUALA_ALKU, ETUALA_S, VARJOSSA,
+} from '../js/linssit/iss-kavely-nakyma.js';
+
+test('näkymä: variantti, kansi ja rajaukset natiivin mukaan', () => {
+  assert.equal(kavelyVariantti(393, 852), 'iphone');
+  assert.equal(kavelyVariantti(1194, 834), 'ipad');
+  const k = kansi(393, 852, 'iphone');
+  assert.ok(k.leveys >= 393 - 1e-6 && k.korkeus >= 852 - 1e-6, 'peittää ruudun');
+  assert.ok(Math.abs(k.vasen + k.leveys / 2 - 393 / 2) < 1e-6, 'keskitetty');
+  for (const v of ['iphone', 'ipad']) for (const n of [...ULKO, ...LUKKO, 'vertailukortti']) assert.ok(RAJAUKSET[v][n], `${v}/${n}`);
+  assert.deepEqual(VARIANTIT.iphone.kangas, [1290, 2796]);
+  assert.equal(VARIANTIT.ipad.luukunKulma, 105);
+});
+
+test('näkymä: animaatio (luukku, ilmalukko, etuala, käsine) ja vähennetty liike', () => {
+  assert.deepEqual(animaatio(VAIHE.ilmalukko, 5), { auki: 0, lukkoNakyy: 1, etuala: 0, kasineKiinni: false });
+  const u = animaatio(VAIHE.ulos, LUUKKU_S / 2);
+  assert.ok(Math.abs(u.auki - 0.5) < 1e-9 && u.lukkoNakyy === 1 && u.etuala === 0);
+  assert.equal(animaatio(VAIHE.ulos, ETUALA_ALKU + ETUALA_S).etuala, 1);
+  assert.equal(animaatio(VAIHE.ulos, 0.1, true).etuala, 1, 'vähennetty: ei liukua');
+  assert.equal(animaatio(VAIHE.koysi, 0).kasineKiinni, false);
+  assert.equal(animaatio(VAIHE.auringonnousu, 0).kasineKiinni, true);
+  assert.equal(animaatio(VAIHE.takaisin, TAKAISIN_S / 2).etuala, 0.5);
+  assert.deepEqual(metallinSavy(0).slice(0, 2), [VARJOSSA, VARJOSSA]);
+  assert.deepEqual(metallinSavy(1), [1, 1, 1]);
+});
+
+test('näkymä: äänet vaiheittain (natiivi KavelyAanet)', () => {
+  assert.equal(vaiheenTehoste(VAIHE.ei, VAIHE.ilmalukko), 'ilmalukko-paine');
+  assert.equal(vaiheenTehoste(VAIHE.ilmalukko, VAIHE.ulos), 'ilmalukko-luukku');
+  assert.equal(vaiheenTehoste(VAIHE.koysi, VAIHE.auringonnousu), 'karabiini');
+  assert.equal(vaiheenTehoste(VAIHE.kuva, VAIHE.vertailu), 'suljin');
+  assert.equal(vaiheenTehoste(VAIHE.vertailu, VAIHE.takaisin), null);
+  assert.equal(hengittaa(VAIHE.ilmalukko), false);
+  assert.equal(hengittaa(VAIHE.ulos), true);
+  assert.equal(hengittaa(VAIHE.vertailu), true);
+  assert.equal(hengittaa(VAIHE.takaisin), false);
+});

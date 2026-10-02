@@ -142,12 +142,13 @@ const soitin = () => ({ paused: false, ended: false });
 
 test('rivit ovat dataa: tunnus, otsikko, moodi ja saatavilla(); vain moodit, ei kyydin säätimiä', () => {
   // ISS:n rinnalla poistettu pelistä (omistaja 2.10.2026 klo 10.4x).
-  assert.deepEqual(ASTRO_TAULUN_RIVIT.map((r) => r.tunnus), ['pallo', 'iss-sisalle', 'kuvat']);
+  // Avaruuskävely (omistaja 29.9.: avataan Pulun taulusta; Päätoimittaja 2.10.: webiin, natiivi malli).
+  assert.deepEqual(ASTRO_TAULUN_RIVIT.map((r) => r.tunnus), ['pallo', 'iss-sisalle', 'avaruuskavely', 'kuvat']);
   assert.doesNotMatch(ASTRO_TAULUN_RIVIT.map((r) => r.otsikko).join(' '), /rinnalla/);
   for (const r of ASTRO_TAULUN_RIVIT) {
     assert.equal(typeof r.otsikko, 'string');
     assert.equal(typeof r.saatavilla, 'function');
-    assert.ok(['pallo', 'seuranta', 'ikkuna', 'kuvat'].includes(r.moodi));
+    assert.ok(['pallo', 'seuranta', 'ikkuna', 'kavely', 'kuvat'].includes(r.moodi));
   }
   // Omistajan tarkennus 28.9.: ei ISS:n sisäisiä toimintoja tauluun.
   const tekstit = ASTRO_TAULUN_RIVIT.map((r) => `${r.otsikko} ${r.selite}`).join(' ');
@@ -157,11 +158,11 @@ test('rivit ovat dataa: tunnus, otsikko, moodi ja saatavilla(); vain moodit, ei 
 test('saatavuus: ISS-rivit vain kyydin kanssa, kuvat vain kuvallisilla kohteilla', () => {
   const kello = luoKello();
   const kaikki = taulunRivit({ avaruus: luoPallo(kello), kuvaAuki: () => false, kuviaOn: () => true });
-  assert.deepEqual(kaikki.map((r) => r.tunnus), ['pallo', 'iss-sisalle', 'kuvat']);
+  assert.deepEqual(kaikki.map((r) => r.tunnus), ['pallo', 'iss-sisalle', 'avaruuskavely', 'kuvat']);
   const ilmanKyytia = taulunRivit({ avaruus: luoPallo(kello, { kyyti: false }), kuvaAuki: () => false, kuviaOn: () => true });
   assert.deepEqual(ilmanKyytia.map((r) => r.tunnus), ['pallo', 'kuvat']);
   const ilmanKuvia = taulunRivit({ avaruus: luoPallo(kello), kuvaAuki: () => false, kuviaOn: () => false });
-  assert.deepEqual(ilmanKuvia.map((r) => r.tunnus), ['pallo', 'iss-sisalle']);
+  assert.deepEqual(ilmanKuvia.map((r) => r.tunnus), ['pallo', 'iss-sisalle', 'avaruuskavely']);
   // Kaatuva saatavuus piilottaa rivin eikä kaada taulua.
   const kaatuva = [{ tunnus: 'x', moodi: 'pallo', otsikko: 'x', selite: '', saatavilla: () => { throw new Error('x'); } }];
   assert.deepEqual(taulunRivit({}, kaatuva), []);
@@ -183,6 +184,19 @@ test('nykyinen moodi on valittuna: pallo, seuranta, ikkuna (myös ylilento), kuv
   pallo.asetaTila('kauko');
   assert.deepEqual(valittu(), ['pallo']);
   assert.equal(nykyinenMoodi({ ...k, kuvaAuki: () => true }), 'kuvat');
+});
+
+test('avaruuskävely: ensin Cupolaan, sitten kävely; kävelyn aikana ikkuna lopettaa, pallo poistuu', () => {
+  const K = (tila, kavely = 'ei', siirtyy = false) => ({ kuva: false, kyyti: { tila, siirtyy, kavely } });
+  assert.equal(moodinAskel('kavely', K('kauko')), 'napauta');
+  assert.equal(moodinAskel('kavely', K('ikkuna', 'ei', true)), 'odota');
+  assert.equal(moodinAskel('kavely', K('kohde')), 'napauta');
+  assert.equal(moodinAskel('kavely', K('ikkuna')), 'aloitaKavely');
+  assert.equal(moodinAskel('kavely', K('ulkona', 'koysi')), 'perilla');
+  assert.equal(moodinAskel('ikkuna', K('ulkona', 'pulu')), 'lopetaKavely');
+  assert.equal(moodinAskel('pallo', K('ulkona', 'pulu')), 'poistu');
+  assert.equal(moodinAskel('kavely', { kuva: false, kyyti: null }), 'ei');
+  assert.equal(nykyinenMoodi({ avaruus: { kyytiMoodi: () => ({ tila: 'ulkona', siirtyy: false, kavely: 'koysi' }) } }), 'kavely');
 });
 
 test('moodin askeleet: yksi toimi kerrallaan, siirtymän aikana odotetaan', () => {

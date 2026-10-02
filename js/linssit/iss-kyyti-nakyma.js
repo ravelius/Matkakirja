@@ -38,7 +38,7 @@
 import {
   luoKyyti, kaukoKulma, kameranAsento, tietorivi, ylilennonTeksti, TILA, MAAN_SADE_M, KAUKOON_S,
   MALLIN_NAKYMISRAJA_M, MALLIN_LEVEYS_PX, KAAREN_KORKEUS_M, KAAREN_ASTEIKKO_M,
-  KAAREN_SIIRTYMA_S, KAAREN_VAALEA, KAAREN_SYVA, KAAREN_YO, TAHDET_KYYDISSA,
+  KAAREN_SIIRTYMA_S, KAAREN_VAALEA, KAAREN_SYVA, KAAREN_YO, TAHDET_KYYDISSA, IKKUNAN_KENTTA,
   kaari as keskuskulma, // nimiristiriita: näkymän oma `kaari`-muuttuja on ilmakehän kaaren piirtokahva.
 } from './iss-kyyti.js';
 import {
@@ -48,6 +48,12 @@ import { SATELLIITTI_KOHTEET } from './satelliitti-data.js';
 import { KUUKAUSINIMET } from './maapallon-vuosi.js';
 // Cupolan humina ja avaruus–maa-radio (30.9.2026): soivat vain ikkunassa.
 import { asetaCupola, puraCupola } from './cupola-aani.js';
+// Avaruuskävely (Päätoimittaja 2.10.2026: web pariteettiin, natiivi malli): tilakone ja näkymä.
+import {
+  luoKavely, VAIHE as KAVELYN_VAIHE, seuraavaNousu, kelausHetki, kelauksenHuippu, auringonSuunta, aurinkoisuus as kavelynAurinko, reunaValo,
+  lahinKohde, paikkaTeksti, NOUSU_KERROIN,
+} from './iss-kavely.js';
+import { luoKavelyNakyma } from './iss-kavely-nakyma.js';
 
 /* ═══════════ CUPOLA ═══════════════════════════════════════════════ */
 
@@ -702,7 +708,10 @@ export function luoIssKyytiNakyma({
 } = {}) {
   const doc = ikkuna?.document;
   if (!pallo?.camera || !issNyt || !doc?.createElement) return null;
-  const kyyti = luoKyyti();
+  // Ulkona katse kohti aurinkoa (natiivi Avaruuskavely.KohtiAurinkoa = true).
+  const kyyti = luoKyyti({ ulkonaSuunta: () => auringonSuunta(simu.nyt(), issNyt) });
+  const kavely = luoKavely({ muuttui: (v) => kavelyVaihtui(v) });
+  let vertailu = null;
   const R = pallo.getGlobeRadius?.() ?? 100;
   const metri = R / MAAN_SADE_M;
   const kello = () => (ikkuna.performance?.now?.() ?? Date.now()) / 1000;
@@ -948,7 +957,9 @@ export function luoIssKyytiNakyma({
     asetaKiinni(kiinni);
 
     paneeli.append(rivi1, osioRivi, nopeudet, kohdeLohko, olosuhteet);
-    juuri.append(cupola, kosketus, paneeli, sulku);
+    // Avaruuskävelyn kerrokset Cupolan päälle ja kosketuskerroksen alle (napautus menee kävelylle kosketuksen kautta).
+    const kavelyNakyma = luoKavelyNakyma({ doc, ikkuna, reduced });
+    juuri.append(...[cupola, kavelyNakyma?.el, kosketus, paneeli, sulku].filter(Boolean));
     doc.body.appendChild(juuri);
 
     /* Pillerin napautus nopeutettuna = "Palaa LIVE". */
@@ -1012,7 +1023,7 @@ export function luoIssKyytiNakyma({
       }
     };
     ui = {
-      juuri, tieto, piste, live, teksti, sulku, kosketus, cupola, haeKuvat, napit, valikko, ylilentoRivi,
+      juuri, tieto, piste, live, teksti, sulku, kosketus, cupola, haeKuvat, napit, valikko, ylilentoRivi, kavelyNakyma,
       paneeli, kutista, osioNapit, pilvipeittoLiuku: pilvipeittoLiuku.liuku, vuodenaikaLiuku: vuodenaikaLiuku.liuku,
       paivitaOlosuhdeOtsikot,
       kehysOk: () => kehysOk,
@@ -1105,6 +1116,8 @@ export function luoIssKyytiNakyma({
     u.juuri.dataset.tila = tila;
     kehysNakyy = tila === TILA.ikkuna;
     u.juuri.classList.toggle('iss-kyyti-ikkuna', kehysNakyy);
+    // Kävelyn ajan säätöpaneeli ja tietorivi piiloon (natiivi: kävelyn kerrokset koko ruudun päällä).
+    u.juuri.classList.toggle('iss-kyyti-kavely', kavely.kaynnissa);
     asetaCupola(kehysNakyy && kyyti.kyydissa);
     u.juuri.classList.toggle('iss-kyyti-liikkumaton', Boolean(reduced));
     doc.body.classList.toggle(KYYTI_LUOKKA, kyyti.kyydissa);
@@ -1234,6 +1247,7 @@ export function luoIssKyytiNakyma({
   /* ---- julkinen ------------------------------------------------------ */
   function napauta() {
     if (purettu || doc.body.classList.contains('satelliitti-kuva-auki')) return false;
+    if (kavely.kaynnissa) { kavely.napauta(kello()); return true; }
     const ms = simu.nyt();
     const nyt = kello();
     const cam = pallo.camera();
@@ -1251,6 +1265,89 @@ export function luoIssKyytiNakyma({
     return true;
   }
 
+  /* ---- avaruuskävely --------------------------------------------- */
+  /** Kävely alkaa (Pulun taulun rivi): vain kyydissä (Cupola tai kohteen yllä), ei kesken siirtymän eikä kuvan. */
+  function aloitaKavely() {
+    if (purettu || !kyyti.kyydissa || kyyti.tila === TILA.kauko || kyyti.tila === TILA.ulkona || kavely.kaynnissa) return false;
+    if (doc.body.classList.contains('satelliitti-kuva-auki')) return false;
+    vertailu = null;
+    ylilento = null;
+    kavely.aloita(kello());
+    return true;
+  }
+
+  function kavelyVaihtui(v) {
+    const nyt = kello();
+    const fov = pallo.camera?.()?.fov ?? IKKUNAN_KENTTA;
+    switch (v) {
+      case KAVELYN_VAIHE.ulos:
+        if (viimeisin) kyyti.ulos(viimeisin, fov, nyt, reduced);
+        break;
+      case KAVELYN_VAIHE.auringonnousu: {
+        // Seuraava auringonnousu ISS:ltä; kello kelaa sinne (≤ 3,6 s) ja pysähtyy ENNEN_S ennen nousua.
+        const ms = simu.nyt();
+        const nousu = seuraavaNousu(issNyt, ms);
+        kavely.asetaNousu(nousu);
+        const k = nousu !== null ? kelausHetki(nousu, ms) : null;
+        if (k !== null) simu.kelaaHetkeen(k, { huippu: kelauksenHuippu(k - ms), vahennetty: reduced });
+        break;
+      }
+      case KAVELYN_VAIHE.pulu:
+        // Aurinko nousee Pulun vaiheen ajan nopeutettuna (valo ehtii maahan), kuvasta eteenpäin 1×.
+        if (!reduced) simu.asetaNopeus(NOUSU_KERROIN, { vahennetty: reduced });
+        break;
+      case KAVELYN_VAIHE.kuva:
+        // 1× ilman LIVE-hyppyä: nollakelaus nykyhetkeen (perillä kerroin 1).
+        if (!simu.live && !simu.kelaa) simu.kelaaHetkeen(simu.nyt(), { vahennetty: true });
+        break;
+      case KAVELYN_VAIHE.vertailu: {
+        const p = issNyt.paikka(simu.nyt());
+        vertailu = { ...lahinKohde(SATELLIITTI_KOHTEET, p.lat, p.lon), lat: p.lat, lon: p.lon };
+        otaKuva();
+        break;
+      }
+      case KAVELYN_VAIHE.takaisin:
+      case KAVELYN_VAIHE.ei:
+        if (kyyti.tila === TILA.ulkona && viimeisin) kyyti.sisaan(viimeisin, fov, nyt, reduced);
+        break;
+      default: break;
+    }
+    rakennaUi().kavelyNakyma?.vaihe(v, kavely.ohje, nyt);
+    paivitaUi();
+  }
+
+  /** Oma kuva: pallo piirretään heti ja etuala koostetaan päälle (natiivi ScreenCapture), sitten vertailukortti. */
+  function otaKuva() {
+    const kn = ui?.kavelyNakyma;
+    if (!kn) return;
+    let omaKuva = null;
+    try {
+      const renderer = pallo.renderer?.();
+      renderer?.render?.(pallo.scene(), pallo.camera());
+      const lahde = renderer?.domElement;
+      const w = ikkuna.innerWidth || lahde?.clientWidth || 390;
+      const h = ikkuna.innerHeight || lahde?.clientHeight || 844;
+      const c = doc.createElement('canvas');
+      c.width = Math.round(w);
+      c.height = Math.round(h);
+      const ctx = c.getContext('2d');
+      if (ctx && lahde) {
+        ctx.drawImage(lahde, 0, 0, c.width, c.height);
+        kn.piirraEtuala(ctx, c.width, c.height);
+        omaKuva = c.toDataURL('image/jpeg', 0.85);
+      }
+    } catch { omaKuva = null; }
+    const k = vertailu?.kohde;
+    const h = k ? (k.havainnot ?? []).find((x) => x.id === k.oletus) ?? k.havainnot?.[0] : null;
+    kn.kortti({
+      omaKuva,
+      omaTeksti: `Oma kuva ISS:n kaiteelta\n${vertailu ? paikkaTeksti(vertailu.lat, vertailu.lon) : ''}`,
+      nasaKuva: h?.pikku ?? h?.kuva ?? null,
+      nasaTeksti: k ? `Astronautin kuva (NASA)\n${k.nimi} · ${Math.round(vertailu.km).toLocaleString('fi-FI')} km alapisteestä`
+        : 'Astronautin kuvaa ei löytynyt',
+    });
+  }
+
   /** Poistuttaessa Olosuhteet-osion säädöt palautuvat: pilvipeitto 1 (= nyt), kuukausi 0 (= ei pakotettu). */
   const nollaaOlosuhteet = () => {
     const abPilvet = realismi?.ab?.('pilvet');
@@ -1261,6 +1358,7 @@ export function luoIssKyytiNakyma({
 
   function poistu() {
     if (purettu || !kyyti.kyydissa || kyyti.tila === TILA.kauko) return false;
+    if (kavely.kaynnissa) kavely.lopeta(kello());
     ylilento = null;
     if (ui?.ylilentoRivi) ui.ylilentoRivi.hidden = true;
     nollaaOlosuhteet();
@@ -1348,6 +1446,11 @@ export function luoIssKyytiNakyma({
       return false;
     }
     const iss = hetki(ms);
+    if (kavely.kaynnissa) {
+      kavely.paivita(kello(), ms);
+      ui?.kavelyNakyma?.vaihe(kavely.vaihe, kavely.ohje, kello());
+      ui?.kavelyNakyma?.animoi(kello(), kavelynAurinko(ms, issNyt), reunaValo(ms, issNyt));
+    }
     const r = kyyti.paivita(kello(), iss, talteen?.fov ?? 50);
     if (!r) { kalvo?.asetaKyyti?.(osuus, true); return false; }
     viimeisin = r.asento;
@@ -1404,6 +1507,15 @@ export function luoIssKyytiNakyma({
     napauta,
     poistu,
     paivita,
+    /** Avaruuskävely (Pulun taulun rivi "Avaruuskävely"). */
+    aloitaKavely,
+    /** Kävely kesken: takaisin sisään Cupolaan (paluuvaihe, kuten vertailun napautus). */
+    lopetaKavely() {
+      if (!kavely.kaynnissa) return false;
+      if (kavely.vaihe === KAVELYN_VAIHE.takaisin) return true;
+      kavely.lopeta(kello());
+      return true;
+    },
     asetaNopeus,
     lennaKohteeseen,
     /** KOE: NASA-kuva kohteen yllä päälle/pois (savuke, ?koe=nasakuva). */
@@ -1415,7 +1527,7 @@ export function luoIssKyytiNakyma({
     kohteet: () => kohteet.slice(),
     kyydissa: () => kyyti.kyydissa,
     /** Kevyt tila Pulun taululle (js/linssit/pulu-taulu.js): moodi ja siirtymä. */
-    moodi: () => ({ tila: kyyti.tila, siirtyy: kyyti.siirtyy }),
+    moodi: () => ({ tila: kyyti.tila, siirtyy: kyyti.siirtyy, kavely: kavely.vaihe }),
     /** Tähtien peitto: 1 kaukonäkymässä, 0,3 kyydissä (liukuen). */
     tahdet: () => 1 + (TAHDET_KYYDISSA - 1) * osuus,
     tila: () => {
@@ -1447,6 +1559,8 @@ export function luoIssKyytiNakyma({
         kuvaMsKa: mittari.kehyksia ? +(mittari.kuvaMs / mittari.kehyksia).toFixed(3) : 0,
         kuvaMsMax: +mittari.kuvaMsMax.toFixed(3),
         realismi: realismiRakennettu,
+        kavely: { vaihe: kavely.vaihe, nousuMs: kavely.nousuMs, ...(ui?.kavelyNakyma?.tila?.() ?? {}),
+          vertailu: vertailu?.kohde ? { tunnus: vertailu.kohde.tunnus, km: Math.round(vertailu.km) } : null },
       };
     },
     pura() {
@@ -1456,6 +1570,8 @@ export function luoIssKyytiNakyma({
         lopetaKuvaus();
       }
       purettu = true;
+      kavely.lopeta(kello());
+      ui?.kavelyNakyma?.pura?.();
       // Linssi suljetaan: aika heti todelliseksi.
       simu.palaaLive({ vahennetty: true });
       asetaHehku(false);

@@ -430,6 +430,8 @@ const SHELL = [
   './js/linssit/iss-kyyti.js',
   './js/linssit/cupola-aani.js',
   './js/linssit/iss-kyyti-nakyma.js',
+  './js/linssit/iss-kavely.js',
+  './js/linssit/iss-kavely-nakyma.js',
   './js/linssit/iss-realismi.js',
   './js/linssit/iss-realismi-kerrokset.js',
   './js/linssit/iss-realismi-taivas.js',

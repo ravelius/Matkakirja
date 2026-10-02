@@ -3339,6 +3339,9 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      */
     /** ISS:n kyyti: napautus (kauko → seuranta → ikkuna → seuranta) ja ✕. */
     napautaIss: () => kyyti?.napauta?.() ?? false,
+    /** Avaruuskävely Pulun taulusta (kyydissä Cupolassa) ja sen lopetus (sisään Cupolaan). */
+    aloitaKavely: () => kyyti?.aloitaKavely?.() ?? false,
+    lopetaKavely: () => kyyti?.lopetaKavely?.() ?? false,
     /*
      * ISS-MERKKI RUUDULLA (ikkunan koordinaatit) tai null. Pulun taulu
      * (js/linssit/pulu-taulu.js) ei saa peittää asemaa: pelaajan napautus

@@ -1501,6 +1501,68 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
 }
 
 /* Läpinäkyvä kosketuskerros: napautus vaihtaa tilaa, eleet nielaistaan. */
+/*
+ * AVARUUSKÄVELY (Päätoimittaja 2.10.2026, natiivi AvaruuskavelyNakyma malli; js/linssit/iss-kavely-nakyma.js):
+ * Codexin kerrokset kankaana (cover, JS mitoittaa), kerrokset prosentein. Ohje, kortti ja tekstit natiivin arvoin
+ * (ohje 17 px, kulmat 14) linssin avaruuslasin tokeneilla (pohjavahti; natiivin musta 50 % / valkoinen lähin pohja).
+ * Kortin taustapeitettä (natiivi musta 45 %) ei ole pohjissa, joten kortti on ilman sitä. Kävelyn ajan säätöpaneeli ja
+ * tietorivi piiloon. Kaikki päästää kosketukset läpi kosketuskerrokselle.
+ */
+.iss-kavely,
+.iss-kavely-kangas,
+.iss-kavely-ulko,
+.iss-kavely-lukko,
+.iss-kavely-korttijuuri {
+  position: absolute;
+  pointer-events: none;
+}
+.iss-kavely { inset: 0; overflow: hidden; }
+.iss-kavely[hidden],
+.iss-kavely-korttijuuri[hidden],
+.iss-kavely-ohje[hidden],
+.iss-kavely-ulko[hidden],
+.iss-kavely-lukko[hidden],
+.iss-kavely-kerros[hidden] { display: none; }
+.iss-kavely-ulko,
+.iss-kavely-lukko { inset: 0; }
+.iss-kavely-kerros {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.iss-kavely-ohje {
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  bottom: 5%;
+  padding: 8px 12px;
+  border-radius: 14px;
+  background: var(--tk-lasi-avaruus-pinta);
+  color: var(--tk-lasi-avaruus-muste);
+  font-size: 17px;
+  text-align: center;
+}
+.iss-kavely-korttijuuri {
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.iss-kavely-kortti {
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.iss-kavely-kuva,
+.iss-kavely-teksti { position: absolute; }
+.iss-kavely-kuva { background-size: cover; background-position: center; }
+.iss-kavely-teksti {
+  color: var(--tk-lasi-avaruus-muste);
+  white-space: pre-line;
+  line-height: 1.25;
+}
+.iss-kyyti-kavely .iss-kyyti-paneeli { display: none; }
+
 .iss-kyyti-kosketus {
   position: absolute;
   inset: 0;
