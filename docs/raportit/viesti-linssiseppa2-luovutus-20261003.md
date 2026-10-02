@@ -13,17 +13,17 @@ suuren paneelin ajaksi (Pulu.Haivyta), C kasvot kasvovalon päälle, D POISTU-×
 vasempaan alakulmaan saaren alle (Sijaintipallo.SijoitaKulmaan, layoutista; kulma 62 pt oletus), pikkukuvat sen oikealle.
 Seurantanäkymää ei ole (omistaja poisti 2.10.).
 
-## 2. Juna 132 (kääntämättä/odottaa vuoroa)
+## 2. Juna 132 (tila 3.10. 01.2x)
 
-- `linssiseppa2/pulu-mittaus` (829c3dd4 + kommenttisiirto): Pulun AlaVara mitataan uudelleen 1,5 s näkymän vaihdon jälkeen
-  (puomi jäi ajoituksesta riippuen pienen paneelin ISS-lukeman päälle, kuva 377bb8a3). Juna 131:n piilevä vika, Päätoimittaja tietää.
-- `linssiseppa2/pulu-vaaka-alas` 3657309b (sis. pulu-mittaus): Päätoimittajan tilaus "Pulu vaakana alemmas, käsi ei paneeliin" →
-  Pulu turva-alueen alareunaan + puomi nousee pienen paneelin vasemman yläkulman yli 6 pt:n välillä (LiviaKuva.VarrenEste,
-  A/B `astro kyyti pulualas 0|1`). Ensimmäinen A/B 377bb8a3: puomi nousee oikein; Pulun korkeus ei vielä eronnut (ajoitusvika).
-  SEURAAVAKSI: käännös (Julkaisija: TF 131 -vienti pitää lukkoa ~01.25 asti, olen 1. jonossa) → skripti
-  lokit/linssiseppa2-skriptit-20261001/pulu-vaaka.sh → yksi suositus kuvan kanssa Päätoimittajalle.
-- `linssiseppa2/kaiku-suunta` 20c4b0d9: ajattelijoiden kaikukuva näyte (u, v) (web #3888), TODENNETTU 377bb8a3:lla Blender v10
-  -otsaa vasten (lokit/linssiseppa2-kaiku-suunta-20261003). Merge-pyyntö Natiivisepälle junaan 132.
+- `linssiseppa2/kaiku-suunta` 20c4b0d9: TODENNETTU ja kuitattu, merge-pyyntö Natiivisepällä.
+- `linssiseppa2/pulu-mittaus` 9f2deece (proto-worktree wt/proto-linssiseppa2-astro): Pulun puomi 6 pt pöydän yläpuolelle suoralla
+  laskulla puomin piirretystä alareunasta (LiviaKuva.VarrenAlinEvasta; kaava NivelY + Nosto oli 33 pt liian ylhäällä). Kuva 3ae041fe:
+  puomi ei osu ISS-lukemaan 12/12. Haitta vaakana: Pulu nousee säätönapin alle (2,5 s -kuvassa kerran päälle). Tilaloki
+  `astro kyyti tila` → "astro kyyti pulu: …".
+- `linssiseppa2/pulu-vaaka-alas` 80a99f64 (sis. pulu-mittaus): SUOSITUS vaakaan (Pulu alakulmaan, puomi nousee pöydän yli,
+  A/B `astro kyyti pulualas 0|1`, oletus 1; komento vasta linssin auettua). Kuvat ja suositus Päätoimittajalla
+  (lokit/linssiseppa2-pulu-mittaus-e-20261003/merkinnat-vaaka-vertailu.png). KUITTAUKSEN JÄLKEEN merge-pyyntö Natiivisepälle.
+  Skripti lokit/linssiseppa2-skriptit-20261001/pulu-mittaus.sh.
 
 ## 3. Ajattelijat natiivissa, jono (web malli, tee kun web mainissa)
 
