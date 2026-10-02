@@ -384,8 +384,16 @@ namespace Matkakirja.Linssit.Iss
         bool onKohde;
 
         /// <summary>
-        /// Napautus: kauko → seuranta → ikkuna → seuranta; kohteen yltä takaisin seurantaan; ulkona ei mitään (avaruuskävely). <paramref name="nykyinen"/> on
-        /// kameran asento nyt.
+        /// ISS:N RINNALLA POIS PELISTÄ (omistaja 2.10.2026 klo 10.4x: "ota ISS:n rinnalla toiminto pois pelistä"): seurantatila
+        /// on vain kehittäjälle (`astro kyyti seuranta 1`, ei muisteta). Pois ollessa napautus vie kaukonäkymästä suoraan Cupolaan,
+        /// kohteen yltä ja avaruuskävelyltä palataan Cupolaan, eikä mikään polku (Pulun taulu, ylilento, AUTO) johda seurantaan.
+        /// </summary>
+        public static bool SeurantaKaytossa;
+
+        /// <summary>
+        /// Napautus: kauko → ikkuna (Cupola); kohteen yltä takaisin ikkunaan; ulkona ei mitään (avaruuskävely). Kehittäjän
+        /// seurantatilassa (<see cref="SeurantaKaytossa"/>) vanha kierto kauko → seuranta → ikkuna → seuranta. <paramref name="nykyinen"/>
+        /// on kameran asento nyt.
         /// </summary>
         public void Napauta(in Kuvakulma nykyinen, in IssHetki iss, double kentta, double nyt, bool vahennetty)
         {
@@ -393,15 +401,23 @@ namespace Matkakirja.Linssit.Iss
             {
                 case KyydinTila.Kauko:
                     double kaari = IssKuvakulma.Kaari(nykyinen.Lat, nykyinen.Lon, iss.Paikka.Lat, iss.Paikka.Lon);
-                    Aloita(KyydinTila.Seuranta, nykyinen, kentta, nyt, vahennetty ? 0 : KyytiinS + KyytiinLisaS * kaari / 180);
+                    // Suoraan Cupolaan: kyytiin lennon kesto + ikkunaan siirtymän kesto (sama kokonaisaika kuin kahdella napautuksella).
+                    if (!SeurantaKaytossa)
+                        Aloita(KyydinTila.Ikkuna, nykyinen, kentta, nyt, vahennetty ? 0 : KyytiinS + KyytiinLisaS * kaari / 180 + IkkunaanS);
+                    else
+                        Aloita(KyydinTila.Seuranta, nykyinen, kentta, nyt, vahennetty ? 0 : KyytiinS + KyytiinLisaS * kaari / 180);
                     break;
                 case KyydinTila.Seuranta:
                     Aloita(KyydinTila.Ikkuna, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : IkkunaanS);
                     break;
                 case KyydinTila.Ulkona: break;   // avaruuskävelyn tilakone ohjaa (Ulos / Sisaan)
                 case KyydinTila.Ikkuna:
+                    if (SeurantaKaytossa)
+                        Aloita(KyydinTila.Seuranta, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : IkkunaanS);
+                    break;   // Cupolassa napautus ei vie mihinkään (ISS:ää ei näy ikkunasta)
                 case KyydinTila.Kohde:
-                    Aloita(KyydinTila.Seuranta, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : IkkunaanS);
+                    Aloita(SeurantaKaytossa ? KyydinTila.Seuranta : KyydinTila.Ikkuna, siirtyy ? viimeisin : nykyinen,
+                        siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : IkkunaanS);
                     break;
             }
         }
@@ -421,11 +437,11 @@ namespace Matkakirja.Linssit.Iss
             Aloita(KyydinTila.Ulkona, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : UlosS);
         }
 
-        /// <summary>Avaruuskävely päättyi: takaisin sisään seurantaan.</summary>
+        /// <summary>Avaruuskävely päättyi: takaisin sisään Cupolaan (kehittäjän seurantatilassa seurantaan).</summary>
         public void Sisaan(in Kuvakulma nykyinen, double kentta, double nyt, bool vahennetty)
         {
             if (Tila != KyydinTila.Ulkona) return;
-            Aloita(KyydinTila.Seuranta, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : SisaanS);
+            Aloita(SeurantaKaytossa ? KyydinTila.Seuranta : KyydinTila.Ikkuna, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : SisaanS);
         }
 
         /// <summary>✕: paluu kaukonäkymään ISS:n alapisteen ylle korkeudelle <paramref name="kaukoKorkeusM"/>.</summary>

@@ -62,10 +62,10 @@ namespace Matkakirja.Natiivi
             Kyyti.AukiMuuttui += Kavely.Kyydissa;
             // Taulu kuvanäkymän ja kyydin päälle (web z-index 50 > kyydin kosketuskerros 48).
             Taulu = new PulunTauluNakyma(kerros, this);
-            // Avaruuskävely Pulun taulusta (Päätoimittaja 29.9.): rivi ISS-rivien jälkeen; valinta vie ensin seurantaan (kuva kiinni,
-            // kyytiin) ja aloittaa kävelyn perillä.
+            // Avaruuskävely Pulun taulusta (Päätoimittaja 29.9.): rivi ISS-rivien jälkeen; valinta vie ensin Cupolaan (kuva kiinni,
+            // kyytiin; ISS:n rinnalla pois pelistä 2.10.) ja aloittaa kävelyn perillä.
             Taulu.LisaaRivi("avaruuskavely", "Avaruuskävely", "Ulos kaiteelle katsomaan auringonnousua",
-                () => AstroLinssi()?.Kavely?.Kaynnissa == true, () => { AstroLinssi()?.AloitaKavely(); }, AstroMoodi.Seuranta);
+                () => AstroLinssi()?.Kavely?.Kaynnissa == true, () => { AstroLinssi()?.AloitaKavely(); }, AstroMoodi.Ikkuna);
             // Laite 29.9. kavely1: linssin avauksen automaattitaulu jäi auki kävelyn päälle (kehittäjäkomennolla aloitettu).
             Kavely.Alkoi += () => { if (Taulu.Auki) Taulu.Sulje("avaruuskavely"); };
             // PULU KYYDIN PÄÄLLÄ (web body.satelliitti-kyyti .pollo-nappi z-index 49 > kyydin kerros 48): Cupola-kehys peitti

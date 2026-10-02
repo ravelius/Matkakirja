@@ -15,7 +15,7 @@
 //                                         kelaus heti, mittaa = pelkkä kokomittari (ennen ui napauta x y kuvaan);
 //                                         palauttaa koon ja luennan tilan (astro-selite)
 //   ui linssi taulu [auki|kiinni|pulu|valitse <tunnus>|kysy|ilman-pulua|pulu-takaisin|testirivi|tila]  Pulun taulu (web #3590): pulu = Pulun napautuksen
-//                                         polku, valitse pallo|iss-rinnalla|iss-sisalle|kuvat, kysy = Kysy Pululta; tila
+//                                         polku, valitse pallo|iss-sisalle|kuvat (iss-rinnalla vain astro kyyti seuranta 1), kysy = Kysy Pululta; tila
 //                                         kertoo paikan, alueen, Pulun laatikon, moodin ja lokin
 //   ui linssi selaa 1|-1                  kuvaselain: seuraava/edellinen kuva (galleria, kohteen lopussa naapuriin)
 //   ui linssi kohde 1|-1                  kuvaselain: viereinen kohde kartalla (alanapit ‹ ›)
