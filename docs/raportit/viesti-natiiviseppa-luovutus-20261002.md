@@ -10,7 +10,8 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen
 - **Juna 128 suunnitelma**: Linssisepän Linssit-karttanappi (~19.15, web #3859) + natiivi-ui/valikko-v2 4d03a255 (VAIN yhdessä
   karttanapin kanssa, omistaja 18.3x: Linssit-rivi ei koskaan pillerivalikkoon) + linssiseppa/erikoisnostot-3 (kipsipään
   karttaobjekti). Yläpalkki (natiivi-ui/ylapalkki-tikkaus-2 b90c5c3c) odottaa omistajan uutta OK:ta.
-- Savuke-aukot: galleria (vaatii voitettuja julisteita), Live (vaatii POLLO-koodin) → Natiivi-UI:lta testikomennot.
+- Savuke-aukot (Natiivi-UI:n komennot seuraavaan savukkeeseen): galleria `ui julisteet 10` (tai kehittäjätilassa `ui julisteet`),
+  Live-nappi `ui chat realtime-nappi`. Natiivi-UI:n omat kuvat: omistajalle-20261002-ylapalkki-valikko/9-* ja 6-*.
 - Raamattu: OHJAUSNAPIT (omistaja 14.2x) = kaikki kuvakenapit ml. ✕ pyöristettyinä neliöinä (ei regressio).
 
 ## TÄNÄÄN (2.10.) TEHDYT BUILDIT
