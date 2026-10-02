@@ -72,13 +72,16 @@ namespace Matkakirja.Natiivi
             rivi = Rakenne.El("mk-nostoselain", null, PickingMode.Ignore);
             kortti.Insert(kortti.IndexOf(ennen), rivi);
             edellinen = Rakenne.Nappi("‹", "mk-nostoselain__askel", () => Askel(-1), rivi);
-            avaaja = Rakenne.Nappi("Nostot", "mk-nappi--toiminto mk-nostoselain__avaaja", VaihdaPaneeli, rivi);
+            // Nostopaneelin ylärivi (omistaja 2.10. klo 13.53): ‹ NOSTOT ▾ › ja AUTO samalla rivillä HISTORIA-kapiteelin
+            // kirjasimella, molemmat kevyinä suorakulmioina (ei ovaalia; web #3849 AUTO:n malli).
+            avaaja = Rakenne.Nappi("NOSTOT", "mk-nostoselain__avaaja", VaihdaPaneeli, rivi);
             // ▾ piirroksena (Kone-kirjasimesta puuttuu merkki: laitteella neliö).
             Rakenne.Ikoni("<path class=\"taytto\" d=\"M7.5 10h9L12 15z\"/>", "mk-nostoselain__avaajaikoni", avaaja);
             seuraava = Rakenne.Nappi("›", "mk-nostoselain__askel", () => Askel(1), rivi);
+            Rakenne.El("mk-nostoselain__vali", rivi, PickingMode.Ignore);
             edellinen.tooltip = "Edellinen nosto";
             seuraava.tooltip = "Seuraava nosto";
-            Kirjasimet.Aseta(avaaja, Kirjasin.KoneBold);
+            Kirjasimet.Aseta(avaaja, Kirjasin.Kone);
             Kirjasimet.Aseta(edellinen, Kirjasin.Kone);
             Kirjasimet.Aseta(seuraava, Kirjasin.Kone);
 
@@ -117,14 +120,15 @@ namespace Matkakirja.Natiivi
             rivi.style.display = DisplayStyle.None;
         }
 
-        /// <summary>AUTO-kytkin lukijan riville (KortinLukija.Juuri) ensimmäiseksi, ≡:n vasemmalle.</summary>
-        public void LisaaAuto(VisualElement lukijanRivi)
+        /// <summary>AUTO-kytkin selaimen riville oikeaan reunaan NOSTOT-valitsimen kanssa (omistaja 2.10. klo 13.53; ennen lukijan
+        /// rivillä ≡:n vasemmalla).</summary>
+        public void LisaaAuto()
         {
             autoNappi = Rakenne.Nappi(null, "mk-nostoselain__auto", () => { AsetaAuto(!Auto); }, null);
             Rakenne.El("mk-nostoselain__autopiste", autoNappi, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("AUTO", "mk-nappi__teksti mk-nostoselain__autoteksti", autoNappi), Kirjasin.KoneBold);
+            Kirjasimet.Aseta(Rakenne.Teksti("AUTO", "mk-nappi__teksti mk-nostoselain__autoteksti", autoNappi), Kirjasin.Kone);
             autoNappi.tooltip = "Auto: lukee avautuvat nostot ja siirtyy seuraavaan";
-            lukijanRivi.Insert(0, autoNappi);
+            rivi.Add(autoNappi);
             PaivitaAuto();
         }
 

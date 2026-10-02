@@ -1,20 +1,23 @@
 /* AUTO-pohjaosa: lukijan AUTO ja siirtolaskuri — Nostoselain
  * Siirretty sellaisenaan (UI-pohjien tyylijako 2.10.2026, web #3820 css/pohjat/…): järjestys Matkakirja.tss:ssä. */
 
+/* Kevyt suorakulmio pyöristetyin kulmin (omistaja 2.10.2026 klo 13.53 "tuo ovaali on aivan hirveä"; web #3849 .tk-auto):
+ * NOSTOT-valitsimen kanssa selaimen rivillä, HISTORIA-kapiteelin kirjasimella. */
 .mk-nostoselain__auto {
-    min-height: 26px;
-    height: 26px;
-    margin-right: var(--tk-vali-s);
-    padding: 0 10px;
-    border-color: var(--tk-paperi-reunus);
-    border-radius: var(--tk-kulma-pilleri);
+    min-height: var(--tk-nappi-korkeus);
+    height: var(--tk-nappi-korkeus);
+    margin-right: 0;
+    padding: 0 var(--tk-vali-m);
+    border-width: 1px;
+    border-color: var(--tk-paperi-muste-pehmea);
+    border-radius: var(--tk-kulma-nappi);
     background-color: initial;
     color: var(--tk-paperi-muste-pehmea);
 }
 
 .mk-nostoselain__autoteksti {
     font-size: var(--tk-koko-kapiteeli);
-    letter-spacing: 6.4px; /* web 0.1em */
+    letter-spacing: 7.69px; /* web 0.12em, sama kuin HISTORIA */
 }
 
 .mk-nostoselain__autopiste {
