@@ -50,7 +50,17 @@ export const KAAREN_YO = 0.06;
 /** Tähtien peitto kyydissä (päivävalo himmentää). */
 export const TAHDET_KYYDISSA = 0.3;
 
-export const TILA = Object.freeze({ kauko: 'kauko', seuranta: 'seuranta', ikkuna: 'ikkuna', kohde: 'kohde' });
+export const TILA = Object.freeze({ kauko: 'kauko', seuranta: 'seuranta', ikkuna: 'ikkuna', kohde: 'kohde', ulkona: 'ulkona' });
+/**
+ * ULKONA (avaruuskävely, natiivi IssKyyti.Ulos/Sisaan ja IssKuvakulma.Ulkona, Päätoimittaja 2.10.2026: web pariteettiin):
+ * silmä ISS:ssä kaiteella, katse ULKONA_KATSE_ALAS astetta vaakatason alle oletuksena kohti aurinkoa (kävelyn suunta),
+ * muuten radan oikealle puolelle (+90°); kenttäkulma 70°. Ulos 4 s, sisään 2 s Cupolaan (ISS:n rinnalla on pois pelistä).
+ */
+export const ULKONA_KATSE_ALAS = 30;
+export const ULKONA_KENTTA = 70;
+export const ULKONA_SIVULLE = 90;
+export const ULOS_S = 4;
+export const SISAAN_S = 2;
 /**
  * KOHTEEN YLLÄ (ylilento, omistaja 28.9.2026 klo 12.1x): silmä ISS:ssä,
  * katse kohteeseen kuten astronautin vinokuvissa. Kenttäkulma rajataan
@@ -148,6 +158,12 @@ export function kohteenKulma(iss, kohdeP) {
   const zeta = Math.acos(Math.max(-1, Math.min(1, ((r + h) * Math.cos(theta) - r) / rho)));
   const loppu = theta < 1e-7 ? iss.suuntima : (suunta(kohdeP.lat, kohdeP.lon, iss.lat, iss.lon) + 180) % 360;
   return kuvakulma(kohdeP.lat, kohdeP.lon, rho, zeta / DEG, loppu, 0);
+}
+
+/** Ulkona: ikkunan kaava katseella 30° alas suuntaan `suuntaA` (oletus radan oikea puoli). */
+export function ulkonaKulma(iss, suuntaA = null) {
+  const s = suuntaA ?? (iss.suuntima + ULKONA_SIVULLE) % 360;
+  return ikkunanKulma({ ...iss, suuntima: s }, ULKONA_KATSE_ALAS);
 }
 
 /** Kohteen kenttäkulma etäisyydestä (astetta). */
@@ -253,7 +269,7 @@ export function issSeurantaLipusta(haku = globalThis.location?.search ?? '') {
   try { return new URLSearchParams(haku).has('issseuranta'); } catch { return false; }
 }
 
-export function luoKyyti({ seuranta = issSeurantaLipusta() } = {}) {
+export function luoKyyti({ seuranta = issSeurantaLipusta(), ulkonaSuunta = null } = {}) {
   let tila = TILA.kauko;
   let siirtyy = false;
   let alku = null;
@@ -286,6 +302,7 @@ export function luoKyyti({ seuranta = issSeurantaLipusta() } = {}) {
      * (pois vain ✕:llä). Kehittäjälipulla vanha ketju kauko → seuranta → ikkuna → seuranta. `nykyinen` = kameran asento nyt.
      */
     napauta(nykyinen, iss, kentta, nyt, vahennetty) {
+      if (tila === TILA.ulkona) return;   // avaruuskävelyn tilakone ohjaa (ulos / sisaan)
       if (tila === TILA.kauko) {
         const k = kaari(nykyinen.lat, nykyinen.lon, iss.lat, iss.lon);
         const lento = KYYTIIN_S + (KYYTIIN_LISA_S * k) / 180;
@@ -306,6 +323,17 @@ export function luoKyyti({ seuranta = issSeurantaLipusta() } = {}) {
         vahennetty ? 0 : KOHTEESEEN_S);
     },
     get kohde() { return kohdeP; },
+    /** Avaruuskävely: ulos kaiteelle (vain kyydissä, ei kaukonäkymästä). */
+    ulos(nykyinen, kentta, nyt, vahennetty) {
+      if (!kyydissa() || tila === TILA.kauko) return;
+      aloita(TILA.ulkona, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt, vahennetty ? 0 : ULOS_S);
+    },
+    /** Avaruuskävely päättyi: sisään Cupolaan (kehittäjälipulla seurantaan kuten natiivissa ennen 2.10.). */
+    sisaan(nykyinen, kentta, nyt, vahennetty) {
+      if (tila !== TILA.ulkona) return;
+      aloita(seuranta ? TILA.seuranta : TILA.ikkuna, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt,
+        vahennetty ? 0 : SISAAN_S);
+    },
     /** ✕: paluu kaukonäkymään ISS:n alapisteen ylle korkeudelle `kaukoKorkeusM`. */
     poistu(kaukoKorkeusM, nyt, vahennetty) {
       if (!kyydissa() || (tila === TILA.kauko && siirtyy)) return;
@@ -327,6 +355,9 @@ export function luoKyyti({ seuranta = issSeurantaLipusta() } = {}) {
       else if (tila === TILA.ikkuna) {
         kohdeK = ikkunanKulma(iss);
         kohdeKentta = IKKUNAN_KENTTA;
+      } else if (tila === TILA.ulkona) {
+        kohdeK = ulkonaKulma(iss, ulkonaSuunta?.() ?? null);
+        kohdeKentta = ULKONA_KENTTA;
       } else if (tila === TILA.kohde && kohdeP) {
         kohdeK = kohteenKulma(iss, kohdeP);
         kohdeKentta = kohteenKentta(kohdeK.etaisyysM);
