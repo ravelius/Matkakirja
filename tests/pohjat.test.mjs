@@ -50,7 +50,11 @@ test('pohjasäännön vahti: css/pohjat/*.css ilman omia värejä, kokoja tai ke
 
 test('NOSTOKORTTI ilman ✕:ää, sulku Esc + veto + ohinapautus; KORTTI modaali vain napeista', () => {
   const k = POHJAT.replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/.*$/gm, '');
-  assert.ok(!/'✕'|"✕"/.test(k), 'nostokortissa ei ✕:ää (löydös 133)');
+  // ✕ kielletty vain NOSTOKORTILTA (löydös 133); KUVANÄKYMÄN sulku on ✕ (tyylikirja.json).
+  const nosto = k.slice(k.indexOf('export function luoPohjaNostokortti'), k.indexOf('export function luoPohjaKortti'));
+  assert.ok(nosto.length > 200 && !/'✕'|"✕"/.test(nosto), 'nostokortissa ei ✕:ää (löydös 133)');
+  const kuva = k.slice(k.indexOf('export function luoPohjaKuvanakyma'));
+  assert.match(kuva, /tk-kuvanakyma__sulku tk-teema-\$\{ohjainteema\}`, '✕'/, 'KUVANÄKYMÄn ✕ on LASI-teemaa');
   assert.match(k, /e\.key !== 'Escape'/);
   assert.match(k, /if \(ylin\.modaali\) return;/);
   assert.match(k, /if \(!modaali\) tausta\.addEventListener\('click'/);

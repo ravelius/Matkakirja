@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2547';
+const CACHE = 'matkakirja-2026-09-21.2548';
 const SHELL = [
   './',
   './index.html',
@@ -20,6 +20,7 @@ const SHELL = [
   './css/pohjat/paneeli.css',
   './css/pohjat/kentta.css',
   './css/pohjat/auto.css',
+  './css/pohjat/kuvanakyma.css',
   './css/pohjat/pulu.css',
   './css/pohjat/esikatselu.css',
   './css/pohjat/pinnat/dialogit.css',
@@ -28,6 +29,7 @@ const SHELL = [
   './css/pohjat/pinnat/karttaselite.css',
   './css/pohjat/pinnat/linssin-valikko.css',
   './css/pohjat/pinnat/linssivalitsin.css',
+  './css/pohjat/pinnat/ajattelija.css',
   // Nosto aukeaa kuva edellä (js/nostokuva.js lataa tyylinsä itse).
   './css/nostokuva.css',
   './css/kuvasarja.css',
