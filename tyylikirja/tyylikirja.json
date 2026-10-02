@@ -192,6 +192,18 @@
       "ulkopuolella": "sisällön omat ohjaimet (kuvan ‹ › -reunakaistat, vetokahva, liukusäätimet) ja Pulu; paneelin sisäinen ‹ Takaisin pysyy tekstinä",
       "_selite": "kaikki kuvakenapit yhtenäisiksi neliöiksi ja yhteen ryhmään (omistaja 2.10.2026 klo 14.16; linnassa yksi hampurilaisvalikko klo 14.44; Päätoimittajan päätökset 15.1x). Malli taikalasinappi (#linssi-btn)."
     },
+    "ERIKOISNOSTOT": {
+      "paikka": "sarake kartuutsin lipun alla kartuutsin rungon vieressä: x = max(lipun vasen reuna, kartuutsin oikea reuna + vali-s), ei kartuutsin rivien päällä; turva-alueen ja yläpalkin alapuolella; iPadilla sama sääntö kartuutsin tablettimitoilla",
+      "osat": ["PÄÄ (ajattelijan 3D-pää, nappi-laukaisin 64, läpinäkyvä tausta kuten minipulu, ei kehystä; osuma ≥ 44)"],
+      "vali": "vali-s",
+      "liike": "nenä kohti näkymän keskustaa ≤ 30°, kartan liike heiluttaa (sisältöanimaatio, ei UI-rajaa)",
+      "valo": "pallolaudan suuntavalo kameran koordinaateissa",
+      "avaus": "napautus avaa ajattelijan (KUVANÄKYMÄ)",
+      "nakyvyys": "piiloon, kun kortti, lehti, paneeli tai linssi on auki (kuten minipulu); enintään 3 allekkain, ei vieritystä vaan karsinta tärkeysjärjestyksessä",
+      "nimi": "jokaisella osalla nimi (VoiceOver ja pitkä painallus), ei näkyvää tekstiä",
+      "teemat": [],
+      "_selite": "omistaja 2.10.2026 klo 12.34 (vaihtoehto B): ajattelijoiden päät kartalla, myöhemmin muut erikoisnostot allekkain; Natiivi-UI:n tarkennukset 2.10."
+    },
     "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)" }
   }
 }

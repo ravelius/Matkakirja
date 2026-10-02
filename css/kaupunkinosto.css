@@ -120,7 +120,7 @@
 .kaupunkipopup-jatka {
   padding: 0.35rem 0.8rem;
   border: 1px solid rgba(122, 85, 20, 0.45);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   background: rgba(122, 85, 20, 0.08);
   color: #4a3320;
   font-family: var(--font-luku);

@@ -264,6 +264,11 @@ export const LAHTEET = [
         lisenssi: 'Public Domain Mark 1.0',
       },
       {
+        nimi: 'Ajattelijat-linssin kreikkalaiset kirjasimet: Gentium Plus, GFS Didot ja GFS Solomos (Sokrateen taustavirta)',
+        tekija: 'SIL International (Gentium Plus); Greek Font Society (GFS Didot, GFS Solomos)',
+        lisenssi: 'SIL Open Font License 1.1',
+      },
+      {
         nimi: 'Kipsin pintakuvio grey_plaster_02 (ajattelijoiden bystit)',
         tekija: 'Rob Tuytel, Poly Haven',
         lisenssi: 'CC0',
@@ -347,6 +352,11 @@ export const LAHTEET = [
         nimi: 'Ajattelijat-linssi: Also sprach Zarathustra (feat. Richard Strauss) — Sokrates',
         tekija: 'Sascha Ende, filmmusic.io',
         lisenssi: 'CC BY 4.0',
+      },
+      {
+        nimi: 'Ajattelijat-linssi: prologin kytkimen napsahdus (Impact Sounds, kaksi iskua kerroksina, oma kaiku)',
+        tekija: 'Kenney (kenney.nl)',
+        lisenssi: 'CC0',
       },
       {
         nimi: 'Ajattelijat-linssi: Beethoven, Sinfonia nro 3 "Eroica", II Marcia funebre — Marcus Aurelius',
