@@ -18567,9 +18567,9 @@ export class UI {
   }
 
   /*
-   * AARTEET-NÄKYMÄ: KOLME OTSIKKOA SAMALLA js/kokoelmanakyma.js
-   * -PIIRTIMELLÄ (omistaja 29.9.2026): Aarnin luettelo, Tavarat ja
-   * Julisteet. Data tulee samoista laskuista kuin ennen matkalaukussa
+   * AARTEET-NÄKYMÄ: KAKSI OTSIKKOA SAMALLA js/kokoelmanakyma.js
+   * -PIIRTIMELLÄ (omistaja 29.9.2026): Aarnin luettelo ja Tavarat.
+   * Julisteet lähtivät omaan ikkunaansa (omistaja 2.10.2026 klo 21.4x). Data tulee samoista laskuista kuin ennen matkalaukussa
    * (aarreLuettelo, p.finds, julisteVoitot) — vain kohde vaihtui.
    *
    * LÖYTÄMÄTTÖMIÄ EI LISTATA RIVEINÄ (omistaja: "Löytämättömiä ei
@@ -18594,7 +18594,9 @@ export class UI {
     const aarreKuvapari = (kuva) => (kuva ? aarrekuvanOsoitteet(kuva) : [null, null]);
 
     const { kaikki, loydetyt } = this.aarreLuettelo();
-    const aarneRivit = loydetyt.map((aarre, i) => {
+    // Kehittäjätilassa kaikki aarteet näkyvät (omistaja 2.10.2026 klo 21.4x), kuten julisteet (julisteVoitot).
+    const naytettavat = this.kehittajaTila ? kaikki.map((rivi) => rivi.aarre) : loydetyt;
+    const aarneRivit = naytettavat.map((aarre, i) => {
       const [osoite, vara] = aarreKuvapari(aarre.kuva);
       return {
         id: `aarre:${i}:${aarre.name}`,
@@ -18634,47 +18636,26 @@ export class UI {
       };
     });
 
-    /*
-     * JULISTEET: TÄSMÄLLEEN SAMA OSOITELASKU KUIN renderJulisteet/
-     * avaaJulisteGalleria (`julisteUrl(JULISTEET[cityId].tiedosto)`) —
-     * julisteilla ei ole peiliosoitetta (sama kuin niissä, `vara: null`),
-     * joten pettävä lataus vain poistaa kuvan siististi.
-     */
-    const voitetut = this.julisteVoitot();
-    const julisteRivit = voitetut.map((cityId) => {
-      const juliste = JULISTEET[cityId];
-      const osoite = julisteUrl(juliste.tiedosto);
-      return {
-        id: `juliste:${cityId}`,
-        nimi: juliste.otsikko ?? juliste.kaupunki,
-        kuva: osoite,
-        kuvaPieni: osoite,
-      };
-    });
-
     const ryhmat = [
       {
         otsikko: 'Aarnin luettelo',
-        luku: `${loydetyt.length} / ${kaikki.length}`,
+        luku: `${naytettavat.length} / ${kaikki.length}`,
         rivit: aarneRivit,
       },
       { otsikko: 'Tavarat', luku: `${tavaraRivit.length}`, rivit: tavaraRivit },
-      {
-        otsikko: 'Julisteet',
-        luku: `${voitetut.length} / ${Object.keys(JULISTEET).length}`,
-        rivit: julisteRivit,
-      },
+      // Julisteet eivät ole täällä: valikon Julisteet avaa oman ikkunansa (omistaja 21.4x: yksi ikkuna, vain julisteet).
     ];
 
     // Rivien data talteen id:n mukaan aktivointia varten (aktivoiAarreRivi):
     // yksinkertaisempi ja luotettavampi kuin sama tieto DOMista lukien.
     this.pilleriAarreData = new Map(
-      [...aarneRivit, ...tavaraRivit, ...julisteRivit].map((rivi) => [rivi.id, rivi]),
+      [...aarneRivit, ...tavaraRivit].map((rivi) => [rivi.id, rivi]),
     );
 
     piirraKokoelma(this.pilleriAarteetLista, ryhmat, {
-      esikatseltu: this.pilleriAarreEsikatseltu,
-      esikatsele: (id) => { this.pilleriAarreEsikatseltu = id; this.renderPilleriAarteet(); },
+      // Yksi ikkuna (omistaja 21.4x): ei esikatselukorttia, napautus avaa kuvan suoraan suurennokseen.
+      esikatseltu: null,
+      esikatsele: (id) => this.aktivoiAarreRivi(id),
       aktivoi: (id) => this.aktivoiAarreRivi(id),
       nappiteksti: () => 'Näytä',
       tyhjaTeksti: 'Ei vielä mitään kerättyä.',
