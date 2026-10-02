@@ -15,7 +15,8 @@ export const MARCUS = Object.freeze({
   vuodet: "121–180 jaa.",
   kysymys: "Miten pitäisi elää?",
   malli: 'ajattelijat/marcus/v1/marcus-L1.glb',
-  kartta: { glb: 'ajattelijat/kartta/v1/marcus-kartta.glb', maa: 'ITA' },
+  // Kiinteä karttapiste (omistaja 16.5x): Keski-Apenniinit Rooman koillispuolella, ei kaupunki eikä nimien päällä.
+  kartta: { glb: 'ajattelijat/kartta/v1/marcus-kartta.glb', maa: 'ITA', piste: [42.4, 13.1] },
   kipsi: SOKRATES.kipsi,
   korkeus: 0.51,
   paa: [0.0, -0.06, 0.38],
