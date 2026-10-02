@@ -290,7 +290,7 @@ namespace Matkakirja.Natiivi
             // "1/80, keskipäivä" ylärivillä ja rahasaldo pillerin oikeaan reunaan alariville. iPadilla sama järjestys yhdellä rivillä.
             if (PilleriOikealla)
             {
-                // Omistaja 2.10.2026 klo 15.1x: yksi rivi "1 pv · £300" (pino rivinä; ennen kaksirivinen).
+                // Omistaja 2.10.2026 klo 15.1x: yksi rivi "1 pv · 400 £" (pino rivinä; ennen kaksirivinen).
                 var pino = Rakenne.El("mk-pilleri__pino mk-pilleri__pino--rivi", pilleri, PickingMode.Ignore);
                 pino.Add(kello);
                 var rivi1 = Rakenne.El("mk-pilleri__rivi1", pino, PickingMode.Ignore);
@@ -626,21 +626,13 @@ namespace Matkakirja.Natiivi
         /// "tikkaus saaren ympärillä saa olla mahd. pieni ja vähäeleinen" → vain ohut hillitty pistorivi lähellä saaren reunaa,
         /// ei harjannetta eikä varjoa. Kehä kiertää saaren stadionmuodon vakioetäisyydellä.
         /// </summary>
-        const float PistoPituus = 3f, PistoJakso = 6f, LankaPaksuus = 0.6f;
-        /// <summary>
-        /// Omistajan valinta (Päätoimittaja 2.10. 15.3x, `ui tikkaus A|B|C`): A ohut pistetikkaus lähellä reunaa (3 pt),
-        /// B sama kauempana (6 pt), C vain saaren alakaaressa (3 pt).
-        /// </summary>
-        public static string TikkausVaihtoehto = "A";
-        float TikkausEtaisyys => TikkausVaihtoehto == "B" ? 6f : 3f;
+        /// <summary>Koko kehä saaren ympäri 3 pt:n päässä reunasta (Päätoimittaja 2.10. 15.4x: yksi suositus, ei numero-A/B:tä).</summary>
+        const float TikkausEtaisyys = 3f, PistoPituus = 3f, PistoJakso = 6f, LankaPaksuus = 0.6f;
         /// <summary>Lanka tyylikirjasta (pohjavahti): TUMMA muste-pehmeä hillittynä.</summary>
         static Color Lanka { get { Color c = Tyylikirja.Tumma.MustePehmea; c.a = 0.55f; return c; } }
         VisualElement saariTikkaus;
         Rect tikkausSaari;
         float tikkausYksikko = 1f;
-
-        /// <summary>Testikomento: tikkausvaihtoehto vaihtuu heti.</summary>
-        public void PiirraTikkausUudelleen() => saariTikkaus?.MarkDirtyRepaint();
 
         /// <summary>Tikkauskehä saaren ympärille (paneelin yksiköissä); saari = Rect.zero piilottaa.</summary>
         void AsetaSaariTikkaus(Rect saari, float yksikko)
@@ -677,14 +669,14 @@ namespace Matkakirja.Natiivi
             p.lineCap = LineCap.Round;
             p.strokeColor = Lanka;
             p.lineWidth = LankaPaksuus * u;
-            Stadion(p, saari, TikkausEtaisyys * u, PistoPituus * u, PistoJakso * u, vainAla: TikkausVaihtoehto == "C");
+            Stadion(p, saari, TikkausEtaisyys * u, PistoPituus * u, PistoJakso * u);
         }
 
         /// <summary>
         /// Pistot saaren stadionmuodon (pyöreät päädyt) ympärille <paramref name="d"/>:n etäisyydelle: pituus <paramref name="pisto"/>
         /// jakson välein kaarenpituuden mukaan, tasaisesti koko kehälle.
         /// </summary>
-        static void Stadion(Painter2D p, Rect saari, float d, float pisto, float jakso, bool vainAla = false)
+        static void Stadion(Painter2D p, Rect saari, float d, float pisto, float jakso)
         {
             float r = saari.height / 2f + d, cy = saari.center.y;
             float xa = saari.xMin + saari.height / 2f, xb = saari.xMax - saari.height / 2f; // päätyjen keskipisteet
@@ -708,7 +700,6 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < n; i++)
             {
                 float a = i * j;
-                if (vainAla && Piste(a + l / 2f).y <= cy) continue;
                 p.MoveTo(Piste(a));
                 for (float s = a + Askel; s < a + l; s += Askel) p.LineTo(Piste(s));
                 p.LineTo(Piste(a + l));
@@ -976,11 +967,11 @@ namespace Matkakirja.Natiivi
             }
             else
             {
-                // Pillerivalikko: omistaja 2.10.2026 klo 15.1x pillerissä vain päivä ja rahat, "1 pv · £300" (täysi muoto
-                // "Päivä 1/80, aamu · £300" valikossa; ennen 30.9.: "1/80, keskipäivä"). Muuten webin "Päivä 1, aamu".
+                // Pillerivalikko: omistaja 2.10.2026 klo 15.1x pillerissä vain päivä ja rahat, "1 pv · 400 £" (rahan muoto 27.9.
+                // ennallaan, Päätoimittaja 15.40; täysi muoto valikossa; ennen 30.9.: "1/80, keskipäivä"). Muuten "Päivä 1, aamu".
                 var pv = System.Text.RegularExpressions.Regex.Match(osat[1], @"\d+");
                 bool lyhyt = Linssivalitsin.PilleriValikko && pv.Success;
-                string uusiRaha = lyhyt ? Punta(osat[0]) : Raha(osat[0]);
+                string uusiRaha = Raha(osat[0]);
                 // Kukkaron muutos välähtää kuten kello (osto, palkkio, lento).
                 if (uusiRaha != raha.text && raha.text.Contains("£")) Valahda(raha, ref rahaAjastin);
                 raha.text = uusiRaha;
@@ -1121,14 +1112,6 @@ namespace Matkakirja.Natiivi
             var osat = s.Trim().Split(' ');
             if (osat.Length == 2 && int.TryParse(osat[0], out _) && (osat[1] == "£" || osat[1].StartsWith("punta")))
                 return osat[0] + "\u00A0£";
-            return s;
-        }
-
-        /// <summary>"300 £" → "£300" (omistajan pillerimuoto 2.10.2026 klo 15.1x).</summary>
-        static string Punta(string s)
-        {
-            var osat = s.Trim().Split(' ');
-            if (osat.Length == 2 && int.TryParse(osat[0], out _) && (osat[1] == "£" || osat[1].StartsWith("punta"))) return "£" + osat[0];
             return s;
         }
 
