@@ -270,7 +270,8 @@ namespace Matkakirja
             double kauimmas = 0;
             foreach (var vx in new[] { 0f, 0.5f, 1f })
             {
-                var sade = kam.ViewportPointToRay(new Vector3(vx, 1f, 0f));
+                // Yläreuna 0,999: tasan 1,0 on näkymän ulkopuolella (Unity "Screen position out of view frustum", savuke 110).
+                var sade = kam.ViewportPointToRay(new Vector3(Mathf.Clamp(vx, 0.001f, 0.999f), 0.999f, 0f));
                 double3 suunta = (double3)(float3)sade.direction;
                 double b = math.dot(oc, suunta), c = oc2 - R * R, d = b * b - c;
                 double osuma = d >= 0 ? -b - Math.Sqrt(d) : horisontti;

@@ -274,6 +274,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Tämä lukija lukee (myös tauolla); Pulun chat erottaa sillä oman automaattisen luentansa.</summary>
         public bool Lukee => luetaan;
 
+        /// <summary>
+        /// Jokin kortin lukija lukee (nostokortti, lehti, wiki …; myös tauolla). Matkakirjakortin luentavahti ei avaa korttia
+        /// tämän aikana: kertoja lukee silloin kortin tekstiä, ei matkakirjan omaa (Päätoimittaja 1.10.2026).
+        /// </summary>
+        public static bool KorttiaLuetaan => ajossa != null && ajossa.luetaan;
+
         /// <summary>Luenta seis; sulje = false jättää valikon auki (luettu loppuun).</summary>
         void Pysayta(bool sulje)
         {

@@ -29,7 +29,7 @@ namespace Matkakirja.Editori
         /// Cesiumin {y} eteläisin, joten osoitteessa on {reverseY}.
         /// </summary>
         public const string LaattaUrl =
-            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-27-pohja-20260927/{z}/{x}/{reverseY}.jpg";
+            "https://media.matkakirja.app/julisteet/pallo/laatat/2026-09-30-pohja-20260930/{z}/{x}/{reverseY}.jpg";
         public const int LaattaMaxTaso = 9;
 
         /// <summary>
@@ -683,7 +683,17 @@ namespace Matkakirja.Editori
                 File.WriteAllText(BurstPalautusMerkki, burstPref ? "1" : "0");
                 Unity.Burst.BurstCompiler.Options.EnableBurstCompilation = false;
                 EditorPrefs.SetBool(BurstPref, false);
-                Debug.Log("MATKAKIRJA: editorin Burst-JIT pois käännöksen ajaksi");
+                // Pois kytkentä ei peru editorin käynnistyksessä jonoon jo laitettuja JIT-käännöksiä (juna 108 1.10.2026:
+                // virheitä 9 kytkennän jälkeen) → peruutus ja odotus, kunnes jono on tyhjä (enintään 60 s), ennen BuildPlayeria.
+                var bc = typeof(Unity.Burst.BurstCompiler);
+                const System.Reflection.BindingFlags sis = System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static;
+                bc.GetMethod("Cancel", sis)?.Invoke(null, null);
+                var valmis = bc.GetMethod("IsCurrentCompilationDone", sis);
+                var odotus = System.Diagnostics.Stopwatch.StartNew();
+                while (valmis != null && !(bool)valmis.Invoke(null, null) && odotus.Elapsed.TotalSeconds < 60)
+                    System.Threading.Thread.Sleep(250);
+                Debug.Log($"MATKAKIRJA: editorin Burst-JIT pois käännöksen ajaksi (jono tyhjä {odotus.Elapsed.TotalSeconds:F1} s, " +
+                          $"{(valmis != null ? "odotettu" : "ei odotusrajapintaa")})");
             }
             BuildReport raportti;
             try { raportti = BuildPipeline.BuildPlayer(asetukset); }

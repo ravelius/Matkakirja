@@ -2250,14 +2250,18 @@
     color: rgba(70, 51, 31, 0.7);
 }
 
-/* Vetokahvan osuma-alue (Pohja.cs Vetokahva): 120 × 26 pt kortin yläreunassa, sisällä .mk-nosto__kahva. */
+/* Vetokahvan osuma-alue (Pohja.cs Vetokahva, Nostokortti kahvaAlue): koko leveys, 16 pt kortin yläpuolelta kortin täytteen
+ * (22 pt) loppuun; kortin sisällä veto mitataan lisäksi 28 pt:n kaistalta (osuma-ala 44 pt, savuke 110). */
 .mk-vetokahva {
     position: absolute;
-    top: 0;
-    left: 50%;
-    width: 120px;
-    height: 26px;
-    margin-left: -60px;
+    top: -16px;
+    left: 0;
+    right: 0;
+    height: 38px;
+}
+
+.mk-vetokahva > .mk-nosto__kahva {
+    top: 24px;
 }
 
 /* NOSTOKORTTI-pohjan toimintorivi (kohdekortti, omistaja 1.10.2026 kokeiluun): kiinteä alarivi Kysy · Visa · Kierros · Lehti,

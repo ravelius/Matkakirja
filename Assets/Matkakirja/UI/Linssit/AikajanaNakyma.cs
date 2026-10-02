@@ -130,6 +130,10 @@ namespace Matkakirja.Natiivi
             kelloRuutu = Rakenne.El("mk-aikajana-kello", ylarivi, PickingMode.Ignore);
             kello = Rakenne.Teksti("", "mk-aikajana-kello__luku", kelloRuutu);
             Kirjasimet.Aseta(kello, Kirjasin.Kone);
+            // Ihmisen matkassa luku on matkamittari (omistaja 1.10.2026: webin rullat); teksti jää keksinnöille ja
+            // kaaren loppupään vuosiluvulle ("n. 1250 jaa.").
+            mittari = new Matkamittari(kelloRuutu);
+            mittari.Nayta(false);
             kelloYksikko = Rakenne.Teksti("v. sitten", "mk-aikajana-kello__yksikko", kelloRuutu);
             Kirjasimet.Aseta(kelloYksikko, Kirjasin.Kone);
             kelloYksikko.style.display = DisplayStyle.None;
@@ -141,6 +145,7 @@ namespace Matkakirja.Natiivi
                 float koko = Mathf.Round(Mathf.Clamp(e.newRect.width * 0.034f, 21.6f, 30.4f) * 2f) / 2f;
                 if (Mathf.Approximately(kello.resolvedStyle.fontSize, koko)) return;
                 kello.style.fontSize = koko;
+                mittari.Koko = koko;
                 kelloYksikko.style.fontSize = koko * 0.5f;
                 kelloLeveys = null;
                 kello.style.minWidth = StyleKeyword.Null;
@@ -765,6 +770,11 @@ namespace Matkakirja.Natiivi
             musta.style.display = DisplayStyle.None;
             kelloTeksti = null;
             kello.text = "";
+            mittari.Nollaa();
+            mittari.Nayta(false);
+            kello.style.display = DisplayStyle.Flex;
+            mittariAskel = null;
+            mittarinEdellinen = null;
             kelloYksikko.style.display = DisplayStyle.None;
             paikka.text = "";
             pysakki = jakso = -1;
@@ -785,7 +795,14 @@ namespace Matkakirja.Natiivi
         void AsetaIhmisenKello(double v)
         {
             string vuositeksti = Asteikko.KellonVuositeksti(Math.Max(0, v));
-            AsetaKello(vuositeksti ?? Ryhmita(Asteikko.KellonNaytto(v, 1, -1)));
+            bool rullina = vuositeksti == null;
+            if (rullina) AsetaMittari(v); else AsetaKello(vuositeksti);
+            if ((kello.style.display.value == DisplayStyle.Flex) == rullina)
+            {
+                kello.style.display = rullina ? DisplayStyle.None : DisplayStyle.Flex;
+                mittari.Nayta(rullina);
+                if (!rullina) mittari.Sumenna(0, true);
+            }
             bool yksikko = vuositeksti == null;
             if ((kelloYksikko.style.display.value == DisplayStyle.Flex) != yksikko)
             {
@@ -793,6 +810,32 @@ namespace Matkakirja.Natiivi
                 kelloLeveys = null;
                 MitoitaKello();
             }
+        }
+
+        Matkamittari mittari;
+        string mittariAskel;
+        (double Arvo, double Aika)? mittarinEdellinen;
+
+        /// <summary>
+        /// Web naytaVuosi + sumennaKello: rullat saavat täyden lukeman murto-osineen; käyvä kello kuljettaa murto-osaa ilman
+        /// siirtymää, pysäytetty kello (selailu, pysäkiltä toiselle) rullaa yhdellä 320 ms:n liu'ulla. Sumu lukeman
+        /// muutosnopeudesta kellon omalla kehysvälillä (katto 200 ms), käymätön kello ja vähennetty liike terävinä.
+        /// </summary>
+        void AsetaMittari(double v)
+        {
+            bool vahennetty = LinssiUi.VahennettyLiike();
+            bool kay = LinssiUi.IhmisenMatka?.Esitys?.Kaynnissa == true;
+            bool ensimmainen = mittariAskel == null;
+            double paikka = vahennetty ? Math.Floor(Math.Max(0, v)) : Math.Max(0, v);
+            mittari.Aseta(paikka, liuku: !kay, heti: ensimmainen || vahennetty, askel: 1, suunta: -1);
+            string teksti = ((long)Asteikko.KellonNaytto(paikka, 1, -1)).ToString().PadLeft(6, '0');
+            if (teksti != mittariAskel) { mittariAskel = teksti; mittari.Selite(teksti); }
+            double nyt = Time.realtimeSinceStartupAsDouble;
+            var ed = mittarinEdellinen;
+            mittarinEdellinen = (paikka, nyt);
+            double dt = ed == null ? 0 : Math.Min(0.2, nyt - ed.Value.Aika);
+            if (!kay || vahennetty || ensimmainen || !(dt > 0)) mittari.Sumenna(0, true);
+            else mittari.Sumenna((paikka - ed.Value.Arvo) / dt);
         }
 
         static string Ryhmita(double n) =>
