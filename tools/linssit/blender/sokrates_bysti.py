@@ -784,6 +784,7 @@ V7_PITO = 1450                # b-luenta alkaa 960 (15,5 s)
 V7_NAUHA = 0.0205             # omistaja 23.5x: kirjaimet ~28 % isommiksi (v4–v6: 0,016); sama ajoaika → nauha
                               # kulkee pinnalla ~22 % nopeammin, lukutahti merkkeinä sekunnissa ≈ ennallaan
 V7_TYKKI = 220.0              # kirjaimet erottuvat kovassa auringossa (v4–v6: 70 himmennetyssä valossa)
+V7_KAIKU = (975, 1440)        # v8: kaikukuva b-luennan (960–1425) aikana
 V7_RENDER = list(range(1, 283)) + list(range(V7_LAHESTY[0], V7_KAARI_LOPPU + 1)) + [V7_PITO]
 
 
@@ -797,6 +798,39 @@ def _kipsin_pinta(o):
     t.image.colorspace_settings.name = 'Non-Color'; nt.links.new(mp.outputs['Vector'], t.inputs['Vector'])
     bu = nt.nodes.new('ShaderNodeBump'); bu.inputs['Strength'].default_value = 0.35; bu.inputs['Distance'].default_value = 0.0006
     nt.links.new(t.outputs['Color'], bu.inputs['Height']); nt.links.new(bu.outputs['Normal'], b.inputs['Normal'])
+
+
+def kaiku_projektori(nimi, p, suunta, etaisyys, lev, kuva, ruudut, voima, savy=(1.0, 0.78, 0.52), liuku=0.05):
+    """v8: kaikukuva samalla videotykillä (omistaja 23.5x): harmaasävy seepiasävyllä, hidas ilmestyminen ja häivytys
+    (45 ruutua = 1,5 s), kuva liukuu hitaasti (uv-siirto ±liuku), kipsi näkyy läpi (voima pieni)."""
+    kk = bpy.data.images.load(kuva); kk.colorspace_settings.name = 'Non-Color'; kork = lev * kk.size[1] / kk.size[0]
+    d = bpy.data.lights.new(nimi, 'SPOT'); d.spot_blend = 0.3; d.shadow_soft_size = 0.0
+    d.spot_size = 2.4 * math.atan(max(lev, kork) / 2 / etaisyys); d.color = savy; d.use_nodes = True
+    nt = d.node_tree; nt.nodes.clear()
+    def m(op, a, b=None, c=None):
+        n_ = nt.nodes.new('ShaderNodeMath'); n_.operation = op
+        for i_, v in enumerate((a, b, c)):
+            if v is None: continue
+            if isinstance(v, (int, float)): n_.inputs[i_].default_value = v
+            else: nt.links.new(v, n_.inputs[i_])
+        return n_.outputs['Value']
+    tc = nt.nodes.new('ShaderNodeTexCoord'); sx = nt.nodes.new('ShaderNodeSeparateXYZ'); nt.links.new(tc.outputs['Normal'], sx.inputs['Vector'])
+    z = m('MULTIPLY', sx.outputs['Z'], -1.0)
+    siirto = nt.nodes.new('ShaderNodeValue'); siirto.name = 'siirto'
+    u = m('ADD', m('MULTIPLY_ADD', m('DIVIDE', sx.outputs['X'], z), etaisyys / lev, 0.5), siirto.outputs['Value'])
+    v = m('MULTIPLY_ADD', m('DIVIDE', sx.outputs['Y'], z), etaisyys / kork, 0.5)
+    yh = nt.nodes.new('ShaderNodeCombineXYZ'); nt.links.new(u, yh.inputs['X']); nt.links.new(v, yh.inputs['Y'])
+    t = nt.nodes.new('ShaderNodeTexImage'); t.image = kk; t.extension = 'CLIP'; nt.links.new(yh.outputs['Vector'], t.inputs['Vector'])
+    em = nt.nodes.new('ShaderNodeEmission'); nt.links.new(t.outputs['Color'], em.inputs['Strength'])
+    out = nt.nodes.new('ShaderNodeOutputLight'); nt.links.new(em.outputs['Emission'], out.inputs['Surface'])
+    o = bpy.data.objects.new(nimi, d); bpy.context.scene.collection.objects.link(o)
+    o.location = Vector(p) + suunta.normalized() * etaisyys; kohdista(o, p)
+    alku, loppu = ruudut; sv = siirto.outputs['Value']
+    for r, v_ in ((alku, -liuku), (loppu, liuku)):
+        sv.default_value = v_; sv.keyframe_insert('default_value', frame=r)
+    for r, v_ in ((1, 0), (alku, 0), (alku + 45, voima), (loppu - 45, voima), (loppu, 0)):
+        d.energy = v_; d.keyframe_insert('energy', frame=r)
+    return o
 
 
 if '--v7' in A:
@@ -819,6 +853,10 @@ if '--v7' in A:
     p, n = osuma(-0.005, 0.418)
     v4_projektori('tykki-otsa', p, (n + Vector((-0.40, -0.15, -0.30))).normalized(), 0.6, 0.075,
                   os.path.join(GOBOT, 'nauha-otsa.png'), V7_NAUHA, (V7_PROJ[0] + 5, V7_PROJ[1] - 5), V7_TYKKI)
+    if '--kaiku' in A:   # v8: kaikukuva elämäkerronnan aikana samalla videotykillä (otsan projektori)
+        KAIKU = A[A.index('--kaiku') + 1]
+        KVOIMA = float(A[A.index('--kaikuvoima') + 1]) if '--kaikuvoima' in A else 160.0
+        kaiku_projektori('kaiku', p, (n + Vector((-0.40, -0.15, -0.30))).normalized(), 0.6, 0.11, KAIKU, V7_KAIKU, KVOIMA)
     c, t, u = lentoasento(p, n, kulma=55, matka=0.11)
     cd = bpy.data.cameras.new('k'); cd.sensor_fit = 'VERTICAL'; cd.sensor_height = 24; cd.clip_start = 0.003
     cam = bpy.data.objects.new('k', cd); sc.collection.objects.link(cam); sc.camera = cam
