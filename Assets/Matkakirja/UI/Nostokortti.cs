@@ -120,7 +120,7 @@ namespace Matkakirja.Natiivi
             lukija = new KortinLukija(kortti, luokka: "mk-nosto__lukija mk-nosto__lukija--kiinni", saatimet: true, rajaus: () => kortti.worldBound,
                 loppui: LuentaLoppui);
             selain = new Nostoselain(kortti, sisus, id => Avaa(id), AutoVaihtui);
-            selain.LisaaAuto(lukija.Juuri);
+            selain.LisaaAuto();
             lukija.Juuri.RegisterCallback<GeometryChangedEvent>(_ => SijoitaLukija());
             // Napit näkyvät heti (omistaja 28.9.2026, TF 1.0.34, Korintin kanava): kiinni kortissa, ei vierityksessä.
             sisus.verticalScroller.valueChanged += _ => SijoitaLukija();
@@ -624,7 +624,8 @@ namespace Matkakirja.Natiivi
             var lohko = Rakenne.El("mk-nosto__kuvasarja", sisus, PickingMode.Ignore);
             if (lk.Hero != null)
             {
-                Kuvakehys(lohko, lk.Hero, () => Suurenna(0), suhde: HeroSuhde);
+                // Puuttuva kuva vie myös kuvatekstin ja lähteen (web #3847: figure poistuu kokonaan).
+                Kuvakehys(lohko, lk.Hero, () => Suurenna(0), suhde: HeroSuhde, puuttui: () => lohko.style.display = DisplayStyle.None);
                 if (!string.IsNullOrEmpty(lk.Hero.Lyhyt))
                     Kirjasimet.Aseta(Rakenne.Teksti(lk.Hero.Lyhyt, "mk-nosto__kuvateksti", lohko), Kirjasin.Luku);
                 if (!string.IsNullOrEmpty(lk.Hero.LahdeRivi)) Rakenne.Teksti(lk.Hero.LahdeRivi, "mk-kansikuva__lahde", lohko);
@@ -1120,7 +1121,10 @@ namespace Matkakirja.Natiivi
         /// kuvaKatto; ennen latausta 3:2 (web oletussuhde). Pysty- ja neliökuva eivät enää kutistu 3:2-kehykseen
         /// (iPhonella pystykuva 225 pt korkea → enintään turva-alue − 150 pt). Katetun kuvan sivuille jää kortin paperi.
         /// </summary>
-        VisualElement Kuvakehys(VisualElement isa, NostoKuva k, Action napautus, Action<Texture2D> ladattuna = null, float kiintea = 0f, float suhde = 0f)
+        /// <param name="puuttui">Kuvaa ei saatu (404 tai ei lähdettä): kehys on jo piilotettu; kutsuja piilottaa kuvatekstinsä
+        /// (web #3847 pohjaKuva: virhe poistaa kuvapaikan, omistaja 2.10. klo 13.53 Bobovacin harmaa laatikko).</param>
+        VisualElement Kuvakehys(VisualElement isa, NostoKuva k, Action napautus, Action<Texture2D> ladattuna = null, float kiintea = 0f, float suhde = 0f,
+            Action puuttui = null)
         {
             var kehys = Rakenne.El("mk-nosto__kuvakehys", isa);
             var kuva = Rakenne.El("mk-nosto__kuva", kehys, PickingMode.Ignore);
@@ -1146,7 +1150,8 @@ namespace Matkakirja.Natiivi
             int v = versio;
             NostoSisalto.HaeKuva(k.Lahde, t =>
             {
-                if (t == null || v != versio) return;
+                if (v != versio) return;
+                if (t == null) { kehys.style.display = DisplayStyle.None; puuttui?.Invoke(); return; }
                 ladattu = t;
                 kuva.style.backgroundImage = new StyleBackground(t);
                 if (t.width > 0 && t.height > 0)
@@ -1176,7 +1181,9 @@ namespace Matkakirja.Natiivi
                 kehysPaikka.Clear();
                 var k = kuvat[kuvaIndeksi];
                 int kohta = kuvaIndeksi;
-                var kehys = Kuvakehys(kehysPaikka, k, () => Suurenna(kohta), suhde: HeroSuhde);
+                // Ainoa kuva puuttuu → koko kuvasarja tekstiä myöten pois (web #3847; Bobovac). Usean kuvan sarjassa vain kehys.
+                var kehys = Kuvakehys(kehysPaikka, k, () => Suurenna(kohta), suhde: HeroSuhde,
+                    puuttui: kuvat.Count == 1 ? () => lohko.style.display = DisplayStyle.None : (Action)null);
                 AsetaKuvateksti(teksti, k.Lyhyt, k);
                 if (kuvat.Count > 1)
                 {
