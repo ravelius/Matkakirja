@@ -4556,12 +4556,12 @@
     margin-left: var(--tk-vali-xs);
 }
 
-/* PILLERINAPPI (omistaja 2.10.2026 klo 15.0x ja 17.0x): tyylikirjan pilleri-nappi (paperi.korostus hillitympänä) ja
-   pilleri-nappi-reuna, kermainen muste; ei laukkukuvaketta (Ylapalkki.PuePilleriNappi), kulma-nappi (ei ovaalia). */
+/* PILLERINAPPI (omistaja 2.10.2026 klo 17.3x: aiempi ulkoasu, uusi teksti): BUILD 123:n tumma täyttö (kehys.panel) ja ohut
+   vaalea reuna (tumma-reunus), kermainen muste; ei laukkukuvaketta (Ylapalkki.PuePilleriNappi), kulma-nappi (ei ovaalia). */
 .mk-pilleri.mk-pilleri--nappi {
     border-width: 1px;
-    border-color: var(--pilleri-nappi-reuna);
-    background-color: var(--pilleri-nappi);
+    border-color: var(--tk-tumma-reunus);
+    background-color: var(--panel);
     color: var(--tk-tumma-muste);
 }
 

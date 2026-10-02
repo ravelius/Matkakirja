@@ -317,7 +317,8 @@ namespace Matkakirja.Natiivi
                 pilleri.AddToClassList("mk-pilleri--paiva-ensin");
             }
             pilleri.style.display = DisplayStyle.None;
-            pilleri.RegisterCallback<GeometryChangedEvent>(_ => { KeskitaPilleri(); VahvistaKulmavali(); SovitaPilleri(); PilleriMuuttui?.Invoke(); });
+            logo.RegisterCallback<GeometryChangedEvent>(_ => KeskitaSivut());
+            pilleri.RegisterCallback<GeometryChangedEvent>(_ => { KeskitaPilleri(); KeskitaSivut(); SovitaPilleri(); PilleriMuuttui?.Invoke(); });
 
             napit = Rakenne.El("mk-ylapalkki__napit", palkki, PickingMode.Ignore);
             Ratas = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Ratas);
@@ -423,8 +424,8 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// PILLERINAPPI (omistaja 2.10.2026 klo 15.0x ja 17.0x): tyylikirjan pilleri-nappi-sävy (paperi.korostus hillitympänä),
-        /// laukkukuvake pois ja pilleri vain tekstin "1 pv · £400" levyinen.
+        /// PILLERINAPPI (omistaja 2.10.2026 klo 17.3x: "palauta pillerin aiempi ulkoasu, muuta vain tekstisisältö"): BUILD 123:n
+        /// tumma täyttö ja ohut vaalea reuna, kulma-nappi (ei ovaalia); laukkukuvake pois ja pilleri tekstin "1 pv · £400" levyinen.
         /// </summary>
         void PuePilleriNappi()
         {
@@ -626,10 +627,12 @@ namespace Matkakirja.Natiivi
                 // kuin logo vasemmalla; kulmakaaren vara lasketaan nostetusta yläreunasta.
                 KeskitaPilleri();
                 float oikeaVara = Mathf.Max(r.z + 8f * yksikko, KulmaVara(yla - alemmas, rivi / 2f, kulmaR, KulmaMarginaali * yksikko));
-                // Omistaja 17.0x: pillerin lähimmän pisteen etäisyys näytön kaareen ≥ logon etäisyys vasempaan kaareen (VahvistaKulmavali
-                // mittaa asettelun jälkeen ja lisää tarvittaessa oikeaa väliä).
+                // Omistaja 17.3x: logo ja pilleri keskelle näytön ulkokaaren ja saaren tikkauskehän väliin (KeskitaSivut mittaa
+                // asettelun jälkeen keskikorkeudelta ja siirtää lisillä).
+                vasenPerus = vasenReuna;
                 oikeaVaraPerus = oikeaVara;
                 naytonKulmaR = kulmaR;
+                vasenReuna += vasenLisa;
                 oikeaVara += kulmaLisa;
                 float oikeaReuna = P(Screen.width / pp, 0f).x - oikeaVara;
                 palkki.style.paddingLeft = vasenReuna;
@@ -660,12 +663,28 @@ namespace Matkakirja.Natiivi
         // joka puolelta (samankeskinen kehä).
         const float LeikkausEtaisyys = 0.5f, TikkausEtaisyys = 2.3f, ViisteEtaisyys = 3.7f, PistoPituus = 3.5f, PistoJakso = 6.5f,
             LankaPaksuus = 0.9f, UraPaksuus = 1.8f;
-        /// <summary>Lanka ja viiste tyylikirjasta (pohjavahti): TUMMA muste-pehmeä, viiste läpikuultavana.</summary>
-        static Color Lanka { get { Color c = Tyylikirja.Tumma.MustePehmea; c.a = 0.8f; return c; } }
+        /// <summary>
+        /// Omistaja 17.3x: "tikkaus on liian vaalea … en nähnyt tikkauksen eri vaihtoehtoja" → kuvaan kolme (`ui ylapalkki tikkaus A|B|C`):
+        /// A kehä alareunan sauman lankasävyllä (kehys.muted), B kehä lähes nahan sävyisellä langalla (kehys.line, sävy sävyyn),
+        /// C pelkkä alakaari tummalla langalla (kehys.muted himmeämpänä). Värit tyylikirjasta (pohjavahti).
+        /// </summary>
+        public static string TikkausVaihtoehto = "A";
+        static Color Lanka
+        {
+            get
+            {
+                Color c = TikkausVaihtoehto == "B" ? (Color)Tyylikirja.Kehys.Line : (Color)Tyylikirja.Kehys.Muted;
+                c.a = TikkausVaihtoehto == "B" ? 1f : TikkausVaihtoehto == "C" ? 0.55f : 0.75f;
+                return c;
+            }
+        }
         static Color Viiste { get { Color c = Tyylikirja.Tumma.MustePehmea; c.a = 0.18f; return c; } }
         VisualElement saariTikkaus;
         Rect tikkausSaari;
         float tikkausYksikko = 1f;
+
+        /// <summary>Testikomento: tikkausvaihtoehto vaihtuu heti.</summary>
+        public void PiirraTikkausUudelleen() => saariTikkaus?.MarkDirtyRepaint();
 
         /// <summary>Tikkauskehä saaren ympärille (paneelin yksiköissä); saari = Rect.zero piilottaa.</summary>
         void AsetaSaariTikkaus(Rect saari, float yksikko)
@@ -708,24 +727,27 @@ namespace Matkakirja.Natiivi
             p.strokeColor = Viiste;
             p.lineWidth = 0.6f * u;
             Stadion(p, saari, ViisteEtaisyys * u, 0f, 0f);
-            // Tikkaus: painettu ura, pistojen varjo hieman ulompana ja lanka.
-            p.strokeColor = Tyylikirja.Himmennys.Kevyt;
-            p.lineWidth = UraPaksuus * u;
-            Stadion(p, saari, TikkausEtaisyys * u, 0f, 0f);
+            // Tikkaus: painettu ura (ei C:ssä, jossa pistot vain alakaaressa), pistojen varjo hieman ulompana ja lanka.
+            if (TikkausVaihtoehto != "C")
+            {
+                p.strokeColor = Tyylikirja.Himmennys.Kevyt;
+                p.lineWidth = UraPaksuus * u;
+                Stadion(p, saari, TikkausEtaisyys * u, 0f, 0f);
+            }
             p.lineCap = LineCap.Round;
             p.strokeColor = Tyylikirja.Himmennys.Tumma;
             p.lineWidth = (LankaPaksuus + 0.4f) * u;
-            Stadion(p, saari, (TikkausEtaisyys + 0.4f) * u, PistoPituus * u, PistoJakso * u);
+            Stadion(p, saari, (TikkausEtaisyys + 0.4f) * u, PistoPituus * u, PistoJakso * u, vainAla: TikkausVaihtoehto == "C");
             p.strokeColor = Lanka;
             p.lineWidth = LankaPaksuus * u;
-            Stadion(p, saari, TikkausEtaisyys * u, PistoPituus * u, PistoJakso * u);
+            Stadion(p, saari, TikkausEtaisyys * u, PistoPituus * u, PistoJakso * u, vainAla: TikkausVaihtoehto == "C");
         }
 
         /// <summary>
         /// Saaren stadionmuodon (pyöreät päädyt) ääriviiva <paramref name="d"/>:n etäisyydellä: jakso 0 = yhtenäinen viiva,
         /// muuten pistot pituudeltaan <paramref name="pisto"/> jakson välein kaarenpituuden mukaan, tasaisesti koko kehälle.
         /// </summary>
-        static void Stadion(Painter2D p, Rect saari, float d, float pisto, float jakso)
+        static void Stadion(Painter2D p, Rect saari, float d, float pisto, float jakso, bool vainAla = false)
         {
             float r = saari.height / 2f + d, cy = saari.center.y;
             float xa = saari.xMin + saari.height / 2f, xb = saari.xMax - saari.height / 2f; // päätyjen keskipisteet
@@ -758,6 +780,7 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < n; i++)
             {
                 float a = i * j;
+                if (vainAla && Piste(a + l / 2f).y <= cy) continue;
                 p.MoveTo(Piste(a));
                 for (float s = a + Askel; s < a + l; s += Askel) p.LineTo(Piste(s));
                 p.LineTo(Piste(a + l));
@@ -1147,33 +1170,33 @@ namespace Matkakirja.Natiivi
         /// saari y 14 pt (sama korkeus 36,3 pt), joten rivin laskennallinen sijainti ei riitä: siirto lasketaan pillerin
         /// todellisesta paikasta suhteessa saaren keskikohtaan (palkin koordinaatit) ja korjataan marginaalilla.
         /// </summary>
-        float oikeaVaraPerus = float.NaN, naytonKulmaR, kulmaLisa;
+        float oikeaVaraPerus = float.NaN, vasenPerus, naytonKulmaR, kulmaLisa, vasenLisa;
 
         /// <summary>
-        /// Pillerin oikean yläkulman lähin piste näytön pyöristettyyn kulmaan vähintään yhtä kaukana kuin logon vasen yläkulma
-        /// vasempaan kaareen (omistaja 2.10.2026 klo 17.0x: mitataan lähimmästä pisteestä, ei suorasta reunasta). Pillerin kulma on
-        /// kulma-napin säteinen kaari; logo on suorakulmio. Lisä oikeaan väliin kasvaa mittauksen mukaan (GeometryChanged).
+        /// KESKITYS KAARTEN VÄLIIN (omistaja 2.10.2026 klo 17.3x: "keskitä pilleri sekä matkakirja logo saaren ja iphonen ulkokaarien
+        /// välille"): logon keskikohta vaakasuunnassa keskelle vasemman näytön kaaren ja tikkauskehän ulkoreunan väliä, pilleri
+        /// samoin oikealle. Kaari luetaan elementin keskikorkeudelta (näytön kulmasäde NaytonKulmaPt). Siirto lisätään palkin
+        /// sisennyksiin asettelun jälkeen (GeometryChanged), kunnes ero < 0,25 pt.
         /// </summary>
-        void VahvistaKulmavali()
+        void KeskitaSivut()
         {
-            if (float.IsNaN(oikeaVaraPerus) || naytonKulmaR <= 0f || !PilleriOikealla) return;
+            if (float.IsNaN(oikeaVaraPerus) || naytonKulmaR <= 0f || !PilleriOikealla || tikkausSaari.width <= 0f) return;
             var p0 = palkki.worldBound;
             var lb = logo.worldBound;
             var pb = pilleri.worldBound;
             if (float.IsNaN(lb.width) || float.IsNaN(pb.width) || pb.width <= 0f || lb.width <= 0f) return;
             float R = naytonKulmaR, W = p0.width;
-            var logoKulma = new Vector2(lb.xMin - p0.xMin, lb.yMin - p0.yMin);
-            float dLogo = logoKulma.x < R && logoKulma.y < R
-                ? R - Vector2.Distance(logoKulma, new Vector2(R, R)) : Mathf.Min(logoKulma.x, logoKulma.y);
-            float rho = pilleri.resolvedStyle.borderTopRightRadius;
-            if (float.IsNaN(rho)) rho = 0f;
-            var c = new Vector2(pb.xMax - p0.xMin - rho, pb.yMin - p0.yMin + rho);
-            float dPilleri = c.x > W - R && c.y < R
-                ? R - Vector2.Distance(c, new Vector2(W - R, R)) - rho : W - (pb.xMax - p0.xMin);
-            // +0,5 pt varmuus: laitteen kaari ei ole täsmälleen mallin 62 pt (8d3af245: pilleri 12,5 px vs logo 13,6 px @3x).
-            float ero = dLogo + 0.5f - dPilleri;
-            if (Mathf.Abs(ero) < 0.25f) return;
-            kulmaLisa = Mathf.Max(0f, kulmaLisa + ero);
+            float Kaari(float y) => y >= R ? 0f : R - Mathf.Sqrt(Mathf.Max(0f, R * R - (R - y) * (R - y)));
+            float ulko = (TikkausEtaisyys + UraPaksuus / 2f) * tikkausYksikko;
+            float logoKeski = lb.center.x - p0.xMin, logoY = lb.center.y - p0.yMin;
+            float logoEro = (Kaari(logoY) + tikkausSaari.xMin - ulko) / 2f - logoKeski;
+            float pilleriKeski = pb.center.x - p0.xMin, pilleriY = pb.center.y - p0.yMin;
+            float pilleriEro = (W - Kaari(pilleriY) + tikkausSaari.xMax + ulko) / 2f - pilleriKeski;
+            bool muuttui = false;
+            if (Mathf.Abs(logoEro) >= 0.25f) { vasenLisa += logoEro; muuttui = true; }
+            if (Mathf.Abs(pilleriEro) >= 0.25f) { kulmaLisa -= pilleriEro; muuttui = true; }
+            if (!muuttui) return;
+            palkki.style.paddingLeft = vasenPerus + vasenLisa;
             palkki.style.paddingRight = oikeaVaraPerus + kulmaLisa;
         }
 
