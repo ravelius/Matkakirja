@@ -3,6 +3,17 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 2.10. KLO 22.1x (viikkoraja 92 %)
+- TOPOGRAFIAN HAMPURILAINEN (omistaja 21.3x): linssiseppa/topografia-hampurilainen d99f62c5 (BUILD 129 e204abbe:n päällä)
+  MERGE-PYYNNÖSSÄ Natiivisepällä. Topografiassa ✕-pilleri ja nimilappu pois; tilalle OHJAUSNAPPI (LinssiValikko-pohja,
+  aanet:false): Korkeustasot (selite auki/kiinni) + Sulje linssi; kartan pikkuselite piilossa (LinssiSelite.PieniPiiloon).
+  Komento `ui linssi topovalikko [auki|korkeustasot]`. Simu 22.06 PASS oikealla tapilla, kuvapari
+  proto-3d/lokit/linssiseppa-topografia-20261002/kuvapari-topografia.png lähetetty Päätoimittajalle.
+  AVOIN: vertaa Pelikoodarin webiin kun valmis (ero → rivi Päätoimittajalle, ei muutosta ilman lupaa).
+- Kipsipäät (erikoisnostot-3) junassa 129, omistaja "Kelpaa". Linssit-karttanappi + Avaajat junassa 128.
+- Odottaa: yövalojen natrium-oranssi (omistaja), Julisteet-galleria (UI-pohja auki Natiivi-UI:lla).
+- Proto-worktree /Users/Shared/Claude/wt/proto-linssiseppa-astro-auto on haarassa topografia-hampurilainen.
+
 ## TILA 2.10. KLO 11.3x
 - ISS:n rinnalla pois pelistä (omistaja 2.10. 10.4x): linssiseppa/ei-seurantaa 19e0242e merge-pyynnössä Natiivisepällä
   (juna 116); simulaattori f7826b2c PASS (lokit/linssiseppa-ei-seurantaa-20261002-iphone). Kehittäjälle `astro kyyti seuranta 1`.
