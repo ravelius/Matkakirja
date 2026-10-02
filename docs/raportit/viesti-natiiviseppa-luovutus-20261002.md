@@ -16,6 +16,8 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen
   3. Topografian hampurilainen: linssiseppa/topografia-hampurilainen.
   4. Astro/ISS: linssiseppa2/astro-palaute (LS2).
   5. Skin-varjo: siirtoseppa/linna-skin 0592decd (yksi sekoitusrivi; Siirtosepän simutodennus).
+  Haarojen kärjet 22.10: ylapalkki-matalampi d00c7f8b, kokoelmat-ikkuna 5cfe7253, topografia-hampurilainen d99f62c5,
+  astro-palaute da145b3e, linna-skin 39a396e3 (uudempi kuin 0592decd).
   Varmista jokaisen kärki-SHA merge-pyynnöstä ennen kokoamista; skin-paketti (2abec0c9…) vaatii osoittimen vaihdon omistajan OK:lla.
 
 ## TÄNÄÄN (2.10.) TEHDYT BUILDIT
