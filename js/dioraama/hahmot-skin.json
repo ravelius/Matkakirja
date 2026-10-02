@@ -1,0 +1,19 @@
+{
+ "_huom": "Skinnatut hahmot (Linnanrakentaja 2.10.2026; Quaternius CC0). Arvot hahmo_skin.py:n json-tulosteesta. skaala = rakennus-henkilön pituus / glb:n pituus_m.",
+ "vartija-1500": {
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo"
+  },
+  "kavely_sykli_m": 1.273,
+  "kavely_kesto_s": 1.333,
+  "pituus_m": 1.844,
+  "skaala": 0.9544,
+  "kasvot": "+Z",
+  "lahde": "_valmiit/vartija-skin/v2 (LOD ~9 k, perusväri 512)"
+ }
+}

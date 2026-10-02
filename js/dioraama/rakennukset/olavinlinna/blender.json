@@ -1,8 +1,13 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "e75b51a0510f79f8",
-  "kansio": "dioraama/olavinlinna/blender/e75b51a0510f79f8/",
+  "hash": "6293384c032dc884",
+  "kansio": "dioraama/olavinlinna/blender/6293384c032dc884/",
   "tiedostot": [
+    {
+      "polku": "hahmot/vartija-1500.glb",
+      "sha256": "05e5b8edcf4ce9d4482ede3384e40643e823ff1224c0de0ed23d89e48fa9256d",
+      "tavuja": 1202728
+    },
     {
       "polku": "kirjasto/materiaali/graniittilohkomuuri/graniittilohkomuuri_diff-4x4.astcm",
       "sha256": "70d4845ef2b55d7012b2c4c2c93abbeadd0e53211b6f0a8c33a6c207fb8a0587",

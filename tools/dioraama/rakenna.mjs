@@ -327,6 +327,13 @@ export function lisaaBlender(rakennusJson, blender) {
   const on8k = on.has('ulkokuori/ulkokuori-8k-4x4.astcm') && on.has('ulkokuori/ulkokuori-hamara-8k-4x4.astcm')
     && on.has('ulkokuori/ulkokuori-hamara-8k.jpg');
   const tasot = { huippu: on8k ? '8k' : '4k', normaali: '4k', kevyt: '2k' };
+  // Skinnatut hahmot (omistaja 2.10. 18.0x): blender/hahmot/<henkilo>.glb + js/dioraama/hahmot-skin.json → henkilot[id].malli3d.skin
+  // (natiivi: DioraamaGlb skin + sekoitin; nivelhahmo malli3d.glb jää varalle). Vain henkilöille, joiden glb on viety.
+  const SKIN = JSON.parse(readFileSync(new URL('../../js/dioraama/hahmot-skin.json', import.meta.url), 'utf8'));
+  for (const [id, h] of Object.entries(rakennusJson.henkilot || {})) {
+    if (!SKIN[id] || !on.has(`hahmot/${id}.glb`) || !h.malli3d) continue;
+    h.malli3d = { ...h.malli3d, skin: { glb: B(`hahmot/${id}.glb`), ...SKIN[id] } };
+  }
   rakennusJson.tunnelma = 'hamara';
   rakennusJson.ulkokuori = {
     ...Object.fromEntries(Object.keys(tasot).map((t) => [t, B(`ulkokuori/ulkokuori_${t}.glb`)])),
