@@ -405,6 +405,7 @@ const SHELL = [
   './js/linssit/ajattelija.js',
   './js/linssit/ajattelija-projektori.js',
   './js/linssit/ajattelija-sokrates.js',
+  './js/linssit/ajattelija-marcus.js',
   './js/linssit/omistus.js',
   './js/linssit/pallo.js',
   './js/linssit/pistenaytto.js',

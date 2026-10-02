@@ -12,7 +12,8 @@ test('vain kehityslippu ?ajattelija=sokrates avaa näkymän; tuntematon tai puut
   assert.equal(ajattelijaLipusta('?ajattelija=sokrates'), 'sokrates');
   assert.equal(ajattelijaLipusta('?ajattelija=platon'), null);
   assert.equal(ajattelijaLipusta(''), null);
-  assert.deepEqual(Object.keys(AJATTELIJAT), ['sokrates']);
+  assert.deepEqual(Object.keys(AJATTELIJAT), ['sokrates', 'marcus']);
+  assert.equal(ajattelijaLipusta('?ajattelija=marcus'), 'marcus');
   const main = lue('../js/main.js');
   assert.match(main, /const ajattelija = ajattelijaLipusta\(\);\n\s*if \(ajattelija\) avaaAjattelija\(ajattelija\)/);
 });
@@ -87,7 +88,7 @@ test('omistajan v9-palaute: prologi ilman kehää, Zarathustra koko kohtaus vaim
   assert.deepEqual(Object.keys(SOKRATES.aani), ['puhe', 'musiikki']);
   const tyokalu = lue('../tools/ajattelija-aaniraita.mjs');
   assert.match(tyokalu, /const VAIMENNUS = \{ alku: 17\.5, taso: 0\.22, ramppi: 2 \};/);
-  assert.match(tyokalu, /const SILMUKKA = \[66\.0, 80\.0\];/);
+  assert.match(tyokalu, /silmukka: \[66\.0, 80\.0\],/);
   assert.doesNotMatch(tyokalu, /gymnopedie/i, 'Satie pois');
   const pr = lue('../js/linssit/ajattelija-projektori.js');
   assert.match(pr, /texture2D\( normalMap, vNormalMapUv, -0\.75 \)/);
@@ -117,4 +118,18 @@ test('ajattelijat ovat dataa: jokainen rekisterin ajattelija kelpaa, moottori ei
   assert.ok(tarkistaAjattelija({ tunnus: 'x' }).length > 5, 'tyhjä data ei kelpaa');
   const moottori = lue('../js/linssit/ajattelija.js').replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, '');
   assert.doesNotMatch(moottori.replace(/import \{ SOKRATES \}[^\n]*\n|sokrates: SOKRATES/g, ''), /38a|sokrates|Sokrates/);
+});
+
+test('Marcus Aurelius pelkkänä datana: Itselleen 10.16, kaksirivinen nimi, ei vielä kaikua, Eroica CC0', async () => {
+  const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
+  assert.equal(MARCUS.paalauseet[MARCUS.kierros.paalause].viite, 'Marcus Aurelius, Itselleen 10.16');
+  assert.deepEqual(MARCUS.nimiRivit, ['MARCUS', 'AURELIUS']);
+  assert.equal(MARCUS.kaiku, null);
+  assert.equal(MARCUS.taustavirta.rivit.length, 20);
+  assert.equal(MARCUS.prologi, SOKRATES.prologi, 'vakioaloitus on yhteinen');
+  const tyokalu = lue('../tools/ajattelija-aaniraita.mjs');
+  assert.match(tyokalu, /marcus: \{[\s\S]*?eroica-marcia-funebre-musopen\.ogg[\s\S]*?osat: \[\[75\.48, 75\.48 \+ 48\.333\]\]/);
+  const js = lue('../js/linssit/ajattelija.js');
+  assert.match(js, /\} else if \(!kk \|\| r <= T\.kaiku\[0\]\) \{/, 'ilman kaikua kaari jatkuu pitoon');
+  assert.match(js, /if \(!a\.pulunKysymykset\?\.length\) return;/);
 });
