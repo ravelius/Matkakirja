@@ -134,3 +134,42 @@ Lisenssi sanatarkasti: **"CC0"** — Commons: UsageTerms **"Creative Commons Zer
 - Jos intro on 5–10 s ja sen jälkeen on tarkoitus siirtyä Goldberg-aariaan: leike **0:00–0:08,4**, häivytys 0,5–1 s.
 
 **Päätettävää Päätoimittajalle:** (a) Eroica 2. osa introksi (leike 0:00–0:08,4 tai nousuleike 0:27–0:37)? (b) Stokowski 1927 jää varalle.
+
+## 9. Lappu "Marcus Aureliuksen elämä" (Pelikoodarin ja Päätoimittajan pyyntö 2.10.; Sokrateen osion 6 mukainen)
+
+Pituus ~1001 merkkiä (6 tapahtumaa otsikkoineen + loppurivi; Sokrateen lappu ~1 100). Kohderyhmä 13+: ei yksityiskohtaista kuolinkuvausta. Lapussa ei käytetä Historia Augusta -anekdootteja.
+
+**Marcus Aureliuksen elämä**
+
+**Rikkaan suvun poika.** Marcus syntyi Roomassa 26.4.121. Hänen isänsä kuoli, kun Marcus oli kolmevuotias, ja poika kasvoi isoisänsä hoivissa.
+
+**Hadrianuksen valinta.** Vuonna 138 keisari Hadrianus määräsi, että hänen seuraajansa Antoninus Pius adoptoi nuoren Marcuksen. Marcus oli nyt tulevan keisarin perillinen.
+
+**Stoalainen opettaja.** Filosofian opettaja Rusticus antoi hänelle Epiktetoksen muistiinpanot, ja Marcus kääntyi stoalaisuuteen.
+
+**Kaksi keisaria.** Vuonna 161 hän nousi valtaan mutta kieltäytyi hallitsemasta yksin: kanssakeisariksi tuli Lucius Verus. Valtakuntaa hallitsi ensimmäistä kertaa kaksi keisaria.
+
+**Sota ja rutto.** Tonavan rajalla käytiin vuosina 166–180 sotia germaanikansoja vastaan. Samaan aikaan Antoninuksen rutto tappoi arvioiden mukaan miljoonia ihmisiä.
+
+**Kuolema Tonavalla.** Marcus kuoli 17.3.180 Tonavan rajalla sotaretkellä. Vallan peri hänen poikansa Commodus.
+
+*Marcus kirjoitti muistiinpanonsa itselleen kreikaksi; teos *Itselleen* on yksi tärkeimmistä lähteistä, joiden kautta stoalaisuutta tunnetaan.*
+
+### Lähde jokaiselle tapahtumalle
+
+| Tapahtuma | Lähde |
+|---|---|
+| Rikkaan suvun poika | Marcus Aurelius, Wikipedia: syntynyt 26.4.121 Roomassa; isä Marcus Annius Verus kuoli noin 125–126, kun Marcus oli kolmevuotias; kasvatti isoisä; äiti Domitia Lucilla peri huomattavan omaisuuden. |
+| Hadrianuksen valinta | Marcus Aurelius, Wikipedia: Hadrianus adoptoi Antoninuksen perilliseksi 138 ja vaati tätä adoptoimaan Marcuksen ja Lucius Commoduksen. |
+| Stoalainen opettaja | *Itselleen* 1.7 (Wikisource, kreikka: "τὸ ἐντυχεῖν τοῖς Ἐπικτητείοις ὑπομνήμασιν, ὧν οἴκοθεν μετέδωκεν" = tutustua Epiktetoksen muistiinpanoihin, jotka Rusticus antoi omasta kirjastostaan); Wikipedia: Rusticus vaikutti eniten, Marcus oli stoalainen. |
+| Kaksi keisaria | Marcus Aurelius, Wikipedia: valtaan 7.3.161; "first time that Rome was ruled by two emperors"; Lucius Verus kanssakeisarina 161–169. |
+| Sota ja rutto | Marcus Aurelius, Wikipedia: Marcomannisodat 166–180 (marcomannit, kvadit, jatsigit); rutto alkoi 165 tai 166, "five to ten million" (arvio). |
+| Kuolema Tonavalla | Marcus Aurelius, Wikipedia: kuoli 17.3.180 "Vindobona … or Sirmium"; seuraaja Commodus. |
+| Loppurivi | Marcus Aurelius, Wikipedia: *Meditations* kirjoitettu kreikaksi sotaretkillä; "one of the most important sources for the modern understanding of ancient Stoic philosophy" |
+
+### Varaukset (lappu)
+1. Wikipedia on pääasiallinen lähde; Marcuksen *Itselleen* 1.7 on luettu Wikisourcesta (kreikka). Ei muuta primaarilähdettä avattu.
+2. "Marcuksesta tuli Caesar" jätetty pois: Wikipedian mukaan Caesar-arvo tuli adoption yhteydessä 138, mutta muualla se ajoitetaan 139; muotoilu "tulevan keisarin perillinen" pätee kumpaankin.
+3. Rutto: kuolleiden "5–10 miljoonaa" on arvio; "arvioiden mukaan miljoonia".
+4. Ei mukana (valinnainen 7. tapahtuma): avioliitto Faustina nuoremman kanssa huhtikuussa 145 ja vähintään 13 lasta, joista monet kuolivat nuorina (Wikipedia). Voin lisätä, jos halutaan henkilökohtaisempi rivi.
+5. Pulun viisi kysymystä ovat osiossa 3 (194 merkkiä).
