@@ -106,10 +106,10 @@
   "fontit": {
     "_selite": "web = CSS-pino (sama kuin ennen), natiivi = Kirjasimet.cs:n ehdokkaat (perhe, tyyli) järjestyksessä.",
     "web": {
-      "font-type": "\"American Typewriter\", \"Courier Prime\", \"Courier New\", Courier, monospace",
-      "font-luku": "\"Iowan Old Style\", Charter, \"Palatino Linotype\", Palatino,\n    Georgia, \"Times New Roman\", serif",
-      "font-kauno": "\"Snell Roundhand\", \"Savoye LET\", \"Bradley Hand\",\n    \"Segoe Script\", \"Comic Sans MS\", cursive",
-      "font-atlas": "\"Liberation Serif\", \"Times New Roman\", Times, serif"
+      "font-type": "\"Matkakirja Punta\", \"American Typewriter\", \"Courier Prime\", \"Courier New\", Courier, monospace",
+      "font-luku": "\"Matkakirja Punta\", \"Iowan Old Style\", Charter, \"Palatino Linotype\", Palatino,\n    Georgia, \"Times New Roman\", serif",
+      "font-kauno": "\"Matkakirja Punta\", \"Snell Roundhand\", \"Savoye LET\", \"Bradley Hand\",\n    \"Segoe Script\", \"Comic Sans MS\", cursive",
+      "font-atlas": "\"Matkakirja Punta\", \"Liberation Serif\", \"Times New Roman\", Times, serif"
     },
     "natiivi": {
       "Kone": [["American Typewriter", "Regular"], ["Courier New", "Regular"], ["Courier", "Regular"]],

@@ -1,6 +1,23 @@
 /* Matkakirja ja unohdettu aarre — sovelluskehys (tumma pähkinäpuu) ja aarrekartta (pergamentti). */
 
 /*
+ * £-MERKKI SELKEÄLLÄ SERIFILLÄ (omistaja ja Päätoimittaja 2.10.2026: American Typewriterin £ näytti koukulta ja
+ * "−£20" luettiin "−&20"; tyylikirja fontit.punta, Natiivi-UI #3860). Vain U+00A3 tästä kasvosta, jokaisen
+ * fonttipinon alussa (tyylikirja.json fontit.web). Iowan on Applen järjestelmäfontti eikä upotettavissa, joten
+ * ketju jatkuu muiden alustojen serifeihin (Windows Georgia/Palatino/Cambria, Android Noto Serif, Linux DejaVu).
+ */
+@font-face {
+  font-family: "Matkakirja Punta";
+  /* local() vaatii kasvon koko nimen tai PostScript-nimen (mitattu Chromiumilla 2.10.2026: pelkkä "Iowan Old Style"
+     tai "Charter" ei löydy, "Iowan Old Style Roman" ja "Charter Roman" löytyvät). */
+  src: local("Iowan Old Style Roman"), local("IowanOldStyle-Roman"), local("Iowan Old Style"),
+    local("Charter Roman"), local("Charter-Roman"), local("Georgia"), local("Palatino Linotype"),
+    local("Palatino-Roman"), local("Cambria"), local("Noto Serif"), local("NotoSerif-Regular"),
+    local("DejaVu Serif"), local("Times New Roman");
+  unicode-range: U+00A3;
+}
+
+/*
  * hidden-attribuutin pitää voittaa aina. Selaimen oletus on display: none,
  * mutta mikä tahansa myöhempi display-sääntö (flex, grid, block) kumoaa sen,
  * jolloin piilotettu elementti jää näkyviin. Tämä sääntö tekee attribuutista
@@ -69,7 +86,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 8820c4af85c0 */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 432affc59259 */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -98,12 +115,12 @@ body.paivittyy .app { visibility: hidden; }
   --liike-sisaan: cubic-bezier(0.22, 0.9, 0.24, 1);
   --liike-pehmea: cubic-bezier(0.45, 0, 0.2, 1);
   --liike-ulos: cubic-bezier(0.4, 0, 1, 1);
-  --font-type: "American Typewriter", "Courier Prime", "Courier New", Courier, monospace;
-  --font-luku: "Iowan Old Style", Charter, "Palatino Linotype", Palatino,
+  --font-type: "Matkakirja Punta", "American Typewriter", "Courier Prime", "Courier New", Courier, monospace;
+  --font-luku: "Matkakirja Punta", "Iowan Old Style", Charter, "Palatino Linotype", Palatino,
     Georgia, "Times New Roman", serif;
-  --font-kauno: "Snell Roundhand", "Savoye LET", "Bradley Hand",
+  --font-kauno: "Matkakirja Punta", "Snell Roundhand", "Savoye LET", "Bradley Hand",
     "Segoe Script", "Comic Sans MS", cursive;
-  --font-atlas: "Liberation Serif", "Times New Roman", Times, serif;
+  --font-atlas: "Matkakirja Punta", "Liberation Serif", "Times New Roman", Times, serif;
   --tk-paperi-pinta: #f5f0e2;
   --tk-paperi-pergamentti: #ecd8ae;
   --tk-paperi-muste: #211d18;
@@ -515,24 +532,31 @@ button, .brand, .turn-pill, .fact-card h2 {
   gap: 0.45rem;
   font-size: 0.9rem;
   padding: 0.25rem 0.7rem;
-  border-radius: 999px;
-  background: var(--panel);
-  border: 1px solid var(--line);
+  /*
+   * KONJAKKINAHKAINEN PYÖRISTETTY SUORAKULMIO (omistaja 2.10.2026 klo 15.05/15.07 ja 16.0x; EI OVAALEJA): sama sävy
+   * ja reuna kuin natiivissa (tyylikirja konjakki / konjakki-reuna, Natiivi-UI #3860), muste tumma-muste.
+   */
+  border-radius: var(--tk-kulma-nappi);
+  background: var(--konjakki, #9a4e1c);
+  border: 1px solid var(--konjakki-reuna, #5a2d12);
+  color: var(--tk-tumma-muste);
   min-width: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: inherit;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
 .turn-pill:hover,
-.turn-pill:focus-visible {
+.turn-pill:focus-visible,
+.turn-pill:hover:not(:disabled) {
   border-color: var(--kulta, #eab84e);
+  background: var(--konjakki, #9a4e1c);   /* yleinen button:hover ei saa tummentaa nahkaa */
+  color: var(--tk-tumma-muste);
 }
 .turn-pill .laukku-ikoni {
   display: inline-flex;
-  color: var(--muted);
+  color: inherit;   /* täysin peittävä samalla musteella kuin teksti (Natiivi-UI) */
 }
 .turn-pill .laukku-ikoni svg {
   width: 15px;
@@ -617,7 +641,7 @@ button, .brand, .turn-pill, .fact-card h2 {
 .rahattomuus-lohko.viimeinen.palaa { border-color: #9e2c21; background: #c0392b; }
 
 .turn-pill .clock {
-  color: var(--muted);
+  color: inherit;
   font-variant-numeric: tabular-nums;
 }
 
@@ -625,7 +649,7 @@ button, .brand, .turn-pill, .fact-card h2 {
 .turn-pill .clock + .kassa::before {
   content: '·';
   margin-right: 0.45rem;
-  color: var(--muted);
+  color: inherit;
   font-weight: 400;
 }
 
@@ -636,9 +660,9 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 
 @keyframes aika-valahdys {
-  0% { color: var(--muted); }
+  0% { color: inherit; }
   22% { color: var(--accent); text-shadow: 0 0 8px rgba(234, 184, 78, 0.55); }
-  100% { color: var(--muted); }
+  100% { color: inherit; }
 }
 
 @media (prefers-reduced-motion: reduce) {
