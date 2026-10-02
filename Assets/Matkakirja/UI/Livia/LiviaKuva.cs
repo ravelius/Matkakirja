@@ -409,7 +409,9 @@ namespace Matkakirja.Natiivi
                 Kuva(evaKuvat[2], 304, t.EvaKasvo, true);
                 Kuva(evaKuvat[3], 304, t.EvaLamput, true);
                 Kuva(evaKuvat[4], 304, t.EvaMaa, true);
-                Kuva(robottiKuvat[2], 304, 1f, true);                    // robotin turvaköysi (vanha vapaa köysi pois)
+                // robotin turvaköysi (vanha vapaa köysi pois); 152 × 400, koska lenkki ulottuu y ≈ 322:een (Codexin 304:n vienti
+                // katkaisi lenkin alaosan, vienti uudelleen samasta SVG:stä 2.10.)
+                Kuva(robottiKuvat[2], 400, 1f, true);
                 Kuva(robottiKuvat[3], 304, 1f, false);                   // jalkapidikkeet
             }
         }
