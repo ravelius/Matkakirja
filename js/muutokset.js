@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2536, teksti: 'Linssivalitsin (#3811)' },
   { v: 2535, teksti: 'Lomakekenttä (#3808)' },
   { v: 2534, teksti: 'Linssin hampurilainen PANEELI (#3810)' },
   { v: 2533, teksti: 'Mitä uutta ja Peli päivittyi KORTTI-pohjalla (#3799)' },

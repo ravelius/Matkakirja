@@ -1201,6 +1201,7 @@ const STYLES = [
   'css/pohjat/pinnat/visa.css',
   'css/pohjat/pinnat/karttaselite.css',
   'css/pohjat/pinnat/linssin-valikko.css',
+  'css/pohjat/pinnat/linssivalitsin.css',
   'css/kuvasarja.css',
   // Sähkepinta on osa peruspeliä (js/ui.js ja js/main.js tuovat
   // js/sahke.js:n), eikä css/styles.css sisällä yhtään sahke-sääntöä.
