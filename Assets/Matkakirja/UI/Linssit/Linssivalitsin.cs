@@ -33,6 +33,8 @@ namespace Matkakirja.Natiivi
         internal Button Nappi => nappi;
         readonly VisualElement paneeli, lista, lisaosa;
         readonly Label otsikko;
+        readonly VisualElement ylarivi;
+        readonly Button ylaSulje;
         readonly List<(VisualElement Rivi, Func<bool> Nakyy)> lisarivit = new List<(VisualElement, Func<bool>)>();
         readonly List<(Button Nappi, Func<bool> Paalla)> kytkimet = new List<(Button, Func<bool>)>();
         /// <summary>"Muut"-paneeli (omistaja 24.9.2026 klo 13.3x): samannäköinen valikko nykyisen päälle.</summary>
@@ -76,14 +78,14 @@ namespace Matkakirja.Natiivi
             paneeli.AddToClassList("mk-paneeli--pohja");
             Kirjasimet.Aseta(paneeli, Kirjasin.Kone);
 
-            var ylarivi = Rakenne.El("mk-selite__ylarivi", paneeli, PickingMode.Ignore);
+            ylarivi = Rakenne.El("mk-selite__ylarivi", paneeli, PickingMode.Ignore);
             // Pillerivalikon alinäkymät (Linssit, Aarteet): ‹ Takaisin pääsivulle (Linssivalitsin.Pilleri.cs).
             alaTakaisin = Rakenne.Nappi("‹ Takaisin", "mk-selite__sulje mk-linssivalitsin__takaisin", () => NaytaNakyma(Nakyma.Paa), ylarivi);
             alaTakaisin.tooltip = "Takaisin valikkoon";
             alaTakaisin.style.display = DisplayStyle.None;
             otsikko = Rakenne.Teksti("LINSSIT", "mk-selite__otsikko", ylarivi);
-            var sulje = Rakenne.Nappi("×", "mk-selite__sulje", Sulje, ylarivi);
-            sulje.tooltip = "Sulje linssivalikko";
+            ylaSulje = Rakenne.Nappi("×", "mk-selite__sulje", Sulje, ylarivi);
+            ylaSulje.tooltip = "Sulje linssivalikko";
 
             var vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-linssivalitsin__vieritys");

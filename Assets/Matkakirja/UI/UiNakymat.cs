@@ -202,8 +202,10 @@ namespace Matkakirja.Natiivi
                 var kk = k;
                 v.LisaKevytKytkin(aanet, Asetukset.Nimi(kk), ikoni, () => Asetukset.Paalla(kk), () => Asetukset.Aseta(kk, !Asetukset.Paalla(kk)));
             }
-            v.LisaTasorivi(v.LisaLuetteloRyhma(null));
-            v.LisaPaivarivi();
+            // Tasorivi ja päivärivi yhteisellä pohjalla (omistaja 2.10.2026 klo 20.2x).
+            var tasopohja = v.LisaTasopohja();
+            v.LisaTasorivi(v.LisaLuetteloRyhma(null, tasopohja));
+            v.LisaPaivarivi(tasopohja);
             // MATKALAUKKU: kerätyt määrät suluissa (web renderValikkoTaso: Aarnin luettelon löydöt + muut aarteet, voitetut julisteet;
             // kehittäjätilassa koko julistekokoelma kuten galleriassa). Julisteet asuvat toistaiseksi Aarteet-näkymässä (web).
             var laukku = v.LisaLuetteloRyhma("Matkalaukku");
