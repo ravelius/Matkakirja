@@ -1204,6 +1204,7 @@ const STYLES = [
   'css/pohjat/kuvanakyma.css',
   'css/pohjat/pulu.css',
   'css/pohjat/erikoisnostot.css',
+  'css/pohjat/galleria.css',
   'css/pohjat/esikatselu.css',
   'css/pohjat/pinnat/dialogit.css',
   'css/pohjat/pinnat/pillerivalikko.css',
