@@ -8,7 +8,7 @@
 // alaoikea (web KUTSUN_ASENNOT). Omistaja 27.9. klo 11.2x: kutsu lähemmäs kaupunkia — renkaat 8, 20, 36 pt (web 16–100),
 // ja kun nostot (täytenä nimineen, maailma auki) peittävät kaikki, toinen kierros väistää vain kalusteet, kaupungin
 // pisteen ja nappulan (kutsu saa peittää nostomerkin). Ei mahdu mihinkään → ei kutsua. Piilossa, kun kamera on maatasoa
-// kauempana (NostoKerros.ZoomKerroin < 0,95), linssissä, muussa tilassa kuin kartalla ja avauskortin ollessa auki.
+// kauempana (NostoKerros.ZoomKerroin < 0,95), linssissä, lentopelissä, muussa tilassa kuin kartalla ja avauskortin ollessa auki.
 // Kaupungilla pitää olla nähtävyyskartta tai turisti-info (web kaupungillaKohdekartta || kaupunginMatkailijalle).
 //
 // VAKAA ANKKURI (omistajan löydös 1.0.32, Ateena: kortti vaihtoi paikkaa ja välkkyi): paikka valitaan kerran kaupunkia
@@ -136,7 +136,8 @@ namespace Matkakirja.Natiivi
             var ui = UiNakymat.Hae();
             var o = PeliOhjain.Instanssi;
             string id = o != null && o.Kaytossa && o.Tila == SilmukanTila.Kartta ? o.PelaajanKaupunki : null;
-            if (ui == null || id == null || ui.Linssit?.Auki != null || ui.Kaupunkikortti.Nakyvissa || !Kutsuttava(id)
+            // Lentopeli (Päätoimittaja 2.10.): ei kutsua lennon ajan (pelin oma näkymä; kuvake osui koneen viereen).
+            if (ui == null || id == null || ui.Linssit?.Auki != null || ui.Kaupunkikortti.Nakyvissa || Nappula.Lentopelissa != null || !Kutsuttava(id)
                 || !(ui.Nostot.Karttakerroin >= Kerroin || MaanNakymassa()))
             { Nayta(false); return; }
             var k = UiSisalto.Kaupunki(id);

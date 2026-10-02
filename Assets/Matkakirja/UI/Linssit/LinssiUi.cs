@@ -56,6 +56,8 @@ namespace Matkakirja.Natiivi
         public readonly RadioNakyma Radio;
         /// <summary>Maapallon vuosi -linssin paneeli (MaapallonVuosiSovitin.Vaihtui).</summary>
         public readonly MaapallonVuosiNakyma Vuosi;
+        /// <summary>Lentopelin ohjain (LINSSIN OHJAIN -pohja; Nappula.Lentopeli).</summary>
+        public readonly LentopeliNakyma Lento;
         /// <summary>Poikkileikkaus-linssin opetustaulu ja Pulu (Linnanrakentaja, DioraamaSovitin.Vaihtui).</summary>
         public readonly DioraamaTaulu Dioraama;
         /// <summary>Kehittäjän mikseripaneeli (linnan ja Cupolan kaiut, MikseriPaneeli.Lahde = Pelikoodari).</summary>
@@ -89,6 +91,7 @@ namespace Matkakirja.Natiivi
             Radio = new RadioNakyma(kerros);
             Radio.SuljePyynto = SuljeLinssi;   // virtakytkin (omistaja 28.9.2026)
             Vuosi = new MaapallonVuosiNakyma(kerros);
+            Lento = new LentopeliNakyma(kerros);
             Dioraama = new DioraamaTaulu(kerros);
             Mikseri = new MikseriPaneeli(kerros);
 

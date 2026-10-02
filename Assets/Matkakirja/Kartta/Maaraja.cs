@@ -205,6 +205,8 @@ namespace Matkakirja
 
         /// <summary>Oma kytkin: "aariviiva".</summary>
         public void Nakyvat(bool nakyy) => piilossa = !nakyy;
+        /// <summary>Piilotettu Nakyvat(false):lla (lentopeli palauttaa aiemman tilan).</summary>
+        public bool Piilossa => piilossa;
 
         /// <summary>Linssin portti (web: kehä pois linssin ajaksi, samalla portilla kuin kaupunkipisteet).</summary>
         public void Linssit(bool paalla) => linssit = paalla;
