@@ -1,4 +1,12 @@
-# Siirtosepän luovutus 2.10.2026 klo 22.0x (Opus 5.5, high)
+# Siirtosepän luovutus 2.10.2026 klo 22.1x — LOPULLINEN (tilinvaihto, Opus 5.5, high)
+
+TILINVAIHTO 22.1x: koesarjan simuajo (SIMULAATTORI NYT 22.10) keskeytettiin ennen käynnistystä — F989814A:ta ei käytetty,
+koesarja on ajamatta. Jalkavarjon tila: 0592decd (alfakanava ennallaan) TODENNETTU EI TOIMIVAKSI 21.20; myös b126d548,
+7859df3e ja 84406601 todennettu ei toimiviksi; kärki 39a396e3 (koesarjan testikomennot) käännetty, ajamatta.
+Peilipaketit (osoitinta ei vaihdettu): 5de728bc349cc54a = kaikki 10 skinnattua henkilöä; 275a276538ace40a = sama + y-korjaukset
+(fatabuuri +0,10, kappalainen +0,22) — uusin. Skin-osoitin (2abec0c9 → 5de728bc/275a2765 tai seuraaja) vain omistajan OK:lla
+Päätoimittajan ja Julkaisijan kautta, Päätoimittaja vie kysymyksen omistajalle vasta jalkavarjon ja hahmoerän kuvien jälkeen.
+
 
 Edellinen luovutus: viesti-siirtoseppa-luovutus-20261001.md (ensilataus, ympäristö, osoittimet). Tämä korvaa sen jonon.
 

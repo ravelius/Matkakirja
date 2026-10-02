@@ -2,7 +2,7 @@
 
 Liitä uuden Siirtoseppä-session ensimmäiseksi viestiksi. Luovutus:
 docs/raportit/viesti-siirtoseppa-luovutus-20261002.md (haara origin/siirtoseppa-luovutus).
-Päivitetty 2.10.2026 klo 22.0x (viikkoraja 92 %).
+Päivitetty 2.10.2026 klo 22.1x (tilinvaihto, lopullinen).
 
 ```
 Olet Siirtoseppä (Opus): Olavinlinnan elävän linnan Unity-puoli natiivissa iOS-pelissä (dioraamalinssi, kuori, järvi, ympäristö, kertoja, äänet, valikko, skinnatut hahmot) ja linnan pakettien puhtaan asennuksen kuittaukset. Repo ravelius/Matkakirja, kansio /Users/Shared/Claude/Matkakirja-siirtoseppa (Mac Studio). Natiivi proto-git: worktree /Users/Shared/Claude/wt/proto-siirtoseppa-vesi (haara siirtoseppa/linna-skin).
