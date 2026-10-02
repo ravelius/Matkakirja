@@ -160,6 +160,8 @@ namespace Matkakirja.Natiivi
         /// Dynamic Island tai lovi ruudun pisteinä (origo ylhäällä vasemmalla); leveys 0 = ei lovea.
         /// Screen.cutouts ensin (pikselit, origo alhaalla), muuten arvio turva-alueen yläreunasta.
         /// </summary>
+        const float SaariLeveys = 125f, SaariKorkeus = 36.33f, SaariLeveysKorjaus = 2.67f, SaariAlaKorjaus = 0.33f;
+
         public static Rect Saari()
         {
             if (PakotaSaari.HasValue) return PakotaSaari.Value;
@@ -169,11 +171,15 @@ namespace Matkakirja.Natiivi
                 {
                     var saari = new Rect(c.xMin / pp, (Screen.height - c.yMax) / pp, c.width / pp, c.height / pp);
                     // Löydös 73: Unity antaa Dynamic Islandin suorakulmion ruudun yläreunasta saaren alareunaan
-                    // (iPhone 17: y 0,3, korkeus 49,7). Saari itse on 126 × 37 pt (leveyden suhteessa), alareuna pitää.
+                    // (iPhone 17: y 0,3, korkeus 49,7, leveys 127,7). Saaren todellinen kehys (Päätoimittaja 2.10. klo 16.1x,
+                    // mitattu simulaattorin saarimaskista @3x): iPhone 17 125 × 36,33 pt, yläreuna 14 pt, alareuna 50,33 pt.
+                    // Unityn suorakulmio on siis 2,67 pt leveämpi ja alareuna 0,33 pt ylempänä; korjaus keskeltä, muoto
+                    // saaren suhteessa 125 : 36,33.
                     if (saari.yMin < 2f && saari.height > 40f && saari.width > 90f)
                     {
-                        float korkeus = saari.width * 37f / 126f;
-                        saari = new Rect(saari.xMin, saari.yMax - korkeus, saari.width, korkeus);
+                        float leveys = saari.width - SaariLeveysKorjaus, korkeus = leveys * SaariKorkeus / SaariLeveys;
+                        float ala = saari.yMax + SaariAlaKorjaus;
+                        saari = new Rect(saari.center.x - leveys / 2f, ala - korkeus, leveys, korkeus);
                     }
                     return saari;
                 }
@@ -636,8 +642,10 @@ namespace Matkakirja.Natiivi
         /// ja lanka; saaren ympärillä nahan leikkausreuna (tumma reunus ja ohut vaalea viiste kuten alareunan taitoksessa), jottei
         /// saari näytä tarralta. Yksi kehä koko saaren ympäri.
         /// </summary>
-        const float LeikkausEtaisyys = 0.8f, ViisteEtaisyys = 2f, TikkausEtaisyys = 4.5f, PistoPituus = 3.5f, PistoJakso = 6.5f,
-            LankaPaksuus = 0.9f, UraPaksuus = 2.2f;
+        // Etäisyydet saaren todellisesta reunasta (pt): omistaja 16.1x "saisi olla enemmän kiinni saaressa" → pistot ~2 pt:n päässä
+        // joka puolelta (samankeskinen kehä).
+        const float LeikkausEtaisyys = 0.5f, TikkausEtaisyys = 2.3f, ViisteEtaisyys = 3.7f, PistoPituus = 3.5f, PistoJakso = 6.5f,
+            LankaPaksuus = 0.9f, UraPaksuus = 1.8f;
         /// <summary>Lanka ja viiste tyylikirjasta (pohjavahti): TUMMA muste-pehmeä, viiste läpikuultavana.</summary>
         static Color Lanka { get { Color c = Tyylikirja.Tumma.MustePehmea; c.a = 0.8f; return c; } }
         static Color Viiste { get { Color c = Tyylikirja.Tumma.MustePehmea; c.a = 0.18f; return c; } }
@@ -680,7 +688,7 @@ namespace Matkakirja.Natiivi
             // Leikkausreuna: tumma reunus heti saaren reunassa ja ohut vaalea viiste sen ulkopuolella.
             p.lineCap = LineCap.Butt;
             p.strokeColor = Tyylikirja.Himmennys.Tumma;
-            p.lineWidth = 1.6f * u;
+            p.lineWidth = 1.2f * u;
             Stadion(p, saari, LeikkausEtaisyys * u, 0f, 0f);
             p.strokeColor = Viiste;
             p.lineWidth = 0.6f * u;
