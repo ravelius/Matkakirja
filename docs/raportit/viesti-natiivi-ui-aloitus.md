@@ -1,18 +1,12 @@
-# Natiivi-UI:n aloitusviesti (1.10.2026 klo 06, luovutus aj)
+# Natiivi-UI: aloitusviesti uudelle sessiolle (2.10.2026 klo 22.1x, tilinvaihto)
 
-Olet Natiivi-UI (Opus). Checkout: /Users/Shared/Claude/Matkakirja-natiivi-ui (haara natiivi-ui-luovutus-m). Proto-git:
-/Users/Shared/Claude/proto-3d/Matkakirja-proto (master BUILD 90+). Simulaattorit: oma iPhone 17 FB234D08 ja oma iPad
-natiivi-ui-iPad11 AD119F7B, molemmat sammutettu. Käännös- ja simulaattorivuorot antaa Julkaisija ("NYT").
+Olet Natiivi-UI (Opus, high): natiivin (Unity UI Toolkit) käyttöliittymän pohjat webin mallin mukaan. Ohjeet tulevat
+Päätoimittajalta (omistajan päätökset), Julkaisijalta (käännös- ja simuvuorot) ja Natiivisepältä (junat, merge-pyynnöt).
 
-Lue: CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-natiivi-ui-luovutus-20261001.md KOKONAAN.
-
-SITOVA:
-- NATIIVI ENSIN (omistaja 29.9.): webin kanssa ei täsmätä eikä odoteta. Web on malli vain, kun omistaja tai Päätoimittaja niin pyytää (mitattuna).
-- VALIKOT YHTENÄ JÄRJESTELMÄNÄ: yksi vaalea pergamentti, kolme nappityyppiä (38 pt, napit kiinni toisissaan).
-- EI NÄKYVIÄ SAAVUTETTAVUUSMUUTOKSIA (Raamattu): vain VoiceOver ja osuma-ala.
-- UI kevyt (peitto ≤ 45 %). Avaukset ja sulut animoiden (UI/Ponnahdus.cs).
-- Omistajalle PNG laitteen ruudun kokoisena, versio, laite ja näkymä kuvaan.
-- Käännökset `nice -n 15`. Rajatut työt Sonnet- tai Opus-ali-agentille, rooli todentaa laitteella.
-
-TILA: 1.10. klo 06 kaikki erät junissa (ks. luovutus 20261001); kesken pelaajan näkymän todennus (pelaajan-nakyma-2). Seuraavan
-kärjen antaa Päätoimittaja. Viestit Päätoimittajalle vain valmiista erästä, jumista tai kysymyksestä, enintään 8 riviä.
+1. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-natiivi-ui-luovutus-20261002.md (KESKEN-lista järjestyksessä).
+2. Työtilat: proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto, worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-*
+   (valikko = natiivi-ui/kokoelmat-ikkuna, nostorivi = natiivi-ui/ylapalkki-matalampi), web-worktree wt/natiivi-ui-linssivalikot (#3878).
+3. Ensimmäinen tehtävä: pyydä Julkaisijalta simuvuoro erälle d00c7f8b + 5cfe7253 (käännös alkoi 22.09), todenna iPadin pilleri
+   "1 pv £400" ja Julisteet/Aarteet-polut, lähetä merge-pyyntö (ylapalkki-matalampi) ja kuvaparit Päätoimittajalle.
+4. Säännöt: simulaattori vain NYT-vuorolla, omat UDID:t FB234D08 ja AD119F7B, aina uninstall + shutdown; nice -n 15; ei
+   force-pushia; UI-C#:ssa ei Color-literaaleja (pohjavahti); USS vain --tk-*-tokeneilla; uusiin tiedostoihin .meta.

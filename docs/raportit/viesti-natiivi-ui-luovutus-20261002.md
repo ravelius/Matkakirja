@@ -1,4 +1,4 @@
-# Natiivi-UI:n luovutus 2.10.2026 klo 22 (viikkoraja 92 %)
+# Natiivi-UI:n luovutus 2.10.2026 klo 22.1x (TILINVAIHTO, lopullinen)
 
 Aloitusviesti seuraavalle Natiivi-UI-sessiolle (Opus, high). Lue ensin CLAUDE.md, Raamatun Ydinajatus kohta 2 ja muistin
 natiivi-ui-tila-20261001.md (2.10.-rivit lopussa). Proto-git /Users/Shared/Claude/proto-3d/Matkakirja-proto (master = BUILD 129
@@ -16,10 +16,14 @@ e204abbe). Omat simulaattorit: iPhone 17 FB234D08, iPad AD119F7B. Käännös- ja
 
 ## KESKEN (järjestyksessä)
 
-1. **Käännös natiivi-ui/ylapalkki-matalampi+natiivi-ui/kokoelmat-ikkuna (d00c7f8b + 5cfe7253)** käynnissä 22.03; simu ~22.21
+Haarat ovat proto-gitissä paikallisina (ei etäpushia; Natiiviseppä mergeää paikallisesti). Älä aloita uutta ennen kohtaa 1.
+
+1. **Käännös natiivi-ui/ylapalkki-matalampi+natiivi-ui/kokoelmat-ikkuna (d00c7f8b + 5cfe7253)** alkoi 22.09 (loki
+   proto-3d/lokit/kaannospalvelu/20261002-220907-…; kopioi .app kansioon natiivi-ui-1035/app-yp); simu Julkaisijalta
    (FB234D08: ENNEN juna-1.1.129-appilla `kartoitus-kokoelmat-ennen.txt`, JÄLKEEN `kartoitus-kokoelmat.txt` tavallisena ja
    KEHITTAJA=1; AD119F7B: `kartoitus-ylapalkki-korkeus.txt` → iPadin pilleri "1 pv £400"). Sitten:
-   - merge-pyyntö Natiivisepälle: ylapalkki-matalampi (7d990788 + d00c7f8b), testit Peli/Kartta/Linssit;
+   - merge-pyyntö Natiivisepälle: ylapalkki-matalampi (7d990788 + d00c7f8b; omistaja hyväksyi 21.5x, kuva 17
+     .../omistajalle-20261002-ylapalkki-valikko/17-ylapalkki-matalampi-iphone-ipad-b725dffa.png), testit Peli/Kartta/Linssit;
    - kuvaparit Päätoimittajalle: Julisteet (yksi GALLERIA-ikkuna) ja Aarteet (yksi ikkuna ilman esikatselua), kehittäjätilassa
      kaikki auki. Web: Julisteet #3870, Aarteet #3877 (Pelikoodari: sama malli).
 2. **PUHE ÄÄNENÄ** natiiviin (web #3867 v2563 ja #3869 v2570 mainissa): Pulu.Sano odottaa klippiä ≤ 1,5 s; kupla vain jos ei
