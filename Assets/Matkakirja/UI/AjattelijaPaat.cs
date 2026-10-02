@@ -56,7 +56,7 @@ namespace Matkakirja.Natiivi
         /// takana valon korkeudella 58° (webin kuvasta: varjo ~27 % pään korkeudesta leuan alle); sumennuksen askel tekseleinä.
         /// A/B `ui erikoisnostot varjo peitto sumennus siirto mittakaava`.
         /// </summary>
-        public static float VarjoPeitto = 0.26f, VarjoSumennus = 2.5f, VarjoSiirto = 0.17f, VarjoMittakaava = 0.85f;
+        public static float VarjoPeitto = 0.26f, VarjoSumennus = 1.0f, VarjoSiirto = 0.24f, VarjoMittakaava = 0.85f;
         const float Kangas = 1.5f, KameraZ = -0.72f * Kangas, KameraY = 0.12f, KatseY = 0.12f, Fov = 30f;
         const int MaskiPx = 96;
         static int seuraava;
