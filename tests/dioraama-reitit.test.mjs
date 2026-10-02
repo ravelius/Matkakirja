@@ -1,6 +1,6 @@
 // Dioraaman kävelyreitit eivät kulje hahmojen, liekkien eikä esineiden läpi (Linnanrakentaja 2.10.2026; Päätoimittajan
 // skin-videohavainnot: Muurinharjan vartija käveli soihtupadan ja seisovan talonpojan läpi). Etäisyys reitin janoista
-// vaakatasossa (x, z), vain kohteet reitin korkeudella (dy −0,3…+1,8 m). Rajat: hahmot 0,7 m, liekit 0,6 m, esineet 0,5 m
+// vaakatasossa (x, z), vain kohteet reitin korkeudella (dy −0,3…+1,8 m). Rajat: hahmot 1,0 m (erä 1b: 0,75 m:llä skinnatut vartalot menivät sisäkkäin), liekit 0,6 m, esineet 0,5 m
 // (lattiat, kannet, seinät, laatat, portaat ohitetaan). KESKEN-listan tilat korjataan, kun niiden hahmot vaihtuvat
 // skinnatuiksi (omistaja 2.10. 18.0x) — poista tila listalta samalla, niin testi vartioi sen.
 import { test } from 'node:test';
@@ -23,10 +23,16 @@ export function reitinOsumat(tila) {
       const dy = q[1] - P[i][1]; return dy > -0.3 && dy < 1.8 ? jana(q, P[i], b) : Infinity;
     }));
     const kohteet = [
-      ...(tila.hahmot ?? []).filter((s) => s !== h && !s.reitti).map((s) => ['hahmo ' + s.id, s.paikka, 0.7]),
+      ...(tila.hahmot ?? []).filter((s) => s !== h && !s.reitti).map((s) => ['hahmo ' + s.id, s.paikka, 1.0]),
       ...(tila.liekit ?? []).map((l) => ['liekki ' + l.liekki, l.paikka, 0.6]),
       ...(tila.palikat ?? []).filter((p) => p.paikka && !OHITA.test(p.resepti ?? '')).map((p) => ['esine ' + p.resepti, p.paikka, 0.5]),
     ];
+    // Kaksi kävelijää samassa tilassa: reitit eivät saa tulla 1,0 m:ää lähemmäs toisiaan (ajoitus ei ole sama webissä ja natiivissa).
+    for (const k of (tila.hahmot ?? []).filter((s) => s !== h && s.reitti?.pisteet)) {
+      const Q = k.reitti.pisteet;
+      const e = Math.min(...Q.slice(1).flatMap((b, i) => Array.from({ length: 21 }, (_, j) => etaisyys(Q[i].map((v, n) => v + (b[n] - v) * j / 20)))));
+      if (e < 1.0) osumat.push(`${h.id} ↔ kävelijä ${k.id} ${e.toFixed(2)} m < 1`);
+    }
     for (const [nimi, q, raja] of kohteet) { const e = etaisyys(q); if (e < raja) osumat.push(`${h.id} ↔ ${nimi} ${e.toFixed(2)} m < ${raja}`); }
   }
   return osumat;
