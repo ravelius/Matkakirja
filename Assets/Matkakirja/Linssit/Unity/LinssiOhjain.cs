@@ -1866,6 +1866,7 @@ namespace Matkakirja.Natiivi
                                $"{kierto.korkeus / 1000:F0} km kall {kierto.KaytettyKallistus:F1}° suunt {kierto.suuntima:F0}° fov {kam?.fieldOfView:F0}");
                         Kirjaa("astro kyyti aika: " + KyydinAikaTila(l));
                         Kirjaa("astro kyyti ohjaamo: " + Matkakirja.Natiivi.IssKyytiNakyma.OhjaamonTila);
+                        Kirjaa("astro kyyti pulu: " + Matkakirja.Natiivi.Pulu.Hae()?.RobottiTila());
                     }
                 }
                 else if (osat[0] == "keksinnot" && osat.Length > 1)
