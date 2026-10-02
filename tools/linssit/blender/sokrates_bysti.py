@@ -204,6 +204,81 @@ if '--lod' in A:
         _vie(c, os.path.join(ULOS, f'{KOHDE}-{nimi}.glb')); print('SOKRATES: vienti', nimi)
 
 
+# ---------- kartan 3D-pää (omistaja 2.10. klo 12.27 Päätoimittajan kautta) ----------
+# --kartta <ulos>: pää ja kaula ilman sokkelia ja rintaa, ~5 000 kolmiota, leivottu kipsitekstuuri 512 px
+# (perusväri × AO 400 k:n leikatusta skannauksesta) + normaalikartta 512. Leikkaus kolmella tasolla (täytetään):
+# vino taso parran alta niskaan ja kaksi jyrkkää sivutasoa, jotka poistavat olkapäät/rinnan yläreunan.
+# Pivot leikkauksen alimman kohdan keskelle (kaulan juuri), kasvot glTF:n +Z-suuntaan (Blenderin −y), ylös +Y.
+KARTTA_KOLMIOT, KARTTA_KUVA, KARTTA_KORKEA = 5_000, 512, 400_000
+# (parran alla edessä (y, z), niskassa takana (y, z)), (sivutason |x| korkeudella z, kaltevuus dx/dz)
+KARTTA_LEIKKAUS = {'sokrates': (((-0.07, 0.185), (0.10, 0.255)), (0.085, 0.24, 0.3)),
+                   'marcus': (((-0.07, 0.235), (0.06, 0.275)), (0.075, 0.25, 0.3))}
+
+
+def _leikkaa(c):
+    (y1, z1), (y2, z2) = KARTTA_LEIKKAUS[KOHDE][0]; xa, zc, k = KARTTA_LEIKKAUS[KOHDE][1]
+    tasot = (((0, y1, z1), (0, -(z2 - z1), y2 - y1)), ((xa, 0, zc), (-1, 0, k)), ((-xa, 0, zc), (1, 0, k)))
+    bpy.ops.object.select_all(action='DESELECT'); c.select_set(True); bpy.context.view_layer.objects.active = c
+    bpy.ops.object.mode_set(mode='EDIT')
+    for co, no in tasot:   # pidetään normaalin puoli
+        bpy.ops.mesh.select_all(action='SELECT')
+        bpy.ops.mesh.bisect(plane_co=co, plane_no=Vector(no).normalized(), clear_inner=True, use_fill=True)
+    # irralliset palat pois: vain suurin yhtenäinen osa jää
+    bpy.ops.mesh.select_all(action='SELECT'); bpy.ops.mesh.separate(type='LOOSE'); bpy.ops.object.mode_set(mode='OBJECT')
+    osat = sorted(bpy.context.selected_objects, key=lambda x: len(x.data.polygons), reverse=True)
+    print('SOKRATES: leikkauksen osat', [len(x.data.polygons) for x in osat[:6]])
+    for x in osat[1:]: bpy.data.objects.remove(x)
+    return osat[0]
+
+
+if '--kartta' in A:
+    import numpy as np
+    from mathutils import Matrix
+    ULOS = A[A.index('--kartta') + 1]; os.makedirs(ULOS, exist_ok=True)
+    bpy.ops.wm.read_factory_settings(use_empty=True)
+    sc = bpy.context.scene; sc.render.engine = 'CYCLES'; sc.cycles.samples = 64
+    try:
+        pr = bpy.context.preferences.addons['cycles'].preferences; pr.compute_device_type = 'METAL'; pr.get_devices()
+        for dv in pr.devices: dv.use = True
+        sc.cycles.device = 'GPU'
+    except Exception as e:
+        print('GPU:', e)
+    o = tuo()
+    hp = _leikkaa(_kopio(o, f'{KOHDE}-korkea', KARTTA_KORKEA))
+    bpy.data.objects.remove(o)
+    c = _kopio(hp, f'{KOHDE}-kartta', KARTTA_KOLMIOT); print('SOKRATES: kartta', len(c.data.polygons), 'kolmiota')
+    _uv(c)
+    # 1) AO korkeasta matalaan → kipsin perusväri (lineaarinen 0,86/0,85/0,82 × (0,45 + 0,55 · AO)) sRGB-PNG:ksi
+    ao = bpy.data.images.new('ao', KARTTA_KUVA, KARTTA_KUVA, alpha=False, float_buffer=True)
+    ao.colorspace_settings.name = 'Non-Color'; ao.generated_color = (1, 1, 1, 1)
+    m = bpy.data.materials.new('ao'); m.use_nodes = True; t = m.node_tree.nodes.new('ShaderNodeTexImage'); t.image = ao
+    m.node_tree.nodes.active = t; c.data.materials.clear(); c.data.materials.append(m)
+    bpy.ops.object.select_all(action='DESELECT'); hp.select_set(True); c.select_set(True); bpy.context.view_layer.objects.active = c
+    bk = sc.render.bake; bk.use_selected_to_active = True; bk.cage_extrusion = 0.002; bk.max_ray_distance = 0.006; bk.margin = 8
+    sc.world = bpy.data.worlds.new('w'); sc.world.light_settings.distance = 0.03
+    bpy.ops.object.bake(type='AO')
+    a = np.array(ao.pixels[:]).reshape(KARTTA_KUVA, KARTTA_KUVA, 4)[..., 0]
+    lin = np.stack([0.86 * (0.45 + 0.55 * a), 0.85 * (0.45 + 0.55 * a), 0.82 * (0.45 + 0.55 * a)], -1)
+    srgb = np.where(lin <= 0.0031308, lin * 12.92, 1.055 * np.power(np.clip(lin, 0, 1), 1 / 2.4) - 0.055)
+    vari = bpy.data.images.new('vari', KARTTA_KUVA, KARTTA_KUVA, alpha=False); vari.colorspace_settings.name = 'Non-Color'
+    vari.pixels[:] = np.concatenate([srgb, np.ones((KARTTA_KUVA, KARTTA_KUVA, 1))], -1).ravel().tolist()
+    vpolku = os.path.join(ULOS, f'{KOHDE}-kartta-vari.png'); vari.filepath_raw = vpolku; vari.file_format = 'PNG'; vari.save()
+    # 2) normaalikartta 512 (sama leivonta kuin LOD-tasoilla) ja perusväri kiinni materiaaliin
+    _leivo(hp, c, KARTTA_KUVA, os.path.join(ULOS, f'{KOHDE}-kartta-nor.png'))
+    nt = c.data.materials[0].node_tree; tv = nt.nodes.new('ShaderNodeTexImage'); tv.image = bpy.data.images.load(vpolku)
+    nt.links.new(tv.outputs['Color'], nt.nodes['Principled BSDF'].inputs['Base Color'])
+    # 3) pivot leikkauksen keskelle (kaulan juuri)
+    v = np.empty(len(c.data.vertices) * 3); c.data.vertices.foreach_get('co', v); v = v.reshape(-1, 3)
+    (y1, z1), (y2, z2) = KARTTA_LEIKKAUS[KOHDE][0]; n_ = np.array([0, -(z2 - z1), y2 - y1]); n_ = n_ / np.linalg.norm(n_)
+    pohja = v[np.abs((v - np.array([0, y1, z1])) @ n_) < 0.001]   # vinon leikkauksen reuna ja täyttö = kaulan juuri
+    kesk = Vector([float(x) for x in pohja.mean(0)])
+    c.data.transform(Matrix.Translation(-kesk)); c.data.update()
+    mn = v.min(0) - np.array(kesk); mx = v.max(0) - np.array(kesk)
+    print('SOKRATES: kartta mitat (m, Blender x/y/z)', [round(float(x), 3) for x in mx - mn], 'pivot', [round(x, 4) for x in kesk])
+    bpy.data.objects.remove(hp)
+    _vie(c, os.path.join(ULOS, f'{KOHDE}-kartta.glb')); print('SOKRATES: kartta valmis', ULOS)
+
+
 # ---------- mallikuva v2 (omistaja 1.10. 21.4x): suomennos pinnoittain + kamera-ajo ----------
 # Lause jaetaan pinnoille, kukin oma projektorinsa pinnan normaalin suunnasta (teksti seuraa pinnan muotoa):
 #   "Tutkimaton elämä" otsalle, "ei ole elämisen / arvoinen" vasemmalle (katsojasta) poskelle, "ihmiselle" rinnalle
