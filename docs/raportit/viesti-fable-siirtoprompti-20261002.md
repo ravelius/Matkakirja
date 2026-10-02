@@ -23,7 +23,7 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 2. **Juna 130 (Natiiviseppä):** matalampi yläpalkki b725dffa + iPadin pillerin väli d00c7f8b (hyväksytty, Natiivi-UI todentaa), Julisteet/
    Aarteet yhteen ikkunaan (natiivi-ui/kokoelmat-ikkuna 5cfe7253), Topografian hampurilainen (Linssiseppä d99f62c5, kuvapari
    proto-3d/lokit/linssiseppa-topografia-20261002/kuvapari-topografia.png odottaa tarkistusta ja omistajaa),
-   astro/ISS-erä (Linssiseppä 2, kesken), skin-moottori ja jalkavarjo (Siirtoseppä, 0592decd todentamatta).
+   astro/ISS-erä (Linssiseppä 2, kesken), skin-moottori ja jalkavarjo (Siirtoseppä: half → float b126d548 ja alfa 0592decd eivät korjanneet, juurisyy auki, koesarja yksi tekijä kerrallaan ajamatta).
 3. **Web-juna (Julkaisija):** #3865 ajossa; #3870 ja #3877 jonossa; #3869, #3874 ja #3875 mainissa; #3850 CONFLICTING. Pelikoodari: webin
    Topografian hampurilainen ja Astronautin kameran AUTO-häivytys, ponnahdus, maapallokuvake ja sumu. Natiivi-UI: linssilista web #3878.
 4. **Linnan hahmot:** Linnanrakentajan erä 1b (11 henkilöä, 16 esiintymää, peilit 275a2765 ja 5de728bc). Siirtoseppä kuvaa ne linnassa
@@ -48,7 +48,7 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 | Linssiseppä | Matkakirja-linssiseppa | linssiseppa-tyo-20260923 | Opus, high | **1b11057e8** · Topografian hampurilainen d99f62c5 merge-pyynnössä |
 | Linssiseppä 2 | Matkakirja-linssiseppa-2 | linssiseppa2-tyo-20260928 | Opus, high | **edfc220db** · astro/ISS-erä |
 | Linnanrakentaja | Matkakirja-linnanrakentaja | linnanrakentaja-tyo-20260929 | Opus, high | **2de3e39c7** · erä 1b odottaa pelikuvia |
-| Siirtoseppä | Matkakirja-siirtoseppa | siirtoseppa-luovutus | Opus, high | **309ae5622** · jalkavarjo ja hahmojen pelikuvat |
+| Siirtoseppä | Matkakirja-siirtoseppa | siirtoseppa-luovutus | Opus, high | **309ae5622** · jalkavarjo auki (0592decd ei toiminut), sitten hahmojen pelikuvat; peilit 5de728bc/275a2765 |
 | Karttaseppä | Matkakirja-karttaseppa | karttaseppa-tyo-20260922 | Opus, high | **3cdcfae7b** · S2-ketju irrotettuna |
 | Sisältökirjuri | Matkakirja-sisaltokirjuri | sisalto-pelikatalogi-20260927 | Sonnet, high | **8e2fa5f36** · #3850 (kuva2 K) nyt MERGEABLE (0942a1d91), Julkaisija voi ottaa junaan |
 | Laitetestaaja | Matkakirja-laitetestaaja | laitetestaaja-savukierros-b13 | Sonnet, high | **8f3d5e0a0** · simulaattorit sammutettu |
