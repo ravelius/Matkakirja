@@ -731,7 +731,7 @@ test('paljastus äänitetään sillä variantilla, jonka peli soittaa', () => {
 test('js/livia.js soittaa jokaisen kuplan äänen', () => {
   const livia = lue('../js/livia.js');
   assert.match(livia,
-    /import \{\n\s*livianKuplanAjastin, pysaytaLivianAani, soitaLivianAani,\n\} from '\.\/liviapuhe\.js';/);
+    /import \{\n\s*livianKuplanAjastin, puhuTaiKupla, pysaytaLivianAani, soitaLivianAani,\n\} from '\.\/liviapuhe\.js';/);
   /*
    * ÄÄNITE KAANONIN NUMEROLLA, EI SARJAN PAIKALLA (7.9.2026). Kun
    * lähtökohteita on useita, "vasta yhden reitin" -kupla jätetään
@@ -740,17 +740,16 @@ test('js/livia.js soittaa jokaisen kuplan äänen', () => {
    * mukana, jotta vanhentunut äänite jää hiljaiseksi, ja soitin otetaan
    * talteen, jotta kupla odottaa puheen loppuun.
    */
-  assert.match(livia, /const aani = soitaLivianAani\(ui, 'avaus', rivi\.indeksi, \{ teksti \}\);/);
+  // PUHE ÄÄNENÄ, EI KUPLANA (omistaja 2.10.2026 klo 14.09): äänite ensin, kupla vain varalla (puhuTaiKupla).
+  assert.match(livia, /\(\) => soitaLivianAani\(ui, 'avaus', rivi\.indeksi, \{ teksti \}\),\n\s*kupla,/);
   assert.match(livia, /export function livianAvausSarja\(kohteita = ETUSIVUN_KOHTEET\.size\)/);
   assert.match(livia,
     /\.filter\(\(\{ indeksi \}\) => kohteita <= 1 \|\| indeksi !== LIVIAN_YHDEN_REITIN_KUPLA\)/);
   assert.match(livia,
-    /const aani = soitaLivianAani\(ui, 'paljastus', i, \{ \.\.\.variantti, teksti \}\);/);
-  assert.match(livia, /soitaLivianAani\(ui, 'mannerivihje', 0, \{ teksti: MANNERIVIHJE \}\);/);
-  // Kupla ensin, ääni sen jälkeen: äänen soitto on kuplan
-  // onnistumisen jälkeisellä polulla.
-  assert.ok(livia.indexOf('const nakyi = polloAvauskupla')
-    < livia.indexOf("soitaLivianAani(ui, 'avaus', rivi.indeksi"));
+    /\(\) => soitaLivianAani\(ui, 'paljastus', i, \{ \.\.\.variantti, teksti \}\),/);
+  assert.match(livia, /\(\) => soitaLivianAani\(ui, 'mannerivihje', 0, \{ teksti: MANNERIVIHJE \}\),/);
+  // Muotokuvarepliikki (Viisas Pöllö) on poikkeus: kupla ensin, ääni sen jälkeen.
+  assert.match(livia, /if \(muotokuva\) \{\n\s*nakyi = kupla\(\);\n\s*if \(nakyi\) aani = soitaLivianAani/);
   // KUPLA ODOTTAA PUHEEN LOPPUUN: avaussarjan ajastin lukee soittimen
   // keston eikä pelkkää tekstin pituutta.
   assert.match(livia, /avausAjastin = livianKuplanAjastin\(\n\s*lukuaika\(teksti\), aani,/);
