@@ -3,6 +3,10 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
+## AJATTELIJAT v11 (3.10. 00.3x, Päätoimittaja hyväksyi): sokrates_bysti.py --v11 (= --v10 + alkukuvat varjon puolelta,
+## taustavirta 25 mm/s ±15 %, kaikukamera lähempänä). Luvut docs/raportit/ajattelijat-v11/ (haara linnanrakentaja-sokrates-bysti
+## d7b51a99f) lähetetty Pelikoodarille. Syötteet: scratchpad ef21bbc6…/ajat (gobot-v4, gobot-v10, syke.json, marcus/).
+
 ## SEURAAVA ASKEL (tilinvaihto 22.2x)
 0c. **23.2x:** irralliset liekit (fatabuuri/keittiö/laituri) = tunnelman JSON-liekit, joita natiivi ei leikkaa (vain tyhja:-liekit);
    rakenna.mjs jättää kohdistamattoman tilan liekit pois (1bb745076, testi dioraama-blender). Kaikkien liekkien alla teline 0–5 cm
