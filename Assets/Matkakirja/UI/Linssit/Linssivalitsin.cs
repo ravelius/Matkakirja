@@ -129,6 +129,10 @@ namespace Matkakirja.Natiivi
             nappi.style.top = yla;
             // iPhonen valikkona suoraan saaren rivin alle (turva-alueen yläreuna + 8).
             paneeli.style.top = Valikkona ? Ylapalkki.Varaus + 8 : yla + 48;
+            // Vaaka-iPhone ilman palkkia (web-malli 2.10.2026 klo 23.3x, tk-peitto-paneeli): enintään 70 % ruudun korkeudesta,
+            // yli jäävä vierittyy valikon sisällä; pystyssä USS:n 82 %.
+            paneeli.style.maxHeight = Valikkona && Ylapalkki.Puhelin && Ylapalkki.Piilossa
+                ? Length.Percent(Tyylikirja.Peitto.Paneeli) : (StyleLength)StyleKeyword.Null;
             AsetteleEsikatselu();
         }
 
