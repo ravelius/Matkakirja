@@ -1037,13 +1037,6 @@ namespace Matkakirja.Natiivi
                     UiNakymat.PakotaKuvaTaso = loput == "kokoruutu" ? KuvaSumennus.Kokoruutu : loput == "pois" ? KuvaSumennus.Ei : (KuvaSumennus?)null;
                     return loput == "kokoruutu" ? $"pysäytyskuva {(PalloKierto.Pysaytyskuva != null ? "päällä" : "tulossa")}" : null;
                 case "ylapalkki":
-                    // Dynamic Islandin tikkaus, omistajan valinta (2.10.2026 klo 17.3x): ui ylapalkki tikkaus A|B|C.
-                    if (loput.StartsWith("tikkaus "))
-                    {
-                        Ylapalkki.TikkausVaihtoehto = loput.Substring(8).Trim().ToUpperInvariant();
-                        ui.Tilarivi.PiirraTikkausUudelleen();
-                        return "=tikkaus " + Ylapalkki.TikkausVaihtoehto;
-                    }
                     if (loput == "auki") { ui.Tilarivi.Avaa(); return Ylapalkki.Piilossa ? null : "palkki ei ole piilossa (ui ylapalkki vaaka)"; }
                     if (loput == "veto" || loput == "napautus") { ui.Tilarivi.TestaaVeto(loput == "veto"); return Ylapalkki.VetoPiilossa ? "palkki piilossa (veto)" : "palkki näkyvissä"; }
                     if (loput == "kelluva" || loput == "palkki") { Ylapalkki.PakotaKelluva = loput == "kelluva"; ui.Tilarivi.Paivita(); return null; }

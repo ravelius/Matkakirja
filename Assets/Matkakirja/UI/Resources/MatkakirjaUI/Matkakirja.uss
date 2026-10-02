@@ -4536,7 +4536,7 @@
     margin-left: 10px;
 }
 
-/* Omistaja 2.10.2026 klo 15.1x: pilleri yhdellä rivillä "1 pv · £400". */
+/* Omistaja 2.10.2026 klo 15.1x ja 18.2x: pilleri yhdellä rivillä "1 pv £400" (BUILD 123:n kohopainettu pilleri). */
 .mk-pilleri--lyhyt {
     padding-left: var(--tk-vali-m);
     padding-right: var(--tk-vali-m);
@@ -4554,22 +4554,6 @@
 .mk-pilleri--lyhyt .mk-pilleri__rivi1 {
     margin-top: 0;
     margin-left: var(--tk-vali-xs);
-}
-
-/* PILLERINAPPI (omistaja 2.10.2026 klo 17.3x: aiempi ulkoasu, uusi teksti): BUILD 123:n tumma täyttö (kehys.panel) ja ohut
-   vaalea reuna (tumma-reunus), kermainen muste; ei laukkukuvaketta (Ylapalkki.PuePilleriNappi), kulma-nappi (ei ovaalia). */
-.mk-pilleri.mk-pilleri--nappi {
-    border-width: 1px;
-    border-color: var(--tk-tumma-reunus);
-    background-color: var(--panel);
-    color: var(--tk-tumma-muste);
-}
-
-.mk-pilleri--nappi .mk-pilleri__raha,
-.mk-pilleri--nappi .mk-pilleri__kello,
-.mk-pilleri--nappi .mk-pilleri__punta {
-    color: var(--tk-tumma-muste);
-    opacity: 1;
 }
 
 /* Punta omana merkkinään selkeällä kirjasimella (Kone-kirjasimen £ näytti koukulta ja kosketti numeroa). */

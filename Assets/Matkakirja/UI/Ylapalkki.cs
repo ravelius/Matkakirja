@@ -405,8 +405,7 @@ namespace Matkakirja.Natiivi
                 palkki.style.backgroundSize = new BackgroundSize(IpadNahkaLeveys, IpadNahkaKorkeus);
                 var logoIpad = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/logo-kohopainatus-ipad");
                 if (logoIpad != null) { logo.style.backgroundImage = new StyleBackground(logoIpad); logoSuhde = 283f / 82f; }
-                // Omistaja 2.10.2026 klo 15.0x ja 17.0x: pillerinappi myös iPadilla (ei kohopainettua ovaalia, ei laukkukuvaketta).
-                PuePilleriNappi();
+                PuePilleriNappi("-ipad");
                 return;
             }
             var varjo = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/keski-varjo");
@@ -418,17 +417,23 @@ namespace Matkakirja.Natiivi
             }
             var logoNahka = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/logo-kohopainatus");
             if (logoNahka != null) { logo.style.backgroundImage = new StyleBackground(logoNahka); logoSuhde = 326f / 95f; }
-            // Omistaja 2.10.2026 klo 15.0x: pilleri napin näköiseksi, nahasta erottuva sävy (ei kohopainettua ovaalia).
-            PuePilleriNappi();
+            PuePilleriNappi("");
         }
 
         /// <summary>
-        /// PILLERINAPPI (omistaja 2.10.2026 klo 17.3x: "palauta pillerin aiempi ulkoasu, muuta vain tekstisisältö"): BUILD 123:n
-        /// tumma täyttö ja ohut vaalea reuna, kulma-nappi (ei ovaalia); laukkukuvake pois ja pilleri tekstin "1 pv · £400" levyinen.
+        /// PILLERI (omistaja 2.10.2026 klo 18.2x: "pilleriin piti palauttaa tuo build 123 tyyli visuaalisesti mutta muuttaa teksti
+        /// muotoon 1pv £400"): BUILD 123:n kohopainettu nahkapilleri täsmälleen (sama 9-slice-kuva, täyttö, reuna ja kulma
+        /// ~13 pt, ei kapseli), tekstivärit ennallaan; laukkukuvake pois ja teksti yhdellä rivillä "1 pv £400".
         /// </summary>
-        void PuePilleriNappi()
+        void PuePilleriNappi(string laite)
         {
-            pilleri.AddToClassList("mk-pilleri--nappi");
+            var kuva = Resources.Load<Texture2D>("MatkakirjaUI/Ylapalkki/pilleri-kohopainatus" + laite);
+            if (kuva != null)
+            {
+                pilleri.style.backgroundImage = new StyleBackground(kuva);
+                pilleri.AddToClassList("mk-pilleri--nahka");
+                if (laite.Length > 0) pilleri.AddToClassList("mk-pilleri--nahka" + laite);
+            }
             pilleri.Q(className: "mk-ikoni")?.RemoveFromHierarchy();
         }
 
@@ -640,8 +645,8 @@ namespace Matkakirja.Natiivi
                     ? new Sivut
                     {
                         R = kulmaR, W = P(Screen.width / pp, 0f).x, RiviKeski = yla + rivi / 2f, SaariKeski = (saariYla + saariAla) / 2f,
-                        KehaVasen = ylakulma.x - (TikkausEtaisyys + UraPaksuus / 2f) * yksikko,
-                        KehaOikea = alakulma.x + (TikkausEtaisyys + UraPaksuus / 2f) * yksikko,
+                        KehaVasen = ylakulma.x - (TikkausEtaisyys + LankaPaksuus / 2f) * yksikko,
+                        KehaOikea = alakulma.x + (TikkausEtaisyys + LankaPaksuus / 2f) * yksikko,
                         LogoLeveys = lk * logoSuhde, VasenPerus = vasenReuna, OikeaPerus = oikeaVara,
                     }
                     : (Sivut?)null;
@@ -657,38 +662,18 @@ namespace Matkakirja.Natiivi
         /// <summary>Rivin lasku saaren akselin alle ja palkin lisäkorkeus (pt; omistaja 30.9.2026 klo 12.28 "hieman").</summary>
         const float RiviAlemmas = 6f, PalkkiKorkeampi = 4f;
         /// <summary>
-        /// NAHKATIKKAUS DYNAMIC ISLANDIN YMPÄRILLE (omistaja 2.10.2026 klo 15.1x: "ota musta pois dynamic islandin kohdalta ja tee
-        /// ennemmin sen ympärille nahkainen tikkaus"; korvaa 30.9.:n mustan saarialueen). Päätoimittajan 16.0x korjaukset: saman
-        /// tyylinen kuin palkin alareunan tikkausreuna (nahka-tile.png rivit 266–276): painettu ura, lyhyt pisto, pistojen varjo
-        /// ja lanka; saaren ympärillä nahan leikkausreuna (tumma reunus ja ohut vaalea viiste kuten alareunan taitoksessa), jottei
-        /// saari näytä tarralta. Yksi kehä koko saaren ympäri.
+        /// NAHKATIKKAUS DYNAMIC ISLANDIN YMPÄRILLE (omistaja 2.10.2026: musta saarialue pois, tikkaus saaren ympärille; valinta
+        /// 18.2x "b mutta ota se ulompi kehä pois, jätä pelkkä tikkaus"): pelkät pistot suoraan nahkaan sävy sävyyn, kehä
+        /// samankeskisesti saaren todellisen kehyksen ympäri (Saari()).
         /// </summary>
-        // Etäisyydet saaren todellisesta reunasta (pt): omistaja 16.1x "saisi olla enemmän kiinni saaressa" → pistot ~2 pt:n päässä
-        // joka puolelta (samankeskinen kehä).
-        const float LeikkausEtaisyys = 0.5f, TikkausEtaisyys = 2.3f, ViisteEtaisyys = 3.7f, PistoPituus = 3.5f, PistoJakso = 6.5f,
-            LankaPaksuus = 0.9f, UraPaksuus = 1.8f;
-        /// <summary>
-        /// Omistaja 17.3x: "tikkaus on liian vaalea … en nähnyt tikkauksen eri vaihtoehtoja" → kuvaan kolme (`ui ylapalkki tikkaus A|B|C`):
-        /// A kehä alareunan sauman lankasävyllä (kehys.muted), B kehä lähes nahan sävyisellä langalla (kehys.line, sävy sävyyn),
-        /// C pelkkä alakaari tummalla langalla (kehys.muted himmeämpänä). Värit tyylikirjasta (pohjavahti).
-        /// </summary>
-        public static string TikkausVaihtoehto = "A";
-        static Color Lanka
-        {
-            get
-            {
-                Color c = TikkausVaihtoehto == "B" ? (Color)Tyylikirja.Kehys.Line : (Color)Tyylikirja.Kehys.Muted;
-                c.a = TikkausVaihtoehto == "B" ? 1f : TikkausVaihtoehto == "C" ? 0.55f : 0.75f;
-                return c;
-            }
-        }
-        static Color Viiste { get { Color c = Tyylikirja.Tumma.MustePehmea; c.a = 0.18f; return c; } }
+        // Pistojen etäisyys saaren todellisesta reunasta 2,3 pt (omistaja: "enemmän kiinni saaressa"); keskitys mittaa pistojen
+        // ulkoreunasta.
+        const float TikkausEtaisyys = 2.3f, PistoPituus = 3.5f, PistoJakso = 6.5f, LankaPaksuus = 0.9f;
+        /// <summary>Lanka sävy sävyyn nahan kanssa (omistajan valinta B 2.10.2026 klo 18.2x; tyylikirjan kehys.line).</summary>
+        static Color Lanka => Tyylikirja.Kehys.Line;
         VisualElement saariTikkaus;
         Rect tikkausSaari;
         float tikkausYksikko = 1f;
-
-        /// <summary>Testikomento: tikkausvaihtoehto vaihtuu heti.</summary>
-        public void PiirraTikkausUudelleen() => saariTikkaus?.MarkDirtyRepaint();
 
         /// <summary>Tikkauskehä saaren ympärille (paneelin yksiköissä); saari = Rect.zero piilottaa.</summary>
         void AsetaSaariTikkaus(Rect saari, float yksikko)
@@ -723,35 +708,19 @@ namespace Matkakirja.Natiivi
             if (saari.width <= 0f) return;
             float u = tikkausYksikko;
             var p = mgc.painter2D;
-            // Leikkausreuna: tumma reunus heti saaren reunassa ja ohut vaalea viiste sen ulkopuolella.
-            p.lineCap = LineCap.Butt;
-            p.strokeColor = Tyylikirja.Himmennys.Tumma;
-            p.lineWidth = 1.2f * u;
-            Stadion(p, saari, LeikkausEtaisyys * u, 0f, 0f);
-            p.strokeColor = Viiste;
-            p.lineWidth = 0.6f * u;
-            Stadion(p, saari, ViisteEtaisyys * u, 0f, 0f);
-            // Tikkaus: painettu ura (ei C:ssä, jossa pistot vain alakaaressa), pistojen varjo hieman ulompana ja lanka.
-            if (TikkausVaihtoehto != "C")
-            {
-                p.strokeColor = Tyylikirja.Himmennys.Kevyt;
-                p.lineWidth = UraPaksuus * u;
-                Stadion(p, saari, TikkausEtaisyys * u, 0f, 0f);
-            }
+            // Omistaja 2.10.2026 klo 18.2x: "b mutta ota se ulompi kehä pois, jätä pelkkä tikkaus" → vain pistot suoraan nahkaan
+            // (ei leikkausreunaa, viistettä, uraa eikä varjoa), lanka sävy sävyyn (kehys.line).
             p.lineCap = LineCap.Round;
-            p.strokeColor = Tyylikirja.Himmennys.Tumma;
-            p.lineWidth = (LankaPaksuus + 0.4f) * u;
-            Stadion(p, saari, (TikkausEtaisyys + 0.4f) * u, PistoPituus * u, PistoJakso * u, vainAla: TikkausVaihtoehto == "C");
             p.strokeColor = Lanka;
             p.lineWidth = LankaPaksuus * u;
-            Stadion(p, saari, TikkausEtaisyys * u, PistoPituus * u, PistoJakso * u, vainAla: TikkausVaihtoehto == "C");
+            Stadion(p, saari, TikkausEtaisyys * u, PistoPituus * u, PistoJakso * u);
         }
 
         /// <summary>
         /// Saaren stadionmuodon (pyöreät päädyt) ääriviiva <paramref name="d"/>:n etäisyydellä: jakso 0 = yhtenäinen viiva,
         /// muuten pistot pituudeltaan <paramref name="pisto"/> jakson välein kaarenpituuden mukaan, tasaisesti koko kehälle.
         /// </summary>
-        static void Stadion(Painter2D p, Rect saari, float d, float pisto, float jakso, bool vainAla = false)
+        static void Stadion(Painter2D p, Rect saari, float d, float pisto, float jakso)
         {
             float r = saari.height / 2f + d, cy = saari.center.y;
             float xa = saari.xMin + saari.height / 2f, xb = saari.xMax - saari.height / 2f; // päätyjen keskipisteet
@@ -784,7 +753,6 @@ namespace Matkakirja.Natiivi
             for (int i = 0; i < n; i++)
             {
                 float a = i * j;
-                if (vainAla && Piste(a + l / 2f).y <= cy) continue;
                 p.MoveTo(Piste(a));
                 for (float s = a + Askel; s < a + l; s += Askel) p.LineTo(Piste(s));
                 p.LineTo(Piste(a + l));
@@ -1063,7 +1031,7 @@ namespace Matkakirja.Natiivi
                 // Kukkaron muutos välähtää kuten kello (osto, palkkio, lento).
                 if (uusiRaha != RahaNyt && RahaNyt.StartsWith("£")) Valahda(raha, ref rahaAjastin);
                 AsetaRahaTeksti(uusiRaha);
-                string uusiKello = lyhyt ? pv.Value + " pv ·" : Iso(osat[1]) + ", " + osat[2];
+                string uusiKello = lyhyt ? pv.Value + " pv" : Iso(osat[1]) + ", " + osat[2];
                 kello.style.display = DisplayStyle.Flex;
                 if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda(kello, ref valahdysAjastin);
                 kelloTeksti = uusiKello;
