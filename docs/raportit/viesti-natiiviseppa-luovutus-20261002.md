@@ -2,24 +2,20 @@
 
 Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen: -20261001-b.md (käytännöt voimassa, ellei tässä toisin).
 
-## TILA HETI (päivitetty 14.2x)
+## TILA HETI (päivitetty 14.5x)
 
-- **proto master 8fd12e83 = BUILD 120** (Pulu-teemapohja + linna-piikit 29c84ce2). TF 116, 118 ja 120 ladattu 2.10.
-- **Mahdollinen regressio TF 120:ssä**: omistajan kuvassa Muurinharjan maasto/heijastus porrasmaisia ASTC-laitteella;
-  Siirtoseppä epäilee linna-piikkien kaistalatausta (29c84ce2), todentaa iPadilla `poikki kaistat 0|1`. Jos vahvistuu → korjaus
-  haaraan linna-piikit-2 → juna 123.
-- **121 ei BUILDia** (✕ avaruuslasi vastoin omistajan 16.9. linjausta, ✕ harmaa; omistajan 14.16: ✕ tulee myöhemmin neliöksi).
-- **Juna 122 käännetty**: juna/b13 3521f148 = 3570bbb2 (121) + natiivi-ui/sulku-harmaa 278c23eb + linssiseppa/kiilto-ilmakeha
-  797aac22, käännös 95cf97d2 (14.25), .app lokit/juna-1.1.122-95cf97d2/. Savuke 1122 pyydetty. BUILD 122 vasta savukkeen JA
-  Siirtosepän kaistatodennuksen jälkeen (122 sisältää 29c84ce2:n).
-- **Juna 123 PIDOSSA**: worktree /Users/Shared/Claude/wt/proto-natiiviseppa-j121, haara natiiviseppa/juna-121-koe = 94da5f0c
-  = 3521f148 + siirtoseppa/linna-piikit-2 db3ed117 (ABAB >100 ms 0/0/0). Testit ok; pohjavahti pyytää `--kirjaa` (Natiivi-UI).
+- **proto master 3f17a0e6 = BUILD 123** (juna 2b2f7adf, käännös 266fb417). juna/b13 = 2b2f7adf. Ei avoimia junia eikä
+  natiiviseppa-worktreeitä. TF 116, 118 ja 120 ladattu 2.10.; seuraava TF = uusin puhdas BUILD.
+- BUILD 122 19060a07 (harmaa ✕, kiilto, kilven maakynnys), BUILD 123 (linna-piikit-2, linna-puhevuoro).
+- Avoinna Siirtosepällä: puhevuoron katkaisu Pulun chatin / luennan / Ihmisen matka -kertojan kanssa ja tekstilaatikon
+  piilotus (savuke 1123 osittain) → korjaukset juna 124:ään. Muurinharjan porras = vanha maastodatan löydös (Linnanrakentaja),
+  ei 120:n regressio. Natiivi-UI: pohjavahti --kirjaa; ✕ neliöksi (omistaja 14.16) tulossa. Cupolassa ei ✕:ää (tarkoitettu).
 - Laitekäännökset tänään: laite-dev-{badf0d9a,be5bd3d4,90840152,29c84ce2,db3ed117}, laite-rel-{f7e91fcc,84b8556b,22dfaccb,
   f5c48ad4,c476ad0c} (lokit/).
 
 ## TÄNÄÄN (2.10.) TEHDYT BUILDIT
 
-111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259 · 120 8fd12e83.
+111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259 · 120 8fd12e83 · 122 19060a07 · 123 3f17a0e6.
 Ohitetut: 112 (Lehti ei avannut leikekirjaa: täkynoston id puuttui kokoelmadatasta), 115 (ISS-kuva raidallinen +
 22dfaccb signal 11: RGB24 luettiin Color32:na), 117 (paluu avaruuskävelyltä Cupolaan ei toiminut), 121 (✕ avaruuslasi).
 
