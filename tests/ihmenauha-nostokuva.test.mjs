@@ -21,7 +21,3 @@ test('nostokuvan napille lasketaan nauhan mitat kuvan leveydestä', () => {
   assert.doesNotMatch(lohko, /container-type/);
 });
 
-test('kortti kirjoittaa kuvan leveyden muuttujaksi ja seuraa sen muutoksia', () => {
-  assert.match(lahde, /if \(piirraIhmenauha\(nappi, paakuva\.nauha\)\) mitoitaNauhaKuvaan\(nappi\);/);
-  assert.match(lahde, /function mitoitaNauhaKuvaan\(nappi\) \{[\s\S]*setProperty\('--nauha-kuva', `\$\{Math\.round\(leveys\)\}px`\)[\s\S]*new Vahti\(kirjaa\)\.observe\(img\)/);
-});

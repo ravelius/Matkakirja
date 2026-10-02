@@ -169,9 +169,9 @@ test('piste on YKSI hehkuva vihreä piste — ei rengasta, ei reunaa, ei pulssia
    * valokuvanäkymässä ja Livian astronauttiasun leijunta ovat kumpikin
    * loputtomia, mutta molemmat ovat pelkkä transform pallon PÄÄLLÄ
    * olevassa kerroksessa — ei pallon piirrossa eikä pisteissä. Muut
-   * loputtomat animaatiot ovat yhä kiellettyjä, ja tämä mitta on se,
-   * joka pitää listan lyhyenä: uusi infinite ei mene läpi ilman että
-   * se kirjataan tähän.
+   * loputtomat animaatiot ovat yhä kiellettyjä. Robottikäden versiossa
+   * leijunnan korvaa Pulun oma hento keinunta kiinteän jalkatuen päällä;
+   * se ei liikuta palloa, varren kerrosta eikä pisteitä.
    *
    * ISS:N KYYTI (omistaja 28.9.2026, LIVE-merkki; Linssisepän suositus
    * luku 6): LIVE-pillerin punainen piste sykkii 0,9 s:n välein ja
@@ -181,6 +181,7 @@ test('piste on YKSI hehkuva vihreä piste — ei rengasta, ei reunaa, ei pulssia
   const ilmanLeijuntaa = tyyli
     .replace(/animation:\s*satelliitti-pulu-leijuu[^;]*infinite/g, '')
     .replace(/animation:\s*livia-astronautti-leijuu[^;]*infinite/g, '')
+    .replace(/animation:\s*livia-eva-jalkatuessa[^;]*infinite/g, '')
     .replace(/animation:\s*iss-kyyti-(live|ulko|heijastus)\b[^;]*infinite[^;]*/g, '');
   assert.ok(!/animation:[^;]*infinite/.test(ilmanLeijuntaa), 'hehku ei saa sykkiä jatkuvasti');
   // Liikkeenvähennys: vakaa hehku ilman ilmestymisanimaatiotakin.
@@ -532,7 +533,7 @@ test('selite lukee kuvan päällä ruudun vasemmassa yläkulmassa, i-nappi on po
   assert.ok(!tyyli.includes('.satelliitti-popup'), 'info-popupin tyyli on yhä jäljellä');
   assert.match(lahde, /html\('div', 'satelliitti-selite'\)/);
   // Minipulun kulma on viides pinta (16.9.2026, Raamattu kohta 9).
-  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, kohdenapit, pulukulma, autoKulma, autoSiirto\.el\)/);
+  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, kohdenapit, pulukulma, autoSiirto\.el\)/);
   // Kiinnitys on RUUTUUN (kortti alkaa ruudun yläreunasta, LISÄYS 3),
   // ei kuvaelementtiin — 12 px vasemmalta, 10 px + turva-alue ylhäältä.
   /*

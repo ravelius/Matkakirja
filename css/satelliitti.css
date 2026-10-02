@@ -246,8 +246,46 @@ body.livia-astronautti-paalla .livia-lentonayttamo.livia-astronautti-puhuu {
   animation-play-state: paused;
 }
 
+/* Robotin jalkatuki on kiinteä: vain Pulun oma paperinukke keinuu
+ * hennosti jalkojen ympäri. Koko näyttämön leijunta liikuttaisi vartta. */
+body.livia-astronautti-paalla .livia-lentonayttamo:has(svg[data-eva-robotissa="true"]) {
+  animation: none;
+  transform: none;
+}
+@keyframes livia-eva-jalkatuessa {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+.livia-lentonayttamo svg[data-eva-robotissa="true"] [data-part="eva-keinunta"] {
+  transform-box: view-box;
+  transform-origin: 113px 300px;
+  animation: livia-eva-jalkatuessa 6s ease-in-out infinite;
+}
+.livia-lentonayttamo.livia-astronautti-puhuu svg[data-eva-robotissa="true"] [data-part="eva-keinunta"] {
+  animation-play-state: paused;
+}
+
+/* EVA-valot pysyvät omissa SVG-ryhmissään: Cupolan päivä/yö-tila voi
+ * säätää voimakkuutta muuttamatta Pulun varjossa olevaa peruskuvaa. */
+.livia-lentonayttamo [data-part="eva-kasvovalo"] {
+  opacity: var(--livia-eva-kasvovalo, 1);
+}
+.livia-lentonayttamo [data-part="eva-kyparalamput"] {
+  opacity: var(--livia-eva-kyparalamput, 1);
+}
+.livia-lentonayttamo [data-part="eva-maavalo"] {
+  opacity: var(--livia-eva-maavalo, 1);
+}
+.livia-lentonayttamo [data-part="eva-robotin-reunavalo"] {
+  opacity: var(--livia-eva-varsi-reunavalo, 1);
+}
+
 @media (prefers-reduced-motion: reduce) {
   body.livia-astronautti-paalla .livia-lentonayttamo:not([hidden]) {
+    animation: none;
+    transform: none;
+  }
+  .livia-lentonayttamo svg[data-eva-robotissa="true"] [data-part="eva-keinunta"] {
     animation: none;
     transform: none;
   }
@@ -835,6 +873,7 @@ body.satelliitti-kuva-auki .astro-sumu { visibility: hidden; }
   bottom: calc(12px + env(safe-area-inset-bottom, 0px));
   z-index: 5;
   display: flex;
+  align-items: center;
   gap: 14px;
   transform: translateX(-50%);
 }
@@ -1966,17 +2005,10 @@ body.satelliitti-kyyti .astro-nakymat-nappi { z-index: 49; }
 }
 
 /*
- * AUTO (omistaja 2.10.2026; NOSTOKORTTI-pohjan osa AUTO, js/pohjat/auto.js): kytkin vasempaan alakulmaan ‹ ›:n
- * riville (‹ › pysyvät keskellä), siirtolappu niiden yläpuolelle koko leveydelle. AUTOn aikana otsikkona on pelkkä
- * kohteen nimi (seutu pois).
+ * AUTO (omistaja 2.10.2026; NOSTOKORTTI-pohjan osa AUTO, js/pohjat/auto.js): kytkin ‹ ›:n ryhmässä alhaalla keskellä
+ * ("AUTO ‹ ›", Päätoimittaja 2.10.2026: vasemmassa alakulmassa se peitti pikkukuvanauhan), siirtolappu rivin
+ * yläpuolelle koko leveydelle. AUTOn aikana otsikkona on pelkkä kohteen nimi (seutu pois).
  */
-.satelliitti-autokulma {
-  position: absolute;
-  left: var(--tk-vali-m);
-  bottom: calc(var(--tk-vali-m) + env(safe-area-inset-bottom, 0px));
-  z-index: 5;
-}
-.satelliitti-autokulma[hidden] { display: none; }
 .satelliitti-autolappu {
   position: absolute;
   left: var(--tk-vali-m);

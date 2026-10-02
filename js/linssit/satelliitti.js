@@ -143,6 +143,7 @@
 import { html, polloNimilappu } from '../ui-apurit.js';
 import { polloUlkoinenKysymys } from '../pollo.js';
 import { asennaLivianAstronauttitila } from '../livia-astronautti.js';
+import { kaynnistaPulunEvaValo } from './pulu-eva-valo.js';
 import {
   hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream,
   kaynnistaPohjaMusiikki, pidaMusiikkiKiinni,
@@ -903,15 +904,16 @@ function avaaHavaintokortti({
    * pohjan osa AUTO (js/pohjat/auto.js, sama kuin natiivin nostoselaimessa): kertoja lukee leipätekstin, 3 s:n lappu
    * ja seuraava kohde maailmankierroksen järjestyksessä (sama kuin ›). AUTOn aikana selite pysyy minimoituna ja
    * otsikkona on pelkkä kohteen nimi. Pelaajan napautus, nipistys tai nuoli pysäyttää AUTOn.
+   * Kytkin on ‹ ›:n ryhmässä alhaalla keskellä ("AUTO ‹ ›", Päätoimittaja 2.10.2026): vasemmassa alakulmassa se
+   * peitti pikkukuvanauhan, kun kohteella on monta kuvaa.
    */
   pohjatLataaTyyli();
   const autoKytkin = luoAutoKytkin({ muuttui: (paalle) => autoMuuttui(paalle) });
   const autoSiirto = luoAutoSiirto({ pysaytetty: () => autoMuuttui(false) });
-  const autoKulma = html('div', 'satelliitti-autokulma tk-teema-lasi-avaruus');
-  autoKulma.append(autoKytkin.el);
-  autoKulma.hidden = kohdenapit.hidden;
+  kohdenapit.classList.add('tk-teema-lasi-avaruus');
+  kohdenapit.prepend(autoKytkin.el);
   autoSiirto.el.classList.add('satelliitti-autolappu');
-  const autoKaytossa = () => autoPaalla() && !autoKulma.hidden;
+  const autoKaytossa = () => autoPaalla() && !kohdenapit.hidden;
   function naytaAutoTila() {
     const paalla = autoKaytossa();
     katselu.classList.toggle('satelliitti-auto-paalla', paalla);
@@ -934,7 +936,7 @@ function avaaHavaintokortti({
   }
   // Pelaajan napautus, nipistys tai rulla kuvalla pysäyttää AUTOn (kytkin ja lappu eivät).
   const pysaytaAuto = (e) => {
-    if (!autoKaytossa() || autoKulma.contains(e.target) || autoSiirto.el.contains(e.target)) return;
+    if (!autoKaytossa() || autoKytkin.el.contains(e.target) || autoSiirto.el.contains(e.target)) return;
     asetaAuto(false);
     autoMuuttui(false);
   };
@@ -1243,7 +1245,7 @@ function avaaHavaintokortti({
   pulunSulku.addEventListener('click', (e) => { e.stopPropagation(); naytaPulukortti(false); });
   pulukulma.append(pulukortti, pulunappi);
 
-  katselu.append(lava, selite, kulma, nauha, kohdenapit, pulukulma, autoKulma, autoSiirto.el);
+  katselu.append(lava, selite, kulma, nauha, kohdenapit, pulukulma, autoSiirto.el);
   katselu.addEventListener('pointerdown', pysaytaAuto, true);
   katselu.addEventListener('wheel', pysaytaAuto, true);
   document.body.appendChild(katselu);
@@ -1944,6 +1946,9 @@ function avaa(lauta, tila, ui) {
 
   // Pulu pysyy mukana astronauttina; tila purkautuu linssin mukana.
   const pulu = vaihe('pulu', () => asennaLivianAstronauttitila()) ?? { pura: () => {} };
+  // Avaruuskävelyasun valot ISS:n valon mukaan (js/linssit/pulu-eva-valo.js); ?eva=yo|paiva kuvapariin.
+  const evaTesti = new URLSearchParams(globalThis.location?.search ?? '').get('eva');
+  const evaValo = vaihe('pulu-eva-valo', () => kaynnistaPulunEvaValo({ testi: evaTesti })) ?? { pura: () => {} };
 
   // Muut äänet vaikenevat linssin ajaksi (ks. vaiennaAanet).
   const aanet = vaihe('aanet', () => vaiennaAanet(ui)) ?? { pura: () => {} };
@@ -2258,6 +2263,7 @@ function avaa(lauta, tila, ui) {
       // tähdet ja zoomirajat. Merkkien häivytys jatkuu tämän päälle.
       avaruus?.pura?.();
       // Pulu takaisin ruudulle ja jonoon jääneet puheenvuorot ulos.
+      evaValo.pura();
       pulu.pura();
       // Linssin oma humina ja musiikki pois ennen muiden palautusta.
       linssiAani?.pura?.();

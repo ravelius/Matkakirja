@@ -2,9 +2,9 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
-   "versio": "1.1 (96)",
-   "paiva": "2026-10-01",
-   "teksti": "Lukijoilta-työkalun avain kulkee nyt suojatussa otsakkeessa eikä näy osoitteissa."
+   "versio": "1.1 (114)",
+   "paiva": "2026-10-02",
+   "teksti": "Kortit, valikot ja asetukset yhtenäisessä paperiasussa; kortin voi vetää alas kahdessa vaiheessa. Uusi Mylly-lautapeli naksahduksineen, ja Lehti avaa Livian leikekirjan. ISS-kyydissä tarkka Eurooppa ja kamerassa AUTO, kartalla uusin pohjakuva ja linnan maasto latautuu sujuvammin."
   },
   {
    "versio": "1.1 (95)",
