@@ -93,6 +93,7 @@ import { animoiAvaus, asennaDialogianimaatiot, haamuSulku } from './avausanimaat
 import { lahetaKaynti, merkitseOmistajaOsoitteesta } from './kaynti.js';
 import { luoPohjaKortti } from './pohjat/pohjat.js';
 import { ajattelijaLipusta, avaaAjattelija } from './linssit/ajattelija.js';
+import { kytkeAjattelijaPaat } from './ajattelijapaat.js';
 
 // Dialogien avaus ja sulku animoiden (omistaja 29.9.2026, js/avausanimaatio.js erä B).
 asennaDialogianimaatiot();
@@ -176,7 +177,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2550';
+const APP_VERSION = '2026-09-21.2562';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -544,6 +545,8 @@ function attach(game) {
   // PILLERIVALIKKO PANEELI-pohjalla (peruttava ?paneeli=vanha): puetaan kerran, nappien kohde on aina nykyinen UI.
   if (paneeliPohjalla()) puePilleriPaneeliksi(() => ui);
   // AJATTELIJAT-LINSSI, vaihe 1 (Päätoimittaja 2.10.2026): vain kehityslipulla ?ajattelija=sokrates, ei pelaajille.
+  // Ajattelijoiden päät kartuutsin lipun alla (omistaja 2.10.2026 klo 12.34): toistaiseksi vain kehittäjätilassa.
+  if (kehittajaTilaPaalla()) kytkeAjattelijaPaat(ui, { kehittaja: kehittajaTilaPaalla });
   const ajattelija = ajattelijaLipusta();
   if (ajattelija) avaaAjattelija(ajattelija).catch((syy) => console.warn('ajattelija', syy));
   // Kehityksen apuri konsolia varten. Vanha nimi jää rinnalle, koska

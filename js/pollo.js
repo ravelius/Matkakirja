@@ -2471,13 +2471,14 @@ export class Pollo {
 
     // Pulun äänikeskustelun koenappi (vain kehittäjätilassa, ks.
     // puluRealtimeKoeNakyvissa); näkyvyys tarkistetaan myös avatessa.
-    const koe = polloElementti('button', 'pollo-realtime-koe', REALTIME_NAPPI_TEKSTIT.valmis);
+    // Nappi asuu alarivillä näppäimistön ja mikrofonin rinnalla samalla tyylillä (omistaja 2.10.2026 klo 13.53:
+    // "puhu pululle nappi pitäisi olla samalla rivillä kahden alimmaisen napin kanssa samalla tyylillä").
+    const koe = polloElementti('button', 'pollo-nappula pollo-realtime-koe', REALTIME_NAPPI_TEKSTIT.valmis);
     koe.type = 'button';
     koe.setAttribute('aria-pressed', 'false');
     koe.hidden = !puluRealtimeKoeNakyvissa({ palvelin: this.palvelin });
     koe.addEventListener('click', () => this.vaihdaRealtime());
     this.realtimeNappi = koe;
-    syote.appendChild(koe);
 
     const lomake = polloElementti('form', 'pollo-rivi');
     this.kentta = polloElementti('input', 'pollo-kentta');
@@ -2547,6 +2548,7 @@ export class Pollo {
     // Sisältö, nimi ja tila tulevat samasta paikasta kuin sanelun aikana.
     this.merkitseMikki(false);
     rivi.appendChild(mikki);
+    rivi.appendChild(koe);
 
     this.saneluOsa = rivi;
     syote.appendChild(rivi);
