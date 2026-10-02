@@ -10,7 +10,8 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
   (Natiivi-UI kuittasi; LinssiValikko teema-parametri, oletus harmaa). Käännös 84bdd62d, simu D0D2CD1E 23.21 PASS 3 oikealla
   tapilla (ajo-topografia-2.sh), kuvapari lokit/linssiseppa-topografia2-20261002/kuvapari-topografia2.png (koosta-topografia2.py)
   lähetetty Päätoimittajalle. Avoin pieni ero: natiivin lasi läpikuultavampi kuin webin (web blur), ei muutettu.
-- Seuraava erä Päätoimittajalta.
+- PÄÄTOIMITTAJA HYVÄKSYI d015ffa1:n junaan 131 (lasin läpikuultavuus saa jäädä). LEVOSSA YÖN: Päätoimittaja kysyy aamulla omistajalta
+  hampurilaisen laajennuksen muihin linsseihin, natrium-oranssin ja Mallinsepän erän 7; erä tulee kun jokin ratkeaa. Ei yövuoroja.
 
 ## TILA 2.10. KLO 22.1x (LOPULLINEN, tilinvaihto; ei uutta työtä aloitettu)
 - TOPOGRAFIAN HAMPURILAINEN (omistaja 21.3x): linssiseppa/topografia-hampurilainen d99f62c5 (BUILD 129 e204abbe:n päällä)
