@@ -2,21 +2,21 @@
 
 Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen: -20261001-b.md (käytännöt voimassa, ellei tässä toisin).
 
-## TILA HETI (päivitetty 18.5x)
+## TILA HETI (päivitetty 19.4x)
 
-- **proto master 140c4033 = BUILD 127** (juna bc5f29c0, käännös 9482b08c): ohjausnappi, linna-valikko/Muurinharja, galleria,
-  ei-ovaaleja, Live, Ajattelijat-korjaukset. TF 126 ladattu 17.44, TF 127 ~19.45 (SHA Julkaisijalla). Ei avoimia junia eikä
-  worktreeitä. TF-raja 12/vrk; junat isoina 2–3 h välein. Päätoimittaja: tilin 95 %:n raja lähellä.
-- **Juna 128 suunnitelma**: Linssisepän Linssit-karttanappi (~19.15, web #3859) + natiivi-ui/valikko-v2 4d03a255 (VAIN yhdessä
-  karttanapin kanssa, omistaja 18.3x: Linssit-rivi ei koskaan pillerivalikkoon) + linssiseppa/erikoisnostot-3 (kipsipään
-  karttaobjekti). Yläpalkki (natiivi-ui/ylapalkki-tikkaus-2 b90c5c3c) odottaa omistajan uutta OK:ta.
-- Savuke-aukot (Natiivi-UI:n komennot seuraavaan savukkeeseen): galleria `ui julisteet 10` (tai kehittäjätilassa `ui julisteet`),
-  Live-nappi `ui chat realtime-nappi`. Natiivi-UI:n omat kuvat: omistajalle-20261002-ylapalkki-valikko/9-* ja 6-*.
-- Raamattu: OHJAUSNAPIT (omistaja 14.2x) = kaikki kuvakenapit ml. ✕ pyöristettyinä neliöinä (ei regressio).
+- **proto master 320ce6c3 = BUILD 128** (juna 5e78c8a0, käännös 582aa509): Linssit-karttanappi (54528521 + 92a70085),
+  valikko-v2 4d03a255 (ilman Linssit-riviä; vain karttanapin kanssa), kipsipäät karttaobjekteina (erikoisnostot-3 2b1bffa1).
+  BUILD 127 = 140c4033. TF: Julkaisija vie 128:n Päätoimittajan V2-OK:lla, muuten 127 viimeistään 20.05.
+- Ei avoimia junia eikä natiiviseppa-worktreeitä. TF-raja 12/vrk; junat isoina 2–3 h välein; tili lähellä 95 %:n rajaa.
+- Odottaa: natiivi-ui/ylapalkki-tikkaus-2 (omistajan uusi OK).
+- Opit: savukkeen napautukset OIKEALLA sim-työkalun tapilla (ui-komento ei paljasta samassa ruudussa tapahtuvaa sulkua);
+  vaakatilassa sim-työkalu käyttää pystykoordinaatteja. OHJAUSNAPIT (Raamattu 14.2x): ✕ pyöristettynä neliönä.
+  Ristiin menneet NYT-viestit: tarkista SHA ennen update-refiä; jos käännös ei ole alkanut, palauta juna/b13 vanhaan
+  (jo käännettyyn) SHA:han, jolloin jonossa oleva ajo ohittaa sen.
 
 ## TÄNÄÄN (2.10.) TEHDYT BUILDIT
 
-111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259 · 120 8fd12e83 · 122 19060a07 · 123 3f17a0e6 · 124 9df72166 · 125 e00ba2b6 · 126 8577dc48 · 127 140c4033.
+111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259 · 120 8fd12e83 · 122 19060a07 · 123 3f17a0e6 · 124 9df72166 · 125 e00ba2b6 · 126 8577dc48 · 127 140c4033 · 128 320ce6c3.
 Ohitetut: 112 (Lehti ei avannut leikekirjaa: täkynoston id puuttui kokoelmadatasta), 115 (ISS-kuva raidallinen +
 22dfaccb signal 11: RGB24 luettiin Color32:na), 117 (paluu avaruuskävelyltä Cupolaan ei toiminut), 121 (✕ avaruuslasi).
 
