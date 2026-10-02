@@ -15,6 +15,7 @@
  */
 import { AJATTELIJAT, avaaAjattelija, lataaKolme } from './linssit/ajattelija.js';
 import { pohjatLataaTyyli } from './pohjat/pohjat.js';
+import { VAISTETTAVA_LUOKKA } from './pulu-paneelin-ylla.js';
 
 const PAAT_MEDIA = 'https://media.matkakirja.app/';
 export const PAAN_KAANTO_ASTE = 30;
@@ -64,7 +65,9 @@ export function sarakkeenPaikka(lippu, kartuutsi, { vali = 8, korkeus = 0, levey
 export function luoPohjaErikoisnostot(ajattelijat, { esikatselu = false, avaa = (a) => avaaAjattelija(a.tunnus) } = {}) {
   pohjatLataaTyyli();
   const el = document.createElement('div');
-  el.className = esikatselu ? 'tk-erikoisnostot tk-erikoisnostot--esikatselu' : 'tk-erikoisnostot';
+  // Kartalla Pulu väistää sarakkeen (VAISTETTAVA_LUOKKA, js/pulu-paneelin-ylla.js; Linssiseppän pariteettirivi 2.10.:
+  // Pulun jalat jäivät pään päälle), kuten natiivissa.
+  el.className = esikatselu ? 'tk-erikoisnostot tk-erikoisnostot--esikatselu' : `tk-erikoisnostot ${VAISTETTAVA_LUOKKA}`;
   const px = PAAN_PIKSELIT * Math.min(globalThis.devicePixelRatio || 1, 2);
   const paat = ajattelijat.slice(0, ERIKOISNOSTOJA_ENINTAAN).map((a) => {
     const nappi = document.createElement('button');

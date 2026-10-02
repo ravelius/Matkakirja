@@ -571,8 +571,8 @@ export function renderQuiz(ui) {
          * sama pari kuin laatan paljastuksessa (playTokenReveal).
          */
         body.appendChild(html('strong', '', kaariAarre
-          ? `Kätkö löytyi! +${EXPLORE_REWARD} puntaa.`
-          : `Oikein! Löytöpalkkio +${EXPLORE_REWARD} puntaa.`));
+          ? `Kätkö löytyi! +£${EXPLORE_REWARD}.`
+          : `Oikein! Löytöpalkkio +£${EXPLORE_REWARD}.`));
         if (kaariAarre) {
           /*
            * Kätkökuva laatattoman löydön tuloskorttiin (omistajan
@@ -738,7 +738,7 @@ export function renderDuel(ui) {
 
   ui.quizHintText.hidden = duel.reliefs === 0;
   if (duel.reliefs > 0) {
-    ui.quizHintText.textContent = `Rosvo on vienyt ${duel.taken} puntaa.`;
+    ui.quizHintText.textContent = `Rosvo on vienyt £${duel.taken}.`;
   }
 
   renderTimer(ui, duel);
@@ -753,7 +753,7 @@ export function renderDuel(ui) {
     } else {
       const body = html('div');
       if (duel.right && duel.prize) {
-        body.appendChild(html('strong', '', `Voitit rosvon — saalis ${duel.prize} puntaa!`));
+        body.appendChild(html('strong', '', `Voitit rosvon — saalis £${duel.prize}!`));
       } else if (duel.right) {
         body.appendChild(html('strong', '', 'Voitit rosvon — loput rahat säilyvät.'));
       } else {

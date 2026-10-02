@@ -11907,7 +11907,7 @@ export class UI {
     const maata = game.board.adj.get(city.id)
       ?.some((id) => game.board.edgeById.get(id)?.type === 'land');
     if (!maata) return 'täältä ei lähde maareittiä';
-    if (game.player.money < BUS_FARE) return `bussilippu maksaa ${BUS_FARE} puntaa`;
+    if (game.player.money < BUS_FARE) return `bussilippu maksaa £${BUS_FARE}`;
     return 'täältä ei lähde bussia';
   }
 
@@ -11919,7 +11919,7 @@ export class UI {
     const satama = game.board.adj.get(city.id)
       ?.some((id) => game.board.edgeById.get(id)?.type === 'sea');
     if (!satama) return 'täältä ei lähde laivareittiä';
-    return `laivalippu maksaa ${SEA_FARE} puntaa`;
+    return `laivalippu maksaa £${SEA_FARE}`;
   }
 
   lentoEste() {
@@ -11930,7 +11930,7 @@ export class UI {
     // Portit poistuivat erillislautojen mukana: lentokenttä on ainoa
     // lennon lähtöpaikka (mannerlento hoituu omassa listassaan).
     if (!city.airport) return 'täällä ei ole lentokenttää';
-    if (game.player.money < FLIGHT_PRICE) return `lentolippu maksaa ${FLIGHT_PRICE} puntaa`;
+    if (game.player.money < FLIGHT_PRICE) return `lentolippu maksaa £${FLIGHT_PRICE}`;
     return 'täältä ei lähde lentoja';
   }
 
@@ -15634,7 +15634,7 @@ export class UI {
           ? 'kulttuuri-tulos oikein-tulos'
           : 'kulttuuri-tulos vaarin-tulos';
         this.arrivalKulttuuriTulos.textContent = (oikein
-          ? `Oikein! +${KULTTUURI_PALKKIO} puntaa. `
+          ? `Oikein! +£${KULTTUURI_PALKKIO}. `
           : `Oikea vastaus: ${kysymys.options[kysymys.correct]}. `) + (kysymys.fact ?? '');
         // Palaute vieritetään näkyviin — kysymys elää dialogin alalaidassa.
         this.arrivalKulttuuriTulos.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
@@ -15646,7 +15646,7 @@ export class UI {
           const box = this.buildToast({
             kind: 'stamp',
             icon: 'kukkaro',
-            text: `+${KULTTUURI_PALKKIO} puntaa`,
+            text: `+£${KULTTUURI_PALKKIO}`,
             sub: 'Tunsit paikallista kulttuuria',
           });
           setTimeout(() => this.removeToast(box), TOAST_MS.default);
@@ -16360,7 +16360,7 @@ export class UI {
           ? 'kulttuuri-tulos oikein-tulos'
           : 'kulttuuri-tulos vaarin-tulos';
         tulos.textContent = (oikein
-          ? `Oikein! +${MINITEHTAVA_PALKKIO} puntaa. `
+          ? `Oikein! +£${MINITEHTAVA_PALKKIO}. `
           : `Oikea vastaus: ${tehtava.vaihtoehdot[tehtava.oikea]}. `)
           + (tehtava.fakta ?? '');
         sfx.play(oikein ? 'correct' : 'wrong');
@@ -16371,7 +16371,7 @@ export class UI {
           const box = this.buildToast({
             kind: 'stamp',
             icon: 'kukkaro',
-            text: `+${MINITEHTAVA_PALKKIO} puntaa`,
+            text: `+£${MINITEHTAVA_PALKKIO}`,
             sub: 'Lehden minitehtävä ratkesi',
           });
           setTimeout(() => this.removeToast(box), TOAST_MS.default);
@@ -20275,7 +20275,7 @@ export class UI {
     };
     const { effect } = kortti;
     this.eventEffect.textContent = effect?.kind === 'raha'
-      ? (effect.amount >= 0 ? `Kukkaroon +${effect.amount} puntaa.` : `Kukkarosta ${effect.amount} puntaa.`)
+      ? (effect.amount >= 0 ? `Kukkaroon +£${effect.amount}.` : `Kukkarosta \u2212£${-effect.amount}.`)
       : (selitteet[effect?.kind] ?? '');
     this.eventText.textContent = '';
     this.typeText(this.eventText, kortti.text, 'event');
@@ -20789,7 +20789,7 @@ export class UI {
           ? `${mannerNimi.toUpperCase()} · UNOHDETTU AARRE` : 'UNOHDETTU AARRE',
         // Pääaarteen arvo on kiinteä eikä revealToken arvo sitä
         // (arvoAarteenArvo antaa tähdelle laattataulun nollan).
-        alanauha: `Arvo ${STAR_PRIZE} puntaa`,
+        alanauha: `Arvo £${STAR_PRIZE}`,
         leima: 'Löydetty',
         leimaPvm: `${nyt.getDate()} · ${KUUT[nyt.getMonth()]}`,
       };
@@ -20807,7 +20807,7 @@ export class UI {
       caption.appendChild(html('span', 'reveal-huudahdus', huudahdus.teksti));
     }
     caption.appendChild(html('strong', '', token.name));
-    caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${arvo} puntaa`));
+    caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+£${arvo}`));
     /*
      * FAKTA ON OPPIMISTEKSTI (Raamattu: *"Löytöteksti: lyhyt tosi
      * fakta aarteesta"*; omistajan leiskapäätös 28.8.2026 nosti sen

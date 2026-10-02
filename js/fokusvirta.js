@@ -6373,7 +6373,7 @@ function piirraSahketehtava(ui, city, data, kohde) {
    * palkkion juuri siitä.
    */
   kohde.appendChild(html('p', 'fokusvirta-varoitus fokusvirta-sahkemaksu',
-    `Sähkeen palkkio nyt ${sahkePalkkio(ohi, tehtava.palkkio ?? SAHKE_PALKKIO)} puntaa. `
+    `Sähkeen palkkio nyt £${sahkePalkkio(ohi, tehtava.palkkio ?? SAHKE_PALKKIO)}. `
     + 'Jokainen ohilyönti pienentää sitä — mutta aarre ei lukitu koskaan.'));
 
   /*
