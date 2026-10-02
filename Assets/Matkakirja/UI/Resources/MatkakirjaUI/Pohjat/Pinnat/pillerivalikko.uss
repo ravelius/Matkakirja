@@ -217,8 +217,9 @@
 }
 
 /* Alinäkymien ylärivi (‹ Takaisin ja otsikko) ilman viivaa kuten webissä (#3875; omistaja 20.2x: viivoista vain alin jää). */
-.mk-linssivalitsin--valikko.mk-pillerivalikko--v2 .mk-selite__ylarivi {
-    border-bottom-width: 0;
+.mk-linssivalitsin--valikko.mk-pillerivalikko--v2 .mk-selite__ylarivi,
+.mk-linssivalitsin--valikko.mk-pillerivalikko--v2 .mk-selite__otsikko {
+    border-bottom-width: 0; /* myös otsikon alleviivaus: webissä alinäkymän otsikko on pelkkä kapiteeli */
 }
 
 /* Tasorivin ja päivärivin yhteinen pohja (omistaja 2.10.2026 klo 20.2x): ÄÄNET-laatan tyyli (päällä-kytkimen pergamentti-
