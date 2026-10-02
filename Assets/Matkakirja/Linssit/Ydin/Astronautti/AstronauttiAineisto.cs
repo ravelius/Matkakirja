@@ -25,11 +25,11 @@ namespace Matkakirja.Linssit.Astronautti
         public IReadOnlyList<string> Kysymykset = Array.Empty<string>();
 
         /// <summary>
-        /// Selitteen luettava teksti (web satelliitti.js lueSelite): "Nimi, seutu. kuvateksti", jossa kuvateksti on
-        /// havainnon oma teksti, muuten kohteen selite. Sama merkkijono kuin webissä, jotta luennan säilöavain
-        /// (persoona|ääni|ohje|nopeus|teksti) osuu webin säilömään ääneen.
+        /// Selitteen luettava teksti (web satelliitti.js lueSelite, PR #3817): vain leipäteksti eli havainnon oma teksti,
+        /// muuten kohteen selite (omistaja 2.10.2026: "Lukijan ei kannata lukea otsikkoa, ainoastaan leipäteksti.").
+        /// Sama merkkijono kuin webissä, jotta luennan säilöavain (persoona|ääni|ohje|nopeus|teksti) osuu webin ääneen.
         /// </summary>
-        public string Luettava(Havainto h) => $"{Nimi}, {Seutu}. {h?.Teksti ?? Selite ?? ""}".Trim();
+        public string Luettava(Havainto h) => (h?.Teksti ?? Selite ?? "").Trim();
 
         /// <summary>Oletuskuvan indeksi: nimetty oletus, muuten uusin aika (web oletusIndeksi).</summary>
         public int OletusIndeksi

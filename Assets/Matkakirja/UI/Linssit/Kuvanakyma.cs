@@ -26,6 +26,12 @@
 // viereisen kohteen kuvat maailmankierroksella, joten selaus ei pääty. Tausta on läpikuultava, ja linssin pallo liukuu kuvan
 // kohteen ylle (AstronauttiLinssi.AvaaKohde): kuvan takana hohtaa himmeästi maapallo juuri kuvan kohdalta, kuin ikkunasta.
 // Liu'ut 140 + 160 ms; pieni liike pois: suora vaihto.
+// AUTO (omistaja 2.10.2026, Hongkongin kaappaus: "Automaattinen kohteen vaihto olisi tässä kiva."; web satelliitti.js PR #3817):
+// NOSTOKORTTI-pohjan osa AUTO samalla asetuksella kuin nostoselaimen AUTO (Nostoselain.Auto, PlayerPrefs matkakirja-lukija-auto).
+// Kytkin "● AUTO" vasempaan alakulmaan ‹ ›:n riville (LASI-AVARUUS), TUMMA lappu "Seuraava: <nimi> 3 s · Pysäytä" sen yläpuolelle.
+// AUTOn aikana selite pysyy minimoituna, otsikkona on pelkkä kohteen nimi, ja kertoja lukee leipätekstin (vaikka Kertoja olisi
+// pois); luennan jälkeen 3 s ja seuraava kohde AstronauttiKierroksen järjestyksessä. Pelaajan kosketus (muu kuin kytkin tai
+// lappu) pysäyttää AUTOn.
 // AVAUS JA SULKU (Raamattu PR #3602, omistaja 29.9.2026): näkymä kasvaa ja häivyttyy esiin kohteen pisteestä ruudulla
 // (napautettu kohta; Pulun tervetulossa väärä kohde) ja sulkeutuu samaa reittiä, Ponnahdus-apurilla webin arvoin.
 using System;
@@ -54,6 +60,14 @@ namespace Matkakirja.Natiivi
         float zoomi = 1f;
         Vector2 siirto;
         readonly Dictionary<int, Vector2> sormet = new Dictionary<int, Vector2>();
+        // AUTO (web PR #3817).
+        const float AutoSiirtoS = 3f;
+        readonly VisualElement autoKulma, autoLappu, autoPalkki;
+        readonly Button autoNappi;
+        readonly Label autoNimi, autoAika;
+        IVisualElementScheduledItem autoAjo;
+        float autoAlku;
+        int luentaVuoro;
         float alkuEtaisyys, alkuZoomi;
         Vector2 alkuKeski, alkuSiirto;
         float edellinenNapautus = -1f;
@@ -136,6 +150,31 @@ namespace Matkakirja.Natiivi
                 n.RegisterCallback<PointerCaptureOutEvent>(_ => { n.userData = null; n.MarkDirtyRepaint(); });
             }
 
+            // AUTO: kytkin vasempaan alakulmaan ‹ ›:n riville, siirtolappu sen yläpuolelle koko leveydelle (web .satelliitti-autokulma).
+            autoKulma = Rakenne.El("mk-astrokuva__autokulma tk-teema-lasi-avaruus", turva, PickingMode.Ignore);
+            autoNappi = Rakenne.Nappi(null, "mk-astrokuva__auto", () => AsetaAuto(!Nostoselain.Auto), autoKulma);
+            Rakenne.El("mk-astrokuva__autopiste", autoNappi, PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Teksti("AUTO", "mk-nappi__teksti mk-astrokuva__autoteksti", autoNappi), Kirjasin.KoneBold);
+            autoNappi.tooltip = "Auto: lukee kohteen ja siirtyy seuraavaan";
+            autoLappu = Rakenne.El("mk-astrokuva__autolappu tk-teema-tumma", turva);
+            autoLappu.style.display = DisplayStyle.None;
+            var lappuTeksti = Rakenne.El("mk-astrokuva__autolapputeksti", autoLappu, PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Teksti("Seuraava:", "mk-astrokuva__autolappuohje", lappuTeksti), Kirjasin.Kone);
+            autoNimi = Rakenne.Teksti("", "mk-astrokuva__autolappunimi", lappuTeksti);
+            Kirjasimet.Aseta(autoNimi, Kirjasin.Kone);
+            autoAika = Rakenne.Teksti("", "mk-astrokuva__autolappuaika", autoLappu);
+            Kirjasimet.Aseta(autoAika, Kirjasin.KoneBold);
+            var pysayta = Rakenne.Nappi("Pysäytä", "mk-astrokuva__autopysayta", () => AsetaAuto(false), autoLappu);
+            Kirjasimet.Aseta(pysayta, Kirjasin.KoneBold);
+            autoPalkki = Rakenne.El("mk-astrokuva__autopalkki", autoLappu, PickingMode.Ignore);
+            // Pelaajan napautus, veto tai nipistys missä tahansa (paitsi kytkin ja lappu) pysäyttää AUTOn (web pysaytaAuto).
+            juuri.RegisterCallback<PointerDownEvent>(e =>
+            {
+                var k = e.target as VisualElement;
+                if (!AutoKaytossa || (k != null && (autoKulma.Contains(k) || autoLappu.Contains(k)))) return;
+                AsetaAuto(false);
+            }, TrickleDown.TrickleDown);
+
             sijaintipallo = new Sijaintipallo(turva);
 
             // Web .satelliitti-pulukulma (löydös 96): sarake oikeassa alakulmassa, kortti pulun yläpuolella 8 pt:n välein.
@@ -213,7 +252,7 @@ namespace Matkakirja.Natiivi
                 // Selite on auki 1,5 s kohteen ensimmäisellä avauksella (webin sessionStorage
                 // per kohde), sen jälkeen kelattuna; myöhemmin suoraan kelattuna.
                 Lisatiedot(false);
-                bool ensiKerta = k.Tunnus == null || nahdyt.Add(k.Tunnus);
+                bool ensiKerta = (k.Tunnus == null || nahdyt.Add(k.Tunnus)) && !AutoKaytossa;   // AUTO: selite minimoituna
                 // Selauksessa laatikko liukuu edellisen kohteen koosta uuteen (PIENENNETTY = MAHDOLLISIMMAN TIIVIS, ANIMOIDEN).
                 if (selaus) Tiivistys.AnimoiKoko(selite, () => AsetaKiinni(!ensiKerta));
                 else AsetaKiinni(!ensiKerta);
@@ -227,6 +266,7 @@ namespace Matkakirja.Natiivi
                 sijaintipallo.Kohteeseen(k.Lat, k.Lon, selaus && !LinssiUi.VahennettyLiike());
             }
             PaivitaVanha();
+            NaytaAutoTila();
             Valitse(Mathf.Clamp(i, 0, Math.Max(0, k.Havainnot.Count - 1)));
             Esilataa();
         }
@@ -242,6 +282,8 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             sijaintipallo.Piilota();
+            LopetaSiirto();
+            luentaVuoro++;
             LopetaLuenta();
             kelaus?.Pause();
             riveittain?.Pause();
@@ -299,7 +341,7 @@ namespace Matkakirja.Natiivi
             if (kohde == null) return;
             indeksi = i;
             var h = i >= 0 && i < kohde.Havainnot.Count ? kohde.Havainnot[i] : null;
-            otsikko.text = kohde.Nimi + (string.IsNullOrEmpty(kohde.Seutu) ? "" : " — " + kohde.Seutu);
+            AsetaOtsikko();
             teksti.text = h?.Teksti ?? kohde.Selite ?? "";
             LueSelite(h);
             if (lisatiedotAuki) LadoLisatiedot();
@@ -443,12 +485,17 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void LueSelite(Havainto h)
         {
-            if (kohde == null || !Puhe.Paalla || LuentaEste?.Invoke() == true) return;
+            // AUTO lukee itse, vaikka Kertoja olisi pois (web: NOSTOKORTTI-osa AUTO "luenta, siirtyy seuraavaan").
+            bool auto = AutoKaytossa;
+            if (kohde == null || (!Puhe.Paalla && !auto) || LuentaEste?.Invoke() == true) return;
             string t = kohde.Luettava(h);
             if (string.IsNullOrEmpty(t) || t == luettu) return;
             luettu = t;
             var puhe = Puhe.Hae();
-            luennanUrl = puhe.Lue(t, "kertoja", lohko: AstronauttiLinssi.SelitteenSailio) ? puhe.SoivaUrl : null;
+            int vuoro = ++luentaVuoro;
+            luennanUrl = puhe.Lue(t, "kertoja", loppu: () => LuentaLoppui(vuoro), pyynnosta: auto, lohko: AstronauttiLinssi.SelitteenSailio)
+                ? puhe.SoivaUrl : null;
+            if (luennanUrl == null) LuentaLoppui(vuoro);   // ei ääntä: AUTO siirtyy silti
             Debug.Log($"MATKAKIRJA kuvaselite luetaan ({AstronauttiLinssi.SelitteenSailio}, {t.Length} mrk): "
                 + (luennanUrl != null ? t.Substring(0, Math.Min(60, t.Length)) : "ei alkanut"));
         }
@@ -461,10 +508,74 @@ namespace Matkakirja.Natiivi
             luettu = luennanUrl = null;
         }
 
+        // --- AUTO (web PR #3817) ---------------------------------------------------------
+
+        /// <summary>AUTO päällä ja kuvaselain käytössä (‹ › näkyvissä).</summary>
+        bool AutoKaytossa => Nostoselain.Auto && !Vanha && kohdeNapit.style.display != DisplayStyle.None;
+
+        /// <summary>Otsikko: "Nimi — seutu", AUTOn aikana pelkkä nimi (omistaja 2.10.: "tekstin voisi lyhentää pelkkään kaupungin nimeen").</summary>
+        void AsetaOtsikko()
+        {
+            if (kohde == null) return;
+            otsikko.text = kohde.Nimi + (AutoKaytossa || string.IsNullOrEmpty(kohde.Seutu) ? "" : " — " + kohde.Seutu);
+        }
+
+        /// <summary>AUTOn tila näkyviin: kytkin, otsikko ja selite minimoituna (web naytaAutoTila).</summary>
+        void NaytaAutoTila()
+        {
+            bool nakyy = !Vanha && kohdeNapit.style.display != DisplayStyle.None;
+            autoKulma.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+            autoNappi.EnableInClassList("mk-valittu", Nostoselain.Auto);
+            bool paalla = Nostoselain.Auto && nakyy;
+            juuri.EnableInClassList("mk-astrokuva--auto", paalla);
+            if (paalla && !kiinni) { kelaus?.Pause(); AsetaKiinni(true); }
+            AsetaOtsikko();
+        }
+
+        /// <summary>Kytkin tai pysäytys: asetus (jaettu nostoselaimen kanssa), päälle → nykyinen kohde luetaan nyt.</summary>
+        void AsetaAuto(bool paalle)
+        {
+            Nostoselain.Auto = paalle;
+            NaytaAutoTila();
+            if (!paalle) { LopetaSiirto(); return; }
+            luettu = null;
+            if (kohde != null && indeksi >= 0) LueSelite(indeksi < kohde.Havainnot.Count ? kohde.Havainnot[indeksi] : null);
+        }
+
+        /// <summary>Luenta loppui: AUTO päällä → lappu ja 3 s:n päästä seuraava kohde (vain tämän kuvan tuorein luenta).</summary>
+        void LuentaLoppui(int vuoro)
+        {
+            if (vuoro != luentaVuoro || !Auki || !AutoKaytossa) return;
+            var seuraava = Linssi()?.KatsoNaapuri(1);
+            if (seuraava == null) return;
+            LopetaSiirto();
+            autoNimi.text = seuraava.Nimi;
+            autoAika.text = Mathf.CeilToInt(AutoSiirtoS) + " s";
+            autoPalkki.style.width = Length.Percent(0);
+            autoLappu.BringToFront();
+            Rakenne.NaytaHeti(autoLappu);
+            autoAlku = Time.unscaledTime;
+            Ruudunpaivitys.Herata(AutoSiirtoS + 0.2f);
+            autoAjo = autoLappu.schedule.Execute(() =>
+            {
+                float t = Time.unscaledTime - autoAlku;
+                if (t >= AutoSiirtoS) { LopetaSiirto(); if (Auki && AutoKaytossa) VaihdaKohde(1); return; }
+                autoAika.text = Mathf.CeilToInt(AutoSiirtoS - t) + " s";
+                autoPalkki.style.width = Length.Percent(100f * t / AutoSiirtoS);
+            }).Every(0);
+        }
+
+        void LopetaSiirto()
+        {
+            autoAjo?.Pause();
+            autoAjo = null;
+            autoLappu.style.display = DisplayStyle.None;
+        }
+
         // --- testikomento --------------------------------------------------------------
 
         /// <summary>
-        /// `ui linssi kuvaselite [kelaa|kiinni|auki|automaatti|mittaa|tila]` (Linssiseppä 29.9.): kelaa = selitteen
+        /// `ui linssi kuvaselite [kelaa|kiinni|auki|automaatti|mittaa|auto|auto-pois|tila]` (Linssiseppä 29.9.): kelaa = selitteen
         /// napautus, kiinni/auki = napautus vain tarvittaessa, automaatti = vinkin automaattinen kelaus heti, mittaa =
         /// pelkkä kokomittari 1,2 s (esim. ennen `ui napauta x y` kuvaan, LISÄYS 6). Liukuvat komennot käynnistävät
         /// kokomittarin, joka kirjaa selitteen koon jokaisella ruudulla 0,8 s ajan (MATKAKIRJA kuvaselite koko …):
@@ -481,6 +592,8 @@ namespace Matkakirja.Natiivi
                 case "auki": if (kiinni) { MittaaKoko(0.8f); Kelaa(); } break;
                 case "automaatti": kelaus?.Pause(); MittaaKoko(1.2f); KelaaRiveittain(); break;
                 case "mittaa": MittaaKoko(1.2f); break;
+                case "auto": AsetaAuto(true); break;          // AUTO päälle (web PR #3817)
+                case "auto-pois": AsetaAuto(false); break;
             }
             return SeliteTila;
         }
@@ -496,7 +609,8 @@ namespace Matkakirja.Natiivi
                 bool oma = puhe != null && luennanUrl != null && puhe.SoivaUrl == luennanUrl;
                 string luenta = luettu == null ? "ei" : luennanUrl == null ? "ei alkanut" : !oma ? "ohi"
                     : puhe.Soi ? $"soi {puhe.Aika:0.0}/{puhe.Kesto:0.0} s" : "latautuu";
-                return $"selite {(kiinni ? "kiinni" : "auki")}{(vinkki ? " (vinkki)" : "")} {r.width:0}x{r.height:0}, liukuja {Tiivistys.Kesken}, "
+                return $"selite {(kiinni ? "kiinni" : "auki")}{(vinkki ? " (vinkki)" : "")} {r.width:0}x{r.height:0}, otsikko \"{otsikko.text}\", "
+                    + $"auto {(AutoKaytossa ? (autoAjo != null ? "siirto " + autoAika.text : "päällä") : "pois")}, liukuja {Tiivistys.Kesken}, "
                     + $"luenta {luenta} ({AstronauttiLinssi.SelitteenSailio}, {luettu?.Length ?? 0} mrk)";
             }
         }
