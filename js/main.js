@@ -176,7 +176,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2557';
+const APP_VERSION = '2026-09-21.2558';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -631,7 +631,8 @@ const AANIKYTKIMET = [
   },
   {
     avain: 'tausta',
-    nimi: 'Äänimaisema',
+    // Valikossa "Tila" (omistaja 2.10.2026 klo 15.0x: "muuta äänimaisema muotoon tila").
+    nimi: 'Tila',
     seloste: 'Paikkojen äänitykset ja tehosteet — myös koko pelin mykistys',
     ikoni: '<path d="M4.5 9.4h2.8l4.2-3.4v12l-4.2-3.4H4.5z"/><path d="M15.4 8.6a4.4 4.4 0 0 1 0 6.8"/><path d="M18.2 6.2a7.6 7.6 0 0 1 0 11.6"/>',
     paalla: () => sfx.enabled,
@@ -1463,7 +1464,8 @@ function paivitaVersioKulma() {
   const numero = `v${APP_VERSION.split('.').pop()}`;
   // Kehittäjätila merkitään numeron perään (omistajan päätös 13.8.2026,
   // kumoaa 8.8. linjan): valikossa merkintä ei häiritse pelinäkymää.
-  versioKulma.textContent = kehittajaTilaPaalla() ? `${numero} · kehittäjä` : numero;
+  // Kehittäjätilassa versio suluissa kuten natiivin "v1.1 (120)" (omistaja 2.10.2026 klo 14.03); pelaajalle ennallaan.
+  versioKulma.textContent = kehittajaTilaPaalla() ? `kehittäjä (${numero})` : numero;
 }
 paivitaVersioKulma();
 
