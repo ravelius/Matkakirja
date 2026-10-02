@@ -9902,4 +9902,4 @@ Päätoimittaja esitti 2.10.2026 klo 07.1x Marcus Aureliuksen lukijan tekstit sa
 
 ## OMISTAJA: KAIKU SILMÄMUNAAN ERITTÄIN LÄHELTÄ (2.10.2026) (2.10.2026 klo 07.25)
 
-Omistaja 2.10.2026 klo 07.3x sanatarkasti: 'Voisiko joku kuva olla niin läheltä että vain silmämuna näkyisi ja siihen heijastettaisiin Kaiku?' → Linja: kierroksella 2 (oraakkeli, Kodros-kylix) kamera erittäin lähellä niin, että ruudussa on vain silmämuna ja luomen reuna; kaiku ainoana valona kaartuu silmämunan pinnalle; kierrosten kuvakoot vaihtelevat (otsa – silmä – kasvojen sivu). Linnanrakentaja: koestilli, sitten v9.
+Omistaja 2.10.2026 klo 07.2x sanatarkasti: 'Voisiko joku kuva olla niin läheltä että vain silmämuna näkyisi ja siihen heijastettaisiin Kaiku?' → Linja: kierroksella 2 (oraakkeli, Kodros-kylix) kamera erittäin lähellä niin, että ruudussa on vain silmämuna ja luomen reuna; kaiku ainoana valona kaartuu silmämunan pinnalle; kierrosten kuvakoot vaihtelevat (otsa – silmä – kasvojen sivu). Linnanrakentaja: koestilli, sitten v9.
