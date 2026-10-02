@@ -7,8 +7,8 @@
 //             tumma pinta). ✕ lämmintä lasia (tk-teema-lasi), veto alas ja Esc → PyydaSulku.
 //   TEKSTIT   nimi (NimiRivit versaalina) ja vuodet, kysymys, lähderivi (kreikka ja viite); peitot joka ruutu Tekstit-arvoista.
 //   LOPUSSA   elämä-lappu NOSTOKORTTI-pohjalla, teema tumma (paikka ja vetokahva kuten IhmisenNostokortti, ei ✕:ää) ja PULU:
-//             minipulu oikeassa alakulmassa → PuluChat.AvaaLinssissa (teema lasi). Kulma nousee lapun yläpuolelle (web
-//             bottom = lapun korkeus + 12). Lappu ja PULU ovat valinnaisia (Elama / PulunKysymykset tyhjä → ei näy).
+//             minipulu oikeassa alakulmassa → PuluChat.AvaaLinssissa (teema lasi). Kulma väistää lapun (
+//             puhelimessa 8 pt lapun yläpuolelle, sivukortilla lapun vasemmalle, web #3857). Lappu ja PULU ovat valinnaisia (Elama / PulunKysymykset tyhjä → ei näy).
 // Kerros: Ylakerros (37) kuten Kuvanakyma ja IssKyytiNakyma (KUVANÄKYMÄ-pohjat): koko ruudun näkymä peittää linssiselitteen
 // ja taikalasit (25) sekä kulman Pulun (35); Pulun chat nousee linssitilassa näkymän päälle (UiNakymat.ChatinKerros).
 // LinssiUi:n "Sulje linssi" on piilossa linssin ajan (Peittaa → LinssiUi.PaivitaSulku), koska ✕ ja kortti sulkevat.
@@ -324,13 +324,32 @@ namespace Matkakirja.Natiivi
             AsetaPulunKorkeus();
         }
 
-        /// <summary>Web: lapun ollessa auki kulma nousee lapun yläreunaan (bottom = lapun korkeus + 12), muuten USS:n kulma.</summary>
+        /// <summary>
+        /// Pulu lapun ollessa auki (web #3857 lapunVahti): sivukortilla (vasen reuna yli 25 % leveydestä) kulma siirtyy kortin
+        /// vasemmalle puolelle (right = näkymän oikea − kortin vasen + 12), ettei se osu ✕:n päälle; puhelimessa 8 pt kortin
+        /// yläreunan yläpuolelle. Kiinni: USS:n kulma.
+        /// </summary>
         void AsetaPulunKorkeus()
         {
-            float H = turva.layout.height, y = lappu.layout.y;
-            if (lappuAuki && !float.IsNaN(H) && !float.IsNaN(y) && H > 0 && lappu.layout.height > 0)
-                pulukulma.style.bottom = Mathf.Round(H - y);
-            else pulukulma.style.bottom = StyleKeyword.Null;
+            float W = turva.layout.width, H = turva.layout.height, x = lappu.layout.x, y = lappu.layout.y;
+            if (lappuAuki && !float.IsNaN(W) && !float.IsNaN(H) && !float.IsNaN(y) && H > 0 && lappu.layout.height > 0)
+            {
+                if (x > 0.25f * W)
+                {
+                    pulukulma.style.bottom = StyleKeyword.Null;
+                    pulukulma.style.right = Mathf.Round(W - x + 12f);
+                }
+                else
+                {
+                    pulukulma.style.bottom = Mathf.Round(H - y + 8f);
+                    pulukulma.style.right = StyleKeyword.Null;
+                }
+            }
+            else
+            {
+                pulukulma.style.bottom = StyleKeyword.Null;
+                pulukulma.style.right = StyleKeyword.Null;
+            }
         }
 
         void PuluNapautettu()
