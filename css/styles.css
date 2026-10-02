@@ -536,7 +536,7 @@ button, .brand, .turn-pill, .fact-card h2 {
   gap: 0.45rem;
   font-size: 0.9rem;
   padding: 0.25rem 0.7rem;
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   background: var(--panel);
   border: 1px solid var(--line);
   min-width: 0;
@@ -642,7 +642,7 @@ button, .brand, .turn-pill, .fact-card h2 {
   font-variant-numeric: tabular-nums;
 }
 
-/* "1 pv · 400 £" (omistaja 2.10.2026 klo 15.1x): päivä ensin, piste kassan edessä. */
+/* "1 pv · £400" (omistaja 2.10.2026 klo 15.1x): päivä ensin, piste kassan edessä. */
 .turn-pill .clock + .kassa::before {
   content: '·';
   margin-right: 0.45rem;
@@ -3327,7 +3327,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   right: 0.4rem;
   bottom: 0.35rem;
   padding: 0.1rem 0.45rem;
-  border-radius: var(--tk-kulma-pieni);
+  border-radius: 999px;
   background: rgba(30, 22, 12, 0.6);
   color: rgba(255, 250, 240, 0.98);
   font-family: var(--font-type);
@@ -3930,7 +3930,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   margin: 0 0 0 auto;
   padding: 0.18rem 0.55rem;
   border: 1px solid rgba(90, 74, 51, 0.45);
-  border-radius: var(--tk-kulma-pieni);
+  border-radius: 999px;
   font-family: var(--font-type);
   font-size: 0.7rem;
   color: rgba(64, 51, 34, 0.95);
@@ -4153,7 +4153,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   font-size: 0.85rem;
   padding: 0.5rem 1.05rem;
   border: 1px solid rgba(70, 51, 31, 0.4);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   background: rgba(255, 250, 238, 0.6);
   box-shadow: none;
 }
@@ -8308,7 +8308,7 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
   min-height: 0;
   padding: 0.42rem 0.95rem;
   border: 1px solid rgba(232, 214, 172, 0.5);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   background: rgba(36, 26, 18, 0.35);
   font-family: var(--font-type);
   font-size: 0.86rem;
@@ -9427,7 +9427,7 @@ body.flight-active .fact-card {
 
 .quiz-badge {
   border: 1px solid rgba(70, 51, 31, 0.55);
-  border-radius: var(--tk-kulma-pieni);
+  border-radius: 999px;
   color: var(--map-ink);
   font-family: var(--font-type);
   font-weight: 700;
@@ -13950,7 +13950,7 @@ button.lukija-nappi.lataa .icon-glyph::after { opacity: 0.55; }
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(70, 51, 31, 0.22);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 1.05rem;
   background: rgba(255, 252, 244, 0.6);
   box-shadow: none;
   color: inherit;
@@ -16149,7 +16149,7 @@ button.lukija-nappi.lukee,
   margin: 0;
   padding: 0.18rem 0.65rem;
   border: 1px solid rgba(70, 51, 31, 0.5);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   background: rgba(255, 250, 238, 0.7);
   box-shadow: none;
   font-family: var(--font-type);
@@ -16674,7 +16674,7 @@ body.vertailu-tila .pawns { display: none; }
   max-width: min(96vw, 900px);
   padding: 0.35rem 0.5rem;
   border: 1px solid rgba(70, 51, 31, 0.45);
-  border-radius: var(--tk-kulma-kortti);
+  border-radius: 999px;
   background: rgba(247, 237, 216, 0.94);
   box-shadow: 0 6px 14px -8px rgba(40, 28, 16, 0.6);
 }
@@ -16692,7 +16692,7 @@ body.vertailu-tila .pawns { display: none; }
   gap: 0.3rem;
   padding: 0.2rem 0.55rem;
   border: 1px solid rgba(70, 51, 31, 0.4);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   background: rgba(255, 250, 238, 0.9);
   font-family: var(--font-type);
   font-size: 0.8rem;
@@ -16718,7 +16718,7 @@ body.vertailu-tila .pawns { display: none; }
 
 .vertailu-vertaa {
   padding: 0.25rem 0.8rem;
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   font-family: var(--font-type);
 }
 
@@ -17586,7 +17586,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   vertical-align: 0.15em;
   margin-left: 0.5em;
   padding: 0.1em 0.55em;
-  border-radius: var(--tk-kulma-pieni);
+  border-radius: 999px;
   font-size: 0.42em;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -17815,7 +17815,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .tk-tuore-merkki {
   font-size: 0.72em;
   padding: 0.1em 0.5em;
-  border-radius: var(--tk-kulma-pieni);
+  border-radius: 0.8em;
   background: rgba(255, 255, 255, 0.65);
   color: inherit;
   white-space: nowrap;
@@ -17825,7 +17825,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   font-size: 0.72em;
   padding: 0.15em 0.6em;
   border: 1px solid rgba(70, 51, 31, 0.35);
-  border-radius: var(--tk-kulma-pieni);
+  border-radius: 0.8em;
   background: rgba(255, 255, 255, 0.5);
   color: inherit;
   cursor: pointer;
@@ -17911,7 +17911,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .tuore-chip {
   font-size: 0.85em;
   padding: 0.2em 0.7em;
-  border-radius: var(--tk-kulma-pieni);
+  border-radius: 1em;
   white-space: nowrap;
 }
 .tuore-chip.valmis { background: #e2efdc; color: #2c5e2a; }
@@ -17939,7 +17939,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .tk-vipu-nappi {
   padding: 0.2rem 0.6rem;
   border: 1px solid rgba(70, 51, 31, 0.3);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   background: transparent;
   color: inherit;
   font: inherit;
@@ -19116,7 +19116,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   color: rgba(70, 51, 31, 0.85);
   background: rgba(255, 250, 238, 0.6);
   border: 1px solid rgba(70, 51, 31, 0.35);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   box-shadow: none;
 }
 
@@ -19141,7 +19141,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   border: 1px solid rgba(70, 51, 31, 0.35);
   /* Yleinen nappisääntö toisi käsinpiirretyn kulmapyöristyksen; tämä
    * rivi on kartan reunassa ja pysyy siistinä pillerinä. */
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   box-shadow: none;
 }
 
@@ -23202,7 +23202,7 @@ button.pollo-naytakuplat {
   padding: 0.12rem 0.55rem;
   min-height: 0;
   border: 1px solid var(--pollo-viiva);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   background: var(--pollo-paperi-2);
   color: var(--pollo-korostus);
   font-family: inherit;
@@ -23225,7 +23225,7 @@ button.pollo-ehdota {
   padding: 0.12rem 0.55rem;
   min-height: 0;
   border: 1px solid var(--pollo-viiva);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   background: var(--pollo-paperi-2);
   color: var(--pollo-korostus);
   font-family: inherit;
@@ -23445,7 +23445,7 @@ a.pollo-kasitelinkki:active { color: var(--pollo-muste); }
   gap: 0.35rem;
   padding: 0.18rem 0.55rem 0.18rem 0.35rem;
   border: 1px solid rgba(122, 85, 20, 0.42);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   background: rgba(250, 243, 226, 0.92);
   color: var(--map-ink);
   box-shadow: 0 2px 8px rgba(46, 30, 14, 0.22);
@@ -23485,7 +23485,7 @@ a.pollo-kasitelinkki:active { color: var(--pollo-muste); }
   min-height: 40px;
   padding: 0 0.7rem;
   border: 1px solid var(--line);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   background: rgba(239, 220, 180, 0.9);
   color: var(--map-ink);
   font-size: 0.86rem;
@@ -23929,10 +23929,19 @@ body[data-mode] .actions .pollo-paneeli button.pollo-mikki.kuuntelee {
 
 .pollo-sanelu-tila:empty { display: none; }
 
-/* Pulun äänikeskustelun koenappi (vain kehittäjätilassa, js/pulu-realtime.js): alarivin .pollo-nappula
-   näppäimistön ja mikrofonin rinnalla (omistaja 2.10.2026 klo 13.53; ei ovaalia). */
-button.pollo-realtime-koe { flex: 2 1 0; font: inherit; font-size: 0.8rem; line-height: 1.2; }
-button.pollo-realtime-koe.paalla { border-color: var(--pollo-korostus); background: var(--pollo-paperi-2); }
+/* Pulun äänikeskustelun koenappi (vain kehittäjätilassa, js/pulu-realtime.js). */
+.pollo-realtime-koe {
+  align-self: center;
+  padding: 0.25rem 0.7rem;
+  border: 1px dashed var(--pollo-muste-himmea);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--pollo-muste-himmea);
+  font: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+.pollo-realtime-koe.paalla { border-style: solid; color: inherit; }
 .pollo-realtime-koe[hidden] { display: none; }
 
 .pollo-rivi { display: flex; gap: 0.35rem; }
@@ -24892,7 +24901,7 @@ textarea.reaktio-teksti {
   padding: 0.25rem 0.7rem;
   min-height: 0;
   border: 1px solid rgba(70, 51, 31, 0.35);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   background: rgba(255, 252, 244, 0.7);
   color: rgba(50, 36, 22, 0.92);
   font-family: inherit;
@@ -24994,7 +25003,7 @@ button.pollo-pilleri {
   padding: 0.3rem 0.7rem;
   min-height: 0;
   border: 1px solid rgba(70, 51, 31, 0.35);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   background: rgba(255, 252, 244, 0.7);
   color: rgba(50, 36, 22, 0.92);
   font-family: inherit;
@@ -25023,7 +25032,7 @@ button.pollo-poimintanappi {
   padding: 0.25rem 0.6rem;
   min-height: 0;
   border: 1px solid var(--pollo-viiva);
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   background: var(--pollo-paperi-2);
   color: var(--pollo-muste);
   font-family: inherit;
@@ -27662,7 +27671,7 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   pointer-events: auto;
   min-height: 0;
   padding: 0.35rem 0.8rem;
-  border-radius: var(--tk-kulma-nappi);
+  border-radius: 999px;
   border: 1px solid rgba(217, 161, 59, 0.55);
   background: rgba(36, 26, 18, 0.82);
   color: #f3e4bf;
@@ -29099,7 +29108,7 @@ body.maatiedot-tila .pallolauta-nappula { display: none; }
 .kt-merkki {
   padding: 0.05rem 0.36rem;
   border: 1px solid rgba(70, 51, 31, 0.35);
-  border-radius: var(--tk-kulma-pieni);
+  border-radius: 999px;
   font-size: 0.68rem;
   letter-spacing: 0.03em;
   white-space: nowrap;
@@ -29731,26 +29740,6 @@ body[data-mode] .turn-card:has(.toimintorivi.rivi-yksi) .actions,
    saa avata tässä — suljettuna se on `pointer-events: none` ja
    sieppaisi muuten koko rivin alan matkanappeineen. */
 .toimintorivi.rivi-yksi .monitoimi-nappi { pointer-events: auto; }
-
-/*
- * LIUKU NOUSEE LIIKU-PILLERIN JA PULUN YLÄPUOLELLE (Päätoimittaja 2.10.2026,
- * Natiivi-UI:n pariteettikatsaus natiivi-ui-pariteetti4/parit/liiku.jpg).
- * Rivin päällä liuska jäi osittain kelluvan Pulun (sama kaista, oikea
- * reuna) ja kartuutsin taakse. Natiivissa liuska on oma rivinsä pillerin
- * yläpuolella, ja pilleri jää näkyviin avaimeksi, josta liuska myös
- * suljetaan (vaihdaLiuku). Siksi liuska nousee rivin korkeuden verran
- * ylös, ja monitoiminappi ei väisty sen alta.
- */
-.toimintorivi.rivi-yksi .toimintorivi-liuku {
-  top: auto;
-  bottom: calc(100% + 1.6rem);   /* Pulun hahmo ulottuu ~13 px nappinsa yli */
-  height: 100%;
-}
-.toimintorivi.rivi-yksi.liuku-auki .toimintorivi-perus > .monitoimi-nappi {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
 
 /*
  * ERÄ 19: SYMBOLI POIS, SANA TILALLE. Kompassi oli napin koko sisältö;
