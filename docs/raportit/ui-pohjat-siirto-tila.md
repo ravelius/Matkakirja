@@ -62,3 +62,11 @@ UI-siirtymiä. Suunnitelma ja säännöt: `ui-pohjat-kartoitus-20261001.md`. Sä
 - Odottaa omistajan OK:ta: ylapalkki-tikkaus-2 c64d945b (tikkaus A/B/C `ui ylapalkki tikkaus X`, pilleri BUILD 123 -tumma "1 pv · £400", logo ja pilleri keskelle kaaren ja tikkauskehän väliin laskennallisesti), nostorivi-2 3ec5808a (yksi ylärivi, kehyksettömät rivit, suodattimet suorakulmioina), valikko-v2 c0f4fe8a (päivärivi −£20, Tila, tasonäkymä), galleria 7e8eaf02 (julisteet pikkukuvin).
 - Kuvat: proto-3d/lokit/natiivi-ui-pohjat/omistajalle-20261002-ylapalkki-valikko/ (1–12). Mittausskriptit: skriptit/saarivali.py, kaarivali.py, keskitys.py; kartoitus.sh MASKI=1 (saari näkyy) ja KEHITTAJA=1.
 - Opit: asettelun jälkeinen padding-takaisinkytkentä (GeometryChanged) aiheutti "Layout update is struggling" → laske asettelussa; generoitu tyylikirja samasta web-lähteestä kaikkiin haaroihin (muuten junamerge riitelee); Peli-testit/unity-tarkistus.sh kääntää C#:n ilman editoria.
+
+## 2.10. myöhäisilta 22.1x (Natiivi-UI)
+
+- BUILD 129: yläpalkki (tikkaus B, pilleri kiinteällä leveydellä, logo optisesti), nostoselain yhdellä rivillä, valikko v2 siistiminen.
+- Hyväksytty, merge-pyyntö tulossa: ylapalkki-matalampi 7d990788 (+ iPadin pilleriväli d00c7f8b, todennus kesken).
+- Kesken: kokoelmat-ikkuna 5cfe7253 (Julisteet = yksi GALLERIA-ikkuna webin #3870 mukaan, Aarteet = yksi ikkuna #3877 mukaan,
+  kehittäjätilassa kaikki auki); PUHE ÄÄNENÄ (web #3867/#3869 mainissa); tyylikirjan linssivalikot web #3878.
+- Luovutus: docs/raportit/viesti-natiivi-ui-luovutus-20261002.md.
