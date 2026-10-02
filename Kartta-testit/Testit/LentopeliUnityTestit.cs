@@ -52,6 +52,7 @@ namespace Matkakirja.Kartta.Testit
             foreach (var k in new[] { "aariviiva", "rannikko", "rajat" })
                 Oleta.Tosi(s.Contains($"Nakyvyys(\"{k}\", false)") && s.Contains($"Nakyvyys(\"{k}\", true)"), k + " pois lennolta ja takaisin");
             Oleta.Tosi(Lue("Assets/Matkakirja/Kartta/Symbolimallit.cs").Contains("&& Nappula.Lentopelissa == null"), "symbolimallit pois lennolta");
+            Oleta.Tosi(Lue("Assets/Matkakirja/UI/Kutsuminiatyyri.cs").Contains("Nappula.Lentopelissa != null"), "avauskortin kutsu pois lennolta");
             var nk = Lue("Assets/Matkakirja/Kartta/NostoKerros.cs");
             Oleta.Tosi(nk.Contains("if (LentopeliPiilottaa) nimet = false;") && nk.Contains("&& !LentopeliPiilottaa;"), "nostot ja nimiöt pois lennon ajaksi");
         }
