@@ -9899,3 +9899,7 @@ Omistaja 2.10.2026 aamulla sanatarkasti: 'Kaiku voisi olla myös ainut valon lä
 ## OMISTAJA: MARCUS AURELIUKSEN LUENTA SAA GENEROIDA; MUSIIKKI BEETHOVEN 7 JA GOLDBERG ARIA (2.10.2026) (2.10.2026 klo 07.22)
 
 Päätoimittaja esitti 2.10.2026 klo 07.1x Marcus Aureliuksen lukijan tekstit sanatarkasti (10.16, keisarin muistiinpanot Granua/Carnuntum, 4.49 niemi ja aallot, Antoninuksen rutto, 2.11, Commodus gladiaattorina; Sisältökirjuri tarkisti kreikan Wikisourcesta ja Perseuksesta sekä Cassius Dion 73(72).17–22), Pulun viisi kysymystä ja hinnan (Viisas Kertoja eleven_v3, 757 merkkiä, enintään 3 ottoa, alle 1 $). Omistaja kysyi 'Mikä musiikki sopisi aureliukselle alkuun? Ja sitten jatkoksi?' → Päätoimittaja: intro Beethovenin 7. sinfonian Allegretto (vapaa orkesterilevytys haussa), jatko Bachin Goldberg-muunnelmien Aria (Kimiko Ishizaka, Open Goldberg Variations, CC0). Omistaja sanatarkasti: 'Äänet ok' → ÄÄNILUPA (UUSIA ÄÄNIÄ): kuusi pätkää sanatarkasti, Linnanrakentaja generoi.
+
+## OMISTAJA: KAIKU SILMÄMUNAAN ERITTÄIN LÄHELTÄ (2.10.2026) (2.10.2026 klo 07.25)
+
+Omistaja 2.10.2026 klo 07.3x sanatarkasti: 'Voisiko joku kuva olla niin läheltä että vain silmämuna näkyisi ja siihen heijastettaisiin Kaiku?' → Linja: kierroksella 2 (oraakkeli, Kodros-kylix) kamera erittäin lähellä niin, että ruudussa on vain silmämuna ja luomen reuna; kaiku ainoana valona kaartuu silmämunan pinnalle; kierrosten kuvakoot vaihtelevat (otsa – silmä – kasvojen sivu). Linnanrakentaja: koestilli, sitten v9.
