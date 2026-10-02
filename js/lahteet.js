@@ -264,7 +264,8 @@ export const LAHTEET = [
         lisenssi: 'Public Domain Mark 1.0',
       },
       {
-        nimi: 'Ajattelijat-linssin kreikkalaiset kirjasimet: Gentium Plus, GFS Didot ja GFS Solomos (Sokrateen taustavirta)',
+        nimi: 'Ajattelijat-linssin kreikkalaiset kirjasimet: Gentium Plus, GFS Didot ja GFS Solomos (Sokrateen taustavirta); '
+          + 'punnan merkin varakirjasin "Matkakirja Punta" on Gentium Plussan osajoukko (vain £)',
         tekija: 'SIL International (Gentium Plus); Greek Font Society (GFS Didot, GFS Solomos)',
         lisenssi: 'SIL Open Font License 1.1',
       },
