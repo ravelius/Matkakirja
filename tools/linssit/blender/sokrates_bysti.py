@@ -1114,12 +1114,12 @@ if '--prologi' in A:
     mt.node_tree.nodes['Principled BSDF'].inputs['Roughness'].default_value = 1.0; lev_.data.materials.append(mt)
     valot_ = []
     for nimi_, paikka, kohde_, e, koko_ in (('taka', (0.0, 0.30, 0.40), (0.0, 0.9, 0.42), 9.0, 0.0),       # hehkuva kehä pään takana
-                                            ('reuna-v', (-0.30, 0.55, 0.40), (0.0, -0.05, 0.38), 22.0, 0.05),  # reunavalot takaa, pään korkeudelta
-                                            ('reuna-o', (0.30, 0.55, 0.40), (0.0, -0.05, 0.38), 22.0, 0.05)):
+                                            ('reuna-v', (-0.30, 0.55, 0.42), (0.0, -0.06, 0.42), 45.0, 26.0),  # reunavalot takaa, keila vain päähän
+                                            ('reuna-o', (0.30, 0.55, 0.42), (0.0, -0.06, 0.42), 45.0, 26.0)):
         if koko_ == 0.0:   # taustan kehä: pehmeäreunainen spotti, vain pään taakse
             d = bpy.data.lights.new(nimi_, 'SPOT'); d.spot_size = math.radians(70); d.spot_blend = 1.0; d.shadow_soft_size = 0.05
-        else:
-            d = bpy.data.lights.new(nimi_, 'AREA'); d.size = koko_
+        else:   # Päätoimittaja: hartiat ja sokkeli saivat leveää valoa → kapea keila pään korkeudelle, hartioihin enintään ohut viiva
+            d = bpy.data.lights.new(nimi_, 'SPOT'); d.spot_size = math.radians(koko_); d.spot_blend = 0.45; d.shadow_soft_size = 0.03
         d.color = (1.0, 0.86, 0.66)
         ob = bpy.data.objects.new(nimi_, d); sc.collection.objects.link(ob); ob.location = paikka; kohdista(ob, kohde_)
         # syttyminen: hehkulangan lämpeneminen (kiihtyvä) + pieni värähdys, sitten tasainen
