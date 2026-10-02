@@ -56,7 +56,15 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Soiko kertoja (isoisän luenta) juuri nyt: pulu vaikenee sen ajan.</summary>
         public static bool KertojaPuhuu => (kertoja != null && kertoja.isPlaying)
-            || (Puhe.Instanssi != null && Puhe.Instanssi.Soi && !Puhe.Instanssi.PuluaaniSoi);
+            || (Puhe.Instanssi != null && Puhe.Instanssi.Soi && !Puhe.Instanssi.PuluaaniSoi)
+            || (LinssiPuhuu != null && LinssiPuhuu());
+
+        /// <summary>LINSSIN OMA PUHE (omistaja 2.10. TF 120, linna: "äänet menevät päällekkäin", "pulu puhuu muiden
+        /// päälle"): DioraamaAanet kertoo, soiko linnan hahmon repliikki, kertojan jakso tai Pulun kertomus. Se lasketaan
+        /// kertojaksi, joten Pulu ei aloita sen päälle (kupla äänettä), ja kertojakanavan uusi puhe katkaisee sen
+        /// (LinssiPuheKatkaise). null = ei linssin puhetta.</summary>
+        public static Func<bool> LinssiPuhuu;
+        public static Action LinssiPuheKatkaise;
         /// <summary>Pulu puhuu: oma repliikki tai chat-vastauksen ääneen luku (Puhe, persoona pollo).</summary>
         public static bool PuluPuhuu => (puhe != null && puhe.isPlaying) || (Puhe.Instanssi != null && Puhe.Instanssi.PuluaaniSoi);
         public static AudioSource Kertojasoitin => Soitin(AaniKanava.Kertoja);
@@ -284,6 +292,7 @@ namespace Matkakirja.Natiivi
                     alkoi?.Invoke(klippi);
                     return;
                 }
+                if (k == AaniKanava.Kertoja) LinssiPuheKatkaise?.Invoke(); // yksi puhe kerrallaan: uusi luenta katkaisee linnan puheen
                 var s = Soitin(k);
                 s.Stop();
                 s.clip = klippi;
