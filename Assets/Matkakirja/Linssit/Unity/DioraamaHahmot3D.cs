@@ -223,6 +223,7 @@ namespace Matkakirja.Natiivi
                 go.transform.localScale = new Vector3(sk, sk, sk);
                 e.Sekoitin = new DioraamaSekoitin(malli.Glb);
             }
+            LisaaKontaktivarjo(go.transform);
             e.Juuri = go;
             e.SolmuT = solmuT;
             e.Malli = malli;
@@ -232,6 +233,42 @@ namespace Matkakirja.Natiivi
                 var lyhty = LyhdynLuoja(go.transform);
                 if (lyhty != null) lyhty.transform.localPosition = new Vector3(0.28f, 0.95f, 0.12f);
             }
+        }
+
+        /// <summary>Kontaktivarjo (omistaja 2.10. 20.2x: "kävelijä tarvitsee vielä varjon jalkojensa alle"): linnan leivotut
+        /// lattiat eivät ota reaaliaikaista varjoa vastaan, joten JOKAISEN 3D-hahmon (skinnattu ja nivelhahmo, kävelijä ja
+        /// seisoja) juuren alle tulee pehmeä levy, joka liikkuu ja kääntyy hahmon mukana. Periaate kuten kartan symbolimallien
+        /// maakontaktissa (Symbolimallit.Rakentaja PohjaVerkko): peitto keskellä, pehmeä lasku reunalle.</summary>
+        const float VarjoSade = 0.36f, VarjoNosto = 0.012f;
+        static Mesh varjoVerkko;
+        static Material varjoMateriaali;
+
+        static void LisaaKontaktivarjo(Transform juuri)
+        {
+            if (varjoVerkko == null)
+            {
+                varjoVerkko = new Mesh { name = "Hahmo3D-kontaktivarjo" };
+                varjoVerkko.SetVertices(new[] { new Vector3(-1, 0, -1), new Vector3(1, 0, -1), new Vector3(1, 0, 1), new Vector3(-1, 0, 1) });
+                varjoVerkko.SetUVs(0, new[] { new Vector2(-1, -1), new Vector2(1, -1), new Vector2(1, 1), new Vector2(-1, 1) });
+                varjoVerkko.SetNormals(new[] { Vector3.up, Vector3.up, Vector3.up, Vector3.up });
+                varjoVerkko.SetTriangles(new[] { 0, 2, 1, 0, 3, 2 }, 0);
+                varjoVerkko.RecalculateBounds();
+            }
+            if (varjoMateriaali == null)
+            {
+                var sh = Resources.Load<Shader>("Varjostimet/DioraamaKontaktivarjo");
+                if (sh == null) return;
+                varjoMateriaali = new Material(sh) { name = "Hahmo3D/kontaktivarjo" };
+            }
+            var g = new GameObject("Kontaktivarjo") { layer = DioraamaNayttamo.Kerros };
+            g.transform.SetParent(juuri, false);
+            g.transform.localPosition = new Vector3(0f, VarjoNosto, 0f);
+            g.transform.localScale = new Vector3(VarjoSade, 1f, VarjoSade);
+            g.AddComponent<MeshFilter>().sharedMesh = varjoVerkko;
+            var r = g.AddComponent<MeshRenderer>();
+            r.sharedMaterial = varjoMateriaali;
+            r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            r.receiveShadows = false;
         }
 
         /// <summary>DioraamaNayttamo asettaa: luo lyhdyn liekin annetun juuren lapseksi (DioraamaLiekit.LuoLyhty).</summary>
