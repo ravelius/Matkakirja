@@ -242,6 +242,27 @@ namespace Matkakirja.Natiivi
             if (p.PiirtoKehyksia-- <= 0) { p.Kamera.enabled = false; p.VarjoKamera.enabled = false; }
         }
 
+        /// <summary>Diagnostiikka `ui erikoisnostot varjokuva`: maski ja varjo PNG:ksi Documentsiin, alfan summa ja maksimi.</summary>
+        public static string VarjoKuva(AjattelijaPaa p)
+        {
+            if (p?.Maski == null) return "ei varjoa";
+            string Tallenna(RenderTexture rt, string nimi)
+            {
+                var vanha = RenderTexture.active;
+                RenderTexture.active = rt;
+                var t = new Texture2D(rt.width, rt.height, TextureFormat.RGBA32, false);
+                t.ReadPixels(new Rect(0, 0, rt.width, rt.height), 0, 0);
+                t.Apply(false);
+                RenderTexture.active = vanha;
+                double summa = 0; float maks = 0;
+                foreach (var c in t.GetPixels32()) { summa += c.a; maks = Mathf.Max(maks, c.a); }
+                File.WriteAllBytes(Path.Combine(Application.persistentDataPath, "varjo-" + nimi + "-" + p.Data.Tunnus + ".png"), t.EncodeToPNG());
+                UnityEngine.Object.Destroy(t);
+                return $"{nimi} alfa summa {summa / 255:0} maks {maks:0}";
+            }
+            return Tallenna(p.Maski, "maski") + ", " + Tallenna(p.Varjo, "varjo");
+        }
+
         public static void Pura(AjattelijaPaa p)
         {
             if (p == null || p.Purettu) return;

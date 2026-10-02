@@ -200,6 +200,20 @@ namespace Matkakirja.Natiivi
             return "erikoisnostot: sävy " + AjattelijaPaat.Savy;
         }
 
+        /// <summary>Diagnostiikka `ui erikoisnostot varjokuva` ja A/B `ui erikoisnostot varjo peitto sumennus syvyys`.</summary>
+        public string Varjo(string[] a)
+        {
+            if (a.Length >= 4)
+            {
+                AjattelijaPaat.VarjoPeitto = float.Parse(a[1], CultureInfo.InvariantCulture);
+                AjattelijaPaat.VarjoSumennus = float.Parse(a[2], CultureInfo.InvariantCulture);
+                AjattelijaPaat.VarjoSyvyys = float.Parse(a[3], CultureInfo.InvariantCulture);
+                foreach (var p in paat) p.Piirretty = null;
+            }
+            return "erikoisnostot: " + string.Join(" | ", paat.Select(p => p.A.Tunnus + ": " + AjattelijaPaat.VarjoKuva(p.P)))
+                + string.Format(CultureInfo.InvariantCulture, " (peitto {0}, sumennus {1}, syvyys {2})", AjattelijaPaat.VarjoPeitto, AjattelijaPaat.VarjoSumennus, AjattelijaPaat.VarjoSyvyys);
+        }
+
         /// <summary>Testikomento `ui erikoisnostot napauta [i]`: pään napautus kuten sormi (avaa ajattelijan).</summary>
         public string Napauta(int i)
         {
