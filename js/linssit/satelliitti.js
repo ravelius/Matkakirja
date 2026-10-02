@@ -2050,7 +2050,7 @@ function avaa(lauta, tila, ui) {
 
   /*
    * PULUN TAULU (js/linssit/pulu-taulu.js, omistaja 28.9.2026): linssin
-   * moodit (Maapallo, ISS:n rinnalla, ISS:n sisälle, Astronauttien kuvat).
+   * moodit (Maapallo, ISS:n sisälle, Astronauttien kuvat; ISS:n rinnalla poistettu 2.10.2026).
    * Tulee itse heti, kun musta verho on poissa (omistaja 29.9.2026:
    * myös tervetulon aikana), ja Pulun napautus avaa sen aina uudelleen. Kuvat avautuvat SAMALLA
    * avaaKohde-funktiolla kuin pisteen napautus: kohde on se, joka on

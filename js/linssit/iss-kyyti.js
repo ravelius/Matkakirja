@@ -244,7 +244,16 @@ export function pisteelta(v, sade = MAAN_SADE_M) {
  * kenttäkulman (siirtymän aikana sekoitettuna). Kaukonäkymässä kamera on
  * pelaajan, joten asentoa ei anneta. Ajat sekunteina.
  */
-export function luoKyyti() {
+/**
+ * ISS:N RINNALLA POIS PELISTÄ (omistaja 2.10.2026 klo 10.4x, loki 10.42: "ota ISS:n rinnalla toiminto pois pelistä"):
+ * napautus vie kaukonäkymästä suoraan Cupolaan (yksi napautus), eikä mikään polku johda seurantaan. Seurannan koodi
+ * jää kehittäjälipun ?issseuranta taakse (siirtymien vertailu); natiivi samalla määrittelyllä (Linssiseppä).
+ */
+export function issSeurantaLipusta(haku = globalThis.location?.search ?? '') {
+  try { return new URLSearchParams(haku).has('issseuranta'); } catch { return false; }
+}
+
+export function luoKyyti({ seuranta = issSeurantaLipusta() } = {}) {
   let tila = TILA.kauko;
   let siirtyy = false;
   let alku = null;
@@ -270,14 +279,22 @@ export function luoKyyti() {
     get tila() { return tila; },
     get kyydissa() { return kyydissa(); },
     get siirtyy() { return siirtyy; },
-    /** Napautus: kauko → seuranta → ikkuna → seuranta. `nykyinen` = kameran asento nyt. */
+    /** Onko seuranta käytössä (vain kehittäjälippu ?issseuranta). */
+    get seuranta() { return seuranta; },
+    /**
+     * Napautus: kauko → ikkuna (Cupola) yhdellä napautuksella; kohteen yltä takaisin ikkunaan; ikkunassa ei tee mitään
+     * (pois vain ✕:llä). Kehittäjälipulla vanha ketju kauko → seuranta → ikkuna → seuranta. `nykyinen` = kameran asento nyt.
+     */
     napauta(nykyinen, iss, kentta, nyt, vahennetty) {
       if (tila === TILA.kauko) {
         const k = kaari(nykyinen.lat, nykyinen.lon, iss.lat, iss.lon);
-        aloita(TILA.seuranta, nykyinen, kentta, nyt, vahennetty ? 0 : KYYTIIN_S + (KYYTIIN_LISA_S * k) / 180);
+        const lento = KYYTIIN_S + (KYYTIIN_LISA_S * k) / 180;
+        aloita(seuranta ? TILA.seuranta : TILA.ikkuna, nykyinen, kentta, nyt,
+          vahennetty ? 0 : lento + (seuranta ? 0 : IKKUNAAN_S));
       } else {
-        // Seurannasta ikkunaan; ikkunasta ja kohteen yltä takaisin seurantaan.
-        const seuraava = tila === TILA.seuranta ? TILA.ikkuna : TILA.seuranta;
+        if (!seuranta && tila === TILA.ikkuna) return;
+        // Seurannasta ikkunaan; ikkunasta ja kohteen yltä takaisin seurantaan (lipulla) tai ikkunaan.
+        const seuraava = !seuranta ? TILA.ikkuna : tila === TILA.seuranta ? TILA.ikkuna : TILA.seuranta;
         aloita(seuraava, siirtyy ? viimeisin : nykyinen, siirtyy ? viimeisinKentta : kentta, nyt,
           vahennetty ? 0 : IKKUNAAN_S);
       }
