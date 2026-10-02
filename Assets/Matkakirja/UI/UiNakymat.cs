@@ -489,11 +489,15 @@ namespace Matkakirja.Natiivi
             Aanet.Alusta(); // tehostekanava, mykistyksen napsahdus ja tehosteiden tiedostot laitteelle
 
             // ☰ avaa linssivalikon koko pelin valikkona (löydös 20 iPhone, löydös 65 kaikki laitteet).
-            Tilarivi.Valikko.clicked += () =>
+            void AvaaPilleriValikko()
             {
                 Aanentasot.Sulje(); Matkalaukku.Sulje(); Valikko.Sulje();
                 Linssit.Valitsin.Vaihda();
-            };
+            }
+            Tilarivi.Valikko.clicked += AvaaPilleriValikko;
+            // Vaaka-iPhonen ☰ (omistaja 2.10.2026 klo 23.0x): sama valikko suoraan napin päälle oikeaan yläkulmaan.
+            Tilarivi.VaakaValikkoPainettu += AvaaPilleriValikko;
+            Linssit.Valitsin.Avaajat.Add(Tilarivi.VaakaValikkoNappi);
             Linssit.Valitsin.AukiMuuttui += auki =>
             {
                 if (Linssivalitsin.Valikkona) Tilarivi.Valikko.EnableInClassList("mk-valittu", auki);
