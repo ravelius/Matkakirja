@@ -317,7 +317,8 @@ namespace Matkakirja.Natiivi
                 pilleri.AddToClassList("mk-pilleri--paiva-ensin");
             }
             pilleri.style.display = DisplayStyle.None;
-            pilleri.RegisterCallback<GeometryChangedEvent>(_ => { KeskitaPilleri(); PilleriLeveysMuuttui(); SovitaPilleri(); PilleriMuuttui?.Invoke(); });
+            logo.RegisterCallback<GeometryChangedEvent>(_ => KeskitaPystyyn(logo));
+            pilleri.RegisterCallback<GeometryChangedEvent>(_ => { KeskitaPystyyn(pilleri); PilleriLeveysMuuttui(); SovitaPilleri(); PilleriMuuttui?.Invoke(); });
 
             napit = Rakenne.El("mk-ylapalkki__napit", palkki, PickingMode.Ignore);
             Ratas = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Ratas);
@@ -1177,18 +1178,27 @@ namespace Matkakirja.Natiivi
 
         void KeskitaPilleri()
         {
+            KeskitaPystyyn(pilleri);
+            // Omistaja 2.10.2026 klo 18.4x: "pilleri ja logo eri korkeuksilla" → myös logo saaren keskilinjalle.
+            KeskitaPystyyn(logo);
+        }
+
+        /// <summary>
+        /// Elementin keskikohta saaren keskilinjalle siirrolla (translate): siirto ei vaikuta asetteluun, joten laskenta ei kierrä
+        /// (vrt. 86638635). Paikka luetaan asettelusta (layout, ilman siirtoa) palkin koordinaateissa.
+        /// </summary>
+        void KeskitaPystyyn(VisualElement e)
+        {
             var saari = tikkausSaari;
             if (saari.width <= 0f || !PilleriOikealla || saariTikkaus == null || saariTikkaus.style.display == DisplayStyle.None)
             {
-                if (pilleri.style.marginTop.keyword != StyleKeyword.Null) pilleri.style.marginTop = StyleKeyword.Null;
+                if (e.style.translate.keyword != StyleKeyword.Null) e.style.translate = StyleKeyword.Null;
                 return;
             }
-            var wb = pilleri.worldBound;
-            if (float.IsNaN(wb.height) || wb.height <= 0f) return;
-            float ero = wb.center.y - palkki.worldBound.yMin - saari.center.y;
-            if (Mathf.Abs(ero) < 0.25f) return;
-            float nyt = pilleri.resolvedStyle.marginTop;
-            pilleri.style.marginTop = (float.IsNaN(nyt) ? 0f : nyt) - ero;
+            var r = e.layout;
+            if (float.IsNaN(r.height) || r.height <= 0f) return;
+            float siirto = saari.center.y - r.center.y;
+            e.style.translate = new Translate(0, siirto);
         }
 
         /// <summary>Raha pilleriin: "£400" → punta omana merkkinään ja numero; muu teksti (lataus, "Matka päättyi") sellaisenaan.</summary>
