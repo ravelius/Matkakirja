@@ -476,7 +476,7 @@ namespace Matkakirja.Natiivi
             // Astronautin kuvaselaimessa pulu on minipulu (Kuvanakyma): iso Pulu kuulsi sen takaa kuvanäkymän himmennyksen
             // läpi (Linssiseppä 29.9., laitekuva 6 kuva-minipulu-taulu; web: iso Pulu ei näy). Vain näkyvyys: puhe ja
             // luenta jatkuvat (Pulu.Nayta(false) pysäyttäisi puhekanavan).
-            Linssit.Astronautti.Kuva.AukiMuuttui += auki => Pulu.Peita(auki);
+            Linssit.Astronautti.Kuva.AukiMuuttui += auki => { kuvaPeittaaPulun = auki; PaivitaPulunPeitto(); };
             Karttaselite.AukiMuuttui += auki => { Linssit.Valitsin.Vaista(auki); Matkakirja.SeliteVaisto(auki); };
             // Linssit-karttanappi avaa valitsimen: ohi-napautus ei saa sulkea sitä samasta napautuksesta (savuke 1128: simulaattorin
             // tap painuu ja nousee samassa ruudussa, joten Avaa ja TarkistaOhiNapautus osuivat samaan ruutuun).
@@ -503,6 +503,9 @@ namespace Matkakirja.Natiivi
                 if (Linssivalitsin.Valikkona) Tilarivi.Valikko.EnableInClassList("mk-valittu", auki);
                 valikkoAuki = auki;
                 PulunKerros();
+                // Vaaka-iPhone (web-malli, Pelikoodari 2.10. klo 23.3x): Pulun hahmo piiloon valikon ajaksi; pystyssä ennallaan.
+                valikkoPeittaaPulun = auki && Ylapalkki.Piilossa;
+                PaivitaPulunPeitto();
             };
             RakennaPuhelinvalikko();
             Tilarivi.Vieras(Karttaselite.Nappi);
@@ -855,7 +858,10 @@ namespace Matkakirja.Natiivi
             Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), o.TallennusOn ? () => { var v = o.Jatka(); if (v != null) Tilarivi.Viesti(v); } : (System.Action)null);
         }
 
-        bool lehtiAuki, arkkiAuki, chatNostonPaalla, valikkoAuki;
+        bool lehtiAuki, arkkiAuki, chatNostonPaalla, valikkoAuki, kuvaPeittaaPulun, valikkoPeittaaPulun;
+
+        /// <summary>Pulun hahmo piilossa astronautin kuvaselaimen tai vaakavalikon ajan (Pulu.Peita: puhe ja kuplat jatkuvat).</summary>
+        void PaivitaPulunPeitto() => Pulu.Peita(kuvaPeittaaPulun || valikkoPeittaaPulun);
 
         /// <summary>
         /// PILLERIVALIKKO PULUN PÄÄLLÄ (web .paavalikko.tk-paneeli--paikallaan z-index 60 > .pollo-nappi 40; Päätoimittaja 2.10.2026
