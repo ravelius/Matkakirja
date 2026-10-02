@@ -88,11 +88,13 @@ namespace Matkakirja.Natiivi
                     else Graphics.CopyTexture(kaista, 0, 0, 0, 0, mw, kh, kuva, 0, m, 0, r0 * d.By);
                     UnityEngine.Object.Destroy(kaista);
                     DioraamaRuutu.Ladattu();
+                    if (m == 0 || koko) DioraamaRuutu.Tapahtuma($"kaista {nimi} m{m} y{r0 * d.By}");
                     ruudussa += (int)(rivit * rivi);
                     if (ruudussa >= KaistaTavuja) { ruudussa = 0; yield return null; }
                 }
                 o += rivi * lh;
             }
+            DioraamaRuutu.Tapahtuma($"kaistat valmiit {nimi}");
             valmis(kuva, null);
         }
 

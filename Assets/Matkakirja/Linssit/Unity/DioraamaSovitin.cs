@@ -733,6 +733,7 @@ namespace Matkakirja.Natiivi
             // "poikki vesi [heijastus 0|1|auto]": järven planaariheijastus (Boat Attack -vesi, 1.10.2026) ja ympäristön tila.
             if (mita == "vesi")
             {
+                if (arvo == "syvyys" && osat.Length > 3) DioraamaYmparisto.SyvyysPaalla = osat[3] != "0";
                 if (arvo == "heijastus" && osat.Length > 3)
                     DioraamaYmparisto.HeijastusPakotettu = osat[3] == "0" ? false : osat[3] == "1" ? true : (bool?)null;
                 // "poikki vesi siirto <m>": vedenpinta alas/ylös vianetsintään (näkyykö maa veden alla), 0 = datan taso.

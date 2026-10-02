@@ -456,6 +456,7 @@ namespace Matkakirja.Natiivi
         {
 
             int i = (int)taso;
+            DioraamaRuutu.Tapahtuma($"kuori {taso} käyttöön");
             PoistaTaso(i);
             var m = new Material(varjostin) { name = "Ulkokuori:" + taso };
             if (kuva != null) m.SetTexture(IdKuva, kuva);

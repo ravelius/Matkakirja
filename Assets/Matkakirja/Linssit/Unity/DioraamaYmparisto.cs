@@ -91,7 +91,8 @@ namespace Matkakirja.Natiivi
             if (oma != kerta) yield break;
             Tila = "vesi";
 
-            if (!string.IsNullOrEmpty(y.SyvyysKuva)) yield return LataaSyvyys(y, url, kirjaa, oma);
+            // Kehittäjän koe ("poikki vesi syvyys 0"): syvyyskartta pois, jotta piikin syy erottuu (linnan piikit 2.10.).
+            if (!string.IsNullOrEmpty(y.SyvyysKuva) && SyvyysPaalla) yield return LataaSyvyys(y, url, kirjaa, oma);
             if (oma != kerta) yield break;
 
             // NOPEA ENSILATAUS (Päätoimittaja 1.10.: TF 91 huippu 93 s ennen kuin maastoa näkyi): ensin kevyt maasto glb:n omalla
@@ -180,9 +181,13 @@ namespace Matkakirja.Natiivi
             if (oma != kerta) yield break;
             if (harmaa != null)
             {
+                DioraamaRuutu.Tapahtuma("syvyys purettu");
+                yield return null;
                 var sv = new Texture2D(pw, ph, TextureFormat.R8, false, true)
                 { name = "Ymparisto:syvyys", wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
                 sv.SetPixelData(harmaa, 0);
+                DioraamaRuutu.Tapahtuma("syvyys luotu");
+                yield return null;
                 sv.Apply(false, true); DioraamaRuutu.Gpu(kirjaa, sv);
                 yield return AsetaSyvyys(sv, y, kirjaa);
                 yield break;
@@ -211,6 +216,7 @@ namespace Matkakirja.Natiivi
             luodut.Add(syv);
             yield return null;
             vesiMat?.SetTexture(IdSyvyys, syv);
+            DioraamaRuutu.Tapahtuma("syvyys vedelle");
             double koko = syv.width * y.SyvyysPikseliM;
             // Kuvan vasen yläkulma on (origoX, origoY) Blenderissä = Unityn (x, z); tekstuurin v = 0 on kuvan alareuna.
             Shader.SetGlobalVector(IdSyvyysParam, new Vector4((float)y.SyvyysOrigoX, (float)(y.SyvyysOrigoY - koko), (float)(1.0 / koko), (float)(255.0 * y.SyvyysKerroinM)));
@@ -267,6 +273,7 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        public static bool SyvyysPaalla = true;
         static readonly Unity.Profiling.ProfilerMarker HeijastusMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Dioraama.Heijastus");
 
         bool PiirraHeijastus(Camera kamera, float skaala)
@@ -901,6 +908,7 @@ namespace Matkakirja.Natiivi
         {
             if (t == null) return;
             Ladattu();
+            Tapahtuma($"{t.name} {t.width}×{t.height}");
             kirjaa?.Invoke($"poikki: gpu {t.name} {t.width}×{t.height} {t.graphicsFormat} (ruutu {Time.frameCount})");
         }
 
@@ -909,7 +917,31 @@ namespace Matkakirja.Natiivi
         {
             if (m == null) return;
             Ladattu();
+            Tapahtuma($"{m.name} mesh {m.vertexCount / 1000}k");
             kirjaa?.Invoke($"poikki: gpu {m.name} mesh {m.vertexCount} kärkeä (ruutu {Time.frameCount})");
+        }
+
+        // Tapahtumarengas piikkiriville (KehysPiikit.Lisatieto): ruutu ja kuvaus, 32 viimeisintä.
+        static readonly (int Ruutu, string Mita)[] rengas = new (int, string)[32];
+        static int renkaassa;
+
+        /// <summary>Kirjaa raskaan vaiheen ruutunumerolla; piikkirivi näyttää ikkunan [ruutu − 3, ruutu] tapahtumat.</summary>
+        public static void Tapahtuma(string mita)
+        {
+            rengas[renkaassa++ % rengas.Length] = (Time.frameCount, mita);
+            KehysPiikit.Lisatieto ??= Viimeiset;
+        }
+
+        static string Viimeiset(int ruutu)
+        {
+            var sb = new System.Text.StringBuilder();
+            int n = Math.Min(renkaassa, rengas.Length);
+            for (int i = renkaassa - n; i < renkaassa; i++)
+            {
+                var (r, m) = rengas[i % rengas.Length];
+                if (r >= ruutu - 3 && r <= ruutu) sb.Append(m).Append('@').Append(r).Append("; ");
+            }
+            return sb.Length == 0 ? null : "tapahtumat: " + sb.ToString();
         }
 
         static int viimeisinLataus = -10;
