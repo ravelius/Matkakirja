@@ -13,7 +13,7 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
   Laitetestaajan napautukset eivät päässeet sovellukseen (attach), ei koodivikaa.
 - Ajattelijat (Sokrates + Marcus Aurelius) natiiviin odottaa webin mallia ja Päätoimittajan vuoroa. Aineisto Linnanrakentajalta:
   luvut docs/raportit/sokrates-v10/sokrates-luvut.json (728f8f3d0) ja marcus-aurelius-v1/marcus-luvut.json (fda74daca), haara
-  linnanrakentaja-sokrates-bysti; GLB:t _valmiit/marcus-aurelius-bysti/v1; kartan päät _valmiit/ajattelijat-kartta/v1 (787f73547).
+  linnanrakentaja-sokrates-bysti; GLB:t _valmiit/marcus-aurelius-bysti/v1; kartan päät _valmiit/ajattelijat-kartta/v1 (787f73547; + platon-kartta.glb, Platonin LODit _valmiit/platon-bysti/v1, b27492b22; SHA256SUMS).
 - KUVAA-osuma ad79d770 junassa 116. LS2:n 1116-kysymys (KUVAA Pariisissa, KOHDE-lista auki): vastattu — todennäköisin
   hiljainen `kaynnissa`-paluu IssKameraKuva.Laukaisessa; odottaa LS2:n koordinaattia.
 - Seuraavaksi: kiillon pystyleikkaus (ajo-kiilto3.sh ilman KUVAA-lippua) seuraavalla simulaattorivuorolla.
