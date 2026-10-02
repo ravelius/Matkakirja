@@ -108,6 +108,15 @@ namespace Matkakirja.Natiivi
             Selite.Vasen = () => sulje.resolvedStyle.display == DisplayStyle.None ? float.NaN : sulje.worldBound.xMin;
             sulje.RegisterCallback<GeometryChangedEvent>(_ => Selite.Uudelleen());
             kerros.TurvaMuuttui += Asettele;
+            // OHJAUSNAPPI-koe (`ui ohjausnapit 1`): järjestys ‹ → ↻ → säätö → taikalasit → ✕ viimeisenä.
+            new OhjausryhmaKoe(turva, sulje, new (VisualElement, string, string, Action)[]
+            {
+                (Dioraama.Paluu, Ikonit.Takaisin, "Takaisin", DioraamaTaulu.PyydaPaluu),
+                (Dioraama.Uusinta, Ikonit.PaivitaVersio, "Kertoja uudelleen", DioraamaTaulu.KertojaUudelleen),
+                (Mikseri.Lappu, Ikonit.Mikseri, "Mikseri", Mikseri.Vaihda),
+                (Valitsin.Nappi, Ikonit.Viiva["taikalasit"], "Linssit", Valitsin.Vaihda),
+                (sulje, Ikonit.Viiva["rasti"], "Sulje linssi", SuljeLinssi),
+            });
             Asettele();
 
             // Koukut. Peite on UI:n; musiikin pito kuuluu Pelikoodarin äänille, joilla ei

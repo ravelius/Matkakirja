@@ -782,6 +782,10 @@ namespace Matkakirja.Natiivi
                     // Näppäimistökerros (Nappaimisto): ui nappain vasen|oikea|ylos|alas|esc (kuin fyysinen näppäin).
                     Kirjaa("nappain: " + Nappaimisto.Paina(loput.Trim()));
                     return null;
+                case "ohjausnapit":
+                    // OHJAUSNAPPI-koe (omistaja 2.10. klo 14.16): ui ohjausnapit 1|0.
+                    OhjausryhmaKoe.Paalla = loput.Trim() != "0";
+                    return "=ohjausnapit " + (OhjausryhmaKoe.Paalla ? "päällä" : "pois");
                 case "mikseri":
                 {
                     // Kehittäjän mikseripaneeli (MikseriPaneeli): ui mikseri [tila] | auki | kiinni | demo | demo pois.
