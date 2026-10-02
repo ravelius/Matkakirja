@@ -368,8 +368,9 @@ namespace Matkakirja.Natiivi
             yield return DioraamaLevyvalimuisti.HaeNatiivi(url(polku), 120, b => tavut = b);
             if (!tavut.IsCreated) { kirjaa?.Invoke($"poikki: ympäristö: {nimi} ASTC ei latautunut, png/jpg varalla"); tulos(null); yield break; }
             float r0 = DioraamaRuutu.Alku();
-            Texture2D k; string syy;
-            try { k = DioraamaAstc.Lue(tavut, nimi + ":astc", out syy, kaari, 0, lineaarinen); }
+            Texture2D k = null; string syy = null;
+            // Isot (≥ 4096, maaston 8k-orto) kaistoina useaan ruutuun (linnan piikit 2.10.); pienet kerralla.
+            try { yield return DioraamaAstc.LueKaistoina(tavut, nimi + ":astc", kaari, 0, lineaarinen, (kk, ss) => { k = kk; syy = ss; }); }
             finally { tavut.Dispose(); }
             DioraamaRuutu.Kirjaa(kirjaa, nimi + " ASTC", r0);
             if (k == null) { kirjaa?.Invoke($"poikki: ympäristö: {nimi} ASTC ei käytössä ({syy}), png/jpg varalla"); tulos(null); yield break; }
@@ -433,6 +434,14 @@ namespace Matkakirja.Natiivi
             if (!string.IsNullOrEmpty(astc))
             {
                 yield return LataaAstc(astc, "Ymparisto:" + nimi, false, TextureWrapMode.Clamp, url, kirjaa, luodut, t => kuva = t);
+                if (oma != kerta) yield break;
+                if (kuva != null) kohteet?.Add(kuva);
+            }
+            // Orto .astcm (maaston 8k): natiivimuistiin ja kaistoina GPU:lle (LataaAstc); tukematon → glb:n kuva alla.
+            if (kuva == null && kuvaPolku != null && kuvaPolku.EndsWith(".astcm", StringComparison.OrdinalIgnoreCase)
+                && SystemInfo.SupportsTextureFormat(TextureFormat.ASTC_4x4))
+            {
+                yield return LataaAstc(kuvaPolku, "Ymparisto:" + nimi, false, TextureWrapMode.Clamp, url, kirjaa, luodut, t => kuva = t);
                 if (oma != kerta) yield break;
                 if (kuva != null) kohteet?.Add(kuva);
             }

@@ -4,7 +4,9 @@
 // olettaa, joten kuva on samoin päin kuin LoadImage-JPEG. Tuetut lohkot 4×4, 6×6 ja 8×8. Palauttaa null, jos laite
 // ei tue ASTC:tä tai tiedosto on rikki — kutsuja käyttää silloin JPEG:iä.
 using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering;
 
 namespace Matkakirja.Natiivi
 {
@@ -39,37 +41,97 @@ namespace Matkakirja.Natiivi
                 (kuva, siirto, tavuja) => kuva.LoadRawTextureData(t.GetSubArray((int)siirto, tavuja)));
         }
 
+        // --- KAISTOITTAIN (linnan piikit, iPad 2.10.: 8k-atlaksen 89 Mt:n kertalataus vei renderisäikeeltä 64–85 ms) -----------
+        /// <summary>Kehittäjän vertailu ("poikki kaistat 0|1"): null/true = isot (≥ 4096) tekstuurit kaistoina.</summary>
+        public static bool? KaistatPakotettu;
+        const int KaistaTavuja = 8 << 20, KaistaRaja = 4096;
+
+        /// <summary>Iso ASTC-mipketju GPU:lle kaistoina: kohde luodaan ilman latausta (DontUploadUponCreate) ja täytetään
+        /// pienistä väliaikaisista tekstuureista Graphics.CopyTexture-kopioina, enintään ~8 Mt ruudussa. Pienet tekstuurit,
+        /// 6×6-lohkot ja laitteet ilman CopyTexturea → Lue kerralla. valmis(kuva, syy). Kutsuja vapauttaa t:n.</summary>
+        public static IEnumerator LueKaistoina(Unity.Collections.NativeArray<byte> t, string nimi, TextureWrapMode kaari, int ohita, bool lineaarinen,
+            Action<Texture2D, string> valmis)
+        {
+            string syy = null;
+            var otsake = new byte[16];
+            if (t.IsCreated && t.Length >= 32) Unity.Collections.NativeArray<byte>.Copy(t, otsake, 16);
+            bool kaistat = KaistatPakotettu ?? true;
+            if (!kaistat || !t.IsCreated || t.Length < 32 || !Mitat(otsake, t.Length, ohita, out var d, out syy)
+                || d.W < KaistaRaja || d.Bx != d.By || d.W % d.Bx != 0 || d.H % d.By != 0
+                || (SystemInfo.copyTextureSupport & UnityEngine.Rendering.CopyTextureSupport.Basic) == 0)
+            {
+                valmis(syy == null ? Lue(t, nimi, out syy, kaari, ohita, lineaarinen) : null, syy);
+                yield break;
+            }
+            var gf = GraphicsFormatUtility.GetGraphicsFormat(d.Muoto, !lineaarinen);
+            var kuva = new Texture2D(d.W, d.H, gf, d.Tasoja,
+                TextureCreationFlags.MipChain | TextureCreationFlags.DontInitializePixels | TextureCreationFlags.DontUploadUponCreate)
+            { name = nimi, filterMode = FilterMode.Trilinear, wrapMode = kaari, anisoLevel = 4 };
+            long o = 16 + d.Siirto;
+            int ruudussa = 0;
+            for (int m = 0; m < d.Tasoja; m++)
+            {
+                int mw = Math.Max(1, d.W >> m), mh = Math.Max(1, d.H >> m);
+                int lw = (mw + d.Bx - 1) / d.Bx, lh = (mh + d.By - 1) / d.By;
+                long rivi = (long)lw * 16;
+                // Kokonaiset lohkorivit kaistaan; pienet tasot (alle lohkon tai kaistan) yhtenä kokonaisen tason kopiona.
+                int kaistaRiveja = mw % d.Bx == 0 && mh % d.By == 0 ? (int)Math.Max(1, Math.Min(lh, KaistaTavuja / rivi)) : lh;
+                for (int r0 = 0; r0 < lh; r0 += kaistaRiveja)
+                {
+                    int rivit = Math.Min(kaistaRiveja, lh - r0);
+                    bool koko = rivit == lh;
+                    int kh = koko ? mh : rivit * d.By;
+                    var kaista = new Texture2D(mw, kh, gf, 1, TextureCreationFlags.DontInitializePixels) { name = nimi + ":kaista" };
+                    kaista.LoadRawTextureData(t.GetSubArray((int)(o + r0 * rivi), (int)(rivit * rivi)));
+                    kaista.Apply(false, true);
+                    if (koko) Graphics.CopyTexture(kaista, 0, 0, kuva, 0, m);
+                    else Graphics.CopyTexture(kaista, 0, 0, 0, 0, mw, kh, kuva, 0, m, 0, r0 * d.By);
+                    UnityEngine.Object.Destroy(kaista);
+                    DioraamaRuutu.Ladattu();
+                    ruudussa += (int)(rivit * rivi);
+                    if (ruudussa >= KaistaTavuja) { ruudussa = 0; yield return null; }
+                }
+                o += rivi * lh;
+            }
+            valmis(kuva, null);
+        }
+
+        struct Tiedot { public TextureFormat Muoto; public int Bx, By, W, H, Tasoja; public long Siirto, Tavuja; }
+
+        static bool Mitat(byte[] t, long pituus, int ohita, out Tiedot d, out string syy)
+        {
+            d = default; syy = null;
+            if (pituus < 32 || t[0] != 0x13 || t[1] != 0xab || t[2] != 0xa1 || t[3] != 0x5c) { syy = "otsake"; return false; }
+            d.Bx = t[4]; d.By = t[5];
+            d.W = t[7] | t[8] << 8 | t[9] << 16; d.H = t[10] | t[11] << 8 | t[12] << 16;
+            if (d.Bx == 4 && d.By == 4) d.Muoto = TextureFormat.ASTC_4x4;
+            else if (d.Bx == 6 && d.By == 6) d.Muoto = TextureFormat.ASTC_6x6;
+            else if (d.Bx == 8 && d.By == 8) d.Muoto = TextureFormat.ASTC_8x8;
+            else { syy = $"lohko {d.Bx}×{d.By}"; return false; }
+            if (d.W <= 0 || d.H <= 0) { syy = "mitat"; return false; }
+            if (!SystemInfo.SupportsTextureFormat(d.Muoto)) { syy = $"laite ei tue {d.Muoto} ({SystemInfo.graphicsDeviceName})"; return false; }
+            for (int x = d.W, y = d.H; ; x = Math.Max(1, x / 2), y = Math.Max(1, y / 2))
+            {
+                d.Tavuja += (long)((x + d.Bx - 1) / d.Bx) * ((y + d.By - 1) / d.By) * 16; d.Tasoja++;
+                if (x == 1 && y == 1) break;
+            }
+            if (pituus - 16 != d.Tavuja) { syy = $"koko {pituus - 16} ≠ {d.Tavuja}"; return false; }
+            for (ohita = Math.Min(ohita, d.Tasoja - 1); ohita > 0 && d.W > 1024; ohita--)
+            {
+                long taso = (long)((d.W + d.Bx - 1) / d.Bx) * ((d.H + d.By - 1) / d.By) * 16;
+                d.Siirto += taso; d.Tavuja -= taso; d.Tasoja--;
+                d.W = Math.Max(1, d.W / 2); d.H = Math.Max(1, d.H / 2);
+            }
+            return true;
+        }
+
         static Texture2D Luo(byte[] t, long pituus, string nimi, out string syy, TextureWrapMode kaari, int ohita, bool lineaarinen,
             Action<Texture2D, long, int> lataa)
         {
-            syy = null;
-            if (pituus < 32 || t[0] != 0x13 || t[1] != 0xab || t[2] != 0xa1 || t[3] != 0x5c) { syy = "otsake"; return null; }
-            int bx = t[4], by = t[5];
-            int w = t[7] | t[8] << 8 | t[9] << 16, h = t[10] | t[11] << 8 | t[12] << 16;
-            TextureFormat muoto;
-            if (bx == 4 && by == 4) muoto = TextureFormat.ASTC_4x4;
-            else if (bx == 6 && by == 6) muoto = TextureFormat.ASTC_6x6;
-            else if (bx == 8 && by == 8) muoto = TextureFormat.ASTC_8x8;
-            else { syy = $"lohko {bx}×{by}"; return null; }
-            if (w <= 0 || h <= 0) { syy = "mitat"; return null; }
-            if (!SystemInfo.SupportsTextureFormat(muoto)) { syy = $"laite ei tue {muoto} ({SystemInfo.graphicsDeviceName})"; return null; }
-            int tasoja = 0; long tavuja = 0;
-            for (int x = w, y = h; ; x = Math.Max(1, x / 2), y = Math.Max(1, y / 2))
-            {
-                tavuja += (long)((x + bx - 1) / bx) * ((y + by - 1) / by) * 16; tasoja++;
-                if (x == 1 && y == 1) break;
-            }
-            if (pituus - 16 != tavuja) { syy = $"koko {pituus - 16} ≠ {tavuja}"; return null; }
-            long siirto = 0;
-            for (ohita = Math.Min(ohita, tasoja - 1); ohita > 0 && w > 1024; ohita--)
-            {
-                long taso = (long)((w + bx - 1) / bx) * ((h + by - 1) / by) * 16;
-                siirto += taso; tavuja -= taso; tasoja--;
-                w = Math.Max(1, w / 2); h = Math.Max(1, h / 2);
-            }
-            var kuva = new Texture2D(w, h, muoto, tasoja, lineaarinen)
+            if (!Mitat(t, pituus, ohita, out var d, out syy)) return null;
+            var kuva = new Texture2D(d.W, d.H, d.Muoto, d.Tasoja, lineaarinen)
             { name = nimi, filterMode = FilterMode.Trilinear, wrapMode = kaari, anisoLevel = 4 };
-            lataa(kuva, 16 + siirto, (int)tavuja);
+            lataa(kuva, 16 + d.Siirto, (int)d.Tavuja);
             kuva.Apply(false, true);
             return kuva;
         }

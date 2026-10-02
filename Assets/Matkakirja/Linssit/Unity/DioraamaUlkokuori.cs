@@ -163,8 +163,12 @@ namespace Matkakirja.Natiivi
                     bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
                     r0 = DioraamaRuutu.Alku();
                     string syy; bool ladattiin = astcTavut.IsCreated;
-                    try { kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out syy, TextureWrapMode.Clamp, puhelin && taso == Laatu.Huippu ? 1 : 0); }
+                    // 8k-atlas kaistoina useaan ruutuun (linnan piikit 2.10.: kertalataus 64–100 ms renderisäikeessä).
+                    Texture2D kk = null; syy = null;
+                    try { yield return DioraamaAstc.LueKaistoina(astcTavut, "Ulkokuori:" + taso + ":astc", TextureWrapMode.Clamp, puhelin && taso == Laatu.Huippu ? 1 : 0, false, (k, s) => { kk = k; syy = s; }); }
                     finally { if (ladattiin) astcTavut.Dispose(); }
+                    kuva = kk;
+                    if (oma != kerta) { if (kuva != null) UnityEngine.Object.Destroy(kuva); UnityEngine.Object.Destroy(mesh); yield break; }
                     DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} ASTC", r0);
                     DioraamaRuutu.Gpu(kirjaa, kuva);
                     if (kuva != null && tauot) yield return null;

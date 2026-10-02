@@ -19,12 +19,13 @@ namespace Matkakirja.Natiivi
 {
     public static class KehysPiikit
     {
-        const int Katto = 1200, Karki = 12;
-        // Pelisilmukan vaiheet ja UI Toolkitin päämerkit ensin, jottei katto rajaa niitä pois.
-        static readonly Regex Ensin = new Regex("^(PlayerLoop|Initialization|EarlyUpdate|FixedUpdate|PreUpdate|Update|PreLateUpdate|PostLateUpdate|UIElements|UIR|GC)",
+        const int Katto = 1200, Karki = 20;
+        // Pelisilmukan vaiheet ja UI Toolkitin päämerkit ensin, jottei katto rajaa niitä pois. Linnan piikit (2.10.): myös
+        // skriptien omat merkit ("Luokka.Update() [Invoke]", korutiinit), jotta 70 ms:n BehaviourUpdate kohdistuu luokkaan.
+        static readonly Regex Ensin = new Regex("^(PlayerLoop|Initialization|EarlyUpdate|FixedUpdate|PreUpdate|Update|PreLateUpdate|PostLateUpdate|UIElements|UIR|GC)|\\[(Invoke|Coroutine)",
             RegexOptions.CultureInvariant);
         static readonly Regex Suodatin = new Regex(
-            "UI|UIR|Panel|Layout|Text|Font|Style|Visual|Update|Script|Coroutine|GC|Load|Shader|Texture|Upload|Render|Cesium|Camera|Audio|Animation|Gfx|Semaphore|WaitFor",
+            "UI|UIR|Panel|Layout|Text|Font|Style|Visual|Update|Script|Coroutine|GC|Load|Shader|Texture|Upload|Render|Cesium|Camera|Audio|Animation|Gfx|Semaphore|WaitFor|Invoke",
             RegexOptions.CultureInvariant);
 
         static readonly List<(string Nimi, ProfilerRecorder Mittari)> mittarit = new List<(string, ProfilerRecorder)>();

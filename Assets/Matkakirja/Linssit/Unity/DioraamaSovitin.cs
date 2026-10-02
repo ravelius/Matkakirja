@@ -740,6 +740,13 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"poikki: vesi: ympäristö {nayttamo?.Ymparisto?.Tila ?? "-"}, heijastus {(DioraamaYmparisto.HeijastusPakotettu.HasValue ? (DioraamaYmparisto.HeijastusPakotettu.Value ? "päällä" : "pois") : "auto")}");
                 return;
             }
+            // "poikki kaistat [0|1|auto]": isojen ASTC-tekstuurien kaistoittainen GPU-lataus (linnan piikit 2.10.) vertailuun.
+            if (mita == "kaistat")
+            {
+                DioraamaAstc.KaistatPakotettu = arvo == "0" ? false : arvo == "1" ? true : (bool?)null;
+                o.Kirjaa($"poikki: kaistat {(DioraamaAstc.KaistatPakotettu == false ? "pois" : "päällä")} (seuraava lataus)");
+                return;
+            }
             // "poikki detalji [0|1|auto]": kuoren lähidetalji päälle/pois vertailua varten (menetelmä B, 30.9.2026).
             if (mita == "detalji")
             {
