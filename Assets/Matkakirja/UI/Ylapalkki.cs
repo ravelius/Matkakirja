@@ -200,7 +200,7 @@ namespace Matkakirja.Natiivi
         public event Action PilleriMuuttui;
         readonly Button vakasnappi;
         bool piilossa, nakyy = true;
-        readonly Label raha, kello, ilmoitusTeksti, rahaton;
+        readonly Label raha, kello, ilmoitusTeksti, rahaton, punta;
         string rivi = "", kelloTeksti = "";
         // Talouden vaihe 1 (UiNakymat.PaivitaKassa): rahattomuuden vuorokaudet ja matkan loppu.
         int? rahatonVrk, rahatonVuoroja;
@@ -285,6 +285,11 @@ namespace Matkakirja.Natiivi
             raha = Rakenne.Teksti("", "mk-pilleri__raha", pilleri);
             rahaton = Rakenne.Teksti("", "mk-pilleri__rahaton", pilleri);
             rahaton.style.display = DisplayStyle.None;
+            // Punta omana merkkinään selkeällä kirjasimella (omistaja 2.10.2026 klo 16.0x: Kone-kirjasimen £ näytti koukulta).
+            punta = Rakenne.Teksti("£", "mk-pilleri__punta", null);
+            pilleri.Insert(pilleri.IndexOf(raha), punta);
+            Kirjasimet.Aseta(punta, Kirjasin.Luku);
+            punta.style.display = DisplayStyle.None;
             kello = Rakenne.Teksti("", "mk-pilleri__kello", pilleri);
             // Pillerivalikko puhelimella: kaksirivinen pilleri saaren oikealla puolella. Omistaja 30.9.2026 klo 12.28: päiväys
             // "1/80, keskipäivä" ylärivillä ja rahasaldo pillerin oikeaan reunaan alariville. iPadilla sama järjestys yhdellä rivillä.
@@ -295,6 +300,7 @@ namespace Matkakirja.Natiivi
                 pino.Add(kello);
                 var rivi1 = Rakenne.El("mk-pilleri__rivi1", pino, PickingMode.Ignore);
                 rivi1.Add(rahaton);
+                rivi1.Add(punta);
                 rivi1.Add(raha);
                 pilleri.AddToClassList("mk-pilleri--lyhyt");
             }
@@ -600,7 +606,11 @@ namespace Matkakirja.Natiivi
                 float kulmaR = NaytonKulmaPt(saari, saariYla) * yksikko;
                 float lkArvio = matala ? rivi * 0.8f : 24f * yksikko;
                 float vasenReuna = Mathf.Max(r.x + 12f * yksikko, KulmaVara(yla + (rivi - lkArvio) / 2f, 0f, kulmaR, KulmaMarginaali * yksikko));
-                float oikeaVara = Mathf.Max(r.z + 8f * yksikko, KulmaVara(yla, rivi / 2f, kulmaR, KulmaMarginaali * yksikko));
+                // Omistaja 2.10.2026 klo 16.0x: pilleri saaren keskilinjalle (ei alemmas kuin logo) ja yhtä kauas näytön reunasta
+                // kuin logo vasemmalla; kulmakaaren vara lasketaan nostetusta yläreunasta.
+                pilleri.style.marginTop = -alemmas;
+                float oikeaVara = Mathf.Max(r.z + 8f * yksikko, KulmaVara(yla - alemmas, rivi / 2f, kulmaR, KulmaMarginaali * yksikko));
+                oikeaVara = Mathf.Max(oikeaVara, vasenReuna);
                 float oikeaReuna = P(Screen.width / pp, 0f).x - oikeaVara;
                 palkki.style.paddingLeft = vasenReuna;
                 palkki.style.paddingRight = oikeaVara;
@@ -621,15 +631,16 @@ namespace Matkakirja.Natiivi
         const float RiviAlemmas = 6f, PalkkiKorkeampi = 4f;
         /// <summary>
         /// NAHKATIKKAUS DYNAMIC ISLANDIN YMPÄRILLE (omistaja 2.10.2026 klo 15.1x: "ota musta pois dynamic islandin kohdalta ja tee
-        /// ennemmin sen ympärille nahkainen tikkaus"; korvaa 30.9.:n mustan saarialueen). Mitat ja värit yläpalkin omasta
-        /// tikkausreunasta (nahka-tile.png rivit 273–274 @3x, palkin levyiseksi skaalattuna), mutta pienempänä: omistajan tarkennus
-        /// "tikkaus saaren ympärillä saa olla mahd. pieni ja vähäeleinen" → vain ohut hillitty pistorivi lähellä saaren reunaa,
-        /// ei harjannetta eikä varjoa. Kehä kiertää saaren stadionmuodon vakioetäisyydellä.
+        /// ennemmin sen ympärille nahkainen tikkaus"; korvaa 30.9.:n mustan saarialueen). Päätoimittajan 16.0x korjaukset: saman
+        /// tyylinen kuin palkin alareunan tikkausreuna (nahka-tile.png rivit 266–276): painettu ura, lyhyt pisto, pistojen varjo
+        /// ja lanka; saaren ympärillä nahan leikkausreuna (tumma reunus ja ohut vaalea viiste kuten alareunan taitoksessa), jottei
+        /// saari näytä tarralta. Yksi kehä koko saaren ympäri.
         /// </summary>
-        /// <summary>Koko kehä saaren ympäri 3 pt:n päässä reunasta (Päätoimittaja 2.10. 15.4x: yksi suositus, ei numero-A/B:tä).</summary>
-        const float TikkausEtaisyys = 3f, PistoPituus = 3f, PistoJakso = 6f, LankaPaksuus = 0.6f;
-        /// <summary>Lanka tyylikirjasta (pohjavahti): TUMMA muste-pehmeä hillittynä.</summary>
-        static Color Lanka { get { Color c = Tyylikirja.Tumma.MustePehmea; c.a = 0.55f; return c; } }
+        const float LeikkausEtaisyys = 0.8f, ViisteEtaisyys = 2f, TikkausEtaisyys = 4.5f, PistoPituus = 3.5f, PistoJakso = 6.5f,
+            LankaPaksuus = 0.9f, UraPaksuus = 2.2f;
+        /// <summary>Lanka ja viiste tyylikirjasta (pohjavahti): TUMMA muste-pehmeä, viiste läpikuultavana.</summary>
+        static Color Lanka { get { Color c = Tyylikirja.Tumma.MustePehmea; c.a = 0.8f; return c; } }
+        static Color Viiste { get { Color c = Tyylikirja.Tumma.MustePehmea; c.a = 0.18f; return c; } }
         VisualElement saariTikkaus;
         Rect tikkausSaari;
         float tikkausYksikko = 1f;
@@ -666,15 +677,30 @@ namespace Matkakirja.Natiivi
             if (saari.width <= 0f) return;
             float u = tikkausYksikko;
             var p = mgc.painter2D;
+            // Leikkausreuna: tumma reunus heti saaren reunassa ja ohut vaalea viiste sen ulkopuolella.
+            p.lineCap = LineCap.Butt;
+            p.strokeColor = Tyylikirja.Himmennys.Tumma;
+            p.lineWidth = 1.6f * u;
+            Stadion(p, saari, LeikkausEtaisyys * u, 0f, 0f);
+            p.strokeColor = Viiste;
+            p.lineWidth = 0.6f * u;
+            Stadion(p, saari, ViisteEtaisyys * u, 0f, 0f);
+            // Tikkaus: painettu ura, pistojen varjo hieman ulompana ja lanka.
+            p.strokeColor = Tyylikirja.Himmennys.Kevyt;
+            p.lineWidth = UraPaksuus * u;
+            Stadion(p, saari, TikkausEtaisyys * u, 0f, 0f);
             p.lineCap = LineCap.Round;
+            p.strokeColor = Tyylikirja.Himmennys.Tumma;
+            p.lineWidth = (LankaPaksuus + 0.4f) * u;
+            Stadion(p, saari, (TikkausEtaisyys + 0.4f) * u, PistoPituus * u, PistoJakso * u);
             p.strokeColor = Lanka;
             p.lineWidth = LankaPaksuus * u;
             Stadion(p, saari, TikkausEtaisyys * u, PistoPituus * u, PistoJakso * u);
         }
 
         /// <summary>
-        /// Pistot saaren stadionmuodon (pyöreät päädyt) ympärille <paramref name="d"/>:n etäisyydelle: pituus <paramref name="pisto"/>
-        /// jakson välein kaarenpituuden mukaan, tasaisesti koko kehälle.
+        /// Saaren stadionmuodon (pyöreät päädyt) ääriviiva <paramref name="d"/>:n etäisyydellä: jakso 0 = yhtenäinen viiva,
+        /// muuten pistot pituudeltaan <paramref name="pisto"/> jakson välein kaarenpituuden mukaan, tasaisesti koko kehälle.
         /// </summary>
         static void Stadion(Painter2D p, Rect saari, float d, float pisto, float jakso)
         {
@@ -694,6 +720,15 @@ namespace Matkakirja.Natiivi
                 { float k = Mathf.PI / 2f + s / r; return new Vector2(xa + r * Mathf.Cos(k), cy + r * Mathf.Sin(k)); }
             }
             const float Askel = 1.5f;
+            if (jakso <= 0f)
+            {
+                p.BeginPath();
+                p.MoveTo(Piste(0f));
+                for (float s = Askel; s < kehä; s += Askel) p.LineTo(Piste(s));
+                p.ClosePath();
+                p.Stroke();
+                return;
+            }
             int n = Mathf.Max(1, Mathf.RoundToInt(kehä / jakso));
             float j = kehä / n, l = Mathf.Min(pisto, j * 0.8f);
             p.BeginPath();
@@ -767,6 +802,9 @@ namespace Matkakirja.Natiivi
                 + (ikoni != null && ikoni.style.display != DisplayStyle.None ? ikoni.resolvedStyle.width + ikoni.resolvedStyle.marginLeft + ikoni.resolvedStyle.marginRight : 0f);
             float rahaLeveys = raha.MeasureTextSize(raha.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
             float kelloLeveys = kello.MeasureTextSize(kello.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+            if (punta.style.display == DisplayStyle.Flex)
+                rahaLeveys += punta.MeasureTextSize(punta.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x
+                    + punta.resolvedStyle.marginRight;
             if (rahaton.style.display == DisplayStyle.Flex)
                 rahaLeveys += rahaton.MeasureTextSize(rahaton.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x
                     + rahaton.resolvedStyle.marginLeft;
@@ -946,7 +984,7 @@ namespace Matkakirja.Natiivi
             if (osat.Length < 3)
             {
                 // Lataus- ja virhetekstit ("Haetaan matkakirjaa…") koko pillerissä.
-                raha.text = teksti;
+                AsetaRahaTeksti(teksti);
                 kello.text = "";
                 kello.style.display = DisplayStyle.None;
             }
@@ -956,8 +994,8 @@ namespace Matkakirja.Natiivi
                 // iPhone: "300 £ 1/80" — raha ja päivä / isoisän ennätys (omistaja 24.9.2026; suomalainen muoto
                 // "400 £" kaikkialle, Fable 27.9. klo 20.1x).
                 string uusiRaha = Raha(osat[0]);
-                if (uusiRaha != raha.text && raha.text.StartsWith("£")) Valahda(raha, ref rahaAjastin);
-                raha.text = uusiRaha;
+                if (uusiRaha != RahaNyt && RahaNyt.StartsWith("£")) Valahda(raha, ref rahaAjastin);
+                AsetaRahaTeksti(uusiRaha);
                 var m = System.Text.RegularExpressions.Regex.Match(osat[1], @"\d+");
                 string uusiKello = (m.Success ? m.Value : osat[1]) + "/" + Matkakirja.Peli.LaattaVakiot.EnnatysPaivat;
                 kello.style.display = DisplayStyle.Flex;
@@ -973,8 +1011,8 @@ namespace Matkakirja.Natiivi
                 bool lyhyt = Linssivalitsin.PilleriValikko && pv.Success;
                 string uusiRaha = Raha(osat[0]);
                 // Kukkaron muutos välähtää kuten kello (osto, palkkio, lento).
-                if (uusiRaha != raha.text && raha.text.StartsWith("£")) Valahda(raha, ref rahaAjastin);
-                raha.text = uusiRaha;
+                if (uusiRaha != RahaNyt && RahaNyt.StartsWith("£")) Valahda(raha, ref rahaAjastin);
+                AsetaRahaTeksti(uusiRaha);
                 string uusiKello = lyhyt ? pv.Value + " pv ·" : Iso(osat[1]) + ", " + osat[2];
                 kello.style.display = DisplayStyle.Flex;
                 if (uusiKello != kelloTeksti && kelloTeksti.Length > 0) Valahda(kello, ref valahdysAjastin);
@@ -1081,12 +1119,22 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Raha pilleriin: "£400" → punta omana merkkinään ja numero; muu teksti (lataus, "Matka päättyi") sellaisenaan.</summary>
+        void AsetaRahaTeksti(string t)
+        {
+            bool p = t.Length > 1 && t[0] == '£' && char.IsDigit(t[1]);
+            punta.style.display = p ? DisplayStyle.Flex : DisplayStyle.None;
+            raha.text = p ? t.Substring(1) : t;
+        }
+
+        string RahaNyt => (punta.style.display == DisplayStyle.Flex ? "£" : "") + raha.text;
+
         void NaytaTalous(bool pelirivi)
         {
             bool loppu = pelirivi && matkaPaattyi;
             if (loppu)
             {
-                raha.text = "Matka päättyi";
+                AsetaRahaTeksti("Matka päättyi");
                 kello.style.display = DisplayStyle.None;
             }
             bool varoitus = pelirivi && !loppu && rahatonVrk != null;

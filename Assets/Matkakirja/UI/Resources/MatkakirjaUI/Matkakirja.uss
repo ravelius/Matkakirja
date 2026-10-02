@@ -4556,18 +4556,28 @@
     margin-left: var(--tk-vali-xs);
 }
 
-/* KONJAKKINAPPI (omistaja 2.10.2026 klo 15.0x "hieman enemmän napin näköinen … vähän eri värinen kuin nahka, hieman oranssin
-   ruskea"): tyylikirjan paperi-korostus pohjana, tumman teeman kultareuna ja kermainen muste; kulma-nappi (ei ovaalia). */
+/* KONJAKKINAPPI (omistaja 2.10.2026 klo 15.0x ja 16.0x: "hieman oranssin ruskea", konjakkinahka, ei sinapinkeltainen):
+   tyylikirjan konjakki pohjana, konjakki-reuna leikkausreunana, kermainen muste; laukkukuvake täydellä musteella
+   (ei haalea); kulma-nappi (ei ovaalia). */
 .mk-pilleri.mk-pilleri--konjakki {
     border-width: 1px;
-    border-color: var(--tk-tumma-reunus);
-    background-color: var(--tk-paperi-korostus);
+    border-color: var(--konjakki-reuna);
+    background-color: var(--konjakki);
     color: var(--tk-tumma-muste);
 }
 
 .mk-pilleri--konjakki .mk-pilleri__raha,
-.mk-pilleri--konjakki .mk-pilleri__kello {
+.mk-pilleri--konjakki .mk-pilleri__kello,
+.mk-pilleri--konjakki .mk-pilleri__punta,
+.mk-ylapalkki .mk-pilleri.mk-pilleri--konjakki > .mk-ikoni {
     color: var(--tk-tumma-muste);
+    opacity: 1;
+}
+
+/* Punta omana merkkinään selkeällä kirjasimella (Kone-kirjasimen £ näytti koukulta ja kosketti numeroa). */
+.mk-pilleri__punta {
+    margin-right: 1px;
+    -unity-font-style: normal;
 }
 
 /* Dynamic Islandin tikkaus (omistaja 2.10.2026, korvaa mustan saarialueen): Painter2D, Ylapalkki.AsetaSaariTikkaus. */

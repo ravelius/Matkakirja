@@ -1,12 +1,12 @@
 // TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi).
-// ÄLÄ MUOKKAA KÄSIN. lähde 4f85f48d0d00. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
+// ÄLÄ MUOKKAA KÄSIN. lähde 157539c23503. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class Tyylikirja
     {
-        public const string Lahde = "4f85f48d0d00";
+        public const string Lahde = "157539c23503";
 
         public static class Kehys
         {
@@ -23,6 +23,8 @@ namespace Matkakirja.Natiivi
             public static readonly Color32 RiviTausta = new Color32(53, 39, 26, 140);
             public static readonly Color32 OverlayCard = new Color32(46, 33, 20, 224);
             public static readonly Color32 OverlayLine = new Color32(217, 161, 59, 115);
+            public static readonly Color32 Konjakki = new Color32(154, 78, 28, 255);
+            public static readonly Color32 KonjakkiReuna = new Color32(90, 45, 18, 255);
             public static readonly Color32 Paper = new Color32(239, 220, 180, 255);
             public static readonly Color32 PaperDark = new Color32(220, 192, 143, 255);
             public static readonly Color32 MapInk = new Color32(70, 51, 31, 255);
@@ -43,6 +45,7 @@ namespace Matkakirja.Natiivi
         public static readonly Teema Tumma = new Teema("tumma", new Color32(32, 26, 20, 255), new Color32(241, 230, 208, 255), new Color32(201, 180, 143, 255), new Color32(217, 161, 59, 255), new Color32(217, 161, 59, 97), new Color32(217, 161, 59, 255));
         public static readonly Teema Lasi = new Teema("lasi", new Color32(46, 33, 20, 224), new Color32(243, 230, 208, 255), new Color32(201, 180, 143, 255), new Color32(217, 161, 59, 255), new Color32(217, 161, 59, 115), new Color32(217, 161, 59, 255));
         public static readonly Teema LasiAvaruus = new Teema("lasi-avaruus", new Color32(4, 12, 9, 230), new Color32(223, 246, 232, 255), new Color32(159, 201, 176, 255), new Color32(93, 255, 168, 255), new Color32(93, 255, 168, 71), new Color32(93, 255, 168, 255));
+        public static readonly Teema Harmaa = new Teema("harmaa", new Color32(130, 130, 130, 107), new Color32(224, 224, 224, 255), new Color32(189, 189, 189, 255), new Color32(255, 255, 255, 255), new Color32(170, 170, 170, 255), new Color32(170, 170, 170, 140));
 
         public static class Himmennys
         {
@@ -117,6 +120,14 @@ namespace Matkakirja.Natiivi
             public const float Korkeus = 38f;
             public const float Osuma = 44f;
             public const float Laukaisin = 64f;
+            public const float Ohjaus = 40f;
+            public const float OhjausKuvake = 22f;
+        }
+
+        public static class Galleria
+        {
+            public const float Sarake = 92f;
+            public const float Vali = 10f;
         }
 
         public static class Leveys
@@ -168,6 +179,6 @@ namespace Matkakirja.Natiivi
             public static readonly (string Perhe, string Tyyli)[] Kauno = { ("Snell Roundhand", "Regular"), ("Savoye LET", "Plain"), ("Bradley Hand", "Bold") };
         }
 
-        public static readonly string[] Pohjat = { "NOSTOKORTTI", "LUKUARKKI", "KORTTI", "PANEELI", "KUVANÄKYMÄ", "LINSSIN OHJAIN", "PULU", "EDISTYMINEN", "KENTTÄ", "LAUTAPELI" };
+        public static readonly string[] Pohjat = { "NOSTOKORTTI", "LUKUARKKI", "KORTTI", "PANEELI", "KUVANÄKYMÄ", "LINSSIN OHJAIN", "PULU", "EDISTYMINEN", "KENTTÄ", "LAUTAPELI", "GALLERIA", "OHJAUSNAPPI" };
     }
 }
