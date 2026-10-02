@@ -784,9 +784,10 @@ namespace Matkakirja.Natiivi
                     Kirjaa("nappain: " + Nappaimisto.Paina(loput.Trim()));
                     return null;
                 case "ohjausnapit":
-                    // OHJAUSNAPPI-koe (omistaja 2.10. klo 14.16): ui ohjausnapit 1|0.
-                    OhjausryhmaKoe.Paalla = loput.Trim() != "0";
-                    return "=ohjausnapit " + (OhjausryhmaKoe.Paalla ? "päällä" : "pois");
+                    // OHJAUSNAPPI-koe (omistaja 2.10. klo 14.16 ja 14.44): ui ohjausnapit 0 (pois) | 1 (rivi) | 2 (valikko).
+                    if (loput.Trim() == "auki") { OhjausryhmaKoe.Viimeisin?.AvaaValikko(); return "=ohjausnapit valikko auki"; }
+                    OhjausryhmaKoe.Tila = int.TryParse(loput.Trim(), out var okTila) ? okTila : 1;
+                    return "=ohjausnapit " + OhjausryhmaKoe.Tila;
                 case "mikseri":
                 {
                     // Kehittäjän mikseripaneeli (MikseriPaneeli): ui mikseri [tila] | auki | kiinni | demo | demo pois.

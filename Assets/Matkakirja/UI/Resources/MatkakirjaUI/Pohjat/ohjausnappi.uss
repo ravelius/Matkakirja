@@ -1,10 +1,10 @@
-/* OHJAUSNAPPI-pohja (omistaja 2.10.2026 klo 14.16: kaikki kuvakenapit yhtenäisiksi neliöiksi pyöristetyin kulmin ja näkymän napit
- * yhteen ohjausryhmään). EHDOTUS, kokeena lipun takana (`ui ohjausnapit 1`, OhjausryhmaKoe) ennen omistajan OK:ta.
- * Malli: olemassa oleva taikalasinappi (web #linssi-btn, natiivi .mk-linssiNappi 40 × 40, pyöristetty neliö).
- *   näkyvä 40 × 40 pt, osuma-ala 44 pt (Kosketusnappi laajentaa), kulma --tk-kulma-nappi, kuvake 22 pt viivalla 1,75 (web VIIVA_IKONIT)
- *   ryhmä: vaakarivi oikeaan yläkulmaan turva-alueen sisään, väli --tk-vali-s; järjestys ‹ → näkymän säätimet → ✕ viimeisenä oikealla
- *   teema elementin tk-teema-*-luokasta (paperi, lasi, lasi-avaruus); --harmaa = 16.9. harmaa (valokuvan, 3D:n ja avaruuden päällä).
- * VAIN --tk-*-tokenit; harmaa poikkeus samoin arvoin kuin Pohjat/kuvanakyma.uss. */
+/* OHJAUSNAPPI-pohja (tyylikirja pohjat.OHJAUSNAPPI, omistaja 2.10.2026 klo 14.16; web #3854): kaikki kuvakenapit yhtenäisiksi
+ * neliöiksi pyöristetyin kulmin ja näkymän napit yhteen ohjausryhmään. Malli taikalasinappi (web #linssi-btn).
+ *   näkyvä --tk-nappi-ohjaus (40) neliö, osuma-ala 44 pt (Kosketusnappi laajentaa), kulma --tk-kulma-nappi,
+ *   kuvake --tk-nappi-ohjaus-kuvake (22) viivalla 1,75 (web VIIVA_IKONIT)
+ *   ryhmä: vaakarivi oikeaan yläkulmaan turva-alueen sisään, väli --tk-vali-s; järjestys ‹ → näkymän toiminnot → ✕ viimeisenä
+ *   teema elementin tk-teema-*-luokasta: harmaa (oletus valokuvan, 3D:n ja avaruuden päällä; omistaja 16.9.), paperi, lasi,
+ *   lasi-avaruus. VAIN --tk-*-tokenit. */
 .mk-ohjausryhma {
     position: absolute;
     top: var(--tk-vali-s);
@@ -14,9 +14,9 @@
 }
 
 .mk-ohjausnappi {
-    width: 40px;
-    height: 40px;
-    min-height: 40px;
+    width: var(--tk-nappi-ohjaus);
+    height: var(--tk-nappi-ohjaus);
+    min-height: var(--tk-nappi-ohjaus);
     margin: 0 0 0 var(--tk-vali-s);
     padding: 0;
     border-width: 1px;
@@ -29,21 +29,20 @@
 }
 
 .mk-ohjausnappi > .mk-ikoni {
-    width: 22px;
-    height: 22px;
+    width: var(--tk-nappi-ohjaus-kuvake);
+    height: var(--tk-nappi-ohjaus-kuvake);
     margin-right: 0;
 }
 
 .mk-ohjausnappi:active {
     border-color: var(--tk-korostus);
+    background-color: var(--tk-toiminto);
 }
 
-.mk-ohjausnappi--harmaa {
-    border-color: rgb(170, 170, 170);
-    background-color: rgba(130, 130, 130, 0.42);
-    color: rgb(224, 224, 224);
-}
-
-.mk-ohjausnappi--harmaa:active {
-    background-color: rgba(170, 170, 170, 0.55);
+/* Iso koko kuvasisällölle (nappi.ohjaus-iso 56 pt; omistaja 2.10.2026 klo 17.4x: linnan pienoiskartta ☰-nappia isompana). */
+.mk-ohjausnappi.mk-ohjausnappi--iso {
+    width: var(--tk-nappi-ohjaus-iso);
+    height: var(--tk-nappi-ohjaus-iso);
+    min-height: var(--tk-nappi-ohjaus-iso);
+    padding: var(--tk-vali-xs);
 }
