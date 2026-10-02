@@ -19,6 +19,8 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
   natiivi + web (iss-realismi-kerrokset.js r. 143) — HYVÄKSYTTY JA TEHTY: natiivi linssiseppa/kiilto-ilmakeha 797aac22
   (käännös 5c292cbe) merge-pyynnössä Natiivisepällä; web PR #3844 (Pelikoodari hyväksyi, CI vihreä). Kuvaparit
   lokit/linssiseppa-kiilto-ilmakeha-20261002/{natiivi,web}-vanha-uusi.png; web-harness scratchpad kiilto-web.mjs.
+- OMISTAJA 20.5x: kipsipäät natiivissa "Kelpaa" (erikoisnostot-3 54358623 junassa 129). ROOMA-nimen ladontavika (Nimikerros,
+  maakuntanimi kaukaiseen ehdokkaaseen) → Natiiviseppä natiiviseppa/nimet-maakunta + Karttaseppä data/web; ei Linssisepän.
 - SAVUKE 1128 (1) KORJATTU: Linssit-nappi valitsimen Avaajiin (92a70085, juna 128 5e78c8a0); oikea sim-tap PASS f512ba86.
   OPPI: todenna napit OIKEALLA sim-tapilla (attach), ei vain ui napauta (synteettinen ohittaa wasPressedThisFrame-polun).
 - LINSSIT-KARTTANAPPI (omistaja 18.3x, web #3859): linssiseppa/linssit-karttanappi 3b05a9d4 merge-pyynnössä junaan 128 (V2:n kanssa);
