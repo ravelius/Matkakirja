@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 1.10.2026 klo 20.0x)
+# Linnanrakentajan aloitusviesti (päivitetty 2.10.2026 klo 18.3x)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,16 +8,17 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261001-b.md`** (uusin): kuori v20–v24 (rantaviiva, delighting, reiät,
+2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261002.md`** (UUSIN: skinnatut hahmot, vartija v1, ajattelijat, ASTC-alfa).
+   Edellinen `docs/raportit/viesti-linnanrakentaja-luovutus-20261001-b.md`: kuori v20–v24 (rantaviiva, delighting, reiät,
    venyneet), kuoriputken irrotettu ajo, vientilähteet, juurisyyt. Edellinen `…-20261001.md`.
 3. Muistitiedosto `linnanrakentaja-tila-20261001.md` (Fablen muistikansio) on sama tila tiivistettynä.
 
-## Kärki 1.10. klo 20.0x
+## Kärki 2.10. klo 18.3x
 
-- #3812 kuori v24 (blender 0e1a7b5806ca986f) junassa; Siirtoseppä mittaa, osoitin vasta omistajan luvalla hänen kuittauksensa jälkeen.
-- Ei uutta tilattua työtä. Ehdota Päätoimittajalle seuraavaa laatuaskelta yhdellä suosituksella (ehdokas: bastionin lautalevyt).
-- Ei worktreetä. Pitkät ajot (kuoriputki ~1 h 45 min) aina perl fork+setsid -irrotuksella.
-- Heredocit aina lainattuina (`<<'EOF'`). Lainaamaton heredoc ajoi 1.10. backtick-komennon roolin checkoutissa.
+- Linnan väki skinnatuiksi (omistaja 18.0x): vartija v1 Siirtosepällä (`_valmiit/vartija-skin/v1`), seuraavaksi muut 16 hahmoa
+  `tools/dioraama/blender/hahmo_skin.py`:llä Siirtosepän iPhone-videon ja Päätoimittajan OK:n jälkeen.
+- PR #3851 (linnan ASTC-alfa, tuotannossa jo) junassa. Ajattelijat odottavat omistajaa (Marcuksen intro, seuraava ajattelija).
+- Pitkät ajot perl fork+setsid; heredocit lainattuina; älä kirjoita `cat > tiedosto` ilman heredocia (jäi odottamaan syötettä 2.10.).
 
 ## Säännöt, jotka opittiin
 
