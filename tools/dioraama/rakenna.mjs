@@ -433,6 +433,10 @@ export function lisaaBlender(rakennusJson, blender) {
   for (const t of rakennusJson.tilat) {
     const g = on.get(`tilat/${t.id}.glb`);
     t.glb = { tiedosto: B(`tilat/${t.id}.glb`), sha256: g.sha256, tavuja: g.tavuja };
+    // Kohdistamaton tila (tunnelma; erä 1b, Päätoimittaja 2.10. 23.xx): liekit tulevat leivotun glb:n liekki:-tyhjistä,
+    // jotka natiivi leikkaa leikkauskäytävästä telineidensä kanssa. JSON-liekit jäivät näkyviin ilman telinettä
+    // (fatabuuri, keittiö, laituri: liekki "tyhjässä"), joten ne jätetään pois paketista.
+    if (t.kohdistettava === false) delete t.liekit;
     if (on.has(`valot/${t.id}.jpg`)) {
       t.valoatlas = atlas(t.id, '');
       if (on.has(`valot/${t.id}-hamara.jpg`)) t.valoatlas.hamara = atlas(t.id, '-hamara');
