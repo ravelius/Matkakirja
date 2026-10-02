@@ -15,7 +15,7 @@ namespace Matkakirja.Natiivi
     public sealed class Leima
     {
         const int SisaanMs = 280, NakyvissaMs = 1200, UlosMs = 300;
-        static readonly Regex Summa = new Regex(@"\d+\s*(puntaa|£)");
+        static readonly Regex Summa = new Regex(@"£\s*\d+|\d+\s*(?:puntaa|£)");
 
         readonly VisualElement juuri;
         readonly Queue<(string Teksti, string Ala, string Ikoni)> jono = new Queue<(string, string, string)>();
@@ -31,7 +31,7 @@ namespace Matkakirja.Natiivi
         {
             if (muutos == 0) return;
             if (!string.IsNullOrEmpty(syy) && Summa.IsMatch(syy)) Nayta(syy, null);
-            else Nayta((muutos > 0 ? "+" : "−") + Mathf.Abs(muutos) + " puntaa", syy);
+            else Nayta((muutos > 0 ? "+" : "−") + "£" + Mathf.Abs(muutos), syy);
         }
 
         /// <summary>Kupla jonoon (ikoni = Ikonit.Viiva-avain, oletus kukkaro).</summary>

@@ -1008,12 +1008,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomento 'ui matka': esimerkkivalinta ilman peliä.</summary>
         public void Esimerkkimatka()
         {
-            Matkavalinta.Nayta("Lontoo", "300 £ · päivä 1 · aamu", new[]
+            Matkavalinta.Nayta("Lontoo", "£300 · päivä 1 · aamu", new[]
             {
-                ("Bussi", "50 £ · perillä heti, aika ei kulu"),
-                ("Lento", "300 £ · perillä, vie vuoron"),
+                ("Bussi", "£50 · perillä heti, aika ei kulu"),
+                ("Lento", "£300 · perillä, vie vuoron"),
                 ("Liftaus", "ilmainen · noppa · 4 askelta perille"),
-                ("Laiva", "100 £ · noppa · 6 askelta perille"),
+                ("Laiva", "£100 · noppa · 6 askelta perille"),
             }, i => { Matkavalinta.Piilota(); Tilarivi.Viesti("Valittu: " + i); }, () => Tilarivi.Viesti("Peruttu"));
         }
 

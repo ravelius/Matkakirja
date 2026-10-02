@@ -619,15 +619,15 @@ namespace Matkakirja.Natiivi
             var nimi = PullanNimi();
             if (vinkki)
                 Pulla(kotelo, k.VinkkiHinta, k.VinkkiOstettu, toiminnot.OstaVinkki,
-                    $"Osta {nimi} Livialle ({k.VinkkiHinta} £) — vinkki",
-                    $"Varmista: {nimi} Livialle, {k.VinkkiHinta} £",
-                    $"Kassa ei riitä: {nimi} {k.VinkkiHinta} £",
+                    $"Osta {nimi} Livialle (£{k.VinkkiHinta}) — vinkki",
+                    $"Varmista: {nimi} Livialle, £{k.VinkkiHinta}",
+                    $"Kassa ei riitä: {nimi} £{k.VinkkiHinta}",
                     $"Livia sai kokonaisen pullan ({nimi}) ja sanoi vinkkinsä.");
             if (!linkki) return;
             Pulla(kotelo, k.LinkkiHinta, k.LinkkiOstettu, toiminnot.OstaLinkki,
-                $"Osta puolikas {nimi} ({k.LinkkiHinta} £) — suora linkki",
-                $"Varmista: puolikas {nimi}, {k.LinkkiHinta} £",
-                $"Kassa ei riitä: puolikas {nimi} {k.LinkkiHinta} £",
+                $"Osta puolikas {nimi} (£{k.LinkkiHinta}) — suora linkki",
+                $"Varmista: puolikas {nimi}, £{k.LinkkiHinta}",
+                $"Kassa ei riitä: puolikas {nimi} £{k.LinkkiHinta}",
                 $"Livia sai puolikkaan pullan ({nimi}) ja näytti linkin.");
             // Ostettu linkki säilyy: kortti avattiin uudelleen, nappi kuuluu sinne edelleen.
             if (k.LinkkiOstettu)

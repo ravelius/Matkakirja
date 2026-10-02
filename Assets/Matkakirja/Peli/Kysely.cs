@@ -754,7 +754,7 @@ namespace Matkakirja.Peli
                 {
                     Kokemus.Anna(p, Kokemus.Tutkiminen);
                     p.Raha += KysymysVakiot.TutkimusPalkkio;
-                    Tapahtui?.Invoke("aid", $"Löytöpalkkio +{KysymysVakiot.TutkimusPalkkio} puntaa");
+                    Tapahtui?.Invoke("aid", $"Löytöpalkkio +£{KysymysVakiot.TutkimusPalkkio}");
                 }
                 return TekoTulos.Onnistui();
             }

@@ -328,7 +328,7 @@ namespace Matkakirja.Natiivi
                     if (r != null && !r.Ok) return;
                     vihje.RemoveFromHierarchy();
                     vaihtoehdot.Clear();
-                    tulos.text = (oikein ? $"Oikein! +{t.Palkkio} puntaa. " : $"Oikea vastaus: {t.Visa.Vaihtoehdot[t.Visa.Oikea]}. ") + (t.Visa.Fakta ?? "");
+                    tulos.text = (oikein ? $"Oikein! +£{t.Palkkio}. " : $"Oikea vastaus: {t.Visa.Vaihtoehdot[t.Visa.Oikea]}. ") + (t.Visa.Fakta ?? "");
                     tulos.EnableInClassList("mk-oikein", oikein);
                     tulos.EnableInClassList("mk-vaarin", !oikein);
                     tulos.style.display = DisplayStyle.Flex;
@@ -402,7 +402,7 @@ namespace Matkakirja.Natiivi
                     nappi.EnableInClassList("mk-fokus__pullanappi--varmistus", false);
                     nappi.EnableInClassList("mk-fokus__pullanappi--koyha", true);
                     nappi.pickingMode = PickingMode.Ignore;
-                    teksti.text = $"Kassa ei riitä: {nimi} {hinta} £";
+                    teksti.text = $"Kassa ei riitä: {nimi} £{hinta}";
                     huomio.text = PullaKoyhaLivia;
                     huomio.style.display = DisplayStyle.Flex;
                     return;
@@ -410,7 +410,7 @@ namespace Matkakirja.Natiivi
                 nappi.EnableInClassList("mk-fokus__pullanappi--koyha", false);
                 nappi.pickingMode = PickingMode.Position;
                 nappi.EnableInClassList("mk-fokus__pullanappi--varmistus", odottaa);
-                teksti.text = odottaa ? $"Varmista: {nimi} Livialle, {hinta} £" : $"Osta {nimi} Livialle ({hinta} £)";
+                teksti.text = odottaa ? $"Varmista: {nimi} Livialle, £{hinta}" : $"Osta {nimi} Livialle (£{hinta})";
                 huomio.text = odottaa ? PullaVarmistusOhje : "";
                 huomio.style.display = odottaa ? DisplayStyle.Flex : DisplayStyle.None;
             }
@@ -436,7 +436,7 @@ namespace Matkakirja.Natiivi
                     return;
                 }
                 rivi.Clear();
-                Kirjasimet.Aseta(Rakenne.Teksti($"Livia sai maksunsa ({nimi}, {hinta} £) ja näytti paikan kartalta.", "mk-fokus__pullatehty", rivi), Kirjasin.LukuKursiivi);
+                Kirjasimet.Aseta(Rakenne.Teksti($"Livia sai maksunsa ({nimi}, £{hinta}) ja näytti paikan kartalta.", "mk-fokus__pullatehty", rivi), Kirjasin.LukuKursiivi);
                 aarreAvattiin?.Invoke();
                 // Kiitos ja vinkki yhdessä kuplassa, sitten pullariemu (web kuittausPinta → bunGranted).
                 var pulu = Pulu.Hae();

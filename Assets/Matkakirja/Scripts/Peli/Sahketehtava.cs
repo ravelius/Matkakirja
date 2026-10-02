@@ -384,7 +384,7 @@ namespace Matkakirja.Natiivi
                 ViimeSahke = n > 0 && viimeSahke.TryGetValue(k, out var v) ? v : null,
                 Vinkki = n >= SahkeTulkinta.VinkkiOhi && t.Vinkki.Count > 0 ? t.Vinkki : null,
                 Palkkio = palkkio,
-                Maksurivi = $"Sähkeen palkkio nyt {palkkio} puntaa. Jokainen ohilyönti pienentää sitä — mutta aarre ei lukitu koskaan.",
+                Maksurivi = $"Sähkeen palkkio nyt £{palkkio}. Jokainen ohilyönti pienentää sitä — mutta aarre ei lukitu koskaan.",
             }, t, maa);
         }
 

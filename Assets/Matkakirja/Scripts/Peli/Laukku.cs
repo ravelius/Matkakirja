@@ -75,7 +75,7 @@ namespace Matkakirja.Natiivi
         public string Sijainti;
         public int Raha;
         /// <summary>Suomalainen muoto "400 £" (Fable 27.9.: yhtenäinen iPhone, iPad ja web).</summary>
-        public string Kukkaro => Raha + "\u00A0£";
+        public string Kukkaro => "£" + Raha;
         public LaukkuTietaja Tietaja;
         /// <summary>Matkan tilastot (väkäsen alla): otsikko ja arvo webin järjestyksessä.</summary>
         public List<(string Otsikko, string Arvo)> Tilastot = new List<(string, string)>();

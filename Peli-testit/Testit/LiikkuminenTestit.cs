@@ -37,7 +37,7 @@ namespace Matkakirja.Peli.Testit
 
         [Testi] static void KultainenKulkutapajalki()
         {
-            var jalki = MiniJson.Objekti(MiniJson.Jasenna(File.ReadAllText(Path.Combine(KultaisetApu.Juuri, "Kultaiset", "kulkutapajalki.json"))));
+            var jalki = MiniJson.Objekti(MiniJson.Jasenna(KultaisetApu.LueRahajalki("kulkutapajalki.json")));
             int vuorot = (int)MiniJson.Luku(jalki, "vuorot").Value, yht = 0, napit = 0;
             foreach (var ajo in MiniJson.Taulukko(MiniJson.Kentta(jalki, "jaljet")).Cast<Dictionary<string, object>>())
             {
@@ -87,7 +87,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(!n[0].Estetty && n[0].Korostettu && !n[1].Estetty, "liftaus ja bussi");
             Oleta.Tosi(!Liikkuminen.LiikuEstetty(n), "Liiku käytössä");
             var koyha = Liikkuminen.Napit(Pariisissa(10));
-            Oleta.Sama("bussilippu maksaa 50 puntaa", koyha[1].Syy);
+            Oleta.Sama("bussilippu maksaa £50", koyha[1].Syy);
             Oleta.Tosi(koyha[3].Estetty, "lento ilman rahaa");
             // Heittovaiheessa liukua ei ole (web: noppa ja Vaihda): tyhjä ja Liiku harmaa.
             var h = Matka.UusiPeli(KultaisetApu.Verkko, new Satunnainen(12345), "Fogg", "pariisi");

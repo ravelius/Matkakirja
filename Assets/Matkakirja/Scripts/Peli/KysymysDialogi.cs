@@ -266,7 +266,7 @@ namespace Matkakirja.Natiivi
             if (!d.Vastattu)
             {
                 if (!string.IsNullOrEmpty(d.Vihje)) y = Lisaa("Vihje: " + d.Vihje, 15, FontStyles.Italic, y + 2, leveys);
-                string puolitusTeksti = $"50:50 {d.PuolitusHinta} {d.Valuutta}";
+                string puolitusTeksti = $"50:50 {d.Valuutta}{d.PuolitusHinta}";
                 bool puolitusKay = d.Raha >= d.PuolitusHinta;
                 bool vihje = d.VihjeTarjolla, puolitus = d.PuolitusTarjolla;
                 if (vihje || puolitus)
@@ -275,11 +275,11 @@ namespace Matkakirja.Natiivi
                     float kv = 0;
                     if (vihje && puolitus)
                     {
-                        kv = Nappi($"Vihje {d.VihjeHinta} {d.Valuutta}", y, puoli, -(puoli + Vali) / 2, nappi, d.Raha >= d.VihjeHinta, () => t?.Vihje?.Invoke(), 15);
+                        kv = Nappi($"Vihje {d.Valuutta}{d.VihjeHinta}", y, puoli, -(puoli + Vali) / 2, nappi, d.Raha >= d.VihjeHinta, () => t?.Vihje?.Invoke(), 15);
                         Nappi(puolitusTeksti, y, puoli, (puoli + Vali) / 2, nappi, puolitusKay, () => t?.Puolita?.Invoke(), 15);
                     }
                     else if (vihje)
-                        kv = Nappi($"Vihje {d.VihjeHinta} {d.Valuutta}", y, puoli, 0, nappi, d.Raha >= d.VihjeHinta, () => t?.Vihje?.Invoke(), 15);
+                        kv = Nappi($"Vihje {d.Valuutta}{d.VihjeHinta}", y, puoli, 0, nappi, d.Raha >= d.VihjeHinta, () => t?.Vihje?.Invoke(), 15);
                     else
                         kv = Nappi(puolitusTeksti, y, puoli, 0, nappi, puolitusKay, () => t?.Puolita?.Invoke(), 15);
                     y += kv + Vali;

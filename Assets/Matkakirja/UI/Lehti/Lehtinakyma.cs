@@ -1026,7 +1026,7 @@ namespace Matkakirja.Natiivi
                         tulos.style.display = DisplayStyle.Flex;
                         // Hiljaista polkua ei ole: jo vastattu saa näkyvän vastauksen (web).
                         if (r != null && !r.Ok) { tulos.text = "Kysymykseen on jo vastattu tässä kaupungissa."; return; }
-                        tulos.text = (oikein ? $"Oikein! +{palkkio} puntaa. " : $"Oikea vastaus: {v.Vaihtoehdot[v.Oikea]}. ") + (v.Fakta ?? "");
+                        tulos.text = (oikein ? $"Oikein! +£{palkkio}. " : $"Oikea vastaus: {v.Vaihtoehdot[v.Oikea]}. ") + (v.Fakta ?? "");
                         tulos.EnableInClassList("mk-oikein", oikein);
                         tulos.EnableInClassList("mk-vaarin", !oikein);
                         Aanet.PulunTehoste(oikein ? "correct" : "wrong");
@@ -1077,7 +1077,7 @@ namespace Matkakirja.Natiivi
                     if (r != null && !r.Ok) { tulos.text = r.Virhe; tulos.style.display = DisplayStyle.Flex; return; }
                     // Web: vaihtoehdot pois, kehystetty tulos tilalle.
                     foreach (var x in napit) x.RemoveFromHierarchy();
-                    tulos.text = (oikein ? $"Oikein! +{palkkio} puntaa. " : $"Oikea vastaus: {t.Vaihtoehdot[t.Oikea]}. ") + (t.Fakta ?? "");
+                    tulos.text = (oikein ? $"Oikein! +£{palkkio}. " : $"Oikea vastaus: {t.Vaihtoehdot[t.Oikea]}. ") + (t.Fakta ?? "");
                     tulos.EnableInClassList("mk-oikein", oikein);
                     tulos.EnableInClassList("mk-vaarin", !oikein);
                     tulos.style.display = DisplayStyle.Flex;

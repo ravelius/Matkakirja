@@ -1212,7 +1212,7 @@ namespace Matkakirja.Natiivi
                         LueLehti = () => ui.Tilarivi.Viesti("Lue lehti"),
                         Liiku = oma ? null : () => ui.Tilarivi.Viesti("Liiku"),
                         Mannerlento = oma ? () => ui.Tilarivi.Viesti("Mannerlento") : null,
-                        MannerlentoTeksti = oma ? "Mannerlento (300 £)" : null,
+                        MannerlentoTeksti = oma ? "Mannerlento (£300)" : null,
                         Sulje = () => { },
                     });
                     return null;

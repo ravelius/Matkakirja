@@ -92,7 +92,7 @@ namespace Matkakirja.Peli.Testit
         {
             Oleta.Sama(null, KysymysApu.LoytoTeksti(null));
             Oleta.Sama("Laatan alta lehahti pöllö!", KysymysApu.LoytoTeksti(new Loyto { Pollo = true }));
-            Oleta.Sama("Löysit: Kätketty matka-arkku · +640 £", KysymysApu.LoytoTeksti(new Loyto { Tyyppi = "isoAarre", RahaLisays = 640 }));
+            Oleta.Sama("Löysit: Kätketty matka-arkku · +£640", KysymysApu.LoytoTeksti(new Loyto { Tyyppi = "isoAarre", RahaLisays = 640 }));
             Oleta.Sama("Laatta oli tyhjä.", KysymysApu.LoytoTeksti(new Loyto { Tyyppi = "empty" }));
         }
 
@@ -199,7 +199,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("Ritarin hopeamiekka", n.Hae("isoAarre", "europe", "ZZZ").Nimi, "maaton → mantereen");
             Oleta.Sama("Kourallinen hopeakolikoita", n.Hae("pieniAarre", null, null).Nimi);
             var l = new Loyto { Tyyppi = "pieniAarre", Manner = "europe", Maa = "FIN", RahaLisays = 120 };
-            Oleta.Sama("Löysit: Tervatynnyrin pohjalta löytynyt hopeariksi · +120 £", KysymysApu.LoytoTeksti(l, "£", n));
+            Oleta.Sama("Löysit: Tervatynnyrin pohjalta löytynyt hopeariksi · +£120", KysymysApu.LoytoTeksti(l, "£", n));
         }
     }
 }

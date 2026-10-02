@@ -74,7 +74,7 @@ namespace Matkakirja.Natiivi
             if (nappi.Estetty) return nappi.Teksti + " — " + nappi.Syy;
             PiilotaKortti();
             Tavoite = null;
-            string ala = $"{matka.Tila.Pelaaja.Raha} {PeliApu.Valuutta} · päivä {matka.Tila.Paiva()} · {PeliApu.AikaNimi(matka.Tila.Vuorokaudenaika())}";
+            string ala = $"{PeliApu.Valuutta}{matka.Tila.Pelaaja.Raha} · päivä {matka.Tila.Paiva()} · {PeliApu.AikaNimi(matka.Tila.Vuorokaudenaika())}";
             switch (laji)
             {
                 case Kulkutapa.Maa:
