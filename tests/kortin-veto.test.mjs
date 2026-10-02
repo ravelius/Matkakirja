@@ -161,58 +161,11 @@ test('vetokynnys on sama luku kuin kartan raahausvahdissa', () => {
   assert.equal(RAAHAUKSEN_KYNNYS, RAAHAUKSEN_KYNNYS_PX);
 });
 
-test('kaikki kolme korttia sulkeutuvat napautusvahdin kautta', () => {
-  for (const polku of ['../js/fokuskohteet.js', '../js/fokusnosto.js', '../js/elaintaky.js']) {
+test('kortit sulkeutuvat napautusvahdin kautta (kohdekortti on NOSTOKORTTI-pohjalla 2.10.2026)', () => {
+  for (const polku of ['../js/fokusnosto.js', '../js/elaintaky.js']) {
     const lahde = lue(polku);
     assert.match(lahde, /kuunteleSulkevaNapautus\(/, `${polku} ei käytä napautusvahtia`);
   }
-});
-
-test('kortin oma ele lukee matkan IRROTUKSESTA, ei pelkästä raahaa-lipusta', () => {
-  /*
-   * Mitattu 12.9.2026 (iPad 834 x 1194): veto kortin OTSIKOSTA ylöspäin
-   * sulki kortin, koska kosketuseleestä ei tullut yhtään pointermovea
-   * eikä `raahaa` noussut. Sääntö on siksi irrotuksessa.
-   */
-  const lahde = lue('../js/fokuskohteet.js');
-  assert.match(lahde, /matka >= RAAHAUKSEN_KYNNYS \|\| kesto > NAPAUTUKSEN_KESTO_MS/,
-    'js/fokuskohteet.js raahausTaiSulku ei mittaa elettä irrotuksesta');
-});
-
-test('kuva edellä -kortti ei sulje omasta pointerdownistaan (vaihe 2)', () => {
-  /*
-   * OMISTAJAN TOINEN VIKAILMOITUS 12.9.2026, sanatarkasti: *"Nosto
-   * häviää edelleen näkyvistä, jos vieritän mistään muualta kohdasta
-   * kuin kuvaa painamalla. Eli ongelma on siinä, että peli ei tajua,
-   * että pelaaja on painanut lisää nappia ja näkyviin on tullut koko
-   * artikkeli, vaan peli luulee, että edelleen, jos pelaaja klikkaa
-   * mistä tahansa muualta kuin kuvan päältä, niin artikkeli pitää
-   * sulkea."*
-   *
-   * MITATTU JUURISYY (Chromium, CDP-kosketus, iPad 834 x 1194,
-   * Parnassós-kortti vaiheessa 2): kortin OMA pointerdown-käsittelijä
-   * (js/fokuskohteet.js avaaFokuskohde) sulki kuva edellä -kortin
-   * suoraan, ilman mitään ele-ehtoa. Kuvan päältä alkava veto meni
-   * läpi vain siksi, että kuva on `button` ja käsittelijä palaa
-   * painikkeiden kohdalla ennen sulkua — kaikki muu (ylärivi, otsikko,
-   * leipäteksti, lähderivi, pöllökysymykset) sulki kortin. v1806:n
-   * napautusvahti korjasi vain kortin ULKOPUOLISEN eleen.
-   *
-   * Vartio lukee juuri sen haaran: `nostokuvaKortissa(popup)` saa
-   * palata, mutta ei sulkea.
-   */
-  const lahde = lue('../js/fokuskohteet.js');
-  const i = lahde.indexOf('if (nostokuvaKortissa(popup))');
-  assert.ok(i > 0, 'kuva edellä -kortin haaraa ei löytynyt');
-  const haara = lahde.slice(i, i + 200);
-  assert.doesNotMatch(haara, /suljeFokuskohde/,
-    'kuva edellä -kortti sulkeutuu taas suoraan pointerdownista');
-  assert.match(haara, /if \(nostokuvaKortissa\(popup\)\) return;/,
-    'haaran on palattava ilman sulkua');
-  // Sulku on siirretty napautusvahtiin, joka odottaa sormen nousua.
-  assert.match(lahde, /const kuvanNapautus = kuunteleSulkevaNapautus\(popup, \{/,
-    'kuva edellä -kortilta puuttuu oma napautusvahti');
-  assert.match(lahde, /kuvanNapautus\(\);/, 'napautusvahtia ei pureta kortin mukana');
 });
 
 test('kuva edellä -kortin ylätekstit ovat vierityspintaa, eivät raahauskahvaa', () => {
