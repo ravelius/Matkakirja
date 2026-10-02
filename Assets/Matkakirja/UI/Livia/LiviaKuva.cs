@@ -421,7 +421,8 @@ namespace Matkakirja.Natiivi
                 float sx = r.width > 0 ? wb.width / r.width : 1f, s1 = r.width / kuva.viewBox.width;
                 float reunaX = leveys > 0 && sx > 0 && s1 > 0 ? (leveys - wb.xMin) / (sx * s1) + kuva.viewBox.x + 60f : 600f;
                 float venytys = Mathf.Max(0.2f, (reunaX - NivelX) / (PaaY - NivelY));
-                // Puomin nousu (yksikköä per yksikkö oikealle): alareuna nivelessä y = NivelY + Nosto (kuvassa 377bb8a3 väli riitti), ja esteen kohdalla sen pitää olla
+                // Puomin nousu (yksikköä per yksikkö oikealle): alareuna nivelessä on VarsiMinX-kaistan reuna (diagnostiikka 1875fff9: NivelY + Nosto
+                // jäi 33 pt liian ylös), ja esteen kohdalla sen pitää olla
                 // 6 pt esteen yläpuolella. Ilman estettä vaaka kuten ennen.
                 float nousu = 0f;
                 if (kuva.VarrenEste is Vector2 este && sx > 0 && s1 > 0 && r.height > 0)
@@ -429,7 +430,7 @@ namespace Matkakirja.Natiivi
                     float sy = wb.height / r.height;
                     float ex = (este.x - wb.xMin) / (sx * s1) + kuva.viewBox.x, ey = (este.y - wb.yMin) / (sy * s1) + kuva.viewBox.y;
                     float vara = 6f / (sy * s1);
-                    if (ex > NivelX + 1f) nousu = Mathf.Max(0f, (NivelY + Nosto - (ey - vara)) / (ex - NivelX));
+                    if (ex > NivelX + 1f) nousu = Mathf.Max(0f, (NivelY - (VarsiMinX - NivelX) * Poikittain + Nosto - (ey - vara)) / (ex - NivelX));
                 }
                 void Kuva(Texture2D kuvaI, float korkeus, float alfa, bool keinuu, Color savyPohja, float y0 = 0, float y1 = -1, bool vaaka = false)
                 {
