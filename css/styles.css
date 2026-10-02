@@ -15393,7 +15393,7 @@ button.lukija-nappi.lukee,
   color: rgba(60, 44, 26, 0.65);
 }
 
-.dialog .julistegalleria-rasti {
+.julistegalleria .julistegalleria-rasti {
   margin: 0 0 0 auto;
   padding: 0 0.3rem;
   border: 0;
@@ -15428,7 +15428,7 @@ button.lukija-nappi.lukee,
   gap: 0.6rem;
 }
 
-.dialog .julistegalleria-vedos {
+.julistegalleria .julistegalleria-vedos {
   display: block;
   width: 100%;
   margin: 0;
@@ -15441,7 +15441,7 @@ button.lukija-nappi.lukee,
   cursor: zoom-in;
 }
 
-.dialog .julistegalleria-vedos img {
+.julistegalleria .julistegalleria-vedos img {
   display: block;
   width: 100%;
   height: auto;
@@ -15463,8 +15463,8 @@ button.lukija-nappi.lukee,
 
 /* Voittamaton paikka ja vielä ämpäriin viemätön kuva: sama tyhjä
  * kehys, jotta ryhmästä ei katoa ruutua kummassakaan tapauksessa. */
-.dialog .julistegalleria-vedos.lukossa,
-.dialog .julistegalleria-vedos.kuvaton {
+.julistegalleria .julistegalleria-vedos.lukossa,
+.julistegalleria .julistegalleria-vedos.kuvaton {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15477,7 +15477,7 @@ button.lukija-nappi.lukee,
   color: rgba(60, 44, 26, 0.45);
 }
 
-.dialog .julistegalleria-vedos.lukossa { cursor: default; }
+.julistegalleria .julistegalleria-vedos.lukossa { cursor: default; }
 
 /*
  * Päivän sää lehden mastossa: hillitty rivi kuvakkeineen heti
@@ -30299,3 +30299,14 @@ body.lehtikuori { background: #2a241c; }
 }
 .lehti-osio-erotin { color: #b3aa9c; }
 .lehti-osio-linkki:hover, .lehti-osio-juttu:hover { text-decoration: underline; }
+
+/*
+ * KARTAN LINSSIT-NAPPI (omistaja 2.10.2026 klo 13.56; js/karttaselite.js): sama laatta kuin selitenapilla
+ * (.karttaselite-nappi), selitenapin vasemmalla puolella samalla rivillä.
+ */
+.karttaselite > .linssit-karttanappi {
+  position: absolute;
+  top: 0;
+  right: calc(100% + 8px);
+}
+.karttaselite > .linssit-karttanappi[hidden] { display: none; }

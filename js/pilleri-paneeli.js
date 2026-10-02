@@ -229,11 +229,9 @@ export function puePilleriPaneeliksi(haeUi) {
     const julisteet = pueLuetteloRivi(pilleriSolmu('button'), 'Julisteet', PILLERI_IKONI.julisteet);
     julisteet.type = 'button';
     julisteet.id = 'pilleri-julisteet-btn';
-    julisteet.addEventListener('click', () => {
-      const ui = haeUi();
-      ui?.renderPilleriAarteet?.();
-      ui?.naytaPilleriNakyma('aarteet');
-    });
+    // Julisteet avaa julistegallerian (voitetut aikakausjulisteet; omistaja 13.56). Valikko sulkeutuu sen alta.
+    julisteet.dataset.paneeliSulje = '';
+    julisteet.addEventListener('click', () => haeUi()?.avaaJulisteGalleria?.());
     linssit.hidden = true;
     const laukkuRyhma = pilleriSolmu('div', 'tk-paneeli__ryhma tk-paneeli__ryhma--luettelo pilleri-pikanapit');
     laukkuRyhma.append(aarteet, julisteet, linssit);

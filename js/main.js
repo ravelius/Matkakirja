@@ -5,6 +5,7 @@ import { asetaKehittajanKerroin, kehittajanKerroin } from './kehittajan-voimat.j
 import { Game } from './game.js';
 import { UI, korttiPohjalla, puePohjaDialogiksi } from './ui.js';
 import { paneeliPohjalla, puePilleriPaneeliksi } from './pilleri-paneeli.js';
+import { LINSSIT_AVAA_TAPAHTUMA } from './karttaselite.js';
 import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
@@ -1253,6 +1254,13 @@ const vaihdaValikko = (tapahtuma) => {
 };
 
 menuBtn.addEventListener('click', vaihdaValikko);
+
+// Kartan Linssit-nappi (js/karttaselite.js, omistaja 2.10.2026 klo 13.56): pillerivalikko suoraan Linssit-näkymään.
+document.addEventListener(LINSSIT_AVAA_TAPAHTUMA, (tapahtuma) => {
+  const lahde = tapahtuma.detail?.lahde ?? menuBtn;
+  if (paavalikko.hidden) avaaPaavalikko(lahde);
+  ui?.naytaPilleriNakyma('linssit', { animoi: false });
+});
 
 /*
  * Valinta sulkee valikon. Kuuntelija on valikossa itsessään, joten

@@ -15979,7 +15979,9 @@ export class UI {
      */
     const arkki = document.getElementById('tiivis-lehtiarkki');
     if (arkki?.open) return arkki;
-    return this.arrivalDialog;
+    // Suljettuun dialogiin liitetty ei piirry (yllä): ilman auki olevaa dialogia isäntä on body (valikon
+    // Julisteet ja Aarteet-näkymä avaavat gallerian kartan päälle; mitattu 2.10.2026 korkeus 0 px).
+    return this.arrivalDialog?.open ? this.arrivalDialog : document.body;
   }
 
   /**
@@ -18412,6 +18414,8 @@ export class UI {
       this.pilleriLinssitBtn.hidden = Boolean(this.linssiKotelo?.hidden)
         || Boolean(this.paavalikko?.classList.contains('tk-paneeli--v2'));
     }
+    // Kartan Linssit-nappi (js/karttaselite.js): näkyy samasta ehdosta kuin valikon Linssit-rivi ennen v2:ta.
+    if (this.karttaselite?.linssiNappi) this.karttaselite.linssiNappi.hidden = Boolean(this.linssiKotelo?.hidden);
     this.naytaPilleriNakyma('paa', { animoi: false });
     ilmoitaLivianTunne(
       { tunne: 'utelias', voimakkuus: 0.4 },
@@ -19139,6 +19143,7 @@ export class UI {
     const hiomassa = tuki.omistus?.hiomassaOlevat?.(this.game, this.game.player) ?? [];
     const valmistuneet = tuki.omistus?.valmistuneet?.(this.game, this.game.player) ?? [];
     this.linssiKotelo.hidden = nakyvat.length === 0 && hiomassa.length === 0;
+    if (this.karttaselite?.linssiNappi) this.karttaselite.linssiNappi.hidden = this.linssiKotelo.hidden;
 
     const tunniste = `${this.game.pack.id}|${nakyvat.map((l) => l.tunnus).join(',')}`
       + `|hiomassa:${hiomassa.join(',')}|valmistui:${valmistuneet.join(',')}`;
