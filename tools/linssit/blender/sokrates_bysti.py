@@ -813,6 +813,24 @@ def _kipsin_pinta(o):
     t.image.colorspace_settings.name = 'Non-Color'; nt.links.new(mp.outputs['Vector'], t.inputs['Vector'])
     bu = nt.nodes.new('ShaderNodeBump'); bu.inputs['Strength'].default_value = 0.35; bu.inputs['Distance'].default_value = 0.0006
     nt.links.new(t.outputs['Color'], bu.inputs['Height']); nt.links.new(bu.outputs['Normal'], b.inputs['Normal'])
+    if '--terava' in A:
+        # omistaja 2.10. 10.3x: "pinta muuttuu vieläkin muovisemman näköiseksi" → voimakkaampi mikronormaali, toinen
+        # hienompi kuvio (huokoset) ja hento onteloiden AO perusväriin; renderissä enemmän näytteitä ja denoise
+        # albedo- ja normaalipasseilla ilman esisuodatusta (ks. rakenna_terava)
+        bu.inputs['Strength'].default_value = 0.6
+        mp2 = nt.nodes.new('ShaderNodeMapping'); mp2.inputs['Scale'].default_value = (95.0,) * 3
+        nt.links.new(tc.outputs['Object'], mp2.inputs['Vector'])
+        t2 = nt.nodes.new('ShaderNodeTexImage'); t2.projection = 'BOX'; t2.projection_blend = 0.25; t2.image = t.image
+        nt.links.new(mp2.outputs['Vector'], t2.inputs['Vector'])
+        bu2 = nt.nodes.new('ShaderNodeBump'); bu2.inputs['Strength'].default_value = 0.35; bu2.inputs['Distance'].default_value = 0.00025
+        nt.links.new(t2.outputs['Color'], bu2.inputs['Height']); nt.links.new(bu.outputs['Normal'], bu2.inputs['Normal'])
+        nt.links.new(bu2.outputs['Normal'], b.inputs['Normal'])
+        ao = nt.nodes.new('ShaderNodeAmbientOcclusion'); ao.inputs['Distance'].default_value = 0.004; ao.samples = 8; ao.only_local = True
+        mx = nt.nodes.new('ShaderNodeMix'); mx.data_type = 'RGBA'; mx.blend_type = 'MULTIPLY'; mx.inputs['Factor'].default_value = 0.35
+        mx.inputs['A'].default_value = b.inputs['Base Color'].default_value
+        nt.links.new(ao.outputs['AO'], mx.inputs['B']); nt.links.new(mx.outputs['Result'], b.inputs['Base Color'])
+        sc_ = bpy.context.scene; sc_.cycles.denoising_input_passes = 'RGB_ALBEDO_NORMAL'; sc_.cycles.denoising_prefilter = 'NONE'
+        sc_.render.use_motion_blur = False
 
 
 def kaiku_projektori(nimi, p, suunta, etaisyys, lev, kuva, ruudut, voima, savy=(1.0, 0.78, 0.52), liuku=0.05):
