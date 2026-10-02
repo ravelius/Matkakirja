@@ -9903,3 +9903,7 @@ Päätoimittaja esitti 2.10.2026 klo 07.1x Marcus Aureliuksen lukijan tekstit sa
 ## OMISTAJA: KAIKU SILMÄMUNAAN ERITTÄIN LÄHELTÄ (2.10.2026) (2.10.2026 klo 07.25)
 
 Omistaja 2.10.2026 klo 07.2x sanatarkasti: 'Voisiko joku kuva olla niin läheltä että vain silmämuna näkyisi ja siihen heijastettaisiin Kaiku?' → Linja: kierroksella 2 (oraakkeli, Kodros-kylix) kamera erittäin lähellä niin, että ruudussa on vain silmämuna ja luomen reuna; kaiku ainoana valona kaartuu silmämunan pinnalle; kierrosten kuvakoot vaihtelevat (otsa – silmä – kasvojen sivu). Linnanrakentaja: koestilli, sitten v9.
+
+## OMISTAJA (KORTTI): OLAVINLINNAN KUORI v24 KÄYTTÖÖN NYT; SOVELLUKSEN NYKÄYKSET KORJATAAN ERIKSEEN (2.10.2026) (2.10.2026 klo 07.46)
+
+Siirtosepän iPad Dev -mittaukset 2.10. aamulla: v24 kylmä 6/1/125 ja 8/0/100; ABAB (>50 ms / >100 ms / suurin): 2d0b 9/2/117, v24 8/2/108, 2d0b 8/0/92, v24 8/2/108 → ehto 7/0/92 ei täyttynyt, mutta nykyinen 2d0b ei täyttänyt sitä itsekään; erot mittausvaihtelun sisällä; >100 ms -ruudut tulevat molemmissa taivaan latauksesta ja GC:stä (sovelluskoodi). Omistaja valitsi kortilla 2.10.2026 klo 07.5x 'Vaihda v24 nyt (Suositus)' → Julkaisija vaihtaa linnan osoittimen pakettiin 52197409fe9d6669 (peruttavissa 2d0bde8dfb083ec7:ään); Siirtoseppä korjaa sovelluksen yli 100 ms:n ruudut (taivaan lataus, GC) erikseen ABAB-mittauksin.
