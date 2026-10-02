@@ -79,11 +79,13 @@ namespace Matkakirja.Natiivi
         /// "hampurilaiseen ylimmäksi korkeustasot-nappi ja sen alapuolelle sulje-nappi").</param>
         /// <param name="kytkimet">linssin omat kytkimet komentojen jälkeen (web luoLinssivalikko kohdat `{ teksti, lue, kirjoita }`):
         /// tila PÄÄLLÄ/POIS rivin oikeassa reunassa, napautus kääntää ja sulkee valikon. Topografia: Korkeustasot.</param>
+        /// <param name="teema">napin OHJAUSNAPPI-teema (tk-teema-*); karttalinssin hampurilainen "lasi" = webin tumma ruskea
+        /// (web luoLinssivalikko teema 'lasi', --tk-lasi-pinta; Päätoimittaja 2.10.2026 klo 23.0x).</param>
         public LinssiValikko(UiKerros kerros, IEnumerable<(string Nimi, Action Teko)> valinnat, string sulkuNimi, Action sulje, bool aanet = true,
-            IEnumerable<(string Nimi, Func<bool> Lue, Action<bool> Kirjoita)> kytkimet = null)
+            IEnumerable<(string Nimi, Func<bool> Lue, Action<bool> Kirjoita)> kytkimet = null, string teema = "harmaa")
         {
             poistu = sulje;
-            Nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", Vaihda, null, "harmaa");
+            Nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", Vaihda, null, teema);
             valikko = Rakenne.El("mk-linssivalikko mk-linssivalikko--pohja", kerros.Juuri(LinssiUi.Kerros));
             valikko.style.display = DisplayStyle.None;
             Kirjasimet.Aseta(valikko, Kirjasin.Luku);

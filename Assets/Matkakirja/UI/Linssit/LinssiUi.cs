@@ -119,8 +119,9 @@ namespace Matkakirja.Natiivi
             // Korkeustasot on KYTKIN (web #3881): tila PÄÄLLÄ/POIS rivin oikeassa reunassa, napautus sulkee valikon ja kortti
             // avautuu yksin napin alle (Päätoimittaja 2.10.2026 klo 23.0x: valikko ei saa jäädä selitteen päälle).
             topoValikko = new LinssiValikko(kerros, new List<(string, Action)>(), "Sulje linssi", SuljeLinssi, aanet: false,
-                kytkimet: new List<(string, Func<bool>, Action<bool>)> { (Korkeustasot, () => Selite.AukiKokonaan, auki => Selite.Avaa(auki)) });
-            topoRyhma = Ohjausnappi.Ryhma(turva);
+                kytkimet: new List<(string, Func<bool>, Action<bool>)> { (Korkeustasot, () => Selite.AukiKokonaan, auki => Selite.Avaa(auki)) },
+                teema: "lasi");
+            topoRyhma = Ohjausnappi.Ryhma(turva, "lasi");
             topoRyhma.Add(topoValikko.Nappi);
             topoRyhma.style.display = DisplayStyle.None;
             // OHJAUSNAPPI-koe (`ui ohjausnapit 1` rivi: ‹ → ↻ → säätö → taikalasit → ✕ viimeisenä; `2` yksi hampurilainen).
