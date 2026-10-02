@@ -3,6 +3,15 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 2.10. KLO 23.2x
+- TOPOGRAFIAN HAMPURILAINEN 2 (Päätoimittaja 23.0x, web #3881 mallina): linssiseppa/topografia-hampurilainen-2 d015ffa1
+  (d99f62c5:n päällä; d99f62c5 pois junasta 130) MERGE-PYYNNÖSSÄ junaan 131 Natiivisepällä. Korkeustasot = KYTKIN (POIS/PÄÄLLÄ,
+  napautus sulkee valikon, selite yksin napin alle), otsikko KORKEUSTASOT (LinssiSelite.ValikkoOtsikko), nappi tk-teema-lasi
+  (Natiivi-UI kuittasi; LinssiValikko teema-parametri, oletus harmaa). Käännös 84bdd62d, simu D0D2CD1E 23.21 PASS 3 oikealla
+  tapilla (ajo-topografia-2.sh), kuvapari lokit/linssiseppa-topografia2-20261002/kuvapari-topografia2.png (koosta-topografia2.py)
+  lähetetty Päätoimittajalle. Avoin pieni ero: natiivin lasi läpikuultavampi kuin webin (web blur), ei muutettu.
+- Seuraava erä Päätoimittajalta.
+
 ## TILA 2.10. KLO 22.1x (LOPULLINEN, tilinvaihto; ei uutta työtä aloitettu)
 - TOPOGRAFIAN HAMPURILAINEN (omistaja 21.3x): linssiseppa/topografia-hampurilainen d99f62c5 (BUILD 129 e204abbe:n päällä)
   JUNA 130:N KOOSTUMUKSESSA (Natiiviseppä 22.1x, tilinvaihto: seuraava Natiiviseppä kokoaa). Topografiassa ✕-pilleri ja nimilappu pois; tilalle OHJAUSNAPPI (LinssiValikko-pohja,
