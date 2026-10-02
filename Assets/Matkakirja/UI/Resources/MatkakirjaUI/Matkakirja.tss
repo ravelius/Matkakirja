@@ -27,3 +27,4 @@
 @import url("Pohjat/Pinnat/kohdekortti.uss");
 @import url("Pohjat/Pinnat/astronautin-auto.uss");
 @import url("Pohjat/Pinnat/lentopeli.uss");
+@import url("Pohjat/Pinnat/ajattelija.uss");
