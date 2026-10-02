@@ -13,6 +13,17 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2567, teksti: 'Raha £N proosassa, konjakkipilleri, £-glyfi, Pu… (#3864)' },
+  { v: 2566, teksti: 'TestFlight-luvut: vain luku -ajo (#3873)' },
+  { v: 2565, teksti: 'Raha £N, pilleri \'1 pv · £400\', valikon päiväri… (#3862)' },
+  { v: 2564, teksti: 'Kipsipää karttaobjektiksi: kiinteä piste, lämmi… (#3866)' },
+  { v: 2563, teksti: 'Puhe äänenä, ei kuplina: Pulun äänitetyt replii… (#3867)' },
+  { v: 2562, teksti: 'Linssit-nappi kartalle, Julisteet valikosta (#3859)' },
+  { v: 2561, teksti: 'Tyylikirja: GALLERIA-pohja ja £-merkin kirjasin (#3860)' },
+  { v: 2560, teksti: 'Tyylikirja: OHJAUSNAPPI-pohja, harmaa teema ja… (#3854)' },
+  { v: 2559, teksti: 'Olavinlinna: puukorttien ASTC-alfa (#3851)' },
+  { v: 2558, teksti: 'Valikko v2 oletukseksi (#3853)' },
+  { v: 2557, teksti: 'AUTO kevyeksi suorakulmioksi, Puhu Pululle alar… (#3849)' },
   { v: 2556, teksti: 'EI OVAALEJA: pillerit kulma-tokeneiksi (#3856)' },
   { v: 2555, teksti: 'Ajattelijat: taustavirta 20 riviä + OFL-kreikka… (#3857)' },
   { v: 2554, teksti: 'NOSTOKORTTI: puuttuva kuva poistaa kuvapaikan (#3847)' },
