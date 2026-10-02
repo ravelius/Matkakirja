@@ -66,6 +66,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Ylärivin kohta noston kategorialle ja lukijan napeille (näkyy, kun selain näkyy).</summary>
         public readonly VisualElement Ylarivipaikka;
         public bool Nakyvissa => rivi.style.display != DisplayStyle.None;
+        /// <summary>Tätä kapeammalla rivillä (pt) kategoriasta näkyy vain symboli: ‹ NOSTOT ▾ › + HISTORIA + ≡ kaiutin + AUTO ≈ 395 pt.</summary>
+        const float KapeaRivi = 400f;
 
         public Nostoselain(VisualElement kortti, VisualElement ennen, Action<string> avaa, Action autoVaihtui)
         {
@@ -86,6 +88,9 @@ namespace Matkakirja.Natiivi
             seuraava = Rakenne.Nappi("›", "mk-nostoselain__askel", () => Askel(1), rivi);
             // Kategoria (HISTORIA) ja lukijan paikka tulevat tähän (Nostokortti.SiirraYlarivi); täyttää rivin, joten AUTO jää oikealle.
             Ylarivipaikka = Rakenne.El("mk-nostoselain__ylarivipaikka", rivi, PickingMode.Ignore);
+            // Puhelimella rivi ei mahdu kokonaan (5fc4be80: HISTORIA katkesi ja ≡ meni päälle): kapealla kategoriasta vain symboli.
+            // Luokka riippuu vain kortin leveydestä (ei rivin sisällöstä), joten asettelu ei kierrä.
+            rivi.RegisterCallback<GeometryChangedEvent>(e => rivi.EnableInClassList("mk-nostoselain--kapea", e.newRect.width < KapeaRivi));
             edellinen.tooltip = "Edellinen nosto";
             seuraava.tooltip = "Seuraava nosto";
             Kirjasimet.Aseta(avaaja, Kirjasin.Kone);

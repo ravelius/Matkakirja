@@ -55,6 +55,14 @@
     margin: 0;
 }
 
+.mk-nostoselain__ylarivipaikka .mk-nosto__ylarivi-teksti {
+    white-space: nowrap;
+}
+
+.mk-nostoselain--kapea .mk-nostoselain__ylarivipaikka .mk-nosto__ylarivi-teksti {
+    display: none;
+}
+
 .mk-nostoselain__avaajaikoni {
     width: 16px;
     height: 16px;
