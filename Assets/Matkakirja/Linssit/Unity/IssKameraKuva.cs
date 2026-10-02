@@ -214,13 +214,30 @@ namespace Matkakirja.Natiivi
                             mtavut += q.downloadHandler.data.Length;
                             // RGB (3 tavua) ilman GetPixels32:n hallittua kopiota (iPad-mittaus 2.10.: 50 mm:n mosaiikki ~0,5 Gt hallittua
                             // muistia, jota IL2CPP:n keko ei palauta). Rivi 0 = alin → laatta: rivi 0 = pohjoinen.
-                            var px = tex.GetPixelData<Color32>(0); var rgb = new byte[256 * 256 * 3];
-                            for (int yy = 0; yy < 256; yy++)
-                                for (int xx = 0; xx < 256; xx++)
-                                {
-                                    var c = px[(255 - yy) * 256 + xx]; int o = (yy * 256 + xx) * 3;
-                                    rgb[o] = c.r; rgb[o + 1] = c.g; rgb[o + 2] = c.b;
-                                }
+                            // LoadImage vaihtaa JPG:n muotoon RGB24 (3 tavua/px): raakadata luetaan muodon mukaan (2.10.: Color32-luku
+                            // RGB24:stä liu'utti rivit → vaakaraidat ja maa katosi, iPad 84b8556b ja savuke 115). Muut muodot GetPixels32:lla.
+                            var rgb = new byte[256 * 256 * 3];
+                            int bpp = tex.format == TextureFormat.RGB24 ? 3 : tex.format == TextureFormat.RGBA32 ? 4 : 0;
+                            if (bpp > 0)
+                            {
+                                var raw = tex.GetPixelData<byte>(0);
+                                for (int yy = 0; yy < 256; yy++)
+                                    for (int xx = 0; xx < 256; xx++)
+                                    {
+                                        int i = ((255 - yy) * 256 + xx) * bpp, o = (yy * 256 + xx) * 3;
+                                        rgb[o] = raw[i]; rgb[o + 1] = raw[i + 1]; rgb[o + 2] = raw[i + 2];
+                                    }
+                            }
+                            else
+                            {
+                                var px = tex.GetPixels32();
+                                for (int yy = 0; yy < 256; yy++)
+                                    for (int xx = 0; xx < 256; xx++)
+                                    {
+                                        var c = px[(255 - yy) * 256 + xx]; int o = (yy * 256 + xx) * 3;
+                                        rgb[o] = c.r; rgb[o + 1] = c.g; rgb[o + 2] = c.b;
+                                    }
+                            }
                             lahde[l] = rgb;
                         }
                         q.Dispose();
@@ -412,6 +429,7 @@ namespace Matkakirja.Natiivi
                 if (rt != null) { kamera.targetTexture = null; kamera.ResetAspect(); rt.Release(); Destroy(rt); }
                 GC.Collect(); Resources.UnloadUnusedAssets();
                 Loki($"muisti kuvan jälkeen: vapaata {VapaaMuistiMt()} Mt");
+                StartCoroutine(KutistaValimuisti());
                 AstronauttiKerros.KuvanPinta = null;
                 Avaruus.KuvaputkiAsetettu = false;
                 Avaruus.KuvanNousu = 0f;
@@ -457,6 +475,24 @@ namespace Matkakirja.Natiivi
             var q = UnityWebRequest.Get(url);
             q.SetRequestHeader("Range", $"bytes={alku}-{alku + pit - 1}");
             return q;
+        }
+
+        /// <summary>
+        /// Pallon laattavälimuisti hetkeksi pieneksi kuvan jälkeen (Natiivisepän jatkoerä 2.10.: perustaso jäi ~0,25 Gt kyydin
+        /// keskiarvon yläpuolelle): kuvan pinta on jo vaihtunut takaisin S2:een (AstronauttiKerros asettaa sen välimuistin ≤ 1 s:ssa),
+        /// joten odotetaan 2 s, kutistetaan 64 Mt:iin 4 s:ksi (Cesium vapauttaa 4096-näkymän laatat) ja palautetaan entinen arvo.
+        /// </summary>
+        IEnumerator KutistaValimuisti()
+        {
+            yield return new WaitForSecondsRealtime(2f);
+            var p = KarttaKerrokset.Instanssi?.pallo;
+            if (p == null) yield break;
+            long vanha = p.maximumCachedBytes, pieni = 64L * 1024 * 1024;
+            if (vanha <= pieni) yield break;
+            p.maximumCachedBytes = pieni;
+            yield return new WaitForSecondsRealtime(4f);
+            if (p != null && p.maximumCachedBytes == pieni) p.maximumCachedBytes = vanha;
+            Loki($"välimuisti kutistettu ja palautettu {vanha / 1048576} Mt, vapaata {VapaaMuistiMt()} Mt");
         }
 
         /// <summary>
