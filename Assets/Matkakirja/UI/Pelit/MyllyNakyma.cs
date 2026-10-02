@@ -1,5 +1,5 @@
 // MYLLY-NÄKYMÄ (Siirtoseppä 1.10.2026; omistajan hyväksymä lautapelien pohja, Päätoimittajan loki b3e273d72):
-//   PELI    = KUVANÄKYMÄ (lauta kuvan paikalla, himmennys-kuva 92 %, ✕ 44 pt) + PANEELI (PAPERI-pergamentti: kapiteeli,
+//   PELI    = KUVANÄKYMÄ (lauta ilman taustaa, himmennys-kevyt + kartan kertakuvasumennus, ✕ 44 pt) + PANEELI (TUMMA: kapiteeli,
 //             vuororivi, pelaajarivit, ohje, napit Säännöt / Luovuta). KAPEA: paneeli laudan alla; KESKI/LEVEÄ: oikealla 350 pt.
 //   VALINTA = KORTTI (vastustaja: KYTKIN-ryhmä Helppo / Normaali / Vaikea + Kaveri samalla laitteella; Peruuta / Aloita peli).
 //   TULOS   = KORTTI (voitto, häviö, tasapeli; botin voitosta palkkio PelinTalous.Minipeli; "Tulos kirjattiin matkakirjaan.").
@@ -45,6 +45,9 @@ namespace Matkakirja.Natiivi
 
         /// <summary>UiNakymat.SuljeKaikki: ei luo näkymää, jos sitä ei ole avattu.</summary>
         public static void SuljeJosAuki() => instanssi?.Sulje();
+
+        /// <summary>UiNakymat.PaivitaKuvaSumea: kartta kertakuvasumennuksena pelin ajan; ei luo näkymää.</summary>
+        public static bool AukiNyt => instanssi != null && instanssi.Auki;
 
         /// <summary>Paikan tiedot kohteelta (pelikatalogi: Mühle Saksassa, Mlin Serbiassa, Moara Moldovassa).</summary>
         public string Paikka = null, PaikallinenNimi = null, Maa = null;
