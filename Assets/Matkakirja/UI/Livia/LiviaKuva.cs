@@ -58,6 +58,13 @@ namespace Matkakirja.Natiivi
         public static bool RobottiPois;
         /// <summary>Robottikäsi näkyy (Pulu asettelee itsensä vasempaan alakulmaan 60 %:iin; omistaja 2.10. 21.3x).</summary>
         public bool RobottiNakyy => Robotissa;
+
+        /// <summary>
+        /// Robottikäden puomin alin kohta paneelin pisteinä viimeisimmästä piirrosta (NaN = ei puomia) ja piirron järjestysnumero.
+        /// Pulu nostaa itseään tällä palautteella ISS-kyydin pöydän yläpuolelle (kaava-arvio jäi 12–20 pt liian alas, kuva 87cc4931).
+        /// </summary>
+        public float VarrenAlin { get; internal set; } = float.NaN;
+        public int VarrenAlinVersio { get; internal set; }
         static bool kyparaHaussa;
         static float kyparaVirhe = float.NegativeInfinity;
 
@@ -391,6 +398,8 @@ namespace Matkakirja.Natiivi
                 const float Nosto = -75;
                 // Varren ensimmäinen nivel (kuvassa px 248, 818 → yksiköt 124, 409) ja puomin pää (y 800).
                 const float NivelX = 124, NivelY = 409, PaaY = 800, Poikittain = 0.6f;
+                // Vaakaosan läpinäkymätön kaista alkaa kuvan x:stä 31,5 (robotin-varsi.png, mitattu 3.10.): se on puomin alareuna.
+                const float VarsiMinX = 31.5f;
                 float a = kuva.keinunta * Mathf.Deg2Rad, ca = Mathf.Cos(a), sa = Mathf.Sin(a);
                 var varjo = (Color)Tyylikirja.LasiAvaruus.Pinta;
                 varjo = Color.Lerp(varjo, Color.white, 0.14f); varjo.a = 1f;
@@ -453,6 +462,15 @@ namespace Matkakirja.Natiivi
                 Kuva(robottiKuvat[0], 800, 1f, false, varjo, NivelY, PaaY, vaaka: true);
                 Kuva(robottiKuvat[1], 800, t.EvaMaa, false, valo, 0, NivelY + 6);
                 Kuva(robottiKuvat[1], 800, t.EvaMaa, false, valo, NivelY, PaaY, vaaka: true);
+                // Puomin alin kohta paneelin pisteinä (puomi on suora, joten alin kohta on jommassakummassa päässä).
+                float Alin(float yI)
+                {
+                    float dy = yI - NivelY;
+                    var p = m.Kuvaa(new Vector2(NivelX + dy * venytys, NivelY - (VarsiMinX - NivelX) * Poikittain + Nosto));
+                    return this.LocalToWorld(p).y;
+                }
+                kuva.VarrenAlin = Mathf.Max(Alin(NivelY), Alin(PaaY));
+                kuva.VarrenAlinVersio++;
                 Kuva(evaKuvat[1], 304, 1f, true, varjo);                 // perus varjokuvana
                 // Kasvovalo ensin ja kasvot sen päälle (Päätoimittajan kuvatarkistus 2.10.: valo peitti silmät ja nokan, visiirissä
                 // näkyi vain vaalea soikio): valo jää kasvojen ympärille sädekehäksi.
