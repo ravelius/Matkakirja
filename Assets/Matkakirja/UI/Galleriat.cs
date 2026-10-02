@@ -165,6 +165,17 @@ namespace Matkakirja.Natiivi
 
     public static class Tietajagalleria
     {
+        static void SovitaSana(Label l)
+        {
+            float w = l.contentRect.width, koko = l.resolvedStyle.fontSize;
+            if (float.IsNaN(w) || w <= 0f || float.IsNaN(koko)) return;
+            string pisin = "";
+            foreach (var sana in (l.text ?? "").Split(' ')) if (sana.Length > pisin.Length) pisin = sana;
+            float leveys = l.MeasureTextSize(pisin, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+            if (leveys <= w + 0.5f || koko <= 8f) return;
+            l.style.fontSize = Mathf.Max(8f, Mathf.Min(koko - 0.5f, koko * w / leveys));
+        }
+
         // Päätoimittajan kaanonteksti (js/tietajagalleria.js TIETAJASELITYS, omistaja 18.8.2026).
         const string Selitys = "Livia — täydeltä nimeltään Columba Livia, kirjekyyhky, "
             + "jonka suku on kantanut viestejä Caesarille ja Pariisin piiritykseen (ja hän kyllä "
@@ -206,7 +217,11 @@ namespace Matkakirja.Natiivi
                 kohta.EnableInClassList("mk-valittu", t.Taso == nyt.Taso);
                 var kuvanIsa = rengas ? Rakenne.El("mk-tietaja__rengas", kohta, PickingMode.Ignore) : kohta;
                 Kuva(Rakenne.El("mk-tietaja__kuva", kuvanIsa, PickingMode.Ignore), t.Taso);
-                Kirjasimet.Aseta(Rakenne.Teksti(t.Nimi, "mk-tietaja__nimi", kohta), Kirjasin.Kone);
+                var nimi = Rakenne.Teksti(t.Nimi, "mk-tietaja__nimi", kohta);
+                Kirjasimet.Aseta(nimi, Kirjasin.Kone);
+                // Pisin sana mahtuu riville (kapea valikko 320 pt: "Maailmanmatkaaja" katkesi keskeltä sanaa, 86638635):
+                // fontti pienenee 0,5 px kerrallaan enintään 8 px:iin; vain pienenee, joten asettelu ei kierrä.
+                nimi.RegisterCallback<GeometryChangedEvent>(_ => SovitaSana(nimi));
                 Rakenne.Teksti($"{t.Raja} tp", "mk-tietaja__raja", kohta);
             }
             Rakenne.Ruudukko(ruudukko, 83f, 9f); // grid auto-fill minmax(5.2rem, 1fr), gap .55rem
