@@ -469,7 +469,7 @@ await testaaAsetteluJaAvaus('Kapein 360×740', 360, 740, { hampurilainenNakyy: f
   await sivu.waitForTimeout(350);
   const kokoRuutu = await sivu.evaluate(() => ({
     aarreSuurennos: Boolean(document.querySelector('.aarre-suurennos')),
-    julistegalleria: Boolean(document.querySelector('.julistegalleria')),
+    julistegalleria: Boolean(document.querySelector('.tk-kokoelma')),
   }));
   vaadi('Aarteet: 2. napautus avaa kohteen koko ruudulle (aarre/tavara) tai galleriaan (juliste)',
     kokoRuutu.aarreSuurennos || kokoRuutu.julistegalleria, JSON.stringify(kokoRuutu));
