@@ -798,7 +798,7 @@ V9 = dict(   # v9 (Päätoimittaja 2.10.): kierrokset 2 ja 3 kierroksen 1 (v8, r
     r2_liuku=(1450, 1510), r2_proj=(1510, 1760), r2_lahde=(1762, 1810), silma_liuku=(1810, 1870), r2_kaiku=(1870, 2300),
     r3_liuku=(2300, 2360), r3_proj=(2360, 2600), r3_lahde=(2602, 2650), r3_kaiku=(2655, 3250), loppu=(3250, 3330),
 )   # luennat: c 1550, d 1880, e 2400, f 2665 (sokrates_aani.sh --v9)
-V9_RENDER = list(range(1451, 3331))
+V9_RENDER = list(range(966, 3331))   # kierros 1:n kaiku (966–1450) uudelleen kaikutäytteen vuoksi
 V7_KAIKU = (965, 1440)        # v8: kaikukuva b-luennan (960–1425) aikana; aurinko hiipuu ja palaa sen reunoilla
 V7_RENDER = list(range(1, 283)) + list(range(V7_LAHESTY[0], V7_KAARI_LOPPU + 1)) + [V7_PITO]
 
@@ -951,7 +951,7 @@ if '--v7' in A:
             ikkunat.append((V9['r3_kaiku'], (0.45, 0.75, 0.55), vp))                          # sivu: takaviistosta oikealta
         for k_, ((a_, l_), suunta_t, kohde_t) in enumerate(ikkunat):
             td = bpy.data.lights.new(f'kaikutayte{k_}', 'SPOT'); td.spot_size = math.radians(45); td.spot_blend = 0.7
-            td.shadow_soft_size = 0.2; td.color = (0.80, 0.88, 1.0); td.energy = 0.0
+            td.shadow_soft_size = 0.2; td.color = (0.90, 0.94, 1.0); td.energy = 0.0   # 0,80/0,88 teki kipsistä sinertävää
             tob = bpy.data.objects.new(f'kaikutayte{k_}', td); sc.collection.objects.link(tob)
             tob.location = Vector(kohde_t) + Vector(suunta_t).normalized() * 1.0; kohdista(tob, kohde_t)
             td.keyframe_insert('energy', frame=1)
