@@ -124,7 +124,9 @@ Shader "Matkakirja/AjattelijaKipsi"
                 if (_PG[i].z > 0.5)
                 {
                     float reunaK = smoothstep(0.0, 0.08, u) * smoothstep(1.0, 0.92, u) * smoothstep(0.0, 0.08, v) * smoothstep(1.0, 0.92, v);
-                    return smoothstep(0.08, 0.9, SAMPLE_TEXTURE2D_LOD(_Kaiku, sampler_Kaiku, float2(u, 1.0 - v), 0).r) * reunaK;
+                    // Kaikukuva (u, v) eikä (u, 1 − v): LoadImage antaa rivin 0 alimpana (= webin flipY true), ja webin kaiut olivat
+                    // ylösalaisin samasta syystä (Pelikoodari 3.10., web #3888 flipY = false + 1 − v, todennettu Blender v10:tä vasten).
+                    return smoothstep(0.08, 0.9, SAMPLE_TEXTURE2D_LOD(_Kaiku, sampler_Kaiku, float2(u, v), 0).r) * reunaK;
                 }
                 float au = u * d.x;
                 float terava = SAMPLE_TEXTURE2D_BIAS(_Atlas, sampler_Atlas, float2(au, lerp(c.x, c.y, 1.0 - v)), -0.75).r;
