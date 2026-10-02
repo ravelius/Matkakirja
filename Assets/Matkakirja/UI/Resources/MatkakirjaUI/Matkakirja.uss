@@ -4536,7 +4536,7 @@
     margin-left: 10px;
 }
 
-/* Omistaja 2.10.2026 klo 15.1x: pilleri yhdellä rivillä "1 pv · 400 £". */
+/* Omistaja 2.10.2026 klo 15.1x: pilleri yhdellä rivillä "1 pv · £400". */
 .mk-pilleri--lyhyt {
     padding-left: var(--tk-vali-s);
     padding-right: var(--tk-vali-m);

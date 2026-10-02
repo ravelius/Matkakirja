@@ -290,7 +290,7 @@ namespace Matkakirja.Natiivi
             // "1/80, keskipäivä" ylärivillä ja rahasaldo pillerin oikeaan reunaan alariville. iPadilla sama järjestys yhdellä rivillä.
             if (PilleriOikealla)
             {
-                // Omistaja 2.10.2026 klo 15.1x: yksi rivi "1 pv · 400 £" (pino rivinä; ennen kaksirivinen).
+                // Omistaja 2.10.2026 klo 15.1x: yksi rivi "1 pv · £400" (pino rivinä; ennen kaksirivinen).
                 var pino = Rakenne.El("mk-pilleri__pino mk-pilleri__pino--rivi", pilleri, PickingMode.Ignore);
                 pino.Add(kello);
                 var rivi1 = Rakenne.El("mk-pilleri__rivi1", pino, PickingMode.Ignore);
@@ -956,7 +956,7 @@ namespace Matkakirja.Natiivi
                 // iPhone: "300 £ 1/80" — raha ja päivä / isoisän ennätys (omistaja 24.9.2026; suomalainen muoto
                 // "400 £" kaikkialle, Fable 27.9. klo 20.1x).
                 string uusiRaha = Raha(osat[0]);
-                if (uusiRaha != raha.text && raha.text.EndsWith("£")) Valahda(raha, ref rahaAjastin);
+                if (uusiRaha != raha.text && raha.text.Contains("£")) Valahda(raha, ref rahaAjastin);
                 raha.text = uusiRaha;
                 var m = System.Text.RegularExpressions.Regex.Match(osat[1], @"\d+");
                 string uusiKello = (m.Success ? m.Value : osat[1]) + "/" + Matkakirja.Peli.LaattaVakiot.EnnatysPaivat;
@@ -967,8 +967,8 @@ namespace Matkakirja.Natiivi
             }
             else
             {
-                // Pillerivalikko: omistaja 2.10.2026 klo 15.1x pillerissä vain päivä ja rahat, "1 pv · 400 £" (rahan muoto 27.9.
-                // ennallaan, Päätoimittaja 15.40; täysi muoto valikossa; ennen 30.9.: "1/80, keskipäivä"). Muuten "Päivä 1, aamu".
+                // Pillerivalikko: omistaja 2.10.2026 klo 15.1x pillerissä vain päivä ja rahat, "1 pv · £400" (rahan muoto £N,
+                // omistaja 15.50; täysi muoto valikossa; ennen 30.9.: "1/80, keskipäivä"). Muuten "Päivä 1, aamu".
                 var pv = System.Text.RegularExpressions.Regex.Match(osat[1], @"\d+");
                 bool lyhyt = Linssivalitsin.PilleriValikko && pv.Success;
                 string uusiRaha = Raha(osat[0]);
@@ -1111,7 +1111,7 @@ namespace Matkakirja.Natiivi
         {
             var osat = s.Trim().Split(' ');
             if (osat.Length == 2 && int.TryParse(osat[0], out _) && (osat[1] == "£" || osat[1].StartsWith("punta")))
-                return osat[0] + "\u00A0£";
+                return "£" + osat[0]; // brittiläinen muoto koko pelissä (omistaja 2.10.2026 klo 15.50)
             return s;
         }
 
