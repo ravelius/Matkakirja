@@ -440,13 +440,14 @@ namespace Matkakirja.Natiivi
                 yield return LataaKokoelma("takynostot");
                 if (kokoelmat.TryGetValue("takynostot", out var taulu) && taulu.Count > 0)
                 {
-                    foreach (var d in taulu.Values)
+                    // Kokoelman id on taulun avain (LataaKokoelma poistaa id-kentän datasta): ennen "takynosto:@ateena" (savuke 112).
+                    foreach (var (tid, d) in taulu.Select(kv => (kv.Key, kv.Value)))
                     {
                         if (T(d, "kohde") != n.Id || T(d, "otsikko") == null) continue;
                         var kaupungit = Kaupungit(d);
                         if (oma != null ? !kaupungit.Contains(oma) : T(d, "$maa") != n.Iso) continue;
                         n.LeikekirjaOtsikko = T(d, "otsikko");
-                        n.LeikekirjaValo = "takynosto:" + T(d, "id") + ((oma ?? kaupungit.FirstOrDefault()) is string k ? "@" + k : "");
+                        n.LeikekirjaValo = "takynosto:" + tid + ((oma ?? kaupungit.FirstOrDefault()) is string k ? "@" + k : "");
                         yield break;
                     }
                     yield break;
@@ -483,8 +484,8 @@ namespace Matkakirja.Natiivi
             {
                 yield return LataaKokoelma("takynostot");
                 if (kokoelmat.TryGetValue("takynostot", out var taulu))
-                    foreach (var d in taulu.Values)
-                        if (Kaupungit(d).Contains(kaupunki)) tulos.Add("takynosto:" + T(d, "id") + "@" + kaupunki);
+                    foreach (var kv in taulu) // id = avain (ks. Leikekirja)
+                        if (Kaupungit(kv.Value).Contains(kaupunki)) tulos.Add("takynosto:" + kv.Key + "@" + kaupunki);
             }
             valmis(tulos);
         }
