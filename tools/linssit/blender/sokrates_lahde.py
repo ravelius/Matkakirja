@@ -7,7 +7,8 @@ SISAAN, ULOS, KOHTA = sys.argv[1], sys.argv[2], sys.argv[3]
 NAKYVYYS = float(sys.argv[4]) if len(sys.argv) > 4 else 1.0
 MERKINTA = sys.argv[5] if len(sys.argv) > 5 else ''
 LAHTEET = {'38a': ('ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ', 'Platon, Puolustuspuhe 38a'),   # Sisältökirjuri 1.10.
-           '21d': ('ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι', 'Platon, Puolustuspuhe 21d')}
+           '21d': ('ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι', 'Platon, Puolustuspuhe 21d'),
+           '49b': ('οὐδαμῶς ἄρα δεῖ ἀδικεῖν', 'Platon, Kriton 49b')}
 KREIKKA, VIITE = LAHTEET[KOHTA]
 im = Image.open(SISAAN).convert('RGBA'); L, K = im.size; lyhyt = min(L, K)
 kerros = Image.new('RGBA', im.size, (0, 0, 0, 0)); d = ImageDraw.Draw(kerros); alku = int(K * 0.84)

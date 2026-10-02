@@ -794,6 +794,11 @@ V7_PITO = 1450                # b-luenta alkaa 960 (15,5 s)
 V7_NAUHA = 0.0205             # omistaja 23.5x: kirjaimet ~28 % isommiksi (v4–v6: 0,016); sama ajoaika → nauha
                               # kulkee pinnalla ~22 % nopeammin, lukutahti merkkeinä sekunnissa ≈ ennallaan
 V7_TYKKI = 220.0              # kirjaimet erottuvat kovassa auringossa (v4–v6: 70 himmennetyssä valossa)
+V9 = dict(   # v9 (Päätoimittaja 2.10.): kierrokset 2 ja 3 kierroksen 1 (v8, ruudut 1–1450) jatkoksi; 30 r/s
+    r2_liuku=(1450, 1510), r2_proj=(1510, 1760), r2_lahde=(1762, 1810), silma_liuku=(1810, 1870), r2_kaiku=(1870, 2300),
+    r3_liuku=(2300, 2360), r3_proj=(2360, 2600), r3_lahde=(2602, 2650), r3_kaiku=(2655, 3250), loppu=(3250, 3330),
+)   # luennat: c 1550, d 1880, e 2400, f 2665 (sokrates_aani.sh --v9)
+V9_RENDER = list(range(1451, 3331))
 V7_KAIKU = (965, 1440)        # v8: kaikukuva b-luennan (960–1425) aikana; aurinko hiipuu ja palaa sen reunoilla
 V7_RENDER = list(range(1, 283)) + list(range(V7_LAHESTY[0], V7_KAARI_LOPPU + 1)) + [V7_PITO]
 
@@ -896,6 +901,43 @@ if '--v7' in A:
         liuku = t * (-V6_LIUKU + 2 * V6_LIUKU * osuus)
         avain(r, p + kierto @ (c - p) + liuku, p + liuku * 0.5, V3B_LINSSI, 'BEZIER')
     avain(V7_PITO, cam.location.copy(), tahtain.location.copy(), V3B_LINSSI, 'BEZIER')
+    if '--v9' in A:
+        # kierros 2: 21d nauhana poskella → oraakkelin kylix SILMÄMUNAAN ainoana valona (d-luenta)
+        # kierros 3: 49b nauhana kasvojen sivulla (ohimo ja poskipää) → Davidin kaiku ainoana valona (f-luenta)
+        dg = bpy.context.evaluated_depsgraph_get()
+        def sivulta(y, z):
+            osui, q, nn, *_ = sc.ray_cast(dg, Vector((2, y, z)), Vector((-1, 0, 0))); return q, nn
+        pp, pn = osuma(-0.055, 0.352)                                    # poski (Rembrandt-varjon puoli)
+        sp, sn = osuma(0.040, 0.374)                                     # vasen silmämuna
+        vp, vn = sivulta(-0.08, 0.375)                                   # kasvojen sivu valon puolella
+        v4_projektori('tykki-poski', pp, (pn + Vector((-0.55, -0.15, -0.30))).normalized(), 0.6, 0.065,
+                      os.path.join(GOBOT, 'nauha-poski.png'), 0.017, (V9['r2_proj'][0] + 5, V9['r2_proj'][1] - 5), V7_TYKKI)
+        v4_projektori('tykki-sivu', vp, (vn + Vector((0.0, -0.45, -0.25))).normalized(), 0.6, 0.075,
+                      os.path.join(GOBOT, 'nauha-sivu.png'), 0.019, (V9['r3_proj'][0] + 5, V9['r3_proj'][1] - 5), V7_TYKKI)
+        kaiku_projektori('kaiku-silma', sp, (sn + Vector((-0.75, 0.0, 0.30))).normalized(), 0.5, 0.03,
+                         os.path.join(GOBOT, 'kaiku-oraakkeli.png'), V9['r2_kaiku'], 15.0, liuku=0.08)
+        kaiku_projektori('kaiku-sivu', vp, (vn + Vector((0.0, -0.40, 0.20))).normalized(), 0.6, 0.085,
+                         os.path.join(GOBOT, 'kaiku-kuolema.png'), V9['r3_kaiku'], 30.0)
+        tausta = sc.world.node_tree.nodes['Background'].inputs['Strength']
+        for (a_, l_) in (V9['r2_kaiku'], V9['r3_kaiku']):                # kaiku ainoa valo (omistaja 2.10. 08.xx)
+            for r, v_ in ((a_, 95), (a_ + 45, 0), (l_ - 45, 0), (l_, 95)):
+                aur.energy = v_; aur.keyframe_insert('energy', frame=r)
+            for r, v_ in ((a_, 1.0), (a_ + 45, 0.0), (l_ - 45, 0.0), (l_, 1.0)):
+                tausta.default_value = v_; tausta.keyframe_insert('default_value', frame=r)
+        def kaari(p_, n_, c_, alku, loppu, aste, mm, liuku_t=None):
+            for osuus in (0.0, 1.0):
+                r = alku + round((loppu - alku) * osuus)
+                kier = Matrix.Rotation(math.radians(-aste + 2 * aste * osuus), 3, n_)
+                lk = (liuku_t * (-0.006 + 0.012 * osuus)) if liuku_t is not None else Vector()
+                avain(r, p_ + kier @ (c_ - p_) + lk, p_ + lk * 0.5, mm, 'BEZIER')
+        pc, pt, _ = lentoasento(pp, pn, kulma=38, matka=0.11)
+        kaari(pp, pn, pc, V9['r2_proj'][0], V9['r2_lahde'][1], 12, V3B_LINSSI, pt)
+        sc_ = sp + (sn + Vector((0.25, 0.0, -0.20))).normalized() * 0.14
+        kaari(sp, sn, sc_, V9['r2_kaiku'][0], V9['r2_kaiku'][1], 8, 50)
+        vc, vt, _ = lentoasento(vp, vn, kulma=40, matka=0.11)
+        kaari(vp, vn, vc, V9['r3_proj'][0], V9['r3_kaiku'][1], 14, V3B_LINSSI, vt)
+        rem = V7_OTOKSET[-1]
+        avain(V9['loppu'][1] - 20, rem[1], rem[2], rem[3], 'BEZIER'); avain(V9['loppu'][1], rem[1], rem[2], rem[3], 'BEZIER')
     for idb in (cam, tahtain, cd):
         act = idb.animation_data.action; kayrat = []
         for kerros in getattr(act, 'layers', []):
@@ -906,9 +948,9 @@ if '--v7' in A:
                 kp.interpolation = tavat.get(int(round(kp.co.x)), 'BEZIER')
                 kp.handle_left_type = kp.handle_right_type = 'AUTO_CLAMPED'
             fc.update()
-    sc.frame_start, sc.frame_end = 1, V7_PITO; sc.render.fps = 30
+    sc.frame_start, sc.frame_end = 1, (V9['loppu'][1] if '--v9' in A else V7_PITO); sc.render.fps = 30
     sc.render.resolution_x, sc.render.resolution_y = LEV, KORK; sc.render.resolution_percentage = 100
-    for ruutu in (RUUDUT or V7_RENDER):
+    for ruutu in (RUUDUT or (V9_RENDER if '--v9' in A else V7_RENDER)):
         sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
         bpy.ops.render.render(write_still=True)
     print('SOKRATES: v7 valmis', ULOS)
