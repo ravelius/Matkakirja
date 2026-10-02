@@ -784,6 +784,9 @@ V7_OTOKSET = (  # (ruutu, kameran paikka, katsepiste, polttoväli mm); ruutu = m
 )
 V7_VALO = ((1, (0.55, 0.85, 0.30)), (119, (0.9, 0.55, 0.35)), (236, (1.0, -0.05, 0.6)), (259, (0.85, -0.45, 0.75)),
            (282, (0.70, -0.70, 0.85)))
+if KOHDE == 'marcus':   # tuuheat kiharat ja parta varjostavat enemmän → aurinko alkaa sivummalta, jotta kasvot näkyvät
+    V7_VALO = ((1, (0.85, 0.45, 0.35)), (119, (1.0, 0.15, 0.45)), (236, (1.0, -0.25, 0.6)), (259, (0.85, -0.5, 0.75)),
+               (282, (0.70, -0.70, 0.85)))
 V7_LAHESTY = (462, 555)       # nimi 282–372, kysymys 373–461
 V7_PROJ = (555, 900)          # 38a; a-luenta alkaa 600; lähderivi 902–950
 V7_KAARI_LOPPU = 965
