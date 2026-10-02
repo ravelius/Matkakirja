@@ -484,6 +484,134 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0.5, (double)tyhja.Extras["koko"]);
         }
 
+        // 1f) SKINNATUT HAHMOT (Siirtoseppä 2.10.2026): skin (JOINTS_0 ubyte, WEIGHTS_0 float, inverseBindMatrices),
+        // animaatiot (LINEAR rotaatio, STEP translaatio, yksikehyksinen idle) ja DioraamaSekoitin (näyte, crossFade).
+        static byte[] TestiSkinGlb()
+        {
+            var bin = new List<byte>();
+            void F(params float[] t) { foreach (var f in t) bin.AddRange(BitConverter.GetBytes(f)); }
+            F(0, 0, 2, 1, 0, 2, 0, 1, 5);                                    // 0: POSITION 36
+            bin.AddRange(new byte[] { 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0 });  // 36: JOINTS_0 12
+            F(0.5f, 0.5f, 0, 0, 1, 0, 0, 0, 0.25f, 0.75f, 0, 0);             // 48: WEIGHTS_0 48
+            foreach (var ix in new uint[] { 0, 1, 2 }) bin.AddRange(BitConverter.GetBytes(ix)); // 96: indeksit 12
+            F(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);               // 108: IBM 0 (identiteetti)
+            F(1, 0, 0.5f, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 2, 3, 1);            // 172: IBM 1 (rivi 2 sarake 0 = 0.5, siirto 1,2,3)
+            F(0, 1);                                                          // 236: kavely-ajat 8
+            F(0, 0, 0, 1, 0, 0.70710678f, 0, 0.70710678f);                    // 244: kavely-rotaatiot 32
+            F(0, 0.5f);                                                       // 276: askel-ajat 8
+            F(0, 0, 0, 1, 2, 3);                                              // 284: askel-siirrot 24
+            F(0);                                                             // 308: idle-aika 4
+            F(0, 0, 0, 1);                                                    // 312: idle-rotaatio 16
+            string json = @"{
+              ""asset"": {""version"":""2.0""},
+              ""nodes"": [
+                {""name"":""vartija"",""mesh"":0,""skin"":0,""children"":[1]},
+                {""name"":""lantio"",""translation"":[0,1,0.5]}
+              ],
+              ""skins"": [{""joints"":[0,1],""inverseBindMatrices"":4}],
+              ""meshes"": [{""primitives"":[{""attributes"":{""POSITION"":0,""JOINTS_0"":1,""WEIGHTS_0"":2},""indices"":3}]}],
+              ""animations"": [
+                {""name"":""kavely"",""channels"":[{""sampler"":0,""target"":{""node"":1,""path"":""rotation""}},{""sampler"":1,""target"":{""node"":1,""path"":""translation""}}],
+                 ""samplers"":[{""input"":5,""output"":6},{""input"":7,""output"":8,""interpolation"":""STEP""}]},
+                {""name"":""idle"",""channels"":[{""sampler"":0,""target"":{""node"":1,""path"":""rotation""}}],""samplers"":[{""input"":9,""output"":10}]}
+              ],
+              ""accessors"": [
+                {""bufferView"":0,""componentType"":5126,""count"":3,""type"":""VEC3""},
+                {""bufferView"":1,""componentType"":5121,""count"":3,""type"":""VEC4""},
+                {""bufferView"":2,""componentType"":5126,""count"":3,""type"":""VEC4""},
+                {""bufferView"":3,""componentType"":5125,""count"":3,""type"":""SCALAR""},
+                {""bufferView"":4,""componentType"":5126,""count"":2,""type"":""MAT4""},
+                {""bufferView"":5,""componentType"":5126,""count"":2,""type"":""SCALAR""},
+                {""bufferView"":6,""componentType"":5126,""count"":2,""type"":""VEC4""},
+                {""bufferView"":7,""componentType"":5126,""count"":2,""type"":""SCALAR""},
+                {""bufferView"":8,""componentType"":5126,""count"":2,""type"":""VEC3""},
+                {""bufferView"":9,""componentType"":5126,""count"":1,""type"":""SCALAR""},
+                {""bufferView"":10,""componentType"":5126,""count"":1,""type"":""VEC4""}
+              ],
+              ""bufferViews"": [
+                {""buffer"":0,""byteOffset"":0,""byteLength"":36},
+                {""buffer"":0,""byteOffset"":36,""byteLength"":12},
+                {""buffer"":0,""byteOffset"":48,""byteLength"":48},
+                {""buffer"":0,""byteOffset"":96,""byteLength"":12},
+                {""buffer"":0,""byteOffset"":108,""byteLength"":128},
+                {""buffer"":0,""byteOffset"":236,""byteLength"":8},
+                {""buffer"":0,""byteOffset"":244,""byteLength"":32},
+                {""buffer"":0,""byteOffset"":276,""byteLength"":8},
+                {""buffer"":0,""byteOffset"":284,""byteLength"":24},
+                {""buffer"":0,""byteOffset"":308,""byteLength"":4},
+                {""buffer"":0,""byteOffset"":312,""byteLength"":16}
+              ],
+              ""buffers"": [{""byteLength"":328}]
+            }";
+            return TeeGlbTavut(json, bin.ToArray());
+        }
+
+        [Testi] static void GlbSkinJaAnimaatiotKanoninen()
+        {
+            var m = DioraamaGlb.Lue(TestiSkinGlb(), unityyn: false);
+            Oleta.Sama(0, m.Solmut[0].Skin);
+            Oleta.Sama(-1, m.Solmut[1].Skin);
+            Oleta.Sama(1, m.Skinit.Count);
+            Oleta.Sama(1, m.Skinit[0].Nivelet[1]);
+            Oleta.Sama(0.5f, m.Skinit[0].KaanteisetSidonnat[16 + 2]);
+            Oleta.Sama(3f, m.Skinit[0].KaanteisetSidonnat[16 + 14]);
+            var osa = m.Osat[0];
+            Oleta.Sama(12, osa.Nivelet.Length);
+            Oleta.Sama(1, osa.Nivelet[1]);
+            Oleta.Sama(0.75f, osa.Painot[9]);
+            Oleta.Sama(2, m.Animaatiot.Count);
+            var k = m.Animaatio("kavely");
+            Oleta.Sama(1f, k.Kesto);
+            Oleta.Sama(2, k.Kanavat.Count);
+            Oleta.Sama(1, k.Kanavat[0].Polku);
+            Oleta.Tosi(k.Kanavat[1].Askel, "STEP");
+            Oleta.Sama(0f, m.Animaatio("idle").Kesto);
+        }
+
+        [Testi] static void GlbSkinUnityynPeilaaSidonnatJaAvainkehykset()
+        {
+            var m = DioraamaGlb.Lue(TestiSkinGlb(), unityyn: true);
+            var ibm = m.Skinit[0].KaanteisetSidonnat;
+            Oleta.Sama(-0.5f, ibm[16 + 2]);   // rivi 2, sarake 0 → negatoitu
+            Oleta.Sama(-3f, ibm[16 + 14]);    // siirron z negatoitu
+            Oleta.Sama(1f, ibm[16 + 10]);     // rivi 2, sarake 2 säilyy
+            Oleta.Sama(2f, ibm[16 + 13]);
+            var k = m.Animaatio("kavely");
+            Oleta.Sama(-0.70710678f, k.Kanavat[0].Arvot[7]);  // w negatoitu
+            Oleta.Sama(0.70710678f, k.Kanavat[0].Arvot[5]);   // y säilyy
+            Oleta.Sama(-3f, k.Kanavat[1].Arvot[5]);           // translation z negatoitu
+            Oleta.Sama(0.25f, m.Osat[0].Painot[8]);           // painot eivät muutu
+        }
+
+        static void Lahi(double odotettu, double saatu, double tol) => Oleta.Tosi(Math.Abs(odotettu - saatu) <= tol, $"{saatu} ≠ {odotettu} ± {tol}");
+
+        [Testi] static void SekoitinNayteAskelJaHaivytys()
+        {
+            var m = DioraamaGlb.Lue(TestiSkinGlb(), unityyn: false);
+            var s = new DioraamaSekoitin(m);
+            Oleta.Sama(0.5f, s.T[1 * 3 + 2]);                  // lepoasento ennen leikettä
+            Oleta.Tosi(s.Toista("kavely", 0f), "kavely");
+            Oleta.Tosi(!s.Toista("ei-ole"), "puuttuva leike");
+            s.Paivita(0.4f);
+            Lahi(0.30510, s.R[4 + 1], 1e-4);                   // nlerp 0.4: y = 0.28284/0.92704
+            Oleta.Sama(0f, s.T[3 + 0]);                        // STEP: vielä ensimmäinen arvo
+            s.Paivita(0.2f);
+            Oleta.Sama(2f, s.T[3 + 1]);                        // STEP 0.5 jälkeen: (1,2,3)
+            s.Paivita(0.5f);                                   // silmukka: 1.1 → 0.1
+            Lahi(0.1, s.Aika, 1e-5);
+            s.Nopeus = 2f;
+            s.Paivita(0.2f);
+            Lahi(0.5, s.Aika, 1e-5);
+            s.Toista("idle", 0.25f);
+            s.Paivita(0.125f);                                 // puolivälissä: paino 0.5
+            float y = s.R[4 + 1];
+            Oleta.Tosi(y > 0.05f && y < 0.38f, "häivytys kesken, y " + y);
+            s.Paivita(0.2f);
+            Oleta.Sama(0f, s.R[4 + 1]);                        // häivytys ohi: idle (identiteetti)
+            Oleta.Sama(1f, s.R[4 + 3]);
+            Oleta.Sama("idle", s.Nykyinen);
+        }
+
         [Testi] static void MonisolmuGlbHierarkiaJaTrsKanoninen()
         {
             var malli = DioraamaGlb.Lue(TestiMonisolmuGlb(), unityyn: false);
