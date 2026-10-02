@@ -494,7 +494,12 @@ namespace Matkakirja.Natiivi
                 Aanentasot.Sulje(); Matkalaukku.Sulje(); Valikko.Sulje();
                 Linssit.Valitsin.Vaihda();
             };
-            Linssit.Valitsin.AukiMuuttui += auki => { if (Linssivalitsin.Valikkona) Tilarivi.Valikko.EnableInClassList("mk-valittu", auki); };
+            Linssit.Valitsin.AukiMuuttui += auki =>
+            {
+                if (Linssivalitsin.Valikkona) Tilarivi.Valikko.EnableInClassList("mk-valittu", auki);
+                valikkoAuki = auki;
+                PulunKerros();
+            };
             RakennaPuhelinvalikko();
             Tilarivi.Vieras(Karttaselite.Nappi);
             Matkakirja.Kiinnita(Tilarivi);
@@ -846,11 +851,17 @@ namespace Matkakirja.Natiivi
             Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), o.TallennusOn ? () => { var v = o.Jatka(); if (v != null) Tilarivi.Viesti(v); } : (System.Action)null);
         }
 
-        bool lehtiAuki, arkkiAuki, chatNostonPaalla;
+        bool lehtiAuki, arkkiAuki, chatNostonPaalla, valikkoAuki;
 
+        /// <summary>
+        /// PILLERIVALIKKO PULUN PÄÄLLÄ (web .paavalikko.tk-paneeli--paikallaan z-index 60 > .pollo-nappi 40; Päätoimittaja 2.10.2026
+        /// klo 23.0x, vaaka-iPhonen kuva: valikko ulottui Pulun lepopaikalle ja Pulu piirtyi sen päälle): valikon ajaksi Pulun kerros
+        /// laskee heti valikon (LinssiUi.Kerros 25) alle, muiden näkymien (kortit 20, nimiöt) yläpuolelle.
+        /// </summary>
         void PulunKerros() =>
             Kerros.AsetaJarjestys(Pulu.Kerros, lehtiAuki && !arkkiAuki ? UiKerros.Traileri + 2
-                : chatNostonPaalla ? UiKerros.Valikot + 2 : Pulu.Kerros);
+                : chatNostonPaalla ? UiKerros.Valikot + 2
+                : valikkoAuki ? LinssiUi.Kerros - 0.5f : Pulu.Kerros);
 
         /// <summary>
         /// Löydös 136 (omistaja, build 16): nostokortin valmis kysymys tai korostettu sana avaa chatin nosto taustalla
