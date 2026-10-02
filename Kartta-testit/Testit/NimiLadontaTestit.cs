@@ -493,6 +493,50 @@ namespace Matkakirja.Kartta.Testit
             Oleta.Tosi(nayta[0] && paikat[0].Ank != NimiLadonta.NimenAnkkuri.Loppu, "varattu lukko vapautuu, uusi paikka: " + paikat[0]);
         }
 
+        [Testi] static void KaukainenLukkoVapautuuJaNimiPalaaPisteelle()
+        {
+            // Päätoimittaja ja Linssiseppä 2.10.2026: lähestymisessä pienellä kertoimella lukittu "pinon yläpuolelle"
+            // -paikka kasvoi zoomissa (AsetaMitta) ~160 pt:n päähän (ROOMA Cagliostron kohdalla) ja varasi naapurien
+            // paikat. Rajan ylittävä lukko vapautuu: nimi palaa ketjun ensimmäiseen vapaaseen (pinon yläpuolelle).
+            var pino = new Ruutulaatikko(100 - 20, 200 - 4, 100 + 20, 200 + 40);
+            var kaukana = new NimiLadonta.NimenPaikka(0, 160, NimiLadonta.NimenAnkkuri.Keski);
+            var naapuri = KE(40, 360); // tuore paikka oikealla osuisi kaukaisen lukon laatikkoon (x 68–132, y 353–367)
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(100, 200, lukittu: true, lukko: kaukana), naapuri },
+                                      new[] { pino }, Ruutu, 1f, v, nayta, paikat);
+            var l = NimiLadonta.NimenLaatikko(100, 200, paikat[0], 60, 10, 1f);
+            Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Keski && l.Y0 >= pino.Y1 && l.Y0 < pino.Y1 + 20,
+                       "pinon yläpuolella eikä 160 pt:n päässä: " + paikat[0]);
+            Oleta.Tosi(nayta[1] && paikat[1].Ank == NimiLadonta.NimenAnkkuri.Alku, "naapuri ei putoa: " + paikat[1]);
+        }
+
+        [Testi] static void KaukainenLukkoEiNayVaikkaPaikkaVapaa()
+        {
+            // Lähiehdokkaat varattuina nimeä ei viedä kauas eikä jätetä kauas lukittuun paikkaan: se jää pois
+            // (web sijoitaKaupunginNimi pallolla pakota: false).
+            var kaukana = new NimiLadonta.NimenPaikka(0, 160, NimiLadonta.NimenAnkkuri.Keski);
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            v.Varaa(new Ruutulaatikko(0, 100, 1000, 300)); // koko lähiympäristö, mutta ei kaukaista lukkoa (y 355–365)
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { KE(100, 200, lukittu: true, lukko: kaukana) }, null, Ruutu, 1f, v, nayta, paikat);
+            Oleta.Tosi(!nayta[0], "kaukainen lukko ei kelpaa: " + paikat[0]);
+            Oleta.Sama(2, v.Maara, "pudotettu nimi ei varaa mitään (vain este ja piste)");
+        }
+
+        [Testi] static void ZoominSkaalaamaLukkoPysyyRajanSisalla()
+        {
+            // Web ZOOMI SKAALAA LUKON: kehän päässä lukittu nimi × 1,5 pysyy kyljessään (raja = kaukaisin ehdokas + 13 pt).
+            var oikea = new NimiLadonta.NimenPaikka((7.5f + 13f) * 1.5f, 0, NimiLadonta.NimenAnkkuri.Alku);
+            var v = new Ruutuvaraukset(); v.Aloita(1);
+            var nayta = new List<bool>(); var paikat = new List<NimiLadonta.NimenPaikka>();
+            var e = KE(100, 200, lukittu: true, lukko: oikea);
+            NimiLadonta.LadoKaupungit(new List<NimiLadonta.KaupunkiEhdokas> { e }, null, Ruutu, 1f, v, nayta, paikat);
+            Oleta.Tosi(nayta[0] && paikat[0].Ank == NimiLadonta.NimenAnkkuri.Alku && Lahella(paikat[0].Dx, oikea.Dx), "lukko pysyy: " + paikat[0]);
+            Oleta.Tosi(NimiLadonta.PisteenEtaisyys(new Ruutulaatikko(0, 0, 10, 10), 5, 5) == 0
+                       && Lahella(NimiLadonta.PisteenEtaisyys(new Ruutulaatikko(0, 0, 10, 10), 13, 14), 5f), "etäisyys laatikosta");
+        }
+
         [Testi] static void LaudanOmaAsetteluEnsin()
         {
             // Paketin nimionAnkkuri (webin maailmankartan la/lx/ly), esimerkkinä end −16/14 → vasemmalle ja hieman alas.
