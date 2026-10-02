@@ -424,6 +424,9 @@ namespace Matkakirja.Natiivi
             // luenta jatkuvat (Pulu.Nayta(false) pysäyttäisi puhekanavan).
             Linssit.Astronautti.Kuva.AukiMuuttui += auki => Pulu.Peita(auki);
             Karttaselite.AukiMuuttui += auki => { Linssit.Valitsin.Vaista(auki); Matkakirja.SeliteVaisto(auki); };
+            // Linssit-karttanappi avaa valitsimen: ohi-napautus ei saa sulkea sitä samasta napautuksesta (savuke 1128: simulaattorin
+            // tap painuu ja nousee samassa ruudussa, joten Avaa ja TarkistaOhiNapautus osuivat samaan ruutuun).
+            Linssit.Valitsin.Avaajat.Add(Karttaselite.LinssitNappi);
             Valikko.TietojaPainettu += Tietoja.Avaa;
             Valikko.EhdotaPainettu += () => Palaute.Avaa();
             Tilarivi.LogoPainettu += () => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Tietoja.Avaa(); };
