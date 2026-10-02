@@ -5,7 +5,9 @@
    PELI = KUVANÄKYMÄ (lauta kuvan paikalla, himmennys-kuva, ✕ 44 pt) + PANEELI (PAPERI-pergamentti 350 pt / KAPEA laudan alla);
    valinta ja tulos = KORTTI-pohja. Vain tyylikirjan muuttujat.
    Omistaja 2.10. klo 08.2x (Natiivi-UI:n arvot): lauta ilman taustaa (Blender-kuva reunoineen), tausta himmennys-kevyt +
-   kartan kertakuvasumennus (UiNakymat.PaivitaKuvaSumea), pelin aikainen paneeli TUMMA; aloitus- ja tuloskortti paperia. */
+   kartan kertakuvasumennus (UiNakymat.PaivitaKuvaSumea), pelin aikainen paneeli TUMMA; aloitus- ja tuloskortti paperia.
+   Omistaja 2.10. klo 10.3x (Päätoimittajan loki 10.39): tumma liian tumma → paneeli PANEELI-teemalla LASI (.tk-teema-lasi
+   MyllyNakymassa); paneelin säännöt teeman muuttujilla (--tk-pinta, --tk-muste …), vertailu "ui mylly teema tumma|lasi|paperi". */
 .mk-peli {
     background-color: var(--tk-himmennys-kevyt);
     padding: 0;
@@ -51,28 +53,33 @@
     padding: var(--tk-vali-l);
     border-width: 1px;
     border-radius: var(--tk-kulma-kortti);
-    border-color: var(--tk-tumma-reunus);
-    background-color: var(--tk-tumma-pinta);
-    color: var(--tk-tumma-muste);
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta);
+    color: var(--tk-muste);
+}
+
+/* Paperiteemassa (vertailu, "ui mylly teema paperi") alkuperäinen pergamentti. */
+.mk-peli__paneeli.tk-teema-paperi {
+    background-color: var(--tk-paperi-pergamentti);
 }
 
 .mk-peli__paneeli .mk-kortti__kapiteeli {
-    color: var(--tk-tumma-muste-pehmea);
+    color: var(--tk-muste-pehmea);
 }
 
 .mk-peli__paneeli .mk-nappi--toiminto {
-    border-color: var(--tk-tumma-reunus);
-    color: var(--tk-tumma-muste);
+    border-color: var(--tk-reunus);
+    color: var(--tk-muste);
 }
 
 .mk-peli__vuoro {
     margin-bottom: var(--tk-vali-s);
     padding-left: var(--tk-vali-s);
     border-left-width: 4px;
-    border-color: var(--tk-tumma-toiminto);
+    border-color: var(--tk-toiminto);
     font-size: var(--tk-koko-leipa);
     white-space: normal;
-    color: var(--tk-tumma-muste);
+    color: var(--tk-muste);
 }
 
 .mk-peli__rivi {
@@ -80,19 +87,19 @@
     align-items: center;
     min-height: var(--tk-nappi-korkeus);
     border-top-width: 1px;
-    border-color: var(--tk-tumma-reunus);
+    border-color: var(--tk-reunus);
 }
 
 .mk-peli__rivi-nimi {
     flex-grow: 1;
     margin-left: var(--tk-vali-s);
     font-size: var(--tk-koko-leipa);
-    color: var(--tk-tumma-muste);
+    color: var(--tk-muste);
 }
 
 .mk-peli__lukema {
     font-size: var(--tk-koko-kapiteeli);
-    color: var(--tk-tumma-muste-pehmea);
+    color: var(--tk-muste-pehmea);
 }
 
 .mk-peli__merkki {
@@ -113,14 +120,14 @@
 
 /* Tummalla paneelilla tumma merkki erottuu vain reunastaan (iPhone-kuva 2.10.: musta merkki katosi). */
 .mk-peli__paneeli .mk-peli__merkki--tumma {
-    border-color: var(--tk-tumma-muste-pehmea);
+    border-color: var(--tk-muste-pehmea);
 }
 
 .mk-peli__ohje {
     margin-top: var(--tk-vali-xs);
     font-size: var(--tk-koko-apuri);
     white-space: normal;
-    color: var(--tk-tumma-muste-pehmea);
+    color: var(--tk-muste-pehmea);
 }
 
 .mk-peli__kortti .mk-kortti__alaotsikko {
