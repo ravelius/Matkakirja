@@ -38,7 +38,8 @@
   (reittitesti ilman todo:ta). Siirtoseppä kuvaa iPhonella jalkavarjon kanssa → pelikuvat Päätoimittajalle → omistaja.
   Omistajalle EI Blender-kokoelmia, vain pelikuvia. Erän ajo: `tools/dioraama/blender/hahmot_era1.sh`.
 - **Päivitys 22.1x:** jalkavarjo (Siirtoseppä) ei vielä näy; mittaus tila-glb:istä: lattia = paikka.y ±1 cm paitsi fatabuuri +0,10
-  ja kappalainen +0,22 → korjattu datassa; keskushallin apulaisen ja vartija2:n alla ei lattiaa (leivonnan reikä pöydän/arkun alla).
+  ja kappalainen +0,22 → korjattu datassa. (22.4x: keskushallin "ei lattiaa" apulaisen/vartija2:n alla oli MITTAUSVIRHE —
+  säde osui tarkalleen kolmion reunaan; 2 cm ruudukko: lattia yhtenäinen, y 2,90 = paikka.y. Datassa ei jalkavarjon estettä.)
   **Uusin peili 275a276538ace40a** (blender 916731d7, kaikki skinnatut + reitit + y). Siirtoseppä kuvaa → pelikuvat Päätoimittajalle.
   Seuraavaksi omistajan OK:n jälkeen: osoitin (käsiajo osoitin=true haarasta linnanrakentaja-linna-skin TAI PR mainiin + käsiajo)
   ja webin AnimationMixer (hahmot3d / DioraamaHahmot-pariteetti, malli3d.skin).
@@ -65,5 +66,5 @@
 - Allymes ei aloiteta ennen nykyisiä töitä.
 
 ## Worktreet
-- `/Users/Shared/Claude/wt/linnanrakentaja-sokrates-bysti` (ajattelijat, ei PR:ää) ja `/Users/Shared/Claude/wt/linnanrakentaja-linna-alfa`
-  (PR #3851; poista `tools/uusi-worktree.sh --poista` mergen jälkeen).
+- `/Users/Shared/Claude/wt/linnanrakentaja-sokrates-bysti` (ajattelijat, ei PR:ää), `linnanrakentaja-linna-skin` (peili, ei PR:ää),
+  `linnanrakentaja-mylly-lauta`. linna-alfa poistettu (PR #3851 mergetty 2.10.).
