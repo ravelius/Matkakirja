@@ -136,9 +136,9 @@
    "vari": 338
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Linssit.uss": {
-   "fontti": 134,
+   "fontti": 133,
    "siirtyma": 18,
-   "vari": 376
+   "vari": 371
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Matkakirja.uss": {
    "fontti": 155,
@@ -214,6 +214,11 @@
    "fontti": 0,
    "siirtyma": 0,
    "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/kuvanakyma.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 5
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/nostokortti.uss": {
    "fontti": 0,

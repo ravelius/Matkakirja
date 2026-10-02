@@ -366,7 +366,9 @@ namespace Matkakirja.Natiivi
             PaivitaPaneeli();
             OmaSijaintiHaku.Valmis += () => { if (omaNappi != null) omaNappi.Q<Label>(className: "mk-nappi__teksti").text = OmaSijaintiHaku.Rivi(); };
 
-            var sulku = Rakenne.Nappi("×", "mk-astrokuva__sulku", Poistu, turva);
+            var sulku = Rakenne.Nappi("×", "mk-kuvanakyma__sulku mk-kuvanakyma__sulku--harmaa", /* KUVANÄKYMÄ-pohja, ✕ harmaa (omistaja 16.9.) */ Poistu, turva);
+            // Näkyvä harmaa rengas webin koossa (2,1 rem ≈ 34 pt) 44 pt:n osuma-alan sisällä (Päätoimittaja 2.10.).
+            Rakenne.El("mk-kuvanakyma__sulkurengas", sulku, PickingMode.Ignore).SendToBack();
             sulku.tooltip = "Pois kyydistä";
             sulkuVanha = sulku;
             poyta = new IssKytkinpoyta(turva,

@@ -15,6 +15,7 @@
 @import url("Pohjat/kentta.uss");
 @import url("Pohjat/auto.uss");
 @import url("Pohjat/pulu.uss");
+@import url("Pohjat/kuvanakyma.uss");
 @import url("Pohjat/Pinnat/dialogit.uss");
 @import url("Pohjat/Pinnat/lautapeli.uss");
 @import url("Pohjat/Pinnat/maakuntakortti.uss");

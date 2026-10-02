@@ -13,7 +13,7 @@
 //
 // AURINGON HEIJASTUS JA PINNAN VALAISTUS (ISS-realismi 1, omistajan kortti 28.9.): vesimaski reliefipyramidin vesiväristä
 // (samat rajat ja koot kuin valoilla; kuvat R = valot, G = vesi). Kiilto vesillä Beckmann-jakaumalla (aallokon kaltevuus
-// σ² = _Aalto, Cox–Munk-luokkaa) ja Schlickin Fresnelillä (F0 0,02), matalalla auringolla oranssimpi. Päiväpuolen
+// σ² = _Aalto, Cox–Munk-luokkaa) ja Schlickin Fresnelillä (F0 0,02), ilmakehän läpäisyllä (Kasten–Young, 2.10.2026). Päiväpuolen
 // varjostus auringon korkeuden mukaan: alle 30°:n korkeudella pinta tummuu pehmeästi (0° → 1 − _Varjo), ja yön kaista
 // jatkaa siitä. Kaikki esikerrottuna samaan kuoreen, joten valot ja kiilto lisätään valon päälle, eivät tummu.
 //
@@ -130,6 +130,12 @@ Shader "Matkakirja/Linssit/Yokuori"
 
             // Hämärä: sin(auringon korkeus) = n · aurinko; −6° (−0,105) … +2° (0,035).
             half Yo(float3 n) { return 1.0h - (half)smoothstep(-0.105, 0.035, dot(n, normalize(_Aurinko.xyz))); }
+            // Ilmamassa korkeuden sinistä (Kasten & Young 1989): 1 zeniitissä, ~10 viidellä asteella, ~38 horisontissa.
+            float Ilmamassa(float s)
+            {
+                s = saturate(s);
+                return 1.0 / (s + 0.50572 * pow(degrees(asin(s)) + 6.07995, -1.6364));
+            }
 
             half4 frag(Vali i) : SV_Target
             {
@@ -270,9 +276,12 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float nh2 = max(nh * nh, 1e-4);
                 float D = exp(-(1.0 - nh2) / (nh2 * _Aalto)) / (3.14159265 * _Aalto * nh2 * nh2);
                 float F = 0.02 + 0.98 * pow(1.0 - saturate(dot(v, hv)), 5.0);
-                half kiilto = (half)(vesi * osuu * saturate(nl * 12.0) * min(D * F / (4.0 * max(nv, 0.08)), 40.0) * _Kiilto) * lapi;
-                half3 kiiltoVari = lerp(half3(1.0, 0.55, 0.25), half3(1.0, 0.96, 0.88), (half)saturate(nl * 4.0));
-                c += kiiltoVari * kiilto * (1.0h - a);
+                // Ilmakehän läpäisy (kiillon pystyleikkaus 2.10.2026, Päätoimittajan OK): auringon ja katseen tie ilmamassoina
+                // (Kasten–Young), τ RGB 0,15 / 0,20 / 0,33. Matalalla auringolla kiilto himmenee oranssiksi; ennen kiinteä oranssi ja
+                // täysi voima jo 4,8°:sta, jolloin ruudun ulkopuolisen huipun sivuliepe puhkesi valkoiseksi tasanteeksi (pystyreuna).
+                half kiilto = (half)(vesi * osuu * saturate(nl * 60.0) * min(D * F / (4.0 * max(nv, 0.08)), 40.0) * _Kiilto) * lapi;
+                half3 lapaisy = (half3)exp(-float3(0.15, 0.20, 0.33) * (Ilmamassa(nl) + Ilmamassa(nv)));
+                c += lapaisy * kiilto * (1.0h - a);
                 // Fotorealismi osa 2 (30.9.): taivaan Fresnel-heijastus vesiltä. Katsekulman Fresnel (Schlick, F0 0,02) kasvaa
                 // horisonttia kohti, jolloin meri hopeoituu reunalla kuten ISS:n kuvissa; vain päiväpuolella, pilvien alla heikkenee.
                 half fres = (half)(0.02 + 0.98 * pow(1.0 - nv, 5.0));

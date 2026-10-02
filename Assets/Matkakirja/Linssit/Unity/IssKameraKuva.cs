@@ -174,7 +174,9 @@ namespace Matkakirja.Natiivi
                 if (ruudut.Count == 0)
                 {
                     var maalla = naytteet.Where(n => !Yokuori.OnVesi(n.Lat, n.Lon)).ToList();
-                    if (Yokuori.VesiMaailma != null && maalla.Count == 0) loppuTila = "ei maata";
+                    // Savuke 1119: Mikronesian meren yllä muutama saari- tai kaukorannikon näyte antoi VAIN EUROOPPA →
+                    // maata vasta, kun ≥ 3 % näytteistä (ja vähintään 3) on maalla.
+                    if (Yokuori.VesiMaailma != null && maalla.Count < Math.Max(3, naytteet.Count * 0.03)) loppuTila = "ei maata";
                     else
                     {
                         var pist = maalla.Count > 0 ? maalla : naytteet;

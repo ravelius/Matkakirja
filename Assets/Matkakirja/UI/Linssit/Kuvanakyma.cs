@@ -130,7 +130,9 @@ namespace Matkakirja.Natiivi
             lisatiedot = Rakenne.El("mk-astrokuva__lisatiedot", runko, PickingMode.Ignore);
             lisatiedot.style.display = DisplayStyle.None;
 
-            var sulku = Rakenne.Nappi("×", "mk-astrokuva__sulku", SuljeKuva, turva);
+            var sulku = Rakenne.Nappi("×", "mk-kuvanakyma__sulku mk-kuvanakyma__sulku--harmaa", /* KUVANÄKYMÄ-pohja, ✕ harmaa (omistaja 16.9.) */ SuljeKuva, turva);
+            // Näkyvä harmaa rengas webin koossa (2,1 rem ≈ 34 pt) 44 pt:n osuma-alan sisällä (Päätoimittaja 2.10.).
+            Rakenne.El("mk-kuvanakyma__sulkurengas", sulku, PickingMode.Ignore).SendToBack();
             sulku.tooltip = "Sulje kuva";
 
             nauha = Rakenne.El("mk-astrokuva__nauha", turva);
