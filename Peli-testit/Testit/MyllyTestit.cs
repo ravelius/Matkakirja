@@ -232,9 +232,9 @@ namespace Matkakirja.Peli.Testit
         {
             var t = new PeliTulos { PeliId = "DEU-2", Nimi = "Mylly", PaikallinenNimi = "Mühle", Paikka = "Leipzig", Vastustaja = Vastustaja.BottiNormaali, Voittaja = 0, Siirtoja = 31, Paiva = "2026-10-01" };
             var talous = PelinTalous.Minipeli;
-            Oleta.Sama(60, Pelikehys.Rahapalkkio(t, talous), "normaali 60 £");
+            Oleta.Sama(60, Pelikehys.Rahapalkkio(t, talous), "normaali £60");
             Oleta.Sama("40,60,80", string.Join(",", new[] { Vastustaja.BottiHelppo, Vastustaja.BottiNormaali, Vastustaja.BottiVaikea }
-                .Select(v => Pelikehys.Rahapalkkio(new PeliTulos { Vastustaja = v, Voittaja = 0 }, talous))), "minipeli 40–80 £");
+                .Select(v => Pelikehys.Rahapalkkio(new PeliTulos { Vastustaja = v, Voittaja = 0 }, talous))), "minipeli £40–£80");
             Oleta.Sama("Mylly (Mühle), Leipzig: voitit botin (normaali) 31 siirrossa.", Pelikehys.Matkakirjarivi(t));
             var kaveri = new PeliTulos { Nimi = "Mylly", Vastustaja = Vastustaja.Kaveri, Voittaja = 0, Siirtoja = 40 };
             Oleta.Sama(0, Pelikehys.Rahapalkkio(kaveri, talous), "kaveripeli ei palkitse");

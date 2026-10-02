@@ -58,7 +58,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("pieniAarre", loyto?.WebTulos, "laatta");
             Oleta.Sama(Vakiot.AloitusRaha - Vakiot.BussiHinta + 190, m.Tila.Pelaaja.Raha, "löytö +190");
             d = KysymysApu.Nakyma(k, q, loyto);
-            Oleta.Sama("Löysit: Kourallinen hopeakolikoita · +190 £", d.Loyto);
+            Oleta.Sama("Löysit: Kourallinen hopeakolikoita · +£190", d.Loyto);
             KysymysApu.LisaaKohtaaminen(d, q, ko, false);
             Oleta.Tosi(d.Tervehdys == null, "ei tervehdystä vastauksen jälkeen");
             Oleta.Tosi(d.RepliikkiLoyto && d.Repliikki.StartsWith(ko.Kaupunki("lontoo").KaariAarre), "kaaren aarre + löytörepliikki");

@@ -38,16 +38,16 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("30,130,130", string.Join(",", new[] { 13, 14, 21 }.Select(Streak.Palkkio)));
             Oleta.Sama(6, toastit.Count, "päivät 1–2 eivät ilmoita, eikä nollattu päivä");
             Oleta.Sama("Kolmas päivä peräkkäin matkalla", toastit[0].Otsikko);
-            Oleta.Sama("+20 £", toastit[0].Ala);
+            Oleta.Sama("+£20", toastit[0].Ala);
             Oleta.Sama(7, toastit[4].Pituus);
-            Oleta.Sama("+50 £ ja viikkobonus +100 £", toastit[4].Ala);
+            Oleta.Sama("+£50 ja viikkobonus +£100", toastit[4].Ala);
             Oleta.Sama("14. päivä peräkkäin matkalla", Streak.Otsikko(14));
             // Lokirivit (web say).
             Oleta.Sama(6, rahat.Count);
-            Oleta.Sama("Kolmas päivä peräkkäin matkalla: +20 puntaa.", rahat[0]);
-            Oleta.Sama("Seitsemäs päivä peräkkäin matkalla: +50 puntaa ja viikkobonus +100 puntaa.", rahat[4]);
-            Oleta.Sama("Kahdeksas päivä peräkkäin matkalla: +30 puntaa.", rahat[5]);
-            Oleta.Sama("14. päivä peräkkäin matkalla: +30 puntaa ja viikkobonus +100 puntaa.", Streak.Lokirivi(14));
+            Oleta.Sama("Kolmas päivä peräkkäin matkalla: +£20.", rahat[0]);
+            Oleta.Sama("Seitsemäs päivä peräkkäin matkalla: +£50 ja viikkobonus +£100.", rahat[4]);
+            Oleta.Sama("Kahdeksas päivä peräkkäin matkalla: +£30.", rahat[5]);
+            Oleta.Sama("14. päivä peräkkäin matkalla: +£30 ja viikkobonus +£100.", Streak.Lokirivi(14));
         }
 
         [Testi] static void PudonnutJaPaattynytEivatKirjaaJaLaskuriKulkeeTallennuksessa()
@@ -85,7 +85,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("Ensimmäinen päivä peräkkäin matkalla", Streak.Otsikko(1));
             Oleta.Sama("Kymmenes päivä peräkkäin matkalla", Streak.Otsikko(10));
             Oleta.Sama("11. päivä peräkkäin matkalla", Streak.Otsikko(11));
-            Oleta.Sama("+30 £", Streak.Ala(8));
+            Oleta.Sama("+£30", Streak.Ala(8));
         }
 
         [Testi] static void KuukaudenJaVuodenVaihdeJatkaaJaKelvotonPaivaEiKirjaa()

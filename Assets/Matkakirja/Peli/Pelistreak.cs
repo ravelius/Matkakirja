@@ -69,14 +69,14 @@ namespace Matkakirja.Peli
         public static string Ala(int pituus)
         {
             var e = Erittely(pituus);
-            return $"+{e.Paiva} £" + (e.Viikko > 0 ? $" ja viikkobonus +{e.Viikko} £" : "");
+            return $"+£{e.Paiva}" + (e.Viikko > 0 ? $" ja viikkobonus +£{e.Viikko}" : "");
         }
 
         /// <summary>Lokirivi (web say): "Kolmas päivä peräkkäin matkalla: +20 puntaa." (+ " ja viikkobonus +100 puntaa").</summary>
         public static string Lokirivi(int pituus)
         {
             var e = Erittely(pituus);
-            return $"{Otsikko(pituus)}: +{e.Paiva} puntaa" + (e.Viikko > 0 ? $" ja viikkobonus +{e.Viikko} puntaa" : "") + ".";
+            return $"{Otsikko(pituus)}: +£{e.Paiva}" + (e.Viikko > 0 ? $" ja viikkobonus +£{e.Viikko}" : "") + ".";
         }
 
         /// <summary>Kelpaako päivämäärä (web /^\d{4}-\d{2}-\d{2}$/ ja oikea kalenteripäivä).</summary>

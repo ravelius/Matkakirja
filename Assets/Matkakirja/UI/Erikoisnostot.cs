@@ -168,6 +168,11 @@ namespace Matkakirja.Natiivi
             return new Vector3(c.x, c.y, Mathf.Max(0.15f, -c.z));
         }
 
+        /// <summary>Näkyvän sarakkeen laatikko (paneelin koordinaatit) pulun väistöön, muuten null.</summary>
+        public Rect? NakyvaAlue =>
+            paat.Count > 0 && sarake.panel != null && sarake.resolvedStyle.display == DisplayStyle.Flex && sarake.worldBound.height > 0
+                ? sarake.worldBound : (Rect?)null;
+
         /// <summary>Testikomento `ui erikoisnostot`: maa, päät, paikka, mahtuuko, kääntö ja lataustila.</summary>
         public string Tila()
         {

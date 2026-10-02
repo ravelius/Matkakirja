@@ -86,7 +86,7 @@ namespace Matkakirja.Peli
             var k = Kaupunki(m);
             if (k == null) return "bussi lähtee vain kaupungista";
             if (!Naapurit(m, k).Any(r => r.Laji == ReitinLaji.Maa)) return "täältä ei lähde maareittiä";
-            if (m.Tila.Pelaaja.Raha < Vakiot.BussiHinta) return $"bussilippu maksaa {Vakiot.BussiHinta} puntaa";
+            if (m.Tila.Pelaaja.Raha < Vakiot.BussiHinta) return $"bussilippu maksaa £{Vakiot.BussiHinta}";
             return "täältä ei lähde bussia";
         }
 
@@ -96,7 +96,7 @@ namespace Matkakirja.Peli
             var k = Kaupunki(m);
             if (k == null) return "laiva lähtee vain satamasta";
             if (!Naapurit(m, k).Any(r => r.Laji == ReitinLaji.Meri)) return "täältä ei lähde laivareittiä";
-            return $"laivalippu maksaa {Vakiot.MeriHinta} puntaa";
+            return $"laivalippu maksaa £{Vakiot.MeriHinta}";
         }
 
         public static string LentoEste(Matka m)
@@ -105,7 +105,7 @@ namespace Matkakirja.Peli
             var k = Kaupunki(m);
             if (k == null) return "lento lähtee vain kaupungista";
             if (!m.Verkko.Kaupungit[k].Lentokentta) return "täällä ei ole lentokenttää";
-            if (m.Tila.Pelaaja.Raha < Vakiot.LentoHinta) return $"lentolippu maksaa {Vakiot.LentoHinta} puntaa";
+            if (m.Tila.Pelaaja.Raha < Vakiot.LentoHinta) return $"lentolippu maksaa £{Vakiot.LentoHinta}";
             return "täältä ei lähde lentoja";
         }
     }
