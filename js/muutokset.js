@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2581, teksti: 'Savukkeet: vaakatila ilman yläpalkkia (#3889)' },
   { v: 2580, teksti: 'Kehittäjätila: valikon Aarteet-rivi näyttää kai… (#3887)' },
   { v: 2579, teksti: 'Olavinlinna: skinnatut linnahahmot (#3885)' },
   { v: 2578, teksti: 'Ajattelijat: Sokrateen kierrokset 2–3 (#3884)' },
