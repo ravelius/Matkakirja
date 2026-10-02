@@ -69,7 +69,7 @@ test('vaihe 3: prologi, intron leikkaukset, nimi ja kysymys, kaiku ja äänirait
 test('vaihe 4: KUVANÄKYMÄ-pohja (✕ lasia, veto alas, Esc), lappu NOSTOKORTTI tummana, Pulun viisi kysymystä', () => {
   const js = lue('../js/linssit/ajattelija.js');
   assert.match(js, /luoPohjaKuvanakyma\(\{ nimi: `\$\{a\.nimi\}: ajattelija`/);
-  assert.match(js, /luoPohjaNostokortti\(\{ yla: a\.nimi, otsikko: a\.elama\.otsikko, kappaleet: a\.elama\.kappaleet \}, \{ teema: 'tumma' \}\)/);
+  assert.match(js, /luoPohjaNostokortti\(\{ yla: a\.nimi, otsikko: a\.elama\.otsikko, kappaleet: a\.elama\.kappaleet \}, \{\s*teema: 'tumma',/);
   assert.doesNotMatch(js, /tk-nappi ajattelija-sulku/, 'oma ✕ korvattu pohjalla');
   assert.equal(SOKRATES.elama.otsikko, 'Sokrateen elämä');
   assert.equal(SOKRATES.elama.kappaleet.length, 7);
