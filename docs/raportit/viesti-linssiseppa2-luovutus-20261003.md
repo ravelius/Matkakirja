@@ -16,10 +16,11 @@ Seurantanäkymää ei ole (omistaja poisti 2.10.).
 ## 2. Juna 132 (tila 3.10. 01.2x): MERGE-PYYNNÖT NATIIVISEPÄLLÄ
 
 - `linssiseppa2/kaiku-suunta` 20c4b0d9: kaiut oikein päin, todennettu ja kuitattu.
-- `linssiseppa2/pulu-vaaka-alas` 62e0582b (sis. `linssiseppa2/pulu-mittaus` 9f2deece): Pulu puomin piirretystä alareunasta 6 pt
-  pöydän yläpuolelle (pysty) ja vaakana Pulu alakulmaan + puomi nousee pienen paneelin yli (A/B `astro kyyti pulualas 0|1`, oletus 1;
-  komento vasta linssin auettua). Kuitattu, todennettu 4f623cf1:llä: lokit/linssiseppa2-pulu-suositus-b-20261003/merkinnat-suositus.png.
-  80a99f64 oli rikki (konfliktinratkaisun kahdennettu lohko) — älä käytä. Omistaja voi TF 132:ssa pyytää Pulua vielä alemmas.
+- `linssiseppa2/pulu-vaaka-alas` 07e7ecca (sis. `linssiseppa2/pulu-mittaus` 9f2deece): Pulu puomin piirretystä alareunasta 6 pt
+  pöydän yläpuolelle (pysty); vaakana kypärä 67 %:n korkeudella (KyparaKorkeus 0,74 rajoittuu kyynärpään 8 pt:n väliin ruudun
+  alareunaan), puomi nousee pienen paneelin yli (A/B `astro kyyti pulualas 0|1`, oletus 1). Kuitattu (vaihtoehto B), todennettu
+  a7cd30f5:llä: lokit/linssiseppa2-pulu-suositus-c-20261003/merkinnat-pulu-korkeus.png. Merge-pyyntö Natiivisepällä.
+  Pystyosan lyhennys vain, jos omistaja pyytää Pulua alemmas TF 132:n jälkeen (Codexin kuvan mittasuhteet).
 
 ## 3. SEURAAVAKSI: Ajattelijat natiivissa (web malli, tee kun Pelikoodarin pino #3884–#3892 on mainissa)
 
