@@ -96,6 +96,13 @@ namespace Matkakirja.Natiivi
             var b = Rakenne.Nappi(null, "mk-luettelorivi mk-tasorivi", () => NaytaNakyma(Nakyma.Matka), ryhma);
             b.tooltip = "Tietäjätaso";
             tasoAvatar = Rakenne.El("mk-tasorivi__avatar", b, PickingMode.Ignore);
+            // Avatar valmiiksi ennen ensimmäistä avausta (Päätoimittaja 2.10.2026 klo 23.5x: ensimmäisellä avauksella kuva puuttui):
+            // nykyisen tason kuva haetaan taustalla ja vaihtuu tason noustessa, joten avattaessa se on jo välimuistissa.
+            tasoAvatar.schedule.Execute(() =>
+            {
+                var t = Kokemus.TasoPisteille(Pisteet());
+                if (avatarTaso != t.Taso) { avatarTaso = t.Taso; Tietajagalleria.Kuva(tasoAvatar, t.Taso); }
+            }).Every(2000);
             tasoNimi = Kirjasimet.Aseta(Rakenne.Teksti("", "mk-luettelorivi__nimi", b), Kirjasin.Kone);
             tasoPalkki = Rakenne.El("mk-tasorivi__palkki", b, PickingMode.Ignore);
             tasoTayte = Rakenne.El("mk-tasorivi__tayte", tasoPalkki, PickingMode.Ignore);
