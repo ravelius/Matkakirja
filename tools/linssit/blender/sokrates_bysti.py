@@ -5,7 +5,7 @@
 # Mallikuva: valkoinen kipsi (matta, hento pinnanalainen sironta) tummaa taustaa vasten, sivuvalo, ja kasvoille
 # projektorista heijastettu mietelause (gobo: sokrates_gobo.py), joka kaartuu kasvojen muotojen mukaan.
 #   Blender -b -P sokrates_bysti.py -- --malli <ulos.png> --gobo <gobo.png> --koko <L> <K> [--naytteita 256]
-import math, os, sys
+import json, math, os, sys
 import bpy
 from mathutils import Vector
 
@@ -900,7 +900,18 @@ def kiertopiste(nimi, kohde, k, ruudut, voima, kansio, ala, korkeudet, siemen):
     for i_, f in enumerate(tiedostot):
         kork = rnd.choice(korkeudet); kulma = rnd.uniform(-6, 6); v_m = rnd.uniform(-0.03, 0.03)
         nopeus = rnd.uniform(0.0012, 0.0035) * rnd.choice((-1, 1)); kirkkaus = rnd.uniform(0.07, 0.22)   # AgX puristaa: 0,15–0,40 näytti lähes päälauseen kirkkaalta
+        if '-fi-' in f:   # suomenkieliset luetaan helposti → kaksi pienintä kokoa ja 7–12 % (Päätoimittaja 2.10.)
+            kork = rnd.choice(sorted(korkeudet)[:2]); kirkkaus = rnd.uniform(0.07, 0.12)
         tausta_rivi(f'{nimi}-{i_}', p_, suunta, 0.6, ala, os.path.join(kansio, f), kork, kulma, v_m, nopeus, kirkkaus, ruudut, voima)
+
+
+def syke_kaikuun(valo, ikkuna, voima, syke, askel=2):
+    """v10: kaikukuvan "VU-mittari" (omistaja 2.10. 08.3x): voima = häivytyskäyrä × Satien verhokäyrä (1 ± 0,15).
+    Häivytys 45 ruutua sisään ja ulos kuten kaiku_projektori; avaimet joka toinen ruutu."""
+    a_, l_ = ikkuna; d = valo.data
+    for r in range(a_, l_ + 1, askel):
+        pohja = min(1.0, (r - a_) / 45, (l_ - r) / 45)
+        d.energy = voima * max(0.0, pohja) * syke.get(str(r), 1.0); d.keyframe_insert('energy', frame=r)
 
 
 if '--v7' in A:
@@ -921,8 +932,12 @@ if '--v7' in A:
         ao.location = PAA + Vector(s_).normalized() * 1.3; kohdista(ao, PAA)
         ao.keyframe_insert('location', frame=r); ao.keyframe_insert('rotation_euler', frame=r)
     p, n = osuma(-0.005, 0.418)
+    V10 = '--v10' in A   # päälause 25 % isompi ja alkaa kulkea jo kameran saapuessa; taustavirta; kaikukuvan syke
+    ISO = 1.25 if V10 else 1.0
+    def vieritys(lahesty_loppu, proj):   # v10: ensimmäiset kirjaimet saapuvat kuvaan kierron alkaessa (ei taukoa)
+        return (lahesty_loppu - 30, proj[1] - 5) if V10 else (proj[0] + 5, proj[1] - 5)
     v4_projektori('tykki-otsa', p, (n + Vector((-0.40, -0.15, -0.30))).normalized(), 0.6, 0.075,
-                  os.path.join(GOBOT, 'nauha-otsa.png'), V7_NAUHA, (V7_PROJ[0] + 5, V7_PROJ[1] - 5), V7_TYKKI)
+                  os.path.join(GOBOT, 'nauha-otsa.png'), V7_NAUHA * ISO, vieritys(V7_LAHESTY[1], V7_PROJ), V7_TYKKI)
     if '--kaiku' in A:   # v8: kaikukuva elämäkerronnan aikana samalla videotykillä (otsan projektori)
         KAIKU = A[A.index('--kaiku') + 1]
         KVOIMA = float(A[A.index('--kaikuvoima') + 1]) if '--kaikuvoima' in A else 160.0
@@ -966,9 +981,9 @@ if '--v7' in A:
         sp, sn = osuma(0.040, 0.374)                                     # vasen silmämuna
         vp, vn = sivulta(-0.08, 0.375)                                   # kasvojen sivu valon puolella
         v4_projektori('tykki-poski', pp, (pn + Vector((-0.55, -0.15, -0.30))).normalized(), 0.6, 0.065,
-                      os.path.join(GOBOT, 'nauha-poski.png'), 0.017, (V9['r2_proj'][0] + 5, V9['r2_proj'][1] - 5), V7_TYKKI)
+                      os.path.join(GOBOT, 'nauha-poski.png'), 0.017 * ISO, vieritys(V9['r2_liuku'][1], V9['r2_proj']), V7_TYKKI)
         v4_projektori('tykki-sivu', vp, (vn + Vector((0.0, -0.45, -0.25))).normalized(), 0.6, 0.075,
-                      os.path.join(GOBOT, 'nauha-sivu.png'), 0.019, (V9['r3_proj'][0] + 5, V9['r3_proj'][1] - 5), V7_TYKKI)
+                      os.path.join(GOBOT, 'nauha-sivu.png'), 0.019 * ISO, vieritys(V9['r3_liuku'][1], V9['r3_proj']), V7_TYKKI)
         kaiku_projektori('kaiku-silma', sp, (sn + Vector((-0.75, 0.0, 0.30))).normalized(), 0.5, 0.03,
                          os.path.join(GOBOT, 'kaiku-oraakkeli.png'), V9['r2_kaiku'], 15.0, liuku=0.08)
         kaiku_projektori('kaiku-sivu', vp, (vn + Vector((0.0, -0.40, 0.20))).normalized(), 0.6, 0.085,
@@ -1012,6 +1027,19 @@ if '--v7' in A:
             td.keyframe_insert('energy', frame=1)
             for r, v_ in ((a_, 0.0), (a_ + 45, 95.0 * osuus_t), (l_ - 45, 95.0 * osuus_t), (l_, 0.0)):
                 td.energy = v_; td.keyframe_insert('energy', frame=r)
+    if V10:
+        TAUSTA = A[A.index('--v10') + 1]; SYKE = json.load(open(A[A.index('--v10') + 2]))
+        RIVIKORK = (0.006, 0.008, 0.010, 0.013)   # ei KORK: se on kuvan korkeus
+        kiertopiste('virta1', (p, (n + Vector((-0.40, -0.15, -0.30))).normalized()), None,
+                    (V7_LAHESTY[0], V7_LAHESTY[1] - 15, V7_PROJ[1], V7_PROJ[1] + 50), V7_TYKKI, TAUSTA, 0.11, RIVIKORK, 38)
+        if '--kaiku' in A: syke_kaikuun(bpy.data.objects['kaiku'], V7_KAIKU, KVOIMA, SYKE)
+        if '--v9' in A:
+            kiertopiste('virta2', (pp, (pn + Vector((-0.55, -0.15, -0.30))).normalized()), None,
+                        (V9['r2_liuku'][0], V9['r2_liuku'][1] - 10, V9['r2_proj'][1], V9['r2_lahde'][1]), V7_TYKKI, TAUSTA, 0.09, RIVIKORK, 21)
+            kiertopiste('virta3', (vp, (vn + Vector((0.0, -0.45, -0.25))).normalized()), None,
+                        (V9['r3_liuku'][0], V9['r3_liuku'][1] - 10, V9['r3_proj'][1], V9['r3_lahde'][1]), V7_TYKKI, TAUSTA, 0.11, RIVIKORK, 49)
+            syke_kaikuun(bpy.data.objects['kaiku-silma'], V9['r2_kaiku'], 15.0, SYKE)
+            syke_kaikuun(bpy.data.objects['kaiku-sivu'], V9['r3_kaiku'], 30.0, SYKE)
     for idb in (cam, tahtain, cd):
         act = idb.animation_data.action; kayrat = []
         for kerros in getattr(act, 'layers', []):
