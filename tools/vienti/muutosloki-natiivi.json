@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (127)",
+   "paiva": "2026-10-02",
+   "teksti": "Olavinlinnalla on uusi valikko ja pienoiskartta, ja napit ovat yhtenäisiä neliöitä. Julisteet aukeavat omaan galleriaansa."
+  },
+  {
    "versio": "1.1 (126)",
    "paiva": "2026-10-02",
    "teksti": "Ajattelijoiden kipsipäät kartalla, ja Pulu väistää niitä. Rahat ovat nyt punnissa (£), ja Olavinlinnan puhe ei enää katkaise luentoa."
