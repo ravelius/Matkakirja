@@ -1,4 +1,4 @@
-# Linnanrakentajan luovutus 2.10.2026 klo 18.3x (päivitys 18.4x) (Opus high; tilin viikkoraja lähellä)
+# Linnanrakentajan luovutus 2.10.2026 klo 18.3x (päivitys 19.3x) (Opus high; tilin viikkoraja lähellä)
 
 ## Kärki nyt: linnan väki skinnatuiksi hahmoiksi (omistaja 18.0x, polku (a))
 - Omistaja: "haluan ne valmiit mallit joiden päälle vain vaihdetaan vaatteet ... tärkeintä mahdollisimman sulava liike".
@@ -13,6 +13,12 @@
   Peilipaketti **b116ad23cc81bcab** (blender 6293384c, ei osoitinta) haarasta `linnanrakentaja-linna-skin` (ei PR:ää):
   `henkilot[id].malli3d.skin` = rakenna.mjs lisaaBlender + `js/dioraama/hahmot-skin.json`, vie-blender.sh vie `hahmot/*.glb`
   (lähde `_valmiit/olavinlinna-blender-v26/hahmot/<henkilo>.glb`). Siirtoseppä kuvaa Muurinharjan vartijan iPhonella.
+- **Päivitys 19.3x:** vartija v3 (perusväri nostettu 1,35·p^0,8, parta värjätty kuvaan; natiivin kärkivärit/AO kunnossa,
+  tummuus oli tekstuurissa) + reittikorjaus (Muurinharja z −19,6, keskushalli z −9,9; `tests/dioraama-reitit.test.mjs`,
+  keittiö ja kierreportaat todo) → peilipaketti **2abec0c92507d1fc** (blender 19545e38). Siirtoseppä kuvasi videon
+  `proto-3d/lokit/siirtoseppa-skin3/vartija-v3-kavely-rajattu.mp4` → Päätoimittaja → omistaja. ODOTTAA OMISTAJAN OK:TA;
+  sen jälkeen osoitin (käsiajo osoitin=true haarasta linnanrakentaja-linna-skin tai PR), muut 16 hahmoa hahmo_skin.py:llä
+  (Peasant-asut) ja webin AnimationMixer.
 - **Webin AnimationMixer on Linnanrakentajan** (Päätoimittaja 2.10.), mutta VASTA kun omistaja on hyväksynyt natiivin vartijavideon.
 - AUKI: kolmiobudjetti (32 k/hahmo → LOD 8–10 k
   tarvittaessa); muut hahmot (talonpoika/renki/vesipoika/kokki = Peasant, naiset Female_Peasant), katselu- ja kääntöleikkeitä ei
