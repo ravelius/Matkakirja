@@ -36,8 +36,10 @@
     color: var(--tk-muste);
 }
 
+/* Laskuri otsikon koossa ja harvennuksessa (web h2.tk-kapiteeli > span.tk-kokoelma__laskuri, vain sävy pehmeämpi). */
 .mk-galleria__luku {
-    font-size: var(--tk-koko-kapiteeli);
+    font-size: var(--tk-koko-valiotsikko);
+    letter-spacing: 10px;
     color: var(--tk-muste-pehmea);
 }
 

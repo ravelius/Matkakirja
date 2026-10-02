@@ -315,10 +315,16 @@ namespace Matkakirja.Natiivi
             if (d == null) { Rakenne.Teksti("Matka ei ole vielä alkanut.", "mk-linssivalitsin__tyhja", aarteet); return; }
             // Kehittäjätilassa kaikki aarteet näkyvät avattuina (omistaja 2.10.2026 klo 21.4x, kuten julisteet galleriassa).
             var loydetyt = d.AarninLuettelo.Where(a => a.Loydetty || Asetukset.Kehittaja).ToList();
-            Osio("Aarnin luettelo", loydetyt.Count, d.AarninLuettelo.Count);
+            // Valikko v2 (web piirraKokoelma, #3877): tyhjät ryhmät pois, ja jos mitään ei ole, pelkkä "Ei vielä mitään kerättyä.".
+            if (V2 && loydetyt.Count == 0 && d.Tavarat.Count == 0 && !(d.Matkamuistot?.Count > 0) && !(d.Pelit?.Count > 0))
+            {
+                Rakenne.Teksti("Ei vielä mitään kerättyä.", "mk-linssivalitsin__tyhja", aarteet);
+                return;
+            }
+            if (!V2 || loydetyt.Count > 0) Osio("Aarnin luettelo", loydetyt.Count, d.AarninLuettelo.Count);
             foreach (var a in loydetyt)
                 AarreRivi("aarre:" + a.Id, a.Nimi, a.KuvaUrl, a.Manner, () => Suurenna(a.KuvaUrl, a.Nimi));
-            Osio("Tavarat", d.Tavarat.Count, -1);
+            if (!V2 || d.Tavarat.Count > 0) Osio("Tavarat", d.Tavarat.Count, -1);
             foreach (var t in d.Tavarat)
                 AarreRivi("tavara:" + t.Id, t.Teksti, t.KuvaUrl, null, () => Suurenna(t.KuvaUrl, t.Nimi));
             // MATKAMUISTOT (Pelikoodari 29.9.2026, elävän linnan etsinnät; Natiivi-UI:n kuittaus): vain kun jotain on löytynyt.
@@ -373,6 +379,22 @@ namespace Matkakirja.Natiivi
                 nayta?.Invoke();
             }, aarteet);
             b.tooltip = nimi;
+            // Valikko v2: rivikuvakkeena aarteen kuva pyöreänä (web kokoelma-rivi-kuvake, kuvaPieni), kuten Linssit-riveillä;
+            // laukkukuvake, kun kuvaa ei ole tai se ei lataudu.
+            if (V2)
+            {
+                var kehys = Rakenne.El("mk-linssirivi__ikoni mk-linssirivi__kuva", b, PickingMode.Ignore);
+                var vara = new SvgIkoni(Ikonit.Laukku);
+                vara.AddToClassList("mk-linssirivi__varaikoni");
+                kehys.Add(vara);
+                if (!string.IsNullOrEmpty(kuvaUrl))
+                    Kuvat.Hae(kuvaUrl, tex =>
+                    {
+                        if (tex == null || kehys.panel == null) return;
+                        kehys.style.backgroundImage = new StyleBackground(tex);
+                        vara.RemoveFromHierarchy();
+                    });
+            }
             var nimirivi = Rakenne.El("mk-linssirivi__nimirivi", b, PickingMode.Ignore);
             var n = Rakenne.Teksti(nimi ?? "", "mk-linssirivi__nimi", nimirivi);
             Kirjasimet.Aseta(n, Kirjasin.Luku);
