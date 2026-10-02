@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 2.10. 22:5x:** Korjaus edelliseen: viestirajan hook on OK (oma testini oli virheellinen, skripti ajettiin repon ulkopuolelta — Päätoimittaja korjasi). T7:n kaksi worktreeta ovat Codexin omia, ei poikkeama. Uudet hälytysrajat Päätoimittajalta: levy < 50 Gi, wt/ > 40 (ent. 45/20). Kuorma selittyy ajossa olevilla poltoilla, ei toimia vaadi.
+
 **Päivitetty 2.10. 22:42:** Levy 77 Gi, wt/ 33 (raja 20, kasvaa tasaisesti 31→33), muisti 69 % vapaa, kuorma 77/101/88 (raskas), sim 1 (päivä ≤1 ok), työtilat: 2 worktreeta /Volumes/T7:llä (ilmoitettu Päätoimittajalle 22.25, viesti ei mennyt perille — approval expired). Viikkoraja uudella tilillä 2 % (hälytys 96/99 % kuitattu Päätoimittajalta). Viestirajan hook PUUTTUU/VANHA (ilmoitettu, ei asennettu itse). Kävijälaskuri ennallaan 24.
 
 **Päivitetty 1.10. 08:0x — POSTIKIERTO LOPETETTU (tilinvaihto, Päätoimittajan käsky):** luovutus docs/raportit/viesti-postivahti-luovutus-20261001.md. Kaikki ajastukset lopetettu. Viimeisin tila: levy 48 Gi, wt/ 31, viikko 96 %, Päätoimittaja 15 %, kävijälaskuri n=9.
