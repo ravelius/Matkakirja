@@ -11,7 +11,7 @@
 // vienti on ämpärissä.
 //
 // Testikomennot (linssi-komento.txt): ajattelija <tunnus> | ruutu <r|pois> | prologi <p> | lappu | tila | peili <kansio|pois>
-// | mittari [nollaa] (ruutuvälit kuten webin mittari()). Peili "dokumentit" = laitteen Documents/ajattelijat-peili.
+// | koe normaali|kipsi|spekulaari|reuna <arvo> (pariteetin A/B) | mittari [nollaa] (ruutuvälit kuten webin mittari()). Peili "dokumentit" = laitteen Documents/ajattelijat-peili.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -319,6 +319,16 @@ namespace Matkakirja.Natiivi
                 Peili = arvo == null || arvo == "pois" ? null
                     : arvo == "dokumentit" ? System.IO.Path.Combine(Application.persistentDataPath, "ajattelijat-peili") : arvo;
                 o.Kirjaa("ajattelija: peili " + (Peili ?? "pois"));
+                return;
+            }
+            if (mita == "koe" && osat.Length > 3)
+            {
+                float x = float.Parse(osat[3], System.Globalization.CultureInfo.InvariantCulture);
+                if (osat[2] == "normaali") AjattelijaNayttamo.KoeNormaali = x > 0;
+                else if (osat[2] == "kipsi") AjattelijaNayttamo.KoeKipsi = x > 0;
+                else if (osat[2] == "spekulaari") AjattelijaNayttamo.KoeSpekulaari = x;
+                else if (osat[2] == "reuna") AjattelijaNayttamo.KoeReuna = x;
+                o.Kirjaa($"ajattelija: koe normaali {AjattelijaNayttamo.KoeNormaali} kipsi {AjattelijaNayttamo.KoeKipsi} spekulaari {AjattelijaNayttamo.KoeSpekulaari} reuna {AjattelijaNayttamo.KoeReuna}");
                 return;
             }
             if (!AukiNyt) { o.Kirjaa("ajattelija: linssi ei ole auki (linssi ajattelijat)"); return; }

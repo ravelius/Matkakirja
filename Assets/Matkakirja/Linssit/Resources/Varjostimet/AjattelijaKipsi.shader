@@ -43,6 +43,7 @@ Shader "Matkakirja/AjattelijaKipsi"
             float4 _Pohja;          // baseColorFactor (lineaarinen), w = karheus
             float4 _Taivas, _Maa;   // puolipallovalo: taivaan ja maan väri × voima (rgb)
             float _KipsiPaalla, _NormaaliPaalla;
+            float _Spekulaari;      // A/B-koe (ajattelija koe spekulaari x); oletus 1
             // Spotit: paikka.xyz + cos ulkoreuna, suunta.xyz + cos sisäreuna, väri × voima.
             float4 _VPaikka[VALOJA], _VSuunta[VALOJA], _VVari[VALOJA];
             float4x4 _VarjoVP;      // avainvalon näkymä+projektio (ei GPU-muunnosta: uv = ndc · 0,5 + 0,5)
@@ -217,7 +218,7 @@ Shader "Matkakirja/AjattelijaKipsi"
                     float nl = saturate(dot(n, l));
                     float3 sateily = _VVari[k].rgb * (keila / max(d2, 0.01)) * nl;
                     if (k == 0 && _VVari[0].a > 0.0 && nl > 0.0 && keila > 0.0) sateily *= Varjo(i.maailma, normalize(i.normaali));
-                    suora += sateily * (lambert + Ggx(l, v, n, _Pohja.w));
+                    suora += sateily * (lambert + Ggx(l, v, n, _Pohja.w) * _Spekulaari);
                 }
                 float3 puolipallo = lerp(_Maa.rgb, _Taivas.rgb, 0.5 * n.y + 0.5);
                 float3 vari = suora + puolipallo * lambert + lambert * ProjektoriValo(i.maailma, n);

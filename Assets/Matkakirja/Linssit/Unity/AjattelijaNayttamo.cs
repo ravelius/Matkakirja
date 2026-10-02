@@ -34,6 +34,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Näyttämön kuva (AjattelijaNakyma); null, kun näyttämöä ei ole.</summary>
         public static RenderTexture NykyinenKuva { get; private set; }
         public static event Action<RenderTexture> KuvaVaihtui;
+        /// <summary>A/B-kokeet webin pariteettiin ("ajattelija koe …"): normaalikartta, kipsi, spekulaari ja reunavalon kerroin.</summary>
+        public static bool KoeNormaali = true, KoeKipsi = true;
+        public static float KoeSpekulaari = 1f, KoeReuna = 1f;
         /// <summary>Kuvan skaala ruudun pikseleistä (0 = automaattinen: @3-näytöllä 2/3 eli webin devicePixelRatio ≤ 2).</summary>
         public static float SkaalaOhitus;
 
@@ -463,6 +466,9 @@ namespace Matkakirja.Natiivi
             var t = a.Ajat;
             float vinjettiKohde = 0, lahde = 0;
             for (int i = 0; i < Projektoreita; i++) pb[i].w = 0;
+            mat.SetFloat("_Spekulaari", KoeSpekulaari);
+            mat.SetFloat("_NormaaliPaalla", KoeNormaali && normaali != null ? 1f : 0f);
+            mat.SetFloat("_KipsiPaalla", KoeKipsi && kipsi != null ? 1f : 0f);
             if (prologi)
             {
                 var pr = a.Prologi;
@@ -473,7 +479,7 @@ namespace Matkakirja.Natiivi
                 {
                     var v = i < pr.Valot.Count ? pr.Valot[i] : null;
                     if (v == null) { Spotti(1 + i, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0); continue; }
-                    Spotti(1 + i, B(v.Paikka), B(v.Kohde), v.Keila, v.Blend, vari, (float)v.Teho * w * h);
+                    Spotti(1 + i, B(v.Paikka), B(v.Kohde), v.Keila, v.Blend, vari, (float)v.Teho * w * h * KoeReuna);
                 }
                 Spotti(3, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0);
                 mat.SetVector(IdTaivas, Vector4.zero); mat.SetVector(IdMaa, Vector4.zero);
