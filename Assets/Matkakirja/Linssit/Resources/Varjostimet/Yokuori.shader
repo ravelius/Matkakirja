@@ -198,6 +198,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float texM = (_TarkatOn > 0.5 && euPaino > 0.5h ? 0.0045 : euPaino > 0.5h ? 0.0357 : 0.176) * 111320.0 * clat;
                 half piste = (half)smoothstep(3.0, 8.0, texM / max(length(fwidth(p)), 1.0));
                 half led = 0.0h;
+                half lKuva = l;   // valokuvan kirkkaus ennen pisteitä: sävy siitä (pisteen ydin ei saa vaalentaa natriumia kermaksi)
                 if (piste > 0.0h && l > 0.002h)
                 {
                     // Yksi valopiste solua kohti; solu ~6 pt ruudulla 2:n potenssin tasoina 30 m:stä ja kahden tason liukuva sekoitus,
@@ -238,7 +239,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                     led = (half)(piste * saturate(ledKuvio / max(kuvio, 1e-4)) * saturate(kuvio * 2.0));
                 }
                 // Sävy NASA-vertailusta (30.9., ISS037-E-18864): himmeät natriumin oranssit, ytimet kellanvalkoiset (ennen valkoisempi).
-                half3 savy = lerp(half3(1.0, 0.46, 0.14), half3(1.0, 0.80, 0.52), saturate(l * 1.4h));
+                half3 savy = lerp(half3(1.0, 0.46, 0.14), half3(1.0, 0.80, 0.52), saturate(lKuva * 1.4h));
                 savy = lerp(savy, half3(0.92h, 0.95h, 1.0h), led);   // LED-valkoinen (lähikuvan pisteet)
                 // Päivän pilvet peittävät valot ja heijastuksen (tasakulmainen, v = 0 etelässä; LOD 0: ei saumaa ±180°:ssa).
                 float pilviA = SAMPLE_TEXTURE2D_LOD(_Pilvet, sampler_Pilvet, float2(lon / 6.2831853 + 0.5, lat / 3.1415927 + 0.5), 0).a;
