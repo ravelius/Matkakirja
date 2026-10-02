@@ -4,7 +4,7 @@
 //   tasorivi    avatar ympyränä, "Untuvikko (80 tp)", etenemispalkki ja › (avaa tasonäkymän)
 //   päivärivi   natiivin oma (omistaja 2.10.2026 klo 15.1x): "Päivä 1/80, aamu · £400" ja lopussa punaisella päivän kulut
 //               ruokaan ja majoitukseen "−£20" (Matka.PaivakuluNyt)
-//   MATKALAUKKU Aarteet (N) · Julisteet (N) luettelorivinä (ikoni, nimi, ›, ohut viiva välissä); Linssit, kun linssejä on
+//   MATKALAUKKU Aarteet (N) · Julisteet (N) luettelorivinä (ikoni, nimi, ›, ohut viiva välissä); ei Linssejä (kartan oma nappi)
 //   PELI        Retkikunta · Asetukset
 //   alarivi     viivan alla "Uusi peli" hillittynä tekstinappina vasemmalla ja versio oikealla (natiivissa ei päivitä-nappia)
 // Tasonäkymä: ‹ Takaisin + TIETÄJÄTASO, nykyinen avatar isona ja kaikki tasot ruudukkona (Tietajagalleria.Ruudukko), nykyinen

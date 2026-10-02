@@ -211,10 +211,8 @@ namespace Matkakirja.Natiivi
                 d => d.AarninLuettelo.Count(a => a.Loydetty) + d.Tavarat.Where(t => t.Tyyppi != global::Matkakirja.Peli.Laattatyypit.Paaaarre).Sum(t => t.Maara));
             v.LisaMaara(v.LisaLuetteloRivi(laukku, "Julisteet", Ikonit.PilleriJulisteet, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Aarteet)),
                 d => Asetukset.Kehittaja && UiSisalto.Julisteet.Count > 0 ? UiSisalto.Julisteet.Count : d.Julisteet.Count);
-            // Linssit: webissä oma nappi kartalle (omistaja 13.56, erillinen erä); natiivissa ei vielä karttanappia, joten rivi jää
-            // luetteloon (hyväksytty kehittäjäkuva valikko-kehittaja.png), kun linssejä on.
-            v.LisaLuetteloRivi(laukku, "Linssit", Ikonit.PilleriLinssit, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Linssit),
-                () => LinssiUi.Rekisteri?.Valittavat.Count > 0);
+            // Ei Linssit-riviä: linssit ovat kartalla omana nappinaan (omistaja 2.10.2026 klo 13.56 ja 18.3x "valikon linssit piti
+            // siirtää kartalle oman napin alle!!!! älä tuo niitä tuohon valikkoon"; Linssisepän Linssit-karttanappi, web #3859).
             var peli = v.LisaLuetteloRyhma("Peli");
             v.LisaLuetteloRivi(peli, "Retkikunta", Ikonit.PilleriRetkikunta,
                 () => { v.Sulje(); Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); }, () => Valikko.RetkikuntaSaatavilla);
