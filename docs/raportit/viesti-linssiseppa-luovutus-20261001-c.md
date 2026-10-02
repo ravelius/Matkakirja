@@ -6,6 +6,9 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
 ## TILA 2.10. KLO 11.3x
 - ISS:n rinnalla pois pelistä (omistaja 2.10. 10.4x): linssiseppa/ei-seurantaa 19e0242e merge-pyynnössä Natiivisepällä
   (juna 116); simulaattori f7826b2c PASS (lokit/linssiseppa-ei-seurantaa-20261002-iphone). Kehittäjälle `astro kyyti seuranta 1`.
+- Savuke 1117 -korjaus: linssiseppa/ei-seurantaa-2 c7d3c110 (Pulun taulu: avaruuskävelyltä ja kohteen yltä "ISS:n sisälle"
+  → Cupola, MoodinAskel.LopetaKavely) junassa 118 (53c5595a); simulaattori 70916e44 PASS (lokit/linssiseppa-ei-seurantaa2-20261002-iphone).
+  POISTU vie aina kaukonäkymään (tarkoitettu). Pelikoodarille kävelyn kulku webiä varten lähetetty.
 - KUVAA-osuma ad79d770 junassa 116. LS2:n 1116-kysymys (KUVAA Pariisissa, KOHDE-lista auki): vastattu — todennäköisin
   hiljainen `kaynnissa`-paluu IssKameraKuva.Laukaisessa; odottaa LS2:n koordinaattia.
 - Seuraavaksi: kiillon pystyleikkaus (ajo-kiilto3.sh ilman KUVAA-lippua) seuraavalla simulaattorivuorolla.
