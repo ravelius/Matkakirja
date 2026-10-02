@@ -3,6 +3,13 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 2.10. KLO 11.3x
+- ISS:n rinnalla pois pelistä (omistaja 2.10. 10.4x): linssiseppa/ei-seurantaa 19e0242e merge-pyynnössä Natiivisepällä
+  (juna 116); simulaattori f7826b2c PASS (lokit/linssiseppa-ei-seurantaa-20261002-iphone). Kehittäjälle `astro kyyti seuranta 1`.
+- KUVAA-osuma ad79d770 junassa 116. LS2:n 1116-kysymys (KUVAA Pariisissa, KOHDE-lista auki): vastattu — todennäköisin
+  hiljainen `kaynnissa`-paluu IssKameraKuva.Laukaisessa; odottaa LS2:n koordinaattia.
+- Seuraavaksi: kiillon pystyleikkaus (ajo-kiilto3.sh ilman KUVAA-lippua) seuraavalla simulaattorivuorolla.
+
 ## TILA 2.10. KLO 10.3x
 - Lentopeli: latausodotus poisti nauhat; lentopeli-2 95bf46cd + astro-auto-2 7fbd363b junassa 113 (juna 113 -todennus PASS).
 - Cupola-ketju (LS2:n kamera + vuodenaika/vuorokausi/v4/iso ikkuna) = linssiseppa2/cupola-ketju-3 84b8556b junassa 115.
