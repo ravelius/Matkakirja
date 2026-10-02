@@ -52,7 +52,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Paikan tiedot kohteelta (pelikatalogi: Mühle Saksassa, Mlin Serbiassa, Moara Moldovassa).</summary>
         public string Paikka = null, PaikallinenNimi = null, Maa = null;
 
-        readonly VisualElement juuri, peliTaso, paneeli, korttiTaso;
+        readonly VisualElement juuri, peliTaso, paneeli, korttiTaso, pysaytys;
+        /// <summary>Kartan sumea pysäytyskuva (PalloKierto.Pysaytyskuva, Kokoruutu-taso sammuttaa pallon kameran): oma kerros
+        /// tilarivin (15) ja nostojen (12) alla, jotta yläpalkki jää näkyviin ja vain himmenee.</summary>
+        const int PysaytysKerros = UiKerros.Nostot - 1;
         readonly MyllyLauta lauta;
         readonly Label kapiteeli, vuoroRivi, nimi0, nimi1, lukema0, lukema1, ohje;
         readonly VisualElement merkki0, merkki1;
@@ -92,6 +95,10 @@ namespace Matkakirja.Natiivi
         MyllyNakyma(UiKerros kerros)
         {
             juuri = kerros.Juuri(UiKerros.Pelidialogit);
+            pysaytys = Rakenne.El("mk-peli__pysaytys", kerros.Juuri(PysaytysKerros), PickingMode.Ignore);
+            pysaytys.style.display = DisplayStyle.None;
+            PalloKierto.PysaytysValmis += t => { if (Auki) AsetaPysaytys(t); };
+            PalloKierto.PysaytysPoistui += () => AsetaPysaytys(null); // synkronisesti: tekstuuri vapautetaan heti tämän jälkeen
 
             // PELI: KUVANÄKYMÄ + PANEELI.
             peliTaso = Rakenne.El("mk-himmennys mk-peli", juuri);
@@ -190,6 +197,8 @@ namespace Matkakirja.Natiivi
             Auki = true;
             SyoteLukko.Esta(this);
             UiKerros.Hae().Juuri(Pulu.Kerros).style.visibility = Visibility.Hidden;
+            UiKerros.Hae().Juuri(UiKerros.Nostot).style.visibility = Visibility.Hidden; // nostomerkit eivät jää sumean kartan päälle
+            if (PalloKierto.Pysaytyskuva != null) AsetaPysaytys(PalloKierto.Pysaytyskuva);
             peli ??= new Mylly();
             lauta.Lataa();
             Aanet.RekisteroiTehoste(AaniAsetus, Resources.Load<AudioClip>(MyllyLauta.KansioPolku + AaniAsetus), AaniGain);
@@ -210,6 +219,7 @@ namespace Matkakirja.Natiivi
             Rakenne.Nayta(peliTaso, false, Tyylikirja.Kesto.Sulku);
             SyoteLukko.Vapauta(this);
             UiKerros.Hae().Juuri(Pulu.Kerros).style.visibility = StyleKeyword.Null;
+            UiKerros.Hae().Juuri(UiKerros.Nostot).style.visibility = StyleKeyword.Null;
             // Kerrokset ja äänet muistista sulkuanimaation jälkeen (Natiiviseppä: Resources.UnloadUnusedAssets suljettaessa).
             int k = kerta;
             lauta.schedule.Execute(() =>
@@ -232,6 +242,14 @@ namespace Matkakirja.Natiivi
             float lasku = s.Mista >= 0 ? Tyylikirja.Kesto.Liuku / 1000f * 0.9f : 0f;
             if (!Aanet.Tehoste(AaniAsetus, voima, lasku)) Aanet.Tehoste("click", voima);
             if (s.Poista >= 0 && !Aanet.Tehoste(AaniPoisto, voima, lasku + 0.12f)) Aanet.Tehoste("wrong", voima);
+        }
+
+        void AsetaPysaytys(Texture t)
+        {
+            if (t == null) { pysaytys.style.backgroundImage = StyleKeyword.None; pysaytys.style.display = DisplayStyle.None; return; }
+            var tausta = t is RenderTexture rt ? Background.FromRenderTexture(rt) : t is Texture2D t2 ? Background.FromTexture2D(t2) : default;
+            pysaytys.style.backgroundImage = new StyleBackground(tausta);
+            pysaytys.style.display = DisplayStyle.Flex;
         }
 
         void NaytaKortti(Kortti k)

@@ -11,6 +11,17 @@
     padding: 0;
 }
 
+/* Kartan sumea pysäytyskuva omassa kerroksessaan (MyllyNakyma.PysaytysKerros), kuten .mk-suurennos__pysaytys mutta ilman
+   omaa sävytystä: pehmennys = sumennus + .mk-peli-himmennys-kevyt. */
+.mk-peli__pysaytys {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
 .mk-peli__lauta {
     position: absolute;
     background-color: initial;
@@ -98,6 +109,11 @@
 
 .mk-peli__merkki--tumma {
     background-color: var(--tk-paperi-muste);
+}
+
+/* Tummalla paneelilla tumma merkki erottuu vain reunastaan (iPhone-kuva 2.10.: musta merkki katosi). */
+.mk-peli__paneeli .mk-peli__merkki--tumma {
+    border-color: var(--tk-tumma-muste-pehmea);
 }
 
 .mk-peli__ohje {
