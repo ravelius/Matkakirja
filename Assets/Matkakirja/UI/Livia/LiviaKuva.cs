@@ -69,6 +69,13 @@ namespace Matkakirja.Natiivi
             set { if (varrenEste == value) return; varrenEste = value; eva.MarkDirtyRepaint(); }
         }
         Vector2? varrenEste;
+
+        /// <summary>
+        /// Robottikäden puomin alin kohta paneelin pisteinä viimeisimmästä piirrosta (NaN = ei puomia) ja piirron järjestysnumero.
+        /// Pulu nostaa itseään tällä palautteella ISS-kyydin pöydän yläpuolelle (kaava-arvio jäi 12–20 pt liian alas, kuva 87cc4931).
+        /// </summary>
+        public float VarrenAlin { get; internal set; } = float.NaN;
+        public int VarrenAlinVersio { get; internal set; }
         static bool kyparaHaussa;
         static float kyparaVirhe = float.NegativeInfinity;
 
@@ -402,6 +409,8 @@ namespace Matkakirja.Natiivi
                 const float Nosto = -75;
                 // Varren ensimmäinen nivel (kuvassa px 248, 818 → yksiköt 124, 409) ja puomin pää (y 800).
                 const float NivelX = 124, NivelY = 409, PaaY = 800, Poikittain = 0.6f;
+                // Vaakaosan läpinäkymätön kaista alkaa kuvan x:stä 31,5 (robotin-varsi.png, mitattu 3.10.): se on puomin alareuna.
+                const float VarsiMinX = 31.5f;
                 float a = kuva.keinunta * Mathf.Deg2Rad, ca = Mathf.Cos(a), sa = Mathf.Sin(a);
                 var varjo = (Color)Tyylikirja.LasiAvaruus.Pinta;
                 varjo = Color.Lerp(varjo, Color.white, 0.14f); varjo.a = 1f;
@@ -412,7 +421,7 @@ namespace Matkakirja.Natiivi
                 float sx = r.width > 0 ? wb.width / r.width : 1f, s1 = r.width / kuva.viewBox.width;
                 float reunaX = leveys > 0 && sx > 0 && s1 > 0 ? (leveys - wb.xMin) / (sx * s1) + kuva.viewBox.x + 60f : 600f;
                 float venytys = Mathf.Max(0.2f, (reunaX - NivelX) / (PaaY - NivelY));
-                // Puomin nousu (yksikköä per yksikkö oikealle): alareuna nivelessä y = NivelY + Nosto, ja esteen kohdalla sen pitää olla
+                // Puomin nousu (yksikköä per yksikkö oikealle): alareuna nivelessä y = NivelY + Nosto (kuvassa 377bb8a3 väli riitti), ja esteen kohdalla sen pitää olla
                 // 6 pt esteen yläpuolella. Ilman estettä vaaka kuten ennen.
                 float nousu = 0f;
                 if (kuva.VarrenEste is Vector2 este && sx > 0 && s1 > 0 && r.height > 0)
@@ -474,6 +483,15 @@ namespace Matkakirja.Natiivi
                 Kuva(robottiKuvat[0], 800, 1f, false, varjo, NivelY, PaaY, vaaka: true);
                 Kuva(robottiKuvat[1], 800, t.EvaMaa, false, valo, 0, NivelY + 6);
                 Kuva(robottiKuvat[1], 800, t.EvaMaa, false, valo, NivelY, PaaY, vaaka: true);
+                // Puomin alin kohta paneelin pisteinä (puomi on suora, joten alin kohta on jommassakummassa päässä).
+                float Alin(float yI)
+                {
+                    float dy = yI - NivelY;
+                    var p = m.Kuvaa(new Vector2(NivelX + dy * venytys, NivelY - (VarsiMinX - NivelX) * Poikittain + Nosto - dy * venytys * nousu));
+                    return this.LocalToWorld(p).y;
+                }
+                kuva.VarrenAlin = Mathf.Max(Alin(NivelY), Alin(PaaY));
+                kuva.VarrenAlinVersio++;
                 Kuva(evaKuvat[1], 304, 1f, true, varjo);                 // perus varjokuvana
                 // Kasvovalo ensin ja kasvot sen päälle (Päätoimittajan kuvatarkistus 2.10.: valo peitti silmät ja nokan, visiirissä
                 // näkyi vain vaalea soikio): valo jää kasvojen ympärille sädekehäksi.

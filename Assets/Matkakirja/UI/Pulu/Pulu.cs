@@ -228,6 +228,8 @@ namespace Matkakirja.Natiivi
         // viewBox-yksiköt: Pulun vasen reuna x 88, varren alin kohta (kyynärnivel vaakaan käännettynä) y 381 (viewBox 304).
         const float RobottiPuluVasen = 88f, RobottiAlin = 381f, RobottiReuna = 12f;
         bool robottiAseteltu;
+        float robottiKorjaus;
+        int robottiVersio = -1;
 
         void AsetteleRobotti(Vector4 reunat)
         {
@@ -247,7 +249,20 @@ namespace Matkakirja.Natiivi
             // Vaakana pienen paneelin yli kulkeva puomi (VarrenEste): Pulu vasempaan alakulmaan turva-alueen alareunaan, puomi nousee.
             kuva.VarrenEste = VarrenEste;
             float alaRaja = VarrenEste.HasValue ? reunat.w + 8f : Mathf.Max(reunat.w + 8f, AlaVara);
-            alue.style.bottom = alaRaja + (RobottiAlin - 304f) * RobottiSkaala;
+            // Palaute ISS-kyydissä: puomin todellinen alin kohta (LiviaKuva.VarrenAlin) vähintään AlaVaran rajalle eli 6 pt pöydän
+            // yläreunan yläpuolelle; korjaus päivitetään vain uudesta piirrosta (yksi askel riittää, siirto on 1:1). Nousevalla
+            // puomilla (VarrenEste) väli hoidetaan nousulla.
+            if (!VarrenEste.HasValue && AlaVara > 0f && !float.IsNaN(kuva.VarrenAlin) && alue.panel != null)
+            {
+                if (kuva.VarrenAlinVersio != robottiVersio)
+                {
+                    robottiVersio = kuva.VarrenAlinVersio;
+                    float raja = alue.panel.visualTree.layout.height - AlaVara;
+                    robottiKorjaus = Mathf.Clamp(robottiKorjaus + kuva.VarrenAlin - raja, 0f, 80f);
+                }
+            }
+            else robottiKorjaus = 0f;
+            alue.style.bottom = alaRaja + (RobottiAlin - 304f) * RobottiSkaala + robottiKorjaus;
             alue.style.transformOrigin = new TransformOrigin(Length.Percent(0), Length.Percent(100));
             alue.style.scale = new Scale(new Vector2(RobottiSkaala, RobottiSkaala));
         }
