@@ -2,23 +2,24 @@
 
 Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen: -20261001-b.md (käytännöt voimassa, ellei tässä toisin).
 
-## TILA HETI (päivitetty 15.3x)
+## TILA HETI (päivitetty 16.2x)
 
-- **proto master 9df72166 = BUILD 124** (juna 46540fa3, käännös f70d6994; nostorivi + linna-puhevuoro-2). TF 116, 118, 120
-  ladattu; TF 123 vietiin 15.04; Päätoimittaja: VIE 124 (SHA Julkaisijalla).
-- **Juna 125 koottu ja testattu, ei avattu**: worktree /Users/Shared/Claude/wt/proto-natiiviseppa-j124, haara
-  natiiviseppa/juna-124-koe = cc387301 = 46540fa3 + linssiseppa2/ajattelijat ea76da0b (Päätoimittajan OK, vain
-  kehittäjätilassa; reunavalo 3× kirkkaampi korjataan erikseen). Testit 0/436/387/568, pohjavahti ok (70). NYT pyydetty
-  Julkaisijalta TF 124 -viennin jälkeen.
-- **Juna 126 odottaa**: siirtoseppa/linna-puhevuoro-3 1bb7df6d (Pulun PCM katkaisee linnan puheen; merge-pyyntö simun
-  jälkeen). Laitetestaajan tekstilaatikkotesti: `kehittaja 1` → `linssi poikkileikkaus` → odota "erillinen puhe linna-kertoja"
-  (laatikko ei näy) → Kertoja pois -tilassa `poikki saapuminen alusta` (laatikko näkyy).
-- **Odottaa webiä**: natiivi-ui/ohjausnappi 01c0d8d1 + siirtoseppa/linna-valikko f45bf78a → kun web #3854 on mainissa.
-- Natiivi-UI: pohjavahti --kirjaa (1 pienentynyt). LS2: Ajattelijoiden reunavalo. Linnanrakentaja: Muurinharjan porras (vanha).
+- **proto master e00ba2b6 = BUILD 125** (juna 4612f388, käännös cf3ffcf1: Ajattelijat ea76da0b + kipsipäät/erikoisnostot
+  ea412b26 + linna-puhevuoro-3 1bb7df6d). TF 125 lähtee ~17.45 (SHA Julkaisijalla). TF-raja 12/vrk; omistaja: junat isoina
+  2–3 h välein.
+- **Juna 126 kokoamassa**: worktree /Users/Shared/Claude/wt/proto-natiiviseppa-j124, haara natiiviseppa/juna-124-koe = 2288fb24
+  = 4612f388 + natiivi-ui/raha-punta cfd6c103 (£-muoto, omistaja 15.50). Testit 0/439/387/568 ok.
+  Tulossa: siirtoseppa/linna-puhevuoro-4 20db9318 (Muurinharjan repliikki pelaajan teko vain 1,5 s napautuksesta; testikomento
+  `poikki kertoja`). Laitetestaajan tekstilaatikkotesti (20db9318+): `kehittaja 1` → `linssi poikkileikkaus` (odota "ympäristö
+  valmis") → `poikki kertoja` (odota "erillinen puhe linna-kertoja" + 3 s: laatikko EI näy) → peli `puhe pois` → `poikki kertoja`
+  + 6 s (laatikko näkyy) → `puhe paalle`.
+- **Odottaa webiä #3854**: natiivi-ui/ohjausnappi 01c0d8d1 + siirtoseppa/linna-valikko f45bf78a.
+- LS2: Ajattelijoiden reunavalon korjaus (haaran kärki f960dec4, ei vielä merge-pyyntönä). Natiivi-UI: ylapalkki-tikkaus
+  raha-punnan päälle; pohjavahti --kirjaa.
 
 ## TÄNÄÄN (2.10.) TEHDYT BUILDIT
 
-111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259 · 120 8fd12e83 · 122 19060a07 · 123 3f17a0e6 · 124 9df72166.
+111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259 · 120 8fd12e83 · 122 19060a07 · 123 3f17a0e6 · 124 9df72166 · 125 e00ba2b6.
 Ohitetut: 112 (Lehti ei avannut leikekirjaa: täkynoston id puuttui kokoelmadatasta), 115 (ISS-kuva raidallinen +
 22dfaccb signal 11: RGB24 luettiin Color32:na), 117 (paluu avaruuskävelyltä Cupolaan ei toiminut), 121 (✕ avaruuslasi).
 
