@@ -1,0 +1,140 @@
+/* NOSTOSELAIN (NOSTOKORTTI-osa) — Nostoselain
+ * Siirretty sellaisenaan (UI-pohjien tyylijako 2.10.2026, web #3820 css/pohjat/…): järjestys Matkakirja.tss:ssä. */
+
+/* NOSTOSELAIN ja AUTO (omistaja 1.10.2026, mallit 20 + 22 + 23; Nostoselain.cs): NOSTOKORTTI-pohjan osat tyylikirjan arvoilla.
+ * Rivi ‹ [Nostot ▾] › vetokahvan alla (TOIMINTO-nappi), PANEELI (paperi) rivin alla, AUTO-pilleri lukijan rivillä ja
+ * siirtolaskurin lappu (LASI) kortin alareunassa. */
+
+.mk-nostoselain {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin: var(--tk-vali-xs) 0 var(--tk-vali-s) 0;
+}
+
+.mk-nostoselain__askel {
+    width: var(--tk-nappi-osuma);
+    min-height: var(--tk-nappi-osuma);
+    padding: 0;
+    border-width: 0;
+    background-color: initial;
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-nostoselain__askel > .mk-nappi__teksti {
+    font-size: var(--tk-koko-otsikko);
+    -unity-text-align: middle-center;
+}
+
+.mk-nostoselain__avaaja {
+    min-width: 148px;
+    margin: 0 var(--tk-vali-s);
+    background-color: var(--tk-paperi-pergamentti);
+    border-color: var(--tk-paperi-korostus);
+}
+
+.mk-nostoselain__avaaja > .mk-nappi__teksti {
+    font-size: var(--tk-koko-leipa);
+    color: var(--tk-paperi-korostus);
+    -unity-text-align: middle-center;
+}
+
+.mk-nostoselain__avaajaikoni {
+    width: 16px;
+    height: 16px;
+    margin-left: var(--tk-vali-xs);
+    color: var(--tk-paperi-korostus);
+}
+
+.mk-nostoselain__avaaja.mk-valittu {
+    background-color: var(--tk-paperi-toiminto);
+}
+
+.mk-nostoselain__paneeli {
+    position: absolute;
+    left: var(--tk-vali-s);
+    right: var(--tk-vali-s);
+    bottom: var(--tk-vali-s);
+    padding: var(--tk-vali-s) var(--tk-vali-m) var(--tk-vali-s) var(--tk-vali-m);
+    border-width: 1px;
+    border-color: var(--tk-paperi-reunus);
+    border-radius: var(--tk-kulma-kortti);
+    background-color: var(--tk-paperi-pinta);
+    color: var(--tk-paperi-muste);
+}
+
+.mk-nostoselain__otsikko {
+    margin-bottom: var(--tk-vali-s);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mk-nostoselain__sirut {
+    flex-shrink: 0;
+    margin-bottom: var(--tk-vali-s);
+}
+
+.mk-nostoselain__sirurivi {
+    flex-direction: row;
+}
+
+.mk-nostoselain__siru {
+    min-height: 32px;
+    margin-right: 6px;
+    padding: 0 var(--tk-vali-m);
+    border-color: var(--tk-paperi-reunus);
+    border-radius: var(--tk-kulma-pilleri);
+    background-color: initial;
+    color: var(--tk-paperi-muste);
+}
+
+.mk-nostoselain__siru > .mk-nappi__teksti {
+    font-size: var(--tk-koko-apuri);
+}
+
+.mk-nostoselain__siru.mk-valittu {
+    border-color: var(--tk-paperi-korostus);
+    background-color: var(--tk-paperi-toiminto);
+}
+
+.mk-nostoselain__lista {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.mk-nostoselain__rivi {
+    margin-bottom: 2px;
+    padding: 0 var(--tk-vali-m);
+    justify-content: flex-start;
+}
+
+.mk-nostoselain__rivi--nykyinen {
+    border-color: var(--tk-paperi-toiminto);
+    background-color: var(--tk-paperi-pergamentti);
+}
+
+.mk-nostoselain__rivi--luettu {
+    opacity: 0.55;
+}
+
+.mk-nostoselain__nimi {
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: var(--tk-koko-apuri);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mk-nostoselain__luettu {
+    margin-left: var(--tk-vali-s);
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-paperi-korostus);
+}
+
+.mk-nostoselain__nuoli {
+    margin-left: var(--tk-vali-s);
+    font-size: var(--tk-koko-valiotsikko);
+    color: var(--tk-paperi-muste-pehmea);
+}

@@ -9,3 +9,16 @@
 @import url("Sahke.uss");
 @import url("Sahketehtava.uss");
 @import url("Kohdekartta.uss");
+@import url("Pohjat/kortti.uss");
+@import url("Pohjat/nostokortti.uss");
+@import url("Pohjat/paneeli.uss");
+@import url("Pohjat/kentta.uss");
+@import url("Pohjat/auto.uss");
+@import url("Pohjat/Pinnat/dialogit.uss");
+@import url("Pohjat/Pinnat/lautapeli.uss");
+@import url("Pohjat/Pinnat/maakuntakortti.uss");
+@import url("Pohjat/Pinnat/nostoselain.uss");
+@import url("Pohjat/Pinnat/visa.uss");
+@import url("Pohjat/Pinnat/pillerivalikko.uss");
+@import url("Pohjat/Pinnat/linssin-valikko.uss");
+@import url("Pohjat/Pinnat/linssivalitsin.uss");

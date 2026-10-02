@@ -1,0 +1,103 @@
+/* AUTO-pohjaosa: lukijan AUTO ja siirtolaskuri — Nostoselain
+ * Siirretty sellaisenaan (UI-pohjien tyylijako 2.10.2026, web #3820 css/pohjat/…): järjestys Matkakirja.tss:ssä. */
+
+.mk-nostoselain__auto {
+    min-height: 26px;
+    height: 26px;
+    margin-right: var(--tk-vali-s);
+    padding: 0 10px;
+    border-color: var(--tk-paperi-reunus);
+    border-radius: var(--tk-kulma-pilleri);
+    background-color: initial;
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-nostoselain__autoteksti {
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 6.4px; /* web 0.1em */
+}
+
+.mk-nostoselain__autopiste {
+    width: 8px;
+    height: 8px;
+    margin-right: 6px;
+    border-radius: 4px;
+    background-color: var(--tk-paperi-reunus);
+}
+
+.mk-nostoselain__auto.mk-valittu {
+    border-color: var(--tk-paperi-korostus);
+    background-color: var(--tk-paperi-toiminto);
+    color: var(--tk-paperi-muste);
+}
+
+.mk-nostoselain__auto.mk-valittu > .mk-nostoselain__autopiste {
+    background-color: var(--tk-paperi-muste);
+}
+
+.mk-nostoselain__lappu {
+    position: absolute;
+    left: var(--tk-vali-m);
+    right: var(--tk-vali-m);
+    bottom: var(--tk-vali-m);
+    height: 44px;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 6px 0 var(--tk-vali-m);
+    border-width: 1px;
+    border-color: var(--tk-lasi-reunus);
+    border-radius: 12px;
+    background-color: var(--tk-lasi-pinta);
+    overflow: hidden;
+}
+
+.mk-nostoselain__lapputeksti {
+    flex-direction: row;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-items: center;
+    overflow: hidden;
+}
+
+.mk-nostoselain__lappuohje,
+
+.mk-nostoselain__lappunimi {
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-lasi-muste);
+}
+
+.mk-nostoselain__lappunimi {
+    flex-shrink: 1;
+    margin-left: var(--tk-vali-xs);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.mk-nostoselain__lappuaika {
+    margin-left: var(--tk-vali-xs);
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-lasi-korostus);
+}
+
+.mk-nostoselain__pysayta {
+    min-height: 32px;
+    padding: 0 var(--tk-vali-m);
+    border-color: var(--tk-lasi-toiminto);
+    border-radius: 9px;
+    background-color: initial;
+}
+
+.mk-nostoselain__pysayta > .mk-nappi__teksti {
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-lasi-korostus);
+}
+
+.mk-nostoselain__palkki {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background-color: var(--tk-lasi-korostus);
+}
