@@ -29,6 +29,8 @@ export const SOKRATES = Object.freeze({
     // Nimi ja vuodet alemmasta kuvakulmasta (omistajan v9-palaute 2.10. 10.3x; Linnanrakentaja v10).
     rembrandt: { paikka: [-0.30, -1.02, 0.25], katse: [-0.06, -0.06, 0.40], mm: 35 },
   },
+  // Kierros 1: päälause (paalauseet-avain), jonka videotykki projisoi ja jonka lähderivi näytetään.
+  kierros: { paalause: '38a' },
   linssi: 18,              // V3B_LINSSI: lähikuvat pinnan yllä
   kierto: 22,              // V6_KIERTO: ± astetta pinnan normaalin ympäri tekstin aikana
   liuku: 0.008,            // V6_LIUKU: ± m sivuttain

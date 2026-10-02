@@ -1140,6 +1140,7 @@ const MODULES = [
   'js/kehittaja-pikatie.js',
   'js/lehtikuori.js',
   'js/linssit/ajattelija-sokrates.js',
+  'js/linssit/ajattelija-marcus.js',
   'js/linssit/ajattelija-projektori.js',
   'js/linssit/ajattelija.js',
   'js/main.js',
