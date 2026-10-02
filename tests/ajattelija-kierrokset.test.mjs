@@ -44,3 +44,8 @@ test('moottori: yksi kaikupaikka suunnataan kierroksittain, ääni ja syke kierr
   assert.match(MOOTTORI, /for \(const \[ka, kl\] of kaikuIkkunat\)/);
   assert.match(MOOTTORI, /kierrosKamera = kamerakayra\(\[\[T\.pito, t2b\(pito\.paikka\), t2b\(pito\.katse\), pitoMm\], \.\.\.KR\.kamera\.slice\(1\)\]\);/);
 });
+
+test('kaikukuva oikein päin: tekstuuri ilman flipY:tä, koska varjostin lukee rivit ylhäältä (1 − v) kuten atlaksen', () => {
+  assert.match(MOOTTORI, /tk\.colorSpace = THREE\.NoColorSpace;\s*\/\/[^\n]*\n\s*tk\.flipY = false;/);
+  assert.match(lue('../js/linssit/ajattelija-projektori.js'), /texture2D\(pKaiku, vec2\(u, 1\.0 - v\)\)/);
+});
