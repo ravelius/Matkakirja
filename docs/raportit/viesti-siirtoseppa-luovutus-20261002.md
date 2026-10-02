@@ -16,6 +16,9 @@ Edellinen luovutus: viesti-siirtoseppa-luovutus-20261001.md (ensilataus, ympäri
 skin14–17), kerroin 0,63 oli vain liian heikko. Korjaus kerroin 0,3 = proto `siirtoseppa/linna-skin` **4d324efa**, käännös ad36e7a5,
 simutodennus F989814A 22.44 (lokit/siirtoseppa-skin18, erän 1b kuvat 7 huoneesta, 0 virhettä). Merge-pyyntö Natiivisepälle junaan 130
 ja kuvat Päätoimittajalle lähetetty 22.47. Avoin: skin-osoitin 2abec0c9 → 275a2765 omistajan OK:lla (kohta 2). Alla oleva kohta 1 on historiaa.
+SEURAAVA (Päätoimittaja 22.5x): Linnanrakentaja korjaa muurinharjan reitin (vartija kulkee talonpojan läpi videolla 3,9–5,0 s) ja
+tarkistaa 7 huonetta → uudella peilillä kuvaa muuttuneet huoneet + muurinharjan video (ajo-linna-skin.sh, simuvuoro Julkaisijalta) → Päätoimittajalle.
+Juna 130: 4d324efa koostumuksessa 4e1f150f, skin-osoitin pysyy 2abec0c9:ssä.
 
 1. **Linnan hahmojen jalkavarjo (omistaja 20.2x: "kävelijä tarvitsee vielä varjon jalkojensa alle") — EI VIELÄ NÄY.**
    Haara `siirtoseppa/linna-skin`, kärki **39a396e3** (KÄÄNNETTY 8219c063, app lokit/siirtoseppa-skin16-app).
