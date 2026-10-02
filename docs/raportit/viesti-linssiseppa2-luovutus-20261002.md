@@ -1,4 +1,4 @@
-# Linssiseppä 2:n luovutus 2.10.2026 (klo 22.1x, viikkoraja 92 %)
+# Linssiseppä 2:n luovutus 2.10.2026 (klo 22.1x, LOPULLINEN: tilinvaihto)
 
 Edellinen: viesti-linssiseppa2-luovutus-20261001.md. Kärki nyt: omistajan Astronautin kamera- ja ISS-palaute (2.10. 21.3x,
 Päätoimittajan tilaus, ohittaa muut).
@@ -21,6 +21,10 @@ huomaamattomampi), Codexin punainen/varoitustila jos on, ei uutta tyyliä; 8 kut
 Kohdat 2–5 koskevat myös webiä: Pelikoodari tekee samat arvot (sovittu 21.4x). Kuvat merkinnöin Päätoimittajalle erä kerrallaan.
 Skriptit: proto-3d/lokit/linssiseppa2-skriptit-20261001/astro-nykytila.sh (APP, OUT; pysty + vaaka 14 kuvaa).
 Nykytila: lokit/linssiseppa2-astro-nykytila-20261002 (+ nykytila-merkinnat.png), korjaus: lokit/linssiseppa2-astro-korjaus-20261002.
+TILINVAIHDON HETKELLÄ: paneelin (8–9) Opus-ali-agentin keskeneräiset muutokset ovat COMMITOIMATTA worktreessä
+(IssKytkinpoyta.cs, mahdollisesti IssKytkimet.cs / IssPaneeliKuvat.cs / LinssiOhjain.cs `astro kyyti paneeli pieni|suuri|tila`); 22.1x ne
+eivät kääntyneet (Liita, ajo, Nayta, Laske, Suuri, nyky, LaskeAlueet puuttuivat). Aloita: `git -C /Users/Shared/Claude/wt/proto-linssiseppa2-astro
+status`, lue diff ja joko viimeistele (spesifi yllä) tai `git stash push -u -m linssiseppa2-paneeli-wip` ja tee alusta.
 Valmiina: Natiivisepälle merge-pyyntö haarasta, kun 8–9 ja kuvat ovat Päätoimittajalla kuitattuina.
 
 ## 2. Ajattelijat natiivissa (valmis, junissa)
