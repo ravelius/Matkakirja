@@ -438,6 +438,9 @@ namespace Matkakirja.Natiivi
         /// Pulu kyydissä (omistaja 29.9.2026): Cupolassa ulkona avaruuskävelyllä ikkunan aukossa (alue oikealle alas keskeltä,
         /// kerros kehyksen alla, AstronautinNakyma), muissa tiloissa ohjauspöydän yläpuolella.
         /// </summary>
+        /// <summary>A/B: Pulu vaakana Cupolan alakulmaan nousevan puomin kanssa (oletus päällä).</summary>
+        public static bool PuluAlas = true;
+
         void PaivitaPulu()
         {
             if (!UiNakymat.Olemassa) return;
@@ -464,6 +467,11 @@ namespace Matkakirja.Natiivi
             bool suuri = Kytkinpoyta && poytaNakyy && (poyta.Suuri || poyta.Liukuu);
             p.Haivyta(suuri);
             if (suuri) return;
+            // VAAKA (Päätoimittaja 3.10., omistajan toive Pulusta vasempaan alakulmaan): Cupolassa Pulu alakulmaan, ja robottikäden
+            // puomi nousee pienen paneelin vasemman yläkulman yli (A/B `astro kyyti pulualas 0|1`).
+            p.VarrenEste = PuluAlas && ikkunassa && poytaNakyy && Kytkinpoyta && W > H
+                ? new Vector2(poyta.Juuri.worldBound.xMin + poyta.Nakyva.x, pe.worldBound.yMin + poyta.YlaReuna)
+                : (Vector2?)null;
             // Robottikäden Pulu (vasen alakulma, omistaja 2.10. 21.3x) pysyy pöydän yläpuolella myös Cupolassa; ikkunan takana
             // olevaa Pulua (A/B ilman robottikättä) AlaVara ei siirrä, koska IkkunanTakana ohittaa sen.
             p.AlaVara = poytaNakyy ? H - pe.worldBound.yMin - (Kytkinpoyta && ikkunassa ? poyta.YlaReuna : 0f) + 6f : 0f;

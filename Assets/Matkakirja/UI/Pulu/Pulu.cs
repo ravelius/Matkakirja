@@ -244,7 +244,9 @@ namespace Matkakirja.Natiivi
             robottiAseteltu = true;
             alue.style.right = StyleKeyword.Null;
             alue.style.left = reunat.x + RobottiReuna - RobottiPuluVasen * RobottiSkaala;
-            float alaRaja = Mathf.Max(reunat.w + 8f, AlaVara);
+            // Vaakana pienen paneelin yli kulkeva puomi (VarrenEste): Pulu vasempaan alakulmaan turva-alueen alareunaan, puomi nousee.
+            kuva.VarrenEste = VarrenEste;
+            float alaRaja = VarrenEste.HasValue ? reunat.w + 8f : Mathf.Max(reunat.w + 8f, AlaVara);
             alue.style.bottom = alaRaja + (RobottiAlin - 304f) * RobottiSkaala;
             alue.style.transformOrigin = new TransformOrigin(Length.Percent(0), Length.Percent(100));
             alue.style.scale = new Scale(new Vector2(RobottiSkaala, RobottiSkaala));
@@ -265,6 +267,9 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Alareunan paneeli, jonka yläpuolelle Pulu nousee (pt ruudun alareunasta; ISS-kyydin ohjauspöytä), 0 = ei mitään.</summary>
         public float AlaVara { get; set; }
+
+        /// <summary>Vaakatilan este robottikäden puomille (pienen paneelin vasen yläkulma, paneelin pisteinä); null = Pulu AlaVaran yllä.</summary>
+        public Vector2? VarrenEste { get; set; }
 
         bool haivytetty;
 

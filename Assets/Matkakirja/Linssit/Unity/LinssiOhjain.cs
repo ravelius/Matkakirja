@@ -1624,6 +1624,7 @@ namespace Matkakirja.Natiivi
                             FindAnyObjectByType<Avaruus>()?.Kyyti(l.Kyydissa);
                         }
                         else if (a == "varsi" && osat.Length > 3) CupolaKerros.Varsi = osat[3] != "0";
+                        else if (a == "pulualas" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.PuluAlas = osat[3] != "0";   // A/B Pulu vaakana alakulmaan (3.10.)
                         else if (a == "ajelehdus" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Ajelehdus = osat[3] != "0"; // A/B painoton ajelehdus
                         else if (a == "kellunta" && osat.Length > 3 && float.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float kellunta))
                             Matkakirja.Natiivi.IssKyytiNakyma.Kellunta = kellunta; // A/B kellunnan nopeus (1 = 28.9.)
