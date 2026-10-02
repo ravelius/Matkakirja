@@ -1,5 +1,5 @@
 {
- "huom": "Taustarivit ovat PAIKKAMERKKEJÄ (hyväksytyt 38a/21d/49b ja kaksi hyväksyttyä suomenkielistä lausetta), kunnes Sisältökirjurin 18 kreikkalaista katkelmaa ja OFL-fontit tulevat; päivitän tämän tiedoston silloin.",
+ "huom": "Taustarivit ovat PAIKKAMERKKEJÄ (hyväksytyt 38a/21d/49b ja kaksi hyväksyttyä suomenkielistä lausetta), kunnes Sisältökirjurin 18 kreikkalaista katkelmaa ja OFL-fontit tulevat; päivitän tämän tiedoston silloin. | Taustarivit 2.10.: Sisältökirjurin 18 varmennettua katkelmaa (docs/raportit/sokrates-taustavirta-20261002.json, haara sisalto-pelikatalogi-20260927) + 21d ja 49b suomeksi; paikkamerkit poistettu.",
  "paalauseet": {
   "38a": {
    "fi": "Tutkimaton elämä ei ole elämisen arvoinen ihmiselle.",
@@ -27,122 +27,160 @@
   {
    "nro": 1,
    "kieli": "el",
-   "fontti_blender": "baskerville",
-   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   "fontti": "gentium-plus",
+   "teksti": "οὗτος ὑμῶν, ὦ ἄνθρωποι, σοφώτατός ἐστιν, ὅστις ὥσπερ Σωκράτης ἔγνωκεν ὅτι οὐδενὸς ἄξιός ἐστι τῇ ἀληθείᾳ πρὸς σοφίαν.",
+   "viite": "Apol. 23b",
+   "sisalto_fi": "Viisain on se, joka kuten Sokrates tietää, ettei hänen viisautensa todellisuudessa ole minkään arvoista."
   },
   {
    "nro": 2,
    "kieli": "el",
-   "fontti_blender": "times",
-   "teksti": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+   "fontti": "gfs-didot",
+   "teksti": "ἕωσπερ ἂν ἐμπνέω καὶ οἷός τε ὦ, οὐ μὴ παύσωμαι φιλοσοφῶν",
+   "viite": "Apol. 29d",
+   "sisalto_fi": "Niin kauan kuin hengitän ja pystyn, en lakkaa filosofoimasta."
   },
   {
    "nro": 3,
    "kieli": "el",
-   "fontti_blender": "baskerville",
-   "teksti": "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+   "fontti": "gfs-solomos",
+   "teksti": "προσκείμενον τῇ πόλει ὑπὸ τοῦ θεοῦ ὥσπερ ἵππῳ μεγάλῳ μὲν καὶ γενναίῳ, ὑπὸ μεγέθους δὲ νωθεστέρῳ καὶ δεομένῳ ἐγείρεσθαι ὑπὸ μύωπός τινος",
+   "viite": "Apol. 30e",
+   "sisalto_fi": "Jumala on asettanut minut kaupungin kylkeen kuin paarman suuren, jalon mutta kömpelön hevosen kylkeen herättämään sitä."
   },
   {
    "nro": 4,
    "kieli": "el",
-   "fontti_blender": "times",
-   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   "fontti": "gentium-plus",
+   "teksti": "καὶ τυγχάνει μέγιστον ἀγαθὸν ὂν ἀνθρώπῳ τοῦτο, ἑκάστης ἡμέρας περὶ ἀρετῆς τοὺς λόγους ποιεῖσθαι καὶ τῶν ἄλλων περὶ ὧν ὑμεῖς ἐμοῦ ἀκούετε διαλεγομένου καὶ ἐμαυτὸν καὶ ἄλλους ἐξετάζοντος, ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ",
+   "viite": "Apol. 38a",
+   "sisalto_fi": "Suurin hyvä ihmiselle on keskustella joka päivä hyveestä ja muista asioista, tutkien itseä ja muita; tutkimaton elämä ei ole elämisen arvoinen."
   },
   {
    "nro": 5,
    "kieli": "fi",
-   "fontti_blender": "iowan-ohut",
-   "teksti": "Mitä en tiedä, en luulekaan tietäväni."
+   "fontti": "iowan-ohut",
+   "teksti": "Mitä en tiedä, en luulekaan tietäväni.",
+   "viite": "Platon, Puolustuspuhe 21d"
   },
   {
    "nro": 6,
    "kieli": "el",
-   "fontti_blender": "baskerville",
-   "teksti": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+   "fontti": "gfs-solomos",
+   "teksti": "ἢ γὰρ οἷον μηδὲν εἶναι μηδὲ αἴσθησιν μηδεμίαν μηδενὸς ἔχειν τὸν τεθνεῶτα",
+   "viite": "Apol. 40c",
+   "sisalto_fi": "Kuolema on joko kuin ei mitään: kuollut ei tunne mitään."
   },
   {
    "nro": 7,
    "kieli": "el",
-   "fontti_blender": "times",
-   "teksti": "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+   "fontti": "gentium-plus",
+   "teksti": "οὐκ ἔστιν ἀνδρὶ ἀγαθῷ κακὸν οὐδὲν οὔτε ζῶντι οὔτε τελευτήσαντι, οὐδὲ ἀμελεῖται ὑπὸ θεῶν τὰ τούτου πράγματα",
+   "viite": "Apol. 41d",
+   "sisalto_fi": "Hyvälle ihmiselle ei ole mitään pahaa, ei elävänä eikä kuolleena, eivätkä jumalat unohda hänen asioitaan."
   },
   {
    "nro": 8,
    "kieli": "fi",
-   "fontti_blender": "iowan-ohut",
-   "teksti": "Vääryyttä ei siis saa tehdä koskaan."
+   "fontti": "iowan-ohut",
+   "teksti": "Vääryyttä ei siis saa tehdä koskaan.",
+   "viite": "Platon, Kriton 49b"
   },
   {
    "nro": 9,
    "kieli": "el",
-   "fontti_blender": "baskerville",
-   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   "fontti": "gfs-solomos",
+   "teksti": "οὐ τὸ ζῆν περὶ πλείστου ποιητέον, ἀλλὰ τὸ εὖ ζῆν",
+   "viite": "Crito 48b",
+   "sisalto_fi": "Ei pidä pitää tärkeimpänä elämistä vaan hyvin elämistä."
   },
   {
    "nro": 10,
    "kieli": "el",
-   "fontti_blender": "times",
-   "teksti": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+   "fontti": "gentium-plus",
+   "teksti": "ταῦτα, ὦ φίλε ἑταῖρε Κρίτων, εὖ ἴσθι ὅτι ἐγὼ δοκῶ ἀκούειν, ὥσπερ οἱ κορυβαντιῶντες τῶν αὐλῶν δοκοῦσιν ἀκούειν, καὶ ἐν ἐμοὶ αὕτη ἡ ἠχὴ τούτων τῶν λόγων βομβεῖ",
+   "viite": "Crito 54d",
+   "sisalto_fi": "Tiedä, ystäväni Kriton: kuulen nämä sanat kuin korybantit huilut, ja niiden kaiku humisee minussa."
   },
   {
    "nro": 11,
    "kieli": "el",
-   "fontti_blender": "iowan-ohut",
-   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   "fontti": "gfs-didot",
+   "teksti": "κινδυνεύουσι γὰρ ὅσοι τυγχάνουσιν ὀρθῶς ἁπτόμενοι φιλοσοφίας λεληθέναι τοὺς ἄλλους ὅτι οὐδὲν ἄλλο αὐτοὶ ἐπιτηδεύουσιν ἢ ἀποθνῄσκειν τε καὶ τεθνάναι.",
+   "viite": "Phaed. 64a",
+   "sisalto_fi": "Ne, jotka oikein harjoittavat filosofiaa, eivät ehkä muiden tietämättä harjoita muuta kuin kuolemista ja kuolleena oloa."
   },
   {
    "nro": 12,
    "kieli": "el",
-   "fontti_blender": "baskerville",
-   "teksti": "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+   "fontti": "gfs-solomos",
+   "teksti": "οὐ πείθω, ὦ ἄνδρες, Κρίτωνα, ὡς ἐγώ εἰμι οὗτος Σωκράτης, ὁ νυνὶ διαλεγόμενος καὶ διατάττων ἕκαστον τῶν λεγομένων, ἀλλ᾽ οἴεταί με ἐκεῖνον εἶναι, ὃν ὄψεται ὀλίγον ὕστερον νεκρόν",
+   "viite": "Phaed. 115c",
+   "sisalto_fi": "En saa Kritonia uskomaan, että minä olen tämä Sokrates, joka nyt puhuu ja järjestää jokaisen sanotun; hän luulee minua siksi, jonka hän pian näkee kuolleena."
   },
   {
    "nro": 13,
    "kieli": "el",
-   "fontti_blender": "times",
-   "teksti": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+   "fontti": "gentium-plus",
+   "teksti": "ὦ Κρίτων, τῷ Ἀσκληπιῷ ὀφείλομεν ἀλεκτρυόνα· ἀλλὰ ἀπόδοτε καὶ μὴ ἀμελήσητε.",
+   "viite": "Phaed. 118a",
+   "sisalto_fi": "Kriton, olemme Asklepiokselle kukon velkaa. Maksakaa se, älkää unohtako."
   },
   {
    "nro": 14,
    "kieli": "el",
-   "fontti_blender": "baskerville",
-   "teksti": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+   "fontti": "gfs-didot",
+   "teksti": "ἑστήκει ἐξ ἑωθινοῦ φροντίζων τι",
+   "viite": "Symp. 220c",
+   "sisalto_fi": "Hän seisoi aamusta asti jotakin pohtien."
   },
   {
    "nro": 15,
    "kieli": "el",
-   "fontti_blender": "times",
-   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   "fontti": "gfs-solomos",
+   "teksti": "οὐ δύναμαί πω κατὰ τὸ Δελφικὸν γράμμα γνῶναι ἐμαυτόν· γελοῖον δή μοι φαίνεται",
+   "viite": "Phdr. 229e",
+   "sisalto_fi": "En vielä kykene tuntemaan itseäni Delfoin kirjoituksen mukaan; naurettavaa on tutkia muuta."
   },
   {
    "nro": 16,
    "kieli": "el",
-   "fontti_blender": "baskerville",
-   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   "fontti": "gentium-plus",
+   "teksti": "φιλομαθὴς γάρ εἰμι· τὰ μὲν οὖν χωρία καὶ τὰ δένδρα οὐδέν μ᾽ ἐθέλει διδάσκειν, οἱ δ᾽ ἐν τῷ ἄστει ἄνθρωποι",
+   "viite": "Phdr. 230d",
+   "sisalto_fi": "Olen tiedonhaluinen: maisemat ja puut eivät halua opettaa minulle mitään, mutta kaupungin ihmiset opettavat."
   },
   {
    "nro": 17,
    "kieli": "el",
-   "fontti_blender": "times",
-   "teksti": "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+   "fontti": "gfs-didot",
+   "teksti": "ἰδὲ γὰρ ἀνθρώπους οἷον ἐν καταγείῳ οἰκήσει σπηλαιώδει, ἀναπεπταμένην πρὸς τὸ φῶς τὴν εἴσοδον ἐχούσῃ μακρὰν παρὰ πᾶν τὸ σπήλαιον, ἐν ταύτῃ ἐκ παίδων ὄντας ἐν δεσμοῖς",
+   "viite": "Resp. 514a",
+   "sisalto_fi": "Katso: ihmiset asuvat kuin maanalaisessa luolamaisessa asunnossa, jonka suu avautuu pitkälle valoa kohti, ja he ovat olleet lapsuudesta asti kahleissa."
   },
   {
    "nro": 18,
    "kieli": "el",
-   "fontti_blender": "iowan-ohut",
-   "teksti": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+   "fontti": "gfs-solomos",
+   "teksti": "τὸ δὲ αἴτιον τούτου τόδε· μαιεύεσθαί με ὁ θεὸς ἀναγκάζει, γεννᾶν δὲ ἀπεκώλυσεν.",
+   "viite": "Tht. 150c",
+   "sisalto_fi": "Syy tähän on tämä: jumala pakottaa minut kätilöimään mutta on kieltänyt synnyttämästä."
   },
   {
    "nro": 19,
    "kieli": "el",
-   "fontti_blender": "baskerville",
-   "teksti": "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+   "fontti": "gentium-plus",
+   "teksti": "βουλοίμην μὲν ἂν ἔγωγε οὐδέτερα· εἰ δ᾽ ἀναγκαῖον εἴη ἀδικεῖν ἢ ἀδικεῖσθαι, ἑλοίμην ἂν μᾶλλον ἀδικεῖσθαι ἢ ἀδικεῖν.",
+   "viite": "Grg. 469c",
+   "sisalto_fi": "En tahtoisi kumpaakaan; mutta jos olisi pakko tehdä tai kärsiä vääryyttä, valitsisin mieluummin kärsiä sitä kuin tehdä sitä."
   },
   {
    "nro": 20,
    "kieli": "el",
-   "fontti_blender": "times",
-   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   "fontti": "gfs-didot",
+   "teksti": "ἐμαυτὸν καταμέμφομαι ὡς οὐκ εἰδὼς περὶ ἀρετῆς τὸ παράπαν· ὃ δὲ μὴ οἶδα τί ἐστιν, πῶς ἂν ὁποῖόν γέ τι εἰδείην;",
+   "viite": "Men. 71b",
+   "sisalto_fi": "Moitin itseäni, kun en lainkaan tiedä, mitä hyve on; ja jota en tiedä mitä se on, miten voisin tietää, millainen se on?"
   }
  ],
  "rivikork_m": [
@@ -245,5 +283,12 @@
   "tiedosto": "syke-satie.json",
   "muoto": "{ruutu: kerroin}, 30 r/s, videon aikajanalla (Satie alkaa 18,0 s); kerroin 1 ± 0,15; nousu 80 ms, lasku 600 ms; vain kaikukuvalle"
  },
- "lahde": "tools/linssit/blender/sokrates_bysti.py (paan_virta, tausta_rivi, PAAN_PROJEKTORIT, syke_kaikuun); sokrates_gobo.py; sokrates_syke.py"
+ "lahde": "tools/linssit/blender/sokrates_bysti.py (paan_virta, tausta_rivi, PAAN_PROJEKTORIT, syke_kaikuun); sokrates_gobo.py; sokrates_syke.py",
+ "fontit": {
+  "gentium-plus": "Gentium Plus (SIL, OFL 1.1)",
+  "gfs-didot": "GFS Didot (Greek Font Society, OFL 1.1)",
+  "gfs-solomos": "GFS Solomos (Greek Font Society, OFL 1.1; vain kreikka, kalligrafinen kursiivi)",
+  "iowan-ohut": "pelin lukufontti kursiivina (Iowan Old Style)",
+  "tiedostot": "/Users/Shared/Claude/proto-3d/_lahteet/fontit-kreikka (TTF/OTF + OFL.txt)"
+ }
 }
