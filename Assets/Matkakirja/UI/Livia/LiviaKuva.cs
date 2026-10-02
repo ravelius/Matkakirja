@@ -399,7 +399,7 @@ namespace Matkakirja.Natiivi
                 var wb = worldBound;
                 float leveys = panel != null ? panel.visualTree.layout.width : 0f;
                 float sx = r.width > 0 ? wb.width / r.width : 1f, s1 = r.width / kuva.viewBox.width;
-                float reunaX = leveys > 0 && sx > 0 && s1 > 0 ? (leveys - wb.xMin) / (sx * s1) + kuva.viewBox.x + 20f : 600f;
+                float reunaX = leveys > 0 && sx > 0 && s1 > 0 ? (leveys - wb.xMin) / (sx * s1) + kuva.viewBox.x + 60f : 600f;
                 float venytys = Mathf.Max(0.2f, (reunaX - NivelX) / (PaaY - NivelY));
                 void Kuva(Texture2D kuvaI, float korkeus, float alfa, bool keinuu, Color savyPohja, float y0 = 0, float y1 = -1, bool vaaka = false)
                 {
@@ -423,13 +423,39 @@ namespace Matkakirja.Natiivi
                     md.SetAllIndices(m.Determinantti >= 0 ? Kolmiot : KolmiotPeili);
                 }
                 var valo = Color.white;
+                // Visiirin soikio (kasvot, viewBox x 90–137, y 237–280) perus-kuvasta sävyttämättä varjokuvan päälle: kasvot näkyvät.
+                void Soikio(Texture2D kuvaI, float cx, float cy, float rx, float ry, Color savy)
+                {
+                    const int N = 28;
+                    if (kuvaI == null) return;
+                    var md = mgc.Allocate(N + 1, N * 3, kuvaI);
+                    if (md.vertexCount == 0) return;
+                    void Piste(float x, float y)
+                    {
+                        float u = x / 152f, v = 1f - y / 304f;
+                        float dx = x - 113, dy = y - 300; x = 113 + dx * ca - dy * sa; y = 300 + dx * sa + dy * ca;
+                        var p = m.Kuvaa(new Vector2(x, y + Nosto));
+                        md.SetNextVertex(new Vertex { position = new Vector3(p.x, p.y, Vertex.nearZ), tint = savy, uv = new Vector2(u, v) });
+                    }
+                    Piste(cx, cy);
+                    for (int i = 0; i < N; i++) { float th = i * Mathf.PI * 2f / N; Piste(cx + rx * Mathf.Cos(th), cy + ry * Mathf.Sin(th)); }
+                    var ind = new ushort[N * 3];
+                    bool suora = m.Determinantti >= 0;
+                    for (int i = 0; i < N; i++)
+                    {
+                        ushort b0 = (ushort)(1 + i), b1 = (ushort)(1 + (i + 1) % N);
+                        ind[i * 3] = 0; ind[i * 3 + 1] = suora ? b0 : b1; ind[i * 3 + 2] = suora ? b1 : b0;
+                    }
+                    md.SetAllIndices(ind);
+                }
                 // Varsi kahdessa osassa: jalkatuki ja ranne pystyyn niveleen asti, loput vaakaan (venytettynä reunaan).
                 Kuva(robottiKuvat[0], 800, 1f, false, varjo, 0, NivelY + 6);
                 Kuva(robottiKuvat[0], 800, 1f, false, varjo, NivelY, PaaY, vaaka: true);
                 Kuva(robottiKuvat[1], 800, t.EvaMaa, false, valo, 0, NivelY + 6);
                 Kuva(robottiKuvat[1], 800, t.EvaMaa, false, valo, NivelY, PaaY, vaaka: true);
                 Kuva(evaKuvat[1], 304, 1f, true, varjo);                 // perus varjokuvana
-                Kuva(evaKuvat[2], 304, 1f, true, valo);                  // kasvot loistavat kypärävalossa
+                Soikio(evaKuvat[1], 113.5f, 258.5f, 21f, 19f, valo);     // kasvot visiirin alla sävyttämättä
+                Kuva(evaKuvat[2], 304, 0.6f, true, valo);                // kasvot loistavat kypärävalossa
                 Kuva(evaKuvat[3], 304, t.EvaLamput, true, valo);
                 Kuva(evaKuvat[4], 304, t.EvaMaa, true, valo);            // Maan reunavalo piirtää siluetin reunan
                 // robotin turvaköysi (vanha vapaa köysi pois); 152 × 400, koska lenkki ulottuu y ≈ 322:een
