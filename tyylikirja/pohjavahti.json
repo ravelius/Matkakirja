@@ -139,14 +139,99 @@
    "vari": 338
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Linssit.uss": {
-   "fontti": 134,
+   "fontti": 133,
    "siirtyma": 18,
-   "vari": 376
+   "vari": 371
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Matkakirja.uss": {
    "fontti": 155,
    "siirtyma": 16,
    "vari": 385
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/astronautin-auto.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/dialogit.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/kohdekortti.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/lautapeli.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/lentopeli.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/linssin-valikko.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/linssivalitsin.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/maakuntakortti.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/nostoselain.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/pillerivalikko.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/visa.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/auto.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/kentta.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/kortti.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/kuvanakyma.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/nostokortti.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/paneeli.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pulu.uss": {
    "fontti": 44,
