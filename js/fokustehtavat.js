@@ -494,17 +494,17 @@ function pullaIsolla(nimi) {
 
 /** Tarjousnappi vastaamattomana. */
 function pullaNapinTeksti(nimi) {
-  return `Osta ${nimi} Livialle (${PULLA_HINTA}\u00a0£)`;
+  return `Osta ${nimi} Livialle (£${PULLA_HINTA})`;
 }
 
 /** Sama nappi varmistusta odottamassa. */
 function pullaVarmistusTeksti(nimi) {
-  return `Varmista: ${nimi} Livialle, ${PULLA_HINTA}\u00a0£`;
+  return `Varmista: ${nimi} Livialle, £${PULLA_HINTA}`;
 }
 
 /** Kassa ei riitä — nappi kertoo sen itse eikä jätä arvailtavaksi. */
 function pullaKoyhaTeksti(nimi) {
-  return `Kassa ei riitä: ${nimi} ${PULLA_HINTA}\u00a0£`;
+  return `Kassa ei riitä: ${nimi} £${PULLA_HINTA}`;
 }
 
 /*
@@ -519,7 +519,7 @@ const PULLA_VARMISTUS_OHJE = 'Toinen napautus maksaa. Muuten tarjous raukeaa.';
 
 /** Kauppa tehty — rivi jää laatikkoon napin tilalle. */
 function pullaTehtyTeksti(nimi) {
-  return `Livia sai maksunsa (${nimi}, ${PULLA_HINTA}\u00a0£) ja näytti paikan kartalta.`;
+  return `Livia sai maksunsa (${nimi}, £${PULLA_HINTA}) ja näytti paikan kartalta.`;
 }
 
 /**
@@ -632,7 +632,7 @@ export function pullaOstosnappi(ui, kotelo, {
     sfx.play('coin');
     rivi.replaceChildren(html('p', 'fokus-pulla-tehty', tehty));
     const box = ui.buildToast?.({
-      kind: 'stamp', icon: 'kukkaro', text: `−${hinta} puntaa`, sub: kelluke,
+      kind: 'stamp', icon: 'kukkaro', text: `−£${hinta}`, sub: kelluke,
     });
     if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);
     ui.onChange?.(ui.game);
@@ -890,7 +890,7 @@ export function piirraVisanVastaukset(laatikko, {
       tulos.hidden = false;
       tulos.className = oikein ? 'kulttuuri-tulos oikein-tulos' : 'kulttuuri-tulos vaarin-tulos';
       tulos.textContent = (oikein
-        ? `Oikein! +${palkkio} puntaa. `
+        ? `Oikein! +£${palkkio}. `
         : `Oikea vastaus: ${visa.vaihtoehdot[visa.oikea]}. `) + (visa.fakta ?? '');
       sfx.play(oikein ? 'correct' : 'wrong');
       natiiviVastaus(oikein);
@@ -1017,7 +1017,7 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
         const box = ui.buildToast?.({
           kind: 'stamp',
           icon: 'kukkaro',
-          text: `+${FOKUS_TEHTAVA_PALKKIO} puntaa`,
+          text: `+£${FOKUS_TEHTAVA_PALKKIO}`,
           sub: `${nimilaatta} ratkesi`,
         });
         if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);

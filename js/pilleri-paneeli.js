@@ -29,7 +29,8 @@ export function paneeliPohjalla() {
  * vanha järjestys ?valikko=vanha tai localStorage matkakirja-valikko=vanha): ÄÄNET (kevyt kytkinrivi, päällä =
  * pehmeä pergamenttitäyttö ilman tummaa reunaa) → tasorivi ilman otsikkoa (avatar ja "Untuvikko (80 tp)", avaa
  * tasonäkymän) → MATKALAUKKU [Aarteet (N), Julisteet (N)] → PELI [Retkikunta, Asetukset] → alarivi yhdellä rivillä
- * (Uusi peli vasemmalla, ↻ ja versio oikealla). Luettelorivit: ikoni, nimi, nuoli, ohut viiva välissä. Ei kapseleita
+ * (Uusi peli vasemmalla, ↻ ja versio oikealla). Luettelorivit: ikoni, nimi, nuoli, ei väliviivoja (20.2x); tasorivi ja
+ * päivärivi yhteisellä ÄÄNET-laatan pohjalla. Ei ×:ää: ohinapautus ja Esc sulkevat. Ei kapseleita
  * (EI OVAALEJA 2.10.). Linssit lähtee valikosta omaksi kartan napikseen (omistaja 13.56, erillinen erä).
  */
 export function valikkoV2() {
@@ -222,7 +223,8 @@ export function puePilleriPaneeliksi(haeUi) {
     avatar.decoding = 'async';
     avatar.draggable = false;
     matkaNappi.prepend(avatar);
-    const tasoRyhma = pilleriSolmu('div', 'tk-paneeli__ryhma tk-paneeli__ryhma--luettelo pilleri-pikanapit');
+    // Tasorivi ja päivärivi yhteisellä laatalla (omistaja 2.10.2026 klo 20.2x; ÄÄNET-kytkimen päällä-pohja).
+    const tasoRyhma = pilleriSolmu('div', 'tk-paneeli__ryhma tk-paneeli__ryhma--luettelo pilleri-pikanapit valikko-tasolaatta');
     // Päivärivi tasorivin alla (omistaja 15.1x): päivä, kellonaika, kassa ja punaisena päivän kulut (js/ui.js täyttää).
     const paivarivi = pilleriSolmu('p', 'valikko-paivarivi');
     paivarivi.id = 'valikko-paivarivi';

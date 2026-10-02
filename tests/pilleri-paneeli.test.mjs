@@ -34,3 +34,15 @@ test('alinäkymät Matka ja Asetukset, sulkupoikkeukset ja paikka', () => {
   assert.match(MODUULI, /--tk-paneeli-yla/);
   assert.match(CSS, /\.paavalikko\.tk-paneeli \.tk-paneeli-rivi--kytkin\[aria-checked="true"\]/);
 });
+
+test('valikko V2 20.2x: ei väliviivoja luettelossa (alin jää), tasorivi ja päivärivi ÄÄNET-laatan pohjalla, ei ×:ää', () => {
+  const css = readFileSync(new URL('../css/pohjat/pinnat/pillerivalikko.css', import.meta.url), 'utf8');
+  const js = readFileSync(new URL('../js/pilleri-paneeli.js', import.meta.url), 'utf8');
+  assert.doesNotMatch(css, /ryhma--luettelo \.tk-paneeli-rivi:not\(\[hidden\]\) ~ \.tk-paneeli-rivi:not\(\[hidden\]\)/);
+  assert.match(css, /\.valikko-tasolaatta \{[\s\S]*?border-radius: var\(--tk-kulma-nappi\);\n\s*background: var\(--tk-pergamentti\);/);
+  // Laatan pohja on sama kuin ÄÄNET-kytkimen päällä-täyttö (ei uutta tyyliä).
+  assert.match(css, /tk-paneeli-rivi--kytkin\[aria-checked="true"\] \{ border-color: transparent; background: var\(--tk-pergamentti\); \}/);
+  assert.match(js, /'tk-paneeli__ryhma tk-paneeli__ryhma--luettelo pilleri-pikanapit valikko-tasolaatta'/);
+  // Alin viiva (erotin Uusi peli -rivin yläpuolella) jää.
+  assert.match(js, /\.\.\.pilleriRyhmaOtsikko\('Peli'\), peliRyhma, erotin\);/);
+});
