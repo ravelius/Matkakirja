@@ -956,9 +956,14 @@ if '--v7' in A:
     # lähestymisen aikana, jolloin pinta latistui vahamaiseksi juuri ennen tekstiä)
     aur = bpy.data.lights.new('aurinko', 'SPOT'); aur.spot_size = math.radians(60); aur.spot_blend = 0.3
     aur.shadow_soft_size = 0.012; aur.color = (1.0, 0.95, 0.88); aur.energy = 95
+    if '--vinjetti' in A:
+        # omistaja 2.10. 08.4x: kova spotti pehmeällä reunahäivytyksellä pään ympärille → kaula noin 1 EV ja sokkeli
+        # noin 2 EV tummempia, pään reunat liukuvat hämärään (lähikuvat pään keskellä ennallaan)
+        aur.spot_size = math.radians(float(A[A.index('--vinjetti') + 1])); aur.spot_blend = 1.0
     ao = bpy.data.objects.new('aurinko', aur); sc.collection.objects.link(ao)
+    tahtays = PAA + Vector((0, 0, 0.05)) if '--vinjetti' in A else PAA   # vinjetti: keila pään keskelle, ei kaulaan
     for r, s_ in V7_VALO:
-        ao.location = PAA + Vector(s_).normalized() * 1.3; kohdista(ao, PAA)
+        ao.location = tahtays + Vector(s_).normalized() * 1.3; kohdista(ao, tahtays)
         ao.keyframe_insert('location', frame=r); ao.keyframe_insert('rotation_euler', frame=r)
     p, n = osuma(-0.005, 0.418)
     V10 = '--v10' in A   # päälause 25 % isompi ja alkaa kulkea jo kameran saapuessa; taustavirta; kaikukuvan syke
