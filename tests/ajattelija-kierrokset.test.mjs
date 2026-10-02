@@ -77,3 +77,18 @@ test('✕ piilossa kunnes napautetaan, häipyy taas astron AUTO-ajoituksella (om
   const css = lue('../css/pohjat/pinnat/ajattelija.css');
   assert.match(css, /\.ajattelija\.ajattelija-sulku-piilossa \.tk-kuvanakyma__sulku \{\s*opacity: 0;\s*pointer-events: none;\s*transition: opacity var\(--tk-kesto-sulku\) ease-in;/);
 });
+
+test('v11 (omistaja 3.10.2026): alkukuvat varjopuolelta, kaiku 1 lähempänä ja leveämpi, kytkinääni v2', async () => {
+  const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
+  const { AJATTELIJA_KYTKIN } = await import('../js/linssit/ajattelija.js');
+  for (const a of [SOKRATES, MARCUS]) {
+    assert.ok(a.intro.otokset.every(([, c]) => c[0] <= 0), `${a.tunnus}: introkamera ei ole valon vastapuolella`);
+    assert.deepEqual(a.intro.valo[0][1], [1.0, -0.35, 0.45]);
+    assert.ok(a.intro.tayte < 1);
+    assert.equal(a.kaiku.lev, 0.07);
+    assert.deepEqual(a.kaiku.kamera.matka, [0.15, 0.14]);
+  }
+  assert.deepEqual(SOKRATES.kierrokset.kamera.find(([r]) => r === 2700)[1], [0.205, -0.1767, 0.337]);   // sokrates-luvut-v11.json
+  assert.equal(AJATTELIJA_KYTKIN, 'ajattelijat/yhteiset/v2/kytkin-kaiku.mp3');
+  assert.match(MOOTTORI, /maailma\.intensity = TAYTE \* hiipuu \* \(r < T\.nimi\[0\] \? \(a\.intro\.tayte \?\? 1\) : 1\);/);
+});

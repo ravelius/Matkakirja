@@ -82,15 +82,23 @@ export const SOKRATES = Object.freeze({
   },
   // INTRO (v7): leikkaukset Zarathustran iskuihin (CONSTANT) ja aurinko kiertää takaa kohti Rembrandtia.
   intro: {
+    /*
+     * V11 (omistaja 3.10.2026 klo 00.0x: "ajattelijoiden alkukuvat saisivat olla enemmän varjopuolelta kuvattuja, jotta
+     * kasvoille piirtyisi enemmän pelkkä valon piirtämä ääriviiva"; Blender --v11, sokrates-luvut-v11.json): kamera
+     * valon vastapuolelle (x → −|x|) ja aurinko kameran vastakkaiselta sivulta (1,0 / 0,05 / 0,5); avausruudussa valo
+     * hieman edestä. Rembrandt + nimi (282) ennallaan.
+     */
     otokset: [   // [ruutu, kameran paikka, katsepiste, mm]
-      [1, [0.62, -0.10, 0.38], [0.0, -0.10, 0.38], 50],
-      [15, [0.26, -0.30, 0.72], [0.0, -0.09, 0.40], 35],
+      [1, [-0.62, -0.10, 0.38], [0.0, -0.10, 0.38], 50],
+      [15, [-0.26, -0.30, 0.72], [0.0, -0.09, 0.40], 35],
       [57, [-0.05, -0.36, 0.13], [0.0, -0.10, 0.36], 28],
-      [119, [0.30, -0.27, 0.47], [0.0, -0.11, 0.43], 50],
-      [236, [0.30, -0.34, 0.42], [0.03, -0.10, 0.38], 50],
-      [259, [0.30, -0.36, 0.22], [0.02, -0.11, 0.30], 50],
+      [119, [-0.30, -0.27, 0.47], [0.0, -0.11, 0.43], 50],
+      [236, [-0.30, -0.34, 0.42], [0.03, -0.10, 0.38], 50],
+      [259, [-0.30, -0.36, 0.22], [0.02, -0.11, 0.30], 50],
     ],
-    valo: [[1, [0.55, 0.85, 0.30]], [119, [0.9, 0.55, 0.35]], [236, [1.0, -0.05, 0.6]], [259, [0.85, -0.45, 0.75]], [282, [0.70, -0.70, 0.85]]],
+    valo: [[1, [1.0, -0.35, 0.45]], [119, [1.0, 0.05, 0.5]], [236, [1.0, 0.05, 0.5]], [259, [1.0, 0.05, 0.5]], [282, [0.70, -0.70, 0.85]]],
+    // Maailman täyte alkukuvissa (osuus TAYTE:sta): Blenderin maailma 0,012 jättää varjopuolen lähes mustaksi.
+    tayte: 0.2,
   },
   /*
    * KAIKU (v8–v10): kaikukuva samalla videotykillä otsalla b-luennan ajan, ainoana valona (aurinko ja maailma
@@ -101,8 +109,10 @@ export const SOKRATES = Object.freeze({
     kuva: 'ajattelijat/sokrates/v1/kaiku-sotilas-v2.png',   // positiivinen (omistaja 2.10. 11.13: kaiut aina positiivisia)
     // v10 (omistajan v9-palaute: kamera lähempänä tasaisempaa pintaa): oma projektori otsalle, kuva-ala 0,06 m;
     // kamera p + norm(n + suunta) × 0,21 → 0,19 ja liuku t × 0,006, 35 mm.
-    lev: 0.06, vino: [-0.10, -0.05, -0.08], etaisyys: 0.6, voima: 20, liuku: 0.05, savy: [1.0, 0.78, 0.52], blend: 0.3,
-    kamera: { suunta: [0.08, -0.05, -0.12], matka: [0.21, 0.19], liuku: 0.006, mm: 35, siirtyma: 45 },
+    // v11 (omistaja 3.10.: "ensimmäinen kaiku on liian pieni läntti. kameran pitäisi olla lähempänä"): kuva-ala 0,06 → 0,07
+    // ja kamera 0,21/0,19 → 0,15/0,14; kaiku täyttää suurimman osan ruudusta.
+    lev: 0.07, vino: [-0.10, -0.05, -0.08], etaisyys: 0.6, voima: 20, liuku: 0.05, savy: [1.0, 0.78, 0.52], blend: 0.3,
+    kamera: { suunta: [0.08, -0.05, -0.12], matka: [0.15, 0.14], liuku: 0.006, mm: 35, siirtyma: 45 },
     tayte: { osuus: 0.10, suunta: [-0.65, -0.25, 0.7], vari: [0.90, 0.94, 1.0], keila: 45, blend: 0.7 },
   },
   /*
@@ -139,7 +149,8 @@ export const SOKRATES = Object.freeze({
   syke: 'ajattelijat/sokrates/v1/syke-musiikki.json',   // sokrates_syke.py musiikkiraidasta (1 ± 0,15)
   /*
    * KIERROKSET 2–3 (Blender v9/v10, sokrates_bysti.py --v9 --v10; luvut docs/raportit/sokrates-v10/sokrates-luvut.json,
-   * haara linnanrakentaja-sokrates-bysti 728f8f3d0) kierroksen 1 jatkoksi ruudusta 1450, loppu 3330 (111,0 s):
+   * haara linnanrakentaja-sokrates-bysti 728f8f3d0; kamera v11: docs/raportit/ajattelijat-v11/sokrates-luvut-v11.json,
+   * 4e9755313) kierroksen 1 jatkoksi ruudusta 1450, loppu 3330 (111,0 s):
    *   kierros 2: 21d nauhana poskella → oraakkelin kylix SILMÄMUNAAN ainoana valona (d-luenta)
    *   kierros 3: 49b nauhana kasvojen sivulla → Davidin "Sokrateen kuolema" ainoana valona (f-luenta)
    * Kamera kulkee Blenderin avaimilla (Blender-koordinaatit; AUTO_CLAMPED-Bézier, js/linssit/ajattelija.js kamerakayra);
@@ -171,18 +182,18 @@ export const SOKRATES = Object.freeze({
       },
     ],
     kamera: [   // [ruutu, kameran paikka, katsepiste, mm]
-      [1450, [0.0405, -0.3049, 0.4805], [-0.002, -0.1304, 0.418], 35],
+      [1450, [0.0301, -0.2589, 0.4641], [-0.002, -0.1304, 0.418], 35],
       [1510, [-0.0983, -0.1598, 0.2678], [-0.0579, -0.1008, 0.352], 18],
       [1810, [-0.0524, -0.1741, 0.2678], [-0.0521, -0.1026, 0.352], 18],
-      [1870, [0.0531, -0.2071, 0.3654], [0.04, -0.1083, 0.374], 50],
-      [2300, [0.0559, -0.2069, 0.3681], [0.04, -0.1083, 0.374], 50],
+      [1870, [0.0498, -0.1824, 0.3675], [0.04, -0.1083, 0.374], 50],
+      [2300, [0.0519, -0.1823, 0.3696], [0.04, -0.1083, 0.374], 50],
       [2360, [0.1078, -0.1321, 0.284], [0.0689, -0.0826, 0.375], 18],
       [2650, [0.1342, -0.0864, 0.284], [0.0719, -0.0774, 0.375], 18],
-      [2700, [0.2604, -0.2165, 0.3214], [0.0704, -0.08, 0.375], 35],
-      [3250, [0.2486, -0.1982, 0.3259], [0.0724, -0.0765, 0.375], 35],
+      [2700, [0.205, -0.1767, 0.337], [0.0704, -0.08, 0.375], 35],
+      [3250, [0.2011, -0.1641, 0.3393], [0.0724, -0.0765, 0.375], 35],
       // Paluu Rembrandt-otokseen: webin oma otokset.rembrandt (Blender v10: [-0.36, -1.24, 0.24] → [-0.075, -0.06, 0.39]).
-      [3310, [-0.30, -1.02, 0.25], [-0.06, -0.06, 0.40], 35],
-      [3330, [-0.30, -1.02, 0.25], [-0.06, -0.06, 0.40], 35],
+      [3310, [-0.3, -1.02, 0.25], [-0.06, -0.06, 0.4], 35],
+      [3330, [-0.3, -1.02, 0.25], [-0.06, -0.06, 0.4], 35],
     ],
   },
   /*
