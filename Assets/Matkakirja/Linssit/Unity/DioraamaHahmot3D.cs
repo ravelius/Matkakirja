@@ -676,13 +676,22 @@ namespace Matkakirja.Natiivi
                     }
                 }
             }
+            if (varjoMateriaali != null && (mita == "varjokoe" || mita == "varjo"))
+            {
+                // varjokoe: punainen, täysi peitto, syvyystesti pois (näkyykö levy lainkaan); varjo: takaisin oletukseen.
+                bool koe = mita == "varjokoe";
+                varjoMateriaali.SetColor("_Vari", koe ? Color.red : new Color(0.06f, 0.045f, 0.03f, 1f));
+                varjoMateriaali.SetFloat("_Peitto", koe ? 1f : 0.5f);
+                varjoMateriaali.SetFloat("_ZTest", (float)(koe ? UnityEngine.Rendering.CompareFunction.Always : UnityEngine.Rendering.CompareFunction.LessEqual));
+            }
             int varjoja = 0; string varjoY = "";
             foreach (var e in esiintymat)
             {
                 var v = e.Juuri != null ? e.Juuri.transform.Find("Kontaktivarjo") : null;
                 if (v == null) continue;
                 varjoja++;
-                if (varjoY.Length < 60) varjoY += $" {e.HahmoId}:{v.position.y:F2}";
+                if (e.TilaId == "muurinharja" || varjoY.Length < 40)
+                    varjoY += $" {e.TilaId}/{e.HahmoId}:{v.position.y:F2}({(v.gameObject.activeInHierarchy ? "päällä" : "pois")}, juuri {e.Juuri.transform.lossyScale.x:F2})";
             }
             return $"{mita}: {materiaaleja} kuvamateriaalia, kärkiä {karkia}, värillisiä {varillisia}, AO min {aoMin:F2}; "
                 + $"kontaktivarjoja {varjoja}/{esiintymat.Count} (materiaali {(varjoMateriaali != null ? "ok" : "PUUTTUU")}, y{varjoY})";

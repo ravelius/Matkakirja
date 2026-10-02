@@ -10,6 +10,7 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
     {
         _Vari("Varjon väri", Color) = (0.06, 0.045, 0.03, 1)
         _Peitto("Peitto keskellä", Range(0, 1)) = 0.5
+        [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("Syvyystesti (testikomento: Always)", Float) = 4
     }
     SubShader
     {
@@ -20,7 +21,7 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
             Tags { "LightMode" = "UniversalForward" }
             Blend SrcAlpha OneMinusSrcAlpha
             ZWrite Off
-            ZTest LEqual
+            ZTest [_ZTest]
             Cull Off
             Offset -1, -1
 
