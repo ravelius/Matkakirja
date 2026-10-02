@@ -317,7 +317,7 @@ namespace Matkakirja.Natiivi
                 pilleri.AddToClassList("mk-pilleri--paiva-ensin");
             }
             pilleri.style.display = DisplayStyle.None;
-            pilleri.RegisterCallback<GeometryChangedEvent>(_ => { SovitaPilleri(); PilleriMuuttui?.Invoke(); });
+            pilleri.RegisterCallback<GeometryChangedEvent>(_ => { KeskitaPilleri(); SovitaPilleri(); PilleriMuuttui?.Invoke(); });
 
             napit = Rakenne.El("mk-ylapalkki__napit", palkki, PickingMode.Ignore);
             Ratas = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Ratas);
@@ -614,7 +614,9 @@ namespace Matkakirja.Natiivi
                 float vasenReuna = Mathf.Max(r.x + 12f * yksikko, KulmaVara(yla + (rivi - lkArvio) / 2f, 0f, kulmaR, KulmaMarginaali * yksikko));
                 // Omistaja 2.10.2026 klo 16.0x: pilleri saaren keskilinjalle (ei alemmas kuin logo) ja yhtä kauas näytön reunasta
                 // kuin logo vasemmalla; kulmakaaren vara lasketaan nostetusta yläreunasta.
-                pilleri.style.marginTop = -alemmas;
+                pilleriNosto = alemmas;
+                pilleriRivi = rivi;
+                KeskitaPilleri();
                 float oikeaVara = Mathf.Max(r.z + 8f * yksikko, KulmaVara(yla - alemmas, rivi / 2f, kulmaR, KulmaMarginaali * yksikko));
                 oikeaVara = Mathf.Max(oikeaVara, vasenReuna);
                 float oikeaReuna = P(Screen.width / pp, 0f).x - oikeaVara;
@@ -1125,6 +1127,20 @@ namespace Matkakirja.Natiivi
                 elamaSelite.style.left = (leveys - sw) / 2f - juuri.xMin;
                 elamaSelite.style.top = top + h - juuri.yMin;
             }
+        }
+
+        float pilleriNosto, pilleriRivi = float.NaN;
+
+        /// <summary>
+        /// Pillerin keskikohta saaren keskilinjalle (Päätoimittaja 2.10. klo 16.0x; mitattu 6b3076de: pilleri 2,8 pt alempana, koska
+        /// se on riviä korkeampi ja kasvaa alaspäin): nosto = rivin alemmas-siirto + puolet ylimenevästä korkeudesta.
+        /// </summary>
+        void KeskitaPilleri()
+        {
+            if (float.IsNaN(pilleriRivi)) return;
+            float h = pilleri.resolvedStyle.height, yli = float.IsNaN(h) || h <= 0f ? 0f : Mathf.Max(0f, h - pilleriRivi) / 2f;
+            float m = -(pilleriNosto + yli);
+            if (!Mathf.Approximately(pilleri.style.marginTop.value.value, m)) pilleri.style.marginTop = m;
         }
 
         /// <summary>Raha pilleriin: "£400" → punta omana merkkinään ja numero; muu teksti (lataus, "Matka päättyi") sellaisenaan.</summary>
