@@ -14,6 +14,9 @@ namespace Matkakirja.Natiivi
     {
         /// <summary>0 = pois, 1 = rivi, 2 = valikko.</summary>
         public static int Tila;
+        /// <summary>Testikomento `ui ohjausnapit auki`: valikkotilan lista auki kuvaa varten.</summary>
+        public static OhjausryhmaKoe Viimeisin;
+        public void AvaaValikko() { if (Tila == 2) valikko.Avaa(); }
 
         readonly VisualElement ryhma, ylaraja, valikkoNappi;
         readonly LinssiValikko valikko;
@@ -38,6 +41,7 @@ namespace Matkakirja.Natiivi
             ryhma.Add(valikkoNappi);
             valikkoNappi.style.display = DisplayStyle.None;
             ryhma.schedule.Execute(Paivita).Every(100);
+            Viimeisin = this;
         }
 
         void Paivita()

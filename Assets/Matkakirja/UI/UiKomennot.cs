@@ -784,6 +784,7 @@ namespace Matkakirja.Natiivi
                     return null;
                 case "ohjausnapit":
                     // OHJAUSNAPPI-koe (omistaja 2.10. klo 14.16 ja 14.44): ui ohjausnapit 0 (pois) | 1 (rivi) | 2 (valikko).
+                    if (loput.Trim() == "auki") { OhjausryhmaKoe.Viimeisin?.AvaaValikko(); return "=ohjausnapit valikko auki"; }
                     OhjausryhmaKoe.Tila = int.TryParse(loput.Trim(), out var okTila) ? okTila : 1;
                     return "=ohjausnapit " + OhjausryhmaKoe.Tila;
                 case "mikseri":
