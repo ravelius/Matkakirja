@@ -669,6 +669,11 @@ namespace Matkakirja.Natiivi
         /// </summary>
         // Pistojen etäisyys saaren todellisesta reunasta 2,3 pt (omistaja: "enemmän kiinni saaressa"); keskitys mittaa pistojen
         // ulkoreunasta.
+        /// <summary>
+        /// Logon optinen keskitys (omistaja 2.10. klo 20.0x: "vähän enemmän oikealle päin, jotta olisi keskitetyn näköinen" ja
+        /// "laskea aivan aavistuksen"): mitattu keskitys jätti logon kaaren puolelle painottuneeksi → 2 pt oikealle, 1 pt alas.
+        /// </summary>
+        const float LogoOptinenX = 2f, LogoOptinenY = 1f;
         const float TikkausEtaisyys = 2.3f, PistoPituus = 3.5f, PistoJakso = 6.5f, LankaPaksuus = 0.9f;
         /// <summary>Lanka sävy sävyyn nahan kanssa (omistajan valinta B 2.10.2026 klo 18.2x; tyylikirjan kehys.line).</summary>
         static Color Lanka => Tyylikirja.Kehys.Line;
@@ -1160,7 +1165,7 @@ namespace Matkakirja.Natiivi
             if (!sivut.HasValue) { sivutPilleriLeveys = float.NaN; return; }
             var v = sivut.Value;
             float logoKeski = (KaariX(v.R, v.SaariKeski) + v.KehaVasen) / 2f; // logo on saaren keskilinjalla (KeskitaPystyyn, 18.4x)
-            palkki.style.paddingLeft = Mathf.Max(v.VasenPerus * 0.5f, logoKeski - v.LogoLeveys / 2f);
+            palkki.style.paddingLeft = Mathf.Max(v.VasenPerus * 0.5f, logoKeski + LogoOptinenX - v.LogoLeveys / 2f);
             float pw = pilleri.layout.width;
             if (float.IsNaN(pw) || pw <= 0f) { palkki.style.paddingRight = v.OikeaPerus; return; }
             sivutPilleriLeveys = pw;
@@ -1197,7 +1202,7 @@ namespace Matkakirja.Natiivi
             }
             var r = e.layout;
             if (float.IsNaN(r.height) || r.height <= 0f) return;
-            float siirto = saari.center.y - r.center.y;
+            float siirto = saari.center.y - r.center.y + (e == logo ? LogoOptinenY : 0f);
             e.style.translate = new Translate(0, siirto);
         }
 
