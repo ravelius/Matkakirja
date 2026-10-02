@@ -178,3 +178,17 @@
   outline: 2px solid var(--tk-toiminto);
   outline-offset: 2px;
 }
+
+/* Päivärivi tasorivin alla (omistaja 2.10.2026 klo 15.1x): "Päivä 1/80, aamu · 400 £" ja oikeassa reunassa punaisena
+   päivän kulut. Tietorivi, ei nappi. */
+.valikko-paivarivi {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--tk-vali-s);
+  margin: 0;
+  padding: var(--tk-vali-xs) var(--tk-vali-xs) var(--tk-vali-s);
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+}
+.valikko-paivarivi-kulu { color: var(--tk-tila-virhe); white-space: nowrap; }

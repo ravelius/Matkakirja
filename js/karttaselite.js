@@ -211,6 +211,9 @@ function karttaseliteRivi(id, vaihda) {
  * @returns {?object} { paivita, sulje, avaa, levy, nappi, valilehdet,
  *   asetaMaakunnat } tai null, jos karttaruutua ei ole (aloitusnäkymä).
  */
+/** Kartan Linssit-napin tapahtuma (js/main.js avaa pillerivalikon Linssit-näkymän). */
+export const LINSSIT_AVAA_TAPAHTUMA = 'matkakirja-avaa-linssit';
+
 export function kaynnistaKarttaselite(ui) {
   if (typeof document === 'undefined') return null;
   const ruutu = ui?.mapPane;
@@ -482,6 +485,26 @@ export function kaynnistaKarttaselite(ui) {
 
   kotelo.append(nappi, levy);
   ruutu.appendChild(kotelo);
+
+  /*
+   * LINSSIT-NAPPI SELITENAPIN VIERESSÄ (omistaja 2.10.2026 klo 13.56: "Linssit pois valikosta omaksi napikseen kartan
+   * oikeaan yläkulmaan nykyisen karttanapin viereen samalla pohjalla"). Sama laatta kuin selitenapilla; napautus avaa
+   * pillerivalikon Linssit-näkymän (js/main.js kuuntelee LINSSIT_AVAA_TAPAHTUMA). Näkyy vain, kun linssejä on
+   * (ui.js paivittaa hidden-tilan samasta lähteestä kuin ennen valikon Linssit-rivin).
+   */
+  const linssiNappi = html('button', 'karttaselite-nappi linssit-karttanappi');
+  linssiNappi.type = 'button';
+  linssiNappi.title = 'Linssit';
+  linssiNappi.setAttribute('aria-label', 'Linssit: vaihda kartan näkymää');
+  linssiNappi.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" '
+    + 'fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">'
+    + '<circle cx="10.5" cy="10.5" r="5.5"/><path d="m15 15 4.5 4.5"/></svg>';
+  linssiNappi.hidden = true;
+  linssiNappi.addEventListener('click', (tapahtuma) => {
+    tapahtuma.stopPropagation();
+    document.dispatchEvent(new CustomEvent(LINSSIT_AVAA_TAPAHTUMA, { detail: { lahde: linssiNappi } }));
+  });
+  kotelo.appendChild(linssiNappi);   // kotelon sisällä: seuraa sen paikkaa ja piilotussääntöjä (aikajana, satelliitti)
   karttavalotSovita();
   paivita();
 
@@ -497,6 +520,7 @@ export function kaynnistaKarttaselite(ui) {
       get nykyinen() { return valilehtiNyt; },
       vaihda: vaihdaValilehti,
     },
+    linssiNappi,
     sammuta: () => {
       document.removeEventListener('pointerdown', ulos, true);
       document.removeEventListener('keydown', nappain, true);
