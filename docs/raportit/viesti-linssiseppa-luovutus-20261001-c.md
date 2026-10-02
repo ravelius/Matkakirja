@@ -3,6 +3,12 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 2.10. KLO 10.3x
+- Lentopeli: latausodotus poisti nauhat; lentopeli-2 95bf46cd + astro-auto-2 7fbd363b junassa 113 (juna 113 -todennus PASS).
+- Cupola-ketju (LS2:n kamera + vuodenaika/vuorokausi/v4/iso ikkuna) = linssiseppa2/cupola-ketju-3 84b8556b junassa 115.
+- Yövalot lähikuvaan: linssiseppa/yovalot-4 9b2e8c9d merge-pyynnössä (erilliset valopisteet; kylläisempi oranssi vasta omistajan TF:n jälkeen).
+- Seuraavaksi: kiillon pystyleikkaus (pilvihypoteesi). Sokrates odottaa omistajan OK:ta. Uudet tyylit vain Pohjat/Pinnat/*.uss (juna 112:n jako).
+
 ## HUOMISEN JONO (Päätoimittaja 1.10. 21.1x)
 1. **Lentopelin latausodotus** (hyväksytty): "Lähde" vasta kun lähialue ≥ 98 % ja Cesium tasaantunut (Valmius.Tasaantunut),
    Laattapalvelin.AsetaSaapumistila lennon ajaksi, ennakkokamera koneen eteen — kuten lento v3; uusi video Päätoimittajalle.
