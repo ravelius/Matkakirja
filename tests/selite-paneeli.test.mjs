@@ -2,10 +2,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { pohjatCss } from './pohjat-css.mjs';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 const SELITE = lue('../js/karttaselite.js');
-const CSS = lue('../css/pohjat.css');
+const CSS = pohjatCss();
 
 test('selite puetaan lipun takana yhdellä luokalla; toiminnan osat pysyvät', () => {
   assert.match(SELITE, /if \(paneeliPohjalla\(\)\) \{\n {4}pohjatLataaTyyli\(\);\n {4}levy\.classList\.add\('tk-paneeli-selite', 'tk-teema-paperi'\);/);

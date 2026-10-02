@@ -3,10 +3,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { tarkistaPaneeliData, PANEELI_RIVITYYPIT } from '../js/pohjat/paneelidata.js';
+import { pohjatCss } from './pohjat-css.mjs';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 const POHJAT = lue('../js/pohjat/pohjat.js').replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/.*$/gm, '');
-const CSS = lue('../css/pohjat.css');
+const CSS = pohjatCss();
 
 test('PaneeliData: tyhjä hylätään, tyhjät rivit ja ryhmät pois, tuntematon tyyppi toiminnoksi', () => {
   assert.equal(tarkistaPaneeliData(null), null);

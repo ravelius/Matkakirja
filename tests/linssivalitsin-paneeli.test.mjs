@@ -2,8 +2,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { pohjatCss } from './pohjat-css.mjs';
 
-const CSS = readFileSync(new URL('../css/pohjat.css', import.meta.url), 'utf8');
+const CSS = pohjatCss();
 
 test('kokoelmanäkymien kehysmuuttujat paperiarvoiksi puetussa valikossa', () => {
   assert.match(CSS, /\.paavalikko\.tk-paneeli--paikallaan \{\n {2}--ink-light: var\(--tk-muste\);\n {2}--accent: var\(--tk-korostus\);/);

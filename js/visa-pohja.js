@@ -1,7 +1,7 @@
 /**
  * VISA KORTTI-POHJALLA, versio B (omistaja 1.10.2026: "visa B"; Päätoimittajan välittämä).
  *
- * #quiz-dialogin kortti saa kerran luokat tk-kortti, tk-teema-paperi ja tk-visa; muu asu on css/pohjat.css:n
+ * #quiz-dialogin kortti saa kerran luokat tk-kortti, tk-teema-paperi ja tk-visa; muu asu on css/pohjat/pinnat/visa.css:n
  * "KORTTI/visa" -osiossa vanhojen .quiz-*-luokkien päällä. Visan logiikka (js/visa.js, js/ui.js renderQuiz) ja sen
  * tilaluokat (correct, wrong, hidden-option, urgent) pysyvät ennallaan. Pohjan poikkeukset (tyylikirja.json
  * pohjat._poikkeukset): tiimalasi kulmassa ja 50:50-oljenkorren hinta (80 p). Oikein ja väärin näkyvät

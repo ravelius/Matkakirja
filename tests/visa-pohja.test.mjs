@@ -2,10 +2,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { pohjatCss } from './pohjat-css.mjs';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 const UI = lue('../js/ui.js');
-const CSS = lue('../css/pohjat.css');
+const CSS = pohjatCss();
 const TK = JSON.parse(lue('../tyylikirja/tyylikirja.json'));
 
 test('ui.js puee #quiz-dialogin heti sen löydyttyä, lipun takana', () => {

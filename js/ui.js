@@ -2362,9 +2362,9 @@ export function puePohjaDialogiksi(dialogi, { apuri = '', korostus = '', sulje =
 /** Puetun dialogin toimintorivi pystyyn, jos jokin näkyvä nimi ei mahdu vierekkäin (pohjan pystyrivi, ei lyhennystä). */
 function sovitaPohjaNapit(dialogi) {
   if (!dialogi?.dataset.pohja) return;
-  // Pohjien tyylitiedosto latautuu ensimmäisellä kerralla taustalla: mitataan vasta sen jälkeen.
-  const tyyli = document.querySelector('link[rel="stylesheet"][href$="pohjat.css"]');
-  if (tyyli && !tyyli.sheet) {
+  // Pohjien tyylitiedostot latautuvat ensimmäisellä kerralla taustalla: mitataan vasta niiden jälkeen.
+  const tyyli = [...document.querySelectorAll('link[data-pohjat]')].find((l) => !l.sheet);
+  if (tyyli) {
     tyyli.addEventListener('load', () => sovitaPohjaNapit(dialogi), { once: true });
     return;
   }

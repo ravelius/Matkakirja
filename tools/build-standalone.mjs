@@ -450,6 +450,8 @@ const MODULES = [
   'js/apuraha.js',
   // PANEELI-pohjan tietomalli: ennen js/pohjat/pohjat.js:ää, joka tuo sen.
   'js/pohjat/paneelidata.js',
+  // UI-pohjien tyylilista (pohjat.js tuo sen; yhden tiedoston versiossa tyylit ovat jo sivulla).
+  'js/pohjat/tyylit.js',
   'js/linssit/omistus.js',
   'js/linssit/aarteet.js',
   'js/packs/valokuvat-paikalliset.js',
@@ -1186,7 +1188,20 @@ const STYLES = [
   'css/saapumistraileri.css',
   'css/fokuskohteet.css',
   'css/fokusnosto.css',
-  'css/pohjat.css',
+  // UI-pohjien tyylit (js/pohjat/tyylit.js POHJAT_TYYLIT, sama järjestys).
+  'css/pohjat/perus.css',
+  'css/pohjat/nostokortti.css',
+  'css/pohjat/kortti.css',
+  'css/pohjat/paneeli.css',
+  'css/pohjat/kentta.css',
+  'css/pohjat/auto.css',
+  'css/pohjat/esikatselu.css',
+  'css/pohjat/pinnat/dialogit.css',
+  'css/pohjat/pinnat/pillerivalikko.css',
+  'css/pohjat/pinnat/visa.css',
+  'css/pohjat/pinnat/karttaselite.css',
+  'css/pohjat/pinnat/linssin-valikko.css',
+  'css/pohjat/pinnat/linssivalitsin.css',
   'css/kuvasarja.css',
   // Sähkepinta on osa peruspeliä (js/ui.js ja js/main.js tuovat
   // js/sahke.js:n), eikä css/styles.css sisällä yhtään sahke-sääntöä.

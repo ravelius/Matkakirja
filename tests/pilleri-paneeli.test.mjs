@@ -2,12 +2,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { pohjatCss } from './pohjat-css.mjs';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 const MODUULI = lue('../js/pilleri-paneeli.js');
 const MAIN = lue('../js/main.js');
 const UI = lue('../js/ui.js');
-const CSS = lue('../css/pohjat.css');
+const CSS = pohjatCss();
 
 test('main.js puee valikon UI:n luonnin jälkeen lipun takana, napit kohdistuvat nykyiseen UI:hin', () => {
   assert.match(MAIN, /import \{ paneeliPohjalla, puePilleriPaneeliksi \} from '\.\/pilleri-paneeli\.js'/);

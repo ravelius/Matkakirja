@@ -2,11 +2,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { pohjatCss } from './pohjat-css.mjs';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 const SATELLIITTI = lue('../js/linssit/satelliitti.js');
 const AUTO = lue('../js/pohjat/auto.js');
-const CSS = lue('../css/pohjat.css');
+const CSS = pohjatCss();
 
 test('AUTO-osa: sama asetus kuin lehden jatkuvalla luennalla ja natiivissa, siirto 3 s', () => {
   assert.match(AUTO, /export const POHJA_AUTO_AVAIN = 'matkakirja-lukija-auto';/);
