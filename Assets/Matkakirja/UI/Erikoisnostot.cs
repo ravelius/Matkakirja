@@ -49,6 +49,9 @@ namespace Matkakirja.Natiivi
             this.kerros = kerros;
             // Karttamerkkien kerros (kuten Kutsuminiatyyri): paneelit ja kortit piirtyvät päälle.
             juuri = Rakenne.El("mk-erikoisnostot", kerros.Juuri(UiKerros.Nostot), PickingMode.Ignore);
+            // Kerroksen alimmaksi: kaupungin kutsukortti ja nostojen merkit piirtyvät pään päälle (Päätoimittaja 2.10. 19.4x:
+            // Marcus peitti Rooman kortin; päätös 16.49 "avattu kortti saa peittää pään"). Kartuutsi on ylemmässä kerroksessa.
+            juuri.SendToBack();
             juuri.style.display = DisplayStyle.None;
             juuri.schedule.Execute(Tarkista).Every(250);
             kerros.JokaRuutu += Ruutu;
