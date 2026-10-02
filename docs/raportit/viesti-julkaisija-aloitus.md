@@ -10,7 +10,7 @@ kuittaa aloitus yhdellä rivillä (malli + id).
 
 Ensimmäisenä:
 1. **Web-juna**: `ps -Ao command | grep -E "^zsh .*julkaisija-tyokalut/(ajojono|jonoon)"` — #3865 ajossa 22.10 (jonot kuolivat tilinvaihdossa),
-   jonossa #3870 ja #3877; #3850 odottaa Sisältökirjurin merge mainia. Poista jäänyt `wt/julkaisija-prNNNN` ja aja `zsh julkaisija-tyokalut/jonoon.sh NNNN` avoimille.
+   jonossa #3870 ja #3877; #3850 on MERGEABLE ja menee junaan #3877:n jälkeen. Poista jäänyt `wt/julkaisija-prNNNN` ja aja `zsh julkaisija-tyokalut/jonoon.sh NNNN` avoimille.
 2. **TF**: 8/12 ladattu (viimeisin 129 = e204abbe). Illalle enintään 2, lataukset 11–12 aamuun ennen 12.30 nollausta.
 3. **Ämpäri**: vain `julkaisija-tyokalut/vie-paketti.sh <kansio>` (pysyvä lupa). Osoittimet omistajan OK:lla.
 4. **Vuorot**: käännöslukko /tmp/matkakirja-kaannospalvelu.lukko/kuka, `xcrun simctl list devices booted`.

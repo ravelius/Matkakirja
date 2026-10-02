@@ -25,7 +25,7 @@ Web-junan pinot: /Users/Shared/Claude/julkaisija-tyokalut/aamujono-20261002.txt 
   Jonot ovat tämän session taustaprosesseja ja KUOLEVAT tilinvaihdossa → uusi Julkaisija: tarkista `gh pr view` kullekin,
   poista jäänyt `wt/julkaisija-prNNNN` (`git worktree remove --force`) ja aja `zsh julkaisija-tyokalut/jonoon.sh NNNN` jäljellä oleville.
 - #3869, #3874 ja #3875 ovat jo mainissa (v2570, v2569, v2568).
-- **#3850** (Sisältökirjuri, kuva2 erä K: SVK, SVN, SWE, UKR) on CONFLICTING: Sisältökirjuri mergeää mainin ja ilmoittaa → junaan.
+- **#3850** (Sisältökirjuri, kuva2 erä K: SVK, SVN, SWE, UKR) on nyt MERGEABLE (0942a1d91, Sisältökirjuri 22.1x) → laita junaan #3877:n jälkeen.
 - Mergetty tänään mm. #3828, #3833, #3839, #3840, #3843, #3844, #3845, #3847, #3849, #3851, #3853, #3854, #3856,
   #3857, #3859, #3860, #3862, #3864, #3866, #3867, #3869, #3873, #3874, #3875.
 - Pinot: tekijä mergeää mainin edellisen squashin jälkeen ja ilmoittaa → vasta sitten `zsh julkaisija-tyokalut/jonoon.sh NNNN`.
