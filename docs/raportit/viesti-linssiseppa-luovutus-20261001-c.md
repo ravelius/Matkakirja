@@ -13,6 +13,10 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
   Laitetestaajan napautukset eivät päässeet sovellukseen (attach), ei koodivikaa.
 - Ajattelijat (Sokrates, Marcus, Platon) natiiviin SIIRTYI Linssiseppä 2:lle (Päätoimittaja 2.10.); kartan päät Natiivi-UI/LS2.
   Linssiseppä jatkaa meren kiiltoa.
+- KIILLON PYSTYLEIKKAUS juurisyy (2.10. 13.4x, lokit/linssiseppa-kiilto4-20261002-iphone): ei pilvet; kiillon huippu ruudun
+  ulkopuolella, näkyvä ~25° sivuliepe (0,75) puhkeaa tonemapissa valkoiseksi tasanteeksi → pystyreuna. Python-toisto
+  scratchpad kiilto_sim.py. Suositus Päätoimittajalle: ilmakehän läpäisy (Kasten–Young, τ RGB 0,15/0,20/0,33) kiiltoon,
+  natiivi + web (iss-realismi-kerrokset.js r. 143) — ODOTTAA PÄÄTÖSTÄ.
 - KUVAA-osuma ad79d770 junassa 116. LS2:n 1116-kysymys (KUVAA Pariisissa, KOHDE-lista auki): vastattu — todennäköisin
   hiljainen `kaynnissa`-paluu IssKameraKuva.Laukaisessa; odottaa LS2:n koordinaattia.
 - Seuraavaksi: kiillon pystyleikkaus (ajo-kiilto3.sh ilman KUVAA-lippua) seuraavalla simulaattorivuorolla.
