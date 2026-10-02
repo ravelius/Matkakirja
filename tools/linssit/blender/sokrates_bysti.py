@@ -1091,3 +1091,50 @@ if '--v7' in A:
         sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
         bpy.ops.render.render(write_still=True)
     print('SOKRATES: v7 valmis', ULOS)
+
+
+# ---------- prologi (omistaja 2.10. 08.5x; kaikkien ajattelijoiden vakioaloitus) ----------
+# 0–1 s pimeää → kytkin napsahtaa (ääni erikseen) → takavalo bystin takana syttyy 0,3–1 s:ssa: vain ääriviivat ja
+# reunavalo siluettina hehkuvaa taustaa vasten → pito → leikkaus nykyiseen introon. 120 ruutua (4 s), 30 r/s.
+#   Blender -b -P sokrates_bysti.py -- [--kohde ...] --prologi <ulos> --koko L K [--ruudut ...]
+PROLOGI = dict(kytkin=30, taysi=58, loppu=120)
+
+
+if '--prologi' in A:
+    ULOS = A[A.index('--prologi') + 1]; os.makedirs(ULOS, exist_ok=True)
+    i = A.index('--koko'); LEV, KORK = int(A[i + 1]), int(A[i + 2])
+    RUUDUT = [int(v) for v in A[A.index('--ruudut') + 1].split(',')] if '--ruudut' in A else list(range(1, PROLOGI['loppu'] + 1))
+    o = rakenna(int(A[A.index('--naytteita') + 1]) if '--naytteita' in A else 32); sc = bpy.context.scene; _kipsin_pinta(o)
+    for nimi in ('sivu', 'reuna', 'tayte'): bpy.data.objects[nimi].hide_render = True
+    sc.world.node_tree.nodes['Background'].inputs['Strength'].default_value = 0.0
+    # tausta: tumma levy bystin takana, jota takavalo valaisee → siluetti hehkua vasten
+    bpy.ops.mesh.primitive_plane_add(size=4, location=(0, 0.9, 0.4), rotation=(math.radians(90), 0, 0))
+    lev_ = bpy.context.object; mt = bpy.data.materials.new('tausta'); mt.use_nodes = True
+    mt.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value = (0.20, 0.19, 0.18, 1)
+    mt.node_tree.nodes['Principled BSDF'].inputs['Roughness'].default_value = 1.0; lev_.data.materials.append(mt)
+    valot_ = []
+    for nimi_, paikka, kohde_, e, koko_ in (('taka', (0.0, 0.30, 0.40), (0.0, 0.9, 0.42), 9.0, 0.0),       # hehkuva kehä pään takana
+                                            ('reuna-v', (-0.30, 0.55, 0.40), (0.0, -0.05, 0.38), 22.0, 0.05),  # reunavalot takaa, pään korkeudelta
+                                            ('reuna-o', (0.30, 0.55, 0.40), (0.0, -0.05, 0.38), 22.0, 0.05)):
+        if koko_ == 0.0:   # taustan kehä: pehmeäreunainen spotti, vain pään taakse
+            d = bpy.data.lights.new(nimi_, 'SPOT'); d.spot_size = math.radians(70); d.spot_blend = 1.0; d.shadow_soft_size = 0.05
+        else:
+            d = bpy.data.lights.new(nimi_, 'AREA'); d.size = koko_
+        d.color = (1.0, 0.86, 0.66)
+        ob = bpy.data.objects.new(nimi_, d); sc.collection.objects.link(ob); ob.location = paikka; kohdista(ob, kohde_)
+        # syttyminen: hehkulangan lämpeneminen (kiihtyvä) + pieni värähdys, sitten tasainen
+        k0, k1 = PROLOGI['kytkin'], PROLOGI['taysi']
+        for r in range(1, PROLOGI['loppu'] + 1):
+            if r < k0: v = 0.0
+            elif r < k1:
+                t = (r - k0) / (k1 - k0); v = t ** 2.2 * (1.0 + 0.08 * math.sin(r * 2.7))
+            else: v = 1.0
+            d.energy = e * v; d.keyframe_insert('energy', frame=r)
+    cd = bpy.data.cameras.new('k'); cd.lens = 35; cd.sensor_fit = 'VERTICAL'; cd.sensor_height = 24
+    cam = bpy.data.objects.new('k', cd); sc.collection.objects.link(cam); sc.camera = cam
+    cam.location = (-0.22, -1.15, 0.34); kohdista(cam, (0.0, -0.04, 0.30))
+    sc.render.resolution_x, sc.render.resolution_y = LEV, KORK; sc.render.resolution_percentage = 100
+    for ruutu in RUUDUT:
+        sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
+        bpy.ops.render.render(write_still=True)
+    print('SOKRATES: prologi valmis', ULOS)
