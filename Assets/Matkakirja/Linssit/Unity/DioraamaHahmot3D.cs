@@ -693,11 +693,23 @@ namespace Matkakirja.Natiivi
                     case "peitto": v = new Color(1f - luku * (1f - VarjoVari.r), 1f - luku * (1f - VarjoVari.g), 1f - luku * (1f - VarjoVari.b), 1f); break;
                     case "ztest": varjoMateriaali.SetFloat("_ZTest", (float)(kv.Length > 1 && kv[1] == "always" ? UnityEngine.Rendering.CompareFunction.Always : UnityEngine.Rendering.CompareFunction.LessEqual)); break;
                     case "vari": v = kv.Length > 1 && kv[1] == "punainen" ? new Color(1f, 0f, 0f, v.a) : new Color(VarjoVari.r, VarjoVari.g, VarjoVari.b, v.a); break;
+                    case "rgba":
+                        var o = kv.Length > 1 ? kv[1].Split(',') : new string[0];
+                        if (o.Length == 4) v = new Color(F(o[0]), F(o[1]), F(o[2]), F(o[3]));
+                        break;
+                    case "sekoitus":
+                        // kerto = DstColor Zero, alfa = SrcAlpha OneMinusSrcAlpha, peite = One Zero
+                        var (l, k) = kv.Length > 1 && kv[1] == "alfa" ? (UnityEngine.Rendering.BlendMode.SrcAlpha, UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha)
+                            : kv.Length > 1 && kv[1] == "peite" ? (UnityEngine.Rendering.BlendMode.One, UnityEngine.Rendering.BlendMode.Zero)
+                            : (UnityEngine.Rendering.BlendMode.DstColor, UnityEngine.Rendering.BlendMode.Zero);
+                        varjoMateriaali.SetFloat("_Lahde", (float)l); varjoMateriaali.SetFloat("_Kohde", (float)k);
+                        break;
                     default: muutettu = false; break;
                 }
                 varjoMateriaali.SetColor("_VarjoVari", v);
                 if (muutettu && mita.Contains("="))
-                    return $"varjo: vari {v}, ztest {varjoMateriaali.GetFloat("_ZTest")}, veto {varjoMateriaali.GetFloat("_VarjoVeto"):F2}";
+                    return $"varjo: vari {v}, ztest {varjoMateriaali.GetFloat("_ZTest")}, veto {varjoMateriaali.GetFloat("_VarjoVeto"):F2}, "
+                        + $"sekoitus {varjoMateriaali.GetFloat("_Lahde")}/{varjoMateriaali.GetFloat("_Kohde")}";
             }
             int varjoja = 0; string varjoY = "";
             foreach (var e in esiintymat)
@@ -711,6 +723,8 @@ namespace Matkakirja.Natiivi
             return $"{mita}: {materiaaleja} kuvamateriaalia, kärkiä {karkia}, värillisiä {varillisia}, AO min {aoMin:F2}; "
                 + $"kontaktivarjoja {varjoja}/{esiintymat.Count} (materiaali {(varjoMateriaali != null ? "ok" : "PUUTTUU")}, y{varjoY})";
         }
+
+        static float F(string s) => float.TryParse(s, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var f) ? f : 0f;
 
         static long MeshKolmiot(Mesh m) { long n = 0; for (int i = 0; i < m.subMeshCount; i++) n += m.GetIndexCount(i) / 3; return n; }
 

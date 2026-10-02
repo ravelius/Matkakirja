@@ -10,6 +10,8 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
     {
         _VarjoVari("Lattian kerroin keskellä (RGB; alfaa ei käytetä)", Color) = (0.63, 0.6, 0.58, 1)
         _VarjoVeto("Siirto kameraa kohti (m)", Float) = 0.4
+        [Enum(UnityEngine.Rendering.BlendMode)] _Lahde("Sekoitus: lähde", Float) = 2
+        [Enum(UnityEngine.Rendering.BlendMode)] _Kohde("Sekoitus: kohde", Float) = 0
         [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("Syvyystesti (testikomento: Always)", Float) = 4
     }
     SubShader
@@ -22,7 +24,7 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
             // Kertova sekoitus (klassinen kontaktivarjo): lattia × lerp(1, väri, peitto), lähtöalfa aina 1 ja kuvan alfa
             // ennallaan. Savukkeet 21.03–21.20: alfasekoituksella levy ei piirtynyt lainkaan, kun lähtöalfa < 1 (peitto 1
             // näkyi, 0,6–0,7 ei muuttanut pikseleitä).
-            Blend DstColor Zero, Zero One
+            Blend [_Lahde] [_Kohde], Zero One
             ZWrite Off
             ZTest [_ZTest]
             Cull Off
@@ -62,7 +64,8 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
                 // Tasainen ydin jalkojen alla (r < 0,35) ja pehmeä smoothstep-lasku reunalle (kartan maakontaktin renkaat).
                 // Vahvuus RGB:stä, ei alfasta (savuke 21.38: alfa 1 näkyi, 0,6–0,9 ei lainkaan, myös ilman syvyystestiä).
                 float a = 1.0 - smoothstep(0.35, 1.0, r);
-                return half4((half3)lerp(float3(1.0, 1.0, 1.0), _VarjoVari.rgb, a), 1.0h);
+                // Kertova (DstColor Zero): kerroin lerp(1, väri, a). Alfasekoitus (testi): väri, alfa = väri.a × a.
+                return half4((half3)lerp(float3(1.0, 1.0, 1.0), _VarjoVari.rgb, a), (half)(_VarjoVari.a * a));
             }
             ENDHLSL
         }
