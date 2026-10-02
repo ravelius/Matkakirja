@@ -13,7 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
-  { v: 2538, teksti: 'Maakuntien toinen kuva: ROU, SRB' },
+  { v: 2538, teksti: 'Maakuntien toinen kuva: ROU, SRB (#3821)' },
   { v: 2537, teksti: 'UI-pohjien tyylit pohjittain tiedostoiksi (#3820)' },
   { v: 2536, teksti: 'Linssivalitsin (#3811)' },
   { v: 2535, teksti: 'Lomakekenttä (#3808)' },
