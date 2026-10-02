@@ -38,3 +38,11 @@
     border-color: var(--tk-korostus);
     background-color: var(--tk-toiminto);
 }
+
+/* Iso koko kuvasisällölle (nappi.ohjaus-iso 56 pt; omistaja 2.10.2026 klo 17.4x: linnan pienoiskartta ☰-nappia isompana). */
+.mk-ohjausnappi.mk-ohjausnappi--iso {
+    width: var(--tk-nappi-ohjaus-iso);
+    height: var(--tk-nappi-ohjaus-iso);
+    min-height: var(--tk-nappi-ohjaus-iso);
+    padding: var(--tk-vali-xs);
+}
