@@ -602,8 +602,11 @@ namespace Matkakirja.Natiivi
                 // Omistaja 29.9.2026 (1.0.50, palaute 5): nahkaa yhtä paljon saaren ylä- ja alapuolella, sitten tikkauskaista.
                 // Laitteen saaren mukaan; kuva rajautuu alareunasta (scale-and-crop), joten tikkaus ei veny.
                 korkeus = saariAla + saariYla + P(Screen.width / pp, 0f).x * NahkaTikkausOsuus;
-                // Omistaja 30.9.2026 klo 12.28: yläpalkista hieman korkeampi (rivi laskee saaren akselin alle).
-                korkeus += alemmas + PalkkiKorkeampi * yksikko;
+                // Omistaja 2.10.2026 klo 21.4x (TF 129): "Uusi yläpalkki onkin vähän liian korkea. Saisi olla enemmän tasapainossa
+                // pillerin ylä- ja alapuolella". Pilleri ja logo ovat nyt saaren keskilinjalla (KeskitaPystyyn), joten 30.9.:n
+                // lisäkorkeus (rivi saaren akselin alle, alemmas + PalkkiKorkeampi) jäi ylimääräiseksi nahaksi pillerin alle:
+                // sauma = saariYla + saariAla eli pillerin alapuolella yhtä paljon nahkaa kuin yläpuolella (+ PalkkiTasaus).
+                korkeus += PalkkiTasaus * yksikko;
             }
             AsetaSaariTikkaus(nahka && saari.width > 0 ? Rect.MinMaxRect(ylakulma.x, saariYla, alakulma.x, saariAla) : Rect.zero, yksikko);
             palkki.style.height = korkeus;
@@ -661,7 +664,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Rivin lasku saaren akselin alle ja palkin lisäkorkeus (pt; omistaja 30.9.2026 klo 12.28 "hieman").</summary>
-        const float RiviAlemmas = 6f, PalkkiKorkeampi = 4f;
+        const float RiviAlemmas = 6f;
+        /// <summary>Pillerin alapuolen nahan hienosäätö (pt) mittauksen mukaan: 0 = sauma saaren keskilinjan kaksinkertaisella.</summary>
+        const float PalkkiTasaus = 0f;
         /// <summary>
         /// NAHKATIKKAUS DYNAMIC ISLANDIN YMPÄRILLE (omistaja 2.10.2026: musta saarialue pois, tikkaus saaren ympärille; valinta
         /// 18.2x "b mutta ota se ulompi kehä pois, jätä pelkkä tikkaus"): pelkät pistot suoraan nahkaan sävy sävyyn, kehä
