@@ -1,6 +1,9 @@
 # Linnanrakentajan luovutus 2.10.2026 klo 18.3x (LOPULLINEN 22.2x, tilinvaihto) (Opus high; tilin viikkoraja lähellä)
 
 ## SEURAAVA ASKEL (tilinvaihto 22.2x)
+0c. **23.2x:** irralliset liekit (fatabuuri/keittiö/laituri) = tunnelman JSON-liekit, joita natiivi ei leikkaa (vain tyhja:-liekit);
+   rakenna.mjs jättää kohdistamattoman tilan liekit pois (1bb745076, testi dioraama-blender). Kaikkien liekkien alla teline 0–5 cm
+   (glb-mittaus). **Uusin peili dad4d0f39cd2c9c2**; Siirtoseppä kuvaa fatabuurin, keittiön, laiturin. Huoneliekit natiivissa tuplana (JSON+tyhjä).
 0b. **23.1x:** vartija kääntyi 0,8 m tulikorista ("tulessa") → partio x −15,2; vesipoika irti tulisijasta ja pöytä/säkkiraosta;
    reittitesti: liekit vartalon korkeudella ≥ 1,0 m, laatikko-/pyöreät esineet reunasta ≥ 0,35 m (6cbed3004).
    **Uusin peili 6cd8735b3a42ea3c** (blender 916731d7); Siirtoseppä kuvaa Muurinharjan ja keittiön.
