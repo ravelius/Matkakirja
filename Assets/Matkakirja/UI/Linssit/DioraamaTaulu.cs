@@ -139,8 +139,8 @@ namespace Matkakirja.Natiivi
             kuunteleNappi.style.flexDirection = FlexDirection.Row; kuunteleNappi.style.alignItems = Align.Center;
             kuunteleNappi.style.height = 34;
             kuunteleNappi.style.backgroundColor = new Color(Pergamentti.r, Pergamentti.g, Pergamentti.b, 0.92f);
-            kuunteleNappi.style.borderTopLeftRadius = 17; kuunteleNappi.style.borderTopRightRadius = 17;
-            kuunteleNappi.style.borderBottomLeftRadius = 17; kuunteleNappi.style.borderBottomRightRadius = 17;
+            kuunteleNappi.style.borderTopLeftRadius = Tyylikirja.Kulma.Nappi; kuunteleNappi.style.borderTopRightRadius = Tyylikirja.Kulma.Nappi;
+            kuunteleNappi.style.borderBottomLeftRadius = Tyylikirja.Kulma.Nappi; kuunteleNappi.style.borderBottomRightRadius = Tyylikirja.Kulma.Nappi;
             kuunteleNappi.style.color = Teksti;
             kuunteleNappi.style.paddingLeft = 10; kuunteleNappi.style.paddingRight = 12; kuunteleNappi.style.paddingTop = 4; kuunteleNappi.style.paddingBottom = 4;
             var kuunteleTeksti = kuunteleNappi.Q<Label>();
@@ -633,8 +633,8 @@ namespace Matkakirja.Natiivi
                         uusi.style.color = Teksti;
                         uusi.style.backgroundColor = Pergamentti;
                         uusi.style.paddingLeft = 8; uusi.style.paddingRight = 8; uusi.style.paddingTop = 3; uusi.style.paddingBottom = 3;
-                        uusi.style.borderTopLeftRadius = 9; uusi.style.borderTopRightRadius = 9;
-                        uusi.style.borderBottomLeftRadius = 9; uusi.style.borderBottomRightRadius = 9;
+                        uusi.style.borderTopLeftRadius = Tyylikirja.Kulma.Pieni; uusi.style.borderTopRightRadius = Tyylikirja.Kulma.Pieni;
+                        uusi.style.borderBottomLeftRadius = Tyylikirja.Kulma.Pieni; uusi.style.borderBottomRightRadius = Tyylikirja.Kulma.Pieni;
                         laput.Add(uusi);
                     }
                     var lappu = laput[n++];
