@@ -159,6 +159,18 @@
       "osat": { "tilapaneeli": { "pohja": "PANEELI", "teemat": ["tumma"] }, "aloituskortti": { "pohja": "KORTTI", "teemat": ["paperi"] }, "tuloskortti": { "pohja": "KORTTI", "teemat": ["paperi"] } },
       "_selite": "lautapelien pohja (omistaja 1.10.2026, loki b3e273d72; Siirtosepän Mylly-malli). Lauta ilman taustaa, sumennettu tausta ja tumma tilapaneeli: omistaja 2.10.2026 klo 08.2x (Myllystä)"
     },
+    "ERIKOISNOSTOT": {
+      "paikka": "sarake kartuutsin lipun alla kartuutsin rungon vieressä: x = max(lipun vasen reuna, kartuutsin oikea reuna + vali-s), ei kartuutsin rivien päällä; turva-alueen ja yläpalkin alapuolella; iPadilla sama sääntö kartuutsin tablettimitoilla",
+      "osat": ["PÄÄ (ajattelijan 3D-pää, nappi-laukaisin 64, läpinäkyvä tausta kuten minipulu, ei kehystä; osuma ≥ 44)"],
+      "vali": "vali-s",
+      "liike": "nenä kohti näkymän keskustaa ≤ 30°, kartan liike heiluttaa (sisältöanimaatio, ei UI-rajaa)",
+      "valo": "pallolaudan suuntavalo kameran koordinaateissa",
+      "avaus": "napautus avaa ajattelijan (KUVANÄKYMÄ)",
+      "nakyvyys": "piiloon, kun kortti, lehti, paneeli tai linssi on auki (kuten minipulu); enintään 3 allekkain, ei vieritystä vaan karsinta tärkeysjärjestyksessä",
+      "nimi": "jokaisella osalla nimi (VoiceOver ja pitkä painallus), ei näkyvää tekstiä",
+      "teemat": [],
+      "_selite": "omistaja 2.10.2026 klo 12.34 (vaihtoehto B): ajattelijoiden päät kartalla, myöhemmin muut erikoisnostot allekkain; Natiivi-UI:n tarkennukset 2.10."
+    },
     "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)" }
   }
 }

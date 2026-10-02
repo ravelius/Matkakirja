@@ -15,6 +15,7 @@ export const POHJAT_TYYLIT = [
   'css/pohjat/auto.css',
   'css/pohjat/kuvanakyma.css',
   'css/pohjat/pulu.css',
+  'css/pohjat/erikoisnostot.css',
   'css/pohjat/esikatselu.css',
   'css/pohjat/pinnat/dialogit.css',
   'css/pohjat/pinnat/pillerivalikko.css',

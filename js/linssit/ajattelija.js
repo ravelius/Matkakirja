@@ -11,12 +11,44 @@
  * latausta), samaan selaimen välimuistiin kuin pallon kirjasto (js/pallo.js PALLO_KIRJASTO).
  */
 import { SOKRATES } from './ajattelija-sokrates.js';
+import { MARCUS } from './ajattelija-marcus.js';
 import { piirraAtlas, lisaaProjektorit, asetaProjektori, lisaaKipsinPinta } from './ajattelija-projektori.js';
 import { pohjatLataaTyyli, luoPohjaKuvanakyma, luoPohjaNostokortti } from '../pohjat/pohjat.js';
 
 const R2 = 'https://media.matkakirja.app/';
 export const AJATTELIJA_KIRJASTO = `${R2}vendor/three-gltf-r185.min.js`;
-export const AJATTELIJAT = Object.freeze({ sokrates: SOKRATES });
+/*
+ * AJATTELIJAT OVAT DATAA (Päätoimittaja 2.10.2026): uusi ajattelija = uusi js/linssit/ajattelija-<nimi>.js samalla
+ * rakenteella kuin SOKRATES + rivi tähän rekisteriin; ?ajattelija=<nimi> avaa sen. Moottori ei tunne yhtäkään ajattelijaa
+ * nimeltä. tarkistaAjattelija() vaatii kentät (tests/ajattelija.test.mjs ajaa sen jokaiselle rekisterin ajattelijalle).
+ */
+export const AJATTELIJAT = Object.freeze({ sokrates: SOKRATES, marcus: MARCUS });
+
+/** Puuttuvat pakolliset kentät (tyhjä lista = kelpaa). */
+export function tarkistaAjattelija(a) {
+  const puuttuu = [];
+  const vaadi = (ehto, nimi) => { if (!ehto) puuttuu.push(nimi); };
+  vaadi(a && typeof a.tunnus === 'string', 'tunnus');
+  if (!a) return puuttuu;
+  for (const k of ['nimi', 'vuodet', 'kysymys', 'malli', 'kipsi']) vaadi(typeof a[k] === 'string' && a[k], k);
+  for (const k of ['paa', 'tausta', 'linssi', 'kierto', 'liuku', 'ca', 'syvyys']) vaadi(a[k] != null, k);
+  vaadi(a.avainvalo?.suunta && a.avainvalo?.tahtays, 'avainvalo');
+  vaadi(a.otokset?.rembrandt?.paikka, 'otokset.rembrandt');
+  const lause = a.paalauseet?.[a.kierros?.paalause];
+  vaadi(lause?.fi && lause?.el && lause?.viite && lause?.sade && lause?.vino, 'kierros.paalause → paalauseet');
+  for (const k of ['nimi', 'kysymys', 'lahesty', 'vieritys', 'lahde', 'kaariLoppu', 'kaiku', 'pito']) vaadi(a.ajat?.[k] != null, `ajat.${k}`);
+  vaadi(a.prologi?.valot?.length, 'prologi');
+  vaadi(a.intro?.otokset?.length && a.intro?.valo?.length, 'intro');
+  vaadi(a.taustavirta?.rivit?.length && a.taustavirta?.projektorit?.length, 'taustavirta');
+  vaadi(a.fontit?.iowan, 'fontit.iowan');
+  // Valinnaiset: kaiku (null = ei kaikua), syke, elama (lappu), pulunKysymykset (PULU); jos annettu, oltava kokonaisia.
+  if (a.kaiku != null) vaadi(a.kaiku.kuva && a.kaiku.kamera, 'kaiku');
+  if (a.elama != null) vaadi(a.elama.otsikko && a.elama.kappaleet?.length, 'elama');
+  if (a.pulunKysymykset != null) vaadi(Array.isArray(a.pulunKysymykset) && a.pulunKysymykset.length, 'pulunKysymykset');
+  vaadi(a.aani?.puhe && a.aani?.musiikki, 'aani');
+  vaadi(a.tykki?.vari, 'tykki');
+  return puuttuu;
+}
 const RUUTUA_S = 30;   // Blender-mallin ruudut
 
 let kolmeLupaus = null;
@@ -95,6 +127,8 @@ export function lentoasento(THREE, mesh, p, n, kulma = 38, matka = 0.09) {
 export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = null, sulkeutui = null } = {}) {
   const a = AJATTELIJAT[tunnus];
   if (!a) return null;
+  const puuttuu = tarkistaAjattelija(a);
+  if (puuttuu.length) { console.warn('ajattelija: puuttuvat kentät', tunnus, puuttuu); return null; }
   const THREE = await lataaKolme();
   const { GLTFLoader } = THREE;
 
@@ -120,7 +154,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   pohjatLataaTyyli();
   const nimi = document.createElement('p');
   nimi.className = 'ajattelija-teksti ajattelija-nimi';
-  nimi.append(a.nimi);
+  (a.nimiRivit ?? [a.nimi]).forEach((rivi, i) => { if (i) nimi.append(document.createElement('br')); nimi.append(rivi); });
   const vuodet = document.createElement('span');
   vuodet.className = 'ajattelija-vuodet';
   vuodet.textContent = a.vuodet;
@@ -179,7 +213,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   kohtaus.add(valo, valo.target);
 
   // Päälause 38a videotykkinä otsalla.
-  const lause = a.paalauseet['38a'];
+  const lause = a.paalauseet[a.kierros.paalause];
   lahdeEl.textContent = lause.el;
   lahdeViite.textContent = lause.viite;
   const tv = a.taustavirta;
@@ -295,33 +329,39 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   const KAIKU_VOIMA = Number(haku.get('kaikuvoima')) || 1.5;
   let kaiku = null;
   let syke = {};
-  const kaikuTayte = new THREE.SpotLight(new THREE.Color(...kk.tayte.vari), 0, 0, kk.tayte.keila / 2 * Math.PI / 180, kk.tayte.blend, 2);
-  kaikuTayte.position.copy(os.p).add(b2t(THREE, kk.tayte.suunta).normalize());
-  kaikuTayte.target.position.copy(os.p);
-  kohtaus.add(kaikuTayte, kaikuTayte.target);
-  const kaikuIndeksi = 1 + virta.length;
-  const kaikuTykki = os.p.clone().add(os.n.clone().add(b2t(THREE, kk.vino)).normalize().multiplyScalar(kk.etaisyys));
-  // Kaiun kamera (v10): lähempänä tasaisempaa otsan pintaa, hidas ajo ja liuku.
-  const kaikuSuunta = os.n.clone().add(b2t(THREE, kk.kamera.suunta)).normalize();
-  const kaikuKamera = (osuus) => {
-    const liuku = lento.t.clone().multiplyScalar(kk.kamera.liuku * osuus);
-    const matka = kk.kamera.matka[0] + (kk.kamera.matka[1] - kk.kamera.matka[0]) * osuus;
-    return { paikka: os.p.clone().add(kaikuSuunta.clone().multiplyScalar(matka)).add(liuku), katse: os.p.clone().add(liuku) };
-  };
-  new THREE.TextureLoader().loadAsync(`${R2}${kk.kuva}`).then((tk) => {
-    tk.colorSpace = THREE.NoColorSpace;
-    u.pKaiku.value = tk;
-    u.pKaikuVari.value.setRGB(...kk.savy);
-    const korkeus = kk.lev * tk.image.height / tk.image.width;
-    asetaProjektori(THREE, u, kaikuIndeksi, {
-      paikka: kaikuTykki, kohde: os.p, etaisyys: kk.etaisyys, nauhaKork: korkeus,
-      rivi: { lev: tk.image.width, korkeus: tk.image.height, uMax: 1 }, ala: Math.max(kk.lev, korkeus), blend: kk.blend,
-      atlasKorkeus: tk.image.height, kaiku: true,
-    });
-    u.pMaara.value = kaikuIndeksi + 1;
-    kaiku = tk;
-  }).catch((syy) => console.warn('ajattelija: kaikukuva', syy));
-  fetch(`${R2}${a.syke}`).then((v) => (v.ok ? v.json() : {})).then((j) => { syke = j; }).catch(() => {});
+  // Kaiku on valinnainen (Marcuksella ei vielä ole): ilman sitä kaaren kamera jatkuu pitoon ja aurinko pysyy.
+  let kaikuTayte = null;
+  let kaikuIndeksi = -1;
+  let kaikuKamera = null;
+  if (kk) {
+    kaikuTayte = new THREE.SpotLight(new THREE.Color(...kk.tayte.vari), 0, 0, kk.tayte.keila / 2 * Math.PI / 180, kk.tayte.blend, 2);
+    kaikuTayte.position.copy(os.p).add(b2t(THREE, kk.tayte.suunta).normalize());
+    kaikuTayte.target.position.copy(os.p);
+    kohtaus.add(kaikuTayte, kaikuTayte.target);
+    kaikuIndeksi = 1 + virta.length;
+    const kaikuTykki = os.p.clone().add(os.n.clone().add(b2t(THREE, kk.vino)).normalize().multiplyScalar(kk.etaisyys));
+    // Kaiun kamera (v10): lähempänä tasaisempaa otsan pintaa, hidas ajo ja liuku.
+    const kaikuSuunta = os.n.clone().add(b2t(THREE, kk.kamera.suunta)).normalize();
+    kaikuKamera = (osuus) => {
+      const liuku = lento.t.clone().multiplyScalar(kk.kamera.liuku * osuus);
+      const matka = kk.kamera.matka[0] + (kk.kamera.matka[1] - kk.kamera.matka[0]) * osuus;
+      return { paikka: os.p.clone().add(kaikuSuunta.clone().multiplyScalar(matka)).add(liuku), katse: os.p.clone().add(liuku) };
+    };
+    new THREE.TextureLoader().loadAsync(`${R2}${kk.kuva}`).then((tk) => {
+      tk.colorSpace = THREE.NoColorSpace;
+      u.pKaiku.value = tk;
+      u.pKaikuVari.value.setRGB(...kk.savy);
+      const korkeus = kk.lev * tk.image.height / tk.image.width;
+      asetaProjektori(THREE, u, kaikuIndeksi, {
+        paikka: kaikuTykki, kohde: os.p, etaisyys: kk.etaisyys, nauhaKork: korkeus,
+        rivi: { lev: tk.image.width, korkeus: tk.image.height, uMax: 1 }, ala: Math.max(kk.lev, korkeus), blend: kk.blend,
+        atlasKorkeus: tk.image.height, kaiku: true,
+      });
+      u.pMaara.value = kaikuIndeksi + 1;
+      kaiku = tk;
+    }).catch((syy) => console.warn('ajattelija: kaikukuva', syy));
+    if (a.syke) fetch(`${R2}${a.syke}`).then((v) => (v.ok ? v.json() : {})).then((j) => { syke = j; }).catch(() => {});
+  }
 
   const nayta = (el, r, [a0, a1], hai = 15) => {
     el.style.opacity = String(r < a0 || r > a1 ? 0 : Math.min(1, (r - a0) / hai, (a1 - r) / hai));
@@ -340,7 +380,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     kohtaus.background = mustaVari;
     valo.intensity = 0;
     maailma.intensity = 0;
-    kaikuTayte.intensity = 0;
+    if (kaikuTayte) kaikuTayte.intensity = 0;
     u.pB.value.forEach((b) => { b.w = 0; });
     asetaKamera(prKamera.paikka, prKamera.katse, prKamera.mm);
     vinjetti.style.opacity = '0';
@@ -362,7 +402,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       const loppu = kaari(0);
       paikka = remPaikka.clone().lerp(loppu.paikka, k); katse = remKatse.clone().lerp(loppu.katse, k);
       mm = rem.mm + (a.linssi - rem.mm) * k;
-    } else if (r <= T.kaiku[0]) {
+    } else if (!kk || r <= T.kaiku[0]) {
       const kk2 = kaari(pehmea(valilla(Math.min(r, T.kaariLoppu), T.lahesty[1], T.kaariLoppu)));
       paikka = kk2.paikka; katse = kk2.katse; mm = a.linssi;
     } else {
@@ -386,12 +426,12 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     valo.position.copy(paa).add(sv.multiplyScalar(av.etaisyys));
     valo.target.position.copy(tahtays);
     const [ka, kl] = T.kaiku;
-    const hiipuu = r <= ka || r >= kl ? 1 : Math.max(0, 1 - Math.min(1, (r - ka) / 45, (kl - r) / 45));
+    const hiipuu = !kk || r <= ka || r >= kl ? 1 : Math.max(0, 1 - Math.min(1, (r - ka) / 45, (kl - r) / 45));
     valo.intensity = AVAIN * hiipuu;
     maailma.intensity = TAYTE * hiipuu;
     const kaikuK = 1 - hiipuu;
     // Webin AgX nostaa himmeää täytettä enemmän kuin Blenderin "Medium High Contrast": 0,10 → 0,05 (v9-täytekoe).
-    kaikuTayte.intensity = AVAIN * kk.tayte.osuus * KAIKU_TAYTE * kaikuK;
+    if (kaikuTayte) kaikuTayte.intensity = AVAIN * kk.tayte.osuus * KAIKU_TAYTE * kaikuK;
     if (kaiku) {
       u.pA.value[kaikuIndeksi].w = -kk.liuku + 2 * kk.liuku * Math.min(1, Math.max(0, valilla(r, ka, kl)));
       u.pB.value[kaikuIndeksi].w = kk.voima * W * KAIKU_VOIMA * kaikuK * (syke[String(Math.round(r))] ?? 1);
@@ -420,13 +460,43 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   let aaniSoi = false;
   /** Globaali ruutu G: 1–120 prologi, sen jälkeen kierros (r = G − 120). */
   // Kierroksen lopussa "Sokrateen elämä" -lappu NOSTOKORTTI-pohjalla (teema tumma) KUVANÄKYMÄN sisällä.
+  // Samalla PULU (osa CHAT, js/pohjat/pulu.js; Päätoimittaja 2.10.2026): minipulu ja viisi kysymystä, isännän teema
+  // lasi (lämmin linssi, Natiivi-UI). Kulma nousee lapun yläpuolelle, kun lappu on auki (molemmat ovat alareunassa).
   let lappu = null;
+  let pulu = null;
+  let lopetusAvattu = false;
+  let lapunVahti = null;
   function avaaLappu() {
-    if (lappu) return;
-    lappu = luoPohjaNostokortti({ yla: a.nimi, otsikko: a.elama.otsikko, kappaleet: a.elama.kappaleet }, { teema: 'tumma' });
-    if (!lappu) return;
-    pohja.el.appendChild(lappu.el);
-    lappu.avaa();
+    if (lopetusAvattu) return;
+    lopetusAvattu = true;
+    // Lappu ja PULU ovat valinnaisia (sisältö Sisältökirjurilta ajattelija kerrallaan).
+    lappu = a.elama && luoPohjaNostokortti({ yla: a.nimi, otsikko: a.elama.otsikko, kappaleet: a.elama.kappaleet }, {
+      teema: 'tumma',
+      sulje: () => { if (pulu) { pulu.kulma.style.bottom = ''; pulu.kulma.style.removeProperty('--tk-pulu-tila'); } },
+    });
+    if (lappu) {
+      pohja.el.appendChild(lappu.el);
+      lappu.avaa();
+    }
+    if (!a.pulunKysymykset?.length) return;
+    // PULU laiskasti (minipulu ja Pulun kortti vasta lopussa; yhden tiedoston versio ei niputa linssiä eikä sen ketjua).
+    import('../pohjat/pulu.js').then(({ luoPohjaPulu }) => {
+      if (!pohja.el.isConnected) return;
+      pulu = luoPohjaPulu({ luokka: 'tk', teema: 'lasi', aihe: a.nimi, kysymykset: a.pulunKysymykset });
+      pohja.el.appendChild(pulu.kulma);
+      if (lappu && typeof ResizeObserver === 'function') {
+        // Kortti mahtuu lapun ja ✕:n väliin: ✕ (44 pt + 12 + turva-alue) jää aina näkyviin.
+        lapunVahti = new ResizeObserver(() => {
+          if (!lappu?.auki) return;
+          const korkeus = lappu.el.getBoundingClientRect().height;
+          pulu.kulma.style.bottom = `${Math.round(korkeus + 12)}px`;
+          const ylaRaja = pohja.sulku.getBoundingClientRect().bottom + 12;
+          const tila = pohja.el.clientHeight - korkeus - 12 - pulu.nappi.getBoundingClientRect().height - 8 - ylaRaja;
+          pulu.kulma.style.setProperty('--tk-pulu-tila', `${Math.max(120, Math.round(tila))}px`);
+        });
+        lapunVahti.observe(lappu.el);
+      }
+    }).catch((syy) => console.warn('ajattelija: PULU', syy));
   }
   function asetaGlobaali(G) {
     if (G <= pr0.loppu) asetaPrologi(Math.max(1, G));
@@ -510,6 +580,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     kokoVahti.disconnect();
     pohja.sulje();
     for (const x of [aani, musiikkiAani]) { x.pause(); x.src = ''; }
+    lapunVahti?.disconnect();
+    pulu?.tuhoa();
     renderoija.dispose();
     atlas.dispose();
     detalji.dispose();

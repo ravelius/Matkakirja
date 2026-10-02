@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { ajattelijaLipusta, kenttaMm, AJATTELIJA_KIRJASTO, AJATTELIJAT } from '../js/linssit/ajattelija.js';
 import { SOKRATES } from '../js/linssit/ajattelija-sokrates.js';
-import { NAUHA_EM, PROJEKTOREITA_ENINTAAN } from '../js/linssit/ajattelija-projektori.js';
+import { NAUHA_EM, PROJEKTOREITA_ENINTAAN, piirraAtlas } from '../js/linssit/ajattelija-projektori.js';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 
@@ -12,7 +12,8 @@ test('vain kehityslippu ?ajattelija=sokrates avaa näkymän; tuntematon tai puut
   assert.equal(ajattelijaLipusta('?ajattelija=sokrates'), 'sokrates');
   assert.equal(ajattelijaLipusta('?ajattelija=platon'), null);
   assert.equal(ajattelijaLipusta(''), null);
-  assert.deepEqual(Object.keys(AJATTELIJAT), ['sokrates']);
+  assert.deepEqual(Object.keys(AJATTELIJAT), ['sokrates', 'marcus']);
+  assert.equal(ajattelijaLipusta('?ajattelija=marcus'), 'marcus');
   const main = lue('../js/main.js');
   assert.match(main, /const ajattelija = ajattelijaLipusta\(\);\n\s*if \(ajattelija\) avaaAjattelija\(ajattelija\)/);
 });
@@ -69,7 +70,7 @@ test('vaihe 3: prologi, intron leikkaukset, nimi ja kysymys, kaiku ja äänirait
 test('vaihe 4: KUVANÄKYMÄ-pohja (✕ lasia, veto alas, Esc), lappu NOSTOKORTTI tummana, Pulun viisi kysymystä', () => {
   const js = lue('../js/linssit/ajattelija.js');
   assert.match(js, /luoPohjaKuvanakyma\(\{ nimi: `\$\{a\.nimi\}: ajattelija`/);
-  assert.match(js, /luoPohjaNostokortti\(\{ yla: a\.nimi, otsikko: a\.elama\.otsikko, kappaleet: a\.elama\.kappaleet \}, \{ teema: 'tumma' \}\)/);
+  assert.match(js, /luoPohjaNostokortti\(\{ yla: a\.nimi, otsikko: a\.elama\.otsikko, kappaleet: a\.elama\.kappaleet \}, \{\s*teema: 'tumma',/);
   assert.doesNotMatch(js, /tk-nappi ajattelija-sulku/, 'oma ✕ korvattu pohjalla');
   assert.equal(SOKRATES.elama.otsikko, 'Sokrateen elämä');
   assert.equal(SOKRATES.elama.kappaleet.length, 7);
@@ -87,7 +88,7 @@ test('omistajan v9-palaute: prologi ilman kehää, Zarathustra koko kohtaus vaim
   assert.deepEqual(Object.keys(SOKRATES.aani), ['puhe', 'musiikki']);
   const tyokalu = lue('../tools/ajattelija-aaniraita.mjs');
   assert.match(tyokalu, /const VAIMENNUS = \{ alku: 17\.5, taso: 0\.22, ramppi: 2 \};/);
-  assert.match(tyokalu, /const SILMUKKA = \[66\.0, 80\.0\];/);
+  assert.match(tyokalu, /silmukka: \[66\.0, 80\.0\],/);
   assert.doesNotMatch(tyokalu, /gymnopedie/i, 'Satie pois');
   const pr = lue('../js/linssit/ajattelija-projektori.js');
   assert.match(pr, /texture2D\( normalMap, vNormalMapUv, -0\.75 \)/);
@@ -97,4 +98,63 @@ test('omistajan v9-palaute: prologi ilman kehää, Zarathustra koko kohtaus vaim
 
 test('kaikukuvat ovat positiivisia (omistaja 2.10.2026 klo 11.13): sotilas v2 ilman kääntöä', () => {
   assert.equal(SOKRATES.kaiku.kuva, 'ajattelijat/sokrates/v1/kaiku-sotilas-v2.png');
+});
+
+test('PULU kierroksen lopussa: pohja, lämmin lasi, viisi kysymystä, kortti lapun ja ✕:n välissä', () => {
+  const js = lue('../js/linssit/ajattelija.js');
+  assert.match(js, /luoPohjaPulu\(\{ luokka: 'tk', teema: 'lasi', aihe: a\.nimi, kysymykset: a\.pulunKysymykset \}\)/);
+  assert.match(js, /pulu\.kulma\.style\.setProperty\('--tk-pulu-tila'/);
+  assert.match(js, /pulu\?\.tuhoa\(\);/);
+  assert.match(lue('../js/pohjat/pohjat.js'), /const POHJA_EI_OHINAPAUTUS = '[^']*\.tk-pulukulma/);
+  assert.match(lue('../css/pohjat/pulu.css'), /max-height: min\(62vh, 500px, var\(--tk-pulu-tila, 100vh\)\);/);
+});
+
+test('ajattelijat ovat dataa: jokainen rekisterin ajattelija kelpaa, moottori ei tunne nimiä', async () => {
+  const { tarkistaAjattelija } = await import('../js/linssit/ajattelija.js');
+  for (const [tunnus, a] of Object.entries(AJATTELIJAT)) {
+    assert.deepEqual(tarkistaAjattelija(a), [], `${tunnus}: puuttuvat kentät`);
+    assert.equal(a.tunnus, tunnus);
+  }
+  assert.ok(tarkistaAjattelija({ tunnus: 'x' }).length > 5, 'tyhjä data ei kelpaa');
+  const moottori = lue('../js/linssit/ajattelija.js').replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, '');
+  assert.doesNotMatch(moottori.replace(/import \{ SOKRATES \}[^\n]*\n|sokrates: SOKRATES/g, ''), /38a|sokrates|Sokrates/);
+});
+
+test('Marcus Aurelius pelkkänä datana: Itselleen 10.16, kaksirivinen nimi, sadeihmeen kaiku, Eroica CC0', async () => {
+  const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
+  assert.equal(MARCUS.paalauseet[MARCUS.kierros.paalause].viite, 'Marcus Aurelius, Itselleen 10.16');
+  assert.deepEqual(MARCUS.nimiRivit, ['MARCUS', 'AURELIUS']);
+  assert.equal(MARCUS.kaiku.kuva, 'ajattelijat/marcus/v1/kaiku-sade.png');
+  assert.match(MARCUS.kaiku.nimeaminen, /Nico Kokkonen, CC BY 3.0/);
+  assert.equal(MARCUS.taustavirta.rivit.length, 20);
+  assert.equal(MARCUS.prologi, SOKRATES.prologi, 'vakioaloitus on yhteinen');
+  const tyokalu = lue('../tools/ajattelija-aaniraita.mjs');
+  assert.match(tyokalu, /marcus: \{[\s\S]*?eroica-marcia-funebre-musopen\.ogg[\s\S]*?osat: \[\[75\.48, 75\.48 \+ 48\.333\]\]/);
+  const js = lue('../js/linssit/ajattelija.js');
+  assert.match(js, /\} else if \(!kk \|\| r <= T\.kaiku\[0\]\) \{/, 'ilman kaikua kaari jatkuu pitoon');
+  assert.match(js, /if \(!a\.pulunKysymykset\?\.length\) return;/);
+});
+
+test('tekijätiedot: CC BY -kuva ja -musiikki nimettyinä, three.js ja bystit (js/lahteet.js)', () => {
+  const l = lue('../js/lahteet.js');
+  assert.match(l, /tekija: 'Nico Kokkonen, Wikimedia Commons \(Column_of_Marcus_Aurelius_-_detail2\.jpg\)',\n\s*lisenssi: 'CC BY 3\.0',/);
+  assert.match(l, /tekija: 'Sascha Ende, filmmusic\.io',\n\s*lisenssi: 'CC BY 4\.0',/);
+  assert.match(l, /three\.js r185 ja GLTFLoader/);
+  assert.match(l, /KAS635\) ja Marcus Aurelius \(KAS979\)/);
+});
+
+test('atlas: toistorivi piirretään koko atlaksen leveydelle (kaikki laatat), tavallinen rivi omalle leveydelleen', () => {
+  const rajat = [];
+  const ctx = {
+    measureText: (t) => ({ width: t.length * 10 }), fillRect() {}, save() {}, restore() {}, beginPath() {}, clip() {},
+    fillText() {}, rect: (x, y, w) => rajat.push(w),
+  };
+  const doc = { createElement: () => ({ getContext: () => ctx }) };
+  const { paikat } = piirraAtlas([
+    { teksti: 'ΓΝΩΘΙ ΣΑΥΤΟΝ', fontti: 'serif', korkeus: 64, toisto: true },
+    { teksti: 'Sokrates', fontti: 'serif', korkeus: 64 },
+  ], doc);
+  assert.ok(paikat[0].toistoja > 1);
+  assert.equal(rajat[0], 4096);
+  assert.equal(rajat[1], paikat[1].lev);
 });

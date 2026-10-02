@@ -17,6 +17,8 @@ export const SOKRATES = Object.freeze({
   kysymys: 'Miten pitäisi elää?',
   // GLB: proto-3d/_valmiit/sokrates-bysti/v1 (SMK KAS635, PDM 1.0; Scan the World / SMK). L1 ~50 k kolmiota + normaalikartta.
   malli: 'ajattelijat/sokrates/v1/sokrates-L1.glb',
+  // Kartan pää ERIKOISNOSTOT-sarakkeessa (js/ajattelijapaat.js): Linnanrakentaja _valmiit/ajattelijat-kartta/v1, ~5 k kolmiota.
+  kartta: { glb: 'ajattelijat/kartta/v1/sokrates-kartta.glb', maa: 'GRC' },
   // Kipsin mikronormaali (Poly Haven grey_plaster_02 nor_gl, Rob Tuytel, CC0; 1024 px).
   kipsi: 'ajattelijat/yhteiset/kipsi-nor-1k.jpg',
   korkeus: 0.51,
@@ -29,6 +31,8 @@ export const SOKRATES = Object.freeze({
     // Nimi ja vuodet alemmasta kuvakulmasta (omistajan v9-palaute 2.10. 10.3x; Linnanrakentaja v10).
     rembrandt: { paikka: [-0.30, -1.02, 0.25], katse: [-0.06, -0.06, 0.40], mm: 35 },
   },
+  // Kierros 1: päälause (paalauseet-avain), jonka videotykki projisoi ja jonka lähderivi näytetään.
+  kierros: { paalause: '38a' },
   linssi: 18,              // V3B_LINSSI: lähikuvat pinnan yllä
   kierto: 22,              // V6_KIERTO: ± astetta pinnan normaalin ympäri tekstin aikana
   liuku: 0.008,            // V6_LIUKU: ± m sivuttain

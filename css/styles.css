@@ -69,7 +69,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 8820c4af85c0 */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde cd29af281aa2 */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -29716,6 +29716,26 @@ body[data-mode] .turn-card:has(.toimintorivi.rivi-yksi) .actions,
    saa avata tässä — suljettuna se on `pointer-events: none` ja
    sieppaisi muuten koko rivin alan matkanappeineen. */
 .toimintorivi.rivi-yksi .monitoimi-nappi { pointer-events: auto; }
+
+/*
+ * LIUKU NOUSEE LIIKU-PILLERIN JA PULUN YLÄPUOLELLE (Päätoimittaja 2.10.2026,
+ * Natiivi-UI:n pariteettikatsaus natiivi-ui-pariteetti4/parit/liiku.jpg).
+ * Rivin päällä liuska jäi osittain kelluvan Pulun (sama kaista, oikea
+ * reuna) ja kartuutsin taakse. Natiivissa liuska on oma rivinsä pillerin
+ * yläpuolella, ja pilleri jää näkyviin avaimeksi, josta liuska myös
+ * suljetaan (vaihdaLiuku). Siksi liuska nousee rivin korkeuden verran
+ * ylös, ja monitoiminappi ei väisty sen alta.
+ */
+.toimintorivi.rivi-yksi .toimintorivi-liuku {
+  top: auto;
+  bottom: calc(100% + 1.6rem);   /* Pulun hahmo ulottuu ~13 px nappinsa yli */
+  height: 100%;
+}
+.toimintorivi.rivi-yksi.liuku-auki .toimintorivi-perus > .monitoimi-nappi {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
 /*
  * ERÄ 19: SYMBOLI POIS, SANA TILALLE. Kompassi oli napin koko sisältö;
