@@ -149,6 +149,8 @@ namespace Matkakirja.Natiivi
                     Lisenssi = "Public domain (Yhdysvaltain liittovaltion teos)" },
                 new Rivi { Nimi = "Lennon pinta, pilvetön",Tekija = "EOxCloudless https://cloudless.eox.at by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)", EiLisenssia = true },
                 new Rivi { Nimi = "Lentokone (DC-3-tyyppinen potkurikone)", Tekija = "Pelin oma malli", Lisenssi = "CC0 (public domain)" },
+                // Myllyn naksahdukset (Siirtoseppä 2.10.2026, omistajan OK): Resources/Pelit/Mylly/mylly-asetus|poisto.wav.
+                new Rivi { Nimi = "Myllyn nappuloiden äänet", Tekija = "Kenney (kenney.nl), Impact Sounds", Lisenssi = "CC0 (public domain)" },
                 // ISS-kytkinpaneelin painetut otsikot ja legendat (Linnanrakentajan Cycles-renderit 30.9., Päätoimittaja).
                 new Rivi { Nimi = "Barlow Condensed (ISS-kytkinpaneelin tekstit)", Tekija = "© 2017 The Barlow Project Authors (github.com/jpt/barlow)",
                     Lisenssi = "SIL Open Font License 1.1" },
