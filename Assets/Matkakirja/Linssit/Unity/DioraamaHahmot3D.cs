@@ -684,9 +684,22 @@ namespace Matkakirja.Natiivi
                 varjoMateriaali.SetFloat("_Peitto", koe ? 1f : 0.7f);
                 varjoMateriaali.SetFloat("_ZTest", (float)(koe ? UnityEngine.Rendering.CompareFunction.Always : UnityEngine.Rendering.CompareFunction.LessEqual));
             }
-            if (varjoMateriaali != null && mita != null && mita.StartsWith("veto=", StringComparison.Ordinal)
-                && float.TryParse(mita.Substring(5), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var veto))
-                varjoMateriaali.SetFloat("_Veto", veto);
+            // Yksittäiset säädöt (juurisyy 20.5x): veto=m, peitto=0–1, ztest=always|lequal, vari=punainen|varjo.
+            if (varjoMateriaali != null && mita != null && mita.Contains("="))
+            {
+                var kv = mita.Split('=');
+                float.TryParse(kv[1], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var luku);
+                switch (kv[0])
+                {
+                    case "veto": varjoMateriaali.SetFloat("_Veto", luku); break;
+                    case "peitto": varjoMateriaali.SetFloat("_Peitto", luku); break;
+                    case "ztest": varjoMateriaali.SetFloat("_ZTest", (float)(kv[1] == "always" ? UnityEngine.Rendering.CompareFunction.Always : UnityEngine.Rendering.CompareFunction.LessEqual)); break;
+                    case "vari": varjoMateriaali.SetColor("_Vari", kv[1] == "punainen" ? Color.red : new Color(0.02f, 0.015f, 0.01f, 1f)); break;
+                }
+            }
+            if (varjoMateriaali != null && mita != null && mita.Contains("="))
+                return $"varjo: vari {varjoMateriaali.GetColor("_Vari")}, peitto {varjoMateriaali.GetFloat("_Peitto"):F2}, ztest {varjoMateriaali.GetFloat("_ZTest")}, "
+                    + $"veto {varjoMateriaali.GetFloat("_Veto"):F2}, jono {varjoMateriaali.renderQueue}";
             int varjoja = 0; string varjoY = "";
             foreach (var e in esiintymat)
             {
