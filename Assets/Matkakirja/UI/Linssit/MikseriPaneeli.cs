@@ -49,12 +49,18 @@ namespace Matkakirja.Natiivi
         readonly Button aNappi, bNappi;
         readonly Dictionary<string, (Slider Saadin, Label Arvo, MikseriSaadin Kuvaus)> saatimet = new Dictionary<string, (Slider, Label, MikseriSaadin)>();
         bool auki;
+        /// <summary>OHJAUSNAPPI-koe (OhjausryhmaKoe): säätönappi ryhmään.</summary>
+        internal VisualElement Lappu => lappu;
+        internal void Vaihda() => Avaa(!auki);
         int versio = int.MinValue;
         IMikseriLahde kytketty;
         Vector2 paikka = new Vector2(62f, 120f), vetoAlku, paikkaAlku;
         bool vedetaan;
 
         public static MikseriPaneeli Viimeisin { get; private set; }
+
+        /// <summary>Linnan valikko (omistaja 2.10. 14.44): säätönappi pois ruudulta, mikseri avataan valikon Äänet-näkymästä.</summary>
+        public static bool LappuPiilossa;
 
         public MikseriPaneeli(UiKerros kerros)
         {
@@ -159,6 +165,7 @@ namespace Matkakirja.Natiivi
             juuri.style.display = l != null ? DisplayStyle.Flex : DisplayStyle.None;
             if (l == null) { kytketty = null; return; }
             if (!ReferenceEquals(l, kytketty) || l.Versio != versio) Rakenna(l);
+            lappu.style.display = LappuPiilossa && !auki ? DisplayStyle.None : DisplayStyle.Flex;
             lappu.style.backgroundColor = auki ? new Color(Kulta.r, Kulta.g, Kulta.b, 0.9f) : Lasi;
             lappu.style.color = auki ? Lasi : Kulta;
             paneeli.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;

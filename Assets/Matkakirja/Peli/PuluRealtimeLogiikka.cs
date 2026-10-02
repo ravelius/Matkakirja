@@ -95,7 +95,7 @@ namespace Matkakirja.Peli
                 case RealtimeTila.Yhdistaa: return "Yhdistän Puluun…";
                 case RealtimeTila.Kuuntelee: return "Kuuntelen — lopeta";
                 case RealtimeTila.Puhuu: return "Pulu puhuu — lopeta";
-                default: return "Puhu Pululle (koe)";
+                default: return "Live"; // omistaja 2.10.2026: "Puhu Pululle (koe)" → "Live"
             }
         }
 

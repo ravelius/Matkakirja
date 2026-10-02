@@ -78,6 +78,24 @@ namespace Matkakirja.Natiivi
         public string Url => string.IsNullOrEmpty(Tiedosto) ? null
             : Tiedosto.StartsWith("https://") || Tiedosto.StartsWith("http://") ? Tiedosto
             : "https://media.matkakirja.app/julisteet/" + Tiedosto;
+
+        /// <summary>
+        /// Gallerian pikkukuva (web #3859 julistePikkuUrl): tuotanto/tuot-x.png → tuotanto/pieni/tuot-x.jpg (360 px JPEG). Täysikokoinen
+        /// (~4 Mt PNG) vasta suurennokseen; muu kuin tuotantopolku sellaisenaan (Päätoimittaja 2.10.: Moskova ja Lontoo jäivät tyhjiksi).
+        /// </summary>
+        public string PikkuUrl
+        {
+            get
+            {
+                var u = Url;
+                if (u == null) return null;
+                int i = u.LastIndexOf('/');
+                if (i < 0 || !u.Substring(0, i + 1).EndsWith("/tuotanto/", System.StringComparison.Ordinal)) return u;
+                var nimi = u.Substring(i + 1);
+                if (nimi.EndsWith(".png", System.StringComparison.OrdinalIgnoreCase)) nimi = nimi.Substring(0, nimi.Length - 4) + ".jpg";
+                return u.Substring(0, i + 1) + "pieni/" + nimi;
+            }
+        }
     }
 
     public static class UiSisalto

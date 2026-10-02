@@ -1,5 +1,5 @@
 /* AJATTELIJAT-LINSSI (pinta; Linssiseppä 2, 2.10.2026; web css/pohjat/pinnat/ajattelija.css ja js/linssit/ajattelija.js):
- * KUVANÄKYMÄ-pohja, teema tumma (juuren tk-teema-tumma), ✕ lämmin lasi (Pohjat/kuvanakyma.uss + tk-teema-lasi). Kuvan päällä
+ * KUVANÄKYMÄ-pohja, teema tumma (juuren tk-teema-tumma), sulku linssien yhteisellä ohjauksella (LinssiUi). Kuvan päällä
  * nimi ja elinvuodet, kysymys sekä päälauseen lähderivi (lähderivin tumma liukuväri piirretään 3D-näyttämössä). Näkyvyys tulee
  * aikajanalta (AjattelijatSovitin.Tekstit → opacity ruuduittain), joten tässä ei ole siirtymiä. Lopussa elämä-lappu
  * (NOSTOKORTTI-pohjan tumma teema: paikka ja vetokahva koodista, AjattelijaNakyma.Paikka) ja PULU-kulma.

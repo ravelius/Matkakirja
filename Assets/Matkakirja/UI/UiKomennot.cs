@@ -519,6 +519,7 @@ namespace Matkakirja.Natiivi
                 case "valikko" when System.Enum.TryParse(loput, true, out Paavalikko.Osa osa): ui.Valikko.AvaaOsa(osa); return null;
                 case "vahvistus": ui.Valikko.KysyUusiPeli(); return null;
                 case "mylly": return "=" + MyllyNakyma.Hae().Komento(loput); // lautapelin pohja (Mylly, Siirtoseppä 1.10.)
+                case "linna": return "=" + (UiNakymat.Hae()?.Linssit?.Dioraama?.Linna?.Komento(loput) ?? "linna: ei auki"); // linnan valikko (2.10.)
                 case "loppukortti": ui.Huipennus.NaytaLoppu("Rahat loppuivat kaupungissa Marseille, matkan 12. päivänä. Laukussa 0 löytöä ja 0 unohdettua aarretta.", null, () => { }, () => { }); return null; // KORTTI-pohja: loppukortti (savuke 1102) // KORTTI-pohja: uuden pelin vahvistus (ei vahvista)
                 case "valikko": ui.Valikko.Sulje(); ui.Linssit.Valitsin.Avaa(); return null;
                 case "asetukset": ui.Aanentasot.Avaa(); return null;
@@ -623,6 +624,7 @@ namespace Matkakirja.Natiivi
                             "testi", new List<string> { "Mitä tässä näkyy?" }, loput.Substring(6).Trim());
                         return null;
                     }
+                    if (loput == "realtime-nappi") { PuluRealtimeNappi.PakotaNakyviin = true; ui.Chat.Avaa(); PuluRealtimeNappi.Nykyinen?.PaivitaNakyvyys(); return null; }
                     if (loput == "aani") { Kirjaa("ui chat aani: " + (ui.Chat.VaihdaAaniTesti() ? "päällä" : "pois")); return null; }
                     if (loput == "lukija" || loput == "lukija valikko") { ui.Chat.Avaa(); Kirjaa("ui chat lukija: " + ui.Chat.LukijaTesti(loput == "lukija valikko")); return null; }
                     // Puhekeskustelu (web #3546): saneltu kysymys ilman mikrofonia, tila + viive, mikin napautus.
@@ -784,6 +786,11 @@ namespace Matkakirja.Natiivi
                     // Näppäimistökerros (Nappaimisto): ui nappain vasen|oikea|ylos|alas|esc (kuin fyysinen näppäin).
                     Kirjaa("nappain: " + Nappaimisto.Paina(loput.Trim()));
                     return null;
+                case "ohjausnapit":
+                    // OHJAUSNAPPI-koe (omistaja 2.10. klo 14.16 ja 14.44): ui ohjausnapit 0 (pois) | 1 (rivi) | 2 (valikko).
+                    if (loput.Trim() == "auki") { OhjausryhmaKoe.Viimeisin?.AvaaValikko(); return "=ohjausnapit valikko auki"; }
+                    OhjausryhmaKoe.Tila = int.TryParse(loput.Trim(), out var okTila) ? okTila : 1;
+                    return "=ohjausnapit " + OhjausryhmaKoe.Tila;
                 case "mikseri":
                 {
                     // Kehittäjän mikseripaneeli (MikseriPaneeli): ui mikseri [tila] | auki | kiinni | demo | demo pois.

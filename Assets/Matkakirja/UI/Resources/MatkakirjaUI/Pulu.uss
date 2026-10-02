@@ -1071,37 +1071,23 @@
     white-space: normal;
 }
 
-/* Pulun äänikeskustelun koenappi (web .pollo-realtime-koe: pilleri, läpinäkyvä, himmeä muste 0.8rem, reuna 1 px
-   katkoviiva; päällä yhtenäinen reuna ja tavallinen muste). UI Toolkitissa ei dashed-reunaa (vrt.
-   .mk-poiminnat__pilleri--oma): lepotilassa 1 px yhtenäinen himmeä reuna. Himmeä muste = sanelun tilarivin väri. */
-.mk-chat__realtime {
-    align-self: center;
-    min-height: 0;
-    margin: 0 0 6px 0;
-    padding: 4px 11px;
-    border-width: 1px;
-    border-color: rgba(33, 29, 24, 0.62);
-    border-radius: 999px;
-    background-color: rgba(0, 0, 0, 0);
-    color: rgba(33, 29, 24, 0.62);
-}
-
-.mk-chat__realtime:active {
-    background-color: rgba(33, 29, 24, 0.08);
+/* Pulun äänikeskustelun koenappi (vain kehittäjätilassa): alarivin nappula näppäimistön ja mikrofonin rinnalla samalla tyylillä
+   (omistaja 2.10.2026 klo 13.53, ei ovaalia; web #3849 button.pollo-realtime-koe { flex: 2 1 0 }). Päällä korostusreuna ja
+   pergamenttipohja (web .paalla: --pollo-korostus, --pollo-paperi-2). */
+.mk-chat__nappula.mk-chat__realtime {
+    flex-grow: 2;
 }
 
 .mk-chat__realtime .mk-nappi__teksti {
-    font-size: 13px;
-    color: rgba(33, 29, 24, 0.62);
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-paperi-korostus);
     -unity-text-align: middle-center;
+    white-space: normal;
 }
 
 .mk-chat__realtime--paalla {
-    border-color: var(--tk-paperi-muste);
-}
-
-.mk-chat__realtime--paalla .mk-nappi__teksti {
-    color: var(--tk-paperi-muste);
+    border-color: var(--tk-paperi-korostus);
+    background-color: var(--tk-paperi-pergamentti);
 }
 
 .mk-chat__nappirivi {
