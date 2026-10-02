@@ -240,6 +240,7 @@ namespace Matkakirja.Natiivi
         /// seisoja) juuren alle tulee pehmeä levy, joka liikkuu ja kääntyy hahmon mukana. Periaate kuten kartan symbolimallien
         /// maakontaktissa (Symbolimallit.Rakentaja PohjaVerkko): peitto keskellä, pehmeä lasku reunalle.</summary>
         const float VarjoSade = 0.55f, VarjoNosto = 0.012f;
+        static readonly Color VarjoVari = new Color(0.02f, 0.015f, 0.01f, 0.6f);
         static Mesh varjoVerkko;
         static Material varjoMateriaali;
 
@@ -676,30 +677,28 @@ namespace Matkakirja.Natiivi
                     }
                 }
             }
-            if (varjoMateriaali != null && (mita == "varjokoe" || mita == "varjo"))
+            // Testisäädöt (juurisyy 2.10. 21.0x): varjokoe (punainen, täysi, syvyystesti pois), varjo (oletus), veto=m,
+            // peitto=0–1, ztest=always|lequal, vari=punainen|varjo.
+            if (varjoMateriaali != null && mita != null)
             {
-                // varjokoe: punainen, täysi peitto, syvyystesti pois (näkyykö levy lainkaan); varjo: takaisin oletukseen.
-                bool koe = mita == "varjokoe";
-                varjoMateriaali.SetColor("_Vari", koe ? Color.red : new Color(0.02f, 0.015f, 0.01f, 1f));
-                varjoMateriaali.SetFloat("_Peitto", koe ? 1f : 0.7f);
-                varjoMateriaali.SetFloat("_ZTest", (float)(koe ? UnityEngine.Rendering.CompareFunction.Always : UnityEngine.Rendering.CompareFunction.LessEqual));
-            }
-            // Yksittäiset säädöt (juurisyy 20.5x): veto=m, peitto=0–1, ztest=always|lequal, vari=punainen|varjo.
-            if (varjoMateriaali != null && mita != null && mita.Contains("="))
-            {
+                var v = varjoMateriaali.GetColor("_VarjoVari");
                 var kv = mita.Split('=');
-                float.TryParse(kv[1], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var luku);
+                float.TryParse(kv.Length > 1 ? kv[1] : "", System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var luku);
+                bool muutettu = true;
                 switch (kv[0])
                 {
-                    case "veto": varjoMateriaali.SetFloat("_Veto", luku); break;
-                    case "peitto": varjoMateriaali.SetFloat("_Peitto", luku); break;
-                    case "ztest": varjoMateriaali.SetFloat("_ZTest", (float)(kv[1] == "always" ? UnityEngine.Rendering.CompareFunction.Always : UnityEngine.Rendering.CompareFunction.LessEqual)); break;
-                    case "vari": varjoMateriaali.SetColor("_Vari", kv[1] == "punainen" ? Color.red : new Color(0.02f, 0.015f, 0.01f, 1f)); break;
+                    case "varjokoe": v = new Color(1f, 0f, 0f, 1f); varjoMateriaali.SetFloat("_ZTest", (float)UnityEngine.Rendering.CompareFunction.Always); break;
+                    case "varjo": v = VarjoVari; varjoMateriaali.SetFloat("_ZTest", (float)UnityEngine.Rendering.CompareFunction.LessEqual); varjoMateriaali.SetFloat("_VarjoVeto", 0.4f); break;
+                    case "veto": varjoMateriaali.SetFloat("_VarjoVeto", luku); break;
+                    case "peitto": v.a = luku; break;
+                    case "ztest": varjoMateriaali.SetFloat("_ZTest", (float)(kv.Length > 1 && kv[1] == "always" ? UnityEngine.Rendering.CompareFunction.Always : UnityEngine.Rendering.CompareFunction.LessEqual)); break;
+                    case "vari": v = kv.Length > 1 && kv[1] == "punainen" ? new Color(1f, 0f, 0f, v.a) : new Color(VarjoVari.r, VarjoVari.g, VarjoVari.b, v.a); break;
+                    default: muutettu = false; break;
                 }
+                varjoMateriaali.SetColor("_VarjoVari", v);
+                if (muutettu && mita.Contains("="))
+                    return $"varjo: vari {v}, ztest {varjoMateriaali.GetFloat("_ZTest")}, veto {varjoMateriaali.GetFloat("_VarjoVeto"):F2}";
             }
-            if (varjoMateriaali != null && mita != null && mita.Contains("="))
-                return $"varjo: vari {varjoMateriaali.GetColor("_Vari")}, peitto {varjoMateriaali.GetFloat("_Peitto"):F2}, ztest {varjoMateriaali.GetFloat("_ZTest")}, "
-                    + $"veto {varjoMateriaali.GetFloat("_Veto"):F2}, jono {varjoMateriaali.renderQueue}";
             int varjoja = 0; string varjoY = "";
             foreach (var e in esiintymat)
             {

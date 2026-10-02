@@ -8,9 +8,8 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
 {
     Properties
     {
-        _Vari("Varjon väri", Color) = (0.02, 0.015, 0.01, 1)
-        _Peitto("Peitto keskellä", Range(0, 1)) = 0.7
-        _Veto("Siirto kameraa kohti (m)", Float) = 0.4
+        _VarjoVari("Varjon väri, alfa = peitto keskellä", Color) = (0.02, 0.015, 0.01, 0.6)
+        _VarjoVeto("Siirto kameraa kohti (m)", Float) = 0.4
         [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("Syvyystesti (testikomento: Always)", Float) = 4
     }
     SubShader
@@ -32,9 +31,10 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
             CBUFFER_START(UnityPerMaterial)
-                half4 _Vari;
-                half _Peitto;
-                float _Veto;
+                // float (ei half): Metalilla half-kenttä vakiopuskurissa luki peiton väärin (savuke 21.03: peitto 1 näkyi,
+                // 0,7 ei lainkaan); nimet omat, ettei globaali _Vari/_Peitto sekoitu.
+                float4 _VarjoVari;
+                float _VarjoVeto;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
@@ -47,7 +47,7 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
                 // piirtyi vain syvyystesti pois): levy siirretään näkymäavaruudessa _Veto metriä kameraa kohti, jolloin se
                 // piirtyy lattian päälle mutta seinät ja esineet peittävät sen yhä.
                 float3 nakyma = TransformWorldToView(TransformObjectToWorld(i.paikka.xyz));
-                nakyma += normalize(-nakyma) * _Veto;
+                nakyma += normalize(-nakyma) * _VarjoVeto;
                 o.paikka = TransformWViewToHClip(nakyma);
                 o.uv = i.uv;
                 return o;
@@ -55,10 +55,10 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
 
             half4 frag(Vali i) : SV_Target
             {
-                half r = (half)length(i.uv);
+                float r = length(i.uv);
                 // Tasainen ydin jalkojen alla (r < 0,35) ja pehmeä smoothstep-lasku reunalle (kartan maakontaktin renkaat).
-                half a = _Peitto * (1.0h - smoothstep(0.35h, 1.0h, r));
-                return half4(_Vari.rgb, a);
+                float a = _VarjoVari.a * (1.0 - smoothstep(0.35, 1.0, r));
+                return half4((half3)_VarjoVari.rgb, (half)a);
             }
             ENDHLSL
         }
