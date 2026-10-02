@@ -4,9 +4,9 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20261002.md`](viesti-pelikoodari-luovutus-20261002.md) (2.10. klo 22.1x, kiintiö 92 %):
-   KÄRKI omistajan palaute 21.3x webiin: Astronautin kamera (haara `pelikoodari-astro-hiljaa` valmis, PR + kuvaparit
-   puuttuvat) ja Topografia-linssin hampurilainen (aloittamatta). Junassa #3865, #3870, #3875, #3877. Edellinen:
+   [`viesti-pelikoodari-luovutus-20261002.md`](viesti-pelikoodari-luovutus-20261002.md) (2.10. klo 22.2x, tilinvaihto):
+   KÄRKI omistajan palaute 21.3x webiin: Astronautin kamera PR #3879 (koko testisarja + junailmoitus puuttuvat) ja
+   Topografia-linssin hampurilainen (aloittamatta). Junassa #3865, #3870, #3875, #3877. Edellinen:
    `viesti-pelikoodari-luovutus-20261001.md`.
    - Roolit NIMELLÄ; Julkaisijalle vastaus viestin `from`-osoitteeseen. Kun viestiraja täyttyy, `docs/raportit/posti-pelikoodari-<pvm>.md` + push.
    - Worktreet enintään 3 (levy): poista `tools/uusi-worktree.sh --poista` heti kun haara on pushattu eikä sitä tarvita.

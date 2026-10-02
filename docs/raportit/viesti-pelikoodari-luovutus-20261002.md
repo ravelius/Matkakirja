@@ -1,8 +1,10 @@
-# Pelikoodarin luovutus 2.10.2026 (klo 22.1x, viikkokiintiö 92 %)
+# Pelikoodarin luovutus 2.10.2026 (klo 22.2x, TILINVAIHTO; lopullinen)
 
 ## 0. Kärki: kesken olevat erät (omistajan palaute 21.3x, menee ajattelijoiden kierrosten 2–3 edelle)
 
-- **B) Astronautin kamera (web), haara `pelikoodari-astro-hiljaa` (775d670b, pushattu, EI vielä PR:ää).**
+- **B) Astronautin kamera (web): PR #3879, haara `pelikoodari-astro-hiljaa` (775d670b).** Koko testisarjaa ei ehditty ajaa
+  (tilinvaihto): aja `node --test tests/*.test.mjs` + niputus ja ilmoita Julkaisijalle junaan. Astro- ja satelliittitestit
+  155/0. B1 (hiljaa) ja B2 (ei lappua) ja B4 (sumu) tehty; B3 (maapallokuvake) vain natiivi, odottaa Linssiseppä 2:n kuvaa.
   Arvot on sovittu Linssiseppä 2:n kanssa, joka tekee saman natiiviin.
   - **AUTO hiljaa:** AUTOn aikana ✕, Pulu, ‹ › ja AUTO häivytetään (200 ms, paluu 220 ms).
     - Napautus palauttaa napit EIKÄ pysäytä AUTOa, ja napit häipyvät taas 4 s:n kuluttua.
@@ -10,15 +12,13 @@
   - **Siirtolappu:** Seuraava/Pysäytä-lappu on poistettu. Siirto tapahtuu hiljaa 3 s luennan jälkeen.
   - **Sumu:** peitot puolitettu (0,15 → 0,08 ja 0,62 → 0,31).
   - Todennettu Playwrightilla (AUTO+5 s: napit opacity 0; napautus: näkyvät, AUTO yhä päällä; 25 s: hiljaa + seuraava kohde).
-  - **Puuttuu:**
-    - kuvaparit (ennen-kuvat on otettu: scratchpad `as/ennen-*`, jälkeen `as/jalkeen-*`; kokoa `pari.mjs`:llä
-      kansioon `proto-3d/lokit/pelikoodari-astro-20261002/`)
-    - PR ("Pohja: …"-rivi)
-    - viesti Päätoimittajalle ja Linssiseppä 2:lle
+  - Kuvaparit valmiina: `proto-3d/lokit/pelikoodari-astro-20261002/` (auto-pari, auto-napautus, sumu-pari).
+  - **Puuttuu:** kuvaparien ja PR:n ilmoitus Päätoimittajalle ja Linssiseppä 2:lle.
   - **Kohta 3 (maapallokuvake isommaksi, vaakatilassa vasempaan alakulmaan):** webissä ei ole maapallokuvaketta.
     Linssiseppä 2 selvittää, mikä se natiivissa on. Jos kuvaketta ei ole webissä, kohta koskee vain natiivia.
   - Testiskripti: scratchpad `astro.mjs` (avaa linssin, sulkee Pulun taulun, napauttaa (200,420) → Dardanellit).
-- **A) Topografia-linssin hampurilainen (web), haara `pelikoodari-topo-hampurilainen` (tyhjä, mainista).**
+- **A) Topografia-linssin hampurilainen (web): ALOITTAMATTA.** Haara `pelikoodari-topo-hampurilainen` (paikallinen, tyhjä;
+  luo uusi mainista).
   - Oikean yläkulman pilleri pois, tilalle hampurilainen (OHJAUSNAPPI-neliö 40 pt, kulma.nappi).
   - Valikossa ylimpänä Korkeustasot ja sen alla Sulje linssi. Kartalta poistuvat Korkeustasot-nappi ja ✕.
   - Natiivin tekee Linssiseppä (Natiivi-UI kirjaa listan tyylikirjaan). Linssien hampurilaisen ensimmäinen käyttö.
@@ -31,7 +31,7 @@
 - **Mainissa:** #3859, #3862, #3864 (v2567), #3866 (kipsipää), #3867 (puhe äänenä), #3869 (poikkeusten tarkennus,
   v2570) ja #3874 (kipsipisteet Sokrates [39.49, 23.98], Marcus [42.82, 12.17]; päät karttamerkkien alla; natiivi puhdas,
   omistaja hyväksyi 20.5x).
-- **Junassa:** #3865 (£-woff2), #3870 (GALLERIA-pohja, luokat `tk-kokoelma-*`; Julisteet ensimmäinen käyttäjä),
+- **Avoimet PR:t:** #3879 (astro, ei vielä junassa). **Junassa:** #3865 (£-woff2), #3870 (GALLERIA-pohja, luokat `tk-kokoelma-*`; Julisteet ensimmäinen käyttäjä),
   #3875 (valikko V2: väliviivat pois paitsi alin, tasolaatta) ja #3877 (Aarteet yhdessä ikkunassa, kehittäjätilassa 7/7).
 - **Ilmoita Natiivi-UI:lle,** kun #3870 on mainissa (natiivi korjataan GALLERIAn osalta webin mukaiseksi).
 
