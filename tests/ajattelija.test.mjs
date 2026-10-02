@@ -94,3 +94,7 @@ test('omistajan v9-palaute: prologi ilman kehää, Zarathustra koko kohtaus vaim
   assert.match(pr, /export const KIPSI_TOISTOT = \[28\.5, 95\.0\];/);
   assert.match(lue('../js/linssit/ajattelija.js'), /kohtaus\.background = mustaVari;/);
 });
+
+test('kaikukuvat ovat positiivisia (omistaja 2.10.2026 klo 11.13): sotilas v2 ilman kääntöä', () => {
+  assert.equal(SOKRATES.kaiku.kuva, 'ajattelijat/sokrates/v1/kaiku-sotilas-v2.png');
+});

@@ -80,7 +80,7 @@ export const SOKRATES = Object.freeze({
    * viileähkö täyte vasemmalta ylhäältä (0,10 × aurinko). Kuva on paikkamerkki (Carstens 1788, PD), Codex korvaa.
    */
   kaiku: {
-    kuva: 'ajattelijat/sokrates/v1/kaiku-sotilas.png',
+    kuva: 'ajattelijat/sokrates/v1/kaiku-sotilas-v2.png',   // positiivinen (omistaja 2.10. 11.13: kaiut aina positiivisia)
     // v10 (omistajan v9-palaute: kamera lähempänä tasaisempaa pintaa): oma projektori otsalle, kuva-ala 0,06 m;
     // kamera p + norm(n + suunta) × 0,21 → 0,19 ja liuku t × 0,006, 35 mm.
     lev: 0.06, vino: [-0.10, -0.05, -0.08], etaisyys: 0.6, voima: 20, liuku: 0.05, savy: [1.0, 0.78, 0.52], blend: 0.3,
