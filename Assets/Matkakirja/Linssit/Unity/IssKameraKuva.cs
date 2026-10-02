@@ -71,9 +71,33 @@ namespace Matkakirja.Natiivi
         static void Loki(string t) => Debug.Log("MATKAKIRJA linssit: iss-kamera: " + t);
 
         /// <summary>Laukaisee kuvan (muoto "4:5" oletus, leveys pikseleinä). false = työstö jo käynnissä tai ei kyydissä.</summary>
+#if UNITY_IOS && !UNITY_EDITOR
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern ulong os_proc_available_memory();
+        /// <summary>Prosessin käytettävissä oleva muisti (Mt) ennen jetsam-rajaa (iOS 13+); muualla tai rajatta −1.</summary>
+        public static long VapaaMuistiMt() { ulong v = os_proc_available_memory(); return v == 0 ? -1 : (long)(v / (1024 * 1024)); }   // 0 = ei rajaa (simulaattori)
+#else
+        public static long VapaaMuistiMt() => -1;
+#endif
+
+        /// <summary>
+        /// Kuvan leveys vapaan muistin mukaan (Natiivisepän ehto 2.10.2026: iPad 00008103 4096 × 5120 → phys_footprint +1,9 Gt ja
+        /// kaksi muistivaroitusta; valinta os_proc_available_memory():n mukaan kuvaushetkellä, ei RAMin): 4096 vain, kun vapaata on
+        /// ≥ 3000 Mt, 3072 ≥ 1800, 2048 ≥ 1000, muuten 1536. Pyydetty leveys on yläraja.
+        /// </summary>
+        public static int LeveysMuistille(int pyydetty, long vapaaMt)
+        {
+            if (vapaaMt < 0) return pyydetty;
+            int sallittu = vapaaMt >= 3000 ? 4096 : vapaaMt >= 1800 ? 3072 : vapaaMt >= 1000 ? 2048 : 1536;
+            return Math.Min(pyydetty, sallittu);
+        }
+
         public bool Laukaise(string muoto = "4:5", int leveys = 3240)
         {
             if (kaynnissa) return false;
+            long vapaa = VapaaMuistiMt();
+            int sallittu = LeveysMuistille(leveys, vapaa);
+            if (sallittu != leveys) Loki($"muisti: vapaata {vapaa} Mt → leveys {leveys} → {sallittu}");
+            leveys = sallittu;
             var kerros = FindAnyObjectByType<AstronauttiKerros>();
             var kamera = FindAnyObjectByType<PalloKierto>()?.GetComponent<Camera>();
             var g = FindAnyObjectByType<CesiumGeoreference>();
@@ -172,7 +196,6 @@ namespace Matkakirja.Natiivi
 
                 // 3b) kaukoalue S2-mosaiikista (lehdet z ≤ 10; 50 mm: ~100 Mt COG:ia → ~10–20 Mt): ladataan ja puretaan ensin,
                 // jotta COG-haku ohittaa vain onnistuneet (404 tai mosaiikin ulkopuolella → COG).
-                var mosaiikki = new Dictionary<(int, int, int), byte[]>();
                 var mlista = ty.Lehdet().Where(l => KuvanTyosto.MosaiikinLaatta(l.z, l.x, l.y)).ToList();
                 // Lähdelaatat: z ≤ 10 sellaisenaan, z11 = z10-isä (neljännes 2 × suurennettuna).
                 var lahteet = mlista.Select(l => l.z > 10 ? (z: 10, x: l.x >> 1, y: l.y >> 1) : l).Distinct().ToList();
@@ -189,39 +212,51 @@ namespace Matkakirja.Natiivi
                         if (q.result == UnityWebRequest.Result.Success && tex.LoadImage(q.downloadHandler.data) && tex.width == 256 && tex.height == 256)
                         {
                             mtavut += q.downloadHandler.data.Length;
-                            var px = tex.GetPixels32(); var rgba = new byte[256 * 256 * 4];
-                            for (int yy = 0; yy < 256; yy++)   // GetPixels32: rivi 0 = alin → laatta: rivi 0 = pohjoinen
+                            // RGB (3 tavua) ilman GetPixels32:n hallittua kopiota (iPad-mittaus 2.10.: 50 mm:n mosaiikki ~0,5 Gt hallittua
+                            // muistia, jota IL2CPP:n keko ei palauta). Rivi 0 = alin → laatta: rivi 0 = pohjoinen.
+                            var px = tex.GetPixelData<Color32>(0); var rgb = new byte[256 * 256 * 3];
+                            for (int yy = 0; yy < 256; yy++)
                                 for (int xx = 0; xx < 256; xx++)
                                 {
-                                    var c = px[(255 - yy) * 256 + xx]; int o = (yy * 256 + xx) * 4;
-                                    rgba[o] = c.r; rgba[o + 1] = c.g; rgba[o + 2] = c.b; rgba[o + 3] = 255;
+                                    var c = px[(255 - yy) * 256 + xx]; int o = (yy * 256 + xx) * 3;
+                                    rgb[o] = c.r; rgb[o + 1] = c.g; rgb[o + 2] = c.b;
                                 }
-                            lahde[l] = rgba;
+                            lahde[l] = rgb;
                         }
                         q.Dispose();
                     }
                     Destroy(tex);
                     Edistyminen = 0.1f * (i0 + era.Count) / Math.Max(1, lahteet.Count);
                 }
-                foreach (var l in mlista)
+                // Lehdet lasketaan lennossa piirron aikana (z ≤ 10 RGB → RGBA, z11 = z10-isän neljännes 2 × suurennettuna);
+                // ennen kaikki ~1 200 lehteä pidettiin valmiina 256 kt:n RGBA-taulukkoina (~0,3 Gt).
+                var lehdet = new HashSet<(int, int, int)>(mlista.Where(l => lahde.ContainsKey(l.z > 10 ? (10, l.x >> 1, l.y >> 1) : l)));
+                byte[] MosaiikinLehti(int z, int x, int y)
                 {
-                    if (l.z <= 10) { if (lahde.TryGetValue(l, out var m)) mosaiikki[l] = m; continue; }
-                    if (!lahde.TryGetValue((10, l.x >> 1, l.y >> 1), out var isa)) continue;
-                    int qx = (l.x & 1) * 128, qy = (l.y & 1) * 128; var r2 = new byte[256 * 256 * 4];
+                    if (!lehdet.Contains((z, x, y))) return null;
+                    var r2 = new byte[256 * 256 * 4];
+                    if (z <= 10)
+                    {
+                        var m = lahde[(z, x, y)];
+                        for (int i = 0, j = 0; i < r2.Length; i += 4, j += 3) { r2[i] = m[j]; r2[i + 1] = m[j + 1]; r2[i + 2] = m[j + 2]; r2[i + 3] = 255; }
+                        return r2;
+                    }
+                    var isa = lahde[(10, x >> 1, y >> 1)];
+                    int qx = (x & 1) * 128, qy = (y & 1) * 128;
                     for (int yy = 0; yy < 256; yy++)
                         for (int xx = 0; xx < 256; xx++)
                         {
                             float fx = Math.Min(254.999f, qx + (xx + 0.5f) / 2 - 0.5f), fy = Math.Min(254.999f, qy + (yy + 0.5f) / 2 - 0.5f);
                             fx = Math.Max(0, fx); fy = Math.Max(0, fy); int ix = (int)fx, iy = (int)fy; float ax = fx - ix, ay = fy - iy;
-                            int o = (yy * 256 + xx) * 4, a00 = (iy * 256 + ix) * 4, a10 = a00 + 4, a01 = a00 + 1024, a11 = a01 + 4;
+                            int o = (yy * 256 + xx) * 4, a00 = (iy * 256 + ix) * 3, a10 = a00 + 3, a01 = a00 + 768, a11 = a01 + 3;
                             for (int c = 0; c < 3; c++)
                                 r2[o + c] = (byte)((isa[a00 + c] * (1 - ax) + isa[a10 + c] * ax) * (1 - ay) + (isa[a01 + c] * (1 - ax) + isa[a11 + c] * ax) * ay + 0.5f);
                             r2[o + 3] = 255;
                         }
-                    mosaiikki[l] = r2;
+                    return r2;
                 }
-                if (mosaiikki.Count > 0) ty.Mosaiikki = (z, x, y) => mosaiikki.TryGetValue((z, x, y), out var m) ? m : null;
-                Loki($"mosaiikki {mosaiikki.Count}/{mlista.Count} lehteä ({lahde.Count} laattaa), {mtavut / 1e6:0.0} Mt");
+                if (lehdet.Count > 0) ty.Mosaiikki = MosaiikinLehti;
+                Loki($"mosaiikki {lehdet.Count}/{mlista.Count} lehteä ({lahde.Count} laattaa), {mtavut / 1e6:0.0} Mt");
 
                 // 4) laatat: TCI näkymän tasoilta, SCL näkymän tasoilta (pilvimaski) ja karkeimmalta tasolta (maamaski)
                 var haku = new List<(string url, long alku, long pit, Action<byte[]> valmis)>();
@@ -325,6 +360,9 @@ namespace Matkakirja.Natiivi
                 }, ytimia, meri, n => kirjoitettu = n));
                 while (!tyot.IsCompleted) { Edistyminen = 0.6f + 0.25f * kirjoitettu / Math.Max(1, lista.Count); yield return null; }
                 if (tyot.IsFaulted) { Loki("työstö: " + tyot.Exception?.GetBaseException().Message); yield break; }
+                // Työstön data pois ennen renderöintiä (iPad-mittaus 2.10.: perustaso jäi kuvan jälkeen 3,2–4,0 Gt:iin).
+                ty.Mosaiikki = null; lahde.Clear(); ty.Data.Vapauta(); sclPuretut.Clear();
+                GC.Collect();
                 int zmax = lista.Max(l => l.z);
                 Loki($"laatat {lista.Count} (z6–{zmax}, juuri {ty.Rx}×{ty.Ry}), aurinko {az:0}° / {korkeus:0.0}°, {kello.ElapsedMilliseconds / 1000.0:0.0} s");
 
@@ -372,6 +410,8 @@ namespace Matkakirja.Natiivi
             finally
             {
                 if (rt != null) { kamera.targetTexture = null; kamera.ResetAspect(); rt.Release(); Destroy(rt); }
+                GC.Collect(); Resources.UnloadUnusedAssets();
+                Loki($"muisti kuvan jälkeen: vapaata {VapaaMuistiMt()} Mt");
                 AstronauttiKerros.KuvanPinta = null;
                 Avaruus.KuvaputkiAsetettu = false;
                 Avaruus.KuvanNousu = 0f;

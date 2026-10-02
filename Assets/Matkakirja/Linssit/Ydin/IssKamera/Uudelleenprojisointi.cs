@@ -68,6 +68,12 @@ namespace Matkakirja.Linssit.IssKamera
             return 255;
         }
 
+        /// <summary>Kaikki laatat ja välimuisti pois (kuvan työstön jälkeen; iPad-mittaus 2.10.).</summary>
+        public void Vapauta()
+        {
+            Laatat.Clear(); Pakatut.Clear(); purettu.Clear(); System.Threading.Interlocked.Exchange(ref purettuTavut, 0);
+        }
+
         /// <summary>Purettu laatta tai null (ei haettu).</summary>
         public byte[] Hae((string tunnus, int taso, int tx, int ty) avain)
         {
