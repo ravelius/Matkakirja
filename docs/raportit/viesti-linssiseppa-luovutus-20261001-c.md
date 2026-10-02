@@ -19,6 +19,10 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
   natiivi + web (iss-realismi-kerrokset.js r. 143) — HYVÄKSYTTY JA TEHTY: natiivi linssiseppa/kiilto-ilmakeha 797aac22
   (käännös 5c292cbe) merge-pyynnössä Natiivisepällä; web PR #3844 (Pelikoodari hyväksyi, CI vihreä). Kuvaparit
   lokit/linssiseppa-kiilto-ilmakeha-20261002/{natiivi,web}-vanha-uusi.png; web-harness scratchpad kiilto-web.mjs.
+- ERIKOISNOSTOT TEHTY (2.10. 16.0x): linssiseppa/erikoisnostot ea412b26 (BUILD 123 + LS2 ajattelijat d817c141) merge-pyynnössä
+  Natiivisepällä omistajan OK:lla ilman uusintakuvausta (loki 6a9639c08); KUVAA JUNABUILDISTA JÄLKIKÄTEEN: ajo-erikoisnostot.sh
+  (Rooma/Kreikka kiinni+auki, heilahdus, napautus), web-mallit lokit/linssiseppa-erikoisnostot-web-20261002. Linssit-nappi + Julisteet:
+  odottaa webin #3859 mergeä (Pelikoodari ilmoittaa).
 - SEURAAVA ERÄ (Päätoimittaja 2.10. 14.2x): 1) ERIKOISNOSTOT natiiviin = ajattelijan 3D-pää kartuutsin lipun alla (web #3843,
   ajattelijapaat.js + css/pohjat/erikoisnostot.css; aloitus kun #3843 mainissa). Natiivin palat: Kartuscha.Maa (ISO3, pollaus),
   lippu mk-kartuscha__lippu (Kartuscha.cs:64, Tilarivi 15), Asetukset.Kehittaja, GlbLukija (+ normaalikartta lisättävä),
