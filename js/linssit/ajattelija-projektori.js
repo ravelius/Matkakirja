@@ -52,7 +52,8 @@ export function piirraAtlas(rivit, doc = document) {
     c.font = `${p.paino ?? 'bold'} ${p.em}px ${p.fontti}`;
     const piirra = (yla, sumeus) => {
       c.save();
-      c.beginPath(); c.rect(0, yla, p.lev, p.korkeus); c.clip();
+      // Toistorivi täyttää koko atlaksen leveyden (kaikki laatat), muuten vain oma leveys (Linssiseppä 2:n löydös 2.10.).
+      c.beginPath(); c.rect(0, yla, p.toistoja ? ATLAS_LEVEYS : p.lev, p.korkeus); c.clip();
       c.filter = `blur(${sumeus}px)`;
       for (let n = 0; n < (p.toistoja ?? 1); n += 1) c.fillText(p.teksti, p.reuna + n * p.lev, yla + p.korkeus / 2);
       c.restore();

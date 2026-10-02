@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { ajattelijaLipusta, kenttaMm, AJATTELIJA_KIRJASTO, AJATTELIJAT } from '../js/linssit/ajattelija.js';
 import { SOKRATES } from '../js/linssit/ajattelija-sokrates.js';
-import { NAUHA_EM, PROJEKTOREITA_ENINTAAN } from '../js/linssit/ajattelija-projektori.js';
+import { NAUHA_EM, PROJEKTOREITA_ENINTAAN, piirraAtlas } from '../js/linssit/ajattelija-projektori.js';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 
@@ -141,4 +141,20 @@ test('tekijätiedot: CC BY -kuva ja -musiikki nimettyinä, three.js ja bystit (j
   assert.match(l, /tekija: 'Sascha Ende, filmmusic\.io',\n\s*lisenssi: 'CC BY 4\.0',/);
   assert.match(l, /three\.js r185 ja GLTFLoader/);
   assert.match(l, /KAS635\) ja Marcus Aurelius \(KAS979\)/);
+});
+
+test('atlas: toistorivi piirretään koko atlaksen leveydelle (kaikki laatat), tavallinen rivi omalle leveydelleen', () => {
+  const rajat = [];
+  const ctx = {
+    measureText: (t) => ({ width: t.length * 10 }), fillRect() {}, save() {}, restore() {}, beginPath() {}, clip() {},
+    fillText() {}, rect: (x, y, w) => rajat.push(w),
+  };
+  const doc = { createElement: () => ({ getContext: () => ctx }) };
+  const { paikat } = piirraAtlas([
+    { teksti: 'ΓΝΩΘΙ ΣΑΥΤΟΝ', fontti: 'serif', korkeus: 64, toisto: true },
+    { teksti: 'Sokrates', fontti: 'serif', korkeus: 64 },
+  ], doc);
+  assert.ok(paikat[0].toistoja > 1);
+  assert.equal(rajat[0], 4096);
+  assert.equal(rajat[1], paikat[1].lev);
 });
