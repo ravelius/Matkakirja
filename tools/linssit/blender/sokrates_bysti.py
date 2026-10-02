@@ -16,6 +16,8 @@ KOHTEET = {
     # KAS979 "Portræt af Marcus Aurelius (kejser 161-180 e.Kr.)", Formeri: Paris, Louvre nr. 383; museo ei ilmoita
     # mittoja → normalisoitu samaan 0,51 m:n korkeuteen (sokkeli mukana), jolloin kasvot osuvat samoille korkeuksille
     'marcus': ('/Users/Shared/Claude/proto-3d/_lahteet/smk/KAS979/smk-inv-979.stl', 0.51),
+    # KAS2111 "Platon (427-347 f.Kr.), græsk filosof", kipsivalos, korkeus 49 cm (forefundet uinventariseret 1952)
+    'platon': ('/Users/Shared/Claude/proto-3d/_lahteet/smk/KAS2111/smk-inv-2111.stl', 0.49),
 }
 KOHDE = A[A.index('--kohde') + 1] if '--kohde' in A else 'sokrates'
 STL, KORKEUS = KOHTEET[KOHDE]
@@ -212,12 +214,16 @@ if '--lod' in A:
 KARTTA_KOLMIOT, KARTTA_KUVA, KARTTA_KORKEA = 5_000, 512, 400_000
 # (parran alla edessä (y, z), niskassa takana (y, z)), (sivutason |x| korkeudella z, kaltevuus dx/dz)
 KARTTA_LEIKKAUS = {'sokrates': (((-0.07, 0.185), (0.10, 0.255)), (0.085, 0.24, 0.3)),
-                   'marcus': (((-0.07, 0.235), (0.06, 0.275)), (0.075, 0.25, 0.3))}
+                   'marcus': (((-0.07, 0.235), (0.06, 0.275)), (0.075, 0.25, 0.3)),
+                   # Platon on herma (ei olkapäitä): vain vino taso pitkän parran alta hermapilarin takayläreunaan
+                   'platon': (((-0.09, 0.11), (0.10, 0.19)), None)}
 
 
 def _leikkaa(c):
-    (y1, z1), (y2, z2) = KARTTA_LEIKKAUS[KOHDE][0]; xa, zc, k = KARTTA_LEIKKAUS[KOHDE][1]
-    tasot = (((0, y1, z1), (0, -(z2 - z1), y2 - y1)), ((xa, 0, zc), (-1, 0, k)), ((-xa, 0, zc), (1, 0, k)))
+    (y1, z1), (y2, z2) = KARTTA_LEIKKAUS[KOHDE][0]; sivut = KARTTA_LEIKKAUS[KOHDE][1]
+    tasot = [((0, y1, z1), (0, -(z2 - z1), y2 - y1))]
+    if sivut:
+        xa, zc, k = sivut; tasot += [((xa, 0, zc), (-1, 0, k)), ((-xa, 0, zc), (1, 0, k))]
     bpy.ops.object.select_all(action='DESELECT'); c.select_set(True); bpy.context.view_layer.objects.active = c
     bpy.ops.object.mode_set(mode='EDIT')
     for co, no in tasot:   # pidetään normaalin puoli
@@ -254,7 +260,8 @@ if '--kartta' in A:
     m = bpy.data.materials.new('ao'); m.use_nodes = True; t = m.node_tree.nodes.new('ShaderNodeTexImage'); t.image = ao
     m.node_tree.nodes.active = t; c.data.materials.clear(); c.data.materials.append(m)
     bpy.ops.object.select_all(action='DESELECT'); hp.select_set(True); c.select_set(True); bpy.context.view_layer.objects.active = c
-    bk = sc.render.bake; bk.use_selected_to_active = True; bk.cage_extrusion = 0.002; bk.max_ray_distance = 0.006; bk.margin = 8
+    # 5 000 kolmion pinta poikkeaa 400 k:sta enemmän kuin LOD-tasot → pidempi säde, muuten AO:hon jää valkoisia hutipisteitä
+    bk = sc.render.bake; bk.use_selected_to_active = True; bk.cage_extrusion = 0.004; bk.max_ray_distance = 0.012; bk.margin = 8
     sc.world = bpy.data.worlds.new('w'); sc.world.light_settings.distance = 0.03
     bpy.ops.object.bake(type='AO')
     a = np.array(ao.pixels[:]).reshape(KARTTA_KUVA, KARTTA_KUVA, 4)[..., 0]
