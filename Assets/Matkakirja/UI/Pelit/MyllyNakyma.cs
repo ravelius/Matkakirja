@@ -1,5 +1,5 @@
 // MYLLY-NÄKYMÄ (Siirtoseppä 1.10.2026; omistajan hyväksymä lautapelien pohja, Päätoimittajan loki b3e273d72):
-//   PELI    = KUVANÄKYMÄ (lauta ilman taustaa, himmennys-kevyt + kartan kertakuvasumennus, ✕ 44 pt) + PANEELI (LASI: kapiteeli,
+//   PELI    = KUVANÄKYMÄ (lauta ilman taustaa, himmennys-kevyt + kartan kertakuvasumennus ja taustan UI-kerrosten blur 4 pt, ✕ 44 pt) + PANEELI (PAPERI: kapiteeli,
 //             vuororivi, pelaajarivit, ohje, napit Säännöt / Luovuta). KAPEA: paneeli laudan alla; KESKI/LEVEÄ: oikealla 350 pt.
 //   VALINTA = KORTTI (vastustaja: KYTKIN-ryhmä Helppo / Normaali / Vaikea + Kaveri samalla laitteella; Peruuta / Aloita peli).
 //   TULOS   = KORTTI (voitto, häviö, tasapeli; botin voitosta palkkio PelinTalous.Minipeli; "Tulos kirjattiin matkakirjaan.").
@@ -93,7 +93,7 @@ namespace Matkakirja.Natiivi
         public bool Auki { get; private set; }
 
         /// <summary>Pelin aikaisen tilapaneelin PANEELI-teema (Tyylikirja .tk-teema-*): lasi; vertailuun "ui mylly teema …".</summary>
-        const string PaneelinTeema = "tk-teema-lasi";
+        const string PaneelinTeema = "tk-teema-paperi"; // omistaja 11.0x: alkuperäinen paperi (tumma ja lasi kokeiltu)
         static readonly string[] Teemat = { "tk-teema-lasi", "tk-teema-tumma", "tk-teema-paperi" };
 
         MyllyNakyma(UiKerros kerros)
@@ -111,7 +111,7 @@ namespace Matkakirja.Natiivi
             peliTaso.Add(lauta);
             var rasti = Rakenne.Nappi("×", "mk-peli__sulje", Sulje, peliTaso);
             Kirjasimet.Aseta(rasti, Kirjasin.Luku);
-            paneeli = Rakenne.El("mk-peli__paneeli " + PaneelinTeema, peliTaso); // omistaja 2.10. 10.3x: LASI (tumma liian tumma)
+            paneeli = Rakenne.El("mk-peli__paneeli " + PaneelinTeema, peliTaso); // omistaja 2.10. 11.0x: PAPERI
             kapiteeli = Rakenne.Teksti("", "mk-kortti__kapiteeli", paneeli);
             Kirjasimet.Aseta(kapiteeli, Tyylikirja.Kirjain.Kapiteeli);
             vuoroRivi = Rakenne.Teksti("", "mk-peli__vuoro", paneeli);
@@ -201,7 +201,7 @@ namespace Matkakirja.Natiivi
             Auki = true;
             SyoteLukko.Esta(this);
             UiKerros.Hae().Juuri(Pulu.Kerros).style.visibility = Visibility.Hidden;
-            UiKerros.Hae().Juuri(UiKerros.Nostot).style.visibility = Visibility.Hidden; // nostomerkit eivät jää sumean kartan päälle
+            Pehmenna(true);
             if (PalloKierto.Pysaytyskuva != null) AsetaPysaytys(PalloKierto.Pysaytyskuva);
             peli ??= new Mylly();
             lauta.Lataa();
@@ -222,7 +222,7 @@ namespace Matkakirja.Natiivi
             Rakenne.Nayta(peliTaso, false, Tyylikirja.Kesto.Sulku);
             SyoteLukko.Vapauta(this);
             UiKerros.Hae().Juuri(Pulu.Kerros).style.visibility = StyleKeyword.Null;
-            UiKerros.Hae().Juuri(UiKerros.Nostot).style.visibility = StyleKeyword.Null;
+            Pehmenna(false);
             // Kerrokset ja äänet muistista sulkuanimaation jälkeen (Natiiviseppä: Resources.UnloadUnusedAssets suljettaessa).
             int k = kerta;
             lauta.schedule.Execute(() =>
@@ -258,6 +258,26 @@ namespace Matkakirja.Natiivi
             if (c.loadState != AudioDataLoadState.Loaded) c.LoadAudioData();
             Aanet.RekisteroiTehoste(nimi, c, AaniGain);
         }
+
+        /// <summary>TAUSTAN PEHMENNYS (omistaja 2.10. klo 11.0x, loki 11.01: "pehmennä kaikki elementit taustalla, myös
+        /// tekstit"; Natiivi-UI:n keino): pallo on Kokoruutu-tason sumea pysäytyskuva (kerros 11), ja laudan alla olevien
+        /// UI-kerrosten juuriin (nostot 12, tilarivi ja yläpalkki 15, matkavalinta 20) UI Toolkitin blur-suodin 4 pt kuten
+        /// Nostokortti.AsetaPehmennys. Kerran avattaessa ja kerran suljettaessa; pois Nullilla (ei StyleKeyword.None, 6.3 kaatuu).</summary>
+        static void Pehmenna(bool paalle)
+        {
+            var k = UiKerros.Hae();
+            foreach (int kerros in PehmeatKerrokset)
+            {
+                var j = k.Juuri(kerros);
+                if (!paalle) { j.style.filter = StyleKeyword.Null; continue; }
+                var f = new FilterFunction(FilterFunctionType.Blur);
+                f.AddParameter(new FilterParameter(PehmennysPt));
+                j.style.filter = new List<FilterFunction> { f };
+            }
+        }
+
+        static readonly int[] PehmeatKerrokset = { UiKerros.Nostot, UiKerros.Tilarivi, UiKerros.Matkavalinta };
+        const float PehmennysPt = 4f;
 
         void AsetaPysaytys(Texture t)
         {

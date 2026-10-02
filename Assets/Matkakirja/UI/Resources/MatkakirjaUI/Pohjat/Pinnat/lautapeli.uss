@@ -6,8 +6,9 @@
    valinta ja tulos = KORTTI-pohja. Vain tyylikirjan muuttujat.
    Omistaja 2.10. klo 08.2x (Natiivi-UI:n arvot): lauta ilman taustaa (Blender-kuva reunoineen), tausta himmennys-kevyt +
    kartan kertakuvasumennus (UiNakymat.PaivitaKuvaSumea), pelin aikainen paneeli TUMMA; aloitus- ja tuloskortti paperia.
-   Omistaja 2.10. klo 10.3x (Päätoimittajan loki 10.39): tumma liian tumma → paneeli PANEELI-teemalla LASI (.tk-teema-lasi
-   MyllyNakymassa); paneelin säännöt teeman muuttujilla (--tk-pinta, --tk-muste …), vertailu "ui mylly teema tumma|lasi|paperi". */
+   Omistaja 2.10. klo 10.3x tumma liian tumma → lasi kokeiltu; klo 11.0x (loki 11.01) "pidetään alkuperäinen, mutta pehmennä
+   kaikki elementit taustalla, myös tekstit": paneeli PAPERI (.tk-teema-paperi, pergamentti) ja taustan UI-kerrosten blur 4 pt
+   (MyllyNakyma.Pehmenna); paneelin säännöt teeman muuttujilla, vertailu "ui mylly teema paperi|lasi|tumma". */
 .mk-peli {
     background-color: var(--tk-himmennys-kevyt);
     padding: 0;
