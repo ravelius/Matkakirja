@@ -782,6 +782,8 @@ V7_OTOKSET = (  # (ruutu, kameran paikka, katsepiste, polttoväli mm); ruutu = m
     (259, (0.30, -0.36, 0.22), (0.02, -0.11, 0.30), 50),   # patarumpu (21,60 s): parta ja suu
     (282, (-0.30, -1.02, 0.40), (-0.06, -0.06, 0.36), 35), # loppusointu (60,6 s): Rembrandt + nimi
 )
+if '--v10' in A:   # omistaja 2.10. 10.3x: nimi ja vuodet alempaa, katse kasvoihin ylöspäin
+    V7_OTOKSET = V7_OTOKSET[:-1] + ((282, (-0.30, -1.02, 0.25), (-0.06, -0.06, 0.40), 35),)
 V7_VALO = ((1, (0.55, 0.85, 0.30)), (119, (0.9, 0.55, 0.35)), (236, (1.0, -0.05, 0.6)), (259, (0.85, -0.45, 0.75)),
            (282, (0.70, -0.70, 0.85)))
 if KOHDE == 'marcus':   # tuuheat kiharat ja parta varjostavat enemmän → aurinko alkaa sivummalta, jotta kasvot näkyvät
@@ -996,7 +998,9 @@ if '--v7' in A:
     if '--kaiku' in A:   # v8: kaikukuva elämäkerronnan aikana samalla videotykillä (otsan projektori)
         KAIKU = A[A.index('--kaiku') + 1]
         KVOIMA = float(A[A.index('--kaikuvoima') + 1]) if '--kaikuvoima' in A else 160.0
-        kaiku_projektori('kaiku', p, (n + Vector((-0.40, -0.15, -0.30))).normalized(), 0.6, 0.11, KAIKU, V7_KAIKU, KVOIMA)
+        # v10 (omistaja 10.3x): kaikukuva suoraan pintaa kohti ja kamera lähelle projektorin suuntaan → kuvasta saa selvää
+        k_suunta = (n + Vector((-0.10, -0.05, -0.08))).normalized() if '--v10' in A else (n + Vector((-0.40, -0.15, -0.30))).normalized()
+        kaiku_projektori('kaiku', p, k_suunta, 0.6, 0.06 if '--v10' in A else 0.11, KAIKU, V7_KAIKU, KVOIMA)
         # omistaja 2.10. 08.xx: kertomuksen ajan kaiku on ainoa valo — aurinko ja ympäristö hiipuvat 1,5 s:ssa kaiun
         # syttyessä ja palaavat kaiun hiipuessa
         alku_k, loppu_k = V7_KAIKU; tausta = sc.world.node_tree.nodes['Background'].inputs['Strength']
@@ -1026,6 +1030,10 @@ if '--v7' in A:
         liuku = t * (-V6_LIUKU + 2 * V6_LIUKU * osuus)
         avain(r, p + kierto @ (c - p) + liuku, p + liuku * 0.5, V3B_LINSSI, 'BEZIER')
     avain(V7_PITO, cam.location.copy(), tahtain.location.copy(), V3B_LINSSI, 'BEZIER')
+    if '--v10' in A and '--kaiku' in A:   # kaiun ajaksi kamera lähelle projektorin suuntaan, hidas liuku
+        kc = (n + Vector((0.08, -0.05, -0.12))).normalized()
+        avain(V7_KAIKU[0] + 45, p + kc * 0.21, p, 35, 'BEZIER'); avain(V7_KAIKU[1] - 45, p + kc * 0.19 + t * 0.006, p + t * 0.003, 35, 'BEZIER')
+        avain(V7_PITO, p + kc * 0.19 + t * 0.006, p + t * 0.003, 35, 'BEZIER')
     if '--v9' in A:
         # kierros 2: 21d nauhana poskella → oraakkelin kylix SILMÄMUNAAN ainoana valona (d-luenta)
         # kierros 3: 49b nauhana kasvojen sivulla (ohimo ja poskipää) → Davidin kaiku ainoana valona (f-luenta)
@@ -1039,9 +1047,9 @@ if '--v7' in A:
                       os.path.join(GOBOT, 'nauha-poski.png'), 0.017 * ISO, vieritys(V9['r2_liuku'][1], V9['r2_proj']), V7_TYKKI)
         v4_projektori('tykki-sivu', vp, (vn + Vector((0.0, -0.45, -0.25))).normalized(), 0.6, 0.075,
                       os.path.join(GOBOT, 'nauha-sivu.png'), 0.019 * ISO, vieritys(V9['r3_liuku'][1], V9['r3_proj']), V7_TYKKI)
-        kaiku_projektori('kaiku-silma', sp, (sn + Vector((-0.75, 0.0, 0.30))).normalized(), 0.5, 0.03,
+        kaiku_projektori('kaiku-silma', sp, (sn + (Vector((-0.15, 0.0, 0.10)) if '--v10' in A else Vector((-0.75, 0.0, 0.30)))).normalized(), 0.5, 0.03,
                          os.path.join(GOBOT, 'kaiku-oraakkeli.png'), V9['r2_kaiku'], 15.0, liuku=0.08)
-        kaiku_projektori('kaiku-sivu', vp, (vn + Vector((0.0, -0.40, 0.20))).normalized(), 0.6, 0.085,
+        kaiku_projektori('kaiku-sivu', vp, (vn + (Vector((0.0, -0.10, 0.05)) if '--v10' in A else Vector((0.0, -0.40, 0.20)))).normalized(), 0.6, 0.07 if '--v10' in A else 0.085,
                          os.path.join(GOBOT, 'kaiku-kuolema.png'), V9['r3_kaiku'], 30.0)
         tausta = sc.world.node_tree.nodes['Background'].inputs['Strength']
         for (a_, l_) in (V9['r2_kaiku'], V9['r3_kaiku']):                # kaiku ainoa valo (omistaja 2.10. 08.xx)
@@ -1057,10 +1065,15 @@ if '--v7' in A:
                 avain(r, p_ + kier @ (c_ - p_) + lk, p_ + lk * 0.5, mm, 'BEZIER')
         pc, pt, _ = lentoasento(pp, pn, kulma=38, matka=0.11)
         kaari(pp, pn, pc, V9['r2_proj'][0], V9['r2_lahde'][1], 12, V3B_LINSSI, pt)
-        sc_ = sp + (sn + Vector((0.25, 0.0, -0.20))).normalized() * 0.14
+        sc_ = sp + (sn + Vector((0.10, 0.0, -0.10))).normalized() * 0.10 if '--v10' in A else sp + (sn + Vector((0.25, 0.0, -0.20))).normalized() * 0.14
         kaari(sp, sn, sc_, V9['r2_kaiku'][0], V9['r2_kaiku'][1], 8, 50)
         vc, vt, _ = lentoasento(vp, vn, kulma=40, matka=0.11)
-        kaari(vp, vn, vc, V9['r3_proj'][0], V9['r3_kaiku'][1], 14, V3B_LINSSI, vt)
+        if '--v10' in A:   # teksti kiertäen, kaiku lähempää projektorin suunnasta
+            kaari(vp, vn, vc, V9['r3_proj'][0], V9['r3_lahde'][1], 14, V3B_LINSSI, vt)
+            vk = (vn + Vector((0.0, -0.12, -0.10))).normalized()
+            avain(V9['r3_kaiku'][0] + 45, vp + vk * 0.24, vp, 35, 'BEZIER'); avain(V9['r3_kaiku'][1], vp + vk * 0.22 + vt * 0.008, vp + vt * 0.004, 35, 'BEZIER')
+        else:
+            kaari(vp, vn, vc, V9['r3_proj'][0], V9['r3_kaiku'][1], 14, V3B_LINSSI, vt)
         rem = V7_OTOKSET[-1]
         avain(V9['loppu'][1] - 20, rem[1], rem[2], rem[3], 'BEZIER'); avain(V9['loppu'][1], rem[1], rem[2], rem[3], 'BEZIER')
     if '--kaikutayte' in A:
@@ -1125,14 +1138,8 @@ if '--prologi' in A:
     o = rakenna(int(A[A.index('--naytteita') + 1]) if '--naytteita' in A else 32); sc = bpy.context.scene; _kipsin_pinta(o)
     for nimi in ('sivu', 'reuna', 'tayte'): bpy.data.objects[nimi].hide_render = True
     sc.world.node_tree.nodes['Background'].inputs['Strength'].default_value = 0.0
-    # tausta: tumma levy bystin takana, jota takavalo valaisee → siluetti hehkua vasten
-    bpy.ops.mesh.primitive_plane_add(size=4, location=(0, 0.9, 0.4), rotation=(math.radians(90), 0, 0))
-    lev_ = bpy.context.object; mt = bpy.data.materials.new('tausta'); mt.use_nodes = True
-    mt.node_tree.nodes['Principled BSDF'].inputs['Base Color'].default_value = (0.20, 0.19, 0.18, 1)
-    mt.node_tree.nodes['Principled BSDF'].inputs['Roughness'].default_value = 1.0; lev_.data.materials.append(mt)
-    valot_ = []
-    for nimi_, paikka, kohde_, e, koko_ in (('taka', (0.0, 0.30, 0.40), (0.0, 0.9, 0.42), 9.0, 0.0),       # hehkuva kehä pään takana
-                                            ('reuna-v', (-0.30, 0.55, 0.42), (0.0, -0.06, 0.42), 45.0, 26.0),  # reunavalot takaa, keila vain päähän
+    # omistaja 2.10. 10.3x: ei valoa taustaan (kehä pois), vain ääriviivavalo kohteeseen — "saa olla salamyhkäinen"
+    for nimi_, paikka, kohde_, e, koko_ in (('reuna-v', (-0.30, 0.55, 0.42), (0.0, -0.06, 0.42), 45.0, 26.0),  # reunavalot takaa, keila vain päähän
                                             ('reuna-o', (0.30, 0.55, 0.42), (0.0, -0.06, 0.42), 45.0, 26.0)):
         if koko_ == 0.0:   # taustan kehä: pehmeäreunainen spotti, vain pään taakse
             d = bpy.data.lights.new(nimi_, 'SPOT'); d.spot_size = math.radians(70); d.spot_blend = 1.0; d.shadow_soft_size = 0.05
