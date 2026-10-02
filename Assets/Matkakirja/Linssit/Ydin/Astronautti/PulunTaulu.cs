@@ -85,6 +85,8 @@ namespace Matkakirja.Linssit.Astronautti
             var l = new List<TaulunRivi>();
             foreach (var r in rivit)
             {
+                // ISS:n rinnalla pois pelistä (omistaja 2.10.2026); kehittäjän seurantatilassa rivi palaa.
+                if (r.Moodi == AstroMoodi.Seuranta && !Iss.IssKyyti.SeurantaKaytossa) continue;
                 bool saatavilla = r.Moodi == AstroMoodi.Pallo || (r.Moodi == AstroMoodi.Kuvat ? kuviaOn : kyytiOn);
                 if (!saatavilla) continue;
                 l.Add(new TaulunRivi { Tunnus = r.Tunnus, Otsikko = r.Otsikko, Selite = r.Selite, Moodi = r.Moodi, Aktiivinen = r.Moodi == nykyinen });
@@ -117,7 +119,10 @@ namespace Matkakirja.Linssit.Astronautti
             var kohde = tavoite == AstroMoodi.Seuranta ? Iss.KyydinTila.Seuranta : Iss.KyydinTila.Ikkuna;
             if (t == kohde) return MoodinAskel.Perilla;
             if (siirtyy) return MoodinAskel.Odota;
-            return MoodinAskel.Napauta; // kauko → seuranta (→ ikkuna), ikkuna/kohde → seuranta
+            // Kauko → Cupola, kohde → Cupola (kehittäjän seurantatilassa kauko → seuranta → ikkuna, ikkuna/kohde → seuranta).
+            // Ikkunasta seurantaan ei ole tietä, kun seuranta on pois.
+            if (kohde == Iss.KyydinTila.Seuranta && !Iss.IssKyyti.SeurantaKaytossa) return MoodinAskel.Ei;
+            return MoodinAskel.Napauta;
         }
 
         /// <summary>

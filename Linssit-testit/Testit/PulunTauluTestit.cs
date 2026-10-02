@@ -10,7 +10,8 @@ namespace Matkakirja.Linssit.Testit
     public static class PulunTauluTestit
     {
         [Testi] static void RivitKutenWebissa()
-        {
+        { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = true;   // kehittäjän seurantapolku (ISS:n rinnalla pois pelistä 2.10.)
+            try {
             var kaikki = PulunTaulu.Rivit(true, true, AstroMoodi.Pallo);
             Oleta.Sama("pallo iss-rinnalla iss-sisalle kuvat", string.Join(" ", kaikki.Select(r => r.Tunnus)));
             Oleta.Sama("Maapallo|ISS:n rinnalla|ISS:n sisälle|Astronauttien kuvat", string.Join("|", kaikki.Select(r => r.Otsikko)));
@@ -24,6 +25,7 @@ namespace Matkakirja.Linssit.Testit
             foreach (var r in PulunTaulu.KaikkiRivit)
                 foreach (var kielletty in new[] { "Lennä", "nopeu", "LIVE", "sijainti", "Kysy" })
                     Oleta.Tosi(!(r.Otsikko + r.Selite).Contains(kielletty), r.Tunnus + ": " + kielletty);
+                    } finally { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = false; }
         }
 
         [Testi] static void NykyinenMoodiKyydinTilasta()
@@ -37,7 +39,8 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi] static void AskelkoneKutenWebissa()
-        {
+        { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = true;   // kehittäjän seurantapolku (ISS:n rinnalla pois pelistä 2.10.)
+            try {
             // Pallolta ISS:n sisälle: napautus, odotus siirtymän ajan, toinen napautus, perillä (web: 2 napautaIss-kutsua).
             Oleta.Sama(MoodinAskel.Napauta, PulunTaulu.Askel(AstroMoodi.Ikkuna, false, KyydinTila.Kauko, false));
             Oleta.Sama(MoodinAskel.Odota, PulunTaulu.Askel(AstroMoodi.Ikkuna, false, KyydinTila.Kauko, true));
@@ -57,6 +60,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(MoodinAskel.Ei, PulunTaulu.Askel(AstroMoodi.Seuranta, false, null, false));
             // Ikkunasta tai ylilennolta rinnalle: napautus.
             Oleta.Sama(MoodinAskel.Napauta, PulunTaulu.Askel(AstroMoodi.Seuranta, false, KyydinTila.Kohde, false));
+                    } finally { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = false; }
         }
 
         [Testi] static void SijoitusVaistaaIssiaJaPulua()

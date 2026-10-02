@@ -265,7 +265,8 @@ namespace Matkakirja.Linssit.Astronautti
             new Iss.IssHetki(paikka, Iss.IssNyt.KorkeusKm(utc) * 1000, Iss.IssNyt.Suuntima(utc));
 
         /// <summary>
-        /// ISS:ää napautettiin (AstronauttiKerros, 44 pt): kauko → seuranta → ikkuna → seuranta (kohteen yltä seurantaan).
+        /// ISS:ää napautettiin (AstronauttiKerros, 44 pt): kauko → Cupola (kohteen yltä Cupolaan); seuranta vain kehittäjälle
+        /// (Iss.IssKyyti.SeurantaKaytossa).
         /// Ei avauksen aikana eikä kuvan ollessa auki.
         /// </summary>
         public void NapautaIss()
@@ -550,7 +551,8 @@ namespace Matkakirja.Linssit.Astronautti
             var yl = Iss.Ylilennot.Seuraava(hakuLat ?? k.Lat, k.Lon, Iss.IssNyt.Kello(), valoisa: valoisa);
             tietoAika = -1;
             if (yl == null) { lento = new Lento { Kohde = k }; return null; }
-            if (kyyti.Tila != Iss.KyydinTila.Seuranta) NapautaIss();
+            // Kehittäjän seurantatilassa lento lähtee seurannasta (ikkunasta napautus vie sinne); muuten Cupolasta suoraan.
+            if (Iss.IssKyyti.SeurantaKaytossa && kyyti.Tila != Iss.KyydinTila.Seuranta) NapautaIss();
             var uusi = new Lento { Kohde = k, Ylilento = yl, Alku = y.Aika };
             lento = uusi;
             uusi.Id = Iss.IssNyt.Simu.KelaaHetkeen(yl.Value.Hetki, vahennetty: y.VahennettyLiike);
