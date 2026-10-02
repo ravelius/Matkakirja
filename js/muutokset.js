@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2563, teksti: 'Puhe äänenä, ei kuplina: Pulun äänitetyt replii… (#3867)' },
   { v: 2562, teksti: 'Linssit-nappi kartalle, Julisteet valikosta (#3859)' },
   { v: 2561, teksti: 'Tyylikirja: GALLERIA-pohja ja £-merkin kirjasin (#3860)' },
   { v: 2560, teksti: 'Tyylikirja: OHJAUSNAPPI-pohja, harmaa teema ja… (#3854)' },
