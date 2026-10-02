@@ -80,7 +80,7 @@ test('iso aarre antaa hiomassa-linssin: raha pysyy, hyvitys 500 kerran, ei tiet�
   assert.ok(kupla, 'aid-kupla hiomassa-linssistä');
   assert.equal(kupla.hyvitys, OPTIKON_HYVITYS);
   assert.equal(kupla.linssi, 'testilinssi');
-  assert.match(kupla.sub, /Optikko hioo vielä tätä linssiä.*500 puntaa hyvitystä/);
+  assert.match(kupla.sub, /Optikko hioo vielä tätä linssiä.*hyvitystä £500/);
   // Toinen löytö (uusi peli, sama passi): ei hyvitystä uudestaan.
   const game2 = new Game({ players: [{ name: 'B', color: '#00f', start: 'tanger' }], rng: () => 0.5 });
   game2.polloLoydetty = true;

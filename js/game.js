@@ -1172,8 +1172,8 @@ export class Game {
     this.lastPath = this.busPath(lahto, cityId);
     p.pos = { type: 'city', city: cityId };
     this.visitCity(p);
-    this.say(p.id, `${p.name} otti bussin kaupunkiin ${kohde.name} (bussilippu ${BUS_FARE} puntaa).`);
-    this.emit('fare', `Bussimatka −${BUS_FARE} puntaa`, { icon: 'kukkaro' });
+    this.say(p.id, `${p.name} otti bussin kaupunkiin ${kohde.name} (bussilippu £${BUS_FARE}).`);
+    this.emit('fare', `Bussimatka −£${BUS_FARE}`, { icon: 'kukkaro' });
     this.moves = null;
     this.die = null;
     if (this.checkWin()) return { ok: true, win: true };
@@ -1282,14 +1282,14 @@ export class Game {
       const hyvitys = hyvitaHiomassa(this, player, tunnus);
       const nimi = hiomassaNimi(tunnus);
       this.say(player.id, `${player.name} löysi aarteen kyljestä linssin (${nimi}), mutta optikko hioo sitä vielä`
-        + (hyvitys ? ` — hän maksoi odotuksesta ${hyvitys} puntaa hyvitystä.` : '.'));
+        + (hyvitys ? ` — hän maksoi odotuksesta hyvitystä £${hyvitys}.` : '.'));
       this.emit('aid', 'Linssi hiomassa', {
         icon: 'suurennuslasi',
         linssi: tunnus,
         hiomassa: true,
         hyvitys,
         sub: hyvitys
-          ? `Optikko hioo vielä tätä linssiä — hän maksoi odotuksesta ${hyvitys} puntaa hyvitystä. Linssi tulee laukkuun, kun se on valmis.`
+          ? `Optikko hioo vielä tätä linssiä — hän maksoi odotuksesta hyvitystä £${hyvitys}. Linssi tulee laukkuun, kun se on valmis.`
           : 'Optikko hioo vielä tätä linssiä. Linssi tulee laukkuun, kun se on valmis.',
         tilanne: 'peli.linssi.hiomassa',
       });
@@ -1436,7 +1436,7 @@ export class Game {
     if (palkkio > 0) {
       p.money += palkkio;
       const otsikko = streakOtsikko(pituus);
-      this.say(p.id, `${otsikko}: +${paiva} puntaa${viikko ? ` ja viikkobonus +${viikko} puntaa` : ''}.`);
+      this.say(p.id, `${otsikko}: +£${paiva}${viikko ? ` ja viikkobonus +£${viikko}` : ''}.`);
       this.emit('rahat', otsikko, {
         sub: `+£${paiva}${viikko ? ` ja viikkobonus +£${viikko}` : ''}`,
         icon: 'kukkaro', tilanne: 'peli.streak', pelaaja: p.id,
@@ -1464,13 +1464,13 @@ export class Game {
       const erittely = k.majoitus ? `ruoka £${k.ruoka}, majoitus £${k.majoitus}` : `ruoka £${k.ruoka}`;
       if (p.money >= k.yhteensa) {
         p.money -= k.yhteensa;
-        this.say(p.id, `${paikka}: ${erittely} (−${k.yhteensa} puntaa).`);
+        this.say(p.id, `${paikka}: ${erittely} (−£${k.yhteensa}).`);
         continue;
       }
       const maksettu = p.money;
       p.money = 0;
       p.rasti = (p.rasti ?? 0) + (k.yhteensa - maksettu);
-      this.say(p.id, `${paikka}: ${erittely} — rahat eivät riittäneet, ${p.rasti} puntaa jäi velaksi.`);
+      this.say(p.id, `${paikka}: ${erittely} — rahat eivät riittäneet, £${p.rasti} jäi velaksi.`);
       if (!p.rahaton) {
         p.rahaton = { alkuVuoro: this.turnCount, paiva: this.dayCount() };
         this.say(p.id, `${p.name}: rahat ovat lopussa. Kaksi päivää aikaa hankkia rahaa — muuten matka päättyy.`);
@@ -1495,7 +1495,7 @@ export class Game {
       p.money -= rasti;
       p.rasti = 0;
       p.rahaton = null;
-      this.say(p.id, `Kassa kunnossa${rasti ? ` — velka ${rasti} puntaa maksettu` : ''}.`);
+      this.say(p.id, `Kassa kunnossa${rasti ? ` — velka £${rasti} maksettu` : ''}.`);
       this.emit('rahat', 'Kassa kunnossa', { icon: 'kukkaro', tilanne: 'peli.vararikko.selvisi', pelaaja: p.id });
       return;
     }
@@ -1605,7 +1605,7 @@ export class Game {
     this.kulttuuriVastatut.add(avain);
     if (oikein) {
       this.player.money += palkkio;
-      this.say(this.player.id, `${this.player.name} tunsi paikallista kulttuuria (+${palkkio} puntaa).`);
+      this.say(this.player.id, `${this.player.name} tunsi paikallista kulttuuria (+£${palkkio}).`);
     }
     return { ok: true, palkittu: !!oikein };
   }
@@ -1624,7 +1624,7 @@ export class Game {
     if (oikein) {
       this.minitehtavatOikein.add(avain);
       this.player.money += palkkio;
-      this.say(this.player.id, `${this.player.name} ratkaisi lehden minitehtävän (+${palkkio} puntaa).`);
+      this.say(this.player.id, `${this.player.name} ratkaisi lehden minitehtävän (+£${palkkio}).`);
     }
     return { ok: true, palkittu: !!oikein };
   }
@@ -1703,7 +1703,7 @@ export class Game {
     if (p.money < hinta) return { ok: false, error: 'Rahat eivät riitä' };
     p.money -= hinta;
     this.pullaVinkit.add(avain);
-    this.say(p.id, `${p.name} osti Livialle pullan ${hinta} punnalla ja ${mita}.`);
+    this.say(p.id, `${p.name} osti Livialle pullan (£${hinta}) ja ${mita}.`);
     return { ok: true, hinta };
   }
 
@@ -1745,7 +1745,7 @@ export class Game {
     const maksu = Number.isFinite(palkkio) && palkkio > 0 ? palkkio : 0;
     this.player.money += maksu;
     if (maksu) {
-      this.say(this.player.id, `${this.player.name} löysi eläintäyn (+${maksu} puntaa).`);
+      this.say(this.player.id, `${this.player.name} löysi eläintäyn (+£${maksu}).`);
     }
     return { ok: true, uusi: true, palkkio: maksu };
   }
@@ -1829,8 +1829,8 @@ export class Game {
     this.visitCity(p);
     this.lastPath = null;
     const city = this.board.cityById.get(cityId);
-    this.say(p.id, `${p.name} lensi ${FLIGHT_PRICE} punnalla kaupunkiin ${city.name}.`);
-    this.emit('flight', `Lento kaupunkiin ${city.name}`, { icon: 'kone', sub: `−${FLIGHT_PRICE} puntaa` });
+    this.say(p.id, `${p.name} lensi kaupunkiin ${city.name} (£${FLIGHT_PRICE}).`);
+    this.emit('flight', `Lento kaupunkiin ${city.name}`, { icon: 'kone', sub: `−£${FLIGHT_PRICE}` });
     // checkWin ei tarvita: mannerlento on vaellustilan mekaniikka, ja
     // vaelluksessa checkWin palauttaa aina false.
     if (this.offerQuiz()) return { ok: true, offer: true };
@@ -2101,12 +2101,12 @@ export class Game {
 
     const city = this.cityOf();
     if (city) this.visitCity(p);
-    const fareText = fare ? ` (laivamatka ${fare} puntaa)` : '';
+    const fareText = fare ? ` (laivamatka £${fare})` : '';
     const where = city
       ? `kaupunkiin ${city.name}`
       : `reitille ${this.routeName(move.pos.edge)}`;
     this.say(p.id, `${p.name} siirtyi ${where}${fareText}.`);
-    if (fare) this.emit('fare', `Laivamatka −${fare} puntaa`, { icon: 'ankkuri' });
+    if (fare) this.emit('fare', `Laivamatka −£${fare}`, { icon: 'ankkuri' });
 
     this.moves = null;
     this.die = null;
@@ -2375,8 +2375,8 @@ export class Game {
      */
     if (palkkio > 0) {
       p.money += palkkio;
-      this.say(p.id, `Sähkeestä ${p.name} saa ${palkkio} puntaa.`);
-      this.emit('aid', `Sähkepalkkio +${palkkio} puntaa`, { icon: 'kukkaro' });
+      this.say(p.id, `Sähkeestä ${p.name} saa £${palkkio}.`);
+      this.emit('aid', `Sähkepalkkio +£${palkkio}`, { icon: 'kukkaro' });
     }
     this.awardXp(p, XP_HARD_ANSWER);
     const found = this.revealToken(cityId);
@@ -2723,8 +2723,8 @@ export class Game {
       const muutos = Math.max(effect.amount, -p.money);
       p.money += muutos;
       this.say(p.id, muutos >= 0
-        ? `${p.name} sai ${muutos} puntaa.`
-        : `${p.name} menetti ${-muutos} puntaa.`);
+        ? `${p.name} sai £${muutos}.`
+        : `${p.name} menetti £${-muutos}.`);
     } else if (effect?.kind === 'kyyti') {
       const kohde = this.rideTarget(p);
       if (kohde) {
@@ -2928,8 +2928,8 @@ export class Game {
       if (this.quiz.right) {
         this.awardXp(p, XP_EXPLORE);
         p.money += EXPLORE_REWARD;
-        this.say(p.id, `◈ ${p.name} tutki paikkaa kaupungissa ${city.name} ja vastasi oikein (+${EXPLORE_REWARD} puntaa, +${XP_EXPLORE} tp).`);
-        this.emit('aid', `Löytöpalkkio +${EXPLORE_REWARD} puntaa`, { icon: 'kukkaro' });
+        this.say(p.id, `◈ ${p.name} tutki paikkaa kaupungissa ${city.name} ja vastasi oikein (+£${EXPLORE_REWARD}, +${XP_EXPLORE} tp).`);
+        this.emit('aid', `Löytöpalkkio +£${EXPLORE_REWARD}`, { icon: 'kukkaro' });
       } else {
         const oikea = this.quiz.options[this.quiz.correct];
         this.say(p.id, `${p.name} vastasi väärin — oikea vastaus oli "${oikea}".`);
@@ -2944,7 +2944,7 @@ export class Game {
       if (this.quiz.hard) {
         p.money += HARD_BONUS;
         this.awardXp(p, XP_HARD_ANSWER);
-        this.say(p.id, `Vaikeasta kysymyksestä ${p.name} saa ${HARD_BONUS} punnan palkkion ja ${XP_HARD_ANSWER} tietäjäpistettä.`);
+        this.say(p.id, `Vaikeasta kysymyksestä ${p.name} saa palkkion £${HARD_BONUS} ja ${XP_HARD_ANSWER} tietäjäpistettä.`);
       }
       this.quiz.found = this.revealToken(this.quiz.cityId);
     } else {
@@ -2966,7 +2966,7 @@ export class Game {
     if (p.money < HINT_PRICE) return { ok: false, error: 'Rahat eivät riitä' };
     p.money -= HINT_PRICE;
     quiz.hintShown = true;
-    this.say(p.id, `${p.name} osti vihjeen ${HINT_PRICE} punnalla.`);
+    this.say(p.id, `${p.name} osti vihjeen (£${HINT_PRICE}).`);
     return { ok: true, hint: quiz.hint };
   }
 
@@ -2999,7 +2999,7 @@ export class Game {
     if (p.money < KAVERIAPU_HINTA) return { ok: false, error: 'Rahat eivät riitä' };
     p.money -= KAVERIAPU_HINTA;
     quiz.kaveriapu = true;
-    this.say(p.id, `${p.name} sähkötti retkikunnalle ja maksoi ${KAVERIAPU_HINTA} puntaa.`);
+    this.say(p.id, `${p.name} sähkötti retkikunnalle ja maksoi £${KAVERIAPU_HINTA}.`);
     return { ok: true };
   }
 
@@ -3042,7 +3042,7 @@ export class Game {
       [wrong[i], wrong[j]] = [wrong[j], wrong[i]];
     }
     quiz.hidden = wrong.slice(0, 2).sort((a, b) => a - b);
-    this.say(p.id, `${p.name} maksoi ${FIFTY_FIFTY_PRICE} puntaa ja poisti kaksi väärää vaihtoehtoa.`);
+    this.say(p.id, `${p.name} maksoi £${FIFTY_FIFTY_PRICE} ja poisti kaksi väärää vaihtoehtoa.`);
     return { ok: true, hidden: quiz.hidden };
   }
 
@@ -3137,7 +3137,7 @@ export class Game {
     }
     const removeCount = duel.reliefs === 1 ? 4 : 2;
     duel.hidden = [...duel.hidden, ...wrong.slice(0, removeCount)].sort((a, b) => a - b);
-    this.say(p.id, `${p.name} pyysi rosvolta helpotusta — rosvo vei ${toll} puntaa.`);
+    this.say(p.id, `${p.name} pyysi rosvolta helpotusta — rosvo vei £${toll}.`);
     return { ok: true, toll, hidden: duel.hidden };
   }
 
@@ -3157,7 +3157,7 @@ export class Game {
       if (duel.reliefs === 0) {
         p.money += DUEL_PRIZE;
         duel.prize = DUEL_PRIZE;
-        this.say(p.id, `${p.name} voitti rosvon suoralla vastauksella ja vei saaliin: ${DUEL_PRIZE} puntaa!`);
+        this.say(p.id, `${p.name} voitti rosvon suoralla vastauksella ja vei saaliin: £${DUEL_PRIZE}!`);
       } else {
         this.say(p.id, `${p.name} voitti rosvon — loput rahat säilyvät.`);
       }
@@ -3166,7 +3166,7 @@ export class Game {
       p.money -= loss;
       duel.taken += loss;
       const oikea = duel.options[duel.correct];
-      this.say(p.id, `☠ ${p.name} hävisi rosvolle ${loss} puntaa — oikea vastaus oli "${oikea}".`);
+      this.say(p.id, `☠ ${p.name} hävisi rosvolle £${loss} — oikea vastaus oli "${oikea}".`);
     }
     return { ok: true, right: duel.right };
   }
@@ -3186,7 +3186,7 @@ export class Game {
     const loss = Math.ceil(p.money / 2);
     p.money -= loss;
     duel.taken += loss;
-    this.say(p.id, `☠ ${p.name} ei ehtinyt vastata rosvolle ja menetti ${loss} puntaa.`);
+    this.say(p.id, `☠ ${p.name} ei ehtinyt vastata rosvolle ja menetti £${loss}.`);
     return { ok: true, right: false, timedOut: true };
   }
 
@@ -3274,8 +3274,8 @@ export class Game {
     this.visitCity(p);
     this.lastPath = null;
     const city = this.board.cityById.get(destination);
-    this.say(p.id, `${p.name} lensi ${FLIGHT_PRICE} punnalla kaupunkiin ${city.name}.`);
-    this.emit('flight', `Lento kaupunkiin ${city.name}`, { icon: 'kone', sub: `−${FLIGHT_PRICE} puntaa` });
+    this.say(p.id, `${p.name} lensi kaupunkiin ${city.name} (£${FLIGHT_PRICE}).`);
+    this.emit('flight', `Lento kaupunkiin ${city.name}`, { icon: 'kone', sub: `−£${FLIGHT_PRICE}` });
     if (this.checkWin()) return { ok: true, win: true };
     if (this.offerQuiz()) return { ok: true, offer: true };
     this.endTurn();
@@ -3391,8 +3391,8 @@ export class Game {
         this.noteRecord(p);
         if (this.roaming) {
           p.money += STAR_PRIZE;
-          this.say(p.id, `◈ ${p.name} löysi aarteen ${token.name} kaupungista ${city.name} — arvo ${STAR_PRIZE} puntaa!`);
-          this.emit('treasure', this.pack.texts.starToast, { token: type, city: cityId, sub: `+${STAR_PRIZE} puntaa` });
+          this.say(p.id, `◈ ${p.name} löysi aarteen ${token.name} kaupungista ${city.name} — arvo £${STAR_PRIZE}!`);
+          this.emit('treasure', this.pack.texts.starToast, { token: type, city: cityId, sub: `+£${STAR_PRIZE}` });
           // Ilmoitus mannerlennosta vain, jos jollakin muulla
           // mantereella on vielä aarre kateissa — viimeisen löydön
           // jälkeen lupaus lennosta olisi tyhjä.
@@ -3428,8 +3428,8 @@ export class Game {
          * paikallisaarteeksi.
          */
         p.money += arvo;
-        this.say(p.id, `${token.symbol} ${p.name} löysi kätköstä: ${token.name} (${arvo} puntaa).`);
-        this.emit('treasure', token.name, { token: type, city: cityId, sub: `+${arvo} puntaa` });
+        this.say(p.id, `${token.symbol} ${p.name} löysi kätköstä: ${token.name} (£${arvo}).`);
+        this.emit('treasure', token.name, { token: type, city: cityId, sub: `+£${arvo}` });
         this.linssiAarteenKylkiaisena(p, cityId, type);
     }
 
