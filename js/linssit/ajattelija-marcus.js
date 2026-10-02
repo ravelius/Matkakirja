@@ -15,6 +15,7 @@ export const MARCUS = Object.freeze({
   vuodet: "121–180 jaa.",
   kysymys: "Miten pitäisi elää?",
   malli: 'ajattelijat/marcus/v1/marcus-L1.glb',
+  kartta: { glb: 'ajattelijat/kartta/v1/marcus-kartta.glb', maa: 'ITA' },
   kipsi: SOKRATES.kipsi,
   korkeus: 0.51,
   paa: [0.0, -0.06, 0.38],
