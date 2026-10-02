@@ -19047,7 +19047,9 @@ export class UI {
      * (?lauta=kartta) linssi jää valikoimaan ennalleen.
      */
     const pallolauta = lautaValinta() === 'pallo';
-    return tuki.kaikki.filter((linssi) => omat.has(linssi.tunnus)
+    // Kehittäjätilan linssit (js/linssit/rekisteri.js KEHITTAJALINSSIT) vain kehittäjätilassa, eivät omistuksen kautta.
+    const kehittajalle = (t) => Boolean(this.kehittajaTila) && tuki.kerros.KEHITTAJALINSSIT?.some((r) => r.tunnus === t);
+    return tuki.kaikki.filter((linssi) => (omat.has(linssi.tunnus) || kehittajalle(linssi.tunnus))
       && !(pallolauta && linssi.tunnus === 'pallo')
       && tuki.kerros.kelpaaLaudalle(linssi, this.game.pack.id)
       && !this.linssiPois.has(linssi.tunnus));
