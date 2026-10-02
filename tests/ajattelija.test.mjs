@@ -59,7 +59,8 @@ test('vaihe 3: prologi, intron leikkaukset, nimi ja kysymys, kaiku ja äänirait
   assert.equal(SOKRATES.kaiku.tayte.osuus, 0.10);
   assert.deepEqual(SOKRATES.kaiku.savy, [1.0, 0.78, 0.52]);
   const js = lue('../js/linssit/ajattelija.js');
-  assert.match(js, /G = pr0\.loppu \+ aani\.currentTime \* RUUTUA_S/, 'ääniraita on kierroksen kello');
+  assert.match(js, /G = pr0\.loppu \+ aani\.currentTime \* RUUTUA_S/, 'pääraita on kierroksen kello');
+  assert.doesNotMatch(lue('../js/linssit/ajattelija-sokrates.js'), /kierros1\.mp3/, 'Straussin sisältävä yhdistelmäraita poistettu ämpäristä');
   assert.match(js, /return e\.suunta\.clone\(\);/, 'auringon avaimia ei saa muuttaa paikallaan');
   const css = lue('../css/pohjat/pinnat/ajattelija.css');
   assert.doesNotMatch(css, /#[0-9a-f]{3,6}\b|rgba?\(|\d+ms/i, 'pinnassa vain tokenit');

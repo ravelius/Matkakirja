@@ -396,8 +396,11 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   }
 
   // Ääniraita on kierroksen kello (luennat ja leikkaukset osuvat musiikkiin); prologi kulkee omalla kellollaan.
-  const aani = new Audio(`${R2}${a.aani}`);
+  const aani = new Audio(`${R2}${a.aani.paa}`);
   aani.preload = 'auto';
+  const introAani = new Audio(`${R2}${a.aani.intro}`);
+  introAani.preload = 'auto';
+  introAani.onerror = () => { introAani.dataset.puuttuu = '1'; };
   let aaniSoi = false;
   /** Globaali ruutu G: 1–120 prologi, sen jälkeen kierros (r = G − 120). */
   function asetaGlobaali(G) {
@@ -429,13 +432,20 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     edellinen = nyt;
     let G;
     if (ruutuOhitus != null) G = ruutuOhitus;
-    else if (aaniSoi && !aani.paused) G = pr0.loppu + aani.currentTime * RUUTUA_S;
+    else if (aaniSoi && !aani.paused) {
+      G = pr0.loppu + aani.currentTime * RUUTUA_S;
+      // Intro seuraa pääraitaa (yli 0,12 s:n ero korjataan); loppuu 21 s:ssa itsestään.
+      if (!introAani.dataset.puuttuu && !introAani.ended && Math.abs(introAani.currentTime - aani.currentTime) > 0.12
+        && aani.currentTime < introAani.duration) introAani.currentTime = aani.currentTime;
+    }
     else {
       G = (nyt - alku) / 1000 * RUUTUA_S;
       if (G > pr0.loppu && !aaniSoi) {
         aaniSoi = true;
         aani.currentTime = (G - pr0.loppu) / RUUTUA_S;
         aani.play().catch(() => { aaniSoi = false; aaniEsto = true; });
+        introAani.currentTime = aani.currentTime;
+        introAani.play().catch(() => {});
       }
       if (aaniEsto) aaniSoi = true;   // ei ääntä (ei eleen jälkeen avattu): kello jatkuu ajastimella
     }
@@ -473,8 +483,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     clearInterval(mittariAjastin);
     kokoVahti.disconnect();
     document.removeEventListener('keydown', nappain, true);
-    aani.pause();
-    aani.src = '';
+    for (const x of [aani, introAani]) { x.pause(); x.src = ''; }
     renderoija.dispose();
     atlas.dispose();
     kaiku?.dispose();
@@ -491,6 +500,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     /** Testeille: prologin ruutu p (1–120). */
     prologi: (p) => { ruutuOhitus = p; },
     nollaaMittari: () => { valit.length = 0; edellinen = 0; },
+    /** Testeille: ääniraitojen tila (kello = pääraita). */
+    aanitila: () => ({ paa: aani.currentTime, intro: introAani.currentTime, soi: !aani.paused, introSoi: !introAani.paused }),
   };
   globalThis.matkakirjaAjattelija = kahva;
   return kahva;

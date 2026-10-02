@@ -83,7 +83,12 @@ export const SOKRATES = Object.freeze({
     lev: 0.11, etaisyys: 0.6, voima: 20, liuku: 0.05, savy: [1.0, 0.78, 0.52], blend: 0.3,
     tayte: { osuus: 0.10, suunta: [-0.65, -0.25, 0.7], vari: [0.90, 0.94, 1.0], keila: 45, blend: 0.7 },
   },
-  aani: 'ajattelijat/sokrates/v1/kierros1.mp3',
+  /*
+   * Ääniraita kahtena (tools/ajattelija-aaniraita.mjs): pääraita = Satie + luennat, kierroksen kello; intro = intron
+   * musiikki 0–21 s, vaihdettavissa ilman uutta ajoitusta (Strauss on suojattu Espanjassa 2029 loppuun; omistajan
+   * päätös musiikista kesken 2.10.2026). Puuttuva intro jättää vain intron hiljaiseksi.
+   */
+  aani: { paa: 'ajattelijat/sokrates/v1/kierros1-paa.mp3', intro: 'ajattelijat/sokrates/v1/kierros1-intro.mp3' },
   syke: 'ajattelijat/sokrates/v1/syke-satie.json',
   /*
    * TAUSTAVIRTA (v10, omistaja 2.10. 08.2x–08.4x; sokrates_bysti.py paan_virta + tausta_rivi): 20 henkeä
