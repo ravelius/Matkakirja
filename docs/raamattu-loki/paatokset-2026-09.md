@@ -10175,3 +10175,7 @@ Omistaja 2.10.2026 klo 20.2x kortilla nostoselaimen kuvista 15/15b (natiivi fc26
 ## PÄÄTOIMITTAJA: VALIKKO V2:N PÄIVÄRIVI WEBIN MUKAAN ILMAN SISENNYSTÄ (2.10.2026) (2.10.2026 klo 20.32)
 
 Pelikoodari ilmoitti pariteettieron valikko V2:ssa (#3875 vs natiivi 72d93b6b): natiivin päivärivi oli sisennetty tason nimen kohdalle (44 pt), webissä se alkaa laatan reunasta avatarin kohdalta. Päätös (web on malli): päivärivi alkaa laatan reunasta molemmilla alustoilla, ja Natiivi-UI poistaa natiivin sisennyksen. Muut erot Natiivi-UI on jo korjannut webin mukaiseksi.
+
+## OMISTAJA (KORTTI): VALIKKO V2 ILMAN ×:ÄÄ JA VÄLIVIIVOJA HYVÄKSYTTY (2.10.2026) (2.10.2026 klo 20.54)
+
+Omistaja hyväksyi 2.10.2026 klo 20.5x kortilla valikon kuvat: natiivi 7aebac2e (ENNEN 128 | JÄLKEEN | Tietäjätaso, otsikko pelkkä kapiteeli) ja web #3875 + #3864/#3865 (selkeä £ Matkakirja Punta -kirjasimella). Vastaus: 'Kelpaa'. Web #3875 menee junaan #3864 → #3865:n jälkeen. Natiivi (natiivi-ui/valikko-v2-siisti e0ba9bd6) menee Natiivisepän junaan 129:n jälkeen.
