@@ -18,7 +18,8 @@ export const SOKRATES = Object.freeze({
   // GLB: proto-3d/_valmiit/sokrates-bysti/v1 (SMK KAS635, PDM 1.0; Scan the World / SMK). L1 ~50 k kolmiota + normaalikartta.
   malli: 'ajattelijat/sokrates/v1/sokrates-L1.glb',
   // Kartan pää ERIKOISNOSTOT-sarakkeessa (js/ajattelijapaat.js): Linnanrakentaja _valmiit/ajattelijat-kartta/v1, ~5 k kolmiota.
-  kartta: { glb: 'ajattelijat/kartta/v1/sokrates-kartta.glb', maa: 'GRC' },
+  // Kiinteä karttapiste (omistaja 16.5x): Pohjois-Egeanmeri Pelionin ja Euboian välissä, ei kaupunki eikä nimien päällä.
+  kartta: { glb: 'ajattelijat/kartta/v1/sokrates-kartta.glb', maa: 'GRC', piste: [39.49, 23.98] },
   // Kipsin mikronormaali (Poly Haven grey_plaster_02 nor_gl, Rob Tuytel, CC0; 1024 px).
   kipsi: 'ajattelijat/yhteiset/kipsi-nor-1k.jpg',
   korkeus: 0.51,
@@ -44,6 +45,19 @@ export const SOKRATES = Object.freeze({
       viite: 'Platon, Puolustuspuhe 38a',
       sade: [-0.005, 0.418], vino: [-0.40, -0.15, -0.30], ala: 0.075, etaisyys: 0.6,
       korkeus: 0.025625, kameraKulma: 55, kameraMatka: 0.11,
+    },
+    // Kierrokset 2–3 (Blender v9/v10): poski (Rembrandt-varjon puoli) ja kasvojen sivu valon puolella, säde sivulta.
+    '21d': {
+      fi: 'Mitä en tiedä, en luulekaan tietäväni.',
+      el: 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι',
+      viite: 'Platon, Puolustuspuhe 21d',
+      sade: [-0.055, 0.352], vino: [-0.55, -0.15, -0.30], ala: 0.065, etaisyys: 0.6, korkeus: 0.02125,
+    },
+    '49b': {
+      fi: 'Vääryyttä ei siis saa tehdä koskaan.',
+      el: 'οὐδαμῶς ἄρα δεῖ ἀδικεῖν',
+      viite: 'Platon, Kriton 49b',
+      sivulta: [-0.08, 0.375], vino: [0.0, -0.45, -0.25], ala: 0.075, etaisyys: 0.6, korkeus: 0.02375,
     },
   },
   // Kierros 1 (v7/v10, 30 r/s): intro 1–281, Rembrandt + nimi 282–372, kysymys 373–461, lähestyminen otsalle,
@@ -123,6 +137,54 @@ export const SOKRATES = Object.freeze({
    */
   aani: { puhe: 'ajattelijat/sokrates/v1/kierros1-puhe.mp3', musiikki: 'ajattelijat/sokrates/v1/kierros1-musiikki.mp3' },
   syke: 'ajattelijat/sokrates/v1/syke-musiikki.json',   // sokrates_syke.py musiikkiraidasta (1 ± 0,15)
+  /*
+   * KIERROKSET 2–3 (Blender v9/v10, sokrates_bysti.py --v9 --v10; luvut docs/raportit/sokrates-v10/sokrates-luvut.json,
+   * haara linnanrakentaja-sokrates-bysti 728f8f3d0) kierroksen 1 jatkoksi ruudusta 1450, loppu 3330 (111,0 s):
+   *   kierros 2: 21d nauhana poskella → oraakkelin kylix SILMÄMUNAAN ainoana valona (d-luenta)
+   *   kierros 3: 49b nauhana kasvojen sivulla → Davidin "Sokrateen kuolema" ainoana valona (f-luenta)
+   * Kamera kulkee Blenderin avaimilla (Blender-koordinaatit; AUTO_CLAMPED-Bézier, js/linssit/ajattelija.js kamerakayra);
+   * ruudun 1450 avain korvataan kierroksen 1 pidon kameralla. Ääni on yksi 111 s:n raita (tools/ajattelija-aaniraita.mjs
+   * --kierrokset; luennat c 51,667 s, d 62,667 s, e 80,0 s, f 88,833 s), syke siitä. Taustavirta: sama 20 riviä, oma siemen.
+   */
+  kierrokset: {
+    aani: { puhe: 'ajattelijat/sokrates/v1/kierrokset-puhe.mp3', musiikki: 'ajattelijat/sokrates/v1/kierrokset-musiikki.mp3' },
+    syke: 'ajattelijat/sokrates/v1/syke-kierrokset.json',
+    loppu: 3330,
+    lista: [
+      {
+        paalause: '21d', vieritys: [1480, 1755], lahde: [1762, 1810], virta: [1450, 1500, 1760, 1810], siemen: 21,
+        kaiku: {
+          kuva: 'ajattelijat/sokrates/v1/kaiku-oraakkeli.png',   // Kodros-maalarin kylix (PD), positiivinen
+          kohde: { sade: [0.040, 0.374] },                       // vasen silmämuna
+          ruudut: [1870, 2300], vino: [-0.15, 0.0, 0.10], etaisyys: 0.5, lev: 0.03, voima: 15, liuku: 0.08,
+          tayte: { suunta: [-0.55, -0.55, 0.6] },                // vasemmalta edestä ylhäältä
+        },
+      },
+      {
+        paalause: '49b', vieritys: [2330, 2595], lahde: [2602, 2650], virta: [2300, 2350, 2600, 2650], siemen: 49,
+        kaiku: {
+          kuva: 'ajattelijat/sokrates/v1/kaiku-kuolema.png',     // David 1787 (The Met, CC0), ilman maljaa
+          kohde: { sivulta: [-0.08, 0.375] },                    // kasvojen sivu valon puolella
+          ruudut: [2655, 3250], vino: [0.0, -0.10, 0.05], etaisyys: 0.6, lev: 0.07, voima: 30, liuku: 0.05,
+          tayte: { suunta: [0.45, 0.75, 0.55] },                 // takaviistosta oikealta
+        },
+      },
+    ],
+    kamera: [   // [ruutu, kameran paikka, katsepiste, mm]
+      [1450, [0.0405, -0.3049, 0.4805], [-0.002, -0.1304, 0.418], 35],
+      [1510, [-0.0983, -0.1598, 0.2678], [-0.0579, -0.1008, 0.352], 18],
+      [1810, [-0.0524, -0.1741, 0.2678], [-0.0521, -0.1026, 0.352], 18],
+      [1870, [0.0531, -0.2071, 0.3654], [0.04, -0.1083, 0.374], 50],
+      [2300, [0.0559, -0.2069, 0.3681], [0.04, -0.1083, 0.374], 50],
+      [2360, [0.1078, -0.1321, 0.284], [0.0689, -0.0826, 0.375], 18],
+      [2650, [0.1342, -0.0864, 0.284], [0.0719, -0.0774, 0.375], 18],
+      [2700, [0.2604, -0.2165, 0.3214], [0.0704, -0.08, 0.375], 35],
+      [3250, [0.2486, -0.1982, 0.3259], [0.0724, -0.0765, 0.375], 35],
+      // Paluu Rembrandt-otokseen: webin oma otokset.rembrandt (Blender v10: [-0.36, -1.24, 0.24] → [-0.075, -0.06, 0.39]).
+      [3310, [-0.30, -1.02, 0.25], [-0.06, -0.06, 0.40], 35],
+      [3330, [-0.30, -1.02, 0.25], [-0.06, -0.06, 0.40], 35],
+    ],
+  },
   /*
    * TAUSTAVIRTA (v10, omistaja 2.10. 08.2x–08.4x; sokrates_bysti.py paan_virta + tausta_rivi): 20 henkeä
    * tekstiriviä koko pään yli viidestä projektorista; jokaisella oma tahti (0,0007 × 1,18^k uv/ruutu, sekoitettuna),

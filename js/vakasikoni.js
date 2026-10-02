@@ -58,3 +58,14 @@ export function vakasikoninSvg({ koko = 20 } = {}) {
     + `stroke-linejoin="round">${
       VAKASIKONIN_POLUT.map((d) => `<path d="${d}"/>`).join('')}</svg>`;
 }
+
+/**
+ * Tavallinen hampurilainen samalla kynällä kuin väkäsikoni (innerHTML-käyttöön). Vaakatilan kelluva valikkonappi
+ * (js/ylapalkki-vaaka.js; omistaja 2.10.2026 klo 23.08: "väkäshampurilaisen voi vaihtaa samalla normaaliksi
+ * hampurilaiseksi").
+ */
+export function hampurilaisenSvg({ koko = 20 } = {}) {
+  return `<svg viewBox="0 0 24 24" width="${koko}" height="${koko}" aria-hidden="true" `
+    + 'fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">'
+    + `<path d="${HAMPURILAISEN_POLKU}"/></svg>`;
+}

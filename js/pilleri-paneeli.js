@@ -29,7 +29,8 @@ export function paneeliPohjalla() {
  * vanha järjestys ?valikko=vanha tai localStorage matkakirja-valikko=vanha): ÄÄNET (kevyt kytkinrivi, päällä =
  * pehmeä pergamenttitäyttö ilman tummaa reunaa) → tasorivi ilman otsikkoa (avatar ja "Untuvikko (80 tp)", avaa
  * tasonäkymän) → MATKALAUKKU [Aarteet (N), Julisteet (N)] → PELI [Retkikunta, Asetukset] → alarivi yhdellä rivillä
- * (Uusi peli vasemmalla, ↻ ja versio oikealla). Luettelorivit: ikoni, nimi, nuoli, ohut viiva välissä. Ei kapseleita
+ * (Uusi peli vasemmalla, ↻ ja versio oikealla). Luettelorivit: ikoni, nimi, nuoli, ei väliviivoja (20.2x); tasorivi ja
+ * päivärivi yhteisellä ÄÄNET-laatan pohjalla. Ei ×:ää: ohinapautus ja Esc sulkevat. Ei kapseleita
  * (EI OVAALEJA 2.10.). Linssit lähtee valikosta omaksi kartan napikseen (omistaja 13.56, erillinen erä).
  */
 export function valikkoV2() {
@@ -142,6 +143,18 @@ export function puePilleriPaneeliksi(haeUi) {
   // Pohjan kiinteä asemointi lukee sen avattaessa ja ruudun muuttuessa.
   const asemoi = () => {
     if (pv.hidden) return;
+    /*
+     * VAAKATILASSA EI YLÄPALKKIA (omistaja 2.10.2026 klo 23.07): kun kartan hampurilainen näkyy (css/styles.css:n
+     * media-kysely), paneeli avautuu suoraan napin päälle — yläreuna napin yläreunaan (pohja lisää --tk-vali-s:n) ja
+     * oikea reuna napin oikeaan reunaan.
+     */
+    const nappi = document.querySelector('.ylapalkki-nappi');
+    const nappiRect = nappi?.getBoundingClientRect();
+    if (nappiRect?.width) {
+      pv.style.setProperty('--tk-paneeli-yla', `calc(${Math.round(nappiRect.top)}px - var(--tk-vali-s))`);
+      pv.style.setProperty('--tk-paneeli-oikea', `${Math.round(window.innerWidth - nappiRect.right)}px`);
+      return;
+    }
     const palkki = document.querySelector('.topbar') ?? pv.parentElement ?? pv;
     pv.style.setProperty('--tk-paneeli-yla', `${Math.round(palkki.getBoundingClientRect().bottom)}px`);
     pv.style.setProperty('--tk-paneeli-oikea', '0px');
@@ -222,18 +235,20 @@ export function puePilleriPaneeliksi(haeUi) {
     avatar.decoding = 'async';
     avatar.draggable = false;
     matkaNappi.prepend(avatar);
-    const tasoRyhma = pilleriSolmu('div', 'tk-paneeli__ryhma tk-paneeli__ryhma--luettelo pilleri-pikanapit');
-    tasoRyhma.append(matkaNappi);
+    // Tasorivi ja päivärivi yhteisellä laatalla (omistaja 2.10.2026 klo 20.2x; ÄÄNET-kytkimen päällä-pohja).
+    const tasoRyhma = pilleriSolmu('div', 'tk-paneeli__ryhma tk-paneeli__ryhma--luettelo pilleri-pikanapit valikko-tasolaatta');
+    // Päivärivi tasorivin alla (omistaja 15.1x): päivä, kellonaika, kassa ja punaisena päivän kulut (js/ui.js täyttää).
+    const paivarivi = pilleriSolmu('p', 'valikko-paivarivi');
+    paivarivi.id = 'valikko-paivarivi';
+    tasoRyhma.append(matkaNappi, paivarivi);
     // MATKALAUKKU: Aarteet (N) ja Julisteet (N) (Julisteet asuvat toistaiseksi Aarteet-näkymässä).
     pueLuetteloRivi(aarteet, 'Aarteet', PILLERI_IKONI.aarteet);
     const julisteet = pueLuetteloRivi(pilleriSolmu('button'), 'Julisteet', PILLERI_IKONI.julisteet);
     julisteet.type = 'button';
     julisteet.id = 'pilleri-julisteet-btn';
-    julisteet.addEventListener('click', () => {
-      const ui = haeUi();
-      ui?.renderPilleriAarteet?.();
-      ui?.naytaPilleriNakyma('aarteet');
-    });
+    // Julisteet avaa julistegallerian (voitetut aikakausjulisteet; omistaja 13.56). Valikko sulkeutuu sen alta.
+    julisteet.dataset.paneeliSulje = '';
+    julisteet.addEventListener('click', () => haeUi()?.avaaJulisteGalleria?.());
     linssit.hidden = true;
     const laukkuRyhma = pilleriSolmu('div', 'tk-paneeli__ryhma tk-paneeli__ryhma--luettelo pilleri-pikanapit');
     laukkuRyhma.append(aarteet, julisteet, linssit);

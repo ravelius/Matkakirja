@@ -147,12 +147,16 @@ export const SUMUN_LUOKKA = 'astro-sumu';
 export const PILVIEN_TAYSI = 0.65;
 /** Pilvet ovat poissa tästä alaspäin (× avauskorkeus). */
 export const PILVIEN_NOLLA = 0.25;
+/*
+ * SUMUA SELVÄSTI VÄHEMMÄN (omistaja 2.10.2026 klo 21.3x): molemmat peitot puolitettu (0,15 → 0,08 ja 0,62 → 0,31),
+ * etäisyyspisteet ennallaan. Natiivi puolittaa omat vastaavat peittävyytensä (Linssiseppä 2).
+ */
 /** Sumu: kaukainen piste ja sen ohut peitto. */
 export const SUMUN_KAUKO = 1.3;
-export const SUMUN_KAUKO_PEITTO = 0.15;
+export const SUMUN_KAUKO_PEITTO = 0.08;
 /** Sumu: tihein kohta ja sen peitto. */
 export const SUMUN_KESKI = 0.6;
-export const SUMUN_KESKI_PEITTO = 0.62;
+export const SUMUN_KESKI_PEITTO = 0.31;
 /** Sumu: tästä alaspäin nolla (kamera on tullut sumun läpi). */
 export const SUMUN_LAHI = 0.22;
 

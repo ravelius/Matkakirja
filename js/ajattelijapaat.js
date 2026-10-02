@@ -15,11 +15,25 @@
  */
 import { AJATTELIJAT, avaaAjattelija, lataaKolme } from './linssit/ajattelija.js';
 import { pohjatLataaTyyli } from './pohjat/pohjat.js';
+import { VAISTETTAVA_LUOKKA } from './pulu-paneelin-ylla.js';
 
 const PAAT_MEDIA = 'https://media.matkakirja.app/';
 export const PAAN_KAANTO_ASTE = 30;
 export const ERIKOISNOSTOJA_ENINTAAN = 3;
 const PAAN_PIKSELIT = 64;          // = --tk-nappi-laukaisin (CSS-koko); kangas × laitteen pikselisuhde
+/** Kankaan reunus varjolle: kangas on 1,5 × pään koko (varjo paperille ulottuu pään ohi). */
+const KANGAS_KERROIN = 1.5;
+/*
+ * KIPSI KARTALLA (omistaja 2.10.2026 klo 16.4x ja 16.5x): lämmin vaalea kipsi ilman sinistä ympäristövaloa
+ * (valaistun puolen keskisävy ~210/202/185) ja pehmeä varjo paperille samasta auringosta, niin että pää seisoo
+ * kartan päällä. Linssiseppä tekee natiivin samoilla arvoilla.
+ */
+export const KIPSI_KARTALLA = Object.freeze({
+  savy: [1.0, 1.03, 1.1],           // värikerroin: tekstuuri on jo lämmin, tämä neutraloi keltaisuutta (mitattu)
+  ymparisto: { taivas: 0xfff6ea, maa: 0x8c7864, voima: 1.0 },   // lämmin puolipallovalo, ei sinistä
+  aurinko: { vari: 0xfff1dc, voima: 2.65 },
+  varjo: { peitto: 0.26, pehmeys: 10, syvyys: 0.1, korkeusAste: 58 },   // paperi pään takana; VSM-säde; auringon korkeus
+});
 const PAAN_KALLISTUS_ASTE = 12;    // pää katsoo hieman ylös/alas kohti keskustaa
 // Heilahdus suhteutetaan korkeuteen (lähellä sama asteliike on ruudulla suurempi): potku = −dLng / korkeus × kerroin.
 const HEILAHDUS = { jousi: 0.12, vaimennus: 0.82, kerroin: 1.4, korkeusMin: 0.05 };
@@ -64,12 +78,15 @@ export function sarakkeenPaikka(lippu, kartuutsi, { vali = 8, korkeus = 0, levey
 export function luoPohjaErikoisnostot(ajattelijat, { esikatselu = false, avaa = (a) => avaaAjattelija(a.tunnus) } = {}) {
   pohjatLataaTyyli();
   const el = document.createElement('div');
+  // Kartalla kerros on koko ruudun läpinäkyvä taso, ja jokainen pää on karttaobjekti omassa kartan pisteessään
+  // (omistaja 16.5x); galleriassa (esikatselu) päät ovat sarakkeena.
   el.className = esikatselu ? 'tk-erikoisnostot tk-erikoisnostot--esikatselu' : 'tk-erikoisnostot';
-  const px = PAAN_PIKSELIT * Math.min(globalThis.devicePixelRatio || 1, 2);
+  const px = Math.round(PAAN_PIKSELIT * KANGAS_KERROIN * Math.min(globalThis.devicePixelRatio || 1, 2));
   const paat = ajattelijat.slice(0, ERIKOISNOSTOJA_ENINTAAN).map((a) => {
     const nappi = document.createElement('button');
     nappi.type = 'button';
-    nappi.className = 'tk-erikoisnosto-paa';
+    // Pulu väistää pään (VAISTETTAVA_LUOKKA): luokka napilla, ei koko ruudun kerroksella.
+    nappi.className = esikatselu ? 'tk-erikoisnosto-paa' : `tk-erikoisnosto-paa ${VAISTETTAVA_LUOKKA}`;
     nappi.setAttribute('aria-label', `${a.nimi}: avaa ajattelija`);
     nappi.title = a.nimi;   // nimi vain VoiceOverille ja vihjeenä, ei näkyvää tekstiä
     const kangas = document.createElement('canvas');
@@ -87,28 +104,47 @@ export function luoPohjaErikoisnostot(ajattelijat, { esikatselu = false, avaa = 
 }
 
 /**
- * Jaettu pään piirtäjä: yksi WebGL-renderöijä (läpinäkyvä, AgX) piirtää päät 2D-kankaille. Pää 3/4-valossa kameran
- * edessä; valo annetaan kameran koordinaateissa.
+ * Jaettu pään piirtäjä: yksi WebGL-renderöijä (läpinäkyvä) piirtää päät 2D-kankaille. Pää kameran edessä, takana
+ * paperitaso, joka ottaa vain varjon (ShadowMaterial); valo annetaan kameran koordinaateissa (kartan aurinko).
  */
 export async function luoPaanPiirtaja() {
   const THREE = await lataaKolme();
+  const K = KIPSI_KARTALLA;
   const renderoija = new THREE.WebGLRenderer({ alpha: true, antialias: true, preserveDrawingBuffer: true });
-  const px = PAAN_PIKSELIT * Math.min(globalThis.devicePixelRatio || 1, 2);
+  const px = Math.round(PAAN_PIKSELIT * KANGAS_KERROIN * Math.min(globalThis.devicePixelRatio || 1, 2));
   renderoija.setSize(px, px, false);
   renderoija.outputColorSpace = THREE.SRGBColorSpace;
-  renderoija.toneMapping = THREE.AgXToneMapping;
+  renderoija.toneMapping = THREE.NeutralToneMapping ?? THREE.AgXToneMapping;
+  renderoija.shadowMap.enabled = true;
+  renderoija.shadowMap.type = THREE.VSMShadowMap;
   const kohtaus = new THREE.Scene();
-  kohtaus.add(new THREE.AmbientLight(0xffffff, 0.35));
-  const valo = new THREE.DirectionalLight(0xfff4e6, 2.6);
+  kohtaus.add(new THREE.HemisphereLight(K.ymparisto.taivas, K.ymparisto.maa, K.ymparisto.voima));
+  const valo = new THREE.DirectionalLight(K.aurinko.vari, K.aurinko.voima);
+  valo.castShadow = true;
+  valo.shadow.mapSize.set(512, 512);
+  valo.shadow.radius = K.varjo.pehmeys;
+  valo.shadow.blurSamples = 16;
+  Object.assign(valo.shadow.camera, { left: -0.4, right: 0.4, top: 0.4, bottom: -0.4, near: 0.01, far: 3 });
   kohtaus.add(valo, valo.target);
+  // Paperi pään takana (kamera katsoo karttaa ylhäältä, joten "lattia" on kameraa kohti oleva taso).
+  const paperi = new THREE.Mesh(new THREE.PlaneGeometry(3, 3), new THREE.ShadowMaterial({ opacity: K.varjo.peitto }));
+  paperi.position.set(0, 0.12, -K.varjo.syvyys);
+  paperi.receiveShadow = true;
+  kohtaus.add(paperi);
+  // Kamera kauempana kuin ennen: kangas on 1,5 × pää, joten varjolle jää tilaa ympärille.
   const kamera = new THREE.PerspectiveCamera(30, 1, 0.05, 5);
-  kamera.position.set(0, 0.13, 0.72);
+  kamera.position.set(0, 0.12, 0.72 * KANGAS_KERROIN);
   kamera.lookAt(0, 0.12, 0);
   const mallit = new Set();
   return {
     THREE,
     async lataa(a) {
       const gltf = await new THREE.GLTFLoader().loadAsync(`${PAAT_MEDIA}${a.kartta.glb}`);
+      gltf.scene.traverse((o) => {
+        if (!o.isMesh) return;
+        o.castShadow = true;
+        for (const m of [o.material].flat()) m?.color?.multiply?.(new THREE.Color(...K.savy));
+      });
       const juuri = new THREE.Group();
       juuri.add(gltf.scene);
       juuri.visible = false;
@@ -120,7 +156,8 @@ export async function luoPaanPiirtaja() {
     piirra(p, kaanto, l) {
       for (const m of mallit) m.visible = m === p.malli;
       p.malli.rotation.set(-PAAN_KALLISTUS_ASTE * Math.PI / 180, kaanto * Math.PI / 180, 0);
-      valo.position.set(l.x, l.y, l.z);
+      valo.position.set(l.x, 0.12 + l.y, l.z);
+      valo.target.position.set(0, 0.12, 0);
       renderoija.render(kohtaus, kamera);
       p.ctx.clearRect(0, 0, p.kangas.width, p.kangas.height);
       p.ctx.drawImage(renderoija.domElement, 0, 0);
@@ -129,26 +166,34 @@ export async function luoPaanPiirtaja() {
   };
 }
 
-/** Kytkee päät kartalle (kehittäjätila). Palauttaa purkufunktion. */
+/** Kartalla näytettävät ajattelijat: kaikki, joilla on kiinteä karttapiste (rekisterijärjestyksessä). */
+export function karttaAjattelijat(rekisteri = AJATTELIJAT) {
+  return Object.values(rekisteri).filter((a) => Array.isArray(a.kartta?.piste) && a.kartta?.glb);
+}
+
+/**
+ * Pään paikka ruudulla karttapisteestä (omistaja 16.5x: "pysyy kartalla samassa paikassa"): napin keskipiste
+ * x = pisteen x, y = pisteen y − puolet pään korkeudesta (pää seisoo pisteen päällä). null, jos piste on pallon
+ * takana tai ruudun ulkopuolella.
+ */
+export function paanRuutupaikka(ruutu, { edessa = true, leveys = Infinity, korkeus = Infinity, koko = PAAN_PIKSELIT } = {}) {
+  if (!ruutu || !edessa || !Number.isFinite(ruutu.x) || !Number.isFinite(ruutu.y)) return null;
+  const x = ruutu.x;
+  const y = ruutu.y - koko * 0.35;
+  if (x < -koko || y < -koko || x > leveys + koko || y > korkeus + koko) return null;
+  return { x, y };
+}
+
+/** Kytkee päät kartalle karttaobjekteina (kehittäjätila). Palauttaa purkufunktion. */
 export function kytkeAjattelijaPaat(ui, { kehittaja = () => true } = {}) {
-  let sarake = null;
-  let nykyinenIso = null;
+  let kerros = null;
   let paat = [];          // { a, nappi, kangas, ctx, malli, kulma, nopeus, piirretty }
   let piirtaja = null;
   let purettu = false;
   let edellinenLng = null;
+  let edellinenAsento = '';
   let kehys = 0;
-
-  const kartuutsi = () => document.querySelector('.pallolauta-maapaneeli .maapaneeli-kortti');
-
-  function rakennaSarake(ajattelijat) {
-    sarake?.remove();
-    const pohja = luoPohjaErikoisnostot(ajattelijat);
-    sarake = pohja.el;
-    paat = pohja.paat;
-    document.body.appendChild(sarake);
-    asemoi();
-  }
+  let ladataan = false;
 
   /** Pallolaudan suuntavalo kameran koordinaateissa (pään valo samasta suunnasta kuin pallon). */
   function kartanValo() {
@@ -156,45 +201,100 @@ export function kytkeAjattelijaPaat(ui, { kehittaja = () => true } = {}) {
     const cam = pallo?.camera?.();
     let suunta = null;
     pallo?.scene?.()?.traverse?.((o) => { if (!suunta && o.isDirectionalLight) suunta = o.position.clone().normalize(); });
-    if (!cam || !suunta) return { x: 0.5, y: 0.8, z: 0.6 };
-    const v = suunta.clone().transformDirection(cam.matrixWorldInverse);
-    return { x: v.x, y: v.y, z: Math.max(0.15, v.z) };
+    // Suunta paperin tasossa tulee kartan auringosta; korkeus kiinnitetään (KIPSI_KARTALLA.varjo.korkeusAste), jotta
+    // varjo on lyhyt ja pehmeä eikä matala aurinko venytä sitä laataksi (mitattu 2.10.2026).
+    const kor = KIPSI_KARTALLA.varjo.korkeusAste * Math.PI / 180;
+    let dx = 0.45; let dy = 0.75;
+    if (cam && suunta) {
+      const v = suunta.clone().transformDirection(cam.matrixWorldInverse);
+      const pit = Math.hypot(v.x, v.y);
+      if (pit > 1e-3) { dx = v.x / pit; dy = v.y / pit; }
+    }
+    return { x: dx * Math.cos(kor), y: dy * Math.cos(kor), z: Math.sin(kor) };
   }
 
-  function asemoi() {
-    const k = kartuutsi();
-    // Lippu näkyy vain avatussa kartuutsissa (pienessä CSS piilottaa sen) → muuten nimirivi.
-    const nakyva = (e) => (e?.getBoundingClientRect().height > 0 ? e : null);
-    const lippu = nakyva(k?.querySelector('.maapaneeli-lippu')) ?? nakyva(k?.querySelector('.maapaneeli-nimirivi'));
-    if (!k || !lippu || !sarake) return null;
-    const p = sarakkeenPaikka(lippu.getBoundingClientRect(), k.getBoundingClientRect(),
-      { korkeus: sarake.getBoundingClientRect().height, ruutuLeveys: globalThis.innerWidth || Infinity });
-    sarake.style.left = `${Math.round(p.x)}px`;
-    sarake.style.top = `${Math.round(p.y)}px`;
-    sarake.dataset.mahtuu = p.mahtuu ? '1' : '0';
-    return { leveys: globalThis.innerWidth || 1, x: p.x };
+  /** Karttapiste ruudulle: getScreenCoords (kankaan koordinaatit) + kankaan paikka; takapuoli piiloon. */
+  function ruutupiste(a) {
+    const pallo = ui.pallolauta?.pallo;
+    const kangas = pallo?.renderer?.()?.domElement;
+    if (!pallo?.getScreenCoords || !kangas) return null;
+    const [lat, lng] = a.kartta.piste;
+    const r = kangas.getBoundingClientRect();
+    const sc = pallo.getScreenCoords(lat, lng, 0);
+    const cam = pallo.camera?.();
+    const w = pallo.getCoords?.(lat, lng, 0);
+    const edessa = !cam || !w ? true
+      : (cam.position.x - w.x) * w.x + (cam.position.y - w.y) * w.y + (cam.position.z - w.z) * w.z > 0;
+    return paanRuutupaikka(sc && { x: r.left + sc.x, y: r.top + sc.y },
+      { edessa, leveys: globalThis.innerWidth || Infinity, korkeus: globalThis.innerHeight || Infinity });
+  }
+
+  /*
+   * PÄÄ KARTTAMERKKIEN ALLA (Päätoimittaja 2.10.2026 klo 16.49; Linssiseppä natiivissa 618591d9): kerros asuu pallon
+   * scene-containerissa kankaan ja HTML-merkkikerroksen (kaupunkien kutsukortit, maakortit) välissä, joten kortit
+   * piirtyvät pään päälle mutta pää kartan päälle. Ilman pallon säiliötä (testit) kerros jää bodyyn kiinteänä.
+   */
+  function kiinnita() {
+    const kangas = ui.pallolauta?.pallo?.renderer?.()?.domElement;
+    const sailio = kangas?.closest?.('.scene-container');
+    let kankaanLapsi = kangas;
+    while (kankaanLapsi && kankaanLapsi.parentElement !== sailio) kankaanLapsi = kankaanLapsi.parentElement;
+    if (sailio && kankaanLapsi) {
+      kerros.classList.add('tk-erikoisnostot--kartalla');
+      if (kerros.parentElement !== sailio || kerros.previousElementSibling !== kankaanLapsi) {
+        sailio.insertBefore(kerros, kankaanLapsi.nextSibling);
+      }
+    } else if (!kerros.isConnected) {
+      document.body.appendChild(kerros);
+    }
+  }
+
+  async function rakenna() {
+    if (kerros || ladataan) return;
+    const ajattelijat = karttaAjattelijat();
+    if (!ajattelijat.length) return;
+    ladataan = true;
+    const pohja = luoPohjaErikoisnostot(ajattelijat);
+    kerros = pohja.el;
+    paat = pohja.paat;
+    for (const p of paat) p.nappi.hidden = true;
+    kiinnita();
+    try {
+      piirtaja ??= await luoPaanPiirtaja();
+      for (const p of paat) p.malli = await piirtaja.lataa(p.a);
+    } catch (syy) {
+      console.warn('ajattelijapaat', syy);
+    }
+    ladataan = false;
+    pyyda();
   }
 
   function piirra() {
     kehys = 0;
-    if (purettu || !sarake || !piirtaja) return;
-    const paikka = asemoi();
-    if (!paikka) return;
-    // Kartan liike: pallon kameran pituusasteen muutos ruudussa → heilahdus (jousi takaisin lepoon).
+    if (purettu || !kerros || !piirtaja) return;
     const pov = ui.pallolauta?.pallo?.pointOfView?.();
+    const asento = pov ? `${pov.lat.toFixed(4)},${pov.lng.toFixed(4)},${pov.altitude.toFixed(4)}` : '';
+    // Kartan liike: pituusasteen muutos ruudussa → pieni heilahdus (jousi takaisin lepoon); pää ei liu'u.
     const lng = pov?.lng ?? 0;
     const korkeus = Math.max(HEILAHDUS.korkeusMin, pov?.altitude ?? 1);
     const dLng = (edellinenLng == null ? 0 : ((lng - edellinenLng + 540) % 360) - 180) / korkeus;
     edellinenLng = lng;
+    let liikkuu = asento !== edellinenAsento;
+    edellinenAsento = asento;
     const l = kartanValo();
-    let liikkuu = Math.abs(dLng) > 0.001;
+    const leveys = globalThis.innerWidth || 1;
+    // Kerroksen paikka ruudulla: kartalla napit asemoidaan säiliön suhteen, bodyssä ruudun suhteen.
+    const isanta = kerros.classList.contains('tk-erikoisnostot--kartalla') ? kerros.getBoundingClientRect() : { left: 0, top: 0 };
     for (const p of paat) {
-      if (!p.malli) continue;
+      const paikka = ruutupiste(p.a);
+      p.nappi.hidden = !paikka || !p.malli;
+      if (!paikka || !p.malli) continue;
+      p.nappi.style.left = `${Math.round(paikka.x - isanta.left)}px`;
+      p.nappi.style.top = `${Math.round(paikka.y - isanta.top)}px`;
       p.nopeus = (p.nopeus + (-dLng * HEILAHDUS.kerroin) - p.kulma * HEILAHDUS.jousi) * HEILAHDUS.vaimennus;
       p.kulma = Math.max(-PAAN_KAANTO_ASTE, Math.min(PAAN_KAANTO_ASTE, p.kulma + p.nopeus));
       if (Math.abs(p.nopeus) > 0.01 || Math.abs(p.kulma) > 0.05) liikkuu = true;
-      const kaanto = Math.max(-PAAN_KAANTO_ASTE, Math.min(PAAN_KAANTO_ASTE,
-        kaantoKeskustaa(paikka.x + PAAN_PIKSELIT / 2, paikka.leveys) + p.kulma));
+      const kaanto = Math.max(-PAAN_KAANTO_ASTE, Math.min(PAAN_KAANTO_ASTE, kaantoKeskustaa(paikka.x, leveys) + p.kulma));
       const tila = `${kaanto.toFixed(2)}|${l.x.toFixed(3)},${l.y.toFixed(3)},${l.z.toFixed(3)}`;
       if (tila === p.piirretty) continue;
       p.piirretty = tila;
@@ -204,28 +304,21 @@ export function kytkeAjattelijaPaat(ui, { kehittaja = () => true } = {}) {
   }
   const pyyda = () => { if (!kehys && !purettu) kehys = requestAnimationFrame(piirra); };
 
-  async function tarkista() {
+  function tarkista() {
     if (purettu) return;
-    const iso = kehittaja() ? kartuutsi()?.dataset?.iso ?? null : null;
-    if (iso === nykyinenIso) { if (sarake) { asemoi(); pyyda(); } return; }
-    nykyinenIso = iso;
-    // Enintään 3 allekkain (Natiivi-UI): ei vieritystä, karsinta rekisterin (tärkeys)järjestyksessä.
-    const ajattelijat = iso ? maanAjattelijat(iso) : [];
-    if (!ajattelijat.length) { sarake?.remove(); sarake = null; paat = []; return; }
-    rakennaSarake(ajattelijat);
-    const omat = paat;
-    try {
-      piirtaja ??= await luoPaanPiirtaja();
-      for (const p of omat) p.malli = await piirtaja.lataa(p.a);
-    } catch (syy) {
-      console.warn('ajattelijapaat', syy);
+    if (!kehittaja() || !ui.pallolauta?.pallo) {
+      if (kerros) kerros.hidden = true;
       return;
     }
-    if (nykyinenIso === iso) pyyda();
+    if (!kerros) { rakenna(); return; }
+    // Pallo voi rakentua uudelleen (laudan vaihto): kerros seuraa uutta säiliötä.
+    if (!ladataan) kiinnita();
+    kerros.hidden = false;
+    pyyda();
   }
 
-  // Kartan liike ja kartuutsin vaihto: kevyt vahti (ei jatkuvaa piirtoa levossa).
-  const vahti = setInterval(tarkista, 400);
+  // Kevyt vahti (kartan liike ja koko): rAF pyörii vain, kun asento tai heilahdus muuttuu.
+  const vahti = setInterval(tarkista, 250);
   const liike = () => pyyda();
   globalThis.addEventListener?.('pointermove', liike, { passive: true });
   globalThis.addEventListener?.('wheel', liike, { passive: true });
@@ -237,7 +330,7 @@ export function kytkeAjattelijaPaat(ui, { kehittaja = () => true } = {}) {
     globalThis.removeEventListener?.('pointermove', liike);
     globalThis.removeEventListener?.('wheel', liike);
     globalThis.removeEventListener?.('resize', liike);
-    sarake?.remove();
+    kerros?.remove();
     piirtaja?.pura();
   };
 }

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2560';
+const CACHE = 'matkakirja-2026-09-21.2578';
 const SHELL = [
   './',
   './index.html',
@@ -23,6 +23,7 @@ const SHELL = [
   './css/pohjat/kuvanakyma.css',
   './css/pohjat/pulu.css',
   './css/pohjat/erikoisnostot.css',
+  './css/pohjat/galleria.css',
   './css/pohjat/esikatselu.css',
   './css/pohjat/pinnat/dialogit.css',
   './css/pohjat/pinnat/pillerivalikko.css',
@@ -923,6 +924,7 @@ const SHELL = [
   './assets/linssit/hiomassa.svg',
   './assets/varusteet/varuste-maatiedot.jpg',
   './assets/varusteet/varuste-radio.jpg',
+  './assets/varusteet/varuste-ajattelijat.jpg',   // kehittäjälinssi: kartan pään GLB-render (väliaikainen)
   // Keksinnöt ja Ihmisen matka saivat omat kuvakkeensa 7.9.2026; ilman
   // näitä matkalaukun ruutu putoaisi viivakuvakkeeseen juuri offlinessa.
   './assets/varusteet/varuste-keksinnot.jpg',

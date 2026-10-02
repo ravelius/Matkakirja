@@ -90,7 +90,7 @@
 /* ── VALIKKO V2 (vedos ?valikko=v2, omistaja 2.10.2026 klo 14.0x; js/pilleri-paneeli.js valikkoV2) ───────────────
  * ÄÄNET: kevyt kytkinrivi ilman yhteistä kehystä ja väliviivoja; ikoni ja nimi samalla rivillä samaa kokoa; päällä =
  * pehmeä pergamenttitäyttö ilman tummaa reunaa. MATKA ja PELI: luettelorivit (ikoni, nimi yhdellä koolla, nuoli),
- * ohut viiva välissä. Uusi peli hillittynä tekstinappina alimpana. Ei kapseleita (EI OVAALEJA 2.10.). */
+ * ei väliviivoja (20.2x). Uusi peli hillittynä tekstinappina alimpana. Ei kapseleita (EI OVAALEJA 2.10.). */
 /* Kapeampi valikko (omistaja 15.0x): minipopupin leveys; puhelimella ilmaa molemmille reunoille. */
 .paavalikko.tk-paneeli--v2.tk-paneeli--paikallaan { width: min(var(--tk-leveys-minipopup), 100vw - 2 * var(--tk-vali-xl)); }
 .paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma--vierekkain { gap: var(--tk-vali-xs); border: 0; border-radius: 0; overflow: visible; }
@@ -118,9 +118,7 @@
   font-size: var(--tk-koko-leipa);
   font-weight: 400;
 }
-.paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma--luettelo .tk-paneeli-rivi:not([hidden]) ~ .tk-paneeli-rivi:not([hidden]) {
-  border-top: 1px solid var(--tk-reunus);
-}
+/* Ei väliviivoja luettelossa (omistaja 2.10.2026 klo 20.2x): vain alin viiva Uusi peli -rivin yläpuolella jää. */
 
 .paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma + .tk-paneeli__ryhma { margin-top: var(--tk-vali-xs); }
 
@@ -178,3 +176,26 @@
   outline: 2px solid var(--tk-toiminto);
   outline-offset: 2px;
 }
+
+/* Tasolaatta (omistaja 20.2x: "untuvikko ja päivä riveille yhteinen pohja"): ÄÄNET-kytkimen päällä-täyttö ja kulma,
+   valikon levyisenä; ei uutta tyyliä. */
+.paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma.valikko-tasolaatta {
+  margin-top: var(--tk-vali-s);
+  padding: 0 var(--tk-vali-xs);
+  border-radius: var(--tk-kulma-nappi);
+  background: var(--tk-pergamentti);
+}
+
+/* Päivärivi tasorivin alla (omistaja 2.10.2026 klo 15.1x): "Päivä 1/80, aamu · £400" ja oikeassa reunassa punaisena
+   päivän kulut. Tietorivi, ei nappi. */
+.valikko-paivarivi {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--tk-vali-s);
+  margin: 0;
+  padding: var(--tk-vali-xs) var(--tk-vali-xs) var(--tk-vali-s);
+  color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+}
+.valikko-paivarivi-kulu { color: var(--tk-tila-virhe); white-space: nowrap; }

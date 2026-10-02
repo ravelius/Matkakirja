@@ -5,6 +5,8 @@ import { asetaKehittajanKerroin, kehittajanKerroin } from './kehittajan-voimat.j
 import { Game } from './game.js';
 import { UI, korttiPohjalla, puePohjaDialogiksi } from './ui.js';
 import { paneeliPohjalla, puePilleriPaneeliksi } from './pilleri-paneeli.js';
+import { LINSSIT_AVAA_TAPAHTUMA } from './karttaselite.js';
+import { PAAVALIKKO_NAPILTA } from './ylapalkki-vaaka.js';
 import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
@@ -176,7 +178,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2560';
+const APP_VERSION = '2026-09-21.2578';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -327,7 +329,7 @@ function paivitaWidget(game) {
     kaupunki: city.name,
     maa: maa ?? '',
     paiva: game.dayCount(),
-    raha: `${game.player.money}\u00a0£`,
+    raha: `£${game.player.money}`,
   });
 }
 
@@ -1257,6 +1259,20 @@ const vaihdaValikko = (tapahtuma) => {
 
 menuBtn.addEventListener('click', vaihdaValikko);
 
+// Vaakatilan kartan hampurilainen (js/ylapalkki-vaaka.js; omistaja 2.10.2026 klo 23.07): ei yläpalkkia, valikko
+// avautuu suoraan napin päälle (js/pilleri-paneeli.js ankkuroi paneelin napin kulmaan).
+document.addEventListener(PAAVALIKKO_NAPILTA, (tapahtuma) => {
+  const lahde = tapahtuma.detail?.lahde ?? menuBtn;
+  if (paavalikko.hidden) avaaPaavalikko(lahde); else suljeValikko(lahde);
+});
+
+// Kartan Linssit-nappi (js/karttaselite.js, omistaja 2.10.2026 klo 13.56): pillerivalikko suoraan Linssit-näkymään.
+document.addEventListener(LINSSIT_AVAA_TAPAHTUMA, (tapahtuma) => {
+  const lahde = tapahtuma.detail?.lahde ?? menuBtn;
+  if (paavalikko.hidden) avaaPaavalikko(lahde);
+  ui?.naytaPilleriNakyma('linssit', { animoi: false });
+});
+
 /*
  * Valinta sulkee valikon. Kuuntelija on valikossa itsessään, joten
  * nappien omat toiminnot pysyvät siellä missä ne on määritelty.
@@ -1324,7 +1340,7 @@ paavalikko.addEventListener('click', (event) => {
  *                laukaise pointerdownia).
  */
 document.addEventListener('pointerdown', (event) => {
-  if (!event.target.closest?.('.valikko-kotelo, #turn-pill, #paavalikko')) suljeValikko();
+  if (!event.target.closest?.('.valikko-kotelo, #turn-pill, #paavalikko, .ylapalkki-nappi')) suljeValikko();
 });
 
 document.addEventListener('keydown', (event) => {

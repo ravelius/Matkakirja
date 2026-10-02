@@ -1468,7 +1468,7 @@ export function puluRealtimeKoeNakyvissa({
 
 /** Koenapin teksti kussakin tilassa. */
 export const REALTIME_NAPPI_TEKSTIT = Object.freeze({
-  valmis: 'Puhu Pululle (koe)',
+  valmis: 'Live',   // omistaja 2.10.2026 klo 16.0x (ennen "Puhu Pululle (koe)")
   yhdistaa: 'Yhdistän Puluun…',
   kuuntelee: 'Kuuntelen — lopeta',
   puhuu: 'Pulu puhuu — lopeta',
@@ -3111,7 +3111,7 @@ export class Pollo {
    * @returns {boolean} näkyikö kupla.
    */
   naytaAvauskupla(teksti, {
-    lennahda = false, kuittaus = null, muotokuva = false, ohita = false,
+    lennahda = false, kuittaus = null, muotokuva = false, ohita = false, vainKuva = false,
   } = {}) {
     if (!teksti) return false;
     /*
@@ -3146,7 +3146,14 @@ export class Pollo {
       kuva.decoding = 'async';
       kuva.addEventListener('error', () => { kuva.hidden = true; }, { once: true });
       kuvapaikka.appendChild(kuva);
-      kupla.append(kuvapaikka, puhe);
+      // vainKuva: repliikki kuuluu äänenä, joten kuplaan jää vain muotokuva kuvakehyksenä (Päätoimittaja 2.10.2026:
+      // "puhe äänenä, ei kuplina" — kuva on sisältöä, jota ääni ei kerro, puhuttu teksti ei).
+      if (vainKuva) {
+        kupla.classList.add('pollo-vihje-vain-kuva');
+        kupla.append(kuvapaikka);
+      } else {
+        kupla.append(kuvapaikka, puhe);
+      }
     } else {
       kupla.appendChild(puhe);
     }
@@ -4661,12 +4668,11 @@ export class Pollo {
     // olisi sekasotku, vaikka puhuja on sama lintu.
     this.peruPuheenvuoro();
     const yksi = palat.length === 1;
-    const nakyi = this.naytaSaapumiskupla(palat[0], {
+    const { nakyi, aaniKahva } = this.puheTaiKupla(palat[0], 0, aani, {
       kuittaus: yksi ? kuittaus : null,
       linssinOma,
       luokka,
     });
-    const aaniKahva = nakyi ? (aani?.(0, palat[0]) ?? null) : null;
     if (!nakyi || yksi) return nakyi;
     this.puheenvuoro = {
       palat, seuraava: 1, kuittaus, jatkuuko, linssinOma, viive, aani, aaniKahva, luokka,
@@ -4718,22 +4724,50 @@ export class Pollo {
       const i = nyt.seuraava;
       nyt.seuraava += 1;
       const viimeinen = nyt.seuraava >= nyt.palat.length;
-      const osaNakyi = this.naytaSaapumiskupla(nyt.palat[i], {
+      // Ääni osaa kohti (puhe ennen kuplaa, puheTaiKupla): jokainen osa on oma äänitiedostonsa, ja sen soitin
+      // kertoo seuraavalle ajastukselle puheen todellisen keston.
+      nyt.aaniKahva = this.puheTaiKupla(nyt.palat[i], i, nyt.aani, {
         kuittaus: viimeinen ? nyt.kuittaus : null,
         // Jatko-osat kulkevat samasta portista kuin ensimmäinen: linssin
         // oma puheenvuoro puhutaan loppuun, vaikka linssi on yhä päällä.
         linssinOma: nyt.linssinOma,
         luokka: nyt.luokka,
-      });
-      // Ääni kuplaa kohti: jokainen osa on oma äänitiedostonsa, ja sen
-      // soitin kertoo seuraavalle ajastukselle puheen todellisen keston.
-      nyt.aaniKahva = osaNakyi ? (nyt.aani?.(i, nyt.palat[i]) ?? null) : null;
+      }).aaniKahva;
       if (viimeinen) {
         this.puheenvuoro = null;
         return;
       }
       this.ajastaPuheenvuoro();
     }, Math.max(0, viive - kulunut));
+  }
+
+  /**
+   * PUHEENVUORON OSA: PUHE ÄÄNENÄ, EI KUPLANA (omistaja 2.10.2026 klo 14.09). Kun osalla on äänite ja Pulu saa puhua
+   * (nappi näkyy, chatti kiinni), äänite soi ilman kuplaa: chat-loki ja puhe-ele kuten puheIlmanKuplaa. Kupla näytetään
+   * vain, jos ääntä ei tule, tai varalta, jos ääni ei käynnisty 1,5 s:ssa tai lataus kaatuu. Ilman kuplaa osan
+   * kuittaus (napautus) kutsutaan äänen loputtua. Ennen: kupla ensin ja ääni vasta, jos kupla näkyi.
+   *
+   * @returns {{nakyi: boolean, aaniKahva: HTMLAudioElement|null}}
+   */
+  puheTaiKupla(teksti, i, aani, kuplanAsetukset) {
+    const voiPuhua = Boolean(aani) && !this.nappi.hidden && !this.auki;
+    const audio = voiPuhua ? (aani(i, teksti) ?? null) : null;
+    if (!audio) {
+      const nakyi = this.naytaSaapumiskupla(teksti, kuplanAsetukset);
+      // Ei puhuttu (nappi piilossa tai chatti auki): ääni vain, jos kupla näkyi (vanha sopimus).
+      return { nakyi, aaniKahva: nakyi && !voiPuhua ? (aani?.(i, teksti) ?? null) : null };
+    }
+    this.kirjaaKuplaViestiin(teksti);
+    try { this.kasvoEleet?.kupla(teksti, { saapuu: false }); } catch { /* ele on koriste */ }
+    let varalla = false;
+    const vara = () => { if (varalla) return; varalla = true; this.naytaSaapumiskupla(teksti, kuplanAsetukset); };
+    audio.addEventListener?.('error', vara, { once: true });
+    const ajastin = setTimeout(() => { if (!audio.ended && !(audio.currentTime > 0)) vara(); }, 1500);
+    audio.addEventListener?.('playing', () => clearTimeout(ajastin), { once: true });
+    if (kuplanAsetukset?.kuittaus) {
+      audio.addEventListener?.('ended', () => { if (!varalla) kuplanAsetukset.kuittaus(); }, { once: true });
+    }
+    return { nakyi: true, aaniKahva: audio };
   }
 
   /** Sarja poikki; loput osat chatin virtaan (ks. naytaPuheenvuoro). */
