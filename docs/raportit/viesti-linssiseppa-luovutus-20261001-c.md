@@ -19,6 +19,13 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
   natiivi + web (iss-realismi-kerrokset.js r. 143) — HYVÄKSYTTY JA TEHTY: natiivi linssiseppa/kiilto-ilmakeha 797aac22
   (käännös 5c292cbe) merge-pyynnössä Natiivisepällä; web PR #3844 (Pelikoodari hyväksyi, CI vihreä). Kuvaparit
   lokit/linssiseppa-kiilto-ilmakeha-20261002/{natiivi,web}-vanha-uusi.png; web-harness scratchpad kiilto-web.mjs.
+- SEURAAVA ERÄ (Päätoimittaja 2.10. 14.2x): 1) ERIKOISNOSTOT natiiviin = ajattelijan 3D-pää kartuutsin lipun alla (web #3843,
+  ajattelijapaat.js + css/pohjat/erikoisnostot.css; aloitus kun #3843 mainissa). Natiivin palat: Kartuscha.Maa (ISO3, pollaus),
+  lippu mk-kartuscha__lippu (Kartuscha.cs:64, Tilarivi 15), Asetukset.Kehittaja, GlbLukija (+ normaalikartta lisättävä),
+  maamerkkien lataus/välimuisti PeliOhjain.Maamerkit.cs, RT-malli Sijaintipallo.cs (vapaa layer 13–23), pinta
+  Pohjat/Pinnat/erikoisnostot.uss. Napautus: AjattelijatSovitin.AvaaAjattelija(tunnus), rekisteri AjattelijatSovitin.Ajattelijat
+  (KarttaMaa, KarttaGlb) LS2:n haarassa linssiseppa2/ajattelijat d817c141. GLB:t _valmiit/ajattelijat-kartta/v1 (1 mesh, väri+nor PNG).
+  2) Linssit-nappi oikeaan yläkulmaan ≡:n viereen + valikkoon Julisteet Linssien tilalle, kun Pelikoodarin web valmis.
 - KUVAA-osuma ad79d770 junassa 116. LS2:n 1116-kysymys (KUVAA Pariisissa, KOHDE-lista auki): vastattu — todennäköisin
   hiljainen `kaynnissa`-paluu IssKameraKuva.Laukaisessa; odottaa LS2:n koordinaattia.
 - Seuraavaksi: kiillon pystyleikkaus (ajo-kiilto3.sh ilman KUVAA-lippua) seuraavalla simulaattorivuorolla.
