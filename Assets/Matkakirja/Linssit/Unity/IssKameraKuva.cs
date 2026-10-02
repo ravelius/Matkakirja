@@ -28,7 +28,7 @@ namespace Matkakirja.Natiivi
 {
     public sealed class IssKameraKuva : MonoBehaviour
     {
-        /// <summary>indeksi | otsakkeet | haku | työstö | renderöinti työn aikana; lopuksi valmis | ei maata | keskeytyi.</summary>
+        /// <summary>indeksi | otsakkeet | haku | työstö | renderöinti työn aikana; lopuksi valmis | ei maata | vain eurooppa | ei kuvauspaikkaa | keskeytyi.</summary>
         public static string Tila = "valmis";
         public static float Edistyminen;
         public static string ViimeisinKuva;
@@ -168,8 +168,24 @@ namespace Matkakirja.Natiivi
                 var ehdokkaat = indeksi.Alueella(w, s, e, nn).ToList();
                 var ruudut = Kuvasuunnitelma.Ruudut(naytteet, ehdokkaat.Select(x => x.Ruutu()).Where(x => x != null)).Keys.ToList();
                 Loki($"indeksi {indeksi.Ruudut.Count} ruutua, näkymässä {ruudut.Count}: {string.Join(" ", ruudut.Select(x => x.Tunnus))}");
-                // Savuke 1116: merellä kilpi jäi 0 %:iin / VALMIS:iin ilman palautetta → tila "ei maata" (kilpi EI MAATA).
-                if (ruudut.Count == 0) { Loki("ei S2-ruutuja näkymässä (indeksin ulkopuolella)"); loppuTila = "ei maata"; yield break; }
+                // Savuke 1116: merellä kilpi jäi 0 %:iin / VALMIS:iin ilman palautetta. Päätoimittaja 2.10.: kuvausalue = koko Euroopan
+                // S2-indeksi; kilpi kertoo syyn: meri → EI MAATA, maa Euroopan (indeksin rajauksen) ulkopuolella → VAIN EUROOPPA,
+                // Euroopan sisällä ruutu puuttuu → EI KUVAUSPAIKKAA. Vesimaski Yokuoresta (puuttuu → ei päätellä merta).
+                if (ruudut.Count == 0)
+                {
+                    var maalla = naytteet.Where(n => !Yokuori.OnVesi(n.Lat, n.Lon)).ToList();
+                    if (Yokuori.VesiMaailma != null && maalla.Count == 0) loppuTila = "ei maata";
+                    else
+                    {
+                        var pist = maalla.Count > 0 ? maalla : naytteet;
+                        double la = pist.Average(n => n.Lat), lo = pist.Average(n => n.Lon);
+                        var kaikki = indeksi.Ruudut.Values;
+                        bool eurooppa = kaikki.Count > 0 && la >= kaikki.Min(r => r.S) && la <= kaikki.Max(r => r.N) && lo >= kaikki.Min(r => r.W) && lo <= kaikki.Max(r => r.E);
+                        loppuTila = eurooppa ? "ei kuvauspaikkaa" : "vain eurooppa";
+                    }
+                    Loki($"ei S2-ruutuja näkymässä (indeksin ulkopuolella): {loppuTila}, maata {maalla.Count}/{naytteet.Count}");
+                    yield break;
+                }
 
                 // 3) otsakkeet (TCI ja SCL)
                 Tila = "otsakkeet";
