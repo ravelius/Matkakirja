@@ -351,7 +351,10 @@ namespace Matkakirja.Natiivi
             kuoriNappi.style.display = Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki && !kierros && !infoAuki
                 ? DisplayStyle.Flex : DisplayStyle.None;
             if (nakyma.KertojaTeksti != null) kertojaTeksti.text = nakyma.KertojaTeksti;
-            kertojaLaatikko.EnableInClassList("mk-nakyy", nakyma.KertojaTeksti != null);
+            // Omistaja 2.10. 14.1x (loki 14.09, kumoaa 30.9.:n tekstilaatikon): kertojan jakso puheen aikana ilman tekstiä;
+            // koko teksti vain, jos jaksolla ei ole ääntä tai Kertoja on pois. (Jaksoilla ei ole lyhyttä otsikkoa.)
+            string jaksonAani = nakyma.KertojaJakso >= 0 && nakyma.KertojaJakso < rakennus.Kertoja.Count ? rakennus.Kertoja[nakyma.KertojaJakso].Aani : null;
+            kertojaLaatikko.EnableInClassList("mk-nakyy", nakyma.KertojaTeksti != null && !DioraamaAanet.Puhutaan(jaksonAani));
             uusintaNappi.style.display = nakyma.KohdeTila == null && linssi.KertojaUusittavissa(tNyt) ? DisplayStyle.Flex : DisplayStyle.None;
             if (kierros)
             {
