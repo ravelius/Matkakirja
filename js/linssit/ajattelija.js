@@ -423,7 +423,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     for (const v of valoAvaimet) {
       if (r <= v.r) {
         if (v === e) return v.suunta.clone();
-        return e.suunta.clone().lerp(v.suunta, pehmea(valilla(r, e.r, v.r)));
+        return e.suunta.clone().lerp(v.suunta, pehmea(valilla(r, e.r, v.r))).normalize();
       }
       e = v;
     }
