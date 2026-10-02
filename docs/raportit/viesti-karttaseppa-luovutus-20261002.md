@@ -1,3 +1,18 @@
+# Karttasepän luovutus 2.10.2026 klo 22.5x (PÄIVITYS, uusi tili)
+
+## Muuttunut 22.25–22.51
+- **P-Afrikka + Lähi-itä tarkistettu ja VIETY** 22.51 (22 165 laattaa, indeksi, alueet.json, laatat.json; todennettu `aws s3 ls`).
+- Viikonloppuvienti kaatui 22.26 (PID 99469): tilinvaihdossa perityn päätteen stdin kuoli → `aws` "init_sys_streams: Bad file descriptor".
+  Skriptiin lisätty `exec </dev/null`. Omistaja ajoi uudelleen 22.40 setsid-irrotettuna: **vienti PID 67566**, odottaa Amerikkaa.
+- **Amerikka** (mosaiikki PID 46451, alkoi 22.15) etenee ~5,6 min/lohko → valmis noin **la 3.10. klo 23**.
+- **Euroopan kaudet valmisteltu:** `iss-eurooppa-s2/kaudet/kausimosaiikki.mjs` (KAUSI=kevat|syksy|talvi → `s2-eurooppa-<kausi>`;
+  talvessa SCL 11 lumi kelpaa; täyttönäkymät ja pilviraja 30→70 kuten maailmassa). Kesän vesisiirtoja EI peritä (32TLT:n
+  kesäsiirto värjäsi kevään järvet punamustiksi, koe `kaudet/koe1-*-kesasiirto`). Koe Alpit 33_22 kunnossa (`koe-kevat`, `koe-talvi`).
+- **`kaudet/ketju-kaudet.sh` PID 72639** odottaa maailman ketjun (34482) loppuun, sitten kevät → syksy → talvi; merkki
+  `s2-eurooppa-<kausi>/valmis-tarkistettavaksi`. Ei vientiä; kuvapari omistajalle. Ei rinnakkain, koska kone on kuormitettu.
+
+---
+
 # Karttasepän luovutus 2.10.2026 klo 22.1x (LOPULLINEN, tilinvaihto)
 
 Ajot jatkuvat ilman sessiota. Ne on käynnistetty **perl fork+setsid** -kaavalla, joten niillä on oma prosessiryhmä (memory `pitkat-ajot-setsid-irrotus`). Tarkista `ps` ennen uudelleenkäynnistystä. Lopeta prosessi vain omalla PID:llä.
