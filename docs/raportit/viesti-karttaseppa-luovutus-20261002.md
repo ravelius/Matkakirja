@@ -1,4 +1,4 @@
-# Karttasepän luovutus 2.10.2026 klo 22.1x (viikkoraja 92 %)
+# Karttasepän luovutus 2.10.2026 klo 22.1x (LOPULLINEN, tilinvaihto)
 
 Ajot jatkuvat ilman sessiota. Ne on käynnistetty **perl fork+setsid** -kaavalla, joten niillä on oma prosessiryhmä (memory `pitkat-ajot-setsid-irrotus`). Tarkista `ps` ennen uudelleenkäynnistystä. Lopeta prosessi vain omalla PID:llä.
 
@@ -14,6 +14,8 @@ Ajot jatkuvat ilman sessiota. Ne on käynnistetty **perl fork+setsid** -kaavalla
 - ROOMA-nimiön hyppy on natiivin vika; webin ladonta on todennettu kunnossa olevaksi koodista. Natiiviseppä korjaa.
 
 ## KÄYNNISSÄ: maailman S2 (omistaja: kone vapaa ma 5.10. asti)
+- **PID:t 2.10. 22.10:** ketju.sh **34482**, mosaiikki (node maailmamosaiikki.mjs) **34487**, omistajan viikonloppuvienti **99469** (odottaa P-Afrikan tarkistusmerkkiä).
+- **Aikataulu (arvio):** P-Afrikan uudelleenajo ja indeksi noin klo 23–24 (2.10.) → Amerikka (274 lohkoa) noin la 3.10. klo 14 → Aasia ja Australia (361) noin su 4.10. klo 10 → tropiikki (196) noin ma 5.10. klo 0. Tropiikki valmistuu siis ehkä vasta maanantain jälkeen. Indeksi kestää noin 40 min aluetta kohti. Uusi sessio luo tarkistusmerkit; ilman niitä vienti odottaa.
 - **Ketju** `/Volumes/T7 4TB/Matkakirja-karttaseppa/iss-maailma-s2/ketju.sh`, PID 34482, loki `ketju.out`.
   - Järjestys: pohjois-afrikka-lahi-ita → amerikka → aasia-australia → tropiikki.
   - Jokaiselle alueelle: `maailmamosaiikki.mjs` (ALUE=…, jatkettava `<alue>/tila.json`) → `iss-s2-indeksi/s2-indeksi.mjs` (ALUE=…) → merkki `<alue>/valmis-tarkistettavaksi`.
