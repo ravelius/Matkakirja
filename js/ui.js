@@ -205,7 +205,7 @@ import {
   seuraavaTietajataso, tietajaAvatar, tietajataso, tietajatasonOsuus, varssynSakeet,
 } from './tietajatasot.js';
 // Matkalaukun i-napin tasogalleria (minipopup-palikan ensimmäinen käyttäjä).
-import { avaaTietajagalleria } from './tietajagalleria.js';
+import { avaaTietajagalleria, tietajaRuudukko } from './tietajagalleria.js';
 import { KOHTAAMISET } from './packs/kohtaamiset.js';
 import { LIPPU_TEKIJAT } from './packs/lippu-tekijat.js';
 // Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
@@ -11255,6 +11255,16 @@ export class UI {
       return row;
     };
 
+    /*
+     * VALIKKO V2 (omistaja 2.10.2026 klo 14.37): Matka-rivin tilalla taso ja pisteet, Aarteet- ja Julisteet-riveillä
+     * kerätyt määrät suluissa, ja rivistä aukeava näkymä on pelkkä tasokortti (iso avatar, tason nimi, pisteet ja
+     * etenemispalkki). Sijainti, kukkaro ja tilastot jäävät pois; muuta lisätään vasta omistajan päätöksellä.
+     */
+    if (this.paavalikko?.classList.contains('tk-paneeli--v2')) {
+      this.renderValikkoTaso();
+      return;
+    }
+
     const city = this.factCity(p.pos);
     rivi('Sijainti', p.pos.type === 'edge' ? `matkalla — ${city.name}` : city.name);
     rivi('Kukkaro', `${p.money}\u00a0£`);
@@ -11357,6 +11367,51 @@ export class UI {
 
     const tieto = game.knowledgePercent(p);
     if (tieto !== null) tilastoRivi('Tieto tästä laudasta', `${tieto} %`);
+  }
+
+  /** Valikko v2: rivien nimet (taso ja pisteet, määrät suluissa) ja Matka-näkymän tasokortti (ks. renderProgress). */
+  renderValikkoTaso() {
+    const { game } = this;
+    const p = game.player;
+    const pisteet = p.xp ?? 0;
+    const taso = tietajataso(pisteet);
+    const { loydetyt } = this.aarreLuettelo();
+    const tavaroita = (p.finds ?? []).filter((type) => type !== 'star' && onAarre(type)).length;
+    const nimea = (id, teksti) => {
+      const nimi = document.getElementById(id)?.querySelector('.tk-paneeli-rivi__nimi');
+      if (nimi) nimi.textContent = teksti;
+    };
+    nimea('pilleri-matka-btn', `${taso.nimi} (${pisteet} tp)`);
+    const riviAvatar = document.querySelector('#pilleri-matka-btn .valikko-tasorivi-avatar');
+    if (riviAvatar) riviAvatar.src = tietajaAvatar(taso);
+    nimea('pilleri-aarteet-btn', `Aarteet (${loydetyt.length + tavaroita})`);
+    nimea('pilleri-julisteet-btn', `Julisteet (${this.julisteVoitot().length})`);
+
+    // Tasorivin etenemispalkki (nykyisen tason alusta seuraavan rajaan; ylimmällä tasolla ei palkkia).
+    const rivi = document.getElementById('pilleri-matka-btn');
+    const seuraava = seuraavaTietajataso(pisteet);
+    let rivinPalkki = rivi?.querySelector('.valikko-tasorivi-palkki');
+    if (rivi && seuraava && !rivinPalkki) {
+      rivinPalkki = html('span', 'valikko-tasorivi-palkki');
+      rivinPalkki.setAttribute('aria-hidden', 'true');
+      rivinPalkki.appendChild(html('span', 'valikko-tasorivi-tayte'));
+      rivi.querySelector('.tk-paneeli-rivi__nuoli')?.before(rivinPalkki);
+    }
+    if (rivinPalkki) {
+      rivinPalkki.hidden = !seuraava;
+      rivinPalkki.firstChild.style.width = `${Math.round(tietajatasonOsuus(pisteet) * 100)}%`;
+    }
+
+    // Tasonäkymä: nykyinen avatar isona ylhäällä, sen alla kaikki tasot (nykyinen ympyröity).
+    const avatar = document.createElement('img');
+    avatar.className = 'valikko-taso-avatar';
+    avatar.src = tietajaAvatar(taso);
+    avatar.alt = taso.nimi;
+    avatar.decoding = 'async';
+    avatar.draggable = false;
+    const ruudukko = tietajaRuudukko(pisteet);
+    ruudukko.classList.add('valikko-tasot');
+    this.passportProgress.replaceChildren(avatar, ruudukko);
   }
 
   /**

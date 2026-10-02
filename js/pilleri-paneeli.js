@@ -25,19 +25,19 @@ export function paneeliPohjalla() {
 }
 
 /*
- * VALIKKO V2 (VEDOS, omistaja 2.10.2026 klo 14.0x Päätoimittajan kautta; lipun takana ?valikko=v2 tai
- * localStorage matkakirja-valikko=v2): kolme osiota HISTORIA-kapiteelilla (ÄÄNET, MATKA, PELI). ÄÄNET on yksi kevyt
- * kytkinrivi (päällä = pehmeä pergamenttitäyttö ilman tummaa reunaa); MATKA [Matka, Aarteet, Julisteet] ja PELI
- * [Retkikunta, Asetukset] ovat koko levyisiä luettelorivejä (ikoni, nimi, nuoli, ohut viiva välissä); Uusi peli on
- * alimpana hillittynä tekstinappina. Ei kapseleita (omistajan EI OVAALEJA -sääntö 2.10.). Linssit lähtee valikosta
- * omaksi kartan napikseen (omistaja 13.56, erillinen erä).
+ * VALIKKO V2 (omistaja 2.10.2026: vedos klo 14.0x, hyväksytty muutoksin klo 14.37 ja tarkennus heti perään; oletus,
+ * vanha järjestys ?valikko=vanha tai localStorage matkakirja-valikko=vanha): ÄÄNET (kevyt kytkinrivi, päällä =
+ * pehmeä pergamenttitäyttö ilman tummaa reunaa) → tasorivi ilman otsikkoa (avatar ja "Untuvikko (80 tp)", avaa
+ * tasonäkymän) → MATKALAUKKU [Aarteet (N), Julisteet (N)] → PELI [Retkikunta, Asetukset] → alarivi yhdellä rivillä
+ * (Uusi peli vasemmalla, ↻ ja versio oikealla). Luettelorivit: ikoni, nimi, nuoli, ohut viiva välissä. Ei kapseleita
+ * (EI OVAALEJA 2.10.). Linssit lähtee valikosta omaksi kartan napikseen (omistaja 13.56, erillinen erä).
  */
 export function valikkoV2() {
   try {
     const valinta = new URLSearchParams(globalThis.location?.search ?? '').get('valikko')
       ?? globalThis.localStorage?.getItem('matkakirja-valikko');
-    return valinta === 'v2';
-  } catch { return false; }
+    return valinta !== 'vanha';
+  } catch { return true; }
 }
 
 /** Navigointirivin viivaikonit (24 × 24, viiva currentColor; samat kuin tyylikirjasivun esimerkissä). */
@@ -212,16 +212,31 @@ export function puePilleriPaneeliksi(haeUi) {
   for (const vanha of paa.querySelectorAll('.kertoja-kotelo, .valikko-alarivi')) vanha.hidden = true;
   if (valikkoV2()) {
     pv.classList.add('tk-paneeli--v2');
-    // MATKA: Matka, Aarteet, Julisteet (Julisteet asuvat toistaiseksi Aarteet-näkymässä).
-    pueLuetteloRivi(matkaNappi, 'Matka', PILLERI_IKONI.matka);
+    const matkaOtsikko = matka.querySelector('.tk-kapiteeli');
+    if (matkaOtsikko) matkaOtsikko.textContent = 'Tietäjätaso';
+    // Tasorivi ilman otsikkoa: avatar ja "Untuvikko (80 tp)" (js/ui.js renderValikkoTaso täyttää), avaa tasonäkymän.
+    pueLuetteloRivi(matkaNappi, 'Matka', '');
+    matkaNappi.classList.add('valikko-tasorivi');
+    const avatar = pilleriSolmu('img', 'valikko-tasorivi-avatar');
+    avatar.alt = '';
+    avatar.decoding = 'async';
+    avatar.draggable = false;
+    matkaNappi.prepend(avatar);
+    const tasoRyhma = pilleriSolmu('div', 'tk-paneeli__ryhma tk-paneeli__ryhma--luettelo pilleri-pikanapit');
+    tasoRyhma.append(matkaNappi);
+    // MATKALAUKKU: Aarteet (N) ja Julisteet (N) (Julisteet asuvat toistaiseksi Aarteet-näkymässä).
     pueLuetteloRivi(aarteet, 'Aarteet', PILLERI_IKONI.aarteet);
     const julisteet = pueLuetteloRivi(pilleriSolmu('button'), 'Julisteet', PILLERI_IKONI.julisteet);
     julisteet.type = 'button';
     julisteet.id = 'pilleri-julisteet-btn';
-    julisteet.addEventListener('click', () => haeUi()?.naytaPilleriNakyma('aarteet'));
+    julisteet.addEventListener('click', () => {
+      const ui = haeUi();
+      ui?.renderPilleriAarteet?.();
+      ui?.naytaPilleriNakyma('aarteet');
+    });
     linssit.hidden = true;
-    const matkaRyhma = pilleriSolmu('div', 'tk-paneeli__ryhma tk-paneeli__ryhma--luettelo pilleri-pikanapit');
-    matkaRyhma.append(matkaNappi, aarteet, julisteet, linssit);
+    const laukkuRyhma = pilleriSolmu('div', 'tk-paneeli__ryhma tk-paneeli__ryhma--luettelo pilleri-pikanapit');
+    laukkuRyhma.append(aarteet, julisteet, linssit);
     // PELI: Retkikunta (asuu palautekortissa, kuten ennen) ja Asetukset.
     const retkikunta = pueLuetteloRivi(pilleriSolmu('button'), 'Retkikunta', PILLERI_IKONI.retkikunta);
     retkikunta.type = 'button';
@@ -231,13 +246,12 @@ export function puePilleriPaneeliksi(haeUi) {
     pueLuetteloRivi(asetuksetNappi, 'Asetukset', PILLERI_IKONI.asetukset);
     const peliRyhma = pilleriSolmu('div', 'tk-paneeli__ryhma tk-paneeli__ryhma--luettelo');
     peliRyhma.append(retkikunta, asetuksetNappi);
-    // Uusi peli alimmaiseksi hillityksi tekstinapiksi (vahvistus kuten ennen, js/main.js).
-    const uusiRyhma = pilleriSolmu('div', 'tk-paneeli__ryhma tk-paneeli__ryhma--hillitty');
-    uusiRyhma.append(uusiPeli);
-    paa.prepend(aanetOtsikko, kertoja,
-      ...pilleriRyhmaOtsikko('Matka'), matkaRyhma,
-      ...pilleriRyhmaOtsikko('Peli'), peliRyhma,
-      erotin, uusiRyhma);
+    // Alarivi yhdelle riville (omistaja 14.37): Uusi peli vasemmalla, ↻ (vain web) ja versio oikealla.
+    uusiPeli.classList.add('valikko-alarivi-uusi');
+    if (pohjarivi) pohjarivi.prepend(uusiPeli);
+    paa.prepend(aanetOtsikko, kertoja, tasoRyhma,
+      ...pilleriRyhmaOtsikko('Matkalaukku'), laukkuRyhma,
+      ...pilleriRyhmaOtsikko('Peli'), peliRyhma, erotin);
     if (pohjarivi) paa.appendChild(pohjarivi);
     pv.append(asetukset, matka);
     return true;

@@ -120,11 +120,59 @@
   border-top: 1px solid var(--tk-reunus);
 }
 
-.paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma--hillitty { align-items: center; }
-.paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma--hillitty .tk-paneeli-rivi {
+.paavalikko.tk-paneeli--v2 .tk-paneeli__ryhma + .tk-paneeli__ryhma { margin-top: var(--tk-vali-xs); }
+
+/* Tasorivi (ilman otsikkoa): avatar ympyränä nimen edessä. */
+.paavalikko.tk-paneeli--v2 .valikko-tasorivi-avatar {
+  flex: none;
+  width: calc(var(--tk-koko-leipa) * 2);
+  height: calc(var(--tk-koko-leipa) * 2);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Alarivi yhdellä rivillä: Uusi peli vasemmalla, ↻ ja versio oikealla (omistaja 14.37). */
+.paavalikko.tk-paneeli--v2 .tk-paneeli__alarivi { justify-content: flex-end; gap: var(--tk-vali-s); }
+.paavalikko.tk-paneeli--v2 .tk-paneeli__alarivi .valikko-alarivi-uusi {
   width: auto;
-  justify-content: center;
+  min-height: var(--tk-nappi-osuma);
+  margin-right: auto;
+  padding: 0 var(--tk-vali-xs);
   border: 0;
   color: var(--tk-muste-pehmea);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
   font-weight: 400;
+  letter-spacing: 0;
+}
+
+/* Tasorivi: avatar, "Untuvikko (80 tp)", etenemispalkki ja › samalla rivillä (omistaja 14.4x). */
+.paavalikko.tk-paneeli--v2 .valikko-tasorivi .tk-paneeli-rivi__nimi { flex: 0 1 auto; }
+.valikko-tasorivi-palkki {
+  flex: 1 1 auto;
+  min-width: var(--tk-vali-xl);
+  height: var(--tk-vali-xs);
+  border-radius: var(--tk-kulma-pieni);
+  background: var(--tk-reunus);
+  overflow: hidden;
+}
+.valikko-tasorivi-palkki[hidden] { display: none; }
+.valikko-tasorivi-tayte { display: block; height: 100%; background: var(--tk-toiminto); }
+
+/* Tasonäkymä (tasorivistä): nykyinen avatar isona ylhäällä ja sen alla kaikki tasot, nykyinen ympyröity (14.4x).
+   Sijainti, kukkaro, nimi-pisteet-sivu ja tilastot poissa. */
+.paavalikko.tk-paneeli--v2 .pilleri-tiedot > .passport-count,
+.paavalikko.tk-paneeli--v2 .pilleri-tiedot .laukku-lohko { display: none; }
+.valikko-taso-avatar {
+  display: block;
+  width: calc(var(--tk-nappi-osuma) * 2.5);
+  height: calc(var(--tk-nappi-osuma) * 2.5);
+  margin: var(--tk-vali-s) auto var(--tk-vali-l);
+  border-radius: 50%;
+  object-fit: cover;
+}
+.valikko-tasot .tietaja-galleria-kohta.nykyinen { border-color: transparent; background: transparent; }
+.valikko-tasot .tietaja-galleria-kohta.nykyinen .tietaja-galleria-kuva {
+  outline: 2px solid var(--tk-toiminto);
+  outline-offset: 2px;
 }
