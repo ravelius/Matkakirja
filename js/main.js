@@ -6,6 +6,7 @@ import { Game } from './game.js';
 import { UI, korttiPohjalla, puePohjaDialogiksi } from './ui.js';
 import { paneeliPohjalla, puePilleriPaneeliksi } from './pilleri-paneeli.js';
 import { LINSSIT_AVAA_TAPAHTUMA } from './karttaselite.js';
+import { PAAVALIKKO_NAPILTA } from './ylapalkki-vaaka.js';
 import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
@@ -1258,6 +1259,13 @@ const vaihdaValikko = (tapahtuma) => {
 
 menuBtn.addEventListener('click', vaihdaValikko);
 
+// Vaakatilan kartan hampurilainen (js/ylapalkki-vaaka.js; omistaja 2.10.2026 klo 23.07): ei yläpalkkia, valikko
+// avautuu suoraan napin päälle (js/pilleri-paneeli.js ankkuroi paneelin napin kulmaan).
+document.addEventListener(PAAVALIKKO_NAPILTA, (tapahtuma) => {
+  const lahde = tapahtuma.detail?.lahde ?? menuBtn;
+  if (paavalikko.hidden) avaaPaavalikko(lahde); else suljeValikko(lahde);
+});
+
 // Kartan Linssit-nappi (js/karttaselite.js, omistaja 2.10.2026 klo 13.56): pillerivalikko suoraan Linssit-näkymään.
 document.addEventListener(LINSSIT_AVAA_TAPAHTUMA, (tapahtuma) => {
   const lahde = tapahtuma.detail?.lahde ?? menuBtn;
@@ -1332,7 +1340,7 @@ paavalikko.addEventListener('click', (event) => {
  *                laukaise pointerdownia).
  */
 document.addEventListener('pointerdown', (event) => {
-  if (!event.target.closest?.('.valikko-kotelo, #turn-pill, #paavalikko')) suljeValikko();
+  if (!event.target.closest?.('.valikko-kotelo, #turn-pill, #paavalikko, .ylapalkki-nappi')) suljeValikko();
 });
 
 document.addEventListener('keydown', (event) => {
