@@ -16,7 +16,9 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
 - KIILLON PYSTYLEIKKAUS juurisyy (2.10. 13.4x, lokit/linssiseppa-kiilto4-20261002-iphone): ei pilvet; kiillon huippu ruudun
   ulkopuolella, näkyvä ~25° sivuliepe (0,75) puhkeaa tonemapissa valkoiseksi tasanteeksi → pystyreuna. Python-toisto
   scratchpad kiilto_sim.py. Suositus Päätoimittajalle: ilmakehän läpäisy (Kasten–Young, τ RGB 0,15/0,20/0,33) kiiltoon,
-  natiivi + web (iss-realismi-kerrokset.js r. 143) — ODOTTAA PÄÄTÖSTÄ.
+  natiivi + web (iss-realismi-kerrokset.js r. 143) — HYVÄKSYTTY JA TEHTY: natiivi linssiseppa/kiilto-ilmakeha 797aac22
+  (käännös 5c292cbe) merge-pyynnössä Natiivisepällä; web PR #3844 (Pelikoodari hyväksyi, CI vihreä). Kuvaparit
+  lokit/linssiseppa-kiilto-ilmakeha-20261002/{natiivi,web}-vanha-uusi.png; web-harness scratchpad kiilto-web.mjs.
 - KUVAA-osuma ad79d770 junassa 116. LS2:n 1116-kysymys (KUVAA Pariisissa, KOHDE-lista auki): vastattu — todennäköisin
   hiljainen `kaynnissa`-paluu IssKameraKuva.Laukaisessa; odottaa LS2:n koordinaattia.
 - Seuraavaksi: kiillon pystyleikkaus (ajo-kiilto3.sh ilman KUVAA-lippua) seuraavalla simulaattorivuorolla.
