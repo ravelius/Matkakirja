@@ -153,11 +153,11 @@
     "KENTTÄ": { "osa": true, "teemat": ["paperi"], "_selite": "tk-kentta (omistaja 1.10.2026)" },
     "LAUTAPELI": {
       "koostuu": ["KUVANÄKYMÄ (lauta)", "PANEELI (ohjaimet)", "KORTTI (valinta ja voitto)"],
-      "teemat": ["paperi", "tumma"],
+      "teemat": ["paperi", "lasi"],
       "lauta": "KUVANÄKYMÄ ilman laudan taustaa: lauta suoraan näkymän päällä, epäsäännöllinen reuna näkyy (ei vaaleaa taustalevyä)",
       "tausta": "kartta sumennettuna kertakuvana pelin avautuessa, koko näkymän päällä himmennys-kevyt",
-      "osat": { "tilapaneeli": { "pohja": "PANEELI", "teemat": ["tumma"] }, "aloituskortti": { "pohja": "KORTTI", "teemat": ["paperi"] }, "tuloskortti": { "pohja": "KORTTI", "teemat": ["paperi"] } },
-      "_selite": "lautapelien pohja (omistaja 1.10.2026, loki b3e273d72; Siirtosepän Mylly-malli). Lauta ilman taustaa, sumennettu tausta ja tumma tilapaneeli: omistaja 2.10.2026 klo 08.2x (Myllystä)"
+      "osat": { "tilapaneeli": { "pohja": "PANEELI", "teemat": ["lasi"] }, "aloituskortti": { "pohja": "KORTTI", "teemat": ["paperi"] }, "tuloskortti": { "pohja": "KORTTI", "teemat": ["paperi"] } },
+      "_selite": "lautapelien pohja (omistaja 1.10.2026, loki b3e273d72; Siirtosepän Mylly-malli). Lauta ilman taustaa ja sumennettu tausta: omistaja 2.10.2026 klo 08.2x (Myllystä). Tilapaneeli LASI (tumma oli liian tumma, omistaja 2.10.2026 klo 10.3x, loki 10.39; jos lasikin liian tumma, paperi)"
     },
     "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)" }
   }
