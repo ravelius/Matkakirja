@@ -772,7 +772,7 @@ namespace Matkakirja.Natiivi
             {
                 // Kysymykset ja kierros siirtyivät alareunan toimintoriville (Kysy · Visa · Kierros · Lehti).
                 Toimintorivi(n);
-                if (n.LeikekirjaValo != null) Leikekirja(sisus, n);
+                // Livian leikekirja on toimintorivin Lehti-nappi (web avaaKohdePohjalla, omistaja 2.10.2026: kohdekortti pysyvä).
                 // Reaktiot kortin loppuun: tunniste on kohteen oma id (web kohdeReaktioTunniste).
                 Reaktiot.Piirra(sisus, Reaktiot.KohdeAvain(n.Id), n.Otsikko);
             }
@@ -884,7 +884,10 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
                 napit[nimi] = a;
             }
-            Nappi("kysy", "Kysy", () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.AvaaKortista(PuluChat.NostonAihe(n), n.Kysymykset); });
+            // Napit kuten web avaaKohdePohjalla (#3788, omistaja 2.10.2026 pysyväksi): Kysy vain kysymyksillä, Visa, Kierros,
+            // Lehti = kohteen oma täkynosto (Livian leikekirja), ei kaupungin/maan lehteä. Esim. Ateena: vain Kysy.
+            if (n.Kysymykset.Count > 0)
+                Nappi("kysy", "Kysy", () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.AvaaKortista(PuluChat.NostonAihe(n), n.Kysymykset); });
             if (n.Visa != null)
                 Nappi("visa", "Visa", () =>
                 {
@@ -893,21 +896,13 @@ namespace Matkakirja.Natiivi
                     if (v != null) sisus.schedule.Execute(() => sisus.ScrollTo(v)).ExecuteLater(30);
                 });
             if (n.Kierrokset.Count > 0) { string u = n.Kierrokset[0].Item2; Nappi("kierros", "Kierros", () => Application.OpenURL(u)); }
-            var lehti = LehtiToiminto(n);
-            if (lehti != null) Nappi("lehti", "Lehti", lehti, true);
-        }
-
-        /// <summary>Kaupungin lehti (noston kaupunki) tai maan lehti (noston maa); null = ei lehteä.</summary>
-        static Action LehtiToiminto(Nosto n)
-        {
-            var ui = UiNakymat.Hae();
-            if (ui == null) return null;
-            var o = PeliOhjain.Instanssi;
-            if (!string.IsNullOrEmpty(n.Kaupunki))
-                return () => { ui.Nostokortti.Sulje(); if (o == null || o.LueLehti(n.Kaupunki) != null) ui.Lehti.Nayta(LehtiLaji.Kaupunki, n.Kaupunki); };
-            if (!string.IsNullOrEmpty(n.Iso))
-                return () => { ui.Nostokortti.Sulje(); if (o == null || o.LueMaalehti(n.Iso, null) != null) ui.Lehti.Nayta(LehtiLaji.Maa, n.Iso); };
-            return null;
+            if (n.LeikekirjaValo != null)
+            {
+                string valo = n.LeikekirjaValo;
+                Nappi("lehti", "Lehti", () => Avaa(valo), true);
+                napit["leikekirja"] = napit["lehti"]; // testikomento ui leikekirja
+            }
+            if (toimintorivi.childCount == 0) PoistaToimintorivi();
         }
 
         void KysyPululta(VisualElement isa, Nosto n)
@@ -1004,21 +999,6 @@ namespace Matkakirja.Natiivi
             Sulje();
             Avaa(valo);
         }
-
-        /// <summary>
-        /// Web piirraKohteenNosto: kohteen nimeävä täkynosto aukeaa kohdekortista. Klikkiotsikko on
-        /// napin sisältö — lupaus lunastetaan noston omassa kortissa.
-        /// </summary>
-        void Leikekirja(VisualElement isa, Nosto n)
-        {
-            string valo = n.LeikekirjaValo;
-            Action avaa = () => Avaa(valo);
-            var b = Rakenne.Nappi(null, "mk-nosto__leikekirja", avaa, isa);
-            Kirjasimet.Aseta(Rakenne.Teksti("LIVIAN LEIKEKIRJA", "mk-nosto__leikekirjaotsake", b), Kirjasin.Kone);
-            Kirjasimet.Aseta(Rakenne.Teksti(n.LeikekirjaOtsikko, "mk-nosto__leikekirjaotsikko", b), Kirjasin.Luku);
-            napit["leikekirja"] = avaa;
-        }
-
         /// <summary>
         /// Web kohteenNykykuva + .fokuskohde-teksti > .fokuskohde-nykykuva (omistaja 27.9.2026, Olympia-kortti):
         /// yhä olemassa olevan ihmekohteen valokuva pienenä tekstin kyljessä, kuvateksti alla, napautus suurentaa.
