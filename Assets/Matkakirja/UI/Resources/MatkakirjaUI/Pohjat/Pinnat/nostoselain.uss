@@ -20,14 +20,17 @@
     min-height: var(--tk-nappi-osuma);
     padding: 0;
     border-width: 0;
+    align-items: center;
+    justify-content: center;
     background-color: initial;
-    color: var(--tk-paperi-muste-pehmea);
+    color: var(--tk-paperi-muste); /* sama kuin kaiutin (Päätoimittaja 20.0x: ‹ › olivat haaleat) */
 }
 
-.mk-nostoselain__askel > .mk-nappi__teksti {
-    font-size: var(--tk-koko-leipa);
-    letter-spacing: 0;
-    -unity-text-align: middle-center;
+/* ‹ › piirroksina ≡:n ja kaiuttimen kokoisina, keskellä rivin keskilinjaa (merkkinä › jäi 4 px alemmas). */
+.mk-nostoselain__askel > .mk-ikoni {
+    width: 20px;
+    height: 20px;
+    margin-right: 0;
 }
 
 /* NOSTOT ▾ ilman kehystä HISTORIA-tyylisenä tekstinä (omistaja 18.4x). */
@@ -55,6 +58,9 @@
 
 .mk-nostoselain__sivu--oikea {
     justify-content: flex-end;
+    /* Optinen keskitys: ‹-piirros alkaa ~10 pt napin reunasta, AUTO:n kehys reunasta → ryhmä 5 pt vasemmalle, jotta
+     * näkyvä ‹ … AUTO on rivin keskellä (Päätoimittaja 20.0x: ryhmä ~6 pt oikealla). */
+    margin-left: 10px;
 }
 
 .mk-nostoselain__sivu > .mk-nosto__ylarivi {
@@ -93,6 +99,11 @@
     height: 16px;
     margin-left: var(--tk-vali-xs);
     color: var(--tk-paperi-muste-pehmea);
+}
+
+/* .mk-nappi > .mk-ikoni antoi ▾:lle 7 px oikean marginaalin: NOSTOT ▾ ei ollut ‹ ›:n keskellä (Päätoimittaja 20.0x). */
+.mk-nostoselain__avaaja > .mk-nostoselain__avaajaikoni {
+    margin-right: 0;
 }
 
 .mk-nostoselain__avaaja.mk-valittu {

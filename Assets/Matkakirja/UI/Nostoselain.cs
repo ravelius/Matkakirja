@@ -82,13 +82,14 @@ namespace Matkakirja.Natiivi
             rivi = Rakenne.El("mk-nostoselain mk-nosto__ylarivi", null, PickingMode.Ignore);
             kortti.Insert(kortti.IndexOf(ennen), rivi);
             Vasen = Rakenne.El("mk-nostoselain__sivu mk-nostoselain__sivu--vasen", rivi, PickingMode.Ignore);
-            edellinen = Rakenne.Nappi("‹", "mk-nostoselain__askel", () => Askel(-1), rivi);
+            // ‹ › piirroksina kuten ≡ ja kaiutin (Päätoimittaja 20.0x: merkit olivat haaleat, pienet ja › 4 px keskilinjan alla).
+            edellinen = Rakenne.Nappi(null, "mk-nostoselain__askel", () => Askel(-1), rivi, Ikonit.Takaisin);
             // Nostopaneelin ylärivi (omistaja 2.10. klo 13.53): ‹ NOSTOT ▾ › ja AUTO samalla rivillä HISTORIA-kapiteelin
             // kirjasimella, molemmat kevyinä suorakulmioina (ei ovaalia; web #3849 AUTO:n malli).
             avaaja = Rakenne.Nappi("NOSTOT", "mk-nostoselain__avaaja", VaihdaPaneeli, rivi);
             // ▾ piirroksena (Kone-kirjasimesta puuttuu merkki: laitteella neliö).
             Rakenne.Ikoni("<path class=\"taytto\" d=\"M7.5 10h9L12 15z\"/>", "mk-nostoselain__avaajaikoni", avaaja);
-            seuraava = Rakenne.Nappi("›", "mk-nostoselain__askel", () => Askel(1), rivi);
+            seuraava = Rakenne.Nappi(null, "mk-nostoselain__askel", () => Askel(1), rivi, Ikonit.NuoliOikea);
             // Oikea reuna: ≡ ja kaiutin (lukijan paikka, Nostokortti.SiirraYlarivi). Sivut yhtä leveät → keskiryhmä keskellä.
             Oikea = Rakenne.El("mk-nostoselain__sivu mk-nostoselain__sivu--oikea", rivi, PickingMode.Ignore);
             // Puhelimella rivi ei mahdu kokonaan (5fc4be80: HISTORIA katkesi ja ≡ meni päälle): kapealla kategoriasta vain symboli.
