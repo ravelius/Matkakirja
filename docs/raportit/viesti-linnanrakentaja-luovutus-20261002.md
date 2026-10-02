@@ -1,4 +1,4 @@
-# Linnanrakentajan luovutus 2.10.2026 klo 18.3x (päivitys 19.3x) (Opus high; tilin viikkoraja lähellä)
+# Linnanrakentajan luovutus 2.10.2026 klo 18.3x (päivitys 20.3x) (Opus high; tilin viikkoraja lähellä)
 
 ## Kärki nyt: linnan väki skinnatuiksi hahmoiksi (omistaja 18.0x, polku (a))
 - Omistaja: "haluan ne valmiit mallit joiden päälle vain vaihdetaan vaatteet ... tärkeintä mahdollisimman sulava liike".
@@ -19,6 +19,11 @@
   `proto-3d/lokit/siirtoseppa-skin3/vartija-v3-kavely-rajattu.mp4` → Päätoimittaja → omistaja. ODOTTAA OMISTAJAN OK:TA;
   sen jälkeen osoitin (käsiajo osoitin=true haarasta linnanrakentaja-linna-skin tai PR), muut 16 hahmoa hahmo_skin.py:llä
   (Peasant-asut) ja webin AnimationMixer.
+- **Päivitys 20.3x:** omistaja hyväksyi liikkeen (20.1x); moonwalk korjattu moottorissa (Siirtoseppä 6ad1ab62, GLB oikein:
+  kasvot +Z, tukijalka −Z). **Erä 1 (11 henkilöä, kaikki 16 esiintymää)** `_valmiit/linna-hahmot/v1/` (+ kokoelma-era1.jpg,
+  LAHTEET.md, era1.sh) → Päätoimittajan tarkistukseen; OK:n jälkeen peilipaketti: kopioi glb:t `olavinlinna-blender-v26/hahmot/`,
+  lisää henkilöt `js/dioraama/hahmot-skin.json`:iin (skaala = henkilot.js pituus / json pituus_m), vie-blender + vie-dioraama
+  (osoitin=false) haarasta linnanrakentaja-linna-skin; keittiön ja kierreportaiden reitit korjattava (todo-testit).
 - **Webin AnimationMixer on Linnanrakentajan** (Päätoimittaja 2.10.), mutta VASTA kun omistaja on hyväksynyt natiivin vartijavideon.
 - AUKI: kolmiobudjetti (32 k/hahmo → LOD 8–10 k
   tarvittaessa); muut hahmot (talonpoika/renki/vesipoika/kokki = Peasant, naiset Female_Peasant), katselu- ja kääntöleikkeitä ei

@@ -9,6 +9,8 @@ L = '/Users/Shared/Claude/proto-3d/_lahteet'
 UBC = f'{L}/quaternius-ubc/Universal Base Characters[Standard]'
 UAL = f'{L}/quaternius-ual/UAL1_Standard.glb'
 LEIKKEET = {'Idle_Loop': 'idle', 'Walk_Loop': 'kavely', 'Idle_Talking_Loop': 'puhe', 'Interact': 'tyo'}
+if '--tyo' in A:   # työsilmukka henkilön mukaan (UAL Standard): Interact | Fixing_Kneeling | Push_Loop | Sitting_Idle_Loop ...
+    LEIKKEET = {k: v for k, v in LEIKKEET.items() if v != 'tyo'}; LEIKKEET[A[A.index('--tyo') + 1]] = 'tyo'
 bpy.ops.wm.read_factory_settings(use_empty=True); sc = bpy.context.scene; sc.render.fps = 30
 def tuo(f):
     ennen = set(bpy.data.objects); bpy.ops.import_scene.gltf(filepath=f); return [o for o in bpy.data.objects if o not in ennen]
@@ -29,9 +31,17 @@ def liita(obs):
             for c in list(o.children): c.parent = arm
             bpy.data.objects.remove(o)
 # pää perushahmosta: vain kärjet, joiden paino Head + neck_01 ≥ 0,5 (vartalo jää asun alle pois)
-pohja = tuo(f'{UBC}/Base Characters/Godot - UE/Superhero_Male_FullBody.gltf')
+# lisäosat (esim. Ranger-huppu talonpoikaisasuun) ja poistettavat osat (esim. huppu voudilta)
+OSAT = f'{L}/quaternius-asut/Modular Character Outfits - Fantasy[Standard]/Exports/glTF (Godot-Unreal)/Modular Parts'
+if '--lisa' in A:
+    for osa in A[A.index('--lisa') + 1].split(','): liita(tuo(f'{OSAT}/{osa}.gltf'))
+if '--pois' in A:
+    for o in list(arm.children):
+        if any(t in o.name for t in A[A.index('--pois') + 1].split(',')): bpy.data.objects.remove(o)
+NAINEN = '--nainen' in A
+pohja = tuo(f'{UBC}/Base Characters/Godot - UE/Superhero_{"Female" if NAINEN else "Male"}_FullBody.gltf')
 for o in pohja:
-    if o.type == 'MESH' and o.name.startswith('SuperHero'):
+    if o.type == 'MESH' and o.name.lower().startswith('superhero'):
         ryhmat = {g.index: g.name for g in o.vertex_groups}
         bpy.context.view_layer.objects.active = o; bpy.ops.object.mode_set(mode='EDIT'); bpy.ops.mesh.select_all(action='DESELECT')
         bpy.ops.object.mode_set(mode='OBJECT')
@@ -69,7 +79,7 @@ alin = min(p.z for p in jalka); tuki = [i for i, p in enumerate(jalka) if p.z < 
 nop = [abs(jalka[i + 1][eteen] - jalka[i][eteen]) for i in tuki if i + 1 < len(jalka) and i + 1 in tuki]
 v = sum(nop) / max(1, len(nop)) * sc.render.fps; kesto = (f1 - f0) / sc.render.fps
 tiedot = {'nimi': NIMI, 'leikkeet': {'idle': 'idle', 'kavely': 'kavely', 'katselu': 'idle', 'kaanto': None,
-                                      'puhe': 'puhe', 'tyo': 'tyo'},
+                                      'puhe': 'puhe', 'tyo': 'tyo', 'kanto': 'kavely'},
           'huom_leikkeet': 'UAL Standardissa ei katselu- eikä kääntöleikettä: katselu = idle, kääntö moottorin juurikiertona',
           'kavely_sykli_m': round(v * kesto, 3), 'fps': sc.render.fps,
           'kavely': {'kesto_s': round(kesto, 3), 'nopeus_m_s': round(v, 3), 'askelpituus_m': round(v * kesto / 2, 3),
@@ -92,11 +102,47 @@ if '--korvaa' in A:
             if im.name.startswith(nimi) and im != uusi and tuple(im.size) == tuple(uusi.size):
                 px = [0.0] * (uusi.size[0] * uusi.size[1] * 4); uusi.pixels.foreach_get(px); im.pixels.foreach_set(px); im.pack()
         bpy.data.images.remove(uusi)
+# LOD (Siirtoseppä 2.10.: 17 hahmoa → 8–10 k / hahmo) ja vain perusväri (natiivi ei käytä normaali- eikä ORM-kuvaa)
+if '--kolmiot' in A:
+    tavoite = int(A[A.index('--kolmiot') + 1]); meshit = [o for o in arm.children if o.type == 'MESH']
+    yht = sum(len(o.data.polygons) for o in meshit); suhde = min(1.0, tavoite / yht)
+    for o in meshit:
+        md = o.modifiers.new('karsi', 'DECIMATE'); md.ratio = suhde
+        bpy.context.view_layer.objects.active = o; bpy.ops.object.modifier_move_to_index(modifier='karsi', index=0)
+        bpy.ops.object.modifier_apply(modifier='karsi')
+    tiedot['kolmiot'] = sum(len(o.data.polygons) for o in meshit)
+if '--vain-perusvari' in A:
+    for m in bpy.data.materials:
+        if not m.use_nodes: continue
+        b = next((n for n in m.node_tree.nodes if n.type == 'BSDF_PRINCIPLED'), None)
+        if b is None: continue
+        for k in ('Normal', 'Roughness', 'Metallic'):
+            for l in list(b.inputs[k].links): m.node_tree.links.remove(l)
+        b.inputs['Roughness'].default_value = 0.8; b.inputs['Metallic'].default_value = 0.0
+PERUS = int(A[A.index('--perusvari') + 1]) if '--perusvari' in A else 1024
 # tekstuurit kevyiksi: perusväri 1024, normaali/ORM/karheus 512, JPEG viennissä (pienoisnäkymässä riittää)
 for im in bpy.data.images:
     if im.size[0] == 0: continue
-    k = 1024 if ('BaseColor' in im.name or im.name.endswith(('_Dark', '_Ligh')) or 'Eye' in im.name) else 512
+    k = PERUS if ('BaseColor' in im.name or im.name.endswith(('_Dark', '_Ligh')) or 'Eye' in im.name) else 512
     if im.size[0] > k: im.scale(k, k)
+# dioraaman hämärävalo (natiivi käyttää perusväriä sellaisenaan): perusvärikuviin nosto p' = min(1, k · p^0,8) (2.10. iPhone: lähes musta)
+if '--kirkkaus' in A:
+    kk = float(A[A.index('--kirkkaus') + 1])
+    import numpy as np
+    for im in bpy.data.images:
+        if im.size[0] == 0 or not ('BaseColor' in im.name or im.name.endswith(('_Dark', '_Ligh'))): continue
+        px = np.empty(im.size[0] * im.size[1] * 4, np.float32); im.pixels.foreach_get(px); px = px.reshape(-1, 4)
+        px[:, :3] = np.minimum(1.0, kk * np.power(px[:, :3], 0.8)); im.pixels.foreach_set(px.ravel()); im.pack()
+    tiedot['kirkkaus'] = kk
+# hiukset/parta: Quaterniusin hiuskuva on harmaa ja värjätään moottorissa kertoimella → väri kuvaan (natiivi ei käytä kerrointa)
+if '--hiusvari' in A:
+    import numpy as np
+    hv = [float(x) for x in A[A.index('--hiusvari') + 1].split(',')]
+    for im in bpy.data.images:
+        if im.size[0] == 0 or not im.name.startswith('T_Hair') or 'Normal' in im.name: continue
+        px = np.empty(im.size[0] * im.size[1] * 4, np.float32); im.pixels.foreach_get(px); px = px.reshape(-1, 4)
+        px[:, :3] = np.minimum(1.0, px[:, :3] * np.array(hv, np.float32)); im.pixels.foreach_set(px.ravel()); im.pack()
+    tiedot['hiusvari'] = hv
 bpy.ops.object.select_all(action='DESELECT'); arm.select_set(True)
 for o in arm.children: o.select_set(True)
 bpy.context.view_layer.objects.active = arm
