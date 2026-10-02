@@ -241,6 +241,9 @@ namespace Matkakirja.Natiivi
             if (!Mathf.Approximately(t.Nimi, nimiPeitto)) { nimiPeitto = t.Nimi; nimiLohko.style.opacity = Mathf.Clamp01(t.Nimi); }
             if (!Mathf.Approximately(t.Kysymys, kysymysPeitto)) { kysymysPeitto = t.Kysymys; kysymys.style.opacity = Mathf.Clamp01(t.Kysymys); }
             if (!Mathf.Approximately(t.Lahde, lahdePeitto)) { lahdePeitto = t.Lahde; lahde.style.opacity = Mathf.Clamp01(t.Lahde); }
+            // Kierrokset 2– vaihtavat lähderivin (web lahdeEl/lahdeViite asetaKierroksessa).
+            if (t.El != null && t.El != kreikka.text) kreikka.text = t.El;
+            if (t.Viite != null && t.Viite != viite.text) viite.text = t.Viite;
         }
 
         void AsetaKuva(RenderTexture rt)

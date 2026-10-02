@@ -30,7 +30,8 @@ namespace Matkakirja.Linssit.Ajattelijat
     public sealed class AjattelijaPaalause
     {
         public string Fi, El, Viite;
-        public double[] Sade, Vino;
+        /// <summary>Kohta bystillä: Sade [x, z] edestä tai (kierrokset 2–, web #3884) Sivulta [y, z] säteellä x = 2 → −x.</summary>
+        public double[] Sade, Sivulta, Vino;
         public double Ala, Etaisyys, Korkeus, KameraKulma, KameraMatka;
     }
 
@@ -59,6 +60,38 @@ namespace Matkakirja.Linssit.Ajattelijat
         // Täyte: osuus auringon voimasta, suunta, väri, keila, pehmeys.
         public double TayteOsuus, TayteKeila, TayteBlend;
         public double[] TayteSuunta, TayteVari;
+    }
+
+    /// <summary>Kierroksen 2– kaiku (web #3884 kierrokset.lista[].kaiku); puuttuvat Blend ja Savy kierroksen 1 kaiusta.</summary>
+    public sealed class AjattelijaKierrosKaiku
+    {
+        public string Kuva;
+        /// <summary>Kohde: KohdeSade [x, z] edestä tai KohdeSivulta [y, z] sivulta (toinen null).</summary>
+        public double[] KohdeSade, KohdeSivulta, Ruudut, Vino, Savy, TayteSuunta;
+        public double Etaisyys, Lev, Voima, Liuku, Blend = double.NaN;
+    }
+
+    /// <summary>Kierros 2– (web kierrokset.lista[]): päälause ja sen atlasrivi, ajat [vieritys, lähde, virta r0–r3], siemen, kaiku.</summary>
+    public sealed class AjattelijaKierros
+    {
+        public string PaalauseAvain;
+        public AjattelijaPaalause Lause;
+        public int AtlasRivi;
+        public double[] Vieritys, Lahde, Virta;
+        public uint Siemen;
+        public AjattelijaKierrosKaiku Kaiku;
+    }
+
+    /// <summary>
+    /// Kierrokset 2– (web #3884 a.kierrokset, Blender v9/v10): yksi ääniraita ja syke koko kohtaukselle, loppuruutu (lappu)
+    /// ja kameran avaimet [ruutu, paikka, katse, mm]; ensimmäinen avain on kierroksen 1 pito (näyttämö korvaa sen omalla).
+    /// </summary>
+    public sealed class AjattelijaKierrokset
+    {
+        public string Puhe, Musiikki, Syke;
+        public double Loppu;
+        public List<AjattelijaKierros> Lista = new List<AjattelijaKierros>();
+        public List<AjattelijaOtos> Kamera = new List<AjattelijaOtos>();
     }
 
     public sealed class AjattelijaProjektori
@@ -115,6 +148,8 @@ namespace Matkakirja.Linssit.Ajattelijat
         /// <summary>Auringon polku introssa: (ruutu, suunta).</summary>
         public List<(double R, double[] Suunta)> IntroValo = new List<(double, double[])>();
         public AjattelijaKaiku Kaiku;
+        /// <summary>Kierrokset 2– (valinnainen; Marcuksella ei vielä ole).</summary>
+        public AjattelijaKierrokset Kierrokset;
         public AjattelijaTaustavirta Taustavirta;
         public AjattelijaAtlas Atlas;
         public string ElamaOtsikko;
@@ -158,9 +193,33 @@ namespace Matkakirja.Linssit.Ajattelijat
             var aani = O(a, "aani");
             Vaadi(Tosi(K(aani, "puhe")) && Tosi(K(aani, "musiikki")), "aani");
             Vaadi(Tosi(K(O(a, "tykki"), "vari")), "tykki");
-            // Natiivi: tekstiatlas (tyokalut/ajattelijat-natiiviin.mjs); ilman sitä videotykillä ei ole kuvaa.
+            // Valinnaiset kierrokset 2– (Blender v9/v10): päälause, ajat, kaiku ja kameran avaimet.
+            var kr = O(a, "kierrokset");
+            if (K(a, "kierrokset") != null)
+            {
+                var kra = O(kr, "aani");
+                Vaadi(Tosi(K(kra, "puhe")) && Tosi(K(kra, "musiikki")) && Nro0(K(kr, "loppu")) > Nro0(K(ajat, "pito")), "kierrokset.aani/loppu");
+                var kam = K(kr, "kamera") as List<object>;
+                Vaadi(kam != null && kam.Count >= 2 && Ruutu(kam[0]) == Nro0(K(ajat, "pito")) && Ruutu(kam[kam.Count - 1]) == Nro0(K(kr, "loppu")),
+                    "kierrokset.kamera");
+                var kl = MiniJson.TaulukkoTaiTyhja(K(kr, "lista"));
+                for (int i = 0; i < kl.Count; i++)
+                {
+                    var k = kl[i] as Dictionary<string, object>;
+                    var l = K(k, "paalause") is string pa ? O(O(a, "paalauseet"), pa) : null;
+                    Vaadi(Tosi(K(l, "fi")) && Tosi(K(l, "el")) && Tosi(K(l, "viite")) && (Tosi(K(l, "sade")) || Tosi(K(l, "sivulta"))) && Tosi(K(l, "vino"))
+                        && Nro0(K(l, "ala")) != 0 && Nro0(K(l, "korkeus")) != 0, $"kierrokset.lista[{i}].paalause");
+                    foreach (var avain in new[] { "vieritys", "lahde", "virta" }) Vaadi(K(k, avain) is List<object>, $"kierrokset.lista[{i}].{avain}");
+                    if (K(k, "kaiku") is Dictionary<string, object> kc)
+                        Vaadi(Tosi(K(kc, "kuva")) && (Tosi(K(O(kc, "kohde"), "sade")) || Tosi(K(O(kc, "kohde"), "sivulta"))) && Tosi(K(kc, "ruudut")),
+                            $"kierrokset.lista[{i}].kaiku");
+                }
+                Vaadi(kl.Count > 0, "kierrokset.lista");
+            }
+            // Natiivi: tekstiatlas (tyokalut/ajattelijat-natiiviin.mjs); ilman sitä videotykillä ei ole kuvaa. Rivit: päälause,
+            // taustavirta ja kierrosten 2– päälauseet.
             var atlas = O(a, "atlas");
-            Vaadi(Tosi(K(atlas, "tiedosto")) && Pituus(K(atlas, "paikat")) == 1 + Pituus(K(tv, "rivit")), "atlas");
+            Vaadi(Tosi(K(atlas, "tiedosto")) && Pituus(K(atlas, "paikat")) == 1 + Pituus(K(tv, "rivit")) + Pituus(K(kr, "lista")), "atlas");
             return puuttuu;
         }
 
@@ -179,13 +238,7 @@ namespace Matkakirja.Linssit.Ajattelijat
             var av = O(a, "avainvalo");
             d.AvainSuunta = V(av, "suunta"); d.AvainTahtays = V(av, "tahtays"); d.AvainEtaisyys = L(av, "etaisyys"); d.AvainKeila = L(av, "keila");
             d.Rembrandt = Otos(O(O(a, "otokset"), "rembrandt"));
-            var lause = O(O(a, "paalauseet"), T(O(a, "kierros"), "paalause"));
-            d.Paalause = new AjattelijaPaalause
-            {
-                Fi = T(lause, "fi"), El = T(lause, "el"), Viite = T(lause, "viite"), Sade = V(lause, "sade"), Vino = V(lause, "vino"),
-                Ala = L(lause, "ala"), Etaisyys = L(lause, "etaisyys"), Korkeus = L(lause, "korkeus"),
-                KameraKulma = Lv(lause, "kameraKulma", 38), KameraMatka = Lv(lause, "kameraMatka", 0.09),
-            };
+            d.Paalause = Lause(O(O(a, "paalauseet"), T(O(a, "kierros"), "paalause")));
             d.TykkiVari = V(O(a, "tykki"), "vari");
             var aj = O(a, "ajat");
             d.Ajat = new AjattelijaAjat
@@ -226,6 +279,41 @@ namespace Matkakirja.Linssit.Ajattelijat
                     TayteOsuus = L(tay, "osuus"), TayteSuunta = V(tay, "suunta"), TayteVari = V(tay, "vari"), TayteKeila = L(tay, "keila"),
                     TayteBlend = L(tay, "blend"),
                 };
+            }
+            if (K(a, "kierrokset") is Dictionary<string, object> kr)
+            {
+                var kra = O(kr, "aani");
+                d.Kierrokset = new AjattelijaKierrokset { Puhe = T(kra, "puhe"), Musiikki = T(kra, "musiikki"), Syke = T(kr, "syke"), Loppu = L(kr, "loppu") };
+                int rivit = MiniJson.TaulukkoTaiTyhja(K(O(a, "taustavirta"), "rivit")).Count;
+                foreach (var x in MiniJson.TaulukkoTaiTyhja(K(kr, "lista")))
+                {
+                    var o = x as Dictionary<string, object>;
+                    var k = new AjattelijaKierros
+                    {
+                        PaalauseAvain = T(o, "paalause"), Lause = Lause(O(O(a, "paalauseet"), T(o, "paalause"))),
+                        AtlasRivi = 1 + rivit + d.Kierrokset.Lista.Count,
+                        Vieritys = V(o, "vieritys"), Lahde = V(o, "lahde"), Virta = V(o, "virta"),
+                        Siemen = K(o, "siemen") is object sm ? (uint)Nro(sm) : (uint)L(O(a, "taustavirta"), "siemen"),
+                    };
+                    if (K(o, "kaiku") is Dictionary<string, object> kc)
+                    {
+                        var ko = O(kc, "kohde");
+                        k.Kaiku = new AjattelijaKierrosKaiku
+                        {
+                            Kuva = T(kc, "kuva"), KohdeSade = K(ko, "sade") is object ks ? Vek(ks) : null,
+                            KohdeSivulta = K(ko, "sivulta") is object kv ? Vek(kv) : null, Ruudut = V(kc, "ruudut"), Vino = V(kc, "vino"),
+                            Etaisyys = L(kc, "etaisyys"), Lev = L(kc, "lev"), Voima = L(kc, "voima"), Liuku = L(kc, "liuku"),
+                            Blend = Lv(kc, "blend", double.NaN), Savy = K(kc, "savy") is object sv ? Vek(sv) : null,
+                            TayteSuunta = K(O(kc, "tayte"), "suunta") is object ts ? Vek(ts) : null,
+                        };
+                    }
+                    d.Kierrokset.Lista.Add(k);
+                }
+                foreach (var x in MiniJson.TaulukkoTaiTyhja(K(kr, "kamera")))
+                {
+                    var l = (List<object>)x;
+                    d.Kierrokset.Kamera.Add(new AjattelijaOtos { R = Nro(l[0]), Paikka = Vek(l[1]), Katse = Vek(l[2]), Mm = Nro(l[3]) });
+                }
             }
             var tv = O(a, "taustavirta");
             d.Taustavirta = new AjattelijaTaustavirta
@@ -292,6 +380,16 @@ namespace Matkakirja.Linssit.Ajattelijat
         static double Lv(Dictionary<string, object> o, string k, double oletus) => K(o, k) is object v ? Nro(v) : oletus;
         static double[] Vek(object v) => ((List<object>)v).Select(Nro).ToArray();
         static double[] V(Dictionary<string, object> o, string k) => Vek(K(o, k) ?? throw new FormatException(k + " puuttuu"));
+        /// <summary>Luku tai 0 (webin ?? 0 ja totuusarvo: puuttuva tai muu kuin luku ei kelpaa).</summary>
+        static double Nro0(object v) => v is double d ? d : 0;
+        static double Ruutu(object avain) => avain is List<object> l && l.Count > 0 ? Nro0(l[0]) : double.NaN;
+        static AjattelijaPaalause Lause(Dictionary<string, object> l) => new AjattelijaPaalause
+        {
+            Fi = T(l, "fi"), El = T(l, "el"), Viite = T(l, "viite"),
+            Sade = K(l, "sade") is object s ? Vek(s) : null, Sivulta = K(l, "sivulta") is object sv ? Vek(sv) : null, Vino = V(l, "vino"),
+            Ala = L(l, "ala"), Etaisyys = L(l, "etaisyys"), Korkeus = L(l, "korkeus"),
+            KameraKulma = Lv(l, "kameraKulma", 38), KameraMatka = Lv(l, "kameraMatka", 0.09),
+        };
         static AjattelijaOtos Otos(Dictionary<string, object> o) => new AjattelijaOtos { Paikka = V(o, "paikka"), Katse = V(o, "katse"), Mm = L(o, "mm") };
     }
 }

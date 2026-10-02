@@ -31,13 +31,15 @@ for (const f of tiedostot) {
 const kohteet = ajattelijat.filter((a) => !valitut.length || valitut.includes(a.tunnus));
 if (!kohteet.length) { console.error('ei ajattelijoita', valitut); process.exit(1); }
 
-// Atlaksen rivit kuten webin avaaAjattelija (päälause 192 px sumealla parilla + taustavirran rivit 96 px toistona).
+// Atlaksen rivit kuten webin avaaAjattelija (päälause 192 px sumealla parilla + taustavirran rivit 96 px toistona +
+// kierrosten 2– päälauseet samoin kuin kierroksen 1, web #3884 lauseRivi). Natiivi: kierroksen j rivi = 1 + rivit + j.
 function atlasRivit(a) {
   const fontti = (n) => a.fontit[n] ?? a.fontit.iowan;
-  const lause = a.paalauseet[a.kierros.paalause];
+  const lauseRivi = (l) => ({ teksti: l.fi, fontti: fontti('iowan').perhe, paino: fontti('iowan').paino, korkeus: 192, sumea: true, emOsuus: 1.15 });
   return [
-    { teksti: lause.fi, fontti: fontti('iowan').perhe, paino: fontti('iowan').paino, korkeus: 192, sumea: true, emOsuus: 1.15 },
+    lauseRivi(a.paalauseet[a.kierros.paalause]),
     ...a.taustavirta.rivit.map(([, f, teksti]) => ({ teksti, fontti: fontti(f).perhe, paino: fontti(f).paino, korkeus: 96, toisto: true })),
+    ...(a.kierrokset?.lista ?? []).map((k) => lauseRivi(a.paalauseet[k.paalause])),
   ];
 }
 
