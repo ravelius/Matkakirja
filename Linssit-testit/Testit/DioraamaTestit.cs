@@ -1729,6 +1729,39 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1.8, Kierto.OletusYleis.EtaisyysMax);
         }
 
+        [Testi] static void HenkilonMalli3dSkinAlakentta()
+        {
+            const string json = @"{
+              ""henkilot"": {
+                ""vartija-1500"": {
+                  ""nimi"":""Vartija"",""atlas"":""hahmot/vartija-1500.png"",""ruutu"":[128,192],""sarakkeet"":8,
+                  ""pivot"":[0.5,0.04],""korkeus_m"":1.76,""silmukat"":{""idle"":{""rivi"":0,""ruudut"":4,""fps"":6}},
+                  ""malli3d"": {
+                    ""glb"": ""hahmot3d/vartija-1500.glb"",
+                    ""skin"": {""glb"":""blender/hahmot/vartija-1500.glb"",""leikkeet"":{""idle"":""idle"",""katselu"":""idle"",""kaanto"":null},
+                              ""kavely_sykli_m"":1.273,""skaala"":0.9544}
+                  }
+                },
+                ""kokki-1500"": {
+                  ""nimi"":""Kokki"",""atlas"":""hahmot/kokki-1500.png"",""ruutu"":[128,192],""sarakkeet"":8,
+                  ""pivot"":[0.5,0.04],""korkeus_m"":1.72,""silmukat"":{""idle"":{""rivi"":0,""ruudut"":4,""fps"":6}},
+                  ""malli3d"": {""glb"": ""hahmot3d/kokki-1500.glb""}
+                }
+              }
+            }";
+            var r = DioraamaData.Lue(json);
+            var v = r.Henkilot["vartija-1500"].Malli3d;
+            Oleta.Sama("blender/hahmot/vartija-1500.glb", v.NatiiviGlb);
+            Oleta.Sama("hahmot3d/vartija-1500.glb", v.Glb);   // web käyttää yhä nivelhahmoa
+            Oleta.Sama(1.273, v.Skin.KavelySykliM);
+            Oleta.Sama(0.9544, v.Skin.Skaala);
+            Oleta.Sama("idle", v.Skin.Leikkeet["katselu"]);
+            Oleta.Tosi(!v.Skin.Leikkeet.ContainsKey("kaanto"), "null-leike ohitetaan");
+            var k = r.Henkilot["kokki-1500"].Malli3d;
+            Oleta.Tosi(k.Skin == null, "ei skin-kenttää");
+            Oleta.Sama("hahmot3d/kokki-1500.glb", k.NatiiviGlb);
+        }
+
         [Testi] static void HenkilonMalli3dJasennysJaOletusPuuttuessa()
         {
             const string json = @"{

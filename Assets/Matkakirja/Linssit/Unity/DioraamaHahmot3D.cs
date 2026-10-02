@@ -4,7 +4,7 @@
 // ("poikki hahmot 2d|3d", oletus 3d: 3D-malli korvaa kortin; kortti jää varalle henkilölle, jolla ei ole
 // malli3d.glb:tä lähteessä) — tämä tiedosto ei itse suodata mitään pois DioraamaHahmot.cs:n puolelta.
 //
-// GLB-LATAUS: yksi glb per HENKILÖ (henkilo.Malli3d.Glb-polku), EI per hahmo-instanssi — monta hahmoa (esim.
+// GLB-LATAUS: yksi glb per HENKILÖ (henkilo.Malli3d.NatiiviGlb: malli3d.skin.glb tai nivelhahmon glb), EI per hahmo-instanssi — monta hahmoa (esim.
 // kaksi eri huoneen kokkia) voi jakaa saman henkilön mallin. Mesh/Material rakennetaan KERRAN per glb-polku
 // (AsetaGlb) ja jaetaan KAIKKIEN sen henkilön instanssien kesken; vain Transform-hierarkia (nivelten paikat/
 // kierrot) on per-instanssi. Sama LataaTila/avauskerta-malli kuin DioraamaSovitin.cs:n muu lataus.
@@ -117,12 +117,12 @@ namespace Matkakirja.Natiivi
             foreach (var hahmo in tila.Hahmot)
             {
                 if (rakennus.Henkilot == null || !rakennus.Henkilot.TryGetValue(hahmo.HenkiloId, out var henkilo)) continue;
-                if (henkilo.Malli3d == null || string.IsNullOrEmpty(henkilo.Malli3d.Glb)) continue;
+                if (henkilo.Malli3d == null || string.IsNullOrEmpty(henkilo.Malli3d.NatiiviGlb)) continue;
                 var e = new Esiintyma { TilaId = tila.Id, HahmoId = hahmo.Id, Hahmo = hahmo, Henkilo = henkilo };
                 if (hahmo.Reitti != null) ValmisteleReitti(e, hahmo.Reitti);
                 esiintymat.Add(e);
                 // Toinen tila saattoi jo latauttaa saman henkilön mallin — rakenna heti, jos se on valmiina.
-                if (malliCache.TryGetValue(henkilo.Malli3d.Glb, out var malli)) Rakenna(e, malli);
+                if (malliCache.TryGetValue(henkilo.Malli3d.NatiiviGlb, out var malli)) Rakenna(e, malli);
             }
         }
 
@@ -135,7 +135,7 @@ namespace Matkakirja.Natiivi
             foreach (var hahmo in tila.Hahmot)
             {
                 if (rakennus.Henkilot == null || !rakennus.Henkilot.TryGetValue(hahmo.HenkiloId, out var henkilo)) continue;
-                string glb = henkilo.Malli3d?.Glb;
+                string glb = henkilo.Malli3d?.NatiiviGlb;
                 if (string.IsNullOrEmpty(glb) || malliCache.ContainsKey(glb) || ulos.Contains(glb)) continue;
                 ulos.Add(glb);
             }
@@ -161,7 +161,7 @@ namespace Matkakirja.Natiivi
             }
             malliCache[glbPolku] = hm;
             foreach (var e in esiintymat)
-                if (e.Juuri == null && e.Henkilo.Malli3d?.Glb == glbPolku) Rakenna(e, hm);
+                if (e.Juuri == null && e.Henkilo.Malli3d?.NatiiviGlb == glbPolku) Rakenna(e, hm);
         }
 
         /// <summary>Rakentaa yhden hahmo-instanssin Transform-hierarkian jaetusta HenkiloMalli-oliosta: kaikki
@@ -219,7 +219,7 @@ namespace Matkakirja.Natiivi
                     // Rajat juuriluun kehyksessä: hahmon koko laatikko + liikevara (ei updateWhenOffscreeniä, kallis).
                     smr.localBounds = new Bounds(new Vector3(0f, 0.9f, 0f), new Vector3(2.4f, 2.4f, 2.4f));
                 }
-                float sk = (float)(e.Henkilo.Malli3d?.Skaala ?? 1);
+                float sk = (float)(e.Henkilo.Malli3d?.Skin?.Skaala ?? 1);
                 go.transform.localScale = new Vector3(sk, sk, sk);
                 e.Sekoitin = new DioraamaSekoitin(malli.Glb);
             }
@@ -466,7 +466,7 @@ namespace Matkakirja.Natiivi
         /// leikkeen kesto / kavely_sykli_m, jalat eivät liu'u) ja tauoilla idle. Vaihe per hahmo kuten nivelhahmoilla.</summary>
         void PaivitaSkin(Esiintyma e, HahmoNakyma hn, double t)
         {
-            var m3 = e.Henkilo.Malli3d;
+            var m3 = e.Henkilo.Malli3d?.Skin;
             string silmukka = hn.Silmukka ?? "idle";
             bool reitilla = e.Hahmo.Reitti != null && silmukka == "kavely";
             double kavely = reitilla ? ReittiPaikkaJaSuunta(e, t).kavely : 1;
@@ -493,7 +493,7 @@ namespace Matkakirja.Natiivi
             PaivitaSijainti(e, t);
         }
 
-        static string Leike(Malli3d m3, string silmukka)
+        static string Leike(SkinMalli m3, string silmukka)
             => m3?.Leikkeet != null && m3.Leikkeet.TryGetValue(silmukka, out var l) && !string.IsNullOrEmpty(l) ? l : silmukka;
 
         const float HaivytysS = 0.25f;
