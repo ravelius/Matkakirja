@@ -109,7 +109,7 @@ namespace Matkakirja.Natiivi
                     kuva.Add(new Katkokehys());
                     // Viemätön tiedosto jättää nimen ja katkoviivakehyksen (web .kuvaton).
                     if (j.Url == null) vedos.AddToClassList("mk-galleria__vedos--kuvaton");
-                    else Kuvat.Hae(j.Url, t =>
+                    else Kuvat.Hae(j.PikkuUrl, t =>
                     {
                         if (t != null) kuva.style.backgroundImage = new StyleBackground(t);
                         else vedos.AddToClassList("mk-galleria__vedos--kuvaton");
