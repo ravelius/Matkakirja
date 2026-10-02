@@ -18,8 +18,11 @@
     color: var(--tk-muste);
 }
 
+/* Otsikkorivi ei kutistu (ikkunan max-height kutisti sen, ja 40 pt:n ✕ työntyi paneelin yläreunan yli; kuva 59029e81). */
 .mk-galleria__yla {
     flex-direction: row;
+    flex-shrink: 0;
+    min-height: var(--tk-nappi-ohjaus);
     align-items: center;
     margin-bottom: var(--tk-vali-xs);
     padding: var(--tk-vali-xs) 0 var(--tk-vali-xs) 0;
