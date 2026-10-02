@@ -20,8 +20,8 @@ import { POHJAT_TYYLIT } from './tyylit.js';
 
 const POHJA_TYYLIN_TUNNUS = 'pohjat-tyyli';
 const POHJA_VETO_PX = 40;
-/** Kortin jatkeet, joiden napautus ei ole ohinapautus: Pulun chat ja -nappi sekä pohjan KORTTI (esim. visa). */
-const POHJA_EI_OHINAPAUTUS = '.pollo-paneeli, .pollo-nappi, .tk-kortti-tausta';
+/** Kortin jatkeet, joiden napautus ei ole ohinapautus: Pulun chat ja -nappi, PULU-pohjan kulma ja pohjan KORTTI (visa). */
+const POHJA_EI_OHINAPAUTUS = '.pollo-paneeli, .pollo-nappi, .tk-pulukulma, .tk-kortti-tausta';
 /** Avoimet pohjat avausjärjestyksessä: Esc sulkee ylimmän (yksi sulkupino). */
 const pohjaPino = [];
 

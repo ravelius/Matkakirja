@@ -247,6 +247,28 @@ export const LAHTEET = [
     johdanto: 'Kuvakortit, kaupunkigalleriat, kulttuurinostot ja maastotekstien kuvat.',
     rivit: [
       {
+        nimi: 'Ajattelijat-linssin kaikukuvat — Marcuksen pylvään sadeihme (Marcus Aurelius, kierros 1)',
+        tekija: 'Nico Kokkonen, Wikimedia Commons (Column_of_Marcus_Aurelius_-_detail2.jpg)',
+        lisenssi: 'CC BY 3.0',
+        huom: 'Rajattu ja tasokäyrällä valoksi muokattu (Linnanrakentaja 2.10.2026, LAHTEET.md).',
+      },
+      {
+        nimi: 'Ajattelijat-linssin kaikukuvat — Carstens 1788 (Sokrates pelastaa Alkibiadeen), '
+          + 'Marcus Aureliuksen uhrireliefi 176–180 (valokuva Angeli 1908) ja Delacroix 1844',
+        tekija: 'Wikimedia Commons; Delacroix: Musée des Beaux-Arts de Lyon',
+        lisenssi: 'Public domain',
+      },
+      {
+        nimi: 'Ajattelijoiden kipsibystit — Sokrates (KAS635) ja Marcus Aurelius (KAS979), 3D-skannaukset',
+        tekija: 'SMK – Statens Museum for Kunst; skannaus Scan the World / SMK',
+        lisenssi: 'Public Domain Mark 1.0',
+      },
+      {
+        nimi: 'Kipsin pintakuvio grey_plaster_02 (ajattelijoiden bystit)',
+        tekija: 'Rob Tuytel, Poly Haven',
+        lisenssi: 'CC0',
+      },
+      {
         nimi: 'Wikimedia Commons — pelin valokuvien pääasiallinen lähde',
         tekija: 'Kuvaajat kuvakohtaisesti: tekijä, lähde ja lisenssi näkyvät, kun '
           + 'kuvan avaa isoksi. Jos Commons ei tunne tekijää (vanhat public domain '
@@ -321,6 +343,16 @@ export const LAHTEET = [
     otsikko: 'Äänet',
     johdanto: 'Kaupunkien äänimaisemat, kielinäytteet, radio ja tehosteet.',
     rivit: [
+      {
+        nimi: 'Ajattelijat-linssi: Also sprach Zarathustra (feat. Richard Strauss) — Sokrates',
+        tekija: 'Sascha Ende, filmmusic.io',
+        lisenssi: 'CC BY 4.0',
+      },
+      {
+        nimi: 'Ajattelijat-linssi: Beethoven, Sinfonia nro 3 "Eroica", II Marcia funebre — Marcus Aurelius',
+        tekija: 'Czech National Symphony Orchestra / Musopen 2012, Wikimedia Commons',
+        lisenssi: 'CC0',
+      },
       {
         nimi: 'radio aporee ::: maps — kenttä-äänitykset kaupungeista '
           + '(äänimaisemat ja "Kuuntele kieltä")',
@@ -459,6 +491,13 @@ export const LAHTEET = [
         lisenssi: 'MIT',
         huom: 'Tarkistettu 5.9.2026 (npm globe.gl 2.46.2, LICENSE). Ämpärissä '
           + 'vendor/globe.gl-2.46.2.min.js.',
+      },
+      {
+        nimi: 'three.js r185 ja GLTFLoader — Ajattelijat-linssin 3D-näkymä',
+        tekija: 'three.js authors, github.com/mrdoob/three.js',
+        lisenssi: 'MIT',
+        huom: 'npm three 0.185.0, koottu tools/vie-three-vendor.mjs:llä. Ämpärissä '
+          + 'vendor/three-gltf-r185.min.js ja vendor/three-LICENSE.txt.',
       },
     ],
   },

@@ -42,7 +42,7 @@ button.tk-pulunappi:focus:not(:disabled) {
   flex-direction: column;
   box-sizing: border-box;
   width: min(320px, calc(100vw - 2 * var(--tk-vali-m)));
-  max-height: min(62vh, 500px);
+  max-height: min(62vh, 500px, var(--tk-pulu-tila, 100vh));   /* isäntä rajaa tilan (esim. lapun ja ✕:n väli) */
   overflow-y: auto;
   padding: var(--tk-vali-m);
   border: 1px solid var(--tk-reunus);
