@@ -19,6 +19,8 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
   natiivi + web (iss-realismi-kerrokset.js r. 143) — HYVÄKSYTTY JA TEHTY: natiivi linssiseppa/kiilto-ilmakeha 797aac22
   (käännös 5c292cbe) merge-pyynnössä Natiivisepällä; web PR #3844 (Pelikoodari hyväksyi, CI vihreä). Kuvaparit
   lokit/linssiseppa-kiilto-ilmakeha-20261002/{natiivi,web}-vanha-uusi.png; web-harness scratchpad kiilto-web.mjs.
+- SAVUKE 1128 (1) KORJATTU: Linssit-nappi valitsimen Avaajiin (92a70085, juna 128 5e78c8a0); oikea sim-tap PASS f512ba86.
+  OPPI: todenna napit OIKEALLA sim-tapilla (attach), ei vain ui napauta (synteettinen ohittaa wasPressedThisFrame-polun).
 - LINSSIT-KARTTANAPPI (omistaja 18.3x, web #3859): linssiseppa/linssit-karttanappi 3b05a9d4 merge-pyynnössä junaan 128 (V2:n kanssa);
   simulaattori 2eaab97a PASS, kuvapari lokit/linssiseppa-linssitnappi-20261002.
 - KIPSIPÄÄT KARTTAOBJEKTEINA (omistaja 16.4x/16.5x, web #3866): linssiseppa/erikoisnostot-3 2b1bffa1 (karttapiste, kipsi webin arvoin,
