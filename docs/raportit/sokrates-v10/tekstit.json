@@ -1,0 +1,249 @@
+{
+ "huom": "Taustarivit ovat PAIKKAMERKKEJÄ (hyväksytyt 38a/21d/49b ja kaksi hyväksyttyä suomenkielistä lausetta), kunnes Sisältökirjurin 18 kreikkalaista katkelmaa ja OFL-fontit tulevat; päivitän tämän tiedoston silloin.",
+ "paalauseet": {
+  "38a": {
+   "fi": "Tutkimaton elämä ei ole elämisen arvoinen ihmiselle.",
+   "el": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ",
+   "viite": "Platon, Puolustuspuhe 38a",
+   "paikka": "otsa",
+   "korkeus_m": 0.025625000000000002
+  },
+  "21d": {
+   "fi": "Mitä en tiedä, en luulekaan tietäväni.",
+   "el": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι",
+   "viite": "Platon, Puolustuspuhe 21d",
+   "paikka": "poski",
+   "korkeus_m": 0.02125
+  },
+  "49b": {
+   "fi": "Vääryyttä ei siis saa tehdä koskaan.",
+   "el": "οὐδαμῶς ἄρα δεῖ ἀδικεῖν",
+   "viite": "Platon, Kriton 49b",
+   "paikka": "kasvojen sivu",
+   "korkeus_m": 0.02375
+  }
+ },
+ "taustarivit": [
+  {
+   "nro": 1,
+   "kieli": "el",
+   "fontti_blender": "baskerville",
+   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+  },
+  {
+   "nro": 2,
+   "kieli": "el",
+   "fontti_blender": "times",
+   "teksti": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+  },
+  {
+   "nro": 3,
+   "kieli": "el",
+   "fontti_blender": "baskerville",
+   "teksti": "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+  },
+  {
+   "nro": 4,
+   "kieli": "el",
+   "fontti_blender": "times",
+   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+  },
+  {
+   "nro": 5,
+   "kieli": "fi",
+   "fontti_blender": "iowan-ohut",
+   "teksti": "Mitä en tiedä, en luulekaan tietäväni."
+  },
+  {
+   "nro": 6,
+   "kieli": "el",
+   "fontti_blender": "baskerville",
+   "teksti": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+  },
+  {
+   "nro": 7,
+   "kieli": "el",
+   "fontti_blender": "times",
+   "teksti": "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+  },
+  {
+   "nro": 8,
+   "kieli": "fi",
+   "fontti_blender": "iowan-ohut",
+   "teksti": "Vääryyttä ei siis saa tehdä koskaan."
+  },
+  {
+   "nro": 9,
+   "kieli": "el",
+   "fontti_blender": "baskerville",
+   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+  },
+  {
+   "nro": 10,
+   "kieli": "el",
+   "fontti_blender": "times",
+   "teksti": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+  },
+  {
+   "nro": 11,
+   "kieli": "el",
+   "fontti_blender": "iowan-ohut",
+   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+  },
+  {
+   "nro": 12,
+   "kieli": "el",
+   "fontti_blender": "baskerville",
+   "teksti": "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+  },
+  {
+   "nro": 13,
+   "kieli": "el",
+   "fontti_blender": "times",
+   "teksti": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+  },
+  {
+   "nro": 14,
+   "kieli": "el",
+   "fontti_blender": "baskerville",
+   "teksti": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+  },
+  {
+   "nro": 15,
+   "kieli": "el",
+   "fontti_blender": "times",
+   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+  },
+  {
+   "nro": 16,
+   "kieli": "el",
+   "fontti_blender": "baskerville",
+   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+  },
+  {
+   "nro": 17,
+   "kieli": "el",
+   "fontti_blender": "times",
+   "teksti": "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+  },
+  {
+   "nro": 18,
+   "kieli": "el",
+   "fontti_blender": "iowan-ohut",
+   "teksti": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+  },
+  {
+   "nro": 19,
+   "kieli": "el",
+   "fontti_blender": "baskerville",
+   "teksti": "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+  },
+  {
+   "nro": 20,
+   "kieli": "el",
+   "fontti_blender": "times",
+   "teksti": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+  }
+ ],
+ "rivikork_m": [
+  0.009,
+  0.012,
+  0.015,
+  0.019
+ ],
+ "kirkkaus": {
+  "kreikka": [
+   0.1,
+   0.28
+  ],
+  "suomi": [
+   0.08,
+   0.13
+  ],
+  "huom": "osuus päälauseen projektorin voimasta; suomenkieliset aina kahdessa pienimmässä koossa"
+ },
+ "nopeudet": "20 eri tahtia: 0,0007 × 1,18^k (k = 0…19, sekoitettuna) uv-yksikköä/ruutu (30 r/s); joka toinen rivi vastakkaiseen suuntaan; kulma ±7°",
+ "projektorit": [
+  {
+   "kohde": [
+    0.0,
+    -0.1,
+    0.33
+   ],
+   "suunta": [
+    0.0,
+    -1.0,
+    0.1
+   ],
+   "ala_m": 0.3,
+   "riveja": 6,
+   "alue": "kasvot ja parta"
+  },
+  {
+   "kohde": [
+    0.0,
+    -0.03,
+    0.47
+   ],
+   "suunta": [
+    0.0,
+    -0.55,
+    1.0
+   ],
+   "ala_m": 0.26,
+   "riveja": 5,
+   "alue": "otsa ja päälaen etuosa"
+  },
+  {
+   "kohde": [
+    0.0,
+    0.05,
+    0.47
+   ],
+   "suunta": [
+    0.0,
+    0.6,
+    1.0
+   ],
+   "ala_m": 0.24,
+   "riveja": 3,
+   "alue": "päälaen takaosa"
+  },
+  {
+   "kohde": [
+    -0.09,
+    -0.04,
+    0.38
+   ],
+   "suunta": [
+    -1.0,
+    -0.35,
+    0.15
+   ],
+   "ala_m": 0.22,
+   "riveja": 3,
+   "alue": "vasen ohimo ja poski"
+  },
+  {
+   "kohde": [
+    0.09,
+    -0.04,
+    0.38
+   ],
+   "suunta": [
+    1.0,
+    -0.35,
+    0.15
+   ],
+   "ala_m": 0.22,
+   "riveja": 3,
+   "alue": "oikea ohimo ja poski"
+  }
+ ],
+ "koordinaatit": "Blender, bysti normalisoitu 0,51 m:n korkeuteen, kasvot −y-suuntaan, z ylös (sokrates_bysti.py tuo())",
+ "syke": {
+  "tiedosto": "syke-satie.json",
+  "muoto": "{ruutu: kerroin}, 30 r/s, videon aikajanalla (Satie alkaa 18,0 s); kerroin 1 ± 0,15; nousu 80 ms, lasku 600 ms; vain kaikukuvalle"
+ },
+ "lahde": "tools/linssit/blender/sokrates_bysti.py (paan_virta, tausta_rivi, PAAN_PROJEKTORIT, syke_kaikuun); sokrates_gobo.py; sokrates_syke.py"
+}
