@@ -11365,7 +11365,9 @@ export class UI {
     const p = game.player;
     const pisteet = p.xp ?? 0;
     const taso = tietajataso(pisteet);
-    const { loydetyt } = this.aarreLuettelo();
+    const { kaikki, loydetyt } = this.aarreLuettelo();
+    // Kehittäjätilassa kaikki aarteet (omistaja 2.10.2026 klo 21.42), sama luku kuin Aarteet-ikkunan Aarnin luettelossa.
+    const aarteita = this.kehittajaTila ? kaikki.length : loydetyt.length;
     const tavaroita = (p.finds ?? []).filter((type) => type !== 'star' && onAarre(type)).length;
     const nimea = (id, teksti) => {
       const nimi = document.getElementById(id)?.querySelector('.tk-paneeli-rivi__nimi');
@@ -11387,7 +11389,7 @@ export class UI {
     }
     const riviAvatar = document.querySelector('#pilleri-matka-btn .valikko-tasorivi-avatar');
     if (riviAvatar) riviAvatar.src = tietajaAvatar(taso);
-    nimea('pilleri-aarteet-btn', `Aarteet (${loydetyt.length + tavaroita})`);
+    nimea('pilleri-aarteet-btn', `Aarteet (${aarteita + tavaroita})`);
     nimea('pilleri-julisteet-btn', `Julisteet (${this.julisteVoitot().length})`);
 
     // Tasorivin etenemispalkki (nykyisen tason alusta seuraavan rajaan; ylimmällä tasolla ei palkkia).
