@@ -201,33 +201,43 @@ Shader "Matkakirja/Linssit/Yokuori"
                 half led = 0.0h;
                 if (piste > 0.0h && l > 0.002h)
                 {
-                    float solu = clamp(texM / 3.0, 400.0, 4000.0);
-                    float2 g = float2(lon * clat, lat) * (6371000.0 / solu);
-                    float2 f0 = frac(g) - 0.5;
-                    uint2 u = (uint2)(int2)floor(g);
+                    // Solun koko ruudun pikseleistä (~36 px), 2:n potenssin tasoina 125 m:stä ylöspäin ja kahden tason liukuva
+                    // sekoitus, jotta pisteet ovat aina 4–8 px:n päässä toisistaan eivätkä ui zoomatessa (laite 2.10.: texel/3-solut
+                    // antoivat alle pikselin välit = hieno rae).
+                    float pxM = max(length(fwidth(p)), 0.5);
+                    float tasoF = log2(max(pxM * 36.0 / 125.0, 1.0));
+                    float taso0 = floor(tasoF), sek = tasoF - taso0;
                     float pr = saturate((float)l * 1.8);
-                    const float Vali = 0.11, Ydin = 0.022;             // pisteväli ja ytimen säde solun mitoissa
+                    const float Vali = 0.11, Ydin = 0.035;             // pisteväli ja ytimen säde solun mitoissa
                     float kuvio = 0.0, ledKuvio = 0.0;
-                    [unroll] for (int katu = 0; katu < 2; katu++)
+                    [unroll] for (int taso = 0; taso < 2; taso++)
                     {
-                        uint hh = u.x * 1664525u + u.y * 1013904223u + 374761393u + (uint)katu * 2654435761u;
-                        hh ^= hh >> 16; hh *= 2246822519u; hh ^= hh >> 13; hh *= 3266489917u; hh ^= hh >> 16;
-                        float h1 = (hh & 1023u) / 1023.0, h2 = ((hh >> 10) & 1023u) / 1023.0;
-                        // Kadun kulma (toinen katu ~90° ± 20° ensimmäisestä) ja siirto keskeltä ±0,25.
-                        float kulma = 3.14159 * h1 + katu * (1.5708 + 0.35 * (h2 - 0.5));
-                        float c = cos(kulma), sn = sin(kulma);
-                        float2 q = float2(c * f0.x + sn * f0.y, -sn * f0.x + c * f0.y - 0.5 * (h2 - 0.5));
-                        if (abs(q.x) > 0.44) continue;
-                        float kk = floor(q.x / Vali + 0.5);
-                        uint ph = hh ^ ((uint)(int)(kk + 64.0) * 2246822519u);
-                        ph ^= ph >> 15; ph *= 2654435761u; ph ^= ph >> 13;
-                        float ps1 = (ph & 1023u) / 1023.0, ps2 = ((ph >> 10) & 1023u) / 1023.0, ps3 = ((ph >> 20) & 1023u) / 1023.0;
-                        if (ps1 >= pr) continue;                         // tiheys kirkkauden mukaan
-                        float2 d = float2(q.x - (kk + 0.3 * (ps2 - 0.5)) * Vali, q.y);
-                        float r2 = dot(d, d) / (Ydin * Ydin);
-                        float v = exp(-r2) + 0.12 * exp(-r2 / 9.0);      // terävä ydin + pieni hehku
-                        kuvio += v;
-                        ledKuvio += v * step(0.7, ps3);
+                        float paino = taso == 0 ? 1.0 - sek : sek;
+                        float solu = 125.0 * exp2(taso0 + taso);
+                        float2 g = float2(lon * clat, lat) * (6371000.0 / solu);
+                        float2 f0 = frac(g) - 0.5;
+                        uint2 u = (uint2)(int2)floor(g);
+                        [unroll] for (int katu = 0; katu < 2; katu++)
+                        {
+                            uint hh = u.x * 1664525u + u.y * 1013904223u + 374761393u + (uint)katu * 2654435761u + (uint)(taso0 + taso) * 40503u;
+                            hh ^= hh >> 16; hh *= 2246822519u; hh ^= hh >> 13; hh *= 3266489917u; hh ^= hh >> 16;
+                            float h1 = (hh & 1023u) / 1023.0, h2 = ((hh >> 10) & 1023u) / 1023.0;
+                            // Kadun kulma (toinen katu ~90° ± 20° ensimmäisestä) ja siirto keskeltä ±0,25.
+                            float kulma = 3.14159 * h1 + katu * (1.5708 + 0.35 * (h2 - 0.5));
+                            float c = cos(kulma), sn = sin(kulma);
+                            float2 q = float2(c * f0.x + sn * f0.y, -sn * f0.x + c * f0.y - 0.5 * (h2 - 0.5));
+                            if (abs(q.x) > 0.44) continue;
+                            float kk = floor(q.x / Vali + 0.5);
+                            uint ph = hh ^ ((uint)(int)(kk + 64.0) * 2246822519u);
+                            ph ^= ph >> 15; ph *= 2654435761u; ph ^= ph >> 13;
+                            float ps1 = (ph & 1023u) / 1023.0, ps2 = ((ph >> 10) & 1023u) / 1023.0, ps3 = ((ph >> 20) & 1023u) / 1023.0;
+                            if (ps1 >= pr) continue;                         // tiheys kirkkauden mukaan
+                            float2 d = float2(q.x - (kk + 0.3 * (ps2 - 0.5)) * Vali, q.y);
+                            float r2 = dot(d, d) / (Ydin * Ydin);
+                            float v = (exp(-r2) + 0.12 * exp(-r2 / 9.0)) * paino;   // terävä ydin + pieni hehku
+                            kuvio += v;
+                            ledKuvio += v * step(0.7, ps3);
+                        }
                     }
                     // Keskiarvo säilyy: odotettu valo solua kohti = 2 katua · (0,88 / väli) pistettä · pr · π·ydin²·(1 + 0,12·9).
                     float odotus = 2.0 * (0.88 / Vali) * pr * 3.14159 * Ydin * Ydin * 2.08;
