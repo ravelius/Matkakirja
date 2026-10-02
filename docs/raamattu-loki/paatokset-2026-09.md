@@ -10071,3 +10071,7 @@ Omistaja 2.10.2026 klo 15.5x, kun Päätoimittaja kertoi Linssisepän arvion (ki
 ## TARKENNUS: KIPSIPÄÄT PAKKO OLLA TF 125:SSÄ (2.10.2026) (2.10.2026 klo 15.59)
 
 Omistaja 2.10.2026 klo 15.5x sanatarkasti: 'kipsit pitää ehtiä seuraavaan buildiin'. Täsmentää klo 15.57 päätöstä: linssiseppa/erikoisnostot (ea412b26) on pakko saada TF 125:een. Se ei ole enää 'jos ehtii'. Julkaisija pitää 125:n odottamassa, kunnes haara on junassa, ja kääntää sen tarvittaessa uudelleen. Myöhästyminen on parempi kuin build ilman kipsejä. Natiiviseppä mergeää heti merge-pyynnön tultua LS2:n Ajattelijat-haaran päälle.
+
+## OMISTAJA: PULUN CHATIN 'PUHU PULULLE (KOE)' -NAPPI → 'LIVE' (2.10.2026) (2.10.2026 klo 16.13)
+
+Omistaja 2.10.2026 klo 16.0x Puhu-alarivin kuvan (natiivi 48d46ea7) jälkeen, sanatarkasti: 'vaihda puhu pululle (koe) tekstiksi pelkkä "live"'. Päätös: Pulun chatin alarivin puhenapin teksti on 'Live' (iso alkukirjain kuten pelin muissa napeissa), webissä ja natiivissa. Pelikoodari tekee webin samassa erässä rahan ja valikon 15.1x-lisäysten kanssa, Natiivi-UI natiivin haarassa natiivi-ui/pulu-puhu. Samalla Päätoimittaja palautti yläpalkkikuvan (tikkaus ei vastaa alareunan tikkausreunaa, saaren leikkausreuna puuttuu, pilleri koskettaa näytön kulmaa ja on 5 pt saaren keskilinjan alapuolella, £-glyfi epäselvä, sävy sinapinkeltainen) Natiivi-UI:lle korjattavaksi ennen uutta kuvaa.
