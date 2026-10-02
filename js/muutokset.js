@@ -13,6 +13,13 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2557, teksti: 'AUTO kevyeksi suorakulmioksi, Puhu Pululle alar… (#3849)' },
+  { v: 2556, teksti: 'EI OVAALEJA: pillerit kulma-tokeneiksi (#3856)' },
+  { v: 2555, teksti: 'Ajattelijat: taustavirta 20 riviä + OFL-kreikka… (#3857)' },
+  { v: 2554, teksti: 'NOSTOKORTTI: puuttuva kuva poistaa kuvapaikan (#3847)' },
+  { v: 2553, teksti: 'Ajattelijoiden päät kartalla: ERIKOISNOSTOT kar… (#3843)' },
+  { v: 2552, teksti: 'ISS-kyyti: kiillon ilmakehän läpäisy (#3844)' },
+  { v: 2551, teksti: 'Liiku-liuska Pulun yläpuolelle (#3845)' },
   { v: 2550, teksti: 'Ajattelijat: Sokrateen PULU, yleinen moottori j… (#3840)' },
   { v: 2549, teksti: 'Ajattelijat-linssi linssilistaan vain kehittäjä… (#3839)' },
   { v: 2548, teksti: 'Ajattelijat-linssi, vaiheet 2–4: Sokrateen kier… (#3833)' },

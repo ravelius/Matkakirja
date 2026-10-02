@@ -1143,6 +1143,7 @@ const MODULES = [
   'js/linssit/ajattelija-marcus.js',
   'js/linssit/ajattelija-projektori.js',
   'js/linssit/ajattelija.js',
+  'js/ajattelijapaat.js',
   'js/main.js',
 ];
 
@@ -1202,6 +1203,7 @@ const STYLES = [
   'css/pohjat/auto.css',
   'css/pohjat/kuvanakyma.css',
   'css/pohjat/pulu.css',
+  'css/pohjat/erikoisnostot.css',
   'css/pohjat/esikatselu.css',
   'css/pohjat/pinnat/dialogit.css',
   'css/pohjat/pinnat/pillerivalikko.css',

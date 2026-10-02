@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { ajattelijaLipusta, kenttaMm, AJATTELIJA_KIRJASTO, AJATTELIJAT } from '../js/linssit/ajattelija.js';
 import { SOKRATES } from '../js/linssit/ajattelija-sokrates.js';
-import { NAUHA_EM, PROJEKTOREITA_ENINTAAN } from '../js/linssit/ajattelija-projektori.js';
+import { NAUHA_EM, PROJEKTOREITA_ENINTAAN, piirraAtlas } from '../js/linssit/ajattelija-projektori.js';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 
@@ -141,4 +141,48 @@ test('tekijätiedot: CC BY -kuva ja -musiikki nimettyinä, three.js ja bystit (j
   assert.match(l, /tekija: 'Sascha Ende, filmmusic\.io',\n\s*lisenssi: 'CC BY 4\.0',/);
   assert.match(l, /three\.js r185 ja GLTFLoader/);
   assert.match(l, /KAS635\) ja Marcus Aurelius \(KAS979\)/);
+});
+
+test('atlas: toistorivi piirretään koko atlaksen leveydelle (kaikki laatat), tavallinen rivi omalle leveydelleen', () => {
+  const rajat = [];
+  const ctx = {
+    measureText: (t) => ({ width: t.length * 10 }), fillRect() {}, save() {}, restore() {}, beginPath() {}, clip() {},
+    fillText() {}, rect: (x, y, w) => rajat.push(w),
+  };
+  const doc = { createElement: () => ({ getContext: () => ctx }) };
+  const { paikat } = piirraAtlas([
+    { teksti: 'ΓΝΩΘΙ ΣΑΥΤΟΝ', fontti: 'serif', korkeus: 64, toisto: true },
+    { teksti: 'Sokrates', fontti: 'serif', korkeus: 64 },
+  ], doc);
+  assert.ok(paikat[0].toistoja > 1);
+  assert.equal(rajat[0], 4096);
+  assert.equal(rajat[1], paikat[1].lev);
+});
+
+test('atlas: liian pitkä toistorivi pienennetään mahtumaan yhteen laattaan', () => {
+  const ctx = {
+    font: '', measureText(t) { return { width: t.length * Number(/(\d+)px/.exec(this.font)[1]) * 0.5 }; },
+    fillRect() {}, save() {}, restore() {}, beginPath() {}, clip() {}, fillText() {}, rect() {},
+  };
+  const doc = { createElement: () => ({ getContext: () => ctx }) };
+  const { paikat } = piirraAtlas([{ teksti: 'α'.repeat(240), fontti: 'serif', korkeus: 96, toisto: true }], doc);
+  assert.equal(paikat[0].toistoja, 1);
+  assert.ok(240 * paikat[0].em * 0.5 + 3 * paikat[0].em <= 4096 + 1);
+});
+
+test('Sokrateen taustavirta: 20 riviä Sisältökirjurilta, kreikan OFL-fontit ämpäristä', () => {
+  const rivit = SOKRATES.taustavirta.rivit;
+  assert.equal(rivit.length, 20);
+  assert.equal(rivit.filter(([k]) => k === 'fi').length, 2);
+  for (const [, f] of rivit) assert.ok(SOKRATES.fontit[f], f);
+  for (const n of ['gentium-plus', 'gfs-didot', 'gfs-solomos']) assert.match(SOKRATES.fontit[n].tiedosto, /^ajattelijat\/fontit\/v1\//);
+  assert.match(lue('../js/linssit/ajattelija.js'), /await lataaAjattelijaFontit\(a, tv\.rivit\.map/);
+});
+
+test('Marcus: elämä-lappu ja Pulun viisi kysymystä (Sisältökirjuri 2.10.)', async () => {
+  const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
+  assert.equal(MARCUS.elama.otsikko, 'Marcus Aureliuksen elämä');
+  assert.equal(MARCUS.elama.kappaleet.length, 7);
+  assert.equal(MARCUS.pulunKysymykset.length, 5);
+  assert.match(lue('../js/linssit/ajattelija.js'), /const kytkinAani = new Audio\(`\$\{R2\}\$\{AJATTELIJA_KYTKIN\}`\);/);
 });

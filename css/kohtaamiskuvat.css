@@ -81,7 +81,7 @@ a { color: inherit; }
   z-index: 3;
   padding: .4rem .75rem;
   border: 1px solid var(--reuna);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   color: var(--muste-himmea);
   background: var(--paperi-tumma);
   font: 700 .68rem/1.2 system-ui, sans-serif;
@@ -108,7 +108,7 @@ a { color: inherit; }
   width: max-content;
   padding: .55rem .8rem;
   border: 1px solid var(--reuna);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   text-decoration: none;
   font: 700 .75rem/1 system-ui, sans-serif;
   letter-spacing: .08em;
@@ -254,7 +254,7 @@ select:focus-visible,
   right: .85rem;
   padding: .48rem .65rem;
   border: 1px solid rgba(255, 255, 255, .35);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-pieni);
   color: white;
   background: rgba(36, 28, 21, .78);
   box-shadow: 0 4px 15px rgba(0, 0, 0, .25);

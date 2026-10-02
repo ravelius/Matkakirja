@@ -101,7 +101,7 @@ button.tk-pulunappi:focus:not(:disabled) {
   min-width: 0;
   padding: var(--tk-vali-s) var(--tk-vali-m);
   border: 1px solid var(--tk-reunus);
-  border-radius: var(--tk-kulma-pilleri);
+  border-radius: var(--tk-kentta-kulma);
   background: transparent;
   color: var(--tk-muste);
   font: inherit;
