@@ -59,4 +59,20 @@ test('Marcuksen kierrokset 2–3 samalla rakenteella (marcus-tekstit.json kierro
   assert.deepEqual(kr.lista.map((k) => k.kaiku.kuva.split('/').pop()), ['kaiku-uhri.png', 'kaiku-kuolema.png']);
   assert.equal(kr.loppu, 3330);
   assert.deepEqual(kamerakayra(kr.kamera)(3330).paikka, MARCUS.otokset.rembrandt.paikka);
+test('taustavirran rivit kulkevat lähes samaa nopeutta pinnalla: 25 mm/s ±15 % (omistaja 3.10.2026, Blender v11)', () => {
+  assert.deepEqual(SOKRATES.taustavirta.nopeus, { mms: 25, vaihtelu: 0.15 });
+  assert.match(MOOTTORI, /const nopeudet = tv\.rivit\.map\(\(_, k\) => 1 - vaihtelu \+ 2 \* vaihtelu \* k \/ Math\.max\(1, tv\.rivit\.length - 1\)\);/);
+  // uv/ruutu = m/s / 30 / rivin laatan leveys pinnalla (Blender v11: nop /= kork × kuvan leveys / korkeus).
+  assert.match(MOOTTORI, /const riviLev = kork \* paikat\[i\]\.lev \/ paikat\[i\]\.korkeus;/);
+  assert.match(MOOTTORI, /const nopeus = mms \/ 1000 \* nopeudet\[ri\] \/ RUUTUA_S \/ riviLev;/);
+  assert.doesNotMatch(MOOTTORI, /0\.0007 \* 1\.18 \*\* k/);
+});
+
+test('✕ piilossa kunnes napautetaan, häipyy taas astron AUTO-ajoituksella (omistaja 3.10.2026 klo 00.1x)', async () => {
+  const { AJATTELIJA_SULKU_PIILOON_MS } = await import('../js/linssit/ajattelija.js');
+  assert.equal(AJATTELIJA_SULKU_PIILOON_MS, 4000);   // = satelliitti.js AUTO_HILJAA_MS
+  assert.match(MOOTTORI, /pohja\.el\.classList\.add\('ajattelija-sulku-piilossa'\);/);
+  assert.match(MOOTTORI, /pohja\.el\.addEventListener\('pointerdown', \(\) => \{\s*pohja\.el\.classList\.remove\('ajattelija-sulku-piilossa'\);/);
+  const css = lue('../css/pohjat/pinnat/ajattelija.css');
+  assert.match(css, /\.ajattelija\.ajattelija-sulku-piilossa \.tk-kuvanakyma__sulku \{\s*opacity: 0;\s*pointer-events: none;\s*transition: opacity var\(--tk-kesto-sulku\) ease-in;/);
 });

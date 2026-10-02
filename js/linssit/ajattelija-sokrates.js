@@ -196,6 +196,9 @@ export const SOKRATES = Object.freeze({
     blend: 0.5,
     voimaKerroin: 3.0,
     siemen: 38,
+    // Tahti pinnalla (omistaja 3.10.2026 klo 00.0x; Blender v11 V11_VIRTA_MS): kaikki rivit lähes samaa nopeutta,
+    // 25 mm/s ±15 %. Suunta vaihtelee rivi riviltä kuten ennen.
+    nopeus: { mms: 25, vaihtelu: 0.15 },
     rivikork: [0.009, 0.012, 0.015, 0.019],
     kirkkaus: { el: [0.10, 0.28], fi: [0.08, 0.13] },
     kulma: 7,
