@@ -1726,6 +1726,12 @@ namespace Matkakirja.Natiivi
                         else if (a == "kuunvalo" && osat.Length > 3) Matkakirja.Natiivi.Yokuori.KuunvaloPois = osat[3] == "0";      // fotorealismi 4
                         else if (a == "ilmatila")
                             Kirjaa("astro " + Matkakirja.Natiivi.Avaruus.Tila(osat.Length > 4 && osat[3] == "debug" ? (float?)Luku(osat[4]) : null));
+                        else if (a == "seuranta" && osat.Length > 3)
+                        {
+                            // ISS:n rinnalla (seurantatila) vain kehittäjälle (omistaja 2.10.: pois pelistä); ei muisteta.
+                            Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = osat[3] == "1" || osat[3] == "paalle";
+                            Kirjaa($"astro kyyti seuranta {(Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa ? "käytössä (kehittäjä)" : "pois (oletus)")}");
+                        }
                         else if (a == "ilmakeha2" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.Ilmakeha2 = osat[3] != "0";   // A/B fotorealismi osa 1
                         else if (a == "kaarivoima" && osat.Length > 3) { Matkakirja.Natiivi.Avaruus.KuvanKaariVoima = (float)Luku(osat[3]); Kirjaa($"astro kaarivoima {Matkakirja.Natiivi.Avaruus.KuvanKaariVoima:0.00} (kuvaputki {Matkakirja.Natiivi.Avaruus.Kuvaputki})"); }
                         else if (a == "nousu" && osat.Length > 3) { Matkakirja.Natiivi.Avaruus.KuvanNousu = (float)Luku(osat[3]); Kirjaa($"astro nousu {Matkakirja.Natiivi.Avaruus.KuvanNousu:0.00}"); }

@@ -162,7 +162,8 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi] static void TilakoneKierto()
-        {
+        { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = true;   // kehittäjän seurantapolku (ISS:n rinnalla pois pelistä 2.10.)
+            try {
             var k = new IssKyyti();
             var kauko = new Kuvakulma(50, 10, 18_000_000, 0, 0);
             Oleta.Sama(false, k.Paivita(0, Iss, 50, out _, out _, out _), "kaukonäkymässä kamera on pelaajan");
@@ -197,14 +198,17 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0.0, a.Kallistus);
             Oleta.Sama(50.0, f, "kenttäkulma palasi");
             Oleta.Sama(false, k.Kyydissa);
+                    } finally { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = false; }
         }
 
         [Testi] static void VahennettyLiikeOnHeti()
-        {
+        { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = true;   // kehittäjän seurantapolku (ISS:n rinnalla pois pelistä 2.10.)
+            try {
             var k = new IssKyyti();
             k.Napauta(new Kuvakulma(50, 10, 18_000_000, 0, 0), Iss, 50, 0, true);
             k.Paivita(0, Iss, 50, out var a, out _, out _);
             Oleta.Sama(IssKuvakulma.SeurannanEtaisyysM, a.EtaisyysM);
+                    } finally { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = false; }
         }
 
         [Testi] static void KaukaaIssiinPidempiLento()
@@ -232,7 +236,8 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi] static void TilakoneKohteenYlleJaTakaisinSeurantaan()
-        {
+        { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = true;   // kehittäjän seurantapolku (ISS:n rinnalla pois pelistä 2.10.)
+            try {
             var k = new IssKyyti();
             k.Napauta(new Kuvakulma(50, 10, 18_000_000, 0, 0), Iss, 50, 0, true);
             k.Paivita(0, Iss, 50, out var a, out _, out _);
@@ -250,6 +255,7 @@ namespace Matkakirja.Linssit.Testit
             k.Paivita(3, Iss, 50, out var q, out f, out _);
             Oleta.Sama(IssKuvakulma.SeurannanEtaisyysM, q.EtaisyysM);
             Oleta.Sama(50.0, f, "kenttäkulma palasi");
+                    } finally { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = false; }
         }
 
         [Testi] static void CupolanValoAuringonJaVarjonMukaan()
@@ -317,7 +323,8 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi] static void LinssiKyytiinJaPois()
-        {
+        { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = true;   // kehittäjän seurantapolku (ISS:n rinnalla pois pelistä 2.10.)
+            try {
             var (l, y, n) = Avaa();
             Oleta.Sama(AvauksenVaihe.OtsikkoPois, l.Vaihe);
             l.NapautaIss();
@@ -339,6 +346,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(false, l.Kyydissa);
             Oleta.Sama(null, y.Kuvaus, "kuvaus loppui");
             Oleta.Sama(null, y.Kentta, "kenttäkulma palautettu");
+                    } finally { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = false; }
         }
 
         [Testi] static void SulkeminenKyydissaPalauttaaKameran()
@@ -366,7 +374,8 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi] static void SeurannastaIkkunaanKyydinOmastaAsennosta()
-        {
+        { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = true;   // kehittäjän seurantapolku (ISS:n rinnalla pois pelistä 2.10.)
+            try {
             // Web napauta: kyydissä siirtymä lähtee kyydin viimeisimmästä asennosta (pelikameran näkymästä puuttuu katsekorkeus).
             var (l, y, n) = Avaa();
             l.NapautaIss();
@@ -378,6 +387,7 @@ namespace Matkakirja.Linssit.Testit
             var eka = y.Kuvaus.Value;
             Oleta.Tosi(Math.Abs(eka.KatseKorkeusM - ennen.KatseKorkeusM) < 20_000 && IssKuvakulma.Kaari(eka.Lat, eka.Lon, ennen.Lat, ennen.Lon) < 1,
                 $"ei hyppyä: {ennen} → {eka}");
+                    } finally { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = false; }
         }
 
         // ---- Nopeutus ja "Lennä kohteen ylle" (web iss-kyyti-nakyma.js asetaNopeus ja lennaKohteeseen, commit 891958e17) ----
@@ -414,7 +424,8 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi] static void LennaKohteenYlleKelaaJaKaantaaKameran()
-        {
+        { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = true;   // kehittäjän seurantapolku (ISS:n rinnalla pois pelistä 2.10.)
+            try {
             try
             {
                 var (l, y, n) = AvaaValekellolla();
@@ -457,10 +468,12 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Sama(KyydinTila.Seuranta, l.Kyyti, "napautus kohteen yltä seurantaan");
             }
             finally { Palauta(); }
+                    } finally { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = false; }
         }
 
         [Testi] static void KeskeytettyYlilentoUnohtuu()
-        {
+        { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = true;   // kehittäjän seurantapolku (ISS:n rinnalla pois pelistä 2.10.)
+            try {
             try
             {
                 var (l, y, n) = AvaaValekellolla();
@@ -477,6 +490,7 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Sama(valeUtc.AddHours(1), IssNyt.Kello(), "testikellon LIVE");
             }
             finally { Palauta(); }
+                    } finally { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = false; }
         }
 
         [Testi] static void NopeutusPilleriinJaPoistuPalaaLiveksi()
@@ -516,7 +530,8 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi] static void CupolaYopuoleltaPaivanvaloonJaLiveTakaisin()
-        {
+        { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = true;   // kehittäjän seurantapolku (ISS:n rinnalla pois pelistä 2.10.)
+            try {
             // Arvioija 1.1 (75), Päätoimittaja 30.9.: Cupola LIVEnä yöpuolella → kelaus päivänvaloon (PÄIVÄ), LIVE palauttaa yön.
             try
             {
@@ -549,10 +564,12 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(!l.PaivanvaloSiirto && IssNyt.Simu.Live, "A/B 0: yö sellaisenaan");
             }
             finally { AstronauttiLinssi.CupolaPaivanvaloon = true; Palauta(); }
+                    } finally { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = false; }
         }
 
         [Testi] static void AvaruuskavelyKyydista()
-        {
+        { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = true;   // kehittäjän seurantapolku (ISS:n rinnalla pois pelistä 2.10.)
+            try {
             // Avaruuskävely (29.9.): kyydistä ilmalukkoon, ulos kaiteelle (Ulkona), köysi, kelaus seuraavaan auringonnousuun
             // (≤ 5 s), Pulu, kuva ja NASA-vertailu, takaisin seurantaan. Ylilento ei käynnisty kävelyn aikana.
             try
@@ -606,6 +623,7 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Sama(false, l.Kyydissa);
             }
             finally { Palauta(); }
+                    } finally { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = false; }
         }
     }
 }

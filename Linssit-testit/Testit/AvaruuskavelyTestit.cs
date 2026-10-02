@@ -27,7 +27,8 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi] static void KyytiUlosJaSisaan()
-        {
+        { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = true;   // kehittäjän seurantapolku (ISS:n rinnalla pois pelistä 2.10.)
+            try {
             var kyyti = new IssKyyti();
             var alku = IssKuvakulma.Kauko(50, 10, 8_000_000, 0, 0);
             kyyti.Ulos(alku, 45, 0, false);
@@ -49,6 +50,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(KyydinTila.Seuranta, kyyti.Tila, "sisään seurantaan");
             kyyti.Paivita(6 + IssKyyti.SisaanS, Iss, 45, out var sisalla, out _, out _);
             Oleta.Tosi(Math.Abs(sisalla.Kallistus - IssKuvakulma.SeurannanKallistus) < 1e-9, "seurannan asento");
+                    } finally { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = false; }
         }
 
         [Testi] static void TilakoneKulkeeVaiheetJarjestyksessa()
