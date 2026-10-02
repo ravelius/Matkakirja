@@ -7,14 +7,15 @@
  * käsine (irti / kiinni), visiiri ja valokerrokset valo-rakenne / -kaide / -käsine. Valokerrosten voimakkuus ISS:n
  * auringosta (reunavalo) ja metallin sävy tummuu varjossa (0,28): auringonnousu pyyhkäisee etualan. Vertailukortti: oma
  * kuva ja astronautin NASA-kuva kortin kuva-alueisiin, tekstit alle. Äänet: ilmalukon paine, luukku, karabiini, suljin
- * ja hengityssilmukka kypärässä. Pulun repliikit ovat pois (omistaja 29.9.: "Ota pulun ääni toistaiseksi kokonaan pois
+ * ja hengityssilmukka kypärässä (Web Audio). Pulun repliikit ovat pois (omistaja 29.9.: "Ota pulun ääni toistaiseksi kokonaan pois
  * ISS-kohtauksesta"; natiivi PuluPuhuu = false), joten niitä ei soiteta.
  *
  * Kaikki päästää kosketukset läpi (pointer-events: none): napautus menee kyydin kosketuskerroksen kautta kävelylle.
  */
 import { VAIHE, jarjestys, TAKAISIN_S } from './iss-kavely.js';
 import { tehosteVoima } from '../aani-ehdokkaat.js';
-import { sfx } from '../sound.js';
+import { sfx, AANIVALINTA_TAPAHTUMA } from '../sound.js';
+import { musiikkiKonteksti } from '../musiikkivahvistin.js';
 
 /** Versioitu ämpärikansio (v1): uusi kuva saa uuden kansion. Vientikansio _valmiit/avaruuskavely/v1. */
 export const KAVELY_JUURI = 'https://media.matkakirja.app/linssit/avaruuskavely/v1/';
@@ -206,29 +207,85 @@ export function luoKavelyNakyma({ doc, ikkuna = globalThis, isa, reduced = false
     nasaTeksti.style.fontSize = `${fs}px`;
     return k;
   };
-  ikkuna.addEventListener?.('resize', () => { if (vaihe !== VAIHE.ei) mitoita(); });
+  /* Nimetty kuuntelija, jotta pura() voi poistaa sen (ikkuna elää kyytiä pidempään). */
+  const uudelleenMitoita = () => { if (vaihe !== VAIHE.ei) mitoita(); };
+  ikkuna.addEventListener?.('resize', uudelleenMitoita);
 
-  /* ---- äänet (HTMLAudio; tehosteiden liuku, äänet pois = hiljaa) ---- */
-  const aanet = new Map();
+  /*
+   * ---- äänet (Web Audio, kuten js/linssit/cupola-aani.js) ----
+   * Pelin oma konteksti (musiikkiKonteksti, EI omaa AudioContextia) ja tehostekanava sfx.bus: kytkin sfx.enabled,
+   * taso gainissa (iOS Safari ei noudata HTMLAudion volume-arvoa), taustalle mennessä konteksti nukkuu
+   * (sfx.taustaTauko) ja silmukka pysähtyy sen mukana. Puskurit haetaan kerran: fetch → decodeAudioData.
+   */
+  const puskurit = new Map();
+  const soivat = new Set();
   let hengitys = null;
+  let hengitysHaluttu = false;
+  let purettu = false;
   const taso = () => (sfx?.enabled === false ? 0 : Math.max(0, Math.min(1, tehosteVoima())));
-  const tehoste = (nimi) => {
-    if (!ikkuna.Audio || !(taso() > 0)) return;
-    let a = aanet.get(nimi);
-    if (!a) { a = new ikkuna.Audio(`${aaniJuuri}${nimi}.mp3`); a.preload = 'auto'; aanet.set(nimi, a); }
-    try { a.currentTime = 0; a.volume = taso(); a.play()?.catch?.(() => {}); } catch { /* ei ääntä */ }
-  };
-  const asetaHengitys = (paalla) => {
-    if (!ikkuna.Audio) return;
-    if (paalla && !hengitys) {
-      hengitys = new ikkuna.Audio(`${aaniJuuri}hengitys-silmukka.wav`);
-      hengitys.loop = true;
+  const kohde = (ctx) => (ctx === sfx?.ctx && sfx.bus ? sfx.bus : ctx.destination);
+  const haePuskuri = (ctx, tiedosto) => {
+    let p = puskurit.get(tiedosto);
+    if (!p) {
+      p = (async () => {
+        const vastaus = await fetch(`${aaniJuuri}${tiedosto}`, { mode: 'cors' });
+        if (!vastaus.ok) throw new Error('http');
+        return ctx.decodeAudioData(await vastaus.arrayBuffer());
+      })().catch(() => { puskurit.delete(tiedosto); return null; });
+      puskurit.set(tiedosto, p);
     }
-    if (!hengitys) return;
-    hengitys.volume = HENGITYS_VOIMA * taso();
-    if (paalla && hengitys.paused && taso() > 0) { hengitys.currentTime = 0; hengitys.play()?.catch?.(() => {}); }
-    else if (!paalla && !hengitys.paused) hengitys.pause();
+    return p;
   };
+  /** Puskuri → AudioBufferSourceNode → GainNode → sfx.bus; palauttaa { lahde, gain } tai null. */
+  const soita = async (tiedosto, voima, silmukka) => {
+    const ctx = musiikkiKonteksti();
+    if (!ctx || sfx?.taustaTauko || typeof ctx.createBufferSource !== 'function') return null;
+    const puskuri = await haePuskuri(ctx, tiedosto);
+    if (!puskuri || purettu) return null;
+    try {
+      const lahde = ctx.createBufferSource();
+      lahde.buffer = puskuri;
+      lahde.loop = silmukka;
+      const gain = ctx.createGain();
+      gain.gain.value = voima;
+      lahde.connect(gain).connect(kohde(ctx));
+      const soi = { lahde, gain };
+      soivat.add(soi);
+      lahde.onended = () => { soivat.delete(soi); try { gain.disconnect(); } catch { /* jo irti */ } };
+      lahde.start();
+      return soi;
+    } catch { return null; /* konteksti kaatui: kävely toimii ilman ääntä */ }
+  };
+  const lopetaSoiva = (soi) => {
+    if (!soi) return;
+    soivat.delete(soi);
+    try { soi.lahde.stop(); } catch { /* jo pysäytetty */ }
+    try { soi.lahde.disconnect(); } catch { /* jo irti */ }
+    try { soi.gain.disconnect(); } catch { /* jo irti */ }
+  };
+  const tehoste = (nimi) => {
+    if (!(taso() > 0)) return;
+    soita(`${nimi}.mp3`, taso(), false);
+  };
+  /** Hengitys päälle tai pois; taso päivitetään joka kutsulla (tehosteliuku, äänikytkin). */
+  const asetaHengitys = async (paalla) => {
+    hengitysHaluttu = paalla;
+    if (!paalla || !(taso() > 0)) {
+      if (hengitys) { lopetaSoiva(hengitys); hengitys = null; }
+      return;
+    }
+    if (hengitys) {
+      try { hengitys.gain.gain.value = HENGITYS_VOIMA * taso(); } catch { /* konteksti kiinni */ }
+      return;
+    }
+    const soi = await soita('hengitys-silmukka.wav', HENGITYS_VOIMA * taso(), true);
+    if (!soi) return;
+    /* Lataus kesti: vaihe on voinut vaihtua tai kytkin sammua; kaksi hengitystä ei saa jäädä soimaan. */
+    if (!hengitysHaluttu || hengitys || purettu) lopetaSoiva(soi);
+    else hengitys = soi;
+  };
+  const aanivalinta = () => { asetaHengitys(hengitysHaluttu); };
+  doc.addEventListener?.(AANIVALINTA_TAPAHTUMA, aanivalinta);
 
   return {
     el,
@@ -311,8 +368,12 @@ export function luoKavelyNakyma({ doc, ikkuna = globalThis, isa, reduced = false
     },
     tila: () => ({ vaihe, variantti, kerroksia: kerrokset.size, ohje: ohje.hidden ? null : ohje.textContent, kortti: !korttiJuuri.hidden }),
     pura() {
-      asetaHengitys(false);
-      for (const a of aanet.values()) { try { a.pause(); } catch { /* ei ääntä */ } }
+      purettu = true;
+      hengitysHaluttu = false;
+      ikkuna.removeEventListener?.('resize', uudelleenMitoita);
+      doc.removeEventListener?.(AANIVALINTA_TAPAHTUMA, aanivalinta);
+      hengitys = null;
+      for (const soi of [...soivat]) lopetaSoiva(soi);
       el.remove();
     },
   };

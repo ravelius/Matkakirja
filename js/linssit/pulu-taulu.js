@@ -66,6 +66,7 @@
 import { pysaytaLivianAani } from '../liviapuhe.js';
 import { polloKuplatPois, polloPaneelivahtiNyt } from '../pollo.js';
 import { pulunIssVahennaLiiketta } from './pulu-iss.js';
+import { KAVELY_TAPAHTUMA } from './iss-kavely.js';
 
 /** Hengähdys tervetulon lopusta (tai paljastuksesta) taulun avaukseen. */
 export const TAULUN_HENGAHDYS_MS = 600;
@@ -557,7 +558,7 @@ export function luoAstroTaulu({
   let purettu = false;
   // Avaruuskävely alkoi (js/linssit/iss-kyyti-nakyma.js): taulu pois kävelyn tieltä (natiivi AvaruuskavelyNakyma.Alkoi).
   const kavelyAlkoi = (e) => { if (e?.detail?.vaihe === 'ilmalukko') sulje({ syy: 'kavely' }); };
-  try { doc?.addEventListener?.('matkakirja:iss-kavely', kavelyAlkoi); } catch { /* ei dokumenttia */ }
+  try { doc?.addEventListener?.(KAVELY_TAPAHTUMA, kavelyAlkoi); } catch { /* ei dokumenttia */ }
   let auki = false;
   let avauksia = 0;
   let automaattiTila = automaatti ? 'odottaa' : 'pois';
@@ -796,7 +797,7 @@ export function luoAstroTaulu({
         doc?.removeEventListener?.('click', pulunNapautus, { capture: true });
         doc?.removeEventListener?.('pointerdown', ulkoNapautus, { capture: true });
         doc?.removeEventListener?.('keydown', nappain, { capture: true });
-        doc?.removeEventListener?.('matkakirja:iss-kavely', kavelyAlkoi);
+        doc?.removeEventListener?.(KAVELY_TAPAHTUMA, kavelyAlkoi);
       } catch { /* ei dokumenttia */ }
       try { n?.pura?.(); } catch { /* jo poissa */ }
     },

@@ -10,7 +10,7 @@ import {
   luoKavely, VAIHE, jarjestys, repliikki, ilmanTageja, REPLIIKIT, OHJEET,
   PULU_S, TAKAISIN_S, ULOS_VAIHE_S, JALKEEN_S, NOUSU_VARA_S, ENNEN_S, NOUSU_KERROIN, KELAUS_ENINTAAN_S,
   valoisuus, aurinkoisuus, reunaValo, seuraavaNousu, kelausHetki, kelauksenHuippu, seuraavaPaivanvalo, PAIVA_RAJA,
-  maanAurinko, lahinKohde, paikkaTeksti,
+  maanAurinko, lahinKohde, paikkaTeksti, KAVELY_TAPAHTUMA,
 } from '../js/linssit/iss-kavely.js';
 import { luoIssNyt } from '../js/linssit/iss-rata.js';
 import {
@@ -161,7 +161,7 @@ test('kyyti: Ulkona-tila (katse 30° alas, kenttä 70°, ulos 4 s, sisään 2 s 
 
 /* ---------- näkymä (js/linssit/iss-kavely-nakyma.js): puhtaat osat ---------- */
 import {
-  animaatio, kansi, kavelyVariantti, vaiheenTehoste, hengittaa, metallinSavy, RAJAUKSET, VARIANTIT, ULKO, LUKKO,
+  luoKavelyNakyma, animaatio, kansi, kavelyVariantti, vaiheenTehoste, hengittaa, metallinSavy, RAJAUKSET, VARIANTIT, ULKO, LUKKO,
   LUUKKU_S, ETUALA_ALKU, ETUALA_S, VARJOSSA,
 } from '../js/linssit/iss-kavely-nakyma.js';
 
@@ -199,4 +199,28 @@ test('näkymä: äänet vaiheittain (natiivi KavelyAanet)', () => {
   assert.equal(hengittaa(VAIHE.ulos), true);
   assert.equal(hengittaa(VAIHE.vertailu), true);
   assert.equal(hengittaa(VAIHE.takaisin), false);
+});
+
+test('näkymä: pura() poistaa resize- ja äänikytkinkuuntelijat; tapahtuman nimi on viivamuotoinen', () => {
+  assert.equal(KAVELY_TAPAHTUMA, 'matkakirja-iss-kavely');
+  const luo = () => {
+    const e = { style: {}, dataset: {}, children: [], hidden: false, append() {}, replaceChildren() {}, remove() {}, setAttribute() {}, toggleAttribute() {} };
+    return e;
+  };
+  const kuuntelijat = (kohde) => {
+    const k = new Set();
+    kohde.addEventListener = (n, f) => k.add(`${n}`);
+    kohde.removeEventListener = (n) => k.delete(`${n}`);
+    return k;
+  };
+  const doc = { createElement: luo };
+  const ikkuna = { innerWidth: 393, innerHeight: 852 };
+  const dk = kuuntelijat(doc);
+  const ik = kuuntelijat(ikkuna);
+  const nakyma = luoKavelyNakyma({ doc, ikkuna });
+  assert.ok(ik.has('resize'));
+  assert.ok(dk.has('matkakirja-aanivalinta'));
+  nakyma.pura();
+  assert.equal(ik.size, 0, 'resize poistettu');
+  assert.equal(dk.size, 0, 'äänikytkin poistettu');
 });

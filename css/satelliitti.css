@@ -1500,11 +1500,11 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
   100% { transform: translate(0px, 0px); }
 }
 
-/* Läpinäkyvä kosketuskerros: napautus vaihtaa tilaa, eleet nielaistaan. */
 /*
  * AVARUUSKÄVELY (Päätoimittaja 2.10.2026, natiivi AvaruuskavelyNakyma malli; js/linssit/iss-kavely-nakyma.js):
- * Codexin kerrokset kankaana (cover, JS mitoittaa), kerrokset prosentein. Ohje, kortti ja tekstit natiivin arvoin
- * (ohje 17 px, kulmat 14) linssin avaruuslasin tokeneilla (pohjavahti; natiivin musta 50 % / valkoinen lähin pohja).
+ * Codexin kerrokset kankaana (cover, JS mitoittaa), kerrokset prosentein. Ohje, kortti ja tekstit lähimmillä
+ * pohjatokeneilla (ohje 17 px → leipäkoko, kulmat 14 → korttikulma) ja linssin avaruuslasin tokeneilla
+ * (pohjavahti; natiivin musta 50 % / valkoinen lähin pohja).
  * Kortin taustapeitettä (natiivi musta 45 %) ei ole pohjissa, joten kortti on ilman sitä. Kävelyn ajan säätöpaneeli ja
  * tietorivi piiloon. Kaikki päästää kosketukset läpi kosketuskerrokselle.
  */
@@ -1535,11 +1535,11 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
   left: 6%;
   right: 6%;
   bottom: 5%;
-  padding: 8px 12px;
-  border-radius: 14px;
+  padding: var(--tk-vali-s) var(--tk-vali-m);
+  border-radius: var(--tk-kulma-kortti);
   background: var(--tk-lasi-avaruus-pinta);
   color: var(--tk-lasi-avaruus-muste);
-  font-size: 17px;
+  font-size: var(--tk-koko-leipa);
   text-align: center;
 }
 .iss-kavely-korttijuuri {
@@ -1563,6 +1563,7 @@ body.satelliitti-kyyti .satelliitti-piste { visibility: hidden; }
 }
 .iss-kyyti-kavely .iss-kyyti-paneeli { display: none; }
 
+/* Läpinäkyvä kosketuskerros: napautus vaihtaa tilaa, eleet nielaistaan. */
 .iss-kyyti-kosketus {
   position: absolute;
   inset: 0;

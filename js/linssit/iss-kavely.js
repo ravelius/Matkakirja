@@ -58,7 +58,7 @@ export const REPLIIKIT = Object.freeze({
 });
 
 /** Dokumentin tapahtuma kävelyn alkaessa ja päättyessä (detail.vaihe): Pulun taulu sulkeutuu (natiivi Alkoi). */
-export const KAVELY_TAPAHTUMA = 'matkakirja:iss-kavely';
+export const KAVELY_TAPAHTUMA = 'matkakirja-iss-kavely';
 
 /** Lyhyt ohjeteksti vaiheen napautukselle (null = ei napautettavaa). */
 export const OHJEET = Object.freeze({
