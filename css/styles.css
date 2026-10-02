@@ -526,7 +526,7 @@ button, .brand, .turn-pill, .fact-card h2 {
  * napautettavalta.
  */
 .turn-pill {
-  --pilleri-vali: 0.45rem;   /* sama väli pisteen molemmin puolin (flex-väli ja pisteen marginaali) */
+  --pilleri-vali: 0.45rem;   /* päivän ja rahan väli ("1 pv £400") */
   flex: 0 1 auto;
   display: flex;
   align-items: center;
@@ -653,13 +653,7 @@ button, .brand, .turn-pill, .fact-card h2 {
   .turn-pill { margin-right: var(--tk-vali-s); }
 }
 
-/* "1 pv · £400" (omistaja 2.10.2026 klo 15.1x): päivä ensin, piste kassan edessä. */
-.turn-pill .clock + .kassa::before {
-  content: '·';
-  margin-right: var(--pilleri-vali);
-  color: var(--muted);
-  font-weight: 400;
-}
+/* "1 pv £400" (omistaja 2.10.2026 klo 18.1x): päivä ja raha ilman väli-pistettä; väli on pillerin flex-väli. */
 
 /* Ajan eteneminen välähtää kevyesti kullalla, jotta pelaaja huomaa
  * vilkaista päivämäärää. Yksi rauhallinen hengähdys, ei vilkutusta. */

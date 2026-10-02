@@ -11154,7 +11154,7 @@ export class UI {
     this.turnPill.hidden = piilossa;
     if (piilossa) return;
     this.turnPill.textContent = '';
-    // Pilleri on pelkkä teksti "1 pv · £400" ilman laukkukuvaketta (omistaja 2.10.2026 klo 17.0x): se kapenee
+    // Pilleri on pelkkä teksti "1 pv £400" ilman laukkukuvaketta (omistaja 2.10.2026 klo 17.0x): se kapenee
     // tekstin mittaiseksi. (Ennen: isoisän mattolaukun kuvake pillerin edessä, omistaja 15.9.2026.)
     if (game.phase === 'over') {
       this.turnPill.appendChild(html('span', '', game.winner ? `${game.winner.name} voitti` : 'Matka päättyi'));
@@ -11176,7 +11176,7 @@ export class UI {
     }
     const jaljella = game.rahattomuuttaJaljella?.(game.player);
     kassa.classList.toggle('rahaton', jaljella !== null && jaljella !== undefined);
-    // Pilleri on vain päivä ja raha, "1 pv · £400" (omistaja 2.10.2026 klo 15.1x ja 15.50); kellonaika ja
+    // Pilleri on vain päivä ja raha, "1 pv £400" (omistaja 2.10.2026 klo 15.1x, 15.50 ja 18.1x); kellonaika ja
     // päiväkulu ovat valikon päivärivillä (renderValikkoTaso).
     const paiva = html('span', 'clock', `${game.dayCount()}\u00a0pv`);
     paiva.title = game.clockLabel();
