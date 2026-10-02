@@ -2,6 +2,7 @@
 import {LIVIA_PIX_ELEET,livianPikseliAsento} from './livia-pikselit.js';
 import {livianSvgPaa} from './livia-svg-paa.js';
 import {LIVIAN_ASTRONAUTTI_KYPARA} from './livia-astronautti.js';
+import {LIVIAN_EVA_KERROKSET,LIVIAN_EVA_ROBOTTI_KERROKSET,LIVIAN_EVA_SIIRTO,livianEvaPuku,livianEvaEtukerros,livianEvaTether,livianEvaValo,livianEvaVarjoDef,livianEvaRobotinVarsi,livianEvaRobotinPidikkeet,livianEvaRobotinTurvakoysi,livianEvaRobotinReunavalo} from './livia-eva.js';
 export const LIVIA_SVG_ELEET=Object.freeze([...LIVIA_PIX_ELEET,
  Object.freeze({id:'glideIn',label:'Kiireinen ensiliito kartalta',duration:2700,group:'Liike'}),
  Object.freeze({id:'trailerFlee',label:'Väistö trailerin tieltä',duration:1200,group:'Liike'}),
@@ -265,7 +266,8 @@ function lvBird(s,m,prefix){
  const headX=m.katseluRata?lvRound(-8*m.lean+(m.headX||0)):-8*m.lean;
  const headY=m.katseluRata?lvRound(8*m.lean+down+m.headY):8*m.lean+down+m.headY;
  const headAngle=m.katseluRata?lvRound(m.headAngle):m.headAngle;
- const head=`<g data-part="approach"${peck} transform="translate(${headX} ${headY}) rotate(${headAngle} 105 146) translate(105 146) scale(${lvRound(m.headScale)}) translate(-105 -146)"><g transform="translate(44 61) scale(1 .87)">${livianSvgPaa(headState,{prefix,lean:m.lean,strength:m.strength})}${kypara}</g></g>`;
+ const evaVisiirinVarjo=s.astronautti?'<ellipse cx="56" cy="56" rx="38" ry="42" fill="#112636" fill-opacity=".43"/>':'';
+ const head=`<g data-part="approach"${peck} transform="translate(${headX} ${headY}) rotate(${headAngle} 105 146) translate(105 146) scale(${lvRound(m.headScale)}) translate(-105 -146)"><g transform="translate(44 61) scale(1 .87)">${livianSvgPaa(headState,{prefix,lean:m.lean,strength:m.strength})}${evaVisiirinVarjo}${kypara}</g></g>`;
  const dashPart=s.flight?.kind==='chatDashOut'||s.flight?.kind==='chatDashBack'?` data-part-chat-dash="${s.flight.kind}"`:'';
  const hoverPart=m.mapHover?` data-map-hover="${lvRound(m.mapHover.height)}"`:'';
  const wing=side=>{
@@ -283,8 +285,12 @@ function lvBird(s,m,prefix){
   const vaihto=lvClamp(maara/.14);
   return `<g data-part="katselu-siipi-${side}"><g opacity="${lvRound(1-vaihto)}">${perus}</g><g opacity="${lvRound(vaihto)}">${uusi}</g></g>`;
  };
- return `<g data-part="whole-bird"${dashPart}${hoverPart} transform="${lvBirdTransform(m)}">
- ${lvFeet(m,s)}${wing('far')}${body}${head}${wing('near')}
+ // EVA-asu (omistaja 30.9.2026 klo 23.5x, korjattu moottorissa): hahmo varjossa tummempana (livianEvaVarjo), valot sen päällä.
+ const olemus=s.astronautti
+  ? `${livianEvaVarjoDef(prefix)}<g data-part="eva-varjohahmo" filter="url(#${prefix}-eva-varjo)">${livianEvaPuku()}${head}${livianEvaEtukerros()}</g>${s.evaValot===false?'':livianEvaValo('kasvovalo',prefix+'-face')+livianEvaValo('kypärälamput',prefix+'-lamps')+livianEvaValo('maavalo',prefix+'-earth')}`
+  : `${lvFeet(m,s)}${wing('far')}${body}${head}${wing('near')}`;
+ return `<g data-part="whole-bird"${dashPart}${hoverPart} transform="${s.astronautti?LIVIAN_EVA_SIIRTO+' ':''}${lvBirdTransform(m)}">
+ ${olemus}
  </g>`;
 }
 function lvChatDashFx(s,m){
@@ -350,15 +356,38 @@ function lvProps(s,m,prefix){
 }
 export function livianSvgKuva(s,{right=0,prefix='livia'}={}) {
  right=Math.max(0,Number.isFinite(right)?right:0);prefix=prefix.replace(/[^a-zA-Z0-9_-]/g,'');
- const m=livianSvgMalli(s,{right}),width=152+right;
+ const robotissa=Boolean(s.astronautti&&s.evaRobottikasi);
+ // Robotin pidikkeissä oleva hahmo ei saa periä kartan lennon/kävelyn paikkaa.
+ // Pään ilme ja puhe saavat silti vaihtua jalkojen pysyessä tuessa.
+ const asento=robotissa?{...s,ele:'rest',p:0,flight:null,walk:null,mapHover:null,katseluRata:null,x:0,y:0,tilt:0,owlX:null,line:null,side:null}:s;
+ const m=livianSvgMalli(asento,{right}),width=152+right;
  // The contact shadow belongs to the ground, not to the leaning or flying body.
  const groundY=m.mapHover?.groundY??m.y,contact=m.visible&&!s.flight&&!s.line&&groundY<=304?lvClamp((groundY-290)/12):0;
  const hoverHeight=m.mapHover?.height||0,shadowOpacity=contact*(1-.65*hoverHeight),shadowRx=19*(1-.45*hoverHeight);
- const shadow=contact?`<defs><radialGradient id="${prefix}ground"><stop stop-color="#635b4e" stop-opacity=".58"/><stop offset=".55" stop-color="#635b4e" stop-opacity=".32"/><stop offset="1" stop-color="#635b4e" stop-opacity="0"/></radialGradient></defs><ellipse data-part="ground-shadow" cx="${lvRound(m.x)}" cy="301" rx="${lvRound(shadowRx)}" ry="2.8" fill="url(#${prefix}ground)" opacity="${lvRound(shadowOpacity)}"/>`:'';
- let markup=(m.visible?shadow+lvBird(s,m,prefix)+lvProps(s,m,prefix):'')+lvChatDashFx(s,m)+lvChatDustFx(s);
- if(s.owlX!==null&&s.owlX!==undefined){const ox=128+(right+80)*s.owlX/24;markup+=`<g transform="translate(${ox-14} 267)" fill="#73654f"><path d="M0 3L4-3L11 2L20-3L23 3V23Q12 35 0 23Z"/><circle cx="7" cy="10" r="5" fill="#e8ddc4"/><circle cx="17" cy="10" r="5" fill="#e8ddc4"/><circle cx="7" cy="10" r="2"/><circle cx="17" cy="10" r="2"/><path d="M9 15h6l-3 5Z" fill="#e8ddc4"/></g>`;}
- if(s.line)markup+=`<path d="M94 303H${Math.min(width,152)}" stroke="#988d79" stroke-width="1.3" stroke-linecap="round"/>`;
- return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} 304" width="${width}" height="304" overflow="${s.flight?.kind==='opening'?'visible':'hidden'}" aria-hidden="true" data-livia-visible="${m.visible}">${markup}</svg>`;
+ const shadow=contact&&!s.astronautti?`<defs><radialGradient id="${prefix}ground"><stop stop-color="#635b4e" stop-opacity=".58"/><stop offset=".55" stop-color="#635b4e" stop-opacity=".32"/><stop offset="1" stop-color="#635b4e" stop-opacity="0"/></radialGradient></defs><ellipse data-part="ground-shadow" cx="${lvRound(m.x)}" cy="301" rx="${lvRound(shadowRx)}" ry="2.8" fill="url(#${prefix}ground)" opacity="${lvRound(shadowOpacity)}"/>`:'';
+ const pulu=m.visible?lvBird(asento,m,prefix)+lvProps(asento,m,prefix):'';
+ let markup=(m.visible?(robotissa
+  ? `<g data-part="eva-robotti-sommittelu" transform="translate(0 -75)">${livianEvaRobotinVarsi(prefix+'-varsi')}${s.evaValot===false?'':livianEvaRobotinReunavalo(prefix+'-varrenvalo')}<g data-part="eva-keinunta">${pulu}${s.evaTether===false?'':livianEvaRobotinTurvakoysi()}</g>${livianEvaRobotinPidikkeet()}</g>`
+  : (s.astronautti&&s.evaTether!==false?`<g transform="${LIVIAN_EVA_SIIRTO}">${livianEvaTether()}</g>`:'')+shadow+pulu):'')+lvChatDashFx(asento,m)+lvChatDustFx(asento,m);
+ if(asento.owlX!==null&&asento.owlX!==undefined){const ox=128+(right+80)*asento.owlX/24;markup+=`<g transform="translate(${ox-14} 267)" fill="#73654f"><path d="M0 3L4-3L11 2L20-3L23 3V23Q12 35 0 23Z"/><circle cx="7" cy="10" r="5" fill="#e8ddc4"/><circle cx="17" cy="10" r="5" fill="#e8ddc4"/><circle cx="7" cy="10" r="2"/><circle cx="17" cy="10" r="2"/><path d="M9 15h6l-3 5Z" fill="#e8ddc4"/></g>`;}
+ if(asento.line)markup+=`<path d="M94 303H${Math.min(width,152)}" stroke="#988d79" stroke-width="1.3" stroke-linecap="round"/>`;
+ return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} 304" width="${width}" height="304" overflow="${asento.flight?.kind==='opening'?'visible':'hidden'}" aria-hidden="true" data-livia-visible="${m.visible}" data-eva-robotissa="${robotissa}">${markup}</svg>`;
+}
+/** Täsmälleen sama näkymä natiivin päällekkäisille 2× PNG-kerroksille. */
+export function livianEvaKerrosSvg(kerros,s,{prefix='livia-eva'}={}) {
+ if(!LIVIAN_EVA_KERROKSET.includes(kerros))throw new RangeError(`Tuntematon EVA-kerros: ${kerros}`);
+ if(kerros==='perus')return livianSvgKuva({...s,astronautti:true,evaValot:false,evaTether:false},{prefix});
+ const m=livianSvgMalli(s),sisalto=kerros==='turvaköysi'?`<g transform="${LIVIAN_EVA_SIIRTO}">${livianEvaTether()}</g>`:`<g transform="${LIVIAN_EVA_SIIRTO} ${lvBirdTransform(m)}">${livianEvaValo(kerros,prefix)}</g>`;
+ return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 304" width="152" height="304" overflow="hidden" aria-hidden="true">${sisalto}</svg>`;
+}
+/** Robotin lisäkerrokset: varsi jatkuu saman ylänurkan alla 800 yksikköön. */
+export function livianEvaRobottiKerrosSvg(kerros,{prefix='livia-eva-robotti'}={}) {
+ if(!LIVIAN_EVA_ROBOTTI_KERROKSET.includes(kerros))throw new RangeError(`Tuntematon robotin kerros: ${kerros}`);
+ const pitka=kerros==='varsi'||kerros==='reunavalo',korkeus=pitka?800:304;
+ const sisalto=kerros==='varsi'?livianEvaRobotinVarsi(prefix)
+  :kerros==='reunavalo'?livianEvaRobotinReunavalo(prefix)
+  :kerros==='turvaköysi'?livianEvaRobotinTurvakoysi():livianEvaRobotinPidikkeet();
+ return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 152 ${korkeus}" width="152" height="${korkeus}" overflow="hidden" aria-hidden="true">${sisalto}</svg>`;
 }
 let lvSerial=0;
 /*

@@ -143,6 +143,7 @@
 import { html, polloNimilappu } from '../ui-apurit.js';
 import { polloUlkoinenKysymys } from '../pollo.js';
 import { asennaLivianAstronauttitila } from '../livia-astronautti.js';
+import { kaynnistaPulunEvaValo } from './pulu-eva-valo.js';
 import {
   hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream,
   kaynnistaPohjaMusiikki, pidaMusiikkiKiinni,
@@ -1944,6 +1945,9 @@ function avaa(lauta, tila, ui) {
 
   // Pulu pysyy mukana astronauttina; tila purkautuu linssin mukana.
   const pulu = vaihe('pulu', () => asennaLivianAstronauttitila()) ?? { pura: () => {} };
+  // Avaruuskävelyasun valot ISS:n valon mukaan (js/linssit/pulu-eva-valo.js); ?eva=yo|paiva kuvapariin.
+  const evaTesti = new URLSearchParams(globalThis.location?.search ?? '').get('eva');
+  const evaValo = vaihe('pulu-eva-valo', () => kaynnistaPulunEvaValo({ testi: evaTesti })) ?? { pura: () => {} };
 
   // Muut äänet vaikenevat linssin ajaksi (ks. vaiennaAanet).
   const aanet = vaihe('aanet', () => vaiennaAanet(ui)) ?? { pura: () => {} };
@@ -2258,6 +2262,7 @@ function avaa(lauta, tila, ui) {
       // tähdet ja zoomirajat. Merkkien häivytys jatkuu tämän päälle.
       avaruus?.pura?.();
       // Pulu takaisin ruudulle ja jonoon jääneet puheenvuorot ulos.
+      evaValo.pura();
       pulu.pura();
       // Linssin oma humina ja musiikki pois ennen muiden palautusta.
       linssiAani?.pura?.();

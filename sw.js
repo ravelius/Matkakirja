@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2538';
+const CACHE = 'matkakirja-2026-09-21.2539';
 const SHELL = [
   './',
   './index.html',
@@ -157,6 +157,7 @@ const SHELL = [
   './js/livia-pikselit.js',
   './js/livia-svg-paa.js',
   './js/livia-astronautti.js',
+  './js/livia-eva.js',
   './js/livia-svg.js',
   './js/livia-uudet-versiot.js',
   './assets/livia/livia-astronauttikypara-2x.png',
@@ -419,6 +420,7 @@ const SHELL = [
   // Pulun tervetulo ja ISS-repliikit (28.9.2026).
   './js/linssit/pulu-tervetulo.js',
   './js/linssit/pulu-iss.js',
+  './js/linssit/pulu-eva-valo.js',
   './js/linssit/pulu-taulu.js',
   './js/linssit/iss-rata.js',
   './js/linssit/iss-kyyti.js',
