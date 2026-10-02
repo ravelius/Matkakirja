@@ -143,6 +143,18 @@ export function puePilleriPaneeliksi(haeUi) {
   // Pohjan kiinteä asemointi lukee sen avattaessa ja ruudun muuttuessa.
   const asemoi = () => {
     if (pv.hidden) return;
+    /*
+     * VAAKATILASSA EI YLÄPALKKIA (omistaja 2.10.2026 klo 23.07): kun kartan hampurilainen näkyy (css/styles.css:n
+     * media-kysely), paneeli avautuu suoraan napin päälle — yläreuna napin yläreunaan (pohja lisää --tk-vali-s:n) ja
+     * oikea reuna napin oikeaan reunaan.
+     */
+    const nappi = document.querySelector('.ylapalkki-nappi');
+    const nappiRect = nappi?.getBoundingClientRect();
+    if (nappiRect?.width) {
+      pv.style.setProperty('--tk-paneeli-yla', `calc(${Math.round(nappiRect.top)}px - var(--tk-vali-s))`);
+      pv.style.setProperty('--tk-paneeli-oikea', `${Math.round(window.innerWidth - nappiRect.right)}px`);
+      return;
+    }
     const palkki = document.querySelector('.topbar') ?? pv.parentElement ?? pv;
     pv.style.setProperty('--tk-paneeli-yla', `${Math.round(palkki.getBoundingClientRect().bottom)}px`);
     pv.style.setProperty('--tk-paneeli-oikea', '0px');
