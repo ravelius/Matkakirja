@@ -496,7 +496,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     // Lappu ja PULU ovat valinnaisia (sisältö Sisältökirjurilta ajattelija kerrallaan).
     lappu = a.elama && luoPohjaNostokortti({ yla: a.nimi, otsikko: a.elama.otsikko, kappaleet: a.elama.kappaleet }, {
       teema: 'tumma',
-      sulje: () => { if (pulu) { pulu.kulma.style.bottom = ''; pulu.kulma.style.removeProperty('--tk-pulu-tila'); } },
+      sulje: () => { if (pulu) { pulu.kulma.style.bottom = ''; pulu.kulma.style.right = ''; pulu.kulma.style.removeProperty('--tk-pulu-tila'); } },
     });
     if (lappu) {
       pohja.el.appendChild(lappu.el);
@@ -512,10 +512,22 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
         // Kortti mahtuu lapun ja ✕:n väliin: ✕ (44 pt + 12 + turva-alue) jää aina näkyviin.
         lapunVahti = new ResizeObserver(() => {
           if (!lappu?.auki) return;
-          const korkeus = lappu.el.getBoundingClientRect().height;
-          pulu.kulma.style.bottom = `${Math.round(korkeus + 12)}px`;
-          const ylaRaja = pohja.sulku.getBoundingClientRect().bottom + 12;
-          const tila = pohja.el.clientHeight - korkeus - 12 - pulu.nappi.getBoundingClientRect().height - 8 - ylaRaja;
+          const kortti = lappu.el.getBoundingClientRect();
+          const isa = pohja.el.getBoundingClientRect();
+          const ylaRaja = pohja.sulku.getBoundingClientRect().bottom + 12 - isa.top;
+          // SIVUKORTTI (leveä ruutu, iPad): kortti ulottuu yläreunaan, joten Pulu sen yläpuolella osuisi ✕:n päälle
+          // (Linssiseppä 2:n pariteettiajo 2.10.2026). Pulu siirtyy kortin vasemmalle puolelle alareunaan.
+          const sivukortti = kortti.left - isa.left > isa.width * 0.25;
+          let tila;
+          if (sivukortti) {
+            pulu.kulma.style.bottom = '';
+            pulu.kulma.style.right = `${Math.round(isa.right - kortti.left + 12)}px`;
+            tila = isa.height - 12 - pulu.nappi.getBoundingClientRect().height - 8 - ylaRaja;
+          } else {
+            pulu.kulma.style.right = '';
+            pulu.kulma.style.bottom = `${Math.round(isa.bottom - kortti.top + 8)}px`;
+            tila = kortti.top - isa.top - 8 - pulu.nappi.getBoundingClientRect().height - 8 - ylaRaja;
+          }
           pulu.kulma.style.setProperty('--tk-pulu-tila', `${Math.max(120, Math.round(tila))}px`);
         });
         lapunVahti.observe(lappu.el);
