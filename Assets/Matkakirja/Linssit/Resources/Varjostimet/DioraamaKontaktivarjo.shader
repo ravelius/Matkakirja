@@ -8,7 +8,7 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
 {
     Properties
     {
-        _VarjoVari("Varjon väri, alfa = peitto keskellä", Color) = (0.02, 0.015, 0.01, 0.6)
+        _VarjoVari("Lattian kerroin keskellä (RGB; alfaa ei käytetä)", Color) = (0.63, 0.6, 0.58, 1)
         _VarjoVeto("Siirto kameraa kohti (m)", Float) = 0.4
         [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("Syvyystesti (testikomento: Always)", Float) = 4
     }
@@ -60,7 +60,8 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
             {
                 float r = length(i.uv);
                 // Tasainen ydin jalkojen alla (r < 0,35) ja pehmeä smoothstep-lasku reunalle (kartan maakontaktin renkaat).
-                float a = _VarjoVari.a * (1.0 - smoothstep(0.35, 1.0, r));
+                // Vahvuus RGB:stä, ei alfasta (savuke 21.38: alfa 1 näkyi, 0,6–0,9 ei lainkaan, myös ilman syvyystestiä).
+                float a = 1.0 - smoothstep(0.35, 1.0, r);
                 return half4((half3)lerp(float3(1.0, 1.0, 1.0), _VarjoVari.rgb, a), 1.0h);
             }
             ENDHLSL

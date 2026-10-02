@@ -240,7 +240,7 @@ namespace Matkakirja.Natiivi
         /// seisoja) juuren alle tulee pehmeä levy, joka liikkuu ja kääntyy hahmon mukana. Periaate kuten kartan symbolimallien
         /// maakontaktissa (Symbolimallit.Rakentaja PohjaVerkko): peitto keskellä, pehmeä lasku reunalle.</summary>
         const float VarjoSade = 0.55f, VarjoNosto = 0.012f;
-        static readonly Color VarjoVari = new Color(0.02f, 0.015f, 0.01f, 0.6f);
+        static readonly Color VarjoVari = new Color(0.63f, 0.6f, 0.58f, 1f);
         static Mesh varjoVerkko;
         static Material varjoMateriaali;
 
@@ -690,7 +690,7 @@ namespace Matkakirja.Natiivi
                     case "varjokoe": v = new Color(1f, 0f, 0f, 1f); varjoMateriaali.SetFloat("_ZTest", (float)UnityEngine.Rendering.CompareFunction.Always); break;
                     case "varjo": v = VarjoVari; varjoMateriaali.SetFloat("_ZTest", (float)UnityEngine.Rendering.CompareFunction.LessEqual); varjoMateriaali.SetFloat("_VarjoVeto", 0.4f); break;
                     case "veto": varjoMateriaali.SetFloat("_VarjoVeto", luku); break;
-                    case "peitto": v.a = luku; break;
+                    case "peitto": v = new Color(1f - luku * (1f - VarjoVari.r), 1f - luku * (1f - VarjoVari.g), 1f - luku * (1f - VarjoVari.b), 1f); break;
                     case "ztest": varjoMateriaali.SetFloat("_ZTest", (float)(kv.Length > 1 && kv[1] == "always" ? UnityEngine.Rendering.CompareFunction.Always : UnityEngine.Rendering.CompareFunction.LessEqual)); break;
                     case "vari": v = kv.Length > 1 && kv[1] == "punainen" ? new Color(1f, 0f, 0f, v.a) : new Color(VarjoVari.r, VarjoVari.g, VarjoVari.b, v.a); break;
                     default: muutettu = false; break;
