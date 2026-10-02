@@ -82,10 +82,9 @@ namespace Matkakirja.Natiivi
                 if (Pakota.HasValue) return Pakota.Value;
                 if (Screen.width <= Screen.height) return false;
                 // iPad: palkki näkyy myös vaaka-asennossa (omistaja 30.9.2026 klo 12.28); vaakapiilo vain iPhonella.
-                if (!Puhelin) return false;
-                float skaala = Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 1f;
-                float w = Screen.width / skaala, h = Screen.height / skaala;
-                return h <= 520f || (Touchscreen.current != null && w <= 1366f);
+                // Vaaka-iPhone osuu aina webin rajaan (korkein vaaka-iPhone 440 pt ≤ 520 pt). Screen.dpi ei kelpaa (uusilla malleilla
+                // väärä skaala, vrt. PuhelimenSkaala), joten iPhone ei mittaa: TF 129:ssä palkki jäi vaakaan näkyviin.
+                return Puhelin;
             }
         }
 
@@ -438,6 +437,61 @@ namespace Matkakirja.Natiivi
             pilleri.Q(className: "mk-ikoni")?.RemoveFromHierarchy();
         }
 
+        /// <summary>
+        /// IPHONEN VAAKATILA (omistaja 2.10.2026 klo 22.3x, TF 129: "Iphone vaaka tilassa palkki väärin"; web ylapalkki-vaaka.js):
+        /// palkki on piilossa ja väkäsnappi tuo sen väliaikaisesti. Avattu palkki on pystyn nahkapalkki ilman saarta: nahka
+        /// toistuu luonnollisessa koossaan (@3x 1290 × 300 px = 430 × 100 pt, tikkaus 14 pt kuten pystyssä), keskivarjo pois
+        /// (saari on sivulla), logo ja pilleri pystyn mitoin (rivi = saaren korkeus 36,33 pt, nahkaa 14 pt ylä- ja alapuolella)
+        /// turva-alueen reunoissa (webin env(safe-area-inset-left/right)).
+        /// </summary>
+        void AsetaVaakaNahka(Vector4 r)
+        {
+            var paneeli = palkki.panel;
+            float u = paneeli != null && Screen.width > 0
+                ? (RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(100f * PuhelimenSkaala, 0f)).x
+                   - RuntimePanelUtils.ScreenToPanel(paneeli, Vector2.zero).x) / 100f
+                : 1f;
+            vaakaNahka = true;
+            palkki.style.backgroundRepeat = new BackgroundRepeat(Repeat.Repeat, Repeat.NoRepeat);
+            palkki.style.backgroundSize = new BackgroundSize(VaakaNahkaLeveys * u, VaakaNahkaKorkeus * u);
+            palkki.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Left);
+            var varjo = palkki.Q(className: "mk-ylapalkki__varjo");
+            if (varjo != null) varjo.style.display = DisplayStyle.None;
+            float rivi = SaariKorkeus * u, tikkaus = VaakaNahkaLeveys * NahkaTikkausOsuus * u;
+            palkki.style.paddingTop = r.y + VaakaNahkaVali * u;
+            palkki.style.paddingBottom = VaakaNahkaVali * u + tikkaus;
+            palkki.style.paddingLeft = r.x + 12f * u;
+            palkki.style.paddingRight = r.z + 8f * u;
+            palkki.style.height = r.y + 2f * VaakaNahkaVali * u + rivi + tikkaus;
+            foreach (var e in new VisualElement[] { pilleri, Valikko }) e.style.height = e.style.minHeight = rivi;
+            pilleri.style.borderTopLeftRadius = pilleri.style.borderTopRightRadius =
+                pilleri.style.borderBottomLeftRadius = pilleri.style.borderBottomRightRadius = Tyylikirja.Kulma.Nappi * u;
+            logo.style.height = rivi * 0.8f;
+            logo.style.width = rivi * 0.8f * logoSuhde;
+            logo.style.translate = StyleKeyword.Null;
+            pilleri.style.translate = StyleKeyword.Null;
+            // Pilleri pystyn kokoisena (12,48 pt, BUILD 123:n kiinteä leveys): SovitaPilleri lukee matalan luokan.
+            palkki.EnableInClassList("mk-ylapalkki--matala", true);
+            pilleriMax = 220f * u;
+            SovitaPilleri();
+        }
+
+        /// <summary>Pystyyn palatessa nahka taas palkin levyiseksi (scale-and-crop, USS) ja keskivarjo saaren kohdalle.</summary>
+        void PalautaPystyNahka()
+        {
+            if (!vaakaNahka) return;
+            vaakaNahka = false;
+            palkki.style.backgroundRepeat = StyleKeyword.Null;
+            palkki.style.backgroundSize = StyleKeyword.Null;
+            palkki.style.backgroundPositionX = StyleKeyword.Null;
+            var varjo = palkki.Q(className: "mk-ylapalkki__varjo");
+            if (varjo != null) varjo.style.display = StyleKeyword.Null;
+        }
+
+        bool vaakaNahka;
+        /// <summary>iPhonen nahkatiili luonnollisessa koossaan (@3x) ja nahkaa pillerin ylä- ja alapuolella (pt, kuten pystyssä).</summary>
+        const float VaakaNahkaLeveys = 430f, VaakaNahkaKorkeus = 100f, VaakaNahkaVali = 14f;
+
         /// <summary>Logon kuvasuhde (kultalogo 4:1, kohopainatus 326 × 95).</summary>
         float logoSuhde = 4f;
 
@@ -530,7 +584,12 @@ namespace Matkakirja.Natiivi
                 palkki.style.paddingLeft = r.x + t.y;
                 palkki.style.paddingRight = r.z + t.y;
                 palkki.style.height = r.y + Korkeus;
-                if (IpadNahka && palkki.ClassListContains("mk-ylapalkki--nahka-ipad"))
+                // Pystyn sivut (logo ja pilleri saaren ja kulmakaaren välissä) eivät koske vaakaa: vanhat arvot ylikirjoittivat
+                // täytteen pillerin leveyden muuttuessa (TF 129: logo 25 pt reunasta).
+                sivut = null;
+                sivutPilleriLeveys = float.NaN;
+                if (Puhelin && palkki.ClassListContains("mk-ylapalkki--nahka")) AsetaVaakaNahka(r);
+                else if (IpadNahka && palkki.ClassListContains("mk-ylapalkki--nahka-ipad"))
                 {
                     // Rivi tikkauksen yläpuolisen nahan keskelle; reunat 36 pt (Codex ipad-v1), turva-alue ja kulmakaari mukana.
                     palkki.style.paddingTop = r.y;
@@ -541,6 +600,7 @@ namespace Matkakirja.Natiivi
                     if (MacSyote.Kaytossa) { logo.style.height = MacLogoKorkeus; logo.style.width = MacLogoKorkeus * logoSuhde; }
                 }
             }
+            else PalautaPystyNahka();
             palkki.EnableInClassList("mk-ylapalkki--puhelin", Puhelin);
             // Löydös 68: väkäsnappi täsmälleen ☰:n paikalle ja kokoiseksi (turva-alueen sisällä, palkin täyte).
             vakasnappi.style.top = Mathf.Round((Korkeus - 36f) / 2f);
