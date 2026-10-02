@@ -25,9 +25,15 @@ export function piirraAtlas(rivit, doc = document) {
   const paikat = [];
   let y = 0;
   for (const r of rivit) {
-    const em = Math.round(r.korkeus * NAUHA_EM * (r.emOsuus ?? 1));
+    let em = Math.round(r.korkeus * NAUHA_EM * (r.emOsuus ?? 1));
     mitta.font = `${r.paino ?? 'bold'} ${em}px ${r.fontti}`;
-    const tekstiLev = Math.ceil(mitta.measureText(r.teksti).width);
+    let tekstiLev = Math.ceil(mitta.measureText(r.teksti).width);
+    // Pitkä toistorivi (esim. Apologia 38a kokonaan) pienennetään mahtumaan yhteen laattaan väleineen.
+    if (r.toisto && tekstiLev + 3 * em > ATLAS_LEVEYS) {
+      em = Math.floor(em * ATLAS_LEVEYS / (tekstiLev + 3 * em));
+      mitta.font = `${r.paino ?? 'bold'} ${em}px ${r.fontti}`;
+      tekstiLev = Math.ceil(mitta.measureText(r.teksti).width);
+    }
     if (r.toisto) {
       // TOISTORIVI TÄYTTÄÄ ATLAKSEN LEVEYDEN kokonaisilla laatoilla (laatta = teksti + väli): näytteenotin
       // kääriä (RepeatWrapping) jatkuvalla u:lla, joten saumassa ei ole fract()-hyppyä eikä mip-viivaa.
@@ -52,7 +58,8 @@ export function piirraAtlas(rivit, doc = document) {
     c.font = `${p.paino ?? 'bold'} ${p.em}px ${p.fontti}`;
     const piirra = (yla, sumeus) => {
       c.save();
-      c.beginPath(); c.rect(0, yla, p.lev, p.korkeus); c.clip();
+      // Toistorivi täyttää koko atlaksen leveyden (kaikki laatat), muuten vain oma leveys (Linssiseppä 2:n löydös 2.10.).
+      c.beginPath(); c.rect(0, yla, p.toistoja ? ATLAS_LEVEYS : p.lev, p.korkeus); c.clip();
       c.filter = `blur(${sumeus}px)`;
       for (let n = 0; n < (p.toistoja ?? 1); n += 1) c.fillText(p.teksti, p.reuna + n * p.lev, yla + p.korkeus / 2);
       c.restore();

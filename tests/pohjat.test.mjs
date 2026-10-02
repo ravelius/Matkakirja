@@ -67,3 +67,10 @@ test('pohjat on kytketty sivuun, välimuistiin ja nippuun', () => {
   assert.match(lue('../tools/build-standalone.mjs'), /'css\/pohjat\/perus\.css'/);
   assert.match(lue('../tyylikirja.html'), /js\/pohjat\/tyylikirja-sivu\.js/);
 });
+
+test('puuttuva kuva poistaa kuvapaikan (omistaja 2.10. klo 13.53: Bobovacin harmaa laatikko)', () => {
+  const lahde = readFileSync(new URL('../js/pohjat/pohjat.js', import.meta.url), 'utf8');
+  assert.match(lahde, /img\.addEventListener\('error', \(\) => \{ poistui\?\.\(kehys\); kehys\.remove\(\); \}, \{ once: true \}\);\n  img\.src = kuva\.url;/);
+  assert.match(lahde, /kehys\.before\(pohjaSolmu\('hr', 'tk-viiva'\)\)/);
+  assert.match(lahde, /img\.addEventListener\('error', \(\) => \{ b\.remove\(\); if \(!nauha\.children\.length\) nauha\.remove\(\); \}/);
+});
