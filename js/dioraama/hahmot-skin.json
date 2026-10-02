@@ -1,5 +1,141 @@
 {
- "_huom": "Skinnatut hahmot (Linnanrakentaja 2.10.2026; Quaternius CC0). Arvot hahmo_skin.py:n json-tulosteesta. skaala = rakennus-henkilön pituus / glb:n pituus_m.",
+ "_huom": "Skinnatut hahmot (Linnanrakentaja 2.10.2026; Quaternius CC0, _valmiit/linna-hahmot/v1). skaala = henkilot.js malli3d.mittasuhteet.pituus_m / glb:n pituus_m.",
+ "apulainen-1500": {
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "kavely_sykli_m": 1.254,
+  "kavely_kesto_s": 1.333,
+  "pituus_m": 1.775,
+  "skaala": 0.9296,
+  "kasvot": "+Z",
+  "lahde": "_valmiit/linna-hahmot/v1 (LOD ~9 k, perusväri 512)"
+ },
+ "kappalainen-1500": {
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "kavely_sykli_m": 1.273,
+  "kavely_kesto_s": 1.333,
+  "pituus_m": 1.784,
+  "skaala": 0.9529,
+  "kasvot": "+Z",
+  "lahde": "_valmiit/linna-hahmot/v1 (LOD ~9 k, perusväri 512)"
+ },
+ "kirjuri-1500": {
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "kavely_sykli_m": 1.273,
+  "kavely_kesto_s": 1.333,
+  "pituus_m": 1.784,
+  "skaala": 0.9529,
+  "kasvot": "+Z",
+  "lahde": "_valmiit/linna-hahmot/v1 (LOD ~9 k, perusväri 512)"
+ },
+ "kokki-1500": {
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "kavely_sykli_m": 1.273,
+  "kavely_kesto_s": 1.333,
+  "pituus_m": 1.784,
+  "skaala": 0.9641,
+  "kasvot": "+Z",
+  "lahde": "_valmiit/linna-hahmot/v1 (LOD ~9 k, perusväri 512)"
+ },
+ "portinvartija-1500": {
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "kavely_sykli_m": 1.273,
+  "kavely_kesto_s": 1.333,
+  "pituus_m": 1.844,
+  "skaala": 0.9328,
+  "kasvot": "+Z",
+  "lahde": "_valmiit/linna-hahmot/v1 (LOD ~9 k, perusväri 512)"
+ },
+ "renki-1500": {
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "kavely_sykli_m": 1.273,
+  "kavely_kesto_s": 1.333,
+  "pituus_m": 1.844,
+  "skaala": 0.9111,
+  "kasvot": "+Z",
+  "lahde": "_valmiit/linna-hahmot/v1 (LOD ~9 k, perusväri 512)"
+ },
+ "soutaja-1500": {
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "kavely_sykli_m": 1.273,
+  "kavely_kesto_s": 1.333,
+  "pituus_m": 1.784,
+  "skaala": 0.9753,
+  "kasvot": "+Z",
+  "lahde": "_valmiit/linna-hahmot/v1 (LOD ~9 k, perusväri 512)"
+ },
+ "talonpoika-1500": {
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "kavely_sykli_m": 1.273,
+  "kavely_kesto_s": 1.333,
+  "pituus_m": 1.844,
+  "skaala": 0.9328,
+  "kasvot": "+Z",
+  "lahde": "_valmiit/linna-hahmot/v1 (LOD ~9 k, perusväri 512)"
+ },
  "vartija-1500": {
   "leikkeet": {
    "idle": "idle",
@@ -14,6 +150,40 @@
   "pituus_m": 1.844,
   "skaala": 0.9544,
   "kasvot": "+Z",
-  "lahde": "_valmiit/vartija-skin/v3 (LOD ~9 k, perusväri 512, nosto 1,35·p^0,8, parta ruskea)"
+  "lahde": "_valmiit/linna-hahmot/v1 (LOD ~9 k, perusväri 512)"
+ },
+ "vesipoika-1500": {
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "kavely_sykli_m": 1.273,
+  "kavely_kesto_s": 1.333,
+  "pituus_m": 1.844,
+  "skaala": 0.7863,
+  "kasvot": "+Z",
+  "lahde": "_valmiit/linna-hahmot/v1 (LOD ~9 k, perusväri 512)"
+ },
+ "vouti-1500": {
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "kavely_sykli_m": 1.273,
+  "kavely_kesto_s": 1.333,
+  "pituus_m": 1.785,
+  "skaala": 0.9972,
+  "kasvot": "+Z",
+  "lahde": "_valmiit/linna-hahmot/v1 (LOD ~9 k, perusväri 512)"
  }
 }

@@ -8,8 +8,8 @@ import assert from 'node:assert/strict';
 import { readdirSync } from 'node:fs';
 
 const KANSIO = new URL('../js/dioraama/rakennukset/olavinlinna/', import.meta.url);
-const KESKEN = new Set(['keittio', 'kierreportaat']);
-const OHITA = /lattia|kansi|matto|seina|laatta|lankku|porras|askelma/;
+const KESKEN = new Set([]);
+const OHITA = /lattia|kansi|matto|seina|laatta|lankku|porras|portaat|askelma/;
 const jana = (p, a, b) => {
   const vx = b[0] - a[0], vz = b[2] - a[2], L = vx * vx + vz * vz;
   const u = L ? Math.max(0, Math.min(1, ((p[0] - a[0]) * vx + (p[2] - a[2]) * vz) / L)) : 0;
