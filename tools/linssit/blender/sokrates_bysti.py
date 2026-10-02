@@ -848,6 +848,61 @@ def kaiku_projektori(nimi, p, suunta, etaisyys, lev, kuva, ruudut, voima, savy=(
     return o
 
 
+def tausta_rivi(nimi, p, suunta, etaisyys, ala, kuva, kork, kulma, v_m, nopeus, kirkkaus, ruudut, voima):
+    """v10 taustavirta (omistaja 2.10. 08.2x–08.3x): yksi henkeä tekstirivi samasta videotykistä. Rivi vierii
+    jatkuvasti (REPEAT vaakasuunnassa, pystysuunnassa rajattu), on kääntynyt kulman verran, siirretty pystyyn v_m
+    metriä ja kirkkaudeltaan osa päälauseen voimasta. Rivit saavat risteillä ja mennä päällekkäin.
+    ruudut = (häivytys sisään alkaa, täysi, häivytys ulos alkaa, pimeä)."""
+    kk = bpy.data.images.load(kuva); kk.colorspace_settings.name = 'Non-Color'; lev = kork * kk.size[0] / kk.size[1]
+    d = bpy.data.lights.new(nimi, 'SPOT'); d.spot_blend = 0.5; d.shadow_soft_size = 0.0
+    d.spot_size = 2.4 * math.atan(ala / 2 / etaisyys); d.color = (1.0, 0.93, 0.80); d.use_nodes = True
+    nt = d.node_tree; nt.nodes.clear()
+    def m(op, a, b=None, c=None):
+        n_ = nt.nodes.new('ShaderNodeMath'); n_.operation = op
+        for i_, v in enumerate((a, b, c)):
+            if v is None: continue
+            if isinstance(v, (int, float)): n_.inputs[i_].default_value = v
+            else: nt.links.new(v, n_.inputs[i_])
+        return n_.outputs['Value']
+    tc = nt.nodes.new('ShaderNodeTexCoord'); sx = nt.nodes.new('ShaderNodeSeparateXYZ'); nt.links.new(tc.outputs['Normal'], sx.inputs['Vector'])
+    z = m('MULTIPLY', sx.outputs['Z'], -1.0)
+    x_ = m('MULTIPLY', m('DIVIDE', sx.outputs['X'], z), etaisyys); y_ = m('MULTIPLY', m('DIVIDE', sx.outputs['Y'], z), etaisyys)
+    c_, s_ = math.cos(math.radians(kulma)), math.sin(math.radians(kulma))
+    xr = m('ADD', m('MULTIPLY', x_, c_), m('MULTIPLY', y_, -s_)); yr = m('ADD', m('MULTIPLY', x_, s_), m('MULTIPLY', y_, c_))
+    siirto = nt.nodes.new('ShaderNodeValue'); siirto.name = 'siirto'
+    u = m('ADD', m('DIVIDE', xr, lev), siirto.outputs['Value']); v = m('ADD', m('DIVIDE', m('SUBTRACT', yr, v_m), kork), 0.5)
+    yh = nt.nodes.new('ShaderNodeCombineXYZ'); nt.links.new(u, yh.inputs['X']); nt.links.new(v, yh.inputs['Y'])
+    t = nt.nodes.new('ShaderNodeTexImage'); t.image = kk; t.extension = 'REPEAT'; nt.links.new(yh.outputs['Vector'], t.inputs['Vector'])
+    rajaus = m('MULTIPLY', m('GREATER_THAN', v, 0.0), m('LESS_THAN', v, 1.0))
+    em = nt.nodes.new('ShaderNodeEmission'); nt.links.new(m('MULTIPLY', t.outputs['Color'], rajaus), em.inputs['Strength'])
+    out = nt.nodes.new('ShaderNodeOutputLight'); nt.links.new(em.outputs['Emission'], out.inputs['Surface'])
+    o = bpy.data.objects.new(nimi, d); bpy.context.scene.collection.objects.link(o)
+    o.location = Vector(p) + suunta.normalized() * etaisyys; kohdista(o, p)
+    sv = siirto.outputs['Value']; r0, r3 = ruudut[0], ruudut[3]
+    for r, v_ in ((r0, 0.0), (r3, nopeus * (r3 - r0))):
+        sv.default_value = v_; sv.keyframe_insert('default_value', frame=r)
+    for r, v_ in ((1, 0.0), (ruudut[0], 0.0), (ruudut[1], voima * kirkkaus), (ruudut[2], voima * kirkkaus), (ruudut[3], 0.0)):
+        d.energy = v_; d.keyframe_insert('energy', frame=r)
+    act = d.node_tree.animation_data.action if d.node_tree.animation_data else None
+    for kerros in getattr(act, 'layers', []):
+        for kaista in kerros.strips:
+            for cb in kaista.channelbags:
+                for fc in cb.fcurves:
+                    for kp in fc.keyframe_points: kp.interpolation = 'LINEAR'
+    return o
+
+
+def kiertopiste(nimi, kohde, k, ruudut, voima, kansio, ala, korkeudet, siemen):
+    """v10: taustavirta (tausta-*.png) kohteen ympärille: koot, kulmat, nopeudet, suunnat ja kirkkaudet vaihtelevat."""
+    import random as _r
+    rnd = _r.Random(siemen); tiedostot = sorted(f for f in os.listdir(kansio) if f.startswith('tausta-') and 'sumea' not in f)
+    p_, suunta = kohde
+    for i_, f in enumerate(tiedostot):
+        kork = rnd.choice(korkeudet); kulma = rnd.uniform(-6, 6); v_m = rnd.uniform(-0.03, 0.03)
+        nopeus = rnd.uniform(0.0012, 0.0035) * rnd.choice((-1, 1)); kirkkaus = rnd.uniform(0.07, 0.22)   # AgX puristaa: 0,15–0,40 näytti lähes päälauseen kirkkaalta
+        tausta_rivi(f'{nimi}-{i_}', p_, suunta, 0.6, ala, os.path.join(kansio, f), kork, kulma, v_m, nopeus, kirkkaus, ruudut, voima)
+
+
 if '--v7' in A:
     from mathutils import Matrix
     i = A.index('--v7'); GOBOT, ULOS = A[i + 1], A[i + 2]; os.makedirs(ULOS, exist_ok=True)

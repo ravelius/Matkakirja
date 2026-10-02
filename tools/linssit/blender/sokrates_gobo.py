@@ -25,7 +25,11 @@ if A and A[0] == '--ei-haloa':   # v4 (omistaja 22.1x): vain kirjaimet, ei halok
     HALO = False; A = A[1:]
 RIVIT = A or ['ὁ δὲ ἀνεξέταστος', 'βίος οὐ βιωτὸς', 'ἀνθρώπῳ']
 POLKU = {'baskerville': ('/System/Library/Fonts/Supplemental/Baskerville.ttc', 0),
-         'iowan': ('/System/Library/Fonts/Supplemental/Iowan Old Style.ttc', 1)}[FONTTI]   # Iowan: lihavoitu luettavuuteen
+         'iowan': ('/System/Library/Fonts/Supplemental/Iowan Old Style.ttc', 1),   # Iowan: lihavoitu luettavuuteen
+         'iowan-ohut': ('/System/Library/Fonts/Supplemental/Iowan Old Style.ttc', 2),   # v10 taustavirta: kursiivi
+         'times': ('/System/Library/Fonts/Supplemental/Times New Roman Italic.ttf', 0)}.get(FONTTI)   # polytoninen kreikka
+if POLKU is None:   # v10: OFL-fontti tiedostopolkuna (Sisältökirjuri toimittaa)
+    POLKU = (FONTTI, 0)
 KOKO = 220; F = ImageFont.truetype(POLKU[0], KOKO, index=POLKU[1]); VALI = int(KOKO * 1.3)
 lev = max(F.getbbox(r)[2] - F.getbbox(r)[0] for r in RIVIT); kork = VALI * (len(RIVIT) - 1) + KOKO
 L, K = int(lev * 1.12) + 40, int(kork * 1.12 + KOKO * 0.5)
