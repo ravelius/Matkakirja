@@ -22573,6 +22573,12 @@ body.lento-kesken .pollo-nappi.pollo-ilmestyy {
 
 .pollo-vihje-puhe { min-width: 0; }
 
+/* Äänen kanssa kuplaan jää vain muotokuva kuvakehyksenä; repliikki kuuluu (Päätoimittaja 2.10.2026). */
+.pollo-vihje-muotokuva.pollo-vihje-vain-kuva {
+  grid-template-columns: clamp(4.5rem, 24vw, 5.6rem);
+  width: auto;
+}
+
 @media (max-width: 340px) {
   .pollo-vihje-muotokuva {
     grid-template-columns: 4.35rem minmax(0, 1fr);

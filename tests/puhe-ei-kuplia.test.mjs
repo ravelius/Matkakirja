@@ -57,6 +57,24 @@ test('kutsupaikat: Livian avaus, paljastus, mannerivihje, sähkepaluu ja Pollon 
   assert.match(lue('../js/fokusvirta.js'), /puhuTaiKupla\(\n\s*\(\) => soitaLivianKaupunkiAani\(ui, city\?\.id, kentta, \{ kupla: i, teksti \}\),/);
   const pollo = lue('../js/pollo.js');
   assert.match(pollo, /const voiPuhua = Boolean\(aani\) && !this\.nappi\.hidden && !this\.auki;/);
-  // Poikkeukset (Päätoimittajalle): muotokuvarepliikki ja lehtivinkki jäävät kupliksi.
-  assert.match(livia, /if \(muotokuva\) \{\n\s*nakyi = kupla\(\);/);
+  // Tarkennetut poikkeukset (Päätoimittaja 2.10.2026): muotokuvarepliikistä jää äänen kanssa vain kuva, lehtivinkistä
+  // ympyröity avainsana lehdessä tai yksinään kuplassa; ilman ääntä molemmat kuplat kuten ennen.
+  assert.match(livia, /muotokuva \? kupla\(true\) : polloPuheIlmanKuplaa\(teksti\)/);
+  assert.match(pollo, /if \(vainKuva\) \{[\s\S]{0,120}kupla\.append\(kuvapaikka\);/);
+  const fokus = lue('../js/fokusvirta.js');
+  assert.match(fokus, /\(\) => soitaLivianAani\(ui, 'lehtivinkki', 0, \{ teksti: LIVIAN_LEHTIVINKKI \}\),\n\s*\(\) => kuplaan\(LIVIAN_LEHTIVINKKI\),/);
+  assert.match(fokus, /lehdenAvainsana\(ui\.arrivalDialog, LIVIAN_LEHTIVINKIN_SANA\);\n\s*if \(!lehdessa\) return kuplaan\(LIVIAN_LEHTIVINKIN_SANA\);/);
+  assert.match(lue('../css/styles.css'), /\.pollo-vihje-muotokuva\.pollo-vihje-vain-kuva \{/);
+});
+
+test('lehdenAvainsana löytää lehden näkyvän tekstisolmun avainsanan ja ohittaa piilotetut', async () => {
+  const { lehdenAvainsana } = await import('../js/fokusvirta.js');
+  const teksti = (data) => ({ nodeType: 3, data });
+  const el = (solmut, piilossa = false) => ({ childNodes: solmut, closest: () => (piilossa ? {} : null) });
+  const piilo = el([teksti('Tämän sivun aarrekysymys')], true);
+  const osuma = el([teksti('Lehden aarrekysymys: missä?')]);
+  const lehti = { querySelectorAll: () => [el([teksti('Uutisia')]), piilo, osuma] };
+  assert.equal(lehdenAvainsana(lehti, 'aarrekysymys'), osuma);
+  assert.equal(lehdenAvainsana({ querySelectorAll: () => [piilo] }, 'aarrekysymys'), null);
+  assert.equal(lehdenAvainsana(null, 'aarrekysymys'), null);
 });
