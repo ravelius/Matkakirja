@@ -634,7 +634,8 @@ namespace Matkakirja.Natiivi
                 bool lennossa = tila == KyydinTila.Kohde;
                 if (!lennossa) omaLento = false;
                 poyta.Kohde.Kilpi.text = lennossa && !omaLento && viimeKohde != null ? viimeKohde.ToUpperInvariant() : "VALITSE";
-                poyta.Kuvaa.Kilpi.text = Matkakirja.Natiivi.IssKameraKuva.Tila == "valmis" ? "VALMIS" : $"{Matkakirja.Natiivi.IssKameraKuva.Edistyminen:P0}";
+                var kt = Matkakirja.Natiivi.IssKameraKuva.Tila;   // savuke 1116 + Päätoimittaja 2.10.: syy kilpeen (EI MAATA / VAIN EUROOPPA / EI KUVAUSPAIKKAA) eikä 0 % / VALMIS
+                poyta.Kuvaa.Kilpi.text = kt == "valmis" ? "VALMIS" : kt == "ei maata" ? "EI MAATA" : kt == "vain eurooppa" ? "VAIN EUROOPPA" : kt == "ei kuvauspaikkaa" ? "EI KUVAUSPAIKKAA" : kt == "keskeytyi" ? "–" : $"{Matkakirja.Natiivi.IssKameraKuva.Edistyminen:P0}";
                 poyta.Sulku.Kilpi.text = tila == KyydinTila.Ikkuna ? "CUPOLA" : tila == KyydinTila.Seuranta ? "SEURANTA" : lennossa ? "LENTO" : "KYYTI";
             }
             if (!auki) SuljeLista();
