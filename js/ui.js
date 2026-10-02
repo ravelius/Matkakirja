@@ -11189,7 +11189,11 @@ export class UI {
     }
     const jaljella = game.rahattomuuttaJaljella?.(game.player);
     kassa.classList.toggle('rahaton', jaljella !== null && jaljella !== undefined);
-    this.turnPill.appendChild(kassa);
+    // Pilleri on vain päivä ja raha, "1 pv · 400 £" (omistaja 2.10.2026 klo 15.1x ja 15.40); kellonaika ja
+    // päiväkulu ovat valikon päivärivillä (renderValikkoTaso).
+    const paiva = html('span', 'clock', `${game.dayCount()}\u00a0pv`);
+    paiva.title = game.clockLabel();
+    this.turnPill.append(paiva, kassa);
     // Lyhyt aika kassan vieressä (omistaja 15.2x: "0£ 2 vrk" kaikilla ruuduilla); pitkä
     // "rahat loppu · N vrk" katkaisi puhelimella päivämäärän. Lohkot: paivitaRahattomuuspalkki.
     if (jaljella !== null && jaljella !== undefined) {
@@ -11198,7 +11202,6 @@ export class UI {
     // Mittari on päivämäärä, ei kello eikä palkki: aika on tarinaa, ei uhkaa,
     // joten se ei saa hälytysväriä eikä muutu punaiseksi ennätyksen jälkeen.
     const kello = game.clockLabel();
-    this.turnPill.appendChild(html('span', 'clock', kello));
     // Ajan eteneminen välähtää kevyesti, jotta pelaaja huomaa vilkaista
     // päivämäärää (omistajan toive). Ensimmäinen piirto ei väläytä.
     if (this.kelloEdellinen !== undefined && this.kelloEdellinen !== kello) {
@@ -11382,6 +11385,19 @@ export class UI {
       if (nimi) nimi.textContent = teksti;
     };
     nimea('pilleri-matka-btn', `${taso.nimi} (${pisteet} tp)`);
+    // Päivärivi tasorivin alle: "Päivä 1/80, aamu · 400 £" ja lopussa punaisena päivän kulut (omistaja 15.1x, 15.40).
+    const paivarivi = document.getElementById('valikko-paivarivi');
+    if (paivarivi) {
+      const kulu = game.paivakulu?.(p);
+      paivarivi.replaceChildren(
+        html('span', 'valikko-paivarivi-teksti',
+          `Päivä ${game.dayCount()}/${RECORD_DAYS}, ${game.timeOfDay()} · ${p.money}\u00a0£`),
+        ...(kulu?.yhteensa ? [html('span', 'valikko-paivarivi-kulu', `\u2212${kulu.yhteensa}\u00a0£`)] : []),
+      );
+      if (kulu) {
+        paivarivi.title = `Päivän kulut: ruoka ${kulu.ruoka}\u00a0£${kulu.majoitus ? `, majoitus ${kulu.majoitus}\u00a0£` : ''}`;
+      }
+    }
     const riviAvatar = document.querySelector('#pilleri-matka-btn .valikko-tasorivi-avatar');
     if (riviAvatar) riviAvatar.src = tietajaAvatar(taso);
     nimea('pilleri-aarteet-btn', `Aarteet (${loydetyt.length + tavaroita})`);
