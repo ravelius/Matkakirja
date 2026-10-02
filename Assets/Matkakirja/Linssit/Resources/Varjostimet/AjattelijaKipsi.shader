@@ -200,10 +200,14 @@ Shader "Matkakirja/AjattelijaKipsi"
                 }
                 if (_KipsiPaalla > 0.5)
                 {
+                    // Webin three.js-koordinaateissa (z peilattu): kipsikuvion x/y-keskiarvo on 0,542, joten mikronormaalissa on vinouma
+                    // (+x, +y, +z three = kasvoista ulos). Unityn z:lla se kääntyi kohti prologin takavaloja ja kirkasti reunavaloa ~3×.
+                    const float3 PEILI = float3(1.0, 1.0, -1.0);
                     float3 w = pow(abs(n), 4.0);
                     w /= (w.x + w.y + w.z);
-                    float3 d = KipsiTaso(i.maailma * 28.5, w) * 0.6 + KipsiTaso(i.maailma * 95.0, w) * 0.35;
-                    n = normalize(n + d);
+                    float3 p = i.maailma * PEILI;
+                    float3 d = KipsiTaso(p * 28.5, w) * 0.6 + KipsiTaso(p * 95.0, w) * 0.35;
+                    n = normalize(n + d * PEILI);
                 }
                 float3 v = normalize(_WorldSpaceCameraPos - i.maailma);
                 float3 albedo = _Pohja.rgb;
