@@ -55,3 +55,10 @@ UI-siirtymiä. Suunnitelma ja säännöt: `ui-pohjat-kartoitus-20261001.md`. Sä
 - Odottaa omistajan OK:ta: natiivi-ui/ylapalkki-tikkaus-2 d99f205d (tikkaus saaren ympärille, pilleri "1 pv · £400" konjakki, raha-punnan päällä), natiivi-ui/pulu-puhu d0c59102, linssin hampurilaisvalikko (koe `ui ohjausnapit 2`).
 - Määrittelyt: proto-3d/lokit/natiivi-ui-pohjat/{ohjausnappi-kuvat/ohjausnappi-ehdotus.md, linssivalikot.md, galleria-pohja.md}; inventaariot kuvakenapit-, puhekuplat- ja ei-ovaaleja-inventaario.md.
 - Jonossa webin jälkeen: valikko v2 (#3853) + päivärivi "Päivä 1/80, aamu · £400 −£20", EI OVAALEJA -korjaukset, puhekuplat äänen aikana pois.
+
+## 2.10. ilta 18.3x (Natiivi-UI)
+
+- Junassa / Natiivisepällä: juna 126 raha-punta; juna 127 pulu-puhu eb35ebeb (Live alarivillä); ohjausnappi b76b91a7 (+ .mk-ohjausnappi--iso 56 pt) ja Siirtosepän linna-valikko kootaan, kun web #3860 on mainissa (#3854 mergetty); ei-ovaaleja 4df45540 merge-pyynnössä.
+- Odottaa omistajan OK:ta: ylapalkki-tikkaus-2 c64d945b (tikkaus A/B/C `ui ylapalkki tikkaus X`, pilleri BUILD 123 -tumma "1 pv · £400", logo ja pilleri keskelle kaaren ja tikkauskehän väliin laskennallisesti), nostorivi-2 3ec5808a (yksi ylärivi, kehyksettömät rivit, suodattimet suorakulmioina), valikko-v2 c0f4fe8a (päivärivi −£20, Tila, tasonäkymä), galleria 7e8eaf02 (julisteet pikkukuvin).
+- Kuvat: proto-3d/lokit/natiivi-ui-pohjat/omistajalle-20261002-ylapalkki-valikko/ (1–12). Mittausskriptit: skriptit/saarivali.py, kaarivali.py, keskitys.py; kartoitus.sh MASKI=1 (saari näkyy) ja KEHITTAJA=1.
+- Opit: asettelun jälkeinen padding-takaisinkytkentä (GeometryChanged) aiheutti "Layout update is struggling" → laske asettelussa; generoitu tyylikirja samasta web-lähteestä kaikkiin haaroihin (muuten junamerge riitelee); Peli-testit/unity-tarkistus.sh kääntää C#:n ilman editoria.
