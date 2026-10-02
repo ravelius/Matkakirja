@@ -9,8 +9,9 @@
  * 4. Tallenna ehdotus: muuttuneet tokenit JSONina palautekanavaan sivulla "Tyylikirja" (sama reitti kuin
  *    äänimikserin Tallenna). Rooli vie hyväksytyt arvot tyylikirja.json:iin ja ajaa generaattorin.
  */
-import { luoPohjaNostokortti, luoPohjaKortti, luoPohjaPaneeli } from './pohjat.js';
-import { PEILI_JUURI, peiliKuvaPolku } from '../media.js';
+import { luoPohjaNostokortti, luoPohjaKortti, luoPohjaPaneeli, luoPohjaGalleria } from './pohjat.js';
+import { PEILI_JUURI, peiliKuvaPolku, julisteUrl, julistePieniUrl } from '../media.js';
+import { JULISTEET, JULISTE_LAHDE } from '../packs/julisteet.js';
 import { luoPohjaErikoisnostot, piirraEsikatselu } from '../ajattelijapaat.js';
 import { AJATTELIJAT } from '../linssit/ajattelija.js';
 
@@ -112,6 +113,23 @@ const TKS_POHJAT = [
   { nimi: 'PANEELI · alinäkymä: Asetukset (säätimet) · PAPERI', luo: () => luoPohjaPaneeli(TKS_PANEELI_ASETUKSET, { esikatselu: true }) },
   { nimi: 'PANEELI · LASI (linssin päällä)', luo: () => luoPohjaPaneeli({ ...TKS_PANEELI, teema: 'lasi' }, { esikatselu: true }) },
   {
+    nimi: 'GALLERIA · Julisteet (4 voitettua, 2 lukossa) · PAPERI',
+    luo: () => {
+      const ruutu = (id) => {
+        const j = JULISTEET[id];
+        return j ? {
+          nimi: j.kaupunki, kuva: julistePieniUrl(j.tiedosto), vara: julisteUrl(j.tiedosto),
+          suuri: { url: julisteUrl(j.tiedosto), otsikko: j.otsikko, kuvateksti: j.lyhyt, lahde: JULISTE_LAHDE },
+        } : { lukossa: true };
+      };
+      const idt = Object.keys(JULISTEET).slice(0, 4);
+      return luoPohjaGalleria({
+        otsikko: 'Julisteet', laskuri: `4/${Object.keys(JULISTEET).length}`, suhde: '2:3',
+        osiot: [{ nimi: 'Eurooppa', laskuri: '4/6', ruudut: [...idt.map(ruutu), { lukossa: true }, { lukossa: true }] }],
+      }, { esikatselu: true });
+    },
+  },
+  {
     nimi: 'ERIKOISNOSTOT · ajattelijoiden päät (kartuutsin vieressä, kehittäjätila)',
     luo: () => {
       const pohja = luoPohjaErikoisnostot(Object.values(AJATTELIJAT).filter((a) => a.kartta), { esikatselu: true });
@@ -193,7 +211,7 @@ function tksTypografia(isa, tk) {
 
 function tksPohjat(isa) {
   isa.appendChild(tksSolmu('h2', null, 'Pohjat'));
-  isa.appendChild(tksSolmu('p', 'tks-ohje', 'Esimerkkidata Ateena/Akropolis (sama nosto kuin natiivin kuvaparissa). Webissä NOSTOKORTTI, KORTTI, PANEELI ja ERIKOISNOSTOT; natiivissa kaikki pohjat.'));
+  isa.appendChild(tksSolmu('p', 'tks-ohje', 'Esimerkkidata Ateena/Akropolis (sama nosto kuin natiivin kuvaparissa). Webissä NOSTOKORTTI, KORTTI, PANEELI, GALLERIA ja ERIKOISNOSTOT; natiivissa kaikki pohjat.'));
   const ruudukko = tksSolmu('div', 'tks-pohjat');
   for (const p of TKS_POHJAT) {
     const lohko = tksSolmu('div', 'tks-pohja');

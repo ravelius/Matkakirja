@@ -13,7 +13,11 @@
   src: local("Iowan Old Style Roman"), local("IowanOldStyle-Roman"), local("Iowan Old Style"),
     local("Charter Roman"), local("Charter-Roman"), local("Georgia"), local("Palatino Linotype"),
     local("Palatino-Roman"), local("Cambria"), local("Noto Serif"), local("NotoSerif-Regular"),
-    local("DejaVu Serif"), local("Times New Roman");
+    local("DejaVu Serif"), local("Times New Roman"),
+    /* Viimeinen vara (Android ilman Noto Serifiä, Linux): 2,7 kt:n osajoukko Gentium Plussasta, vain U+00A3,
+       sisäiset nimet "Matkakirja Punta" (OFL:n varattu nimi). Upotettu data-URI:na (toimii myös yhden tiedoston
+       versiossa); lähdetiedosto ja lisenssi assets/fontit/matkakirja-punta.woff2 + OFL-matkakirja-punta.txt. */
+    url("data:font/woff2;base64,d09GMgABAAAAAAqIAA4AAAAAKbAAAAo3AAYzMwAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbIBw2BmAANBEICoEwgTwBNgIkAwgLBgAEIAXMWgcgG78oI5Jw0gII/plg20Yu+28DRNmTzNHR8sbBw/843vveB+nBiWp2Api2tLMkBcBDtdxvmfiSrrS6fa87lvGZnCQUQHZsplOSbFmmP2Yfwy4sAaLJcqHY595/pZErvunU5abAQGyAQp+ks+OvOaMEn7kjmKKR3VGqpK9XGr7uNKWzsN5hkHEAD0xgQ+EBMLwhU27rpP/v/3Pg3P2PESNaaaWVaNEiu+/9SAhAEwAQgEQgEIA6llgjEpMzC1FFEeD/fwBoO+JPIIpvZd4w1t+JY0t/U8fX3Z11g92lm4rPVlQUYgNKoLRV8S5w4+t+spNG8eVslBSUQXboJcBHU5CWactV9rFP9dZffXi/LvIzIAAU9ip+AmxRASSgABiigHi7vyK2gOKjAtiHZd4e8L9aABwXV0EHrAlCBYdSePtoAOmtOrH9yRNT9WfP1Ff9/jFPip6+KHz+9GnJ9efPS8KuH7qx6vPRJ5n+V57/cFMsfvVaY/XTSm33TbtMdNyCnqwVmm269WM+WhMjPU2uOTahrbovjc7pbU2SYTnlKp2yVjlNPMw2CE22yNqjXGS2arJq00HTI8bb1Q7UfotOtG6X5zW2G/vdrP4c1Gi8eZ9eafbeGr1lACAA5YAAtVM5yjU6kV9VtVUBeP9frgT4+KHtza+Nf9L1/NVdAWUkAAKoPqzX03TL0YsgeHuqVBqlUeEasYK8sXuYsoRK+/dTQgA6nEcBoagG5MNZL7Alv5do098rUM7svGJrr4Q5r3plvPnSq1Aq7HtV7MV4r8ak2N6rs0qa9ho4y729Jt7yRq9lPyy/XU/tu39zSgdSF+X16MBr4huAL3ziE195/1Rf/n4CHs4ugbPipAWdpWC6Qt/ghvUvAretON7TuiXUWxpKTug0cstN3z41A6x1Rg48vQN//72vvOGZ1AAT8IMPzqrWOC58D2gZ4i8wG4CAK/aUUTeADLQ2/dB6k3rm6KLACbbkhZYAsFcKE3CTjEoAOLMNAvfSHDNiANinGBE4ZbVOWymkx1IcGDBzWoABSiVX3s7GNRkXNYpDSImAS2cGjQ90k5QcSgC6ud5lVCKWYrE9Vjc1/3xe//CRj8zz/AHj9AHR9cdn3qly6x8mv+7TDqytZGZqEbinI+pERBBAx7VlvGxbx/lthryN+Uu3+cBq9Tiy9fyyBxl8RiWdTSCJimFMVNjbm2DniYPc1DuZweJlJxWKA6g+T35mACzbA8rFeJiB3qyjJLMwGMOYTE7uPyGn53eJODtElr27s1fS/wDKnH1zfLn66cZ7/zK/iuHI7dH1kZvrRzk7uLy8h6OnAO8Vdz96MA39SdRF/Rv1p9PPX93eH+1d7V8e6Xw+AWuJnXKW9GzUcgBeBxneACPQuZxvzjnx2QU6WzT1KnU9pZ4mJYeax5GQUpQk4SCaD5N7ARjgfn5V+UvRLcDEVmsP7x6zVxXnKXciQEObUtB5BIxzacxxdIbEqc3snqMDlzl0hZ/PZCMXXDz4iUtCYMht3BEkEtNiEsxSlQ1gRGAeEfzo0/hIGZfBT4CNgS324+8zkCLqnSrqdBQ1o8WaBU5+N01IykiAIPrglDjegqhmJNANIzy5NXKQ62Tr+UKyHBcZ2JvxaqN5onLX/Aqk7fxlTE8nTwUAHi2Cq+L8MUhKU7/ccBn3UJqIknmRHHIgPMTkh4yHsgzF85Qn4RG46ePiLaLE3WzxiUyk3J1yf9XAxHB7/kdEPSJqQC6xeVeWeKGvK7i9XKexLzO4xBih47WNTJ033NX7WJ5plDmF5pQwgIaOXKi0Emc5vGIYPgTwpVKC5MITNiziv8YnyEDUwfJg2HbGIc1Lxe5KwNALc3LoMBs5KbwoGiaJDSnPSVDwJu8q5z8vFecyWINAZvzxHh4dn12fPZ7dXD+stksWb/NwQ38wAtTYaJJ0A1+SLNJ8jFdDgU2nkry8Iq+xN/whIkdrVvK01tAQ0so1jmOdQ4IXksM6fXBpGolDLjgGL1V+gFXCxhS04Wy8XaDrcUCp0rB3VjnmdZWAABh2oSKvisGwgWNwTDzwwDe3PC8ReXlr0gjVI1DkQ1LtTk5M/q6KwfPmtpLBs9EQfpddTcD217aZw7nsEOIY+3nVu4SUyBs4JAC2B/oteGt0UElL9QK3UWS0a6ZbQM4Lap14sbVNBh+cxjjioYEphzURZBvdQqXMs7BBEPB38CozwB+aWH3RmQKOe82ZbK5hKgvrMs88uWK6oonN6xLp87U4kUiFI7E0K48kUcgmHVekOQnPhrO0qA7sNl6WwvvfHt1fnT08TIazgZcAB2fLDieG3FJkgS1iWmcNNlOAhgEXvIVQtzUQCaH0IhSIl90n6Xwio8whuaBum38YogJldXe0hN629jKBovLVKvH6S/k7GBiq6/qpUF+0laZ8r7A1c01ZgbWtKIoaaHEwhEmx0HMyi/3R5qd85g3ANbGo7cOpynLNGubRZ7Y1FZfbgFQSCNW+mj3WqCWxba9sXSutGsBLlIaBuUZfeGM9teiAWFk9/sFrxibhIYSji0EhYTCg2eIp2HWs1wsqyabKAR41b7d1/uJGyxmKG+BzTVGB2O3SezDJpeCF6b9XPDW6/Mbvy/l8v5/j8YLmBSZszoIr2ZNVeUPDmaiZHVUTldmvBkdER5HO2YNsyQlmaOCyGYO73a/gLIQzuxJvU+mxR3fTjRVzxULGso7Q3q9XeC0DM+UDprjbXKuzJcNSEgOeXBUcsU9p/VBl3ToJMfvqbA5F0YEs21D4mippaWEJShlQKM9cIqLV8xJM1dtKOZdFAaV9BYJwtbwMKkUDgbM99n6j1XuhUEfEU10EF2XaoLblje3qYDMXUsqifANW3hmGLNN8L4nog/AG7LcbY+eldNNFeg7qPTdSndIR4waT5/xfWIteLIFQYVa8kcZNX4s6VbCDmMkQWX32fW8sNvUKdTmixxbCMgSD0EyN3S2U+DeW1+1m87bChwcMIWODccs+7H/N/qt9pTn4GK73lpfJdR3dkDdVEw64JQSFFSfhk8vjYVFG5alW6Mr+leY8tnO/vkdL3EkPyf/HRf5JdrycqCnelL9+mBakbJeyMHoqba6XT27tLNZ6ml6SyeK2Fzs414fbaDruIfJYOVkVFSQD+Py0q7SLnm6k8VmaMdqG0/7R5w4kAxyqmRfhnBoToOEzxKUp0qh9Jz66gE4r4fL06AhCubfERtzlS9XOT1YEhxnanV6GKXvaERATiD7MoizpbTx/Xmow5HojBlRfO9xHm4ctsGQLe5zRjQemBuck5AJwhUPad/SovjsEPuxsMYwSAdM/JkEJb9BQYwoT9rFnKWqvRFFRAUa6pzu7KPrwgJIk6oWRTzRfz9XeRnIrgN9Z2n2FjnHw1mj6ltyYcdA+6I14M/3mY3pkUfMZJWG5CrCq0nH34O0VoXxqaWih2CiPrD0RJzcZvQHmnC0A2puSAj2BUAqyY+EdlIt1c/+tD///QH4/HOu/cg8=") format("woff2");
   unicode-range: U+00A3;
 }
 
@@ -15379,155 +15383,7 @@ button.lukija-nappi.lukee,
   color: rgba(60, 44, 26, 0.8);
 }
 
-/*
- * JULISTEGALLERIA: laukun rivistä avautuva popup (omistajan tilaus
- * 22.8.2026: "julisteet vähän isommalla maanosien mukaan jaoteltuna").
- *
- * Kerrokset: huntu 65, galleria 66, ja gallerian päälle avautuva täysi
- * koko on tavallinen .postikortti.kulttuuri-suurennos (69/70). Näin
- * suurennos jää aina gallerian PÄÄLLE ilman erillistä pinologiikkaa.
- * Kortti asuu avoimen <dialog>-elementin sisällä (js/ui.js
- * suurennosIsanta), koska modaali elää selaimen top layerissa.
- */
-.julistegalleria-huntu {
-  position: fixed;
-  inset: 0;
-  z-index: 65;
-  background: rgba(26, 18, 8, 0.28);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-}
-
-.julistegalleria {
-  position: fixed;
-  inset: 0;
-  z-index: 66;
-  margin: auto;
-  width: min(94vw, 760px);
-  height: fit-content;
-  max-height: 88dvh;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  padding: 0.6rem 0.9rem 1rem;
-  background: #f8f3e6;
-  border: 1px solid rgba(60, 44, 26, 0.35);
-  border-radius: 3px;
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
-}
-
-.julistegalleria-ylapalkki {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  margin: 0 0 0.4rem;
-  padding: 0.25rem 0 0.35rem;
-  background: #f8f3e6;
-  border-bottom: 1px solid rgba(60, 44, 26, 0.22);
-}
-
-.julistegalleria-otsikko {
-  margin: 0;
-  font-family: var(--font-type);
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(60, 44, 26, 0.92);
-}
-
-.julistegalleria-luku {
-  font-family: var(--font-type);
-  font-size: 0.8rem;
-  color: rgba(60, 44, 26, 0.65);
-}
-
-.julistegalleria .julistegalleria-rasti {
-  margin: 0 0 0 auto;
-  padding: 0 0.3rem;
-  border: 0;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
-  font-size: 1.35rem;
-  line-height: 1;
-  color: rgba(60, 44, 26, 0.7);
-  cursor: pointer;
-}
-
-.julistegalleria-ryhma { margin: 0.6rem 0 0; }
-
-.julistegalleria-ryhma-otsikko {
-  margin: 0 0 0.35rem;
-  font-family: var(--font-type);
-  font-size: 0.74rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: rgba(60, 44, 26, 0.7);
-}
-
-/*
- * Ruudukko täyttyy itsestään: kapealla puhelimella kaksi tai kolme
- * saraketta, leveällä useampi — ryhmät pinoutuvat allekkain eikä
- * mitään tarvitse mediakyselyillä siirtää.
- */
-.julistegalleria-ruudukko {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
-  gap: 0.6rem;
-}
-
-.julistegalleria .julistegalleria-vedos {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
-  text-align: center;
-  cursor: zoom-in;
-}
-
-.julistegalleria .julistegalleria-vedos img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  border: 1px solid rgba(60, 44, 26, 0.6);
-  box-shadow: 1px 2px 0 rgba(60, 44, 26, 0.2);
-}
-
-.julistegalleria-nimi {
-  display: block;
-  margin-top: 0.25rem;
-  font-family: var(--font-type);
-  font-size: 0.6rem;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
-  color: rgba(60, 44, 26, 0.8);
-}
-
-/* Voittamaton paikka ja vielä ämpäriin viemätön kuva: sama tyhjä
- * kehys, jotta ryhmästä ei katoa ruutua kummassakaan tapauksessa. */
-.julistegalleria .julistegalleria-vedos.lukossa,
-.julistegalleria .julistegalleria-vedos.kuvaton {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 2 / 3;
-  border: 1px dashed rgba(60, 44, 26, 0.4);
-  background: rgba(60, 44, 26, 0.05);
-  font-family: var(--font-type);
-  font-size: 1rem;
-  color: rgba(60, 44, 26, 0.45);
-}
-
-.julistegalleria .julistegalleria-vedos.lukossa { cursor: default; }
+/* JULISTEGALLERIA siirtyi GALLERIA-pohjalle (css/pohjat/galleria.css, js/pohjat/pohjat.js luoPohjaGalleria). */
 
 /*
  * Päivän sää lehden mastossa: hillitty rivi kuvakkeineen heti
