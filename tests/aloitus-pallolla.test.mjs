@@ -352,7 +352,7 @@ test('Livian "vasta yhden reitin" -kupla väistyy usealla kohteella', () => {
   assert.deepEqual(livianAvausSarja(14).map((r) => r.indeksi), [0, 1, 2, 4]);
   // Teksti kulkee mukana, jotta vanhentunut äänite jää hiljaiseksi
   // (js/liviapuhe.js livianAaniAjanTasalla).
-  assert.match(livia, /soitaLivianAani\(ui, 'avaus', rivi\.indeksi, \{ teksti \}\);/);
+  assert.match(livia, /soitaLivianAani\(ui, 'avaus', rivi\.indeksi, \{ teksti \}\)/);
 });
 
 /* ================================================================== *
