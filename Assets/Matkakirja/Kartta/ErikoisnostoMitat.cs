@@ -46,7 +46,7 @@ namespace Matkakirja
             float alle = lippuAla + Vali;
             mahtuu = alle + korkeus <= kortinAla;
             float x = Math.Max(lippuVasen, kortinOikea + Vali);
-            ylla = x + PaaPt > oikeaReuna && !float.IsNaN(kortinYla);
+            ylla = x + PaaPt + Vali > oikeaReuna && !float.IsNaN(kortinYla);   // web #3857: x + 64 + 8 > ruutu
             if (ylla) return (oikeaReuna - PaaPt - Vali, Math.Max(0f, kortinYla - korkeus - Vali));
             return (x, mahtuu ? alle : Math.Max(0f, kortinAla - korkeus));
         }

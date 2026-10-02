@@ -39,6 +39,10 @@ namespace Matkakirja.Kartta.Testit
             // iPad (ruutu 1376): avattu kartuutsi 35–585 mahtuu → lipun alle kuten webissä (593, 822 + 20 + 8 = 850).
             var z = ErikoisnostoMitat.SarakkeenPaikka(245, 842, 585, 804, 997, 64, 1376, out bool m3, out bool ylla3);
             Oleta.Tosi(!ylla3 && m3 && Lahella(z.X, 593) && Lahella(z.Y, 850), $"{z} {m3} {ylla3}");
+            // Rajalla kuten webin #3857 (x + 64 + 8 > ruutu): x 330 ruudulla 401 → yllä, ruudulla 402 → ei.
+            ErikoisnostoMitat.SarakkeenPaikka(330, 643, 322, 612, 853, 64, 401, out _, out bool raja1);
+            ErikoisnostoMitat.SarakkeenPaikka(330, 643, 322, 612, 853, 64, 402, out _, out bool raja2);
+            Oleta.Tosi(raja1 && !raja2, $"{raja1} {raja2}");
         }
 
         [Testi]
