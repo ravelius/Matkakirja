@@ -30,49 +30,56 @@
     -unity-text-align: middle-center;
 }
 
+/* NOSTOT ▾ ilman kehystä HISTORIA-tyylisenä tekstinä (omistaja 18.4x). */
 .mk-nostoselain__avaaja {
     height: 26px;
     min-height: 26px;
-    margin: 0 var(--tk-vali-xs);
-    padding: 0 var(--tk-vali-s);
-    border-width: 1px;
-    border-radius: var(--tk-kulma-pieni); /* 26 pt korkea: kulma-nappi näytti kapselilta (Päätoimittaja 18.3x) */
-    border-color: var(--tk-paperi-muste-pehmea);
+    margin: 0;
+    padding: 0 var(--tk-vali-xs);
+    border-width: 0;
+    border-radius: var(--tk-kulma-pieni);
     background-color: initial;
     color: var(--tk-paperi-korostus); /* sama kuin HISTORIA (.mk-nosto__ylarivi) */
 }
 
-/* Kategoria (HISTORIA) ja lukijan paikka: täyttää rivin, lukijan paikka oikeaan reunaan (margin-left: auto). */
-.mk-nostoselain__ylarivipaikka {
+/* Sivut yhtä leveinä (flex 1, perusta 0): keskiryhmä ‹ NOSTOT ▾ › AUTO keskellä, kategoria vasemmalla, ≡ ja kaiutin oikealla
+ * (omistaja 2.10.2026 klo 18.4x). */
+.mk-nostoselain__sivu {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    min-width: 0;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-nostoselain__sivu--oikea {
+    justify-content: flex-end;
+}
+
+.mk-nostoselain__sivu > .mk-nosto__ylarivi {
     flex-grow: 1;
     flex-shrink: 1;
     min-width: 0;
-    margin-left: var(--tk-vali-s);
-}
-
-.mk-nostoselain__ylarivipaikka > .mk-nosto__ylarivi {
-    flex-grow: 1;
     align-items: center;
     margin: 0;
 }
 
-/* Päätoimittaja 18.3x (0a1a174c): symboli ja ≡ päällekkäin ja ≈ 10 px alempana kuin NOSTOT/AUTO → lukijan paikka ilman
- * negatiivisia marginaaleja samalle keskilinjalle ja väli symboliin. */
-.mk-nostoselain__ylarivipaikka .mk-nosto__lukijapaikka {
-    margin: 0 0 0 auto;
+.mk-nostoselain__sivu .mk-nosto__lukijapaikka {
+    margin: 0;
 }
 
-.mk-nostoselain__ylarivipaikka .mk-nosto__ylarivi-symboli {
-    margin-right: var(--tk-vali-s);
+.mk-nostoselain__sivu .mk-nosto__ylarivi-symboli {
+    margin-right: var(--tk-vali-xs);
 }
 
-.mk-nostoselain__ylarivipaikka .mk-nosto__ylarivi-teksti {
+.mk-nostoselain__sivu .mk-nosto__ylarivi-teksti {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.mk-nostoselain--kapea .mk-nostoselain__ylarivipaikka .mk-nosto__ylarivi-teksti {
+.mk-nostoselain--kapea .mk-nostoselain__sivu .mk-nosto__ylarivi-teksti {
     display: none;
 }
 

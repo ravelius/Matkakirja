@@ -619,6 +619,7 @@ namespace Matkakirja.Natiivi
             sisus.scrollOffset = Vector2.zero;
             lukija.Aseta(null);
             lukijaPaikka = null;
+            ylarivi = null;
 
             Kirjasimet.Aseta(Rakenne.Teksti(lk.Nimi ?? "", "mk-nosto__otsikko", sisus), Kirjasin.LukuLihava);
             // 1. Kuva tai sen paikkamerkki (seepiaruutu ja nimi, ei hakua ulkoa).
@@ -667,6 +668,7 @@ namespace Matkakirja.Natiivi
             sisus.scrollOffset = Vector2.zero;
             lukija.Aseta(null);
             lukijaPaikka = null;
+            ylarivi = null;
             kortti.AddToClassList("mk-nosto--esittely");
             var k = nosto.Kuvat[0];
             var kuva = Kuvakehys(sisus, k, Vaihe2, suhde: HeroSuhde);
@@ -715,7 +717,8 @@ namespace Matkakirja.Natiivi
             // NAPIT NÄKYVÄT HETI (omistaja 28.9.2026, TF 1.0.34: "käyttäjän pitää vierittää lappua hieman alaspäin, jotta
             // se kaiutin tulee näkyviin"): vaiheen 2 kuvan kohdistus (löydös 131) vierittää ylärivin kortin yläreunan taakse.
             // Ylärivillä on vain paikkavaraus; kaiutin ja valikkonappi ovat kortissa sen kohdalla eivätkä vieri pois.
-            lukijaPaikka = Rakenne.El("mk-nosto__lukijapaikka", Ylarivi(sisus, n), PickingMode.Ignore);
+            ylarivi = Ylarivi(sisus, n);
+            lukijaPaikka = Rakenne.El("mk-nosto__lukijapaikka", ylarivi, PickingMode.Ignore);
             lukijaPaikka.RegisterCallback<GeometryChangedEvent>(_ => SijoitaLukija());
             if (lukija.Juuri.parent != kortti) kortti.Add(lukija.Juuri);
             lukija.Juuri.BringToFront();
@@ -819,11 +822,17 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void SiirraYlarivi()
         {
-            selain.Ylarivipaikka.Clear();
-            var yla = lukijaPaikka?.parent;
-            if (yla == null || !selain.Nakyvissa || !sisus.Contains(yla)) return;
-            selain.Ylarivipaikka.Add(yla);
+            // Edellisen kortin ylärivi pois sivuilta.
+            foreach (var paikka in new[] { selain.Vasen, selain.Oikea })
+                for (int i = paikka.childCount - 1; i >= 0; i--)
+                    if (paikka[i] != ylarivi && paikka[i] != lukijaPaikka) paikka.RemoveAt(i);
+            if (ylarivi == null || lukijaPaikka == null || !selain.Nakyvissa) return;
+            selain.Vasen.Add(ylarivi);       // kategoria (symboli ja nimi) vasemmalle
+            selain.Oikea.Add(lukijaPaikka);  // ≡ ja kaiutin oikeaan reunaan
         }
+
+        /// <summary>Nykyisen kortin ylärivi (kategoria); selaimen näkyessä se asuu selaimen rivillä.</summary>
+        VisualElement ylarivi;
 
         void SijoitaLukija()
         {

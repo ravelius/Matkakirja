@@ -63,8 +63,8 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Ylärivin kohta noston kategorialle ja lukijan napeille (näkyy, kun selain näkyy).</summary>
-        public readonly VisualElement Ylarivipaikka;
+        /// <summary>Ylärivin sivut: vasemmalle noston kategoria, oikealle lukijan napit (näkyvät, kun selain näkyy).</summary>
+        public readonly VisualElement Vasen, Oikea;
         public bool Nakyvissa => rivi.style.display != DisplayStyle.None;
         /// <summary>Tätä kapeammalla rivillä (pt) kategoriasta näkyy vain symboli (puhelin ~340 pt; iPadin kortti ~390 pt,
         /// jossa pitkä kategoria lyhenee …-merkillä).</summary>
@@ -76,10 +76,12 @@ namespace Matkakirja.Natiivi
             this.avaa = avaa;
             this.autoVaihtui = autoVaihtui;
 
-            // Yksi ylärivi (omistaja 2.10.2026 klo 17.5x, loki 63d9c8eee): vasemmalla ‹ NOSTOT ▾ › ja kategoria, oikealla ≡, kaiutin ja
-            // AUTO, kaikki HISTORIA-otsakkeen kokoisina (rivi perii .mk-nosto__ylarivi-kirjasimen).
+            // Yksi ylärivi (omistaja 2.10.2026 klo 17.5x ja 18.4x, loki b00599567): vasemmalla kategoria (symboli ja nimi), keskellä
+            // ryhmänä ‹ NOSTOT ▾ › ilman kehystä ja AUTO sen vieressä, oikeassa reunassa ≡ ja kaiutin; kaikki HISTORIA-otsakkeen
+            // kirjasimella samalla keskilinjalla (rivi perii .mk-nosto__ylarivi-kirjasimen).
             rivi = Rakenne.El("mk-nostoselain mk-nosto__ylarivi", null, PickingMode.Ignore);
             kortti.Insert(kortti.IndexOf(ennen), rivi);
+            Vasen = Rakenne.El("mk-nostoselain__sivu mk-nostoselain__sivu--vasen", rivi, PickingMode.Ignore);
             edellinen = Rakenne.Nappi("‹", "mk-nostoselain__askel", () => Askel(-1), rivi);
             // Nostopaneelin ylärivi (omistaja 2.10. klo 13.53): ‹ NOSTOT ▾ › ja AUTO samalla rivillä HISTORIA-kapiteelin
             // kirjasimella, molemmat kevyinä suorakulmioina (ei ovaalia; web #3849 AUTO:n malli).
@@ -87,8 +89,8 @@ namespace Matkakirja.Natiivi
             // ▾ piirroksena (Kone-kirjasimesta puuttuu merkki: laitteella neliö).
             Rakenne.Ikoni("<path class=\"taytto\" d=\"M7.5 10h9L12 15z\"/>", "mk-nostoselain__avaajaikoni", avaaja);
             seuraava = Rakenne.Nappi("›", "mk-nostoselain__askel", () => Askel(1), rivi);
-            // Kategoria (HISTORIA) ja lukijan paikka tulevat tähän (Nostokortti.SiirraYlarivi); täyttää rivin, joten AUTO jää oikealle.
-            Ylarivipaikka = Rakenne.El("mk-nostoselain__ylarivipaikka", rivi, PickingMode.Ignore);
+            // Oikea reuna: ≡ ja kaiutin (lukijan paikka, Nostokortti.SiirraYlarivi). Sivut yhtä leveät → keskiryhmä keskellä.
+            Oikea = Rakenne.El("mk-nostoselain__sivu mk-nostoselain__sivu--oikea", rivi, PickingMode.Ignore);
             // Puhelimella rivi ei mahdu kokonaan (5fc4be80: HISTORIA katkesi ja ≡ meni päälle): kapealla kategoriasta vain symboli.
             // Luokka riippuu vain kortin leveydestä (ei rivin sisällöstä), joten asettelu ei kierrä.
             rivi.RegisterCallback<GeometryChangedEvent>(e => rivi.EnableInClassList("mk-nostoselain--kapea", e.newRect.width < KapeaRivi));
@@ -143,7 +145,7 @@ namespace Matkakirja.Natiivi
             Rakenne.El("mk-nostoselain__autopiste", autoNappi, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("AUTO", "mk-nostoselain__autoteksti", autoNappi), Kirjasin.Kone);
             autoNappi.tooltip = "Auto: lukee avautuvat nostot ja siirtyy seuraavaan";
-            rivi.Add(autoNappi);
+            rivi.Insert(rivi.IndexOf(seuraava) + 1, autoNappi); // NOSTOT-ryhmän viereen keskelle (omistaja 18.4x)
             PaivitaAuto();
         }
 
