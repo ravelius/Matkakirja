@@ -111,6 +111,9 @@ namespace Matkakirja.Natiivi
             kerros.TurvaMuuttui += Asettele;
             // OHJAUSNAPPI-koe (`ui ohjausnapit 1` rivi: ‹ → ↻ → säätö → taikalasit → ✕ viimeisenä; `2` yksi hampurilainen).
             var koeValinnat = new List<(string, Action)> { ("Linssit", Valitsin.Avaa) };
+            var koeValikko = new LinssiValikko(kerros, koeValinnat, "Sulje linssi", SuljeLinssi);
+            // Napautus valikkoon sulkee Pulun taulun kuten muukin napautus taulun ohi (PulunTauluNakyma.UlkoNapautus).
+            koeValikko.Avautuu += () => Astronautti?.Taulu?.Sulje("valikko");
             new OhjausryhmaKoe(turva, sulje, new (VisualElement, string, string, Action)[]
             {
                 (Dioraama.Paluu, Ikonit.Takaisin, "Takaisin", DioraamaTaulu.PyydaPaluu),
@@ -118,7 +121,7 @@ namespace Matkakirja.Natiivi
                 (Mikseri.Lappu, Ikonit.Mikseri, "Mikseri", Mikseri.Vaihda),
                 (Valitsin.Nappi, Ikonit.Viiva["taikalasit"], "Linssit", Valitsin.Vaihda),
                 (sulje, Ikonit.Viiva["rasti"], "Sulje linssi", SuljeLinssi),
-            }, new LinssiValikko(kerros, koeValinnat, "Sulje linssi", SuljeLinssi));
+            }, koeValikko);
             Asettele();
 
             // Koukut. Peite on UI:n; musiikin pito kuuluu Pelikoodarin äänille, joilla ei

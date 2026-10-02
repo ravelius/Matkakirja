@@ -181,9 +181,13 @@ namespace Matkakirja.Natiivi
 
         public void Vaihda() { if (Auki) Sulje(); else Avaa(); }
 
+        /// <summary>Valikko aukeaa (OHJAUSNAPPI-valikko: linssin omat paneelit, kuten Pulun taulu, väistyvät).</summary>
+        public event Action Avautuu;
+
         public void Avaa()
         {
             if (Auki || Nappi.panel == null) return;
+            Avautuu?.Invoke();
             Paivita();
             Auki = true;
             Asettele();
