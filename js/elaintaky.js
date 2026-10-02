@@ -1308,11 +1308,11 @@ function elaintakyLunasta(ui, iso) {
    * vielä etsiä vai tuliko palkkio jo"*). "Lisätty kukkaroon" on
    * mennyt aikamuoto samasta syystä kuin leimassa: raha tuli juuri.
    */
-  rivi.textContent = `Löytöpalkkio +${vastaus.palkkio} puntaa lisätty kukkaroon.`;
+  rivi.textContent = `Löytöpalkkio +£${vastaus.palkkio} lisätty kukkaroon.`;
   const leima = ui.buildToast?.({
     kind: 'stamp',
     icon: 'kukkaro',
-    text: `+${vastaus.palkkio} puntaa`,
+    text: `+£${vastaus.palkkio}`,
     sub: 'Eläintäky löytyi',
   });
   if (leima) setTimeout(() => ui.removeToast(leima), TOAST_MS.default);

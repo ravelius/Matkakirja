@@ -1576,7 +1576,7 @@ const NOSTON_VISA_KAUPUNKI = 'nosto';
 
 /** Laatikon otsake ja vihjerivi, kun data ei anna omaansa. */
 const NOSTON_VISA_OTSAKE = 'LUKIJAN KYSYMYS';
-const NOSTON_VISA_VIHJE = `vastaus löytyy tästä jutusta · +${NOSTON_VISA_PALKKIO} puntaa`;
+const NOSTON_VISA_VIHJE = `vastaus löytyy tästä jutusta · +£${NOSTON_VISA_PALKKIO}`;
 
 /**
  * Onko tässä nostossa kelvollinen minikysymys?
@@ -1663,7 +1663,7 @@ function piirraNostonVisa(ui, sisalto, nosto) {
         const box = ui.buildToast?.({
           kind: 'stamp',
           icon: 'kukkaro',
-          text: `+${NOSTON_VISA_PALKKIO} puntaa`,
+          text: `+£${NOSTON_VISA_PALKKIO}`,
           sub: 'Lukijan kysymys ratkesi',
         });
         if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);

@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2567, teksti: 'Raha £N proosassa, konjakkipilleri, £-glyfi, Pu… (#3864)' },
+  { v: 2566, teksti: 'TestFlight-luvut: vain luku -ajo (#3873)' },
   { v: 2565, teksti: 'Raha £N, pilleri \'1 pv · £400\', valikon päiväri… (#3862)' },
   { v: 2564, teksti: 'Kipsipää karttaobjektiksi: kiinteä piste, lämmi… (#3866)' },
   { v: 2563, teksti: 'Puhe äänenä, ei kuplina: Pulun äänitetyt replii… (#3867)' },
