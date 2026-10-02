@@ -47,6 +47,13 @@ const RESEPTIT = {
     osat: [[75.48, 75.48 + 48.333]],                    // yhtenäinen; forte 84,88 s osuu ruutuun 282 (9,4 s)
     silmukka: null,
     luennat: [['luennat/a-otto1.mp3', 20.0], ['luennat/b-otto1.mp3', 32.0]],
+    // Kierrokset 2–3 (marcus-tekstit.json kierrokset_2_3, luennat_s_kohtauksessa): sama levytys jatkuu yhtenäisenä 111 s.
+    kierrokset: {
+      kesto: 111.0,
+      osat: [[75.48, 75.48 + 111.0]],
+      luennat: [['luennat/c-otto1.mp3', 51.667], ['luennat/d-otto1.mp3', 62.667], ['luennat/e-otto1.mp3', 80.0],
+        ['luennat/f-otto1.mp3', 88.833]],
+    },
   },
 };
 const R = RESEPTIT[AJATTELIJA];
@@ -58,6 +65,7 @@ if (KIERROKSET && !R.kierrokset) throw new Error(`${AJATTELIJA}: ei kierrosten 2
 const KESTO = KIERROKSET ? R.kierrokset.kesto : 48.333;
 const LUENNAT = KIERROKSET ? [...R.luennat, ...R.kierrokset.luennat] : R.luennat;
 const ETULIITE = KIERROKSET ? 'kierrokset' : 'kierros1';
+const OSAT = (KIERROKSET && R.kierrokset.osat) || R.osat;
 const SILMUKAN_HAIVYTYS = 3;
 // Vaimennus (s, kierroksen ajassa): päälause ja lähderivi 17,5–31,7 sekä luennat → yhtenäinen ikkuna 17,5 s → loppu;
 // nimi ja kysymys (9,4–15,4 s) saavat musiikin täytenä. v10: ×0,22 (−13 dB), ramppi 2 s, viimeiset 2,7 s ×0,7.
@@ -74,21 +82,21 @@ ff(...LUENNAT.flatMap(([f]) => ['-i', join(LAHTEET, f)]), '-filter_complex',
   '-map', '[out]', '-c:a', 'libmp3lame', '-b:a', '160k', join(ULOS, `${ETULIITE}-puhe.mp3`));
 
 // Musiikki: osat ristihäivytettyinä, sitten (valinnainen) urkupohjan silmukka ristihäivytettyinä, kunnes kesto täyttyy.
-const pituus = R.osat.reduce((s, [a, l]) => s + l - a, 0) - 0.15 * (R.osat.length - 1);
+const pituus = OSAT.reduce((s, [a, l]) => s + l - a, 0) - 0.15 * (OSAT.length - 1);
 const kopioita = R.silmukka && pituus < KESTO
   ? Math.ceil((KESTO - pituus + SILMUKAN_HAIVYTYS) / (R.silmukka[1] - R.silmukka[0] - SILMUKAN_HAIVYTYS)) + 1 : 0;
 const { alku: va, taso, ramppi } = VAIMENNUS;
 const vaimennus = `'if(lt(t,${va}),1,max(${taso},1-(1-${taso})*(t-${va})/${ramppi}))`
   + `*if(gt(t,${(KESTO - LOPPU.kesto).toFixed(3)}),${LOPPU.taso},1)':eval=frame`;
 const kopiot = Array.from({ length: kopioita }, (_, i) => i + 1);
-const osaNimet = R.osat.map((_, i) => `o${i}`);
+const osaNimet = OSAT.map((_, i) => `o${i}`);
 let ketju = osaNimet.length > 1 ? `[o0][o1]acrossfade=d=0.15:c1=tri:c2=tri[y1];` : '[o0]anull[y1];';
 for (let i = 2; i < osaNimet.length; i += 1) ketju += `[y${i - 1}][o${i}]acrossfade=d=0.15:c1=tri:c2=tri[y${i}];`;
 let viimeinen = `y${Math.max(1, osaNimet.length - 1)}`;
 for (const i of kopiot) { ketju += `[${viimeinen}][s${i}]acrossfade=d=${SILMUKAN_HAIVYTYS}:c1=qsin:c2=qsin[x${i}];`; viimeinen = `x${i}`; }
 ff('-i', join(LAHTEET, R.musiikki), '-filter_complex',
-  `[0]aformat=sample_rates=48000:channel_layouts=stereo,asplit=${R.osat.length + kopioita}${osaNimet.map((n) => `[r${n}]`).join('')}${kopiot.map((i) => `[u${i}]`).join('')};`
-  + R.osat.map(([a, l], i) => `[ro${i}]atrim=${a}:${l},asetpts=PTS-STARTPTS[o${i}];`).join('')
+  `[0]aformat=sample_rates=48000:channel_layouts=stereo,asplit=${OSAT.length + kopioita}${osaNimet.map((n) => `[r${n}]`).join('')}${kopiot.map((i) => `[u${i}]`).join('')};`
+  + OSAT.map(([a, l], i) => `[ro${i}]atrim=${a}:${l},asetpts=PTS-STARTPTS[o${i}];`).join('')
   + kopiot.map((i) => `[u${i}]atrim=${R.silmukka[0]}:${R.silmukka[1]},asetpts=PTS-STARTPTS[s${i}];`).join('')
   + ketju
   + `[${viimeinen}]atrim=0:${KESTO},volume=${vaimennus},volume=0.75,alimiter=limit=0.95[out]`,

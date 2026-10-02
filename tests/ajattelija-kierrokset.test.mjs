@@ -49,3 +49,14 @@ test('kaikukuva oikein päin: tekstuuri ilman flipY:tä, koska varjostin lukee r
   assert.match(MOOTTORI, /tk\.colorSpace = THREE\.NoColorSpace;\s*\/\/[^\n]*\n\s*tk\.flipY = false;/);
   assert.match(lue('../js/linssit/ajattelija-projektori.js'), /texture2D\(pKaiku, vec2\(u, 1\.0 - v\)\)/);
 });
+
+test('Marcuksen kierrokset 2–3 samalla rakenteella (marcus-tekstit.json kierrokset_2_3): 4.49 poskella, 2.11 sivulla', async () => {
+  const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
+  const kr = MARCUS.kierrokset;
+  assert.deepEqual(tarkistaAjattelija(MARCUS), []);
+  assert.deepEqual(kr.lista.map((k) => k.paalause), ['itselleen-4-49', 'itselleen-2-11']);
+  assert.deepEqual(MARCUS.paalauseet['itselleen-4-49'].sade, [-0.035, 0.360]);   // poskiparran yläpuolella
+  assert.deepEqual(kr.lista.map((k) => k.kaiku.kuva.split('/').pop()), ['kaiku-uhri.png', 'kaiku-kuolema.png']);
+  assert.equal(kr.loppu, 3330);
+  assert.deepEqual(kamerakayra(kr.kamera)(3330).paikka, MARCUS.otokset.rembrandt.paikka);
+});
