@@ -5,6 +5,7 @@
 # Lisäksi yläkuva (ortografinen, pohjoinen ylös) ja yleiskuva dioraaman yleiskamerasta tilojen sijoittelua varten.
 #   nice -n 15 Blender -b -P tools/dioraama/blender/ulkokuori.py -- <obj> <ulos> [--lod 200000,60000,20000] [--siivoa]
 #   --siivoa: poistaa restauroinnin työmaaromun (kuori_siivous.py) keskityksen jälkeen ja tallentaa tekstuuri_siivottu.png.
+#   --venyneet (siivouksen kanssa): venyneet tekstuurialueet kuntoon (kuori_venyneet.py), periytyy kaikille tasoille.
 import bpy, math, os, sys, time
 from mathutils import Vector
 a = sys.argv[sys.argv.index('--') + 1:]
@@ -44,7 +45,11 @@ if '--siivoa' in a:
     import kuori_siivous
     _k = next(im for im in bpy.data.images if 'diffuse' in im.name)
     kuori_siivous.siivoa(o, _k)
+    if '--venyneet' in a:  # v23 (1.10.): venyneet tekstuurialueet uudelleen UV:lla ja maalattuina ennen laatutasoja
+        import kuori_venyneet
+        kuori_venyneet.korjaa(o, _k)
     kuori_siivous.tallenna_kuva(_k, os.path.join(ULOS, 'tekstuuri_siivottu.png'))
+    kuori_siivous.tallenna_maski(os.path.join(ULOS, 'siivousmaski.png'))
 
 # Tekstuuri: 4k alkuperäinen LOD0:lle, 2k muille (JPEG vientiin).
 kuva = next(im for im in bpy.data.images if 'diffuse' in im.name)

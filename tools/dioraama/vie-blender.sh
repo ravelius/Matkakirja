@@ -55,6 +55,37 @@ if [ -f "$LAHDE/ulkokuori/hybridi/kuori-materiaali-2k.png" ]; then
       [ -f "$KIRJASTO/materiaali/$id/${id}_$k" ] || { echo "PUUTTUU: $KIRJASTO/materiaali/$id/${id}_$k" >&2; exit 1; }
       LISTA+=("kirjasto/materiaali/$id/${id}_$k|@$KIRJASTO/materiaali/$id/${id}_$k")
     done
+    for k in diff-4x4.astcm nor_gl-4x4.astcm; do  # ASTC (1.10.), jos kirjastossa
+      if [ -f "$KIRJASTO/materiaali/$id/${id}_$k" ]; then LISTA+=("kirjasto/materiaali/$id/${id}_$k|@$KIRJASTO/materiaali/$id/${id}_$k"); fi
+    done
+  done
+fi
+# Ympäristö (vaihe 5, aikakerros n1500, 1.10.2026): tools/dioraama/blender/ymparisto_putki.sh → $LAHDE/ymparisto/.
+# Mukaan, jos lähteessä on (koko lista, tai ei mitään).
+if [ -f "$LAHDE/ymparisto/ymparisto_huippu.glb" ]; then
+  for f in ymparisto_huippu.glb ymparisto_normaali.glb ymparisto_kevyt.glb puut.json puukortit.png puukortit-hamara.png \
+           puukortit.json horisontti.glb horisontti-1k.jpg horisontti-hamara-1k.jpg syvyys.png \
+           ymparisto-8k-4x4.astcm ymparisto-4k-4x4.astcm ymparisto-2k-4x4.astcm \
+           ymparisto-hamara-8k-4x4.astcm ymparisto-hamara-4k-4x4.astcm ymparisto-hamara-2k-4x4.astcm; do
+    lisaa "ymparisto/$f" "ymparisto/$f"
+  done
+  # Lähimaasto (kerrosmaskit + CC0-kerrokset) ja aluskasvit, jos lähteessä (1.10.2026).
+  if [ -f "$LAHDE/ymparisto/splat-0.png" ]; then
+    for f in splat-0.png splat-1.png splat-normaali-0.png aluskasvit.png aluskasvit-hamara.png aluskasvit.json aluskasvit-lista.json; do
+      lisaa "ymparisto/$f" "ymparisto/$f"
+    done
+    for f in "$LAHDE"/ymparisto/maasto/*_1k.jpg "$LAHDE"/ymparisto/maasto/*_1k-4x4.astcm(N); do lisaa "ymparisto/maasto/${f:t}" "ymparisto/maasto/${f:t}"; done
+  fi
+  # Puukorttien normaalikartta (v3), jos lähteessä.
+  [ -f "$LAHDE/ymparisto/puukortit-normaali.png" ] && lisaa ymparisto/puukortit-normaali.png ymparisto/puukortit-normaali.png
+  # Taivas (LDR-equirect päivä + hämärä, 1.10.2026), jos lähteessä.
+  if [ -f "$LAHDE/ymparisto/taivas-2k.jpg" ] && [ -f "$LAHDE/ymparisto/taivas-hamara-2k.jpg" ]; then
+    lisaa ymparisto/taivas-2k.jpg ymparisto/taivas-2k.jpg; lisaa ymparisto/taivas-hamara-2k.jpg ymparisto/taivas-hamara-2k.jpg
+  fi
+  # ASTC-mipketjut kuville (Siirtoseppä 1.10., ensilataus v2), jos lähteessä; png/jpg jäävät rinnalle.
+  for f in puukortit puukortit-hamara puukortit-normaali horisontti-1k horisontti-hamara-1k taivas-2k taivas-hamara-2k \
+           aluskasvit aluskasvit-hamara; do
+    if [ -f "$LAHDE/ymparisto/$f-4x4.astcm" ]; then lisaa "ymparisto/$f-4x4.astcm" "ymparisto/$f-4x4.astcm"; fi
   done
 fi
 for g in "$LAHDE"/tilat/*.glb; do
@@ -97,7 +128,7 @@ else
   i=0
   while read -r p s b; do
     i=$((i + 1)); f=$(awk -v p="$p" '$1 == p { print $2; exit }' "$TMP/lahteet")
-    case "$p" in *.glb) ct=model/gltf-binary ;; *.jpg) ct=image/jpeg ;; *.png) ct=image/png ;; *) ct=application/octet-stream ;; esac
+    case "$p" in *.glb) ct=model/gltf-binary ;; *.jpg) ct=image/jpeg ;; *.png) ct=image/png ;; *.json) ct=application/json ;; *) ct=application/octet-stream ;; esac
     printf '   [%d/%d] %s (%d Mt)\n' $i $N "$p" $((b / 1048576))
     aws s3 cp "$f" "s3://$AMPARI/$KOHDE/$p" --endpoint-url "$PAATE" --no-progress --only-show-errors \
       --content-type "$ct" --cache-control 'public, max-age=31536000, immutable'

@@ -62,6 +62,7 @@ test('Pulun piilotetun napin vara-ankkuri vastaa uutta alaoikeaa paikkaa',()=>{
 // Kuplan napautusnielu asuu ui-apureissa: sama vuoto koskee kaikkia
 // kelluvia kuplia (ks. tämän tiedoston loppu). Puheenvuoron jako osiin
 // asuu samassa tiedostossa (kuplapino, 3.9.2026).
+import { nostonAihe } from '../js/fokusnosto.js';
 import { jaaPuheenvuoroksi, linssiEstaa, nielaiseSulkevaNapautus } from '../js/ui-apurit.js';
 // Puheenvuoron jaon testi lukee tekstinsä paketista eikä kopioi sitä
 // tänne. Uuden kulun kaupungeissa repliikit on 7.9.2026 alkaen
@@ -421,11 +422,43 @@ test('lueNakyma astronautin kamerassa: ei kaupunkia, maata eikä matkapäivää'
   assert.ok(!kuvassa.includes('Doha'), kuvassa);
 });
 
+// Avoin linssi näkymärivillä (Päätoimittaja 1.10.2026): Ihmisen matkassa ei enää "kartta".
+test('lueNakyma avoimessa linssissä: "linssi auki: <nimi>", lehti voittaa', () => {
+  const doc = teeDoc({ lehti: teeLehti({ auki: false }) });
+  const ui = { linssiValittu: 'ihmisen-matka', linssiTuki: { kaikki: [{ tunnus: 'ihmisen-matka', nimi: 'Ihmisen matka' }] } };
+  const linssissa = lueNakyma({ game: teeGame(), ui, doc });
+  assert.ok(linssissa.includes('Näkymä: linssi auki: Ihmisen matka'), linssissa);
+  assert.ok(!linssissa.includes('Näkymä: kartta'), linssissa);
+  // Ilman ladattua linssilistaa tunnus kelpaa nimeksi.
+  assert.ok(lueNakyma({ game: teeGame(), ui: { linssiValittu: 'radio' }, doc }).includes('Näkymä: linssi auki: radio'));
+  const lehdessa = lueNakyma({ game: teeGame(), ui, doc: teeDoc({ lehti: teeLehti({ auki: true }) }) });
+  assert.ok(lehdessa.includes('Näkymä: kaupungin lehti auki'), lehdessa);
+});
+
 test('lueNakyma kartalla: ei lehtitekstiä, ei kaatumista ilman peliä', () => {
   const kartalla = lueNakyma({ game: teeGame(), doc: teeDoc({ lehti: teeLehti({ auki: false }) }) });
   assert.ok(kartalla.includes('Näkymä: kartta'));
   assert.ok(!kartalla.includes(JUTUN_TEKSTI));
   assert.equal(lueNakyma({ game: null, doc: teeDoc() }), 'Näkymä: kartta');
+});
+
+/*
+ * OMISTAJAN LÖYDÖS 30.9.2026 (TF 1.1 (78)): Segovian akvedukti → "Miten
+ * akveduktin ikä selvitettiin?" → pulu ei tiennyt, mistä akveduktista on
+ * kyse. Kortti antaa aiheensa kysymyksen mukana (polloKysy aihe), koska
+ * täkynoston kortti sulkeutuu ennen kysymystä.
+ */
+test('lueNakyma: kortin aihe kulkee kysymyksen mukana, avoin tietoruutu voittaa', () => {
+  const aihe = nostonAihe({ otsikko: 'Segovian akvedukti', ingressi: 'Roomalainen vesijohto.', teksti: 'Rakennettiin 100-luvulla.' });
+  const k = lueNakyma({ game: teeGame(), doc: teeDoc(), aihe });
+  assert.ok(k.includes('Kortti, josta pelaaja kysyy: Segovian akvedukti'), k);
+  assert.ok(k.includes('Tietoruudun teksti: Roomalainen vesijohto. Rakennettiin 100-luvulla.'), k);
+  assert.ok(k.includes('Näkymä: kartta'));
+  const ui = { fokuskohdeAuki: { kohde: { nimi: 'Alhambra', tyyppi: 'palatsi', teksti: 'Nasridien palatsi.' } } };
+  const auki = lueNakyma({ game: teeGame(), ui, doc: teeDoc(), aihe });
+  assert.ok(auki.includes('Kartalla auki oleva kohdetietoruutu: Alhambra (palatsi)'), auki);
+  assert.ok(!auki.includes('Segovian'));
+  assert.equal(nostonAihe({}), null);
 });
 
 /* ---------------------------------------------------------------- */

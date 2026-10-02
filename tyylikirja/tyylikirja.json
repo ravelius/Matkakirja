@@ -1,0 +1,157 @@
+{
+  "_ohje": "TYYLIKIRJA (omistaja 1.10.2026, UI-pohjat kohta 7): pelin tyylien AINOA LÄHDE webille ja natiiville. Muokkaa vain tätä ja aja `node tools/tyylikirja.mjs` (web: css/styles.css:n generoitu lohko) ja `node tools/tyylikirja.mjs --natiivi <proto-git>` (Tyylikirja.uss, Tyylikirja.cs, tyylikirja.json-kopio). Raportti: docs/raportit/ui-pohjat-kartoitus-20261001.md. Uusi pinta käyttää vain näitä arvoja ja pohjia; puuttuva arvo → kysymys Päätoimittajalle.",
+  "versio": 1,
+  "kehys": {
+    "_selite": "Sovelluksen kehyksen ja kartan värit. Nimet ovat samat kuin ennen (css/styles.css :root ja Matkakirja.uss :root), joten mikään käyttöpaikka ei muutu.",
+    "_vainNatiivi": ["kulta", "rivi-tausta"],
+    "_vainNatiiviSyy": "Webissä --kulta on määrittelemätön (käyttöpaikat var(--kulta, #eab84e), var(--kulta, #d9a13b) ja ilman varaa); määrittely muuttaisi niitä. Yhtenäistetään KORTTI-pohjan siirrossa.",
+    "bg": "#1d1610",
+    "panel": "#2a1f16",
+    "panel-2": "#35271a",
+    "line": "#4b3826",
+    "ink-light": "#f3e6d0",
+    "muted": "#b39c7d",
+    "accent": "#d9a13b",
+    "accent-dark": "#8a6114",
+    "kulta": "#eab84e",
+    "danger": "#ff9b8a",
+    "rivi-tausta": "rgba(53, 39, 26, 0.55)",
+    "overlay-card": "rgba(46, 33, 20, 0.88)",
+    "overlay-line": "rgba(217, 161, 59, 0.45)"
+  },
+  "kartta": {
+    "_selite": "Kartan paperi ja muste. raja-muste: maiden rajojen yksi sävy (karttauudistuksen PÄÄTÖKSET 15 kohta 3, 14.9.2026); kerma: kartan vaalein paperi (PÄÄTÖKSET 4 ja 7). Perustelut css/styles.css:n kommenteissa.",
+    "paper": "#efdcb4",
+    "paper-dark": "#dcc08f",
+    "map-ink": "#46331f",
+    "map-ink-soft": "#8a6c46",
+    "sea-ink": "#6e6350",
+    "mark": "#b03a2b",
+    "raja-muste": "#6b5539",
+    "kerma": "#faf4d6"
+  },
+  "teemat": {
+    "_selite": "UI-pohjien kolme teemaa (+ linssin avaruuslasi). Teeman valitsee konteksti, ei pinta. Värit webin nykyisistä pinnoista; ei saavutettavuusperusteisia näkyviä muutoksia (omistajan Ydinajatus).",
+    "paperi": {
+      "pinta": "#f5f0e2",
+      "pergamentti": "#ecd8ae",
+      "muste": "#211d18",
+      "muste-pehmea": "#5c4a32",
+      "korostus": "#7a5514",
+      "reunus": "rgba(70, 51, 31, 0.3)",
+      "toiminto": "#d9a13b"
+    },
+    "tumma": {
+      "pinta": "#201a14",
+      "muste": "#f1e6d0",
+      "muste-pehmea": "#c9b48f",
+      "korostus": "#d9a13b",
+      "reunus": "rgba(217, 161, 59, 0.38)",
+      "toiminto": "#d9a13b"
+    },
+    "lasi": {
+      "pinta": "rgba(46, 33, 20, 0.88)",
+      "pinta-peitto": "#2e2114",
+      "muste": "#f3e6d0",
+      "muste-pehmea": "#c9b48f",
+      "korostus": "#d9a13b",
+      "reunus": "rgba(217, 161, 59, 0.45)",
+      "toiminto": "#d9a13b"
+    },
+    "lasi-avaruus": {
+      "pinta": "rgba(4, 12, 9, 0.9)",
+      "pinta-peitto": "#040c09",
+      "muste": "#dff6e8",
+      "muste-pehmea": "#9fc9b0",
+      "korostus": "#5dffa8",
+      "reunus": "rgba(93, 255, 168, 0.28)",
+      "toiminto": "#5dffa8"
+    }
+  },
+  "himmennys": {
+    "tumma": "rgba(14, 9, 4, 0.72)",
+    "kevyt": "rgba(14, 9, 4, 0.35)",
+    "kuva": "rgba(14, 9, 4, 0.92)"
+  },
+  "tila": {
+    "_selite": "Tilavärit (omistaja 1.10.2026, visa versio B): onnistuminen ja virhe; käytetään vain tilan merkkinä (oikein/väärin), ei tekstin pohjana.",
+    "onnistuminen": "#2f6b3f",
+    "virhe": "#b03a2b"
+  },
+  "kentta": {
+    "_selite": "LOMAKEKENTTÄ (tk-kentta, uusi pohjaosa, omistaja 1.10.2026; arvot omistajan mallikuvasta, Pelikoodari): tekstikenttä, alue ja valinta lomakkeissa. Korkeus = osuma-ala, alue 2 × korkeus; teksti Luku 16, vihje kursiivina.",
+    "korkeus": 44,
+    "alue": 88,
+    "kulma": 10,
+    "vali-pysty": 8,
+    "vali-vaaka": 12,
+    "koko": 16,
+    "pinta": "#f5f0e2",
+    "reunus": "rgba(70, 51, 31, 0.3)",
+    "fokus": "#d9a13b",
+    "muste": "#211d18",
+    "vihje": "#5c4a32"
+  },
+  "typografia": {
+    "_selite": "Seitsemän porrasta (pt). LEVEÄ- ja KESKI-luokassa portaat leipa…arkki +2 (leveaLisa). Kirjasin = natiivin Kirjasin-enum ja webin fonttipino.",
+    "kapiteeli": { "koko": 12, "kirjasin": "Kone", "harvennus": 0.12 },
+    "apuri": { "koko": 14, "kirjasin": "LukuKursiivi" },
+    "leipa": { "koko": 16, "kirjasin": "Luku" },
+    "valiotsikko": { "koko": 18, "kirjasin": "KoneLihava" },
+    "otsikko": { "koko": 21, "kirjasin": "LukuLihava" },
+    "arkki": { "koko": 26, "kirjasin": "LukuLihava" },
+    "nimio": { "koko": 34, "kirjasin": "KoneBold" },
+    "leveaLisa": 2
+  },
+  "fontit": {
+    "_selite": "web = CSS-pino (sama kuin ennen), natiivi = Kirjasimet.cs:n ehdokkaat (perhe, tyyli) järjestyksessä.",
+    "web": {
+      "font-type": "\"American Typewriter\", \"Courier Prime\", \"Courier New\", Courier, monospace",
+      "font-luku": "\"Iowan Old Style\", Charter, \"Palatino Linotype\", Palatino,\n    Georgia, \"Times New Roman\", serif",
+      "font-kauno": "\"Snell Roundhand\", \"Savoye LET\", \"Bradley Hand\",\n    \"Segoe Script\", \"Comic Sans MS\", cursive",
+      "font-atlas": "\"Liberation Serif\", \"Times New Roman\", Times, serif"
+    },
+    "natiivi": {
+      "Kone": [["American Typewriter", "Regular"], ["Courier New", "Regular"], ["Courier", "Regular"]],
+      "KoneLihava": [["American Typewriter", "Semibold"], ["American Typewriter", "Bold"], ["Courier New", "Bold"]],
+      "KoneBold": [["American Typewriter", "Bold"], ["American Typewriter", "Semibold"], ["Courier New", "Bold"]],
+      "Luku": [["Iowan Old Style", "Roman"], ["Iowan Old Style", "Regular"], ["Charter", "Roman"], ["Palatino", "Regular"], ["Georgia", "Regular"]],
+      "LukuLihava": [["Iowan Old Style", "Bold"], ["Charter", "Bold"], ["Palatino", "Bold"], ["Georgia", "Bold"]],
+      "LukuKursiivi": [["Iowan Old Style", "Italic"], ["Charter", "Italic"], ["Palatino", "Italic"], ["Georgia", "Italic"]],
+      "Kauno": [["Snell Roundhand", "Regular"], ["Savoye LET", "Plain"], ["Bradley Hand", "Bold"]]
+    }
+  },
+  "mitat": {
+    "_selite": "pt (web px). vali = välien asteikko; kulma = border-radius; nappi = kolme nappityyppiä 38 pt, osuma-ala aina ≥ 44 pt.",
+    "vali": { "xs": 4, "s": 8, "m": 12, "l": 16, "xl": 24 },
+    "kulma": { "pieni": 6, "nappi": 10, "kortti": 12, "pilleri": 999 },
+    "nappi": { "korkeus": 38, "osuma": 44, "laukaisin": 64 },
+    "leveys": { "kapea": 600, "levea": 940, "kortti": 420, "minipopup": 320, "paneeli": 350, "sivukortti": 400, "lukupalsta": 640, "lehti": 960 },
+    "peitto": { "max": 45, "ohjain": 25, "kamera": 20, "laajennettu": 85, "paneeli": 70 },
+    "kuva": { "hero-kortti": "2:1", "hero-arkki": "3:2", "upotus": "4:3", "upotus-leveys": 40, "galleria-korkeus": 64 }
+  },
+  "liike": {
+    "_selite": "ms. Mikään UI-siirtymä (avaus, sulku, siirto, ponnahdus) ei ylitä maksimia (UI-pohjat kohta 6); ei koske jatkuvia sisältöanimaatioita kuten matkamittaria, kartan liikettä tai linssien omaa liikettä (omistaja 1.10.2026 klo 11.37). Käyrät webin cubic-bezier; natiivi Ponnahdus.cs käyttää samaa sisaan-käyrää.",
+    "avaus": 220,
+    "sulku": 200,
+    "liuku": 240,
+    "maksimi": 250,
+    "sisaan": "cubic-bezier(0.22, 0.9, 0.24, 1)",
+    "pehmea": "cubic-bezier(0.45, 0, 0.2, 1)",
+    "ulos": "cubic-bezier(0.4, 0, 1, 1)"
+  },
+  "pohjat": {
+    "_selite": "Hyväksytyt pohjat (omistaja 1.10.2026). Uusi pinta valitsee näistä; merge-pyynnössä rivi 'Pohja: …'.",
+    "NOSTOKORTTI": { "teemat": ["paperi", "tumma"], "kuvat": "0|1|2|3+", "sulku": "ohinapautus, veto alas, Esc (ei ✕)", "osat": ["NOSTOSELAIN (‹ Nostot ›, PANEELI, luetut/kaikki)", "AUTO (luenta, siirtyy seuraavaan 3 s)"] },
+    "LUKUARKKI": { "teemat": ["paperi"], "kuvat": "vapaa", "sulku": "POISTU, Esc, veto oikealle" },
+    "KORTTI": { "teemat": ["paperi"], "kuvat": "0|1", "sulku": "modaali: napit; muuten Takaisin, ohinapautus, Esc" },
+    "PANEELI": { "teemat": ["paperi", "lasi"], "kuvat": "0", "sulku": "ohinapautus, Esc, avaaja" },
+    "KUVANÄKYMÄ": { "teemat": ["tumma"], "kuvat": "1+", "sulku": "✕, ohinapautus, veto alas, Esc" },
+    "LINSSIN OHJAIN": { "teemat": ["lasi", "lasi-avaruus"], "kuvat": "0", "sulku": "Sulje linssi, Esc", "variantit": ["KAMERAN PÄÄLLYS"] },
+    "PULU": { "osat": ["CHAT", "VALINTATAULU", "OPETUSTAULU"], "teemat": ["paperi", "lasi-avaruus"], "sulku": "Pulun napautus, ohinapautus, Esc (ei ✕)" },
+    "EDISTYMINEN": { "osa": true, "teemat": ["paperi", "lasi", "lasi-avaruus"] },
+    "KENTTÄ": { "osa": true, "teemat": ["paperi"], "_selite": "tk-kentta (omistaja 1.10.2026)" },
+    "LAUTAPELI": { "koostuu": ["KUVANÄKYMÄ (lauta)", "PANEELI (ohjaimet)", "KORTTI (valinta ja voitto)"], "teemat": ["paperi", "tumma"], "_selite": "lautapelien pohja (omistaja 1.10.2026, loki b3e273d72; Siirtosepän Mylly-malli)" },
+    "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)" }
+  }
+}

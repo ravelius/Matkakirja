@@ -164,6 +164,8 @@ import { haeAstronautinKysymykset } from './astronaut-kysymykset.js';
 import { avaaAstronautinAani } from './satelliitti-aani.js';
 import { PULUN_TERVETULO_KAYTOSSA, aloitaPulunTervetulo } from './pulu-tervetulo.js';
 import { luoAstroTaulu } from './pulu-taulu.js';
+import { autoPaalla, asetaAuto, luoAutoKytkin, luoAutoSiirto } from '../pohjat/auto.js';
+import { pohjatLataaTyyli } from '../pohjat/pohjat.js';
 
 /*
  * VARTIJAN KELLOT (Raamattu, ASTRONAUTIN KAMERA LISÄYS 11 kohta 34).
@@ -849,7 +851,8 @@ function avaaHavaintokortti({
   } catch {
     /* Yksityinen tila tai estetty talletus: vinkki jää väliin, ei kaaduta. */
   }
-  if (!vinkkiNahty && !liikePois) {
+  // AUTOn aikana selite pysyy minimoituna (omistaja 2.10.2026), joten avausvinkki jää pois.
+  if (!vinkkiNahty && !liikePois && !autoPaalla()) {
     asetaSelite(false);
     vinkkiAjastin = setTimeout(() => {
       vinkkiAjastin = null;
@@ -895,6 +898,47 @@ function avaaHavaintokortti({
   const seuraavaKohde = nappi('satelliitti-kohdenappi', '›', 'Seuraava kohde kartalla');
   kohdenapit.append(edellinenKohde, seuraavaKohde);
   kohdenapit.hidden = !siirry || !naapuriKohde?.(1);
+
+  /*
+   * AUTO (omistaja 2.10.2026, Hongkongin kaappaus: *"Automaattinen kohteen vaihto olisi tässä kiva."*). NOSTOKORTTI-
+   * pohjan osa AUTO (js/pohjat/auto.js, sama kuin natiivin nostoselaimessa): kertoja lukee leipätekstin, 3 s:n lappu
+   * ja seuraava kohde maailmankierroksen järjestyksessä (sama kuin ›). AUTOn aikana selite pysyy minimoituna ja
+   * otsikkona on pelkkä kohteen nimi. Pelaajan napautus, nipistys tai nuoli pysäyttää AUTOn.
+   */
+  pohjatLataaTyyli();
+  const autoKytkin = luoAutoKytkin({ muuttui: (paalle) => autoMuuttui(paalle) });
+  const autoSiirto = luoAutoSiirto({ pysaytetty: () => autoMuuttui(false) });
+  const autoKulma = html('div', 'satelliitti-autokulma tk-teema-lasi-avaruus');
+  autoKulma.append(autoKytkin.el);
+  autoKulma.hidden = kohdenapit.hidden;
+  autoSiirto.el.classList.add('satelliitti-autolappu');
+  const autoKaytossa = () => autoPaalla() && !autoKulma.hidden;
+  function naytaAutoTila() {
+    const paalla = autoKaytossa();
+    katselu.classList.toggle('satelliitti-auto-paalla', paalla);
+    if (paalla && !selite.classList.contains('satelliitti-selite-kiinni')) asetaSelite(true);
+    else sovitaOtsikko();
+  }
+  function autoMuuttui(paalle) {
+    naytaAutoTila();
+    if (!paalle) { autoSiirto.lopeta(); return; }
+    // Päälle kesken katselun: kohde luetaan nyt, ja luennan jälkeen siirrytään.
+    luettu = null;
+    lueSelite(havainnot[indeksi]);
+  }
+  /** Luenta loppui: AUTO päällä → lappu ja 3 s:n päästä seuraava kohde (vain tämän kortin tuorein luenta). */
+  function luentaLoppui(vuoro) {
+    if (vuoro !== luentaVuoro || !katselu.isConnected || !autoKaytossa()) return;
+    const seuraava = naapuriKohde?.(1);
+    if (!seuraava) return;
+    autoSiirto.aloita(seuraava.nimi, () => { if (katselu.isConnected && autoKaytossa()) vaihdaKohde(1); });
+  }
+  // Pelaajan napautus, nipistys tai rulla kuvalla pysäyttää AUTOn (kytkin ja lappu eivät).
+  const pysaytaAuto = (e) => {
+    if (!autoKaytossa() || autoKulma.contains(e.target) || autoSiirto.el.contains(e.target)) return;
+    asetaAuto(false);
+    autoMuuttui(false);
+  };
 
   /*
    * ── MINIPULU RUUDUN OIKEASSA ALAKULMASSA ─────────────────────────
@@ -1200,7 +1244,9 @@ function avaaHavaintokortti({
   pulunSulku.addEventListener('click', (e) => { e.stopPropagation(); naytaPulukortti(false); });
   pulukulma.append(pulukortti, pulunappi);
 
-  katselu.append(lava, selite, kulma, nauha, kohdenapit, pulukulma);
+  katselu.append(lava, selite, kulma, nauha, kohdenapit, pulukulma, autoKulma, autoSiirto.el);
+  katselu.addEventListener('pointerdown', pysaytaAuto, true);
+  katselu.addEventListener('wheel', pysaytaAuto, true);
   document.body.appendChild(katselu);
   /* Hampurilainen pois kuvan ajaksi (LISÄYS 6, ks. KUVA_AUKI_LUOKKA). */
   document.body.classList.add(KUVA_AUKI_LUOKKA);
@@ -1208,6 +1254,7 @@ function avaaHavaintokortti({
   const nappain = (e) => {
     if (e.key === 'Escape') { sulje(); return; }
     // Nuolinäppäimet selaavat kuten pyyhkäisy: galleria jatkuu naapuriin.
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') pysaytaAuto(e);
     if (e.key === 'ArrowRight') selaa(1);
     if (e.key === 'ArrowLeft') selaa(-1);
   };
@@ -1225,6 +1272,8 @@ function avaaHavaintokortti({
     /* Vinkkiajastin ei saa herätä suljetun näkymän päälle. */
     lopetaVinkki();
     lopetaLiuku();
+    autoSiirto.lopeta();
+    autoKytkin.pura();
     // Selitteen luenta loppuu kuvan mukana (ei muiden puhujien luentaa).
     if (luettu) { try { pysaytaLukija(); } catch { /* ei lukijaa */ } }
     clearTimeout(kirkastusAjastin);
@@ -1621,8 +1670,10 @@ function avaaHavaintokortti({
    * syntetisoidaan kerran, ei joka katselulla.
    */
   let luettu = null;
+  let luentaVuoro = 0;
   function lueSelite(h) {
-    if (!luentaKytkinPaalla()) return;
+    // AUTO lukee itse, vaikka kertoja olisi pois (NOSTOKORTTI-osa AUTO: "luenta, siirtyy seuraavaan").
+    if (!luentaKytkinPaalla() && !autoKaytossa()) return;
     /*
      * PULUN TERVETULO VÄISTÄÄ (löydös: Linssiseppä 1 / Päätoimittaja
      * 29.9.2026, PR #3575): kuva, joka aukeaa tervetulon ollessa kesken
@@ -1633,10 +1684,19 @@ function avaaHavaintokortti({
      * napautuksella, joka ohittaa sen) luetaan normaalisti.
      */
     if (!automaattiluentaSallittu()) return;
-    const teksti = `${kohde.nimi}, ${kohde.seutu}. ${h?.teksti ?? kohde.selite ?? ''}`.trim();
+    // Vain leipäteksti (omistaja 2.10.2026: *"Lukijan ei kannata lukea otsikkoa, ainoastaan leipäteksti."*).
+    const teksti = String(h?.teksti ?? kohde.selite ?? '').trim();
     if (!teksti || teksti === luettu) return;
     luettu = teksti;
-    try { lueAaneen(teksti, null, { persoona: 'kertoja', sailio: SELITTEEN_SAILIO }); } catch { /* ei ääntä */ }
+    luentaVuoro += 1;
+    const vuoro = luentaVuoro;
+    let alkoi = false;
+    try {
+      alkoi = lueAaneen(teksti, null, {
+        persoona: 'kertoja', sailio: SELITTEEN_SAILIO, onLoppu: () => luentaLoppui(vuoro),
+      });
+    } catch { /* ei ääntä */ }
+    if (!alkoi) luentaLoppui(vuoro);
   }
   function nayta(uusi) {
     if (!havainnot.length) return;
@@ -1664,6 +1724,7 @@ function avaaHavaintokortti({
   }
   kuva.addEventListener('error', () => katselu.classList.add('satelliitti-kuvatta'), { once: true });
   kuva.addEventListener('load', () => { piirra(); });
+  naytaAutoTila();
   nayta(indeksi);
   kuva.src = havainnot[indeksi].kuva;
   kuva.alt = kuvatiedot(kohde, havainnot[indeksi]).lyhyt;

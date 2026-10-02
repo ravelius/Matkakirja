@@ -346,13 +346,82 @@ export function lisaaBlender(rakennusJson, blender) {
     rakennusJson.ulkokuori.detalji = {
       maski: B('ulkokuori/hybridi/kuori-materiaali-2k.png'), voimakkuus: 0.8, normaali: 0.7,
       kanavat: DETALJI.map((id) => ({ id, diff: B(kp(id, 'diff.jpg')), nor: B(kp(id, 'nor_gl.jpg')),
-        toisto_m: kirjasto[`materiaali/${id}`].toisto_m })),
+        toisto_m: kirjasto[`materiaali/${id}`].toisto_m,
+        // ASTC (Siirtoseppä 1.10.: ei runtime-pakkausta) + keski = diff-kuvan lineaarinen luminanssi (0,299/0,587/0,114),
+        // jonka natiivi ennen laski GetPixelsillä; vain jos .astcm on viety (keski_luminanssi.py → lahteet.json).
+        ...(on.has(kp(id, 'diff-4x4.astcm')) && on.has(kp(id, 'nor_gl-4x4.astcm'))
+          ? { diff_astc: B(kp(id, 'diff-4x4.astcm')), nor_astc: B(kp(id, 'nor_gl-4x4.astcm')), keski: kirjasto[`materiaali/${id}`].keski } : {}) })),
     };
+  }
+  // Ympäristö (laatusuunnitelman vaihe 5, aikakerros n1500; Siirtosepän kenttänimet 1.10.): Kyrönsalmen maasto
+  // laatutasoittain, ortokuva ASTC:nä (hämärä erikseen), puulista + korttiatlakset, horisonttirengas ja veden
+  // syvyyskartta. Vain jos kaikki ympäristön tiedostot ovat blender.json:ssa (vanha paketti ei muutu).
+  const Y = (p) => `ymparisto/${p}`;
+  const YMP = ['ymparisto_huippu.glb', 'ymparisto_normaali.glb', 'ymparisto_kevyt.glb', 'puut.json', 'puukortit.png',
+    'puukortit-hamara.png', 'puukortit.json', 'horisontti.glb', 'horisontti-1k.jpg', 'horisontti-hamara-1k.jpg', 'syvyys.png',
+    ...['8k', '4k', '2k'].flatMap((k) => [`ymparisto-${k}-4x4.astcm`, `ymparisto-hamara-${k}-4x4.astcm`])];
+  if (YMP.every((p) => on.has(Y(p)))) {
+    const yt = { huippu: '8k', normaali: '4k', kevyt: '2k' };
+    const syv = JSON.parse(readFileSync(new URL('../../js/dioraama/rakennukset/olavinlinna/ymparisto-syvyys.json', import.meta.url), 'utf8'));
+    rakennusJson.ymparisto = {
+      ...Object.fromEntries(Object.keys(yt).map((t) => [t, B(Y(`ymparisto_${t}.glb`))])),
+      orto: Object.fromEntries(Object.entries(yt).map(([t, k]) => [t, B(Y(`ymparisto-${k}-4x4.astcm`))])),
+      puut: B(Y('puut.json')), puukortit: B(Y('puukortit.png')), puukortit_tiedot: B(Y('puukortit.json')),
+      horisontti: B(Y('horisontti.glb')), horisontti_kuva: B(Y('horisontti-1k.jpg')),
+      hamara: {
+        orto: Object.fromEntries(Object.entries(yt).map(([t, k]) => [t, B(Y(`ymparisto-hamara-${k}-4x4.astcm`))])),
+        puukortit: B(Y('puukortit-hamara.png')), horisontti_kuva: B(Y('horisontti-hamara-1k.jpg')),
+      },
+      syvyys: { kuva: B(Y('syvyys.png')), pikseli_m: syv.pikseli_m, kerroin_m: syv.kerroin_m, origo: syv.origo },
+    };
+    // Lähimaaston kerrosmaskit (Siirtosepän splat-rajapinta 1.10.) ja aluskasvit (Linssiseppä 2), jos viety.
+    const MAA = JSON.parse(readFileSync(new URL('../../js/dioraama/rakennukset/olavinlinna/ymparisto-maasto.json', import.meta.url), 'utf8'));
+    const maaTied = ['splat-0.png', 'splat-1.png', 'splat-normaali-0.png',
+      ...MAA.kerrokset.flatMap((k) => [`maasto/${k.lahde}_diff_1k.jpg`, `maasto/${k.lahde}_nor_gl_1k.jpg`])];
+    if (maaTied.every((p) => on.has(Y(p)))) {
+      rakennusJson.ymparisto.maasto = {
+        alue: MAA.alue, lahi_m: MAA.lahi_m,
+        maski: [B(Y('splat-0.png')), B(Y('splat-1.png'))], maski_normaali: B(Y('splat-normaali-0.png')),
+        kerrokset: MAA.kerrokset.map((k) => ({ id: k.id, diff: B(Y(`maasto/${k.lahde}_diff_1k.jpg`)),
+          nor: B(Y(`maasto/${k.lahde}_nor_gl_1k.jpg`)), toisto_m: k.toisto_m,
+          // ASTC + keski (lineaarinen luminanssi 0,2126/0,7152/0,0722, ymparisto-maasto.json), vain jos .astcm on viety.
+          ...([`maasto/${k.lahde}_diff_1k-4x4.astcm`, `maasto/${k.lahde}_nor_gl_1k-4x4.astcm`].every((p) => on.has(Y(p)))
+            ? { diff_astc: B(Y(`maasto/${k.lahde}_diff_1k-4x4.astcm`)), nor_astc: B(Y(`maasto/${k.lahde}_nor_gl_1k-4x4.astcm`)), keski: k.keski } : {}) })),
+      };
+    }
+    // Puukorttien normaalikartta (v3, Siirtoseppä 1.10.: tangenttiavaruus, OpenGL), jos viety.
+    if (on.has(Y('puukortit-normaali.png'))) rakennusJson.ymparisto.puukortit_normaali = B(Y('puukortit-normaali.png'));
+    // Taivas (Siirtosepän pyyntö 1.10.): välikuvien Poly Haven -taivaat LDR-equirectinä (AgX, 2048 × 1024). u = 0 osoittaa
+    // atsimuuttiin taivas_suunta (270 = länsi) ja u kasvaa myötäpäivään; kuvan alapuolisko on HDRI:n synteettistä maata.
+    if (['taivas-2k.jpg', 'taivas-hamara-2k.jpg'].every((p) => on.has(Y(p)))) {
+      Object.assign(rakennusJson.ymparisto, { taivas: B(Y('taivas-2k.jpg')), taivas_hamara: B(Y('taivas-hamara-2k.jpg')), taivas_suunta: 270 });
+    }
+    if (['aluskasvit.png', 'aluskasvit-hamara.png', 'aluskasvit.json', 'aluskasvit-lista.json'].every((p) => on.has(Y(p)))) {
+      rakennusJson.ymparisto.aluskasvit = { atlas: B(Y('aluskasvit.png')), atlas_hamara: B(Y('aluskasvit-hamara.png')),
+        kortit: B(Y('aluskasvit.json')), lista: B(Y('aluskasvit-lista.json')) };
+    }
+    // ASTC-mipketjut (Siirtoseppä 1.10., ensilataus v2: iPadin LoadImage-purkupiikit pois). png/jpg-kentät jäävät
+    // (simulaattori ja vanhat natiivit); *_astc vain, jos .astcm on viety. Lohko 4×4, alfa säilyy, normaalikartta lineaarisena.
+    const ya = rakennusJson.ymparisto;
+    const astc = (o, k, p) => { if (o && on.has(Y(p))) o[k] = B(Y(p)); };
+    astc(ya, 'puukortit_astc', 'puukortit-4x4.astcm'); astc(ya.hamara, 'puukortit_astc', 'puukortit-hamara-4x4.astcm');
+    if (ya.puukortit_normaali) astc(ya, 'puukortit_normaali_astc', 'puukortit-normaali-4x4.astcm');
+    astc(ya, 'horisontti_kuva_astc', 'horisontti-1k-4x4.astcm'); astc(ya.hamara, 'horisontti_kuva_astc', 'horisontti-hamara-1k-4x4.astcm');
+    if (ya.taivas) { astc(ya, 'taivas_astc', 'taivas-2k-4x4.astcm'); astc(ya, 'taivas_hamara_astc', 'taivas-hamara-2k-4x4.astcm'); }
+    astc(ya.aluskasvit, 'atlas_astc', 'aluskasvit-4x4.astcm'); astc(ya.aluskasvit, 'atlas_hamara_astc', 'aluskasvit-hamara-4x4.astcm');
   }
   const atlas = (id, v) => ({
     tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
     astc: B(`valot/${id}${v}-4x4.astcm`), astcPuoli: B(`valot/${id}${v}-2k-4x4.astcm`),
   });
+  // Äänitilat (Linnanrakentaja 30.9., Siirtosepän kuittaus): yleisnäkymän taustaäänet soivat massa-tilasta
+  // (natiivin Aanimaisema.MassaTilaId), joten kohdistamaton tila, jolla on ääniä mutta ei leivottua glb:tä, jää
+  // pakettiin ILMAN glb:tä ja vain kentillä id, nimi, kohdistettava, rajat, aanet ja tehosteet (lataaja ohittaa
+  // piirron; hahmot, palikat, valot, liekit ja käsikirjoitus pois, etteivät ne ilmesty kuoren päälle).
+  const aanitilat = rakennusJson.tilat
+    .filter((t) => !on.has(`tilat/${t.id}.glb`) && t.kohdistettava === false && (t.aanet?.length || t.tehosteet?.length))
+    .map((t) => ({ id: t.id, nimi: t.nimi, kohdistettava: false, rajat: t.rajat, aanet: t.aanet ?? [],
+      tehosteet: t.tehosteet ?? [] }));
   rakennusJson.tilat = rakennusJson.tilat.filter((t) => on.has(`tilat/${t.id}.glb`));
   for (const t of rakennusJson.tilat) {
     const g = on.get(`tilat/${t.id}.glb`);
@@ -362,6 +431,7 @@ export function lisaaBlender(rakennusJson, blender) {
       if (on.has(`valot/${t.id}-hamara.jpg`)) t.valoatlas.hamara = atlas(t.id, '-hamara');
     }
   }
+  rakennusJson.tilat.push(...aanitilat);
   return blender.tiedostot.map((t) => ({ polku: `blender/${t.polku}`, sha256: t.sha256, tavuja: t.tavuja }));
 }
 
@@ -377,6 +447,7 @@ export function tarkistaBlenderPaketti(rakennusJson, blender) {
   }
   if (!rakennusJson.tilat?.length) throw new Error(`${rakennusJson.id}: blender.json on olemassa, mutta tiloja ei ole`);
   for (const t of rakennusJson.tilat) {
+    if (t.glb === undefined && t.kohdistettava === false && !t.hahmot && !t.palikat && !t.valot && !t.liekit) continue;   // äänitila
     if (!t.glb?.tiedosto?.startsWith('blender/')) throw new Error(`${rakennusJson.id}/${t.id}: tila-glb ei ole leivottu (blender/)`);
   }
 }
@@ -577,6 +648,17 @@ export async function rakennaData(rakennus, {
   for (const kohta of rakennus.taulu?.kohdat ?? []) {
     if (kohta.aani != null) kaytetytAanet.add(kohta.aani);
   }
+  // Uuden linnan puheet (#3742, Siirtoseppä 1.10.2026: kuiva paketti 353b5142 ilman näitä → 43/133 ääntä puuttui
+  // pankista, eikä natiivi soittanut niitä): kertojan jaksot, Pulun kertomukset (rakennus ja tilat), tilan kuunnelma
+  // ja etsinnän repliikit.
+  const lisaaAani = (id) => { if (typeof id === 'string') kaytetytAanet.add(id); };
+  for (const jakso of rakennus.kertoja?.jaksot ?? []) lisaaAani(jakso?.aani);
+  lisaaAani(rakennus.pulu?.aani);
+  for (const tila of rakennus.tilat) {
+    lisaaAani(tila.pulu?.aani);
+    for (const rivi of tila.kuunnelma ?? []) lisaaAani(rivi?.aani);
+    for (const vaihe of tila.etsinta ?? []) { lisaaAani(vaihe?.aani); lisaaAani(vaihe?.repliikki?.aani); }
+  }
 
   // Käytetyt liekit (erä 2, era2-speksin kohta 2 "LIEKIT"): kerätty tilojen omista
   // `liekit`-listoista (oma pieni silmukka — ei kosketa yllä olevaa geometria/AO-silmukkaa).
@@ -705,11 +787,13 @@ export async function rakennaData(rakennus, {
   rakennusJson.aanet = {};
   for (const id of [...kaytetytAanet].sort()) {
     if (!Object.hasOwn(AANET, id)) throw new Error(`rakenna: käytetty ääni '${id}' puuttuu AANET-pankista`);
-    const { silmukka, voimakkuus, kesto_s: kestoS, versio } = AANET[id];
+    const { silmukka, voimakkuus, kesto_s: kestoS, versio, kuiva, kaiku, kaikuPitka } = AANET[id];
     // `tiedosto` on suhteessa rakennuksen juureen (ei hash-kansioon) — vakio polku riippumatta
     // siitä, kopioitiinko paikallinen mp3 tässä ajossa (`--aanet`); ämpäri tarjoaa sen julkaisussa.
     // v<versio>-alikansio: ks. aanetVersiot yllä (natiivin URL-välimuisti).
     rakennusJson.aanet[id] = { tiedosto: `aanet/v${versio ?? 1}/${id}.mp3`, silmukka, voimakkuus, kesto_s: kestoS };
+    // Mikseritilan valinnaiset otot (kehittäjätila; Pelikoodari 30.9.): '/'-alkuinen polku median juuresta.
+    for (const [k, v] of Object.entries({ kuiva, kaiku, kaikuPitka })) if (v !== undefined) rakennusJson.aanet[id][k] = v;
   }
   // era2b kohta 4 (3D-hahmot, ali-agentti P4b): liikesilmukkapankki LIIKKEET rakennus.json:iin SELLAISENAAN
   // (sama muoto kuin js/dioraama/pankit/liikkeet.js — ei rakennuskohtaista suodatusta, koska mikä silmukka

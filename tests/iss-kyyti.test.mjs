@@ -268,7 +268,7 @@ test('paneeli: kuukauden nimi ja vuodenaika-otsikko ("(nyt)" simuloidun kuukaude
 
 test('paneeli: pilvipeiton otsikko ja liu\'un prosentti realismin pilvimääräksi', async () => {
   const { pilvipeittoTeksti, pilvipeittoMaaraksi } = await import('../js/linssit/iss-kyyti-nakyma.js');
-  assert.equal(pilvipeittoTeksti(100), 'nyt', 'oletus 100 % = nyt');
+  assert.equal(pilvipeittoTeksti(100), 'nyt', '100 % = nyt');
   assert.equal(pilvipeittoTeksti(0), 'selkeä');
   assert.equal(pilvipeittoTeksti(40), '40 %');
   assert.equal(pilvipeittoTeksti(37.6), '38 %', 'pyöristyy');

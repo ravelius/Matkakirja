@@ -175,7 +175,7 @@ test('YOKUORI_FRAGMENT: karsittu pilvi (alfa < karsinta) ei himmennä valoja', (
   assert.match(VARJOSTIMET.YOKUORI_FRAGMENT, /float pilvi = uPilvetOn \* uPilviPeitto \* pilviAlfa \* pilviNaytto;/);
 });
 
-test('pilvet(): ab.maara oletus 1 (ei karsintaa), 0,4 → uKarsinta 0,6 ja kuva() kertoo karsinnan', () => {
+test('pilvet(): ab.maara oletus 0 (pilvet pois, omistaja 30.9.), 0,4 → uKarsinta 0,6 ja kuva() kertoo karsinnan', () => {
   class Shader { constructor(o) { Object.assign(this, o); } dispose() {} }
   class Sphere { constructor(r) { this.r = r; } dispose() {} }
   class Mesh { constructor(g, m) { this.geometry = g; this.material = m; } }
@@ -195,12 +195,12 @@ test('pilvet(): ab.maara oletus 1 (ei karsintaa), 0,4 → uKarsinta 0,6 ja kuva(
   const doc = { createElement: () => ({ width: 0, height: 0, getContext: () => ctx2d }) };
   const ikkuna = { document: doc, Image: class { set src(v) { this._src = v; this.onload?.(); } } };
   const p = pilvet({ ikkuna, arvot: { ...PILVET, leveys: 2, korkeusPx: 2 } });
-  assert.equal(p.ab.maara, 1, 'oletus 1 = nyt, ei karsintaa');
+  assert.equal(p.ab.maara, 0, 'oletus 0 = pilvet pois');
   p.rakenna({ pallo: koePallo, luokat: { Shader, Sphere, Mesh }, metri: 100 / 6378137, R: 100 });
   p.paivita({ pallo: koePallo }, { osuus: 1, ms: 0, aurinko: [1, 0, 0] });
   const alussa = p.kuva();
   assert.ok(alussa, 'pilvikuva valmis (synkroninen onload testissä)');
-  assert.equal(alussa.karsinta, 0, 'oletus: ei karsintaa');
+  assert.equal(alussa.karsinta, 1, 'oletus: kaikki karsittu (pilvet pois)');
   p.ab.maara = 0.4;
   p.paivita({ pallo: koePallo }, { osuus: 1, ms: 0, aurinko: [1, 0, 0] });
   const kuva = p.kuva();

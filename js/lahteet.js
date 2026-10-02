@@ -385,6 +385,20 @@ export const LAHTEET = [
         lisenssi: 'Public domain',
       },
       {
+        nimi: 'Cupolan radioliikenne: NASA, avaruuskävely EVA 38 (6.1.2017), '
+          + 'avaruus–maa-radiosilmukka',
+        tekija: 'NASA / Johnson Space Center',
+        lisenssi: 'Public domain (NASA)',
+        huom: 'https://archive.org/details/01-06-17_EVA_38.wav',
+      },
+      {
+        nimi: 'Cupolan humina: NASA:n aseman sisätila (Life On Station B-Roll) '
+          + 'ja pelin oma synteettinen humina',
+        tekija: 'NASA / Johnson Space Center; Matkakirja',
+        lisenssi: 'Public domain (NASA); oma',
+        huom: 'https://archive.org/details/LifeOnStationB-Roll',
+      },
+      {
         nimi: 'Musiikkinäytteet kulttuurinostoissa',
         tekija: 'Wikimedia Commons sekä archive.org (vain kohteet, joilla on '
           + 'merkitty lisenssiosoite)',

@@ -46,6 +46,8 @@ import {
 } from './iss-rata.js';
 import { SATELLIITTI_KOHTEET } from './satelliitti-data.js';
 import { KUUKAUSINIMET } from './maapallon-vuosi.js';
+// Cupolan humina ja avaruus–maa-radio (30.9.2026): soivat vain ikkunassa.
+import { asetaCupola, puraCupola } from './cupola-aani.js';
 
 /* ═══════════ CUPOLA ═══════════════════════════════════════════════ */
 
@@ -506,7 +508,7 @@ export function vuodenaikaTeksti(pakotettu, ms) {
   return kk === simKk ? `${kuukaudenNimi(kk)} (nyt)` : kuukaudenNimi(kk);
 }
 
-/** Pilvipeitto-rivin otsikko: "nyt" 100 %:ssa (oletus), "selkeä" 0 %:ssa, muuten prosenttiluku. */
+/** Pilvipeitto-rivin otsikko: "nyt" 100 %:ssa, "selkeä" 0 %:ssa (oletus 30.9. alkaen), muuten prosenttiluku. */
 export function pilvipeittoTeksti(prosentti) {
   const p = Math.round(Math.max(0, Math.min(100, prosentti)));
   if (p >= 100) return 'nyt';
@@ -903,7 +905,7 @@ export function luoIssKyytiNakyma({
       return { lohko, otsikko, liuku };
     };
     const pilvipeittoLiuku = teeLiuku({
-      luokka: 'iss-kyyti-liuku-pilvipeitto', min: 0, max: 100, arvo: 100, paatNimet: ['Selkeä', 'Nykyinen'],
+      luokka: 'iss-kyyti-liuku-pilvipeitto', min: 0, max: 100, arvo: 0, paatNimet: ['Selkeä', 'Nykyinen'],   // oletus pois (omistaja 30.9.)
     });
     const vuodenaikaLiuku = teeLiuku({
       luokka: 'iss-kyyti-liuku-vuodenaika', min: 1, max: 12, arvo: kuukausiNyt(0, simu.nyt()), paatNimet: ['Tammikuu', 'Joulukuu'],
@@ -911,7 +913,7 @@ export function luoIssKyytiNakyma({
     const paivitaOlosuhdeOtsikot = () => {
       const abPilvet = realismi?.ab?.('pilvet');
       const abKuukausi = realismi?.ab?.('kuukausi');
-      const pilviProsentti = Math.round((abPilvet?.maara ?? 1) * 100);
+      const pilviProsentti = Math.round((abPilvet?.maara ?? 0) * 100);
       pilvipeittoLiuku.otsikko.textContent = `Pilvipeitto · ${pilvipeittoTeksti(pilviProsentti)}`;
       if (doc.activeElement !== pilvipeittoLiuku.liuku) pilvipeittoLiuku.liuku.value = String(pilviProsentti);
       const pakotettu = abKuukausi?.pakotettu ?? 0;
@@ -1103,6 +1105,7 @@ export function luoIssKyytiNakyma({
     u.juuri.dataset.tila = tila;
     kehysNakyy = tila === TILA.ikkuna;
     u.juuri.classList.toggle('iss-kyyti-ikkuna', kehysNakyy);
+    asetaCupola(kehysNakyy && kyyti.kyydissa);
     u.juuri.classList.toggle('iss-kyyti-liikkumaton', Boolean(reduced));
     doc.body.classList.toggle(KYYTI_LUOKKA, kyyti.kyydissa);
     if (auki) u.haeKuvat();
@@ -1463,6 +1466,7 @@ export function luoIssKyytiNakyma({
       koe = null;
       nollaaOlosuhteet();
       realismiKutsu('pura');
+      puraCupola();
       ui?.juuri?.remove?.();
       doc.body.classList.remove(KYYTI_LUOKKA);
     },

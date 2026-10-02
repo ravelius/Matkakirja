@@ -533,7 +533,7 @@ test('selite lukee kuvan päällä ruudun vasemmassa yläkulmassa, i-nappi on po
   assert.ok(!tyyli.includes('.satelliitti-popup'), 'info-popupin tyyli on yhä jäljellä');
   assert.match(lahde, /html\('div', 'satelliitti-selite'\)/);
   // Minipulun kulma on viides pinta (16.9.2026, Raamattu kohta 9).
-  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, kohdenapit, pulukulma\)/);
+  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, kohdenapit, pulukulma, autoKulma, autoSiirto\.el\)/);
   // Kiinnitys on RUUTUUN (kortti alkaa ruudun yläreunasta, LISÄYS 3),
   // ei kuvaelementtiin — 12 px vasemmalta, 10 px + turva-alue ylhäältä.
   /*
@@ -1337,7 +1337,7 @@ test('selite avautuu pienennettynä ja vinkkaa kerran kohdetta kohti', () => {
   assert.match(lahde, /globalThis\.sessionStorage\?\.getItem\(VINKIN_AVAIN\) === '1'/);
   assert.match(lahde, /globalThis\.sessionStorage\?\.setItem\(VINKIN_AVAIN, '1'\)/);
   // Liikkeenvähennys: ei vinkkiavausta lainkaan.
-  assert.match(lahde, /if \(!vinkkiNahty && !liikePois\) \{/);
+  assert.match(lahde, /if \(!vinkkiNahty && !liikePois && !autoPaalla\(\)\) \{/);
   // Pelaajan ele voittaa vinkin ja JÄTTÄÄ selitteen auki.
   assert.match(lahde, /if \(lopetaVinkki\(\)\) \{ asetaSelite\(false\); return; \}/);
   // Ajastin ei jää elämään suljetun näkymän yli.

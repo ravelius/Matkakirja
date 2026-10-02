@@ -131,3 +131,86 @@ def reunat(rgb, uvp, M, K, n):
     G = iso & ~M & ~rasteri(uvp[muut], H, W)
     rgb[G] = push_pull(rgb, M)[G]
     return int(G.sum())
+
+
+def seinapaikka(co, tv, uvp, rgb, V, res=0.03, log=print):
+    """Muurin juuren paikkaus (v16, 30.9.2026): romun takana muurin alaosasta ei ole kuvaa, joten litistyksessä venyneet
+    kolmiot V jäävät muurin ja maan väliin. Ne maalataan muurin kivellä: kolmiot jaetaan vaakanormaalin suunnan mukaan
+    30°:n sektoreihin, ja kullekin tehdään muurin edestä nähty ortokuva (koordinaatisto kierretty: x' muurin suuntaan,
+    y' ylös, z' ulos muurista), jonka aukko kloonataan puhtaalta muurilta (kloonaa) ja maalataan takaisin (paluu).
+    Palauttaa (maalatut pikselit, vaakasuorat kolmiot, jotka jäävät maan täyttöön)."""
+    H, W = rgb.shape[:2]; M = np.zeros((H, W), bool)
+    n = np.cross(co[tv[:, 1]] - co[tv[:, 0]], co[tv[:, 2]] - co[tv[:, 0]])
+    n /= np.maximum(np.linalg.norm(n, axis=1, keepdims=True), 1e-12)
+    vaaka = V[np.abs(n[V, 2]) > 0.7]; V = V[np.abs(n[V, 2]) <= 0.7]
+    sek = np.round(np.degrees(np.arctan2(n[V, 0], n[V, 1])) / 30).astype(int) % 12
+    for s in np.unique(sek):
+        Vs = V[sek == s]
+        if len(Vs) < 3: continue
+        c = np.radians(s * 30); ulos = np.array([np.sin(c), np.cos(c), 0.0])
+        R = np.array([[np.cos(c), -np.sin(c), 0.0], [0.0, 0.0, 1.0], ulos])
+        cr = co @ R.T
+        a = cr[tv[Vs]].reshape(-1, 3); lo = a[:, :2].min(0) - np.array([4.0, 1.0]); hi = a[:, :2].max(0) + np.array([4.0, 6.0])
+        kp = cr[tv].mean(1)
+        ehd = np.flatnonzero((kp[:, 0] > lo[0]) & (kp[:, 0] < hi[0]) & (kp[:, 1] > lo[1]) & (kp[:, 1] < hi[1])
+                             & (kp[:, 2] > a[:, 2].min() - 3) & ((n @ ulos) > 0.3))
+        ehd = np.union1d(ehd, Vs)
+        lahde = np.zeros(len(tv), bool); lahde[ehd] = (n[ehd] @ ulos) > 0.6; lahde[Vs] = False
+        Hg = int(np.ceil((hi[1] - lo[1]) / res)); Wg = int(np.ceil((hi[0] - lo[0]) / res))
+        orto, puhdas = ortokuva(cr, tv, uvp, rgb, ehd, lahde, lo, res, Hg, Wg)
+        ti, ys, xs, _ = bary_rasteri((cr[tv[Vs], :2] - lo) / res, Hg, Wg)
+        P = np.zeros((Hg, Wg), bool); P[ys, xs] = True; P = laajenna(P, 3)
+        puhdas &= ~laajenna(P, int(0.3 / res))
+        rengas = puhdas & laajenna(P, int(1.5 / res))
+        if puhdas.mean() < 0.05 or not rengas.any():
+            log(f'SEINÄPAIKKA: sektori {s * 30}°: ei puhdasta muuria ({len(Vs)} kolmiota jää ennalleen)'); continue
+        tayt = kloonaa(orto, puhdas, P, res, rengas, askel_m=1.5)
+        M |= paluu(rgb, cr, tv, uvp, Vs, tayt, lo, res)
+        log(f'SEINÄPAIKKA: sektori {s * 30}°: {len(Vs)} kolmiota, muuria {puhdas.mean():.2f}')
+    return M, vaaka
+
+
+def tasopaikka(co, tv, uvp, rgb, V, res=0.03, log=print):
+    """Venyneiden pintojen paikkaus minkä tahansa suuntaisille pinnoille (v23, 1.10.2026; seinapaikan yleistys): kolmiot
+    ryhmitellään normaalin suunnan (atsimuutti 30°, kaltevuus 0–20/20–50/50–75/75–90°) ja 12 m:n ruudun mukaan, ja
+    kullekin ryhmälle tehdään ortokuva pinnan suunnasta (x' vaakatangentti, y' rinnettä ylös, z' ulos pinnasta). Aukko
+    kloonataan samansuuntaiselta puhtaalta pinnalta (kloonaa), joten katon laudat ja muurin kivet jatkuvat oikeassa
+    suunnassa, ja maalataan takaisin (paluu). Palauttaa (maalatut pikselit, kolmiot joita ei voitu maalata)."""
+    H, W = rgb.shape[:2]; M = np.zeros((H, W), bool)
+    n = np.cross(co[tv[:, 1]] - co[tv[:, 0]], co[tv[:, 2]] - co[tv[:, 0]])
+    n /= np.maximum(np.linalg.norm(n, axis=1, keepdims=True), 1e-12)
+    kal = np.degrees(np.arccos(np.clip(np.abs(n[:, 2]), 0, 1)))
+    kp = co[tv].mean(1)
+    ats = np.round(np.degrees(np.arctan2(n[V, 0], n[V, 1])) / 30).astype(int) % 12
+    kb = np.digitize(kal[V], [20, 50, 75]); ats[kb == 0] = 0  # vaakapinnoilla atsimuutilla ei väliä
+    ruutu = np.floor(kp[V, :2] / 12).astype(int)
+    avaimet = np.c_[ats, kb, ruutu]
+    jaljelle = []
+    for av in np.unique(avaimet, axis=0):
+        Vs = V[(avaimet == av).all(1)]
+        if len(Vs) < 3: jaljelle.append(Vs); continue
+        ulos = n[Vs].mean(0); ulos /= max(np.linalg.norm(ulos), 1e-9)
+        if ulos[2] < -0.2: ulos = -ulos
+        xt = np.cross([0.0, 0.0, 1.0], ulos)
+        xt = xt / np.linalg.norm(xt) if np.linalg.norm(xt) > 1e-3 else np.array([1.0, 0.0, 0.0])
+        yt = np.cross(ulos, xt); R = np.array([xt, yt, ulos])
+        cr = co @ R.T
+        a = cr[tv[Vs]].reshape(-1, 3); lo = a[:, :2].min(0) - 4.0; hi = a[:, :2].max(0) + 4.0
+        kr = cr[tv].mean(1)
+        ehd = np.flatnonzero((kr[:, 0] > lo[0]) & (kr[:, 0] < hi[0]) & (kr[:, 1] > lo[1]) & (kr[:, 1] < hi[1])
+                             & (np.abs(kr[:, 2] - a[:, 2].mean()) < 3.0) & ((n @ ulos) > 0.3))
+        ehd = np.union1d(ehd, Vs)
+        lahde = np.zeros(len(tv), bool); lahde[ehd] = (n[ehd] @ ulos) > 0.85; lahde[Vs] = False
+        Hg = int(np.ceil((hi[1] - lo[1]) / res)); Wg = int(np.ceil((hi[0] - lo[0]) / res))
+        orto, puhdas = ortokuva(cr, tv, uvp, rgb, ehd, lahde, lo, res, Hg, Wg)
+        ti, ys, xs, _ = bary_rasteri((cr[tv[Vs], :2] - lo) / res, Hg, Wg)
+        P = np.zeros((Hg, Wg), bool); P[ys, xs] = True; P = laajenna(P, 3)
+        puhdas &= ~laajenna(P, int(0.3 / res))
+        rengas = puhdas & laajenna(P, int(1.5 / res))
+        if puhdas.mean() < 0.05 or not rengas.any():
+            jaljelle.append(Vs); continue
+        tayt = kloonaa(orto, puhdas, P, res, rengas, askel_m=1.5)
+        M |= paluu(rgb, cr, tv, uvp, Vs, tayt, lo, res)
+    jaljelle = np.concatenate(jaljelle) if jaljelle else np.zeros(0, int)
+    log(f'TASOPAIKKA: {len(np.unique(avaimet, axis=0))} ryhmää, maalattu {int(M.sum())} tekseliä, ilman lähdettä {len(jaljelle)} kolmiota')
+    return M, jaljelle

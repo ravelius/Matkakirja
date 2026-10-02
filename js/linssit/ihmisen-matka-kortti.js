@@ -47,7 +47,8 @@
 
 import * as data from './ihmisen-matka-data.js';
 import { IHMISEN_MATKA_VIRRAT } from './ihmisen-matka-virrat.js';
-import { polloUlkoinenKysymys } from '../pollo.js';
+import { polloEhdota, polloUlkoinenKysymys } from '../pollo.js';
+import { luoPohjaNostokortti } from '../pohjat/pohjat.js';
 import { haeIhmisenMatkanKysymykset, haeIhmisenMatkanVastaus } from './ihmisen-matka-kysymykset.js';
 import { kuvatekstiLyhyt } from '../kuvatekstit.js';
 import { polloNimilappu } from '../ui-apurit.js';
@@ -259,6 +260,20 @@ export function nostonKonteksti(nosto) {
  * @param {{ ajo: object, ui: object, linssi?: object, koti?: Element }} asetukset
  * @returns {object|null} { avaa, sulje, auki, nostot, virta, vari, tila, pura, el }
  */
+/** Ihmisen matkan kortti NOSTOKORTTI-pohjalla (omistajan kokeilu 1.10.2026); false = vanha kortti. */
+const IM_KORTTI_POHJA = true;
+
+/** Lippu + ?imkortti=vanha|pohja tai localStorage matkakirja-imkortti. */
+export function imKorttiPohjalla() {
+  try {
+    const valinta = new URLSearchParams(globalThis.location?.search ?? '').get('imkortti')
+      ?? globalThis.localStorage?.getItem('matkakirja-imkortti');
+    if (valinta === 'vanha') return false;
+    if (valinta === 'pohja') return true;
+  } catch { /* yksityinen selaus */ }
+  return IM_KORTTI_POHJA;
+}
+
 export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
   if (typeof document === 'undefined' || !ajo || !ui) return null;
   const pesa = koti ?? ui.mapPane ?? null;
@@ -303,8 +318,14 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
   };
 
   function sulje() {
-    if (tila.auki === null && kortti.hidden) return;
+    if (tila.auki === null && kortti.hidden && !pohjaAuki) return;
     tila.auki = null;
+    if (pohjaAuki) {
+      const p = pohjaAuki;
+      pohjaAuki = null;
+      p.sulje();
+      setTimeout(() => p.el.remove(), 260);
+    }
     kortti.hidden = true;
     kortti.classList.remove('esilla');
     kortti.replaceChildren();
@@ -389,6 +410,12 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
     if (tila.auki === nosto.tunnus) { sulje(); return false; }
     tila.auki = nosto.tunnus;
     tila.avattu += 1;
+    // UI-pohjat: kortti NOSTOKORTTI-pohjalla (omistajan kokeilu 1.10.2026). Peruttavissa: IM_KORTTI_POHJA = false
+    // tai ?imkortti=vanha (localStorage matkakirja-imkortti = 'vanha').
+    if (imKorttiPohjalla()) {
+      avaaPohjalla(nosto);
+      return avauksenHanta(nosto, pohjaAuki?.el ?? kortti);
+    }
     kortti.replaceChildren();
     kortti.style.setProperty('--nosto-savy', heksaRgb(vari(nosto.tunnus)));
     kortti.dataset.laji = nosto.laji;
@@ -432,9 +459,24 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
       kehys.appendChild(vara);
       kuvat.appendChild(kehys);
     }
-    kortti.appendChild(kuvat);
-
-    kortti.appendChild(solmu('p', 'ihmisen-nostokortti-teksti', nosto.teksti ?? ''));
+    /*
+     * KAKSI KUVAA (omistaja 1.10.2026 klo 09.2x, pariteettiparin perusteella):
+     * vasen (maisema)kuva koko kortin levyiseksi ylös, oikea (esine)kuva
+     * leipätekstin oikealle puolelle — teksti kiertää kuvan, kuvateksti
+     * kuvan alla. Sama natiivissa (IhmisenNostokortti.cs).
+     */
+    const teksti = solmu('p', 'ihmisen-nostokortti-teksti', nosto.teksti ?? '');
+    if (kuvat.childElementCount === 2) {
+      const sivukuva = kuvat.lastElementChild;
+      sivukuva.classList.add('kellu');
+      kortti.appendChild(kuvat);
+      const runko = solmu('div', 'ihmisen-nostokortti-runko');
+      runko.append(sivukuva, teksti);
+      kortti.appendChild(runko);
+    } else {
+      kortti.appendChild(kuvat);
+      kortti.appendChild(teksti);
+    }
     if (nosto.lahde) kortti.appendChild(solmu('div', 'ihmisen-nostokortti-lahde', nosto.lahde));
 
     if (nosto.juttu && typeof ajo.avaaNostonJuttu === 'function') {
@@ -483,7 +525,12 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
      * tästä moduulista. `linssinosto` erottaa oman merkintämme
      * fokuskohteen omasta, jottei purku vie väärää korttia.
      */
-    ui.fokuskohdeAuki = { kohde: nostonKonteksti(nosto), popup: kortti, linssinosto: true };
+    return avauksenHanta(nosto, kortti);
+  }
+
+  /** Avauksen yhteinen loppu (vanha kortti ja pohja): Pulun konteksti, esitys tauolle, muisti. */
+  function avauksenHanta(nosto, popup) {
+    ui.fokuskohdeAuki = { kohde: nostonKonteksti(nosto), popup, linssinosto: true };
     // Auki oleva pulupaneeli vaihtaa valmiit kysymyksensä tämän noston
     // omiin (js/linssit/ihmisen-matka-pulukysymykset.js).
     paivitaPulu();
@@ -496,6 +543,62 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
     }
     tallenna();
     return true;
+  }
+
+  /*
+   * POHJAKORTTI (omistajan kokeilu 1.10.2026, Päätoimittajan kysymys + loki f344f1034): NOSTOKORTTI TUMMA linssissä,
+   * kapiteelissa ajoitus ja paikka virran värisen pisteen kanssa (väri on tietoa), kuvat kuvasäännöin (kuvitus hero,
+   * esine tai aito kuva upotus), Kysy avaa Pulun paneelin, joka näyttää tämän noston valmiit kysymykset
+   * (ihmisen-matka-pulukysymykset.js), Lue lisää avaa tiedeliitteen. Ei ✕:ää: ohinapautus, veto alas, Esc.
+   */
+  let pohjaAuki = null;
+  function avaaPohjalla(nosto) {
+    kortti.hidden = true;
+    kortti.replaceChildren();
+    if (pohjaAuki) { const vanha = pohjaAuki; pohjaAuki = null; vanha.sulje(); setTimeout(() => vanha.el.remove(), 260); }
+    const kuvat = [
+      nosto.kuva ? { url: nosto.kuva, kuvateksti: nosto.kuvaSelite ?? '' } : null,
+      nosto.esine ? { url: nosto.esine, kuvateksti: nosto.esineSelite ?? '' } : null,
+      nosto.kuvaAito ? {
+        url: nosto.kuvaAito,
+        kuvateksti: nosto.kuvaAitoSelite ?? 'Aito kuva',
+        lahde: typeof nosto.kuvaAitoTiedot?.lahde === 'string' ? nosto.kuvaAitoTiedot.lahde : '',
+        tiedot: nosto.kuvaAitoTiedot ?? null,
+      } : null,
+    ].filter(Boolean);
+    const kysymykset = nosto.laji === 'loytopaikka' ? haeIhmisenMatkanKysymykset(nosto.tunnus) : (nosto.kysymykset ?? []);
+    const napit = [
+      kysymykset.length ? { teksti: 'Kysy', tyyppi: 'toiminto', toiminto: 'kysy' } : null,
+      nosto.juttu && typeof ajo.avaaNostonJuttu === 'function' ? { teksti: 'Lue lisää', tyyppi: 'ensisijainen', toiminto: 'lue' } : null,
+    ].filter(Boolean);
+    const piste = vari(nosto.tunnus);
+    const pohja = luoPohjaNostokortti({
+      yla: [nosto.ajoitus, nosto.maa ? `${nosto.paikka} — ${nosto.maa}` : nosto.paikka].filter(Boolean).join(' · '),
+      ylaVari: typeof piste === 'string' ? piste : '',
+      otsikko: nosto.otsikko ?? '',
+      kuvat,
+      kappaleet: [{ teksti: nosto.teksti ?? '' }],
+      lahde: nosto.lahde ?? '',
+      napit,
+    }, {
+      teema: 'tumma',
+      toiminnot: {
+        kysy: () => polloEhdota([]),
+        lue: () => ajo.avaaNostonJuttu(nosto.indeksi),
+      },
+      kuvaAuki: (kuva, i, img) => {
+        const k = kuvat[i] ?? kuva;
+        import('../fokuskohteet.js').then(({ avaaKohdeSuurennos }) => avaaKohdeSuurennos(
+          ui, { osoite: k.url, lyhyt: k.kuvateksti ?? '', ...(k.tiedot ?? {}) }, () => img, 'ihmisenKuvaZoom',
+        ));
+      },
+      sulje: (p) => { if (pohjaAuki === p) sulje(); },
+    });
+    if (!pohja) return;
+    pohjaAuki = pohja;
+    pesa.appendChild(pohja.el);
+    document.body.classList.add(KORTIN_LUOKKA);
+    pohja.avaa();
   }
 
   /*

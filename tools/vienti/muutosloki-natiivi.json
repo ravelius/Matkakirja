@@ -2,6 +2,101 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (96)",
+   "paiva": "2026-10-01",
+   "teksti": "Lukijoilta-työkalun avain kulkee nyt suojatussa otsakkeessa eikä näy osoitteissa."
+  },
+  {
+   "versio": "1.1 (95)",
+   "paiva": "2026-10-01",
+   "teksti": "Ihmisen matkan nostokortissa kaksi kuvaa ja teksti kiertää kuvan ympäri; tekstitys pysyy kortin takana."
+  },
+  {
+   "versio": "1.1 (94)",
+   "paiva": "2026-10-01",
+   "teksti": "Linnan kertoja ei enää vaihda jaksoa kesken isoisän puheen, ja iPadilla kuvia mahtuu muistiin enemmän."
+  },
+  {
+   "versio": "1.1 (93)",
+   "paiva": "2026-10-01",
+   "teksti": "Linnan ympäristön puut näyttävät todellisemmilta: lajeilla on muunnelmia ja valo varjostaa lehvästöä."
+  },
+  {
+   "versio": "1.1 (92)",
+   "paiva": "2026-10-01",
+   "teksti": "Linnan ympäristö latautuu nopeammin — kevyt kuori ja maasto ensin, tarkempi taso taustalla."
+  },
+  {
+   "versio": "1.1 (91)",
+   "paiva": "2026-10-01",
+   "teksti": "Pulu pysyy linnassa näkyvillä myös puhelin vaakatasossa."
+  },
+  {
+   "versio": "1.1 (90)",
+   "paiva": "2026-10-01",
+   "teksti": "Pieniä parannuksia kulissien takana."
+  },
+  {
+   "versio": "1.1 (89)",
+   "paiva": "2026-10-01",
+   "teksti": "Pieniä parannuksia kulissien takana."
+  },
+  {
+   "versio": "1.1 (88)",
+   "paiva": "2026-10-01",
+   "teksti": "Pulun kanssa voi jutella samassa ikkunassa kaikkialla, ja maakuntakortin kysymykset avaavat keskustelun."
+  },
+  {
+   "versio": "1.1 (87)",
+   "paiva": "2026-10-01",
+   "teksti": "Olavinlinnan ympärillä on nyt kimalteleva järvi ja iltataivas, ja Macilla zoomaus on pehmeämpi."
+  },
+  {
+   "versio": "1.1 (86)",
+   "paiva": "2026-10-01",
+   "teksti": "Astronautin kameran kuvissa on uusi pehmeä tausta ja sijaintipallo, joka näyttää kohteen paikan maapallolla."
+  },
+  {
+   "versio": "1.1 (85)",
+   "paiva": "2026-10-01",
+   "teksti": "Ohita näkyy koko luennon ajan, ja luennon jälkeen matkakirjan kortti pienenee lapuksi."
+  },
+  {
+   "versio": "1.1 (84)",
+   "paiva": "2026-10-01",
+   "teksti": "Avaruusasemalla kuuluu nyt aseman humina ja Cupolassa avaruuskävelyn radio, ja Pulu pukeutuu avaruuspukuun."
+  },
+  {
+   "versio": "1.1 (82)",
+   "paiva": "2026-09-30",
+   "teksti": "Macilla ohjauslevyn veto liukuu luontevasti, ja lehteä voi selata nuolinäppäimillä."
+  },
+  {
+   "versio": "1.1 (81)",
+   "paiva": "2026-09-30",
+   "teksti": "Pulu vastaa kysymyksiin kortin aiheesta, eikä pelikello peitä linssiä tai Tietoja-korttia."
+  },
+  {
+   "versio": "1.1 (79)",
+   "paiva": "2026-09-30",
+   "teksti": "ISS:n ikkunasta näkyy nyt Maan kaareva horisontti, ja ohjauspaneeli on uusittu."
+  },
+  {
+   "versio": "1.1 (78)",
+   "paiva": "2026-09-30",
+   "teksti": "Päivälaskuri ei enää peitä linssin sulkunappia."
+  },
+  {
+   "versio": "1.1 (77)",
+   "paiva": "2026-09-30",
+   "teksti": "Olavinlinnan keittiössä kuunnelma tekstitettynä, ja Kuuntele-napilla sen voi toistaa."
+  },
+  {
+   "versio": "1.1 (76)",
+   "paiva": "2026-09-30",
+   "teksti": "Luennan kuvat ja Ohita-nappi poistuvat, kun luenta päättyy."
+  },
+  {
    "versio": "1.1 (75)",
    "paiva": "2026-09-30",
    "teksti": "Azorit, Madeira ja Kanariansaaret kartalle, taustamusiikki soi kerran läpi ja viisumi pienentää matkakirjan lapuksi."

@@ -533,9 +533,11 @@ export function pilvet({ ikkuna = globalThis, lahde = LAHTEET.pilvet, arvot = PI
   /*
    * A/B: pilvet 0|1, tarkat 0|1, tarkkuusKm = kohinan pohja-aallonpituus (natiivi `astro kyyti tarkat 0|1|<km>`).
    * maara = ISS-säätöpaneelin "Pilvipeitto"-liuku (Siirtoseppä 29.9.2026, omistajan asettelumuutos): 0…1, oletus
-   * 1 = nyt (ei karsintaa). Karsinta = 1 − maara asetetaan uKarsinta-uniformiin joka kehys (paivita).
+   * 0 = pilvet pois (omistaja 30.9.2026 ilta: "pilvet saisivat olla pois oletuksena, tosin saattaa muuttua sitten kun tulee
+   * niitä visuaalisia parannuksia"; natiivi AstronauttiKerros.PilvienOletus 0), 1 = nyt (ei karsintaa). Karsinta = 1 − maara
+   * asetetaan uKarsinta-uniformiin joka kehys (paivita).
    */
-  const ab = { pilvet: 1, tarkat: 1, tarkkuusKm: arvot.tarkkuusKm, maara: 1 };
+  const ab = { pilvet: 1, tarkat: 1, tarkkuusKm: arvot.tarkkuusKm, maara: 0 };
   const hae = () => {
     if (haettu || !T || !mesh) return;
     haettu = true;

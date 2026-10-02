@@ -289,6 +289,28 @@ test('vapaa nimimerkki ei mene läpi', async () => {
 /* Sähke                                                             */
 /* ---------------------------------------------------------------- */
 
+// Jäsenavain otsakkeessa (1.10.2026, tietoturvakorjaus); kysely kelpaa siirtymän ajan.
+test('tila hyväksyy jäsenavaimen x-sahke-avain-otsakkeesta, väärä hylätään, CORS sallii otsakkeen', async () => {
+  const kello = teeKello();
+  const apurit = { varasto: teeVarasto(), nyt: kello.nyt };
+  const { koodi, jasenet: [ilves] } = await teeRetkikunta(apurit, ['Utelias Ilves']);
+  const polku = `/retkikunta/tila?koodi=${koodi}&jasenId=${ilves.jasenId}`;
+  const oikea = await aja(polku, { metodi: 'GET', otsakkeet: { 'x-sahke-avain': ilves.avain } }, apurit);
+  assert.equal(oikea.status, 200);
+  const vaara = await aja(polku, { metodi: 'GET', otsakkeet: { 'x-sahke-avain': 'huti' } }, apurit);
+  assert.equal(vaara.status, 401);
+  const esi = await kasittele(pyynto('/retkikunta/tila', { metodi: 'OPTIONS' }), YMPARISTO, apurit);
+  assert.match(esi.headers.get('access-control-allow-headers') ?? '', /x-sahke-avain/);
+});
+
+test('web-asiakas ei laita jäsenavainta osoitteeseen', async () => {
+  const { readFileSync } = await import('node:fs');
+  const koodi = readFileSync(new URL('../js/sahke.js', import.meta.url), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+  const tila = koodi.slice(koodi.indexOf('function sahkeHaeTila'), koodi.indexOf('function sahkeHaeTila') + 400);
+  assert.ok(!/avain: tunnus\.avain/.test(tila.split('otsakkeet')[0]), tila);
+  assert.match(tila, /'x-sahke-avain': tunnus\.avain/);
+});
+
 test('sähke tallentuu ja näkyy tilannekuvassa virstanpylväänä', async () => {
   const kello = teeKello();
   const apurit = { varasto: teeVarasto(), nyt: kello.nyt };
@@ -662,4 +684,15 @@ test('ilman tietokantaa worker kertoo sen eikä kaadu', async () => {
     { SAHKE_ORIGINIT: PELI },
   );
   assert.equal(vastaus.status, 503);
+});
+
+// Asiakkaan sanalistat = workerin sanalistat (1.10.2026: lista oli erkaantunut, ja worker hylkäsi osan arvotuista
+// nimistä "Nimimerkki ei ole sanalistoilta"; natiivi Sahke.cs kopioi webin listat kultaisen jäljen kautta).
+test('js/sahke.js:n nimimerkkisanat ovat täsmälleen workerin listat samassa järjestyksessä', async () => {
+  const { readFileSync } = await import('node:fs');
+  const { ADJEKTIIVIT, SUBSTANTIIVIT } = await import('../worker/sahke/nimimerkit.js');
+  const koodi = readFileSync(new URL('../js/sahke.js', import.meta.url), 'utf8');
+  const lista = (nimi) => [...koodi.match(new RegExp(`const ${nimi} = \\[([\\s\\S]*?)\\];`))[1].matchAll(/'([^']+)'/g)].map((m) => m[1]);
+  assert.deepEqual(lista('SAHKE_ADJEKTIIVIT'), [...ADJEKTIIVIT]);
+  assert.deepEqual(lista('SAHKE_SUBSTANTIIVIT'), [...SUBSTANTIIVIT]);
 });

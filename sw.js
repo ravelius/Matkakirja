@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2457';
+const CACHE = 'matkakirja-2026-09-21.2537';
 const SHELL = [
   './',
   './index.html',
@@ -13,6 +13,20 @@ const SHELL = [
   './css/saapumistraileri.css',
   './css/fokuskohteet.css',
   './css/fokusnosto.css',
+  // UI-pohjien tyylit (js/pohjat/tyylit.js POHJAT_TYYLIT, sama järjestys; js/pohjat/pohjat.js lataa ne itse).
+  './css/pohjat/perus.css',
+  './css/pohjat/nostokortti.css',
+  './css/pohjat/kortti.css',
+  './css/pohjat/paneeli.css',
+  './css/pohjat/kentta.css',
+  './css/pohjat/auto.css',
+  './css/pohjat/esikatselu.css',
+  './css/pohjat/pinnat/dialogit.css',
+  './css/pohjat/pinnat/pillerivalikko.css',
+  './css/pohjat/pinnat/visa.css',
+  './css/pohjat/pinnat/karttaselite.css',
+  './css/pohjat/pinnat/linssin-valikko.css',
+  './css/pohjat/pinnat/linssivalitsin.css',
   // Nosto aukeaa kuva edellä (js/nostokuva.js lataa tyylinsä itse).
   './css/nostokuva.css',
   './css/kuvasarja.css',
@@ -23,6 +37,8 @@ const SHELL = [
   './css/sahke.css',
   './js/muutokset.js',
   './js/main.js',
+  './js/pilleri-paneeli.js',
+  './js/visa-pohja.js',
   './js/ui.js',
   './js/pelaajanakyma.js',
   './js/siirtokoreografia.js',
@@ -408,6 +424,7 @@ const SHELL = [
   './js/linssit/pulu-taulu.js',
   './js/linssit/iss-rata.js',
   './js/linssit/iss-kyyti.js',
+  './js/linssit/cupola-aani.js',
   './js/linssit/iss-kyyti-nakyma.js',
   './js/linssit/iss-realismi.js',
   './js/linssit/iss-realismi-kerrokset.js',
@@ -2139,15 +2156,15 @@ const LAATTAPOLKU = '/julisteet/pallo/laatat/';
  * on tahallinen: palvelutyöntekijä ei voi tuoda ES-moduulia, ja
  * tests/sw.test.mjs vartioi, että luvut ovat samat.
  */
-const LAATTAKANSIO = '2026-09-27-pohja-20260927';
+const LAATTAKANSIO = '2026-09-30-pohja-20260930';
 /** Varakansio syvimmälle tasolle (js/pallo.js PALLO_LAATAT_SYVA), kunnes nostosarja kattaa sen. */
-const LAATTAKANSIO_SYVA = '2026-09-27-pohja';
+const LAATTAKANSIO_SYVA = '2026-09-30-pohja';
 /**
  * DELTASARJAN PERUSSARJA (js/pallo.js PALLO_LAATTAPERUS, js/deltasarja.js):
  * muuttumattomat laatat haetaan perussarjan kansiosta, joten activate ei
  * saa siivota niitä. null = tuotantosarja ei ole delta.
  */
-const LAATTAKANSIO_PERUS = null;
+const LAATTAKANSIO_PERUS = '2026-09-27-pohja-20260927';
 const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA, ...(LAATTAKANSIO_PERUS ? [LAATTAKANSIO_PERUS] : [])];
 /** Laattoja korissa enintään (≈ 30 Mt; yksi laatta 8–14 kt). */
 const LAATTAKATTO = 3000;

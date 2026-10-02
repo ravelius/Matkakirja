@@ -230,6 +230,11 @@ jobs:
         env:
           MATKAKIRJA_KANSIO: Build/yo
         run: |
+          # set +e: askeleen oletuskuori on bash -eo pipefail, jolloin unity-vahdin nollasta
+          # poikkeava paluuarvo katkaisi askeleen ennen tila=$?-riviä eikä käännöskopion
+          # palautus (git reset/clean) ajanut; jäänyt iss-tle.json ohitti seuraavan ajon
+          # (30.9.2026 TF 1.1 (75) ja (76)). Virheet käsitellään alla tila-muuttujalla.
+          set +e
           set -uo pipefail
           # Edellisen viennin siivous: rm -rf kaatui 25.9. "Directory not empty" -virheeseen
           # (joku kirjoitti kansioon samaan aikaan). Yritetään viisi kertaa, ja jos kansio on
