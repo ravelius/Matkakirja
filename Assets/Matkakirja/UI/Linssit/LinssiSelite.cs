@@ -34,6 +34,14 @@ namespace Matkakirja.Natiivi
         /// "Korkeustasot"-rivistä ja suljetaan samasta (tai kortin napautuksella).</summary>
         public bool PieniPiiloon { get => pieniPiiloon; set { if (pieniPiiloon == value) return; pieniPiiloon = value; AsetaPieni(pieni); } }
         bool pieniPiiloon;
+        /// <summary>Hampurilaisen linssin selitteen otsikko linssin nimen tilalla (web linssi.valikko.selite; Topografia
+        /// "Korkeustasot", Päätoimittaja 2.10.2026 klo 23.0x). null = linssin nimi.</summary>
+        public string ValikkoOtsikko
+        {
+            get => valikkoOtsikko;
+            set { if (valikkoOtsikko == value) return; valikkoOtsikko = value; otsikko.text = (value ?? linssinNimi ?? "").ToUpperInvariant(); }
+        }
+        string valikkoOtsikko, linssinNimi;
         /// <summary>Selitekortti näkyy avattuna (ei kutistettuna).</summary>
         public bool AukiKokonaan => Nakyvissa && !pieni;
 
@@ -109,7 +117,8 @@ namespace Matkakirja.Natiivi
 
         public void Nayta(string nimi, IReadOnlyList<SeliteRivi> selite)
         {
-            otsikko.text = (nimi ?? "").ToUpperInvariant();
+            linssinNimi = nimi;
+            otsikko.text = (valikkoOtsikko ?? nimi ?? "").ToUpperInvariant();
             rivit.Clear();
             foreach (var r in selite)
             {

@@ -116,8 +116,10 @@ namespace Matkakirja.Natiivi
             // hampurilainen ja hampurilaiseen ylimmäksi korkeustasot-nappi ja sen alapuolelle sulje-nappi ja ota vastaavasti kartalta
             // pois"): ✕-pilleri ja selitteen nimilappu pois, tilalle OHJAUSNAPPI-hampurilainen (LinssiValikko-pohja, PANEELI-lista):
             // Korkeustasot (selite auki/kiinni) ja Sulje linssi. Linssien hampurilaispäätös 2.10. klo 15.00.
-            topoValikko = new LinssiValikko(kerros, new List<(string, Action)> { ("Korkeustasot", () => Selite.Avaa(!Selite.AukiKokonaan)) },
-                "Sulje linssi", SuljeLinssi, aanet: false);
+            // Korkeustasot on KYTKIN (web #3881): tila PÄÄLLÄ/POIS rivin oikeassa reunassa, napautus sulkee valikon ja kortti
+            // avautuu yksin napin alle (Päätoimittaja 2.10.2026 klo 23.0x: valikko ei saa jäädä selitteen päälle).
+            topoValikko = new LinssiValikko(kerros, new List<(string, Action)>(), "Sulje linssi", SuljeLinssi, aanet: false,
+                kytkimet: new List<(string, Func<bool>, Action<bool>)> { (Korkeustasot, () => Selite.AukiKokonaan, auki => Selite.Avaa(auki)) });
             topoRyhma = Ohjausnappi.Ryhma(turva);
             topoRyhma.Add(topoValikko.Nappi);
             topoRyhma.style.display = DisplayStyle.None;
@@ -380,7 +382,7 @@ namespace Matkakirja.Natiivi
         /// Sulkupilleri näkyy, kun linssi on auki eikä sitä peitä kuvanäkymä tai vertailuarkki
         /// eikä korvaa aikajanan hampurilainen (sen "Poistu").
         /// </summary>
-        const string TopografiaId = "topografia";
+        const string TopografiaId = "topografia", Korkeustasot = "Korkeustasot";
         LinssiValikko topoValikko;
         VisualElement topoRyhma;
 
@@ -388,9 +390,13 @@ namespace Matkakirja.Natiivi
         public string TopoValikko(string mita)
         {
             if (mita == "auki") topoValikko.Avaa();
-            if (mita == "korkeustasot") Selite.Avaa(!Selite.AukiKokonaan);
+            // Kuten rivin napautus: valikko kiinni, sitten kortti auki/kiinni (oikea sim-tap todentaa saman polun).
+            if (mita == "korkeustasot") { topoValikko.Sulje(); Selite.Avaa(!Selite.AukiKokonaan); }
             var b = topoValikko.Nappi.worldBound;
-            return $"topovalikko: näkyy {topoRyhma.resolvedStyle.display == DisplayStyle.Flex}, nappi {b.xMin:0},{b.yMin:0} {b.width:0}×{b.height:0}, auki {topoValikko.Auki}, ✕ {sulje.resolvedStyle.display == DisplayStyle.Flex}, selite auki {Selite.AukiKokonaan}";
+            var r = topoValikko.OmaRivi(Korkeustasot)?.worldBound ?? default;
+            return $"topovalikko: näkyy {topoRyhma.resolvedStyle.display == DisplayStyle.Flex}, nappi {b.xMin:0},{b.yMin:0} {b.width:0}×{b.height:0}, " +
+                   $"rivi {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}, auki {topoValikko.Auki}, ✕ {sulje.resolvedStyle.display == DisplayStyle.Flex}, " +
+                   $"selite auki {Selite.AukiKokonaan}, otsikko {Selite.ValikkoOtsikko ?? "-"}";
         }
 
         internal void PaivitaSulku()
@@ -403,6 +409,7 @@ namespace Matkakirja.Natiivi
             topoRyhma.style.display = nakyy && topo ? DisplayStyle.Flex : DisplayStyle.None;
             if (!(nakyy && topo)) topoValikko.Sulje();
             Selite.PieniPiiloon = topo;
+            Selite.ValikkoOtsikko = topo ? Korkeustasot : null;
             nakyy &= !topo;
             sulje.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (nakyy && !sulkuNakyi) Kutista();

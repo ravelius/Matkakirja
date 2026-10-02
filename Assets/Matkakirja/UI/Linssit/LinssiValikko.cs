@@ -77,7 +77,10 @@ namespace Matkakirja.Natiivi
         /// </summary>
         /// <param name="aanet">false = ei Kertoja-, Taustamusiikki- eikä Tekstitys-rivejä (Topografia, omistaja 2.10.2026 klo 21.3x:
         /// "hampurilaiseen ylimmäksi korkeustasot-nappi ja sen alapuolelle sulje-nappi").</param>
-        public LinssiValikko(UiKerros kerros, IEnumerable<(string Nimi, Action Teko)> valinnat, string sulkuNimi, Action sulje, bool aanet = true)
+        /// <param name="kytkimet">linssin omat kytkimet komentojen jälkeen (web luoLinssivalikko kohdat `{ teksti, lue, kirjoita }`):
+        /// tila PÄÄLLÄ/POIS rivin oikeassa reunassa, napautus kääntää ja sulkee valikon. Topografia: Korkeustasot.</param>
+        public LinssiValikko(UiKerros kerros, IEnumerable<(string Nimi, Action Teko)> valinnat, string sulkuNimi, Action sulje, bool aanet = true,
+            IEnumerable<(string Nimi, Func<bool> Lue, Action<bool> Kirjoita)> kytkimet = null)
         {
             poistu = sulje;
             Nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", Vaihda, null, "harmaa");
@@ -86,7 +89,10 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(valikko, Kirjasin.Luku);
             bool omia = false;
             foreach (var (nimi, teko) in valinnat) { Komento(nimi, teko); omia = true; }
-            if (omia) Rakenne.El("mk-linssivalikko__viiva", valikko, PickingMode.Ignore);
+            if (kytkimet != null)
+                foreach (var (nimi, lue, kirjoita) in kytkimet) { omat.Add(OmaKytkin(nimi, lue, kirjoita)); omia = true; }
+            // Webin karttalinssin valikossa (kohdat) ei ole erotinta omien rivien ja sulun välissä.
+            if (omia && aanet) Rakenne.El("mk-linssivalikko__viiva", valikko, PickingMode.Ignore);
             kertoja = Kytkinrivi(Kytkin.Kertoja, "Kertoja");
             musiikki = Kytkinrivi(Kytkin.Musiikki, "Taustamusiikki");
             tekstitys = Tekstitysrivi();
@@ -94,6 +100,39 @@ namespace Matkakirja.Natiivi
             else { kertoja.Rivi.style.display = DisplayStyle.None; musiikki.Rivi.style.display = DisplayStyle.None; }
             Komento(sulkuNimi, () => poistu?.Invoke());
             kerros.JokaRuutu += TarkistaOhiNapautus;
+        }
+
+        readonly List<(Button Rivi, Label Tila, string Nimi, Func<bool> Lue)> omat = new();
+
+        /// <summary>Linssin oma kytkin (web aikajana-valikko.js kytkin): nimi vasemmalla, tila PÄÄLLÄ/POIS oikealla.</summary>
+        (Button, Label, string, Func<bool>) OmaKytkin(string nimi, Func<bool> lue, Action<bool> kirjoita)
+        {
+            Label tila = null;
+            var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__kytkin", () =>
+            {
+                // Valikko kiinni ennen tekoa (web: kytkin sulkee pudotuksen), jotta avautuva kortti jää yksin napin alle.
+                bool uusi = !lue();
+                Sulje();
+                kirjoita(uusi);
+            }, valikko);
+            Kirjasimet.Aseta(Rakenne.Teksti(nimi, "mk-linssivalikko__nimi", b), Kirjasin.Luku);
+            tila = Rakenne.Teksti("", "mk-linssivalikko__tila", b);
+            Kirjasimet.Aseta(tila, Kirjasin.KoneBold);
+            return (b, tila, nimi, lue);
+        }
+
+        /// <summary>Oman kytkimen rivi nimellä (testikomennot: rivin paikka oikeaa sim-tappia varten).</summary>
+        public Button OmaRivi(string nimi) => omat.Find(o => o.Nimi == nimi).Rivi;
+
+        void PaivitaOmat()
+        {
+            foreach (var (rivi, tila, nimi, lue) in omat)
+            {
+                bool paalla = lue();
+                rivi.EnableInClassList("mk-valittu", paalla);
+                tila.text = paalla ? "PÄÄLLÄ" : "POIS";
+                rivi.tooltip = nimi + ": " + (paalla ? "päällä" : "pois");
+            }
         }
 
         /// <summary>Löydös 147 (omistaja, build 17): Ihmisen matka II:n CC-nappi pois yläriviltä, tilalle kytkin "Tekstitys".</summary>
@@ -155,6 +194,7 @@ namespace Matkakirja.Natiivi
             PaivitaRivi(Kytkin.Kertoja);
             PaivitaRivi(Kytkin.Musiikki);
             PaivitaTekstitys();
+            PaivitaOmat();
         }
 
         /// <summary>
