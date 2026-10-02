@@ -17,10 +17,11 @@ namespace Matkakirja.Natiivi
     {
         public const int Kerros = 12;
         public static bool Paalla = true;
-        /// <summary>Koko (pt): puhelimella 72, tabletilla 96 (omistaja: "pienen maapallon"; 100 pt vei iPhonella neljänneksen leveydestä).</summary>
-        static float KokoPt => UiKerros.Tabletti ? 96f : 72f;
+        /// <summary>Koko (pt): puhelimella 94, tabletilla 125 (omistaja: "pienen maapallon"; 2.10. "Pieni karttapallo vähän
+        /// isompana" → noin 30 % isommaksi kuin 72 / 96).</summary>
+        static float KokoPt => UiKerros.Tabletti ? 125f : 94f;
         const float KestoS = 0.7f, Sade = 1000f;
-        const float Vasen = 12f, Alas = 62f, Rako = 6f, MinKokoPt = 48f;
+        const float Vasen = 12f, Alas = 62f, Rako = 6f, MinKokoPt = 62f;   // min 48 → 62 (+30 %, omistaja 2.10.)
         const string PintaJuuri = "https://media.matkakirja.app/julisteet/pallo/bmng/";
 
         readonly VisualElement el;

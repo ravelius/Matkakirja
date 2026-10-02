@@ -1,0 +1,23 @@
+/* KORTTI-pinnat: palaute ja periaatteet — PalauteLomake, Aloitusnakyma
+ * Siirretty sellaisenaan (UI-pohjien tyylijako 2.10.2026, web #3820 css/pohjat/…): järjestys Matkakirja.tss:ssä. */
+
+/* KORTTI-pohja: palautelomakkeen ensimmäinen osio suoraan otsikon alaviivan alle (ei toista viivaa). */
+.mk-palaute__osio--ensin {
+    margin-top: 0;
+    padding-top: 0;
+    border-top-width: 0;
+}
+
+/* Periaatteet KORTTI-pohjassa (web #3800): väliotsikot kapiteeleja ilman viivaa, oikeusrivi apurina. */
+.mk-periaatteet .mk-tietoja__otsikko {
+    margin-top: var(--tk-vali-m);
+    padding-top: 0;
+    border-top-width: 0;
+    font-size: var(--tk-koko-kapiteeli);
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-periaatteet .mk-aloitus__oikeudet {
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-paperi-muste-pehmea);
+}

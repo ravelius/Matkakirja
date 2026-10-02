@@ -57,6 +57,9 @@ namespace Matkakirja.Natiivi
         readonly Kuvasuurennos suurennos;
         readonly ScrollView sisus;
         readonly KortinLukija lukija;
+        // Kohdekortin visa omana KORTTI-ikkunanaan nostokortin päällä (web: luoPohjaKortti({ yla: 'Visa', otsikko })).
+        readonly VisualElement visaKerros;
+        bool visaAuki;
         // NOSTOSELAIN ja AUTO (omistaja 1.10.2026, mallit 20 + 22 + 23): ‹ [Nostot ▾] › kahvan alla, AUTO lukijan rivillä.
         readonly Nostoselain selain;
         /// <summary>Auki olevan kortin valo (selaimen nykyinen).</summary>
@@ -143,6 +146,11 @@ namespace Matkakirja.Natiivi
             // TrickleDown-vaiheessa, joten vaakapyyhkäisy jää kuvasarjalle (KuvaSelaus) ja napautus napeille.
             Kosketusvieritys.Liita(kortti, () => kahvaVeto ? null : selain.Vierittava ?? sisus);
             Nappaimisto.Rekisteroi("nostokortti", 60, () => Auki, null, null, Sulje); // Esc sulkee (UI-pohjat: yksi sulkupino)
+
+            visaKerros = Rakenne.El("mk-himmennys mk-nosto-visa__kerros", ui.Juuri(UiKerros.Valikot));
+            visaKerros.style.display = DisplayStyle.None;
+            visaKerros.RegisterCallback<PointerDownEvent>(e => { if (e.target == visaKerros) SuljeVisa(); });
+            Nappaimisto.Rekisteroi("nostovisa", 62, () => visaAuki, null, null, SuljeVisa); // Esc sulkee ensin visan
 
             suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true }; // löydökset 102 ja 150
             suurennos.AukiMuuttui += Pehmenna;
@@ -307,6 +315,7 @@ namespace Matkakirja.Natiivi
             kahvaVeto = false;
             lukija.Pysayta();
             selain.Sulje();
+            SuljeVisa();
             Puhe.Instanssi?.PeruEsihaku(alunEsihaku);
             alunEsihaku = null;
             Rakenne.PiilotaHaivyttaen(kerros, 200);
@@ -761,7 +770,8 @@ namespace Matkakirja.Natiivi
             // Täkynosto: valokuva ja karttaliite jutun jälkeen, ennen kysymystä (web piirraNostonSisus).
             if (n.Valokuva != null) Valokuva(sisus, n.Valokuva);
             if (n.Karttaliite != null) Karttaliite(sisus, n.Karttaliite);
-            if (n.Visa != null) Visa(sisus, n);
+            // Kohdekortin visa on oma KORTTI-ikkunansa (Visa-nappi, web avaaKohdePohjalla); muilla lajeilla kortin tekstissä.
+            if (n.Visa != null && n.Laji != NostoLaji.Kohde) Visa(sisus, n);
             if (n.Laji == NostoLaji.Elain) Elainpalkkio(sisus, n);
             if (n.Laji == NostoLaji.Takynosto)
             {
@@ -772,7 +782,7 @@ namespace Matkakirja.Natiivi
             {
                 // Kysymykset ja kierros siirtyivät alareunan toimintoriville (Kysy · Visa · Kierros · Lehti).
                 Toimintorivi(n);
-                if (n.LeikekirjaValo != null) Leikekirja(sisus, n);
+                // Livian leikekirja on toimintorivin Lehti-nappi (web avaaKohdePohjalla, omistaja 2.10.2026: kohdekortti pysyvä).
                 // Reaktiot kortin loppuun: tunniste on kohteen oma id (web kohdeReaktioTunniste).
                 Reaktiot.Piirra(sisus, Reaktiot.KohdeAvain(n.Id), n.Otsikko);
             }
@@ -815,6 +825,32 @@ namespace Matkakirja.Natiivi
             if (j.resolvedStyle.left != x) j.style.left = x;
             if (j.resolvedStyle.top != y) j.style.top = y;
             j.EnableInClassList("mk-nosto__lukija--irti", s > 1f);
+        }
+
+        /// <summary>
+        /// Kohdekortin Visa-nappi: KORTTI-pohjan ikkuna (kapiteeli VISA, otsikkona kohteen nimi) ja sen sisällä sama lukijan
+        /// kysymys kuin ennen kortin tekstissä (Visa). Sulku: ohinapautus ja Esc; nostokortti jää taakse.
+        /// </summary>
+        void AvaaVisa(Nosto n)
+        {
+            lukija.Pysayta();
+            visaKerros.Clear();
+            var k = new Kortti("mk-nosto-visa", pohja: true);
+            visaKerros.Add(k);
+            Kirjasimet.Aseta(Rakenne.Teksti("VISA", "mk-kortti__kapiteeli", k.Sisus), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(n.Otsikko ?? "", "mk-kortti__otsikko", k.Sisus), Kirjasin.LukuLihava);
+            Visa(k.Sisus, n);
+            visaAuki = true;
+            visaKerros.BringToFront();
+            Rakenne.NaytaHeti(visaKerros);
+            Ponnahdus.Avaa(k);
+        }
+
+        void SuljeVisa()
+        {
+            if (!visaAuki) return;
+            visaAuki = false;
+            Rakenne.PiilotaHaivyttaen(visaKerros, 200);
         }
 
         /// <summary>Luenta loppui omia aikojaan: AUTO siirtyy seuraavaan nostoon 3 s:n laskurilla (Nostoselain).</summary>
@@ -884,30 +920,20 @@ namespace Matkakirja.Natiivi
                 Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
                 napit[nimi] = a;
             }
-            Nappi("kysy", "Kysy", () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.AvaaKortista(PuluChat.NostonAihe(n), n.Kysymykset); });
+            // Napit kuten web avaaKohdePohjalla (#3788, omistaja 2.10.2026 pysyväksi): Kysy vain kysymyksillä, Visa, Kierros,
+            // Lehti = kohteen oma täkynosto (Livian leikekirja), ei kaupungin/maan lehteä. Esim. Ateena: vain Kysy.
+            if (n.Kysymykset.Count > 0)
+                Nappi("kysy", "Kysy", () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.AvaaKortista(PuluChat.NostonAihe(n), n.Kysymykset); });
             if (n.Visa != null)
-                Nappi("visa", "Visa", () =>
-                {
-                    laajennettu = true; Pystypaikka();
-                    var v = sisus.contentContainer.Q(className: "mk-nosto__visa");
-                    if (v != null) sisus.schedule.Execute(() => sisus.ScrollTo(v)).ExecuteLater(30);
-                });
+                Nappi("visa", "Visa", () => AvaaVisa(n));
             if (n.Kierrokset.Count > 0) { string u = n.Kierrokset[0].Item2; Nappi("kierros", "Kierros", () => Application.OpenURL(u)); }
-            var lehti = LehtiToiminto(n);
-            if (lehti != null) Nappi("lehti", "Lehti", lehti, true);
-        }
-
-        /// <summary>Kaupungin lehti (noston kaupunki) tai maan lehti (noston maa); null = ei lehteä.</summary>
-        static Action LehtiToiminto(Nosto n)
-        {
-            var ui = UiNakymat.Hae();
-            if (ui == null) return null;
-            var o = PeliOhjain.Instanssi;
-            if (!string.IsNullOrEmpty(n.Kaupunki))
-                return () => { ui.Nostokortti.Sulje(); if (o == null || o.LueLehti(n.Kaupunki) != null) ui.Lehti.Nayta(LehtiLaji.Kaupunki, n.Kaupunki); };
-            if (!string.IsNullOrEmpty(n.Iso))
-                return () => { ui.Nostokortti.Sulje(); if (o == null || o.LueMaalehti(n.Iso, null) != null) ui.Lehti.Nayta(LehtiLaji.Maa, n.Iso); };
-            return null;
+            if (n.LeikekirjaValo != null)
+            {
+                string valo = n.LeikekirjaValo;
+                Nappi("lehti", "Lehti", () => Avaa(valo), true);
+                napit["leikekirja"] = napit["lehti"]; // testikomento ui leikekirja
+            }
+            if (toimintorivi.childCount == 0) PoistaToimintorivi();
         }
 
         void KysyPululta(VisualElement isa, Nosto n)
@@ -1004,21 +1030,6 @@ namespace Matkakirja.Natiivi
             Sulje();
             Avaa(valo);
         }
-
-        /// <summary>
-        /// Web piirraKohteenNosto: kohteen nimeävä täkynosto aukeaa kohdekortista. Klikkiotsikko on
-        /// napin sisältö — lupaus lunastetaan noston omassa kortissa.
-        /// </summary>
-        void Leikekirja(VisualElement isa, Nosto n)
-        {
-            string valo = n.LeikekirjaValo;
-            Action avaa = () => Avaa(valo);
-            var b = Rakenne.Nappi(null, "mk-nosto__leikekirja", avaa, isa);
-            Kirjasimet.Aseta(Rakenne.Teksti("LIVIAN LEIKEKIRJA", "mk-nosto__leikekirjaotsake", b), Kirjasin.Kone);
-            Kirjasimet.Aseta(Rakenne.Teksti(n.LeikekirjaOtsikko, "mk-nosto__leikekirjaotsikko", b), Kirjasin.Luku);
-            napit["leikekirja"] = avaa;
-        }
-
         /// <summary>
         /// Web kohteenNykykuva + .fokuskohde-teksti > .fokuskohde-nykykuva (omistaja 27.9.2026, Olympia-kortti):
         /// yhä olemassa olevan ihmekohteen valokuva pienenä tekstin kyljessä, kuvateksti alla, napautus suurentaa.

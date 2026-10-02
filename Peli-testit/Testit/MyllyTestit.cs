@@ -253,7 +253,7 @@ namespace Matkakirja.Peli.Testit
             m.Tapahtui += (laji, teksti) => { if (laji == "peli") rivit.Add(teksti); };
             var raha = PelinTalous.Minipeli;
             var t = new PeliTulos { Nimi = "Mylly", Vastustaja = Vastustaja.BottiNormaali, Voittaja = 0, Siirtoja = 20, Paiva = "2026-10-01" };
-            var (streak, palkkio) = Pelikehys.Kirjaa(m, t, raha);
+            var (streak, palkkio, _) = Pelikehys.Kirjaa(m, t, raha);
             Oleta.Tosi(streak.HasValue && streak.Value.Pituus == 1, "pelattu peli = pelipäivän teko");
             Oleta.Sama(60, palkkio);
             Oleta.Sama("Mylly: voitit botin (normaali) 20 siirrossa.", rivit.FirstOrDefault(), "matkakirjan rivi");

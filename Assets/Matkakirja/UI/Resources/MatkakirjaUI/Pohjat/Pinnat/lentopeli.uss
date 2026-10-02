@@ -1,0 +1,105 @@
+/* LENTOPELI (pinta; UI-pohjien tyylijako 2.10.2026): LENTOPELIN OHJAIN (Linssiseppä 1.10.2026, lentopeli vaihe 1): LINSSIN OHJAIN -pohja, teema LASI (tk-teema-lasi),
+ * alareunan nauha ≤ 25 %; otsikko kapiteeli, lukema Kone, Lopeta TOIMINTO. Kaasuvipu oikeassa reunassa (.mk-lento-vipu). */
+.mk-lento {
+    position: absolute;
+    align-items: center;
+}
+
+.mk-lento__paneeli {
+    width: 100%;
+    max-width: 560px;
+    padding: var(--tk-vali-m) 14px 10px 14px;
+    border-width: 1px;
+    border-radius: var(--tk-kulma-kortti);
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta);
+    color: var(--tk-muste);
+}
+
+.mk-lento__rivi {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--tk-vali-s);
+}
+
+.mk-lento__otsikko {
+    margin: 0;
+    padding: 0;
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 1.5px;
+    color: var(--tk-muste-pehmea);
+}
+
+.mk-lento__lopeta {
+    height: var(--tk-nappi-korkeus);
+    margin: 0;
+    padding: 0 var(--tk-vali-m) 0 var(--tk-vali-m);
+    border-width: 1px;
+    border-radius: var(--tk-kulma-pilleri);
+    border-color: var(--tk-reunus);
+    background-color: transparent;
+    color: var(--tk-muste);
+    font-size: var(--tk-koko-apuri);
+}
+
+.mk-lento__lukema {
+    margin: 0 0 var(--tk-vali-s) 0;
+    padding: 0;
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-muste);
+    white-space: normal;
+}
+
+/* KAASUVIPU (omistajan speksi, Päätoimittaja 1.10.): PANEELIn säätimen (.mk-saadin) rata ja nuppi pystyyn, oikeaan reunaan.
+ * Rata 8 pt reunuksella, nuppi teeman toiminto-värillä (LASI = kulta); pykälät LASI-pillereinä radan vasemmalla.
+ * Osuma-ala: koko vivun laatikko (88 × 232 pt). Mitat LentopeliNakyma.VipuKorkeus / Reuna / NuppiKoko. */
+.mk-lento-vipu {
+    position: absolute;
+    top: 30%;
+    width: 88px;
+    height: 232px;
+}
+
+.mk-lento-vipu__rata {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    bottom: 12px;
+    width: 8px;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta);
+}
+
+.mk-lento-vipu__nuppi {
+    position: absolute;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    border-width: 2px;
+    border-radius: 14px;
+    border-color: var(--tk-pinta);
+    background-color: var(--tk-toiminto);
+}
+
+.mk-lento-vipu__pykala {
+    position: absolute;
+    right: 40px;
+    height: 22px;
+    margin: 0;
+    padding: 0 var(--tk-vali-s) 0 var(--tk-vali-s);
+    border-width: 1px;
+    border-radius: var(--tk-kulma-pilleri);
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta);
+    color: var(--tk-muste-pehmea);
+    font-size: var(--tk-koko-kapiteeli);
+    -unity-text-align: middle-center;
+}
+
+.mk-lento-vipu__pykala.mk-valittu {
+    border-color: var(--tk-korostus);
+    color: var(--tk-toiminto);
+}

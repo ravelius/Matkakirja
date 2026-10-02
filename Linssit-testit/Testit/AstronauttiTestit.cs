@@ -135,11 +135,11 @@ namespace Matkakirja.Linssit.Testit
             var a = AstronauttiAineisto.Lue(MiniJson.Jasenna(File.ReadAllText(Polku("paketti/satelliitti-data.json"))));
             var etna = a.Kohteet.First(x => x.Tunnus == "etna");
             var h = etna.Havainnot[1];
-            Oleta.Sama("Etna, Sisilia, Italia. " + h.Teksti, etna.Luettava(h));
+            Oleta.Sama(h.Teksti.Trim(), etna.Luettava(h));
             // Ilman havaintoa tai sen tekstiä luetaan kohteen selite (web h?.teksti ?? kohde.selite), reunat siistittyinä.
-            Oleta.Sama("Etna, Sisilia, Italia. " + etna.Selite, etna.Luettava(null));
-            Oleta.Sama("Etna, Sisilia, Italia. " + etna.Selite, etna.Luettava(new Havainto()));
-            Oleta.Sama("X, Y.", new Havaintokohde { Nimi = "X", Seutu = "Y" }.Luettava(null));
+            Oleta.Sama(etna.Selite.Trim(), etna.Luettava(null));
+            Oleta.Sama(etna.Selite.Trim(), etna.Luettava(new Havainto()));
+            Oleta.Sama("", new Havaintokohde { Nimi = "X", Seutu = "Y" }.Luettava(null));   // ei otsikkoa (omistaja 2.10.)
             Oleta.Sama("astro-selite", AstronauttiLinssi.SelitteenSailio);
             Oleta.Tosi(System.Text.RegularExpressions.Regex.IsMatch(AstronauttiLinssi.SelitteenSailio, "^[a-z0-9-]{1,24}$"),
                 "workerin lohkomuoto (tools/pollo/worker.js)");

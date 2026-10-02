@@ -1,0 +1,6 @@
+/* KORTTI-pinta: kohdekortin Visa-ikkuna (Nostokortti.AvaaVisa; web avaaKohdePohjalla luoPohjaKortti({ yla: 'Visa' })).
+ * Kortti nostokortin päällä himmennyksellä; sisältö on nostokortin lukijan kysymys (.mk-nosto__visa*). */
+.mk-nosto-visa {
+    width: 92%;
+    max-width: var(--tk-leveys-kortti);
+}

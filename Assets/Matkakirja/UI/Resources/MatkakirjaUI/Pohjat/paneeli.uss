@@ -1,0 +1,28 @@
+/* PANEELI-pohja (PAPERI) — mk-paneeli--pohja
+ * Siirretty sellaisenaan (UI-pohjien tyylijako 2.10.2026, web #3820 css/pohjat/…): järjestys Matkakirja.tss:ssä. */
+
+/* PANEELI (PAPERI): pillerivalikko ja sen alinäkymät, Muut ja linssin esikatselu (omistaja 1.10.2026, web #3804;
+ * Linssivalitsin mk-paneeli--pohja). Paperipinta ja pergamenttirengas, kapiteeliotsikko, ‹ Takaisin korostusvärillä,
+ * segmentit ja rivit 38 pt (reunus, kulma nappi), päällä oleva kytkin pergamenttina korostusreunuksella. */
+
+.mk-paneeli--pohja {
+    border-width: 3px;
+    border-color: var(--tk-paperi-pergamentti);
+    border-radius: var(--tk-kulma-kortti);
+    background-color: var(--tk-paperi-pinta);
+    color: var(--tk-paperi-muste);
+}
+
+.mk-paneeli--pohja .mk-selite__otsikko {
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 7.69px; /* web 0.12em */
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-paneeli--pohja .mk-linssivalitsin__takaisin .mk-nappi__teksti {
+    color: var(--tk-paperi-korostus);
+}
+
+.mk-paneeli--pohja .mk-linssivalitsin__erotin {
+    background-color: var(--tk-paperi-reunus);
+}

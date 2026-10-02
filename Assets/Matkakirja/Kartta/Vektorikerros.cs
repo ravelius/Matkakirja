@@ -199,6 +199,8 @@ namespace Matkakirja
 
         /// <summary>Oma kerros ("rannikko", "rajat"; KarttaKerrokset.Nakyvyys).</summary>
         public void Nakyvat(bool nakyy) => piilossa = !nakyy;
+        /// <summary>Piilotettu Nakyvat(false):lla (lentopeli palauttaa aiemman tilan).</summary>
+        public bool Piilossa => piilossa;
 
         /// <summary>Näkyykö kerros juuri nyt, ja jos ei, miksi (tila-komento).</summary>
         public string Syy()
