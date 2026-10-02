@@ -1,18 +1,18 @@
-# Natiivisepän aloitusviesti (1.10.2026 klo 21.4x, BUILD 110; luovutus -20261001-b)
+# Natiivisepän aloitusviesti (2.10.2026 klo 13.1x, BUILD 119; luovutus -20261002)
 
 Olet Natiiviseppä (Opus, high), Macin käyttäjä koodaus. Checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja, proto-repo
 /Users/Shared/Claude/proto-3d. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutus (ensin TILA HETI):
-`git fetch origin && git show origin/selvittaja-3d-luovutus:docs/raportit/viesti-natiiviseppa-luovutus-20261001-b.md`.
+`git fetch origin && git show origin/selvittaja-3d-luovutus:docs/raportit/viesti-natiiviseppa-luovutus-20261002.md`.
 Muisti: burst-linkkeri-ohimeneva, kaannos-vika-merge-vanha-app, juna-pudotus-historia-ansa, jaettu-kaannospalvelu-luokitin,
 juna-avaus-julkaisijan-kuittauksella, ui-pohjat-ja-tyylit-ensin.
 Päätoimittajan sessio: "Päätoimittaja (Opus, max)". Vertaisille SendMessage NIMELLÄ (ListAgents); tavoittamattomalle
 mcp__ccd_session_mgmt__send_message session id:llä.
 
 ## KÄRKI
-1. BUILD 110 = 5872d9d6 = huomisen TF (Julkaisija lataa). Ei avoimia junia.
-2. Juna 111 = juna/b13 4a5eb743 + natiiviseppa/sarja-20260930 4254fe57 (kun Karttaseppä kuittaa 30-pohjan laatat.json ämpäriin)
-   + pelikoodari/matkamittari-2 8b590fba → testit (4 sarjaa + tyylikirja + pohjavahti) → Julkaisijan NYT → savuke (+ Wien z10 -pari).
-3. Uudet merge-pyynnöt: kokoa junaan, testaa, pyydä NYT; .app vain kopioi-juna-app.sh:lla.
+1. BUILD 119 = bce26259 masterissa. TF 116 ja 118 ladattu 2.10.; seuraava TF = uusin puhdas BUILD.
+2. Juna 120 (juna/b13 f41e9530, käännös 8aaa1ae7) odottaa savuketta 1120 → PASS → BUILD 120.
+3. Juna 121 koottu ja testattu (natiiviseppa/juna-121-koe 3570bbb2) → NYT Julkaisijalta 120:n jälkeen; savuke 1121 ohjeet luovutuksessa.
+4. Laitekäännökset ilman iPad-asennusta: laite-vuorossa-kopio.sh (luovutus, UUDET OPIT).
 
 ## SÄÄNNÖT
 - Viestit Päätoimittajalle vain valmis erä / jumi / kysymys (≤ 8 riviä).
