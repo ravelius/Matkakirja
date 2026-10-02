@@ -65,6 +65,12 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public float VarrenAlin { get; internal set; } = float.NaN;
         public int VarrenAlinVersio { get; internal set; }
+
+        /// <summary>Puomin alin kohta EVA-kerroksen alareunasta (pt; siirrosta riippumaton, joten Pulu laskee paikkansa suoraan).</summary>
+        public float VarrenAlinEvasta { get; internal set; } = float.NaN;
+
+        /// <summary>EVA-kerroksen alareuna paneelin pisteinä nykyisessä asettelussa.</summary>
+        public float EvaAla => eva.worldBound.yMax;
         static bool kyparaHaussa;
         static float kyparaVirhe = float.NegativeInfinity;
 
@@ -470,6 +476,7 @@ namespace Matkakirja.Natiivi
                     return this.LocalToWorld(p).y;
                 }
                 kuva.VarrenAlin = Mathf.Max(Alin(NivelY), Alin(PaaY));
+                kuva.VarrenAlinEvasta = kuva.VarrenAlin - worldBound.yMax;
                 kuva.VarrenAlinVersio++;
                 Kuva(evaKuvat[1], 304, 1f, true, varjo);                 // perus varjokuvana
                 // Kasvovalo ensin ja kasvot sen päälle (Päätoimittajan kuvatarkistus 2.10.: valo peitti silmät ja nokan, visiirissä

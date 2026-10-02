@@ -237,7 +237,6 @@ namespace Matkakirja.Natiivi
 
         bool robottiAseteltu;
         float robottiKorjaus;
-        int robottiVersio = -1;
 
         void AsetteleRobotti(Vector4 reunat)
         {
@@ -255,19 +254,17 @@ namespace Matkakirja.Natiivi
             alue.style.right = StyleKeyword.Null;
             alue.style.left = reunat.x + RobottiReuna - RobottiPuluVasen * RobottiSkaala;
             float alaRaja = Mathf.Max(reunat.w + 8f, AlaVara);
-            // Palaute ISS-kyydissä: puomin todellinen alin kohta (LiviaKuva.VarrenAlin) vähintään AlaVaran rajalle eli 6 pt pöydän
-            // yläreunan yläpuolelle; korjaus päivitetään vain uudesta piirrosta (yksi askel riittää, siirto on 1:1).
-            if (AlaVara > 0f && !float.IsNaN(kuva.VarrenAlin) && alue.panel != null)
+            float perus = alaRaja + (RobottiAlin - 304f) * RobottiSkaala;
+            // ISS-kyydissä puomin piirretty alin kohta (LiviaKuva) AlaVaran rajalle eli 6 pt pöydän yläreunan yläpuolelle. Etäisyys
+            // alueen alareunasta puomin alimpaan kohtaan ei riipu Pulun paikasta, joten tarvittava alareuna lasketaan suoraan
+            // (palautesilmukka heilui yhden piirron viiveellä 4 ↔ 41 pt, kuva 78c03213).
+            robottiKorjaus = 0f;
+            if (AlaVara > 0f && !float.IsNaN(kuva.VarrenAlinEvasta) && !float.IsNaN(alue.worldBound.yMax))
             {
-                if (kuva.VarrenAlinVersio != robottiVersio)
-                {
-                    robottiVersio = kuva.VarrenAlinVersio;
-                    float raja = alue.panel.visualTree.layout.height - AlaVara;
-                    robottiKorjaus = Mathf.Clamp(robottiKorjaus + kuva.VarrenAlin - raja, 0f, 80f);
-                }
+                float d = kuva.VarrenAlinEvasta + (kuva.EvaAla - alue.worldBound.yMax);
+                robottiKorjaus = Mathf.Clamp(AlaVara + d - perus, 0f, 80f);
             }
-            else robottiKorjaus = 0f;
-            alue.style.bottom = alaRaja + (RobottiAlin - 304f) * RobottiSkaala + robottiKorjaus;
+            alue.style.bottom = perus + robottiKorjaus;
             alue.style.transformOrigin = new TransformOrigin(Length.Percent(0), Length.Percent(100));
             alue.style.scale = new Scale(new Vector2(RobottiSkaala, RobottiSkaala));
         }
