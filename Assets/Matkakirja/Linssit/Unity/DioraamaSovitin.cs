@@ -886,6 +886,8 @@ namespace Matkakirja.Natiivi
             else if (mita == "aika") pysaytettyT = (arvo == null || arvo == "pois") ? (double?)null : arvo == "nyt" ? t : Luku(arvo); // "nyt" jäädyttää nykyhetkeen (kuvaparit)
             else if (mita == "taso" && arvo != null && osat.Length > 3) { pakotettuTila = arvo; pakotettuTaso = (int)Luku(osat[3]); }
             else if (mita == "napauta") linssi.Napauta(t);
+            // "poikki kertoja": esittely (kertojan kierros) alusta kuten valikon "Esittely uudelleen" (savukkeiden todennus 2.10.).
+            else if (mita == "kertoja") { Yleisnakymaan(t); linssi.KertojaUudelleen(t + 0.1); }
             else if (mita == "mittaus") { o.Kirjaa(Mittausraportti()); return; }
             else if (mita != "tila") { o.Kirjaa("poikki: tuntematon " + mita); return; }
             o.Kirjaa(Tilaraportti());
