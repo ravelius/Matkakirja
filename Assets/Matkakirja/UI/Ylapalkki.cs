@@ -317,8 +317,7 @@ namespace Matkakirja.Natiivi
                 pilleri.AddToClassList("mk-pilleri--paiva-ensin");
             }
             pilleri.style.display = DisplayStyle.None;
-            logo.RegisterCallback<GeometryChangedEvent>(_ => KeskitaSivut());
-            pilleri.RegisterCallback<GeometryChangedEvent>(_ => { KeskitaPilleri(); KeskitaSivut(); SovitaPilleri(); PilleriMuuttui?.Invoke(); });
+            pilleri.RegisterCallback<GeometryChangedEvent>(_ => { KeskitaPilleri(); PilleriLeveysMuuttui(); SovitaPilleri(); PilleriMuuttui?.Invoke(); });
 
             napit = Rakenne.El("mk-ylapalkki__napit", palkki, PickingMode.Ignore);
             Ratas = Rakenne.Nappi(null, "mk-ikoninappi", null, napit, Ikonit.Ratas);
@@ -627,21 +626,26 @@ namespace Matkakirja.Natiivi
                 // kuin logo vasemmalla; kulmakaaren vara lasketaan nostetusta yläreunasta.
                 KeskitaPilleri();
                 float oikeaVara = Mathf.Max(r.z + 8f * yksikko, KulmaVara(yla - alemmas, rivi / 2f, kulmaR, KulmaMarginaali * yksikko));
-                // Omistaja 17.3x: logo ja pilleri keskelle näytön ulkokaaren ja saaren tikkauskehän väliin (KeskitaSivut mittaa
-                // asettelun jälkeen keskikorkeudelta ja siirtää lisillä).
-                vasenPerus = vasenReuna;
-                oikeaVaraPerus = oikeaVara;
-                naytonKulmaR = kulmaR;
-                vasenReuna += vasenLisa;
-                oikeaVara += kulmaLisa;
                 float oikeaReuna = P(Screen.width / pp, 0f).x - oikeaVara;
-                palkki.style.paddingLeft = vasenReuna;
-                palkki.style.paddingRight = oikeaVara;
                 pilleriMax = Mathf.Max(60f, oikeaReuna - (ruudunKeski + puoli));
                 float logoTila = Mathf.Max(40f, (ruudunKeski - puoli) - vasenReuna);
                 float lk = Mathf.Min(matala ? rivi * 0.8f : 24f * yksikko, logoTila / logoSuhde);
                 logo.style.height = lk;
                 logo.style.width = lk * logoSuhde;
+                palkki.style.paddingLeft = vasenReuna;
+                palkki.style.paddingRight = oikeaVara;
+                // Omistaja 17.3x: logo ja pilleri keskelle näytön ulkokaaren ja saaren tikkauskehän väliin, keskikorkeudelta
+                // laskettuna (ei asettelun jälkeistä takaisinkytkentää: se kierrätti asettelua, 86638635 "Layout update is struggling").
+                sivut = (nahka && saari.width > 0)
+                    ? new Sivut
+                    {
+                        R = kulmaR, W = P(Screen.width / pp, 0f).x, RiviKeski = yla + rivi / 2f, SaariKeski = (saariYla + saariAla) / 2f,
+                        KehaVasen = ylakulma.x - (TikkausEtaisyys + UraPaksuus / 2f) * yksikko,
+                        KehaOikea = alakulma.x + (TikkausEtaisyys + UraPaksuus / 2f) * yksikko,
+                        LogoLeveys = lk * logoSuhde, VasenPerus = vasenReuna, OikeaPerus = oikeaVara,
+                    }
+                    : (Sivut?)null;
+                AsetaSivut();
             }
             pilleri.style.maxWidth = pilleriMax;
             // Varaus turva-alueen yläreunasta: se osa palkista, joka jää turva-alueen alle.
@@ -1170,34 +1174,37 @@ namespace Matkakirja.Natiivi
         /// saari y 14 pt (sama korkeus 36,3 pt), joten rivin laskennallinen sijainti ei riitä: siirto lasketaan pillerin
         /// todellisesta paikasta suhteessa saaren keskikohtaan (palkin koordinaatit) ja korjataan marginaalilla.
         /// </summary>
-        float oikeaVaraPerus = float.NaN, vasenPerus, naytonKulmaR, kulmaLisa, vasenLisa;
+        struct Sivut { public float R, W, RiviKeski, SaariKeski, KehaVasen, KehaOikea, LogoLeveys, VasenPerus, OikeaPerus; }
+        Sivut? sivut;
+        float sivutPilleriLeveys = float.NaN;
+
+        static float KaariX(float R, float y) => R <= 0f || y >= R ? 0f : R - Mathf.Sqrt(Mathf.Max(0f, R * R - (R - y) * (R - y)));
 
         /// <summary>
         /// KESKITYS KAARTEN VÄLIIN (omistaja 2.10.2026 klo 17.3x: "keskitä pilleri sekä matkakirja logo saaren ja iphonen ulkokaarien
-        /// välille"): logon keskikohta vaakasuunnassa keskelle vasemman näytön kaaren ja tikkauskehän ulkoreunan väliä, pilleri
-        /// samoin oikealle. Kaari luetaan elementin keskikorkeudelta (näytön kulmasäde NaytonKulmaPt). Siirto lisätään palkin
-        /// sisennyksiin asettelun jälkeen (GeometryChanged), kunnes ero < 0,25 pt.
+        /// välille"): logon keskikohta vaakasuunnassa keskelle vasemman näytön kaaren ja tikkauskehän ulkoreunan väliä rivin
+        /// keskikorkeudella, pilleri samoin oikealle saaren keskikorkeudella. Pillerin leveys luetaan viimeisestä asettelusta;
+        /// se riippuu vain tekstistä, joten uudelleenlaskenta tehdään vain, kun leveys muuttuu.
         /// </summary>
-        void KeskitaSivut()
+        void AsetaSivut()
         {
-            if (float.IsNaN(oikeaVaraPerus) || naytonKulmaR <= 0f || !PilleriOikealla || tikkausSaari.width <= 0f) return;
-            var p0 = palkki.worldBound;
-            var lb = logo.worldBound;
-            var pb = pilleri.worldBound;
-            if (float.IsNaN(lb.width) || float.IsNaN(pb.width) || pb.width <= 0f || lb.width <= 0f) return;
-            float R = naytonKulmaR, W = p0.width;
-            float Kaari(float y) => y >= R ? 0f : R - Mathf.Sqrt(Mathf.Max(0f, R * R - (R - y) * (R - y)));
-            float ulko = (TikkausEtaisyys + UraPaksuus / 2f) * tikkausYksikko;
-            float logoKeski = lb.center.x - p0.xMin, logoY = lb.center.y - p0.yMin;
-            float logoEro = (Kaari(logoY) + tikkausSaari.xMin - ulko) / 2f - logoKeski;
-            float pilleriKeski = pb.center.x - p0.xMin, pilleriY = pb.center.y - p0.yMin;
-            float pilleriEro = (W - Kaari(pilleriY) + tikkausSaari.xMax + ulko) / 2f - pilleriKeski;
-            bool muuttui = false;
-            if (Mathf.Abs(logoEro) >= 0.25f) { vasenLisa += logoEro; muuttui = true; }
-            if (Mathf.Abs(pilleriEro) >= 0.25f) { kulmaLisa -= pilleriEro; muuttui = true; }
-            if (!muuttui) return;
-            palkki.style.paddingLeft = vasenPerus + vasenLisa;
-            palkki.style.paddingRight = oikeaVaraPerus + kulmaLisa;
+            if (!sivut.HasValue) { sivutPilleriLeveys = float.NaN; return; }
+            var v = sivut.Value;
+            float logoKeski = (KaariX(v.R, v.RiviKeski) + v.KehaVasen) / 2f;
+            palkki.style.paddingLeft = Mathf.Max(v.VasenPerus * 0.5f, logoKeski - v.LogoLeveys / 2f);
+            float pw = pilleri.layout.width;
+            if (float.IsNaN(pw) || pw <= 0f) { palkki.style.paddingRight = v.OikeaPerus; return; }
+            sivutPilleriLeveys = pw;
+            float pilleriKeski = (v.W - KaariX(v.R, v.SaariKeski) + v.KehaOikea) / 2f;
+            palkki.style.paddingRight = Mathf.Max(0f, v.W - pilleriKeski - pw / 2f);
+        }
+
+        /// <summary>Pillerin leveys muuttui (teksti tai fonttikoko): oikea väli uudelleen; muu asettelu ei vaikuta leveyteen.</summary>
+        void PilleriLeveysMuuttui()
+        {
+            float pw = pilleri.layout.width;
+            if (!sivut.HasValue || float.IsNaN(pw) || (!float.IsNaN(sivutPilleriLeveys) && Mathf.Abs(pw - sivutPilleriLeveys) < 0.5f)) return;
+            AsetaSivut();
         }
 
         void KeskitaPilleri()
