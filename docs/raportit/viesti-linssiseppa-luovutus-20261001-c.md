@@ -26,7 +26,8 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
 - KIPSIPÄÄT KARTTAOBJEKTEINA (omistaja 16.4x/16.5x, web #3866): linssiseppa/erikoisnostot-3 2b1bffa1 (karttapiste, kipsi webin arvoin,
   varjo pään siluetista: siirto 0,24, mittakaava 0,85, sumennus 1,0, peitto 0,26; valo ylhäältä kuten web). MERGE-PYYNNÖSSÄ junaan 128
   (simulaattori 8e577065 PASS); omistajan parit lokit/linssiseppa-kipsipaat-kartta-20261002/omistaja-*-ennen-jalkeen.png.
-  Avoin: Marcuksen piste Rooman kutsukortin alla (Pelikoodarin datapäätös). Linssit-nappi vaaka 8 pt väli 54528521 (ei kuvattu).
+  JATKO 54358623 (merge-pyynnössä seuraavaan junaan): päät karttamerkkikerroksen alimpana (kortit päälle), pisteet #3874
+  Sokrates [39.49, 23.98], Marcus [42.82, 12.17] — simulaattori edb73ea4 ei osumia nimiin; omistajan parit uusittu samaan kansioon.
 - PULU VÄISTÄÄ KIPSIPÄÄN: linssiseppa/erikoisnostot-2 1ba9ac42 (Pulu.cs Alareuna + Erikoisnostot.NakyvaAlue) merge-pyynnössä junaan 126;
   omistajan kuvat lokit/linssiseppa-kipsipaat-omistaja-20261002/omistaja-kipsipaat-{kiinni,auki}.png (ajo-kipsipaat-omistaja.sh).
 - KIPSIPÄÄT JUNASSA 125 (cf3ffcf1) ja todennettu iPhonella 16.19 (lokit/linssiseppa-erikoisnostot-juna125-iphone): näkyvät, reunaehto,
