@@ -223,6 +223,7 @@ namespace Matkakirja.Natiivi
                 go.transform.localScale = new Vector3(sk, sk, sk);
                 e.Sekoitin = new DioraamaSekoitin(malli.Glb);
             }
+            LisaaKontaktivarjo(go.transform);
             e.Juuri = go;
             e.SolmuT = solmuT;
             e.Malli = malli;
@@ -232,6 +233,43 @@ namespace Matkakirja.Natiivi
                 var lyhty = LyhdynLuoja(go.transform);
                 if (lyhty != null) lyhty.transform.localPosition = new Vector3(0.28f, 0.95f, 0.12f);
             }
+        }
+
+        /// <summary>Kontaktivarjo (omistaja 2.10. 20.2x: "kävelijä tarvitsee vielä varjon jalkojensa alle"): linnan leivotut
+        /// lattiat eivät ota reaaliaikaista varjoa vastaan, joten JOKAISEN 3D-hahmon (skinnattu ja nivelhahmo, kävelijä ja
+        /// seisoja) juuren alle tulee pehmeä levy, joka liikkuu ja kääntyy hahmon mukana. Periaate kuten kartan symbolimallien
+        /// maakontaktissa (Symbolimallit.Rakentaja PohjaVerkko): peitto keskellä, pehmeä lasku reunalle.</summary>
+        const float VarjoSade = 0.55f, VarjoNosto = 0.012f;
+        static readonly Color VarjoVari = new Color(0.02f, 0.015f, 0.01f, 0.6f);
+        static Mesh varjoVerkko;
+        static Material varjoMateriaali;
+
+        static void LisaaKontaktivarjo(Transform juuri)
+        {
+            if (varjoVerkko == null)
+            {
+                varjoVerkko = new Mesh { name = "Hahmo3D-kontaktivarjo" };
+                varjoVerkko.SetVertices(new[] { new Vector3(-1, 0, -1), new Vector3(1, 0, -1), new Vector3(1, 0, 1), new Vector3(-1, 0, 1) });
+                varjoVerkko.SetUVs(0, new[] { new Vector2(-1, -1), new Vector2(1, -1), new Vector2(1, 1), new Vector2(-1, 1) });
+                varjoVerkko.SetNormals(new[] { Vector3.up, Vector3.up, Vector3.up, Vector3.up });
+                varjoVerkko.SetTriangles(new[] { 0, 2, 1, 0, 3, 2 }, 0);
+                varjoVerkko.RecalculateBounds();
+            }
+            if (varjoMateriaali == null)
+            {
+                var sh = Resources.Load<Shader>("Varjostimet/DioraamaKontaktivarjo");
+                if (sh == null) { Debug.LogWarning("MATKAKIRJA linssit: kontaktivarjon varjostin puuttuu (Varjostimet/DioraamaKontaktivarjo)"); return; }
+                varjoMateriaali = new Material(sh) { name = "Hahmo3D/kontaktivarjo" };
+            }
+            var g = new GameObject("Kontaktivarjo") { layer = DioraamaNayttamo.Kerros };
+            g.transform.SetParent(juuri, false);
+            g.transform.localPosition = new Vector3(0f, VarjoNosto, 0f);
+            g.transform.localScale = new Vector3(VarjoSade, 1f, VarjoSade);
+            g.AddComponent<MeshFilter>().sharedMesh = varjoVerkko;
+            var r = g.AddComponent<MeshRenderer>();
+            r.sharedMaterial = varjoMateriaali;
+            r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            r.receiveShadows = false;
         }
 
         /// <summary>DioraamaNayttamo asettaa: luo lyhdyn liekin annetun juuren lapseksi (DioraamaLiekit.LuoLyhty).</summary>
@@ -639,7 +677,39 @@ namespace Matkakirja.Natiivi
                     }
                 }
             }
-            return $"{mita}: {materiaaleja} kuvamateriaalia, kärkiä {karkia}, värillisiä {varillisia}, AO min {aoMin:F2}";
+            // Testisäädöt (juurisyy 2.10. 21.0x): varjokoe (punainen, täysi, syvyystesti pois), varjo (oletus), veto=m,
+            // peitto=0–1, ztest=always|lequal, vari=punainen|varjo.
+            if (varjoMateriaali != null && mita != null)
+            {
+                var v = varjoMateriaali.GetColor("_VarjoVari");
+                var kv = mita.Split('=');
+                float.TryParse(kv.Length > 1 ? kv[1] : "", System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var luku);
+                bool muutettu = true;
+                switch (kv[0])
+                {
+                    case "varjokoe": v = new Color(1f, 0f, 0f, 1f); varjoMateriaali.SetFloat("_ZTest", (float)UnityEngine.Rendering.CompareFunction.Always); break;
+                    case "varjo": v = VarjoVari; varjoMateriaali.SetFloat("_ZTest", (float)UnityEngine.Rendering.CompareFunction.LessEqual); varjoMateriaali.SetFloat("_VarjoVeto", 0.4f); break;
+                    case "veto": varjoMateriaali.SetFloat("_VarjoVeto", luku); break;
+                    case "peitto": v.a = luku; break;
+                    case "ztest": varjoMateriaali.SetFloat("_ZTest", (float)(kv.Length > 1 && kv[1] == "always" ? UnityEngine.Rendering.CompareFunction.Always : UnityEngine.Rendering.CompareFunction.LessEqual)); break;
+                    case "vari": v = kv.Length > 1 && kv[1] == "punainen" ? new Color(1f, 0f, 0f, v.a) : new Color(VarjoVari.r, VarjoVari.g, VarjoVari.b, v.a); break;
+                    default: muutettu = false; break;
+                }
+                varjoMateriaali.SetColor("_VarjoVari", v);
+                if (muutettu && mita.Contains("="))
+                    return $"varjo: vari {v}, ztest {varjoMateriaali.GetFloat("_ZTest")}, veto {varjoMateriaali.GetFloat("_VarjoVeto"):F2}";
+            }
+            int varjoja = 0; string varjoY = "";
+            foreach (var e in esiintymat)
+            {
+                var v = e.Juuri != null ? e.Juuri.transform.Find("Kontaktivarjo") : null;
+                if (v == null) continue;
+                varjoja++;
+                if (e.TilaId == "muurinharja" || varjoY.Length < 40)
+                    varjoY += $" {e.TilaId}/{e.HahmoId}:{v.position.y:F2}({(v.gameObject.activeInHierarchy ? "päällä" : "pois")}, juuri {e.Juuri.transform.lossyScale.x:F2})";
+            }
+            return $"{mita}: {materiaaleja} kuvamateriaalia, kärkiä {karkia}, värillisiä {varillisia}, AO min {aoMin:F2}; "
+                + $"kontaktivarjoja {varjoja}/{esiintymat.Count} (materiaali {(varjoMateriaali != null ? "ok" : "PUUTTUU")}, y{varjoY})";
         }
 
         static long MeshKolmiot(Mesh m) { long n = 0; for (int i = 0; i < m.subMeshCount; i++) n += m.GetIndexCount(i) / 3; return n; }
