@@ -7,16 +7,20 @@ from PIL import Image, ImageDraw, ImageFont
 SISAAN, ULOS, MITA = sys.argv[1], sys.argv[2], sys.argv[3]
 NAKYVYYS = float(sys.argv[4]) if len(sys.argv) > 4 else 1.0
 MERKINTA = sys.argv[5] if len(sys.argv) > 5 else ''
+NIMI = (sys.argv[6] if len(sys.argv) > 6 else 'SOKRATES').split('/')        # rivit '/'-merkillä, esim. MARCUS/AURELIUS
+VUODET = sys.argv[7] if len(sys.argv) > 7 else 'n. 470–399 eaa.'
 IOWAN = '/System/Library/Fonts/Supplemental/Iowan Old Style.ttc'
 im = Image.open(SISAAN).convert('RGBA'); L, K = im.size
 kerros = Image.new('RGBA', im.size, (0, 0, 0, 0)); d = ImageDraw.Draw(kerros)
 x, y = int(L * 0.06), int(K * 0.42)
 if MITA == 'nimi':
     F = ImageFont.truetype(IOWAN, int(L * 0.062), index=0); Fv = ImageFont.truetype(IOWAN, int(L * 0.034), index=2)
-    vali = int(L * 0.008); xx = x                         # harvennettu versaali
-    for kirjain in 'SOKRATES':
-        d.text((xx, y), kirjain, font=F, fill=(238, 233, 224, 255), anchor='ls'); xx += F.getlength(kirjain) + vali
-    d.text((x + 2, y + int(L * 0.058)), 'n. 470–399 eaa.', font=Fv, fill=(176, 171, 162, 255), anchor='ls')
+    vali = int(L * 0.008); rivi_k = int(L * 0.075)          # harvennettu versaali, rivit allekkain
+    for r_i, rivi in enumerate(NIMI):
+        xx = x
+        for kirjain in rivi:
+            d.text((xx, y + r_i * rivi_k), kirjain, font=F, fill=(238, 233, 224, 255), anchor='ls'); xx += F.getlength(kirjain) + vali
+    d.text((x + 2, y + (len(NIMI) - 1) * rivi_k + int(L * 0.058)), VUODET, font=Fv, fill=(176, 171, 162, 255), anchor='ls')
 else:
     F = ImageFont.truetype(IOWAN, int(L * 0.062), index=2)
     for i, rivi in enumerate(('Miten pitäisi', 'elää?')):

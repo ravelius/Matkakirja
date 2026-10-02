@@ -10,8 +10,15 @@ import bpy
 from mathutils import Vector
 
 A = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
-STL = '/Users/Shared/Claude/proto-3d/_lahteet/smk/KAS635/smk-inv-635.stl'
-KORKEUS = 0.51                       # museon mitta (cm → m); skannauksen yksiköt ovat mielivaltaiset
+# Ajattelijat (sama putki): --kohde sokrates | marcus. Kaikki skannaukset SMK:n kipsivaloksia, PDM, api.smk.dk.
+KOHTEET = {
+    'sokrates': ('/Users/Shared/Claude/proto-3d/_lahteet/smk/KAS635/smk-inv-635.stl', 0.51),   # KAS635, 51 cm
+    # KAS979 "Portræt af Marcus Aurelius (kejser 161-180 e.Kr.)", Formeri: Paris, Louvre nr. 383; museo ei ilmoita
+    # mittoja → normalisoitu samaan 0,51 m:n korkeuteen (sokkeli mukana), jolloin kasvot osuvat samoille korkeuksille
+    'marcus': ('/Users/Shared/Claude/proto-3d/_lahteet/smk/KAS979/smk-inv-979.stl', 0.51),
+}
+KOHDE = A[A.index('--kohde') + 1] if '--kohde' in A else 'sokrates'
+STL, KORKEUS = KOHTEET[KOHDE]
 PH = '/Users/Shared/Claude/proto-3d/_lahteet/polyhaven'   # CC0-tekstuurit (v7: grey_plaster_02)
 GOBO_LEV, GOBO_KORK = 0.172, 0.129     # gobon ala projisointietäisyydellä (m), kuvasuhde 4:3 kuten sokrates_gobo.py
 
@@ -187,14 +194,14 @@ if '--lod' in A:
         print('GPU:', e)
     o = tuo()
     for nimi, kolmiot, kartta in LOD:
-        c = _kopio(o, f'sokrates-{nimi}', kolmiot); print('SOKRATES:', nimi, len(c.data.polygons), 'kolmiota')
+        c = _kopio(o, f'{KOHDE}-{nimi}', kolmiot); print('SOKRATES:', nimi, len(c.data.polygons), 'kolmiota')
         if kartta:
-            _uv(c); _leivo(o, c, kartta, os.path.join(ULOS, f'sokrates-{nimi}-nor.png'))
+            _uv(c); _leivo(o, c, kartta, os.path.join(ULOS, f'{KOHDE}-{nimi}-nor.png'))
         else:
             m = bpy.data.materials.new('kipsi-symboli'); m.use_nodes = True; b = m.node_tree.nodes['Principled BSDF']
             b.inputs['Base Color'].default_value = (0.86, 0.85, 0.82, 1); b.inputs['Roughness'].default_value = 0.62
             c.data.materials.clear(); c.data.materials.append(m)
-        _vie(c, os.path.join(ULOS, f'sokrates-{nimi}.glb')); print('SOKRATES: vienti', nimi)
+        _vie(c, os.path.join(ULOS, f'{KOHDE}-{nimi}.glb')); print('SOKRATES: vienti', nimi)
 
 
 # ---------- mallikuva v2 (omistaja 1.10. 21.4x): suomennos pinnoittain + kamera-ajo ----------
