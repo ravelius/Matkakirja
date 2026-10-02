@@ -334,8 +334,9 @@ namespace Matkakirja.Natiivi
             if (!sallittu) Sulje();
             nappi.style.display = sallittu && !Automaattinen ? DisplayStyle.Flex : DisplayStyle.None;
             bool linsseja = LinssiUi.Rekisteri?.Valittavat.Count > 0;
-            linssit.style.display = nappiSallittu && linsseja && !LinssiPaalla && !Aloitusnakyma.AloitusAuki && !Ylapalkki.PalkkiPiilossa
-                ? DisplayStyle.Flex : DisplayStyle.None;
+            // Myös piilotetulla palkilla (iPhonen vaaka) ☰:n vieressä: linssit eivät ole enää valikossa (Päätoimittaja 2.10. 19.0x;
+            // omistajan 24.9. "vaakana vain ☰" koski yläpalkin nappeja).
+            linssit.style.display = nappiSallittu && linsseja && !LinssiPaalla && !Aloitusnakyma.AloitusAuki ? DisplayStyle.Flex : DisplayStyle.None;
             // Maakuntadata valmiiksi kartan tullessa näkyviin, jotta ensimmäinen napautus avaa maakunnan heti.
             if (Automaattinen && sallittu) Maakunnat.Esilataa();
         }
