@@ -50,11 +50,13 @@ function kivikasa(x, z, siemen, kerrat = [5, 3, 1]) {
 // Hahmot: vartija partioi muurilla (reitti z ≈ -19,8), talonpoika seisoo sakaran raossa katsomassa pohjoiseen.
 const HAHMOT = [
   {
-    id: 'vartija', henkilo: 'vartija-1500', paikka: [-20, KY, -19.8], suunta: 90, peilattu: false,
+    id: 'vartija', henkilo: 'vartija-1500', paikka: [-19.2, KY, -19.6], suunta: 90, peilattu: false,
     // Elävä linna (29.9.): lyhty käteen ja reitti kannen päästä päähän; natiivi 1.0.57 lukee lyhdyn hahmolta (Siirtoseppä:
     // erillinen elava.reitti kaatoi vanhan natiivin, joten kävelijä on tavallinen hahmo ja näkyy aina elävässä linnassa).
     silmukka: 'kavely', heraa: 2, lyhty: true,
-    reitti: { pisteet: [[-21.0, KY, -19.75], [-9.0, KY, -19.75], [-21.0, KY, -19.75]], nopeus: 0.8, tauko: 2 },
+    // 2.10. (Päätoimittaja, skin-video): reitti kannen keskeltä z -19,6 ja päät lyhennetty — ennen vartija kulki soihtupadan
+    // ja talonpojan läpi sekä laattakasaan (tests/dioraama-reitit.test.mjs: hahmot ≥ 0,7 m, liekit ≥ 0,6 m, esineet ≥ 0,5 m).
+    reitti: { pisteet: [[-19.2, KY, -19.6], [-11.4, KY, -19.6], [-19.2, KY, -19.6]], nopeus: 0.8, tauko: 2 },
     repliikit: [
       { id: 'vartija-1', aani: 'muurinharja-vartija-1', teksti: 'Vahtivuoro on pitkä, mutta rajalta ei saa silmää siirtää hetkeksikään.' },
       { id: 'vartija-2', aani: 'muurinharja-vartija-2', teksti: 'Itäraja on lähellä, ja sieltä on tultu ennenkin. Siksi harjalla ei nukuta.' },
