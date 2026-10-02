@@ -2,23 +2,17 @@
 
 Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen: -20261001-b.md (käytännöt voimassa, ellei tässä toisin).
 
-## TILA HETI (päivitetty 19.4x)
+## TILA HETI (päivitetty 21.2x)
 
-- **proto master 320ce6c3 = BUILD 128** (juna 5e78c8a0, käännös 582aa509): Linssit-karttanappi (54528521 + 92a70085),
-  valikko-v2 4d03a255 (ilman Linssit-riviä; vain karttanapin kanssa), kipsipäät karttaobjekteina (erikoisnostot-3 2b1bffa1).
-  BUILD 127 = 140c4033. TF: Julkaisija vie 128:n Päätoimittajan V2-OK:lla, muuten 127 viimeistään 20.05.
-- Ei avoimia junia eikä natiiviseppa-worktreeitä. TF-raja 12/vrk; junat isoina 2–3 h välein; tili lähellä 95 %:n rajaa.
-- TF 128 ladattu 20.03 (7/12). Omistaja 20.1x: laskuri nollautuu 3.10. klo 12.30, aamuun säästetään 2 latausta → illalla ja
-  yöllä enintään 3 TF-BUILDia (8–10).
-- Seuraava juna: natiivi-ui/ylapalkki-tikkaus-2 (nyt hyväksytty) + nostoselain (kun Päätoimittaja tarkistanut viimeisen tasauksen).
-- Opit: savukkeen napautukset OIKEALLA sim-työkalun tapilla (ui-komento ei paljasta samassa ruudussa tapahtuvaa sulkua);
-  vaakatilassa sim-työkalu käyttää pystykoordinaatteja. OHJAUSNAPIT (Raamattu 14.2x): ✕ pyöristettynä neliönä.
-  Ristiin menneet NYT-viestit: tarkista SHA ennen update-refiä; jos käännös ei ole alkanut, palauta juna/b13 vanhaan
-  (jo käännettyyn) SHA:han, jolloin jonossa oleva ajo ohittaa sen.
+- **proto master e204abbe = BUILD 129** (juna 0b5c8d87, käännös 745d8ff0): yläpalkki-tikkaus-2, nostorivi-2, valikko-v2-siisti,
+  erikoisnostot-3 54358623, nimet-maakunta b39cd1da (ROOMA-hyppy), linna-skin b126d548. TF 128 ladattu 20.03 (7/12); TF 129
+  (8/12) ~22.05. Illalla vielä 1–2 latausta (9–10); 11–12 säästetään 3.10. aamuun ennen 12.30.
+- Ei avoimia junia eikä natiiviseppa-worktreeitä. Lokeissa vain uusin juna-kopio (juna-1.1.129-745d8ff0).
+- Juna 130 tulossa: Siirtosepän varjokorjaus 0592decd (simu ~21.50).
 
 ## TÄNÄÄN (2.10.) TEHDYT BUILDIT
 
-111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259 · 120 8fd12e83 · 122 19060a07 · 123 3f17a0e6 · 124 9df72166 · 125 e00ba2b6 · 126 8577dc48 · 127 140c4033 · 128 320ce6c3.
+111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259 · 120 8fd12e83 · 122 19060a07 · 123 3f17a0e6 · 124 9df72166 · 125 e00ba2b6 · 126 8577dc48 · 127 140c4033 · 128 320ce6c3 · 129 e204abbe.
 Ohitetut: 112 (Lehti ei avannut leikekirjaa: täkynoston id puuttui kokoelmadatasta), 115 (ISS-kuva raidallinen +
 22dfaccb signal 11: RGB24 luettiin Color32:na), 117 (paluu avaruuskävelyltä Cupolaan ei toiminut), 121 (✕ avaruuslasi).
 
