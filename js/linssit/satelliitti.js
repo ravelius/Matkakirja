@@ -163,7 +163,7 @@ import { haeAstronautinKysymykset } from './astronaut-kysymykset.js';
 import { avaaAstronautinAani } from './satelliitti-aani.js';
 import { PULUN_TERVETULO_KAYTOSSA, aloitaPulunTervetulo } from './pulu-tervetulo.js';
 import { luoAstroTaulu } from './pulu-taulu.js';
-import { autoPaalla, asetaAuto, luoAutoKytkin, luoAutoSiirto } from '../pohjat/auto.js';
+import { autoPaalla, asetaAuto, luoAutoKytkin, POHJA_AUTO_SIIRTO_MS } from '../pohjat/auto.js';
 import { pohjatLataaTyyli } from '../pohjat/pohjat.js';
 
 /*
@@ -908,36 +908,84 @@ function avaaHavaintokortti({
    */
   pohjatLataaTyyli();
   const autoKytkin = luoAutoKytkin({ muuttui: (paalle) => autoMuuttui(paalle) });
-  const autoSiirto = luoAutoSiirto({ pysaytetty: () => autoMuuttui(false) });
   kohdenapit.classList.add('tk-teema-lasi-avaruus');
   kohdenapit.prepend(autoKytkin.el);
-  autoSiirto.el.classList.add('satelliitti-autolappu');
   const autoKaytossa = () => autoPaalla() && !kohdenapit.hidden;
+  /*
+   * AUTO HILJAA (omistaja 2.10.2026 klo 21.3x; arvot sovittu Linssiseppä 2:n kanssa natiivia varten): AUTOn aikana ✕,
+   * Pulu, ‹ › ja AUTO häivytetään (opacity, kesto.sulku 200 ms; paluu kesto.avaus 220 ms), kuva ja selite jäävät.
+   * Napautus mihin tahansa palauttaa napit EIKÄ pysäytä AUTOa; napit häipyvät taas AUTO_HILJAA_MS:n kuluttua viimeisestä
+   * kosketuksesta. Seuraava/Pysäytä-lappua ei näytetä: siirto tapahtuu hiljaa POHJA_AUTO_SIIRTO_MS luennan jälkeen.
+   */
+  const AUTO_HILJAA_MS = 4000;
+  let hiljaaAjastin = 0;
+  let siirtoAjastin = 0;
+  const hiljaa = () => katselu.classList.contains('satelliitti-auto-hiljaa');
+  function asetaHiljaa(paalle) {
+    katselu.classList.toggle('satelliitti-auto-hiljaa', paalle);
+    document.body.classList.toggle('satelliitti-auto-hiljaa', paalle && katselu.isConnected);
+  }
+  function ajastaHiljaa() {
+    clearTimeout(hiljaaAjastin);
+    hiljaaAjastin = setTimeout(() => { if (katselu.isConnected && autoKaytossa()) asetaHiljaa(true); }, AUTO_HILJAA_MS);
+  }
   function naytaAutoTila() {
     const paalla = autoKaytossa();
     katselu.classList.toggle('satelliitti-auto-paalla', paalla);
+    if (paalla) ajastaHiljaa();
+    else { clearTimeout(hiljaaAjastin); asetaHiljaa(false); }
     if (paalla && !selite.classList.contains('satelliitti-selite-kiinni')) asetaSelite(true);
     else sovitaOtsikko();
   }
   function autoMuuttui(paalle) {
     naytaAutoTila();
-    if (!paalle) { autoSiirto.lopeta(); return; }
+    if (!paalle) { clearTimeout(siirtoAjastin); return; }
     // Päälle kesken katselun: kohde luetaan nyt, ja luennan jälkeen siirrytään.
     luettu = null;
     lueSelite(havainnot[indeksi]);
   }
-  /** Luenta loppui: AUTO päällä → lappu ja 3 s:n päästä seuraava kohde (vain tämän kortin tuorein luenta). */
+  /** Luenta loppui: AUTO päällä → 3 s:n päästä hiljaa seuraava kohde (vain tämän kortin tuorein luenta). */
   function luentaLoppui(vuoro) {
     if (vuoro !== luentaVuoro || !katselu.isConnected || !autoKaytossa()) return;
-    const seuraava = naapuriKohde?.(1);
-    if (!seuraava) return;
-    autoSiirto.aloita(seuraava.nimi, () => { if (katselu.isConnected && autoKaytossa()) vaihdaKohde(1); });
+    if (!naapuriKohde?.(1)) return;
+    clearTimeout(siirtoAjastin);
+    siirtoAjastin = setTimeout(() => { if (katselu.isConnected && autoKaytossa()) vaihdaKohde(1); }, POHJA_AUTO_SIIRTO_MS);
   }
-  // Pelaajan napautus, nipistys tai rulla kuvalla pysäyttää AUTOn (kytkin ja lappu eivät).
-  const pysaytaAuto = (e) => {
-    if (!autoKaytossa() || autoKytkin.el.contains(e.target) || autoSiirto.el.contains(e.target)) return;
+  function lopetaAuto() {
     asetaAuto(false);
     autoMuuttui(false);
+  }
+  /*
+   * Kosketus AUTOn aikana: hiljaisessa tilassa ensimmäinen napautus vain palauttaa napit (ja sen klikkaus nielaistaan).
+   * Näkyvillä napeilla ‹ ›, ✕ ja Pulu pysäyttävät AUTOn kuten ennen; kuvan napautus vain pitää napit esillä, mutta
+   * veto tai nipistys (liike yli 10 px) ja rulla pysäyttävät. AUTO-kytkin hoitaa itsensä.
+   */
+  let nielaiseKlikki = false;
+  let kosketusAlku = null;
+  const pysaytaAuto = (e) => {
+    if (!autoKaytossa() || autoKytkin.el.contains(e.target)) return;
+    if (e.type === 'wheel' || e.type === 'keydown') { lopetaAuto(); return; }
+    if (hiljaa()) {
+      asetaHiljaa(false);
+      ajastaHiljaa();
+      nielaiseKlikki = true;
+      e.stopPropagation();
+      return;
+    }
+    ajastaHiljaa();
+    if (kohdenapit.contains(e.target) || kulma.contains(e.target) || pulukulma.contains(e.target)) { lopetaAuto(); return; }
+    kosketusAlku = { x: e.clientX, y: e.clientY };
+  };
+  const kosketusLiikkuu = (e) => {
+    if (!kosketusAlku || !autoKaytossa()) return;
+    if (Math.hypot(e.clientX - kosketusAlku.x, e.clientY - kosketusAlku.y) > 10) { kosketusAlku = null; lopetaAuto(); }
+  };
+  const kosketusLoppuu = () => { kosketusAlku = null; };
+  const nieleKlikki = (e) => {
+    if (!nielaiseKlikki) return;
+    nielaiseKlikki = false;
+    e.stopPropagation();
+    e.preventDefault();
   };
 
   /*
@@ -947,8 +995,12 @@ function avaaHavaintokortti({
   const pulu = luoPohjaPulu({ luokka: 'satelliitti', aihe: kohde.nimi, kysymykset: haeAstronautinKysymykset(kohde.tunnus) });
   const { kulma: pulukulma, nayta: naytaPulukortti } = pulu;
 
-  katselu.append(lava, selite, kulma, nauha, kohdenapit, pulukulma, autoSiirto.el);
+  katselu.append(lava, selite, kulma, nauha, kohdenapit, pulukulma);
   katselu.addEventListener('pointerdown', pysaytaAuto, true);
+  katselu.addEventListener('pointermove', kosketusLiikkuu, true);
+  katselu.addEventListener('pointerup', kosketusLoppuu, true);
+  katselu.addEventListener('pointercancel', kosketusLoppuu, true);
+  katselu.addEventListener('click', nieleKlikki, true);
   katselu.addEventListener('wheel', pysaytaAuto, true);
   document.body.appendChild(katselu);
   /* Hampurilainen pois kuvan ajaksi (LISÄYS 6, ks. KUVA_AUKI_LUOKKA). */
@@ -974,7 +1026,9 @@ function avaaHavaintokortti({
     /* Vinkkiajastin ei saa herätä suljetun näkymän päälle. */
     lopetaVinkki();
     lopetaLiuku();
-    autoSiirto.lopeta();
+    clearTimeout(siirtoAjastin);
+    clearTimeout(hiljaaAjastin);
+    document.body.classList.remove('satelliitti-auto-hiljaa');
     autoKytkin.pura();
     // Selitteen luenta loppuu kuvan mukana (ei muiden puhujien luentaa).
     if (luettu) { try { pysaytaLukija(); } catch { /* ei lukijaa */ } }
