@@ -443,7 +443,8 @@ namespace Matkakirja.Natiivi
             // Linssit-nappi kulmassa; jos selitenappi näkyy kartalla (ei rivissä), sen vasemmalla puolella 8 pt:n välillä (web).
             bool selite = !Automaattinen && !rivissa;
             linssit.style.top = yla;
-            linssit.style.right = selite ? oikea + 40 + 8 : oikea;
+            // Piilotetulla palkilla kelluva palkkinappi on 43 pt leveä (mitattu simulaattori 06e3578b: väli jäi −1 pt) → 8 pt:n väli.
+            linssit.style.right = selite ? oikea + 40 + 8 : Ylapalkki.Piilossa ? oikea + 9 : oikea;
             // Maakuntakartassa lappu peittää sen avanneen napin (omistaja 29.9.2026); sulkeminen lapun omalla ✕:llä.
             paneeli.style.top = yla;
             paneeli.style.right = oikea;
