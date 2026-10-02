@@ -355,7 +355,47 @@
   ],
   "muut": "kuten Sokrates (docs/raportit/sokrates-v10/tekstit.json): projektorit, nopeudet, kirkkaudet"
  },
- "kaiku": null,
+ "kaiku": {
+  "kansio": "/Users/Shared/Claude/proto-3d/_lahteet/marcus-aurelius/kaiut",
+  "lahteet": "/Users/Shared/Claude/proto-3d/_lahteet/marcus-aurelius/kaiut/LAHTEET.md",
+  "huom": "POSITIIVISINA (omistaja 2.10.); seepia 1,0/0,78/0,52, häivytys 1,5 s; ajat kuten Sokrateen v9/v10 (kohtauksen ruudut, 30 r/s)",
+  "kierrokset": [
+   {
+    "kierros": 1,
+    "luenta": "b",
+    "tiedosto": "kaiku-sade.png",
+    "ruudut": [
+     965,
+     1440
+    ],
+    "aihe": "Marcuksen pylväs, sadeihme",
+    "lisenssi": "CC BY 3.0",
+    "nimeaminen": "Nico Kokkonen, CC BY 3.0, Wikimedia Commons"
+   },
+   {
+    "kierros": 2,
+    "luenta": "d",
+    "tiedosto": "kaiku-uhri.png",
+    "ruudut": [
+     1870,
+     2300
+    ],
+    "aihe": "Marcus uhraa Capitoliumilla (reliefi 176–180)",
+    "lisenssi": "Public domain"
+   },
+   {
+    "kierros": 3,
+    "luenta": "f",
+    "tiedosto": "kaiku-kuolema.png",
+    "ruudut": [
+     2655,
+     3250
+    ],
+    "aihe": "Delacroix, Marcus Aureliuksen viimeiset sanat (1844), Commodus vieressä",
+    "lisenssi": "Public domain"
+   }
+  ]
+ },
  "glb": {
   "kansio": "/Users/Shared/Claude/proto-3d/_valmiit/marcus-aurelius-bysti/v1",
   "L0": "marcus-L0.glb",
