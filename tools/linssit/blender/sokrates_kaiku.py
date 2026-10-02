@@ -1,8 +1,8 @@
 # Sokrates v8: kaikukuva projektorille (Linnanrakentaja 2.10.2026), PIL. Valoa vain sisällössä (omistaja: ei taustavuotoa).
 #   python3 sokrates_kaiku.py <lähde> <ulos.png> <viiva|kuva> x0 y0 x1 y1
-# viiva: viivapiirros/kaiverrus käännetään → valoa vain viivoissa, paperi mustaksi (Codexin musta viiva läpinäkyvällä
-#        taustalla yhdistetään ensin valkoiselle paperille). kuva: maalaus/valokuva, tummat taustat mustaksi tasokäyrällä
-#        (sisältö jää valoksi). Molemmissa pehmeä soikea maski reunoille (ei suorakaidetta).
+# KAIKKI KAIUT POSITIIVISINA (omistaja 2.10. 11.1x). viiva: viivapiirros/kaiverrus positiivina, tummat viivat vaalealla
+#        (Codexin musta viiva läpinäkyvällä taustalla yhdistetään ensin valkoiselle paperille). kuva: maalaus/valokuva,
+#        tummat taustat mustaksi tasokäyrällä (sisältö jää valoksi). Molemmissa pehmeä soikea maski (ei suorakaidetta).
 import sys
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageOps
 
@@ -13,7 +13,9 @@ if src.mode in ('RGBA', 'LA') or 'transparency' in src.info:
 im = ImageOps.autocontrast(src.convert('L').crop((x0, y0, x1, y1)), cutoff=1)
 im.thumbnail((1600, 1600))
 if tapa == 'viiva':
-    im = ImageOps.invert(im).point(lambda v: 0 if v < 70 else min(255, int((v - 70) * 255 / 150)))
+    # omistaja 2.10. 11.1x: "varmista jatkossa että kaikki ovat positiivina" → EI kääntöä: tummat viivat vaalealla
+    # paperilla; paperi himmennetään hieman (×0,75), jotta valo ei vie kipsin muotoja, ja viivat jäävät varjoiksi
+    im = im.point(lambda v: int(min(255, v) * 0.75))
 else:
     im = im.point(lambda v: 0 if v < 105 else min(255, int((v - 105) * 255 / 130)))
 im = im.filter(ImageFilter.GaussianBlur(1.0))
