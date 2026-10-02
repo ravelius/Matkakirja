@@ -23905,19 +23905,10 @@ body[data-mode] .actions .pollo-paneeli button.pollo-mikki.kuuntelee {
 
 .pollo-sanelu-tila:empty { display: none; }
 
-/* Pulun äänikeskustelun koenappi (vain kehittäjätilassa, js/pulu-realtime.js). */
-.pollo-realtime-koe {
-  align-self: center;
-  padding: 0.25rem 0.7rem;
-  border: 1px dashed var(--pollo-muste-himmea);
-  border-radius: 999px;
-  background: transparent;
-  color: var(--pollo-muste-himmea);
-  font: inherit;
-  font-size: 0.8rem;
-  cursor: pointer;
-}
-.pollo-realtime-koe.paalla { border-style: solid; color: inherit; }
+/* Pulun äänikeskustelun koenappi (vain kehittäjätilassa, js/pulu-realtime.js): alarivin .pollo-nappula
+   näppäimistön ja mikrofonin rinnalla (omistaja 2.10.2026 klo 13.53; ei ovaalia). */
+button.pollo-realtime-koe { flex: 2 1 0; font: inherit; font-size: 0.8rem; line-height: 1.2; }
+button.pollo-realtime-koe.paalla { border-color: var(--pollo-korostus); background: var(--pollo-paperi-2); }
 .pollo-realtime-koe[hidden] { display: none; }
 
 .pollo-rivi { display: flex; gap: 0.35rem; }
