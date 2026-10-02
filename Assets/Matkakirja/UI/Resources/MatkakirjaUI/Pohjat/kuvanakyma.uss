@@ -27,3 +27,32 @@
 .mk-kuvanakyma__sulku:active {
     border-color: var(--tk-korostus);
 }
+
+/* POHJAN POIKKEUS (omistaja 16.9.2026 "ota siitä väri pois … nämä saisivat olla harmaalla"; Päätoimittaja 2.10.): satelliitin,
+ * astronautin kameran ja ISS:n ✕ neutraalin harmaana kuten webin .satelliitti-sulku (reuna rgb(170), pohja
+ * rgba(130,130,130,.42), merkki rgb(224)); näkyvä rengas webin koossa 34 pt, osuma-ala pohjan 44 pt. */
+.mk-kuvanakyma__sulku.mk-kuvanakyma__sulku--harmaa {
+    border-width: 0;
+    background-color: initial;
+    color: rgb(224, 224, 224);
+}
+
+.mk-kuvanakyma__sulkurengas {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 34px;
+    height: 34px;
+    border-width: 1px;
+    border-radius: var(--tk-kulma-pilleri);
+    border-color: rgb(170, 170, 170);
+    background-color: rgba(130, 130, 130, 0.42);
+}
+
+.mk-kuvanakyma__sulku--harmaa .mk-nappi__teksti {
+    color: rgb(224, 224, 224);
+}
+
+.mk-kuvanakyma__sulku--harmaa:active > .mk-kuvanakyma__sulkurengas {
+    background-color: rgba(170, 170, 170, 0.55);
+}
