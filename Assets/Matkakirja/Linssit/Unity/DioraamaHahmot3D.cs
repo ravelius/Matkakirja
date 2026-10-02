@@ -506,6 +506,10 @@ namespace Matkakirja.Natiivi
             if (e.Hahmo.Reitti != null) (paikkaKanoninen, kasvot, _) = ReittiPaikkaJaSuunta(e, t);
             else { paikkaKanoninen = e.Hahmo.Paikka; kasvot = SuunnastaKasvot(e.Hahmo.Suunta); }
 
+            // SKIN (omistaja 20.1x "kuin moon walkia"): glTF-mallin kasvot ovat +Z (Linnanrakentajan mittaus: varvas
+            // (0, 0, +0,16), tukijalka liukuu −Z:aan), ja DioraamaGlb:n z-peilaus kääntää ne Unityssä −Z:ksi. LookRotation
+            // vie paikallisen +Z:n kasvosuuntaan, joten skinnatulle hahmolle käytetään vastavektoria. Nivelhahmot ennallaan.
+            if (e.Sekoitin != null) kasvot = -kasvot;
             Vector3 paikka = DioraamaNayttamo.UnityPiste(paikkaKanoninen);
             paikka.y += (float)juuriNousuM;
             e.Juuri.transform.position = paikka;
