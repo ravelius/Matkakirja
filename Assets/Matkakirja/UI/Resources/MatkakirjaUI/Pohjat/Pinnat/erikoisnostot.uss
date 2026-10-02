@@ -11,7 +11,10 @@
     height: var(--tk-nappi-laukaisin);
     min-width: var(--tk-nappi-osuma);
     min-height: var(--tk-nappi-osuma);
-    margin: var(--tk-vali-s) 0 0 0;
+    margin-top: var(--tk-vali-s);
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
     padding: 0;
     border-width: 0;
     -unity-background-scale-mode: stretch-to-fill;
