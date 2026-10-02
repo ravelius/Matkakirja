@@ -684,6 +684,9 @@ namespace Matkakirja.Natiivi
                 varjoMateriaali.SetFloat("_Peitto", koe ? 1f : 0.7f);
                 varjoMateriaali.SetFloat("_ZTest", (float)(koe ? UnityEngine.Rendering.CompareFunction.Always : UnityEngine.Rendering.CompareFunction.LessEqual));
             }
+            if (varjoMateriaali != null && mita != null && mita.StartsWith("veto=", StringComparison.Ordinal)
+                && float.TryParse(mita.Substring(5), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var veto))
+                varjoMateriaali.SetFloat("_Veto", veto);
             int varjoja = 0; string varjoY = "";
             foreach (var e in esiintymat)
             {

@@ -10,11 +10,12 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
     {
         _Vari("Varjon väri", Color) = (0.02, 0.015, 0.01, 1)
         _Peitto("Peitto keskellä", Range(0, 1)) = 0.7
+        _Veto("Siirto kameraa kohti (m)", Float) = 0.4
         [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("Syvyystesti (testikomento: Always)", Float) = 4
     }
     SubShader
     {
-        Tags { "RenderType" = "Transparent" "Queue" = "Transparent-10" "RenderPipeline" = "UniversalPipeline" "IgnoreProjector" = "True" }
+        Tags { "RenderType" = "Transparent" "Queue" = "Transparent" "RenderPipeline" = "UniversalPipeline" "IgnoreProjector" = "True" }
         Pass
         {
             Name "Forward"
@@ -33,6 +34,7 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
             CBUFFER_START(UnityPerMaterial)
                 half4 _Vari;
                 half _Peitto;
+                float _Veto;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
@@ -41,10 +43,11 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
             Vali vert(Syote i)
             {
                 Vali o;
-                // Leivotun lattian pinta voi olla hahmon juurta muutaman sentin ylempänä (laatat, kynnykset): levy siirretään
-                // näkymäavaruudessa 15 cm kameraa kohti, jolloin se piirtyy lattian päälle mutta seinät ja esineet peittävät.
+                // Näkyvä lattia voi olla hahmon juurta ylempänä (laatat, kynnykset, ulkokuoren muurinharja; savuke 20.42: levy
+                // piirtyi vain syvyystesti pois): levy siirretään näkymäavaruudessa _Veto metriä kameraa kohti, jolloin se
+                // piirtyy lattian päälle mutta seinät ja esineet peittävät sen yhä.
                 float3 nakyma = TransformWorldToView(TransformObjectToWorld(i.paikka.xyz));
-                nakyma += normalize(-nakyma) * 0.15;
+                nakyma += normalize(-nakyma) * _Veto;
                 o.paikka = TransformWViewToHClip(nakyma);
                 o.uv = i.uv;
                 return o;
