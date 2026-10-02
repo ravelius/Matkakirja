@@ -21,7 +21,7 @@
  * Vain paperinukke saa keinua ±2° kuudessa sekunnissa, varsi ei liiku. Varren sininen
  * reunavalo käyttää --livia-eva-varsi-reunavalo-muuttujaa, joka seuraa Maan valoa.
  * Natiivin lisäkerrokset ovat robotin-varsi/reunavalo (304 × 1600) ja
- * robotin-turvakoysi/pidikkeet (304 × 608), kaikki samasta vasemmasta ylänurkasta.
+ * robotin-turvakoysi (304 × 800) ja robotin-pidikkeet (304 × 608), kaikki samasta vasemmasta ylänurkasta.
  *
  * Natiivin läpinäkyvät 2× PNG:t (assets/livia/livia-eva-{turvakoysi,perus,kasvovalo,kyparalamput,maavalo}-2x.png)
  * ovat kaikki 304 × 608 ja vastaavat samaa 152 × 304 SVG-näkymää; kerrokset samaan suorakulmioon ilman
