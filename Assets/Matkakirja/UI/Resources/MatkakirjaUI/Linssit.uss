@@ -44,25 +44,29 @@
     color: #f5f0e2;
 }
 
+/* Pallonäkymän ✕ (omistaja 16.9.2026: sama puhtaan harmaa ✕ kuin valokuvan sulussa, web .satelliitti-linssisulku = .satelliitti-sulku):
+ * reuna rgb(170), pohja rgba(130,130,130,.42), merkki rgb(224), rengas 2,1 rem ≈ 34 pt — sama kuin KUVANÄKYMÄn harmaa rengas
+ * (Pohjat/kuvanakyma.uss). Natiivin "Sulje linssi" -teksti sulaa pois (löydös 32), joten pilleri on samaa harmaata. */
 .mk-linssiSulje {
     position: absolute;
-    min-height: 32px;
-    height: 32px;
+    min-height: 34px;
+    height: 34px;
     padding: 0 12px 0 10px;
-    border-radius: 16px;
-    border-color: rgba(170, 170, 170, 0.9);
-    background-color: rgba(60, 56, 50, 0.72);
-    color: rgb(232, 228, 220);
+    border-width: 1px;
+    border-radius: var(--tk-kulma-pilleri);
+    border-color: rgb(170, 170, 170);
+    background-color: rgba(130, 130, 130, 0.42);
+    color: rgb(224, 224, 224);
 }
 
 .mk-linssiSulje:active {
-    background-color: rgba(90, 84, 76, 0.85);
+    background-color: rgba(170, 170, 170, 0.55);
 }
 
 .mk-linssiSulje__risti {
-    font-size: 15px;
+    font-size: var(--tk-koko-valiotsikko);
     margin-right: 6px;
-    color: rgb(232, 228, 220);
+    color: rgb(224, 224, 224);
 }
 
 .mk-linssiSulje .mk-nappi__teksti {
@@ -70,9 +74,9 @@
     letter-spacing: 3.85px; /* web 0.5px */
 }
 
-/* Löydös 32: kutistunut pilleri = pyöreä ✕ (32 × 32). */
+/* Löydös 32: kutistunut pilleri = pyöreä ✕ (34 × 34, webin rengas). */
 .mk-linssiSulje--risti {
-    width: 32px;
+    width: 34px;
     padding: 0;
     justify-content: center;
 }
