@@ -284,7 +284,9 @@ namespace Matkakirja.Natiivi
             {
                 bool uusiAskel = avain != null;
                 bool aaniSoi = uusiAskel && kertojaPaalla && AaniOnValmis(nakyma.AskeleenAani);
-                if (aaniSoi) aaniSoi = SoitaPuhe(nakyma.AskeleenAani, true); // repliikki seuraa pelaajan napautusta
+                // Repliikit etenevät käsikirjoituksen mukaan itsestään (savuke 1125: 2 repliikkiä katkaisi luennon 4 s:n kohdalla);
+                // pelaajan tekona vain heti napautuksen (DioraamaSyote) jälkeen.
+                if (aaniSoi) aaniSoi = SoitaPuhe(nakyma.AskeleenAani, Time.unscaledTime - napautusAika < 1.5f);
                 if (aaniSoi != puhuu) { y?.Repliikki(aaniSoi); puhuu = aaniSoi; }
                 viimeAskelAvain = avain;
             }
@@ -432,6 +434,10 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Soiko pelin muu puhe (Puhe: luento tai Pulun chat-vastaus; kertojakanava).</summary>
+        static float napautusAika = -10f;
+        /// <summary>Pelaaja napautti dioraamaa (DioraamaSyote): seuraava repliikki on pelaajan teko ja saa katkaista muun puheen.</summary>
+        public static void Napautettu() => napautusAika = Time.unscaledTime;
+
         bool MuuPuheSoi => (Puhe.Instanssi != null && Puhe.Instanssi.Soi) || (Aanet.Kertojasoitin != null && Aanet.Kertojasoitin.isPlaying);
         bool muuSoi;
 
