@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2544, teksti: 'Ajattelijat-linssi, vaihe 1: Sokrates kehitysli… (#3828)' },
   { v: 2543, teksti: 'Astronautin kamera: AUTO ‹ ›:n ryhmään alhaalle… (#3825)' },
   { v: 2542, teksti: 'Tyylikirja: LAUTAPELI-pohjan kuvaus (#3826)' },
   { v: 2541, teksti: 'Robotin turvaköyden kerros 304 × 800: lenkin al… (#3824)' },
