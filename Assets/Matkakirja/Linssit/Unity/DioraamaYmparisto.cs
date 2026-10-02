@@ -212,7 +212,12 @@ namespace Matkakirja.Natiivi
         {
             if (vesiMat == null || kamera == null) return;
             float skaala = HeijastusSkaala(DioraamaUlkokuori.Valittu);
-            bool heijastus = skaala > 0f && PiirraHeijastus(kamera, skaala);
+            // Linnan avautuessa (iPad 2.10.: 81–100 ms:n BehaviourUpdate-ruudut, pääsäie odotti GPU:ta): heijastuskameran
+            // SubmitRenderRequest jonottaa renderisäikeen taakse, kun edellisessä ruudussa ladattiin iso tekstuuri tai mesh.
+            // Silloin käytetään edellisen ruudun heijastusta (vesi liikkuu hitaasti, ero ei näy).
+            bool heijastus;
+            if (skaala > 0f && heijastusKuva != null && DioraamaRuutu.LatausTuore) heijastus = true;
+            else using (HeijastusMerkki.Auto()) heijastus = skaala > 0f && PiirraHeijastus(kamera, skaala);
             // 1.10. ensimmäinen kuva: linnan heijastus jäi pintakuvion alle → fresnel-bias 0,03 → 0,10 ja pintanormaali 0,35 → 0,22.
             Shader.SetGlobalVector(IdParam, new Vector4(Time.time, heijastus ? 1f : 0f, 0.22f, 0.10f));
             // Taivaan liukuma (kevyt taso ja heijastuksen tausta) tunnelman mukaan: horisontti = kameran tausta (sumun väri),
@@ -241,6 +246,8 @@ namespace Matkakirja.Natiivi
                 Shader.SetGlobalVector(IdTaivasParam, new Vector4(kuva ? 1f : 0f, -taivasSuunta / 360f, 0, 0));
             }
         }
+
+        static readonly Unity.Profiling.ProfilerMarker HeijastusMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Dioraama.Heijastus");
 
         bool PiirraHeijastus(Camera kamera, float skaala)
         {
@@ -493,7 +500,7 @@ namespace Matkakirja.Natiivi
                 var mesh = new Mesh { name = "Ymparisto:" + nimi, indexFormat = n > 65000 ? IndexFormat.UInt32 : IndexFormat.UInt16 };
                 mesh.SetVertices(p); mesh.SetNormals(nr); mesh.SetUVs(0, uv); mesh.SetTriangles(o.Kolmiot, 0);
                 mesh.RecalculateBounds();
-                mesh.UploadMeshData(true);
+                mesh.UploadMeshData(true); DioraamaRuutu.Ladattu();
                 luodut.Add(mesh);
                 kohteet?.Add(mesh);
                 kolmiot += o.Kolmiot.Length / 3;
@@ -818,7 +825,7 @@ namespace Matkakirja.Natiivi
             var mesh = new Mesh { name = "Ymparisto:puut", indexFormat = IndexFormat.UInt32 };
             mesh.SetVertices(p); mesh.SetUVs(0, uv0); mesh.SetUVs(1, uv1); mesh.SetTangents(tan); mesh.SetColors(v); mesh.SetTriangles(kolmiot, 0);
             mesh.RecalculateBounds();
-            mesh.UploadMeshData(true);
+            mesh.UploadMeshData(true); DioraamaRuutu.Ladattu();
             luodut.Add(mesh);
             yield return null;
             if (oma != kerta) yield break;
@@ -861,8 +868,16 @@ namespace Matkakirja.Natiivi
         /// <summary>GPU-lataus (Apply) lokiin ruutunumerolla: laitemittauksen piikit kohdistuvat tekstuuriin.</summary>
         public static void Gpu(Action<string> kirjaa, Texture t)
         {
-            if (t != null) kirjaa?.Invoke($"poikki: gpu {t.name} {t.width}×{t.height} {t.graphicsFormat} (ruutu {Time.frameCount})");
+            if (t == null) return;
+            Ladattu();
+            kirjaa?.Invoke($"poikki: gpu {t.name} {t.width}×{t.height} {t.graphicsFormat} (ruutu {Time.frameCount})");
         }
+
+        static int viimeisinLataus = -10;
+        /// <summary>Iso GPU-lataus (tekstuuri tai mesh) tässä ruudussa: renderisäie on varattu seuraavan ruudun ajan.</summary>
+        public static void Ladattu() => viimeisinLataus = Time.frameCount;
+        /// <summary>Lataus tässä tai edellisessä ruudussa: vältä pääsäikeen GPU-synkronointia (heijastuksen piirto).</summary>
+        public static bool LatausTuore => Time.frameCount - viimeisinLataus <= 1;
     }
 
     /// <summary>ENSILATAUS v2 (iPad-mittaus 1.10.: puiden vaiheessa 100–220 ms:n ruutuja): puut.json (4,5 Mt, ~65 000 riviä) ja

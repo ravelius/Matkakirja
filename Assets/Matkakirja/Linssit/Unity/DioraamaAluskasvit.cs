@@ -211,7 +211,7 @@ namespace Matkakirja.Natiivi
                 var mesh = new Mesh { name = "Ymparisto:aluskasvit", indexFormat = nv > 65535 ? IndexFormat.UInt32 : IndexFormat.UInt16 };
                 mesh.SetVertices(osaP); mesh.SetUVs(0, osaUv0); mesh.SetUVs(1, osaUv1); mesh.SetColors(osaV); mesh.SetTriangles(osaK, 0);
                 mesh.RecalculateBounds();
-                mesh.UploadMeshData(true);
+                mesh.UploadMeshData(true); DioraamaRuutu.Ladattu();
                 luodut.Add(mesh);
                 yield return null;
                 if (!voimassa()) yield break;
