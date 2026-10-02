@@ -1242,6 +1242,8 @@ namespace Matkakirja.Natiivi
         {
             bool p = t.Length > 1 && t[0] == '£' && char.IsDigit(t[1]);
             punta.style.display = p ? DisplayStyle.Flex : DisplayStyle.None;
+            // iPadin päivä ensin -pilleri: väli päivän ja £:n väliin, ei £:n ja luvun väliin (b725dffa: "1 pv£  400").
+            pilleri.EnableInClassList("mk-pilleri--punta", p);
             raha.text = p ? t.Substring(1) : t;
         }
 

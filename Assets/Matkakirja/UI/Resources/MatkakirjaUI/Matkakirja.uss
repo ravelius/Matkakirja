@@ -4417,6 +4417,15 @@
     margin-left: 10px;
 }
 
+/* Punta mukana: väli siirtyy £:n eteen ("1 pv £400", ei "1 pv£  400"; Ylapalkki.AsetaRahaTeksti). */
+.mk-pilleri--paiva-ensin.mk-pilleri--punta .mk-pilleri__punta {
+    margin-left: 10px;
+}
+
+.mk-pilleri--paiva-ensin.mk-pilleri--punta .mk-pilleri__raha {
+    margin-left: 0;
+}
+
 /* Omistaja 2.10.2026 klo 15.1x ja 18.2x: pilleri yhdellä rivillä "1 pv £400" (BUILD 123:n kohopainettu pilleri). */
 .mk-pilleri--lyhyt {
     padding-left: var(--tk-vali-m);
