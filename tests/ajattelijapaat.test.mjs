@@ -87,3 +87,19 @@ test('kipsi kartalla: lämmin vaalea, ei sinistä ympäristövaloa, pehmeä varj
   assert.doesNotMatch(css, /maataulu-auki/, 'pää näkyy maakortin aikana');
   assert.match(lue('../js/ajattelijapaat.js'), /new THREE\.ShadowMaterial/);
 });
+
+test('pää on karttamerkkien alla: kerros pallon säiliössä kankaan perässä, z 0 (Päätoimittaja 16.49)', () => {
+  const js = lue('../js/ajattelijapaat.js');
+  assert.match(js, /const sailio = kangas\?\.closest\?\.\('\.scene-container'\);/);
+  assert.match(js, /sailio\.insertBefore\(kerros, kankaanLapsi\.nextSibling\);/);
+  assert.match(js, /paikka\.x - isanta\.left/);
+  assert.match(lue('../css/pohjat/erikoisnostot.css'),
+    /\.tk-erikoisnostot\.tk-erikoisnostot--kartalla \{ position: absolute; z-index: 0;/);
+});
+
+test('kipsipäiden pisteet eivät osu nimiin eikä kaupunkikortteihin (Päätoimittaja 2.10.2026, natiivikuvat)', async () => {
+  const { AJATTELIJAT } = await import('../js/linssit/ajattelija.js');
+  const pisteet = Object.fromEntries(Object.values(AJATTELIJAT).filter((a) => a.kartta).map((a) => [a.tunnus, a.kartta.piste]));
+  assert.deepEqual(pisteet.sokrates, [39.49, 23.98], 'Pohjois-Egea: Pelionin ja Poliokhnin välissä, ei SPORADIEN PUISTO -nimellä');
+  assert.deepEqual(pisteet.marcus, [42.82, 12.17], 'Umbria: Rooman kutsukortin pohjoispuolella');
+});
