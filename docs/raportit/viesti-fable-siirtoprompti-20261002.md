@@ -18,6 +18,12 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 
 ## 2. Tila ja jono (2.10. klo 22.2x)
 
+0. **ENSIMMÄISEKSI Natiivi-UI:lle — iPhonen vaakatilan yläpalkki väärin** (omistaja 22.3x: "Iphone vaaka tilassa palkki väärin", kuva
+   /Users/Shared/Claude/proto-3d/lokit/natiivi-ui-pohjat/omistajalta-20261002/omistaja-ylapalkki-iphone-vaaka-tf129.png, TF 129). Kuvassa saaren
+   leikkaus (musta kaari) piirtyy yläreunan keskelle, vaikka vaakatilassa saari on vasemmalla, ja tikkaussauma kulkee logon alarivin ja
+   pillerin läpi. Linjaukset: 24.9. palkki piiloutuu vaakamuodossa oletuksena (piilossa vain ☰), ja 29.9. puhelimen pillerivalikossa ei ole
+   ☰:ta. Natiivi-UI selvittää voimassa olevan vaakatilan mallin (webin vaakatila mallina), korjaa ennen junaa 130 ja lähettää kuvan
+   (pysty ja vaaka) Päätoimittajan tarkistukseen ja omistajalle.
 1. **TF:** 1.1 (129) = proto master e204abbe ladattu 21.29 (yläpalkki, nostoselain, valikko V2, kipsipäät erikoisnostot-3 54358623, ROOMA-korjaus). Käytössä 8/12.
    **Laskuri nollautuu 3.10. klo 12.30, ja aamuun säästetään 2 latausta** (omistaja 20.1x).
 2. **Juna 130 (Natiiviseppä):** matalampi yläpalkki b725dffa + iPadin pillerin väli d00c7f8b (hyväksytty, Natiivi-UI todentaa; omistaja näki saman "1 pv£  420" -vian myös Macin iPad-sovelluksessa 22.3x, joten todenna myös Macilla), Julisteet/

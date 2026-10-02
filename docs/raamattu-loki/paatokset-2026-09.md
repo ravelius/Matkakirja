@@ -10203,3 +10203,7 @@ Omistaja hyväksyi 2.10.2026 klo 21.5x kortilla matalamman yläpalkin (natiivi b
 ## OMISTAJA: PILLERIN VÄLIVIKA MYÖS MACIN IPAD-SOVELLUKSESSA (2.10.2026) (2.10.2026 klo 22.14)
 
 Omistaja 2.10.2026 klo 22.3x Macin iPad-sovelluksen kuvakaappauksella (Sarajevo) sanatarkasti: 'macilla ipad apissa tuossa £   420 liikaa väliä'. Pillerissä lukee '1 pv£  420'. Tämä on sama vika kuin iPadissa (BUILD 129), ja korjaus on Natiivi-UI:n d00c7f8b, joka tulee junaan 130. Todennus tehdään myös Macin iPad-sovelluksessa.
+
+## OMISTAJA: IPHONEN VAAKATILAN YLÄPALKKI VÄÄRIN (2.10.2026) (2.10.2026 klo 22.16)
+
+Omistaja 2.10.2026 klo 22.3x TF 129:n kuvakaappauksella (iPhone vaaka, Bulgaria) sanatarkasti: 'Iphone vaaka tilassa palkki väärin'. Havainto: saaren leikkaus piirtyy yläreunan keskelle, vaikka vaakatilassa saari on vasemmalla, ja tikkaussauma kulkee logon alarivin ja pillerin läpi. Aiemmat linjaukset: 24.9. palkki piiloutuu vaakamuodossa oletuksena, ja 29.9. puhelimen pillerivalikossa ei ole ☰:ta. Korjaus on uuden tilin ensimmäinen Natiivi-UI-erä ennen junaa 130 (siirtoprompti kohta 2.0), ja kuva pystystä ja vaakatilasta tarkistetaan ennen omistajaa.
