@@ -135,6 +135,7 @@ namespace Matkakirja.Natiivi
         {
             var kamera = nayttamo != null ? nayttamo.Kamera : null;
             if (kamera == null || rakennus?.Tilat == null) return;
+            DioraamaAanet.Napautettu();
             // Elävä linna: saapumiskaaren aikana napautus ohittaa kaaren (loppuun 1 s:ssa), ei kohdista.
             var linssi = DioraamaSovitin.Linssi;
             if (linssi != null && linssi.SaapuminenKaynnissa(t)) { linssi.Napauta(t); return; }

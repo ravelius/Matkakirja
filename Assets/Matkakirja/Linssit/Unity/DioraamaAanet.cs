@@ -118,7 +118,7 @@ namespace Matkakirja.Natiivi
             }
             aktiivinen = this;
             // Kuunnelman tekstityksen äänikoukut (Natiivi-UI:n KuunnelmaKaistale): sama puheväylä, kaiku ja kertoimet.
-            KuunnelmaKaistale.Soita = id => aktiivinen?.SoitaPuhe(id);
+            KuunnelmaKaistale.Soita = id => aktiivinen?.SoitaPuhe(id, false); // kuunnelman rivit etenevät itsestään
             // YKSI PUHE KERRALLAAN (omistaja 2.10. TF 120): linnan puhe näkyy Aanet.KertojaPuhuu-tilana (Pulu ei aloita
             // päälle), kertojakanavan ja Puhe-luennan alku katkaisee sen, ja linnan uusi puhe katkaisee muut.
             Aanet.LinssiPuhuu = () => aktiivinen != null && aktiivinen.PuheSoi;
@@ -185,6 +185,7 @@ namespace Matkakirja.Natiivi
         public void Paivita(Rakennus rak, Nakyma nakyma, double t)
         {
             rakennus = rak;
+            SeuraaMuutaPuhetta();
             bool aanimaisemaPaalla = Paalla && Asetukset.Paalla(Kytkin.Aanimaisema);
             bool kertojaPaalla = Paalla && Asetukset.Paalla(Kytkin.Kertoja);
 
@@ -235,7 +236,7 @@ namespace Matkakirja.Natiivi
             }
 
             string huone = nakyma.KohdeTila;
-            if (huone != NykyinenHuone) { NykyinenHuone = huone; HuoneVaihtui?.Invoke(huone); }
+            if (huone != NykyinenHuone) { NykyinenHuone = huone; HuoneVaihtui?.Invoke(huone); aanettomat.Clear(); }
             bool puheSoi = puhuu || Time.unscaledTime < puheLoppuu;
             // Sovittimen duckaus puheen ajaksi (0,15); mikserin VaistoKerroin skaalaa väistön (1 = nykyinen, 0 = ei väistöä).
             double duck = puheSoi ? 1.0 - 0.85 * Kerroin(VaistoKerroin, huone ?? "") : 1.0;
@@ -273,9 +274,10 @@ namespace Matkakirja.Natiivi
             int jaksoNyt = nakyma.KertojaTeksti != null ? nakyma.KertojaJakso : -1;
             if (jaksoNyt != viimeJakso)
             {
+                aanettomat.Clear();
                 if (viimeJakso >= 0) LopetaErillinen();
                 viimeJakso = jaksoNyt;
-                if (viimeJakso >= 0 && viimeJakso < rak.Kertoja.Count && kertojaPaalla) SoitaErillinen(rak.Kertoja[viimeJakso].Aani);
+                if (viimeJakso >= 0 && viimeJakso < rak.Kertoja.Count && kertojaPaalla) SoitaErillinen(rak.Kertoja[viimeJakso].Aani, false);
             }
 
             string avain = nakyma.Puhuja == null ? null : nakyma.KohdeTila + "|" + nakyma.Askel;
@@ -283,7 +285,9 @@ namespace Matkakirja.Natiivi
             {
                 bool uusiAskel = avain != null;
                 bool aaniSoi = uusiAskel && kertojaPaalla && AaniOnValmis(nakyma.AskeleenAani);
-                if (aaniSoi) SoitaPuhe(nakyma.AskeleenAani);
+                // Repliikit etenevät käsikirjoituksen mukaan itsestään (savuke 1125: 2 repliikkiä katkaisi luennon 4 s:n kohdalla);
+                // pelaajan tekona vain heti napautuksen (DioraamaSyote) jälkeen.
+                if (aaniSoi) aaniSoi = SoitaPuhe(nakyma.AskeleenAani, Time.unscaledTime - napautusAika < 1.5f);
                 if (aaniSoi != puhuu) { y?.Repliikki(aaniSoi); puhuu = aaniSoi; }
                 viimeAskelAvain = avain;
             }
@@ -357,7 +361,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Repliikki tai kuunnelman rivi puheväylälle (−3 dB). Mikseritilassa kuiva + kaiku (lyhyt/pitkä) kahdelta
         /// lähteeltä samalla dspTime-hetkellä (PlayScheduled +50 ms); kaiun taso KaikuKerroin[huone] (KaikuPois → 0).
         /// Muuten Tiedosto kuten ennen. Palauttaa, soiko.</summary>
-        bool SoitaPuhe(string aaniId)
+        bool SoitaPuhe(string aaniId, bool kayttaja)
         {
             if (string.IsNullOrEmpty(aaniId) || rakennus == null || !rakennus.Aanet.TryGetValue(aaniId, out var aani)) return false;
             if (MikseriTila && !string.IsNullOrEmpty(aani.Kuiva) && puheKuiva != null)
@@ -368,7 +372,7 @@ namespace Matkakirja.Natiivi
                 if (kuiva != null)
                 {
                     double hetki = AudioSettings.dspTime + 0.05;
-                    AloitaPuhe();
+                    if (!AloitaPuhe(kayttaja, aaniId)) return false;
                     puheKuiva.clip = kuiva; puheKuiva.volume = PuheTaso; puheKuiva.PlayScheduled(hetki);
                     float kaikuTaso = KaikuPois ? 0f : Kerroin(KaikuKerroin, NykyinenHuone ?? "", 1f);
                     if (kaiku != null && kaikuTaso > 0.001f)
@@ -384,7 +388,7 @@ namespace Matkakirja.Natiivi
             if (k == null) { VarmistaLadattu(sovitin.AaniUrl(aani.Tiedosto)); return false; }
             // Ennen PlayOneShot kertaäänilähteeltä: repliikkiä ei voinut katkaista, ja seuraava puhe (vartija, kortti,
             // kertoja, Pulu) soi sen päälle. Nyt sama pysäytettävä puhelähde kuin kertojalla.
-            AloitaPuhe();
+            if (!AloitaPuhe(kayttaja, aaniId)) return false;
             puheKuiva.clip = k; puheKuiva.volume = PuheTaso; puheKuiva.Play();
             puheLoppuu = Time.unscaledTime + k.length;
             return true;
@@ -394,12 +398,12 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Kertojan jakso tai Pulun kertomus omalta, pysäytettävältä lähteeltä (puheväylä −3 dB, taustat väistävät
         /// puheen ajan). Katkaisee edellisen erillisen puheen. Lataamaton klippi jää soittamatta (esiladattu avatessa).</summary>
-        bool SoitaErillinen(string aaniId)
+        bool SoitaErillinen(string aaniId, bool kayttaja)
         {
             if (string.IsNullOrEmpty(aaniId) || rakennus == null || !rakennus.Aanet.TryGetValue(aaniId, out var aani) || puheKuiva == null) return false;
             var k = Klippi(aani.Tiedosto);
             if (k == null) { VarmistaLadattu(sovitin.AaniUrl(aani.Tiedosto)); return false; }
-            AloitaPuhe();
+            if (!AloitaPuhe(kayttaja, aaniId)) return false;
             puheKuiva.clip = k; puheKuiva.volume = PuheTaso; puheKuiva.Play();
             puheLoppuu = Time.unscaledTime + k.length;
             Debug.Log($"MATKAKIRJA linssit: poikki: erillinen puhe {aaniId} {k.length:F1} s");
@@ -408,8 +412,17 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Linnan uusi puhe katkaisee edellisen linnan puheen sekä pelin muut puheet (Pulun repliikki, kertojan
         /// luenta, Puhe-luenta), jotta kerrallaan soi yksi puhe (omistaja 2.10.).</summary>
-        void AloitaPuhe()
+        /// <summary>Savuke 1124: itsestään etenevä linnan puhe (kertojan jakso, kuunnelman rivi) ei katkaise pelaajan pyytämää
+        /// puhetta (Pulun chat-vastaus, luento), vaan jää soimatta (teksti näkyy, ks. Puhutaan). Pelaajan teko katkaisee.</summary>
+        bool AloitaPuhe(bool kayttaja, string aaniId = null)
         {
+            if (!kayttaja && MuuPuheSoi)
+            {
+                Debug.Log("MATKAKIRJA linssit: poikki: linnan puhe odottaa (muu puhe soi)");
+                // Odottamaan jäänyt rivi näytetään tekstinä (simu 2.10.: kertojan jakso jäi muuten äänettä ja tekstittä).
+                if (aaniId != null) aanettomat.Add(aaniId);
+                return false;
+            }
             puheKuiva.Stop(); puheKaiku.Stop();
             katkaiseeMuita = true;
             try
@@ -420,6 +433,30 @@ namespace Matkakirja.Natiivi
             }
             finally { katkaiseeMuita = false; }
             Debug.Log("MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu)");
+            return true;
+        }
+
+        /// <summary>Soiko pelin muu puhe (Puhe: luento tai Pulun chat-vastaus; kertojakanava).</summary>
+        static float napautusAika = -10f;
+        /// <summary>Pelaaja napautti dioraamaa (DioraamaSyote): seuraava repliikki on pelaajan teko ja saa katkaista muun puheen.</summary>
+        public static void Napautettu() => napautusAika = Time.unscaledTime;
+
+        bool MuuPuheSoi => (Puhe.Instanssi != null && Puhe.Instanssi.Soi) || (Aanet.Kertojasoitin != null && Aanet.Kertojasoitin.isPlaying);
+        bool muuSoi;
+        /// <summary>Muun puheen vuoksi soimatta jääneet rivit (näkyvät tekstinä); tyhjennetään jakson ja huoneen vaihtuessa.</summary>
+        readonly HashSet<string> aanettomat = new HashSet<string>();
+
+        /// <summary>Joka ruutu: muun puheen alku (nouseva reuna) katkaisee linnan puheen, vaikka Puhe.Puhuu-tilaus puuttuisi
+        /// (Puhe luodaan laiskasti; savuke 1124: Pulun vastaus soi linnan puheen päällä).</summary>
+        void SeuraaMuutaPuhetta()
+        {
+            bool nyt = MuuPuheSoi;
+            if (nyt && !muuSoi && !katkaiseeMuita)
+            {
+                Debug.Log($"MATKAKIRJA linssit: poikki: muu puhe alkoi (linnan puhe {(PuheSoi ? "katkeaa" : "ei soi")})");
+                KatkaisePuhe();
+            }
+            muuSoi = nyt;
         }
 
         bool katkaiseeMuita;
@@ -451,7 +488,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Pulun kertomus (DioraamaTaulu: Pulun napautus), Kertoja-kytkimen mukaan.</summary>
         public static bool SoitaPulu(string aaniId) =>
-            aktiivinen != null && aktiivinen.Paalla && Asetukset.Paalla(Kytkin.Kertoja) && aktiivinen.SoitaErillinen(aaniId);
+            aktiivinen != null && aktiivinen.Paalla && Asetukset.Paalla(Kytkin.Kertoja) && aktiivinen.SoitaErillinen(aaniId, true);
 
         /// <summary>Pulun kertomuksen kesto (kuplan näyttöaika), null = tuntematon.</summary>
         public static float? PuluKesto(string aaniId) => aktiivinen?.PuheenKesto(aaniId);
@@ -460,7 +497,9 @@ namespace Matkakirja.Natiivi
         /// kuplana (omistaja 2.10. klo 14.1x, loki 14.09: "näytä vain tekstinä sellaista mitä ei puhuta").</summary>
         public static bool Puhutaan(string aaniId) =>
             !string.IsNullOrEmpty(aaniId) && aktiivinen != null && aktiivinen.Paalla && Asetukset.Paalla(Kytkin.Kertoja)
-            && aktiivinen.rakennus != null && aktiivinen.rakennus.Aanet.ContainsKey(aaniId);
+            && aktiivinen.rakennus != null && aktiivinen.rakennus.Aanet.ContainsKey(aaniId)
+            && (aktiivinen.PuheSoi || !aktiivinen.MuuPuheSoi) // muun puheen aikana linnan rivi jää tekstiksi
+            && !aktiivinen.aanettomat.Contains(aaniId);
 
         /// <summary>Puheen kesto sekunteina (kuunnelman ajoitus): ladattu klippi, muuten pankin kesto_s, muuten null.</summary>
         float? PuheenKesto(string aaniId)
