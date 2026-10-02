@@ -10,6 +10,11 @@ import bpy
 from mathutils import Vector
 
 A = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
+# v11 (omistaja 3.10. 00.0x, kaikki ajattelijat): v10 + alkukuvat varjon puolelta (ääriviiva valosta), taustavirran
+# rivit lähes samalla nopeudella (25 mm/s ±15 %) ja kaikukuvien kamera lähempänä. --v11 = --v10 + nämä.
+V11 = '--v11' in A
+if V11 and '--v10' not in A:
+    i_ = A.index('--v11'); A[i_] = '--v10'; A.append('--v11')
 # Ajattelijat (sama putki): --kohde sokrates | marcus. Kaikki skannaukset SMK:n kipsivaloksia, PDM, api.smk.dk.
 KOHTEET = {
     'sokrates': ('/Users/Shared/Claude/proto-3d/_lahteet/smk/KAS635/smk-inv-635.stl', 0.51),   # KAS635, 51 cm
@@ -871,6 +876,14 @@ V7_VALO = ((1, (0.55, 0.85, 0.30)), (119, (0.9, 0.55, 0.35)), (236, (1.0, -0.05,
 if KOHDE == 'marcus':   # tuuheat kiharat ja parta varjostavat enemmän → aurinko alkaa sivummalta, jotta kasvot näkyvät
     V7_VALO = ((1, (0.85, 0.45, 0.35)), (119, (1.0, 0.15, 0.45)), (236, (1.0, -0.25, 0.6)), (259, (0.85, -0.5, 0.75)),
                (282, (0.70, -0.70, 0.85)))
+V11_AURINKO = (1.0, 0.05, 0.5)
+if V11:   # omistaja 3.10.: alkukuvat varjon puolelta → kamera valon vastapuolelle (−x), aurinko takaviistoon (+y ≥ 0,5):
+    # kasvot jäävät varjoon ja niistä erottuu kirkas ääriviiva. Rembrandt + nimi (282) ennallaan.
+    V7_OTOKSET = tuple((r_, ((-abs(c_[0]),) + tuple(c_[1:])) if r_ < 282 else c_, q_, mm_) for r_, c_, q_, mm_ in V7_OTOKSET)
+    # Kokeet 3.10.: takaa tuleva aurinko (y ≥ 0,5) jätti kasvot mustiksi ja valaisi vain päälaen → aurinko kameran
+    # vastakkaiselta sivulta (+x, y ≈ 0, hieman ylhäältä): kasvojen profiili (otsa, nenä, huulet, parta) piirtyy valona.
+    # avausruutu (vasen profiili −x:stä): valo hieman edestä, jotta nenän ja huulten reuna syttyy
+    V7_VALO = tuple((r_, (1.0, -0.35, 0.45) if r_ <= 1 else V11_AURINKO if r_ < 282 else s_) for r_, s_ in V7_VALO)
 if '--otokset' in A:   # muu ajattelija/musiikki: leikkausruudut annetaan (viimeinen = Rembrandt, oltava 282); valot skaalataan
     _uudet = [int(v) for v in A[A.index('--otokset') + 1].split(',')]
     _vanhat = [o_[0] for o_ in V7_OTOKSET]
@@ -1026,6 +1039,10 @@ PAAN_PROJEKTORIT = (  # v10 (omistaja 2.10. 08.4x): taustavirta koko pään alue
 )   # yhteensä 20 riviä (omistaja 2.10. 08.3x: 18 kreikaksi + 2 suomeksi, puolet kumpaankin suuntaan)
 
 
+V11_VIRTA_MS = 0.025   # v11: taustavirran yhteinen nopeus pinnalla (m/s); v10:n mediaani 26 mm/s
+VIRTA_LOKI = []        # v11: rivikohtaiset nopeudet --luvut-tiedostoon (web)
+
+
 def paan_virta(nimi, ruudut, voima, kansio, korkeudet, siemen, etaisyys=0.9):
     """v10: 15 taustariviä koko päähän (päälaki, otsa, ohimot, posket, parta). Rivit jaetaan projektoreille ja
     levitetään tasaisin välein projektorin kuva-alan korkeudelle (ei aukkoja); jokaisella oma nopeus (selvästi eri
@@ -1033,6 +1050,8 @@ def paan_virta(nimi, ruudut, voima, kansio, korkeudet, siemen, etaisyys=0.9):
     import random as _r
     rnd = _r.Random(siemen); tiedostot = sorted(f for f in os.listdir(kansio) if f.startswith('tausta-') and 'sumea' not in f)
     nopeudet = [0.0007 * 1.18 ** k for k in range(len(tiedostot))]; rnd.shuffle(nopeudet)
+    if V11:   # omistaja 3.10.: lähes sama nopeus pinnalla, 25 mm/s ±15 % (v10: 4,5–102 mm/s); erillinen siemen
+        rnd11 = _r.Random(siemen + 1100); nopeudet = [V11_VIRTA_MS * (1 + rnd11.uniform(-0.15, 0.15)) / 30 for _ in tiedostot]
     i_ = 0
     for kohde, suunta, ala, rivit in PAAN_PROJEKTORIT:
         for k in range(rivit):
@@ -1041,8 +1060,13 @@ def paan_virta(nimi, ruudut, voima, kansio, korkeudet, siemen, etaisyys=0.9):
             if '-fi-' in f:
                 kork = rnd.choice(sorted(korkeudet)[:2]); kirkkaus = rnd.uniform(0.08, 0.13)
             v_m = (-0.4 + 0.8 * (k + 0.5) / rivit) * ala + rnd.uniform(-0.01, 0.01)
+            nop = nopeudet[i_]
+            if V11:   # m/ruutu → uv/ruutu: rivin leveys pinnalla = kork × kuvan leveys/korkeus
+                kk_ = bpy.data.images.load(os.path.join(kansio, f), check_existing=True); nop /= kork * kk_.size[0] / kk_.size[1]
+                VIRTA_LOKI.append({'virta': nimi, 'rivi': i_, 'tiedosto': f, 'kork_m': kork, 'mm_s': round(nopeudet[i_] * 30000, 1),
+                                   'suunta': 1 if i_ % 2 else -1, 'uv_ruutu': round(nop, 6)})
             tausta_rivi(f'{nimi}-{i_}', Vector(kohde), Vector(suunta).normalized(), etaisyys, ala, os.path.join(kansio, f),
-                        kork, rnd.uniform(-7, 7), v_m, nopeudet[i_] * (1 if i_ % 2 else -1), kirkkaus, ruudut, voima * 3.0)   # puolet kumpaankin suuntaan
+                        kork, rnd.uniform(-7, 7), v_m, nop * (1 if i_ % 2 else -1), kirkkaus, ruudut, voima * 3.0)   # puolet kumpaankin suuntaan
             i_ += 1
 
 
@@ -1092,7 +1116,7 @@ if '--v7' in A:
         KVOIMA = float(A[A.index('--kaikuvoima') + 1]) if '--kaikuvoima' in A else 160.0
         # v10 (omistaja 10.3x): kaikukuva suoraan pintaa kohti ja kamera lähelle projektorin suuntaan → kuvasta saa selvää
         k_suunta = (n + Vector((-0.10, -0.05, -0.08))).normalized() if '--v10' in A else (n + Vector((-0.40, -0.15, -0.30))).normalized()
-        kaiku_projektori('kaiku', p, k_suunta, 0.6, 0.06 if '--v10' in A else 0.11, KAIKU, V7_KAIKU, KVOIMA)
+        kaiku_projektori('kaiku', p, k_suunta, 0.6, (0.07 if V11 else 0.06) if '--v10' in A else 0.11, KAIKU, V7_KAIKU, KVOIMA)
         # omistaja 2.10. 08.xx: kertomuksen ajan kaiku on ainoa valo — aurinko ja ympäristö hiipuvat 1,5 s:ssa kaiun
         # syttyessä ja palaavat kaiun hiipuessa
         alku_k, loppu_k = V7_KAIKU; tausta = sc.world.node_tree.nodes['Background'].inputs['Strength']
@@ -1124,8 +1148,9 @@ if '--v7' in A:
     avain(V7_PITO, cam.location.copy(), tahtain.location.copy(), V3B_LINSSI, 'BEZIER')
     if '--v10' in A and '--kaiku' in A:   # kaiun ajaksi kamera lähelle projektorin suuntaan, hidas liuku
         kc = (n + Vector((0.08, -0.05, -0.12))).normalized()
-        avain(V7_KAIKU[0] + 45, p + kc * 0.21, p, 35, 'BEZIER'); avain(V7_KAIKU[1] - 45, p + kc * 0.19 + t * 0.006, p + t * 0.003, 35, 'BEZIER')
-        avain(V7_PITO, p + kc * 0.19 + t * 0.006, p + t * 0.003, 35, 'BEZIER')
+        d0, d1 = (0.15, 0.14) if V11 else (0.21, 0.19)   # v11 (omistaja 3.10.): kaiku täyttää suurimman osan ruudusta
+        avain(V7_KAIKU[0] + 45, p + kc * d0, p, 35, 'BEZIER'); avain(V7_KAIKU[1] - 45, p + kc * d1 + t * 0.006, p + t * 0.003, 35, 'BEZIER')
+        avain(V7_PITO, p + kc * d1 + t * 0.006, p + t * 0.003, 35, 'BEZIER')
     if '--v9' in A:
         # kierros 2: 21d nauhana poskella → oraakkelin kylix SILMÄMUNAAN ainoana valona (d-luenta)
         # kierros 3: 49b nauhana kasvojen sivulla (ohimo ja poskipää) → Davidin kaiku ainoana valona (f-luenta)
@@ -1158,13 +1183,14 @@ if '--v7' in A:
                 avain(r, p_ + kier @ (c_ - p_) + lk, p_ + lk * 0.5, mm, 'BEZIER')
         pc, pt, _ = lentoasento(pp, pn, kulma=38, matka=0.11)
         kaari(pp, pn, pc, V9['r2_proj'][0], V9['r2_lahde'][1], 12, V3B_LINSSI, pt)
-        sc_ = sp + (sn + Vector((0.10, 0.0, -0.10))).normalized() * 0.10 if '--v10' in A else sp + (sn + Vector((0.25, 0.0, -0.20))).normalized() * 0.14
+        sc_ = sp + (sn + Vector((0.10, 0.0, -0.10))).normalized() * (0.075 if V11 else 0.10) if '--v10' in A else sp + (sn + Vector((0.25, 0.0, -0.20))).normalized() * 0.14
         kaari(sp, sn, sc_, V9['r2_kaiku'][0], V9['r2_kaiku'][1], 8, 50)
         vc, vt, _ = lentoasento(vp, vn, kulma=40, matka=0.11)
         if '--v10' in A:   # teksti kiertäen, kaiku lähempää projektorin suunnasta
             kaari(vp, vn, vc, V9['r3_proj'][0], V9['r3_lahde'][1], 14, V3B_LINSSI, vt)
             vk = (vn + Vector((0.0, -0.12, -0.10))).normalized()
-            avain(V9['r3_kaiku'][0] + 45, vp + vk * 0.24, vp, 35, 'BEZIER'); avain(V9['r3_kaiku'][1], vp + vk * 0.22 + vt * 0.008, vp + vt * 0.004, 35, 'BEZIER')
+            d0, d1 = (0.17, 0.16) if V11 else (0.24, 0.22)
+            avain(V9['r3_kaiku'][0] + 45, vp + vk * d0, vp, 35, 'BEZIER'); avain(V9['r3_kaiku'][1], vp + vk * d1 + vt * 0.008, vp + vt * 0.004, 35, 'BEZIER')
         else:
             kaari(vp, vn, vc, V9['r3_proj'][0], V9['r3_kaiku'][1], 14, V3B_LINSSI, vt)
         rem = V7_OTOKSET[-1]
@@ -1240,7 +1266,11 @@ if '--v7' in A:
                               'keila_aste': round(math.degrees(ob.data.spot_size), 2) if ob.data.type == 'SPOT' else None,
                               'energia_avaimet': energia, 'kuvat': kuvat}
         ulos_j = A[A.index('--luvut') + 1]
-        json.dump({'kohde': KOHDE, 'ruudut_30fps': V9 if '--v9' in A else None, 'kamera': kamera, 'valot': valot},
+        aurinko = []   # v11: alkukuvien valo (varjon puoli) — webin aurinko samoista avaimista
+        for r in sorted(set(kayrien_ruudut(ao)) | set(kayrien_ruudut(aur))): sc.frame_set(r); aurinko.append({'ruutu': r, 'sijainti': pyor(ao.matrix_world.translation), 'energia': round(aur.energy, 2)})
+        json.dump({'kohde': KOHDE, 'versio': 'v11' if V11 else 'v10', 'ruudut_30fps': V9 if '--v9' in A else None, 'kamera': kamera,
+                   'aurinko': aurinko, 'aurinko_kohde': pyor(tahtays), 'valot': valot,
+                   'taustavirta': {'mm_s': V11_VIRTA_MS * 1000, 'vaihtelu': 0.15, 'rivit': VIRTA_LOKI} if V11 else None},
                   open(ulos_j, 'w'), ensure_ascii=False, indent=1)
         print('SOKRATES: luvut', ulos_j, len(kamera), 'kamera-avainta', len(valot), 'valoa'); sys.exit(0)
     for ruutu in (RUUDUT or (V9_RENDER if '--v9' in A else V7_RENDER)):
