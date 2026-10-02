@@ -211,14 +211,16 @@ namespace Matkakirja.Natiivi
             puluAlue.RegisterCallback<PointerDownEvent>(e =>
             {
                 if (string.IsNullOrEmpty(puluKupla)) return;
-                etsintaOtsikko.text = "Pulu";
-                etsintaTeksti.text = puluKupla;
-                etsintaKortti.style.display = DisplayStyle.Flex;
-                etsintaKortti.style.opacity = 1f;
-                etsintaLoppuu = Time.unscaledTime + 9f;
-                // Pulun kertomus ääneen (Pelikoodari 1.10.2026, #3742: pulu.aani 12–22 s): kupla näkyy puheen ajan.
-                if (DioraamaAanet.SoitaPulu(puluAani))
-                    etsintaLoppuu = Time.unscaledTime + Mathf.Max(9f, (DioraamaAanet.PuluKesto(puluAani) ?? 0f) + 1f);
+                // Pulun kertomus ääneen (Pelikoodari 1.10.2026, #3742: pulu.aani 12–22 s). Omistaja 2.10. 14.1x (loki 14.09):
+                // puhuttua ei näytetä kuplana; teksti vain, jos ääntä ei ole tai Kertoja on pois.
+                if (!DioraamaAanet.SoitaPulu(puluAani))
+                {
+                    etsintaOtsikko.text = "Pulu";
+                    etsintaTeksti.text = puluKupla;
+                    etsintaKortti.style.display = DisplayStyle.Flex;
+                    etsintaKortti.style.opacity = 1f;
+                    etsintaLoppuu = Time.unscaledTime + 9f;
+                }
                 e.StopPropagation();
             });
 
@@ -477,7 +479,8 @@ namespace Matkakirja.Natiivi
             }
             // Hahmon repliikki tai Pulun reaktio lainauksena (kohdan oma teksti näkyy jo yllä).
             string puhe = nakyma.Repliikki;
-            bool lainausNakyy = !string.IsNullOrEmpty(puhe) && puhe != teksti.text;
+            // Omistaja 2.10. 14.1x (loki 14.09): ääneen puhuttua repliikkiä ei näytetä tekstinä.
+            bool lainausNakyy = !string.IsNullOrEmpty(puhe) && puhe != teksti.text && !DioraamaAanet.Puhutaan(nakyma.AskeleenAani);
             lainaus.style.display = lainausNakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (lainausNakyy) lainaus.text = PuhujanNimi(rakennus, nakyma) + ": ”" + puhe + "”";
 
@@ -527,6 +530,7 @@ namespace Matkakirja.Natiivi
             // hahmon repliikki (1.1 (74) -kuva: "Pulu: …" toisti tekstiä taulussa).
             string puhe = !string.IsNullOrEmpty(vihje) ? vihje
                 : !string.IsNullOrEmpty(nakyma.Repliikki) && nakyma.Puhuja != null && nakyma.Puhuja != "pulu"
+                  && !DioraamaAanet.Puhutaan(nakyma.AskeleenAani) // omistaja 14.09: ääneen puhuttu ei kuplana
                     ? PuhujanNimi(DioraamaSovitin.Linssi.Rakennus, nakyma) + ": ”" + nakyma.Repliikki + "”" : null;
             lainaus.text = puhe ?? "";
             lainaus.style.display = puhe != null ? DisplayStyle.Flex : DisplayStyle.None;
