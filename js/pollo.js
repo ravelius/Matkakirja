@@ -1468,7 +1468,7 @@ export function puluRealtimeKoeNakyvissa({
 
 /** Koenapin teksti kussakin tilassa. */
 export const REALTIME_NAPPI_TEKSTIT = Object.freeze({
-  valmis: 'Puhu Pululle (koe)',
+  valmis: 'Live',   // omistaja 2.10.2026 klo 16.0x (ennen "Puhu Pululle (koe)")
   yhdistaa: 'Yhdistän Puluun…',
   kuuntelee: 'Kuuntelen — lopeta',
   puhuu: 'Pulu puhuu — lopeta',

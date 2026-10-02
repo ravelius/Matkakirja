@@ -11175,7 +11175,7 @@ export class UI {
     }
     // Yläpalkissa on kukkaro ja päiväkirjan päivämäärä. Sijainti, kokemus ja
     // tietoprosentti ovat passissa: kartta on tärkeämpi kuin mittaristo.
-    const kassa = html('span', 'kassa', `${game.player.money}\u00a0£`);
+    const kassa = html('span', 'kassa', `£${game.player.money}`);
     /*
      * PÄIVÄKULU JA RAHATTOMUUS (talouden vaihe 1, omistaja 27.9.2026):
      * kassan vihje kertoo päiväkulun ja arvion; rahat lopussa kassa on
@@ -11184,12 +11184,12 @@ export class UI {
     const kulu = game.paivakulu?.(game.player);
     if (kulu) {
       const riittaa = game.kassaRiittaa(game.player);
-      kassa.title = `Päiväkulu ${kulu.yhteensa}\u00a0£ (ruoka ${kulu.ruoka}\u00a0£${kulu.majoitus ? `, majoitus ${kulu.majoitus}\u00a0£` : ''})`
+      kassa.title = `Päiväkulu £${kulu.yhteensa} (ruoka £${kulu.ruoka}£${kulu.majoitus ? `, majoitus ${kulu.majoitus}` : ''})`
         + (Number.isFinite(riittaa) ? ` — kassa riittää noin ${riittaa} päiväksi` : '');
     }
     const jaljella = game.rahattomuuttaJaljella?.(game.player);
     kassa.classList.toggle('rahaton', jaljella !== null && jaljella !== undefined);
-    // Pilleri on vain päivä ja raha, "1 pv · 400 £" (omistaja 2.10.2026 klo 15.1x ja 15.40); kellonaika ja
+    // Pilleri on vain päivä ja raha, "1 pv · £400" (omistaja 2.10.2026 klo 15.1x ja 15.50); kellonaika ja
     // päiväkulu ovat valikon päivärivillä (renderValikkoTaso).
     const paiva = html('span', 'clock', `${game.dayCount()}\u00a0pv`);
     paiva.title = game.clockLabel();
@@ -11270,7 +11270,7 @@ export class UI {
 
     const city = this.factCity(p.pos);
     rivi('Sijainti', p.pos.type === 'edge' ? `matkalla — ${city.name}` : city.name);
-    rivi('Kukkaro', `${p.money}\u00a0£`);
+    rivi('Kukkaro', `£${p.money}`);
 
     /*
      * TIETÄJÄRIVI: nimike on rivin selite ja oikeassa reunassa vain
@@ -11385,17 +11385,17 @@ export class UI {
       if (nimi) nimi.textContent = teksti;
     };
     nimea('pilleri-matka-btn', `${taso.nimi} (${pisteet} tp)`);
-    // Päivärivi tasorivin alle: "Päivä 1/80, aamu · 400 £" ja lopussa punaisena päivän kulut (omistaja 15.1x, 15.40).
+    // Päivärivi tasorivin alle: "Päivä 1/80, aamu · £400" ja lopussa punaisena päivän kulut "−£20" (omistaja 15.1x, 15.50).
     const paivarivi = document.getElementById('valikko-paivarivi');
     if (paivarivi) {
       const kulu = game.paivakulu?.(p);
       paivarivi.replaceChildren(
         html('span', 'valikko-paivarivi-teksti',
-          `Päivä ${game.dayCount()}/${RECORD_DAYS}, ${game.timeOfDay()} · ${p.money}\u00a0£`),
-        ...(kulu?.yhteensa ? [html('span', 'valikko-paivarivi-kulu', `\u2212${kulu.yhteensa}\u00a0£`)] : []),
+          `Päivä ${game.dayCount()}/${RECORD_DAYS}, ${game.timeOfDay()} · £${p.money}`),
+        ...(kulu?.yhteensa ? [html('span', 'valikko-paivarivi-kulu', `\u2212£${kulu.yhteensa}`)] : []),
       );
       if (kulu) {
-        paivarivi.title = `Päivän kulut: ruoka ${kulu.ruoka}\u00a0£${kulu.majoitus ? `, majoitus ${kulu.majoitus}\u00a0£` : ''}`;
+        paivarivi.title = `Päivän kulut: ruoka £${kulu.ruoka}£${kulu.majoitus ? `, majoitus ${kulu.majoitus}` : ''}`;
       }
     }
     const riviAvatar = document.querySelector('#pilleri-matka-btn .valikko-tasorivi-avatar');

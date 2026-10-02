@@ -621,7 +621,7 @@ button, .brand, .turn-pill, .fact-card h2 {
   font-variant-numeric: tabular-nums;
 }
 
-/* "1 pv · 400 £" (omistaja 2.10.2026 klo 15.1x): päivä ensin, piste kassan edessä. */
+/* "1 pv · £400" (omistaja 2.10.2026 klo 15.1x): päivä ensin, piste kassan edessä. */
 .turn-pill .clock + .kassa::before {
   content: '·';
   margin-right: 0.45rem;

@@ -327,7 +327,7 @@ function paivitaWidget(game) {
     kaupunki: city.name,
     maa: maa ?? '',
     paiva: game.dayCount(),
-    raha: `${game.player.money}\u00a0£`,
+    raha: `£${game.player.money}`,
   });
 }
 
