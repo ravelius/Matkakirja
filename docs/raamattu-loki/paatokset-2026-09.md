@@ -10199,3 +10199,7 @@ Omistaja 2.10.2026 klo 21.4x TF 129:n kuvakaappauksella (Bulgaria: tyhjä laukku
 ## OMISTAJA (KORTTI): MATALAMPI YLÄPALKKI HYVÄKSYTTY (2.10.2026) (2.10.2026 klo 22.06)
 
 Omistaja hyväksyi 2.10.2026 klo 21.5x kortilla matalamman yläpalkin (natiivi b725dffa, iPhone 17: palkki 87,3 → 77,3 pt, nahkaa pillerin yllä 14,0 pt ja alla 13,9 pt; paikkapilleri ja Linssit-nappi nousivat 10 pt): 'Kelpaa'. Syy: 30.9. lisätty 6 + 4 pt:n lisäkorkeus oli jäänyt pillerin alle, kun pilleri siirtyi saaren keskilinjalle. iPadilla oma laskenta ilman muutosta (9,5 / 9,5 pt). Samaan junaan menee iPadin pillerin välikorjaus d00c7f8b: '1 pv£  400' korjataan muotoon '1 pv £400' (vika oli jo BUILD 129:ssä).
+
+## OMISTAJA: PILLERIN VÄLIVIKA MYÖS MACIN IPAD-SOVELLUKSESSA (2.10.2026) (2.10.2026 klo 22.14)
+
+Omistaja 2.10.2026 klo 22.3x Macin iPad-sovelluksen kuvakaappauksella (Sarajevo) sanatarkasti: 'macilla ipad apissa tuossa £   420 liikaa väliä'. Pillerissä lukee '1 pv£  420'. Tämä on sama vika kuin iPadissa (BUILD 129), ja korjaus on Natiivi-UI:n d00c7f8b, joka tulee junaan 130. Todennus tehdään myös Macin iPad-sovelluksessa.

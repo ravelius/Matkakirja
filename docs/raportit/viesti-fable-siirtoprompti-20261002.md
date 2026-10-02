@@ -20,7 +20,7 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 
 1. **TF:** 1.1 (129) = proto master e204abbe ladattu 21.29 (yläpalkki, nostoselain, valikko V2, kipsipäät erikoisnostot-3 54358623, ROOMA-korjaus). Käytössä 8/12.
    **Laskuri nollautuu 3.10. klo 12.30, ja aamuun säästetään 2 latausta** (omistaja 20.1x).
-2. **Juna 130 (Natiiviseppä):** matalampi yläpalkki b725dffa + iPadin pillerin väli d00c7f8b (hyväksytty, Natiivi-UI todentaa), Julisteet/
+2. **Juna 130 (Natiiviseppä):** matalampi yläpalkki b725dffa + iPadin pillerin väli d00c7f8b (hyväksytty, Natiivi-UI todentaa; omistaja näki saman "1 pv£  420" -vian myös Macin iPad-sovelluksessa 22.3x, joten todenna myös Macilla), Julisteet/
    Aarteet yhteen ikkunaan (natiivi-ui/kokoelmat-ikkuna 5cfe7253), Topografian hampurilainen (Linssiseppä d99f62c5, kuvapari
    proto-3d/lokit/linssiseppa-topografia-20261002/kuvapari-topografia.png odottaa tarkistusta ja omistajaa),
    astro/ISS-erä (Linssiseppä 2, kesken), skin-moottori ja jalkavarjo (Siirtoseppä: half → float b126d548 ja alfa 0592decd eivät korjanneet, juurisyy auki, koesarja yksi tekijä kerrallaan ajamatta).
