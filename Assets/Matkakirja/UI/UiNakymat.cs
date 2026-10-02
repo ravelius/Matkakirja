@@ -288,7 +288,8 @@ namespace Matkakirja.Natiivi
             // vieritys ei maksa pallon, Cesiumin ja elävien elementtien piirtoa (iPhone ja iPad).
             bool arkkiPeittaa = (Nahtavyydet.Auki && Peittoosuus(Nahtavyydet.Arkki) >= ArkkiPeittoRaja)
                 || (Linssit?.Valitsin != null && Linssit.Valitsin.Auki && Peittoosuus(Linssit.Valitsin.Paneeli) >= ArkkiPeittoRaja);
-            var taso = PakotaKuvaTaso ?? (Nostokortti.KuvaKokoruudulla || arkkiPeittaa ? KuvaSumennus.Kokoruutu : s ? KuvaSumennus.Kortti : KuvaSumennus.Ei);
+            // Lautapeli (omistaja 2.10. klo 08.2x, Natiivi-UI): kartta sumeana pysäytyskuvana pelin ajan (Kokoruutu, kaappaus kerran).
+            var taso = PakotaKuvaTaso ?? (Nostokortti.KuvaKokoruudulla || arkkiPeittaa || MyllyNakyma.AukiNyt ? KuvaSumennus.Kokoruutu : s ? KuvaSumennus.Kortti : KuvaSumennus.Ei);
             if (taso != KuvaSumennus.Ei) s = true;
             if (taso != KuvaTaso) { KuvaTaso = taso; KuvaTasoMuuttui?.Invoke(taso); }
             if (s == KuvaSumea) return;

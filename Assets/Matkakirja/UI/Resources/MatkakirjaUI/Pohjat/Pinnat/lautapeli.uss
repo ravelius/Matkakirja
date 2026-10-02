@@ -3,18 +3,28 @@
 
 /* LAUTAPELIN POHJA (omistaja 1.10.2026, Päätoimittajan loki b3e273d72; Mylly ensimmäisenä, UI/Pelit/MyllyNakyma.cs):
    PELI = KUVANÄKYMÄ (lauta kuvan paikalla, himmennys-kuva, ✕ 44 pt) + PANEELI (PAPERI-pergamentti 350 pt / KAPEA laudan alla);
-   valinta ja tulos = KORTTI-pohja. Vain tyylikirjan muuttujat. */
+   valinta ja tulos = KORTTI-pohja. Vain tyylikirjan muuttujat.
+   Omistaja 2.10. klo 08.2x (Natiivi-UI:n arvot): lauta ilman taustaa (Blender-kuva reunoineen), tausta himmennys-kevyt +
+   kartan kertakuvasumennus (UiNakymat.PaivitaKuvaSumea), pelin aikainen paneeli TUMMA; aloitus- ja tuloskortti paperia. */
 .mk-peli {
-    background-color: var(--tk-himmennys-kuva);
+    background-color: var(--tk-himmennys-kevyt);
     padding: 0;
+}
+
+/* Kartan sumea pysäytyskuva omassa kerroksessaan (MyllyNakyma.PysaytysKerros), kuten .mk-suurennos__pysaytys mutta ilman
+   omaa sävytystä: pehmennys = sumennus + .mk-peli-himmennys-kevyt. */
+.mk-peli__pysaytys {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: scale-and-crop;
 }
 
 .mk-peli__lauta {
     position: absolute;
-    border-width: 1px;
-    border-color: var(--tk-paperi-reunus);
-    border-radius: var(--tk-kulma-kortti);
-    background-color: var(--tk-paperi-pergamentti);
+    background-color: initial;
 }
 
 .mk-peli__sulje {
@@ -41,19 +51,28 @@
     padding: var(--tk-vali-l);
     border-width: 1px;
     border-radius: var(--tk-kulma-kortti);
-    border-color: var(--tk-paperi-reunus);
-    background-color: var(--tk-paperi-pergamentti);
-    color: var(--tk-paperi-muste);
+    border-color: var(--tk-tumma-reunus);
+    background-color: var(--tk-tumma-pinta);
+    color: var(--tk-tumma-muste);
+}
+
+.mk-peli__paneeli .mk-kortti__kapiteeli {
+    color: var(--tk-tumma-muste-pehmea);
+}
+
+.mk-peli__paneeli .mk-nappi--toiminto {
+    border-color: var(--tk-tumma-reunus);
+    color: var(--tk-tumma-muste);
 }
 
 .mk-peli__vuoro {
     margin-bottom: var(--tk-vali-s);
     padding-left: var(--tk-vali-s);
     border-left-width: 4px;
-    border-color: var(--tk-paperi-toiminto);
+    border-color: var(--tk-tumma-toiminto);
     font-size: var(--tk-koko-leipa);
     white-space: normal;
-    color: var(--tk-paperi-muste);
+    color: var(--tk-tumma-muste);
 }
 
 .mk-peli__rivi {
@@ -61,19 +80,19 @@
     align-items: center;
     min-height: var(--tk-nappi-korkeus);
     border-top-width: 1px;
-    border-color: var(--tk-paperi-reunus);
+    border-color: var(--tk-tumma-reunus);
 }
 
 .mk-peli__rivi-nimi {
     flex-grow: 1;
     margin-left: var(--tk-vali-s);
     font-size: var(--tk-koko-leipa);
-    color: var(--tk-paperi-muste);
+    color: var(--tk-tumma-muste);
 }
 
 .mk-peli__lukema {
     font-size: var(--tk-koko-kapiteeli);
-    color: var(--tk-paperi-muste-pehmea);
+    color: var(--tk-tumma-muste-pehmea);
 }
 
 .mk-peli__merkki {
@@ -92,11 +111,16 @@
     background-color: var(--tk-paperi-muste);
 }
 
+/* Tummalla paneelilla tumma merkki erottuu vain reunastaan (iPhone-kuva 2.10.: musta merkki katosi). */
+.mk-peli__paneeli .mk-peli__merkki--tumma {
+    border-color: var(--tk-tumma-muste-pehmea);
+}
+
 .mk-peli__ohje {
     margin-top: var(--tk-vali-xs);
     font-size: var(--tk-koko-apuri);
     white-space: normal;
-    color: var(--tk-paperi-muste-pehmea);
+    color: var(--tk-tumma-muste-pehmea);
 }
 
 .mk-peli__kortti .mk-kortti__alaotsikko {
@@ -131,6 +155,8 @@
 .mk-peli__kytkin > .mk-nappi__teksti {
     font-size: var(--tk-koko-leipa);
     -unity-text-align: middle-center;
+    white-space: normal; /* savuke 1113: "Luostari 1200-l." ja "Viikinkilaiva n. 900" menivät päällekkäin iPhonella */
+    padding: var(--tk-vali-xs) 0;
 }
 
 .mk-peli__kytkin:first-child {
@@ -162,7 +188,7 @@
 
 /* Lukittu lauta (ansaitaan voitoilla): himmeä KYTKIN, napautus näyttää ehdon apurivillä. */
 .mk-peli__kytkin--lukittu {
-    opacity: 0.45;
+    opacity: 0.6; /* savuke 1113: 0,45 oli liian haalea luettavaksi */
 }
 
 .mk-peli__ansaitut {
