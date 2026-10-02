@@ -300,13 +300,21 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   kaikuTayte.target.position.copy(os.p);
   kohtaus.add(kaikuTayte, kaikuTayte.target);
   const kaikuIndeksi = 1 + virta.length;
+  const kaikuTykki = os.p.clone().add(os.n.clone().add(b2t(THREE, kk.vino)).normalize().multiplyScalar(kk.etaisyys));
+  // Kaiun kamera (v10): lähempänä tasaisempaa otsan pintaa, hidas ajo ja liuku.
+  const kaikuSuunta = os.n.clone().add(b2t(THREE, kk.kamera.suunta)).normalize();
+  const kaikuKamera = (osuus) => {
+    const liuku = lento.t.clone().multiplyScalar(kk.kamera.liuku * osuus);
+    const matka = kk.kamera.matka[0] + (kk.kamera.matka[1] - kk.kamera.matka[0]) * osuus;
+    return { paikka: os.p.clone().add(kaikuSuunta.clone().multiplyScalar(matka)).add(liuku), katse: os.p.clone().add(liuku) };
+  };
   new THREE.TextureLoader().loadAsync(`${R2}${kk.kuva}`).then((tk) => {
     tk.colorSpace = THREE.NoColorSpace;
     u.pKaiku.value = tk;
     u.pKaikuVari.value.setRGB(...kk.savy);
     const korkeus = kk.lev * tk.image.height / tk.image.width;
     asetaProjektori(THREE, u, kaikuIndeksi, {
-      paikka: tykki, kohde: os.p, etaisyys: kk.etaisyys, nauhaKork: korkeus,
+      paikka: kaikuTykki, kohde: os.p, etaisyys: kk.etaisyys, nauhaKork: korkeus,
       rivi: { lev: tk.image.width, korkeus: tk.image.height, uMax: 1 }, ala: Math.max(kk.lev, korkeus), blend: kk.blend,
       atlasKorkeus: tk.image.height, kaiku: true,
     });
@@ -354,9 +362,18 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       const loppu = kaari(0);
       paikka = remPaikka.clone().lerp(loppu.paikka, k); katse = remKatse.clone().lerp(loppu.katse, k);
       mm = rem.mm + (a.linssi - rem.mm) * k;
-    } else {
+    } else if (r <= T.kaiku[0]) {
       const kk2 = kaari(pehmea(valilla(Math.min(r, T.kaariLoppu), T.lahesty[1], T.kaariLoppu)));
       paikka = kk2.paikka; katse = kk2.katse; mm = a.linssi;
+    } else {
+      // Kaiku: siirtymä kaaren lopusta kaiun kameraan (45 ruutua), sitten hidas ajo kaiun loppuun.
+      const [ka0, kl0] = T.kaiku;
+      const kaarenLoppu = kaari(1);
+      const k1 = pehmea(valilla(r, ka0, ka0 + kk.kamera.siirtyma));
+      const kp = kaikuKamera(Math.min(1, Math.max(0, valilla(r, ka0 + kk.kamera.siirtyma, kl0))));
+      paikka = kaarenLoppu.paikka.clone().lerp(kp.paikka, k1);
+      katse = kaarenLoppu.katse.clone().lerp(kp.katse, k1);
+      mm = a.linssi + (kk.kamera.mm - a.linssi) * k1;
     }
     asetaKamera(paikka, katse, mm);
     vinjetti.style.opacity = r >= T.nimi[0] && r < T.lahesty[0] + 20 ? '1' : '0';

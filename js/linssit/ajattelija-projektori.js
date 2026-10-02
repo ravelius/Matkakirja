@@ -113,7 +113,12 @@ float pNayte(int i, float jx, float jy, float sk, float sumeus) {
   // toisivat muuten viereisen atlasrivin palasia katkoviivaksi.
   float reuna = smoothstep(0.0, 0.15, v) * smoothstep(1.0, 0.85, v);
   if (d.w < 0.5 && (u <= 0.0 || u >= 1.0)) return 0.0;
-  if (pF[i].z > 0.5) return texture2D(pKaiku, vec2(u, 1.0 - v)).r;
+  // Kaikukuva: valoa vain sisällössä (sokrates_kaiku.py). Matalat sävyt kynnystetään pois (webin AgX nostaa niitä
+  // Blenderiä enemmän, jolloin kuva-ala erottui suorakaiteena), ja reunat häivytetään.
+  if (pF[i].z > 0.5) {
+    float reunaK = smoothstep(0.0, 0.08, u) * smoothstep(1.0, 0.92, u) * smoothstep(0.0, 0.08, v) * smoothstep(1.0, 0.92, v);
+    return smoothstep(0.08, 0.9, texture2D(pKaiku, vec2(u, 1.0 - v)).r) * reunaK;
+  }
   float au = u * d.x;   // toistorivi: jatkuva u, atlas kääritään (RepeatWrapping)
   float terava = texture2D(pAtlas, vec2(au, mix(c.x, c.y, 1.0 - v)), -0.75).r;
   if (sumeus <= 0.0) return terava * reuna;

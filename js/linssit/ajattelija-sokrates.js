@@ -26,7 +26,8 @@ export const SOKRATES = Object.freeze({
   tausta: 0.012,           // maailman väri (lineaarinen)
   // Kamera: Blenderin pystysensori 24 mm → pystykenttä 2·atan(12 / polttoväli).
   otokset: {
-    rembrandt: { paikka: [-0.30, -1.02, 0.40], katse: [-0.06, -0.06, 0.36], mm: 35 },
+    // Nimi ja vuodet alemmasta kuvakulmasta (omistajan v9-palaute 2.10. 10.3x; Linnanrakentaja v10).
+    rembrandt: { paikka: [-0.30, -1.02, 0.25], katse: [-0.06, -0.06, 0.40], mm: 35 },
   },
   linssi: 18,              // V3B_LINSSI: lähikuvat pinnan yllä
   kierto: 22,              // V6_KIERTO: ± astetta pinnan normaalin ympäri tekstin aikana
@@ -80,7 +81,10 @@ export const SOKRATES = Object.freeze({
    */
   kaiku: {
     kuva: 'ajattelijat/sokrates/v1/kaiku-sotilas.png',
-    lev: 0.11, etaisyys: 0.6, voima: 20, liuku: 0.05, savy: [1.0, 0.78, 0.52], blend: 0.3,
+    // v10 (omistajan v9-palaute: kamera lähempänä tasaisempaa pintaa): oma projektori otsalle, kuva-ala 0,06 m;
+    // kamera p + norm(n + suunta) × 0,21 → 0,19 ja liuku t × 0,006, 35 mm.
+    lev: 0.06, vino: [-0.10, -0.05, -0.08], etaisyys: 0.6, voima: 20, liuku: 0.05, savy: [1.0, 0.78, 0.52], blend: 0.3,
+    kamera: { suunta: [0.08, -0.05, -0.12], matka: [0.21, 0.19], liuku: 0.006, mm: 35, siirtyma: 45 },
     tayte: { osuus: 0.10, suunta: [-0.65, -0.25, 0.7], vari: [0.90, 0.94, 1.0], keila: 45, blend: 0.7 },
   },
   /*
