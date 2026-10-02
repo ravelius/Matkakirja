@@ -120,11 +120,12 @@ test('ajattelijat ovat dataa: jokainen rekisterin ajattelija kelpaa, moottori ei
   assert.doesNotMatch(moottori.replace(/import \{ SOKRATES \}[^\n]*\n|sokrates: SOKRATES/g, ''), /38a|sokrates|Sokrates/);
 });
 
-test('Marcus Aurelius pelkkänä datana: Itselleen 10.16, kaksirivinen nimi, ei vielä kaikua, Eroica CC0', async () => {
+test('Marcus Aurelius pelkkänä datana: Itselleen 10.16, kaksirivinen nimi, sadeihmeen kaiku, Eroica CC0', async () => {
   const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
   assert.equal(MARCUS.paalauseet[MARCUS.kierros.paalause].viite, 'Marcus Aurelius, Itselleen 10.16');
   assert.deepEqual(MARCUS.nimiRivit, ['MARCUS', 'AURELIUS']);
-  assert.equal(MARCUS.kaiku, null);
+  assert.equal(MARCUS.kaiku.kuva, 'ajattelijat/marcus/v1/kaiku-sade.png');
+  assert.match(MARCUS.kaiku.nimeaminen, /Nico Kokkonen, CC BY 3.0/);
   assert.equal(MARCUS.taustavirta.rivit.length, 20);
   assert.equal(MARCUS.prologi, SOKRATES.prologi, 'vakioaloitus on yhteinen');
   const tyokalu = lue('../tools/ajattelija-aaniraita.mjs');
@@ -132,4 +133,12 @@ test('Marcus Aurelius pelkkänä datana: Itselleen 10.16, kaksirivinen nimi, ei 
   const js = lue('../js/linssit/ajattelija.js');
   assert.match(js, /\} else if \(!kk \|\| r <= T\.kaiku\[0\]\) \{/, 'ilman kaikua kaari jatkuu pitoon');
   assert.match(js, /if \(!a\.pulunKysymykset\?\.length\) return;/);
+});
+
+test('tekijätiedot: CC BY -kuva ja -musiikki nimettyinä, three.js ja bystit (js/lahteet.js)', () => {
+  const l = lue('../js/lahteet.js');
+  assert.match(l, /tekija: 'Nico Kokkonen, Wikimedia Commons \(Column_of_Marcus_Aurelius_-_detail2\.jpg\)',\n\s*lisenssi: 'CC BY 3\.0',/);
+  assert.match(l, /tekija: 'Sascha Ende, filmmusic\.io',\n\s*lisenssi: 'CC BY 4\.0',/);
+  assert.match(l, /three\.js r185 ja GLTFLoader/);
+  assert.match(l, /KAS635\) ja Marcus Aurelius \(KAS979\)/);
 });

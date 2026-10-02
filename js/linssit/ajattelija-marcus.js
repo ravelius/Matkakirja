@@ -4,7 +4,7 @@
  * linnanrakentaja-sokrates-bysti) sellaisinaan Blenderin koordinaateissa; yhteiset osat (prologi, taustavirran
  * projektorit, fontit, videotykki, kipsi) ovat samat kuin Sokrateella (ajattelija-sokrates.js).
  * Lähde: SMK KAS979, kipsivalos (Formeri: Paris, Louvre nr. 383), PDM 1.0; Scan the World / SMK.
- * Kaikua ei vielä ole (kaiku: null); elämä-lappu ja Pulun kysymykset tulevat Sisältökirjurilta.
+ * Kierrosten 2–3 kaiut (uhri, Delacroix) tulevat kierrosten mukana; elämä-lappu ja Pulun kysymykset Sisältökirjurilta.
  */
 import { SOKRATES } from './ajattelija-sokrates.js';
 
@@ -79,12 +79,18 @@ export const MARCUS = Object.freeze({
   ca: SOKRATES.ca,
   syvyys: SOKRATES.syvyys,
   tykki: SOKRATES.tykki,
-  kaiku: null,
+  // Kierroksen 1 kaiku (b-luenta): Marcuksen pylvään sadeihme, POSITIIVINEN (omistaja 2.10. 11.13); projektori, kamera,
+  // seepia ja häivytys kuten Sokrateella (marcus-tekstit.json kaiku, 3682f58af). CC BY 3.0: nimeäminen tekijätietoihin.
+  kaiku: {
+    ...SOKRATES.kaiku,
+    kuva: 'ajattelijat/marcus/v1/kaiku-sade.png',
+    nimeaminen: 'Nico Kokkonen, CC BY 3.0, Wikimedia Commons (Column_of_Marcus_Aurelius_-_detail2.jpg)',
+  },
   /*
    * Ääni (tools/ajattelija-aaniraita.mjs --ajattelija marcus): Beethoven, Eroica II Marcia funebre (Czech National SO /
    * Musopen 2012, CC0) 75.48 s:sta, forte 84.88 s osuu ruutuun 282 (Rembrandt + nimi);
    * luennat a 20 s ja b 32 s; vaimennus ×0,22 17,5 s:sta.
    */
   aani: { puhe: 'ajattelijat/marcus/v1/kierros1-puhe.mp3', musiikki: 'ajattelijat/marcus/v1/kierros1-musiikki.mp3' },
-  syke: null,
+  syke: 'ajattelijat/marcus/v1/syke-musiikki.json',   // sokrates_syke.py Marcuksen musiikkiraidasta
 });
