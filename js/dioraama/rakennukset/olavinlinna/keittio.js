@@ -42,10 +42,12 @@ const KEITTIO_HAHMOT = [
     reaktio: { id: 'pulu-apulainen-r1', teksti: 'Säkki painaa, leipä palkitsee. Minä lupaan hoitaa murut.', aani: 'pulu-apulainen-r1' },
   },
   {
-    id: 'vesipoika', henkilo: 'vesipoika-1500', paikka: [18.75, 0, 9.0], suunta: 304, peilattu: false,
+    id: 'vesipoika', henkilo: 'vesipoika-1500', paikka: [18.6, 0, 7.8], suunta: 304, peilattu: false,
     silmukka: 'kavely', heraa: 2,
-    // 2.10. (skinnatut hahmot): kiertää pöydän ja luudan; pysähtyy ≥ 1 m:n päähän kokista (erä 1b) (ennen suoraan pöydän läpi; tests/dioraama-reitit.test.mjs)
-    reitti: { pisteet: [[18.75, 0, 9.0], [17.77, 0, 5.8], [14.0, 0, 5.55], [17.77, 0, 5.8], [18.75, 0, 9.0]], nopeus: 1.0, tauko: 1.5 },
+    // 2.10. (skinnatut hahmot): kiertää pöydän ja luudan; pysähtyy ≥ 1 m:n päähän kokista ja tulisijan
+    // liekistä, ≥ 0,35 m pöydän, säkkien ja tulisijan reunoista (erä 1b, reittitesti);
+    // pää siirretty pöydän ja säkkien välistä (0,7 m:n rako) pöydän kaakkoiskulmalle (ennen suoraan pöydän läpi; tests/dioraama-reitit.test.mjs)
+    reitti: { pisteet: [[18.6, 0, 7.8], [17.6, 0, 6.0], [14.4, 0, 5.95], [17.6, 0, 6.0], [18.6, 0, 7.8]], nopeus: 1.0, tauko: 1.5 },
     repliikit: [
       { id: 'vesipoika-1', teksti: 'Järvestä tänne ja takaisin, jalat tuntevat jo polun ulkoa.', aani: 'vesipoika-1' },
       { id: 'vesipoika-2', teksti: 'Yksi sanko kokille, toinen padalle — kolmannen taidan juoda itse.', aani: 'vesipoika-2' },
