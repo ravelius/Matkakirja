@@ -69,7 +69,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde b2badff8ac52 */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde cca43639f785 */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -176,6 +176,9 @@ body.paivittyy .app { visibility: hidden; }
   --tk-nappi-laukaisin: 64px;
   --tk-nappi-ohjaus: 40px;
   --tk-nappi-ohjaus-kuvake: 22px;
+  --tk-nappi-ohjaus-iso: 56px;
+  --tk-galleria-sarake: 92px;
+  --tk-galleria-vali: 10px;
   --tk-leveys-kapea: 600px;
   --tk-leveys-levea: 940px;
   --tk-leveys-kortti: 420px;
