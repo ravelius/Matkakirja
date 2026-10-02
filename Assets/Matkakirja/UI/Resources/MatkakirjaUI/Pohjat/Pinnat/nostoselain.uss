@@ -88,10 +88,6 @@
     width: 26px;
 }
 
-.mk-nostoselain--kapea .mk-nostoselain__avaaja {
-    padding: 0;
-}
-
 .mk-nostoselain__avaajaikoni {
     width: 16px;
     height: 16px;
