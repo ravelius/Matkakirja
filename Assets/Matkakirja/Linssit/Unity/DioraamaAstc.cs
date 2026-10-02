@@ -18,8 +18,32 @@ namespace Matkakirja.Natiivi
         /// <param name="lineaarinen">Normaalikartat (ei sRGB-muunnosta).</param>
         public static Texture2D Lue(byte[] t, string nimi, out string syy, TextureWrapMode kaari = TextureWrapMode.Clamp, int ohita = 0, bool lineaarinen = false)
         {
+            if (t == null) { syy = "otsake"; return null; }
+            return Luo(t, t.Length, nimi, out syy, kaari, ohita, lineaarinen, (kuva, siirto, tavuja) =>
+            {
+                // Suoraan ladatusta puskurista otsakkeen jälkeen (8k-atlas 89 Mt: erillinen kopio tuplasi huippumuistin).
+                var kahva = System.Runtime.InteropServices.GCHandle.Alloc(t, System.Runtime.InteropServices.GCHandleType.Pinned);
+                try { kuva.LoadRawTextureData(kahva.AddrOfPinnedObject() + (int)siirto, tavuja); }
+                finally { kahva.Free(); }
+            });
+        }
+
+        /// <summary>Linnan piikit (iPad 2.10.): sama natiivimuistista (DioraamaLevyvalimuisti.HaeNatiivi), ei hallittua
+        /// 89 Mt:n taulukkoa → ei roskienkeruun kasvua kesken latauksen. Kutsuja vapauttaa t:n.</summary>
+        public static Texture2D Lue(Unity.Collections.NativeArray<byte> t, string nimi, out string syy, TextureWrapMode kaari = TextureWrapMode.Clamp, int ohita = 0, bool lineaarinen = false)
+        {
+            if (!t.IsCreated || t.Length < 32) { syy = "otsake"; return null; }
+            var otsake = new byte[16];
+            Unity.Collections.NativeArray<byte>.Copy(t, otsake, 16);
+            return Luo(otsake, t.Length, nimi, out syy, kaari, ohita, lineaarinen,
+                (kuva, siirto, tavuja) => kuva.LoadRawTextureData(t.GetSubArray((int)siirto, tavuja)));
+        }
+
+        static Texture2D Luo(byte[] t, long pituus, string nimi, out string syy, TextureWrapMode kaari, int ohita, bool lineaarinen,
+            Action<Texture2D, long, int> lataa)
+        {
             syy = null;
-            if (t == null || t.Length < 32 || t[0] != 0x13 || t[1] != 0xab || t[2] != 0xa1 || t[3] != 0x5c) { syy = "otsake"; return null; }
+            if (pituus < 32 || t[0] != 0x13 || t[1] != 0xab || t[2] != 0xa1 || t[3] != 0x5c) { syy = "otsake"; return null; }
             int bx = t[4], by = t[5];
             int w = t[7] | t[8] << 8 | t[9] << 16, h = t[10] | t[11] << 8 | t[12] << 16;
             TextureFormat muoto;
@@ -35,7 +59,7 @@ namespace Matkakirja.Natiivi
                 tavuja += (long)((x + bx - 1) / bx) * ((y + by - 1) / by) * 16; tasoja++;
                 if (x == 1 && y == 1) break;
             }
-            if (t.Length - 16 != tavuja) { syy = $"koko {t.Length - 16} ≠ {tavuja}"; return null; }
+            if (pituus - 16 != tavuja) { syy = $"koko {pituus - 16} ≠ {tavuja}"; return null; }
             long siirto = 0;
             for (ohita = Math.Min(ohita, tasoja - 1); ohita > 0 && w > 1024; ohita--)
             {
@@ -45,10 +69,7 @@ namespace Matkakirja.Natiivi
             }
             var kuva = new Texture2D(w, h, muoto, tasoja, lineaarinen)
             { name = nimi, filterMode = FilterMode.Trilinear, wrapMode = kaari, anisoLevel = 4 };
-            // Suoraan ladatusta puskurista otsakkeen jälkeen (8k-atlas 89 Mt: erillinen kopio tuplasi huippumuistin).
-            var kahva = System.Runtime.InteropServices.GCHandle.Alloc(t, System.Runtime.InteropServices.GCHandleType.Pinned);
-            try { kuva.LoadRawTextureData(kahva.AddrOfPinnedObject() + 16 + (int)siirto, (int)tavuja); }
-            finally { kahva.Free(); }
+            lataa(kuva, 16 + siirto, (int)tavuja);
             kuva.Apply(false, true);
             return kuva;
         }

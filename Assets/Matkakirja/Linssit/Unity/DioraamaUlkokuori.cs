@@ -156,17 +156,19 @@ namespace Matkakirja.Natiivi
                 string astc = AstcPolku(taso);
                 if (!string.IsNullOrEmpty(astc))
                 {
-                    byte[] astcTavut = null;
-                    yield return DioraamaLevyvalimuisti.Hae(url(astc), 300, t => astcTavut = t); // 8k-atlas 89 Mt
-                    if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
+                    var astcTavut = default(Unity.Collections.NativeArray<byte>); // natiivimuistiin (linnan piikit 2.10.)
+                    yield return DioraamaLevyvalimuisti.HaeNatiivi(url(astc), 300, t => astcTavut = t); // 8k-atlas 89 Mt
+                    if (oma != kerta) { if (astcTavut.IsCreated) astcTavut.Dispose(); UnityEngine.Object.Destroy(mesh); yield break; }
                     // Puhelimessa huipputason 8k-atlas 4k:na (ylin mip ohitetaan; iPad ja Mac 8k), kuten maaston orto.
                     bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
                     r0 = DioraamaRuutu.Alku();
-                    kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out string syy, TextureWrapMode.Clamp, puhelin && taso == Laatu.Huippu ? 1 : 0);
+                    string syy; bool ladattiin = astcTavut.IsCreated;
+                    try { kuva = DioraamaAstc.Lue(astcTavut, "Ulkokuori:" + taso + ":astc", out syy, TextureWrapMode.Clamp, puhelin && taso == Laatu.Huippu ? 1 : 0); }
+                    finally { if (ladattiin) astcTavut.Dispose(); }
                     DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} ASTC", r0);
                     DioraamaRuutu.Gpu(kirjaa, kuva);
                     if (kuva != null && tauot) yield return null;
-                    if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(astcTavut == null ? "ei latautunut" : syy)}), JPEG varalla");
+                    if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(!ladattiin ? "ei latautunut" : syy)}), JPEG varalla");
                 }
                 if (kuva == null && hamara && !string.IsNullOrEmpty(JpgHamara(taso)))
                 {

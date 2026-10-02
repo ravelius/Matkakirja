@@ -87,6 +87,49 @@ namespace Matkakirja.Natiivi
             valmis(tavut);
         }
 
+        /// <summary>Linnan piikit (iPad 2.10.): ASTC-mipketjut (8k-atlas 89 Mt) natiivimuistiin. Välimuistiosuma luetaan
+        /// taustasäikeessä suoraan NativeArrayhin (ei hallittua taulukkoa, roskienkeruun keko ei kasva kesken latauksen);
+        /// ensilataus kulkee Hae:n kautta ja kopioidaan kerran. default = epäonnistui. Kutsuja vapauttaa (Dispose).</summary>
+        public static IEnumerator HaeNatiivi(string url, int aikakatkaisu, Action<Unity.Collections.NativeArray<byte>> valmis)
+        {
+            string paikka = Paikka(url);
+            if (paikka != null && File.Exists(paikka))
+            {
+                var data = default(Unity.Collections.NativeArray<byte>);
+                try
+                {
+                    long pituus = new FileInfo(paikka).Length;
+                    if (pituus > 0 && pituus < int.MaxValue)
+                        data = new Unity.Collections.NativeArray<byte>((int)pituus, Unity.Collections.Allocator.Persistent,
+                            Unity.Collections.NativeArrayOptions.UninitializedMemory);
+                }
+                catch (IOException) { }
+                if (data.IsCreated)
+                {
+                    bool ok = false;
+                    var kohde = data;
+                    var luku = Task.Run(() =>
+                    {
+                        try
+                        {
+                            using var f = new FileStream(paikka, FileMode.Open, FileAccess.Read, FileShare.Read, 1 << 20);
+                            var s = kohde.AsSpan();
+                            int o = 0;
+                            while (o < s.Length) { int r = f.Read(s.Slice(o)); if (r <= 0) break; o += r; }
+                            ok = o == s.Length;
+                        }
+                        catch (Exception) { ok = false; }
+                    });
+                    while (!luku.IsCompleted) yield return null;
+                    if (ok) { Osumia++; valmis(data); yield break; }
+                    data.Dispose();
+                }
+            }
+            byte[] tavut = null;
+            yield return Hae(url, aikakatkaisu, t => tavut = t);
+            valmis(tavut == null ? default : new Unity.Collections.NativeArray<byte>(tavut, Unity.Collections.Allocator.Persistent));
+        }
+
         static void Siivoa(string rakennusKansio, string pidettava)
         {
             try

@@ -364,11 +364,13 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(polku)) { tulos(null); yield break; }
             // Tukematon laite (simulaattori): ei turhaa latausta, suoraan png/jpg.
             if (!SystemInfo.SupportsTextureFormat(TextureFormat.ASTC_4x4)) { tulos(null); yield break; }
-            byte[] tavut = null;
-            yield return DioraamaLevyvalimuisti.Hae(url(polku), 120, b => tavut = b);
-            if (tavut == null) { kirjaa?.Invoke($"poikki: ympäristö: {nimi} ASTC ei latautunut, png/jpg varalla"); tulos(null); yield break; }
+            var tavut = default(Unity.Collections.NativeArray<byte>);
+            yield return DioraamaLevyvalimuisti.HaeNatiivi(url(polku), 120, b => tavut = b);
+            if (!tavut.IsCreated) { kirjaa?.Invoke($"poikki: ympäristö: {nimi} ASTC ei latautunut, png/jpg varalla"); tulos(null); yield break; }
             float r0 = DioraamaRuutu.Alku();
-            var k = DioraamaAstc.Lue(tavut, nimi + ":astc", out string syy, kaari, 0, lineaarinen);
+            Texture2D k; string syy;
+            try { k = DioraamaAstc.Lue(tavut, nimi + ":astc", out syy, kaari, 0, lineaarinen); }
+            finally { tavut.Dispose(); }
             DioraamaRuutu.Kirjaa(kirjaa, nimi + " ASTC", r0);
             if (k == null) { kirjaa?.Invoke($"poikki: ympäristö: {nimi} ASTC ei käytössä ({syy}), png/jpg varalla"); tulos(null); yield break; }
             luodut?.Add(k);
