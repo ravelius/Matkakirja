@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2556, teksti: 'EI OVAALEJA: pillerit kulma-tokeneiksi (#3856)' },
   { v: 2555, teksti: 'Ajattelijat: taustavirta 20 riviä + OFL-kreikka… (#3857)' },
   { v: 2554, teksti: 'NOSTOKORTTI: puuttuva kuva poistaa kuvapaikan (#3847)' },
   { v: 2553, teksti: 'Ajattelijoiden päät kartalla: ERIKOISNOSTOT kar… (#3843)' },
