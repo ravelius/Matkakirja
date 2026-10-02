@@ -58,23 +58,29 @@
     color: var(--tk-lasi-muste-pehmea);
 }
 
-.mk-minikartta {
-    position: absolute;
+/* Pienoiskartan ohjausryhmä vasempaan yläkulmaan (yläreuna ☰:n tasolla); kehys on .mk-ohjausnappi--iso. */
+.mk-ohjausryhma.mk-minikartta-ryhma {
+    right: auto;
     left: var(--tk-vali-s);
-    top: var(--tk-vali-s);
-    width: 120px;
-    height: 58px;
+}
+
+.mk-minikartta-ryhma > .mk-ohjausnappi {
+    margin: 0;
+}
+
+.mk-minikartta {
+    width: 100%;
     -unity-background-scale-mode: scale-to-fit;
 }
 
 .mk-minikartta__piste {
     position: absolute;
-    width: 8px;
-    height: 8px;
-    margin-left: -4px;
-    margin-top: -4px;
+    width: 7px;
+    height: 7px;
+    margin-left: -3.5px;
+    margin-top: -3.5px;
     border-width: 1.5px;
-    border-radius: 4px;
+    border-radius: 3.5px;
     border-color: var(--tk-pinta);
     background-color: var(--tk-korostus);
 }

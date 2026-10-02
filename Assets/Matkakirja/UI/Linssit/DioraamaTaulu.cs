@@ -23,7 +23,7 @@ namespace Matkakirja.Natiivi
         static readonly Color Teksti = new Color(0.2039f, 0.1569f, 0.1137f);
 
         readonly VisualElement juuri, lauta, nakyma, lappuKerros;
-        readonly Label otsikko, teksti, lainaus, lahde, laskuri, seuraava;
+        readonly Label otsikko, teksti, lainaus, lahde, laskuri, seuraava, puhuja;
         readonly LiviaKuva pulu;
         readonly List<Label> laput = new List<Label>();
         readonly List<(Label Lappu, Rect Rect)> sijoitukset = new List<(Label, Rect)>();
@@ -90,7 +90,12 @@ namespace Matkakirja.Natiivi
             // Läpinäkyvyys + 8 pt liuku, alle 250 ms (speksin animaatiovaatimus).
             lauta.style.transitionProperty = new List<StylePropertyName> { new StylePropertyName("opacity"), new StylePropertyName("translate") };
             lauta.style.transitionDuration = new List<TimeValue> { new TimeValue(AnimaatioMs, TimeUnit.Millisecond) };
-            lauta.RegisterCallback<PointerDownEvent>(_ => DioraamaSovitin.Linssi?.Napauta(DioraamaSovitin.ViimeisinT));
+            // Kuunnelman aikana kortin napautus ohittaa rivin (ennen nimipalkin napautus), muuten dioraaman napautus.
+            lauta.RegisterCallback<PointerDownEvent>(_ =>
+            {
+                if (kuunnelma != null && kuunnelma.OhitaRivi()) return;
+                DioraamaSovitin.Linssi?.Napauta(DioraamaSovitin.ViimeisinT);
+            });
 
             // Laskuri omalle rivilleen otsikon yläpuolelle: rivissä rinnakkain rivittyvä otsikko mitattiin yhden rivin
             // korkuiseksi ja sen toinen rivi peitti tekstin (savuke 29.9.).
@@ -98,6 +103,11 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(laskuri, Kirjasin.Kone);
             laskuri.style.color = new Color(Teksti.r, Teksti.g, Teksti.b, 0.65f);
             laskuri.style.fontSize = 11;
+
+            // Puhujan nimi KORTTI-pohjan kapiteelina otsikon yläpuolella (omistaja 2.10. 17.4x, loki d6b00328f: nimipalkki pois).
+            puhuja = Rakenne.Teksti("", "mk-kortti__kapiteeli mk-dioraama__puhuja", lauta);
+            Kirjasimet.Aseta(puhuja, Kirjasin.Kone);
+            puhuja.style.display = DisplayStyle.None;
 
             otsikko = Rakenne.Teksti("", "mk-dioraama__otsikko", lauta);
             Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
@@ -257,8 +267,7 @@ namespace Matkakirja.Natiivi
                 etsintaLoppuu = Time.unscaledTime + 7f;
             };
 
-            // Tekstityskaistale viimeisenä: laudan ja Pulun päällä piirtojärjestyksessä (sijoitus ei kuitenkaan peitä niitä).
-            kuunnelma = new KuunnelmaKaistale(juuri);
+            kuunnelma = new KuunnelmaKaistale();
             Viimeisin = this;
 
             DioraamaSovitin.PeittaaRuutu = OsuukoPaneeliin;
@@ -315,7 +324,7 @@ namespace Matkakirja.Natiivi
                 && etsintaKortti.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(etsintaKortti.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
                 return true;
             // ‹-nappi ei saa välittää napautusta dioraamalle (muuten sama napautus voisi kohdistaa tilan uudelleen).
-            foreach (var el in new VisualElement[] { paluuNappi, uusintaNappi, puluAlue, kuunnelma?.Juuri, kuunteleNappi })
+            foreach (var el in new VisualElement[] { paluuNappi, uusintaNappi, puluAlue, kuunteleNappi })
                 if (el != null && el.resolvedStyle.display != DisplayStyle.None && el.panel != null
                     && el.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(el.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
                     return true;
@@ -474,6 +483,7 @@ namespace Matkakirja.Natiivi
             if (!auki) return;
 
             otsikko.text = taulu.Otsikko ?? "";
+            puhuja.style.display = DisplayStyle.None;
             bool luonnos = taulu.Tila == "luonnos";
             if (nakyma.Kohta < 0)
             {
@@ -542,28 +552,34 @@ namespace Matkakirja.Natiivi
             // Lähderivi pois paikkakortista (omistaja 2.10. 14.44): lähteet valikon Lähteet-näkymässä.
             lahde.text = "";
             lahde.style.display = DisplayStyle.None;
-            // Etsinnän vihje riviksi (korostettuna kursiivilla); muuten hahmon repliikki kuten ennen.
+            puluKupla = tila.PuluTeksti; puluAani = tila.PuluAani;
+            bool puluNakyy = !string.IsNullOrEmpty(puluKupla);
+
+            // Kuunnelma alkaa, kun tilaan on tultu perille (kierroksen aikana tänne ei tulla).
+            bool kuunneltava = tila.Kuunnelma != null && tila.Kuunnelma.Count > 0;
+            if (kuunneltava && kuunnelma.TilaId != tila.Id) { kuunnelmaTila = tila; kuunnelma.Aloita(tila); }
+            else if (!kuunneltava) LopetaKuunnelma();
+            kuunnelma.Paivita();
+
+            // Puhuja kortin kapiteelina otsikon yläpuolella ja repliikki samaan korttiin vain, jos sitä ei puhuta ääneen
+            // (omistaja 2.10. 17.4x, loki d6b00328f; 14.09: ääneen puhuttu ei tekstinä). Kuunnelman rivi ensin, sitten
+            // hahmon repliikki. Pulun vanhat käsikirjoitusrivit eivät kuulu infotauluun (Pulu kertoo lisää kuplassa).
+            string nimi = null, repliikki = null;
+            if (kuunnelma.Nimi != null) { nimi = kuunnelma.Nimi; repliikki = kuunnelma.Teksti; }
+            else if (!string.IsNullOrEmpty(nakyma.Repliikki) && nakyma.Puhuja != null && nakyma.Puhuja != "pulu")
+            {
+                nimi = PuhujanNimi(DioraamaSovitin.Linssi.Rakennus, nakyma).ToUpperInvariant();
+                if (!DioraamaAanet.Puhutaan(nakyma.AskeleenAani)) repliikki = nakyma.Repliikki;
+            }
+            puhuja.text = nimi ?? "";
+            puhuja.style.display = string.IsNullOrEmpty(nimi) ? DisplayStyle.None : DisplayStyle.Flex;
+            // Etsinnän vihje riviksi (korostettuna kursiivilla) repliikin sijaan.
             string vihje = DioraamaEtsinta.AktiivinenRivi;
-            // Pulun vanhat käsikirjoitusrivit eivät kuulu infotauluun (Pulu kertoo lisää kuplassa napautuksesta); vain
-            // hahmon repliikki (1.1 (74) -kuva: "Pulu: …" toisti tekstiä taulussa).
-            string puhe = !string.IsNullOrEmpty(vihje) ? vihje
-                : !string.IsNullOrEmpty(nakyma.Repliikki) && nakyma.Puhuja != null && nakyma.Puhuja != "pulu"
-                  && !DioraamaAanet.Puhutaan(nakyma.AskeleenAani) // omistaja 14.09: ääneen puhuttu ei kuplana
-                    ? PuhujanNimi(DioraamaSovitin.Linssi.Rakennus, nakyma) + ": ”" + nakyma.Repliikki + "”" : null;
+            string puhe = !string.IsNullOrEmpty(vihje) ? vihje : repliikki != null ? "”" + repliikki + "”" : null;
             lainaus.text = puhe ?? "";
             lainaus.style.display = puhe != null ? DisplayStyle.Flex : DisplayStyle.None;
             seuraava.style.display = DisplayStyle.None;
 
-            puluKupla = tila.PuluTeksti; puluAani = tila.PuluAani;
-            bool puluNakyy = !string.IsNullOrEmpty(puluKupla);
-
-            // Kuunnelma alkaa, kun tilaan on tultu perille (kierroksen aikana tänne ei tulla); kaistale laudan yläpuolelle
-            // Pulun oikealle puolelle (Pulu 64 pt laudan vasemmassa yläkulmassa, x + 6 … x + 59).
-            bool kuunneltava = tila.Kuunnelma != null && tila.Kuunnelma.Count > 0;
-            if (kuunneltava && kuunnelma.TilaId != tila.Id) { kuunnelmaTila = tila; kuunnelma.Aloita(tila); }
-            else if (!kuunneltava) LopetaKuunnelma();
-            float kuunnelmaVasen = puluNakyy ? x + 70f : x;
-            kuunnelma.Paivita(kuunnelmaVasen, Mathf.Max(160f, x + tauluLeveys - kuunnelmaVasen), y - 8f);
             bool kuuntele = kuunneltava && !kuunnelma.Kaynnissa;
             kuunteleNappi.style.display = kuuntele ? DisplayStyle.Flex : DisplayStyle.None;
             if (kuuntele)
@@ -578,7 +594,8 @@ namespace Matkakirja.Natiivi
             const float koko = 64f;
             float puluLeveys = koko * (58f / 70f);
             pulu.MiniKorkeus(koko);
-            float px = x + 6f, py = y - koko + 12f; // istuu taulun yläreunalla vasemmassa kulmassa
+            // Istuu kortin vasemmalla yläkulmalla (omistaja 17.4x): jalat kehyksen 8 pt:n renkaassa, ei tekstin päällä.
+            float px = x + 2f, py = y - koko + 6f;
             pulu.style.left = px; pulu.style.top = py;
             puluAlue.style.left = px - 6f; puluAlue.style.top = py - 6f;
             puluAlue.style.width = puluLeveys + 12f; puluAlue.style.height = koko + 12f;

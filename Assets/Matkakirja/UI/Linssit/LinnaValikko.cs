@@ -5,8 +5,9 @@
 //   nappi    OHJAUSNAPPI (Ohjausnappi.Nappi, Ikonit.Valikko, harmaa 3D:n päällä) ohjausryhmässä turva-alueen sisällä
 //   lista    LINSSIN VALIKKO -pohja (.mk-linssivalikko--pohja, LASI): Huoneet › · Esittely uudelleen · Äänet › · Lähteet ·
 //            ─ · Sulje linna. Huoneet ja Äänet (ja Lähteet) vaihtavat saman listan alanäkymäksi, jonka ylin rivi ‹ palaa.
-//   kartta   Linnanrakentajan kuva (_valmiit/olavinlinna-minikartta/v1 → Resources/Minikartta), 120 × 58 pt, nykyinen huone
-//            8 pt:n pisteenä (--tk-korostus, reunus 1,5 pt --tk-pinta, ei hehkua). Koko kartta on yksi osuma: Huoneet-alanäkymä.
+//   kartta   Linnanrakentajan kuva (_valmiit/olavinlinna-minikartta/v1 → Resources/Minikartta) OHJAUSNAPPI-kehyksessä
+//            (.mk-ohjausnappi--iso 56 pt, omistaja 17.4x) vasemmassa yläkulmassa ☰:n tasolla; nykyinen huone "olet tässä"
+//            -pisteenä (--tk-korostus, reunus --tk-pinta, ei hehkua). Koko kehys on yksi osuma: Huoneet-alanäkymä.
 //
 // Ruudulta pois: ‹ (paluu), ↻ (uusinta), mikserin säätönappi ja linssin ✕ (DioraamaTaulu, MikseriPaneeli.LappuPiilossa,
 // LinssiUi.PaivitaSulku). Kuuntele ja Pulu jäävät. Lähteet kootaan tilojen infotauluista ja taulun kohdista (paikkakortin
@@ -27,8 +28,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Kaikki linnan ohjaimet (ryhmä ja pienoiskartta); kutsuja näyttää ja piilottaa linnan mukana.</summary>
         public readonly VisualElement Juuri;
-        readonly VisualElement ryhma, valikko, kartta, piste;
-        readonly Button nappi;
+        readonly VisualElement ryhma, karttaRyhma, valikko, karttaKuva, piste;
+        readonly Button nappi, kartta;
         Nakyma nakyma;
         public bool Auki { get; private set; }
 
@@ -45,14 +46,22 @@ namespace Matkakirja.Natiivi
             ryhma = Ohjausnappi.Ryhma(Juuri);
             nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
 
-            // Pienoiskartta ‹:n paikalle; tk-teema-lasi antaa pisteen --tk-korostus- ja --tk-pinta-arvot.
-            kartta = Rakenne.El("mk-minikartta tk-teema-lasi", Juuri, PickingMode.Position);
+            // Pienoiskartta ‹:n paikalle OHJAUSNAPPI-kehyksessä (.mk-ohjausnappi--iso 56 pt, omistaja 17.4x): oma ryhmä
+            // vasempaan yläkulmaan, yläreuna ☰:n tasolla. Kuva kehyksen sisällä kuvasuhteessaan, piste kuvan päällä.
+            karttaRyhma = Ohjausnappi.Ryhma(Juuri);
+            karttaRyhma.AddToClassList("mk-minikartta-ryhma");
+            kartta = Ohjausnappi.Nappi(null, "Huoneet", () => Avaa(Nakyma.Huoneet), karttaRyhma);
+            kartta.AddToClassList("mk-ohjausnappi--iso");
+            karttaKuva = Rakenne.El("mk-minikartta", kartta, PickingMode.Ignore);
             var kuva = Resources.Load<Texture2D>(MinikarttaKuva);
-            if (kuva != null) kartta.style.backgroundImage = new StyleBackground(kuva);
-            piste = Rakenne.El("mk-minikartta__piste", kartta, PickingMode.Ignore);
+            if (kuva != null)
+            {
+                karttaKuva.style.backgroundImage = new StyleBackground(kuva);
+                float suhde = (float)kuva.height / kuva.width;
+                kartta.RegisterCallback<GeometryChangedEvent>(_ => karttaKuva.style.height = kartta.contentRect.width * suhde);
+            }
+            piste = Rakenne.El("mk-minikartta__piste", karttaKuva, PickingMode.Ignore);
             piste.style.display = DisplayStyle.None;
-            kartta.RegisterCallback<PointerDownEvent>(e => { Avaa(Nakyma.Huoneet); e.StopPropagation(); });
-            kartta.tooltip = "Huoneet";
             LueKartta();
 
             // Lista kerroksen juureen (ei turvaan), paikka napista kuten LinssiValikko.
