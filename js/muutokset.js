@@ -13,6 +13,12 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2569, teksti: 'Kipsipäät: pisteet irti nimistä ja korteista, p… (#3874)' },
+  { v: 2568, teksti: 'Valikko V2: väliviivat pois paitsi alin, Untuvi… (#3875)' },
+  { v: 2567, teksti: 'Raha £N proosassa, konjakkipilleri, £-glyfi, Pu… (#3864)' },
+  { v: 2566, teksti: 'TestFlight-luvut: vain luku -ajo (#3873)' },
+  { v: 2565, teksti: 'Raha £N, pilleri \'1 pv · £400\', valikon päiväri… (#3862)' },
+  { v: 2564, teksti: 'Kipsipää karttaobjektiksi: kiinteä piste, lämmi… (#3866)' },
   { v: 2563, teksti: 'Puhe äänenä, ei kuplina: Pulun äänitetyt replii… (#3867)' },
   { v: 2562, teksti: 'Linssit-nappi kartalle, Julisteet valikosta (#3859)' },
   { v: 2561, teksti: 'Tyylikirja: GALLERIA-pohja ja £-merkin kirjasin (#3860)' },

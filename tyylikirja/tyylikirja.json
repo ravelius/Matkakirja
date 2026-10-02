@@ -116,10 +116,10 @@
     "punta": { "kirjasin": "Luku", "vali": 1, "_selite": "£-merkki aina Luku-kirjasimella (Iowan Old Style) ja 1 pt:n väli numeroon, myös Kone-teksteissä: American Typewriterin £ näytti koukulta ja '−£20' luettiin '−&20' (omistaja ja Päätoimittaja 2.10.2026). Web: @font-face 'Matkakirja Punta' src: local('Iowan Old Style Roman'), local('IowanOldStyle-Roman'), local('Iowan Old Style'), local('Charter Roman'), local('Charter-Roman'), local('Georgia'), local('Palatino Linotype'), local('Palatino-Roman'), local('Cambria'), local('Noto Serif'), local('NotoSerif-Regular'), local('DejaVu Serif'), local('Times New Roman') (local() vaatii kasvon koko nimen tai PostScript-nimen, Pelikoodari mittasi Chromiumilla; Iowan on Applen järjestelmäfontti eikä upotettavissa), unicode-range U+00A3, jokaisen fonttipinon alkuun. Natiivi: £ omana Luku-tekstinään (Ylapalkki.AsetaRahaTeksti; muut näytöt samalla apurilla)." },
     "_selite": "web = CSS-pino (sama kuin ennen), natiivi = Kirjasimet.cs:n ehdokkaat (perhe, tyyli) järjestyksessä.",
     "web": {
-      "font-type": "\"American Typewriter\", \"Courier Prime\", \"Courier New\", Courier, monospace",
-      "font-luku": "\"Iowan Old Style\", Charter, \"Palatino Linotype\", Palatino,\n    Georgia, \"Times New Roman\", serif",
-      "font-kauno": "\"Snell Roundhand\", \"Savoye LET\", \"Bradley Hand\",\n    \"Segoe Script\", \"Comic Sans MS\", cursive",
-      "font-atlas": "\"Liberation Serif\", \"Times New Roman\", Times, serif"
+      "font-type": "\"Matkakirja Punta\", \"American Typewriter\", \"Courier Prime\", \"Courier New\", Courier, monospace",
+      "font-luku": "\"Matkakirja Punta\", \"Iowan Old Style\", Charter, \"Palatino Linotype\", Palatino,\n    Georgia, \"Times New Roman\", serif",
+      "font-kauno": "\"Matkakirja Punta\", \"Snell Roundhand\", \"Savoye LET\", \"Bradley Hand\",\n    \"Segoe Script\", \"Comic Sans MS\", cursive",
+      "font-atlas": "\"Matkakirja Punta\", \"Liberation Serif\", \"Times New Roman\", Times, serif"
     },
     "natiivi": {
       "Kone": [["American Typewriter", "Regular"], ["Courier New", "Regular"], ["Courier", "Regular"]],
@@ -191,13 +191,13 @@
       "_selite": "kaikki kuvakenapit yhtenäisiksi neliöiksi ja yhteen ryhmään (omistaja 2.10.2026 klo 14.16; linnassa yksi hampurilaisvalikko klo 14.44; Päätoimittajan päätökset 15.1x). Malli taikalasinappi (#linssi-btn)."
     },
     "ERIKOISNOSTOT": {
-      "paikka": "sarake kartuutsin lipun alla kartuutsin rungon vieressä: x = max(lipun vasen reuna, kartuutsin oikea reuna + vali-s), ei kartuutsin rivien päällä; turva-alueen ja yläpalkin alapuolella; iPadilla sama sääntö kartuutsin tablettimitoilla",
+      "paikka": "karttaobjekti: jokaisella ajattelijalla kiinteä karttapiste (kartta.piste [lat, lng], maan alueella tai rannikon tuntumassa, ei kaupunki eikä nimien päällä); liikkuu kartan mukana, koko ruudulla vakio; ei väistä kartuutsia (avattu kortti saa peittää); Pulu väistää (pulu-vaistettava)",
       "osat": ["PÄÄ (ajattelijan 3D-pää, nappi-laukaisin 64, läpinäkyvä tausta kuten minipulu, ei kehystä; osuma ≥ 44)"],
       "vali": "vali-s",
-      "liike": "nenä kohti näkymän keskustaa ≤ 30°, kartan liike heiluttaa (sisältöanimaatio, ei UI-rajaa)",
-      "valo": "pallolaudan suuntavalo kameran koordinaateissa",
+      "liike": "nenä kohti näkymän keskustaa ≤ 30°, kartan liike heilauttaa hieman (jousi), pää ei liu'u",
+      "valo": "lämmin vaalea kipsi (valaistun puolen keskisävy ~210/202/185, ei sinistä ympäristövaloa); suunta kartan auringosta, korkeus 58°; pehmeä varjo paperille (peitto 0,26, VSM-säde 10)",
       "avaus": "napautus avaa ajattelijan (KUVANÄKYMÄ)",
-      "nakyvyys": "piiloon, kun kortti, lehti, paneeli tai linssi on auki (kuten minipulu); enintään 3 allekkain, ei vieritystä vaan karsinta tärkeysjärjestyksessä",
+      "nakyvyys": "piiloon, kun linssi, nosto, valikko, aikajana tai lento on auki; näkyy maakortin (maataulu) aikana; enintään 3",
       "nimi": "jokaisella osalla nimi (VoiceOver ja pitkä painallus), ei näkyvää tekstiä",
       "teemat": [],
       "_selite": "omistaja 2.10.2026 klo 12.34 (vaihtoehto B): ajattelijoiden päät kartalla, myöhemmin muut erikoisnostot allekkain; Natiivi-UI:n tarkennukset 2.10."

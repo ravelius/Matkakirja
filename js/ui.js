@@ -11154,28 +11154,15 @@ export class UI {
     this.turnPill.hidden = piilossa;
     if (piilossa) return;
     this.turnPill.textContent = '';
-    // Laukun kahva pillerin edessä: pilleri on samalla matkalaukun nappi,
-    // ja ilman kuvaketta mikään ei kertoisi sen aukeavan (omistajan toive).
-    //
-    // Isoisän mattolaukku (omistaja 15.9.2026, Raamattu "MATKALAUKKU ON
-    // FOGGIN MATTOLAUKKU"): pyöreähkö kangaslaukku, nahkakahva ja
-    // messinkilukko/kehys ylhäällä, kuvioitu kangas viitteellisesti
-    // siksak-rivinä. Bounding box (x4-20, y4.6-19.5) on tarkoituksella
-    // sama kuin vanhassa laukkukuvakkeessa.
-    const laukku = html('span', 'laukku-ikoni');
-    laukku.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">'
-      + '<rect x="4" y="8" width="16" height="11.5" rx="4"/>'
-      + '<path d="M9.3 8V6.3a1.7 1.7 0 0 1 1.7-1.7h2a1.7 1.7 0 0 1 1.7 1.7V8"/>'
-      + '<path d="M6.6 9.6h10.8"/><circle cx="12" cy="9.6" r="0.85"/>'
-      + '<path d="M7 13.6 10.3 16.4 13.7 13.6 17 16.4"/></svg>';
-    this.turnPill.appendChild(laukku);
+    // Pilleri on pelkkä teksti "1 pv £400" ilman laukkukuvaketta (omistaja 2.10.2026 klo 17.0x): se kapenee
+    // tekstin mittaiseksi. (Ennen: isoisän mattolaukun kuvake pillerin edessä, omistaja 15.9.2026.)
     if (game.phase === 'over') {
       this.turnPill.appendChild(html('span', '', game.winner ? `${game.winner.name} voitti` : 'Matka päättyi'));
       return;
     }
     // Yläpalkissa on kukkaro ja päiväkirjan päivämäärä. Sijainti, kokemus ja
     // tietoprosentti ovat passissa: kartta on tärkeämpi kuin mittaristo.
-    const kassa = html('span', 'kassa', `${game.player.money}\u00a0£`);
+    const kassa = html('span', 'kassa', `£${game.player.money}`);
     /*
      * PÄIVÄKULU JA RAHATTOMUUS (talouden vaihe 1, omistaja 27.9.2026):
      * kassan vihje kertoo päiväkulun ja arvion; rahat lopussa kassa on
@@ -11184,12 +11171,12 @@ export class UI {
     const kulu = game.paivakulu?.(game.player);
     if (kulu) {
       const riittaa = game.kassaRiittaa(game.player);
-      kassa.title = `Päiväkulu ${kulu.yhteensa}\u00a0£ (ruoka ${kulu.ruoka}\u00a0£${kulu.majoitus ? `, majoitus ${kulu.majoitus}\u00a0£` : ''})`
+      kassa.title = `Päiväkulu £${kulu.yhteensa} (ruoka £${kulu.ruoka}£${kulu.majoitus ? `, majoitus ${kulu.majoitus}` : ''})`
         + (Number.isFinite(riittaa) ? ` — kassa riittää noin ${riittaa} päiväksi` : '');
     }
     const jaljella = game.rahattomuuttaJaljella?.(game.player);
     kassa.classList.toggle('rahaton', jaljella !== null && jaljella !== undefined);
-    // Pilleri on vain päivä ja raha, "1 pv · 400 £" (omistaja 2.10.2026 klo 15.1x ja 15.40); kellonaika ja
+    // Pilleri on vain päivä ja raha, "1 pv £400" (omistaja 2.10.2026 klo 15.1x, 15.50 ja 18.1x); kellonaika ja
     // päiväkulu ovat valikon päivärivillä (renderValikkoTaso).
     const paiva = html('span', 'clock', `${game.dayCount()}\u00a0pv`);
     paiva.title = game.clockLabel();
@@ -11270,7 +11257,7 @@ export class UI {
 
     const city = this.factCity(p.pos);
     rivi('Sijainti', p.pos.type === 'edge' ? `matkalla — ${city.name}` : city.name);
-    rivi('Kukkaro', `${p.money}\u00a0£`);
+    rivi('Kukkaro', `£${p.money}`);
 
     /*
      * TIETÄJÄRIVI: nimike on rivin selite ja oikeassa reunassa vain
@@ -11385,17 +11372,17 @@ export class UI {
       if (nimi) nimi.textContent = teksti;
     };
     nimea('pilleri-matka-btn', `${taso.nimi} (${pisteet} tp)`);
-    // Päivärivi tasorivin alle: "Päivä 1/80, aamu · 400 £" ja lopussa punaisena päivän kulut (omistaja 15.1x, 15.40).
+    // Päivärivi tasorivin alle: "Päivä 1/80, aamu · £400" ja lopussa punaisena päivän kulut "−£20" (omistaja 15.1x, 15.50).
     const paivarivi = document.getElementById('valikko-paivarivi');
     if (paivarivi) {
       const kulu = game.paivakulu?.(p);
       paivarivi.replaceChildren(
         html('span', 'valikko-paivarivi-teksti',
-          `Päivä ${game.dayCount()}/${RECORD_DAYS}, ${game.timeOfDay()} · ${p.money}\u00a0£`),
-        ...(kulu?.yhteensa ? [html('span', 'valikko-paivarivi-kulu', `\u2212${kulu.yhteensa}\u00a0£`)] : []),
+          `Päivä ${game.dayCount()}/${RECORD_DAYS}, ${game.timeOfDay()} · £${p.money}`),
+        ...(kulu?.yhteensa ? [html('span', 'valikko-paivarivi-kulu', `\u2212£${kulu.yhteensa}`)] : []),
       );
       if (kulu) {
-        paivarivi.title = `Päivän kulut: ruoka ${kulu.ruoka}\u00a0£${kulu.majoitus ? `, majoitus ${kulu.majoitus}\u00a0£` : ''}`;
+        paivarivi.title = `Päivän kulut: ruoka £${kulu.ruoka}£${kulu.majoitus ? `, majoitus ${kulu.majoitus}` : ''}`;
       }
     }
     const riviAvatar = document.querySelector('#pilleri-matka-btn .valikko-tasorivi-avatar');
@@ -11907,7 +11894,7 @@ export class UI {
     const maata = game.board.adj.get(city.id)
       ?.some((id) => game.board.edgeById.get(id)?.type === 'land');
     if (!maata) return 'täältä ei lähde maareittiä';
-    if (game.player.money < BUS_FARE) return `bussilippu maksaa ${BUS_FARE} puntaa`;
+    if (game.player.money < BUS_FARE) return `bussilippu maksaa £${BUS_FARE}`;
     return 'täältä ei lähde bussia';
   }
 
@@ -11919,7 +11906,7 @@ export class UI {
     const satama = game.board.adj.get(city.id)
       ?.some((id) => game.board.edgeById.get(id)?.type === 'sea');
     if (!satama) return 'täältä ei lähde laivareittiä';
-    return `laivalippu maksaa ${SEA_FARE} puntaa`;
+    return `laivalippu maksaa £${SEA_FARE}`;
   }
 
   lentoEste() {
@@ -11930,7 +11917,7 @@ export class UI {
     // Portit poistuivat erillislautojen mukana: lentokenttä on ainoa
     // lennon lähtöpaikka (mannerlento hoituu omassa listassaan).
     if (!city.airport) return 'täällä ei ole lentokenttää';
-    if (game.player.money < FLIGHT_PRICE) return `lentolippu maksaa ${FLIGHT_PRICE} puntaa`;
+    if (game.player.money < FLIGHT_PRICE) return `lentolippu maksaa £${FLIGHT_PRICE}`;
     return 'täältä ei lähde lentoja';
   }
 
@@ -15634,7 +15621,7 @@ export class UI {
           ? 'kulttuuri-tulos oikein-tulos'
           : 'kulttuuri-tulos vaarin-tulos';
         this.arrivalKulttuuriTulos.textContent = (oikein
-          ? `Oikein! +${KULTTUURI_PALKKIO} puntaa. `
+          ? `Oikein! +£${KULTTUURI_PALKKIO}. `
           : `Oikea vastaus: ${kysymys.options[kysymys.correct]}. `) + (kysymys.fact ?? '');
         // Palaute vieritetään näkyviin — kysymys elää dialogin alalaidassa.
         this.arrivalKulttuuriTulos.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
@@ -15646,7 +15633,7 @@ export class UI {
           const box = this.buildToast({
             kind: 'stamp',
             icon: 'kukkaro',
-            text: `+${KULTTUURI_PALKKIO} puntaa`,
+            text: `+£${KULTTUURI_PALKKIO}`,
             sub: 'Tunsit paikallista kulttuuria',
           });
           setTimeout(() => this.removeToast(box), TOAST_MS.default);
@@ -16360,7 +16347,7 @@ export class UI {
           ? 'kulttuuri-tulos oikein-tulos'
           : 'kulttuuri-tulos vaarin-tulos';
         tulos.textContent = (oikein
-          ? `Oikein! +${MINITEHTAVA_PALKKIO} puntaa. `
+          ? `Oikein! +£${MINITEHTAVA_PALKKIO}. `
           : `Oikea vastaus: ${tehtava.vaihtoehdot[tehtava.oikea]}. `)
           + (tehtava.fakta ?? '');
         sfx.play(oikein ? 'correct' : 'wrong');
@@ -16371,7 +16358,7 @@ export class UI {
           const box = this.buildToast({
             kind: 'stamp',
             icon: 'kukkaro',
-            text: `+${MINITEHTAVA_PALKKIO} puntaa`,
+            text: `+£${MINITEHTAVA_PALKKIO}`,
             sub: 'Lehden minitehtävä ratkesi',
           });
           setTimeout(() => this.removeToast(box), TOAST_MS.default);
@@ -20275,7 +20262,7 @@ export class UI {
     };
     const { effect } = kortti;
     this.eventEffect.textContent = effect?.kind === 'raha'
-      ? (effect.amount >= 0 ? `Kukkaroon +${effect.amount} puntaa.` : `Kukkarosta ${effect.amount} puntaa.`)
+      ? (effect.amount >= 0 ? `Kukkaroon +£${effect.amount}.` : `Kukkarosta \u2212£${-effect.amount}.`)
       : (selitteet[effect?.kind] ?? '');
     this.eventText.textContent = '';
     this.typeText(this.eventText, kortti.text, 'event');
@@ -20789,7 +20776,7 @@ export class UI {
           ? `${mannerNimi.toUpperCase()} · UNOHDETTU AARRE` : 'UNOHDETTU AARRE',
         // Pääaarteen arvo on kiinteä eikä revealToken arvo sitä
         // (arvoAarteenArvo antaa tähdelle laattataulun nollan).
-        alanauha: `Arvo ${STAR_PRIZE} puntaa`,
+        alanauha: `Arvo £${STAR_PRIZE}`,
         leima: 'Löydetty',
         leimaPvm: `${nyt.getDate()} · ${KUUT[nyt.getMonth()]}`,
       };
@@ -20807,7 +20794,7 @@ export class UI {
       caption.appendChild(html('span', 'reveal-huudahdus', huudahdus.teksti));
     }
     caption.appendChild(html('strong', '', token.name));
-    caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+${arvo} puntaa`));
+    caption.appendChild(html('span', '', REVEAL_SUB[type] ?? `+£${arvo}`));
     /*
      * FAKTA ON OPPIMISTEKSTI (Raamattu: *"Löytöteksti: lyhyt tosi
      * fakta aarteesta"*; omistajan leiskapäätös 28.8.2026 nosti sen

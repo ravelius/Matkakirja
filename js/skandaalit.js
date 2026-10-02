@@ -434,7 +434,7 @@ function piirraSkandaaliVisa(ui, sisalto, iso, skandaali) {
   // (omistaja 1.9.2026: "lopussa oleva kysymys ei mainitse, mitä
   // siitä voi voittaa").
   laatikko.appendChild(html('p', 'fokusvirta-visa-palkkio',
-    `Oikeasta vastauksesta saat ${TAKY_PALKKIO} puntaa.`));
+    `Oikeasta vastauksesta saat £${TAKY_PALKKIO}.`));
   const vaihtoehdot = html('div', 'fokusvirta-vaihtoehdot');
   visa.vaihtoehdot.forEach((tekstiRivi, i) => {
     const nap = html('button', '', tekstiRivi);
@@ -448,14 +448,14 @@ function piirraSkandaaliVisa(ui, sisalto, iso, skandaali) {
       vaihtoehdot.replaceChildren();
       tulos.className = `fokusvirta-visa-tulos ${oikein ? 'oikein-tulos' : 'vaarin-tulos'}`;
       tulos.textContent = oikein
-        ? `Oikein! +${TAKY_PALKKIO} puntaa.`
+        ? `Oikein! +£${TAKY_PALKKIO}.`
         : `Oikea vastaus: ${visa.vaihtoehdot[visa.oikea]}.`;
       sfx.play(oikein ? 'correct' : 'wrong');
       natiiviVastaus(oikein);
       if (oikein) {
         const leima = ui.buildToast?.({
           kind: 'stamp', icon: 'kukkaro',
-          text: `+${TAKY_PALKKIO} puntaa`, sub: 'Skandaali selvisi',
+          text: `+£${TAKY_PALKKIO}`, sub: 'Skandaali selvisi',
         });
         if (leima) setTimeout(() => ui.removeToast(leima), TOAST_MS.default);
       }
