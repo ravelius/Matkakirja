@@ -240,7 +240,9 @@ namespace Matkakirja.Natiivi
         /// seisoja) juuren alle tulee pehmeä levy, joka liikkuu ja kääntyy hahmon mukana. Periaate kuten kartan symbolimallien
         /// maakontaktissa (Symbolimallit.Rakentaja PohjaVerkko): peitto keskellä, pehmeä lasku reunalle.</summary>
         const float VarjoSade = 0.55f, VarjoNosto = 0.012f;
-        static readonly Color VarjoVari = new Color(0.02f, 0.015f, 0.01f, 0.6f);
+        // Kerroin 0,3 (savuke 22.32, lokit/siirtoseppa-skin17): 0,63 piirtyi koko ajan (lattia tummui keskellä ~0,6:een), mutta
+        // ydin jää jalkojen alle eikä heikko reuna erotu tummalla lattialla; 0,3 näkyy selvänä pehmeänä varjona.
+        static readonly Color VarjoVari = new Color(0.3f, 0.29f, 0.28f, 1f);
         static Mesh varjoVerkko;
         static Material varjoMateriaali;
 
@@ -260,6 +262,7 @@ namespace Matkakirja.Natiivi
                 var sh = Resources.Load<Shader>("Varjostimet/DioraamaKontaktivarjo");
                 if (sh == null) { Debug.LogWarning("MATKAKIRJA linssit: kontaktivarjon varjostin puuttuu (Varjostimet/DioraamaKontaktivarjo)"); return; }
                 varjoMateriaali = new Material(sh) { name = "Hahmo3D/kontaktivarjo" };
+                varjoMateriaali.SetColor("_VarjoVari", VarjoVari);
             }
             var g = new GameObject("Kontaktivarjo") { layer = DioraamaNayttamo.Kerros };
             g.transform.SetParent(juuri, false);
@@ -690,14 +693,26 @@ namespace Matkakirja.Natiivi
                     case "varjokoe": v = new Color(1f, 0f, 0f, 1f); varjoMateriaali.SetFloat("_ZTest", (float)UnityEngine.Rendering.CompareFunction.Always); break;
                     case "varjo": v = VarjoVari; varjoMateriaali.SetFloat("_ZTest", (float)UnityEngine.Rendering.CompareFunction.LessEqual); varjoMateriaali.SetFloat("_VarjoVeto", 0.4f); break;
                     case "veto": varjoMateriaali.SetFloat("_VarjoVeto", luku); break;
-                    case "peitto": v.a = luku; break;
+                    case "peitto": v = new Color(1f - luku * (1f - VarjoVari.r), 1f - luku * (1f - VarjoVari.g), 1f - luku * (1f - VarjoVari.b), 1f); break;
                     case "ztest": varjoMateriaali.SetFloat("_ZTest", (float)(kv.Length > 1 && kv[1] == "always" ? UnityEngine.Rendering.CompareFunction.Always : UnityEngine.Rendering.CompareFunction.LessEqual)); break;
                     case "vari": v = kv.Length > 1 && kv[1] == "punainen" ? new Color(1f, 0f, 0f, v.a) : new Color(VarjoVari.r, VarjoVari.g, VarjoVari.b, v.a); break;
+                    case "rgba":
+                        var o = kv.Length > 1 ? kv[1].Split(',') : new string[0];
+                        if (o.Length == 4) v = new Color(F(o[0]), F(o[1]), F(o[2]), F(o[3]));
+                        break;
+                    case "sekoitus":
+                        // kerto = DstColor Zero, alfa = SrcAlpha OneMinusSrcAlpha, peite = One Zero
+                        var (l, k) = kv.Length > 1 && kv[1] == "alfa" ? (UnityEngine.Rendering.BlendMode.SrcAlpha, UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha)
+                            : kv.Length > 1 && kv[1] == "peite" ? (UnityEngine.Rendering.BlendMode.One, UnityEngine.Rendering.BlendMode.Zero)
+                            : (UnityEngine.Rendering.BlendMode.DstColor, UnityEngine.Rendering.BlendMode.Zero);
+                        varjoMateriaali.SetFloat("_Lahde", (float)l); varjoMateriaali.SetFloat("_Kohde", (float)k);
+                        break;
                     default: muutettu = false; break;
                 }
                 varjoMateriaali.SetColor("_VarjoVari", v);
                 if (muutettu && mita.Contains("="))
-                    return $"varjo: vari {v}, ztest {varjoMateriaali.GetFloat("_ZTest")}, veto {varjoMateriaali.GetFloat("_VarjoVeto"):F2}";
+                    return $"varjo: vari {v}, ztest {varjoMateriaali.GetFloat("_ZTest")}, veto {varjoMateriaali.GetFloat("_VarjoVeto"):F2}, "
+                        + $"sekoitus {varjoMateriaali.GetFloat("_Lahde")}/{varjoMateriaali.GetFloat("_Kohde")}";
             }
             int varjoja = 0; string varjoY = "";
             foreach (var e in esiintymat)
@@ -711,6 +726,8 @@ namespace Matkakirja.Natiivi
             return $"{mita}: {materiaaleja} kuvamateriaalia, kärkiä {karkia}, värillisiä {varillisia}, AO min {aoMin:F2}; "
                 + $"kontaktivarjoja {varjoja}/{esiintymat.Count} (materiaali {(varjoMateriaali != null ? "ok" : "PUUTTUU")}, y{varjoY})";
         }
+
+        static float F(string s) => float.TryParse(s, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var f) ? f : 0f;
 
         static long MeshKolmiot(Mesh m) { long n = 0; for (int i = 0; i < m.subMeshCount; i++) n += m.GetIndexCount(i) / 3; return n; }
 
