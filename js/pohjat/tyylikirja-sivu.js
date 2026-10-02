@@ -53,7 +53,7 @@ const TKS_PANEELI = {
     { otsikko: 'Äänet', rivit: [
       { tyyppi: 'kytkin', nimi: 'Kertoja', paalla: true, ikoni: TKS_IKONI('<path d="M4 6c3-1 6-1 8 1 2-2 5-2 8-1v12c-3-1-6-1-8 1-2-2-5-2-8-1zM12 7v12"/>') },
       { tyyppi: 'kytkin', nimi: 'Musiikki', paalla: true, ikoni: TKS_IKONI('<path d="M9 17V6l10-2v11"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="15" r="2"/>') },
-      { tyyppi: 'kytkin', nimi: 'Äänimaisema', paalla: false, ikoni: TKS_IKONI('<path d="M5 10h3l4-4v12l-4-4H5zM16 9a4 4 0 0 1 0 6M18.5 7a7 7 0 0 1 0 10"/>') },
+      { tyyppi: 'kytkin', nimi: 'Tila', paalla: false, ikoni: TKS_IKONI('<path d="M5 10h3l4-4v12l-4-4H5zM16 9a4 4 0 0 1 0 6M18.5 7a7 7 0 0 1 0 10"/>') },
     ] },
     { erotin: true, vierekkain: true, rivit: [
       { tyyppi: 'toiminto', nimi: 'Uusi peli' },
