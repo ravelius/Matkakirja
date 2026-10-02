@@ -29,6 +29,13 @@
 // korjaa kuvat, samat tiedostot vaihdetaan sekä webiin (assets/livia/livia-eva-*-2x.png) että tänne. A/B EvaPois
 // (`astro eva pois|paalla`) palauttaa kypäräpulun.
 //
+// Robottikäsi (omistajan OK 2.10.2026, Codexin haara codex-pulu-robottikasi b557f749; web js/livia-svg.js evaRobottikasi):
+// astronauttina Pulun jalat ovat robottivarren jalkatuessa. Sommitelma nostetaan 75 yksikköä kuten webissä (eva-robotti-
+// sommittelu translate(0 −75)), jotta varsi näkyy alareunasta; järjestys varsi (152 × 800) → varren reunavalo (Maan valo) →
+// keinuva Pulu (perus, kasvovalo, kypärälamput, maavalo) ja robotin turvaköysi → jalkapidikkeet. Varsi ei liiku: sisuksen
+// leijunta on pois, vain Pulu keinuu ±2° / 6 s jalkojen ympäri (113, 300), pysähtyy puheen ajaksi ja vähennetyllä liikkeellä.
+// Vanha vapaapäinen turvaköysi jää pois. A/B RobottiPois (`astro eva robotti pois|paalla`).
+//
 // Minipulun peilaus (webin suunta 'oikea') hoituu kutsujan style.scale = (−1, 1).
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -45,6 +52,10 @@ namespace Matkakirja.Natiivi
         static Texture2D[] evaKuvat;
         /// <summary>A/B: avaruuskävelyasu pois (vanha kypäräpulu).</summary>
         public static bool EvaPois;
+        static readonly string[] RobottiKerrokset = { "robotin-varsi", "robotin-reunavalo", "robotin-turvakoysi", "robotin-pidikkeet" };
+        static Texture2D[] robottiKuvat;
+        /// <summary>A/B: robottikäsi pois (vapaa turvaköysi ja leijunta kuten ennen).</summary>
+        public static bool RobottiPois;
         static bool kyparaHaussa;
         static float kyparaVirhe = float.NegativeInfinity;
 
@@ -60,6 +71,7 @@ namespace Matkakirja.Natiivi
         bool ylivuoto;
         IVisualElementScheduledItem leijunta;
         float leijuntaAika;
+        float keinuntaAika, keinunta;
 
         public LiviaKuva(bool mini = false)
         {
@@ -143,6 +155,21 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Robottikäsi näkyy: asu näkyy ja robotin kerroskuvat ladattu.</summary>
+        bool Robotissa
+        {
+            get
+            {
+                if (RobottiPois || !EvaNakyy) return false;
+                if (robottiKuvat == null)
+                {
+                    robottiKuvat = new Texture2D[RobottiKerrokset.Length];
+                    for (int i = 0; i < RobottiKerrokset.Length; i++) robottiKuvat[i] = Resources.Load<Texture2D>("LiviaEva/" + RobottiKerrokset[i]);
+                }
+                return robottiKuvat[0] != null;
+            }
+        }
+
         /// <summary>Sisus = viewBox sovitettuna sisältöalueeseen (kuvasuhde säilyy).</summary>
         void Sovita()
         {
@@ -206,6 +233,21 @@ namespace Matkakirja.Natiivi
 
         void Leiju(TimerState t)
         {
+            if (Robotissa)
+            {
+                // Varsi paikallaan (webin .livia-lentonayttamo animation: none), vain Pulu keinuu ±2° / 6 s (livia-eva-jalkatuessa).
+                if (sisus.style.translate != StyleKeyword.Null) { sisus.style.translate = StyleKeyword.Null; sisus.style.rotate = StyleKeyword.Null; }
+                float vanha = keinunta;
+                if (LinssiUi.VahennettyLiike()) keinunta = 0;
+                else
+                {
+                    if (tila.Puhe < 0) keinuntaAika += Mathf.Min(0.1f, t.deltaTime / 1000f);
+                    float uk = keinuntaAika % 6f / 6f, pk = uk < .5f ? uk * 2 : (uk - .5f) * 2, ek = pk * pk * (3 - 2 * pk);
+                    keinunta = -2 + 4 * (uk < .5f ? ek : 1 - ek);
+                }
+                if (!Mathf.Approximately(vanha, keinunta)) eva.MarkDirtyRepaint();
+                return;
+            }
             // Puhe pysäyttää animaation (animation-play-state: paused).
             if (tila.Puhe < 0) leijuntaAika += Mathf.Min(0.1f, t.deltaTime / 1000f);
             float u = leijuntaAika % 5f / 5f;
@@ -308,6 +350,7 @@ namespace Matkakirja.Natiivi
                 if (r.width <= 0 || r.height <= 0 || !kuva.EvaNakyy) return;
                 var m = kuva.Nakyma(r);
                 var t = kuva.tila;
+                if (kuva.Robotissa) { Robotti(mgc, m, t); return; }
                 for (int i = 0; i < evaKuvat.Length; i++)
                 {
                     var kuvaI = evaKuvat[i];
@@ -316,7 +359,7 @@ namespace Matkakirja.Natiivi
                     if (alfa <= 0.004f) continue;
                     var md = mgc.Allocate(4, 6, kuvaI);
                     if (md.vertexCount == 0) continue;
-                    var savy = new Color(1, 1, 1, Mathf.Clamp01(alfa));
+                    var savy = Valkoinen(alfa);
                     void Kulma(float x, float y, float u, float v)
                     {
                         var p = m.Kuvaa(new Vector2(x, y));
@@ -329,6 +372,47 @@ namespace Matkakirja.Natiivi
                     Kulma(0, 304, 0, 0);
                     md.SetAllIndices(m.Determinantti >= 0 ? Kolmiot : KolmiotPeili);
                 }
+            }
+
+            /// <summary>Kerroskuvan sävy: valkoinen (kuva sellaisenaan) peittävyydellä alfa.</summary>
+            static Color Valkoinen(float alfa) => new Color(1, 1, 1, Mathf.Clamp01(alfa));
+
+            /// <summary>
+            /// Robottikäden kerrokset (webin eva-robotti-sommittelu): kaikki 75 yksikköä ylös; Pulu ja robotin turvaköysi
+            /// kierrettynä keinunnan kulmalla pisteen (113, 300) ympäri.
+            /// </summary>
+            void Robotti(MeshGenerationContext mgc, Affiini m, LiviaTila t)
+            {
+                const float Nosto = -75;
+                float a = kuva.keinunta * Mathf.Deg2Rad, ca = Mathf.Cos(a), sa = Mathf.Sin(a);
+                void Kuva(Texture2D kuvaI, float korkeus, float alfa, bool keinuu)
+                {
+                    if (kuvaI == null || alfa <= 0.004f) return;
+                    var md = mgc.Allocate(4, 6, kuvaI);
+                    if (md.vertexCount == 0) return;
+                    var savy = Valkoinen(alfa);
+                    void Kulma(float x, float y, float u, float v)
+                    {
+                        if (keinuu) { float dx = x - 113, dy = y - 300; x = 113 + dx * ca - dy * sa; y = 300 + dx * sa + dy * ca; }
+                        var p = m.Kuvaa(new Vector2(x, y + Nosto));
+                        md.SetNextVertex(new Vertex { position = new Vector3(p.x, p.y, Vertex.nearZ), tint = savy, uv = new Vector2(u, v) });
+                    }
+                    Kulma(0, 0, 0, 1);
+                    Kulma(152, 0, 1, 1);
+                    Kulma(152, korkeus, 1, 0);
+                    Kulma(0, korkeus, 0, 0);
+                    md.SetAllIndices(m.Determinantti >= 0 ? Kolmiot : KolmiotPeili);
+                }
+                Kuva(robottiKuvat[0], 800, 1f, false);                   // varsi
+                Kuva(robottiKuvat[1], 800, t.EvaMaa, false);             // varren reunavalo seuraa Maan valoa
+                Kuva(evaKuvat[1], 304, 1f, true);                        // perus
+                Kuva(evaKuvat[2], 304, t.EvaKasvo, true);
+                Kuva(evaKuvat[3], 304, t.EvaLamput, true);
+                Kuva(evaKuvat[4], 304, t.EvaMaa, true);
+                // robotin turvaköysi (vanha vapaa köysi pois); 152 × 400, koska lenkki ulottuu y ≈ 322:een (Codexin 304:n vienti
+                // katkaisi lenkin alaosan, vienti uudelleen samasta SVG:stä 2.10.)
+                Kuva(robottiKuvat[2], 400, 1f, true);
+                Kuva(robottiKuvat[3], 304, 1f, false);                   // jalkapidikkeet
             }
         }
     }

@@ -1544,8 +1544,9 @@ namespace Matkakirja.Natiivi
                     if (osat[1] == "eva" && osat.Length > 2)
                     {
                         if (osat[2] == "pois" || osat[2] == "paalla") LiviaKuva.EvaPois = osat[2] == "pois";
+                        else if (osat[2] == "robotti" && osat.Length > 3) LiviaKuva.RobottiPois = osat[3] == "pois";   // robottikäsi A/B (2.10.)
                         else Pulu.EvaYo = osat[2] == "yo" ? true : osat[2] == "paiva" ? (bool?)false : null;
-                        Kirjaa($"astro eva: asu {(LiviaKuva.EvaPois ? "pois" : "päällä")}, valot {(Pulu.EvaYo == true ? "yö" : Pulu.EvaYo == false ? "päivä" : "ISS:n valo")}");
+                        Kirjaa($"astro eva: asu {(LiviaKuva.EvaPois ? "pois" : "päällä")}, robottikäsi {(LiviaKuva.RobottiPois ? "pois" : "päällä")}, valot {(Pulu.EvaYo == true ? "yö" : Pulu.EvaYo == false ? "päivä" : "ISS:n valo")}");
                     }
                     else if (l == null) Kirjaa("astro: linssi ei auki (linssi satelliitti)");
                     else if (osat[1] == "kuva" && osat.Length > 2)
