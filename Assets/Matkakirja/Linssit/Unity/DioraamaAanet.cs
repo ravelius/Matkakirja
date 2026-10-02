@@ -439,7 +439,9 @@ namespace Matkakirja.Natiivi
 
         void PuheLuentaAlkoi(bool alkoi)
         {
-            if (alkoi && !katkaiseeMuita && Puhe.Instanssi != null && !Puhe.Instanssi.PuluaaniSoi) KatkaisePuhe();
+            // Myös Pulun chat-vastauksen ääneen luku (Puhe, persoona pollo; PuluChat) on pelaajan pyytämä uusi puhe, joten se
+            // katkaisee linnan puheen (2.10. ristikatkaisutodennus: ennen molemmat soivat).
+            if (alkoi && !katkaiseeMuita) KatkaisePuhe();
         }
 
         void LopetaErillinen()
