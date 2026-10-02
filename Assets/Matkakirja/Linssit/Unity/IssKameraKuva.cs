@@ -412,6 +412,7 @@ namespace Matkakirja.Natiivi
                 if (rt != null) { kamera.targetTexture = null; kamera.ResetAspect(); rt.Release(); Destroy(rt); }
                 GC.Collect(); Resources.UnloadUnusedAssets();
                 Loki($"muisti kuvan jälkeen: vapaata {VapaaMuistiMt()} Mt");
+                StartCoroutine(KutistaValimuisti());
                 AstronauttiKerros.KuvanPinta = null;
                 Avaruus.KuvaputkiAsetettu = false;
                 Avaruus.KuvanNousu = 0f;
@@ -457,6 +458,24 @@ namespace Matkakirja.Natiivi
             var q = UnityWebRequest.Get(url);
             q.SetRequestHeader("Range", $"bytes={alku}-{alku + pit - 1}");
             return q;
+        }
+
+        /// <summary>
+        /// Pallon laattavälimuisti hetkeksi pieneksi kuvan jälkeen (Natiivisepän jatkoerä 2.10.: perustaso jäi ~0,25 Gt kyydin
+        /// keskiarvon yläpuolelle): kuvan pinta on jo vaihtunut takaisin S2:een (AstronauttiKerros asettaa sen välimuistin ≤ 1 s:ssa),
+        /// joten odotetaan 2 s, kutistetaan 64 Mt:iin 4 s:ksi (Cesium vapauttaa 4096-näkymän laatat) ja palautetaan entinen arvo.
+        /// </summary>
+        IEnumerator KutistaValimuisti()
+        {
+            yield return new WaitForSecondsRealtime(2f);
+            var p = KarttaKerrokset.Instanssi?.pallo;
+            if (p == null) yield break;
+            long vanha = p.maximumCachedBytes, pieni = 64L * 1024 * 1024;
+            if (vanha <= pieni) yield break;
+            p.maximumCachedBytes = pieni;
+            yield return new WaitForSecondsRealtime(4f);
+            if (p != null && p.maximumCachedBytes == pieni) p.maximumCachedBytes = vanha;
+            Loki($"välimuisti kutistettu ja palautettu {vanha / 1048576} Mt, vapaata {VapaaMuistiMt()} Mt");
         }
 
         /// <summary>
