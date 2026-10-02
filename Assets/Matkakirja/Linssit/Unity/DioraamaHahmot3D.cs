@@ -610,6 +610,34 @@ namespace Matkakirja.Natiivi
             return (h % 1000) / 1000.0;
         }
 
+        /// <summary>Testikomento "poikki skin valkoinen|kuva|tila": skinnattujen kuvamateriaalien tila ja kärkivärit.</summary>
+        public string SkinKoe(string mita)
+        {
+            int materiaaleja = 0, karkia = 0, varillisia = 0; float aoMin = 1f;
+            foreach (var hm in malliCache.Values)
+            {
+                if (hm.SkinSolmut == null) continue;
+                foreach (var sm in hm.SkinSolmut)
+                {
+                    if (sm?.Mesh == null) continue;
+                    karkia += sm.Mesh.vertexCount;
+                    if (sm.Mesh.HasVertexAttribute(UnityEngine.Rendering.VertexAttribute.Color))
+                    {
+                        varillisia += sm.Mesh.vertexCount;
+                        foreach (var c in sm.Mesh.colors32) aoMin = Mathf.Min(aoMin, c.r / 255f);
+                    }
+                    foreach (var m in sm.Materiaalit)
+                    {
+                        if (m == null || !m.name.StartsWith("Hahmo3D/kuva:", StringComparison.Ordinal)) continue;
+                        materiaaleja++;
+                        if (mita == "valkoinen") { m.SetFloat(IdTila, 0f); m.SetColor(IdVari, Color.white); }
+                        else if (mita == "kuva") m.SetFloat(IdTila, m.GetTexture(IdPohjaKuva) != null ? 1f : 0f);
+                    }
+                }
+            }
+            return $"{mita}: {materiaaleja} kuvamateriaalia, kärkiä {karkia}, värillisiä {varillisia}, AO min {aoMin:F2}";
+        }
+
         static long MeshKolmiot(Mesh m) { long n = 0; for (int i = 0; i < m.subMeshCount; i++) n += m.GetIndexCount(i) / 3; return n; }
 
         public void Tyhjenna()

@@ -827,6 +827,13 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: hahmot " + (DioraamaHahmot3D.Paalla ? "3d" : "2d"));
                 return;
             }
+            if (mita == "skin")
+            {
+                // Skinnatun hahmon sävyn juurisyy (Linnanrakentaja 2.10. 19.1x): "valkoinen" = kuva pois (_Tila 0, _Vari
+                // valkoinen) → näkyy pelkkä valo × AO; "kuva" = takaisin. Tila kertoo kärkivärit (AO) ja kuvat.
+                o.Kirjaa("poikki: skin " + (nayttamo?.Hahmot3D?.SkinKoe(arvo) ?? "ei näyttämöä"));
+                return;
+            }
             if (mita == "liekit")
             {
                 // 3D-liekki vs. atlas-billboard (era 2b kohta 6): DioraamaLiekit.Kolmiulotteinen on staattinen,
