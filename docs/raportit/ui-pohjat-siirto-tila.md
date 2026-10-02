@@ -46,3 +46,12 @@ UI-siirtymiä. Suunnitelma ja säännöt: `ui-pohjat-kartoitus-20261001.md`. Sä
 - Kuollut koodi (taikalasit-nappi, Muut-paneeli, .mk-minipuluKortti*, USS-tuplat) poistetaan kunkin pinnan siirrossa.
 - Pohjagalleria (`ui pohjat`) Akropolis-datalla (web js/pohjat/tyylikirja-sivu.js TKS_PERUS, TKS_KUVAT) savukkeen kuvaregressioon.
 - Tyylitiedostojen jako (Pelikoodari 2.10., hyväksytty): web css/pohjat/<pohja>.css + css/pohjat/pinnat/<pinta>.css kiinteällä latauslistalla; natiivi samoin nimin UI/Resources/MatkakirjaUI/Pohjat/*.uss (Matkakirja.uss:n loppuun lisätyt pohjaosiot aiheuttavat junakonflikteja). Oma PR ilman ulkoasumuutoksia, kuvavertailu 0 px.
+
+## 2.10. iltapäivä (Natiivi-UI)
+
+- Juna 122: sulku-harmaa 278c23eb (harmaa ✕ pallossa, kuvanäkymässä ja ISS:ssä, Pulun taulu ✕:n alle, versiorivi "(BUILD)" kehittäjälle).
+- Juna 126: raha-punta cfd6c103 (raha £N koko natiivissa, omistaja 15.50).
+- Odottaa webiä: OHJAUSNAPPI natiivi-ui/ohjausnappi 00b4da07 (web #3854) + Siirtosepän linna-valikko f45bf78a; nostorivi 83ac5ece (web #3849); GALLERIA (web #3860, natiivi tekemättä).
+- Odottaa omistajan OK:ta: natiivi-ui/ylapalkki-tikkaus-2 d99f205d (tikkaus saaren ympärille, pilleri "1 pv · £400" konjakki, raha-punnan päällä), natiivi-ui/pulu-puhu d0c59102, linssin hampurilaisvalikko (koe `ui ohjausnapit 2`).
+- Määrittelyt: proto-3d/lokit/natiivi-ui-pohjat/{ohjausnappi-kuvat/ohjausnappi-ehdotus.md, linssivalikot.md, galleria-pohja.md}; inventaariot kuvakenapit-, puhekuplat- ja ei-ovaaleja-inventaario.md.
+- Jonossa webin jälkeen: valikko v2 (#3853) + päivärivi "Päivä 1/80, aamu · £400 −£20", EI OVAALEJA -korjaukset, puhekuplat äänen aikana pois.
