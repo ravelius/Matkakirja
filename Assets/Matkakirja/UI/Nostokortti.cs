@@ -848,6 +848,9 @@ namespace Matkakirja.Natiivi
             // AUTO levittää lukijan riviä: paikkavaraus ylärivillä saman levyiseksi (USS 65,4 = ≡ + kaiutin).
             float w = j.resolvedStyle.width;
             if (w > 0f && !float.IsNaN(w) && Mathf.Abs(lukijaPaikka.resolvedStyle.width - w) > 0.5f) lukijaPaikka.style.width = w;
+            // Oikea sivu ei kapene ≡:n ja kaiuttimen alle (flex-perusta 0): muuten napit valuivat AUTO:n päälle (f19af4a6).
+            if (w > 0f && !float.IsNaN(w) && lukijaPaikka.parent == selain?.Oikea && Mathf.Abs(selain.Oikea.resolvedStyle.minWidth.value - w) > 0.5f)
+                selain.Oikea.style.minWidth = w;
             if (j.resolvedStyle.left != x) j.style.left = x;
             if (j.resolvedStyle.top != y) j.style.top = y;
             j.EnableInClassList("mk-nosto__lukija--irti", s > 1f);

@@ -83,6 +83,15 @@
     display: none;
 }
 
+/* Puhelimella keskiryhmä tiiviimmäksi, jotta ≡ ja kaiutin mahtuvat oikealle (osuma-ala pysyy 44 pt laajennuksella). */
+.mk-nostoselain--kapea .mk-nostoselain__askel {
+    width: 26px;
+}
+
+.mk-nostoselain--kapea .mk-nostoselain__avaaja {
+    padding: 0;
+}
+
 .mk-nostoselain__avaajaikoni {
     width: 16px;
     height: 16px;
