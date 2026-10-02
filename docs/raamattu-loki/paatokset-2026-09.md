@@ -10035,3 +10035,7 @@ Omistaja 2.10.2026 klo 14.5x: 'anna pysyvä lupa skriptillä jonka voin ajaa nä
 ## OMISTAJA: UUSI VALIKKO JA TIETÄJÄTASOJEN NÄKYMÄ KÄYTTÖÖN (2.10.2026) (2.10.2026 klo 14.56)
 
 Omistaja 2.10.2026 klo 14.5x vastasi 'ok' viimeisimpään ok-pyyntöön, jossa näytettiin uusi valikko (ÄÄNET → tasorivi 'Untuvikko (80 tp)' palkkeineen → MATKALAUKKU: Aarteet (N), Julisteet (N) → PELI: Retkikunta, Asetukset → alarivi, jossa Uusi peli on vasemmalla ja ↻ ja versio oikealla) sekä tietäjätasojen näkymä (iso avatar ja kymmenen tasoa, nykyinen ympyröitynä). Tulkinta: valikko v2 otetaan käyttöön oletuksena (Pelikoodarin haara pelikoodari-valikko-v2 e7390618d, ?valikko=vanha palauttaa vanhan). Julkaisija mergeää PR:n vihreänä, ja Natiivi-UI tekee natiivin webin mukaan.
+
+## OMISTAJA: VALIKON ÄÄNIMAISEMA → TILA, VALIKKO KAPEAMMAKSI (2.10.2026) (2.10.2026 klo 14.57)
+
+Omistaja 2.10.2026 klo 14.5x uuden valikon hyväksynnän jälkeen, sanatarkasti: 'muuta äänimaisema muotoon tila ja kavenna valikkoa'. Kytkimen nimi Äänimaisema muuttuu muotoon Tila valikossa ja kaikkialla, missä sama kytkin näkyy, ja valikosta tehdään kapeampi (iPadilla selvästi, ja iPhonessa reunoille jää ilmaa). Web (Pelikoodari) samaan valikko v2 -PR:ään tai jatko-PR:nä, natiivi (Natiivi-UI) webin mukaan.
