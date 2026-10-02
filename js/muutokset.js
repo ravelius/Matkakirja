@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2579, teksti: 'Olavinlinna: skinnatut linnahahmot (#3885)' },
   { v: 2578, teksti: 'Ajattelijat: Sokrateen kierrokset 2–3 (#3884)' },
   { v: 2577, teksti: 'Topografia: hampurilainen nimipilleri tilalle (#3881)' },
   { v: 2576, teksti: 'Astronautin kamera: AUTO hiljaa, ei siirtolappu… (#3879)' },
