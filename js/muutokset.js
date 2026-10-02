@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2553, teksti: 'Ajattelijoiden päät kartalla: ERIKOISNOSTOT kar… (#3843)' },
   { v: 2552, teksti: 'ISS-kyyti: kiillon ilmakehän läpäisy (#3844)' },
   { v: 2551, teksti: 'Liiku-liuska Pulun yläpuolelle (#3845)' },
   { v: 2550, teksti: 'Ajattelijat: Sokrateen PULU, yleinen moottori j… (#3840)' },
