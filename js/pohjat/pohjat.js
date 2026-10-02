@@ -51,9 +51,15 @@ function pohjaSolmu(tagi, luokka, teksti) {
   return e;
 }
 
-function pohjaKuva(kuva, luokka, kuvaAuki = null, indeksi = 0) {
+/*
+ * PUUTTUVA KUVA POISTAA KUVAPAIKAN (omistaja 2.10.2026 klo 13.53: Bobovacin nostossa harmaa laatikko havainnekuvan
+ * paikalla, kun tiedosto puuttui ämpäristä). Sama sääntö kuin vanhalla kohdekortilla (js/fokuskohteet.js
+ * piirraKohdeKuva): virhe poistaa kehyksen, ja `poistui` antaa kutsujalle paikan korvata se (hero → viiva).
+ */
+function pohjaKuva(kuva, luokka, kuvaAuki = null, indeksi = 0, poistui = null) {
   const kehys = pohjaSolmu('figure', `tk-kuva ${luokka}`);
   const img = document.createElement('img');
+  img.addEventListener('error', () => { poistui?.(kehys); kehys.remove(); }, { once: true });
   img.src = kuva.url;
   img.alt = kuva.kuvateksti || '';
   img.loading = 'lazy';
@@ -87,7 +93,10 @@ export function pohjaSisalto(isa, d, { kuvaAuki = null } = {}) {
   const hero = d.kuvat.find((k) => k.rooli === 'hero');
   const upotus = d.kuvat.find((k) => k.rooli === 'upotus');
   const galleria = d.kuvat.filter((k) => k.rooli === 'galleria');
-  if (hero) isa.appendChild(pohjaKuva(hero, 'tk-kuva--hero', kuvaAuki, d.kuvat.indexOf(hero)));
+  if (hero) {
+    isa.appendChild(pohjaKuva(hero, 'tk-kuva--hero', kuvaAuki, d.kuvat.indexOf(hero),
+      (kehys) => { if (d.otsikko) kehys.before(pohjaSolmu('hr', 'tk-viiva')); }));
+  }
   else if (d.otsikko) isa.appendChild(pohjaSolmu('hr', 'tk-viiva'));
   if (galleria.length) {
     const nauha = pohjaSolmu('div', 'tk-galleria');
@@ -96,6 +105,7 @@ export function pohjaSisalto(isa, d, { kuvaAuki = null } = {}) {
       b.type = 'button';
       b.setAttribute('aria-label', k.kuvateksti || `Kuva ${i + 2}`);
       const img = document.createElement('img');
+      img.addEventListener('error', () => { b.remove(); if (!nauha.children.length) nauha.remove(); }, { once: true });
       img.src = k.url;
       img.alt = '';
       img.loading = 'lazy';
