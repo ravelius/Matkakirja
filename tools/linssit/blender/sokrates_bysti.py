@@ -879,7 +879,8 @@ if KOHDE == 'marcus':   # tuuheat kiharat ja parta varjostavat enemmän → auri
 V11_AURINKO = (1.0, 0.05, 0.5)
 if V11:   # omistaja 3.10.: alkukuvat varjon puolelta → kamera valon vastapuolelle (−x), aurinko takaviistoon (+y ≥ 0,5):
     # kasvot jäävät varjoon ja niistä erottuu kirkas ääriviiva. Rembrandt + nimi (282) ennallaan.
-    V7_OTOKSET = tuple((r_, ((-abs(c_[0]),) + tuple(c_[1:])) if r_ < 282 else c_, q_, mm_) for r_, c_, q_, mm_ in V7_OTOKSET)
+    # x ≤ −0,22: parran alta otettu kuva (x −0,05) jäi lähes eteen ja kasvot valaistuivat ¾-kulmasta (Päätoimittaja 3.10.)
+    V7_OTOKSET = tuple((r_, ((min(-abs(c_[0]), -0.22),) + tuple(c_[1:])) if r_ < 282 else c_, q_, mm_) for r_, c_, q_, mm_ in V7_OTOKSET)
     # Kokeet 3.10.: takaa tuleva aurinko (y ≥ 0,5) jätti kasvot mustiksi ja valaisi vain päälaen → aurinko kameran
     # vastakkaiselta sivulta (+x, y ≈ 0, hieman ylhäältä): kasvojen profiili (otsa, nenä, huulet, parta) piirtyy valona.
     # avausruutu (vasen profiili −x:stä): valo hieman edestä, jotta nenän ja huulten reuna syttyy
