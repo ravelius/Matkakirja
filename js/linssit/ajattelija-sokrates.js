@@ -41,6 +41,60 @@ export const SOKRATES = Object.freeze({
   },
   // Kierros 1 (v7/v10, 30 r/s): lähestyminen Rembrandtista otsalle, 38a, kaari ja pito.
   ajat: { lahesty: [462, 555], vieritys: [525, 895], proj: [555, 900], kaariLoppu: 965, pito: 1450 },
+  /*
+   * TAUSTAVIRTA (v10, omistaja 2.10. 08.2x–08.4x; sokrates_bysti.py paan_virta + tausta_rivi): 20 henkeä
+   * tekstiriviä koko pään yli viidestä projektorista; jokaisella oma tahti (0,0007 × 1,18^k uv/ruutu, sekoitettuna),
+   * suunta (joka toinen vastakkaiseen), kulma ±7°, koko ja kirkkaus (osuus päälauseen tehosta × 3).
+   * Suomenkieliset aina kahdessa pienimmässä koossa ja himmeämpinä. Luuppaavat vaakasuunnassa saumattomasti.
+   */
+  taustavirta: {
+    etaisyys: 0.9,
+    blend: 0.5,
+    voimaKerroin: 3.0,
+    siemen: 38,
+    rivikork: [0.009, 0.012, 0.015, 0.019],
+    kirkkaus: { el: [0.10, 0.28], fi: [0.08, 0.13] },
+    kulma: 7,
+    projektorit: [   // (kohde, suunta kohteesta, kuva-alan leveys m, rivejä) — Blender-koordinaatit
+      { kohde: [0.0, -0.10, 0.33], suunta: [0.0, -1.0, 0.10], ala: 0.30, riveja: 6 },   // kasvot ja parta
+      { kohde: [0.0, -0.03, 0.47], suunta: [0.0, -0.55, 1.0], ala: 0.26, riveja: 5 },   // otsa ja päälaen etuosa
+      { kohde: [0.0, 0.05, 0.47], suunta: [0.0, 0.6, 1.0], ala: 0.24, riveja: 3 },      // päälaen takaosa
+      { kohde: [-0.09, -0.04, 0.38], suunta: [-1.0, -0.35, 0.15], ala: 0.22, riveja: 3 }, // vasen ohimo ja poski
+      { kohde: [0.09, -0.04, 0.38], suunta: [1.0, -0.35, 0.15], ala: 0.22, riveja: 3 },  // oikea ohimo ja poski
+    ],
+    // Kierros 1 (virta1): häivytys sisään 462–540, täysi, häivytys ulos 900–950.
+    ajat: [462, 540, 900, 950],
+    // PAIKKAMERKIT (tekstit.json 2.10.): Sisältökirjurin 18 kreikkalaista katkelmaa korvaavat nämä.
+    rivit: [
+      ['el', 'baskerville', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
+      ['el', 'times', 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι'],
+      ['el', 'baskerville', 'οὐδαμῶς ἄρα δεῖ ἀδικεῖν'],
+      ['el', 'times', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
+      ['fi', 'iowan-ohut', 'Mitä en tiedä, en luulekaan tietäväni.'],
+      ['el', 'baskerville', 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι'],
+      ['el', 'times', 'οὐδαμῶς ἄρα δεῖ ἀδικεῖν'],
+      ['fi', 'iowan-ohut', 'Vääryyttä ei siis saa tehdä koskaan.'],
+      ['el', 'baskerville', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
+      ['el', 'times', 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι'],
+      ['el', 'iowan-ohut', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
+      ['el', 'baskerville', 'οὐδαμῶς ἄρα δεῖ ἀδικεῖν'],
+      ['el', 'times', 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι'],
+      ['el', 'baskerville', 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι'],
+      ['el', 'times', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
+      ['el', 'baskerville', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
+      ['el', 'times', 'οὐδαμῶς ἄρα δεῖ ἀδικεῖν'],
+      ['el', 'iowan-ohut', 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι'],
+      ['el', 'baskerville', 'οὐδαμῶς ἄρα δεῖ ἀδικεῖν'],
+      ['el', 'times', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
+    ],
+  },
+  // Blenderin gobot sokrates_gobo.py:n fonteilla (macOS/iOS-järjestelmäfontit; polytoninen kreikka).
+  fontit: {
+    iowan: { perhe: '"Iowan Old Style", Charter, Palatino, serif', paino: 'bold' },
+    baskerville: { perhe: 'Baskerville, "Baskerville Old Face", "Times New Roman", serif', paino: 'normal' },
+    times: { perhe: '"Times New Roman", Times, serif', paino: 'italic normal' },
+    'iowan-ohut': { perhe: '"Iowan Old Style", Charter, Palatino, serif', paino: 'italic normal' },
+  },
   // Videotykin "epätäydellisyys" (v4): kromaattinen aberraatio ja tarkennuksen pehmeys.
   ca: 0.014,
   syvyys: 0.022,

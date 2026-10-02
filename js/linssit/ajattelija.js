@@ -39,6 +39,22 @@ export function b2t(THREE, [x, y, z]) { return new THREE.Vector3(x, z, -y); }
 /** Pystykenttä asteina Blenderin pystysensorista (24 mm) ja polttovälistä. */
 export function kenttaMm(mm) { return 2 * Math.atan(12 / mm) * 180 / Math.PI; }
 
+/** Toistettava satunnaisluku (mulberry32): sama siemen → sama taustavirta joka avauksella. */
+function siemenluku(siemen) {
+  let s = siemen >>> 0;
+  return () => {
+    s = (s + 0x6D2B79F5) >>> 0;
+    let x = Math.imul(s ^ (s >>> 15), 1 | s);
+    x = (x + Math.imul(x ^ (x >>> 7), 61 | x)) ^ x;
+    return ((x ^ (x >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function sekoita(lista, satunnainen) {
+  for (let i = lista.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(satunnainen() * (i + 1));
+    [lista[i], lista[j]] = [lista[j], lista[i]];
+  }
+}
 const pehmea = (t) => { const x = Math.min(1, Math.max(0, t)); return x * x * (3 - 2 * x); };
 const valilla = (r, a, b) => (r - a) / (b - a);
 
@@ -147,14 +163,21 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
 
   // Päälause 38a videotykkinä otsalla.
   const lause = a.paalauseet['38a'];
+  const tv = a.taustavirta;
+  // Rivien kirkkaus päälauseeseen nähden: Blenderin AgX puristaa kirkkaan päälauseen, webin AgX vähemmän (v10-kuva).
+  const RIVIT = Number(haku.get('rivit')) || 0.75;
+  const fontti = (nimi) => a.fontit[nimi] ?? a.fontit.iowan;
+  // Päälause: kirjaimet 1,15 × gobon mittasuhde (mitattu v10-kuvasta: v10:n päälausegobo oli väljempi kuin v4:n).
   const { kangas, paikat } = piirraAtlas([
-    { teksti: lause.fi, fontti: '"Iowan Old Style", Charter, Palatino, serif', korkeus: 192, sumea: true },
+    { teksti: lause.fi, fontti: fontti('iowan').perhe, paino: fontti('iowan').paino, korkeus: 192, sumea: true, emOsuus: 1.15 },
+    ...tv.rivit.map(([, f, teksti]) => ({ teksti, fontti: fontti(f).perhe, paino: fontti(f).paino, korkeus: 96, toisto: true })),
   ]);
   const atlas = new THREE.CanvasTexture(kangas);
   atlas.flipY = false;
   atlas.colorSpace = THREE.NoColorSpace;
   atlas.anisotropy = renderoija.capabilities.getMaxAnisotropy();
   atlas.minFilter = THREE.LinearMipmapLinearFilter;
+  atlas.wrapS = THREE.RepeatWrapping;   // toistorivit (päälause rajataan varjostimessa)
   const u = lisaaProjektorit(THREE, mat, atlas);
   u.pVari.value.setRGB(...a.tykki.vari);
   const os = osuma(THREE, mesh, lause.sade);
@@ -167,8 +190,34 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     paikka: tykki, kohde: os.p, etaisyys: lause.etaisyys, nauhaKork, rivi: paikat[0], ala: lause.ala,
     ca: a.ca, syvyys: a.syvyys, atlasKorkeus: kangas.height,
   });
-  u.pMaara.value = 1;
   const s0 = 0.5 + lause.ala / 2 / pr.nauhaLev;
+
+  // Taustavirta (paan_virta): rivit jaetaan projektoreille tasaisin välein kuva-alan korkeudelle.
+  const satunnainen = siemenluku(tv.siemen);
+  const nopeudet = tv.rivit.map((_, k) => 0.0007 * 1.18 ** k);
+  sekoita(nopeudet, satunnainen);
+  const virta = [];
+  let ri = 0;
+  for (const pj of tv.projektorit) {
+    const kohde = b2t(THREE, pj.kohde);
+    const paikka = kohde.clone().add(b2t(THREE, pj.suunta).normalize().multiplyScalar(tv.etaisyys));
+    for (let k = 0; k < pj.riveja && ri < tv.rivit.length; k += 1, ri += 1) {
+      const [kieli] = tv.rivit[ri];
+      const koot = kieli === 'fi' ? [...tv.rivikork].sort((x, y) => x - y).slice(0, 2) : tv.rivikork;
+      const kork = koot[Math.floor(satunnainen() * koot.length)];
+      const [kMin, kMax] = tv.kirkkaus[kieli] ?? tv.kirkkaus.el;
+      const kirkkaus = kMin + (kMax - kMin) * satunnainen();
+      const vM = (-0.4 + 0.8 * (k + 0.5) / pj.riveja) * pj.ala + (satunnainen() * 2 - 1) * 0.01;
+      const kulma = (satunnainen() * 2 - 1) * tv.kulma * Math.PI / 180;
+      const i = 1 + ri;
+      asetaProjektori(THREE, u, i, {
+        paikka, kohde, etaisyys: tv.etaisyys, nauhaKork: kork, rivi: paikat[i], ala: pj.ala, blend: tv.blend,
+        kulma, vM, toisto: true, atlasKorkeus: kangas.height,
+      });
+      virta.push({ i, nopeus: nopeudet[ri] * (ri % 2 ? 1 : -1), voima: TYKKI * tv.voimaKerroin * kirkkaus * RIVIT });
+    }
+  }
+  u.pMaara.value = 1 + virta.length;
 
   // Kamera: Rembrandt → lentoasento otsalle (35 → 18 mm) → kaari ±22° ja liuku ±8 mm tekstin aikana → pito.
   const rem = a.otokset.rembrandt;
@@ -206,6 +255,13 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     u.pA.value[0].w = -s0 + 2 * s0 * Math.min(1, Math.max(0, valilla(r, va, vl)));
     const teho = r < va || r > vl ? 0 : Math.min(1, (r - va) / 6, (vl - r) / 6);
     u.pB.value[0].w = TYKKI * Math.max(0, teho);
+    // Taustavirta: lineaarinen häivytys (r0 → r1 sisään, r2 → r3 ulos), siirto = nopeus × ruudut.
+    const [r0, r1, r2, r3] = tv.ajat;
+    const vk = r <= r0 || r >= r3 ? 0 : Math.min(1, (r - r0) / (r1 - r0), (r3 - r) / (r3 - r2));
+    for (const v of virta) {
+      u.pA.value[v.i].w = v.nopeus * (r - r0);
+      u.pB.value[v.i].w = v.voima * vk;
+    }
   }
 
   // Koko ja kuvasuhde.

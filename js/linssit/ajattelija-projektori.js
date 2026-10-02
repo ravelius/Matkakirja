@@ -25,12 +25,20 @@ export function piirraAtlas(rivit, doc = document) {
   const paikat = [];
   let y = 0;
   for (const r of rivit) {
-    const em = Math.round(r.korkeus * NAUHA_EM);
+    const em = Math.round(r.korkeus * NAUHA_EM * (r.emOsuus ?? 1));
     mitta.font = `${r.paino ?? 'bold'} ${em}px ${r.fontti}`;
     const tekstiLev = Math.ceil(mitta.measureText(r.teksti).width);
-    const reuna = r.toisto ? Math.round(em * 1.5) : Math.round(em * 0.85 + tekstiLev * 0.06);
-    const lev = Math.min(ATLAS_LEVEYS, tekstiLev + 2 * reuna);
-    paikat.push({ ...r, em, lev, y, uMax: lev / ATLAS_LEVEYS, reuna });
+    if (r.toisto) {
+      // TOISTORIVI TÄYTTÄÄ ATLAKSEN LEVEYDEN kokonaisilla laatoilla (laatta = teksti + väli): näytteenotin
+      // kääriä (RepeatWrapping) jatkuvalla u:lla, joten saumassa ei ole fract()-hyppyä eikä mip-viivaa.
+      const toistoja = Math.max(1, Math.floor(ATLAS_LEVEYS / (tekstiLev + 3 * em)));
+      const lev = ATLAS_LEVEYS / toistoja;
+      paikat.push({ ...r, em, lev, y, uMax: 1 / toistoja, toistoja, reuna: (lev - tekstiLev) / 2 });
+    } else {
+      const reuna = Math.round(em * 0.85 + tekstiLev * 0.06);
+      const lev = Math.min(ATLAS_LEVEYS, tekstiLev + 2 * reuna);
+      paikat.push({ ...r, em, lev, y, uMax: lev / ATLAS_LEVEYS, reuna });
+    }
     y += (r.korkeus + ATLAS_VALI) * (r.sumea ? 2 : 1);
   }
   kangas.width = ATLAS_LEVEYS;
@@ -46,8 +54,7 @@ export function piirraAtlas(rivit, doc = document) {
       c.save();
       c.beginPath(); c.rect(0, yla, p.lev, p.korkeus); c.clip();
       c.filter = `blur(${sumeus}px)`;
-      // Toistuva rivi piirretään myös kerran lev:n jälkeen, jotta sauma on saumaton.
-      for (const dx of p.toisto ? [0, -p.lev] : [0]) c.fillText(p.teksti, p.reuna + dx, yla + p.korkeus / 2);
+      for (let n = 0; n < (p.toistoja ?? 1); n += 1) c.fillText(p.teksti, p.reuna + n * p.lev, yla + p.korkeus / 2);
       c.restore();
     };
     // Projektorin pehmeys: GaussianBlur 2 px 220 px:n kirjaimissa; sumea pari nauhan korkeus / 40.
@@ -101,8 +108,8 @@ float pNayte(int i, float jx, float jy, float sk, float sumeus) {
   // Rivin reunat häivytetään: kirjaimet ovat keskellä (v 0,3–0,7), ja loivassa kulmassa korkeat mip-tasot
   // toisivat muuten viereisen atlasrivin palasia katkoviivaksi.
   float reuna = smoothstep(0.0, 0.15, v) * smoothstep(1.0, 0.85, v);
-  if (d.w < 0.5) { if (u <= 0.0 || u >= 1.0) return 0.0; } else { u = fract(u); }
-  float au = u * d.x;
+  if (d.w < 0.5 && (u <= 0.0 || u >= 1.0)) return 0.0;
+  float au = u * d.x;   // toistorivi: jatkuva u, atlas kääritään (RepeatWrapping)
   float terava = texture2D(pAtlas, vec2(au, mix(c.x, c.y, 1.0 - v)), -0.75).r;
   if (sumeus <= 0.0) return terava * reuna;
   float sumea = texture2D(pAtlas, vec2(au, mix(c.z, c.w, 1.0 - v))).r;
