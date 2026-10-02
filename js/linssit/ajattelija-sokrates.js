@@ -19,7 +19,7 @@ export const SOKRATES = Object.freeze({
   malli: 'ajattelijat/sokrates/v1/sokrates-L1.glb',
   // Kartan pää ERIKOISNOSTOT-sarakkeessa (js/ajattelijapaat.js): Linnanrakentaja _valmiit/ajattelijat-kartta/v1, ~5 k kolmiota.
   // Kiinteä karttapiste (omistaja 16.5x): Pohjois-Egeanmeri Pelionin ja Euboian välissä, ei kaupunki eikä nimien päällä.
-  kartta: { glb: 'ajattelijat/kartta/v1/sokrates-kartta.glb', maa: 'GRC', piste: [39.05, 24.1] },
+  kartta: { glb: 'ajattelijat/kartta/v1/sokrates-kartta.glb', maa: 'GRC', piste: [39.49, 23.98] },
   // Kipsin mikronormaali (Poly Haven grey_plaster_02 nor_gl, Rob Tuytel, CC0; 1024 px).
   kipsi: 'ajattelijat/yhteiset/kipsi-nor-1k.jpg',
   korkeus: 0.51,
