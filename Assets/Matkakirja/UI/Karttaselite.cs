@@ -67,6 +67,14 @@ namespace Matkakirja.Natiivi
             nappi = Rakenne.Nappi(null, "mk-seliteNappi", Vaihda, turva, NostoMerkit.SeliteNappi);
             nappi.tooltip = MaakuntaKartta ? "Maakuntakartta" : "Karttaselitteet";
             nappi.style.top = Ylapalkki.Varaus + 8;
+            // LINSSIT-KARTTANAPPI (omistaja 2.10.2026 klo 13.56 ja 18.3x, web #3859): OHJAUSNAPPI-neliö suurennuslasilla kartan
+            // oikeaan yläkulmaan (webissä selitenapin ≡ vasemmalla puolella; natiivissa selite on automaattinen eikä nappia ole,
+            // joten Linssit on kulmassa); napautus avaa pillerivalikon suoraan Linssit-näkymään. Näkyy, kun linssejä on.
+            linssit = Ohjausnappi.Nappi(Ikonit.Viiva["suurennuslasi"], "Linssit", AvaaLinssit, turva, "paperi");
+            linssit.AddToClassList("mk-linssitNappi");
+            linssit.style.position = Position.Absolute;
+            linssit.style.display = DisplayStyle.None;
+            linssit.schedule.Execute(PaivitaNappi).Every(500);   // linssien määrä muuttuu pelin aikana
             // Pelaajan näkymä (omistaja 29.9.2026, web on malli, Siirtoseppä): kehittäjän maailmatilassa silmänappi
             // karttaselitenapin alla (sama koko ja tyyli, väli 8), valittuna = kartta kuten pelaajalla.
             Aloitusnakyma.AukiMuuttui += _ => PaivitaNappi();
@@ -304,6 +312,18 @@ namespace Matkakirja.Natiivi
         }
 
         bool nappiSallittu = true;
+        readonly Button linssit;
+
+        /// <summary>Linssit-karttanappi (web #3859): pillerivalikko suoraan Linssit-näkymään.</summary>
+        public VisualElement LinssitNappi => linssit;
+
+        static void AvaaLinssit()
+        {
+            var v = UiNakymat.Olemassa ? UiNakymat.Hae().Linssit?.Valitsin : null;
+            if (v == null) return;
+            if (!v.Auki) v.Avaa();
+            v.NaytaNakyma(Linssivalitsin.Nakyma.Linssit);
+        }
 
         /// <summary>Linssi ei päällä eikä aloitusnäkymä auki (web: aloituksessa ei selitteen nappia).</summary>
         void PaivitaNappi()
@@ -313,6 +333,9 @@ namespace Matkakirja.Natiivi
             bool sallittu = nappiSallittu && !Aloitusnakyma.AloitusAuki && (Automaattinen || !Ylapalkki.PalkkiPiilossa);
             if (!sallittu) Sulje();
             nappi.style.display = sallittu && !Automaattinen ? DisplayStyle.Flex : DisplayStyle.None;
+            bool linsseja = LinssiUi.Rekisteri?.Valittavat.Count > 0;
+            linssit.style.display = nappiSallittu && linsseja && !LinssiPaalla && !Aloitusnakyma.AloitusAuki && !Ylapalkki.PalkkiPiilossa
+                ? DisplayStyle.Flex : DisplayStyle.None;
             // Maakuntadata valmiiksi kartan tullessa näkyviin, jotta ensimmäinen napautus avaa maakunnan heti.
             if (Automaattinen && sallittu) Maakunnat.Esilataa();
         }
@@ -416,6 +439,10 @@ namespace Matkakirja.Natiivi
             bool rivissa = nappi.ClassListContains("mk-ylapalkki__vieras");
             nappi.style.top = rivissa ? StyleKeyword.Null : yla;
             nappi.style.right = rivissa ? StyleKeyword.Null : oikea;
+            // Linssit-nappi kulmassa; jos selitenappi näkyy kartalla (ei rivissä), sen vasemmalla puolella 8 pt:n välillä (web).
+            bool selite = !Automaattinen && !rivissa;
+            linssit.style.top = yla;
+            linssit.style.right = selite ? oikea + 40 + 8 : oikea;
             // Maakuntakartassa lappu peittää sen avanneen napin (omistaja 29.9.2026); sulkeminen lapun omalla ✕:llä.
             paneeli.style.top = yla;
             paneeli.style.right = oikea;

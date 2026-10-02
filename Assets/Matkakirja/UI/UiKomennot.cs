@@ -1218,6 +1218,19 @@ namespace Matkakirja.Natiivi
                     if (en[0] == "napauta") return "=" + ui.Erikoisnostot.Napauta(en.Length > 1 && int.TryParse(en[1], out int ei) ? ei : 0);
                     return "=" + ui.Erikoisnostot.Tila();
                 }
+                case "linssitnappi":
+                {
+                    // "ui linssitnappi [napauta]": Linssit-karttanappi (web #3859) — näkyvyys, paikka ja pillerivalikon näkymä.
+                    var ln = ui.Karttaselite.LinssitNappi;
+                    if (loput.Trim() == "napauta")
+                    {
+                        using (var e = ClickEvent.GetPooled()) { e.target = ln; ln.SendEvent(e); }
+                    }
+                    var lb = ln.worldBound;
+                    var lv = ui.Linssit?.Valitsin;
+                    return string.Format(CultureInfo.InvariantCulture, "=linssitnappi: näkyy {0}, {1:0},{2:0} {3:0}×{4:0}, valitsin auki {5}, näkymä {6}",
+                        ln.resolvedStyle.display == DisplayStyle.Flex, lb.xMin, lb.yMin, lb.width, lb.height, lv?.Auki, lv?.NykyinenNakyma);
+                }
                 case "kortti":
                 {
                     // "ui kortti <id> oma": oman kaupungin rivit (Tutki, Mannerlento) Liiku-rivin sijaan.
