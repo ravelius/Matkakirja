@@ -467,3 +467,57 @@ export function luoPohjaPaneeli(data, { teema, avaaja = null, sulje = null, esik
   paneeliSisalto(el, d, pohja);
   return pohja;
 }
+
+/**
+ * KUVANÄKYMÄ: koko ruudun kuva- tai 3D-näkymä (tyylikirja: teema TUMMA, kuvia 1+, sulku ✕, veto alas, Esc). Natiivissa
+ * Kuvanakyma.cs (Astronautin kamera). ✕ on LASI-teemaa (Natiivi-UI 2.10.2026: kuvan päällä olevat ohjaimet ovat lasia,
+ * kuten linssin ohjaimessa), 44 pt, pyöreä, oikeassa yläkulmassa turva-alueen sisällä. Ohinapautusta ei ole, koska
+ * näkymä täyttää ruudun. Sisältö menee el.sisalto-solmuun; kutsuja vastaa omista eleistään.
+ *
+ * @param {{teema?: string, ohjainteema?: string, nimi?: string, sulje?: Function, vetoAlas?: boolean}} [asetukset]
+ */
+export function luoPohjaKuvanakyma({ teema = 'tumma', ohjainteema = 'lasi', nimi = '', sulje = null, vetoAlas = true } = {}) {
+  pohjatLataaTyyli();
+  const el = pohjaSolmu('section', `tk-kuvanakyma tk-teema-${teema} tk-piilossa`);
+  el.setAttribute('role', 'dialog');
+  if (nimi) el.setAttribute('aria-label', nimi);
+  const sisalto = pohjaSolmu('div', 'tk-kuvanakyma__sisalto');
+  const sulku = pohjaSolmu('button', `tk-kuvanakyma__sulku tk-teema-${ohjainteema}`, '✕');
+  sulku.type = 'button';
+  sulku.setAttribute('aria-label', 'Sulje');
+  el.append(sisalto, sulku);
+  let auki = false;
+  const pohja = {
+    el, sisalto, sulku,
+    modaali: false,
+    get auki() { return auki; },
+    avaa() {
+      if (auki) return pohja;
+      auki = true;
+      requestAnimationFrame(() => el.classList.remove('tk-piilossa'));
+      pohjaPinoon(pohja);
+      return pohja;
+    },
+    sulje() {
+      if (!auki) return;
+      auki = false;
+      el.classList.add('tk-piilossa');
+      pohjaPinosta(pohja);
+      sulje?.(pohja);
+    },
+  };
+  sulku.addEventListener('click', (e) => { e.stopPropagation(); pohja.sulje(); });
+  if (vetoAlas) {
+    // Veto alas sulkee: pystysuora liike yli 2 × POHJA_VETO_PX ja selvästi enemmän pysty- kuin vaakasuunnassa.
+    let alku = null;
+    el.addEventListener('pointerdown', (e) => { alku = { x: e.clientX, y: e.clientY }; });
+    el.addEventListener('pointerup', (e) => {
+      if (!alku) return;
+      const dx = e.clientX - alku.x, dy = e.clientY - alku.y;
+      alku = null;
+      if (dy > 2 * POHJA_VETO_PX && dy > 2 * Math.abs(dx)) pohja.sulje();
+    });
+    el.addEventListener('pointercancel', () => { alku = null; });
+  }
+  return pohja;
+}

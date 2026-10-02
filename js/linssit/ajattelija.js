@@ -12,7 +12,7 @@
  */
 import { SOKRATES } from './ajattelija-sokrates.js';
 import { piirraAtlas, lisaaProjektorit, asetaProjektori } from './ajattelija-projektori.js';
-import { pohjatLataaTyyli } from '../pohjat/pohjat.js';
+import { pohjatLataaTyyli, luoPohjaKuvanakyma, luoPohjaNostokortti } from '../pohjat/pohjat.js';
 
 const R2 = 'https://media.matkakirja.app/';
 export const AJATTELIJA_KIRJASTO = `${R2}vendor/three-gltf-r185.min.js`;
@@ -98,11 +98,10 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   const THREE = await lataaKolme();
   const { GLTFLoader } = THREE;
 
-  const juuri = document.createElement('div');
-  juuri.className = 'ajattelija tk-teema-tumma';
-  juuri.setAttribute('role', 'dialog');
-  juuri.setAttribute('aria-label', `${a.nimi}: ajattelija`);
-  Object.assign(juuri.style, { position: 'fixed', inset: '0', zIndex: '60', background: '#000', overflow: 'hidden' });
+  // Pohja: KUVANÄKYMÄ (tumma, ✕ lasia, veto alas, Esc; js/pohjat/pohjat.js). Sisältö pohjan sisalto-solmuun.
+  const pohja = luoPohjaKuvanakyma({ nimi: `${a.nimi}: ajattelija`, sulje: () => sulje() });
+  const juuri = pohja.sisalto;
+  pohja.el.classList.add('ajattelija');
   const renderoija = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
   renderoija.setPixelRatio(Math.min(globalThis.devicePixelRatio || 1, 2));
   renderoija.toneMapping = THREE.AgXToneMapping;
@@ -117,12 +116,6 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     background: 'linear-gradient(to bottom, transparent 52%, rgba(0,0,0,0.05) 62%, rgba(0,0,0,0.3) 78%, rgba(0,0,0,0.58) 92%, rgba(0,0,0,0.65) 100%),'
       + ' radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.18) 100%)',
   });
-  const sulku = document.createElement('button');
-  sulku.type = 'button';
-  sulku.className = 'tk-nappi ajattelija-sulku';
-  sulku.textContent = '✕';
-  sulku.setAttribute('aria-label', 'Sulje');
-  Object.assign(sulku.style, { position: 'absolute', top: 'calc(12px + env(safe-area-inset-top, 0px))', right: '12px', zIndex: '2' });
   // Nimi, kysymys ja lähderivi (css/pohjat/pinnat/ajattelija.css); näkyvyys aikajanalta.
   pohjatLataaTyyli();
   const nimi = document.createElement('p');
@@ -142,8 +135,9 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   const lahdeViite = document.createElement('span');
   lahdeViite.className = 'ajattelija-lahde__viite';
   lahde.append(lahdeEl, lahdeViite);
-  juuri.append(renderoija.domElement, vinjetti, nimi, kysymys, lahde, sulku);
-  koti.appendChild(juuri);
+  juuri.append(renderoija.domElement, vinjetti, nimi, kysymys, lahde);
+  koti.appendChild(pohja.el);
+  pohja.avaa();
 
   const kohtaus = new THREE.Scene();
   // Blenderin maailma 0,012 (lineaarinen) näkyy AgX:n jälkeen lähes mustana (#0b0c10 mallikuvissa); tausta
@@ -403,9 +397,19 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   introAani.onerror = () => { introAani.dataset.puuttuu = '1'; };
   let aaniSoi = false;
   /** Globaali ruutu G: 1–120 prologi, sen jälkeen kierros (r = G − 120). */
+  // Kierroksen lopussa "Sokrateen elämä" -lappu NOSTOKORTTI-pohjalla (teema tumma) KUVANÄKYMÄN sisällä.
+  let lappu = null;
+  function avaaLappu() {
+    if (lappu) return;
+    lappu = luoPohjaNostokortti({ yla: a.nimi, otsikko: a.elama.otsikko, kappaleet: a.elama.kappaleet }, { teema: 'tumma' });
+    if (!lappu) return;
+    pohja.el.appendChild(lappu.el);
+    lappu.avaa();
+  }
   function asetaGlobaali(G) {
     if (G <= pr0.loppu) asetaPrologi(Math.max(1, G));
     else asetaRuutu(Math.min(G - pr0.loppu, T.pito));
+    if (G - pr0.loppu >= T.pito && ruutuOhitus == null) avaaLappu();
   }
 
   // Koko ja kuvasuhde.
@@ -482,17 +486,14 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     kaynnissa = false;
     clearInterval(mittariAjastin);
     kokoVahti.disconnect();
-    document.removeEventListener('keydown', nappain, true);
+    pohja.sulje();
     for (const x of [aani, introAani]) { x.pause(); x.src = ''; }
     renderoija.dispose();
     atlas.dispose();
     kaiku?.dispose();
-    juuri.remove();
+    pohja.el.remove();
     sulkeutui?.();
   }
-  const nappain = (e) => { if (e.key === 'Escape') { e.stopPropagation(); sulje(); } };
-  document.addEventListener('keydown', nappain, true);
-  sulku.addEventListener('click', sulje);
   const kahva = {
     sulje, mittari,
     /** Testeille: pysäytä aika kierroksen ruutuun r (Blender v7–v10; null = juokse). */
@@ -500,6 +501,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     /** Testeille: prologin ruutu p (1–120). */
     prologi: (p) => { ruutuOhitus = p; },
     nollaaMittari: () => { valit.length = 0; edellinen = 0; },
+    /** Testeille: avaa lappu heti. */
+    lappu: () => avaaLappu(),
     /** Testeille: ääniraitojen tila (kello = pääraita). */
     aanitila: () => ({ paa: aani.currentTime, intro: introAani.currentTime, soi: !aani.paused, introSoi: !introAani.paused }),
   };

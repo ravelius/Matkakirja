@@ -66,3 +66,18 @@ test('vaihe 3: prologi, intron leikkaukset, nimi ja kysymys, kaiku ja äänirait
   assert.doesNotMatch(css, /#[0-9a-f]{3,6}\b|rgba?\(|\d+ms/i, 'pinnassa vain tokenit');
   assert.match(css, /font-size: var\(--tk-koko-arkki\);/);
 });
+
+test('vaihe 4: KUVANÄKYMÄ-pohja (✕ lasia, veto alas, Esc), lappu NOSTOKORTTI tummana, Pulun viisi kysymystä', () => {
+  const js = lue('../js/linssit/ajattelija.js');
+  assert.match(js, /luoPohjaKuvanakyma\(\{ nimi: `\$\{a\.nimi\}: ajattelija`/);
+  assert.match(js, /luoPohjaNostokortti\(\{ yla: a\.nimi, otsikko: a\.elama\.otsikko, kappaleet: a\.elama\.kappaleet \}, \{ teema: 'tumma' \}\)/);
+  assert.doesNotMatch(js, /tk-nappi ajattelija-sulku/, 'oma ✕ korvattu pohjalla');
+  assert.equal(SOKRATES.elama.otsikko, 'Sokrateen elämä');
+  assert.equal(SOKRATES.elama.kappaleet.length, 7);
+  assert.equal(SOKRATES.pulunKysymykset.length, 5);
+  assert.ok(SOKRATES.pulunKysymykset.every((k) => k.endsWith('?') && k.length <= 50));
+  const css = lue('../css/pohjat/kuvanakyma.css');
+  assert.match(css, /width: var\(--tk-nappi-osuma\);/);
+  assert.match(css, /border-radius: var\(--tk-kulma-pilleri\);/);
+  assert.doesNotMatch(css, /#[0-9a-f]{3,6}\b|rgba?\(|\d+ms/i);
+});

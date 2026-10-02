@@ -88,6 +88,31 @@ export const SOKRATES = Object.freeze({
    * musiikki 0–21 s, vaihdettavissa ilman uutta ajoitusta (Strauss on suojattu Espanjassa 2029 loppuun; omistajan
    * päätös musiikista kesken 2.10.2026). Puuttuva intro jättää vain intron hiljaiseksi.
    */
+  /*
+   * LAPPU "Sokrateen elämä" (NOSTOKORTTI, teema tumma) kierroksen lopussa. Teksti: Sisältökirjuri, docs/raportit/
+   * sisaltokirjuri-sokrates-pilotti-20261001.md osio 6 (haara sisalto-pelikatalogi-20260927), Päätoimittajan korjauksin;
+   * lähteet osion taulukossa. Omistajan OK lapulle puuttuu 2.10.2026: vain kehityslipun takana.
+   */
+  elama: {
+    otsikko: 'Sokrateen elämä',
+    kappaleet: [
+      { otsikko: 'Kivenhakkaajan poika', teksti: 'Sokrates syntyi Ateenassa vuonna 470 tai 469 eaa. kivenhakkaaja Sofroniskoksen ja kätilö Fainaretan poikana.' },
+      { otsikko: 'Sotilas', teksti: 'Peloponnesolaissodassa hän taisteli raskaana jalkaväkimiehenä Potidaiassa, Amfipoliksessa ja Delionissa. Platonin Pidoissa Alkibiades kertoo, että Sokrates käveli talvella jäällä paljain jaloin, seisoi kerran aamusta seuraavaan aamuun paikallaan ajatuksiinsa vaipuneena ja pelasti haavoittuneen Alkibiadeen taistelussa.' },
+      { otsikko: 'Delfoin oraakkeli', teksti: 'Ystävä Khairefon kysyi Delfoin oraakkelilta, onko kukaan Sokratesta viisaampi. Oraakkeli vastasi, ettei ole. Sokrates ryhtyi sen jälkeen kysymään ateenalaisilta viisailta, mitä he oikeasti tiesivät.' },
+      { otsikko: 'Oikeudenkäynti', teksti: 'Vuonna 399 eaa. kolme ateenalaista syytti häntä jumalattomuudesta ja nuorison turmelemisesta, ja tuomaristo julisti hänet syylliseksi ja tuomitsi hänet kuolemaan.' },
+      { otsikko: 'Ei pakoa', teksti: 'Ystävät tarjosivat hänelle keinoa paeta vankilasta, mutta hän kieltäytyi: Platonin Kritonissa hän sanoo, ettei vääryyttä saa tehdä koskaan, ei edes vääryyden vastaukseksi.' },
+      { otsikko: 'Viimeiset sanat', teksti: 'Hän joi maljallisen myrkkykatkoa, käveli, kunnes jalat tuntuivat raskailta, ja asettui sitten makuulle. Platonin mukaan hänen viimeiset sanansa olivat: "Kriton, olemme Asklepiokselle kukon velkaa. Maksakaa se, älkää unohtako."' },
+      { teksti: 'Sokrates ei kirjoittanut itse mitään. Lähes kaikki, mitä hänestä tiedetään, tulee Platonilta, Ksenofonilta ja Aristofanekselta; myös Aristoteles kertoo hänestä, mutta toisen käden tietoon perustuen.' },
+    ],
+  },
+  // PULU kierroksen lopussa: viisi kysymystä (Sisältökirjuri 7.3, omistaja hyväksyi 1.10. klo 23.1x).
+  pulunKysymykset: [
+    'Mitä sokraattinen kysyminen tarkoittaa?',
+    'Mitä Sokrates tarkoitti tietämättömyydellään?',
+    'Millaista Sokrateen arki Ateenassa oli?',
+    'Miten Sokrates vaikutti Platoniin ja filosofiaan?',
+    'Missä sokraattinen kysyminen näkyy nykyään?',
+  ],
   aani: { paa: 'ajattelijat/sokrates/v1/kierros1-paa.mp3', intro: 'ajattelijat/sokrates/v1/kierros1-intro.mp3' },
   syke: 'ajattelijat/sokrates/v1/syke-satie.json',
   /*
