@@ -20,4 +20,5 @@ export const POHJAT_TYYLIT = [
   'css/pohjat/pinnat/karttaselite.css',
   'css/pohjat/pinnat/linssin-valikko.css',
   'css/pohjat/pinnat/linssivalitsin.css',
+  'css/pohjat/pinnat/ajattelija.css',
 ];

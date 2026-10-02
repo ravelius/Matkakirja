@@ -27,6 +27,7 @@ const SHELL = [
   './css/pohjat/pinnat/karttaselite.css',
   './css/pohjat/pinnat/linssin-valikko.css',
   './css/pohjat/pinnat/linssivalitsin.css',
+  './css/pohjat/pinnat/ajattelija.css',
   // Nosto aukeaa kuva edellä (js/nostokuva.js lataa tyylinsä itse).
   './css/nostokuva.css',
   './css/kuvasarja.css',

@@ -44,3 +44,24 @@ test('projektori on valoa pinnalla: lisäys diffuusiin valoon, ei emissioon', ()
   assert.match(p, /reflectedLight\.directDiffuse \+= BRDF_Lambert\(diffuseColor\.rgb\) \* projektoriValo\(/);
   assert.doesNotMatch(p, /totalEmissiveRadiance/);
 });
+
+test('vaihe 3: prologi, intron leikkaukset, nimi ja kysymys, kaiku ja ääniraita kellona (Blender v7–v10)', () => {
+  const pr = SOKRATES.prologi;
+  assert.deepEqual([pr.kytkin, pr.taysi, pr.loppu], [30, 58, 120]);
+  assert.equal(pr.valot.length, 3);
+  assert.deepEqual(SOKRATES.intro.otokset.map(([r]) => r), [1, 15, 57, 119, 236, 259]);
+  assert.deepEqual(SOKRATES.ajat.nimi, [282, 372]);
+  assert.deepEqual(SOKRATES.ajat.kysymys, [373, 461]);
+  assert.deepEqual(SOKRATES.ajat.kaiku, [965, 1440]);
+  assert.equal(SOKRATES.vuodet, 'n. 470–399 eaa.');
+  // Linnanrakentaja 2.10.: kaikuvoima 20 (otsa), täyte 0,10 × aurinko, seepia 1/0,78/0,52.
+  assert.equal(SOKRATES.kaiku.voima, 20);
+  assert.equal(SOKRATES.kaiku.tayte.osuus, 0.10);
+  assert.deepEqual(SOKRATES.kaiku.savy, [1.0, 0.78, 0.52]);
+  const js = lue('../js/linssit/ajattelija.js');
+  assert.match(js, /G = pr0\.loppu \+ aani\.currentTime \* RUUTUA_S/, 'ääniraita on kierroksen kello');
+  assert.match(js, /return e\.suunta\.clone\(\);/, 'auringon avaimia ei saa muuttaa paikallaan');
+  const css = lue('../css/pohjat/pinnat/ajattelija.css');
+  assert.doesNotMatch(css, /#[0-9a-f]{3,6}\b|rgba?\(|\d+ms/i, 'pinnassa vain tokenit');
+  assert.match(css, /font-size: var\(--tk-koko-arkki\);/);
+});

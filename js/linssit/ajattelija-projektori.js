@@ -78,6 +78,8 @@ export function lisaaProjektorit(THREE, materiaali, atlasTekstuuri) {
     pE: { value: Array.from({ length: N }, () => new THREE.Vector4()) },
     pF: { value: Array.from({ length: N }, () => new THREE.Vector4()) },
     pVari: { value: new THREE.Color(1, 1, 1) },
+    pKaiku: { value: null },
+    pKaikuVari: { value: new THREE.Color(1, 1, 1) },
   };
   materiaali.onBeforeCompile = (shader) => {
     Object.assign(shader.uniforms, uniformit);
@@ -97,8 +99,10 @@ uniform vec4 pB[P_ENINTAAN]; // cos kulma, sin kulma, pystysiirto vM, voima
 uniform vec4 pC[P_ENINTAAN]; // atlas v0, v1 (terävä), v0, v1 (sumea; = terävä, jos ei sumeaa)
 uniform vec4 pD[P_ENINTAAN]; // uMax, ca, syvyys, toisto (0 = CLIP, 1 = REPEAT)
 uniform vec4 pE[P_ENINTAAN]; // projektorin paikka (maailma), keilan cos ulkoreuna
-uniform vec4 pF[P_ENINTAAN]; // keilan cos sisäreuna, keskitys (0,5 päälause, 0 rivi)
+uniform vec4 pF[P_ENINTAAN]; // keilan cos sisäreuna, keskitys (0,5 päälause, 0 rivi), kaiku (1 = kaikukuva)
 uniform vec3 pVari;
+uniform sampler2D pKaiku;     // kaikukuva (v8): harmaasävy, valoa vain sisällössä
+uniform vec3 pKaikuVari;      // seepia
 float pNayte(int i, float jx, float jy, float sk, float sumeus) {
   vec4 a = pA[i]; vec4 b = pB[i]; vec4 c = pC[i]; vec4 d = pD[i];
   float x = jx * a.x * sk, y = jy * a.x * sk;
@@ -109,6 +113,7 @@ float pNayte(int i, float jx, float jy, float sk, float sumeus) {
   // toisivat muuten viereisen atlasrivin palasia katkoviivaksi.
   float reuna = smoothstep(0.0, 0.15, v) * smoothstep(1.0, 0.85, v);
   if (d.w < 0.5 && (u <= 0.0 || u >= 1.0)) return 0.0;
+  if (pF[i].z > 0.5) return texture2D(pKaiku, vec2(u, 1.0 - v)).r;
   float au = u * d.x;   // toistorivi: jatkuva u, atlas kääritään (RepeatWrapping)
   float terava = texture2D(pAtlas, vec2(au, mix(c.x, c.y, 1.0 - v)), -0.75).r;
   if (sumeus <= 0.0) return terava * reuna;
@@ -133,9 +138,9 @@ vec3 projektoriValo(vec3 nW) {
     vec3 t = ca > 0.0
       ? vec3(pNayte(i, jx, jy, 1.0 + ca, sumeus), pNayte(i, jx, jy, 1.0, sumeus), pNayte(i, jx, jy, 1.0 - ca, sumeus))
       : vec3(pNayte(i, jx, jy, 1.0, sumeus));
-    summa += t * (pB[i].w * keila * nl / (r * r));
+    summa += t * (pF[i].z > 0.5 ? pKaikuVari : pVari) * (pB[i].w * keila * nl / (r * r));
   }
-  return summa * pVari;
+  return summa;
 }`)
       .replace('#include <lights_fragment_end>', `#include <lights_fragment_end>
 reflectedLight.directDiffuse += BRDF_Lambert(diffuseColor.rgb) * projektoriValo(inverseTransformDirection(normal, viewMatrix));`);
@@ -147,7 +152,7 @@ reflectedLight.directDiffuse += BRDF_Lambert(diffuseColor.rgb) * projektoriValo(
 /** Asettaa projektorin i: paikka ja kohde (three-koordinaatit), atlasrivi, mitat ja voima. */
 export function asetaProjektori(THREE, u, i, {
   paikka, kohde, etaisyys, nauhaKork, rivi, sumeaRivi = null, ala, blend = 0.45, kulma = 0, vM = 0, voima = 0,
-  siirto = 0, ca = 0, syvyys = 0, toisto = false, atlasKorkeus,
+  siirto = 0, ca = 0, syvyys = 0, toisto = false, atlasKorkeus, kaiku = null,
 }) {
   const kamera = new THREE.PerspectiveCamera();
   kamera.position.copy(paikka);
@@ -155,17 +160,18 @@ export function asetaProjektori(THREE, u, i, {
   kamera.lookAt(kohde);
   kamera.updateMatrixWorld(true);
   u.pNakyma.value[i].copy(kamera.matrixWorldInverse);
+  // Kaikukuva: rivi = { lev, korkeus } kuvan pikseleinä, nauhaKork = kuvan korkeus metreinä (lev × K / L).
   const nauhaLev = nauhaKork * rivi.lev / rivi.korkeus;
   u.pA.value[i].set(etaisyys, nauhaLev, nauhaKork, siirto);
   u.pB.value[i].set(Math.cos(kulma), Math.sin(kulma), vM, voima);
   const s = sumeaRivi ?? rivi;
-  const v0 = rivi.y / atlasKorkeus, v1 = (rivi.y + rivi.korkeus) / atlasKorkeus;
+  const v0 = (rivi.y ?? 0) / atlasKorkeus, v1 = ((rivi.y ?? 0) + rivi.korkeus) / atlasKorkeus;
   const sv0 = (s === rivi && rivi.sumea ? rivi.y + rivi.korkeus + 16 : s.y) / atlasKorkeus;
   u.pC.value[i].set(v0, v1, rivi.sumea ? sv0 : v0, rivi.sumea ? sv0 + rivi.korkeus / atlasKorkeus : v1);
-  u.pD.value[i].set(rivi.uMax, ca, syvyys, toisto ? 1 : 0);
+  u.pD.value[i].set(rivi.uMax ?? 1, ca, syvyys, toisto ? 1 : 0);
   // Blender: spot_size = 2,4·atan(ala / 2 / etäisyys) koko kulmana, spot_blend reunan pehmeys.
   const puoli = 1.2 * Math.atan(ala / 2 / etaisyys);
   u.pE.value[i].set(paikka.x, paikka.y, paikka.z, Math.cos(puoli));
-  u.pF.value[i].set(Math.cos(puoli * (1 - blend)), toisto ? 0 : 0.5, 0, 0);
+  u.pF.value[i].set(Math.cos(puoli * (1 - blend)), toisto ? 0 : 0.5, kaiku ? 1 : 0, 0);
   return { nauhaLev };
 }

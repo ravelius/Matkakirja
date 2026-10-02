@@ -13,7 +13,7 @@
 export const SOKRATES = Object.freeze({
   tunnus: 'sokrates',
   nimi: 'Sokrates',
-  vuodet: '469–399 eaa.',
+  vuodet: 'n. 470–399 eaa.',
   kysymys: 'Miten pitäisi elää?',
   // GLB: proto-3d/_valmiit/sokrates-bysti/v1 (SMK KAS635, PDM 1.0; Scan the World / SMK). L1 ~50 k kolmiota + normaalikartta.
   malli: 'ajattelijat/sokrates/v1/sokrates-L1.glb',
@@ -39,8 +39,52 @@ export const SOKRATES = Object.freeze({
       korkeus: 0.025625, kameraKulma: 55, kameraMatka: 0.11,
     },
   },
-  // Kierros 1 (v7/v10, 30 r/s): lähestyminen Rembrandtista otsalle, 38a, kaari ja pito.
-  ajat: { lahesty: [462, 555], vieritys: [525, 895], proj: [555, 900], kaariLoppu: 965, pito: 1450 },
+  // Kierros 1 (v7/v10, 30 r/s): intro 1–281, Rembrandt + nimi 282–372, kysymys 373–461, lähestyminen otsalle,
+  // 38a, lähderivi, kaiku (b-luenta) ja pito. Ääniraita alkaa ruudusta 0 (sokrates_aani.sh).
+  ajat: {
+    nimi: [282, 372], kysymys: [373, 461], lahesty: [462, 555], vieritys: [525, 895], proj: [555, 900],
+    lahde: [902, 950], kaariLoppu: 965, kaiku: [965, 1440], pito: 1450,
+  },
+  /*
+   * PROLOGI (omistaja 2.10. 08.5x; kaikkien ajattelijoiden vakioaloitus, sokrates_bysti.py --prologi): 0–1 s pimeää →
+   * kytkin napsahtaa → takavalo ja reunavalot syttyvät hehkulangan tavoin (t^2,2 ja pieni värähdys) → siluetti
+   * hehkuvaa levyä vasten → leikkaus introon. 120 ruutua.
+   */
+  prologi: {
+    kytkin: 30, taysi: 58, loppu: 120,
+    kamera: { paikka: [-0.22, -1.15, 0.34], katse: [0.0, -0.04, 0.30], mm: 35 },
+    levy: { paikka: [0, 0.9, 0.4], vari: 0.20 },
+    vari: [1.0, 0.86, 0.66],
+    valot: [
+      { paikka: [0.0, 0.30, 0.40], kohde: [0.0, 0.9, 0.42], teho: 9, keila: 70, blend: 1.0 },      // kehä levyllä pään takana
+      { paikka: [-0.30, 0.55, 0.42], kohde: [0.0, -0.06, 0.42], teho: 45, keila: 26, blend: 0.45 }, // reunavalo vasemmalta takaa
+      { paikka: [0.30, 0.55, 0.42], kohde: [0.0, -0.06, 0.42], teho: 45, keila: 26, blend: 0.45 },  // reunavalo oikealta takaa
+    ],
+  },
+  // INTRO (v7): leikkaukset Zarathustran iskuihin (CONSTANT) ja aurinko kiertää takaa kohti Rembrandtia.
+  intro: {
+    otokset: [   // [ruutu, kameran paikka, katsepiste, mm]
+      [1, [0.62, -0.10, 0.38], [0.0, -0.10, 0.38], 50],
+      [15, [0.26, -0.30, 0.72], [0.0, -0.09, 0.40], 35],
+      [57, [-0.05, -0.36, 0.13], [0.0, -0.10, 0.36], 28],
+      [119, [0.30, -0.27, 0.47], [0.0, -0.11, 0.43], 50],
+      [236, [0.30, -0.34, 0.42], [0.03, -0.10, 0.38], 50],
+      [259, [0.30, -0.36, 0.22], [0.02, -0.11, 0.30], 50],
+    ],
+    valo: [[1, [0.55, 0.85, 0.30]], [119, [0.9, 0.55, 0.35]], [236, [1.0, -0.05, 0.6]], [259, [0.85, -0.45, 0.75]], [282, [0.70, -0.70, 0.85]]],
+  },
+  /*
+   * KAIKU (v8–v10): kaikukuva samalla videotykillä otsalla b-luennan ajan, ainoana valona (aurinko ja maailma
+   * hiipuvat 45 ruudussa), seepiana, liukuu hitaasti; voima sykkii Satien verhokäyrän mukaan (1 ± 0,15). Himmeä,
+   * viileähkö täyte vasemmalta ylhäältä (0,10 × aurinko). Kuva on paikkamerkki (Carstens 1788, PD), Codex korvaa.
+   */
+  kaiku: {
+    kuva: 'ajattelijat/sokrates/v1/kaiku-sotilas.png',
+    lev: 0.11, etaisyys: 0.6, voima: 20, liuku: 0.05, savy: [1.0, 0.78, 0.52], blend: 0.3,
+    tayte: { osuus: 0.10, suunta: [-0.65, -0.25, 0.7], vari: [0.90, 0.94, 1.0], keila: 45, blend: 0.7 },
+  },
+  aani: 'ajattelijat/sokrates/v1/kierros1.mp3',
+  syke: 'ajattelijat/sokrates/v1/syke-satie.json',
   /*
    * TAUSTAVIRTA (v10, omistaja 2.10. 08.2x–08.4x; sokrates_bysti.py paan_virta + tausta_rivi): 20 henkeä
    * tekstiriviä koko pään yli viidestä projektorista; jokaisella oma tahti (0,0007 × 1,18^k uv/ruutu, sekoitettuna),
