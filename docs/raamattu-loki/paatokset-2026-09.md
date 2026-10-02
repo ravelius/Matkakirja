@@ -10179,3 +10179,7 @@ Pelikoodari ilmoitti pariteettieron valikko V2:ssa (#3875 vs natiivi 72d93b6b): 
 ## OMISTAJA (KORTTI): VALIKKO V2 ILMAN ×:ÄÄ JA VÄLIVIIVOJA HYVÄKSYTTY (2.10.2026) (2.10.2026 klo 20.54)
 
 Omistaja hyväksyi 2.10.2026 klo 20.5x kortilla valikon kuvat: natiivi 7aebac2e (ENNEN 128 | JÄLKEEN | Tietäjätaso, otsikko pelkkä kapiteeli) ja web #3875 + #3864/#3865 (selkeä £ Matkakirja Punta -kirjasimella). Vastaus: 'Kelpaa'. Web #3875 menee junaan #3864 → #3865:n jälkeen. Natiivi (natiivi-ui/valikko-v2-siisti e0ba9bd6) menee Natiivisepän junaan 129:n jälkeen.
+
+## OMISTAJA (KORTTI): KIPSIPÄÄT NATIIVISSA HYVÄKSYTTY; ROOMA-MAAKUNTANIMI ERILLINEN VIKA (2.10.2026) (2.10.2026 klo 20.59)
+
+Omistaja hyväksyi 2.10.2026 klo 20.5x kortilla kipsipäiden kuvaparit natiivista (Linssiseppä edb73ea4: Sokrates [39.49, 23.98] merellä Athoksen alla, Marcus [42.82, 12.17] Chiantin ja Val d'Orcian välissä; kumpikaan ei osu nimiin, ja kaupunki- ja nostokortit piirtyvät pään päälle): 'Kelpaa'. Web #3874 ja natiivi erikoisnostot-3 54358623 menevät seuraaviin juniin. Erillinen löydös: natiivin Nimikerros.cs:n maakuntanimi ROOMA hyppäsi noin 44 N:ään, kun lähin ehdokas oli varattu. Korjaus (Natiiviseppä, natiiviseppa/nimet-maakunta, webin nimet.js mallina): ehdokas kelpaa vain maakunnan tai ankkurin rajan sisältä, muuten nimi jätetään pois. Karttaseppä tarkistaa Rooman ehdokaspisteet ja webin.
