@@ -57,6 +57,9 @@ export const REPLIIKIT = Object.freeze({
   kuva: '[amused] Hymyile, kamera on valmis! [warmly] Ota kuva – verrataan sitä astronautin oikeaan kuvaan samalta paikalta.',
 });
 
+/** Dokumentin tapahtuma kävelyn alkaessa ja päättyessä (detail.vaihe): Pulun taulu sulkeutuu (natiivi Alkoi). */
+export const KAVELY_TAPAHTUMA = 'matkakirja:iss-kavely';
+
 /** Lyhyt ohjeteksti vaiheen napautukselle (null = ei napautettavaa). */
 export const OHJEET = Object.freeze({
   ilmalukko: 'Napauta: avaa luukku',

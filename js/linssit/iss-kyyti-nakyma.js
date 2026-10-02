@@ -51,7 +51,7 @@ import { asetaCupola, puraCupola } from './cupola-aani.js';
 // Avaruuskävely (Päätoimittaja 2.10.2026: web pariteettiin, natiivi malli): tilakone ja näkymä.
 import {
   luoKavely, VAIHE as KAVELYN_VAIHE, seuraavaNousu, kelausHetki, kelauksenHuippu, auringonSuunta, aurinkoisuus as kavelynAurinko, reunaValo,
-  lahinKohde, paikkaTeksti, NOUSU_KERROIN,
+  lahinKohde, paikkaTeksti, NOUSU_KERROIN, KAVELY_TAPAHTUMA,
 } from './iss-kavely.js';
 import { luoKavelyNakyma } from './iss-kavely-nakyma.js';
 
@@ -1314,6 +1314,9 @@ export function luoIssKyytiNakyma({
     }
     rakennaUi().kavelyNakyma?.vaihe(v, kavely.ohje, nyt);
     paivitaUi();
+    if (v === KAVELYN_VAIHE.ilmalukko || v === KAVELYN_VAIHE.ei) {
+      try { doc.dispatchEvent?.(new ikkuna.CustomEvent(KAVELY_TAPAHTUMA, { detail: { vaihe: v } })); } catch { /* ei tapahtumia */ }
+    }
   }
 
   /** Oma kuva: pallo piirretään heti ja etuala koostetaan päälle (natiivi ScreenCapture), sitten vertailukortti. */

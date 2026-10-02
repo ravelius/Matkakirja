@@ -555,6 +555,9 @@ export function luoAstroTaulu({
 } = {}) {
   const k = { avaruus, kuvaAuki, kuviaOn };
   let purettu = false;
+  // Avaruuskävely alkoi (js/linssit/iss-kyyti-nakyma.js): taulu pois kävelyn tieltä (natiivi AvaruuskavelyNakyma.Alkoi).
+  const kavelyAlkoi = (e) => { if (e?.detail?.vaihe === 'ilmalukko') sulje({ syy: 'kavely' }); };
+  try { doc?.addEventListener?.('matkakirja:iss-kavely', kavelyAlkoi); } catch { /* ei dokumenttia */ }
   let auki = false;
   let avauksia = 0;
   let automaattiTila = automaatti ? 'odottaa' : 'pois';
@@ -586,6 +589,7 @@ export function luoAstroTaulu({
 
   function avaa({ syy = 'napautus' } = {}) {
     if (purettu) return false;
+    if (syy !== 'napautus' && nykyinenMoodi(k) === 'kavely') return false;   // ei automaattista avausta kävelyn päälle
     if (syy === 'napautus' && liviaPuhuu(ui, tervetulo)) {
       // Pelaajan napautus on pyyntö juuri nyt: puhe vaikenee (ks. otsikko).
       try { tervetulo?.ohita?.(); } catch { /* jo ohi */ }
@@ -792,6 +796,7 @@ export function luoAstroTaulu({
         doc?.removeEventListener?.('click', pulunNapautus, { capture: true });
         doc?.removeEventListener?.('pointerdown', ulkoNapautus, { capture: true });
         doc?.removeEventListener?.('keydown', nappain, { capture: true });
+        doc?.removeEventListener?.('matkakirja:iss-kavely', kavelyAlkoi);
       } catch { /* ei dokumenttia */ }
       try { n?.pura?.(); } catch { /* jo poissa */ }
     },
