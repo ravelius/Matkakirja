@@ -109,14 +109,13 @@ namespace Matkakirja.Natiivi
 
         VisualElement Poyta => Kytkinpoyta ? poyta.Juuri : ohjaimet;
 
-        /// <summary>Testikomento `astro kyyti kytkin lista|kansi|nopeus <i>|tila` (kuvaparit ilman kosketusta).</summary>
+        /// <summary>Testikomento `astro kyyti kytkin lista|nopeus <i>|tila` (kuvaparit ilman kosketusta).</summary>
         public static string KytkinTesti(string[] a)
         {
             var n = instanssi;
             if (n == null) return "kytkin: ei kyytinäkymää";
             string k = a.Length > 0 ? a[0] : "tila";
             if (k == "lista") n.VaihdaLista();
-            else if (k == "kansi") n.poyta.Oma.AvaaKansi();
             else if (k == "nopeus" && a.Length > 1 && int.TryParse(a[1], out int i) && i >= 0 && i < Simukello.Nopeudet.Length)
                 Linssi()?.AsetaNopeus(Simukello.Nopeudet[i]);
             var r = n.poyta.Juuri.worldBound;
@@ -375,7 +374,7 @@ namespace Matkakirja.Natiivi
                     AstronauttiKerros.KuukausiPakotettu = kk == IssNyt.Kello().Month ? 0 : kk;
                     PaivitaSaatimet();
                 },
-                VaihdaLista, LennaOmaan, Poistu,
+                VaihdaLista, Kuvaa, Poistu,
                 () => { if (nopeutettu) Linssi()?.AsetaNopeus(1); });
             PaivitaPoydat(KyydinTila.Kauko);
             juuri.RegisterCallback<GeometryChangedEvent>(_ =>
@@ -497,6 +496,9 @@ namespace Matkakirja.Natiivi
         static bool omaLento;
 
         /// <summary>"Oma sijainti": lento maan keskipisteen ylle; jos maa ei ole vielä tiedossa, haku ja lento perään.</summary>
+        /// <summary>KUVAA (ISS-kamera, omistaja 1.10.2026): oletusmuoto pysty 4:5; rajausruutu ja muotovalinta tulevat UI-pohjista.</summary>
+        static void Kuvaa() => Matkakirja.Natiivi.IssKameraKuva.Hae().Laukaise();
+
         static void LennaOmaan()
         {
             if (OmaSijaintiHaku.Paikka(out var nimi, out var lat, out var lon)) { Linssi()?.LennaPaikkaan($"Oma sijainti ({nimi})", lat, lon); return; }
@@ -591,7 +593,7 @@ namespace Matkakirja.Natiivi
                 bool lennossa = tila == KyydinTila.Kohde;
                 if (!lennossa) omaLento = false;
                 poyta.Kohde.Kilpi.text = lennossa && !omaLento && viimeKohde != null ? viimeKohde.ToUpperInvariant() : "VALITSE";
-                poyta.Oma.Kilpi.text = lennossa && omaLento ? "PÄÄLLÄ" : "POIS";
+                poyta.Kuvaa.Kilpi.text = Matkakirja.Natiivi.IssKameraKuva.Tila == "valmis" ? "VALMIS" : $"{Matkakirja.Natiivi.IssKameraKuva.Edistyminen:P0}";
                 poyta.Sulku.Kilpi.text = tila == KyydinTila.Ikkuna ? "CUPOLA" : tila == KyydinTila.Seuranta ? "SEURANTA" : lennossa ? "LENTO" : "KYYTI";
             }
             if (!auki) SuljeLista();

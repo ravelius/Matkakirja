@@ -31,6 +31,12 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         _MieG("Mie g", Float) = 0.8
         _Hehku("Ilmahehku", Float) = 0.12
         _KaariVoima("Horisontin kaaren kerroin (kuvaputki, 1 = ennallaan)", Float) = 1
+        _HrKerroin("Rayleighin skaalakorkeuden kerroin näkymän säteelle (kuvaputki, 1 = ennallaan)", Float) = 1
+        _SiniKerroin("Rayleigh-sironnan sinisyys (kuvaputki, 1 = ennallaan)", Float) = 1
+        _UtuKerroin("Maan ilmaperspektiivi horisonttia kohti (kuvaputki, 1 = ennallaan)", Float) = 1
+        _KaariYdin("Kaaren ytimen (0–5 km) ja maan reunan kerroin suhteessa kaarivoimaan (kuvaputki, kun _KaariSyva > 0)", Float) = 1
+        _NousuVoima("Kiertoratanousun värjäytymä auringon ympärillä (kuvaputki, 0 = pois)", Float) = 0
+        _KaariSyva("Syvänsininen hehku ytimen yllä 5–45 km; > 0 ottaa kaaren muodon käyttöön (kuvaputki, 0 = pois)", Float) = 0
         _HehkuVari("Ilmahehkun sävy", Color) = (0.62, 0.9, 0.42, 1)
         _Lapinakyvyys("Transmittanssi-LUT", 2D) = "white" {}
         _Debug("Vianetsintä (0 = pois, 1 = T, 2 = matka/tulo, 3 = LUT)", Float) = 0
@@ -39,7 +45,7 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
         #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
         CBUFFER_START(UnityPerMaterial)
-            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku, _Debug, _KaariVoima;
+            float _Peitto, _R, _Litistys, _Ylaraja, _Voima, _Moni, _MieG, _Hehku, _Debug, _KaariVoima, _HrKerroin, _SiniKerroin, _UtuKerroin, _KaariYdin, _KaariSyva, _NousuVoima;
             float4 _Keskus, _Akseli, _Aurinko, _HehkuVari;
         CBUFFER_END
         TEXTURE2D(_Lapinakyvyys); SAMPLER(sampler_Lapinakyvyys);
@@ -177,8 +183,12 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                     float r = length(p);
                     float h = r - _R;
                     float3 tih = Tiheys(h);
+                    // KUVAPUTKEN KAARI (Linssiseppä 2 / omistaja 1.10. 19.5x: "yhtä sininen ja voimakas kaari kuin Cupola-mallikuvassa"):
+                    // paksumpi Rayleigh-kerros näkymän säteelle (HR · k; auringon läpinäkyvyys-LUT ennallaan) ja syvempi sininen
+                    // sironnassa (punainen / √k, sininen · k; ekstinktio ennallaan, jottei kaari tummu). 1 = ennallaan.
+                    tih.x = exp(-h / (HR * _HrKerroin));
                     float3 sigmaT = Ekstinktio(tih);
-                    float3 sR = BetaR * tih.x, sM = BetaMs * tih.y;
+                    float3 sR = BetaR * float3(rsqrt(max(_SiniKerroin, 0.05)), 1.0, _SiniKerroin) * tih.x, sM = BetaMs * tih.y;
                     float mus = dot(p / r, s);
                     float3 aurinko = AurinkoPisteeseen(h, mus);
                     // Monisironta (Hillaire ψ_ms karkeasti): isotrooppinen osuus auringon valosta, hämärässä himmenee.
@@ -189,6 +199,17 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                     T *= askelT;
                 }
                 L *= _Voima;
+                // Ilmaperspektiivi (kuvaputki): maahan osuvan säteen sironta voimistuu loivassa kulmassa, jolloin maa sinertyy
+                // horisonttia kohti; kohtisuoraan alas ennallaan.
+                // Päätoimittaja 1.10. 20.3x (omistajan Cupola-mallikuva): maa ja meri syvän kylläisen sinisiä, ei maitomaisia, ja
+                // valkoiset pysyvät valkoisina → lisäsironta on lähes puhdasta sinistä (punainen 0,15, vihreä 0,5): tummat pinnat
+                // ja varjot sinertyvät, mutta kirkkaat pilvet ovat jo lähellä valkoista eivätkä harmaannu.
+                if (maa && _UtuKerroin != 1.0)
+                {
+                    float kulma = saturate(-dot(d, normalize(o + d * g0)));
+                    float lisa = (_UtuKerroin - 1.0) * (1.0 - smoothstep(0.0, 0.6, kulma));
+                    L += L * lisa * float3(0.15, 0.5, 1.0);
+                }
 
                 // Ilmahehku yöllä (95 km, σ 4,5 km) säteen lähimmällä korkeudella, kuten Ilmakaaressa.
                 float tl = -dot(o, d);
@@ -200,6 +221,44 @@ Shader "Matkakirja/Linssit/Ilmakeha2"
                 // Kuvaputken kaari (Linssiseppä 1.10., Päätoimittaja: julisteen wau-tekijä): vain maan ohi kulkevat säteet, liuku
                 // 0–20 km:n sivuamiskorkeudella, jottei horisonttiin tule saumaa. 1 = ennallaan (livenäkymä).
                 L *= lerp(1.0, _KaariVoima, smoothstep(0.0, 20000.0, hmin) * (maa ? 0.0 : 1.0));
+                // Kaaren muoto (Päätoimittaja 1.10. 20.3x ja 21.1x, omistajan mallikuva: "ohut, erittäin kirkas sinivalkoinen viiva ja
+                // sen yllä kapea syvänsininen hehku, joka häipyy mustaan; siirtymä maahan jatkuva ja kirkas"). Päällä, kun _KaariSyva > 0:
+                //  - kerroin ei laske 1:een maan reunaa kohti (yllä oleva liuku 0–20 km jätti tumman violetin vyön ytimen ja maan väliin),
+                //    ja maata hipovat säteet (kulma < 0,06) saavat saman kertoimen liukuen → kirkas jatkuva siirtymä maahan;
+                //  - ydin 0–~5 km (_KaariYdin), sen punainen vaimenee (pitkän matkan punertuma näkyi violettina);
+                //  - 5–45 km sininen voimistuu ja punainen/vihreä vaimenevat, jolloin valkoinen jää ohueksi viivaksi.
+                if (_KaariSyva > 0.0)
+                {
+                    float kulmaM = maa ? saturate(-dot(d, normalize(o + d * g0))) : 0.0;
+                    float hs = maa ? 0.0 : hmin;
+                    float reuna = maa ? 1.0 - smoothstep(0.0, 0.06, kulmaM) : 0.0;
+                    float kerroin = _KaariVoima * _KaariYdin * (maa ? 1.5 : 1.0);
+                    float nyt = maa ? 1.0 : lerp(1.0, _KaariVoima, smoothstep(0.0, 20000.0, hmin));
+                    float ydin = 1.0 - smoothstep(3000.0, 6000.0, hs);
+                    // korvaa yllä tehdyn liukuvan kertoimen: ytimessä ja maata hipovissa kerroin, muualla ennallaan
+                    float tavoite = maa ? lerp(1.0, kerroin, reuna) : lerp(_KaariVoima, kerroin, ydin);
+                    L *= tavoite / max(nyt, 1e-3);
+                    L *= lerp(float3(1.0, 1.0, 1.0), float3(0.7, 0.92, 1.0), max(ydin, reuna));
+                    float vyo = smoothstep(3500.0, 7000.0, hs) * (1.0 - smoothstep(30000.0, 55000.0, hs));
+                    L *= lerp(float3(1.0, 1.0, 1.0), float3(0.35, 0.8, 1.0) * (1.0 + _KaariSyva), vyo);
+                }
+                // Kiertoratanousu (Päätoimittaja 1.10. 21.5x, omistaja: "aurinko värjäsi paljon enemmän ympäristöä ja ilmakehää"):
+                // auringon ympärillä leveä oranssi–kulta–punainen vyö kaaren alaosassa (sivuamiskorkeus 0–25 km, myös maata hipovat
+                // säteet), haalenee kaarta pitkin sivuille (kulma auringosta σ 10°, häntä σ 23°); sen yllä sininen jää. 0 = pois.
+                if (_NousuVoima > 0.0)
+                {
+                    float kulmaA = acos(clamp(dot(d, s), -1.0, 1.0));
+                    float wA = exp(-kulmaA * kulmaA / (2.0 * 0.17 * 0.17)) + 0.2 * exp(-kulmaA * kulmaA / (2.0 * 0.40 * 0.40));   // σ 10° / 23° (laite 4968e1fd: σ 17°/43° tasainen koko leveydeltä)
+                    float hsN = maa ? 0.0 : hmin;
+                    float pohja = maa ? 1.0 - smoothstep(0.0, 0.08, saturate(-dot(d, normalize(o + d * g0)))) : 1.0 - smoothstep(12000.0, 32000.0, hmin);
+                    float3 savyN = lerp(float3(1.0, 0.26, 0.05), float3(1.0, 0.70, 0.28), smoothstep(1500.0, 12000.0, hsN));
+                    float wN = wA * pohja * _NousuVoima;
+                    L = L * lerp(float3(1.0, 1.0, 1.0), float3(1.0, 0.7, 0.45), saturate(wN)) + savyN * wN * 1.4;
+                    // Kaukana auringosta reunan oma punertuma viilenee (laite 8648c410: oranssi vyö oli koko leveydeltä tasainen,
+                    // koska sivuavan säteen punertuma kerrottiin kaarivoimalla); näin oranssi keskittyy auringon ympärille.
+                    float kaukana = (1.0 - saturate(wA * 1.5)) * pohja * saturate(_NousuVoima);
+                    L *= lerp(float3(1.0, 1.0, 1.0), float3(0.5, 0.78, 1.05), kaukana);
+                }
                 float dh = hmin - 95000.0;
                 float3 nl = normalize(lahin);
                 float aalto = 0.75 + 0.25 * sin(nl.x * 23.0 + nl.y * 17.0) * sin(nl.z * 29.0 - nl.x * 11.0);

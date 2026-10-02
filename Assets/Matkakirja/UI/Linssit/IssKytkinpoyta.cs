@@ -4,7 +4,7 @@
 //   rivi 1  merkkivalo LIVE (vihreä LIVE, meripihka nopeutettu; napautus nopeutettuna = Palaa LIVE) · lukemanäyttö
 //           (rivi 1 = kyydin tietorivi ISS · 429 km · 27 550 km/h, rivi 2 = ylilento tai lennon kohde)
 //   rivi 2  NOPEUS kiertokytkin LIVE/10×/100×/1000× · PILVET nuppi · VUODENAIKA nuppi (kuukausi) · KOHDE painike
-//           (lista pöydän yläpuolelle) · OMA vipukytkin suojakannella (kansi auki → vipu → lento omaan paikkaan) · SULKU painike
+//           (lista pöydän yläpuolelle) · KUVAA painike (ISS-kamera, 1.10.; aiemmin OMA-vipu) · SULKU painike
 //
 // Pöydän leveys ruutu − 24, enintään 560 pt, keskellä; korkeus ~116 pt (iPhone 874 pt: 13 %). Tekstit piirtää peli.
 // IssKyytiNakyma omistaa toiminnot ja tilan; tämä on vain kokoonpano (A/B `astro kyyti poyta 0|1`: 0 = entinen välilehtipaneeli).
@@ -29,17 +29,16 @@ namespace Matkakirja.Natiivi
         public readonly IssKytkimet.Lukema Lukema;
         public readonly IssKytkimet.Kiertokytkin Nopeus;
         public readonly IssKytkimet.Nuppi Pilvet, Vuodenaika;
-        public readonly IssKytkimet.Painike Kohde, Sulku;
-        public readonly IssKytkimet.Vipu Oma;
+        public readonly IssKytkimet.Painike Kohde, Kuvaa, Sulku;
 
         public const float PoytaEnintaan = 560f;
 
         readonly VisualElement ylarivi, saatimet;
         readonly IssKytkimet.Kytkin[] moduulit;
-        readonly string[] osaNimet = { "live", "lukema", "nopeus", "pilvet", "kuukausi", "kohde", "oma", "poistu" };
+        readonly string[] osaNimet = { "live", "lukema", "nopeus", "pilvet", "kuukausi", "kohde", "kuvaa", "poistu" };
 
         public IssKytkinpoyta(VisualElement isa, Action<int> nopeus, Action<float> pilvet, Action<float> kuukausi,
-            Action kohde, Action oma, Action sulku, Action palaaLive)
+            Action kohde, Action kuvaa, Action sulku, Action palaaLive)
         {
             Juuri = new IssKytkimet.Pohja { name = "IssKytkinpoyta" };
             var s = Juuri.style;
@@ -67,10 +66,11 @@ namespace Matkakirja.Natiivi
             Pilvet = new IssKytkimet.Nuppi("PILVET", 0f, 1f, v => pilvet?.Invoke(v));
             Vuodenaika = new IssKytkimet.Nuppi("KUUKAUSI", 1f, 12f, v => kuukausi?.Invoke(v), kokonaisluku: true);
             Kohde = new IssKytkimet.Painike("KOHDE", "LENNÄ", () => kohde?.Invoke());
-            Oma = new IssKytkimet.Vipu("OMA PAIKKA", () => oma?.Invoke());
+            // ISS-kamera (omistaja 1.10.2026, A): KUVAA korvaa OMA PAIKKA -vivun (oma paikka on KOHDE-listan rivinä); paneeli v3.
+            Kuvaa = new IssKytkimet.Painike("KUVAA", "●", () => kuvaa?.Invoke());
             Sulku = new IssKytkimet.Painike("POISTU", "×", () => sulku?.Invoke(), leveys: 52f);   // ✕ puuttuu fontista (□)
-            foreach (var m in new VisualElement[] { Nopeus, Pilvet, Vuodenaika, Kohde, Oma, Sulku }) saatimet.Add(m);
-            moduulit = new IssKytkimet.Kytkin[] { Live, Lukema, Nopeus, Pilvet, Vuodenaika, Kohde, Oma, Sulku };
+            foreach (var m in new VisualElement[] { Nopeus, Pilvet, Vuodenaika, Kohde, Kuvaa, Sulku }) saatimet.Add(m);
+            moduulit = new IssKytkimet.Kytkin[] { Live, Lukema, Nopeus, Pilvet, Vuodenaika, Kohde, Kuvaa, Sulku };
             foreach (var m in moduulit) m.Muuttui += () => { if (asettelu != null) PaivitaKerrokset(); };
         }
 
@@ -121,7 +121,7 @@ namespace Matkakirja.Natiivi
         float poytaLeveys = 1e6f, alaReuna;
         VisualElement kerrosPohja, ryhmaEl, tekstiEl, valot, legendat;
         readonly Dictionary<IssKytkimet.Kytkin, VisualElement> osat = new Dictionary<IssKytkimet.Kytkin, VisualElement>();
-        VisualElement kaari;
+
         RenderTexture valoRt;
         Material valoMat;
         Vector4 painotA = new Vector4(-1, 0, 0, 0), painotB;
@@ -129,7 +129,7 @@ namespace Matkakirja.Natiivi
         IVisualElementScheduledItem pulssi;
         /// <summary>Painikkeen valo levossa: v1-simulaattorikuvassa 0,55 peitti legendan (LENNÄ/POISTU) → hehku vain vihjeenä.</summary>
         const float LepoValo = 0.15f;
-        static readonly string[] ValoJarjestys = { "paneeli", "live-vihrea", "live-meripihka", "kohde", "poistu" };
+        static readonly string[] ValoJarjestys = { "paneeli", "live-vihrea", "live-meripihka", "kohde", "poistu", "kuvaa" };
 
         /// <summary>Kerrostilan asettelu (puhelin | tabletti) tai null (paikkamerkit / kehys).</summary>
         public string Asettelu => asettelu;
@@ -177,7 +177,7 @@ namespace Matkakirja.Natiivi
             }
             if (m == Kohde) return ("kohde-ylos", Vector2.zero);
             if (m == Sulku) return ("poistu-ylos", Vector2.zero);
-            if (m == Oma) return ("vipu-ylos", Vector2.zero);
+            if (m == Kuvaa) return ("kuvaa-ylos", Vector2.zero);
             return (null, Vector2.zero);
         }
 
@@ -244,11 +244,6 @@ namespace Matkakirja.Natiivi
                 kr.position += siirto;
                 osat[m] = Kuvakerros(m, new Rect(kr.x - osuma.x, kr.y - osuma.y, kr.width, kr.height), "osa-" + osaNimet[i]);
                 osat[m].SendToBack();
-                if (m == Oma)
-                {
-                    var ka = IssPaneeliKuvat.Kehys(a, "kaari-0") ?? kr;
-                    kaari = Kuvakerros(m, new Rect(ka.x - osuma.x, ka.y - osuma.y, ka.width, ka.height), "osa-kaari");
-                }
             }
 
             valot = Kuvakerros(ryhmaEl, new Rect(0, 0, g.x, g.y), "IssPaneeliValot");
@@ -337,14 +332,13 @@ namespace Matkakirja.Natiivi
             Lukema.Rivi1.style.fontSize = 11f; Lukema.Rivi2.style.fontSize = 9.5f;
             kerrosPohja?.RemoveFromHierarchy(); ryhmaEl?.RemoveFromHierarchy();
             foreach (var e in osat.Values) e.RemoveFromHierarchy();
-            kaari?.RemoveFromHierarchy();
-            osat.Clear(); kerrosPohja = ryhmaEl = tekstiEl = valot = legendat = kaari = null;
+            osat.Clear(); kerrosPohja = ryhmaEl = tekstiEl = valot = legendat = null;
             Juuri.Kerros = false;
             Juuri.style.height = StyleKeyword.Null; Juuri.style.scale = StyleKeyword.Null; Juuri.style.bottom = 8; Juuri.style.overflow = StyleKeyword.Null;
             Juuri.style.paddingLeft = 10; Juuri.style.paddingRight = 10; Juuri.style.paddingTop = 8; Juuri.style.paddingBottom = 6;
             ylarivi.style.display = DisplayStyle.Flex; saatimet.style.display = DisplayStyle.Flex;
             ylarivi.Add(Live); ylarivi.Add(Lukema);
-            foreach (var m in new IssKytkimet.Kytkin[] { Nopeus, Pilvet, Vuodenaika, Kohde, Oma, Sulku }) saatimet.Add(m);
+            foreach (var m in new IssKytkimet.Kytkin[] { Nopeus, Pilvet, Vuodenaika, Kohde, Kuvaa, Sulku }) saatimet.Add(m);
             foreach (var m in moduulit)
             {
                 m.Kerros = false;
@@ -354,7 +348,7 @@ namespace Matkakirja.Natiivi
                 if (m is IssKytkimet.Saadin sd) { sd.Otsikko.style.display = DisplayStyle.Flex; sd.Kilpi.style.display = DisplayStyle.None; }
             }
             Live.Nimi.style.display = DisplayStyle.Flex;
-            Nopeus.style.width = 62; Pilvet.style.width = 62; Vuodenaika.style.width = 62; Kohde.style.width = 62; Oma.style.width = 62;
+            Nopeus.style.width = 62; Pilvet.style.width = 62; Vuodenaika.style.width = 62; Kohde.style.width = 62; Kuvaa.style.width = 62;
             Sulku.style.width = 52; Live.style.width = 44; Live.style.height = 36; Lukema.style.width = StyleKeyword.Null; Lukema.style.marginLeft = 6;
             if (valoRt != null) { valoRt.Release(); UnityEngine.Object.Destroy(valoRt); valoRt = null; }
             asettelu = null;
@@ -370,8 +364,7 @@ namespace Matkakirja.Natiivi
                 if (osat.TryGetValue(n, out var e)) AsetaKuva(e, IssPaneeliKuvat.Kuva(a, "osa-nuppi-" + IssPaneeliKuvat.NupinKehys(n.Kulma).ToString("00")));
             if (osat.TryGetValue(Kohde, out var ok)) AsetaKuva(ok, IssPaneeliKuvat.Kuva(a, Kohde.Painettu ? "osa-kohde-alas" : "osa-kohde-ylos"));
             if (osat.TryGetValue(Sulku, out var os)) AsetaKuva(os, IssPaneeliKuvat.Kuva(a, Sulku.Painettu ? "osa-poistu-alas" : "osa-poistu-ylos"));
-            if (osat.TryGetValue(Oma, out var ov)) AsetaKuva(ov, IssPaneeliKuvat.Kuva(a, Oma.Alhaalla ? "osa-vipu-alas" : "osa-vipu-ylos"));
-            AsetaKuva(kaari, IssPaneeliKuvat.Kuva(a, "osa-kaari-" + Oma.KansiKehys));
+            if (osat.TryGetValue(Kuvaa, out var ov)) AsetaKuva(ov, IssPaneeliKuvat.Kuva(a, Kuvaa.Painettu ? "osa-kuvaa-alas" : "osa-kuvaa-ylos"));
 
             // Legendojen taustavalo: valkoinen LIVE:nä, meripihka nopeutettuna (PALAA).
             bool meri = Live.Meripihka;
@@ -384,7 +377,7 @@ namespace Matkakirja.Natiivi
             bool live = Live.Tila == IssKytkimet.Tila.Aktiivinen;
             float Nappi(IssKytkimet.Painike p) => p.Tila == IssKytkimet.Tila.Pois ? 0f : p.Painettu || p.Tila == IssKytkimet.Tila.Aktiivinen ? 1f : LepoValo;
             var uA = new Vector4(1f, live && !meri ? 1f : 0f, live && meri ? 1f : 0f, Nappi(Kohde));
-            var uB = new Vector4(Nappi(Sulku), 0f, 0f, 0f);
+            var uB = new Vector4(Nappi(Sulku), Nappi(Kuvaa), 0f, 0f);
             if (uA == painotA && uB == painotB && valoRt != null && valoRt.IsCreated()) return;
             painotA = uA; painotB = uB;
             PiirraValot();
