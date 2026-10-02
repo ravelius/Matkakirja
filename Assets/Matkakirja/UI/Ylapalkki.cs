@@ -614,8 +614,6 @@ namespace Matkakirja.Natiivi
                 float vasenReuna = Mathf.Max(r.x + 12f * yksikko, KulmaVara(yla + (rivi - lkArvio) / 2f, 0f, kulmaR, KulmaMarginaali * yksikko));
                 // Omistaja 2.10.2026 klo 16.0x: pilleri saaren keskilinjalle (ei alemmas kuin logo) ja yhtä kauas näytön reunasta
                 // kuin logo vasemmalla; kulmakaaren vara lasketaan nostetusta yläreunasta.
-                pilleriNosto = alemmas;
-                pilleriRivi = rivi;
                 KeskitaPilleri();
                 float oikeaVara = Mathf.Max(r.z + 8f * yksikko, KulmaVara(yla - alemmas, rivi / 2f, kulmaR, KulmaMarginaali * yksikko));
                 oikeaVara = Mathf.Max(oikeaVara, vasenReuna);
@@ -679,6 +677,7 @@ namespace Matkakirja.Natiivi
             tikkausSaari = saari;
             tikkausYksikko = yksikko;
             saariTikkaus.MarkDirtyRepaint();
+            KeskitaPilleri();
         }
 
         void PiirraTikkaus(MeshGenerationContext mgc)
@@ -1129,18 +1128,25 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        float pilleriNosto, pilleriRivi = float.NaN;
-
         /// <summary>
-        /// Pillerin keskikohta saaren keskilinjalle (Päätoimittaja 2.10. klo 16.0x; mitattu 6b3076de: pilleri 2,8 pt alempana, koska
-        /// se on riviä korkeampi ja kasvaa alaspäin): nosto = rivin alemmas-siirto + puolet ylimenevästä korkeudesta.
+        /// Pillerin keskikohta saaren keskilinjalle (Päätoimittaja 2.10. klo 16.0x). Mitattu 6b3076de ja 2c013d62: pilleri y 17 pt,
+        /// saari y 14 pt (sama korkeus 36,3 pt), joten rivin laskennallinen sijainti ei riitä: siirto lasketaan pillerin
+        /// todellisesta paikasta suhteessa saaren keskikohtaan (palkin koordinaatit) ja korjataan marginaalilla.
         /// </summary>
         void KeskitaPilleri()
         {
-            if (float.IsNaN(pilleriRivi)) return;
-            float h = pilleri.resolvedStyle.height, yli = float.IsNaN(h) || h <= 0f ? 0f : Mathf.Max(0f, h - pilleriRivi) / 2f;
-            float m = -(pilleriNosto + yli);
-            if (!Mathf.Approximately(pilleri.style.marginTop.value.value, m)) pilleri.style.marginTop = m;
+            var saari = tikkausSaari;
+            if (saari.width <= 0f || !PilleriOikealla || saariTikkaus == null || saariTikkaus.style.display == DisplayStyle.None)
+            {
+                if (pilleri.style.marginTop.keyword != StyleKeyword.Null) pilleri.style.marginTop = StyleKeyword.Null;
+                return;
+            }
+            var wb = pilleri.worldBound;
+            if (float.IsNaN(wb.height) || wb.height <= 0f) return;
+            float ero = wb.center.y - palkki.worldBound.yMin - saari.center.y;
+            if (Mathf.Abs(ero) < 0.25f) return;
+            float nyt = pilleri.resolvedStyle.marginTop;
+            pilleri.style.marginTop = (float.IsNaN(nyt) ? 0f : nyt) - ero;
         }
 
         /// <summary>Raha pilleriin: "£400" → punta omana merkkinään ja numero; muu teksti (lataus, "Matka päättyi") sellaisenaan.</summary>
