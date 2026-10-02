@@ -838,13 +838,14 @@ namespace Matkakirja.Natiivi
         {
             var j = lukija.Juuri;
             if (lukijaPaikka?.panel == null || j.parent != kortti) return;
-            var r = lukijaPaikka.worldBound;
-            var k = kortti.worldBound;
-            if (float.IsNaN(r.y) || r.width <= 0 || float.IsNaN(k.y)) return;
+            // Kortin omissa koordinaateissa, ei worldBoundista: Ponnahdus.Avaa skaalaa korttia avautuessa, ja selaimen
+            // rivillä paikka ei enää liiku animaation jälkeen, joten skaalattu mittaus jäi voimaan (≡ AUTO:n päällä, 7e218ee5).
+            var r = lukijaPaikka.ChangeCoordinatesTo(kortti, Vector2.zero);
+            if (float.IsNaN(r.x) || float.IsNaN(r.y) || lukijaPaikka.layout.width <= 0) return;
             // Selaimen ylärivillä (SiirraYlarivi) paikka ei vieri sisällön mukana.
             float s = sisus.Contains(lukijaPaikka) ? sisus.scrollOffset.y : 0f;
-            float x = Mathf.Round(r.x - k.x - kortti.resolvedStyle.borderLeftWidth);
-            float y = Mathf.Round(r.y - k.y - kortti.resolvedStyle.borderTopWidth + s);
+            float x = Mathf.Round(r.x - kortti.resolvedStyle.borderLeftWidth);
+            float y = Mathf.Round(r.y - kortti.resolvedStyle.borderTopWidth + s);
             // AUTO levittää lukijan riviä: paikkavaraus ylärivillä saman levyiseksi (USS 65,4 = ≡ + kaiutin).
             float w = j.resolvedStyle.width;
             if (w > 0f && !float.IsNaN(w) && Mathf.Abs(lukijaPaikka.resolvedStyle.width - w) > 0.5f) lukijaPaikka.style.width = w;
