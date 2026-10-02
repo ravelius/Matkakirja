@@ -47,3 +47,34 @@
 .mk-linssivalikko--pohja .mk-linssivalikko__kytkin.mk-valittu .mk-linssivalikko__tila {
     color: var(--tk-lasi-korostus);
 }
+
+/* LINNAN VALIKKO (omistaja 2.10.2026 klo 14.44, Natiivi-UI ohjausnappi-ehdotus.md kohta 8; LinnaValikko): sama LASI-lista,
+ * lähteet vierityksenä apurikoossa, ja vasempaan yläkulmaan linnan pienoiskartta 120 × 58 pt (Linnanrakentajan kuva),
+ * nykyinen huone 8 pt:n pisteenä (--tk-korostus, reunus 1,5 pt --tk-pinta, ei hehkua; teema tk-teema-lasi). */
+.mk-linssivalikko--pohja .mk-linssivalikko__lahde {
+    margin: 0 var(--tk-vali-m) var(--tk-vali-xs) var(--tk-vali-m);
+    font-size: var(--tk-koko-apuri);
+    white-space: normal;
+    color: var(--tk-lasi-muste-pehmea);
+}
+
+.mk-minikartta {
+    position: absolute;
+    left: var(--tk-vali-s);
+    top: var(--tk-vali-s);
+    width: 120px;
+    height: 58px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-minikartta__piste {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    margin-left: -4px;
+    margin-top: -4px;
+    border-width: 1.5px;
+    border-radius: 4px;
+    border-color: var(--tk-pinta);
+    background-color: var(--tk-korostus);
+}

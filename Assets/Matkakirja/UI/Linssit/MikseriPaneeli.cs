@@ -59,6 +59,9 @@ namespace Matkakirja.Natiivi
 
         public static MikseriPaneeli Viimeisin { get; private set; }
 
+        /// <summary>Linnan valikko (omistaja 2.10. 14.44): säätönappi pois ruudulta, mikseri avataan valikon Äänet-näkymästä.</summary>
+        public static bool LappuPiilossa;
+
         public MikseriPaneeli(UiKerros kerros)
         {
             // Turva-alueen sisään (44f3a13f-vaakakuva: nappi jäi Dynamic Islandin alle vasempaan reunaan).
@@ -162,6 +165,7 @@ namespace Matkakirja.Natiivi
             juuri.style.display = l != null ? DisplayStyle.Flex : DisplayStyle.None;
             if (l == null) { kytketty = null; return; }
             if (!ReferenceEquals(l, kytketty) || l.Versio != versio) Rakenna(l);
+            lappu.style.display = LappuPiilossa && !auki ? DisplayStyle.None : DisplayStyle.Flex;
             lappu.style.backgroundColor = auki ? new Color(Kulta.r, Kulta.g, Kulta.b, 0.9f) : Lasi;
             lappu.style.color = auki ? Lasi : Kulta;
             paneeli.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;

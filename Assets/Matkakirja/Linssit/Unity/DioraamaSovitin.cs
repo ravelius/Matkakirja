@@ -196,6 +196,7 @@ namespace Matkakirja.Natiivi
             SaapumisOdotus = kuoriOdotusAlku >= 0f;
             bool pysty = linssi.Kuvasuhde < 1.0; // kameran oma suhde (ks. yllä)
             if (paluuPyydetty) { paluuPyydetty = false; Yleisnakymaan(t); }
+            if (pyydettyTila != null) { string pt = pyydettyTila; pyydettyTila = null; if (rakennus?.Tila(pt) != null) Kohdista(pt, t); }
             var nakyma = linssi.NakymaHetkella(t, pysty);
             // Elävä linna: saapumiskaaren eteneminen → soihtujen syttyminen; kaari nähty → seuraavalla kerralla lyhyt.
             if (rakennus.Saapuminen != null)
@@ -269,6 +270,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Elävä linna: UI:n ‹-nappi (DioraamaTaulu) pyytää paluuta yleisnäkymään; toteutetaan seuraavassa Paivitassa.</summary>
         public static void PyydaPaluu() => paluuPyydetty = true;
         static bool paluuPyydetty;
+
+        /// <summary>Linnan valikon Huoneet-lista (omistaja 2.10. 14.44): siirtyy tilaan seuraavassa Paivitassa.</summary>
+        public static void PyydaTila(string tilaId) => pyydettyTila = tilaId;
+        static string pyydettyTila;
 
         /// <summary>Äänen URL (era 2, DioraamaAanet.cs): Rakennus.Aanet[id].Tiedosto on suhteessa RAKENNUKSEN
         /// JUUREEN eli uusin.json:n kansioon (AmpariJuuri), EI hash-kansioon (dioraama-rajapinnat-era2-20260929.md

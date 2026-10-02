@@ -264,6 +264,8 @@ namespace Matkakirja.Natiivi
             DioraamaSovitin.PeittaaRuutu = OsuukoPaneeliin;
             DioraamaSovitin.Vaihtui += Kytke;
             kerros.JokaRuutu += Paivita;
+            // Linnan valikko ja pienoiskartta (omistaja 2.10. 14.44): ‹, ↻, säätönappi ja ✕ pois ruudulta.
+            Linna = new LinnaValikko(kerros, LinssiUi.RadioKerros);
             Kytke(DioraamaSovitin.Linssi);
         }
 
@@ -283,14 +285,21 @@ namespace Matkakirja.Natiivi
             {
                 peitetty = value;
                 juuri.style.display = kytketty && !peitetty ? DisplayStyle.Flex : DisplayStyle.None;
+                Linna?.Nayta(kytketty && !peitetty);
             }
         }
+
+        /// <summary>Linnan valikko ja pienoiskartta (LinnaValikko); LinssiUi piilottaa ✕:n, kun linna on auki.</summary>
+        public LinnaValikko Linna { get; private set; }
+        public bool Kytketty => kytketty;
 
         void Kytke(PoikkileikkausLinssi uusi)
         {
             kytketty = uusi != null;
             if (kuoriNappi != null) kuoriNappi.style.display = Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki ? DisplayStyle.Flex : DisplayStyle.None;
             juuri.style.display = kytketty && !peitetty ? DisplayStyle.Flex : DisplayStyle.None;
+            Linna?.Nayta(kytketty && !peitetty);
+            UiNakymat.Hae()?.Linssit?.PaivitaSulku();
             nakyma.style.display = uusi != null ? DisplayStyle.Flex : DisplayStyle.None;
             // Kulman Pulu piiloon linssin ajaksi: dioraamassa Pulu liitää näyttämöllä (oma LiviaKuva).
             var p = Pulu.Hae();
@@ -334,8 +343,8 @@ namespace Matkakirja.Natiivi
             var nakymaTaiEi = DioraamaSovitin.ViimeisinNakyma;
             if (etsintaKortti != null && etsintaKortti.style.display == DisplayStyle.Flex && Time.unscaledTime > etsintaLoppuu)
                 etsintaKortti.style.display = DisplayStyle.None;
-            if (paluuNappi != null)
-                paluuNappi.style.display = rakennus?.Saapuminen != null && nakymaTaiEi?.KohdeTila != null ? DisplayStyle.Flex : DisplayStyle.None;
+            // ‹ ja ↻ korvautuvat pienoiskartalla ja valikolla (omistaja 2.10. 14.44); napit jäävät piiloon.
+            if (paluuNappi != null) paluuNappi.style.display = DisplayStyle.None;
             if (linssi == null || rakennus == null || kamera == null || nakymaTaiEi == null || DioraamaSovitin.SaapumisOdotus)
             {
                 lauta.style.display = DisplayStyle.None;
@@ -360,7 +369,7 @@ namespace Matkakirja.Natiivi
             // koko teksti vain, jos jaksolla ei ole ääntä tai Kertoja on pois. (Jaksoilla ei ole lyhyttä otsikkoa.)
             string jaksonAani = nakyma.KertojaJakso >= 0 && nakyma.KertojaJakso < rakennus.Kertoja.Count ? rakennus.Kertoja[nakyma.KertojaJakso].Aani : null;
             kertojaLaatikko.EnableInClassList("mk-nakyy", nakyma.KertojaTeksti != null && !DioraamaAanet.Puhutaan(jaksonAani));
-            uusintaNappi.style.display = nakyma.KohdeTila == null && linssi.KertojaUusittavissa(tNyt) ? DisplayStyle.Flex : DisplayStyle.None;
+            uusintaNappi.style.display = DisplayStyle.None; // valikon "Esittely uudelleen" (omistaja 14.44)
             if (kierros)
             {
                 lauta.style.display = DisplayStyle.None;
@@ -530,8 +539,9 @@ namespace Matkakirja.Natiivi
             }
             teksti.text = string.Join("\n", rivit);
             teksti.style.display = rivit.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
-            lahde.text = string.Join(" · ", lahteet);
-            lahde.style.display = lahteet.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            // Lähderivi pois paikkakortista (omistaja 2.10. 14.44): lähteet valikon Lähteet-näkymässä.
+            lahde.text = "";
+            lahde.style.display = DisplayStyle.None;
             // Etsinnän vihje riviksi (korostettuna kursiivilla); muuten hahmon repliikki kuten ennen.
             string vihje = DioraamaEtsinta.AktiivinenRivi;
             // Pulun vanhat käsikirjoitusrivit eivät kuulu infotauluun (Pulu kertoo lisää kuplassa napautuksesta); vain
