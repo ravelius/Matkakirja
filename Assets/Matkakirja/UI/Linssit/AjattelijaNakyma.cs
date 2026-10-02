@@ -4,14 +4,14 @@
 //   VALINTA   AukiNyt && Valittu == null: KORTTI-pohja (Kortti pohja: true) himmennyksellä, nappi per ajattelija → Valitse;
 //             himmennyksen napautus ja Esc → PyydaSulku (web luoPohjaKortti ei-modaali, sulje ilman valintaa → poistu).
 //   KUVA      Valittu != null: KUVANÄKYMÄ-pohja, teema tumma; AjattelijaNayttamo.NykyinenKuva koko ruudulle (Latautuu: vain
-//             tumma pinta). ✕ lämmintä lasia (tk-teema-lasi), veto alas ja Esc → PyydaSulku.
+//             tumma pinta). Sulku linssien yhteisellä ohjauksella (LinssiUi:n sulku; Päätoimittaja 2.10.: ei omaa pyöreää ✕:ää,
+//             OHJAUSNAPPI/☰ koskee tätäkin), lisäksi veto alas ja Esc → PyydaSulku.
 //   TEKSTIT   nimi (NimiRivit versaalina) ja vuodet, kysymys, lähderivi (kreikka ja viite); peitot joka ruutu Tekstit-arvoista.
 //   LOPUSSA   elämä-lappu NOSTOKORTTI-pohjalla, teema tumma (paikka ja vetokahva kuten IhmisenNostokortti, ei ✕:ää) ja PULU:
 //             minipulu oikeassa alakulmassa → PuluChat.AvaaLinssissa (teema lasi). Kulma väistää lapun (
 //             puhelimessa 8 pt lapun yläpuolelle, sivukortilla lapun vasemmalle, web #3857). Lappu ja PULU ovat valinnaisia (Elama / PulunKysymykset tyhjä → ei näy).
 // Kerros: Ylakerros (37) kuten Kuvanakyma ja IssKyytiNakyma (KUVANÄKYMÄ-pohjat): koko ruudun näkymä peittää linssiselitteen
 // ja taikalasit (25) sekä kulman Pulun (35); Pulun chat nousee linssitilassa näkymän päälle (UiNakymat.ChatinKerros).
-// LinssiUi:n "Sulje linssi" on piilossa linssin ajan (Peittaa → LinssiUi.PaivitaSulku), koska ✕ ja kortti sulkevat.
 // Testikomennot (UiKomennot): ui ajattelija tila | valitse <n> | pulu | sulje.
 using System;
 using System.Collections.Generic;
@@ -33,7 +33,6 @@ namespace Matkakirja.Natiivi
         readonly Kortti kortti;
         readonly VisualElement korttiNapit;
         readonly Label nimi, vuodet, kysymys, kreikka, viite;
-        readonly Button sulku;
         readonly ScrollView lapunVieritys;
         readonly Vetokahva kahva;
         readonly LiviaKuva minipulu;
@@ -41,13 +40,10 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Ajattelija, jonka tekstit ja lappu on täytetty.</summary>
         AjattelijaData naytetty;
-        bool kuvaAuki, valintaAuki, lappuAuki, lappuSuljettu, laajennettu, puluPiilotettu, peittaa;
+        bool kuvaAuki, valintaAuki, lappuAuki, lappuSuljettu, laajennettu, puluPiilotettu;
         float nimiPeitto = -1f, kysymysPeitto = -1f, lahdePeitto = -1f;
         int vetoId = -1;
         Vector2 vetoAlku;
-
-        /// <summary>Linssi auki (valinta tai kohtaus): LinssiUi piilottaa "Sulje linssi" -pillerin.</summary>
-        public event Action<bool> Peittaa;
 
         static PuluChat Chat => UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
         static bool ChatAuki => Chat != null && Chat.Auki && Chat.Linssissa;
@@ -89,7 +85,7 @@ namespace Matkakirja.Natiivi
             kysymys = Rakenne.Teksti("", "mk-ajattelija__teksti mk-ajattelija__kysymys", juuri);
             Kirjasimet.Aseta(kysymys, Kirjasin.LukuKursiivi);
 
-            // Turva-alueen sisällä: lähderivi, lappu, PULU ja ✕ (Kuvanakyma.AsetaTurva: linssikerroksen reunat).
+            // Turva-alueen sisällä: lähderivi, lappu ja PULU (Kuvanakyma.AsetaTurva: linssikerroksen reunat).
             turva = Rakenne.El("mk-ajattelija__turva", juuri, PickingMode.Ignore);
             kerros.TurvaMuuttui += AsetaTurva;
             AsetaTurva();
@@ -118,10 +114,6 @@ namespace Matkakirja.Natiivi
             minipulu = new LiviaKuva(mini: true);
             pulunappi.Add(minipulu);
             pulunappi.RegisterCallback<PointerDownEvent>(e => { e.StopPropagation(); PuluNapautettu(); });
-
-            sulku = Rakenne.Nappi("×", "mk-kuvanakyma__sulku tk-teema-lasi", /* KUVANÄKYMÄ-pohja: ✕ lämmin lasi */
-                AjattelijatSovitin.PyydaSulku, turva);
-            sulku.tooltip = "Sulje";
 
             turva.RegisterCallback<GeometryChangedEvent>(e =>
             {
@@ -191,7 +183,6 @@ namespace Matkakirja.Natiivi
             else if (!auki && puluPiilotettu) { p.Nayta(true); puluPiilotettu = false; }
             if (!auki && ChatAuki) Chat.Sulje();
 
-            if (auki != peittaa) { peittaa = auki; Peittaa?.Invoke(auki); }
         }
 
         /// <summary>Valinnan napit sovittimen listasta (uusi ajattelija = uusi data, ei koodimuutosta).</summary>
@@ -386,8 +377,9 @@ namespace Matkakirja.Natiivi
                     PuluNapautettu();
                     return Kirjaa("Pulu napautettu, chat " + (ChatAuki ? "auki" : "kiinni"));
                 case "sulje":
-                    if (!kuvaAuki) return Kirjaa("✕ ei ole näkyvissä");
-                    return Kirjaa("painettu " + Paina(sulku));
+                    if (!AjattelijatSovitin.AukiNyt) return Kirjaa("linssi ei ole auki");
+                    AjattelijatSovitin.PyydaSulku();
+                    return Kirjaa("suljettu");
                 default:
                     return "ui ajattelija tila | valitse <n> | pulu | sulje";
             }
@@ -427,7 +419,6 @@ namespace Matkakirja.Natiivi
             Osa("nimi", nimiLohko);
             Osa("kysymys", kysymys);
             Osa("lähde", lahde);
-            Osa("✕", sulku);
             Osa("lappu", lappu);
             Osa("pulu", pulunappi);
             return $"{n} näkyvää osaa";
