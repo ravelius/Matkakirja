@@ -4536,9 +4536,43 @@
     margin-left: 10px;
 }
 
-.mk-ylapalkki__saarimusta {
+/* Omistaja 2.10.2026 klo 15.1x: pilleri yhdellä rivillä "1 pv · £400". */
+.mk-pilleri--lyhyt {
+    padding-left: var(--tk-vali-s);
+    padding-right: var(--tk-vali-m);
+}
+
+.mk-pilleri__pino--rivi {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-pilleri--lyhyt .mk-pilleri__kello {
+    margin-left: 0;
+}
+
+.mk-pilleri--lyhyt .mk-pilleri__rivi1 {
+    margin-top: 0;
+    margin-left: var(--tk-vali-xs);
+}
+
+/* KONJAKKINAPPI (omistaja 2.10.2026 klo 15.0x "hieman enemmän napin näköinen … vähän eri värinen kuin nahka, hieman oranssin
+   ruskea"): tyylikirjan paperi-korostus pohjana, tumman teeman kultareuna ja kermainen muste; kulma-nappi (ei ovaalia). */
+.mk-pilleri.mk-pilleri--konjakki {
+    border-width: 1px;
+    border-color: var(--tk-tumma-reunus);
+    background-color: var(--tk-paperi-korostus);
+    color: var(--tk-tumma-muste);
+}
+
+.mk-pilleri--konjakki .mk-pilleri__raha,
+.mk-pilleri--konjakki .mk-pilleri__kello {
+    color: var(--tk-tumma-muste);
+}
+
+/* Dynamic Islandin tikkaus (omistaja 2.10.2026, korvaa mustan saarialueen): Painter2D, Ylapalkki.AsetaSaariTikkaus. */
+.mk-ylapalkki__saaritikkaus {
     position: absolute;
-    -unity-background-scale-mode: stretch-to-fill;
 }
 
 /* MATKALAUKKUNAHKA (omistaja 29.9.2026, Codex iphone-v1): kaistale rajattuna matalaan palkkiin alareuna (tikkaus) edellä,
