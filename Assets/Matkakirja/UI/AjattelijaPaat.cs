@@ -44,7 +44,7 @@ namespace Matkakirja.Natiivi
     {
         public const int Kerros = 13;
         /// <summary>Kipsin lämpö/valotus ja ympäristövalo (omistaja 2.10. 16.4x); A/B `ui erikoisnostot kipsi|ymparisto r g b`.</summary>
-        public static Vector4 Kipsi = new Vector4(1.9f, 1.8f, 1.6f, 0f), Ymparisto = new Vector4(0.42f, 0.34f, 0.26f, 0f);
+        public static Vector4 Kipsi = new Vector4(1.9f, 1.72f, 1.38f, 0f), Ymparisto = new Vector4(0.42f, 0.34f, 0.26f, 0f);
         const float KameraZ = -0.72f, KameraY = 0.13f, KatseY = 0.12f, Fov = 30f;
         static int seuraava;
         static Shader varjostin;

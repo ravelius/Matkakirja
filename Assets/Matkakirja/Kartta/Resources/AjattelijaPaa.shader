@@ -12,7 +12,7 @@ Shader "Matkakirja/Kartta/AjattelijaPaa"
         _NormaaliPaalla("Normaalikartta päällä", Float) = 1
         _Valo("Suunta kohti valoa (maailma)", Vector) = (-0.5, 0.8, -0.6, 0)
         _Karheus("Karheus", Float) = 0.62
-        _Kipsi("Kipsin lämpö ja valotus (kerroin)", Vector) = (1.9, 1.8, 1.6, 0)
+        _Kipsi("Kipsin lämpö ja valotus (kerroin)", Vector) = (1.9, 1.72, 1.38, 0)
         _Ymparisto("Ympäristövalo (lämmin ruskeanharmaa)", Vector) = (0.42, 0.34, 0.26, 0)
     }
     SubShader
