@@ -9967,3 +9967,7 @@ Omistaja 2.10.2026 klo 11.0x sanatarkasti: 'tämä tili saa mennä vain 90% week
 ## PÄÄTOIMITTAJA: AVARUUSKÄVELY WEBIIN PARITEETIN VUOKSI, ISS:N RINNALLA -POISTO EI KOSKE SITÄ (2.10.2026) (2.10.2026 klo 11.10)
 
 Pelikoodarin pariteettirivi 2.10. klo 11.1x: natiivissa on Astronautin kameran avaruuskävelytila (Linssiseppä 2 bdea89bf, omistaja hyväksyi 29.9., BUILD 48; robottikäsi ja jalkatuki 1.10.), mutta webissä on vain Pulun EVA-asun valot. Päätoimittaja: avaruuskävely tuodaan webiin samoilla GLB-malleilla, ja tässä natiivi on poikkeuksellisesti malli. Pelikoodari tekee sen Sokrateen ja PULU-pohjan jälkeen omana PR:nä. Omistajan klo 10.4x poisto koskee vain ISS:n rinnalla -näkymää (seuranta). Pulun avaruuskävely robottikäsineen säilyy, ja omistajalle annettu tieto robottikäden poistumisesta oikaistiin.
+
+## OMISTAJA: AJATTELIJOIDEN KAIKUKUVAT AINA POSITIIVINA, EI NEGATIIVEJA (2.10.2026) (2.10.2026 klo 11.13)
+
+Omistaja 2.10.2026 klo 11.1x nähtyään otsan kaiun vertailun (Carstens, negatiivi ja positiivi) sanatarkasti: 'joo, nyt toimii kun ei ole negatiivina. varmista jatkossa että kaikki ovat positiivina'. Kaikki ajattelijakohtausten kaikukuvat (Sokrates, Marcus Aurelius ja tulevat; Blender-mallit, web ja natiivi) näytetään positiivina: viivapiirrokset ja kaiverrukset tummina viivoina vaalealla, maalaukset ja valokuvat alkuperäisillä sävyillään. Kääntöä (ImageOps.invert, sokrates_kaiku.py viiva-tila) ei käytetä. Linnanrakentaja poistaa viiva-tilan kaikukuvista, Pelikoodari tarkistaa webin kaikukuvat, ja natiivi seuraa webiä.
