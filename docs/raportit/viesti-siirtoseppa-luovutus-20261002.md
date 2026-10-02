@@ -12,6 +12,11 @@ Edellinen luovutus: viesti-siirtoseppa-luovutus-20261001.md (ensilataus, ympäri
 
 ## JONON KÄRKI
 
+**PÄIVITYS 22.47 (uusi tili): JALKAVARJO RATKAISTU.** Juurisyy: varjo piirtyi koko ajan (pikselimittaus: lattia ~0,6 jalkojen alla
+skin14–17), kerroin 0,63 oli vain liian heikko. Korjaus kerroin 0,3 = proto `siirtoseppa/linna-skin` **4d324efa**, käännös ad36e7a5,
+simutodennus F989814A 22.44 (lokit/siirtoseppa-skin18, erän 1b kuvat 7 huoneesta, 0 virhettä). Merge-pyyntö Natiivisepälle junaan 130
+ja kuvat Päätoimittajalle lähetetty 22.47. Avoin: skin-osoitin 2abec0c9 → 275a2765 omistajan OK:lla (kohta 2). Alla oleva kohta 1 on historiaa.
+
 1. **Linnan hahmojen jalkavarjo (omistaja 20.2x: "kävelijä tarvitsee vielä varjon jalkojensa alle") — EI VIELÄ NÄY.**
    Haara `siirtoseppa/linna-skin`, kärki **39a396e3** (KÄÄNNETTY 8219c063, app lokit/siirtoseppa-skin16-app).
    Toteutus: `DioraamaHahmot3D.LisaaKontaktivarjo` (levy jokaisen 3D-hahmon juuren alle, 17/17 syntyy, materiaali ok) +
