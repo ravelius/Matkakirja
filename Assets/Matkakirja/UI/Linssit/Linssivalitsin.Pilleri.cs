@@ -392,6 +392,20 @@ namespace Matkakirja.Natiivi
         public string TestaaNakyma(string nimi, int rivi)
         {
             if (!Auki) Avaa();
+            // ui pilleri rivi <nimi>: pääsivun luettelorivi napautettuna kuten pelaajan napautus (esim. "Julisteet", "Aarteet").
+            if (nimi.StartsWith("rivi:"))
+            {
+                string haku = nimi.Substring(5);
+                var r = lisaosa.Query<Button>(className: "mk-luettelorivi").Where(b => b.tooltip == haku).First();
+                if (r == null) return $"riviä {haku} ei ole";
+                paneeli.schedule.Execute(() =>
+                {
+                    using var e = NavigationSubmitEvent.GetPooled();
+                    e.target = r;
+                    r.SendEvent(e);
+                }).StartingIn(300);
+                return $"rivi {haku} napautettu";
+            }
             NaytaNakyma(nimi switch { "linssit" => Nakyma.Linssit, "aarteet" => Nakyma.Aarteet, "matka" or "tasot" => Nakyma.Matka, "asetukset" => Nakyma.Asetukset, _ => Nakyma.Paa });
             if (rivi < 0) return $"näkymä {NykyinenNakyma}";
             var isa = NykyinenNakyma == Nakyma.Linssit ? lista : aarteet;
