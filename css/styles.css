@@ -5694,6 +5694,10 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
 .linssi-selite[data-corner='tr'] { top: 0.5rem; right: 0.5rem; }
 .linssi-selite[data-corner='bl'] { bottom: 0.9rem; left: 0.5rem; }
 .linssi-selite[data-corner='br'] { bottom: 0.9rem; right: 0.5rem; }
+/* Hampurilaisen linssillä (js/ui.js piirraLinssinHampurilainen) oikea ylänurkka alkaa napin alta, ja kortti on piilossa,
+   kunnes valikon kytkin avaa sen. */
+.linssi-selite.valikossa[data-corner='tr'] { top: calc(var(--tk-vali-s) * 2 + var(--tk-nappi-ohjaus)); }
+.linssi-selite.valikossa[hidden] { display: none; }
 
 .linssi-selite h2 {
   margin: 0 0 0.35rem;
