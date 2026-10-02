@@ -538,14 +538,14 @@ button, .brand, .turn-pill, .fact-card h2 {
   font-size: 0.9rem;
   padding: 0.25rem 0.7rem;
   /*
-   * PYÖRISTETTY SUORAKULMIO (omistaja 2.10.2026 klo 15.05/15.07; EI OVAALEJA), sävy paperin korostus hillitympänä
-   * (17.0x hylkäsi konjakin): tyylikirja pilleri-nappi / pilleri-nappi-reuna (Natiivi-UI #3860), muste tumma-muste.
-   * Pelkkä teksti "1 pv · £400" ilman laukkukuvaketta, joten pilleri on tekstin levyinen.
+   * AIEMPI ULKOASU (tumma täyttö, ohut reuna) PYÖRISTETTYNÄ SUORAKULMIONA (omistaja 2.10.2026 klo 17.3x: "palauta
+   * pillerin aiempi ulkoasu, muuta vain tekstisisältö"; EI OVAALEJA 15.05). Teksti "1 pv · £400" ilman kuvaketta,
+   * joten pilleri on tekstin levyinen.
    */
   border-radius: var(--tk-kulma-nappi);
-  background: var(--pilleri-nappi);
-  border: 1px solid var(--pilleri-nappi-reuna);
-  color: var(--tk-tumma-muste);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: inherit;
   min-width: 0;
   overflow: hidden;
   white-space: nowrap;
@@ -554,11 +554,8 @@ button, .brand, .turn-pill, .fact-card h2 {
   -webkit-tap-highlight-color: transparent;
 }
 .turn-pill:hover,
-.turn-pill:focus-visible,
-.turn-pill:hover:not(:disabled) {
+.turn-pill:focus-visible {
   border-color: var(--kulta, #eab84e);
-  background: var(--pilleri-nappi);   /* yleinen button:hover ei saa tummentaa pilleriä */
-  color: var(--tk-tumma-muste);
 }
 .turn-pill .laukku-ikoni {
   display: inline-flex;
@@ -647,7 +644,7 @@ button, .brand, .turn-pill, .fact-card h2 {
 .rahattomuus-lohko.viimeinen.palaa { border-color: #9e2c21; background: #c0392b; }
 
 .turn-pill .clock {
-  color: inherit;
+  color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
 
@@ -664,7 +661,7 @@ button, .brand, .turn-pill, .fact-card h2 {
 .turn-pill .clock + .kassa::before {
   content: '·';
   margin-right: var(--pilleri-vali);
-  color: inherit;
+  color: var(--muted);
   font-weight: 400;
 }
 
@@ -675,9 +672,9 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 
 @keyframes aika-valahdys {
-  0% { color: inherit; }
+  0% { color: var(--muted); }
   22% { color: var(--accent); text-shadow: 0 0 8px rgba(234, 184, 78, 0.55); }
-  100% { color: inherit; }
+  100% { color: var(--muted); }
 }
 
 @media (prefers-reduced-motion: reduce) {
