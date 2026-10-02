@@ -354,7 +354,6 @@ test('tyhjä kortti ei tarjoa kaiutinta', () => {
  */
 const KORTTITIEDOSTOT = [
   'js/skandaalit.js', // lisälehti
-  'js/fokuskohteet.js', // kartan kohdekortti
   'js/elaintaky.js', // eläintäky
   'js/fokusvirta.js', // kohtaamiskortti
   'js/fokusnosto.js', // täkynosto

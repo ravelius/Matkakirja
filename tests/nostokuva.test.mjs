@@ -423,8 +423,8 @@ test('iso kuva mitoitetaan yhteisellä suurennoslinjauksella', async () => {
 /* Lähdekoodin vartijat                                              */
 /* ================================================================= */
 
-test('molemmat karttakortit avaavat kuvan edellä ja kuvaton aukeaa tekstinä', () => {
-  for (const polku of ['js/fokusnosto.js', 'js/fokuskohteet.js']) {
+test('karttanosto avaa kuvan edellä ja kuvaton aukeaa tekstinä', () => {
+  for (const polku of ['js/fokusnosto.js']) {
     const src = lue(polku);
     assert.ok(src.includes('nostokuvaAloita'), `${polku} ei käytä kuva edellä -avausta`);
     // Löydös 135: kuvaton haara on lohko, joka latoo tekstin ja antaa
@@ -447,11 +447,6 @@ test('kuvaa ei rakenneta uudelleen vaiheenvaihdossa', () => {
 });
 
 test('kartan painallus sulkee kortin eikä avaa uutta nostoa', () => {
-  const kohteet = lue('js/fokuskohteet.js');
-  // Tasokartta: nielu syö saman napautuksen clickin ennen kartan omia
-  // kuuntelijoita (js/ui-apurit.js nielaiseSulkevaNapautus).
-  assert.ok(/nielaiseSulkevaNapautus\(tapahtuma\)/.test(kohteet));
-  assert.ok(kohteet.includes("closest?.('#board')"));
   const lauta = lue('js/pallolauta/lauta.js');
   // Pallo: korttivahti lukee kortin auki-tilan pointerdownin
   // kaappausvaiheessa ja nielaisee sitä seuraavan napautuksen.
@@ -461,20 +456,6 @@ test('kartan painallus sulkee kortin eikä avaa uutta nostoa', () => {
     lauta.indexOf('const KORTTIVALITSIN') + 220);
   assert.ok(valitsin.includes('.fokuskohde-popup'), 'kartan tietoruutu puuttuu korttivahdista');
   assert.ok(valitsin.includes('.fokusnosto-kerros'), 'noston kortti puuttuu korttivahdista');
-});
-
-test('kuva edellä -kortti ei seuraa merkkiään eikä ole raahattava', () => {
-  const src = lue('js/fokuskohteet.js');
-  assert.ok(/if \(nostokuvaKortissa\(auki\.popup\)\) return;/.test(src),
-    'automaattinen asemointi siirtäisi kuvaa');
-  /*
-   * Raahaus kirjoittaisi kuvaesittelyn paikan päälle, joten kortin oma
-   * pointerdown-haara palaa heti. SE EI SAA SULKEA KORTTIA (omistaja
-   * 12.9.2026): sulku ratkeaa vasta napautusvahdissa, ks.
-   * tests/kortin-veto.test.mjs.
-   */
-  assert.ok(/if \(nostokuvaKortissa\(popup\)\) return;/.test(src),
-    'raahaus kirjoittaisi kuvaesittelyn paikan päälle');
 });
 
 test('vaihe 1 aukeaa niin ylös, ettei vaiheen 2 päälle jää kartan kaistaletta', async () => {
@@ -617,7 +598,7 @@ test('löydös 135: kuvattoman kortin leveys on kuvallisen noston leveys (mitatu
 
 test('löydös 135: jokainen kuvaton karttanosto ja lisäkaupunki käyttää vakiokorttia', () => {
   for (const [tiedosto, lato] of [
-    ['js/fokuskohteet.js', 'latoKohde'], ['js/skandaalit.js', 'latoSkandaali'],
+    ['js/skandaalit.js', 'latoSkandaali'],
     ['js/fokusnosto.js', 'latoNosto'], ['js/syvennys.js', 'latoSyvennys'],
     ['js/historian-hetket.js', 'latoHetki'], ['js/elaintaky.js', 'latoElaintaky'],
   ]) {
