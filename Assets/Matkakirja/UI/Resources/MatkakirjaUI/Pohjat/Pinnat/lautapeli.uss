@@ -155,6 +155,8 @@
 .mk-peli__kytkin > .mk-nappi__teksti {
     font-size: var(--tk-koko-leipa);
     -unity-text-align: middle-center;
+    white-space: normal; /* savuke 1113: "Luostari 1200-l." ja "Viikinkilaiva n. 900" menivät päällekkäin iPhonella */
+    padding: var(--tk-vali-xs) 0;
 }
 
 .mk-peli__kytkin:first-child {
@@ -186,7 +188,7 @@
 
 /* Lukittu lauta (ansaitaan voitoilla): himmeä KYTKIN, napautus näyttää ehdon apurivillä. */
 .mk-peli__kytkin--lukittu {
-    opacity: 0.45;
+    opacity: 0.6; /* savuke 1113: 0,45 oli liian haalea luettavaksi */
 }
 
 .mk-peli__ansaitut {

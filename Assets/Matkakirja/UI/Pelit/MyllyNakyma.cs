@@ -201,8 +201,7 @@ namespace Matkakirja.Natiivi
             if (PalloKierto.Pysaytyskuva != null) AsetaPysaytys(PalloKierto.Pysaytyskuva);
             peli ??= new Mylly();
             lauta.Lataa();
-            Aanet.RekisteroiTehoste(AaniAsetus, Resources.Load<AudioClip>(MyllyLauta.KansioPolku + AaniAsetus), AaniGain);
-            Aanet.RekisteroiTehoste(AaniPoisto, Resources.Load<AudioClip>(MyllyLauta.KansioPolku + AaniPoisto), AaniGain);
+            RekisteroiAani(AaniAsetus); RekisteroiAani(AaniPoisto);
             Paivita();
             peliTaso.style.display = DisplayStyle.Flex;
             Rakenne.Nayta(peliTaso, true, Tyylikirja.Kesto.Avaus);
@@ -240,8 +239,20 @@ namespace Matkakirja.Natiivi
         static void SiirronAani(MyllySiirto s, float voima)
         {
             float lasku = s.Mista >= 0 ? Tyylikirja.Kesto.Liuku / 1000f * 0.9f : 0f;
-            if (!Aanet.Tehoste(AaniAsetus, voima, lasku)) Aanet.Tehoste("click", voima);
+            bool oma = Aanet.Tehoste(AaniAsetus, voima, lasku);
+            if (!oma) Aanet.Tehoste("click", voima);
             if (s.Poista >= 0 && !Aanet.Tehoste(AaniPoisto, voima, lasku + 0.12f)) Aanet.Tehoste("wrong", voima);
+            Debug.Log($"MATKAKIRJA mylly: ääni {(oma ? AaniAsetus : "click")}{(s.Poista >= 0 ? " + " + AaniPoisto : "")}");
+        }
+
+        /// <summary>Savuke 1113: naksua ei todennettu. Klippi ladataan muistiin heti (preloadAudioData + LoadAudioData), jotta
+        /// ensimmäinen soitto leikkaa siivun eikä jää latauksen taakse; puuttuva klippi lokiin.</summary>
+        static void RekisteroiAani(string nimi)
+        {
+            var c = Resources.Load<AudioClip>(MyllyLauta.KansioPolku + nimi);
+            if (c == null) { Debug.LogWarning("MATKAKIRJA mylly: ääni puuttuu " + nimi); return; }
+            if (c.loadState != AudioDataLoadState.Loaded) c.LoadAudioData();
+            Aanet.RekisteroiTehoste(nimi, c, AaniGain);
         }
 
         void AsetaPysaytys(Texture t)
