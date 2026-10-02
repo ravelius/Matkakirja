@@ -101,5 +101,5 @@ test('kipsipäiden pisteet eivät osu nimiin eikä kaupunkikortteihin (Päätoim
   const { AJATTELIJAT } = await import('../js/linssit/ajattelija.js');
   const pisteet = Object.fromEntries(Object.values(AJATTELIJAT).filter((a) => a.kartta).map((a) => [a.tunnus, a.kartta.piste]));
   assert.deepEqual(pisteet.sokrates, [39.49, 23.98], 'Pohjois-Egea: Pelionin ja Poliokhnin välissä, ei SPORADIEN PUISTO -nimellä');
-  assert.deepEqual(pisteet.marcus, [43.37, 12.55], 'Umbria: Rooman kutsukortin pohjoispuolella');
+  assert.deepEqual(pisteet.marcus, [42.95, 12.41], 'Umbria: Rooman kutsukortin pohjoispuolella');
 });
