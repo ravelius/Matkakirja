@@ -219,6 +219,35 @@ namespace Matkakirja.Natiivi
                 alue.style.bottom = alue.parent.layout.height - kulma.y;
             }
             alue.EnableInClassList("mk-pulu--pieni", modaali);
+            AsetteleRobotti(reunat);
+        }
+
+        // ROBOTTIKÄSI (omistaja 2.10. 21.3x, Päätoimittajan tarkennus): Pulu vasempaan alakulmaan 60 %:iin varjokuvana (kasvot
+        // loistavat), ja varsi kulkee ruudun yli oikeaan reunaan aluksen suuntaan (LiviaKuva.Robotti) — kaukonäkymässä ja Cupolassa.
+        const float RobottiSkaala = 0.6f;
+        // viewBox-yksiköt: Pulun vasen reuna x 88, varren alin kohta (kyynärnivel vaakaan käännettynä) y 381 (viewBox 304).
+        const float RobottiPuluVasen = 88f, RobottiAlin = 381f, RobottiReuna = 12f;
+        bool robottiAseteltu;
+
+        void AsetteleRobotti(Vector4 reunat)
+        {
+            bool robotti = Astronautti && kuva.RobottiNakyy;
+            if (!robotti)
+            {
+                if (!robottiAseteltu) return;
+                robottiAseteltu = false;
+                alue.style.left = StyleKeyword.Null;
+                alue.style.scale = StyleKeyword.Null;
+                alue.style.transformOrigin = StyleKeyword.Null;
+                return;
+            }
+            robottiAseteltu = true;
+            alue.style.right = StyleKeyword.Null;
+            alue.style.left = reunat.x + RobottiReuna - RobottiPuluVasen * RobottiSkaala;
+            float alaRaja = Mathf.Max(reunat.w + 8f, AlaVara);
+            alue.style.bottom = alaRaja + (RobottiAlin - 304f) * RobottiSkaala;
+            alue.style.transformOrigin = new TransformOrigin(Length.Percent(0), Length.Percent(100));
+            alue.style.scale = new Scale(new Vector2(RobottiSkaala, RobottiSkaala));
         }
 
         /// <summary>Astronautin kamera (Linssiseppä asettaa): kypärä päähän.</summary>
@@ -236,6 +265,24 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Alareunan paneeli, jonka yläpuolelle Pulu nousee (pt ruudun alareunasta; ISS-kyydin ohjauspöytä), 0 = ei mitään.</summary>
         public float AlaVara { get; set; }
+
+        bool haivytetty;
+
+        /// <summary>
+        /// ISS-kyydin suuren säätöpaneelin ajaksi (omistaja 2.10. 21.3x kohta 8; Päätoimittajan kuvatarkistus 2.10.: kypärä
+        /// nousi säätönapin alle): lintu häivytetään paikalleen (Kesto.Sulku/Avaus) eikä se ota kosketuksia; puhe jatkuu.
+        /// </summary>
+        public void Haivyta(bool piiloon)
+        {
+            if (piiloon == haivytetty) return;
+            haivytetty = piiloon;
+            float kesto = (piiloon ? Tyylikirja.Kesto.Sulku : Tyylikirja.Kesto.Avaus) / 1000f;
+            // kuva (ei näyttämö): karttavaiston näyttämön läpinäkyvyys pysyy ilman siirtymää.
+            kuva.style.transitionProperty = new StyleList<StylePropertyName>(new List<StylePropertyName> { new StylePropertyName("opacity") });
+            kuva.style.transitionDuration = new StyleList<TimeValue>(new List<TimeValue> { new TimeValue(kesto) });
+            kuva.style.opacity = piiloon ? 0f : 1f;
+            kosketus.pickingMode = piiloon ? PickingMode.Ignore : PickingMode.Position;
+        }
 
         // Webin livia-astronautti-leijuu (css/satelliitti.css): 5 s:n kierros, 5 px ylös ja −3° → +3°, puheen ajaksi paikalleen;
         // vähennetty liike: ei leijuntaa.

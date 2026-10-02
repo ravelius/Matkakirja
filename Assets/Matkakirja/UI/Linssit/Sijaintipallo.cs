@@ -17,9 +17,12 @@ namespace Matkakirja.Natiivi
     {
         public const int Kerros = 12;
         public static bool Paalla = true;
-        /// <summary>Koko (pt): puhelimella 94, tabletilla 125 (omistaja: "pienen maapallon"; 2.10. "Pieni karttapallo vähän
-        /// isompana" → noin 30 % isommaksi kuin 72 / 96).</summary>
-        static float KokoPt => UiKerros.Tabletti ? 125f : 94f;
+        /// <summary>Koko (pt): puhelimella 120, tabletilla 160 (omistaja: "pienen maapallon"; 2.10. "Pieni karttapallo vähän
+        /// isompana" → 94 / 125; 2.10. 21.3x "Maapallokuvake suuremmaksi" → +28 %).</summary>
+        static float KokoPt => UiKerros.Tabletti ? 160f : 120f;
+        /// <summary>iPhonen vaakatilassa pallo ruudun vasempaan alakulmaan turva-alueen ulkopuolelle (omistaja 2.10. 21.3x
+        /// "siirtyy selvästi enemmän vasempaan alakulmaan"): kuva on keskellä, ja sen vasemmalla puolella on vapaa kaistale.</summary>
+        const float VaakaReuna = 8f;
         const float KestoS = 0.7f, Sade = 1000f;
         const float Vasen = 12f, Alas = 62f, Rako = 6f, MinKokoPt = 62f;   // min 48 → 62 (+30 %, omistaja 2.10.)
         const string PintaJuuri = "https://media.matkakirja.app/julisteet/pallo/bmng/";
@@ -75,11 +78,80 @@ namespace Matkakirja.Natiivi
         {
             if (float.IsNaN(isanKorkeus) || isanKorkeus <= 0f || kuva.width <= 0f) return;
             float koko = KokoPt;
+            var isa = el.parent;
+            float isanLeveys = isa != null ? isa.layout.width : 0f;
+            bool puhelinVaaka = !UiKerros.Tabletti && isanLeveys > isanKorkeus;
+            if (puhelinVaaka && isa.panel != null && SijoitaKulmaan(isa, ref koko)) return;
+            NauhanVasen = float.NaN;
+            el.style.left = Vasen; el.style.bottom = Alas;
+            float vasen = Vasen;
             float yla = isanKorkeus - Alas - koko;
             bool samallaKorkeudella = kuva.yMax > yla && kuva.yMin < isanKorkeus - Alas;
-            if (samallaKorkeudella && kuva.xMin < Vasen + koko + Rako)
-                koko = Mathf.Clamp(kuva.xMin - Vasen - Rako, MinKokoPt, KokoPt);
+            if (samallaKorkeudella && kuva.xMin < vasen + koko + Rako)
+                koko = Mathf.Clamp(kuva.xMin - vasen - Rako, MinKokoPt, KokoPt);
             el.style.width = koko; el.style.height = koko;
+        }
+
+        /// <summary>Pikkukuvanauhan vasen reuna isän koordinaateissa, kun pallo on iPhonen vaakatilan kulmassa (NaN = tyylin 12 pt).</summary>
+        public float NauhanVasen { get; private set; } = float.NaN;
+
+        /// <summary>Näytön pyöristetyn kulman säde (pt), iPhone 16 Pro / 17 -sarja 62; Unity ei kerro sitä, joten suurin nykyinen.</summary>
+        const float NaytonKulma = 62f;
+
+        /// <summary>
+        /// IPHONE VAAKA (omistaja 2.10. 21.3x "ihan enemmän vasempaan alareunaan"; Päätoimittaja 2.10. valinta E2): pallo täysikokoisena
+        /// ruudun vasempaan alakulmaan Dynamic Islandin alle, ja pikkukuvanauha pallon oikealle puolelle. Ehdot: väli ruudun reunoihin,
+        /// näytön pyöristettyyn kulmaan ja saaren alareunaan vähintään VaakaReuna (8 pt); jos saari ei jätä tilaa, pallo pienenee
+        /// (vähintään MinKokoPt). Palauttaa false, jos paneelin mittoja ei vielä ole.
+        /// </summary>
+        bool SijoitaKulmaan(VisualElement isa, ref float koko)
+        {
+            // Layout eikä worldBound: kuvanäkymän avausanimaatio (skaala) siirsi worldBoundia, ja pallo jäi 31 pt reunan yli (kuva
+            // a8f0939c). Isä (turva-alue) on ruudun kokoisen näkymän lapsi, joten sen layout antaa turva-alueen reunat.
+            var ruutu = isa.parent != null ? isa.parent.layout : isa.panel.visualTree.layout;
+            var lo = isa.layout;
+            if (!(ruutu.width > 0f) || !(ruutu.height > 0f) || float.IsNaN(lo.xMin)) return false;
+            float pp = Screen.height / ruutu.height;
+            // Saaren alareuna (pt ylhäältä) niiltä loviilta, jotka ovat pallon vaakakaistalla (Screen.cutouts: pikselit, origo alhaalla).
+            float saariAla = 0f;
+            foreach (var c in Screen.cutouts)
+                if (c.xMin / pp < VaakaReuna + koko + VaakaReuna) saariAla = Mathf.Max(saariAla, (Screen.height - c.yMin) / pp);
+            float a = VaakaReuna;
+            for (int kierros = 0; kierros < 2; kierros++)
+            {
+                a = KulmaVali(koko * 0.5f);
+                // Saaren alle: pallon yläreuna (ruudun alareunasta a + koko) vähintään 8 pt saaren alapuolelle.
+                float tila = ruutu.height - saariAla - VaakaReuna - a;
+                if (saariAla <= 0f || koko <= tila) break;
+                koko = Mathf.Max(MinKokoPt, tila);
+            }
+            float vasen = a - lo.xMin, ala = a - (ruutu.height - lo.yMax);
+            el.style.left = vasen; el.style.bottom = ala;
+            el.style.width = koko; el.style.height = koko;
+            NauhanVasen = vasen + koko + VaakaReuna;
+            return true;
+        }
+
+        /// <summary>
+        /// Pienin etäisyys a ruudun vasemmasta ja alareunasta pallon reunaan, jolla r-säteinen pallo pysyy kokonaan näytön
+        /// pyöristetyn kulman sisällä VaakaReunan välillä (kulman kaaren keskipiste (K, K), säde K − 8 pt).
+        /// </summary>
+        static float KulmaVali(float r)
+        {
+            const float K = NaytonKulma, Raja = NaytonKulma - VaakaReuna;
+            for (float a = VaakaReuna; a < K + r; a += 0.5f)
+            {
+                float c = a + r;
+                bool sopii = true;
+                for (int i = 0; i < 90 && sopii; i++)
+                {
+                    float th = Mathf.PI + i * (Mathf.PI * 0.5f) / 89f;
+                    float x = c + r * Mathf.Cos(th), y = c + r * Mathf.Sin(th);
+                    if (x < K && y < K && (new Vector2(x - K, y - K)).magnitude > Raja) sopii = false;
+                }
+                if (sopii) return a;
+            }
+            return K;
         }
 
         public void Piilota()

@@ -72,8 +72,10 @@ namespace Matkakirja.Natiivi
             // Pulun, joka on taulun avaaja kaikissa moodeissa. Kyydin ajaksi Pulun kerros nousee kehyksen yläpuolelle.
             // Cupolassa (Ikkuna) Pulu on ulkona avaruuskävelyllä ikkunan aukossa (omistaja 29.9.2026), joten kerros pysyy kehyksen
             // alla ja lasi, heijastus ja pölyt piirtyvät sen päälle; Cupolan läpinäkyvät osat päästävät napautuksen Puluun.
+            // Omistaja 2.10. 21.3x: robottikäden Pulu on vasemmassa alakulmassa myös Cupolassa, joten kerros kehyksen yläpuolelle
+            // (ilman robottikättä, A/B `astro eva robotti pois`, Pulu pysyy ikkunan takana kehyksen alla).
             Kyyti.TilaMuuttui += tila => kerros.AsetaJarjestys(Pulu.Kerros,
-                tila != KyydinTila.Kauko && tila != KyydinTila.Ikkuna ? LinssiUi.SulkuKerros : Pulu.Kerros);
+                tila != KyydinTila.Kauko && (tila != KyydinTila.Ikkuna || !LiviaKuva.RobottiPois) ? LinssiUi.SulkuKerros : Pulu.Kerros);
 
             AstronauttiKerros.AvausKasittelija = Avaus;
             AstronauttiKerros.KuvaKasittelija = (kohde, indeksi) =>

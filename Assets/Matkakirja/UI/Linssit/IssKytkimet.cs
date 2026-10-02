@@ -214,7 +214,20 @@ namespace Matkakirja.Natiivi
             {
                 Rivi1.text = r1 ?? "";
                 Rivi2.text = r2 ?? "";
-                Rivi2.style.display = string.IsNullOrEmpty(r2) ? DisplayStyle.None : DisplayStyle.Flex;
+                PaivitaRivit();
+            }
+            /// <summary>Pöydän pieni tila (omistaja 2.10. 21.3x kohta 8): vain rivi 1 (tietorivi), ylilento piiloon.</summary>
+            public bool VainRivi1 { get => vainRivi1; set { if (vainRivi1 == value) return; vainRivi1 = value; PaivitaRivit(); } }
+            bool vainRivi1;
+            /// <summary>Näkyykö rivi 2 (ylilento): pöytä mitoittaa lukeman tekstit rivien määrästä.</summary>
+            public bool KaksiRivia { get; private set; }
+            void PaivitaRivit()
+            {
+                bool kaksi = !vainRivi1 && !string.IsNullOrEmpty(Rivi2.text);
+                Rivi2.style.display = kaksi ? DisplayStyle.Flex : DisplayStyle.None;
+                if (kaksi == KaksiRivia) return;
+                KaksiRivia = kaksi;
+                Ilmoita();
             }
             protected override void Paikkamerkki(Painter2D p, Rect r) => Levy(p, r, 4f, Lcd, new Color(0.3f, 0.32f, 0.3f), 1.5f);
         }

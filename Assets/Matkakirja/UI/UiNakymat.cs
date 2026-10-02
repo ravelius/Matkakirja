@@ -210,8 +210,14 @@ namespace Matkakirja.Natiivi
             // kehittäjätilassa koko julistekokoelma kuten galleriassa). Julisteet asuvat toistaiseksi Aarteet-näkymässä (web).
             var laukku = v.LisaLuetteloRyhma("Matkalaukku");
             v.LisaMaara(v.LisaLuetteloRivi(laukku, "Aarteet", Ikonit.PilleriAarteet, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Aarteet)),
-                d => d.AarninLuettelo.Count(a => a.Loydetty) + d.Tavarat.Where(t => t.Tyyppi != global::Matkakirja.Peli.Laattatyypit.Paaaarre).Sum(t => t.Maara));
-            v.LisaMaara(v.LisaLuetteloRivi(laukku, "Julisteet", Ikonit.PilleriJulisteet, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Aarteet)),
+                d => d.AarninLuettelo.Count(a => a.Loydetty || Asetukset.Kehittaja) + d.Tavarat.Where(t => t.Tyyppi != global::Matkakirja.Peli.Laattatyypit.Paaaarre).Sum(t => t.Maara));
+            // Julisteet avaa suoraan yhden ikkunan, jossa on vain julisteet (omistaja 2.10.2026 klo 21.4x; web avaaJulisteGalleria):
+            // GALLERIA-pohja. Kehittäjätilassa koko kokoelma auki (Julistegalleria.Rakenna).
+            v.LisaMaara(v.LisaLuetteloRivi(laukku, "Julisteet", Ikonit.PilleriJulisteet, () =>
+                {
+                    v.Sulje();
+                    Julistegalleria.Avaa(PeliOhjain.Instanssi?.Laukku()?.Julisteet.Select(j => j.Avain));
+                }),
                 d => Asetukset.Kehittaja && UiSisalto.Julisteet.Count > 0 ? UiSisalto.Julisteet.Count : d.Julisteet.Count);
             // Ei Linssit-riviä: linssit ovat kartalla omana nappinaan (omistaja 2.10.2026 klo 13.56 ja 18.3x "valikon linssit piti
             // siirtää kartalle oman napin alle!!!! älä tuo niitä tuohon valikkoon"; Linssisepän Linssit-karttanappi, web #3859).
@@ -476,7 +482,7 @@ namespace Matkakirja.Natiivi
             // Astronautin kuvaselaimessa pulu on minipulu (Kuvanakyma): iso Pulu kuulsi sen takaa kuvanäkymän himmennyksen
             // läpi (Linssiseppä 29.9., laitekuva 6 kuva-minipulu-taulu; web: iso Pulu ei näy). Vain näkyvyys: puhe ja
             // luenta jatkuvat (Pulu.Nayta(false) pysäyttäisi puhekanavan).
-            Linssit.Astronautti.Kuva.AukiMuuttui += auki => Pulu.Peita(auki);
+            Linssit.Astronautti.Kuva.AukiMuuttui += auki => { kuvaPeittaaPulun = auki; PaivitaPulunPeitto(); };
             Karttaselite.AukiMuuttui += auki => { Linssit.Valitsin.Vaista(auki); Matkakirja.SeliteVaisto(auki); };
             // Linssit-karttanappi avaa valitsimen: ohi-napautus ei saa sulkea sitä samasta napautuksesta (savuke 1128: simulaattorin
             // tap painuu ja nousee samassa ruudussa, joten Avaa ja TarkistaOhiNapautus osuivat samaan ruutuun).
@@ -489,12 +495,24 @@ namespace Matkakirja.Natiivi
             Aanet.Alusta(); // tehostekanava, mykistyksen napsahdus ja tehosteiden tiedostot laitteelle
 
             // ☰ avaa linssivalikon koko pelin valikkona (löydös 20 iPhone, löydös 65 kaikki laitteet).
-            Tilarivi.Valikko.clicked += () =>
+            void AvaaPilleriValikko()
             {
                 Aanentasot.Sulje(); Matkalaukku.Sulje(); Valikko.Sulje();
                 Linssit.Valitsin.Vaihda();
+            }
+            Tilarivi.Valikko.clicked += AvaaPilleriValikko;
+            // Vaaka-iPhonen ☰ (omistaja 2.10.2026 klo 23.0x): sama valikko suoraan napin päälle oikeaan yläkulmaan.
+            Tilarivi.VaakaValikkoPainettu += AvaaPilleriValikko;
+            Linssit.Valitsin.Avaajat.Add(Tilarivi.VaakaValikkoNappi);
+            Linssit.Valitsin.AukiMuuttui += auki =>
+            {
+                if (Linssivalitsin.Valikkona) Tilarivi.Valikko.EnableInClassList("mk-valittu", auki);
+                valikkoAuki = auki;
+                PulunKerros();
+                // Vaaka-iPhone (web-malli, Pelikoodari 2.10. klo 23.3x): Pulun hahmo piiloon valikon ajaksi; pystyssä ennallaan.
+                valikkoPeittaaPulun = auki && Ylapalkki.Piilossa;
+                PaivitaPulunPeitto();
             };
-            Linssit.Valitsin.AukiMuuttui += auki => { if (Linssivalitsin.Valikkona) Tilarivi.Valikko.EnableInClassList("mk-valittu", auki); };
             RakennaPuhelinvalikko();
             Tilarivi.Vieras(Karttaselite.Nappi);
             Matkakirja.Kiinnita(Tilarivi);
@@ -846,11 +864,20 @@ namespace Matkakirja.Natiivi
             Aloitus.Nayta(id => Aloita(o, id), o.Lahtokaupungit(), o.TallennusOn ? () => { var v = o.Jatka(); if (v != null) Tilarivi.Viesti(v); } : (System.Action)null);
         }
 
-        bool lehtiAuki, arkkiAuki, chatNostonPaalla;
+        bool lehtiAuki, arkkiAuki, chatNostonPaalla, valikkoAuki, kuvaPeittaaPulun, valikkoPeittaaPulun;
 
+        /// <summary>Pulun hahmo piilossa astronautin kuvaselaimen tai vaakavalikon ajan (Pulu.Peita: puhe ja kuplat jatkuvat).</summary>
+        void PaivitaPulunPeitto() => Pulu.Peita(kuvaPeittaaPulun || valikkoPeittaaPulun);
+
+        /// <summary>
+        /// PILLERIVALIKKO PULUN PÄÄLLÄ (web .paavalikko.tk-paneeli--paikallaan z-index 60 > .pollo-nappi 40; Päätoimittaja 2.10.2026
+        /// klo 23.0x, vaaka-iPhonen kuva: valikko ulottui Pulun lepopaikalle ja Pulu piirtyi sen päälle): valikon ajaksi Pulun kerros
+        /// laskee heti valikon (LinssiUi.Kerros 25) alle, muiden näkymien (kortit 20, nimiöt) yläpuolelle.
+        /// </summary>
         void PulunKerros() =>
             Kerros.AsetaJarjestys(Pulu.Kerros, lehtiAuki && !arkkiAuki ? UiKerros.Traileri + 2
-                : chatNostonPaalla ? UiKerros.Valikot + 2 : Pulu.Kerros);
+                : chatNostonPaalla ? UiKerros.Valikot + 2
+                : valikkoAuki ? LinssiUi.Kerros - 0.5f : Pulu.Kerros);
 
         /// <summary>
         /// Löydös 136 (omistaja, build 16): nostokortin valmis kysymys tai korostettu sana avaa chatin nosto taustalla

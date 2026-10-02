@@ -1178,7 +1178,7 @@ namespace Matkakirja.Natiivi
                 }
                 case "pilleri":
                 {
-                    // Pillerivalikko (omistaja 29.9.2026): ui pilleri [paa|linssit|aarteet] [n] = näkymä ja n:s rivi napautettuna.
+                    // Pillerivalikko (omistaja 29.9.2026): ui pilleri [paa|linssit|aarteet] [n] = näkymä ja n:s rivi napautettuna; ui pilleri rivi:Julisteet = pääsivun rivi.
                     var o = loput.Split(' ');
                     string nk = o.Length > 0 && o[0].Length > 0 ? o[0] : "paa";
                     int n = o.Length > 1 && int.TryParse(o[1], out int nn) ? nn : -1;
