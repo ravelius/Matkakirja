@@ -791,7 +791,7 @@ V7_PITO = 1450                # b-luenta alkaa 960 (15,5 s)
 V7_NAUHA = 0.0205             # omistaja 23.5x: kirjaimet ~28 % isommiksi (v4–v6: 0,016); sama ajoaika → nauha
                               # kulkee pinnalla ~22 % nopeammin, lukutahti merkkeinä sekunnissa ≈ ennallaan
 V7_TYKKI = 220.0              # kirjaimet erottuvat kovassa auringossa (v4–v6: 70 himmennetyssä valossa)
-V7_KAIKU = (975, 1440)        # v8: kaikukuva b-luennan (960–1425) aikana
+V7_KAIKU = (965, 1440)        # v8: kaikukuva b-luennan (960–1425) aikana; aurinko hiipuu ja palaa sen reunoilla
 V7_RENDER = list(range(1, 283)) + list(range(V7_LAHESTY[0], V7_KAARI_LOPPU + 1)) + [V7_PITO]
 
 
@@ -864,6 +864,13 @@ if '--v7' in A:
         KAIKU = A[A.index('--kaiku') + 1]
         KVOIMA = float(A[A.index('--kaikuvoima') + 1]) if '--kaikuvoima' in A else 160.0
         kaiku_projektori('kaiku', p, (n + Vector((-0.40, -0.15, -0.30))).normalized(), 0.6, 0.11, KAIKU, V7_KAIKU, KVOIMA)
+        # omistaja 2.10. 08.xx: kertomuksen ajan kaiku on ainoa valo — aurinko ja ympäristö hiipuvat 1,5 s:ssa kaiun
+        # syttyessä ja palaavat kaiun hiipuessa
+        alku_k, loppu_k = V7_KAIKU; tausta = sc.world.node_tree.nodes['Background'].inputs['Strength']
+        for r, v_ in ((alku_k, 95), (alku_k + 45, 0), (loppu_k - 45, 0), (loppu_k, 95)):
+            aur.energy = v_; aur.keyframe_insert('energy', frame=r)
+        for r, v_ in ((alku_k, 1.0), (alku_k + 45, 0.0), (loppu_k - 45, 0.0), (loppu_k, 1.0)):
+            tausta.default_value = v_; tausta.keyframe_insert('default_value', frame=r)
     c, t, u = lentoasento(p, n, kulma=55, matka=0.11)
     cd = bpy.data.cameras.new('k'); cd.sensor_fit = 'VERTICAL'; cd.sensor_height = 24; cd.clip_start = 0.003
     cam = bpy.data.objects.new('k', cd); sc.collection.objects.link(cam); sc.camera = cam
