@@ -91,6 +91,11 @@ uniform vec4 uEuRaja;
 uniform sampler2D uValotEu, uValotMaa, uVesiEu, uVesiMaa, uPilvet;
 varying vec3 vMaailma;
 float yo(vec3 n) { return 1.0 - smoothstep(-0.105, 0.035, dot(n, uAurinko)); }
+// Ilmamassa korkeuden sinistä (Kasten & Young 1989; natiivi Yokuori.Ilmamassa): 1 zeniitissä, ~10 5°:ssa, ~38 horisontissa.
+float ilmamassa(float s) {
+  s = clamp(s, 0.0, 1.0);
+  return 1.0 / (s + 0.50572 * pow(degrees(asin(s)) + 6.07995, -1.6364));
+}
 void main() {
   vec3 n = normalize(vMaailma);
   float yoKuori = yo(n);
@@ -140,9 +145,12 @@ void main() {
   float nh2 = max(nh * nh, 1e-4);
   float D = exp(-(1.0 - nh2) / (nh2 * uAalto)) / (3.14159265 * uAalto * nh2 * nh2);
   float F = 0.02 + 0.98 * pow(1.0 - clamp(dot(v, hv), 0.0, 1.0), 5.0);
-  float kiilto = vesi * osuu * clamp(nl * 12.0, 0.0, 1.0) * min(D * F / (4.0 * max(nv, 0.08)), 40.0) * uKiilto * lapi;
-  vec3 kiiltoVari = mix(vec3(1.0, 0.55, 0.25), vec3(1.0, 0.96, 0.88), clamp(nl * 4.0, 0.0, 1.0));
-  c += kiiltoVari * kiilto * (1.0 - a);
+  // Ilmakehän läpäisy (kiillon pystyleikkaus, Linssiseppä 2.10.2026, Päätoimittajan OK; natiivi samassa erässä): auringon
+  // ja katseen tie ilmamassoina, τ RGB 0,15 / 0,20 / 0,33. Korvaa kiinteän oranssin: matalalla auringolla kiilto himmenee
+  // oranssiksi, eikä ruudun ulkopuolisen huipun sivuliepe puhkea valkoiseksi tasanteeksi.
+  float kiilto = vesi * osuu * clamp(nl * 60.0, 0.0, 1.0) * min(D * F / (4.0 * max(nv, 0.08)), 40.0) * uKiilto * lapi;
+  vec3 lapaisy = exp(-vec3(0.15, 0.20, 0.33) * (ilmamassa(nl) + ilmamassa(nv)));
+  c += lapaisy * kiilto * (1.0 - a);
   float lisa = vesi * osuu * yoKuori * clamp(uYoVesi - a, 0.0, 1.0);
   c += uVari * lisa;
   a += lisa;
