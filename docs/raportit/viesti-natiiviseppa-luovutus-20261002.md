@@ -8,7 +8,9 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen
   valikko-v2 4d03a255 (ilman Linssit-riviä; vain karttanapin kanssa), kipsipäät karttaobjekteina (erikoisnostot-3 2b1bffa1).
   BUILD 127 = 140c4033. TF: Julkaisija vie 128:n Päätoimittajan V2-OK:lla, muuten 127 viimeistään 20.05.
 - Ei avoimia junia eikä natiiviseppa-worktreeitä. TF-raja 12/vrk; junat isoina 2–3 h välein; tili lähellä 95 %:n rajaa.
-- Odottaa: natiivi-ui/ylapalkki-tikkaus-2 (omistajan uusi OK).
+- TF 128 ladattu 20.03 (7/12). Omistaja 20.1x: laskuri nollautuu 3.10. klo 12.30, aamuun säästetään 2 latausta → illalla ja
+  yöllä enintään 3 TF-BUILDia (8–10).
+- Seuraava juna: natiivi-ui/ylapalkki-tikkaus-2 (nyt hyväksytty) + nostoselain (kun Päätoimittaja tarkistanut viimeisen tasauksen).
 - Opit: savukkeen napautukset OIKEALLA sim-työkalun tapilla (ui-komento ei paljasta samassa ruudussa tapahtuvaa sulkua);
   vaakatilassa sim-työkalu käyttää pystykoordinaatteja. OHJAUSNAPIT (Raamattu 14.2x): ✕ pyöristettynä neliönä.
   Ristiin menneet NYT-viestit: tarkista SHA ennen update-refiä; jos käännös ei ole alkanut, palauta juna/b13 vanhaan
