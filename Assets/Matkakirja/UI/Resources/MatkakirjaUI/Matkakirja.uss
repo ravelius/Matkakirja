@@ -126,24 +126,17 @@
 
 .mk-vakasnappi {
     position: absolute;
-    top: 8px;
+    top: var(--tk-vali-s);
     right: 10px;
-    width: 40px;
-    height: 40px;
-    min-height: 40px;
-    padding: 0;
-    border-width: 1px;
-    border-radius: 12px;
-    border-color: rgba(70, 51, 31, 0.35);
-    background-color: rgba(239, 220, 180, 0.9);
-    color: var(--map-ink);
-    justify-content: center;
     transition-property: opacity;
     transition-duration: 0.18s;
 }
 
-.mk-vakasnappi:active {
-    background-color: rgba(245, 231, 200, 0.95);
+/* Väkäsnappi on OHJAUSNAPPI-neliö kuten viereinen suurennuslasi (Päätoimittaja 2.10. klo 22.5x; web .ylapalkki-nappi
+ * karttaselitteen kokoinen, omistaja 13.9. "saman korkuinen kuin kartta selite"), webin tan-sävyllä (--paper). */
+.mk-ohjausnappi.mk-vakasnappi {
+    --tk-pinta: var(--paper);
+    --tk-muste: var(--map-ink);
 }
 
 /* Auki olevan palkin alta nappi väistyy kokonaan (sulku napauttamalla palkin ulkopuolelle). */
@@ -151,12 +144,6 @@
     opacity: 0;
 }
 
-.mk-vakasnappi > .mk-ikoni {
-    width: 20px;
-    height: 20px;
-    margin-right: 0;
-    --mk-ikoni-viiva: 1.6;
-}
 
 /* Löydös 76: logo avatun laukun oikeassa yläkulmassa (iPhone), webin puhelinlogon koko 92 × 22. */
 .mk-laukku__logo {

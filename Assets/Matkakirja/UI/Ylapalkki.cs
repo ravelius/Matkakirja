@@ -369,7 +369,7 @@ namespace Matkakirja.Natiivi
             ilmoitus.style.display = DisplayStyle.None;
 
             // Piilossa ☰ tuo palkin takaisin (omistaja 24.9.: ei kelluvia nappeja, vain palkki).
-            vakasnappi = Rakenne.Nappi(null, "mk-vakasnappi", () =>
+            vakasnappi = Rakenne.Nappi(null, "mk-ohjausnappi tk-teema-paperi mk-vakasnappi", () =>
             {
                 if (VetoPiilossa) { NaytaVedonJalkeen(); return; }
                 if (Auki) Sulje(); else Avaa();
@@ -602,11 +602,8 @@ namespace Matkakirja.Natiivi
             }
             else PalautaPystyNahka();
             palkki.EnableInClassList("mk-ylapalkki--puhelin", Puhelin);
-            // Löydös 68: väkäsnappi täsmälleen ☰:n paikalle ja kokoiseksi (turva-alueen sisällä, palkin täyte).
-            vakasnappi.style.top = Mathf.Round((Korkeus - 36f) / 2f);
-            vakasnappi.style.right = Tayte.y;
-            vakasnappi.style.width = 44f;
-            vakasnappi.style.height = vakasnappi.style.minHeight = 36f;
+            // Väkäsnappi on OHJAUSNAPPI-neliö kartan oikeassa yläkulmassa (USS .mk-vakasnappi; suurennuslasi sen vasemmalla 8 pt:n
+            // välillä, Karttaselite.Asettele), ei enää ☰:n paikalla ja kokoisena (Päätoimittaja 2.10. klo 22.5x).
             bool p = Piilossa;
             if (p != piilossa) { piilossa = p; if (!p) Sulje(); PalkkiPiilossaMuuttui?.Invoke(); }
             palkki.EnableInClassList("mk-ylapalkki--piilossa", piilossa || VetoPiilossa);
