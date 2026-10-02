@@ -31,7 +31,7 @@
     "kerma": "#faf4d6"
   },
   "teemat": {
-    "_selite": "UI-pohjien kolme teemaa (+ linssin avaruuslasi). Teeman valitsee konteksti, ei pinta. Värit webin nykyisistä pinnoista; ei saavutettavuusperusteisia näkyviä muutoksia (omistajan Ydinajatus).",
+    "_selite": "UI-pohjien kolme teemaa (+ linssin avaruuslasi). Teeman valitsee konteksti, ei pinta. Värit webin nykyisistä pinnoista; ei saavutettavuusperusteisia näkyviä muutoksia (omistajan Ydinajatus). HARMAA = ohjausnappien neutraali harmaa valokuvan, 3D:n ja avaruuden päällä (omistaja 16.9.2026, .satelliitti-sulku; OHJAUSNAPPI 2.10.2026).",
     "paperi": {
       "pinta": "#f5f0e2",
       "pergamentti": "#ecd8ae",
@@ -66,6 +66,15 @@
       "korostus": "#5dffa8",
       "reunus": "rgba(93, 255, 168, 0.28)",
       "toiminto": "#5dffa8"
+    },
+    "harmaa": {
+      "pinta": "rgba(130, 130, 130, 0.42)",
+      "pinta-peitto": "#828282",
+      "muste": "#e0e0e0",
+      "muste-pehmea": "#bdbdbd",
+      "korostus": "#ffffff",
+      "reunus": "#aaaaaa",
+      "toiminto": "rgba(170, 170, 170, 0.55)"
     }
   },
   "himmennys": {
@@ -122,10 +131,10 @@
     }
   },
   "mitat": {
-    "_selite": "pt (web px). vali = välien asteikko; kulma = border-radius; nappi = kolme nappityyppiä 38 pt, osuma-ala aina ≥ 44 pt.",
+    "_selite": "pt (web px). vali = välien asteikko; kulma = border-radius; nappi = kolme nappityyppiä 38 pt, osuma-ala aina ≥ 44 pt; nappi.ohjaus = OHJAUSNAPPI-neliö (kuvake ohjaus-kuvake).",
     "vali": { "xs": 4, "s": 8, "m": 12, "l": 16, "xl": 24 },
     "kulma": { "pieni": 6, "nappi": 10, "kortti": 12, "pilleri": 999 },
-    "nappi": { "korkeus": 38, "osuma": 44, "laukaisin": 64 },
+    "nappi": { "korkeus": 38, "osuma": 44, "laukaisin": 64, "ohjaus": 40, "ohjaus-kuvake": 22 },
     "leveys": { "kapea": 600, "levea": 940, "kortti": 420, "minipopup": 320, "paneeli": 350, "sivukortti": 400, "lukupalsta": 640, "lehti": 960 },
     "peitto": { "max": 45, "ohjain": 25, "kamera": 20, "laajennettu": 85, "paneeli": 70 },
     "kuva": { "hero-kortti": "2:1", "hero-arkki": "3:2", "upotus": "4:3", "upotus-leveys": 40, "galleria-korkeus": 64 }
@@ -158,6 +167,14 @@
       "tausta": "kartta sumennettuna kertakuvana pelin avautuessa, koko näkymän päällä himmennys-kevyt",
       "osat": { "tilapaneeli": { "pohja": "PANEELI", "teemat": ["tumma"] }, "aloituskortti": { "pohja": "KORTTI", "teemat": ["paperi"] }, "tuloskortti": { "pohja": "KORTTI", "teemat": ["paperi"] } },
       "_selite": "lautapelien pohja (omistaja 1.10.2026, loki b3e273d72; Siirtosepän Mylly-malli). Lauta ilman taustaa, sumennettu tausta ja tumma tilapaneeli: omistaja 2.10.2026 klo 08.2x (Myllystä)"
+    },
+    "OHJAUSNAPPI": {
+      "teemat": ["harmaa", "paperi", "lasi", "lasi-avaruus"],
+      "koko": "nappi.ohjaus neliönä, kulma kulma.nappi, reuna 1 pt, osuma-ala nappi.osuma",
+      "kuvake": "24-ruudukon viivakuvake kokoa nappi.ohjaus-kuvake, viiva 1,75, ei tekstimerkkejä (×, ‹)",
+      "ryhma": "yksi ohjausryhmä näkymää kohden oikeaan yläkulmaan turva-alueen sisään: ‹ ensin, näkymän toiminnot, ✕ viimeisenä; väli vali.s; puhelimessa pystyssä enintään 4, loput valikkoon",
+      "ulkopuolella": "sisällön omat ohjaimet (kuvan ‹ › -reunakaistat, vetokahva, liukusäätimet) ja Pulu; paneelin sisäinen ‹ Takaisin pysyy tekstinä",
+      "_selite": "kaikki kuvakenapit yhtenäisiksi neliöiksi ja yhteen ryhmään (omistaja 2.10.2026 klo 14.16; linnassa yksi hampurilaisvalikko klo 14.44; Päätoimittajan päätökset 15.1x). Malli taikalasinappi (#linssi-btn)."
     },
     "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)" }
   }
