@@ -9931,3 +9931,7 @@ Omistaja 2.10.2026 klo 08.2x v10-koekuvasta sanatarkasti: 'Tekstit pitää levit
 ## OMISTAJA: AJATUSTEN VIRTA 20 RIVIÄ MOLEMPIIN SUUNTIIN, ENIMMÄKSEEN ALKUKIELELLÄ, KAKSI SUOMEKSI (2.10.2026) (2.10.2026 klo 08.30)
 
 Omistaja 2.10.2026 klo 08.3x sanatarkasti: 'Tekstit voisivat kulkea eri suunnista. Siis vasemmalta oikealle ja oikealta vasemmalle. Ja vielä kun mietin, niin kaksikymmentä eri tekstiä ei varmasti ole sekään liikaa. Suurin osa voi olla ajattelijan alkuperäiskielellä, mutta sekin on kiva, jos siellä on kaksi. Suomen kielistä mukana.' → 20 taustariviä (18 alkukielellä, 2 suomeksi), noin puolet kumpaankin suuntaan, omat nopeudet, kulmat ja koot, luuppaus; sama periaate tuleville ajattelijoille (Marcus: kreikka).
+
+## OMISTAJA: BYSTIN VALO VINJETOIDUKSI — SOKKELI JA KAULA TUMMEMMIKSI (2.10.2026) (2.10.2026 klo 08.36)
+
+Omistaja 2.10.2026 klo 08.3x sanatarkasti: 'Valospotti saisi vinjetoitua kipsipään reunoille ja varsinkin aluslaatta ja kaulaosuus saisi tummentua. Se on nyt liian tylsän näköinen, kun on tasaisen vaalea ja vie liikaa huomiota.' → avainvalo spottina pehmeällä reunahäivytyksellä; sokkeli noin 2 EV ja kaula noin 1 EV tummempi, pään reunat hämärään; kaikissa otoksissa, joissa sokkeli tai kaula näkyy; sama periaate kaikille ajattelijoille. Linnanrakentaja v10 (koestilli ensin).
