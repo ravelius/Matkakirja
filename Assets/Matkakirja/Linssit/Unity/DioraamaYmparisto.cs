@@ -172,6 +172,21 @@ namespace Matkakirja.Natiivi
             byte[] tavut = null;
             yield return DioraamaLevyvalimuisti.Hae(url(y.SyvyysKuva), 60, t => tavut = t);
             if (oma != kerta || tavut == null) { if (tavut == null) kirjaa?.Invoke("poikki: ympäristö: syvyyskartta ei latautunut (vakiosyvyys)"); yield break; }
+            // Linnan piikit (iPad 2.10.): 2048²-PNG puretaan taustasäikeessä suoraan R8-tavuiksi (DioraamaPng); ennen LoadImage
+            // purki pääsäikeessä, latasi 16 Mt:n RGBA:n GPU:lle ja GetPixels32 loi 16 Mt roskaa → 92–109 ms:n ruutu.
+            byte[] harmaa = null; int pw = 0, ph = 0;
+            var purku = Task.Run(() => { try { harmaa = DioraamaPng.Harmaa(tavut, out pw, out ph); } catch (Exception) { harmaa = null; } });
+            while (!purku.IsCompleted) yield return null;
+            if (oma != kerta) yield break;
+            if (harmaa != null)
+            {
+                var sv = new Texture2D(pw, ph, TextureFormat.R8, false, true)
+                { name = "Ymparisto:syvyys", wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Bilinear };
+                sv.SetPixelData(harmaa, 0);
+                sv.Apply(false, true); DioraamaRuutu.Gpu(kirjaa, sv);
+                yield return AsetaSyvyys(sv, y, kirjaa);
+                yield break;
+            }
             var raaka = new Texture2D(2, 2, TextureFormat.RGBA32, false, true);
             float r0 = DioraamaRuutu.Alku();
             if (!raaka.LoadImage(tavut, false)) { UnityEngine.Object.Destroy(raaka); kirjaa?.Invoke("poikki: ympäristö: syvyyskartta ei jäsentynyt"); yield break; }
@@ -188,6 +203,11 @@ namespace Matkakirja.Natiivi
             syv.SetPixelData(r8, 0);
             syv.Apply(false, true); DioraamaRuutu.Gpu(kirjaa, syv);
             UnityEngine.Object.Destroy(raaka);
+            yield return AsetaSyvyys(syv, y, kirjaa);
+        }
+
+        IEnumerator AsetaSyvyys(Texture2D syv, Ymparisto y, Action<string> kirjaa)
+        {
             luodut.Add(syv);
             yield return null;
             vesiMat?.SetTexture(IdSyvyys, syv);
@@ -897,6 +917,74 @@ namespace Matkakirja.Natiivi
         public static void Ladattu() => viimeisinLataus = Time.frameCount;
         /// <summary>Lataus tässä tai edellisessä ruudussa: vältä pääsäikeen GPU-synkronointia (heijastuksen piirto).</summary>
         public static bool LatausTuore => Time.frameCount - viimeisinLataus <= 1;
+    }
+
+    /// <summary>Linnan piikit (iPad 2.10.): pieni PNG-purkaja taustasäikeeseen (8-bittinen, lomittamaton; harmaa, harmaa+alfa,
+    /// RGB, RGBA). Palauttaa ensimmäisen kanavan rivit alhaalta ylös (Unityn raakajärjestys), tai null → LoadImage varalla.</summary>
+    internal static class DioraamaPng
+    {
+        public static byte[] Harmaa(byte[] png, out int w, out int h)
+        {
+            w = h = 0;
+            if (png == null || png.Length < 33 || png[0] != 0x89 || png[1] != (byte)'P' || png[2] != (byte)'N' || png[3] != (byte)'G') return null;
+            int p = 8, varit = 0, syvyys = 0, lomitus = 0;
+            var idat = new System.IO.MemoryStream();
+            while (p + 8 <= png.Length)
+            {
+                int pituus = png[p] << 24 | png[p + 1] << 16 | png[p + 2] << 8 | png[p + 3];
+                string tyyppi = System.Text.Encoding.ASCII.GetString(png, p + 4, 4);
+                int d = p + 8;
+                if (pituus < 0 || d + pituus > png.Length) return null;
+                if (tyyppi == "IHDR")
+                {
+                    w = png[d] << 24 | png[d + 1] << 16 | png[d + 2] << 8 | png[d + 3];
+                    h = png[d + 4] << 24 | png[d + 5] << 16 | png[d + 6] << 8 | png[d + 7];
+                    syvyys = png[d + 8]; varit = png[d + 9]; lomitus = png[d + 12];
+                }
+                else if (tyyppi == "IDAT") idat.Write(png, d, pituus);
+                else if (tyyppi == "IEND") break;
+                p = d + pituus + 4;
+            }
+            int kanavia = varit == 0 ? 1 : varit == 4 ? 2 : varit == 2 ? 3 : varit == 6 ? 4 : 0;
+            if (w <= 0 || h <= 0 || syvyys != 8 || lomitus != 0 || kanavia == 0 || idat.Length < 3) return null;
+            int rivi = w * kanavia;
+            var raaka = new byte[(long)(rivi + 1) * h];
+            idat.Position = 2; // zlib-otsake
+            using (var z = new System.IO.Compression.DeflateStream(idat, System.IO.Compression.CompressionMode.Decompress))
+            {
+                int o = 0;
+                while (o < raaka.Length) { int r = z.Read(raaka, o, raaka.Length - o); if (r <= 0) break; o += r; }
+                if (o < raaka.Length) return null;
+            }
+            var tulos = new byte[w * h];
+            var ed = new byte[rivi]; var nyt = new byte[rivi];
+            for (int y = 0; y < h; y++)
+            {
+                int a = y * (rivi + 1);
+                byte suodin = raaka[a];
+                for (int x = 0; x < rivi; x++)
+                {
+                    int vas = x >= kanavia ? nyt[x - kanavia] : 0, yla = ed[x], vy = x >= kanavia ? ed[x - kanavia] : 0;
+                    int v = raaka[a + 1 + x];
+                    switch (suodin)
+                    {
+                        case 1: v += vas; break;
+                        case 2: v += yla; break;
+                        case 3: v += (vas + yla) >> 1; break;
+                        case 4:
+                            int pp = vas + yla - vy, pa = Math.Abs(pp - vas), pb = Math.Abs(pp - yla), pc = Math.Abs(pp - vy);
+                            v += pa <= pb && pa <= pc ? vas : pb <= pc ? yla : vy; break;
+                        case 0: break;
+                        default: return null;
+                    }
+                    nyt[x] = (byte)v;
+                }
+                int kohde = (h - 1 - y) * w; // PNG ylhäältä alas → Unity alhaalta ylös
+                for (int x = 0; x < w; x++) tulos[kohde + x] = nyt[x * kanavia];
+                var t = ed; ed = nyt; nyt = t;
+            }
+            return tulos;
+        }
     }
 
     /// <summary>ENSILATAUS v2 (iPad-mittaus 1.10.: puiden vaiheessa 100–220 ms:n ruutuja): puut.json (4,5 Mt, ~65 000 riviä) ja
