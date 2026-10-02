@@ -190,59 +190,50 @@ Shader "Matkakirja/Linssit/Yokuori"
                 // pehmeä raja levitti taivaan heijastuksen ja kiillon maalle; terävöinti kapeaksi rajaksi.
                 if (_VesiTerava > 0.0) vesi = lerp(vesi, (half)smoothstep(0.4, 0.6, vesi), (half)_VesiTerava);
                 l = l * l * (half)0.6 + l * (half)0.4;                   // kuvan sRGB-sävy lähemmäs lineaarista, himmeät vaimeammiksi
-                // LÄHIKUVAN VALOPISTEET KATUVERKKONA (Päätoimittaja 2.10., ISS037-E-18864:n malli; omistaja: uskottavuus): kun valokuvan
-                // tekseli kattaa yli 3 kuvapikseliä (Eurooppa 2048 ≈ 2–4 km, tarkat ≈ 0,5 km, maailma ≈ 19 km), valo jaetaan soluihin
-                // (texel/3, 400 m … 4 km), joissa kaksi lähes kohtisuoraa "katua" kulkee satunnaisessa kulmassa; kadun varrella erilliset
-                // terävät pisteet (harvemmat kuin rae) pienellä hehkulla, natriumin oranssi ja LEDin valkoinen sekaisin (30 % LED).
-                // Pisteiden tiheys seuraa kirkkautta ja keskiarvo säilyy; kaukana kuva ennallaan (liuku 3…8 px), välillä hieno rae.
+                // LÄHIKUVAN VALOPISTEET (Päätoimittaja 2.10., ISS037-E-18864:n malli; omistaja: uskottavuus): kun valokuvan tekseli
+                // kattaa yli 3 kuvapikseliä (Eurooppa 2048 ≈ 2–4 km, tarkat ≈ 0,5 km, maailma ≈ 19 km), valo jaetaan erillisiksi 1–2 px:n
+                // valopisteiksi pienellä hehkulla (natriumin oranssi, ~30 % LED-valkoisia); tiheys kirkkauden mukaan ja keskiarvo säilyy,
+                // joten kaupungin muoto ja kadut tulevat valokuvasta. Kaukana kuva ennallaan (liuku 3…8 px).
                 float clat = max(cos(lat), 0.2);
                 float texM = (_TarkatOn > 0.5 && euPaino > 0.5h ? 0.0045 : euPaino > 0.5h ? 0.0357 : 0.176) * 111320.0 * clat;
                 half piste = (half)smoothstep(3.0, 8.0, texM / max(length(fwidth(p)), 1.0));
                 half led = 0.0h;
                 if (piste > 0.0h && l > 0.002h)
                 {
-                    // Solun koko ruudun pikseleistä (~36 px), 2:n potenssin tasoina 125 m:stä ylöspäin ja kahden tason liukuva
-                    // sekoitus, jotta pisteet ovat aina 4–8 px:n päässä toisistaan eivätkä ui zoomatessa (laite 2.10.: texel/3-solut
-                    // antoivat alle pikselin välit = hieno rae).
+                    // Yksi valopiste solua kohti; solu ~8 px ruudulla 2:n potenssin tasoina 30 m:stä ja kahden tason liukuva sekoitus,
+                    // jotta pisteet ovat 1–2 px:n kokoisia, 4–8 px:n päässä toisistaan, eivätkä ui zoomatessa. Lähimmät 2 × 2 solua
+                    // lasketaan, joten hehku ei katkea solun reunaan (simulaattori 6bbc2df7: katusolut katkesivat pätkiksi).
                     float pxM = max(length(fwidth(p)), 0.5);
-                    float tasoF = log2(max(pxM * 36.0 / 125.0, 1.0));
+                    float tasoF = log2(max(pxM * 8.0 / 30.0, 1.0));
                     float taso0 = floor(tasoF), sek = tasoF - taso0;
-                    float pr = saturate((float)l * 1.8);
-                    const float Vali = 0.11, Ydin = 0.035;             // pisteväli ja ytimen säde solun mitoissa
+                    float pr = saturate((float)l * 1.6);
+                    const float Ydin = 0.17, Hehku = 0.08;              // ytimen säde solun mitoissa ja hehkun voimakkuus (säde 2 ×)
                     float kuvio = 0.0, ledKuvio = 0.0;
                     [unroll] for (int taso = 0; taso < 2; taso++)
                     {
                         float paino = taso == 0 ? 1.0 - sek : sek;
-                        float solu = 125.0 * exp2(taso0 + taso);
+                        float solu = 30.0 * exp2(taso0 + taso);
                         float2 g = float2(lon * clat, lat) * (6371000.0 / solu);
-                        float2 f0 = frac(g) - 0.5;
-                        uint2 u = (uint2)(int2)floor(g);
-                        [unroll] for (int katu = 0; katu < 2; katu++)
+                        float2 alku = floor(g - 0.5);
+                        [unroll] for (int n = 0; n < 4; n++)
                         {
-                            uint hh = u.x * 1664525u + u.y * 1013904223u + 374761393u + (uint)katu * 2654435761u + (uint)(taso0 + taso) * 40503u;
+                            float2 c = alku + float2(n & 1, n >> 1);
+                            uint2 u = (uint2)(int2)c;
+                            uint hh = u.x * 1664525u + u.y * 1013904223u + 374761393u + (uint)(taso0 + taso) * 40503u;
                             hh ^= hh >> 16; hh *= 2246822519u; hh ^= hh >> 13; hh *= 3266489917u; hh ^= hh >> 16;
-                            float h1 = (hh & 1023u) / 1023.0, h2 = ((hh >> 10) & 1023u) / 1023.0;
-                            // Kadun kulma (toinen katu ~90° ± 20° ensimmäisestä) ja siirto keskeltä ±0,25.
-                            float kulma = 3.14159 * h1 + katu * (1.5708 + 0.35 * (h2 - 0.5));
-                            float c = cos(kulma), sn = sin(kulma);
-                            float2 q = float2(c * f0.x + sn * f0.y, -sn * f0.x + c * f0.y - 0.5 * (h2 - 0.5));
-                            if (abs(q.x) > 0.44) continue;
-                            float kk = floor(q.x / Vali + 0.5);
-                            uint ph = hh ^ ((uint)(int)(kk + 64.0) * 2246822519u);
-                            ph ^= ph >> 15; ph *= 2654435761u; ph ^= ph >> 13;
-                            float ps1 = (ph & 1023u) / 1023.0, ps2 = ((ph >> 10) & 1023u) / 1023.0, ps3 = ((ph >> 20) & 1023u) / 1023.0;
-                            if (ps1 >= pr) continue;                         // tiheys kirkkauden mukaan
-                            float2 d = float2(q.x - (kk + 0.3 * (ps2 - 0.5)) * Vali, q.y);
+                            float h1 = (hh & 1023u) / 1023.0, h2 = ((hh >> 10) & 1023u) / 1023.0, h3 = ((hh >> 20) & 1023u) / 1023.0;
+                            if (h1 >= pr) continue;                       // tiheys kirkkauden mukaan
+                            float2 d = g - (c + 0.15 + 0.7 * float2(h2, h3));
                             float r2 = dot(d, d) / (Ydin * Ydin);
-                            float v = (exp(-r2) + 0.12 * exp(-r2 / 9.0)) * paino;   // terävä ydin + pieni hehku
-                            kuvio += v;
-                            ledKuvio += v * step(0.7, ps3);
+                            float ydin = exp(-r2);
+                            kuvio += (ydin + Hehku * exp(-r2 / 4.0)) * paino;
+                            ledKuvio += ydin * paino * step(0.7, frac(h1 * 7.31 + h2 * 3.17));   // ~30 % LED, vain ytimessä
                         }
                     }
-                    // Keskiarvo säilyy: odotettu valo solua kohti = 2 katua · (0,88 / väli) pistettä · pr · π·ydin²·(1 + 0,12·9).
-                    float odotus = 2.0 * (0.88 / Vali) * pr * 3.14159 * Ydin * Ydin * 2.08;
+                    // Keskiarvo säilyy: odotettu valo solua kohti = pr · π·ydin²·(1 + 4·hehku).
+                    float odotus = pr * 3.14159 * Ydin * Ydin * (1.0 + 4.0 * Hehku);
                     l = lerp(l, (half)min(kuvio * (float)l / max(odotus, 0.002), 8.0), piste);
-                    led = (half)(piste * saturate(ledKuvio / max(kuvio, 1e-4)));
+                    led = (half)(piste * saturate(ledKuvio / max(kuvio, 1e-4)) * saturate(kuvio * 2.0));
                 }
                 // Sävy NASA-vertailusta (30.9., ISS037-E-18864): himmeät natriumin oranssit, ytimet kellanvalkoiset (ennen valkoisempi).
                 half3 savy = lerp(half3(1.0, 0.46, 0.14), half3(1.0, 0.80, 0.52), saturate(l * 1.4h));
