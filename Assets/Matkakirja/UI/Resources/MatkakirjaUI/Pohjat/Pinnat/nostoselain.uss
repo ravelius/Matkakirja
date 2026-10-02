@@ -5,10 +5,11 @@
  * Rivi ‹ [Nostot ▾] › vetokahvan alla (TOIMINTO-nappi), PANEELI (paperi) rivin alla, AUTO-pilleri lukijan rivillä ja
  * siirtolaskurin lappu (LASI) kortin alareunassa. */
 
+/* Ylärivi (omistaja 2.10.2026 klo 13.53): ‹ NOSTOT ▾ › vasemmalla, AUTO oikealla, HISTORIA-kapiteelin kirjasin. */
 .mk-nostoselain {
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-shrink: 0;
     margin: var(--tk-vali-xs) 0 var(--tk-vali-s) 0;
 }
@@ -28,23 +29,32 @@
 }
 
 .mk-nostoselain__avaaja {
-    min-width: 148px;
-    margin: 0 var(--tk-vali-s);
-    background-color: var(--tk-paperi-pergamentti);
-    border-color: var(--tk-paperi-korostus);
+    height: var(--tk-nappi-korkeus);
+    min-height: var(--tk-nappi-korkeus);
+    margin: 0 var(--tk-vali-xs);
+    padding: 0 var(--tk-vali-s) 0 var(--tk-vali-m);
+    border-width: 1px;
+    border-radius: var(--tk-kulma-nappi);
+    border-color: var(--tk-paperi-muste-pehmea);
+    background-color: initial;
 }
 
 .mk-nostoselain__avaaja > .mk-nappi__teksti {
-    font-size: var(--tk-koko-leipa);
-    color: var(--tk-paperi-korostus);
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 7.69px; /* web 0.12em, sama kuin HISTORIA (.mk-kortti__kapiteeli) */
+    color: var(--tk-paperi-muste-pehmea);
     -unity-text-align: middle-center;
+}
+
+.mk-nostoselain__vali {
+    flex-grow: 1;
 }
 
 .mk-nostoselain__avaajaikoni {
     width: 16px;
     height: 16px;
     margin-left: var(--tk-vali-xs);
-    color: var(--tk-paperi-korostus);
+    color: var(--tk-paperi-muste-pehmea);
 }
 
 .mk-nostoselain__avaaja.mk-valittu {
