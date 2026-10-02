@@ -2006,14 +2006,17 @@ body.satelliitti-kyyti .astro-nakymat-nappi { z-index: 49; }
 
 /*
  * AUTO (omistaja 2.10.2026; NOSTOKORTTI-pohjan osa AUTO, js/pohjat/auto.js): kytkin ‹ ›:n ryhmässä alhaalla keskellä
- * ("AUTO ‹ ›", Päätoimittaja 2.10.2026: vasemmassa alakulmassa se peitti pikkukuvanauhan), siirtolappu rivin
- * yläpuolelle koko leveydelle. AUTOn aikana otsikkona on pelkkä kohteen nimi (seutu pois).
+ * ("AUTO ‹ ›", Päätoimittaja 2.10.2026: vasemmassa alakulmassa se peitti pikkukuvanauhan). AUTOn aikana otsikkona on
+ * pelkkä kohteen nimi (seutu pois), eikä siirtolappua näytetä (omistaja 21.3x).
  */
-.satelliitti-autolappu {
-  position: absolute;
-  left: var(--tk-vali-m);
-  right: var(--tk-vali-m);
-  bottom: calc(var(--tk-vali-m) * 2 + var(--tk-nappi-osuma) + env(safe-area-inset-bottom, 0px));
-  z-index: 7;
-}
 .satelliitti-auto-paalla .satelliitti-seutu { display: none; }
+/* AUTO HILJAA (omistaja 21.3x): ✕, Pulu, ‹ › ja AUTO häipyvät; napautus palauttaa (js/linssit/satelliitti.js). */
+.satelliitti-katselu :is(.satelliitti-kulma, .satelliitti-kohteet, .satelliitti-pulukulma) {
+  transition: opacity var(--tk-kesto-avaus) ease-out;
+}
+.satelliitti-katselu.satelliitti-auto-hiljaa :is(.satelliitti-kulma, .satelliitti-kohteet, .satelliitti-pulukulma),
+body.satelliitti-auto-hiljaa .pollo-nappi {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--tk-kesto-sulku) ease-in;
+}
