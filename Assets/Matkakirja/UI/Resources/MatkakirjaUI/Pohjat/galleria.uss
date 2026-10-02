@@ -1,16 +1,15 @@
-/* GALLERIA-pohja (tyylikirja pohjat.GALLERIA, omistaja 2.10.2026 klo 15.5x, web #3860; malli julistegalleria .julistegalleria-*):
+/* GALLERIA-pohja (tyylikirja pohjat.GALLERIA, omistaja 2.10.2026 klo 15.5x, web #3860 ja #3870 css/pohjat/galleria.css):
  * PANEELI paperi, otsikkorivi kapiteeli + laskuri ja ✕ OHJAUSNAPPI, osiot kapiteelina laskureineen, ruudukko
- * galleria.sarake / galleria.vali (Rakenne.Ruudukko), vedos kehyksellä ja nimi alla, lukossa katkoviivakehys.
+ * galleria.sarake / galleria.vali (Rakenne.Ruudukko), vedos kehyksellä ja nimi alla (enintään 2 riviä), lukossa ja kuvaton
+ * reunus-kehys himmeällä pohjalla (Galleriat.Himmea). Leveys min(leveys.levea, ruutu − vali.xl) asetetaan C#:ssa.
  * Käyttäjät: Julisteet (Galleriat.cs Julistegalleria), sitten ISS-kameran ja astronauttien kuvat. VAIN --tk-*-tokenit. */
 .mk-galleria-huntu {
     background-color: var(--tk-himmennys-kevyt);
 }
 
 .mk-galleria {
-    width: 94%;
-    max-width: 760px;
-    max-height: 88%;
-    padding: var(--tk-vali-s) var(--tk-vali-m) var(--tk-vali-l) var(--tk-vali-m);
+    max-height: var(--tk-peitto-laajennettu);
+    padding: 0 var(--tk-vali-l) var(--tk-vali-l) var(--tk-vali-l);
     border-width: 1px;
     border-color: var(--tk-reunus);
     border-radius: var(--tk-kulma-kortti);
@@ -24,21 +23,23 @@
     flex-shrink: 0;
     min-height: var(--tk-nappi-ohjaus);
     align-items: center;
-    margin-bottom: var(--tk-vali-xs);
-    padding: var(--tk-vali-xs) 0 var(--tk-vali-xs) 0;
+    margin-bottom: var(--tk-vali-s);
+    padding: var(--tk-vali-m) 0 var(--tk-vali-s) 0;
     border-bottom-width: 1px;
     border-color: var(--tk-reunus);
 }
 
 .mk-galleria__otsikko {
     margin-right: var(--tk-vali-s);
-    font-size: var(--tk-koko-leipa);
+    font-size: var(--tk-koko-valiotsikko);
     letter-spacing: 10px; /* web 1.6px */
     color: var(--tk-muste);
 }
 
 .mk-galleria__luku {
-    font-size: var(--tk-koko-kapiteeli);
+    /* Laskuri otsikon koossa ja harvennuksessa (web h2.tk-kapiteeli > span.tk-kokoelma__laskuri, sävy pehmeämpi). */
+    font-size: var(--tk-koko-valiotsikko);
+    letter-spacing: 10px; /* web 1.6px */
     color: var(--tk-muste-pehmea);
 }
 
@@ -51,7 +52,7 @@
 }
 
 .mk-galleria__ryhma {
-    margin: var(--tk-vali-m) 0 var(--tk-vali-xs) 0;
+    margin: var(--tk-vali-s) 0 var(--tk-vali-s) 0;
     font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 9.17px; /* web 1.1px */
     color: var(--tk-muste-pehmea);
@@ -75,6 +76,8 @@
 }
 
 .mk-galleria__nimi {
+    max-height: 30px; /* 2 riviä: koko-kapiteeli 12 × rivikorkeus 1,25 × 2 (web line-clamp 2) */
+    overflow: hidden;
     margin-top: var(--tk-vali-xs);
     font-size: var(--tk-koko-kapiteeli);
     letter-spacing: 3px; /* web 0.3px */
@@ -83,33 +86,13 @@
     color: var(--tk-muste-pehmea);
 }
 
-.mk-galleria__vedos--lukossa {
-    align-items: center;
-    justify-content: center;
+/* Osioiden väli (web .tk-kokoelma__osio + .tk-kokoelma__osio: vali-m). */
+.mk-galleria__ruudukko--vali {
+    margin-bottom: var(--tk-vali-m);
 }
 
-.mk-galleria__kysymys {
-    font-size: var(--tk-koko-leipa);
-    color: var(--tk-muste);
-}
-
-.mk-katkokehys {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: var(--tk-reunus);
-}
-
-.mk-galleria__kuva .mk-katkokehys {
-    display: none;
-}
-
+/* Lukossa ja kuvaton: kehys reunus-värillä, pohja reunus 30 % (C# Galleriat.Himmea; web color-mix). */
+.mk-galleria__vedos--lukossa .mk-galleria__kuva,
 .mk-galleria__vedos--kuvaton .mk-galleria__kuva {
-    border-width: 0;
-}
-
-.mk-galleria__vedos--kuvaton .mk-galleria__kuva .mk-katkokehys {
-    display: flex;
+    border-color: var(--tk-reunus);
 }
