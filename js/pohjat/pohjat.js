@@ -531,3 +531,201 @@ export function luoPohjaKuvanakyma({ teema = 'tumma', ohjainteema = 'lasi', nimi
   }
   return pohja;
 }
+
+/** OHJAUSNAPIN ✕ viivakuvakkeena (tyylikirja OHJAUSNAPPI: 24-ruudukko, viiva 1,75, ei tekstimerkkiä ×). */
+function pohjaSulkuKuvake() {
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('aria-hidden', 'true');
+  const polku = document.createElementNS(ns, 'path');
+  polku.setAttribute('d', 'M6 6 18 18M18 6 6 18');
+  svg.appendChild(polku);
+  return svg;
+}
+
+/** '2:3' → '2 / 3' (CSS aspect-ratio); tuntematon suhde → juliste 2:3. */
+function galleriaSuhde(suhde) {
+  const m = /^(\d+(?:\.\d+)?):(\d+(?:\.\d+)?)$/.exec(String(suhde ?? ''));
+  return m ? `${m[1]} / ${m[2]}` : '2 / 3';
+}
+
+/**
+ * GALLERIA: kuvakokoelman ikkuna (tyylikirja.json pohjat.GALLERIA; omistaja 2.10.2026 klo 15.5x, Natiivi-UI määritteli).
+ * PANEELI-ikkuna PAPERI-teemalla keskellä ruutua hunnun päällä: otsikkorivi (kapiteeli + laskuri, ✕ OHJAUSNAPPINA) pysyy
+ * ylhäällä vieritettäessä, osiot kapiteeleina laskureineen, ruudukko sarakkeen vähimmäisleveydellä galleria.sarake ja
+ * välillä galleria.vali (puhelimessa pystyssä 3). Vedos kuvan suhteella (data.suhde, juliste 2:3), nimi alla enintään
+ * 2 riviä; lukossa oleva ruutu on pelkkä kehys (ei katoa). Napautus avaa KUVANÄKYMÄN saman osion avoimista kuvista
+ * (‹ › reunakaistat, vaakaveto, nuolinäppäimet; ✕, veto alas ja Esc sulkevat). Sulku: ✕, ohinapautus (huntu), Esc.
+ *
+ * Data: { otsikko, laskuri?, nimi?, suhde?: '2:3' | '3:2', osiot: [{ nimi, laskuri?, ruudut: [{ nimi, kuva, vara?,
+ * lukossa?, suuri?: { url, otsikko?, kuvateksti?, lahde? } }] }] }. `kuva` on ruudukon pikkukuva, `vara` sen varaosoite
+ * ja `suuri` kuvanäkymän täysi koko (oletus kuva).
+ *
+ * @param {object} data GalleriaData (yllä)
+ * @param {{teema?: string, sulje?: Function, esikatselu?: boolean, avattu?: Function}} [asetukset]
+ *   `avattu(ruutu)` kutsutaan, kun kuva avataan kuvanäkymään (pinnan ääni tms.).
+ */
+export function luoPohjaGalleria(data, { teema = 'paperi', sulje = null, esikatselu = false, avattu = null } = {}) {
+  if (!data || !Array.isArray(data.osiot)) return null;
+  pohjatLataaTyyli();
+  const tausta = pohjaSolmu('div', 'tk-kokoelma-tausta tk-piilossa');
+  const el = pohjaSolmu('section', `tk-kokoelma tk-teema-${teema} tk-piilossa`);
+  el.setAttribute('role', 'dialog');
+  el.setAttribute('aria-label', data.nimi || data.otsikko || 'Galleria');
+  el.style.setProperty('--tk-kokoelma-suhde', galleriaSuhde(data.suhde));
+
+  const yla = pohjaSolmu('header', 'tk-kokoelma__yla');
+  const otsikko = pohjaSolmu('h2', 'tk-kapiteeli tk-kokoelma__otsikko', data.otsikko ?? '');
+  if (data.laskuri) otsikko.append(' ', pohjaSolmu('span', 'tk-kokoelma__laskuri', data.laskuri));
+  const sulku = pohjaSolmu('button', 'tk-kokoelma__sulku');
+  sulku.type = 'button';
+  sulku.setAttribute('aria-label', 'Sulje');
+  sulku.appendChild(pohjaSulkuKuvake());
+  yla.append(otsikko, sulku);
+  el.appendChild(yla);
+
+  let auki = false;
+  let kuvanakyma = null;
+  const pohja = {
+    el, tausta, sulku,
+    modaali: false,
+    get auki() { return auki; },
+    get kuvanakyma() { return kuvanakyma; },
+    avaa() {
+      if (auki) return pohja;
+      auki = true;
+      requestAnimationFrame(() => { el.classList.remove('tk-piilossa'); tausta.classList.remove('tk-piilossa'); });
+      if (!esikatselu) pohjaPinoon(pohja);
+      return pohja;
+    },
+    sulje() {
+      if (!auki) return;
+      auki = false;
+      kuvanakyma?.sulje();
+      el.classList.add('tk-piilossa');
+      tausta.classList.add('tk-piilossa');
+      pohjaPinosta(pohja);
+      sulje?.(pohja);
+    },
+    /** Avaa osion avoimet kuvat kuvanäkymään kohdasta `kohdalla`. */
+    avaaKuva(kuvat, kohdalla = 0) {
+      kuvanakyma?.sulje();
+      kuvanakyma = galleriaKuvanakyma(kuvat, kohdalla, () => { kuvanakyma = null; sulku.focus?.({ preventScroll: true }); });
+      (el.parentNode ?? document.body).appendChild(kuvanakyma.el);
+      kuvanakyma.avaa();
+      return kuvanakyma;
+    },
+  };
+  sulku.addEventListener('click', (e) => { e.stopPropagation(); pohja.sulje(); });
+  tausta.addEventListener('click', () => pohja.sulje());
+
+  for (const osio of data.osiot) {
+    const lohko = pohjaSolmu('section', 'tk-kokoelma__osio');
+    const nimi = pohjaSolmu('h3', 'tk-kapiteeli tk-kokoelma__osiootsikko', osio.nimi ?? '');
+    if (osio.laskuri) nimi.append(' ', pohjaSolmu('span', 'tk-kokoelma__laskuri', osio.laskuri));
+    lohko.appendChild(nimi);
+    const ruudukko = pohjaSolmu('div', 'tk-kokoelma__ruudukko');
+    const avoimet = (osio.ruudut ?? []).filter((r) => !r.lukossa);
+    for (const ruutu of osio.ruudut ?? []) {
+      if (ruutu.lukossa) {
+        const lukossa = pohjaSolmu('div', 'tk-kokoelma__vedos tk-kokoelma__vedos--lukossa');
+        lukossa.setAttribute('aria-hidden', 'true');
+        lukossa.appendChild(pohjaSolmu('span', 'tk-kokoelma__kuva'));
+        ruudukko.appendChild(lukossa);
+        continue;
+      }
+      const vedos = pohjaSolmu('button', 'tk-kokoelma__vedos');
+      vedos.type = 'button';
+      vedos.setAttribute('aria-label', `${ruutu.suuri?.otsikko || ruutu.nimi || ''} — katso isona`.trim());
+      const kehys = pohjaSolmu('span', 'tk-kokoelma__kuva');
+      const img = document.createElement('img');
+      img.alt = '';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      // Pikkukuva ensin, sitten varaosoite; kumpikin puuttuu → tyhjä kehys nimen kanssa (ruutu ei katoa).
+      img.addEventListener('error', function virhe() {
+        if (ruutu.vara && img.src !== new URL(ruutu.vara, document.baseURI).href) { img.src = ruutu.vara; return; }
+        img.removeEventListener('error', virhe);
+        img.remove();
+        vedos.classList.add('tk-kokoelma__vedos--kuvaton');
+      });
+      img.src = ruutu.kuva;
+      kehys.appendChild(img);
+      vedos.append(kehys, pohjaSolmu('span', 'tk-kokoelma__nimi', ruutu.nimi ?? ''));
+      const kohdalla = avoimet.indexOf(ruutu);
+      vedos.addEventListener('click', () => {
+        avattu?.(ruutu);
+        pohja.avaaKuva(avoimet, kohdalla);
+      });
+      ruudukko.appendChild(vedos);
+    }
+    lohko.appendChild(ruudukko);
+    el.appendChild(lohko);
+  }
+  if (esikatselu) {
+    el.classList.add('tk-kokoelma--esikatselu');
+    el.classList.remove('tk-piilossa');
+  }
+  return pohja;
+}
+
+/**
+ * GALLERIAN KUVANÄKYMÄ: KUVANÄKYMÄ-pohja, jossa yksi kuva kerrallaan (object-fit contain) ja kuvateksti alhaalla.
+ * Selaus ‹ › -reunakaistoilla (sisällön omat ohjaimet, ei OHJAUSNAPPEJA), vaakavedolla ja nuolinäppäimillä.
+ */
+function galleriaKuvanakyma(kuvat, kohdalla, suljettu) {
+  const nimi = kuvat[kohdalla]?.suuri?.otsikko || kuvat[kohdalla]?.nimi || 'Kuva';
+  const pohja = luoPohjaKuvanakyma({ nimi, sulje: () => {
+    document.removeEventListener('keydown', nuolet);
+    // Häivytys (kesto-sulku) loppuun ennen poistoa.
+    setTimeout(() => pohja.el.remove(), 250);
+    suljettu?.();
+  } });
+  pohja.el.classList.add('tk-kokoelma-kuvanakyma');
+  const img = document.createElement('img');
+  img.className = 'tk-kokoelma-kuvanakyma__kuva';
+  img.alt = '';
+  img.decoding = 'async';
+  const teksti = pohjaSolmu('div', 'tk-kokoelma-kuvanakyma__teksti');
+  pohja.sisalto.append(img, teksti);
+  let i = kohdalla;
+  const nayta = (uusi) => {
+    i = (uusi + kuvat.length) % kuvat.length;
+    const k = kuvat[i];
+    const suuri = k.suuri ?? {};
+    img.src = suuri.url || k.vara || k.kuva;
+    img.alt = suuri.otsikko || k.nimi || '';
+    pohja.el.setAttribute('aria-label', img.alt || 'Kuva');
+    teksti.replaceChildren();
+    if (suuri.otsikko || k.nimi) teksti.appendChild(pohjaSolmu('p', 'tk-kokoelma-kuvanakyma__otsikko', suuri.otsikko || k.nimi));
+    if (suuri.kuvateksti) teksti.appendChild(pohjaSolmu('p', 'tk-kokoelma-kuvanakyma__kuvateksti', suuri.kuvateksti));
+    if (suuri.lahde) teksti.appendChild(pohjaSolmu('p', 'tk-lahde', suuri.lahde));
+    if (kuvat.length > 1) teksti.appendChild(pohjaSolmu('p', 'tk-kokoelma-kuvanakyma__laskuri', `${i + 1}/${kuvat.length}`));
+  };
+  if (kuvat.length > 1) {
+    for (const [suunta, merkki, luokka] of [[-1, '‹', 'edellinen'], [1, '›', 'seuraava']]) {
+      const kaista = pohjaSolmu('button', `tk-kokoelma-kuvanakyma__kaista tk-kokoelma-kuvanakyma__kaista--${luokka}`, merkki);
+      kaista.type = 'button';
+      kaista.setAttribute('aria-label', suunta < 0 ? 'Edellinen kuva' : 'Seuraava kuva');
+      kaista.addEventListener('click', (e) => { e.stopPropagation(); nayta(i + suunta); });
+      pohja.sisalto.appendChild(kaista);
+    }
+    let alku = null;
+    pohja.sisalto.addEventListener('pointerdown', (e) => { alku = { x: e.clientX, y: e.clientY }; });
+    pohja.sisalto.addEventListener('pointerup', (e) => {
+      if (!alku) return;
+      const dx = e.clientX - alku.x, dy = e.clientY - alku.y;
+      alku = null;
+      if (Math.abs(dx) > POHJA_VETO_PX && Math.abs(dx) > 2 * Math.abs(dy)) nayta(i + (dx < 0 ? 1 : -1));
+    });
+  }
+  function nuolet(e) {
+    if (!pohja.auki || kuvat.length < 2) return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); nayta(i + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); nayta(i - 1); }
+  }
+  document.addEventListener('keydown', nuolet);
+  nayta(kohdalla);
+  return pohja;
+}

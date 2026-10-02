@@ -426,13 +426,14 @@ function naytaRepliikki(ui, i) {
     return;
   }
   const { teksti } = rivi;
-  // Canonical avauksen viides repliikki lupaa Viisaan Pöllön oppaaksi: sen kuplassa on pöllön muotokuva, joten se
-  // jää kuplaksi myös äänen kanssa (poikkeus omistajan 14.09 "puhe äänenä, ei kuplina" -sääntöön; Päätoimittajalle).
+  // Canonical avauksen viides repliikki lupaa Viisaan Pöllön oppaaksi: kuplassa on pöllön muotokuva. Äänen kanssa
+  // kuplaan jää vain muotokuva kuvakehyksenä ilman puhuttua tekstiä (Päätoimittaja 2.10.2026).
   const muotokuva = rivi.indeksi === 4;
-  const kupla = () => polloAvauskupla(teksti, {
+  const kupla = (vainKuva = false) => polloAvauskupla(teksti, {
     // Ensiliito omistaa saapumisliikkeen; kupla ei aloita sitä uudestaan.
     lennahda: false,
     muotokuva,
+    vainKuva,
     kuittaus: () => seuraavaRepliikki(ui, i + 1),
   });
   /*
@@ -441,18 +442,12 @@ function naytaRepliikki(ui, i) {
    * hiljaiseksi (js/liviapuhe.js livianAaniAjanTasalla). Eteneminen kulkee äänen kestoon sidotulla ajastimella
    * (livianKuplanAjastin alla), joten kuplaa ei tarvita.
    */
-  let aani = null;
-  let nakyi;
-  if (muotokuva) {
-    nakyi = kupla();
-    if (nakyi) aani = soitaLivianAani(ui, 'avaus', rivi.indeksi, { teksti });
-  } else {
-    ({ audio: aani, kupla: nakyi } = puhuTaiKupla(
-      () => soitaLivianAani(ui, 'avaus', rivi.indeksi, { teksti }),
-      kupla,
-      { ilmanKuplaa: () => polloPuheIlmanKuplaa(teksti) },
-    ));
-  }
+  const { audio: aani, kupla: nakyi } = puhuTaiKupla(
+    () => soitaLivianAani(ui, 'avaus', rivi.indeksi, { teksti }),
+    () => kupla(),
+    // Muotokuvakupla kirjaa repliikin chat-lokiin itse (js/pollo.js naytaAvauskupla).
+    { ilmanKuplaa: () => (muotokuva ? kupla(true) : polloPuheIlmanKuplaa(teksti)) },
+  );
   if (!nakyi) {
     lopetaAvaus();
     return;

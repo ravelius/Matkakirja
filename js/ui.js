@@ -195,7 +195,7 @@ import { otsikkoAvain, piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.j
  */
 import { paivitaSahke, retkikuntaOsio } from './sahke.js';
 import { avaaEsittelylinssit, esittelylinssitAuki, lataaApuraha } from './apuraha.js';
-import { pohjatLataaTyyli } from './pohjat/pohjat.js';
+import { pohjatLataaTyyli, luoPohjaGalleria } from './pohjat/pohjat.js';
 import { lahetaKaynti } from './kaynti.js';
 // Kävijälaskurin versio: sama APP_VERSION-teksti kuin versiorivillä (#app-version), luetaan sivulta.
 const APURAHA_VERSIO = () => globalThis.document?.getElementById('app-version')?.textContent ?? '';
@@ -2449,7 +2449,7 @@ export class UI {
     // Kiinni-tila kirjoitetaan DOMiin heti, jotta ensimmäinenkin avaus
     // näyttää oikean asennon ilman välähdystä.
     this.paivitaTilastolohko(laukunTilastotAuki(), { heti: true });
-    /** Avoin julistegalleria: { kortti, huntu, nappaimet } tai null. */
+    /** Avoin julistegalleria (GALLERIA-pohja) tai null. */
     this.julisteGalleria = null;
     /** Avoin aarteen/tavaran koko ruudun katselin, tai null. */
     this.aarreSuurennos = null;
@@ -18760,118 +18760,67 @@ export class UI {
    * avautuvat popupit: isäntä on päällimmäinen avoin dialogi
    * (suurennosIsanta), koska modaali <dialog> on selaimen top
    * layerissa eikä sen päälle pääse z-indexillä ulkopuolelta. Oma
-   * huntu kortin alle, rasti ja Escape sulkevat.
+   * huntu kortin alle, ✕, ohinapautus ja Escape sulkevat.
    *
-   * Kerroksia on kaksi: galleria (z 66) ja sen päälle avautuva täysi
-   * koko (kulttuurisuurennos, z 70). Escape purkaa ne oikeassa
-   * järjestyksessä ilman erillistä pinologiikkaa: gallerian kuuntelija
-   * väistää, jos suurennos on auki, ja suurennoksen oma kuuntelija
-   * sulkee sen ensin.
+   * Kerroksia on kaksi: galleria (z 66) ja sen päälle avautuva
+   * kuvanäkymä (z 67). Escape purkaa ne pohjien yhteisellä sulkupinolla
+   * (js/pohjat/pohjat.js): ylin, eli kuvanäkymä, sulkeutuu ensin.
    */
   avaaJulisteGalleria() {
     this.suljeJulisteGalleria();
     // Kehittäjätilassa koko kokoelma on auki (ks. julisteVoitot).
     const voitetut = new Set(this.julisteVoitot());
-    const ryhmat = julisteMantereet();
-    const kortti = html('div', 'julistegalleria');
-    kortti.setAttribute('role', 'dialog');
-    kortti.setAttribute('aria-label', 'Julistekokoelma');
-    const ylapalkki = html('div', 'julistegalleria-ylapalkki');
-    ylapalkki.appendChild(html('h2', 'julistegalleria-otsikko', 'Julisteet'));
-    ylapalkki.appendChild(html('span', 'julistegalleria-luku',
-      `${voitetut.size}/${Object.keys(JULISTEET).length}`));
-    const rasti = html('button', 'julistegalleria-rasti', '×');
-    rasti.type = 'button';
-    rasti.setAttribute('aria-label', 'Sulje julistegalleria');
-    rasti.addEventListener('click', () => this.suljeJulisteGalleria());
-    ylapalkki.appendChild(rasti);
-    kortti.appendChild(ylapalkki);
     /*
-     * Täyden koon selailu seuraa gallerian omaa järjestystä (maanosa
-     * kerrallaan): nuoli vie siihen julisteeseen, joka on ruudulla
-     * seuraavana, eikä johonkin muuhun voittojärjestykseen.
+     * GALLERIA-POHJA (tyylikirja pohjat.GALLERIA, js/pohjat/pohjat.js luoPohjaGalleria; Julisteet ensimmäinen käyttäjä).
+     * Voittamaton paikka on pelkkä kehys omassa maanosassaan: kokoelma kertoo, että sitä voi täydentää ja mistä päin
+     * maailmaa, muttei sitä mistä kaupungista (sama linjaus kuin Aarnin luettelossa). Napautus avaa KUVANÄKYMÄN saman
+     * maanosan voitetuista julisteista; ruudukossa pikkukuva (360 px), varana täysikokoinen.
      */
-    const selattavat = ryhmat.flatMap((r) => r.kaupungit.filter((id) => voitetut.has(id)));
-    const teokset = selattavat.map((cityId) => ({
-      otsikko: JULISTEET[cityId].otsikko,
-      lyhyt: JULISTEET[cityId].lyhyt,
-      selite: JULISTEET[cityId].selite,
-      lahde: JULISTE_LAHDE,
-      // Valmis osoite ohittaa Commons-portaikon (ks. naytaKulttuuriKuva).
-      osoite: julisteUrl(JULISTEET[cityId].tiedosto),
-    }));
-    for (const ryhma of ryhmat) {
-      const osio = html('section', 'julistegalleria-ryhma');
-      const saatu = ryhma.kaupungit.filter((id) => voitetut.has(id)).length;
-      osio.appendChild(html('h3', 'julistegalleria-ryhma-otsikko',
-        `${ryhma.nimi} ${saatu}/${ryhma.kaupungit.length}`));
-      const ruudukko = html('div', 'julistegalleria-ruudukko');
-      for (const cityId of ryhma.kaupungit) {
-        /*
-         * Voittamaton paikka näkyy himmeänä kysymysmerkkinä omassa
-         * ryhmässään: kokoelma kertoo että sitä voi täydentää ja mistä
-         * päin maailmaa, muttei sitä mistä kaupungista — sama linjaus
-         * kuin Aarnin luettelossa.
-         */
-        if (!voitetut.has(cityId)) {
-          const lukossa = html('div', 'julistegalleria-vedos lukossa', '?');
-          lukossa.setAttribute('aria-hidden', 'true');
-          ruudukko.appendChild(lukossa);
-          continue;
-        }
-        const juliste = JULISTEET[cityId];
-        const nappi = html('button', 'julistegalleria-vedos');
-        nappi.type = 'button';
-        nappi.setAttribute('aria-label', `${juliste.otsikko} — katso juliste isona`);
-        const kuva = document.createElement('img');
-        kuva.decoding = 'async';
-        kuva.loading = 'lazy';
-        kuva.alt = '';
-        // Viemättä oleva tiedosto jättää nimen ja kehyksen paikalleen,
-        // jottei ryhmästä katoaisi kokonainen ruutu. Ruudukossa pikkukuva (360 px), varana täysikokoinen.
-        asetaKuva(kuva, julistePieniUrl(juliste.tiedosto), julisteUrl(juliste.tiedosto), () => {
-          kuva.remove();
-          nappi.classList.add('kuvaton');
-        });
-        nappi.appendChild(kuva);
-        nappi.appendChild(html('span', 'julistegalleria-nimi', juliste.kaupunki));
-        const kohdalla = selattavat.indexOf(cityId);
-        nappi.addEventListener('click', () => {
-          sfx.play('paper');
-          this.naytaKulttuuriKuva(teokset[kohdalla], { teokset, kohdalla });
-        });
-        ruudukko.appendChild(nappi);
-      }
-      osio.appendChild(ruudukko);
-      kortti.appendChild(osio);
-    }
-    const huntu = html('div', 'julistegalleria-huntu');
-    huntu.addEventListener('click', () => this.suljeJulisteGalleria());
-    const nappaimet = (e) => {
-      if (e.key !== 'Escape') return;
-      // Täysi koko on kerrosta ylempänä ja sulkee itsensä omalla
-      // kuuntelijallaan — galleria odottaa vuoroaan.
-      if (this.lehtitila.kulttuuriKuvaEl) return;
-      e.preventDefault();
-      e.stopPropagation();
-      this.suljeJulisteGalleria();
+    const data = {
+      otsikko: 'Julisteet',
+      nimi: 'Julistekokoelma',
+      laskuri: `${voitetut.size}/${Object.keys(JULISTEET).length}`,
+      suhde: '2:3',
+      osiot: julisteMantereet().map((ryhma) => ({
+        nimi: ryhma.nimi,
+        laskuri: `${ryhma.kaupungit.filter((id) => voitetut.has(id)).length}/${ryhma.kaupungit.length}`,
+        ruudut: ryhma.kaupungit.map((cityId) => {
+          if (!voitetut.has(cityId)) return { lukossa: true };
+          const juliste = JULISTEET[cityId];
+          return {
+            nimi: juliste.kaupunki,
+            kuva: julistePieniUrl(juliste.tiedosto),
+            vara: julisteUrl(juliste.tiedosto),
+            suuri: {
+              url: julisteUrl(juliste.tiedosto),
+              otsikko: juliste.otsikko,
+              kuvateksti: juliste.lyhyt,
+              lahde: JULISTE_LAHDE,
+            },
+          };
+        }),
+      })),
     };
+    const pohja = luoPohjaGalleria(data, {
+      avattu: () => sfx.play('paper'),
+      sulje: (p) => {
+        if (this.julisteGalleria === p) this.julisteGalleria = null;
+        // Häivytys (kesto-sulku) loppuun ennen poistoa.
+        setTimeout(() => { p.el.remove(); p.tausta.remove(); }, 250);
+      },
+    });
+    if (!pohja) return;
     const isanta = this.suurennosIsanta();
-    isanta.appendChild(huntu);
-    isanta.appendChild(kortti);
-    document.addEventListener('keydown', nappaimet, { capture: true });
-    this.julisteGalleria = { kortti, huntu, nappaimet };
-    rasti.focus({ preventScroll: true });
+    isanta.append(pohja.tausta, pohja.el);
+    this.julisteGalleria = pohja;
+    pohja.avaa();
+    pohja.sulku.focus({ preventScroll: true });
   }
 
-  /** Sulkee julistegallerian ja purkaa sen näppäinkuuntelijan. */
+  /** Sulkee julistegallerian (GALLERIA-pohja; ✕, ohinapautus ja Esc sulkevat sen myös itse). */
   suljeJulisteGalleria() {
-    const auki = this.julisteGalleria;
-    if (!auki) return;
+    this.julisteGalleria?.sulje();
     this.julisteGalleria = null;
-    auki.kortti.remove();
-    auki.huntu.remove();
-    document.removeEventListener('keydown', auki.nappaimet, { capture: true });
   }
 
   /**
