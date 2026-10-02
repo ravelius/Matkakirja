@@ -242,7 +242,7 @@ namespace Matkakirja.Peli.Testit
         [Testi] static void TilarivinTekstiJaTavat()
         {
             var m = UusiPariisissa();
-            Oleta.Sama($"{Vakiot.AloitusRaha} puntaa · päivä 1 · aamu · Pariisi", PeliApu.TilaTeksti(m.Verkko, m.Tila));
+            Oleta.Sama($"£{Vakiot.AloitusRaha} · päivä 1 · aamu · Pariisi", PeliApu.TilaTeksti(m.Verkko, m.Tila));
             Oleta.Sama("Lontoo–Pariisi", PeliApu.SijaintiNimi(m.Verkko, Sijainti.ReitillaSijainti("lontoo|pariisi", 1)));
             Oleta.Sama(Kulkutapa.Bussi, PeliApu.TapaTekstista("bussi"));
             Oleta.Sama(Kulkutapa.Maa, PeliApu.TapaTekstista("Liftaus"));

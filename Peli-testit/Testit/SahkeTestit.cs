@@ -436,12 +436,12 @@ namespace Matkakirja.Peli.Testit
             p.Kaynnista();
             var nappi = p.Apunappi(m);
             Oleta.Tosi(nappi.Nakyy && nappi.Kaytossa, "nappi näkyy");
-            Oleta.Sama("Kysy kaverilta (25 £)", nappi.Teksti);
+            Oleta.Sama("Kysy kaverilta (£25)", nappi.Teksti);
 
             vale.Kutsut.Clear();
             var tulos = p.KysyKaverilta(k);
             Oleta.Tosi(tulos.Ok, tulos.Virhe);
-            Oleta.Sama(75, m.Tila.Pelaaja.Raha, "25 £ pelin omalla reitillä");
+            Oleta.Sama(75, m.Tila.Pelaaja.Raha, "£25 pelin omalla reitillä");
             Oleta.Tosi(q.Kaveriapu && p.KelloPysaytetty(q), "aika pysähtyi");
             Oleta.Sama("POST /apu/kysy", vale.Kutsut[0].Metodi + " " + vale.Kutsut[0].Polku);
             Oleta.Tosi(vale.Kutsut[0].Runko.Contains(SahkeTeksti.Json(q.Kysymys)), "kysymys runkoon");
@@ -501,7 +501,7 @@ namespace Matkakirja.Peli.Testit
             var p = Pinta(new Dictionary<string, string> { [SahkeVakiot.TunnusAvain] = OmaTunnus }, new ValeSahke { Vastaa = (_, __) => SahkeVastaus.Jasenna(200, "{}") });
             p.Kaynnista();
             m.Tila.Pelaaja.Raha = 24;
-            Oleta.Tosi(!p.Apunappi(m).Nakyy, "alle 25 £: ei nappia");
+            Oleta.Tosi(!p.Apunappi(m).Nakyy, "alle £25: ei nappia");
             Oleta.Tosi(!p.KysyKaverilta(k).Ok && p.Apu == null, "rahat eivät riitä");
         }
 
@@ -584,7 +584,7 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(!k.VinkkiOstettu && !k.LinkkiOstettu && k.LinkkiNappi == null, "ei ostettu");
             if (t.Vastauslinkki == null) return;
             Oleta.Tosi(SahketehtavaTila.OstaLinkki(ka, t).Ok, "linkki ostettu");
-            Oleta.Sama(75, m.Tila.Pelaaja.Raha, "25 £");
+            Oleta.Sama(75, m.Tila.Pelaaja.Raha, "£25");
             k = SahketehtavaTila.Pullat(tila.Kortti(t), t, ka);
             Oleta.Tosi(k.LinkkiOstettu && k.LinkkiNappi == t.Vastauslinkki.Nappi, "linkkinappi näkyvissä");
             Oleta.Tosi(!SahketehtavaTila.OstaLinkki(ka, t).Ok, "ei kahdesti");

@@ -941,7 +941,7 @@ namespace Matkakirja.Natiivi
                 // iPhone: "300 £ 1/80" — raha ja päivä / isoisän ennätys (omistaja 24.9.2026; suomalainen muoto
                 // "400 £" kaikkialle, Fable 27.9. klo 20.1x).
                 string uusiRaha = Raha(osat[0]);
-                if (uusiRaha != raha.text && raha.text.EndsWith("£")) Valahda(raha, ref rahaAjastin);
+                if (uusiRaha != raha.text && raha.text.StartsWith("£")) Valahda(raha, ref rahaAjastin);
                 raha.text = uusiRaha;
                 var m = System.Text.RegularExpressions.Regex.Match(osat[1], @"\d+");
                 string uusiKello = (m.Success ? m.Value : osat[1]) + "/" + Matkakirja.Peli.LaattaVakiot.EnnatysPaivat;
@@ -954,7 +954,7 @@ namespace Matkakirja.Natiivi
             {
                 string uusiRaha = Raha(osat[0]);
                 // Kukkaron muutos välähtää kuten kello (osto, palkkio, lento).
-                if (uusiRaha != raha.text && raha.text.EndsWith("£")) Valahda(raha, ref rahaAjastin);
+                if (uusiRaha != raha.text && raha.text.StartsWith("£")) Valahda(raha, ref rahaAjastin);
                 raha.text = uusiRaha;
                 // Pillerivalikko (omistaja 30.9.2026 klo 12.28): "1/80, keskipäivä" = päivä / isoisän ennätys ja vuorokaudenaika
                 // pelin omalla sanalla; rahat pillerin oikeassa reunassa. Muuten webin "Päivä 1, aamu".

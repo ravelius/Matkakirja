@@ -147,7 +147,7 @@ namespace Matkakirja.Natiivi
             x.VuoroVaihtuu = !x.Oikein && x.Laji != KysymysLaji.Pulma;
             if (x.Oikein && x.Loyto == null && x.Laji != KysymysLaji.Pulma)
             {
-                x.Loyto = "Löysit: Ivalojoen kultahippu · +640 £";
+                x.Loyto = "Löysit: Ivalojoen kultahippu · +£640";
                 x.LoytoTyyppi = "isoAarre";
                 x.LoytoNimi = "Ivalojoen kultahippu";
                 x.LoytoKuvaUrl = Kuvat.PeiliJuuri + "kohtaamiset/aarteet/paikallis/fin-iso.jpg";
@@ -352,11 +352,11 @@ namespace Matkakirja.Natiivi
             d.Loyto = tyyppi switch
             {
                 "star" => "Löysit: Unohdettu aarre · +1 aarre",
-                "mannerAarre" => "Löysit: Mantereen aarre · +1000 £",
-                "pieniAarre" => "Löysit: Tervatynnyrin pohjalta löytynyt hopeariksi · +180 £",
+                "mannerAarre" => "Löysit: Mantereen aarre · +£1000",
+                "pieniAarre" => "Löysit: Tervatynnyrin pohjalta löytynyt hopeariksi · +£180",
                 "pollo" => "Laatan alta lehahti pöllö!",
-                "piirros" => "Löysit: Kätketty matka-arkku · +640 £",
-                _ => "Löysit: Ivalojoen kultahippu · +640 £",
+                "piirros" => "Löysit: Kätketty matka-arkku · +£640",
+                _ => "Löysit: Ivalojoen kultahippu · +£640",
             };
             // Maakohtainen löytö (kokoelma paikallisaarteet, FIN): oma nimi, fakta ja kuva ämpäristä.
             if (tyyppi == "isoAarre")

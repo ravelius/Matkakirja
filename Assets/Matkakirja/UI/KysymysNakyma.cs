@@ -706,7 +706,7 @@ namespace Matkakirja.Natiivi
                 // Vihje: tarjolla → hinta; ostettu → harmaa "Vihje ostettu" (web quizHint).
                 if (d.VihjeTarjolla)
                 {
-                    var v = Rakenne.Nappi($"Vihje ({d.VihjeHinta} {d.Valuutta})", "mk-kysymys__apu mk-kysymys__vihjenappi", () => Teko(toiminnot?.Vihje), napit);
+                    var v = Rakenne.Nappi($"Vihje ({d.Valuutta}{d.VihjeHinta})", "mk-kysymys__apu mk-kysymys__vihjenappi", () => Teko(toiminnot?.Vihje), napit);
                     v.SetEnabled(d.Raha >= d.VihjeHinta);
                 }
                 else if (!string.IsNullOrEmpty(d.Vihje))
@@ -715,7 +715,7 @@ namespace Matkakirja.Natiivi
                 // 50:50; käytetty → harmaa.
                 if (d.PuolitusTarjolla)
                 {
-                    string teksti = $"50:50 ({d.PuolitusHinta} {d.Valuutta})";
+                    string teksti = $"50:50 ({d.Valuutta}{d.PuolitusHinta})";
                     var p = Rakenne.Nappi(teksti, "mk-kysymys__apu", () => Teko(toiminnot?.Puolita), napit);
                     p.SetEnabled(d.Raha >= d.PuolitusHinta);
                 }

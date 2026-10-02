@@ -17,7 +17,7 @@ namespace Matkakirja.Peli.Testit
     {
         static Dictionary<string, object> jalki;
         static Dictionary<string, object> Jalki => jalki ??= MiniJson.Objekti(MiniJson.Jasenna(
-            File.ReadAllText(Path.Combine(KultaisetApu.Juuri, "Kultaiset", "linssijalki.json"))));
+            KultaisetApu.LueRahajalki("linssijalki.json")));
 
         static List<Dictionary<string, object>> Lista(string nimi) =>
             MiniJson.Taulukko(MiniJson.Kentta(Jalki, nimi)).Select(MiniJson.Objekti).ToList();

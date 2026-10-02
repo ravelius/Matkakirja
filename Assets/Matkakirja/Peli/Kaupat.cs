@@ -448,7 +448,7 @@ namespace Matkakirja.Peli
             if (palkkio > 0)
             {
                 p.Raha += palkkio;
-                Matka.Ilmoita("aid", $"Sähkepalkkio +{palkkio} puntaa");
+                Matka.Ilmoita("aid", $"Sähkepalkkio +£{palkkio}");
             }
             Matka.Kokemus.Anna(p, Kokemus.VaikeaVastaus);
             var loyto = Matka.KaannaLaatta(kaupunki)?.WebTulos;

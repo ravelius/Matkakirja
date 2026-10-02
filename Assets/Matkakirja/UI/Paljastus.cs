@@ -289,12 +289,12 @@ namespace Matkakirja.Natiivi
             if (l.resolvedStyle.letterSpacing != vali) l.style.letterSpacing = vali;
         }
 
-        /// <summary>"Löysit: X · +640 £" → "+640 puntaa" (web `+${arvo} puntaa`), tai null.</summary>
+        /// <summary>"Löysit: X · +£640" → "+£640" (brittiläinen muoto, omistaja 2.10.2026), tai null.</summary>
         static string Puntaa(string loyto)
         {
             if (string.IsNullOrEmpty(loyto)) return null;
-            var m = Regex.Match(loyto, @"\+(\d+)\s*£");
-            return m.Success ? "+" + m.Groups[1].Value + " puntaa" : null;
+            var m = Regex.Match(loyto, @"\+£(\d+)|\+(\d+)\s*£");
+            return m.Success ? "+£" + (m.Groups[1].Success ? m.Groups[1].Value : m.Groups[2].Value) : null;
         }
 
         /// <summary>"Löysit: X · …" → "X" (varanimi, jos ohjain ei antanut LoytoNimeä).</summary>
@@ -399,25 +399,25 @@ namespace Matkakirja.Natiivi
                     break;
                 case "isoAarre":
                     d.LoytoNimi = "Ivalojoen kultahippu";
-                    d.Loyto = "Löysit: Ivalojoen kultahippu · +640 £";
+                    d.Loyto = "Löysit: Ivalojoen kultahippu · +£640";
                     d.LoytoKuvaUrl = Kuvat.PeiliJuuri + "kohtaamiset/aarteet/paikallis/fin-iso.jpg";
                     d.LoytoFakta = "Ivalojoen kultaryntäys alkoi 1870, ja huippuvuonna 1871 joelta huuhdottiin yli 50 kiloa kultaa.";
                     break;
                 case "pieniAarre":
                     d.LoytoNimi = "Tervatynnyrin pohjalta löytynyt hopeariksi";
-                    d.Loyto = "Löysit: Tervatynnyrin pohjalta löytynyt hopeariksi · +180 £";
+                    d.Loyto = "Löysit: Tervatynnyrin pohjalta löytynyt hopeariksi · +£180";
                     d.LoytoKuvaUrl = Kuvat.PeiliJuuri + "kohtaamiset/aarteet/paikallis/fin-pieni.jpg";
                     d.LoytoFakta = "Terva oli 1800-luvun Suomen tärkein vientitavara, ja Oulu oli maailman suurimpia tervasatamia.";
                     break;
                 case "mannerAarre":
-                    d.Loyto = "Löysit: Mantereen aarre · +1000 £";
+                    d.Loyto = "Löysit: Mantereen aarre · +£1000";
                     break;
                 case "pollo":
                     d.Loyto = "Laatan alta lehahti pöllö!";
                     break;
                 default: // piirros: kuvaton iso aarre
                     d.LoytoTyyppi = "isoAarre";
-                    d.Loyto = "Löysit: Kätketty matka-arkku · +640 £";
+                    d.Loyto = "Löysit: Kätketty matka-arkku · +£640";
                     break;
             }
             if (kaari)

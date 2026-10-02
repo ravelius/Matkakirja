@@ -1270,8 +1270,8 @@ namespace Matkakirja.Natiivi
                 Rakenne.Teksti(n.Visa.Fakta ?? "Tähän on jo vastattu.", "mk-nosto__visavihje", laatikko);
                 return;
             }
-            var vihje = Rakenne.Teksti(lukijan ? n.Visa.Vihje ?? $"Vastaus löytyy tästä jutusta · +{n.VisaPalkkio} puntaa"
-                : $"Oikeasta vastauksesta saat {n.VisaPalkkio} puntaa.", "mk-nosto__visavihje", laatikko);
+            var vihje = Rakenne.Teksti(lukijan ? n.Visa.Vihje ?? $"Vastaus löytyy tästä jutusta · +£{n.VisaPalkkio}"
+                : $"Oikeasta vastauksesta saat £{n.VisaPalkkio}.", "mk-nosto__visavihje", laatikko);
             var napitVisa = new List<Button>();
             var tulos = Rakenne.Teksti("", "mk-nosto__visatulos", laatikko);
             tulos.style.display = DisplayStyle.None;
@@ -1306,7 +1306,7 @@ namespace Matkakirja.Natiivi
                     // Web: vihjerivi oli lupaus vastaamattomalle; tulos korvaa sen.
                     if (lukijan) vihje.style.display = DisplayStyle.None;
                     tulos.text = t != null && !t.Ok && t.Virhe != null && t.Virhe != "Jo vastattu" ? t.Virhe
-                        : oikein ? $"Oikein! +{n.VisaPalkkio} puntaa." : $"Oikea vastaus: {n.Visa.Vaihtoehdot[n.Visa.Oikea]}.";
+                        : oikein ? $"Oikein! +£{n.VisaPalkkio}." : $"Oikea vastaus: {n.Visa.Vaihtoehdot[n.Visa.Oikea]}.";
                     if (!string.IsNullOrEmpty(n.Visa.Fakta)) tulos.text += " " + n.Visa.Fakta;
                     tulos.EnableInClassList("mk-oikein", oikein);
                     tulos.style.display = DisplayStyle.Flex;
@@ -1350,7 +1350,7 @@ namespace Matkakirja.Natiivi
             {
                 var t = o.KauppaTeko(k => k.Elaintaky(n.Iso, KauppaVakiot.ElaintakyPalkkio));
                 teksti = t == null || !t.Ok ? "Eläin on kirjattu."
-                    : t.Uusi ? $"Löytöpalkkio +{t.Palkkio} puntaa lisätty kukkaroon." : "Tämä eläin on jo löydetty.";
+                    : t.Uusi ? $"Löytöpalkkio +£{t.Palkkio} lisätty kukkaroon." : "Tämä eläin on jo löydetty.";
                 if (t != null && t.Ok && !t.Uusi) teksti = "Tämä eläin on jo löydetty.";
             }
             var l = Rakenne.Teksti(teksti, "mk-nosto__palkkio", isa);
