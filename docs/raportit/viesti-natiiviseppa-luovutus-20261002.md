@@ -24,6 +24,9 @@ Ohitetut: 112 (Lehti ei avannut leikekirjaa: täkynoston id puuttui kokoelmadata
 
 ## UUDET OPIT JA TYÖKALUT
 
+- **Levy** (Päätoimittaja 2.10. 20.2x): lokeihin vain uusin junan .app — kun kopioit uuden lokit/juna-1.1.NNN-<SHA>/, poista
+  edellinen juna-kopio; samoin laite-dev-/laite-rel-kopioista jätetään vain uusin.
+
 - **Laitekäännös ilman iPad-asennusta** (proto-3d/lokit/natiiviseppa-skriptit/): `laite-kopio.sh` (Dev) ja
   `laite-release-kopio.sh` (Release) kopioivat .appin lokit/laite-dev-<SHA>/ tai laite-rel-<SHA>/; `laite-sha-kopio.sh`
   (KEHITYS=1 → Dev, muuten Release); `laite-lukon-jalkeen-kopio.sh <SHA>`; **`laite-vuorossa-kopio.sh <SHA> <edeltäjä>`**
