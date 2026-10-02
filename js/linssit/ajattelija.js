@@ -297,9 +297,27 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     const p = (q) => (j.length ? j[Math.min(j.length - 1, Math.floor(q * j.length))] : 0);
     return { ruutuja: j.length, fps: j.length ? 1000 / (j.reduce((s, v) => s + v, 0) / j.length) : 0, p50: p(0.5), p95: p(0.95), yli33: j.filter((v) => v > 33.4).length };
   };
+  // ?mittari=1: sujuvuus ruudulle laitemittausta varten (Laitetestaaja kuvaa ruudun; ei verkkoliikennettä).
+  let mittariAjastin = null;
+  if (haku.get('mittari')) {
+    const nayta = document.createElement('pre');
+    Object.assign(nayta.style, { position: 'absolute', left: '8px', bottom: 'calc(8px + env(safe-area-inset-bottom, 0px))', margin: '0',
+      padding: '6px 8px', font: '12px/1.35 ui-monospace, monospace', color: '#cfe', background: 'rgba(0,0,0,0.6)', zIndex: '3', pointerEvents: 'none' });
+    juuri.appendChild(nayta);
+    const gl = renderoija.getContext();
+    const tiedot = gl.getExtension('WEBGL_debug_renderer_info');
+    const gpu = tiedot ? gl.getParameter(tiedot.UNMASKED_RENDERER_WEBGL) : gl.getParameter(gl.RENDERER);
+    mittariAjastin = setInterval(() => {
+      const m = mittari();
+      const kp = renderoija.getDrawingBufferSize(new THREE.Vector2());
+      nayta.textContent = `fps ${m.fps.toFixed(1)}  p50 ${m.p50.toFixed(1)}  p95 ${m.p95.toFixed(1)} ms\n`
+        + `>33 ms ${m.yli33}/${m.ruutuja}  ${kp.x}×${kp.y} @${renderoija.getPixelRatio()}\n${gpu}`;
+    }, 1000);
+  }
   function sulje() {
     if (!kaynnissa) return;
     kaynnissa = false;
+    clearInterval(mittariAjastin);
     kokoVahti.disconnect();
     document.removeEventListener('keydown', nappain, true);
     renderoija.dispose();
