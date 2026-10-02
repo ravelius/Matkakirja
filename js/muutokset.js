@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2562, teksti: 'Linssit-nappi kartalle, Julisteet valikosta (#3859)' },
   { v: 2561, teksti: 'Tyylikirja: GALLERIA-pohja ja £-merkin kirjasin (#3860)' },
   { v: 2560, teksti: 'Tyylikirja: OHJAUSNAPPI-pohja, harmaa teema ja… (#3854)' },
   { v: 2559, teksti: 'Olavinlinna: puukorttien ASTC-alfa (#3851)' },
