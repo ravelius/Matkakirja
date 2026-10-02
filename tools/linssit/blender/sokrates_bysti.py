@@ -783,7 +783,7 @@ V7_OTOKSET = (  # (ruutu, kameran paikka, katsepiste, polttoväli mm); ruutu = m
     (282, (-0.30, -1.02, 0.40), (-0.06, -0.06, 0.36), 35), # loppusointu (60,6 s): Rembrandt + nimi
 )
 if '--v10' in A:   # omistaja 2.10. 10.3x: nimi ja vuodet alempaa, katse kasvoihin ylöspäin
-    V7_OTOKSET = V7_OTOKSET[:-1] + ((282, (-0.30, -1.02, 0.25), (-0.06, -0.06, 0.40), 35),)
+    V7_OTOKSET = V7_OTOKSET[:-1] + ((282, (-0.30, -1.02, 0.25), (-0.08, -0.06, 0.40), 35),)   # pää oikealle, nimelle tilaa
 V7_VALO = ((1, (0.55, 0.85, 0.30)), (119, (0.9, 0.55, 0.35)), (236, (1.0, -0.05, 0.6)), (259, (0.85, -0.45, 0.75)),
            (282, (0.70, -0.70, 0.85)))
 if KOHDE == 'marcus':   # tuuheat kiharat ja parta varjostavat enemmän → aurinko alkaa sivummalta, jotta kasvot näkyvät
