@@ -257,7 +257,7 @@ namespace Matkakirja.Natiivi
             if (varjoMateriaali == null)
             {
                 var sh = Resources.Load<Shader>("Varjostimet/DioraamaKontaktivarjo");
-                if (sh == null) return;
+                if (sh == null) { Debug.LogWarning("MATKAKIRJA linssit: kontaktivarjon varjostin puuttuu (Varjostimet/DioraamaKontaktivarjo)"); return; }
                 varjoMateriaali = new Material(sh) { name = "Hahmo3D/kontaktivarjo" };
             }
             var g = new GameObject("Kontaktivarjo") { layer = DioraamaNayttamo.Kerros };
@@ -676,7 +676,16 @@ namespace Matkakirja.Natiivi
                     }
                 }
             }
-            return $"{mita}: {materiaaleja} kuvamateriaalia, kärkiä {karkia}, värillisiä {varillisia}, AO min {aoMin:F2}";
+            int varjoja = 0; string varjoY = "";
+            foreach (var e in esiintymat)
+            {
+                var v = e.Juuri != null ? e.Juuri.transform.Find("Kontaktivarjo") : null;
+                if (v == null) continue;
+                varjoja++;
+                if (varjoY.Length < 60) varjoY += $" {e.HahmoId}:{v.position.y:F2}";
+            }
+            return $"{mita}: {materiaaleja} kuvamateriaalia, kärkiä {karkia}, värillisiä {varillisia}, AO min {aoMin:F2}; "
+                + $"kontaktivarjoja {varjoja}/{esiintymat.Count} (materiaali {(varjoMateriaali != null ? "ok" : "PUUTTUU")}, y{varjoY})";
         }
 
         static long MeshKolmiot(Mesh m) { long n = 0; for (int i = 0; i < m.subMeshCount; i++) n += m.GetIndexCount(i) / 3; return n; }

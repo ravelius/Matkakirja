@@ -2,8 +2,8 @@
 // lattiat ovat leivottuja (DioraamaLeivottu), eivätkä ne ota vastaan reaaliaikaisia varjoja, joten jokaisen 3D-hahmon
 // juuren alle piirretään pehmeä varjolevy samalla periaatteella kuin kartan symbolimallien maakontakti
 // (Symbolimallit.Rakentaja PohjaVerkko: peitto keskellä, smoothstep-lasku reunalle nollaan, ei kovaa reunaa).
-// Neliö (DioraamaHahmot3D.VarjoVerkko), uv −1…1; ZTest LEqual (seinät ja esineet peittävät), ZWrite pois, Offset kohti
-// kameraa ettei levy välky lattian kanssa.
+// Neliö (DioraamaHahmot3D.VarjoVerkko), uv −1…1; ZTest LEqual (seinät ja esineet peittävät), ZWrite pois, 15 cm
+// kameraa kohti (vert) ettei levy jää lattian alle.
 Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
 {
     Properties
@@ -40,7 +40,11 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
             Vali vert(Syote i)
             {
                 Vali o;
-                o.paikka = TransformObjectToHClip(i.paikka.xyz);
+                // Leivotun lattian pinta voi olla hahmon juurta muutaman sentin ylempänä (laatat, kynnykset): levy siirretään
+                // näkymäavaruudessa 15 cm kameraa kohti, jolloin se piirtyy lattian päälle mutta seinät ja esineet peittävät.
+                float3 nakyma = TransformWorldToView(TransformObjectToWorld(i.paikka.xyz));
+                nakyma += normalize(-nakyma) * 0.15;
+                o.paikka = TransformWViewToHClip(nakyma);
                 o.uv = i.uv;
                 return o;
             }
