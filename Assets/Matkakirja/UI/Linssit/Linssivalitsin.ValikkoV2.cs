@@ -175,7 +175,7 @@ namespace Matkakirja.Natiivi
                 paivaRivi.style.display = m != null ? DisplayStyle.Flex : DisplayStyle.None;
                 if (m == null) return;
                 var t = m.Tila;
-                paivaTeksti.text = $"Päivä {t.Paiva()}/{LaattaVakiot.EnnatysPaivat}, {PeliApu.AikaNimi(t.Vuorokaudenaika())} · ";
+                paivaTeksti.text = $"Päivä {t.Paiva()}/{LaattaVakiot.EnnatysPaivat}, {PeliApu.AikaNimi(t.Vuorokaudenaika())} ·"; // väli £:ään USS-marginaalina (lopun välilyönti ei mitoitu)
                 paivaRaha.text = t.Pelaaja.Raha.ToString();
                 int kulu = m.PaivakuluNyt().Yhteensa;
                 paivaKulu.style.display = kulu > 0 ? DisplayStyle.Flex : DisplayStyle.None;

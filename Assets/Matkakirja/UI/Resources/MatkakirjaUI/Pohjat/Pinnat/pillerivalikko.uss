@@ -191,6 +191,11 @@
     -unity-font-style: normal;
 }
 
+/* Väli "·" ja £ välissä (Labelin lopun välilyönti ei mitoitu: 219637f1 "aamu ·£400"). */
+.mk-pillerivalikko--v2 .mk-paivarivi > .mk-paivarivi__punta {
+    margin-left: var(--tk-vali-xs);
+}
+
 .mk-pillerivalikko--v2 .mk-paivarivi__raha {
     flex-grow: 1;
     font-size: var(--tk-koko-apuri);
