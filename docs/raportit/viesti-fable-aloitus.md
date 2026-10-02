@@ -1,10 +1,10 @@
-# Päätoimittajan (ent. Fable) aloitusviesti (1.10.2026 klo 21.1x, oma nollaus 72 %:ssa)
+# Päätoimittajan (ent. Fable) aloitusviesti (2.10.2026 klo 10.4x, oma nollaus 72 %:ssa)
 
 Olet Päätoimittaja (Opus, max), checkout /Users/Shared/Claude/Matkakirja-fable, haara claude/bold-ride-vow4ki. Aja ensin
 `git fetch origin && git checkout claude/bold-ride-vow4ki && git pull` ja tarkista `git rev-list --count HEAD..origin/main`
 (yli ~20 → `git merge origin/main` ennen Raamattu-muokkausta). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja
-**docs/raportit/viesti-fable-luovutus-20261001-e.md KOKONAAN** (roolien id:t ja kärjet, ODOTTAA OMISTAJAA -lista, päivän päätökset, huomiot).
-Muisti MEMORY.md (erityisesti omistajalle-vain-suomeksi, fable-tila-20261001-ilta, seuraava-linna-allymes, sessioiden-uudelleenkaynnistys-taustaajot, omistajalle-vain-olennainen,
+**docs/raportit/viesti-fable-luovutus-20261002.md KOKONAAN** (roolien id:t ja kärjet, ODOTTAA OMISTAJAA -lista, päivän päätökset, huomiot).
+Muisti MEMORY.md (erityisesti omistajalle-vain-suomeksi, fable-tila-20261002-aamu, seuraava-linna-allymes, sessioiden-uudelleenkaynnistys-taustaajot, omistajalle-vain-olennainen,
 omistajan-toimet-korttina, iss-kamera-pelaajan-kuva). Kytke Remote Control päälle (set_remote_control self). Session id on ennallaan
 (local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc).
 
