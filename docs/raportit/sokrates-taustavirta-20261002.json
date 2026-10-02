@@ -126,8 +126,8 @@
   "kreikka": "οὐ δύναμαί πω κατὰ τὸ Δελφικὸν γράμμα γνῶναι ἐμαυτόν· γελοῖον δή μοι φαίνεται",
   "merkkeja": 77,
   "sisalto_fi": "En vielä kykene tuntemaan itseäni Delfoin kirjoituksen mukaan; naurettavaa on tutkia muuta.",
-  "lahde": "Perseus 229e (hakutuloksen kautta)",
-  "varmuus": "kohtalainen (lause jatkuu: 'τοῦτο ἔτι ἀγνοοῦντα τὰ ἀλλότρια σκοπεῖν' — ei varmennettu)"
+  "lahde": "Perseus (Phaedrus, sivu 229) + ancientlibrary.net (Burnet-pohjainen teksti)",
+  "varmuus": "vahva (lause jatkuu: 'τοῦτο ἔτι ἀγνοοῦντα τὰ ἀλλότρια σκοπεῖν' — ei varmennettu, ei mukana)"
  },
  {
   "nro": 14,
@@ -136,8 +136,8 @@
   "kreikka": "φιλομαθὴς γάρ εἰμι· τὰ μὲν οὖν χωρία καὶ τὰ δένδρα οὐδέν μ᾽ ἐθέλει διδάσκειν, οἱ δ᾽ ἐν τῷ ἄστει ἄνθρωποι",
   "merkkeja": 104,
   "sisalto_fi": "Olen tiedonhaluinen: maisemat ja puut eivät halua opettaa minulle mitään, mutta kaupungin ihmiset opettavat.",
-  "lahde": "Perseus 230d (hakutuloksen kautta)",
-  "varmuus": "kohtalainen"
+  "lahde": "Perseus (Phaedrus, sivu 230) + ancientlibrary.net",
+  "varmuus": "vahva"
  },
  {
   "nro": 15,
@@ -146,8 +146,8 @@
   "kreikka": "ἰδὲ γὰρ ἀνθρώπους οἷον ἐν καταγείῳ οἰκήσει σπηλαιώδει, ἀναπεπταμένην πρὸς τὸ φῶς τὴν εἴσοδον ἐχούσῃ μακρὰν παρὰ πᾶν τὸ σπήλαιον, ἐν ταύτῃ ἐκ παίδων ὄντας ἐν δεσμοῖς",
   "merkkeja": 164,
   "sisalto_fi": "Katso: ihmiset asuvat kuin maanalaisessa luolamaisessa asunnossa, jonka suu avautuu pitkälle valoa kohti, ja he ovat olleet lapsuudesta asti kahleissa.",
-  "lahde": "greek-language.gr (Πολιτεία 514a–517a) hakutuloksen kautta",
-  "varmuus": "kohtalainen"
+  "lahde": "greek-language.gr (Πολιτεία 514a–517a) itsenäisenä lähteenä; hakutulos; teksti jatkuu: 'καὶ τὰ σκέλη καὶ τοὺς αὐχένας…' (varmennettu, ei mukana)",
+  "varmuus": "vahva"
  },
  {
   "nro": 16,
@@ -156,8 +156,8 @@
   "kreikka": "τὸ δὲ αἴτιον τούτου τόδε· μαιεύεσθαί με ὁ θεὸς ἀναγκάζει, γεννᾶν δὲ ἀπεκώλυσεν.",
   "merkkeja": 79,
   "sisalto_fi": "Syy tähän on tämä: jumala pakottaa minut kätilöimään mutta on kieltänyt synnyttämästä.",
-  "lahde": "Perseus 150c + hakutulos",
-  "varmuus": "kohtalainen"
+  "lahde": "Perseus (Theaetetus, sivu 150) + ancientlibrary.net",
+  "varmuus": "vahva"
  },
  {
   "nro": 17,
@@ -166,8 +166,8 @@
   "kreikka": "βουλοίμην μὲν ἂν ἔγωγε οὐδέτερα· εἰ δ᾽ ἀναγκαῖον εἴη ἀδικεῖν ἢ ἀδικεῖσθαι, ἑλοίμην ἂν μᾶλλον ἀδικεῖσθαι ἢ ἀδικεῖν.",
   "merkkeja": 114,
   "sisalto_fi": "En tahtoisi kumpaakaan; mutta jos olisi pakko tehdä tai kärsiä vääryyttä, valitsisin mieluummin kärsiä sitä kuin tehdä sitä.",
-  "lahde": "Burnet 469c hakutuloksen kautta",
-  "varmuus": "kohtalainen"
+  "lahde": "Perseus (Gorgias, sivu 469) + ancientlibrary.net",
+  "varmuus": "vahva"
  },
  {
   "nro": 18,
