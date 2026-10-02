@@ -1170,7 +1170,8 @@ namespace Matkakirja.Natiivi
             var c = new Vector2(pb.xMax - p0.xMin - rho, pb.yMin - p0.yMin + rho);
             float dPilleri = c.x > W - R && c.y < R
                 ? R - Vector2.Distance(c, new Vector2(W - R, R)) - rho : W - (pb.xMax - p0.xMin);
-            float ero = dLogo - dPilleri;
+            // +0,5 pt varmuus: laitteen kaari ei ole täsmälleen mallin 62 pt (8d3af245: pilleri 12,5 px vs logo 13,6 px @3x).
+            float ero = dLogo + 0.5f - dPilleri;
             if (Mathf.Abs(ero) < 0.25f) return;
             kulmaLisa = Mathf.Max(0f, kulmaLisa + ero);
             palkki.style.paddingRight = oikeaVaraPerus + kulmaLisa;
