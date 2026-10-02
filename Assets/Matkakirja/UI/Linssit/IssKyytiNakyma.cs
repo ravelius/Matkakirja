@@ -434,15 +434,15 @@ namespace Matkakirja.Natiivi
             sulkuVanha.style.display = uusi ? DisplayStyle.None : DisplayStyle.Flex;
         }
 
-        /// <summary>
-        /// Pulu kyydissä (omistaja 29.9.2026): Cupolassa ulkona avaruuskävelyllä ikkunan aukossa (alue oikealle alas keskeltä,
-        /// kerros kehyksen alla, AstronautinNakyma), muissa tiloissa ohjauspöydän yläpuolella.
-        /// </summary>
         /// <summary>A/B: Pulu vaakana Cupolan alakulmaan nousevan puomin kanssa (oletus päällä).</summary>
         public static bool PuluAlas = true;
 
         IVisualElementScheduledItem puluJalki;
 
+        /// <summary>
+        /// Pulu kyydissä (omistaja 29.9.2026): Cupolassa ulkona avaruuskävelyllä ikkunan aukossa (alue oikealle alas keskeltä,
+        /// kerros kehyksen alla, AstronautinNakyma), muissa tiloissa ohjauspöydän yläpuolella.
+        /// </summary>
         void PaivitaPulu()
         {
             if (!UiNakymat.Olemassa) return;
