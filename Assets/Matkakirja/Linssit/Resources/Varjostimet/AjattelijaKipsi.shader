@@ -191,6 +191,11 @@ Shader "Matkakirja/AjattelijaKipsi"
             half4 frag(Ulos i) : SV_Target
             {
                 float3 n = normalize(i.normaali);
+                // three.js MeshStandardMaterial: karheus += geometrinen karheus (näkymäavaruuden geometrianormaalin derivaatat,
+                // ennen normaalikarttaa), enintään 1. Pehmentää spekulaaria vinoissa kulmissa (prologin takavalot).
+                float3 nNakyma = mul((float3x3)UNITY_MATRIX_V, n);
+                float3 dxy = max(abs(ddx(nNakyma)), abs(ddy(nNakyma)));
+                float karheus = min(max(_Pohja.w, 0.0525) + max(max(dxy.x, dxy.y), dxy.z), 1.0);
                 if (_NormaaliPaalla > 0.5)
                 {
                     float3 t = normalize(i.tangentti.xyz);
@@ -222,7 +227,7 @@ Shader "Matkakirja/AjattelijaKipsi"
                     float nl = saturate(dot(n, l));
                     float3 sateily = _VVari[k].rgb * (keila / max(d2, 0.01)) * nl;
                     if (k == 0 && _VVari[0].a > 0.0 && nl > 0.0 && keila > 0.0) sateily *= Varjo(i.maailma, normalize(i.normaali));
-                    suora += sateily * (lambert + Ggx(l, v, n, _Pohja.w) * _Spekulaari);
+                    suora += sateily * (lambert + Ggx(l, v, n, karheus) * _Spekulaari);
                 }
                 float3 puolipallo = lerp(_Maa.rgb, _Taivas.rgb, 0.5 * n.y + 0.5);
                 float3 vari = suora + puolipallo * lambert + lambert * ProjektoriValo(i.maailma, n);
