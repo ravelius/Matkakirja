@@ -1057,15 +1057,13 @@ if '--v7' in A:
                 td.energy = v_; td.keyframe_insert('energy', frame=r)
     if V10:
         TAUSTA = A[A.index('--v10') + 1]; SYKE = json.load(open(A[A.index('--v10') + 2]))
-        RIVIKORK = (0.006, 0.008, 0.010, 0.013)   # ei KORK: se on kuvan korkeus
-        kiertopiste('virta1', (p, (n + Vector((-0.40, -0.15, -0.30))).normalized()), None,
-                    (V7_LAHESTY[0], V7_LAHESTY[1] - 15, V7_PROJ[1], V7_PROJ[1] + 50), V7_TYKKI, TAUSTA, 0.11, RIVIKORK, 38)
+        RIVIKORK = (0.009, 0.012, 0.015, 0.019)   # ei KORK: se on kuvan korkeus
+        # koko pään taustavirta (omistaja 2.10. 08.3x–08.4x): 20 riviä neljästä projektorista, joka kierroksella
+        paan_virta('virta1', (V7_LAHESTY[0], V7_LAHESTY[1] - 15, V7_PROJ[1], V7_PROJ[1] + 50), V7_TYKKI, TAUSTA, RIVIKORK, 38)
         if '--kaiku' in A: syke_kaikuun(bpy.data.objects['kaiku'], V7_KAIKU, KVOIMA, SYKE)
         if '--v9' in A:
-            kiertopiste('virta2', (pp, (pn + Vector((-0.55, -0.15, -0.30))).normalized()), None,
-                        (V9['r2_liuku'][0], V9['r2_liuku'][1] - 10, V9['r2_proj'][1], V9['r2_lahde'][1]), V7_TYKKI, TAUSTA, 0.09, RIVIKORK, 21)
-            kiertopiste('virta3', (vp, (vn + Vector((0.0, -0.45, -0.25))).normalized()), None,
-                        (V9['r3_liuku'][0], V9['r3_liuku'][1] - 10, V9['r3_proj'][1], V9['r3_lahde'][1]), V7_TYKKI, TAUSTA, 0.11, RIVIKORK, 49)
+            paan_virta('virta2', (V9['r2_liuku'][0], V9['r2_liuku'][1] - 10, V9['r2_proj'][1], V9['r2_lahde'][1]), V7_TYKKI, TAUSTA, RIVIKORK, 21)
+            paan_virta('virta3', (V9['r3_liuku'][0], V9['r3_liuku'][1] - 10, V9['r3_proj'][1], V9['r3_lahde'][1]), V7_TYKKI, TAUSTA, RIVIKORK, 49)
             syke_kaikuun(bpy.data.objects['kaiku-silma'], V9['r2_kaiku'], 15.0, SYKE)
             syke_kaikuun(bpy.data.objects['kaiku-sivu'], V9['r3_kaiku'], 30.0, SYKE)
     for idb in (cam, tahtain, cd):
