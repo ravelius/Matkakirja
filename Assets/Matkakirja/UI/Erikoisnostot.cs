@@ -7,8 +7,9 @@
 //  - Näkyy aina, kun piste on näkyvissä (web, Päätoimittajan täsmennys): ei riipu kartuutsin maasta eikä väistä kartuutsia
 //    (avattu kortti saa peittää sen). Piilossa pallon takapuolella, ruudun ulkopuolella sekä linssin, lentopelin,
 //    kaupunkikortin, valikon ja muun kuin karttatilan aikana (web body-luokat).
-//  - Nenä kohti näkymän keskustaa ±30°, kartan liike heilauttaa (jousi); valo kartan auringosta, korkeus kiinnitetty 58°:een
-//    (web kartanValo), varjo paperille samasta valosta (UI/AjattelijaPaat.cs). Piirto vain, kun kääntö tai valo muuttuu.
+//  - Nenä kohti näkymän keskustaa ±30°, kartan liike heilauttaa (jousi); valo ylhäältä kuten webin pallolaudan suuntavalo,
+//    korkeus kiinnitetty 58°:een (web kartanValo), varjo paperille samasta valosta (UI/AjattelijaPaat.cs). Piirto vain, kun
+//    kääntö muuttuu.
 //  - Napautus: AjattelijatSovitin.AvaaAjattelija(tunnus). Pulu väistää päätä (Pulu.Alareuna, NakyvaAlueet).
 using System.Collections.Generic;
 using System.Globalization;
@@ -42,8 +43,6 @@ namespace Matkakirja.Natiivi
         bool rakennettu;
         double? edellinenLon;
         PalloKierto kierto;
-        Camera karttaKamera;
-        Aurinko aurinko;
 
         public Erikoisnostot(UiKerros kerros, Kartuscha kartuscha)
         {
@@ -148,21 +147,14 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Kartan valon suunta kartan kameran koordinaateissa (web kartanValo: x oikea, y ylös, z kohti katsojaa): suunta paperin
-        /// tasossa kartan auringosta, korkeus kiinnitetty 58°:een, jottei matala aurinko venytä varjoa. Oletus (0,45, 0,75).
+        /// Valon suunta pään kameran koordinaateissa (web kartanValo: x oikea, y ylös, z kohti katsojaa; korkeus kiinnitetty 58°:een).
+        /// Suunta paperin tasossa on webin pallolaudan suuntavalon mitattu suunta (kameran yläpuolelta: x 0, y 0,78 → (0, 1); mitattu
+        /// 2.10. GRC ja ITA). Natiivin karttatilan rinnevalo tulee sivulta, jolloin varjo jäi pään taakse (simulaattori 8be87066:
+        /// maski oikealla, ei leuan alla) → webin suunta, jotta pää seisoo kartalla samoin.
         /// </summary>
-        Vector3 KartanValo()
+        static Vector3 KartanValo()
         {
-            aurinko ??= Object.FindAnyObjectByType<Aurinko>();
-            if (karttaKamera == null && kierto != null) karttaKamera = kierto.GetComponent<Camera>();
-            float dx = 0.45f, dy = 0.75f;
-            var valo = aurinko != null ? aurinko.valo : null;
-            if (valo != null && karttaKamera != null)
-            {
-                var c = karttaKamera.transform.InverseTransformDirection(-valo.transform.forward);
-                float pit = Mathf.Sqrt(c.x * c.x + c.y * c.y);
-                if (pit > 1e-3f) { dx = c.x / pit; dy = c.y / pit; }
-            }
+            const float dx = 0f, dy = 1f;
             float kor = VarjonKorkeusAste * Mathf.Deg2Rad;
             return new Vector3(dx * Mathf.Cos(kor), dy * Mathf.Cos(kor), Mathf.Sin(kor));
         }
