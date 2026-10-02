@@ -1,0 +1,182 @@
+[
+ {
+  "nro": 1,
+  "nimi": "Puolustuspuhe 23b",
+  "stephanus": "Apol. 23b",
+  "kreikka": "οὗτος ὑμῶν, ὦ ἄνθρωποι, σοφώτατός ἐστιν, ὅστις ὥσπερ Σωκράτης ἔγνωκεν ὅτι οὐδενὸς ἄξιός ἐστι τῇ ἀληθείᾳ πρὸς σοφίαν.",
+  "merkkeja": 116,
+  "sisalto_fi": "Viisain on se, joka kuten Sokrates tietää, ettei hänen viisautensa todellisuudessa ole minkään arvoista.",
+  "lahde": "Perseus (Burnet) 23b, jtauber-osa",
+  "varmuus": "vahva"
+ },
+ {
+  "nro": 2,
+  "nimi": "Puolustuspuhe 29d",
+  "stephanus": "Apol. 29d",
+  "kreikka": "ἕωσπερ ἂν ἐμπνέω καὶ οἷός τε ὦ, οὐ μὴ παύσωμαι φιλοσοφῶν",
+  "merkkeja": 56,
+  "sisalto_fi": "Niin kauan kuin hengitän ja pystyn, en lakkaa filosofoimasta.",
+  "lahde": "Perseus 29d, jtauber",
+  "varmuus": "vahva (lause jatkuu: lyhyt)"
+ },
+ {
+  "nro": 3,
+  "nimi": "Puolustuspuhe 30e (paarma)",
+  "stephanus": "Apol. 30e",
+  "kreikka": "προσκείμενον τῇ πόλει ὑπὸ τοῦ θεοῦ ὥσπερ ἵππῳ μεγάλῳ μὲν καὶ γενναίῳ, ὑπὸ μεγέθους δὲ νωθεστέρῳ καὶ δεομένῳ ἐγείρεσθαι ὑπὸ μύωπός τινος",
+  "merkkeja": 135,
+  "sisalto_fi": "Jumala on asettanut minut kaupungin kylkeen kuin paarman suuren, jalon mutta kömpelön hevosen kylkeen herättämään sitä.",
+  "lahde": "Perseus 30e + jtauber 30e (yhdistetty päällekkäisistä katkelmista)",
+  "varmuus": "vahva (katkelma: lause jatkuu)"
+ },
+ {
+  "nro": 4,
+  "nimi": "Puolustuspuhe 38a",
+  "stephanus": "Apol. 38a",
+  "kreikka": "καὶ τυγχάνει μέγιστον ἀγαθὸν ὂν ἀνθρώπῳ τοῦτο, ἑκάστης ἡμέρας περὶ ἀρετῆς τοὺς λόγους ποιεῖσθαι καὶ τῶν ἄλλων περὶ ὧν ὑμεῖς ἐμοῦ ἀκούετε διαλεγομένου καὶ ἐμαυτὸν καὶ ἄλλους ἐξετάζοντος, ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ",
+  "merkkeja": 225,
+  "sisalto_fi": "Suurin hyvä ihmiselle on keskustella joka päivä hyveestä ja muista asioista, tutkien itseä ja muita; tutkimaton elämä ei ole elämisen arvoinen.",
+  "lahde": "Perseus 38a, jtauber",
+  "varmuus": "vahva (pitkä; voi lyhentää loppuun: ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ)"
+ },
+ {
+  "nro": 5,
+  "nimi": "Puolustuspuhe 40c",
+  "stephanus": "Apol. 40c",
+  "kreikka": "ἢ γὰρ οἷον μηδὲν εἶναι μηδὲ αἴσθησιν μηδεμίαν μηδενὸς ἔχειν τὸν τεθνεῶτα",
+  "merkkeja": 72,
+  "sisalto_fi": "Kuolema on joko kuin ei mitään: kuollut ei tunne mitään.",
+  "lahde": "Perseus 40c (jtauber ilman 'τὸν τεθνεῶτα')",
+  "varmuus": "vahva (katkelma)"
+ },
+ {
+  "nro": 6,
+  "nimi": "Puolustuspuhe 41d",
+  "stephanus": "Apol. 41d",
+  "kreikka": "οὐκ ἔστιν ἀνδρὶ ἀγαθῷ κακὸν οὐδὲν οὔτε ζῶντι οὔτε τελευτήσαντι, οὐδὲ ἀμελεῖται ὑπὸ θεῶν τὰ τούτου πράγματα",
+  "merkkeja": 106,
+  "sisalto_fi": "Hyvälle ihmiselle ei ole mitään pahaa, ei elävänä eikä kuolleena, eivätkä jumalat unohda hänen asioitaan.",
+  "lahde": "Perseus 41d (itsenäinen kysely), jtauber",
+  "varmuus": "vahva"
+ },
+ {
+  "nro": 7,
+  "nimi": "Kriton 48b",
+  "stephanus": "Crito 48b",
+  "kreikka": "οὐ τὸ ζῆν περὶ πλείστου ποιητέον, ἀλλὰ τὸ εὖ ζῆν",
+  "merkkeja": 48,
+  "sisalto_fi": "Ei pidä pitää tärkeimpänä elämistä vaan hyvin elämistä.",
+  "lahde": "Perseus 48b",
+  "varmuus": "vahva (lyhyt)"
+ },
+ {
+  "nro": 8,
+  "nimi": "Kriton 54d",
+  "stephanus": "Crito 54d",
+  "kreikka": "ταῦτα, ὦ φίλε ἑταῖρε Κρίτων, εὖ ἴσθι ὅτι ἐγὼ δοκῶ ἀκούειν, ὥσπερ οἱ κορυβαντιῶντες τῶν αὐλῶν δοκοῦσιν ἀκούειν, καὶ ἐν ἐμοὶ αὕτη ἡ ἠχὴ τούτων τῶν λόγων βομβεῖ",
+  "merkkeja": 157,
+  "sisalto_fi": "Tiedä, ystäväni Kriton: kuulen nämä sanat kuin korybantit huilut, ja niiden kaiku humisee minussa.",
+  "lahde": "jtauber (Crito, 54d, itsenäinen)",
+  "varmuus": "vahva"
+ },
+ {
+  "nro": 9,
+  "nimi": "Faidon 64a",
+  "stephanus": "Phaed. 64a",
+  "kreikka": "κινδυνεύουσι γὰρ ὅσοι τυγχάνουσιν ὀρθῶς ἁπτόμενοι φιλοσοφίας λεληθέναι τοὺς ἄλλους ὅτι οὐδὲν ἄλλο αὐτοὶ ἐπιτηδεύουσιν ἢ ἀποθνῄσκειν τε καὶ τεθνάναι.",
+  "merkkeja": 148,
+  "sisalto_fi": "Ne, jotka oikein harjoittavat filosofiaa, eivät ehkä muiden tietämättä harjoita muuta kuin kuolemista ja kuolleena oloa.",
+  "lahde": "Perseus 64a",
+  "varmuus": "vahva"
+ },
+ {
+  "nro": 10,
+  "nimi": "Faidon 115c",
+  "stephanus": "Phaed. 115c",
+  "kreikka": "οὐ πείθω, ὦ ἄνδρες, Κρίτωνα, ὡς ἐγώ εἰμι οὗτος Σωκράτης, ὁ νυνὶ διαλεγόμενος καὶ διατάττων ἕκαστον τῶν λεγομένων, ἀλλ᾽ οἴεταί με ἐκεῖνον εἶναι, ὃν ὄψεται ὀλίγον ὕστερον νεκρόν",
+  "merkkeja": 175,
+  "sisalto_fi": "En saa Kritonia uskomaan, että minä olen tämä Sokrates, joka nyt puhuu ja järjestää jokaisen sanotun; hän luulee minua siksi, jonka hän pian näkee kuolleena.",
+  "lahde": "Perseus 115c (loppu 'ὃν ὄψεται…νεκρόν' hakutuloksen kautta)",
+  "varmuus": "vahva (loppu hieman heikommin)"
+ },
+ {
+  "nro": 11,
+  "nimi": "Faidon 118a",
+  "stephanus": "Phaed. 118a",
+  "kreikka": "ὦ Κρίτων, τῷ Ἀσκληπιῷ ὀφείλομεν ἀλεκτρυόνα· ἀλλὰ ἀπόδοτε καὶ μὴ ἀμελήσητε.",
+  "merkkeja": 74,
+  "sisalto_fi": "Kriton, olemme Asklepiokselle kukon velkaa. Maksakaa se, älkää unohtako.",
+  "lahde": "Perseus 118a (Päätoimittaja vahvisti)",
+  "varmuus": "vahva"
+ },
+ {
+  "nro": 12,
+  "nimi": "Pidot 220c",
+  "stephanus": "Symp. 220c",
+  "kreikka": "ἑστήκει ἐξ ἑωθινοῦ φροντίζων τι",
+  "merkkeja": 31,
+  "sisalto_fi": "Hän seisoi aamusta asti jotakin pohtien.",
+  "lahde": "Perseus 220c (Greek-sivu)",
+  "varmuus": "vahva (lyhyt; lause jatkuu 'ἐπειδὴ δὲ οὐ προχωροῖ αὐτῷ, οὐκ ἀνίει ἀλλὰ εἱστήκει ζητῶν' — ei varmennettu)"
+ },
+ {
+  "nro": 13,
+  "nimi": "Faidros 229e",
+  "stephanus": "Phdr. 229e",
+  "kreikka": "οὐ δύναμαί πω κατὰ τὸ Δελφικὸν γράμμα γνῶναι ἐμαυτόν· γελοῖον δή μοι φαίνεται",
+  "merkkeja": 77,
+  "sisalto_fi": "En vielä kykene tuntemaan itseäni Delfoin kirjoituksen mukaan; naurettavaa on tutkia muuta.",
+  "lahde": "Perseus 229e (hakutuloksen kautta)",
+  "varmuus": "kohtalainen (lause jatkuu: 'τοῦτο ἔτι ἀγνοοῦντα τὰ ἀλλότρια σκοπεῖν' — ei varmennettu)"
+ },
+ {
+  "nro": 14,
+  "nimi": "Faidros 230d",
+  "stephanus": "Phdr. 230d",
+  "kreikka": "φιλομαθὴς γάρ εἰμι· τὰ μὲν οὖν χωρία καὶ τὰ δένδρα οὐδέν μ᾽ ἐθέλει διδάσκειν, οἱ δ᾽ ἐν τῷ ἄστει ἄνθρωποι",
+  "merkkeja": 104,
+  "sisalto_fi": "Olen tiedonhaluinen: maisemat ja puut eivät halua opettaa minulle mitään, mutta kaupungin ihmiset opettavat.",
+  "lahde": "Perseus 230d (hakutuloksen kautta)",
+  "varmuus": "kohtalainen"
+ },
+ {
+  "nro": 15,
+  "nimi": "Valtio 514a (luola)",
+  "stephanus": "Resp. 514a",
+  "kreikka": "ἰδὲ γὰρ ἀνθρώπους οἷον ἐν καταγείῳ οἰκήσει σπηλαιώδει, ἀναπεπταμένην πρὸς τὸ φῶς τὴν εἴσοδον ἐχούσῃ μακρὰν παρὰ πᾶν τὸ σπήλαιον, ἐν ταύτῃ ἐκ παίδων ὄντας ἐν δεσμοῖς",
+  "merkkeja": 164,
+  "sisalto_fi": "Katso: ihmiset asuvat kuin maanalaisessa luolamaisessa asunnossa, jonka suu avautuu pitkälle valoa kohti, ja he ovat olleet lapsuudesta asti kahleissa.",
+  "lahde": "greek-language.gr (Πολιτεία 514a–517a) hakutuloksen kautta",
+  "varmuus": "kohtalainen"
+ },
+ {
+  "nro": 16,
+  "nimi": "Theaitetos 150c (kätilö)",
+  "stephanus": "Tht. 150c",
+  "kreikka": "τὸ δὲ αἴτιον τούτου τόδε· μαιεύεσθαί με ὁ θεὸς ἀναγκάζει, γεννᾶν δὲ ἀπεκώλυσεν.",
+  "merkkeja": 79,
+  "sisalto_fi": "Syy tähän on tämä: jumala pakottaa minut kätilöimään mutta on kieltänyt synnyttämästä.",
+  "lahde": "Perseus 150c + hakutulos",
+  "varmuus": "kohtalainen"
+ },
+ {
+  "nro": 17,
+  "nimi": "Gorgias 469c",
+  "stephanus": "Grg. 469c",
+  "kreikka": "βουλοίμην μὲν ἂν ἔγωγε οὐδέτερα· εἰ δ᾽ ἀναγκαῖον εἴη ἀδικεῖν ἢ ἀδικεῖσθαι, ἑλοίμην ἂν μᾶλλον ἀδικεῖσθαι ἢ ἀδικεῖν.",
+  "merkkeja": 114,
+  "sisalto_fi": "En tahtoisi kumpaakaan; mutta jos olisi pakko tehdä tai kärsiä vääryyttä, valitsisin mieluummin kärsiä sitä kuin tehdä sitä.",
+  "lahde": "Burnet 469c hakutuloksen kautta",
+  "varmuus": "kohtalainen"
+ },
+ {
+  "nro": 18,
+  "nimi": "Menon 71b",
+  "stephanus": "Men. 71b",
+  "kreikka": "ἐμαυτὸν καταμέμφομαι ὡς οὐκ εἰδὼς περὶ ἀρετῆς τὸ παράπαν· ὃ δὲ μὴ οἶδα τί ἐστιν, πῶς ἂν ὁποῖόν γέ τι εἰδείην;",
+  "merkkeja": 109,
+  "sisalto_fi": "Moitin itseäni, kun en lainkaan tiedä, mitä hyve on; ja jota en tiedä mitä se on, miten voisin tietää, millainen se on?",
+  "lahde": "jtauber (Meno 71b), Perseus",
+  "varmuus": "vahva"
+ }
+]
