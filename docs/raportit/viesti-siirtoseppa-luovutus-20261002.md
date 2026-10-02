@@ -29,7 +29,8 @@ OMISTAJAN OK 23.3x skin-hahmoille (osoitin dad4d0f3). Osoitin = ämpärin uusin.
 Kulku: PR ravelius/Matkakirja#3885 (Linnanrakentaja, blender 916731d7 jo ämpärissä) mergetään → CI vie hash-kansion → KUITTAA puhtaalla
 asennuksella (ajo-ymparisto-kuittaus.sh, APP lokit/juna-1.1.130-e406ead2) → Julkaisija osoitin=true → todenna tuotannosta → Päätoimittajalle.
 TEHTY 23.56: dad4d0f3 KUITATTU puhtaalla asennuksella (build 130, 10 skin-hahmoa, puheet 3/3, 404 0, virheitä 0; lokit/siirtoseppa-kuittaus-dad4d0f3).
-AVOIN: osoitin=true vasta kun TF 131 ladattu (Päätoimittajan ehto) → Julkaisija ilmoittaa → todenna tuotannosta TF 131 -appilla (uusin.json = dad4d0f3).
+TEHTY 01.47 (3.10.): OSOITIN uusin.json = dad4d0f39cd2c9c2 (run 37073768334), todennettu tuotannosta TF 131 -appilla (10 skin-hahmoa, 0 virhettä,
+lokit/siirtoseppa-osoitin-dad4d0f3). Skin-hahmot VALMIS. Jäljellä: liekit kerran 473267d2 junassa 132.
 
 1. **Linnan hahmojen jalkavarjo (omistaja 20.2x: "kävelijä tarvitsee vielä varjon jalkojensa alle") — EI VIELÄ NÄY.**
    Haara `siirtoseppa/linna-skin`, kärki **39a396e3** (KÄÄNNETTY 8219c063, app lokit/siirtoseppa-skin16-app).
