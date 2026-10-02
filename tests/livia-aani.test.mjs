@@ -741,15 +741,15 @@ test('js/livia.js soittaa jokaisen kuplan äänen', () => {
    * talteen, jotta kupla odottaa puheen loppuun.
    */
   // PUHE ÄÄNENÄ, EI KUPLANA (omistaja 2.10.2026 klo 14.09): äänite ensin, kupla vain varalla (puhuTaiKupla).
-  assert.match(livia, /\(\) => soitaLivianAani\(ui, 'avaus', rivi\.indeksi, \{ teksti \}\),\n\s*kupla,/);
+  assert.match(livia, /\(\) => soitaLivianAani\(ui, 'avaus', rivi\.indeksi, \{ teksti \}\),\n\s*\(\) => kupla\(\),/);
   assert.match(livia, /export function livianAvausSarja\(kohteita = ETUSIVUN_KOHTEET\.size\)/);
   assert.match(livia,
     /\.filter\(\(\{ indeksi \}\) => kohteita <= 1 \|\| indeksi !== LIVIAN_YHDEN_REITIN_KUPLA\)/);
   assert.match(livia,
     /\(\) => soitaLivianAani\(ui, 'paljastus', i, \{ \.\.\.variantti, teksti \}\),/);
   assert.match(livia, /\(\) => soitaLivianAani\(ui, 'mannerivihje', 0, \{ teksti: MANNERIVIHJE \}\),/);
-  // Muotokuvarepliikki (Viisas Pöllö) on poikkeus: kupla ensin, ääni sen jälkeen.
-  assert.match(livia, /if \(muotokuva\) \{\n\s*nakyi = kupla\(\);\n\s*if \(nakyi\) aani = soitaLivianAani/);
+  // Muotokuvarepliikki (Viisas Pöllö): äänen kanssa kuplaan jää vain muotokuva (Päätoimittaja 2.10.2026).
+  assert.match(livia, /ilmanKuplaa: \(\) => \(muotokuva \? kupla\(true\) : polloPuheIlmanKuplaa\(teksti\)\)/);
   // KUPLA ODOTTAA PUHEEN LOPPUUN: avaussarjan ajastin lukee soittimen
   // keston eikä pelkkää tekstin pituutta.
   assert.match(livia, /avausAjastin = livianKuplanAjastin\(\n\s*lukuaika\(teksti\), aani,/);
