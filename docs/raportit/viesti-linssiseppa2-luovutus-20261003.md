@@ -13,19 +13,15 @@ suuren paneelin ajaksi (Pulu.Haivyta), C kasvot kasvovalon päälle, D POISTU-×
 vasempaan alakulmaan saaren alle (Sijaintipallo.SijoitaKulmaan, layoutista; kulma 62 pt oletus), pikkukuvat sen oikealle.
 Seurantanäkymää ei ole (omistaja poisti 2.10.).
 
-## 2. Juna 132 (tila 3.10. 01.2x)
+## 2. Juna 132 (tila 3.10. 01.2x): MERGE-PYYNNÖT NATIIVISEPÄLLÄ
 
-- `linssiseppa2/kaiku-suunta` 20c4b0d9: TODENNETTU ja kuitattu, merge-pyyntö Natiivisepällä.
-- `linssiseppa2/pulu-mittaus` 9f2deece (proto-worktree wt/proto-linssiseppa2-astro): Pulun puomi 6 pt pöydän yläpuolelle suoralla
-  laskulla puomin piirretystä alareunasta (LiviaKuva.VarrenAlinEvasta; kaava NivelY + Nosto oli 33 pt liian ylhäällä). Kuva 3ae041fe:
-  puomi ei osu ISS-lukemaan 12/12. Haitta vaakana: Pulu nousee säätönapin alle (2,5 s -kuvassa kerran päälle). Tilaloki
-  `astro kyyti tila` → "astro kyyti pulu: …".
-- `linssiseppa2/pulu-vaaka-alas` 80a99f64 (sis. pulu-mittaus): SUOSITUS vaakaan (Pulu alakulmaan, puomi nousee pöydän yli,
-  A/B `astro kyyti pulualas 0|1`, oletus 1; komento vasta linssin auettua). Kuvat ja suositus Päätoimittajalla
-  (lokit/linssiseppa2-pulu-mittaus-e-20261003/merkinnat-vaaka-vertailu.png). KUITTAUKSEN JÄLKEEN merge-pyyntö Natiivisepälle.
-  Skripti lokit/linssiseppa2-skriptit-20261001/pulu-mittaus.sh.
+- `linssiseppa2/kaiku-suunta` 20c4b0d9: kaiut oikein päin, todennettu ja kuitattu.
+- `linssiseppa2/pulu-vaaka-alas` 62e0582b (sis. `linssiseppa2/pulu-mittaus` 9f2deece): Pulu puomin piirretystä alareunasta 6 pt
+  pöydän yläpuolelle (pysty) ja vaakana Pulu alakulmaan + puomi nousee pienen paneelin yli (A/B `astro kyyti pulualas 0|1`, oletus 1;
+  komento vasta linssin auettua). Kuitattu, todennettu 4f623cf1:llä: lokit/linssiseppa2-pulu-suositus-b-20261003/merkinnat-suositus.png.
+  80a99f64 oli rikki (konfliktinratkaisun kahdennettu lohko) — älä käytä. Omistaja voi TF 132:ssa pyytää Pulua vielä alemmas.
 
-## 3. Ajattelijat natiivissa, jono (web malli, tee kun web mainissa)
+## 3. SEURAAVAKSI: Ajattelijat natiivissa (web malli, tee kun Pelikoodarin pino #3884–#3892 on mainissa)
 
 - Sokrateen kierrokset 2–3 (#3884): `kierrokset`-kenttä, yksi 111 s raita, loppu 3330, lista[] (paalause 21d/49b, sivulta-säde,
   vieritys, lähde, virta, siemen, kaiku), kamera[] Blender-avaimet Hermite AUTO_CLAMPED (js/linssit/ajattelija.js kamerakayra),
