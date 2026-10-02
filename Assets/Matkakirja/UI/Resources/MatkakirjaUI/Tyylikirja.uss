@@ -1,5 +1,5 @@
 /* TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi);
- * ÄLÄ MUOKKAA KÄSIN. lähde 3b553b612423. Tuodaan ensimmäisenä (Matkakirja.tss). */
+ * ÄLÄ MUOKKAA KÄSIN. lähde cca43639f785. Tuodaan ensimmäisenä (Matkakirja.tss). */
 
 :root {
     --bg: #1d1610;
@@ -99,6 +99,7 @@
     --tk-nappi-laukaisin: 64px;
     --tk-nappi-ohjaus: 40px;
     --tk-nappi-ohjaus-kuvake: 22px;
+    --tk-nappi-ohjaus-iso: 56px;
     --tk-galleria-sarake: 92px;
     --tk-galleria-vali: 10px;
     --tk-leveys-kapea: 600px;
