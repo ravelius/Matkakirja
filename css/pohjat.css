@@ -311,6 +311,37 @@
 .tk-kortti .tk-otsikko[tabindex="-1"]:focus { outline: none; }
 /* Otsikon alaviiva riittää: lomakkeen ensimmäinen katkoviiva olisi toinen viiva sen alla. */
 .tk-kortti .tk-otsikko + .periaate-lomake > :first-child { margin-top: var(--tk-vali-s); padding-top: 0; border-top: none; }
+/* Muutosloki: versionumero (kapiteeli) on rivin numero, joten listamerkkiä ei tarvita. */
+.tk-lista--loki { list-style: none; padding-left: 0; }
+/* Kehyksetön dialogi on itse kortti: sivuilla väli kuten muillakin korteilla. */
+dialog.tk-kortti { width: calc(100% - var(--tk-vali-l) * 2); }
+/* Pitkä loki vierii omassa laatikossaan: kortti on sarake kortin enimmäiskorkeudessa, ja lista joustaa. */
+dialog.tk-kortti[open]:has(.tk-lista--loki) { display: flex; flex-direction: column; overflow: hidden; }
+.tk-kortti .tk-lista--loki { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+dialog.tk-kortti[open]:has(.tk-lista--loki) > :not(.tk-lista--loki) { flex: none; }
+.tk-lista--loki li { display: flex; gap: var(--tk-vali-xs); align-items: baseline; }
+.tk-lista--loki .tk-kapiteeli { flex: none; margin: 0; }
+/* Vanha `.dialog button` (0,1,1) ohittaisi napin pinnan, reunuksen ja kulman: sama pohja dialogin sisällä. */
+.dialog .tk-kortti .tk-nappi,
+.dialog .tk-kortti .tk-nappi:hover:not(:disabled) {
+  background: transparent;
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  color: var(--tk-muste);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.dialog .tk-kortti .tk-nappi--ensisijainen,
+.dialog .tk-kortti .tk-nappi--ensisijainen:hover:not(:disabled) {
+  border-color: var(--tk-toiminto);
+  background: var(--tk-toiminto);
+  color: var(--tk-paperi-muste);
+}
+.dialog .tk-kortti .tk-nappi--haamu,
+.dialog .tk-kortti .tk-nappi--haamu:hover:not(:disabled) { border-color: transparent; }
+/* Ikoninappi (voittokortin Jatka vaeltamista): ikoni ja teksti rinnakkain pohjan välillä. */
+.tk-kortti .tk-nappi:has(.viiva-ikoni) { display: inline-flex; align-items: center; justify-content: center; gap: var(--tk-vali-xs); }
+.tk-kortti .tk-napit--pysty .tk-nappi:has(.viiva-ikoni) { display: flex; justify-content: flex-start; }
 
 /* ── Esikatselu (tyylikirjasivu): pohja paikallaan virrassa, ei kiinnitettynä ───────────────── */
 

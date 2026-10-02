@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-09-21.2529';
+const CACHE = 'matkakirja-2026-09-21.2533';
 const SHELL = [
   './',
   './index.html',
@@ -2142,15 +2142,15 @@ const LAATTAPOLKU = '/julisteet/pallo/laatat/';
  * on tahallinen: palvelutyöntekijä ei voi tuoda ES-moduulia, ja
  * tests/sw.test.mjs vartioi, että luvut ovat samat.
  */
-const LAATTAKANSIO = '2026-09-27-pohja-20260927';
+const LAATTAKANSIO = '2026-09-30-pohja-20260930';
 /** Varakansio syvimmälle tasolle (js/pallo.js PALLO_LAATAT_SYVA), kunnes nostosarja kattaa sen. */
-const LAATTAKANSIO_SYVA = '2026-09-27-pohja';
+const LAATTAKANSIO_SYVA = '2026-09-30-pohja';
 /**
  * DELTASARJAN PERUSSARJA (js/pallo.js PALLO_LAATTAPERUS, js/deltasarja.js):
  * muuttumattomat laatat haetaan perussarjan kansiosta, joten activate ei
  * saa siivota niitä. null = tuotantosarja ei ole delta.
  */
-const LAATTAKANSIO_PERUS = null;
+const LAATTAKANSIO_PERUS = '2026-09-27-pohja-20260927';
 const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA, ...(LAATTAKANSIO_PERUS ? [LAATTAKANSIO_PERUS] : [])];
 /** Laattoja korissa enintään (≈ 30 Mt; yksi laatta 8–14 kt). */
 const LAATTAKATTO = 3000;
