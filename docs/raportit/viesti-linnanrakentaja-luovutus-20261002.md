@@ -1,4 +1,12 @@
-# Linnanrakentajan luovutus 2.10.2026 klo 18.3x (päivitys 22.1x, viikkoraja 92 %) (Opus high; tilin viikkoraja lähellä)
+# Linnanrakentajan luovutus 2.10.2026 klo 18.3x (LOPULLINEN 22.2x, tilinvaihto) (Opus high; tilin viikkoraja lähellä)
+
+## SEURAAVA ASKEL (tilinvaihto 22.2x)
+1. Odota Siirtosepän iPhone-pelikuvia peilistä **275a276538ace40a** (= erä 1b, kampauskorjaus, sisäinen kuva
+   `_valmiit/linna-hahmot/v1/kokoelma-era1b.jpg`; edellinen peili 5de728bc ilman y-korjausta) → Päätoimittaja → omistaja.
+2. Omistajan OK:n jälkeen: PR haarasta `linnanrakentaja-linna-skin` mainiin (blender.json 916731d7, hahmot-skin.json, reitit,
+   rakenna.mjs/vie-blender.sh, reittitesti) ja osoitin käsiajolla osoitin=true (omistajan lupa).
+3. Webin AnimationMixer (Linnanrakentajan, vasta omistajan OK:n jälkeen).
+Älä aloita uutta ennen näitä.
 
 ## Kärki nyt: linnan väki skinnatuiksi hahmoiksi (omistaja 18.0x, polku (a))
 - Omistaja: "haluan ne valmiit mallit joiden päälle vain vaihdetaan vaatteet ... tärkeintä mahdollisimman sulava liike".
