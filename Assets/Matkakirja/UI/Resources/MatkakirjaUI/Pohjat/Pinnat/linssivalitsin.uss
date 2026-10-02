@@ -1,0 +1,45 @@
+/* PANEELI-pinta: linssivalitsin — Linssivalitsin
+ * Siirretty sellaisenaan (UI-pohjien tyylijako 2.10.2026, web #3820 css/pohjat/…): järjestys Matkakirja.tss:ssä. */
+
+/* LINSSIVALITSIN PANEELI-pohjalla (web #3811): tila kapiteelina korostusvärillä; kapeassa sarakkeessa (esikatselu auki)
+ * tila nimen alle omalle rivilleen, nimi ei lyhene. Esikatseltu rivi (Aktivoi) pergamenttina toimintoreunuksella;
+ * esikatselukortin oma Aktivoi pysyy kultana. */
+.mk-paneeli--pohja .mk-linssirivi__nimi {
+    color: var(--tk-paperi-muste);
+}
+
+.mk-paneeli--pohja .mk-linssirivi__tila {
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 7.69px; /* web 0.12em */
+    -unity-font-style: bold;
+    color: var(--tk-paperi-korostus);
+}
+
+.mk-paneeli--pohja.mk-linssivalitsin--kapea .mk-linssirivi__nimirivi {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mk-paneeli--pohja.mk-linssivalitsin--kapea .mk-linssirivi__tila {
+    margin-top: var(--tk-vali-xs);
+}
+
+.mk-paneeli--pohja .mk-linssirivi--aktivoi.mk-esikatseltu .mk-linssirivi__tekstit,
+.mk-paneeli--pohja .mk-linssirivi--aktivoi.mk-esikatseltu > .mk-linssirivi__nimirivi {
+    border-width: 1px;
+    border-color: var(--tk-paperi-toiminto);
+    border-radius: var(--tk-kulma-nappi);
+    background-color: var(--tk-paperi-pergamentti);
+}
+
+.mk-paneeli--pohja .mk-linssirivi.mk-esikatseltu .mk-linssirivi__tila,
+.mk-paneeli--pohja.mk-linssivalitsin--kapea .mk-linssirivi.mk-esikatseltu .mk-linssirivi__tila {
+    margin-top: 0;
+    font-size: var(--tk-koko-leipa);
+    letter-spacing: 0;
+    color: var(--tk-paperi-muste);
+}
+
+.mk-paneeli--pohja.mk-linssivalitsin--kapea .mk-linssirivi.mk-esikatseltu .mk-linssirivi__nimirivi {
+    align-items: center;
+}

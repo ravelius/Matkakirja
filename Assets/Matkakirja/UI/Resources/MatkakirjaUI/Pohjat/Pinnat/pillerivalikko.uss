@@ -1,0 +1,39 @@
+/* PANEELI-pinta: pillerivalikon segmentit ja rivit — Linssivalitsin.Pilleri
+ * Siirretty sellaisenaan (UI-pohjien tyylijako 2.10.2026, web #3820 css/pohjat/…): järjestys Matkakirja.tss:ssä. */
+
+.mk-paneeli--pohja .mk-valikkonappi {
+    min-height: var(--tk-nappi-korkeus);
+    border-color: var(--tk-paperi-reunus);
+    background-color: var(--tk-paperi-pinta);
+}
+
+.mk-paneeli--pohja .mk-valikkonappi__nimi,
+
+.mk-paneeli--pohja .mk-valikkonappi__ikoni {
+    color: var(--tk-paperi-muste);
+}
+
+.mk-paneeli--pohja .mk-valikkonappi__nimi {
+    font-size: var(--tk-koko-apuri);
+}
+
+.mk-paneeli--pohja .mk-valikkonappi--kytkin .mk-valikkonappi__nimi,
+
+.mk-paneeli--pohja .mk-valikkonappi--kytkin .mk-valikkonappi__ikoni {
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-paneeli--pohja .mk-valikkonappi--kytkin.mk-valittu {
+    border-color: var(--tk-paperi-korostus);
+    background-color: var(--tk-paperi-pergamentti);
+}
+
+.mk-paneeli--pohja .mk-valikkonappi--kytkin.mk-valittu .mk-valikkonappi__nimi,
+
+.mk-paneeli--pohja .mk-valikkonappi--kytkin.mk-valittu .mk-valikkonappi__ikoni {
+    color: var(--tk-paperi-muste);
+}
+
+.mk-paneeli--pohja .mk-valikkonappi--rivi > .mk-valikkonappi__nimi {
+    font-size: var(--tk-koko-leipa);
+}
