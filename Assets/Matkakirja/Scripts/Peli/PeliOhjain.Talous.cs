@@ -53,7 +53,7 @@ namespace Matkakirja.Natiivi
                 if (m != matka || p != m.Tila.Pelaaja) return;
                 var paikka = k.Matkalla ? "Yö matkalla"
                     : "Yö kaupungissa " + (p.Sijainti.Kaupungissa && m.Verkko.Kaupungit.TryGetValue(p.Sijainti.Kaupunki, out var c) ? c.Nimi : "");
-                paivakuluSyy = paikka.Trim() + ": " + (k.Majoitus > 0 ? $"ruoka {k.Ruoka} £, majoitus {k.Majoitus} £" : $"ruoka {k.Ruoka} £");
+                paivakuluSyy = paikka.Trim() + ": " + (k.Majoitus > 0 ? $"ruoka £{k.Ruoka}, majoitus £{k.Majoitus}" : $"ruoka £{k.Ruoka}");
             };
         }
 

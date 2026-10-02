@@ -578,7 +578,7 @@ namespace Matkakirja.Natiivi
             var nimi = (l.Tyyppi != Laattatyypit.Tyhja ? nimet?.Hae(l.Tyyppi, l.Manner, l.Maa)?.Nimi : null) ?? LaatanNimi(l.Tyyppi);
             if (nimi == null) return "Laatta oli tyhjä.";
             var osat = new List<string> { "Löysit: " + nimi };
-            if (l.RahaLisays != 0) osat.Add($"+{l.RahaLisays} {valuutta}");
+            if (l.RahaLisays != 0) osat.Add($"+{valuutta}{l.RahaLisays}");
             if (l.PaaaarreLisays != 0) osat.Add("+" + l.PaaaarreLisays + " ◈");
             return string.Join(" · ", osat);
         }

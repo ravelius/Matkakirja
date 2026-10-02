@@ -538,9 +538,17 @@ namespace Matkakirja.Natiivi
             string astcPolku = puoli ? astcPuoliP : astcTaysi;
             if (!string.IsNullOrEmpty(astcPolku))
             {
-                byte[] astcTavut = null;
-                yield return HaeTavut(peili(paketinJuuri + astcPolku), t => astcTavut = t);
-                var astc = DioraamaAstc.Lue(astcTavut, "Valoatlas:" + tila.Id + ":astc", out string astcSyy);
+                // Linnan piikit (iPad 2.10.): 8 valoatlasta (4096² ASTC, ~22 Mt) latautui peräkkäin kukin yhdessä ruudussa →
+                // 108 ms:n ruutu. Nyt natiivimuistiin ja kaistoina yhteisellä ruutubudjetilla (DioraamaAstc.LueKaistoina).
+                var astcTavut = default(Unity.Collections.NativeArray<byte>);
+                yield return DioraamaLevyvalimuisti.HaeNatiivi(peili(paketinJuuri + astcPolku), 120, t => astcTavut = t);
+                Texture2D astc = null; string astcSyy = null;
+                if (astcTavut.IsCreated)
+                {
+                    try { yield return DioraamaAstc.LueKaistoina(astcTavut, "Valoatlas:" + tila.Id + ":astc", TextureWrapMode.Clamp, 0, false, (k, sy) => { astc = k; astcSyy = sy; }); }
+                    finally { astcTavut.Dispose(); }
+                    if (astc != null) DioraamaRuutu.Gpu(null, astc);
+                }
                 if (kerta != avauskerta || rakennus3D == null) { if (astc != null) UnityEngine.Object.Destroy(astc); yield break; }
                 if (astc != null)
                 {

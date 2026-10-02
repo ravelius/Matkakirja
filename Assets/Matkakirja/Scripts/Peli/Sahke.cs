@@ -1009,7 +1009,7 @@ namespace Matkakirja.Natiivi
             {
                 Nakyy = kaytossa && rahaa && q.Vaihtoehdot != null && q.Vaihtoehdot.Count >= 2,
                 Kaytossa = !q.Kaveriapu,
-                Teksti = q.Kaveriapu ? "Kaverilta kysytty" : $"Kysy kaverilta ({SahkeVakiot.KaveriapuHinta} £)",
+                Teksti = q.Kaveriapu ? "Kaverilta kysytty" : $"Kysy kaverilta (£{SahkeVakiot.KaveriapuHinta})",
             };
         }
 

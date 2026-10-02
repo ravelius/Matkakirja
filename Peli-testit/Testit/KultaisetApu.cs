@@ -25,6 +25,10 @@ namespace Matkakirja.Peli.Testit
             }
         }
 
+        /// <summary>Webin tuottama kultainen jälki, jossa rahat ovat "N puntaa"; natiivi näyttää ne brittiläisesti "£N" (omistaja 2.10.2026 klo 15.50), joten jälki muunnetaan luettaessa.</summary>
+        public static string LueRahajalki(string tiedosto) =>
+            System.Text.RegularExpressions.Regex.Replace(File.ReadAllText(Path.Combine(Juuri, "Kultaiset", tiedosto)), @"(\d+) puntaa", "£$1");
+
         public static string Paketti => Path.Combine(Juuri, "Kultaiset", "paketti");
 
         public static Reittiverkko Verkko => verkko ??= SisaltoTuonti.LueKansiosta(Paketti);

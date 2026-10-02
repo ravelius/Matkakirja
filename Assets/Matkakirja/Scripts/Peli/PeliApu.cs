@@ -156,7 +156,7 @@ namespace Matkakirja.Natiivi
 
     public static class PeliApu
     {
-        public const string Valuutta = "puntaa";
+        public const string Valuutta = "£";
         /// <summary>Web ui.js vaihe 'roll': paluunapin nimi (iconButton('nuoli', …)).</summary>
         public const string VaihdaTeksti = "Vaihda matkustustapa";
 
@@ -225,7 +225,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Tilarivin teksti: "300 puntaa · päivä 1 · aamu · Pariisi".</summary>
         public static string TilaTeksti(IReittiverkko v, Pelitila t) =>
-            $"{t.Pelaaja.Raha} {Valuutta} · päivä {t.Paiva()} · {AikaNimi(t.Vuorokaudenaika())} · {SijaintiNimi(v, t.Pelaaja.Sijainti)}";
+            $"{Valuutta}{t.Pelaaja.Raha} · päivä {t.Paiva()} · {AikaNimi(t.Vuorokaudenaika())} · {SijaintiNimi(v, t.Pelaaja.Sijainti)}";
 
         // --- koordinaatit ---------------------------------------------------
 
@@ -412,13 +412,13 @@ namespace Matkakirja.Natiivi
                 tulos.Add(new MatkaVaihtoehto
                 {
                     Tapa = Kulkutapa.Bussi, Hinta = Vakiot.BussiHinta, Askelia = AskeliaKohteeseen(m.Verkko, p.Sijainti, kohde, Kulkutapa.Maa),
-                    Nimi = "Bussi", Selite = $"{Vakiot.BussiHinta} {Valuutta} · perillä heti, aika ei kulu",
+                    Nimi = "Bussi", Selite = $"{Valuutta}{Vakiot.BussiHinta} · perillä heti, aika ei kulu",
                 });
             if (tavat.Contains(Kulkutapa.Lento) && m.LentoKohteet().Contains(kohde))
                 tulos.Add(new MatkaVaihtoehto
                 {
                     Tapa = Kulkutapa.Lento, Hinta = Vakiot.LentoHinta,
-                    Nimi = "Lento", Selite = $"{Vakiot.LentoHinta} {Valuutta} · perillä, vie vuoron",
+                    Nimi = "Lento", Selite = $"{Valuutta}{Vakiot.LentoHinta} · perillä, vie vuoron",
                 });
             else if (Mannerlento(m, kohde) is MannerlentoKohde ml)
                 tulos.Add(MannerlentoVaihtoehto(ml));
@@ -436,7 +436,7 @@ namespace Matkakirja.Natiivi
                 {
                     Tapa = tapa, Hinta = hinta, Noppa = true, Askelia = askelia,
                     Nimi = kesken ? "Jatka matkaa" : TavanNimi(tapa),
-                    Selite = (hinta > 0 ? $"{hinta} {Valuutta}" : "ilmainen") + " · noppa · " + matka,
+                    Selite = (hinta > 0 ? $"{Valuutta}{hinta}" : "ilmainen") + " · noppa · " + matka,
                 });
             }
             return tulos;
@@ -529,7 +529,7 @@ namespace Matkakirja.Natiivi
         {
             Tapa = Kulkutapa.Lento, Hinta = Vakiot.LentoHinta, Mannerlento = true,
             Nimi = KauppaVakiot.MannerlentoNappi(k),
-            Selite = $"{Vakiot.LentoHinta} {Valuutta} · mannerlento, vie vuoron",
+            Selite = $"{Valuutta}{Vakiot.LentoHinta} · mannerlento, vie vuoron",
         };
 
         /// <summary>

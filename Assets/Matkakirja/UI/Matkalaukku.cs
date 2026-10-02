@@ -382,7 +382,7 @@ namespace Matkakirja.Natiivi
             if (m == null) return null;
             var k = m.PaivakuluNyt();
             int riittaa = m.KassaRiittaa();
-            return $"Päiväkulu {k.Yhteensa} £ (ruoka {k.Ruoka} £{(k.Majoitus > 0 ? $", majoitus {k.Majoitus} £" : "")})"
+            return $"Päiväkulu £{k.Yhteensa} (ruoka £{k.Ruoka}{(k.Majoitus > 0 ? $", majoitus £{k.Majoitus}" : "")})"
                 + (riittaa != int.MaxValue ? $" — kassa riittää noin {riittaa} päiväksi" : "");
         }
 

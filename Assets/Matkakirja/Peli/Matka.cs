@@ -695,7 +695,7 @@ namespace Matkakirja.Peli
             Tila.ViimePolku = siirto.Polku;
             Tila.OdottavaMaksu = 0;
             KirjaaKaynti(p);
-            if (maksu != 0) Tapahtui?.Invoke("fare", $"Laivamatka −{maksu} puntaa");
+            if (maksu != 0) Tapahtui?.Invoke("fare", $"Laivamatka −£{maksu}");
             Tila.Siirrot = null;
             Tila.Noppa = null;
             SaapumisenJalkeen(true);
@@ -715,7 +715,7 @@ namespace Matkakirja.Peli
             Tila.ViimePolku = BussiPolku(lahto, kohde);
             p.Sijainti = Sijainti.KaupungissaSijainti(kohde);
             KirjaaKaynti(p);
-            Tapahtui?.Invoke("fare", $"Bussimatka −{Vakiot.BussiHinta} puntaa");
+            Tapahtui?.Invoke("fare", $"Bussimatka −£{Vakiot.BussiHinta}");
             Tila.Siirrot = null;
             Tila.Noppa = null;
             // AIKA EI KULU: bussi ostaa nimenomaan päiviä.
@@ -829,7 +829,7 @@ namespace Matkakirja.Peli
             p.Paaaarteet += l.PaaaarreLisays;
             if (l.TpLisays != 0) Kokemus.Anna(p, l.TpLisays);
             if (l.Ennatys) KirjaaEnnatys(p);
-            Tapahtui?.Invoke("treasure", $"+{l.RahaLisays} puntaa");
+            Tapahtui?.Invoke("treasure", $"+£{l.RahaLisays}");
             if (l.Tyyppi != Laattatyypit.Paaaarre) LinssiKylkiaisena?.Invoke(p, kaupunki, l.Tyyppi);
             Loysi?.Invoke(p, l);
             return l;

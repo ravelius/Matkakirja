@@ -441,7 +441,7 @@ namespace Matkakirja.Natiivi
             var matka = PeliOhjain.Instanssi != null ? PeliOhjain.Instanssi.Matka : null;
             var ansaitut = new List<PeliLauta>();
             if (matka != null) { var k = Pelikehys.Kirjaa(matka, tulos, PelinTalous.Minipeli); palkkio = k.Palkkio; ansaitut = k.Laudat; }
-            Debug.Log("MATKAKIRJA mylly: " + Pelikehys.Matkakirjarivi(tulos) + (palkkio > 0 ? $" +{palkkio} £" : ""));
+            Debug.Log("MATKAKIRJA mylly: " + Pelikehys.Matkakirjarivi(tulos) + (palkkio > 0 ? $" +£{palkkio}" : ""));
             Paivita();
 
             bool kaveri = vastustaja == Vastustaja.Kaveri;
@@ -454,7 +454,7 @@ namespace Matkakirja.Natiivi
                 : voittaja == 0 ? $"Voitit {(vast.StartsWith("botti") ? "botin" + vast.Substring(5) : vast)} {peli.Siirtoja} siirrossa."
                 : $"Vastassa {vast}, {peli.Siirtoja} siirtoa.";
             tulosPalkkioRivi.style.display = palkkio > 0 ? DisplayStyle.Flex : DisplayStyle.None;
-            tulosPalkkio.text = $"+{palkkio} £";
+            tulosPalkkio.text = $"+£{palkkio}";
             tulosKirjattu.style.display = matka != null ? DisplayStyle.Flex : DisplayStyle.None;
             // Ansaitut laudat (omistaja 1.10.): uusi lauta auki / majatalon lauta Aarteisiin.
             tulosLaudat.text = string.Join("\n", ansaitut.ConvertAll(l => l.Avautuu == null ? l.Esine + " tallentui Aarteisiin." : "Uusi lauta: " + l.Nimi + "."));

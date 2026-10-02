@@ -1368,7 +1368,7 @@ namespace Matkakirja.Natiivi
             riviValittu = null;
             Tila = SilmukanTila.Dialogi;
             dialogi.PiilotaHeitto();
-            string ala = $"{p.Raha} {PeliApu.Valuutta} · päivä {matka.Tila.Paiva()} · {PeliApu.AikaNimi(matka.Tila.Vuorokaudenaika())}";
+            string ala = $"{PeliApu.Valuutta}{p.Raha} · päivä {matka.Tila.Paiva()} · {PeliApu.AikaNimi(matka.Tila.Vuorokaudenaika())}";
             if (vaihtoehdot.Count == 0) ala += " · ei kulkutapaa nyt";
             dialogi.Nayta(PeliApu.KaupunginNimi(verkko, kaupunki), ala,
                 vaihtoehdot.Select(v => (v.Nimi, v.Selite)).ToList(),
@@ -1400,7 +1400,7 @@ namespace Matkakirja.Natiivi
             if (kohteet.Count == 0) return "mannerlentoa ei ole tarjolla";
             var p = matka.Tila.Pelaaja;
             // NaytaRivit asettaa riviValittu-käsittelijän, joten myös testikomento `rivi i` toimii (Laitetestaaja 24.9.2026).
-            NaytaRivit("Mannerlento", $"{p.Raha} {PeliApu.Valuutta} · mantereen aarre löytyi, matka voi jatkua",
+            NaytaRivit("Mannerlento", $"{PeliApu.Valuutta}{p.Raha} · mantereen aarre löytyi, matka voi jatkua",
                 kohteet.Select(PeliApu.MannerlentoVaihtoehto).ToList(),
                 i => Matkusta(kohteet[i].Kaupunki, Kulkutapa.Lento, true));
             return null;

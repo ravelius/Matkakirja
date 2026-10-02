@@ -189,7 +189,7 @@ namespace Matkakirja.Kartta.Testit
 
             double p = Tankkaa(0.25, 100, 1.0, out double maksu);
             Lahella(1.0, p, 1e-12, "täyteen");
-            Lahella(18, maksu, 1e-12, "0,75 tankkia = 18 £");
+            Lahella(18, maksu, 1e-12, "0,75 tankkia = £18");
             p = Tankkaa(0.25, 6, 1.0, out maksu);
             Lahella(0.5, p, 1e-12, "rahan verran");
             Lahella(6, maksu, 1e-12, "koko raha");

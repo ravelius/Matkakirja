@@ -22,7 +22,7 @@ projektin syöte on pelkkä Input System). Fontti otetaan `KaupunkiMerkit.fontti
 1. `./aja.sh sim && ./aja.sh xcode-sim && ./aja.sh asenna-sim <UDID>` (uudet skriptit tuodaan
    käännöksessä; `luo` ei ole pakollinen, koska kohtaus ei muutu).
 2. Lokissa pitää näkyä `MATKAKIRJA peli: sisältö sisalto/1/v1/, 266 kaupunkia …`,
-   `MATKAKIRJA peli: laattoja 266 (kokoelmat/laatat.json)` ja `MATKAKIRJA peli: uusi peli, 300 puntaa · päivä 1 · aamu · Pariisi`.
+   `MATKAKIRJA peli: laattoja 266 (kokoelmat/laatat.json)` ja `MATKAKIRJA peli: uusi peli, £300 · päivä 1 · aamu · Pariisi`.
    Kamera ajaa Pariisiin ja itsestään pyöriminen loppuu.
 3. Aja testiskripti (alla) ja tarkista `peli-tila-*.json` ja `peli-loki.txt`.
 
@@ -82,7 +82,7 @@ JSON-tiedostot. 3D:n `komento.txt` (esim. `kuva nimi`) toimii rinnalla.
 | `tutki [vaikea]` | "Tutki kaupunkia" -nappi: kysymys auki (tila Kysymys) |
 | `vastaa i\|oikea\|vaara` | vaihtoehto i (0..), oikea tai ensimmäinen näkyvä väärä |
 | `aloita` | kohtaamisen tervehdyssivun "Aloita peli" (aika alkaa vasta tästä) |
-| `vihje` / `puolita` | vihje 40 £ / 50:50 80 £ (virhe näkyy kysymyksen alareunassa) |
+| `vihje` / `puolita` | vihje £40 / 50:50 £80 (virhe näkyy kysymyksen alareunassa) |
 | `jatka` | tuloksen Jatka-nappi: kysymys kiinni, vuoro päättyy |
 | `luento kaupunki\|intro\|lento\|saapuminen kaupunki` | soittaa luennan ehdoitta (tila-JSONin `puhe`: soi, url, aika, virhe) |
 | `puhe seis\|pois\|paalle` | pysäyttää puheen / kertoja pois tai päälle (Asetukset Kytkin.Kertoja) |
@@ -163,7 +163,7 @@ Odotettu siemenellä 12345 (Testit/SilmukkaKysymysTestit.cs toistaa saman logiik
 | k1-alku | Kartta | c:pariisi | 300 | vaihe Toiminta, tutkiTarjolla true |
 | k2-lontoossa | Kartta | c:lontoo | 250 | tutkiTarjolla true (laatta + kohtaaminen) |
 | k3-kysymys | Kysymys | c:lontoo | 250 | kysymys.otsikko "Lontoo · kohtaaminen", tervehdysVaihe true (Leilan tervehdys, "Aloita peli"), yritys 1, 4 vaihtoehtoa, syoteEstetty true; sitten `aloita` |
-| k4-vastattu | Kysymys | c:lontoo | 440 | oikein true, tulosVaihe 2 (tuomio 0,9 s → paljastus), loytoTyyppi pieniAarre, loyto "Löysit: Kourallinen hopeakolikoita · +190 £" |
+| k4-vastattu | Kysymys | c:lontoo | 440 | oikein true, tulosVaihe 2 (tuomio 0,9 s → paljastus), loytoTyyppi pieniAarre, loyto "Löysit: Kourallinen hopeakolikoita · +£190" |
 | k5-kartalla | Kartta | c:lontoo | 440 | vaihe Toiminta, keskipäivä, tutkiTarjolla false |
 | k6-reitilla | Kartta | e:lontoo\|pariisi:2 | 440 | viimeisin noppa 2, Heitä-nappi, ilta |
 | k7-lehti-pariisi | Lehti | c:pariisi | 440 | noppa 2, yö |

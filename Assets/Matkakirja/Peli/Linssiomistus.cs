@@ -453,11 +453,11 @@ namespace Matkakirja.Peli
                     Hyvitys = hyvitys,
                     Otsikko = "Linssi hiomassa",
                     Alaotsikko = hyvitys != 0
-                        ? $"Optikko hioo vielä tätä linssiä — hän maksoi odotuksesta {hyvitys} puntaa hyvitystä. Linssi tulee laukkuun, kun se on valmis."
+                        ? $"Optikko hioo vielä tätä linssiä — hän maksoi odotuksesta £{hyvitys} hyvitystä. Linssi tulee laukkuun, kun se on valmis."
                         : "Optikko hioo vielä tätä linssiä. Linssi tulee laukkuun, kun se on valmis.",
                     Tilanne = "peli.linssi.hiomassa",
                     Teksti = $"{p.Nimi} löysi aarteen kyljestä linssin ({nimi}), mutta optikko hioo sitä vielä"
-                        + (hyvitys != 0 ? $" — hän maksoi odotuksesta {hyvitys} puntaa hyvitystä." : "."),
+                        + (hyvitys != 0 ? $" — hän maksoi odotuksesta £{hyvitys} hyvitystä." : "."),
                 });
             }
             return Ilmoita(p, new LinssiMyonto
