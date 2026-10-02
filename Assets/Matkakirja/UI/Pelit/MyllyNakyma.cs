@@ -3,7 +3,8 @@
 //             vuororivi, pelaajarivit, ohje, napit Säännöt / Luovuta). KAPEA: paneeli laudan alla; KESKI/LEVEÄ: oikealla 350 pt.
 //   VALINTA = KORTTI (vastustaja: KYTKIN-ryhmä Helppo / Normaali / Vaikea + Kaveri samalla laitteella; Peruuta / Aloita peli).
 //   TULOS   = KORTTI (voitto, häviö, tasapeli; botin voitosta palkkio PelinTalous.Minipeli; "Tulos kirjattiin matkakirjaan.").
-// Vain tyylikirjan arvot (Tyylikirja.cs, Tyylikirja.uss); äänet olemassa olevista tehosteista (click, correct, coin, wrong).
+// Vain tyylikirjan arvot (Tyylikirja.cs, Tyylikirja.uss); äänet tehosteväylältä (click, correct, coin, wrong) ja nappuloiden
+// naksahdukset Resources/Pelit/Mylly (Kenney CC0). Lauta Linnanrakentajan Blender-kerroksina (MyllyLauta.Lataa), vektori varalla.
 // Säännöt ja botti: Peli/Pelit/Mylly.cs ja Pelikehys.cs (Peli-testit MyllyTestit). Botti hakee kopiosta taustasäikeessä.
 // Testikomento: ui mylly [valinta | peli helppo|normaali|vaikea|kaveri | asema <24 merkkiä> <käsi0> <käsi1> <vuoro> | tila | sulje].
 using System;
@@ -187,6 +188,9 @@ namespace Matkakirja.Natiivi
             SyoteLukko.Esta(this);
             UiKerros.Hae().Juuri(Pulu.Kerros).style.visibility = Visibility.Hidden;
             peli ??= new Mylly();
+            lauta.Lataa();
+            Aanet.RekisteroiTehoste(AaniAsetus, Resources.Load<AudioClip>(MyllyLauta.KansioPolku + AaniAsetus), AaniGain);
+            Aanet.RekisteroiTehoste(AaniPoisto, Resources.Load<AudioClip>(MyllyLauta.KansioPolku + AaniPoisto), AaniGain);
             Paivita();
             peliTaso.style.display = DisplayStyle.Flex;
             Rakenne.Nayta(peliTaso, true, Tyylikirja.Kesto.Avaus);
@@ -203,6 +207,28 @@ namespace Matkakirja.Natiivi
             Rakenne.Nayta(peliTaso, false, Tyylikirja.Kesto.Sulku);
             SyoteLukko.Vapauta(this);
             UiKerros.Hae().Juuri(Pulu.Kerros).style.visibility = StyleKeyword.Null;
+            // Kerrokset ja äänet muistista sulkuanimaation jälkeen (Natiiviseppä: Resources.UnloadUnusedAssets suljettaessa).
+            int k = kerta;
+            lauta.schedule.Execute(() =>
+            {
+                if (Auki || k != kerta) return;
+                lauta.Pura();
+                Aanet.RekisteroiTehoste(AaniAsetus, (AudioClip)null);
+                Aanet.RekisteroiTehoste(AaniPoisto, (AudioClip)null);
+                Resources.UnloadUnusedAssets();
+            }).StartingIn(Tyylikirja.Kesto.Sulku + 50);
+        }
+
+        // NAPPULOIDEN ÄÄNET (Kenney Impact Sounds, CC0; omistajan OK 2.10.2026): asetus/siirto naksahtaa, kun nappula
+        // laskeutuu (liu'un lopussa), poisto heti perään. Puuttuva klippi → tehosteväylän "click" kuten ennen.
+        const string AaniAsetus = "mylly-asetus", AaniPoisto = "mylly-poisto";
+        const float AaniGain = 0.5f;
+
+        static void SiirronAani(MyllySiirto s, float voima)
+        {
+            float lasku = s.Mista >= 0 ? Tyylikirja.Kesto.Liuku / 1000f * 0.9f : 0f;
+            if (!Aanet.Tehoste(AaniAsetus, voima, lasku)) Aanet.Tehoste("click", voima);
+            if (s.Poista >= 0 && !Aanet.Tehoste(AaniPoisto, voima, lasku + 0.12f)) Aanet.Tehoste("wrong", voima);
         }
 
         void NaytaKortti(Kortti k)
@@ -302,7 +328,7 @@ namespace Matkakirja.Natiivi
             peli.Tee(s);
             lauta.Animoi(s, peli.Nappula(s.Mihin));
             valittu = poistoKohde = poistoLahde = -1;
-            Aanet.Tehoste("click");
+            SiirronAani(s, 1f);
             Paivita();
             if (TarkistaLoppu()) return;
             if (vastustaja != Vastustaja.Kaveri && peli.Vuorossa == 1) BotinVuoro();
@@ -327,7 +353,7 @@ namespace Matkakirja.Natiivi
                 var s = tehtava.Result;
                 peli.Tee(s);
                 lauta.Animoi(s, peli.Nappula(s.Mihin));
-                Aanet.Tehoste(s.Poista >= 0 ? "wrong" : "click", 0.8f);
+                SiirronAani(s, 0.8f);
                 Paivita();
                 TarkistaLoppu();
             }
@@ -539,7 +565,105 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Valitun laudan tunnus (majatalo / luostari / viikinkilaiva): Blender-kerrokset tulevat tämän mukaan.</summary>
         public string LautaId { get; private set; } = "majatalo";
-        public void AsetaLauta(string id) { LautaId = id; MarkDirtyRepaint(); }
+        public void AsetaLauta(string id) { LautaId = id; if (ladattu != null) Lataa(); MarkDirtyRepaint(); }
+
+        // BLENDER-KERROKSET (Linnanrakentajan _valmiit/mylly-laudat/v1, omistajan OK 2.10.2026; Natiivisepän jakelu):
+        // Resources/Pelit/Mylly, iOS ASTC 6×6 sRGB + mipit, ladataan nimellä avattaessa ja puretaan suljettaessa
+        // (MyllyNakyma.Sulje → Resources.UnloadUnusedAssets). Piirtojärjestys lauta → hehku (valmiin myllyn suorakaide
+        // ± 0,03 laudasta) → varjot → nappulat → renkaat. Pisteet = Mylly.Paikat (pisteet.json: reuna 0,09, sama kuin
+        // Marginaali). Nappulan halkaisija 0,098 laudasta = 200 px 256 px:n kuvasta; renkaat samassa pikselimitassa.
+        // Ilman kuvia (lataus epäonnistui) piirretään vektoreina kuten ennen.
+        public const string KansioPolku = "Pelit/Mylly/";
+        const string Kansio = KansioPolku;
+        const float NappulaKuva = 0.098f * 256f / 200f, RengasKuva = NappulaKuva * 320f / 256f, HehkuReuna = 0.03f;
+        Texture2D kLauta, kHehku, kVaalea, kTumma, kVarjo, rValittu, rPoistettava, rKohde;
+        string ladattu;
+
+        public void Lataa()
+        {
+            if (ladattu == LautaId && kLauta != null) return;
+            ladattu = LautaId;
+            kLauta = Kuva("lauta-" + LautaId); kHehku = Kuva("hehku-" + LautaId);
+            kVaalea = Kuva("nappula-vaalea-" + LautaId); kTumma = Kuva("nappula-tumma-" + LautaId); kVarjo = Kuva("nappula-varjo-" + LautaId);
+            rValittu = Kuva("rengas-valittu"); rPoistettava = Kuva("rengas-poistettava"); rKohde = Kuva("rengas-kohde");
+            if (kLauta == null || kVaalea == null || kTumma == null) Debug.LogWarning("MATKAKIRJA mylly: kerrokset puuttuvat (" + LautaId + "), vektoripiirto");
+            MarkDirtyRepaint();
+        }
+
+        public void Pura()
+        {
+            kLauta = kHehku = kVaalea = kTumma = kVarjo = rValittu = rPoistettava = rKohde = null;
+            ladattu = null;
+        }
+
+        static Texture2D Kuva(string nimi) => Resources.Load<Texture2D>(Kansio + nimi);
+        bool Kuvat => kLauta != null && kVaalea != null && kTumma != null;
+        static readonly ushort[] Nelio = { 0, 1, 2, 2, 3, 0 };
+
+        /// <summary>Kuva suorakaiteeseen r (UITK: y alas); uv laudan osuus (0–1, y alas), sävy = läpinäkyvyys.</summary>
+        static void Kuva(MeshGenerationContext mgc, Texture2D t, Rect r, Rect uv, float a = 1f)
+        {
+            if (t == null || a <= 0f) return;
+            var md = mgc.Allocate(4, 6, t);
+            var reg = md.uvRegion;
+            var savy = Color.white; savy.a = a;
+            Vector2 U(float u, float v) => new Vector2(reg.x + u * reg.width, reg.y + (1f - v) * reg.height);
+            md.SetNextVertex(new Vertex { position = new Vector3(r.xMin, r.yMax, Vertex.nearZ), tint = savy, uv = U(uv.xMin, uv.yMax) });
+            md.SetNextVertex(new Vertex { position = new Vector3(r.xMin, r.yMin, Vertex.nearZ), tint = savy, uv = U(uv.xMin, uv.yMin) });
+            md.SetNextVertex(new Vertex { position = new Vector3(r.xMax, r.yMin, Vertex.nearZ), tint = savy, uv = U(uv.xMax, uv.yMin) });
+            md.SetNextVertex(new Vertex { position = new Vector3(r.xMax, r.yMax, Vertex.nearZ), tint = savy, uv = U(uv.xMax, uv.yMax) });
+            md.SetAllIndices(Nelio);
+        }
+
+        static void Kuva(MeshGenerationContext mgc, Texture2D t, Vector2 keski, float koko, float a = 1f) =>
+            Kuva(mgc, t, new Rect(keski.x - koko / 2f, keski.y - koko / 2f, koko, koko), new Rect(0f, 0f, 1f, 1f), a);
+
+        void PiirraKuvat(MeshGenerationContext mgc)
+        {
+            float w = contentRect.width, nk = w * NappulaKuva, rk = w * RengasKuva;
+            Kuva(mgc, kLauta, new Rect(0f, 0f, w, w), new Rect(0f, 0f, 1f, 1f));
+            if (peli != null && kHehku != null)
+                foreach (var m in Mylly.Myllyt)
+                {
+                    int o = peli.Nappula(m[0]);
+                    if (o < 0 || peli.Nappula(m[1]) != o || peli.Nappula(m[2]) != o) continue;
+                    Vector2 a0 = Kohta(m[0]) / w, a2 = Kohta(m[2]) / w;
+                    var uv = Rect.MinMaxRect(Mathf.Min(a0.x, a2.x) - HehkuReuna, Mathf.Min(a0.y, a2.y) - HehkuReuna,
+                                             Mathf.Max(a0.x, a2.x) + HehkuReuna, Mathf.Max(a0.y, a2.y) + HehkuReuna);
+                    Kuva(mgc, kHehku, new Rect(uv.x * w, uv.y * w, uv.width * w, uv.height * w), uv);
+                }
+            foreach (int k in kohteet) Kuva(mgc, rKohde, Kohta(k), rk);
+            if (peli == null) return;
+
+            // Näkyvät nappulat (sama logiikka kuin vektoripiirrossa): (paikka, omistaja, koko, läpinäkyvyys).
+            var nappulat = new List<(Vector2 P, int O, float K, float A)>(Mylly.Pisteita + 2);
+            float tl = Pehmea(AnimT(LiukuS)), th = AnimT(HaivytysS);
+            for (int a = 0; a < Mylly.Pisteita; a++)
+            {
+                int o = peli.Nappula(a);
+                if (anim.HasValue && a == anim.Value.Mihin && tl < 1f) continue;
+                if (o < 0 && a != poistoKohde) continue;
+                if (a == poistoLahde) continue;
+                if (a == poistoKohde && o < 0) o = peli.Vuorossa;
+                nappulat.Add((Kohta(a), o, nk, 1f));
+            }
+            if (anim.HasValue)
+            {
+                var am = anim.Value;
+                if (am.Poista >= 0 && th < 1f) nappulat.Add((Kohta(am.Poista), 1 - animOmistaja, nk * (1f + 0.15f * th), 1f - th));
+                if (tl < 1f)
+                {
+                    var paikka = am.Mista >= 0 ? Vector2.Lerp(Kohta(am.Mista), Kohta(am.Mihin), tl) : Kohta(am.Mihin);
+                    nappulat.Add((paikka, animOmistaja, am.Mista >= 0 ? nk : nk * (0.7f + 0.3f * tl), 1f));
+                }
+            }
+            foreach (var n in nappulat) Kuva(mgc, kVarjo, n.P, n.K, n.A);
+            foreach (var n in nappulat) Kuva(mgc, n.O == 0 ? kVaalea : kTumma, n.P, n.K, n.A);
+            foreach (int a in poistettavat) Kuva(mgc, rPoistettava, Kohta(a), rk);
+            if (valittu >= 0) Kuva(mgc, rValittu, Kohta(valittu), rk);
+            if (viimeisin >= 0 && peli.Nappula(viimeisin) >= 0 && !(anim.HasValue && tl < 1f))
+                Ympyra(mgc.painter2D, Kohta(viimeisin), Askel * 0.36f * 0.2f, Tyylikirja.Paperi.Toiminto, null, 0);
+        }
 
         public void Aseta(Mylly m, int valittu, int poistoKohde, int poistoLahde, List<int> kohteet, List<int> poistettavat, int viimeisin)
         {
@@ -570,6 +694,7 @@ namespace Matkakirja.Natiivi
         {
             var r = contentRect;
             if (r.width < 10) return;
+            if (Kuvat) { PiirraKuvat(mgc); return; }
             var t = Tyylikirja.Paperi;
             var p = mgc.painter2D;
             float s = Askel, sade = s * 0.36f, viiva = Mathf.Max(2f, r.width / 160f);
