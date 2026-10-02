@@ -42,7 +42,9 @@ test('PaneeliData: kytkin totuusarvoksi, säätimen arvo rajoihin, teema vain pa
 });
 
 test('PANEELI: sulkupino (Esc), ohinapautus ohittaa avaajan, ei ✕:ää eikä kuvia', () => {
-  const p = POHJAT.slice(POHJAT.indexOf('export function luoPohjaPaneeli'));
+  // Vain PANEELIN funktio: perässä tuleva KUVANÄKYMÄ saa ✕:n (tyylikirja).
+  const loppu = POHJAT.indexOf('export function luoPohjaKuvanakyma');
+  const p = POHJAT.slice(POHJAT.indexOf('export function luoPohjaPaneeli'), loppu > 0 ? loppu : undefined);
   assert.match(p, /pohjaPinoon\(pohja\)/);
   assert.match(p, /addEventListener\('pointerdown', ohi, true\)/);
   assert.match(p, /avaaja\?\.contains\?\.\(e\.target\)/);

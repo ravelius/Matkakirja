@@ -44,3 +44,57 @@ test('projektori on valoa pinnalla: lisäys diffuusiin valoon, ei emissioon', ()
   assert.match(p, /reflectedLight\.directDiffuse \+= BRDF_Lambert\(diffuseColor\.rgb\) \* projektoriValo\(/);
   assert.doesNotMatch(p, /totalEmissiveRadiance/);
 });
+
+test('vaihe 3: prologi, intron leikkaukset, nimi ja kysymys, kaiku ja ääniraita kellona (Blender v7–v10)', () => {
+  const pr = SOKRATES.prologi;
+  assert.deepEqual([pr.kytkin, pr.taysi, pr.loppu], [30, 58, 120]);
+  assert.equal(pr.valot.length, 2);   // v9-palaute: vain reunavalot
+  assert.deepEqual(SOKRATES.intro.otokset.map(([r]) => r), [1, 15, 57, 119, 236, 259]);
+  assert.deepEqual(SOKRATES.ajat.nimi, [282, 372]);
+  assert.deepEqual(SOKRATES.ajat.kysymys, [373, 461]);
+  assert.deepEqual(SOKRATES.ajat.kaiku, [965, 1440]);
+  assert.equal(SOKRATES.vuodet, 'n. 470–399 eaa.');
+  // Linnanrakentaja 2.10.: kaikuvoima 20 (otsa), täyte 0,10 × aurinko, seepia 1/0,78/0,52.
+  assert.equal(SOKRATES.kaiku.voima, 20);
+  assert.equal(SOKRATES.kaiku.tayte.osuus, 0.10);
+  assert.deepEqual(SOKRATES.kaiku.savy, [1.0, 0.78, 0.52]);
+  const js = lue('../js/linssit/ajattelija.js');
+  assert.match(js, /G = pr0\.loppu \+ aani\.currentTime \* RUUTUA_S/, 'pääraita on kierroksen kello');
+  assert.match(js, /return e\.suunta\.clone\(\);/, 'auringon avaimia ei saa muuttaa paikallaan');
+  const css = lue('../css/pohjat/pinnat/ajattelija.css');
+  assert.doesNotMatch(css, /#[0-9a-f]{3,6}\b|rgba?\(|\d+ms/i, 'pinnassa vain tokenit');
+  assert.match(css, /font-size: var\(--tk-koko-arkki\);/);
+});
+
+test('vaihe 4: KUVANÄKYMÄ-pohja (✕ lasia, veto alas, Esc), lappu NOSTOKORTTI tummana, Pulun viisi kysymystä', () => {
+  const js = lue('../js/linssit/ajattelija.js');
+  assert.match(js, /luoPohjaKuvanakyma\(\{ nimi: `\$\{a\.nimi\}: ajattelija`/);
+  assert.match(js, /luoPohjaNostokortti\(\{ yla: a\.nimi, otsikko: a\.elama\.otsikko, kappaleet: a\.elama\.kappaleet \}, \{ teema: 'tumma' \}\)/);
+  assert.doesNotMatch(js, /tk-nappi ajattelija-sulku/, 'oma ✕ korvattu pohjalla');
+  assert.equal(SOKRATES.elama.otsikko, 'Sokrateen elämä');
+  assert.equal(SOKRATES.elama.kappaleet.length, 7);
+  assert.equal(SOKRATES.pulunKysymykset.length, 5);
+  assert.ok(SOKRATES.pulunKysymykset.every((k) => k.endsWith('?') && k.length <= 50));
+  const css = lue('../css/pohjat/kuvanakyma.css');
+  assert.match(css, /width: var\(--tk-nappi-osuma\);/);
+  assert.match(css, /border-radius: var\(--tk-kulma-pilleri\);/);
+  assert.doesNotMatch(css, /#[0-9a-f]{3,6}\b|rgba?\(|\d+ms/i);
+});
+
+test('omistajan v9-palaute: prologi ilman kehää, Zarathustra koko kohtaus vaimennettuna, terävä kipsi', () => {
+  assert.ok(!SOKRATES.prologi.levy, 'prologissa ei taustalevyä');
+  assert.ok(SOKRATES.prologi.valot.every((v) => v.keila <= 30), 'vain kapeat reunavalot');
+  assert.deepEqual(Object.keys(SOKRATES.aani), ['puhe', 'musiikki']);
+  const tyokalu = lue('../tools/ajattelija-aaniraita.mjs');
+  assert.match(tyokalu, /const VAIMENNUS = \{ alku: 17\.5, taso: 0\.22, ramppi: 2 \};/);
+  assert.match(tyokalu, /const SILMUKKA = \[66\.0, 80\.0\];/);
+  assert.doesNotMatch(tyokalu, /gymnopedie/i, 'Satie pois');
+  const pr = lue('../js/linssit/ajattelija-projektori.js');
+  assert.match(pr, /texture2D\( normalMap, vNormalMapUv, -0\.75 \)/);
+  assert.match(pr, /export const KIPSI_TOISTOT = \[28\.5, 95\.0\];/);
+  assert.match(lue('../js/linssit/ajattelija.js'), /kohtaus\.background = mustaVari;/);
+});
+
+test('kaikukuvat ovat positiivisia (omistaja 2.10.2026 klo 11.13): sotilas v2 ilman kääntöä', () => {
+  assert.equal(SOKRATES.kaiku.kuva, 'ajattelijat/sokrates/v1/kaiku-sotilas-v2.png');
+});

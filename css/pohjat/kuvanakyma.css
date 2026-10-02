@@ -1,0 +1,43 @@
+/*
+ * KUVANÄKYMÄ (tyylikirja.json pohjat.KUVANÄKYMÄ: teema TUMMA, kuvat 1+, sulku ✕, veto alas, Esc; natiivi Kuvanakyma.cs).
+ * Koko ruudun näkymä; ✕ on LASI-teemaa (Natiivi-UI 2.10.2026), 44 pt, pyöreä, oikea yläkulma turva-alueen sisällä.
+ * Osa UI-pohjien tyylejä (css/pohjat/, latausjärjestys js/pohjat/tyylit.js POHJAT_TYYLIT). VAIN --tk-*-tokenit.
+ */
+
+.tk-kuvanakyma {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  overflow: hidden;
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  opacity: 1;
+  transition: opacity var(--tk-kesto-avaus) ease-out;
+  touch-action: none;
+}
+.tk-kuvanakyma.tk-piilossa { opacity: 0; transition-duration: var(--tk-kesto-sulku); pointer-events: none; }
+.tk-kuvanakyma__sisalto { position: absolute; inset: 0; }
+.tk-kuvanakyma__sulku {
+  position: absolute;
+  top: calc(var(--tk-vali-m) + env(safe-area-inset-top, 0px));
+  right: calc(var(--tk-vali-m) + env(safe-area-inset-right, 0px));
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: var(--tk-nappi-osuma);
+  height: var(--tk-nappi-osuma);
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-pilleri);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  font-size: var(--tk-koko-valiotsikko);
+  line-height: 1;
+  cursor: pointer;
+}
+.tk-kuvanakyma__sulku:focus-visible { outline: 2px solid var(--tk-korostus); outline-offset: 2px; }
