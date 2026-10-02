@@ -391,7 +391,7 @@ namespace Matkakirja.Natiivi
                 PalaaLive);
             // Pieni ↔ suuri (omistaja 2.10. 21.3x kohta 8): pienentyessä kohdelista kiinni; avoimen listan ohi napautus sulkee vain
             // listan (peite), ei pöytää; liu'un jälkeen Pulu pöydän uuden yläreunan mukaan.
-            poyta.SuuriMuuttui += suuri => { if (!suuri) SuljeLista(); };
+            poyta.SuuriMuuttui += suuri => { if (!suuri) SuljeLista(); PaivitaPulu(); };
             poyta.EstaPienennys = () => lista.style.display == DisplayStyle.Flex;
             poyta.KokoMuuttui += PaivitaPulu;
             PaivitaPoydat(KyydinTila.Kauko);
@@ -459,6 +459,11 @@ namespace Matkakirja.Natiivi
                 kulma.y = Mathf.Min(kulma.y, yla);
             }
             p.IkkunanTakana = ikkunassa ? kulma : (Vector2?)null;
+            // Suuri säätöpaneeli (Päätoimittajan kuvatarkistus 2.10.: Pulu nousi paneelin mukana säätönapin alle): lintu häivytetään
+            // pienen paneelin yläpuolelle paikalleen koko suuren tilan ja liu'un ajaksi, ja AlaVara päivittyy vasta liu'un jälkeen.
+            bool suuri = Kytkinpoyta && poytaNakyy && (poyta.Suuri || poyta.Liukuu);
+            p.Haivyta(suuri);
+            if (suuri) return;
             // Robottikäden Pulu (vasen alakulma, omistaja 2.10. 21.3x) pysyy pöydän yläpuolella myös Cupolassa; ikkunan takana
             // olevaa Pulua (A/B ilman robottikättä) AlaVara ei siirrä, koska IkkunanTakana ohittaa sen.
             p.AlaVara = poytaNakyy ? H - pe.worldBound.yMin - (Kytkinpoyta && ikkunassa ? poyta.YlaReuna : 0f) + 6f : 0f;

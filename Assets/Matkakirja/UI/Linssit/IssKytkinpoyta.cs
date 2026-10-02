@@ -323,10 +323,11 @@ namespace Matkakirja.Natiivi
             s.position = Position.Relative; s.left = StyleKeyword.Null; s.top = StyleKeyword.Null; s.right = StyleKeyword.Null;
             s.bottom = StyleKeyword.Null; s.width = StyleKeyword.Null; s.height = StyleKeyword.Null; s.flexGrow = 0;
             s.display = DisplayStyle.Flex; s.unityTextAlign = TextAnchor.MiddleCenter;
-            s.color = (Color)Tyylikirja.Tila.Virhe; s.fontSize = MerkkiPt;
+            s.color = (Color)Tyylikirja.Tila.Virhe; s.fontSize = MerkkiPt; s.unityFontStyleAndWeight = FontStyle.Bold;
         }
-        /// <summary>×-merkin paikka painikkeen kuvakehyksessä (lasi 0,33…0,89, kaiverrettu legenda ~0,6): ylä 0,30, korkeus 0,26.</summary>
-        const float MerkkiYla = 0.30f, MerkkiKorkeus = 0.26f, MerkkiPt = 12f;
+        /// <summary>×-merkin paikka painikkeen kuvakehyksessä (lasi 0,33…0,89, kaiverrettu legenda ~0,6): ylä 0,32, korkeus 0,26.
+        /// Koko 12 → 22 pt lihavoituna (Päätoimittajan kuvatarkistus 2.10.: 12 pt:n merkki ei erottunut lasista).</summary>
+        const float MerkkiYla = 0.32f, MerkkiKorkeus = 0.26f, MerkkiPt = 22f;
 
         // Tekstien alkuperäinen paikka ja tyyli (palautus kerrostilasta kehykseen).
         readonly List<(Label l, VisualElement isa, int ix, StyleEnum<Position> pos, StyleLength left, StyleLength top, StyleLength right,
@@ -533,6 +534,8 @@ namespace Matkakirja.Natiivi
         // ---------------- Pieni ja suuri tila (omistaja 2.10. 21.3x kohta 8) ----------------
         /// <summary>Suuri tila (säätimet luettavina); pieni = vain mittaririvi. Pieni on oletus kyydin avautuessa.</summary>
         public bool Suuri { get; private set; }
+        /// <summary>Pieni ↔ suuri -liuku käynnissä.</summary>
+        public bool Liukuu => ajo != null && ajo.isActive;
         /// <summary>Tila vaihtui (liu'un alussa): kyytinäkymä sulkee kohdelistan pienentyessä.</summary>
         public event Action<bool> SuuriMuuttui;
         /// <summary>Liuku päättyi tai asento asetettiin: pulu ja kohdelista seuraavat pöydän uutta yläreunaa.</summary>

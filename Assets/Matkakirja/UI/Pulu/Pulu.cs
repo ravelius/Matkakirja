@@ -266,6 +266,24 @@ namespace Matkakirja.Natiivi
         /// <summary>Alareunan paneeli, jonka yläpuolelle Pulu nousee (pt ruudun alareunasta; ISS-kyydin ohjauspöytä), 0 = ei mitään.</summary>
         public float AlaVara { get; set; }
 
+        bool haivytetty;
+
+        /// <summary>
+        /// ISS-kyydin suuren säätöpaneelin ajaksi (omistaja 2.10. 21.3x kohta 8; Päätoimittajan kuvatarkistus 2.10.: kypärä
+        /// nousi säätönapin alle): lintu häivytetään paikalleen (Kesto.Sulku/Avaus) eikä se ota kosketuksia; puhe jatkuu.
+        /// </summary>
+        public void Haivyta(bool piiloon)
+        {
+            if (piiloon == haivytetty) return;
+            haivytetty = piiloon;
+            float kesto = (piiloon ? Tyylikirja.Kesto.Sulku : Tyylikirja.Kesto.Avaus) / 1000f;
+            // kuva (ei näyttämö): karttavaiston näyttämön läpinäkyvyys pysyy ilman siirtymää.
+            kuva.style.transitionProperty = new StyleList<StylePropertyName>(new List<StylePropertyName> { new StylePropertyName("opacity") });
+            kuva.style.transitionDuration = new StyleList<TimeValue>(new List<TimeValue> { new TimeValue(kesto) });
+            kuva.style.opacity = piiloon ? 0f : 1f;
+            kosketus.pickingMode = piiloon ? PickingMode.Ignore : PickingMode.Position;
+        }
+
         // Webin livia-astronautti-leijuu (css/satelliitti.css): 5 s:n kierros, 5 px ylös ja −3° → +3°, puheen ajaksi paikalleen;
         // vähennetty liike: ei leijuntaa.
         float leijuAika;

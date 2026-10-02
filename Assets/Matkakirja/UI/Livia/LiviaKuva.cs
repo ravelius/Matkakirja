@@ -454,8 +454,10 @@ namespace Matkakirja.Natiivi
                 Kuva(robottiKuvat[1], 800, t.EvaMaa, false, valo, 0, NivelY + 6);
                 Kuva(robottiKuvat[1], 800, t.EvaMaa, false, valo, NivelY, PaaY, vaaka: true);
                 Kuva(evaKuvat[1], 304, 1f, true, varjo);                 // perus varjokuvana
-                Soikio(evaKuvat[1], 113.5f, 258.5f, 21f, 19f, valo);     // kasvot visiirin alla sävyttämättä
+                // Kasvovalo ensin ja kasvot sen päälle (Päätoimittajan kuvatarkistus 2.10.: valo peitti silmät ja nokan, visiirissä
+                // näkyi vain vaalea soikio): valo jää kasvojen ympärille sädekehäksi.
                 Kuva(evaKuvat[2], 304, 0.6f, true, valo);                // kasvot loistavat kypärävalossa
+                Soikio(evaKuvat[1], 113.5f, 258.5f, 21f, 19f, valo);     // kasvot visiirin alla sävyttämättä
                 Kuva(evaKuvat[3], 304, t.EvaLamput, true, valo);
                 Kuva(evaKuvat[4], 304, t.EvaMaa, true, valo);            // Maan reunavalo piirtää siluetin reunan
                 // robotin turvaköysi (vanha vapaa köysi pois); 152 × 400, koska lenkki ulottuu y ≈ 322:een
