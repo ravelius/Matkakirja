@@ -64,6 +64,14 @@ namespace Matkakirja.Natiivi
         // AUTO (web PR #3817).
         const float AutoSiirtoS = 3f;
         readonly VisualElement autoKulma, autoLappu, autoPalkki;
+        // AUTON HILJAINEN TILA (omistaja 2.10. 21.3x, web sama Pelikoodarin kanssa): AUTOn aikana ✕, Pulu, ‹ › ja AUTO häivytetään
+        // (Kesto.Sulku), ensimmäinen napautus vain palauttaa ne (Kesto.Avaus) ja ne häviävät taas 4 s viimeisen kosketuksen jälkeen.
+        const float AutoPiilotusS = 4f;
+        VisualElement sulkuNappi;
+        bool autoNapitPiilossa;
+        float autoKosketus;
+        IVisualElementScheduledItem autoPiilotus;
+        readonly System.Collections.Generic.Dictionary<int, Vector3> autoSormet = new System.Collections.Generic.Dictionary<int, Vector3>();
         readonly Button autoNappi;
         readonly Label autoNimi, autoAika;
         IVisualElementScheduledItem autoAjo;
@@ -134,6 +142,7 @@ namespace Matkakirja.Natiivi
             // Näkyvä harmaa rengas webin koossa (2,1 rem ≈ 34 pt) 44 pt:n osuma-alan sisällä (Päätoimittaja 2.10.).
             Rakenne.El("mk-kuvanakyma__sulkurengas", sulku, PickingMode.Ignore).SendToBack();
             sulku.tooltip = "Sulje kuva";
+            sulkuNappi = sulku;
 
             nauha = Rakenne.El("mk-astrokuva__nauha", turva);
 
@@ -172,13 +181,35 @@ namespace Matkakirja.Natiivi
             var pysayta = Rakenne.Nappi("Pysäytä", "mk-astrokuva__autopysayta", () => AsetaAuto(false), autoLappu);
             Kirjasimet.Aseta(pysayta, Kirjasin.KoneBold);
             autoPalkki = Rakenne.El("mk-astrokuva__autopalkki", autoLappu, PickingMode.Ignore);
-            // Pelaajan napautus, veto tai nipistys missä tahansa (paitsi kytkin ja lappu) pysäyttää AUTOn (web pysaytaAuto).
+            // AUTOn aikana (web sama): piilotettujen nappien aikana ensimmäinen napautus vain palauttaa ne (ei toimintoa alla);
+            // näkyvillä napeilla ‹ › ja AUTO toimivat itse, veto ja nipistys pysäyttävät AUTOn (web pysaytaAuto).
             juuri.RegisterCallback<PointerDownEvent>(e =>
             {
+                if (!AutoKaytossa) return;
+                autoKosketus = Time.unscaledTime;
+                if (autoNapitPiilossa)
+                {
+                    NaytaAutoNapit(true);
+                    e.StopImmediatePropagation();
+                    return;
+                }
                 var k = e.target as VisualElement;
-                if (!AutoKaytossa || (k != null && (autoKulma.Contains(k) || autoLappu.Contains(k)))) return;
-                AsetaAuto(false);
+                if (k != null && kohdeNapit.Contains(k) && !autoKulma.Contains(k)) AsetaAuto(false);   // ‹ ›
+                AjastaAutoPiilotus();
             }, TrickleDown.TrickleDown);
+            // Veto (> 12 pt alkupisteestä) tai toinen sormi (nipistys) pysäyttää AUTOn kuten ennen.
+            juuri.RegisterCallback<PointerDownEvent>(e =>
+            {
+                autoSormet[e.pointerId] = e.position;
+                if (AutoKaytossa && autoSormet.Count > 1) AsetaAuto(false);
+            }, TrickleDown.TrickleDown);
+            juuri.RegisterCallback<PointerMoveEvent>(e =>
+            {
+                if (!AutoKaytossa || !autoSormet.TryGetValue(e.pointerId, out var alku)) return;
+                if (((Vector2)e.position - (Vector2)alku).sqrMagnitude > 144f) AsetaAuto(false);
+            }, TrickleDown.TrickleDown);
+            juuri.RegisterCallback<PointerUpEvent>(e => autoSormet.Remove(e.pointerId), TrickleDown.TrickleDown);
+            juuri.RegisterCallback<PointerCancelEvent>(e => autoSormet.Remove(e.pointerId), TrickleDown.TrickleDown);
 
             sijaintipallo = new Sijaintipallo(turva);
 
@@ -288,6 +319,9 @@ namespace Matkakirja.Natiivi
             Auki = false;
             sijaintipallo.Piilota();
             LopetaSiirto();
+            NaytaAutoNapit(true);   // seuraava avaus alkaa napit näkyvissä
+            autoPiilotus?.Pause();
+            autoSormet.Clear();
             luentaVuoro++;
             LopetaLuenta();
             kelaus?.Pause();
@@ -543,7 +577,9 @@ namespace Matkakirja.Natiivi
         {
             Nostoselain.Auto = paalle;
             NaytaAutoTila();
-            if (!paalle) { LopetaSiirto(); return; }
+            if (!paalle) { LopetaSiirto(); NaytaAutoNapit(true); return; }
+            autoKosketus = Time.unscaledTime;
+            AjastaAutoPiilotus();
             luettu = null;
             if (kohde != null && indeksi >= 0) LueSelite(indeksi < kohde.Havainnot.Count ? kohde.Havainnot[indeksi] : null);
         }
@@ -555,11 +591,10 @@ namespace Matkakirja.Natiivi
             var seuraava = Linssi()?.KatsoNaapuri(1);
             if (seuraava == null) return;
             LopetaSiirto();
+            // Omistaja 2.10. 21.3x: AUTOn aikana ei "Seuraava … Pysäytä" -lappua; siirto tapahtuu hiljaa samalla 3 s:n viiveellä.
             autoNimi.text = seuraava.Nimi;
             autoAika.text = Mathf.CeilToInt(AutoSiirtoS) + " s";
             autoPalkki.style.width = Length.Percent(0);
-            autoLappu.BringToFront();
-            Rakenne.NaytaHeti(autoLappu);
             autoAlku = Time.unscaledTime;
             Ruudunpaivitys.Herata(AutoSiirtoS + 0.2f);
             autoAjo = autoLappu.schedule.Execute(() =>
@@ -576,6 +611,34 @@ namespace Matkakirja.Natiivi
             autoAjo?.Pause();
             autoAjo = null;
             autoLappu.style.display = DisplayStyle.None;
+        }
+
+        /// <summary>AUTOn napit (✕, Pulu, ‹ › ja AUTO) näkyviin tai häivytetyiksi; piilossa ne eivät ota kosketuksia.</summary>
+        void NaytaAutoNapit(bool nakyvissa)
+        {
+            autoNapitPiilossa = !nakyvissa;
+            float kesto = (nakyvissa ? Tyylikirja.Kesto.Avaus : Tyylikirja.Kesto.Sulku) / 1000f;
+            foreach (var e in new[] { sulkuNappi, pulukulma, kohdeNapit })
+            {
+                if (e == null) continue;
+                e.style.transitionProperty = new StyleList<StylePropertyName>(new System.Collections.Generic.List<StylePropertyName> { new StylePropertyName("opacity") });
+                e.style.transitionDuration = new StyleList<TimeValue>(new System.Collections.Generic.List<TimeValue> { new TimeValue(kesto) });
+                e.style.opacity = nakyvissa ? 1f : 0f;
+            }
+            if (nakyvissa) AjastaAutoPiilotus();
+        }
+
+        /// <summary>Piilotus 4 s viimeisen kosketuksen jälkeen, jos AUTO on yhä päällä.</summary>
+        void AjastaAutoPiilotus()
+        {
+            autoPiilotus?.Pause();
+            if (!AutoKaytossa) return;
+            autoPiilotus = juuri.schedule.Execute(() =>
+            {
+                if (!Auki || !AutoKaytossa) { autoPiilotus?.Pause(); return; }
+                if (!autoNapitPiilossa && Time.unscaledTime - autoKosketus >= AutoPiilotusS) NaytaAutoNapit(false);
+            }).Every(250);
+            Ruudunpaivitys.Herata(AutoPiilotusS + 0.5f);
         }
 
         // --- testikomento --------------------------------------------------------------
