@@ -229,6 +229,26 @@ export function kytkeAjattelijaPaat(ui, { kehittaja = () => true } = {}) {
       { edessa, leveys: globalThis.innerWidth || Infinity, korkeus: globalThis.innerHeight || Infinity });
   }
 
+  /*
+   * PÄÄ KARTTAMERKKIEN ALLA (Päätoimittaja 2.10.2026 klo 16.49; Linssiseppä natiivissa 618591d9): kerros asuu pallon
+   * scene-containerissa kankaan ja HTML-merkkikerroksen (kaupunkien kutsukortit, maakortit) välissä, joten kortit
+   * piirtyvät pään päälle mutta pää kartan päälle. Ilman pallon säiliötä (testit) kerros jää bodyyn kiinteänä.
+   */
+  function kiinnita() {
+    const kangas = ui.pallolauta?.pallo?.renderer?.()?.domElement;
+    const sailio = kangas?.closest?.('.scene-container');
+    let kankaanLapsi = kangas;
+    while (kankaanLapsi && kankaanLapsi.parentElement !== sailio) kankaanLapsi = kankaanLapsi.parentElement;
+    if (sailio && kankaanLapsi) {
+      kerros.classList.add('tk-erikoisnostot--kartalla');
+      if (kerros.parentElement !== sailio || kerros.previousElementSibling !== kankaanLapsi) {
+        sailio.insertBefore(kerros, kankaanLapsi.nextSibling);
+      }
+    } else if (!kerros.isConnected) {
+      document.body.appendChild(kerros);
+    }
+  }
+
   async function rakenna() {
     if (kerros || ladataan) return;
     const ajattelijat = karttaAjattelijat();
@@ -238,7 +258,7 @@ export function kytkeAjattelijaPaat(ui, { kehittaja = () => true } = {}) {
     kerros = pohja.el;
     paat = pohja.paat;
     for (const p of paat) p.nappi.hidden = true;
-    document.body.appendChild(kerros);
+    kiinnita();
     try {
       piirtaja ??= await luoPaanPiirtaja();
       for (const p of paat) p.malli = await piirtaja.lataa(p.a);
@@ -263,12 +283,14 @@ export function kytkeAjattelijaPaat(ui, { kehittaja = () => true } = {}) {
     edellinenAsento = asento;
     const l = kartanValo();
     const leveys = globalThis.innerWidth || 1;
+    // Kerroksen paikka ruudulla: kartalla napit asemoidaan säiliön suhteen, bodyssä ruudun suhteen.
+    const isanta = kerros.classList.contains('tk-erikoisnostot--kartalla') ? kerros.getBoundingClientRect() : { left: 0, top: 0 };
     for (const p of paat) {
       const paikka = ruutupiste(p.a);
       p.nappi.hidden = !paikka || !p.malli;
       if (!paikka || !p.malli) continue;
-      p.nappi.style.left = `${Math.round(paikka.x)}px`;
-      p.nappi.style.top = `${Math.round(paikka.y)}px`;
+      p.nappi.style.left = `${Math.round(paikka.x - isanta.left)}px`;
+      p.nappi.style.top = `${Math.round(paikka.y - isanta.top)}px`;
       p.nopeus = (p.nopeus + (-dLng * HEILAHDUS.kerroin) - p.kulma * HEILAHDUS.jousi) * HEILAHDUS.vaimennus;
       p.kulma = Math.max(-PAAN_KAANTO_ASTE, Math.min(PAAN_KAANTO_ASTE, p.kulma + p.nopeus));
       if (Math.abs(p.nopeus) > 0.01 || Math.abs(p.kulma) > 0.05) liikkuu = true;
@@ -289,6 +311,8 @@ export function kytkeAjattelijaPaat(ui, { kehittaja = () => true } = {}) {
       return;
     }
     if (!kerros) { rakenna(); return; }
+    // Pallo voi rakentua uudelleen (laudan vaihto): kerros seuraa uutta säiliötä.
+    if (!ladataan) kiinnita();
     kerros.hidden = false;
     pyyda();
   }
