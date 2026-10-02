@@ -52,3 +52,18 @@ alariviin · Linssit-nappi kartalle, Julisteet valikkoon · build-numero valikko
 - Omistajan kuvakaappaukset: /Users/Shared/Claude/proto-3d/lokit/paatoimittaja-kaappaukset-20261002/.
 - Raamattuun lisätty tänään: OMISTAJALLE VAIN PELAAJAN NÄKYMÄ, EI OVAALEJA, OHJAUSNAPIT, PUHE ÄÄNENÄ (osa mainissa #3837/#3846/#3848; OHJAUSNAPIT-muutos haarassa → vie).
 - Vahinkocommit .claude/settings.local.json palautettu (älä käytä `git commit -a`).
+
+## Päivitys klo 15.2x (juuri ennen nollausta)
+
+- TF 1.1 (123) ladattu 15.17 (linnan puhevuoro, harmaa ✕, kiilto, linna-piikit-2); 124 (+ nostorivi 46540fa3) kääntyy; 125 = LS2:n
+  natiivi Ajattelijat-linssi (vain kehittäjätila, iPad 60 fps; prologin reunavalo 3× kirkkaampi kuin web → LS2 korjaa erikseen).
+  Latauksia 4/12.
+- **ODOTTAA OMISTAJAA (uudet):** a) **linnan valikko + pienoiskartta** (Siirtoseppä 81b03b43, kuvat lähetetty 15.1x) — "ok" →
+  Siirtoseppä merge-pyyntö Natiivisepälle (Natiivi-UI kuittaa); b) **Dynamic Islandin tikkaus**: Natiivi-UI tekee 2–3 vaihtoehtoa
+  (A/B/C kuvissa), omistaja valitsee; c) **oranssinruskea pilleri** (Natiivi-UI yksi suositus kuvana); d) iPhonen yläpalkki ilman
+  mustaa + pilleri "1 pv · £300" + valikon päivärivi "Päivä 1/80, aamu · £300 · -£20 punaisella" (Natiivi-UI natiivi, Pelikoodari
+  web jatko-PR) → kuvat omistajalle.
+- Ajattelijapäät (#3843) mainissa → omistaja voi kokeilla webissä kehittäjätilassa; Linssiseppä aloitti natiivin.
+- Webjuna: #3847 → #3849 → #3851 → #3853 (valikko v2 + Tila + kapea, omistajan OK) → #3856 (ei ovaaleja).
+- Fontit: Linnanrakentaja toi OFL-kreikkafontit jo kansioon proto-3d/_lahteet/fontit-kreikka/ → fonttien Run-riviä ei tarvita.
+- Sokrateen 18 kreikkalaista katkelmaa tarkistettu kahdesta lähteestä (Sisältökirjuri 44cd1263a).
