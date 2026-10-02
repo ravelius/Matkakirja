@@ -80,15 +80,76 @@ namespace Matkakirja.Natiivi
             float koko = KokoPt;
             var isa = el.parent;
             float isanLeveys = isa != null ? isa.layout.width : 0f;
-            // iPhone vaaka: vasen reuna ruudun reunasta (turva-alueen vasen kaistale mukaan), alareuna ennallaan nauhan yläpuolella.
             bool puhelinVaaka = !UiKerros.Tabletti && isanLeveys > isanKorkeus;
-            float vasen = puhelinVaaka && isa != null && !float.IsNaN(isa.layout.x) ? VaakaReuna - isa.layout.x : Vasen;
-            el.style.left = vasen;
+            if (puhelinVaaka && isa.panel != null && SijoitaKulmaan(isa, ref koko)) return;
+            NauhanVasen = float.NaN;
+            el.style.left = Vasen; el.style.bottom = Alas;
+            float vasen = Vasen;
             float yla = isanKorkeus - Alas - koko;
             bool samallaKorkeudella = kuva.yMax > yla && kuva.yMin < isanKorkeus - Alas;
             if (samallaKorkeudella && kuva.xMin < vasen + koko + Rako)
                 koko = Mathf.Clamp(kuva.xMin - vasen - Rako, MinKokoPt, KokoPt);
             el.style.width = koko; el.style.height = koko;
+        }
+
+        /// <summary>Pikkukuvanauhan vasen reuna isän koordinaateissa, kun pallo on iPhonen vaakatilan kulmassa (NaN = tyylin 12 pt).</summary>
+        public float NauhanVasen { get; private set; } = float.NaN;
+
+        /// <summary>Näytön pyöristetyn kulman säde (pt), iPhone 16 Pro / 17 -sarja 62; Unity ei kerro sitä, joten suurin nykyinen.</summary>
+        const float NaytonKulma = 62f;
+
+        /// <summary>
+        /// IPHONE VAAKA (omistaja 2.10. 21.3x "ihan enemmän vasempaan alareunaan"; Päätoimittaja 2.10. valinta E2): pallo täysikokoisena
+        /// ruudun vasempaan alakulmaan Dynamic Islandin alle, ja pikkukuvanauha pallon oikealle puolelle. Ehdot: väli ruudun reunoihin,
+        /// näytön pyöristettyyn kulmaan ja saaren alareunaan vähintään VaakaReuna (8 pt); jos saari ei jätä tilaa, pallo pienenee
+        /// (vähintään MinKokoPt). Palauttaa false, jos paneelin mittoja ei vielä ole.
+        /// </summary>
+        bool SijoitaKulmaan(VisualElement isa, ref float koko)
+        {
+            var juuri = isa.panel.visualTree.layout;
+            var wb = isa.worldBound;
+            if (!(juuri.width > 0f) || !(juuri.height > 0f) || float.IsNaN(wb.xMin)) return false;
+            float pp = Screen.height / juuri.height;
+            // Saaren alareuna (pt ylhäältä) niiltä loviilta, jotka ovat pallon vaakakaistalla (Screen.cutouts: pikselit, origo alhaalla).
+            float saariAla = 0f;
+            foreach (var c in Screen.cutouts)
+                if (c.xMin / pp < VaakaReuna + koko + VaakaReuna) saariAla = Mathf.Max(saariAla, (Screen.height - c.yMin) / pp);
+            float a = VaakaReuna;
+            for (int kierros = 0; kierros < 2; kierros++)
+            {
+                a = KulmaVali(koko * 0.5f);
+                // Saaren alle: pallon yläreuna (ruudun alareunasta a + koko) vähintään 8 pt saaren alapuolelle.
+                float tila = juuri.height - saariAla - VaakaReuna - a;
+                if (saariAla <= 0f || koko <= tila) break;
+                koko = Mathf.Max(MinKokoPt, tila);
+            }
+            float vasen = a - wb.xMin, ala = a - (juuri.height - wb.yMax);
+            el.style.left = vasen; el.style.bottom = ala;
+            el.style.width = koko; el.style.height = koko;
+            NauhanVasen = vasen + koko + VaakaReuna;
+            return true;
+        }
+
+        /// <summary>
+        /// Pienin etäisyys a ruudun vasemmasta ja alareunasta pallon reunaan, jolla r-säteinen pallo pysyy kokonaan näytön
+        /// pyöristetyn kulman sisällä VaakaReunan välillä (kulman kaaren keskipiste (K, K), säde K − 8 pt).
+        /// </summary>
+        static float KulmaVali(float r)
+        {
+            const float K = NaytonKulma, Raja = NaytonKulma - VaakaReuna;
+            for (float a = VaakaReuna; a < K + r; a += 0.5f)
+            {
+                float c = a + r;
+                bool sopii = true;
+                for (int i = 0; i < 90 && sopii; i++)
+                {
+                    float th = Mathf.PI + i * (Mathf.PI * 0.5f) / 89f;
+                    float x = c + r * Mathf.Cos(th), y = c + r * Mathf.Sin(th);
+                    if (x < K && y < K && (new Vector2(x - K, y - K)).magnitude > Raja) sopii = false;
+                }
+                if (sopii) return a;
+            }
+            return K;
         }
 
         public void Piilota()

@@ -783,6 +783,10 @@ namespace Matkakirja.Natiivi
                 Vector2 vy = turva.WorldToLocal(lava.LocalToWorld(sovitus.position));
                 Vector2 aa = turva.WorldToLocal(lava.LocalToWorld(sovitus.position + sovitus.size));
                 sijaintipallo.Mitoita(Rect.MinMaxRect(vy.x, vy.y, aa.x, aa.y), turva.layout.height);
+                // iPhone vaaka: pallo on vasemmassa alakulmassa, joten nauha sen oikealle puolelle (Päätoimittaja 2.10. E2).
+                float nv = sijaintipallo.NauhanVasen;
+                nauha.style.left = float.IsNaN(nv) ? (StyleLength)StyleKeyword.Null : nv;
+                RajaaNauha();
             }
         }
 
@@ -941,7 +945,8 @@ namespace Matkakirja.Natiivi
             // 375 pt:n ruudulla raja on ~71 pt, joten kaksi pikkukuvaa rivittyy eikä mene ryhmän alle (web #3825: väli ~1 pt).
             float auto = autoKulma.style.display == DisplayStyle.None ? 0f
                 : (autoKulma.layout.width > 0f ? autoKulma.layout.width : 81f) + 7f;
-            nauha.style.maxWidth = Mathf.Max(Pikkukuva, turvaLeveys / 2f - NappienPuolikas - auto / 2f - Vasen - Vali);
+            float vasen = float.IsNaN(sijaintipallo.NauhanVasen) ? Vasen : sijaintipallo.NauhanVasen;   // pallon oikealla puolella (vaaka)
+            nauha.style.maxWidth = Mathf.Max(Pikkukuva, turvaLeveys / 2f - NappienPuolikas - auto / 2f - vasen - Vali);
         }
 
         /// <summary>Reunavyöhyke: −1 vasen, +1 oikea, 0 keskiosa (lavan leveydestä ulommat <see cref="ReunaOsuus"/>).</summary>
