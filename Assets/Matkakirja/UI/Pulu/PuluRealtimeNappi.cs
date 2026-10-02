@@ -20,7 +20,9 @@ namespace Matkakirja.Natiivi
         public static PuluRealtimeNappi Nykyinen { get; private set; }
 
         /// <summary>Web puluRealtimeKoeNakyvissa: kehittäjätila ja pöllön kehittäjäkoodi.</summary>
-        public static bool Nakyvissa => Asetukset.Kehittaja && !string.IsNullOrEmpty(Asetukset.PolloKoodi);
+        public static bool Nakyvissa => PakotaNakyviin || Asetukset.Kehittaja && !string.IsNullOrEmpty(Asetukset.PolloKoodi);
+        /// <summary>Kuvaparin testikomento `ui chat realtime-nappi`: nappi näkyviin ilman Pöllön koodia (ei yhteyttä).</summary>
+        public static bool PakotaNakyviin;
 
         readonly Button nappi;
         readonly Label teksti;
