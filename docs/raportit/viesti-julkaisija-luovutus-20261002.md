@@ -1,4 +1,4 @@
-# Julkaisijan luovutus 2.10.2026 klo 22.1x (viikkoraja 92 %)
+# Julkaisijan luovutus 2.10.2026 klo 22.1x (TILINVAIHTO, lopullinen)
 
 TF-suunnitelma ja historia: /Users/Shared/Claude/julkaisija-tyokalut/tf-jono-20261002.txt.
 Web-junan pinot: /Users/Shared/Claude/julkaisija-tyokalut/aamujono-20261002.txt (loppuosa). Pidossa: pidossa.txt.
@@ -19,9 +19,13 @@ Web-junan pinot: /Users/Shared/Claude/julkaisija-tyokalut/aamujono-20261002.txt 
 - **TestFlight-luvut** (omistajan kysymys): `gh workflow run testflight-luvut.yml --ref main` (vain luku, #3873).
   20.3x: 6 asennusta / 3 istuntoa 12 buildissa, tämän päivän buildeilla 0; Arvioijat-linkki 0 katselua.
 
-## Web-juna (22.1x)
+## Web-juna (22.10, tilinvaihto)
 
 - Ajossa **#3865** (£-varakirjasin), jonossa #3870 (GALLERIA-pohja + Julisteet) ja #3877 (Aarteet yhteen ikkunaan).
+  Jonot ovat tämän session taustaprosesseja ja KUOLEVAT tilinvaihdossa → uusi Julkaisija: tarkista `gh pr view` kullekin,
+  poista jäänyt `wt/julkaisija-prNNNN` (`git worktree remove --force`) ja aja `zsh julkaisija-tyokalut/jonoon.sh NNNN` jäljellä oleville.
+- #3869, #3874 ja #3875 ovat jo mainissa (v2570, v2569, v2568).
+- **#3850** (Sisältökirjuri, kuva2 erä K: SVK, SVN, SWE, UKR) on CONFLICTING: Sisältökirjuri mergeää mainin ja ilmoittaa → junaan.
 - Mergetty tänään mm. #3828, #3833, #3839, #3840, #3843, #3844, #3845, #3847, #3849, #3851, #3853, #3854, #3856,
   #3857, #3859, #3860, #3862, #3864, #3866, #3867, #3869, #3873, #3874, #3875.
 - Pinot: tekijä mergeää mainin edellisen squashin jälkeen ja ilmoittaa → vasta sitten `zsh julkaisija-tyokalut/jonoon.sh NNNN`.
@@ -48,9 +52,10 @@ Web-junan pinot: /Users/Shared/Claude/julkaisija-tyokalut/aamujono-20261002.txt 
 - Seuraava juna 130 Natiivisepältä: mm. matalampi yläpalkki, kokoelmat-ikkuna, Topografia-hampurilainen, astro-palaute.
 - BUILD = proto master (Natiiviseppä ilmoittaa SHA:n). Savuke Laitetestaajalla (1572C658).
 
-## Vuorot (22.1x)
+## Vuorot (22.10, tilinvaihto)
 
-- Simu: Linssiseppä (topografia, ~22.14) → Siirtoseppä (koesarja ~4 min) → Natiivi-UI (kokoelmat, ~12 min).
+- Simu: Siirtoseppä ajossa (F989814A, koesarja 39a396e3, ~22.14 asti); seuraavana Natiivi-UI (kokoelmat-ikkuna,
+  FB234D08 ×3 → AD119F7B, ~12 min; käännetty 22.0x). Kaikki roolit lopettavat tilinvaihdossa → tarkista bootatut ja sammuta vain omistajan ohjeella.
 - Käännöslukko /tmp/matkakirja-kaannospalvelu.lukko/kuka. 1 simulaattori kerrallaan, muisti ≥ 50 %,
   uninstall + shutdown omalla UDID:llä. Juna-käännös bootaa hetkeksi 3B4CDACB/993F8873 (normaali asennus).
 - Etusija: linna ja ISS, juna/TF, sitten omistajan/Päätoimittajan kuvat, sitten testit.
