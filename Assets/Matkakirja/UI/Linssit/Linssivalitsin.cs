@@ -129,10 +129,14 @@ namespace Matkakirja.Natiivi
             nappi.style.top = yla;
             // iPhonen valikkona suoraan saaren rivin alle (turva-alueen yläreuna + 8).
             paneeli.style.top = Valikkona ? Ylapalkki.Varaus + 8 : yla + 48;
-            // Vaaka-iPhone ilman palkkia (web-malli 2.10.2026 klo 23.3x, tk-peitto-paneeli): enintään 70 % ruudun korkeudesta,
-            // yli jäävä vierittyy valikon sisällä; pystyssä USS:n 82 %.
+            // Vaaka-iPhone ilman palkkia (web-malli 2.10.2026 klo 23.3x, tk-peitto-paneeli): enintään 70 % RUUDUN korkeudesta
+            // (webissä näkymän 390 → 273; turva-alueen prosentti jätti alareunan 21 pt pois, eikä seuraava otsikko pilkottanut
+            // vierityksen vihjeenä, Päätoimittaja 23.5x), yli jäävä vierittyy valikon sisällä; pystyssä USS:n 82 %.
+            // Ruudun korkeus paneelin yksiköissä Screenistä (kääntyessä visualTree.layout on vielä edellisen asennon).
+            float ruutu = paneeli.panel != null ? RuntimePanelUtils.ScreenToPanel(paneeli.panel, new Vector2(0f, Screen.height)).y : float.NaN;
             paneeli.style.maxHeight = Valikkona && Ylapalkki.Puhelin && Ylapalkki.Piilossa
-                ? Length.Percent(Tyylikirja.Peitto.Paneeli) : (StyleLength)StyleKeyword.Null;
+                ? (float.IsNaN(ruutu) || ruutu <= 0f ? Length.Percent(Tyylikirja.Peitto.Paneeli) : new Length(Mathf.Round(ruutu * Tyylikirja.Peitto.Paneeli / 100f)))
+                : (StyleLength)StyleKeyword.Null;
             AsetteleEsikatselu();
         }
 
