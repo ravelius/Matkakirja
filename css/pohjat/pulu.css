@@ -1,0 +1,128 @@
+/*
+ * PULU, osa CHAT (tyylikirja.json pohjat.PULU; js/pohjat/pulu.js luoPohjaPulu, luokka 'tk'). Minipulu kulmassa ja sen
+ * yläpuolelle kasvava kysymyskortti: valmiit kysymykset virran alussa, keskustelu ja vapaa kysymyskenttä. Mitat ja
+ * rakenne Astronautin kameran kortista (css/satelliitti.css, joka on saman pohjan avaruusnahka); värit teeman tokeneista.
+ * Osa UI-pohjien tyylejä (css/pohjat/, latausjärjestys js/pohjat/tyylit.js POHJAT_TYYLIT). VAIN --tk-*-tokenit.
+ */
+
+.tk-pulukulma {
+  position: absolute;
+  right: calc(var(--tk-vali-m) + env(safe-area-inset-right, 0px));
+  bottom: calc(var(--tk-vali-m) + env(safe-area-inset-bottom, 0px));
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--tk-vali-s);
+  max-width: calc(100% - 2 * var(--tk-vali-m));
+  pointer-events: none;
+}
+.tk-pulukulma > * { pointer-events: auto; }
+.tk-pulunappi,
+button.tk-pulunappi:hover:not(:disabled),
+button.tk-pulunappi:active:not(:disabled),
+button.tk-pulunappi:focus:not(:disabled) {
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  min-width: var(--tk-nappi-osuma);
+  min-height: var(--tk-nappi-osuma);
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  line-height: 0;
+  cursor: pointer;
+}
+.tk-pulunappi:focus-visible { outline: 2px solid var(--tk-korostus); outline-offset: 2px; }
+.tk-pulukortti {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: min(320px, calc(100vw - 2 * var(--tk-vali-m)));
+  max-height: min(62vh, 500px);
+  overflow-y: auto;
+  padding: var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  box-shadow: 0 6px 20px var(--tk-himmennys-kevyt);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-apuri);
+  line-height: 1.4;
+}
+.tk-pulukortti[hidden] { display: none; }
+.tk-pulu-ylarivi { flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; gap: var(--tk-vali-s); }
+.tk-pulu-otsikko { color: var(--tk-korostus); font-weight: 600; }
+.tk-pulu-sulku { display: none; }   /* PULU: ei ✕ (tyylikirja); sulku Pulun napautuksella ja ohinapautuksella */
+.tk-pulu-kysymykset { flex: 0 0 auto; display: flex; flex-direction: column; gap: var(--tk-vali-s); }
+.tk-pulu-kysymykset:empty { display: none; }
+.tk-pulu-kysymys {
+  min-height: 0;
+  padding: var(--tk-vali-s) var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  background: transparent;
+  color: var(--tk-muste);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.tk-pulu-kysymys.valittu { border-color: var(--tk-toiminto); color: var(--tk-toiminto); }
+.tk-pulu-virta {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--tk-vali-s);
+  min-height: 0;
+  max-height: min(44vh, 340px);
+  margin-top: var(--tk-vali-s);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.tk-pulu-virta:empty { display: none; }
+.tk-pulu-tila { flex: 0 0 auto; }
+.tk-pulu-oma,
+.tk-pulu-vastaus {
+  padding: var(--tk-vali-s) var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+}
+.tk-pulu-oma { align-self: flex-end; max-width: 88%; color: var(--tk-muste-pehmea); }
+.tk-pulu-vastaus { align-self: flex-start; max-width: 96%; color: var(--tk-muste); font-size: var(--tk-koko-leipa); }
+.tk-pulu-vastaus[hidden] { display: none; }
+.tk-pulu-odottaa { opacity: 0.6; }
+.tk-pulu-syote { flex: 0 0 auto; display: flex; align-items: center; gap: var(--tk-vali-s); margin-top: var(--tk-vali-s); }
+.tk-pulu-kentta {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: var(--tk-vali-s) var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-pilleri);
+  background: transparent;
+  color: var(--tk-muste);
+  font: inherit;
+  font-size: var(--tk-koko-leipa);   /* iOS ei zoomaa 16 px:n kenttään */
+}
+.tk-pulu-laheta {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: var(--tk-nappi-korkeus);
+  height: var(--tk-nappi-korkeus);
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  border: 1px solid var(--tk-toiminto);
+  border-radius: var(--tk-kulma-pilleri);
+  background: transparent;
+  color: var(--tk-toiminto);
+  font-size: var(--tk-koko-valiotsikko);
+  line-height: 1;
+  cursor: pointer;
+}
+.tk-pulu-laheta:disabled { opacity: 0.5; cursor: default; }
