@@ -56,6 +56,8 @@ namespace Matkakirja.Natiivi
         static Texture2D[] robottiKuvat;
         /// <summary>A/B: robottikäsi pois (vapaa turvaköysi ja leijunta kuten ennen).</summary>
         public static bool RobottiPois;
+        /// <summary>Robottikäsi näkyy (Pulu asettelee itsensä vasempaan alakulmaan 60 %:iin; omistaja 2.10. 21.3x).</summary>
+        public bool RobottiNakyy => Robotissa;
         static bool kyparaHaussa;
         static float kyparaVirhe = float.NegativeInfinity;
 
@@ -190,9 +192,10 @@ namespace Matkakirja.Natiivi
         void Rakenna()
         {
             kuvaaja.Kokoa(tila, (float)(Time.unscaledTimeAsDouble * 1000.0));
-            if (kuvaaja.Ylivuoto != ylivuoto)
+            bool yv = kuvaaja.Ylivuoto || Robotissa;   // robottikäden varsi ulottuu ruudun oikeaan reunaan
+            if (yv != ylivuoto)
             {
-                ylivuoto = kuvaaja.Ylivuoto;
+                ylivuoto = yv;
                 sisus.style.overflow = ylivuoto ? Overflow.Visible : Overflow.Hidden;
             }
             // Kuvat voi vapauttaa tekstuurin muistista (LRU): silloin haetaan uudelleen
@@ -378,41 +381,60 @@ namespace Matkakirja.Natiivi
             static Color Valkoinen(float alfa) => new Color(1, 1, 1, Mathf.Clamp01(alfa));
 
             /// <summary>
-            /// Robottikäden kerrokset (webin eva-robotti-sommittelu): kaikki 75 yksikköä ylös; Pulu ja robotin turvaköysi
-            /// kierrettynä keinunnan kulmalla pisteen (113, 300) ympäri.
+            /// Robottikäden kerrokset (webin eva-robotti-sommittelu; omistaja 2.10. 21.3x): kaikki 75 yksikköä ylös; Pulu ja robotin
+            /// turvaköysi kierrettynä keinunnan kulmalla pisteen (113, 300) ympäri. Pulu on VARJOKUVA (perus, varsi, köysi ja pidikkeet
+            /// tummina, Maan reunavalo ennallaan) ja vain kasvot loistavat kypärävalossa (kasvovalo täysi). Varsi kulkee jalkatuesta
+            /// ensimmäiseen niveleen pystyssä ja sieltä vaakasuoraan ruudun oikean reunan yli aluksen (ISS) suuntaan.
             /// </summary>
             void Robotti(MeshGenerationContext mgc, Affiini m, LiviaTila t)
             {
                 const float Nosto = -75;
+                // Varren ensimmäinen nivel (kuvassa px 248, 818 → yksiköt 124, 409) ja puomin pää (y 800).
+                const float NivelX = 124, NivelY = 409, PaaY = 800, Poikittain = 0.6f;
                 float a = kuva.keinunta * Mathf.Deg2Rad, ca = Mathf.Cos(a), sa = Mathf.Sin(a);
-                void Kuva(Texture2D kuvaI, float korkeus, float alfa, bool keinuu)
+                var varjo = (Color)Tyylikirja.LasiAvaruus.Pinta;
+                varjo = Color.Lerp(varjo, Color.white, 0.14f); varjo.a = 1f;
+                // Ruudun oikea reuna viewBoxin yksiköissä (elementti voi olla skaalattu: worldBound / contentRect).
+                var r = contentRect;
+                var wb = worldBound;
+                float leveys = panel != null ? panel.visualTree.layout.width : 0f;
+                float sx = r.width > 0 ? wb.width / r.width : 1f, s1 = r.width / kuva.viewBox.width;
+                float reunaX = leveys > 0 && sx > 0 && s1 > 0 ? (leveys - wb.xMin) / (sx * s1) + kuva.viewBox.x + 20f : 600f;
+                float venytys = Mathf.Max(0.2f, (reunaX - NivelX) / (PaaY - NivelY));
+                void Kuva(Texture2D kuvaI, float korkeus, float alfa, bool keinuu, Color savyPohja, float y0 = 0, float y1 = -1, bool vaaka = false)
                 {
                     if (kuvaI == null || alfa <= 0.004f) return;
+                    if (y1 < 0) y1 = korkeus;
                     var md = mgc.Allocate(4, 6, kuvaI);
                     if (md.vertexCount == 0) return;
-                    var savy = Valkoinen(alfa);
-                    void Kulma(float x, float y, float u, float v)
+                    var savy = savyPohja; savy.a *= Mathf.Clamp01(alfa);
+                    void Kulma(float x, float y)
                     {
+                        float u = x / 152f, v = 1f - y / korkeus;
+                        if (vaaka) { float dx = x - NivelX, dy = y - NivelY; x = NivelX + dy * venytys; y = NivelY - dx * Poikittain; }
                         if (keinuu) { float dx = x - 113, dy = y - 300; x = 113 + dx * ca - dy * sa; y = 300 + dx * sa + dy * ca; }
                         var p = m.Kuvaa(new Vector2(x, y + Nosto));
                         md.SetNextVertex(new Vertex { position = new Vector3(p.x, p.y, Vertex.nearZ), tint = savy, uv = new Vector2(u, v) });
                     }
-                    Kulma(0, 0, 0, 1);
-                    Kulma(152, 0, 1, 1);
-                    Kulma(152, korkeus, 1, 0);
-                    Kulma(0, korkeus, 0, 0);
+                    Kulma(0, y0);
+                    Kulma(152, y0);
+                    Kulma(152, y1);
+                    Kulma(0, y1);
                     md.SetAllIndices(m.Determinantti >= 0 ? Kolmiot : KolmiotPeili);
                 }
-                Kuva(robottiKuvat[0], 800, 1f, false);                   // varsi
-                Kuva(robottiKuvat[1], 800, t.EvaMaa, false);             // varren reunavalo seuraa Maan valoa
-                Kuva(evaKuvat[1], 304, 1f, true);                        // perus
-                Kuva(evaKuvat[2], 304, t.EvaKasvo, true);
-                Kuva(evaKuvat[3], 304, t.EvaLamput, true);
-                Kuva(evaKuvat[4], 304, t.EvaMaa, true);
-                // robotin turvaköysi (vanha vapaa köysi pois); 152 × 400, koska lenkki ulottuu y ≈ 322:een (Codexin 304:n vienti
-                // katkaisi lenkin alaosan, vienti uudelleen samasta SVG:stä 2.10.)
-                Kuva(robottiKuvat[2], 400, 1f, true);
-                Kuva(robottiKuvat[3], 304, 1f, false);                   // jalkapidikkeet
+                var valo = Color.white;
+                // Varsi kahdessa osassa: jalkatuki ja ranne pystyyn niveleen asti, loput vaakaan (venytettynä reunaan).
+                Kuva(robottiKuvat[0], 800, 1f, false, varjo, 0, NivelY + 6);
+                Kuva(robottiKuvat[0], 800, 1f, false, varjo, NivelY, PaaY, vaaka: true);
+                Kuva(robottiKuvat[1], 800, t.EvaMaa, false, valo, 0, NivelY + 6);
+                Kuva(robottiKuvat[1], 800, t.EvaMaa, false, valo, NivelY, PaaY, vaaka: true);
+                Kuva(evaKuvat[1], 304, 1f, true, varjo);                 // perus varjokuvana
+                Kuva(evaKuvat[2], 304, 1f, true, valo);                  // kasvot loistavat kypärävalossa
+                Kuva(evaKuvat[3], 304, t.EvaLamput, true, valo);
+                Kuva(evaKuvat[4], 304, t.EvaMaa, true, valo);            // Maan reunavalo piirtää siluetin reunan
+                // robotin turvaköysi (vanha vapaa köysi pois); 152 × 400, koska lenkki ulottuu y ≈ 322:een
+                Kuva(robottiKuvat[2], 400, 1f, true, varjo);
+                Kuva(robottiKuvat[3], 304, 1f, false, varjo);            // jalkapidikkeet
             }
         }
     }

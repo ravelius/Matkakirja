@@ -219,6 +219,35 @@ namespace Matkakirja.Natiivi
                 alue.style.bottom = alue.parent.layout.height - kulma.y;
             }
             alue.EnableInClassList("mk-pulu--pieni", modaali);
+            AsetteleRobotti(reunat);
+        }
+
+        // ROBOTTIKÄSI (omistaja 2.10. 21.3x, Päätoimittajan tarkennus): Pulu vasempaan alakulmaan 60 %:iin varjokuvana (kasvot
+        // loistavat), ja varsi kulkee ruudun yli oikeaan reunaan aluksen suuntaan (LiviaKuva.Robotti) — kaukonäkymässä ja Cupolassa.
+        const float RobottiSkaala = 0.6f;
+        // viewBox-yksiköt: Pulun vasen reuna x 88, varren alin kohta (kyynärnivel vaakaan käännettynä) y 381 (viewBox 304).
+        const float RobottiPuluVasen = 88f, RobottiAlin = 381f, RobottiReuna = 12f;
+        bool robottiAseteltu;
+
+        void AsetteleRobotti(Vector4 reunat)
+        {
+            bool robotti = Astronautti && kuva.RobottiNakyy;
+            if (!robotti)
+            {
+                if (!robottiAseteltu) return;
+                robottiAseteltu = false;
+                alue.style.left = StyleKeyword.Null;
+                alue.style.scale = StyleKeyword.Null;
+                alue.style.transformOrigin = StyleKeyword.Null;
+                return;
+            }
+            robottiAseteltu = true;
+            alue.style.right = StyleKeyword.Null;
+            alue.style.left = reunat.x + RobottiReuna - RobottiPuluVasen * RobottiSkaala;
+            float alaRaja = Mathf.Max(reunat.w + 8f, AlaVara);
+            alue.style.bottom = alaRaja + (RobottiAlin - 304f) * RobottiSkaala;
+            alue.style.transformOrigin = new TransformOrigin(Length.Percent(0), Length.Percent(100));
+            alue.style.scale = new Scale(new Vector2(RobottiSkaala, RobottiSkaala));
         }
 
         /// <summary>Astronautin kamera (Linssiseppä asettaa): kypärä päähän.</summary>
