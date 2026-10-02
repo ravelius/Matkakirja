@@ -533,7 +533,7 @@ test('selite lukee kuvan päällä ruudun vasemmassa yläkulmassa, i-nappi on po
   assert.ok(!tyyli.includes('.satelliitti-popup'), 'info-popupin tyyli on yhä jäljellä');
   assert.match(lahde, /html\('div', 'satelliitti-selite'\)/);
   // Minipulun kulma on viides pinta (16.9.2026, Raamattu kohta 9).
-  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, kohdenapit, pulukulma, autoSiirto\.el\)/);
+  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, kohdenapit, pulukulma\)/);
   // Kiinnitys on RUUTUUN (kortti alkaa ruudun yläreunasta, LISÄYS 3),
   // ei kuvaelementtiin — 12 px vasemmalta, 10 px + turva-alue ylhäältä.
   /*
@@ -1389,4 +1389,14 @@ test('kohdepisteet asetetaan uudestaan, kunnes ne näkyvät DOMissa', () => {
   assert.match(lahde, /avaruus\?\.pakotaKehys\?\.\(\)/);
   // Kello siivotaan purkaessa, eikä se jää kuluttamaan taustalla.
   assert.match(lahde, /pura: \(\) => \{[\s\S]*?lopetaPisteUusinta\(\)/);
+});
+
+test('AUTO hiljaa (omistaja 21.3x): napit häipyvät, napautus palauttaa ilman pysäytystä, ei siirtolappua', () => {
+  const lahde = readFileSync(new URL('../js/linssit/satelliitti.js', import.meta.url), 'utf8');
+  const tyyli = readFileSync(new URL('../css/satelliitti.css', import.meta.url), 'utf8');
+  assert.doesNotMatch(lahde, /luoAutoSiirto/, 'Seuraava/Pysäytä-lappu ei kuulu AUTOon');
+  assert.match(lahde, /const AUTO_HILJAA_MS = 4000;/);
+  assert.match(lahde, /if \(hiljaa\(\)\) \{\n\s*asetaHiljaa\(false\);\n\s*ajastaHiljaa\(\);\n\s*nielaiseKlikki = true;/);
+  assert.match(lahde, /siirtoAjastin = setTimeout\([\s\S]{0,120}POHJA_AUTO_SIIRTO_MS\);/);
+  assert.match(tyyli, /\.satelliitti-auto-hiljaa :is\(\.satelliitti-kulma, \.satelliitti-kohteet, \.satelliitti-pulukulma\),\nbody\.satelliitti-auto-hiljaa \.pollo-nappi \{\n\s*opacity: 0;\n\s*pointer-events: none;\n\s*transition: opacity var\(--tk-kesto-sulku\)/);
 });
