@@ -146,7 +146,7 @@ namespace Matkakirja.Natiivi
                 DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} kolmiot", r0);
                 if (tauot) { yield return null; if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; } }
                 r0 = DioraamaRuutu.Alku();
-                mesh.UploadMeshData(true); DioraamaRuutu.Ladattu(); // kärjet vain GPU:lle, CPU-kopio vapautuu
+                mesh.UploadMeshData(true); DioraamaRuutu.Mesh(kirjaa, mesh); // kärjet vain GPU:lle, CPU-kopio vapautuu
                 DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} mesh-lataus", r0);
                 if (tauot) yield return null;
 

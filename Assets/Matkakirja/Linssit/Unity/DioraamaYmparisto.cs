@@ -500,7 +500,7 @@ namespace Matkakirja.Natiivi
                 var mesh = new Mesh { name = "Ymparisto:" + nimi, indexFormat = n > 65000 ? IndexFormat.UInt32 : IndexFormat.UInt16 };
                 mesh.SetVertices(p); mesh.SetNormals(nr); mesh.SetUVs(0, uv); mesh.SetTriangles(o.Kolmiot, 0);
                 mesh.RecalculateBounds();
-                mesh.UploadMeshData(true); DioraamaRuutu.Ladattu();
+                mesh.UploadMeshData(true); DioraamaRuutu.Mesh(kirjaa, mesh);
                 luodut.Add(mesh);
                 kohteet?.Add(mesh);
                 kolmiot += o.Kolmiot.Length / 3;
@@ -825,7 +825,7 @@ namespace Matkakirja.Natiivi
             var mesh = new Mesh { name = "Ymparisto:puut", indexFormat = IndexFormat.UInt32 };
             mesh.SetVertices(p); mesh.SetUVs(0, uv0); mesh.SetUVs(1, uv1); mesh.SetTangents(tan); mesh.SetColors(v); mesh.SetTriangles(kolmiot, 0);
             mesh.RecalculateBounds();
-            mesh.UploadMeshData(true); DioraamaRuutu.Ladattu();
+            mesh.UploadMeshData(true); DioraamaRuutu.Mesh(kirjaa, mesh);
             luodut.Add(mesh);
             yield return null;
             if (oma != kerta) yield break;
@@ -871,6 +871,14 @@ namespace Matkakirja.Natiivi
             if (t == null) return;
             Ladattu();
             kirjaa?.Invoke($"poikki: gpu {t.name} {t.width}×{t.height} {t.graphicsFormat} (ruutu {Time.frameCount})");
+        }
+
+        /// <summary>Mesh-lataus lokiin ruutunumerolla (kuten Gpu tekstuureille).</summary>
+        public static void Mesh(Action<string> kirjaa, Mesh m)
+        {
+            if (m == null) return;
+            Ladattu();
+            kirjaa?.Invoke($"poikki: gpu {m.name} mesh {m.vertexCount} kärkeä (ruutu {Time.frameCount})");
         }
 
         static int viimeisinLataus = -10;
