@@ -5,12 +5,14 @@
  *    joten kaikki esikatselut päivittyvät heti.
  * 2. Typografia: seitsemän porrasta näytetekstinä.
  * 3. Pohjat esimerkkidatalla (Ateena/Akropolis, sama nosto kuin natiivin kuvaparissa): NOSTOKORTTI 0/1/2/3+ kuvaa
- *    PAPERI ja 2 kuvaa TUMMA, KORTTI vahvistus (modaali) ja visa.
+ *    PAPERI ja 2 kuvaa TUMMA, KORTTI vahvistus (modaali) ja visa, PANEELI ja ERIKOISNOSTOT (ajattelijoiden päät).
  * 4. Tallenna ehdotus: muuttuneet tokenit JSONina palautekanavaan sivulla "Tyylikirja" (sama reitti kuin
  *    äänimikserin Tallenna). Rooli vie hyväksytyt arvot tyylikirja.json:iin ja ajaa generaattorin.
  */
 import { luoPohjaNostokortti, luoPohjaKortti, luoPohjaPaneeli } from './pohjat.js';
 import { PEILI_JUURI, peiliKuvaPolku } from '../media.js';
+import { luoPohjaErikoisnostot, piirraEsikatselu } from '../ajattelijapaat.js';
+import { AJATTELIJAT } from '../linssit/ajattelija.js';
 
 // Pelin kuvapeili (sama reitti kuin nostojen kuvilla).
 const TKS_KUVA = (nimi) => `${PEILI_JUURI}${peiliKuvaPolku(nimi, 'kuvat')}`;
@@ -51,7 +53,7 @@ const TKS_PANEELI = {
     { otsikko: 'Äänet', rivit: [
       { tyyppi: 'kytkin', nimi: 'Kertoja', paalla: true, ikoni: TKS_IKONI('<path d="M4 6c3-1 6-1 8 1 2-2 5-2 8-1v12c-3-1-6-1-8 1-2-2-5-2-8-1zM12 7v12"/>') },
       { tyyppi: 'kytkin', nimi: 'Musiikki', paalla: true, ikoni: TKS_IKONI('<path d="M9 17V6l10-2v11"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="15" r="2"/>') },
-      { tyyppi: 'kytkin', nimi: 'Äänimaisema', paalla: false, ikoni: TKS_IKONI('<path d="M5 10h3l4-4v12l-4-4H5zM16 9a4 4 0 0 1 0 6M18.5 7a7 7 0 0 1 0 10"/>') },
+      { tyyppi: 'kytkin', nimi: 'Tila', paalla: false, ikoni: TKS_IKONI('<path d="M5 10h3l4-4v12l-4-4H5zM16 9a4 4 0 0 1 0 6M18.5 7a7 7 0 0 1 0 10"/>') },
     ] },
     { erotin: true, vierekkain: true, rivit: [
       { tyyppi: 'toiminto', nimi: 'Uusi peli' },
@@ -109,6 +111,14 @@ const TKS_POHJAT = [
   { nimi: 'PANEELI · pillerivalikon pääsivu · PAPERI (malli 09)', luo: () => luoPohjaPaneeli(TKS_PANEELI, { esikatselu: true }) },
   { nimi: 'PANEELI · alinäkymä: Asetukset (säätimet) · PAPERI', luo: () => luoPohjaPaneeli(TKS_PANEELI_ASETUKSET, { esikatselu: true }) },
   { nimi: 'PANEELI · LASI (linssin päällä)', luo: () => luoPohjaPaneeli({ ...TKS_PANEELI, teema: 'lasi' }, { esikatselu: true }) },
+  {
+    nimi: 'ERIKOISNOSTOT · ajattelijoiden päät (kartuutsin vieressä, kehittäjätila)',
+    luo: () => {
+      const pohja = luoPohjaErikoisnostot(Object.values(AJATTELIJAT).filter((a) => a.kartta), { esikatselu: true });
+      piirraEsikatselu(pohja).catch((syy) => console.warn('erikoisnostot', syy));
+      return pohja;
+    },
+  },
 ];
 
 function tksSolmu(tagi, luokka, teksti) {
@@ -183,7 +193,7 @@ function tksTypografia(isa, tk) {
 
 function tksPohjat(isa) {
   isa.appendChild(tksSolmu('h2', null, 'Pohjat'));
-  isa.appendChild(tksSolmu('p', 'tks-ohje', 'Esimerkkidata Ateena/Akropolis (sama nosto kuin natiivin kuvaparissa). Webissä NOSTOKORTTI, KORTTI ja PANEELI; natiivissa kaikki pohjat.'));
+  isa.appendChild(tksSolmu('p', 'tks-ohje', 'Esimerkkidata Ateena/Akropolis (sama nosto kuin natiivin kuvaparissa). Webissä NOSTOKORTTI, KORTTI, PANEELI ja ERIKOISNOSTOT; natiivissa kaikki pohjat.'));
   const ruudukko = tksSolmu('div', 'tks-pohjat');
   for (const p of TKS_POHJAT) {
     const lohko = tksSolmu('div', 'tks-pohja');
