@@ -62,6 +62,19 @@ namespace Matkakirja.Natiivi
         /// Ilmakeha2 _KaariVoima vain, kun <see cref="Kuvaputki"/> on päällä; livenäkymässä aina 1. A/B `astro kyyti kaarivoima x`.
         /// </summary>
         public static float KuvanKaariVoima = 1f;
+        /// <summary>
+        /// Kuvaputken kaaren säätimet (Linssiseppä 2:n pyyntö 1.10. 19.5x, omistajan Cupola-mallikuvan kaari): Rayleighin
+        /// skaalakorkeuden kerroin, sironnan sinisyys ja maan ilmaperspektiivi. Vain <see cref="Kuvaputki"/>; livenä aina 1.
+        /// Komennot `astro kyyti kaarihr|kaarisini|utu x`.
+        /// </summary>
+        public static float KuvanHrKerroin = 1f, KuvanSiniKerroin = 1f, KuvanUtuKerroin = 1f;
+        /// <summary>Kaaren valkoinen ydin (1 = ennallaan) ja syvänsininen hehku sen yllä (0 = pois); vain kuvaputki. `astro kyyti kaariydin|kaarisyva x`.</summary>
+        public static float KuvanKaariYdin = 1f, KuvanKaariSyva = 0f;
+        /// <summary>
+        /// Kiertoratanousu kuvaputkessa (0 = pois, 1 = täysi; IssKameraKuva asettaa, kun aurinko on lähellä maan reunaa):
+        /// Ilmakeha2 _NousuVoima, KyydinAurinko-flare ja Yokuori _AamuVoima. Päätoimittaja 1.10. 21.5x.
+        /// </summary>
+        public static float KuvanNousu = 0f;
         /// <summary>Kuvaputki päällä: valokuvauskulma (AstronauttiLinssi.Vertailu) tai pelaajan ISS-kamera (IssKameraKuva asettaa).</summary>
         public static bool KuvaputkiAsetettu;
         public static bool Kuvaputki => KuvaputkiAsetettu || Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu.HasValue;
@@ -255,7 +268,10 @@ namespace Matkakirja.Natiivi
             var m = uusi ? kaari2 : kaari;
             if (kaariPiirto.sharedMaterial != m) kaariPiirto.sharedMaterial = m;
             if (uusi && lapinakyvyys != null && !lapinakyvyys.IsCreated()) { lapinakyvyys.Create(); Graphics.Blit(null, lapinakyvyys, kaari2, 0); }
-            if (uusi) { kaari2.SetFloat("_Peitto", kyyti); kaari2.SetFloat("_Voima", IlmanVoima); kaari2.SetFloat("_Moni", IlmanMoni); kaari2.SetFloat("_Hehku", HehkuPois ? 0f : IlmahehkunVoima); kaari2.SetFloat("_KaariVoima", Kuvaputki ? KuvanKaariVoima : 1f); }
+            if (uusi) { kaari2.SetFloat("_Peitto", kyyti); kaari2.SetFloat("_Voima", IlmanVoima); kaari2.SetFloat("_Moni", IlmanMoni); kaari2.SetFloat("_Hehku", HehkuPois ? 0f : IlmahehkunVoima); kaari2.SetFloat("_KaariVoima", Kuvaputki ? KuvanKaariVoima : 1f);
+                kaari2.SetFloat("_HrKerroin", Kuvaputki ? KuvanHrKerroin : 1f); kaari2.SetFloat("_SiniKerroin", Kuvaputki ? KuvanSiniKerroin : 1f);
+                kaari2.SetFloat("_UtuKerroin", Kuvaputki ? KuvanUtuKerroin : 1f);
+                kaari2.SetFloat("_KaariYdin", Kuvaputki ? KuvanKaariYdin : 1f); kaari2.SetFloat("_KaariSyva", Kuvaputki ? KuvanKaariSyva : 0f); kaari2.SetFloat("_NousuVoima", Kuvaputki ? KuvanNousu : 0f); }
             kaari.SetFloat("_Peitto", kyyti);
             // Ilmahehku himmeämmäksi ja ohuemmaksi (laite cl4 28.9.: 0,32 piirsi kirkkaan vihreän viivan; ISS:n yökuvissa se on
             // ohut ja himmeä kellanvihreä kerros): voimakkuus 0,12, σ 4,5 km, sävy (0,55, 0,95, 0,5).
@@ -263,7 +279,7 @@ namespace Matkakirja.Natiivi
             kaari.SetFloat("_HamaraVoima", HehkuPois ? 0f : 1f);
             if (!nakyy) return;
             // Kerran sekunnissa ja sekunnin välein simuloitua aikaa (web kaari.aseta): nopeutettuna joka kehys.
-            var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
+            var utc = Matkakirja.Linssit.Iss.IssNyt.AurinkoKello();   // vuorokaudenaika: auringon kello
             if (Time.unscaledTime - aurinkoPaivitetty < 1f && Math.Abs((utc - aurinkoUtc).TotalSeconds) < 1) return;
             // Keskipiste, napa-akseli ja aurinko maailmassa (georeferenssi voi liikkua); aurinko liikkuu 0,25°/min.
             aurinkoPaivitetty = Time.unscaledTime;

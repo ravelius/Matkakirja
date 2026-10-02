@@ -32,6 +32,28 @@ namespace Matkakirja.Linssit.Iss
         /// <summary>UTC-kello: simuloitu aika, jota rata, aurinko, kaari, yökuori ja taivas lukevat (testit korvaavat).</summary>
         public static Func<DateTime> Kello = () => Simu.Nyt();
 
+        /// <summary>
+        /// Auringon kello (vuorokaudenaika, omistaja 1.10.2026): Kello() + siirto, joka pitää valitun aamun, päivän, illan tai yön
+        /// ISS:n alapisteessä (Vuorokausi); LIVE = Kello(). Aurinkoa käyttävät kerrokset (valaistus, ilmakehä, yökuori, Cupola)
+        /// lukevat tätä, rata, Kuu ja tähdet Kelloa. Välimuisti hetken mukaan: SGP4 kerran hetkeä kohden, vaikka kutsujia on monta.
+        /// </summary>
+        public static DateTime AurinkoKello()
+        {
+            var t = Kello();
+            if (!Vuorokausi.Valittu.HasValue) return t;
+            if (t == aurinkoT && Vuorokausi.Valittu == aurinkoV) return aurinkoTulos;
+            // Viite: katsekohta (kamera, Unity-puoli) tai ISS:n alapiste; Cupola katsoo horisonttiin, jossa aika on eri kuin alla.
+            var v = AurinkoViite?.Invoke();
+            double lat, lon;
+            if (v.HasValue) { lat = v.Value.lat; lon = v.Value.lon; } else { var p = Paikka(t); lat = p.Lat; lon = p.Lon; }
+            aurinkoT = t; aurinkoV = Vuorokausi.Valittu; aurinkoTulos = Vuorokausi.AurinkoAika(t, lat, lon);
+            return aurinkoTulos;
+        }
+        /// <summary>Vuorokaudenajan viitepiste (leveys, pituus): kameran katsekohta kyydissä (AstronauttiKerros); null = ISS:n alapiste.</summary>
+        public static Func<(double lat, double lon)?> AurinkoViite;
+        static DateTime aurinkoT, aurinkoTulos;
+        static int? aurinkoV;
+
         public static Tle Tle => tle;
         /// <summary>Kasvaa, kun TLE vaihtuu (kutsuja laskee maajäljen uudelleen).</summary>
         public static int Versio { get; private set; }

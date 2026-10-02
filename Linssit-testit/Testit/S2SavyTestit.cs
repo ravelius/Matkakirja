@@ -49,7 +49,7 @@ namespace Matkakirja.Linssit.Testit
             var p = Metodi(s, "void PaivitaS2(bool kyydissa)");
             // Kyydistä poistuttaessa halutaan = false → S2 pois; sävy seuraa s2Lisatty-tilaa sekä alussa että muutoksen jälkeen.
             Oleta.Tosi(Regex.Matches(p, @"AsetaS2Savy\(\);").Count >= 2, "PaivitaS2 päivittää sävyn alussa ja muutoksen jälkeen");
-            Oleta.Tosi(p.Contains("bool halutaan = kyydissa && S2Kaytossa"), "S2 (ja sävy) vain kyydissä");
+            Oleta.Tosi(Regex.IsMatch(p, @"bool halutaan = kyydissa && \(\(S2Kaytossa"), "S2 (ja sävy) vain kyydissä");
             var a = Metodi(s, "void AsetaS2Savy()");
             Oleta.Tosi(a.Contains("Kyytipino.S2 = s2Lisatty"), "sävy päällä vain, kun S2 on pinnalla");
         }

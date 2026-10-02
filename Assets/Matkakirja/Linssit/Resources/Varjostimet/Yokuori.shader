@@ -27,6 +27,8 @@ Shader "Matkakirja/Linssit/Yokuori"
     Properties
     {
         _Peitto("Yön peitto", Range(0, 1)) = 0.82
+        _VesiTerava("Vesimaskin terävöinti kiillolle ja taivaan heijastukselle (kuvaputki, 0 = ennallaan)", Float) = 0
+        _AamuVoima("Hämärän lämmin valo terminaattorissa (kuvaputken kiertoratanousu, 0 = pois)", Float) = 0
         _Vari("Yön väri", Color) = (0.012, 0.02, 0.05, 1)
         _Aurinko("Auringon suunta (maailma)", Vector) = (0, 0, 1, 0)
         _Keskus("Maan keskipiste (maailma)", Vector) = (0, 0, 0, 0)
@@ -91,6 +93,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float _PilvetOn, _PilviPeitto, _Karsinta;
                 float _PilviVarjo, _PilviKorkeus, _KuuVoima, _TaivasHeijastus, _TarkatOn;
                 float4 _Kuu;
+                float _AamuVoima, _VesiTerava;
             CBUFFER_END
 
             // Pallotilan piste → (pituus, leveys) radiaaneina (ellipsoidille ja geodeettiseksi kuten valojen haussa).
@@ -182,6 +185,9 @@ Shader "Matkakirja/Linssit/Yokuori"
                 }
                 half l = lerp(sMaa.r * (half)_MaaVoima, sEu.r, euPaino);
                 half vesi = lerp(sMaa.g, sEu.g, euPaino);
+                // Kuvaputki (Ateena 4968e1fd, Päätoimittaja 22.1x: "rannikoiden ympärillä vaalea, sumea reunus"): 500 m:n vesimaskin
+                // pehmeä raja levitti taivaan heijastuksen ja kiillon maalle; terävöinti kapeaksi rajaksi.
+                if (_VesiTerava > 0.0) vesi = lerp(vesi, (half)smoothstep(0.4, 0.6, vesi), (half)_VesiTerava);
                 l = l * l * (half)0.6 + l * (half)0.4;                   // kuvan sRGB-sävy lähemmäs lineaarista, himmeät vaimeammiksi
                 // Sävy NASA-vertailusta (30.9., ISS037-E-18864): himmeät natriumin oranssit, ytimet kellanvalkoiset (ennen valkoisempi).
                 half3 savy = lerp(half3(1.0, 0.46, 0.14), half3(1.0, 0.80, 0.52), saturate(l * 1.4h));
@@ -232,6 +238,16 @@ Shader "Matkakirja/Linssit/Yokuori"
                 half lisaPilvi = pilvi * (half)osuu * yoKuori * saturate(_YoVesi - a) * saturate(1.0h - 2.0h * kuuValo);
                 c += _Vari.rgb * lisaPilvi;
                 a += lisaPilvi;
+                // Kiertoratanousu (Päätoimittaja 1.10. 21.5x): terminaattorin lähellä (auringon korkeus −5° … +1°, huippu −1,5°)
+                // maa ja pilvien huiput saavat lämmintä hämärän valoa, joten terminaattori erottuu horisontin lähellä. 0 = pois.
+                if (_AamuVoima > 0.0 && osuu > 0.5)
+                {
+                    float sk = dot(normalize(p), aur);
+                    // −10° … +1°, huippu ~ −3° (laite 8648c410: −5°:n kaista jäi reunan taakse näkymättömiin)
+                    half kaista = (half)(smoothstep(-0.174, -0.05, sk) * (1.0 - smoothstep(-0.010, 0.017, sk)));
+                    c += half3(1.0h, 0.42h, 0.13h) * kaista * (half)(_AamuVoima * 1.2) * (0.4h + 0.6h * (1.0h - 0.85h * pilvi) + 1.2h * pilvi);
+                    a *= 1.0h - 0.35h * kaista * (half)saturate(_AamuVoima);
+                }
                 return half4(c, a);
             }
             ENDHLSL

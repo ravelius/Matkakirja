@@ -109,14 +109,13 @@ namespace Matkakirja.Natiivi
 
         VisualElement Poyta => Kytkinpoyta ? poyta.Juuri : ohjaimet;
 
-        /// <summary>Testikomento `astro kyyti kytkin lista|kansi|nopeus <i>|tila` (kuvaparit ilman kosketusta).</summary>
+        /// <summary>Testikomento `astro kyyti kytkin lista|nopeus <i>|tila` (kuvaparit ilman kosketusta).</summary>
         public static string KytkinTesti(string[] a)
         {
             var n = instanssi;
             if (n == null) return "kytkin: ei kyytinäkymää";
             string k = a.Length > 0 ? a[0] : "tila";
             if (k == "lista") n.VaihdaLista();
-            else if (k == "kansi") n.poyta.Oma.AvaaKansi();
             else if (k == "nopeus" && a.Length > 1 && int.TryParse(a[1], out int i) && i >= 0 && i < Simukello.Nopeudet.Length)
                 Linssi()?.AsetaNopeus(Simukello.Nopeudet[i]);
             var r = n.poyta.Juuri.worldBound;
@@ -214,7 +213,16 @@ namespace Matkakirja.Natiivi
         /// Cupola 3 on sommiteltu ruudulle valmiiksi (ikkuna 98 % iPhonen leveydestä), joten sitä suurennetaan vain 1,04 × ja
         /// ajelehdus puolitetaan (4 pt, 0,25°): liike ei paljasta kuvan reunoja, ja ikkuna pysyy pyöreänä.
         /// </summary>
-        const float Cupola3Yli = 1.04f, Cupola3Ajelehdus = 0.5f;
+        const float Cupola3Ajelehdus = 0.5f;   // suurennos: IkkunanOletus (aiemmin 1,04)
+        /// <summary>
+        /// Isompi Cupolan ikkuna-aukko (omistajan valinta 1.10. Päätoimittajan kautta): kehyksen suurennos laitteen ja asennon mukaan —
+        /// iPhone vaaka 2,0 (aukko lähes reunasta reunaan), pysty 1,25; iPad vaaka 1,45 (sama periaate 4:3-ruudulla), pysty 1,25.
+        /// Taustan maa on koko ruudun kokoinen, joten suurempi z näyttää enemmän maata. Testikomento `astro kyyti ikkuna z` (0 = oletus).
+        /// </summary>
+        public static float IkkunanSuurennos;
+        public const float IkkunaPuhelinVaaka = 2f, IkkunaPuhelinPysty = 1.25f, IkkunaTablettiVaaka = 1.45f, IkkunaTablettiPysty = 1.25f;
+        static float IkkunanOletus(float w, float h, bool ipad) =>
+            w > h ? (ipad ? IkkunaTablettiVaaka : IkkunaPuhelinVaaka) : (ipad ? IkkunaTablettiPysty : IkkunaPuhelinPysty);
         /// <summary>Kuvan reunan vara (pt) keskitetyssä rajauksessa: ajelehdus 3,5–4 pt + kallistus ja skaala.</summary>
         const float Cupola3Vara = 8f;
         readonly float[] cupola3Painot = new float[3];
@@ -306,7 +314,7 @@ namespace Matkakirja.Natiivi
             tieto = Rakenne.Teksti("", "mk-isskyyti__teksti", pilleri);
             live.pickingMode = PickingMode.Ignore; tieto.pickingMode = PickingMode.Ignore;
             // Lukeman napautus nopeutettuna = Palaa LIVE (poimittava vain nopeutettuna).
-            pilleri.AddManipulator(new Clickable(() => { if (nopeutettu) Linssi()?.AsetaNopeus(1); }));
+            pilleri.AddManipulator(new Clickable(PalaaLive));
 
             var valit = Rakenne.El("mk-isskyyti__valilehdet", ohjaimet);
             runko = Rakenne.El("mk-isskyyti__runko", ohjaimet);
@@ -353,13 +361,8 @@ namespace Matkakirja.Natiivi
             // Olosuhteet: pilvipeitto ja vuodenaika (arvo otsikkorivillä).
             pilviSaadin = IssOhjaus.Liukusaadin(sivut[2], "Pilvipeitto", 0f, 1f, v => { AstronauttiKerros.PilvienMaara = v; PaivitaSaatimet(); },
                 vasen: "Selkeä", oikea: "Nykyinen");
-            // Kuluva kuukausi = ei pakotusta (pinta seuraa taas ISS-kelloa, myös nopeutettuna).
-            kuukausiSaadin = IssOhjaus.Liukusaadin(sivut[2], "Vuodenaika", 1f, 12f, v =>
-            {
-                int kk = Mathf.RoundToInt(v);
-                AstronauttiKerros.KuukausiPakotettu = kk == IssNyt.Kello().Month ? 0 : kk;
-                PaivitaSaatimet();
-            }, kokonaisluku: true, vasen: "Tammikuu", oikea: "Joulukuu");
+            // Vuodenaika (omistaja 1.10.: neljä kautta, Iss.Vuodenaika): nykyinen kausi = ei pakotusta (pinta seuraa ISS-kelloa).
+            kuukausiSaadin = IssOhjaus.Liukusaadin(sivut[2], "Vuodenaika", 0f, 3f, AsetaKausi, kokonaisluku: true, vasen: "Talvi", oikea: "Syksy");
             PaivitaPaneeli();
             OmaSijaintiHaku.Valmis += () => { if (omaNappi != null) omaNappi.Q<Label>(className: "mk-nappi__teksti").text = OmaSijaintiHaku.Rivi(); };
 
@@ -369,14 +372,9 @@ namespace Matkakirja.Natiivi
             poyta = new IssKytkinpoyta(turva,
                 k => Linssi()?.AsetaNopeus(k),
                 v => { AstronauttiKerros.PilvienMaara = v; PaivitaSaatimet(); },
-                v =>
-                {
-                    int kk = Mathf.RoundToInt(v);
-                    AstronauttiKerros.KuukausiPakotettu = kk == IssNyt.Kello().Month ? 0 : kk;
-                    PaivitaSaatimet();
-                },
-                VaihdaLista, LennaOmaan, Poistu,
-                () => { if (nopeutettu) Linssi()?.AsetaNopeus(1); });
+                AsetaKausi, AsetaVuorokausi,
+                VaihdaLista, Kuvaa, Poistu,
+                PalaaLive);
             PaivitaPoydat(KyydinTila.Kauko);
             juuri.RegisterCallback<GeometryChangedEvent>(_ =>
             {
@@ -497,6 +495,9 @@ namespace Matkakirja.Natiivi
         static bool omaLento;
 
         /// <summary>"Oma sijainti": lento maan keskipisteen ylle; jos maa ei ole vielä tiedossa, haku ja lento perään.</summary>
+        /// <summary>KUVAA (ISS-kamera, omistaja 1.10.2026): oletusmuoto pysty 4:5; rajausruutu ja muotovalinta tulevat UI-pohjista.</summary>
+        static void Kuvaa() => Matkakirja.Natiivi.IssKameraKuva.Hae().Laukaise();
+
         static void LennaOmaan()
         {
             if (OmaSijaintiHaku.Paikka(out var nimi, out var lat, out var lon)) { Linssi()?.LennaPaikkaan($"Oma sijainti ({nimi})", lat, lon); return; }
@@ -506,20 +507,62 @@ namespace Matkakirja.Natiivi
             OmaSijaintiHaku.Aloita();
         }
 
-        /// <summary>Säätimien arvot ja tekstit tilasta (AstronauttiKerros: pilvien määrä, pakotettu kuukausi).</summary>
+        /// <summary>
+        /// LIVE (omistaja 1.10.): oikea UTC-aika ja ISS:n todellinen paikka (nopeutus pois), kuluva vuodenaika ja aurinko oikeassa
+        /// ajassa — vuodenaika- ja vuorokaudenaikavalinnat nollataan.
+        /// </summary>
+        void PalaaLive()
+        {
+            if (nopeutettu) Linssi()?.AsetaNopeus(1);
+            AstronauttiKerros.KuukausiPakotettu = 0;
+            Vuorokausi.Valittu = null;
+            PaivitaSaatimet();
+        }
+
+        /// <summary>Vuodenaika nupista tai liukusäätimestä (0–3): nykyinen kausi = ei pakotusta, muuten kauden edustava kuukausi.</summary>
+        void AsetaKausi(float v)
+        {
+            int kausi = Mathf.Clamp(Mathf.RoundToInt(v), 0, 3);
+            AstronauttiKerros.KuukausiPakotettu = kausi == Vuodenaika.Kausi(IssNyt.Kello().Month) ? 0 : Vuodenaika.Kuukausi(kausi);
+            PaivitaSaatimet();
+        }
+
+        /// <summary>LIVE-hetken vuorokaudenaika ISS:n alapisteessä auringon korkeudesta: yö &lt; −6°, ilta/aamu −6…20° (iltapäivä/aamupäivä), muuten päivä.</summary>
+        static int VuorokausiNyt()
+        {
+            var t = IssNyt.Kello(); var p = IssNyt.Paikka(t);
+            Matkakirja.Linssit.Iss.Aurinko.Alihajapiste(Matkakirja.Linssit.Iss.Aika.Jd(t), out double dekl, out double slon);
+            double r = Math.PI / 180, h = ((p.Lon - slon) % 360 + 540) % 360 - 180;
+            double e = Math.Asin(Math.Sin(p.Lat * r) * Math.Sin(dekl * r) + Math.Cos(p.Lat * r) * Math.Cos(dekl * r) * Math.Cos(h * r)) / r;
+            return e < -6 ? Vuorokausi.Yo : e > 20 ? Vuorokausi.Paiva : h < 0 ? Vuorokausi.Aamu : Vuorokausi.Ilta;
+        }
+
+        /// <summary>Vuorokaudenaika nupista (0–3: aamu, päivä, ilta, yö; Iss.Vuorokausi). LIVE-valo nollaa.</summary>
+        void AsetaVuorokausi(float v)
+        {
+            Vuorokausi.Valittu = Mathf.Clamp(Mathf.RoundToInt(v), 0, 3);
+            PaivitaSaatimet();
+        }
+
+        /// <summary>Säätimien arvot ja tekstit tilasta (AstronauttiKerros: pilvien määrä, pakotettu kuukausi → vuodenaika).</summary>
         void PaivitaSaatimet()
         {
             float m = AstronauttiKerros.PilvienMaara;
             pilviSaadin.Aseta(m, m <= 0.01f ? "selkeä" : m >= 0.99f ? "nyt" : $"{Mathf.RoundToInt(m * 100)} %");
-            int nyt = IssNyt.Kello().Month, kk = AstronauttiKerros.KuukausiPakotettu is >= 1 and <= 12 ? AstronauttiKerros.KuukausiPakotettu : nyt;
-            kuukausiSaadin.Aseta(kk, Matkakirja.Linssit.Vuosi.MaapallonVuosiLinssi.Kuukaudet[kk - 1] + (kk == nyt ? " (nyt)" : ""));
+            int nyt = Vuodenaika.Kausi(IssNyt.Kello().Month);
+            int kausi = AstronauttiKerros.KuukausiPakotettu is >= 1 and <= 12 ? Vuodenaika.Kausi(AstronauttiKerros.KuukausiPakotettu) : nyt;
+            string nimi = Vuodenaika.Nimet[kausi];
+            kuukausiSaadin.Aseta(kausi, nimi + (kausi == nyt ? " (nyt)" : ""));
             if (poyta != null)
             {
                 poyta.Pilvet.Aseta(m, m <= 0.01f ? "0 %" : m >= 0.99f ? "NYT" : $"{Mathf.RoundToInt(m * 100)} %");
-                string nimi = Matkakirja.Linssit.Vuosi.MaapallonVuosiLinssi.Kuukaudet[kk - 1];
                 // Renderipaneelin kilvessä koko nimi (tarrakirjoitin), kehyksessä lyhenne.
-                poyta.Vuodenaika.Aseta(kk, poyta.Asettelu != null ? nimi.ToUpperInvariant()
-                    : (nimi.Length > 3 ? nimi.Substring(0, 3) : nimi).ToUpperInvariant() + (kk == nyt ? " •" : ""));
+                poyta.Vuodenaika.Aseta(kausi, poyta.Asettelu != null ? nimi.ToUpperInvariant()
+                    : (nimi.Length > 3 ? nimi.Substring(0, 3) : nimi).ToUpperInvariant() + (kausi == nyt ? " •" : ""));
+                // Vuorokaudenaika: LIVE:nä nupin asento seuraa ISS:n alapisteen aurinkoa (lähin kausi), kilvessä "NYT".
+                int vk = Vuorokausi.Valittu ?? VuorokausiNyt();
+                string vn = Vuorokausi.Valittu.HasValue ? Vuorokausi.Nimet[vk].ToUpperInvariant() : "NYT";
+                poyta.Vuorokausi.Aseta(vk, poyta.Asettelu != null ? vn : (vn.Length > 3 ? vn.Substring(0, 3) : vn));
             }
         }
 
@@ -591,7 +634,7 @@ namespace Matkakirja.Natiivi
                 bool lennossa = tila == KyydinTila.Kohde;
                 if (!lennossa) omaLento = false;
                 poyta.Kohde.Kilpi.text = lennossa && !omaLento && viimeKohde != null ? viimeKohde.ToUpperInvariant() : "VALITSE";
-                poyta.Oma.Kilpi.text = lennossa && omaLento ? "PÄÄLLÄ" : "POIS";
+                poyta.Kuvaa.Kilpi.text = Matkakirja.Natiivi.IssKameraKuva.Tila == "valmis" ? "VALMIS" : $"{Matkakirja.Natiivi.IssKameraKuva.Edistyminen:P0}";
                 poyta.Sulku.Kilpi.text = tila == KyydinTila.Ikkuna ? "CUPOLA" : tila == KyydinTila.Seuranta ? "SEURANTA" : lennossa ? "LENTO" : "KYYTI";
             }
             if (!auki) SuljeLista();
@@ -937,8 +980,8 @@ namespace Matkakirja.Natiivi
             // siirtyy laatikon sisällä cover-ylijäämän verran (taustakuva leikataan laatikkoon, cl19) ja loput laatikon siirtona.
             if (cupola3)
             {
-                z = Cupola3Yli; kuvanYlareuna = 0f;
                 bool ipad = IssKuvakulma.Cupola3Kuva(Screen.width, Screen.height).ipad;
+                z = IkkunanSuurennos > 0f ? IkkunanSuurennos : IkkunanOletus(W, H, ipad); kuvanYlareuna = 0f;
                 var d = IssKuvakulma.Cupola3Rajaus(W, H, ipad, Ohjaamo3Kulma, z, Cupola3Vara);
                 var (kl, kk) = IssKuvakulma.Cupola3Koko(ipad);
                 float s3 = Mathf.Max(W / (float)kl, H / (float)kk);

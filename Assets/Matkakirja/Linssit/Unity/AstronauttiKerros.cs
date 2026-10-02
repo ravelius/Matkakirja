@@ -95,6 +95,7 @@ namespace Matkakirja.Natiivi
             k.georeferenssi = g;
             k.kierto = kierto;
             k.kamera = kierto.GetComponent<Camera>();
+            // Vuorokaudenaika (omistaja 1.10.): auringon kellon viite = katsekohta ja kyydin aurinko kartan valolle (OnEnable/OnDisable).
             var merkit = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.merkit : null;
             k.fontti = merkit != null ? merkit.fontti : null;
             var varjostin = Resources.Load<Shader>("Varjostimet/Havaintopiste");
@@ -219,7 +220,7 @@ namespace Matkakirja.Natiivi
                 pilviValoAika = Time.unscaledTime;
                 var gt = georeferenssi.transform;
                 var au = gt.TransformDirection((Vector3)(Unity.Mathematics.float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(
-                    Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()))).normalized;
+                    Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.AurinkoKello()))).normalized;
                 pilvet.Valaistus(1f, au, pilvet.transform.position);
             }
             else if (pilvet != null && kyyti == KyydinTila.Kauko && pilviValoAika > 0f) { pilvet.Valaistus(0f, Vector3.forward, Vector3.zero); pilviValoAika = 0f; }
@@ -371,11 +372,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomento `astro kyyti kuukausi m&lt;1–12&gt;` (m0 = pois): kuukausi pakotettuna kuvapareihin (talvi | kesä
         /// samasta paikasta ilman testikellon siirtoa, joka muuttaisi myös auringon ja ISS:n paikan).</summary>
         public static int KuukausiPakotettu;
-        /// <summary>BMNG-kerroksen alfa reliefin päällä (KarttaKerrokset.RasterinAlfa): 1 = pelkkä BMNG; alle 1 päästää reliefin
-        /// rinnevarjostuksen läpi (laite taivas1 28.9.: BMNG ilman varjostusta näytti latteammalta). Testikomento
-        /// `astro kyyti kuukausi a&lt;0–1&gt;`. Oletus 0,75 (Päätoimittaja 28.9. laite taivas2:n kuvaparista: vuoret erottuvat, meri
-        /// sinertävä eikä musta, Alppien tammikuun lumi näkyy yhä; 0,6 heikensi lunta).</summary>
-        public static float KuukaudenAlfa = 0.75f;
+        /// <summary>BMNG-kerroksen alfa (KarttaKerrokset.RasterinAlfa). 1 (Päätoimittaja 1.10.): reliefi on kyydissä pois BMNG:n alta
+        /// (Cupolan yön suorakulmiot), joten alle 1 näyttäisi vain pohjan. Aiemmin 0,75 reliefin päällä (28.9.). Testikomento
+        /// `astro kyyti kuukausi a&lt;0–1&gt;`.</summary>
+        public static float KuukaudenAlfa = 1f;
         float kuukausiAlfaAsetettu = -1f;
         readonly Dictionary<int, bool> kuukausiAmparissa = new Dictionary<int, bool>();
         int kuukausiLisatty = -1, kuukausiKokeillaan = -1;
@@ -403,54 +403,53 @@ namespace Matkakirja.Natiivi
         const double S2W = -28.125, S2E = 45.0, S2N = 72.395704, S2S = 31.952162;
         const int S2Rx = 13, S2Ry = 13, S2MaxTaso = 4;
         bool s2Lisatty, reliefPoissa;
+        string s2Url;
+
+        /// <summary>
+        /// ISS-KAMERA, PELAAJAN KUVA (omistaja 1.10.2026): laukaisun työstetyt Sentinel-2-laatat (IssKameraKuva, file://) S2:n
+        /// paikalle omalla rajatulla jaollaan kuvan ajaksi; null = tavallinen S2 (tai ei mitään). Paikat kuten S2:lla.
+        /// </summary>
+        public struct Pinta { public string Url; public double W, S, E, N; public int Rx, Ry, MaxTaso; }
+        public static Pinta? KuvanPinta;
 
         void PaivitaS2(bool kyydissa)
         {
             var kk = KarttaKerrokset.Instanssi;
             if (kk == null) return;
-            bool halutaan = kyydissa && S2Kaytossa && kuukausiLisatty > 0;
+            var kuvan = KuvanPinta;
+            // S2 on kesäaineisto: vain lumettomina kausina (Iss.Vuodenaika.S2Nakyy), talvella BMNG (omistaja 1.10.); kuvan pinta aina.
+            bool halutaan = kyydissa && ((S2Kaytossa && Vuodenaika.S2Nakyy(Vuodenaika.Kausi(kuukausiLisatty))) || kuvan.HasValue)
+                && kuukausiLisatty > 0;
+            string haluttu = kuvan?.Url ?? (S2Osoite ?? S2Juuri + "{z}/{x}/{reverseY}.jpg");
+            // Kuvan pinta tulee tai poistuu kesken S2:n: vaihdetaan vain S2-kerros (reliefi ja BMNG pysyvät paikoillaan).
+            if (halutaan && s2Lisatty && haluttu != s2Url) { kk.PoistaRasteri(S2Kerros); s2Lisatty = false; }
             AsetaS2Savy();
             if (halutaan == s2Lisatty) return;
             if (halutaan)
             {
-                kk.PoistaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros);
-                reliefPoissa = true;
-                // BMNG paikkaan 1 (alle): poisto ja uudelleenlisäys, alfa 1 (reliefiä ei ole alla).
-                kk.PoistaRasteri(KuukausiKerros);
-                kk.LisaaRasteri(KuukausiKerros, KuukaudenPintaJuuri + kuukausiLisatty.ToString("00") + "/{z}/{x}/{reverseY}.jpg",
-                    CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, KuukaudenPintaMaxTaso, 1f);
-                kuukausiAlfaAsetettu = 1f;
-                string url = (S2Osoite ?? S2Juuri + "{z}/{x}/{reverseY}.jpg").Replace("{docs}", "file://" + Application.persistentDataPath);
-                bool kevyt = S2Kevyt;
-                int maxTaso = kevyt ? S2MaxTaso - 1 : S2MaxTaso;
-                // Muistiraja laiteluokan mukaan (Natiivisepän ehto 1.10.: iPad +480 Mt GPU:n puolella → kevyille ≤ +250 Mt).
+                // BMNG on jo paikassa 1 ilman reliefiä (PaivitaKuukaudenPintaBmng), S2 paikkaan 2.
+                string url = haluttu.Replace("{docs}", "file://" + Application.persistentDataPath);
+                // Kuvan pinta (ISS-kamera) aina täydellä laadulla; muuten muistiraja laiteluokan mukaan (Natiivisepän ehto 1.10.:
+                // iPad +480 Mt GPU:n puolella → kevyille ≤ +250 Mt).
+                bool kevyt = !kuvan.HasValue && S2Kevyt;
+                int maxTaso = kuvan?.MaxTaso ?? (kevyt ? S2MaxTaso - 1 : S2MaxTaso);
                 s2Lisatty = kk.LisaaRasteri(S2Kerros, url, CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, maxTaso, 1f) != null
                     && kk.RasterinMuisti(S2Kerros, kevyt ? 4f : 2f, kevyt ? 1024 : 2048, (kevyt ? 8L : 16L) * 1024 * 1024)
-                    && kk.RasterinJako(S2Kerros, S2W, S2S, S2E, S2N, S2Rx, S2Ry);
+                    && (kuvan.HasValue ? kk.RasterinJako(S2Kerros, kuvan.Value.W, kuvan.Value.S, kuvan.Value.E, kuvan.Value.N, kuvan.Value.Rx, kuvan.Value.Ry)
+                                       : kk.RasterinJako(S2Kerros, S2W, S2S, S2E, S2N, S2Rx, S2Ry));
+                s2Url = haluttu;
                 long valimuisti = s2Lisatty ? kk.PallonValimuisti((kevyt ? S2ValimuistiKevytMt : S2ValimuistiMt) * 1024L * 1024) : -1;
-                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: S2 {(s2Lisatty ? "päällä" : "ei mahtunut")} (z{6}–z{6 + maxTaso}) {url}; " +
+                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: {(kuvan.HasValue ? "kuvan pinta" : "S2")} {(s2Lisatty ? "päällä" : "ei mahtunut")} (z{6}–z{6 + maxTaso}) {url}; " +
                     $"laite {(kevyt ? "kevyt" : "täysi")} (muisti {SystemInfo.systemMemorySize} Mt, {SystemInfo.deviceModel}), " +
                     $"pallon välimuisti {valimuisti / 1048576} Mt, S2 näyttövirhe {(kevyt ? 4 : 2)}, tekstuuri {(kevyt ? 1024 : 2048)}");
-                if (!s2Lisatty) S2Kaytossa = false;   // ei yritetä joka sekunti uudelleen
+                if (!s2Lisatty && !kuvan.HasValue) S2Kaytossa = false;   // ei yritetä joka sekunti uudelleen
             }
             else
             {
                 kk.PoistaRasteri(S2Kerros);
                 s2Lisatty = false;
                 kk.PallonValimuisti(null);
-                if (reliefPoissa)
-                {
-                    // Alkuperäinen järjestys: reliefi paikkaan 1 ja BMNG sen päälle paikkaan 2 (lisätään seuraavalla kierroksella).
-                    // Ilman tätä kesken kyydin `s2 0` antoi reliefille S2:n paikan 2 BMNG:n päältä täydellä alfalla
-                    // (S2-esitodennus 1.10.: Egypti reliefin korkeusväreissä). Kyydin päättyessä BMNG on jo poistettu.
-                    kk.PoistaRasteri(KuukausiKerros);
-                    kuukausiLisatty = -1;
-                    kk.LisaaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros, Matkakirja.Linssit.Astronautti.AstronauttiLinssi.ReliefinSarja(),
-                        CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, Matkakirja.Linssit.Topografia.ReliefiMaxTaso, 1f);
-                    reliefPoissa = false;
-                }
-                kuukausiAlfaAsetettu = -1f;
-                Debug.Log("MATKAKIRJA linssit: kyydin pinta: S2 pois, reliefi palautettu");
+                Debug.Log("MATKAKIRJA linssit: kyydin pinta: S2 pois");
             }
             AsetaS2Savy();
         }
@@ -478,13 +477,24 @@ namespace Matkakirja.Natiivi
         {
             PaivitaKuukaudenPintaBmng(kyydissa);
             PaivitaS2(kyydissa);
+            // Reliefi palaa vasta, kun BMNG ja S2 ovat poissa (kyydin loppu tai BMNG puuttuu ämpäristä): paikka 1 on silloin vapaa.
+            if (reliefPoissa && kuukausiLisatty < 0 && !s2Lisatty)
+            {
+                KarttaKerrokset.Instanssi?.LisaaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros,
+                    Matkakirja.Linssit.Astronautti.AstronauttiLinssi.ReliefinSarja(), CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0,
+                    Matkakirja.Linssit.Topografia.ReliefiMaxTaso, 1f);
+                reliefPoissa = false;
+                Debug.Log("MATKAKIRJA linssit: kyydin pinta: reliefi palautettu");
+            }
         }
 
         void PaivitaKuukaudenPintaBmng(bool kyydissa)
         {
             var kk = KarttaKerrokset.Instanssi;
             if (kk == null) return;
-            int kuukausi = kyydissa && !KuukaudenPintaPois ? (KuukausiPakotettu is >= 1 and <= 12 ? KuukausiPakotettu : IssNyt.Kello().Month) : -1;
+            // Vuodenaika (omistaja 1.10.): pakottamatta nykyisen kauden edustava kuukausi (Iss.Vuodenaika), ei kuluva kuukausi.
+            int kuukausi = kyydissa && !KuukaudenPintaPois
+                ? (KuukausiPakotettu is >= 1 and <= 12 ? KuukausiPakotettu : Vuodenaika.Kuukausi(Vuodenaika.Kausi(IssNyt.Kello().Month))) : -1;
             if (kuukausi > 0 && !kuukausiAmparissa.TryGetValue(kuukausi, out bool amparissa))
             {
                 if (kuukausiKokeillaan < 0) StartCoroutine(KokeileKuukausi(kuukausi));
@@ -493,7 +503,7 @@ namespace Matkakirja.Natiivi
             if (kuukausi > 0 && !kuukausiAmparissa[kuukausi]) kuukausi = -1;
             if (kuukausi == kuukausiLisatty)
             {
-                float alfa = s2Lisatty ? 1f : KuukaudenAlfa;
+                float alfa = KuukaudenAlfa;
                 if (kuukausi > 0 && kuukausiAlfaAsetettu != alfa && kk.RasterinAlfa(KuukausiKerros, alfa) >= 0)
                     kuukausiAlfaAsetettu = alfa;
                 return;
@@ -505,6 +515,9 @@ namespace Matkakirja.Natiivi
                 kuukausiLisatty = -1;
                 return;
             }
+            // Reliefi pois kyydin ajaksi aina, kun BMNG on ladattu (Päätoimittaja 1.10.: Cupolan yön harmaat suorakulmiot olivat
+            // reliefin laattoja BMNG:n alla; korvaa 28.9. linjan alfa 0,75): BMNG paikkaan 1, S2 paikkaan 2.
+            if (!reliefPoissa) { kk.PoistaRasteri(Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Kerros); reliefPoissa = true; }
             kk.LisaaRasteri(KuukausiKerros, KuukaudenPintaJuuri + kuukausi.ToString("00") + "/{z}/{x}/{reverseY}.jpg",
                 CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, KuukaudenPintaMaxTaso, 1f);
             kuukausiLisatty = kuukausi;
@@ -617,9 +630,51 @@ namespace Matkakirja.Natiivi
             rataMesh.RecalculateBounds();
         }
 
+        // ---- Vuorokaudenaika: katsekohta ja kyydin aurinko (Linssiseppä 1.10.2026) ----
+        bool katseOn;
+        double katseLat, katseLon;
+
+        /// <summary>Kameran keskisäteen osuma maahan (pallo R 6371 km) tai horisontissa lähin piste; vain kyydissä.</summary>
+        void PaivitaKatse()
+        {
+            katseOn = false;
+            if (kyyti == KyydinTila.Kauko || georeferenssi == null || kamera == null) return;
+            var gt = georeferenssi.transform;
+            double3 o = georeferenssi.TransformUnityPositionToEarthCenteredEarthFixed((float3)gt.InverseTransformPoint(kamera.transform.position));
+            double3 d = math.normalize(georeferenssi.TransformUnityDirectionToEarthCenteredEarthFixed((float3)gt.InverseTransformDirection(kamera.transform.forward)));
+            const double R = 6_371_000;
+            double b = math.dot(o, d), c = math.dot(o, o) - R * R, h = b * b - c;
+            double3 p = h >= 0 && -b - math.sqrt(h) > 0 ? o + d * (-b - math.sqrt(h)) : o + d * math.max(0, -b);   // osuma tai lähin piste
+            p = math.normalize(p);
+            katseLat = math.degrees(math.asin(math.clamp(p.z, -1, 1)));
+            katseLon = math.degrees(math.atan2(p.y, p.x));
+            katseOn = true;
+        }
+
+        (double lat, double lon)? KatseViite() => katseOn ? (katseLat, katseLon) : null;
+
+        /// <summary>
+        /// Kyydin aurinko kartan valolle: suunta auringon kellosta (vuorokaudenaika) ja väri katsekohdan auringon korkeudesta
+        /// (alle 3°: oranssi, 3–20°: lämmin, ylempänä valkoinen). Kaukonäkymässä null → kameravalo kuten ennen.
+        /// </summary>
+        (Vector3 suunta, Color vari)? KyydinAurinkoArvo()
+        {
+            if (kyyti == KyydinTila.Kauko || georeferenssi == null || !katseOn) return null;
+            var gt = georeferenssi.transform;
+            var ecef = Aurinko.AurinkoEcef(IssNyt.AurinkoKello());
+            Vector3 au = gt.TransformDirection((Vector3)(float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(ecef)).normalized;
+            double r = math.radians(1.0);
+            var n = new double3(math.cos(katseLat * r) * math.cos(katseLon * r), math.cos(katseLat * r) * math.sin(katseLon * r), math.sin(katseLat * r));
+            float sinK = (float)math.dot(n, math.normalize(ecef));
+            var vari = Color.Lerp(new Color(1f, 0.55f, 0.3f), new Color(1f, 0.86f, 0.7f), Mathf.InverseLerp(0.05f, 0.2f, sinK));
+            vari = Color.Lerp(vari, Color.white, Mathf.InverseLerp(0.2f, 0.45f, sinK));
+            return (au, vari);
+        }
+
         void LateUpdate()
         {
             if (kamera == null) return;
+            PaivitaKatse();
             // Automaattivalotukseen auringon korkeus kameran alapisteessä (maan keskipiste georeferenssin origossa).
             if (kyyti != KyydinTila.Kauko && georeferenssi != null && Time.unscaledTime - valotusAika > 0.5f)
             {
@@ -627,7 +682,7 @@ namespace Matkakirja.Natiivi
                 var gtv = georeferenssi.transform;
                 Vector3 keski = gtv.TransformPoint((Vector3)(Unity.Mathematics.float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(Unity.Mathematics.double3.zero));
                 Vector3 au = gtv.TransformDirection((Vector3)(Unity.Mathematics.float3)georeferenssi.TransformEarthCenteredEarthFixedDirectionToUnity(
-                    Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()))).normalized;
+                    Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.AurinkoKello()))).normalized;
                 Matkakirja.Linssit.Kyytipino.AurinkoSin = Vector3.Dot((kamera.transform.position - keski).normalized, au);
             }
             Matkakirja.Linssit.Kyytipino.Paivita(kamera, kyyti != KyydinTila.Kauko);
@@ -844,8 +899,16 @@ namespace Matkakirja.Natiivi
             return m;
         }
 
+        void OnEnable()
+        {
+            IssNyt.AurinkoViite = KatseViite;
+            Aurinko.KyydinAurinko = KyydinAurinkoArvo;
+        }
+
         void OnDisable()
         {
+            if (IssNyt.AurinkoViite == (System.Func<(double lat, double lon)?>)KatseViite) IssNyt.AurinkoViite = null;
+            if (Aurinko.KyydinAurinko == (System.Func<(Vector3 suunta, Color vari)?>)KyydinAurinkoArvo) Aurinko.KyydinAurinko = null;
             // Kartta ei peri S2-sävyä (Natiivisepän ehto 1.10.): varjostimen globaali pois, kun kerros ei ole käytössä.
             Matkakirja.Linssit.Kyytipino.S2 = false;
             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
@@ -854,6 +917,8 @@ namespace Matkakirja.Natiivi
 
         void OnDestroy()
         {
+            if (IssNyt.AurinkoViite == (System.Func<(double lat, double lon)?>)KatseViite) IssNyt.AurinkoViite = null;
+            if (Aurinko.KyydinAurinko == (System.Func<(Vector3 suunta, Color vari)?>)KyydinAurinkoArvo) Aurinko.KyydinAurinko = null;
             Matkakirja.Linssit.Kyytipino.S2 = false;
             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
             AsetaS2Reuna(false);

@@ -33,6 +33,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>A/B (`astro kyyti taivas 0|1`): oikeat tähdet ja Kuu pois (kuvapari).</summary>
         public static bool Pois;
+        /// <summary>Auringon suunta Unityn maailmassa (viimeisin päivitys; IssKameraKuvan linssiheijastukset).</summary>
+        public static Vector3 AurinkoMaailma;
         /// <summary>A/B (`astro kyyti taivas 2`): ISS maan varjossa pakotettuna (tähdet täysinä), kuvapariin, kun testikello osuu
         /// hetkeen, jolloin alapisteessä on yö mutta ISS vielä auringossa (laite taivas1 28.9.: aurinko −19,4° → tähdet 0,3).</summary>
         public static bool VarjoPakko;
@@ -223,7 +225,7 @@ namespace Matkakirja.Natiivi
             Vector3 ex = X * c - Y * s, ey = X * s + Y * c;
 
             // Aurinko ja ISS:n varjo (kamera ~ ISS): sylinterivarjo ECEF:ssä.
-            var aur = Aurinko.AurinkoEcef(utc);
+            var aur = Aurinko.AurinkoEcef(IssNyt.AurinkoKello());   // vuorokaudenaika: aurinko omasta kellostaan, tähdet ja Kuu oikeassa ajassa
             Vector3 aurMaailma = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(aur)).normalized;
             var kameraEcef = g.TransformUnityPositionToEarthCenteredEarthFixed((float3)gt.InverseTransformPoint(kamera.transform.position));
             double d = math.dot(kameraEcef, aur);
@@ -244,7 +246,16 @@ namespace Matkakirja.Natiivi
             Vector3 kuuMaailma = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(
                 new double3(kuuEcef.x, kuuEcef.y, kuuEcef.z))).normalized;
             kuuMat.SetVector(IdSuunta, kuuMaailma);
-            if (aurinkoMat != null) aurinkoMat.SetVector(IdSuunta, aurMaailma);
+            AurinkoMaailma = aurMaailma;
+            if (aurinkoMat != null)
+            {
+                aurinkoMat.SetVector(IdSuunta, aurMaailma);
+                // Kiertoratanousu (Avaruus.KuvanNousu): flare suuremmaksi (hehkun kulmasäde 3° → 7,5°, kiekko pysyy 0,27°:ssa).
+                float n = Matkakirja.Natiivi.Avaruus.Kuvaputki ? Matkakirja.Natiivi.Avaruus.KuvanNousu : 0f;
+                aurinkoMat.SetFloat(IdKoko, 0.0524f * (1f + 1.5f * n));
+                aurinkoMat.SetFloat("_Kiekko", 0.09f / (1f + 1.5f * n));
+                aurinkoMat.SetFloat("_Sateet", 1f + 2f * n);
+            }
             kuuMat.SetVector(IdAurinko, aurMaailma);
             kuuMat.SetFloat(IdKoko, Mathf.Tan(KuunKulma * 0.5f * Mathf.Deg2Rad));
             if (Time.unscaledTime >= seuraavaLoki) { seuraavaLoki = Time.unscaledTime + 10f; Kirjaa(ex, ey, Z, kuuMaailma, varjossa); }

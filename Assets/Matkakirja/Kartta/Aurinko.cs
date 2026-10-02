@@ -56,6 +56,17 @@ namespace Matkakirja
         /// <summary>Kohta (koneen pituusaste), jonka paikallinen aika määrää auringon, kun Aika = null.</summary>
         public void Kohde(double pituusAste) => kohdePituus = pituusAste;
 
+        /// <summary>
+        /// Kyydin aurinko (ISS-kyydin vuorokaudenaika, Linssiseppä 1.10.2026, Natiivisepän OK): kun linssi on päällä ja tämä palauttaa
+        /// arvon, valo tulee auringon suunnasta (maailma, kohti aurinkoa) ja värillä (lämmin matalalla auringolla) 0,5 s:n liu'ulla
+        /// kameravalon sijaan, joten rinteet ja vuoret varjostuvat aamulla ja illalla. null → täsmälleen kameravalo kuten ennen.
+        /// AstronauttiKerros asettaa kyydissä ja nollaa kyydistä poistuttaessa ja OnDestroy:ssa.
+        /// </summary>
+        public static Func<(Vector3 suunta, Color vari)?> KyydinAurinko;
+        float kyyti;
+        Quaternion kyydinKierto = Quaternion.identity;
+        Color kyydinVari = Color.white, perusVari = Color.white;
+
         /// <summary>Kokeilu (komento "lentoharmaa sumu pois"): etäisyyssumu pois lennolta.</summary>
         public static bool SumuEstetty;
 
@@ -127,6 +138,7 @@ namespace Matkakirja
                 // Pehmeä valo ilman heittovarjoja (planeetan mittakaavassa varjokartta ei toimi; rinteet varjostuvat N·L:stä).
                 valo.shadows = LightShadows.None;
                 perusIntensiteetti = valo.intensity;
+                perusVari = valo.color;
             }
             perusAmbientti = RenderSettings.ambientLight;
             kameraKomp = transform.parent != null ? transform.parent.GetComponent<Camera>() : null;
@@ -172,7 +184,15 @@ namespace Matkakirja
             taustaKartta = Mathf.MoveTowards(taustaKartta, kk != null && kk.OmaTausta ? 0f : 1f, dt / 0.5f);
             float rinneTavoite = RinnevaloSallittu && kierto != null && !kierto.Portissa ? (float)Karttavalo.Osuus(kierto.korkeus) : 0f;
             rinne = Mathf.MoveTowards(rinne, rinneTavoite, dt / 0.5f);
-            liukuu = osuus > 0f || osuus != osuus0 || kartta != kartta0 || taustaKartta != tausta0 || rinne != rinne0;
+            float kyyti0 = kyyti;
+            var ka = KyydinAurinko != null && kk != null && kk.LinssiPaalla ? KyydinAurinko() : null;
+            kyyti = Mathf.MoveTowards(kyyti, ka.HasValue ? 1f : 0f, dt / 0.5f);
+            if (ka.HasValue)
+            {
+                kyydinKierto = Quaternion.LookRotation(-ka.Value.suunta, kamera != null ? kamera.up : Vector3.up);
+                kyydinVari = ka.Value.vari;
+            }
+            liukuu = osuus > 0f || osuus != osuus0 || kartta != kartta0 || taustaKartta != tausta0 || rinne != rinne0 || kyyti != kyyti0;
             Rinne = rinne * rinne * (3f - 2f * rinne) * kartta * (1f - s);
 
             // Kameran alapisteen normaali n0 (geosentrinen, kuten tileset-varjostimen tasaus).
@@ -214,6 +234,12 @@ namespace Matkakirja
                 var aurinko = Quaternion.LookRotation(-suunta, kamera != null ? kamera.up : Vector3.up);
                 valonKierto = Quaternion.Slerp(valonKierto, aurinko, s);
             }
+            if (kyyti > 0f)
+            {
+                valonKierto = Quaternion.Slerp(valonKierto, kyydinKierto, kyyti);
+                valo.color = Color.Lerp(perusVari, kyydinVari, kyyti);
+            }
+            else if (kyyti0 > 0f) valo.color = perusVari;
             valo.transform.rotation = valonKierto;
             // Tileset-varjostimen normaalien tasaus samalla painolla (0 lennolla, linssissä ja pallon mittakaavassa).
             KorkeusKerroin.Tasaus(Rinne);
@@ -296,6 +322,7 @@ namespace Matkakirja
                    $"ambientProbe[0,0] {RenderSettings.ambientProbe[0, 0]:0.0000}, N·L(kameran akseli) {Vector3.Dot(n0, valo != null ? -valo.transform.forward : n0):0.000}, " +
                    $"usva {Usva:0.00} (sallittu {UsvaSallittu}, raja {UsvaRaja:0.00}, vähintään {UsvaVahintaanM / 1000.0:0} km, taustakartta {taustaKartta:0.00}), " +
                    $"tausta {(kameraKomp != null ? kameraKomp.backgroundColor.ToString() : "-")} {(kameraKomp != null ? kameraKomp.clearFlags.ToString() : "")}, " +
+                   $"kyydin aurinko {(kyyti > 0f ? $"{kyyti:0.00} suunta {-(kyydinKierto * Vector3.forward)} väri {kyydinVari}" : "pois")}, " +
                    $"sumu {RenderSettings.fog} (lennon sumu {sumu}) " +
                    $"{RenderSettings.fogStartDistance:0}–{RenderSettings.fogEndDistance:0} m, kallistus {kierto?.KaytettyKallistus:0.0}°, " +
                    $"korkeus {kierto?.korkeus / 1000.0:0} km, lento {osuus:0.00}";

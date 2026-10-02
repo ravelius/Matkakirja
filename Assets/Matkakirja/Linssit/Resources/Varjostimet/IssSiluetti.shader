@@ -77,19 +77,21 @@ Shader "Matkakirja/Linssit/IssSiluetti"
                 // Masto keskellä ja sen molemmin puolin mattojen rako.
                 half masto = 1 - smoothstep(0.0035, 0.0035 + reuna, abs(s));
                 half rako = 1 - smoothstep(0.0075, 0.0075 + reuna, abs(s));
-                half a = saturate(max(max(sisalla * (1 - rako * (1 - masto)), putki), masto * step(0, t) * step(t, _Pituus)));
+                // Bokeh (400 mm:n etuala, _Sumeus > 0,02): pelkkä pehmeä muoto, ei teräviä mastoja, rakoja eikä kehysputkea.
+                half bokeh = step(0.02, _Sumeus);
+                half a = lerp(saturate(max(max(sisalla * (1 - rako * (1 - masto)), putki), masto * step(0, t) * step(t, _Pituus))), sisalla, bokeh);
                 if (a <= 0.001) return 0;
 
                 // Musta vastavalosiluetti (omistaja 30.9.2026 Päätoimittajan kautta: "musta siluetti"): matto ja runko lähes
                 // mustia, rakenne erottuu vain aavistuksena; auringon puoleisessa reunassa ohut lämmin reunavalo.
-                half lohko = Viiva(t, 0.052, 0.0022);
+                half lohko = Viiva(t, 0.052, 0.0022) * (1 - bokeh);
                 half3 vari = half3(0.006, 0.007, 0.010) + half3(0.012, 0.010, 0.008) * lohko;
                 float3 aur = normalize(_AurinkoRuutu.xyz);
                 half nakyy = saturate(_AurinkoRuutu.w);
                 float puoli = sign(dot(float2(aur.x, aur.y), n));      // kummalla puolella aurinko on
                 half reunus = (1 - smoothstep(0.0, 0.0022, w - s * puoli)) * sisalla * nakyy;
                 half karki = (1 - smoothstep(0.0, 0.003, abs(t - _Pituus))) * step(0, s * puoli) * nakyy;
-                vari += half3(0.55, 0.45, 0.32) * saturate(reunus + karki * 0.6) * 0.7;
+                vari += half3(0.55, 0.45, 0.32) * saturate(reunus + karki * 0.6) * 0.7 * (1 - bokeh);
                 a *= _Peitto;
                 return half4(vari * a, a);
             }

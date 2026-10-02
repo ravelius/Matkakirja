@@ -106,7 +106,7 @@ namespace Matkakirja.Natiivi
             if (!piirto.enabled) { if (nakyy && !Pois && kuva != null) piirto.enabled = true; else return; }
             if (Pois) { piirto.enabled = false; return; }
             var gt = g.transform;
-            var a = (Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.Kello()));
+            var a = (Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(Aurinko.AurinkoEcef(Matkakirja.Linssit.Iss.IssNyt.AurinkoKello()));
             materiaali.SetVector(IdAurinko, gt.TransformDirection(a).normalized);
             materiaali.SetVector(IdKeskus, transform.position);
             materiaali.SetVector(IdAkseli, gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(0, 0, 1))).normalized);
