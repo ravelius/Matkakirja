@@ -179,7 +179,7 @@
   outline-offset: 2px;
 }
 
-/* Päivärivi tasorivin alla (omistaja 2.10.2026 klo 15.1x): "Päivä 1/80, aamu · 400 £" ja oikeassa reunassa punaisena
+/* Päivärivi tasorivin alla (omistaja 2.10.2026 klo 15.1x): "Päivä 1/80, aamu · £400" ja oikeassa reunassa punaisena
    päivän kulut. Tietorivi, ei nappi. */
 .valikko-paivarivi {
   display: flex;

@@ -206,7 +206,7 @@ test('koenappi näkyy vain kehittäjätilassa ja kytketyllä palvelimella', () =
   } finally {
     globalThis.localStorage = alkuperainen;
   }
-  assert.equal(REALTIME_NAPPI_TEKSTIT.valmis, 'Puhu Pululle (koe)');
+  assert.equal(REALTIME_NAPPI_TEKSTIT.valmis, 'Live');
 });
 
 test('PCM: taajuusvalinta, näytteistys ja base64-edestakaisin', () => {
