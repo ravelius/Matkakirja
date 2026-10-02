@@ -441,6 +441,8 @@ namespace Matkakirja.Natiivi
         /// <summary>A/B: Pulu vaakana Cupolan alakulmaan nousevan puomin kanssa (oletus päällä).</summary>
         public static bool PuluAlas = true;
 
+        IVisualElementScheduledItem puluJalki;
+
         void PaivitaPulu()
         {
             if (!UiNakymat.Olemassa) return;
@@ -684,6 +686,15 @@ namespace Matkakirja.Natiivi
             this.ikkuna = ikkuna;
             PaivitaKehys();
             PaivitaPulu();
+            // Näkymän vaihdon animaatio siirtää pöydän worldBoundia: Pulun paikka (AlaVara) mitattiin kesken siirtymän ja jäi
+            // väärälle korkeudelle, jolloin robottikäden puomi saattoi peittää pienen paneelin (kuva 377bb8a3). Mitataan uudelleen
+            // 100 ms:n välein 1,5 s ajan vaihdon jälkeen.
+            if (tila != edellinenTila)
+            {
+                puluJalki?.Pause();
+                puluJalki = juuri.schedule.Execute(PaivitaPulu).Every(100).ForDuration(1500);
+                Matkakirja.Ruudunpaivitys.Herata(1.6f);
+            }
             if (tila != edellinenTila) { edellinenTila = tila; TilaMuuttui?.Invoke(tila); }
             if (auki != oliAuki) AukiMuuttui?.Invoke(auki);
             PaivitaCupolanKatto(auki && ikkuna);
