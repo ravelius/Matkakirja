@@ -333,3 +333,23 @@ Haettu Commonsin rajapinnasta (lisenssikentät sanatarkasti) ja Metin rajapinnas
 - **Laatu:** erinomainen, korkea resoluutio, tummat sävyt sopivat kaiuksi.
 
 **Yhteenveto:** kuvat 2 ja 3 ovat selkeästi vapaat ja laadukkaat; kuva 1 on aito ja vapaa, mutta rakeinen ja tiheä — jos Linnanrakentaja kokee sen liian sekavaksi, kerro Päätoimittajalle, niin pyydetään Codexia piirtämään selkeämpi versio (esim. kaksi hahmoa: kilpeä pitävä Sokrates ja kaatunut Alkibiades) Carstensin sommitelman mukaan tai Platonin kuvauksen pohjalta. Muut Sokrates-pelastaa-Alkibiades-kuvat eivät tulleet vastaan Commonsin haussa (hakusanat: "Socrates Alcibiades Potidaea saves", "Socrate sauvant Alcibiade", "Sokrates rettet Alkibiades").
+
+### 7.10 Prologin kytkimen napsahdus ja hallin kaiku (omistaja 2.10. 08.5x)
+
+Haku: OpenGameArt (CC0), Kenney (CC0), Wikimedia Commons (ei sopivia: haut "knife switch", "main switch", "clunk", "thunk", "breaker" antoivat vain LinguaLibre-ääntämistiedoston), Freesound (jmuehlhans-IR vaatii kirjautumisen → ei). Ladattu scratchpadiin omistajan luvalla (OpenGameArt Mechanical Sounds, 100 CC0 SFX ja Kenney Impact Sounds); mitattu ffmpegillä (kesto, huippu- ja RMS-taso, matalataajuinen energia < 250 Hz). Kuuntelematta; valinta perustuu mittauksiin ja pakettien kuvauksiin. Valitut tiedostot kopioitu kansioon `/Users/Shared/Claude/siirto-sisaltokirjuri/aanet-kytkin/` (ei repoon, Linnanrakentaja/Pelikoodari päättävät käytöstä).
+
+| # | Tiedosto | Lähde | Lisenssi (sanatarkasti) | Kesto | Tekniikka | Arvio |
+|---|---|---|---|---|---|---|
+| **1 (suositus)** | **impactMetal_heavy_001.ogg** | Kenney, *Impact Sounds* (130 tiedostoa), <https://kenney.nl/assets/impact-sounds> | **"License: (Creative Commons Zero, CC0)"**, <http://creativecommons.org/publicdomain/zero/1.0/>; "free to use in personal, educational and commercial projects … crediting Kenney … is not mandatory" (tiedosto License.txt) | **0,36 s** | OGG, 44,1 kHz stereo; huippu −1,1 dB, RMS −23,6 dB; matalataajuinen RMS −24,5 dB (suurin osa energiasta < 250 Hz) | Raskas metallinen "clunk", lyhyt, kuiva (ei kaikua); matala runko ja metallinen isku |
+| **2** | **impactPlate_heavy_001.ogg** | Kenney, *Impact Sounds* | sama CC0 | **0,35 s** | OGG, 44,1 kHz stereo; huippu −0,9 dB, RMS −17,4 dB; matala RMS −17,8 dB | Erittäin raskas, matalaenerginen "thud"/levyn isku; voimakkain mitatuista |
+| **3** | **slam_03.ogg** | rubberduck, *100 CC0 SFX*, <https://opengameart.org/content/100-cc0-sfx> | **"CC0 (Creative Commons Zero)"** (OpenGameArtin sivu, lisenssikenttä) | **0,56 s** | OGG, 48 kHz stereo; huippu −2,5 dB, RMS −17,8 dB; matala RMS −21,3 dB | Raskas ovi-/metalli-slam, kuiva, lyhyt kaiku |
+| varalle | **switch_02.ogg** (sama pakki) | rubberduck | CC0 | **0,46 s** | OGG, 48 kHz stereo; RMS −26,7 dB; matala RMS −44,6 dB | Oikea "switch"-ääni, mutta kevyt (vähän matalia); sopii lisäkerrokseksi iskun päälle |
+| varalle | **lightclunk1.wav** | BMacZero, *Mechanical Sounds*, <https://opengameart.org/content/mechanical-sounds> | **"CC0 (Creative Commons Zero)"** | **0,37 s** | WAV, 44,1 kHz mono; huippu −5,0 dB, RMS −29,0 dB | Kevyt "clunk"; liian kevyt pääääneksi |
+
+Suositus: **1 + 2 kerroksina** (Metal_heavy_001 isku ja Plate_heavy_001 matala runko, esim. rungon viive 5–10 ms), tai 1 yksin. Kaiku lisätään itse (kuivat äänet).
+
+**Hallin impulssivaste (kaiku):**
+- **OpenAIR, Usina del Arte Symphony Hall** (konserttisali, Buenos Aires): CC BY 4.0 ("Creative Commons Attribution 4.0 International License" hakutuloksen mukaan), sivu <https://www.openair.hosted.york.ac.uk/?page_id=770>. **Sivun varmenne on vanhentunut, joten en voinut lukea tai ladata sitä enkä varmentaa lisenssiä sanatarkasti**; sama koskee "Lady Chapel, St Albans Cathedral" (CC BY 4.0 hakutuloksen mukaan, <https://www.openair.hosted.york.ac.uk/?page_id=595>) ja Hamilton Mausoleumia (pitkä jälkikaiunta ~15 s, lisenssi tarkistamatta, <https://www.openair.hosted.york.ac.uk/?page_id=502>).
+- **Freesound "Impulse Response Church" (jmuehlhans):** CC0, kirkko Wienissä (Karlskirche), 5,16 s, 44,1 kHz 16-bit mono, RT60 5,0 s — **lataus vaatii kirjautumisen ("Login to download")** → ei, ellei tiliä ole.
+- **Voxengo** (<https://www.voxengo.com/impulses/>): ilmaiset IR:t, mutta oma lisenssi (ei CC) → ei kelpaa.
+- **Suositus:** koska varmennettavissa oleva CC0/CC BY -IR ei ollut ladattavissa (OpenAIR-varmenne, Freesound-tili), **algoritminen kaiku riittää** (halli, jälkikaiunta ~3–5 s; Web Audio ConvolverNode ei tarvita; esim. generoitu impulssi/ReverbNode). Jos halutaan oikea IR: avaa OpenAIR selaimessa (varmennevaroitus ohitettavissa), tarkista lisenssi sanatarkasti ja kirjaa; Usina del Arte Symphony Hall tai Lady Chapel ovat CC BY 4.0 (attribuutio).
