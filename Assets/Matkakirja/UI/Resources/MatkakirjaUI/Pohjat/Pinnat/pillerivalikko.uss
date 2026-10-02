@@ -177,18 +177,57 @@
 }
 
 .mk-pillerivalikko--v2 .mk-paivarivi__teksti {
-    flex-grow: 1;
     flex-shrink: 1;
     font-size: var(--tk-koko-apuri);
     color: var(--tk-paperi-muste-pehmea);
     white-space: nowrap;
 }
 
+/* £ omana merkkinään Luku-kirjasimella kuten pillerissä (.mk-pilleri__punta; Kone-kirjasimen £ näytti koukulta). */
+.mk-pillerivalikko--v2 .mk-paivarivi__punta {
+    margin-right: 1px;
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-paperi-muste-pehmea);
+    -unity-font-style: normal;
+}
+
+.mk-pillerivalikko--v2 .mk-paivarivi__raha {
+    flex-grow: 1;
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-paperi-muste-pehmea);
+    white-space: nowrap;
+}
+
 .mk-pillerivalikko--v2 .mk-paivarivi__kulu {
+    flex-direction: row;
+    align-items: center;
     flex-shrink: 0;
     margin-left: var(--tk-vali-s);
+}
+
+.mk-pillerivalikko--v2 .mk-paivarivi__kuluteksti,
+.mk-pillerivalikko--v2 .mk-paivarivi__kulu > .mk-paivarivi__punta {
     font-size: var(--tk-koko-apuri);
     color: var(--tk-tila-virhe);
+}
+
+/* Tasorivin ja päivärivin yhteinen pohja (omistaja 2.10.2026 klo 20.2x): ÄÄNET-laatan tyyli (päällä-kytkimen pergamentti-
+   täyttö ja kulma-nappi) valikon levyisenä; rivit sen sisällä ilman omaa taustaa. */
+.mk-pillerivalikko--v2 .mk-tasopohja {
+    margin-top: var(--tk-vali-s);
+    padding-bottom: var(--tk-vali-xs);
+    border-radius: var(--tk-kulma-nappi);
+    background-color: var(--tk-paperi-pergamentti);
+}
+
+.mk-pillerivalikko--v2 .mk-tasopohja > .mk-luetteloryhma {
+    margin-top: 0;
+}
+
+.mk-pillerivalikko--v2 .mk-tasopohja .mk-luettelorivi,
+.mk-pillerivalikko--v2 .mk-tasopohja .mk-luettelorivi:active {
+    border-radius: var(--tk-kulma-nappi);
+    background-color: initial;
 }
 
 /* Viiva ennen alariviä (web .tk-paneeli__erotin: marginaali vali-m, reunusväri). */
