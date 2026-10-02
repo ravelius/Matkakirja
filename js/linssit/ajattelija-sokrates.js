@@ -146,28 +146,29 @@ export const SOKRATES = Object.freeze({
     ],
     // Kierros 1 (virta1): häivytys sisään 462–540, täysi, häivytys ulos 900–950.
     ajat: [462, 540, 900, 950],
-    // PAIKKAMERKIT (tekstit.json 2.10.): Sisältökirjurin 18 kreikkalaista katkelmaa korvaavat nämä.
+    // Sisältökirjurin 18 varmennettua kreikkalaista katkelmaa (Stephanus-viite) ja 2 suomenkielistä (21d, Kriton 49b),
+    // fontit riveittäin (Linnanrakentaja tekstit.json taustarivit 08efbe694; docs/raportit/sokrates-taustavirta-20261002.json).
     rivit: [
-      ['el', 'baskerville', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
-      ['el', 'times', 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι'],
-      ['el', 'baskerville', 'οὐδαμῶς ἄρα δεῖ ἀδικεῖν'],
-      ['el', 'times', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
-      ['fi', 'iowan-ohut', 'Mitä en tiedä, en luulekaan tietäväni.'],
-      ['el', 'baskerville', 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι'],
-      ['el', 'times', 'οὐδαμῶς ἄρα δεῖ ἀδικεῖν'],
-      ['fi', 'iowan-ohut', 'Vääryyttä ei siis saa tehdä koskaan.'],
-      ['el', 'baskerville', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
-      ['el', 'times', 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι'],
-      ['el', 'iowan-ohut', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
-      ['el', 'baskerville', 'οὐδαμῶς ἄρα δεῖ ἀδικεῖν'],
-      ['el', 'times', 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι'],
-      ['el', 'baskerville', 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι'],
-      ['el', 'times', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
-      ['el', 'baskerville', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
-      ['el', 'times', 'οὐδαμῶς ἄρα δεῖ ἀδικεῖν'],
-      ['el', 'iowan-ohut', 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι'],
-      ['el', 'baskerville', 'οὐδαμῶς ἄρα δεῖ ἀδικεῖν'],
-      ['el', 'times', 'ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],
+      ['el', 'gentium-plus', 'οὗτος ὑμῶν, ὦ ἄνθρωποι, σοφώτατός ἐστιν, ὅστις ὥσπερ Σωκράτης ἔγνωκεν ὅτι οὐδενὸς ἄξιός ἐστι τῇ ἀληθείᾳ πρὸς σοφίαν.'],   // Apol. 23b
+      ['el', 'gfs-didot', 'ἕωσπερ ἂν ἐμπνέω καὶ οἷός τε ὦ, οὐ μὴ παύσωμαι φιλοσοφῶν'],   // Apol. 29d
+      ['el', 'gfs-solomos', 'προσκείμενον τῇ πόλει ὑπὸ τοῦ θεοῦ ὥσπερ ἵππῳ μεγάλῳ μὲν καὶ γενναίῳ, ὑπὸ μεγέθους δὲ νωθεστέρῳ καὶ δεομένῳ ἐγείρεσθαι ὑπὸ μύωπός τινος'],   // Apol. 30e
+      ['el', 'gentium-plus', 'καὶ τυγχάνει μέγιστον ἀγαθὸν ὂν ἀνθρώπῳ τοῦτο, ἑκάστης ἡμέρας περὶ ἀρετῆς τοὺς λόγους ποιεῖσθαι καὶ τῶν ἄλλων περὶ ὧν ὑμεῖς ἐμοῦ ἀκούετε διαλεγομένου καὶ ἐμαυτὸν καὶ ἄλλους ἐξετάζοντος, ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ'],   // Apol. 38a
+      ['fi', 'iowan-ohut', 'Mitä en tiedä, en luulekaan tietäväni.'],   // Platon, Puolustuspuhe 21d
+      ['el', 'gfs-solomos', 'ἢ γὰρ οἷον μηδὲν εἶναι μηδὲ αἴσθησιν μηδεμίαν μηδενὸς ἔχειν τὸν τεθνεῶτα'],   // Apol. 40c
+      ['el', 'gentium-plus', 'οὐκ ἔστιν ἀνδρὶ ἀγαθῷ κακὸν οὐδὲν οὔτε ζῶντι οὔτε τελευτήσαντι, οὐδὲ ἀμελεῖται ὑπὸ θεῶν τὰ τούτου πράγματα'],   // Apol. 41d
+      ['fi', 'iowan-ohut', 'Vääryyttä ei siis saa tehdä koskaan.'],   // Platon, Kriton 49b
+      ['el', 'gfs-solomos', 'οὐ τὸ ζῆν περὶ πλείστου ποιητέον, ἀλλὰ τὸ εὖ ζῆν'],   // Crito 48b
+      ['el', 'gentium-plus', 'ταῦτα, ὦ φίλε ἑταῖρε Κρίτων, εὖ ἴσθι ὅτι ἐγὼ δοκῶ ἀκούειν, ὥσπερ οἱ κορυβαντιῶντες τῶν αὐλῶν δοκοῦσιν ἀκούειν, καὶ ἐν ἐμοὶ αὕτη ἡ ἠχὴ τούτων τῶν λόγων βομβεῖ'],   // Crito 54d
+      ['el', 'gfs-didot', 'κινδυνεύουσι γὰρ ὅσοι τυγχάνουσιν ὀρθῶς ἁπτόμενοι φιλοσοφίας λεληθέναι τοὺς ἄλλους ὅτι οὐδὲν ἄλλο αὐτοὶ ἐπιτηδεύουσιν ἢ ἀποθνῄσκειν τε καὶ τεθνάναι.'],   // Phaed. 64a
+      ['el', 'gfs-solomos', 'οὐ πείθω, ὦ ἄνδρες, Κρίτωνα, ὡς ἐγώ εἰμι οὗτος Σωκράτης, ὁ νυνὶ διαλεγόμενος καὶ διατάττων ἕκαστον τῶν λεγομένων, ἀλλ᾽ οἴεταί με ἐκεῖνον εἶναι, ὃν ὄψεται ὀλίγον ὕστερον νεκρόν'],   // Phaed. 115c
+      ['el', 'gentium-plus', 'ὦ Κρίτων, τῷ Ἀσκληπιῷ ὀφείλομεν ἀλεκτρυόνα· ἀλλὰ ἀπόδοτε καὶ μὴ ἀμελήσητε.'],   // Phaed. 118a
+      ['el', 'gfs-didot', 'ἑστήκει ἐξ ἑωθινοῦ φροντίζων τι'],   // Symp. 220c
+      ['el', 'gfs-solomos', 'οὐ δύναμαί πω κατὰ τὸ Δελφικὸν γράμμα γνῶναι ἐμαυτόν· γελοῖον δή μοι φαίνεται'],   // Phdr. 229e
+      ['el', 'gentium-plus', 'φιλομαθὴς γάρ εἰμι· τὰ μὲν οὖν χωρία καὶ τὰ δένδρα οὐδέν μ᾽ ἐθέλει διδάσκειν, οἱ δ᾽ ἐν τῷ ἄστει ἄνθρωποι'],   // Phdr. 230d
+      ['el', 'gfs-didot', 'ἰδὲ γὰρ ἀνθρώπους οἷον ἐν καταγείῳ οἰκήσει σπηλαιώδει, ἀναπεπταμένην πρὸς τὸ φῶς τὴν εἴσοδον ἐχούσῃ μακρὰν παρὰ πᾶν τὸ σπήλαιον, ἐν ταύτῃ ἐκ παίδων ὄντας ἐν δεσμοῖς'],   // Resp. 514a
+      ['el', 'gfs-solomos', 'τὸ δὲ αἴτιον τούτου τόδε· μαιεύεσθαί με ὁ θεὸς ἀναγκάζει, γεννᾶν δὲ ἀπεκώλυσεν.'],   // Tht. 150c
+      ['el', 'gentium-plus', 'βουλοίμην μὲν ἂν ἔγωγε οὐδέτερα· εἰ δ᾽ ἀναγκαῖον εἴη ἀδικεῖν ἢ ἀδικεῖσθαι, ἑλοίμην ἂν μᾶλλον ἀδικεῖσθαι ἢ ἀδικεῖν.'],   // Grg. 469c
+      ['el', 'gfs-didot', 'ἐμαυτὸν καταμέμφομαι ὡς οὐκ εἰδὼς περὶ ἀρετῆς τὸ παράπαν· ὃ δὲ μὴ οἶδα τί ἐστιν, πῶς ἂν ὁποῖόν γέ τι εἰδείην;'],   // Men. 71b
     ],
   },
   // Blenderin gobot sokrates_gobo.py:n fonteilla (macOS/iOS-järjestelmäfontit; polytoninen kreikka).
@@ -176,6 +177,10 @@ export const SOKRATES = Object.freeze({
     baskerville: { perhe: 'Baskerville, "Baskerville Old Face", "Times New Roman", serif', paino: 'normal' },
     times: { perhe: '"Times New Roman", Times, serif', paino: 'italic normal' },
     'iowan-ohut': { perhe: '"Iowan Old Style", Charter, Palatino, serif', paino: 'italic normal' },
+    // Taustavirran kreikka (SIL OFL 1.1; ladataan ämpäristä FontFacella vasta linssissä, ks. js/linssit/ajattelija.js).
+    'gentium-plus': { perhe: '"Gentium Plus", serif', paino: 'normal', tiedosto: 'ajattelijat/fontit/v1/GentiumPlus-Regular.ttf' },
+    'gfs-didot': { perhe: '"GFS Didot", serif', paino: 'normal', tiedosto: 'ajattelijat/fontit/v1/GFSDidot-Regular.ttf' },
+    'gfs-solomos': { perhe: '"GFS Solomos", serif', paino: 'normal', tiedosto: 'ajattelijat/fontit/v1/GFSSolomos.otf' },
   },
   // Videotykin "epätäydellisyys" (v4): kromaattinen aberraatio ja tarkennuksen pehmeys.
   ca: 0.014,

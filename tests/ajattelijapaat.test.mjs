@@ -32,6 +32,10 @@ test('sarake lipun alla kartuutsin oikean reunan ulkopuolella; ei mahdu → alar
   // Puhelin, pieni kartuutsi (mitattu 393 × 852): nimirivi päättyy 804 → pää nousee kartuutsin viereen.
   const pieni = sarakkeenPaikka({ left: 20, bottom: 804 }, { left: 20, right: 240, bottom: 832 }, { korkeus: 64 });
   assert.deepEqual(pieni, { x: 248, y: 768, mahtuu: false });
+  // Avattu kartuutsi puhelimella (ruudun levyinen): sarake nousee kartuutsin yläpuolelle oikeaan reunaan.
+  const avattu = sarakkeenPaikka({ left: 150, bottom: 600 }, { left: 20, right: 373, top: 520, bottom: 832 },
+    { korkeus: 64, ruutuLeveys: 393 });
+  assert.deepEqual(avattu, { x: 393 - 64 - 8, y: 520 - 64 - 8, mahtuu: false, ylla: true });
 });
 
 test('vain kehittäjätilassa, enintään 3 allekkain, pohja rekisteröity neljään paikkaan', () => {

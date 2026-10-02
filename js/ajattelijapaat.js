@@ -43,11 +43,17 @@ export function kaantoKeskustaa(paaX, leveys) {
  * Sarakkeen paikka (näytön px): lipun alla, kartuutsin oikean reunan ulkopuolella. Kartuutsi on ruudun alareunaan
  * ankkuroitu, joten jos sarake ei mahdu lipun alle, se nousee niin, että alareuna on kartuutsin alareunan tasalla
  * (pieni ruutu: pää kartuutsin vieressä, ei ruudun ulkopuolella). `mahtuu` kertoo, mahtuiko sarake lipun alle.
+ * Jos sarake ei mahdu vaakasuunnassa (avattu kartuutsi puhelimella on ruudun levyinen; Linssiseppän mittaus
+ * 2.10.2026), se nousee kartuutsin yläpuolelle ruudun oikeaan reunaan.
  */
-export function sarakkeenPaikka(lippu, kartuutsi, { vali = 8, korkeus = 0 } = {}) {
+export function sarakkeenPaikka(lippu, kartuutsi, { vali = 8, korkeus = 0, leveys = PAAN_PIKSELIT, ruutuLeveys = Infinity } = {}) {
+  const x = Math.max(lippu.left, kartuutsi.right + vali);
+  if (x + leveys + vali > ruutuLeveys) {
+    return { x: ruutuLeveys - leveys - vali, y: Math.max(0, kartuutsi.top - korkeus - vali), mahtuu: false, ylla: true };
+  }
   const alle = lippu.bottom + vali;
   const mahtuu = alle + korkeus <= kartuutsi.bottom;
-  return { x: Math.max(lippu.left, kartuutsi.right + vali), y: mahtuu ? alle : Math.max(0, kartuutsi.bottom - korkeus), mahtuu };
+  return { x, y: mahtuu ? alle : Math.max(0, kartuutsi.bottom - korkeus), mahtuu };
 }
 
 /**
@@ -162,7 +168,7 @@ export function kytkeAjattelijaPaat(ui, { kehittaja = () => true } = {}) {
     const lippu = nakyva(k?.querySelector('.maapaneeli-lippu')) ?? nakyva(k?.querySelector('.maapaneeli-nimirivi'));
     if (!k || !lippu || !sarake) return null;
     const p = sarakkeenPaikka(lippu.getBoundingClientRect(), k.getBoundingClientRect(),
-      { korkeus: sarake.getBoundingClientRect().height });
+      { korkeus: sarake.getBoundingClientRect().height, ruutuLeveys: globalThis.innerWidth || Infinity });
     sarake.style.left = `${Math.round(p.x)}px`;
     sarake.style.top = `${Math.round(p.y)}px`;
     sarake.dataset.mahtuu = p.mahtuu ? '1' : '0';

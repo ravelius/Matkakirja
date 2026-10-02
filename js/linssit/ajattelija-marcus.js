@@ -4,7 +4,7 @@
  * linnanrakentaja-sokrates-bysti) sellaisinaan Blenderin koordinaateissa; yhteiset osat (prologi, taustavirran
  * projektorit, fontit, videotykki, kipsi) ovat samat kuin Sokrateella (ajattelija-sokrates.js).
  * Lähde: SMK KAS979, kipsivalos (Formeri: Paris, Louvre nr. 383), PDM 1.0; Scan the World / SMK.
- * Kierrosten 2–3 kaiut (uhri, Delacroix) tulevat kierrosten mukana; elämä-lappu ja Pulun kysymykset Sisältökirjurilta.
+ * Kierrosten 2–3 kaiut (uhri, Delacroix) tulevat kierrosten mukana; elämä-lappu ja Pulun kysymykset Sisältökirjurilta (2.10.).
  */
 import { SOKRATES } from './ajattelija-sokrates.js';
 
@@ -94,4 +94,26 @@ export const MARCUS = Object.freeze({
    */
   aani: { puhe: 'ajattelijat/marcus/v1/kierros1-puhe.mp3', musiikki: 'ajattelijat/marcus/v1/kierros1-musiikki.mp3' },
   syke: 'ajattelijat/marcus/v1/syke-musiikki.json',   // sokrates_syke.py Marcuksen musiikkiraidasta
+  // Kierroksen lopussa "Marcus Aureliuksen elämä" -lappu (Sisältökirjuri 2.10.2026, sisaltokirjuri-marcus-aurelius-20261002.md
+  // osio 9; lähteet tapahtumittain samassa osiossa). Kohderyhmä 13+, ei Historia Augusta -anekdootteja.
+  elama: {
+    otsikko: 'Marcus Aureliuksen elämä',
+    kappaleet: [
+      { otsikko: 'Rikkaan suvun poika', teksti: 'Marcus syntyi Roomassa 26.4.121. Hänen isänsä kuoli, kun Marcus oli kolmevuotias, ja poika kasvoi isoisänsä hoivissa.' },
+      { otsikko: 'Hadrianuksen valinta', teksti: 'Vuonna 138 keisari Hadrianus määräsi, että hänen seuraajansa Antoninus Pius adoptoi nuoren Marcuksen. Marcus oli nyt tulevan keisarin perillinen.' },
+      { otsikko: 'Stoalainen opettaja', teksti: 'Filosofian opettaja Rusticus antoi hänelle Epiktetoksen muistiinpanot, ja Marcus kääntyi stoalaisuuteen.' },
+      { otsikko: 'Kaksi keisaria', teksti: 'Vuonna 161 hän nousi valtaan mutta kieltäytyi hallitsemasta yksin: kanssakeisariksi tuli Lucius Verus. Valtakuntaa hallitsi ensimmäistä kertaa kaksi keisaria.' },
+      { otsikko: 'Sota ja rutto', teksti: 'Tonavan rajalla käytiin vuosina 166–180 sotia germaanikansoja vastaan. Samaan aikaan Antoninuksen rutto tappoi arvioiden mukaan miljoonia ihmisiä.' },
+      { otsikko: 'Kuolema Tonavalla', teksti: 'Marcus kuoli 17.3.180 Tonavan rajalla sotaretkellä. Vallan peri hänen poikansa Commodus.' },
+      { teksti: 'Marcus kirjoitti muistiinpanonsa itselleen kreikaksi; teos Itselleen on yksi tärkeimmistä lähteistä, joiden kautta stoalaisuutta tunnetaan.' },
+    ],
+  },
+  // PULU kierroksen lopussa: viisi kysymystä (Sisältökirjuri 2.10.2026, osio 3; sama jako kuin Sokrateella).
+  pulunKysymykset: [
+    'Mitä stoalaisuus on?',
+    'Miksi Marcus kirjoitti itselleen muistiinpanoja?',
+    'Millainen ihminen Marcus Aurelius oli?',
+    'Miten Marcus Aurelius vaikutti stoalaisuuteen?',
+    'Missä Marcuksen ajatukset näkyvät nykyään?',
+  ],
 });
