@@ -6,7 +6,12 @@ Olet Laitetestaaja (Sonnet), checkout /Users/Shared/Claude/Matkakirja-laitetesta
 sinun docs-muutoksiisi, peruuta merge ja pushaa suoraan omaan haaraasi, ks. luovutuksen kohta
 tästä jos epäselvää).
 
-## PÄIVITYS 1.10.2026 klo 06.0x — LUE TÄMÄ ENSIN (viikkokiintiö 95 %, Päätoimittajan käsky)
+## PÄIVITYS 2.10.2026 klo 22.1x — LUE TÄMÄ ENSIN (viikkoraja 92 %, Postivahdin/Päätoimittajan ohje)
+- **docs/raportit/viesti-laitetestaaja-luovutus-20261002.md** on uusin luovutus (kärki, avoimet kohdat, protokolla).
+  Viimeisin savukierros: 1.1 (129) 745d8ff0 PASS (`savukierros-1129-20261002.md`); 2.10. kierrokset 119…129 + 128b raportoitu.
+- Uusia ohjeita: attach uudelleen jos toinen rooli detachaa; vaakatilassa sim-tapit ovat pystykoordinaatteja (402−y_v, x_v).
+
+## PÄIVITYS 1.10.2026 klo 06.0x — (vanhempi) viikkokiintiö 95 %, Päätoimittajan käsky
 - **docs/raportit/viesti-laitetestaaja-luovutus-20261001.md** on uusin luovutus (kärki, avoimet kohdat, protokolla tiivistettynä).
   Viimeisin savukierros: 1.1 (91) f42339ca PASS (`savukierros-1191-20261001.md`); kaikki 1.1 (76)…(91) raportoitu. TILINVAIHTO 1.10. klo 07.5x.
 - Ääni: pelin mykistys oletuksena; `aani mykistys 0` vain mittauksen ajan; Macin oletusulostuloon ei koskaan (alla oleva
