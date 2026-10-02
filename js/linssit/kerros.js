@@ -21,7 +21,7 @@
  */
 
 import { el } from '../mapart.js';
-import { LINSSIT } from './rekisteri.js';
+import { LINSSIT, KEHITTAJALINSSIT } from './rekisteri.js';
 
 const NS = 'http://www.w3.org/2000/svg';
 
@@ -153,7 +153,7 @@ const ladatut = new Map();
  */
 export async function haeLinssi(tunnus) {
   if (ladatut.has(tunnus)) return ladatut.get(tunnus);
-  const rivi = LINSSIT.find((r) => r.tunnus === tunnus);
+  const rivi = LINSSIT.find((r) => r.tunnus === tunnus) ?? KEHITTAJALINSSIT.find((r) => r.tunnus === tunnus);
   if (!rivi || typeof rivi.tuo !== 'function') {
     ladatut.set(tunnus, null);
     return null;
@@ -179,7 +179,7 @@ export async function haeLinssi(tunnus) {
  * moduulien tuonti on halpaa — aineisto haetaan vasta lataa():ssa.
  */
 export async function haeKaikki() {
-  const linssit = await Promise.all(LINSSIT.map((rivi) => haeLinssi(rivi.tunnus)));
+  const linssit = await Promise.all([...LINSSIT, ...KEHITTAJALINSSIT].map((rivi) => haeLinssi(rivi.tunnus)));
   return linssit
     .filter(Boolean)
     .sort((a, b) => (a.jarjestys ?? 1000) - (b.jarjestys ?? 1000));
@@ -505,3 +505,5 @@ export class Linssikerros {
     });
   }
 }
+// Kehittäjätilan linssit (rekisteri.js): js/ui.js nakyvatLinssit näyttää ne kehittäjätilassa.
+export { KEHITTAJALINSSIT };

@@ -20,8 +20,8 @@ import { POHJAT_TYYLIT } from './tyylit.js';
 
 const POHJA_TYYLIN_TUNNUS = 'pohjat-tyyli';
 const POHJA_VETO_PX = 40;
-/** Kortin jatkeet, joiden napautus ei ole ohinapautus: Pulun chat ja -nappi sekä pohjan KORTTI (esim. visa). */
-const POHJA_EI_OHINAPAUTUS = '.pollo-paneeli, .pollo-nappi, .tk-kortti-tausta';
+/** Kortin jatkeet, joiden napautus ei ole ohinapautus: Pulun chat ja -nappi, PULU-pohjan kulma ja pohjan KORTTI (visa). */
+const POHJA_EI_OHINAPAUTUS = '.pollo-paneeli, .pollo-nappi, .tk-pulukulma, .tk-kortti-tausta';
 /** Avoimet pohjat avausjärjestyksessä: Esc sulkee ylimmän (yksi sulkupino). */
 const pohjaPino = [];
 
@@ -51,9 +51,15 @@ function pohjaSolmu(tagi, luokka, teksti) {
   return e;
 }
 
-function pohjaKuva(kuva, luokka, kuvaAuki = null, indeksi = 0) {
+/*
+ * PUUTTUVA KUVA POISTAA KUVAPAIKAN (omistaja 2.10.2026 klo 13.53: Bobovacin nostossa harmaa laatikko havainnekuvan
+ * paikalla, kun tiedosto puuttui ämpäristä). Sama sääntö kuin vanhalla kohdekortilla (js/fokuskohteet.js
+ * piirraKohdeKuva): virhe poistaa kehyksen, ja `poistui` antaa kutsujalle paikan korvata se (hero → viiva).
+ */
+function pohjaKuva(kuva, luokka, kuvaAuki = null, indeksi = 0, poistui = null) {
   const kehys = pohjaSolmu('figure', `tk-kuva ${luokka}`);
   const img = document.createElement('img');
+  img.addEventListener('error', () => { poistui?.(kehys); kehys.remove(); }, { once: true });
   img.src = kuva.url;
   img.alt = kuva.kuvateksti || '';
   img.loading = 'lazy';
@@ -87,7 +93,10 @@ export function pohjaSisalto(isa, d, { kuvaAuki = null } = {}) {
   const hero = d.kuvat.find((k) => k.rooli === 'hero');
   const upotus = d.kuvat.find((k) => k.rooli === 'upotus');
   const galleria = d.kuvat.filter((k) => k.rooli === 'galleria');
-  if (hero) isa.appendChild(pohjaKuva(hero, 'tk-kuva--hero', kuvaAuki, d.kuvat.indexOf(hero)));
+  if (hero) {
+    isa.appendChild(pohjaKuva(hero, 'tk-kuva--hero', kuvaAuki, d.kuvat.indexOf(hero),
+      (kehys) => { if (d.otsikko) kehys.before(pohjaSolmu('hr', 'tk-viiva')); }));
+  }
   else if (d.otsikko) isa.appendChild(pohjaSolmu('hr', 'tk-viiva'));
   if (galleria.length) {
     const nauha = pohjaSolmu('div', 'tk-galleria');
@@ -96,6 +105,7 @@ export function pohjaSisalto(isa, d, { kuvaAuki = null } = {}) {
       b.type = 'button';
       b.setAttribute('aria-label', k.kuvateksti || `Kuva ${i + 2}`);
       const img = document.createElement('img');
+      img.addEventListener('error', () => { b.remove(); if (!nauha.children.length) nauha.remove(); }, { once: true });
       img.src = k.url;
       img.alt = '';
       img.loading = 'lazy';
@@ -465,5 +475,59 @@ export function luoPohjaPaneeli(data, { teema, avaaja = null, sulje = null, esik
   }
   if (esikatselu) el.classList.add('tk-paneeli--esikatselu');
   paneeliSisalto(el, d, pohja);
+  return pohja;
+}
+
+/**
+ * KUVANÄKYMÄ: koko ruudun kuva- tai 3D-näkymä (tyylikirja: teema TUMMA, kuvia 1+, sulku ✕, veto alas, Esc). Natiivissa
+ * Kuvanakyma.cs (Astronautin kamera). ✕ on LASI-teemaa (Natiivi-UI 2.10.2026: kuvan päällä olevat ohjaimet ovat lasia,
+ * kuten linssin ohjaimessa), 44 pt, pyöreä, oikeassa yläkulmassa turva-alueen sisällä. Ohinapautusta ei ole, koska
+ * näkymä täyttää ruudun. Sisältö menee el.sisalto-solmuun; kutsuja vastaa omista eleistään.
+ *
+ * @param {{teema?: string, ohjainteema?: string, nimi?: string, sulje?: Function, vetoAlas?: boolean}} [asetukset]
+ */
+export function luoPohjaKuvanakyma({ teema = 'tumma', ohjainteema = 'lasi', nimi = '', sulje = null, vetoAlas = true } = {}) {
+  pohjatLataaTyyli();
+  const el = pohjaSolmu('section', `tk-kuvanakyma tk-teema-${teema} tk-piilossa`);
+  el.setAttribute('role', 'dialog');
+  if (nimi) el.setAttribute('aria-label', nimi);
+  const sisalto = pohjaSolmu('div', 'tk-kuvanakyma__sisalto');
+  const sulku = pohjaSolmu('button', `tk-kuvanakyma__sulku tk-teema-${ohjainteema}`, '✕');
+  sulku.type = 'button';
+  sulku.setAttribute('aria-label', 'Sulje');
+  el.append(sisalto, sulku);
+  let auki = false;
+  const pohja = {
+    el, sisalto, sulku,
+    modaali: false,
+    get auki() { return auki; },
+    avaa() {
+      if (auki) return pohja;
+      auki = true;
+      requestAnimationFrame(() => el.classList.remove('tk-piilossa'));
+      pohjaPinoon(pohja);
+      return pohja;
+    },
+    sulje() {
+      if (!auki) return;
+      auki = false;
+      el.classList.add('tk-piilossa');
+      pohjaPinosta(pohja);
+      sulje?.(pohja);
+    },
+  };
+  sulku.addEventListener('click', (e) => { e.stopPropagation(); pohja.sulje(); });
+  if (vetoAlas) {
+    // Veto alas sulkee: pystysuora liike yli 2 × POHJA_VETO_PX ja selvästi enemmän pysty- kuin vaakasuunnassa.
+    let alku = null;
+    el.addEventListener('pointerdown', (e) => { alku = { x: e.clientX, y: e.clientY }; });
+    el.addEventListener('pointerup', (e) => {
+      if (!alku) return;
+      const dx = e.clientX - alku.x, dy = e.clientY - alku.y;
+      alku = null;
+      if (dy > 2 * POHJA_VETO_PX && dy > 2 * Math.abs(dx)) pohja.sulje();
+    });
+    el.addEventListener('pointercancel', () => { alku = null; });
+  }
   return pohja;
 }
