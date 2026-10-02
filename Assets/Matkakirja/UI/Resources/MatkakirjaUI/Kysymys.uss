@@ -57,7 +57,7 @@
     margin-right: 9px;
     padding: 3px 10px 2px 10px;
     border-width: 1px;
-    border-radius: 12px;
+    border-radius: var(--tk-kulma-pieni);
     border-color: rgba(70, 51, 31, 0.55);
     font-size: 11px;
     letter-spacing: 18.18px; /* web 2px */
@@ -983,7 +983,7 @@
     padding: 4px 14px;
     border-width: 1px;
     border-color: rgba(122, 85, 20, 0.45);
-    border-radius: 18px;
+    border-radius: var(--tk-kulma-nappi);
     background-color: rgba(255, 252, 242, 0.7);
     color: #46331f;
 }

@@ -101,7 +101,7 @@ namespace Matkakirja.Natiivi
             s.minHeight = 44; s.paddingLeft = s.paddingRight = 14; s.marginLeft = s.marginRight = 4;
             s.fontSize = 15; s.color = tausta.HasValue ? Ruskea : new Color(0.96f, 0.93f, 0.86f);
             s.backgroundColor = tausta ?? new Color(0.08f, 0.1f, 0.16f, 0.72f);
-            s.borderTopLeftRadius = s.borderTopRightRadius = s.borderBottomLeftRadius = s.borderBottomRightRadius = 22;
+            s.borderTopLeftRadius = s.borderTopRightRadius = s.borderBottomLeftRadius = s.borderBottomRightRadius = Tyylikirja.Kulma.Nappi;
             s.borderTopWidth = s.borderBottomWidth = s.borderLeftWidth = s.borderRightWidth = 1;
             s.borderTopColor = s.borderBottomColor = s.borderLeftColor = s.borderRightColor = new Color(0.94f, 0.89f, 0.76f, 0.5f);
             Kirjasimet.Aseta(b, Kirjasin.Luku);
