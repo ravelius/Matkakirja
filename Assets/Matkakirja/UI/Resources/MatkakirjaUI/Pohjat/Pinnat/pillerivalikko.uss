@@ -169,11 +169,11 @@
     background-color: var(--tk-paperi-toiminto);
 }
 
-/* Päivärivi tasorivin nimen kohdalle (vasen sisennys = vali-xs + avatar 32 + vali-s = nappi-osuma 44). */
+/* Päivärivi alkaa avatarin kohdalta kuten webissä (#3875; Päätoimittaja 20.4x: ei 44 pt:n sisennystä nimen kohdalle). */
 .mk-pillerivalikko--v2 .mk-paivarivi {
     flex-direction: row;
     align-items: center;
-    padding: 0 var(--tk-vali-xs) var(--tk-vali-xs) var(--tk-nappi-osuma);
+    padding: 0 var(--tk-vali-xs) var(--tk-vali-xs) var(--tk-vali-xs);
 }
 
 .mk-pillerivalikko--v2 .mk-paivarivi__teksti {
