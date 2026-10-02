@@ -34,7 +34,8 @@ Seurantanäkymää ei ole (omistaja poisti 2.10.).
   kytkimen napsahdus äänitteeksi ajattelijat/yhteiset/v2/kytkin-kaiku.mp3; taustavirta.nopeus { mms 25, vaihtelu 0,15 }
   (uv/ruutu = mms/1000 × kerroin/30/(kork × laatan lev px/laatan kork px), kertoimet tasavälein 0,85–1,15 sekoitettuna siemenellä);
   kamera-avaimet Linnanrakentajan v11.
-- #3892 (pino #3884 → #3888 → #3891 → #3892): v11-alkukuvat (intro.otokset x = −|x|, intro.valo [1, (1, −0,35, 0,45)],
+- #3892 (pino #3884 → #3888 → #3891 → #3892, odottaa Päätoimittajan kuittausta): v11-alkukuvat (Linnanrakentaja d7b51a99f;
+  introkamerat x = min(−|x|, −0,22): Sokrates ruutu 57 ja Marcus ruutu 51 → x −0,22; intro.valo [1, (1, −0,35, 0,45)],
   keskiavaimet (1, 0,05, 0,5), 282 ennallaan; uusi intro.tayte 0,2 = maailman täyte × kun r < ajat.nimi[0]); kaiku 1 lev 0,07 ja
   kamera.matka [0,15, 0,14]; kierrosten kamera-avaimet v11-luvuista (sokrates/marcus-luvut-v11.json, 4e9755313); Marcuksen kierrokset
   (kaiku-uhri.png, kaiku-kuolema.png, kierrokset-*.mp3, syke-kierrokset.json, ämpäri ajattelijat/marcus/v1/);
