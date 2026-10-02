@@ -30,6 +30,12 @@ namespace Matkakirja.Natiivi
         static bool pieni = true;
 
         public bool Nakyvissa { get; private set; }
+        /// <summary>Topografia (omistaja 2.10.2026 klo 21.3x): kutistettu nimilappu ei näy kartalla; selite avataan hampurilaisen
+        /// "Korkeustasot"-rivistä ja suljetaan samasta (tai kortin napautuksella).</summary>
+        public bool PieniPiiloon { get => pieniPiiloon; set { if (pieniPiiloon == value) return; pieniPiiloon = value; AsetaPieni(pieni); } }
+        bool pieniPiiloon;
+        /// <summary>Selitekortti näkyy avattuna (ei kutistettuna).</summary>
+        public bool AukiKokonaan => Nakyvissa && !pieni;
 
         public LinssiSelite(UiKerros kerros)
         {
@@ -142,6 +148,7 @@ namespace Matkakirja.Natiivi
             pieni = p;
             kortti.EnableInClassList("mk-pieni", p);
             runko.style.display = p ? DisplayStyle.None : DisplayStyle.Flex;
+            kortti.visible = !(p && pieniPiiloon);
             Asettele();
         }
     }

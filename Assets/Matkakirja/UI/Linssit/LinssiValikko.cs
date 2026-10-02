@@ -75,7 +75,9 @@ namespace Matkakirja.Natiivi
         /// linssin omat valinnat, viiva, Kertoja ja Taustamusiikki, viiva ja viimeisenä <paramref name="sulkuNimi"/>. Nappi on
         /// OHJAUSNAPPI-neliö (harmaa); kutsuja sijoittaa sen ohjausryhmään.
         /// </summary>
-        public LinssiValikko(UiKerros kerros, IEnumerable<(string Nimi, Action Teko)> valinnat, string sulkuNimi, Action sulje)
+        /// <param name="aanet">false = ei Kertoja-, Taustamusiikki- eikä Tekstitys-rivejä (Topografia, omistaja 2.10.2026 klo 21.3x:
+        /// "hampurilaiseen ylimmäksi korkeustasot-nappi ja sen alapuolelle sulje-nappi").</param>
+        public LinssiValikko(UiKerros kerros, IEnumerable<(string Nimi, Action Teko)> valinnat, string sulkuNimi, Action sulje, bool aanet = true)
         {
             poistu = sulje;
             Nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", Vaihda, null, "harmaa");
@@ -88,7 +90,8 @@ namespace Matkakirja.Natiivi
             kertoja = Kytkinrivi(Kytkin.Kertoja, "Kertoja");
             musiikki = Kytkinrivi(Kytkin.Musiikki, "Taustamusiikki");
             tekstitys = Tekstitysrivi();
-            Rakenne.El("mk-linssivalikko__viiva", valikko, PickingMode.Ignore);
+            if (aanet) Rakenne.El("mk-linssivalikko__viiva", valikko, PickingMode.Ignore);
+            else { kertoja.Rivi.style.display = DisplayStyle.None; musiikki.Rivi.style.display = DisplayStyle.None; }
             Komento(sulkuNimi, () => poistu?.Invoke());
             kerros.JokaRuutu += TarkistaOhiNapautus;
         }
