@@ -27,6 +27,8 @@ Shader "Matkakirja/Linssit/Yokuori"
     Properties
     {
         _Peitto("Yön peitto", Range(0, 1)) = 0.82
+        _VesiTerava("Vesimaskin terävöinti kiillolle ja taivaan heijastukselle (kuvaputki, 0 = ennallaan)", Float) = 0
+        _AamuVoima("Hämärän lämmin valo terminaattorissa (kuvaputken kiertoratanousu, 0 = pois)", Float) = 0
         _Vari("Yön väri", Color) = (0.012, 0.02, 0.05, 1)
         _Aurinko("Auringon suunta (maailma)", Vector) = (0, 0, 1, 0)
         _Keskus("Maan keskipiste (maailma)", Vector) = (0, 0, 0, 0)
@@ -74,6 +76,7 @@ Shader "Matkakirja/Linssit/Yokuori"
             HLSLPROGRAM
             #pragma vertex vert
             #pragma fragment frag
+            #pragma target 3.5   // uint-hajautus (lähikuvan pisteet)
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
             TEXTURE2D(_ValotEu); SAMPLER(sampler_ValotEu);
@@ -91,6 +94,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float _PilvetOn, _PilviPeitto, _Karsinta;
                 float _PilviVarjo, _PilviKorkeus, _KuuVoima, _TaivasHeijastus, _TarkatOn;
                 float4 _Kuu;
+                float _AamuVoima, _VesiTerava;
             CBUFFER_END
 
             // Pallotilan piste → (pituus, leveys) radiaaneina (ellipsoidille ja geodeettiseksi kuten valojen haussa).
@@ -182,9 +186,61 @@ Shader "Matkakirja/Linssit/Yokuori"
                 }
                 half l = lerp(sMaa.r * (half)_MaaVoima, sEu.r, euPaino);
                 half vesi = lerp(sMaa.g, sEu.g, euPaino);
+                // Kuvaputki (Ateena 4968e1fd, Päätoimittaja 22.1x: "rannikoiden ympärillä vaalea, sumea reunus"): 500 m:n vesimaskin
+                // pehmeä raja levitti taivaan heijastuksen ja kiillon maalle; terävöinti kapeaksi rajaksi.
+                if (_VesiTerava > 0.0) vesi = lerp(vesi, (half)smoothstep(0.4, 0.6, vesi), (half)_VesiTerava);
                 l = l * l * (half)0.6 + l * (half)0.4;                   // kuvan sRGB-sävy lähemmäs lineaarista, himmeät vaimeammiksi
+                // LÄHIKUVAN VALOPISTEET (Päätoimittaja 2.10., ISS037-E-18864:n malli; omistaja: uskottavuus): kun valokuvan tekseli
+                // kattaa yli 3 kuvapikseliä (Eurooppa 2048 ≈ 2–4 km, tarkat ≈ 0,5 km, maailma ≈ 19 km), valo jaetaan erillisiksi 1–2 px:n
+                // valopisteiksi pienellä hehkulla (natriumin oranssi, ~30 % LED-valkoisia); tiheys kirkkauden mukaan ja keskiarvo säilyy,
+                // joten kaupungin muoto ja kadut tulevat valokuvasta. Kaukana kuva ennallaan (liuku 3…8 px).
+                float clat = max(cos(lat), 0.2);
+                float texM = (_TarkatOn > 0.5 && euPaino > 0.5h ? 0.0045 : euPaino > 0.5h ? 0.0357 : 0.176) * 111320.0 * clat;
+                half piste = (half)smoothstep(3.0, 8.0, texM / max(length(fwidth(p)), 1.0));
+                half led = 0.0h;
+                half lKuva = l;   // valokuvan kirkkaus ennen pisteitä: sävy siitä (pisteen ydin ei saa vaalentaa natriumia kermaksi)
+                if (piste > 0.0h && l > 0.002h)
+                {
+                    // Yksi valopiste solua kohti; solu ~6 pt ruudulla 2:n potenssin tasoina 30 m:stä ja kahden tason liukuva sekoitus,
+                    // jotta pisteet ovat 1–2 px:n kokoisia, 4–8 px:n päässä toisistaan, eivätkä ui zoomatessa. Lähimmät 2 × 2 solua
+                    // lasketaan, joten hehku ei katkea solun reunaan (simulaattori 6bbc2df7: katusolut katkesivat pätkiksi).
+                    float pxM = max(length(fwidth(p)), 0.5);
+                    float tasoF = log2(max(pxM * 6.0 / 30.0, 1.0));
+                    float taso0 = floor(tasoF), sek = tasoF - taso0;
+                    float pr = saturate((float)l * 1.6);
+                    const float Ydin = 0.08, Hehku = 0.05;              // ytimen säde solun mitoissa (~1,5 px) ja hehku (säde 2 ×)
+                    float kuvio = 0.0, ledKuvio = 0.0;
+                    [unroll] for (int taso = 0; taso < 2; taso++)
+                    {
+                        float paino = taso == 0 ? 1.0 - sek : sek;
+                        float solu = 30.0 * exp2(taso0 + taso);
+                        float2 g = float2(lon * clat, lat) * (6371000.0 / solu);
+                        float2 alku = floor(g - 0.5);
+                        [unroll] for (int n = 0; n < 4; n++)
+                        {
+                            float2 c = alku + float2(n & 1, n >> 1);
+                            uint2 u = (uint2)(int2)c;
+                            uint hh = u.x * 1664525u + u.y * 1013904223u + 374761393u + (uint)(taso0 + taso) * 40503u;
+                            hh ^= hh >> 16; hh *= 2246822519u; hh ^= hh >> 13; hh *= 3266489917u; hh ^= hh >> 16;
+                            float h1 = (hh & 1023u) / 1023.0, h2 = ((hh >> 10) & 1023u) / 1023.0, h3 = ((hh >> 20) & 1023u) / 1023.0;
+                            if (h1 >= pr) continue;                       // tiheys kirkkauden mukaan
+                            float2 d = g - (c + 0.15 + 0.7 * float2(h2, h3));
+                            float r2 = dot(d, d) / (Ydin * Ydin);
+                            // Kirkkaus vaihtelee pisteittäin 0,4–1,6 (keskiarvo 1): katuvalot, aukiot ja ikkunat eivät ole yhtä kirkkaita.
+                            float kirkas = 0.4 + 1.2 * frac(h2 * 5.71 + h3 * 2.93);
+                            float ydin = exp(-r2) * kirkas;
+                            kuvio += (ydin + Hehku * kirkas * exp(-r2 / 4.0)) * paino;
+                            ledKuvio += ydin * paino * step(0.7, frac(h1 * 7.31 + h2 * 3.17));   // ~30 % LED, vain ytimessä
+                        }
+                    }
+                    // Keskiarvo säilyy: odotettu valo solua kohti = pr · π·ydin²·(1 + 4·hehku).
+                    float odotus = pr * 3.14159 * Ydin * Ydin * (1.0 + 4.0 * Hehku);
+                    l = lerp(l, (half)min(kuvio * (float)l / max(odotus, 0.002), 8.0), piste);
+                    led = (half)(piste * saturate(ledKuvio / max(kuvio, 1e-4)) * saturate(kuvio * 2.0));
+                }
                 // Sävy NASA-vertailusta (30.9., ISS037-E-18864): himmeät natriumin oranssit, ytimet kellanvalkoiset (ennen valkoisempi).
-                half3 savy = lerp(half3(1.0, 0.46, 0.14), half3(1.0, 0.80, 0.52), saturate(l * 1.4h));
+                half3 savy = lerp(half3(1.0, 0.46, 0.14), half3(1.0, 0.80, 0.52), saturate(lKuva * 1.4h));
+                savy = lerp(savy, half3(0.92h, 0.95h, 1.0h), led);   // LED-valkoinen (lähikuvan pisteet)
                 // Päivän pilvet peittävät valot ja heijastuksen (tasakulmainen, v = 0 etelässä; LOD 0: ei saumaa ±180°:ssa).
                 float pilviA = SAMPLE_TEXTURE2D_LOD(_Pilvet, sampler_Pilvet, float2(lon / 6.2831853 + 0.5, lat / 3.1415927 + 0.5), 0).a;
                 // Pilvipeiton säädin kuten Pilvet.shader: karsitut pilvet eivät himmennä kaupunkien valoja.
@@ -232,6 +288,16 @@ Shader "Matkakirja/Linssit/Yokuori"
                 half lisaPilvi = pilvi * (half)osuu * yoKuori * saturate(_YoVesi - a) * saturate(1.0h - 2.0h * kuuValo);
                 c += _Vari.rgb * lisaPilvi;
                 a += lisaPilvi;
+                // Kiertoratanousu (Päätoimittaja 1.10. 21.5x): terminaattorin lähellä (auringon korkeus −5° … +1°, huippu −1,5°)
+                // maa ja pilvien huiput saavat lämmintä hämärän valoa, joten terminaattori erottuu horisontin lähellä. 0 = pois.
+                if (_AamuVoima > 0.0 && osuu > 0.5)
+                {
+                    float sk = dot(normalize(p), aur);
+                    // −10° … +1°, huippu ~ −3° (laite 8648c410: −5°:n kaista jäi reunan taakse näkymättömiin)
+                    half kaista = (half)(smoothstep(-0.174, -0.05, sk) * (1.0 - smoothstep(-0.010, 0.017, sk)));
+                    c += half3(1.0h, 0.42h, 0.13h) * kaista * (half)(_AamuVoima * 1.2) * (0.4h + 0.6h * (1.0h - 0.85h * pilvi) + 1.2h * pilvi);
+                    a *= 1.0h - 0.35h * kaista * (half)saturate(_AamuVoima);
+                }
                 return half4(c, a);
             }
             ENDHLSL

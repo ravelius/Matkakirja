@@ -10,6 +10,7 @@ Shader "Matkakirja/Linssit/KyydinAurinko"
         _Koko("tan(hehkun kulmasäde)", Float) = 0.0524
         _Kiekko("Kiekon säde hehkun säteestä", Float) = 0.09
         _Kirkkaus("Kirkkaus (HDR)", Float) = 24
+        _Sateet("Säteiden ja hehkun kerroin (kuvaputken kiertoratanousu, 1 = ennallaan)", Float) = 1
     }
     SubShader
     {
@@ -30,7 +31,7 @@ Shader "Matkakirja/Linssit/KyydinAurinko"
 
             CBUFFER_START(UnityPerMaterial)
                 float4 _Suunta;
-                float _Koko, _Kiekko, _Kirkkaus;
+                float _Koko, _Kiekko, _Kirkkaus, _Sateet;
             CBUFFER_END
 
             struct Syote { float4 paikka : POSITION; float2 uv : TEXCOORD0; };
@@ -62,8 +63,19 @@ Shader "Matkakirja/Linssit/KyydinAurinko"
                 float hehku = exp(-r * r / 0.004) * 0.35 + exp(-r * 9.0) * 0.06;
                 float kulma = atan2(i.uv.y, i.uv.x);
                 float sade = pow(abs(cos(kulma * 3.0)), 60.0) * exp(-r * 5.0) * 0.12 * (1.0 - smoothstep(0.7, 1.0, r));
-                float v = (kiekko + hehku + sade) * (1.0 - smoothstep(0.85, 1.0, r));
-                return half4(half3(1.0, 0.96, 0.9) * (half)(v * _Kirkkaus), 0);
+                // Kiertoratanousu (_Sateet > 1, Päätoimittaja 1.10. 21.5x: "selvästi suurempi flare"): pidemmät säteet, lisäksi
+                // ohuet välisäteet ja lämmin laaja hehku; _Koko kasvaa samalla (KyydinTaivas), kiekko pysyy 0,27°:ssa.
+                float lisa = 0.0;
+                if (_Sateet > 1.0)
+                {
+                    float k = _Sateet - 1.0;
+                    // ei laajaa hehkua tässä (laite 4968e1fd: kuvion reuna näkyi terävänä puolikaarena); laaja hehku tulee kuvan
+                    // jälkikäsittelystä (IssKameraKuva.Heijastukset), säteet häivytetään jo 0,5:stä alkaen
+                    lisa = k * (pow(abs(cos(kulma * 3.0)), 40.0) * exp(-r * 3.0) * 0.10 + pow(abs(sin(kulma * 6.0 + 0.3)), 200.0) * exp(-r * 4.5) * 0.05);
+                }
+                float v = (kiekko + hehku + sade + lisa) * (1.0 - smoothstep(_Sateet > 1.0 ? 0.45 : 0.85, 1.0, r));
+                half3 vari = lerp(half3(1.0, 0.96, 0.9), half3(1.0, 0.78, 0.55), (half)saturate((_Sateet - 1.0) * 0.5 * saturate(r * 4.0)));
+                return half4(vari * (half)(v * _Kirkkaus), 0);
             }
             ENDHLSL
         }

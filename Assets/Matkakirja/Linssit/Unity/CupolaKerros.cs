@@ -98,7 +98,7 @@ namespace Matkakirja.Natiivi
         {
             // Neljästi sekunnissa ja nopeutettuna sekunnin välein simuloitua aikaa (1000×: ISS kiertää 65°/s); myös kehyksen
             // ollessa piilossa, koska pölyhiukkaset (IssKyytiNakyma) lukevat valon Cupola 2 -kuvien kanssa.
-            if (Time.unscaledTime - aurinkoAika >= 0.25f || Math.Abs((IssNyt.Kello() - aurinkoUtc).TotalSeconds) >= 1) PaivitaValo();
+            if (Time.unscaledTime - aurinkoAika >= 0.25f || Math.Abs((IssNyt.AurinkoKello() - aurinkoUtc).TotalSeconds) >= 1) PaivitaValo();
             bool valmis = kehys != null;
             float nopeus = LinssiOhjain.Instanssi != null && LinssiOhjain.Instanssi.VahennettyLiike ? 1000f : 1f / HaivytysS;
             peitto = Mathf.MoveTowards(peitto, valmis ? tavoite : 0f, Time.unscaledDeltaTime * nopeus);
@@ -116,7 +116,7 @@ namespace Matkakirja.Natiivi
         void PaivitaValo()
         {
             aurinkoAika = Time.unscaledTime;
-            aurinkoUtc = IssNyt.Kello();
+            aurinkoUtc = IssNyt.AurinkoKello();   // vuorokaudenaika: auringon kello
             var gt = g.transform;
             Vector3 a = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(
                 Aurinko.AurinkoEcef(aurinkoUtc))).normalized;

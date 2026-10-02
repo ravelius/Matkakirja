@@ -281,7 +281,7 @@ namespace Matkakirja.Natiivi
             // Aurinko liikkuu 0,25°/min: suunta kerran sekunnissa riittää (vain piirrettäessä). Myös sekunnin välein simuloitua
             // aikaa (web kaari.aseta): nopeutettuna (1000×: 4°/s) päivitys on joka kehys, eikä terminaattori hypi.
             if (!piirto.enabled) return;
-            var utc = Matkakirja.Linssit.Iss.IssNyt.Kello();
+            var utc = Matkakirja.Linssit.Iss.IssNyt.AurinkoKello();   // vuorokaudenaika: auringon kello
             if (Time.unscaledTime - paivitetty < 1f && Math.Abs((utc - aurinkoUtc).TotalSeconds) < 1) return;
             paivitetty = Time.unscaledTime;
             aurinkoUtc = utc;
@@ -305,7 +305,10 @@ namespace Matkakirja.Natiivi
             var kd = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(new double3(ke.x, ke.y, ke.z))).normalized;
             materiaali.SetVector("_Kuu", new Vector4(kd.x, kd.y, kd.z, (float)Matkakirja.Linssit.Iss.Kuu.Vaihe(jd).valaistu));
             materiaali.SetFloat("_KuuVoima", KuunvaloPois ? 0f : KuunvalonVoima);
-            materiaali.SetFloat("_TaivasHeijastus", TaivasHeijastusPois ? 0f : 0.3f);
+            bool kuva = Matkakirja.Natiivi.Avaruus.KuvaputkiAsetettu;   // pelaajan ISS-kamera: kapeampi heijastus, terävä vesiraja
+            materiaali.SetFloat("_TaivasHeijastus", TaivasHeijastusPois ? 0f : kuva ? 0.15f : 0.3f);
+            materiaali.SetFloat("_VesiTerava", kuva ? 1f : 0f);
+            materiaali.SetFloat("_AamuVoima", Matkakirja.Natiivi.Avaruus.Kuvaputki ? Matkakirja.Natiivi.Avaruus.KuvanNousu : 0f);
         }
 
         /// <summary>Fotorealismi osa 3: pilvien varjot maahan (A/B `astro kyyti pilvivarjo 0|1`); korkeus = kyydin pilvikuori 8 km.</summary>

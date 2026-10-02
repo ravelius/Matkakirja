@@ -1650,6 +1650,11 @@ namespace Matkakirja.Natiivi
                             Matkakirja.Natiivi.IssKyytiNakyma.Ohjaamo3Sarja = osat[3] == "3terava" ? "" : osat[3] == "3pehmea" ? "pehmea" : "pehmea-umpi";
                         }
                         // Läpikuulon kontrollikoe (Natiiviseppä 28.9.): kehys pelkkänä mustana taustana ilman kuvaa.
+                        else if (a == "ikkuna" && osat.Length > 3)   // KOKEILU 1.10.: Cupolan ikkunan suurennos (0 = oletus)
+                        {
+                            Matkakirja.Natiivi.IssKyytiNakyma.IkkunanSuurennos = (float)Luku(osat[3]);
+                            Kirjaa($"astro ikkuna {Matkakirja.Natiivi.IssKyytiNakyma.IkkunanSuurennos:0.00}");
+                        }
                         else if (a == "kehysmusta" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.KehysMustana = osat[3] != "0";
                         else if (a == "paiva" && osat.Length > 3) Matkakirja.Linssit.Astronautti.AstronauttiLinssi.CupolaPaivanvaloon = osat[3] != "0"; // A/B (30.9.)
                         else if (a == "horisonttikulma" && osat.Length > 3) Matkakirja.Linssit.Iss.IssKuvakulma.Horisonttikulma = osat[3] != "0"; // A/B (30.9.)
@@ -1723,10 +1728,35 @@ namespace Matkakirja.Natiivi
                             Kirjaa("astro " + Matkakirja.Natiivi.Avaruus.Tila(osat.Length > 4 && osat[3] == "debug" ? (float?)Luku(osat[4]) : null));
                         else if (a == "ilmakeha2" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.Ilmakeha2 = osat[3] != "0";   // A/B fotorealismi osa 1
                         else if (a == "kaarivoima" && osat.Length > 3) { Matkakirja.Natiivi.Avaruus.KuvanKaariVoima = (float)Luku(osat[3]); Kirjaa($"astro kaarivoima {Matkakirja.Natiivi.Avaruus.KuvanKaariVoima:0.00} (kuvaputki {Matkakirja.Natiivi.Avaruus.Kuvaputki})"); }
+                        else if (a == "nousu" && osat.Length > 3) { Matkakirja.Natiivi.Avaruus.KuvanNousu = (float)Luku(osat[3]); Kirjaa($"astro nousu {Matkakirja.Natiivi.Avaruus.KuvanNousu:0.00}"); }
+                        else if ((a == "kaariydin" || a == "kaarisyva") && osat.Length > 3)
+                        {
+                            // Kaaren ydin (1 = ennallaan) ja syvänsininen hehku (0 = pois), Ilmakeha2 _KaariYdin / _KaariSyva.
+                            if (a == "kaariydin") Matkakirja.Natiivi.Avaruus.KuvanKaariYdin = (float)Luku(osat[3]);
+                            else Matkakirja.Natiivi.Avaruus.KuvanKaariSyva = (float)Luku(osat[3]);
+                            Kirjaa($"astro kaari ydin {Matkakirja.Natiivi.Avaruus.KuvanKaariYdin:0.00} syva {Matkakirja.Natiivi.Avaruus.KuvanKaariSyva:0.00}");
+                        }
+                        else if ((a == "kaarihr" || a == "kaarisini" || a == "utu") && osat.Length > 3)
+                        {
+                            // Kuvaputken kaaren säätimet (Ilmakeha2 _HrKerroin / _SiniKerroin / _UtuKerroin; 1 = ennallaan).
+                            float x = (float)Luku(osat[3]);
+                            if (a == "kaarihr") Matkakirja.Natiivi.Avaruus.KuvanHrKerroin = x;
+                            else if (a == "kaarisini") Matkakirja.Natiivi.Avaruus.KuvanSiniKerroin = x;
+                            else Matkakirja.Natiivi.Avaruus.KuvanUtuKerroin = x;
+                            Kirjaa($"astro kaari hr {Matkakirja.Natiivi.Avaruus.KuvanHrKerroin:0.00} sini {Matkakirja.Natiivi.Avaruus.KuvanSiniKerroin:0.00} "
+                                   + $"utu {Matkakirja.Natiivi.Avaruus.KuvanUtuKerroin:0.00} (kuvaputki {Matkakirja.Natiivi.Avaruus.Kuvaputki})");
+                        }
                         else if (a == "ilmavoima" && osat.Length > 3) { Matkakirja.Natiivi.Avaruus.IlmanVoima = (float)Luku(osat[3]); Kirjaa($"astro ilmavoima {Matkakirja.Natiivi.Avaruus.IlmanVoima:0.0}"); }
                         else if (a == "ilmamoni" && osat.Length > 3) Matkakirja.Natiivi.Avaruus.IlmanMoni = (float)Luku(osat[3]);
                         else if (a == "savytys" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Pois = osat[3] == "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
                         else if (a == "autovalotus" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.AutoValotus = osat[3] != "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }
+                        else if (a == "vuorokausi" && osat.Length > 3)   // vuorokaudenaika (omistaja 1.10.): aamu|paiva|ilta|yo|live
+                        {
+                            int i = Array.IndexOf(new[] { "aamu", "paiva", "ilta", "yo" }, osat[3]);
+                            Matkakirja.Linssit.Iss.Vuorokausi.Valittu = i >= 0 ? i : null;
+                            var t = Matkakirja.Linssit.Iss.IssNyt.Kello();
+                            Kirjaa($"astro vuorokausi {(i >= 0 ? Matkakirja.Linssit.Iss.Vuorokausi.Nimet[i] : "LIVE")}, aurinko {(Matkakirja.Linssit.Iss.IssNyt.AurinkoKello() - t).TotalHours:+0.00;-0.00} h");
+                        }
                         else if (a == "s2savy" && osat.Length > 5)
                         {
                             Matkakirja.Linssit.Kyytipino.S2Kontrasti = (float)Luku(osat[3]);
@@ -1740,7 +1770,8 @@ namespace Matkakirja.Natiivi
                         else if (a == "filmi" && osat.Length > 3) { Matkakirja.Linssit.Kyytipino.Filmi = osat[3] != "0"; Kirjaa("astro " + Matkakirja.Linssit.Kyytipino.Tila()); }   // ISS-kamera
                         else if (a == "siluetti" && osat.Length > 3)   // ISS-kamera: siluetti 0|1, siluetti asettelu x y kulma leveys pituus
                         {
-                            if (osat[3] == "asettelu" && osat.Length > 8)
+                            if (osat[3] == "sumeus" && osat.Length > 4) Matkakirja.Linssit.IssSiluetti.Sumeus = (float)Luku(osat[4]);   // 400 mm:n etualan bokeh
+                            else if (osat[3] == "asettelu" && osat.Length > 8)
                             {
                                 Matkakirja.Linssit.IssSiluetti.Asettelu = new Vector4((float)Luku(osat[4]), (float)Luku(osat[5]), (float)Luku(osat[6]), (float)Luku(osat[7]));
                                 Matkakirja.Linssit.IssSiluetti.Pituus = (float)Luku(osat[8]);
@@ -1778,6 +1809,18 @@ namespace Matkakirja.Natiivi
                                     Luku(osat[7]), Luku(osat[8]), Luku(osat[9]), Luku(osat[10]), (int)Luku(osat[11]), (int)Luku(osat[12]));
                                 Kirjaa($"astro kyyti pinta {pintaAvain}: {(pintaTulos != null ? "lisätty" : "ei mahdu")}{(jaettu ? " (rajattu jako)" : "")} {pintaUrl} z{osat[5]}–{osat[6]}");
                             }
+                        }
+                        // ISS-kamera, pelaajan kuva (omistaja 1.10.): kuvaa [4:5|9:16|4:3] [leveys], kuvaa tila, kuvaa laatat 0|1 (säilytys)
+                        else if (a == "kuvaa")
+                        {
+                            if (osat.Length > 3 && osat[3] == "tila") Kirjaa($"astro kyyti kuvaa: {Matkakirja.Natiivi.IssKameraKuva.Tila} {Matkakirja.Natiivi.IssKameraKuva.Edistyminen:P0} {Matkakirja.Natiivi.IssKameraKuva.ViimeisinKuva}");
+                            else if (osat.Length > 4 && osat[3] == "laatat") Matkakirja.Natiivi.IssKameraKuva.SailytaLaatat = osat[4] != "0";
+                            else if (osat.Length > 4 && osat[3] == "odotus") Matkakirja.Natiivi.IssKameraKuva.LisaOdotus = (float)Luku(osat[4]);
+                            else if (osat.Length > 4 && osat[3] == "sini") Matkakirja.Natiivi.IssKameraKuva.MaanSini = (float)Luku(osat[4]);
+                            else if (osat.Length > 4 && osat[3] == "nousu") Matkakirja.Natiivi.IssKameraKuva.NousuKerroin = (float)Luku(osat[4]);
+                            else if (osat.Length > 4 && osat[3] == "sarja") Matkakirja.Natiivi.IssKameraKuva.Sarja = (int)Luku(osat[4]);
+                            else Kirjaa("astro kyyti kuvaa: " + (Matkakirja.Natiivi.IssKameraKuva.Hae().Laukaise(osat.Length > 3 ? osat[3] : "4:5",
+                                osat.Length > 4 ? (int)Luku(osat[4]) : 3240) ? "laukaistu" : "ei laukaistu (käynnissä tai ei kyytiä)"));
                         }
                         else if (a == "vertailu" && osat.Length > 3)
                             Kirjaa("astro kyyti vertailu: " + KyydinVertailu(osat.Skip(3).ToArray()));

@@ -16,9 +16,11 @@ namespace Matkakirja.Linssit
         public static bool Paalla;
         public static Vector4 Asettelu = new Vector4(-0.1f, -0.05f, 22f, 0.08f);
         public static float Pituus = 0.5f;
+        /// <summary>Reunan pehmeys (varjostimen _Sumeus, oletus 0,006). 400 mm:n etualan bokeh (omistaja 1.10.): ~0,05–0,08.</summary>
+        public static float Sumeus = 0.006f;
 
         static readonly int IdPeitto = Shader.PropertyToID("_Peitto"), IdRuutu = Shader.PropertyToID("_Ruutu"),
-            IdAurinko = Shader.PropertyToID("_AurinkoRuutu"), IdAsettelu = Shader.PropertyToID("_Asettelu"), IdPituus = Shader.PropertyToID("_Pituus");
+            IdAurinko = Shader.PropertyToID("_AurinkoRuutu"), IdAsettelu = Shader.PropertyToID("_Asettelu"), IdPituus = Shader.PropertyToID("_Pituus"), IdSumeus = Shader.PropertyToID("_Sumeus");
         static Transform nelio;
         static Material materiaali;
         static Camera kohdeKamera;
@@ -36,13 +38,14 @@ namespace Matkakirja.Linssit
             kohdeKamera = kamera;
             materiaali.SetVector(IdAsettelu, Asettelu);
             materiaali.SetFloat(IdPituus, Pituus);
+            materiaali.SetFloat(IdSumeus, Sumeus);
             materiaali.SetFloat(IdPeitto, 1f);
             if (g != null)
             {
                 // Aurinko kameran koordinaateissa (w = 1: siluetti on aina auringossa tai sen reunalla kuvaushetkellä).
                 var gt = g.transform;
                 Vector3 a = gt.TransformDirection((Vector3)(float3)g.TransformEarthCenteredEarthFixedDirectionToUnity(
-                    global::Matkakirja.Aurinko.AurinkoEcef(Iss.IssNyt.Kello()))).normalized;
+                    global::Matkakirja.Aurinko.AurinkoEcef(Iss.IssNyt.AurinkoKello()))).normalized;
                 Vector3 k = kamera.transform.InverseTransformDirection(a);
                 materiaali.SetVector(IdAurinko, new Vector4(k.x, k.y, k.z, 1f));
             }
