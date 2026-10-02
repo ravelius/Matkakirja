@@ -227,6 +227,14 @@ namespace Matkakirja.Natiivi
         const float RobottiSkaala = 0.6f;
         // viewBox-yksiköt: Pulun vasen reuna x 88, varren alin kohta (kyynärnivel vaakaan käännettynä) y 381 (viewBox 304).
         const float RobottiPuluVasen = 88f, RobottiAlin = 381f, RobottiReuna = 12f;
+        /// <summary>Testikomennon tila (astro kyyti tila): robottikäden paikka, puomin alin kohta ja palautteen korjaus.</summary>
+        public string RobottiTila()
+        {
+            float h = alue.panel != null ? alue.panel.visualTree.layout.height : float.NaN;
+            return $"robotti {kuva.RobottiNakyy}, AlaVara {AlaVara:0.0}, raja y {h - AlaVara:0.0}, puomin alin y {kuva.VarrenAlin:0.0} "
+                + $"(piirto {kuva.VarrenAlinVersio}), korjaus {robottiKorjaus:0.0}, bottom {alue.resolvedStyle.bottom:0.0}, wb {alue.worldBound}";
+        }
+
         bool robottiAseteltu;
         float robottiKorjaus;
         int robottiVersio = -1;
