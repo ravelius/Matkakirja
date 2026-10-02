@@ -36,7 +36,7 @@
     margin: 0;
     padding: 0 var(--tk-vali-m) 0 var(--tk-vali-m);
     border-width: 1px;
-    border-radius: var(--tk-kulma-pilleri);
+    border-radius: var(--tk-kulma-nappi);
     border-color: var(--tk-reunus);
     background-color: transparent;
     color: var(--tk-muste);
@@ -91,7 +91,7 @@
     margin: 0;
     padding: 0 var(--tk-vali-s) 0 var(--tk-vali-s);
     border-width: 1px;
-    border-radius: var(--tk-kulma-pilleri);
+    border-radius: var(--tk-kulma-pieni);
     border-color: var(--tk-reunus);
     background-color: var(--tk-pinta);
     color: var(--tk-muste-pehmea);

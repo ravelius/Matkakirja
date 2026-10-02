@@ -38,12 +38,13 @@ namespace Matkakirja.Natiivi
             himmennys = Rakenne.El("mk-himmennys mk-galleria-huntu", juuri);
             himmennys.style.display = DisplayStyle.None;
             himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
-            var kortti = Rakenne.El("mk-galleria", himmennys);
+            // GALLERIA-pohja (omistaja 2.10.2026 klo 15.5x, Pohjat/galleria.uss): PANEELI paperi, ✕ OHJAUSNAPPI.
+            var kortti = Rakenne.El("mk-galleria tk-teema-paperi", himmennys);
             var yla = Rakenne.El("mk-galleria__yla", kortti, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("JULISTEET", "mk-galleria__otsikko", yla), Kirjasin.Kone);
             luku = Rakenne.Teksti("", "mk-galleria__luku", yla);
             Kirjasimet.Aseta(luku, Kirjasin.Kone);
-            Rakenne.Nappi("×", "mk-galleria__rasti", Sulje, yla);
+            Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje", Sulje, yla);
             var v = new ScrollView(ScrollViewMode.Vertical);
             v.AddToClassList("mk-galleria__vieritys");
             v.verticalScrollerVisibility = ScrollerVisibility.Hidden;
@@ -108,7 +109,7 @@ namespace Matkakirja.Natiivi
                     kuva.Add(new Katkokehys());
                     // Viemätön tiedosto jättää nimen ja katkoviivakehyksen (web .kuvaton).
                     if (j.Url == null) vedos.AddToClassList("mk-galleria__vedos--kuvaton");
-                    else Kuvat.Hae(j.Url, t =>
+                    else Kuvat.Hae(j.PikkuUrl, t =>
                     {
                         if (t != null) kuva.style.backgroundImage = new StyleBackground(t);
                         else vedos.AddToClassList("mk-galleria__vedos--kuvaton");
@@ -116,7 +117,7 @@ namespace Matkakirja.Natiivi
                     Kirjasimet.Aseta(Rakenne.Teksti(j.KaupunkiNimi ?? UiSisalto.Kaupunki(j.Kaupunki)?.Nimi ?? j.Kaupunki, "mk-galleria__nimi", vedos), Kirjasin.Kone);
                 }
                 // grid auto-fill minmax(92px, 1fr), gap .6rem; vedos 2:3.
-                Rakenne.Ruudukko(ruudukko, 92f, 10f, (c, w) =>
+                Rakenne.Ruudukko(ruudukko, Tyylikirja.Galleria.Sarake, Tyylikirja.Galleria.Vali, (c, w) =>
                 {
                     var k = c.ClassListContains("mk-galleria__vedos--lukossa") ? c : c.Q(className: "mk-galleria__kuva");
                     if (k != null) k.style.height = Mathf.Round(w * 1.5f);

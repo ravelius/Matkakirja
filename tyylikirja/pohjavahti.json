@@ -58,9 +58,6 @@
   "Assets/Matkakirja/UI/Linssit/Keksijakaruselli.cs": {
    "vari": 1
   },
-  "Assets/Matkakirja/UI/Linssit/KuunnelmaKaistale.cs": {
-   "vari": 7
-  },
   "Assets/Matkakirja/UI/Linssit/Kuvanakyma.cs": {
    "vari": 4
   },
@@ -136,14 +133,14 @@
    "vari": 338
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Linssit.uss": {
-   "fontti": 133,
+   "fontti": 132,
    "siirtyma": 18,
    "vari": 371
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Matkakirja.uss": {
-   "fontti": 155,
+   "fontti": 149,
    "siirtyma": 16,
-   "vari": 385
+   "vari": 370
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/astronautin-auto.uss": {
    "fontti": 0,
@@ -205,6 +202,11 @@
    "siirtyma": 0,
    "vari": 0
   },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/galleria.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/kentta.uss": {
    "fontti": 0,
    "siirtyma": 0,
@@ -221,6 +223,11 @@
    "vari": 5
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/nostokortti.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/ohjausnappi.uss": {
    "fontti": 0,
    "siirtyma": 0,
    "vari": 0

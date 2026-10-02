@@ -32,6 +32,8 @@ namespace Matkakirja.Natiivi
     public sealed class AjattelijatSovitin : ILinssi
     {
         public const string Juuri = "https://media.matkakirja.app/";
+        /// <summary>Prologin kytkimen napsahdus (web AJATTELIJA_KYTKIN; Linnanrakentaja: Kenney CC0 -iskut ja hallin kaiku).</summary>
+        public const string Kytkin = "ajattelijat/yhteiset/v1/kytkin-kaiku.mp3";
 
         public static readonly LinssiTiedot AjattelijatTiedot = new LinssiTiedot
         {
@@ -93,8 +95,8 @@ namespace Matkakirja.Natiivi
         readonly Func<bool> nakymaPeitto;
         ILinssiYmparisto y;
         AjattelijaNayttamo nayttamo;
-        AudioSource puhe, musiikki;
-        bool aaniSoi;
+        AudioSource puhe, musiikki, kytkin;
+        bool aaniSoi, kytkinSoi;
         double alku = -1, ruutuOhitus = double.NaN;
         int sukupolvi;
         readonly List<float> valit = new List<float>();
@@ -148,6 +150,7 @@ namespace Matkakirja.Natiivi
             nayttamo = AjattelijaNayttamo.Luo(a);
             puhe = LuoLahde("Puhe");
             musiikki = LuoLahde("Musiikki");
+            kytkin = LuoLahde("Kytkin");
             Muuttui?.Invoke();
             o.StartCoroutine(Lataa(a, s));
         }
@@ -185,9 +188,11 @@ namespace Matkakirja.Natiivi
                 o.StartCoroutine(Hae(a.Syke, b => { if (s == sukupolvi) nayttamo.AsetaSyke(System.Text.Encoding.UTF8.GetString(b)); }));
             o.StartCoroutine(HaeAani(a.Puhe, puhe, s));
             o.StartCoroutine(HaeAani(a.Musiikki, musiikki, s));
+            o.StartCoroutine(HaeAani(Kytkin, kytkin, s));
             Latautuu = false;
             alku = Time.realtimeSinceStartupAsDouble;
             aaniSoi = false;
+            kytkinSoi = false;
             valit.Clear();
             o.Kirjaa($"ajattelija: {a.Tunnus} auki, malli {(Time.realtimeSinceStartup - t0) * 1000:F0} ms, {nayttamo.Kuvaus()}");
             Muuttui?.Invoke();
@@ -249,6 +254,13 @@ namespace Matkakirja.Natiivi
                     }
                 }
             }
+            // Kytkin kerran prologin ruudussa kytkin (web: vain juoksevalla kellolla, ei ruutuohituksella).
+            if (!kytkinSoi && double.IsNaN(ruutuOhitus) && g >= a.Prologi.Kytkin && g < pl && kytkin.clip != null)
+            {
+                kytkinSoi = true;
+                kytkin.volume = EsityksenAani.Mykistetty?.Invoke() ?? false ? 0f : 1f;
+                kytkin.Play();
+            }
             if (valit.Count >= 3600) valit.RemoveAt(0);   // koko kierros (~53 s) 60 r/s
             valit.Add(Time.unscaledDeltaTime * 1000f);
             var (prologi, r, loppu) = AjattelijaAikajana.Globaali(a, g);
@@ -281,7 +293,7 @@ namespace Matkakirja.Natiivi
                 y?.Pelikerrokset(true);
                 y?.MusiikkiPitoon(false);
             }
-            puhe = musiikki = null;
+            puhe = musiikki = kytkin = null;
             aaniSoi = false;
             ruutuOhitus = double.NaN;
             Tekstit = default;

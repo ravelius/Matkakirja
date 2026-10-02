@@ -53,7 +53,7 @@
     height: 34px;
     padding: 0 12px 0 10px;
     border-width: 1px;
-    border-radius: var(--tk-kulma-pilleri);
+    border-radius: var(--tk-kulma-nappi);
     border-color: rgb(170, 170, 170);
     background-color: rgba(130, 130, 130, 0.42);
     color: rgb(224, 224, 224);
@@ -617,7 +617,7 @@
     padding: 5px 8px;
     border-width: 1px;
     border-color: rgba(70, 51, 31, 0.45);
-    border-radius: 22px;
+    border-radius: var(--tk-kulma-kortti);
     background-color: rgba(247, 237, 216, 0.94);
     color: var(--map-ink);
 }
@@ -636,7 +636,7 @@
     margin: 3px;
     padding: 3px 9px;
     border-color: rgba(70, 51, 31, 0.4);
-    border-radius: 15px;
+    border-radius: var(--tk-kulma-nappi);
     background-color: rgba(255, 250, 238, 0.9);
     color: var(--map-ink);
 }
@@ -667,7 +667,7 @@
     min-height: 32px;
     margin: 3px 3px 3px 6px;
     padding: 3px 14px;
-    border-radius: 16px;
+    border-radius: var(--tk-kulma-nappi);
 }
 
 /* --- vertailuarkki ----------------------------------------------------------- */
@@ -1517,7 +1517,7 @@
     padding: 9.9px 33.6px;
     border-width: 1.5px;
     border-color: rgba(214, 168, 84, 0.92);
-    border-radius: 22px;
+    border-radius: var(--tk-kulma-nappi);
     background-color: rgba(0, 0, 0, 0);
     -unity-background-scale-mode: stretch-to-fill;
     color: #f6e6c2;
@@ -1861,7 +1861,7 @@
     padding: 0 14px;
     border-width: 1px;
     border-color: rgba(93, 255, 168, 0.28);
-    border-radius: 22px;
+    border-radius: var(--tk-kulma-nappi);
     background-color: rgba(6, 13, 10, 0.72);
 }
 
@@ -2246,7 +2246,7 @@
     flex-shrink: 0;
     min-height: 32px;
     padding: 4px 12px;
-    border-radius: 16px;
+    border-radius: var(--tk-kulma-nappi);
 }
 
 .mk-radio__sivu .mk-nappi__teksti {
@@ -2546,7 +2546,7 @@
     left: 4px;
     width: 36px;
     height: 40px;
-    border-radius: 18px;
+    border-radius: var(--tk-kulma-nappi);
     background-color: rgba(246, 236, 198, 0.85);
     color: #46331f;
 }
@@ -2970,7 +2970,7 @@
     padding: 5px 11px;
     border-width: 1px;
     border-color: rgba(217, 161, 59, 0.45);
-    border-radius: 16px;
+    border-radius: var(--tk-kulma-nappi);
     background-color: rgba(0, 0, 0, 0);
 }
 

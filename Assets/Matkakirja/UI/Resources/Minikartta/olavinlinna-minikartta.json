@@ -1,0 +1,51 @@
+{
+ "kuva": "olavinlinna-minikartta.png",
+ "koordinaatit": "x, y = 0–1 rajatun kuvan vasemmasta yläkulmasta (tilan rajojen keskipiste, rakennus.json)",
+ "kamera": "yleiskamera.vaaka (atsimuutti 165, korkeus 30), ortografinen",
+ "tilat": {
+  "laituri": {
+   "nimi": "Laituri",
+   "x": 0.9724,
+   "y": 0.5592
+  },
+  "fatabuuri": {
+   "nimi": "Fatabuuri",
+   "x": 0.7584,
+   "y": 0.3513
+  },
+  "kierreportaat": {
+   "nimi": "Kierreportaat",
+   "x": 0.7584,
+   "y": 0.2634
+  },
+  "muurinharja": {
+   "nimi": "Muurinharja",
+   "x": 0.6736,
+   "y": 0.2255
+  },
+  "kappeli": {
+   "nimi": "Kappeli",
+   "x": 0.5906,
+   "y": 0.3088
+  },
+  "keskushalli": {
+   "nimi": "Keskushalli",
+   "x": 0.6726,
+   "y": 0.3781
+  },
+  "keittio": {
+   "nimi": "Keittiö",
+   "x": 0.6046,
+   "y": 0.5275
+  }
+ },
+ "kuvat": {
+  "vari": "olavinlinna-minikartta{@2x,@3x,-iso}.png",
+  "paperi": "olavinlinna-minikartta-paperi{@2x,@3x,-iso}.png",
+  "koko_pt": [
+   120,
+   58.3
+  ],
+  "huom": "@3x = 360 px leveä (120 pt), @2x 240 px, -iso 720 px; läpinäkyvä tausta; kuvasuhde 2.058"
+ }
+}

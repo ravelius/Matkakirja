@@ -41,9 +41,23 @@ function atlasRivit(a) {
   ];
 }
 
-const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript' };
+const MIME = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.ttf': 'font/ttf', '.otf': 'font/otf' };
+// Ämpärin fontit (data fontit[nimi].tiedosto, web lataaAjattelijaFontit) paikallisesta OFL-kansiosta tiedostonimellä.
+const FONTIT = process.env.FONTIT ?? '/Users/Shared/Claude/proto-3d/_lahteet/fontit-kreikka';
+function etsiFontti(nimi, kansio = FONTIT) {
+  for (const e of readdirSync(kansio, { withFileTypes: true })) {
+    const p = join(kansio, e.name);
+    if (e.isDirectory()) { const l = etsiFontti(nimi, p); if (l) return l; } else if (e.name === nimi) return p;
+  }
+  return null;
+}
 const palvelin = createServer((q, s) => {
   const polku = decodeURIComponent(q.url.split('?')[0]);
+  if (polku.startsWith('/__fontti/')) {
+    const f = etsiFontti(polku.slice('/__fontti/'.length));
+    if (!f) { s.writeHead(404); s.end(); return; }
+    s.writeHead(200, { 'content-type': MIME[extname(f)] ?? 'application/octet-stream' }); s.end(readFileSync(f)); return;
+  }
   if (polku === '/') { s.writeHead(200, { 'content-type': MIME['.html'] }); s.end('<!doctype html><meta charset="utf-8"><body></body>'); return; }
   const p = join(WEB, polku.replace(/^\/+/, ''));
   if (!p.startsWith(WEB) || !existsSync(p)) { s.writeHead(404); s.end(); return; }
@@ -79,8 +93,12 @@ function varmistaMeta(tiedosto) {
 }
 
 for (const a of kohteet) {
-  const tulos = await sivu.evaluate(async (rivit) => {
+  // Fontit kuten webin lataaAjattelijaFontit (FontFace ennen atlasta); puuttuva fontti on virhe, ei hiljainen varafontti.
+  const fontit = [...new Set(a.taustavirta.rivit.map(([, f]) => f))].map((n) => a.fontit[n]).filter((f) => f?.tiedosto)
+    .map((f) => ({ perhe: f.perhe.split(',')[0].replace(/"/g, '').trim(), url: `/__fontti/${f.tiedosto.split('/').pop()}` }));
+  const tulos = await sivu.evaluate(async ([rivit, fontit]) => {
     const { piirraAtlas } = await import('/js/linssit/ajattelija-projektori.js');
+    for (const f of fontit) document.fonts.add(await new FontFace(f.perhe, `url(${f.url})`).load());
     await document.fonts.ready;
     const { kangas, paikat } = piirraAtlas(rivit);
     const d = kangas.getContext('2d').getImageData(0, 0, kangas.width, kangas.height).data;
@@ -89,7 +107,7 @@ for (const a of kohteet) {
     let b = '';
     for (let i = 0; i < r.length; i += 0x8000) b += String.fromCharCode(...r.subarray(i, i + 0x8000));
     return { leveys: kangas.width, korkeus: kangas.height, paikat: paikat.map(({ y, korkeus, lev, uMax, sumea, toistoja }) => ({ y, korkeus, lev, uMax, sumea: !!sumea, toistoja: toistoja ?? 1 })), r: btoa(b) };
-  }, atlasRivit(a));
+  }, [atlasRivit(a), fontit]);
   const png = harmaaPng(tulos.leveys, tulos.korkeus, Buffer.from(tulos.r, 'base64'));
   const atlasNimi = `${a.tunnus}-atlas.bytes`;
   writeFileSync(join(ULOS, atlasNimi), png);
@@ -98,7 +116,7 @@ for (const a of kohteet) {
   const json = join(ULOS, `${a.tunnus}.json`);
   writeFileSync(json, `${JSON.stringify(data, null, 1)}\n`);
   varmistaMeta(json);
-  console.log(`${a.tunnus}: ${json.replace(PROTO + '/', '')}, atlas ${tulos.leveys}×${tulos.korkeus} (${(png.length / 1024).toFixed(0)} kt, ${tulos.paikat.length} riviä)`);
+  console.log(`${a.tunnus}: ${json.replace(PROTO + '/', '')}, fontit ${fontit.map((f) => f.perhe).join(', ') || '-'}, atlas ${tulos.leveys}×${tulos.korkeus} (${(png.length / 1024).toFixed(0)} kt, ${tulos.paikat.length} riviä)`);
 }
 await selain.close();
 palvelin.close();

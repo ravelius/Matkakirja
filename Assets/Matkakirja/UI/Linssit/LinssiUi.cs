@@ -23,6 +23,7 @@
 // Rekisteri syntyy LinssiOhjaimen mukana (AfterSceneLoad), joten kytkentä
 // odottaa sitä ja kytkeytyy uudelleen, jos ohjain vaihtuu.
 using System;
+using System.Collections.Generic;
 using Matkakirja.Linssit;
 using Matkakirja.Linssit.Aikajana;
 using Matkakirja.Linssit.Vuosi;
@@ -68,8 +69,6 @@ namespace Matkakirja.Natiivi
         Linssirekisteri kuunneltu;
         // Sulkupillerin peittäjät: astronautin kuvanäkymä, vertailuarkki ja aikajanan hampurilainen.
         bool kuvaPeittaa, arkkiPeittaa, valikkoKorvaa, avausPeittaa, valitsinAuki;
-        /// <summary>Ajattelijat-linssin kortti tai KUVANÄKYMÄ auki: niiden oma sulku (✕, kortti) korvaa pillerin.</summary>
-        bool ajattelijaPeittaa;
 
         /// <summary>Aikajanan aloituslaatikko auki (web: .aikajana-avaus peittää ✕:n): sulkupilleri piiloon.</summary>
         public void AvausPeittaa(bool peittaa)
@@ -113,6 +112,19 @@ namespace Matkakirja.Natiivi
             Selite.Vasen = () => sulje.resolvedStyle.display == DisplayStyle.None ? float.NaN : sulje.worldBound.xMin;
             sulje.RegisterCallback<GeometryChangedEvent>(_ => Selite.Uudelleen());
             kerros.TurvaMuuttui += Asettele;
+            // OHJAUSNAPPI-koe (`ui ohjausnapit 1` rivi: ‹ → ↻ → säätö → taikalasit → ✕ viimeisenä; `2` yksi hampurilainen).
+            var koeValinnat = new List<(string, Action)> { ("Linssit", Valitsin.Avaa) };
+            var koeValikko = new LinssiValikko(kerros, koeValinnat, "Sulje linssi", SuljeLinssi);
+            // Napautus valikkoon sulkee Pulun taulun kuten muukin napautus taulun ohi (PulunTauluNakyma.UlkoNapautus).
+            koeValikko.Avautuu += () => Astronautti?.Taulu?.Sulje("valikko");
+            new OhjausryhmaKoe(turva, sulje, new (VisualElement, string, string, Action)[]
+            {
+                (Dioraama.Paluu, Ikonit.Takaisin, "Takaisin", DioraamaTaulu.PyydaPaluu),
+                (Dioraama.Uusinta, Ikonit.PaivitaVersio, "Kertoja uudelleen", DioraamaTaulu.KertojaUudelleen),
+                (Mikseri.Lappu, Ikonit.Mikseri, "Mikseri", Mikseri.Vaihda),
+                (Valitsin.Nappi, Ikonit.Viiva["taikalasit"], "Linssit", Valitsin.Vaihda),
+                (sulje, Ikonit.Viiva["rasti"], "Sulje linssi", SuljeLinssi),
+            }, koeValikko);
             Asettele();
 
             // Koukut. Peite on UI:n; musiikin pito kuuluu Pelikoodarin äänille, joilla ei
@@ -146,7 +158,6 @@ namespace Matkakirja.Natiivi
             };
             Maat.ArkkiMuuttui += auki => { arkkiPeittaa = auki; PaivitaSulku(); };
             // Ajattelijat: valintakortti ja kohtauksen ✕ sulkevat linssin, joten pilleri ei tule tuplana (kuten astronautin kuva).
-            Ajattelija.Peittaa += p => { ajattelijaPeittaa = p; PaivitaSulku(); };
             Aikajana.ValikkoKaytettavissa += kaytossa => { valikkoKorvaa = kaytossa; PaivitaSulku(); };
             // Laitetestaaja 29.9. (savukierros 1051): Linssivalitsin (kerros 25) aukeaa auki olevan linssin päälle, mutta
             // ✕ (38) ja dioraaman taulu/laput (36) piirtyivät sen päälle ja siirsivät Aktivoi-napin. Valitsimen ajaksi pois.
@@ -357,9 +368,12 @@ namespace Matkakirja.Natiivi
         /// Sulkupilleri näkyy, kun linssi on auki eikä sitä peitä kuvanäkymä tai vertailuarkki
         /// eikä korvaa aikajanan hampurilainen (sen "Poistu").
         /// </summary>
-        void PaivitaSulku()
+        internal void PaivitaSulku()
         {
-            bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa && !valitsinAuki && !ajattelijaPeittaa;
+            // Linnassa ✕ korvautuu valikon "Sulje linna" -rivillä (omistaja 2.10. 14.44, LinnaValikko). Ajattelijat käyttävät
+            // linssien yhteistä sulkua (0f703701), joten niille ei ole omaa ehtoa.
+            bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa && !valitsinAuki
+                         && !(Dioraama != null && Dioraama.Kytketty);
             sulje.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (nakyy && !sulkuNakyi) Kutista();
             else if (!nakyy) { kutistus?.Pause(); kutistus = null; }

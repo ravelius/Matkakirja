@@ -32,6 +32,8 @@ Shader "Hidden/Matkakirja/AjattelijaPeite"
             #endif
                 return o;
             }
+            // sRGB → lineaarinen (IEC 61966-2-1); oma kaava, koska Core.hlsl ei tuo Color.hlsl:n SRGBToLinearia (Metal-käännös 2.10.).
+            float3 Lineaariseksi(float3 c) { return lerp(pow((c + 0.055) / 1.055, 2.4), c / 12.92, step(c, 0.04045)); }
             float Vali(float y, float a, float b, float pa, float pb) { return lerp(pa, pb, saturate((y - a) / (b - a))); }
             float4 frag(Ulos i) : SV_Target
             {
@@ -47,7 +49,7 @@ Shader "Hidden/Matkakirja/AjattelijaPeite"
                 // Kaksi sRGB-kerrosta päällekkäin: musta vinjetti ja himmennysväri; tulos lineaariseksi peitoksi.
                 float a = 1.0 - (1.0 - a1) * (1.0 - a2);
                 float3 vari = a > 1e-4 ? _HimmennysVari.rgb * (a2 * (1.0 - a1)) / a : 0;
-                return float4(SRGBToLinear(vari), 1.0 - pow(1.0 - a, 2.2));
+                return float4(Lineaariseksi(vari), 1.0 - pow(1.0 - a, 2.2));
             }
             ENDHLSL
         }

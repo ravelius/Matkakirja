@@ -22,7 +22,7 @@
     margin: 0;
     padding: 0 var(--tk-vali-m) 0 var(--tk-vali-m);
     border-width: 1px;
-    border-radius: 19px; /* pilleri: puolet 38 pt:n korkeudesta (999 piirtyi UITK:ssa ellipsinä) */
+    border-radius: var(--tk-kulma-nappi);
     border-color: var(--tk-reunus);
     background-color: var(--tk-pinta);
     color: var(--tk-muste);
