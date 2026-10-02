@@ -274,7 +274,8 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Pienoiskartta kehyksen sisäalaan: keskitetty, ja jos piste jäisi reunalle (alle KarttaReuna), kuva
-        /// siirtyy niin, että piste näkyy; kuva ei irtoa kehyksen reunasta.</summary>
+        /// siirtyy niin, että piste on vähintään KarttaReunan päässä reunasta (kuvan tausta on läpinäkyvä, joten reunatilassa
+        /// esim. laiturilla kuva saa irrota kehyksen reunasta; savuke 18.06: piste leikkautui).</summary>
         void AsetteleKartta(bool onPiste, Vector2 paikka)
         {
             var r = kartta.resolvedStyle;
@@ -288,13 +289,11 @@ namespace Matkakirja.Natiivi
                 float m = w * KarttaReuna, px = x + paikka.x * kw;
                 if (px < m) x = m - paikka.x * kw;
                 else if (px > w - m) x = w - m - paikka.x * kw;
-                x = Mathf.Clamp(x, w - kw, 0f);
                 if (kh > h)
                 {
                     float py = y + paikka.y * kh;
                     if (py < m) y = m - paikka.y * kh;
                     else if (py > h - m) y = h - m - paikka.y * kh;
-                    y = Mathf.Clamp(y, h - kh, 0f);
                 }
             }
             karttaKuva.style.left = x; karttaKuva.style.top = y;
