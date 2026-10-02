@@ -59,6 +59,7 @@ test('Marcuksen kierrokset 2–3 samalla rakenteella (marcus-tekstit.json kierro
   assert.deepEqual(kr.lista.map((k) => k.kaiku.kuva.split('/').pop()), ['kaiku-uhri.png', 'kaiku-kuolema.png']);
   assert.equal(kr.loppu, 3330);
   assert.deepEqual(kamerakayra(kr.kamera)(3330).paikka, MARCUS.otokset.rembrandt.paikka);
+});
 test('taustavirran rivit kulkevat lähes samaa nopeutta pinnalla: 25 mm/s ±15 % (omistaja 3.10.2026, Blender v11)', () => {
   assert.deepEqual(SOKRATES.taustavirta.nopeus, { mms: 25, vaihtelu: 0.15 });
   assert.match(MOOTTORI, /const nopeudet = tv\.rivit\.map\(\(_, k\) => 1 - vaihtelu \+ 2 \* vaihtelu \* k \/ Math\.max\(1, tv\.rivit\.length - 1\)\);/);
