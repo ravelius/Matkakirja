@@ -378,6 +378,19 @@ namespace Matkakirja.Natiivi
             kynnyksetLaskettu = false;
         }
 
+        /// <summary>Tilan glb:n liekki:-solmut ovat sen liekit (Linnanrakentaja 2.10.2026: sama liekki piirtyi kahdesti, rakennus.json:n
+        /// tila.Liekit-listasta ja solmusta). DioraamaSovitin kutsuu tätä, kun tilan glb:ssä on liekki:-solmuja: tilan JSON-liekit pois.</summary>
+        public int PoistaJsonLiekit(string tilaId)
+        {
+            return esiintymat.RemoveAll(e =>
+            {
+                if (e.TilaId != tilaId || (e.Paikka?.LiekkiId != null && e.Paikka.LiekkiId.StartsWith("tyhja:"))) return false;
+                if (e.Mesh != null) UnityEngine.Object.Destroy(e.Mesh);
+                if (e.Go != null) UnityEngine.Object.Destroy(e.Go);
+                return true;
+            });
+        }
+
         bool kynnyksetLaskettu, kaikkiSyttyneet;
 
         /// <summary>Elävä linna: lyhdyn pieni 3D-liekki (6 cm) hahmon lapseksi, jaettu pisaramesh ja materiaali; ei kipinöitä.</summary>
@@ -431,8 +444,9 @@ namespace Matkakirja.Natiivi
             Shader.SetGlobalFloat(IdAika, (float)t);
             foreach (var e in esiintymat)
             {
-                // Elävä linna: toisen tilan (tunnelma) tyhjäliekki piiloon leikkauskäytävässä, kuten sen leivottu teline.
-                if (e.Kolme && e.Go != null && e.Paikka?.LiekkiId != null && e.Paikka.LiekkiId.StartsWith("tyhja:") && e.TilaId != DioraamaUlkokuori.LeikkausTila)
+                // Elävä linna: toisen tilan (tunnelma) liekki piiloon leikkauskäytävässä, kuten sen leivottu teline -- sekä
+                // liekki:-solmusta että JSON-listasta tehty (2.10.: JSON-liekit jäivät leijumaan, kun teline katosi).
+                if (e.Go != null && e.TilaId != DioraamaUlkokuori.LeikkausTila)
                 {
                     var r = e.Go.GetComponent<MeshRenderer>();
                     bool piilo = DioraamaUlkokuori.Leikkauksessa(e.Go.transform.position);
