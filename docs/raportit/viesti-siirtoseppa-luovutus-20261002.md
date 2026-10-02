@@ -22,6 +22,8 @@ Juna 130: 4d324efa koostumuksessa 4e1f150f, skin-osoitin pysyy 2abec0c9:ssä.
 TEHTY 22.59: peili 01fb6118 (Linnanrakentaja) kuvattu, lokit/siirtoseppa-skin19 (Muurinharja+video, keittiö) → Päätoimittajalle; odottaa sen arviota.
 TEHTY 23.13: peili 6cd8735b3a42ea3c (Muurinharjan kääntöpiste 1,28 m tulikorista, keittiö) kuvattu, lokit/siirtoseppa-skin20; omistajan arkki
 omistaja-linna-hahmot-6cd8735b.png → Päätoimittajalle. Seuraava: omistajan OK → skin-osoitin 2abec0c9 → 6cd8735b Päätoimittajan ja Julkaisijan kautta.
+TEHTY 23.27: peili dad4d0f39cd2c9c2 (irralliset tunnelma-liekit pois) kuvattu, lokit/siirtoseppa-skin21; UUSI omistajan arkki
+omistaja-linna-hahmot-dad4d0f3.png → Päätoimittajalle (korvaa 6cd8735b). Osoitinehdokas nyt dad4d0f3. Natiivi: JSON- + liekki:-solmuliekit tuplana, ei muutettu ilman käskyä.
 
 1. **Linnan hahmojen jalkavarjo (omistaja 20.2x: "kävelijä tarvitsee vielä varjon jalkojensa alle") — EI VIELÄ NÄY.**
    Haara `siirtoseppa/linna-skin`, kärki **39a396e3** (KÄÄNNETTY 8219c063, app lokit/siirtoseppa-skin16-app).
