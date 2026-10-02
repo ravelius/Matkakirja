@@ -28,3 +28,10 @@ test('pelaajan napautus, nipistys, rulla tai nuoli pysäyttää AUTOn; AUTOssa o
   assert.match(SATELLIITTI, /if \(e\.key === 'ArrowRight' \|\| e\.key === 'ArrowLeft'\) pysaytaAuto\(e\);/);
   assert.match(lue('../css/satelliitti.css'), /\.satelliitti-auto-paalla \.satelliitti-seutu \{ display: none; \}/);
 });
+
+test('AUTO on ‹ ›:n ryhmässä alhaalla keskellä, ei vasemmassa alakulmassa pikkukuvien päällä (2.10.2026)', () => {
+  assert.match(SATELLIITTI, /kohdenapit\.classList\.add\('tk-teema-lasi-avaruus'\);\s*kohdenapit\.prepend\(autoKytkin\.el\);/);
+  assert.doesNotMatch(SATELLIITTI, /satelliitti-autokulma/);
+  assert.doesNotMatch(lue('../css/satelliitti.css'), /\.satelliitti-autokulma/);
+  assert.match(lue('../css/satelliitti.css'), /\.satelliitti-kohteet \{[^}]*align-items: center;/);
+});
