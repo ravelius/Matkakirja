@@ -49,6 +49,9 @@ namespace Matkakirja.Natiivi
         readonly Button aNappi, bNappi;
         readonly Dictionary<string, (Slider Saadin, Label Arvo, MikseriSaadin Kuvaus)> saatimet = new Dictionary<string, (Slider, Label, MikseriSaadin)>();
         bool auki;
+        /// <summary>OHJAUSNAPPI-koe (OhjausryhmaKoe): säätönappi ryhmään.</summary>
+        internal VisualElement Lappu => lappu;
+        internal void Vaihda() => Avaa(!auki);
         int versio = int.MinValue;
         IMikseriLahde kytketty;
         Vector2 paikka = new Vector2(62f, 120f), vetoAlku, paikkaAlku;

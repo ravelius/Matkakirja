@@ -29,6 +29,8 @@ namespace Matkakirja.Natiivi
     public sealed partial class Linssivalitsin
     {
         readonly Button nappi;
+        /// <summary>OHJAUSNAPPI-koe (OhjausryhmaKoe): taikalasit ryhmään.</summary>
+        internal Button Nappi => nappi;
         readonly VisualElement paneeli, lista, lisaosa;
         readonly Label otsikko;
         readonly List<(VisualElement Rivi, Func<bool> Nakyy)> lisarivit = new List<(VisualElement, Func<bool>)>();

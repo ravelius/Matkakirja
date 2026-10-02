@@ -38,6 +38,11 @@ namespace Matkakirja.Natiivi
         readonly VisualElement kertojaKehys, kertojaLaatikko, puluAlue;
         readonly Label kertojaTeksti;
         readonly Button uusintaNappi;
+        /// <summary>OHJAUSNAPPI-koe (OhjausryhmaKoe): linnan ‹ ja ↻ ryhmään.</summary>
+        internal Button Paluu => paluuNappi;
+        internal Button Uusinta => uusintaNappi;
+        internal static void PyydaPaluu() => DioraamaSovitin.PyydaPaluu();
+        internal static void KertojaUudelleen() => DioraamaSovitin.Linssi?.KertojaUudelleen(DioraamaSovitin.ViimeisinT);
         string puluKupla, puluAani;
         // KUUNNELMA (Päätoimittaja 30.9.2026): tekstityskaistale infotaulun yläpuolella Pulun oikealla puolella ja
         // infotaulun "Kuuntele"-nappi (alusta uudelleen).
