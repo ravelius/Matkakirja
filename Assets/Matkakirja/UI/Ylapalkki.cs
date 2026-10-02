@@ -815,6 +815,7 @@ namespace Matkakirja.Natiivi
             if (!(palkki.ClassListContains("mk-ylapalkki--saari") || matala) || kello.style.display == DisplayStyle.None)
             {
                 pilleri.style.fontSize = StyleKeyword.Null;
+                pilleri.style.minWidth = StyleKeyword.Null;
                 return;
             }
             float nyt = raha.resolvedStyle.fontSize;
@@ -842,6 +843,7 @@ namespace Matkakirja.Natiivi
             while (koko > alaraja && kiintea + teksti * koko / nyt + 2f > pilleriMax) koko -= 0.5f;
             if (!Mathf.Approximately(koko, nyt)) pilleri.style.fontSize = koko;
             rahaton.style.fontSize = koko * 0.85f;
+            AsetaPilleriVahimmais(koko / nyt);
             if (PilleriOikealla && ikoni != null)
             {
                 // Kulmakaaren sisällä pilleri on kapeampi (1.0.54-laitekuva: "Päivä 1, a…" katkesi): jos teksti ei mahdu pienimmälläkään
@@ -861,6 +863,30 @@ namespace Matkakirja.Natiivi
                 if (ikoni.style.display != d) ikoni.style.display = d;
             }
         }
+
+        /// <summary>
+        /// Pillerin kiinteä leveys (omistaja 2.10.2026 klo 20.0x: "voisi olla vain sitten enemmän tyhjää sivuilla jos ei ole niin
+        /// pitkä teksti"): yksirivisen pillerin vähimmäisleveys mallitekstin "80 pv £9999" mukaan samoilla sisätäytteillä, teksti
+        /// keskellä (USS .mk-pilleri--lyhyt). Pilleri ei hypi lukujen muuttuessa; pidempi teksti (rahattomuuden varoitus) levittää sitä.
+        /// </summary>
+        const string MalliPaiva = "80 pv", MalliRaha = "9999";
+
+        void AsetaPilleriVahimmais(float mittakaava)
+        {
+            if (!pilleri.ClassListContains("mk-pilleri--lyhyt")) { pilleri.style.minWidth = StyleKeyword.Null; return; }
+            float Mitta(TextElement t, string teksti) => t.MeasureTextSize(teksti, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+            var rivi1 = raha.parent;
+            float teksti = Mitta(kello, MalliPaiva) + Mitta(raha, MalliRaha)
+                + (punta.style.display == DisplayStyle.Flex ? Mitta(punta, punta.text) + punta.resolvedStyle.marginRight : 0f);
+            float kiintea = pilleri.resolvedStyle.paddingLeft + pilleri.resolvedStyle.paddingRight
+                + pilleri.resolvedStyle.borderLeftWidth + pilleri.resolvedStyle.borderRightWidth + (rivi1?.resolvedStyle.marginLeft ?? 0f);
+            if (float.IsNaN(teksti) || float.IsNaN(kiintea) || teksti <= 0f) return;
+            float w = Mathf.Ceil(kiintea + teksti * mittakaava + 2f);
+            if (Mathf.Abs(pilleri.resolvedStyle.minWidth.value - w) > 0.5f) pilleri.style.minWidth = w;
+        }
+
+        /// <summary>Testikomento (ui ylapalkki teksti &lt;rahat&gt; &lt;päivä&gt; | pois): pillerin teksti kuviin, peli ei ylikirjoita.</summary>
+        public static string PakotaTeksti;
 
         void AsetaKelluva()
         {
@@ -1001,7 +1027,7 @@ namespace Matkakirja.Natiivi
         /// <summary>PeliApu.TilaTeksti: "300 £ · päivä 1 · aamu · Pariisi".</summary>
         public void Aseta(string teksti)
         {
-            teksti ??= "";
+            teksti = PakotaTeksti ?? teksti ?? "";
             if (teksti == rivi) return;
             rivi = teksti;
             var osat = teksti.Split(new[] { " · " }, StringSplitOptions.None);

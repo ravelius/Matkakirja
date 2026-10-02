@@ -1037,6 +1037,14 @@ namespace Matkakirja.Natiivi
                     UiNakymat.PakotaKuvaTaso = loput == "kokoruutu" ? KuvaSumennus.Kokoruutu : loput == "pois" ? KuvaSumennus.Ei : (KuvaSumennus?)null;
                     return loput == "kokoruutu" ? $"pysäytyskuva {(PalloKierto.Pysaytyskuva != null ? "päällä" : "tulossa")}" : null;
                 case "ylapalkki":
+                    if (loput.StartsWith("teksti"))
+                    {
+                        // ui ylapalkki teksti 4500 50 → pillerissä "50 pv £4500"; "pois" palauttaa pelin tekstin seuraavalla päivityksellä.
+                        var tt = loput.Substring(6).Trim().Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                        Ylapalkki.PakotaTeksti = tt.Length == 2 ? $"{tt[0]} £ · päivä {tt[1]} · aamu · testi" : null;
+                        ui.Tilarivi.Aseta(Ylapalkki.PakotaTeksti ?? "");
+                        return Ylapalkki.PakotaTeksti ?? "pakotus pois";
+                    }
                     if (loput == "auki") { ui.Tilarivi.Avaa(); return Ylapalkki.Piilossa ? null : "palkki ei ole piilossa (ui ylapalkki vaaka)"; }
                     if (loput == "veto" || loput == "napautus") { ui.Tilarivi.TestaaVeto(loput == "veto"); return Ylapalkki.VetoPiilossa ? "palkki piilossa (veto)" : "palkki näkyvissä"; }
                     if (loput == "kelluva" || loput == "palkki") { Ylapalkki.PakotaKelluva = loput == "kelluva"; ui.Tilarivi.Paivita(); return null; }

@@ -4540,6 +4540,9 @@
 .mk-pilleri--lyhyt {
     padding-left: var(--tk-vali-m);
     padding-right: var(--tk-vali-m);
+    /* Kiinteä leveys "80 pv £9999":n mukaan (Ylapalkki.AsetaPilleriVahimmais), teksti keskellä (omistaja 2.10. klo 20.0x). */
+    justify-content: center;
+    align-items: center;
 }
 
 .mk-pilleri__pino--rivi {
