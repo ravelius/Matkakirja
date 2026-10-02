@@ -69,3 +69,8 @@ test('robotin pitkät ja lyhyet 2x-kerrokset säilyvät erillisinä',()=>{
   assert.match(css,/livia-eva-jalkatuessa 6s ease-in-out infinite/);
   assert.match(css,/\[data-part="eva-robotin-reunavalo"\]/);
 });
+
+test('robottikäsi on pelissä aina EVA-asun kanssa (omistaja 2.10.2026)', () => {
+  const eleet = readFileSync(new URL('../js/livia-eleet.js', import.meta.url), 'utf8');
+  assert.match(eleet, /const piirrettava=\{\.\.\.s,compactExplain,astronautti,evaRobottikasi:astronautti\};/);
+});

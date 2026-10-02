@@ -248,7 +248,7 @@ export function asennaLivianKasvot(pollo) {
  }
  const piirra=s=>{if(!kuollut){viimeAsento=s;
   // Leijunnan vaihe paikataan paikalleen: ei asettelumittoja, ei rakennusta (ks. luoLivianSvg).
-  if(s.mapHover?.height>0&&!kohtausPiilossa()&&kasvot.paikkaa?.({...s,compactExplain:viimePiirretty?.compactExplain,astronautti:viimePiirretty?.astronautti,...(lehtiPaalla?{glasses:viimePiirretty?.glasses}:{})}))return;
+  if(s.mapHover?.height>0&&!kohtausPiilossa()&&kasvot.paikkaa?.({...s,compactExplain:viimePiirretty?.compactExplain,astronautti:viimePiirretty?.astronautti,evaRobottikasi:viimePiirretty?.evaRobottikasi,...(lehtiPaalla?{glasses:viimePiirretty?.glasses}:{})}))return;
   sijoita();
   // Kohtaus omistaa myös suorat piirrot: puhe, napin näkyvyys ja
   // taustalta paluu eivät saa palauttaa levossa olevaa lintua sen alle.
@@ -258,7 +258,9 @@ export function asennaLivianKasvot(pollo) {
   if(lehtiPaalla&&lasit>=1)lasitPuettu=true;
   const compactExplain=(doc.documentElement?.clientWidth||doc.defaultView?.innerWidth||0)<=600;
   pinta.classList.toggle(LIVIAN_ASTRONAUTTI_PUHE_LUOKKA,puhe);
-  const piirrettava={...s,compactExplain,astronautti:doc.body.classList.contains(LIVIAN_ASTRONAUTTI_LUOKKA)};
+  // Robottikäsi (omistaja 2.10.2026 "Ok kaikkiin"; Codexin evaRobottikasi): aina EVA-asun kanssa.
+  const astronautti=doc.body.classList.contains(LIVIAN_ASTRONAUTTI_LUOKKA);
+  const piirrettava={...s,compactExplain,astronautti,evaRobottikasi:astronautti};
   viimePiirretty=lehtiPaalla?{...piirrettava,glasses:lasit}:piirrettava;
   kasvot.paint(viimePiirretty);
  }};
