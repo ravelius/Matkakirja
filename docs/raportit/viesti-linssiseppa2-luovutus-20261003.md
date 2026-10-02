@@ -15,18 +15,19 @@ Seurantanäkymää ei ole (omistaja poisti 2.10.).
 
 ## 2. Juna 132 (tila 3.10. 01.2x): MERGE-PYYNNÖT NATIIVISEPÄLLÄ
 
-- `linssiseppa2/kaiku-suunta` 20c4b0d9: kaiut oikein päin, todennettu ja kuitattu.
+- `linssiseppa2/ajattelijat-kierrokset` 18df338f (sis. kaiku-suunta 20c4b0d9): Sokrateen kierrokset 2–3 (web #3884) natiivissa;
+  kuitattu, todennettu 4c87ada3 (lokit/linssiseppa2-ajattelijat-kierrokset-20261003), merge-pyyntö Natiivisepällä (korvaa kaiku-suunnan).
 - `linssiseppa2/pulu-vaaka-alas` 07e7ecca (sis. `linssiseppa2/pulu-mittaus` 9f2deece): Pulu puomin piirretystä alareunasta 6 pt
   pöydän yläpuolelle (pysty); vaakana kypärä 67 %:n korkeudella (KyparaKorkeus 0,74 rajoittuu kyynärpään 8 pt:n väliin ruudun
   alareunaan), puomi nousee pienen paneelin yli (A/B `astro kyyti pulualas 0|1`, oletus 1). Kuitattu (vaihtoehto B), todennettu
   a7cd30f5:llä: lokit/linssiseppa2-pulu-suositus-c-20261003/merkinnat-pulu-korkeus.png. Merge-pyyntö Natiivisepällä.
   Pystyosan lyhennys vain, jos omistaja pyytää Pulua alemmas TF 132:n jälkeen (Codexin kuvan mittasuhteet).
 
-## 3. SEURAAVAKSI: Ajattelijat natiivissa (web malli, tee kun Pelikoodarin pino #3884–#3892 on mainissa)
+## 3. SEURAAVAKSI: ajattelijoiden v11-erä natiiviin (kun Pelikoodarin #3888–#3892 on mainissa)
 
-- Sokrateen kierrokset 2–3 (#3884): `kierrokset`-kenttä, yksi 111 s raita, loppu 3330, lista[] (paalause 21d/49b, sivulta-säde,
-  vieritys, lähde, virta, siemen, kaiku), kamera[] Blender-avaimet Hermite AUTO_CLAMPED (js/linssit/ajattelija.js kamerakayra),
-  yksi kaikupaikka tekstuuri kierroksittain, aurinko hiipuu kaiun ajaksi, lappu 3330. Kuvat proto-3d/lokit/pelikoodari-sokrates-kierrokset-20261002.
+Päätoimittaja 3.10. 01.5x: (a) ✕ natiivissa astronautin kameran pyöreällä sulkunappipohjalla + piilossa napautukseen asti (4 s, sama
+mekanismi kuin astron AUTO); jos pohja ei sovi → kysy Päätoimittajalta. (b) Auringon normalisointi (#3884 poisti webistä):
+Päätoimittaja kysyy Pelikoodarilta; jos tarkoituksellinen → peilaa v11-erässä, muuten natiivi ennallaan. Muut:
 - #3891 + omistaja 3.10. 00.0x: ✕ piilossa kunnes napautus, häipyy 4 s (webin AUTO_HILJAA_MS; Päätoimittaja sanoi ~3 s, web voittaa);
   kytkimen napsahdus äänitteeksi ajattelijat/yhteiset/v2/kytkin-kaiku.mp3; taustavirta.nopeus { mms 25, vaihtelu 0,15 }
   (uv/ruutu = mms/1000 × kerroin/30/(kork × laatan lev px/laatan kork px), kertoimet tasavälein 0,85–1,15 sekoitettuna siemenellä);
