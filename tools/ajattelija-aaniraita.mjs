@@ -10,7 +10,11 @@
  *   <ulos>/kierros1-puhe.mp3      luennat a (20,0 s) ja b (32,0 s), 48,333 s — kello
  *   <ulos>/kierros1-musiikki.mp3  Zarathustra 0–48,333 s (leikkaukset iskuihin, silmukka, ducking)
  *
- *   node tools/ajattelija-aaniraita.mjs --ajattelija sokrates|marcus --ulos <kansio> [--lahteet <kansio>]
+ * KIERROKSET 2–3 (--kierrokset; Blender v9/v10, sokrates_aani.sh --v9): luennat c 51,667 s, d 62,667 s, e 80,0 s ja
+ * f 88,833 s lisätään, kesto 111,0 s (3330 ruutua). Tiedostot kierrokset-puhe.mp3 ja kierrokset-musiikki.mp3, jotta
+ * kierroksen 1 v1-tiedostot jäävät ämpäriin ennalleen.
+ *
+ *   node tools/ajattelija-aaniraita.mjs --ajattelija sokrates|marcus --ulos <kansio> [--lahteet <kansio>] [--kierrokset]
  * Ääni ei kuulu repoon; Julkaisija vie tiedostot ämpäriin (ajattelijat/sokrates/v1/).
  */
 import { execFileSync } from 'node:child_process';
@@ -31,6 +35,11 @@ const RESEPTIT = {
     osat: [[13.0, 22.517], [60.5, 80.0]],               // trumpetit → loppusointu (levytys hiljenee 80 s:n jälkeen)
     silmukka: [66.0, 80.0],                             // urkupohja (sokrates_aani_v10.py)
     luennat: [['luennat/a-otto1.mp3', 20.0], ['luennat/b-otto1.mp3', 32.0]],
+    kierrokset: {
+      kesto: 111.0,
+      luennat: [['luennat/c-otto1.mp3', 51.667], ['luennat/d-otto1.mp3', 62.667], ['luennat/e-otto1.mp3', 80.0],
+        ['luennat/f-otto1.mp3', 88.833]],
+    },
   },
   marcus: {
     lahteet: '/Users/Shared/Claude/proto-3d/_lahteet/marcus-aurelius',
@@ -44,7 +53,11 @@ const R = RESEPTIT[AJATTELIJA];
 if (!R) throw new Error(`tuntematon ajattelija ${AJATTELIJA}`);
 const LAHTEET = resolve(arvo('--lahteet', R.lahteet));
 const ULOS = resolve(arvo('--ulos', '.'));
-const KESTO = 48.333;
+const KIERROKSET = A.includes('--kierrokset');
+if (KIERROKSET && !R.kierrokset) throw new Error(`${AJATTELIJA}: ei kierrosten 2–3 reseptiä`);
+const KESTO = KIERROKSET ? R.kierrokset.kesto : 48.333;
+const LUENNAT = KIERROKSET ? [...R.luennat, ...R.kierrokset.luennat] : R.luennat;
+const ETULIITE = KIERROKSET ? 'kierrokset' : 'kierros1';
 const SILMUKAN_HAIVYTYS = 3;
 // Vaimennus (s, kierroksen ajassa): päälause ja lähderivi 17,5–31,7 sekä luennat → yhtenäinen ikkuna 17,5 s → loppu;
 // nimi ja kysymys (9,4–15,4 s) saavat musiikin täytenä. v10: ×0,22 (−13 dB), ramppi 2 s, viimeiset 2,7 s ×0,7.
@@ -54,11 +67,11 @@ mkdirSync(ULOS, { recursive: true });
 const ff = (...args) => execFileSync('ffmpeg', ['-y', '-loglevel', 'error', ...args], { stdio: 'inherit' });
 
 // Puheraita: luennat hiljaisen pohjan päällä.
-ff(...R.luennat.flatMap(([f]) => ['-i', join(LAHTEET, f)]), '-filter_complex',
+ff(...LUENNAT.flatMap(([f]) => ['-i', join(LAHTEET, f)]), '-filter_complex',
   `anullsrc=r=48000:cl=stereo,atrim=0:${KESTO}[hiljaa];`
-  + R.luennat.map(([, s], i) => `[${i}]aformat=sample_rates=48000:channel_layouts=stereo,adelay=${Math.round(s * 1000)}|${Math.round(s * 1000)}[v${i}];`).join('')
-  + `[hiljaa]${R.luennat.map((_, i) => `[v${i}]`).join('')}amix=inputs=${R.luennat.length + 1}:normalize=0:duration=first,atrim=0:${KESTO},alimiter=limit=0.95[out]`,
-  '-map', '[out]', '-c:a', 'libmp3lame', '-b:a', '160k', join(ULOS, 'kierros1-puhe.mp3'));
+  + LUENNAT.map(([, s], i) => `[${i}]aformat=sample_rates=48000:channel_layouts=stereo,adelay=${Math.round(s * 1000)}|${Math.round(s * 1000)}[v${i}];`).join('')
+  + `[hiljaa]${LUENNAT.map((_, i) => `[v${i}]`).join('')}amix=inputs=${LUENNAT.length + 1}:normalize=0:duration=first,atrim=0:${KESTO},alimiter=limit=0.95[out]`,
+  '-map', '[out]', '-c:a', 'libmp3lame', '-b:a', '160k', join(ULOS, `${ETULIITE}-puhe.mp3`));
 
 // Musiikki: osat ristihäivytettyinä, sitten (valinnainen) urkupohjan silmukka ristihäivytettyinä, kunnes kesto täyttyy.
 const pituus = R.osat.reduce((s, [a, l]) => s + l - a, 0) - 0.15 * (R.osat.length - 1);
@@ -79,5 +92,5 @@ ff('-i', join(LAHTEET, R.musiikki), '-filter_complex',
   + kopiot.map((i) => `[u${i}]atrim=${R.silmukka[0]}:${R.silmukka[1]},asetpts=PTS-STARTPTS[s${i}];`).join('')
   + ketju
   + `[${viimeinen}]atrim=0:${KESTO},volume=${vaimennus},volume=0.75,alimiter=limit=0.95[out]`,
-  '-map', '[out]', '-c:a', 'libmp3lame', '-b:a', '160k', join(ULOS, 'kierros1-musiikki.mp3'));
+  '-map', '[out]', '-c:a', 'libmp3lame', '-b:a', '160k', join(ULOS, `${ETULIITE}-musiikki.mp3`));
 console.log('valmis:', ULOS);

@@ -19768,6 +19768,14 @@ export class UI {
       return;
     }
     /*
+     * HAMPURILAINEN PILLERIN TILALLA (omistaja 2.10.2026 klo 21.3x, ensin Topografia; linssimoduulin `valikko`):
+     * oikean yläkulman nimipilleri poistuu, ja sen paikalle tulee OHJAUSNAPPI-neliö, jonka valikossa ylimpänä on
+     * selitteen kytkin (Topografia: Korkeustasot) ja sen alla Sulje linssi. Selitekortti on silloin kokonaan
+     * piilossa, kunnes kytkin avaa sen; kortin napautus sulkee sen kuten ennenkin.
+     */
+    const valikossa = Boolean(linssi.valikko);
+    void this.piirraLinssinHampurilainen(valikossa ? linssi : null);
+    /*
      * Selite avautuu ja sulkeutuu napauttamalla, ja kutistettuna siitä
      * jää näkyviin vain linssin nimi. Aloitustila on kutistettu: linssin
      * päällä kartta on se, jota katsotaan, ja värilaatikot ovat
@@ -19795,10 +19803,15 @@ export class UI {
      * kumpi tila on päällä. Otsikkotaso säilyy sen ympärillä.
      */
     const otsikko = html('h2');
-    const otsikkoNappi = html('button', 'linssi-selite-nappi', linssi.nimi);
-    otsikkoNappi.type = 'button';
-    otsikkoNappi.addEventListener('click', () => this.vaihdaLinssiSelite());
-    otsikko.appendChild(otsikkoNappi);
+    kortti.classList.toggle('valikossa', valikossa);
+    if (valikossa) {
+      otsikko.textContent = linssi.valikko.selite ?? linssi.nimi;
+    } else {
+      const otsikkoNappi = html('button', 'linssi-selite-nappi', linssi.nimi);
+      otsikkoNappi.type = 'button';
+      otsikkoNappi.addEventListener('click', () => this.vaihdaLinssiSelite());
+      otsikko.appendChild(otsikkoNappi);
+    }
     kortti.appendChild(otsikko);
 
     let rivit = [];
@@ -19880,6 +19893,8 @@ export class UI {
     const kortti = this.linssiSelite;
     if (!kortti) return;
     kortti.classList.toggle('pieni', this.linssiSelitePieni);
+    // Hampurilaisen linssillä kutistettua nimilappua ei ole: kortti on piilossa, kunnes valikon kytkin avaa sen.
+    kortti.hidden = kortti.classList.contains('valikossa') && this.linssiSelitePieni;
     kortti.querySelector('.linssi-selite-nappi')
       ?.setAttribute('aria-expanded', String(!this.linssiSelitePieni));
   }
@@ -19887,6 +19902,43 @@ export class UI {
   suljeLinssiSelite() {
     this.linssiSelite?.remove();
     this.linssiSelite = null;
+    void this.piirraLinssinHampurilainen(null);
+  }
+
+  /**
+   * Kartan päälle piirtyvän linssin hampurilainen oikeaan yläkulmaan (js/aikajana-valikko.js luoLinssivalikko,
+   * PANEELI (LASI) -pohja, nappi OHJAUSNAPPI-neliönä). `null` purkaa sen. Rakennetaan uudelleen vain linssin
+   * vaihtuessa, ei joka selitteen piirrolla, jotta auki oleva valikko ei sulkeudu kesken. Valikkomoduuli ladataan
+   * vasta tarvittaessa kuten aikajanakin (js/aikajana-valikko.js ei ole yhden tiedoston version ydinlistalla).
+   */
+  async piirraLinssinHampurilainen(linssi) {
+    const vanha = this.linssiHampurilainen;
+    if (vanha && vanha.tunnus === linssi?.tunnus && vanha.kotelo.isConnected) return;
+    vanha?.pura();
+    this.linssiHampurilainen = null;
+    const pyynto = (this.linssiHampurilainenPyynto = (this.linssiHampurilainenPyynto ?? 0) + 1);
+    if (!linssi || !this.mapPane) return;
+    const { luoLinssivalikko } = await import('./aikajana-valikko.js');
+    // Linssi ehti vaihtua tai sulkeutua latauksen aikana: tuoreempi kutsu hoitaa napin.
+    if (pyynto !== this.linssiHampurilainenPyynto || this.linssiHampurilainen) return;
+    const valikko = luoLinssivalikko({
+      ui: this,
+      kohdat: [
+        {
+          luokka: 'linssi-valikko-selite',
+          teksti: linssi.valikko.selite ?? 'Selite',
+          lue: () => !this.linssiSelitePieni,
+          kirjoita: (auki) => this.vaihdaLinssiSelite(!auki),
+        },
+        { luokka: 'linssi-valikko-sulje', teksti: 'Sulje linssi', teko: () => this.valitseLinssi(null) },
+      ],
+    });
+    valikko.tunnus = linssi.tunnus;
+    valikko.kotelo.classList.add('linssi-karttavalikko');
+    // Kartan oma napautuskuuntelija kutistaisi päiväkirjan (sama syy kuin selitekortilla).
+    valikko.kotelo.addEventListener('click', (e) => e.stopPropagation());
+    this.mapPane.appendChild(valikko.kotelo);
+    this.linssiHampurilainen = valikko;
   }
 
   /**

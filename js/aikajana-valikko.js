@@ -96,11 +96,15 @@ function viivaIkoni() {
  * @param {Function} asetukset.onAlusta Aloita alusta -kohdan teko
  * @param {Function} [asetukset.onMusiikki] kutsutaan kytkimen uudella
  *   tilalla, jotta linssin oma raita tottelee samaa kytkintä
+ * @param {Array<object>} [asetukset.kohdat] linssin OMAT kohdat neljän
+ *   aikajanakohdan sijaan (KARTTALINSSIN HAMPURILAINEN, ks. alla):
+ *   `{ luokka, teksti, teko }` on komento, `{ luokka, teksti, lue,
+ *   kirjoita }` kytkin. Järjestys on taulukon järjestys.
  * @returns {object} kahvat: kotelo, nappi, valikko, kohtien napit,
  *   auki/avaa/sulje/vaihda/paivita/pura
  */
 export function luoLinssivalikko({
-  ui = null, onPoistu = null, onAlusta = null, onMusiikki = null, teema = 'lasi',
+  ui = null, onPoistu = null, onAlusta = null, onMusiikki = null, teema = 'lasi', kohdat = null,
 } = {}) {
   const kotelo = solmu('div', 'aikajana-valikko-kotelo');
   const nappi = solmu('button', `aikajana-nappi ${VALIKON_NAPPI_LUOKKA}`);
@@ -178,36 +182,51 @@ export function luoLinssivalikko({
     return rivi;
   };
 
-  // 1. Poistu — entinen ✕.
-  const poistuNappi = komento('aikajana-valikko-poistu', 'Poistu', () => onPoistu?.());
-  // 2. Aloita alusta — entinen ↺.
-  const alustaNappi = komento('aikajana-valikko-alusta', 'Aloita alusta', () => onAlusta?.());
-  // Toimintojen ja kytkinten väliin 1 px viiva (PANEELIN erotin).
-  if (pohjalla) valikko.appendChild(solmu('div', 'tk-paneeli__erotin'));
+  let poistuNappi = null;
+  let alustaNappi = null;
+  let kertojaNappi = null;
+  let musiikkiNappi = null;
   /*
-   * 3. Kertoja. Pois kesken luennan tarkoittaa hiljaisuutta HETI eikä
-   * lauseen lopusta: linssin luenta pysäytetään samalla kahvalla kuin
-   * muuallakin (js/linssipuhe.js pysaytaLinssiluenta) ja lukija
-   * vaiennetaan. Kello ja esitys jatkavat ilman ääntä.
+   * KARTTALINSSIN HAMPURILAINEN (omistaja 2.10.2026 klo 21.3x, Topografia): kartan päälle piirtyvällä linssillä ei
+   * ole aikajanan palkkia eikä kertojaa, joten valikossa on linssin omat kohdat (Topografia: Korkeustasot, Sulje
+   * linssi). Sama nappi, sama pudotus ja sama PANEELI (LASI) -pohja; vain rivit tulevat kutsujalta.
    */
-  const kertojaNappi = kytkin('aikajana-valikko-kertoja', 'Kertoja', luentaKytkinPaalla, (paalla) => {
-    asetaLuentaKytkin(paalla);
-    if (!paalla) { pysaytaLinssiluenta(ui); vaiennaAanikytkimella(); }
-  });
-  /*
-   * 4. Taustamusiikki. Kytkin on pelin oma (js/musiikkivalitsin.js), ja
-   * sen kuuntelijat hoitavat pohjaraidan. Linssin oma raita
-   * (js/siirtymamusiikki.js) ei ole kuuntelijoiden joukossa, joten se
-   * saa käskyn tästä takaisinkutsusta.
-   */
-  const musiikkiNappi = kytkin('aikajana-valikko-musiikki', 'Taustamusiikki', musiikkiPaalla, (paalla) => {
-    asetaMusiikkiPaalla(paalla);
-    onMusiikki?.(paalla);
-  });
+  const omat = [];
+  if (kohdat) {
+    for (const k of kohdat) {
+      omat.push(k.lue ? kytkin(k.luokka, k.teksti, k.lue, k.kirjoita) : komento(k.luokka, k.teksti, k.teko));
+    }
+  } else {
+    // 1. Poistu — entinen ✕.
+    poistuNappi = komento('aikajana-valikko-poistu', 'Poistu', () => onPoistu?.());
+    // 2. Aloita alusta — entinen ↺.
+    alustaNappi = komento('aikajana-valikko-alusta', 'Aloita alusta', () => onAlusta?.());
+    // Toimintojen ja kytkinten väliin 1 px viiva (PANEELIN erotin).
+    if (pohjalla) valikko.appendChild(solmu('div', 'tk-paneeli__erotin'));
+    /*
+     * 3. Kertoja. Pois kesken luennan tarkoittaa hiljaisuutta HETI eikä
+     * lauseen lopusta: linssin luenta pysäytetään samalla kahvalla kuin
+     * muuallakin (js/linssipuhe.js pysaytaLinssiluenta) ja lukija
+     * vaiennetaan. Kello ja esitys jatkavat ilman ääntä.
+     */
+    kertojaNappi = kytkin('aikajana-valikko-kertoja', 'Kertoja', luentaKytkinPaalla, (paalla) => {
+      asetaLuentaKytkin(paalla);
+      if (!paalla) { pysaytaLinssiluenta(ui); vaiennaAanikytkimella(); }
+    });
+    /*
+     * 4. Taustamusiikki. Kytkin on pelin oma (js/musiikkivalitsin.js), ja
+     * sen kuuntelijat hoitavat pohjaraidan. Linssin oma raita
+     * (js/siirtymamusiikki.js) ei ole kuuntelijoiden joukossa, joten se
+     * saa käskyn tästä takaisinkutsusta.
+     */
+    musiikkiNappi = kytkin('aikajana-valikko-musiikki', 'Taustamusiikki', musiikkiPaalla, (paalla) => {
+      asetaMusiikkiPaalla(paalla);
+      onMusiikki?.(paalla);
+    });
+  }
 
   const paivita = () => {
-    kertojaNappi.paivita();
-    musiikkiNappi.paivita();
+    for (const rivi of [kertojaNappi, musiikkiNappi, ...omat]) rivi?.paivita?.();
   };
 
   const avaa = () => {
@@ -234,6 +253,9 @@ export function luoLinssivalikko({
     sulje();
   };
   document.addEventListener?.('pointerdown', ulkopuolella);
+  // Esc sulkee karttalinssin valikon (PANEELIN sulku); aikajanan valikon Escin hoitaa js/aikajana.js itse.
+  const esc = (e) => { if (e.key === 'Escape' && sulje()) e.stopPropagation(); };
+  if (kohdat) document.addEventListener?.('keydown', esc, true);
 
   return {
     kotelo,
@@ -243,6 +265,7 @@ export function luoLinssivalikko({
     alustaNappi,
     kertojaNappi,
     musiikkiNappi,
+    kohdat: omat,
     auki,
     avaa,
     sulje,
@@ -250,6 +273,7 @@ export function luoLinssivalikko({
     paivita,
     pura() {
       document.removeEventListener?.('pointerdown', ulkopuolella);
+      document.removeEventListener?.('keydown', esc, true);
       kotelo.remove?.();
     },
   };

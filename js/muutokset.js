@@ -13,6 +13,12 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2579, teksti: 'Olavinlinna: skinnatut linnahahmot (#3885)' },
+  { v: 2578, teksti: 'Ajattelijat: Sokrateen kierrokset 2–3 (#3884)' },
+  { v: 2577, teksti: 'Topografia: hampurilainen nimipilleri tilalle (#3881)' },
+  { v: 2576, teksti: 'Astronautin kamera: AUTO hiljaa, ei siirtolappu… (#3879)' },
+  { v: 2575, teksti: 'Vaakatila ilman yläpalkkia: hampurilainen avaa… (#3886)' },
+  { v: 2574, teksti: 'Maakuntien toinen kuva: SVK, SVN, SWE, UKR (#3850)' },
   { v: 2573, teksti: 'Aarteet yhdessä ikkunassa: vain aarteet, kehitt… (#3877)' },
   { v: 2572, teksti: 'GALLERIA-pohja webiin, Julisteet ensimmäisenä k… (#3870)' },
   { v: 2571, teksti: '£-varakirjasin upotettuna (#3865)' },
