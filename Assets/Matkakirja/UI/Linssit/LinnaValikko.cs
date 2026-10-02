@@ -30,6 +30,8 @@ namespace Matkakirja.Natiivi
         public readonly VisualElement Juuri;
         readonly VisualElement ryhma, karttaRyhma, valikko, karttaKuva, piste;
         readonly Button nappi, kartta;
+        const float KarttaZoom = 1.65f, KarttaReuna = 0.18f;
+        float karttaSuhde = 0.5f;
         Nakyma nakyma;
         public bool Auki { get; private set; }
 
@@ -52,13 +54,15 @@ namespace Matkakirja.Natiivi
             karttaRyhma.AddToClassList("mk-minikartta-ryhma");
             kartta = Ohjausnappi.Nappi(null, "Huoneet", () => Avaa(Nakyma.Huoneet), karttaRyhma);
             kartta.AddToClassList("mk-ohjausnappi--iso");
+            // Linna täyttää kehyksen (Päätoimittaja 2.10. 18.0x: 2:1-kuva jäi viiruksi): kuva KarttaZoom × kehyksen
+            // sisäleveys, korkeus ~80 % kehyksestä, reunat rajautuvat (overflow hidden); näkymä panoroi pisteen näkyviin.
+            kartta.style.overflow = Overflow.Hidden;
             karttaKuva = Rakenne.El("mk-minikartta", kartta, PickingMode.Ignore);
             var kuva = Resources.Load<Texture2D>(MinikarttaKuva);
             if (kuva != null)
             {
                 karttaKuva.style.backgroundImage = new StyleBackground(kuva);
-                float suhde = (float)kuva.height / kuva.width;
-                kartta.RegisterCallback<GeometryChangedEvent>(_ => karttaKuva.style.height = kartta.contentRect.width * suhde);
+                karttaSuhde = (float)kuva.height / kuva.width;
             }
             piste = Rakenne.El("mk-minikartta__piste", karttaKuva, PickingMode.Ignore);
             piste.style.display = DisplayStyle.None;
@@ -106,13 +110,16 @@ namespace Matkakirja.Natiivi
             if (Juuri.style.display == DisplayStyle.None) return;
             // Nykyinen huone pisteenä (DioraamaAanet.NykyinenHuone = näkymän kohdetila); yleisnäkymässä ei pistettä.
             string huone = DioraamaAanet.NykyinenHuone;
-            if (huone != null && karttaTilat.TryGetValue(huone, out var k))
+            (string Nimi, Vector2 Paikka) k = default;
+            bool onPiste = huone != null && karttaTilat.TryGetValue(huone, out k);
+            if (onPiste)
             {
                 piste.style.display = DisplayStyle.Flex;
                 piste.style.left = Length.Percent(k.Paikka.x * 100f);
                 piste.style.top = Length.Percent(k.Paikka.y * 100f);
             }
             else piste.style.display = DisplayStyle.None;
+            AsetteleKartta(onPiste, k.Paikka);
             TarkistaOhiNapautus();
         }
 
@@ -264,6 +271,34 @@ namespace Matkakirja.Natiivi
             tila = Rakenne.Teksti("", "mk-linssivalikko__tila", b);
             Kirjasimet.Aseta(tila, Kirjasin.KoneBold);
             Paivita();
+        }
+
+        /// <summary>Pienoiskartta kehyksen sisäalaan: keskitetty, ja jos piste jäisi reunalle (alle KarttaReuna), kuva
+        /// siirtyy niin, että piste näkyy; kuva ei irtoa kehyksen reunasta.</summary>
+        void AsetteleKartta(bool onPiste, Vector2 paikka)
+        {
+            var r = kartta.resolvedStyle;
+            float w = kartta.layout.width - r.borderLeftWidth - r.borderRightWidth;
+            float h = kartta.layout.height - r.borderTopWidth - r.borderBottomWidth;
+            if (float.IsNaN(w) || w <= 0) return;
+            float kw = w * KarttaZoom, kh = kw * karttaSuhde;
+            float x = (w - kw) * 0.5f, y = (h - kh) * 0.5f;
+            if (onPiste)
+            {
+                float m = w * KarttaReuna, px = x + paikka.x * kw;
+                if (px < m) x = m - paikka.x * kw;
+                else if (px > w - m) x = w - m - paikka.x * kw;
+                x = Mathf.Clamp(x, w - kw, 0f);
+                if (kh > h)
+                {
+                    float py = y + paikka.y * kh;
+                    if (py < m) y = m - paikka.y * kh;
+                    else if (py > h - m) y = h - m - paikka.y * kh;
+                    y = Mathf.Clamp(y, h - kh, 0f);
+                }
+            }
+            karttaKuva.style.left = x; karttaKuva.style.top = y;
+            karttaKuva.style.width = kw; karttaKuva.style.height = kh;
         }
 
         /// <summary>Lista napin alle, oikea reuna napin oikeaan reunaan (LinssiValikko.Asettele).</summary>
