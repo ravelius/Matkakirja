@@ -112,9 +112,6 @@
   "Assets/Matkakirja/UI/Pulu/Matkakirjakortti.cs": {
    "vari": 5
   },
-  "Assets/Matkakirja/UI/Pulu/PuluChat.cs": {
-   "vari": 2
-  },
   "Assets/Matkakirja/UI/RepaleinenPergamentti.cs": {
    "vari": 7
   },
@@ -233,10 +230,15 @@
    "siirtyma": 0,
    "vari": 0
   },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/pulu.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pulu.uss": {
    "fontti": 44,
    "siirtyma": 8,
-   "vari": 119
+   "vari": 90
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Sahke.uss": {
    "fontti": 13,
