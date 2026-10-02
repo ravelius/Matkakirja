@@ -57,6 +57,9 @@ namespace Matkakirja.Natiivi
         readonly Kuvasuurennos suurennos;
         readonly ScrollView sisus;
         readonly KortinLukija lukija;
+        // Kohdekortin visa omana KORTTI-ikkunanaan nostokortin päällä (web: luoPohjaKortti({ yla: 'Visa', otsikko })).
+        readonly VisualElement visaKerros;
+        bool visaAuki;
         // NOSTOSELAIN ja AUTO (omistaja 1.10.2026, mallit 20 + 22 + 23): ‹ [Nostot ▾] › kahvan alla, AUTO lukijan rivillä.
         readonly Nostoselain selain;
         /// <summary>Auki olevan kortin valo (selaimen nykyinen).</summary>
@@ -143,6 +146,11 @@ namespace Matkakirja.Natiivi
             // TrickleDown-vaiheessa, joten vaakapyyhkäisy jää kuvasarjalle (KuvaSelaus) ja napautus napeille.
             Kosketusvieritys.Liita(kortti, () => kahvaVeto ? null : selain.Vierittava ?? sisus);
             Nappaimisto.Rekisteroi("nostokortti", 60, () => Auki, null, null, Sulje); // Esc sulkee (UI-pohjat: yksi sulkupino)
+
+            visaKerros = Rakenne.El("mk-himmennys mk-nosto-visa__kerros", ui.Juuri(UiKerros.Valikot));
+            visaKerros.style.display = DisplayStyle.None;
+            visaKerros.RegisterCallback<PointerDownEvent>(e => { if (e.target == visaKerros) SuljeVisa(); });
+            Nappaimisto.Rekisteroi("nostovisa", 62, () => visaAuki, null, null, SuljeVisa); // Esc sulkee ensin visan
 
             suurennos = new Kuvasuurennos(ui.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true }; // löydökset 102 ja 150
             suurennos.AukiMuuttui += Pehmenna;
@@ -307,6 +315,7 @@ namespace Matkakirja.Natiivi
             kahvaVeto = false;
             lukija.Pysayta();
             selain.Sulje();
+            SuljeVisa();
             Puhe.Instanssi?.PeruEsihaku(alunEsihaku);
             alunEsihaku = null;
             Rakenne.PiilotaHaivyttaen(kerros, 200);
@@ -761,7 +770,8 @@ namespace Matkakirja.Natiivi
             // Täkynosto: valokuva ja karttaliite jutun jälkeen, ennen kysymystä (web piirraNostonSisus).
             if (n.Valokuva != null) Valokuva(sisus, n.Valokuva);
             if (n.Karttaliite != null) Karttaliite(sisus, n.Karttaliite);
-            if (n.Visa != null) Visa(sisus, n);
+            // Kohdekortin visa on oma KORTTI-ikkunansa (Visa-nappi, web avaaKohdePohjalla); muilla lajeilla kortin tekstissä.
+            if (n.Visa != null && n.Laji != NostoLaji.Kohde) Visa(sisus, n);
             if (n.Laji == NostoLaji.Elain) Elainpalkkio(sisus, n);
             if (n.Laji == NostoLaji.Takynosto)
             {
@@ -815,6 +825,32 @@ namespace Matkakirja.Natiivi
             if (j.resolvedStyle.left != x) j.style.left = x;
             if (j.resolvedStyle.top != y) j.style.top = y;
             j.EnableInClassList("mk-nosto__lukija--irti", s > 1f);
+        }
+
+        /// <summary>
+        /// Kohdekortin Visa-nappi: KORTTI-pohjan ikkuna (kapiteeli VISA, otsikkona kohteen nimi) ja sen sisällä sama lukijan
+        /// kysymys kuin ennen kortin tekstissä (Visa). Sulku: ohinapautus ja Esc; nostokortti jää taakse.
+        /// </summary>
+        void AvaaVisa(Nosto n)
+        {
+            lukija.Pysayta();
+            visaKerros.Clear();
+            var k = new Kortti("mk-nosto-visa", pohja: true);
+            visaKerros.Add(k);
+            Kirjasimet.Aseta(Rakenne.Teksti("VISA", "mk-kortti__kapiteeli", k.Sisus), Kirjasin.Kone);
+            Kirjasimet.Aseta(Rakenne.Teksti(n.Otsikko ?? "", "mk-kortti__otsikko", k.Sisus), Kirjasin.LukuLihava);
+            Visa(k.Sisus, n);
+            visaAuki = true;
+            visaKerros.BringToFront();
+            Rakenne.NaytaHeti(visaKerros);
+            Ponnahdus.Avaa(k);
+        }
+
+        void SuljeVisa()
+        {
+            if (!visaAuki) return;
+            visaAuki = false;
+            Rakenne.PiilotaHaivyttaen(visaKerros, 200);
         }
 
         /// <summary>Luenta loppui omia aikojaan: AUTO siirtyy seuraavaan nostoon 3 s:n laskurilla (Nostoselain).</summary>
@@ -889,12 +925,7 @@ namespace Matkakirja.Natiivi
             if (n.Kysymykset.Count > 0)
                 Nappi("kysy", "Kysy", () => { lukija.Pysayta(); UiNakymat.Hae()?.Chat.AvaaKortista(PuluChat.NostonAihe(n), n.Kysymykset); });
             if (n.Visa != null)
-                Nappi("visa", "Visa", () =>
-                {
-                    laajennettu = true; Pystypaikka();
-                    var v = sisus.contentContainer.Q(className: "mk-nosto__visa");
-                    if (v != null) sisus.schedule.Execute(() => sisus.ScrollTo(v)).ExecuteLater(30);
-                });
+                Nappi("visa", "Visa", () => AvaaVisa(n));
             if (n.Kierrokset.Count > 0) { string u = n.Kierrokset[0].Item2; Nappi("kierros", "Kierros", () => Application.OpenURL(u)); }
             if (n.LeikekirjaValo != null)
             {
