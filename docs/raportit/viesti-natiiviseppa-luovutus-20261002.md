@@ -2,15 +2,21 @@
 
 Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen: -20261001-b.md (käytännöt voimassa, ellei tässä toisin).
 
-## TILA HETI (päivitetty 22.0x, viikkoraja 92 %)
+## TILA HETI (LOPULLINEN, tilinvaihto 2.10. 22.1x)
 
-- **proto master e204abbe = BUILD 129** (juna 0b5c8d87, käännös 745d8ff0): yläpalkki-tikkaus-2, nostorivi-2, valikko-v2-siisti,
-  erikoisnostot-3 54358623, nimet-maakunta b39cd1da (ROOMA-hyppy), linna-skin b126d548. TF 128 ladattu 20.03 (7/12); TF 129
-  (8/12) ~22.05. Illalla vielä 1–2 latausta (9–10); 11–12 säästetään 3.10. aamuun ennen 12.30.
-- Ei avoimia junia eikä natiiviseppa-worktreeitä. Lokeissa vain uusin juna-kopio (juna-1.1.129-745d8ff0).
-- Juna 130 tulossa: Siirtosepän varjokorjaus 0592decd (simu ~21.50, merge-pyyntöä ei vielä tullut 22.07).
-- Viikkoraja 92 % 22.06; 95 %:ssa (~23.30) lopullinen luovutus ja lopetus (Päätoimittajan ohje). Seuraava Natiiviseppä
-  jatkaa tästä tilasta: kokoa juna 130 BUILD 129:n (juna/b13 0b5c8d87) päälle worktreessä, testit testit-j111.sh-pohjalla.
+- **proto master e204abbe = BUILD 129** (juna/b13 0b5c8d87, käännös 745d8ff0, savuke 1129 PASS). TF 129 = lataus 8/12
+  (Julkaisija ~22.05). TF-laskuri nollautuu 3.10. klo 12.30: illalla enintään 9–10, **2 latausta (11–12) säästetään aamuun**.
+- Ei avoimia junia eikä natiiviseppa-worktreeitä. Lokeissa vain uusin juna-kopio (juna-1.1.129-745d8ff0); levysääntö alla.
+- Klo 22.09 käännöspalvelussa käynnissä Natiivi-UI:n testikäännös (ylapalkki-matalampi + kokoelmat-ikkuna) — saa valmistua.
+- **Juna 130 koostumus (Päätoimittaja 22.1x), ei vielä koottu eikä merge-pyyntöjä kuitattu**: kokoa juna/b13 0b5c8d87:n päälle
+  uuteen worktreehen (`git worktree add -b natiiviseppa/juna-130-koe /Users/Shared/Claude/wt/proto-natiiviseppa-j130 0b5c8d87`),
+  testaa (scratchpadin testit-j111.sh-pohja: 4 sarjaa + tyylikirja + pohjavahti), pyydä NYT Julkaisijalta:
+  1. Matalampi yläpalkki: natiivi-ui/ylapalkki-matalampi (b725dffa + d00c7f8b) — odota Natiivi-UI:n merge-pyyntö ja kuvapari.
+  2. Julisteet/Aarteet-ikkuna: natiivi-ui/kokoelmat-ikkuna (5cfe7253).
+  3. Topografian hampurilainen: linssiseppa/topografia-hampurilainen.
+  4. Astro/ISS: linssiseppa2/astro-palaute (LS2).
+  5. Skin-varjo: siirtoseppa/linna-skin 0592decd (yksi sekoitusrivi; Siirtosepän simutodennus).
+  Varmista jokaisen kärki-SHA merge-pyynnöstä ennen kokoamista; skin-paketti (2abec0c9…) vaatii osoittimen vaihdon omistajan OK:lla.
 
 ## TÄNÄÄN (2.10.) TEHDYT BUILDIT
 
