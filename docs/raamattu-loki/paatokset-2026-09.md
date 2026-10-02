@@ -10039,3 +10039,7 @@ Omistaja 2.10.2026 klo 14.5x vastasi 'ok' viimeisimpään ok-pyyntöön, jossa n
 ## OMISTAJA: VALIKON ÄÄNIMAISEMA → TILA, VALIKKO KAPEAMMAKSI (2.10.2026) (2.10.2026 klo 14.57)
 
 Omistaja 2.10.2026 klo 14.5x uuden valikon hyväksynnän jälkeen, sanatarkasti: 'muuta äänimaisema muotoon tila ja kavenna valikkoa'. Kytkimen nimi Äänimaisema muuttuu muotoon Tila valikossa ja kaikkialla, missä sama kytkin näkyy, ja valikosta tehdään kapeampi (iPadilla selvästi, ja iPhonessa reunoille jää ilmaa). Web (Pelikoodari) samaan valikko v2 -PR:ään tai jatko-PR:nä, natiivi (Natiivi-UI) webin mukaan.
+
+## TARKENNUS: HAMPURILAISVALIKKO MYÖS LINSSEIHIN, EI NAPPIRYHMÄÄ (2.10.2026) (2.10.2026 klo 15.00)
+
+Omistaja 2.10.2026 klo 15.0x OHJAUSNAPPI-kuvan (linna: ‹, säätö ja ✕ neliöinä ryhmässä) jälkeen: 'saitko sen hampurilais viestini näistä napeista?'. Tulkinta: klo 14.44 kirjattu yhden hampurilaisvalikon malli koskee linnan lisäksi heti myös linssejä, eikä vasta kokeilun jälkeen. Linsseissä kaikki kuvakenapit kootaan yhteen hampurilaisvalikkoon oikeaan yläkulmaan (OHJAUSNAPPI-neliö): linssin omat valinnat ja viimeisenä Sulje linssi. Kohtauksen omat toiminnot (esim. ISS-kameran KUVAA ja AUTO ‹ ›) jäävät näkyviin. Tämä kumoaa Päätoimittajan klo 15.0x tekemän pienen päätöksen, jonka mukaan linssien ‹ olisi ollut nappiryhmän ensimmäinen. Neliönappi (40 pt, kulma-nappi) on hampurilaisnapin ja muiden kuvakenappien yhteinen pohja.
