@@ -938,6 +938,25 @@ if '--v7' in A:
         kaari(vp, vn, vc, V9['r3_proj'][0], V9['r3_kaiku'][1], 14, V3B_LINSSI, vt)
         rem = V7_OTOKSET[-1]
         avain(V9['loppu'][1] - 20, rem[1], rem[2], rem[3], 'BEZIER'); avain(V9['loppu'][1], rem[1], rem[2], rem[3], 'BEZIER')
+    if '--kaikutayte' in A:
+        # omistaja 2.10. 08.0x: "Kaiku on liian kontrastinen. Lisää täytevaloa." Kaiun ajaksi himmeä, viileähkö,
+        # suunnattu ja pehmeäreunainen täyte (osuus auringon tehosta), oma kullekin kaikuotokselle: sivulta tai
+        # takaviistosta kameran näkemälle puolelle → kipsin muoto ja ääriviiva erottuvat hämärästi, kaiku hallitsee.
+        # Ei tasaista täytettä (v5:n muovisuus).
+        osuus_t = float(A[A.index('--kaikutayte') + 1])
+        ikkunat = []   # (ikkuna, suunta kohteesta valoon, kohde)
+        if '--kaiku' in A: ikkunat.append((V7_KAIKU, (-0.65, -0.25, 0.7), p))                 # otsa: vasemmalta ylhäältä
+        if '--v9' in A:
+            ikkunat.append((V9['r2_kaiku'], (-0.55, -0.55, 0.6), sp))                         # silmä: vasemmalta edestä ylhäältä
+            ikkunat.append((V9['r3_kaiku'], (0.45, 0.75, 0.55), vp))                          # sivu: takaviistosta oikealta
+        for k_, ((a_, l_), suunta_t, kohde_t) in enumerate(ikkunat):
+            td = bpy.data.lights.new(f'kaikutayte{k_}', 'SPOT'); td.spot_size = math.radians(45); td.spot_blend = 0.7
+            td.shadow_soft_size = 0.2; td.color = (0.80, 0.88, 1.0); td.energy = 0.0
+            tob = bpy.data.objects.new(f'kaikutayte{k_}', td); sc.collection.objects.link(tob)
+            tob.location = Vector(kohde_t) + Vector(suunta_t).normalized() * 1.0; kohdista(tob, kohde_t)
+            td.keyframe_insert('energy', frame=1)
+            for r, v_ in ((a_, 0.0), (a_ + 45, 95.0 * osuus_t), (l_ - 45, 95.0 * osuus_t), (l_, 0.0)):
+                td.energy = v_; td.keyframe_insert('energy', frame=r)
     for idb in (cam, tahtain, cd):
         act = idb.animation_data.action; kayrat = []
         for kerros in getattr(act, 'layers', []):
