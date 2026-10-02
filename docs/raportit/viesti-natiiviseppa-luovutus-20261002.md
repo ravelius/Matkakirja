@@ -2,18 +2,20 @@
 
 Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen: -20261001-b.md (käytännöt voimassa, ellei tässä toisin).
 
-## TILA HETI (päivitetty 16.5x)
+## TILA HETI (päivitetty 18.5x)
 
-- **proto master 8577dc48 = BUILD 126** (juna d0169799, käännös 23d6a1db). TF 126 klo 17.45 (125:n sijaan, Päätoimittaja).
-  Ei avoimia junia eikä natiiviseppa-worktreeitä. TF-raja 12/vrk; junat isoina 2–3 h välein.
-- **Odottaa webiä #3854**: natiivi-ui/ohjausnappi 01c0d8d1 + siirtoseppa/linna-valikko f45bf78a.
-- Tulossa: LS2 Ajattelijoiden reunavalo (haara f960dec4); Natiivi-UI ylapalkki-tikkaus raha-punnan päälle + pohjavahti --kirjaa.
-- Savuke-aukot: tilarivin "päivä 1" ja Kysy kaverilta (£25) eivät tavoitettavissa testikomennoilla; kertojan alku katkaisee
-  linnan puheen ajamatta.
+- **proto master 140c4033 = BUILD 127** (juna bc5f29c0, käännös 9482b08c): ohjausnappi, linna-valikko/Muurinharja, galleria,
+  ei-ovaaleja, Live, Ajattelijat-korjaukset. TF 126 ladattu 17.44, TF 127 ~19.45 (SHA Julkaisijalla). Ei avoimia junia eikä
+  worktreeitä. TF-raja 12/vrk; junat isoina 2–3 h välein. Päätoimittaja: tilin 95 %:n raja lähellä.
+- **Juna 128 suunnitelma**: Linssisepän Linssit-karttanappi (~19.15, web #3859) + natiivi-ui/valikko-v2 4d03a255 (VAIN yhdessä
+  karttanapin kanssa, omistaja 18.3x: Linssit-rivi ei koskaan pillerivalikkoon) + linssiseppa/erikoisnostot-3 (kipsipään
+  karttaobjekti). Yläpalkki (natiivi-ui/ylapalkki-tikkaus-2 b90c5c3c) odottaa omistajan uutta OK:ta.
+- Savuke-aukot: galleria (vaatii voitettuja julisteita), Live (vaatii POLLO-koodin) → Natiivi-UI:lta testikomennot.
+- Raamattu: OHJAUSNAPIT (omistaja 14.2x) = kaikki kuvakenapit ml. ✕ pyöristettyinä neliöinä (ei regressio).
 
 ## TÄNÄÄN (2.10.) TEHDYT BUILDIT
 
-111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259 · 120 8fd12e83 · 122 19060a07 · 123 3f17a0e6 · 124 9df72166 · 125 e00ba2b6 · 126 8577dc48.
+111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259 · 120 8fd12e83 · 122 19060a07 · 123 3f17a0e6 · 124 9df72166 · 125 e00ba2b6 · 126 8577dc48 · 127 140c4033.
 Ohitetut: 112 (Lehti ei avannut leikekirjaa: täkynoston id puuttui kokoelmadatasta), 115 (ISS-kuva raidallinen +
 22dfaccb signal 11: RGB24 luettiin Color32:na), 117 (paluu avaruuskävelyltä Cupolaan ei toiminut), 121 (✕ avaruuslasi).
 

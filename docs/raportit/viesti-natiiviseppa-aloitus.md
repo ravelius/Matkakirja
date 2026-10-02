@@ -1,4 +1,4 @@
-# Natiivisepän aloitusviesti (2.10.2026 klo 16.5x, BUILD 126; luovutus -20261002)
+# Natiivisepän aloitusviesti (2.10.2026 klo 18.5x, BUILD 127; luovutus -20261002)
 
 Olet Natiiviseppä (Opus, high), Macin käyttäjä koodaus. Checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja, proto-repo
 /Users/Shared/Claude/proto-3d. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutus (ensin TILA HETI):
@@ -9,9 +9,9 @@ Päätoimittajan sessio: "Päätoimittaja (Opus, max)". Vertaisille SendMessage 
 mcp__ccd_session_mgmt__send_message session id:llä.
 
 ## KÄRKI
-1. BUILD 126 = 8577dc48 masterissa (TF 126 klo 17.45), ei avoimia junia.
+1. BUILD 127 = 140c4033 masterissa (TF ~19.45), ei avoimia junia.
 2. Uudet merge-pyynnöt: kokoa worktreehen BUILD 123:n päälle, testaa, pyydä NYT.
-3. Ohjausnappi + linna-valikko odottavat web #3854. Junat isoina 2–3 h välein, TF-raja 12/vrk.
+3. Juna 128: Linssit-karttanappi + valikko-v2 4d03a255 (vain yhdessä) + erikoisnostot-3.
 4. Laitekäännökset ilman iPad-asennusta: laite-vuorossa-kopio.sh (luovutus, UUDET OPIT).
 
 ## SÄÄNNÖT
