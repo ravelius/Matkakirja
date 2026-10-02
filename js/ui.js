@@ -142,7 +142,7 @@ import {
   lippuUrl, lippuVara, valokuvaSuurennos, valokuvaUrl, valokuvaVara,
 } from './packs/africa-valokuvat.js';
 import {
-  asetaKuva, assetOsoite, julisteUrl, musaPolku, peiliPetti, peilinLaji,
+  asetaKuva, assetOsoite, julistePieniUrl, julisteUrl, musaPolku, peiliPetti, peilinLaji,
   aaniOsoite, aaniUrl, onPeilista,
 } from './media.js';
 import { KULTTUURI_PALKKIO } from './packs/africa-kulttuuri.js';
@@ -18857,10 +18857,11 @@ export class UI {
         nappi.setAttribute('aria-label', `${juliste.otsikko} — katso juliste isona`);
         const kuva = document.createElement('img');
         kuva.decoding = 'async';
+        kuva.loading = 'lazy';
         kuva.alt = '';
         // Viemättä oleva tiedosto jättää nimen ja kehyksen paikalleen,
-        // jottei ryhmästä katoaisi kokonainen ruutu.
-        asetaKuva(kuva, julisteUrl(juliste.tiedosto), null, () => {
+        // jottei ryhmästä katoaisi kokonainen ruutu. Ruudukossa pikkukuva (360 px), varana täysikokoinen.
+        asetaKuva(kuva, julistePieniUrl(juliste.tiedosto), julisteUrl(juliste.tiedosto), () => {
           kuva.remove();
           nappi.classList.add('kuvaton');
         });
