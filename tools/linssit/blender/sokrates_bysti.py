@@ -906,8 +906,9 @@ def kiertopiste(nimi, kohde, k, ruudut, voima, kansio, ala, korkeudet, siemen):
 
 
 PAAN_PROJEKTORIT = (  # v10 (omistaja 2.10. 08.4x): taustavirta koko pään alueelle — (kohde, suunta kohteesta, ala m, rivejä)
-    ((0.0, -0.10, 0.33), (0.0, -1.0, 0.10), 0.30, 7),     # kasvot ja parta edestä
-    ((0.0, -0.02, 0.47), (0.0, -0.55, 1.0), 0.30, 7),     # päälaki ja otsa ylhäältä
+    ((0.0, -0.10, 0.33), (0.0, -1.0, 0.10), 0.30, 6),     # kasvot ja parta edestä
+    ((0.0, -0.03, 0.47), (0.0, -0.55, 1.0), 0.26, 5),     # otsa ja päälaen etuosa ylhäältä
+    ((0.0, 0.05, 0.47), (0.0, 0.6, 1.0), 0.24, 3),        # päälaen takaosa (Päätoimittaja: tasainen tiheys koko pään yli)
     ((-0.09, -0.04, 0.38), (-1.0, -0.35, 0.15), 0.22, 3),  # vasen ohimo ja poski
     ((0.09, -0.04, 0.38), (1.0, -0.35, 0.15), 0.22, 3),    # oikea ohimo ja poski
 )   # yhteensä 20 riviä (omistaja 2.10. 08.3x: 18 kreikaksi + 2 suomeksi, puolet kumpaankin suuntaan)
