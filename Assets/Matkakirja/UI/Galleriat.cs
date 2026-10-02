@@ -166,6 +166,17 @@ namespace Matkakirja.Natiivi
 
     public static class Tietajagalleria
     {
+        static void SovitaSana(Label l)
+        {
+            float w = l.contentRect.width, koko = l.resolvedStyle.fontSize;
+            if (float.IsNaN(w) || w <= 0f || float.IsNaN(koko)) return;
+            string pisin = "";
+            foreach (var sana in (l.text ?? "").Split(' ')) if (sana.Length > pisin.Length) pisin = sana;
+            float leveys = l.MeasureTextSize(pisin, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+            if (leveys <= w + 0.5f || koko <= 8f) return;
+            l.style.fontSize = Mathf.Max(8f, Mathf.Min(koko - 0.5f, koko * w / leveys));
+        }
+
         // Päätoimittajan kaanonteksti (js/tietajagalleria.js TIETAJASELITYS, omistaja 18.8.2026).
         const string Selitys = "Livia — täydeltä nimeltään Columba Livia, kirjekyyhky, "
             + "jonka suku on kantanut viestejä Caesarille ja Pariisin piiritykseen (ja hän kyllä "
@@ -173,10 +184,11 @@ namespace Matkakirja.Natiivi
             + "Jokainen uusi kaupunki, lauta ja oikea vastaus kartuttaa tietäjäpisteitä, ja pisteet "
             + "nostavat tietäjätasoa: untuvikosta aina Tietäjäksi iänikuiseksi asti.";
 
-        static string Avatar(int taso) => Laukku.SivustoJuuri + $"assets/tietaja/taso-{taso:00}.jpg";
+        public static string Avatar(int taso) => Laukku.SivustoJuuri + $"assets/tietaja/taso-{taso:00}.jpg";
 
-        static void Kuva(VisualElement e, int taso) =>
-            Kuvat.Hae(Avatar(taso), t => { if (t != null) e.style.backgroundImage = new StyleBackground(t); });
+        /// <summary>Tason muotokuva elementin taustaksi (myös valikon tasorivi ja tasonäkymä).</summary>
+        public static void Kuva(VisualElement e, int taso) =>
+            Kuvat.Hae(Avatar(taso), t => { if (t != null && e != null) e.style.backgroundImage = new StyleBackground(t); });
 
         /// <summary>Webin avaaTietajagalleria(pisteet): minipopup "Tietäjän tie".</summary>
         public static Minipopup Avaa(int pisteet) => Minipopup.Avaa("Tietäjän tie", s =>
@@ -187,17 +199,34 @@ namespace Matkakirja.Natiivi
             var nyky = Rakenne.El("mk-tietaja__nykyinen", ylarivi, PickingMode.Ignore);
             Kuva(Rakenne.El("mk-tietaja__nykykuva", nyky, PickingMode.Ignore), nyt.Taso);
             Kirjasimet.Aseta(Rakenne.Teksti(nyt.Nimi, "mk-tietaja__nykynimi", nyky), Kirjasin.Kone);
-            var ruudukko = Rakenne.El("mk-tietaja__ruudukko", s, PickingMode.Ignore);
+            Ruudukko(s, pisteet);
+        }, "mk-minipopup--tietaja");
+
+        /// <summary>
+        /// Kaikki tasot ruudukkona (kuva, nimi ja raja; nykyinen korostettu, saavuttamattomat himmeinä). Sama ruudukko
+        /// minipopupissa ja valikon tasonäkymässä (web tietajaRuudukko, omistaja 2.10.2026 klo 14.4x, #3853); rengas = kuva
+        /// renkaan sisällä, jolloin nykyinen ympyröidään toimintovärillä (pillerivalikko.uss .mk-tasonakyma).
+        /// </summary>
+        public static VisualElement Ruudukko(VisualElement isa, int pisteet, bool rengas = false)
+        {
+            var nyt = Kokemus.TasoPisteille(pisteet);
+            var ruudukko = Rakenne.El("mk-tietaja__ruudukko", isa, PickingMode.Ignore);
             foreach (var t in Kokemus.Tasot)
             {
                 var kohta = Rakenne.El("mk-tietaja__kohta", ruudukko, PickingMode.Ignore);
                 kohta.EnableInClassList("mk-tietaja__kohta--saavuttamaton", pisteet < t.Raja);
                 kohta.EnableInClassList("mk-valittu", t.Taso == nyt.Taso);
-                Kuva(Rakenne.El("mk-tietaja__kuva", kohta, PickingMode.Ignore), t.Taso);
-                Kirjasimet.Aseta(Rakenne.Teksti(t.Nimi, "mk-tietaja__nimi", kohta), Kirjasin.Kone);
+                var kuvanIsa = rengas ? Rakenne.El("mk-tietaja__rengas", kohta, PickingMode.Ignore) : kohta;
+                Kuva(Rakenne.El("mk-tietaja__kuva", kuvanIsa, PickingMode.Ignore), t.Taso);
+                var nimi = Rakenne.Teksti(t.Nimi, "mk-tietaja__nimi", kohta);
+                Kirjasimet.Aseta(nimi, Kirjasin.Kone);
+                // Pisin sana mahtuu riville (kapea valikko 320 pt: "Maailmanmatkaaja" katkesi keskeltä sanaa, 86638635):
+                // fontti pienenee 0,5 px kerrallaan enintään 8 px:iin; vain pienenee, joten asettelu ei kierrä.
+                nimi.RegisterCallback<GeometryChangedEvent>(_ => SovitaSana(nimi));
                 Rakenne.Teksti($"{t.Raja} tp", "mk-tietaja__raja", kohta);
             }
             Rakenne.Ruudukko(ruudukko, 83f, 9f); // grid auto-fill minmax(5.2rem, 1fr), gap .55rem
-        }, "mk-minipopup--tietaja");
+            return ruudukko;
+        }
     }
 }

@@ -1,8 +1,9 @@
-// AJATTELIJAN PÄÄ KARTUUTSIN LIPUN ALLA (ERIKOISNOSTOT, Linssiseppä 2.10.2026; web #3843 js/ajattelijapaat.js luoPaanPiirtaja on malli).
-// Webin three.js-kohtaus samoin luvuin: MeshStandardMaterial (kipsiväri + normaalikartta, metallisuus 0, karheus 0,62),
-// AmbientLight 0,35 valkoinen ja DirectionalLight 2,6 (0xfff4e6), AgX-sävytys ja sRGB. Valo annetaan maailman suunnassa
-// (_Valo, kohti valoa); AjattelijaPaat.cs muuntaa kartan auringon suunnan pään kameran kehykseen kuten web (kameran koordinaatit).
-// Oma kerros ja kamera (Kartta/AjattelijaPaat.cs), piirto RenderTextureen vain kun asento tai valo muuttuu.
+// AJATTELIJAN KIPSIPÄÄ KARTALLA (ERIKOISNOSTOT, Linssiseppä 2.10.2026; web #3866 js/ajattelijapaat.js luoPaanPiirtaja ja
+// KIPSI_KARTALLA ovat malli). Webin three.js-kohtaus samoin luvuin: MeshStandardMaterial (kipsiväri × sävy [1,0, 1,03, 1,1],
+// normaalikartta, metallisuus 0, karheus 0,62), HemisphereLight taivas #fff6ea / maa #8c7864 voima 1,0 (ylös = +y),
+// DirectionalLight #fff1dc voima 2,65 ja NeutralToneMapping (Khronos PBR Neutral) + sRGB. Valo (_Valo, kohti valoa) maailman
+// suunnassa; AjattelijaPaat.cs muuntaa webin kameran koordinaateista. Varjo paperille: AjattelijaVarjo.shader.
+// Oma kerros ja kamera (UI/AjattelijaPaat.cs), piirto RenderTextureen vain kun asento tai valo muuttuu.
 Shader "Matkakirja/Kartta/AjattelijaPaa"
 {
     Properties
@@ -12,6 +13,7 @@ Shader "Matkakirja/Kartta/AjattelijaPaa"
         _NormaaliPaalla("Normaalikartta päällä", Float) = 1
         _Valo("Suunta kohti valoa (maailma)", Vector) = (-0.5, 0.8, -0.6, 0)
         _Karheus("Karheus", Float) = 0.62
+        _Savy("Kipsin sävykerroin (lineaarinen)", Vector) = (1.0, 1.03, 1.1, 0)
     }
     SubShader
     {
@@ -30,7 +32,7 @@ Shader "Matkakirja/Kartta/AjattelijaPaa"
             TEXTURE2D(_NormalMap); SAMPLER(sampler_NormalMap);
             CBUFFER_START(UnityPerMaterial)
                 float4 _MainTex_ST;
-                float4 _Valo;
+                float4 _Valo, _Savy;
                 float _NormaaliPaalla, _Karheus;
             CBUFFER_END
 
@@ -48,27 +50,20 @@ Shader "Matkakirja/Kartta/AjattelijaPaa"
                 return o;
             }
 
-            // AgX (Troy Sobotka; minimaalinen sovitus kuten three.js AgXToneMapping): lineaarinen → näyttö → lineaarinen.
-            float3 AgxKontrasti(float3 x)
+            // Khronos PBR Neutral (three.js NeutralToneMapping): lineaarinen → lineaarinen näyttöalue.
+            float3 Neutral(float3 c)
             {
-                float3 x2 = x * x, x4 = x2 * x2;
-                return 15.5 * x4 * x2 - 40.14 * x4 * x + 31.96 * x4 - 6.868 * x2 * x + 0.4298 * x2 + 0.1191 * x - 0.00232;
-            }
-            float3 Agx(float3 c)
-            {
-                // GLSL mat3(...)·v sarakkein = HLSL mul(v, rivit).
-                const float3x3 sisaan = float3x3(0.842479062253094, 0.0423282422610123, 0.0423756549057051,
-                                                 0.0784335999999992, 0.878468636469772, 0.0784336,
-                                                 0.0792237451477643, 0.0791661274605434, 0.879142973793104);
-                const float3x3 ulos = float3x3(1.19687900512017, -0.0528968517574562, -0.0529716355144438,
-                                               -0.0980208811401368, 1.15190312990417, -0.0980434501171241,
-                                               -0.0990297440797205, -0.0989611768448433, 1.15107367264116);
-                const float minEv = -12.47393, maxEv = 4.026069;
-                c = mul(max(c, 1e-10), sisaan);
-                c = saturate((clamp(log2(c), minEv, maxEv) - minEv) / (maxEv - minEv));
-                c = AgxKontrasti(c);
-                c = mul(c, ulos);
-                return pow(max(c, 0.0), 2.2);   // takaisin lineaariseksi (RenderTexture koodaa sRGB:ksi)
+                const float alku = 0.8 - 0.04, desaturaatio = 0.15;
+                float x = min(c.r, min(c.g, c.b));
+                float siirto = x < 0.08 ? x - 6.25 * x * x : 0.04;
+                c -= siirto;
+                float huippu = max(c.r, max(c.g, c.b));
+                if (huippu < alku) return c;
+                float d = 1.0 - alku;
+                float uusi = 1.0 - d * d / (huippu + d - alku);
+                c *= uusi / huippu;
+                float g = 1.0 - 1.0 / (desaturaatio * (huippu - uusi) + 1.0);
+                return lerp(c, uusi.xxx, g);
             }
 
             half4 frag(Vali i, bool edessa : SV_IsFrontFace) : SV_Target
@@ -81,23 +76,25 @@ Shader "Matkakirja/Kartta/AjattelijaPaa"
                     float3 nt = SAMPLE_TEXTURE2D(_NormalMap, sampler_NormalMap, i.uv).rgb * 2.0 - 1.0;
                     n = normalize(nt.x * t + nt.y * b + nt.z * n);
                 }
-                float3 albedo = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv).rgb;
+                float3 albedo = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv).rgb * _Savy.rgb;
                 float3 l = normalize(_Valo.xyz);
                 float3 v = normalize(GetCameraPositionWS() - i.maailma);
                 float nl = saturate(dot(n, l));
-                // three.js: suora = valo · n·l · albedo / π, ympäristö = 0,35 · albedo / π.
-                float3 valoVari = float3(1.0, 0.957, 0.902) * 2.6;
-                float3 c = albedo * (valoVari * nl + 0.35) / PI;
+                // Värit sRGB:stä lineaarisiksi kuten three.js ColorManagement: #fff1dc, #fff6ea, #8c7864.
+                const float3 aurinko = float3(1.0, 0.8796, 0.7157) * 2.65;
+                const float3 taivas = float3(1.0, 0.9216, 0.8228), maa = float3(0.2623, 0.1878, 0.1274);
+                float3 puolipallo = lerp(maa, taivas, 0.5 * n.y + 0.5);
+                float3 c = albedo * (aurinko * nl + puolipallo) / PI;
                 // GGX-heijastus (F0 0,04, karheus 0,62) kuten MeshStandardMaterial.
                 float3 h = normalize(l + v);
                 float a = _Karheus * _Karheus, a2 = a * a;
                 float nh = saturate(dot(n, h)), nv = saturate(dot(n, v)) + 1e-4;
-                float d = a2 / (PI * pow(nh * nh * (a2 - 1.0) + 1.0, 2.0));
+                float dd = a2 / (PI * pow(nh * nh * (a2 - 1.0) + 1.0, 2.0));
                 float k = a / 2.0;
                 float g = (nl / (nl * (1.0 - k) + k)) * (nv / (nv * (1.0 - k) + k));
                 float f = 0.04 + 0.96 * pow(1.0 - saturate(dot(v, h)), 5.0);
-                c += valoVari * d * g * f / max(4.0 * nl * nv, 1e-4) * nl;
-                return half4((half3)Agx(c), 1);
+                c += aurinko * dd * g * f / max(4.0 * nl * nv, 1e-4) * nl;
+                return half4((half3)Neutral(c), 1);
             }
             ENDHLSL
         }

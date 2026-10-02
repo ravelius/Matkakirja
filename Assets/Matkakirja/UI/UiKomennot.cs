@@ -4,6 +4,7 @@
 // jonossa. Rivit ja tulokset kirjataan Documents/ui-loki.txt:hen.
 //
 //   ui valikko | ui asetukset | ui sulje      avaa päävalikon / äänentasot, sulkee
+//   ui valikko tasot|matka|asetukset          valikon alinäkymä (v2: tasot = matka = tasonäkymä, web #3853)
 //   ui matka                                  esimerkkimatkavalinta (ilman peliä)
 //   ui kortti [kaupunki] [oma]                kaupunkikortti (oletus firenze, ilman peliä; oma = Tutki + Mannerlento)
 //   ui kysymys [laji]                         esimerkkikysymys ilman peliä: visa (oletus), vaite,
@@ -106,7 +107,7 @@
 //   ui noppa [1–6 | pois]                     näkyvä noppa: heitto Pariisista lepopaikkaan / häivytys
 //   ui lippu [ISO3]                           lipun tarina (oletus FIN; skeema 1.15 maat.lipputarina)
 //   ui offline demo|verkoton|verkko|pois      offline-tilan pilleri: keksitty lataus / verkon tila
-//   ui pilleri [paa|linssit|aarteet] [n]      pillerivalikko auki, näkymä ja n:s rivi kerran (esikatselu), kahdesti = toiminto
+//   ui pilleri [paa|linssit|aarteet|tasot] [n] pillerivalikko auki, näkymä ja n:s rivi kerran (esikatselu), kahdesti = toiminto
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
 //   ui maakunnat sulje                        auki oleva maakuntakortti tai lappu kiinni (sulkuanimaatio)
 //   ui maakunnat kysymys [n]                  auki olevan kortin n:s kysymys auki/kiinni; kortin reunat ja vieritys 300 ms päästä
@@ -514,8 +515,9 @@ namespace Matkakirja.Natiivi
             var ui = UiNakymat.Hae();
             switch (osat[1].ToLowerInvariant())
             {
-                // ui valikko [asetukset|matka|kehittaja|retkikunta]: pillerivalikko tai sen alinäkymä (1.0.50-palautteen kuvaparit).
-                case "valikko" when loput == "asetukset" || loput == "matka": return "=" + ui.Linssit.Valitsin.TestaaNakyma(loput, -1);
+                // ui valikko [asetukset|matka|tasot|kehittaja|retkikunta]: pillerivalikko tai sen alinäkymä (1.0.50-palautteen kuvaparit;
+                // valikko v2:n tasonäkymä = tasot, omistaja 2.10.2026, web #3853).
+                case "valikko" when loput == "asetukset" || loput == "matka" || loput == "tasot": return "=" + ui.Linssit.Valitsin.TestaaNakyma(loput, -1);
                 case "valikko" when System.Enum.TryParse(loput, true, out Paavalikko.Osa osa): ui.Valikko.AvaaOsa(osa); return null;
                 case "vahvistus": ui.Valikko.KysyUusiPeli(); return null;
                 case "mylly": return "=" + MyllyNakyma.Hae().Komento(loput); // lautapelin pohja (Mylly, Siirtoseppä 1.10.)
@@ -1213,10 +1215,27 @@ namespace Matkakirja.Natiivi
                 }
                 case "erikoisnostot":
                 {
-                    // "ui erikoisnostot [tila|napauta <i>]": ajattelijan pää kartuutsin lipun alla (kehittäjätila).
+                    // "ui erikoisnostot [tila|napauta <i>|kipsi r g b]": ajattelijoiden kipsipäät kartalla (kehittäjätila).
                     var en = loput.Split(' ');
                     if (en[0] == "napauta") return "=" + ui.Erikoisnostot.Napauta(en.Length > 1 && int.TryParse(en[1], out int ei) ? ei : 0);
+                    if (en[0] == "varjokuva" || en[0] == "varjo") return "=" + ui.Erikoisnostot.Varjo(en);
+                    if (en[0] == "kipsi" && en.Length > 3)
+                        return "=" + ui.Erikoisnostot.Saato(en[0], float.Parse(en[1], CultureInfo.InvariantCulture), float.Parse(en[2], CultureInfo.InvariantCulture), float.Parse(en[3], CultureInfo.InvariantCulture));
                     return "=" + ui.Erikoisnostot.Tila();
+                }
+                case "linssitnappi":
+                {
+                    // "ui linssitnappi [napauta|sulje]": Linssit-karttanappi (web #3859) — näkyvyys, paikka ja pillerivalikon näkymä.
+                    var ln = ui.Karttaselite.LinssitNappi;
+                    if (loput.Trim() == "napauta")
+                    {
+                        using (var e = ClickEvent.GetPooled()) { e.target = ln; ln.SendEvent(e); }
+                    }
+                    var lv = ui.Linssit?.Valitsin;
+                    if (loput.Trim() == "sulje") lv?.Sulje();
+                    var lb = ln.worldBound;
+                    return string.Format(CultureInfo.InvariantCulture, "=linssitnappi: näkyy {0}, {1:0},{2:0} {3:0}×{4:0}, valitsin auki {5}, näkymä {6}",
+                        ln.resolvedStyle.display == DisplayStyle.Flex, lb.xMin, lb.yMin, lb.width, lb.height, lv?.Auki, lv?.NykyinenNakyma);
                 }
                 case "kortti":
                 {

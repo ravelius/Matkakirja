@@ -224,6 +224,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Yhtenäisten rivien päät näkyvien nappien mukaan (piilotettu Retkikunta tai Kehittäjätyökalut ei jätä kulmaa).</summary>
         void PaivitaNappirivit()
         {
+            PaivitaLuettelot();
             paneeli.Query<VisualElement>(className: "mk-valikkorivi--yhtenainen").ForEach(rivi =>
             {
                 VisualElement eka = null, vika = null;

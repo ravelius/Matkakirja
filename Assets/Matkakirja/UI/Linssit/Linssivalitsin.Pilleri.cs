@@ -169,7 +169,9 @@ namespace Matkakirja.Natiivi
             bool paa = n == Nakyma.Paa;
             DisplayStyle D(bool b) => b ? DisplayStyle.Flex : DisplayStyle.None;
             lisaosa.style.display = D(paa);
-            tiedot.style.display = D(n == Nakyma.Matka);
+            // Valikko v2 (web #3853): Matka-rivin tilalla tasorivi, ja sen näkymä on tasonäkymä (Linssivalitsin.ValikkoV2.cs).
+            tiedot.style.display = D(n == Nakyma.Matka && !V2);
+            if (tasot != null) tasot.style.display = D(n == Nakyma.Matka && V2);
             asetukset.style.display = D(n == Nakyma.Asetukset);
             pohja.style.display = D(paa);
             lista.style.display = D(n == Nakyma.Linssit);
@@ -177,8 +179,9 @@ namespace Matkakirja.Natiivi
             runko.style.display = D(n == Nakyma.Linssit || n == Nakyma.Aarteet);
             aarteet.style.display = D(n == Nakyma.Aarteet);
             alaTakaisin.style.display = D(!paa);
-            otsikko.text = n switch { Nakyma.Linssit => "LINSSIT", Nakyma.Aarteet => "AARTEET", Nakyma.Matka => "MATKA", Nakyma.Asetukset => "ASETUKSET", _ => "" };
+            otsikko.text = n switch { Nakyma.Linssit => "LINSSIT", Nakyma.Aarteet => "AARTEET", Nakyma.Matka => V2 ? "TIETÄJÄTASO" : "MATKA", Nakyma.Asetukset => "ASETUKSET", _ => "" };
             if (n == Nakyma.Aarteet) RakennaAarteet();
+            if (n == Nakyma.Matka && V2) RakennaTasot();
             if (n == Nakyma.Asetukset)
             {
                 foreach (var (rivi, nakyy) in lisarivit) rivi.style.display = nakyy == null || nakyy() ? DisplayStyle.Flex : DisplayStyle.None;
@@ -377,11 +380,11 @@ namespace Matkakirja.Natiivi
 
         // --- testikomento -------------------------------------------------------------------------
 
-        /// <summary>Testi (ui pilleri linssit|aarteet|paa [n]): näkymä auki ja n:s rivi napautettuna kerran (esikatselu).</summary>
+        /// <summary>Testi (ui pilleri linssit|aarteet|matka|tasot|asetukset|paa [n]): näkymä auki ja n:s rivi napautettuna kerran (esikatselu).</summary>
         public string TestaaNakyma(string nimi, int rivi)
         {
             if (!Auki) Avaa();
-            NaytaNakyma(nimi switch { "linssit" => Nakyma.Linssit, "aarteet" => Nakyma.Aarteet, "matka" => Nakyma.Matka, "asetukset" => Nakyma.Asetukset, _ => Nakyma.Paa });
+            NaytaNakyma(nimi switch { "linssit" => Nakyma.Linssit, "aarteet" => Nakyma.Aarteet, "matka" or "tasot" => Nakyma.Matka, "asetukset" => Nakyma.Asetukset, _ => Nakyma.Paa });
             if (rivi < 0) return $"näkymä {NykyinenNakyma}";
             var isa = NykyinenNakyma == Nakyma.Linssit ? lista : aarteet;
             var napit = isa.Query<Button>(className: "mk-linssirivi").ToList();

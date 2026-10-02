@@ -168,6 +168,63 @@ namespace Matkakirja.Natiivi
             // kolme nappityyppiä (navigointi, kytkin, toiminto), alinäkymät Linssit, Aarteet, Matka ja Asetukset ‹ Takaisin -paluulla.
             // Pääsivu (omistaja 29.9.2026 klo 23.0x, 1.0.56: äänet ylimmäksi, Linssit ja Matka vaihtavat paikkaa):
             // ÄÄNET [Kertoja | Musiikki | Äänimaisema] → [Matka | Aarteet | Linssit] → [Uusi peli | Retkikunta | Asetukset] → versio.
+            // Valikko v2 (omistaja 2.10.2026, web #3853) on oletus; vanha järjestys PlayerPrefs matkakirja-valikko = "vanha".
+            bool v2 = Linssivalitsin.ValikkoV2;
+            if (v2) RakennaValikkoV2(v);
+            else RakennaVanhaPaasivu(v);
+            // Retkikunnan ja Kehittäjätyökalujen ‹ Takaisin palaa pillerivalikkoon (sama pergamentti, Paavalikko).
+            Valikko.Takaisin = () => { if (!v.Auki) v.Avaa(); };
+            RakennaAsetusnakyma(v);
+            v.AarteetData = () => PeliOhjain.Instanssi?.Laukku();
+            // V2:ssa Matka-sivun tilalla on tasonäkymä: matkalaukun tiedot (sijainti, kukkaro, tilastot) jäävät pois (web #3853).
+            if (!v2)
+            {
+                Matkalaukku.Upota(v.TiedotKohde);
+                v.Avautuu += Matkalaukku.PaivitaTiedot;
+            }
+            // Kehittäjätilassa build-numero (CFBundleVersion) suluissa versionumeron perässä (omistaja 2.10.): "v1.1 (120) · kehittäjä".
+            v.LisaVersio(() => "v" + Application.version
+                + (Asetukset.Kehittaja ? (MitaUutta.Build() is string b ? " (" + b + ")" : "") + " · kehittäjä" : ""), Valikko.MitaUutta.Avaa);
+        }
+
+        /// <summary>
+        /// VALIKKO V2 (omistaja 2.10.2026 klo 14.37 ja 15.0x, web #3853; Linssivalitsin.ValikkoV2.cs): ÄÄNET kevyinä kytkiminä →
+        /// tasorivi → päivärivi (natiivin oma, omistaja 15.1x) → MATKALAUKKU [Aarteet (N), Julisteet (N), Linssit] → PELI
+        /// [Retkikunta, Asetukset] → viiva → Uusi peli ja versio samalla rivillä.
+        /// </summary>
+        void RakennaValikkoV2(Linssivalitsin v)
+        {
+            v.AloitaV2();
+            v.LisaOsioOtsikko("Äänet");
+            var aanet = v.LisaKevytKytkinrivi();
+            foreach (var (k, ikoni) in new[] { (Kytkin.Kertoja, Ikonit.Kertoja), (Kytkin.Musiikki, Ikonit.Musiikki), (Kytkin.Aanimaisema, Ikonit.Aanimaisema) })
+            {
+                var kk = k;
+                v.LisaKevytKytkin(aanet, Asetukset.Nimi(kk), ikoni, () => Asetukset.Paalla(kk), () => Asetukset.Aseta(kk, !Asetukset.Paalla(kk)));
+            }
+            v.LisaTasorivi(v.LisaLuetteloRyhma(null));
+            v.LisaPaivarivi();
+            // MATKALAUKKU: kerätyt määrät suluissa (web renderValikkoTaso: Aarnin luettelon löydöt + muut aarteet, voitetut julisteet;
+            // kehittäjätilassa koko julistekokoelma kuten galleriassa). Julisteet asuvat toistaiseksi Aarteet-näkymässä (web).
+            var laukku = v.LisaLuetteloRyhma("Matkalaukku");
+            v.LisaMaara(v.LisaLuetteloRivi(laukku, "Aarteet", Ikonit.PilleriAarteet, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Aarteet)),
+                d => d.AarninLuettelo.Count(a => a.Loydetty) + d.Tavarat.Where(t => t.Tyyppi != global::Matkakirja.Peli.Laattatyypit.Paaaarre).Sum(t => t.Maara));
+            v.LisaMaara(v.LisaLuetteloRivi(laukku, "Julisteet", Ikonit.PilleriJulisteet, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Aarteet)),
+                d => Asetukset.Kehittaja && UiSisalto.Julisteet.Count > 0 ? UiSisalto.Julisteet.Count : d.Julisteet.Count);
+            // Ei Linssit-riviä: linssit ovat kartalla omana nappinaan (omistaja 2.10.2026 klo 13.56 ja 18.3x "valikon linssit piti
+            // siirtää kartalle oman napin alle!!!! älä tuo niitä tuohon valikkoon"; Linssisepän Linssit-karttanappi, web #3859).
+            var peli = v.LisaLuetteloRyhma("Peli");
+            v.LisaLuetteloRivi(peli, "Retkikunta", Ikonit.PilleriRetkikunta,
+                () => { v.Sulje(); Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); }, () => Valikko.RetkikuntaSaatavilla);
+            v.LisaLuetteloRivi(peli, "Asetukset", Ikonit.PilleriAsetukset, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Asetukset));
+            v.LisaErotin();
+            // Alarivi yhdellä rivillä (omistaja 14.37): Uusi peli vasemmalla, versio oikealla (natiivissa ei päivitä-nappia).
+            v.LisaAlarivinNappi("Uusi peli", Valikko.KysyUusiPeli);
+        }
+
+        /// <summary>29.9.2026 pääsivu (omistaja 23.0x, 1.0.56): äänet, [Matka | Aarteet | Linssit], [Uusi peli | Retkikunta | Asetukset].</summary>
+        void RakennaVanhaPaasivu(Linssivalitsin v)
+        {
             v.LisaOsioOtsikko("Äänet");
             var aanet = v.LisaNappirivi();
             foreach (var (k, ikoni) in new[] { (Kytkin.Kertoja, Ikonit.Kertoja), (Kytkin.Musiikki, Ikonit.Musiikki), (Kytkin.Aanimaisema, Ikonit.Aanimaisema) })
@@ -184,9 +241,10 @@ namespace Matkakirja.Natiivi
             v.LisaNappi(toiminnot, "Retkikunta", Ikonit.Viiva["kompassi"], () => { Aanentasot.Sulje(); Valikko.AvaaOsa(Paavalikko.Osa.Retkikunta); },
                 () => Valikko.RetkikuntaSaatavilla);
             v.LisaNappi(toiminnot, "Asetukset", Ikonit.Ratas, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Asetukset), pysy: true);
-            // Retkikunnan ja Kehittäjätyökalujen ‹ Takaisin palaa pillerivalikkoon (sama pergamentti, Paavalikko).
-            Valikko.Takaisin = () => { if (!v.Auki) v.Avaa(); };
+        }
 
+        void RakennaAsetusnakyma(Linssivalitsin v)
+        {
             // ASETUKSET-näkymä: äänentasot, kartta (Pieni liike, Kuljettu reitti, kehittäjän maailmatilassa Näytä huntu), muut
             // (Offline-kartat ja Ehdota toimintoina, Kehittäjä kytkimenä koodilukolla; päällä myös Kehittäjätyökalut).
             var a = v.AsetusKohde;
@@ -216,12 +274,6 @@ namespace Matkakirja.Natiivi
             v.LisaKytkin(kehittaja, "Kehittäjä", Ikonit.Ratas, () => Asetukset.Kehittaja, () => { v.Sulje(); Valikko.AvaaKehittajakoodi(); });
             v.LisaNappi(kehittaja, "Kehittäjätyökalut", Ikonit.Viiva["kone"], () => Valikko.AvaaOsa(Paavalikko.Osa.Kehittaja), () => Asetukset.Kehittaja);
 #endif
-            v.AarteetData = () => PeliOhjain.Instanssi?.Laukku();
-            Matkalaukku.Upota(v.TiedotKohde);
-            v.Avautuu += Matkalaukku.PaivitaTiedot;
-            // Kehittäjätilassa build-numero (CFBundleVersion) suluissa versionumeron perässä (omistaja 2.10.): "v1.1 (120) · kehittäjä".
-            v.LisaVersio(() => "v" + Application.version
-                + (Asetukset.Kehittaja ? (MitaUutta.Build() is string b ? " (" + b + ")" : "") + " · kehittäjä" : ""), Valikko.MitaUutta.Avaa);
         }
 
         /// <summary>
@@ -319,7 +371,7 @@ namespace Matkakirja.Natiivi
             Kartuscha = new Kartuscha(kerros);
             Kartuscha.AukiMuuttui += auki => Matkavalinta?.VaistaLiiku(auki);
             MaakuntaNimet = new MaakuntanimetKartalla(kerros, Kartuscha);
-            Erikoisnostot = new Erikoisnostot(kerros, Kartuscha);   // ajattelijan pää lipun alla (kehittäjätila, web #3843)
+            Erikoisnostot = new Erikoisnostot(kerros, Kartuscha);   // ajattelijoiden kipsipäät karttaobjekteina (kehittäjätila, web #3866)
             Karttaselite = new Karttaselite(kerros);
             OfflineTila = new OfflineTilaUi(kerros, Tilarivi, () => { Valikko.Sulje(); Aanentasot.Avaa(); });
             Matkakirja = new Matkakirjakortti(kerros);
@@ -424,6 +476,9 @@ namespace Matkakirja.Natiivi
             // luenta jatkuvat (Pulu.Nayta(false) pysäyttäisi puhekanavan).
             Linssit.Astronautti.Kuva.AukiMuuttui += auki => Pulu.Peita(auki);
             Karttaselite.AukiMuuttui += auki => { Linssit.Valitsin.Vaista(auki); Matkakirja.SeliteVaisto(auki); };
+            // Linssit-karttanappi avaa valitsimen: ohi-napautus ei saa sulkea sitä samasta napautuksesta (savuke 1128: simulaattorin
+            // tap painuu ja nousee samassa ruudussa, joten Avaa ja TarkistaOhiNapautus osuivat samaan ruutuun).
+            Linssit.Valitsin.Avaajat.Add(Karttaselite.LinssitNappi);
             Valikko.TietojaPainettu += Tietoja.Avaa;
             Valikko.EhdotaPainettu += () => Palaute.Avaa();
             Tilarivi.LogoPainettu += () => { Valikko.Sulje(); Aanentasot.Sulje(); Matkalaukku.Sulje(); Tietoja.Avaa(); };

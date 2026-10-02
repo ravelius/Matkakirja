@@ -37,3 +37,227 @@
 .mk-paneeli--pohja .mk-valikkonappi--rivi > .mk-valikkonappi__nimi {
     font-size: var(--tk-koko-leipa);
 }
+
+/* ── VALIKKO V2 (omistaja 2.10.2026 klo 14.37 ja 15.0x; web #3853 css/pohjat/pinnat/pillerivalikko.css "VALIKKO V2") ───
+ * Linssivalitsin.ValikkoV2.cs: ÄÄNET kevyenä kytkinrivinä ilman yhteistä kehystä ja väliviivoja (päällä pehmeä pergamentti-
+ * täyttö ilman tummaa reunaa, pois himmeä muste); tasorivi (avatar ympyränä, nimi ja pisteet, etenemispalkki, ›); natiivin
+ * päivärivi (omistaja 15.1x: päivä, aika ja kassa, päivän kulut tila-virhe-värillä); MATKALAUKKU ja PELI luetteloriveinä
+ * (ikoni, nimi yhdellä koolla, ›, ohut viiva välissä); alarivi: Uusi peli hillittynä tekstinappina, versio oikealla.
+ * Ei kapseleita (EI OVAALEJA 2.10.): kulmat kulma-tokeneista, ympyrä vain avatarissa. Unityn USS:ssä ei ole calc()- eikä
+ * gap-tukea: koot on laskettu tokeneista kommenttiin (avatar 2 × koko-leipa = 32, iso avatar 2,5 × nappi-osuma = 110). */
+
+/* Kapeampi valikko (omistaja 15.0x): minipopupin leveys (web min(--tk-leveys-minipopup, 100vw − 2 × vali-xl)). Linssit- ja
+   Aarteet-näkymä pysyvät kapeina (Linssit.uss --kapea, kolmen luokan valitsin voittaa). */
+.mk-linssivalitsin--valikko.mk-pillerivalikko--v2 {
+    width: var(--tk-leveys-minipopup);
+}
+
+/* ÄÄNET: rako vali-xs, napit erillään omilla kulmillaan (ei yhteistä reunaa). */
+.mk-pillerivalikko--v2 .mk-valikkorivi--kevyt {
+    margin: 0;
+}
+
+.mk-pillerivalikko--v2 .mk-valikkorivi--kevyt > .mk-valikkonappi {
+    min-height: var(--tk-nappi-korkeus);
+    padding: 0 var(--tk-vali-xs);
+    border-width: 0;
+    border-radius: var(--tk-kulma-nappi);
+}
+
+/* Ikoni ja nimi samalla rivillä samaa kokoa, rako vali-xs (web gap). */
+.mk-pillerivalikko--v2 .mk-valikkorivi--kevyt .mk-valikkonappi__ikoni {
+    margin-right: var(--tk-vali-xs);
+}
+
+.mk-pillerivalikko--v2 .mk-valikkorivi--kevyt > .mk-valikkonappi--vali {
+    margin-left: var(--tk-vali-xs);
+}
+
+.mk-pillerivalikko--v2 .mk-valikkorivi--kevyt > .mk-valikkonappi--kytkin.mk-valittu {
+    background-color: var(--tk-paperi-pergamentti);
+}
+
+.mk-pillerivalikko--v2 .mk-valikkorivi--kevyt > .mk-valikkonappi--kytkin.mk-valittu .mk-valikkonappi__ikoni {
+    color: var(--tk-paperi-korostus);
+}
+
+/* Osio-otsikot (ÄÄNET, MATKALAUKKU, PELI): web .tk-paneeli__ryhmaotsikko, kapiteeli muste-pehmeällä. */
+.mk-pillerivalikko--v2 .mk-linssivalitsin__lisaosa > .mk-linssivalitsin__valiotsikko {
+    margin: var(--tk-vali-m) 0 var(--tk-vali-xs) var(--tk-vali-xs);
+    font-size: var(--tk-koko-kapiteeli);
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+/* Luettelorivit: ikoni, nimi ja › ilman kehystä; viiva näkyvien rivien välissä (Linssivalitsin.PaivitaLuettelot). */
+.mk-pillerivalikko--v2 .mk-luetteloryhma {
+    flex-direction: column;
+    margin-top: var(--tk-vali-xs);
+}
+
+.mk-pillerivalikko--v2 .mk-luettelorivi {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: var(--tk-nappi-korkeus);
+    margin: 0;
+    padding: 0 var(--tk-vali-xs);
+    border-width: 0;
+    border-radius: 0;
+    background-color: var(--tk-paperi-pinta);
+}
+
+.mk-pillerivalikko--v2 .mk-luettelorivi:active {
+    background-color: var(--tk-paperi-pergamentti);
+}
+
+.mk-pillerivalikko--v2 .mk-luettelorivi--viiva {
+    border-top-width: 1px;
+    border-color: var(--tk-paperi-reunus);
+}
+
+.mk-pillerivalikko--v2 .mk-luettelorivi__ikoni {
+    flex-shrink: 0;
+    width: var(--tk-koko-valiotsikko);
+    height: var(--tk-koko-valiotsikko);
+    margin-right: var(--tk-vali-s);
+    color: var(--tk-paperi-korostus);
+}
+
+.mk-pillerivalikko--v2 .mk-luettelorivi__nimi {
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: var(--tk-koko-leipa);
+    color: var(--tk-paperi-muste);
+    white-space: nowrap;
+    -unity-text-align: middle-left;
+}
+
+.mk-pillerivalikko--v2 .mk-luettelorivi__nuoli {
+    flex-shrink: 0;
+    margin-left: var(--tk-vali-s);
+    font-size: var(--tk-koko-valiotsikko);
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+/* Tasorivi: avatar ympyränä (2 × koko-leipa), nimi omalla leveydellään, etenemispalkki täyttää välin (web 14.4x). */
+.mk-pillerivalikko--v2 .mk-tasorivi__avatar {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    margin-right: var(--tk-vali-s);
+    border-radius: 16px;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-pillerivalikko--v2 .mk-tasorivi > .mk-luettelorivi__nimi {
+    flex-grow: 0;
+}
+
+.mk-pillerivalikko--v2 .mk-tasorivi__palkki {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: var(--tk-vali-xl);
+    height: var(--tk-vali-xs);
+    margin-left: var(--tk-vali-s);
+    border-radius: var(--tk-kulma-pieni);
+    background-color: var(--tk-paperi-reunus);
+    overflow: hidden;
+}
+
+.mk-pillerivalikko--v2 .mk-tasorivi__tayte {
+    height: 100%;
+    background-color: var(--tk-paperi-toiminto);
+}
+
+/* Päivärivi tasorivin nimen kohdalle (vasen sisennys = vali-xs + avatar 32 + vali-s = nappi-osuma 44). */
+.mk-pillerivalikko--v2 .mk-paivarivi {
+    flex-direction: row;
+    align-items: center;
+    padding: 0 var(--tk-vali-xs) var(--tk-vali-xs) var(--tk-nappi-osuma);
+}
+
+.mk-pillerivalikko--v2 .mk-paivarivi__teksti {
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-paperi-muste-pehmea);
+    white-space: nowrap;
+}
+
+.mk-pillerivalikko--v2 .mk-paivarivi__kulu {
+    flex-shrink: 0;
+    margin-left: var(--tk-vali-s);
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-tila-virhe);
+}
+
+/* Viiva ennen alariviä (web .tk-paneeli__erotin: marginaali vali-m, reunusväri). */
+.mk-pillerivalikko--v2 .mk-linssivalitsin__lisaosa > .mk-linssivalitsin__erotin {
+    margin: var(--tk-vali-m) 0 0 0;
+}
+
+/* Alarivi yhdellä rivillä (omistaja 14.37): Uusi peli vasemmalla, versio oikealla. */
+.mk-pillerivalikko--v2 .mk-linssivalitsin__pohja {
+    align-items: center;
+    margin: var(--tk-vali-s) var(--tk-vali-xs) 0 var(--tk-vali-xs);
+}
+
+.mk-pillerivalikko--v2 .mk-alarivi__nappi {
+    min-height: var(--tk-nappi-osuma);
+    margin-right: auto;
+    padding: 0 var(--tk-vali-xs);
+    border-width: 0;
+    border-radius: var(--tk-kulma-pieni);
+    background-color: var(--tk-paperi-pinta);
+}
+
+.mk-pillerivalikko--v2 .mk-alarivi__nappi:active {
+    background-color: var(--tk-paperi-pergamentti);
+}
+
+.mk-pillerivalikko--v2 .mk-alarivi__nappi .mk-nappi__teksti {
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-pillerivalikko--v2 .mk-pudotus__versio {
+    font-size: var(--tk-koko-kapiteeli);
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+/* Tasonäkymä (tasorivistä): nykyinen avatar isona (2,5 × nappi-osuma) ja kaikki tasot ruudukkona; nykyinen ympyröity
+   toimintovärillä (web outline 2px, offset 2px → rengas, jonka sisäreunus on rako). Tason kohdan oma korostus pois. */
+.mk-tasonakyma {
+    flex-direction: column;
+    padding: 0 var(--tk-vali-xs);
+}
+
+.mk-tasonakyma__avatar {
+    align-self: center;
+    width: 110px;
+    height: 110px;
+    margin: var(--tk-vali-s) 0 var(--tk-vali-l) 0;
+    border-radius: 55px;
+    -unity-background-scale-mode: scale-and-crop;
+}
+
+.mk-tasonakyma .mk-tietaja__kohta.mk-valittu {
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.mk-tietaja__rengas {
+    margin-bottom: 2px;
+    padding: 2px;
+    border-width: 2px;
+    border-color: transparent;
+    border-radius: 31px;
+}
+
+.mk-tietaja__rengas > .mk-tietaja__kuva {
+    margin-bottom: 0;
+}
+
+.mk-tasonakyma .mk-tietaja__kohta.mk-valittu .mk-tietaja__rengas {
+    border-color: var(--tk-paperi-toiminto);
+}
