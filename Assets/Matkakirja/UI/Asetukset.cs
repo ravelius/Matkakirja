@@ -238,7 +238,7 @@ namespace Matkakirja.Natiivi
         {
             Kytkin.Kertoja => "Kertoja",
             Kytkin.Musiikki => "Musiikki",
-            Kytkin.Aanimaisema => "Äänimaisema",
+            Kytkin.Aanimaisema => "Tila", // valikossa "Tila" (omistaja 2.10.2026 klo 15.0x: "muuta äänimaisema muotoon tila"; web main.js)
             Kytkin.KuljettuReitti => "Kuljettu reitti",
             _ => "Pieni liike",
         };
