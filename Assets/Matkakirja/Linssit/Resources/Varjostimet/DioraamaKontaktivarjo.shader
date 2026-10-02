@@ -19,7 +19,10 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
         {
             Name "Forward"
             Tags { "LightMode" = "UniversalForward" }
-            Blend SrcAlpha OneMinusSrcAlpha
+            // Värille tavallinen sekoitus, alfakanava ennallaan (Zero One): dioraaman kuva yhdistetään alfansa kautta, ja
+            // SrcAlpha/OneMinusSrcAlpha laski alfaa varjon kohdalla, jolloin tausta kumosi tummennuksen (savuke 21.10: peitto 1
+            // näkyi, < 1 ei lainkaan).
+            Blend SrcAlpha OneMinusSrcAlpha, Zero One
             ZWrite Off
             ZTest [_ZTest]
             Cull Off
