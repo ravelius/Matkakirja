@@ -138,9 +138,9 @@
    "vari": 371
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Matkakirja.uss": {
-   "fontti": 155,
+   "fontti": 149,
    "siirtyma": 16,
-   "vari": 385
+   "vari": 370
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/Pinnat/astronautin-auto.uss": {
    "fontti": 0,
@@ -198,6 +198,11 @@
    "vari": 0
   },
   "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/auto.uss": {
+   "fontti": 0,
+   "siirtyma": 0,
+   "vari": 0
+  },
+  "Assets/Matkakirja/UI/Resources/MatkakirjaUI/Pohjat/galleria.uss": {
    "fontti": 0,
    "siirtyma": 0,
    "vari": 0
