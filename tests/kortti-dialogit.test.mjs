@@ -37,3 +37,13 @@ test('pohjan nappi voittaa vanhan .dialog button -säännön (pinta, reunus, kul
   assert.match(CSS, /\.dialog \.tk-kortti \.tk-nappi,[\s\S]*?border-radius: var\(--tk-kulma-nappi\)/);
   assert.match(CSS, /\.dialog \.tk-kortti \.tk-nappi--ensisijainen,[\s\S]*?background: var\(--tk-toiminto\)/);
 });
+
+test('Mitä uutta ja Peli päivittyi puetaan KORTIKSI ennen avausta (loki listan rakentamisen jälkeen)', () => {
+  const MAIN = lue('../js/main.js');
+  assert.match(MAIN, /import \{ UI, korttiPohjalla, puePohjaDialogiksi \} from '\.\/ui\.js'/);
+  const loki = MAIN.slice(MAIN.indexOf('function avaaMuutokset()'), MAIN.indexOf('muutoksetDialog.showModal();'));
+  assert.ok(loki.indexOf('lokiRakennettu = true') < loki.indexOf("puePohjaDialogiksi(muutoksetDialog, { sulje: '#muutokset-sulje' })"));
+  assert.match(MAIN, /if \(korttiPohjalla\(\)\) puePohjaDialogiksi\(paivitysDialog, \{ sulje: '#paivitys-sulje' \}\);\n {2}paivitysDialog\.showModal\(\);/);
+  assert.match(CSS, /\.tk-lista--loki \{ list-style: none;/);
+  assert.match(CSS, /dialog\.tk-kortti\[open\]:has\(\.tk-lista--loki\) \{ display: flex;/);
+});
