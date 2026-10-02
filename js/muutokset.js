@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2534, teksti: 'Linssin hampurilainen PANEELI (#3810)' },
   { v: 2533, teksti: 'Mitä uutta ja Peli päivittyi KORTTI-pohjalla (#3799)' },
   { v: 2532, teksti: 'Peruskartta 2026-09-30 webin palloon, deltasarja (#3818)' },
   { v: 2531, teksti: 'Periaatteet-ikkuna KORTTI-pohjalla (#3800)' },
