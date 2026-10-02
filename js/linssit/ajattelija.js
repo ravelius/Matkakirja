@@ -40,7 +40,7 @@ export function b2t(THREE, [x, y, z]) { return new THREE.Vector3(x, z, -y); }
 export function kenttaMm(mm) { return 2 * Math.atan(12 / mm) * 180 / Math.PI; }
 
 /** Toistettava satunnaisluku (mulberry32): sama siemen → sama taustavirta joka avauksella. */
-function siemenluku(siemen) {
+function ajattelijaSiemenluku(siemen) {
   let s = siemen >>> 0;
   return () => {
     s = (s + 0x6D2B79F5) >>> 0;
@@ -49,7 +49,7 @@ function siemenluku(siemen) {
     return ((x ^ (x >>> 14)) >>> 0) / 4294967296;
   };
 }
-function sekoita(lista, satunnainen) {
+function sekoitaSiemenella(lista, satunnainen) {
   for (let i = lista.length - 1; i > 0; i -= 1) {
     const j = Math.floor(satunnainen() * (i + 1));
     [lista[i], lista[j]] = [lista[j], lista[i]];
@@ -193,9 +193,9 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   const s0 = 0.5 + lause.ala / 2 / pr.nauhaLev;
 
   // Taustavirta (paan_virta): rivit jaetaan projektoreille tasaisin välein kuva-alan korkeudelle.
-  const satunnainen = siemenluku(tv.siemen);
+  const satunnainen = ajattelijaSiemenluku(tv.siemen);
   const nopeudet = tv.rivit.map((_, k) => 0.0007 * 1.18 ** k);
-  sekoita(nopeudet, satunnainen);
+  sekoitaSiemenella(nopeudet, satunnainen);
   const virta = [];
   let ri = 0;
   for (const pj of tv.projektorit) {
