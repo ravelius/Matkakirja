@@ -2,10 +2,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { pohjatCss } from './pohjat-css.mjs';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 const VALIKKO = lue('../js/aikajana-valikko.js');
-const CSS = lue('../css/pohjat.css');
+const CSS = pohjatCss();
 
 test('kotelo saa pohjan luokat lipun takana; erotin toimintojen ja kytkinten välissä; järjestys ennallaan', () => {
   assert.match(VALIKKO, /kotelo\.classList\.add\('tk-paneeli-linssivalikko', `tk-teema-\$\{teema\}`\);/);

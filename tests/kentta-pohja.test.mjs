@@ -2,10 +2,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { pohjatCss } from './pohjat-css.mjs';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 const UI = lue('../js/ui.js');
-const CSS = lue('../css/pohjat.css');
+const CSS = pohjatCss();
 
 test('tk-kentta vain kenttätokeneista; alue 2 × korkeus, vihje kursiivina, fokus toimintovärillä', () => {
   assert.match(CSS, /\.tk-kentta, \.tk-kortti \.tk-kentta \{[\s\S]*?min-height: var\(--tk-kentta-korkeus\);[\s\S]*?border-radius: var\(--tk-kentta-kulma\);[\s\S]*?background: var\(--tk-kentta-pinta\);/);

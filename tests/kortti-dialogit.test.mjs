@@ -3,10 +3,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
+import { pohjatCss } from './pohjat-css.mjs';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 const UI = lue('../js/ui.js');
-const CSS = lue('../css/pohjat.css');
+const CSS = pohjatCss();
 
 const metodi = (nimi) => {
   const alku = UI.indexOf(`\n  ${nimi}() {`);
