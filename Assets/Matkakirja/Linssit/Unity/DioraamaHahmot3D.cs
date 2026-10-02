@@ -4,7 +4,7 @@
 // ("poikki hahmot 2d|3d", oletus 3d: 3D-malli korvaa kortin; kortti jää varalle henkilölle, jolla ei ole
 // malli3d.glb:tä lähteessä) — tämä tiedosto ei itse suodata mitään pois DioraamaHahmot.cs:n puolelta.
 //
-// GLB-LATAUS: yksi glb per HENKILÖ (henkilo.Malli3d.Glb-polku), EI per hahmo-instanssi — monta hahmoa (esim.
+// GLB-LATAUS: yksi glb per HENKILÖ (henkilo.Malli3d.NatiiviGlb: malli3d.skin.glb tai nivelhahmon glb), EI per hahmo-instanssi — monta hahmoa (esim.
 // kaksi eri huoneen kokkia) voi jakaa saman henkilön mallin. Mesh/Material rakennetaan KERRAN per glb-polku
 // (AsetaGlb) ja jaetaan KAIKKIEN sen henkilön instanssien kesken; vain Transform-hierarkia (nivelten paikat/
 // kierrot) on per-instanssi. Sama LataaTila/avauskerta-malli kuin DioraamaSovitin.cs:n muu lataus.
@@ -43,7 +43,7 @@ namespace Matkakirja.Natiivi
         public static bool Paalla = true;
 
         static readonly int IdVari = Shader.PropertyToID("_Vari"), IdTila = Shader.PropertyToID("_Tila"),
-            IdKuvioTyyppi = Shader.PropertyToID("_KuvioTyyppi");
+            IdKuvioTyyppi = Shader.PropertyToID("_KuvioTyyppi"), IdPohjaKuva = Shader.PropertyToID("_PohjaKuva");
         static Shader varjostin;
         static Shader Varjostin() => varjostin ??= Resources.Load<Shader>("Varjostimet/DioraamaValaistu");
         static readonly double[] Lepo = { 0, 0, 0 };
@@ -55,7 +55,14 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Yhden henkilön (glb-polun) jaettu malli: solmuhierarkia + per-solmu SolmuMalli (rinnakkainen
         /// Glb.Solmut-listan kanssa).</summary>
-        sealed class HenkiloMalli { public GlbMalli Glb; public SolmuMalli[] Solmut; }
+        sealed class HenkiloMalli
+        {
+            public GlbMalli Glb; public SolmuMalli[] Solmut;
+            /// <summary>SKIN: skinnattujen solmujen meshit (null muille); jaettu kaikkien instanssien kesken.</summary>
+            public SolmuMalli[] SkinSolmut;
+            public bool Skin;
+            public List<Texture2D> Tekstuurit = new List<Texture2D>();
+        }
 
         /// <summary>Yksi hahmo-instanssi näyttämöllä. Juuri/SolmuT ovat null, kunnes henkilön glb on latautunut
         /// (AsetaGlb) — siihen asti hahmo on täysin näkymätön (2D-kortti on varalla tälle ajalle, ks. tiedoston
@@ -73,6 +80,9 @@ namespace Matkakirja.Natiivi
             // Reitti (SAMA logiikka kuin DioraamaHahmot.cs:n Esiintyma, ks. ValmisteleReitti/ReittiPaikkaJaSuunta).
             public double[] Kumulatiivinen;
             public double ReitinVaihe, ReitinMatka, ReitinKulkuS;
+            // SKIN: oma sekoitin (leike, häivytys, aikakerroin) ja edellinen aika dt:tä varten.
+            public DioraamaSekoitin Sekoitin;
+            public double EdellinenT = double.NaN;
         }
 
         readonly Transform juuri;
@@ -91,8 +101,10 @@ namespace Matkakirja.Natiivi
         {
             int n = 0;
             foreach (var hm in malliCache.Values)
-                foreach (var sm in hm.Solmut)
-                    if (sm?.Mesh != null) n += sm.Mesh.triangles.Length / 3;
+                foreach (var lista in new[] { hm.Solmut, hm.SkinSolmut })
+                    if (lista != null)
+                        foreach (var sm in lista)
+                            if (sm?.Mesh != null) n += (int)MeshKolmiot(sm.Mesh);
             return n;
         }
 
@@ -105,12 +117,12 @@ namespace Matkakirja.Natiivi
             foreach (var hahmo in tila.Hahmot)
             {
                 if (rakennus.Henkilot == null || !rakennus.Henkilot.TryGetValue(hahmo.HenkiloId, out var henkilo)) continue;
-                if (henkilo.Malli3d == null || string.IsNullOrEmpty(henkilo.Malli3d.Glb)) continue;
+                if (henkilo.Malli3d == null || string.IsNullOrEmpty(henkilo.Malli3d.NatiiviGlb)) continue;
                 var e = new Esiintyma { TilaId = tila.Id, HahmoId = hahmo.Id, Hahmo = hahmo, Henkilo = henkilo };
                 if (hahmo.Reitti != null) ValmisteleReitti(e, hahmo.Reitti);
                 esiintymat.Add(e);
                 // Toinen tila saattoi jo latauttaa saman henkilön mallin — rakenna heti, jos se on valmiina.
-                if (malliCache.TryGetValue(henkilo.Malli3d.Glb, out var malli)) Rakenna(e, malli);
+                if (malliCache.TryGetValue(henkilo.Malli3d.NatiiviGlb, out var malli)) Rakenna(e, malli);
             }
         }
 
@@ -123,7 +135,7 @@ namespace Matkakirja.Natiivi
             foreach (var hahmo in tila.Hahmot)
             {
                 if (rakennus.Henkilot == null || !rakennus.Henkilot.TryGetValue(hahmo.HenkiloId, out var henkilo)) continue;
-                string glb = henkilo.Malli3d?.Glb;
+                string glb = henkilo.Malli3d?.NatiiviGlb;
                 if (string.IsNullOrEmpty(glb) || malliCache.ContainsKey(glb) || ulos.Contains(glb)) continue;
                 ulos.Add(glb);
             }
@@ -138,14 +150,18 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(glbPolku) || malli?.Solmut == null || malli.Solmut.Count == 0 || malliCache.ContainsKey(glbPolku)) return;
             var materiaaliCache = new Dictionary<string, Material>(StringComparer.Ordinal);
             var hm = new HenkiloMalli { Glb = malli, Solmut = new SolmuMalli[malli.Solmut.Count] };
+            hm.Skin = malli.Skinit.Count > 0 && malli.Animaatiot.Count > 0;
+            if (hm.Skin) hm.SkinSolmut = new SolmuMalli[malli.Solmut.Count];
             for (int i = 0; i < malli.Solmut.Count; i++)
             {
                 var s = malli.Solmut[i];
-                if (s.Osat.Count > 0) hm.Solmut[i] = RakennaSolmuMalli(s, materiaaliCache);
+                if (s.Osat.Count == 0) continue;
+                if (hm.Skin && s.Skin >= 0 && s.Skin < malli.Skinit.Count) hm.SkinSolmut[i] = RakennaSkinMalli(malli, s, hm, materiaaliCache);
+                else hm.Solmut[i] = RakennaSolmuMalli(s, materiaaliCache);
             }
             malliCache[glbPolku] = hm;
             foreach (var e in esiintymat)
-                if (e.Juuri == null && e.Henkilo.Malli3d?.Glb == glbPolku) Rakenna(e, hm);
+                if (e.Juuri == null && e.Henkilo.Malli3d?.NatiiviGlb == glbPolku) Rakenna(e, hm);
         }
 
         /// <summary>Rakentaa yhden hahmo-instanssin Transform-hierarkian jaetusta HenkiloMalli-oliosta: kaikki
@@ -180,6 +196,34 @@ namespace Matkakirja.Natiivi
             }
             for (int i = 0; i < solmut.Count; i++)
                 solmuT[i].SetParent(solmut[i].Vanhempi >= 0 ? solmuT[solmut[i].Vanhempi] : go.transform, false);
+            if (malli.Skin)
+            {
+                // SKIN: SkinnedMeshRenderer skinnatulle solmulle; luut = skinin nivelsolmujen Transformit. Unity laskee
+                // kärjet luiden maailmamatriiseista × bindpose (= glTF:n inverseBindMatrix), joten solmun oma TRS ei
+                // vaikuta (glTF-spec: skinnatun meshin solmun muunnos ohitetaan).
+                for (int i = 0; i < solmut.Count; i++)
+                {
+                    var sm = malli.SkinSolmut[i];
+                    if (sm?.Mesh == null) continue;
+                    var skin = malli.Glb.Skinit[solmut[i].Skin];
+                    var luut = new Transform[skin.Nivelet.Length];
+                    for (int j = 0; j < luut.Length; j++) luut[j] = solmuT[skin.Nivelet[j]];
+                    var smr = solmuT[i].gameObject.AddComponent<SkinnedMeshRenderer>();
+                    smr.sharedMesh = sm.Mesh;
+                    smr.sharedMaterials = sm.Materiaalit;
+                    smr.bones = luut;
+                    smr.rootBone = luut.Length > 0 ? luut[0] : solmuT[i];
+                    smr.quality = SkinQuality.Bone4;
+                    smr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.On;
+                    smr.receiveShadows = true;
+                    // Rajat juuriluun kehyksessä: hahmon koko laatikko + liikevara (ei updateWhenOffscreeniä, kallis).
+                    smr.localBounds = new Bounds(new Vector3(0f, 0.9f, 0f), new Vector3(2.4f, 2.4f, 2.4f));
+                }
+                float sk = (float)(e.Henkilo.Malli3d?.Skin?.Skaala ?? 1);
+                go.transform.localScale = new Vector3(sk, sk, sk);
+                e.Sekoitin = new DioraamaSekoitin(malli.Glb);
+            }
+            LisaaKontaktivarjo(go.transform);
             e.Juuri = go;
             e.SolmuT = solmuT;
             e.Malli = malli;
@@ -189,6 +233,43 @@ namespace Matkakirja.Natiivi
                 var lyhty = LyhdynLuoja(go.transform);
                 if (lyhty != null) lyhty.transform.localPosition = new Vector3(0.28f, 0.95f, 0.12f);
             }
+        }
+
+        /// <summary>Kontaktivarjo (omistaja 2.10. 20.2x: "kävelijä tarvitsee vielä varjon jalkojensa alle"): linnan leivotut
+        /// lattiat eivät ota reaaliaikaista varjoa vastaan, joten JOKAISEN 3D-hahmon (skinnattu ja nivelhahmo, kävelijä ja
+        /// seisoja) juuren alle tulee pehmeä levy, joka liikkuu ja kääntyy hahmon mukana. Periaate kuten kartan symbolimallien
+        /// maakontaktissa (Symbolimallit.Rakentaja PohjaVerkko): peitto keskellä, pehmeä lasku reunalle.</summary>
+        const float VarjoSade = 0.55f, VarjoNosto = 0.012f;
+        static readonly Color VarjoVari = new Color(0.02f, 0.015f, 0.01f, 0.6f);
+        static Mesh varjoVerkko;
+        static Material varjoMateriaali;
+
+        static void LisaaKontaktivarjo(Transform juuri)
+        {
+            if (varjoVerkko == null)
+            {
+                varjoVerkko = new Mesh { name = "Hahmo3D-kontaktivarjo" };
+                varjoVerkko.SetVertices(new[] { new Vector3(-1, 0, -1), new Vector3(1, 0, -1), new Vector3(1, 0, 1), new Vector3(-1, 0, 1) });
+                varjoVerkko.SetUVs(0, new[] { new Vector2(-1, -1), new Vector2(1, -1), new Vector2(1, 1), new Vector2(-1, 1) });
+                varjoVerkko.SetNormals(new[] { Vector3.up, Vector3.up, Vector3.up, Vector3.up });
+                varjoVerkko.SetTriangles(new[] { 0, 2, 1, 0, 3, 2 }, 0);
+                varjoVerkko.RecalculateBounds();
+            }
+            if (varjoMateriaali == null)
+            {
+                var sh = Resources.Load<Shader>("Varjostimet/DioraamaKontaktivarjo");
+                if (sh == null) { Debug.LogWarning("MATKAKIRJA linssit: kontaktivarjon varjostin puuttuu (Varjostimet/DioraamaKontaktivarjo)"); return; }
+                varjoMateriaali = new Material(sh) { name = "Hahmo3D/kontaktivarjo" };
+            }
+            var g = new GameObject("Kontaktivarjo") { layer = DioraamaNayttamo.Kerros };
+            g.transform.SetParent(juuri, false);
+            g.transform.localPosition = new Vector3(0f, VarjoNosto, 0f);
+            g.transform.localScale = new Vector3(VarjoSade, 1f, VarjoSade);
+            g.AddComponent<MeshFilter>().sharedMesh = varjoVerkko;
+            var r = g.AddComponent<MeshRenderer>();
+            r.sharedMaterial = varjoMateriaali;
+            r.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+            r.receiveShadows = false;
         }
 
         /// <summary>DioraamaNayttamo asettaa: luo lyhdyn liekin annetun juuren lapseksi (DioraamaLiekit.LuoLyhty).</summary>
@@ -239,6 +320,97 @@ namespace Matkakirja.Natiivi
             return new SolmuMalli { Mesh = mesh, Materiaalit = materiaalit };
         }
 
+        /// <summary>SKIN: skinnatun solmun mesh (submesh per primitiivi) painoineen ja bindposeineen + materiaalit
+        /// (baseColorTexture → _Tila 1 / _PohjaKuva, muuten baseColorFactor kuten nivelhahmoilla). UV:n v käännetään
+        /// (glTF vasen ylä → Unity vasen ala, sama kuin DioraamaUlkokuori).</summary>
+        static SolmuMalli RakennaSkinMalli(GlbMalli malli, GlbSolmu s, HenkiloMalli hm, Dictionary<string, Material> materiaaliCache)
+        {
+            var skin = malli.Skinit[s.Skin];
+            int kaikki = 0;
+            foreach (var osa in s.Osat) kaikki += (osa.Paikat?.Length ?? 0) / 3;
+            var paikat = new Vector3[kaikki];
+            var normaalit = new Vector3[kaikki];
+            var uvt = new Vector2[kaikki];
+            var varit = new Color32[kaikki];
+            var painot = new BoneWeight[kaikki];
+            var materiaalit = new Material[s.Osat.Count];
+            var kolmiotOsittain = new int[s.Osat.Count][];
+            int kv = 0;
+            for (int oi = 0; oi < s.Osat.Count; oi++)
+            {
+                var osa = s.Osat[oi];
+                int n = (osa.Paikat?.Length ?? 0) / 3;
+                for (int i = 0; i < n; i++)
+                {
+                    paikat[kv + i] = new Vector3(osa.Paikat[i * 3], osa.Paikat[i * 3 + 1], osa.Paikat[i * 3 + 2]);
+                    normaalit[kv + i] = osa.Normaalit != null && osa.Normaalit.Length >= (i + 1) * 3
+                        ? new Vector3(osa.Normaalit[i * 3], osa.Normaalit[i * 3 + 1], osa.Normaalit[i * 3 + 2]) : Vector3.up;
+                    uvt[kv + i] = osa.Uv != null && osa.Uv.Length >= (i + 1) * 2 ? new Vector2(osa.Uv[i * 2], 1f - osa.Uv[i * 2 + 1]) : Vector2.zero;
+                    // R = AO 1, G = lämpö 0, B = 128 (varjostimen B-tilan kerroin 1).
+                    varit[kv + i] = new Color32(255, 0, 128, 255);
+                    painot[kv + i] = Paino(osa, i, skin.Nivelet.Length);
+                }
+                int[] lahde = osa.Kolmiot ?? Array.Empty<int>();
+                var kolmiot = new int[lahde.Length];
+                for (int i = 0; i < lahde.Length; i++) kolmiot[i] = lahde[i] + kv;
+                kolmiotOsittain[oi] = kolmiot;
+                materiaalit[oi] = osa.Kuva >= 0 && osa.Kuva < malli.Kuvat.Count && malli.Kuvat[osa.Kuva] != null
+                    ? KuvaMateriaali(malli, osa.Kuva, hm, materiaaliCache) : MateriaaliOsalle(osa, materiaaliCache);
+                kv += n;
+            }
+            var bindposet = new Matrix4x4[skin.Nivelet.Length];
+            for (int j = 0; j < bindposet.Length; j++)
+            {
+                var m = new Matrix4x4();
+                for (int c = 0; c < 16; c++) m[c % 4, c / 4] = skin.KaanteisetSidonnat[j * 16 + c];
+                bindposet[j] = m;
+            }
+            var mesh = new Mesh { name = "Hahmo3D-skin:" + s.Nimi, indexFormat = UnityEngine.Rendering.IndexFormat.UInt32 };
+            mesh.SetVertices(paikat);
+            mesh.SetNormals(normaalit);
+            mesh.SetUVs(0, uvt);
+            mesh.SetColors(varit);
+            mesh.subMeshCount = s.Osat.Count;
+            for (int oi = 0; oi < s.Osat.Count; oi++) mesh.SetTriangles(kolmiotOsittain[oi], oi);
+            mesh.boneWeights = painot;
+            mesh.bindposes = bindposet;
+            mesh.RecalculateBounds();
+            return new SolmuMalli { Mesh = mesh, Materiaalit = materiaalit };
+        }
+
+        /// <summary>Kärjen 4 nivelpainoa normalisoituna (glTF-painojen summa voi poiketa 1:stä pyöristyksen takia).</summary>
+        static BoneWeight Paino(GlbOsa osa, int i, int niveliä)
+        {
+            if (osa.Nivelet == null || osa.Painot == null) return new BoneWeight { weight0 = 1f };
+            int o = i * 4;
+            float w0 = osa.Painot[o], w1 = osa.Painot[o + 1], w2 = osa.Painot[o + 2], w3 = osa.Painot[o + 3];
+            float summa = w0 + w1 + w2 + w3;
+            if (summa <= 1e-6f) return new BoneWeight { weight0 = 1f };
+            int N(int k) => Mathf.Clamp(osa.Nivelet[o + k], 0, niveliä - 1);
+            return new BoneWeight
+            {
+                boneIndex0 = N(0), weight0 = w0 / summa, boneIndex1 = N(1), weight1 = w1 / summa,
+                boneIndex2 = N(2), weight2 = w2 / summa, boneIndex3 = N(3), weight3 = w3 / summa,
+            };
+        }
+
+        /// <summary>Upotetun perusvärikuvan materiaali (_Tila 1, _PohjaKuva sRGB) — yksi per kuva-indeksi.</summary>
+        static Material KuvaMateriaali(GlbMalli malli, int kuva, HenkiloMalli hm, Dictionary<string, Material> cache)
+        {
+            string avain = "kuva:" + kuva;
+            if (cache.TryGetValue(avain, out var m)) return m;
+            var tex = new Texture2D(2, 2, TextureFormat.RGBA32, true, false) { name = "Hahmo3D-kuva" + kuva };
+            if (!tex.LoadImage(malli.Kuvat[kuva], false)) { UnityEngine.Object.Destroy(tex); tex = null; }
+            else { tex.wrapMode = TextureWrapMode.Repeat; tex.Apply(true, true); hm.Tekstuurit.Add(tex); }
+            m = new Material(Varjostin()) { name = "Hahmo3D/" + avain };
+            m.SetColor(IdVari, Color.white);
+            if (tex != null) { m.SetTexture(IdPohjaKuva, tex); m.SetFloat(IdTila, 1f); }
+            else m.SetFloat(IdTila, 0f);
+            m.SetFloat(IdKuvioTyyppi, 0f);
+            cache[avain] = m;
+            return m;
+        }
+
         /// <summary>Yksi materiaali per (henkilö, pinta) — jaettu KAIKKIEN samaa pintaa käyttävien solmujen
         /// kesken tämän henkilön mallissa (esim. "iho" kaulassa, päässä ja käsissä). _Tila 0 (A, proseduraalinen)
         /// ja _KuvioTyyppi 0 ("tasainen") KIINTEÄSTI, kohdan 4 vaatimus "kuvio tasainen" — ei pohjakuvaa.</summary>
@@ -274,6 +446,7 @@ namespace Matkakirja.Natiivi
                     continue;
                 }
                 if (!e.Nakyvissa) { e.Juuri.SetActive(true); e.Nakyvissa = true; }
+                if (e.Sekoitin != null) { PaivitaSkin(e, hn, t); continue; }
 
                 // Silmukka (kohta 4): Heratys.HahmonTilan silmukka, PAITSI 'kanto' korvaa 'kavelyn', kun
                 // henkilön esine on sanko (kävely + sanko -- vesipoika kantaa vettä kävellessään reittiään).
@@ -326,6 +499,43 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>SKINNATTU HAHMO (omistaja loki 59b9df127): silmukka → GLB-leike (malli3d.leikkeet), crossFade 0,25 s
+        /// (THREE.AnimationMixer.crossFadeTo-pariteetti), reittihahmon kävely sidottu nopeuteen (aikakerroin = m/s ×
+        /// leikkeen kesto / kavely_sykli_m, jalat eivät liu'u) ja tauoilla idle. Vaihe per hahmo kuten nivelhahmoilla.</summary>
+        void PaivitaSkin(Esiintyma e, HahmoNakyma hn, double t)
+        {
+            var m3 = e.Henkilo.Malli3d?.Skin;
+            string silmukka = hn.Silmukka ?? "idle";
+            bool reitilla = e.Hahmo.Reitti != null && silmukka == "kavely";
+            double kavely = reitilla ? ReittiPaikkaJaSuunta(e, t).kavely : 1;
+            string tavoite = reitilla && kavely < 0.5 ? "idle" : silmukka;
+            string leike = Leike(m3, tavoite);
+            bool ensimmainen = e.Sekoitin.Nykyinen == null;
+            if (!e.Sekoitin.Toista(leike, ensimmainen ? 0f : HaivytysS)) e.Sekoitin.Toista(Leike(m3, "idle"), ensimmainen ? 0f : HaivytysS);
+            var anim = e.Malli.Glb.Animaatio(e.Sekoitin.Nykyinen);
+            float kesto = anim?.Kesto ?? 0f;
+            e.Sekoitin.Nopeus = tavoite == "kavely" && m3?.KavelySykliM > 0 && kesto > 0
+                ? (float)((e.Hahmo.Reitti?.Nopeus > 0 ? e.Hahmo.Reitti.Nopeus : 1.0) * kesto / m3.KavelySykliM) : 1f;
+            float dt = double.IsNaN(e.EdellinenT) ? (float)(VaiheYksikko(e.HahmoId) * kesto) : (float)Math.Clamp(t - e.EdellinenT, 0, 0.1);
+            e.EdellinenT = t;
+            e.Sekoitin.Paivita(dt);
+            var s = e.Sekoitin;
+            for (int i = 0; i < e.SolmuT.Length; i++)
+            {
+                if (!s.Animoitu[i]) continue;
+                var tr = e.SolmuT[i];
+                tr.localPosition = new Vector3(s.T[i * 3], s.T[i * 3 + 1], s.T[i * 3 + 2]);
+                tr.localRotation = new Quaternion(s.R[i * 4], s.R[i * 4 + 1], s.R[i * 4 + 2], s.R[i * 4 + 3]);
+                tr.localScale = new Vector3(s.S[i * 3], s.S[i * 3 + 1], s.S[i * 3 + 2]);
+            }
+            PaivitaSijainti(e, t);
+        }
+
+        static string Leike(SkinMalli m3, string silmukka)
+            => m3?.Leikkeet != null && m3.Leikkeet.TryGetValue(silmukka, out var l) && !string.IsNullOrEmpty(l) ? l : silmukka;
+
+        const float HaivytysS = 0.25f;
+
         /// <summary>Juuri-GameObjectin paikka (hahmon oma tai reitti + juuren pystynousu) ja kasvot (Suunta tai
         /// kulkusuunta) -- eriytetty Paivita():sta, jotta se voi ajaa myös liikedatattoman puuttumistilanteen.</summary>
         void PaivitaSijainti(Esiintyma e, double t, double juuriNousuM = 0)
@@ -334,6 +544,10 @@ namespace Matkakirja.Natiivi
             if (e.Hahmo.Reitti != null) (paikkaKanoninen, kasvot, _) = ReittiPaikkaJaSuunta(e, t);
             else { paikkaKanoninen = e.Hahmo.Paikka; kasvot = SuunnastaKasvot(e.Hahmo.Suunta); }
 
+            // SKIN (omistaja 20.1x "kuin moon walkia"): glTF-mallin kasvot ovat +Z (Linnanrakentajan mittaus: varvas
+            // (0, 0, +0,16), tukijalka liukuu −Z:aan), ja DioraamaGlb:n z-peilaus kääntää ne Unityssä −Z:ksi. LookRotation
+            // vie paikallisen +Z:n kasvosuuntaan, joten skinnatulle hahmolle käytetään vastavektoria. Nivelhahmot ennallaan.
+            if (e.Sekoitin != null) kasvot = -kasvot;
             Vector3 paikka = DioraamaNayttamo.UnityPiste(paikkaKanoninen);
             paikka.y += (float)juuriNousuM;
             e.Juuri.transform.position = paikka;
@@ -438,16 +652,83 @@ namespace Matkakirja.Natiivi
             return (h % 1000) / 1000.0;
         }
 
+        /// <summary>Testikomento "poikki skin valkoinen|kuva|tila": skinnattujen kuvamateriaalien tila ja kärkivärit.</summary>
+        public string SkinKoe(string mita)
+        {
+            int materiaaleja = 0, karkia = 0, varillisia = 0; float aoMin = 1f;
+            foreach (var hm in malliCache.Values)
+            {
+                if (hm.SkinSolmut == null) continue;
+                foreach (var sm in hm.SkinSolmut)
+                {
+                    if (sm?.Mesh == null) continue;
+                    karkia += sm.Mesh.vertexCount;
+                    if (sm.Mesh.HasVertexAttribute(UnityEngine.Rendering.VertexAttribute.Color))
+                    {
+                        varillisia += sm.Mesh.vertexCount;
+                        foreach (var c in sm.Mesh.colors32) aoMin = Mathf.Min(aoMin, c.r / 255f);
+                    }
+                    foreach (var m in sm.Materiaalit)
+                    {
+                        if (m == null || !m.name.StartsWith("Hahmo3D/kuva:", StringComparison.Ordinal)) continue;
+                        materiaaleja++;
+                        if (mita == "valkoinen") { m.SetFloat(IdTila, 0f); m.SetColor(IdVari, Color.white); }
+                        else if (mita == "kuva") m.SetFloat(IdTila, m.GetTexture(IdPohjaKuva) != null ? 1f : 0f);
+                    }
+                }
+            }
+            // Testisäädöt (juurisyy 2.10. 21.0x): varjokoe (punainen, täysi, syvyystesti pois), varjo (oletus), veto=m,
+            // peitto=0–1, ztest=always|lequal, vari=punainen|varjo.
+            if (varjoMateriaali != null && mita != null)
+            {
+                var v = varjoMateriaali.GetColor("_VarjoVari");
+                var kv = mita.Split('=');
+                float.TryParse(kv.Length > 1 ? kv[1] : "", System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var luku);
+                bool muutettu = true;
+                switch (kv[0])
+                {
+                    case "varjokoe": v = new Color(1f, 0f, 0f, 1f); varjoMateriaali.SetFloat("_ZTest", (float)UnityEngine.Rendering.CompareFunction.Always); break;
+                    case "varjo": v = VarjoVari; varjoMateriaali.SetFloat("_ZTest", (float)UnityEngine.Rendering.CompareFunction.LessEqual); varjoMateriaali.SetFloat("_VarjoVeto", 0.4f); break;
+                    case "veto": varjoMateriaali.SetFloat("_VarjoVeto", luku); break;
+                    case "peitto": v.a = luku; break;
+                    case "ztest": varjoMateriaali.SetFloat("_ZTest", (float)(kv.Length > 1 && kv[1] == "always" ? UnityEngine.Rendering.CompareFunction.Always : UnityEngine.Rendering.CompareFunction.LessEqual)); break;
+                    case "vari": v = kv.Length > 1 && kv[1] == "punainen" ? new Color(1f, 0f, 0f, v.a) : new Color(VarjoVari.r, VarjoVari.g, VarjoVari.b, v.a); break;
+                    default: muutettu = false; break;
+                }
+                varjoMateriaali.SetColor("_VarjoVari", v);
+                if (muutettu && mita.Contains("="))
+                    return $"varjo: vari {v}, ztest {varjoMateriaali.GetFloat("_ZTest")}, veto {varjoMateriaali.GetFloat("_VarjoVeto"):F2}";
+            }
+            int varjoja = 0; string varjoY = "";
+            foreach (var e in esiintymat)
+            {
+                var v = e.Juuri != null ? e.Juuri.transform.Find("Kontaktivarjo") : null;
+                if (v == null) continue;
+                varjoja++;
+                if (e.TilaId == "muurinharja" || varjoY.Length < 40)
+                    varjoY += $" {e.TilaId}/{e.HahmoId}:{v.position.y:F2}({(v.gameObject.activeInHierarchy ? "päällä" : "pois")}, juuri {e.Juuri.transform.lossyScale.x:F2})";
+            }
+            return $"{mita}: {materiaaleja} kuvamateriaalia, kärkiä {karkia}, värillisiä {varillisia}, AO min {aoMin:F2}; "
+                + $"kontaktivarjoja {varjoja}/{esiintymat.Count} (materiaali {(varjoMateriaali != null ? "ok" : "PUUTTUU")}, y{varjoY})";
+        }
+
+        static long MeshKolmiot(Mesh m) { long n = 0; for (int i = 0; i < m.subMeshCount; i++) n += m.GetIndexCount(i) / 3; return n; }
+
         public void Tyhjenna()
         {
             foreach (var e in esiintymat) if (e.Juuri != null) UnityEngine.Object.Destroy(e.Juuri);
             esiintymat.Clear();
             foreach (var hm in malliCache.Values)
-                foreach (var sm in hm.Solmut)
-                {
-                    if (sm?.Mesh != null) UnityEngine.Object.Destroy(sm.Mesh);
-                    if (sm?.Materiaalit != null) foreach (var m in sm.Materiaalit) if (m != null) UnityEngine.Object.Destroy(m);
-                }
+            {
+                foreach (var lista in new[] { hm.Solmut, hm.SkinSolmut })
+                    if (lista != null)
+                        foreach (var sm in lista)
+                        {
+                            if (sm?.Mesh != null) UnityEngine.Object.Destroy(sm.Mesh);
+                            if (sm?.Materiaalit != null) foreach (var m in sm.Materiaalit) if (m != null) UnityEngine.Object.Destroy(m);
+                        }
+                foreach (var tex in hm.Tekstuurit) if (tex != null) UnityEngine.Object.Destroy(tex);
+            }
             malliCache.Clear();
             nakymaHaku.Clear();
         }

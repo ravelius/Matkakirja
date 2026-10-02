@@ -418,7 +418,7 @@ namespace Matkakirja.Natiivi
             foreach (var hahmo in tila.Hahmot)
             {
                 bool onMalli3d = rakennus.Henkilot != null && rakennus.Henkilot.TryGetValue(hahmo.HenkiloId, out var henkilo)
-                    && !string.IsNullOrEmpty(henkilo.Malli3d?.Glb);
+                    && !string.IsNullOrEmpty(henkilo.Malli3d?.NatiiviGlb);
                 if (!onMalli3d) (jaljelle ??= new List<Hahmo>()).Add(hahmo);
             }
             if (jaljelle != null && jaljelle.Count == tila.Hahmot.Count) return tila; // ei yhtään suodatettavaa
@@ -602,7 +602,8 @@ namespace Matkakirja.Natiivi
             catch (Exception e) { o.Kirjaa($"poikki: hahmo3d {glbPolku} virhe: {e.Message}"); yield break; }
             if (kerta != avauskerta || nayttamo?.Hahmot3D == null) yield break; // ks. LataaTila-kommentti
             nayttamo.Hahmot3D.AsetaGlb(glbPolku, malli);
-            o.Kirjaa($"poikki: hahmo3d {glbPolku} valmis ({malli.Solmut.Count} solmua)");
+            o.Kirjaa($"poikki: hahmo3d {glbPolku} valmis ({malli.Solmut.Count} solmua"
+                + (malli.Skinit.Count > 0 ? $", skin {malli.Skinit[0].Nivelet.Length} luuta, leikkeet {string.Join(",", malli.Animaatiot.ConvertAll(a => a.Nimi))}" : "") + ")");
         }
 
         /// <summary>Pinnan Tekstuuri/TekstuuriPuoli (era 2 kohta 3, puolikas era 2b): mipmapattu, ei-lineaarinen
@@ -824,6 +825,13 @@ namespace Matkakirja.Natiivi
                 // + DioraamaHahmot3D.LisaaTila), "poikki lataa" lataa tilat uudelleen. Sama sopimus kuin liekit.
                 if (arvo == "3d" || arvo == "2d") DioraamaHahmot3D.Paalla = arvo == "3d";
                 o.Kirjaa("poikki: hahmot " + (DioraamaHahmot3D.Paalla ? "3d" : "2d"));
+                return;
+            }
+            if (mita == "skin")
+            {
+                // Skinnatun hahmon sävyn juurisyy (Linnanrakentaja 2.10. 19.1x): "valkoinen" = kuva pois (_Tila 0, _Vari
+                // valkoinen) → näkyy pelkkä valo × AO; "kuva" = takaisin. Tila kertoo kärkivärit (AO) ja kuvat.
+                o.Kirjaa("poikki: skin " + (nayttamo?.Hahmot3D?.SkinKoe(arvo) ?? "ei näyttämöä"));
                 return;
             }
             if (mita == "liekit")

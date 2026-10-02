@@ -6,7 +6,7 @@
 //
 // Tuettu: glTF 2.0 binääri, yksi solmu jolla on mesh (ei hierarkiaa), kolmiot (mode 4), POSITION/NORMAL float
 // VEC3, TEXCOORD_0 float VEC2 (rakennuskoneen oma tasoprojektio — EI käännetä, ks. kohta 3), COLOR_0
-// UNSIGNED_BYTE normalized VEC4, indeksit ubyte/ushort/uint. Muu (sparse, skin, morph, ulkoiset puskurit) →
+// UNSIGNED_BYTE normalized VEC4, indeksit ubyte/ushort/uint, skin + animaatiot (alla). Muu (sparse, morph, ulkoiset puskurit) →
 // GlbVirhe, ei arvausta.
 //
 // unityyn = true: (x, y, z) → (x, y, −z) paikoille ja normaaleille, kolmion kiertosuunta käännetään
@@ -26,6 +26,11 @@
 // komponenteittain: esim. M'_13 = -M_13 ja M(q')_13 = 2(x·(-z) + (-w)·y) = -2(xz+wy) = -M_13, jne. kaikille
 // 9 komponentille). scale EI muutu (skaalan etumerkki ei kuvaa kätisyyttä — kätisyyden kääntää jo paikkojen/
 // normaalien peilaus + kiertosuunnan kääntö; ja diag(sx,sy,sz) kommutoi R:n kanssa: R·S·R = S).
+//
+// SKINNATUT HAHMOT (Siirtoseppä 2.10.2026, omistaja loki 59b9df127: valmiit CC0-mallit, sulava liike): skins[] (nivelsolmut +
+// inverseBindMatrices), primitiivien JOINTS_0/WEIGHTS_0 ja animations[] (kanavat translation/rotation/scale, LINEAR/STEP/
+// CUBICSPLINE). unityyn: avainkehysten T ja R kuten solmun TRS yllä; inverseBindMatrix M' = R·M·R eli alkio (rivi, sarake)
+// negatoidaan, kun TÄSMÄLLEEN toinen indekseistä on 2 (sama konjugaatio kuin kvaterniolle). Nivelet/painot eivät muutu.
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -55,6 +60,37 @@ namespace Matkakirja.Linssit.Dioraama
         /// pinnoille, koska niitä ei käytetä rakennuksen geometriassa) ja leiponut tuloksen tähän.</summary>
         public float[] Vari;
         public int[] Kolmiot;
+        /// <summary>SKIN: JOINTS_0 (4 per kärki, indeksejä skinin Nivelet-listaan) tai null.</summary>
+        public int[] Nivelet;
+        /// <summary>SKIN: WEIGHTS_0 (4 per kärki, 0–1) tai null.</summary>
+        public float[] Painot;
+    }
+
+    /// <summary>SKIN: nivelsolmut (indeksit GlbMalli.Solmut-listaan) ja käänteiset sidontamatriisit (16 per nivel,
+    /// sarakkeittain kuten glTF).</summary>
+    public sealed class GlbSkin
+    {
+        public int[] Nivelet;
+        public float[] KaanteisetSidonnat;
+        public int Luuranko = -1;
+    }
+
+    /// <summary>Animaation yksi kanava: solmun T (0), R (1) tai S (2) avainkehyksinä. Arvot = 3 tai 4 per aika;
+    /// CUBICSPLINE luetaan arvopisteiksi (tangentit pois).</summary>
+    public sealed class GlbKanava
+    {
+        public int Solmu;
+        public int Polku;
+        public float[] Ajat;
+        public float[] Arvot;
+        public bool Askel;
+    }
+
+    public sealed class GlbAnimaatio
+    {
+        public string Nimi;
+        public float Kesto;
+        public List<GlbKanava> Kanavat = new List<GlbKanava>();
     }
 
     /// <summary>ERÄ 2B: yksi solmu solmuhierarkiassa (pienoisfiguurin nivel). Translation/Rotation/Scale ovat
@@ -74,6 +110,8 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>LINNA: solmun extras (Blenderin custom properties, esim. valo:/liekki:/ikkuna:-tyhjien väri, säde,
         /// voima, koko); null, jos kenttää ei ole.</summary>
         public Dictionary<string, object> Extras;
+        /// <summary>SKIN: skins-indeksi (GlbMalli.Skinit), jos solmun mesh on skinnattu; muuten -1.</summary>
+        public int Skin = -1;
     }
 
     /// <summary>Tilan koko glb: yksi mesh (solmun nimi), primitiivi per käytetty pinta. Nimi/Osat = ENSIMMÄINEN
@@ -87,6 +125,14 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>LINNA (ulkokuori): glb:n sisään upotetut kuvat (images[i].bufferView) tavuina (JPEG/PNG) images-
         /// järjestyksessä; null alkio, jos kuva on ulkoinen (uri) — ulkoisia ei tueta.</summary>
         public List<byte[]> Kuvat = new List<byte[]>();
+        public List<GlbSkin> Skinit = new List<GlbSkin>();
+        public List<GlbAnimaatio> Animaatiot = new List<GlbAnimaatio>();
+
+        public GlbAnimaatio Animaatio(string nimi)
+        {
+            foreach (var a in Animaatiot) if (a.Nimi == nimi) return a;
+            return null;
+        }
     }
 
     public static class DioraamaGlb
@@ -143,7 +189,6 @@ namespace Matkakirja.Linssit.Dioraama
                     if (MiniJson.Luku(MiniJson.Objekti(solmut[i]), "mesh").HasValue) { solmuIndeksi = i; break; }
                 if (solmuIndeksi < 0) throw new DioraamaGlbVirhe("ei solmua, jolla on mesh");
                 var solmu = MiniJson.Objekti(solmut[solmuIndeksi]);
-                if (MiniJson.Kentta(solmu, "skin") != null) throw new DioraamaGlbVirhe("skin ei tuettu");
                 string nimi = MiniJson.Teksti(solmu, "name");
                 int meshI = (int)MiniJson.Luku(solmu, "mesh").Value;
 
@@ -158,6 +203,8 @@ namespace Matkakirja.Linssit.Dioraama
                     var bvi = MiniJson.Luku(MiniJson.Objekti(io), "bufferView");
                     malli.Kuvat.Add(bvi.HasValue ? BufferView((int)bvi.Value) : null);
                 }
+                foreach (var so in Lista("skins")) malli.Skinit.Add(LueSkin(MiniJson.Objekti(so), solmut.Count));
+                foreach (var ao in Lista("animations")) malli.Animaatiot.Add(LueAnimaatio(MiniJson.Objekti(ao), solmut.Count));
                 return malli;
             }
 
@@ -229,7 +276,10 @@ namespace Matkakirja.Linssit.Dioraama
                     if (texI.HasValue && (int)texI.Value < Lista("textures").Count)
                         kuva = (int)(MiniJson.Luku(MiniJson.Objekti(Lista("textures")[(int)texI.Value]), "source") ?? -1);
 
-                    osat.Add(new GlbOsa { Pinta = pinta, Vari = materiaaliVari, Paikat = paikat, Normaalit = normaalit, Uv = tex, Uv1 = tex1, Kuva = kuva, Varit = vari, Kolmiot = kolmiot });
+                    var nivelet = Nivelet(a, k);
+                    var painot = nivelet != null ? Painot(a, k) : null;
+                    if (nivelet != null && painot == null) throw new DioraamaGlbVirhe("JOINTS_0 ilman WEIGHTS_0:aa");
+                    osat.Add(new GlbOsa { Pinta = pinta, Vari = materiaaliVari, Paikat = paikat, Normaalit = normaalit, Uv = tex, Uv1 = tex1, Kuva = kuva, Varit = vari, Kolmiot = kolmiot, Nivelet = nivelet, Painot = painot });
                 }
                 return osat;
             }
@@ -264,6 +314,7 @@ namespace Matkakirja.Linssit.Dioraama
                         Scale = LueVec(MiniJson.Kentta(s, "scale"), new[] { 1f, 1f, 1f }),
                         Extras = MiniJson.ObjektiTaiNull(MiniJson.Kentta(s, "extras")),
                     };
+                    g.Skin = (int)(MiniJson.Luku(s, "skin") ?? -1);
                     var meshIn = MiniJson.Luku(s, "mesh");
                     g.Osat = meshIn.HasValue ? LueMeshinOsat((int)meshIn.Value) : new List<GlbOsa>();
                     tulos.Add(g);
@@ -311,6 +362,126 @@ namespace Matkakirja.Linssit.Dioraama
                 return r;
             }
 
+            GlbSkin LueSkin(Dictionary<string, object> s, int solmuja)
+            {
+                var nl = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(s, "joints"));
+                var sk = new GlbSkin { Nivelet = new int[nl.Count], Luuranko = (int)(MiniJson.Luku(s, "skeleton") ?? -1) };
+                for (int i = 0; i < nl.Count; i++)
+                {
+                    int n = nl[i] is double d ? (int)d : -1;
+                    if (n < 0 || n >= solmuja) throw new DioraamaGlbVirhe("skin-nivel yli solmujen");
+                    sk.Nivelet[i] = n;
+                }
+                var ibm = MiniJson.Luku(s, "inverseBindMatrices");
+                var m = new float[nl.Count * 16];
+                if (ibm.HasValue)
+                {
+                    var (alku, askel, maara, komponentit, tyyppi, _) = Accessor((int)ibm.Value);
+                    if (tyyppi != 5126 || komponentit != 16 || maara < nl.Count) throw new DioraamaGlbVirhe("inverseBindMatrices ei ole float MAT4 × nivelet");
+                    for (int q = 0; q < nl.Count; q++)
+                        for (int c = 0; c < 16; c++)
+                        {
+                            float v = BitConverter.ToSingle(b, alku + q * askel + c * 4);
+                            int rivi = c % 4, sarake = c / 4;
+                            m[q * 16 + c] = unityyn && ((rivi == 2) != (sarake == 2)) ? -v : v;
+                        }
+                }
+                else for (int q = 0; q < nl.Count; q++) { m[q * 16] = 1; m[q * 16 + 5] = 1; m[q * 16 + 10] = 1; m[q * 16 + 15] = 1; }
+                sk.KaanteisetSidonnat = m;
+                return sk;
+            }
+
+            GlbAnimaatio LueAnimaatio(Dictionary<string, object> a, int solmuja)
+            {
+                var anim = new GlbAnimaatio { Nimi = MiniJson.Teksti(a, "name") ?? "" };
+                var naytteet = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(a, "samplers"));
+                foreach (var ko in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(a, "channels")))
+                {
+                    var k = MiniJson.Objekti(ko);
+                    var kohde = MiniJson.Objekti(MiniJson.Kentta(k, "target"));
+                    var solmu = MiniJson.Luku(kohde, "node");
+                    int polku = MiniJson.Teksti(kohde, "path") switch { "translation" => 0, "rotation" => 1, "scale" => 2, _ => -1 };
+                    if (!solmu.HasValue || polku < 0 || (int)solmu.Value >= solmuja) continue; // weights (morph) ja tuntemattomat ohi
+                    int si = (int)(MiniJson.Luku(k, "sampler") ?? -1);
+                    if (si < 0 || si >= naytteet.Count) throw new DioraamaGlbVirhe("animaation sampler puuttuu");
+                    var n = MiniJson.Objekti(naytteet[si]);
+                    string interp = MiniJson.Teksti(n, "interpolation") ?? "LINEAR";
+                    var ajat = FloatAccessor((int)(MiniJson.Luku(n, "input") ?? -1), 1);
+                    int c = polku == 1 ? 4 : 3;
+                    var raaka = FloatAccessor((int)(MiniJson.Luku(n, "output") ?? -1), c, polku == 1);
+                    float[] arvot;
+                    if (interp == "CUBICSPLINE")
+                    {
+                        if (raaka.Length != ajat.Length * 3 * c) throw new DioraamaGlbVirhe("CUBICSPLINE-arvojen määrä");
+                        arvot = new float[ajat.Length * c];
+                        for (int q = 0; q < ajat.Length; q++) Array.Copy(raaka, (q * 3 + 1) * c, arvot, q * c, c);
+                    }
+                    else arvot = raaka;
+                    if (arvot.Length != ajat.Length * c) throw new DioraamaGlbVirhe("animaation arvojen määrä");
+                    if (unityyn)
+                        for (int q = 0; q < ajat.Length; q++)
+                        {
+                            if (polku == 0) arvot[q * 3 + 2] = -arvot[q * 3 + 2];
+                            else if (polku == 1) { arvot[q * 4 + 2] = -arvot[q * 4 + 2]; arvot[q * 4 + 3] = -arvot[q * 4 + 3]; }
+                        }
+                    anim.Kanavat.Add(new GlbKanava { Solmu = (int)solmu.Value, Polku = polku, Ajat = ajat, Arvot = arvot, Askel = interp == "STEP" });
+                    if (ajat.Length > 0) anim.Kesto = Math.Max(anim.Kesto, ajat[ajat.Length - 1]);
+                }
+                return anim;
+            }
+
+            /// <summary>Float-accessor (tai rotaatiolle normalisoitu kokonaisluku, glTF sallii sen) litteäksi taulukoksi.</summary>
+            float[] FloatAccessor(int i, int komponenttejaOdotettu, bool normalisoituSallittu = false)
+            {
+                var (alku, askel, maara, komponentit, tyyppi, normalisoitu) = Accessor(i);
+                if (komponentit != komponenttejaOdotettu) throw new DioraamaGlbVirhe("accessor " + i + " komponentit " + komponentit);
+                var t = new float[maara * komponentit];
+                for (int q = 0; q < maara; q++)
+                    for (int c = 0; c < komponentit; c++)
+                        t[q * komponentit + c] = tyyppi == 5126 ? BitConverter.ToSingle(b, alku + q * askel + c * 4)
+                            : normalisoituSallittu && normalisoitu ? Normalisoitu(tyyppi, alku + q * askel, c)
+                            : throw new DioraamaGlbVirhe("accessor " + i + " ei ole float");
+                return t;
+            }
+
+            float Normalisoitu(int tyyppi, int o, int c) => tyyppi switch
+            {
+                5120 => Math.Max((sbyte)b[o + c] / 127f, -1f),
+                5121 => b[o + c] / 255f,
+                5122 => Math.Max((short)(b[o + c * 2] | b[o + c * 2 + 1] << 8) / 32767f, -1f),
+                5123 => (b[o + c * 2] | b[o + c * 2 + 1] << 8) / 65535f,
+                _ => throw new DioraamaGlbVirhe("normalisoitu componentType " + tyyppi),
+            };
+
+            int[] Nivelet(Dictionary<string, object> attr, int karkia)
+            {
+                var i = MiniJson.Luku(attr, "JOINTS_0");
+                if (!i.HasValue) return null;
+                var (alku, askel, maara, komponentit, tyyppi, _) = Accessor((int)i.Value);
+                if (komponentit != 4 || (tyyppi != 5121 && tyyppi != 5123) || maara != karkia) throw new DioraamaGlbVirhe("JOINTS_0 ei ole UNSIGNED_BYTE/SHORT VEC4");
+                var t = new int[maara * 4];
+                for (int q = 0; q < maara; q++)
+                    for (int c = 0; c < 4; c++)
+                    {
+                        int o = alku + q * askel;
+                        t[q * 4 + c] = tyyppi == 5121 ? b[o + c] : b[o + c * 2] | b[o + c * 2 + 1] << 8;
+                    }
+                return t;
+            }
+
+            float[] Painot(Dictionary<string, object> attr, int karkia)
+            {
+                var i = MiniJson.Luku(attr, "WEIGHTS_0");
+                if (!i.HasValue) return null;
+                var (alku, askel, maara, komponentit, tyyppi, normalisoitu) = Accessor((int)i.Value);
+                if (komponentit != 4 || maara != karkia || (tyyppi != 5126 && !normalisoitu)) throw new DioraamaGlbVirhe("WEIGHTS_0 ei ole float tai normalisoitu VEC4");
+                var t = new float[maara * 4];
+                for (int q = 0; q < maara; q++)
+                    for (int c = 0; c < 4; c++)
+                        t[q * 4 + c] = tyyppi == 5126 ? BitConverter.ToSingle(b, alku + q * askel + c * 4) : Normalisoitu(tyyppi, alku + q * askel, c);
+                return t;
+            }
+
             static int[] Jarjestys(int n) { var t = new int[n]; for (int i = 0; i < n; i++) t[i] = i; return t; }
 
             /// <summary>Accessorin tavualue: (alku, askel, määrä, komponentit, componentType, normalized).</summary>
@@ -322,7 +493,7 @@ namespace Matkakirja.Linssit.Dioraama
                 int maara = (int)(MiniJson.Luku(a, "count") ?? 0);
                 int komponentit = MiniJson.Teksti(a, "type") switch
                 {
-                    "SCALAR" => 1, "VEC2" => 2, "VEC3" => 3, "VEC4" => 4,
+                    "SCALAR" => 1, "VEC2" => 2, "VEC3" => 3, "VEC4" => 4, "MAT4" => 16,
                     var x => throw new DioraamaGlbVirhe("accessor-tyyppi " + x),
                 };
                 int koko = tyyppi switch { 5120 => 1, 5121 => 1, 5122 => 2, 5123 => 2, 5125 => 4, 5126 => 4, _ => throw new DioraamaGlbVirhe("componentType " + tyyppi) };
@@ -353,12 +524,21 @@ namespace Matkakirja.Linssit.Dioraama
             }
 
             /// <summary>COLOR_0: UNSIGNED_BYTE normalized VEC4 (kohta 3) → raa'at tavut RGBA sellaisinaan. LINNA: myös
-            /// Blenderin UNSIGNED_SHORT normalized VEC4 (yläbitit tavuiksi).</summary>
+            /// Blenderin UNSIGNED_SHORT normalized VEC4 (yläbitit tavuiksi) ja float VEC3/VEC4 (skinnatut hahmot).</summary>
             byte[] ColorVec(Dictionary<string, object> attr, string nimi)
             {
                 var i = MiniJson.Luku(attr, nimi);
                 if (!i.HasValue) return null;
                 var (alku, askel, maara, komponentit, tyyppi, normalisoitu) = Accessor((int)i.Value);
+                if (tyyppi == 5126 && (komponentit == 3 || komponentit == 4))
+                {
+                    // Skinnattujen hahmojen Blender-vienti: float VEC3/VEC4 (0–1) → tavut, alfa 255 VEC3:lle.
+                    var f = new byte[maara * 4];
+                    for (int q = 0; q < maara; q++)
+                        for (int c = 0; c < 4; c++)
+                            f[q * 4 + c] = c < komponentit ? (byte)Math.Round(Math.Clamp(BitConverter.ToSingle(b, alku + q * askel + c * 4), 0f, 1f) * 255f) : (byte)255;
+                    return f;
+                }
                 if ((tyyppi != 5121 && tyyppi != 5123) || komponentit != 4 || !normalisoitu) throw new DioraamaGlbVirhe(nimi + " ei ole normalisoitu UNSIGNED_BYTE/SHORT VEC4");
                 var t = new byte[maara * 4];
                 for (int q = 0; q < maara; q++)

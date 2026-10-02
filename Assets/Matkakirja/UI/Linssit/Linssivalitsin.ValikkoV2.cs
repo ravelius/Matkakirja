@@ -3,10 +3,12 @@
 //   ÄÄNET       Kertoja · Musiikki · Äänimaisema kevyinä kytkinnappeina vierekkäin (päällä pergamenttitäyttö, pois himmeä muste)
 //   tasorivi    avatar ympyränä, "Untuvikko (80 tp)", etenemispalkki ja › (avaa tasonäkymän)
 //   päivärivi   natiivin oma (omistaja 2.10.2026 klo 15.1x): "Päivä 1/80, aamu · £400" ja lopussa punaisella päivän kulut
-//               ruokaan ja majoitukseen "−£20" (Matka.PaivakuluNyt)
-//   MATKALAUKKU Aarteet (N) · Julisteet (N) luettelorivinä (ikoni, nimi, ›, ohut viiva välissä); ei Linssejä (kartan oma nappi)
+//               ruokaan ja majoitukseen "−£20" (Matka.PaivakuluNyt); £ pillerin selkeällä merkillä (Luku-kirjasin)
+//               Tasorivi ja päivärivi yhteisellä pohjalla (omistaja 20.2x): ÄÄNET-laattojen täyttö ja kulma valikon levyisenä.
+//   MATKALAUKKU Aarteet (N) · Julisteet (N) luettelorivinä (ikoni, nimi, ›); ei Linssejä (kartan oma nappi)
 //   PELI        Retkikunta · Asetukset
 //   alarivi     viivan alla "Uusi peli" hillittynä tekstinappina vasemmalla ja versio oikealla (natiivissa ei päivitä-nappia)
+// Omistaja 2.10.2026 klo 20.2x: ei ×:ää (ohinapautus sulkee) eikä vaakaviivoja paitsi alin (alarivin yläpuolella).
 // Tasonäkymä: ‹ Takaisin + TIETÄJÄTASO, nykyinen avatar isona ja kaikki tasot ruudukkona (Tietajagalleria.Ruudukko), nykyinen
 // ympyröity toimintovärillä. Ei kapseleita (EI OVAALEJA 2.10.): kulmat kulma-tokeneista, ympyrä vain avatar. Vanha järjestys:
 // PlayerPrefs matkakirja-valikko = "vanha" (web ?valikko=vanha), luetaan valikkoa rakennettaessa.
@@ -27,8 +29,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Pääsivu on rakennettu v2-järjestykseen (AloitaV2).</summary>
         public bool V2 { get; private set; }
 
-        VisualElement tasot, tasoAvatar, tasoPalkki, tasoTayte, paivaRivi;
-        Label tasoNimi, paivaTeksti, paivaKulu;
+        VisualElement tasot, tasoAvatar, tasoPalkki, tasoTayte, paivaRivi, paivaKulu;
+        Label tasoNimi, paivaTeksti, paivaRaha, paivaKuluLuku;
         int avatarTaso = -1;
         readonly List<(Label Nimi, string Perus, Func<LaukkuNaytto, int> Maara)> maarat = new List<(Label, string, Func<LaukkuNaytto, int>)>();
 
@@ -57,11 +59,17 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Luetteloryhmä (web .tk-paneeli__ryhma--luettelo), otsikko kapiteelina yllä (null = ei otsikkoa).</summary>
-        public VisualElement LisaLuetteloRyhma(string otsikkoTeksti)
+        public VisualElement LisaLuetteloRyhma(string otsikkoTeksti, VisualElement isa = null)
         {
             if (otsikkoTeksti != null) LisaOsioOtsikko(otsikkoTeksti);
-            return Rakenne.El("mk-luetteloryhma", lisaosa, PickingMode.Ignore);
+            return Rakenne.El("mk-luetteloryhma", isa ?? lisaosa, PickingMode.Ignore);
         }
+
+        /// <summary>
+        /// Tasorivin ja päivärivin yhteinen pohja (omistaja 2.10.2026 klo 20.2x: "untuvikko ja päivä riveille saisi tehdä yhteisen
+        /// pohjan joka sopisi"): olemassa olevan ÄÄNET-laatan tyyli (pergamenttitäyttö, kulma-nappi) valikon levyisenä.
+        /// </summary>
+        public VisualElement LisaTasopohja() => Rakenne.El("mk-tasopohja", lisaosa, PickingMode.Ignore);
 
         /// <summary>Luettelorivi (web pueLuetteloRivi): ikoni, nimi yhdellä koolla ja › oikeassa reunassa.</summary>
         public Button LisaLuetteloRivi(VisualElement ryhma, string nimi, string ikoni, Action painettu, Func<bool> nakyy = null)
@@ -96,12 +104,20 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Päivärivi tasorivin alle (omistaja 2.10.2026 klo 15.1x): päivä, aika ja kassa; päivän kulut punaisella.</summary>
-        public void LisaPaivarivi()
+        public void LisaPaivarivi(VisualElement isa = null)
         {
-            paivaRivi = Rakenne.El("mk-paivarivi", lisaosa, PickingMode.Ignore);
+            paivaRivi = Rakenne.El("mk-paivarivi", isa ?? lisaosa, PickingMode.Ignore);
             paivaTeksti = Kirjasimet.Aseta(Rakenne.Teksti("", "mk-paivarivi__teksti", paivaRivi), Kirjasin.Kone);
-            paivaKulu = Kirjasimet.Aseta(Rakenne.Teksti("", "mk-paivarivi__kulu", paivaRivi), Kirjasin.Kone);
+            // £ omana merkkinään Luku-kirjasimella kuten pillerissä (Kone-kirjasimen £ näytti koukulta; Päätoimittaja 20.2x).
+            Punta(paivaRivi, "mk-paivarivi__punta");
+            paivaRaha = Kirjasimet.Aseta(Rakenne.Teksti("", "mk-paivarivi__raha", paivaRivi), Kirjasin.Kone);
+            paivaKulu = Rakenne.El("mk-paivarivi__kulu", paivaRivi, PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Teksti("−", "mk-paivarivi__kuluteksti", paivaKulu), Kirjasin.Kone);
+            Punta(paivaKulu, "mk-paivarivi__punta");
+            paivaKuluLuku = Kirjasimet.Aseta(Rakenne.Teksti("", "mk-paivarivi__kuluteksti", paivaKulu), Kirjasin.Kone);
         }
+
+        static Label Punta(VisualElement isa, string luokka) => Kirjasimet.Aseta(Rakenne.Teksti("£", luokka, isa), Kirjasin.Luku);
 
         /// <summary>Ohut viiva ennen alariviä (web .tk-paneeli__erotin).</summary>
         public void LisaErotin() => Rakenne.El("mk-linssivalitsin__erotin", lisaosa, PickingMode.Ignore);
@@ -125,7 +141,8 @@ namespace Matkakirja.Natiivi
                 foreach (var c in ryhma.Children())
                 {
                     if (c.style.display == DisplayStyle.None) continue;
-                    c.EnableInClassList("mk-luettelorivi--viiva", !eka);
+                    // V2: ei väliviivoja (omistaja 2.10.2026 klo 20.2x, vain alin viiva alarivin yläpuolella jää).
+                    c.EnableInClassList("mk-luettelorivi--viiva", !eka && !V2);
                     eka = false;
                 }
             });
@@ -158,9 +175,11 @@ namespace Matkakirja.Natiivi
                 paivaRivi.style.display = m != null ? DisplayStyle.Flex : DisplayStyle.None;
                 if (m == null) return;
                 var t = m.Tila;
-                paivaTeksti.text = $"Päivä {t.Paiva()}/{LaattaVakiot.EnnatysPaivat}, {PeliApu.AikaNimi(t.Vuorokaudenaika())} · {PeliApu.Valuutta}{t.Pelaaja.Raha}";
+                paivaTeksti.text = $"Päivä {t.Paiva()}/{LaattaVakiot.EnnatysPaivat}, {PeliApu.AikaNimi(t.Vuorokaudenaika())} ·"; // väli £:ään USS-marginaalina (lopun välilyönti ei mitoitu)
+                paivaRaha.text = t.Pelaaja.Raha.ToString();
                 int kulu = m.PaivakuluNyt().Yhteensa;
-                paivaKulu.text = kulu > 0 ? $"−{PeliApu.Valuutta}{kulu}" : "";
+                paivaKulu.style.display = kulu > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+                paivaKuluLuku.text = kulu.ToString();
                 paivaRivi.tooltip = Matkalaukku.KassaVihje(m) ?? "";
             }
         }

@@ -4417,9 +4417,38 @@
     margin-left: 10px;
 }
 
-.mk-ylapalkki__saarimusta {
+/* Omistaja 2.10.2026 klo 15.1x ja 18.2x: pilleri yhdellä rivillä "1 pv £400" (BUILD 123:n kohopainettu pilleri). */
+.mk-pilleri--lyhyt {
+    padding-left: var(--tk-vali-m);
+    padding-right: var(--tk-vali-m);
+    /* Kiinteä leveys "80 pv £9999":n mukaan (Ylapalkki.AsetaPilleriVahimmais), teksti keskellä (omistaja 2.10. klo 20.0x). */
+    justify-content: center;
+    align-items: center;
+}
+
+.mk-pilleri__pino--rivi {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-pilleri--lyhyt .mk-pilleri__kello {
+    margin-left: 0;
+}
+
+.mk-pilleri--lyhyt .mk-pilleri__rivi1 {
+    margin-top: 0;
+    margin-left: var(--tk-vali-xs);
+}
+
+/* Punta omana merkkinään selkeällä kirjasimella (Kone-kirjasimen £ näytti koukulta ja kosketti numeroa). */
+.mk-pilleri__punta {
+    margin-right: 1px;
+    -unity-font-style: normal;
+}
+
+/* Dynamic Islandin tikkaus (omistaja 2.10.2026, korvaa mustan saarialueen): Painter2D, Ylapalkki.AsetaSaariTikkaus. */
+.mk-ylapalkki__saaritikkaus {
     position: absolute;
-    -unity-background-scale-mode: stretch-to-fill;
 }
 
 /* MATKALAUKKUNAHKA (omistaja 29.9.2026, Codex iphone-v1): kaistale rajattuna matalaan palkkiin alareuna (tikkaus) edellä,

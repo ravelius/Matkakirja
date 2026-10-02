@@ -796,8 +796,9 @@ namespace Matkakirja
         /// <summary>
         /// KAUPUNKIEN LADONTA EHDOKASKEHÄLLÄ (web js/karttanimet.js ladoRuutunimet + js/pallolauta/nimet.js LUKKO):
         /// 1) pelimerkkien pinot (<paramref name="pinot"/>, jo laajennettuina) ja kaikkien kaupunkien pisteet
-        /// varataan ensin; 2) nimet järjestyksessä: pakollinen kiinteään laatikkoonsa; lukittu vain lukittuun
-        /// paikkaansa (se ei vaihda kylkeä: jos paikka on varattu, nimi on tämän kehyksen piilossa); muut ottavat
+        /// varataan ensin; 2) nimet järjestyksessä: pakollinen kiinteään laatikkoonsa; lukittu lukittuun paikkaansa
+        /// (se ei vaihda kylkeä), jos paikka on vapaa ja ehdokasketjun etäisyysrajan sisällä (<see cref="LukkoLahella"/>),
+        /// muuten lukko vapautuu; muut ottavat
         /// ensimmäisen vapaan ehdokkaan (<see cref="NimenPaikat"/>), joka mahtuu ruutuun (web RUUDUN ULKOPUOLI ON
         /// ESTE; lukittu saa leikkautua). Tulos: naytetaan[i] ja paikat[i] (uusi lukko, jos näytetään ehdokkaasta).
         ///
@@ -837,13 +838,9 @@ namespace Matkakirja
                 if (e.Pakko) nakyy = true;
                 else if (!e.Sallittu) nakyy = false;
                 else if (e.Leveys <= 0) nakyy = !varaukset.OsuuPaitsi(e.Nimio, e.Piste);
-                else if (e.Lukittu && !varaukset.OsuuPaitsi(NimenLaatikko(e.X, e.Y, e.Lukko, e.Leveys, e.Korkeus, kerroin), e.Piste)) nakyy = true;
                 else
                 {
-                    // Lukittu paikka varattu (esim. noston ikoni tai nappula tuli päälle): lukko vapautuu ja nimi etsii
-                    // uuden paikan, eikä jää piiloon niin kauaksi aikaa kuin kaupunki on ruudulla (build 13 -kuva b13-
-                    // yhdistelmä: Pariisi ja Marseille ilman nimeä). Web näyttää lukitun nimen, kun sille löytyy paperia.
-                    nakyy = false;
+                    // Ehdokasketju tämän ladonnan mitoissa (web sijoitaKaupunginNimi): oma → pino → 4 → kehä.
                     Ruutulaatikko? pino = null;
                     if (pinot != null)
                         foreach (var r in pinot)
@@ -854,6 +851,21 @@ namespace Matkakirja
                         }
                     NimenPaikat(e.Kirjain, e.Sivu, pino, kerroin, ehdokasPaikat);
                     if (e.OnOma) ehdokasPaikat.Insert(0, e.Oma);
+                    if (e.Lukittu && LukkoLahella(e, ehdokasPaikat, kerroin)
+                        && !varaukset.OsuuPaitsi(NimenLaatikko(e.X, e.Y, e.Lukko, e.Leveys, e.Korkeus, kerroin), e.Piste))
+                    {
+                        varaukset.Varaa(NimenLaatikko(e.X, e.Y, paikka, e.Leveys, e.Korkeus, kerroin));
+                        ladottu++;
+                        naytetaan.Add(true);
+                        paikat.Add(paikka);
+                        continue;
+                    }
+                    // Lukittu paikka varattu (esim. noston ikoni tai nappula tuli päälle) tai liian kaukana pisteestä
+                    // (LukkoLahella): lukko vapautuu ja nimi etsii uuden paikan, eikä jää piiloon niin kauaksi aikaa kuin
+                    // kaupunki on ruudulla (build 13 -kuva b13-yhdistelmä: Pariisi ja Marseille ilman nimeä). Web näyttää
+                    // lukitun nimen, kun sille löytyy paperia. Jos mikään ehdokas ei mahdu, nimi jää pois (web pallolla
+                    // pakota: false); kauemmas sitä ei viedä.
+                    nakyy = false;
                     foreach (var p in ehdokasPaikat)
                     {
                         var l = NimenLaatikko(e.X, e.Y, p, e.Leveys, e.Korkeus, kerroin);
@@ -885,6 +897,37 @@ namespace Matkakirja
         }
 
         static readonly List<NimenPaikka> ehdokasPaikat = new List<NimenPaikka>();
+
+        /// <summary>Pisteen etäisyys laatikosta (0, jos piste on laatikon sisällä), pikseleinä.</summary>
+        public static float PisteenEtaisyys(Ruutulaatikko l, float x, float y)
+        {
+            float dx = Math.Max(0f, Math.Max(l.X0 - x, x - l.X1)), dy = Math.Max(0f, Math.Max(l.Y0 - y, y - l.Y1));
+            return (float)Math.Sqrt(dx * dx + dy * dy);
+        }
+
+        /// <summary>
+        /// LUKON ETÄISYYSRAJA (Päätoimittaja ja Linssiseppä 2.10.2026: ROOMA noin 160 pt pelinappulan yläpuolella,
+        /// ~44° N Cagliostron kohdalla, ja sen varaama paikka pudotti FIRENZEN ja CINQUE TERREN). Juurisyy: lukko
+        /// kerrotaan zoomissa kartan mittakertoimen suhteella (KaupunkiMerkit.AsetaMitta, web nimet.js ZOOMI SKAALAA
+        /// LUKON), mutta natiivin pelinappulan pino on RUUTUVAKIO (Nappula.koko 36 pt), kun webissä se on kartan mitta.
+        /// Lähestymisessä pienellä kertoimella lukittu "pinon yläpuolelle" -paikka (Dy ≈ pinon korkeus) kasvoi
+        /// perillä kertoimien suhteella (esim. 0,3 → 1: ×3,3) satojen pikselien päähän pisteestä.
+        ///
+        /// Webin ehdokasketju (js/karttanimet.js sijoitaKaupunginNimi: oma lx/ly, pinon kehä, neljä tavanomaista,
+        /// kartografin kehä KAUPUNGIN_KEHA [7, 13]) ei koskaan vie nimeä kauemmas kuin kehän pisin askel, ja webin
+        /// liuku on rajattu samaan: max(KAUPUNGIN_KEHA) · k ("nimi ei päädy kauemmas merkistään kuin kehä muutenkin
+        /// veisi"). Siksi lukko kelpaa vain, jos sen laatikko on pisteestä enintään yhtä kaukana kuin tämän ladonnan
+        /// kaukaisin ehdokas (<paramref name="ehdokkaat"/>, samoilla mitoilla) lisättynä kehän pisimmällä askeleella
+        /// (13 pt). Muuten lukko vapautuu ja nimi ladotaan ketjusta uudelleen; jos mikään ei mahdu, nimi jää pois.
+        /// </summary>
+        public static bool LukkoLahella(in KaupunkiEhdokas e, List<NimenPaikka> ehdokkaat, float kerroin)
+        {
+            float raja = 0f;
+            foreach (var p in ehdokkaat)
+                raja = Math.Max(raja, PisteenEtaisyys(NimenLaatikko(e.X, e.Y, p, e.Leveys, e.Korkeus, kerroin), e.X, e.Y));
+            raja += KaupunginKeha[KaupunginKeha.Length - 1] * kerroin;
+            return PisteenEtaisyys(NimenLaatikko(e.X, e.Y, e.Lukko, e.Leveys, e.Korkeus, kerroin), e.X, e.Y) <= raja;
+        }
 
         /// <summary>
         /// Noston merkki ja nimiö ruudulla (Natiivi-UI:n NostotKartalla.Laatikko samoin mitoin): symboli 20 × 20 pt

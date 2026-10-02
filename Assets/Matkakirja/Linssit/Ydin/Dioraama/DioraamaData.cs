@@ -111,6 +111,21 @@ namespace Matkakirja.Linssit.Dioraama
         public Dictionary<string, string> Varit = new Dictionary<string, string>();
         public string Esine;
         public string Glb;
+        /// <summary>SKINNATTU MALLI (Siirtoseppä 2.10.2026, omistaja loki 59b9df127): malli3d.skin; null = nivelhahmo (Glb).</summary>
+        public SkinMalli Skin;
+        /// <summary>Natiivin ladattava glb: skinnattu, jos sellainen on, muuten nivelhahmo.</summary>
+        public string NatiiviGlb => !string.IsNullOrEmpty(Skin?.Glb) ? Skin.Glb : Glb;
+    }
+
+    /// <summary>henkilot[id].malli3d.skin (Linnanrakentaja 2.10.: rakenna.mjs lisaaBlender + js/dioraama/hahmot-skin.json).</summary>
+    public sealed class SkinMalli
+    {
+        public string Glb;
+        /// <summary>silmukka → GLB:n animations[].name; puuttuva tai null = samanniminen leike.</summary>
+        public Dictionary<string, string> Leikkeet = new Dictionary<string, string>();
+        /// <summary>Matka metreinä yhden kävelyleikkeen kierroksen aikana; 0 = luonnollinen nopeus.</summary>
+        public double KavelySykliM;
+        public double Skaala = 1;
     }
 
     /// <summary>Yksi liikesilmukka LIIKKEET-pankista (era 2b, kohta 4 "3D-HAHMOT"); JS-pari
@@ -1143,6 +1158,14 @@ namespace Matkakirja.Linssit.Dioraama
                 Esiliina = MiniJson.Teksti(vaatteet, "esiliina"), Paahine = MiniJson.Teksti(vaatteet, "paahine") };
             foreach (var pari in MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "varit")) ?? new Dictionary<string, object>())
                 if (pari.Value is string vari) m.Varit[pari.Key] = vari;
+            var skin = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "skin"));
+            if (skin != null && !string.IsNullOrEmpty(MiniJson.Teksti(skin, "glb")))
+            {
+                m.Skin = new SkinMalli { Glb = MiniJson.Teksti(skin, "glb"), KavelySykliM = MiniJson.Luku(skin, "kavely_sykli_m") ?? 0,
+                    Skaala = MiniJson.Luku(skin, "skaala") ?? 1 };
+                foreach (var pari in MiniJson.ObjektiTaiNull(MiniJson.Kentta(skin, "leikkeet")) ?? new Dictionary<string, object>())
+                    if (pari.Value is string leike) m.Skin.Leikkeet[pari.Key] = leike;
+            }
             return m;
         }
 

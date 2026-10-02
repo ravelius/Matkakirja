@@ -339,6 +339,7 @@ namespace Matkakirja.Natiivi
             AvaaKerros();
             EsihaeLuennanAlku(n);
             selain.Paivita(valo);
+            SiirraYlarivi();
             if (Nostoselain.Auto) AutoLue();
         }
 
@@ -618,6 +619,7 @@ namespace Matkakirja.Natiivi
             sisus.scrollOffset = Vector2.zero;
             lukija.Aseta(null);
             lukijaPaikka = null;
+            ylarivi = null;
 
             Kirjasimet.Aseta(Rakenne.Teksti(lk.Nimi ?? "", "mk-nosto__otsikko", sisus), Kirjasin.LukuLihava);
             // 1. Kuva tai sen paikkamerkki (seepiaruutu ja nimi, ei hakua ulkoa).
@@ -648,6 +650,7 @@ namespace Matkakirja.Natiivi
             }
             AvaaKerros();
             selain.Paivita(valo);
+            SiirraYlarivi();
         }
 
         // --- vaihe 1: kuva edellä ------------------------------------------------------------
@@ -665,6 +668,7 @@ namespace Matkakirja.Natiivi
             sisus.scrollOffset = Vector2.zero;
             lukija.Aseta(null);
             lukijaPaikka = null;
+            ylarivi = null;
             kortti.AddToClassList("mk-nosto--esittely");
             var k = nosto.Kuvat[0];
             var kuva = Kuvakehys(sisus, k, Vaihe2, suhde: HeroSuhde);
@@ -713,10 +717,12 @@ namespace Matkakirja.Natiivi
             // NAPIT NÄKYVÄT HETI (omistaja 28.9.2026, TF 1.0.34: "käyttäjän pitää vierittää lappua hieman alaspäin, jotta
             // se kaiutin tulee näkyviin"): vaiheen 2 kuvan kohdistus (löydös 131) vierittää ylärivin kortin yläreunan taakse.
             // Ylärivillä on vain paikkavaraus; kaiutin ja valikkonappi ovat kortissa sen kohdalla eivätkä vieri pois.
-            lukijaPaikka = Rakenne.El("mk-nosto__lukijapaikka", Ylarivi(sisus, n), PickingMode.Ignore);
+            ylarivi = Ylarivi(sisus, n);
+            lukijaPaikka = Rakenne.El("mk-nosto__lukijapaikka", ylarivi, PickingMode.Ignore);
             lukijaPaikka.RegisterCallback<GeometryChangedEvent>(_ => SijoitaLukija());
             if (lukija.Juuri.parent != kortti) kortti.Add(lukija.Juuri);
             lukija.Juuri.BringToFront();
+            SiirraYlarivi();
             if (n.Looppi)
             {
                 var nimio = Rakenne.Teksti("LISÄLEHTI", "mk-nosto__nimio", sisus);
@@ -810,19 +816,42 @@ namespace Matkakirja.Natiivi
         /// Lukijan napit ylärivin paikkavarauksen kohdalle kortissa: vierittämättömässä asemassa (vieritys lisätään takaisin),
         /// joten ne pysyvät kortin yläkulmassa, vaikka sisältö vierii. Vierityksen aikana alla paperipohja (teksti alta).
         /// </summary>
+        /// <summary>
+        /// Omistaja 2.10.2026 klo 17.5x: noston kategoria (HISTORIA) ja lukijan napit selaimen ylärivillä, kun selain näkyy
+        /// (yksi rivi ‹ NOSTOT ▾ › HISTORIA … ≡ kaiutin AUTO); muuten ne jäävät kortin sisältöön kuten ennen.
+        /// </summary>
+        void SiirraYlarivi()
+        {
+            // Edellisen kortin ylärivi pois sivuilta.
+            foreach (var paikka in new[] { selain.Vasen, selain.Oikea })
+                for (int i = paikka.childCount - 1; i >= 0; i--)
+                    if (paikka[i] != ylarivi && paikka[i] != lukijaPaikka) paikka.RemoveAt(i);
+            if (ylarivi == null || lukijaPaikka == null || !selain.Nakyvissa) return;
+            selain.Vasen.Add(ylarivi);       // kategoria (symboli ja nimi) vasemmalle
+            selain.Oikea.Add(lukijaPaikka);  // ≡ ja kaiutin oikeaan reunaan
+        }
+
+        /// <summary>Nykyisen kortin ylärivi (kategoria); selaimen näkyessä se asuu selaimen rivillä.</summary>
+        VisualElement ylarivi;
+
         void SijoitaLukija()
         {
             var j = lukija.Juuri;
             if (lukijaPaikka?.panel == null || j.parent != kortti) return;
-            var r = lukijaPaikka.worldBound;
-            var k = kortti.worldBound;
-            if (float.IsNaN(r.y) || r.width <= 0 || float.IsNaN(k.y)) return;
-            float s = sisus.scrollOffset.y;
-            float x = Mathf.Round(r.x - k.x - kortti.resolvedStyle.borderLeftWidth);
-            float y = Mathf.Round(r.y - k.y - kortti.resolvedStyle.borderTopWidth + s);
+            // Kortin omissa koordinaateissa, ei worldBoundista: Ponnahdus.Avaa skaalaa korttia avautuessa, ja selaimen
+            // rivillä paikka ei enää liiku animaation jälkeen, joten skaalattu mittaus jäi voimaan (≡ AUTO:n päällä, 7e218ee5).
+            var r = lukijaPaikka.ChangeCoordinatesTo(kortti, Vector2.zero);
+            if (float.IsNaN(r.x) || float.IsNaN(r.y) || lukijaPaikka.layout.width <= 0) return;
+            // Selaimen ylärivillä (SiirraYlarivi) paikka ei vieri sisällön mukana.
+            float s = sisus.Contains(lukijaPaikka) ? sisus.scrollOffset.y : 0f;
+            float x = Mathf.Round(r.x - kortti.resolvedStyle.borderLeftWidth);
+            float y = Mathf.Round(r.y - kortti.resolvedStyle.borderTopWidth + s);
             // AUTO levittää lukijan riviä: paikkavaraus ylärivillä saman levyiseksi (USS 65,4 = ≡ + kaiutin).
             float w = j.resolvedStyle.width;
             if (w > 0f && !float.IsNaN(w) && Mathf.Abs(lukijaPaikka.resolvedStyle.width - w) > 0.5f) lukijaPaikka.style.width = w;
+            // Oikea sivu ei kapene ≡:n ja kaiuttimen alle (flex-perusta 0): muuten napit valuivat AUTO:n päälle (f19af4a6).
+            if (w > 0f && !float.IsNaN(w) && lukijaPaikka.parent == selain?.Oikea && Mathf.Abs(selain.Oikea.resolvedStyle.minWidth.value - w) > 0.5f)
+                selain.Oikea.style.minWidth = w;
             if (j.resolvedStyle.left != x) j.style.left = x;
             if (j.resolvedStyle.top != y) j.style.top = y;
             j.EnableInClassList("mk-nosto__lukija--irti", s > 1f);
