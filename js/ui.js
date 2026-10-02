@@ -18407,7 +18407,11 @@ export class UI {
     if (this.paavalikko) this.paavalikko.hidden = false;
     this.renderProgress();
     void this.paivitaLinssit();
-    if (this.pilleriLinssitBtn) this.pilleriLinssitBtn.hidden = Boolean(this.linssiKotelo?.hidden);
+    // Valikko v2: Linssit ei ole valikossa (omistaja 13.56: oma nappi kartalle), joten rivi pysyy piilossa.
+    if (this.pilleriLinssitBtn) {
+      this.pilleriLinssitBtn.hidden = Boolean(this.linssiKotelo?.hidden)
+        || Boolean(this.paavalikko?.classList.contains('tk-paneeli--v2'));
+    }
     this.naytaPilleriNakyma('paa', { animoi: false });
     ilmoitaLivianTunne(
       { tunne: 'utelias', voimakkuus: 0.4 },
