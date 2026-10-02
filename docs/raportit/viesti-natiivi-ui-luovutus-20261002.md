@@ -18,7 +18,7 @@ e204abbe). Omat simulaattorit: iPhone 17 FB234D08, iPad AD119F7B. Käännös- ja
 
 Haarat ovat proto-gitissä paikallisina (ei etäpushia; Natiiviseppä mergeää paikallisesti). Älä aloita uutta ennen kohtaa 1.
 
-1. **Käännös natiivi-ui/ylapalkki-matalampi+natiivi-ui/kokoelmat-ikkuna (d00c7f8b + 5cfe7253)** alkoi 22.09 (loki
+1. **Käännös natiivi-ui/ylapalkki-matalampi+natiivi-ui/kokoelmat-ikkuna (d00c7f8b + 5cfe7253)** KÄÄNNETTY 947e2655 klo 22.15, .app valmiina natiivi-ui-1035/app-yp (loki
    proto-3d/lokit/kaannospalvelu/20261002-220907-…; kopioi .app kansioon natiivi-ui-1035/app-yp); simu Julkaisijalta
    (FB234D08: ENNEN juna-1.1.129-appilla `kartoitus-kokoelmat-ennen.txt`, JÄLKEEN `kartoitus-kokoelmat.txt` tavallisena ja
    KEHITTAJA=1; AD119F7B: `kartoitus-ylapalkki-korkeus.txt` → iPadin pilleri "1 pv £400"). Sitten:
