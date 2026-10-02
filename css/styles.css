@@ -533,12 +533,13 @@ button, .brand, .turn-pill, .fact-card h2 {
   font-size: 0.9rem;
   padding: 0.25rem 0.7rem;
   /*
-   * KONJAKKINAHKAINEN PYÖRISTETTY SUORAKULMIO (omistaja 2.10.2026 klo 15.05/15.07 ja 16.0x; EI OVAALEJA): sama sävy
-   * ja reuna kuin natiivissa (tyylikirja konjakki / konjakki-reuna, Natiivi-UI #3860), muste tumma-muste.
+   * PYÖRISTETTY SUORAKULMIO (omistaja 2.10.2026 klo 15.05/15.07; EI OVAALEJA), sävy paperin korostus hillitympänä
+   * (17.0x hylkäsi konjakin): tyylikirja pilleri-nappi / pilleri-nappi-reuna (Natiivi-UI #3860), muste tumma-muste.
+   * Pelkkä teksti "1 pv · £400" ilman laukkukuvaketta, joten pilleri on tekstin levyinen.
    */
   border-radius: var(--tk-kulma-nappi);
-  background: var(--konjakki);
-  border: 1px solid var(--konjakki-reuna);
+  background: var(--pilleri-nappi);
+  border: 1px solid var(--pilleri-nappi-reuna);
   color: var(--tk-tumma-muste);
   min-width: 0;
   overflow: hidden;
@@ -551,7 +552,7 @@ button, .brand, .turn-pill, .fact-card h2 {
 .turn-pill:focus-visible,
 .turn-pill:hover:not(:disabled) {
   border-color: var(--kulta, #eab84e);
-  background: var(--konjakki);   /* yleinen button:hover ei saa tummentaa nahkaa */
+  background: var(--pilleri-nappi);   /* yleinen button:hover ei saa tummentaa pilleriä */
   color: var(--tk-tumma-muste);
 }
 .turn-pill .laukku-ikoni {
@@ -643,6 +644,15 @@ button, .brand, .turn-pill, .fact-card h2 {
 .turn-pill .clock {
   color: inherit;
   font-variant-numeric: tabular-nums;
+}
+
+/*
+ * PWA (koti-valikosta avattu, yläpalkki tilapalkin alla): pillerin oikea yläkulma vähintään yhtä kauas näytön
+ * kaaresta kuin logo vasemmasta kaaresta (omistaja 2.10.2026 klo 17.0x). Pilleri on logoa korkeampi, joten sen kulma
+ * on lähempänä kaarta: lisäväli oikealle.
+ */
+@media (display-mode: standalone) {
+  .turn-pill { margin-right: var(--tk-vali-s); }
 }
 
 /* "1 pv · £400" (omistaja 2.10.2026 klo 15.1x): päivä ensin, piste kassan edessä. */
