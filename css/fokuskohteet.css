@@ -1229,7 +1229,7 @@ button.fokuskohde-zoomnuoli:is(:hover, :active, :focus, :focus-visible) {
   right: 0.75rem;
   top: 0.7rem;
   padding: 0.05rem 0.45rem;
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-pieni);
   background: rgba(18, 12, 4, 0.55);
   color: #f6f0e0;
   font-family: var(--font-type);
