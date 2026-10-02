@@ -115,6 +115,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Maiden aineisto (vertailu ja maatiedot), kun ladattu; muuten null.</summary>
         internal static Matkakirja.Linssit.Maat.MaatAineisto MaatAineisto;
         MaapallonVuosiSovitin vuosi;
+        AjattelijatSovitin ajattelijat;
         DioraamaSovitin poikki;
         Linssirekisteri rekisteri;
 
@@ -228,6 +229,8 @@ namespace Matkakirja.Natiivi
             // Maapallon vuosi (Linssiseppä 2, 28.9.2026): hiomassa, vain kehittäjätilassa (ei avauskynnystä).
             rekisteri.Lisaa(vuosi = new MaapallonVuosiSovitin(this, k));
             rekisteri.Lisaa(poikki = new DioraamaSovitin(this, k));
+            // Ajattelijat (Linssiseppä 2, 2.10.2026; web #3839/#3840): vain kehittäjätilassa (ei avauskynnystä).
+            rekisteri.Lisaa(ajattelijat = new AjattelijatSovitin(this));
             StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
@@ -1163,7 +1166,7 @@ namespace Matkakirja.Natiivi
         // luodaan käynnistyksessä: KehysPiikit ottaa seurantaan vain aloitushetkellä olemassa olevat merkit.
 
         static readonly string[] MitattavatLinssit =
-            { "topografia", "vesistot", "satelliitti", "keksinnot", "ihmisen-matka", "ihmisen-matka-2", "vertailu", "maatiedot", "radio", "isoisa-1873", "maapallon-vuosi" };
+            { "topografia", "vesistot", "satelliitti", "keksinnot", "ihmisen-matka", "ihmisen-matka-2", "vertailu", "maatiedot", "radio", "isoisa-1873", "maapallon-vuosi", "ajattelijat" };
         static readonly Dictionary<(string, string), Unity.Profiling.ProfilerMarker> merkit =
             new Dictionary<(string, string), Unity.Profiling.ProfilerMarker>();
         static readonly Unity.Profiling.ProfilerMarker KytkeMerkki = new Unity.Profiling.ProfilerMarker("Update.Linssi.Kerrokset");
@@ -1930,6 +1933,8 @@ namespace Matkakirja.Natiivi
                     vuosi.Komento(osat);
                 else if (osat[0] == "poikki")
                     poikki.Komento(osat);
+                else if (osat[0] == "ajattelija")
+                    ajattelijat.Komento(osat);
                 else if (osat[0] == "tila")
                     Kirjaa($"tila: auki {rekisteri.Auki?.Tiedot.Id ?? "ei"}, kamera {Kamera}");
                 else if (osat[0] == "maa" && osat.Length > 1)

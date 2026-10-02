@@ -1,0 +1,788 @@
+{
+ "tunnus": "sokrates",
+ "nimi": "Sokrates",
+ "vuodet": "n. 470–399 eaa.",
+ "kysymys": "Miten pitäisi elää?",
+ "malli": "ajattelijat/sokrates/v1/sokrates-L1.glb",
+ "kartta": {
+  "glb": "ajattelijat/kartta/v1/sokrates-kartta.glb",
+  "maa": "GRC"
+ },
+ "kipsi": "ajattelijat/yhteiset/kipsi-nor-1k.jpg",
+ "korkeus": 0.51,
+ "paa": [
+  0,
+  -0.06,
+  0.38
+ ],
+ "avainvalo": {
+  "suunta": [
+   0.7,
+   -0.7,
+   0.85
+  ],
+  "etaisyys": 1.3,
+  "keila": 32,
+  "tahtays": [
+   0,
+   -0.06,
+   0.43
+  ]
+ },
+ "tausta": 0.012,
+ "otokset": {
+  "rembrandt": {
+   "paikka": [
+    -0.3,
+    -1.02,
+    0.25
+   ],
+   "katse": [
+    -0.06,
+    -0.06,
+    0.4
+   ],
+   "mm": 35
+  }
+ },
+ "kierros": {
+  "paalause": "38a"
+ },
+ "linssi": 18,
+ "kierto": 22,
+ "liuku": 0.008,
+ "paalauseet": {
+  "38a": {
+   "fi": "Tutkimaton elämä ei ole elämisen arvoinen ihmiselle.",
+   "el": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ",
+   "viite": "Platon, Puolustuspuhe 38a",
+   "sade": [
+    -0.005,
+    0.418
+   ],
+   "vino": [
+    -0.4,
+    -0.15,
+    -0.3
+   ],
+   "ala": 0.075,
+   "etaisyys": 0.6,
+   "korkeus": 0.025625,
+   "kameraKulma": 55,
+   "kameraMatka": 0.11
+  }
+ },
+ "ajat": {
+  "nimi": [
+   282,
+   372
+  ],
+  "kysymys": [
+   373,
+   461
+  ],
+  "lahesty": [
+   462,
+   555
+  ],
+  "vieritys": [
+   525,
+   895
+  ],
+  "proj": [
+   555,
+   900
+  ],
+  "lahde": [
+   902,
+   950
+  ],
+  "kaariLoppu": 965,
+  "kaiku": [
+   965,
+   1440
+  ],
+  "pito": 1450
+ },
+ "prologi": {
+  "kytkin": 30,
+  "taysi": 58,
+  "loppu": 120,
+  "kamera": {
+   "paikka": [
+    -0.22,
+    -1.15,
+    0.34
+   ],
+   "katse": [
+    0,
+    -0.04,
+    0.3
+   ],
+   "mm": 35
+  },
+  "vari": [
+   1,
+   0.86,
+   0.66
+  ],
+  "valot": [
+   {
+    "paikka": [
+     -0.3,
+     0.55,
+     0.42
+    ],
+    "kohde": [
+     0,
+     -0.06,
+     0.42
+    ],
+    "teho": 45,
+    "keila": 26,
+    "blend": 0.45
+   },
+   {
+    "paikka": [
+     0.3,
+     0.55,
+     0.42
+    ],
+    "kohde": [
+     0,
+     -0.06,
+     0.42
+    ],
+    "teho": 45,
+    "keila": 26,
+    "blend": 0.45
+   }
+  ]
+ },
+ "intro": {
+  "otokset": [
+   [
+    1,
+    [
+     0.62,
+     -0.1,
+     0.38
+    ],
+    [
+     0,
+     -0.1,
+     0.38
+    ],
+    50
+   ],
+   [
+    15,
+    [
+     0.26,
+     -0.3,
+     0.72
+    ],
+    [
+     0,
+     -0.09,
+     0.4
+    ],
+    35
+   ],
+   [
+    57,
+    [
+     -0.05,
+     -0.36,
+     0.13
+    ],
+    [
+     0,
+     -0.1,
+     0.36
+    ],
+    28
+   ],
+   [
+    119,
+    [
+     0.3,
+     -0.27,
+     0.47
+    ],
+    [
+     0,
+     -0.11,
+     0.43
+    ],
+    50
+   ],
+   [
+    236,
+    [
+     0.3,
+     -0.34,
+     0.42
+    ],
+    [
+     0.03,
+     -0.1,
+     0.38
+    ],
+    50
+   ],
+   [
+    259,
+    [
+     0.3,
+     -0.36,
+     0.22
+    ],
+    [
+     0.02,
+     -0.11,
+     0.3
+    ],
+    50
+   ]
+  ],
+  "valo": [
+   [
+    1,
+    [
+     0.55,
+     0.85,
+     0.3
+    ]
+   ],
+   [
+    119,
+    [
+     0.9,
+     0.55,
+     0.35
+    ]
+   ],
+   [
+    236,
+    [
+     1,
+     -0.05,
+     0.6
+    ]
+   ],
+   [
+    259,
+    [
+     0.85,
+     -0.45,
+     0.75
+    ]
+   ],
+   [
+    282,
+    [
+     0.7,
+     -0.7,
+     0.85
+    ]
+   ]
+  ]
+ },
+ "kaiku": {
+  "kuva": "ajattelijat/sokrates/v1/kaiku-sotilas-v2.png",
+  "lev": 0.06,
+  "vino": [
+   -0.1,
+   -0.05,
+   -0.08
+  ],
+  "etaisyys": 0.6,
+  "voima": 20,
+  "liuku": 0.05,
+  "savy": [
+   1,
+   0.78,
+   0.52
+  ],
+  "blend": 0.3,
+  "kamera": {
+   "suunta": [
+    0.08,
+    -0.05,
+    -0.12
+   ],
+   "matka": [
+    0.21,
+    0.19
+   ],
+   "liuku": 0.006,
+   "mm": 35,
+   "siirtyma": 45
+  },
+  "tayte": {
+   "osuus": 0.1,
+   "suunta": [
+    -0.65,
+    -0.25,
+    0.7
+   ],
+   "vari": [
+    0.9,
+    0.94,
+    1
+   ],
+   "keila": 45,
+   "blend": 0.7
+  }
+ },
+ "elama": {
+  "otsikko": "Sokrateen elämä",
+  "kappaleet": [
+   {
+    "otsikko": "Kivenhakkaajan poika",
+    "teksti": "Sokrates syntyi Ateenassa vuonna 470 tai 469 eaa. kivenhakkaaja Sofroniskoksen ja kätilö Fainaretan poikana."
+   },
+   {
+    "otsikko": "Sotilas",
+    "teksti": "Peloponnesolaissodassa hän taisteli raskaana jalkaväkimiehenä Potidaiassa, Amfipoliksessa ja Delionissa. Platonin Pidoissa Alkibiades kertoo, että Sokrates käveli talvella jäällä paljain jaloin, seisoi kerran aamusta seuraavaan aamuun paikallaan ajatuksiinsa vaipuneena ja pelasti haavoittuneen Alkibiadeen taistelussa."
+   },
+   {
+    "otsikko": "Delfoin oraakkeli",
+    "teksti": "Ystävä Khairefon kysyi Delfoin oraakkelilta, onko kukaan Sokratesta viisaampi. Oraakkeli vastasi, ettei ole. Sokrates ryhtyi sen jälkeen kysymään ateenalaisilta viisailta, mitä he oikeasti tiesivät."
+   },
+   {
+    "otsikko": "Oikeudenkäynti",
+    "teksti": "Vuonna 399 eaa. kolme ateenalaista syytti häntä jumalattomuudesta ja nuorison turmelemisesta, ja tuomaristo julisti hänet syylliseksi ja tuomitsi hänet kuolemaan."
+   },
+   {
+    "otsikko": "Ei pakoa",
+    "teksti": "Ystävät tarjosivat hänelle keinoa paeta vankilasta, mutta hän kieltäytyi: Platonin Kritonissa hän sanoo, ettei vääryyttä saa tehdä koskaan, ei edes vääryyden vastaukseksi."
+   },
+   {
+    "otsikko": "Viimeiset sanat",
+    "teksti": "Hän joi maljallisen myrkkykatkoa, käveli, kunnes jalat tuntuivat raskailta, ja asettui sitten makuulle. Platonin mukaan hänen viimeiset sanansa olivat: \"Kriton, olemme Asklepiokselle kukon velkaa. Maksakaa se, älkää unohtako.\""
+   },
+   {
+    "teksti": "Sokrates ei kirjoittanut itse mitään. Lähes kaikki, mitä hänestä tiedetään, tulee Platonilta, Ksenofonilta ja Aristofanekselta; myös Aristoteles kertoo hänestä, mutta toisen käden tietoon perustuen."
+   }
+  ]
+ },
+ "pulunKysymykset": [
+  "Mitä sokraattinen kysyminen tarkoittaa?",
+  "Mitä Sokrates tarkoitti tietämättömyydellään?",
+  "Millaista Sokrateen arki Ateenassa oli?",
+  "Miten Sokrates vaikutti Platoniin ja filosofiaan?",
+  "Missä sokraattinen kysyminen näkyy nykyään?"
+ ],
+ "aani": {
+  "puhe": "ajattelijat/sokrates/v1/kierros1-puhe.mp3",
+  "musiikki": "ajattelijat/sokrates/v1/kierros1-musiikki.mp3"
+ },
+ "syke": "ajattelijat/sokrates/v1/syke-musiikki.json",
+ "taustavirta": {
+  "etaisyys": 0.9,
+  "blend": 0.5,
+  "voimaKerroin": 3,
+  "siemen": 38,
+  "rivikork": [
+   0.009,
+   0.012,
+   0.015,
+   0.019
+  ],
+  "kirkkaus": {
+   "el": [
+    0.1,
+    0.28
+   ],
+   "fi": [
+    0.08,
+    0.13
+   ]
+  },
+  "kulma": 7,
+  "projektorit": [
+   {
+    "kohde": [
+     0,
+     -0.1,
+     0.33
+    ],
+    "suunta": [
+     0,
+     -1,
+     0.1
+    ],
+    "ala": 0.3,
+    "riveja": 6
+   },
+   {
+    "kohde": [
+     0,
+     -0.03,
+     0.47
+    ],
+    "suunta": [
+     0,
+     -0.55,
+     1
+    ],
+    "ala": 0.26,
+    "riveja": 5
+   },
+   {
+    "kohde": [
+     0,
+     0.05,
+     0.47
+    ],
+    "suunta": [
+     0,
+     0.6,
+     1
+    ],
+    "ala": 0.24,
+    "riveja": 3
+   },
+   {
+    "kohde": [
+     -0.09,
+     -0.04,
+     0.38
+    ],
+    "suunta": [
+     -1,
+     -0.35,
+     0.15
+    ],
+    "ala": 0.22,
+    "riveja": 3
+   },
+   {
+    "kohde": [
+     0.09,
+     -0.04,
+     0.38
+    ],
+    "suunta": [
+     1,
+     -0.35,
+     0.15
+    ],
+    "ala": 0.22,
+    "riveja": 3
+   }
+  ],
+  "ajat": [
+   462,
+   540,
+   900,
+   950
+  ],
+  "rivit": [
+   [
+    "el",
+    "baskerville",
+    "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   ],
+   [
+    "el",
+    "times",
+    "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+   ],
+   [
+    "el",
+    "baskerville",
+    "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+   ],
+   [
+    "el",
+    "times",
+    "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   ],
+   [
+    "fi",
+    "iowan-ohut",
+    "Mitä en tiedä, en luulekaan tietäväni."
+   ],
+   [
+    "el",
+    "baskerville",
+    "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+   ],
+   [
+    "el",
+    "times",
+    "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+   ],
+   [
+    "fi",
+    "iowan-ohut",
+    "Vääryyttä ei siis saa tehdä koskaan."
+   ],
+   [
+    "el",
+    "baskerville",
+    "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   ],
+   [
+    "el",
+    "times",
+    "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+   ],
+   [
+    "el",
+    "iowan-ohut",
+    "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   ],
+   [
+    "el",
+    "baskerville",
+    "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+   ],
+   [
+    "el",
+    "times",
+    "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+   ],
+   [
+    "el",
+    "baskerville",
+    "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+   ],
+   [
+    "el",
+    "times",
+    "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   ],
+   [
+    "el",
+    "baskerville",
+    "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   ],
+   [
+    "el",
+    "times",
+    "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+   ],
+   [
+    "el",
+    "iowan-ohut",
+    "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι"
+   ],
+   [
+    "el",
+    "baskerville",
+    "οὐδαμῶς ἄρα δεῖ ἀδικεῖν"
+   ],
+   [
+    "el",
+    "times",
+    "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   ]
+  ]
+ },
+ "fontit": {
+  "iowan": {
+   "perhe": "\"Iowan Old Style\", Charter, Palatino, serif",
+   "paino": "bold"
+  },
+  "baskerville": {
+   "perhe": "Baskerville, \"Baskerville Old Face\", \"Times New Roman\", serif",
+   "paino": "normal"
+  },
+  "times": {
+   "perhe": "\"Times New Roman\", Times, serif",
+   "paino": "italic normal"
+  },
+  "iowan-ohut": {
+   "perhe": "\"Iowan Old Style\", Charter, Palatino, serif",
+   "paino": "italic normal"
+  }
+ },
+ "ca": 0.014,
+ "syvyys": 0.022,
+ "tykki": {
+  "vari": [
+   1,
+   0.93,
+   0.8
+  ]
+ },
+ "atlas": {
+  "tiedosto": "Ajattelijat/sokrates-atlas",
+  "leveys": 4096,
+  "korkeus": 4096,
+  "paikat": [
+   {
+    "y": 0,
+    "korkeus": 192,
+    "lev": 2755,
+    "uMax": 0.672607421875,
+    "sumea": true,
+    "toistoja": 1
+   },
+   {
+    "y": 416,
+    "korkeus": 96,
+    "lev": 819.2,
+    "uMax": 0.2,
+    "sumea": false,
+    "toistoja": 5
+   },
+   {
+    "y": 528,
+    "korkeus": 96,
+    "lev": 682.6666666666666,
+    "uMax": 0.16666666666666666,
+    "sumea": false,
+    "toistoja": 6
+   },
+   {
+    "y": 640,
+    "korkeus": 96,
+    "lev": 585.1428571428571,
+    "uMax": 0.14285714285714285,
+    "sumea": false,
+    "toistoja": 7
+   },
+   {
+    "y": 752,
+    "korkeus": 96,
+    "lev": 819.2,
+    "uMax": 0.2,
+    "sumea": false,
+    "toistoja": 5
+   },
+   {
+    "y": 864,
+    "korkeus": 96,
+    "lev": 819.2,
+    "uMax": 0.2,
+    "sumea": false,
+    "toistoja": 5
+   },
+   {
+    "y": 976,
+    "korkeus": 96,
+    "lev": 682.6666666666666,
+    "uMax": 0.16666666666666666,
+    "sumea": false,
+    "toistoja": 6
+   },
+   {
+    "y": 1088,
+    "korkeus": 96,
+    "lev": 585.1428571428571,
+    "uMax": 0.14285714285714285,
+    "sumea": false,
+    "toistoja": 7
+   },
+   {
+    "y": 1200,
+    "korkeus": 96,
+    "lev": 682.6666666666666,
+    "uMax": 0.16666666666666666,
+    "sumea": false,
+    "toistoja": 6
+   },
+   {
+    "y": 1312,
+    "korkeus": 96,
+    "lev": 819.2,
+    "uMax": 0.2,
+    "sumea": false,
+    "toistoja": 5
+   },
+   {
+    "y": 1424,
+    "korkeus": 96,
+    "lev": 682.6666666666666,
+    "uMax": 0.16666666666666666,
+    "sumea": false,
+    "toistoja": 6
+   },
+   {
+    "y": 1536,
+    "korkeus": 96,
+    "lev": 819.2,
+    "uMax": 0.2,
+    "sumea": false,
+    "toistoja": 5
+   },
+   {
+    "y": 1648,
+    "korkeus": 96,
+    "lev": 585.1428571428571,
+    "uMax": 0.14285714285714285,
+    "sumea": false,
+    "toistoja": 7
+   },
+   {
+    "y": 1760,
+    "korkeus": 96,
+    "lev": 682.6666666666666,
+    "uMax": 0.16666666666666666,
+    "sumea": false,
+    "toistoja": 6
+   },
+   {
+    "y": 1872,
+    "korkeus": 96,
+    "lev": 682.6666666666666,
+    "uMax": 0.16666666666666666,
+    "sumea": false,
+    "toistoja": 6
+   },
+   {
+    "y": 1984,
+    "korkeus": 96,
+    "lev": 819.2,
+    "uMax": 0.2,
+    "sumea": false,
+    "toistoja": 5
+   },
+   {
+    "y": 2096,
+    "korkeus": 96,
+    "lev": 819.2,
+    "uMax": 0.2,
+    "sumea": false,
+    "toistoja": 5
+   },
+   {
+    "y": 2208,
+    "korkeus": 96,
+    "lev": 585.1428571428571,
+    "uMax": 0.14285714285714285,
+    "sumea": false,
+    "toistoja": 7
+   },
+   {
+    "y": 2320,
+    "korkeus": 96,
+    "lev": 585.1428571428571,
+    "uMax": 0.14285714285714285,
+    "sumea": false,
+    "toistoja": 7
+   },
+   {
+    "y": 2432,
+    "korkeus": 96,
+    "lev": 585.1428571428571,
+    "uMax": 0.14285714285714285,
+    "sumea": false,
+    "toistoja": 7
+   },
+   {
+    "y": 2544,
+    "korkeus": 96,
+    "lev": 819.2,
+    "uMax": 0.2,
+    "sumea": false,
+    "toistoja": 5
+   }
+  ]
+ }
+}
