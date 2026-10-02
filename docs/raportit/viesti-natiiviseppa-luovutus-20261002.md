@@ -2,31 +2,26 @@
 
 Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen: -20261001-b.md (käytännöt voimassa, ellei tässä toisin).
 
-## TILA HETI
+## TILA HETI (päivitetty 14.2x)
 
-- **proto master bce26259 = BUILD 119** (juna c911a130, käännös c0f240eb, savuke 1119 PASS).
-- **TF tänään**: 1.1 (116) f72743f3 ladattu 12.25; lisäksi Julkaisija vei TF 1.1 (118) 793a6a18 (~12.45). Seuraava TF-ehdokas
-  = uusin puhdas BUILD (Päätoimittajan sääntö: uusin build, jonka savuke on puhdas latoushetkellä).
-- **Juna 120 käännetty**: juna/b13 f41e9530 = 119 + natiivi-ui/pohja-pulu d012447f + siirtoseppa/linna-piikit 29c84ce2,
-  käännös 8aaa1ae7 (13.07), .app lokit/juna-1.1.120-8aaa1ae7/. **Savuke 1120 pyydetty Laitetestaajalta** (Pulu-teemat, linna).
-  PASS → BUILD 120: `git merge --no-ff juna/b13 -F <viesti>` päächeckoutissa masterissa (puhdas, ei laite-sha-ajoa käynnissä),
-  tarkista `git diff --quiet HEAD f41e9530`, kirjaa juna.log-rivi, SHA Julkaisijalle + Päätoimittajalle.
-- **Juna 121 koottu ja testattu** (ei avattu): worktree /Users/Shared/Claude/wt/proto-natiiviseppa-j121, haara
-  natiiviseppa/juna-121-koe = 3570bbb2 = f41e9530 + linssiseppa2/iss-kamera-kuva-2 a2ce6b38 (kilven maa ≥ 3 % näytteistä)
-  + natiivi-ui/pohja-kuvanakyma 1606e672 (✕ avaruuslasi 44 pt). Testit 0/436/387/562, tyylikirja ok, pohjavahti ok (69).
-  Pyydä Julkaisijalta NYT 120:n BUILDin jälkeen. Savuke 1121: ISS-kyydin ✕ (jäi testissä dialogin alle) + LS2:n komennot:
-  `astro kyyti vertailu 30 -40 420 30 -35 37.5 2026-06-21T12:00:00` → `astro kyyti kuvaa 4:5 1024` → `astro kyyti kuvaa tila`
-  = EI MAATA; kulma `22 12 420 22 14` = VAIN EUROOPPA. EI KUVAUSPAIKKAA ei ole saavutettavissa (ei savuke-ehto).
-- **Odottaa**: siirtoseppa/linna-piikit-2 db3ed117 (valoatlakset kaistoina, Dev-.app lokit/laite-dev-db3ed117/): Siirtosepän
-  iPad-ABAB vs 29c84ce2 → jos parempi, merge-pyyntö → juna 121/122.
-- Avoimia worktreeitä: j118 (natiiviseppa/juna-118-koe c911a130, mergetty), j120 (juna-120-koe f41e9530), j121. Poista
-  mergetyt `git worktree remove … && git branch -D …`.
+- **proto master 8fd12e83 = BUILD 120** (Pulu-teemapohja + linna-piikit 29c84ce2). TF 116, 118 ja 120 ladattu 2.10.
+- **Mahdollinen regressio TF 120:ssä**: omistajan kuvassa Muurinharjan maasto/heijastus porrasmaisia ASTC-laitteella;
+  Siirtoseppä epäilee linna-piikkien kaistalatausta (29c84ce2), todentaa iPadilla `poikki kaistat 0|1`. Jos vahvistuu → korjaus
+  haaraan linna-piikit-2 → juna 123.
+- **121 ei BUILDia** (✕ avaruuslasi vastoin omistajan 16.9. linjausta, ✕ harmaa; omistajan 14.16: ✕ tulee myöhemmin neliöksi).
+- **Juna 122 käännetty**: juna/b13 3521f148 = 3570bbb2 (121) + natiivi-ui/sulku-harmaa 278c23eb + linssiseppa/kiilto-ilmakeha
+  797aac22, käännös 95cf97d2 (14.25), .app lokit/juna-1.1.122-95cf97d2/. Savuke 1122 pyydetty. BUILD 122 vasta savukkeen JA
+  Siirtosepän kaistatodennuksen jälkeen (122 sisältää 29c84ce2:n).
+- **Juna 123 PIDOSSA**: worktree /Users/Shared/Claude/wt/proto-natiiviseppa-j121, haara natiiviseppa/juna-121-koe = 94da5f0c
+  = 3521f148 + siirtoseppa/linna-piikit-2 db3ed117 (ABAB >100 ms 0/0/0). Testit ok; pohjavahti pyytää `--kirjaa` (Natiivi-UI).
+- Laitekäännökset tänään: laite-dev-{badf0d9a,be5bd3d4,90840152,29c84ce2,db3ed117}, laite-rel-{f7e91fcc,84b8556b,22dfaccb,
+  f5c48ad4,c476ad0c} (lokit/).
 
 ## TÄNÄÄN (2.10.) TEHDYT BUILDIT
 
-111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259.
+111 94a914c8 · 113 fed526e4 · 114 4fa4d295 · 116 f72743f3 · 118 793a6a18 · 119 bce26259 · 120 8fd12e83.
 Ohitetut: 112 (Lehti ei avannut leikekirjaa: täkynoston id puuttui kokoelmadatasta), 115 (ISS-kuva raidallinen +
-22dfaccb signal 11: RGB24 luettiin Color32:na), 117 (paluu avaruuskävelyltä Cupolaan ei toiminut).
+22dfaccb signal 11: RGB24 luettiin Color32:na), 117 (paluu avaruuskävelyltä Cupolaan ei toiminut), 121 (✕ avaruuslasi).
 
 ## UUDET OPIT JA TYÖKALUT
 
