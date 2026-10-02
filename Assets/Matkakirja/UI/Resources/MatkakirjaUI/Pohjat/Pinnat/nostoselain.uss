@@ -5,7 +5,8 @@
  * Rivi ‹ [Nostot ▾] › vetokahvan alla (TOIMINTO-nappi), PANEELI (paperi) rivin alla, AUTO-pilleri lukijan rivillä ja
  * siirtolaskurin lappu (LASI) kortin alareunassa. */
 
-/* Ylärivi (omistaja 2.10.2026 klo 13.53): ‹ NOSTOT ▾ › vasemmalla, AUTO oikealla, HISTORIA-kapiteelin kirjasin. */
+/* Yksi ylärivi (omistaja 2.10.2026 klo 13.53 ja 17.5x): ‹ NOSTOT ▾ › ja kategoria vasemmalla, ≡ kaiutin AUTO oikealla, kaikki
+ * HISTORIA-otsakkeen kokoisina ja kevyinä (rivillä myös .mk-nosto__ylarivi: kirjasin, harvennus ja väri periytyvät). */
 .mk-nostoselain {
     flex-direction: row;
     align-items: center;
@@ -24,30 +25,34 @@
 }
 
 .mk-nostoselain__askel > .mk-nappi__teksti {
-    font-size: var(--tk-koko-otsikko);
+    font-size: var(--tk-koko-leipa);
+    letter-spacing: 0;
     -unity-text-align: middle-center;
 }
 
 .mk-nostoselain__avaaja {
-    height: var(--tk-nappi-korkeus);
-    min-height: var(--tk-nappi-korkeus);
+    height: 26px;
+    min-height: 26px;
     margin: 0 var(--tk-vali-xs);
     padding: 0 var(--tk-vali-s) 0 var(--tk-vali-m);
     border-width: 1px;
     border-radius: var(--tk-kulma-nappi);
     border-color: var(--tk-paperi-muste-pehmea);
     background-color: initial;
+    color: var(--tk-paperi-korostus); /* sama kuin HISTORIA (.mk-nosto__ylarivi) */
 }
 
-.mk-nostoselain__avaaja > .mk-nappi__teksti {
-    font-size: var(--tk-koko-kapiteeli);
-    letter-spacing: 7.69px; /* web 0.12em, sama kuin HISTORIA (.mk-kortti__kapiteeli) */
-    color: var(--tk-paperi-muste-pehmea);
-    -unity-text-align: middle-center;
-}
-
-.mk-nostoselain__vali {
+/* Kategoria (HISTORIA) ja lukijan paikka: täyttää rivin, lukijan paikka oikeaan reunaan (margin-left: auto). */
+.mk-nostoselain__ylarivipaikka {
     flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    margin-left: var(--tk-vali-s);
+}
+
+.mk-nostoselain__ylarivipaikka > .mk-nosto__ylarivi {
+    flex-grow: 1;
+    margin: 0;
 }
 
 .mk-nostoselain__avaajaikoni {
@@ -61,13 +66,15 @@
     background-color: var(--tk-paperi-toiminto);
 }
 
+/* Ei kehystä (omistaja 17.5x, loki cc217e829): paneeli on kortin paperia, yläreunassa vain ohut viiva. */
 .mk-nostoselain__paneeli {
     position: absolute;
     left: var(--tk-vali-s);
     right: var(--tk-vali-s);
     bottom: var(--tk-vali-s);
     padding: var(--tk-vali-s) var(--tk-vali-m) var(--tk-vali-s) var(--tk-vali-m);
-    border-width: 1px;
+    border-width: 0;
+    border-top-width: 1px;
     border-color: var(--tk-paperi-reunus);
     border-radius: var(--tk-kulma-kortti);
     background-color: var(--tk-paperi-pinta);
@@ -95,7 +102,7 @@
     margin-right: 6px;
     padding: 0 var(--tk-vali-m);
     border-color: var(--tk-paperi-reunus);
-    border-radius: var(--tk-kulma-pilleri);
+    border-radius: var(--tk-kulma-nappi); /* suodattimet pyöristettyinä suorakulmioina, ei kapseleita (omistaja 17.5x) */
     background-color: initial;
     color: var(--tk-paperi-muste);
 }
@@ -114,14 +121,24 @@
     flex-shrink: 1;
 }
 
+/* Kehyksettömät rivit, jakoviiva välissä kuten valikko v2:ssa (omistaja 17.5x). */
 .mk-nostoselain__rivi {
-    margin-bottom: 2px;
-    padding: 0 var(--tk-vali-m);
+    min-height: var(--tk-nappi-osuma);
+    margin: 0;
+    padding: 0 var(--tk-vali-xs);
     justify-content: flex-start;
+    border-width: 0;
+    border-radius: 0;
+    background-color: initial;
+    color: var(--tk-paperi-muste);
+}
+
+.mk-nostoselain__rivi--viiva {
+    border-top-width: 1px;
+    border-color: var(--tk-paperi-reunus);
 }
 
 .mk-nostoselain__rivi--nykyinen {
-    border-color: var(--tk-paperi-toiminto);
     background-color: var(--tk-paperi-pergamentti);
 }
 

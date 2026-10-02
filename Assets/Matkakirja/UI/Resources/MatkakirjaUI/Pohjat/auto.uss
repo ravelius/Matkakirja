@@ -4,20 +4,20 @@
 /* Kevyt suorakulmio pyöristetyin kulmin (omistaja 2.10.2026 klo 13.53 "tuo ovaali on aivan hirveä"; web #3849 .tk-auto):
  * NOSTOT-valitsimen kanssa selaimen rivillä, HISTORIA-kapiteelin kirjasimella. */
 .mk-nostoselain__auto {
-    min-height: var(--tk-nappi-korkeus);
-    height: var(--tk-nappi-korkeus);
+    min-height: 26px;
+    height: 26px;
     margin-right: 0;
     padding: 0 var(--tk-vali-m);
     border-width: 1px;
     border-color: var(--tk-paperi-muste-pehmea);
     border-radius: var(--tk-kulma-nappi);
     background-color: initial;
-    color: var(--tk-paperi-muste-pehmea);
+    color: var(--tk-paperi-korostus); /* sama kuin HISTORIA (.mk-nosto__ylarivi) */
 }
 
+/* Kirjasin, harvennus ja väri periytyvät rivin .mk-nosto__ylarivi-luokasta (HISTORIA-otsake, omistaja 17.5x). */
 .mk-nostoselain__autoteksti {
-    font-size: var(--tk-koko-kapiteeli);
-    letter-spacing: 7.69px; /* web 0.12em, sama kuin HISTORIA */
+    -unity-text-align: middle-center;
 }
 
 .mk-nostoselain__autopiste {
