@@ -34,6 +34,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Kuljettu reitti: mutkitteleva viiva lähtö- ja tulopisteineen (☰ Kartta).</summary>
         public const string KuljettuReitti = "<path d=\"M5.5 17.5c3.5 0 3-6 6.5-6s3-5 6.5-5\"/><circle cx=\"4\" cy=\"18\" r=\"1.7\"/><circle cx=\"20\" cy=\"6\" r=\"1.7\"/>";
 
+        // js/pilleri-paneeli.js PILLERI_IKONI (valikko v2, web #3853): luettelorivien viivaikonit.
+        public const string PilleriAarteet = "<path d=\"M4 11h16v7H4zM4 11a8 5 0 0 1 16 0M10.5 13.5h3\"/>";
+        public const string PilleriJulisteet = "<path d=\"M6 3.5h12v17H6z\"/><path d=\"M8.5 7h7M8.5 10h7\"/><path d=\"m8.5 17 2.5-3.5 2 2.5 1.5-1.5 1 2.5\"/>";
+        public const string PilleriRetkikunta = "<circle cx=\"8.5\" cy=\"8\" r=\"2.5\"/><circle cx=\"15.5\" cy=\"8\" r=\"2.5\"/><path d=\"M3.5 19c.6-3.4 2.6-5.2 5-5.2s4.4 1.8 5 5.2M10.5 19c.6-3.4 2.6-5.2 5-5.2s4.4 1.8 5 5.2\"/>";
+        public const string PilleriAsetukset = "<circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 3.5v2.5M12 18v2.5M3.5 12H6M18 12h2.5M6 6l1.8 1.8M16.2 16.2 18 18M6 18l1.8-1.8M16.2 7.8 18 6\"/>";
+        public const string PilleriLinssit = "<circle cx=\"10.5\" cy=\"10.5\" r=\"5.5\"/><path d=\"m15 15 4.5 4.5\"/>";
+
         // js/ui.js renderTurnPill (~rivi 10942-10946): matkalaukun kahva.
         public const string Laukku = "<rect x=\"4\" y=\"8\" width=\"16\" height=\"11.5\" rx=\"4\"/><path d=\"M9.3 8V6.3a1.7 1.7 0 0 1 1.7-1.7h2a1.7 1.7 0 0 1 1.7 1.7V8\"/><path d=\"M6.6 9.6h10.8\"/><circle cx=\"12\" cy=\"9.6\" r=\"0.85\"/><path d=\"M7 13.6 10.3 16.4 13.7 13.6 17 16.4\"/>";
 
