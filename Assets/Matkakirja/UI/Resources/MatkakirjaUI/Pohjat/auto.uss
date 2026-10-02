@@ -7,10 +7,10 @@
     min-height: 26px;
     height: 26px;
     margin-right: 0;
-    padding: 0 var(--tk-vali-m);
+    padding: 0 var(--tk-vali-s);
     border-width: 1px;
     border-color: var(--tk-paperi-muste-pehmea);
-    border-radius: var(--tk-kulma-nappi);
+    border-radius: var(--tk-kulma-pieni); /* 26 pt korkea: kulma-nappi näytti kapselilta (Päätoimittaja 18.3x) */
     background-color: initial;
     color: var(--tk-paperi-korostus); /* sama kuin HISTORIA (.mk-nosto__ylarivi) */
 }
