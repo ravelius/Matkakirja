@@ -435,7 +435,7 @@ namespace Matkakirja.Natiivi
 
         void Asettele()
         {
-            float yla = Ylapalkki.Varaus + 8, oikea = Ylapalkki.Piilossa ? 10 + 40 + 6 : 10;
+            float yla = Ylapalkki.Varaus + 8, oikea = Ylapalkki.Piilossa ? 10 + 40 + 8 : 10;
             // iPhonella nappi on yläpalkin rivissä (Ylapalkki.Vieras): ei omaa sijaintia.
             bool rivissa = nappi.ClassListContains("mk-ylapalkki__vieras");
             nappi.style.top = rivissa ? StyleKeyword.Null : yla;
@@ -443,8 +443,8 @@ namespace Matkakirja.Natiivi
             // Linssit-nappi kulmassa; jos selitenappi näkyy kartalla (ei rivissä), sen vasemmalla puolella 8 pt:n välillä (web).
             bool selite = !Automaattinen && !rivissa;
             linssit.style.top = yla;
-            // Piilotetulla palkilla kelluva palkkinappi on 43 pt leveä (mitattu simulaattori 06e3578b: väli jäi −1 pt) → 8 pt:n väli.
-            linssit.style.right = selite ? oikea + 40 + 8 : Ylapalkki.Piilossa ? oikea + 9 : oikea;
+            // Piilotetulla palkilla väkäsnappi (40 pt:n OHJAUSNAPPI, oikea 10) on kulmassa: oikea siirtyy sen ja 8 pt:n välin verran.
+            linssit.style.right = selite ? oikea + 40 + 8 : oikea;
             // Maakuntakartassa lappu peittää sen avanneen napin (omistaja 29.9.2026); sulkeminen lapun omalla ✕:llä.
             paneeli.style.top = yla;
             paneeli.style.right = oikea;

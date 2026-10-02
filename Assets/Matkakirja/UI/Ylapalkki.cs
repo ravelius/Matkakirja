@@ -82,10 +82,9 @@ namespace Matkakirja.Natiivi
                 if (Pakota.HasValue) return Pakota.Value;
                 if (Screen.width <= Screen.height) return false;
                 // iPad: palkki näkyy myös vaaka-asennossa (omistaja 30.9.2026 klo 12.28); vaakapiilo vain iPhonella.
-                if (!Puhelin) return false;
-                float skaala = Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 163f)) : 1f;
-                float w = Screen.width / skaala, h = Screen.height / skaala;
-                return h <= 520f || (Touchscreen.current != null && w <= 1366f);
+                // Vaaka-iPhone osuu aina webin rajaan (korkein vaaka-iPhone 440 pt ≤ 520 pt). Screen.dpi ei kelpaa (uusilla malleilla
+                // väärä skaala, vrt. PuhelimenSkaala), joten iPhone ei mittaa: TF 129:ssä palkki jäi vaakaan näkyviin.
+                return Puhelin;
             }
         }
 
@@ -370,7 +369,7 @@ namespace Matkakirja.Natiivi
             ilmoitus.style.display = DisplayStyle.None;
 
             // Piilossa ☰ tuo palkin takaisin (omistaja 24.9.: ei kelluvia nappeja, vain palkki).
-            vakasnappi = Rakenne.Nappi(null, "mk-vakasnappi", () =>
+            vakasnappi = Rakenne.Nappi(null, "mk-ohjausnappi tk-teema-paperi mk-vakasnappi", () =>
             {
                 if (VetoPiilossa) { NaytaVedonJalkeen(); return; }
                 if (Auki) Sulje(); else Avaa();
@@ -437,6 +436,61 @@ namespace Matkakirja.Natiivi
             }
             pilleri.Q(className: "mk-ikoni")?.RemoveFromHierarchy();
         }
+
+        /// <summary>
+        /// IPHONEN VAAKATILA (omistaja 2.10.2026 klo 22.3x, TF 129: "Iphone vaaka tilassa palkki väärin"; web ylapalkki-vaaka.js):
+        /// palkki on piilossa ja väkäsnappi tuo sen väliaikaisesti. Avattu palkki on pystyn nahkapalkki ilman saarta: nahka
+        /// toistuu luonnollisessa koossaan (@3x 1290 × 300 px = 430 × 100 pt, tikkaus 14 pt kuten pystyssä), keskivarjo pois
+        /// (saari on sivulla), logo ja pilleri pystyn mitoin (rivi = saaren korkeus 36,33 pt, nahkaa 14 pt ylä- ja alapuolella)
+        /// turva-alueen reunoissa (webin env(safe-area-inset-left/right)).
+        /// </summary>
+        void AsetaVaakaNahka(Vector4 r)
+        {
+            var paneeli = palkki.panel;
+            float u = paneeli != null && Screen.width > 0
+                ? (RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(100f * PuhelimenSkaala, 0f)).x
+                   - RuntimePanelUtils.ScreenToPanel(paneeli, Vector2.zero).x) / 100f
+                : 1f;
+            vaakaNahka = true;
+            palkki.style.backgroundRepeat = new BackgroundRepeat(Repeat.Repeat, Repeat.NoRepeat);
+            palkki.style.backgroundSize = new BackgroundSize(VaakaNahkaLeveys * u, VaakaNahkaKorkeus * u);
+            palkki.style.backgroundPositionX = new BackgroundPosition(BackgroundPositionKeyword.Left);
+            var varjo = palkki.Q(className: "mk-ylapalkki__varjo");
+            if (varjo != null) varjo.style.display = DisplayStyle.None;
+            float rivi = SaariKorkeus * u, tikkaus = VaakaNahkaLeveys * NahkaTikkausOsuus * u;
+            palkki.style.paddingTop = r.y + VaakaNahkaVali * u;
+            palkki.style.paddingBottom = VaakaNahkaVali * u + tikkaus;
+            palkki.style.paddingLeft = r.x + 12f * u;
+            palkki.style.paddingRight = r.z + 8f * u;
+            palkki.style.height = r.y + 2f * VaakaNahkaVali * u + rivi + tikkaus;
+            foreach (var e in new VisualElement[] { pilleri, Valikko }) e.style.height = e.style.minHeight = rivi;
+            pilleri.style.borderTopLeftRadius = pilleri.style.borderTopRightRadius =
+                pilleri.style.borderBottomLeftRadius = pilleri.style.borderBottomRightRadius = Tyylikirja.Kulma.Nappi * u;
+            logo.style.height = rivi * 0.8f;
+            logo.style.width = rivi * 0.8f * logoSuhde;
+            logo.style.translate = StyleKeyword.Null;
+            pilleri.style.translate = StyleKeyword.Null;
+            // Pilleri pystyn kokoisena (12,48 pt, BUILD 123:n kiinteä leveys): SovitaPilleri lukee matalan luokan.
+            palkki.EnableInClassList("mk-ylapalkki--matala", true);
+            pilleriMax = 220f * u;
+            SovitaPilleri();
+        }
+
+        /// <summary>Pystyyn palatessa nahka taas palkin levyiseksi (scale-and-crop, USS) ja keskivarjo saaren kohdalle.</summary>
+        void PalautaPystyNahka()
+        {
+            if (!vaakaNahka) return;
+            vaakaNahka = false;
+            palkki.style.backgroundRepeat = StyleKeyword.Null;
+            palkki.style.backgroundSize = StyleKeyword.Null;
+            palkki.style.backgroundPositionX = StyleKeyword.Null;
+            var varjo = palkki.Q(className: "mk-ylapalkki__varjo");
+            if (varjo != null) varjo.style.display = StyleKeyword.Null;
+        }
+
+        bool vaakaNahka;
+        /// <summary>iPhonen nahkatiili luonnollisessa koossaan (@3x) ja nahkaa pillerin ylä- ja alapuolella (pt, kuten pystyssä).</summary>
+        const float VaakaNahkaLeveys = 430f, VaakaNahkaKorkeus = 100f, VaakaNahkaVali = 14f;
 
         /// <summary>Logon kuvasuhde (kultalogo 4:1, kohopainatus 326 × 95).</summary>
         float logoSuhde = 4f;
@@ -530,7 +584,12 @@ namespace Matkakirja.Natiivi
                 palkki.style.paddingLeft = r.x + t.y;
                 palkki.style.paddingRight = r.z + t.y;
                 palkki.style.height = r.y + Korkeus;
-                if (IpadNahka && palkki.ClassListContains("mk-ylapalkki--nahka-ipad"))
+                // Pystyn sivut (logo ja pilleri saaren ja kulmakaaren välissä) eivät koske vaakaa: vanhat arvot ylikirjoittivat
+                // täytteen pillerin leveyden muuttuessa (TF 129: logo 25 pt reunasta).
+                sivut = null;
+                sivutPilleriLeveys = float.NaN;
+                if (Puhelin && palkki.ClassListContains("mk-ylapalkki--nahka")) AsetaVaakaNahka(r);
+                else if (IpadNahka && palkki.ClassListContains("mk-ylapalkki--nahka-ipad"))
                 {
                     // Rivi tikkauksen yläpuolisen nahan keskelle; reunat 36 pt (Codex ipad-v1), turva-alue ja kulmakaari mukana.
                     palkki.style.paddingTop = r.y;
@@ -541,12 +600,10 @@ namespace Matkakirja.Natiivi
                     if (MacSyote.Kaytossa) { logo.style.height = MacLogoKorkeus; logo.style.width = MacLogoKorkeus * logoSuhde; }
                 }
             }
+            else PalautaPystyNahka();
             palkki.EnableInClassList("mk-ylapalkki--puhelin", Puhelin);
-            // Löydös 68: väkäsnappi täsmälleen ☰:n paikalle ja kokoiseksi (turva-alueen sisällä, palkin täyte).
-            vakasnappi.style.top = Mathf.Round((Korkeus - 36f) / 2f);
-            vakasnappi.style.right = Tayte.y;
-            vakasnappi.style.width = 44f;
-            vakasnappi.style.height = vakasnappi.style.minHeight = 36f;
+            // Väkäsnappi on OHJAUSNAPPI-neliö kartan oikeassa yläkulmassa (USS .mk-vakasnappi; suurennuslasi sen vasemmalla 8 pt:n
+            // välillä, Karttaselite.Asettele), ei enää ☰:n paikalla ja kokoisena (Päätoimittaja 2.10. klo 22.5x).
             bool p = Piilossa;
             if (p != piilossa) { piilossa = p; if (!p) Sulje(); PalkkiPiilossaMuuttui?.Invoke(); }
             palkki.EnableInClassList("mk-ylapalkki--piilossa", piilossa || VetoPiilossa);
@@ -602,8 +659,11 @@ namespace Matkakirja.Natiivi
                 // Omistaja 29.9.2026 (1.0.50, palaute 5): nahkaa yhtä paljon saaren ylä- ja alapuolella, sitten tikkauskaista.
                 // Laitteen saaren mukaan; kuva rajautuu alareunasta (scale-and-crop), joten tikkaus ei veny.
                 korkeus = saariAla + saariYla + P(Screen.width / pp, 0f).x * NahkaTikkausOsuus;
-                // Omistaja 30.9.2026 klo 12.28: yläpalkista hieman korkeampi (rivi laskee saaren akselin alle).
-                korkeus += alemmas + PalkkiKorkeampi * yksikko;
+                // Omistaja 2.10.2026 klo 21.4x (TF 129): "Uusi yläpalkki onkin vähän liian korkea. Saisi olla enemmän tasapainossa
+                // pillerin ylä- ja alapuolella". Pilleri ja logo ovat nyt saaren keskilinjalla (KeskitaPystyyn), joten 30.9.:n
+                // lisäkorkeus (rivi saaren akselin alle, alemmas + PalkkiKorkeampi) jäi ylimääräiseksi nahaksi pillerin alle:
+                // sauma = saariYla + saariAla eli pillerin alapuolella yhtä paljon nahkaa kuin yläpuolella (+ PalkkiTasaus).
+                korkeus += PalkkiTasaus * yksikko;
             }
             AsetaSaariTikkaus(nahka && saari.width > 0 ? Rect.MinMaxRect(ylakulma.x, saariYla, alakulma.x, saariAla) : Rect.zero, yksikko);
             palkki.style.height = korkeus;
@@ -661,7 +721,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Rivin lasku saaren akselin alle ja palkin lisäkorkeus (pt; omistaja 30.9.2026 klo 12.28 "hieman").</summary>
-        const float RiviAlemmas = 6f, PalkkiKorkeampi = 4f;
+        const float RiviAlemmas = 6f;
+        /// <summary>Pillerin alapuolen nahan hienosäätö (pt) mittauksen mukaan: 0 = sauma saaren keskilinjan kaksinkertaisella.</summary>
+        const float PalkkiTasaus = 0f;
         /// <summary>
         /// NAHKATIKKAUS DYNAMIC ISLANDIN YMPÄRILLE (omistaja 2.10.2026: musta saarialue pois, tikkaus saaren ympärille; valinta
         /// 18.2x "b mutta ota se ulompi kehä pois, jätä pelkkä tikkaus"): pelkät pistot suoraan nahkaan sävy sävyyn, kehä
@@ -1237,6 +1299,8 @@ namespace Matkakirja.Natiivi
         {
             bool p = t.Length > 1 && t[0] == '£' && char.IsDigit(t[1]);
             punta.style.display = p ? DisplayStyle.Flex : DisplayStyle.None;
+            // iPadin päivä ensin -pilleri: väli päivän ja £:n väliin, ei £:n ja luvun väliin (b725dffa: "1 pv£  400").
+            pilleri.EnableInClassList("mk-pilleri--punta", p);
             raha.text = p ? t.Substring(1) : t;
         }
 

@@ -8,8 +8,10 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
 {
     Properties
     {
-        _VarjoVari("Varjon väri, alfa = peitto keskellä", Color) = (0.02, 0.015, 0.01, 0.6)
+        _VarjoVari("Lattian kerroin keskellä (RGB; alfaa ei käytetä)", Color) = (0.3, 0.29, 0.28, 1)
         _VarjoVeto("Siirto kameraa kohti (m)", Float) = 0.4
+        [Enum(UnityEngine.Rendering.BlendMode)] _Lahde("Sekoitus: lähde", Float) = 2
+        [Enum(UnityEngine.Rendering.BlendMode)] _Kohde("Sekoitus: kohde", Float) = 0
         [Enum(UnityEngine.Rendering.CompareFunction)] _ZTest("Syvyystesti (testikomento: Always)", Float) = 4
     }
     SubShader
@@ -19,7 +21,10 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
         {
             Name "Forward"
             Tags { "LightMode" = "UniversalForward" }
-            Blend SrcAlpha OneMinusSrcAlpha
+            // Kertova sekoitus (klassinen kontaktivarjo): lattia × lerp(1, väri, peitto), lähtöalfa aina 1 ja kuvan alfa
+            // ennallaan. Savukkeet 21.03–21.20: alfasekoituksella levy ei piirtynyt lainkaan, kun lähtöalfa < 1 (peitto 1
+            // näkyi, 0,6–0,7 ei muuttanut pikseleitä).
+            Blend [_Lahde] [_Kohde], Zero One
             ZWrite Off
             ZTest [_ZTest]
             Cull Off
@@ -57,8 +62,10 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
             {
                 float r = length(i.uv);
                 // Tasainen ydin jalkojen alla (r < 0,35) ja pehmeä smoothstep-lasku reunalle (kartan maakontaktin renkaat).
-                float a = _VarjoVari.a * (1.0 - smoothstep(0.35, 1.0, r));
-                return half4((half3)_VarjoVari.rgb, (half)a);
+                // Vahvuus RGB:stä, ei alfasta (savuke 21.38: alfa 1 näkyi, 0,6–0,9 ei lainkaan, myös ilman syvyystestiä).
+                float a = 1.0 - smoothstep(0.35, 1.0, r);
+                // Kertova (DstColor Zero): kerroin lerp(1, väri, a). Alfasekoitus (testi): väri, alfa = väri.a × a.
+                return half4((half3)lerp(float3(1.0, 1.0, 1.0), _VarjoVari.rgb, a), (half)(_VarjoVari.a * a));
             }
             ENDHLSL
         }
