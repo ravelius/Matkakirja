@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 2.10. 22:42:** Levy 77 Gi, wt/ 33 (raja 20, kasvaa tasaisesti 31→33), muisti 69 % vapaa, kuorma 77/101/88 (raskas), sim 1 (päivä ≤1 ok), työtilat: 2 worktreeta /Volumes/T7:llä (ilmoitettu Päätoimittajalle 22.25, viesti ei mennyt perille — approval expired). Viikkoraja uudella tilillä 2 % (hälytys 96/99 % kuitattu Päätoimittajalta). Viestirajan hook PUUTTUU/VANHA (ilmoitettu, ei asennettu itse). Kävijälaskuri ennallaan 24.
+
 **Päivitetty 1.10. 08:0x — POSTIKIERTO LOPETETTU (tilinvaihto, Päätoimittajan käsky):** luovutus docs/raportit/viesti-postivahti-luovutus-20261001.md. Kaikki ajastukset lopetettu. Viimeisin tila: levy 48 Gi, wt/ 31, viikko 96 %, Päätoimittaja 15 %, kävijälaskuri n=9.
 
 **Päivitetty 1.10. 07:49:** Levy 48 Gi (vakaa), wt/ 31 (raja 20), muisti 79 % vapaa, kuorma 23/27/22, sim 1 (siirtoseppa-iPhone; päivä ≤1 ok), työtilat ok. Viikko 96 % (97 % ilmoitus lähellä). 5 h 23 %. Päätoimittaja 15 %. Kävijälaskuri: 07.33 n=9, seuraava ~08.33. Viestirajan hook: OK (#3734 auki). Varmuuskopio-VIKA: ei uusia rivejä 10.52 jälkeen. Posti: ei uutta.
