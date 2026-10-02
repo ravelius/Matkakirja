@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2560, teksti: 'Tyylikirja: OHJAUSNAPPI-pohja, harmaa teema ja… (#3854)' },
   { v: 2559, teksti: 'Olavinlinna: puukorttien ASTC-alfa (#3851)' },
   { v: 2558, teksti: 'Valikko v2 oletukseksi (#3853)' },
   { v: 2557, teksti: 'AUTO kevyeksi suorakulmioksi, Puhu Pululle alar… (#3849)' },
