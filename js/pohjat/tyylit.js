@@ -13,6 +13,7 @@ export const POHJAT_TYYLIT = [
   'css/pohjat/paneeli.css',
   'css/pohjat/kentta.css',
   'css/pohjat/auto.css',
+  'css/pohjat/pulu.css',
   'css/pohjat/esikatselu.css',
   'css/pohjat/pinnat/dialogit.css',
   'css/pohjat/pinnat/pillerivalikko.css',

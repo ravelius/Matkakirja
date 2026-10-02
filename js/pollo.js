@@ -4948,7 +4948,7 @@ export class Pollo {
        * pinossa ei ole kuplia, joten mitään ei jää tämän taakse.
        */
       if (e.target?.closest?.(
-        '.pollo-paneeli, .pollo-nappi, .fokuskohde-popup, .pollo-kuplapino-kehys',
+        '.pollo-paneeli, .pollo-nappi, .fokuskohde-popup, .tk-nostokortti:not(.tk-piilossa), .pollo-kuplapino-kehys',
       )) return;
       this.sulje();
     });
