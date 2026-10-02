@@ -3,8 +3,9 @@
  * NOSTOKORTTI-pohjan osa AUTO. Kytkin "● AUTO" pillerinä ‹ ›:n ryhmässä keskellä (LASI-AVARUUS; päällä
  * toimintovärillä), TUMMA siirtolappu "Seuraava: <nimi> 3 s · Pysäytä" palkilla sen yläpuolella koko leveydellä. */
 /* Päätoimittaja 2.10.: kytkin ‹ ›:n ryhmään keskelle ("AUTO ‹ ›"), ei vasempaan alakulmaan (osui pikkukuvanauhaan). */
+/* Väli kuten webissä (#3825 .satelliitti-kohteet gap 14 px): 7 pt + ‹:n osuma-alan reunus 7 pt (44 pt:n laatikko, 30 pt:n kiekko). */
 .mk-astrokuva__autokulma {
-    margin-right: var(--tk-vali-s);
+    margin-right: 7px;
     justify-content: center;
 }
 

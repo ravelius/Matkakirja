@@ -872,9 +872,10 @@ namespace Matkakirja.Natiivi
         {
             if (kohdeNapit.style.display == DisplayStyle.None || float.IsNaN(turvaLeveys)) { nauha.style.maxWidth = Length.Percent(50); return; }
             const float NappienPuolikas = 52f, Vasen = 12f, Vali = 8f, Pikkukuva = 42f;
-            // AUTO ‹ ›:n ryhmässä (Päätoimittaja 2.10.) levittää ryhmää vasemmalle puolella omasta leveydestään (+ 8 pt:n väli).
+            // AUTO ‹ ›:n ryhmässä (Päätoimittaja 2.10.) levittää ryhmää vasemmalle puolella omasta leveydestään (+ 7 pt:n väli).
+            // 375 pt:n ruudulla raja on ~71 pt, joten kaksi pikkukuvaa rivittyy eikä mene ryhmän alle (web #3825: väli ~1 pt).
             float auto = autoKulma.style.display == DisplayStyle.None ? 0f
-                : (autoKulma.layout.width > 0f ? autoKulma.layout.width : 76f) + 8f;
+                : (autoKulma.layout.width > 0f ? autoKulma.layout.width : 81f) + 7f;
             nauha.style.maxWidth = Mathf.Max(Pikkukuva, turvaLeveys / 2f - NappienPuolikas - auto / 2f - Vasen - Vali);
         }
 
