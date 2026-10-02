@@ -200,14 +200,14 @@ Shader "Matkakirja/Linssit/Yokuori"
                 half led = 0.0h;
                 if (piste > 0.0h && l > 0.002h)
                 {
-                    // Yksi valopiste solua kohti; solu ~8 px ruudulla 2:n potenssin tasoina 30 m:stä ja kahden tason liukuva sekoitus,
+                    // Yksi valopiste solua kohti; solu ~6 pt ruudulla 2:n potenssin tasoina 30 m:stä ja kahden tason liukuva sekoitus,
                     // jotta pisteet ovat 1–2 px:n kokoisia, 4–8 px:n päässä toisistaan, eivätkä ui zoomatessa. Lähimmät 2 × 2 solua
                     // lasketaan, joten hehku ei katkea solun reunaan (simulaattori 6bbc2df7: katusolut katkesivat pätkiksi).
                     float pxM = max(length(fwidth(p)), 0.5);
-                    float tasoF = log2(max(pxM * 8.0 / 30.0, 1.0));
+                    float tasoF = log2(max(pxM * 6.0 / 30.0, 1.0));
                     float taso0 = floor(tasoF), sek = tasoF - taso0;
                     float pr = saturate((float)l * 1.6);
-                    const float Ydin = 0.17, Hehku = 0.08;              // ytimen säde solun mitoissa ja hehkun voimakkuus (säde 2 ×)
+                    const float Ydin = 0.08, Hehku = 0.05;              // ytimen säde solun mitoissa (~1,5 px) ja hehku (säde 2 ×)
                     float kuvio = 0.0, ledKuvio = 0.0;
                     [unroll] for (int taso = 0; taso < 2; taso++)
                     {
@@ -225,8 +225,10 @@ Shader "Matkakirja/Linssit/Yokuori"
                             if (h1 >= pr) continue;                       // tiheys kirkkauden mukaan
                             float2 d = g - (c + 0.15 + 0.7 * float2(h2, h3));
                             float r2 = dot(d, d) / (Ydin * Ydin);
-                            float ydin = exp(-r2);
-                            kuvio += (ydin + Hehku * exp(-r2 / 4.0)) * paino;
+                            // Kirkkaus vaihtelee pisteittäin 0,4–1,6 (keskiarvo 1): katuvalot, aukiot ja ikkunat eivät ole yhtä kirkkaita.
+                            float kirkas = 0.4 + 1.2 * frac(h2 * 5.71 + h3 * 2.93);
+                            float ydin = exp(-r2) * kirkas;
+                            kuvio += (ydin + Hehku * kirkas * exp(-r2 / 4.0)) * paino;
                             ledKuvio += ydin * paino * step(0.7, frac(h1 * 7.31 + h2 * 3.17));   // ~30 % LED, vain ytimessä
                         }
                     }
