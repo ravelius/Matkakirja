@@ -10,9 +10,7 @@ namespace Matkakirja
     ///  - PAIKKA (web sarakkeenPaikka): sarake roikkuu lipun alla (väli 8) kartuutsin oikean reunan ulkopuolella. Kartuutsi
     ///    on ruudun alareunassa, joten jos sarake ei mahdu lipun alle, se nousee niin, että alareuna on kartuutsin alareunan
     ///    tasalla (puhelin: pää kartuutsin vieressä). Ruudun koordinaatit, y alas kuten webin getBoundingClientRect.
-    ///    REUNAEHTO (Päätoimittajan OK 2.10.2026, webiin samoin): jos sarake ei mahdu vaakasuunnassa (puhelimella avattu
-    ///    kartuutsi on lähes ruudun levyinen, webissä pää jäi 12 px:ää lukuun ottamatta ruudun ulkopuolelle), se nousee
-    ///    kartuutsin yläpuolelle oikeaan reunaan: x = oikea reuna − 64 − 8, y = kartuutsin yläreuna − korkeus − 8.
+    ///    Ei reunaehtoa (omistaja 2.10. 16.4x: "ei pään tarvitse väistää kartussia"): avattu kortti saa peittää pään.
     ///  - KÄÄNTÖ (web kaantoKeskustaa): nenä kohti näkymän keskustaa enintään 30° (+ = katsojan oikealle).
     ///  - HEILAHDUS (web HEILAHDUS): kartan pituusasteen muutos korkeudella jaettuna potkaisee jousta (jousi 0,12,
     ///    vaimennus 0,82, kerroin 1,4, korkeus vähintään 0,05 maan sädettä).
@@ -36,19 +34,11 @@ namespace Matkakirja
         /// = mahtuiko lipun alle (muuten alareuna kartuutsin alareunan tasalla, ei ruudun yläreunan yli).
         /// </summary>
         public static (float X, float Y) SarakkeenPaikka(float lippuVasen, float lippuAla, float kortinOikea, float kortinAla,
-            float korkeus, out bool mahtuu) =>
-            SarakkeenPaikka(lippuVasen, lippuAla, kortinOikea, float.NaN, kortinAla, korkeus, float.PositiveInfinity, out mahtuu, out _);
-
-        /// <summary>Kuten yllä, ja reunaehto: ei mahdu oikean reunan sisään → kartuutsin yläpuolelle oikeaan reunaan (<paramref name="ylla"/>).</summary>
-        public static (float X, float Y) SarakkeenPaikka(float lippuVasen, float lippuAla, float kortinOikea, float kortinYla, float kortinAla,
-            float korkeus, float oikeaReuna, out bool mahtuu, out bool ylla)
+            float korkeus, out bool mahtuu)
         {
             float alle = lippuAla + Vali;
             mahtuu = alle + korkeus <= kortinAla;
-            float x = Math.Max(lippuVasen, kortinOikea + Vali);
-            ylla = x + PaaPt + Vali > oikeaReuna && !float.IsNaN(kortinYla);   // web #3857: x + 64 + 8 > ruutu
-            if (ylla) return (oikeaReuna - PaaPt - Vali, Math.Max(0f, kortinYla - korkeus - Vali));
-            return (x, mahtuu ? alle : Math.Max(0f, kortinAla - korkeus));
+            return (Math.Max(lippuVasen, kortinOikea + Vali), mahtuu ? alle : Math.Max(0f, kortinAla - korkeus));
         }
 
         /// <summary>Pituusasteen muutos (aste, kääritty ±180) jaettuna korkeudella maan säteinä (vähintään 0,05).</summary>

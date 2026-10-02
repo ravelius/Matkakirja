@@ -32,17 +32,6 @@ namespace Matkakirja.Kartta.Testit
             // Korkea sarake ei nouse ruudun yläreunan yli.
             var r = ErikoisnostoMitat.SarakkeenPaikka(20, 804, 240, 100, 300, out _);
             Oleta.Tosi(Lahella(r.Y, 0), r.ToString());
-            // Reunaehto (Päätoimittajan OK 2.10.): webin iPhone, avattu kartuutsi 20–382 × 612–853, lippu (165, 643), ruutu 402
-            // → webin kaavalla x 390 (vain 12 px näkyy) → kartuutsin yläpuolelle oikeaan reunaan (330, 612 − 64 − 8 = 540).
-            var y = ErikoisnostoMitat.SarakkeenPaikka(165, 643, 382, 612, 853, 64, 402, out _, out bool ylla);
-            Oleta.Tosi(ylla && Lahella(y.X, 330) && Lahella(y.Y, 540), $"{y} {ylla}");
-            // iPad (ruutu 1376): avattu kartuutsi 35–585 mahtuu → lipun alle kuten webissä (593, 822 + 20 + 8 = 850).
-            var z = ErikoisnostoMitat.SarakkeenPaikka(245, 842, 585, 804, 997, 64, 1376, out bool m3, out bool ylla3);
-            Oleta.Tosi(!ylla3 && m3 && Lahella(z.X, 593) && Lahella(z.Y, 850), $"{z} {m3} {ylla3}");
-            // Rajalla kuten webin #3857 (x + 64 + 8 > ruutu): x 330 ruudulla 401 → yllä, ruudulla 402 → ei.
-            ErikoisnostoMitat.SarakkeenPaikka(330, 643, 322, 612, 853, 64, 401, out _, out bool raja1);
-            ErikoisnostoMitat.SarakkeenPaikka(330, 643, 322, 612, 853, 64, 402, out _, out bool raja2);
-            Oleta.Tosi(raja1 && !raja2, $"{raja1} {raja2}");
         }
 
         [Testi]

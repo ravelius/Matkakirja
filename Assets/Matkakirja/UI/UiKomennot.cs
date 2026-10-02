@@ -1209,6 +1209,8 @@ namespace Matkakirja.Natiivi
                     // "ui erikoisnostot [tila|napauta <i>]": ajattelijan pää kartuutsin lipun alla (kehittäjätila).
                     var en = loput.Split(' ');
                     if (en[0] == "napauta") return "=" + ui.Erikoisnostot.Napauta(en.Length > 1 && int.TryParse(en[1], out int ei) ? ei : 0);
+                    if ((en[0] == "kipsi" || en[0] == "ymparisto") && en.Length > 3)
+                        return "=" + ui.Erikoisnostot.Saato(en[0], float.Parse(en[1], CultureInfo.InvariantCulture), float.Parse(en[2], CultureInfo.InvariantCulture), float.Parse(en[3], CultureInfo.InvariantCulture));
                     return "=" + ui.Erikoisnostot.Tila();
                 }
                 case "kortti":

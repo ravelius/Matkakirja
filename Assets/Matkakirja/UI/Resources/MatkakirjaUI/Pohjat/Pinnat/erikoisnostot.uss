@@ -17,6 +17,22 @@
     margin-left: 0;
     padding: 0;
     border-width: 0;
+}
+
+/* Pää (RenderTexture) koko napin kokoisena; varjo sen alla kartalla (omistaja 2.10. 16.4x), paikka koodista. */
+.mk-erikoisnosto-paa__kuva {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-erikoisnosto-paa__varjo {
+    position: absolute;
+    width: 52px;
+    height: 16px;
     -unity-background-scale-mode: stretch-to-fill;
 }
 

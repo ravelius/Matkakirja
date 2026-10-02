@@ -1,6 +1,6 @@
 // AJATTELIJAN PÄÄ KARTUUTSIN LIPUN ALLA (ERIKOISNOSTOT, Linssiseppä 2.10.2026; web #3843 js/ajattelijapaat.js luoPaanPiirtaja on malli).
 // Webin three.js-kohtaus samoin luvuin: MeshStandardMaterial (kipsiväri + normaalikartta, metallisuus 0, karheus 0,62),
-// AmbientLight 0,35 valkoinen ja DirectionalLight 2,6 (0xfff4e6), AgX-sävytys ja sRGB. Valo annetaan maailman suunnassa
+// DirectionalLight 2,6 (0xfff4e6), AgX-sävytys ja sRGB; 2.10. 16.4x kipsi lämpimäksi (_Kipsi) ja ympäristö ruskeanharmaaksi (_Ymparisto). Valo annetaan maailman suunnassa
 // (_Valo, kohti valoa); AjattelijaPaat.cs muuntaa kartan auringon suunnan pään kameran kehykseen kuten web (kameran koordinaatit).
 // Oma kerros ja kamera (Kartta/AjattelijaPaat.cs), piirto RenderTextureen vain kun asento tai valo muuttuu.
 Shader "Matkakirja/Kartta/AjattelijaPaa"
@@ -12,6 +12,8 @@ Shader "Matkakirja/Kartta/AjattelijaPaa"
         _NormaaliPaalla("Normaalikartta päällä", Float) = 1
         _Valo("Suunta kohti valoa (maailma)", Vector) = (-0.5, 0.8, -0.6, 0)
         _Karheus("Karheus", Float) = 0.62
+        _Kipsi("Kipsin lämpö ja valotus (kerroin)", Vector) = (1.9, 1.8, 1.6, 0)
+        _Ymparisto("Ympäristövalo (lämmin ruskeanharmaa)", Vector) = (0.42, 0.34, 0.26, 0)
     }
     SubShader
     {
@@ -30,7 +32,7 @@ Shader "Matkakirja/Kartta/AjattelijaPaa"
             TEXTURE2D(_NormalMap); SAMPLER(sampler_NormalMap);
             CBUFFER_START(UnityPerMaterial)
                 float4 _MainTex_ST;
-                float4 _Valo;
+                float4 _Valo, _Kipsi, _Ymparisto;
                 float _NormaaliPaalla, _Karheus;
             CBUFFER_END
 
@@ -81,13 +83,15 @@ Shader "Matkakirja/Kartta/AjattelijaPaa"
                     float3 nt = SAMPLE_TEXTURE2D(_NormalMap, sampler_NormalMap, i.uv).rgb * 2.0 - 1.0;
                     n = normalize(nt.x * t + nt.y * b + nt.z * n);
                 }
-                float3 albedo = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv).rgb;
+                // OMISTAJA 2.10. 16.4x: "pää on liian tumma ja sininen" → kipsi lämpimäksi ja vaaleaksi (valaistu puoli ≈ 210/202/185),
+                // varjopuolet lämpimän ruskeanharmaat (ei valkoista/sinistä ympäristövaloa).
+                float3 albedo = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.uv).rgb * _Kipsi.rgb;
                 float3 l = normalize(_Valo.xyz);
                 float3 v = normalize(GetCameraPositionWS() - i.maailma);
                 float nl = saturate(dot(n, l));
                 // three.js: suora = valo · n·l · albedo / π, ympäristö = 0,35 · albedo / π.
                 float3 valoVari = float3(1.0, 0.957, 0.902) * 2.6;
-                float3 c = albedo * (valoVari * nl + 0.35) / PI;
+                float3 c = albedo * (valoVari * nl + _Ymparisto.rgb) / PI;
                 // GGX-heijastus (F0 0,04, karheus 0,62) kuten MeshStandardMaterial.
                 float3 h = normalize(l + v);
                 float a = _Karheus * _Karheus, a2 = a * a;
