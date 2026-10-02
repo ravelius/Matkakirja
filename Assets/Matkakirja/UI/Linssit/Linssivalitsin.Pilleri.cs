@@ -277,7 +277,8 @@ namespace Matkakirja.Natiivi
                 sisalto = aukiId != null && linssiTiedot.TryGetValue(aukiId, out var t)
                     ? ("aktiivinen:" + aukiId, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t), LinssinIkoni(t))
                     : ("aktiivinen:", null, "Ei linssiä", "Kartta sellaisena kuin isoisä sen piirsi.", EiLinssiaIkoni);
-            else if (Auki && Valikkona && NykyinenNakyma == Nakyma.Aarteet)
+            // Valikko v2 (omistaja 2.10.2026 klo 21.4x: "ei kahta erillistä ikkunaa"): Aarteet on yksi ikkuna ilman esikatselua.
+            else if (Auki && Valikkona && NykyinenNakyma == Nakyma.Aarteet && !V2)
             {
                 // Tyhjissä Aarteissakin ikkuna (Päätoimittaja 30.9.2026): laukku ja lyhyt selite, kunnes jotain löytyy.
                 if (ensimmainenAarre.HasValue)
@@ -312,7 +313,8 @@ namespace Matkakirja.Natiivi
             ensimmainenAarre = null;
             var d = AarteetData?.Invoke();
             if (d == null) { Rakenne.Teksti("Matka ei ole vielä alkanut.", "mk-linssivalitsin__tyhja", aarteet); return; }
-            var loydetyt = d.AarninLuettelo.Where(a => a.Loydetty).ToList();
+            // Kehittäjätilassa kaikki aarteet näkyvät avattuina (omistaja 2.10.2026 klo 21.4x, kuten julisteet galleriassa).
+            var loydetyt = d.AarninLuettelo.Where(a => a.Loydetty || Asetukset.Kehittaja).ToList();
             Osio("Aarnin luettelo", loydetyt.Count, d.AarninLuettelo.Count);
             foreach (var a in loydetyt)
                 AarreRivi("aarre:" + a.Id, a.Nimi, a.KuvaUrl, a.Manner, () => Suurenna(a.KuvaUrl, a.Nimi));
@@ -335,6 +337,8 @@ namespace Matkakirja.Natiivi
                     AarreRivi("peli:" + id, g.Nimi, null, g.Selite, () => { Sulje(); MyllyNakyma.AvaaPeli(id); });
                 }
             }
+            // Valikko v2: julisteilla on oma rivinsä ja ikkunansa (GALLERIA), joten Aarteet-ikkunassa vain aarteet (omistaja 21.4x).
+            if (V2) return;
             Osio("Julisteet", d.Julisteet.Count, d.JulisteitaKaikkiaan);
             var avaimet = d.Julisteet.Select(j => j.Avain).ToList();
             foreach (var j in d.Julisteet)
@@ -364,6 +368,7 @@ namespace Matkakirja.Natiivi
             Label tila = null;
             b = Rakenne.Nappi(null, "mk-linssirivi mk-linssivalitsin__aarrerivi mk-linssirivi--aktivoi", () =>
             {
+                if (V2) { nayta?.Invoke(); return; } // yksi ikkuna: napautus avaa kuvan suoraan (omistaja 21.4x)
                 if (esiId != id) { Esikatsele(id, b, tila, kuvaUrl, nimi, selite, "Näytä", nayta, Ikonit.Laukku); return; }
                 nayta?.Invoke();
             }, aarteet);

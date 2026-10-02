@@ -210,8 +210,14 @@ namespace Matkakirja.Natiivi
             // kehittäjätilassa koko julistekokoelma kuten galleriassa). Julisteet asuvat toistaiseksi Aarteet-näkymässä (web).
             var laukku = v.LisaLuetteloRyhma("Matkalaukku");
             v.LisaMaara(v.LisaLuetteloRivi(laukku, "Aarteet", Ikonit.PilleriAarteet, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Aarteet)),
-                d => d.AarninLuettelo.Count(a => a.Loydetty) + d.Tavarat.Where(t => t.Tyyppi != global::Matkakirja.Peli.Laattatyypit.Paaaarre).Sum(t => t.Maara));
-            v.LisaMaara(v.LisaLuetteloRivi(laukku, "Julisteet", Ikonit.PilleriJulisteet, () => v.NaytaNakyma(Linssivalitsin.Nakyma.Aarteet)),
+                d => d.AarninLuettelo.Count(a => a.Loydetty || Asetukset.Kehittaja) + d.Tavarat.Where(t => t.Tyyppi != global::Matkakirja.Peli.Laattatyypit.Paaaarre).Sum(t => t.Maara));
+            // Julisteet avaa suoraan yhden ikkunan, jossa on vain julisteet (omistaja 2.10.2026 klo 21.4x; web avaaJulisteGalleria):
+            // GALLERIA-pohja. Kehittäjätilassa koko kokoelma auki (Julistegalleria.Rakenna).
+            v.LisaMaara(v.LisaLuetteloRivi(laukku, "Julisteet", Ikonit.PilleriJulisteet, () =>
+                {
+                    v.Sulje();
+                    Julistegalleria.Avaa(PeliOhjain.Instanssi?.Laukku()?.Julisteet.Select(j => j.Avain));
+                }),
                 d => Asetukset.Kehittaja && UiSisalto.Julisteet.Count > 0 ? UiSisalto.Julisteet.Count : d.Julisteet.Count);
             // Ei Linssit-riviä: linssit ovat kartalla omana nappinaan (omistaja 2.10.2026 klo 13.56 ja 18.3x "valikon linssit piti
             // siirtää kartalle oman napin alle!!!! älä tuo niitä tuohon valikkoon"; Linssisepän Linssit-karttanappi, web #3859).

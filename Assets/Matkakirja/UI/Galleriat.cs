@@ -3,8 +3,8 @@
 // JULISTEGALLERIA (webin js/ui.js avaaJulisteGalleria, css .julistegalleria): laukun
 // julisterivi "n/m »" avaa. Ylärivi "Julisteet n/m" ja ×; ryhmä per maanosa (webin
 // MANNER_NIMET-järjestys) otsikolla "Maanosa saatu/kaikki"; voitettu juliste = vedos
-// kaupungin nimellä (napautus → suurennos, selattava voitettujen sarja), voittamaton =
-// "?"-lukko. Data: UiSisalto.Julisteet (kokoelma julisteet), voitetut LaukkuNaytto.Julisteet.
+// kaupungin nimellä (napautus → suurennos, selaus saman maanosan voitetuissa, web #3870), voittamaton =
+// pelkkä reunus-kehys himmeällä pohjalla (ei kuvaa eikä nimeä). Data: UiSisalto.Julisteet (kokoelma julisteet), voitetut LaukkuNaytto.Julisteet.
 //
 // TIETÄJÄN TIE (webin js/tietajagalleria.js): laukun tietäjärivin "i" avaa. Selitys
 // (päätoimittajan kaanonteksti TIETAJASELITYS), nykyinen taso isona kuvana ja kaikki
@@ -40,6 +40,12 @@ namespace Matkakirja.Natiivi
             himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
             // GALLERIA-pohja (omistaja 2.10.2026 klo 15.5x, Pohjat/galleria.uss): PANEELI paperi, ✕ OHJAUSNAPPI.
             var kortti = Rakenne.El("mk-galleria tk-teema-paperi", himmennys);
+            // Web #3870: leveys min(leveys.levea, ruutu − vali.xl) (USS:ssä ei min()/calc()).
+            himmennys.RegisterCallback<GeometryChangedEvent>(e =>
+            {
+                float w = Mathf.Min(Tyylikirja.Leveys.Levea, e.newRect.width - Tyylikirja.Vali.Xl);
+                if (w > 0f && Mathf.Abs(kortti.resolvedStyle.width - w) > 0.5f) kortti.style.width = w;
+            });
             var yla = Rakenne.El("mk-galleria__yla", kortti, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("JULISTEET", "mk-galleria__otsikko", yla), Kirjasin.Kone);
             luku = Rakenne.Teksti("", "mk-galleria__luku", yla);
@@ -74,6 +80,14 @@ namespace Matkakirja.Natiivi
             SyoteLukko.Vapauta(this);
         }
 
+        /// <summary>Lukossa olevan ja kuvattoman ruudun pohja: reunus-väri 30 %:n peitolla (web color-mix reunus 30 %).</summary>
+        static void Himmea(VisualElement e)
+        {
+            Color c = Tyylikirja.Paperi.Reunus;
+            c.a *= 0.3f;
+            e.style.backgroundColor = c;
+        }
+
         static bool Voitettu(JulisteTiedot j, HashSet<string> saadut) => saadut.Contains(j.Id) || saadut.Contains(j.Kaupunki);
 
         void Rakenna(HashSet<string> saadut)
@@ -86,81 +100,44 @@ namespace Matkakirja.Natiivi
             string Manner(JulisteTiedot j) => UiSisalto.Kaupunki(j.Kaupunki)?.Manner ?? "muu";
             var jarjestys = Mantereet.Select(m => m.Id).ToList();
             var ryhmat = kaikki.GroupBy(Manner).OrderBy(g => { int i = jarjestys.IndexOf(g.Key); return i < 0 ? 99 : i; }).ToList();
-            // Selattava sarja: voitetut ryhmien järjestyksessä (web selattavat).
-            var sarja = ryhmat.SelectMany(g => g).Where(j => Voitettu(j, saadut)).ToList();
-            var teokset = sarja.Select(j => new LehtiKuva { Lahde = j.Url, Lyhyt = j.Otsikko, Selite = j.Selite ?? j.Lyhyt ?? j.Otsikko, Otsikko = j.Otsikko, LahdeRivi = "Matkakirjan oma paino" }).ToList();
-            foreach (var g in ryhmat)
+            // Web #3870: täysi koko selaa vain saman osion avoimia kuvia.
+            var osiot = ryhmat.ToList();
+            for (int oi = 0; oi < osiot.Count; oi++)
             {
+                var g = osiot[oi];
                 string nimi = Mantereet.FirstOrDefault(m => m.Id == g.Key).Nimi ?? "Muualla";
                 Kirjasimet.Aseta(Rakenne.Teksti($"{nimi.ToUpperInvariant()} {g.Count(j => Voitettu(j, saadut))}/{g.Count()}", "mk-galleria__ryhma", sisus), Kirjasin.Kone);
-                var ruudukko = Rakenne.El("mk-galleria__ruudukko", sisus, PickingMode.Ignore);
+                var ruudukko = Rakenne.El("mk-galleria__ruudukko" + (oi < osiot.Count - 1 ? " mk-galleria__ruudukko--vali" : ""), sisus, PickingMode.Ignore);
+                var sarja = g.Where(j => Voitettu(j, saadut)).ToList();
+                var teokset = sarja.Select(j => new LehtiKuva { Lahde = j.Url, Lyhyt = j.Otsikko, Selite = j.Selite ?? j.Lyhyt ?? j.Otsikko, Otsikko = j.Otsikko, LahdeRivi = "Matkakirjan oma paino" }).ToList();
                 foreach (var j in g)
                 {
                     if (!Voitettu(j, saadut))
                     {
+                        // Lukossa: ohut reunus-kehys ja himmeä pohja, ei kuvaa eikä nimeä (web #3870, tyylikirja GALLERIA).
                         var lukko = Rakenne.El("mk-galleria__vedos mk-galleria__vedos--lukossa", ruudukko, PickingMode.Ignore);
-                        lukko.Add(new Katkokehys());
-                        Kirjasimet.Aseta(Rakenne.Teksti("?", "mk-galleria__kysymys", lukko), Kirjasin.Luku);
+                        Himmea(Rakenne.El("mk-galleria__kuva", lukko, PickingMode.Ignore));
                         continue;
                     }
                     int kohta = sarja.IndexOf(j);
                     var vedos = Rakenne.Nappi(null, "mk-galleria__vedos", () => suurennos.Avaa(teokset, kohta), ruudukko);
                     var kuva = Rakenne.El("mk-galleria__kuva", vedos, PickingMode.Ignore);
-                    kuva.Add(new Katkokehys());
-                    // Viemätön tiedosto jättää nimen ja katkoviivakehyksen (web .kuvaton).
-                    if (j.Url == null) vedos.AddToClassList("mk-galleria__vedos--kuvaton");
+                    // Viemätön tiedosto: sama kehys kuin lukossa, nimi jää (web .kuvaton).
+                    if (j.Url == null) { vedos.AddToClassList("mk-galleria__vedos--kuvaton"); Himmea(kuva); }
                     else Kuvat.Hae(j.PikkuUrl, t =>
                     {
                         if (t != null) kuva.style.backgroundImage = new StyleBackground(t);
-                        else vedos.AddToClassList("mk-galleria__vedos--kuvaton");
+                        else { vedos.AddToClassList("mk-galleria__vedos--kuvaton"); Himmea(kuva); }
                     });
                     Kirjasimet.Aseta(Rakenne.Teksti(j.KaupunkiNimi ?? UiSisalto.Kaupunki(j.Kaupunki)?.Nimi ?? j.Kaupunki, "mk-galleria__nimi", vedos), Kirjasin.Kone);
                 }
                 // grid auto-fill minmax(92px, 1fr), gap .6rem; vedos 2:3.
                 Rakenne.Ruudukko(ruudukko, Tyylikirja.Galleria.Sarake, Tyylikirja.Galleria.Vali, (c, w) =>
                 {
-                    var k = c.ClassListContains("mk-galleria__vedos--lukossa") ? c : c.Q(className: "mk-galleria__kuva");
+                    var k = c.Q(className: "mk-galleria__kuva");
                     if (k != null) k.style.height = Mathf.Round(w * 1.5f);
                 });
             }
-        }
-    }
-
-    /// <summary>Katkoviivakehys (web border: 1px dashed): lukossa oleva ja kuvaton paikka. Väri = USS color.</summary>
-    sealed class Katkokehys : VisualElement
-    {
-        public Katkokehys()
-        {
-            pickingMode = PickingMode.Ignore;
-            AddToClassList("mk-katkokehys");
-            generateVisualContent += Piirra;
-        }
-
-        void Piirra(MeshGenerationContext mgc)
-        {
-            var r = contentRect;
-            if (r.width < 4 || r.height < 4) return;
-            var p = mgc.painter2D;
-            p.strokeColor = resolvedStyle.color;
-            p.lineWidth = 1f;
-            p.lineCap = LineCap.Butt;
-            const float Viiva = 4f, Vali = 3f;
-            void Sivu(Vector2 a, Vector2 b)
-            {
-                float pituus = Vector2.Distance(a, b);
-                for (float t = 0; t < pituus; t += Viiva + Vali)
-                {
-                    p.MoveTo(Vector2.Lerp(a, b, t / pituus));
-                    p.LineTo(Vector2.Lerp(a, b, Mathf.Min(pituus, t + Viiva) / pituus));
-                }
-            }
-            p.BeginPath();
-            float x0 = r.xMin + 0.5f, y0 = r.yMin + 0.5f, x1 = r.xMax - 0.5f, y1 = r.yMax - 0.5f;
-            Sivu(new Vector2(x0, y0), new Vector2(x1, y0));
-            Sivu(new Vector2(x1, y0), new Vector2(x1, y1));
-            Sivu(new Vector2(x1, y1), new Vector2(x0, y1));
-            Sivu(new Vector2(x0, y1), new Vector2(x0, y0));
-            p.Stroke();
         }
     }
 
