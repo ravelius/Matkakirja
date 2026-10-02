@@ -138,7 +138,15 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  * kuin 2026-09-26: sarja ILMAN viivatasoa, rantaa tai nostoja — levossa
  * rajat, joet ja nostot tulevat pyramidin lepokerroksesta kuten ennen.
  */
-export const PALLO_LAATTAVERSIO = '2026-09-27-pohja';
+/*
+ * PERUSKARTTA 2026-09-30 (omistaja 1.10.2026 klo 12.41 "KARTTA OK", vienti
+ * klo 12.01 "VIE"): raeton patina (omistajan valinta A 29.9.), GEOGLOWS-joet
+ * pohjaan ja viivatasolle koe-d-säännöin (ohut valumasta, hierarkia,
+ * järvileikkaus), Perekop pois. Sarja on DELTASARJA 27-sarjaa vasten
+ * (js/deltasarja.js; raeton muutti tällä kertaa kaikki laatat, joten
+ * kartta on täysi, mutta seuraava poltto vertautuu 30:een).
+ */
+export const PALLO_LAATTAVERSIO = '2026-09-30-pohja';
 /*
  * NOSTOTASOLLINEN KANSIO (omistaja 5.9.2026: "lisää palloon myös se
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
@@ -208,7 +216,7 @@ export const PALLO_LAATTAVERSIO = '2026-09-27-pohja';
  * versiovahti (js/pallolaatat.js lepokerroksenKerrokset) vaatii aina
  * saman viivaversion sarjaan ja luetteloon — muuten kerros sammuu.
  */
-export const PALLO_LAATTATUNNISTE = '20260927';
+export const PALLO_LAATTATUNNISTE = '20260930';
 /*
  * Sarja k on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
  * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
@@ -255,7 +263,7 @@ export const PALLO_LAATAT_SYVA = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAVERS
  * kaksoiskappaleena (activate ei siivoa perussarjan laattoja). null =
  * tuotantosarja on täysi sarja.
  */
-export const PALLO_LAATTAPERUS = null;
+export const PALLO_LAATTAPERUS = '2026-09-27-pohja-20260927';
 export const PALLO_SYVA_TASO = 0;
 /**
  * Laatan osoite laattamoottorille (slippy map -koordinaatit).

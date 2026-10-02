@@ -114,8 +114,9 @@ ALAVARA = 0.6   # näin paljon maanpinnan alapuolella olevat (urat romun alla) n
 VENYMA = 0.5    # venynyt kolmio: kärki painui yli tämän ja toinen kärki jäi yli tämän maasta
 # Venyneiden kolmioiden käsittely ryhmittäin: 'poista' (vapaa piha), 'jata' (muurin vieri: takana ei ole pintaa) tai
 # 'paikkaa' (v16: jätetään ja maalataan muurin kivellä edestä kloonaten, kuori_orto.seinapaikka) tai 'tayta' (v17:
-# pilkotaan ja saavat oman UV:n atlaksen vapaasta tilasta, sitten sama maalaus; kuori_tayte).
-RYHMAT = {'piha': 'poista', 'lounas': 'jata', 'koillinen': 'paikkaa', 'koillinen_kansi': 'paikkaa', 'itaportas': 'paikkaa', 'kaakko': 'tayta', 'koillisbastioni': 'poista',
+# pilkotaan ja saavat oman UV:n atlaksen vapaasta tilasta, sitten sama maalaus; kuori_tayte). v23 (1.10.): 'lounas' jata → tayta
+# (lounaisbastionin sisäkulman muurissa näkyi venymäraitoja lähikameraan).
+RYHMAT = {'piha': 'poista', 'lounas': 'tayta', 'koillinen': 'paikkaa', 'koillinen_kansi': 'paikkaa', 'itaportas': 'paikkaa', 'kaakko': 'tayta', 'koillisbastioni': 'poista',
           'lansipiha': 'poista', 'etela': 'poista', 'itabastioni': 'poista', 'ita_harja': 'poista', 'etela_katto': 'poista',
           'etela_alakatto': 'poista', 'vene': 'poista', 'ponttoni': 'paikkaa'}
 VEDEN_ALLE = {'ponttoni', 'vene'}

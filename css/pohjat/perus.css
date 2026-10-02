@@ -1,0 +1,175 @@
+/*
+ * PERUS: yhteiset osat kaikille pohjille (tekstiportaat, kuvasäännöt, napit).
+ * Osa UI-pohjien tyylejä (css/pohjat/, latausjärjestys js/pohjat/tyylit.js POHJAT_TYYLIT: tokenit → pohjat →
+ * pinnat). VAIN --tk-*-tokenit ja .tk-teema-*-luokat (tyylikirja/tyylikirja.json → tools/tyylikirja.mjs).
+ */
+
+/* ── Yhteiset tekstiportaat (typografia 7 porrasta) ───────────────────────── */
+
+.tk-kapiteeli,
+.tk-kortti .tk-kapiteeli, .tk-nostokortti .tk-kapiteeli {
+  margin: 0 0 var(--tk-vali-xs);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tk-muste-pehmea);
+}
+/* Kapiteelin piste: tietoa kantava väri (Ihmisen matkan virta), annetaan datasta (KorttiData.ylaVari). */
+.tk-kapiteeli__piste {
+  display: inline-block;
+  flex: none;
+  width: var(--tk-vali-s);
+  height: var(--tk-vali-s);
+  margin-right: var(--tk-vali-xs);
+  border-radius: var(--tk-kulma-pilleri);
+  background: var(--tk-piste, var(--tk-toiminto));
+  vertical-align: 0.05em;
+}
+.tk-otsikko,
+.tk-kortti .tk-otsikko, .tk-nostokortti .tk-otsikko {
+  margin: 0 0 var(--tk-vali-xs);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-otsikko);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--tk-muste);
+}
+.tk-apuri,
+.tk-kortti .tk-apuri, .tk-nostokortti .tk-apuri {
+  margin: 0 0 var(--tk-vali-s);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-apuri);
+  font-style: italic;
+  color: var(--tk-muste-pehmea);
+}
+.tk-leipa,
+.tk-kortti .tk-leipa, .tk-nostokortti .tk-leipa {
+  margin: 0 0 var(--tk-vali-s);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-leipa);
+  line-height: 1.45;
+  color: var(--tk-muste);
+}
+.tk-leipa--korostus { font-weight: 700; }
+.tk-valiotsikko {
+  margin: var(--tk-vali-m) 0 var(--tk-vali-xs);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-valiotsikko);
+  font-weight: 700;
+  color: var(--tk-korostus);
+}
+.tk-lahde {
+  margin: var(--tk-vali-xs) 0 0;
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  color: var(--tk-muste-pehmea);
+}
+.tk-viiva {
+  height: 1px;
+  margin: var(--tk-vali-s) 0;
+  border: 0;
+  background: var(--tk-reunus);
+}
+@media (min-width: 600px) {
+  .tk-otsikko { font-size: calc(var(--tk-koko-otsikko) + var(--tk-koko-leveaLisa)); }
+  .tk-leipa { font-size: calc(var(--tk-koko-leipa) + var(--tk-koko-leveaLisa)); }
+}
+
+/* ── Kuvasäännöt (0 / 1 hero 2:1 / 2 hero + upotus 4:3 40 % / 3+ hero + galleria 64 px) ─────── */
+
+.tk-kuva {
+  margin: 0 0 var(--tk-vali-s);
+}
+.tk-kuva img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--tk-kulma-pieni);
+  border: 1px solid var(--tk-reunus);
+  background: var(--tk-reunus);
+}
+.tk-kuva--hero img { aspect-ratio: 2 / 1; }
+.tk-kuva--suurennettava img { cursor: zoom-in; }
+.tk-kuva--upotus {
+  float: right;
+  width: var(--tk-kuva-upotus-leveys);
+  margin: var(--tk-vali-xs) 0 var(--tk-vali-s) var(--tk-vali-m);
+}
+.tk-kuva--upotus img { aspect-ratio: 4 / 3; }
+.tk-kuvateksti {
+  margin-top: var(--tk-vali-xs);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-kapiteeli);
+  font-style: italic;
+  line-height: 1.3;
+  color: var(--tk-muste-pehmea);
+}
+/* Runko pitää upotuksen sisällään; teksti kiertää kuvan. */
+.tk-runko { display: flow-root; }
+.tk-galleria {
+  display: flex;
+  gap: var(--tk-vali-xs);
+  margin: 0 0 var(--tk-vali-s);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.tk-galleria button {
+  flex: none;
+  height: var(--tk-kuva-galleria-korkeus);
+  aspect-ratio: 3 / 2;
+  padding: 0;
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-pieni);
+  overflow: hidden;
+  background: var(--tk-reunus);
+  cursor: zoom-in;
+}
+.tk-galleria img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* ── Napit: TOIMINTO (ohut reunus), ensisijainen (kulta), haamu; 38 pt, osuma ≥ 44 pt ───────── */
+
+.tk-napit {
+  display: flex;
+  gap: var(--tk-vali-s);
+}
+.tk-nappi {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  height: var(--tk-nappi-korkeus);
+  min-height: 0;
+  padding: 0 var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  background: transparent;
+  color: var(--tk-muste);
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-apuri);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+/* Näkymätön osuma-alan laajennus 38 → 44 pt. */
+.tk-nappi::after {
+  content: '';
+  position: absolute;
+  inset: calc((var(--tk-nappi-korkeus) - var(--tk-nappi-osuma)) / 2) 0;
+}
+/* Tiivis rivi (≥ 4 nappia): kapiteeliporras ja xs-reunus, jotta jokainen nimi mahtuu KAPEAAN ilman lyhennystä. */
+.tk-napit--tiivis { gap: var(--tk-vali-xs); }
+.tk-napit--tiivis .tk-nappi {
+  padding: 0 var(--tk-vali-xs);
+  font-size: var(--tk-koko-kapiteeli);
+  text-overflow: clip;
+}
+.tk-nappi--ensisijainen {
+  border-color: var(--tk-toiminto);
+  background: var(--tk-toiminto);
+  color: var(--tk-paperi-muste);
+}
+.tk-nappi--haamu { border-color: transparent; }
+.tk-nappi:focus-visible { outline: 2px solid var(--tk-toiminto); outline-offset: 2px; }

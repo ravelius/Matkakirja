@@ -1,0 +1,60 @@
+/*
+ * PINTA: linssin hampurilainen PANEELI (LASI) -pohjalla (js/aikajana-valikko.js).
+ * Osa UI-pohjien tyylejä (css/pohjat/, latausjärjestys js/pohjat/tyylit.js POHJAT_TYYLIT: tokenit → pohjat →
+ * pinnat). VAIN --tk-*-tokenit ja .tk-teema-*-luokat (tyylikirja/tyylikirja.json → tools/tyylikirja.mjs).
+ */
+
+/* ── PANEELI (LASI) puettuna linssin hampurilaiseen (js/aikajana-valikko.js; Natiivi-UI 1.10.2026, 2. erä) ─────────
+   Vain ulkoasu: järjestys Poistu, Aloita alusta | Kertoja, Taustamusiikki (omistaja 8.9.) ja sulku ennallaan.
+   Teema LASI, ISS-linssissä LASI-AVARUUS (kotelon tk-teema-*); peruttava ?paneeli=vanha. */
+
+.aikajana .tk-paneeli-linssivalikko .aikajana-nappi.aikajana-valikko-nappi {
+  position: relative;
+  width: var(--tk-nappi-korkeus);
+  min-width: var(--tk-nappi-korkeus);
+  height: var(--tk-nappi-korkeus);
+  min-height: var(--tk-nappi-korkeus);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  color: var(--tk-muste);
+}
+/* Näkymätön osuma-ala 38 → 44 pt kuten pohjan napeissa. */
+.tk-paneeli-linssivalikko .aikajana-valikko-nappi::after {
+  content: '';
+  position: absolute;
+  inset: calc((var(--tk-nappi-korkeus) - var(--tk-nappi-osuma)) / 2);
+}
+.tk-paneeli-linssivalikko .aikajana-valikko {
+  top: calc(100% + var(--tk-vali-s));
+  gap: var(--tk-vali-xs);
+  min-width: calc(var(--tk-vali-xl) * 10);
+  padding: var(--tk-vali-s);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-kortti);
+  background: var(--tk-pinta);
+  box-shadow: 0 10px 30px var(--tk-himmennys-kevyt);
+  backdrop-filter: blur(var(--tk-vali-m));
+}
+.tk-paneeli-linssivalikko .aikajana-valikko-kohta {
+  min-height: var(--tk-nappi-korkeus);
+  padding: 0 var(--tk-vali-m);
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  color: var(--tk-muste);
+  font-family: var(--font-luku);
+  font-size: var(--tk-koko-leipa);
+  letter-spacing: 0;
+}
+.tk-paneeli-linssivalikko .aikajana-valikko-kytkin { border-color: transparent; }
+.tk-paneeli-linssivalikko .aikajana-valikko-kohta:hover { background: color-mix(in srgb, var(--tk-toiminto) 12%, transparent); }
+.tk-paneeli-linssivalikko .aikajana-valikko-kohta:focus-visible { outline: 2px solid var(--tk-toiminto); outline-offset: 1px; }
+.tk-paneeli-linssivalikko .aikajana-valikko-tila {
+  color: var(--tk-muste-pehmea);
+  opacity: 1;
+  font-family: var(--font-type);
+  font-size: var(--tk-koko-kapiteeli);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.tk-paneeli-linssivalikko .aikajana-valikko-kytkin.valittu .aikajana-valikko-tila { color: var(--tk-korostus); font-weight: 700; }
+.tk-paneeli-linssivalikko .tk-paneeli__erotin { margin: var(--tk-vali-xs) 0; }
