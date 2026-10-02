@@ -481,6 +481,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     if (!e) return;
     new THREE.TextureLoader().loadAsync(`${R2}${e.kuva}`).then((tk) => {
       tk.colorSpace = THREE.NoColorSpace;
+      // Varjostin lukee kuvan rivit ylhäältä alas (1 − v) kuten atlaksen; ilman tätä kaiku piirtyi ylösalaisin.
+      tk.flipY = false;
       e.tk = tk;
       if (k === nykyKierros) sovitaKaiku(k);
     }).catch((syy) => console.warn('ajattelija: kaikukuva', e.kuva, syy));
