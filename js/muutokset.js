@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2571, teksti: '£-varakirjasin upotettuna (#3865)' },
   { v: 2570, teksti: 'Puhe äänenä: muotokuva ilman tekstiä, lehtivink… (#3869)' },
   { v: 2569, teksti: 'Kipsipäät: pisteet irti nimistä ja korteista, p… (#3874)' },
   { v: 2568, teksti: 'Valikko V2: väliviivat pois paitsi alin, Untuvi… (#3875)' },
