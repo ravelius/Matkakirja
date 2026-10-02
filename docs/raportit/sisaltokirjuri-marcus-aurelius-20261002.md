@@ -115,3 +115,22 @@ Lisenssi sanatarkasti: **"CC0"** — Commons: UsageTerms **"Creative Commons Zer
 
 ### 8.3 Päätettävää Päätoimittajalle
 (a) Goldberg Aria: Ishizakan CC0 OGG — hyväksytäänkö? (b) Beethoven: hyväksytäänkö Stokowski 1927 (PDM, historiallinen laatu), vai etsitäänkö uusi vapaa orkesterilevytys (Musopen selaimella tarkistettavaksi)? (c) Lupa ladata Stokowskin Allegretto (osa 2) mittaamista varten.
+
+### 8.4 Beethoven, Eroica (sinfonia nro 3), 2. osa "Marcia funebre. Adagio assai" — Musopen / Czech National Symphony Orchestra 2012 (löytyi, CC0)
+
+**Löytyi ja varmennettu kahdesta lähteestä:**
+- **Commons:** **File:Beethoven SymphonyNo.3Eroica LudwigVanBeethoven-SymphonyNo.3InEFlatMajorEroicaOp.55-02-MarciaFunebreAdagioAssai.ogg**, <https://commons.wikimedia.org/wiki/File:Beethoven_SymphonyNo.3Eroica_LudwigVanBeethoven-SymphonyNo.3InEFlatMajorEroicaOp.55-02-MarciaFunebreAdagioAssai.ogg> — esittäjä **Czech National Symphony Orchestra** (Musopen-sarja), lähde Musopen (musopen.org/music/piece/1562) / Internet Archive "Musopen Collection as FLAC" (<https://archive.org/details/MusopenCollectionAsFlac>), ladattu Commonsiin 26.10.2012. **Lisenssi sanatarkasti: "CC0"; UsageTerms "Creative Commons Zero, Public Domain Dedication"; sivun teksti "Creative Commons CC0 1.0 Universal Public Domain Dedication"** (<http://creativecommons.org/publicdomain/zero/1.0/deed.en>); attribuutio ei vaadittu (Musopen pyytää kuitenkin sisäistä kunniamainintaa URL:lla).
+- **IMSLP** (Symphony No.3, Op.55): Musopen-levytys, **Czech National Symphony Orchestra, 2012, Palo Alto: Musopen, 2012; lisenssi "Public Domain (dedicated)"**; 2. osa "Marcia funebre. Adagio assai", **15:33**.
+- **Kesto 15:28,5 (928,5 s)**; OGG Vorbis, 48 kHz, stereo, 96 kbit/s nimellinen, 9,7 Mt. Häviötön versio: **File:Beethoven - Symphony No. 3 in E flat major, Op. 55 'Eroica' - II. Marcia funebre. Adagio assai (Musopen Symphony).flac** (Commons, "Public domain", 150 Mt, ≈ 1 296 kbit/s, 2012).
+- **Laatuarvio:** nykyaikainen studiolevytys (2012), joten selvästi parempi kuin Stokowski 1927; OGG 96 kbit/s riittää introksi, FLAC jos halutaan puhtaampi jälkikoodaus. Kuuntelematta; arvio tiedoston tiedoista ja tasokäyrästä.
+- **Suositus: ensisijainen introksi (Päätoimittajan sääntö: PD/CC0 → ensisijainen).** Stokowski 1927 jää varalle.
+
+**Aikakoodit (mitattu: lataus omistajan luvalla, 9,7 Mt scratchpadiin; ffmpeg RMS-taso 0,25 s:n askelin; kuuntelematta, joten sisältö perustuu tasokäyrään ja partituurin tuttuun rakenteeseen):**
+- **Avaus (hiljainen, jouset; matala rytmipulssi alla):** ääni alkaa **0:00,5** (−87 → −55 dB), nousee **−34 dB:hen 0:01,75**, ja ensimmäinen fraasi päättyy **0:08,0–0:08,5 lähes hiljaisuuteen (−61…−65 dB)**; toinen toisto alkaa **0:08,75–0:09,0** (−48 → −39 dB). **Ehdotus 5–10 s introon: 0:00–0:08,4** (yksi kokonainen fraasi luonnollisine taukoineen; ei tarvitse häivytystä). Rytmi-iskut näkyvät käyrässä pieninä pulsseina ~0:01,5, 0:04,0–0:05,5 ja 0:06,0 (suhteessa pehmeitä, −34…−39 dB).
+- **Ensimmäinen nousu:** **0:29,5** (−41 → −29 dB, ensimmäinen selvä forte-isku), huippu **0:36,5–0:37,25** (−26…−27 dB). **10 s:n nousuleike: 0:27,0–0:37,0.**
+- **Suurempi nousu:** **1:08,75** alkaa (−50 → −39 dB) ja **1:16,25** iskee (−39 → −26 dB); leike **1:08,5–1:18,5**.
+- **Kirkastuva C-duuri-keskiosa:** hiljaisuus 2:06 (−65 dB), nousu **2:06,25** (−50 → −41 dB) ja **2:11,5 (−30 → −20 dB)** — loppupuolen "valoisa" kohta; leike **2:06,0–2:16,0**.
+- **Voimakkaimmat kohdat:** fugato/huippu ~**3:53,25** (−53 → −25 dB), **4:56,75–5:00,5** (−32 → −20 dB) ja kovin **6:16,0–6:17,0 (−32 → −17 dB)**.
+- Jos intro on 5–10 s ja sen jälkeen on tarkoitus siirtyä Goldberg-aariaan: leike **0:00–0:08,4**, häivytys 0,5–1 s.
+
+**Päätettävää Päätoimittajalle:** (a) Eroica 2. osa introksi (leike 0:00–0:08,4 tai nousuleike 0:27–0:37)? (b) Stokowski 1927 jää varalle.
