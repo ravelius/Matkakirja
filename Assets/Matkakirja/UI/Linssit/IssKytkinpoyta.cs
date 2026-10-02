@@ -230,6 +230,14 @@ namespace Matkakirja.Natiivi
                 var osuma = m is IssKytkimet.Lukema ? o
                     : Rect.MinMaxRect(Mathf.Min(o.xMin, o.center.x - 32f), Mathf.Min(o.yMin, o.center.y - 32f),
                                       Mathf.Max(o.xMax, o.center.x + 32f), Mathf.Max(o.yMax, o.center.y + 32f));   // 64 pt: vaakaskaalassa ≥ 44
+                // Osuma-ala ulottuu moduulin kilpeen (…-levy, esim. KUVAA:n "VALMIS") ja otsikkoon: savuke 1115:ssä napautus kilpeen
+                // (iPhone y 792) ei käynnistänyt KUVAA:a, koska kilpi oli moduulin 64 pt:n alueen alapuolella. Leveys ennallaan.
+                if (!(m is IssKytkimet.Lukema))
+                    foreach (var lisa in new[] { osaNimet[i] + "-levy", osaNimet[i] + "-otsikko" })
+                    {
+                        var l = IssPaneeliKuvat.Osa(a, lisa);
+                        if (l.HasValue) osuma = Rect.MinMaxRect(osuma.xMin, Mathf.Min(osuma.yMin, l.Value.yMin), osuma.xMax, Mathf.Max(osuma.yMax, l.Value.yMax));
+                    }
                 ryhmaEl.Add(m);
                 m.Kerros = true;
                 var ms = m.style;
