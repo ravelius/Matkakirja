@@ -46,7 +46,7 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 | Natiivi-UI | Matkakirja-natiivi-ui | natiivi-ui-luovutus-m | Opus, high | **b8d52344f** · d00c7f8b + 5cfe7253 käännös kesken, linssilista web #3878 |
 | Pelikoodari | Matkakirja-pelikoodari | pelikoodari-tyo-20260923 | Opus, high | **7cca600e9** · astro B1, B2 ja B4 PR:ssä #3879 (koko testisarja ajamatta), B3 vain natiivi; webin Topografian hampurilainen aloittamatta; kuvaparit proto-3d/lokit/pelikoodari-astro-20261002/ |
 | Linssiseppä | Matkakirja-linssiseppa | linssiseppa-tyo-20260923 | Opus, high | **1b11057e8** · Topografian hampurilainen d99f62c5 merge-pyynnössä |
-| Linssiseppä 2 | Matkakirja-linssiseppa-2 | linssiseppa2-tyo-20260928 | Opus, high | **edfc220db** · astro/ISS-erä |
+| Linssiseppä 2 | Matkakirja-linssiseppa-2 | linssiseppa2-tyo-20260928 | Opus, high | **9ce9efeb9** · astro/ISS-erä: paneeli ym. proto-haarassa linssiseppa2/astro-palaute 43bac2ff (kääntämättä ja kuvaamatta); POISTU-× punaisella Tyylikirja.Tila.Virhe -tokenilla hyväksytty |
 | Linnanrakentaja | Matkakirja-linnanrakentaja | linnanrakentaja-tyo-20260929 | Opus, high | **2de3e39c7** · erä 1b odottaa pelikuvia |
 | Siirtoseppä | Matkakirja-siirtoseppa | siirtoseppa-luovutus | Opus, high | **309ae5622** · jalkavarjo auki (0592decd ei toiminut), sitten hahmojen pelikuvat; peilit 5de728bc/275a2765 |
 | Karttaseppä | Matkakirja-karttaseppa | karttaseppa-tyo-20260922 | Opus, high | **3cdcfae7b** · S2-ketju irrotettuna |
