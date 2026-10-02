@@ -733,11 +733,19 @@ namespace Matkakirja.Natiivi
             // "poikki vesi [heijastus 0|1|auto]": järven planaariheijastus (Boat Attack -vesi, 1.10.2026) ja ympäristön tila.
             if (mita == "vesi")
             {
+                if (arvo == "syvyys" && osat.Length > 3) DioraamaYmparisto.SyvyysPaalla = osat[3] != "0";
                 if (arvo == "heijastus" && osat.Length > 3)
                     DioraamaYmparisto.HeijastusPakotettu = osat[3] == "0" ? false : osat[3] == "1" ? true : (bool?)null;
                 // "poikki vesi siirto <m>": vedenpinta alas/ylös vianetsintään (näkyykö maa veden alla), 0 = datan taso.
                 if (arvo == "siirto" && osat.Length > 3) nayttamo?.Ymparisto?.SiirraVesi((float)Luku(osat[3]));
                 o.Kirjaa($"poikki: vesi: ympäristö {nayttamo?.Ymparisto?.Tila ?? "-"}, heijastus {(DioraamaYmparisto.HeijastusPakotettu.HasValue ? (DioraamaYmparisto.HeijastusPakotettu.Value ? "päällä" : "pois") : "auto")}");
+                return;
+            }
+            // "poikki kaistat [0|1|auto]": isojen ASTC-tekstuurien kaistoittainen GPU-lataus (linnan piikit 2.10.) vertailuun.
+            if (mita == "kaistat")
+            {
+                DioraamaAstc.KaistatPakotettu = arvo == "0" ? false : arvo == "1" ? true : (bool?)null;
+                o.Kirjaa($"poikki: kaistat {(DioraamaAstc.KaistatPakotettu == false ? "pois" : "päällä")} (seuraava lataus)");
                 return;
             }
             // "poikki detalji [0|1|auto]": kuoren lähidetalji päälle/pois vertailua varten (menetelmä B, 30.9.2026).
