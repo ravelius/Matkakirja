@@ -26,8 +26,8 @@ Seurantanäkymää ei ole (omistaja poisti 2.10.).
 ## 3. SEURAAVAKSI: ajattelijoiden v11-erä natiiviin (kun Pelikoodarin #3888–#3892 on mainissa)
 
 Päätoimittaja 3.10. 01.5x: (a) ✕ natiivissa astronautin kameran pyöreällä sulkunappipohjalla + piilossa napautukseen asti (4 s, sama
-mekanismi kuin astron AUTO); jos pohja ei sovi → kysy Päätoimittajalta. (b) Auringon normalisointi (#3884 poisti webistä):
-Päätoimittaja kysyy Pelikoodarilta; jos tarkoituksellinen → peilaa v11-erässä, muuten natiivi ennallaan. Muut:
+mekanismi kuin astron AUTO); jos pohja ei sovi → kysy Päätoimittajalta. (b) Auringon normalisointi: webin poisto oli vahinko,
+Pelikoodari palautti sen #3892:een (af02da9e7) → natiivi on oikein, EI muutosta. Muut:
 - #3891 + omistaja 3.10. 00.0x: ✕ piilossa kunnes napautus, häipyy 4 s (webin AUTO_HILJAA_MS; Päätoimittaja sanoi ~3 s, web voittaa);
   kytkimen napsahdus äänitteeksi ajattelijat/yhteiset/v2/kytkin-kaiku.mp3; taustavirta.nopeus { mms 25, vaihtelu 0,15 }
   (uv/ruutu = mms/1000 × kerroin/30/(kork × laatan lev px/laatan kork px), kertoimet tasavälein 0,85–1,15 sekoitettuna siemenellä);
