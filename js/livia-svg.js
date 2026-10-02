@@ -383,7 +383,8 @@ export function livianEvaKerrosSvg(kerros,s,{prefix='livia-eva'}={}) {
 /** Robotin lisäkerrokset: varsi jatkuu saman ylänurkan alla 800 yksikköön. */
 export function livianEvaRobottiKerrosSvg(kerros,{prefix='livia-eva-robotti'}={}) {
  if(!LIVIAN_EVA_ROBOTTI_KERROKSET.includes(kerros))throw new RangeError(`Tuntematon robotin kerros: ${kerros}`);
- const pitka=kerros==='varsi'||kerros==='reunavalo',korkeus=pitka?800:304;
+ // Turvaköyden lenkki ulottuu y ≈ 326:een, joten sen kangas on 400 (sama kuin natiivissa, Linssiseppä 2 2.10.2026).
+ const pitka=kerros==='varsi'||kerros==='reunavalo',korkeus=pitka?800:kerros==='turvaköysi'?400:304;
  const sisalto=kerros==='varsi'?livianEvaRobotinVarsi(prefix)
   :kerros==='reunavalo'?livianEvaRobotinReunavalo(prefix)
   :kerros==='turvaköysi'?livianEvaRobotinTurvakoysi():livianEvaRobotinPidikkeet();

@@ -56,7 +56,7 @@ test('robottikäsi sitoo saman Pulun jalkatukeen ilman vapaata köyden päätä'
 test('robotin pitkät ja lyhyet 2x-kerrokset säilyvät erillisinä',()=>{
   for(const [kerros,tiedosto] of Object.entries({varsi:'varsi',reunavalo:'reunavalo','turvaköysi':'turvakoysi',pidikkeet:'pidikkeet'})){
     const svg=livianEvaRobottiKerrosSvg(kerros);
-    const korkeus=['varsi','reunavalo'].includes(kerros)?800:304;
+    const korkeus=['varsi','reunavalo'].includes(kerros)?800:kerros==='turvaköysi'?400:304;
     assert.match(svg,new RegExp(`viewBox="0 0 152 ${korkeus}"`));
     assert.doesNotMatch(svg,/data-part="eva-puku"|data-part="astronautti-kypara"/);
     const png=readFileSync(new URL(`../assets/livia/livia-eva-robotin-${tiedosto}-2x.png`,import.meta.url));
