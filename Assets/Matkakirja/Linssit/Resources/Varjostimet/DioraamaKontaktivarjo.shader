@@ -8,7 +8,7 @@ Shader "Matkakirja/Linssit/DioraamaKontaktivarjo"
 {
     Properties
     {
-        _VarjoVari("Lattian kerroin keskellä (RGB; alfaa ei käytetä)", Color) = (0.63, 0.6, 0.58, 1)
+        _VarjoVari("Lattian kerroin keskellä (RGB; alfaa ei käytetä)", Color) = (0.3, 0.29, 0.28, 1)
         _VarjoVeto("Siirto kameraa kohti (m)", Float) = 0.4
         [Enum(UnityEngine.Rendering.BlendMode)] _Lahde("Sekoitus: lähde", Float) = 2
         [Enum(UnityEngine.Rendering.BlendMode)] _Kohde("Sekoitus: kohde", Float) = 0

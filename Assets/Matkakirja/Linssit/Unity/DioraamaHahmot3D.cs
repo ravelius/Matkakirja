@@ -240,7 +240,9 @@ namespace Matkakirja.Natiivi
         /// seisoja) juuren alle tulee pehmeä levy, joka liikkuu ja kääntyy hahmon mukana. Periaate kuten kartan symbolimallien
         /// maakontaktissa (Symbolimallit.Rakentaja PohjaVerkko): peitto keskellä, pehmeä lasku reunalle.</summary>
         const float VarjoSade = 0.55f, VarjoNosto = 0.012f;
-        static readonly Color VarjoVari = new Color(0.63f, 0.6f, 0.58f, 1f);
+        // Kerroin 0,3 (savuke 22.32, lokit/siirtoseppa-skin17): 0,63 piirtyi koko ajan (lattia tummui keskellä ~0,6:een), mutta
+        // ydin jää jalkojen alle eikä heikko reuna erotu tummalla lattialla; 0,3 näkyy selvänä pehmeänä varjona.
+        static readonly Color VarjoVari = new Color(0.3f, 0.29f, 0.28f, 1f);
         static Mesh varjoVerkko;
         static Material varjoMateriaali;
 
@@ -260,6 +262,7 @@ namespace Matkakirja.Natiivi
                 var sh = Resources.Load<Shader>("Varjostimet/DioraamaKontaktivarjo");
                 if (sh == null) { Debug.LogWarning("MATKAKIRJA linssit: kontaktivarjon varjostin puuttuu (Varjostimet/DioraamaKontaktivarjo)"); return; }
                 varjoMateriaali = new Material(sh) { name = "Hahmo3D/kontaktivarjo" };
+                varjoMateriaali.SetColor("_VarjoVari", VarjoVari);
             }
             var g = new GameObject("Kontaktivarjo") { layer = DioraamaNayttamo.Kerros };
             g.transform.SetParent(juuri, false);
