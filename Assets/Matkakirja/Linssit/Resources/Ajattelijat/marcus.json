@@ -10,7 +10,11 @@
  "malli": "ajattelijat/marcus/v1/marcus-L1.glb",
  "kartta": {
   "glb": "ajattelijat/kartta/v1/marcus-kartta.glb",
-  "maa": "ITA"
+  "maa": "ITA",
+  "piste": [
+   42.4,
+   13.1
+  ]
  },
  "kipsi": "ajattelijat/yhteiset/kipsi-nor-1k.jpg",
  "korkeus": 0.51,

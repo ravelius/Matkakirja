@@ -1,17 +1,22 @@
-/* ERIKOISNOSTOT (pinta; omistaja 2.10.2026 klo 12.34, web css/pohjat/erikoisnostot.css #3843, tyylikirja.json pohjat.ERIKOISNOSTOT):
- * sarake kartuutsin lipun alla kartuutsin rungon vieressä (UI/Erikoisnostot.cs asemoi). Osa PÄÄ: ajattelijan 3D-pää läpinäkyvällä
- * taustalla kuten minipulu, ilman kehystä; osuma ≥ 44; nimi vain VoiceOverille. Enintään 3 allekkain. VAIN --tk-*-tokenit. */
+/* ERIKOISNOSTOT (pinta; omistaja 2.10.2026 klo 12.34, 16.4x ja 16.5x; web css/pohjat/erikoisnostot.css #3866, tyylikirja.json
+ * pohjat.ERIKOISNOSTOT): koko ruudun läpinäkyvä kerros, jossa jokainen PÄÄ on karttaobjekti omassa karttapisteessään
+ * (UI/Erikoisnostot.cs asettaa left/top). Osa PÄÄ: 3D-pää ja sen varjo paperilla läpinäkyvällä kankaalla (1,5 × pää = 96),
+ * ilman kehystä; osuma ≥ 44; nimi vain VoiceOverille. VAIN --tk-*-tokenit. */
 .mk-erikoisnostot {
     position: absolute;
-    flex-direction: column;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .mk-erikoisnosto-paa {
-    width: var(--tk-nappi-laukaisin);
-    height: var(--tk-nappi-laukaisin);
+    position: absolute;
+    width: 96px;
+    height: 96px;
     min-width: var(--tk-nappi-osuma);
     min-height: var(--tk-nappi-osuma);
-    margin-top: var(--tk-vali-s);
+    margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
@@ -19,7 +24,7 @@
     border-width: 0;
 }
 
-/* Pää (RenderTexture) koko napin kokoisena; varjo sen alla kartalla (omistaja 2.10. 16.4x), paikka koodista. */
+/* Varjo ja pää samassa kehyksessä napin kokoisina (varjo ensin, pää päälle). */
 .mk-erikoisnosto-paa__kuva {
     position: absolute;
     left: 0;
@@ -27,15 +32,4 @@
     right: 0;
     bottom: 0;
     -unity-background-scale-mode: stretch-to-fill;
-}
-
-.mk-erikoisnosto-paa__varjo {
-    position: absolute;
-    width: 52px;
-    height: 16px;
-    -unity-background-scale-mode: stretch-to-fill;
-}
-
-.mk-erikoisnosto-paa--ensimmainen {
-    margin-top: 0;
 }

@@ -1,5 +1,5 @@
-// ERIKOISNOSTOT (Kartta/ErikoisnostoMitat.cs): samat tapaukset kuin webin tests/ajattelijapaat.test.mjs (#3843) — nenän kääntö,
-// sarakkeen paikka lipun alla tai kartuutsin vieressä, heilahduksen jousi.
+// ERIKOISNOSTOT (Kartta/ErikoisnostoMitat.cs): samat tapaukset kuin webin tests/ajattelijapaat.test.mjs (#3866) — nenän kääntö,
+// pää karttapisteen päällä, heilahduksen jousi.
 using System;
 using Matkakirja;
 
@@ -21,17 +21,13 @@ namespace Matkakirja.Kartta.Testit
         }
 
         [Testi]
-        static void SarakeLipunAllaTaiKartuutsinVieressa()
+        static void PaaSeisooKarttapisteenPaalla()
         {
-            // Web: kartuutsi { left 20, right 240, bottom 832 }, lippu { left 150, bottom 560 }, korkeus 64 → (248, 568) mahtuu.
-            var p = ErikoisnostoMitat.SarakkeenPaikka(150, 560, 240, 832, 64, out bool mahtuu);
-            Oleta.Tosi(Lahella(p.X, 248) && Lahella(p.Y, 568) && mahtuu, $"{p} {mahtuu}");
-            // Puhelin (393 × 852): nimirivi päättyy 804 → pää nousee kartuutsin viereen (248, 768).
-            var q = ErikoisnostoMitat.SarakkeenPaikka(20, 804, 240, 832, 64, out bool mahtuu2);
-            Oleta.Tosi(Lahella(q.X, 248) && Lahella(q.Y, 768) && !mahtuu2, $"{q} {mahtuu2}");
-            // Korkea sarake ei nouse ruudun yläreunan yli.
-            var r = ErikoisnostoMitat.SarakkeenPaikka(20, 804, 240, 100, 300, out _);
-            Oleta.Tosi(Lahella(r.Y, 0), r.ToString());
+            // Web #3866: paanRuutupaikka({ x: 200, y: 400 }, 393 × 852) → (200, 400 − 64 · 0,35); kaukana ruudun ulkopuolella → piiloon.
+            Oleta.Tosi(ErikoisnostoMitat.PaanRuutupaikka(200, 400, 393, 852, out float x, out float y) && Lahella(x, 200) && Lahella(y, 400 - 64 * 0.35), $"{x} {y}");
+            Oleta.Tosi(!ErikoisnostoMitat.PaanRuutupaikka(-500, 400, 393, 852, out _, out _), "vasemmalla ulkona");
+            Oleta.Tosi(ErikoisnostoMitat.PaanRuutupaikka(-30, 400, 393, 852, out _, out _), "reunan yli puoliksi näkyy");
+            Oleta.Tosi(!ErikoisnostoMitat.PaanRuutupaikka(float.NaN, 400, 393, 852, out _, out _), "NaN");
         }
 
         [Testi]

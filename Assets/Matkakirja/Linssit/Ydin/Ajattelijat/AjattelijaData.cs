@@ -122,6 +122,8 @@ namespace Matkakirja.Linssit.Ajattelijat
         public List<string> PulunKysymykset = new List<string>();
         /// <summary>Kartan pää (web #3843 kartta.maa ISO3 ja kartta.glb); null = ei karttapäätä.</summary>
         public string KarttaMaa, KarttaGlb;
+        /// <summary>Kiinteä karttapiste [lat, lng] (web kartta.piste) tai null.</summary>
+        public double[] KarttaPiste;
 
         /// <summary>Webin tarkistaAjattelija: puuttuvat pakolliset kentät (tyhjä = kelpaa). Natiivin lisäys: atlas.</summary>
         public static List<string> Tarkista(Dictionary<string, object> a)
@@ -263,6 +265,8 @@ namespace Matkakirja.Linssit.Ajattelijat
             d.Puhe = T(aani, "puhe"); d.Musiikki = T(aani, "musiikki");
             var kartta = O(a, "kartta");
             d.KarttaMaa = T(kartta, "maa"); d.KarttaGlb = T(kartta, "glb");
+            // Kiinteä karttapiste [lat, lng] (omistaja 2.10. 16.5x, web #3866 kartta.piste): pää karttaobjektina.
+            d.KarttaPiste = kartta != null && K(kartta, "piste") is List<object> kp && kp.Count == 2 ? Vek(kp) : null;
             return d;
         }
 

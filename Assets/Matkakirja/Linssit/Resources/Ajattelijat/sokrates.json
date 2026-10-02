@@ -6,7 +6,11 @@
  "malli": "ajattelijat/sokrates/v1/sokrates-L1.glb",
  "kartta": {
   "glb": "ajattelijat/kartta/v1/sokrates-kartta.glb",
-  "maa": "GRC"
+  "maa": "GRC",
+  "piste": [
+   39.05,
+   24.1
+  ]
  },
  "kipsi": "ajattelijat/yhteiset/kipsi-nor-1k.jpg",
  "korkeus": 0.51,
