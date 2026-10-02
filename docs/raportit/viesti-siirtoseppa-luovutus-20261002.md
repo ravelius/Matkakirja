@@ -24,6 +24,10 @@ TEHTY 23.13: peili 6cd8735b3a42ea3c (Muurinharjan kääntöpiste 1,28 m tulikori
 omistaja-linna-hahmot-6cd8735b.png → Päätoimittajalle. Seuraava: omistajan OK → skin-osoitin 2abec0c9 → 6cd8735b Päätoimittajan ja Julkaisijan kautta.
 TEHTY 23.27: peili dad4d0f39cd2c9c2 (irralliset tunnelma-liekit pois) kuvattu, lokit/siirtoseppa-skin21; UUSI omistajan arkki
 omistaja-linna-hahmot-dad4d0f3.png → Päätoimittajalle (korvaa 6cd8735b). Osoitinehdokas nyt dad4d0f3. Natiivi: JSON- + liekki:-solmuliekit tuplana, ei muutettu ilman käskyä.
+TEHTY 23.38: liekit kerran = proto siirtoseppa/liekit-kerran 473267d2 (käännös a6db66ba, simu 2 peiliä, 0 virhettä) → merge-pyyntö junaan 132.
+OMISTAJAN OK 23.3x skin-hahmoille (osoitin dad4d0f3). Osoitin = ämpärin uusin.json (nyt ec7eb286), vaihtuu vie-dioraama.yml käsiajolla osoitin=true.
+Kulku: PR ravelius/Matkakirja#3885 (Linnanrakentaja, blender 916731d7 jo ämpärissä) mergetään → CI vie hash-kansion → KUITTAA puhtaalla
+asennuksella (ajo-ymparisto-kuittaus.sh, APP lokit/juna-1.1.130-e406ead2) → Julkaisija osoitin=true → todenna tuotannosta → Päätoimittajalle.
 
 1. **Linnan hahmojen jalkavarjo (omistaja 20.2x: "kävelijä tarvitsee vielä varjon jalkojensa alle") — EI VIELÄ NÄY.**
    Haara `siirtoseppa/linna-skin`, kärki **39a396e3** (KÄÄNNETTY 8219c063, app lokit/siirtoseppa-skin16-app).
