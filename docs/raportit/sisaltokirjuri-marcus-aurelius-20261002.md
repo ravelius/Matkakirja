@@ -22,20 +22,20 @@ toisin kuin Sokrateella, ne ovat hänen omia sanojaan, eivät "Platonin mukaan".
 **Kierros 1 — miten pitäisi elää?**
 Mietelause (*Itselleen* 10.16): *Älä enää puhu siitä, millainen hyvän ihmisen pitäisi olla. Ole sellainen.* (73 merkkiä, 11 sanaa)
 Kreikka: **Μηκέθ᾽ ὅλως περὶ τοῦ οἷόν τινα εἶναι τὸν ἀγαθὸν ἄνδρα διαλέγεσθαι, ἀλλὰ εἶναι τοιοῦτον.**
-Elämänkokemus: *Marcus Aurelius oli Rooman keisari vuodesta 161 vuoteen 180. Hän kirjoitti muistiinpanonsa itselleen kreikaksi sotaretkillä, osan kvadien maassa Granuan varrella ja osan Carnuntumissa.* (184 merkkiä)
-Lähteet: *Itselleen* 10.16 (Wikisource, Perseus); Marcus Aurelius, Wikipedia (keisari 7.3.161–17.3.180; *Meditations* kirjoitettu kreikaksi sotaretkillä; paikat "Among the Quadi on the river Gran" ja "at Carnuntum").
+Elämänkokemus: *Rooman keisari Marcus Aurelius kirjoitti sotaretkillä muistiinpanoja vain itselleen, kreikaksi. Osa niistä syntyi kvadien maassa Granuan varrella, osa Carnuntumissa Tonavan rannalla.* (182 merkkiä)
+Lähteet: *Itselleen* 10.16 (Wikisource, Perseus); Marcus Aurelius, Wikipedia (keisari 7.3.161–17.3.180; *Meditations* kirjoitettu kreikaksi sotaretkillä; paikat "Among the Quadi on the river Gran" ja "at Carnuntum"); Carnuntum on Tonavan varrella (Pannonia).
 
 **Kierros 2 — ikävät asiat**
-Mietelause (*Itselleen* 4.7): *Poista arvio, ja ”minua on vahingoitettu” poistuu; poista se, ja vahinkokin poistuu.* (84 merkkiä, 12 sanaa)
-Kreikka: **Ἆρον τὴν ὑπόληψιν, ἦρται τὸ βέβλαμμαι· ἆρον τὸ βέβλαμμαι, ἦρται ἡ βλάβη.**
-Elämänkokemus: *Antoninuksen rutto levisi Rooman valtakuntaan vuonna 165 tai 166, ja se tappoi arvioiden mukaan viidestä kymmeneen miljoonaa ihmistä. Marcuksen kanssakeisari Lucius Verus kuoli vuonna 169, mahdollisesti ruttoon.* (211 merkkiä)
-Lähteet: *Itselleen* 4.7 (Wikisource); Marcus Aurelius, Wikipedia (rutto alkoi "in 165 or 166", kuolleita "five to ten million", Lucius Verus kanssakeisarina 161–169 ja "may have died from the plague in 169").
+Mietelause (*Itselleen* 4.49): *Ole kuin niemi, johon aallot lyövät lakkaamatta. Se pysyy paikallaan, ja vesi tyyntyy sen ympärillä.* (100 merkkiä, 15 sanaa)
+Kreikka: **Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται· ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος.**
+Elämänkokemus: *Marcuksen hallituskaudella Antoninuksen rutto tappoi arvioiden mukaan viidestä kymmeneen miljoonaa ihmistä. Hänen kanssakeisarinsa Lucius Verus kuoli vuonna 169, mahdollisesti ruttoon.* (184 merkkiä)
+Lähteet: *Itselleen* 4.49 (Perseus/Leopold-numerointi; Wikisourcen Farquharson-painoksessa sama lause on numeroitu 4.48, ja 4.49 on seuraava kappale kuolemanpelosta); Marcus Aurelius, Wikipedia (rutto alkoi "in 165 or 166", kuolleita "five to ten million", Lucius Verus kanssakeisarina 161–169 ja "may have died from the plague in 169").
 
 **Kierros 3 — kuolema ja perintö**
 Mietelause (*Itselleen* 2.11): *Tee, sano ja ajattele kaikki niin, kuin voisit jo nyt lähteä elämästä.* (70 merkkiä, 12 sanaa)
 Kreikka: **Ὡς ἤδη δυνατοῦ ὄντος ἐξιέναι τοῦ βίου, οὕτως ἕκαστα ποιεῖν καὶ λέγειν καὶ διανοεῖσθαι.**
-Elämänkokemus: *Marcus Aurelius teki poikansa Commoduksen kanssakeisarikseen vuonna 177. Hän kuoli sotaretkellä Tonavan rajalla maaliskuussa 180, ja Commodus peri vallan.* (154 merkkiä)
-Lähteet: *Itselleen* 2.11 (Wikisource); Marcus Aurelius, Wikipedia (Commodus kanssakeisarina 177–180 ja seuraaja; kuolema 17.3.180 "Vindobona … or Sirmium" eli Tonavan rajaseutu; Marcomannisodat 166–180).
+Elämänkokemus: *Marcus kuoli sotaretkellä Tonavan rajalla vuonna 180. Vallan peri hänen poikansa Commodus, joka myöhemmin taisteli gladiaattorina areenalla.* (140 merkkiä)
+Lähteet: *Itselleen* 2.11 (Wikisource); Marcus Aurelius, Wikipedia (kuolema 17.3.180 "Vindobona … or Sirmium", Commodus kanssakeisarina 177–180 ja seuraaja; Marcomannisodat 166–180); **Cassius Dio, *Rooman historia* 73(72).17–22** (aikalainen: Commodus esiintyi gladiaattorina, "secutor"-asussa 19.2; Dio kertoo olleensa itse senaattorina läsnä, 18.3 ja 19.4; Thayer/Penelope, Cary-Loeb-käännös: <https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/73*.html>).
 
 ## 3. Pulun viisi kysymystä (samalla jaolla kuin Sokrateella; 20–48 merkkiä)
 
@@ -53,9 +53,9 @@ Nimi, elinvuodet ja kysymys ovat vain tekstiä; lukija lukee vain kierrokset:
 
 | Osa | Merkkiä (välilyönteineen) |
 |---|---|
-| Mietelauseet (3) | 73 + 84 + 70 = 227 |
-| Elämänkokemukset (3) | 184 + 211 + 154 = 549 |
-| **Lukijan tekstit yhteensä** | **776** |
+| Mietelauseet (3) | 73 + 100 + 70 = 243 |
+| Elämänkokemukset (3) | 182 + 184 + 140 = 506 |
+| **Lukijan tekstit yhteensä** | **749** |
 
 Pulun kysymykset (194 merkkiä) ovat Pulun chat-tekstiä eivätkä kuulu tähän. Ääniluvan pyyntö (palvelu, tekstit sanatarkasti, merkkimäärä/hinta) tulee omistajalle Raamatun UUSIA ÄÄNIÄ -säännön mukaan.
 
@@ -74,3 +74,9 @@ Pulun kysymykset (194 merkkiä) ovat Pulun chat-tekstiä eivätkä kuulu tähän
 6. **Kuolinpaikka:** Wikipedian mukaan Vindobona tai Sirmium (kumpikin Tonavan rajaseutua); kirjoitin "sotaretkellä Tonavan rajalla", mikä pätee kumpaankin.
 7. **Kuvaukset (kohtaus, ei kuvia):** tämä dokumentti kattaa tekstit, ei bystin kuvia eikä musiikkia. Kuvaehdotukset (Rooma-kohtaus: esim. Marcus Aureliuksen ratsastajapatsas, Marcus Aureliuksen pylväs, rintakuvat) tehdään erikseen pyydettäessä samalla lähdekurilla.
 8. **Pulun kysymykset** ovat ehdotuksia; kysymys 3 ("Millainen ihminen …") saa Pulun live-mallilta vastauksen, jonka faktat pitää tarkistaa (Marcus oli stoalainen, hänen kuvauksensa Historia Augustassa on osin epäluotettava).
+
+## 7. Päätoimittajan muutokset 2.10. (päivitetty yllä)
+
+- **4.49 tarkistettu:** kreikka täsmää Päätoimittajan antamaan sanatarkasti (Wikisource: "Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται˙ ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος"; Perseus-viite hakutuloksessa). Suomennos ei poikkea olennaisesti. Pieni tiivistys: *τὰ φλεγμήναντα τοῦ ὕδατος* on "veden kuohuva/turvonnut osa", suomennoksessa "vesi"; täsmällisempi: "ja kuohuva vesi tyyntyy sen ympärillä" (valinnainen). Numerointiero: Perseus/Leopold 4.49, Wikisource/Farquharson 4.48.
+- **Dio tarkistettu:** Cassius Dio 73(72).17–22: Commodus esiintyi gladiaattorina (17.2, 19.2), Dio itse läsnä (18.3, 19.4). Päätoimittajan lause "joka myöhemmin taisteli gladiaattorina areenalla" on lähteen mukainen. Lähde kirjattu kierrokselle 3.
+- Mietelause 2 on nyt 15 sanaa (aiemmin 12); mietelauseet ovat edelleen yli Sokrateen 8 sanan rajan.
