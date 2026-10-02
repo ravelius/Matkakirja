@@ -481,5 +481,485 @@
   ],
   "luenta_b": 960,
   "huom": "kohtauksen ruudut; videossa prologi 120 ruutua ensin"
+ },
+ "kierrokset_2_3": {
+  "huom": "Pelin aineisto kierroksille 2–3 (Linnanrakentaja 2.10. 12.3x; ei videota). Rakenne kuten Sokrateen v9/v10: lause nauhana kasvoilla → lähderivi → kaiku ainoana valona (aurinko 95 W → 0 ja tausta 1 → 0, 45 ruutua). Kaikki luvut Blenderin koordinaateissa (z ylös, kasvot −y), 30 r/s kohtauksen ruuduissa. Täydet kamera- ja valoavaimet (myös syke ja 60 taustavirran projektoria): marcus-luvut.json (sokrates_bysti.py --luvut).",
+  "ruudut": {
+   "r2_liuku": [
+    1450,
+    1510
+   ],
+   "r2_proj": [
+    1510,
+    1760
+   ],
+   "r2_lahde": [
+    1762,
+    1810
+   ],
+   "silma_liuku": [
+    1810,
+    1870
+   ],
+   "r2_kaiku": [
+    1870,
+    2300
+   ],
+   "r3_liuku": [
+    2300,
+    2360
+   ],
+   "r3_proj": [
+    2360,
+    2600
+   ],
+   "r3_lahde": [
+    2602,
+    2650
+   ],
+   "r3_kaiku": [
+    2655,
+    3250
+   ],
+   "loppu": [
+    3250,
+    3330
+   ]
+  },
+  "paalauseet": {
+   "m4.49": {
+    "kierros": 2,
+    "fi": "Ole kuin niemi, johon aallot lyövät lakkaamatta. Se pysyy paikallaan, ja kuohuva vesi tyyntyy sen ympärillä.",
+    "el": "Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται· ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος.",
+    "viite": "Marcus Aurelius, Itselleen 4.49",
+    "paikka": "poski (Rembrandt-varjon puoli, poskiparran yläpuolella)",
+    "osuma_xz": [
+     -0.035,
+     0.36
+    ],
+    "korkeus_m": 0.02125,
+    "nauha": "nauha-poski.png (Iowan, sokrates_gobo.py --nauha --ei-haloa)",
+    "projektori": {
+     "sijainti": [
+      -0.4457,
+      -0.5047,
+      0.2247
+     ],
+     "suunta": [
+      0.6845,
+      0.6933,
+      0.2254
+     ],
+     "keila_aste": 7.44,
+     "kuvat": [
+      "nauha-poski-sumea.png",
+      "nauha-poski.png"
+     ],
+     "energia_avaimet": [
+      [
+       1,
+       0.0
+      ],
+      [
+       1480,
+       0.0
+      ],
+      [
+       1755,
+       0.0
+      ]
+     ]
+    },
+    "luenta": "c"
+   },
+   "m2.11": {
+    "kierros": 3,
+    "fi": "Tee, sano ja ajattele kaikki niin, kuin voisit jo nyt lähteä elämästä.",
+    "el": "Ὡς ἤδη δυνατοῦ ὄντος ἐξιέναι τοῦ βίου, οὕτως ἕκαστα ποιεῖν καὶ λέγειν καὶ διανοεῖσθαι.",
+    "viite": "Marcus Aurelius, Itselleen 2.11",
+    "paikka": "kasvojen sivu (ohimo ja poskipää, valon puoli; säde sivulta y −0,08, z 0,375)",
+    "korkeus_m": 0.02375,
+    "nauha": "nauha-sivu.png",
+    "projektori": {
+     "sijainti": [
+      0.3416,
+      -0.6034,
+      0.3111
+     ],
+     "suunta": [
+      -0.477,
+      0.8724,
+      0.1065
+     ],
+     "keila_aste": 8.58,
+     "kuvat": [
+      "nauha-sivu-sumea.png",
+      "nauha-sivu.png"
+     ],
+     "energia_avaimet": [
+      [
+       1,
+       0.0
+      ],
+      [
+       2330,
+       0.0
+      ],
+      [
+       2595,
+       0.0
+      ]
+     ]
+    },
+    "luenta": "e"
+   }
+  },
+  "kaiut": {
+   "kierros2": {
+    "kuva": "kaiku-uhri.png",
+    "paikka": "vasen silmämuna (osuma x 0,040, z 0,374)",
+    "voima_W": 15.0,
+    "uv_liuku": 0.08,
+    "projektori": {
+     "sijainti": [
+      0.1317,
+      -0.5528,
+      0.2042
+     ],
+     "suunta": [
+      -0.1834,
+      0.9225,
+      0.3397
+     ],
+     "keila_aste": 4.12,
+     "kuvat": [
+      "kaiku-oraakkeli.png"
+     ],
+     "energia_avaimet": [
+      [
+       1,
+       0.0
+      ],
+      [
+       1870,
+       0.0
+      ],
+      [
+       1900,
+       9.385
+      ],
+      [
+       1950,
+       13.684
+      ],
+      [
+       2000,
+       13.778
+      ],
+      [
+       2050,
+       14.953
+      ],
+      [
+       2100,
+       16.924
+      ],
+      [
+       2150,
+       16.485
+      ],
+      [
+       2200,
+       17.25
+      ],
+      [
+       2250,
+       16.272
+      ],
+      [
+       2300,
+       0.0
+      ]
+     ]
+    },
+    "tayte": {
+     "sijainti": [
+      -0.5199,
+      -0.6514,
+      0.9848
+     ],
+     "suunta": [
+      0.5599,
+      0.5599,
+      -0.6108
+     ],
+     "keila_aste": 45.0,
+     "kuvat": [],
+     "energia_avaimet": [
+      [
+       1,
+       0.0
+      ],
+      [
+       1870,
+       0.0
+      ],
+      [
+       2300,
+       0.0
+      ]
+     ]
+    },
+    "luenta": "d"
+   },
+   "kierros3": {
+    "kuva": "kaiku-kuolema.png",
+    "paikka": "kasvojen sivu",
+    "voima_W": 30.0,
+    "uv_liuku": 0.05,
+    "projektori": {
+     "sijainti": [
+      0.4185,
+      -0.55,
+      0.4601
+     ],
+     "suunta": [
+      -0.6051,
+      0.7834,
+      -0.1419
+     ],
+     "keila_aste": 8.01,
+     "kuvat": [
+      "kaiku-kuolema.png"
+     ],
+     "energia_avaimet": [
+      [
+       1,
+       0.0
+      ],
+      [
+       2655,
+       0.0
+      ],
+      [
+       2700,
+       30.0
+      ],
+      [
+       3250,
+       0.0
+      ]
+     ]
+    },
+    "tayte": {
+     "sijainti": [
+      0.4909,
+      0.6459,
+      0.9073
+     ],
+     "suunta": [
+      -0.4355,
+      -0.7259,
+      -0.5323
+     ],
+     "keila_aste": 45.0,
+     "kuvat": [],
+     "energia_avaimet": [
+      [
+       1,
+       0.0
+      ],
+      [
+       2655,
+       0.0
+      ],
+      [
+       2700,
+       9.5
+      ],
+      [
+       3250,
+       0.0
+      ]
+     ]
+    },
+    "luenta": "f"
+   }
+  },
+  "luennat_s_kohtauksessa": {
+   "c": 51.667,
+   "d": 62.667,
+   "e": 80.0,
+   "f": 88.833,
+   "huom": "kuten Sokrateen v9/v10 (prologi +4 s erikseen); kierros 1: a 20,0, b 32,0"
+  },
+  "kamera": [
+   {
+    "ruutu": 1450,
+    "sijainti": [
+     0.0012,
+     -0.2946,
+     0.4418
+    ],
+    "kohde": [
+     -0.002,
+     -0.1058,
+     0.418
+    ],
+    "mm": 35.0,
+    "tapa": "BEZIER"
+   },
+   {
+    "ruutu": 1510,
+    "sijainti": [
+     -0.0866,
+     -0.1345,
+     0.2729
+    ],
+    "kohde": [
+     -0.0376,
+     -0.0873,
+     0.36
+    ],
+    "mm": 18.0,
+    "tapa": "BEZIER"
+   },
+   {
+    "ruutu": 1810,
+    "sijainti": [
+     -0.0441,
+     -0.1571,
+     0.2729
+    ],
+    "kohde": [
+     -0.0324,
+     -0.0901,
+     0.36
+    ],
+    "mm": 18.0,
+    "tapa": "BEZIER"
+   },
+   {
+    "ruutu": 1870,
+    "sijainti": [
+     0.0777,
+     -0.1704,
+     0.3254
+    ],
+    "kohde": [
+     0.04,
+     -0.0915,
+     0.374
+    ],
+    "mm": 50.0,
+    "tapa": "BEZIER"
+   },
+   {
+    "ruutu": 2300,
+    "sijainti": [
+     0.0799,
+     -0.1706,
+     0.3276
+    ],
+    "kohde": [
+     0.04,
+     -0.0915,
+     0.374
+    ],
+    "mm": 50.0,
+    "tapa": "BEZIER"
+   },
+   {
+    "ruutu": 2360,
+    "sijainti": [
+     0.0875,
+     -0.1567,
+     0.301
+    ],
+    "kohde": [
+     0.0531,
+     -0.082,
+     0.375
+    ],
+    "mm": 18.0,
+    "tapa": "BEZIER"
+   },
+   {
+    "ruutu": 2650,
+    "sijainti": [
+     0.1272,
+     -0.1219,
+     0.301
+    ],
+    "kohde": [
+     0.0577,
+     -0.078,
+     0.375
+    ],
+    "mm": 18.0,
+    "tapa": "BEZIER"
+   },
+   {
+    "ruutu": 2700,
+    "sijainti": [
+     0.2,
+     -0.2716,
+     0.3758
+    ],
+    "kohde": [
+     0.0554,
+     -0.08,
+     0.375
+    ],
+    "mm": 35.0,
+    "tapa": "BEZIER"
+   },
+   {
+    "ruutu": 3250,
+    "sijainti": [
+     0.1939,
+     -0.2503,
+     0.3757
+    ],
+    "kohde": [
+     0.0584,
+     -0.0774,
+     0.375
+    ],
+    "mm": 35.0,
+    "tapa": "BEZIER"
+   },
+   {
+    "ruutu": 3310,
+    "sijainti": [
+     -0.36,
+     -1.24,
+     0.24
+    ],
+    "kohde": [
+     -0.075,
+     -0.06,
+     0.39
+    ],
+    "mm": 35.0,
+    "tapa": "BEZIER"
+   },
+   {
+    "ruutu": 3330,
+    "sijainti": [
+     -0.36,
+     -1.24,
+     0.24
+    ],
+    "kohde": [
+     -0.075,
+     -0.06,
+     0.39
+    ],
+    "mm": 35.0,
+    "tapa": "BEZIER"
+   }
+  ],
+  "loppu": "ruudut 3250–3330 takaisin Rembrandt-otokseen (kamera-avaimet 3310 ja 3330)"
  }
 }

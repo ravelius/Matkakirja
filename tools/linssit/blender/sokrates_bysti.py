@@ -1050,7 +1050,8 @@ if '--v7' in A:
         dg = bpy.context.evaluated_depsgraph_get()
         def sivulta(y, z):
             osui, q, nn, *_ = sc.ray_cast(dg, Vector((2, y, z)), Vector((-1, 0, 0))); return q, nn
-        pp, pn = osuma(-0.055, 0.352)                                    # poski (Rembrandt-varjon puoli)
+        # poski (Rembrandt-varjon puoli); Marcuksella poskiparta alkaa sivummalta → lähemmäs nenää ja ylemmäs
+        pp, pn = osuma(*((-0.035, 0.360) if KOHDE == 'marcus' else (-0.055, 0.352)))
         sp, sn = osuma(0.040, 0.374)                                     # vasen silmämuna
         vp, vn = sivulta(-0.08, 0.375)                                   # kasvojen sivu valon puolella
         v4_projektori('tykki-poski', pp, (pn + Vector((-0.55, -0.15, -0.30))).normalized(), 0.6, 0.065,
@@ -1128,6 +1129,38 @@ if '--v7' in A:
             fc.update()
     sc.frame_start, sc.frame_end = 1, (V9['loppu'][1] if '--v9' in A else V7_PITO); sc.render.fps = 30
     sc.render.resolution_x, sc.render.resolution_y = LEV, KORK; sc.render.resolution_percentage = 100
+    if '--luvut' in A:
+        # pelin aineisto (Päätoimittaja 2.10. 12.2x: ei videoita, luvut Pelikoodarille/Linssisepälle): kameran ja
+        # projektorien tila jokaisessa avainruudussa, Blenderin koordinaateissa (z ylös, kasvot −y), ei renderöintiä
+        def kayrien_ruudut(idb):
+            r_ = set(); act = idb.animation_data.action if idb.animation_data else None
+            for kerros in (getattr(act, 'layers', []) if act else []):
+                for kaista in kerros.strips:
+                    for cb in kaista.channelbags:
+                        for fc in cb.fcurves: r_ |= {int(round(kp.co.x)) for kp in fc.keyframe_points}
+            return sorted(r_)
+        pyor = lambda v: [round(x, 4) for x in v]
+        kamera = []
+        for r in sorted(set(kayrien_ruudut(cam)) | set(kayrien_ruudut(cd))):
+            sc.frame_set(r)
+            kamera.append({'ruutu': r, 'sijainti': pyor(cam.matrix_world.translation), 'kohde': pyor(tahtain.matrix_world.translation),
+                           'mm': round(cd.lens, 2), 'tapa': tavat.get(r, 'BEZIER')})
+        valot = {}
+        for ob in bpy.data.objects:
+            if ob.type != 'LIGHT' or not ob.name.startswith(('tykki', 'kaiku', 'virta')): continue
+            ruudut_ = kayrien_ruudut(ob.data); energia = []
+            for r in ruudut_: sc.frame_set(r); energia.append([r, round(ob.data.energy, 3)])
+            sc.frame_set(ruudut_[len(ruudut_) // 2] if ruudut_ else 1)
+            suunta = (ob.matrix_world.to_3x3() @ Vector((0, 0, -1))).normalized()
+            kuvat = sorted({n.image.filepath.rsplit('/', 1)[-1] for n in (ob.data.node_tree.nodes if ob.data.node_tree else [])
+                            if getattr(n, 'image', None)})
+            valot[ob.name] = {'sijainti': pyor(ob.matrix_world.translation), 'suunta': pyor(suunta),
+                              'keila_aste': round(math.degrees(ob.data.spot_size), 2) if ob.data.type == 'SPOT' else None,
+                              'energia_avaimet': energia, 'kuvat': kuvat}
+        ulos_j = A[A.index('--luvut') + 1]
+        json.dump({'kohde': KOHDE, 'ruudut_30fps': V9 if '--v9' in A else None, 'kamera': kamera, 'valot': valot},
+                  open(ulos_j, 'w'), ensure_ascii=False, indent=1)
+        print('SOKRATES: luvut', ulos_j, len(kamera), 'kamera-avainta', len(valot), 'valoa'); sys.exit(0)
     for ruutu in (RUUDUT or (V9_RENDER if '--v9' in A else V7_RENDER)):
         sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
         bpy.ops.render.render(write_still=True)

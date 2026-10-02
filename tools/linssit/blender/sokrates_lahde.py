@@ -10,7 +10,10 @@ LAHTEET = {'38a': ('ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸ
            '21d': ('ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι', 'Platon, Puolustuspuhe 21d'),
            '49b': ('οὐδαμῶς ἄρα δεῖ ἀδικεῖν', 'Platon, Kriton 49b'),
            # Marcus Aurelius (Sisältökirjuri 2.10.: Wikisource, Farquharson 1944; Perseus)
-           'm10.16': ('Μηκέθ᾽ ὅλως περὶ τοῦ οἷόν τινα εἶναι τὸν ἀγαθὸν ἄνδρα διαλέγεσθαι, ἀλλὰ εἶναι τοιοῦτον.', 'Marcus Aurelius, Itselleen 10.16')}
+           'm10.16': ('Μηκέθ᾽ ὅλως περὶ τοῦ οἷόν τινα εἶναι τὸν ἀγαθὸν ἄνδρα διαλέγεσθαι, ἀλλὰ εἶναι τοιοῦτον.', 'Marcus Aurelius, Itselleen 10.16'),
+           # kierrokset 2–3 (2.10. 12.3x): sama kreikka kuin taustavirrassa, Sisältökirjuri tarkistaa
+           'm4.49': ('Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται· ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος.', 'Marcus Aurelius, Itselleen 4.49'),
+           'm2.11': ('Ὡς ἤδη δυνατοῦ ὄντος ἐξιέναι τοῦ βίου, οὕτως ἕκαστα ποιεῖν καὶ λέγειν καὶ διανοεῖσθαι.', 'Marcus Aurelius, Itselleen 2.11')}
 KREIKKA, VIITE = LAHTEET[KOHTA]
 im = Image.open(SISAAN).convert('RGBA'); L, K = im.size; lyhyt = min(L, K)
 kerros = Image.new('RGBA', im.size, (0, 0, 0, 0)); d = ImageDraw.Draw(kerros); alku = int(K * 0.84)
