@@ -9887,3 +9887,7 @@ Omistaja 2.10.2026 klo 00.0x (kaappaus Astronautin kamerasta, Hongkong) sanatark
 ## OMISTAJA: ASTRONAUTIN KAMERAN MINIPALLO ISOMMAKSI (2.10.2026) (2.10.2026 klo 00.10)
 
 Omistaja 2.10.2026 klo 00.1x sanatarkasti: 'Pieni karttapallo vähän isompana' → kuvanäkymän minipallo noin 30 % isommaksi (iPhonella noin 53 → 70 pt), web ja natiivi samalla mitalla (tyylikirjan mitta, jos koko tulee sieltä); osa Astronautin kamera -erää (Pelikoodari web, Linssiseppä natiivi).
+
+## OMISTAJA: OK KAIKKIIN — SOKRATES v7, MARCUS AURELIUS SEURAAVAKSI, KOHDEKORTTI PYSYVÄKSI, MYLLYN LAUDAT JA ÄÄNET, PULUN ROBOTTIKÄSI (2.10.2026) (2.10.2026 klo 07.15)
+
+Päätoimittaja listasi 2.10.2026 klo 07.1x omistajan vastausta odottavat: 'ok Sokrates' (v7 äänellä), 'ok Marcus' (seuraava ajattelija), kohdekortti (jääkö uusi kortti webiin käyttöön?), Mylly (laudat ja äänet), 'ok käsi' (Pulun robottikäsi). Omistaja vastasi sanatarkasti: 'Ok kaikkiin'. → 1) Sokrates v7 hyväksytty kohtauksen malliksi (v8 kuvakaiut jatkuu; Linssiseppä toteuttaa reaaliaikaisena jonossaan). 2) Seuraava ajattelija Marcus Aurelius, koti Rooma (Carnuntum ja Tonavan leirit tarinoissa); bysti SMK KAS979 (PDM), Linnanrakentaja + Sisältökirjuri. 3) Kohdekortti NOSTOKORTTI-pohjalla (#3788) pysyväksi, kokeilukytkin pois siivouksessa; natiivin pariteetti Natiivi-UI. 4) Myllyn kolme lautaa ja äänet (Kenney CC0) kytketään (Siirtoseppä; jakelu sovellukseen ASTC 6×6). 5) Pulun robottikäsi (Codex b557f749): web Pelikoodari, natiivi Linssiseppä 2.
