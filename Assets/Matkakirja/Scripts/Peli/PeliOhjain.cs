@@ -274,6 +274,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>UI:n löytöhetki (UiNakymat asettaa: Paljastus-kortti). Null = ei korttia (testit).</summary>
         public static Action<Matkamuisto> NaytaMatkamuisto;
+        /// <summary>Lautapelin kohtaaminen (Peliluettelo.Kytke): UI avaa pelin valintakortin (UiNakymat asettaa).</summary>
+        public static Action<Matkakirja.Peli.Pelit.PeliKuvaus, Matkakirja.Peli.Pelit.PeliMaa, Kaupunki> AvaaLautapeli;
         /// <summary>Uusi matkamuisto löytyi (tunnus); dioraama voi esim. poistaa sinetin tynnyristä.</summary>
         public event Action<string> MatkamuistoLoytyi;
 
@@ -1067,6 +1069,7 @@ namespace Matkakirja.Natiivi
             kysely = new Kysely(matka, Kysymykset);
             kysely.Tapahtui += (laji, teksti) => kysymysLisat.Add(teksti);
             pulmat = pulmadata != null ? Pulmat.Kytke(kysely, pulmadata) : null;
+            Matkakirja.Peli.Pelit.Peliluettelo.Kytke(kysely, (peli, maa, k) => AvaaLautapeli?.Invoke(peli, maa, k));
             kaupat = new Kaupat(matka);
             kuvakokoelmat?.Kytke(kysely);
             // Pysy-tapa tuli tarjolle vasta nyt: vuoron alun esivalinta puretaan kuten webissä.

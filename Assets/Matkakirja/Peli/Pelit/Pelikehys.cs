@@ -163,13 +163,14 @@ namespace Matkakirja.Peli.Pelit
         /// <summary>Pelikerran kirjaus matkaan: pelattu peli on pelipäivän teko (pelistreak, Matka.KirjaaPelipaiva) ja
         /// voittopalkkio kassaan (panos veloitetaan pelin alussa, ei tässä). Palauttaa streakin tuloksen (null = sama päivä
         /// jo kirjattu tai kelvoton päivä) ja maksetun palkkion.</summary>
-        public static ((int Pituus, int Palkkio)? Streak, int Palkkio) Kirjaa(Matka matka, PeliTulos t, PelinTalous talous)
+        public static ((int Pituus, int Palkkio)? Streak, int Palkkio, List<PeliLauta> Laudat) Kirjaa(Matka matka, PeliTulos t, PelinTalous talous)
         {
             var streak = t.Paiva != null ? matka.KirjaaPelipaiva(t.Paiva) : null;
             matka.KirjaaTapahtuma("peli", Matkakirjarivi(t));
+            var laudat = t.PeliId != null ? Peliluettelo.Kirjaa(matka.Tila.Pelaaja, t.PeliId, t.Vastustaja, t.PelaajaVoitti) : new List<PeliLauta>();
             int palkkio = Rahapalkkio(t, talous);
             if (palkkio > 0) matka.Tila.Pelaaja.Raha += palkkio;
-            return (streak, palkkio);
+            return (streak, palkkio, laudat);
         }
     }
 }

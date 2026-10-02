@@ -27,6 +27,9 @@
 // kirjoitetaan vain kun putki on alkanut (web: p.streak puuttuu). Vanha tallennus: ei putkea.
 // Versio 8 (29.9.2026, matkamuistot): pelaajan matkamuistot [tunnus, …] (Peli/Matkamuistot.cs, vain natiivi),
 // kirjoitetaan vain kun jokin on löytynyt. Vanha tallennus: ei matkamuistoja.
+// Versio 9 (1.10.2026, pelit): pelaajan pelatut lautapelit [{id, pelattu, voitot}, …] (Peli/Pelit/Peliluettelo.cs;
+// Aarteet-näkymän "Pelit") ansaittuine lautoineen (laudat [tunnus, …]), kirjoitetaan vain kun jokin on pelattu.
+// Vanha tallennus: ei pelattuja pelejä.
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -76,6 +79,17 @@ namespace Matkakirja.Peli
         public StreakTila Streak;
         /// <summary>Löydetyt matkamuistot tunnuksina löytöjärjestyksessä (Peli/Matkamuistot.cs; vain natiivi). Versio 8.</summary>
         public List<string> Matkamuistot = new List<string>();
+        /// <summary>Pelatut lautapelit (Peli/Pelit/Peliluettelo.cs): kohtaaminen ei toistu, Aarteet "Pelit" -lista. Versio 9.</summary>
+        public List<PelattuPeli> Pelit = new List<PelattuPeli>();
+    }
+
+    /// <summary>Pelattu lautapeli: tunnus (Peliluettelo), pelikerrat ja voitot bottia vastaan.</summary>
+    public sealed class PelattuPeli
+    {
+        public string Id;
+        public int Pelattu, Voitot;
+        /// <summary>Ansaitut laudat (Peliluettelo: PeliLauta.Id) ansaitsemisjärjestyksessä.</summary>
+        public List<string> Laudat = new List<string>();
     }
 
     /// <summary>Kuljetun reitin piste: kaupunki ja kulkutapa, jolla sinne saavuttiin (null = aloitus tai siirto ilman tapaa).</summary>
@@ -100,7 +114,7 @@ namespace Matkakirja.Peli
     /// <summary>Pelin tila (web Game): matkan kentät ja kello.</summary>
     public sealed class Pelitila
     {
-        public const int TallennusVersio = 8;
+        public const int TallennusVersio = 9;
 
         public List<Pelaaja> Pelaajat = new List<Pelaaja>();
         public int Vuorossa;                                   // web current
@@ -247,6 +261,12 @@ namespace Matkakirja.Peli
                 // Matkamuistot (versio 8): vain kun jokin on löytynyt.
                 if (p.Matkamuistot.Count > 0)
                     Kentta(sb, "matkamuistot", "[" + string.Join(",", p.Matkamuistot.Select(Teksti)) + "]");
+                // Pelit (versio 9): vain kun jokin on pelattu.
+                if (p.Pelit.Count > 0)
+                    Kentta(sb, "pelit", "[" + string.Join(",", p.Pelit.Select(g => "{\"id\":" + Teksti(g.Id)
+                        + ",\"pelattu\":" + g.Pelattu.ToString(CultureInfo.InvariantCulture)
+                        + ",\"voitot\":" + g.Voitot.ToString(CultureInfo.InvariantCulture)
+                        + (g.Laudat.Count > 0 ? ",\"laudat\":[" + string.Join(",", g.Laudat.Select(Teksti)) + "]" : "") + "}")) + "]");
                 sb.Append('}');
             }
             sb.Append(']');
@@ -352,6 +372,11 @@ namespace Matkakirja.Peli
                     };
                 // Matkamuistot (versio 8); vanhassa tallennuksessa ei ole.
                 p.Matkamuistot = Tekstit(pd, "matkamuistot");
+                // Pelit (versio 9); vanhassa tallennuksessa ei ole.
+                foreach (var go in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(pd, "pelit")))
+                    if (go is Dictionary<string, object> g && MiniJson.Teksti(g, "id") is string gid)
+                        p.Pelit.Add(new PelattuPeli { Id = gid, Pelattu = Math.Max(0, (int)(MiniJson.Luku(g, "pelattu") ?? 0)),
+                            Voitot = Math.Max(0, (int)(MiniJson.Luku(g, "voitot") ?? 0)), Laudat = Tekstit(g, "laudat") });
                 t.Pelaajat.Add(p);
             }
             if (t.Pelaajat.Count == 0) throw new FormatException("tallennuksessa ei ole pelaajia");
@@ -398,6 +423,7 @@ namespace Matkakirja.Peli
             // 6 → 7 (pelistreak): pelaajan streak puuttuu → null (lukija hoitaa); ensimmäinen
             //   pelipäivä päivityksen jälkeen aloittaa putken 1:stä.
             // 7 → 8 (matkamuistot): pelaajan matkamuistot puuttuu → tyhjä (lukija hoitaa).
+            // 8 → 9 (pelit): pelaajan pelit puuttuu → tyhjä (lukija hoitaa).
             for (int v = versio; v < TallennusVersio; v++)
             {
                 switch (v)
