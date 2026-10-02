@@ -1256,7 +1256,7 @@ button.satelliitti-pulunappi:focus-visible {
   flex: 1 1 auto;
   min-width: 0;
   padding: 7px 10px;
-  border-radius: 999px;
+  border-radius: var(--tk-kentta-kulma);
   border: 1px solid rgba(93, 255, 168, 0.3);
   background: rgba(10, 24, 18, 0.85);
   color: #eafff3;
@@ -1989,7 +1989,7 @@ body.satelliitti-kyyti.livia-astronautti-paalla .livia-lentonayttamo { z-index: 
   min-width: 44px;
   height: 44px;
   padding: 0 14px;
-  border-radius: 22px;
+  border-radius: var(--tk-kulma-nappi);
   border: 1px solid rgba(93, 255, 168, 0.28);
   background: rgba(6, 13, 10, 0.72);
   color: rgba(233, 250, 240, 0.9);
