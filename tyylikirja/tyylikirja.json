@@ -115,6 +115,7 @@
     "leveaLisa": 2
   },
   "fontit": {
+    "punta": { "kirjasin": "Luku", "vali": 1, "_selite": "£-merkki aina Luku-kirjasimella (Iowan Old Style) ja 1 pt:n väli numeroon, myös Kone-teksteissä: American Typewriterin £ näytti koukulta ja '−£20' luettiin '−&20' (omistaja ja Päätoimittaja 2.10.2026). Web: @font-face 'Matkakirja Punta' src: local('Iowan Old Style Roman'), local('IowanOldStyle-Roman'), local('Iowan Old Style'), local('Charter Roman'), local('Charter-Roman'), local('Georgia'), local('Palatino Linotype'), local('Palatino-Roman'), local('Cambria'), local('Noto Serif'), local('NotoSerif-Regular'), local('DejaVu Serif'), local('Times New Roman') (local() vaatii kasvon koko nimen tai PostScript-nimen, Pelikoodari mittasi Chromiumilla; Iowan on Applen järjestelmäfontti eikä upotettavissa), unicode-range U+00A3, jokaisen fonttipinon alkuun. Natiivi: £ omana Luku-tekstinään (Ylapalkki.AsetaRahaTeksti; muut näytöt samalla apurilla)." },
     "_selite": "web = CSS-pino (sama kuin ennen), natiivi = Kirjasimet.cs:n ehdokkaat (perhe, tyyli) järjestyksessä.",
     "web": {
       "font-type": "\"American Typewriter\", \"Courier Prime\", \"Courier New\", Courier, monospace",

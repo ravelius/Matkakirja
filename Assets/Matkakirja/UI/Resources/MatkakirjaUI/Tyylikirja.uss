@@ -1,5 +1,5 @@
 /* TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi);
- * ÄLÄ MUOKKAA KÄSIN. lähde 157539c23503. Tuodaan ensimmäisenä (Matkakirja.tss). */
+ * ÄLÄ MUOKKAA KÄSIN. lähde 9ff49878ac00. Tuodaan ensimmäisenä (Matkakirja.tss). */
 
 :root {
     --bg: #1d1610;
