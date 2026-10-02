@@ -18,7 +18,7 @@ namespace Matkakirja.Linssit.Astronautti
 {
     public enum AstroMoodi { Pallo, Seuranta, Ikkuna, Kuvat }
 
-    public enum MoodinAskel { Perilla, Odota, SuljeKuva, Poistu, AvaaKuva, Napauta, Ei }
+    public enum MoodinAskel { Perilla, Odota, SuljeKuva, Poistu, AvaaKuva, Napauta, Ei, LopetaKavely }
 
     public sealed class TaulunRivi
     {
@@ -100,9 +100,12 @@ namespace Matkakirja.Linssit.Astronautti
         /// Seuraava askel kohti moodia (web moodinAskel): kyyti null = ei kyytiä (ISS-moodeihin ei ole tietä).
         /// Puhdas funktio tilasta, joten askeleet testataan ilman palloa.
         /// </summary>
-        public static MoodinAskel Askel(AstroMoodi tavoite, bool kuva, Iss.KyydinTila? kyyti, bool siirtyy)
+        public static MoodinAskel Askel(AstroMoodi tavoite, bool kuva, Iss.KyydinTila? kyyti, bool siirtyy, bool kavely = false)
         {
             if (kuva) return tavoite == AstroMoodi.Kuvat ? MoodinAskel.Perilla : MoodinAskel.SuljeKuva;
+            // Avaruuskävelyltä Cupolaan (savuke 1117): ilmalukossa kyyti on jo Ikkuna ja ulkona napautus jatkaisi kävelyä, joten
+            // kävely lopetetaan ensin (ulkona kyyti palaa sisään Cupolaan). Pallo ja kuvat: Poistu lopettaa kävelyn itse.
+            if (kavely && (tavoite == AstroMoodi.Ikkuna || tavoite == AstroMoodi.Seuranta)) return MoodinAskel.LopetaKavely;
             var t = kyyti ?? Iss.KyydinTila.Kauko;
             bool kyydissa = t != Iss.KyydinTila.Kauko || siirtyy;
             if (tavoite == AstroMoodi.Pallo)

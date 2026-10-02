@@ -396,12 +396,17 @@ namespace Matkakirja.Natiivi
             Sulje("valinta");
             if (lisa != null)
             {
+                if (Kysy(lisa.Aktiivinen)) return;   // jo käynnissä (esim. avaruuskävely): ei aloiteta alusta
                 void Tee() { try { lisa.Toiminto(); } catch (Exception e) { Debug.LogWarning("MATKAKIRJA pulun taulu: " + tunnus + ": " + e.Message); } }
                 if (lisa.Lahto.HasValue) SiirryMoodiin(lisa.Lahto.Value, Tee);
                 else Tee();
                 return;
             }
-            if (Nykyinen(Linssi()) == rivi.Moodi) return;
+            // Sama moodi riittää vain, jos askelkone on perillä: kohteen yltä (moodi Ikkuna) ja avaruuskävelyltä (kyyti Ikkuna)
+            // "ISS:n sisälle" vie silti Cupolaan (savuke 1117).
+            var l = Linssi();
+            if (Nykyinen(l) == rivi.Moodi && (l == null || !l.Auki
+                || PulunTaulu.Askel(rivi.Moodi, astro.Kuva.Auki, l.Kyyti, l.KyytiSiirtyy, l.Kavely.Kaynnissa) == MoodinAskel.Perilla)) return;
             SiirryMoodiin(rivi.Moodi, null);
         }
 
@@ -434,7 +439,7 @@ namespace Matkakirja.Natiivi
                 if (vaihto != oma || !linssiAuki) return;
                 var l = Linssi();
                 if (l == null || !l.Auki) { vaihto = null; return; }
-                var askel = PulunTaulu.Askel(tavoite, astro.Kuva.Auki, l.Kyyti, l.KyytiSiirtyy);
+                var askel = PulunTaulu.Askel(tavoite, astro.Kuva.Auki, l.Kyyti, l.KyytiSiirtyy, l.Kavely.Kaynnissa);
                 float kulunut = (Time.unscaledTime - oma.Alku) * 1000f;
                 if (askel == MoodinAskel.Perilla || askel == MoodinAskel.Ei)
                 {
@@ -469,6 +474,7 @@ namespace Matkakirja.Natiivi
                     case MoodinAskel.SuljeKuva: l.SuljeKuva(); break;
                     case MoodinAskel.Poistu: l.PoistuKyydista(); break;
                     case MoodinAskel.Napauta: l.NapautaIss(); break;
+                    case MoodinAskel.LopetaKavely: l.LopetaKavely(); break;
                     case MoodinAskel.AvaaKuva:
                         var (lat, lon) = l.Katse;
                         var k = PulunTaulu.LahinKohde(l.Kohteet, lat, lon) ?? (l.Kohteet.Count > 0 ? l.Kohteet[0] : null);
