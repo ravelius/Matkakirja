@@ -1185,6 +1185,47 @@ PAAN_PROJEKTORIT = (  # v10 (omistaja 2.10. 08.4x): taustavirta koko pään alue
 
 VIRTA_AVAIMET = None   # v13: taustavirran (ruutu, kerroin) -avaimet koko kohtaukselle
 VIRTA_VAISTO = []      # v13c: [(kaiun kohdepiste, säde m, alku, loppu)] — virta väistää kaikukuvan
+V14_AUR = []           # v14: tekstivaiheen auringon avaimet (ruutu, suunta, energia ×0,3, väri) ennen kattoa
+V14_PYYHKAISY = 12.0   # Päätoimittaja 16.5x: pyyhkäisy tekstien aikana hienovarainen hohde (oli 70 → kasvot valkoisiksi)
+
+
+def v14_tekstivalit():
+    """Ruutuvälit, joilla kasvoilla on tekstiä: kiinteät lainaukset, kysymys ja taustavirta (kerroin > 0)."""
+    valit = [(a_, l_) for _, _, _, a_, l_ in KEHYS_LAINAUKSET]
+    va = VIRTA_AVAIMET or []
+    for (r0, k0), (r1, k1) in zip(va, va[1:]):
+        if k0 > 0 or k1 > 0: valit.append((r0 if k0 > 0 else r0 + (r1 - r0) * 0.5, r1 if k1 > 0 else r0 + (r1 - r0) * 0.5))
+    valit.sort(); yhd = []
+    for a_, l_ in valit:
+        if yhd and a_ <= yhd[-1][1] + 20: yhd[-1] = (yhd[-1][0], max(yhd[-1][1], l_))   # alle 0,7 s tauko → yksi väli
+        else: yhd.append((a_, l_))
+    return yhd
+
+
+def v14_aurinko_katto(ao, aur, liuku=15):
+    """Päätoimittaja 16.5x: tumma katto (V14_KATTO osumakulman mukaan) vain kun kasvoilla on tekstiä; tekstittömissä
+    jaksoissa tarinavalo (×0,3) näkyy. Rajoilla 0,5 s liuku: katto täysi tekstin alkaessa ja vielä sen loppuessa."""
+    if not V14_AUR: return
+    av = sorted({r_: (r_, Vector(d_).normalized(), e_, v_) for r_, d_, e_, v_ in V14_AUR}.values(), key=lambda x: x[0])
+    def tila(r_):   # lineaarinen tila avainten välissä
+        if r_ <= av[0][0]: return av[0][1:]
+        for (r0, d0, e0, v0), (r1, d1, e1, v1) in zip(av, av[1:]):
+            if r0 <= r_ <= r1:
+                u = (r_ - r0) / max(1, r1 - r0)
+                return (d0.lerp(d1, u).normalized(), e0 + (e1 - e0) * u, tuple(a + (b - a) * u for a, b in zip(v0, v1)))
+        return av[-1][1:]
+    valit = v14_tekstivalit(); rajat = {r_ for r_, *_ in av}
+    for a_, l_ in valit: rajat |= {int(a_) - liuku, int(a_), int(l_), int(l_) + liuku}
+    katto = lambda d_, e_: min(e_, V14_KATTO / max(0.068, d_.dot(Vector((0.0, -0.7, 0.7)).normalized())))
+    for r_ in sorted(x for x in rajat if x >= av[0][0]):
+        d_, e_, v_ = tila(r_)
+        if any(a_ <= r_ <= l_ for a_, l_ in valit): e_ = katto(d_, e_)
+        ao.location = PAA + d_ * 1.3; kohdista(ao, PAA)
+        ao.keyframe_insert('location', frame=r_); ao.keyframe_insert('rotation_euler', frame=r_)
+        aur.energy = e_; aur.keyframe_insert('energy', frame=r_); aur.color = v_; aur.keyframe_insert('color', frame=r_)
+    V14_AUR.clear()
+
+
 KEHYS_LAINAUKSET = []  # v14: [(nimi, kohde, leveys m, alku, loppu)] — --kehys tarkistaa, että lainaus pysyy ruudussa
 V11_VIRTA_MS = 0.025   # v11: taustavirran yhteinen nopeus pinnalla (m/s); v10:n mediaani 26 mm/s
 VIRTA_LOKI = []        # v11: rivikohtaiset nopeudet --luvut-tiedostoon (web)
@@ -1329,7 +1370,7 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     nena_t, silma_t = T(W.get('nenä', 5.6)), T(W.get('silmät', 7.2))
     for t_, kohde, e in ((nena_t - 1.2, nenap + Vector((0.03, 0, 0)), 0.0), (nena_t - 0.2, nenap, 70.0), (silma_t, sp, 70.0),
                          (silma_t + 0.9, silma_v, 70.0), (silma_t + 1.8, silma_v + Vector((-0.03, 0, 0)), 0.0)):
-        kohdista(po, kohde); po.keyframe_insert('rotation_euler', frame=F(t_)); pd.energy = e; pd.keyframe_insert('energy', frame=F(t_))
+        kohdista(po, kohde); po.keyframe_insert('rotation_euler', frame=F(t_)); pd.energy = min(e, V14_PYYHKAISY) if V14 else e;   # v14: rivit eivät katoa valoon pd.keyframe_insert('energy', frame=F(t_))
     pd.energy = 0.0; pd.keyframe_insert('energy', frame=1)
     # --- avainvalo (aurinko) vaiheittain ---
     def aur_avain(t_, suunta, e, vari=(1.0, 0.95, 0.88)):
@@ -1338,7 +1379,7 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
             if tuple(suunta) == tuple(V12_REM_AURINKO): suunta = V14_REUNA
             # Päätoimittaja 16.3x: tarinavalo (LÄMMIN/KOVA/ILTA) näkyy värissä ja suunnassa, ei kirkkaudessa → kasvojen
             # valaistus rajataan tummalle tasolle: katto / kuinka suoraan valo osuu otsaan ja kasvoihin
-            e = min(e, V14_KATTO / max(0.068, Vector(suunta).normalized().dot(Vector((0.0, -0.7, 0.7)).normalized())))
+            V14_AUR.append((F(t_), tuple(suunta), e, tuple(vari))); return   # katto vain tekstin aikana → v14_aurinko_katto()
         ao.location = PAA + Vector(suunta).normalized() * 1.3; kohdista(ao, PAA)
         ao.keyframe_insert('location', frame=F(t_)); ao.keyframe_insert('rotation_euler', frame=F(t_))
         aur.energy = e; aur.keyframe_insert('energy', frame=F(t_)); aur.color = vari; aur.keyframe_insert('color', frame=F(t_))
@@ -1355,7 +1396,10 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
         aur_avain(a6 + (l6 - a6) * i_ / 16, tuple(sade_), 60)
     aur_avain(k_('07', 0) - 0.2, R, 70, LAMMIN); aur_avain(k_('08', 0) - 0.05, R, 70, LAMMIN)   # 07 lämmin valo, 30e
     KOVA = (0.12, -0.50, 1.0)   # v13b: "kova kuin kuulustelussa" — yksi kova valo ylhäältä hieman edestä, ei täyttöä
-    aur_avain(k_('08', 0), KOVA, 110); aur_avain(k_('09', 0) - 0.5, KOVA, 110); aur_avain(k_('09', 0) + 0.3, KOVA, 60); aur_avain(illan_t - 0.05, KOVA, 60)            # 08–09: kova, suora valo
+    aur_avain(k_('08', 0), KOVA, 200 if V14 else 110); aur_avain(k_('09', 0) - 0.5, KOVA, 20 if V14 else 110);
+    if V14:   # kamera kääntyy alaviistosta eteen → sama näkyvä kirkkaus (mitattu kasvojen mediaani ~35–60/255)
+        for dt_, e_ in ((5.0, 150), (8.0, 50), (11.0, 30)): aur_avain(k_('08', 0) + dt_, KOVA, e_)   # v14: tekstitön 08 näkyy (mediaani ~40–60), kamera kääntyy eteen → energia laskee
+    aur_avain(k_('09', 0) + 0.3, KOVA, 60); aur_avain(illan_t - 0.05, KOVA, 60)            # 08–09: kova, suora valo
     malja_t = T(W.get('myrkkymaljan', K['10'][0] + 1.5))
     ILTASUUNTA = (1.0, -0.15, 0.22)
     aur_avain(illan_t, ILTASUUNTA, 22, ILTA); aur_avain(malja_t + 0.2, ILTASUUNTA, 22, ILTA)   # 10: lämmin, laskee
@@ -1373,6 +1417,7 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     else:
         VIRTA_VAISTO = []
     VIRTA_AVAIMET = [(1, 0.0)] + [(F(t_), k) for t_, k in kk_]
+    if V14: v14_aurinko_katto(ao, aur)
     paan_virta('virta', (F(T(0)), F(T(0)) + 30, LOPPU - 1, LOPPU), V7_TYKKI, tausta, (0.009, 0.012, 0.015, 0.019), 38)
     # --- kamera: leikkaukset 04, 08 ja 10; muuten yksi hidas ajo ---
     rem = V7_OTOKSET[-1]; kc = lambda kohde, suunta, d: tuple(Vector(kohde) + Vector(suunta).normalized() * d)
@@ -1477,7 +1522,7 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
             if tuple(suunta) == tuple(V12_REM_AURINKO): suunta = V14_REUNA
             # Päätoimittaja 16.3x: tarinavalo (LÄMMIN/KOVA/ILTA) näkyy värissä ja suunnassa, ei kirkkaudessa → kasvojen
             # valaistus rajataan tummalle tasolle: katto / kuinka suoraan valo osuu otsaan ja kasvoihin
-            e = min(e, V14_KATTO / max(0.068, Vector(suunta).normalized().dot(Vector((0.0, -0.7, 0.7)).normalized())))
+            V14_AUR.append((F(t_), tuple(suunta), e, tuple(vari))); return   # katto vain tekstin aikana → v14_aurinko_katto()
         ao.location = PAA + Vector(suunta).normalized() * 1.3; kohdista(ao, PAA)
         ao.keyframe_insert('location', frame=F(t_)); ao.keyframe_insert('rotation_euler', frame=F(t_))
         aur.energy = e; aur.keyframe_insert('energy', frame=F(t_)); aur.color = vari; aur.keyframe_insert('color', frame=F(t_))
@@ -1485,8 +1530,8 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     R = V12_REM_AURINKO; LAMMIN = (1.0, 0.95, 0.88); ILTA = (1.0, 0.82, 0.62); KOVA = (0.12, -0.50, 1.0)
     if V14: aur_avain(T(0) - 1.0, R, 95); aur_avain(T(0), V14_REUNA, 19)                               # Rembrandt → tummenee 11–12 s (linssi)
     else: aur_avain(T(0) - 0.6, R, 95); aur_avain(T(0) + 1.0, R, 45)                             # 01
-    aur_avain(k_('03', 0) - 0.05, R, 45); aur_avain(k_('03', 0), KOVA, 110)                      # 03 sota ja rutto: kova yläviisto
-    aur_avain(sade_t - 0.6, KOVA, 110); aur_avain(sade_t + 0.8, R, 16)                           # 04 sadeihme: kaiku, ääriviiva kehystää
+    aur_avain(k_('03', 0) - 0.05, R, 45); aur_avain(k_('03', 0), KOVA, 160 if V14 else 110)                      # 03 sota ja rutto: kova yläviisto
+    aur_avain(sade_t - 0.6, KOVA, 30 if V14 else 110); aur_avain(sade_t + 0.8, R, 16)                           # 04 sadeihme: kaiku, ääriviiva kehystää
     a5, l5 = k_('05', 0), k_('05', 1)                                                              # 05 niemi: valo keinuu kuin aallot
     for i_ in range(9):
         kulma = math.radians(-20 + 40 * (i_ % 2)); aur_avain(a5 + (l5 - a5) * i_ / 8, (math.cos(kulma), -0.3 + 0.5 * math.sin(kulma), 0.5), 50)
@@ -1501,6 +1546,7 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
            (sail_t, 0), (sail_t + 0.8, 0.9), (loppu_t - 0.04, 0.9), (loppu_t, 0)]   # loppu harvempi: kasvot ja kysymys näkyvät
     VIRTA_VAISTO.append((tuple(p), 0.075, F(kys_t) - 15, LOPPU))   # virta väistää kysymyksen alueen
     VIRTA_AVAIMET = [(1, 0.0)] + [(F(t_), k) for t_, k in kk_]
+    if V14: v14_aurinko_katto(ao, aur)
     paan_virta('virta', (F(T(0)), F(T(0)) + 30, LOPPU - 1, LOPPU), V7_TYKKI, tausta, (0.009, 0.012, 0.015, 0.019), 38)
     rem = V7_OTOKSET[-1]; kc = lambda kohde, suunta, d: tuple(Vector(kohde) + Vector(suunta).normalized() * d)
     for t_, c_, q_, mm_, tapa in [
