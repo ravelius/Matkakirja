@@ -68,26 +68,54 @@
     "nimi": "kaiku-jumala",
     "kuva": "kaiku-jumala.png",
     "alku_s": 24.18,
-    "loppu_s": 27.26
+    "loppu_s": 27.26,
+    "lahde": {
+     "kohde": "Sokrates: jumalankuva",
+     "teos": "Artemisionin Zeus (tai Poseidon), pronssi n. 460 eaa., Ateenan kansallinen arkeologinen museo X 15161",
+     "tekija": "kuva Jebulon",
+     "lisenssi": "CC0",
+     "lahde": "Wikimedia Commons: Bronze_Zeus_or_Poseidon_NAMA_X_15161_Athens_Greece.jpg"
+    }
    },
    {
     "nimi": "kaiku-sotilas",
     "kuva": "kaiku-sotilas.png",
     "alku_s": 26.06,
-    "loppu_s": 31.5
+    "loppu_s": 31.5,
+    "lahde": {
+     "kohde": "Sokrates: hopliitti",
+     "teos": "Kreikkalainen hopliitti, pronssi, Altes Museum Berlin",
+     "tekija": "kuva Gary Todd / WorldHistoryPics.com",
+     "lisenssi": "CC0",
+     "lahde": "Wikimedia Commons: Ancient Greece Bronze Hoplite Warrior Statue (28660212241).jpg"
+    }
    },
    {
     "nimi": "kaiku-oraakkeli",
     "kuva": "kaiku-oraakkeli.png",
     "alku_s": 35.8,
     "loppu_s": 48.26,
-    "lahde": "Davide Mauro, CC BY-SA 4.0, Wikimedia Commons: pronssikolmijalan rekonstruktio, Olympian museo (rajattu, johdannainen CC BY-SA 4.0)"
+    "lahde": {
+     "kohde": "Sokrates: Delfoin oraakkeli (kolmijalka)",
+     "teos": "Pronssikolmijalkakattilan rekonstruktio (700-l. eaa.), Olympian arkeologinen museo",
+     "tekija": "Davide Mauro",
+     "lisenssi": "CC BY-SA 4.0 (rajattu johdannainen CC BY-SA 4.0)",
+     "lahde": "Wikimedia Commons: Reconstrunction of a bronze tripod cauldron.jpg",
+     "nimea": "Davide Mauro, CC BY-SA 4.0, Wikimedia Commons"
+    }
    },
    {
     "nimi": "kaiku-david",
     "kuva": "kaiku-kuolema.png",
     "alku_s": 83.18,
-    "loppu_s": 90.32
+    "loppu_s": 90.32,
+    "lahde": {
+     "kohde": "Sokrates: kuolema (David)",
+     "teos": "Jacques-Louis David, Sokrateen kuolema 1787, The Metropolitan Museum of Art 31.45",
+     "tekija": "Jacques-Louis David",
+     "lisenssi": "CC0 (The Met Open Access)",
+     "lahde": "Wikimedia Commons: The_Death_of_Socrates_MET_DP-13139-001.jpg"
+    }
    }
   ],
   "lainaukset": [

@@ -1189,9 +1189,26 @@ PAAN_PROJEKTORIT = (  # v10 (omistaja 2.10. 08.4x): taustavirta koko pään alue
 
 VIRTA_AVAIMET = None   # v13: taustavirran (ruutu, kerroin) -avaimet koko kohtaukselle
 VIRTA_VAISTO = []      # v13c: [(kaiun kohdepiste, säde m, alku, loppu)] — virta väistää kaikukuvan
-KAIKU_LAHTEET = {   # v14: kaikukuvien attribuutio lukuihin (Päätoimittaja 4.10.)
-    'kaiku-oraakkeli.png': 'Davide Mauro, CC BY-SA 4.0, Wikimedia Commons: pronssikolmijalan rekonstruktio, Olympian museo (rajattu, johdannainen CC BY-SA 4.0)',
-    'kaiku-uhri.png': 'José Luiz, CC BY-SA 4.0, Wikimedia Commons: "Marcus Aurelius showing sacrifice - Arch of Marcus Aurelius - Musei Capitolini - Rome 2016.jpg" (rajattu, johdannainen CC BY-SA 4.0)',
+KAIKU_LAHTEET = {   # v14: kaikukuvien lähteet tekijätietoihin (Päätoimittaja 4.10.: kohde, teos, tekijä, lisenssi, lähde — kaikille)
+    'kaiku-jumala.png': {'kohde': 'Sokrates: jumalankuva', 'teos': 'Artemisionin Zeus (tai Poseidon), pronssi n. 460 eaa., Ateenan kansallinen arkeologinen museo X 15161',
+                         'tekija': 'kuva Jebulon', 'lisenssi': 'CC0', 'lahde': 'Wikimedia Commons: Bronze_Zeus_or_Poseidon_NAMA_X_15161_Athens_Greece.jpg'},
+    'kaiku-sotilas.png': {'kohde': 'Sokrates: hopliitti', 'teos': 'Kreikkalainen hopliitti, pronssi, Altes Museum Berlin',
+                          'tekija': 'kuva Gary Todd / WorldHistoryPics.com', 'lisenssi': 'CC0', 'lahde': 'Wikimedia Commons: Ancient Greece Bronze Hoplite Warrior Statue (28660212241).jpg'},
+    'kaiku-oraakkeli.png': {'kohde': 'Sokrates: Delfoin oraakkeli (kolmijalka)', 'teos': 'Pronssikolmijalkakattilan rekonstruktio (700-l. eaa.), Olympian arkeologinen museo',
+                            'tekija': 'Davide Mauro', 'lisenssi': 'CC BY-SA 4.0 (rajattu johdannainen CC BY-SA 4.0)', 'lahde': 'Wikimedia Commons: Reconstrunction of a bronze tripod cauldron.jpg',
+                            'nimea': 'Davide Mauro, CC BY-SA 4.0, Wikimedia Commons'},
+    'kaiku-kuolema.png': {'kohde': 'Sokrates: kuolema (David)', 'teos': 'Jacques-Louis David, Sokrateen kuolema 1787, The Metropolitan Museum of Art 31.45',
+                          'tekija': 'Jacques-Louis David', 'lisenssi': 'CC0 (The Met Open Access)', 'lahde': 'Wikimedia Commons: The_Death_of_Socrates_MET_DP-13139-001.jpg'},
+    'kaiku-sade.png': {'kohde': 'Marcus: sadeihme', 'teos': 'Marcus Aureliuksen pylväs, Rooma: sadeihme (sadejumala)',
+                       'tekija': 'kuva Nico Kokkonen 2009', 'lisenssi': 'CC BY 3.0', 'lahde': 'Wikimedia Commons: Column_of_Marcus_Aurelius_-_detail2.jpg',
+                       'nimea': 'Nico Kokkonen, CC BY 3.0, Wikimedia Commons'},
+    'kaiku-uhri.png': {'kohde': 'Marcus: uhri', 'teos': 'Marcus Aurelius uhraa, Marcus Aureliuksen kaaren reliefi 176–180 jaa., Musei Capitolini',
+                       'tekija': 'José Luiz', 'lisenssi': 'CC BY-SA 4.0 (rajattu johdannainen CC BY-SA 4.0)',
+                       'lahde': 'Wikimedia Commons: Marcus Aurelius showing sacrifice - Arch of Marcus Aurelius - Musei Capitolini - Rome 2016.jpg',
+                       'nimea': 'José Luiz, CC BY-SA 4.0, Wikimedia Commons'},
+    'kaiku-kuolinvuode.png': {'kohde': 'Marcus: kuolinvuode', 'teos': 'Eugène Delacroix, Marcus Aureliuksen viimeiset sanat 1844, Musée des Beaux-Arts de Lyon',
+                              'tekija': 'Eugène Delacroix', 'lisenssi': 'CC0',
+                              'lahde': "Wikimedia Commons: Lyon 1er - Musée des Beaux-Arts - Salle 221 - Dernières paroles de l'empereur Marc Aurèle (Eugène Delacroix).jpg"},
 }
 V14_AUR = []           # v14: tekstivaiheen auringon avaimet (ruutu, suunta, energia ×0,3, väri) ennen kattoa
 V14_PYYHKAISY = 12.0   # Päätoimittaja 16.5x: pyyhkäisy tekstien aikana hienovarainen hohde (oli 70 → kasvot valkoisiksi)
@@ -1498,8 +1515,8 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
           Vector((0.0, -0.55, 0.30)) if V14 else SIVU * 0.55 + YLOS * 0.25, 0.121 if V14 else 0.10,   # v14: yksinkertainen (pää + parta), sama pinta-ala
           sade_t, k_('05', 0) - 0.3, 26.0)
     kaiku('kaiku-uhri', 'kaiku-uhri.png', sp, sn, SIVU * 0.55 + YLOS * 0.30, 0.09 if V14 else 0.08,   # v14: Capitolinen hunnutettu Marcus (huntupää + olka), sama pinta-ala
-          uhri_t, k_('07', 0) - 0.3, 25.0 if V14 else 22.0)
-    kaiku('kaiku-kuolinvuode', 'kaiku-kuolinvuode.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.089 if V14 else 0.11,   # v14: pää + ylävartalo (GrabCut-rajaus, sohva alfa 0), sama pinta-ala
+          uhri_t, k_('07', 0) - 0.3, 14.0 if V14 else 22.0)   # v14: ylivalotus teki häivytyksestä kovan reunan
+    kaiku('kaiku-kuolinvuode', 'kaiku-kuolinvuode.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.088 if V14 else 0.11,   # v14: pää + ylävartalo (GrabCut-rajaus, sohva alfa 0), sama pinta-ala
           sair_t, k_('09', 0) - 0.2, 7.0 if V14 else 50.0, haiv=24)   # v14: 50, 25 ja 12 ylivalottivat kasvot, käden ja rinnan
     lainaukset = []
     def lainaus(nimi, kuva, q, suunta, ala, kork, kap, raja=None):
