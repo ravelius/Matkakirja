@@ -440,6 +440,9 @@ namespace Matkakirja.Natiivi
         /// <summary>A/B: Pulu Cupolassa oikeassa reunassa lyhyen varren päässä (omistaja 3.10.2026; oletus päällä).</summary>
         public static bool PuluOikealla = true;
 
+        /// <summary>Astronautin kameran kaukonäkymä (maapallo ja ISS avaruudessa): Pulu vain kypärä päässä (omistaja 3.10. klo 07.5x).</summary>
+        public static bool KaukoNakyma => instanssi == null || instanssi.Tila == KyydinTila.Kauko;
+
         IVisualElementScheduledItem puluJalki;
 
         /// <summary>

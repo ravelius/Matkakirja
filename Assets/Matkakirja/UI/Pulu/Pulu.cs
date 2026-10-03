@@ -219,6 +219,8 @@ namespace Matkakirja.Natiivi
                 alue.style.bottom = alue.parent.layout.height - kulma.y;
             }
             alue.EnableInClassList("mk-pulu--pieni", modaali);
+            // Kaukonäkymässä maapallon vierellä tavallinen Pulu kypärä päässä (ei pukua eikä robottikättä), Cupolassa ja kävelyllä asu.
+            kuva.VainKypara = Astronautti && IssKyytiNakyma.KaukoNakyma;
             AsetteleRobotti(reunat);
         }
 

@@ -170,12 +170,30 @@ namespace Matkakirja.Natiivi
             eva.MarkDirtyRepaint();
         }
 
+        /// <summary>
+        /// Vain kypärä ilman avaruuspukua ja robottikättä (omistaja 3.10.2026 klo 07.5x: "Maapallon vierellä pulu voi olla pelkkää kypärä
+        /// päässään ilman pukua ja robotti kättä"): astronautin kameran kaukonäkymässä tavallinen Pulu ja kypäräkerros (Kypara), kuten
+        /// ennen avaruuskävelyasua. Pulu asettaa (IssKyytiNakyma.KaukoNakyma).
+        /// </summary>
+        public bool VainKypara
+        {
+            get => vainKypara;
+            set
+            {
+                if (vainKypara == value) return;
+                vainKypara = value;
+                Rakenna();
+                MarkDirtyRepaint(); pohja.MarkDirtyRepaint(); kypara.MarkDirtyRepaint(); etu.MarkDirtyRepaint(); eva.MarkDirtyRepaint();
+            }
+        }
+        bool vainKypara;
+
         /// <summary>Asu näkyy: kokopulu astronauttina ja kerroskuvat ladattu.</summary>
         bool EvaNakyy
         {
             get
             {
-                if (mini || !tila.Astronautti || EvaPois) return false;
+                if (mini || !tila.Astronautti || EvaPois || vainKypara) return false;
                 if (evaKuvat == null)
                 {
                     evaKuvat = new Texture2D[EvaKerrokset.Length];
