@@ -1,0 +1,249 @@
+# AJATTELIJOIDEN VARASTO — havainnekuva (Linnanrakentaja 3.10.2026; omistajan idea 08.3x Päätoimittajan kautta).
+# "kun linssin alussa halliin sytytetään valot … taustalla näkyisi kymmeniä muita patsaita ja ehkä tauluja ja muita
+# kulttuuriesineitä … kuin suuri kulttuuriperimän varasto tai Noan arkki … heikosti sinertävässä valossa … varaston
+# raoista siivilöityisi ohuita valonsuikaleita pölyisen ilman läpi"; kipsipatsas matalan kreikkalaisen pylvään päällä,
+# pylväs jää hyvin tummaksi. VAIN HAVAINNEKUVA (ei peliin, ei lukuja).
+# Aineisto: SMK:n kipsivalokset KAS635 (Sokrates), KAS979 (Marcus Aurelius), KAS2111 (Platon), PDM; taulut PD/CC0
+# (David, Delacroix, Carstens, Kodros-maljakko, Artemision-pronssi, Marcuksen kaikujen lähteet); Poly Haven CC0 -tekstuurit.
+#   Blender -b -P ajattelijat_varasto.py -- <ulos.png> --koko 1080 2340 [--naytteita 256] [--siemen 7]
+import math, os, random, sys
+import bpy
+from mathutils import Vector
+
+A = sys.argv[sys.argv.index('--') + 1:]
+ULOS = A[0]; i = A.index('--koko'); LEV, KORK = int(A[i + 1]), int(A[i + 2])
+N = int(A[A.index('--naytteita') + 1]) if '--naytteita' in A else 256
+rnd = random.Random(int(A[A.index('--siemen') + 1]) if '--siemen' in A else 7)
+SMK = '/Users/Shared/Claude/proto-3d/_lahteet/smk'
+PH = '/Users/Shared/Claude/proto-3d/_lahteet/polyhaven'
+KUVAT = ['/Users/Shared/Claude/proto-3d/_lahteet/sokrates/kuvat/kuolema-david.jpg',
+         '/Users/Shared/Claude/proto-3d/_lahteet/sokrates/kuvat/sotilas-carstens.jpg',
+         '/Users/Shared/Claude/proto-3d/_lahteet/sokrates/kuvat/oraakkeli-kodros.jpg',
+         '/Users/Shared/Claude/proto-3d/_lahteet/sokrates/kuvat/jumala-artemision.jpg',
+         '/Users/Shared/Claude/proto-3d/_lahteet/marcus-aurelius/kuvat/kuolema-delacroix.jpg',
+         '/Users/Shared/Claude/proto-3d/_lahteet/marcus-aurelius/kuvat/uhri-angeli.jpg',
+         '/Users/Shared/Claude/proto-3d/_lahteet/marcus-aurelius/kuvat/sade-pylvas.jpg']
+
+bpy.ops.wm.read_factory_settings(use_empty=True)
+sc = bpy.context.scene; sc.render.engine = 'CYCLES'
+try:
+    sc.cycles.device = 'GPU'; bpy.context.preferences.addons['cycles'].preferences.compute_device_type = 'METAL'
+    bpy.context.preferences.addons['cycles'].preferences.get_devices()
+    for d in bpy.context.preferences.addons['cycles'].preferences.devices: d.use = True
+except Exception: pass
+sc.cycles.samples = N; sc.cycles.use_denoising = True; sc.cycles.max_bounces = 6; sc.cycles.volume_bounces = 1
+sc.view_settings.view_transform = 'AgX'; sc.view_settings.look = 'AgX - Medium High Contrast'
+sc.render.resolution_x, sc.render.resolution_y, sc.render.resolution_percentage = LEV, KORK, 100
+
+
+def mat(nimi, vari, karheus=0.7, kuva=None, normaali=None, toisto=1.0, sss=0.0):
+    m = bpy.data.materials.new(nimi); m.use_nodes = True; b = m.node_tree.nodes['Principled BSDF']; nt = m.node_tree
+    b.inputs['Base Color'].default_value = (*vari, 1); b.inputs['Roughness'].default_value = karheus
+    if sss: b.inputs['Subsurface Weight'].default_value = sss; b.inputs['Subsurface Radius'].default_value = (0.006, 0.004, 0.003)
+    if kuva:
+        tc = nt.nodes.new('ShaderNodeTexCoord'); mp = nt.nodes.new('ShaderNodeMapping'); mp.inputs['Scale'].default_value = (toisto,) * 3
+        nt.links.new(tc.outputs['Object' if toisto != 1.0 else 'UV'], mp.inputs['Vector'])
+        t = nt.nodes.new('ShaderNodeTexImage'); t.image = bpy.data.images.load(kuva, check_existing=True)
+        if toisto != 1.0: t.projection = 'BOX'; t.projection_blend = 0.3
+        nt.links.new(mp.outputs['Vector'], t.inputs['Vector'])
+        sek = nt.nodes.new('ShaderNodeMix'); sek.data_type = 'RGBA'; sek.blend_type = 'MULTIPLY'; sek.inputs['Factor'].default_value = 1.0
+        sek.inputs['A'].default_value = (*vari, 1); nt.links.new(t.outputs['Color'], sek.inputs['B']); nt.links.new(sek.outputs['Result'], b.inputs['Base Color'])
+        if normaali:
+            tn = nt.nodes.new('ShaderNodeTexImage'); tn.image = bpy.data.images.load(normaali, check_existing=True)
+            tn.image.colorspace_settings.name = 'Non-Color'; tn.projection = t.projection; tn.projection_blend = 0.3
+            nt.links.new(mp.outputs['Vector'], tn.inputs['Vector'])
+            nm = nt.nodes.new('ShaderNodeNormalMap'); nm.inputs['Strength'].default_value = 0.8
+            nt.links.new(tn.outputs['Color'], nm.inputs['Color']); nt.links.new(nm.outputs['Normal'], b.inputs['Normal'])
+    return m
+
+
+def laatikko(nimi, keski, koko, m, kierto=0.0):
+    bpy.ops.mesh.primitive_cube_add(size=1, location=keski); o = bpy.context.object; o.name = nimi
+    o.scale = koko; o.rotation_euler[2] = kierto; o.data.materials.append(m); return o
+
+
+KIPSI = mat('kipsi', (0.86, 0.85, 0.82), 0.62, sss=0.12)
+KIPSI_T = mat('kipsi-varasto', (0.80, 0.79, 0.76), 0.65, sss=0.08)
+PUU = mat('puu', (0.55, 0.50, 0.44), 0.8, f'{PH}/rough_wood/rough_wood_diff_2k.jpg', f'{PH}/rough_wood/rough_wood_nor_2k.jpg', 1.2)
+LATTIA = mat('lattia', (0.5, 0.5, 0.5), 0.75, f'{PH}/slate_floor_02/slate_floor_02_diff_2k.jpg', f'{PH}/slate_floor_02/slate_floor_02_nor_2k.jpg', 0.45)
+KANGAS = mat('kangas', (0.62, 0.58, 0.50), 0.95, f'{PH}/hessian_230/hessian_230_diff_2k.jpg', f'{PH}/hessian_230/hessian_230_nor_2k.jpg', 1.5)
+KIVI = mat('pylvas', (0.22, 0.21, 0.20), 0.8)   # pylväs jää hyvin tummaksi (omistaja)
+KEHYS = mat('kehys', (0.30, 0.22, 0.12), 0.4)
+
+
+def bysti(stl, korkeus, paikka, kierto, m, nimi):
+    bpy.ops.wm.stl_import(filepath=stl); o = bpy.context.selected_objects[0]; o.name = nimi
+    bb = [Vector(c) for c in o.bound_box]; mn = Vector([min(v[k] for v in bb) for k in range(3)]); mx = Vector([max(v[k] for v in bb) for k in range(3)])
+    s = korkeus / (mx.z - mn.z); o.scale = (s, s, s)
+    o.location = (-(mn.x + mx.x) / 2 * s, -(mn.y + mx.y) / 2 * s, -mn.z * s)
+    bpy.ops.object.transform_apply(location=True, scale=True); bpy.ops.object.shade_smooth()
+    o.location = paikka; o.rotation_euler[2] = kierto; o.data.materials.append(m); return o
+
+
+# --- Sokrates matalan doorilaisen pylvään päällä ---
+PYLVAS_K = 1.0
+def pylvas(paikka, korkeus, sade, m, nimi):
+    """Uurrettu doorilainen tynkä: 20 uurretta (profiili tähtimäinen), echinus ja abakus."""
+    import bmesh
+    me = bpy.data.meshes.new(nimi); bm = bmesh.new(); n = 80; renkaat = []
+    for z in (0.0, korkeus):
+        r_ = []
+        for k in range(n):
+            th = 2 * math.pi * k / n; rr = sade * (1 - 0.045 * abs(math.sin(10 * th)) ** 0.6) * (1 - 0.06 * z / korkeus)
+            r_.append(bm.verts.new((rr * math.cos(th), rr * math.sin(th), z)))
+        renkaat.append(r_)
+    for k in range(n):
+        bm.faces.new((renkaat[0][k], renkaat[0][(k + 1) % n], renkaat[1][(k + 1) % n], renkaat[1][k]))
+    bm.faces.new(list(reversed(renkaat[0]))); bm.faces.new(renkaat[1]); bm.to_mesh(me); bm.free()
+    o = bpy.data.objects.new(nimi, me); sc.collection.objects.link(o); o.location = paikka; o.data.materials.append(m)
+    bpy.ops.mesh.primitive_cone_add(vertices=64, radius1=sade * 0.95, radius2=sade * 1.25, depth=0.08,
+                                    location=(paikka[0], paikka[1], paikka[2] + korkeus + 0.04)); bpy.context.object.data.materials.append(m)
+    laatikko(nimi + '-abakus', (paikka[0], paikka[1], paikka[2] + korkeus + 0.115), (sade * 2.3, sade * 2.3, 0.06), m)
+    return korkeus + 0.15
+
+
+yla = pylvas((0, 0, 0), PYLVAS_K - 0.15, 0.20, KIVI, 'pylvas')
+sok = bysti(f'{SMK}/KAS635/smk-inv-635.stl', 0.51, (0, 0, yla), 0.0, KIPSI, 'sokrates')
+PAA = Vector((0, -0.06, yla + 0.38))
+
+# --- varasto: suljettu lautahalli (raot seinissä ja katossa), lattia ---
+X0, X1, Y0, Y1, Z1 = -8.0, 8.0, -6.0, 15.0, 7.5
+laatikko('lattia', ((X0 + X1) / 2, (Y0 + Y1) / 2, -0.05), (X1 - X0, Y1 - Y0, 0.1), LATTIA)
+def lautaseina(alku, loppu, z0, z1, akseli, paikka, rako=0.012, leveys=0.22):
+    """Pystylaudat raoilla: akseli 'x' = seinä x-suunnassa (paikka = y), 'y' = seinä y-suunnassa (paikka = x)."""
+    t = alku
+    while t < loppu:
+        lev = leveys * rnd.uniform(0.8, 1.2); r_ = rako * (4 if rnd.random() < 0.05 else 0.6) if rnd.random() < 0.22 else 0.0
+        if akseli == 'x': laatikko('lauta', (t + lev / 2, paikka, (z0 + z1) / 2), (lev - r_, 0.03, z1 - z0), PUU)
+        else: laatikko('lauta', (paikka, t + lev / 2, (z0 + z1) / 2), (0.03, lev - r_, z1 - z0), PUU)
+        t += lev
+lautaseina(X0, X1, 0, Z1, 'x', Y1); lautaseina(X0, X1, 0, Z1, 'x', Y0)
+lautaseina(Y0, Y1, 0, Z1, 'y', X0); lautaseina(Y0, Y1, 0, Z1, 'y', X1)
+y_ = Y0                                                     # katto: poikittaiset laudat, muutama leveä rako (kattoluukut)
+while y_ < Y1:
+    lev = 0.25; rako = 0.09 if rnd.random() < 0.12 else (0.006 if rnd.random() < 0.25 else 0.0)
+    laatikko('katto', (0, y_ + lev / 2, Z1), (X1 - X0, lev - rako, 0.04), PUU); y_ += lev
+for x_ in (-6, -2, 2, 6):                                    # kattopalkit
+    laatikko('palkki', (x_, (Y0 + Y1) / 2, Z1 - 0.25), (0.25, Y1 - Y0, 0.4), PUU)
+
+# --- kulttuuriperimän varasto: bystit jalustoilla, hyllyt, kankaiden alla olevat patsaat, taulut, laatikot ---
+STL = [f'{SMK}/KAS635/smk-inv-635.stl', f'{SMK}/KAS979/smk-inv-979.stl', f'{SMK}/KAS2111/smk-inv-2111.stl']
+pohjat = [bysti(s, 0.5, (0, 0, -50), 0, KIPSI_T, f'pohja{k}') for k, s in enumerate(STL)]
+def kopio(pohja, paikka, kierto, skaala):
+    o = pohja.copy(); o.data = pohja.data; sc.collection.objects.link(o); o.location = paikka; o.rotation_euler[2] = kierto
+    o.scale = (skaala,) * 3; return o
+varatut = [(0.0, 0.0, 1.6)]
+def vapaa(x, y, r):
+    return all(math.hypot(x - a, y - b) > r + c for a, b, c in varatut)
+for k in range(26):                                          # jalustat + bystit hajallaan
+    for _ in range(40):
+        x, y = rnd.uniform(-7, 7), rnd.uniform(2.5, 12.5)
+        if vapaa(x, y, 0.5): break
+    varatut.append((x, y, 0.5)); kork = rnd.uniform(0.7, 1.4)
+    laatikko('jalusta', (x, y, kork / 2), (0.45, 0.45, kork), KIPSI_T if rnd.random() < 0.5 else PUU, rnd.uniform(-0.3, 0.3))
+    kopio(rnd.choice(pohjat), (x, y, kork), rnd.uniform(-math.pi, math.pi), rnd.uniform(0.85, 1.25))
+for y in (9.0, 12.0):                                        # hyllyrivit
+    for x0 in (-6.5, -1.5, 3.5):
+        varatut.append((x0 + 1.5, y, 1.8))
+        for zt in (0.05, 1.05, 2.05, 3.05):
+            laatikko('hylly', (x0 + 1.5, y, zt), (3.0, 0.7, 0.05), PUU)
+        for xt in (x0, x0 + 3.0):
+            laatikko('pysty', (xt, y, 1.6), (0.07, 0.7, 3.2), PUU)
+        for zt in (0.1, 1.1, 2.1):                           # hyllyillä bystejä, laatikoita, ruukkuja
+            xt = x0 + 0.2
+            while xt < x0 + 2.8:
+                v = rnd.random()
+                if v < 0.45: kopio(rnd.choice(pohjat), (xt + 0.15, y, zt), rnd.uniform(-1, 1) + math.pi * (y > 10), rnd.uniform(0.6, 0.85)); xt += 0.45
+                elif v < 0.8:
+                    s_ = rnd.uniform(0.25, 0.5); laatikko('laatikko', (xt + s_ / 2, y, zt + s_ * 0.4), (s_, 0.5, s_ * 0.8), PUU, rnd.uniform(-0.1, 0.1)); xt += s_ + 0.05
+                else:
+                    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.14, location=(xt + 0.15, y, zt + 0.16)); o = bpy.context.object
+                    o.scale = (1, 1, 1.35); bpy.ops.object.shade_smooth(); o.data.materials.append(KIVI); xt += 0.35
+for k in range(9):                                           # suojakankaiden alla olevat isot patsaat
+    for _ in range(40):
+        x, y = rnd.uniform(-7, 7), rnd.uniform(4, 13)
+        if vapaa(x, y, 0.6): break
+    varatut.append((x, y, 0.6)); kork = rnd.uniform(1.6, 2.4)
+    bpy.ops.mesh.primitive_cone_add(vertices=32, radius1=rnd.uniform(0.42, 0.55), radius2=0.24, depth=kork, location=(x, y, kork / 2)); vartalo = bpy.context.object
+    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.24, location=(x + rnd.uniform(-0.08, 0.08), y, kork + 0.12)); paa_ = bpy.context.object
+    bpy.ops.mesh.primitive_cube_add(size=1, location=(x + rnd.choice((-0.35, 0.35)), y, kork * rnd.uniform(0.6, 0.85))); kasi = bpy.context.object
+    kasi.scale = (0.55, 0.32, 0.28)   # olkapää/käsi verhon alla, ei tikku
+    bpy.ops.object.select_all(action='DESELECT')
+    for o in (vartalo, paa_, kasi): o.select_set(True)
+    bpy.context.view_layer.objects.active = vartalo; bpy.ops.object.join()
+    rm = vartalo.modifiers.new('verho', 'REMESH'); rm.mode = 'VOXEL'; rm.voxel_size = 0.04
+    tx = bpy.data.textures.new(f'rypyt{k}', 'CLOUDS'); tx.noise_scale = 0.32; tx.noise_depth = 3
+    dp = vartalo.modifiers.new('rypyt', 'DISPLACE'); dp.texture = tx; dp.strength = 0.11
+    sm = vartalo.modifiers.new('sile', 'SMOOTH'); sm.iterations = 4; sm.factor = 0.7
+    vartalo.data.materials.clear(); vartalo.data.materials.append(KANGAS); bpy.ops.object.shade_smooth()
+for k in range(14):                                          # taulut kehyksissä: nojaamassa hyllyihin, seinään ja toisiinsa
+    kuva = KUVAT[k % len(KUVAT)]; img = bpy.data.images.load(kuva, check_existing=True); sk = img.size[1] / max(img.size[0], 1)
+    lev = rnd.uniform(0.6, 1.4); kork = lev * sk
+    for _ in range(40):
+        x, y = rnd.uniform(-6.5, 6.5), rnd.uniform(3.5, 11)
+        if vapaa(x, y, lev * 0.5): break
+    varatut.append((x, y, lev * 0.5)); kierto = (0.0 if rnd.random() < 0.8 else math.pi) + rnd.uniform(-0.6, 0.6)   # useimmat kasvot kameraan päin
+    bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 0, 0)); taulu = bpy.context.object
+    taulu.scale = (lev, kork, 1); bpy.ops.object.transform_apply(scale=True)
+    mt = mat(f'taulu{k}', (0.85, 0.82, 0.76), 0.55, kuva); taulu.data.materials.append(mt)
+    kehys = []
+    for (cx, cy, sx, sy) in ((0, kork / 2 + 0.04, lev + 0.16, 0.08), (0, -kork / 2 - 0.04, lev + 0.16, 0.08),
+                             (lev / 2 + 0.04, 0, 0.08, kork), (-lev / 2 - 0.04, 0, 0.08, kork)):
+        kehys.append(laatikko('kehys', (cx, cy, 0.02), (sx, sy, 0.05), KEHYS))
+    for o in kehys: o.parent = taulu
+    taulu.rotation_euler = (math.radians(rnd.uniform(72, 82)), 0, kierto)
+    taulu.location = (x, y, kork / 2 * math.sin(math.radians(77)) + 0.04)
+for k in range(30):                                          # laatikkopinot
+    for _ in range(40):
+        x, y = rnd.uniform(-7.4, 7.4), rnd.uniform(3, 14.5)
+        if vapaa(x, y, 0.45): break
+    varatut.append((x, y, 0.45)); z = 0.0
+    for _ in range(rnd.randint(1, 3)):
+        s_ = rnd.uniform(0.5, 0.9); laatikko('laatikko', (x, y, z + s_ * 0.35), (s_, s_ * 0.8, s_ * 0.7), PUU, rnd.uniform(-0.2, 0.2)); z += s_ * 0.7
+for o in pohjat: bpy.data.objects.remove(o, do_unlink=True)
+
+# --- valot ---
+w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True
+w.node_tree.nodes['Background'].inputs['Color'].default_value = (0.35, 0.55, 1.0, 1); w.node_tree.nodes['Background'].inputs['Strength'].default_value = 0.9
+vol = bpy.data.materials.new('pöly'); vol.use_nodes = True; vn = vol.node_tree; vn.nodes.remove(vn.nodes['Principled BSDF'])
+vs = vn.nodes.new('ShaderNodeVolumeScatter'); vs.inputs['Density'].default_value = 0.035; vs.inputs['Anisotropy'].default_value = 0.65
+nz = vn.nodes.new('ShaderNodeTexNoise'); nz.inputs['Scale'].default_value = 0.6
+ma = vn.nodes.new('ShaderNodeMath'); ma.operation = 'MULTIPLY_ADD'; ma.inputs[1].default_value = 0.05; ma.inputs[2].default_value = 0.022
+vn.links.new(nz.outputs['Fac'], ma.inputs[0]); vn.links.new(ma.outputs['Value'], vs.inputs['Density'])
+vn.links.new(vs.outputs['Volume'], vn.nodes['Material Output'].inputs['Volume'])
+ilma = laatikko('ilma', ((X0 + X1) / 2, (Y0 + Y1) / 2, Z1 / 2), (X1 - X0 - 0.1, Y1 - Y0 - 0.1, Z1 - 0.1), vol)
+ilma.visible_shadow = False
+aur = bpy.data.lights.new('aurinko', 'SUN'); aur.energy = 30.0; aur.color = (0.70, 0.82, 1.0); aur.angle = math.radians(0.4)
+ao = bpy.data.objects.new('aurinko', aur); sc.collection.objects.link(ao); ao.rotation_euler = (math.radians(38), 0, math.radians(200))
+kp = bpy.data.lights.new('keila', 'SPOT'); kp.energy = 700; kp.spot_size = math.radians(13); kp.spot_blend = 0.55
+kp.color = (1.0, 0.80, 0.58); kp.shadow_soft_size = 0.05
+ko = bpy.data.objects.new('keila', kp); sc.collection.objects.link(ko); ko.location = PAA + Vector((0.7, -1.1, 2.9))
+ko.rotation_euler = (PAA + Vector((0, 0, -0.08)) - ko.location).to_track_quat('-Z', 'Y').to_euler()
+tay = bpy.data.lights.new('sini', 'AREA'); tay.energy = 560; tay.size = 8; tay.color = (0.55, 0.68, 1.0)
+to = bpy.data.objects.new('sini', tay); sc.collection.objects.link(to); to.location = (0, 8, Z1 - 0.6)
+# pölyhiukkaset keilassa ja suikaleissa (pienet tetraedrit, valaistuina vain valossa)
+import bmesh
+me = bpy.data.meshes.new('poly'); bm = bmesh.new()
+for _ in range(2600):
+    c = Vector((rnd.gauss(0, 0.9), rnd.gauss(0.3, 1.2), rnd.uniform(0.3, 3.4))) if rnd.random() < 0.6 else \
+        Vector((rnd.uniform(-7, 7), rnd.uniform(1, 14), rnd.uniform(0.2, 7)))
+    s_ = rnd.uniform(0.0008, 0.0022)
+    bmesh.ops.create_icosphere(bm, subdivisions=1, radius=s_, matrix=__import__('mathutils').Matrix.Translation(c))
+bm.to_mesh(me); bm.free(); po = bpy.data.objects.new('poly', me); sc.collection.objects.link(po)
+pm = bpy.data.materials.new('pölyhiukkanen'); pm.use_nodes = True; pn = pm.node_tree; pn.nodes.clear()
+tl = pn.nodes.new('ShaderNodeBsdfTranslucent'); tl.inputs['Color'].default_value = (1, 0.97, 0.92, 1)
+tp = pn.nodes.new('ShaderNodeBsdfTransparent'); mx_ = pn.nodes.new('ShaderNodeMixShader'); mx_.inputs['Fac'].default_value = 0.35
+pn.links.new(tp.outputs[0], mx_.inputs[1]); pn.links.new(tl.outputs[0], mx_.inputs[2]); ou = pn.nodes.new('ShaderNodeOutputMaterial')
+pn.links.new(mx_.outputs[0], ou.inputs['Surface']); po.data.materials.append(pm)   # valaisematon hiukkanen lähes näkymätön
+
+# --- kamera: bysti valokeilassa, tausta epätarkka ---
+cd = bpy.data.cameras.new('k'); cd.sensor_fit = 'VERTICAL'; cd.sensor_height = 24
+cam = bpy.data.objects.new('k', cd); sc.collection.objects.link(cam); sc.camera = cam
+pysty = KORK > LEV
+cd.lens = 32 if pysty else 30
+cam.location = PAA + (Vector((-0.45, -2.2, 0.05)) if pysty else Vector((-0.6, -2.4, 0.0)))
+kohde = PAA + (Vector((0, 0, -0.30)) if pysty else Vector((0, 0, -0.05)))   # pysty: bysti yläkolmannekseen, pylväs alas
+cam.rotation_euler = (kohde - cam.location).to_track_quat('-Z', 'Y').to_euler()
+cd.dof.use_dof = True; cd.dof.focus_distance = (PAA - cam.location).length; cd.dof.aperture_fstop = 2.2
+sc.render.filepath = ULOS; bpy.ops.render.render(write_still=True)
+print('VARASTO valmis', ULOS)
