@@ -953,7 +953,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     u.pMaara.value = kaikuIndeksi + 2;
     const virranAlku = AJ.virta.find(([, k]) => k > 0)?.[0] ?? 0;
     /*
-     * Porrastus (v14): lähtöjärjestys kiertää vasen → oikea → ylhäällä → alhaalla; ylhäällä olevat (otsa ja päälaki)
+     * Porrastus (v14): lähtöjärjestys kiertää alhaalla → vasen → oikea → ylhäällä; ylhäällä olevat (otsa ja päälaki)
      * vasta kysymyksen jälkeen, ettei kysymys jää rivien alle. Tahti PORRAS.vali ruutua.
      */
     const PORRAS = AJ.virtaPorrastus ?? null;
@@ -963,7 +963,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     if (PORRAS) {
       const jonot = { vasen: [], oikea: [], yla: [], ala: [] };
       for (const v of virta) jonot[v.puoli].push(v);
-      const kierto = ['vasen', 'oikea', 'yla', 'ala'];
+      // Ensimmäinen kasvojen etupuolelta (ala = parta ja suu, näkyy heti), sitten ohimot ja otsa vuorotellen.
+      const kierto = ['ala', 'vasen', 'oikea', 'yla'];
       let r0 = PORRAS.alku, k = 0;
       while (kierto.some((p) => jonot[p].length)) {
         let p = null;
