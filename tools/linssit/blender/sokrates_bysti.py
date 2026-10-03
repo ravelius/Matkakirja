@@ -1314,8 +1314,10 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     lainaus('tykki-30e', 'nauha-30e.png', p, n + Vector((-0.40, -0.15, -0.30)), 0.075, V7_NAUHA * 1.25, '07', raja=k_('08', 0) - 0.05)
     lainaus('tykki-49b', 'nauha-sivu.png', vp, vn + Vector((0.0, -0.45, -0.25)), 0.075, 0.019 * 1.25, '09', raja=illan_t - 0.05)
     kys_t = T(W.get('Miten', K['10'][1] - 1.8))
-    v4_projektori('tykki-kysymys', p, (n + Vector((-0.30, -0.10, -0.20))).normalized(), 0.6, 0.12, os.path.join(gobot, 'nauha-kysymys.png'),
-                  0.022, (F(kys_t), LOPPU), V7_TYKKI, kiintea=True, energia=(F(kys_t), LOPPU - 1))
+    v4_projektori('tykki-kysymys', p, (n + (Vector((-0.12, -0.10, -0.22)) if V14 else Vector((-0.30, -0.10, -0.20)))).normalized(), 0.6, 0.12,
+                  os.path.join(gobot, 'nauha-kysymys.png'), 0.022, (F(kys_t), LOPPU), V7_TYKKI, kiintea=True, energia=(F(kys_t), LOPPU - 1),
+                  **({'ca': 0.004, 'syvyys': 0.06} if V14 else {}))   # v14: kuten lainaukset — ei värireunoja, "elää?" ei sumene
+    if V14: VIRTA_VAISTO.append((tuple(p), 0.12 * 0.62, F(kys_t), LOPPU))   # taustavirta väistää kysymyksen
     lainaukset.append({'nimi': 'tykki-kysymys', 'kuva': 'nauha-kysymys.png', 'nakyy_s': [round(kys_t, 2), round(loppu_t, 2)], 'kiintea': True})
     # --- 01: kapea sivuvalo pyyhkäisee nenän ja silmien yli, kun ne mainitaan ---
     pd = bpy.data.lights.new('pyyhkaisy', 'SPOT'); pd.spot_size = math.radians(7); pd.spot_blend = 0.35; pd.shadow_soft_size = 0.004
@@ -1457,8 +1459,10 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     lainaus('tykki-449', 'nauha-449.png', p if V14 else pp, (n + Vector((-0.40, -0.15, -0.30))) if V14 else (pn + Vector((-0.55, -0.15, -0.30))), 0.075, 0.019 * 1.25, '05', raja=uhri_t - 0.05)
     lainaus('tykki-211', 'nauha-211.png', vp, vn + Vector((0.0, -0.45, -0.25)), 0.075, 0.019 * 1.25, '07', raja=k_('08', 0) - 0.05)
     kys_t = w_('Miten', T(kesto) - 1.8)   # Marcuksella kysymys on kappaleen 09 lopussa
-    v4_projektori('tykki-kysymys', p, (n + Vector((-0.30, -0.10, -0.20))).normalized(), 0.6, 0.12, os.path.join(gobot, 'nauha-kysymys.png'),
-                  0.022, (F(kys_t), LOPPU), V7_TYKKI, kiintea=True, energia=(F(kys_t), LOPPU - 1))
+    v4_projektori('tykki-kysymys', p, (n + (Vector((-0.12, -0.10, -0.22)) if V14 else Vector((-0.30, -0.10, -0.20)))).normalized(), 0.6, 0.12,
+                  os.path.join(gobot, 'nauha-kysymys.png'), 0.022, (F(kys_t), LOPPU), V7_TYKKI, kiintea=True, energia=(F(kys_t), LOPPU - 1),
+                  **({'ca': 0.004, 'syvyys': 0.06} if V14 else {}))   # v14: kuten lainaukset — ei värireunoja, "elää?" ei sumene
+    if V14: VIRTA_VAISTO.append((tuple(p), 0.12 * 0.62, F(kys_t), LOPPU))   # taustavirta väistää kysymyksen
     lainaukset.append({'nimi': 'tykki-kysymys', 'kuva': 'nauha-kysymys.png', 'nakyy_s': [round(kys_t, 2), round(loppu_t, 2)], 'kiintea': True})
     def aur_avain(t_, suunta, e, vari=(1.0, 0.95, 0.88)):
         if V14 and t_ > T(0) + 0.05:   # omistaja 15.4x: tekstivaiheessa kasvot tummina, teksti erottuu; heikko reunavalo pitää muodon
