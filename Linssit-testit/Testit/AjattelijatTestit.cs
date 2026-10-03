@@ -604,5 +604,20 @@ namespace Matkakirja.Linssit.Testit
             for (int i = 0; i < tasainen.Length; i++) tasainen[i] = 0.3f * (float)Math.Sin(i * 0.2);
             Oleta.Tosi(double.IsNaN(AjattelijaTahti.Isku(tasainen, f, 1.8, 2.0)), "ei iskua");
         }
+
+        [Testi] static void TahtiMp3AlkuviiveTagista()
+        {
+            // v14-musiikki.mp3 (Lavf, 48 kHz, ämpäri 3.10.): ffmpeg "skip 1105" = enkooderi 576 + dekooderi 529; kehyksiä 4528.
+            var t = AjattelijaTahti.Mp3Alku(File.ReadAllBytes(Fixtuurit + "v14-musiikki-alku.bin"));
+            Oleta.Tosi(t.HasValue, "tagi löytyy ID3:n jälkeen");
+            Oleta.Sama(4528, t.Value.Kehyksia);
+            Oleta.Sama(1152, t.Value.KehyksenNaytteet);
+            Oleta.Sama(576, t.Value.Viive);
+            // Leikkaamaton dekoodaus (kaikki kehykset) → ohitetaan 1105; leikattu → 0.
+            Oleta.Sama(1105, AjattelijaTahti.Mp3Ohitus(t, 4528L * 1152));
+            Oleta.Sama(0, AjattelijaTahti.Mp3Ohitus(t, 4528L * 1152 - 1105 - t.Value.Tayte));
+            Oleta.Sama(0, AjattelijaTahti.Mp3Ohitus(null, 123456));
+            Oleta.Tosi(!AjattelijaTahti.Mp3Alku(new byte[300]).HasValue, "ei MP3:a");
+        }
     }
 }

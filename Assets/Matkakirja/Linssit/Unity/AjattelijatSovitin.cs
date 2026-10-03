@@ -125,6 +125,9 @@ namespace Matkakirja.Natiivi
         double viimeViive;
         /// <summary>Tahtimittari: intron leikkaukset (globaali ruutu) ja kytkin, joiden kuvan ja äänen ero kirjataan lokiin.</summary>
         readonly List<(double g, string nimi, double isku)> mitattavat = new List<(double, string, double)>();
+        /// <summary>MP3-tagit polun mukaan (AjattelijaTahti.Mp3Alku; null = ei tagia) ja klipin lähdepolku alkuviiveen ohitukseen.</summary>
+        static readonly Dictionary<string, AjattelijaTahti.Mp3Tiedot?> mp3Tagit = new Dictionary<string, AjattelijaTahti.Mp3Tiedot?>();
+        readonly Dictionary<AudioClip, string> klipinPolku = new Dictionary<AudioClip, string>();
         /// <summary>
         /// Prologin kello (s): alkaa nollasta ensimmäisellä ruudulla valinnan jälkeen (kohtauksen kuva näkyy mustana), etenee
         /// ruutujen välillä enintään ProloginAskelS (purun tai varjostimen kääntämisen pätkintä ei syö prologia) ja odottaa
@@ -283,6 +286,8 @@ namespace Matkakirja.Natiivi
                 o.StartCoroutine(JalkiLataa(a, s));
                 Odota0(HaeAani(ajv != null ? ajv.Puhe : krv != null ? krv.Puhe : a.Puhe, puhe, s));
                 Odota0(HaeAani(ajv != null ? ajv.Musiikki : krv != null ? krv.Musiikki : a.Musiikki, musiikki, s));
+                Odota0(HaeMp3Tagi(ajv != null ? ajv.Puhe : krv != null ? krv.Puhe : a.Puhe));
+                Odota0(HaeMp3Tagi(ajv != null ? ajv.Musiikki : krv != null ? krv.Musiikki : a.Musiikki));
                 Odota0(HaeAani(Kytkin, kytkin, s));
                 while (k0 > 0) { yield return null; if (s != sukupolvi) yield break; }
                 Latautuu = false;
@@ -324,6 +329,8 @@ namespace Matkakirja.Natiivi
             o.StartCoroutine(JalkiLataa(a, s));
             Odota(HaeAani(aj != null ? aj.Puhe : kr != null ? kr.Puhe : a.Puhe, puhe, s));
             Odota(HaeAani(aj != null ? aj.Musiikki : kr != null ? kr.Musiikki : a.Musiikki, musiikki, s));
+            Odota(HaeMp3Tagi(aj != null ? aj.Puhe : kr != null ? kr.Puhe : a.Puhe));
+            Odota(HaeMp3Tagi(aj != null ? aj.Musiikki : kr != null ? kr.Musiikki : a.Musiikki));
             Odota(HaeAani(Kytkin, kytkin, s));
             // Haut päättyvät aina (onnistui, virhe tai 30 s:n aikaraja); puuttuva aineisto ei estä kohtausta (kuten web).
             while (kesken > 0)
@@ -388,6 +395,41 @@ namespace Matkakirja.Natiivi
             valmis(p.downloadHandler.data);
         }
 
+        /// <summary>
+        /// MP3:n alun tagi (alkuviive): ämpäristä Range-pyynnöllä 8 kt, peilistä tiedoston alku. Kerran polkua kohden (välimuisti);
+        /// virhe = ei ohitusta (null).
+        /// </summary>
+        IEnumerator HaeMp3Tagi(string polku)
+        {
+            if (string.IsNullOrEmpty(polku) || mp3Tagit.ContainsKey(polku)) yield break;
+            if (!string.IsNullOrEmpty(Peili))
+            {
+                byte[] alku = null;
+                try
+                {
+                    using var f = System.IO.File.OpenRead(Peili.TrimEnd('/') + "/" + polku);
+                    alku = new byte[Math.Min(8192, (int)f.Length)];
+                    int n = f.Read(alku, 0, alku.Length);
+                    if (n < alku.Length) Array.Resize(ref alku, n);
+                }
+                catch (Exception) { }
+                mp3Tagit[polku] = AjattelijaTahti.Mp3Alku(alku);
+                yield break;
+            }
+            using var p = UnityWebRequest.Get(Osoite(polku));
+            p.SetRequestHeader("Range", "bytes=0-8191");
+            p.timeout = 15;
+            yield return p.SendWebRequest();
+            mp3Tagit[polku] = p.result == UnityWebRequest.Result.Success ? AjattelijaTahti.Mp3Alku(p.downloadHandler.data) : null;
+        }
+
+        /// <summary>Raidan alusta ohitettavat näytteet (LAME-alkuviive, jos Unity ei leikannut sitä).</summary>
+        int Mp3Ohitus(AudioClip c)
+        {
+            if (c == null || !klipinPolku.TryGetValue(c, out var polku) || !mp3Tagit.TryGetValue(polku, out var t)) return 0;
+            return AjattelijaTahti.Mp3Ohitus(t, c.samples);
+        }
+
         IEnumerator HaeAani(string polku, AudioSource kohde, int s)
         {
             if (esiladatut.TryGetValue(polku, out var l))
@@ -399,6 +441,7 @@ namespace Matkakirja.Natiivi
                     if (!yhteinen && esiladatut.TryGetValue(polku, out var l2) && l2 == l) esiladatut.Remove(polku);   // omistus lähteelle
                     if (s != sukupolvi || kohde == null) { if (!yhteinen) UnityEngine.Object.Destroy(l.Klippi); yield break; }
                     kohde.clip = l.Klippi;
+                    klipinPolku[l.Klippi] = polku;
                     yield break;
                 }
             }
@@ -410,6 +453,7 @@ namespace Matkakirja.Natiivi
             if (s != sukupolvi || kohde == null) yield break;
             if (p.result != UnityWebRequest.Result.Success) { o.Kirjaa($"ajattelija: ääni {polku} ei latautunut ({p.error})"); yield break; }
             kohde.clip = DownloadHandlerAudioClip.GetContent(p);
+            klipinPolku[kohde.clip] = polku;
             // Jos kello on jo puheen alueella, ääni liittyy kesken (AjattelijaTahti.Ajastus, Paivita).
         }
 
@@ -637,7 +681,14 @@ namespace Matkakirja.Natiivi
             mitattavat.Clear();
             // MP3:n alkuviive (LAME 1105 näytettä): ffmpeg ja selaimet leikkaavat sen tagin mukaan; näytemäärä kertoo, tekeekö Unity samoin.
             foreach (var (nimi, l) in new[] { ("puhe", puhe), ("musiikki", musiikki) })
-                if (l?.clip != null) o.Kirjaa($"ajattelija: tahti {nimi} {l.clip.samples} näytettä {l.clip.frequency} Hz {l.clip.channels} kan, {l.clip.length:F4} s");
+                if (l?.clip != null)
+                {
+                    klipinPolku.TryGetValue(l.clip, out var pp);
+                    var tg = pp != null && mp3Tagit.TryGetValue(pp, out var x) ? x : null;
+                    o.Kirjaa($"ajattelija: tahti {nimi} {l.clip.samples} näytettä {l.clip.frequency} Hz, tagi "
+                        + (tg.HasValue ? $"{tg.Value.Kehyksia} × {tg.Value.KehyksenNaytteet} viive {tg.Value.Viive} täyte {tg.Value.Tayte}" : "-")
+                        + $", ohitus {Mp3Ohitus(l.clip)} näytettä");
+                }
             if (kytkin.clip != null) mitattavat.Add((a.Prologi.Kytkin, "kytkin", double.NaN));
             if (a.Aikajana == null) return;
             foreach (var n in AjattelijaTahti.Leikkaukset(a.Aikajana.Kamera, 300))
@@ -646,13 +697,14 @@ namespace Matkakirja.Natiivi
                 var c = musiikki.clip;
                 if (c != null && c.loadType == AudioClipLoadType.DecompressOnLoad && t + 0.25 < c.length)
                 {
-                    int alku = Math.Max(0, (int)((t - 0.25) * c.frequency)), pituus = (int)(0.5 * c.frequency);
+                    int ohitus = Mp3Ohitus(c);   // iskut leikatun raidan ajassa (sama kuin soitossa)
+                    int alku = Math.Max(0, (int)((t - 0.25) * c.frequency)) + ohitus, pituus = (int)(0.5 * c.frequency);
                     var d = new float[pituus * c.channels];
                     if (c.GetData(d, alku))
                     {
                         var mono = new float[pituus];
                         for (int i = 0; i < pituus; i++) { float x = 0; for (int k = 0; k < c.channels; k++) x += d[i * c.channels + k]; mono[i] = x / c.channels; }
-                        double h = AjattelijaTahti.Isku(mono, c.frequency, (double)alku / c.frequency, t);
+                        double h = AjattelijaTahti.Isku(mono, c.frequency, (double)(alku - ohitus) / c.frequency, t);
                         if (!double.IsNaN(h)) isku = h - t;
                     }
                 }
@@ -674,7 +726,7 @@ namespace Matkakirja.Natiivi
             var (hetki, kohta) = AjattelijaTahti.Ajastus(dspNyt, dspNolla, pl);
             if (kohta >= l.clip.length) return;
             l.volume = EsityksenAani.Mykistetty?.Invoke() ?? false ? 0f : 1f;
-            l.timeSamples = (int)(kohta * l.clip.frequency);
+            l.timeSamples = Math.Min(l.clip.samples - 1, (int)(kohta * l.clip.frequency) + Mp3Ohitus(l.clip));
             l.PlayScheduled(hetki);
         }
 
@@ -708,6 +760,7 @@ namespace Matkakirja.Natiivi
             foreach (var l in new[] { puhe, musiikki })
                 if (l != null && l.clip != null) { var c = l.clip; l.clip = null; UnityEngine.Object.Destroy(c); }
             puhe = musiikki = kytkin = null;
+            klipinPolku.Clear();
             dspNolla = double.NaN;
             ruutuOhitus = double.NaN;
             Tekstit = default;

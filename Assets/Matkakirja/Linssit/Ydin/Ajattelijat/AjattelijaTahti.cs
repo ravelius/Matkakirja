@@ -107,6 +107,65 @@ namespace Matkakirja.Linssit.Ajattelijat
             return alku + paras * (double)jakso / taajuus;
         }
 
+        /// <summary>MP3:n alun tiedot Xing/Info- ja LAME-tagista: kehykset, näytteet kehyksessä, enkooderin viive ja loppujen täyte.</summary>
+        public readonly struct Mp3Tiedot
+        {
+            public readonly int Kehyksia, KehyksenNaytteet, Viive, Tayte;
+            public Mp3Tiedot(int k, int n, int v, int t) { Kehyksia = k; KehyksenNaytteet = n; Viive = v; Tayte = t; }
+            /// <summary>Koko dekoodattu pituus ilman leikkausta.</summary>
+            public long Naytteita => (long)Kehyksia * KehyksenNaytteet;
+        }
+
+        /// <summary>MP3-dekooderin oma viive (LAME/ffmpeg: 529 näytettä), joka lisätään tagin enkooderiviiveeseen.</summary>
+        public const int DekooderinViive = 529;
+
+        /// <summary>
+        /// MP3-ALKUVIIVE (Linssiseppä 2 4.10.2026, Päätoimittaja: poista LAME-alkuviive natiivista): ajattelijan v14-musiikin
+        /// alussa on 576 + 529 = 1105 näytettä hiljaisuutta (23 ms 48 kHz:llä), jonka ffmpeg ja selaimet leikkaavat tagin mukaan.
+        /// Lukee ID3v2:n yli ensimmäisen kehyksen Xing/Info-tagin ja sen LAME-laajennuksen (viive 12 bittiä, täyte 12 bittiä);
+        /// null = ei tagia (tasan alkava raita, tai muu kuin MP3).
+        /// </summary>
+        public static Mp3Tiedot? Mp3Alku(byte[] b)
+        {
+            if (b == null || b.Length < 200) return null;
+            int i = 0;
+            if (b[0] == 'I' && b[1] == 'D' && b[2] == '3' && b.Length > 10)
+                i = 10 + ((b[6] & 0x7f) << 21 | (b[7] & 0x7f) << 14 | (b[8] & 0x7f) << 7 | (b[9] & 0x7f)) + ((b[5] & 0x10) != 0 ? 10 : 0);
+            for (; i + 4 < b.Length; i++) if (b[i] == 0xFF && (b[i + 1] & 0xE0) == 0xE0) break;
+            if (i + 4 >= b.Length) return null;
+            int versio = (b[i + 1] >> 3) & 3, kerros = (b[i + 1] >> 1) & 3, kanavat = (b[i + 3] >> 6) & 3;
+            if (kerros != 1) return null;                                   // vain Layer III
+            bool mpeg1 = versio == 3;
+            int sivu = mpeg1 ? (kanavat == 3 ? 17 : 32) : (kanavat == 3 ? 9 : 17);
+            int x = i + 4 + sivu;
+            if (x + 120 + 24 > b.Length) return null;
+            string tag = System.Text.Encoding.ASCII.GetString(b, x, 4);
+            if (tag != "Xing" && tag != "Info") return null;
+            int liput = b[x + 4] << 24 | b[x + 5] << 16 | b[x + 6] << 8 | b[x + 7];
+            int o = x + 8, kehyksia = 0;
+            if ((liput & 1) != 0) { kehyksia = b[o] << 24 | b[o + 1] << 16 | b[o + 2] << 8 | b[o + 3]; o += 4; }
+            if ((liput & 2) != 0) o += 4;
+            if ((liput & 4) != 0) o += 100;
+            if ((liput & 8) != 0) o += 4;
+            int viive = 0, tayte = 0;
+            if (o + 24 <= b.Length)
+            {
+                viive = b[o + 21] << 4 | b[o + 22] >> 4;
+                tayte = (b[o + 22] & 0x0F) << 8 | b[o + 23];
+            }
+            return new Mp3Tiedot(kehyksia, mpeg1 ? 1152 : 576, viive, tayte);
+        }
+
+        /// <summary>
+        /// Ohitettavat näytteet raidan alusta: jos dekooderi EI leikannut (näytteitä ≈ kehykset × näytteet), viive + 529;
+        /// jos leikkasi (tai tagia ei ole), 0.
+        /// </summary>
+        public static int Mp3Ohitus(Mp3Tiedot? t, long naytteita)
+        {
+            if (t == null || t.Value.Kehyksia <= 0 || t.Value.Viive <= 0) return 0;
+            return naytteita >= t.Value.Naytteita - t.Value.KehyksenNaytteet / 2 ? t.Value.Viive + DekooderinViive : 0;
+        }
+
         /// <summary>
         /// Tasainen äänikello: AudioSettings.dspTime etenee puskurin kerrallaan (iOS 5–21 ms), joten sen väliin interpoloidaan
         /// reaaliajalla (enintään Raja s) ja arvo ei koskaan pienene. Kuvan ruutu ei näin nyi puskurin tahdissa.
