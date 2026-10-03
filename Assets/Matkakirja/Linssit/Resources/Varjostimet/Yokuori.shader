@@ -294,8 +294,8 @@ Shader "Matkakirja/Linssit/Yokuori"
                 float nl = dot(ng, aur), nv = saturate(dot(ng, v));
                 // AALLOKON KIMALLUS (Päätoimittaja 3.10. Cupolan vedon jälkeen: "iso tasainen kermanvärinen läiskä, kuin usva tai
                 // linssiheijastus"): ISS-kuvissa kiilto on rakeinen ja juovainen, koska pinnan kaltevuus vaihtelee aaltojen mukaan.
-                // Pinnan normaali värähtelee kahdella mittakaavalla (noin 1,4 km ja 0,35 km, tuulen suuntaan neljä kertaa venytetty
-                // eli juovat poikittain) ja karheus vaihtelee 12 km:n laikuittain (tuulen vaihtelu). Paikallinen σ² on 40 % ja
+                // Pinnan normaali värähtelee kahdella mittakaavalla (8 km ja 2,5 km, tuulen suuntaan viisi kertaa venytetty
+                // eli juovat poikittain) ja karheus vaihtelee 25 km:n laikuittain (tuulen vaihtelu). Paikallinen σ² on 40 % ja
                 // loput tulee normaalin värähtelystä, joten kiillon kokonaisleveys pysyy Cox–Munk-luokassa (σ² = _Aalto).
                 float3 nw = ng;
                 float aaltoS = _Aalto;
@@ -304,14 +304,14 @@ Shader "Matkakirja/Linssit/Yokuori"
                     float3 ita = normalize(cross(z, ng) + float3(1e-6, 0, 0));
                     float3 poh = cross(ng, ita);
                     float2 q = float2(dot(p, ita), dot(p, poh)) * 0.001;               // km pinnan tasossa
-                    float2 tq = float2(q.x * 0.25, q.y);                               // tuuli itä–länsi: juovat venyvät
-                    float karheus = 0.75 + 0.45 * Arvokohina(q / 12.0 + 17.0);
-                    // Oktaavi hiipuu, kun sen solu on alle kaksi kuvapikseliä (kaukana ja vinosti), ettei kimallus väreile;
-                    // puuttuva vaihtelu siirtyy paikalliseen σ²:een, joten kiillon leveys säilyy.
-                    float pk = length(fwidth(tq));
-                    float w1 = saturate(2.0 - pk / 0.7), w2 = saturate(2.0 - pk / 0.175);
-                    float sx = 0.65 * w1 * Arvokohina(tq / 1.4) + 0.35 * w2 * Arvokohina(tq / 0.35 + 41.0);
-                    float sy = 0.65 * w1 * Arvokohina(tq / 1.4 + 93.0) + 0.35 * w2 * Arvokohina(tq / 0.35 + 7.0);
+                    float2 tq = float2(q.x * 0.2, q.y);                                // tuuli itä–länsi: juovat venyvät 5 ×
+                    float karheus = 0.75 + 0.45 * Arvokohina(q / 25.0 + 17.0);
+                    // Aaltojuovat 8 km ja 2,5 km (simu c0e73c4e: 1,4 / 0,35 km näkyi pikselikohinana, ei juovina). Oktaavi on
+                    // täysin mukana, kun solu on ≥ 5 kuvapikseliä, ja poissa ≤ 3 pikselillä; puuttuva vaihtelu siirtyy σ²:een.
+                    float pk = max(length(fwidth(tq)), 1e-4);
+                    float w1 = saturate((8.0 / pk - 3.0) * 0.5), w2 = saturate((2.5 / pk - 3.0) * 0.5);
+                    float sx = 0.65 * w1 * Arvokohina(tq / 8.0) + 0.35 * w2 * Arvokohina(tq / 2.5 + 41.0);
+                    float sy = 0.65 * w1 * Arvokohina(tq / 8.0 + 93.0) + 0.35 * w2 * Arvokohina(tq / 2.5 + 7.0);
                     float sig = sqrt(_Aalto * 0.6) * 1.6 * karheus;                   // normaalin värähtelyn hajonta
                     nw = normalize(ng + (ita * sx + poh * sy) * sig);
                     float puuttuu = 1.0 - (0.4225 * w1 * w1 + 0.1225 * w2 * w2) / 0.545;
@@ -329,12 +329,12 @@ Shader "Matkakirja/Linssit/Yokuori"
                 if (_KiiltoVanha < 0.5)
                 {
                     // Hopeanvalkoinen: läpäisy suhteessa kahden ilmamassan tiehen (korkealla auringolla lähes valkoinen, matalalla yhä
-                    // oranssi ja himmeä kuten pystyleikkauksen korjauksessa 2.10.). Logaritminen sävykäyrä (k 0…240 → 0…2): keskusta
+                    // oranssi ja himmeä kuten pystyleikkauksen korjauksessa 2.10.). Logaritminen sävykäyrä (k 0…240 → 0…3): keskusta
                     // ylivalottuu, reunat hiipuvat laajasti ja kimallus näkyy myös välialueella; ei tasaista valkoista kiekkoa eikä
                     // bloomin kermaista usvaa rannoille (ennen huippu 240 suoraan).
                     lapaisy = (half3)min(exp(-float3(0.15, 0.20, 0.33) * max(Ilmamassa(nl) + Ilmamassa(nv) - 2.0, 0.0)), 1.0);
                     lapaisy *= half3(1.0h, 0.995h, 0.98h);
-                    kiilto = (half)(2.0 * pow(saturate(log2(1.0 + (float)kiilto) / 7.91), 1.5));
+                    kiilto = (half)(3.0 * pow(saturate(log2(1.0 + (float)kiilto) / 7.91), 1.4));
                 }
                 c += lapaisy * kiilto * (1.0h - a);
                 // Fotorealismi osa 2 (30.9.): taivaan Fresnel-heijastus vesiltä. Katsekulman Fresnel (Schlick, F0 0,02) kasvaa
