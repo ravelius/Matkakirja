@@ -25,6 +25,15 @@ Seurantanäkymää ei ole (omistaja poisti 2.10.).
 - Webin vertailukuvat: lokit/linssiseppa2-ajattelijat-v11-web-20261003 (skripti ajattelija-webkuvat-v11.mjs). Natiivin skriptit
   ajattelija-v11.sh / -v11-x.sh (✕-kuvaan ≥ 1,5 s odotus: ui-komento käsitellään viiveellä).
 
+## 2b. Juna 133: MERGE-PYYNTÖ NATIIVISEPÄLLÄ (3.10. klo 07.0x)
+
+- `linssiseppa2/iss-humina-pulu-oikea` 16c30163 (omistaja 3.10. 06.3x, Päätoimittaja kuittasi): ISS-humina ilman rätinää (NASA-radio
+  pois, CupolaAani.RadioKaytossa = false; humina v2 generoitu aanet/cupola/v2/cupola-humina-gen-90s.wav, vientipaketti
+  _valmiit/cupola-humina-v2-vienti-20261003 viety); robottikäden Pulu oikealla lyhyen varren päässä Cupolassa ja kaukonäkymässä
+  (A/B `astro kyyti pulu-oikealla`), +30 % (0,78), vaaka-Cupolassa kypärä 64 % teipin alla; kasvot kypärävalossa
+  (Resources/LiviaEva/perus-kasvot.png), Pulu valaistu (perus 75 %). Web (cupola-aani.js) → Pelikoodari (Päätoimittaja hoitaa).
+  Kuvat lokit/linssiseppa2-pulu-oikea-c|d-20261003, ääninäyte lokit/linssiseppa2-cupola-humina-nayte-20s.mp3.
+
 ## 3. Seuraavaksi
 - Platon datana, kun web saa sen (muunnin tyokalut/ajattelijat-natiiviin.mjs).
 - TF 132:n palaute (Pulun korkeus, ajattelijat).

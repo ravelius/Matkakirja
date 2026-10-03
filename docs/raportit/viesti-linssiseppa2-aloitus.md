@@ -10,8 +10,8 @@ CLAUDE.md, Raamatun Ydinajatus kohta 2 (js/tyohuone-raamattu.js, grep "TYÖTAPA 
 docs/raportit/viesti-linssiseppa2-luovutus-20261003.md**.
 
 ## Tehtävä nyt
-Juna 132: merge-pyynnöt pulu-vaaka-alas 07e7ecca ja ajattelijat-v11 d3fcd459 Natiivisepällä (kuitattu). Rooli levossa; seuraavaksi
-TF 132:n palaute ja Platon datana (luovutuksen kohta 3). KÄÄNNÖS- JA SIMUVUORO AINA JULKAISIJALTA.
+Merge-pyynnöt Natiivisepällä: juna 132 (pulu-vaaka-alas 07e7ecca, ajattelijat-v11 d3fcd459) ja juna 133 (iss-humina-pulu-oikea
+16c30163). Rooli levossa; seuraavaksi TF 132/133 -palaute ja Platon datana. KÄÄNNÖS- JA SIMUVUORO AINA JULKAISIJALTA.
 
 ## Säännöt
 - Rajatut tehtävät (juurisyyt, data, testikorjaukset) Sonnet-ali-agentille; rooli todentaa ja julkaisee.
