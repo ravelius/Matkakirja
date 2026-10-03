@@ -4,7 +4,7 @@
  */
 export const MARCUS_AIKAJANA = Object.freeze({
  "versio": "v13",
- "lahde": "linnanrakentaja-sokrates-bysti 6f314058e docs/raportit/ajattelijat-v11/marcus-luvut-v13.json",
+ "lahde": "linnanrakentaja-sokrates-bysti 6c2fb3c51 docs/raportit/ajattelijat-v11/marcus-luvut-v13.json",
  "loppu": 3644,
  "kertoja": {
   "alku": 28,
@@ -154,31 +154,31 @@ export const MARCUS_AIKAJANA = Object.freeze({
     [1, 0.95, 0.88]],
    [2322,
     [1.0853, -0.4027, 1.0083], 16,
-    [1, 0.74, 0.48]],
+    [1, 0.95, 0.88]],
    [2570,
     [1.0853, -0.4027, 1.0083], 16,
-    [1, 0.74, 0.48]],
+    [1, 0.95, 0.88]],
    [2588,
     [1.0853, -0.4027, 1.0083], 55,
-    [1, 0.74, 0.48]],
+    [1, 0.95, 0.88]],
    [2781,
     [1.0853, -0.4027, 1.0083], 55,
-    [1, 0.74, 0.48]],
+    [1, 0.95, 0.88]],
    [2783,
     [1.2562, -0.2484, 0.6564], 40,
-    [1, 0.6, 0.33]],
+    [1, 0.82, 0.62]],
    [2849,
     [1.2562, -0.2484, 0.6564], 22,
-    [1, 0.6, 0.33]],
+    [1, 0.82, 0.62]],
    [3284,
     [1.2562, -0.2484, 0.6564], 12,
-    [1, 0.6, 0.33]],
+    [1, 0.82, 0.62]],
    [3613,
     [1.2562, -0.2484, 0.6564], 12,
-    [1, 0.6, 0.33]],
+    [1, 0.82, 0.62]],
    [3614,
     [1.2562, -0.2484, 0.6564], 0,
-    [1, 0.6, 0.33]]]
+    [1, 0.82, 0.62]]]
  },
  "tykit": [{
    "paalause": "itselleen-10-16",
@@ -292,8 +292,8 @@ export const MARCUS_AIKAJANA = Object.freeze({
   [2849, 0.5],
   [2867, 0],
   [3284, 0],
-  [3308, 1.8],
-  [3613, 1.8],
+  [3308, 0.9],
+  [3613, 0.9],
   [3614, 0]],
  "vaisto": [{
    "kohde": [-0.005, -0.1056, 0.418],
@@ -309,6 +309,11 @@ export const MARCUS_AIKAJANA = Object.freeze({
    "kohde": [0.0554, -0.08, 0.375],
    "sade": 0.0756,
    "ruudut": [2849, 3278]
+  },
+  {
+   "kohde": [-0.005, -0.1056, 0.418],
+   "sade": 0.075,
+   "ruudut": [3526, 3614]
   }],
  "savu": {
   "kuva": "ajattelijat/sokrates/v3/savu-atlas-v5.png",
@@ -319,6 +324,7 @@ export const MARCUS_AIKAJANA = Object.freeze({
   "ydin": 0.286,
   "vahvuus": 0.95
  },
+ "tykkiVari": [1, 1, 1],
  "efektit": [["01-projektori-naksahdus", 61.92],
   ["01-projektori-naksahdus", 77.36],
   ["03-malja-kivelle", 77.66],

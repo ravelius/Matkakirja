@@ -430,6 +430,7 @@ export const SOKRATES_AIKAJANA = Object.freeze({
   "ydin": 0.286,
   "vahvuus": 0.95
  },
+ "tykkiVari": [1, 0.93, 0.8],
  "efektit": [["01-projektori-naksahdus", 42.68],
   ["01-projektori-naksahdus", 44.56],
   ["01-projektori-naksahdus", 54.3],

@@ -91,6 +91,9 @@ const savu = c.savu && SAVU ? {
   ydin: YDIN, vahvuus: 0.95,
 } : null;
 
+// v13b: tekstiprojektorien (tykki-*, virta-*) väri, jos viety (värittömässä tilassa 1/1/1); kaikilla sama.
+const tykkiVari = d.valot[v.lainaukset[0]?.nimi]?.vari;
+
 const aikajana = {
   versio: 'v13',
   lahde: A.includes('--lahde-nimi') ? A[A.indexOf('--lahde-nimi') + 1] : LAHDE.split('/').pop(),
@@ -99,6 +102,7 @@ const aikajana = {
   kamera, aurinko, pyyhkaisy, tykit, kaiut, virta,
   ...(vaisto.length ? { vaisto } : {}),
   ...(savu ? { savu } : {}),
+  ...(tykkiVari ? { tykkiVari: pv(tykkiVari) } : {}),
   efektit: v.efektit.map((e) => [e.efekti, e.s]),
 };
 

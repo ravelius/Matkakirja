@@ -60,7 +60,7 @@ export const MARCUS = Object.freeze({
       korkeus: 0.022,
     },
   },
-  // v13 (Linnanrakentaja marcus-luvut-v13.json 6f314058e): intro ja leikkaukset samat kuin Sokrateen v12:ssa (+442).
+  // v13 (Linnanrakentaja marcus-luvut-v13.json 6c2fb3c51, v13b): intro ja leikkaukset samat kuin Sokrateen v12:ssa (+442).
   ajat: SOKRATES.ajat,
   prologi: SOKRATES.prologi,
   intro: SOKRATES.intro,
@@ -119,7 +119,7 @@ export const MARCUS = Object.freeze({
    */
   /*
    * AIKAJANA (v13, Päätoimittaja 3.10.2026 klo 14.4x: Sokrateen v13c-mallin mukaan; Linnanrakentaja marcus-luvut-v13.json
-   * 6f314058e): kertoja (Sisältökirjuri, Iv4 William, yksi otto, 91,84 s) 28,0 s:sta yhdeksänä kappaleena; lainaukset
+   * 6c2fb3c51, v13b): kertoja (Sisältökirjuri, Iv4 William, yksi otto, 91,84 s) 28,0 s:sta yhdeksänä kappaleena; lainaukset
    * 10.16/4.49/2.11 ja kysymys, kaiut sade/uhri/kuolinvuode, värit neutraalit, savu v5, efektit. Avaimet generoitu:
    *   node tools/ajattelija-aikajana.mjs <marcus-luvut-v13.json> js/linssit/ajattelija-marcus-aikajana.js
    *     --vienti MARCUS_AIKAJANA --kaiut ajattelijat/marcus/v3/kaiut-v13 --savu ajattelijat/sokrates/v3/savu-atlas-v5.png
