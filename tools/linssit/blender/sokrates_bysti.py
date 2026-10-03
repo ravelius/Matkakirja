@@ -23,6 +23,7 @@ V12 = '--v12' in A
 if V12 and '--v11' not in A:
     i_ = A.index('--v12'); A[i_] = '--v11'; A.append('--v12')
 V11 = '--v11' in A
+KAIKUVARI = A[A.index('--kaikuvari') + 1] if '--kaikuvari' in A else 'seepia'   # seepia | neutraali (projektorit)
 if V11 and '--v10' not in A:
     i_ = A.index('--v11'); A[i_] = '--v10'; A.append('--v11')
 # Ajattelijat (sama putki): --kohde sokrates | marcus. Kaikki skannaukset SMK:n kipsivaloksia, PDM, api.smk.dk.
@@ -613,7 +614,7 @@ def v4_projektori(nimi, p, suunta, etaisyys, ala, nauha_kuva, nauha_kork, ruudut
     for k in (nk, sk): k.colorspace_settings.name = 'Non-Color'
     nauha_lev = nauha_kork * nk.size[0] / nk.size[1]
     d = bpy.data.lights.new(nimi, 'SPOT'); d.spot_blend = 0.45; d.shadow_soft_size = 0.0
-    d.spot_size = 2.4 * math.atan(ala / 2 / etaisyys); d.color = (1.0, 0.93, 0.80); d.use_nodes = True
+    d.spot_size = 2.4 * math.atan(ala / 2 / etaisyys); d.color = (1.0, 1.0, 1.0) if KAIKUVARI == 'neutraali' else (1.0, 0.93, 0.80); d.use_nodes = True
     nt = d.node_tree; nt.nodes.clear()
     def m(op, a, b=None, c=None):
         n_ = nt.nodes.new('ShaderNodeMath'); n_.operation = op
@@ -1054,7 +1055,7 @@ def tausta_rivi(nimi, p, suunta, etaisyys, ala, kuva, kork, kulma, v_m, nopeus, 
     ruudut = (häivytys sisään alkaa, täysi, häivytys ulos alkaa, pimeä)."""
     kk = bpy.data.images.load(kuva); kk.colorspace_settings.name = 'Non-Color'; lev = kork * kk.size[0] / kk.size[1]
     d = bpy.data.lights.new(nimi, 'SPOT'); d.spot_blend = 0.5; d.shadow_soft_size = 0.0
-    d.spot_size = 2.4 * math.atan(ala / 2 / etaisyys); d.color = (1.0, 0.93, 0.80); d.use_nodes = True
+    d.spot_size = 2.4 * math.atan(ala / 2 / etaisyys); d.color = (1.0, 1.0, 1.0) if KAIKUVARI == 'neutraali' else (1.0, 0.93, 0.80); d.use_nodes = True
     nt = d.node_tree; nt.nodes.clear()
     def m(op, a, b=None, c=None):
         n_ = nt.nodes.new('ShaderNodeMath'); n_.operation = op
@@ -1185,9 +1186,9 @@ def syke_kaikuun(valo, ikkuna, voima, syke, askel=2):
 # kamera niin kaukana, että kasvojen ääriviiva kehystää kaiun.
 KERTOJA_OLETUS = '/Users/Shared/Claude/proto-3d/_lahteet/sokrates/kertoja-aanikoe-v4/Iv4-william-oletus-ajat.json'
 V13_KERTOJA_ALKAA = 28.0
-V13_NAUHA_MS = 0.055
-V13C = '--v13c' in A
-KAIKUVARI = A[A.index('--kaikuvari') + 1] if '--kaikuvari' in A else 'seepia'   # seepia | neutraali   # v13c (omistaja 3.10. 08.0x): rajatut kaikuhahmot viistosti, ei reunahehkua, virta väistää kaiun   # lainausnauhojen nopeus pinnalla (m/s); nauha näkyy lainauksen ajan ±0,6 s
+V13_NAUHA_MS = 0.055   # lainausnauhojen nopeus pinnalla (m/s); nauha näkyy lainauksen ajan ±0,6 s
+V13C = '--v13c' in A   # v13c (omistaja 3.10. 08.0x): rajatut kaikuhahmot viistosti, ei reunahehkua, virta väistää kaiun
+
 
 
 def v13_ajat():
@@ -1389,7 +1390,8 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
         ao.location = PAA + Vector(suunta).normalized() * 1.3; kohdista(ao, PAA)
         ao.keyframe_insert('location', frame=F(t_)); ao.keyframe_insert('rotation_euler', frame=F(t_))
         aur.energy = e; aur.keyframe_insert('energy', frame=F(t_)); aur.color = vari; aur.keyframe_insert('color', frame=F(t_))
-    R = V12_REM_AURINKO; LAMMIN = (1.0, 0.74, 0.48); ILTA = (1.0, 0.60, 0.33); KOVA = (0.12, -0.50, 1.0)
+    # Päätoimittaja 3.10.: kipsi ei saa olla tasaisen beige → 06–07 neutraali avainvalo, ilta (08) vain lievästi lämmin
+    R = V12_REM_AURINKO; LAMMIN = (1.0, 0.95, 0.88); ILTA = (1.0, 0.82, 0.62); KOVA = (0.12, -0.50, 1.0)
     aur_avain(T(0) - 0.6, R, 95); aur_avain(T(0) + 1.0, R, 45)                                   # 01
     aur_avain(k_('03', 0) - 0.05, R, 45); aur_avain(k_('03', 0), KOVA, 110)                      # 03 sota ja rutto: kova yläviisto
     aur_avain(sade_t - 0.6, KOVA, 110); aur_avain(sade_t + 0.8, R, 16)                           # 04 sadeihme: kaiku, ääriviiva kehystää
@@ -1404,7 +1406,8 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     sail_t = w_('Muistiinpanot', k_('09', 0))
     kk_ = [(T(0), 0), (T(0) + 1.0, 1), (k_('03', 0) - 0.05, 1), (k_('03', 0), 0), (sade_t - 0.8, 0), (sade_t, 1),
            (a5, 1), (a5 + 0.6, 1.6), (l5, 1.6), (l5 + 0.6, 1), (k_('08', 0) - 0.05, 1), (k_('08', 0), 0.5), (sair_t, 0.5), (sair_t + 0.6, 0),
-           (sail_t, 0), (sail_t + 0.8, 1.8), (loppu_t - 0.04, 1.8), (loppu_t, 0)]
+           (sail_t, 0), (sail_t + 0.8, 0.9), (loppu_t - 0.04, 0.9), (loppu_t, 0)]   # loppu harvempi: kasvot ja kysymys näkyvät
+    VIRTA_VAISTO.append((tuple(p), 0.075, F(kys_t) - 15, LOPPU))   # virta väistää kysymyksen alueen
     VIRTA_AVAIMET = [(1, 0.0)] + [(F(t_), k) for t_, k in kk_]
     paan_virta('virta', (F(T(0)), F(T(0)) + 30, LOPPU - 1, LOPPU), V7_TYKKI, tausta, (0.009, 0.012, 0.015, 0.019), 38)
     rem = V7_OTOKSET[-1]; kc = lambda kohde, suunta, d: tuple(Vector(kohde) + Vector(suunta).normalized() * d)
