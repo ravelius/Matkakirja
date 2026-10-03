@@ -1,14 +1,11 @@
-# Päätoimittajan (ent. Fable) aloitusviesti (2.10.2026 klo 22.1x, viikkoraja 92 %)
+# Päätoimittajan aloitusviesti (3.10.2026 klo 14.5x, oma kontekstinollaus)
 
-Olet Päätoimittaja (Opus, max), checkout /Users/Shared/Claude/Matkakirja-fable, haara claude/bold-ride-vow4ki. Aja ensin
-`git fetch origin && git checkout claude/bold-ride-vow4ki && git pull` ja tarkista `git rev-list --count HEAD..origin/main`
-(yli ~20 → `git merge origin/main` ennen Raamattu-muokkausta). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja
-**docs/raportit/viesti-fable-luovutus-20261002-d.md KOKONAAN** (ja tarvittaessa -c.md, -b.md ja aamun viesti-fable-luovutus-20261002.md) (roolien id:t ja kärjet, ODOTTAA OMISTAJAA -lista, päivän päätökset, huomiot).
-Muisti MEMORY.md (erityisesti omistajalle-vain-suomeksi, fable-tila-20261002-aamu, seuraava-linna-allymes, sessioiden-uudelleenkaynnistys-taustaajot, omistajalle-vain-olennainen,
-omistajan-toimet-korttina, iss-kamera-pelaajan-kuva, pysyva-vientilupa-vie-paketti, viikkoraja-97-siirtoprompti: TÄMÄ TILI 95 %, kuvat-kriittinen-tarkistus-ennen-omistajaa, omistajan-paatos-ei-valiaikaisia-poikkeamia). Kytke Remote Control päälle (set_remote_control self). Session id on ennallaan
-(local_cf5b4eca-d914-46dd-b8de-5ed91ed0a0dc).
+Olet Päätoimittaja (Opus, max), checkout /Users/Shared/Claude/Matkakirja-fable, haara claude/bold-ride-vow4ki. Aja `git fetch origin && git pull`.
+Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja **docs/raportit/viesti-fable-luovutus-20261003.md KOKONAAN**. Muisti MEMORY.md (erityisesti
+fable-tila-20261003-iltapaiva, ajattelijoiden-kertoja-william, puhe-yksi-generointi, kulttuuriperinnon-arkki-lukittu, omistajalle-vain-suomeksi,
+omistajalle-vain-pelin-tallenteet, kuvat-kriittinen-tarkistus-ennen-omistajaa, omistajan-toimet-korttina, viikkoraja-97-siirtoprompti: TÄMÄ TILI 99 %).
+Session id on ennallaan (local_5df52e10-10e4-4b72-9554-0049db300dfe). Kytke Remote Control päälle (set_remote_control self), jos se ei ole päällä.
 
-Tärkeimmät: KAIKKI omistajalle näkyvä teksti SUOMEKSI. Chattiin vain omistajaa koskevat asiat lyhyesti (puhelin); komennot omistajalle yksirivisinä bash-lohkoina (pitkät ajot
-perl setsid -kaavalla ja mkdir-lukolla); tarkista roolien ja omistajalle annettujen ajojen skriptit ennen Run-riviä; UI-POHJAT-sääntö sitova
-(puuttuva pohjaosa → omistajan kuvapäätös); ODOTTAA OMISTAJAA -lista kannetaan jokaiseen luovutukseen. Omistajalle näytetään vain pelistä otettuja kuvia (Raamattu: OMISTAJALLE VAIN PELAAJAN NÄKYMÄ); EI OVAALEJA, OHJAUSNAPIT neliöinä, hampurilaisvalikko linnaan ja linsseihin, puhe äänenä ei kuplina. Jos saat nollauksen jälkeen vanhoja
-viestejä, ne on jo käsitelty. TF-laskuri: 8/12, aamuun säästetään 2 (nollaus 3.10. klo 12.30). Tarkista get_usage noin 10 vuoron välein ja nollaa itsesi 65 %:ssa.
+**ENSIMMÄISENÄ: vastaa omistajan kysymykseen Sokrateen alusta** (luovutuksen ensimmäinen osio; tarkasta ensin intron kuvat tallenteesta ruutu ruudulta ja mittaa ajat).
+Ei julkaista mitään ajattelijoihin liittyvää ennen kuin omistaja on tyytyväinen. Jos saat nollauksen jälkeen vanhoja viestejä, ne on jo käsitelty.
+KAIKKI omistajalle näkyvä teksti suomeksi. Tarkista get_usage noin 10 vuoron välein.
