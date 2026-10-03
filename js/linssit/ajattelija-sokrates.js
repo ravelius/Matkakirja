@@ -207,7 +207,7 @@ export const SOKRATES = Object.freeze({
      */
     lauseKortti: { merkkeja: 24, leveys: 0.11 },   // leveys luvuista (nauha_lev_m); 24 merkkiä/rivi: kirjaimet 1,4 × suuremmat (puhelin)
     virtaPorrastus: { alku: 286, vali: 15, haivytys: 9, rintama: 4, reuna: 0.35 },
-    virtaVoima: 0.4,
+    virtaVoima: 0.12,   // Päätoimittaja 3.10. 17.1x: rivit ~45 % päälainauksen kirkkaudesta (mitattu näyttöarvoista)
     // V14: puhe = kertoja (sama William-otto, 9,5 s:sta kohtauksen alusta) + efektit; musiikki Linssisepän v14-sävellys
     // (iskut 2,0 / 3,9 / 4,5 / 5,1 / 6,1 s, −8 dB puheen alla). Zarathustralla ei ole v14-ajoitusta, joten vaihtoehto pois.
     // ÄMPÄRIIN vasta omistajan hyväksynnän jälkeen (ajattelijat/sokrates/v4/).
@@ -285,6 +285,7 @@ export const SOKRATES = Object.freeze({
     sumeus: 0.45,
     riviTila: 2,
     riviKorkeus: 80,
+    riviKoko: 0.6,   // ohuet pehmeät tekstirivit, ei valkoisia palkkeja (Päätoimittaja 3.10. 17.1x)
     etaisyys: 0.9,
     blend: 0.5,
     voimaKerroin: 3.0,
