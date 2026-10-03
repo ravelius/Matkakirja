@@ -2,7 +2,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { kamerakayra, tarkistaAjattelija } from '../js/linssit/ajattelija.js';
+import { kamerakayra, tarkistaAjattelija, aikajanaKamera, aikajanaAurinko, avainArvo } from '../js/linssit/ajattelija.js';
 import { SOKRATES } from '../js/linssit/ajattelija-sokrates.js';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
@@ -37,8 +37,9 @@ test('kamerakäyrä kulkee avainten kautta ja pysähtyy tasaisiin avaimiin (AUTO
 });
 
 test('moottori: yksi kaikupaikka suunnataan kierroksittain, ääni ja syke kierrosten raidoista, lappu lopussa', () => {
-  assert.match(MOOTTORI, /const aaniLahde = KR\?\.aani \?\? a\.aani;/);
-  assert.match(MOOTTORI, /const sykeLahde = KR \? KR\.syke : a\.syke;/);
+  assert.match(MOOTTORI, /const aaniPohja = AJ\?\.aani \?\? KR\?\.aani \?\? a\.aani;/);
+  assert.match(MOOTTORI, /haku\.get\('ajattelijamusiikki'\)/);
+  assert.match(MOOTTORI, /const sykeLahde = AJ \? AJ\.syke : KR \? KR\.syke : a\.syke;/);
   assert.match(MOOTTORI, /if \(G - pr0\.loppu >= LOPPU && ruutuOhitus == null\) avaaLappu\(\);/);
   assert.match(MOOTTORI, /if \(edellinen && edellinen\.siemen !== kt\.siemen\) virta = asetaVirta\(kt\.siemen\);/);
   assert.match(MOOTTORI, /for \(const \[ka, kl\] of kaikuIkkunat\)/);
@@ -113,4 +114,44 @@ test('v12 Sokrates (omistaja 3.10.2026 klo 04.5x; sokrates-luvut-v12.json a6308b
   assert.deepEqual(MARCUS.ajat.nimi, [282, 372]);
   assert.deepEqual(MARCUS.taustavirta.ajat, [462, 540, 900, 950]);
   assert.match(MOOTTORI, /ajo: tapa === 'BEZIER' && seuraava \? kamerakayra\(\[\[r, c, q, mm\], seuraava\.slice\(0, 4\)\]\) : null,/);
+});
+
+test('v13 aikajana (Linnanrakentaja ffa1c9c94): Blenderin avaimet sellaisinaan, kierrokset eivät ole käytössä', () => {
+  const aj = SOKRATES.aikajana;
+  assert.equal(aj.versio, 'v13');
+  assert.equal(aj.loppu, 3493);
+  assert.equal(aj.kertoja.alku, 28);
+  assert.deepEqual(aj.tykit.map((t) => t.paalause), ['38a', '21d', '30e', '49b', 'kysymys']);
+  assert.equal(aj.tykit.at(-1).kiintea, true);
+  assert.deepEqual(aj.kaiut.map((k) => k.kuva.split('/').pop()), ['kaiku-jumala.png', 'kaiku-sotilas.png', 'kaiku-oraakkeli.png', 'kaiku-kuolema.png']);
+  assert.ok(aj.kaiut.every((k) => k.kuva.startsWith('ajattelijat/sokrates/v3/')));
+  assert.deepEqual(aj.efektit.map(([e]) => e).filter((e, i, l) => l.indexOf(e) === i),
+    ['01-projektori-naksahdus', '02-hallin-ovi', '03-malja-kivelle', '04-kytkin-pois']);
+  assert.ok(aj.aurinko.avaimet.every((x) => x[3]?.length === 3));   // v13b: väri jokaisessa avaimessa
+  assert.ok(aj.pyyhkaisy.kohteet.length >= 4);
+  assert.deepEqual(tarkistaAjattelija(SOKRATES), []);
+  assert.match(MOOTTORI, /const KR = AJ \? null : \(a\.kierrokset \?\? null\);/);
+  assert.match(MOOTTORI, /else \(asetaAikajana \?\? asetaRuutu\)\(Math\.min\(G - pr0\.loppu, LOPPU\)\);/);
+});
+
+test('aikajanan kamera: CONSTANT pitää (leikkaus), BEZIER ajaa seuraavaan', () => {
+  const k = aikajanaKamera([
+    [1, [0, 0, 0], [0, 0, 0], 50, 'BEZIER'], [11, [1, 0, 0], [0, 0, 0], 50, 'CONSTANT'],
+    [21, [5, 0, 0], [0, 0, 0], 35, 'CONSTANT'], [31, [9, 0, 0], [0, 0, 0], 35, 'BEZIER'], [41, [10, 0, 0], [0, 0, 0], 18, 'BEZIER'],
+  ]);
+  assert.ok(k(6).paikka[0] > 0 && k(6).paikka[0] < 1);   // ajo
+  assert.equal(k(15).paikka[0], 1);                         // pito
+  assert.equal(k(21).paikka[0], 5);                         // leikkaus
+  assert.equal(k(30).mm, 35);
+  assert.ok(k(36).paikka[0] > 9 && k(36).paikka[0] < 10);
+  assert.equal(k(50).paikka[0], 10);
+});
+
+test('aikajanan aurinko kiertää säteellä (ei oikaise ympyrän läpi); avainArvo lineaarinen', () => {
+  const au = aikajanaAurinko({ kohde: [0, 0, 0], avaimet: [[0, [1, 0, 0], 60, [1, 1, 1]], [10, [0, 1, 0], 60, [1, 0.6, 0.3]]] });
+  const keski = au(5);
+  assert.ok(Math.abs(Math.hypot(...keski.paikka) - 1) < 1e-9);
+  assert.deepEqual(keski.vari, [1, 0.8, 0.65]);
+  assert.equal(avainArvo([[0, 0], [10, 220], [20, 220], [26, 0]], 5), 110);
+  assert.equal(avainArvo([[0, 0], [10, 220]], 99), 220);
 });

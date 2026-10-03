@@ -86,6 +86,7 @@ export function lisaaProjektorit(THREE, materiaali, atlasTekstuuri) {
     pF: { value: Array.from({ length: N }, () => new THREE.Vector4()) },
     pVari: { value: new THREE.Color(1, 1, 1) },
     pKaiku: { value: null },
+    pKaiku2: { value: null },   // toinen kaikukuva: kaksi kaikua voi olla päällekkäin (v13 ristihäivytys)
     pKaikuVari: { value: new THREE.Color(1, 1, 1) },
   };
   materiaali.onBeforeCompile = (shader) => {
@@ -106,9 +107,10 @@ uniform vec4 pB[P_ENINTAAN]; // cos kulma, sin kulma, pystysiirto vM, voima
 uniform vec4 pC[P_ENINTAAN]; // atlas v0, v1 (terävä), v0, v1 (sumea; = terävä, jos ei sumeaa)
 uniform vec4 pD[P_ENINTAAN]; // uMax, ca, syvyys, toisto (0 = CLIP, 1 = REPEAT)
 uniform vec4 pE[P_ENINTAAN]; // projektorin paikka (maailma), keilan cos ulkoreuna
-uniform vec4 pF[P_ENINTAAN]; // keilan cos sisäreuna, keskitys (0,5 päälause, 0 rivi), kaiku (1 = kaikukuva)
+uniform vec4 pF[P_ENINTAAN]; // keilan cos sisäreuna, keskitys (0,5 päälause, 0 rivi), kaiku (1 = pKaiku, 2 = pKaiku2)
 uniform vec3 pVari;
 uniform sampler2D pKaiku;     // kaikukuva (v8): harmaasävy, valoa vain sisällössä
+uniform sampler2D pKaiku2;    // toinen kaikukuva (pF.z = 2)
 uniform vec3 pKaikuVari;      // seepia
 float pNayte(int i, float jx, float jy, float sk, float sumeus) {
   vec4 a = pA[i]; vec4 b = pB[i]; vec4 c = pC[i]; vec4 d = pD[i];
@@ -124,7 +126,8 @@ float pNayte(int i, float jx, float jy, float sk, float sumeus) {
   // Blenderiä enemmän, jolloin kuva-ala erottui suorakaiteena), ja reunat häivytetään.
   if (pF[i].z > 0.5) {
     float reunaK = smoothstep(0.0, 0.08, u) * smoothstep(1.0, 0.92, u) * smoothstep(0.0, 0.08, v) * smoothstep(1.0, 0.92, v);
-    return smoothstep(0.08, 0.9, texture2D(pKaiku, vec2(u, 1.0 - v)).r) * reunaK;
+    float kuva = pF[i].z > 1.5 ? texture2D(pKaiku2, vec2(u, 1.0 - v)).r : texture2D(pKaiku, vec2(u, 1.0 - v)).r;
+    return smoothstep(0.08, 0.9, kuva) * reunaK;
   }
   float au = u * d.x;   // toistorivi: jatkuva u, atlas kääritään (RepeatWrapping)
   float terava = texture2D(pAtlas, vec2(au, mix(c.x, c.y, 1.0 - v)), -0.75).r;
@@ -184,7 +187,7 @@ export function asetaProjektori(THREE, u, i, {
   // Blender: spot_size = 2,4·atan(ala / 2 / etäisyys) koko kulmana, spot_blend reunan pehmeys.
   const puoli = 1.2 * Math.atan(ala / 2 / etaisyys);
   u.pE.value[i].set(paikka.x, paikka.y, paikka.z, Math.cos(puoli));
-  u.pF.value[i].set(Math.cos(puoli * (1 - blend)), toisto ? 0 : 0.5, kaiku ? 1 : 0, 0);
+  u.pF.value[i].set(Math.cos(puoli * (1 - blend)), toisto ? 0 : 0.5, kaiku ? Number(kaiku) : 0, 0);
   return { nauhaLev };
 }
 

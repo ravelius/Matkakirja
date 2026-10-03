@@ -10,6 +10,8 @@
  * PAIKKAMERKKEJÄ (hyväksytyt 38a/21d/49b ja kaksi suomenkielistä), kunnes Sisältökirjurin 18 katkelmaa tulevat.
  */
 
+import { SOKRATES_AIKAJANA } from './ajattelija-sokrates-aikajana.js';
+
 export const SOKRATES = Object.freeze({
   tunnus: 'sokrates',
   nimi: 'Sokrates',
@@ -52,6 +54,19 @@ export const SOKRATES = Object.freeze({
       el: 'ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι',
       viite: 'Platon, Puolustuspuhe 21d',
       sade: [-0.055, 0.352], vino: [-0.55, -0.15, -0.30], ala: 0.065, etaisyys: 0.6, korkeus: 0.02125,
+    },
+    // v13 (kertojan kappale 07 ja loppu): 30e ja kysymys nauhoina (Linnanrakentajan gobot-v13 nauha-30e, nauha-kysymys).
+    '30e': {
+      fi: 'Olen kuin paarma, jonka jumala on kiinnittänyt suureen ja laiskaan hevoseen herättämään sitä.',
+      el: 'προσκείμενον τῇ πόλει ὑπὸ τοῦ θεοῦ ὥσπερ ἵππῳ μεγάλῳ μὲν καὶ γενναίῳ, ὑπὸ μεγέθους δὲ νωθεστέρῳ καὶ δεομένῳ ἐγείρεσθαι ὑπὸ μύωπός τινος',
+      viite: 'Platon, Puolustuspuhe 30e',
+      korkeus: 0.025625,
+    },
+    kysymys: {
+      fi: 'Miten pitäisi elää?',
+      el: '',
+      viite: '',
+      korkeus: 0.022,   // kiinteä keskellä (sokrates_bysti.py v13: tykki-kysymys)
     },
     '49b': {
       fi: 'Vääryyttä ei siis saa tehdä koskaan.',
@@ -163,6 +178,24 @@ export const SOKRATES = Object.freeze({
    * ruudun 1450 avain korvataan kierroksen 1 pidon kameralla. Ääni on yksi 111 s:n raita (tools/ajattelija-aaniraita.mjs
    * --kierrokset; luennat c 51,667 s, d 62,667 s, e 80,0 s, f 88,833 s), syke siitä. Taustavirta: sama 20 riviä, oma siemen.
    */
+  /*
+   * AIKAJANA (v13, omistaja 3.10.2026; Linnanrakentaja sokrates-luvut-v13.json 847976897): kertoja Iv4 William
+   * (oletusotto) 28,0 s:sta kymmenenä kappaleena; lainaukset 38a/21d/30e/49b ja kysymys, kaiut jumala/sotilas/oraakkeli/
+   * David, pyyhkäisy, valon kierto, lämmin, kova ja ilta, efektit. Avaimet generoitu (tools/ajattelija-aikajana.mjs).
+   * Ääni: tools/ajattelija-aaniraita.mjs --v12 (musiikki Linssisepän oma, kertoja ja efektit puheraidassa).
+   * Kun aikajana on, moottori ei käytä kierrokset-kenttää (Marcus käyttää).
+   */
+  aikajana: {
+    ...SOKRATES_AIKAJANA,
+    // Puhe = kertoja (ajattelijat/sokrates/v3/kertoja.mp3, 28,0 s) + efektit; musiikki Linssisepän oma (−8 dB puheen alla).
+    // Zarathustra testikomennolla ?ajattelijamusiikki=zarathustra (−13 dB), samalla ajoituksella.
+    aani: {
+      puhe: 'ajattelijat/sokrates/v3/v13-puhe.mp3',
+      musiikki: 'ajattelijat/sokrates/v3/v13-musiikki.mp3',
+      vaihtoehdot: { zarathustra: 'ajattelijat/sokrates/v3/v13-musiikki-zarathustra.mp3' },
+    },
+    syke: 'ajattelijat/sokrates/v3/syke-v13.json',
+  },
   kierrokset: {
     aani: { puhe: 'ajattelijat/sokrates/v1/kierrokset-puhe.mp3', musiikki: 'ajattelijat/sokrates/v1/kierrokset-musiikki.mp3' },
     syke: 'ajattelijat/sokrates/v1/syke-kierrokset.json',
