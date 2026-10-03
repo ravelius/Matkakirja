@@ -1190,6 +1190,7 @@ PAAN_PROJEKTORIT = (  # v10 (omistaja 2.10. 08.4x): taustavirta koko pään alue
 VIRTA_AVAIMET = None   # v13: taustavirran (ruutu, kerroin) -avaimet koko kohtaukselle
 VIRTA_VAISTO = []      # v13c: [(kaiun kohdepiste, säde m, alku, loppu)] — virta väistää kaikukuvan
 KAIKU_LAHTEET = {   # v14: kaikukuvien attribuutio lukuihin (Päätoimittaja 4.10.)
+    'kaiku-oraakkeli.png': 'Davide Mauro, CC BY-SA 4.0, Wikimedia Commons: pronssikolmijalan rekonstruktio, Olympian museo (rajattu, johdannainen CC BY-SA 4.0)',
     'kaiku-uhri.png': 'José Luiz, CC BY-SA 4.0, Wikimedia Commons: "Marcus Aurelius showing sacrifice - Arch of Marcus Aurelius - Musei Capitolini - Rome 2016.jpg" (rajattu, johdannainen CC BY-SA 4.0)',
 }
 V14_AUR = []           # v14: tekstivaiheen auringon avaimet (ruutu, suunta, energia ×0,3, väri) ennen kattoa
@@ -1336,7 +1337,7 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     SAVUKOE = '--savukoe' in A   # koevideo: Zeus 10,5 s savun kanssa, ei sotilasta eikä 38a:ta
     kaiku('kaiku-jumala', 'kaiku-jumala.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, jum_t, (k_('03', 0) - 0.3) if SAVUKOE else k_('02', 0) + 1.2, 9.0, haiv=30)   # himmeä
     if not SAVUKOE: kaiku('kaiku-sotilas', 'kaiku-sotilas.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, k_('02', 0), k_('03', 0) + 0.8, 26.0)
-    kaiku('kaiku-oraakkeli', 'kaiku-oraakkeli.png', sp, sn, (SIVU * 0.55 + YLOS * 0.30) if V13C else (SIVU * 0.15 + YLOS * 0.12), 0.08 if V13C else 0.07, k_('04', 0) + 0.3, k_('05', 0) - 0.2, 12.0 if V13C else 32.0)   # v13c: rajattu punakuvio on lähes kokonaan vaaleaa
+    kaiku('kaiku-oraakkeli', 'kaiku-oraakkeli.png', sp, sn, (SIVU * 0.55 + YLOS * 0.30) if V13C else (SIVU * 0.15 + YLOS * 0.12), (0.055 if V14 else 0.08) if V13C else 0.07, k_('04', 0) + 0.3, k_('05', 0) - 0.2, 12.0 if V13C else 32.0)   # v13c: rajattu punakuvio on lähes kokonaan vaaleaa
     illan_t = T(W.get('Illan', K['10'][0])); rivi_t = T(W.get('riviäkään', K['10'][0] + 6.8))
     kaiku('kaiku-david', 'kaiku-kuolema.png', (vp + Vector((0.015, 0.0, 0.02))) if V14 else vp, vn,   # v14: ylemmäs ja projektorin puolelle → malja ei osu nenän varjoon (kova pystyviiva)
           Vector((0.0, -0.55, 0.30)), 0.125 if V14 else 0.11,   # v14: yksinkertainen rajattu (4.10.)
@@ -1496,10 +1497,10 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     kaiku('kaiku-sade', 'kaiku-sade.png', vp if V14 else p, vn if V14 else n,   # v14: poskelle (otsalla jumalan kasvot hukkuivat kiharoihin)
           Vector((0.0, -0.55, 0.30)) if V14 else SIVU * 0.55 + YLOS * 0.25, 0.121 if V14 else 0.10,   # v14: yksinkertainen (pää + parta), sama pinta-ala
           sade_t, k_('05', 0) - 0.3, 26.0)
-    kaiku('kaiku-uhri', 'kaiku-uhri.png', sp, sn, SIVU * 0.55 + YLOS * 0.30, 0.07 if V14 else 0.08,   # v14: Capitolinen hunnutettu Marcus, sama pinta-ala
-          uhri_t, k_('07', 0) - 0.3, 22.0)
-    kaiku('kaiku-kuolinvuode', 'kaiku-kuolinvuode.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.102 if V14 else 0.11,   # v14: pää + ylävartalo
-          sair_t, k_('09', 0) - 0.2, 25.0 if V14 else 50.0, haiv=24)   # v14: 50 ylivalotti kasvot, käden ja rinnan
+    kaiku('kaiku-uhri', 'kaiku-uhri.png', sp, sn, SIVU * 0.55 + YLOS * 0.30, 0.09 if V14 else 0.08,   # v14: Capitolinen hunnutettu Marcus (huntupää + olka), sama pinta-ala
+          uhri_t, k_('07', 0) - 0.3, 25.0 if V14 else 22.0)
+    kaiku('kaiku-kuolinvuode', 'kaiku-kuolinvuode.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.089 if V14 else 0.11,   # v14: pää + ylävartalo (GrabCut-rajaus, sohva alfa 0), sama pinta-ala
+          sair_t, k_('09', 0) - 0.2, 7.0 if V14 else 50.0, haiv=24)   # v14: 50, 25 ja 12 ylivalottivat kasvot, käden ja rinnan
     lainaukset = []
     def lainaus(nimi, kuva, q, suunta, ala, kork, kap, raja=None):
         if V14:   # Päätoimittaja 3.10.: lainaus luettavissa KOKONAAN → kiinteä 2–3-rivinen heijastus (ei vierivää ikkunaa)

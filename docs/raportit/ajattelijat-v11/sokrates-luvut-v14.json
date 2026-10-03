@@ -80,7 +80,8 @@
     "nimi": "kaiku-oraakkeli",
     "kuva": "kaiku-oraakkeli.png",
     "alku_s": 35.8,
-    "loppu_s": 48.26
+    "loppu_s": 48.26,
+    "lahde": "Davide Mauro, CC BY-SA 4.0, Wikimedia Commons: pronssikolmijalan rekonstruktio, Olympian museo (rajattu, johdannainen CC BY-SA 4.0)"
    },
    {
     "nimi": "kaiku-david",
@@ -204,6 +205,14 @@
    154,
    184
   ],
+  "leikkaukset_musiikin_s": [
+   2.0,
+   3.9,
+   4.5,
+   5.1,
+   6.1
+  ],
+  "ruutu_aika": "musiikin aika s = (ruutu − 1) / 30 (ruutu 1 = 0,0 s)",
   "kertoja_kohtauksen_s": 9.5,
   "prologi_valot": [
    {
@@ -346,7 +355,7 @@
      -0.1083,
      0.374
     ],
-    "sade_m": 0.0626,
+    "sade_m": 0.0711,
     "ruudut": [
      1075,
      1449
@@ -1739,7 +1748,7 @@
     0.8263,
     -0.2695
    ],
-   "keila_aste": 9.26,
+   "keila_aste": 13.38,
    "spot_blend": 0.3,
    "vari": [
     1.0,
@@ -1772,8 +1781,8 @@
     "kaiku-oraakkeli.png",
     "savu-0156.png"
    ],
-   "lev_m": 0.08,
-   "kork_m": 0.08095,
+   "lev_m": 0.055,
+   "kork_m": 0.11709,
    "liuku_uv": 0.02,
    "haivytys_ruutua": 45
   },

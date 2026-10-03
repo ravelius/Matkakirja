@@ -64,7 +64,8 @@
     "nimi": "kaiku-uhri",
     "kuva": "kaiku-uhri.png",
     "alku_s": 58.86,
-    "loppu_s": 67.12
+    "loppu_s": 67.12,
+    "lahde": "José Luiz, CC BY-SA 4.0, Wikimedia Commons: \"Marcus Aurelius showing sacrifice - Arch of Marcus Aurelius - Musei Capitolini - Rome 2016.jpg\" (rajattu, johdannainen CC BY-SA 4.0)"
    },
    {
     "nimi": "kaiku-kuolinvuode",
@@ -169,6 +170,14 @@
    154,
    184
   ],
+  "leikkaukset_musiikin_s": [
+   2.0,
+   3.9,
+   4.5,
+   5.1,
+   6.1
+  ],
+  "ruutu_aika": "musiikin aika s = (ruutu − 1) / 30 (ruutu 1 = 0,0 s)",
   "kertoja_kohtauksen_s": 9.5,
   "prologi_valot": [
    {
@@ -281,7 +290,7 @@
      -0.0915,
      0.374
     ],
-    "sade_m": 0.0621,
+    "sade_m": 0.0631,
     "ruudut": [
      1767,
      2015
@@ -293,7 +302,7 @@
      -0.08,
      0.375
     ],
-    "sade_m": 0.0744,
+    "sade_m": 0.0748,
     "ruudut": [
      2294,
      2723
@@ -1308,7 +1317,7 @@
     0.8602,
     -0.2675
    ],
-   "keila_aste": 11.66,
+   "keila_aste": 11.75,
    "spot_blend": 0.3,
    "vari": [
     1.0,
@@ -1326,11 +1335,11 @@
     ],
     [
      2318,
-     50.0
+     7.0
     ],
     [
      2699,
-     50.0
+     7.0
     ],
     [
      2723,
@@ -1341,8 +1350,8 @@
     "kaiku-kuolinvuode.png",
     "savu-0149.png"
    ],
-   "lev_m": 0.102,
-   "kork_m": 0.0889,
+   "lev_m": 0.089,
+   "kork_m": 0.10279,
    "liuku_uv": 0.02,
    "haivytys_ruutua": 24
   },
@@ -1406,7 +1415,7 @@
     0.6971,
     0.0931
    ],
-   "keila_aste": 9.15,
+   "keila_aste": 10.29,
    "spot_blend": 0.3,
    "vari": [
     1.0,
@@ -1424,11 +1433,11 @@
     ],
     [
      1812,
-     22.0
+     25.0
     ],
     [
      1970,
-     22.0
+     25.0
     ],
     [
      2015,
@@ -1439,8 +1448,8 @@
     "kaiku-uhri.png",
     "savu-0125.png"
    ],
-   "lev_m": 0.08,
-   "kork_m": 0.07955,
+   "lev_m": 0.09,
+   "kork_m": 0.0712,
    "liuku_uv": 0.02,
    "haivytys_ruutua": 45
   },

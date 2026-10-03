@@ -9,13 +9,18 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageOps
 # lisäliput (4.10.): --reuna ala=0.3,oikea=0.3 (häivytysmatka osuutena lyhyemmästä sivusta, oletus ala 0,25 / muut 0,14)
 #                    --musta 0.28 (mustapiste: luma alle tämän → läpinäkyvä, liuku sen yläpuolella; tumma tausta ei valaise)
 LIPUT = {}
-for nimi_ in ('--reuna', '--musta'):
+for nimi_ in ('--tiivis', '--pehmea'):   # --tiivis: rajaa hahmon alfan rajoihin (+2 %); --pehmea N: alfan reunan sumennus N px
+    if nimi_ in sys.argv:
+        i_ = sys.argv.index(nimi_)
+        if nimi_ == '--pehmea': LIPUT[nimi_] = sys.argv[i_ + 1]; del sys.argv[i_:i_ + 2]
+        else: LIPUT[nimi_] = '1'; del sys.argv[i_]
+for nimi_ in ('--reuna', '--musta', '--kayra'):
     if nimi_ in sys.argv:
         i_ = sys.argv.index(nimi_); LIPUT[nimi_] = sys.argv[i_ + 1]; del sys.argv[i_:i_ + 2]
 REUNA = {'ala': 0.25, 'yla': 0.14, 'vasen': 0.14, 'oikea': 0.14}
 for kv in LIPUT.get('--reuna', '').split(','):
     if '=' in kv: REUNA[kv.split('=')[0]] = float(kv.split('=')[1])
-MUSTA = float(LIPUT.get('--musta', 0))
+MUSTA = float(LIPUT.get('--musta', 0)); KAYRA = float(LIPUT.get('--kayra', 2.2))   # --kayra 1.0 = lineaarinen liuku
 lahde, ulos, tapa = sys.argv[1], sys.argv[2], sys.argv[3]
 src = Image.open(lahde)
 x0, y0, x1, y1 = map(int, sys.argv[4:8]) if len(sys.argv) >= 8 else (0, 0) + src.size
@@ -23,8 +28,13 @@ if tapa == 'rajattu':
     # v13c (omistaja 3.10. 08.0x, Zeuksen linja): rajattu hahmo ilman taustaa ja kehystä — läpinäkyvyys on maski,
     # sävyt S-käyrällä kuten keski-tilassa, ei soikiota, ei sumennusta (reuna ei hehku)
     import math as _m
-    rgba = src.convert('RGBA').crop((x0, y0, x1, y1)); rgba.thumbnail((2048, 2048), Image.LANCZOS)
+    rgba = src.convert('RGBA').crop((x0, y0, x1, y1))
+    if '--tiivis' in LIPUT:
+        bx = rgba.getchannel('A').point(lambda v: 255 if v > 8 else 0).getbbox(); m_ = int(0.02 * max(rgba.size))
+        rgba = rgba.crop((max(0, bx[0] - m_), max(0, bx[1] - m_), min(rgba.size[0], bx[2] + m_), min(rgba.size[1], bx[3] + m_)))
+    rgba.thumbnail((2048, 2048), Image.LANCZOS)
     alfa = rgba.getchannel('A')
+    if '--pehmea' in LIPUT: alfa = alfa.filter(ImageFilter.GaussianBlur(float(LIPUT['--pehmea'])))   # sahalaitainen rajaus pehmeäksi
     if MUSTA > 0:   # mustapiste: tumma tausta (esim. sohva) ei valaise — luma → alfa, pehmeä liuku 0,12 mustapisteen yläpuolelle
         luma = rgba.convert('L'); mp_, lv_ = MUSTA * 255, 0.12 * 255
         alfa = ImageChops.multiply(alfa, luma.point(lambda v: 0 if v <= mp_ else min(255, int(255 * ((v - mp_) / lv_) ** 1.5))))
@@ -35,7 +45,7 @@ if tapa == 'rajattu':
     im = im.point(lambda v: int(70 + 185 * s_(v / 255))).filter(ImageFilter.UnsharpMask(1.5, 80, 2))
     # 4.10.: rajausreunat (hahmo leikattu kuvan reunaan) häivytetään 14 %:n matkalla (käyrä ^2,2: ylivalottuva projektori ei tee liu'usta reunaa) — muuten suora reuna piirtyy kasvoille
     w_, h_ = alfa.size; r_ = max(2, int(0.14 * min(w_, h_)))
-    ramppi = Image.linear_gradient('L').point(lambda v: int(255 * (v / 255) ** 2.2))   # 0 yläreunassa → 255
+    ramppi = Image.linear_gradient('L').point(lambda v: int(255 * (v / 255) ** KAYRA))   # 0 yläreunassa → 255
     for nimi_, laatikko in (('yla', (0, 0, w_, 1)), ('ala', (0, h_ - 1, w_, h_)), ('vasen', (0, 0, 1, h_)), ('oikea', (w_ - 1, 0, w_, h_))):
         reuna = alfa.crop(laatikko).point(lambda v: 255 if v > 128 else 0)
         if sum(reuna.tobytes()) / 255 < 0.02 * max(reuna.size): continue
