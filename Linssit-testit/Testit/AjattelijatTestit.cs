@@ -633,5 +633,18 @@ namespace Matkakirja.Linssit.Testit
             var k = Lue("marcus-v11");
             Oleta.Tosi(k.Aikajana != null || Math.Abs(AjattelijaAikajana.Globaali(k, k.Prologi.Loppu + 10).ruutu - 10) < 1e-12, "kierrokset ennallaan");
         }
+
+        [Testi] static void KuvalahteetDatasta()
+        {
+            // Tekijätiedot ja lähteet -sivun Ajattelijat-osio (Päätoimittaja 4.10.): kuvalahteet [{ kuva, kohde, teos, tekija, lisenssi, lahde }].
+            var (_, r) = AjattelijaData.Kuvalahteet(File.ReadAllText(Fixtuurit + "kuvalahteet-esimerkki.json"));
+            Oleta.Sama(4, r.Count);
+            var o = r.First(x => x.Kuva == "kaiku-oraakkeli.png");
+            Oleta.Tosi(o.Tekija == "Davide Mauro" && o.Lisenssi.StartsWith("CC BY-SA 4.0") && o.Kohde == "Delfoin oraakkeli", "oraakkeli");
+            // Vanha kaiku.nimeaminen (Marcus v11) tekijäksi, kun kuvalähdettä ei ole.
+            var (nimi, m) = AjattelijaData.Kuvalahteet(File.ReadAllText(Fixtuurit + "marcus-v11.json"));
+            Oleta.Tosi(nimi == "Marcus Aurelius" && m.Count == 1 && m[0].Tekija.StartsWith("Nico Kokkonen, CC BY 3.0"), "Marcus nimeaminen");
+            Oleta.Sama(0, AjattelijaData.Kuvalahteet("ei jsonia").rivit.Count);
+        }
     }
 }
