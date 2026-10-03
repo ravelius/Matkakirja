@@ -14,6 +14,7 @@
 // versiorivi lopussa. Ilman pakettia (ei verkkoa, vanha paketti) näkyvät vain nämä ja lyhyt vara.
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -25,6 +26,7 @@ namespace Matkakirja.Natiivi
         const string Moduuli = "moduulit/js/lahteet.json";
 
         readonly VisualElement himmennys, sisus;
+        readonly ScrollView vieritys;
         bool rakennettu, haussa;
         public bool Auki { get; private set; }
 
@@ -54,6 +56,7 @@ namespace Matkakirja.Natiivi
             vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Sisus.Add(vieritys);
             sisus = vieritys.contentContainer;
+            this.vieritys = vieritys;
 
             var napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
             var sulje = Rakenne.Nappi("Sulje", "mk-nappi--kulta", Sulje, napit);
@@ -136,6 +139,15 @@ namespace Matkakirja.Natiivi
                     aineistoja += rivit.Count;
                     Ryhma(Teksti(ryhma, "otsikko"), Teksti(ryhma, "johdanto"), rivit);
                 }
+            // AJATTELIJAT (Päätoimittaja 4.10.2026: kaikukuvien CC BY-SA -nimeäminen, oraakkeli ja uhri): ajattelijoiden omista
+            // tiedostoista (Resources/Ajattelijat/*.json, kuvalahteet[]; vanha kaiku.nimeaminen varalla), joten uusi kuva näkyy
+            // täällä ilman erillistä listaa.
+            var ajattelijat = AjattelijoidenLahteet();
+            if (ajattelijat.Count > 0)
+            {
+                aineistoja += ajattelijat.Count;
+                Ryhma("Ajattelijat", "Ajattelijoiden kohtausten kaikukuvat.", ajattelijat);
+            }
             Ryhma("Sovelluksen kartta, malli ja fontit", "Natiivisovelluksen omat aineistot.", new List<Rivi>
             {
                 new Rivi { Nimi = "Maasto ja pallo", Tekija = KarttaKerrokset.Tekijatiedot, EiLisenssia = true },
@@ -163,6 +175,42 @@ namespace Matkakirja.Natiivi
             rakennettu = peli != null;
         }
 
+        /// <summary>
+        /// Ajattelijoiden kuvien lähteet (Linssiseppä 2:n muoto 4.10.2026): juuren "kuvalahteet": [{ kuva, kohde, teos, tekija, lisenssi,
+        /// lahde }]; ilman sitä vanha kaiku.nimeaminen ("Tekijä, lisenssi, lähde") yhtenä rivinä. *-atlas-tiedostot ohitetaan.
+        /// Rivi: ajattelija: kohde, teos · tekijä, lisenssi, lähde huomautuksena.
+        /// </summary>
+        static List<Rivi> AjattelijoidenLahteet()
+        {
+            var rivit = new List<Rivi>();
+            foreach (var t in Resources.LoadAll<TextAsset>("Ajattelijat").OrderBy(t => t.name))
+            {
+                if (t.name.EndsWith("-atlas", System.StringComparison.Ordinal)) continue;
+                Dictionary<string, object> d;
+                try { d = MiniJson.ObjektiTaiNull(MiniJson.Jasenna(t.text)); }
+                catch (System.Exception) { continue; }
+                if (d == null) continue;
+                string ajattelija = Teksti(d, "nimi") ?? t.name;
+                var lahteet = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(d, "kuvalahteet"));
+                foreach (var x in lahteet)
+                {
+                    if (MiniJson.ObjektiTaiNull(x) is not Dictionary<string, object> l) continue;
+                    string kohde = Teksti(l, "kohde"), teos = Teksti(l, "teos"), tekija = Teksti(l, "tekija");
+                    rivit.Add(new Rivi
+                    {
+                        Nimi = ajattelija + (kohde != null ? ": " + kohde : ""),
+                        Tekija = teos != null && tekija != null ? teos + " · " + tekija : teos ?? tekija,
+                        Lisenssi = Teksti(l, "lisenssi"),
+                        Huom = Teksti(l, "lahde"),
+                    });
+                }
+                if (lahteet.Count == 0 && MiniJson.ObjektiTaiNull(MiniJson.Kentta(d, "kaiku")) is Dictionary<string, object> k
+                    && Teksti(k, "nimeaminen") is string n)
+                    rivit.Add(new Rivi { Nimi = ajattelija, Tekija = n, EiLisenssia = true });
+            }
+            return rivit;
+        }
+
         /// <summary>Viennin export: arvo suoraan tai { arvo } -kääreessä (kuten ui-tekstit).</summary>
         static object Arvo(Dictionary<string, object> exportit, string nimi)
         {
@@ -182,6 +230,20 @@ namespace Matkakirja.Natiivi
             if (teksti == null) return;
             var l = Rakenne.Teksti(teksti, "mk-kortti__teksti mk-tietoja__kappale" + (luokka != null ? " " + luokka : ""), sisus);
             if (luokka == "mk-tietoja__copyright") Kirjasimet.Aseta(l, Kirjasin.LukuLihava);
+        }
+
+        /// <summary>Testikomento ui tietoja &lt;osio&gt;: auki ja vieritys ryhmän otsikkoon heti, kun sisältö on rakennettu.</summary>
+        public void AvaaOsioon(string osio)
+        {
+            Avaa();
+            float alku = Time.unscaledTime;
+            IVisualElementScheduledItem ajo = null;
+            ajo = sisus.schedule.Execute(() =>
+            {
+                var o = sisus.Query<Label>(className: "mk-tietoja__ryhma").Where(l => l.text.ToLowerInvariant().StartsWith(osio.ToLowerInvariant())).First();
+                if (o != null && o.layout.height > 0) { vieritys.scrollOffset = new Vector2(0f, o.layout.y); ajo.Pause(); }   // otsikko yläreunaan
+                else if (Time.unscaledTime - alku > 8f) ajo.Pause();
+            }).Every(200);
         }
 
         void Ryhma(string otsikko, string johdanto, List<Rivi> rivit)

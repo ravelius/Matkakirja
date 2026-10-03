@@ -306,7 +306,9 @@ namespace Matkakirja.Natiivi
                 else if (selaus && !Vanha) Korosta();
                 RakennaNauha();
                 if (pulukortti.Auki) pulukortti.Avaa(k);
-                sijaintipallo.Kohteeseen(k.Lat, k.Lon, selaus && !LinssiUi.VahennettyLiike());
+                // Pallosta valittu kohde: pallo pysyy sormen jättämässä asennossa, vain merkki siirtyy (omistaja 4.10.2026).
+                if (palloValitsi) { palloValitsi = false; sijaintipallo.MerkitseKohde(k.Lat, k.Lon); }
+                else sijaintipallo.Kohteeseen(k.Lat, k.Lon, selaus && !LinssiUi.VahennettyLiike());
             }
             PaivitaVanha();
             NaytaAutoTila();
@@ -683,10 +685,12 @@ namespace Matkakirja.Natiivi
                 autoOdottaa = false;
                 double d = (k.Lon - kohde.Lon) % 360;
                 if (d > 180) d -= 360; else if (d < -180) d += 360;
+                palloValitsi = true;
                 Vaihda(d >= 0 ? 1 : -1, () => l.AvaaValittu(k));
                 return;
             }
-            sijaintipallo.Kohteeseen(kohde.Lat, kohde.Lon, !LinssiUi.VahennettyLiike());
+            // Sama kohde tai ei mitään: pallo ei kierry takaisin (omistaja 4.10.2026), merkki pysyy nykyisessä kohteessa.
+            sijaintipallo.MerkitseKohde(kohde.Lat, kohde.Lon);
             if (autoOdottaa) { autoOdottaa = false; if (AutoKaytossa) LuentaLoppui(luentaVuoro); }
         }
 
@@ -721,6 +725,15 @@ namespace Matkakirja.Natiivi
                 case "mittaa": MittaaKoko(1.2f); break;
                 case "auto": AsetaAuto(true); break;          // AUTO päälle (web PR #3817)
                 case "auto-pois": AsetaAuto(false); break;
+                default:
+                    // ui linssi kuvaselite zoomi:<x>: kuva x-kertaiseksi keskeltä (rajattu ylärajaan Suurin = 8×), tila lokiin.
+                    if (komento.StartsWith("zoomi:") && float.TryParse(komento.Substring(6), System.Globalization.NumberStyles.Float,
+                            System.Globalization.CultureInfo.InvariantCulture, out float z))
+                    {
+                        ZoomaaKohtaan(z, new Vector2(lava.layout.width / 2f, lava.layout.height / 2f));
+                        return $"zoomi {zoomi:0.##} (yläraja {Suurin:0.##}, kuva {tekstuuri?.width ?? 0} px, näytetty {sovitus.width:0} pt)";
+                    }
+                    break;
             }
             return SeliteTila;
         }
@@ -848,19 +861,14 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        float Suurin => tekstuuri == null || sovitus.width <= 0 ? 1f
-            : Mathf.Max(1f, Mathf.Min(MaxZoomi, tekstuuri.width / sovitus.width * PisteetPikseleina()));
+        /// <summary>Pallosta valittu kohde odottaa avautumista: avautuessa pallo ei kierry (MerkitseKohde).</summary>
+        bool palloValitsi;
 
-        /// <summary>Paneelin piste näytön pikseleinä (kuvan oma tarkkuus rajaa zoomin).</summary>
-        float PisteetPikseleina()
-        {
-            var p = lava.panel;
-            if (p == null) return 1f;
-            var a = RuntimePanelUtils.ScreenToPanel(p, Vector2.zero);
-            var b = RuntimePanelUtils.ScreenToPanel(p, new Vector2(100, 0));
-            float pisteita = Mathf.Abs(b.x - a.x);
-            return pisteita > 0 ? pisteita / 100f : 1f;
-        }
+        /// <summary>
+        /// Zoomin yläraja: kiinteä 8× kuvan tarkkuudesta riippumatta (omistaja 4.10.2026, TF 134: "kuvaa pitäisi pystyä zoomaamaan
+        /// lähemmäs"; ennen raja oli kuvan oma tarkkuus, jolloin pieni kuva pysähtyi 1:1-pikseliin). Web ei mallina (jäädytetty).
+        /// </summary>
+        float Suurin => tekstuuri == null || sovitus.width <= 0 ? 1f : MaxZoomi;
 
         void NollaaZoomi()
         {
@@ -1040,6 +1048,7 @@ namespace Matkakirja.Natiivi
         public void Selaa(int suunta)
         {
             if (kohde == null || suunta == 0 || liukuu) return;
+            palloValitsi = false;
             int j = indeksi + Math.Sign(suunta);
             if (j >= 0 && j < kohde.Havainnot.Count) { Vaihda(suunta, () => Valitse(j)); return; }
             var linssi = Linssi();
@@ -1053,6 +1062,7 @@ namespace Matkakirja.Natiivi
         {
             var linssi = Linssi();
             if (linssi == null || liukuu) return;
+            palloValitsi = false;
             Vaihda(suunta, () => linssi.Naapuri(suunta));
         }
 
