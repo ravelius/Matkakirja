@@ -10267,3 +10267,7 @@ Omistaja 3.10.2026 klo 06.3x välihuomiona sanatarkasti: 'ottaa iss linssin humi
 ## OMISTAJA: PULU CUPOLAN ULKOPUOLELLE (3.10.2026) (3.10.2026 klo 07.52)
 
 Omistaja 3.10.2026 klo 07.5x sanatarkasti: 'Pulun pitäisi olla cupolan ulkopuolella'. Tarkennus klo 06.30 linjaukseen (oikea reuna, lyhyt varsi, kasvot näkyvissä): Cupola-näkymässä Pulu on ikkunan takana avaruudessa robottivarren päässä, eli se näkyy ikkunan läpi ja ikkunan kehys ja Cupolan rakenteet piirtyvät sen eteen. Pulu ei ole kehyksen päällä eikä sisätilassa. Oikea reuna, lyhyt varsi ja valaistut kasvot säilyvät. Kaukonäkymässä Pulu on jo avaruudessa, joten se ei muutu. Toteutus: Linssiseppä 2 natiivi, ja juna 133 ottaa uuden version.
+
+## OMISTAJA: KAUKONÄKYMÄSSÄ PULU PELKÄSSÄ KYPÄRÄSSÄ ILMAN PUKUA JA ROBOTTIKÄTTÄ (3.10.2026) (3.10.2026 klo 07.55)
+
+Omistaja 3.10.2026 klo 07.5x sanatarkasti: 'Maapallon vierellä pulu voi olla pelkkää kypärä päässään ilman pukua ja robotti kättä'. Linja: astronautin kameran kaukonäkymässä (maapallo ja ISS avaruudessa) Pulu on tavallinen Pulu, jolla on päässään vain avaruuskypärä. Avaruuspukua ja robottikättä ei ole. Cupola-näkymässä Pulu on edelleen puvussa robottivarren päässä ikkunan takana (klo 07.52). Kuva kootaan olemassa olevista Pulun kuvista (tavallinen Pulu ja astronautti-Pulun kypärä), jos se onnistuu siististi. Muuten pyydetään uusi kuva Codexilta. Natiivi Linssiseppä 2, web Pelikoodari samaan malliin.
