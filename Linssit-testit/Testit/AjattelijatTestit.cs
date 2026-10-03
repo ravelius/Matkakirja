@@ -82,14 +82,15 @@ namespace Matkakirja.Linssit.Testit
         {
             var v = AjattelijaAikajana.Taustavirta(Lue("sokrates"));
             Oleta.Sama(20, v.Count);
-            // (rivi, korkeus, kirkkaus, vM, kulma, nopeus uv/ruutu, mm/s) webin asetaVirta (088b64d0c, v14: riviKoko 0,6,
-            // riviTila 2, 80 px:n nauha) nodella natiivin atlaksen paikoista 3.10.; kirkkaudet ja asettelu ennallaan (sama siemen).
+            // (rivi, korkeus, kirkkaus, vM, kulma, nopeus uv/ruutu, mm/s) webin asetaVirta (088b64d0c, v14: riviTila 2, 80 px:n nauha)
+            // nodella natiivin atlaksen paikoista 3.10.; kirkkaudet ja asettelu ennallaan (sama siemen). Omistaja TF 133 (rivit liian
+            // sumeita, Pelikoodari #3913): riviKoko 0,6 → 0,8, joten korkeus × 4/3 ja uv-nopeus × 3/4; pinnan mm/s ennallaan.
             var odotetut = new[]
             {
-                (0, 0.009, 0.267322949637, -0.101083351336, -0.0578257875064, -0.00393099719785575, 27.1710526316),
-                (4, 0.0054, 0.106924289309, 0.0607134358166, -0.120095068305, -0.01926632807423652, 22.8289473684),
-                (7, 0.0054, 0.117068000645, -0.0373129654754, 0.106374477445, 0.02242714805677388, 24.8026315789),
-                (19, 0.0054, 0.18325603181, 0.0497238574733, 0.0350482896975, 0.0064564804662118275, 26.7763157895),
+                (0, 0.012, 0.267322949637, -0.101083351336, -0.0578257875064, -0.0029482478983918125, 27.1710526316),
+                (4, 0.0072, 0.106924289309, 0.0607134358166, -0.120095068305, -0.014449746055677387, 22.8289473684),
+                (7, 0.0072, 0.117068000645, -0.0373129654754, 0.106374477445, 0.01682036104258041, 24.8026315789),
+                (19, 0.0072, 0.18325603181, 0.0497238574733, 0.0350482896975, 0.00484236034965887, 26.7763157895),
             };
             foreach (var (i, k, kir, vm, ku, n, mms) in odotetut)
             {
@@ -346,7 +347,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(aj.Tykit.All(t => t.Kiintea) && aj.Tykit[0].Leveys == 0.11 && aj.Tykit[4].Leveys == 0.10522, "kortit, leveys luvuista");
             Oleta.Tosi(aj.Kortti && aj.KorttiMerkkeja == 24 && aj.KorttiLeveys == 0.11 && aj.KorttiSiirto == 0, "lauseKortti");
             Oleta.Tosi(aj.Porrastus && aj.PorrasAlku == 286 && aj.PorrasVali == 15 && aj.PorrasHaivytys == 9 && aj.PorrasRintama == 4 && aj.PorrasReuna == 0.35, "virtaPorrastus");
-            Oleta.Sama(0.1, aj.VirtaVoima);
+            Oleta.Sama(0.065, aj.VirtaVoima);   // #3913 (omistaja TF 133): 0,1 → 0,065
             Oleta.Tosi(aj.TykkiVari.SequenceEqual(new[] { 1.0, 1, 1 }), "tekstiprojektorit värittömiä");
             Oleta.Tosi(aj.Puhe == "ajattelijat/sokrates/v4/v14-puhe.mp3" && aj.Musiikki == "ajattelijat/sokrates/v4/v14-musiikki.mp3"
                 && aj.Syke == "ajattelijat/sokrates/v4/syke-v14.json", "v4-raidat");
@@ -357,7 +358,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(aj.Ymparisto.Select(x => x[1]).SequenceEqual(new[] { 1.0, 1, 0, 0, 1 }), "ympäristö 0 silmä- ja partakuvissa");
             Oleta.Tosi(aj.VarjolevyRuudut.SequenceEqual(new[] { 136.0, 153 }) && aj.VarjolevyKeski[2] == 0.197, "varjolevy");
             var tv = a.Taustavirta;
-            Oleta.Tosi(tv.Sumeus == 0.15 && tv.RiviTila == 2 && tv.RiviKorkeus == 80 && tv.RiviKoko == 0.6, "taustavirran pehmeys");
+            Oleta.Tosi(tv.Sumeus == 0.04 && tv.RiviTila == 2 && tv.RiviKorkeus == 80 && tv.RiviKoko == 0.8, "taustavirran pehmeys (#3913)");
             Oleta.Tosi(tv.Projektorit.Select(p => p.Pehmeys).SequenceEqual(new[] { 1.0, 1, 1.5, 1.3, 1.3 }), "kauemmat pehmeämpiä");
             // Kortit atlaksessa: monirivinen laatta ilman sumeaa paria.
             var kortti = a.Atlas.Paikat[21];
@@ -430,10 +431,10 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(v.Where(x => x.Puoli == VirtaPuoli.Yla).All(x => x.Lahto >= 338), "ylärivit kysymyksen jälkeen");
             // Rintama ja häivytys (web asetaAikajana): rivi 0 ja 7, 5 ja 40 ruutua lähdöstä.
             var t0 = AjattelijaAikajana.PorrasTila(v[0], 286 + 5, 9, 4, 0.35, 0, false);
-            Oleta.Tosi(Math.Abs(t0.siirto - -0.019654985989278752) < 1e-15 && Math.Abs(t0.rintama - -10.03438596491228) < 1e-12
+            Oleta.Tosi(Math.Abs(t0.siirto - -0.019654985989278752 * 0.75) < 1e-15 && Math.Abs(t0.rintama - -10.03438596491228) < 1e-12
                 && Math.Abs(t0.voima - 0.5555555555555556) < 1e-12, $"rivi 0: {t0}");
             var t7 = AjattelijaAikajana.PorrasTila(v[7], 481 + 40, 9, 4, 0.35, 0.5, false);
-            Oleta.Tosi(Math.Abs(t7.siirto - 0.8970859222709553) < 1e-12 && Math.Abs(t7.rintama - 9.913219298245615) < 1e-12 && t7.voima == 1,
+            Oleta.Tosi(Math.Abs(t7.siirto - 0.8970859222709553 * 0.75) < 1e-12 && Math.Abs(t7.rintama - 9.913219298245615) < 1e-12 && t7.voima == 1,
                 $"rivi 7: {t7}");
             // Ennen lähtöä pimeä; kaikkien lähdettyä aikajanan kerroin sellaisenaan (myös alle 1).
             Oleta.Tosi(AjattelijaAikajana.PorrasTila(v[0], 286, 9, 4, 0.35, 1, false) == (0, 0, 0), "ennen lähtöä");
