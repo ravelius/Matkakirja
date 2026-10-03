@@ -36,6 +36,7 @@ Shader "Matkakirja/AjattelijaKipsi"
             #pragma fragment frag
             #pragma target 3.5
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "AjattelijaPeite.hlsl"   // webin CSS-vinjetti ja lähderivin liukuväri sRGB:nä bystin pikseleille
 
             #define P_ENINTAAN 24
             #define VALOJA 4
@@ -84,6 +85,7 @@ Shader "Matkakirja/AjattelijaKipsi"
                 float3 normaali : TEXCOORD1;
                 float4 tangentti : TEXCOORD2;
                 float2 uv : TEXCOORD3;
+                float4 leikkaus : TEXCOORD4;   // leikkausavaruuden paikka (peitteen uv kuten AjattelijaPeite)
             };
 
             Ulos vert(Tulo t)
@@ -91,6 +93,7 @@ Shader "Matkakirja/AjattelijaKipsi"
                 Ulos o;
                 o.maailma = TransformObjectToWorld(t.paikka.xyz);
                 o.paikka = TransformWorldToHClip(o.maailma);
+                o.leikkaus = o.paikka;
                 o.normaali = TransformObjectToWorldNormal(t.normaali);
                 o.tangentti = float4(TransformObjectToWorldDir(t.tangentti.xyz), t.tangentti.w * GetOddNegativeScale());
                 o.uv = t.uv;
@@ -347,7 +350,7 @@ Shader "Matkakirja/AjattelijaKipsi"
                 }
                 float3 puolipallo = lerp(_Maa.rgb, _Taivas.rgb, 0.5 * n.y + 0.5);
                 float3 vari = suora + puolipallo * lambert + lambert * ProjektoriValo(i.maailma, n);
-                return half4(AgX(vari), 1.0);
+                return half4(PeiteLineaariseen(AgX(vari), PeiteUv(i.leikkaus)), 1.0);
             }
             ENDHLSL
         }

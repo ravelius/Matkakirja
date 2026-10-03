@@ -141,7 +141,7 @@ namespace Matkakirja.Natiivi
             IdPeite = Shader.PropertyToID("_Peite"), IdHimmennys = Shader.PropertyToID("_HimmennysVari"),
             IdVaisto = Shader.PropertyToID("_PVaisto"), IdSavuTila = Shader.PropertyToID("_SavuTila"), IdSavuKanava = Shader.PropertyToID("_SavuKanava"),
             IdVKuvio = Shader.PropertyToID("_VKuvio"), IdPVari = Shader.PropertyToID("_PVari"), IdPKaikuVari = Shader.PropertyToID("_PKaikuVari"),
-            IdKaikuMuoto = Shader.PropertyToID("_PKaikuMuoto");
+            IdKaikuMuoto = Shader.PropertyToID("_PKaikuMuoto"), IdPeiteTausta = Shader.PropertyToID("_PeiteTausta");
 
         /// <summary>Blender (x, y, z) → Unity (x, z, y).</summary>
         public static Vector3 B(double[] v) => new Vector3((float)v[0], (float)v[2], (float)v[1]);
@@ -189,7 +189,9 @@ namespace Matkakirja.Natiivi
             mat = new Material(Resources.Load<Shader>("Varjostimet/AjattelijaKipsi")) { name = "AjattelijaKipsi" };
             varjoMat = new Material(Resources.Load<Shader>("Varjostimet/AjattelijaVarjo")) { name = "AjattelijaVarjo" };
             peiteMat = new Material(Resources.Load<Shader>("Varjostimet/AjattelijaPeite")) { name = "AjattelijaPeite" };
-            peiteMat.SetColor(IdHimmennys, (Color)Tyylikirja.Himmennys.Tumma);
+            // sRGB-arvoina SetVectorilla: SetColor linearisoisi värin, ja varjostin sekoittaa sRGB:nä (AjattelijaPeite.hlsl).
+            var h = (Color)Tyylikirja.Himmennys.Tumma;
+            peiteMat.SetVector(IdHimmennys, new Vector4(h.r, h.g, h.b, h.a));
             // Taulukot kiinteällä pituudella ensimmäisestä asetuksesta (Unity lukitsee taulukon koon).
             AsetaTaulukot();
             mat.SetVectorArray(IdVPaikka, vPaikka); mat.SetVectorArray(IdVSuunta, vSuunta); mat.SetVectorArray(IdVVari, vVari);
@@ -1077,7 +1079,13 @@ namespace Matkakirja.Natiivi
             vinjettiAika = nyt;
             vinjetti = Mathf.MoveTowards(vinjetti, vinjettiKohde, dt / 1.2f);
             float turva = Screen.height > 0 ? Screen.safeArea.yMin / Screen.height : 0;
-            peiteMat.SetVector(IdPeite, new Vector4(Mathf.SmoothStep(0, 1, vinjetti), lahde, 0.12f + turva, 0));
+            // Peite (vinjetti ja lähderivin liukuväri): taustalle peitteen kolmio, bystille kipsin varjostin (sama lasku).
+            var peite = new Vector4(Mathf.SmoothStep(0, 1, vinjetti), lahde, 0.12f + turva, 0);
+            peiteMat.SetVector(IdPeite, peite);
+            mat.SetVector(IdPeite, peite);
+            mat.SetVector(IdHimmennys, peiteMat.GetVector(IdHimmennys));
+            var bg = kamera.backgroundColor;
+            peiteMat.SetVector(IdPeiteTausta, new Vector4(bg.r, bg.g, bg.b, 1));
         }
 
         /// <summary>
