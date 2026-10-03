@@ -265,13 +265,15 @@ export function leikkaaHiljaisuusSuodatin({ kynnysDb = HILJAISUUS_DB } = {}) {
  * Häivytykset päihin ja tason korjaus yhtenä lineaarisena
  * vahvistuksena. `kesto` on leikatun äänen pituus sekunteina.
  */
-export function viimeistelySuodatin({ kesto, korjausDb, haivytys = HAIVYTYS_S }) {
+export function viimeistelySuodatin({ kesto, korjausDb, haivytys = HAIVYTYS_S, sisaan = null }) {
   if (!(kesto > 0)) throw new Error('keston pitää olla positiivinen');
   // Hyvin lyhyt ääni ei kestä kahta täyttä häivytystä: puolitetaan.
   const h = Math.min(haivytys, kesto / 4);
+  // Sisäänhäivytys erikseen (isku): pitkä häivytys söisi iskun alun eli juuri sen, mikä kuuluu (myllyn napsahdus 3.10.2026).
+  const hs = sisaan == null ? h : Math.min(sisaan, h);
   const ulosAlkaa = Math.max(0, kesto - h);
   return [
-    `afade=t=in:st=0:d=${h.toFixed(3)}`,
+    `afade=t=in:st=0:d=${hs.toFixed(3)}`,
     `afade=t=out:st=${ulosAlkaa.toFixed(3)}:d=${h.toFixed(3)}`,
     `volume=${korjausDb.toFixed(2)}dB`,
   ].join(',');
