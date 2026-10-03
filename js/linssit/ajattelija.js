@@ -893,6 +893,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
         paikka: t.paikkaT, kohde: t.kohdeT, etaisyys: 0.6, nauhaKork: t.korkeus, rivi: t.rivi, ala: t.ala, blend: t.blend,
         // v14-kortti terävänä (Päätoimittaja 3.10.2026): ei kromaattista kaksoisvalotusta eikä syvyyssumeuden hehkua.
         ca: KORTTI ? 0 : a.ca, syvyys: KORTTI ? 0 : a.syvyys, atlasKorkeus: kangas.height,
+        // Kortin pystysiirto (m, + = alas): ylin rivi pois hiusrajan kiharoilta (Marcus); ?korttisiirto= kokeiluun.
+        vM: KORTTI ? Number(haku.get('korttisiirto') ?? KORTTI.siirto ?? 0) : 0,
       });
     };
     /*
