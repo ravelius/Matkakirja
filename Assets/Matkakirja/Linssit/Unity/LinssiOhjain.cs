@@ -1566,6 +1566,13 @@ namespace Matkakirja.Natiivi
                     }
                     else if (osat[1] == "kierros")
                         Kirjaa("astro kierros: " + string.Join(" ", l.KierrosTunnukset()));
+                    else if (osat[1] == "pallo")
+                    {
+                        // Pallovalitsin (omistaja 3.10.2026): "astro pallo tartu|pyorita dx dy [ms]|irti|tila" = sormi palloon, siirto
+                        // pisteinä (ms > 0 → vauhti, irti jättää inertian), sormi irti (valinta 0,5 s pysähdyksestä), tila lokiin.
+                        var kuva = UiNakymat.Olemassa ? UiNakymat.Hae().Linssit?.Astronautti?.Kuva : null;
+                        Kirjaa("astro pallo: " + (kuva != null ? kuva.TestaaPallo(osat.Skip(2).ToArray()) : "ei kuvanäkymää"));
+                    }
                     else if (osat[1] == "seuranta")
                     {
                         // ISS-seuranta avauksesta (web PAATOKSET 53): "astro seuranta" kertoo, seuraako kamera asemaa, ja kameran

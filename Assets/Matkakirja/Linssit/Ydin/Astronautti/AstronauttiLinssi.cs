@@ -689,6 +689,17 @@ namespace Matkakirja.Linssit.Astronautti
             return k;
         }
 
+        /// <summary>
+        /// Pallovalitsin (natiivin sijaintipallo, omistaja 3.10.2026): pyöritetyn pallon keskimmäinen kohde avautuu kuten ‹ ›
+        /// (oletuskuva, kamera liukuu sen ylle). null, jos kuva ei ole auki tai kohde on jo auki.
+        /// </summary>
+        public Havaintokohde AvaaValittu(Havaintokohde k)
+        {
+            if (!Auki || AvoinKuva == null || k == null || ReferenceEquals(k, AvoinKuva) || !aineisto.Kohteet.Contains(k)) return null;
+            AvaaKohde(k, k.OletusIndeksi);
+            return k;
+        }
+
         public void SuljeKuva()
         {
             if (AvoinKuva == null) return;
