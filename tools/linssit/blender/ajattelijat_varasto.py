@@ -241,7 +241,7 @@ to = bpy.data.objects.new('sini', tay); sc.collection.objects.link(to); to.locat
 # kaukainen valonheitin pimeydessä kameraa kohti (syvyys): pieni kirkas lähde + keila pölyssä
 kd = bpy.data.lights.new('kaukovalo', 'SPOT'); kd.energy = 1500; kd.spot_size = math.radians(28); kd.spot_blend = 0.6
 kd.color = (1.0, 0.88, 0.70); kd.shadow_soft_size = 0.05
-kv = bpy.data.objects.new('kaukovalo', kd); sc.collection.objects.link(kv); kv.location = (-1.3, 38.0, 2.8)   # keskikäytävän päässä, näkyy bystin vasemmalla
+kv = bpy.data.objects.new('kaukovalo', kd); sc.collection.objects.link(kv); kv.location = (1.9, 38.0, 2.9) if KORK > LEV else (-1.3, 38.0, 2.8)   # keskikäytävän päässä; pystykuvan kapeassa kulmassa oikeaan laitaan
 kv.rotation_euler = (Vector((0.0, -6.0, 1.5)) - kv.location).to_track_quat('-Z', 'Y').to_euler()
 bpy.ops.mesh.primitive_circle_add(vertices=32, radius=0.09, fill_type='NGON', location=kv.location); lam = bpy.context.object
 lam.rotation_euler = kv.rotation_euler; lm = bpy.data.materials.new('lamppu'); lm.use_nodes = True
