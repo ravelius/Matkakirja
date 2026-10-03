@@ -87,7 +87,7 @@ test('omistajan v9-palaute: prologi ilman kehää, Zarathustra koko kohtaus vaim
   assert.ok(SOKRATES.prologi.valot.every((v) => v.keila <= 30), 'vain kapeat reunavalot');
   assert.deepEqual(Object.keys(SOKRATES.aani), ['puhe', 'musiikki']);
   const tyokalu = lue('../tools/ajattelija-aaniraita.mjs');
-  assert.match(tyokalu, /const VAIMENNUS = \{ alku: 17\.5, taso: 0\.22, ramppi: 2 \};/);
+  assert.match(tyokalu, /const VAIMENNUS = \{ alku: Number\(arvo\('--vaimennus', 17\.5\)\), taso: 0\.22, ramppi: 2 \};/);
   assert.match(tyokalu, /silmukka: \[66\.0, 80\.0\],/);
   assert.doesNotMatch(tyokalu, /gymnopedie/i, 'Satie pois');
   const pr = lue('../js/linssit/ajattelija-projektori.js');
