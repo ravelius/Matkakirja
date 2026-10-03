@@ -192,7 +192,7 @@
   ]
  },
  "v13c": {
-  "kaikuvari": "seepia",
+  "kaikuvari": "neutraali",
   "virta_vaisto": [
    {
     "kohde": [
@@ -1214,8 +1214,8 @@
    "spot_blend": 0.3,
    "vari": [
     1.0,
-    0.78,
-    0.52
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -1241,7 +1241,7 @@
    ],
    "kuvat": [
     "kaiku-kuolema.png",
-    "savu-0001.png"
+    "savu-0183.png"
    ],
    "lev_m": 0.11,
    "kork_m": 0.1488,
@@ -1263,8 +1263,8 @@
    "spot_blend": 0.3,
    "vari": [
     1.0,
-    0.78,
-    0.52
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -1290,7 +1290,7 @@
    ],
    "kuvat": [
     "kaiku-jumala.png",
-    "savu-0001.png"
+    "savu-0106.png"
    ],
    "lev_m": 0.1,
    "kork_m": 0.1104,
@@ -1312,8 +1312,8 @@
    "spot_blend": 0.3,
    "vari": [
     1.0,
-    0.78,
-    0.52
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -1339,7 +1339,7 @@
    ],
    "kuvat": [
     "kaiku-oraakkeli.png",
-    "savu-0001.png"
+    "savu-0229.png"
    ],
    "lev_m": 0.08,
    "kork_m": 0.16094,
@@ -1361,8 +1361,8 @@
    "spot_blend": 0.3,
    "vari": [
     1.0,
-    0.78,
-    0.52
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -1388,7 +1388,7 @@
    ],
    "kuvat": [
     "kaiku-sotilas.png",
-    "savu-0001.png"
+    "savu-0178.png"
    ],
    "lev_m": 0.1,
    "kork_m": 0.11866,
@@ -1506,8 +1506,8 @@
    "spot_blend": 0.45,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -1534,7 +1534,7 @@
    "kuvat": [
     "nauha-poski-sumea.png",
     "nauha-poski.png",
-    "savu-0001.png"
+    "savu-0070.png"
    ],
    "ala_m": 0.065,
    "nauha_kork_m": 0.02125,
@@ -1556,8 +1556,8 @@
    "spot_blend": 0.45,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -1584,7 +1584,7 @@
    "kuvat": [
     "nauha-30e-sumea.png",
     "nauha-30e.png",
-    "savu-0001.png"
+    "savu-0040.png"
    ],
    "ala_m": 0.075,
    "nauha_kork_m": 0.02563,
@@ -1606,8 +1606,8 @@
    "spot_blend": 0.45,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -1634,7 +1634,7 @@
    "kuvat": [
     "nauha-otsa-sumea.png",
     "nauha-otsa.png",
-    "savu-0001.png"
+    "savu-0019.png"
    ],
    "ala_m": 0.075,
    "nauha_kork_m": 0.02563,
@@ -1656,8 +1656,8 @@
    "spot_blend": 0.45,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -1684,7 +1684,7 @@
    "kuvat": [
     "nauha-sivu-sumea.png",
     "nauha-sivu.png",
-    "savu-0001.png"
+    "savu-0030.png"
    ],
    "ala_m": 0.075,
    "nauha_kork_m": 0.02375,
@@ -1706,8 +1706,8 @@
    "spot_blend": 0.45,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -1734,7 +1734,7 @@
    "kuvat": [
     "nauha-kysymys-sumea.png",
     "nauha-kysymys.png",
-    "savu-0001.png"
+    "savu-0022.png"
    ],
    "ala_m": 0.12,
    "nauha_kork_m": 0.022,
@@ -1756,8 +1756,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -1830,7 +1830,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-1.png"
    ]
   },
@@ -1849,8 +1849,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -1923,7 +1923,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-10.png"
    ]
   },
@@ -1942,8 +1942,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -2016,7 +2016,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-19.png"
    ]
   },
@@ -2035,8 +2035,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -2109,7 +2109,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-2.png"
    ]
   },
@@ -2128,8 +2128,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -2202,7 +2202,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-20.png"
    ]
   },
@@ -2221,8 +2221,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -2295,7 +2295,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-3.png"
    ]
   },
@@ -2314,8 +2314,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -2388,7 +2388,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-4.png"
    ]
   },
@@ -2407,8 +2407,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -2481,7 +2481,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-6.png"
    ]
   },
@@ -2500,8 +2500,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -2574,7 +2574,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-7.png"
    ]
   },
@@ -2593,8 +2593,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -2667,7 +2667,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-9.png"
    ]
   },
@@ -2686,8 +2686,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -2760,7 +2760,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-fi-5.png"
    ]
   },
@@ -2779,8 +2779,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -2853,7 +2853,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-fi-8.png"
    ]
   },
@@ -2872,8 +2872,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -2946,7 +2946,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-11.png"
    ]
   },
@@ -2965,8 +2965,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -3039,7 +3039,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-12.png"
    ]
   },
@@ -3058,8 +3058,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -3132,7 +3132,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-13.png"
    ]
   },
@@ -3151,8 +3151,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -3225,7 +3225,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-14.png"
    ]
   },
@@ -3244,8 +3244,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -3318,7 +3318,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-15.png"
    ]
   },
@@ -3337,8 +3337,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -3411,7 +3411,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-16.png"
    ]
   },
@@ -3430,8 +3430,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -3504,7 +3504,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-17.png"
    ]
   },
@@ -3523,8 +3523,8 @@
    "spot_blend": 0.5,
    "vari": [
     1.0,
-    0.93,
-    0.8
+    1.0,
+    1.0
    ],
    "energia_avaimet": [
     [
@@ -3597,7 +3597,7 @@
     ]
    ],
    "kuvat": [
-    "savu-0001.png",
+    "savu-0015.png",
     "tausta-18.png"
    ]
   }
