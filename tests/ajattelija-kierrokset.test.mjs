@@ -176,7 +176,7 @@ test('v13c: tekstivirran väistökehät kaikujen ympärillä ja savumaski lipull
   const aj = SOKRATES.aikajana;
   assert.equal(aj.vaisto.length, 4);
   assert.ok(aj.vaisto.every((v) => v.sade > 0.05 && v.sade < 0.2 && v.ruudut[1] > v.ruudut[0]));
-  assert.deepEqual(aj.savu, { kuva: 'ajattelijat/sokrates/v3/savu-atlas-v3.png', ala: 0.28, kesto: 8, fps: 30, ruutuja: 240 });
+  assert.deepEqual(aj.savu, { kuva: 'ajattelijat/sokrates/v3/savu-atlas-v4.png', ala: 0.28, kesto: 8, fps: 30, ruutuja: 240 });
   assert.match(MOOTTORI, /const savuPaalla = haku\.get\('savu'\) === '1' && AJ\.savu\?\.kuva;/);
   const pr = lue('../js/linssit/ajattelija-projektori.js');
   assert.match(pr, /if \(pD\[i\]\.w > 0\.5\) t \*= pVaistoKerroin\(vMaailma\);/);

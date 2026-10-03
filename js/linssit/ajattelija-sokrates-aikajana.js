@@ -422,7 +422,7 @@ export const SOKRATES_AIKAJANA = Object.freeze({
    "ruudut": [3051, 3266]
   }],
  "savu": {
-  "kuva": "ajattelijat/sokrates/v3/savu-atlas-v3.png",
+  "kuva": "ajattelijat/sokrates/v3/savu-atlas-v4.png",
   "ala": 0.28,
   "kesto": 8,
   "fps": 30,
