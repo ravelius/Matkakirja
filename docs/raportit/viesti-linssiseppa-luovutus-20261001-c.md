@@ -4,7 +4,7 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
 `linssiseppa-tila-20261001-paiva.md`.
 
 ## TILA 3.10. KLO 19.3x (MARCUS v14 NATIIVI — MERGE-PYYNNÖSSÄ)
-- linssiseppa/marcus-v14 ee01111b (proto, LS2:n linssiseppa2/sokrates-v14 69e7438c:n päällä; vain data: tyokalut/ajattelijat-natiiviin.mjs,
+- linssiseppa/marcus-v14 08172a25 (päivitetty 19.4x; proto, LS2:n linssiseppa2/sokrates-v14 005bb623:n päällä, käännös 111dada1, kuvat lokit/linssiseppa-marcus-v14-c-20261003; vain data: tyokalut/ajattelijat-natiiviin.mjs,
   web 088b64d0c, luvut 78b883452). Päätoimittaja hyväksyi; merge-pyyntö Natiivisepälle junaan 133 Sokrateen kanssa (muuten 134).
   Käännös d41204e0 simu PASS; vertailu lokit/linssiseppa-marcus-v14-b-20261003/vertailu-*.png (korrelaatio 0,991). Punahehku/lämmin
   tausta korjattu LS2:n 69e7438c:ssä; rinta ~17 % webiä kirkkaampi kerrottu LS2:lle (ei estä). Omistaja 19.00: ajattelijat vain natiiviin.
