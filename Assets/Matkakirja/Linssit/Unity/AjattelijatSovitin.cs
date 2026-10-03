@@ -123,6 +123,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomennon lisäsiirto (ms, `ajattelija viive <ms>`): + = kuva myöhemmin suhteessa ääneen.</summary>
         public static double ViiveLisaMs;
         double viimeViive;
+        /// <summary>Tahtimittari: intron leikkaukset (globaali ruutu) ja kytkin, joiden kuvan ja äänen ero kirjataan lokiin.</summary>
+        readonly List<(double g, string nimi, double isku)> mitattavat = new List<(double, string, double)>();
         /// <summary>
         /// Prologin kello (s): alkaa nollasta ensimmäisellä ruudulla valinnan jälkeen (kohtauksen kuva näkyy mustana), etenee
         /// ruutujen välillä enintään ProloginAskelS (purun tai varjostimen kääntämisen pätkintä ei syö prologia) ja odottaa
@@ -583,9 +585,21 @@ namespace Matkakirja.Natiivi
                         kytkin.PlayScheduled(AjattelijaTahti.Hetki(dspNolla, a.Prologi.Kytkin));
                     }
                     Ajasta(dspNyt, pl);
+                    Mitattavat(a, pl);
                     o.Kirjaa($"ajattelija: tahti ankkuroitu ruudussa {g:F1}, viive {viive * 1000:F0} ms (laite {AaniIstunto.Viive() * 1000:F0}, "
                         + $"Unity {UnityPuskuri() * 1000:F0}, näyttö −{NaytonViive * 1000:F0}, lisä {ViiveLisaMs:F0})");
                 }
+            }
+            // Tahtimittari: ensimmäinen ruutu, joka näyttää leikkauksen; kuva näkyy seuraavalla päivityksellä (dspNyt + näyttö),
+            // ääni kuuluu ajastushetkellä + ulostulon viiveellä. Ero ms (+ = kuva myöhässä äänestä).
+            while (mitattavat.Count > 0 && !double.IsNaN(dspNolla) && double.IsNaN(ruutuOhitus) && g >= mitattavat[0].g)
+            {
+                var (mg, nimi, isku) = mitattavat[0];
+                mitattavat.RemoveAt(0);
+                double kuva = dspNyt + NaytonViive;
+                double aani = AjattelijaTahti.Hetki(dspNolla, mg) + AaniIstunto.Viive() + UnityPuskuri() + ViiveLisaMs / 1000.0;
+                o.Kirjaa($"ajattelija: tahti {nimi} (ruutu {mg:F0}): kuva − ääni {(kuva - aani) * 1000:+0;-0} ms, kuvan ruutu {g:F2}"
+                    + (double.IsNaN(isku) ? "" : $", musiikin isku {isku * 1000:+0;-0} ms leikkauksesta"));
             }
             // Kytkimen ruutu (kuva) mittariin; ääni on ajastettu samaan hetkeen.
             if (!kytkinKirjattu && double.IsNaN(ruutuOhitus) && g >= a.Prologi.Kytkin)
@@ -612,6 +626,35 @@ namespace Matkakirja.Natiivi
                 El = nayttamo.Lause.El, Viite = nayttamo.Lause.Viite,
             };
             if (loppu && !Lopussa && double.IsNaN(ruutuOhitus)) { Lopussa = true; Muuttui?.Invoke(); }
+        }
+
+        /// <summary>
+        /// Mitattavat hetket ankkuroinnissa: kytkin (prologin ruutu) ja intron leikkaukset (aikajanan kamera ≤ 300 r). Musiikin
+        /// isku haetaan raidan PCM:stä ±0,2 s leikkauksen ympäriltä (onset; NaN = ei selvää iskua).
+        /// </summary>
+        void Mitattavat(AjattelijaData a, double pl)
+        {
+            mitattavat.Clear();
+            if (kytkin.clip != null) mitattavat.Add((a.Prologi.Kytkin, "kytkin", double.NaN));
+            if (a.Aikajana == null) return;
+            foreach (var n in AjattelijaTahti.Leikkaukset(a.Aikajana.Kamera, 300))
+            {
+                double isku = double.NaN, t = n / AjattelijaAikajana.RuutuaSekunnissa;
+                var c = musiikki.clip;
+                if (c != null && c.loadType == AudioClipLoadType.DecompressOnLoad && t + 0.25 < c.length)
+                {
+                    int alku = Math.Max(0, (int)((t - 0.25) * c.frequency)), pituus = (int)(0.5 * c.frequency);
+                    var d = new float[pituus * c.channels];
+                    if (c.GetData(d, alku))
+                    {
+                        var mono = new float[pituus];
+                        for (int i = 0; i < pituus; i++) { float x = 0; for (int k = 0; k < c.channels; k++) x += d[i * c.channels + k]; mono[i] = x / c.channels; }
+                        double h = AjattelijaTahti.Isku(mono, c.frequency, (double)alku / c.frequency, t);
+                        if (!double.IsNaN(h)) isku = h - t;
+                    }
+                }
+                mitattavat.Add((pl + n, $"leikkaus {n:F0}", isku));
+            }
         }
 
         /// <summary>Puhe ja musiikki ajastetaan ruutuun prologi.loppu; myöhässä latautunut raita liittyy kesken samaan kelloon.</summary>

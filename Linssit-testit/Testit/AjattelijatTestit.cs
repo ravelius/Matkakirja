@@ -587,5 +587,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(k.Nyt(5.0, 100.020) >= 5.0 + AjattelijaTahti.Kello.Raja, "ei koskaan taaksepäin");
             Oleta.Tosi(Math.Abs(k.Nyt(5.2, 101.1) - 5.2) < 1e-9, "uusi puskuri: dspTime");
         }
+
+        [Testi] static void TahtiIntronLeikkauksetJaIsku()
+        {
+            // Sokrateen intro: kameran CONSTANT-leikkaukset (61 silmä, 118, 136, 154, 184) mittariin.
+            var l = AjattelijaTahti.Leikkaukset(Lue("sokrates").Aikajana.Kamera, 300);
+            Oleta.Tosi(l.SequenceEqual(new[] { 61.0, 118, 136, 154, 184 }), string.Join(" ", l));
+            // Isku: hiljaisuus + napsahdus 2,03 s kohdalla → löytyy 5 ms:n tarkkuudella; tasainen kohina → NaN.
+            int f = 48000; var m = new float[f / 2];
+            for (int i = 0; i < m.Length; i++) m[i] = 0.001f * (float)Math.Sin(i * 0.37);
+            int isku = (int)((2.03 - 1.8) * f);
+            for (int i = isku; i < isku + 2400; i++) m[i] = 0.6f * (float)Math.Sin(i * 0.2) * (1 - (i - isku) / 2400f);
+            double h = AjattelijaTahti.Isku(m, f, 1.8, 2.0);
+            Oleta.Tosi(Math.Abs(h - 2.03) <= 0.006, $"isku {h}");
+            var tasainen = new float[f / 2];
+            for (int i = 0; i < tasainen.Length; i++) tasainen[i] = 0.3f * (float)Math.Sin(i * 0.2);
+            Oleta.Tosi(double.IsNaN(AjattelijaTahti.Isku(tasainen, f, 1.8, 2.0)), "ei iskua");
+        }
     }
 }
