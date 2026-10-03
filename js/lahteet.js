@@ -247,10 +247,11 @@ export const LAHTEET = [
     johdanto: 'Kuvakortit, kaupunkigalleriat, kulttuurinostot ja maastotekstien kuvat.',
     rivit: [
       {
-        nimi: 'Ajattelijat-linssin kaikukuvat — Marcuksen pylvään sadeihme (Marcus Aurelius, kierros 1)',
+        nimi: 'Ajattelijat-linssin kaikukuvat — Marcuksen pylvään sadeihme (Marcus Aurelius, sadeihmeen kaiku)',
         tekija: 'Nico Kokkonen, Wikimedia Commons (Column_of_Marcus_Aurelius_-_detail2.jpg)',
         lisenssi: 'CC BY 3.0',
-        huom: 'Rajattu ja tasokäyrällä valoksi muokattu (Linnanrakentaja 2.10.2026, LAHTEET.md).',
+        huom: 'Rajattu ja tasokäyrällä valoksi muokattu (Linnanrakentaja 2.10.2026, LAHTEET.md); v14:ssä '
+          + 'kaiku ajattelijat/marcus/v4/kaiut-paikka/kaiku-sade.png.',
       },
       {
         nimi: 'Ajattelijat-linssin kaikukuvat — Carstens 1788 (Sokrates pelastaa Alkibiadeen), '
