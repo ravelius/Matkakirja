@@ -1,24 +1,25 @@
 #!/bin/zsh
 # Myllyn laudat: kaikki kerrokset, jälkikäsittely ja mallikuvat yhdellä ajolla (Linnanrakentaja 3.10.2026).
-#   tools/linssit/blender/mylly_laudat.sh <toimituskansio, esim. …/_valmiit/mylly-laudat/v2> [naytteita]
+#   [LAUDAT="viikinkilaiva"] tools/linssit/blender/mylly_laudat.sh <toimituskansio, esim. …/_valmiit/mylly-laudat/v2> [naytteita]
+#   LAUDAT rajaa uudelleen renderöitävät laudat (muut ja renkaat jäävät renderikansiosta ennalleen)
 # Välivaiheet: <toimituskansio>-renderit/ (Blenderin raakakerrokset ja mallit). Mallikuvat → docs/raportit/kuvat/mylly-lauta-20261001/.
 set -e
 U=${1:?toimituskansio}; N=${2:-128}
 B=/Applications/Blender.app/Contents/MacOS/Blender
 D=${0:A:h}; REPO=${D:h:h:h}; R=$U-renderit; K=$REPO/docs/raportit/kuvat/mylly-lauta-20261001
-mkdir -p $U $R/mallit
+mkdir -p $U $R/mallit $R/mallit-hehku
 aja() { nice -n 10 $B -b -P $D/mylly_lauta.py -- "$@" 2>&1 | grep -E 'MYLLY|Error|Traceback' || true; }
-for t in majatalo luostari viikinkilaiva; do
+for t in ${=LAUDAT:-majatalo luostari viikinkilaiva}; do
   aja --tyyli $t --naytteita $N --kerros lauta $R/lauta-$t.png
   aja --tyyli $t --naytteita $N --kerros hehku $R/hehku-$t.png
   for k in vaalea tumma varjo; do aja --tyyli $t --naytteita $N --kerros $k $R/nappula-$k-$t.png; done
   aja --tyyli $t --naytteita $N --malli $R/mallit/malli-$t.png
 done
-for k in valittu poistettava kohde; do aja --tyyli majatalo --naytteita $N --kerros $k $R/rengas-$k.png; done
+[ -n "$LAUDAT" ] || for k in valittu poistettava kohde; do aja --tyyli majatalo --naytteita $N --kerros $k $R/rengas-$k.png; done
 aja --json $U/pisteet.json
-python3 $D/mylly_jalki.py $R $U $R/mallit $R/mallit
+python3 $D/mylly_jalki.py $R $U $R/mallit $R/mallit-hehku   # raakamallit säilyvät (rajattu uusinta-ajo ei tuplaa hehkua)
 # mallikuvat: iPhone @3x (koko lauta) ja iPad @2x (vasen yläneljännes), otsikkopalkki
-python3 - "$R/mallit" "$K" "$U" <<'PY'
+python3 - "$R/mallit-hehku" "$K" "$U" <<'PY'
 import sys
 from PIL import Image, ImageDraw, ImageFont
 R, K, U = sys.argv[1], sys.argv[2], sys.argv[3]

@@ -32,7 +32,9 @@ TYYLIT = {
                           kuoppa_r=0.0, kuoppa_syv=0.0, heilunta=0.0012, yli=(0.004, 0.06), vino=0.005, upotus=None,
                           nappula='kiekko', reunat=True, murtuma=True),
     # Gokstad: siisti, ammattimainen kaiverrus (terävä V-ura), ei pistekuoppia
-    'viikinkilaiva': dict(paksuus=0.05, viiste=0.006, viiste_os=1, ura_lev=0.012, ura_syv=0.005, kapenee=0.2,
+    # v2b (Päätoimittaja 3.10.): "kynänviiva" → oikea V-ura. Juurisyy: leikkaaja ulottui 1 cm pinnan yläpuolelle, joten
+    # V kapeni jo ennen pintaa (pinnassa ~⅓ leveydestä); ura_yla = leikkaajan yläpinta → pinnassa täysi leveys
+    'viikinkilaiva': dict(paksuus=0.05, viiste=0.006, viiste_os=1, ura_lev=0.018, ura_syv=0.006, kapenee=0.1, ura_yla=0.0004,
                           kuoppa_r=0.0, kuoppa_syv=0.0, heilunta=0.0004, yli=(0.0, 0.006), vino=0.0015, upotus=None,
                           nappula='kupu'),
 }
@@ -139,7 +141,22 @@ def lauta_viikinkilaiva():
     nt.links.new(ra.outputs['Result'], tk.inputs[0])
     terva = nt.nodes.new('ShaderNodeMix'); terva.data_type = 'RGBA'; terva.inputs['B'].default_value = (0.045, 0.030, 0.018, 1)
     nt.links.new(tk.outputs['Value'], terva.inputs['Factor']); nt.links.new(puu, terva.inputs['A'])
-    _ao_kerto(nt, terva.outputs['Result'], b, vahvuus=1.0, etaisyys=0.006)
+    # v2b: kaiverruksen seinät valon mukaan — valoon päin oleva seinä vaalenee, vastakkainen ja pohja tummuvat
+    # (pehmeä iso avainvalo ei yksin erota V-uran seiniä ylhäältä katsottuna). Kerroin = 1 + 2,2·(n·L − n₀·L), rajattu.
+    ge = nt.nodes.new('ShaderNodeNewGeometry'); L = Vector((-0.9, 0.9, 1.6)).normalized()
+    dp = nt.nodes.new('ShaderNodeVectorMath'); dp.operation = 'DOT_PRODUCT'; dp.inputs[1].default_value = tuple(L)
+    nt.links.new(ge.outputs['Normal'], dp.inputs[0])
+    def _vali(a, b_, c, d):
+        mr = nt.nodes.new('ShaderNodeMapRange'); mr.clamp = True
+        for k_, v_ in (('From Min', a), ('From Max', b_), ('To Min', c), ('To Max', d)): mr.inputs[k_].default_value = v_
+        nt.links.new(dp.outputs['Value'], mr.inputs['Value']); return mr.outputs['Result']
+    sv = nt.nodes.new('ShaderNodeMath'); sv.operation = 'ADD'   # pinta 1,0; varjoseinä → 0,4; valoseinä → 1,7
+    nt.links.new(_vali(L.z - 0.50, L.z, 0.40, 1.0), sv.inputs[0]); nt.links.new(_vali(L.z, L.z + 0.07, 0.0, 0.7), sv.inputs[1])
+    kv = nt.nodes.new('ShaderNodeMix'); kv.data_type = 'RGBA'; kv.blend_type = 'MULTIPLY'; kv.inputs['Factor'].default_value = 1.0
+    nt.links.new(terva.outputs['Result'], kv.inputs['A'])
+    cmb = nt.nodes.new('ShaderNodeCombineColor'); [nt.links.new(sv.outputs['Value'], cmb.inputs[i]) for i in range(3)]
+    nt.links.new(cmb.outputs['Color'], kv.inputs['B'])
+    _ao_kerto(nt, kv.outputs['Result'], b, vahvuus=0.35, etaisyys=0.004)   # v2b: uran pohja varjoon, ei mustaksi
     # karheus: puu kuiva, terva kiiltävämpi
     kr = nt.nodes.new('ShaderNodeMix'); kr.data_type = 'FLOAT'; kr.inputs['A'].default_value = 0.8; kr.inputs['B'].default_value = 0.42
     nt.links.new(tk.outputs['Value'], kr.inputs['Factor']); nt.links.new(kr.outputs['Result'], b.inputs['Roughness'])
@@ -302,7 +319,7 @@ def lauta(mat):
         sisa = (T['yli'][0], T['yli'][1] * 0.12)               # keskilinjan sisäpää ei mene sisäneliöön
         pol, sis = veto_polku(p0, p1, rnd, T['heilunta'], yli, T['vino'], yli_loppu=sisa if j >= 12 else None)
         lf = (lambda g: (lambda t: 0.92 + 0.16 * g(t)))(_kohina(rnd)) if T['heilunta'] else None
-        kok.objects.link(nauha('ura', pol, T['ura_lev'], -T['ura_syv'], 0.01, T['kapenee'], lf))
+        kok.objects.link(nauha('ura', pol, T['ura_lev'], -T['ura_syv'], T.get('ura_yla', 0.01), T['kapenee'], lf))
         polut.append(sis); vedot.append(pol)
     if T['kuoppa_r']:
         for x, y in pisteet():
