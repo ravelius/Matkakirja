@@ -2,8 +2,8 @@
 // datapohjainen. Silloin Marcus ja Platon tulevat pelkkinä datoina."). Web: js/linssit/ajattelija.js (moottori) ja
 // js/linssit/ajattelija-<tunnus>.js (data, Pelikoodarin PR #3840).
 //
-// AJATTELIJAT OVAT DATAA: Linssit/Resources/Ajattelijat/<tunnus>.json syntyy webin datamoduulista työkalulla
-// tyokalut/ajattelijat-natiiviin.mjs (myös tekstiatlas <tunnus>-atlas.bytes webin piirraAtlas-funktiolla). Moottori ei
+// AJATTELIJAT OVAT DATAA: Linssit/Resources/Ajattelijat/<tunnus>.json syntyy Matkakirja-repon data/ajattelijat/<tunnus>.json:sta
+// ja Linnanrakentajan luvuista (omistaja 3.10.2026 klo 19.00: ei webiä) työkalulla tools/ajattelija-natiivi.mjs --ulos <tämä kansio> (myös tekstiatlas <tunnus>-atlas.bytes samoilla OFL-fonteilla). Moottori ei
 // tunne yhtäkään ajattelijaa nimeltä; uusi ajattelija = työkalun ajo, ei koodimuutosta. Tarkista() on webin
 // tarkistaAjattelija() sellaisenaan (samat kentät, sama järjestys), joten vajaa data hylätään samoin kuin webissä.
 //
@@ -340,7 +340,7 @@ namespace Matkakirja.Linssit.Ajattelijat
                 }
                 Vaadi(kl.Count > 0, "kierrokset.lista");
             }
-            // Natiivi: tekstiatlas (tyokalut/ajattelijat-natiiviin.mjs); ilman sitä videotykillä ei ole kuvaa. Rivit: päälause,
+            // Natiivi: tekstiatlas (Matkakirja-repon tools/ajattelija-natiivi.mjs); ilman sitä videotykillä ei ole kuvaa. Rivit: päälause,
             // taustavirta ja kierrosten 2– päälauseet (aikajana-tilassa aikajanan lainaukset).
             var atlas = O(a, "atlas");
             int lisarivit = ajd != null ? Pituus(K(ajd, "tykit")) : Pituus(K(kr, "lista"));
@@ -605,7 +605,7 @@ namespace Matkakirja.Linssit.Ajattelijat
         };
 
         /// <summary>
-        /// Muuntimen harmaasävy-PNG (8 bit, suodatin 0, tyokalut/ajattelijat-natiiviin.mjs) raa'aksi R8-dataksi Unityn
+        /// Muuntimen harmaasävy-PNG (8 bit, suodatin 0, Matkakirja-repon tools/ajattelija-natiivi.mjs) raa'aksi R8-dataksi Unityn
         /// rivijärjestyksessä (rivi 0 alimpana, kuten LoadImage). Säieturvallinen; null = muu muoto (varatie LoadImage).
         /// </summary>
         public static (int lev, int kork, byte[] data)? PuraHarmaaPng(byte[] png)

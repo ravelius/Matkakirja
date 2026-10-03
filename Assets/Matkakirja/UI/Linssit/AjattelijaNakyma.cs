@@ -4,7 +4,7 @@
 //   VALINTA   AukiNyt && Valittu == null: KORTTI-pohja (Kortti pohja: true) himmennyksellä, nappi per ajattelija → Valitse;
 //             himmennyksen napautus ja Esc → PyydaSulku (web luoPohjaKortti ei-modaali, sulje ilman valintaa → poistu).
 //   KUVA      Valittu != null: KUVANÄKYMÄ-pohja, teema tumma; AjattelijaNayttamo.NykyinenKuva koko ruudulle heti (latauksen
-//             aikana musta prologin pimeä). ✕ on astronautin kuvanäkymän sulkunappipohja (mk-kuvanakyma__sulku--harmaa + sulkurengas; Päätoimittaja
+//             aikana musta prologin pimeä). ✕ on astronautin kuvanäkymän sulkunappipohja (OHJAUSNAPPI harmaa, ennen sulkurengas; Päätoimittaja
 //             3.10., web #3891): piilossa, kunnes ruutua napautetaan, ja häipyy 4 s viimeisen napautuksen jälkeen (Kuvanakyma
 //             NaytaAutoNapit/AjastaAutoPiilotus: Kesto.Sulku/Avaus; piilossa ei ota kosketuksia). Kohtauksen ajan LinssiUi:n
 //             sulkupilleri on piilossa (Peittaa), veto alas ja Esc → PyydaSulku kuten ennen.
@@ -126,10 +126,9 @@ namespace Matkakirja.Natiivi
             pulunappi.Add(minipulu);
             pulunappi.RegisterCallback<PointerDownEvent>(e => { e.StopPropagation(); PuluNapautettu(); });
 
-            sulku = Rakenne.Nappi("×", "mk-kuvanakyma__sulku mk-kuvanakyma__sulku--harmaa", /* KUVANÄKYMÄ-pohja, ✕ harmaa kuten astronautin kuva */
-                AjattelijatSovitin.PyydaSulku, turva);
-            Rakenne.El("mk-kuvanakyma__sulkurengas", sulku, PickingMode.Ignore).SendToBack();
-            sulku.tooltip = "Sulje";
+            // KUVANÄKYMÄn ✕ OHJAUSNAPPI-neliönä harmaalla teemalla kuten astronautin kuva (EI OVAALEJA, Päätoimittaja 3.10.).
+            sulku = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje", AjattelijatSovitin.PyydaSulku, turva, "harmaa");
+            sulku.AddToClassList("mk-kuvanakyma__sulku");
             NaytaSulku(false, heti: true);
             // Napautus mihin tahansa kohtauksessa tuo ✕:n (web pointerdown kaappausvaiheessa, ei estä alla olevaa toimintoa).
             juuri.RegisterCallback<PointerDownEvent>(_ =>

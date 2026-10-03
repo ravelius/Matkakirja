@@ -6,7 +6,7 @@
 // koko kohtaukselle (Sokrates 111 s), lappu kierrosten lopussa; kaikukuvat haetaan kierroksittain. Kohtauksen piirtää AjattelijaNayttamo omalla kamerallaan
 // RenderTextureen, jonka AjattelijaNakyma näyttää koko ruudulla (Dioraaman malli).
 //
-// AJATTELIJAT OVAT DATAA: Resources/Ajattelijat/*.json (tyokalut/ajattelijat-natiiviin.mjs webin datasta). Aineistot
+// AJATTELIJAT OVAT DATAA: Resources/Ajattelijat/*.json (Matkakirja-repon tools/ajattelija-natiivi.mjs, data/ajattelijat; ei webiä 3.10.). Aineistot
 // (GLB, kipsi, kaikukuva, syke, ääni) haetaan ämpäristä datan poluilla; "ajattelija peili <kansio>" lukee ne
 // paikallisesta kansiosta (simulaattori: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-ajattelijat-peili), kunnes
 // vienti on ämpärissä.

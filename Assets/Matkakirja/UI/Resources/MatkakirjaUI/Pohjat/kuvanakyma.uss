@@ -1,58 +1,10 @@
 /* KUVANÄKYMÄ-pohja (web #3833 css/pohjat/kuvanakyma.css; tyylikirja pohjat.KUVANÄKYMÄ: teema TUMMA, sulku ✕, veto alas, Esc).
- * ✕ on LASI-teemaa (Natiivi-UI ja Päätoimittaja 2.10.2026): 44 pt, pyöreä, oikea yläkulma turva-alueen sisällä. Teema tulee
- * elementin tk-teema-*-luokasta (astronautin kamera ja ISS: tk-teema-lasi-avaruus; lämpimät linssit: tk-teema-lasi).
+ * ✕ on OHJAUSNAPPI-neliö harmaalla teemalla (Päätoimittaja 3.10.2026, EI OVAALEJA), oikea yläkulma turva-alueen sisällä.
  * VAIN --tk-*-tokenit. */
 .mk-kuvanakyma__sulku {
+    /* ✕ on OHJAUSNAPPI (Pohjat/ohjausnappi.uss, teema harmaa; omistaja 2.10.2026 EI OVAALEJA, Päätoimittaja 3.10.): täällä vain paikka. */
     position: absolute;
     top: var(--tk-vali-m);
     right: var(--tk-vali-m);
-    width: var(--tk-nappi-osuma);
-    height: var(--tk-nappi-osuma);
-    min-height: var(--tk-nappi-osuma);
     margin: 0;
-    padding: 0;
-    border-width: 1px;
-    border-color: var(--tk-reunus);
-    border-radius: var(--tk-kulma-pilleri);
-    background-color: var(--tk-pinta);
-    color: var(--tk-muste);
-}
-
-.mk-kuvanakyma__sulku .mk-nappi__teksti {
-    font-size: var(--tk-koko-valiotsikko);
-    -unity-text-align: middle-center;
-    color: var(--tk-muste);
-}
-
-.mk-kuvanakyma__sulku:active {
-    border-color: var(--tk-korostus);
-}
-
-/* POHJAN POIKKEUS (omistaja 16.9.2026 "ota siitä väri pois … nämä saisivat olla harmaalla"; Päätoimittaja 2.10.): satelliitin,
- * astronautin kameran ja ISS:n ✕ neutraalin harmaana kuten webin .satelliitti-sulku (reuna rgb(170), pohja
- * rgba(130,130,130,.42), merkki rgb(224)); näkyvä rengas webin koossa 34 pt, osuma-ala pohjan 44 pt. */
-.mk-kuvanakyma__sulku.mk-kuvanakyma__sulku--harmaa {
-    border-width: 0;
-    background-color: initial;
-    color: rgb(224, 224, 224);
-}
-
-.mk-kuvanakyma__sulkurengas {
-    position: absolute;
-    left: 5px;
-    top: 5px;
-    width: 34px;
-    height: 34px;
-    border-width: 1px;
-    border-radius: var(--tk-kulma-pilleri);
-    border-color: rgb(170, 170, 170);
-    background-color: rgba(130, 130, 130, 0.42);
-}
-
-.mk-kuvanakyma__sulku--harmaa .mk-nappi__teksti {
-    color: rgb(224, 224, 224);
-}
-
-.mk-kuvanakyma__sulku--harmaa:active > .mk-kuvanakyma__sulkurengas {
-    background-color: rgba(170, 170, 170, 0.55);
 }

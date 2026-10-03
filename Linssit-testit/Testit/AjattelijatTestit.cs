@@ -1,4 +1,4 @@
-// Ajattelijat: data Resources/Ajattelijat/*.json (webistä tyokalut/ajattelijat-natiiviin.mjs), webin tarkistaAjattelija,
+// Ajattelijat: data Resources/Ajattelijat/*.json (Matkakirja-repon tools/ajattelija-natiivi.mjs), webin tarkistaAjattelija,
 // aikajana ja taustavirran arvonta webin luvuin (odotetut arvot laskettu webin ajattelija.js:n kaavoilla nodella 2.10.).
 // v14 (3.10.2026, web 088b64d0c): Sokrates on aikajana-tilassa (kierrokset eivät ole käytössä), joten kierrosmoottorin
 // testit ajetaan Marcuksella (natiivin Marcus on vielä v11-datassa: samat ruudut ja avaimet kuin Sokrateen v11).
@@ -449,7 +449,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(AjattelijaAikajana.KorttiRivit("Olen kuin paarma, jonka jumala on kiinnittänyt suureen ja laiskaan hevoseen herättämään sitä.", 24)
                 .SequenceEqual(new[] { "Olen kuin paarma, jonka", "jumala on kiinnittänyt", "suureen ja laiskaan", "hevoseen herättämään sitä." }), "30e");
             Oleta.Tosi(AjattelijaAikajana.KorttiRivit("Miten pitäisi elää?", 24).SequenceEqual(new[] { "Miten pitäisi elää?" }), "kysymys yhdellä rivillä");
-            // Atlaksen kortit ovat webin piirraAtlas-kuvia samoista riveistä (tyokalut/ajattelijat-natiiviin.mjs).
+            // Atlaksen kortit ovat webin piirraAtlas-kuvia samoista riveistä (Matkakirja-repon tools/ajattelija-natiivi.mjs).
             var a = Lue("sokrates");
             var ajo = (System.Collections.Generic.Dictionary<string, object>)MiniJson.Objekti(MiniJson.Jasenna(File.ReadAllText(Kansio + "sokrates.json")))["atlas"];
             var paikat = (System.Collections.Generic.List<object>)ajo["paikat"];

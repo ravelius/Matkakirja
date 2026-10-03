@@ -69,6 +69,13 @@ namespace Matkakirja
         static bool korvaaMedian;
         // Skeema 1.56: lahteet.kerrokset (kerma, reliefi, yövalot) tai null (vanha paketti: ei ladata).
         static Dictionary<string, object> kerrokset;
+        // KERMAMAAT (Päätoimittaja 3.10.2026, webin pariteetti): maat, joilla on offline.jsonin maat.*.kerma-kenttä (27 maata,
+        // samat kuin webin väritasossa). Vain niille on kermasarja <ISO>/laatat.json; ennen saapumisen esilataus ja Varitaso
+        // hakivat luettelon jokaiselle maalle (Malta: 14 × 404 yhdessä istunnossa, lokit/natiiviseppa-hakuvirheet-20261003-1644).
+        static HashSet<string> kermaMaat;
+
+        /// <summary>Onko maalla kermasarja (offline.jsonin kerma-kenttä). Ennen luettelon latautumista tosi (vanha käytös).</summary>
+        public static bool OnKerma(string maa) => kermaMaat == null || (maa != null && kermaMaat.Contains(maa));
 
         static string Kirjanpito => Path.Combine(Laattapalvelin.OfflineKansio, "_alueet");
         static string Merkki(string id) => Path.Combine(Kirjanpito, id + ".txt");
@@ -116,9 +123,15 @@ namespace Matkakirja
             if (juuri.TryGetValue("maat", out var m) && m is Dictionary<string, object> maat)
             {
                 var lista = new List<Alue>();
+                var kerma = new HashSet<string>();
                 foreach (var p in maat)
                     if (p.Value is Dictionary<string, object> md)
+                    {
                         lista.Add(Uusi(p.Key, md.TryGetValue("nimi", out var n) && n is string ns ? ns : p.Key, md));
+                        if (md.ContainsKey("kerma")) kerma.Add(p.Key);
+                    }
+                kermaMaat = kerma;
+                Debug.Log($"MATKAKIRJA alueet: kermasarja {kerma.Count} maalla");
                 lista.Sort((a, b) => string.Compare(a.Nimi, b.Nimi, StringComparison.CurrentCulture));
                 alueet.AddRange(lista);
             }
