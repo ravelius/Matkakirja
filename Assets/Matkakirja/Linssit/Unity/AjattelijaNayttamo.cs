@@ -96,6 +96,12 @@ namespace Matkakirja.Natiivi
         Vector3 tayteVari, tayteP, tayteKohde;
         bool tayteAsetettu;
         bool malliValmis;
+        /// <summary>
+        /// Valmistelu (valintakortin aikana, AjattelijatSovitin): kamera pois päältä, pieni kuva (sama muoto ja MSAA, joten
+        /// varjostinten tilat käännetään samoina), kuvaa ei julkaista. Aktivoi() ottaa näyttämön käyttöön napautuksessa.
+        /// </summary>
+        bool valmistelu;
+        public bool MalliValmis => malliValmis;
         float vinjetti, vinjettiAika = -1;
         // Varjokartat: 0 aurinko (2048, lähi 0,6, kauko 2,2), 2 rakovalo (1024, lähi 0,3, kauko 1,8; web rako.shadow).
         VarjoKartta varjoAurinko, varjoRako;
@@ -154,11 +160,12 @@ namespace Matkakirja.Natiivi
         /// Näyttämö (kamera, musta kuva, materiaalit). atlas = esivalmisteltu tekstiatlas (AtlasTekstuuri), null = myöhemmin
         /// AsetaAtlas-kutsulla; lataaAtlas = vanha tie (atlas puretaan heti pääsäikeellä).
         /// </summary>
-        public static AjattelijaNayttamo Luo(AjattelijaData a, Texture2D atlasValmis = null, bool lataaAtlas = false)
+        public static AjattelijaNayttamo Luo(AjattelijaData a, Texture2D atlasValmis = null, bool lataaAtlas = false, bool valmistelu = false)
         {
             var go = new GameObject("AjattelijaNayttamo") { layer = Kerros };
             var n = go.AddComponent<AjattelijaNayttamo>();
             n.a = a;
+            n.valmistelu = valmistelu;
             n.w = Avain / 95f;   // Blenderin wateista three.js:n voimaksi (aurinko 95 W = AVAIN)
             n.tykki = Avain * 220f / 95f * TykkiKerroin;
             n.LuoKamera();
@@ -316,14 +323,39 @@ namespace Matkakirja.Natiivi
         {
             float skaala = SkaalaOhitus > 0 ? SkaalaOhitus : Screen.dpi > 300 ? 2f / 3f : 1f;
             int l = Mathf.Max(64, Mathf.RoundToInt(Screen.width * skaala)), k = Mathf.Max(64, Mathf.RoundToInt(Screen.height * skaala));
+            if (valmistelu) l = k = 64;
             if (kuva != null && kuva.width == l && kuva.height == k) return;
             VapautaKuva();
             kuva = new RenderTexture(l, k, 24, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB)
             { name = "AjattelijaKuva", antiAliasing = 4, useMipMap = false };
             kuva.Create();
             kamera.targetTexture = kuva;
+            if (valmistelu) { kamera.enabled = false; return; }
             NykyinenKuva = kuva;
             KuvaVaihtui?.Invoke(kuva);
+        }
+
+        /// <summary>
+        /// Lämmitys valmistelussa: yksi aikajanan ruutu kaikilla valoilla (aurinko, rako, varjolevy → molemmat varjokartat)
+        /// ja kuva pieneen kohteeseen, jotta Metal kääntää kipsi-, peite- ja varjovarjostimet ennen napautusta.
+        /// </summary>
+        public void Lammita()
+        {
+            if (!malliValmis) return;
+            Aseta(false, a.Aikajana != null ? 140 : a.Ajat.Kysymys[0]);
+            kamera.Render();
+            Aseta(true, 1);
+            kamera.Render();
+        }
+
+        /// <summary>Valmisteltu näyttämö käyttöön: täysikokoinen kuva julkaistaan ja kamera päälle.</summary>
+        public void Aktivoi()
+        {
+            if (!valmistelu) return;
+            valmistelu = false;
+            VarmistaKuva();
+            if (NykyinenKuva != kuva) { NykyinenKuva = kuva; KuvaVaihtui?.Invoke(kuva); }
+            kamera.enabled = true;
         }
 
         void VapautaKuva()
@@ -1238,9 +1270,9 @@ namespace Matkakirja.Natiivi
 
         public void Tuhoa()
         {
+            bool julkaistu = kuva != null && NykyinenKuva == kuva;
             VapautaKuva();
-            NykyinenKuva = null;
-            KuvaVaihtui?.Invoke(null);
+            if (julkaistu) { NykyinenKuva = null; KuvaVaihtui?.Invoke(null); }
             varjoAurinko?.Tuhoa();
             varjoRako?.Tuhoa();
             foreach (var t in new UnityEngine.Object[] { normaali, kipsi, atlas, mesh, peiteMesh, mat, varjoMat, peiteMat, levyMesh, savu })
