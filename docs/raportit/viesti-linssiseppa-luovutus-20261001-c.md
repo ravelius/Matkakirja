@@ -3,6 +3,17 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 3.10. KLO 15.xx
+- YÖVALOT NATRIUMORANSSI (omistaja 14.2x): linssiseppa/yovalot-natrium 486d8dfc (1 rivi Yokuori.shader), käännös d815dc0f,
+  simu PASS; Päätoimittaja kuittasi, MERGE-PYYNNÖSSÄ Natiivisepällä junaan 133. Kuvapari lokit/linssiseppa-yovalot-natrium-20261003-iphone.
+- KARTTALINSSIEN HAMPURILAINEN (omistaja 14.2x, web #3899): linssiseppa/linssihampurilainen 1e2ea061 (Topografia: Korkeustasot,
+  Vesistöt: Joet ja järvet; LinssiUi.Karttalinssit, komento ui linssi karttavalikko [auki|selite]), käännös 5c3cbb98, simu PASS
+  oikeilla tapeilla; kuvapari lokit/linssiseppa-linssihampurilainen-20261003/kuvapari-vesistot.png. ODOTTAA Päätoimittajan kuittausta,
+  sitten merge-pyyntö Natiivisepälle. Isoisän linssi 1873 pitää ✕:n (ei selitettä).
+- MARCUS, OMA MUSIIKKI v1: proto-3d/_lahteet/marcus-aurelius/musiikki-oma/ (lahde/marcus.py käyttää Sokrateen moottoria; harppu lisätty
+  naytteet.py:hyn). Intro, koko raita ja kuunteluversio (kertoja-v1, −8 dB) Päätoimittajalle; odottaa palautetta.
+- SendMessage-raja täyttyi 15.xx → varakanava mcp send_message.
+
 ## TILA 3.10. (SOKRATES, OMA MUSIIKKI — LOPULLINEN, WILLIAM OLETUS; LEVOSSA)
 - Raita proto-3d/_lahteet/sokrates/musiikki-oma/sokrates-oma-koko-vsco.mp3 (127,1 s) kertojalle Iv4 William, oletusvakauden otto
   (omistajan valinta), ajat ja kohdistus kansiosta musiikki-oma/kertoja-iv4/ (linkit Iv4-william-oletus*). Nuottien loput
