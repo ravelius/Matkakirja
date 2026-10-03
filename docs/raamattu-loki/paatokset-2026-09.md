@@ -10259,3 +10259,7 @@ Omistaja 3.10.2026 klo 06.2x Sokrateen kertojan äänikokeen jälkeen sanatarkas
 ## OMISTAJA: AJATTELIJOIDEN KERTOJA WILLIAM OLETUSVAKAUDELLA (3.10.2026) (3.10.2026 klo 06.22)
 
 Omistaja 3.10.2026 klo 06.2x: 'Voi kokeilla vakaan sijasta myös oletus asetusta.' ja kuunneltuaan oton: 'Tuo on aavistuksen parempi. Pidetään se'. Tarkennus klo 06.16 kirjaukseen: Iv4 William, eleven_v4, vakaus mallin oletus (stability-kenttä jätetään pois pyynnöstä, Natural noin 0,5), style 0, ei tunnetageja, välimerkeillä, yksi otto, keskitaso −17,2 dB ja limitteri 0,97. Sokrateen kertoja on proto-3d/_lahteet/sokrates/kertoja-aanikoe-v4/Iv4-william-oletus.mp3 (86,8 s).
+
+## OMISTAJA: ISS-LINSSIN HUMINASTA RATINA POIS; PULU OIKEAAN REUNAAN LYHYEN VARREN PÄÄHÄN, KASVOT NÄKYVIIN (3.10.2026) (3.10.2026 klo 06.30)
+
+Omistaja 3.10.2026 klo 06.3x välihuomiona sanatarkasti: 'ottaa iss linssin huminasta Ratina pois. Pidä pelkkä generoitu kohina jossa matala taajuus mukana. Lisäksi pulu saisi olla oikeassa reunassa ja lyhyen varten päässä ja pulun kasvot pitää näkyä.' (varten = varren, sanelu). Linja: 1) ISS-näkymän taustaäänestä poistetaan ratina tai rätinä, ja jäljelle jää vain generoitu kohina, jossa on matalat taajuudet mukana (ilmanvaihdon ja aluksen tasainen humina). 2) Pulu siirtyy Cupolassa oikeaan reunaan lyhyen robottivarren päähän. Tämä korvaa 2.10. linjauksen 'vasempaan alareunaan, robottikäsi koko ruudun matkan'. 3) Pulun kasvot näkyvät selvästi (kypärävalo kasvoilla, ei pelkkä varjokuva). Toteutus: Linssiseppä 2 natiivi.
