@@ -31,6 +31,11 @@ asennuksella (ajo-ymparisto-kuittaus.sh, APP lokit/juna-1.1.130-e406ead2) → Ju
 TEHTY 23.56: dad4d0f3 KUITATTU puhtaalla asennuksella (build 130, 10 skin-hahmoa, puheet 3/3, 404 0, virheitä 0; lokit/siirtoseppa-kuittaus-dad4d0f3).
 TEHTY 01.47 (3.10.): OSOITIN uusin.json = dad4d0f39cd2c9c2 (run 37073768334), todennettu tuotannosta TF 131 -appilla (10 skin-hahmoa, 0 virhettä,
 lokit/siirtoseppa-osoitin-dad4d0f3). Skin-hahmot VALMIS. Jäljellä: liekit kerran 473267d2 junassa 132.
+TEHTY 3.10. 19.04: TF 132 -linnakierros (lokit/siirtoseppa-kierros-tf132, video 7 huonetta) ja kertojan puheiden juurisyy: lataamaton jakso
+jäi pysyvästi äänettömäksi → proto siirtoseppa/kertoja-odottaa fff9971a (worktree wt/proto-siirtoseppa-puhe), todennettu 19d020bc, merge-pyyntö
+Natiivisepälle. Testiskripti tyokalut/siirtoseppa-ajot/ajo-linnakierros.sh (UNOHDA=1 pakottaa latausodotuksen).
+JONO (Päätoimittaja 3.10.): 2) myllyn laudat natiiviin (ASTC 6×6), kun Linnanrakentajan laudat ovat mainissa; #3815 nappulaäänet natiiviin, kun
+mergetty (Pelikoodari vie junaan v14:n jälkeen). Allymes vasta näiden jälkeen ja omistajan päätöksellä.
 
 1. **Linnan hahmojen jalkavarjo (omistaja 20.2x: "kävelijä tarvitsee vielä varjon jalkojensa alle") — EI VIELÄ NÄY.**
    Haara `siirtoseppa/linna-skin`, kärki **39a396e3** (KÄÄNNETTY 8219c063, app lokit/siirtoseppa-skin16-app).
