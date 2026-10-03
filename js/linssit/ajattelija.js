@@ -407,12 +407,13 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
    * joten kirjainten koko pinnalla ei muutu. Kauempana pinnasta (päälaen takaosa, ohimot) projektorin pehmeyskerroin.
    */
   const TILA = tv.riviTila ?? 1;
+  const SUMEUS = Number(haku.get('virtasumeus')) || tv.sumeus;   // ?virtasumeus= kokeiluun (em-osuus)
   const riviProjektori = tv.projektorit.flatMap((pj) => Array(pj.riveja).fill(pj));
   const { kangas, paikat } = piirraAtlas([
     AJ ? { ...lauseRivi(lause), korkeus: 16, sumea: false } : lauseRivi(lause),   // aikajana-tilassa käyttämätön
     ...tv.rivit.map(([, f, teksti], ri) => ({
       teksti, fontti: fontti(f).perhe, paino: fontti(f).paino, korkeus: tv.riviKorkeus ?? 96, toisto: true,
-      emOsuus: 1 / TILA, sumeus: tv.sumeus && tv.sumeus * (riviProjektori[ri]?.pehmeys ?? 1),
+      emOsuus: 1 / TILA, sumeus: SUMEUS && SUMEUS * (riviProjektori[ri]?.pehmeys ?? 1),
     })),
     ...(KR?.lista ?? []).map((k) => lauseRivi(a.paalauseet[k.paalause])),
     ...(AJ?.tykit ?? []).map((t) => (KORTTI ? lauseKortti : lauseRivi)(a.paalauseet[t.paalause])),
