@@ -11,8 +11,8 @@ from PIL import Image, ImageDraw, ImageFilter
 A = sys.argv[1:]; ULOS = A[0]; os.makedirs(ULOS, exist_ok=True)
 arg = lambda k, o: type(o)(A[A.index(k) + 1]) if k in A else o
 KESTO, FPS, KOKO, ETAISYYS = arg('--kesto', 8.0), arg('--fps', 30), arg('--koko', 512), arg('--etaisyys', 0.07)
-N = int(KESTO * FPS); TUMMUUS = 0.85           # savun varjo päästää 15 % valosta läpi paksuimmasta kohdasta (tiheä nauha)
-PEHMEYS = KOKO * (0.003 + 0.04 * ETAISYYS)      # reunan sumeus kuvapisteinä: lähellä pintaa terävämpi
+N = int(KESTO * FPS); TUMMUUS = 0.45           # Päätoimittaja 3.10.: kiekuran ydin tummentaa projektorin valoa ~35–50 %
+PEHMEYS = KOKO * (0.002 + 0.03 * ETAISYYS)   # reuna pehmenee muutaman kuvapisteen matkalla      # reunan sumeus kuvapisteinä: lähellä pintaa terävämpi
 
 
 def nauha(t):
@@ -23,22 +23,28 @@ def nauha(t):
         s = i / 239                                   # 0 alhaalla → 1 ylhäällä
         v = 1.05 - 1.1 * s
         # saumaton silmukka: ajan kertoimet kokonaislukuja (t = 0 ja t = 1 sama kuva)
-        u = (0.5 + 0.10 * math.sin(w * (0.9 * s - t)) + 0.035 * math.sin(w * (2.3 * s - 2 * t) + 0.3)
+        u = (0.5 + 0.07 * math.sin(w * (0.9 * s - t)) + 0.035 * math.sin(w * (2.3 * s - 2 * t) + 0.3)
              + 0.02 * math.sin(w * (t + 0.6 * s)))
         # kiekura: selvä silmukka, joka nousee kuva-alan läpi yhden kierron aikana (ääripäissä nauha on ohut)
         ds = ((s - t + 0.5) % 1.0) - 0.5; kiemura = math.exp(-(ds * 5.0) ** 2)   # jaksollinen: ei hyppyä saumassa
         fii = w * 5.0 * ds   # yksi täysi kierros kiemuran leveydellä: säde 0,06 > nousunopeus → nauha kiertyy silmukaksi
-        u += 0.06 * kiemura * math.sin(fii); v += 0.06 * kiemura * (math.cos(fii) - 1.0)
-        paksuus = (0.026 + 0.018 * math.sin(w * (1.7 * s - t)) ** 2) * (0.35 + 0.65 * math.sin(math.pi * s))
+        u += 0.10 * kiemura * math.sin(fii); v += 0.10 * kiemura * (math.cos(fii) - 1.0)   # iso, selvä kiekura
+        paksuus = (0.060 + 0.035 * math.sin(w * (1.7 * s - t)) ** 2)   # yksi selvä nauha (2–3 cm pinnalla) * (0.35 + 0.65 * math.sin(math.pi * s))
         pts.append((u, v, paksuus))
     return pts
 
 
+YN = 4   # ylinäytteistys: sileä reuna (ei karvaisuutta)
 for k in range(N):
-    t = k / N; kuva = Image.new('L', (KOKO, KOKO), 0); d = ImageDraw.Draw(kuva)
+    t = k / N; K_ = KOKO * YN; kuva = Image.new('L', (K_, K_), 0); d = ImageDraw.Draw(kuva)
     p = nauha(t)
-    for (u0, v0, p0), (u1, v1, p1) in zip(p, p[1:]):
-        d.line([(u0 * KOKO, v0 * KOKO), (u1 * KOKO, v1 * KOKO)], fill=int(255 * TUMMUUS), width=max(1, int((p0 + p1) / 2 * KOKO)))
-    kuva = kuva.filter(ImageFilter.GaussianBlur(PEHMEYS))
+    for j in range(len(p) - 1):   # nauha nelikulmioina keskiviivan normaalin suuntaan (silmukka saa mennä päällekkäin)
+        (u0, v0, p0), (u1, v1, p1) = p[j], p[j + 1]
+        du, dv = u1 - u0, v1 - v0; l_ = math.hypot(du, dv) or 1e-9; nu, nv = -dv / l_, du / l_
+        q = [(u0 + nu * p0 / 2, v0 + nv * p0 / 2), (u1 + nu * p1 / 2, v1 + nv * p1 / 2),
+             (u1 - nu * p1 / 2, v1 - nv * p1 / 2), (u0 - nu * p0 / 2, v0 - nv * p0 / 2)]
+        d.polygon([(x * K_, y * K_) for x, y in q], fill=int(255 * TUMMUUS))
+        d.ellipse([((u1 - p1 / 2) * K_, (v1 - p1 / 2) * K_), ((u1 + p1 / 2) * K_, (v1 + p1 / 2) * K_)], fill=int(255 * TUMMUUS))
+    kuva = kuva.resize((KOKO, KOKO), Image.LANCZOS).filter(ImageFilter.GaussianBlur(PEHMEYS))
     kuva.point(lambda x: 255 - x).save(os.path.join(ULOS, f'savu-{k + 1:04d}.png'))
 print('SAVU', ULOS, N, 'kuvaa', KOKO, 'px, pehmeys', round(PEHMEYS, 1), 'px')
