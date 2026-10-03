@@ -268,6 +268,7 @@ namespace Matkakirja.Natiivi
                 alue.style.left = alue.parent.layout.width - reunat.z - OikeaVarsiPt - RobottiNivelX * RobottiSkaala;
             // Vaakana pienen paneelin yli kulkeva puomi (VarrenEste): Pulu vasempaan alakulmaan turva-alueen alareunaan, puomi nousee.
             kuva.VarrenEste = VarrenEste;
+            kuva.Valospotti = OikeallaReunalla && Lasi.HasValue;   // Cupolan ikkunan takana ISS:n valospotti (omistaja 3.10.)
             float alaRaja = VarrenEste.HasValue ? reunat.w + 8f : Mathf.Max(reunat.w + 8f, AlaVara);
             float perus = alaRaja + (RobottiAlin - 304f) * RobottiSkaala;
             // Vaaka-Cupola oikeassa reunassa (Päätoimittaja 3.10.: kypärä osui Cupolan oranssin teipin ja saranan päälle oikeassa

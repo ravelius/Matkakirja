@@ -60,6 +60,16 @@ namespace Matkakirja.Natiivi
         /// <summary>Robottikäsi näkyy (Pulu asettelee itsensä vasempaan alakulmaan 60 %:iin; omistaja 2.10. 21.3x).</summary>
         public bool RobottiNakyy => Robotissa;
 
+        /// <summary>ISS:n valospotti Pulun päällä (Cupolan ikkunan takana): spotin ulkopuoli, kuten tukivarsi, tummuu siluetiksi.</summary>
+        public bool Valospotti
+        {
+            get => valospotti;
+            set { if (valospotti == value) return; valospotti = value; eva.MarkDirtyRepaint(); }
+        }
+        bool valospotti;
+        /// <summary>Spotin keskipiste (viewBox, ennen 75:n nostoa: kypärän alapuoli / rintakehä) sekä täysvalon ja täyden varjon säteet.</summary>
+        const float SpottiX = 113f, SpottiY = 285f, SpottiSisa = 55f, SpottiUlko = 125f;
+
         /// <summary>
         /// Vaakatilan este robottikäden puomille (ISS-kyydin pienen paneelin vasen yläkulma paneelin pisteinä, null = ei estettä):
         /// puomi nousee loivasti niin, että se kulkee esteen yli 6 pt:n välillä (Päätoimittaja 3.10.: Pulu vaakana alakulmaan).
@@ -466,11 +476,24 @@ namespace Matkakirja.Natiivi
                     float vara = 6f / (sy * s1);
                     if (ex > NivelX + 1f) nousu = Mathf.Max(0f, (NivelY - (VarsiMinX - NivelX) * Poikittain + Nosto - (ey - vara)) / (ex - NivelX));
                 }
+                // VALOSPOTTI (omistaja 3.10.2026: "ISS:n oma valospotti valaisee pulua, mutta tukivarsi jää jo varjon puolelle … pallomaisella
+                // gradient-maskilla, joka tummentaisi spotin ulkopuoliset alueet"): Cupolan ikkunan takana (Valospotti) kerrokset piirretään
+                // ruudukkona, ja kärkien sävy tummuu spotin keskipisteestä (kypärän ja vartalon kohta) ulospäin pehmeästi siluetiksi.
+                bool spotti = kuva.Valospotti;
+                var siluetti = new Color(varjo.r * 0.45f, varjo.g * 0.45f, varjo.b * 0.5f, 1f);
+                Color Spotissa(Color pohja, float x, float y)
+                {
+                    float d = new Vector2(x - SpottiX, (y - SpottiY) * 0.8f).magnitude;   // hieman pystysuunnassa venytetty pallo
+                    float w = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(SpottiSisa, SpottiUlko, d));
+                    var c = Color.Lerp(siluetti, pohja, w); c.a = pohja.a; return c;
+                }
                 void Kuva(Texture2D kuvaI, float korkeus, float alfa, bool keinuu, Color savyPohja, float y0 = 0, float y1 = -1, bool vaaka = false)
                 {
                     if (kuvaI == null || alfa <= 0.004f) return;
                     if (y1 < 0) y1 = korkeus;
-                    var md = mgc.Allocate(4, 6, kuvaI);
+                    // Ilman spottia yksi nelikulmio kuten ennen; spotissa 3 × 16 ruudukko, jotta gradientti seuraa kärkien sävyä.
+                    int sar = spotti ? 3 : 1, riv = spotti ? 16 : 1;
+                    var md = mgc.Allocate((sar + 1) * (riv + 1), sar * riv * 6, kuvaI);
                     if (md.vertexCount == 0) return;
                     var savy = savyPohja; savy.a *= Mathf.Clamp01(alfa);
                     void Kulma(float x, float y)
@@ -479,13 +502,22 @@ namespace Matkakirja.Natiivi
                         if (vaaka) { float dx = x - NivelX, dy = y - NivelY; x = NivelX + dy * venytys; y = NivelY - dx * Poikittain - dy * venytys * nousu; }
                         if (keinuu) { float dx = x - 113, dy = y - 300; x = 113 + dx * ca - dy * sa; y = 300 + dx * sa + dy * ca; }
                         var p = m.Kuvaa(new Vector2(x, y + Nosto));
-                        md.SetNextVertex(new Vertex { position = new Vector3(p.x, p.y, Vertex.nearZ), tint = savy, uv = new Vector2(u, v) });
+                        md.SetNextVertex(new Vertex { position = new Vector3(p.x, p.y, Vertex.nearZ), tint = spotti ? Spotissa(savy, x, y) : savy, uv = new Vector2(u, v) });
                     }
-                    Kulma(0, y0);
-                    Kulma(152, y0);
-                    Kulma(152, y1);
-                    Kulma(0, y1);
-                    md.SetAllIndices(m.Determinantti >= 0 ? Kolmiot : KolmiotPeili);
+                    for (int j = 0; j <= riv; j++)
+                        for (int i = 0; i <= sar; i++)
+                            Kulma(152f * i / sar, y0 + (y1 - y0) * j / riv);
+                    var ind = new ushort[sar * riv * 6];
+                    bool suora = m.Determinantti >= 0;
+                    int q = 0;
+                    for (int j = 0; j < riv; j++)
+                        for (int i = 0; i < sar; i++)
+                        {
+                            ushort a0 = (ushort)(j * (sar + 1) + i), a1 = (ushort)(a0 + 1), b0 = (ushort)(a0 + sar + 1), b1 = (ushort)(b0 + 1);
+                            if (suora) { ind[q++] = a0; ind[q++] = a1; ind[q++] = b1; ind[q++] = a0; ind[q++] = b1; ind[q++] = b0; }
+                            else { ind[q++] = a0; ind[q++] = b1; ind[q++] = a1; ind[q++] = a0; ind[q++] = b0; ind[q++] = b1; }
+                        }
+                    md.SetAllIndices(ind);
                 }
                 var valo = Color.white;
                 // Visiirin soikio (kasvot, viewBox x 90–137, y 237–280) perus-kuvasta sävyttämättä varjokuvan päälle: kasvot näkyvät.
