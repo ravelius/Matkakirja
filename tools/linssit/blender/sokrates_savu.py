@@ -11,25 +11,27 @@ from PIL import Image, ImageDraw, ImageFilter
 A = sys.argv[1:]; ULOS = A[0]; os.makedirs(ULOS, exist_ok=True)
 arg = lambda k, o: type(o)(A[A.index(k) + 1]) if k in A else o
 KESTO, FPS, KOKO, ETAISYYS = arg('--kesto', 8.0), arg('--fps', 30), arg('--koko', 512), arg('--etaisyys', 0.07)
-N = int(KESTO * FPS); TUMMUUS = 0.50           # Päätoimittaja 3.10.: kiekuran ydin tummentaa projektorin valoa ~35–50 %
-PEHMEYS = KOKO * (0.002 + 0.03 * ETAISYYS)   # reuna pehmenee muutaman kuvapisteen matkalla      # reunan sumeus kuvapisteinä: lähellä pintaa terävämpi
+N = int(KESTO * FPS); TUMMUUS = 0.70           # Päätoimittaja 3.10.: kiekuran ydin tummentaa projektorin valoa ~35–50 %
+PEHMEYS = 1.0   # pehmeä reuna 1–2 px (512 px; web pienentää 256 px:iin → ydin ≥ 4 px, Pelikoodari)      # reunan sumeus kuvapisteinä: lähellä pintaa terävämpi
 
 
 def nauha(t):
     """Savunauhan keskiviiva (u, v) ja paksuus pisteittäin; t 0–1 silmukka. Nousee alhaalta ylös, kiertyy yhden
     kiemuran kerrallaan (kiemura nousee kuva-alan läpi yhden silmukan aikana = 8 s)."""
     w = 2 * math.pi; pts = []
-    for i in range(240):
-        s = i / 239                                   # 0 alhaalla → 1 ylhäällä
+    for i in range(600):
+        s = i / 599                                   # 0 alhaalla → 1 ylhäällä
         v = 1.05 - 1.1 * s
         # saumaton silmukka: ajan kertoimet kokonaislukuja (t = 0 ja t = 1 sama kuva)
-        u = (0.5 + 0.13 * math.sin(w * (0.9 * s - t)) + 0.035 * math.sin(w * (2.3 * s - 2 * t) + 0.3)
+        u = (0.5 + 0.22 * math.sin(w * (0.9 * s - t)) + 0.03 * math.sin(w * (4.0 * s - 3 * t))   # heilunta ±6 cm: pyyhkii kaikuhahmon yli + 0.035 * math.sin(w * (2.3 * s - 2 * t) + 0.3)
              + 0.02 * math.sin(w * (t + 0.6 * s)))
         # kiekura: selvä silmukka, joka nousee kuva-alan läpi yhden kierron aikana (ääripäissä nauha on ohut)
         ds = ((s - t + 0.5) % 1.0) - 0.5; kiemura = math.exp(-(ds * 5.0) ** 2)   # jaksollinen: ei hyppyä saumassa
         fii = w * 5.0 * ds   # yksi täysi kierros kiemuran leveydellä: säde 0,06 > nousunopeus → nauha kiertyy silmukaksi
-        u += 0.08 * kiemura * math.sin(fii); v += 0.08 * kiemura * (math.cos(fii) - 1.0)   # iso, selvä kiekura
-        paksuus = (0.030 + 0.020 * math.sin(w * (1.7 * s - t)) ** 2)   # yksi selvä nauha (~1–1,4 cm pinnalla: muoto erottuu kaikuhahmon päällä) * (0.35 + 0.65 * math.sin(math.pi * s))
+        u += 0.07 * kiemura * math.sin(fii); v += 0.07 * kiemura * (math.cos(fii) - 1.0)
+        ds2 = ((s - t + 0.0) % 1.0) - 0.5; k2 = math.exp(-(ds2 * 6.0) ** 2); f2 = -w * 6.0 * ds2   # toinen, vastakkainen kiekura
+        u += 0.045 * k2 * math.sin(f2); v += 0.045 * k2 * (math.cos(f2) - 1.0)   # iso, selvä kiekura
+        paksuus = (0.0100 + 0.0040 * math.sin(w * (1.7 * s - t)) ** 2)   # kiemurteleva viiva 5–7 px = 2,8–3,9 mm pinnalla (ala 0,28 m) * (0.35 + 0.65 * math.sin(math.pi * s))
         pts.append((u, v, paksuus))
     return pts
 
