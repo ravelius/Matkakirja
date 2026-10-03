@@ -303,7 +303,9 @@ Shader "Matkakirja/Linssit/Yokuori"
                 {
                     float3 ita = normalize(cross(z, ng) + float3(1e-6, 0, 0));
                     float3 poh = cross(ng, ita);
-                    float2 q = float2(dot(p, ita), dot(p, poh)) * 0.001;               // km pinnan tasossa
+                    // Kohinan koordinaatit pituus- ja leveyspiiristä km:nä. (Ei p·tangentti: paikallinen tangentti on kohtisuorassa p:tä
+                    // vastaan, joten pistetulo on ≈ 0 ± pyöristys ja solu vaihtui pikseleittäin — simulla rakeina 3.10.)
+                    float2 q = float2(lon * cos(lat), lat) * 6371.0;
                     float2 tq = float2(q.x * 0.2, q.y);                                // tuuli itä–länsi: juovat venyvät 5 ×
                     float karheus = 0.75 + 0.45 * Arvokohina(q / 25.0 + 17.0);
                     // Aaltojuovat 8 km ja 2,5 km (simu c0e73c4e: 1,4 / 0,35 km näkyi pikselikohinana, ei juovina). Oktaavi on
