@@ -13,6 +13,9 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
   Tila e (3559411b): juovat liian voimakkaat (siveltimenvedot, ei ydintä) → c2d70795 pienensi värähtelyä. SEURAAVAKSI: simu aamulla,
   tarkista pysty-45-90 suurennos (ydin yhtenäinen + juovat reunoilla), oletus ennallaan → kuvapari Päätoimittajalle → merge-pyyntö.
 - Marcus v14 2848bfe2 ja linssihampurilainen/natrium: junissa 133 (hyväksytty). BUILD 133 natrium tarkistettu silmin (ok).
+- MARCUS JUNAAN 135 (Päätoimittaja 22.2x, omistajan TF 133 -löydökset): odota LS2:n moottori (dspTime + latenssikompensaatio, pehmeämpi savu),
+  Pelikoodarin uudet taustarivien atlakset ja Sisältökirjurin/Linnanrakentajan Marcus-kaikukuvat (sade, uhri, kuolinvuode) → aja muunnin
+  uudelleen → tarkista FYYSISELLÄ iPadilla äänen kanssa (iPad-testien ehdot muistiossa ipad-testit-omistajan-lupa).
 
 ## TILA 3.10. KLO 19.3x (MARCUS v14 NATIIVI — MERGE-PYYNNÖSSÄ)
 - linssiseppa/marcus-v14 2848bfe2 (LOPULLINEN 20.3x; proto, LS2:n linssiseppa2/sokrates-v14 649651b2:n päällä, käännös 9bb5418d, kuvat lokit/linssiseppa-marcus-v14-d-20261003; vain data: tyokalut/ajattelijat-natiiviin.mjs,
