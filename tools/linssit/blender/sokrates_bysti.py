@@ -1155,7 +1155,8 @@ def syke_kaikuun(valo, ikkuna, voima, syke, askel=2):
 KERTOJA_OLETUS = '/Users/Shared/Claude/proto-3d/_lahteet/sokrates/kertoja-aanikoe-v4/Iv4-william-oletus-ajat.json'
 V13_KERTOJA_ALKAA = 28.0
 V13_NAUHA_MS = 0.055
-V13C = '--v13c' in A   # v13c (omistaja 3.10. 08.0x): rajatut kaikuhahmot viistosti, ei reunahehkua, virta väistää kaiun   # lainausnauhojen nopeus pinnalla (m/s); nauha näkyy lainauksen ajan ±0,6 s
+V13C = '--v13c' in A
+KAIKUVARI = A[A.index('--kaikuvari') + 1] if '--kaikuvari' in A else 'seepia'   # seepia | neutraali   # v13c (omistaja 3.10. 08.0x): rajatut kaikuhahmot viistosti, ei reunahehkua, virta väistää kaiun   # lainausnauhojen nopeus pinnalla (m/s); nauha näkyy lainauksen ajan ±0,6 s
 
 
 def v13_ajat():
@@ -1196,7 +1197,9 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
         kk_ = bpy.data.images.load(os.path.join(gobot, kuva), check_existing=True)
         VIRTA_VAISTO.append((tuple(q), 0.55 * math.hypot(lev, lev * kk_.size[1] / kk_.size[0]), F(a_t), F(l_t)))
         kaiku_projektori(nimi, q, (nn + viisto).normalized(), 0.6, lev, os.path.join(gobot, kuva), (F(a_t), F(l_t)), voima,
-                         liuku=0.02, haivytys=haiv, varjo=0.0)   # v13b: pistemäinen projektori = kuva terävä pinnalla
+                         liuku=0.02, haivytys=haiv, varjo=0.0,
+                         # omistaja 3.10. 08.1x "kuvat värittöminä": neutraali valkoinen projektori (kuvat ovat harmaasävyisiä)
+                         savy=(1.0, 1.0, 1.0) if KAIKUVARI == 'neutraali' else (1.0, 0.78, 0.52))   # v13b: pistemäinen projektori = kuva terävä pinnalla
         kaiut.append({'nimi': nimi, 'kuva': kuva, 'alku_s': round(a_t, 2), 'loppu_s': round(l_t, 2)})
     jum_t = T(W.get('jumalankuvia', K['01'][1] - 1.4))
     kaiku('kaiku-jumala', 'kaiku-jumala.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, jum_t, k_('02', 0) + 1.2, 9.0, haiv=30)   # himmeä
