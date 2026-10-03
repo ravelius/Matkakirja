@@ -83,8 +83,8 @@ test('v11 (omistaja 3.10.2026): alkukuvat varjopuolelta, kaiku 1 lähempänä ja
   const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
   const { AJATTELIJA_KYTKIN } = await import('../js/linssit/ajattelija.js');
   for (const a of [SOKRATES, MARCUS]) {
-    // v14 (Sokrates): patarummun lähikuva 118 lähes edestä (x 0,16), muut varjon puolelta.
-    assert.ok(a.intro.otokset.every(([, c]) => c[0] <= 0.2), `${a.tunnus}: introkamera ei ole valon vastapuolella`);
+    // v14 (Sokrates): silmän lähikuva 118 lähes edestä (x 0,22), muut varjon puolelta.
+    assert.ok(a.intro.otokset.every(([, c]) => c[0] <= 0.25), `${a.tunnus}: introkamera ei ole valon vastapuolella`);
     assert.ok(a.intro.tayte < 1);
     assert.equal(a.kaiku.lev, 0.07);
     assert.deepEqual(a.kaiku.kamera.matka, [0.15, 0.14]);
@@ -99,7 +99,7 @@ test('auringon suunta normalisoidaan avainten välissä (valo pysyy 1,3 m:n pä�
   assert.match(MOOTTORI, /return e\.suunta\.clone\(\)\.lerp\(v\.suunta, pehmea\(valilla\(r, e\.r, v\.r\)\)\)\.normalize\(\);/);
 });
 
-test('v14 Sokrates (omistaja 3.10.2026 klo 14.5x; sokrates-luvut-v14.json 822739628): tiivis alku iskuihin, kertoja 12 s', async () => {
+test('v14 Sokrates (omistaja 3.10.2026 klo 14.5x; sokrates-luvut-v14.json 85b583529): tiivis alku iskuihin, kertoja 12 s', async () => {
   const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
   const o = SOKRATES.intro.otokset;
   assert.deepEqual(o.map(([r]) => r), [1, 60, 61, 118, 136, 154]);

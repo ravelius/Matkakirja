@@ -79,7 +79,7 @@ export const SOKRATES = Object.freeze({
   // 38a, lähderivi, kaiku (b-luenta) ja pito. Ääniraita alkaa ruudusta 0 (sokrates_aani.sh).
   // V12 (omistaja 3.10.2026 klo 04.5x/05.0x; Linnanrakentaja sokrates-luvut-v12.json a6308b998): intro pitenee 442 ruutua
   // (musiikki alusta leikkaamattomana, leikkaukset vain kuuluviin iskuihin); Rembrandt + nimi 724, kysymys 815.
-  // V14 (omistaja 3.10.2026 klo 14.5x; sokrates-luvut-v14.json 822739628): tiivis alku. Rembrandt + nimi ruudussa 184
+  // V14 (omistaja 3.10.2026 klo 14.5x; sokrates-luvut-v14.json 85b583529): tiivis alku. Rembrandt + nimi ruudussa 184
   // (musiikin huippu 6,1 s), kysymys 250 (8,3 s), kertoja 286 (9,5 s; linssin ajassa 12,0 s). Muut v12:n ajat −540
   // (käytössä vain ilman aikajanaa).
   ajat: {
@@ -116,7 +116,7 @@ export const SOKRATES = Object.freeze({
      * intro (1,0 / −0,45 / 0,5), Rembrandtista (724) eteenpäin (0,95 / −0,30 / 0,55). Tausta pimeä, ei täyttöä.
      */
     /*
-     * V14 (omistaja 3.10.2026 klo 14.5x; sokrates-luvut-v14.json 822739628): lyhyt ajo 1 → 60, sitten leikkaukset
+     * V14 (omistaja 3.10.2026 klo 14.5x; sokrates-luvut-v14.json 85b583529, silmä ja suu korjattu): lyhyt ajo 1 → 60, sitten leikkaukset
      * musiikin iskuihin: suuri sointu 61 (2,0 s), patarummut 118 / 136 / 154 (3,9 / 4,5 / 5,1 s), huippu ja
      * Rembrandt 184 (6,1 s). Aikajana-tilassa kamera ja aurinko tulevat aikajanasta; nämä samat avaimet ilman sitä.
      */
@@ -124,13 +124,13 @@ export const SOKRATES = Object.freeze({
       [1, [-0.85, 0.3, 0.52], [0, -0.04, 0.38], 35, 'BEZIER'],
       [60, [-0.8, 0.1, 0.48], [0, -0.05, 0.38], 35],
       [61, [-0.72, -0.08, 0.35], [0, -0.08, 0.34], 45],
-      [118, [0.16, -0.43, 0.395], [0.04, -0.125, 0.378], 50],
-      [136, [-0.16, -0.58, 0.29], [0, -0.12, 0.27], 50],
+      [118, [0.22, -0.55, 0.425], [0.03, -0.12, 0.392], 50],   // silmä
+      [136, [-0.05, -0.5, 0.3], [0, -0.13, 0.285], 50],        // suu ja parta
       [154, [-0.42, -0.52, 0.82], [0, -0.07, 0.4], 35],
     ],
     // Auringon suunta (paikka − aurinko_kohde) v14-avaimista.
-    valo: [[1, [1.075, 0.591, 0.43]], [61, [1.206, -0.241, 0.422]], [118, [1.027, -0.205, 0.77]],
-      [136, [1.102, -0.331, 0.606]], [154, [0.977, -0.488, 0.705]], [184, [1.085, -0.343, 0.628]]],
+    valo: [[1, [1.075, 0.591, 0.43]], [61, [1.129, -0.508, 0.395]], [118, [0.697, -0.697, 0.847]],
+      [136, [0.729, -0.841, 0.673]], [154, [0.342, -0.968, 0.797]], [184, [1.085, -0.343, 0.628]]],
     tayte: 0,
   },
   /*
