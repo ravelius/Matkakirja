@@ -10,8 +10,8 @@ CLAUDE.md, Raamatun Ydinajatus kohta 2 (js/tyohuone-raamattu.js, grep "TYÖTAPA 
 docs/raportit/viesti-linssiseppa2-luovutus-20261003.md**.
 
 ## Tehtävä nyt
-Astro-palaute on junassa 131. Juna 132: Pulu vaaka -suositus kuvan kanssa (odottaa käännösvuoroa), merge-pyynnöt pulu-mittaus ja
-kaiku-suunta, sitten ajattelijoiden web-muutokset natiiviin (luovutuksen kohta 3). KÄÄNNÖS- JA SIMUVUORO AINA JULKAISIJALTA.
+Juna 132: merge-pyynnöt pulu-vaaka-alas 07e7ecca ja ajattelijat-v11 d3fcd459 Natiivisepällä (kuitattu). Rooli levossa; seuraavaksi
+TF 132:n palaute ja Platon datana (luovutuksen kohta 3). KÄÄNNÖS- JA SIMUVUORO AINA JULKAISIJALTA.
 
 ## Säännöt
 - Rajatut tehtävät (juurisyyt, data, testikorjaukset) Sonnet-ali-agentille; rooli todentaa ja julkaisee.
