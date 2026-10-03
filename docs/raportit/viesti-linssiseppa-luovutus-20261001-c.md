@@ -3,6 +3,13 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 4.10. KLO 02.2x (MARCUS 135 — MERGE-PYYNTÖ ODOTTAA LS2:TA)
+- Proto linssiseppa/marcus-v15b 92d46875 (LS2 659c903c:n päällä), luvut f55de4076, käännös a12ba471, Linssit 596/596. Tallenne B
+  lokit/linssiseppa-marcus-tallenne-b-20261004: ääni = kytkinajastus −1 ms; kuvan leikkaukset 52–69 ms ennen ääntä (näkyy pelkästä videosta).
+- Koodista: c093efe5 EI muuttanut merkin ajoitusta (vain AudioSource lapsiolioon); välähdys raaka dspTime ≥ T + viive, mutta moottori
+  käyttää Kello.Nyt-interpolointia (≤ 100 ms raa'an edellä) → todennäköinen ero. Lähetetty LS2:lle + Päätoimittajalle 02.2x.
+  SEURAAVAKSI: LS2:n vastaus (merkki samaan kelloon?) → tallenne uudelleen → merge-pyyntö Natiivisepälle (kopio Päätoimittajalle).
+
 ## TILA 3.10. KLO 22.2x (AURINGON KIILTO CUPOLAN KULMISSA — KESKEN, juna 134)
 - Päätoimittajan erä 21.2x: sunglint Cupolan vedon kulmissa iso tasainen kermaläiskä → aidon ISS-kiillon kaltainen. Proto-haara
   linssiseppa/glint (LS2:n linssiseppa2/cupola-veto 4aa02624:n päällä), kärki c2d70795 (TARKISTAMATTA SIMULLA, yötauko).
