@@ -3,6 +3,9 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
+## 3.10. 18.x: OMISTAJA HYVÄKSYI v14. 78b883452: prologi 3 reunavaloa (PROLOGI_VALOT, luvut v14.prologi_valot; web-arvot ajattelija-sokrates.js:ssä
+## päivitettävä), Sokrateen parta (-0,50,-0,06,0,26) + rako 0,03 takaa kameran puolelta. Pelikoodari avaa PR:n.
+
 ## 3.10. 17.x: 6c506d581 — KOVA v14:ssä (0.80,-0.80,0.30) 45° sivulta edestä (ei pääkalloa), tekstittömät 08/03 mediaani 51–60/255.
 
 ## 3.10. 17.x: aadd632ff luvut Pelikoodarilla: lainaukset pysyvät ruudussa (--kehys tarkistaa, 9/9 OK; Marcus 4.49/2.11 kamerapito);
