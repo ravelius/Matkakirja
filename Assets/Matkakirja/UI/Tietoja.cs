@@ -201,7 +201,9 @@ namespace Matkakirja.Natiivi
                     string nimea = Teksti(l, "nimea"), lahde = Teksti(l, "lahde");
                     rivit.Add(new Rivi
                     {
-                        Nimi = ajattelija + (kohde != null ? ": " + kohde : ""),
+                        // Kohde sisältää jo ajattelijan nimen ("Sokrates: jumalankuva"): ei toista kertaa.
+                        Nimi = kohde == null ? ajattelija
+                            : kohde.StartsWith(ajattelija, System.StringComparison.OrdinalIgnoreCase) ? kohde : ajattelija + ": " + kohde,
                         Tekija = teos != null && tekija != null ? teos + " · " + tekija : teos ?? tekija,
                         Lisenssi = Teksti(l, "lisenssi"),
                         Huom = nimea != null && lahde != null ? nimea + "\n" + lahde : nimea ?? lahde,
