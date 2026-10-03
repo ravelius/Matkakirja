@@ -468,7 +468,7 @@
    "rintama": 4,
    "reuna": 0.35
   },
-  "virtaVoima": 0.1,
+  "virtaVoima": 0.065,
   "aani": {
    "puhe": "ajattelijat/sokrates/v4/v14-puhe.mp3",
    "musiikki": "ajattelijat/sokrates/v4/v14-musiikki.mp3"
@@ -760,10 +760,10 @@
   ]
  },
  "taustavirta": {
-  "sumeus": 0.15,
+  "sumeus": 0.04,
   "riviTila": 2,
   "riviKorkeus": 80,
-  "riviKoko": 0.6,
+  "riviKoko": 0.8,
   "etaisyys": 0.9,
   "blend": 0.5,
   "voimaKerroin": 3,
