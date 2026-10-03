@@ -15,6 +15,13 @@
 // KIERROKSET 2– (web #3884): kierros vaihtaa päälauseen tykin (oma atlasrivi, kohta edestä tai sivulta), taustavirran
 // asettelun (sama 20 riviä, kierroksen siemen) ja yhden kaikupaikan (tekstuuri vaihdetaan; kaiut eivät ole päällekkäin).
 // Kamera kulkee pidon jälkeen Blenderin avaimilla (AjattelijaAikajana.Kamerakayra), ensimmäinen avain on oma pito.
+//
+// AIKAJANA (v13–v14, web 088b64d0c asetaAikajana; data a.Aikajana): koko kohtaus yhtenä aikajanana Blenderin avaimin —
+// kamera (leikkaukset ja ajot), aurinko (paikka, energia, väri), ympäristövalo askelina, pyyhkäisy (valo 1), rakovalo
+// (valo 2: suorakaidekuvio ja oma varjokartta), varjolevy (näkymätön, vain varjokarttoihin), lainausten videotykki
+// (projektori 0; v14 kortti paikallaan ilman kaksoisvalotusta ja syvyyssumeutta), kaksi kaikupaikkaa vuorotellen
+// (_Kaiku/_Kaiku2), väistökehät, savumaski ja porrastettu taustavirta (rintama, häivytys, virtakerroin). Kierrokset jäävät
+// käyttämättä kuten webissä. Seepia (testikomento, web ?kaikuvari=seepia) palauttaa lämpimän tykki- ja kaikuvärin.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,14 +51,17 @@ namespace Matkakirja.Natiivi
         public static float KoeSpekulaari = 1f, KoeReuna = 1f;
         /// <summary>Kuvan skaala ruudun pikseleistä (0 = automaattinen: @3-näytöllä 2/3 eli webin devicePixelRatio ≤ 2).</summary>
         public static float SkaalaOhitus;
+        /// <summary>Seepia (web ?kaikuvari=seepia, "ajattelija seepia 1"): lämmin tykki- ja kaikuväri aikajana-tilassa.</summary>
+        public static bool Seepia;
+        /// <summary>Savu pois (web ?savu=0, "ajattelija savu 0").</summary>
+        public static bool SavuPois;
 
         AjattelijaData a;
         Camera kamera;
-        RenderTexture kuva, varjo;
+        RenderTexture kuva;
         Mesh mesh, peiteMesh;
         Material mat, varjoMat, peiteMat;
         Texture2D normaali, kipsi, atlas;
-        CommandBuffer varjoKomennot;
         Vector3[] paikat;
         int[] kolmiot;
         Dictionary<int, float> syke;
@@ -86,8 +96,40 @@ namespace Matkakirja.Natiivi
         Vector3 tayteVari, tayteP, tayteKohde;
         bool tayteAsetettu;
         bool malliValmis;
+        /// <summary>
+        /// Valmistelu (valintakortin aikana, AjattelijatSovitin): kamera pois päältä, pieni kuva (sama muoto ja MSAA, joten
+        /// varjostinten tilat käännetään samoina), kuvaa ei julkaista. Aktivoi() ottaa näyttämön käyttöön napautuksessa.
+        /// </summary>
+        bool valmistelu;
+        public bool MalliValmis => malliValmis;
         float vinjetti, vinjettiAika = -1;
-        Vector3 varjoPaikka = new Vector3(float.NaN, 0, 0), varjoKohde;
+        // Varjokartat: 0 aurinko (2048, lähi 0,6, kauko 2,2), 2 rakovalo (1024, lähi 0,3, kauko 1,8; web rako.shadow).
+        VarjoKartta varjoAurinko, varjoRako;
+
+        // ── Aikajana (v13–v14) ──
+        AjattelijaAikajanaData aj;
+        Func<double, AjattelijaOtos> kameraAj;
+        Func<double, (double[] paikka, double energia, double[] vari)> aurinkoAj;
+        Vector3 auringonKohde;
+        sealed class AjTykki
+        {
+            public AikajanaTykki T; public AtlasRivi Rivi; public Vector3 PaikkaT, KohdeT; public float Korkeus, Ala, S0; public double Alku, Loppu;
+        }
+        sealed class AjKaiku
+        {
+            public AikajanaKaiku K; public string Kuva; public bool Varissa, Sovita; public Vector3 PaikkaT, KohdeT; public Texture2D Tk;
+        }
+        readonly List<AjTykki> tykitAj = new List<AjTykki>();
+        readonly List<AjKaiku> kaiutAj = new List<AjKaiku>();
+        readonly List<(Vector3 kohde, double sade, double[] ruudut)> vaistot = new List<(Vector3, double, double[])>();
+        readonly int[] kaikuPaikassa = { -1, -1 };
+        int tykkiNyt = -1;
+        bool kaikuVarissa;   // viimeksi suunnattu kaikukuva on valmiiksi värissä (sarjan seepiaversio): valo neutraali
+        double virranAlku, porrasLoppu;
+        Mesh levyMesh;
+        Texture2D savu;
+        readonly Vector4[] vaistoT = new Vector4[4];
+        static readonly double[] PerusVari = { 1.0, 0.95, 0.88 };
 
         readonly Vector4[] px = new Vector4[Projektoreita], py = new Vector4[Projektoreita], pf = new Vector4[Projektoreita],
             pa = new Vector4[Projektoreita], pb = new Vector4[Projektoreita], pc = new Vector4[Projektoreita],
@@ -102,7 +144,10 @@ namespace Matkakirja.Natiivi
             IdTaivas = Shader.PropertyToID("_Taivas"), IdMaa = Shader.PropertyToID("_Maa"), IdVarjoVP = Shader.PropertyToID("_VarjoVP"),
             IdVarjoTiedot = Shader.PropertyToID("_VarjoTiedot"), IdVarjoGpuVP = Shader.PropertyToID("_VarjoGpuVP"),
             IdVarjoValo = Shader.PropertyToID("_VarjoValo"), IdVarjoKauko = Shader.PropertyToID("_VarjoKauko"),
-            IdPeite = Shader.PropertyToID("_Peite"), IdHimmennys = Shader.PropertyToID("_HimmennysVari");
+            IdPeite = Shader.PropertyToID("_Peite"), IdHimmennys = Shader.PropertyToID("_HimmennysVari"),
+            IdVaisto = Shader.PropertyToID("_PVaisto"), IdSavuTila = Shader.PropertyToID("_SavuTila"), IdSavuKanava = Shader.PropertyToID("_SavuKanava"),
+            IdVKuvio = Shader.PropertyToID("_VKuvio"), IdPVari = Shader.PropertyToID("_PVari"), IdPKaikuVari = Shader.PropertyToID("_PKaikuVari"),
+            IdKaikuMuoto = Shader.PropertyToID("_PKaikuMuoto"), IdPeiteTausta = Shader.PropertyToID("_PeiteTausta");
 
         /// <summary>Blender (x, y, z) → Unity (x, z, y).</summary>
         public static Vector3 B(double[] v) => new Vector3((float)v[0], (float)v[2], (float)v[1]);
@@ -111,16 +156,22 @@ namespace Matkakirja.Natiivi
         /// <summary>Pystykenttä asteina Blenderin pystysensorista (24 mm) ja polttovälistä.</summary>
         public static float KenttaMm(double mm) => (float)(2 * Math.Atan(12 / mm) * 180 / Math.PI);
 
-        public static AjattelijaNayttamo Luo(AjattelijaData a)
+        /// <summary>
+        /// Näyttämö (kamera, musta kuva, materiaalit). atlas = esivalmisteltu tekstiatlas (AtlasTekstuuri), null = myöhemmin
+        /// AsetaAtlas-kutsulla; lataaAtlas = vanha tie (atlas puretaan heti pääsäikeellä).
+        /// </summary>
+        public static AjattelijaNayttamo Luo(AjattelijaData a, Texture2D atlasValmis = null, bool lataaAtlas = false, bool valmistelu = false)
         {
             var go = new GameObject("AjattelijaNayttamo") { layer = Kerros };
             var n = go.AddComponent<AjattelijaNayttamo>();
             n.a = a;
+            n.valmistelu = valmistelu;
             n.w = Avain / 95f;   // Blenderin wateista three.js:n voimaksi (aurinko 95 W = AVAIN)
             n.tykki = Avain * 220f / 95f * TykkiKerroin;
             n.LuoKamera();
             n.LuoMateriaalit();
-            n.LataaAtlas();
+            if (atlasValmis != null) n.AsetaAtlas(atlasValmis);
+            else if (lataaAtlas) n.LataaAtlas();
             return n;
         }
 
@@ -150,10 +201,16 @@ namespace Matkakirja.Natiivi
             mat = new Material(Resources.Load<Shader>("Varjostimet/AjattelijaKipsi")) { name = "AjattelijaKipsi" };
             varjoMat = new Material(Resources.Load<Shader>("Varjostimet/AjattelijaVarjo")) { name = "AjattelijaVarjo" };
             peiteMat = new Material(Resources.Load<Shader>("Varjostimet/AjattelijaPeite")) { name = "AjattelijaPeite" };
-            peiteMat.SetColor(IdHimmennys, (Color)Tyylikirja.Himmennys.Tumma);
+            // sRGB-arvoina SetVectorilla: SetColor linearisoisi värin, ja varjostin sekoittaa sRGB:nä (AjattelijaPeite.hlsl).
+            var h = (Color)Tyylikirja.Himmennys.Tumma;
+            peiteMat.SetVector(IdHimmennys, new Vector4(h.r, h.g, h.b, h.a));
             // Taulukot kiinteällä pituudella ensimmäisestä asetuksesta (Unity lukitsee taulukon koon).
             AsetaTaulukot();
             mat.SetVectorArray(IdVPaikka, vPaikka); mat.SetVectorArray(IdVSuunta, vSuunta); mat.SetVectorArray(IdVVari, vVari);
+            mat.SetVectorArray(IdVaisto, vaistoT);
+            mat.SetFloat("_VKuvioEtaisyys", (float)AjattelijaAikajana.RakoEtaisyys);
+            varjoAurinko = new VarjoKartta(mat, varjoMat, 0, VarjoKoko, VarjoLahi, VarjoKauko);
+            varjoRako = new VarjoKartta(mat, new Material(varjoMat) { name = "AjattelijaVarjoRako" }, 2, 1024, 0.3f, 1.8f);
             // Peite: koko ruudun kolmio leikkausavaruudessa (varjostin ohittaa matriisit), rajat suuriksi ettei karsiudu.
             peiteMesh = new Mesh { name = "AjattelijaPeite" };
             peiteMesh.vertices = new[] { new Vector3(-1, -1, 0), new Vector3(3, -1, 0), new Vector3(-1, 3, 0) };
@@ -168,17 +225,51 @@ namespace Matkakirja.Natiivi
             pr.receiveShadows = false;
         }
 
-        void LataaAtlas()
+        /// <summary>Atlas pääsäikeellä (varatie, jos esivalmistelu puuttuu).</summary>
+        public void LataaAtlas()
         {
             var ta = Resources.Load<TextAsset>(a.Atlas.Tiedosto);
             if (ta == null) { Virhe = "atlas puuttuu: " + a.Atlas.Tiedosto; return; }
-            atlas = LueKuva(ta.bytes, true, "atlas", yksiKanava: true);
+            AsetaAtlas(LueKuva(ta.bytes, true, "atlas", yksiKanava: true));
+            Resources.UnloadAsset(ta);
+        }
+
+        /// <summary>Atlas käyttöön (omistus näyttämölle).</summary>
+        public void AsetaAtlas(Texture2D t)
+        {
+            if (t == null || atlas != null) return;
+            atlas = t;
             atlas.wrapModeU = TextureWrapMode.Repeat;   // toistorivit (päälause rajataan varjostimessa)
             atlas.wrapModeV = TextureWrapMode.Clamp;
             atlas.anisoLevel = 16;
             mat.SetTexture("_Atlas", atlas);
-            Resources.UnloadAsset(ta);
         }
+
+        // ── ESIVALMISTELU (Päätoimittaja 3.10.2026: napautuksesta kytkimeen ≤ 1,5 s; "malli 1925 ms" pääsäikeellä) ──────
+        // Valintakortin aikana: atlaksen PNG ja GLB puretaan taustasäikeellä (PuraHarmaaPng, DioraamaGlb.Lue), tekstuurit
+        // luodaan pääsäikeellä ruutu kerrallaan (AtlasTekstuuri, NormaaliKuva, KipsiKuva). Napautuksen jälkeen jää vain
+        // verkon kokoaminen ja säteet (AsetaMalli(GlbMalli, …)).
+
+        /// <summary>Muuntimen harmaasävy-PNG raa'aksi R8-dataksi (AjattelijaData.PuraHarmaaPng, säieturvallinen).</summary>
+        public static (int lev, int kork, byte[] data)? PuraHarmaaPng(byte[] png) => AjattelijaData.PuraHarmaaPng(png);
+
+        /// <summary>Puretusta atlaksesta R8-tekstuuri mippeineen (pääsäie).</summary>
+        public static Texture2D AtlasTekstuuri((int lev, int kork, byte[] data)? purettu)
+        {
+            if (purettu == null) return null;
+            var (lev, kork, data) = purettu.Value;
+            var t = new Texture2D(lev, kork, TextureFormat.R8, true, true) { name = "Ajattelija:atlas" };
+            t.SetPixelData(data, 0);
+            t.Apply(true, true);
+            return t;
+        }
+
+        /// <summary>GLB:n upotettu normaalikartta (pääsäie); null, jos ei ole.</summary>
+        public static Texture2D NormaaliKuva(GlbMalli m) =>
+            m != null && m.Kuvat.Count > 0 && m.Kuvat[0] != null ? LueKuva(m.Kuvat[0], true, "normaali") : null;
+
+        /// <summary>Kipsin mikronormaali (pääsäie).</summary>
+        public static Texture2D KipsiKuva(byte[] tavut) => tavut == null ? null : LueKuva(tavut, true, "kipsi");
 
         /// <summary>
         /// PNG/JPG tekstuuriksi (lineaarinen, mipit). Yksikanavainen atlas pidetään R8:na: LoadImage voi antaa RGBA32:n
@@ -232,14 +323,39 @@ namespace Matkakirja.Natiivi
         {
             float skaala = SkaalaOhitus > 0 ? SkaalaOhitus : Screen.dpi > 300 ? 2f / 3f : 1f;
             int l = Mathf.Max(64, Mathf.RoundToInt(Screen.width * skaala)), k = Mathf.Max(64, Mathf.RoundToInt(Screen.height * skaala));
+            if (valmistelu) l = k = 64;
             if (kuva != null && kuva.width == l && kuva.height == k) return;
             VapautaKuva();
             kuva = new RenderTexture(l, k, 24, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB)
             { name = "AjattelijaKuva", antiAliasing = 4, useMipMap = false };
             kuva.Create();
             kamera.targetTexture = kuva;
+            if (valmistelu) { kamera.enabled = false; return; }
             NykyinenKuva = kuva;
             KuvaVaihtui?.Invoke(kuva);
+        }
+
+        /// <summary>
+        /// Lämmitys valmistelussa: yksi aikajanan ruutu kaikilla valoilla (aurinko, rako, varjolevy → molemmat varjokartat)
+        /// ja kuva pieneen kohteeseen, jotta Metal kääntää kipsi-, peite- ja varjovarjostimet ennen napautusta.
+        /// </summary>
+        public void Lammita()
+        {
+            if (!malliValmis) return;
+            Aseta(false, a.Aikajana != null ? 140 : a.Ajat.Kysymys[0]);
+            kamera.Render();
+            Aseta(true, 1);
+            kamera.Render();
+        }
+
+        /// <summary>Valmisteltu näyttämö käyttöön: täysikokoinen kuva julkaistaan ja kamera päälle.</summary>
+        public void Aktivoi()
+        {
+            if (!valmistelu) return;
+            valmistelu = false;
+            VarmistaKuva();
+            if (NykyinenKuva != kuva) { NykyinenKuva = kuva; KuvaVaihtui?.Invoke(kuva); }
+            kamera.enabled = true;
         }
 
         void VapautaKuva()
@@ -256,10 +372,17 @@ namespace Matkakirja.Natiivi
         /// <summary>GLB (L1 + upotettu normaalikartta) → bysti, osuma otsalle, lentoasento ja videotykit.</summary>
         public bool AsetaMalli(byte[] glb, out string virhe)
         {
-            virhe = null;
             GlbMalli m;
             try { m = DioraamaGlb.Lue(glb, true); }
             catch (Exception e) { virhe = Virhe = e.Message; return false; }
+            return AsetaMalli(m, NormaaliKuva(m), out virhe);
+        }
+
+        /// <summary>Esivalmisteltu malli ja normaalikartta (omistus näyttämölle).</summary>
+        public bool AsetaMalli(GlbMalli m, Texture2D normaaliValmis, out string virhe)
+        {
+            virhe = null;
+            if (m == null || m.Osat.Count == 0) { virhe = Virhe = "malli tyhjä"; if (normaaliValmis != null) Destroy(normaaliValmis); return false; }
             var o = m.Osat[0];
             int k = o.Paikat.Length / 3;
             paikat = new Vector3[k];
@@ -291,7 +414,7 @@ namespace Matkakirja.Natiivi
             var pohja = o.Vari ?? new[] { 0.86f, 0.85f, 0.82f, 1f };
             mat.SetVector("_Pohja", new Vector4(pohja[0], pohja[1], pohja[2], 0.62f));
             mat.SetFloat("_NormaaliPaalla", 0f);
-            if (m.Kuvat.Count > 0 && m.Kuvat[0] != null && (normaali = LueKuva(m.Kuvat[0], true, "normaali")) != null)
+            if ((normaali = normaaliValmis) != null)
             {
                 normaali.anisoLevel = 8;
                 normaali.wrapMode = TextureWrapMode.Repeat;
@@ -324,6 +447,15 @@ namespace Matkakirja.Natiivi
             kaiut.Clear();
             kierrokset.Add(LauseTykki(lause, osP, osN, a.Atlas.Paikat[0], a.Ajat.Vieritys, a.Ajat.Lahde, tv.Ajat, tv.Siemen, 0));
             kaiut.Add(null);
+            // Aikajana-tilassa kaiut tulevat aikajanasta (web kk = AJ ? null : a.kaiku) eikä kierroksia käytetä.
+            aj = a.Aikajana;
+            if (aj != null)
+            {
+                nykyKierros = 0;
+                JohdaAikajana();
+                AsetaTaulukot();
+                return true;
+            }
             var kk = a.Kaiku;
             if (kk != null)
             {
@@ -376,6 +508,293 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
+        // ── Aikajana (v13–v14, web asetaAikajana) ─────────────────────────────────────────────────────
+
+        /// <summary>Webin aikajana-alustus: kamera, aurinko, lainausten tykit, kaiut, porrastus, väistökehät ja varjolevy.</summary>
+        void JohdaAikajana()
+        {
+            kameraAj = AjattelijaAikajana.AikajanaKamera(aj.Kamera);
+            aurinkoAj = AjattelijaAikajana.AikajanaAurinko(aj.AurinkoKohde, aj.Aurinko);
+            auringonKohde = B(aj.AurinkoKohde);
+            // Lainausten videotykit: yksi projektoripaikka (0), suunnataan lainaus kerrallaan. Kortti (v14): koko kortti mahtuu
+            // leveyteen (luvuista nauha_lev_m, muuten lauseKortti.leveys), keila 1,15 × leveys, ei vieritystä.
+            tykitAj.Clear();
+            foreach (var t in aj.Tykit)
+            {
+                var rivi = a.Atlas.Paikat[t.AtlasRivi];
+                double lev = !double.IsNaN(t.Leveys) ? t.Leveys : aj.KorttiLeveys;
+                double korkeus = aj.Kortti ? lev * rivi.Korkeus / rivi.Lev : !double.IsNaN(t.Korkeus) ? t.Korkeus : t.Lause.Korkeus;
+                double nauhaLev = korkeus * rivi.Lev / rivi.Korkeus;
+                double ala = aj.Kortti ? lev * 1.15 : t.Ala;
+                tykitAj.Add(new AjTykki
+                {
+                    T = t, Rivi = rivi, PaikkaT = B(t.Paikka), KohdeT = B(new[] { t.Paikka[0] + t.Suunta[0] * 0.6, t.Paikka[1] + t.Suunta[1] * 0.6, t.Paikka[2] + t.Suunta[2] * 0.6 }),
+                    Korkeus = (float)korkeus, Ala = (float)ala, S0 = (float)(0.5 + ala / 2 / nauhaLev),
+                    Alku = t.Energia[0][0], Loppu = t.Energia[t.Energia.Count - 1][0],
+                });
+            }
+            tykkiNyt = -1;
+            // Kaiut: kaksi paikkaa vuorotellen (kaiut 1, 3 → _Kaiku; 2, 4 → _Kaiku2). Kaikusarja (web ?kaikusarja, oletus
+            // aikajanan kaikusarja): sarjan kuva sovitetaan suurimpaan mittaan omalla mittasuhteellaan; seepiaversio lipulla.
+            kaiutAj.Clear();
+            for (int j = 0; j < aj.Kaiut.Count; j++)
+            {
+                var k = aj.Kaiut[j];
+                string kuva = KaikunKuva(aj, j, out bool varissa, out bool sovita);
+                kaiutAj.Add(new AjKaiku
+                {
+                    K = k, Kuva = kuva, Varissa = varissa, Sovita = sovita, PaikkaT = B(k.Paikka),
+                    KohdeT = B(new[] { k.Paikka[0] + k.Suunta[0] * 0.6, k.Paikka[1] + k.Suunta[1] * 0.6, k.Paikka[2] + k.Suunta[2] * 0.6 }),
+                });
+            }
+            kaikuPaikassa[0] = kaikuPaikassa[1] = -1;
+            kaikuVarissa = false;
+            mat.SetVector(IdKaikuMuoto, Vector4.zero);
+            virranAlku = aj.Virta.FirstOrDefault(x => x[1] > 0)?[0] ?? 0;
+            // Porrastus (v14): ala → vasen → oikea → ylä, ylärivit vasta kysymyksen jälkeen.
+            porrasLoppu = aj.Porrastus ? AjattelijaAikajana.Porrastus(virta, aj.PorrasAlku, aj.PorrasVali, aj.PorrasHaivytys, a.Ajat.Kysymys[1]) : 0;
+            // Väistökehät (v13c) ja v14:n lainauskortit: kortin keskipiste pinnalla säteellä tykin suunnassa, säde 0,6 × leveys,
+            // ellei luvuissa jo ole kehää, joka kattaa yli puolet kortin ajasta (alle 5 cm:n päässä).
+            vaistot.Clear();
+            foreach (var v in aj.Vaisto) vaistot.Add((B(v.Kohde), v.Sade, v.Ruudut));
+            if (aj.Kortti)
+            {
+                int luvuista = vaistot.Count;
+                foreach (var t in tykitAj)
+                {
+                    var suunta = (t.KohdeT - t.PaikkaT).normalized;
+                    bool osui = Osuma(t.PaikkaT, suunta, 10f, out float tt, out _);
+                    var piste = t.PaikkaT + suunta * tt;
+                    bool kattaa = vaistot.Take(luvuista).Any(v => Math.Min(v.ruudut[1], t.Loppu) - Math.Max(v.ruudut[0], t.Alku) > (t.Loppu - t.Alku) / 2
+                        && Vector3.Distance(v.kohde, osui ? piste : v.kohde) < 0.05f);
+                    double lev = !double.IsNaN(t.T.Leveys) ? t.T.Leveys : aj.KorttiLeveys;
+                    if (osui && !kattaa) vaistot.Add((piste, lev * 0.6, new[] { t.Alku, t.Loppu }));
+                }
+            }
+            // Varjolevy (v14b, Sokrates): näkymätön vaakalevy, vain varjokarttoihin ruuduissa ruudut[0]…ruudut[1].
+            if (aj.VarjolevyKeski != null)
+            {
+                var c = B(aj.VarjolevyKeski);
+                float hx = (float)aj.VarjolevyKoko[0] / 2, hz = (float)aj.VarjolevyKoko[1] / 2;
+                levyMesh = new Mesh { name = "AjattelijaVarjolevy" };
+                levyMesh.vertices = new[] { c + new Vector3(-hx, 0, -hz), c + new Vector3(hx, 0, -hz), c + new Vector3(hx, 0, hz), c + new Vector3(-hx, 0, hz) };
+                levyMesh.triangles = new[] { 0, 2, 1, 0, 3, 2 };
+                levyMesh.bounds = new Bounds(c, new Vector3(2 * hx, 0.01f, 2 * hz));
+            }
+            AsetaAikajananVarit();
+            mat.SetVector(IdSavuTila, Vector4.zero);
+            pMaara = kaikuIndeksi + 2;
+        }
+
+        /// <summary>Aikajanan kaiun j kuva kaikusarjasta (web sarjanKuva): pelkkä kuva, seepialla seepiaversio, muuten harmaa.</summary>
+        static string KaikunKuva(AjattelijaAikajanaData aj, int j, out bool varissa, out bool sovita)
+        {
+            aj.Kaikusarjat.TryGetValue(aj.Kaikusarja ?? "", out var sarja);
+            var e = sarja != null && j < sarja.Count ? sarja[j] : null;
+            varissa = false;
+            sovita = e != null;
+            if (e == null) return aj.Kaiut[j].Kuva;
+            if (e.Kuva != null && e.Harmaa == null && e.Seepia == null) return e.Kuva;
+            if (Seepia && e.Seepia != null) { varissa = true; return e.Seepia; }
+            return e.Harmaa ?? e.Kuva ?? aj.Kaiut[j].Kuva;
+        }
+
+        /// <summary>
+        /// Kohtauksen ämpäriaineistot (esilataus valintakortin aikana, AjattelijatSovitin): malli, kipsi, kaikukuvat, syke ja
+        /// savu tavuina; äänet erikseen (AanetPolut). Samat polut, joita näyttämö pyytää kohtauksen alussa.
+        /// </summary>
+        public static IEnumerable<string> Aineistot(AjattelijaData a)
+        {
+            yield return a.Malli;
+            yield return a.Kipsi;
+            var aj = a.Aikajana;
+            if (aj != null)
+            {
+                for (int j = 0; j < aj.Kaiut.Count; j++) yield return KaikunKuva(aj, j, out _, out _);
+                if (!string.IsNullOrEmpty(aj.Syke)) yield return aj.Syke;
+                if (aj.SavuKuva != null && !SavuPois) yield return aj.SavuKuva;
+                yield break;
+            }
+            if (a.Kaiku != null) yield return a.Kaiku.Kuva;
+            if (a.Kierrokset != null)
+            {
+                foreach (var k in a.Kierrokset.Lista) if (k.Kaiku != null) yield return k.Kaiku.Kuva;
+                if (!string.IsNullOrEmpty(a.Kierrokset.Syke)) yield return a.Kierrokset.Syke;
+            }
+            else if (!string.IsNullOrEmpty(a.Syke)) yield return a.Syke;
+        }
+
+        /// <summary>Tykki- ja kaikuväri (web: aikajanan tykkiVari, väritön 1/1/1; seepialla ajattelijan lämmin tykki.vari ja kaiun sävy).</summary>
+        void AsetaAikajananVarit()
+        {
+            var tv = aj.TykkiVari != null && !Seepia ? aj.TykkiVari : a.TykkiVari;
+            mat.SetVector(IdPVari, new Vector4((float)tv[0], (float)tv[1], (float)tv[2], 1));
+            var kv = kaikuVarissa ? new[] { 1.0, 1.0, 1.0 } : KaikuValo();
+            mat.SetVector(IdPKaikuVari, new Vector4((float)kv[0], (float)kv[1], (float)kv[2], 1));
+        }
+
+        double[] KaikuValo() => Seepia ? (a.Kaiku?.Savy ?? new[] { 1.0, 0.78, 0.52 }) : (aj.KaikuVari ?? new[] { 1.0, 1.0, 1.0 });
+
+        /// <summary>Webin suuntaaTykki: lainauksen j tykki projektoriin 0 (kortti terävänä: ei ca:ta eikä syvyyssumeutta, pystysiirto).</summary>
+        void SuuntaaTykki(int j)
+        {
+            if (j == tykkiNyt || j < 0 || j >= tykitAj.Count) return;
+            tykkiNyt = j;
+            var t = tykitAj[j];
+            AsetaProjektori(0, t.PaikkaT, t.KohdeT, 0.6f, t.Korkeus, t.Rivi, t.Ala, (float)t.T.Blend,
+                vM: aj.Kortti ? (float)aj.KorttiSiirto : 0, ca: aj.Kortti ? 0 : (float)a.Ca, syvyys: aj.Kortti ? 0 : (float)a.SyvyysTykki);
+        }
+
+        /// <summary>Webin suuntaaKaiku: kaiun j kuva paikkaan j % 2 (vasta kun kuva on latautunut).</summary>
+        void SuuntaaKaiku(int j)
+        {
+            if (j < 0) return;
+            var k = kaiutAj[j];
+            int s = j % 2;
+            if (kaikuPaikassa[s] == j || k.Tk == null) return;
+            kaikuPaikassa[s] = j;
+            mat.SetTexture(s == 0 ? "_Kaiku" : "_Kaiku2", k.Tk);
+            var muoto = mat.GetVector(IdKaikuMuoto);
+            float m = k.Tk.format == TextureFormat.Alpha8 ? 2 : k.Tk.format == TextureFormat.R8 || k.Tk.format == TextureFormat.R16 ? 1 : 0;
+            if (s == 0) muoto.x = m; else muoto.y = m;
+            mat.SetVector(IdKaikuMuoto, muoto);
+            int w = k.Tk.width, h = k.Tk.height;
+            // v13b: kuva-alan mitat viennistä (lev, kork); sarjan kuva samaan suurimpaan mittaan, muuten keilasta ja mittasuhteesta.
+            bool mitat = !double.IsNaN(k.K.Lev);
+            double koko = mitat ? Math.Max(k.K.Lev, k.K.Kork) : k.K.Ala;
+            double lev = mitat && !k.Sovita ? k.K.Lev : (w >= h ? koko : koko * w / h);
+            double kork = !double.IsNaN(k.K.Kork) && !k.Sovita ? k.K.Kork : lev * h / w;
+            kaikuVarissa = k.Varissa;
+            AsetaAikajananVarit();
+            AsetaProjektori(kaikuIndeksi + s, k.PaikkaT, k.KohdeT, 0.6f, (float)kork, null, (float)Math.Max(lev, kork), (float)k.K.Blend,
+                onKaiku: true, kuvaLev: w, kuvaKork: h, kaikuTila: s + 2);
+        }
+
+        /// <summary>Webin asetaAikajana: ruutu r (1…aikajana.loppu).</summary>
+        void AsetaAikajana(double r, ref float vinjettiKohde, ref float lahde)
+        {
+            kamera.backgroundColor = TaustaVari;
+            var kc = kameraAj(r);
+            AsetaKamera(B(kc.Paikka), B(kc.Katse), kc.Mm);
+            vinjettiKohde = AjattelijaAikajana.VinjettiAikajana(a.Ajat, r) ? 1 : 0;
+            lahde = 0;
+            AsetaAikajananVarit();
+
+            // Aurinko avaimista (paikka, energia, väri); ympäristövalo askelina (v14b: 0 silmä- ja partakuvissa).
+            var au = aurinkoAj(r);
+            var valoP = B(au.paikka);
+            var av = au.vari ?? PerusVari;
+            float aurinko = (float)au.energia * w;
+            Spotti(0, valoP, auringonKohde, a.AvainKeila, 1.0, new Vector3((float)av[0], (float)av[1], (float)av[2]), aurinko, varjo: true);
+            double ymp = aj.Ymparisto != null ? AjattelijaAikajana.AskelAvain(aj.Ymparisto, r)[1] : 1;
+            float maailma = Tayte * (float)(a.IntroTayte * ymp);
+            mat.SetVector(IdTaivas, new Vector4(0.9f, 0.92f, 1.0f, 0) * maailma);
+            mat.SetVector(IdMaa, new Vector4(0.25f, 0.25f, 0.28f, 0) * maailma);
+            Spotti(3, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0);   // kaiun täyte ei ole käytössä aikajanassa
+            bool levy = AjattelijaAikajana.RuutuValilla(r, aj.VarjolevyRuudut);
+            if (aurinko > 0) varjoAurinko.Piirra(mesh, levy ? levyMesh : null, valoP, auringonKohde, (float)a.AvainKeila);
+
+            // Pyyhkäisy (valo 1): kapea sivuvalo, kohde avaimista tai suunnasta.
+            if (aj.Pyyhkaisy)
+            {
+                var pp = B(aj.PyyhkaisyPaikka);
+                Vector3 kohde = aj.PyyhkaisyKohteet != null ? B(AjattelijaAikajana.AvainArvo(aj.PyyhkaisyKohteet, r))
+                    : pp + B(aj.PyyhkaisySuunta ?? new[] { 0.0, 1, 0 }) * 0.6f;
+                var pv = aj.PyyhkaisyVari ?? PerusVari;
+                Spotti(1, pp, kohde, aj.PyyhkaisyKeila, aj.PyyhkaisyBlend, new Vector3((float)pv[0], (float)pv[1], (float)pv[2]),
+                    (float)AjattelijaAikajana.AvainArvo(aj.PyyhkaisyEnergia, r) * w);
+            }
+            else Spotti(1, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0);
+
+            // Rakovalo (valo 2, v14b): avaimet askelina, kuvio suorakaide, E = P / A' (kerroin W · RD² / A' × 30), oma varjo.
+            if (aj.Rako != null)
+            {
+                var ra = AjattelijaAikajana.AskelAvain(aj.Rako, r);
+                var rj = AjattelijaAikajana.Rako(ra.Koko, ra.KokoY, ra.Spread);
+                double e = aj.RakoEnergia != null ? AjattelijaAikajana.AvainArvo(aj.RakoEnergia, r) : ra.Energia;
+                var rp = B(ra.Paikka);
+                var rk = B(new[] { ra.Paikka[0] + ra.Suunta[0] * AjattelijaAikajana.RakoEtaisyys, ra.Paikka[1] + ra.Suunta[1] * AjattelijaAikajana.RakoEtaisyys,
+                    ra.Paikka[2] + ra.Suunta[2] * AjattelijaAikajana.RakoEtaisyys });
+                var rv = aj.RakoVari ?? new[] { 1.0, 1.0, 1.0 };
+                float keila = (float)(2 * rj.Kulma * 180 / Math.PI);
+                // three.js SpotLight penumbra 0 = kova keila; pieni pehmeys välttää smoothstepin nollavälin.
+                Spotti(2, rp, rk, keila, 0.002, new Vector3((float)rv[0], (float)rv[1], (float)rv[2]), (float)(Math.Max(0, e) * w * rj.Kerroin), varjo: true);
+                mat.SetVector(IdVKuvio, new Vector4((float)(ra.Koko / 2), (float)(ra.KokoY / 2), (float)rj.Sumeus, e > 0 ? 1 : 0));
+                if (e > 0) varjoRako.Piirra(mesh, levy ? levyMesh : null, rp, rk, keila);
+            }
+            else
+            {
+                Spotti(2, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0);
+                mat.SetVector(IdVKuvio, Vector4.zero);
+            }
+
+            // Lainaus: tykki, jonka energia-avainten väli sisältää ruudun (muuten seuraava, sammuksissa).
+            int j = AjattelijaAikajana.TykkiRuudussa(aj.Tykit, r);
+            SuuntaaTykki(j);
+            var t = tykitAj[j];
+            bool kiintea = aj.Kortti || t.T.Kiintea;
+            pa[0].w = kiintea || t.T.Vierii == null ? 0 : (float)AjattelijaAikajana.VieritysSiirto(t.T.Vierii, r, t.S0);
+            pb[0].w = tykki * (float)AjattelijaAikajana.AvainArvo(t.T.Energia, r) / 220f;
+
+            // Kaiut: kummassakin paikassa sen hetken kaiku (tai viimeksi ollut).
+            float sk = syke != null && syke.TryGetValue((int)Math.Round(r), out var sy) ? sy : 1f;
+            for (int s = 0; s < 2; s++)
+            {
+                int i = AjattelijaAikajana.KaikuPaikassa(aj.Kaiut, s, r);
+                int ind = kaikuIndeksi + s;
+                if (i < 0) { pb[ind].w = 0; continue; }
+                SuuntaaKaiku(i);
+                if (kaikuPaikassa[s] != i) { pb[ind].w = 0; continue; }
+                var k = aj.Kaiut[i];
+                double ka = k.Energia[0][0], kl = k.Energia[k.Energia.Count - 1][0];
+                pa[ind].w = (float)AjattelijaAikajana.KaikuSiirto(k.Liuku, new[] { ka, kl }, r);
+                pb[ind].w = (float)AjattelijaAikajana.AvainArvo(k.Energia, r) * w * KaikuVoima * sk;
+            }
+
+            // Väistökehät: enintään neljä samanaikaista (kaiut ja v14:n lainauskortit).
+            int n = 0;
+            foreach (var v in vaistot)
+            {
+                if (n >= 4) break;
+                if (!(r > v.ruudut[0] && r < v.ruudut[1])) continue;
+                vaistoT[n++] = new Vector4(v.kohde.x, v.kohde.y, v.kohde.z, (float)AjattelijaAikajana.VaistoSade(v.sade, v.ruudut, r));
+            }
+            for (; n < 4; n++) vaistoT[n] = Vector4.zero;
+            mat.SetVectorArray(IdVaisto, vaistoT);
+
+            // Savu (v13c, oletuksena päällä): 8 s:n silmukka, ruutu neljänä kanavana 8 × 8 laatassa.
+            if (savu != null && !SavuPois)
+            {
+                var (su, sv, kanava) = AjattelijaAikajana.SavuRuutu(r, aj.SavuKesto, aj.SavuFps, aj.SavuRuutuja);
+                mat.SetVector(IdSavuTila, new Vector4(1, (float)aj.SavuAla, (float)su, (float)sv));
+                mat.SetVector(IdSavuKanava, new Vector4(kanava == 0 ? 1 : 0, kanava == 1 ? 1 : 0, kanava == 2 ? 1 : 0, kanava == 3 ? 1 : 0));
+            }
+            else mat.SetVector(IdSavuTila, Vector4.zero);
+
+            // Taustavirta: porrastettu sisääntulo (v14) tai vaiheittainen kerroin, siirto = nopeus × ruudut virran alusta.
+            float vv = (float)aj.VirtaVoima;
+            double vk = AjattelijaAikajana.AvainArvo(aj.Virta, r);
+            bool kaikki = r >= porrasLoppu;
+            for (int i = 0; i < virta.Count; i++)
+            {
+                var v = virta[i];
+                if (aj.Porrastus)
+                {
+                    var (siirto, rintama, kerroin) = AjattelijaAikajana.PorrasTila(v, r, aj.PorrasHaivytys, aj.PorrasRintama, aj.PorrasReuna, vk, kaikki);
+                    pa[v.I].w = (float)siirto;
+                    pg[v.I].w = (float)rintama;
+                    pb[v.I].w = virtaVoima[i] * vv * (float)kerroin;
+                }
+                else
+                {
+                    pa[v.I].w = (float)(v.Nopeus * (r - virranAlku));
+                    pg[v.I].w = 0;
+                    pb[v.I].w = virtaVoima[i] * vv * (float)vk;
+                }
+            }
+            pMaara = kaikuIndeksi + 2;
+        }
+
         /// <summary>Kohta bystillä (web kohta): sivulta [y, z] säteellä x = 2 → −x tai edestä [x, z] säteellä y = −2 → +y.</summary>
         bool Kohta(double[] sade, double[] sivulta, out Vector3 p, out Vector3 n)
         {
@@ -411,7 +830,8 @@ namespace Matkakirja.Natiivi
                 var pj = tv.Projektorit[v.Projektori];
                 var kohde = B(pj.Kohde);
                 var paikka = kohde + B(pj.Suunta).normalized * (float)tv.Etaisyys;
-                AsetaProjektori(v.I, paikka, kohde, (float)tv.Etaisyys, (float)v.Korkeus, a.Atlas.Paikat[v.I], (float)pj.Ala, (float)tv.Blend,
+                // v14: nauha riviTila-kertaisena (kirjaimet atlaksessa 1 / riviTila -kokoisina; koko pinnalla ennallaan).
+                AsetaProjektori(v.I, paikka, kohde, (float)tv.Etaisyys, (float)(v.Korkeus * tv.RiviTila), a.Atlas.Paikat[v.I], (float)pj.Ala, (float)tv.Blend,
                     (float)v.Kulma, (float)v.VM, toisto: true);
                 virtaVoima.Add(tykki * (float)tv.VoimaKerroin * (float)v.Kirkkaus * RivitKerroin);
             }
@@ -464,7 +884,28 @@ namespace Matkakirja.Natiivi
         /// <summary>Ladattavat kaikukuvat (kierros, ämpäripolku) bystiin osuneille kaiuille; AsetaMallin jälkeen.</summary>
         public IEnumerable<(int kierros, string kuva)> Kaikukuvat()
         {
+            if (aj != null)
+            {
+                for (int j = 0; j < kaiutAj.Count; j++) yield return (j, kaiutAj[j].Kuva);
+                yield break;
+            }
             for (int k = 0; k < kaiut.Count; k++) if (kaiut[k] != null) yield return (k, kaiut[k].Kuva);
+        }
+
+        /// <summary>Savumaskin ämpäripolku (aikajana, ei "ajattelija savu 0"); null = ei savua.</summary>
+        public string SavuKuva => aj != null && !SavuPois ? aj.SavuKuva : null;
+
+        /// <summary>Savumaski latautui (web: ei mippejä, lineaarinen suodatus; ydin → 1 − vahvuus).</summary>
+        public void AsetaSavu(byte[] tavut)
+        {
+            if (tavut == null || aj == null || savu != null) return;
+            savu = LueKuva(tavut, false, "savu");
+            if (savu == null) return;
+            savu.wrapMode = TextureWrapMode.Clamp;
+            savu.filterMode = FilterMode.Bilinear;
+            mat.SetTexture("_Savu", savu);
+            double vahvuus = aj.SavuVahvuus, ydin = aj.SavuYdin;
+            mat.SetFloat("_SavuC0", vahvuus > 1 - ydin ? (float)((ydin - (1 - vahvuus)) / vahvuus) : 0f);
         }
 
         /// <summary>Lähin osuma bystiin (Möller–Trumbore kaikkiin kolmioihin); normaali säteen puolelle.</summary>
@@ -515,7 +956,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Webin asetaProjektori: projektorin kanta, atlasrivi, mitat ja keila. Palauttaa nauhan leveyden.</summary>
         float AsetaProjektori(int i, Vector3 paikka, Vector3 kohde, float etaisyys, float nauhaKork, AtlasRivi rivi, float ala,
             float blend = 0.45f, float kulma = 0, float vM = 0, float ca = 0, float syvyys = 0, bool toisto = false,
-            bool onKaiku = false, float kuvaLev = 0, float kuvaKork = 0)
+            bool onKaiku = false, float kuvaLev = 0, float kuvaKork = 0, int kaikuTila = 1)
         {
             var z = (paikka - kohde).normalized;
             var x = Vector3.Cross(z, Ylos).normalized;
@@ -541,13 +982,19 @@ namespace Matkakirja.Natiivi
             // Blender: spot_size = 2,4·atan(ala / 2 / etäisyys) koko kulmana, spot_blend reunan pehmeys.
             float puoli = 1.2f * Mathf.Atan(ala / 2f / etaisyys);
             pe[i] = new Vector4(paikka.x, paikka.y, paikka.z, Mathf.Cos(puoli));
-            pg[i] = new Vector4(Mathf.Cos(puoli * (1 - blend)), toisto ? 0 : 0.5f, onKaiku ? 1 : 0, 0);
+            // z: kaiku (1 kierrokset, 2 _Kaiku, 3 _Kaiku2; web pF.z), w: v14 rintama (asetetaan ruuduittain).
+            pg[i] = new Vector4(Mathf.Cos(puoli * (1 - blend)), toisto ? 0 : 0.5f, onKaiku ? kaikuTila : 0, 0);
             return nauhaLev;
         }
 
-        public void AsetaKipsi(byte[] tavut)
+        public void AsetaKipsi(byte[] tavut) => AsetaKipsi(KipsiKuva(tavut));
+
+        /// <summary>Esivalmisteltu kipsi (omistus näyttämölle).</summary>
+        public void AsetaKipsi(Texture2D t)
         {
-            if (tavut == null || (kipsi = LueKuva(tavut, true, "kipsi")) == null) return;
+            if (t == null) return;
+            if (kipsi != null) { Destroy(t); return; }
+            kipsi = t;
             kipsi.wrapMode = TextureWrapMode.Repeat;
             kipsi.anisoLevel = 8;
             mat.SetTexture("_Detalji", kipsi);
@@ -557,6 +1004,16 @@ namespace Matkakirja.Natiivi
         /// <summary>Kierroksen k kaikukuva latautui (Kaikukuvat()); kaikupaikka heti, jos kierros on käynnissä.</summary>
         public void AsetaKaiku(int k, byte[] tavut)
         {
+            if (aj != null)
+            {
+                if (tavut == null || !malliValmis || k < 0 || k >= kaiutAj.Count || kaiutAj[k].Tk != null) return;
+                var t = LueKuva(tavut, false, "kaiku" + k);
+                if (t == null) return;
+                t.wrapMode = TextureWrapMode.Clamp;
+                t.anisoLevel = 16;   // terävä myös viistossa (v13b)
+                kaiutAj[k].Tk = t;
+                return;
+            }
             if (tavut == null || !malliValmis || k < 0 || k >= kaiut.Count || kaiut[k] == null || kaiut[k].Tk != null) return;
             var tk = LueKuva(tavut, false, "kaiku" + k);
             if (tk == null) return;
@@ -631,20 +1088,23 @@ namespace Matkakirja.Natiivi
                 float h = (float)AjattelijaAikajana.Hehku(pr, r);
                 var vari = new Vector3((float)pr.Vari[0], (float)pr.Vari[1], (float)pr.Vari[2]);
                 Spotti(0, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0);
-                for (int i = 0; i < 2; i++)
+                // Reunavalot valopaikoissa 1–3 (v14: kolmas päälaelle, Linnanrakentaja 78b883452 v14.prologi_valot).
+                for (int i = 0; i < 3; i++)
                 {
                     var v = i < pr.Valot.Count ? pr.Valot[i] : null;
                     if (v == null) { Spotti(1 + i, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0); continue; }
                     Spotti(1 + i, B(v.Paikka), B(v.Kohde), v.Keila, v.Blend, vari, (float)v.Teho * w * h * KoeReuna);
                 }
-                Spotti(3, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0);
+                mat.SetVector(IdVKuvio, Vector4.zero);
                 mat.SetVector(IdTaivas, Vector4.zero); mat.SetVector(IdMaa, Vector4.zero);
                 kamera.backgroundColor = Color.black;
                 AsetaKamera(B(pr.Kamera.Paikka), B(pr.Kamera.Katse), pr.Kamera.Mm);
             }
+            else if (aj != null) AsetaAikajana(r, ref vinjettiKohde, ref lahde);
             else
             {
                 kamera.backgroundColor = TaustaVari;
+                mat.SetVector(IdVKuvio, Vector4.zero);
                 int kierros = KierrosRuudussa(r);
                 AsetaKierros(kierros);
                 var kt = kierrokset[kierros];
@@ -711,7 +1171,7 @@ namespace Matkakirja.Natiivi
                     float s = syke != null && syke.TryGetValue((int)Math.Round(r), out var sk) ? sk : 1f;
                     pb[kaikuIndeksi].w = (float)e.Voima * w * KaikuVoima * kaikuK * s;
                 }
-                if (hiipuu > 0) PiirraVarjo(valoP, tahtays);
+                if (hiipuu > 0) varjoAurinko.Piirra(mesh, null, valoP, tahtays, (float)a.AvainKeila);
 
                 // Päälause vierii −s0 → s0; teho nousee ja laskee 6 ruudussa. Taustavirta: häivytys ja siirto = nopeus × ruudut.
                 pa[0].w = (float)AjattelijaAikajana.VieritysSiirto(kt.Vieritys, r, kt.S0);
@@ -732,34 +1192,69 @@ namespace Matkakirja.Natiivi
             vinjettiAika = nyt;
             vinjetti = Mathf.MoveTowards(vinjetti, vinjettiKohde, dt / 1.2f);
             float turva = Screen.height > 0 ? Screen.safeArea.yMin / Screen.height : 0;
-            peiteMat.SetVector(IdPeite, new Vector4(Mathf.SmoothStep(0, 1, vinjetti), lahde, 0.12f + turva, 0));
+            // Peite (vinjetti ja lähderivin liukuväri): taustalle peitteen kolmio, bystille kipsin varjostin (sama lasku).
+            var peite = new Vector4(Mathf.SmoothStep(0, 1, vinjetti), lahde, 0.12f + turva, 0);
+            peiteMat.SetVector(IdPeite, peite);
+            mat.SetVector(IdPeite, peite);
+            mat.SetVector(IdHimmennys, peiteMat.GetVector(IdHimmennys));
+            var bg = kamera.backgroundColor;
+            peiteMat.SetVector(IdPeiteTausta, new Vector4(bg.r, bg.g, bg.b, 1));
         }
 
-        /// <summary>Avainvalon varjokartta valon perspektiivistä (vain kun valo liikkuu).</summary>
-        void PiirraVarjo(Vector3 valo, Vector3 kohde)
+        /// <summary>
+        /// Spottivalon varjokartta valon perspektiivistä (URP:n lisävalojen varjot ovat projektissa pois): bysti ja aikajanan
+        /// varjolevy (näkymätön, vain varjo) piirretään AjattelijaVarjo-varjostimella; uudelleen vain, kun valo tai levy muuttuu.
+        /// </summary>
+        sealed class VarjoKartta
         {
-            if (varjo == null)
+            readonly Material kipsi, varjoMat;
+            readonly int indeksi, koko;
+            readonly float lahi, kauko;
+            RenderTexture rt;
+            CommandBuffer komennot;
+            Vector3 paikka = new Vector3(float.NaN, 0, 0), kohde;
+            float keila;
+            Mesh levy;
+
+            public VarjoKartta(Material kipsi, Material varjoMat, int indeksi, int koko, float lahi, float kauko)
             {
-                varjo = new RenderTexture(VarjoKoko, VarjoKoko, 16, RenderTextureFormat.RHalf, RenderTextureReadWrite.Linear)
-                { name = "AjattelijaVarjo", filterMode = FilterMode.Point, wrapMode = TextureWrapMode.Clamp };
-                varjo.Create();
-                mat.SetTexture("_Varjo", varjo);
-                varjoKomennot = new CommandBuffer { name = "AjattelijaVarjo" };
+                this.kipsi = kipsi; this.varjoMat = varjoMat; this.indeksi = indeksi; this.koko = koko; this.lahi = lahi; this.kauko = kauko;
             }
-            if ((valo - varjoPaikka).sqrMagnitude < 1e-10f && (kohde - varjoKohde).sqrMagnitude < 1e-10f) return;
-            varjoPaikka = valo; varjoKohde = kohde;
-            var nakyma = Matrix4x4.TRS(valo, Quaternion.LookRotation(kohde - valo, Ylos), new Vector3(1, 1, -1)).inverse;
-            var proj = Matrix4x4.Perspective((float)a.AvainKeila, 1f, VarjoLahi, VarjoKauko);
-            mat.SetMatrix(IdVarjoVP, proj * nakyma);
-            mat.SetVector(IdVarjoTiedot, new Vector4(VarjoLahi, VarjoKauko, VarjoHarha, 1f / VarjoKoko));
-            varjoMat.SetMatrix(IdVarjoGpuVP, GL.GetGPUProjectionMatrix(proj, true) * nakyma);
-            varjoMat.SetVector(IdVarjoValo, new Vector4(valo.x, valo.y, valo.z, VarjoLahi));
-            varjoMat.SetFloat(IdVarjoKauko, VarjoKauko);
-            varjoKomennot.Clear();
-            varjoKomennot.SetRenderTarget(varjo);
-            varjoKomennot.ClearRenderTarget(true, true, Color.white);
-            varjoKomennot.DrawMesh(mesh, Matrix4x4.identity, varjoMat, 0, 0);
-            Graphics.ExecuteCommandBuffer(varjoKomennot);
+
+            public void Piirra(Mesh bysti, Mesh levyNyt, Vector3 valo, Vector3 kohdeNyt, float keilaAsteina)
+            {
+                string nimi = indeksi == 0 ? "" : "2";
+                if (rt == null)
+                {
+                    rt = new RenderTexture(koko, koko, 16, RenderTextureFormat.RHalf, RenderTextureReadWrite.Linear)
+                    { name = "AjattelijaVarjo" + nimi, filterMode = FilterMode.Point, wrapMode = TextureWrapMode.Clamp };
+                    rt.Create();
+                    kipsi.SetTexture("_Varjo" + nimi, rt);
+                    komennot = new CommandBuffer { name = "AjattelijaVarjo" + nimi };
+                }
+                if ((valo - paikka).sqrMagnitude < 1e-10f && (kohdeNyt - kohde).sqrMagnitude < 1e-10f && keila == keilaAsteina && levy == levyNyt) return;
+                paikka = valo; kohde = kohdeNyt; keila = keilaAsteina; levy = levyNyt;
+                var nakyma = Matrix4x4.TRS(valo, Quaternion.LookRotation(kohdeNyt - valo, Ylos), new Vector3(1, 1, -1)).inverse;
+                var proj = Matrix4x4.Perspective(keilaAsteina, 1f, lahi, kauko);
+                kipsi.SetMatrix(indeksi == 0 ? IdVarjoVP : Shader.PropertyToID("_Varjo2VP"), proj * nakyma);
+                kipsi.SetVector(indeksi == 0 ? IdVarjoTiedot : Shader.PropertyToID("_Varjo2Tiedot"), new Vector4(lahi, kauko, VarjoHarha, 1f / koko));
+                varjoMat.SetMatrix(IdVarjoGpuVP, GL.GetGPUProjectionMatrix(proj, true) * nakyma);
+                varjoMat.SetVector(IdVarjoValo, new Vector4(valo.x, valo.y, valo.z, lahi));
+                varjoMat.SetFloat(IdVarjoKauko, kauko);
+                komennot.Clear();
+                komennot.SetRenderTarget(rt);
+                komennot.ClearRenderTarget(true, true, Color.white);
+                komennot.DrawMesh(bysti, Matrix4x4.identity, varjoMat, 0, 0);
+                if (levyNyt != null) komennot.DrawMesh(levyNyt, Matrix4x4.identity, varjoMat, 0, 0);
+                Graphics.ExecuteCommandBuffer(komennot);
+            }
+
+            public void Tuhoa()
+            {
+                if (rt != null) { rt.Release(); Destroy(rt); }
+                komennot?.Release();
+                if (indeksi != 0 && varjoMat != null) Destroy(varjoMat);   // rakovalon oma kopio
+            }
         }
 
         public string Kuvaus() =>
@@ -767,18 +1262,23 @@ namespace Matkakirja.Natiivi
             + $", normaali {(normaali != null ? $"{normaali.format}{(normaali.isDataSRGB ? " sRGB" : " lin")}" : "-")}, atlas {(atlas != null ? $"{atlas.width}×{atlas.height} {atlas.format}" : "-")}"
             + $", kipsi {(kipsi != null ? (kipsi.isDataSRGB ? "sRGB" : "lin") : "-")}"
             + $", kaiut {(kaiut.Any(e => e != null) ? string.Join("/", kaiut.Where(e => e != null).Select(e => e.Tk != null ? $"{e.Tk.width}×{e.Tk.height}" : "-")) : "-")}"
-            + $", syke {syke?.Count ?? 0}, kierros {nykyKierros + 1}/{kierrokset.Count}, tykkejä {pMaara}{(Virhe != null ? ", virhe " + Virhe : "")}";
+            + (aj != null
+                ? $", aikajana {aj.Loppu:F0} r, lainauksia {tykitAj.Count} (kortti {(aj.Kortti ? "on" : "ei")}), kaiut {string.Join("/", kaiutAj.Select(k => k.Tk != null ? $"{k.Tk.width}×{k.Tk.height}" : "-"))}"
+                  + $", savu {(savu != null ? $"{savu.width}×{savu.height}" : "-")}, porrastus {(aj.Porrastus ? porrasLoppu.ToString("F0") : "-")}, seepia {(Seepia ? 1 : 0)}"
+                : $", kierros {nykyKierros + 1}/{kierrokset.Count}")
+            + $", syke {syke?.Count ?? 0}, tykkejä {pMaara}{(Virhe != null ? ", virhe " + Virhe : "")}";
 
         public void Tuhoa()
         {
+            bool julkaistu = kuva != null && NykyinenKuva == kuva;
             VapautaKuva();
-            NykyinenKuva = null;
-            KuvaVaihtui?.Invoke(null);
-            if (varjo != null) { varjo.Release(); Destroy(varjo); }
-            varjoKomennot?.Release();
-            foreach (var t in new UnityEngine.Object[] { normaali, kipsi, atlas, mesh, peiteMesh, mat, varjoMat, peiteMat })
+            if (julkaistu) { NykyinenKuva = null; KuvaVaihtui?.Invoke(null); }
+            varjoAurinko?.Tuhoa();
+            varjoRako?.Tuhoa();
+            foreach (var t in new UnityEngine.Object[] { normaali, kipsi, atlas, mesh, peiteMesh, mat, varjoMat, peiteMat, levyMesh, savu })
                 if (t != null) Destroy(t);
             foreach (var e in kaiut) if (e?.Tk != null) Destroy(e.Tk);
+            foreach (var e in kaiutAj) if (e.Tk != null) Destroy(e.Tk);
             if (this != null && gameObject != null) Destroy(gameObject);
         }
     }
