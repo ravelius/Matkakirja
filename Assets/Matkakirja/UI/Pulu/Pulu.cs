@@ -239,7 +239,7 @@ namespace Matkakirja.Natiivi
         {
             float h = alue.panel != null ? alue.panel.visualTree.layout.height : float.NaN;
             return $"robotti {kuva.RobottiNakyy}, AlaVara {AlaVara:0.0}, raja y {h - AlaVara:0.0}, puomin alin y {kuva.VarrenAlin:0.0} "
-                + $"(piirto {kuva.VarrenAlinVersio}), kypärä y {kuva.EvaAla + kuva.KyparaEvasta:0.0} ({(kuva.EvaAla + kuva.KyparaEvasta) / h * 100f:0} %), korjaus {robottiKorjaus:0.0}, bottom {alue.resolvedStyle.bottom:0.0}, wb {alue.worldBound}";
+                + $"(piirto {kuva.VarrenAlinVersio}), kypärä y {kuva.EvaAla + kuva.KyparaEvasta:0.0} ({(kuva.EvaAla + kuva.KyparaEvasta) / h * 100f:0} %), korjaus {robottiKorjaus:0.0}, lasi {(Lasi.HasValue ? $"{Lasi.Value.x:0} {Lasi.Value.y:0} r {Lasi.Value.z:0}" : "-")}, kyynär {kuva.KyynarEvasta:0.0}, bottom {alue.resolvedStyle.bottom:0.0}, wb {alue.worldBound}";
         }
 
         bool robottiAseteltu;
