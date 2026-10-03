@@ -230,6 +230,8 @@ namespace Matkakirja.Natiivi
         const float RobottiPuluVasen = 88f, RobottiAlin = 381f, RobottiReuna = 12f;
         /// <summary>Varren nivel (viewBox x 124, LiviaKuva.NivelX) ja oikean reunan tilassa nivelen etäisyys turvareunasta (pt).</summary>
         const float RobottiNivelX = 124f, OikeaVarsiPt = 40f;
+        /// <summary>Vaaka-Cupolan oikean reunan Pulun kypärän keskipiste ruudun korkeudesta (osuus; teippi ~54 %).</summary>
+        const float OikeaVaakaKypara = 0.64f;
         /// <summary>Testikomennon tila (astro kyyti tila): robottikäden paikka, puomin alin kohta ja palautteen korjaus.</summary>
         public string RobottiTila()
         {
@@ -266,6 +268,15 @@ namespace Matkakirja.Natiivi
             kuva.VarrenEste = VarrenEste;
             float alaRaja = VarrenEste.HasValue ? reunat.w + 8f : Mathf.Max(reunat.w + 8f, AlaVara);
             float perus = alaRaja + (RobottiAlin - 304f) * RobottiSkaala;
+            // Vaaka-Cupola oikeassa reunassa (Päätoimittaja 3.10.: kypärä osui Cupolan oranssin teipin ja saranan päälle oikeassa
+            // yläkulmassa): kypärän keskipiste OikeaVaakaKypara-korkeudelle (~19 pt teipin alle); lyhyt varsi saa jatkua ruudun
+            // alareunan yli oikeaan alakulmaan (ei ISS-lukeman eikä säätönapin kohdalla).
+            if (OikeallaReunalla && alue.panel != null && !float.IsNaN(kuva.KyparaEvasta) && !float.IsNaN(alue.worldBound.yMax))
+            {
+                var juuri = alue.panel.visualTree.layout;
+                if (juuri.width > juuri.height)
+                    perus = Mathf.Min(perus, juuri.height * (1f - OikeaVaakaKypara) + kuva.KyparaEvasta + (kuva.EvaAla - alue.worldBound.yMax));
+            }
             // Nousevalla puomilla (vaaka) kypärän keskipiste KyparaKorkeus-kohtaan ruudun korkeudesta (Päätoimittaja 3.10.: omistajan
             // "Pulu vasempaan alareunaan", kypärä 72–78 %), kuitenkin niin, että puomin kyynärpää jää 8 pt ruudun alareunan yläpuolelle.
             if (VarrenEste.HasValue && !float.IsNaN(kuva.KyparaEvasta) && !float.IsNaN(kuva.VarrenAlinEvasta) && alue.panel != null
