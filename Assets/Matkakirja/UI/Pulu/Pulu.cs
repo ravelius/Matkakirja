@@ -317,7 +317,7 @@ namespace Matkakirja.Natiivi
                 float ky = UiKerros.Tabletti ? lasi.y + LasiKyparaSateina * lasi.z : juuri.height * LasiKypara;
                 float d = ky - lasi.y, r = lasi.z - LasiVali * k;
                 float lasinOikea = r > Mathf.Abs(d) ? lasi.x + Mathf.Sqrt(r * r - d * d) : lasi.x;
-                float oikea = Mathf.Min(lasinOikea, alue.parent.layout.width - reunat.z - 8f);
+                float oikea = Mathf.Min(lasinOikea, alue.parent.layout.width - reunat.z - 8f * k);
                 float vasen = oikea - RobottiPuluOikea * RobottiSkaala;
                 // Varsi kehyksen taakse (Päätoimittaja 3.10.: pystyssä varsi päättyi keskelle lasia, kun vaakaosa jäi ruudun ulkopuolelle):
                 // jos lasin alareuna näkyy ruudulla kyynärpään kohdalla, Pulu laskee, kunnes kyynärpää on KyynarVara lasin reunan alla
@@ -329,7 +329,8 @@ namespace Matkakirja.Natiivi
                     {
                         float reunaY = lasi.y + Mathf.Sqrt(lasi.z * lasi.z - dxl * dxl) + KyynarVara * k;
                         float varsiKyparasta = kuva.KyynarEvasta - kuva.KyparaEvasta;
-                        if (reunaY < juuri.height) ky = Mathf.Max(ky, reunaY - varsiKyparasta);
+                        // Lasin reuna ruudun alapuolella (iPad pysty, kuva 23c3bab1: kyynärpää jäi tyngäksi lasiin): kyynärpää ruudun alareunan alle.
+                        ky = Mathf.Max(ky, Mathf.Min(reunaY, juuri.height + 8f * k) - varsiKyparasta);
                     }
                 }
                 alue.style.left = vasen;
@@ -362,7 +363,7 @@ namespace Matkakirja.Natiivi
         public Vector3? Lasi { get; set; }
 
         /// <summary>Ikkunan takana: kypärän keskipiste ruudun korkeudesta, väli lasin reunaan (pt) ja Pulun oikea reuna kuvassa (viewBox).</summary>
-        const float LasiKyparaSateina = 0.351f, LasiKypara = 0.62f, LasiVali = 12f, RobottiPuluOikea = 145f, KyynarVara = 40f;   // vara: lasin malli ~20 pt näkyvää reunaa ylempänä
+        const float LasiKyparaSateina = 0.351f, LasiKypara = 0.62f, LasiVali = 12f, RobottiPuluOikea = 158f, KyynarVara = 40f;   // vara: lasin malli ~20 pt näkyvää reunaa ylempänä
 
         /// <summary>Vaakatilan este robottikäden puomille (pienen paneelin vasen yläkulma, paneelin pisteinä); null = Pulu AlaVaran yllä.</summary>
         public Vector2? VarrenEste { get; set; }
