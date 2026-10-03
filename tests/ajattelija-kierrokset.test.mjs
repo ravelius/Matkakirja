@@ -10,10 +10,10 @@ const MOOTTORI = lue('../js/linssit/ajattelija.js');
 
 test('kierrokset jatkavat kierrosta 1 Blenderin v9-ruuduin; tarkistus vaatii kokonaiset kierrokset', () => {
   const kr = SOKRATES.kierrokset;
-  assert.equal(kr.loppu, 3330);   // 111,0 s × 30
+  assert.equal(kr.loppu, 3772);   // v12: v11 + 442 (alustava, sidotaan uuteen kertojan puheeseen)
   assert.deepEqual(kr.lista.map((k) => k.paalause), ['21d', '49b']);
-  assert.deepEqual(kr.lista.map((k) => k.vieritys), [[1480, 1755], [2330, 2595]]);   // v10: kirjaimet saapuvat liu'un lopussa
-  assert.deepEqual(kr.lista.map((k) => k.kaiku.ruudut), [[1870, 2300], [2655, 3250]]);
+  assert.deepEqual(kr.lista.map((k) => k.vieritys), [[1922, 2197], [2772, 3037]]);   // v10-sääntö, v12 +442
+  assert.deepEqual(kr.lista.map((k) => k.kaiku.ruudut), [[2312, 2742], [3097, 3692]]);   // sokrates-luvut-v12.json r2_kaiku, r3_kaiku
   assert.deepEqual(kr.lista.map((k) => k.siemen), [21, 49]);
   assert.equal(kr.kamera[0][0], SOKRATES.ajat.pito);
   assert.deepEqual(tarkistaAjattelija(SOKRATES), []);
@@ -33,7 +33,7 @@ test('kamerakäyrä kulkee avainten kautta ja pysähtyy tasaisiin avaimiin (AUTO
   assert.ok(k(5).paikka[0] > 0 && k(5).paikka[0] < 1);
   assert.equal(k(40).paikka[0], 3);   // lopun jälkeen viimeinen avain
   const sokrates = kamerakayra(SOKRATES.kierrokset.kamera);
-  assert.deepEqual(sokrates(3330).paikka, SOKRATES.otokset.rembrandt.paikka);   // paluu Rembrandt-otokseen
+  assert.deepEqual(sokrates(SOKRATES.kierrokset.loppu).paikka, SOKRATES.otokset.rembrandt.paikka);   // paluu Rembrandt-otokseen
 });
 
 test('moottori: yksi kaikupaikka suunnataan kierroksittain, ääni ja syke kierrosten raidoista, lappu lopussa', () => {
@@ -83,16 +83,34 @@ test('v11 (omistaja 3.10.2026): alkukuvat varjopuolelta, kaiku 1 lähempänä ja
   const { AJATTELIJA_KYTKIN } = await import('../js/linssit/ajattelija.js');
   for (const a of [SOKRATES, MARCUS]) {
     assert.ok(a.intro.otokset.every(([, c]) => c[0] <= 0), `${a.tunnus}: introkamera ei ole valon vastapuolella`);
-    assert.deepEqual(a.intro.valo[0][1], [1.0, -0.35, 0.45]);
     assert.ok(a.intro.tayte < 1);
     assert.equal(a.kaiku.lev, 0.07);
     assert.deepEqual(a.kaiku.kamera.matka, [0.15, 0.14]);
   }
-  assert.deepEqual(SOKRATES.kierrokset.kamera.find(([r]) => r === 2700)[1], [0.205, -0.1767, 0.337]);   // sokrates-luvut-v11.json
+  assert.deepEqual(MARCUS.intro.valo[0][1], [1.0, -0.35, 0.45]);   // Marcus v11
+  assert.deepEqual(SOKRATES.kierrokset.kamera.find(([r]) => r === 3142)[1], [0.205, -0.1767, 0.337]);   // v11:n 2700 → v12 +442
   assert.equal(AJATTELIJA_KYTKIN, 'ajattelijat/yhteiset/v2/kytkin-kaiku.mp3');
   assert.match(MOOTTORI, /maailma\.intensity = TAYTE \* hiipuu \* \(r < T\.nimi\[0\] \? \(a\.intro\.tayte \?\? 1\) : 1\);/);
 });
 
 test('auringon suunta normalisoidaan avainten välissä (valo pysyy 1,3 m:n päässä; vahingossa pois #3884:ssä)', () => {
   assert.match(MOOTTORI, /return e\.suunta\.clone\(\)\.lerp\(v\.suunta, pehmea\(valilla\(r, e\.r, v\.r\)\)\)\.normalize\(\);/);
+});
+
+test('v12 Sokrates (omistaja 3.10.2026 klo 04.5x; sokrates-luvut-v12.json a6308b998): pidempi intro, aurinko sivulta, Marcus ennallaan', async () => {
+  const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
+  const o = SOKRATES.intro.otokset;
+  assert.deepEqual(o.map(([r]) => r), [1, 520, 521, 627, 649, 673]);
+  assert.equal(o[0][4], 'BEZIER');   // yksi hidas ajo 1 → 520
+  assert.ok(o.slice(1).every((x) => x[4] === undefined));   // leikkaukset kuuluviin iskuihin
+  assert.deepEqual(SOKRATES.ajat.nimi, [724, 814]);
+  assert.deepEqual(SOKRATES.ajat.kysymys[0], 815);
+  assert.deepEqual(SOKRATES.ajat.kaiku, [1407, 1882]);
+  assert.deepEqual(SOKRATES.intro.valo.at(-1), [724, [0.95, -0.30, 0.55]]);
+  assert.equal(SOKRATES.intro.tayte, 0);
+  assert.deepEqual(SOKRATES.taustavirta.ajat, [904, 982, 1342, 1392]);
+  // Marcus ei muutu: omat kierroksen 1 ajat ja taustavirran ajat.
+  assert.deepEqual(MARCUS.ajat.nimi, [282, 372]);
+  assert.deepEqual(MARCUS.taustavirta.ajat, [462, 540, 900, 950]);
+  assert.match(MOOTTORI, /ajo: tapa === 'BEZIER' && seuraava \? kamerakayra\(\[\[r, c, q, mm\], seuraava\.slice\(0, 4\)\]\) : null,/);
 });

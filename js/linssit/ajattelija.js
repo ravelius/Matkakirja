@@ -415,7 +415,17 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     ? valilla(r, pr0.kytkin, pr0.taysi) ** 2.2 * (1 + 0.08 * Math.sin(r * 2.7)) : 1);
 
   // INTRO: leikkaukset ja auringon polku (avaimet; pehmeä siirtymä avainten välillä).
-  const otokset = a.intro.otokset.map(([r, c, q, mm]) => ({ r, paikka: b2t(THREE, c), katse: b2t(THREE, q), mm }));
+  /*
+   * Intron avaimet [ruutu, paikka, katse, mm, tapa?]: oletus CONSTANT (leikkaus iskuun), 'BEZIER' = hidas ajo seuraavaan
+   * avaimeen (Blender v12: yksi ajo profiilista ¾-kuvaan ruuduissa 1→520 ennen leikkauksia).
+   */
+  const otokset = a.intro.otokset.map(([r, c, q, mm, tapa], i, kaikki) => {
+    const seuraava = kaikki[i + 1];
+    return {
+      r, paikka: b2t(THREE, c), katse: b2t(THREE, q), mm,
+      ajo: tapa === 'BEZIER' && seuraava ? kamerakayra([[r, c, q, mm], seuraava.slice(0, 4)]) : null,
+    };
+  });
   const valoAvaimet = a.intro.valo.map(([r, s]) => ({ r, suunta: b2t(THREE, s).normalize() }));
   const tahtays = b2t(THREE, av.tahtays);
   function auringonSuunta(r) {
@@ -583,7 +593,10 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     if (r < T.nimi[0]) {
       let o = otokset[0];
       for (const x of otokset) if (r >= x.r) o = x;
-      ({ paikka, katse, mm } = o);
+      if (o.ajo) {
+        const k = o.ajo(r);
+        paikka = b2t(THREE, k.paikka); katse = b2t(THREE, k.katse); mm = k.mm;
+      } else ({ paikka, katse, mm } = o);
     } else if (r <= T.lahesty[0]) { paikka = remPaikka; katse = remKatse; mm = rem.mm; }
     else if (r <= T.lahesty[1]) {
       const kv = pehmea(valilla(r, T.lahesty[0], T.lahesty[1]));

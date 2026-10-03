@@ -50,10 +50,9 @@ test('vaihe 3: prologi, intron leikkaukset, nimi ja kysymys, kaiku ja äänirait
   const pr = SOKRATES.prologi;
   assert.deepEqual([pr.kytkin, pr.taysi, pr.loppu], [30, 58, 120]);
   assert.equal(pr.valot.length, 2);   // v9-palaute: vain reunavalot
-  assert.deepEqual(SOKRATES.intro.otokset.map(([r]) => r), [1, 15, 57, 119, 236, 259]);
-  assert.deepEqual(SOKRATES.ajat.nimi, [282, 372]);
-  assert.deepEqual(SOKRATES.ajat.kysymys, [373, 461]);
-  assert.deepEqual(SOKRATES.ajat.kaiku, [965, 1440]);
+  // Ruudut ja leikkaukset: v12 (tests/ajattelija-kierrokset.test.mjs); Marcus pitää v7–v11:n ajat.
+  assert.ok(SOKRATES.intro.otokset.length >= 2);
+  assert.ok(SOKRATES.ajat.nimi[0] < SOKRATES.ajat.kysymys[0] && SOKRATES.ajat.kysymys[0] < SOKRATES.ajat.lahesty[0]);
   assert.equal(SOKRATES.vuodet, 'n. 470–399 eaa.');
   // Linnanrakentaja 2.10.: kaikuvoima 20 (otsa), täyte 0,10 × aurinko, seepia 1/0,78/0,52.
   assert.equal(SOKRATES.kaiku.voima, 20);

@@ -51,7 +51,11 @@ export const MARCUS = Object.freeze({
       sivulta: [-0.08, 0.375], vino: [0.0, -0.45, -0.25], ala: 0.075, etaisyys: 0.6, korkeus: 0.02375,
     },
   },
-  ajat: { ...SOKRATES.ajat },
+  // Kierroksen 1 ajat (v7–v11; Sokrateen v12 siirsi omiaan +442, Marcus ei muutu 3.10.2026).
+  ajat: {
+    nimi: [282, 372], kysymys: [373, 461], lahesty: [462, 555], vieritys: [525, 895], proj: [555, 900],
+    lahde: [902, 950], kaariLoppu: 965, kaiku: [965, 1440], pito: 1450,
+  },
   prologi: SOKRATES.prologi,
   intro: {
     // v11 (omistaja 3.10.2026, marcus-luvut-v11.json): alkukuvat varjon puolelta kuten Sokrateella (ajattelija-sokrates.js intro).
@@ -69,6 +73,7 @@ export const MARCUS = Object.freeze({
   },
   taustavirta: {
     ...SOKRATES.taustavirta,
+    ajat: [462, 540, 900, 950],   // kierros 1 (Sokrateen v12: +442)
     // PAIKKAMERKIT (marcus-tekstit.json 2.10.): Sisältökirjurin katkelmat korvaavat nämä.
     rivit: [
       ["el", "times", "Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται· ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος."],

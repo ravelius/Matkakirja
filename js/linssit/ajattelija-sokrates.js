@@ -25,7 +25,7 @@ export const SOKRATES = Object.freeze({
   korkeus: 0.51,
   // Pään keskipiste (PAA) ja avainvalo (v7 "aurinko"): kova spotti 1,3 m:n päässä, viimeinen V7_VALO-suunta = Rembrandt.
   paa: [0.0, -0.06, 0.38],
-  avainvalo: { suunta: [0.70, -0.70, 0.85], etaisyys: 1.3, keila: 32, tahtays: [0.0, -0.06, 0.43] },
+  avainvalo: { suunta: [0.95, -0.30, 0.55], etaisyys: 1.3, keila: 32, tahtays: [0.0, -0.06, 0.43] },
   tausta: 0.012,           // maailman väri (lineaarinen)
   // Kamera: Blenderin pystysensori 24 mm → pystykenttä 2·atan(12 / polttoväli).
   otokset: {
@@ -62,9 +62,11 @@ export const SOKRATES = Object.freeze({
   },
   // Kierros 1 (v7/v10, 30 r/s): intro 1–281, Rembrandt + nimi 282–372, kysymys 373–461, lähestyminen otsalle,
   // 38a, lähderivi, kaiku (b-luenta) ja pito. Ääniraita alkaa ruudusta 0 (sokrates_aani.sh).
+  // V12 (omistaja 3.10.2026 klo 04.5x/05.0x; Linnanrakentaja sokrates-luvut-v12.json a6308b998): intro pitenee 442 ruutua
+  // (musiikki alusta leikkaamattomana, leikkaukset vain kuuluviin iskuihin); Rembrandt + nimi 724, kysymys 815.
   ajat: {
-    nimi: [282, 372], kysymys: [373, 461], lahesty: [462, 555], vieritys: [525, 895], proj: [555, 900],
-    lahde: [902, 950], kaariLoppu: 965, kaiku: [965, 1440], pito: 1450,
+    nimi: [724, 814], kysymys: [815, 903], lahesty: [904, 997], vieritys: [967, 1337], proj: [997, 1342],
+    lahde: [1344, 1392], kaariLoppu: 1407, kaiku: [1407, 1882], pito: 1892,
   },
   /*
    * PROLOGI (omistaja 2.10. 08.5x; kaikkien ajattelijoiden vakioaloitus, sokrates_bysti.py --prologi): 0–1 s pimeää →
@@ -88,17 +90,21 @@ export const SOKRATES = Object.freeze({
      * valon vastapuolelle (x → −|x|) ja aurinko kameran vastakkaiselta sivulta (1,0 / 0,05 / 0,5); avausruudussa valo
      * hieman edestä. Rembrandt + nimi (282) ennallaan.
      */
-    otokset: [   // [ruutu, kameran paikka, katsepiste, mm]
-      [1, [-0.62, -0.10, 0.38], [0.0, -0.10, 0.38], 50],
-      [15, [-0.26, -0.30, 0.72], [0.0, -0.09, 0.40], 35],
-      [57, [-0.22, -0.36, 0.13], [0.0, -0.10, 0.36], 28],   // v11 d7b51a99f: x ≤ −0,22 (parran alta ei enää lähes edestä)
-      [119, [-0.30, -0.27, 0.47], [0.0, -0.11, 0.43], 50],
-      [236, [-0.30, -0.34, 0.42], [0.03, -0.10, 0.38], 50],
-      [259, [-0.30, -0.36, 0.22], [0.02, -0.11, 0.30], 50],
+    /*
+     * V12 (omistaja 3.10.2026): yksi hidas ajo profiilista ¾-kuvaan (ruudut 1→520, BEZIER), sitten leikkaukset vain
+     * kuuluviin iskuihin (521, 627, 649, 673). Kamera varjon puolella (v11). Aurinko sivulta (omistajan toive):
+     * intro (1,0 / −0,45 / 0,5), Rembrandtista (724) eteenpäin (0,95 / −0,30 / 0,55). Tausta pimeä, ei täyttöä.
+     */
+    otokset: [   // [ruutu, kameran paikka, katsepiste, mm, tapa?]
+      [1, [-0.62, -0.1, 0.38], [0.0, -0.1, 0.38], 50, 'BEZIER'],
+      [520, [-0.5, -0.45, 0.42], [0.0, -0.1, 0.39], 50],
+      [521, [-0.3, -0.27, 0.47], [0.0, -0.11, 0.43], 50],
+      [627, [-0.3, -0.34, 0.42], [0.03, -0.1, 0.38], 50],
+      [649, [-0.3, -0.36, 0.22], [0.02, -0.11, 0.3], 50],
+      [673, [-0.26, -0.3, 0.72], [0.0, -0.09, 0.4], 35],
     ],
-    valo: [[1, [1.0, -0.35, 0.45]], [119, [1.0, 0.05, 0.5]], [236, [1.0, 0.05, 0.5]], [259, [1.0, 0.05, 0.5]], [282, [0.70, -0.70, 0.85]]],
-    // Maailman täyte alkukuvissa (osuus TAYTE:sta): Blenderin maailma 0,012 jättää varjopuolen lähes mustaksi.
-    tayte: 0.2,
+    valo: [[1, [1.0, -0.45, 0.5]], [723, [1.0, -0.45, 0.5]], [724, [0.95, -0.30, 0.55]]],
+    tayte: 0,
   },
   /*
    * KAIKU (v8–v10): kaikukuva samalla videotykillä otsalla b-luennan ajan, ainoana valona (aurinko ja maailma
@@ -160,40 +166,40 @@ export const SOKRATES = Object.freeze({
   kierrokset: {
     aani: { puhe: 'ajattelijat/sokrates/v1/kierrokset-puhe.mp3', musiikki: 'ajattelijat/sokrates/v1/kierrokset-musiikki.mp3' },
     syke: 'ajattelijat/sokrates/v1/syke-kierrokset.json',
-    loppu: 3330,
+    loppu: 3772,   // ALUSTAVA (v12 +442): kierrosten ajat sidotaan lopullisesti uuden kertojan puheen mukaan
     lista: [
       {
-        paalause: '21d', vieritys: [1480, 1755], lahde: [1762, 1810], virta: [1450, 1500, 1760, 1810], siemen: 21,
+        paalause: '21d', vieritys: [1922, 2197], lahde: [2204, 2252], virta: [1892, 1942, 2202, 2252], siemen: 21,
         kaiku: {
           kuva: 'ajattelijat/sokrates/v1/kaiku-oraakkeli.png',   // Kodros-maalarin kylix (PD), positiivinen
           kohde: { sade: [0.040, 0.374] },                       // vasen silmämuna
-          ruudut: [1870, 2300], vino: [-0.15, 0.0, 0.10], etaisyys: 0.5, lev: 0.03, voima: 15, liuku: 0.08,
+          ruudut: [2312, 2742], vino: [-0.15, 0.0, 0.10], etaisyys: 0.5, lev: 0.03, voima: 15, liuku: 0.08,
           tayte: { suunta: [-0.55, -0.55, 0.6] },                // vasemmalta edestä ylhäältä
         },
       },
       {
-        paalause: '49b', vieritys: [2330, 2595], lahde: [2602, 2650], virta: [2300, 2350, 2600, 2650], siemen: 49,
+        paalause: '49b', vieritys: [2772, 3037], lahde: [3044, 3092], virta: [2742, 2792, 3042, 3092], siemen: 49,
         kaiku: {
           kuva: 'ajattelijat/sokrates/v1/kaiku-kuolema.png',     // David 1787 (The Met, CC0), ilman maljaa
           kohde: { sivulta: [-0.08, 0.375] },                    // kasvojen sivu valon puolella
-          ruudut: [2655, 3250], vino: [0.0, -0.10, 0.05], etaisyys: 0.6, lev: 0.07, voima: 30, liuku: 0.05,
+          ruudut: [3097, 3692], vino: [0.0, -0.10, 0.05], etaisyys: 0.6, lev: 0.07, voima: 30, liuku: 0.05,
           tayte: { suunta: [0.45, 0.75, 0.55] },                 // takaviistosta oikealta
         },
       },
     ],
     kamera: [   // [ruutu, kameran paikka, katsepiste, mm]
-      [1450, [0.0301, -0.2589, 0.4641], [-0.002, -0.1304, 0.418], 35],
-      [1510, [-0.0983, -0.1598, 0.2678], [-0.0579, -0.1008, 0.352], 18],
-      [1810, [-0.0524, -0.1741, 0.2678], [-0.0521, -0.1026, 0.352], 18],
-      [1870, [0.0498, -0.1824, 0.3675], [0.04, -0.1083, 0.374], 50],
-      [2300, [0.0519, -0.1823, 0.3696], [0.04, -0.1083, 0.374], 50],
-      [2360, [0.1078, -0.1321, 0.284], [0.0689, -0.0826, 0.375], 18],
-      [2650, [0.1342, -0.0864, 0.284], [0.0719, -0.0774, 0.375], 18],
-      [2700, [0.205, -0.1767, 0.337], [0.0704, -0.08, 0.375], 35],
-      [3250, [0.2011, -0.1641, 0.3393], [0.0724, -0.0765, 0.375], 35],
-      // Paluu Rembrandt-otokseen: webin oma otokset.rembrandt (Blender v10: [-0.36, -1.24, 0.24] → [-0.075, -0.06, 0.39]).
-      [3310, [-0.3, -1.02, 0.25], [-0.06, -0.06, 0.4], 35],
-      [3330, [-0.3, -1.02, 0.25], [-0.06, -0.06, 0.4], 35],
+      [1892, [0.0301, -0.2589, 0.4641], [-0.002, -0.1304, 0.418], 35],
+      [1952, [-0.0983, -0.1598, 0.2678], [-0.0579, -0.1008, 0.352], 18],
+      [2252, [-0.0524, -0.1741, 0.2678], [-0.0521, -0.1026, 0.352], 18],
+      [2312, [0.0498, -0.1824, 0.3675], [0.04, -0.1083, 0.374], 50],
+      [2742, [0.0519, -0.1823, 0.3696], [0.04, -0.1083, 0.374], 50],
+      [2802, [0.1078, -0.1321, 0.284], [0.0689, -0.0826, 0.375], 18],
+      [3092, [0.1342, -0.0864, 0.284], [0.0719, -0.0774, 0.375], 18],
+      [3142, [0.205, -0.1767, 0.337], [0.0704, -0.08, 0.375], 35],
+      [3692, [0.2011, -0.1641, 0.3393], [0.0724, -0.0765, 0.375], 35],
+      // Paluu Rembrandt-otokseen: webin oma otokset.rembrandt.
+      [3752, [-0.3, -1.02, 0.25], [-0.06, -0.06, 0.4], 35],
+      [3772, [-0.3, -1.02, 0.25], [-0.06, -0.06, 0.4], 35],
     ],
   },
   /*
@@ -220,8 +226,8 @@ export const SOKRATES = Object.freeze({
       { kohde: [-0.09, -0.04, 0.38], suunta: [-1.0, -0.35, 0.15], ala: 0.22, riveja: 3 }, // vasen ohimo ja poski
       { kohde: [0.09, -0.04, 0.38], suunta: [1.0, -0.35, 0.15], ala: 0.22, riveja: 3 },  // oikea ohimo ja poski
     ],
-    // Kierros 1 (virta1): häivytys sisään 462–540, täysi, häivytys ulos 900–950.
-    ajat: [462, 540, 900, 950],
+    // Kierros 1 (virta1): häivytys sisään, täysi, häivytys ulos (v12: v11 + 442 ruutua).
+    ajat: [904, 982, 1342, 1392],
     // Sisältökirjurin 18 varmennettua kreikkalaista katkelmaa (Stephanus-viite) ja 2 suomenkielistä (21d, Kriton 49b),
     // fontit riveittäin (Linnanrakentaja tekstit.json taustarivit 08efbe694; docs/raportit/sokrates-taustavirta-20261002.json).
     rivit: [
