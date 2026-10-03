@@ -148,8 +148,8 @@ def lauta_viikinkilaiva():
     vm.inputs['Rotation'].default_value = (0, 0, 0.06)
     nt.links.new(tc.outputs['Object'], vm.inputs['Vector'])
     vo = nt.nodes.new('ShaderNodeTexVoronoi'); vo.feature = 'F1'; vo.distance = 'EUCLIDEAN'
-    vo.inputs['Randomness'].default_value = 0.8; nt.links.new(vm.outputs['Vector'], vo.inputs['Vector'])
-    bu = nt.nodes.new('ShaderNodeBump'); bu.inputs['Strength'].default_value = 0.35; bu.inputs['Distance'].default_value = 0.008
+    vo.inputs['Randomness'].default_value = 1.0; nt.links.new(vm.outputs['Vector'], vo.inputs['Vector'])
+    bu = nt.nodes.new('ShaderNodeBump'); bu.inputs['Strength'].default_value = 0.12;   # v2: 0,35 toistui aaltokuviona bu.inputs['Distance'].default_value = 0.008
     nt.links.new(vo.outputs['Distance'], bu.inputs['Height']); nt.links.new(_normaali(nt, k, 0.9), bu.inputs['Normal'])
     nt.links.new(bu.outputs['Normal'], b.inputs['Normal'])
     return m
@@ -191,7 +191,7 @@ def lasi(nimi, vari):
     näyttäisi irrallisessa nappulakuvassa taustan harmaana renkaana laudan päällä."""
     m, nt, b = _solmut(nimi)
     b.inputs['Base Color'].default_value = (*vari, 1); b.inputs['Roughness'].default_value = 0.14
-    b.inputs['Coat Weight'].default_value = 1.0; b.inputs['Coat Roughness'].default_value = 0.12; b.inputs['IOR'].default_value = 1.52
+    b.inputs['Coat Weight'].default_value = 1.0; b.inputs['Coat Roughness'].default_value = 0.22; b.inputs['IOR'].default_value = 1.52
     return m
 
 
@@ -382,7 +382,7 @@ def valot():
     w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True
     w.node_tree.nodes['Background'].inputs['Color'].default_value = (0.30, 0.26, 0.22, 1)
     w.node_tree.nodes['Background'].inputs['Strength'].default_value = 0.35
-    d = bpy.data.lights.new('avain', 'AREA'); d.energy = 42; d.size = 1.2; d.color = (1.0, 0.92, 0.82)
+    d = bpy.data.lights.new('avain', 'AREA'); d.energy = 42; d.shape = 'DISK'; d.size = 1.2; d.color = (1.0, 0.92, 0.82)   # v2: pyöreä → lasin kiilto ei neliönä
     o = bpy.data.objects.new('avain', d); sc.collection.objects.link(o)
     o.location = (-0.9, 0.9, 1.6); o.rotation_euler = (Vector((0, 0, 0)) - o.location).to_track_quat('-Z', 'Y').to_euler()
 
