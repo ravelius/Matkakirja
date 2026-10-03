@@ -1049,6 +1049,24 @@ def tausta_rivi(nimi, p, suunta, etaisyys, ala, kuva, kork, kulma, v_m, nopeus, 
     out = nt.nodes.new('ShaderNodeOutputLight'); nt.links.new(em.outputs['Emission'], out.inputs['Surface'])
     o = bpy.data.objects.new(nimi, d); bpy.context.scene.collection.objects.link(o)
     o.location = Vector(p) + suunta.normalized() * etaisyys; kohdista(o, p)
+    voimakkuus = t.outputs['Color']
+    if VIRTA_VAISTO:   # v13c (omistaja 3.10. 08.0x): tekstivirta väistää kaikukuvan alueen sen näkymisen ajan
+        bpy.context.view_layer.update(); inv = o.matrix_world.inverted()
+        for q_, sade_, a_, l_ in VIRTA_VAISTO:
+            lq = inv @ Vector(q_)
+            if lq.z >= -1e-3: continue
+            cx, cy, rr = lq.x / -lq.z * etaisyys, lq.y / -lq.z * etaisyys, sade_ * etaisyys / -lq.z
+            if abs(cx) > ala + rr or abs(cy) > ala + rr: continue
+            sade_n = nt.nodes.new('ShaderNodeValue')
+            for r_, v_ in ((1, 0.0), (a_, 0.0), (a_ + 12, rr), (l_ - 12, rr), (l_, 0.0)):
+                sade_n.outputs['Value'].default_value = v_; sade_n.outputs['Value'].keyframe_insert('default_value', frame=r_)
+            et = m('SQRT', m('ADD', m('POWER', m('SUBTRACT', x_, cx), 2.0), m('POWER', m('SUBTRACT', y_, cy), 2.0)))
+            ulko = m('MINIMUM', m('MAXIMUM', m('DIVIDE', m('SUBTRACT', et, m('MULTIPLY', sade_n.outputs['Value'], 0.85)),
+                                                  m('MAXIMUM', m('MULTIPLY', sade_n.outputs['Value'], 0.15), 1e-5)), 0.0), 1.0)
+            voimakkuus = m('MULTIPLY', voimakkuus, ulko)
+        em_ = [n_ for n_ in nt.nodes if n_.type == 'EMISSION'][0]
+        for l_ in list(em_.inputs['Strength'].links): nt.links.remove(l_)
+        nt.links.new(m('MULTIPLY', voimakkuus, rajaus), em_.inputs['Strength'])
     sv = siirto.outputs['Value']; r0, r3 = ruudut[0], ruudut[3]
     for r, v_ in ((r0, 0.0), (r3, nopeus * (r3 - r0))):
         sv.default_value = v_; sv.keyframe_insert('default_value', frame=r)
@@ -1088,6 +1106,7 @@ PAAN_PROJEKTORIT = (  # v10 (omistaja 2.10. 08.4x): taustavirta koko pään alue
 
 
 VIRTA_AVAIMET = None   # v13: taustavirran (ruutu, kerroin) -avaimet koko kohtaukselle
+VIRTA_VAISTO = []      # v13c: [(kaiun kohdepiste, säde m, alku, loppu)] — virta väistää kaikukuvan
 V11_VIRTA_MS = 0.025   # v11: taustavirran yhteinen nopeus pinnalla (m/s); v10:n mediaani 26 mm/s
 VIRTA_LOKI = []        # v11: rivikohtaiset nopeudet --luvut-tiedostoon (web)
 
@@ -1135,7 +1154,8 @@ def syke_kaikuun(valo, ikkuna, voima, syke, askel=2):
 # kamera niin kaukana, että kasvojen ääriviiva kehystää kaiun.
 KERTOJA_OLETUS = '/Users/Shared/Claude/proto-3d/_lahteet/sokrates/kertoja-aanikoe-v4/Iv4-william-oletus-ajat.json'
 V13_KERTOJA_ALKAA = 28.0
-V13_NAUHA_MS = 0.055   # lainausnauhojen nopeus pinnalla (m/s); nauha näkyy lainauksen ajan ±0,6 s
+V13_NAUHA_MS = 0.055
+V13C = '--v13c' in A   # v13c (omistaja 3.10. 08.0x): rajatut kaikuhahmot viistosti, ei reunahehkua, virta väistää kaiun   # lainausnauhojen nopeus pinnalla (m/s); nauha näkyy lainauksen ajan ±0,6 s
 
 
 def v13_ajat():
@@ -1152,8 +1172,11 @@ def v13_ajat():
 
 
 def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
-    global VIRTA_AVAIMET
+    global VIRTA_AVAIMET, VIRTA_VAISTO
     polku, kesto, K, W = v13_ajat()
+    if V13C:   # reunahehku tuli kipsin pinnanalaisesta sironnasta (6 mm) → ohuempi, kuva ei leviä reunan yli
+        b_ = bpy.data.materials['kipsi'].node_tree.nodes['Principled BSDF']
+        b_.inputs['Subsurface Weight'].default_value = 0.10; b_.inputs['Subsurface Radius'].default_value = (0.0015, 0.001, 0.0008)
     T = lambda s_: V13_KERTOJA_ALKAA + s_                 # kertojan aika → kohtauksen aika (s)
     F = lambda t_: round(t_ * 30) + 1                     # kohtauksen aika → ruutu (ruutu 1 = 0,0 s = musiikin alku)
     k_ = lambda nro, i_: T(K[nro][i_])
@@ -1170,13 +1193,15 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     # --- kaiut (keskisävy, viisto projektio: kipsin muodot varjostavat kuvaa) ---
     kaiut = []
     def kaiku(nimi, kuva, q, nn, viisto, lev, a_t, l_t, voima, haiv=45):
+        kk_ = bpy.data.images.load(os.path.join(gobot, kuva), check_existing=True)
+        VIRTA_VAISTO.append((tuple(q), 0.55 * math.hypot(lev, lev * kk_.size[1] / kk_.size[0]), F(a_t), F(l_t)))
         kaiku_projektori(nimi, q, (nn + viisto).normalized(), 0.6, lev, os.path.join(gobot, kuva), (F(a_t), F(l_t)), voima,
                          liuku=0.02, haivytys=haiv, varjo=0.0)   # v13b: pistemäinen projektori = kuva terävä pinnalla
         kaiut.append({'nimi': nimi, 'kuva': kuva, 'alku_s': round(a_t, 2), 'loppu_s': round(l_t, 2)})
     jum_t = T(W.get('jumalankuvia', K['01'][1] - 1.4))
     kaiku('kaiku-jumala', 'kaiku-jumala.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, jum_t, k_('02', 0) + 1.2, 9.0, haiv=30)   # himmeä
     kaiku('kaiku-sotilas', 'kaiku-sotilas.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, k_('02', 0), k_('03', 0) + 0.8, 26.0)
-    kaiku('kaiku-oraakkeli', 'kaiku-oraakkeli.png', sp, sn, SIVU * 0.15 + YLOS * 0.12, 0.07, k_('04', 0) + 0.3, k_('05', 0) - 0.2, 32.0)
+    kaiku('kaiku-oraakkeli', 'kaiku-oraakkeli.png', sp, sn, (SIVU * 0.55 + YLOS * 0.30) if V13C else (SIVU * 0.15 + YLOS * 0.12), 0.08 if V13C else 0.07, k_('04', 0) + 0.3, k_('05', 0) - 0.2, 32.0)
     illan_t = T(W.get('Illan', K['10'][0])); rivi_t = T(W.get('riviäkään', K['10'][0] + 6.8))
     kaiku('kaiku-david', 'kaiku-kuolema.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.11, illan_t, rivi_t + 0.3, 70.0, haiv=24)
     # --- lainaukset nauhoina (vierivät tasaisella nopeudella, näkyvät lainauksen ajan) ---
@@ -1233,6 +1258,12 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
            (k_('04', 0), 0), (k_('05', 0) - 0.8, 0), (k_('05', 0), 1), (a6, 1), (a6 + 0.6, 2.2), (l6, 2.2), (l6 + 0.6, 1),
            (k_('08', 0) - 0.05, 1), (k_('08', 0), 0), (k_('09', 0) - 0.8, 0), (k_('09', 0), 1), (illan_t, 1), (illan_t + 0.6, 0),   # Davidin aikana vain kaiku; "riviäkään" → paljas kipsi
            (rivi_t, 0), (rivi_t + 0.4, 0), (elavat_t, 0), (elavat_t + 0.8, 1.8), (loppu_t - 0.04, 1.8), (loppu_t, 0)]
+    if V13C:   # virta kulkee koko kertomuksen ajan ja väistää kaiut; pois vain 08 (kova valo) ja "riviäkään"–"elävät yhä"
+        kk_ = [(T(0), 0), (T(0) + 1.0, 1), (a6, 1), (a6 + 0.6, 2.2), (l6, 2.2), (l6 + 0.6, 1), (k_('08', 0) - 0.05, 1), (k_('08', 0), 0),
+               (k_('09', 0) - 0.8, 0), (k_('09', 0), 1), (rivi_t, 1), (rivi_t + 0.4, 0), (elavat_t, 0), (elavat_t + 0.8, 1.8),
+               (loppu_t - 0.04, 1.8), (loppu_t, 0)]
+    else:
+        VIRTA_VAISTO = []
     VIRTA_AVAIMET = [(1, 0.0)] + [(F(t_), k) for t_, k in kk_]
     paan_virta('virta', (F(T(0)), F(T(0)) + 30, LOPPU - 1, LOPPU), V7_TYKKI, tausta, (0.009, 0.012, 0.015, 0.019), 38)
     # --- kamera: leikkaukset 04, 08 ja 10; muuten yksi hidas ajo ---

@@ -1,13 +1,23 @@
 # Sokrates v8: kaikukuva projektorille (Linnanrakentaja 2.10.2026), PIL. Valoa vain sisällössä (omistaja: ei taustavuotoa).
-#   python3 sokrates_kaiku.py <lähde> <ulos.png> <viiva|kuva|keski|tondo> x0 y0 x1 y1
+#   python3 sokrates_kaiku.py <lähde> <ulos.png> <viiva|kuva|keski|tondo|rajattu> [x0 y0 x1 y1] x0 y0 x1 y1
 # KAIKKI KAIUT POSITIIVISINA (omistaja 2.10. 11.1x). viiva: viivapiirros/kaiverrus positiivina, tummat viivat vaalealla
 #        (Codexin musta viiva läpinäkyvällä taustalla yhdistetään ensin valkoiselle paperille). kuva: maalaus/valokuva,
 #        tummat taustat mustaksi tasokäyrällä (sisältö jää valoksi). Molemmissa pehmeä soikea maski (ei suorakaidetta).
 import sys
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageOps
 
-lahde, ulos, tapa = sys.argv[1], sys.argv[2], sys.argv[3]; x0, y0, x1, y1 = map(int, sys.argv[4:8])
+lahde, ulos, tapa = sys.argv[1], sys.argv[2], sys.argv[3]
 src = Image.open(lahde)
+x0, y0, x1, y1 = map(int, sys.argv[4:8]) if len(sys.argv) >= 8 else (0, 0) + src.size
+if tapa == 'rajattu':
+    # v13c (omistaja 3.10. 08.0x, Zeuksen linja): rajattu hahmo ilman taustaa ja kehystä — läpinäkyvyys on maski,
+    # sävyt S-käyrällä kuten keski-tilassa, ei soikiota, ei sumennusta (reuna ei hehku)
+    import math as _m
+    rgba = src.convert('RGBA').crop((x0, y0, x1, y1)); rgba.thumbnail((2048, 2048), Image.LANCZOS)
+    alfa = rgba.getchannel('A'); im = ImageOps.autocontrast(rgba.convert('L'), cutoff=1.0, mask=alfa.point(lambda v: 255 if v > 128 else 0))
+    s_ = lambda x: 0.5 + 0.5 * _m.tanh(2.6 * (x - 0.5)) / _m.tanh(1.3)
+    im = im.point(lambda v: int(8 + 247 * s_(v / 255))).filter(ImageFilter.UnsharpMask(1.5, 80, 2))
+    ImageChops.multiply(im, alfa).save(ulos); print('KAIKU', ulos, tapa, im.size); sys.exit()
 if src.mode in ('RGBA', 'LA') or 'transparency' in src.info:
     tausta = Image.new('RGBA', src.size, (255, 255, 255, 255)); tausta.alpha_composite(src.convert('RGBA')); src = tausta
 im = ImageOps.autocontrast(src.convert('L').crop((x0, y0, x1, y1)), cutoff=1)
