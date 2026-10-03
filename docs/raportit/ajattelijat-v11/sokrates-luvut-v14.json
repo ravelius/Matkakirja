@@ -346,7 +346,7 @@
      -0.1083,
      0.374
     ],
-    "sade_m": 0.0989,
+    "sade_m": 0.0626,
     "ruudut": [
      1075,
      1449
@@ -358,7 +358,7 @@
      -0.08,
      0.375
     ],
-    "sade_m": 0.1018,
+    "sade_m": 0.1,
     "ruudut": [
      2496,
      2711
@@ -1641,7 +1641,7 @@
     0.7682,
     -0.1163
    ],
-   "keila_aste": 16.96,
+   "keila_aste": 15.52,
    "spot_blend": 0.3,
    "vari": [
     1.0,
@@ -1674,8 +1674,8 @@
     "kaiku-kuolema.png",
     "savu-0110.png"
    ],
-   "lev_m": 0.11,
-   "kork_m": 0.1488,
+   "lev_m": 0.136,
+   "kork_m": 0.12073,
    "liuku_uv": 0.02,
    "haivytys_ruutua": 24
   },
@@ -1739,7 +1739,7 @@
     0.8263,
     -0.2695
    ],
-   "keila_aste": 18.33,
+   "keila_aste": 9.26,
    "spot_blend": 0.3,
    "vari": [
     1.0,
@@ -1773,7 +1773,7 @@
     "savu-0156.png"
    ],
    "lev_m": 0.08,
-   "kork_m": 0.16094,
+   "kork_m": 0.08095,
    "liuku_uv": 0.02,
    "haivytys_ruutua": 45
   },
