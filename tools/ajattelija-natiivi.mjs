@@ -167,7 +167,12 @@ for (const tunnus of kohteet) {
   const atlasTiedosto = join(ULOS, `${tunnus}-atlas.bytes`);
   writeFileSync(atlasTiedosto, png);
   varmistaMeta(atlasTiedosto);
-  const data = { ...a, atlas: { tiedosto: `Ajattelijat/${tunnus}-atlas`, leveys: tulos.leveys, korkeus: tulos.korkeus, paikat: tulos.paikat } };
+  // kuvalahteet viimeisenä kenttänä atlaksen jälkeen (natiivin proto 4f8456c6 -muoto, tavu tavulta).
+  const { kuvalahteet, ...muut } = a;
+  const data = {
+    ...muut, atlas: { tiedosto: `Ajattelijat/${tunnus}-atlas`, leveys: tulos.leveys, korkeus: tulos.korkeus, paikat: tulos.paikat },
+    ...(kuvalahteet ? { kuvalahteet } : {}),
+  };
   const json = join(ULOS, `${tunnus}.json`);
   writeFileSync(json, `${JSON.stringify(data, null, 1)}\n`);
   varmistaMeta(json);

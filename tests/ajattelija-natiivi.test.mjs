@@ -35,7 +35,7 @@ test('aikajana luvuista on kirjasto: sama muunnos CLI:lle ja natiivin muuntimell
   assert.deepEqual(aj.virta, [[10, 1], [20, 1]]);
   assert.match(lue('../tools/ajattelija-aikajana.mjs'), /import \{ aikajanaLuvuista \} from '\.\/ajattelija-aikajana-luvut\.mjs';/);
   const natiivi = lue('../tools/ajattelija-natiivi.mjs');
-  assert.match(natiivi, /return \{ \.\.\.s, aikajana: \{ \.\.\.gen, \.\.\.omat \} \};/);   // generoitu ensin kuten webissä
+  assert.match(natiivi, /return \{ \.\.\.s, aikajana: \{ \.\.\.gen, \.\.\.omat \}, \.\.\.\(kuvalahteet\.length \? \{ kuvalahteet \} : \{\}\) \};/);   // generoitu ensin kuten webissä
   assert.match(natiivi, /await import\('\/atlas\.js'\)/);
   // Kaikukuvien lähteet luvuista ajattelijan juureen (natiivi AjattelijaData.Kuvalahteet, 4.10.2026).
   assert.match(natiivi, /const kuvalahteet = \(d\.v13\?\.kaiut \?\? \[\]\)\.filter\(\(k\) => k\.lahde\)\.map\(\(k\) => \(\{ kuva: k\.kuva, \.\.\.k\.lahde \}\)\);/);
