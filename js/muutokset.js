@@ -13,6 +13,11 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2593, teksti: 'Joet rauhallisiksi, järvien kevyt ranta ja raet… (#3910)' },
+  { v: 2592, teksti: 'Tyylikirja: linssien hampurilaislista, työkalu (#3909)' },
+  { v: 2591, teksti: 'Ääniputki: lyhyt isku tasoon (#3907)' },
+  { v: 2590, teksti: 'Myllyn laudat: majatalo, luostari ja viikinkila… (#3906)' },
+  { v: 2589, teksti: 'Myllyn nappulaäänet: tehostelista (#3815)' },
   { v: 2588, teksti: 'Ajattelijat v14: Sokrates ja Marcus (#3902)' },
   { v: 2587, teksti: 'Ajattelijat: Sokrateen tekstiprojektorit väritt… (#3900)' },
   { v: 2586, teksti: 'Ajattelijat: Sokrates v12–v13 (#3897)' },

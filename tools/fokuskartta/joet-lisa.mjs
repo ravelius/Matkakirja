@@ -16,13 +16,23 @@ import { join } from 'node:path';
 
 export const EUROOPPA = { lon0: -25, lon1: 45, lat0: 34, lat1: 72 };
 
+/*
+ * TARKEMMAT JOET VAIN OMILLE TASOILLEEN (omistaja 29.9.2026 vientikuvista:
+ * "Voisiko nuo tarkemmat jokikuvat piirtää vain omalle tasolleen. Voi olla
+ * vaara, että ne hyppäävät liikaa."). Kynnykset siirtyivät syvemmälle:
+ * kaukaa vain suurimmat virrat, sivujoet tulevat lähemmäs zoomatessa.
+ * Valinta on HIERARKKINEN — joki, joka on näkyvissä tasolla z, on näkyvissä
+ * kaikilla syvemmillä tasoilla samassa kohdassa; syvemmällä tulee vain
+ * lisää, mikään ei vaihda paikkaa. Viivataso päättyy z8:aan (z9–z10
+ * venyttävät z8:n), joten alle 5 000 km²:n uomat eivät tule kartalle.
+ */
 /** valuma km² → pienin px/laudan yksikkö, jolla joki piirretään. */
 export function joenMinPx(valuma) {
-  if (valuma >= 100000) return 0;
-  if (valuma >= 30000) return 3.5;      // z6
-  if (valuma >= 10000) return 7;        // z7
-  if (valuma >= 3000) return 14;        // z8
-  return 28;                            // z9+
+  if (valuma >= 150000) return 0;      // kaikki tasot (Tonava, Rein, Volga…)
+  if (valuma >= 50000) return 3.5;      // z6
+  if (valuma >= 15000) return 7;        // z7
+  if (valuma >= 5000) return 14;        // z8
+  return 28;                            // z9+ eli ei viivatasolle
 }
 
 const osuusAlueella = (pisteet, a) => pisteet.filter(([lon, lat]) => lon >= a.lon0 && lon <= a.lon1
@@ -65,9 +75,16 @@ export const joenLeveysM = (valuma) => 5 * Math.max(300, valuma) ** 0.4;
  * @param {Array<{pisteet:Array<[number,number]>}>} joet laudan koordinaatit
  * @param {string} kansio ISO.geojson-tiedostot (lon/lat LineString, valuma_km2)
  * @param {object} kaava laudanProjektio
- * @param {{ alue?: object, onMeri?: (lon:number, lat:number)=>boolean }} asetukset
+ * JOKI EI KULJE JÄRVEN PÄÄLLÄ (omistaja 29.9.2026: "yhdessä kuvassa joki
+ * menee järven päältä, mikä on myös oudon näköistä" — Tonava/Leitha
+ * Neusiedler Seen yli). `onJarvi` pilkkoo uoman järven kohdalta samalla
+ * idiomilla kuin `onMeri`: järven sisällä oleva piste katkaisee jakson.
+ * Leikkaus tehdään tässä eikä piirrossa, jotta pohja, viivataso ja natiivin
+ * vektorit saavat saman geometrian.
+ * @param {{ alue?: object, onMeri?: (lon:number, lat:number)=>boolean,
+ *   onJarvi?: (lon:number, lat:number)=>boolean }} asetukset
  */
-export function korvaaEuroopanJoet(joet, kansio, kaava, { alue = EUROOPPA, onMeri = null } = {}) {
+export function korvaaEuroopanJoet(joet, kansio, kaava, { alue = EUROOPPA, onMeri = null, onJarvi = null } = {}) {
   const ehdokkaat = [];
   for (const f of readdirSync(kansio).filter((n) => n.endsWith('.geojson')).sort()) {
     for (const p of JSON.parse(readFileSync(join(kansio, f), 'utf8')).features) {
@@ -96,7 +113,11 @@ export function korvaaEuroopanJoet(joet, kansio, kaava, { alue = EUROOPPA, onMer
     const jaksot = [];
     let jakso = [];
     for (const [lon, lat] of c) {
-      if ((onMeri && onMeri(lon, lat)) || lahella(lon, lat)) { if (jakso.length > 1) jaksot.push(jakso); jakso = []; continue; }
+      if ((onMeri && onMeri(lon, lat)) || (onJarvi && onJarvi(lon, lat)) || lahella(lon, lat)) {
+        if (jakso.length > 1) jaksot.push(jakso);
+        jakso = [];
+        continue;
+      }
       jakso.push([lon, lat]);
     }
     if (jakso.length > 1) jaksot.push(jakso);
@@ -108,6 +129,7 @@ export function korvaaEuroopanJoet(joet, kansio, kaava, { alue = EUROOPPA, onMer
         tarkeys: valuma >= 50000 ? 1 : 2,
         minPx: joenMinPx(valuma),
         leveysM: joenLeveysM(valuma),
+        valuma,
         pisteet: j.map(([lon, lat]) => [kaava.lautaX(lon), kaava.lautaY(lat)]),
       });
     }
