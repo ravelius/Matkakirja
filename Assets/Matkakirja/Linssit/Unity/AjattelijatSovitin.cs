@@ -693,7 +693,8 @@ namespace Matkakirja.Natiivi
             if (a.Aikajana == null) return;
             foreach (var n in AjattelijaTahti.Leikkaukset(a.Aikajana.Kamera, 300))
             {
-                double isku = double.NaN, t = n / AjattelijaAikajana.RuutuaSekunnissa;
+                // Aikajana 1-pohjainen: ruutu n kuuluu raidan hetkellä (n − 1) / 30 ja piirtyy globaalissa ruudussa pl + n − 1.
+                double isku = double.NaN, t = (n - 1) / AjattelijaAikajana.RuutuaSekunnissa;
                 var c = musiikki.clip;
                 if (c != null && c.loadType == AudioClipLoadType.DecompressOnLoad && t + 0.25 < c.length)
                 {
@@ -708,7 +709,7 @@ namespace Matkakirja.Natiivi
                         if (!double.IsNaN(h)) isku = h - t;
                     }
                 }
-                mitattavat.Add((pl + n, $"leikkaus {n:F0}", isku));
+                mitattavat.Add((pl + n - 1, $"leikkaus {n:F0}", isku));
             }
         }
 
@@ -821,7 +822,8 @@ namespace Matkakirja.Natiivi
             }
             if (!AukiNyt) { o.Kirjaa("ajattelija: linssi ei ole auki (linssi ajattelijat)"); return; }
             if (mita == "ruutu" && arvo != null)
-                ruutuOhitus = arvo == "pois" ? double.NaN : (Valittu?.Prologi.Loppu ?? 120) + double.Parse(arvo, System.Globalization.CultureInfo.InvariantCulture);
+                ruutuOhitus = arvo == "pois" ? double.NaN : (Valittu?.Prologi.Loppu ?? 120) + double.Parse(arvo, System.Globalization.CultureInfo.InvariantCulture)
+                    - (Valittu?.Aikajana != null ? 1 : 0);   // aikajanan ruutu N (1-pohjainen, Globaali)
             else if (mita == "prologi" && arvo != null) ruutuOhitus = double.Parse(arvo, System.Globalization.CultureInfo.InvariantCulture);
             else if (mita == "lappu") { Lopussa = true; Muuttui?.Invoke(); }
             else if ((mita == "savupehmeys" || mita == "savuharso") && arvo != null)

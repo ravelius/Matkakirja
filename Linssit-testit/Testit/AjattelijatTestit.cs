@@ -619,5 +619,17 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0, AjattelijaTahti.Mp3Ohitus(null, 123456));
             Oleta.Tosi(!AjattelijaTahti.Mp3Alku(new byte[300]).HasValue, "ei MP3:a");
         }
+
+        [Testi] static void AikajanaOnYksipohjainen()
+        {
+            // Linnanrakentajan luvut (Blender): ruutu 1 = 0,0 s. Leikkaus 61 = raidan 2,000 s = globaali pl + 60 (Linssiseppä 1 4.10.).
+            var a = Lue("sokrates");
+            double pl = a.Prologi.Loppu;
+            Oleta.Tosi(Math.Abs(AjattelijaAikajana.Globaali(a, pl + 0.5).ruutu - 1.5) < 1e-12, "raidan alku = ruutu 1");
+            Oleta.Tosi(Math.Abs(AjattelijaAikajana.Globaali(a, pl + 2.0 * AjattelijaAikajana.RuutuaSekunnissa).ruutu - 61) < 1e-12, "2,000 s = ruutu 61");
+            // Kierrostila (webin oma data) ennallaan: 0-pohjainen.
+            var k = Lue("marcus-v11");
+            Oleta.Tosi(k.Aikajana != null || Math.Abs(AjattelijaAikajana.Globaali(k, k.Prologi.Loppu + 10).ruutu - 10) < 1e-12, "kierrokset ennallaan");
+        }
     }
 }
