@@ -1185,6 +1185,7 @@ PAAN_PROJEKTORIT = (  # v10 (omistaja 2.10. 08.4x): taustavirta koko pään alue
 
 VIRTA_AVAIMET = None   # v13: taustavirran (ruutu, kerroin) -avaimet koko kohtaukselle
 VIRTA_VAISTO = []      # v13c: [(kaiun kohdepiste, säde m, alku, loppu)] — virta väistää kaikukuvan
+KEHYS_LAINAUKSET = []  # v14: [(nimi, kohde, leveys m, alku, loppu)] — --kehys tarkistaa, että lainaus pysyy ruudussa
 V11_VIRTA_MS = 0.025   # v11: taustavirran yhteinen nopeus pinnalla (m/s); v10:n mediaani 26 mm/s
 VIRTA_LOKI = []        # v11: rivikohtaiset nopeudet --luvut-tiedostoon (web)
 
@@ -1255,7 +1256,7 @@ def v13_ajat():
 
 
 def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
-    global VIRTA_AVAIMET, VIRTA_VAISTO
+    global VIRTA_AVAIMET, VIRTA_VAISTO, KEHYS_LAINAUKSET
     polku, kesto, K, W = v13_ajat()
     if V13C:   # reunahehku tuli kipsin pinnanalaisesta sironnasta (6 mm) → ohuempi, kuva ei leviä reunan yli
         b_ = bpy.data.materials['kipsi'].node_tree.nodes['Principled BSDF']
@@ -1303,6 +1304,7 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
                           ca=0.004, syvyys=0.06, energia=(F(e0), F(e1)), kiintea=True)
             lainaukset.append({'nimi': nimi, 'kuva': kuva, 'nakyy_s': [round(e0, 2), round(e1, 2)], 'kiintea': True, 'leveys_m': lev_})
             VIRTA_VAISTO.append((tuple(q), lev_ * 0.62, F(e0), F(e1)))   # tekstivirta väistää lainauksen
+            KEHYS_LAINAUKSET.append((nimi, tuple(q), lev_, F(e0), F(e1)))
             return
         a_t, l_t = k_(kap, 0), k_(kap, 1); kk = bpy.data.images.load(os.path.join(gobot, kuva), check_existing=True)
         matka = kork * kk.size[0] / kk.size[1] + ala; kesto_ = matka / V13_NAUHA_MS; keski = (a_t + l_t) / 2
@@ -1318,7 +1320,7 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     v4_projektori('tykki-kysymys', p, (n + (Vector((-0.12, -0.10, -0.22)) if V14 else Vector((-0.30, -0.10, -0.20)))).normalized(), 0.6, 0.12,
                   os.path.join(gobot, 'nauha-kysymys.png'), 0.022, (F(kys_t), LOPPU), V7_TYKKI, kiintea=True, energia=(F(kys_t), LOPPU - 1),
                   **({'ca': 0.004, 'syvyys': 0.06} if V14 else {}))   # v14: kuten lainaukset — ei värireunoja, "elää?" ei sumene
-    if V14: VIRTA_VAISTO.append((tuple(p), 0.12 * 0.62, F(kys_t), LOPPU))   # taustavirta väistää kysymyksen
+    if V14: VIRTA_VAISTO.append((tuple(p), 0.12 * 0.62, F(kys_t), LOPPU)); KEHYS_LAINAUKSET.append(('tykki-kysymys', tuple(p), 0.12, F(kys_t), LOPPU - 1))   # taustavirta väistää kysymyksen
     lainaukset.append({'nimi': 'tykki-kysymys', 'kuva': 'nauha-kysymys.png', 'nakyy_s': [round(kys_t, 2), round(loppu_t, 2)], 'kiintea': True})
     # --- 01: kapea sivuvalo pyyhkäisee nenän ja silmien yli, kun ne mainitaan ---
     pd = bpy.data.lights.new('pyyhkaisy', 'SPOT'); pd.spot_size = math.radians(7); pd.spot_blend = 0.35; pd.shadow_soft_size = 0.004
@@ -1381,7 +1383,7 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
         (k_('04', 0) - 0.04, kc((0.0, -0.07, 0.40), (-0.18, -1.0, 0.10), 0.78 if V14 else 0.52), (0.0, -0.07, 0.40), 50, 'CONSTANT'),
         (k_('04', 0), kc(sp, (0.35, -1.0, 0.05), 0.40), tuple(sp), 50, 'BEZIER'),           # leikkaus: silmä (kylix) silmän puolelta, nenä ei peitä
         (k_('04', 1) - 0.6, kc((0.0, -0.08, 0.37), (0.05, -1.0, 0.05), 0.55), (0.0, -0.08, 0.37), 50, 'BEZIER'),   # väliin kauemmas (ei nenän läpi)
-        (k_('05', 0), kc(pp, (-0.45, -1.0, 0.10), 0.55 if V14 else 0.30), tuple(pp), 50, 'BEZIER'),          # poski (21d)
+        (k_('05', 0) - (0.7 if V14 else 0.0), kc(pp, (-0.45, -1.0, 0.10), 0.55 if V14 else 0.30), tuple(pp), 50, 'BEZIER'),          # poski (21d)
         (a6 + 0.8, kc((0.0, -0.06, 0.40), (-0.55, -1.0, 0.15), 0.85), (0.0, -0.06, 0.40), 50, 'BEZIER'),   # koko pää: kierto
         (k_('07', 0) + 0.6, kc((0.0, -0.07, 0.41), (-0.15, -1.0, 0.08), 0.80 if V14 else 0.55), (0.0, -0.07, 0.41), 50, 'BEZIER'),  # 30e
         (k_('08', 0) - 0.04, kc((0.0, -0.08, 0.41), (-0.10, -1.0, 0.08), 0.50), (0.0, -0.08, 0.41), 50, 'CONSTANT'),
@@ -1415,7 +1417,7 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
 # 08 "Vuonna 180 hän sairastui…" · 09 muistiinpanot säilyivät · 10 "Miten pitäisi elää?". Kaiut: sadeihme otsalle,
 # uhri silmäkuoppaan, kuolinvuode kasvojen sivulle (rajatut ja värittömät, Sisältökirjuri). Leikkaukset 03 ja 08.
 def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
-    global VIRTA_AVAIMET, VIRTA_VAISTO
+    global VIRTA_AVAIMET, VIRTA_VAISTO, KEHYS_LAINAUKSET
     polku, kesto, K, W = v13_ajat()
     if V13C:
         b_ = bpy.data.materials['kipsi'].node_tree.nodes['Principled BSDF']
@@ -1452,6 +1454,7 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
                           ca=0.004, syvyys=0.06, energia=(F(e0), F(e1)), kiintea=True)
             lainaukset.append({'nimi': nimi, 'kuva': kuva, 'nakyy_s': [round(e0, 2), round(e1, 2)], 'kiintea': True, 'leveys_m': lev_})
             VIRTA_VAISTO.append((tuple(q), lev_ * 0.62, F(e0), F(e1)))   # tekstivirta väistää lainauksen
+            KEHYS_LAINAUKSET.append((nimi, tuple(q), lev_, F(e0), F(e1)))
             return
         a_t, l_t = k_(kap, 0), k_(kap, 1); kk = bpy.data.images.load(os.path.join(gobot, kuva), check_existing=True)
         matka = kork * kk.size[0] / kk.size[1] + ala; kesto_ = matka / V13_NAUHA_MS; keski = (a_t + l_t) / 2
@@ -1466,7 +1469,7 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     v4_projektori('tykki-kysymys', p, (n + (Vector((-0.12, -0.10, -0.22)) if V14 else Vector((-0.30, -0.10, -0.20)))).normalized(), 0.6, 0.12,
                   os.path.join(gobot, 'nauha-kysymys.png'), 0.022, (F(kys_t), LOPPU), V7_TYKKI, kiintea=True, energia=(F(kys_t), LOPPU - 1),
                   **({'ca': 0.004, 'syvyys': 0.06} if V14 else {}))   # v14: kuten lainaukset — ei värireunoja, "elää?" ei sumene
-    if V14: VIRTA_VAISTO.append((tuple(p), 0.12 * 0.62, F(kys_t), LOPPU))   # taustavirta väistää kysymyksen
+    if V14: VIRTA_VAISTO.append((tuple(p), 0.12 * 0.62, F(kys_t), LOPPU)); KEHYS_LAINAUKSET.append(('tykki-kysymys', tuple(p), 0.12, F(kys_t), LOPPU - 1))   # taustavirta väistää kysymyksen
     lainaukset.append({'nimi': 'tykki-kysymys', 'kuva': 'nauha-kysymys.png', 'nakyy_s': [round(kys_t, 2), round(loppu_t, 2)], 'kiintea': True})
     def aur_avain(t_, suunta, e, vari=(1.0, 0.95, 0.88)):
         if V14 and t_ > T(0) + 0.05:   # omistaja 15.4x: tekstivaiheessa kasvot tummina, teksti erottuu; heikko reunavalo pitää muodon
@@ -1508,9 +1511,10 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
         (k_('03', 0), (-0.14, -0.55, 0.10), (0.0, -0.08, 0.36), 35, 'BEZIER'),                     # leikkaus: alaviisto, kova
         (sade_t, kc((0.0, -0.08, 0.41), (-0.12, -1.0, 0.10), 0.58), (0.0, -0.08, 0.41), 50, 'BEZIER'),   # sadeihme otsalla
         (a5 + 0.5, kc((0.0, -0.07, 0.41), (-0.02, -1.0, 0.10), 0.80) if V14 else kc(pp, (-0.45, -1.0, 0.10), 0.34), (0.0, -0.07, 0.40) if V14 else tuple(pp), 50, 'BEZIER'),                     # poski (4.49)
+        *([(uhri_t - 0.04, kc((0.0, -0.07, 0.41), (-0.02, -1.0, 0.10), 0.80), (0.0, -0.07, 0.40), 50, 'CONSTANT')] if V14 else []),   # v14: 4.49 pysyy ruudussa → leikkaus uhriin
         (uhri_t, kc(sp, (0.35, -1.0, 0.05), 0.42), tuple(sp), 50, 'BEZIER'),                        # silmäkuoppa (uhri)
         (k_('07', 0) + 0.5, kc((0.0, -0.07, 0.41), (0.02, -1.0, 0.10), 0.80) if V14 else kc(vp, (0.25, -1.0, -0.15), 0.40), (0.0, -0.07, 0.41) if V14 else tuple(vp), 50, 'BEZIER'),            # 2.11
-        (k_('08', 0) - 0.04, kc(vp, (0.20, -1.0, -0.10), 0.58 if V14 else 0.36), tuple(vp), 50, 'CONSTANT'),
+        (k_('08', 0) - 0.04, kc((0.0, -0.07, 0.41), (0.05, -1.0, 0.10), 0.80) if V14 else kc(vp, (0.20, -1.0, -0.10), 0.36), (0.0, -0.07, 0.41) if V14 else tuple(vp), 50, 'CONSTANT'),   # v14: 2.11 pysyy ruudussa
         (k_('08', 0), kc((0.03, -0.07, 0.38), (0.95, -1.0, 0.10), 0.70), (0.03, -0.07, 0.38), 50, 'BEZIER'),   # leikkaus: ilta, kuolinvuode
         (kys_t, kc((0.0, -0.08, 0.41), (0.10, -1.0, 0.06), 0.68 if V14 else 0.55), (0.0, -0.08, 0.41), 50, 'BEZIER'),
         (loppu_t + 1.0, kc((0.0, -0.08, 0.41), (0.08, -1.0, 0.06), 0.66 if V14 else 0.53), (0.0, -0.08, 0.41), 50, 'BEZIER')]:
@@ -1718,6 +1722,17 @@ if '--v7' in A:
             fc.update()
     sc.frame_start, sc.frame_end = 1, (V13_AIKA['loppu'] if V13 else V9['loppu'][1] if '--v9' in A else V7_PITO); sc.render.fps = 30
     sc.render.resolution_x, sc.render.resolution_y = LEV, KORK; sc.render.resolution_percentage = 100
+    if '--kehys' in A and V14:   # Pelikoodari 3.10.: kiinteä lainaus pysyy kokonaan ruudussa koko näkyvyysvälinsä ajan
+        from bpy_extras.object_utils import world_to_camera_view
+        for nimi_, q_, lev_, a_, l_ in KEHYS_LAINAUKSET:
+            huono = []
+            for r__ in range(int(a_), int(l_) + 1, 3):
+                sc.frame_set(r__); oik = sc.camera.matrix_world.to_quaternion() @ Vector((1, 0, 0)); yl = Vector((0, 0, 1))
+                for dx, dz in ((-0.42, -0.15), (0.42, -0.15), (-0.42, 0.15), (0.42, 0.15)):   # tekstin ala ≈ 0,84 × kortin leveys (mitattu stilleistä)
+                    v_ = world_to_camera_view(sc, sc.camera, Vector(q_) + oik * dx * lev_ + yl * dz * lev_)
+                    if not (0.02 <= v_.x <= 0.98 and 0.02 <= v_.y <= 0.98 and v_.z > 0): huono.append(r__); break
+            print('KEHYS', nimi_, int(a_), int(l_), 'OK' if not huono else f'ULKONA {len(huono)} näytettä {huono[0]}–{huono[-1]}')
+        sys.exit(0)
     if '--luvut' in A:
         # pelin aineisto (Päätoimittaja 2.10. 12.2x: ei videoita, luvut Pelikoodarille/Linssisepälle): kameran ja
         # projektorien tila jokaisessa avainruudussa, Blenderin koordinaateissa (z ylös, kasvot −y), ei renderöintiä
