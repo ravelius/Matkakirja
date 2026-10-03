@@ -288,6 +288,8 @@ namespace Matkakirja.Natiivi
 
         void Tartu()
         {
+            RekisteroiAanet();
+            MatkakirjaHaptiikka_Valmistele();
             if (!selaa) AloitaSelaus();
             valitsin.Tartu(Time.unscaledTime);
             Ruudunpaivitys.Herata(0.5f);
@@ -373,6 +375,7 @@ namespace Matkakirja.Natiivi
                 var k = ehdokas;
                 LopetaSelaus(false);
                 Debug.Log("MATKAKIRJA pallo valitsi: " + (k?.Tunnus ?? "-"));
+                Aanet.Tehoste(AaniLukko);   // kohde lukittu: hieman tic:iä kuuluvampi, ei silti kova (omistaja 3.10.2026)
                 Valittu?.Invoke(k);
                 return;
             }
@@ -381,12 +384,53 @@ namespace Matkakirja.Natiivi
             if (sormi != EiSormea || !valitsin.Pysahtynyt) Ruudunpaivitys.Herata(0.3f);
         }
 
+#if UNITY_IOS && !UNITY_EDITOR
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern void MatkakirjaHaptiikka_Valinta();
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern void MatkakirjaHaptiikka_Valmistele();
+#else
+        static void MatkakirjaHaptiikka_Valinta() { }
+        static void MatkakirjaHaptiikka_Valmistele() { }
+#endif
+        // ÄÄNET (omistaja 3.10.2026: "hienovarainen tic-ääni ja sitten hieman kovempi ääni, kun kohde on lukittu, mutta ei mitenkään
+        // kova sekään"): pelin omat syntetisoidut PCM-klipit (ei näytteitä), soivat tehosteväylällä (mykistys, sanelutauko, Master).
+        //   tic   12 ms, 2,4 kHz sinipurske, nopea vaimeneminen (τ 2,5 ms), gain 0,10
+        //   lukko 140 ms, 880 + 1320 Hz (kvintti), 4 ms:n nousu, vaimeneminen τ 45 ms, gain 0,22
+        const string AaniTic = "pallo-tic", AaniLukko = "pallo-lukko";
+        static bool aanetRekisteroity;
+
+        static void RekisteroiAanet()
+        {
+            if (aanetRekisteroity) return;
+            aanetRekisteroity = true;
+            Aanet.RekisteroiTehoste(AaniTic, Syntetisoi(AaniTic, 0.012f, t => Mathf.Sin(2f * Mathf.PI * 2400f * t) * Mathf.Exp(-t / 0.0025f)), 0.10f);
+            Aanet.RekisteroiTehoste(AaniLukko, Syntetisoi(AaniLukko, 0.14f, t =>
+                (0.6f * Mathf.Sin(2f * Mathf.PI * 880f * t) + 0.4f * Mathf.Sin(2f * Mathf.PI * 1320f * t))
+                * Mathf.Min(1f, t / 0.004f) * Mathf.Exp(-t / 0.045f)), 0.22f);
+        }
+
+        static AudioClip Syntetisoi(string nimi, float kestoS, System.Func<float, float> f)
+        {
+            const int Taajuus = 44100;
+            int n = Mathf.CeilToInt(kestoS * Taajuus);
+            var d = new float[n];
+            for (int i = 0; i < n; i++) d[i] = f(i / (float)Taajuus) * (i > n - 64 ? (n - i) / 64f : 1f);   // loppu nollaan ilman napsua
+            var c = AudioClip.Create(nimi, n, 1, Taajuus, false);
+            c.SetData(d, 0);
+            return c;
+        }
+
+        /// <summary>Haptisten napsahdusten määrä (testitila: simulaattorissa napsahdus ei tunnu, mutta määrä näkyy lokissa).</summary>
+        public static int Napsahduksia { get; private set; }
+
         void PaivitaEhdokas(float nyt)
         {
             int i = Pallovalitsin.Keskimmainen(lista, valitsin.Lat, valitsin.Lon);
             var k = i >= 0 ? lista[i] : null;
             if (!ReferenceEquals(k, ehdokas))
             {
+                // Haptinen napsahdus, kun keskimmäinen kohde vaihtuu pyörittäessä (omistaja 3.10.2026); ei ensimmäisestä ehdokkaasta
+                // tartunnassa eikä tyhjään (kohteeton puoli).
+                if (ehdokas != null && k != null && selaa) { MatkakirjaHaptiikka_Valinta(); Napsahduksia++; Aanet.Tehoste(AaniTic); }
                 ehdokas = k;
                 ehdokasAika = nyt;
                 nimi.text = k?.Nimi ?? "";
@@ -526,7 +570,7 @@ namespace Matkakirja.Natiivi
                 return $"pallo {(selaa ? "tartuttu" : "levossa")}{(sormi != EiSormea ? " (sormi)" : "")}, koko {el.layout.width:0}→{D:0} pt (×{skaala:0.00}), "
                     + $"peitto {peitto:0.0} %, katse {valitsin.Lat:0.0}, {valitsin.Lon:0.0}, vauhti {valitsin.Vauhti:0} °/s, "
                     + $"keskimmäinen {ehdokas?.Tunnus ?? "-"} \"{nimi.text}\", viive {(double.IsNaN(j) ? "-" : j.ToString("0.00") + " s")}, "
-                    + $"nimi {(nimiNakyy ? (nimiVaaka ? "oikealla" : "alla") : "piilossa")}";
+                    + $"nimi {(nimiNakyy ? (nimiVaaka ? "oikealla" : "alla") : "piilossa")}, napsahduksia {Napsahduksia}";
             }
         }
 
