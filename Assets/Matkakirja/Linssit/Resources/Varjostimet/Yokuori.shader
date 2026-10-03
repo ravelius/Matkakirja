@@ -329,11 +329,12 @@ Shader "Matkakirja/Linssit/Yokuori"
                 if (_KiiltoVanha < 0.5)
                 {
                     // Hopeanvalkoinen: läpäisy suhteessa kahden ilmamassan tiehen (korkealla auringolla lähes valkoinen, matalalla yhä
-                    // oranssi ja himmeä kuten pystyleikkauksen korjauksessa 2.10.). Pehmeä HDR-katto 2,2: keskusta ylivalottuu, mutta
-                    // bloom ei levitä kermaista usvaa rannoille (ennen huippu 240).
+                    // oranssi ja himmeä kuten pystyleikkauksen korjauksessa 2.10.). Logaritminen sävykäyrä (k 0…240 → 0…2): keskusta
+                    // ylivalottuu, reunat hiipuvat laajasti ja kimallus näkyy myös välialueella; ei tasaista valkoista kiekkoa eikä
+                    // bloomin kermaista usvaa rannoille (ennen huippu 240 suoraan).
                     lapaisy = (half3)min(exp(-float3(0.15, 0.20, 0.33) * max(Ilmamassa(nl) + Ilmamassa(nv) - 2.0, 0.0)), 1.0);
                     lapaisy *= half3(1.0h, 0.995h, 0.98h);
-                    kiilto = (half)(2.2 * (1.0 - exp(-(float)kiilto / 2.2)));
+                    kiilto = (half)(2.0 * pow(saturate(log2(1.0 + (float)kiilto) / 7.91), 1.5));
                 }
                 c += lapaisy * kiilto * (1.0h - a);
                 // Fotorealismi osa 2 (30.9.): taivaan Fresnel-heijastus vesiltä. Katsekulman Fresnel (Schlick, F0 0,02) kasvaa
