@@ -480,7 +480,8 @@ namespace Matkakirja.Natiivi
                 // gradient-maskilla, joka tummentaisi spotin ulkopuoliset alueet"): Cupolan ikkunan takana (Valospotti) kerrokset piirretään
                 // ruudukkona, ja kärkien sävy tummuu spotin keskipisteestä (kypärän ja vartalon kohta) ulospäin pehmeästi siluetiksi.
                 bool spotti = kuva.Valospotti;
-                var siluetti = new Color(varjo.r * 0.45f, varjo.g * 0.45f, varjo.b * 0.5f, 1f);
+                // Siluetti = varjosävy (Tyylikirja.LasiAvaruus.Pinta) tummennettuna kertoimella, ei uutta värivakiota (pohjavahti).
+                var siluetti = varjo * 0.45f; siluetti.a = 1f;
                 Color Spotissa(Color pohja, float x, float y)
                 {
                     float d = new Vector2(x - SpottiX, (y - SpottiY) * 0.8f).magnitude;   // hieman pystysuunnassa venytetty pallo
