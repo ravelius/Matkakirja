@@ -74,8 +74,9 @@ namespace Matkakirja.Natiivi
                 case "peite":
                     l.Peite.Aseta(a1 != "pois");
                     return null;
-                case "topovalikko":   // ui linssi topovalikko [auki|korkeustasot]: Topografian hampurilainen (omistaja 2.10. 21.3x)
-                    return "=" + l.TopoValikko(a1);
+                case "topovalikko":   // vanha nimi (ajoskriptit)
+                case "karttavalikko": // ui linssi karttavalikko [auki|selite]: karttalinssin hampurilainen (omistaja 2.10. / 3.10.)
+                    return "=" + l.KarttaValikko(a1);
                 case "selite":
                     if (a1 == "pois") { l.Selite.Piilota(); return null; }
                     // ui linssi selite auki|kiinni: auki olevan linssin OMA selite (pariteettiajot, Linssiseppä 25.9.).
