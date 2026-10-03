@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2594, teksti: 'Ajattelijat natiiviin ilman webiä: data/ajattel… (#3905)' },
   { v: 2593, teksti: 'Joet rauhallisiksi, järvien kevyt ranta ja raet… (#3910)' },
   { v: 2592, teksti: 'Tyylikirja: linssien hampurilaislista, työkalu (#3909)' },
   { v: 2591, teksti: 'Ääniputki: lyhyt isku tasoon (#3907)' },
