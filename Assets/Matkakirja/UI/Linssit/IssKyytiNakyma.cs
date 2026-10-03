@@ -482,6 +482,14 @@ namespace Matkakirja.Natiivi
             // Robottikäden Pulu (vasen alakulma, omistaja 2.10. 21.3x) pysyy pöydän yläpuolella myös Cupolassa; ikkunan takana
             // olevaa Pulua (A/B ilman robottikättä) AlaVara ei siirrä, koska IkkunanTakana ohittaa sen.
             p.AlaVara = poytaNakyy ? H - pe.worldBound.yMin - (Kytkinpoyta && ikkunassa ? poyta.YlaReuna : 0f) + 6f : 0f;
+            // Oikeassa reunassa Pulu ja lyhyt varsi ovat pöydän oikealla puolella: ei nostoa pöydän yli, vaan Pulu alareunaan (turva + 8 pt),
+            // jos pöytä ei ulotu Pulun kaistalle (~70 pt oikeasta turvareunasta).
+            if (p.OikeallaReunalla && Kytkinpoyta)
+            {
+                var rr = UiKerros.Hae().Reunat(LinssiUi.Kerros);
+                float poytaOikea = poyta.Juuri.worldBound.xMin + poyta.Nakyva.xMax;
+                if (poytaOikea + 8f < W - rr.z - 70f) p.AlaVara = 0f;
+            }
         }
 
         static AstronauttiLinssi Linssi() => UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>()?.Linssi;
