@@ -121,8 +121,8 @@ namespace Matkakirja.Linssit.Ajattelijat
         /// yli rajan rivi häivyttyy välillä raja … raja × 1,3) ja geometrisen N·L:n häivytys rajaKulma [pois alle, täysi yli].
         /// </summary>
         public double RajaKoko = OletusRajaKoko;
-        public double[] RajaKulma = { 0.2, 0.4 };
-        public const double OletusRajaKoko = 0.065;
+        public double[] RajaKulma = { 0.1, 0.25 };
+        public const double OletusRajaKoko = 0.08;
         public uint Siemen;
         public double[] Rivikork, Ajat;
         public Dictionary<string, double[]> Kirkkaus = new Dictionary<string, double[]>();
