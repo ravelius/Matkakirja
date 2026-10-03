@@ -30,7 +30,7 @@
     background-color: initial;
 }
 
-/* ✕ on OHJAUSNAPPI (harmaa teema, Pohjat/ohjausnappi.uss); täällä vain sijoitus. */
+/* ✕ on OHJAUSNAPPI (tumma teema, Pohjat/ohjausnappi.uss); täällä vain sijoitus. */
 .mk-peli__sulje {
     position: absolute;
 }
