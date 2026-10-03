@@ -32,6 +32,10 @@ test('aikajana luvuista on kirjasto: sama muunnos CLI:lle ja natiivin muuntimell
   };
   const aj = aikajanaLuvuista(luvut, { lahdeNimi: 'testi' });
   assert.equal(aj.lahde, 'testi');
+  // Kaiun tekijämaininta luvuista (v14b, CC BY-SA): kaiut[].nimeaminen = lahde, puuttuessa ei kenttää.
+  const kl = { ...luvut, valot: { ...luvut.valot, 'kaiku-x': { sijainti: [0, -1, 0.4], suunta: [0, 1, 0], keila_aste: 10, energia_avaimet: [[1, 0]] } },
+    v13: { ...luvut.v13, kaiut: [{ nimi: 'kaiku-x', kuva: 'x.png', alku_s: 1, loppu_s: 2, lahde: 'Tekijä, CC BY-SA 4.0' }] } };
+  assert.equal(aikajanaLuvuista(kl, {}).kaiut[0].nimeaminen, 'Tekijä, CC BY-SA 4.0');
   assert.deepEqual(aj.virta, [[10, 1], [20, 1]]);
   assert.match(lue('../tools/ajattelija-aikajana.mjs'), /import \{ aikajanaLuvuista \} from '\.\/ajattelija-aikajana-luvut\.mjs';/);
   const natiivi = lue('../tools/ajattelija-natiivi.mjs');

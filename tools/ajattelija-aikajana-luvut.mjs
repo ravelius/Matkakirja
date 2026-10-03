@@ -58,6 +58,8 @@ export function aikajanaLuvuista(d, { kaiut: KAIUT = 'ajattelijat/sokrates/v3', 
       paikka: pv(valo.sijainti), suunta: pv(valo.suunta), ala: alaKeilasta(valo.keila_aste),
       ...(valo.lev_m ? { lev: valo.lev_m, kork: valo.kork_m } : {}),
       blend: valo.spot_blend ?? 0.3, liuku: valo.liuku_uv ?? 0.02, ruudut: [F(k.alku_s), F(k.loppu_s)], energia: energia(valo),
+      // Tekijämaininta luvuista (CC BY / BY-SA -kuvat, esim. oraakkelin kolmijalka v14b): natiivi näyttää sen lähteissä.
+      ...(k.lahde ? { nimeaminen: k.lahde } : {}),
     };
   });
 
