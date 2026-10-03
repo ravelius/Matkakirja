@@ -368,13 +368,14 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(ilmoitus, Kirjasin.KoneLihava);
             ilmoitus.style.display = DisplayStyle.None;
 
-            // Piilossa ☰ tuo palkin takaisin (omistaja 24.9.: ei kelluvia nappeja, vain palkki).
+            // VAAKA-IPHONE ILMAN YLÄPALKKIA (omistaja 2.10.2026 klo 23.0x): kartan oikeassa yläkulmassa ☰ (OHJAUSNAPPI 40 pt
+            // suurennuslasin vieressä), joka avaa pillerivalikon (valikko v2) suoraan napin päälle; palkki ei enää avaudu vaakassa.
             vakasnappi = Rakenne.Nappi(null, "mk-ohjausnappi tk-teema-paperi mk-vakasnappi", () =>
             {
                 if (VetoPiilossa) { NaytaVedonJalkeen(); return; }
-                if (Auki) Sulje(); else Avaa();
-            }, turva, KolmeVakasta);
-            vakasnappi.tooltip = "Näytä yläpalkki";
+                VaakaValikkoPainettu?.Invoke();
+            }, turva, Ikonit.Valikko);
+            vakasnappi.tooltip = "Valikko";
 
             Kirjasimet.Aseta(juuri, Kirjasin.Kone);
             kerros.TurvaMuuttui += Asettele;
@@ -495,8 +496,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Logon kuvasuhde (kultalogo 4:1, kohopainatus 326 × 95).</summary>
         float logoSuhde = 4f;
 
-        /// <summary>Löydös 68: piilotetun palkin nappi kolmena allekkaisena väkäsenä (⌄), ei ☰.</summary>
-        const string KolmeVakasta = "<path d=\"M7 5.5l5 3 5-3\"/><path d=\"M7 10.5l5 3 5-3\"/><path d=\"M7 15.5l5 3 5-3\"/>";
+        /// <summary>Vaaka-iPhonen ☰ (palkin piilossa ollessa) painettu: UiNakymat avaa pillerivalikon.</summary>
+        public event Action VaakaValikkoPainettu;
+        /// <summary>Vaaka-iPhonen ☰: pillerivalikon avaaja (ohi-napautus ei sulje samasta napautuksesta).</summary>
+        public VisualElement VaakaValikkoNappi => vakasnappi;
 
         // --- iPhonen automaattinen piilotus (kartan veto piilottaa, napautus tuo takaisin) ---------------------
         Vector2 vetoAlku;
@@ -1038,7 +1041,7 @@ namespace Matkakirja.Natiivi
             vakasnappi.style.display = (piilossa || VetoPiilossa) && nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             vakasnappi.EnableInClassList("mk-vakasnappi--auki", Auki);
             vakasnappi.pickingMode = Auki ? PickingMode.Ignore : PickingMode.Position;
-            vakasnappi.tooltip = Auki ? "Piilota yläpalkki" : "Näytä yläpalkki";
+
         }
 
         public void Avaa()

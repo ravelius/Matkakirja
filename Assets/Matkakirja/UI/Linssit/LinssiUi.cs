@@ -112,6 +112,18 @@ namespace Matkakirja.Natiivi
             Selite.Vasen = () => sulje.resolvedStyle.display == DisplayStyle.None ? float.NaN : sulje.worldBound.xMin;
             sulje.RegisterCallback<GeometryChangedEvent>(_ => Selite.Uudelleen());
             kerros.TurvaMuuttui += Asettele;
+            // TOPOGRAFIA (omistaja 2.10.2026 klo 21.3x: "Topografia linssissa ota oikean yläkulman pilleri pois ja laita sen tilalle
+            // hampurilainen ja hampurilaiseen ylimmäksi korkeustasot-nappi ja sen alapuolelle sulje-nappi ja ota vastaavasti kartalta
+            // pois"): ✕-pilleri ja selitteen nimilappu pois, tilalle OHJAUSNAPPI-hampurilainen (LinssiValikko-pohja, PANEELI-lista):
+            // Korkeustasot (selite auki/kiinni) ja Sulje linssi. Linssien hampurilaispäätös 2.10. klo 15.00.
+            // Korkeustasot on KYTKIN (web #3881): tila PÄÄLLÄ/POIS rivin oikeassa reunassa, napautus sulkee valikon ja kortti
+            // avautuu yksin napin alle (Päätoimittaja 2.10.2026 klo 23.0x: valikko ei saa jäädä selitteen päälle).
+            topoValikko = new LinssiValikko(kerros, new List<(string, Action)>(), "Sulje linssi", SuljeLinssi, aanet: false,
+                kytkimet: new List<(string, Func<bool>, Action<bool>)> { (Korkeustasot, () => Selite.AukiKokonaan, auki => Selite.Avaa(auki)) },
+                teema: "lasi");
+            topoRyhma = Ohjausnappi.Ryhma(turva, "lasi");
+            topoRyhma.Add(topoValikko.Nappi);
+            topoRyhma.style.display = DisplayStyle.None;
             // OHJAUSNAPPI-koe (`ui ohjausnapit 1` rivi: ‹ → ↻ → säätö → taikalasit → ✕ viimeisenä; `2` yksi hampurilainen).
             var koeValinnat = new List<(string, Action)> { ("Linssit", Valitsin.Avaa) };
             var koeValikko = new LinssiValikko(kerros, koeValinnat, "Sulje linssi", SuljeLinssi);
@@ -185,6 +197,9 @@ namespace Matkakirja.Natiivi
             var s = sulje.style;
             s.top = astroTila ? 12 : Ylapalkki.Varaus + 8 + 4;
             s.right = astroTila ? 12 : 10 + 40 + 8;
+            // Topografian hampurilainen ✕:n paikalle (taikalasien vasemmalle puolelle).
+            topoRyhma.style.top = Ylapalkki.Varaus + 8;
+            topoRyhma.style.right = 10 + 40 + 8;
         }
 
         void Kytke()
@@ -368,12 +383,35 @@ namespace Matkakirja.Natiivi
         /// Sulkupilleri näkyy, kun linssi on auki eikä sitä peitä kuvanäkymä tai vertailuarkki
         /// eikä korvaa aikajanan hampurilainen (sen "Poistu").
         /// </summary>
+        const string TopografiaId = "topografia", Korkeustasot = "Korkeustasot";
+        LinssiValikko topoValikko;
+        VisualElement topoRyhma;
+
+        /// <summary>Testikomento `ui linssi topovalikko [auki|korkeustasot]`: Topografian hampurilaisen tila.</summary>
+        public string TopoValikko(string mita)
+        {
+            if (mita == "auki") topoValikko.Avaa();
+            // Kuten rivin napautus: valikko kiinni, sitten kortti auki/kiinni (oikea sim-tap todentaa saman polun).
+            if (mita == "korkeustasot") { topoValikko.Sulje(); Selite.Avaa(!Selite.AukiKokonaan); }
+            var b = topoValikko.Nappi.worldBound;
+            var r = topoValikko.OmaRivi(Korkeustasot)?.worldBound ?? default;
+            return $"topovalikko: näkyy {topoRyhma.resolvedStyle.display == DisplayStyle.Flex}, nappi {b.xMin:0},{b.yMin:0} {b.width:0}×{b.height:0}, " +
+                   $"rivi {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}, auki {topoValikko.Auki}, ✕ {sulje.resolvedStyle.display == DisplayStyle.Flex}, " +
+                   $"selite auki {Selite.AukiKokonaan}, otsikko {Selite.ValikkoOtsikko ?? "-"}";
+        }
+
         internal void PaivitaSulku()
         {
             // Linnassa ✕ korvautuu valikon "Sulje linna" -rivillä (omistaja 2.10. 14.44, LinnaValikko). Ajattelijat käyttävät
             // linssien yhteistä sulkua (0f703701), joten niille ei ole omaa ehtoa.
             bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa && !valitsinAuki
                          && !(Dioraama != null && Dioraama.Kytketty);
+            bool topo = Auki?.Tiedot?.Id == TopografiaId;
+            topoRyhma.style.display = nakyy && topo ? DisplayStyle.Flex : DisplayStyle.None;
+            if (!(nakyy && topo)) topoValikko.Sulje();
+            Selite.PieniPiiloon = topo;
+            Selite.ValikkoOtsikko = topo ? Korkeustasot : null;
+            nakyy &= !topo;
             sulje.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (nakyy && !sulkuNakyi) Kutista();
             else if (!nakyy) { kutistus?.Pause(); kutistus = null; }

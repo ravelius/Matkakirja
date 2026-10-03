@@ -149,7 +149,7 @@ namespace Matkakirja.Natiivi
         /// Kerroksen piirtojärjestys ajon aikana (oletus = kerroksen numero). Pulu ja chat nousevat lehden päälle
         /// lehden ajaksi (web: pulun nappi ja paneeli asuvat ylimmässä dialogissa, livianDialogikoti).
         /// </summary>
-        public void AsetaJarjestys(int kerros, int jarjestys)
+        public void AsetaJarjestys(int kerros, float jarjestys)
         {
             var d = Dokumentti(kerros);
             if (d.panelSettings != null && d.panelSettings.sortingOrder != jarjestys) d.panelSettings.sortingOrder = jarjestys;

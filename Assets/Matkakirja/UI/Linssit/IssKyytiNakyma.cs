@@ -82,13 +82,24 @@ namespace Matkakirja.Natiivi
         static IssKyytiNakyma instanssi;
 
         /// <summary>
-        /// Testikomento astro kyyti paneeli 0|1|2|kutista|avaa|nahka perus|codex (kuvapari): välilehti, kutistus tai nahka.
+        /// Testikomento astro kyyti paneeli 0|1|2|kutista|avaa|nahka perus|codex (kuvapari): välilehti, kutistus tai nahka;
+        /// pieni|suuri|tila: kytkinpöydän pieni ja suuri tila (2.10.).
         /// Palauttaa tilan lokiin (paneelin koko ja peitto ruudusta).
         /// </summary>
         public static string Paneeli(string[] a)
         {
             var n = instanssi;
             if (n == null) return "paneeli: ei kyytinäkymää";
+            // Kytkinpöydän pieni ja suuri tila (omistaja 2.10. 21.3x kohta 8): `astro kyyti paneeli pieni|suuri|tila`. Liuku 240 ms,
+            // joten mitta lokiin liu'un jälkeen (+150 ms asettelulle).
+            if (a.Length > 0 && (a[0] == "pieni" || a[0] == "suuri" || a[0] == "tila"))
+            {
+                if (a[0] != "tila") n.poyta.AsetaSuuri(a[0] == "suuri");
+                n.juuri.schedule.Execute(() => Debug.Log("MATKAKIRJA linssit: paneeli " + n.poyta.TilaRivi() + " · Juuri "
+                    + $"{n.poyta.Juuri.worldBound.width:0} × {n.poyta.Juuri.worldBound.height:0} pt, näkyvä yläreuna y {n.poyta.Juuri.worldBound.yMin + n.poyta.YlaReuna:0}"))
+                    .ExecuteLater(Tyylikirja.Kesto.Liuku + 150);
+                return "paneeli " + n.poyta.TilaRivi();
+            }
             if (a.Length > 0 && int.TryParse(a[0], out int v)) Valilehti = v;
             else if (a.Length > 0 && a[0] == "kutista") Kutistettu = true;
             else if (a.Length > 0 && a[0] == "avaa") Kutistettu = false;
@@ -220,7 +231,8 @@ namespace Matkakirja.Natiivi
         /// Taustan maa on koko ruudun kokoinen, joten suurempi z näyttää enemmän maata. Testikomento `astro kyyti ikkuna z` (0 = oletus).
         /// </summary>
         public static float IkkunanSuurennos;
-        public const float IkkunaPuhelinVaaka = 2f, IkkunaPuhelinPysty = 1.25f, IkkunaTablettiVaaka = 1.45f, IkkunaTablettiPysty = 1.25f;
+        // Omistaja 2.10. 21.3x "kamera zoomaa enemmän sisäänpäin, jolloin ikkuna kasvaa": +20 % (2,0 / 1,25 / 1,45 / 1,25 →).
+        public const float IkkunaPuhelinVaaka = 2.4f, IkkunaPuhelinPysty = 1.5f, IkkunaTablettiVaaka = 1.75f, IkkunaTablettiPysty = 1.5f;
         static float IkkunanOletus(float w, float h, bool ipad) =>
             w > h ? (ipad ? IkkunaTablettiVaaka : IkkunaPuhelinVaaka) : (ipad ? IkkunaTablettiPysty : IkkunaPuhelinPysty);
         /// <summary>Kuvan reunan vara (pt) keskitetyssä rajauksessa: ajelehdus 3,5–4 pt + kallistus ja skaala.</summary>
@@ -377,6 +389,11 @@ namespace Matkakirja.Natiivi
                 AsetaKausi, AsetaVuorokausi,
                 VaihdaLista, Kuvaa, Poistu,
                 PalaaLive);
+            // Pieni ↔ suuri (omistaja 2.10. 21.3x kohta 8): pienentyessä kohdelista kiinni; avoimen listan ohi napautus sulkee vain
+            // listan (peite), ei pöytää; liu'un jälkeen Pulu pöydän uuden yläreunan mukaan.
+            poyta.SuuriMuuttui += suuri => { if (!suuri) SuljeLista(); PaivitaPulu(); };
+            poyta.EstaPienennys = () => lista.style.display == DisplayStyle.Flex;
+            poyta.KokoMuuttui += PaivitaPulu;
             PaivitaPoydat(KyydinTila.Kauko);
             juuri.RegisterCallback<GeometryChangedEvent>(_ =>
             {
@@ -442,7 +459,14 @@ namespace Matkakirja.Natiivi
                 kulma.y = Mathf.Min(kulma.y, yla);
             }
             p.IkkunanTakana = ikkunassa ? kulma : (Vector2?)null;
-            p.AlaVara = poytaNakyy && !ikkunassa ? H - pe.worldBound.yMin + 6f : 0f;
+            // Suuri säätöpaneeli (Päätoimittajan kuvatarkistus 2.10.: Pulu nousi paneelin mukana säätönapin alle): lintu häivytetään
+            // pienen paneelin yläpuolelle paikalleen koko suuren tilan ja liu'un ajaksi, ja AlaVara päivittyy vasta liu'un jälkeen.
+            bool suuri = Kytkinpoyta && poytaNakyy && (poyta.Suuri || poyta.Liukuu);
+            p.Haivyta(suuri);
+            if (suuri) return;
+            // Robottikäden Pulu (vasen alakulma, omistaja 2.10. 21.3x) pysyy pöydän yläpuolella myös Cupolassa; ikkunan takana
+            // olevaa Pulua (A/B ilman robottikättä) AlaVara ei siirrä, koska IkkunanTakana ohittaa sen.
+            p.AlaVara = poytaNakyy ? H - pe.worldBound.yMin - (Kytkinpoyta && ikkunassa ? poyta.YlaReuna : 0f) + 6f : 0f;
         }
 
         static AstronauttiLinssi Linssi() => UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>()?.Linssi;
@@ -473,7 +497,9 @@ namespace Matkakirja.Natiivi
             {
                 if (lista.parent != turva) turva.Add(lista);
                 lista.style.position = Position.Absolute;
-                lista.style.left = poyta.Juuri.layout.x; lista.style.width = poyta.Juuri.layout.width;
+                // Kerrostilassa Juuri on turva-alueen levyinen kehys: lista pohjan (Nakyva) levyiseksi.
+                var nak = poyta.Nakyva;
+                lista.style.left = poyta.Juuri.layout.x + nak.x; lista.style.width = nak.width;
                 lista.style.bottom = turva.layout.height - poyta.Juuri.layout.y - poyta.YlaReuna + 6f;
                 poyta.Kohde.Tila = IssKytkimet.Tila.Aktiivinen;
             }
@@ -625,6 +651,8 @@ namespace Matkakirja.Natiivi
             PaivitaPoydat(tila);
             if (auki && Kytkinpoyta)
             {
+                // Kyyti avautui: pöytä pienenä (omistaja 2.10. 21.3x kohta 8; napautus suurentaa).
+                if (!oliAuki) poyta.AsetaSuuri(false, animoi: false);
                 poyta.Lukema.Aseta(rivi.Teksti, aika.Ylilento);
                 poyta.Live.Tila = IssKytkimet.Tila.Aktiivinen;
                 poyta.Live.Meripihka = aika.Nopeutettu;
@@ -638,7 +666,8 @@ namespace Matkakirja.Natiivi
                 poyta.Kohde.Kilpi.text = lennossa && !omaLento && viimeKohde != null ? viimeKohde.ToUpperInvariant() : "VALITSE";
                 var kt = Matkakirja.Natiivi.IssKameraKuva.Tila;   // savuke 1116 + Päätoimittaja 2.10.: syy kilpeen (EI MAATA / VAIN EUROOPPA / EI KUVAUSPAIKKAA) eikä 0 % / VALMIS
                 poyta.Kuvaa.Kilpi.text = kt == "valmis" ? "VALMIS" : kt == "ei maata" ? "EI MAATA" : kt == "vain eurooppa" ? "VAIN EUROOPPA" : kt == "ei kuvauspaikkaa" ? "EI KUVAUSPAIKKAA" : kt == "keskeytyi" ? "–" : $"{Matkakirja.Natiivi.IssKameraKuva.Edistyminen:P0}";
-                poyta.Sulku.Kilpi.text = tila == KyydinTila.Ikkuna ? "CUPOLA" : tila == KyydinTila.Seuranta ? "SEURANTA" : lennossa ? "LENTO" : "KYYTI";
+                // POISTU (omistaja 2.10. 21.3x kohta 9): painikkeessa ×, alalapussa POISTU (ennen näkymän nimi CUPOLA/SEURANTA/…).
+                poyta.Sulku.Kilpi.text = "POISTU";
             }
             if (!auki) SuljeLista();
             bool ikkuna = tila == KyydinTila.Ikkuna;
