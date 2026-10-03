@@ -13,8 +13,10 @@
 //
 // ESILATAUS (Päätoimittaja 3.10.2026, juna 133): valintakortin avautuessa haetaan jokaisen valittavan ajattelijan
 // aineistot (malli, kipsi, kaikukuvat, syke, savu, puhe ja musiikki) ja kytkimen ääni muistiin; valinta vapauttaa muut.
-// Kohtauksen kuva (näyttämön RenderTexture, musta) näkyy heti napautuksesta, ja prologin kello käy: purku tapahtuu
-// prologin pimeässä (ruudut 0–30), ja jos aineistoja on vielä kesken, prologi odottaa pimeässä ennen kytkintä.
+// Raskas purku tehdään jo kortin aikana (Valmiste: atlas ja GLB taustasäikeellä, tekstuurit ruutu kerrallaan), joten
+// napautuksen jälkeen jää vain verkon kokoaminen. Kohtauksen kuva (näyttämön RenderTexture, musta) näkyy seuraavalla
+// ruudulla, prologin kello käy, ja jos jotain on vielä kesken, prologi odottaa pimeässä ennen kytkintä (ruutu 30).
+// Kaikukuvat, savu ja syke puretaan vasta kytkimen jälkeen ruutu kerrallaan (tarvitaan ruudusta 286 alkaen).
 //
 // AIKAJANA (v13–v14, web 088b64d0c, data a.Aikajana): ääni, syke, kaikukuvat ja savumaski aikajanan poluista; kierrokset
 // jäävät käyttämättä. Lähderiviä ei näytetä (web lahde.style.opacity 0); lappu aikajanan lopussa.
@@ -26,7 +28,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Matkakirja.Linssit;
+using Matkakirja.Linssit.Dioraama;
 using Matkakirja.Linssit.Ajattelijat;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -127,6 +131,14 @@ namespace Matkakirja.Natiivi
             public string Tunnus; public bool Valmis; public byte[] Tavut; public AudioClip Klippi;
         }
         readonly Dictionary<string, Esilataus> esiladatut = new Dictionary<string, Esilataus>();
+        /// <summary>Kortin aikana puretut (atlas, malli, normaalikartta, kipsi) ajattelijoittain; omistus näyttämölle valinnassa.</summary>
+        sealed class Valmiste
+        {
+            public bool Valmis; public Texture2D Atlas, Normaali, Kipsi; public GlbMalli Malli;
+            public void Tuhoa() { foreach (var t in new[] { Atlas, Normaali, Kipsi }) if (t != null) UnityEngine.Object.Destroy(t); Atlas = Normaali = Kipsi = null; }
+        }
+        readonly Dictionary<string, Valmiste> valmisteet = new Dictionary<string, Valmiste>();
+        double viimeG;
         const string Yhteinen = "*";
 
         public AjattelijatSovitin(LinssiOhjain o)
@@ -176,6 +188,7 @@ namespace Matkakirja.Natiivi
             int s = ++sukupolvi;
             // Prologin kello alkaa heti (kuva on musta, aineistot purkautuvat pimeässä; Paivita pitää kytkintä odottamassa).
             kelloAlkanut = false;
+            viimeG = 0;
             aaniSoi = false;
             kytkinSoi = false;
             valit.Clear();
@@ -184,7 +197,10 @@ namespace Matkakirja.Natiivi
             y.Pelikerrokset(false);
             y.MusiikkiPitoon(true);
             y.Taustaaani(null);
-            nayttamo = AjattelijaNayttamo.Luo(a);
+            // Atlas esivalmisteesta, jos valmis; muuten Lataa asettaa sen (näyttämö ja musta kuva syntyvät heti).
+            valmisteet.TryGetValue(a.Tunnus, out var v0);
+            nayttamo = AjattelijaNayttamo.Luo(a, v0 != null && v0.Valmis ? v0.Atlas : null);
+            if (v0 != null && v0.Valmis) v0.Atlas = null;
             puhe = LuoLahde("Puhe");
             musiikki = LuoLahde("Musiikki");
             kytkin = LuoLahde("Kytkin");
@@ -211,33 +227,39 @@ namespace Matkakirja.Natiivi
             // Malli ensin (ilman sitä ei ole kohtausta); muut rinnakkain, esiladattuina muistista. PROLOGIN VALO VASTA LATAUKSEN
             // JÄLKEEN (Fable 3.10.2026: kello kulki ennen purkua, ja pelaaja näki prologista vain lopun): prologi alkaa ruudusta 0
             // mustana kuvana, ja Paivita pitää sen ennen kytkintä (ruutu 30), kunnes kaikki aineistot on purettu.
-            byte[] glb = null;
-            yield return Hae(a.Malli, b => glb = b);
+            // Musta kuva ensin (≤ 1 ruutu napautuksesta); sitten esivalmiste (kesken → odotetaan pimeässä).
+            yield return null;
             if (s != sukupolvi) yield break;
-            if (glb == null || !nayttamo.AsetaMalli(glb, out string virhe))
+            valmisteet.TryGetValue(a.Tunnus, out var v);
+            while (v != null && !v.Valmis) { yield return null; if (s != sukupolvi) yield break; }
+            if (v != null) valmisteet.Remove(a.Tunnus);
+            if (v?.Atlas != null) { nayttamo.AsetaAtlas(v.Atlas); v.Atlas = null; }
+            else nayttamo.LataaAtlas();   // varatie (ei esivalmistetta tai jo käytetty Luossa)
+            bool ok;
+            string virhe;
+            if (v?.Malli != null) { ok = nayttamo.AsetaMalli(v.Malli, v.Normaali, out virhe); v.Normaali = null; }
+            else
             {
-                o.Kirjaa($"ajattelija: malli {a.Malli} ei latautunut{(glb == null ? "" : ": " + nayttamo.Virhe)}");
+                byte[] glb = null;
+                yield return Hae(a.Malli, b => glb = b);
+                if (s != sukupolvi) { v?.Tuhoa(); yield break; }
+                ok = glb != null && nayttamo.AsetaMalli(glb, out virhe);
+            }
+            if (!ok)
+            {
+                v?.Tuhoa();
+                o.Kirjaa($"ajattelija: malli {a.Malli} ei latautunut: {nayttamo.Virhe}");
                 Latautuu = false;
                 PyydaSulku();
                 yield break;
             }
             int kesken = 0;
             void Odota(IEnumerator ajo) { kesken++; o.StartCoroutine(Valmis(ajo, () => kesken--)); }
-            Odota(Hae(a.Kipsi, b => { if (s == sukupolvi) nayttamo.AsetaKipsi(b); }));
-            // Kaikukuvat kierroksittain (yksi kaikupaikka, tekstuuri vaihtuu); syke ja ääni kierrosten raidoista, jos niitä on.
-            bool kaikuja = false;
-            foreach (var (k, kuva) in nayttamo.Kaikukuvat())
-            {
-                kaikuja = true;
-                Odota(Hae(kuva, b => { if (s == sukupolvi) nayttamo.AsetaKaiku(k, b); }));
-            }
+            if (v?.Kipsi != null) { nayttamo.AsetaKipsi(v.Kipsi); v.Kipsi = null; }
+            else Odota(Hae(a.Kipsi, b => { if (s == sukupolvi) nayttamo.AsetaKipsi(b); }));
             var aj = a.Aikajana;
             var kr = aj != null ? null : a.Kierrokset;   // aikajana-tilassa kierrokset eivät ole käytössä (web KR = AJ ? null : …)
-            string sykePolku = aj != null ? aj.Syke : kr != null ? kr.Syke : a.Syke;
-            if ((aj != null || kaikuja) && !string.IsNullOrEmpty(sykePolku))
-                Odota(Hae(sykePolku, b => { if (s == sukupolvi && b != null) nayttamo.AsetaSyke(System.Text.Encoding.UTF8.GetString(b)); }));
-            // Savumaski (v13c, aikajana; oletuksena päällä).
-            if (nayttamo.SavuKuva != null) Odota(Hae(nayttamo.SavuKuva, b => { if (s == sukupolvi) nayttamo.AsetaSavu(b); }));
+            o.StartCoroutine(JalkiLataa(a, s));
             Odota(HaeAani(aj != null ? aj.Puhe : kr != null ? kr.Puhe : a.Puhe, puhe, s));
             Odota(HaeAani(aj != null ? aj.Musiikki : kr != null ? kr.Musiikki : a.Musiikki, musiikki, s));
             Odota(HaeAani(Kytkin, kytkin, s));
@@ -250,6 +272,32 @@ namespace Matkakirja.Natiivi
             Latautuu = false;
             o.Kirjaa($"ajattelija: {a.Tunnus} auki, malli {(Time.realtimeSinceStartup - t0) * 1000:F0} ms, {nayttamo.Kuvaus()}");
             Muuttui?.Invoke();
+        }
+
+        /// <summary>
+        /// Kaikukuvat, syke ja savu vasta kytkimen jälkeen (prologin valo nousee omalla kellollaan, purku ei syö pimeää eikä
+        /// kytkimen aikaa), yksi aineisto ruutua kohden; ensimmäinen tarve on ruudussa 286 (taustavirta) ja 726 (kaiku).
+        /// </summary>
+        IEnumerator JalkiLataa(AjattelijaData a, int s)
+        {
+            while (s == sukupolvi && (Latautuu || viimeG < a.Prologi.Kytkin)) yield return null;
+            if (s != sukupolvi || nayttamo == null) yield break;
+            var aj = a.Aikajana;
+            var kr = aj != null ? null : a.Kierrokset;
+            bool kaikuja = false;
+            foreach (var (k, kuva) in nayttamo.Kaikukuvat().ToList())
+            {
+                kaikuja = true;
+                yield return Hae(kuva, b => { if (s == sukupolvi) nayttamo.AsetaKaiku(k, b); });
+                yield return null;
+                if (s != sukupolvi) yield break;
+            }
+            string sykePolku = aj != null ? aj.Syke : kr != null ? kr.Syke : a.Syke;
+            if ((aj != null || kaikuja) && !string.IsNullOrEmpty(sykePolku))
+                yield return Hae(sykePolku, b => { if (s == sukupolvi && b != null) nayttamo.AsetaSyke(System.Text.Encoding.UTF8.GetString(b)); });
+            if (s != sukupolvi) yield break;
+            // Savumaski (v13c, aikajana; oletuksena päällä).
+            if (nayttamo.SavuKuva != null) yield return Hae(nayttamo.SavuKuva, b => { if (s == sukupolvi) nayttamo.AsetaSavu(b); });
         }
 
         static IEnumerator Valmis(IEnumerator ajo, Action valmis)
@@ -309,11 +357,21 @@ namespace Matkakirja.Natiivi
         void Esilataa(AjattelijaData a)
         {
             foreach (var polku in AjattelijaNayttamo.Aineistot(a))
-                if (!string.IsNullOrEmpty(polku) && !esiladatut.ContainsKey(polku))
+            {
+                if (string.IsNullOrEmpty(polku)) continue;
+                if (esiladatut.TryGetValue(polku, out var x))
                 {
-                    var l = esiladatut[polku] = new Esilataus { Tunnus = a.Tunnus };
-                    o.StartCoroutine(EsiHae(polku, l));
+                    if (x.Tunnus != a.Tunnus) x.Tunnus = Yhteinen;   // sama polku usealla ajattelijalla (kipsi): ei vapauteta valinnassa
+                    continue;
                 }
+                var l = esiladatut[polku] = new Esilataus { Tunnus = a.Tunnus };
+                o.StartCoroutine(EsiHae(polku, l));
+            }
+            if (!valmisteet.ContainsKey(a.Tunnus))
+            {
+                var v = valmisteet[a.Tunnus] = new Valmiste();
+                o.StartCoroutine(Valmistele(a, v));
+            }
             var aj = a.Aikajana;
             var kr = aj != null ? null : a.Kierrokset;
             foreach (var (polku, tunnus) in new[]
@@ -326,6 +384,37 @@ namespace Matkakirja.Natiivi
                     var l = esiladatut[polku] = new Esilataus { Tunnus = tunnus };
                     o.StartCoroutine(EsiHaeAani(polku, l));
                 }
+        }
+
+        /// <summary>
+        /// Kortin aikana: atlaksen PNG ja GLB taustasäikeellä, tekstuurit pääsäikeellä yksi ruutua kohden. Vapautettu
+        /// (valmisteet ei enää osoita tähän) → luodut tekstuurit tuhotaan.
+        /// </summary>
+        IEnumerator Valmistele(AjattelijaData a, Valmiste v)
+        {
+            bool Elossa() => valmisteet.TryGetValue(a.Tunnus, out var x) && x == v;
+            var ta = Resources.Load<TextAsset>(a.Atlas.Tiedosto);
+            byte[] png = ta != null ? ta.bytes : null;
+            if (ta != null) Resources.UnloadAsset(ta);
+            var atlasTyo = Task.Run(() => AjattelijaNayttamo.PuraHarmaaPng(png));
+            Esilataus l;
+            while (esiladatut.TryGetValue(a.Malli, out l) && !l.Valmis) yield return null;
+            byte[] glb = l?.Tavut;
+            var malliTyo = glb != null ? Task.Run(() => DioraamaGlb.Lue(glb, true)) : null;
+            while (!atlasTyo.IsCompleted) yield return null;
+            if (!Elossa()) yield break;
+            v.Atlas = AjattelijaNayttamo.AtlasTekstuuri(atlasTyo.Status == TaskStatus.RanToCompletion ? atlasTyo.Result : null);
+            yield return null;
+            while (malliTyo != null && !malliTyo.IsCompleted) yield return null;
+            if (!Elossa()) { v.Tuhoa(); yield break; }
+            v.Malli = malliTyo != null && malliTyo.Status == TaskStatus.RanToCompletion ? malliTyo.Result : null;
+            if (malliTyo?.Exception != null) o.Kirjaa($"ajattelija: {a.Tunnus} malli: {malliTyo.Exception.InnerException?.Message}");
+            if (v.Malli != null) { v.Normaali = AjattelijaNayttamo.NormaaliKuva(v.Malli); yield return null; }
+            while (esiladatut.TryGetValue(a.Kipsi, out l) && !l.Valmis) yield return null;
+            if (!Elossa()) { v.Tuhoa(); yield break; }
+            v.Kipsi = AjattelijaNayttamo.KipsiKuva(l?.Tavut);
+            v.Valmis = true;
+            o.Kirjaa($"ajattelija: {a.Tunnus} esivalmisteltu (atlas {(v.Atlas != null ? "taustalla" : "-")}, malli {(v.Malli != null ? "taustalla" : "-")})");
         }
 
         IEnumerator EsiHae(string polku, Esilataus l)
@@ -361,6 +450,11 @@ namespace Matkakirja.Natiivi
             {
                 if (kv.Value.Klippi != null) UnityEngine.Object.Destroy(kv.Value.Klippi);
                 esiladatut.Remove(kv.Key);
+            }
+            foreach (var kv in valmisteet.Where(kv => kv.Key != sailyta).ToList())
+            {
+                kv.Value.Tuhoa();   // kesken oleva valmistelu huomaa poiston ja tuhoaa myöhemmin luodut
+                valmisteet.Remove(kv.Key);
             }
         }
 
@@ -409,6 +503,7 @@ namespace Matkakirja.Natiivi
             }
             if (valit.Count >= 7200) valit.RemoveAt(0);   // koko kohtaus (kierrokset ~115 s) 60 r/s
             valit.Add(Time.unscaledDeltaTime * 1000f);
+            viimeG = g;   // JalkiLataa: kaikukuvat ja savu kytkimen jälkeen
             var (prologi, r, loppu) = AjattelijaAikajana.Globaali(a, g);
             nayttamo.Aseta(prologi, r);
             Tekstit = prologi ? default : new AjattelijaTekstit

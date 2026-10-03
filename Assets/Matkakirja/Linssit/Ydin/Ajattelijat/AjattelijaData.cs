@@ -604,6 +604,49 @@ namespace Matkakirja.Linssit.Ajattelijat
             Vino = K(l, "vino") is object vi ? Vek(vi) : null, Ala = Lv(l, "ala", double.NaN), Etaisyys = Lv(l, "etaisyys", double.NaN),
         };
 
+        /// <summary>
+        /// Muuntimen harmaasävy-PNG (8 bit, suodatin 0, tyokalut/ajattelijat-natiiviin.mjs) raa'aksi R8-dataksi Unityn
+        /// rivijärjestyksessä (rivi 0 alimpana, kuten LoadImage). Säieturvallinen; null = muu muoto (varatie LoadImage).
+        /// </summary>
+        public static (int lev, int kork, byte[] data)? PuraHarmaaPng(byte[] png)
+        {
+            try
+            {
+                if (png == null || png.Length < 33 || png[1] != 0x50 || png[2] != 0x4E || png[3] != 0x47) return null;
+                int B32(int i) => png[i] << 24 | png[i + 1] << 16 | png[i + 2] << 8 | png[i + 3];
+                int lev = 0, kork = 0;
+                var idat = new System.IO.MemoryStream();
+                for (int k = 8; k + 12 <= png.Length;)
+                {
+                    int n = B32(k);
+                    string tyyppi = System.Text.Encoding.ASCII.GetString(png, k + 4, 4);
+                    if (tyyppi == "IHDR")
+                    {
+                        lev = B32(k + 8); kork = B32(k + 12);
+                        if (png[k + 16] != 8 || png[k + 17] != 0 || png[k + 20] != 0) return null;   // 8 bit harmaa, ei lomitusta
+                    }
+                    else if (tyyppi == "IDAT") idat.Write(png, k + 8, n);
+                    k += 12 + n;
+                }
+                if (lev <= 0 || kork <= 0) return null;
+                var raaka = new byte[(lev + 1) * kork];
+                idat.Position = 2;   // zlib-otsake
+                using (var d = new System.IO.Compression.DeflateStream(idat, System.IO.Compression.CompressionMode.Decompress))
+                {
+                    int luettu = 0;
+                    while (luettu < raaka.Length) { int x = d.Read(raaka, luettu, raaka.Length - luettu); if (x <= 0) return null; luettu += x; }
+                }
+                var data = new byte[lev * kork];
+                for (int y = 0; y < kork; y++)
+                {
+                    if (raaka[y * (lev + 1)] != 0) return null;   // muu suodatin kuin 0
+                    Buffer.BlockCopy(raaka, y * (lev + 1) + 1, data, (kork - 1 - y) * lev, lev);
+                }
+                return (lev, kork, data);
+            }
+            catch (Exception) { return null; }
+        }
+
         /// <summary>JSON-tekstistä: (data, null) tai (null, syy).</summary>
         public static (AjattelijaData data, string virhe) Jasenna(string json)
         {

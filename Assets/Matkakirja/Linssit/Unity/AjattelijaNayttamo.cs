@@ -150,7 +150,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Pystykenttä asteina Blenderin pystysensorista (24 mm) ja polttovälistä.</summary>
         public static float KenttaMm(double mm) => (float)(2 * Math.Atan(12 / mm) * 180 / Math.PI);
 
-        public static AjattelijaNayttamo Luo(AjattelijaData a)
+        /// <summary>
+        /// Näyttämö (kamera, musta kuva, materiaalit). atlas = esivalmisteltu tekstiatlas (AtlasTekstuuri), null = myöhemmin
+        /// AsetaAtlas-kutsulla; lataaAtlas = vanha tie (atlas puretaan heti pääsäikeellä).
+        /// </summary>
+        public static AjattelijaNayttamo Luo(AjattelijaData a, Texture2D atlasValmis = null, bool lataaAtlas = false)
         {
             var go = new GameObject("AjattelijaNayttamo") { layer = Kerros };
             var n = go.AddComponent<AjattelijaNayttamo>();
@@ -159,7 +163,8 @@ namespace Matkakirja.Natiivi
             n.tykki = Avain * 220f / 95f * TykkiKerroin;
             n.LuoKamera();
             n.LuoMateriaalit();
-            n.LataaAtlas();
+            if (atlasValmis != null) n.AsetaAtlas(atlasValmis);
+            else if (lataaAtlas) n.LataaAtlas();
             return n;
         }
 
@@ -213,17 +218,51 @@ namespace Matkakirja.Natiivi
             pr.receiveShadows = false;
         }
 
-        void LataaAtlas()
+        /// <summary>Atlas pääsäikeellä (varatie, jos esivalmistelu puuttuu).</summary>
+        public void LataaAtlas()
         {
             var ta = Resources.Load<TextAsset>(a.Atlas.Tiedosto);
             if (ta == null) { Virhe = "atlas puuttuu: " + a.Atlas.Tiedosto; return; }
-            atlas = LueKuva(ta.bytes, true, "atlas", yksiKanava: true);
+            AsetaAtlas(LueKuva(ta.bytes, true, "atlas", yksiKanava: true));
+            Resources.UnloadAsset(ta);
+        }
+
+        /// <summary>Atlas käyttöön (omistus näyttämölle).</summary>
+        public void AsetaAtlas(Texture2D t)
+        {
+            if (t == null || atlas != null) return;
+            atlas = t;
             atlas.wrapModeU = TextureWrapMode.Repeat;   // toistorivit (päälause rajataan varjostimessa)
             atlas.wrapModeV = TextureWrapMode.Clamp;
             atlas.anisoLevel = 16;
             mat.SetTexture("_Atlas", atlas);
-            Resources.UnloadAsset(ta);
         }
+
+        // ── ESIVALMISTELU (Päätoimittaja 3.10.2026: napautuksesta kytkimeen ≤ 1,5 s; "malli 1925 ms" pääsäikeellä) ──────
+        // Valintakortin aikana: atlaksen PNG ja GLB puretaan taustasäikeellä (PuraHarmaaPng, DioraamaGlb.Lue), tekstuurit
+        // luodaan pääsäikeellä ruutu kerrallaan (AtlasTekstuuri, NormaaliKuva, KipsiKuva). Napautuksen jälkeen jää vain
+        // verkon kokoaminen ja säteet (AsetaMalli(GlbMalli, …)).
+
+        /// <summary>Muuntimen harmaasävy-PNG raa'aksi R8-dataksi (AjattelijaData.PuraHarmaaPng, säieturvallinen).</summary>
+        public static (int lev, int kork, byte[] data)? PuraHarmaaPng(byte[] png) => AjattelijaData.PuraHarmaaPng(png);
+
+        /// <summary>Puretusta atlaksesta R8-tekstuuri mippeineen (pääsäie).</summary>
+        public static Texture2D AtlasTekstuuri((int lev, int kork, byte[] data)? purettu)
+        {
+            if (purettu == null) return null;
+            var (lev, kork, data) = purettu.Value;
+            var t = new Texture2D(lev, kork, TextureFormat.R8, true, true) { name = "Ajattelija:atlas" };
+            t.SetPixelData(data, 0);
+            t.Apply(true, true);
+            return t;
+        }
+
+        /// <summary>GLB:n upotettu normaalikartta (pääsäie); null, jos ei ole.</summary>
+        public static Texture2D NormaaliKuva(GlbMalli m) =>
+            m != null && m.Kuvat.Count > 0 && m.Kuvat[0] != null ? LueKuva(m.Kuvat[0], true, "normaali") : null;
+
+        /// <summary>Kipsin mikronormaali (pääsäie).</summary>
+        public static Texture2D KipsiKuva(byte[] tavut) => tavut == null ? null : LueKuva(tavut, true, "kipsi");
 
         /// <summary>
         /// PNG/JPG tekstuuriksi (lineaarinen, mipit). Yksikanavainen atlas pidetään R8:na: LoadImage voi antaa RGBA32:n
@@ -301,10 +340,17 @@ namespace Matkakirja.Natiivi
         /// <summary>GLB (L1 + upotettu normaalikartta) → bysti, osuma otsalle, lentoasento ja videotykit.</summary>
         public bool AsetaMalli(byte[] glb, out string virhe)
         {
-            virhe = null;
             GlbMalli m;
             try { m = DioraamaGlb.Lue(glb, true); }
             catch (Exception e) { virhe = Virhe = e.Message; return false; }
+            return AsetaMalli(m, NormaaliKuva(m), out virhe);
+        }
+
+        /// <summary>Esivalmisteltu malli ja normaalikartta (omistus näyttämölle).</summary>
+        public bool AsetaMalli(GlbMalli m, Texture2D normaaliValmis, out string virhe)
+        {
+            virhe = null;
+            if (m == null || m.Osat.Count == 0) { virhe = Virhe = "malli tyhjä"; if (normaaliValmis != null) Destroy(normaaliValmis); return false; }
             var o = m.Osat[0];
             int k = o.Paikat.Length / 3;
             paikat = new Vector3[k];
@@ -336,7 +382,7 @@ namespace Matkakirja.Natiivi
             var pohja = o.Vari ?? new[] { 0.86f, 0.85f, 0.82f, 1f };
             mat.SetVector("_Pohja", new Vector4(pohja[0], pohja[1], pohja[2], 0.62f));
             mat.SetFloat("_NormaaliPaalla", 0f);
-            if (m.Kuvat.Count > 0 && m.Kuvat[0] != null && (normaali = LueKuva(m.Kuvat[0], true, "normaali")) != null)
+            if ((normaali = normaaliValmis) != null)
             {
                 normaali.anisoLevel = 8;
                 normaali.wrapMode = TextureWrapMode.Repeat;
@@ -909,9 +955,14 @@ namespace Matkakirja.Natiivi
             return nauhaLev;
         }
 
-        public void AsetaKipsi(byte[] tavut)
+        public void AsetaKipsi(byte[] tavut) => AsetaKipsi(KipsiKuva(tavut));
+
+        /// <summary>Esivalmisteltu kipsi (omistus näyttämölle).</summary>
+        public void AsetaKipsi(Texture2D t)
         {
-            if (tavut == null || (kipsi = LueKuva(tavut, true, "kipsi")) == null) return;
+            if (t == null) return;
+            if (kipsi != null) { Destroy(t); return; }
+            kipsi = t;
             kipsi.wrapMode = TextureWrapMode.Repeat;
             kipsi.anisoLevel = 8;
             mat.SetTexture("_Detalji", kipsi);

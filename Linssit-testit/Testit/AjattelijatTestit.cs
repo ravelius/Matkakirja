@@ -525,5 +525,19 @@ namespace Matkakirja.Linssit.Testit
             // Pidemmät välit pysyvät lineaarisina (lainauksen 6 ruudun nousu).
             Oleta.Sama(88.0, AjattelijaAikajana.AvainArvo(aj.Tykit[0].Energia, 907));
         }
+        [Testi] static void AtlasPuretaanTaustasaikeellaKutenLoadImage()
+        {
+            // Esivalmistelu (kortin aikana taustasäikeellä): muuntimen harmaasävy-PNG → R8, rivi 0 alimpana kuten LoadImage.
+            var png = File.ReadAllBytes(Kansio + "sokrates-atlas.bytes");
+            var p = AjattelijaData.PuraHarmaaPng(png);
+            Oleta.Tosi(p != null && p.Value.lev == 4096 && p.Value.kork == 4096 && p.Value.data.Length == 4096 * 4096, "4096 × 4096");
+            var d = p.Value.data;
+            int Max(int y0, int y1) { int m = 0; for (int y = y0; y < y1; y++) for (int x = 0; x < 4096; x += 3) m = Math.Max(m, d[y * 4096 + x]); return m; }
+            // 38a-kortti kankaan riveillä 1952–2298 (ylhäältä) → Unityn riveillä 4096 − 2298 … 4096 − 1952; alaosa tyhjä.
+            var r = Lue("sokrates").Atlas.Paikat[21];
+            Oleta.Sama(255, Max(4096 - (int)(r.Y + r.Korkeus), 4096 - (int)r.Y));
+            Oleta.Sama(0, Max(4096 - 3500 - 500, 4096 - 3500));   // kankaan rivit 3500–4000 tyhjiä
+            Oleta.Tosi(AjattelijaData.PuraHarmaaPng(new byte[] { 1, 2, 3 }) == null, "muu muoto → varatie");
+        }
     }
 }
