@@ -33,6 +33,9 @@
 // AUTOn aikana selite pysyy minimoituna, otsikkona on pelkkä kohteen nimi, ja kertoja lukee leipätekstin (vaikka Kertoja olisi
 // pois); luennan jälkeen 3 s ja seuraava kohde AstronauttiKierroksen järjestyksessä. Pelaajan kosketus (muu kuin kytkin tai
 // lappu) pysäyttää AUTOn.
+// PALLOVALITSIN (omistaja 3.10.2026, vain natiivi): vasemman alakulman sijaintipalloa voi pyörittää; tartunta kasvattaa sen ja
+// himmentää kuvan, keskimmäisen kohteen nimi näkyy pallon alla, ja 0,5 s pysähdyksestä (sormi irti) kohde avautuu kuten ‹ ›.
+// AUTO on tauolla pyörityksen ajan ja jatkaa valitusta kohteesta (Sijaintipallo, Pallovalitsin).
 // AVAUS JA SULKU (Raamattu PR #3602, omistaja 29.9.2026): näkymä kasvaa ja häivyttyy esiin kohteen pisteestä ruudulla
 // (napautettu kohta; Pulun tervetulossa väärä kohde) ja sulkeutuu samaa reittiä, Ponnahdus-apurilla webin arvoin.
 using System;
@@ -185,7 +188,7 @@ namespace Matkakirja.Natiivi
             // näkyvillä napeilla ‹ › ja AUTO toimivat itse, veto ja nipistys pysäyttävät AUTOn (web pysaytaAuto).
             juuri.RegisterCallback<PointerDownEvent>(e =>
             {
-                if (!AutoKaytossa) return;
+                if (!AutoKaytossa || sijaintipallo.Sisaltaa(e.target as VisualElement)) return;   // pallo: AUTO tauolla, ei pysähdy
                 autoKosketus = Time.unscaledTime;
                 if (autoNapitPiilossa)
                 {
@@ -200,6 +203,7 @@ namespace Matkakirja.Natiivi
             // Veto (> 12 pt alkupisteestä) tai toinen sormi (nipistys) pysäyttää AUTOn kuten ennen.
             juuri.RegisterCallback<PointerDownEvent>(e =>
             {
+                if (sijaintipallo.Sisaltaa(e.target as VisualElement)) return;
                 autoSormet[e.pointerId] = e.position;
                 if (AutoKaytossa && autoSormet.Count > 1) AsetaAuto(false);
             }, TrickleDown.TrickleDown);
@@ -212,6 +216,14 @@ namespace Matkakirja.Natiivi
             juuri.RegisterCallback<PointerCancelEvent>(e => autoSormet.Remove(e.pointerId), TrickleDown.TrickleDown);
 
             sijaintipallo = new Sijaintipallo(turva);
+            sijaintipallo.Ehdokkaat = () => Linssi()?.Kohteet;
+            sijaintipallo.Tartuttu += PalloTartuttu;
+            sijaintipallo.Valittu += PalloValitsi;
+            sijaintipallo.Esilataa += k =>
+            {
+                int i = k.OletusIndeksi;
+                if (i >= 0 && i < k.Havainnot.Count && !string.IsNullOrEmpty(k.Havainnot[i].Kuva)) Kuvat.Hae(k.Havainnot[i].Kuva, _ => { });
+            };
 
             // Web .satelliitti-pulukulma (löydös 96): sarake oikeassa alakulmassa, kortti pulun yläpuolella 8 pt:n välein.
             pulukulma = Rakenne.El("mk-astrokuva__pulu", turva, PickingMode.Ignore);
@@ -318,6 +330,7 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             sijaintipallo.Piilota();
+            autoOdottaa = false;
             LopetaSiirto();
             NaytaAutoNapit(true);   // seuraava avaus alkaa napit näkyvissä
             autoPiilotus?.Pause();
@@ -588,6 +601,7 @@ namespace Matkakirja.Natiivi
         void LuentaLoppui(int vuoro)
         {
             if (vuoro != luentaVuoro || !Auki || !AutoKaytossa) return;
+            if (palloSelaa) { autoOdottaa = true; return; }   // pallon pyöritys: siirto vasta valinnan jälkeen
             var seuraava = Linssi()?.KatsoNaapuri(1);
             if (seuraava == null) return;
             LopetaSiirto();
@@ -639,6 +653,55 @@ namespace Matkakirja.Natiivi
                 if (!autoNapitPiilossa && Time.unscaledTime - autoKosketus >= AutoPiilotusS) NaytaAutoNapit(false);
             }).Every(250);
             Ruudunpaivitys.Herata(AutoPiilotusS + 0.5f);
+        }
+
+        // --- pallovalitsin (omistaja 3.10.2026) ----------------------------------------------
+
+        /// <summary>Kuvan himmennys pyöritettäessä (lavan peitto: kuva painuu taustan himmeään avaruuteen, ei uutta väriä).</summary>
+        const float PalloHimmennys = 0.55f;
+        bool palloSelaa, autoOdottaa;
+
+        /// <summary>Tartunta: kuva himmenee taakse, selite pienenee ja AUTOn siirto odottaa valintaa; paluu: kuva kirkastuu.</summary>
+        void PalloTartuttu(bool tartuttu)
+        {
+            palloSelaa = tartuttu;
+            float kesto = LinssiUi.VahennettyLiike() || !Auki ? 0f : (tartuttu ? Tyylikirja.Kesto.Avaus : Tyylikirja.Kesto.Sulku) / 1000f;
+            lava.style.transitionProperty = new StyleList<StylePropertyName>(new List<StylePropertyName> { new StylePropertyName("opacity") });
+            lava.style.transitionDuration = new StyleList<TimeValue>(new List<TimeValue> { new TimeValue(kesto) });
+            lava.style.opacity = tartuttu ? PalloHimmennys : 1f;
+            if (!tartuttu) return;
+            KelaaKuvasta();
+            autoKosketus = Time.unscaledTime;
+            if (autoAjo != null) { LopetaSiirto(); autoOdottaa = true; }
+        }
+
+        /// <summary>
+        /// Valinta: uusi kohde avautuu kuten ‹ › (liuku itään +1 / länteen −1, otsikko vasempaan yläkulmaan, AUTO jatkaa sen
+        /// luennasta); sama kohde tai ei mitään → pallo kiertyy takaisin nykyiseen ja AUTOn odottava siirto jatkuu.
+        /// </summary>
+        void PalloValitsi(Havaintokohde k)
+        {
+            if (!Auki || kohde == null) return;
+            var l = Linssi();
+            if (k != null && !ReferenceEquals(k, kohde) && l != null && !liukuu)
+            {
+                autoOdottaa = false;
+                double d = (k.Lon - kohde.Lon) % 360;
+                if (d > 180) d -= 360; else if (d < -180) d += 360;
+                Vaihda(d >= 0 ? 1 : -1, () => l.AvaaValittu(k));
+                return;
+            }
+            sijaintipallo.Kohteeseen(kohde.Lat, kohde.Lon, !LinssiUi.VahennettyLiike());
+            if (autoOdottaa) { autoOdottaa = false; if (AutoKaytossa) LuentaLoppui(luentaVuoro); }
+        }
+
+        /// <summary>`astro pallo tartu|pyorita dx dy [ms]|irti|tila`: pallon tila + kuvanäkymän kohde, otsikko ja AUTO.</summary>
+        public string TestaaPallo(string[] a)
+        {
+            if (!Auki) return "kuva ei ole auki";
+            string t = sijaintipallo.Testaa(a);
+            return t + $", kohde {kohde?.Tunnus ?? "-"}, otsikko \"{otsikko.text}\", kuva {(palloSelaa ? "himmennetty" : "kirkas")}, "
+                + $"auto {(AutoKaytossa ? (palloSelaa ? "tauolla" : autoAjo != null ? "siirto " + autoAika.text : "päällä") : "pois")}{(autoOdottaa ? " (siirto odottaa)" : "")}";
         }
 
         // --- testikomento --------------------------------------------------------------
