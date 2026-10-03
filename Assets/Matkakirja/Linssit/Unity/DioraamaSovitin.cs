@@ -851,6 +851,7 @@ namespace Matkakirja.Natiivi
             {
                 // A/B-kehityskytkin (era 2) + tilaraportti ("poikki aanet"): ladatut klipit, silmukat, puhuja.
                 if (aanet == null) { o.Kirjaa("poikki: äänet eivät ole valmiit (linssiä ei ole avattu kertaakaan)"); return; }
+                if (arvo == "unohda-kertoja") { o.Kirjaa($"poikki: kertojan klipit unohdettu ({aanet.UnohdaKertoja()})"); return; }
                 if (arvo == "0" || arvo == "1")
                 {
                     aanet.Paalla = arvo == "1";
