@@ -58,8 +58,8 @@ test('Marcuksen kierrokset 2–3 samalla rakenteella (marcus-tekstit.json kierro
   assert.deepEqual(kr.lista.map((k) => k.paalause), ['itselleen-4-49', 'itselleen-2-11']);
   assert.deepEqual(MARCUS.paalauseet['itselleen-4-49'].sade, [-0.035, 0.360]);   // poskiparran yläpuolella
   assert.deepEqual(kr.lista.map((k) => k.kaiku.kuva.split('/').pop()), ['kaiku-uhri.png', 'kaiku-kuolema.png']);
-  assert.equal(kr.loppu, 3330);
-  assert.deepEqual(kamerakayra(kr.kamera)(3330).paikka, MARCUS.otokset.rembrandt.paikka);
+  assert.equal(kr.loppu, 3772);   // v13: +442 kuten Sokrateella
+  assert.deepEqual(kamerakayra(kr.kamera)(3772).paikka, MARCUS.otokset.rembrandt.paikka);
 });
 test('taustavirran rivit kulkevat lähes samaa nopeutta pinnalla: 25 mm/s ±15 % (omistaja 3.10.2026, Blender v11)', () => {
   assert.deepEqual(SOKRATES.taustavirta.nopeus, { mms: 25, vaihtelu: 0.15 });
@@ -88,7 +88,7 @@ test('v11 (omistaja 3.10.2026): alkukuvat varjopuolelta, kaiku 1 lähempänä ja
     assert.equal(a.kaiku.lev, 0.07);
     assert.deepEqual(a.kaiku.kamera.matka, [0.15, 0.14]);
   }
-  assert.deepEqual(MARCUS.intro.valo[0][1], [1.0, -0.35, 0.45]);   // Marcus v11
+  assert.equal(MARCUS.intro, SOKRATES.intro);   // Marcus v13: sama intro kuin Sokrateen v12
   assert.deepEqual(SOKRATES.kierrokset.kamera.find(([r]) => r === 3142)[1], [0.205, -0.1767, 0.337]);   // v11:n 2700 → v12 +442
   assert.equal(AJATTELIJA_KYTKIN, 'ajattelijat/yhteiset/v2/kytkin-kaiku.mp3');
   assert.match(MOOTTORI, /maailma\.intensity = TAYTE \* hiipuu \* \(r < T\.nimi\[0\] \? \(a\.intro\.tayte \?\? 1\) : 1\);/);
@@ -110,9 +110,9 @@ test('v12 Sokrates (omistaja 3.10.2026 klo 04.5x; sokrates-luvut-v12.json a6308b
   assert.deepEqual(SOKRATES.intro.valo.at(-1), [724, [0.95, -0.30, 0.55]]);
   assert.equal(SOKRATES.intro.tayte, 0);
   assert.deepEqual(SOKRATES.taustavirta.ajat, [904, 982, 1342, 1392]);
-  // Marcus ei muutu: omat kierroksen 1 ajat ja taustavirran ajat.
-  assert.deepEqual(MARCUS.ajat.nimi, [282, 372]);
-  assert.deepEqual(MARCUS.taustavirta.ajat, [462, 540, 900, 950]);
+  // Marcus v13: intro, ajat ja taustavirran ajat samat kuin Sokrateen v12:ssa.
+  assert.deepEqual(MARCUS.ajat.nimi, [724, 814]);
+  assert.deepEqual(MARCUS.taustavirta.ajat, [904, 982, 1342, 1392]);
   assert.match(MOOTTORI, /ajo: tapa === 'BEZIER' && seuraava \? kamerakayra\(\[\[r, c, q, mm\], seuraava\.slice\(0, 4\)\]\) : null,/);
 });
 
