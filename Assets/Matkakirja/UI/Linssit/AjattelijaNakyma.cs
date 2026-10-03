@@ -4,8 +4,10 @@
 //   VALINTA   AukiNyt && Valittu == null: KORTTI-pohja (Kortti pohja: true) himmennyksellä, nappi per ajattelija → Valitse;
 //             himmennyksen napautus ja Esc → PyydaSulku (web luoPohjaKortti ei-modaali, sulje ilman valintaa → poistu).
 //   KUVA      Valittu != null: KUVANÄKYMÄ-pohja, teema tumma; AjattelijaNayttamo.NykyinenKuva koko ruudulle (Latautuu: vain
-//             tumma pinta). Sulku linssien yhteisellä ohjauksella (LinssiUi:n sulku; Päätoimittaja 2.10.: ei omaa pyöreää ✕:ää,
-//             OHJAUSNAPPI/☰ koskee tätäkin), lisäksi veto alas ja Esc → PyydaSulku.
+//             tumma pinta). ✕ on astronautin kuvanäkymän sulkunappipohja (mk-kuvanakyma__sulku--harmaa + sulkurengas; Päätoimittaja
+//             3.10., web #3891): piilossa, kunnes ruutua napautetaan, ja häipyy 4 s viimeisen napautuksen jälkeen (Kuvanakyma
+//             NaytaAutoNapit/AjastaAutoPiilotus: Kesto.Sulku/Avaus; piilossa ei ota kosketuksia). Kohtauksen ajan LinssiUi:n
+//             sulkupilleri on piilossa (Peittaa), veto alas ja Esc → PyydaSulku kuten ennen.
 //   TEKSTIT   nimi (NimiRivit versaalina) ja vuodet, kysymys, lähderivi (kreikka ja viite); peitot joka ruutu Tekstit-arvoista.
 //   LOPUSSA   elämä-lappu NOSTOKORTTI-pohjalla, teema tumma (paikka ja vetokahva kuten IhmisenNostokortti, ei ✕:ää) ja PULU:
 //             minipulu oikeassa alakulmassa → PuluChat.AvaaLinssissa (teema lasi). Kulma väistää lapun (
@@ -33,6 +35,7 @@ namespace Matkakirja.Natiivi
         readonly Kortti kortti;
         readonly VisualElement korttiNapit;
         readonly Label nimi, vuodet, kysymys, kreikka, viite;
+        readonly Button sulku;
         readonly ScrollView lapunVieritys;
         readonly Vetokahva kahva;
         readonly LiviaKuva minipulu;
@@ -44,6 +47,14 @@ namespace Matkakirja.Natiivi
         float nimiPeitto = -1f, kysymysPeitto = -1f, lahdePeitto = -1f;
         int vetoId = -1;
         Vector2 vetoAlku;
+        /// <summary>✕ häipyy näin kauan viimeisen napautuksen jälkeen (web AJATTELIJA_SULKU_PIILOON_MS = Kuvanakyma.AutoPiilotusS).</summary>
+        const float SulkuPiiloonS = 4f;
+        bool sulkuPiilossa = true, peittaa;
+        float sulkuKosketus;
+        IVisualElementScheduledItem sulkuPiilotus;
+
+        /// <summary>Kohtaus (KUVANÄKYMÄ) auki: oma ✕ korvaa LinssiUi:n sulkupillerin.</summary>
+        public event Action<bool> Peittaa;
 
         static PuluChat Chat => UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
         static bool ChatAuki => Chat != null && Chat.Auki && Chat.Linssissa;
@@ -115,6 +126,19 @@ namespace Matkakirja.Natiivi
             pulunappi.Add(minipulu);
             pulunappi.RegisterCallback<PointerDownEvent>(e => { e.StopPropagation(); PuluNapautettu(); });
 
+            sulku = Rakenne.Nappi("×", "mk-kuvanakyma__sulku mk-kuvanakyma__sulku--harmaa", /* KUVANÄKYMÄ-pohja, ✕ harmaa kuten astronautin kuva */
+                AjattelijatSovitin.PyydaSulku, turva);
+            Rakenne.El("mk-kuvanakyma__sulkurengas", sulku, PickingMode.Ignore).SendToBack();
+            sulku.tooltip = "Sulje";
+            NaytaSulku(false, heti: true);
+            // Napautus mihin tahansa kohtauksessa tuo ✕:n (web pointerdown kaappausvaiheessa, ei estä alla olevaa toimintoa).
+            juuri.RegisterCallback<PointerDownEvent>(_ =>
+            {
+                sulkuKosketus = Time.unscaledTime;
+                if (sulkuPiilossa) NaytaSulku(true);
+                else Ruudunpaivitys.Herata(SulkuPiiloonS + 0.5f);
+            }, TrickleDown.TrickleDown);
+
             turva.RegisterCallback<GeometryChangedEvent>(e =>
             {
                 float w = e.newRect.width, h = e.newRect.height;
@@ -164,7 +188,9 @@ namespace Matkakirja.Natiivi
                 kuvaAuki = kuvaNakyy;
                 vetoId = -1;
                 if (kuvaNakyy) Ponnahdus.Avaa(juuri); else Ponnahdus.Sulje(juuri);
+                NaytaSulku(false, heti: true);   // kohtaus alkaa ✕ piilossa
             }
+            if (kuvaNakyy != peittaa) { peittaa = kuvaNakyy; Peittaa?.Invoke(kuvaNakyy); }
             // Lataus: vain tumma pinta (näyttämön kuva voi olla edellisen kohtauksen tai musta).
             kuva.style.display = a != null && !AjattelijatSovitin.Latautuu ? DisplayStyle.Flex : DisplayStyle.None;
 
@@ -241,6 +267,9 @@ namespace Matkakirja.Natiivi
             if (!Mathf.Approximately(t.Nimi, nimiPeitto)) { nimiPeitto = t.Nimi; nimiLohko.style.opacity = Mathf.Clamp01(t.Nimi); }
             if (!Mathf.Approximately(t.Kysymys, kysymysPeitto)) { kysymysPeitto = t.Kysymys; kysymys.style.opacity = Mathf.Clamp01(t.Kysymys); }
             if (!Mathf.Approximately(t.Lahde, lahdePeitto)) { lahdePeitto = t.Lahde; lahde.style.opacity = Mathf.Clamp01(t.Lahde); }
+            // Kierrokset 2– vaihtavat lähderivin (web lahdeEl/lahdeViite asetaKierroksessa).
+            if (t.El != null && t.El != kreikka.text) kreikka.text = t.El;
+            if (t.Viite != null && t.Viite != viite.text) viite.text = t.Viite;
         }
 
         void AsetaKuva(RenderTexture rt)
@@ -253,6 +282,31 @@ namespace Matkakirja.Natiivi
             // Kuvanakyma.AsetaTurva: Ylakerroksella ei ole omaa turva-aluetta; sama ruutu, joten linssikerroksen reunat.
             var r = kerros.Reunat(LinssiUi.Kerros);
             turva.style.left = r.x; turva.style.top = r.y; turva.style.right = r.z; turva.style.bottom = r.w;
+        }
+
+        /// <summary>✕ näkyviin (Kesto.Avaus) tai häivytetyksi (Kesto.Sulku); piilossa se ei ota kosketuksia (Kuvanakyma.NaytaAutoNapit).</summary>
+        void NaytaSulku(bool nakyvissa, bool heti = false)
+        {
+            sulkuPiilossa = !nakyvissa;
+            float kesto = heti ? 0f : (nakyvissa ? Tyylikirja.Kesto.Avaus : Tyylikirja.Kesto.Sulku) / 1000f;
+            sulku.style.transitionProperty = new StyleList<StylePropertyName>(new List<StylePropertyName> { new StylePropertyName("opacity") });
+            sulku.style.transitionDuration = new StyleList<TimeValue>(new List<TimeValue> { new TimeValue(kesto) });
+            sulku.style.opacity = nakyvissa ? 1f : 0f;
+            sulku.pickingMode = nakyvissa ? PickingMode.Position : PickingMode.Ignore;
+            if (nakyvissa) AjastaSulkuPiilotus();
+            else { sulkuPiilotus?.Pause(); sulkuPiilotus = null; }
+        }
+
+        /// <summary>Piilotus 4 s viimeisen kosketuksen jälkeen (Kuvanakyma.AjastaAutoPiilotus).</summary>
+        void AjastaSulkuPiilotus()
+        {
+            sulkuPiilotus?.Pause();
+            sulkuPiilotus = juuri.schedule.Execute(() =>
+            {
+                if (!kuvaAuki) { sulkuPiilotus?.Pause(); return; }
+                if (!sulkuPiilossa && Time.unscaledTime - sulkuKosketus >= SulkuPiiloonS) NaytaSulku(false);
+            }).Every(250);
+            Ruudunpaivitys.Herata(SulkuPiiloonS + 0.5f);
         }
 
         /// <summary>Veto alas kuvassa sulkee (KUVANÄKYMÄ-pohja; web pointerup dy &gt; 80 ja dy &gt; 2 |dx|).</summary>
@@ -378,8 +432,12 @@ namespace Matkakirja.Natiivi
                     return Kirjaa("Pulu napautettu, chat " + (ChatAuki ? "auki" : "kiinni"));
                 case "sulje":
                     if (!AjattelijatSovitin.AukiNyt) return Kirjaa("linssi ei ole auki");
-                    AjattelijatSovitin.PyydaSulku();
-                    return Kirjaa("suljettu");
+                    if (!kuvaAuki) { AjattelijatSovitin.PyydaSulku(); return Kirjaa("suljettu"); }
+                    // ✕ kuten pelaajalla: piilossa ensin napautus tuo sen näkyviin.
+                    // Kosketushetki kuten pelaajan napautuksessa, muuten 4 s:n ajastin piilottaa ✕:n heti (kuva 7b1c1f3b).
+                    sulkuKosketus = Time.unscaledTime;
+                    if (sulkuPiilossa) { NaytaSulku(true); return Kirjaa("✕ näkyviin (napauta uudelleen: ui ajattelija sulje)"); }
+                    return Kirjaa("painettu " + Paina(sulku));
                 default:
                     return "ui ajattelija tila | valitse <n> | pulu | sulje";
             }
@@ -419,6 +477,7 @@ namespace Matkakirja.Natiivi
             Osa("nimi", nimiLohko);
             Osa("kysymys", kysymys);
             Osa("lähde", lahde);
+            Osa("✕" + (sulkuPiilossa ? " (piilossa)" : ""), sulku);
             Osa("lappu", lappu);
             Osa("pulu", pulunappi);
             return $"{n} näkyvää osaa";

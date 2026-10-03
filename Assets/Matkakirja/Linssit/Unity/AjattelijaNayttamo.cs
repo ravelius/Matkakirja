@@ -11,8 +11,13 @@
 // WEBIN SÄÄTIMET oletusarvoin (?avain 8,5, ?tayte 0,12, ?rivit 0,75, ?tykki 1,6, ?kaikutayte 0,5, ?kaikuvoima 1,5).
 // Avainvalon varjo on oma varjokartta (2048, lähi 0,6, kauko 2,2, keila 32° kuten webin SpotLight.shadow), koska URP:n
 // lisävalojen varjot ovat projektissa pois.
+//
+// KIERROKSET 2– (web #3884): kierros vaihtaa päälauseen tykin (oma atlasrivi, kohta edestä tai sivulta), taustavirran
+// asettelun (sama 20 riviä, kierroksen siemen) ja yhden kaikupaikan (tekstuuri vaihdetaan; kaiut eivät ole päällekkäin).
+// Kamera kulkee pidon jälkeen Blenderin avaimilla (AjattelijaAikajana.Kamerakayra), ensimmäinen avain on oma pito.
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Matkakirja.Linssit.Ajattelijat;
 using Matkakirja.Linssit.Dioraama;
 using UnityEngine;
@@ -45,7 +50,7 @@ namespace Matkakirja.Natiivi
         RenderTexture kuva, varjo;
         Mesh mesh, peiteMesh;
         Material mat, varjoMat, peiteMat;
-        Texture2D normaali, kipsi, kaiku, atlas;
+        Texture2D normaali, kipsi, atlas;
         CommandBuffer varjoKomennot;
         Vector3[] paikat;
         int[] kolmiot;
@@ -53,11 +58,33 @@ namespace Matkakirja.Natiivi
         public string Virhe { get; private set; }
 
         // Johdetut (webin avaaAjattelija): osuma otsalla, lentoasento, tykit, kaiku.
-        Vector3 osP, osN, lentoC, lentoT, paa, tahtays, remPaikka, remKatse, kaikuTykki, kaikuSuunta;
-        float s0, tykki, w;
+        Vector3 osP, osN, lentoC, lentoT, paa, tahtays, remPaikka, remKatse, kaikuSuunta;
+        float tykki, w;
         List<VirtaRivi> virta;
         readonly List<float> virtaVoima = new List<float>();
         int kaikuIndeksi = -1;
+
+        /// <summary>Kierroksen päälausetykki (web lauseTykki + kierroksen ajat); 0 = kierros 1, sitten bystiin osuneet kierrokset 2–.</summary>
+        sealed class KierrosTykki
+        {
+            public AjattelijaPaalause Lause; public AtlasRivi Rivi; public Vector3 Paikka, Kohde; public float S0;
+            public double[] Vieritys, Lahde, Virta; public uint Siemen; public double Alku;
+        }
+        /// <summary>Kierroksen kaiku (web kaiut[k]): kuva latautuu ämpäristä, Tk null siihen asti.</summary>
+        sealed class KaikuPaikka
+        {
+            public string Kuva; public Vector3 Paikka, Kohde; public double Etaisyys, Lev, Blend, Voima, Liuku;
+            public double[] Ruudut, Savy, Tayte; public Texture2D Tk;
+        }
+        readonly List<KierrosTykki> kierrokset = new List<KierrosTykki>();
+        readonly List<KaikuPaikka> kaiut = new List<KaikuPaikka>();   // kierroksittain, null = ei kaikua
+        List<double[]> kaikuIkkunat = new List<double[]>();
+        int nykyKierros = -1;
+        Func<double, AjattelijaOtos> kierrosKamera;
+        // Kaiun täyte (web tayteMalli = kierroksen 1 kaiun täyte tai oletus); paikka seuraa kierroksen kaikua.
+        double tayteOsuus, tayteKeila, tayteBlend;
+        Vector3 tayteVari, tayteP, tayteKohde;
+        bool tayteAsetettu;
         bool malliValmis;
         float vinjetti, vinjettiAika = -1;
         Vector3 varjoPaikka = new Vector3(float.NaN, 0, 0), varjoKohde;
@@ -79,6 +106,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Blender (x, y, z) → Unity (x, z, y).</summary>
         public static Vector3 B(double[] v) => new Vector3((float)v[0], (float)v[2], (float)v[1]);
+        /// <summary>Unity → Blender (sama vaihto; webin t2b).</summary>
+        static double[] UB(Vector3 v) => new double[] { v.x, v.z, v.y };
         /// <summary>Pystykenttä asteina Blenderin pystysensorista (24 mm) ja polttovälistä.</summary>
         public static float KenttaMm(double mm) => (float)(2 * Math.Atan(12 / mm) * 180 / Math.PI);
 
@@ -283,19 +312,99 @@ namespace Matkakirja.Natiivi
             remKatse = B(a.Rembrandt.Katse);
             var lause = a.Paalause;
             // Säde edestä (Blender y = −2 → +y) otsan kohtaan: osumapiste ja pinnan normaali.
-            var alku = B(new[] { lause.Sade[0], -2.0, lause.Sade[1] });
-            if (!Osuma(alku, B(new[] { 0.0, 1.0, 0.0 }), 10f, out float t, out osN)) { virhe = "säde ei osu bystiin"; return false; }
-            osP = alku + B(new[] { 0.0, 1.0, 0.0 }) * t;
+            if (!Kohta(lause.Sade, null, out osP, out osN)) { virhe = "säde ei osu bystiin"; return false; }
             Lentoasento((float)lause.KameraKulma, (float)lause.KameraMatka);
-            // Päälause (CLIP, kromaattinen aberraatio ja syvyyspehmeys).
-            var tykinSuunta = (osN + B(lause.Vino)).normalized;
-            var tykkiP = osP + tykinSuunta * (float)lause.Etaisyys;
-            float nauhaLev = AsetaProjektori(0, tykkiP, osP, (float)lause.Etaisyys, (float)lause.Korkeus, a.Atlas.Paikat[0], (float)lause.Ala,
-                ca: (float)a.Ca, syvyys: (float)a.SyvyysTykki);
-            s0 = 0.5f + (float)lause.Ala / 2f / nauhaLev;
             // Taustavirta: rivit projektoreille (AjattelijaAikajana.Taustavirta = webin arvonta).
             var tv = a.Taustavirta;
-            virta = AjattelijaAikajana.Taustavirta(tv);
+            AsetaVirta(tv.Siemen);
+            kaikuIndeksi = 1 + virta.Count;
+            mat.SetVector("_PVari", new Vector4((float)a.TykkiVari[0], (float)a.TykkiVari[1], (float)a.TykkiVari[2], 1));
+            // Kierros 1: päälause (CLIP, kromaattinen aberraatio ja syvyyspehmeys) ja kaiku otsalla.
+            kierrokset.Clear();
+            kaiut.Clear();
+            kierrokset.Add(LauseTykki(lause, osP, osN, a.Atlas.Paikat[0], a.Ajat.Vieritys, a.Ajat.Lahde, tv.Ajat, tv.Siemen, 0));
+            kaiut.Add(null);
+            var kk = a.Kaiku;
+            if (kk != null)
+            {
+                kaiut[0] = new KaikuPaikka
+                {
+                    Kuva = kk.Kuva, Kohde = osP, Paikka = osP + (osN + B(kk.Vino)).normalized * (float)kk.Etaisyys, Etaisyys = kk.Etaisyys,
+                    Lev = kk.Lev, Blend = kk.Blend, Voima = kk.Voima, Liuku = kk.Liuku, Ruudut = a.Ajat.Kaiku, Savy = kk.Savy, Tayte = kk.TayteSuunta,
+                };
+                kaikuSuunta = (osN + B(kk.KameraSuunta)).normalized;
+            }
+            tayteOsuus = kk?.TayteOsuus ?? 0.10; tayteKeila = kk?.TayteKeila ?? 45; tayteBlend = kk?.TayteBlend ?? 0.7;
+            tayteVari = kk != null ? new Vector3((float)kk.TayteVari[0], (float)kk.TayteVari[1], (float)kk.TayteVari[2]) : new Vector3(0.90f, 0.94f, 1.0f);
+            // Kierrokset 2–: päälause edestä tai sivulta, kaiku omaan kohtaansa; bystin ohi menevä kierros jätetään pois (web).
+            if (a.Kierrokset != null)
+                foreach (var k in a.Kierrokset.Lista)
+                {
+                    if (!Kohta(k.Lause.Sade, k.Lause.Sivulta, out var kp, out var kn))
+                    {
+                        Debug.LogWarning("MATKAKIRJA linssit: ajattelijan kierroksen päälause ei osu bystiin " + k.PaalauseAvain);
+                        continue;
+                    }
+                    kierrokset.Add(LauseTykki(k.Lause, kp, kn, a.Atlas.Paikat[k.AtlasRivi], k.Vieritys, k.Lahde, k.Virta, k.Siemen, k.Virta[0]));
+                    kaiut.Add(null);
+                    var kc = k.Kaiku;
+                    if (kc == null || !Kohta(kc.KohdeSade, kc.KohdeSivulta, out var ko, out var kon)) continue;
+                    kaiut[kaiut.Count - 1] = new KaikuPaikka
+                    {
+                        Kuva = kc.Kuva, Kohde = ko, Paikka = ko + (kon + B(kc.Vino)).normalized * (float)kc.Etaisyys, Etaisyys = kc.Etaisyys,
+                        Lev = kc.Lev, Blend = !double.IsNaN(kc.Blend) ? kc.Blend : kk?.Blend ?? 0.3, Voima = kc.Voima, Liuku = kc.Liuku,
+                        Ruudut = kc.Ruudut, Savy = kc.Savy ?? kk?.Savy ?? new[] { 1.0, 0.78, 0.52 }, Tayte = kc.TayteSuunta ?? kk?.TayteSuunta,
+                    };
+                }
+            // Auringon hiipumisen ikkunat: kaikki kaiut (aurinko ja maailma hiipuvat 45 ruudussa kunkin kaiun ajaksi).
+            kaikuIkkunat = kaiut.Where(e => e != null).Select(e => e.Ruudut).ToList();
+            nykyKierros = -1;
+            AsetaKierros(0);
+            // Kierrosten 2– kamera: Blenderin avaimet; ensimmäinen avain (kierroksen 1 pito) tämän näkymän omasta pidosta.
+            kierrosKamera = null;
+            if (a.Kierrokset != null && kierrokset.Count > 1)
+            {
+                var pito = kk != null ? KaikuKamera(1) : Kaari(1);
+                var avaimet = new List<AjattelijaOtos>
+                {
+                    new AjattelijaOtos { R = a.Ajat.Pito, Paikka = UB(pito.paikka), Katse = UB(pito.katse), Mm = kk != null ? kk.KameraMm : a.Linssi },
+                };
+                avaimet.AddRange(a.Kierrokset.Kamera.Skip(1));
+                kierrosKamera = AjattelijaAikajana.Kamerakayra(avaimet);
+            }
+            AsetaTaulukot();
+            return true;
+        }
+
+        /// <summary>Kohta bystillä (web kohta): sivulta [y, z] säteellä x = 2 → −x tai edestä [x, z] säteellä y = −2 → +y.</summary>
+        bool Kohta(double[] sade, double[] sivulta, out Vector3 p, out Vector3 n)
+        {
+            Vector3 alku, suunta;
+            if (sivulta != null) { alku = B(new[] { 2.0, sivulta[0], sivulta[1] }); suunta = B(new[] { -1.0, 0.0, 0.0 }); }
+            else { alku = B(new[] { sade[0], -2.0, sade[1] }); suunta = B(new[] { 0.0, 1.0, 0.0 }); }
+            p = default;
+            if (!Osuma(alku, suunta, 10f, out float t, out n)) return false;
+            p = alku + suunta * t;
+            return true;
+        }
+
+        /// <summary>Webin lauseTykki: paikka normaalin ja vinouden suunnassa, vieritysväli s0 nauhan leveydestä.</summary>
+        KierrosTykki LauseTykki(AjattelijaPaalause l, Vector3 p, Vector3 n, AtlasRivi rivi, double[] vieritys, double[] lahde, double[] virtaAjat,
+            uint siemen, double alku)
+        {
+            float nauhaLev = (float)l.Korkeus * (float)rivi.Lev / (float)rivi.Korkeus;
+            return new KierrosTykki
+            {
+                Lause = l, Rivi = rivi, Kohde = p, Paikka = p + (n + B(l.Vino)).normalized * (float)l.Etaisyys, S0 = 0.5f + (float)l.Ala / 2f / nauhaLev,
+                Vieritys = vieritys, Lahde = lahde, Virta = virtaAjat, Siemen = siemen, Alku = alku,
+            };
+        }
+
+        /// <summary>Webin asetaVirta: taustavirran rivit projektoreille 1… siemenellä (kierrokset 2– omalla siemenellään).</summary>
+        void AsetaVirta(uint siemen)
+        {
+            var tv = a.Taustavirta;
+            virta = AjattelijaAikajana.Taustavirta(a, siemen);
             virtaVoima.Clear();
             foreach (var v in virta)
             {
@@ -306,18 +415,56 @@ namespace Matkakirja.Natiivi
                     (float)v.Kulma, (float)v.VM, toisto: true);
                 virtaVoima.Add(tykki * (float)tv.VoimaKerroin * (float)v.Kirkkaus * RivitKerroin);
             }
+        }
+
+        /// <summary>Webin asetaKierros: päälauseen tykki, taustavirran asettelu (siemen vaihtuu) ja kaikupaikka kierrokselle k.</summary>
+        void AsetaKierros(int k)
+        {
+            if (k == nykyKierros) return;
+            var edellinen = nykyKierros >= 0 ? kierrokset[nykyKierros] : null;
+            nykyKierros = k;
+            var kt = kierrokset[k];
+            AsetaProjektori(0, kt.Paikka, kt.Kohde, (float)kt.Lause.Etaisyys, (float)kt.Lause.Korkeus, kt.Rivi, (float)kt.Lause.Ala,
+                ca: (float)a.Ca, syvyys: (float)a.SyvyysTykki);
+            if (edellinen != null && edellinen.Siemen != kt.Siemen) AsetaVirta(kt.Siemen);
+            SovitaKaiku(k);
+        }
+
+        /// <summary>Webin sovitaKaiku: kaikupaikka kierroksen k kaiulle (tai pois, jos kaikua ei ole tai kuva ei ole vielä latautunut).</summary>
+        void SovitaKaiku(int k)
+        {
+            var e = kaiut[k];
             pMaara = 1 + virta.Count;
-            mat.SetVector("_PVari", new Vector4((float)a.TykkiVari[0], (float)a.TykkiVari[1], (float)a.TykkiVari[2], 1));
-            if (a.Kaiku != null)
-            {
-                var kk = a.Kaiku;
-                kaikuIndeksi = 1 + virta.Count;
-                kaikuTykki = osP + (osN + B(kk.Vino)).normalized * (float)kk.Etaisyys;
-                kaikuSuunta = (osN + B(kk.KameraSuunta)).normalized;
-                mat.SetVector("_PKaikuVari", new Vector4((float)kk.Savy[0], (float)kk.Savy[1], (float)kk.Savy[2], 1));
-            }
-            AsetaTaulukot();
-            return true;
+            if (e == null) return;
+            tayteP = e.Kohde + B(e.Tayte).normalized;
+            tayteKohde = e.Kohde;
+            tayteAsetettu = true;
+            if (e.Tk == null) return;
+            mat.SetTexture("_Kaiku", e.Tk);
+            mat.SetVector("_PKaikuVari", new Vector4((float)e.Savy[0], (float)e.Savy[1], (float)e.Savy[2], 1));
+            float korkeus = (float)e.Lev * e.Tk.height / e.Tk.width;
+            AsetaProjektori(kaikuIndeksi, e.Paikka, e.Kohde, (float)e.Etaisyys, korkeus, null, Mathf.Max((float)e.Lev, korkeus), (float)e.Blend,
+                onKaiku: true, kuvaLev: e.Tk.width, kuvaKork: e.Tk.height);
+            pMaara = kaikuIndeksi + 1;
+        }
+
+        /// <summary>Kierroksen (bystiin osuneet) ruudussa r: viimeinen, jonka virran alku on saavutettu (web kierrosRuudussa).</summary>
+        int KierrosRuudussa(double r)
+        {
+            int k = 0;
+            for (int j = 1; j < kierrokset.Count; j++) if (r >= kierrokset[j].Alku) k = j;
+            return k;
+        }
+
+        /// <summary>Nykyisen kierroksen päälause (lähderivin kreikka ja viite).</summary>
+        public AjattelijaPaalause Lause => nykyKierros >= 0 ? kierrokset[nykyKierros].Lause : a.Paalause;
+        /// <summary>Nykyisen kierroksen lähderivin ruudut.</summary>
+        public double[] LahdeAjat => nykyKierros >= 0 ? kierrokset[nykyKierros].Lahde : a.Ajat.Lahde;
+
+        /// <summary>Ladattavat kaikukuvat (kierros, ämpäripolku) bystiin osuneille kaiuille; AsetaMallin jälkeen.</summary>
+        public IEnumerable<(int kierros, string kuva)> Kaikukuvat()
+        {
+            for (int k = 0; k < kaiut.Count; k++) if (kaiut[k] != null) yield return (k, kaiut[k].Kuva);
         }
 
         /// <summary>Lähin osuma bystiin (Möller–Trumbore kaikkiin kolmioihin); normaali säteen puolelle.</summary>
@@ -407,16 +554,16 @@ namespace Matkakirja.Natiivi
             mat.SetFloat("_KipsiPaalla", 1f);
         }
 
-        public void AsetaKaiku(byte[] tavut)
+        /// <summary>Kierroksen k kaikukuva latautui (Kaikukuvat()); kaikupaikka heti, jos kierros on käynnissä.</summary>
+        public void AsetaKaiku(int k, byte[] tavut)
         {
-            if (tavut == null || !malliValmis || a.Kaiku == null || (kaiku = LueKuva(tavut, false, "kaiku")) == null) return;
-            kaiku.wrapMode = TextureWrapMode.Clamp;
-            mat.SetTexture("_Kaiku", kaiku);
-            var kk = a.Kaiku;
-            float korkeus = (float)kk.Lev * kaiku.height / kaiku.width;
-            AsetaProjektori(kaikuIndeksi, kaikuTykki, osP, (float)kk.Etaisyys, korkeus, null, Mathf.Max((float)kk.Lev, korkeus), (float)kk.Blend,
-                onKaiku: true, kuvaLev: kaiku.width, kuvaKork: kaiku.height);
-            pMaara = kaikuIndeksi + 1;
+            if (tavut == null || !malliValmis || k < 0 || k >= kaiut.Count || kaiut[k] == null || kaiut[k].Tk != null) return;
+            var tk = LueKuva(tavut, false, "kaiku" + k);
+            if (tk == null) return;
+            tk.wrapMode = TextureWrapMode.Clamp;
+            kaiut[k].Tk = tk;
+            if (k != nykyKierros) return;
+            SovitaKaiku(k);
             AsetaTaulukot();
         }
 
@@ -498,7 +645,11 @@ namespace Matkakirja.Natiivi
             else
             {
                 kamera.backgroundColor = TaustaVari;
-                var kh = AjattelijaAikajana.Kamera(a, r);
+                int kierros = KierrosRuudussa(r);
+                AsetaKierros(kierros);
+                var kt = kierrokset[kierros];
+                // Ilman kierrosten kameraa (kierros ei osunut bystiin) kamera jää pitoon kuten webissä.
+                var kh = AjattelijaAikajana.Kamera(a, kierrosKamera != null ? r : Math.Min(r, t.Pito));
                 Vector3 paikka, katse; double mm;
                 switch (kh.Vaihe)
                 {
@@ -519,6 +670,11 @@ namespace Matkakirja.Natiivi
                         var l = Kaari((float)kh.Osuus);
                         paikka = l.paikka; katse = l.katse; mm = a.Linssi; break;
                     }
+                    case KameraVaihe.Kierrokset:
+                    {
+                        var c = kierrosKamera(r);
+                        paikka = B(c.Paikka); katse = B(c.Katse); mm = c.Mm; break;
+                    }
                     default:
                     {
                         var l = Kaari(1);
@@ -530,38 +686,38 @@ namespace Matkakirja.Natiivi
                 }
                 AsetaKamera(paikka, katse, mm);
                 vinjettiKohde = AjattelijaAikajana.Vinjetti(t, r) ? 1 : 0;
-                lahde = (float)AjattelijaAikajana.Nakyvyys(r, t.Lahde, 10);
+                lahde = (float)AjattelijaAikajana.Nakyvyys(r, kt.Lahde, 10);
 
-                // Aurinko: polku introssa, Rembrandt sen jälkeen; hiipuu kaiun ajaksi, samoin maailma.
+                // Aurinko: polku introssa, Rembrandt sen jälkeen; hiipuu jokaisen kaiun ajaksi, samoin maailma.
                 var sv = B(AjattelijaAikajana.AuringonSuunta(a, r));
-                float hiipuu = (float)AjattelijaAikajana.Hiipuu(a, r);
+                float hiipuu = (float)AjattelijaAikajana.Hiipuu(kaikuIkkunat, r);
                 var valoP = paa + sv * (float)a.AvainEtaisyys;
                 Spotti(0, valoP, tahtays, a.AvainKeila, 1.0, new Vector3(1f, 0.95f, 0.88f), Avain * hiipuu, varjo: true);
                 Spotti(1, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0);
                 Spotti(2, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0);
-                mat.SetVector(IdTaivas, new Vector4(0.9f, 0.92f, 1.0f, 0) * (Tayte * hiipuu));
-                mat.SetVector(IdMaa, new Vector4(0.25f, 0.25f, 0.28f, 0) * (Tayte * hiipuu));
+                // v11 (web #3892): alkukuvissa maailman täyte intro.tayte-kertaiseksi, varjopuoli lähes mustaksi.
+                float maailma = Tayte * hiipuu * (float)AjattelijaAikajana.MaailmaKerroin(a, r);
+                mat.SetVector(IdTaivas, new Vector4(0.9f, 0.92f, 1.0f, 0) * maailma);
+                mat.SetVector(IdMaa, new Vector4(0.25f, 0.25f, 0.28f, 0) * maailma);
                 float kaikuK = 1 - hiipuu;
-                if (a.Kaiku != null)
-                {
-                    var kk = a.Kaiku;
-                    Spotti(3, osP + B(kk.TayteSuunta).normalized, osP, kk.TayteKeila, kk.TayteBlend,
-                        new Vector3((float)kk.TayteVari[0], (float)kk.TayteVari[1], (float)kk.TayteVari[2]), Avain * (float)kk.TayteOsuus * KaikuTayte * kaikuK);
-                    if (kaiku != null)
-                    {
-                        pa[kaikuIndeksi].w = (float)AjattelijaAikajana.KaikuSiirto(a, r);
-                        float s = syke != null && syke.TryGetValue((int)Math.Round(r), out var sk) ? sk : 1f;
-                        pb[kaikuIndeksi].w = (float)kk.Voima * w * KaikuVoima * kaikuK * s;
-                    }
-                }
+                // Täyte kierroksen kaiun kohdassa (paikka jää edellisen kaiun kohdalle kierroksella, jolla kaikua ei ole).
+                if (tayteAsetettu)
+                    Spotti(3, tayteP, tayteKohde, tayteKeila, tayteBlend, tayteVari, Avain * (float)tayteOsuus * KaikuTayte * kaikuK);
                 else Spotti(3, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0);
+                var e = kaiut[kierros];
+                if (e?.Tk != null)
+                {
+                    pa[kaikuIndeksi].w = (float)AjattelijaAikajana.KaikuSiirto(e.Liuku, e.Ruudut, r);
+                    float s = syke != null && syke.TryGetValue((int)Math.Round(r), out var sk) ? sk : 1f;
+                    pb[kaikuIndeksi].w = (float)e.Voima * w * KaikuVoima * kaikuK * s;
+                }
                 if (hiipuu > 0) PiirraVarjo(valoP, tahtays);
 
-                // 38a vierii −s0 → s0; teho nousee ja laskee 6 ruudussa. Taustavirta: häivytys ja siirto = nopeus × ruudut.
-                pa[0].w = (float)AjattelijaAikajana.VieritysSiirto(t, r, s0);
-                pb[0].w = tykki * (float)AjattelijaAikajana.VieritysTeho(t, r);
-                float vk = (float)AjattelijaAikajana.VirtaVoima(a.Taustavirta, r);
-                double r0 = a.Taustavirta.Ajat[0];
+                // Päälause vierii −s0 → s0; teho nousee ja laskee 6 ruudussa. Taustavirta: häivytys ja siirto = nopeus × ruudut.
+                pa[0].w = (float)AjattelijaAikajana.VieritysSiirto(kt.Vieritys, r, kt.S0);
+                pb[0].w = tykki * (float)AjattelijaAikajana.VieritysTeho(kt.Vieritys, r);
+                float vk = (float)AjattelijaAikajana.VirtaVoima(kt.Virta, r);
+                double r0 = kt.Virta[0];
                 for (int i = 0; i < virta.Count; i++)
                 {
                     pa[virta[i].I].w = (float)(virta[i].Nopeus * (r - r0));
@@ -609,8 +765,9 @@ namespace Matkakirja.Natiivi
         public string Kuvaus() =>
             $"näyttämö {(kuva != null ? $"{kuva.width}×{kuva.height}" : "-")}, malli {(malliValmis ? $"{mesh.vertexCount} kärkeä" : "ei")}"
             + $", normaali {(normaali != null ? $"{normaali.format}{(normaali.isDataSRGB ? " sRGB" : " lin")}" : "-")}, atlas {(atlas != null ? $"{atlas.width}×{atlas.height} {atlas.format}" : "-")}"
-            + $", kipsi {(kipsi != null ? (kipsi.isDataSRGB ? "sRGB" : "lin") : "-")}, kaiku {(kaiku != null ? $"{kaiku.width}×{kaiku.height}" : "-")}, syke {syke?.Count ?? 0}"
-            + $", tykkejä {pMaara}{(Virhe != null ? ", virhe " + Virhe : "")}";
+            + $", kipsi {(kipsi != null ? (kipsi.isDataSRGB ? "sRGB" : "lin") : "-")}"
+            + $", kaiut {(kaiut.Any(e => e != null) ? string.Join("/", kaiut.Where(e => e != null).Select(e => e.Tk != null ? $"{e.Tk.width}×{e.Tk.height}" : "-")) : "-")}"
+            + $", syke {syke?.Count ?? 0}, kierros {nykyKierros + 1}/{kierrokset.Count}, tykkejä {pMaara}{(Virhe != null ? ", virhe " + Virhe : "")}";
 
         public void Tuhoa()
         {
@@ -619,8 +776,9 @@ namespace Matkakirja.Natiivi
             KuvaVaihtui?.Invoke(null);
             if (varjo != null) { varjo.Release(); Destroy(varjo); }
             varjoKomennot?.Release();
-            foreach (var t in new UnityEngine.Object[] { normaali, kipsi, kaiku, atlas, mesh, peiteMesh, mat, varjoMat, peiteMat })
+            foreach (var t in new UnityEngine.Object[] { normaali, kipsi, atlas, mesh, peiteMesh, mat, varjoMat, peiteMat })
                 if (t != null) Destroy(t);
+            foreach (var e in kaiut) if (e?.Tk != null) Destroy(e.Tk);
             if (this != null && gameObject != null) Destroy(gameObject);
         }
     }

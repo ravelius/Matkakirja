@@ -2,7 +2,8 @@
 // Vain kehittäjätilassa (ei avauskynnystä, Linssirekisteri.Avauskynnykset) kuten webin KEHITTAJALINSSIT. Linssi avaa
 // ajattelijan valinnan (AjattelijaNakyma, KORTTI-pohja), ja valinta käynnistää ~53 s:n kohtauksen: prologi (4 s, oma
 // kello) → kierros 1, jonka kello on puheraita (G = prologi.loppu + puhe.time · 30, kuten webin aani.currentTime) →
-// lopussa elämä-lappu (NOSTOKORTTI tumma) ja PULU. Kohtauksen piirtää AjattelijaNayttamo omalla kamerallaan
+// lopussa elämä-lappu (NOSTOKORTTI tumma) ja PULU. Kierrokset 2– (web #3884, data kierrokset): yksi ääniraita ja syke
+// koko kohtaukselle (Sokrates 111 s), lappu kierrosten lopussa; kaikukuvat haetaan kierroksittain. Kohtauksen piirtää AjattelijaNayttamo omalla kamerallaan
 // RenderTextureen, jonka AjattelijaNakyma näyttää koko ruudulla (Dioraaman malli).
 //
 // AJATTELIJAT OVAT DATAA: Resources/Ajattelijat/*.json (tyokalut/ajattelijat-natiiviin.mjs webin datasta). Aineistot
@@ -27,13 +28,15 @@ namespace Matkakirja.Natiivi
     public struct AjattelijaTekstit
     {
         public float Nimi, Kysymys, Lahde;
+        /// <summary>Lähderivi nykyisen kierroksen päälauseesta (null = ei muutosta).</summary>
+        public string El, Viite;
     }
 
     public sealed class AjattelijatSovitin : ILinssi
     {
         public const string Juuri = "https://media.matkakirja.app/";
-        /// <summary>Prologin kytkimen napsahdus (web AJATTELIJA_KYTKIN; Linnanrakentaja: Kenney CC0 -iskut ja hallin kaiku).</summary>
-        public const string Kytkin = "ajattelijat/yhteiset/v1/kytkin-kaiku.mp3";
+        /// <summary>Prologin kytkimen napsahdus (web AJATTELIJA_KYTKIN v2, #3892: aito katkaisijaäänite ja konvoluutiokaiku, CC0).</summary>
+        public const string Kytkin = "ajattelijat/yhteiset/v2/kytkin-kaiku.mp3";
 
         public static readonly LinssiTiedot AjattelijatTiedot = new LinssiTiedot
         {
@@ -183,11 +186,19 @@ namespace Matkakirja.Natiivi
                 yield break;
             }
             o.StartCoroutine(Hae(a.Kipsi, b => { if (s == sukupolvi) nayttamo.AsetaKipsi(b); }));
-            if (a.Kaiku != null) o.StartCoroutine(Hae(a.Kaiku.Kuva, b => { if (s == sukupolvi) nayttamo.AsetaKaiku(b); }));
-            if (a.Kaiku != null && !string.IsNullOrEmpty(a.Syke))
-                o.StartCoroutine(Hae(a.Syke, b => { if (s == sukupolvi) nayttamo.AsetaSyke(System.Text.Encoding.UTF8.GetString(b)); }));
-            o.StartCoroutine(HaeAani(a.Puhe, puhe, s));
-            o.StartCoroutine(HaeAani(a.Musiikki, musiikki, s));
+            // Kaikukuvat kierroksittain (yksi kaikupaikka, tekstuuri vaihtuu); syke ja ääni kierrosten raidoista, jos niitä on.
+            bool kaikuja = false;
+            foreach (var (k, kuva) in nayttamo.Kaikukuvat())
+            {
+                kaikuja = true;
+                o.StartCoroutine(Hae(kuva, b => { if (s == sukupolvi) nayttamo.AsetaKaiku(k, b); }));
+            }
+            var kr = a.Kierrokset;
+            string sykePolku = kr != null ? kr.Syke : a.Syke;
+            if (kaikuja && !string.IsNullOrEmpty(sykePolku))
+                o.StartCoroutine(Hae(sykePolku, b => { if (s == sukupolvi) nayttamo.AsetaSyke(System.Text.Encoding.UTF8.GetString(b)); }));
+            o.StartCoroutine(HaeAani(kr != null ? kr.Puhe : a.Puhe, puhe, s));
+            o.StartCoroutine(HaeAani(kr != null ? kr.Musiikki : a.Musiikki, musiikki, s));
             o.StartCoroutine(HaeAani(Kytkin, kytkin, s));
             Latautuu = false;
             alku = Time.realtimeSinceStartupAsDouble;
@@ -217,7 +228,7 @@ namespace Matkakirja.Natiivi
             using var p = UnityWebRequestMultimedia.GetAudioClip(Osoite(polku), AudioType.MPEG);
             var dh = (DownloadHandlerAudioClip)p.downloadHandler;
             dh.streamAudio = false;
-            dh.compressed = false;   // PCM: kello (AudioSource.time) tarkka myös kelatessa (~48 s ≈ 8 Mt)
+            dh.compressed = false;   // PCM: kello (AudioSource.time) tarkka myös kelatessa (~48 s ≈ 8 Mt, kierrokset 111 s ≈ 19 Mt)
             yield return p.SendWebRequest();
             if (s != sukupolvi || kohde == null) yield break;
             if (p.result != UnityWebRequest.Result.Success) { o.Kirjaa($"ajattelija: ääni {polku} ei latautunut ({p.error})"); yield break; }
@@ -261,7 +272,7 @@ namespace Matkakirja.Natiivi
                 kytkin.volume = EsityksenAani.Mykistetty?.Invoke() ?? false ? 0f : 1f;
                 kytkin.Play();
             }
-            if (valit.Count >= 3600) valit.RemoveAt(0);   // koko kierros (~53 s) 60 r/s
+            if (valit.Count >= 7200) valit.RemoveAt(0);   // koko kohtaus (kierrokset ~115 s) 60 r/s
             valit.Add(Time.unscaledDeltaTime * 1000f);
             var (prologi, r, loppu) = AjattelijaAikajana.Globaali(a, g);
             nayttamo.Aseta(prologi, r);
@@ -269,7 +280,8 @@ namespace Matkakirja.Natiivi
             {
                 Nimi = (float)AjattelijaAikajana.Nakyvyys(r, a.Ajat.Nimi),
                 Kysymys = (float)AjattelijaAikajana.Nakyvyys(r, a.Ajat.Kysymys),
-                Lahde = (float)AjattelijaAikajana.Nakyvyys(r, a.Ajat.Lahde, 10),
+                Lahde = (float)AjattelijaAikajana.Nakyvyys(r, nayttamo.LahdeAjat, 10),
+                El = nayttamo.Lause.El, Viite = nayttamo.Lause.Viite,
             };
             if (loppu && !Lopussa && double.IsNaN(ruutuOhitus)) { Lopussa = true; Muuttui?.Invoke(); }
         }

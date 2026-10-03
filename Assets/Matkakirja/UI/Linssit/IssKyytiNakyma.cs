@@ -434,6 +434,11 @@ namespace Matkakirja.Natiivi
             sulkuVanha.style.display = uusi ? DisplayStyle.None : DisplayStyle.Flex;
         }
 
+        /// <summary>A/B: Pulu vaakana Cupolan alakulmaan nousevan puomin kanssa (oletus päällä).</summary>
+        public static bool PuluAlas = true;
+
+        IVisualElementScheduledItem puluJalki;
+
         /// <summary>
         /// Pulu kyydissä (omistaja 29.9.2026): Cupolassa ulkona avaruuskävelyllä ikkunan aukossa (alue oikealle alas keskeltä,
         /// kerros kehyksen alla, AstronautinNakyma), muissa tiloissa ohjauspöydän yläpuolella.
@@ -464,6 +469,11 @@ namespace Matkakirja.Natiivi
             bool suuri = Kytkinpoyta && poytaNakyy && (poyta.Suuri || poyta.Liukuu);
             p.Haivyta(suuri);
             if (suuri) return;
+            // VAAKA (Päätoimittaja 3.10., omistajan toive Pulusta vasempaan alakulmaan): Cupolassa Pulu alakulmaan, ja robottikäden
+            // puomi nousee pienen paneelin vasemman yläkulman yli (A/B `astro kyyti pulualas 0|1`).
+            p.VarrenEste = PuluAlas && ikkunassa && poytaNakyy && Kytkinpoyta && W > H
+                ? new Vector2(poyta.Juuri.worldBound.xMin + poyta.Nakyva.x, pe.worldBound.yMin + poyta.YlaReuna)
+                : (Vector2?)null;
             // Robottikäden Pulu (vasen alakulma, omistaja 2.10. 21.3x) pysyy pöydän yläpuolella myös Cupolassa; ikkunan takana
             // olevaa Pulua (A/B ilman robottikättä) AlaVara ei siirrä, koska IkkunanTakana ohittaa sen.
             p.AlaVara = poytaNakyy ? H - pe.worldBound.yMin - (Kytkinpoyta && ikkunassa ? poyta.YlaReuna : 0f) + 6f : 0f;
@@ -676,6 +686,15 @@ namespace Matkakirja.Natiivi
             this.ikkuna = ikkuna;
             PaivitaKehys();
             PaivitaPulu();
+            // Näkymän vaihdon animaatio siirtää pöydän worldBoundia: Pulun paikka (AlaVara) mitattiin kesken siirtymän ja jäi
+            // väärälle korkeudelle, jolloin robottikäden puomi saattoi peittää pienen paneelin (kuva 377bb8a3). Mitataan uudelleen
+            // 100 ms:n välein 1,5 s ajan vaihdon jälkeen.
+            if (tila != edellinenTila)
+            {
+                puluJalki?.Pause();
+                puluJalki = juuri.schedule.Execute(PaivitaPulu).Every(100).ForDuration(1500);
+                Matkakirja.Ruudunpaivitys.Herata(1.6f);
+            }
             if (tila != edellinenTila) { edellinenTila = tila; TilaMuuttui?.Invoke(tila); }
             if (auki != oliAuki) AukiMuuttui?.Invoke(auki);
             PaivitaCupolanKatto(auki && ikkuna);
