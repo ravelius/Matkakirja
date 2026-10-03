@@ -968,20 +968,28 @@ if V14:
         (1, (-0.85, 0.30, 0.52), (0.0, -0.04, 0.38), 35),             # alkuajo ~2 s: pään siluetti takaviistosta, pimeä
         (_L(V14_INTRO['c1']) - 1, (-0.80, 0.10, 0.48), (0.0, -0.05, 0.38), 35),
         (_L(V14_INTRO['c1']), (-0.72, -0.08, 0.35), (0.0, -0.08, 0.34), 45),   # 1) profiilin ääriviiva otsasta partaan
-        (_L(V14_INTRO['c2']), (0.22, -0.55, 0.425), (0.030, -0.12, 0.392), 50),   # 2) silmä, kulmakaari ja nenänvarsi; silmä ~¼ leveydestä
-        (_L(V14_INTRO['c3']), (-0.05, -0.50, 0.30), (0.0, -0.13, 0.285), 50),   # 3) suu ja parta täyttävät kuvan, suoraan edestä
+        (_L(V14_INTRO['c2']), (0.22, -0.55, 0.425) if KOHDE == 'marcus' else (0.22, -0.55, 0.445), (0.030, -0.12, 0.392) if KOHDE == 'marcus' else (0.030, -0.12, 0.412), 50),   # Sokrates: alareuna nenänpäässä   # 2) silmä, kulmakaari ja nenänvarsi; silmä ~¼ leveydestä
+        (_L(V14_INTRO['c3']), (-0.04, -0.68, 0.31) if KOHDE == 'marcus' else (-0.20, -0.58, 0.30), (0.0, -0.13, 0.27) if KOHDE == 'marcus' else (0.0, -0.11, 0.26), 50),   # 3) parta (Sokrates: liukuva sivuvalo kiharoiden poikki; takavalo piirsi renkaan = kita)
         (_L(V14_INTRO['c4']), (-0.42, -0.52, 0.82), (0.0, -0.07, 0.40), 35),    # 4) ¾-kuva ylhäältä
         (V12_REM, (-0.36, -1.24, 0.24), (-0.075, -0.06, 0.39), 35),             # Rembrandt + nimi (toimii, pidetään)
     )
     V7_PEHMEAT = {1}
-    _S = {'alku': (1.0, 0.55, 0.40), 'profiili': (1.0, -0.45, 0.35), 'silma': (0.70, -0.70, 0.85),   # silmä: Rembrandt-suunta osuu silmämunaan
-      'suu': (0.65, -0.75, 0.60),
-          'yla': (0.30, -0.85, 0.70)}   # ¾ ylhäältä: valo edestä ylhäältä otsaan, silmään ja poskeen   # sivuvalo muotoilee; silmä saa valoa, ei litteä
+    # OMISTAJA 3.10. 15.3x: leikkauskuvat MYSTISIÄ — 70–80 % varjossa, kapea reuna- tai rakovalo paljastaa yhden piirteen;
+    # valoa tulee leikkaus leikkaukselta lisää musiikin kasvun mukana, ja vasta Rembrandt + nimi näyttää kasvot kokonaan.
+    _S = {'alku': (1.0, 0.55, 0.40),                                                   # siluetti takaviistosta
+          'profiili': (1.0, -0.65, 0.40) if KOHDE == 'marcus' else (1.0, -0.45, 0.35),  # profiilin ääriviiva (v14 hyvä)
+          'silma': (1.0, -0.45, 0.35),                                                # aurinko lähes pois; rakovalo silmien yli
+          'suu': (0.85, 0.55, 0.15) if KOHDE == 'marcus' else (1.0, -0.10, 0.08),                                                  # takaviistosta matalalta (+ rakovalo toiselta puolelta): kiharoiden reunat
+          'yla': (0.25, 0.55, 1.0)}                                                   # takaa ylhäältä: kaljun ja kulmakaaren kaari
     V7_VALO = ((1, _S['alku']), (_L(V14_INTRO['c1']) - 1, _S['alku']), (_L(V14_INTRO['c1']), _S['profiili']),
                (_L(V14_INTRO['c2']) - 1, _S['profiili']), (_L(V14_INTRO['c2']), _S['silma']),
                (_L(V14_INTRO['c3']) - 1, _S['silma']), (_L(V14_INTRO['c3']), _S['suu']),
                (_L(V14_INTRO['c4']) - 1, _S['suu']), (_L(V14_INTRO['c4']), _S['yla']),
                (V12_REM - 1, _S['yla']), (V12_REM, V12_REM_AURINKO))
+    V14_ENERGIA = ((1, 55), (_L(V14_INTRO['c1']), 65), (_L(V14_INTRO['c2']), 4), (_L(V14_INTRO['c3']), 80),
+                   (_L(V14_INTRO['c4']), 90), (V12_REM, 95))                         # nousee musiikin mukana; silmässä rakovalo
+    V14_RAKO = (_L(V14_INTRO['c2']), _L(V14_INTRO['c3']) - 1)                       # rakovalon ruudut (silmäkuva)
+    V14_PARTA = (_L(V14_INTRO['c3']), _L(V14_INTRO['c4']) - 1)
     V7_RENDER = list(range(1, V12_REM + 1))
 
 
@@ -1133,6 +1141,13 @@ def tausta_rivi(nimi, p, suunta, etaisyys, ala, kuva, kork, kulma, v_m, nopeus, 
         sv.default_value = v_; sv.keyframe_insert('default_value', frame=r)
     avaimet = (((1, 0.0), (ruudut[0], 0.0), (ruudut[1], 1.0), (ruudut[2], 1.0), (ruudut[3], 0.0)) if VIRTA_AVAIMET is None
                else VIRTA_AVAIMET)   # v13: koko kohtauksen (ruutu, kerroin) -avaimet
+    if VIRTA_PORRAS and VIRTA_AVAIMET is not None:   # rivi i lähtee i × porras myöhemmin (ensimmäinen nousu)
+        try: i_r = int(nimi.rsplit('-', 1)[1])
+        except ValueError: i_r = 0
+        av = list(avaimet); j0 = next(j for j, (r_, k__) in enumerate(av) if k__ > 0); viive = round(i_r * VIRTA_PORRAS * 30)
+        seur = av[j0 + 1][0] if j0 + 1 < len(av) else 10 ** 6
+        for j in range(1, j0 + 1): av[j] = (min(av[j][0] + viive, seur - (j0 + 1 - j)), av[j][1])
+        avaimet = av
     for r, k_ in avaimet:
         d.energy = voima * kirkkaus * k_; d.keyframe_insert('energy', frame=r)
     act = d.node_tree.animation_data.action if d.node_tree.animation_data else None
@@ -1215,6 +1230,8 @@ def syke_kaikuun(valo, ikkuna, voima, syke, askel=2):
 # kamera niin kaukana, että kasvojen ääriviiva kehystää kaiun.
 KERTOJA_OLETUS = '/Users/Shared/Claude/proto-3d/_lahteet/sokrates/kertoja-aanikoe-v4/Iv4-william-oletus-ajat.json'
 V13_KERTOJA_ALKAA = (V14_INTRO['kertoja'] - V14_INTRO['prologi']) if V14 else 28.0   # kohtauksen aika (prologin jälkeen)
+V14_TEKSTI_K = 0.3; V14_REUNA = (1.0, 0.35, 0.45)   # v14: tekstivaiheen aurinko ×0,3 ja reunavalon suunta
+VIRTA_PORRAS = 0.45 if '--v14' in A else 0.0   # v14: taustavirran rivit lähtevät yksi kerrallaan (s/rivi)
 V13_NAUHA_MS = 0.055   # lainausnauhojen nopeus pinnalla (m/s); nauha näkyy lainauksen ajan ±0,6 s
 V13C = '--v13c' in A   # v13c (omistaja 3.10. 08.0x): rajatut kaikuhahmot viistosti, ei reunahehkua, virta väistää kaiun
 
@@ -1298,11 +1315,15 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     pd.energy = 0.0; pd.keyframe_insert('energy', frame=1)
     # --- avainvalo (aurinko) vaiheittain ---
     def aur_avain(t_, suunta, e, vari=(1.0, 0.95, 0.88)):
+        if V14 and t_ > T(0) + 0.05:   # omistaja 15.4x: tekstivaiheessa kasvot tummina, teksti erottuu; heikko reunavalo pitää muodon
+            e *= V14_TEKSTI_K
+            if tuple(suunta) == tuple(V12_REM_AURINKO): suunta = V14_REUNA
         ao.location = PAA + Vector(suunta).normalized() * 1.3; kohdista(ao, PAA)
         ao.keyframe_insert('location', frame=F(t_)); ao.keyframe_insert('rotation_euler', frame=F(t_))
         aur.energy = e; aur.keyframe_insert('energy', frame=F(t_)); aur.color = vari; aur.keyframe_insert('color', frame=F(t_))
     R = V12_REM_AURINKO; LAMMIN = (1.0, 0.74, 0.48); ILTA = (1.0, 0.60, 0.33)
-    aur_avain(T(0) - 0.6, R, 95); aur_avain(T(0) + 1.0, R, 30)                        # 01: himmeämpi, pyyhkäisy näkyy
+    if V14: aur_avain(T(0) - 1.0, R, 95); aur_avain(T(0), V14_REUNA, 19)   # Rembrandt → tummenee 11–12 s (linssi)
+    else: aur_avain(T(0) - 0.6, R, 95); aur_avain(T(0) + 1.0, R, 30)                  # 01: himmeämpi, pyyhkäisy näkyy
     aur_avain(k_('02', 0) - 0.3, R, 30); aur_avain(k_('02', 0) + 0.8, R, 16)           # 02 sotilas: kasvojen ääriviiva kehystää
     aur_avain(k_('03', 0) - 0.4, R, 16); aur_avain(k_('03', 0) + 0.4, R, 45)           # 03 38a
     aur_avain(k_('04', 0) - 0.05, R, 45); aur_avain(k_('04', 0), R, 9)               # 04 leikkaus: kylix silmässä
@@ -1416,12 +1437,16 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
                   0.022, (F(kys_t), LOPPU), V7_TYKKI, kiintea=True, energia=(F(kys_t), LOPPU - 1))
     lainaukset.append({'nimi': 'tykki-kysymys', 'kuva': 'nauha-kysymys.png', 'nakyy_s': [round(kys_t, 2), round(loppu_t, 2)], 'kiintea': True})
     def aur_avain(t_, suunta, e, vari=(1.0, 0.95, 0.88)):
+        if V14 and t_ > T(0) + 0.05:   # omistaja 15.4x: tekstivaiheessa kasvot tummina, teksti erottuu; heikko reunavalo pitää muodon
+            e *= V14_TEKSTI_K
+            if tuple(suunta) == tuple(V12_REM_AURINKO): suunta = V14_REUNA
         ao.location = PAA + Vector(suunta).normalized() * 1.3; kohdista(ao, PAA)
         ao.keyframe_insert('location', frame=F(t_)); ao.keyframe_insert('rotation_euler', frame=F(t_))
         aur.energy = e; aur.keyframe_insert('energy', frame=F(t_)); aur.color = vari; aur.keyframe_insert('color', frame=F(t_))
     # Päätoimittaja 3.10.: kipsi ei saa olla tasaisen beige → 06–07 neutraali avainvalo, ilta (08) vain lievästi lämmin
     R = V12_REM_AURINKO; LAMMIN = (1.0, 0.95, 0.88); ILTA = (1.0, 0.82, 0.62); KOVA = (0.12, -0.50, 1.0)
-    aur_avain(T(0) - 0.6, R, 95); aur_avain(T(0) + 1.0, R, 45)                                   # 01
+    if V14: aur_avain(T(0) - 1.0, R, 95); aur_avain(T(0), V14_REUNA, 19)                               # Rembrandt → tummenee 11–12 s (linssi)
+    else: aur_avain(T(0) - 0.6, R, 95); aur_avain(T(0) + 1.0, R, 45)                             # 01
     aur_avain(k_('03', 0) - 0.05, R, 45); aur_avain(k_('03', 0), KOVA, 110)                      # 03 sota ja rutto: kova yläviisto
     aur_avain(sade_t - 0.6, KOVA, 110); aur_avain(sade_t + 0.8, R, 16)                           # 04 sadeihme: kaiku, ääriviiva kehystää
     a5, l5 = k_('05', 0), k_('05', 1)                                                              # 05 niemi: valo keinuu kuin aallot
@@ -1492,6 +1517,24 @@ if '--v7' in A:
         ao.location = tahtays + Vector(s_).normalized() * 1.3; kohdista(ao, tahtays)
         ao.keyframe_insert('location', frame=r); ao.keyframe_insert('rotation_euler', frame=r)
     p, n = osuma(-0.005, 0.418)
+    if V14:   # mystinen intro: auringon voima leikkauksittain (vakio leikkausten välillä) ja kapea rakovalo silmien yli
+        for r, e_ in V14_ENERGIA:
+            aur.energy = e_; aur.keyframe_insert('energy', frame=r)
+            if r > 1: aur.energy = dict(V14_ENERGIA).get(max(k for k in dict(V14_ENERGIA) if k < r)); aur.keyframe_insert('energy', frame=r - 1)
+        rd = bpy.data.lights.new('rako', 'AREA'); rd.shape = 'RECTANGLE'; rd.size = 0.34; rd.size_y = 0.014
+        rd.spread = math.radians(1.2); rd.color = (1.0, 0.97, 0.92)
+        ro = bpy.data.objects.new('rako', rd); sc.collection.objects.link(ro)
+        silmat = Vector((0.0, -0.125, 0.378)); parta = Vector((0.0, -0.10, 0.25))
+        def rako_avain(r, paikka, kohde, e_, koko, koko_y, levi):
+            ro.location = paikka; kohdista(ro, kohde); ro.keyframe_insert('location', frame=r); ro.keyframe_insert('rotation_euler', frame=r)
+            rd.energy, rd.size, rd.size_y, rd.spread = e_, koko, koko_y, math.radians(levi)
+            for k__ in ('energy', 'size', 'size_y', 'spread'): rd.keyframe_insert(k__, frame=r)
+        A_ = (silmat + Vector((0.45, -0.85, 0.22)).normalized() * 0.9, silmat); B_ = (parta + Vector((-0.80, 0.45, 0.05)).normalized() * 0.7, parta)
+        rako_avain(1, *A_, 0.0, 0.34, 0.014, 1.2); rako_avain(V14_RAKO[0] - 1, *A_, 0.0, 0.34, 0.014, 1.2)
+        rako_avain(V14_RAKO[0], *A_, 0.12, 0.34, 0.014, 1.2); rako_avain(V14_RAKO[1], *A_, 0.12, 0.34, 0.014, 1.2)   # kapea kaista silmien yli
+        e_b = 0.5 if KOHDE == 'marcus' else 0.0
+        rako_avain(V14_RAKO[1] + 1, *B_, e_b, 0.12, 0.12, 12); rako_avain(V14_PARTA[1], *B_, e_b, 0.12, 0.12, 12)   # parran toinen reuna takaviistosta
+        rako_avain(V14_PARTA[1] + 1, *B_, 0.0, 0.25, 0.25, 30)
     V10 = '--v10' in A   # päälause 25 % isompi ja alkaa kulkea jo kameran saapuessa; taustavirta; kaikukuvan syke
     ISO = 1.25 if V10 else 1.0
     def vieritys(lahesty_loppu, proj):   # v10: ensimmäiset kirjaimet saapuvat kuvaan kierron alkaessa (ei taukoa)
@@ -1646,7 +1689,7 @@ if '--v7' in A:
                            'mm': round(cd.lens, 2), 'tapa': tavat.get(r, 'BEZIER')})
         valot = {}
         for ob in bpy.data.objects:
-            if ob.type != 'LIGHT' or not ob.name.startswith(('tykki', 'kaiku', 'virta', 'pyyhkaisy')): continue
+            if ob.type != 'LIGHT' or not ob.name.startswith(('tykki', 'kaiku', 'virta', 'pyyhkaisy', 'rako')): continue
             ruudut_ = kayrien_ruudut(ob.data); energia = []
             for r in ruudut_: sc.frame_set(r); energia.append([r, round(ob.data.energy, 3)])
             sc.frame_set(ruudut_[len(ruudut_) // 2] if ruudut_ else 1)
