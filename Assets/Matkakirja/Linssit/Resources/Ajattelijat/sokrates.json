@@ -449,7 +449,7 @@
  "syke": "ajattelijat/sokrates/v1/syke-musiikki.json",
  "aikajana": {
   "versio": "v13",
-  "lahde": "linnanrakentaja-sokrates-bysti 5b79c21d5 docs/raportit/ajattelijat-v11/sokrates-luvut-v14.json",
+  "lahde": "linnanrakentaja-sokrates-bysti b9e8aabf9 docs/raportit/ajattelijat-v11/sokrates-luvut-v14.json",
   "loppu": 2938,
   "kertoja": {
    "alku": 9.5,
@@ -1954,7 +1954,7 @@
   ],
   "kaiut": [
    {
-    "kuva": "ajattelijat/sokrates/v3/kaiut-v14b/kaiku-jumala.png",
+    "kuva": "ajattelijat/sokrates/v3/kaiut-v14c/kaiku-jumala.png",
     "paikka": [
      0.305,
      -0.5325,
@@ -1994,7 +1994,7 @@
     ]
    },
    {
-    "kuva": "ajattelijat/sokrates/v3/kaiut-v14b/kaiku-sotilas.png",
+    "kuva": "ajattelijat/sokrates/v3/kaiut-v14c/kaiku-sotilas.png",
     "paikka": [
      0.305,
      -0.5325,
@@ -2034,7 +2034,7 @@
     ]
    },
    {
-    "kuva": "ajattelijat/sokrates/v3/kaiut-v14b/kaiku-oraakkeli.png",
+    "kuva": "ajattelijat/sokrates/v3/kaiut-v14c/kaiku-oraakkeli.png",
     "paikka": [
      0.3368,
      -0.6041,
@@ -2074,7 +2074,7 @@
     ]
    },
    {
-    "kuva": "ajattelijat/sokrates/v3/kaiut-v14b/kaiku-kuolema.png",
+    "kuva": "ajattelijat/sokrates/v3/kaiut-v14c/kaiku-kuolema.png",
     "paikka": [
      0.4632,
      -0.5409,
@@ -3338,7 +3338,7 @@
    "kuva": "kaiku-kuolema.png",
    "kohde": "Sokrates: kuolema (David)",
    "teos": "Jacques-Louis David, Sokrateen kuolema 1787, The Metropolitan Museum of Art 31.45",
-   "tekija": "Jacques-Louis David",
+   "tekija": "kuva The Metropolitan Museum of Art",
    "lisenssi": "CC0 (The Met Open Access)",
    "lahde": "Wikimedia Commons: The_Death_of_Socrates_MET_DP-13139-001.jpg"
   }
