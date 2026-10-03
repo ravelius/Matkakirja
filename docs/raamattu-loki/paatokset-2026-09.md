@@ -10331,3 +10331,7 @@ Omistaja 3.10.2026 klo 15.4x sanatarkasti: "Ja itse projisoisin epäterävinä n
 ## AJATTELIJAN TEKSTIVAIHE: KASVOT MELKO TUMMAT (omistaja) (3.10.2026 klo 15.47)
 
 Omistaja 3.10.2026 klo 15.4x sanatarkasti: "Silloin kun tekstejä tulee, niin kasvot saisivat olla melko tummat. Vai mitä olet mieltä?" Päätoimittaja samaa mieltä: projisoitu teksti erottuu vain tummalta kipsiltä (v13:ssa valkoiset rivit katosivat kasvojen valaistuihin kohtiin 35–46 s), ja tummilla kasvoilla sanat ovat valo, joka piirtää kasvot (linssin ajatus: ajattelijan ajatuksia valona kasvoilla). Linja: kysymyksen jälkeen aurinko himmenee noin viidennekseen ja pysyy matalana koko tekstivaiheen; heikko reunavalo pitää pään muodon näkyvissä; päälainaus ja kaikukuvat kirkkaimmat; kasvot näkyvät kokonaan vain Rembrandt-valossa nimen kohdalla. Sama Marcukselle. Toteutus Linnanrakentaja (aurinkoavaimet luvuissa v14) ja Pelikoodari (projektorien voimakkuudet).
+
+## TARKENNUS: AJATTELIJAN TEKSTIVAIHE ALKAA TUMMENNUKSEN JÄLKEEN (omistaja) (3.10.2026 klo 15.47)
+
+Omistaja 3.10.2026 klo 15.4x sanatarkasti: "Eli sen selkeän Rembrandt-valon jälkeen valospotti voisi tummentua ja sitten ne yksittäiset tekstit lähtisivätkin tulemaan." Järjestys (linssin aika, v14): Rembrandt + nimi 8,6 s → kysymys 10,8 s vielä Rembrandt-valossa → valospotti tummenee noin 11,0–12,0 s → vasta sitten ensimmäinen epäterävä rivi (noin 12,3 s, kertojan alkaessa) ja loput yksi kerrallaan kasvojen eri puolilta. Sama Marcukselle.
