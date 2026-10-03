@@ -85,6 +85,9 @@ namespace Matkakirja.Natiivi
 
         struct Rivi { public string Nimi, Tekija, Lisenssi, Huom; public bool EiLisenssia; }
 
+        /// <summary>lahteet.json:n webin aikaiset kaikukuvarivit ("Valokuvat ja kuvitus"), jotka natiivissa korvaa Ajattelijat-osio.</summary>
+        const string KaikukuvaEtuliite = "Ajattelijat-linssin kaikukuvat";
+
         /// <summary>Webin tapaan vasta ensimmäisellä avauksella; epäonnistunut haku yritetään seuraavalla.</summary>
         IEnumerator Rakenna()
         {
@@ -134,6 +137,9 @@ namespace Matkakirja.Natiivi
                     {
                         var o = Rakenne.Olio(x);
                         if (o == null || Teksti(o, "nimi") == null) continue;
+                        // Kaikukuvat ovat natiivissa vain Ajattelijat-osiossa (kuvalahteet[]); webin aikaiset rivit pois, ettei sama
+                        // kuva näy kahdesti (Päätoimittaja 4.10.2026). Ajattelijoiden äänet ja musiikki jäävät tänne.
+                        if (Teksti(o, "nimi").StartsWith(KaikukuvaEtuliite, System.StringComparison.Ordinal)) continue;
                         rivit.Add(new Rivi { Nimi = Teksti(o, "nimi"), Tekija = Teksti(o, "tekija"), Lisenssi = Teksti(o, "lisenssi"), Huom = Teksti(o, "huom") });
                     }
                     aineistoja += rivit.Count;
