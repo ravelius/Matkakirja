@@ -102,8 +102,11 @@ namespace Matkakirja.Natiivi
             valikkoNappi.tooltip = "Kaupungin nähtävyydet";
             valikko = Rakenne.El("mk-nahtavyys__valikko", arkki);
             valikko.style.display = DisplayStyle.None;
-            edellinen = Rakenne.Nappi("‹", "mk-nahtavyys__nuoli mk-nahtavyys__nuoli--vasen", () => Selaa(-1), arkki);
-            seuraava = Rakenne.Nappi("›", "mk-nahtavyys__nuoli mk-nahtavyys__nuoli--oikea", () => Selaa(1), arkki);
+            // ‹ › OHJAUSNAPPI-neliöinä paperiteemalla kortin reunoilla (omistaja 2.10.2026 klo 14.2x EI OVAALEJA, Päätoimittaja 3.10.).
+            edellinen = Ohjausnappi.Nappi(Ikonit.Takaisin, "Edellinen nähtävyys", () => Selaa(-1), arkki, "paperi");
+            edellinen.AddToClassList("mk-nahtavyys__nuoli"); edellinen.AddToClassList("mk-nahtavyys__nuoli--vasen");
+            seuraava = Ohjausnappi.Nappi(Ikonit.NuoliOikea, "Seuraava nähtävyys", () => Selaa(1), arkki, "paperi");
+            seuraava.AddToClassList("mk-nahtavyys__nuoli"); seuraava.AddToClassList("mk-nahtavyys__nuoli--oikea");
             Vector2 vetoAlku = default;
             bool veto = false;
             arkki.RegisterCallback<PointerDownEvent>(e =>

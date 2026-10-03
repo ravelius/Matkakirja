@@ -67,8 +67,11 @@ namespace Matkakirja.Natiivi
             kuva.RegisterCallback<ClickEvent>(_ => AvaaSuurennos());
             new KuvaSelaus(kuvakotelo, () => kuvat?.Count ?? 0, Selaa, () => kuva);
             kuva.RegisterCallback<GeometryChangedEvent>(e => MitoitaKuva());
-            edellinen = Rakenne.Nappi("‹", "mk-wiki__nuoli mk-wiki__nuoli--edellinen", () => Selaa(-1), kuvakotelo);
-            seuraava = Rakenne.Nappi("›", "mk-wiki__nuoli mk-wiki__nuoli--seuraava", () => Selaa(1), kuvakotelo);
+            // ‹ › OHJAUSNAPPI-neliöinä tummalla teemalla kuvan päällä (omistaja 2.10.2026 klo 14.2x EI OVAALEJA, Päätoimittaja 3.10.).
+            edellinen = Ohjausnappi.Nappi(Ikonit.Takaisin, "Edellinen kuva", () => Selaa(-1), kuvakotelo, "tumma");
+            edellinen.AddToClassList("mk-wiki__nuoli"); edellinen.AddToClassList("mk-wiki__nuoli--edellinen");
+            seuraava = Ohjausnappi.Nappi(Ikonit.NuoliOikea, "Seuraava kuva", () => Selaa(1), kuvakotelo, "tumma");
+            seuraava.AddToClassList("mk-wiki__nuoli"); seuraava.AddToClassList("mk-wiki__nuoli--seuraava");
             laskuri = Rakenne.Teksti("", "mk-wiki__laskuri", kuvakotelo);
             Kirjasimet.Aseta(laskuri, Kirjasin.Kone);
             kuvateksti = Rakenne.Teksti("", "mk-wiki__kuvateksti", vieritys.contentContainer);

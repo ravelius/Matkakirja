@@ -50,7 +50,8 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(paneeli, Kirjasin.Luku);
 
             var rivi1 = Rakenne.El("mk-vuosi__rivi", paneeli, PickingMode.Ignore);
-            toista = Rakenne.Nappi(null, "mk-vuosi__toista", () => linssi?.Toisto(!linssi.Toistaa), rivi1);
+            // ▶/❚❚ OHJAUSNAPPI-neliönä lasiteemalla (omistaja 2.10.2026 klo 14.2x EI OVAALEJA, Päätoimittaja 3.10.).
+            toista = Rakenne.Nappi(null, "mk-ohjausnappi tk-teema-lasi mk-vuosi__toista", () => linssi?.Toisto(!linssi.Toistaa), rivi1);
             toistaIkoni = Rakenne.Ikoni(ToistaIkoni, "mk-vuosi__ikoni", toista);
             taukoIkoni = Rakenne.Ikoni(TaukoIkoni, "mk-vuosi__ikoni", toista);
             kuukausi = new SliderInt(1, 12) { pageSize = 0 };

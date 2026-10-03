@@ -57,26 +57,10 @@
     color: var(--map-ink);
 }
 
-.mk-nappi.mk-st__sulje {
+.mk-st__sulje {
+    /* OHJAUSNAPPI (Pohjat/ohjausnappi.uss); täällä vain paikka otsikon vieressä. */
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
-    min-height: 40px;
-    padding: 0;
     margin: -6px -6px 0 6px;
-    border-width: 0;
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0);
-    color: var(--map-ink);
-}
-
-.mk-nappi.mk-st__sulje:active {
-    background-color: rgba(122, 85, 20, 0.12);
-}
-
-.mk-st__sulje .mk-nappi__teksti {
-    font-size: 26px;
-    -unity-text-align: middle-center;
 }
 
 .mk-st__vieritys {
