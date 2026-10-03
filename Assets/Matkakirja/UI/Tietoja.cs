@@ -177,7 +177,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Ajattelijoiden kuvien lähteet (Linssiseppä 2:n muoto 4.10.2026): juuren "kuvalahteet": [{ kuva, kohde, teos, tekija, lisenssi,
-        /// lahde }]; ilman sitä vanha kaiku.nimeaminen ("Tekijä, lisenssi, lähde") yhtenä rivinä. *-atlas-tiedostot ohitetaan.
+        /// lahde, nimea? }]; ilman sitä vanha kaiku.nimeaminen ("Tekijä, lisenssi, lähde") yhtenä rivinä. *-atlas-tiedostot ohitetaan.
         /// Rivi: ajattelija: kohde, teos · tekijä, lisenssi, lähde huomautuksena.
         /// </summary>
         static List<Rivi> AjattelijoidenLahteet()
@@ -196,12 +196,15 @@ namespace Matkakirja.Natiivi
                 {
                     if (MiniJson.ObjektiTaiNull(x) is not Dictionary<string, object> l) continue;
                     string kohde = Teksti(l, "kohde"), teos = Teksti(l, "teos"), tekija = Teksti(l, "tekija");
+                    // nimea: lisenssin vaatima nimeämisrivi (CC BY / BY-SA, esim. "Davide Mauro, CC BY-SA 4.0, Wikimedia Commons")
+                    // sellaisenaan ensimmäisenä huomautusrivinä, lähde sen alla (Linssiseppä 2, 4.10.2026).
+                    string nimea = Teksti(l, "nimea"), lahde = Teksti(l, "lahde");
                     rivit.Add(new Rivi
                     {
                         Nimi = ajattelija + (kohde != null ? ": " + kohde : ""),
                         Tekija = teos != null && tekija != null ? teos + " · " + tekija : teos ?? tekija,
                         Lisenssi = Teksti(l, "lisenssi"),
-                        Huom = Teksti(l, "lahde"),
+                        Huom = nimea != null && lahde != null ? nimea + "\n" + lahde : nimea ?? lahde,
                     });
                 }
                 if (lahteet.Count == 0 && MiniJson.ObjektiTaiNull(MiniJson.Kentta(d, "kaiku")) is Dictionary<string, object> k
