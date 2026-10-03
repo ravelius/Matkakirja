@@ -398,11 +398,21 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     }
     return rivit;
   };
-  const lauseKortti = (l) => ({ ...lauseRivi(l), kortti: korttiRivit(l.fi, KORTTI.merkkeja), emOsuus: 1.0 });
+  // Kortti on terävä ilman syvyyssumeutta, joten sumeaa paria ei piirretä (atlas pysyy 4096 × 4096:ssa).
+  const lauseKortti = (l) => ({ ...lauseRivi(l), korkeus: 128, sumea: false, kortti: korttiRivit(l.fi, KORTTI.merkkeja), emOsuus: 1.0 });
+  /*
+   * TAUSTAVIRRAN PEHMEYS (v14; omistaja 3.10.2026 klo 16.0x: "kirjaimia ei voi lukea, ne sulautuvat toisiinsa, jäljelle
+   * jää vain tekstirivin muoto"): sumennuksen säde ≈ kirjaimen korkeus (tv.sumeus em-osuutena). Pehmeä rivi tarvitsee
+   * tilaa ylä- ja alapuolelle: kirjaimet piirretään 1 / tv.riviTila -kokoisina ja nauha heijastetaan riviTila-kertaisena,
+   * joten kirjainten koko pinnalla ei muutu. Kauempana pinnasta (päälaen takaosa, ohimot) projektorin pehmeyskerroin.
+   */
+  const TILA = tv.riviTila ?? 1;
+  const riviProjektori = tv.projektorit.flatMap((pj) => Array(pj.riveja).fill(pj));
   const { kangas, paikat } = piirraAtlas([
-    lauseRivi(lause),
-    ...tv.rivit.map(([, f, teksti]) => ({
-      teksti, fontti: fontti(f).perhe, paino: fontti(f).paino, korkeus: 96, toisto: true, sumeus: tv.sumeus,
+    AJ ? { ...lauseRivi(lause), korkeus: 16, sumea: false } : lauseRivi(lause),   // aikajana-tilassa käyttämätön
+    ...tv.rivit.map(([, f, teksti], ri) => ({
+      teksti, fontti: fontti(f).perhe, paino: fontti(f).paino, korkeus: tv.riviKorkeus ?? 96, toisto: true,
+      emOsuus: 1 / TILA, sumeus: tv.sumeus && tv.sumeus * (riviProjektori[ri]?.pehmeys ?? 1),
     })),
     ...(KR?.lista ?? []).map((k) => lauseRivi(a.paalauseet[k.paalause])),
     ...(AJ?.tykit ?? []).map((t) => (KORTTI ? lauseKortti : lauseRivi)(a.paalauseet[t.paalause])),
@@ -464,10 +474,10 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
         const kulma = (satunnainen() * 2 - 1) * tv.kulma * Math.PI / 180;
         const i = 1 + ri;
         asetaProjektori(THREE, u, i, {
-          paikka, kohde, etaisyys: tv.etaisyys, nauhaKork: kork, rivi: paikat[i], ala: pj.ala, blend: tv.blend,
+          paikka, kohde, etaisyys: tv.etaisyys, nauhaKork: kork * TILA, rivi: paikat[i], ala: pj.ala, blend: tv.blend,
           kulma, vM, toisto: true, atlasKorkeus: kangas.height,
         });
-        const riviLev = kork * paikat[i].lev / paikat[i].korkeus;   // laatta pinnalla (m), u:n yksikkö
+        const riviLev = kork * TILA * paikat[i].lev / paikat[i].korkeus;   // laatta pinnalla (m), u:n yksikkö
         const nopeus = mms / 1000 * nopeudet[ri] / RUUTUA_S / riviLev;
         // v14: kasvojen puoli porrastettua sisääntuloa varten (vasen/oikea ohimo, ylhäällä otsa ja päälaki, alhaalla parta).
         const pjNro = tv.projektorit.indexOf(pj);
