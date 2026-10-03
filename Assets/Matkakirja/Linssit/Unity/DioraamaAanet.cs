@@ -277,7 +277,33 @@ namespace Matkakirja.Natiivi
                 aanettomat.Clear();
                 if (viimeJakso >= 0) LopetaErillinen();
                 viimeJakso = jaksoNyt;
-                if (viimeJakso >= 0 && viimeJakso < rak.Kertoja.Count && kertojaPaalla) SoitaErillinen(rak.Kertoja[viimeJakso].Aani, false);
+                odottavaJakso = -1;
+                if (viimeJakso >= 0 && viimeJakso < rak.Kertoja.Count && kertojaPaalla)
+                {
+                    // Puhdas asennus (tuotantoajo 3.10. 01.45: piha-jakso jäi äänettömäksi): klippi ei ehtinyt latautua ennen
+                    // jaksoa, ja yksi yritys jätti jakson pysyvästi hiljaiseksi. Nyt jakso odottaa latausta ja alkaa, kun klippi
+                    // valmistuu, jos sama jakso on yhä ruudulla eikä viivettä ole yli KertojaOdotusS.
+                    string id = rak.Kertoja[viimeJakso].Aani;
+                    bool valmis = KlippiValmis(id);
+                    SoitaErillinen(id, false);
+                    if (!valmis && !string.IsNullOrEmpty(id)) { odottavaJakso = viimeJakso; odottavaAlku = Time.unscaledTime; Debug.Log($"MATKAKIRJA linssit: poikki: kertojan jakso {id} odottaa latausta"); }
+                }
+            }
+            else if (odottavaJakso >= 0 && odottavaJakso == viimeJakso && odottavaJakso < rak.Kertoja.Count)
+            {
+                string id = rak.Kertoja[odottavaJakso].Aani;
+                float viive = Time.unscaledTime - odottavaAlku;
+                if (!kertojaPaalla) odottavaJakso = -1;
+                else if (KlippiValmis(id))
+                {
+                    odottavaJakso = -1;
+                    if (SoitaErillinen(id, false)) Debug.Log($"MATKAKIRJA linssit: poikki: kertojan jakso {id} alkoi latauksen jälkeen ({viive:F1} s)");
+                }
+                else if (viive > KertojaOdotusS)
+                {
+                    odottavaJakso = -1;
+                    Debug.Log($"MATKAKIRJA linssit: poikki: kertojan jakso {id} jäi soimatta (ei latautunut {KertojaOdotusS:F0} s:ssa)");
+                }
             }
 
             string avain = nakyma.Puhuja == null ? null : nakyma.KohdeTila + "|" + nakyma.Askel;
@@ -395,6 +421,28 @@ namespace Matkakirja.Natiivi
         }
 
         int viimeJakso = -1;
+        /// <summary>Kertojan jakso, jonka klippi latautuu vielä (−1 = ei odottavaa) ja odotuksen alku; yli KertojaOdotusS myöhässä jakso jää soimatta.</summary>
+        int odottavaJakso = -1;
+        float odottavaAlku;
+        const float KertojaOdotusS = 4f;
+
+        bool KlippiValmis(string aaniId) =>
+            !string.IsNullOrEmpty(aaniId) && rakennus != null && rakennus.Aanet.TryGetValue(aaniId, out var aani) && Klippi(aani.Tiedosto) != null;
+
+        /// <summary>Testikomento "poikki aanet unohda-kertoja": kertojan klipit pois välimuistista, jolloin seuraava jakso joutuu
+        /// odottamaan latausta kuten puhtaalla asennuksella (latausodotuksen todennus). Palauttaa poistettujen määrän.</summary>
+        public int UnohdaKertoja()
+        {
+            int n = 0;
+            if (rakennus == null) return 0;
+            foreach (var j in rakennus.Kertoja)
+                if (!string.IsNullOrEmpty(j.Aani) && rakennus.Aanet.TryGetValue(j.Aani, out var aani))
+                {
+                    string url = sovitin.AaniUrl(aani.Tiedosto);
+                    if (url != null && klipit.Remove(url)) n++;
+                }
+            return n;
+        }
 
         /// <summary>Kertojan jakso tai Pulun kertomus omalta, pysäytettävältä lähteeltä (puheväylä −3 dB, taustat väistävät
         /// puheen ajan). Katkaisee edellisen erillisen puheen. Lataamaton klippi jää soittamatta (esiladattu avatessa).</summary>
