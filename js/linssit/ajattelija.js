@@ -815,7 +815,12 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
         k.tk = tk;
       }).catch((syy) => console.warn('ajattelija: kaikukuva', k.kuva, syy));
     }
-    u.pKaikuVari.value.setRGB(...(a.kaiku?.savy ?? [1.0, 0.78, 0.52]));
+    /*
+     * KAIKUJEN VÄRI (omistaja vertaa, Päätoimittaja 3.10.2026): oletus väritön (projektorin valo neutraali), seepia
+     * kehityslipulla ?kaikuvari=seepia. Oletus voimassa, kunnes omistaja päättää.
+     */
+    const SEEPIA = a.kaiku?.savy ?? [1.0, 0.78, 0.52];
+    u.pKaikuVari.value.setRGB(...(haku.get('kaikuvari') === 'seepia' ? SEEPIA : (AJ.kaikuVari ?? [1.0, 1.0, 1.0])));
     u.pMaara.value = kaikuIndeksi + 2;
     const virranAlku = AJ.virta.find(([, k]) => k > 0)?.[0] ?? 0;
 

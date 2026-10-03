@@ -155,3 +155,7 @@ test('aikajanan aurinko kiertää säteellä (ei oikaise ympyrän läpi); avainA
   assert.equal(avainArvo([[0, 0], [10, 220], [20, 220], [26, 0]], 5), 110);
   assert.equal(avainArvo([[0, 0], [10, 220]], 99), 220);
 });
+
+test('kehitysliput omistajan vertailuun: kaikujen väri (oletus väritön, ?kaikuvari=seepia)', () => {
+  assert.match(MOOTTORI, /haku\.get\('kaikuvari'\) === 'seepia' \? SEEPIA : \(AJ\.kaikuVari \?\? \[1\.0, 1\.0, 1\.0\]\)/);
+});
