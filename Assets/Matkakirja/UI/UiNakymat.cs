@@ -509,7 +509,7 @@ namespace Matkakirja.Natiivi
                 if (Linssivalitsin.Valikkona) Tilarivi.Valikko.EnableInClassList("mk-valittu", auki);
                 valikkoAuki = auki;
                 PulunKerros();
-                // Vaaka-iPhone (web-malli, Pelikoodari 2.10. klo 23.3x): Pulun hahmo piiloon valikon ajaksi; pystyssä ennallaan.
+                // Vaaka-iPhone ja -iPad (web-malli, Pelikoodari 2.10. klo 23.3x): Pulun hahmo piiloon valikon ajaksi; pystyssä ennallaan.
                 valikkoPeittaaPulun = auki && Ylapalkki.Piilossa;
                 PaivitaPulunPeitto();
             };

@@ -50,6 +50,7 @@ namespace Matkakirja.Natiivi
         static Texture2D kyparaKuva;
         static readonly string[] EvaKerrokset = { "turvakoysi", "perus", "kasvovalo", "kyparalamput", "maavalo" };
         static Texture2D[] evaKuvat;
+        static Texture2D kasvoKuva;
         /// <summary>A/B: avaruuskävelyasu pois (vanha kypäräpulu).</summary>
         public static bool EvaPois;
         static readonly string[] RobottiKerrokset = { "robotin-varsi", "robotin-reunavalo", "robotin-turvakoysi", "robotin-pidikkeet" };
@@ -58,6 +59,16 @@ namespace Matkakirja.Natiivi
         public static bool RobottiPois;
         /// <summary>Robottikäsi näkyy (Pulu asettelee itsensä vasempaan alakulmaan 60 %:iin; omistaja 2.10. 21.3x).</summary>
         public bool RobottiNakyy => Robotissa;
+
+        /// <summary>ISS:n valospotti Pulun päällä (Cupolan ikkunan takana): spotin ulkopuoli, kuten tukivarsi, tummuu siluetiksi.</summary>
+        public bool Valospotti
+        {
+            get => valospotti;
+            set { if (valospotti == value) return; valospotti = value; eva.MarkDirtyRepaint(); }
+        }
+        bool valospotti;
+        /// <summary>Spotin keskipiste (viewBox, ennen 75:n nostoa: kypärän alapuoli / rintakehä) sekä täysvalon ja täyden varjon säteet.</summary>
+        const float SpottiX = 113f, SpottiY = 285f, SpottiSisa = 55f, SpottiUlko = 125f;
 
         /// <summary>
         /// Vaakatilan este robottikäden puomille (ISS-kyydin pienen paneelin vasen yläkulma paneelin pisteinä, null = ei estettä):
@@ -79,6 +90,9 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Puomin alin kohta EVA-kerroksen alareunasta (pt; siirrosta riippumaton, joten Pulu laskee paikkansa suoraan).</summary>
         public float VarrenAlinEvasta { get; internal set; } = float.NaN;
+
+        /// <summary>Kyynärpään (puomin nivelen) alareuna EVA-kerroksen alareunasta (pt): Pulu ikkunan takana vie sen lasin reunan taakse.</summary>
+        public float KyynarEvasta { get; internal set; } = float.NaN;
 
         /// <summary>Kypärän (visiirin) keskipiste EVA-kerroksen alareunasta (pt), robottikädessä; Pulu sijoittaa sillä kypärän korkeuden.</summary>
         public float KyparaEvasta { get; internal set; } = float.NaN;
@@ -169,16 +183,37 @@ namespace Matkakirja.Natiivi
             eva.MarkDirtyRepaint();
         }
 
+        /// <summary>
+        /// Vain kypärä ilman avaruuspukua ja robottikättä (omistaja 3.10.2026 klo 07.5x: "Maapallon vierellä pulu voi olla pelkkää kypärä
+        /// päässään ilman pukua ja robotti kättä"): astronautin kameran kaukonäkymässä tavallinen Pulu ja kypäräkerros (Kypara), kuten
+        /// ennen avaruuskävelyasua. Pulu asettaa (IssKyytiNakyma.KaukoNakyma).
+        /// </summary>
+        public bool VainKypara
+        {
+            get => vainKypara;
+            set
+            {
+                if (vainKypara == value) return;
+                vainKypara = value;
+                Rakenna();
+                MarkDirtyRepaint(); pohja.MarkDirtyRepaint(); kypara.MarkDirtyRepaint(); etu.MarkDirtyRepaint(); eva.MarkDirtyRepaint();
+            }
+        }
+        bool vainKypara;
+
         /// <summary>Asu näkyy: kokopulu astronauttina ja kerroskuvat ladattu.</summary>
         bool EvaNakyy
         {
             get
             {
-                if (mini || !tila.Astronautti || EvaPois) return false;
+                if (mini || !tila.Astronautti || EvaPois || vainKypara) return false;
                 if (evaKuvat == null)
                 {
                     evaKuvat = new Texture2D[EvaKerrokset.Length];
                     for (int i = 0; i < EvaKerrokset.Length; i++) evaKuvat[i] = Resources.Load<Texture2D>("LiviaEva/" + EvaKerrokset[i]);
+                    // Kasvot kypärävalossa (omistaja 3.10.2026 "pulun kasvot pitää näkyä"): perus.png:n visiirin alue lämpimästi
+                    // valaistuna (kertova valo R 2,4 / G 2,05 / B 1,55 keskeltä reunaa kohti; pupillit pysyvät tummina). Vain Soikio käyttää.
+                    kasvoKuva = Resources.Load<Texture2D>("LiviaEva/perus-kasvot");
                 }
                 return evaKuvat[1] != null;
             }
@@ -441,11 +476,25 @@ namespace Matkakirja.Natiivi
                     float vara = 6f / (sy * s1);
                     if (ex > NivelX + 1f) nousu = Mathf.Max(0f, (NivelY - (VarsiMinX - NivelX) * Poikittain + Nosto - (ey - vara)) / (ex - NivelX));
                 }
+                // VALOSPOTTI (omistaja 3.10.2026: "ISS:n oma valospotti valaisee pulua, mutta tukivarsi jää jo varjon puolelle … pallomaisella
+                // gradient-maskilla, joka tummentaisi spotin ulkopuoliset alueet"): Cupolan ikkunan takana (Valospotti) kerrokset piirretään
+                // ruudukkona, ja kärkien sävy tummuu spotin keskipisteestä (kypärän ja vartalon kohta) ulospäin pehmeästi siluetiksi.
+                bool spotti = kuva.Valospotti;
+                // Siluetti = varjosävy (Tyylikirja.LasiAvaruus.Pinta) tummennettuna kertoimella, ei uutta värivakiota (pohjavahti).
+                var siluetti = varjo * 0.45f; siluetti.a = 1f;
+                Color Spotissa(Color pohja, float x, float y)
+                {
+                    float d = new Vector2(x - SpottiX, (y - SpottiY) * 0.8f).magnitude;   // hieman pystysuunnassa venytetty pallo
+                    float w = 1f - Mathf.SmoothStep(0f, 1f, Mathf.InverseLerp(SpottiSisa, SpottiUlko, d));
+                    var c = Color.Lerp(siluetti, pohja, w); c.a = pohja.a; return c;
+                }
                 void Kuva(Texture2D kuvaI, float korkeus, float alfa, bool keinuu, Color savyPohja, float y0 = 0, float y1 = -1, bool vaaka = false)
                 {
                     if (kuvaI == null || alfa <= 0.004f) return;
                     if (y1 < 0) y1 = korkeus;
-                    var md = mgc.Allocate(4, 6, kuvaI);
+                    // Ilman spottia yksi nelikulmio kuten ennen; spotissa 3 × 16 ruudukko, jotta gradientti seuraa kärkien sävyä.
+                    int sar = spotti ? 3 : 1, riv = spotti ? 16 : 1;
+                    var md = mgc.Allocate((sar + 1) * (riv + 1), sar * riv * 6, kuvaI);
                     if (md.vertexCount == 0) return;
                     var savy = savyPohja; savy.a *= Mathf.Clamp01(alfa);
                     void Kulma(float x, float y)
@@ -454,13 +503,22 @@ namespace Matkakirja.Natiivi
                         if (vaaka) { float dx = x - NivelX, dy = y - NivelY; x = NivelX + dy * venytys; y = NivelY - dx * Poikittain - dy * venytys * nousu; }
                         if (keinuu) { float dx = x - 113, dy = y - 300; x = 113 + dx * ca - dy * sa; y = 300 + dx * sa + dy * ca; }
                         var p = m.Kuvaa(new Vector2(x, y + Nosto));
-                        md.SetNextVertex(new Vertex { position = new Vector3(p.x, p.y, Vertex.nearZ), tint = savy, uv = new Vector2(u, v) });
+                        md.SetNextVertex(new Vertex { position = new Vector3(p.x, p.y, Vertex.nearZ), tint = spotti ? Spotissa(savy, x, y) : savy, uv = new Vector2(u, v) });
                     }
-                    Kulma(0, y0);
-                    Kulma(152, y0);
-                    Kulma(152, y1);
-                    Kulma(0, y1);
-                    md.SetAllIndices(m.Determinantti >= 0 ? Kolmiot : KolmiotPeili);
+                    for (int j = 0; j <= riv; j++)
+                        for (int i = 0; i <= sar; i++)
+                            Kulma(152f * i / sar, y0 + (y1 - y0) * j / riv);
+                    var ind = new ushort[sar * riv * 6];
+                    bool suora = m.Determinantti >= 0;
+                    int q = 0;
+                    for (int j = 0; j < riv; j++)
+                        for (int i = 0; i < sar; i++)
+                        {
+                            ushort a0 = (ushort)(j * (sar + 1) + i), a1 = (ushort)(a0 + 1), b0 = (ushort)(a0 + sar + 1), b1 = (ushort)(b0 + 1);
+                            if (suora) { ind[q++] = a0; ind[q++] = a1; ind[q++] = b1; ind[q++] = a0; ind[q++] = b1; ind[q++] = b0; }
+                            else { ind[q++] = a0; ind[q++] = b1; ind[q++] = a1; ind[q++] = a0; ind[q++] = b0; ind[q++] = b1; }
+                        }
+                    md.SetAllIndices(ind);
                 }
                 var valo = Color.white;
                 // Visiirin soikio (kasvot, viewBox x 90–137, y 237–280) perus-kuvasta sävyttämättä varjokuvan päälle: kasvot näkyvät.
@@ -502,17 +560,21 @@ namespace Matkakirja.Natiivi
                 }
                 kuva.VarrenAlin = Mathf.Max(Alin(NivelY), Alin(PaaY));
                 kuva.VarrenAlinEvasta = kuva.VarrenAlin - worldBound.yMax;
+                // Kyynärpää = nivelen keskipiste (kuva c9e42de3: puomin alareuna nivelessä oli 40 pt näkyvän kyynärpään alapuolella).
+                kuva.KyynarEvasta = this.LocalToWorld(m.Kuvaa(new Vector2(NivelX, NivelY + Nosto))).y - worldBound.yMax;
                 {
                     float dx = 113.5f - 113, dy = 258.5f - 300;   // visiirin soikion keskipiste (Soikio), keinunta mukana
                     var kp = m.Kuvaa(new Vector2(113 + dx * ca - dy * sa, 300 + dx * sa + dy * ca + Nosto));
                     kuva.KyparaEvasta = this.LocalToWorld(kp).y - worldBound.yMax;
                 }
                 kuva.VarrenAlinVersio++;
-                Kuva(evaKuvat[1], 304, 1f, true, varjo);                 // perus varjokuvana
+                // Pulu valaistuna eikä pelkkänä varjokuvana (omistaja 3.10.2026 "pulun kasvot pitää näkyä"; Päätoimittaja: kypärävalo
+                // valaisee, ei pelkkä varjokuva): perus 75 % kohti omia värejään, varsi ja pidikkeet yhä varjossa.
+                Kuva(evaKuvat[1], 304, 1f, true, Color.Lerp(varjo, valo, 0.75f));
                 // Kasvovalo ensin ja kasvot sen päälle (Päätoimittajan kuvatarkistus 2.10.: valo peitti silmät ja nokan, visiirissä
                 // näkyi vain vaalea soikio): valo jää kasvojen ympärille sädekehäksi.
                 Kuva(evaKuvat[2], 304, 0.6f, true, valo);                // kasvot loistavat kypärävalossa
-                Soikio(evaKuvat[1], 113.5f, 258.5f, 21f, 19f, valo);     // kasvot visiirin alla sävyttämättä
+                Soikio(kasvoKuva != null ? kasvoKuva : evaKuvat[1], 113.5f, 258.5f, 21f, 19f, valo);   // kasvot kypärävalossa
                 Kuva(evaKuvat[3], 304, t.EvaLamput, true, valo);
                 Kuva(evaKuvat[4], 304, t.EvaMaa, true, valo);            // Maan reunavalo piirtää siluetin reunan
                 // robotin turvaköysi (vanha vapaa köysi pois); 152 × 400, koska lenkki ulottuu y ≈ 322:een

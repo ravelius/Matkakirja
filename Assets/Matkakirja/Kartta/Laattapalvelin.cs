@@ -925,7 +925,7 @@ namespace Matkakirja
             int n = 0;
             while (n < puskuri.Length)
             {
-                int k = await virta.ReadAsync(puskuri, n, puskuri.Length - n);
+                int k = await LueApm(virta, puskuri, n, puskuri.Length - n);
                 if (k == 0) return n == 0 ? null : Encoding.ASCII.GetString(puskuri, 0, n);
                 n += k;
                 for (int i = Math.Max(0, n - k - 3); i + 3 < n; i++)
@@ -946,10 +946,22 @@ namespace Matkakirja
             var o = Encoding.ASCII.GetBytes(
                 $"HTTP/1.1 {tila} {teksti}\r\nContent-Type: {tyyppi}\r\nContent-Length: {pituus}\r\n" +
                 "Cache-Control: no-store\r\nAccess-Control-Allow-Origin: *\r\nConnection: keep-alive\r\n\r\n");
-            await virta.WriteAsync(o, 0, o.Length);
-            if (!vainOtsake && pituus > 0) await virta.WriteAsync(data, 0, pituus);
-            await virta.FlushAsync();
+            await KirjoitaApm(virta, o, 0, o.Length);
+            if (!vainOtsake && pituus > 0) await KirjoitaApm(virta, data, 0, pituus);
         }
+
+        // SOKETTIPOIKKEUS (Linssiseppä 2:n ajo d59933cb 3.10.2026: "ArgumentOutOfRangeException … Parameter name: state at
+        // Socket+<>c.<.cctor>b__367_15 / ThreadPoolWorkQueue.Dispatch"): Unityn Mono-kirjastossa NetworkStream.ReadAsync/WriteAsync
+        // kulkevat Socket.ReceiveAsync/SendAsyncForNetworkStream → ValueTask.AsTask() -polkua, jonka uudelleenkäytetty
+        // AwaitableSocketAsyncEventArgs voi kutsua jatkoa väärällä tilalla (ValueTaskSourceAsTask heittää "state"). Poikkeus syntyy
+        // säiealtaassa kirjaston omassa takaisinkutsussa (SendAsyncCallback nappaa vain SocketExceptionin ja ObjectDisposedExceptionin),
+        // joten omalla try/catchilla sitä ei saa kiinni. APM-pari BeginRead/EndRead ja BeginWrite/EndWrite kulkee Socket.BeginReceive/
+        // BeginSend → SocketAsyncResult -polkua, jossa ValueTaskia ei ole; virheet tulevat End-kutsusta tavallisina poikkeuksina.
+        static Task<int> LueApm(NetworkStream virta, byte[] puskuri, int alku, int maara) =>
+            Task<int>.Factory.FromAsync(virta.BeginRead, virta.EndRead, puskuri, alku, maara, null);
+
+        static Task KirjoitaApm(NetworkStream virta, byte[] data, int alku, int maara) =>
+            Task.Factory.FromAsync(virta.BeginWrite, virta.EndWrite, data, alku, maara, null);
 
         /// <summary>
         /// Laatat välimuistiin etukäteen (LENNON PINTA, Fable 24.9.: sileän pinnan laatat latautuivat matkalla

@@ -109,8 +109,11 @@ namespace Matkakirja.Natiivi
             peliTaso.style.display = DisplayStyle.None;
             lauta = new MyllyLauta(Napautus);
             peliTaso.Add(lauta);
-            var rasti = Rakenne.Nappi("×", "mk-peli__sulje", Sulje, peliTaso);
-            Kirjasimet.Aseta(rasti, Kirjasin.Luku);
+            // ✕ OHJAUSNAPPI-neliönä (omistaja 2.10.2026 klo 14.2x: kuvakenapit yhtenäisiä neliöitä, EI OVAALEJA; Päätoimittaja 3.10.):
+            // Tumma teema (Päätoimittaja 3.10. klo 20.2x: harmaa läpikuultava jäi vaalean kartan päällä heikoksi iPhonessa ja näytti
+            // iPadissa eri napilta), rasti-ikoni kuten GALLERIAssa.
+            var rasti = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje", Sulje, peliTaso, "tumma");
+            rasti.AddToClassList("mk-peli__sulje");
             paneeli = Rakenne.El("mk-peli__paneeli " + PaneelinTeema, peliTaso); // omistaja 2.10. 11.0x: PAPERI
             kapiteeli = Rakenne.Teksti("", "mk-kortti__kapiteeli", paneeli);
             Kirjasimet.Aseta(kapiteeli, Tyylikirja.Kirjain.Kapiteeli);
@@ -237,8 +240,9 @@ namespace Matkakirja.Natiivi
 
         // NAPPULOIDEN ÄÄNET (Kenney Impact Sounds, CC0; omistajan OK 2.10.2026): asetus/siirto naksahtaa, kun nappula
         // laskeutuu (liu'un lopussa), poisto heti perään. Puuttuva klippi → tehosteväylän "click" kuten ennen.
+        // v2 (Pelikoodari 3.10., ämpäri aanet/tehosteet/mylly-v2/, Kenney CC0): molemmat samalla tasolla (huiput −1,5 / −1,4 dBFS),
+        // joten tehosteiden oletusvahvistus ilman omaa kerrointa; v1:n asetus oli ~10 dB hiljaisempi ja tarvitsi 0,5:n.
         const string AaniAsetus = "mylly-asetus", AaniPoisto = "mylly-poisto";
-        const float AaniGain = 0.5f;
 
         static void SiirronAani(MyllySiirto s, float voima)
         {
@@ -256,7 +260,7 @@ namespace Matkakirja.Natiivi
             var c = Resources.Load<AudioClip>(MyllyLauta.KansioPolku + nimi);
             if (c == null) { Debug.LogWarning("MATKAKIRJA mylly: ääni puuttuu " + nimi); return; }
             if (c.loadState != AudioDataLoadState.Loaded) c.LoadAudioData();
-            Aanet.RekisteroiTehoste(nimi, c, AaniGain);
+            Aanet.RekisteroiTehoste(nimi, c);
         }
 
         /// <summary>TAUSTAN PEHMENNYS (omistaja 2.10. klo 11.0x, loki 11.01: "pehmennä kaikki elementit taustalla, myös
@@ -515,7 +519,7 @@ namespace Matkakirja.Natiivi
             float w = peliTaso.layout.width, h = peliTaso.layout.height;
             if (float.IsNaN(w) || w <= 0 || h <= 0) return;
             var t = UiKerros.Hae().Reunat(UiKerros.Pelidialogit);
-            float m = Tyylikirja.Vali.M, osuma = Tyylikirja.Nappi.Osuma;
+            float m = Tyylikirja.Vali.M, osuma = Tyylikirja.Nappi.Ohjaus; // ✕:n näkyvä korkeus
             var rasti = peliTaso.Q(className: "mk-peli__sulje");
             rasti.style.top = t.y + m; rasti.style.right = t.z + m;
             bool kapea = Pohja.Leveys(w - t.x - t.z) == Pohja.Luokka.Kapea && h > w;
@@ -630,7 +634,7 @@ namespace Matkakirja.Natiivi
         public string LautaId { get; private set; } = "majatalo";
         public void AsetaLauta(string id) { LautaId = id; if (ladattu != null) Lataa(); MarkDirtyRepaint(); }
 
-        // BLENDER-KERROKSET (Linnanrakentajan _valmiit/mylly-laudat/v1, omistajan OK 2.10.2026; Natiivisepän jakelu):
+        // BLENDER-KERROKSET (Linnanrakentajan _valmiit/mylly-laudat/v2, PR #3906, Päätoimittaja 3.10.; v1 omistajan OK 2.10.):
         // Resources/Pelit/Mylly, iOS ASTC 6×6 sRGB + mipit, ladataan nimellä avattaessa ja puretaan suljettaessa
         // (MyllyNakyma.Sulje → Resources.UnloadUnusedAssets). Piirtojärjestys lauta → hehku (valmiin myllyn suorakaide
         // ± 0,03 laudasta) → varjot → nappulat → renkaat. Pisteet = Mylly.Paikat (pisteet.json: reuna 0,09, sama kuin
