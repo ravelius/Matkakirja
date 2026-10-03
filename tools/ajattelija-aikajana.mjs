@@ -1,5 +1,6 @@
 /*
- * AJATTELIJAN AIKAJANA BLENDERIN LUVUISTA (Sokrates v13, omistaja 3.10.2026; Linnanrakentajan sokrates_bysti.py --luvut).
+ * AJATTELIJAN AIKAJANA BLENDERIN LUVUISTA (Sokrates v13, omistaja 3.10.2026; Linnanrakentajan sokrates_bysti.py --luvut;
+ * Marcus samalla mallilla, --vienti MARCUS_AIKAJANA).
  *
  * Kohtaus on v13:sta lähtien yksi aikajana: kertoja (yksi yhtenäinen otto) kulkee 10 kappaletta, ja lainaukset, kaiut,
  * valot ja taustavirta ajoitetaan sen sanoihin. Web toistaa Blenderin viedyt avaimet sellaisinaan (kamera, aurinko,
@@ -7,6 +8,8 @@
  * Korjatut luvut vaihtuvat ajamalla tämä uudelleen — käsin ei muokata generoitua tiedostoa.
  *
  *   node tools/ajattelija-aikajana.mjs <luvut.json> <ulos.js> [--kaiut <ämpärikansio>] [--savu <ämpäripolku atlas.png> [--savu-ydin 0..1]]
+ *     [--vienti <NIMI>]   (oletus SOKRATES_AIKAJANA; Marcus: MARCUS_AIKAJANA)
+ *     [--paalauseet tykki=avain,…]   (tykin nimen loppu → ajattelijan paalauseet-avain, esim. 1016=itselleen-10-16)
  *
  * Ruudut ovat Blenderin 30 r/s -ruutuja (ruutu 1 = musiikin 0,0 s heti prologin jälkeen), koordinaatit Blenderin
  * (z ylös, kasvot −y); moottori muuntaa ne three.js:n koordinaatteihin (b2t).
@@ -16,6 +19,9 @@ import { readFileSync, writeFileSync } from 'node:fs';
 const A = process.argv.slice(2);
 const [LAHDE, ULOS] = A;
 if (!LAHDE || !ULOS) throw new Error('käyttö: node tools/ajattelija-aikajana.mjs <luvut.json> <ulos.js> [--kaiut <kansio>]');
+const VIENTI = A.includes('--vienti') ? A[A.indexOf('--vienti') + 1] : 'SOKRATES_AIKAJANA';
+const PAALAUSEET = Object.fromEntries((A.includes('--paalauseet') ? A[A.indexOf('--paalauseet') + 1].split(',') : [])
+  .map((pari) => pari.split('=')));
 const KAIUT = A.includes('--kaiut') ? A[A.indexOf('--kaiut') + 1] : 'ajattelijat/sokrates/v3';
 const d = JSON.parse(readFileSync(LAHDE, 'utf8'));
 const v = d.v13;
@@ -51,7 +57,7 @@ const pyyhkaisy = p && {
 const tykit = v.lainaukset.map((l) => {
   const valo = d.valot[l.nimi];
   return {
-    paalause: l.nimi.replace(/^tykki-/, ''),
+    paalause: PAALAUSEET[l.nimi.replace(/^tykki-/, '')] ?? l.nimi.replace(/^tykki-/, ''),
     paikka: pv(valo.sijainti), suunta: pv(valo.suunta), ala: valo.ala_m ?? alaKeilasta(valo.keila_aste),
     blend: valo.spot_blend ?? 0.45, energia: energia(valo), ...(valo.nauha_kork_m ? { korkeus: valo.nauha_kork_m } : {}),
     ...(l.kiintea ? { kiintea: true } : { vierii: [F(l.vierii_s[0]), F(l.vierii_s[1])] }),
@@ -97,10 +103,10 @@ const aikajana = {
 };
 
 const teksti = `/*
- * GENEROITU — älä muokkaa käsin: node tools/ajattelija-aikajana.mjs <sokrates-luvut-v13.json> ${ULOS}
- * Sokrateen v13-aikajana Linnanrakentajan Blender-luvuista (js/linssit/ajattelija.js aikajana-tila).
+ * GENEROITU — älä muokkaa käsin: node tools/ajattelija-aikajana.mjs <luvut-v13.json> ${ULOS}${VIENTI === 'SOKRATES_AIKAJANA' ? '' : ` --vienti ${VIENTI}`}
+ * v13-aikajana Linnanrakentajan Blender-luvuista (js/linssit/ajattelija.js aikajana-tila).
  */
-export const SOKRATES_AIKAJANA = Object.freeze(${JSON.stringify(aikajana, null, 1)
+export const ${VIENTI} = Object.freeze(${JSON.stringify(aikajana, null, 1)
   .replace(/\n\s+(-?[\d.]+,?)(?=\n)/g, ' $1')
   .replace(/\[\s+/g, '[').replace(/\s+\]/g, ']')});
 `;

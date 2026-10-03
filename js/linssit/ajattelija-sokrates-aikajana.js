@@ -1,6 +1,6 @@
 /*
- * GENEROITU — älä muokkaa käsin: node tools/ajattelija-aikajana.mjs <sokrates-luvut-v13.json> js/linssit/ajattelija-sokrates-aikajana.js
- * Sokrateen v13-aikajana Linnanrakentajan Blender-luvuista (js/linssit/ajattelija.js aikajana-tila).
+ * GENEROITU — älä muokkaa käsin: node tools/ajattelija-aikajana.mjs <luvut-v13.json> js/linssit/ajattelija-sokrates-aikajana.js
+ * v13-aikajana Linnanrakentajan Blender-luvuista (js/linssit/ajattelija.js aikajana-tila).
  */
 export const SOKRATES_AIKAJANA = Object.freeze({
  "versio": "v13",

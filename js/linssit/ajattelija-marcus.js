@@ -39,7 +39,8 @@ export const MARCUS = Object.freeze({
     },
     // Kierrokset 2–3 (marcus-tekstit.json kierrokset_2_3): poski poskiparran yläpuolella, kasvojen sivu säteellä sivulta.
     'itselleen-4-49': {
-      fi: 'Ole kuin niemi, johon aallot lyövät lakkaamatta. Se pysyy paikallaan, ja kuohuva vesi tyyntyy sen ympärillä.',
+      // Sama sanamuoto kuin kertojan tekstissä ja v13-nauhassa (omistaja hyväksyi 3.10.2026 klo 14.31).
+      fi: 'Ole kuin niemi, johon aallot lyövät lakkaamatta. Se pysyy paikallaan, ja vesi tyyntyy sen ympärillä.',
       el: 'Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται· ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος.',
       viite: 'Marcus Aurelius, Itselleen 4.49',
       sade: [-0.035, 0.360], vino: [-0.55, -0.15, -0.30], ala: 0.065, etaisyys: 0.6, korkeus: 0.02125,
@@ -49,6 +50,13 @@ export const MARCUS = Object.freeze({
       el: 'Ὡς ἤδη δυνατοῦ ὄντος ἐξιέναι τοῦ βίου, οὕτως ἕκαστα ποιεῖν καὶ λέγειν καὶ διανοεῖσθαι.',
       viite: 'Marcus Aurelius, Itselleen 2.11',
       sivulta: [-0.08, 0.375], vino: [0.0, -0.45, -0.25], ala: 0.075, etaisyys: 0.6, korkeus: 0.02375,
+    },
+    // v13 (kertojan loppu "Miten pitäisi elää?" 90,00 s): kysymys nauhana kuten Sokrateella (gobot-v13 nauha-kysymys).
+    kysymys: {
+      fi: 'Miten pitäisi elää?',
+      el: '',
+      viite: '',
+      korkeus: 0.022,
     },
   },
   // Kierroksen 1 ajat (v7–v11; Sokrateen v12 siirsi omiaan +442, Marcus ei muutu 3.10.2026).
@@ -122,6 +130,16 @@ export const MARCUS = Object.freeze({
    *   kierros 2: 4.49 nauhana poskella → uhrireliefi silmämunassa ainoana valona (d-luenta: rutto ja Lucius Verus)
    *   kierros 3: 2.11 nauhana kasvojen sivulla → Delacroix'n "Marcus Aureliuksen viimeiset sanat" (f-luenta)
    * Ääni: Eroica jatkuu yhtenäisenä 111 s (tools/ajattelija-aaniraita.mjs --ajattelija marcus --kierrokset).
+   */
+  /*
+   * AIKAJANA (v13, Päätoimittaja 3.10.2026 klo 14.4x: Sokrateen v13c-mallin mukaan; ODOTTAA Linnanrakentajan Marcus
+   * v13 -lukuja ja Linssisepän omaa sävellystä). Kun luvut tulevat:
+   *   node tools/ajattelija-aikajana.mjs <marcus-luvut-v13.json> js/linssit/ajattelija-marcus-aikajana.js
+   *     --vienti MARCUS_AIKAJANA --kaiut ajattelijat/marcus/v3/<kaiut> --paalauseet 1016=itselleen-10-16,449=itselleen-4-49,211=itselleen-2-11
+   * ja tähän `aikajana: { ...MARCUS_AIKAJANA, aani: { puhe: 'ajattelijat/marcus/v3/v13-puhe.mp3', musiikki: … }, syke }`.
+   * Kertoja (Sisältökirjuri 3.10.2026, Iv4 William, yksi otto, 91,84 s, yhdeksän kappaletta): ämpärissä
+   * ajattelijat/marcus/v3/kertoja.mp3 + ajat.json; puheraita tools/ajattelija-aaniraita.mjs --ajattelija marcus --v12
+   * --puhe <kertoja.mp3> --puhe-alku <luvuista> --musiikki <oma> --efektit <json>. Kun aikajana on, kierrokset jää käyttämättä.
    */
   kierrokset: {
     aani: { puhe: 'ajattelijat/marcus/v1/kierrokset-puhe.mp3', musiikki: 'ajattelijat/marcus/v1/kierrokset-musiikki.mp3' },

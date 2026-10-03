@@ -14,7 +14,7 @@
  * f 88,833 s lisätään, kesto 111,0 s (3330 ruutua). Tiedostot kierrokset-puhe.mp3 ja kierrokset-musiikki.mp3, jotta
  * kierroksen 1 v1-tiedostot jäävät ämpäriin ennalleen.
  *
- * V12 (--v12, vain Sokrates; omistaja 3.10.2026 klo 04.5x): musiikki alkaa levytyksen alusta 0,0 s heti prologin jälkeen ja
+ * V12 (--v12, Sokrates ja Marcus; omistaja 3.10.2026 klo 04.5x): musiikki alkaa levytyksen alusta 0,0 s heti prologin jälkeen ja
  * soi leikkaamattomana loppuun (levytys hiljenee ~84–86 s); ei otteita, hyppyjä eikä urkusilmukkaa, ja raita jatkuu
  * hiljaisuutena kohtauksen loppuun. Vaimennus säilyy. Ajat tulevat Linnanrakentajan Blender v12 -luvuista:
  *   --kesto <s> --luennat a:<s>,b:<s>,c:<s>,… [--vaimennus <alku s>]  → v12-puhe.mp3, v12-musiikki.mp3
@@ -59,6 +59,8 @@ const RESEPTIT = {
   marcus: {
     lahteet: '/Users/Shared/Claude/proto-3d/_lahteet/marcus-aurelius',
     musiikki: 'musiikki/eroica-marcia-funebre-musopen.ogg',   // Beethoven, Eroica II, Czech National SO / Musopen, CC0
+    // v13 (Päätoimittaja 3.10.2026): Linssisepän oma sävellys --musiikki-lipulla, kertoja --puhe/--puhe-alku (Sokrateen malli).
+    v12: { osat: 'koko' },
     osat: [[75.48, 75.48 + 48.333]],                    // yhtenäinen; forte 84,88 s osuu ruutuun 282 (9,4 s)
     silmukka: null,
     luennat: [['luennat/a-otto1.mp3', 20.0], ['luennat/b-otto1.mp3', 32.0]],
