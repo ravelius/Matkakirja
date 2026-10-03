@@ -1335,8 +1335,9 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     if not SAVUKOE: kaiku('kaiku-sotilas', 'kaiku-sotilas.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, k_('02', 0), k_('03', 0) + 0.8, 26.0)
     kaiku('kaiku-oraakkeli', 'kaiku-oraakkeli.png', sp, sn, (SIVU * 0.55 + YLOS * 0.30) if V13C else (SIVU * 0.15 + YLOS * 0.12), 0.08 if V13C else 0.07, k_('04', 0) + 0.3, k_('05', 0) - 0.2, 12.0 if V13C else 32.0)   # v13c: rajattu punakuvio on lähes kokonaan vaaleaa
     illan_t = T(W.get('Illan', K['10'][0])); rivi_t = T(W.get('riviäkään', K['10'][0] + 6.8))
-    kaiku('kaiku-david', 'kaiku-kuolema.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.136 if V14 else 0.11,   # v14: yksinkertainen rajattu (4.10.), sama pinta-ala
-          illan_t, rivi_t + 0.3, 70.0, haiv=24)
+    kaiku('kaiku-david', 'kaiku-kuolema.png', (vp + Vector((0.015, 0.0, 0.02))) if V14 else vp, vn,   # v14: ylemmäs ja projektorin puolelle → malja ei osu nenän varjoon (kova pystyviiva)
+          Vector((0.0, -0.55, 0.30)), 0.125 if V14 else 0.11,   # v14: yksinkertainen rajattu (4.10.)
+          illan_t, rivi_t + 0.3, 30.0 if V14 else 70.0, haiv=24)   # v14: 70 ylivalotti hahmon valkoiseksi ja teki häivytyksestä kovan reunan
     # --- lainaukset nauhoina (vierivät tasaisella nopeudella, näkyvät lainauksen ajan) ---
     lainaukset = []
     def lainaus(nimi, kuva, q, suunta, ala, kork, kap, raja=None):
@@ -1489,7 +1490,8 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
                          liuku=0.02, haivytys=haiv, varjo=0.0, savy=(1.0, 1.0, 1.0) if KAIKUVARI == 'neutraali' else (1.0, 0.78, 0.52))
         kaiut.append({'nimi': nimi, 'kuva': kuva, 'alku_s': round(a_t, 2), 'loppu_s': round(l_t, 2)})
     sade_t = w_('taivas', k_('04', 0) + 3.5); uhri_t = w_('uhrasi', k_('06', 0)); sair_t = w_('sairastui', k_('08', 0) + 1.5)
-    kaiku('kaiku-sade', 'kaiku-sade.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.121 if V14 else 0.10,   # v14: yksinkertainen (pää + parta), sama pinta-ala
+    kaiku('kaiku-sade', 'kaiku-sade.png', vp if V14 else p, vn if V14 else n,   # v14: poskelle (otsalla jumalan kasvot hukkuivat kiharoihin)
+          Vector((0.0, -0.55, 0.30)) if V14 else SIVU * 0.55 + YLOS * 0.25, 0.121 if V14 else 0.10,   # v14: yksinkertainen (pää + parta), sama pinta-ala
           sade_t, k_('05', 0) - 0.3, 26.0)
     kaiku('kaiku-uhri', 'kaiku-uhri.png', sp, sn, SIVU * 0.55 + YLOS * 0.30, 0.08, uhri_t, k_('07', 0) - 0.3, 22.0)
     kaiku('kaiku-kuolinvuode', 'kaiku-kuolinvuode.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.102 if V14 else 0.11,   # v14: pää + ylävartalo
@@ -1562,7 +1564,7 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
         (k_('02', 0), kc((0.0, -0.07, 0.41), (-0.02, -1.0, 0.10), 0.80 if V14 else 0.52), (0.0, -0.07, 0.41), 50, 'BEZIER'),   # v14: 10.16 kokonaan kuvaan, edestä
         (k_('03', 0) - 0.04, kc((0.0, -0.07, 0.40), (-0.15, -1.0, 0.08), 0.78 if V14 else 0.52), (0.0, -0.07, 0.40), 50, 'CONSTANT'),
         (k_('03', 0), (-0.14, -0.55, 0.10), (0.0, -0.08, 0.36), 35, 'BEZIER'),                     # leikkaus: alaviisto, kova
-        (sade_t, kc((0.0, -0.08, 0.41), (-0.12, -1.0, 0.10), 0.58), (0.0, -0.08, 0.41), 50, 'BEZIER'),   # sadeihme otsalla
+        (sade_t, kc((0.03, -0.07, 0.38), (0.75, -1.0, 0.10), 0.66) if V14 else kc((0.0, -0.08, 0.41), (-0.12, -1.0, 0.10), 0.58), (0.03, -0.07, 0.38) if V14 else (0.0, -0.08, 0.41), 50, 'BEZIER'),   # sadeihme otsalla
         (a5 + 0.5, kc((0.0, -0.07, 0.41), (-0.02, -1.0, 0.10), 0.80) if V14 else kc(pp, (-0.45, -1.0, 0.10), 0.34), (0.0, -0.07, 0.40) if V14 else tuple(pp), 50, 'BEZIER'),                     # poski (4.49)
         *([(uhri_t - 0.04, kc((0.0, -0.07, 0.41), (-0.02, -1.0, 0.10), 0.80), (0.0, -0.07, 0.40), 50, 'CONSTANT')] if V14 else []),   # v14: 4.49 pysyy ruudussa → leikkaus uhriin
         (uhri_t, kc(sp, (0.35, -1.0, 0.05), 0.42), tuple(sp), 50, 'BEZIER'),                        # silmäkuoppa (uhri)

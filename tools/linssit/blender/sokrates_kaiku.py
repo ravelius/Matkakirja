@@ -19,13 +19,13 @@ if tapa == 'rajattu':
     # projektorissa musta = ei valoa: alfa kerrotaan sävyyn (maski), ja hahmon sisäsävyt nostetaan välille 0,27–1,0,
     # jotta tummakin hahmo (hopliittipronssi) piirtyy valona eikä katoa varjoon
     im = im.point(lambda v: int(70 + 185 * s_(v / 255))).filter(ImageFilter.UnsharpMask(1.5, 80, 2))
-    # 4.10.: rajausreunat (hahmo leikattu kuvan reunaan) häivytetään 12 %:n matkalla — muuten suora reuna piirtyy kasvoille
-    w_, h_ = alfa.size; r_ = max(2, int(0.12 * min(w_, h_)))
-    ramppi = Image.linear_gradient('L').point(lambda v: int(255 * (v / 255) ** 1.5))   # 0 yläreunassa → 255
+    # 4.10.: rajausreunat (hahmo leikattu kuvan reunaan) häivytetään 14 %:n matkalla (käyrä ^2,2: ylivalottuva projektori ei tee liu'usta reunaa) — muuten suora reuna piirtyy kasvoille
+    w_, h_ = alfa.size; r_ = max(2, int(0.14 * min(w_, h_)))
+    ramppi = Image.linear_gradient('L').point(lambda v: int(255 * (v / 255) ** 2.2))   # 0 yläreunassa → 255
     for nimi_, laatikko in (('yla', (0, 0, w_, 1)), ('ala', (0, h_ - 1, w_, h_)), ('vasen', (0, 0, 1, h_)), ('oikea', (w_ - 1, 0, w_, h_))):
         reuna = alfa.crop(laatikko).point(lambda v: 255 if v > 128 else 0)
         if sum(reuna.tobytes()) / 255 < 0.02 * max(reuna.size): continue
-        k_ = Image.new('L', (w_, h_), 255)
+        k_ = Image.new('L', (w_, h_), 255); r_ = max(2, int((0.25 if nimi_ == 'ala' else 0.14) * min(w_, h_)))   # alareuna: hahmo jatkuu yleensä kirkkaana leikkaukseen asti
         if nimi_ == 'yla': k_.paste(ramppi.resize((w_, r_)), (0, 0))
         elif nimi_ == 'ala': k_.paste(ramppi.resize((w_, r_)).transpose(Image.FLIP_TOP_BOTTOM), (0, h_ - r_))
         elif nimi_ == 'vasen': k_.paste(ramppi.transpose(Image.ROTATE_90).resize((r_, h_)), (0, 0))   # ROTATE_90: tumma vasemmalla
