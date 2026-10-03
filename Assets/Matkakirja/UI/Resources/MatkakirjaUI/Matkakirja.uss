@@ -4125,10 +4125,20 @@
 }
 
 .mk-wiki__nuoli {
-    /* OHJAUSNAPPI (Pohjat/ohjausnappi.uss, teema tumma); täällä vain paikka kuvan reunoilla. */
     position: absolute;
     top: 42%;
-    margin: 0;
+    width: 36px;
+    height: 36px;
+    min-height: 36px;
+    border-radius: 18px;
+    border-width: 0;
+    background-color: rgba(20, 16, 10, 0.55);
+}
+
+.mk-wiki__nuoli .mk-nappi__teksti {
+    font-size: 22px;
+    -unity-text-align: middle-center;
+    color: #f1e6d0;
 }
 
 .mk-wiki__nuoli--edellinen {

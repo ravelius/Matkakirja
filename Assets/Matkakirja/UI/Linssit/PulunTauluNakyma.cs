@@ -84,8 +84,9 @@ namespace Matkakirja.Natiivi
             paneeli.RegisterCallback<GeometryChangedEvent>(_ => OrigoAvaajaan());
             var ylarivi = Rakenne.El("mk-astroTaulu__ylarivi", paneeli, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(PulunTaulu.Otsikko, "mk-astroTaulu__otsikko", ylarivi), Kirjasin.LukuLihava);
-            // ✕ OHJAUSNAPPI-neliönä taulun teemalla (omistaja 2.10.2026 klo 14.2x EI OVAALEJA, Päätoimittaja 3.10.).
-            var sulku = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje taulu", () => Sulje("sulku"), ylarivi);
+            // ✕ OHJAUSNAPPI-neliönä harmaalla teemalla kuten KUVANÄKYMÄn ✕ (omistaja 2.10.2026 klo 14.2x EI OVAALEJA, Päätoimittaja
+            // 3.10.); taulun oma teema jätti neliön näkymättömäksi saman värisenä kuin taulu.
+            var sulku = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje taulu", () => Sulje("sulku"), ylarivi, "harmaa");
             sulku.AddToClassList("mk-astroTaulu__sulku");
             rivit = Rakenne.El("mk-astroTaulu__rivit", paneeli, PickingMode.Ignore);
             // Sulkeutuva taulu (200 ms) ei enää toimi: linkki ja rivit vain auki ollessa.
