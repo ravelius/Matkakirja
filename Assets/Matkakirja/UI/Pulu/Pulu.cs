@@ -227,7 +227,14 @@ namespace Matkakirja.Natiivi
         // ROBOTTIKÄSI (omistaja 2.10. 21.3x, Päätoimittajan tarkennus): Pulu vasempaan alakulmaan 60 %:iin varjokuvana (kasvot
         // loistavat), ja varsi kulkee ruudun yli oikeaan reunaan aluksen suuntaan (LiviaKuva.Robotti) — kaukonäkymässä ja Cupolassa.
         // 0,6 → 0,78 (+30 %; Päätoimittaja 3.10.: varsi on lyhyt ja Pulu lähellä kameraa, kasvojen pitää erottua puhelimessa).
-        const float RobottiSkaala = 0.78f;
+        const float RobottiSkaalaPerus = 0.78f;
+        /// <summary>
+        /// Cupolan ikkunan takana Pulu mitoitetaan lasin halkaisijan mukaan (Päätoimittaja 3.10.: iPadilla sama pt-koko teki Pulusta
+        /// pikkuruisen): osuus lasista sama kuin iPhonessa (lasin säde 299 pt, kun skaala 0,78). Muualla 0,78; ei koskaan pienemmäksi.
+        /// </summary>
+        float RobottiSkaala => OikeallaReunalla && Lasi is Vector3 l && l.z > 1f
+            ? RobottiSkaalaPerus * Mathf.Max(1f, l.z / IphoneLasinSade) : RobottiSkaalaPerus;
+        const float IphoneLasinSade = 299f;
         // viewBox-yksiköt: Pulun vasen reuna x 88, varren alin kohta (kyynärnivel vaakaan käännettynä) y 381 (viewBox 304).
         const float RobottiPuluVasen = 88f, RobottiAlin = 381f, RobottiReuna = 12f;
         /// <summary>Varren nivel (viewBox x 124, LiviaKuva.NivelX) ja oikean reunan tilassa nivelen etäisyys turvareunasta (pt).</summary>
@@ -304,7 +311,11 @@ namespace Matkakirja.Natiivi
                 && !float.IsNaN(alue.worldBound.yMax))
             {
                 var juuri = alue.panel.visualTree.layout;
-                float ky = juuri.height * LasiKypara, d = ky - lasi.y, r = lasi.z - LasiVali;
+                // Sijainti suhteessa lasiin (iPhone pysty: kypärä 62 % = lasin keskipiste + 0,35 sädettä), välit skaalan mukana.
+                float k = RobottiSkaala / RobottiSkaalaPerus;
+                // iPhonella (kuitattu 3.10.) ruudun korkeudesta kuten ennen; tabletilla suhteessa lasiin.
+                float ky = UiKerros.Tabletti ? lasi.y + LasiKyparaSateina * lasi.z : juuri.height * LasiKypara;
+                float d = ky - lasi.y, r = lasi.z - LasiVali * k;
                 float lasinOikea = r > Mathf.Abs(d) ? lasi.x + Mathf.Sqrt(r * r - d * d) : lasi.x;
                 float oikea = Mathf.Min(lasinOikea, alue.parent.layout.width - reunat.z - 8f);
                 float vasen = oikea - RobottiPuluOikea * RobottiSkaala;
@@ -316,7 +327,7 @@ namespace Matkakirja.Natiivi
                     float kyynarX = vasen + RobottiNivelX * RobottiSkaala, dxl = kyynarX - lasi.x;
                     if (lasi.z > Mathf.Abs(dxl))
                     {
-                        float reunaY = lasi.y + Mathf.Sqrt(lasi.z * lasi.z - dxl * dxl) + KyynarVara;
+                        float reunaY = lasi.y + Mathf.Sqrt(lasi.z * lasi.z - dxl * dxl) + KyynarVara * k;
                         float varsiKyparasta = kuva.KyynarEvasta - kuva.KyparaEvasta;
                         if (reunaY < juuri.height) ky = Mathf.Max(ky, reunaY - varsiKyparasta);
                     }
@@ -351,7 +362,7 @@ namespace Matkakirja.Natiivi
         public Vector3? Lasi { get; set; }
 
         /// <summary>Ikkunan takana: kypärän keskipiste ruudun korkeudesta, väli lasin reunaan (pt) ja Pulun oikea reuna kuvassa (viewBox).</summary>
-        const float LasiKypara = 0.62f, LasiVali = 12f, RobottiPuluOikea = 145f, KyynarVara = 40f;   // vara: lasin malli ~20 pt näkyvää reunaa ylempänä
+        const float LasiKyparaSateina = 0.351f, LasiKypara = 0.62f, LasiVali = 12f, RobottiPuluOikea = 145f, KyynarVara = 40f;   // vara: lasin malli ~20 pt näkyvää reunaa ylempänä
 
         /// <summary>Vaakatilan este robottikäden puomille (pienen paneelin vasen yläkulma, paneelin pisteinä); null = Pulu AlaVaran yllä.</summary>
         public Vector2? VarrenEste { get; set; }
