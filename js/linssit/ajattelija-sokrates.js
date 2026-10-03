@@ -205,7 +205,7 @@ export const SOKRATES = Object.freeze({
      * (kohtauksen ruutu 295, kertojan alku), sitten 0,5 s:n välein; rivi juoksee sisään kasvojen reunasta (rintama 3 ×
      * tekstin nopeus, alku 55 % keilan puolileveydestä). Rivien voima 0,4 (päälainaus kirkkain, kasvot näkyvät rivien välistä); kortti väistää rivit.
      */
-    lauseKortti: { merkkeja: 20, leveys: 0.075 },
+    lauseKortti: { merkkeja: 34, leveys: 0.11 },   // leveys luvuista (nauha_lev_m), tämä oletus; 2–3 riviä otsalla
     virtaPorrastus: { alku: 295, vali: 15, haivytys: 12, rintama: 3, reuna: 0.55 },
     virtaVoima: 0.4,
     // V14: puhe = kertoja (sama William-otto, 9,5 s:sta kohtauksen alusta) + efektit; musiikki Linssisepän v14-sävellys
