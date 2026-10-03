@@ -524,6 +524,9 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0.0, AjattelijaAikajana.AvainArvo(aj.Virta, 1870));
             // Pidemmät välit pysyvät lineaarisina (lainauksen 6 ruudun nousu).
             Oleta.Sama(88.0, AjattelijaAikajana.AvainArvo(aj.Tykit[0].Energia, 907));
+            // Varjolevy 136–153 pysyy päällä leikkaukseen 154 asti (välähdys 3.10. 20.0x: olkapää valaistui ruudulla 153,5).
+            Oleta.Tosi(AjattelijaAikajana.RuutuValilla(153.5, aj.VarjolevyRuudut) && AjattelijaAikajana.RuutuValilla(136, aj.VarjolevyRuudut), "varjolevy 136…<154");
+            Oleta.Tosi(!AjattelijaAikajana.RuutuValilla(154, aj.VarjolevyRuudut) && !AjattelijaAikajana.RuutuValilla(135.9, aj.VarjolevyRuudut), "varjolevy pois 154");
         }
         [Testi] static void AtlasPuretaanTaustasaikeellaKutenLoadImage()
         {

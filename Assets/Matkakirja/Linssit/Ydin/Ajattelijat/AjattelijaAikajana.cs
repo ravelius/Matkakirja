@@ -310,6 +310,12 @@ namespace Matkakirja.Linssit.Ajattelijat
         public static double Valinta(double r, double r0, double r1) =>
             r1 - r0 <= 1 ? (r >= r1 ? 1 : 0) : r1 > r0 ? (r - r0) / (r1 - r0) : 1;
 
+        /// <summary>
+        /// Blenderin ruutuväli [alku, loppu] kokonaisina ruutuina: murtoluvulla voimassa, kunnes seuraava ruutu (loppu + 1) alkaa.
+        /// Varjolevy 136–153: r ≤ 153 sammutti levyn ruuduilla 153–154 vielä vanhassa otoksessa (kamera leikkaa 154) → olkapää välähti.
+        /// </summary>
+        public static bool RuutuValilla(double r, double[] ruudut) => ruudut != null && r >= ruudut[0] && r < ruudut[1] + 1;
+
         /// <summary>Webin avainArvo: lineaarinen arvo avaimista [[ruutu, arvo], …]; päiden ulkopuolella ensimmäinen tai viimeinen.</summary>
         public static double AvainArvo(IReadOnlyList<double[]> avaimet, double r)
         {

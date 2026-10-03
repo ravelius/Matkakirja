@@ -691,7 +691,7 @@ namespace Matkakirja.Natiivi
             mat.SetVector(IdTaivas, new Vector4(0.9f, 0.92f, 1.0f, 0) * maailma);
             mat.SetVector(IdMaa, new Vector4(0.25f, 0.25f, 0.28f, 0) * maailma);
             Spotti(3, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0);   // kaiun täyte ei ole käytössä aikajanassa
-            bool levy = aj.VarjolevyRuudut != null && r >= aj.VarjolevyRuudut[0] && r <= aj.VarjolevyRuudut[1];
+            bool levy = AjattelijaAikajana.RuutuValilla(r, aj.VarjolevyRuudut);
             if (aurinko > 0) varjoAurinko.Piirra(mesh, levy ? levyMesh : null, valoP, auringonKohde, (float)a.AvainKeila);
 
             // Pyyhkäisy (valo 1): kapea sivuvalo, kohde avaimista tai suunnasta.
