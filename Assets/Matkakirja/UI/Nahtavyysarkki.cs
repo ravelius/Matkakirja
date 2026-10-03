@@ -98,8 +98,9 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(sulje, Kirjasin.KoneLihava);
 
             // ☰ ja ‹ ›: kortin sisaruksia (eivät vieri sisällön mukana).
-            valikkoNappi = Rakenne.Nappi(null, "mk-nahtavyys__valikkonappi", VaihdaValikko, arkki, Ikonit.Valikko);
-            valikkoNappi.tooltip = "Kaupungin nähtävyydet";
+            // ☰ OHJAUSNAPPInä paperiteemalla, sama 40 pt kuin sähkeen ✕ (Päätoimittaja 3.10.: korttien sisänapit yhtä suuriksi).
+            valikkoNappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Kaupungin nähtävyydet", VaihdaValikko, arkki, "paperi");
+            valikkoNappi.AddToClassList("mk-nahtavyys__valikkonappi");
             valikko = Rakenne.El("mk-nahtavyys__valikko", arkki);
             valikko.style.display = DisplayStyle.None;
             // ‹ › OHJAUSNAPPI-neliöinä paperiteemalla kortin reunoilla (omistaja 2.10.2026 klo 14.2x EI OVAALEJA, Päätoimittaja 3.10.).

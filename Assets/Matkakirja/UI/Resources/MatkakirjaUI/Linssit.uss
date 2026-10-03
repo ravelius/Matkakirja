@@ -48,25 +48,26 @@
  * reuna rgb(170), pohja rgba(130,130,130,.42), merkki rgb(224), rengas 2,1 rem ≈ 34 pt — sama kuin KUVANÄKYMÄn harmaa rengas
  * (Pohjat/kuvanakyma.uss). Natiivin "Sulje linssi" -teksti sulaa pois (löydös 32), joten pilleri on samaa harmaata. */
 .mk-linssiSulje {
+    /* OHJAUSNAPPI-mitat ja harmaa teema (Pohjat/ohjausnappi.uss; Päätoimittaja 3.10.2026). */
     position: absolute;
-    min-height: 34px;
-    height: 34px;
-    padding: 0 12px 0 10px;
+    min-height: var(--tk-nappi-ohjaus);
+    height: var(--tk-nappi-ohjaus);
+    padding: 0 12px 0 8px;
     border-width: 1px;
     border-radius: var(--tk-kulma-nappi);
-    border-color: rgb(170, 170, 170);
-    background-color: rgba(130, 130, 130, 0.42);
-    color: rgb(224, 224, 224);
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta);
+    color: var(--tk-muste);
 }
 
 .mk-linssiSulje:active {
-    background-color: rgba(170, 170, 170, 0.55);
+    border-color: var(--tk-korostus);
 }
 
 .mk-linssiSulje__risti {
-    font-size: var(--tk-koko-valiotsikko);
+    width: var(--tk-nappi-ohjaus-kuvake);
+    height: var(--tk-nappi-ohjaus-kuvake);
     margin-right: 6px;
-    color: rgb(224, 224, 224);
 }
 
 .mk-linssiSulje .mk-nappi__teksti {
@@ -74,9 +75,9 @@
     letter-spacing: 3.85px; /* web 0.5px */
 }
 
-/* Löydös 32: kutistunut pilleri = pyöreä ✕ (34 × 34, webin rengas). */
+/* Löydös 32: kutistunut pilleri = OHJAUSNAPPI-neliö (40 × 40), sama kuin KUVANÄKYMÄn ✕. */
 .mk-linssiSulje--risti {
-    width: 34px;
+    width: var(--tk-nappi-ohjaus);
     padding: 0;
     justify-content: center;
 }
@@ -3618,11 +3619,28 @@
     transition-duration: 0.2s;
 }
 
+/* Varatyyli OHJAUSNAPPI-neliönä (Päätoimittaja 3.10.2026, EI OVAALEJA): 40 pt, kulma-nappi, avaruuslasin sävyt, rasti 22 pt. */
 .mk-issohjaus__sulkunappi.mk-issnahka--perus {
+    width: var(--tk-nappi-ohjaus);
+    height: var(--tk-nappi-ohjaus);
+    min-width: var(--tk-nappi-ohjaus);
     border-width: 1px;
-    border-radius: 22px;
-    border-color: rgba(93, 255, 168, 0.28);
-    background-color: rgba(6, 13, 10, 0.72);
+    border-radius: var(--tk-kulma-nappi);
+    border-color: var(--tk-lasi-avaruus-reunus);
+    background-color: var(--tk-lasi-avaruus-pinta);
+    color: var(--tk-lasi-avaruus-muste);
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-issohjaus__sulkuikoni {
+    display: none;
+    width: var(--tk-nappi-ohjaus-kuvake);
+    height: var(--tk-nappi-ohjaus-kuvake);
+}
+
+.mk-issnahka--perus > .mk-issohjaus__sulkuikoni {
+    display: flex;
 }
 
 .mk-isskyyti__ohjaimet--kutistettu .mk-issohjaus__sulkunappi {

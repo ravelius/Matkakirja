@@ -1719,25 +1719,11 @@
 
 /* Nähtävyysarkin ☰-valikko ja ‹ › -nuolet (web .nahtavyys-valikko-nappi, .nahtavyys-nuoli). */
 .mk-nahtavyys__valikkonappi {
+    /* OHJAUSNAPPI (Pohjat/ohjausnappi.uss, paperi, 40 pt); keskipiste sama kuin entisellä 34 pt:n napilla. */
     position: absolute;
-    top: 9px;
-    right: 10px;
-    width: 34px;
-    height: 34px;
-    min-height: 34px;
-    padding: 0;
-    border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.35);
-    border-radius: 6px;
-    background-color: rgba(246, 231, 198, 0.9);
-    color: #46331f;
-    justify-content: center;
-}
-
-.mk-nahtavyys__valikkonappi > .mk-ikoni {
-    width: 17px;
-    height: 17px;
-    margin-right: 0;
+    top: 6px;
+    right: 7px;
+    margin: 0;
 }
 
 .mk-nahtavyys__valikko {
