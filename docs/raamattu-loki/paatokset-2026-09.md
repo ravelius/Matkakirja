@@ -10343,3 +10343,7 @@ Omistaja 3.10.2026 klo 16.0x sanatarkasti: "Lisätekstit näyttävät myös viel
 ## TARKENNUS: TAUSTARIVIT TUNNISTETTAVINA TEKSTINÄ MUTTA LUKEMATTOMINA (3.10.2026 klo 17.33)
 
 Omistaja 3.10.2026 klo 17.4x sanatarkasti: "Tunnistaako pehmennettyä tekstiä enää tekstiksi?" Päätoimittajan arvio v14c-tallenteesta: ei tunnista (sumennus noin kirjaimen korkeuden verran → pehmeitä katkoviivoja ja valoraitoja). Linja: taustarivien sumennus noin 0,3 × kirjaimen korkeus, jolloin kirjaimet näkyvät möykkyinä ja sanojen rytmi erottuu ja rivin tunnistaa heti tekstiksi, mutta yhtäkään sanaa ei voi lukea (kuin tarkentamaton teksti valokuvassa); kirkkaus noin 50 % päälainauksesta; lähemmät rivit hieman tarkempia, kauemmat pehmeämpiä. Sama Marcukselle.
+
+## AJATTELIJAT v14 HYVÄKSYTTY (omistaja) (3.10.2026 klo 17.48)
+
+Omistaja 3.10.2026 klo 17.4x kortilla: "Hyväksyn molemmat (suositus)" — Sokrates ja Marcus v14 (web-tallenteet pelikoodari-sokrates-v14-20261003/*-v14d-web-iphone.mp4; luvut Linnanrakentaja 6c506d581; musiikki Linssiseppä v14; haara pelikoodari-sokrates-v14). Web junaan (vientipaketti ensin, sitten PR Julkaisijan junaan; #3900 mukaan), natiivi v14:n mukaan: Sokrates juna 133:een (Linssiseppä 2), Marcus natiiviin perässä. Päätoimittaja tarkistaa natiivin tallenteen ennen julkaisua (tarkista–korjaa–tarkista).
