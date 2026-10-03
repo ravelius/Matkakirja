@@ -136,6 +136,15 @@ namespace Matkakirja.Natiivi
                     aineistoja += rivit.Count;
                     Ryhma(Teksti(ryhma, "otsikko"), Teksti(ryhma, "johdanto"), rivit);
                 }
+            // AJATTELIJAT (Päätoimittaja 4.10.2026: kaikukuvien CC BY-SA -nimeäminen, oraakkeli ja uhri): ajattelijoiden omista
+            // tiedostoista (Resources/Ajattelijat/*.json, kaiut[].lahde; vanha kaiku.nimeaminen varalla), joten uusi kaiku näkyy
+            // täällä ilman erillistä listaa.
+            var ajattelijat = AjattelijoidenLahteet();
+            if (ajattelijat.Count > 0)
+            {
+                aineistoja += ajattelijat.Count;
+                Ryhma("Ajattelijat", "Ajattelijoiden kohtausten kaikukuvat.", ajattelijat);
+            }
             Ryhma("Sovelluksen kartta, malli ja fontit", "Natiivisovelluksen omat aineistot.", new List<Rivi>
             {
                 new Rivi { Nimi = "Maasto ja pallo", Tekija = KarttaKerrokset.Tekijatiedot, EiLisenssia = true },
@@ -161,6 +170,47 @@ namespace Matkakirja.Natiivi
             Kappale("Sovellus " + Application.version + (UiNakymat.SisaltoVersio != null ? " · sisältö " + UiNakymat.SisaltoVersio : ""),
                 "mk-tietoja__lopetus");
             rakennettu = peli != null;
+        }
+
+        /// <summary>
+        /// Ajattelijoiden kaikukuvien lähteet: kaiut[] (tai yksittäinen kaiku), lahde = { kohde, teos, tekija, lisenssi, lahde } tai
+        /// merkkijono; vanha kaiku.nimeaminen ("Tekijä, lisenssi, lähde") varalla. Rivi: kohde (tai ajattelija), teos ja tekijä,
+        /// lisenssi, lähde huomautuksena.
+        /// </summary>
+        static List<Rivi> AjattelijoidenLahteet()
+        {
+            var rivit = new List<Rivi>();
+            foreach (var t in Resources.LoadAll<TextAsset>("Ajattelijat"))
+            {
+                if (t.name.EndsWith("-atlas", System.StringComparison.Ordinal)) continue;
+                Dictionary<string, object> d;
+                try { d = MiniJson.ObjektiTaiNull(MiniJson.Jasenna(t.text)); }
+                catch (System.Exception) { continue; }
+                if (d == null) continue;
+                string ajattelija = Teksti(d, "nimi") ?? t.name;
+                var kaiut = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(d, "kaiut"));
+                if (kaiut.Count == 0 && MiniJson.Kentta(d, "kaiku") != null) kaiut.Add(MiniJson.Kentta(d, "kaiku"));
+                foreach (var k in kaiut)
+                {
+                    var o = MiniJson.ObjektiTaiNull(k);
+                    if (o == null) continue;
+                    var lahde = MiniJson.Kentta(o, "lahde");
+                    if (MiniJson.ObjektiTaiNull(lahde) is Dictionary<string, object> l)
+                    {
+                        string kohde = Teksti(l, "kohde"), teos = Teksti(l, "teos"), tekija = Teksti(l, "tekija");
+                        rivit.Add(new Rivi
+                        {
+                            Nimi = ajattelija + (kohde != null ? ": " + kohde : ""),
+                            Tekija = teos != null && tekija != null ? teos + " · " + tekija : teos ?? tekija,
+                            Lisenssi = Teksti(l, "lisenssi"),
+                            Huom = Teksti(l, "lahde"),
+                        });
+                    }
+                    else if ((lahde as string ?? Teksti(o, "nimeaminen")) is string n && !string.IsNullOrWhiteSpace(n))
+                        rivit.Add(new Rivi { Nimi = ajattelija, Tekija = n, EiLisenssia = true });
+                }
+            }
+            return rivit;
         }
 
         /// <summary>Viennin export: arvo suoraan tai { arvo } -kääreessä (kuten ui-tekstit).</summary>
