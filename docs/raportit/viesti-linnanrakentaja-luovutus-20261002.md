@@ -3,6 +3,12 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
+## 3.10. 10.x: v13c (--v13c: rajatut kaiut viistosti, ei reunahehkua, virta väistää; --kaikuvari seepia|neutraali;
+## --savu <kansio>: savukiekuran maski kaikkiin projektoreihin, sokrates_savu.py → proto-3d/_lahteet/sokrates/savu-v1/) luvut
+## sokrates-luvut-v13c.json + gobot-v13cA Pelikoodarilla (lippuina A/B, väri, savu). Savun koevideo v13c-savu-koe.mp4 (df639c875).
+## Varasto-havainnekuva tools/linssit/blender/ajattelijat_varasto.py → docs/raportit/kuvat/ajattelijat-varasto/ (f1f86dc90).
+## Kaikusarja B odottaa Codexia (vaalea marmori, oraakkeli ilman pylvästä, sotilas, Sokrates yksin).
+
 ## SOKRATES v12–v13b VALMIS (Päätoimittaja hyväksyi 3.10.; sotilaan kuva paikkamerkki, Codex korvaa): sokrates_bysti.py --v13 TAUSTA SYKE [--kertoja ajat.json] (= v12 intro: musiikki alusta,
 ## leikkaukset 17,35/20,85/21,6/22,4, Rembrandt 24,1 s, sivuvalo; + v13 kierrokset kertojan Iv4 William -oletusoton mukaan, alku 28,0 s).
 ## Luvut docs/raportit/ajattelijat-v11/sokrates-luvut-v13.json (haara linnanrakentaja-sokrates-bysti ffa1c9c94) Pelikoodarilla,
