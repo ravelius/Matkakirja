@@ -1,5 +1,6 @@
 /*
- * AJATTELIJAN AIKAJANA BLENDERIN LUVUISTA (Sokrates v13, omistaja 3.10.2026; Linnanrakentajan sokrates_bysti.py --luvut).
+ * AJATTELIJAN AIKAJANA BLENDERIN LUVUISTA (Sokrates v13, omistaja 3.10.2026; Linnanrakentajan sokrates_bysti.py --luvut;
+ * Marcus samalla mallilla, --vienti MARCUS_AIKAJANA).
  *
  * Kohtaus on v13:sta lähtien yksi aikajana: kertoja (yksi yhtenäinen otto) kulkee 10 kappaletta, ja lainaukset, kaiut,
  * valot ja taustavirta ajoitetaan sen sanoihin. Web toistaa Blenderin viedyt avaimet sellaisinaan (kamera, aurinko,
@@ -7,6 +8,8 @@
  * Korjatut luvut vaihtuvat ajamalla tämä uudelleen — käsin ei muokata generoitua tiedostoa.
  *
  *   node tools/ajattelija-aikajana.mjs <luvut.json> <ulos.js> [--kaiut <ämpärikansio>] [--savu <ämpäripolku atlas.png> [--savu-ydin 0..1]]
+ *     [--vienti <NIMI>]   (oletus SOKRATES_AIKAJANA; Marcus: MARCUS_AIKAJANA)
+ *     [--paalauseet tykki=avain,…]   (tykin nimen loppu → ajattelijan paalauseet-avain, esim. 1016=itselleen-10-16)
  *
  * Ruudut ovat Blenderin 30 r/s -ruutuja (ruutu 1 = musiikin 0,0 s heti prologin jälkeen), koordinaatit Blenderin
  * (z ylös, kasvot −y); moottori muuntaa ne three.js:n koordinaatteihin (b2t).
@@ -16,6 +19,9 @@ import { readFileSync, writeFileSync } from 'node:fs';
 const A = process.argv.slice(2);
 const [LAHDE, ULOS] = A;
 if (!LAHDE || !ULOS) throw new Error('käyttö: node tools/ajattelija-aikajana.mjs <luvut.json> <ulos.js> [--kaiut <kansio>]');
+const VIENTI = A.includes('--vienti') ? A[A.indexOf('--vienti') + 1] : 'SOKRATES_AIKAJANA';
+const PAALAUSEET = Object.fromEntries((A.includes('--paalauseet') ? A[A.indexOf('--paalauseet') + 1].split(',') : [])
+  .map((pari) => pari.split('=')));
 const KAIUT = A.includes('--kaiut') ? A[A.indexOf('--kaiut') + 1] : 'ajattelijat/sokrates/v3';
 const d = JSON.parse(readFileSync(LAHDE, 'utf8'));
 const v = d.v13;
@@ -51,10 +57,11 @@ const pyyhkaisy = p && {
 const tykit = v.lainaukset.map((l) => {
   const valo = d.valot[l.nimi];
   return {
-    paalause: l.nimi.replace(/^tykki-/, ''),
+    paalause: PAALAUSEET[l.nimi.replace(/^tykki-/, '')] ?? l.nimi.replace(/^tykki-/, ''),
     paikka: pv(valo.sijainti), suunta: pv(valo.suunta), ala: valo.ala_m ?? alaKeilasta(valo.keila_aste),
     blend: valo.spot_blend ?? 0.45, energia: energia(valo), ...(valo.nauha_kork_m ? { korkeus: valo.nauha_kork_m } : {}),
     ...(l.kiintea ? { kiintea: true } : { vierii: [F(l.vierii_s[0]), F(l.vierii_s[1])] }),
+    ...(valo.nauha_lev_m ? { leveys: valo.nauha_lev_m } : {}),   // v14b: kortin leveys (kiinteä lainaus otsalla)
   };
 });
 
@@ -85,6 +92,21 @@ const savu = c.savu && SAVU ? {
   ydin: YDIN, vahvuus: 0.95,
 } : null;
 
+// v14: rakovalo (Blender AREA, suorakaide koko × koko_y, spread ~1°): kapea kaista (silmät); koko Blender-koodin arvoista,
+// jos luvuissa ei ole niitä (sokrates_bysti.py rako_avain).
+// v14b: rako.avaimet = [[ruutu, sijainti, suunta, energia, size, size_y, spread_aste], …] (paikka ja koko avaimittain).
+const rk = d.valot.rako;
+const rako = rk && (rk.avaimet ?? rk.energia_avaimet).some((x) => (rk.avaimet ? x[3] : x[1]) > 0) ? {
+  ...(rk.avaimet
+    ? { avaimet: rk.avaimet.map(([r, p, su, e, k, ky, sp]) => [r, pv(p), pv(su), e, [k, ky], sp]) }
+    : { paikka: pv(rk.sijainti), suunta: pv(rk.suunta), energia: energia(rk), koko: rk.koko ?? [0.34, 0.014] }),
+  ...(rk.vari ? { vari: pv(rk.vari) } : {}),
+} : null;
+// v14b: ympäristövalon kerroin avaimittain (0 = ei täytettä; silmä- ja partakuvat) ja näkymätön varjolevy (vain varjo).
+const ymparisto = d.v14?.ymparisto_voima_avaimet ?? null;
+const vl = d.v14?.varjolevy;
+const varjolevy = vl ? { keski: pv(vl.keski), koko: [vl.leveys_x_m, vl.syvyys_y_m], ruudut: vl.ruudut } : null;
+
 // v13b: tekstiprojektorien (tykki-*, virta-*) väri, jos viety (värittömässä tilassa 1/1/1); kaikilla sama.
 const tykkiVari = d.valot[v.lainaukset[0]?.nimi]?.vari;
 
@@ -97,14 +119,17 @@ const aikajana = {
   ...(vaisto.length ? { vaisto } : {}),
   ...(savu ? { savu } : {}),
   ...(tykkiVari ? { tykkiVari: pv(tykkiVari) } : {}),
+  ...(rako ? { rako } : {}),
+  ...(ymparisto ? { ymparisto } : {}),
+  ...(varjolevy ? { varjolevy } : {}),
   efektit: v.efektit.map((e) => [e.efekti, e.s]),
 };
 
 const teksti = `/*
- * GENEROITU — älä muokkaa käsin: node tools/ajattelija-aikajana.mjs <sokrates-luvut-v13.json> ${ULOS}
- * Sokrateen v13-aikajana Linnanrakentajan Blender-luvuista (js/linssit/ajattelija.js aikajana-tila).
+ * GENEROITU — älä muokkaa käsin: node tools/ajattelija-aikajana.mjs <luvut-v13.json> ${ULOS}${VIENTI === 'SOKRATES_AIKAJANA' ? '' : ` --vienti ${VIENTI}`}
+ * v13-aikajana Linnanrakentajan Blender-luvuista (js/linssit/ajattelija.js aikajana-tila).
  */
-export const SOKRATES_AIKAJANA = Object.freeze(${JSON.stringify(aikajana, null, 1)
+export const ${VIENTI} = Object.freeze(${JSON.stringify(aikajana, null, 1)
   .replace(/\n\s+(-?[\d.]+,?)(?=\n)/g, ' $1')
   .replace(/\[\s+/g, '[').replace(/\s+\]/g, ']')});
 `;
