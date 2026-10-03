@@ -826,12 +826,13 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       rako.angle = Math.atan(puoli / RD);
       rako.position.copy(b2t(THREE, paikka));
       rako.target.position.copy(b2t(THREE, paikka.map((x, i) => x + suunta[i] * RD)));
-      const ck = rakoKuvio.getContext('2d');
+      // Kankaan oma suodatin (ctx.filter) esilaskee pehmeyden kuvioon; ei SVG-suodatinta (tests/sw.test.mjs).
+      const ctx = rakoKuvio.getContext('2d');
       const px = 256 / puoli;   // kuvion pikseleitä metriä kohden (kuvio kattaa ±puoli)
-      ck.filter = 'none'; ck.fillStyle = '#000'; ck.fillRect(0, 0, 512, 512);
-      ck.filter = `blur(${Math.max(1, levea * px / 2)}px)`;
-      ck.fillStyle = '#fff';
-      ck.fillRect(256 - k / 2 * px, 256 - ky / 2 * px, k * px, ky * px);
+      ctx.filter = 'none'; ctx.fillStyle = '#000'; ctx.fillRect(0, 0, 512, 512);
+      ctx.filter = `blur(${Math.max(1, levea * px / 2)}px)`;
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(256 - k / 2 * px, 256 - ky / 2 * px, k * px, ky * px);
       if (rako.map) rako.map.needsUpdate = true;
       else rako.map = new THREE.CanvasTexture(rakoKuvio);
       // ?rako=<kerroin> kalibrointiin (Blenderin AREA-valon säteily vs. webin spotti).
