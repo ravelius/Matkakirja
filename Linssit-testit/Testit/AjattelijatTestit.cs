@@ -286,7 +286,7 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void V11AlkukuvatVarjopuolelta()
         {
-            foreach (var t in new[] { "marcus" })   // Sokrateen v14-intro: tests V14Aikajana
+            foreach (var t in new[] { "marcus-v11" })   // Sokrateen v14-intro: tests V14Aikajana
             {
                 var a = Lue(t);
                 // Introkamera valon vastapuolella: x = min(−|x|, −0,22) (Sokrates ruutu 57, Marcus 51 → −0,22).
