@@ -308,14 +308,15 @@ namespace Matkakirja.Natiivi
                 float oikea = Mathf.Min(lasinOikea, alue.parent.layout.width - reunat.z - 8f);
                 float vasen = oikea - RobottiPuluOikea * RobottiSkaala;
                 // Varsi kehyksen taakse (Päätoimittaja 3.10.: pystyssä varsi päättyi keskelle lasia, kun vaakaosa jäi ruudun ulkopuolelle):
-                // jos lasin alareuna näkyy ruudulla kyynärpään kohdalla, Pulu laskee, kunnes varren alin kohta on 8 pt lasin reunan alla.
-                if (!float.IsNaN(kuva.VarrenAlinEvasta) && lasi.z > 0f)
+                // jos lasin alareuna näkyy ruudulla kyynärpään kohdalla, Pulu laskee, kunnes kyynärpää on KyynarVara lasin reunan alla
+                // (kuva bf6b3285: varren alin kohta oli puomin oikeassa päässä ruudun ulkopuolella, kyynärpää yhä lasin keskellä).
+                if (!float.IsNaN(kuva.KyynarEvasta) && lasi.z > 0f)
                 {
                     float kyynarX = vasen + RobottiNivelX * RobottiSkaala, dxl = kyynarX - lasi.x;
                     if (lasi.z > Mathf.Abs(dxl))
                     {
-                        float reunaY = lasi.y + Mathf.Sqrt(lasi.z * lasi.z - dxl * dxl) + 8f;
-                        float varsiKyparasta = kuva.VarrenAlinEvasta - kuva.KyparaEvasta;
+                        float reunaY = lasi.y + Mathf.Sqrt(lasi.z * lasi.z - dxl * dxl) + KyynarVara;
+                        float varsiKyparasta = kuva.KyynarEvasta - kuva.KyparaEvasta;
                         if (reunaY < juuri.height) ky = Mathf.Max(ky, reunaY - varsiKyparasta);
                     }
                 }
@@ -349,7 +350,7 @@ namespace Matkakirja.Natiivi
         public Vector3? Lasi { get; set; }
 
         /// <summary>Ikkunan takana: kypärän keskipiste ruudun korkeudesta, väli lasin reunaan (pt) ja Pulun oikea reuna kuvassa (viewBox).</summary>
-        const float LasiKypara = 0.62f, LasiVali = 12f, RobottiPuluOikea = 145f;
+        const float LasiKypara = 0.62f, LasiVali = 12f, RobottiPuluOikea = 145f, KyynarVara = 24f;
 
         /// <summary>Vaakatilan este robottikäden puomille (pienen paneelin vasen yläkulma, paneelin pisteinä); null = Pulu AlaVaran yllä.</summary>
         public Vector2? VarrenEste { get; set; }

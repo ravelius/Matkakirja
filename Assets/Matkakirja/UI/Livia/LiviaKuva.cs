@@ -81,6 +81,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Puomin alin kohta EVA-kerroksen alareunasta (pt; siirrosta riippumaton, joten Pulu laskee paikkansa suoraan).</summary>
         public float VarrenAlinEvasta { get; internal set; } = float.NaN;
 
+        /// <summary>Kyynärpään (puomin nivelen) alareuna EVA-kerroksen alareunasta (pt): Pulu ikkunan takana vie sen lasin reunan taakse.</summary>
+        public float KyynarEvasta { get; internal set; } = float.NaN;
+
         /// <summary>Kypärän (visiirin) keskipiste EVA-kerroksen alareunasta (pt), robottikädessä; Pulu sijoittaa sillä kypärän korkeuden.</summary>
         public float KyparaEvasta { get; internal set; } = float.NaN;
 
@@ -524,6 +527,7 @@ namespace Matkakirja.Natiivi
                 }
                 kuva.VarrenAlin = Mathf.Max(Alin(NivelY), Alin(PaaY));
                 kuva.VarrenAlinEvasta = kuva.VarrenAlin - worldBound.yMax;
+                kuva.KyynarEvasta = Alin(NivelY) - worldBound.yMax;
                 {
                     float dx = 113.5f - 113, dy = 258.5f - 300;   // visiirin soikion keskipiste (Soikio), keinunta mukana
                     var kp = m.Kuvaa(new Vector2(113 + dx * ca - dy * sa, 300 + dx * sa + dy * ca + Nosto));

@@ -452,7 +452,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Lasin ympyrä kuvun koordinaateissa (x, y, säde, 1 = laskettu), Cupola 3:n rajauksesta.</summary>
         Vector4 lasiKuvussa;
         /// <summary>Lasin säde osuutena Codexin kuvan leveydestä (kehyksen alfa &gt; 0,5 ikkunan keskeltä 16 suuntaan, pienin; 3.10.).</summary>
-        const float LasinSadeOsuusIphone = 0.484f, LasinSadeOsuusIpad = 0.315f;
+        const float LasinSadeOsuusIphone = 0.495f, LasinSadeOsuusIpad = 0.324f;   // umpinainen kehys (alfa > 0,94), mediaani
 
         /// <summary>Lasin ympyrä ruudun pisteinä (x, y, säde); kuvun 90°:n kierto vaakana huomioitu. null = ei Cupola 3:n lasia.</summary>
         Vector3? LasiRuudulla(float W, float H)
