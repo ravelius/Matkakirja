@@ -50,6 +50,16 @@ test('kaikukuva oikein päin: tekstuuri ilman flipY:tä, koska varjostin lukee r
   assert.match(lue('../js/linssit/ajattelija-projektori.js'), /texture2D\(pKaiku, vec2\(u, 1\.0 - v\)\)/);
 });
 
+test('Marcuksen kierrokset 2–3 samalla rakenteella (marcus-tekstit.json kierrokset_2_3): 4.49 poskella, 2.11 sivulla', async () => {
+  const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
+  const kr = MARCUS.kierrokset;
+  assert.deepEqual(tarkistaAjattelija(MARCUS), []);
+  assert.deepEqual(kr.lista.map((k) => k.paalause), ['itselleen-4-49', 'itselleen-2-11']);
+  assert.deepEqual(MARCUS.paalauseet['itselleen-4-49'].sade, [-0.035, 0.360]);   // poskiparran yläpuolella
+  assert.deepEqual(kr.lista.map((k) => k.kaiku.kuva.split('/').pop()), ['kaiku-uhri.png', 'kaiku-kuolema.png']);
+  assert.equal(kr.loppu, 3330);
+  assert.deepEqual(kamerakayra(kr.kamera)(3330).paikka, MARCUS.otokset.rembrandt.paikka);
+});
 test('taustavirran rivit kulkevat lähes samaa nopeutta pinnalla: 25 mm/s ±15 % (omistaja 3.10.2026, Blender v11)', () => {
   assert.deepEqual(SOKRATES.taustavirta.nopeus, { mms: 25, vaihtelu: 0.15 });
   assert.match(MOOTTORI, /const nopeudet = tv\.rivit\.map\(\(_, k\) => 1 - vaihtelu \+ 2 \* vaihtelu \* k \/ Math\.max\(1, tv\.rivit\.length - 1\)\);/);
@@ -66,4 +76,23 @@ test('✕ piilossa kunnes napautetaan, häipyy taas astron AUTO-ajoituksella (om
   assert.match(MOOTTORI, /pohja\.el\.addEventListener\('pointerdown', \(\) => \{\s*pohja\.el\.classList\.remove\('ajattelija-sulku-piilossa'\);/);
   const css = lue('../css/pohjat/pinnat/ajattelija.css');
   assert.match(css, /\.ajattelija\.ajattelija-sulku-piilossa \.tk-kuvanakyma__sulku \{\s*opacity: 0;\s*pointer-events: none;\s*transition: opacity var\(--tk-kesto-sulku\) ease-in;/);
+});
+
+test('v11 (omistaja 3.10.2026): alkukuvat varjopuolelta, kaiku 1 lähempänä ja leveämpi, kytkinääni v2', async () => {
+  const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
+  const { AJATTELIJA_KYTKIN } = await import('../js/linssit/ajattelija.js');
+  for (const a of [SOKRATES, MARCUS]) {
+    assert.ok(a.intro.otokset.every(([, c]) => c[0] <= 0), `${a.tunnus}: introkamera ei ole valon vastapuolella`);
+    assert.deepEqual(a.intro.valo[0][1], [1.0, -0.35, 0.45]);
+    assert.ok(a.intro.tayte < 1);
+    assert.equal(a.kaiku.lev, 0.07);
+    assert.deepEqual(a.kaiku.kamera.matka, [0.15, 0.14]);
+  }
+  assert.deepEqual(SOKRATES.kierrokset.kamera.find(([r]) => r === 2700)[1], [0.205, -0.1767, 0.337]);   // sokrates-luvut-v11.json
+  assert.equal(AJATTELIJA_KYTKIN, 'ajattelijat/yhteiset/v2/kytkin-kaiku.mp3');
+  assert.match(MOOTTORI, /maailma\.intensity = TAYTE \* hiipuu \* \(r < T\.nimi\[0\] \? \(a\.intro\.tayte \?\? 1\) : 1\);/);
+});
+
+test('auringon suunta normalisoidaan avainten välissä (valo pysyy 1,3 m:n päässä; vahingossa pois #3884:ssä)', () => {
+  assert.match(MOOTTORI, /return e\.suunta\.clone\(\)\.lerp\(v\.suunta, pehmea\(valilla\(r, e\.r, v\.r\)\)\)\.normalize\(\);/);
 });

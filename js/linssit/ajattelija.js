@@ -16,8 +16,12 @@ import { piirraAtlas, lisaaProjektorit, asetaProjektori, lisaaKipsinPinta } from
 import { pohjatLataaTyyli, luoPohjaKuvanakyma, luoPohjaNostokortti } from '../pohjat/pohjat.js';
 
 const R2 = 'https://media.matkakirja.app/';
-/** Prologin kytkimen napsahdus, yhteinen kaikille ajattelijoille (ämpärissä 2.10.2026). */
-export const AJATTELIJA_KYTKIN = 'ajattelijat/yhteiset/v1/kytkin-kaiku.mp3';
+/**
+ * Prologin kytkimen napsahdus, yhteinen kaikille ajattelijoille. v2 (omistaja 3.10.2026 klo 00.1x: "naksahdus ääni alussa
+ * on todella outo. hae siihen oikea ääni"): aito katkaisijaäänite ja konserttisalin konvoluutiokaiku, CC0, 1,8 s
+ * (Sisältökirjuri; lähteet ämpärissä ajattelijat/yhteiset/v2/LAHTEET.txt).
+ */
+export const AJATTELIJA_KYTKIN = 'ajattelijat/yhteiset/v2/kytkin-kaiku.mp3';
 export const AJATTELIJA_KIRJASTO = `${R2}vendor/three-gltf-r185.min.js`;
 /** ✕ häipyy näin kauan viimeisen napautuksen jälkeen (sama kuin astronautin kameran AUTO_HILJAA_MS). */
 export const AJATTELIJA_SULKU_PIILOON_MS = 4000;
@@ -419,7 +423,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     for (const v of valoAvaimet) {
       if (r <= v.r) {
         if (v === e) return v.suunta.clone();
-        return e.suunta.clone().lerp(v.suunta, pehmea(valilla(r, e.r, v.r)));
+        return e.suunta.clone().lerp(v.suunta, pehmea(valilla(r, e.r, v.r))).normalize();
       }
       e = v;
     }
@@ -617,7 +621,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       if (r > ka && r < kl) hiipuu = Math.min(hiipuu, Math.max(0, 1 - Math.min(1, (r - ka) / 45, (kl - r) / 45)));
     }
     valo.intensity = AVAIN * hiipuu;
-    maailma.intensity = TAYTE * hiipuu;
+    // v11 (omistaja 3.10.): alkukuvissa varjopuoli lähes mustaksi, jotta kasvoille piirtyy vain valon ääriviiva.
+    maailma.intensity = TAYTE * hiipuu * (r < T.nimi[0] ? (a.intro.tayte ?? 1) : 1);
     const kaikuK = 1 - hiipuu;
     // Webin AgX nostaa himmeää täytettä enemmän kuin Blenderin "Medium High Contrast": 0,10 → 0,05 (v9-täytekoe).
     if (kaikuTayte) kaikuTayte.intensity = AVAIN * tayteMalli.osuus * KAIKU_TAYTE * kaikuK;
