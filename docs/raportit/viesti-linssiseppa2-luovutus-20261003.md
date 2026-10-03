@@ -28,6 +28,8 @@ Seurantanäkymää ei ole (omistaja poisti 2.10.).
 ## 3. Seuraavaksi
 - Platon datana, kun web saa sen (muunnin tyokalut/ajattelijat-natiiviin.mjs).
 - TF 132:n palaute (Pulun korkeus, ajattelijat).
+- Sokrateen lopullinen kertoja (Iv4 William) ämpärissä ajattelijat/sokrates/v3/kertoja.mp3 + ajat.json (Sisältökirjuri 3.10.;
+  ei v2:een). Natiiviin vasta, kun webin data viittaa siihen: aja muunnin webin mainista ja peilaa uusi raita ajoon.
 
 ## 4. Muut
 - Lokeissa vain uusin .app: proto-3d/lokit/linssiseppa2-astro-app-<sha>.
