@@ -34,6 +34,22 @@ Seurantanäkymää ei ole (omistaja poisti 2.10.).
   (Resources/LiviaEva/perus-kasvot.png), Pulu valaistu (perus 75 %). Web (cupola-aani.js) → Pelikoodari (Päätoimittaja hoitaa).
   Kuvat lokit/linssiseppa2-pulu-oikea-c|d-20261003, ääninäyte lokit/linssiseppa2-cupola-humina-nayte-20s.mp3.
 
+## 2c. Ilta 3.10. (klo 20.3x)
+
+- Juna 133: `linssiseppa2/sokrates-v14` 649651b2 (käännös 732737e6), jonka Päätoimittaja hyväksyi; merge-pyyntö on Natiivisepällä. Sokrates v14
+  natiivina (webin 088b64d0c mukaan). Kortin aikana tehdään esivalmistelu, joten napautuksesta tulee musta 26 ms:ssa ja kytkin 1,03 s:ssa.
+  Leikkausruudut toimivat askelina, ja varjolevy pysyy voimassa leikkaukseen asti (AjattelijaAikajana.RuutuValilla). valahdys.py:n
+  mukaan välähdyksiä on 0. Video ja ruudut ovat kansiossa lokit/linssiseppa2-sokrates-v14-g-20261003. Marcus (Linssiseppä 1) rebasaa sen päälle.
+- Juna 134: `linssiseppa2/minipallo-selain` c2a10071 (7549894a), jonka Päätoimittaja hyväksyi; merge-pyyntö on Natiivisepällä. Siinä
+  pyöritettävä sijaintipallo toimii kohdeselaimena, ja mukana ovat haptiikka, tic-ääni ja lukkoääni.
+- Juna 134: `linssiseppa2/cupola-veto` c5e946eb on käännetty (3e863a31). Kuvaus tehdään skriptillä
+  lokit/linssiseppa2-skriptit-20261001/cupola-veto.sh (APP, OUT), kun Julkaisija antaa simuvuoron. Sen jälkeen kuvat ja videot
+  menevät Päätoimittajalle, ja kuittauksen jälkeen tehdään merge-pyyntö. Riski: laatat 21–25°:n kulmassa.
+- Juna 133:n jälkeen: ajattelijoiden muunnin vaihdetaan Pelikoodarin tools/ajattelija-natiivi.mjs:ään (#3905). Omistajan
+  linja (3.10. 19.00) on "ei webiä lainkaan".
+- #3842 (avaruuskävely webiin) on suljettu ja haara säilytetty (web-jono #3908); worktree on poistettu.
+- Lokien .app-kopioita ei poisteta itse (yösiivous hoitaa ne).
+
 ## 3. Seuraavaksi
 - Platon datana, kun web saa sen (muunnin tyokalut/ajattelijat-natiiviin.mjs).
 - TF 132:n palaute (Pulun korkeus, ajattelijat).
@@ -41,6 +57,5 @@ Seurantanäkymää ei ole (omistaja poisti 2.10.).
   ei v2:een). Natiiviin vasta, kun webin data viittaa siihen: aja muunnin webin mainista ja peilaa uusi raita ajoon.
 
 ## 4. Muut
-- Lokeissa vain uusin .app: proto-3d/lokit/linssiseppa2-astro-app-<sha>.
 - Proto-worktreet: wt/proto-linssiseppa2-astro (haara pulu-mittaus), wt/proto-linssiseppa2-pulu-vaaka, wt/proto-linssiseppa2-ajattelijat
   (haara kaiku-suunta).
