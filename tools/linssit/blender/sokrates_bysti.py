@@ -12,6 +12,11 @@ from mathutils import Vector
 A = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
 # v11 (omistaja 3.10. 00.0x, kaikki ajattelijat): v10 + alkukuvat varjon puolelta (ääriviiva valosta), taustavirran
 # rivit lähes samalla nopeudella (25 mm/s ±15 %) ja kaikukuvien kamera lähempänä. --v11 = --v10 + nämä.
+# v12 (omistaja 3.10. 04.5x, vain Sokrates): musiikki alusta leikkaamattomana, intron leikkaukset kuuluviin iskuihin,
+# kaikki myöhempi ajoitus siirtyy (V12_SIIRTO). --v12 = --v11 + nämä.
+V12 = '--v12' in A
+if V12 and '--v11' not in A:
+    i_ = A.index('--v12'); A[i_] = '--v11'; A.append('--v12')
 V11 = '--v11' in A
 if V11 and '--v10' not in A:
     i_ = A.index('--v11'); A[i_] = '--v10'; A.append('--v11')
@@ -909,6 +914,36 @@ V9 = dict(   # v9 (Päätoimittaja 2.10.): kierrokset 2 ja 3 kierroksen 1 (v8, r
 V9_RENDER = list(range(966, 3331))   # kierros 1:n kaiku (966–1450) uudelleen kaikutäytteen vuoksi
 V7_KAIKU = (965, 1440)        # v8: kaikukuva b-luennan (960–1425) aikana; aurinko hiipuu ja palaa sen reunoilla
 V7_RENDER = list(range(1, 283)) + list(range(V7_LAHESTY[0], V7_KAARI_LOPPU + 1)) + [V7_PITO]
+V7_PEHMEAT = set()   # avainruudut, joista kamera liukuu seuraavaan (muut intron avaimet ovat leikkauksia)
+if V12:
+    # Zarathustra (Sascha Ende) alkaa ruudusta 1 = 0,0 s heti prologin jälkeen ja soi leikkaamattomana (~84 s, hiljenee
+    # 86 s:iin). Iskut levytyksestä (Päätoimittaja 3.10., tarkistettu RMS-nousuista): jyrinä 0–13, trumpetit 13–17,
+    # suuri sointu 17,35, patarummut 20,85 / 21,6 / 22,4 … 24,1. Leikkaukset vain kuuluviin iskuihin (v11:n kolme
+    # ensimmäistä osuivat pehmeään trumpettinousuun → omistajan "outo rytmi").
+    _f = lambda t: round(t * 30) + 1
+    V12_REM = _f(24.1); V12_SIIRTO = V12_REM - 282          # 724 − 282 = 442 ruutua = 14,73 s
+    V7_OTOKSET = (
+        (1, (-0.62, -0.10, 0.38), (0.0, -0.10, 0.38), 50),         # jyrinä 0–17,3 s: yksi hidas pimeä ajo profiilista…
+        (_f(17.35) - 1, (-0.50, -0.45, 0.42), (0.0, -0.10, 0.39), 50),  # …kolme neljäsosaa kohti, varjon puolelta
+        (_f(17.35), (-0.30, -0.27, 0.47), (0.0, -0.11, 0.43), 50),  # suuri sointu: otsan rypyt
+        (_f(20.85), (-0.30, -0.34, 0.42), (0.03, -0.10, 0.38), 50), # patarumpu: silmä ja kulmakaari
+        (_f(21.6), (-0.30, -0.36, 0.22), (0.02, -0.11, 0.30), 50),  # patarumpu: parta ja suu
+        (_f(22.4), (-0.26, -0.30, 0.72), (0.0, -0.09, 0.40), 35),   # patarumpu: ylhäältä otsan yli
+        (V12_REM, (-0.36, -1.24, 0.24), (-0.075, -0.06, 0.39), 35), # viimeinen patarumpu 24,1 s: Rembrandt + nimi
+    )
+    V7_PEHMEAT = {1}
+    # omistaja 3.10. 05.0x: "valo saisi olla enemmän sivusta jotta patsaan muoto näkyisi" → avainvalo sivulta koko
+    # kohtauksessa (kasvojen toinen puoli valossa, toinen varjossa; v11:ssä pelkkä ääriviiva). Kierrokset käyttävät
+    # Rembrandt-avainta (viimeinen V7_VALO-avain). Tausta pimeä, ei täyttöä.
+    _v = lambda k, o: tuple(float(x) for x in A[A.index(k) + 1].split(',')) if k in A else o
+    V12_AURINKO, V12_REM_AURINKO = _v('--aurinko', (1.0, -0.45, 0.5)), _v('--rem-aurinko', (0.95, -0.30, 0.55))
+    V7_VALO = ((1, V12_AURINKO), (V12_REM - 1, V12_AURINKO), (V12_REM, V12_REM_AURINKO))
+    S_ = V12_SIIRTO
+    V7_LAHESTY = (V7_LAHESTY[0] + S_, V7_LAHESTY[1] + S_); V7_PROJ = (V7_PROJ[0] + S_, V7_PROJ[1] + S_)
+    V7_KAARI_LOPPU += S_; V7_PITO += S_; V7_KAIKU = (V7_KAIKU[0] + S_, V7_KAIKU[1] + S_)
+    V9 = {k: (a + S_, b + S_) for k, (a, b) in V9.items()}
+    V9_RENDER = list(range(V7_KAARI_LOPPU + 1, V9['loppu'][1] + 1))
+    V7_RENDER = list(range(1, V12_REM + 1)) + list(range(V7_LAHESTY[0], V7_KAARI_LOPPU + 1)) + [V7_PITO]
 
 
 def _kipsin_pinta(o):
@@ -1138,7 +1173,7 @@ if '--v7' in A:
             ob.keyframe_insert(ominaisuus, frame=r)
         tavat[r] = tapa
     for r, c_, q_, mm in V7_OTOKSET:
-        avain(r, c_, q_, mm, 'CONSTANT')
+        avain(r, c_, q_, mm, 'BEZIER' if r in V7_PEHMEAT else 'CONSTANT')
     rem = V7_OTOKSET[-1]
     avain(V7_LAHESTY[0], rem[1], rem[2], rem[3], 'BEZIER')
     for osuus in (0.0, 1.0):
@@ -1269,7 +1304,9 @@ if '--v7' in A:
         ulos_j = A[A.index('--luvut') + 1]
         aurinko = []   # v11: alkukuvien valo (varjon puoli) — webin aurinko samoista avaimista
         for r in sorted(set(kayrien_ruudut(ao)) | set(kayrien_ruudut(aur))): sc.frame_set(r); aurinko.append({'ruutu': r, 'sijainti': pyor(ao.matrix_world.translation), 'energia': round(aur.energy, 2)})
-        json.dump({'kohde': KOHDE, 'versio': 'v11' if V11 else 'v10', 'ruudut_30fps': V9 if '--v9' in A else None, 'kamera': kamera,
+        json.dump({'kohde': KOHDE, 'versio': 'v12' if V12 else 'v11' if V11 else 'v10',
+                   'v12': {'musiikki_alkaa_ruutu': 1, 'siirto_ruutua': V12_SIIRTO, 'rembrandt': V12_REM, 'kysymys': V7_LAHESTY[0] - 89,
+                           'lahesty': V7_LAHESTY, 'teksti_38a': V7_PROJ, 'kaiku1': V7_KAIKU} if V12 else None, 'ruudut_30fps': V9 if '--v9' in A else None, 'kamera': kamera,
                    'aurinko': aurinko, 'aurinko_kohde': pyor(tahtays), 'valot': valot,
                    'taustavirta': {'mm_s': V11_VIRTA_MS * 1000, 'vaihtelu': 0.15, 'rivit': VIRTA_LOKI} if V11 else None},
                   open(ulos_j, 'w'), ensure_ascii=False, indent=1)
