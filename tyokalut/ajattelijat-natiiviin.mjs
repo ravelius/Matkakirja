@@ -31,15 +31,43 @@ for (const f of tiedostot) {
 const kohteet = ajattelijat.filter((a) => !valitut.length || valitut.includes(a.tunnus));
 if (!kohteet.length) { console.error('ei ajattelijoita', valitut); process.exit(1); }
 
-// Atlaksen rivit kuten webin avaaAjattelija (päälause 192 px sumealla parilla + taustavirran rivit 96 px toistona +
-// kierrosten 2– päälauseet samoin kuin kierroksen 1, web #3884 lauseRivi). Natiivi: kierroksen j rivi = 1 + rivit + j.
+// Atlaksen rivit kuten webin avaaAjattelija (päälause 192 px sumealla parilla + taustavirran rivit toistona + kierrosten
+// 2– päälauseet samoin kuin kierroksen 1, web #3884 lauseRivi). Natiivi: kierroksen j rivi = 1 + rivit + j.
+// AIKAJANA (v13–v14, web 088b64d0c): kierrokset eivät ole käytössä; ensimmäinen rivi on käyttämätön 16 px:n paikkamerkki,
+// taustavirran rivit pehmeinä (tv.sumeus em-osuutena × projektorin pehmeys, kirjaimet 1 / riviTila -kokoisina tv.riviKorkeus
+// px:n nauhassa) ja lainaukset (aikajana.tykit) rivin 1 + rivit + j kohdalla: lauseKortti-tilassa monirivisenä korttina
+// (rivitys tasapainoisesti lauseKortti.merkkeja merkkiin, korkeus 128 px yhdelle tekstiriville, ei sumeaa paria).
+/** Webin korttiRivit (ajattelija.js): sanat tasapainoisille riveille, rivejä ceil(pituus / merkkeja). */
+function korttiRivit(teksti, merkkeja) {
+  const sanat = teksti.split(/\s+/);
+  const n = Math.max(1, Math.ceil(teksti.length / merkkeja));
+  const tavoite = teksti.length / n;
+  const rivit = [''];
+  for (const sana of sanat) {
+    const nyt = rivit.at(-1);
+    if (nyt && nyt.length + 1 + sana.length > tavoite + 4 && rivit.length < n) rivit.push(sana);
+    else rivit[rivit.length - 1] = nyt ? `${nyt} ${sana}` : sana;
+  }
+  return rivit;
+}
 function atlasRivit(a) {
   const fontti = (n) => a.fontit[n] ?? a.fontit.iowan;
+  const AJ = a.aikajana ?? null;
+  const KR = AJ ? null : (a.kierrokset ?? null);
+  const tv = a.taustavirta;
   const lauseRivi = (l) => ({ teksti: l.fi, fontti: fontti('iowan').perhe, paino: fontti('iowan').paino, korkeus: 192, sumea: true, emOsuus: 1.15 });
+  const KORTTI = AJ?.lauseKortti ?? null;
+  const lauseKortti = (l) => ({ ...lauseRivi(l), korkeus: 128, sumea: false, kortti: korttiRivit(l.fi, KORTTI.merkkeja), emOsuus: 1.0 });
+  const TILA = tv.riviTila ?? 1;
+  const riviProjektori = tv.projektorit.flatMap((pj) => Array(pj.riveja).fill(pj));
   return [
-    lauseRivi(a.paalauseet[a.kierros.paalause]),
-    ...a.taustavirta.rivit.map(([, f, teksti]) => ({ teksti, fontti: fontti(f).perhe, paino: fontti(f).paino, korkeus: 96, toisto: true })),
-    ...(a.kierrokset?.lista ?? []).map((k) => lauseRivi(a.paalauseet[k.paalause])),
+    AJ ? { ...lauseRivi(a.paalauseet[a.kierros.paalause]), korkeus: 16, sumea: false } : lauseRivi(a.paalauseet[a.kierros.paalause]),
+    ...tv.rivit.map(([, f, teksti], ri) => ({
+      teksti, fontti: fontti(f).perhe, paino: fontti(f).paino, korkeus: tv.riviKorkeus ?? 96, toisto: true,
+      emOsuus: 1 / TILA, sumeus: tv.sumeus && tv.sumeus * (riviProjektori[ri]?.pehmeys ?? 1),
+    })),
+    ...(KR?.lista ?? []).map((k) => lauseRivi(a.paalauseet[k.paalause])),
+    ...(AJ?.tykit ?? []).map((t) => (KORTTI ? lauseKortti : lauseRivi)(a.paalauseet[t.paalause])),
   ];
 }
 
@@ -108,7 +136,7 @@ for (const a of kohteet) {
     for (let i = 0; i < r.length; i += 1) r[i] = d[i * 4];
     let b = '';
     for (let i = 0; i < r.length; i += 0x8000) b += String.fromCharCode(...r.subarray(i, i + 0x8000));
-    return { leveys: kangas.width, korkeus: kangas.height, paikat: paikat.map(({ y, korkeus, lev, uMax, sumea, toistoja }) => ({ y, korkeus, lev, uMax, sumea: !!sumea, toistoja: toistoja ?? 1 })), r: btoa(b) };
+    return { leveys: kangas.width, korkeus: kangas.height, paikat: paikat.map(({ y, korkeus, lev, uMax, sumea, toistoja, kortti }) => ({ y, korkeus, lev, uMax, sumea: !!sumea, toistoja: toistoja ?? 1, ...(kortti ? { kortti } : {}) })), r: btoa(b) };
   }, [atlasRivit(a), fontit]);
   const png = harmaaPng(tulos.leveys, tulos.korkeus, Buffer.from(tulos.r, 'base64'));
   const atlasNimi = `${a.tunnus}-atlas.bytes`;

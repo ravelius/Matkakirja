@@ -11,8 +11,12 @@
 // paikallisesta kansiosta (simulaattori: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-ajattelijat-peili), kunnes
 // vienti on ämpärissä.
 //
+// AIKAJANA (v13–v14, web 088b64d0c, data a.Aikajana): ääni, syke, kaikukuvat ja savumaski aikajanan poluista; kierrokset
+// jäävät käyttämättä. Lähderiviä ei näytetä (web lahde.style.opacity 0); lappu aikajanan lopussa.
+//
 // Testikomennot (linssi-komento.txt): ajattelija <tunnus> | ruutu <r|pois> | prologi <p> | lappu | tila | peili <kansio|pois>
-// | koe normaali|kipsi|spekulaari|reuna <arvo> (pariteetin A/B) | mittari [nollaa] (ruutuvälit kuten webin mittari()). Peili "dokumentit" = laitteen Documents/ajattelijat-peili.
+// | koe normaali|kipsi|spekulaari|reuna <arvo> (pariteetin A/B) | mittari [nollaa] (ruutuvälit kuten webin mittari())
+// | seepia 0|1 (web ?kaikuvari=seepia) | savu 0|1 (web ?savu=0). Peili "dokumentit" = laitteen Documents/ajattelijat-peili.
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -193,12 +197,15 @@ namespace Matkakirja.Natiivi
                 kaikuja = true;
                 o.StartCoroutine(Hae(kuva, b => { if (s == sukupolvi) nayttamo.AsetaKaiku(k, b); }));
             }
-            var kr = a.Kierrokset;
-            string sykePolku = kr != null ? kr.Syke : a.Syke;
-            if (kaikuja && !string.IsNullOrEmpty(sykePolku))
-                o.StartCoroutine(Hae(sykePolku, b => { if (s == sukupolvi) nayttamo.AsetaSyke(System.Text.Encoding.UTF8.GetString(b)); }));
-            o.StartCoroutine(HaeAani(kr != null ? kr.Puhe : a.Puhe, puhe, s));
-            o.StartCoroutine(HaeAani(kr != null ? kr.Musiikki : a.Musiikki, musiikki, s));
+            var aj = a.Aikajana;
+            var kr = aj != null ? null : a.Kierrokset;   // aikajana-tilassa kierrokset eivät ole käytössä (web KR = AJ ? null : …)
+            string sykePolku = aj != null ? aj.Syke : kr != null ? kr.Syke : a.Syke;
+            if ((aj != null || kaikuja) && !string.IsNullOrEmpty(sykePolku))
+                o.StartCoroutine(Hae(sykePolku, b => { if (s == sukupolvi && b != null) nayttamo.AsetaSyke(System.Text.Encoding.UTF8.GetString(b)); }));
+            // Savumaski (v13c, aikajana; oletuksena päällä).
+            if (nayttamo.SavuKuva != null) o.StartCoroutine(Hae(nayttamo.SavuKuva, b => { if (s == sukupolvi) nayttamo.AsetaSavu(b); }));
+            o.StartCoroutine(HaeAani(aj != null ? aj.Puhe : kr != null ? kr.Puhe : a.Puhe, puhe, s));
+            o.StartCoroutine(HaeAani(aj != null ? aj.Musiikki : kr != null ? kr.Musiikki : a.Musiikki, musiikki, s));
             o.StartCoroutine(HaeAani(Kytkin, kytkin, s));
             Latautuu = false;
             alku = Time.realtimeSinceStartupAsDouble;
@@ -280,7 +287,8 @@ namespace Matkakirja.Natiivi
             {
                 Nimi = (float)AjattelijaAikajana.Nakyvyys(r, a.Ajat.Nimi),
                 Kysymys = (float)AjattelijaAikajana.Nakyvyys(r, a.Ajat.Kysymys),
-                Lahde = (float)AjattelijaAikajana.Nakyvyys(r, nayttamo.LahdeAjat, 10),
+                // Aikajana-tilassa lähderiviä ei näytetä (web asetaAikajana: lahde.style.opacity = 0).
+                Lahde = a.Aikajana != null ? 0f : (float)AjattelijaAikajana.Nakyvyys(r, nayttamo.LahdeAjat, 10),
                 El = nayttamo.Lause.El, Viite = nayttamo.Lause.Viite,
             };
             if (loppu && !Lopussa && double.IsNaN(ruutuOhitus)) { Lopussa = true; Muuttui?.Invoke(); }
@@ -353,6 +361,14 @@ namespace Matkakirja.Natiivi
                 else if (osat[2] == "spekulaari") AjattelijaNayttamo.KoeSpekulaari = x;
                 else if (osat[2] == "reuna") AjattelijaNayttamo.KoeReuna = x;
                 o.Kirjaa($"ajattelija: koe normaali {AjattelijaNayttamo.KoeNormaali} kipsi {AjattelijaNayttamo.KoeKipsi} spekulaari {AjattelijaNayttamo.KoeSpekulaari} reuna {AjattelijaNayttamo.KoeReuna}");
+                return;
+            }
+            if ((mita == "seepia" || mita == "savu") && arvo != null)
+            {
+                // Seepia vaikuttaa heti (värit joka ruutu); kaikusarjan seepiakuvat ja savu seuraavasta avauksesta.
+                if (mita == "seepia") AjattelijaNayttamo.Seepia = arvo == "1";
+                else AjattelijaNayttamo.SavuPois = arvo == "0";
+                o.Kirjaa($"ajattelija: seepia {(AjattelijaNayttamo.Seepia ? 1 : 0)} savu {(AjattelijaNayttamo.SavuPois ? 0 : 1)}");
                 return;
             }
             if (!AukiNyt) { o.Kirjaa("ajattelija: linssi ei ole auki (linssi ajattelijat)"); return; }

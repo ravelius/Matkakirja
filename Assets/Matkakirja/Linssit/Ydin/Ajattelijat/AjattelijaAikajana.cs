@@ -31,6 +31,25 @@ namespace Matkakirja.Linssit.Ajattelijat
     {
         public int I, Projektori, Rivi;
         public double Korkeus, Kirkkaus, VM, Kulma, Nopeus, Mms;
+        /// <summary>v14 porrastus: kasvojen puoli, projektorin kuva-ala (m), siirto pinnalla m/ruutu ja lähtöruutu (Porrastus).</summary>
+        public VirtaPuoli Puoli;
+        public double Ala, MPerRuutu, Lahto;
+    }
+
+    /// <summary>Taustavirran rivin puoli kasvoilla (web v14 puoli): alhaalla parta ja suu, ohimot, ylhäällä otsa ja päälaki.</summary>
+    public enum VirtaPuoli { Ala, Vasen, Oikea, Yla }
+
+    /// <summary>Rakovalon jalanjälki (web asetaRako): keila, kuvion pehmeys ja voimakerroin ilman W:tä.</summary>
+    public struct RakoJalanjalki
+    {
+        /// <summary>Jalanjälki etäisyydellä RD (m): k + 2·RD·tan(spread/2) kumpaankin suuntaan.</summary>
+        public double Kx, Ky;
+        /// <summary>Kuvion puolikas (m, RD:n tasolla) = max(kx, ky) / 2 × 1,1 ja keilan puolikulma atan(puoli / RD).</summary>
+        public double Puoli, Kulma;
+        /// <summary>Kuvion sumennus metreinä (kankaan blur(px) on Gaussin keskihajonta): max(1 px, levea · px / 2) / px.</summary>
+        public double Sumeus;
+        /// <summary>Voima = energia × W × Kerroin; Kerroin = RD² / (kx · ky) × 30 (kalibroitu Blender-stilleihin).</summary>
+        public double Kerroin;
     }
 
     public static class AjattelijaAikajana
@@ -51,6 +70,8 @@ namespace Matkakirja.Linssit.Ajattelijat
 
         /// <summary>Pystyvinjetti laajoissa otoksissa: nimestä lähestymisen alkuun + 20 ruutua (CSS-siirtymä 1,2 s).</summary>
         public static bool Vinjetti(AjattelijaAjat t, double r) => r >= t.Nimi[0] && r < t.Lahesty[0] + 20;
+        /// <summary>Aikajana-tilassa vinjetti nimestä kysymyksen loppuun + 20 ruutua (web asetaAikajana).</summary>
+        public static bool VinjettiAikajana(AjattelijaAjat t, double r) => r >= t.Nimi[0] && r < t.Kysymys[1] + 20;
 
         /// <summary>Kaikujen ikkunat datasta: kierroksen 1 kaiku (a.Ajat.Kaiku) ja kierrosten 2– kaiut (ruudut).</summary>
         public static List<double[]> KaikuIkkunat(AjattelijaData a)
@@ -106,8 +127,8 @@ namespace Matkakirja.Linssit.Ajattelijat
         public static double KaikuSiirto(double liuku, double[] ruudut, double r) =>
             -liuku + 2 * liuku * Rajaa(Valilla(r, ruudut[0], ruudut[1]));
 
-        /// <summary>Kohtauksen loppuruutu (lappu): kierrosten loppu tai kierroksen 1 pito.</summary>
-        public static double Loppu(AjattelijaData a) => a.Kierrokset?.Loppu ?? a.Ajat.Pito;
+        /// <summary>Kohtauksen loppuruutu (lappu): aikajanan loppu, kierrosten loppu tai kierroksen 1 pito (web LOPPU).</summary>
+        public static double Loppu(AjattelijaData a) => a.Aikajana?.Loppu ?? a.Kierrokset?.Loppu ?? a.Ajat.Pito;
 
         /// <summary>
         /// Kierros ruudussa r (web kierrosRuudussa): 0 = kierros 1, j = a.Kierrokset.Lista[j − 1], kun r ≥ sen virran alku.
@@ -253,22 +274,241 @@ namespace Matkakirja.Linssit.Ajattelijat
                 {
                     string kieli = tv.Rivit[ri].Kieli;
                     var koot = kieli == "fi" ? tv.Rivikork.OrderBy(x => x).Take(2).ToArray() : tv.Rivikork;
-                    double kork = koot[(int)Math.Floor(satunnainen() * koot.Length)];
+                    // v14: riviKoko ohentaa pehmeät rivit (web tv.riviKoko; arvonta ennallaan).
+                    double kork = koot[(int)Math.Floor(satunnainen() * koot.Length)] * tv.RiviKoko;
                     var kk = tv.Kirkkaus.TryGetValue(kieli, out var v) ? v : tv.Kirkkaus["el"];
                     double kirkkaus = kk[0] + (kk[1] - kk[0]) * satunnainen();
                     double vM = (-0.4 + 0.8 * (k + 0.5) / pj.Riveja) * pj.Ala + (satunnainen() * 2 - 1) * 0.01;
                     double kulma = (satunnainen() * 2 - 1) * tv.Kulma * Math.PI / 180;
                     var paikka = a.Atlas.Paikat[1 + ri];
-                    double riviLev = kork * paikka.Lev / paikka.Korkeus;   // laatta pinnalla (m), u:n yksikkö
+                    // v14: nauha heijastetaan riviTila-kertaisena (kirjaimet atlaksessa 1 / riviTila -kokoisina).
+                    double riviLev = kork * tv.RiviTila * paikka.Lev / paikka.Korkeus;   // laatta pinnalla (m), u:n yksikkö
                     double nopeus = tv.Mms / 1000 * nopeudet[ri] / RuutuaSekunnissa / riviLev;
+                    // v14: kasvojen puoli porrastettua sisääntuloa varten (web: suunta x ±0,5 → ohimot, muuten z > 0,5 tai vM > 0 → ylä).
+                    var puoli = pj.Suunta[0] < -0.5 ? VirtaPuoli.Vasen : pj.Suunta[0] > 0.5 ? VirtaPuoli.Oikea
+                        : pj.Suunta[2] > 0.5 || vM > 0 ? VirtaPuoli.Yla : VirtaPuoli.Ala;
                     tulos.Add(new VirtaRivi
                     {
                         I = 1 + ri, Projektori = p, Rivi = ri, Korkeus = kork, Kirkkaus = kirkkaus, VM = vM, Kulma = kulma,
                         Nopeus = nopeus * (ri % 2 == 1 ? 1 : -1), Mms = tv.Mms * nopeudet[ri],
+                        Puoli = puoli, Ala = pj.Ala, MPerRuutu = tv.Mms / 1000 * nopeudet[ri] / RuutuaSekunnissa,
                     });
                 }
             }
             return tulos;
+        }
+
+        // ── AIKAJANA (v13–v14, web asetaAikajana; 088b64d0c) ─────────────────────────────────────────
+
+        /// <summary>Webin avainArvo: lineaarinen arvo avaimista [[ruutu, arvo], …]; päiden ulkopuolella ensimmäinen tai viimeinen.</summary>
+        public static double AvainArvo(IReadOnlyList<double[]> avaimet, double r)
+        {
+            if (r <= avaimet[0][0]) return avaimet[0][1];
+            for (int i = 1; i < avaimet.Count; i++)
+            {
+                double r1 = avaimet[i][0];
+                if (r <= r1)
+                {
+                    double r0 = avaimet[i - 1][0], a = avaimet[i - 1][1], b = avaimet[i][1];
+                    double t = r1 > r0 ? (r - r0) / (r1 - r0) : 1;
+                    return a + (b - a) * t;
+                }
+            }
+            return avaimet[avaimet.Count - 1][1];
+        }
+
+        /// <summary>avainArvo vektoriavaimille [[ruutu, [x, y, z]], …] (pyyhkäisyn kohteet).</summary>
+        public static double[] AvainArvo(IReadOnlyList<(double R, double[] V)> avaimet, double r)
+        {
+            if (r <= avaimet[0].R) return avaimet[0].V;
+            for (int i = 1; i < avaimet.Count; i++)
+            {
+                if (r <= avaimet[i].R)
+                {
+                    var (r0, a) = avaimet[i - 1]; var (r1, b) = avaimet[i];
+                    double t = r1 > r0 ? (r - r0) / (r1 - r0) : 1;
+                    return a.Select((x, j) => x + (b[j] - x) * t).ToArray();
+                }
+            }
+            return avaimet[avaimet.Count - 1].V;
+        }
+
+        /// <summary>Webin askelAvain: viimeinen avain, jonka ruutu ≤ r (muuten ensimmäinen); arvot vaihtuvat leikkausruuduissa.</summary>
+        public static int AskelIndeksi(IReadOnlyList<double> ruudut, double r)
+        {
+            int k = 0;
+            for (int i = 0; i < ruudut.Count; i++) if (ruudut[i] <= r) k = i;
+            return k;
+        }
+        public static double[] AskelAvain(IReadOnlyList<double[]> avaimet, double r) => avaimet[AskelIndeksi(avaimet.Select(x => x[0]).ToList(), r)];
+        public static RakoAvain AskelAvain(IReadOnlyList<RakoAvain> avaimet, double r) => avaimet[AskelIndeksi(avaimet.Select(x => x.R).ToList(), r)];
+
+        /// <summary>
+        /// Webin aikajanaKamera: CONSTANT-avain pitää arvonsa seuraavaan avaimeen (leikkaus), BEZIER-avaimista seuraavaan
+        /// ajetaan; peräkkäiset ajot ovat yksi AUTO_CLAMPED-käyrä (Kamerakayra), joka päättyy pitoon tai leikkaukseen.
+        /// </summary>
+        public static Func<double, AjattelijaOtos> AikajanaKamera(IReadOnlyList<AikajanaKameraAvain> avaimet)
+        {
+            var otos = avaimet.Select(k => new AjattelijaOtos { R = k.R, Paikka = k.Paikka, Katse = k.Katse, Mm = k.Mm }).ToList();
+            var ajot = new List<(double alku, double loppu, Func<double, AjattelijaOtos> kayra)>();
+            int i = 0;
+            while (i < avaimet.Count - 1)
+            {
+                if (!avaimet[i].Ajo) { i++; continue; }
+                int e = i;
+                while (e < avaimet.Count - 1 && avaimet[e].Ajo) e++;
+                ajot.Add((avaimet[i].R, avaimet[e].R, Kamerakayra(otos.GetRange(i, e - i + 1))));
+                i = e;
+            }
+            return r =>
+            {
+                foreach (var (alku, loppu, kayra) in ajot) if (r >= alku && r < loppu) return kayra(r);
+                var k = otos[0];
+                foreach (var x in otos) if (r >= x.R) k = x;
+                return new AjattelijaOtos { R = r, Paikka = k.Paikka, Katse = k.Katse, Mm = k.Mm };
+            };
+        }
+
+        /// <summary>
+        /// Webin aikajanaAurinko: paikka avaimista suunnan ja etäisyyden mukaan (kierto ei oikaise ympyrän läpi), energia ja
+        /// väri lineaarisesti. Palauttaa ruutu → (paikka, energia, väri tai null) Blender-koordinaateissa.
+        /// </summary>
+        public static Func<double, (double[] paikka, double energia, double[] vari)> AikajanaAurinko(double[] kohde, IReadOnlyList<AikajanaAurinkoAvain> avaimet)
+        {
+            var suhteessa = avaimet.Select(k =>
+            {
+                var d = new[] { k.Paikka[0] - kohde[0], k.Paikka[1] - kohde[1], k.Paikka[2] - kohde[2] };
+                double pituus = Math.Sqrt(d[0] * d[0] + d[1] * d[1] + d[2] * d[2]);
+                return (r: k.R, suunta: d.Select(x => x / pituus).ToArray(), pituus, e: k.Energia, vari: k.Vari);
+            }).ToList();
+            return r =>
+            {
+                int i = suhteessa.FindIndex(x => r <= x.r);
+                if (i <= 0) i = i < 0 ? suhteessa.Count - 1 : 0;
+                var b = suhteessa[i]; var a = suhteessa[Math.Max(0, i - 1)];
+                double t = b.r > a.r ? Rajaa((r - a.r) / (b.r - a.r)) : 1;
+                var s = a.suunta.Select((x, j) => x + (b.suunta[j] - x) * t).ToArray();
+                double n = Math.Sqrt(s[0] * s[0] + s[1] * s[1] + s[2] * s[2]);
+                if (n == 0) n = 1;
+                double pituus = a.pituus + (b.pituus - a.pituus) * t;
+                var vari = a.vari != null && b.vari != null ? a.vari.Select((x, j) => x + (b.vari[j] - x) * t).ToArray() : (b.vari ?? a.vari);
+                return (s.Select((x, j) => kohde[j] + x / n * pituus).ToArray(), a.e + (b.e - a.e) * t, vari);
+            };
+        }
+
+        /// <summary>
+        /// Webin korttiRivit (v14 päälainaus korttina): sanat tasapainoisille riveille; rivejä ceil(pituus / merkkeja), rivi
+        /// vaihtuu, kun tavoitepituus + 4 ylittyisi. Natiivissa kortti on valmiina atlaksessa (tyokalut/ajattelijat-natiiviin.mjs).
+        /// </summary>
+        public static List<string> KorttiRivit(string teksti, int merkkeja)
+        {
+            var sanat = System.Text.RegularExpressions.Regex.Split(teksti, @"\s+");
+            int n = Math.Max(1, (int)Math.Ceiling(teksti.Length / (double)merkkeja));
+            double tavoite = teksti.Length / (double)n;
+            var rivit = new List<string> { "" };
+            foreach (var sana in sanat)
+            {
+                string nyt = rivit[rivit.Count - 1];
+                if (nyt.Length > 0 && nyt.Length + 1 + sana.Length > tavoite + 4 && rivit.Count < n) rivit.Add(sana);
+                else rivit[rivit.Count - 1] = nyt.Length > 0 ? nyt + " " + sana : sana;
+            }
+            return rivit;
+        }
+
+        /// <summary>Rakovalon kuvion etäisyys (m) ja kerroin (web RD 0,9, RAKO_KERROIN 30).</summary>
+        public const double RakoEtaisyys = 0.9, RakoKerroin = 30;
+
+        /// <summary>
+        /// Webin asetaRako: suorakaide k × ky levenee spreadin verran (RD · tan(spread/2) joka reunalla), teho jakautuu
+        /// jalanjäljelle (E = P / A'); keila kattaa jalanjäljen (kuvio ±puoli, 512 px:n kangas), kuvion pehmeys kankaan blur.
+        /// </summary>
+        public static RakoJalanjalki Rako(double k, double ky, double spread)
+        {
+            double levea = RakoEtaisyys * Math.Tan(spread / 2 * Math.PI / 180);
+            double kx = k + 2 * levea, kyy = ky + 2 * levea;
+            double puoli = Math.Max(kx, kyy) / 2 * 1.1;
+            double px = 256 / puoli;
+            return new RakoJalanjalki
+            {
+                Kx = kx, Ky = kyy, Puoli = puoli, Kulma = Math.Atan(puoli / RakoEtaisyys),
+                Sumeus = Math.Max(1, levea * px / 2) / px, Kerroin = RakoEtaisyys * RakoEtaisyys / (kx * kyy) * RakoKerroin,
+            };
+        }
+
+        /// <summary>
+        /// Webin porrastus (v14): lähtöjärjestys kiertää ala → vasen → oikea → ylä, tahti vali ruutua; ylärivit vasta
+        /// kysymyksen jälkeen (r0 ≥ kysymysLoppu), ellei muita ole jäljellä. Asettaa rivien Lahto; palauttaa porrastuksen lopun
+        /// (viimeinen lähtö + vali + häivytys), jonka jälkeen aikajanan virtakerroin ohjaa.
+        /// </summary>
+        public static double Porrastus(IReadOnlyList<VirtaRivi> virta, double alku, double vali, double haivytys, double kysymysLoppu)
+        {
+            var kierto = new[] { VirtaPuoli.Ala, VirtaPuoli.Vasen, VirtaPuoli.Oikea, VirtaPuoli.Yla };
+            var jonot = kierto.ToDictionary(p => p, p => new Queue<VirtaRivi>(virta.Where(v => v.Puoli == p)));
+            double r0 = alku;
+            int k = 0;
+            while (kierto.Any(p => jonot[p].Count > 0))
+            {
+                VirtaPuoli? valittu = null;
+                for (int n = 0; n < 4 && valittu == null; n++)
+                {
+                    var ehdokas = kierto[(k + n) % 4];
+                    if (jonot[ehdokas].Count == 0) continue;
+                    if (ehdokas == VirtaPuoli.Yla && r0 < kysymysLoppu && kierto.Any(q => q != VirtaPuoli.Yla && jonot[q].Count > 0)) continue;
+                    valittu = ehdokas; k += n;
+                }
+                jonot[valittu.Value].Dequeue().Lahto = r0;
+                r0 += vali; k++;
+            }
+            return r0 + haivytys;
+        }
+
+        /// <summary>
+        /// Porrastetun rivin tila ruudussa r (web asetaAikajana): siirto (uv), rintama (projektorin pF.w: 0 = koko rivi,
+        /// ±10 + kynnys m) ja voiman kerroin (häivytys × aikajanan virtakerroin, ennen kaikkien lähtöä vähintään 1).
+        /// </summary>
+        public static (double siirto, double rintama, double voima) PorrasTila(VirtaRivi v, double r, double haivytys, double rintamaKerroin,
+            double reuna, double vk, bool kaikki)
+        {
+            double ika = r - v.Lahto;
+            if (ika <= 0) return (0, 0, 0);
+            double etu = reuna * v.Ala / 2 - rintamaKerroin * v.MPerRuutu * ika;
+            double sd = v.Nopeus > 0 ? 1 : -1;
+            double rintama = etu > -v.Ala / 2 ? sd * 10 + sd * etu : 0;
+            return (v.Nopeus * ika, rintama, Math.Min(1, ika / haivytys) * (kaikki ? vk : Math.Max(vk, 1)));
+        }
+
+        /// <summary>Väistökehän säde ruudussa r: kasvaa ja kutistuu 15 ruudussa (web v13c), 0 välin ulkopuolella.</summary>
+        public static double VaistoSade(double sade, double[] ruudut, double r) =>
+            r > ruudut[0] && r < ruudut[1] ? sade * Math.Min(1, Math.Min((r - ruudut[0]) / 15, (ruudut[1] - r) / 15)) : 0;
+
+        /// <summary>Lainaus ruudussa r (web): tykki, jonka energia-avainten väli sisältää ruudun, muuten seuraava (tai 0).</summary>
+        public static int TykkiRuudussa(IReadOnlyList<AikajanaTykki> tykit, double r)
+        {
+            for (int j = 0; j < tykit.Count; j++)
+                if (r >= tykit[j].Energia[0][0] && r <= tykit[j].Energia[tykit[j].Energia.Count - 1][0]) return j;
+            for (int j = 0; j < tykit.Count; j++) if (r < tykit[j].Energia[0][0]) return j;
+            return 0;
+        }
+
+        /// <summary>Kaikupaikan s (0/1; kaiut vuorotellen) kaiku ruudussa r: käynnissä oleva, muuten viimeksi alkanut tai ensimmäinen.</summary>
+        public static int KaikuPaikassa(IReadOnlyList<AikajanaKaiku> kaiut, int s, double r)
+        {
+            var omat = Enumerable.Range(0, kaiut.Count).Where(i => i % 2 == s).ToList();
+            if (omat.Count == 0) return -1;
+            double Alku(int i) => kaiut[i].Energia[0][0];
+            double Loppu(int i) => kaiut[i].Energia[kaiut[i].Energia.Count - 1][0];
+            foreach (var i in omat) if (r >= Alku(i) && r <= Loppu(i)) return i;
+            int viim = -1;
+            foreach (var i in omat) if (Alku(i) <= r) viim = i;
+            return viim >= 0 ? viim : omat[0];
+        }
+
+        /// <summary>Savumaskin ruutu (web): laatan u, v (8 × 8) ja kanava 0–3 ruudussa r (silmukka kesto s, fps, ruutuja).</summary>
+        public static (double u, double v, int kanava) SavuRuutu(double r, double kesto, double fps, double ruutuja)
+        {
+            int ruutu = (int)Math.Floor(((r / RuutuaSekunnissa) % kesto) * fps) % (int)ruutuja;
+            int laatta = ruutu / 4;
+            return ((laatta % 8) / 8.0, Math.Floor(laatta / 8.0) / 8.0, ruutu % 4);
         }
     }
 }
