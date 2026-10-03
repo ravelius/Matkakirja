@@ -3,6 +3,10 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
+## 3.10. 16.39: v14c (361cb8091) Päätoimittajalla, luvut Pelikoodarilla: Sokrateen parta sivulta 90° takavalolla (kamera (-0.36,-0.10,0.245),
+## 'suu' (0.62,-0.78,0.08), varjolevy 3×3 m z 0,197); tekstivaiheen kasvovalon katto V14_KATTO 0,9 / max(0,068, osuma otsaan) → mediaani 11–24/255.
+## Stillit v14c-parta-ja-tumma-tekstivaihe.jpg. ODOTTAA: Päätoimittajan arvio.
+
 ## 3.10. 16.2x: v14-KORJAUKSET (b7c36890c, haara linnanrakentaja-sokrates-bysti) Päätoimittajalla, luvut Pelikoodarilla:
 ## lainaukset kiinteinä 2–3 rivinä otsalla (lainaus-<id>.png gobot-kansioissa, virta väistää), kysymys ca 0,004; silmäkaista 0,004;
 ## Sokrateen parta suun alta + vaakavarjolevy z 0,197 + ympäristövalo 0 (luvut: v14.varjolevy, ymparisto_voima_avaimet, valot.rako.avaimet).
