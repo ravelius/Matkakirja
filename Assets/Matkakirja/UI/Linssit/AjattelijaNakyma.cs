@@ -434,6 +434,8 @@ namespace Matkakirja.Natiivi
                     if (!AjattelijatSovitin.AukiNyt) return Kirjaa("linssi ei ole auki");
                     if (!kuvaAuki) { AjattelijatSovitin.PyydaSulku(); return Kirjaa("suljettu"); }
                     // ✕ kuten pelaajalla: piilossa ensin napautus tuo sen näkyviin.
+                    // Kosketushetki kuten pelaajan napautuksessa, muuten 4 s:n ajastin piilottaa ✕:n heti (kuva 7b1c1f3b).
+                    sulkuKosketus = Time.unscaledTime;
                     if (sulkuPiilossa) { NaytaSulku(true); return Kirjaa("✕ näkyviin (napauta uudelleen: ui ajattelija sulje)"); }
                     return Kirjaa("painettu " + Paina(sulku));
                 default:
