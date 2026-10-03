@@ -55,7 +55,8 @@ esikuvien mukaan, koska niistä tulee ansaittavia esineitä. Kaikilla kolmella l
 
 ## Kerrokset (Siirtosepän speksi 1.10.)
 Kansio `/Users/Shared/Claude/proto-3d/_valmiit/mylly-laudat/v2/` (3.10.: pyöreä avainvalo → lasin kiilto ei neliönä, viikinkitammen
-kirveenjäljet hillitymmiksi, koska toistuivat aaltokuviona; v1 ennallaan). Kaikki tiedostot ovat suoran alfan PNG:itä.
+kirveenjäljet hillitymmiksi, koska toistuivat aaltokuviona; viikinkilaivan viivat oikeiksi V-uriksi, joiden valon puoleinen
+seinä vaalenee ja varjon puoleinen tummuu — aiemmin leikkaaja kapeni jo pinnan yläpuolella ja ura näkyi ohuena viivana; v1 ennallaan). Kaikki tiedostot ovat suoran alfan PNG:itä.
 Koko ketju yhdellä ajolla: `tools/linssit/blender/mylly_laudat.sh <kansio> [näytteitä]` (kerrokset, jälkikäsittely, mallikuvat, SHA256SUMS).
 - `lauta-<tunnus>.png`, 2048²: lauta, urat ja pisteet.
 - `hehku-<tunnus>.png`, 2048²: kaikkien 16 myllyviivan kultahehku. Koodi rajaa yhden myllyn suorakaiteella
