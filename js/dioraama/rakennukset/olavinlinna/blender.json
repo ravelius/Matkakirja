@@ -1,8 +1,63 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "e75b51a0510f79f8",
-  "kansio": "dioraama/olavinlinna/blender/e75b51a0510f79f8/",
+  "hash": "916731d7cbf72741",
+  "kansio": "dioraama/olavinlinna/blender/916731d7cbf72741/",
   "tiedostot": [
+    {
+      "polku": "hahmot/apulainen-1500.glb",
+      "sha256": "818a37b494a2fb4bd100803def40e627606e5351712b49fba607e0463d9cde19",
+      "tavuja": 1017656
+    },
+    {
+      "polku": "hahmot/kappalainen-1500.glb",
+      "sha256": "80f852e4fba07630e805cd375e8f379354a08bba2b5e262949cbaf349b991d77",
+      "tavuja": 980644
+    },
+    {
+      "polku": "hahmot/kirjuri-1500.glb",
+      "sha256": "dea9477d12d8e41136cdcdaf05afb71b58c261be69cfbdc973ad2ea997a0a49a",
+      "tavuja": 976356
+    },
+    {
+      "polku": "hahmot/kokki-1500.glb",
+      "sha256": "9615792e4c8facdb8390016397760b1494d61227ba920bc33615183f9fdb5940",
+      "tavuja": 967756
+    },
+    {
+      "polku": "hahmot/portinvartija-1500.glb",
+      "sha256": "cceb9d6c8d90f78cfa70a483450d63fc72b685b9142fc536a5683d0fe9d01232",
+      "tavuja": 1189776
+    },
+    {
+      "polku": "hahmot/renki-1500.glb",
+      "sha256": "bb427be547530410c9f3a89889aa73296b5239d1b768b77abdd102032a39b17b",
+      "tavuja": 999948
+    },
+    {
+      "polku": "hahmot/soutaja-1500.glb",
+      "sha256": "881e99ed09ce3ec96c714b334f9ea6de98f1556bcf86871bb87b82f83853b420",
+      "tavuja": 975484
+    },
+    {
+      "polku": "hahmot/talonpoika-1500.glb",
+      "sha256": "b6dc74a98603457f0a699ddc549a7c7253ef9158ff038f2abafe23711b89f630",
+      "tavuja": 1009956
+    },
+    {
+      "polku": "hahmot/vartija-1500.glb",
+      "sha256": "a3ffaebcf9ba4915b80d7c7020e3c6897b6bef8a416650b62d7753c31c403a05",
+      "tavuja": 1206608
+    },
+    {
+      "polku": "hahmot/vesipoika-1500.glb",
+      "sha256": "e866bb4ef552eb36e1c2670125f044fa0a9c343d923eaae89f7b53ef81499e07",
+      "tavuja": 1009336
+    },
+    {
+      "polku": "hahmot/vouti-1500.glb",
+      "sha256": "b2c56b0f5a32521cd772210d2d81e4af3bfd6b2d9cdb49d3680baf6dc1494fef",
+      "tavuja": 1152504
+    },
     {
       "polku": "kirjasto/materiaali/graniittilohkomuuri/graniittilohkomuuri_diff-4x4.astcm",
       "sha256": "70d4845ef2b55d7012b2c4c2c93abbeadd0e53211b6f0a8c33a6c207fb8a0587",

@@ -207,3 +207,13 @@ test('ympäristön ASTC-mipketjut (ensilataus v2): *_astc vain jos .astcm viety,
   assert.match(y.taivas_astc, /taivas-2k-4x4\.astcm$/); assert.match(y.taivas_hamara_astc, /taivas-hamara-2k-4x4\.astcm$/);
   assert.match(y.aluskasvit.atlas_astc, /aluskasvit-4x4\.astcm$/); assert.match(y.aluskasvit.atlas_hamara_astc, /aluskasvit-hamara-4x4\.astcm$/);
 });
+
+test('kohdistamaton tila (tunnelma) ilman JSON-liekkejä: liekit leivotun glb:n liekki:-tyhjistä, jotka leikataan telineineen (erä 1b)', () => {
+  const json = kopio(RAKENNUS);
+  assert.ok(RAKENNUS.tilat.find((t) => t.id === 'tunnelma')?.liekit?.length > 0, 'lähteessä tunnelman liekit');
+  lisaaBlender(json, B);
+  const tunnelma = json.tilat.find((t) => t.id === 'tunnelma');
+  assert.ok(tunnelma?.glb, 'tunnelma-glb puuttuu');
+  assert.equal(tunnelma.liekit, undefined);
+  for (const t of json.tilat.filter((x) => x.kohdistettava !== false && RAKENNUS.tilat.find((r) => r.id === x.id)?.liekit?.length)) assert.ok(t.liekit.length > 0, t.id);
+});

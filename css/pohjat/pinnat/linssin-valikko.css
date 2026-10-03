@@ -58,3 +58,56 @@
 }
 .tk-paneeli-linssivalikko .aikajana-valikko-kytkin.valittu .aikajana-valikko-tila { color: var(--tk-korostus); font-weight: 700; }
 .tk-paneeli-linssivalikko .tk-paneeli__erotin { margin: var(--tk-vali-xs) 0; }
+
+/* ── KARTTALINSSIN HAMPURILAINEN (omistaja 2.10.2026 klo 21.3x; js/ui.js piirraLinssinHampurilainen) ──────────────────
+   Kartan päälle piirtyvä linssi (ensin Topografia): nimipilleri pois, tilalle OHJAUSNAPPI-neliö oikeaan yläkulmaan ja
+   sama PANEELI (LASI) -pudotus kuin aikajanan hampurilaisella. css/aikajana.css ei ole ladattuna kartalla, joten
+   pudotuksen asettelu on tässä. */
+.linssi-karttavalikko {
+  position: absolute;
+  top: var(--tk-vali-s);
+  right: var(--tk-vali-s);
+  z-index: 6;
+  display: inline-flex;
+}
+.linssi-karttavalikko .aikajana-valikko-nappi,
+.linssi-karttavalikko .aikajana-valikko-nappi:hover:not(:disabled) {
+  position: relative;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: var(--tk-nappi-ohjaus);
+  min-width: var(--tk-nappi-ohjaus);
+  height: var(--tk-nappi-ohjaus);
+  min-height: var(--tk-nappi-ohjaus);
+  padding: 0;
+  border: 1px solid var(--tk-reunus);
+  border-radius: var(--tk-kulma-nappi);
+  background: var(--tk-pinta);
+  color: var(--tk-muste);
+  backdrop-filter: blur(var(--tk-vali-m));
+  cursor: pointer;
+}
+.linssi-karttavalikko .aikajana-valikko-nappi .viiva-ikoni svg {
+  width: var(--tk-nappi-ohjaus-kuvake);
+  height: var(--tk-nappi-ohjaus-kuvake);
+}
+.linssi-karttavalikko .aikajana-valikko {
+  position: absolute;
+  right: 0;
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+}
+.linssi-karttavalikko .aikajana-valikko[hidden] { display: none; }
+.linssi-karttavalikko .aikajana-valikko-kohta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--tk-vali-m);
+  width: 100%;
+  background: none;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+}

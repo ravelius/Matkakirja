@@ -573,13 +573,17 @@ export const NAKYMAT = [
   },
   {
     nimi: 'ratas', kuvaus: 'Hammasratas: äänentasot ja asetukset (#kehittaja-valikko-btn)',
-    // Vaakapuhelimella yläpalkki on väkäsnapin takana (js/ylapalkki-vaaka.js): auki ensin, muuten nappi ei näy.
-    avaa: () => { document.body.classList.add('ylapalkki-auki'); document.getElementById('kehittaja-valikko-btn')?.click(); },
+    // Vaakatilassa ei yläpalkkia (omistaja 2.10.2026 klo 23.07): ratas on vain pystyssä.
+    avaa: () => { document.getElementById('kehittaja-valikko-btn')?.click(); },
     odota: '#kehittaja-valikko:not([hidden])',
   },
   {
     nimi: 'valikko', kuvaus: 'Hampurilainen: päävalikko (#menu-btn)',
-    avaa: () => { document.body.classList.add('ylapalkki-auki'); document.getElementById('menu-btn')?.click(); },
+    // Vaakatilassa kartan hampurilainen avaa valikon napin päälle (js/ylapalkki-vaaka.js), muuten yläpalkin nappi.
+    avaa: () => {
+      const kartalla = document.querySelector('.ylapalkki-nappi');
+      if (kartalla && kartalla.getBoundingClientRect().width) kartalla.click(); else document.getElementById('menu-btn')?.click();
+    },
     odota: '#paavalikko:not([hidden])',
   },
   {

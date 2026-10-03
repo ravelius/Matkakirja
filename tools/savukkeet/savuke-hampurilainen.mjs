@@ -1,10 +1,11 @@
 /*
- * Savuke: PÄÄVALIKON NAPPI ON ALKUPERÄINEN HAMPURILAINEN — VÄKÄSET
- * VAIN SILLOIN KUN YLÄPALKKI ON PIILOSSA.
+ * Savuke: PÄÄVALIKON NAPPI ON TAVALLINEN HAMPURILAINEN — KARTAN NAPISSA
+ * VAAKATILASSA EI ENÄÄ VÄKÄSIÄ.
  *
- * OMISTAJAN TILAUS 14.9.2026, sanatarkasti: *"Hampurilaisen ikonin voi
- * vaihtaa alkuperaiseen mutta jata nykyinen iPhonen vaaka tilaa varten
- * kayttoon silloin kun Ylapalkki on piilossa"*
+ * OMISTAJAN TILAUS 14.9.2026 (väkäset vain palkin piilossa ollessa) on
+ * KUMOTTU 2.10.2026 klo 23.08, sanatarkasti: *"väkäshampurilaisen voi
+ * vaihtaa samalla normaaliksi hampurilaiseksi"*; klo 23.07 palkki poistui
+ * vaakatilasta kokonaan ja kartan nappi avaa päävalikon suoraan.
  *
  * MITÄ TÄMÄ MITTAA, jota yksikkötesti ei näe: sen KUMPI kuvake on
  * oikeasti ruudulla kussakin ruutukoossa. Yläpalkin piilotus on
@@ -12,12 +13,13 @@
  * selaimessa. Kolme kokoa:
  *
  *   pysty 390 × 844   yläpalkki näkyy → #menu-btn = kolme suoraa viivaa
- *   vaaka 844 × 390   yläpalkki piilossa → kartalla väkäsnappi
+ *   vaaka 844 × 390   ei yläpalkkia → kartan nappi on tavallinen
+ *                     hampurilainen (kolme suoraa viivaa) ja avaa valikon
  *   työpöytä 1400×900 yläpalkki näkyy → kolme suoraa viivaa
  *
  * VASTAKOE kuuluu ajoon: `--vastakoe` pakottaa odotukset päinvastoin
- * (väkäset päävalikossa, suorat viivat kartan napissa), jolloin ajon
- * pitää antaa FAIL-rivejä.
+ * (väkäset kartan napissa ja päävalikossa), jolloin
+ * ajon pitää antaa FAIL-rivejä.
  *
  *   node tools/savukkeet/savuke-hampurilainen.mjs
  */
@@ -187,7 +189,16 @@ const kuvat = [];
   await ctx.close();
 }
 
-/* ── 2. VAAKA 844 × 390: yläpalkki piilossa ────────────────────────── */
+/* ── 2. VAAKA 844 × 390: ei yläpalkkia, tavallinen hampurilainen avaa valikon ──
+ *
+ * PÄIVITETTY 2.10.2026 (omistaja klo 23.07 ja 23.08, sanatarkasti:
+ * *"tajusin että vaakatilassa ei tarvita koko yläpalkkia. nappi voisi
+ * avata suoraan valikon napin päälle ... eli poista palkki kokonaan ja
+ * avaa valikko suoraan napin päälle"* ja *"väkäshampurilaisen voi
+ * vaihtaa samalla normaaliksi hampurilaiseksi"*): kartan napissa ei ole
+ * enää väkäsiä, napin painallus avaa #paavalikko suoraan eikä palkkia
+ * tuoda näkyviin (#menu-btn-klikkausta ei enää ole).
+ */
 {
   const { ctx, sivu, virheet } = await avaaPeli(844, 390);
   vaadi('vaaka: sivu latautui ilman poikkeuksia', virheet.length === 0,
@@ -198,26 +209,25 @@ const kuvat = [];
   vaadi('vaaka: kartan nappi on näkyvissä oikeassa yläkulmassa',
     tila.karttaNappiNakyy && tila.karttaLaatikko.x > 844 * 0.8 && tila.karttaLaatikko.y < 100,
     JSON.stringify(tila.karttaLaatikko));
-  vaadi('vaaka: kartan napissa on väkäset',
-    tila.karttaPolut.length === 3 && tila.karttaPolut.every(VASTAKOE ? onSuoraViiva : onVakanen),
+  // Sama tarkistus kuin työpöytäosan valikkoPolut-väitteessä: kaikki polut
+  // suoria viivoja ja M-alkuisia viivoja kolme (polut-funktio palauttaa
+  // yhden polun, jossa kolme M:ää).
+  vaadi('vaaka: kartan napissa on tavallinen hampurilainen (kolme suoraa viivaa, ei väkäsiä)',
+    tila.karttaPolut.every(VASTAKOE ? onVakanen : onSuoraViiva)
+      && tila.karttaPolut.join('').split('M').length - 1 === 3,
     JSON.stringify(tila.karttaPolut));
   await sivu.screenshot({ path: `${JUURI}docs/raportit/kuvat/hampurilainen-vaaka.png` });
   kuvat.push('hampurilainen-vaaka.png');
   await sivu.click('.ylapalkki-nappi');
-  await sivu.waitForTimeout(350);
-  const palkkiAuki = await lueTila(sivu);
-  vaadi('vaaka: nappi tuo yläpalkin näkyviin', palkkiAuki.palkkiNakyy,
-    JSON.stringify(palkkiAuki.palkkiLaatikko));
-  vaadi('vaaka: esiin tulleessa palkissa on kolme viivaa',
-    palkkiAuki.valikkoPolut.every(VASTAKOE ? onVakanen : onSuoraViiva),
-    JSON.stringify(palkkiAuki.valikkoPolut));
-  await sivu.click('#menu-btn');
-  await sivu.waitForTimeout(250);
+  await sivu.waitForTimeout(450);
   const auki = await sivu.evaluate(() => {
     const v = document.getElementById('paavalikko');
     return Boolean(v) && !v.hidden && v.getBoundingClientRect().height > 0;
   });
-  vaadi('vaaka: nappi avaa päävalikon', auki);
+  vaadi('vaaka: nappi avaa päävalikon suoraan', auki);
+  const jalkeen = await lueTila(sivu);
+  vaadi('vaaka: yläpalkki pysyy piilossa napin painalluksen jälkeen', !jalkeen.palkkiNakyy,
+    JSON.stringify(jalkeen.palkkiLaatikko));
   await ctx.close();
 }
 
