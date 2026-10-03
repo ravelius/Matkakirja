@@ -244,8 +244,10 @@ Shader "Matkakirja/Linssit/Yokuori"
                     l = lerp(l, (half)min(kuvio * (float)l / max(odotus, 0.002), 8.0), piste);
                     led = (half)(piste * saturate(ledKuvio / max(kuvio, 1e-4)) * saturate(kuvio * 2.0));
                 }
-                // Sävy NASA-vertailusta (30.9., ISS037-E-18864): himmeät natriumin oranssit, ytimet kellanvalkoiset (ennen valkoisempi).
-                half3 savy = lerp(half3(1.0, 0.46, 0.14), half3(1.0, 0.80, 0.52), saturate(lKuva * 1.4h));
+                // NATRIUMORANSSI (omistaja 3.10.2026 klo 14.2x): sävy pysyy oranssina myös kirkkaissa ytimissä. Ennen ytimet menivät
+                // kermanvalkoisiksi (lopputulos G/R 0,94, B/R 0,86); NASA ISS037-E-18864:ssä kirkkaatkin ovat kultaisia (0,90 / 0,66)
+                // ja keskisävyt oransseja (0,83 / 0,51). Ennen: lerp((1, 0,46, 0,14), (1, 0,80, 0,52), l · 1,4).
+                half3 savy = lerp(half3(1.0, 0.50, 0.13), half3(1.0, 0.68, 0.28), saturate(lKuva * 1.2h));
                 savy = lerp(savy, half3(0.92h, 0.95h, 1.0h), led);   // LED-valkoinen (lähikuvan pisteet)
                 // Päivän pilvet peittävät valot ja heijastuksen (tasakulmainen, v = 0 etelässä; LOD 0: ei saumaa ±180°:ssa).
                 float pilviA = SAMPLE_TEXTURE2D_LOD(_Pilvet, sampler_Pilvet, float2(lon / 6.2831853 + 0.5, lat / 3.1415927 + 0.5), 0).a;
