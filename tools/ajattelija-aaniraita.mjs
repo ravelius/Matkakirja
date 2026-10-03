@@ -23,12 +23,15 @@
  * OMA MUSIIKKI (Linssiseppä säveltää rinnalle toisen version samalla ajoituksella):
  *   --musiikki <tiedosto>  (polku tai lähdekansion suhteen; v12:ssa soi alusta loppuun, pituus luetaan tiedostosta)
  * Ilman --kestoa kesto = puheen loppu + 3 s.
+ * ÄÄNIEFEKTIT (omistaja 3.10.2026 klo 05.3x: diaprojektorin naksahdus kaiun syttyessä, hallin ovi, savimalja, kytkin pois):
+ *   --efektit <json>  [[tiedosto, aika s, taso dB], …]; miksataan PUHERAITAAN (kohtauksen kello), joten ne ovat samassa
+ *   tahdissa ilman erillisiä Audio-olioita, eivät vaimene puheen alla eivätkä muutu, kun musiikki vaihdetaan.
  *
  *   node tools/ajattelija-aaniraita.mjs --ajattelija sokrates|marcus --ulos <kansio> [--lahteet <kansio>] [--kierrokset]
  * Ääni ei kuulu repoon; Julkaisija vie tiedostot ämpäriin (ajattelijat/sokrates/v1/).
  */
 import { execFileSync } from 'node:child_process';
-import { mkdirSync } from 'node:fs';
+import { mkdirSync, readFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 
 const A = process.argv.slice(2);
@@ -88,6 +91,9 @@ const KESTO = A.includes('--kesto') ? Number(arvo('--kesto'))
 const LUENNAT = PUHE ? [[PUHE, PUHE_ALKU]] : V12
   ? arvo('--luennat').split(',').map((pari) => { const [k, t] = pari.split(':'); return [`luennat/${k}-otto1.mp3`, Number(t)]; })
   : KIERROKSET ? [...R.luennat, ...R.kierrokset.luennat] : R.luennat;
+const EFEKTIT = A.includes('--efektit')
+  ? JSON.parse(readFileSync(resolve(arvo('--efektit')), 'utf8')).map(([f, t, db]) => [resolve(LAHTEET, f), Number(t), Number(db ?? 0)])
+  : [];
 const ETULIITE = V12 ? 'v12' : KIERROKSET ? 'kierrokset' : 'kierros1';
 const OSAT = (V12 && [[0, kestoS(MUSIIKKI)]]) || (KIERROKSET && R.kierrokset.osat) || R.osat;
 const SILMUKKA = V12 ? null : R.silmukka;
@@ -100,11 +106,13 @@ const LOPPU = { kesto: 2.7, taso: 0.7 };
 mkdirSync(ULOS, { recursive: true });
 const ff = (...args) => execFileSync('ffmpeg', ['-y', '-loglevel', 'error', ...args], { stdio: 'inherit' });
 
-// Puheraita: luennat hiljaisen pohjan päällä.
-ff(...LUENNAT.flatMap(([f]) => ['-i', resolve(LAHTEET, f)]), '-filter_complex',
+// Puheraita: luennat (ja efektit omilla tasoillaan) hiljaisen pohjan päällä.
+const PUHEOSAT = [...LUENNAT.map(([f, t]) => [resolve(LAHTEET, f), t, 0]), ...EFEKTIT];
+ff(...PUHEOSAT.flatMap(([f]) => ['-i', f]), '-filter_complex',
   `anullsrc=r=48000:cl=stereo,atrim=0:${KESTO}[hiljaa];`
-  + LUENNAT.map(([, s], i) => `[${i}]aformat=sample_rates=48000:channel_layouts=stereo,adelay=${Math.round(s * 1000)}|${Math.round(s * 1000)}[v${i}];`).join('')
-  + `[hiljaa]${LUENNAT.map((_, i) => `[v${i}]`).join('')}amix=inputs=${LUENNAT.length + 1}:normalize=0:duration=first,atrim=0:${KESTO},alimiter=limit=0.95[out]`,
+  + PUHEOSAT.map(([, s, db], i) => `[${i}]aformat=sample_rates=48000:channel_layouts=stereo,`
+    + `${db ? `volume=${db}dB,` : ''}adelay=${Math.round(s * 1000)}|${Math.round(s * 1000)}[v${i}];`).join('')
+  + `[hiljaa]${PUHEOSAT.map((_, i) => `[v${i}]`).join('')}amix=inputs=${PUHEOSAT.length + 1}:normalize=0:duration=first,atrim=0:${KESTO},alimiter=limit=0.95[out]`,
   '-map', '[out]', '-c:a', 'libmp3lame', '-b:a', '160k', join(ULOS, `${ETULIITE}-puhe.mp3`));
 
 // Musiikki: osat ristihäivytettyinä, sitten (valinnainen) urkupohjan silmukka ristihäivytettyinä, kunnes kesto täyttyy.

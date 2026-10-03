@@ -194,3 +194,9 @@ test('ääniraita v12: yhtenäinen puhe (--puhe, --puhe-alku) vaimentaa musiikin
   assert.match(tyokalu, /const SILMUKKA = V12 \? null : R\.silmukka;/);
   assert.match(tyokalu, /\$\{V12 \? `apad=whole_dur=\$\{KESTO\},` : ''\}/);
 });
+
+test('ääniraita: efektit (--efektit json [tiedosto, aika, dB]) miksataan puheraitaan eli kohtauksen kelloon (omistaja 3.10.2026)', () => {
+  const tyokalu = readFileSync(new URL('../tools/ajattelija-aaniraita.mjs', import.meta.url), 'utf8');
+  assert.match(tyokalu, /const PUHEOSAT = \[\.\.\.LUENNAT\.map\(\(\[f, t\]\) => \[resolve\(LAHTEET, f\), t, 0\]\), \.\.\.EFEKTIT\];/);
+  assert.match(tyokalu, /\$\{db \? `volume=\$\{db\}dB,` : ''\}adelay=/);
+});
