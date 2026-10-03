@@ -10335,3 +10335,7 @@ Omistaja 3.10.2026 klo 15.4x sanatarkasti: "Silloin kun tekstejä tulee, niin ka
 ## TARKENNUS: AJATTELIJAN TEKSTIVAIHE ALKAA TUMMENNUKSEN JÄLKEEN (omistaja) (3.10.2026 klo 15.47)
 
 Omistaja 3.10.2026 klo 15.4x sanatarkasti: "Eli sen selkeän Rembrandt-valon jälkeen valospotti voisi tummentua ja sitten ne yksittäiset tekstit lähtisivätkin tulemaan." Järjestys (linssin aika, v14): Rembrandt + nimi 8,6 s → kysymys 10,8 s vielä Rembrandt-valossa → valospotti tummenee noin 11,0–12,0 s → vasta sitten ensimmäinen epäterävä rivi (noin 12,3 s, kertojan alkaessa) ja loput yksi kerrallaan kasvojen eri puolilta. Sama Marcukselle.
+
+## TARKENNUS: TAUSTAVIRRAN RIVIT VIELÄ PEHMEÄMMIKSI (omistaja) (3.10.2026 klo 16.04)
+
+Omistaja 3.10.2026 klo 16.0x sanatarkasti: "Lisätekstit näyttävät myös vielä liian teräviltä, ainakin tässä puhelimessa, kun katsoin, että pitäisivätkö ne olla vielä pehmeämpiä." Päätoimittaja: kyllä. Tavoite puhelimen ruudulla: taustarivien kirjaimia ei voi lukea (sumennus noin kirjaimen korkeuden verran, kauempana olevat rivit pehmeämpiä), vain tekstirivin muoto erottuu syvyytenä; ainoa terävä teksti on päälainaus. Sama Marcukselle. Pelikoodari webissä; tarkistus iPhonen ruutukoossa 1:1.
