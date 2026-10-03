@@ -251,7 +251,15 @@ export const LAHTEET = [
         tekija: 'Nico Kokkonen, Wikimedia Commons (Column_of_Marcus_Aurelius_-_detail2.jpg)',
         lisenssi: 'CC BY 3.0',
         huom: 'Rajattu ja tasokäyrällä valoksi muokattu (Linnanrakentaja 2.10.2026, LAHTEET.md); v14:ssä '
-          + 'kaiku ajattelijat/marcus/v4/kaiut-paikka/kaiku-sade.png.',
+          + 'kaiku ajattelijat/marcus/v5/kaiut-paikka/kaiku-sade.png (natiivi, juna 135).',
+      },
+      {
+        nimi: 'Ajattelijat-linssin kaikukuvat — Marcus Aurelius uhraa, Marcus Aureliuksen kaaren reliefi 176–180 jaa., '
+          + 'Musei Capitolini (Marcus Aurelius, uhrin kaiku)',
+        tekija: 'José Luiz, Wikimedia Commons (Marcus Aurelius showing sacrifice - Arch of Marcus Aurelius - Musei Capitolini - Rome 2016.jpg)',
+        lisenssi: 'CC BY-SA 4.0',
+        huom: 'Rajattu johdannainen, jaettu samalla lisenssillä CC BY-SA 4.0 (Linnanrakentaja 4.10.2026); '
+          + 'kaiku ajattelijat/marcus/v5/kaiut-paikka/kaiku-uhri.png.',
       },
       {
         nimi: 'Ajattelijat-linssin kaikukuvat — Carstens 1788 (Sokrates pelastaa Alkibiadeen), '
@@ -354,6 +362,13 @@ export const LAHTEET = [
         nimi: 'Ajattelijat-linssi: Also sprach Zarathustra (feat. Richard Strauss) — Sokrates',
         tekija: 'Sascha Ende, filmmusic.io',
         lisenssi: 'CC BY 4.0',
+      },
+      {
+        nimi: 'Ajattelijat-linssi: oma musiikki Sokrateelle ja Marcus Aureliukselle (sävelletty pelille, v14)',
+        tekija: 'Matkakirja (Linssiseppä); soitinnäytteet Versilian Studios VS Chamber Orchestra 2 Community Edition; '
+          + 'salin kaiku Liverpool Philharmonic Hall -impulssivaste (johnnyguitar01, Freesound 423866)',
+        lisenssi: 'Oma teos; näytteet ja impulssivaste CC0',
+        huom: 'Partituuri ja lähteet: proto-3d/_lahteet/sokrates/musiikki-oma/LAHTEET.md ja marcus-aurelius/musiikki-oma/LAHTEET.md.',
       },
       {
         nimi: 'Ajattelijat-linssi: prologin kytkimen napsahdus (Impact Sounds, kaksi iskua kerroksina, oma kaiku)',
