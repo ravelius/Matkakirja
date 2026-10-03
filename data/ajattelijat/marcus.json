@@ -667,8 +667,8 @@
   "luvut": {
    "tiedosto": "docs/raportit/ajattelijat-v11/marcus-luvut-v14.json",
    "haara": "linnanrakentaja-sokrates-bysti",
-   "versio": "78b883452",
-   "kaiut": "ajattelijat/marcus/v4/kaiut-paikka",
+   "versio": "5b79c21d5",
+   "kaiut": "ajattelijat/marcus/v5/kaiut-paikka",
    "savu": "ajattelijat/sokrates/v3/savu-atlas-v5.png",
    "savuYdin": 0.286,
    "paalauseet": {
