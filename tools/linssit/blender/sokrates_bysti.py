@@ -969,7 +969,7 @@ if V14:
         (_L(V14_INTRO['c1']) - 1, (-0.80, 0.10, 0.48), (0.0, -0.05, 0.38), 35),
         (_L(V14_INTRO['c1']), (-0.72, -0.08, 0.35), (0.0, -0.08, 0.34), 45),   # 1) profiilin ääriviiva otsasta partaan
         (_L(V14_INTRO['c2']), (0.22, -0.55, 0.425) if KOHDE == 'marcus' else (0.22, -0.55, 0.445), (0.030, -0.12, 0.392) if KOHDE == 'marcus' else (0.030, -0.12, 0.412), 50),   # Sokrates: alareuna nenänpäässä   # 2) silmä, kulmakaari ja nenänvarsi; silmä ~¼ leveydestä
-        (_L(V14_INTRO['c3']), (-0.04, -0.68, 0.31) if KOHDE == 'marcus' else (-0.20, -0.58, 0.30), (0.0, -0.13, 0.27) if KOHDE == 'marcus' else (0.0, -0.11, 0.26), 50),   # 3) parta (Sokrates: liukuva sivuvalo kiharoiden poikki; takavalo piirsi renkaan = kita)
+        (_L(V14_INTRO['c3']), (-0.04, -0.68, 0.31) if KOHDE == 'marcus' else (-0.17, -0.44, 0.275), (0.0, -0.13, 0.27) if KOHDE == 'marcus' else (0.0, -0.11, 0.252), 50),   # 3) parta (Sokrates: rajattu suun alapuolelta — leuka ja kiharat, suu yläreunan ulkopuolella)
         (_L(V14_INTRO['c4']), (-0.42, -0.52, 0.82), (0.0, -0.07, 0.40), 35),    # 4) ¾-kuva ylhäältä
         (V12_REM, (-0.36, -1.24, 0.24), (-0.075, -0.06, 0.39), 35),             # Rembrandt + nimi (toimii, pidetään)
     )
@@ -986,10 +986,12 @@ if V14:
                (_L(V14_INTRO['c3']) - 1, _S['silma']), (_L(V14_INTRO['c3']), _S['suu']),
                (_L(V14_INTRO['c4']) - 1, _S['suu']), (_L(V14_INTRO['c4']), _S['yla']),
                (V12_REM - 1, _S['yla']), (V12_REM, V12_REM_AURINKO))
-    V14_ENERGIA = ((1, 55), (_L(V14_INTRO['c1']), 65), (_L(V14_INTRO['c2']), 4), (_L(V14_INTRO['c3']), 80),
+    V14_ENERGIA = ((1, 55), (_L(V14_INTRO['c1']), 65), (_L(V14_INTRO['c2']), 0), (_L(V14_INTRO['c3']), 80),
                    (_L(V14_INTRO['c4']), 90), (V12_REM, 95))                         # nousee musiikin mukana; silmässä rakovalo
     V14_RAKO = (_L(V14_INTRO['c2']), _L(V14_INTRO['c3']) - 1)                       # rakovalon ruudut (silmäkuva)
     V14_PARTA = (_L(V14_INTRO['c3']), _L(V14_INTRO['c4']) - 1)
+    V14_YMPARISTO = []   # maailman (ympäristövalon) voima: (ruutu, kerroin)
+    VARJOLEVY = {'keski': (0.20, -0.10, 0.197), 'koko': (1.2, 0.8)}   # vaakalevy parran alareunan tasolla: x-leveys, y-syvyys; alapuoli varjoon
     V7_RENDER = list(range(1, V12_REM + 1))
 
 
@@ -1290,11 +1292,22 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     # --- lainaukset nauhoina (vierivät tasaisella nopeudella, näkyvät lainauksen ajan) ---
     lainaukset = []
     def lainaus(nimi, kuva, q, suunta, ala, kork, kap, raja=None):
+        if V14:   # Päätoimittaja 3.10.: lainaus luettavissa KOKONAAN → kiinteä 2–3-rivinen heijastus (ei vierivää ikkunaa)
+            a_t, l_t = k_(kap, 0), k_(kap, 1); e0, e1 = a_t - 0.6, min(l_t + 0.6, raja if raja else 1e9)
+            kuva = 'lainaus-' + nimi.split('-', 1)[1] + '.png'; kk = bpy.data.images.load(os.path.join(gobot, kuva), check_existing=True)
+            lev_ = 0.10 if kk.size[1] > 800 else 0.11; kork_ = lev_ * kk.size[1] / kk.size[0]
+            if q is vp: q = p   # v14: sivulla viimeiset sanat häipyivät → kaikki lainaukset otsalle
+            if q is p: suunta = n + Vector((-0.12, -0.10, -0.22))   # otsalla suoremmin edestä: rivit eivät kaarru pois
+            v4_projektori(nimi, q, suunta.normalized(), 0.6, lev_ * 1.08, os.path.join(gobot, kuva), kork_, (F(e0), F(e1)), V7_TYKKI * 0.8,
+                          ca=0.004, syvyys=0.06, energia=(F(e0), F(e1)), kiintea=True)
+            lainaukset.append({'nimi': nimi, 'kuva': kuva, 'nakyy_s': [round(e0, 2), round(e1, 2)], 'kiintea': True, 'leveys_m': lev_})
+            VIRTA_VAISTO.append((tuple(q), lev_ * 0.62, F(e0), F(e1)))   # tekstivirta väistää lainauksen
+            return
         a_t, l_t = k_(kap, 0), k_(kap, 1); kk = bpy.data.images.load(os.path.join(gobot, kuva), check_existing=True)
         matka = kork * kk.size[0] / kk.size[1] + ala; kesto_ = matka / V13_NAUHA_MS; keski = (a_t + l_t) / 2
         e0, e1 = a_t - 0.6, min(l_t + 0.6, raja if raja else 1e9)
         v4_projektori(nimi, q, suunta.normalized(), 0.6, ala, os.path.join(gobot, kuva), kork, (F(keski - kesto_ / 2), F(keski + kesto_ / 2)),
-                      V7_TYKKI, energia=(F(e0), F(e1)))
+                      V7_TYKKI, energia=(F(e0), F(e1)), **({'ca': 0.004, 'syvyys': 0.06} if V14 else {}))   # v14: ei kaksoisvalotusta
         lainaukset.append({'nimi': nimi, 'kuva': kuva, 'nakyy_s': [round(e0, 2), round(e1, 2)], 'vierii_s': [round(keski - kesto_ / 2, 2), round(keski + kesto_ / 2, 2)]})
     lainaus('tykki-38a', 'nauha-otsa.png', p, n + Vector((-0.40, -0.15, -0.30)), 0.075, V7_NAUHA * 1.25, '03', raja=k_('04', 0) - 0.05)
     lainaus('tykki-21d', 'nauha-poski.png', pp, pn + Vector((-0.55, -0.15, -0.30)), 0.065, 0.017 * 1.25, '05', raja=k_('06', 0))
@@ -1358,20 +1371,20 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     avaimet = [
         (T(0) - 0.6, rem[1], rem[2], rem[3], 'BEZIER'),                                     # Rembrandt + kysymys, sitten liuku eteen
         (T(0) + 3.2, kc((0.0, -0.08, 0.37), (-0.08, -1.0, 0.04), 0.50), (0.0, -0.08, 0.37), 50, 'BEZIER'),   # kasvot edestä ennen nenää
-        (k_('02', 0), kc((0.0, -0.08, 0.38), (-0.10, -1.0, 0.05), 0.58), (0.0, -0.08, 0.38), 50, 'BEZIER'),
-        (k_('04', 0) - 0.04, kc((0.0, -0.08, 0.40), (-0.18, -1.0, 0.10), 0.52), (0.0, -0.08, 0.40), 50, 'CONSTANT'),
+        (k_('02', 0), kc((0.0, -0.07, 0.40), (-0.10, -1.0, 0.05), 0.80 if V14 else 0.58), (0.0, -0.07, 0.40), 50, 'BEZIER'),   # v14: 38a kokonaan kuvaan
+        (k_('04', 0) - 0.04, kc((0.0, -0.07, 0.40), (-0.18, -1.0, 0.10), 0.78 if V14 else 0.52), (0.0, -0.07, 0.40), 50, 'CONSTANT'),
         (k_('04', 0), kc(sp, (0.35, -1.0, 0.05), 0.40), tuple(sp), 50, 'BEZIER'),           # leikkaus: silmä (kylix) silmän puolelta, nenä ei peitä
         (k_('04', 1) - 0.6, kc((0.0, -0.08, 0.37), (0.05, -1.0, 0.05), 0.55), (0.0, -0.08, 0.37), 50, 'BEZIER'),   # väliin kauemmas (ei nenän läpi)
-        (k_('05', 0), kc(pp, (-0.45, -1.0, 0.10), 0.30), tuple(pp), 50, 'BEZIER'),          # poski (21d)
+        (k_('05', 0), kc(pp, (-0.45, -1.0, 0.10), 0.55 if V14 else 0.30), tuple(pp), 50, 'BEZIER'),          # poski (21d)
         (a6 + 0.8, kc((0.0, -0.06, 0.40), (-0.55, -1.0, 0.15), 0.85), (0.0, -0.06, 0.40), 50, 'BEZIER'),   # koko pää: kierto
-        (k_('07', 0) + 0.6, kc((0.0, -0.08, 0.41), (-0.15, -1.0, 0.08), 0.55), (0.0, -0.08, 0.41), 50, 'BEZIER'),  # 30e
+        (k_('07', 0) + 0.6, kc((0.0, -0.07, 0.41), (-0.15, -1.0, 0.08), 0.80 if V14 else 0.55), (0.0, -0.07, 0.41), 50, 'BEZIER'),  # 30e
         (k_('08', 0) - 0.04, kc((0.0, -0.08, 0.41), (-0.10, -1.0, 0.08), 0.50), (0.0, -0.08, 0.41), 50, 'CONSTANT'),
         (k_('08', 0), (-0.14, -0.55, 0.10), (0.0, -0.08, 0.36), 35, 'BEZIER'),               # leikkaus: alaviisto, kova valo
-        (k_('09', 0) - 0.5, kc(vp, (0.25, -1.0, -0.15), 0.40), tuple(vp), 50, 'BEZIER'),     # sivulle (49b)
-        (illan_t - 0.04, kc(vp, (0.20, -1.0, -0.10), 0.36), tuple(vp), 50, 'CONSTANT'),
+        (k_('09', 0) - 0.5, kc((0.0, -0.07, 0.41), (0.02, -1.0, 0.10), 0.80) if V14 else kc(vp, (0.25, -1.0, -0.15), 0.40), (0.0, -0.07, 0.41) if V14 else tuple(vp), 50, 'BEZIER'),     # 49b
+        (illan_t - 0.04, kc((0.0, -0.07, 0.41), (0.05, -1.0, 0.10), 0.80) if V14 else kc(vp, (0.20, -1.0, -0.10), 0.36), (0.0, -0.07, 0.41) if V14 else tuple(vp), 50, 'CONSTANT'),   # v14: pito otsalla
         (illan_t, kc((0.03, -0.07, 0.38), (0.95, -1.0, 0.10), 0.70), (0.03, -0.07, 0.38), 50, 'BEZIER'),   # leikkaus: ilta, David sivulla
-        (kys_t, kc((0.0, -0.08, 0.41), (0.10, -1.0, 0.06), 0.55), (0.0, -0.08, 0.41), 50, 'BEZIER'),        # kysymys kasvoille
-        (loppu_t + 1.0, kc((0.0, -0.08, 0.41), (0.08, -1.0, 0.06), 0.53), (0.0, -0.08, 0.41), 50, 'BEZIER'),
+        (kys_t, kc((0.0, -0.08, 0.41), (0.10, -1.0, 0.06), 0.68 if V14 else 0.55), (0.0, -0.08, 0.41), 50, 'BEZIER'),        # kysymys kasvoille
+        (loppu_t + 1.0, kc((0.0, -0.08, 0.41), (0.08, -1.0, 0.06), 0.66 if V14 else 0.53), (0.0, -0.08, 0.41), 50, 'BEZIER'),
     ]
     for t_, c_, q_, mm_, tapa in avaimet:
         avain(F(t_), c_, q_, mm_, tapa)
@@ -1423,14 +1436,25 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     kaiku('kaiku-kuolinvuode', 'kaiku-kuolinvuode.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.11, sair_t, k_('09', 0) - 0.2, 50.0, haiv=24)
     lainaukset = []
     def lainaus(nimi, kuva, q, suunta, ala, kork, kap, raja=None):
+        if V14:   # Päätoimittaja 3.10.: lainaus luettavissa KOKONAAN → kiinteä 2–3-rivinen heijastus (ei vierivää ikkunaa)
+            a_t, l_t = k_(kap, 0), k_(kap, 1); e0, e1 = a_t - 0.6, min(l_t + 0.6, raja if raja else 1e9)
+            kuva = 'lainaus-' + nimi.split('-', 1)[1] + '.png'; kk = bpy.data.images.load(os.path.join(gobot, kuva), check_existing=True)
+            lev_ = 0.10 if kk.size[1] > 800 else 0.11; kork_ = lev_ * kk.size[1] / kk.size[0]
+            if q is vp: q = p   # v14: sivulla viimeiset sanat häipyivät → kaikki lainaukset otsalle
+            if q is p: suunta = n + Vector((-0.12, -0.10, -0.22))   # otsalla suoremmin edestä: rivit eivät kaarru pois
+            v4_projektori(nimi, q, suunta.normalized(), 0.6, lev_ * 1.08, os.path.join(gobot, kuva), kork_, (F(e0), F(e1)), V7_TYKKI * 0.8,
+                          ca=0.004, syvyys=0.06, energia=(F(e0), F(e1)), kiintea=True)
+            lainaukset.append({'nimi': nimi, 'kuva': kuva, 'nakyy_s': [round(e0, 2), round(e1, 2)], 'kiintea': True, 'leveys_m': lev_})
+            VIRTA_VAISTO.append((tuple(q), lev_ * 0.62, F(e0), F(e1)))   # tekstivirta väistää lainauksen
+            return
         a_t, l_t = k_(kap, 0), k_(kap, 1); kk = bpy.data.images.load(os.path.join(gobot, kuva), check_existing=True)
         matka = kork * kk.size[0] / kk.size[1] + ala; kesto_ = matka / V13_NAUHA_MS; keski = (a_t + l_t) / 2
         e0, e1 = a_t - 0.6, min(l_t + 0.6, raja if raja else 1e9)
         v4_projektori(nimi, q, suunta.normalized(), 0.6, ala, os.path.join(gobot, kuva), kork, (F(keski - kesto_ / 2), F(keski + kesto_ / 2)),
-                      V7_TYKKI, energia=(F(e0), F(e1)))
+                      V7_TYKKI, energia=(F(e0), F(e1)), **({'ca': 0.004, 'syvyys': 0.06} if V14 else {}))   # v14: ei kaksoisvalotusta
         lainaukset.append({'nimi': nimi, 'kuva': kuva, 'nakyy_s': [round(e0, 2), round(e1, 2)], 'vierii_s': [round(keski - kesto_ / 2, 2), round(keski + kesto_ / 2, 2)]})
     lainaus('tykki-1016', 'nauha-1016.png', p, n + Vector((-0.40, -0.15, -0.30)), 0.075, V7_NAUHA * 1.25, '02', raja=k_('03', 0) - 0.05)
-    lainaus('tykki-449', 'nauha-449.png', pp, pn + Vector((-0.55, -0.15, -0.30)), 0.075, 0.019 * 1.25, '05', raja=uhri_t - 0.05)
+    lainaus('tykki-449', 'nauha-449.png', p if V14 else pp, (n + Vector((-0.40, -0.15, -0.30))) if V14 else (pn + Vector((-0.55, -0.15, -0.30))), 0.075, 0.019 * 1.25, '05', raja=uhri_t - 0.05)
     lainaus('tykki-211', 'nauha-211.png', vp, vn + Vector((0.0, -0.45, -0.25)), 0.075, 0.019 * 1.25, '07', raja=k_('08', 0) - 0.05)
     kys_t = w_('Miten', T(kesto) - 1.8)   # Marcuksella kysymys on kappaleen 09 lopussa
     v4_projektori('tykki-kysymys', p, (n + Vector((-0.30, -0.10, -0.20))).normalized(), 0.6, 0.12, os.path.join(gobot, 'nauha-kysymys.png'),
@@ -1468,16 +1492,17 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     for t_, c_, q_, mm_, tapa in [
         (T(0) - 0.6, rem[1], rem[2], rem[3], 'BEZIER'),
         (T(0) + 3.2, kc((0.0, -0.08, 0.37), (-0.08, -1.0, 0.04), 0.52), (0.0, -0.08, 0.37), 50, 'BEZIER'),
-        (k_('03', 0) - 0.04, kc((0.0, -0.08, 0.40), (-0.15, -1.0, 0.08), 0.52), (0.0, -0.08, 0.40), 50, 'CONSTANT'),
+        (k_('02', 0), kc((0.0, -0.07, 0.41), (-0.02, -1.0, 0.10), 0.80 if V14 else 0.52), (0.0, -0.07, 0.41), 50, 'BEZIER'),   # v14: 10.16 kokonaan kuvaan, edestä
+        (k_('03', 0) - 0.04, kc((0.0, -0.07, 0.40), (-0.15, -1.0, 0.08), 0.78 if V14 else 0.52), (0.0, -0.07, 0.40), 50, 'CONSTANT'),
         (k_('03', 0), (-0.14, -0.55, 0.10), (0.0, -0.08, 0.36), 35, 'BEZIER'),                     # leikkaus: alaviisto, kova
         (sade_t, kc((0.0, -0.08, 0.41), (-0.12, -1.0, 0.10), 0.58), (0.0, -0.08, 0.41), 50, 'BEZIER'),   # sadeihme otsalla
-        (a5 + 0.5, kc(pp, (-0.45, -1.0, 0.10), 0.34), tuple(pp), 50, 'BEZIER'),                     # poski (4.49)
+        (a5 + 0.5, kc((0.0, -0.07, 0.41), (-0.02, -1.0, 0.10), 0.80) if V14 else kc(pp, (-0.45, -1.0, 0.10), 0.34), (0.0, -0.07, 0.40) if V14 else tuple(pp), 50, 'BEZIER'),                     # poski (4.49)
         (uhri_t, kc(sp, (0.35, -1.0, 0.05), 0.42), tuple(sp), 50, 'BEZIER'),                        # silmäkuoppa (uhri)
-        (k_('07', 0) + 0.5, kc(vp, (0.25, -1.0, -0.15), 0.40), tuple(vp), 50, 'BEZIER'),            # sivu (2.11)
-        (k_('08', 0) - 0.04, kc(vp, (0.20, -1.0, -0.10), 0.36), tuple(vp), 50, 'CONSTANT'),
+        (k_('07', 0) + 0.5, kc((0.0, -0.07, 0.41), (0.02, -1.0, 0.10), 0.80) if V14 else kc(vp, (0.25, -1.0, -0.15), 0.40), (0.0, -0.07, 0.41) if V14 else tuple(vp), 50, 'BEZIER'),            # 2.11
+        (k_('08', 0) - 0.04, kc(vp, (0.20, -1.0, -0.10), 0.58 if V14 else 0.36), tuple(vp), 50, 'CONSTANT'),
         (k_('08', 0), kc((0.03, -0.07, 0.38), (0.95, -1.0, 0.10), 0.70), (0.03, -0.07, 0.38), 50, 'BEZIER'),   # leikkaus: ilta, kuolinvuode
-        (kys_t, kc((0.0, -0.08, 0.41), (0.10, -1.0, 0.06), 0.55), (0.0, -0.08, 0.41), 50, 'BEZIER'),
-        (loppu_t + 1.0, kc((0.0, -0.08, 0.41), (0.08, -1.0, 0.06), 0.53), (0.0, -0.08, 0.41), 50, 'BEZIER')]:
+        (kys_t, kc((0.0, -0.08, 0.41), (0.10, -1.0, 0.06), 0.68 if V14 else 0.55), (0.0, -0.08, 0.41), 50, 'BEZIER'),
+        (loppu_t + 1.0, kc((0.0, -0.08, 0.41), (0.08, -1.0, 0.06), 0.66 if V14 else 0.53), (0.0, -0.08, 0.41), 50, 'BEZIER')]:
         avain(F(t_), c_, q_, mm_, tapa)
     efektit = [{'efekti': '01-projektori-naksahdus', 's': round(sade_t, 2), 'syy': 'sadeihme'},
                {'efekti': '01-projektori-naksahdus', 's': round(uhri_t, 2), 'syy': 'uhri'},
@@ -1531,10 +1556,21 @@ if '--v7' in A:
             for k__ in ('energy', 'size', 'size_y', 'spread'): rd.keyframe_insert(k__, frame=r)
         A_ = (silmat + Vector((0.45, -0.85, 0.22)).normalized() * 0.9, silmat); B_ = (parta + Vector((-0.80, 0.45, 0.05)).normalized() * 0.7, parta)
         rako_avain(1, *A_, 0.0, 0.34, 0.014, 1.2); rako_avain(V14_RAKO[0] - 1, *A_, 0.0, 0.34, 0.014, 1.2)
-        rako_avain(V14_RAKO[0], *A_, 0.12, 0.34, 0.014, 1.2); rako_avain(V14_RAKO[1], *A_, 0.12, 0.34, 0.014, 1.2)   # kapea kaista silmien yli
+        rako_avain(V14_RAKO[0], *A_, 0.004, 0.34, 0.02, 2.2); rako_avain(V14_RAKO[1], *A_, 0.004, 0.34, 0.02, 2.2)   # kaista silmien yli: ei valkoiseksi, pehmeät reunat
+        wt_ = sc.world.node_tree.nodes['Background'].inputs['Strength']   # muu kasvo varjoon silmäkuvan ajan
+        V14_YMPARISTO[:] = ((1, 1.0), (V14_RAKO[0] - 1, 1.0), (V14_RAKO[0], 0.0), (V14_RAKO[1], 0.0), (V14_RAKO[1] + 1, 1.0)) if KOHDE == 'marcus' else \
+            ((1, 1.0), (V14_RAKO[0] - 1, 1.0), (V14_RAKO[0], 0.0), (V14_PARTA[1], 0.0), (V14_PARTA[1] + 1, 1.0))   # Sokrates: myös parta ilman ympäristövaloa (rinta ei kirkastu)
+        for r__, v__ in V14_YMPARISTO:
+            wt_.default_value = v__; wt_.keyframe_insert('default_value', frame=r__)
         e_b = 0.5 if KOHDE == 'marcus' else 0.0
         rako_avain(V14_RAKO[1] + 1, *B_, e_b, 0.12, 0.12, 12); rako_avain(V14_PARTA[1], *B_, e_b, 0.12, 0.12, 12)   # parran toinen reuna takaviistosta
         rako_avain(V14_PARTA[1] + 1, *B_, 0.0, 0.25, 0.25, 30)
+        if KOHDE != 'marcus':   # Sokrateen parta: matala sivuvalo pois rintakehältä (parran alareuna z 0,195) — näkymätön varjolevy
+            bpy.ops.mesh.primitive_plane_add(size=1.0, location=VARJOLEVY['keski'])
+            vl = bpy.context.active_object; vl.name = 'varjolevy'; vl.scale = (VARJOLEVY['koko'][0], VARJOLEVY['koko'][1], 1.0)
+            vl.visible_camera = vl.visible_diffuse = vl.visible_glossy = vl.visible_transmission = vl.visible_volume_scatter = False
+            for r__, h__ in ((1, True), (V14_PARTA[0] - 1, True), (V14_PARTA[0], False), (V14_PARTA[1], False), (V14_PARTA[1] + 1, True)):
+                vl.hide_render = h__; vl.keyframe_insert('hide_render', frame=r__)
     V10 = '--v10' in A   # päälause 25 % isompi ja alkaa kulkea jo kameran saapuessa; taustavirta; kaikukuvan syke
     ISO = 1.25 if V10 else 1.0
     def vieritys(lahesty_loppu, proj):   # v10: ensimmäiset kirjaimet saapuvat kuvaan kierron alkaessa (ei taukoa)
@@ -1702,6 +1738,13 @@ if '--v7' in A:
                               'vari': pyor(ob.data.color), 'energia_avaimet': energia, 'kuvat': kuvat,
                               **{k: (round(ob[k], 5) if isinstance(ob[k], float) else ob[k]) for k in ob.keys()
                                  if k in ('lev_m', 'kork_m', 'liuku_uv', 'haivytys_ruutua', 'ala_m', 'nauha_kork_m', 'nauha_lev_m', 'kiintea')}}
+            if ob.name == 'rako':   # Pelikoodari: [ruutu, sijainti, suunta, energia, size, size_y, spread_aste] jokaisessa avaimessa
+                ra = []
+                for r in sorted(set(kayrien_ruudut(ob)) | set(kayrien_ruudut(ob.data))):
+                    sc.frame_set(r)
+                    ra.append([r, pyor(ob.matrix_world.translation), pyor((ob.matrix_world.to_3x3() @ Vector((0, 0, -1))).normalized()),
+                               round(ob.data.energy, 4), round(ob.data.size, 4), round(ob.data.size_y, 4), round(math.degrees(ob.data.spread), 2)])
+                valot[ob.name]['avaimet'] = ra
             if ob.name == 'pyyhkaisy':   # v13: valo kääntyy nenästä silmiin → suunta jokaisessa avaimessa
                 sk = []
                 for r in kayrien_ruudut(ob):
@@ -1722,6 +1765,10 @@ if '--v7' in A:
                    'v13': V13_AIKA if V13 else None,
                    'v14': {'intro_linssin_aika_s': V14_INTRO, 'prologi_ruutua': 75, 'kytkin_ruutu': 30, 'valo_taysi_ruutu': 58,
                            'leikkaukset_kohtauksen_ruutu': [r_ for r_, *_ in V7_OTOKSET[2:]], 'kertoja_kohtauksen_s': V13_KERTOJA_ALKAA,
+                           'ymparisto_voima_avaimet': [list(x_) for x_ in V14_YMPARISTO],
+                           'varjolevy': ({'keski': VARJOLEVY['keski'], 'leveys_x_m': VARJOLEVY['koko'][0], 'syvyys_y_m': VARJOLEVY['koko'][1],
+                                          'normaali': (0, 0, 1), 'ruudut': list(V14_PARTA),
+                                          'huom': 'näkymätön, vain varjo (aurinko); rintakehä varjoon partakuvassa'} if KOHDE != 'marcus' else None),
                            'huom': 'kohtauksen ruutu 1 = prologin jälkeen; linssin aika = kohtauksen aika + prologi'} if V14 else None,
                    'v13c': {'kaikuvari': KAIKUVARI, 'virta_vaisto': [{'kohde': pyor(q_), 'sade_m': round(r_, 4), 'ruudut': [a_, l_]}
                                                                   for q_, r_, a_, l_ in VIRTA_VAISTO],
