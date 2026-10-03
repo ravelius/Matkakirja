@@ -18,7 +18,7 @@ import { execFileSync } from 'node:child_process';
 import { deflateSync, crc32 } from 'node:zlib';
 import { randomUUID } from 'node:crypto';
 import { aikajanaLuvuista } from './ajattelija-aikajana-luvut.mjs';
-import { lataaPlaywright } from './selain.mjs';
+import { avaaChromium } from './selain.mjs';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const A = process.argv.slice(2);
@@ -112,8 +112,8 @@ const palvelin = createServer((q, s) => {
   s.writeHead(404); s.end();
 });
 await new Promise((r) => palvelin.listen(0, '127.0.0.1', r));
-// Oletusasetuksin (ohjelmistopiirto ilman GPU-lippuja): atlas on sama tavu tavulta kuin aiemmalla muuntimella.
-const selain = await (await lataaPlaywright()).chromium.launch();
+// Ohjelmistopiirto ilman GPU-lippuja (cpu: true): atlas on sama tavu tavulta kuin aiemmalla muuntimella.
+const selain = await avaaChromium({}, { cpu: true });
 const sivu = await selain.newPage();
 await sivu.goto(`http://127.0.0.1:${palvelin.address().port}/`);
 
