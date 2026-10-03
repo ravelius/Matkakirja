@@ -3,6 +3,15 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 3.10. KLO 06.xx
+- SOKRATES, OMA MUSIIKKI (omistaja 05.0x, Päätoimittaja): proto-3d/_lahteet/sokrates/musiikki-oma/ — partituuri koodissa
+  (lahde/savellys.py, AJAT-parametrit = Linnanrakentajan v12-leikkaukset 17,35/20,85/21,6/22,4/24,1, kysymys 27,1), E-fryyginen,
+  F→E-kadenssi. Kaksi renderöintiä: synteesi (syntetisaattori.py) ja VSCO 2 CE -näytteet (naytteet.py, oma Python-soitin,
+  indeksi vsco-indeksi.json). Omistaja antoi tässä sessiossa luvan: VSCO 2 CE (proto-3d/_lahteet/vsco2-ce), brew cmake/libsndfile/
+  pkg-config, sfizz 1.2.3 → proto-3d/_tyokalut/sfizz/sfizz_render (käännetty, ei käytössä). Intro sokrates-oma-intro-vsco.mp3
+  lähetetty Päätoimittajalle. Kertojan pohja (kertojan_pohja, 3 vaihetta, ~115 s) nuotteina; näyterenderöinti odottaa lupaa.
+  Python: proto-3d/_lahteet/venv-laser/bin/python (numpy).
+
 ## TILA 2.10. KLO 23.2x
 - TOPOGRAFIAN HAMPURILAINEN 2 (Päätoimittaja 23.0x, web #3881 mallina): linssiseppa/topografia-hampurilainen-2 d015ffa1
   (d99f62c5:n päällä; d99f62c5 pois junasta 130) MERGE-PYYNNÖSSÄ junaan 131 Natiivisepällä. Korkeustasot = KYTKIN (POIS/PÄÄLLÄ,
