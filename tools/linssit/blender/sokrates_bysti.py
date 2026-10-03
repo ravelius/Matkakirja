@@ -642,6 +642,7 @@ def v4_projektori(nimi, p, suunta, etaisyys, ala, nauha_kuva, nauha_kork, ruudut
     for kanava_nimi, sk_ in (('Red', 1 + ca), ('Green', 1.0), ('Blue', 1 - ca)):
         nt.links.new(kanava(sk_), yhd.inputs[kanava_nimi])
     em = nt.nodes.new('ShaderNodeEmission'); nt.links.new(yhd.outputs['Color'], em.inputs['Color']); em.inputs['Strength'].default_value = 1.0
+    if SAVU: nt.links.new(savu_kerroin(nt, m, jx, jy, etaisyys), em.inputs['Strength'])
     out = nt.nodes.new('ShaderNodeOutputLight'); nt.links.new(em.outputs['Emission'], out.inputs['Surface'])
     o = bpy.data.objects.new(nimi, d); bpy.context.scene.collection.objects.link(o)
     o.location = Vector(p) + suunta.normalized() * etaisyys; kohdista(o, p)
@@ -984,6 +985,26 @@ def _kipsin_pinta(o):
         sc_.render.use_motion_blur = False
 
 
+SAVU = A[A.index('--savu') + 1] if '--savu' in A else None   # savukiekuran varjomaskisarja (sokrates_savu.py)
+SAVU_ALA = float(A[A.index("--savuala") + 1]) if "--savuala" in A else 0.28    # maskin kuva-ala projektorin tarkennusetäisyydellä (m): nauha 3–5 mm pinnalla, kiekura ~3 cm
+
+
+def savu_kerroin(nt, m, jx, jy, etaisyys):
+    """Savun varjo projektorin kuvaan (omistaja 3.10. 08.2x): silmukoituva harmaasävymaski projektorin kuva-alassa,
+    1 = täysi valo. Sama sarja webille ja natiiville (kerrotaan projektorin kuvaan)."""
+    tied = sorted(f for f in os.listdir(SAVU) if f.startswith('savu-') and f.endswith('.png'))
+    img = bpy.data.images.get('savu') or bpy.data.images.load(os.path.join(SAVU, tied[0]))
+    img.name = 'savu'; img.colorspace_settings.name = 'Non-Color'
+    if not os.environ.get('SAVU_STILL'): img.source = 'SEQUENCE'
+    t = nt.nodes.new('ShaderNodeTexImage'); t.image = img; t.extension = 'EXTEND'
+    t.image_user.frame_duration = len(tied); t.image_user.frame_start = 1; t.image_user.use_cyclic = True
+    t.image_user.use_auto_refresh = True
+    u = m('MULTIPLY_ADD', jx, etaisyys / SAVU_ALA, 0.5); v = m('MULTIPLY_ADD', jy, etaisyys / SAVU_ALA, 0.5)
+    yh = nt.nodes.new('ShaderNodeCombineXYZ'); nt.links.new(u, yh.inputs['X']); nt.links.new(v, yh.inputs['Y'])
+    nt.links.new(yh.outputs['Vector'], t.inputs['Vector'])
+    return t.outputs['Color']
+
+
 def kaiku_projektori(nimi, p, suunta, etaisyys, lev, kuva, ruudut, voima, savy=(1.0, 0.78, 0.52), liuku=0.05, haivytys=45,
                      varjo=0.0):
     """v8: kaikukuva samalla videotykillä (omistaja 23.5x): harmaasävy seepiasävyllä, hidas ilmestyminen ja häivytys
@@ -1007,6 +1028,9 @@ def kaiku_projektori(nimi, p, suunta, etaisyys, lev, kuva, ruudut, voima, savy=(
     yh = nt.nodes.new('ShaderNodeCombineXYZ'); nt.links.new(u, yh.inputs['X']); nt.links.new(v, yh.inputs['Y'])
     t = nt.nodes.new('ShaderNodeTexImage'); t.image = kk; t.extension = 'CLIP'; nt.links.new(yh.outputs['Vector'], t.inputs['Vector'])
     em = nt.nodes.new('ShaderNodeEmission'); nt.links.new(t.outputs['Color'], em.inputs['Strength'])
+    if SAVU:
+        nt.links.new(m('MULTIPLY', t.outputs['Color'], savu_kerroin(nt, m, m('DIVIDE', sx.outputs['X'], z), m('DIVIDE', sx.outputs['Y'], z), etaisyys)),
+                     em.inputs['Strength'])
     out = nt.nodes.new('ShaderNodeOutputLight'); nt.links.new(em.outputs['Emission'], out.inputs['Surface'])
     o = bpy.data.objects.new(nimi, d); bpy.context.scene.collection.objects.link(o)
     o.location = Vector(p) + suunta.normalized() * etaisyys; kohdista(o, p)
@@ -1064,8 +1088,11 @@ def tausta_rivi(nimi, p, suunta, etaisyys, ala, kuva, kork, kulma, v_m, nopeus, 
             ulko = m('MINIMUM', m('MAXIMUM', m('DIVIDE', m('SUBTRACT', et, m('MULTIPLY', sade_n.outputs['Value'], 0.85)),
                                                   m('MAXIMUM', m('MULTIPLY', sade_n.outputs['Value'], 0.15), 1e-5)), 0.0), 1.0)
             voimakkuus = m('MULTIPLY', voimakkuus, ulko)
+    if VIRTA_VAISTO or SAVU:
         em_ = [n_ for n_ in nt.nodes if n_.type == 'EMISSION'][0]
         for l_ in list(em_.inputs['Strength'].links): nt.links.remove(l_)
+        if SAVU:   # omistaja 3.10. 08.3x: savun varjo myös tekstivirtaan (sama maski kuin kaiuissa ja lainauksissa)
+            voimakkuus = m('MULTIPLY', voimakkuus, savu_kerroin(nt, m, m('DIVIDE', x_, etaisyys), m('DIVIDE', y_, etaisyys), etaisyys))
         nt.links.new(m('MULTIPLY', voimakkuus, rajaus), em_.inputs['Strength'])
     sv = siirto.outputs['Value']; r0, r3 = ruudut[0], ruudut[3]
     for r, v_ in ((r0, 0.0), (r3, nopeus * (r3 - r0))):
@@ -1202,8 +1229,9 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
                          savy=(1.0, 1.0, 1.0) if KAIKUVARI == 'neutraali' else (1.0, 0.78, 0.52))   # v13b: pistemäinen projektori = kuva terävä pinnalla
         kaiut.append({'nimi': nimi, 'kuva': kuva, 'alku_s': round(a_t, 2), 'loppu_s': round(l_t, 2)})
     jum_t = T(W.get('jumalankuvia', K['01'][1] - 1.4))
-    kaiku('kaiku-jumala', 'kaiku-jumala.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, jum_t, k_('02', 0) + 1.2, 9.0, haiv=30)   # himmeä
-    kaiku('kaiku-sotilas', 'kaiku-sotilas.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, k_('02', 0), k_('03', 0) + 0.8, 26.0)
+    SAVUKOE = '--savukoe' in A   # koevideo: Zeus 10,5 s savun kanssa, ei sotilasta eikä 38a:ta
+    kaiku('kaiku-jumala', 'kaiku-jumala.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, jum_t, (k_('03', 0) - 0.3) if SAVUKOE else k_('02', 0) + 1.2, 9.0, haiv=30)   # himmeä
+    if not SAVUKOE: kaiku('kaiku-sotilas', 'kaiku-sotilas.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, k_('02', 0), k_('03', 0) + 0.8, 26.0)
     kaiku('kaiku-oraakkeli', 'kaiku-oraakkeli.png', sp, sn, (SIVU * 0.55 + YLOS * 0.30) if V13C else (SIVU * 0.15 + YLOS * 0.12), 0.08 if V13C else 0.07, k_('04', 0) + 0.3, k_('05', 0) - 0.2, 12.0 if V13C else 32.0)   # v13c: rajattu punakuvio on lähes kokonaan vaaleaa
     illan_t = T(W.get('Illan', K['10'][0])); rivi_t = T(W.get('riviäkään', K['10'][0] + 6.8))
     kaiku('kaiku-david', 'kaiku-kuolema.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.11, illan_t, rivi_t + 0.3, 70.0, haiv=24)
@@ -1517,12 +1545,18 @@ if '--v7' in A:
         for r in sorted(set(kayrien_ruudut(ao)) | set(kayrien_ruudut(aur))): sc.frame_set(r); aurinko.append({'ruutu': r, 'sijainti': pyor(ao.matrix_world.translation), 'energia': round(aur.energy, 2), 'vari': pyor(aur.color)})
         json.dump({'kohde': KOHDE, 'versio': 'v12' if V12 else 'v11' if V11 else 'v10',
                    'v13': V13_AIKA if V13 else None,
+                   'v13c': {'kaikuvari': KAIKUVARI, 'virta_vaisto': [{'kohde': pyor(q_), 'sade_m': round(r_, 4), 'ruudut': [a_, l_]}
+                                                                  for q_, r_, a_, l_ in VIRTA_VAISTO],
+                            'savu': {'ala_m': SAVU_ALA, 'kesto_s': 8.0, 'fps': 30, 'maski': 'savu-0001…0240.png (1 = täysi valo)',
+                                     'koskee': 'kaiku-*, tykki-*, virta-* (kuva-ala: projektorin suunta X/Z · etäisyys / ala_m + 0,5)'}}
+                           if V13C else None,
                    'v12': {'musiikki_alkaa_ruutu': 1, 'siirto_ruutua': V12_SIIRTO, 'rembrandt': V12_REM, 'kysymys': V7_LAHESTY[0] - 89,
                            'lahesty': V7_LAHESTY, 'teksti_38a': V7_PROJ, 'kaiku1': V7_KAIKU} if V12 else None, 'ruudut_30fps': V9 if '--v9' in A else None, 'kamera': kamera,
                    'aurinko': aurinko, 'aurinko_kohde': pyor(tahtays), 'valot': valot,
                    'taustavirta': {'mm_s': V11_VIRTA_MS * 1000, 'vaihtelu': 0.15, 'rivit': VIRTA_LOKI} if V11 else None},
                   open(ulos_j, 'w'), ensure_ascii=False, indent=1)
         print('SOKRATES: luvut', ulos_j, len(kamera), 'kamera-avainta', len(valot), 'valoa'); sys.exit(0)
+    if os.environ.get('NODEDBG'): exec(open(os.environ['NODEDBG']).read())
     for ruutu in (RUUDUT or (V9_RENDER if '--v9' in A else V7_RENDER)):
         sc.frame_set(ruutu); sc.render.filepath = os.path.join(ULOS, f'ruutu-{ruutu:04d}.png')
         bpy.ops.render.render(write_still=True)
