@@ -35,8 +35,8 @@ namespace Matkakirja.Natiivi
     public sealed class AjattelijatSovitin : ILinssi
     {
         public const string Juuri = "https://media.matkakirja.app/";
-        /// <summary>Prologin kytkimen napsahdus (web AJATTELIJA_KYTKIN; Linnanrakentaja: Kenney CC0 -iskut ja hallin kaiku).</summary>
-        public const string Kytkin = "ajattelijat/yhteiset/v1/kytkin-kaiku.mp3";
+        /// <summary>Prologin kytkimen napsahdus (web AJATTELIJA_KYTKIN v2, #3892: aito katkaisijaäänite ja konvoluutiokaiku, CC0).</summary>
+        public const string Kytkin = "ajattelijat/yhteiset/v2/kytkin-kaiku.mp3";
 
         public static readonly LinssiTiedot AjattelijatTiedot = new LinssiTiedot
         {

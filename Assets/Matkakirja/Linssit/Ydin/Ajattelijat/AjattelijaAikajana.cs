@@ -23,11 +23,14 @@ namespace Matkakirja.Linssit.Ajattelijat
         public KameraVaihe Vaihe; public int Otos; public double K, Osuus;
     }
 
-    /// <summary>Taustavirran rivi: projektori i (1 + rivin indeksi), sen projektorikohde, koko ja liike (webin virta-alkio).</summary>
+    /// <summary>
+    /// Taustavirran rivi: projektori i (1 + rivin indeksi), sen projektorikohde, koko ja liike (webin virta-alkio). Nopeus on
+    /// uv/ruutu (etumerkki = suunta), Mms sama pinnalla millimetreinä sekunnissa (web paikat().virta).
+    /// </summary>
     public sealed class VirtaRivi
     {
         public int I, Projektori, Rivi;
-        public double Korkeus, Kirkkaus, VM, Kulma, Nopeus;
+        public double Korkeus, Kirkkaus, VM, Kulma, Nopeus, Mms;
     }
 
     public static class AjattelijaAikajana
@@ -57,6 +60,9 @@ namespace Matkakirja.Linssit.Ajattelijat
             if (a.Kierrokset != null) foreach (var k in a.Kierrokset.Lista) if (k.Kaiku != null) l.Add(k.Kaiku.Ruudut);
             return l;
         }
+
+        /// <summary>Maailman täytteen lisäkerroin (web #3892): alkukuvissa (r &lt; nimi) intro.tayte, varjopuoli lähes mustaksi.</summary>
+        public static double MaailmaKerroin(AjattelijaData a, double r) => r < a.Ajat.Nimi[0] ? a.IntroTayte : 1;
 
         /// <summary>Auringon ja maailman kerroin: hiipuu nollaan jokaisen kaiun ajaksi (45 ruutua kummassakin päässä).</summary>
         public static double Hiipuu(AjattelijaData a, double r) => Hiipuu(KaikuIkkunat(a), r);
@@ -224,11 +230,15 @@ namespace Matkakirja.Linssit.Ajattelijat
         /// Taustavirran rivit projektoreille (web asetaVirta: nopeudet sekoitetaan, rivit jaetaan tasaisin välein kuva-alalle).
         /// Kierrokset 2– asettelevat samat rivit omalla siemenellään (Blender virta2/virta3).
         /// </summary>
-        public static List<VirtaRivi> Taustavirta(AjattelijaTaustavirta tv) => Taustavirta(tv, tv.Siemen);
-        public static List<VirtaRivi> Taustavirta(AjattelijaTaustavirta tv, uint siemen)
+        public static List<VirtaRivi> Taustavirta(AjattelijaData a) => Taustavirta(a, a.Taustavirta.Siemen);
+        public static List<VirtaRivi> Taustavirta(AjattelijaData a, uint siemen)
         {
+            var tv = a.Taustavirta;
             var satunnainen = Siemenluku(siemen);
-            var nopeudet = Enumerable.Range(0, tv.Rivit.Count).Select(k => 0.0007 * Math.Pow(1.18, k)).ToArray();
+            // Nopeudet lähes samat (web #3891, Blender v11): kertoimet tasavälein 1 ± vaihtelu, sekoitettuina siemenellä;
+            // uv/ruutu = mm/s / 1000 × kerroin / 30 / rivin laatan leveys pinnalla (kork × laatan lev / laatan korkeus px).
+            int n = tv.Rivit.Count;
+            var nopeudet = Enumerable.Range(0, n).Select(k => 1 - tv.Vaihtelu + 2 * tv.Vaihtelu * k / Math.Max(1, n - 1)).ToArray();
             for (int i = nopeudet.Length - 1; i > 0; i--)
             {
                 int j = (int)Math.Floor(satunnainen() * (i + 1));
@@ -248,10 +258,13 @@ namespace Matkakirja.Linssit.Ajattelijat
                     double kirkkaus = kk[0] + (kk[1] - kk[0]) * satunnainen();
                     double vM = (-0.4 + 0.8 * (k + 0.5) / pj.Riveja) * pj.Ala + (satunnainen() * 2 - 1) * 0.01;
                     double kulma = (satunnainen() * 2 - 1) * tv.Kulma * Math.PI / 180;
+                    var paikka = a.Atlas.Paikat[1 + ri];
+                    double riviLev = kork * paikka.Lev / paikka.Korkeus;   // laatta pinnalla (m), u:n yksikkö
+                    double nopeus = tv.Mms / 1000 * nopeudet[ri] / RuutuaSekunnissa / riviLev;
                     tulos.Add(new VirtaRivi
                     {
                         I = 1 + ri, Projektori = p, Rivi = ri, Korkeus = kork, Kirkkaus = kirkkaus, VM = vM, Kulma = kulma,
-                        Nopeus = nopeudet[ri] * (ri % 2 == 1 ? 1 : -1),
+                        Nopeus = nopeus * (ri % 2 == 1 ? 1 : -1), Mms = tv.Mms * nopeudet[ri],
                     });
                 }
             }

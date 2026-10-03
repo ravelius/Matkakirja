@@ -39,10 +39,11 @@ namespace Matkakirja.Linssit.Testit
         {
             var o = MiniJson.Objekti(MiniJson.Jasenna(File.ReadAllText(Kansio + "sokrates.json")));
             o.Remove("kysymys");
+            ((System.Collections.Generic.Dictionary<string, object>)o["taustavirta"]).Remove("nopeus");   // web #3891: nopeus.mms > 0
             ((System.Collections.Generic.Dictionary<string, object>)o["kaiku"]).Remove("kamera");
             o["pulunKysymykset"] = new System.Collections.Generic.List<object>();
             var puuttuu = AjattelijaData.Tarkista(o);
-            Oleta.Tosi(puuttuu.SequenceEqual(new[] { "kysymys", "kaiku", "pulunKysymykset" }), string.Join(", ", puuttuu));
+            Oleta.Tosi(puuttuu.SequenceEqual(new[] { "kysymys", "taustavirta", "kaiku", "pulunKysymykset" }), string.Join(", ", puuttuu));
             Oleta.Sama("tunnus", AjattelijaData.Tarkista(null).Single());
         }
 
@@ -56,7 +57,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(6, a.IntroOtokset.Count);
             Oleta.Sama(7, a.Elama.Count);
             Oleta.Sama(5, a.PulunKysymykset.Count);
-            Oleta.Tosi(a.Kaiku != null && a.Kaiku.KameraMatka[1] == 0.19, "kaiun kamera");
+            Oleta.Tosi(a.Kaiku != null && a.Kaiku.KameraMatka[1] == 0.14, "kaiun kamera");
             Oleta.Sama("Sokrates", a.NimiRivit.Single());
             Oleta.Sama(2, Lue("marcus").NimiRivit.Count);
         }
@@ -70,22 +71,33 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void TaustavirtaOnWebinArvonta()
         {
-            var v = AjattelijaAikajana.Taustavirta(Lue("sokrates").Taustavirta);
+            var v = AjattelijaAikajana.Taustavirta(Lue("sokrates"));
             Oleta.Sama(20, v.Count);
-            // (rivi, korkeus, kirkkaus, vM, kulma, nopeus) webistä.
+            // (rivi, korkeus, kirkkaus, vM, kulma, nopeus uv/ruutu, mm/s) webin asetaVirta (cb61902f0, #3891: 25 mm/s ±15 %)
+            // nodella atlaksen paikoista 3.10.; koot, kirkkaudet ja asettelu ennallaan (sama siemen).
             var odotetut = new[]
             {
-                (0, 0.015, 0.267322949637, -0.101083351336, -0.0578257875064, -0.00838162352021),
-                (4, 0.009, 0.106924289309, 0.0607134358166, -0.120095068305, -0.001357144432),
-                (7, 0.009, 0.117068000645, -0.0373129654754, 0.106374477445, 0.00310481770141),
-                (19, 0.009, 0.18325603181, 0.0497238574733, 0.0350482896975, 0.00710307077984),
+                (0, 0.015, 0.267322949637, -0.101083351336, -0.0578257875064, -0.00141515899123, 27.1710526316),
+                (4, 0.009, 0.106924289309, 0.0607134358166, -0.120095068305, -0.00990839729532, 22.8289473684),
+                (7, 0.009, 0.117068000645, -0.0373129654754, 0.106374477445, 0.0129180372807, 24.8026315789),
+                (19, 0.009, 0.18325603181, 0.0497238574733, 0.0350482896975, 0.00232433296784, 26.7763157895),
             };
-            foreach (var (i, k, kir, vm, ku, n) in odotetut)
+            foreach (var (i, k, kir, vm, ku, n, mms) in odotetut)
             {
                 var r = v[i];
                 Oleta.Tosi(r.I == i + 1 && Math.Abs(r.Korkeus - k) < 1e-12 && Math.Abs(r.Kirkkaus - kir) < 1e-10 && Math.Abs(r.VM - vm) < 1e-10
-                    && Math.Abs(r.Kulma - ku) < 1e-10 && Math.Abs(r.Nopeus - n) < 1e-12, $"rivi {i}: {r.Korkeus} {r.Kirkkaus} {r.VM} {r.Kulma} {r.Nopeus}");
+                    && Math.Abs(r.Kulma - ku) < 1e-10 && Math.Abs(r.Nopeus - n) < 1e-13 && Math.Abs(r.Mms - mms) < 1e-9,
+                    $"rivi {i}: {r.Korkeus} {r.Kirkkaus} {r.VM} {r.Kulma} {r.Nopeus} {r.Mms}");
             }
+            // Lähes sama tahti pinnalla: 21,25–28,75 mm/s (v10:n 0,0007 × 1,18^k teki 4,5–102 mm/s).
+            Oleta.Tosi(Math.Abs(v.Min(r => r.Mms) - 21.25) < 1e-9 && Math.Abs(v.Max(r => r.Mms) - 28.75) < 1e-9, "25 mm/s ±15 %");
+            var a = Lue("sokrates");
+            Oleta.Tosi(a.Taustavirta.Mms == 25 && a.Taustavirta.Vaihtelu == 0.15, "nopeus { mms: 25, vaihtelu: 0.15 }");
+            // Kierroksen 3 siemen 49 ja Marcus (eri koot → eri uv-nopeus, sama mm/s).
+            var r49 = AjattelijaAikajana.Taustavirta(a, 49)[4];
+            Oleta.Tosi(Math.Abs(r49.Nopeus - -0.0124782986111) < 1e-13 && Math.Abs(r49.Mms - 28.75) < 1e-9, "siemen 49: " + r49.Nopeus);
+            var m7 = AjattelijaAikajana.Taustavirta(Lue("marcus"))[7];
+            Oleta.Tosi(m7.Korkeus == 0.012 && Math.Abs(m7.Nopeus - 0.00322950932018) < 1e-13, "Marcus rivi 7: " + m7.Nopeus);
             // Projektorit 6 + 5 + 3 + 3 + 3 riviä.
             Oleta.Sama(6, v.Count(r => r.Projektori == 0));
             Oleta.Sama(3, v.Count(r => r.Projektori == 4));
@@ -151,7 +163,6 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(k3.KohdeSivulta.SequenceEqual(new[] { -0.08, 0.375 }) && k3.TayteSuunta[1] == 0.75, "David kasvojen sivulle");
             // Valinnaiset kentät puuttuvat (blend, sävy) → kierroksen 1 kaiusta näyttämöllä.
             Oleta.Tosi(double.IsNaN(k2.Blend) && k2.Savy == null, "blend ja sävy kierroksen 1 kaiusta");
-            Oleta.Tosi(Lue("marcus").Kierrokset == null, "Marcuksella ei vielä kierroksia");
         }
 
         sealed class Vertaa : System.Collections.Generic.IEqualityComparer<double[]>
@@ -185,14 +196,13 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1, AjattelijaAikajana.KierrosRuudussa(a, 2299.9));
             Oleta.Sama(2, AjattelijaAikajana.KierrosRuudussa(a, 2300));
             Oleta.Sama(2, AjattelijaAikajana.KierrosRuudussa(a, 3330));
-            Oleta.Sama(0, AjattelijaAikajana.KierrosRuudussa(Lue("marcus"), 1450));
+            Oleta.Sama(1, AjattelijaAikajana.KierrosRuudussa(Lue("marcus"), 1450));   // Marcuksen kierrokset web #3892
             // Kohtaus jatkuu pidosta loppuun; lappu vasta lopussa (web LOPPU).
             var g = AjattelijaAikajana.Globaali(a, 120 + 1450);
             Oleta.Tosi(!g.prologi && g.ruutu == 1450 && !g.loppu, "pito ei ole enää loppu");
             g = AjattelijaAikajana.Globaali(a, 120 + 4000);
             Oleta.Tosi(g.ruutu == 3330 && g.loppu, "loppu 3330 → lappu");
             Oleta.Tosi(!AjattelijaAikajana.Globaali(a, 120 + 3329).loppu, "ennen loppua");
-            Oleta.Tosi(AjattelijaAikajana.Globaali(Lue("marcus"), 120 + 1450).loppu, "Marcus: lappu pidossa");
             // Kamera: pito kuuluu kierrokseen 1, sen jälkeen avaimet.
             Oleta.Sama(KameraVaihe.Kaiku, AjattelijaAikajana.Kamera(a, 1450).Vaihe);
             Oleta.Sama(KameraVaihe.Kierrokset, AjattelijaAikajana.Kamera(a, 1451).Vaihe);
@@ -211,8 +221,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0.0, AjattelijaAikajana.VirtaVoima(k3.Virta, 2650));
             Oleta.Tosi(Math.Abs(AjattelijaAikajana.KaikuSiirto(k3.Kaiku.Liuku, k3.Kaiku.Ruudut, 2952.5)) < 1e-12, "kaiun liu'un puoliväli");
             // Taustavirta kierroksen siemenellä: samat 20 riviä, eri asettelu.
-            var v1 = AjattelijaAikajana.Taustavirta(a.Taustavirta);
-            var v3 = AjattelijaAikajana.Taustavirta(a.Taustavirta, k3.Siemen);
+            var v1 = AjattelijaAikajana.Taustavirta(a);
+            var v3 = AjattelijaAikajana.Taustavirta(a, k3.Siemen);
             Oleta.Tosi(v3.Count == 20 && v1.Zip(v3, (x, y) => x.Rivi == y.Rivi && x.Projektori == y.Projektori).All(b => b), "samat rivit");
             Oleta.Tosi(v1.Zip(v3, (x, y) => x.Kulma != y.Kulma).Any(b => b), "eri siemen");
         }
@@ -236,7 +246,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(D(h, 1e-5)) < 1e-3 && Math.Abs(D(h, 30 - 1e-5)) < 1e-3, "päät vaakana");
             var m = AjattelijaAikajana.Kamerakayra(new[] { Avain(0, 0, 35), Avain(10, 1, 35), Avain(20, 3, 35) });
             Oleta.Tosi(Math.Abs(D(m, 10) - 0.15) < 1e-6, "kulmakerroin " + D(m, 10));
-            // Sokrateen avaimet: avaimissa tarkka, paluu Rembrandt-otokseen ja webin arvot välillä (node, web #3884).
+            // Sokrateen avaimet: avaimissa tarkka, paluu Rembrandt-otokseen ja webin arvot välillä (node, web cb61902f0 v11-avaimet).
             var a = Lue("sokrates");
             var s = AjattelijaAikajana.Kamerakayra(a.Kierrokset.Kamera);
             foreach (var av in a.Kierrokset.Kamera)
@@ -248,10 +258,10 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(s(3330).Paikka.SequenceEqual(a.Rembrandt.Paikka), "paluu Rembrandt-otokseen");
             var webista = new (double r, double[] paikka, double[] katse, double mm)[]
             {
-                (1480, new[] { -0.0289, -0.23235, 0.37415 }, new[] { -0.02995, -0.1156, 0.385 }, 26.5),
-                (2000, new[] { 0.06463763727131715, -0.21125318620385883, 0.37894363512595347 }, new[] { 0.04, -0.1083, 0.374 }, 50),
-                (2330, new[] { 0.08100938775510204, -0.1709341836734694, 0.32604999999999995 }, new[] { 0.05376642857142857, -0.09611214285714287, 0.3745 }, 34),
-                (3280, new[] { -0.032590163934426236, -0.6091, 0.28795000000000004 }, new[] { 0.006200000000000004, -0.06800409836065574, 0.3875 }, 35),
+                (1480, new[] { -0.0341, -0.20935, 0.36595 }, new[] { -0.02995, -0.1156, 0.385 }, 26.5),
+                (2000, new[] { 0.06048316415728251, -0.18519287658665917, 0.38110597957874587 }, new[] { 0.04, -0.1083, 0.374 }, 50),
+                (2330, new[] { 0.07897418367346938, -0.1584851020408163, 0.3268 }, new[] { 0.05376642857142857, -0.09611214285714287, 0.3745 }, 34),
+                (3280, new[] { -0.05565901639344262, -0.59205, 0.29464999999999997 }, new[] { 0.006200000000000004, -0.06800409836065574, 0.3875 }, 35),
             };
             foreach (var (r, p, q, mm) in webista)
             {
@@ -259,6 +269,47 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(o.Paikka.Zip(p, (x, y) => Math.Abs(x - y)).Max() < 1e-12 && o.Katse.Zip(q, (x, y) => Math.Abs(x - y)).Max() < 1e-12
                     && Math.Abs(o.Mm - mm) < 1e-12, $"ruutu {r}: {string.Join(", ", o.Paikka)} / {string.Join(", ", o.Katse)} / {o.Mm}");
             }
+        }
+
+        // ── v11 (web #3892, Linnanrakentaja d7b51a99f) ja Marcuksen kierrokset ─────────────────────────────
+
+        [Testi] static void V11AlkukuvatVarjopuolelta()
+        {
+            foreach (var t in new[] { "sokrates", "marcus" })
+            {
+                var a = Lue(t);
+                // Introkamera valon vastapuolella: x = min(−|x|, −0,22) (Sokrates ruutu 57, Marcus 51 → −0,22).
+                Oleta.Tosi(a.IntroOtokset.All(o => o.Paikka[0] <= -0.22), t + ": introkamera varjopuolella");
+                Oleta.Sama(-0.22, a.IntroOtokset[2].Paikka[0], t + " x-raja");
+                Oleta.Tosi(a.IntroValo[0].Suunta.SequenceEqual(new[] { 1.0, -0.35, 0.45 }) && a.IntroValo[1].Suunta.SequenceEqual(new[] { 1.0, 0.05, 0.5 }),
+                    t + ": intro.valo");
+                Oleta.Sama(282.0, a.IntroValo[a.IntroValo.Count - 1].R);
+                Oleta.Sama(0.2, a.IntroTayte);
+                Oleta.Tosi(a.Kaiku.Lev == 0.07 && a.Kaiku.KameraMatka.SequenceEqual(new[] { 0.15, 0.14 }), t + ": kaiku 1 lähempänä");
+                // Maailman täyte: intro.tayte alkukuvissa (r < nimi), sen jälkeen täysi (web maailma.intensity).
+                Oleta.Sama(0.2, AjattelijaAikajana.MaailmaKerroin(a, a.Ajat.Nimi[0] - 1));
+                Oleta.Sama(1.0, AjattelijaAikajana.MaailmaKerroin(a, a.Ajat.Nimi[0]));
+            }
+            var s = Lue("sokrates");
+            Oleta.Tosi(s.Kierrokset.Kamera.First(k => k.R == 2700).Paikka.SequenceEqual(new[] { 0.205, -0.1767, 0.337 }), "sokrates-luvut-v11.json");
+            // Puuttuva intro.tayte = 1 (web ?? 1).
+            var o = MiniJson.Objekti(MiniJson.Jasenna(File.ReadAllText(Kansio + "sokrates.json")));
+            ((System.Collections.Generic.Dictionary<string, object>)o["intro"]).Remove("tayte");
+            Oleta.Sama(1.0, AjattelijaData.Lue(o).IntroTayte);
+        }
+
+        [Testi] static void MarcuksenKierrokset()
+        {
+            var m = Lue("marcus");
+            var kr = m.Kierrokset;
+            Oleta.Tosi(kr != null && kr.Loppu == 3330, "Marcuksen kierrokset");
+            Oleta.Tosi(kr.Lista.Select(k => k.PaalauseAvain).SequenceEqual(new[] { "itselleen-4-49", "itselleen-2-11" }), "päälauseet");
+            Oleta.Tosi(kr.Lista[0].Lause.Sade.SequenceEqual(new[] { -0.035, 0.360 }) && kr.Lista[1].Lause.Sivulta != null, "4.49 poskella, 2.11 sivulla");
+            Oleta.Tosi(kr.Lista.Select(k => k.Kaiku.Kuva.Split('/').Last()).SequenceEqual(new[] { "kaiku-uhri.png", "kaiku-kuolema.png" }), "kaikukuvat");
+            Oleta.Tosi(kr.Puhe.StartsWith("ajattelijat/marcus/v1/") && kr.Syke == "ajattelijat/marcus/v1/syke-kierrokset.json", "Marcuksen raidat");
+            Oleta.Tosi(kr.Lista.Select(k => k.AtlasRivi).SequenceEqual(new[] { 21, 22 }) && m.Atlas.Paikat.Count == 23, "atlasrivit");
+            Oleta.Tosi(AjattelijaAikajana.Kamerakayra(kr.Kamera)(3330).Paikka.SequenceEqual(m.Rembrandt.Paikka), "paluu Rembrandt-otokseen");
+            Oleta.Tosi(AjattelijaAikajana.Globaali(m, 120 + 3330).loppu && !AjattelijaAikajana.Globaali(m, 120 + 1450).loppu, "lappu kierrosten lopussa");
         }
     }
 }
