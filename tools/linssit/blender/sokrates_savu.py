@@ -23,15 +23,17 @@ def nauha(t):
         s = i / 599                                   # 0 alhaalla → 1 ylhäällä
         v = 1.05 - 1.1 * s
         # saumaton silmukka: ajan kertoimet kokonaislukuja (t = 0 ja t = 1 sama kuva)
-        u = (0.5 + 0.22 * math.sin(w * (0.9 * s - t)) + 0.03 * math.sin(w * (4.0 * s - 3 * t))   # heilunta ±6 cm: pyyhkii kaikuhahmon yli + 0.035 * math.sin(w * (2.3 * s - 2 * t) + 0.3)
+        # v5 (Päätoimittaja 3.10.): reitti kaikukuvan ja päälauseen kirkkaan keskiosan yli (heilunta ±2 cm)
+        u = (0.5 + 0.07 * math.sin(w * (0.9 * s - t)) + 0.025 * math.sin(w * (4.0 * s - 3 * t))
              + 0.02 * math.sin(w * (t + 0.6 * s)))
         # kiekura: selvä silmukka, joka nousee kuva-alan läpi yhden kierron aikana (ääripäissä nauha on ohut)
         ds = ((s - t + 0.5) % 1.0) - 0.5; kiemura = math.exp(-(ds * 5.0) ** 2)   # jaksollinen: ei hyppyä saumassa
         fii = w * 5.0 * ds   # yksi täysi kierros kiemuran leveydellä: säde 0,06 > nousunopeus → nauha kiertyy silmukaksi
-        u += 0.07 * kiemura * math.sin(fii); v += 0.07 * kiemura * (math.cos(fii) - 1.0)
+        u += 0.06 * kiemura * math.sin(fii); v += 0.06 * kiemura * (math.cos(fii) - 1.0)
         ds2 = ((s - t + 0.0) % 1.0) - 0.5; k2 = math.exp(-(ds2 * 6.0) ** 2); f2 = -w * 6.0 * ds2   # toinen, vastakkainen kiekura
-        u += 0.045 * k2 * math.sin(f2); v += 0.045 * k2 * (math.cos(f2) - 1.0)   # iso, selvä kiekura
-        paksuus = (0.0100 + 0.0040 * math.sin(w * (1.7 * s - t)) ** 2)   # kiemurteleva viiva 5–7 px = 2,8–3,9 mm pinnalla (ala 0,28 m) * (0.35 + 0.65 * math.sin(math.pi * s))
+        u += 0.04 * k2 * math.sin(f2); v += 0.04 * k2 * (math.cos(f2) - 1.0)
+        # v5: ydin 15–18 px / 512 = 8–10 mm pinnalla (ala 0,28 m), puhelimessa ~15–20 px; päät ohenevat vähän
+        paksuus = (0.0300 + 0.0050 * math.sin(w * (1.7 * s - t)) ** 2) * (0.70 + 0.30 * math.sin(math.pi * s))
         pts.append((u, v, paksuus))
     return pts
 
@@ -49,4 +51,9 @@ for k in range(N):
         d.ellipse([((u1 - p1 / 2) * K_, (v1 - p1 / 2) * K_), ((u1 + p1 / 2) * K_, (v1 + p1 / 2) * K_)], fill=int(255 * TUMMUUS))
     kuva = kuva.resize((KOKO, KOKO), Image.LANCZOS).filter(ImageFilter.GaussianBlur(PEHMEYS))
     kuva.point(lambda x: 255 - x).save(os.path.join(ULOS, f'savu-{k + 1:04d}.png'))
+if '--atlas' in A:   # web: 256 px/ruutu, 16 saraketta × 15 riviä, ruutu 1 vasemmassa yläkulmassa, rivi kerrallaan
+    RA = 256; SA = 16; RI = math.ceil(N / SA); at = Image.new('L', (SA * RA, RI * RA), 255)
+    for k in range(N):
+        at.paste(Image.open(os.path.join(ULOS, f'savu-{k + 1:04d}.png')).resize((RA, RA), Image.LANCZOS), ((k % SA) * RA, (k // SA) * RA))
+    at.save(A[A.index('--atlas') + 1]); print('ATLAS', A[A.index('--atlas') + 1], at.size)
 print('SAVU', ULOS, N, 'kuvaa', KOKO, 'px, pehmeys', round(PEHMEYS, 1), 'px')
