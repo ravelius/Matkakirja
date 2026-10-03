@@ -310,8 +310,9 @@ namespace Matkakirja.Natiivi
             materiaali.SetFloat("_KuuVoima", KuunvaloPois ? 0f : KuunvalonVoima);
             bool kuva = Matkakirja.Natiivi.Avaruus.KuvaputkiAsetettu;   // pelaajan ISS-kamera: kapeampi heijastus, terävä vesiraja
             materiaali.SetFloat("_TaivasHeijastus", TaivasHeijastusPois ? 0f : kuva ? 0.15f : 0.3f);
-            // Terävä vesiraja aina (Päätoimittaja 3.10.: kiilto vain vedessä, rannat tarkasti rajattuina); ennen vain kuvaputkessa.
-            materiaali.SetFloat("_VesiTerava", kuva || !KiiltoVanha ? 1f : 0f);
+            // Terävöinti vain kuvaputkessa (simu 15d39449–51861426: aina päällä se teki avomeren vesimaskin kohinasta pikselirakeita
+            // kiiltoon). Rannat pysyvät puhtaina, koska kiillon huippu ei enää levitä bloomia maalle.
+            materiaali.SetFloat("_VesiTerava", kuva ? 1f : 0f);
             materiaali.SetFloat("_AamuVoima", Matkakirja.Natiivi.Avaruus.Kuvaputki ? Matkakirja.Natiivi.Avaruus.KuvanNousu : 0f);
         }
 
