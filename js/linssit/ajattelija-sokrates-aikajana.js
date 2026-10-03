@@ -426,7 +426,9 @@ export const SOKRATES_AIKAJANA = Object.freeze({
   "ala": 0.28,
   "kesto": 8,
   "fps": 30,
-  "ruutuja": 240
+  "ruutuja": 240,
+  "ydin": 0.28,
+  "vahvuus": 0.95
  },
  "efektit": [["01-projektori-naksahdus", 42.68],
   ["01-projektori-naksahdus", 44.56],

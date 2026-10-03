@@ -860,6 +860,10 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
         u.pSavu.value = tk;
         u.pSavuTila.value.x = 1;
         u.pSavuTila.value.y = AJ.savu.ala;
+        // Ytimen tummennus (oletus 95 %, ?savuvahvuus=0..1): ydin (maskin tummin arvo) → 1 − vahvuus, tausta 1 pysyy.
+        const vahvuus = Number(haku.get('savuvahvuus')) || AJ.savu.vahvuus || 0;
+        const ydin = AJ.savu.ydin ?? 0.28;
+        u.pSavuC0.value = vahvuus > 1 - ydin ? (ydin - (1 - vahvuus)) / vahvuus : 0;
       }).catch((syy) => console.warn('ajattelija: savumaski', syy));
     }
 

@@ -78,7 +78,11 @@ const virta = v0.filter(([r]) => r > 1).map(([r, e]) => [r, pyor(e / perus)]);
 const c = d.v13c ?? {};
 const vaisto = (c.virta_vaisto ?? []).map((x) => ({ kohde: pv(x.kohde), sade: x.sade_m, ruudut: x.ruudut }));
 const SAVU = A.includes('--savu') ? A[A.indexOf('--savu') + 1] : null;
-const savu = c.savu && SAVU ? { kuva: SAVU, ala: c.savu.ala_m, kesto: c.savu.kesto_s, fps: c.savu.fps, ruutuja: Math.round(c.savu.kesto_s * c.savu.fps) } : null;
+// Vahvuus: ytimen tummennus (Päätoimittaja 3.10.2026: noin 95 %); ydin = atlaksen tummin arvo (v4: 72/255).
+const savu = c.savu && SAVU ? {
+  kuva: SAVU, ala: c.savu.ala_m, kesto: c.savu.kesto_s, fps: c.savu.fps, ruutuja: Math.round(c.savu.kesto_s * c.savu.fps),
+  ydin: 0.28, vahvuus: 0.95,
+} : null;
 
 const aikajana = {
   versio: 'v13',

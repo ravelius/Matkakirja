@@ -93,6 +93,8 @@ export function lisaaProjektorit(THREE, materiaali, atlasTekstuuri) {
     pSavu: { value: null },
     pSavuTila: { value: new THREE.Vector4() },
     pSavuKanava: { value: new THREE.Vector4(1, 0, 0, 0) },
+    // Maskin tasokorjaus (Päätoimittaja 3.10.2026: ydin lähes täysi varjo, reuna terävä, leveys ennallaan): m' = (m − c0) / (1 − c0).
+    pSavuC0: { value: 0 },
     pKaikuVari: { value: new THREE.Color(1, 1, 1) },
   };
   materiaali.onBeforeCompile = (shader) => {
@@ -121,6 +123,7 @@ uniform vec4 pVaisto[2];
 uniform sampler2D pSavu;
 uniform vec4 pSavuTila;
 uniform vec4 pSavuKanava;
+uniform float pSavuC0;
 /* Väistö: taustavirta jättää kaiun ympärille tyhjän kehän, reuna pehmenee 15 % säteestä (Linnanrakentaja v13c). */
 float pVaistoKerroin(vec3 p) {
   float k = 1.0;
@@ -133,7 +136,8 @@ float pVaistoKerroin(vec3 p) {
 float pSavuNayte(float x, float y) {
   vec2 uv = vec2(x, y) / pSavuTila.y + 0.5;
   if (uv.x <= 0.0 || uv.x >= 1.0 || uv.y <= 0.0 || uv.y >= 1.0) return 1.0;
-  return dot(texture2D(pSavu, pSavuTila.zw + uv * 0.125), pSavuKanava);
+  float m = dot(texture2D(pSavu, pSavuTila.zw + uv * 0.125), pSavuKanava);
+  return clamp((m - pSavuC0) / (1.0 - pSavuC0), 0.0, 1.0);
 }
 uniform vec3 pKaikuVari;      // seepia
 float pNayte(int i, float jx, float jy, float sk, float sumeus) {
