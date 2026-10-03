@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 3.10. 18:23 (päiväkooste):** Päivä 09:53–18:23 vakaa, levy 57–82 Gi, muisti 46–88 % vapaa, wt/ 28–40 (raja 40; wt/ saavutti 40:n 14.41, Päätoimittaja siivosi 12 proto-worktreetä → 28). Kävijälaskuri kasvoi 28→29 (16.00, ilmoitettu). Kevyt tila 15.25–15.42 (omistaja tarvitsi konetta), ei raskaita tarkistuksia sillä välin. Avustin Päätoimittajan oman session nollauksessa 14.5x (nollaus onnistui, aloitusviesti lähetetty). Ei muita poikkeamia.
+
 **Päivitetty 3.10. 09:53 (yökooste):** Yö 22:42–09:53 vakaa koko ajan, levy 70–82 Gi, muisti 46–88 % vapaa (lyhyt pudotus 46 %:iin 08:49, palautui), wt/ 32–36 (raja 40), sim 0–1. Kävijälaskuri kasvoi tasaisesti 24→28 (ilmoitettu Päätoimittajalle kussakin kasvussa: 00.17, 02.57, 04.01, 06.09). Ei muita poikkeamia. Jatkan 15 min tahdilla.
 
 **Päivitetty 2.10. 22:5x:** Korjaus edelliseen: viestirajan hook on OK (oma testini oli virheellinen, skripti ajettiin repon ulkopuolelta — Päätoimittaja korjasi). T7:n kaksi worktreeta ovat Codexin omia, ei poikkeama. Uudet hälytysrajat Päätoimittajalta: levy < 50 Gi, wt/ > 40 (ent. 45/20). Kuorma selittyy ajossa olevilla poltoilla, ei toimia vaadi.
