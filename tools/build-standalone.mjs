@@ -1139,6 +1139,7 @@ const MODULES = [
   // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
   'js/kehittaja-pikatie.js',
   'js/lehtikuori.js',
+  'js/linssit/ajattelija-sokrates-aikajana.js',
   'js/linssit/ajattelija-sokrates.js',
   'js/linssit/ajattelija-marcus.js',
   'js/linssit/ajattelija-projektori.js',
