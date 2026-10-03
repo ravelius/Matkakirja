@@ -527,7 +527,8 @@ namespace Matkakirja.Natiivi
                 }
                 kuva.VarrenAlin = Mathf.Max(Alin(NivelY), Alin(PaaY));
                 kuva.VarrenAlinEvasta = kuva.VarrenAlin - worldBound.yMax;
-                kuva.KyynarEvasta = Alin(NivelY) - worldBound.yMax;
+                // Kyynärpää = nivelen keskipiste (kuva c9e42de3: puomin alareuna nivelessä oli 40 pt näkyvän kyynärpään alapuolella).
+                kuva.KyynarEvasta = this.LocalToWorld(m.Kuvaa(new Vector2(NivelX, NivelY + Nosto))).y - worldBound.yMax;
                 {
                     float dx = 113.5f - 113, dy = 258.5f - 300;   // visiirin soikion keskipiste (Soikio), keinunta mukana
                     var kp = m.Kuvaa(new Vector2(113 + dx * ca - dy * sa, 300 + dx * sa + dy * ca + Nosto));

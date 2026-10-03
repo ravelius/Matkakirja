@@ -350,7 +350,7 @@ namespace Matkakirja.Natiivi
         public Vector3? Lasi { get; set; }
 
         /// <summary>Ikkunan takana: kypärän keskipiste ruudun korkeudesta, väli lasin reunaan (pt) ja Pulun oikea reuna kuvassa (viewBox).</summary>
-        const float LasiKypara = 0.62f, LasiVali = 12f, RobottiPuluOikea = 145f, KyynarVara = 24f;
+        const float LasiKypara = 0.62f, LasiVali = 12f, RobottiPuluOikea = 145f, KyynarVara = 40f;   // vara: lasin malli ~20 pt näkyvää reunaa ylempänä
 
         /// <summary>Vaakatilan este robottikäden puomille (pienen paneelin vasen yläkulma, paneelin pisteinä); null = Pulu AlaVaran yllä.</summary>
         public Vector2? VarrenEste { get; set; }
