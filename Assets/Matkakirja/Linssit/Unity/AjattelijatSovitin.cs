@@ -843,6 +843,25 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"ajattelija: rivinraja {AjattelijaNayttamo.RajaOhitus} kulma {AjattelijaNayttamo.KulmaOhitus0}–{AjattelijaNayttamo.KulmaOhitus1} (NaN = data)");
                 return;
             }
+            else if (mita == "pcm" && arvo != null)
+            {
+                // Mittaus (Linssiseppä 2 4.10.): Unityn dekoodaama musiikki 1 s hetkestä <s> (raidan näyte, ei ohitusta) monona
+                // float32-tiedostoon Documents/ajattelija-pcm.raw: ristikorrelaatio ffmpeg-dekoodausta vasten antaa alkusiirtymän.
+                var c = musiikki?.clip;
+                if (c == null) { o.Kirjaa("ajattelija: pcm: ei musiikkia"); return; }
+                int alku = (int)(double.Parse(arvo, System.Globalization.CultureInfo.InvariantCulture) * c.frequency), n = c.frequency;
+                var d = new float[n * c.channels];
+                if (!c.GetData(d, alku)) { o.Kirjaa("ajattelija: pcm: GetData epäonnistui"); return; }
+                var tavut = new byte[n * 4];
+                for (int i = 0; i < n; i++)
+                {
+                    float x = 0; for (int k = 0; k < c.channels; k++) x += d[i * c.channels + k];
+                    BitConverter.GetBytes(x / c.channels).CopyTo(tavut, i * 4);
+                }
+                System.IO.File.WriteAllBytes(System.IO.Path.Combine(Application.persistentDataPath, "ajattelija-pcm.raw"), tavut);
+                o.Kirjaa($"ajattelija: pcm {alku} → +{n} näytettä ({c.frequency} Hz, {c.channels} kan, klippi {c.samples}, ohitus {Mp3Ohitus(c)})");
+                return;
+            }
             else if (mita == "viive" && arvo != null)
             {
                 // Mittauksen kalibrointi: lisäsiirto ms (+ = kuva myöhemmin); vaikuttaa heti (kello lasketaan joka ruutu).

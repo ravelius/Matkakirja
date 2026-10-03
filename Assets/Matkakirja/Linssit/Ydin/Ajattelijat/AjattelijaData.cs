@@ -122,7 +122,7 @@ namespace Matkakirja.Linssit.Ajattelijat
         /// </summary>
         public double RajaKoko = OletusRajaKoko;
         public double[] RajaKulma = { 0.2, 0.4 };
-        public const double OletusRajaKoko = 0.05;
+        public const double OletusRajaKoko = 0.065;
         public uint Siemen;
         public double[] Rivikork, Ajat;
         public Dictionary<string, double[]> Kirkkaus = new Dictionary<string, double[]>();
