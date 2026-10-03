@@ -1652,7 +1652,8 @@ namespace Matkakirja
         {
             Laattapalvelin.Esilataa(polut, e);
             int kermaN = 0;
-            if (!string.IsNullOrEmpty(maa))
+            // Vain kermamaille (Alueet.OnKerma, webin pariteetti): muilla maille <ISO>/laatat.json on 404 (esim. Malta).
+            if (!string.IsNullOrEmpty(maa) && Alueet.OnKerma(maa))
             {
                 // Maan huntusarjan luettelo levylle samasta taustajonosta; Varitaso lukee sen saapuessa välimuistista.
                 string luettelo = Varitaso.Kansio + maa + "/laatat.json";

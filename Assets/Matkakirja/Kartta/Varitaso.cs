@@ -198,6 +198,15 @@ namespace Matkakirja
         {
             if (string.IsNullOrEmpty(maa)) { Poista(); ladattu = null; Maa = null; yield break; }
             if (!huntu) { Poista(); ladattu = null; Maa = maa; yield break; }
+            if (!Alueet.OnKerma(maa))
+            {
+                // Maa ilman kermasarjaa offline.jsonissa (webin pariteetti): pelkkä pohja, luetteloa ei haeta (ennen 404).
+                Poista();
+                ladattu = null;
+                Maa = null;
+                Debug.Log($"MATKAKIRJA väritaso: {maa} ei sarjaa (ei kerma-kenttää)");
+                yield break;
+            }
             string url = Laattapalvelin.Paikallinen(Laattapalvelin.Ampari + Kansio + maa + "/laatat.json");
             using (var r = UnityWebRequest.Get(url))
             {
