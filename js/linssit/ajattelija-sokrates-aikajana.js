@@ -422,12 +422,12 @@ export const SOKRATES_AIKAJANA = Object.freeze({
    "ruudut": [3051, 3266]
   }],
  "savu": {
-  "kuva": "ajattelijat/sokrates/v3/savu-atlas-v4.png",
+  "kuva": "ajattelijat/sokrates/v3/savu-atlas-v5.png",
   "ala": 0.28,
   "kesto": 8,
   "fps": 30,
   "ruutuja": 240,
-  "ydin": 0.28,
+  "ydin": 0.286,
   "vahvuus": 0.95
  },
  "efektit": [["01-projektori-naksahdus", 42.68],
