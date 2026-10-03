@@ -39,3 +39,18 @@ test('aikajana luvuista on kirjasto: sama muunnos CLI:lle ja natiivin muuntimell
   assert.match(natiivi, /await import\('\/atlas\.js'\)/);
   assert.match(lue('../tools/ajattelija-atlas-selain.js'), /export function piirraAtlas\(rivit, doc = document\)/);
 });
+
+test('ajattelijaputki: puuttuvat syötteet roolin mukaan, ei arvausta; resepti uudelle ajattelijalle ilman koodimuutosta', async () => {
+  const { spawnSync } = await import('node:child_process');
+  const ajo = spawnSync('node', [new URL('../tools/ajattelija-putki.mjs', import.meta.url).pathname, 'testiajattelija-ei-ole'], { encoding: 'utf8' });
+  assert.equal(ajo.status, 1);
+  for (const rooli of ['Sisältökirjuri', 'Linssiseppä', 'Linnanrakentaja', 'Codex / Sisältökirjuri']) assert.match(ajo.stderr, new RegExp(`  ${rooli}:`));
+  assert.match(ajo.stderr, /putki pysähtyy, mitään ei arvata/);
+  const putki = lue('../tools/ajattelija-putki.mjs');
+  for (const vaihe of ['ajattelija-aaniraita.mjs', 'ajattelija-syke.py', 'ajattelija-natiivi.mjs', 'vie-paketti.sh']) assert.ok(putki.includes(vaihe), vaihe);
+  assert.match(lue('../tools/ajattelija-aaniraita.mjs'), /const R = RESEPTIT\[AJATTELIJA\] \?\? YLEINEN;/);
+  for (const f of ['sokrates', 'marcus']) {
+    const p = JSON.parse(lue(`../data/ajattelijat/putki/${f}.json`));
+    assert.ok(p.kertoja.tiedosto && p.kertoja.ajat && p.musiikki.tiedosto && p.efektit.kansio && Number.isFinite(p.vaimennusDb), f);
+  }
+});
