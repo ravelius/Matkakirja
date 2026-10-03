@@ -1189,6 +1189,9 @@ PAAN_PROJEKTORIT = (  # v10 (omistaja 2.10. 08.4x): taustavirta koko pään alue
 
 VIRTA_AVAIMET = None   # v13: taustavirran (ruutu, kerroin) -avaimet koko kohtaukselle
 VIRTA_VAISTO = []      # v13c: [(kaiun kohdepiste, säde m, alku, loppu)] — virta väistää kaikukuvan
+KAIKU_LAHTEET = {   # v14: kaikukuvien attribuutio lukuihin (Päätoimittaja 4.10.)
+    'kaiku-uhri.png': 'José Luiz, CC BY-SA 4.0, Wikimedia Commons: "Marcus Aurelius showing sacrifice - Arch of Marcus Aurelius - Musei Capitolini - Rome 2016.jpg" (rajattu, johdannainen CC BY-SA 4.0)',
+}
 V14_AUR = []           # v14: tekstivaiheen auringon avaimet (ruutu, suunta, energia ×0,3, väri) ennen kattoa
 V14_PYYHKAISY = 12.0   # Päätoimittaja 16.5x: pyyhkäisy tekstien aikana hienovarainen hohde (oli 70 → kasvot valkoisiksi)
 
@@ -1328,7 +1331,7 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
                          liuku=0.02, haivytys=haiv, varjo=0.0,
                          # omistaja 3.10. 08.1x "kuvat värittöminä": neutraali valkoinen projektori (kuvat ovat harmaasävyisiä)
                          savy=(1.0, 1.0, 1.0) if KAIKUVARI == 'neutraali' else (1.0, 0.78, 0.52))   # v13b: pistemäinen projektori = kuva terävä pinnalla
-        kaiut.append({'nimi': nimi, 'kuva': kuva, 'alku_s': round(a_t, 2), 'loppu_s': round(l_t, 2)})
+        kaiut.append({'nimi': nimi, 'kuva': kuva, 'alku_s': round(a_t, 2), 'loppu_s': round(l_t, 2), **({'lahde': KAIKU_LAHTEET[kuva]} if V14 and kuva in KAIKU_LAHTEET else {})})
     jum_t = T(W.get('jumalankuvia', K['01'][1] - 1.4))
     SAVUKOE = '--savukoe' in A   # koevideo: Zeus 10,5 s savun kanssa, ei sotilasta eikä 38a:ta
     kaiku('kaiku-jumala', 'kaiku-jumala.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, jum_t, (k_('03', 0) - 0.3) if SAVUKOE else k_('02', 0) + 1.2, 9.0, haiv=30)   # himmeä
@@ -1488,14 +1491,15 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
         if V13C: VIRTA_VAISTO.append((tuple(q), 0.55 * math.hypot(lev, lev * kk_.size[1] / kk_.size[0]), F(a_t), F(l_t)))
         kaiku_projektori(nimi, q, (nn + viisto).normalized(), 0.6, lev, os.path.join(gobot, kuva), (F(a_t), F(l_t)), voima,
                          liuku=0.02, haivytys=haiv, varjo=0.0, savy=(1.0, 1.0, 1.0) if KAIKUVARI == 'neutraali' else (1.0, 0.78, 0.52))
-        kaiut.append({'nimi': nimi, 'kuva': kuva, 'alku_s': round(a_t, 2), 'loppu_s': round(l_t, 2)})
+        kaiut.append({'nimi': nimi, 'kuva': kuva, 'alku_s': round(a_t, 2), 'loppu_s': round(l_t, 2), **({'lahde': KAIKU_LAHTEET[kuva]} if V14 and kuva in KAIKU_LAHTEET else {})})
     sade_t = w_('taivas', k_('04', 0) + 3.5); uhri_t = w_('uhrasi', k_('06', 0)); sair_t = w_('sairastui', k_('08', 0) + 1.5)
     kaiku('kaiku-sade', 'kaiku-sade.png', vp if V14 else p, vn if V14 else n,   # v14: poskelle (otsalla jumalan kasvot hukkuivat kiharoihin)
           Vector((0.0, -0.55, 0.30)) if V14 else SIVU * 0.55 + YLOS * 0.25, 0.121 if V14 else 0.10,   # v14: yksinkertainen (pää + parta), sama pinta-ala
           sade_t, k_('05', 0) - 0.3, 26.0)
-    kaiku('kaiku-uhri', 'kaiku-uhri.png', sp, sn, SIVU * 0.55 + YLOS * 0.30, 0.08, uhri_t, k_('07', 0) - 0.3, 22.0)
+    kaiku('kaiku-uhri', 'kaiku-uhri.png', sp, sn, SIVU * 0.55 + YLOS * 0.30, 0.07 if V14 else 0.08,   # v14: Capitolinen hunnutettu Marcus, sama pinta-ala
+          uhri_t, k_('07', 0) - 0.3, 22.0)
     kaiku('kaiku-kuolinvuode', 'kaiku-kuolinvuode.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.102 if V14 else 0.11,   # v14: pää + ylävartalo
-          sair_t, k_('09', 0) - 0.2, 50.0, haiv=24)
+          sair_t, k_('09', 0) - 0.2, 25.0 if V14 else 50.0, haiv=24)   # v14: 50 ylivalotti kasvot, käden ja rinnan
     lainaukset = []
     def lainaus(nimi, kuva, q, suunta, ala, kork, kap, raja=None):
         if V14:   # Päätoimittaja 3.10.: lainaus luettavissa KOKONAAN → kiinteä 2–3-rivinen heijastus (ei vierivää ikkunaa)
@@ -1845,7 +1849,8 @@ if '--v7' in A:
         json.dump({'kohde': KOHDE, 'versio': 'v12' if V12 else 'v11' if V11 else 'v10',
                    'v13': V13_AIKA if V13 else None,
                    'v14': {'intro_linssin_aika_s': V14_INTRO, 'prologi_ruutua': 75, 'kytkin_ruutu': 30, 'valo_taysi_ruutu': 58,
-                           'leikkaukset_kohtauksen_ruutu': [r_ for r_, *_ in V7_OTOKSET[2:]], 'kertoja_kohtauksen_s': V13_KERTOJA_ALKAA,
+                           'leikkaukset_kohtauksen_ruutu': [r_ for r_, *_ in V7_OTOKSET[2:]], 'leikkaukset_musiikin_s': [round((r_ - 1) / 30, 3) for r_, *_ in V7_OTOKSET[2:]],
+                           'ruutu_aika': 'musiikin aika s = (ruutu − 1) / 30 (ruutu 1 = 0,0 s)', 'kertoja_kohtauksen_s': V13_KERTOJA_ALKAA,
                            'prologi_valot': [{'nimi': n_, 'paikka': p_, 'kohde': k_, 'teho_w': e_, 'keila_aste': kk_, 'blend': 0.45, 'vari': (1.0, 0.86, 0.66)}
                                              for n_, p_, k_, e_, kk_ in PROLOGI_VALOT],
                            'ymparisto_voima_avaimet': [list(x_) for x_ in V14_YMPARISTO],

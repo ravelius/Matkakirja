@@ -6,6 +6,16 @@
 import sys
 from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageOps
 
+# lisäliput (4.10.): --reuna ala=0.3,oikea=0.3 (häivytysmatka osuutena lyhyemmästä sivusta, oletus ala 0,25 / muut 0,14)
+#                    --musta 0.28 (mustapiste: luma alle tämän → läpinäkyvä, liuku sen yläpuolella; tumma tausta ei valaise)
+LIPUT = {}
+for nimi_ in ('--reuna', '--musta'):
+    if nimi_ in sys.argv:
+        i_ = sys.argv.index(nimi_); LIPUT[nimi_] = sys.argv[i_ + 1]; del sys.argv[i_:i_ + 2]
+REUNA = {'ala': 0.25, 'yla': 0.14, 'vasen': 0.14, 'oikea': 0.14}
+for kv in LIPUT.get('--reuna', '').split(','):
+    if '=' in kv: REUNA[kv.split('=')[0]] = float(kv.split('=')[1])
+MUSTA = float(LIPUT.get('--musta', 0))
 lahde, ulos, tapa = sys.argv[1], sys.argv[2], sys.argv[3]
 src = Image.open(lahde)
 x0, y0, x1, y1 = map(int, sys.argv[4:8]) if len(sys.argv) >= 8 else (0, 0) + src.size
@@ -14,7 +24,11 @@ if tapa == 'rajattu':
     # sävyt S-käyrällä kuten keski-tilassa, ei soikiota, ei sumennusta (reuna ei hehku)
     import math as _m
     rgba = src.convert('RGBA').crop((x0, y0, x1, y1)); rgba.thumbnail((2048, 2048), Image.LANCZOS)
-    alfa = rgba.getchannel('A'); im = ImageOps.autocontrast(rgba.convert('L'), cutoff=1.0, mask=alfa.point(lambda v: 255 if v > 128 else 0))
+    alfa = rgba.getchannel('A')
+    if MUSTA > 0:   # mustapiste: tumma tausta (esim. sohva) ei valaise — luma → alfa, pehmeä liuku 0,12 mustapisteen yläpuolelle
+        luma = rgba.convert('L'); mp_, lv_ = MUSTA * 255, 0.12 * 255
+        alfa = ImageChops.multiply(alfa, luma.point(lambda v: 0 if v <= mp_ else min(255, int(255 * ((v - mp_) / lv_) ** 1.5))))
+    im = ImageOps.autocontrast(rgba.convert('L'), cutoff=1.0, mask=alfa.point(lambda v: 255 if v > 128 else 0))
     s_ = lambda x: 0.5 + 0.5 * _m.tanh(2.6 * (x - 0.5)) / _m.tanh(1.3)
     # projektorissa musta = ei valoa: alfa kerrotaan sävyyn (maski), ja hahmon sisäsävyt nostetaan välille 0,27–1,0,
     # jotta tummakin hahmo (hopliittipronssi) piirtyy valona eikä katoa varjoon
@@ -25,7 +39,7 @@ if tapa == 'rajattu':
     for nimi_, laatikko in (('yla', (0, 0, w_, 1)), ('ala', (0, h_ - 1, w_, h_)), ('vasen', (0, 0, 1, h_)), ('oikea', (w_ - 1, 0, w_, h_))):
         reuna = alfa.crop(laatikko).point(lambda v: 255 if v > 128 else 0)
         if sum(reuna.tobytes()) / 255 < 0.02 * max(reuna.size): continue
-        k_ = Image.new('L', (w_, h_), 255); r_ = max(2, int((0.25 if nimi_ == 'ala' else 0.14) * min(w_, h_)))   # alareuna: hahmo jatkuu yleensä kirkkaana leikkaukseen asti
+        k_ = Image.new('L', (w_, h_), 255); r_ = max(2, int(REUNA[nimi_] * min(w_, h_)))   # alareuna: hahmo jatkuu yleensä kirkkaana leikkaukseen asti
         if nimi_ == 'yla': k_.paste(ramppi.resize((w_, r_)), (0, 0))
         elif nimi_ == 'ala': k_.paste(ramppi.resize((w_, r_)).transpose(Image.FLIP_TOP_BOTTOM), (0, h_ - r_))
         elif nimi_ == 'vasen': k_.paste(ramppi.transpose(Image.ROTATE_90).resize((r_, h_)), (0, 0))   # ROTATE_90: tumma vasemmalla
