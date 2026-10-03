@@ -449,7 +449,7 @@
  "syke": "ajattelijat/sokrates/v1/syke-musiikki.json",
  "aikajana": {
   "versio": "v13",
-  "lahde": "linnanrakentaja-sokrates-bysti 78b883452 docs/raportit/ajattelijat-v11/sokrates-luvut-v14.json",
+  "lahde": "linnanrakentaja-sokrates-bysti ad3f687b0 docs/raportit/ajattelijat-v11/sokrates-luvut-v14.json",
   "loppu": 2938,
   "kertoja": {
    "alku": 9.5,
@@ -1954,7 +1954,7 @@
   ],
   "kaiut": [
    {
-    "kuva": "ajattelijat/sokrates/v3/kaiut-v13c/kaiku-jumala.png",
+    "kuva": "ajattelijat/sokrates/v3/kaiut-v14b/kaiku-jumala.png",
     "paikka": [
      0.305,
      -0.5325,
@@ -1994,7 +1994,7 @@
     ]
    },
    {
-    "kuva": "ajattelijat/sokrates/v3/kaiut-v13c/kaiku-sotilas.png",
+    "kuva": "ajattelijat/sokrates/v3/kaiut-v14b/kaiku-sotilas.png",
     "paikka": [
      0.305,
      -0.5325,
@@ -2034,7 +2034,7 @@
     ]
    },
    {
-    "kuva": "ajattelijat/sokrates/v3/kaiut-v13c/kaiku-oraakkeli.png",
+    "kuva": "ajattelijat/sokrates/v3/kaiut-v14b/kaiku-oraakkeli.png",
     "paikka": [
      0.3368,
      -0.6041,
@@ -2045,9 +2045,9 @@
      0.8263,
      -0.2695
     ],
-    "ala": 0.1609,
-    "lev": 0.08,
-    "kork": 0.16094,
+    "ala": 0.1171,
+    "lev": 0.055,
+    "kork": 0.11709,
     "blend": 0.3,
     "liuku": 0.02,
     "ruudut": [
@@ -2074,20 +2074,20 @@
     ]
    },
    {
-    "kuva": "ajattelijat/sokrates/v3/kaiut-v13c/kaiku-kuolema.png",
+    "kuva": "ajattelijat/sokrates/v3/kaiut-v14b/kaiku-kuolema.png",
     "paikka": [
-     0.4482,
+     0.4632,
      -0.5409,
-     0.4448
+     0.4648
     ],
     "suunta": [
      -0.6296,
      0.7682,
      -0.1163
     ],
-    "ala": 0.1488,
-    "lev": 0.11,
-    "kork": 0.1488,
+    "ala": 0.125,
+    "lev": 0.125,
+    "kork": 0.11096,
     "blend": 0.3,
     "liuku": 0.02,
     "ruudut": [
@@ -2101,11 +2101,11 @@
      ],
      [
       2520,
-      70
+      30
      ],
      [
       2687,
-      70
+      30
      ],
      [
       2711,
@@ -2211,7 +2211,7 @@
      -0.1083,
      0.374
     ],
-    "sade": 0.0989,
+    "sade": 0.0711,
     "ruudut": [
      1075,
      1449
@@ -2219,11 +2219,11 @@
    },
    {
     "kohde": [
-     0.0704,
+     0.0854,
      -0.08,
-     0.375
+     0.395
     ],
-    "sade": 0.1018,
+    "sade": 0.0919,
     "ruudut": [
      2496,
      2711
