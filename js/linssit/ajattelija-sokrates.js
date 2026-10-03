@@ -199,6 +199,15 @@ export const SOKRATES = Object.freeze({
    */
   aikajana: {
     ...SOKRATES_AIKAJANA,
+    /*
+     * V14 (omistaja 3.10.2026 klo 15.4x): päälainaus korttina (koko lause kerralla luettavissa, terävä ja kirkkain) ja
+     * taustavirran rivit epäterävinä yksi kerrallaan kasvojen eri puolilta: ensimmäinen 12,3 s linssin ajassa
+     * (kohtauksen ruutu 295, kertojan alku), sitten 0,5 s:n välein; rivi juoksee sisään kasvojen reunasta (rintama 3 ×
+     * tekstin nopeus, alku 55 % keilan puolileveydestä). Rivien voima 0,6 (päälainaus kirkkain); kortti väistää rivit.
+     */
+    lauseKortti: { merkkeja: 20, leveys: 0.075 },
+    virtaPorrastus: { alku: 295, vali: 15, haivytys: 12, rintama: 3, reuna: 0.55 },
+    virtaVoima: 0.6,
     // V14: puhe = kertoja (sama William-otto, 9,5 s:sta kohtauksen alusta) + efektit; musiikki Linssisepän v14-sävellys
     // (iskut 2,0 / 3,9 / 4,5 / 5,1 / 6,1 s, −8 dB puheen alla). Zarathustralla ei ole v14-ajoitusta, joten vaihtoehto pois.
     // ÄMPÄRIIN vasta omistajan hyväksynnän jälkeen (ajattelijat/sokrates/v4/).
@@ -271,6 +280,8 @@ export const SOKRATES = Object.freeze({
    * Suomenkieliset aina kahdessa pienimmässä koossa ja himmeämpinä. Luuppaavat vaakasuunnassa saumattomasti.
    */
   taustavirta: {
+    // v14: rivit epäteräviä (sumennus atlakseen 0,2 em): tunnistettavaa tekstiä ja syvyyttä, ei luettavaa.
+    sumeus: 0.2,
     etaisyys: 0.9,
     blend: 0.5,
     voimaKerroin: 3.0,
