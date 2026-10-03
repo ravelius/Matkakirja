@@ -542,5 +542,49 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0, Max(4096 - 3500 - 500, 4096 - 3500));   // kankaan rivit 3500–4000 tyhjiä
             Oleta.Tosi(AjattelijaData.PuraHarmaaPng(new byte[] { 1, 2, 3 }) == null, "muu muoto → varatie");
         }
+
+        [Testi] static void TahtiAnkkuriJaRuutu()
+        {
+            // Omistaja TF 133 (iskut eivät ihan osu): kuva ruudussa g näkyy, kun sen ääni kuuluu (viive = ulostulo − näyttö).
+            double viive = 0.040, dsp = 100.0;
+            double nolla = AjattelijaTahti.Ankkuri(dsp, 12, viive);
+            Oleta.Tosi(Math.Abs(AjattelijaTahti.Ruutu(dsp, nolla, viive) - 12) < 1e-9, "ankkuri jatkaa samasta ruudusta");
+            Oleta.Tosi(Math.Abs(AjattelijaTahti.Ruutu(dsp + 1, nolla, viive) - 42) < 1e-9, "30 ruutua sekunnissa");
+            // Ruudun 30 ääni ajastetaan hetkeen, jona kuva on ruudussa 30 miinus viive: kuuluu viiveen jälkeen, kun kuva näkyy.
+            double h = AjattelijaTahti.Hetki(nolla, 30);
+            Oleta.Tosi(Math.Abs(AjattelijaTahti.Ruutu(h + viive, nolla, viive) - 30) < 1e-9, "ääni + viive = kuva");
+        }
+
+        [Testi] static void TahtiSuuriViiveOdottaaMustassa()
+        {
+            // Bluetooth 0,25 s: kytkin (ruutu 30) ei ehtisi, jos kuva jatkaisi ruudusta 29 → ankkuri siirtyy, kuva odottaa.
+            double viive = 0.25, dsp = 50.0;
+            double nolla = AjattelijaTahti.Ankkuri(dsp, 29, viive, 30);
+            Oleta.Tosi(AjattelijaTahti.Hetki(nolla, 30) >= dsp + AjattelijaTahti.Etumatka - 1e-9, "kytkin ajastetaan tulevaisuuteen");
+            Oleta.Tosi(AjattelijaTahti.Ruutu(dsp, nolla, viive) < 29, "kuva odottaa (ruutu pienempi kuin ennen ankkuria)");
+            // Pieni viive: ankkuri ei siirry.
+            double n2 = AjattelijaTahti.Ankkuri(dsp, 10, 0.02, 30);
+            Oleta.Tosi(Math.Abs(AjattelijaTahti.Ruutu(dsp, n2, 0.02) - 10) < 1e-9, "pieni viive: jatkuu samasta ruudusta");
+        }
+
+        [Testi] static void TahtiMyohainenRaitaLiittyyKesken()
+        {
+            double nolla = 10.0;   // ruutu 75 (prologin loppu) = 12,5 s
+            var (h0, k0) = AjattelijaTahti.Ajastus(11.0, nolla, 75);
+            Oleta.Tosi(Math.Abs(h0 - 12.5) < 1e-9 && k0 == 0, "ajoissa: alku prologin lopussa");
+            var (h1, k1) = AjattelijaTahti.Ajastus(14.0, nolla, 75);
+            Oleta.Tosi(Math.Abs(h1 - (14.0 + AjattelijaTahti.Etumatka)) < 1e-9, "myöhässä: alku Etumatkan päähän");
+            Oleta.Tosi(Math.Abs(k1 - (h1 - 12.5)) < 1e-9, "kohta raidassa = sama ruutu kuin ajoissa alkaneella");
+        }
+
+        [Testi] static void TahtiKelloTasainenJaKasvava()
+        {
+            var k = new AjattelijaTahti.Kello();
+            Oleta.Sama(5.0, k.Nyt(5.0, 100.0));
+            Oleta.Tosi(Math.Abs(k.Nyt(5.0, 100.010) - 5.010) < 1e-9, "puskurin välissä interpoloidaan reaaliajalla");
+            Oleta.Tosi(Math.Abs(k.Nyt(5.0, 101.0) - (5.0 + AjattelijaTahti.Kello.Raja)) < 1e-9, "interpolointi rajattu");
+            Oleta.Tosi(k.Nyt(5.0, 100.020) >= 5.0 + AjattelijaTahti.Kello.Raja, "ei koskaan taaksepäin");
+            Oleta.Tosi(Math.Abs(k.Nyt(5.2, 101.1) - 5.2) < 1e-9, "uusi puskuri: dspTime");
+        }
     }
 }

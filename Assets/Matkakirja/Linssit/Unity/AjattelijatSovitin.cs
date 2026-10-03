@@ -1,7 +1,7 @@
 // AJATTELIJAT-LINSSI UNITYSSÄ (Linssiseppä 2, 2.10.2026; web js/linssit/ajattelijat.js + ajattelija.js, PR #3839/#3840).
 // Vain kehittäjätilassa (ei avauskynnystä, Linssirekisteri.Avauskynnykset) kuten webin KEHITTAJALINSSIT. Linssi avaa
 // ajattelijan valinnan (AjattelijaNakyma, KORTTI-pohja), ja valinta käynnistää ~53 s:n kohtauksen: prologi (4 s, oma
-// kello) → kierros 1, jonka kello on puheraita (G = prologi.loppu + puhe.time · 30, kuten webin aani.currentTime) →
+// kello) → kierros 1, jonka kello on äänikello (AjattelijaTahti: dspTime, äänet PlayScheduledilla, laitteen viive kompensoituna; omistaja TF 133) →
 // lopussa elämä-lappu (NOSTOKORTTI tumma) ja PULU. Kierrokset 2– (web #3884, data kierrokset): yksi ääniraita ja syke
 // koko kohtaukselle (Sokrates 111 s), lappu kierrosten lopussa; kaikukuvat haetaan kierroksittain. Kohtauksen piirtää AjattelijaNayttamo omalla kamerallaan
 // RenderTextureen, jonka AjattelijaNakyma näyttää koko ruudulla (Dioraaman malli).
@@ -112,8 +112,17 @@ namespace Matkakirja.Natiivi
         ILinssiYmparisto y;
         AjattelijaNayttamo nayttamo;
         AudioSource puhe, musiikki, kytkin;
-        bool aaniSoi, kytkinSoi;
+        bool kytkinSoi, kytkinKirjattu, puheAjastettu, musiikkiAjastettu;
         double ruutuOhitus = double.NaN;
+        /// <summary>
+        /// Äänikellon ankkuri (AjattelijaTahti): dspTime-hetki, jolloin ruutu 0 kuuluisi; NaN = ei vielä (prologi odottaa
+        /// aineistoja ruutujen kellolla). Ankkuroinnin jälkeen kuva ja kaikki äänet kulkevat samalla kellolla.
+        /// </summary>
+        double dspNolla = double.NaN;
+        readonly AjattelijaTahti.Kello dspKello = new AjattelijaTahti.Kello();
+        /// <summary>Testikomennon lisäsiirto (ms, `ajattelija viive <ms>`): + = kuva myöhemmin suhteessa ääneen.</summary>
+        public static double ViiveLisaMs;
+        double viimeViive;
         /// <summary>
         /// Prologin kello (s): alkaa nollasta ensimmäisellä ruudulla valinnan jälkeen (kohtauksen kuva näkyy mustana), etenee
         /// ruutujen välillä enintään ProloginAskelS (purun tai varjostimen kääntämisen pätkintä ei syö prologia) ja odottaa
@@ -206,8 +215,9 @@ namespace Matkakirja.Natiivi
             // Prologin kello alkaa heti (kuva on musta, aineistot purkautuvat pimeässä; Paivita pitää kytkintä odottamassa).
             kelloAlkanut = false;
             viimeG = 0;
-            aaniSoi = false;
-            kytkinSoi = false;
+            kytkinSoi = kytkinKirjattu = puheAjastettu = musiikkiAjastettu = false;
+            dspNolla = double.NaN;
+            dspKello.Nollaa();
             valit.Clear();
             // Pallo piiloon (Dioraaman näkymäpeitto) ja kartan musiikki pitoon kohtauksen ajaksi.
             SyoteLukko.LisaaNakymaPeitto(nakymaPeitto);
@@ -387,7 +397,6 @@ namespace Matkakirja.Natiivi
                     if (!yhteinen && esiladatut.TryGetValue(polku, out var l2) && l2 == l) esiladatut.Remove(polku);   // omistus lähteelle
                     if (s != sukupolvi || kohde == null) { if (!yhteinen) UnityEngine.Object.Destroy(l.Klippi); yield break; }
                     kohde.clip = l.Klippi;
-                    if (aaniSoi && kohde == puhe) aaniSoi = false;
                     yield break;
                 }
             }
@@ -399,8 +408,7 @@ namespace Matkakirja.Natiivi
             if (s != sukupolvi || kohde == null) yield break;
             if (p.result != UnityWebRequest.Result.Success) { o.Kirjaa($"ajattelija: ääni {polku} ei latautunut ({p.error})"); yield break; }
             kohde.clip = DownloadHandlerAudioClip.GetContent(p);
-            // Jos kello on jo puheen alueella, ääni liittyy kesken (webissä sama kelaus currentTime:lla).
-            if (aaniSoi && kohde == puhe) aaniSoi = false;
+            // Jos kello on jo puheen alueella, ääni liittyy kesken (AjattelijaTahti.Ajastus, Paivita).
         }
 
         /// <summary>Aloittaa ajattelijan aineistojen haun muistiin (jo haetut ja kesken olevat ohitetaan).</summary>
@@ -541,13 +549,14 @@ namespace Matkakirja.Natiivi
             var a = Valittu;
             double pl = a.Prologi.Loppu;
             double g;
+            double dspNyt = dspKello.Nyt(AudioSettings.dspTime, Time.realtimeSinceStartupAsDouble);
+            double viive = viimeViive = Viive();
             if (!double.IsNaN(ruutuOhitus)) g = ruutuOhitus;
-            else if (aaniSoi && puhe.isPlaying)
+            else if (!double.IsNaN(dspNolla))
             {
-                g = pl + puhe.time * AjattelijaAikajana.RuutuaSekunnissa;
-                // Musiikki seuraa puheraitaa (yli 0,12 s:n ero korjataan, web).
-                if (musiikki.clip != null && musiikki.isPlaying && Mathf.Abs(musiikki.time - puhe.time) > 0.12f && puhe.time < musiikki.clip.length)
-                    musiikki.time = puhe.time;
+                // Äänikello: ruutu g näkyy, kun sen ääni kuuluu (viive = ulostulo − näyttö). Ei taaksepäin (reitin vaihto).
+                g = Math.Max(viimeG, AjattelijaTahti.Ruutu(dspNyt, dspNolla, viive));
+                Ajasta(dspNyt, pl);
             }
             else
             {
@@ -560,23 +569,28 @@ namespace Matkakirja.Natiivi
                     g = a.Prologi.Kytkin - 1;
                     prologiAika = g / AjattelijaAikajana.RuutuaSekunnissa;
                 }
-                if (g > pl && !aaniSoi && puhe.clip != null)
+                if (!Latautuu)
                 {
-                    aaniSoi = true;
-                    float kohta = (float)((g - pl) / AjattelijaAikajana.RuutuaSekunnissa);
-                    if (kohta < puhe.clip.length)
+                    // Aineistot valmiina: ankkuri äänikelloon ja kaikki äänet ajastetaan (PlayScheduled) samaan kelloon.
+                    // Ensimmäisen äänen (kytkin tai puhe) on ehdittävä Etumatkan päähän; suurella viiveellä kuva odottaa mustassa.
+                    double ensimmainen = g < a.Prologi.Kytkin && kytkin.clip != null ? a.Prologi.Kytkin : Math.Max(g, pl);
+                    dspNolla = AjattelijaTahti.Ankkuri(dspNyt, g, viive, ensimmainen);
+                    g = Math.Max(0, Math.Min(g, AjattelijaTahti.Ruutu(dspNyt, dspNolla, viive)));
+                    if (!kytkinSoi && g < a.Prologi.Kytkin && kytkin.clip != null)
                     {
-                        Soita(puhe, kohta);
-                        if (musiikki.clip != null) Soita(musiikki, kohta);
+                        kytkinSoi = true;
+                        kytkin.volume = EsityksenAani.Mykistetty?.Invoke() ?? false ? 0f : 1f;
+                        kytkin.PlayScheduled(AjattelijaTahti.Hetki(dspNolla, a.Prologi.Kytkin));
                     }
+                    Ajasta(dspNyt, pl);
+                    o.Kirjaa($"ajattelija: tahti ankkuroitu ruudussa {g:F1}, viive {viive * 1000:F0} ms (laite {AaniIstunto.Viive() * 1000:F0}, "
+                        + $"Unity {UnityPuskuri() * 1000:F0}, näyttö −{NaytonViive * 1000:F0}, lisä {ViiveLisaMs:F0})");
                 }
             }
-            // Kytkin kerran prologin ruudussa kytkin (web: vain juoksevalla kellolla, ei ruutuohituksella).
-            if (!kytkinSoi && double.IsNaN(ruutuOhitus) && g >= a.Prologi.Kytkin && g < pl && kytkin.clip != null)
+            // Kytkimen ruutu (kuva) mittariin; ääni on ajastettu samaan hetkeen.
+            if (!kytkinKirjattu && double.IsNaN(ruutuOhitus) && g >= a.Prologi.Kytkin)
             {
-                kytkinSoi = true;
-                kytkin.volume = EsityksenAani.Mykistetty?.Invoke() ?? false ? 0f : 1f;
-                kytkin.Play();
+                kytkinKirjattu = true;
                 if (napautusKello.IsRunning) { o.Kirjaa($"ajattelija: kytkin napautuksesta {napautusKello.Elapsed.TotalMilliseconds:F0} ms"); napautusKello.Stop(); }
             }
             if (valit.Count >= 7200) valit.RemoveAt(0);   // koko kohtaus (kierrokset ~115 s) 60 r/s
@@ -600,13 +614,38 @@ namespace Matkakirja.Natiivi
             if (loppu && !Lopussa && double.IsNaN(ruutuOhitus)) { Lopussa = true; Muuttui?.Invoke(); }
         }
 
-        static void Soita(AudioSource l, float kohta)
+        /// <summary>Puhe ja musiikki ajastetaan ruutuun prologi.loppu; myöhässä latautunut raita liittyy kesken samaan kelloon.</summary>
+        void Ajasta(double dspNyt, double pl)
         {
-            // Kelaus ennen ja jälkeen Playn (EsityksenAani: iPadilla pelkkä ennen asetettu time ei aina tarttunut).
+            Ajasta(puhe, ref puheAjastettu, dspNyt, pl);
+            Ajasta(musiikki, ref musiikkiAjastettu, dspNyt, pl);
+        }
+
+        void Ajasta(AudioSource l, ref bool ajastettu, double dspNyt, double pl)
+        {
+            if (ajastettu || l == null || l.clip == null) return;
+            ajastettu = true;
+            var (hetki, kohta) = AjattelijaTahti.Ajastus(dspNyt, dspNolla, pl);
+            if (kohta >= l.clip.length) return;
             l.volume = EsityksenAani.Mykistetty?.Invoke() ?? false ? 0f : 1f;
-            l.time = kohta;
-            l.Play();
-            l.time = kohta;
+            l.timeSamples = (int)(kohta * l.clip.frequency);
+            l.PlayScheduled(hetki);
+        }
+
+        /// <summary>
+        /// Kuvan ja äänen ero (s): laitteen ulostulo (AVAudioSession outputLatency + IOBufferDuration) + Unityn miksauspuskuri
+        /// − näytön viive (ruutu piirretään ja näytetään seuraavalla näytön päivityksellä) + testikomennon lisä.
+        /// </summary>
+        static double Viive() => AaniIstunto.Viive() + UnityPuskuri() - NaytonViive + ViiveLisaMs / 1000.0;
+
+        /// <summary>Näytön viive: yksi 60 Hz:n päivitys (Unity piirtää ruudun, Core Animation näyttää sen seuraavalla vsyncillä).</summary>
+        const double NaytonViive = 1.0 / 60;
+
+        static double UnityPuskuri()
+        {
+            AudioSettings.GetDSPBufferSize(out int pituus, out _);
+            int taajuus = AudioSettings.outputSampleRate;
+            return taajuus > 0 ? (double)pituus / taajuus : 0;
         }
 
         void PuraKohtaus()
@@ -623,7 +662,7 @@ namespace Matkakirja.Natiivi
             foreach (var l in new[] { puhe, musiikki })
                 if (l != null && l.clip != null) { var c = l.clip; l.clip = null; UnityEngine.Object.Destroy(c); }
             puhe = musiikki = kytkin = null;
-            aaniSoi = false;
+            dspNolla = double.NaN;
             ruutuOhitus = double.NaN;
             Tekstit = default;
         }
@@ -686,10 +725,17 @@ namespace Matkakirja.Natiivi
                 ruutuOhitus = arvo == "pois" ? double.NaN : (Valittu?.Prologi.Loppu ?? 120) + double.Parse(arvo, System.Globalization.CultureInfo.InvariantCulture);
             else if (mita == "prologi" && arvo != null) ruutuOhitus = double.Parse(arvo, System.Globalization.CultureInfo.InvariantCulture);
             else if (mita == "lappu") { Lopussa = true; Muuttui?.Invoke(); }
+            else if (mita == "viive" && arvo != null)
+            {
+                // Mittauksen kalibrointi: lisäsiirto ms (+ = kuva myöhemmin); vaikuttaa heti (kello lasketaan joka ruutu).
+                ViiveLisaMs = double.Parse(arvo, System.Globalization.CultureInfo.InvariantCulture);
+                o.Kirjaa($"ajattelija: viive lisä {ViiveLisaMs:F0} ms, yhteensä {Viive() * 1000:F0} ms");
+                return;
+            }
             else if (mita == "mittari") { if (arvo == "nollaa") valit.Clear(); o.Kirjaa("ajattelija: mittari " + Mittari()); return; }
             else if (mita != "tila") { Valitse(mita); return; }
             o.Kirjaa($"ajattelija: {(Valittu == null ? "valinta" : Valittu.Tunnus)}{(Latautuu ? " latautuu" : "")}{(Lopussa ? " lopussa" : "")}, "
-                + $"ruutu {(double.IsNaN(ruutuOhitus) ? "juoksee" : ruutuOhitus.ToString("F0"))}, puhe {(puhe?.clip == null ? "-" : $"{puhe.time:F1}/{puhe.clip.length:F0} s{(puhe.isPlaying ? " soi" : "")}")}, "
+                + $"ruutu {(double.IsNaN(ruutuOhitus) ? "juoksee" : ruutuOhitus.ToString("F0"))}{(double.IsNaN(dspNolla) ? "" : $" (äänikello, viive {viimeViive * 1000:F0} ms, kuva {viimeG:F1})")}, puhe {(puhe?.clip == null ? "-" : $"{puhe.time:F1}/{puhe.clip.length:F0} s{(puhe.isPlaying ? " soi" : "")}")}, "
                 + $"{nayttamo?.Kuvaus() ?? "ei näyttämöä"}, {Mittari()}");
         }
     }
