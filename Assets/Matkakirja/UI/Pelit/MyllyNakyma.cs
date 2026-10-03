@@ -237,8 +237,9 @@ namespace Matkakirja.Natiivi
 
         // NAPPULOIDEN ÄÄNET (Kenney Impact Sounds, CC0; omistajan OK 2.10.2026): asetus/siirto naksahtaa, kun nappula
         // laskeutuu (liu'un lopussa), poisto heti perään. Puuttuva klippi → tehosteväylän "click" kuten ennen.
+        // v2 (Pelikoodari 3.10., ämpäri aanet/tehosteet/mylly-v2/, Kenney CC0): molemmat samalla tasolla (huiput −1,5 / −1,4 dBFS),
+        // joten tehosteiden oletusvahvistus ilman omaa kerrointa; v1:n asetus oli ~10 dB hiljaisempi ja tarvitsi 0,5:n.
         const string AaniAsetus = "mylly-asetus", AaniPoisto = "mylly-poisto";
-        const float AaniGain = 0.5f;
 
         static void SiirronAani(MyllySiirto s, float voima)
         {
@@ -256,7 +257,7 @@ namespace Matkakirja.Natiivi
             var c = Resources.Load<AudioClip>(MyllyLauta.KansioPolku + nimi);
             if (c == null) { Debug.LogWarning("MATKAKIRJA mylly: ääni puuttuu " + nimi); return; }
             if (c.loadState != AudioDataLoadState.Loaded) c.LoadAudioData();
-            Aanet.RekisteroiTehoste(nimi, c, AaniGain);
+            Aanet.RekisteroiTehoste(nimi, c);
         }
 
         /// <summary>TAUSTAN PEHMENNYS (omistaja 2.10. klo 11.0x, loki 11.01: "pehmennä kaikki elementit taustalla, myös
