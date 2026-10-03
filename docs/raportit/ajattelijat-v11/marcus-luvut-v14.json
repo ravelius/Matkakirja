@@ -320,11 +320,11 @@
    },
    {
     "kohde": [
-     0.0554,
+     0.0634,
      -0.08,
-     0.375
+     0.357
     ],
-    "sade_m": 0.0749,
+    "sade_m": 0.0613,
     "ruudut": [
      2294,
      2723
@@ -1330,16 +1330,16 @@
  "valot": {
   "kaiku-kuolinvuode": {
    "sijainti": [
-    0.3159,
+    0.3239,
     -0.5961,
-    0.5355
+    0.5175
    ],
    "suunta": [
     -0.4341,
     0.8602,
     -0.2675
    ],
-   "keila_aste": 11.88,
+   "keila_aste": 9.73,
    "spot_blend": 0.3,
    "vari": [
     1.0,
@@ -1372,8 +1372,8 @@
     "kaiku-kuolinvuode.png",
     "savu-0149.png"
    ],
-   "lev_m": 0.088,
-   "kork_m": 0.10394,
+   "lev_m": 0.072,
+   "kork_m": 0.08504,
    "liuku_uv": 0.02,
    "haivytys_ruutua": 24
   },

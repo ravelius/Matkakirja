@@ -1516,7 +1516,7 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
           sade_t, k_('05', 0) - 0.3, 26.0)
     kaiku('kaiku-uhri', 'kaiku-uhri.png', sp, sn, SIVU * 0.55 + YLOS * 0.30, 0.09 if V14 else 0.08,   # v14: Capitolinen hunnutettu Marcus (huntupää + olka), sama pinta-ala
           uhri_t, k_('07', 0) - 0.3, 14.0 if V14 else 22.0)   # v14: ylivalotus teki häivytyksestä kovan reunan
-    kaiku('kaiku-kuolinvuode', 'kaiku-kuolinvuode.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.088 if V14 else 0.11,   # v14: pää + ylävartalo (GrabCut-rajaus, sohva alfa 0), sama pinta-ala
+    kaiku('kaiku-kuolinvuode', 'kaiku-kuolinvuode.png', (vp + Vector((0.008, 0.0, -0.018))) if V14 else vp, vn, Vector((0.0, -0.55, 0.30)), 0.072 if V14 else 0.11,   # v14: pää + ylävartalo, poskelle pois nenänvarrelta (GrabCut-rajaus, sohva alfa 0), sama pinta-ala
           sair_t, k_('09', 0) - 0.2, 7.0 if V14 else 50.0, haiv=24)   # v14: 50, 25 ja 12 ylivalottivat kasvot, käden ja rinnan
     lainaukset = []
     def lainaus(nimi, kuva, q, suunta, ala, kork, kap, raja=None):
