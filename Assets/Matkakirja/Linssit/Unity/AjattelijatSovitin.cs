@@ -104,7 +104,14 @@ namespace Matkakirja.Natiivi
         AjattelijaNayttamo nayttamo;
         AudioSource puhe, musiikki, kytkin;
         bool aaniSoi, kytkinSoi;
-        double alku = -1, ruutuOhitus = double.NaN;
+        double ruutuOhitus = double.NaN;
+        /// <summary>
+        /// Prologin kello (s): alkaa nollasta ensimmäisellä ruudulla, jolla kohtauksen kuva näkyy (Latautuu false), ja etenee
+        /// ruutujen välillä enintään ProloginAskelS (latauksen tai varjostimen kääntämisen pätkintä ei syö prologia).
+        /// </summary>
+        double prologiAika;
+        bool kelloAlkanut;
+        const double ProloginAskelS = 0.1;
         int sukupolvi;
         readonly List<float> valit = new List<float>();
 
@@ -178,7 +185,11 @@ namespace Matkakirja.Natiivi
         IEnumerator Lataa(AjattelijaData a, int s)
         {
             float t0 = Time.realtimeSinceStartup;
-            // Malli ensin (ilman sitä ei ole kohtausta); muut rinnakkain taustalla, kohtaus alkaa ilman niitä.
+            // Malli ensin (ilman sitä ei ole kohtausta); muut rinnakkain. PROLOGI VASTA LATAUKSEN JÄLKEEN (Fable 3.10.2026, löydös:
+            // kello käynnistyi heti mallin jälkeen, ja kipsin, kaikukuvien, savun ja äänten (PCM) purku pääsäikeellä pätki
+            // ~1,9 s, joten pelaaja näki prologista vain lopun). Web aloittaa kellon vasta latausten jälkeen (alku =
+            // performance.now() ennen ensimmäistä requestAnimationFramea) ja purkaa kuvat ja äänen taustalla; natiivi odottaa
+            // raskaat aineistot Latautuu-tilassa (tumma pinta) ja aloittaa prologin ruudusta 0, kun kuva on näkyvissä.
             byte[] glb = null;
             yield return Hae(a.Malli, b => glb = b);
             if (s != sukupolvi) yield break;
@@ -189,31 +200,45 @@ namespace Matkakirja.Natiivi
                 PyydaSulku();
                 yield break;
             }
-            o.StartCoroutine(Hae(a.Kipsi, b => { if (s == sukupolvi) nayttamo.AsetaKipsi(b); }));
+            int kesken = 0;
+            void Odota(IEnumerator ajo) { kesken++; o.StartCoroutine(Valmis(ajo, () => kesken--)); }
+            Odota(Hae(a.Kipsi, b => { if (s == sukupolvi) nayttamo.AsetaKipsi(b); }));
             // Kaikukuvat kierroksittain (yksi kaikupaikka, tekstuuri vaihtuu); syke ja ääni kierrosten raidoista, jos niitä on.
             bool kaikuja = false;
             foreach (var (k, kuva) in nayttamo.Kaikukuvat())
             {
                 kaikuja = true;
-                o.StartCoroutine(Hae(kuva, b => { if (s == sukupolvi) nayttamo.AsetaKaiku(k, b); }));
+                Odota(Hae(kuva, b => { if (s == sukupolvi) nayttamo.AsetaKaiku(k, b); }));
             }
             var aj = a.Aikajana;
             var kr = aj != null ? null : a.Kierrokset;   // aikajana-tilassa kierrokset eivät ole käytössä (web KR = AJ ? null : …)
             string sykePolku = aj != null ? aj.Syke : kr != null ? kr.Syke : a.Syke;
             if ((aj != null || kaikuja) && !string.IsNullOrEmpty(sykePolku))
-                o.StartCoroutine(Hae(sykePolku, b => { if (s == sukupolvi && b != null) nayttamo.AsetaSyke(System.Text.Encoding.UTF8.GetString(b)); }));
+                Odota(Hae(sykePolku, b => { if (s == sukupolvi && b != null) nayttamo.AsetaSyke(System.Text.Encoding.UTF8.GetString(b)); }));
             // Savumaski (v13c, aikajana; oletuksena päällä).
-            if (nayttamo.SavuKuva != null) o.StartCoroutine(Hae(nayttamo.SavuKuva, b => { if (s == sukupolvi) nayttamo.AsetaSavu(b); }));
-            o.StartCoroutine(HaeAani(aj != null ? aj.Puhe : kr != null ? kr.Puhe : a.Puhe, puhe, s));
-            o.StartCoroutine(HaeAani(aj != null ? aj.Musiikki : kr != null ? kr.Musiikki : a.Musiikki, musiikki, s));
-            o.StartCoroutine(HaeAani(Kytkin, kytkin, s));
+            if (nayttamo.SavuKuva != null) Odota(Hae(nayttamo.SavuKuva, b => { if (s == sukupolvi) nayttamo.AsetaSavu(b); }));
+            Odota(HaeAani(aj != null ? aj.Puhe : kr != null ? kr.Puhe : a.Puhe, puhe, s));
+            Odota(HaeAani(aj != null ? aj.Musiikki : kr != null ? kr.Musiikki : a.Musiikki, musiikki, s));
+            Odota(HaeAani(Kytkin, kytkin, s));
+            // Haut päättyvät aina (onnistui, virhe tai 30 s:n aikaraja); puuttuva aineisto ei estä kohtausta (kuten web).
+            while (kesken > 0)
+            {
+                yield return null;
+                if (s != sukupolvi) yield break;
+            }
             Latautuu = false;
-            alku = Time.realtimeSinceStartupAsDouble;
+            kelloAlkanut = false;   // prologi ruudusta 0 ensimmäisellä Paivita-kierroksella (kuva näkyvissä)
             aaniSoi = false;
             kytkinSoi = false;
             valit.Clear();
             o.Kirjaa($"ajattelija: {a.Tunnus} auki, malli {(Time.realtimeSinceStartup - t0) * 1000:F0} ms, {nayttamo.Kuvaus()}");
             Muuttui?.Invoke();
+        }
+
+        static IEnumerator Valmis(IEnumerator ajo, Action valmis)
+        {
+            yield return ajo;
+            valmis();
         }
 
         IEnumerator Hae(string polku, Action<byte[]> valmis)
@@ -260,7 +285,9 @@ namespace Matkakirja.Natiivi
             }
             else
             {
-                g = (Time.realtimeSinceStartupAsDouble - alku) * AjattelijaAikajana.RuutuaSekunnissa;
+                if (!kelloAlkanut) { kelloAlkanut = true; prologiAika = 0; }
+                else prologiAika += Math.Min(Time.unscaledDeltaTime, ProloginAskelS);
+                g = prologiAika * AjattelijaAikajana.RuutuaSekunnissa;
                 if (g > pl && !aaniSoi && puhe.clip != null)
                 {
                     aaniSoi = true;
