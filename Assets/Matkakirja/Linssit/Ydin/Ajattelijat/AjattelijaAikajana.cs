@@ -414,7 +414,7 @@ namespace Matkakirja.Linssit.Ajattelijat
 
         /// <summary>
         /// Webin korttiRivit (v14 päälainaus korttina): sanat tasapainoisille riveille; rivejä ceil(pituus / merkkeja), rivi
-        /// vaihtuu, kun tavoitepituus + 4 ylittyisi. Natiivissa kortti on valmiina atlaksessa (tyokalut/ajattelijat-natiiviin.mjs).
+        /// vaihtuu, kun tavoitepituus + 4 ylittyisi. Natiivissa kortti on valmiina atlaksessa (Matkakirja-repon tools/ajattelija-natiivi.mjs).
         /// </summary>
         public static List<string> KorttiRivit(string teksti, int merkkeja)
         {
