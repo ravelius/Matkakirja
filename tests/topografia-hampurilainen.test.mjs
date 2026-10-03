@@ -22,13 +22,15 @@ test('valikossa ylimpänä selitteen kytkin ja sen alla Sulje linssi; valikko on
   const sulje = runko.indexOf("{ luokka: 'linssi-valikko-sulje', teksti: 'Sulje linssi', teko: () => this.valitseLinssi(null) }");
   assert.ok(selite > 0 && sulje > selite);
   assert.match(runko, /kirjoita: \(auki\) => this\.vaihdaLinssiSelite\(!auki\),/);
+  // Selitteen kytkin vain, jos kortissa on sisältöä; muuten valikossa on vain Sulje linssi.
+  assert.match(runko, /const kortissaSisaltoa = Boolean\(linssi\.selite \|\| linssi\.askeleet\);/);
   // Omat kohdat korvaavat aikajanan neljä kohtaa; Esc sulkee vain karttalinssin valikon.
   assert.match(VALIKKO, /omat\.push\(k\.lue \? kytkin\(k\.luokka, k\.teksti, k\.lue, k\.kirjoita\) : komento\(k\.luokka, k\.teksti, k\.teko\)\);/);
   assert.match(VALIKKO, /if \(kohdat\) document\.addEventListener\?\.\('keydown', esc, true\);/);
 });
 
 test('hampurilaisen linssillä ei nimipilleriä: otsikko on tekstiä ja kortti piilossa, kunnes kytkin avaa sen', () => {
-  assert.match(UI, /if \(valikossa\) \{\s*otsikko\.textContent = linssi\.valikko\.selite \?\? linssi\.nimi;\s*\} else \{\s*const otsikkoNappi = html\('button', 'linssi-selite-nappi'/);
+  assert.match(UI, /const otsikko = html\('h2', '', linssi\.valikko\?\.selite \?\? linssi\.nimi\);\s*kortti\.classList\.add\('valikossa'\);/);
   assert.match(UI, /kortti\.hidden = kortti\.classList\.contains\('valikossa'\) && this\.linssiSelitePieni;/);
   // Kerroksen sammuessa myös hampurilainen puretaan.
   assert.match(UI, /suljeLinssiSelite\(\) \{\s*this\.linssiSelite\?\.remove\(\);\s*this\.linssiSelite = null;\s*void this\.piirraLinssinHampurilainen\(null\);/);
@@ -38,4 +40,10 @@ test('nappi on OHJAUSNAPPI-neliö (40, kulma nappi) oikeassa yläkulmassa; kortt
   assert.match(CSS, /\.linssi-karttavalikko \{\s*position: absolute;\s*top: var\(--tk-vali-s\);\s*right: var\(--tk-vali-s\);/);
   assert.match(CSS, /\.linssi-karttavalikko \.aikajana-valikko-nappi,[\s\S]*?width: var\(--tk-nappi-ohjaus\);[\s\S]*?height: var\(--tk-nappi-ohjaus\);[\s\S]*?border-radius: var\(--tk-kulma-nappi\);/);
   assert.match(lue('../css/styles.css'), /\.linssi-selite\.valikossa\[data-corner='tr'\] \{ top: calc\(var\(--tk-vali-s\) \* 2 \+ var\(--tk-nappi-ohjaus\)\); \}/);
+});
+
+test('kaikki karttalinssit saavat hampurilaisen (omistaja 3.10.2026): Vesistöt Joet ja järvet, ei nimipilleriä', () => {
+  assert.match(UI, /void this\.piirraLinssinHampurilainen\(linssi\);/);
+  assert.doesNotMatch(UI, /html\('button', 'linssi-selite-nappi'/);
+  assert.match(lue('../js/linssit/vesistot.js'), /valikko: \{ selite: 'Joet ja järvet' \},/);
 });

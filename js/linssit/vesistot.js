@@ -513,6 +513,9 @@ export const LINSSI = {
    */
   laudat: ['maailmankartta'],
 
+  // Hampurilainen nimipillerin tilalla (omistaja 3.10.2026, Topografian malli): valikossa ylimpänä selite, sitten Sulje linssi.
+  valikko: { selite: 'Joet ja järvet' },
+
   /*
    * valokuva: true ottaa paperin rakeisuuden pois linssin päältä
    * (css/styles.css: body.linssi-valokuva .grain). Sama syy kuin

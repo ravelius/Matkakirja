@@ -19768,13 +19768,13 @@ export class UI {
       return;
     }
     /*
-     * HAMPURILAINEN PILLERIN TILALLA (omistaja 2.10.2026 klo 21.3x, ensin Topografia; linssimoduulin `valikko`):
-     * oikean yläkulman nimipilleri poistuu, ja sen paikalle tulee OHJAUSNAPPI-neliö, jonka valikossa ylimpänä on
-     * selitteen kytkin (Topografia: Korkeustasot) ja sen alla Sulje linssi. Selitekortti on silloin kokonaan
-     * piilossa, kunnes kytkin avaa sen; kortin napautus sulkee sen kuten ennenkin.
+     * HAMPURILAINEN PILLERIN TILALLA (omistaja 2.10.2026 klo 21.3x Topografia; 3.10.2026 klo 14.2x kaikki
+     * nimipillerin linssit): oikean yläkulman nimipilleri poistuu, ja sen paikalle tulee OHJAUSNAPPI-neliö, jonka
+     * valikossa ylimpänä on selitteen kytkin (linssimoduulin `valikko.selite`, oletuksena linssin nimi; Topografia:
+     * Korkeustasot) ja sen alla Sulje linssi. Selitekortti on silloin kokonaan piilossa, kunnes kytkin avaa sen;
+     * kortin napautus sulkee sen kuten ennenkin.
      */
-    const valikossa = Boolean(linssi.valikko);
-    void this.piirraLinssinHampurilainen(valikossa ? linssi : null);
+    void this.piirraLinssinHampurilainen(linssi);
     /*
      * Selite avautuu ja sulkeutuu napauttamalla, ja kutistettuna siitä
      * jää näkyviin vain linssin nimi. Aloitustila on kutistettu: linssin
@@ -19797,21 +19797,9 @@ export class UI {
     }
     const kortti = this.linssiSelite;
     kortti.replaceChildren();
-    /*
-     * Nimi on oikea painike eikä pelkkä otsikko: kutistettuna se on
-     * ainoa näkyvä osa selitteestä, ja aria-expanded kertoo apuvälineelle
-     * kumpi tila on päällä. Otsikkotaso säilyy sen ympärillä.
-     */
-    const otsikko = html('h2');
-    kortti.classList.toggle('valikossa', valikossa);
-    if (valikossa) {
-      otsikko.textContent = linssi.valikko.selite ?? linssi.nimi;
-    } else {
-      const otsikkoNappi = html('button', 'linssi-selite-nappi', linssi.nimi);
-      otsikkoNappi.type = 'button';
-      otsikkoNappi.addEventListener('click', () => this.vaihdaLinssiSelite());
-      otsikko.appendChild(otsikkoNappi);
-    }
+    // Otsikko on tekstiä: kortti avataan ja suljetaan hampurilaisen kytkimestä (tai kortin napautuksella).
+    const otsikko = html('h2', '', linssi.valikko?.selite ?? linssi.nimi);
+    kortti.classList.add('valikossa');
     kortti.appendChild(otsikko);
 
     let rivit = [];
@@ -19921,15 +19909,17 @@ export class UI {
     const { luoLinssivalikko } = await import('./aikajana-valikko.js');
     // Linssi ehti vaihtua tai sulkeutua latauksen aikana: tuoreempi kutsu hoitaa napin.
     if (pyynto !== this.linssiHampurilainenPyynto || this.linssiHampurilainen) return;
+    // Selitteen kytkin vain, jos kortissa on näytettävää (väririvit tai askeleet); muuten valikossa on vain Sulje linssi.
+    const kortissaSisaltoa = Boolean(linssi.selite || linssi.askeleet);
     const valikko = luoLinssivalikko({
       ui: this,
       kohdat: [
-        {
+        ...(kortissaSisaltoa ? [{
           luokka: 'linssi-valikko-selite',
-          teksti: linssi.valikko.selite ?? 'Selite',
+          teksti: linssi.valikko?.selite ?? linssi.nimi,
           lue: () => !this.linssiSelitePieni,
           kirjoita: (auki) => this.vaihdaLinssiSelite(!auki),
-        },
+        }] : []),
         { luokka: 'linssi-valikko-sulje', teksti: 'Sulje linssi', teko: () => this.valitseLinssi(null) },
       ],
     });
