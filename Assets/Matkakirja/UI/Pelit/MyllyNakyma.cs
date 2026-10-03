@@ -630,7 +630,7 @@ namespace Matkakirja.Natiivi
         public string LautaId { get; private set; } = "majatalo";
         public void AsetaLauta(string id) { LautaId = id; if (ladattu != null) Lataa(); MarkDirtyRepaint(); }
 
-        // BLENDER-KERROKSET (Linnanrakentajan _valmiit/mylly-laudat/v1, omistajan OK 2.10.2026; Natiivisepän jakelu):
+        // BLENDER-KERROKSET (Linnanrakentajan _valmiit/mylly-laudat/v2, PR #3906, Päätoimittaja 3.10.; v1 omistajan OK 2.10.):
         // Resources/Pelit/Mylly, iOS ASTC 6×6 sRGB + mipit, ladataan nimellä avattaessa ja puretaan suljettaessa
         // (MyllyNakyma.Sulje → Resources.UnloadUnusedAssets). Piirtojärjestys lauta → hehku (valmiin myllyn suorakaide
         // ± 0,03 laudasta) → varjot → nappulat → renkaat. Pisteet = Mylly.Paikat (pisteet.json: reuna 0,09, sama kuin
