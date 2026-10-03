@@ -195,6 +195,20 @@ export const SOKRATES = Object.freeze({
       vaihtoehdot: { zarathustra: 'ajattelijat/sokrates/v3/v13-musiikki-zarathustra.mp3' },
     },
     syke: 'ajattelijat/sokrates/v3/syke-v13.json',
+    /*
+     * KAIKUSARJAT omistajan vertailuun (?kaikusarja=a|v13b; ?kaikuvari=seepia): oletus A = Sisältökirjurin rajatut hahmot
+     * alfalla (ajattelijat/sokrates/v3/kaiut/, harmaa ja seepia valmiina); Davidilla nykyinen. B (Codexin yksinkertaistetut)
+     * lisätään, kun kuvat tulevat. v13b = aikajanan omat kuvat (Linnanrakentajan gobot-v13).
+     */
+    kaikusarja: 'a',
+    kaikusarjat: {
+      a: [
+        { harmaa: 'ajattelijat/sokrates/v3/kaiut/jumala-harmaa.png', seepia: 'ajattelijat/sokrates/v3/kaiut/jumala-seepia.png' },
+        { harmaa: 'ajattelijat/sokrates/v3/kaiut/sotilas-v2-harmaa.png', seepia: 'ajattelijat/sokrates/v3/kaiut/sotilas-v2-seepia.png' },
+        { harmaa: 'ajattelijat/sokrates/v3/kaiut/themis-harmaa.png', seepia: 'ajattelijat/sokrates/v3/kaiut/themis-seepia.png' },
+        'ajattelijat/sokrates/v3/kaiku-kuolema.png',
+      ],
+    },
   },
   kierrokset: {
     aani: { puhe: 'ajattelijat/sokrates/v1/kierrokset-puhe.mp3', musiikki: 'ajattelijat/sokrates/v1/kierrokset-musiikki.mp3' },

@@ -122,18 +122,27 @@ float pNayte(int i, float jx, float jy, float sk, float sumeus) {
   // toisivat muuten viereisen atlasrivin palasia katkoviivaksi.
   float reuna = smoothstep(0.0, 0.15, v) * smoothstep(1.0, 0.85, v);
   if (d.w < 0.5 && (u <= 0.0 || u >= 1.0)) return 0.0;
-  // Kaikukuva: valoa vain sisällössä (sokrates_kaiku.py). Matalat sävyt kynnystetään pois (webin AgX nostaa niitä
-  // Blenderiä enemmän, jolloin kuva-ala erottui suorakaiteena), ja reunat häivytetään.
-  if (pF[i].z > 0.5) {
-    float reunaK = smoothstep(0.0, 0.08, u) * smoothstep(1.0, 0.92, u) * smoothstep(0.0, 0.08, v) * smoothstep(1.0, 0.92, v);
-    float kuva = pF[i].z > 1.5 ? texture2D(pKaiku2, vec2(u, 1.0 - v)).r : texture2D(pKaiku, vec2(u, 1.0 - v)).r;
-    return smoothstep(0.08, 0.9, kuva) * reunaK;
-  }
   float au = u * d.x;   // toistorivi: jatkuva u, atlas kääritään (RepeatWrapping)
   float terava = texture2D(pAtlas, vec2(au, mix(c.x, c.y, 1.0 - v)), -0.75).r;
   if (sumeus <= 0.0) return terava * reuna;
   float sumea = texture2D(pAtlas, vec2(au, mix(c.z, c.w, 1.0 - v))).r;
   return mix(terava, sumea, sumeus) * reuna;
+}
+/*
+ * Kaikukuva (v8; v13c värikuvat alfalla): valoa vain sisällössä. Matalat sävyt kynnystetään pois kirkkaudesta (webin AgX
+ * nostaa niitä Blenderiä enemmän, jolloin kuva-ala erottui suorakaiteena), sävy säilyy (väri / kirkkaus), alfa rajaa
+ * hahmon ja reunat häivytetään. Harmaasävykuvalla tulos on sama kuin ennen (kirkkaus = punainen kanava).
+ */
+vec3 pKaikuNayte(int i, float jx, float jy) {
+  vec4 a = pA[i]; vec4 b = pB[i];
+  float x = jx * a.x, y = jy * a.x;
+  float u = (x * b.x - y * b.y) / a.y + pF[i].y + a.w;
+  float v = (x * b.y + y * b.x - b.z) / a.z + 0.5;
+  if (u <= 0.0 || u >= 1.0 || v <= 0.0 || v >= 1.0) return vec3(0.0);
+  float reunaK = smoothstep(0.0, 0.08, u) * smoothstep(1.0, 0.92, u) * smoothstep(0.0, 0.08, v) * smoothstep(1.0, 0.92, v);
+  vec4 c = pF[i].z > 1.5 ? texture2D(pKaiku2, vec2(u, 1.0 - v)) : texture2D(pKaiku, vec2(u, 1.0 - v));
+  float l = max(max(c.r, c.g), c.b);
+  return c.rgb / max(l, 1e-3) * smoothstep(0.08, 0.9, l) * c.a * reunaK;
 }
 vec3 projektoriValo(vec3 nW) {
   vec3 summa = vec3(0.0);
@@ -150,10 +159,11 @@ vec3 projektoriValo(vec3 nW) {
     float jx = l.x / z, jy = l.y / z;
     float sumeus = pD[i].z > 0.0 ? min(abs(r - pA[i].x) / pD[i].z, 1.0) : 0.0;
     float ca = pD[i].y;
-    vec3 t = ca > 0.0
-      ? vec3(pNayte(i, jx, jy, 1.0 + ca, sumeus), pNayte(i, jx, jy, 1.0, sumeus), pNayte(i, jx, jy, 1.0 - ca, sumeus))
-      : vec3(pNayte(i, jx, jy, 1.0, sumeus));
-    summa += t * (pF[i].z > 0.5 ? pKaikuVari : pVari) * (pB[i].w * keila * nl / (r * r));
+    vec3 t = pF[i].z > 0.5 ? pKaikuNayte(i, jx, jy) * pKaikuVari
+      : (ca > 0.0
+        ? vec3(pNayte(i, jx, jy, 1.0 + ca, sumeus), pNayte(i, jx, jy, 1.0, sumeus), pNayte(i, jx, jy, 1.0 - ca, sumeus))
+        : vec3(pNayte(i, jx, jy, 1.0, sumeus))) * pVari;
+    summa += t * (pB[i].w * keila * nl / (r * r));
   }
   return summa;
 }`)

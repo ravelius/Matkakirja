@@ -159,3 +159,13 @@ test('aikajanan aurinko kiertää säteellä (ei oikaise ympyrän läpi); avainA
 test('kehitysliput omistajan vertailuun: kaikujen väri (oletus väritön, ?kaikuvari=seepia)', () => {
   assert.match(MOOTTORI, /haku\.get\('kaikuvari'\) === 'seepia' \? SEEPIA : \(AJ\.kaikuVari \?\? \[1\.0, 1\.0, 1\.0\]\)/);
 });
+
+test('kehitysliput: kaikusarja (oletus A, harmaa ja seepia kuvina) ja väritön valo sarjan värikuville', () => {
+  const aj = SOKRATES.aikajana;
+  assert.equal(aj.kaikusarja, 'a');
+  assert.equal(aj.kaikusarjat.a.length, aj.kaiut.length);
+  assert.ok(aj.kaikusarjat.a.slice(0, 3).every((e) => e.harmaa.includes('/v3/kaiut/') && e.seepia.includes('/v3/kaiut/')));
+  assert.match(MOOTTORI, /const sarjanNimi = haku\.get\('kaikusarja'\) \?\? AJ\.kaikusarja;/);
+  assert.match(MOOTTORI, /u\.pKaikuVari\.value\.setRGB\(\.\.\.\(k\.varissa \? \[1, 1, 1\] : kaikuValo\)\);/);
+  assert.match(lue('../js/linssit/ajattelija-projektori.js'), /return c\.rgb \/ max\(l, 1e-3\) \* smoothstep\(0\.08, 0\.9, l\) \* c\.a \* reunaK;/);
+});

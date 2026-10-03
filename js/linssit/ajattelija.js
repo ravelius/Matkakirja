@@ -786,9 +786,25 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
         ca: a.ca, syvyys: a.syvyys, atlasKorkeus: kangas.height,
       });
     };
+    /*
+     * KAIKUSARJA JA VÄRI (omistaja vertaa, Päätoimittaja 3.10.2026): ?kaikusarja=<nimi> valitsee AJ.kaikusarjat-kentästä
+     * (oletus AJ.kaikusarja, nyt A = Sisältökirjurin rajatut hahmot alfalla); ?kaikusarja=v13b näyttää aikajanan omat kuvat.
+     * Sarjan kuvalla voi olla valmiit harmaa- ja seepiaversiot: väri tulee silloin kuvasta ja projektorin valo on
+     * neutraali; ilman versioita seepia tehdään valon värillä kuten ennen.
+     */
+    const sarjanNimi = haku.get('kaikusarja') ?? AJ.kaikusarja;
+    const sarja = AJ.kaikusarjat?.[sarjanNimi] ?? null;
+    const seepiana = haku.get('kaikuvari') === 'seepia';
+    const sarjanKuva = (j) => {
+      const e = sarja?.[j];
+      if (!e) return null;
+      if (typeof e === 'string') return { kuva: e, varissa: false };
+      return seepiana && e.seepia ? { kuva: e.seepia, varissa: true } : { kuva: e.harmaa ?? e.kuva, varissa: false };
+    };
     // Kaiut: kaksi paikkaa vuorotellen (kaiut 1, 3 → A; 2, 4 → B), kummallakin oma tekstuuri.
     const kaiutAj = AJ.kaiut.map((k, j) => ({
-      ...k, paikka: kaikuIndeksi + (j % 2), naytteenotin: j % 2 ? 'pKaiku2' : 'pKaiku', liukuAlku: k.energia[0][0],
+      ...k,
+      ...(sarjanKuva(j) ? { kuva: sarjanKuva(j).kuva, varissa: sarjanKuva(j).varissa, sovita: true } : {}), paikka: kaikuIndeksi + (j % 2), naytteenotin: j % 2 ? 'pKaiku2' : 'pKaiku', liukuAlku: k.energia[0][0],
       liukuLoppu: k.energia.at(-1)[0], paikkaT: b2t(THREE, k.paikka), kohdeT: b2t(THREE, k.paikka.map((x, i) => x + k.suunta[i] * 0.6)),
       tk: null,
     }));
@@ -800,9 +816,12 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       kaikuPaikassa[s] = j;
       u[k.naytteenotin].value = k.tk;
       const { width: w, height: h } = k.tk.image;
-      // v13b: kuva-alan mitat viennistä (lev_m, kork_m); muuten keilasta ja kuvan mittasuhteesta.
-      const lev = k.lev ?? (w >= h ? k.ala : k.ala * w / h);
-      const kork = k.kork ?? lev * h / w;
+      // v13b: kuva-alan mitat viennistä (lev_m, kork_m); sarjan kuva sovitetaan samaan suurimpaan mittaan omalla
+      // mittasuhteellaan; muuten keilasta ja kuvan mittasuhteesta.
+      const koko = k.lev ? Math.max(k.lev, k.kork) : k.ala;
+      const lev = k.lev && !k.sovita ? k.lev : (w >= h ? koko : koko * w / h);
+      const kork = k.kork && !k.sovita ? k.kork : lev * h / w;
+      u.pKaikuVari.value.setRGB(...(k.varissa ? [1, 1, 1] : kaikuValo));
       asetaProjektori(THREE, u, k.paikka, {
         paikka: k.paikkaT, kohde: k.kohdeT, etaisyys: 0.6, nauhaKork: kork, rivi: { lev: w, korkeus: h, uMax: 1 },
         ala: Math.max(lev, kork), blend: k.blend, atlasKorkeus: h, kaiku: s + 1,
@@ -820,7 +839,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
      * kehityslipulla ?kaikuvari=seepia. Oletus voimassa, kunnes omistaja päättää.
      */
     const SEEPIA = a.kaiku?.savy ?? [1.0, 0.78, 0.52];
-    u.pKaikuVari.value.setRGB(...(haku.get('kaikuvari') === 'seepia' ? SEEPIA : (AJ.kaikuVari ?? [1.0, 1.0, 1.0])));
+    const kaikuValo = haku.get('kaikuvari') === 'seepia' ? SEEPIA : (AJ.kaikuVari ?? [1.0, 1.0, 1.0]);
+    u.pKaikuVari.value.setRGB(...kaikuValo);
     u.pMaara.value = kaikuIndeksi + 2;
     const virranAlku = AJ.virta.find(([, k]) => k > 0)?.[0] ?? 0;
 
