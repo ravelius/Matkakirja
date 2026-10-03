@@ -295,6 +295,18 @@ namespace Matkakirja.Natiivi
                 robottiKorjaus = Mathf.Clamp(AlaVara + d - perus, 0f, 80f);
             }
             alue.style.bottom = perus + robottiKorjaus;
+            // IKKUNAN TAKANA (omistaja 3.10. klo 06.5x; AstronautinNakyma laskee kerroksen kehyksen alle): kypärä LasiKypara-korkeudelle
+            // ja Pulun oikea reuna lasin oikeaan reunaan LasiVälin päähän (tai ruudun turvareunaan); lyhyt varsi jatkuu kehyksen taakse.
+            if (OikeallaReunalla && Lasi is Vector3 lasi && alue.panel != null && alue.parent != null && !float.IsNaN(kuva.KyparaEvasta)
+                && !float.IsNaN(alue.worldBound.yMax))
+            {
+                var juuri = alue.panel.visualTree.layout;
+                float ky = juuri.height * LasiKypara, d = ky - lasi.y, r = lasi.z - LasiVali;
+                float lasinOikea = r > Mathf.Abs(d) ? lasi.x + Mathf.Sqrt(r * r - d * d) : lasi.x;
+                float oikea = Mathf.Min(lasinOikea, alue.parent.layout.width - reunat.z - 8f);
+                alue.style.left = oikea - RobottiPuluOikea * RobottiSkaala;
+                alue.style.bottom = juuri.height - ky + kuva.KyparaEvasta + (kuva.EvaAla - alue.worldBound.yMax);
+            }
             alue.style.transformOrigin = new TransformOrigin(Length.Percent(0), Length.Percent(100));
             alue.style.scale = new Scale(new Vector2(RobottiSkaala, RobottiSkaala));
         }
@@ -317,6 +329,12 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Robottikäden Pulu oikeaan reunaan lyhyen varren päähän (ISS-kyydin Cupola; IssKyytiNakyma asettaa).</summary>
         public bool OikeallaReunalla { get; set; }
+
+        /// <summary>Cupolan lasin ympyrä ruudun pisteinä (x, y, säde): Pulu ikkunan takana lasin oikeassa reunassa; null = ei lasia.</summary>
+        public Vector3? Lasi { get; set; }
+
+        /// <summary>Ikkunan takana: kypärän keskipiste ruudun korkeudesta, väli lasin reunaan (pt) ja Pulun oikea reuna kuvassa (viewBox).</summary>
+        const float LasiKypara = 0.62f, LasiVali = 12f, RobottiPuluOikea = 145f;
 
         /// <summary>Vaakatilan este robottikäden puomille (pienen paneelin vasen yläkulma, paneelin pisteinä); null = Pulu AlaVaran yllä.</summary>
         public Vector2? VarrenEste { get; set; }

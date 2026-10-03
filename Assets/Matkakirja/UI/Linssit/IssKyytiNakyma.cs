@@ -446,6 +446,22 @@ namespace Matkakirja.Natiivi
         /// Pulu kyydissä (omistaja 29.9.2026): Cupolassa ulkona avaruuskävelyllä ikkunan aukossa (alue oikealle alas keskeltä,
         /// kerros kehyksen alla, AstronautinNakyma), muissa tiloissa ohjauspöydän yläpuolella.
         /// </summary>
+        /// <summary>Lasin ympyrä kuvun koordinaateissa (x, y, säde, 1 = laskettu), Cupola 3:n rajauksesta.</summary>
+        Vector4 lasiKuvussa;
+        /// <summary>Lasin säde osuutena Codexin kuvan leveydestä (kehyksen alfa &gt; 0,5 ikkunan keskeltä 16 suuntaan, pienin; 3.10.).</summary>
+        const float LasinSadeOsuusIphone = 0.484f, LasinSadeOsuusIpad = 0.315f;
+
+        /// <summary>Lasin ympyrä ruudun pisteinä (x, y, säde); kuvun 90°:n kierto vaakana huomioitu. null = ei Cupola 3:n lasia.</summary>
+        Vector3? LasiRuudulla(float W, float H)
+        {
+            if (!cupola3 || lasiKuvussa.w < 0.5f) return null;
+            float kw = kupu.layout.width, kh = kupu.layout.height;
+            if (!(kw > 1f) || !(kh > 1f)) return null;
+            float dx = lasiKuvussa.x - kw * 0.5f, dy = lasiKuvussa.y - kh * 0.5f;
+            // Kuvun kierto 90° myötäpäivään ruudun keskipisteen ympäri (PaivitaKupu): (dx, dy) → (−dy, dx).
+            return kupuKaannetty ? new Vector3(W * 0.5f - dy, H * 0.5f + dx, lasiKuvussa.z) : new Vector3(W * 0.5f + dx, H * 0.5f + dy, lasiKuvussa.z);
+        }
+
         void PaivitaPulu()
         {
             if (!UiNakymat.Olemassa) return;
@@ -476,6 +492,8 @@ namespace Matkakirja.Natiivi
             // puomi nousee pienen paneelin vasemman yläkulman yli (A/B `astro kyyti pulualas 0|1`).
             // Cupolassa Pulu oikeassa reunassa lyhyen varren päässä (omistaja 3.10.); nouseva puomi (VarrenEste) vain vasemmassa tilassa.
             p.OikeallaReunalla = ikkunassa && PuluOikealla;
+            // Ikkunan takana avaruudessa (omistaja 3.10. klo 06.5x "Pulun pitäisi olla cupolan ulkopuolella"): lasin ympyrä Pululle.
+            p.Lasi = p.OikeallaReunalla ? LasiRuudulla(W, H) : null;
             p.VarrenEste = PuluAlas && !p.OikeallaReunalla && ikkunassa && poytaNakyy && Kytkinpoyta && W > H
                 ? new Vector2(poyta.Juuri.worldBound.xMin + poyta.Nakyva.x, pe.worldBound.yMin + poyta.YlaReuna)
                 : (Vector2?)null;
@@ -1051,6 +1069,13 @@ namespace Matkakirja.Natiivi
                 float s3 = Mathf.Max(W / (float)kl, H / (float)kk);
                 AsetaKuvanAsema(new Vector2((W - (float)kl * s3) * (float)d.asemaX, (H - (float)kk * s3) * (float)d.asemaY));
                 siirto = new Vector2((float)d.x, (float)d.y);
+                // Lasin ympyrä kuvun koordinaateissa (Pulu ikkunan takana, omistaja 3.10.): keskipiste kuvassa (Cupola3Keskus), kuva
+                // cover-asemassa, laatikko skaalattu z keskeltä ja siirretty; säde kehyskuvan alfasta mitattuna (LasinSadeOsuus).
+                var (kcx, kcy) = IssKuvakulma.Cupola3Keskus(ipad, Ohjaamo3Kulma);
+                float ix = (W - (float)kl * s3) * (float)d.asemaX + (float)kcx * (float)kl * s3;
+                float iy = (H - (float)kk * s3) * (float)d.asemaY + (float)kcy * (float)kk * s3;
+                lasiKuvussa = new Vector4(W * 0.5f + z * (ix - W * 0.5f) + siirto.x, H * 0.5f + z * (iy - H * 0.5f) + siirto.y,
+                    (ipad ? LasinSadeOsuusIpad : LasinSadeOsuusIphone) * (float)kl * s3 * z, 1f);
                 return true;
             }
             float s = Mathf.Max(W / KuvaL, H / KuvaK);

@@ -74,8 +74,11 @@ namespace Matkakirja.Natiivi
             // alla ja lasi, heijastus ja pölyt piirtyvät sen päälle; Cupolan läpinäkyvät osat päästävät napautuksen Puluun.
             // Omistaja 2.10. 21.3x: robottikäden Pulu on vasemmassa alakulmassa myös Cupolassa, joten kerros kehyksen yläpuolelle
             // (ilman robottikättä, A/B `astro eva robotti pois`, Pulu pysyy ikkunan takana kehyksen alla).
+            // Omistaja 3.10. klo 06.5x "Pulun pitäisi olla cupolan ulkopuolella": oikean reunan robottikäden Pulu on Cupolassa taas ikkunan
+            // takana (kehys, pultit, teipit ja lasi sen edessä); vasemman alakulman tila (A/B pulu-oikealla 0) pitää 2.10.:n järjestyksen.
             Kyyti.TilaMuuttui += tila => kerros.AsetaJarjestys(Pulu.Kerros,
-                tila != KyydinTila.Kauko && (tila != KyydinTila.Ikkuna || !LiviaKuva.RobottiPois) ? LinssiUi.SulkuKerros : Pulu.Kerros);
+                tila != KyydinTila.Kauko && (tila != KyydinTila.Ikkuna || (!LiviaKuva.RobottiPois && !IssKyytiNakyma.PuluOikealla))
+                    ? LinssiUi.SulkuKerros : Pulu.Kerros);
 
             AstronauttiKerros.AvausKasittelija = Avaus;
             AstronauttiKerros.KuvaKasittelija = (kohde, indeksi) =>
