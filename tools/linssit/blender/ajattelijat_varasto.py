@@ -118,7 +118,7 @@ def lautaseina(alku, loppu, z0, z1, akseli, paikka, rako=0.012, leveys=0.22):
         else: laatikko('lauta', (paikka, t + lev / 2, (z0 + z1) / 2), (0.03, lev - r_, z1 - z0), PUU)
         t += lev
 lautaseina(X0, X1, 0, Z1, 'x', Y1); lautaseina(X0, X1, 0, Z1, 'x', Y0)
-lautaseina(Y0, Y1, 0, Z1, 'y', X0); lautaseina(Y0, Y1, 0, Z1, 'y', X1)
+lautaseina(Y0, Y1, 0, Z1, 'y', X0); lautaseina(Y0, Y1, 0, Z1, 'y', X1, rako=0.0)   # oikea seinä umpinainen (ei kovia viivoja)
 y_ = Y0                                                     # katto: poikittaiset laudat, muutama leveä rako (kattoluukut)
 while y_ < Y1:
     lev = 0.25; rako = 0.09 if rnd.random() < 0.12 else (0.006 if rnd.random() < 0.25 else 0.0)
@@ -159,29 +159,45 @@ for y in (9.0, 12.0):                                        # hyllyrivit
                 else:
                     bpy.ops.mesh.primitive_uv_sphere_add(radius=0.14, location=(xt + 0.15, y, zt + 0.16)); o = bpy.context.object
                     o.scale = (1, 1, 1.35); bpy.ops.object.shade_smooth(); o.data.materials.append(KIVI); xt += 0.35
-for k in range(9):                                           # suojakankaiden alla olevat isot patsaat
-    for _ in range(40):
-        x, y = rnd.uniform(-7, 7), rnd.uniform(4, 13)
-        if vapaa(x, y, 0.6): break
-    varatut.append((x, y, 0.6)); kork = rnd.uniform(1.6, 2.4)
-    bpy.ops.mesh.primitive_cone_add(vertices=32, radius1=rnd.uniform(0.42, 0.55), radius2=0.24, depth=kork, location=(x, y, kork / 2)); vartalo = bpy.context.object
-    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.24, location=(x + rnd.uniform(-0.08, 0.08), y, kork + 0.12)); paa_ = bpy.context.object
-    bpy.ops.mesh.primitive_cube_add(size=1, location=(x + rnd.choice((-0.35, 0.35)), y, kork * rnd.uniform(0.6, 0.85))); kasi = bpy.context.object
-    kasi.scale = (0.55, 0.32, 0.28)   # olkapää/käsi verhon alla, ei tikku
-    bpy.ops.object.select_all(action='DESELECT')
-    for o in (vartalo, paa_, kasi): o.select_set(True)
-    bpy.context.view_layer.objects.active = vartalo; bpy.ops.object.join()
-    rm = vartalo.modifiers.new('verho', 'REMESH'); rm.mode = 'VOXEL'; rm.voxel_size = 0.04
-    tx = bpy.data.textures.new(f'rypyt{k}', 'CLOUDS'); tx.noise_scale = 0.32; tx.noise_depth = 3
-    dp = vartalo.modifiers.new('rypyt', 'DISPLACE'); dp.texture = tx; dp.strength = 0.11
-    sm = vartalo.modifiers.new('sile', 'SMOOTH'); sm.iterations = 4; sm.factor = 0.7
-    vartalo.data.materials.clear(); vartalo.data.materials.append(KANGAS); bpy.ops.object.shade_smooth()
-for k in range(14):                                          # taulut kehyksissä: nojaamassa hyllyihin, seinään ja toisiinsa
+# suojakankaiden alla olevat patsaat (Päätoimittaja 3.10.: vaalea haalistunut pellava, selvät laskokset, alta erottuu
+# pää, olkapäät ja kohotettu käsi; vähemmän ja syvemmällä): kangassimulaatio putoaa patsasmuodon päälle
+LAKANA = mat('lakana', (0.86, 0.83, 0.76), 0.9, f'{PH}/hessian_230/hessian_230_diff_2k.jpg', None, 3.0)
+for b_ in LAKANA.node_tree.nodes:
+    if b_.type == 'MIX': b_.inputs['Factor'].default_value = 0.25   # pellavan kuvio vain häivähdyksenä
+bpy.ops.mesh.primitive_plane_add(size=40, location=(0, 4, 0)); maa = bpy.context.object; maa.modifiers.new('t', 'COLLISION'); maa.hide_render = True
+for k in range(5):
+    for _ in range(60):
+        x, y = rnd.uniform(-6.5, 6.5), rnd.uniform(8.0, 13.2)
+        if vapaa(x, y, 0.8): break
+    varatut.append((x, y, 0.8)); kork = rnd.uniform(1.7, 2.2); puoli = rnd.choice((-1, 1))
+    muodot = []
+    bpy.ops.mesh.primitive_cone_add(vertices=24, radius1=0.40, radius2=0.26, depth=kork - 0.45, location=(x, y, (kork - 0.45) / 2)); muodot.append(bpy.context.object)
+    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.15, location=(x, y - 0.02, kork - 0.25)); muodot.append(bpy.context.object)          # pää
+    bpy.ops.mesh.primitive_cylinder_add(radius=0.07, depth=0.75, location=(x + puoli * 0.32, y, kork - 0.05)); kasi = bpy.context.object
+    kasi.rotation_euler = (0, puoli * math.radians(-28), 0); muodot.append(kasi)                                                      # kohotettu käsi
+    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.2, location=(x, y, kork - 0.5)); o_ = bpy.context.object; o_.scale = (1.6, 0.9, 0.6); muodot.append(o_)  # olkapäät
+    for o_ in muodot: o_.modifiers.new('t', 'COLLISION'); o_.collision.thickness_outer = 0.015
+    bpy.ops.mesh.primitive_grid_add(x_subdivisions=56, y_subdivisions=56, size=2.6, location=(x, y, kork + 0.45)); kan = bpy.context.object
+    kan.rotation_euler[2] = rnd.uniform(0, math.pi)
+    cl = kan.modifiers.new('kangas', 'CLOTH'); cs = cl.settings; cs.quality = 6; cs.mass = 0.25; cs.bending_stiffness = 0.6
+    cs.tension_stiffness = 12; cs.compression_stiffness = 12; cl.collision_settings.distance_min = 0.008
+    cl.collision_settings.use_self_collision = True; cl.collision_settings.self_distance_min = 0.006
+    cl.point_cache.frame_start, cl.point_cache.frame_end = 1, 70
+    for f_ in range(1, 71): sc.frame_set(f_)
+    bpy.context.view_layer.objects.active = kan; bpy.ops.object.modifier_apply(modifier='kangas')
+    kan.modifiers.new('paksuus', 'SOLIDIFY').thickness = 0.006; kan.modifiers.new('sile', 'SUBSURF').levels = 1
+    kan.data.materials.append(LAKANA); bpy.ops.object.shade_smooth()
+    for o_ in muodot: o_.hide_render = True
+sc.frame_set(1)
+for k in range(30):                                          # taulut kehyksissä: nojaamassa hyllyihin, seinään ja toisiinsa
     kuva = KUVAT[k % len(KUVAT)]; img = bpy.data.images.load(kuva, check_existing=True); sk = img.size[1] / max(img.size[0], 1)
     lev = rnd.uniform(0.6, 1.4); kork = lev * sk
-    for _ in range(40):
-        x, y = rnd.uniform(-6.5, 6.5), rnd.uniform(3.5, 11)
-        if vapaa(x, y, lev * 0.5): break
+    paikka_ = k % 3   # 0 = takaseinä, 1 = hyllyrivin eteen, 2 = vapaasti lattialle
+    for _ in range(60):
+        if paikka_ == 0: x, y = rnd.uniform(-7.0, 7.0), Y1 - 0.35
+        elif paikka_ == 1: x, y = rnd.uniform(-6.3, 6.3), rnd.choice((9.0, 12.0)) - 0.55
+        else: x, y = rnd.uniform(-6.5, 6.5), rnd.uniform(3.5, 11)
+        if paikka_ != 2 or vapaa(x, y, lev * 0.5): break
     varatut.append((x, y, lev * 0.5)); kierto = (0.0 if rnd.random() < 0.8 else math.pi) + rnd.uniform(-0.6, 0.6)   # useimmat kasvot kameraan päin
     bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 0, 0)); taulu = bpy.context.object
     taulu.scale = (lev, kork, 1); bpy.ops.object.transform_apply(scale=True)
@@ -208,12 +224,12 @@ w.node_tree.nodes['Background'].inputs['Color'].default_value = (0.35, 0.55, 1.0
 vol = bpy.data.materials.new('pöly'); vol.use_nodes = True; vn = vol.node_tree; vn.nodes.remove(vn.nodes['Principled BSDF'])
 vs = vn.nodes.new('ShaderNodeVolumeScatter'); vs.inputs['Density'].default_value = 0.035; vs.inputs['Anisotropy'].default_value = 0.65
 nz = vn.nodes.new('ShaderNodeTexNoise'); nz.inputs['Scale'].default_value = 0.6
-ma = vn.nodes.new('ShaderNodeMath'); ma.operation = 'MULTIPLY_ADD'; ma.inputs[1].default_value = 0.05; ma.inputs[2].default_value = 0.022
+ma = vn.nodes.new('ShaderNodeMath'); ma.operation = 'MULTIPLY_ADD'; ma.inputs[1].default_value = 0.06; ma.inputs[2].default_value = 0.035
 vn.links.new(nz.outputs['Fac'], ma.inputs[0]); vn.links.new(ma.outputs['Value'], vs.inputs['Density'])
 vn.links.new(vs.outputs['Volume'], vn.nodes['Material Output'].inputs['Volume'])
 ilma = laatikko('ilma', ((X0 + X1) / 2, (Y0 + Y1) / 2, Z1 / 2), (X1 - X0 - 0.1, Y1 - Y0 - 0.1, Z1 - 0.1), vol)
 ilma.visible_shadow = False
-aur = bpy.data.lights.new('aurinko', 'SUN'); aur.energy = 30.0; aur.color = (0.70, 0.82, 1.0); aur.angle = math.radians(0.4)
+aur = bpy.data.lights.new('aurinko', 'SUN'); aur.energy = 30.0; aur.color = (0.70, 0.82, 1.0); aur.angle = math.radians(3.0)   # säde leviää raosta
 ao = bpy.data.objects.new('aurinko', aur); sc.collection.objects.link(ao); ao.rotation_euler = (math.radians(38), 0, math.radians(200))
 kp = bpy.data.lights.new('keila', 'SPOT'); kp.energy = 700; kp.spot_size = math.radians(13); kp.spot_blend = 0.55
 kp.color = (1.0, 0.80, 0.58); kp.shadow_soft_size = 0.05
