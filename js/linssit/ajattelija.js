@@ -786,6 +786,32 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       pyyhkaisy.shadow.bias = -0.0004;
       kohtaus.add(pyyhkaisy, pyyhkaisy.target);
     }
+    /*
+     * RAKOVALO (v14, omistaja 3.10.2026 klo 15.3x: mystinen intro, "kapea kaista silmien yli"; Blender AREA 0,34 × 0,014 m,
+     * spread 1,2°): kapea spotti, jonka kuvio (map) on vaakasuora kaista. Voima: Blenderin teho / pinta-ala = säteilytys
+     * kuten auringolla (W/m²) → three.js: I = E · W · d² (decay 2).
+     */
+    const RK = AJ.rako ?? null;
+    let rako = null;
+    if (RK) {
+      const RD = 0.9;
+      rako = new THREE.SpotLight(new THREE.Color(...(RK.vari ?? [1, 1, 1])), 0, 0, Math.atan(RK.koko[0] / 2 / RD) * 1.05, 0, 2);
+      rako.position.copy(b2t(THREE, RK.paikka));
+      rako.target.position.copy(b2t(THREE, RK.paikka.map((x, i) => x + RK.suunta[i] * RD)));
+      const kuvio = document.createElement('canvas');
+      kuvio.width = kuvio.height = 512;
+      const ck = kuvio.getContext('2d');
+      const kaista = Math.max(2, Math.round(512 * RK.koko[1] / RK.koko[0]));
+      ck.fillStyle = '#000'; ck.fillRect(0, 0, 512, 512);
+      ck.filter = 'blur(2px)'; ck.fillStyle = '#fff'; ck.fillRect(8, 256 - kaista / 2, 496, kaista);
+      rako.map = new THREE.CanvasTexture(kuvio);
+      rako.castShadow = true;
+      rako.shadow.mapSize.set(1024, 1024);
+      rako.shadow.camera.near = 0.3;
+      rako.shadow.camera.far = 1.8;
+      rako.userData.kerroin = W * RD * RD / (RK.koko[0] * RK.koko[1]);
+      kohtaus.add(rako, rako.target);
+    }
     const pyyhkaisynKohde = (r) => {
       if (py.kohteet) {
         const k = avainArvo(py.kohteet.map(([rr, q]) => [rr, q]), r);
@@ -815,7 +841,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       const t = tykitAj[j];
       asetaProjektori(THREE, u, 0, {
         paikka: t.paikkaT, kohde: t.kohdeT, etaisyys: 0.6, nauhaKork: t.korkeus, rivi: t.rivi, ala: t.ala, blend: t.blend,
-        ca: a.ca, syvyys: a.syvyys, atlasKorkeus: kangas.height,
+        // v14-kortti terävänä (Päätoimittaja 3.10.2026): ei kromaattista kaksoisvalotusta eikä syvyyssumeuden hehkua.
+        ca: KORTTI ? 0 : a.ca, syvyys: KORTTI ? 0 : a.syvyys, atlasKorkeus: kangas.height,
       });
     };
     /*
@@ -955,6 +982,11 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       valo.color.setRGB(...(au.vari ?? PERUSVARI));
       maailma.intensity = TAYTE * (a.intro.tayte ?? 1);
       if (kaikuTayte) kaikuTayte.intensity = 0;
+      if (rako) {
+        const e = avainArvo(RK.energia, r);
+        rako.visible = e > 0;
+        rako.intensity = e * rako.userData.kerroin;
+      }
       if (pyyhkaisy) {
         pyyhkaisy.intensity = avainArvo(py.energia, r) * W;
         pyyhkaisy.target.position.copy(pyyhkaisynKohde(r));
