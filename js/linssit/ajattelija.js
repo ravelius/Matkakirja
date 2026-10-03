@@ -467,7 +467,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       for (let k = 0; k < pj.riveja && ri < tv.rivit.length; k += 1, ri += 1) {
         const [kieli] = tv.rivit[ri];
         const koot = kieli === 'fi' ? [...tv.rivikork].sort((x, y) => x - y).slice(0, 2) : tv.rivikork;
-        const kork = koot[Math.floor(satunnainen() * koot.length)];
+        // v14: riviKoko ohentaa pehmeät rivit (Päätoimittaja 3.10.2026: "tekstiriveiltä, ei valkoisilta palkeilta"); ?rivikoko=.
+        const kork = koot[Math.floor(satunnainen() * koot.length)] * (Number(haku.get('rivikoko')) || tv.riviKoko || 1);
         const [kMin, kMax] = tv.kirkkaus[kieli] ?? tv.kirkkaus.el;
         const kirkkaus = kMin + (kMax - kMin) * satunnainen();
         const vM = (-0.4 + 0.8 * (k + 0.5) / pj.riveja) * pj.ala + (satunnainen() * 2 - 1) * 0.01;
