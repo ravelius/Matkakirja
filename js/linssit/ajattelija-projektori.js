@@ -139,7 +139,8 @@ vec3 pKaikuNayte(int i, float jx, float jy) {
   float u = (x * b.x - y * b.y) / a.y + pF[i].y + a.w;
   float v = (x * b.y + y * b.x - b.z) / a.z + 0.5;
   if (u <= 0.0 || u >= 1.0 || v <= 0.0 || v >= 1.0) return vec3(0.0);
-  float reunaK = smoothstep(0.0, 0.08, u) * smoothstep(1.0, 0.92, u) * smoothstep(0.0, 0.08, v) * smoothstep(1.0, 0.92, v);
+  // Pistemäinen projektori (Linnanrakentaja v13b): kuva terävä pinnalla; reunasta häivytetään vain 1 % (ei saumaa).
+  float reunaK = smoothstep(0.0, 0.01, u) * smoothstep(1.0, 0.99, u) * smoothstep(0.0, 0.01, v) * smoothstep(1.0, 0.99, v);
   vec4 c = pF[i].z > 1.5 ? texture2D(pKaiku2, vec2(u, 1.0 - v)) : texture2D(pKaiku, vec2(u, 1.0 - v));
   float l = max(max(c.r, c.g), c.b);
   return c.rgb / max(l, 1e-3) * smoothstep(0.08, 0.9, l) * c.a * reunaK;

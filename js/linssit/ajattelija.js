@@ -831,6 +831,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       new THREE.TextureLoader().loadAsync(`${R2}${k.kuva}`).then((tk) => {
         tk.colorSpace = THREE.NoColorSpace;
         tk.flipY = false;
+        tk.anisotropy = renderoija.capabilities.getMaxAnisotropy();   // terävä myös viistossa (v13b: ei pehmennystä)
         k.tk = tk;
       }).catch((syy) => console.warn('ajattelija: kaikukuva', k.kuva, syy));
     }
