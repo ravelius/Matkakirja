@@ -81,10 +81,12 @@ namespace Matkakirja.Natiivi
             {
                 if (Pakota.HasValue) return Pakota.Value;
                 if (Screen.width <= Screen.height) return false;
-                // iPad: palkki näkyy myös vaaka-asennossa (omistaja 30.9.2026 klo 12.28); vaakapiilo vain iPhonella.
                 // Vaaka-iPhone osuu aina webin rajaan (korkein vaaka-iPhone 440 pt ≤ 520 pt). Screen.dpi ei kelpaa (uusilla malleilla
                 // väärä skaala, vrt. PuhelimenSkaala), joten iPhone ei mittaa: TF 129:ssä palkki jäi vaakaan näkyviin.
-                return Puhelin;
+                // iPad (omistaja 3.10.2026 klo 14.2x, web päätös 43/9 "pointer: coarse and max-width: 1366px"): palkki poistuu myös
+                // iPadin vaakatilassa ja ☰ avaa valikon (kumoaa 30.9. klo 12.28 "iPadilla palkki näkyy vaakassa"). Mac (hiiri,
+                // web pointer: fine) pitää palkin.
+                return Puhelin || (UiKerros.Tabletti && !MacSyote.Kaytossa);
             }
         }
 
