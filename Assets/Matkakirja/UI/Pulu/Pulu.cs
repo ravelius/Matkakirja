@@ -227,6 +227,8 @@ namespace Matkakirja.Natiivi
         const float RobottiSkaala = 0.6f;
         // viewBox-yksiköt: Pulun vasen reuna x 88, varren alin kohta (kyynärnivel vaakaan käännettynä) y 381 (viewBox 304).
         const float RobottiPuluVasen = 88f, RobottiAlin = 381f, RobottiReuna = 12f;
+        /// <summary>Varren nivel (viewBox x 124, LiviaKuva.NivelX) ja oikean reunan tilassa nivelen etäisyys turvareunasta (pt).</summary>
+        const float RobottiNivelX = 124f, OikeaVarsiPt = 40f;
         /// <summary>Testikomennon tila (astro kyyti tila): robottikäden paikka, puomin alin kohta ja palautteen korjaus.</summary>
         public string RobottiTila()
         {
@@ -253,6 +255,11 @@ namespace Matkakirja.Natiivi
             robottiAseteltu = true;
             alue.style.right = StyleKeyword.Null;
             alue.style.left = reunat.x + RobottiReuna - RobottiPuluVasen * RobottiSkaala;
+            // OIKEA REUNA (omistaja 3.10.2026 klo 06.3x: "pulu saisi olla oikeassa reunassa ja lyhyen varren päässä"; korvaa 2.10.:n
+            // vasemman alakulman ja koko ruudun yli kulkevan varren Cupolassa): nivel OikeaVarsiPt:n päähän ruudun oikeasta
+            // turvareunasta, jolloin vaakaosa on lyhyt (LiviaKuva venyttää sen oikeaan reunaan). Korkeus kuten ennen (AlaVara).
+            if (OikeallaReunalla && alue.parent != null && alue.parent.layout.width > 0f)
+                alue.style.left = alue.parent.layout.width - reunat.z - OikeaVarsiPt - RobottiNivelX * RobottiSkaala;
             // Vaakana pienen paneelin yli kulkeva puomi (VarrenEste): Pulu vasempaan alakulmaan turva-alueen alareunaan, puomi nousee.
             kuva.VarrenEste = VarrenEste;
             float alaRaja = VarrenEste.HasValue ? reunat.w + 8f : Mathf.Max(reunat.w + 8f, AlaVara);
@@ -294,6 +301,9 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Alareunan paneeli, jonka yläpuolelle Pulu nousee (pt ruudun alareunasta; ISS-kyydin ohjauspöytä), 0 = ei mitään.</summary>
         public float AlaVara { get; set; }
+
+        /// <summary>Robottikäden Pulu oikeaan reunaan lyhyen varren päähän (ISS-kyydin Cupola; IssKyytiNakyma asettaa).</summary>
+        public bool OikeallaReunalla { get; set; }
 
         /// <summary>Vaakatilan este robottikäden puomille (pienen paneelin vasen yläkulma, paneelin pisteinä); null = Pulu AlaVaran yllä.</summary>
         public Vector2? VarrenEste { get; set; }

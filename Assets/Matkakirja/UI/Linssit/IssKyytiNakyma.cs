@@ -437,6 +437,9 @@ namespace Matkakirja.Natiivi
         /// <summary>A/B: Pulu vaakana Cupolan alakulmaan nousevan puomin kanssa (oletus päällä).</summary>
         public static bool PuluAlas = true;
 
+        /// <summary>A/B: Pulu Cupolassa oikeassa reunassa lyhyen varren päässä (omistaja 3.10.2026; oletus päällä).</summary>
+        public static bool PuluOikealla = true;
+
         IVisualElementScheduledItem puluJalki;
 
         /// <summary>
@@ -471,7 +474,9 @@ namespace Matkakirja.Natiivi
             if (suuri) return;
             // VAAKA (Päätoimittaja 3.10., omistajan toive Pulusta vasempaan alakulmaan): Cupolassa Pulu alakulmaan, ja robottikäden
             // puomi nousee pienen paneelin vasemman yläkulman yli (A/B `astro kyyti pulualas 0|1`).
-            p.VarrenEste = PuluAlas && ikkunassa && poytaNakyy && Kytkinpoyta && W > H
+            // Cupolassa Pulu oikeassa reunassa lyhyen varren päässä (omistaja 3.10.); nouseva puomi (VarrenEste) vain vasemmassa tilassa.
+            p.OikeallaReunalla = ikkunassa && PuluOikealla;
+            p.VarrenEste = PuluAlas && !p.OikeallaReunalla && ikkunassa && poytaNakyy && Kytkinpoyta && W > H
                 ? new Vector2(poyta.Juuri.worldBound.xMin + poyta.Nakyva.x, pe.worldBound.yMin + poyta.YlaReuna)
                 : (Vector2?)null;
             // Robottikäden Pulu (vasen alakulma, omistaja 2.10. 21.3x) pysyy pöydän yläpuolella myös Cupolassa; ikkunan takana
