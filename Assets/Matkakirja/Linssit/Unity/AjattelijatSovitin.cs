@@ -625,8 +625,9 @@ namespace Matkakirja.Natiivi
                     if (!kytkinSoi && g < a.Prologi.Kytkin && kytkin.clip != null)
                     {
                         kytkinSoi = true;
-                        kytkin.volume = EsityksenAani.Mykistetty?.Invoke() ?? false ? 0f : 1f;
+                        kytkin.volume = !AaniKaappaus.Kaynnissa && (EsityksenAani.Mykistetty?.Invoke() ?? false) ? 0f : 1f;
                         kytkin.PlayScheduled(AjattelijaTahti.Hetki(dspNolla, a.Prologi.Kytkin));
+                        o.Kirjaa($"ajattelija: tahti kytkin ajastettu dsp {AjattelijaTahti.Hetki(dspNolla, a.Prologi.Kytkin):F4} s");
                     }
                     Ajasta(dspNyt, pl);
                     Mitattavat(a, pl);
@@ -726,7 +727,7 @@ namespace Matkakirja.Natiivi
             ajastettu = true;
             var (hetki, kohta) = AjattelijaTahti.Ajastus(dspNyt, dspNolla, pl);
             if (kohta >= l.clip.length) return;
-            l.volume = EsityksenAani.Mykistetty?.Invoke() ?? false ? 0f : 1f;
+            l.volume = !AaniKaappaus.Kaynnissa && (EsityksenAani.Mykistetty?.Invoke() ?? false) ? 0f : 1f;
             l.timeSamples = Math.Min(l.clip.samples - 1, (int)(kohta * l.clip.frequency) + Mp3Ohitus(l.clip));
             l.PlayScheduled(hetki);
         }
@@ -841,6 +842,13 @@ namespace Matkakirja.Natiivi
                 AjattelijaNayttamo.RajaOhitus = L(0); AjattelijaNayttamo.KulmaOhitus0 = L(1); AjattelijaNayttamo.KulmaOhitus1 = L(2);
                 nayttamo?.AsetaRivinRaja();
                 o.Kirjaa($"ajattelija: rivinraja {AjattelijaNayttamo.RajaOhitus} kulma {AjattelijaNayttamo.KulmaOhitus0}–{AjattelijaNayttamo.KulmaOhitus1} (NaN = data)");
+                return;
+            }
+            else if (mita == "kaappaa" && arvo != null)
+            {
+                // Tallenteen ääniraita (Päätoimittaja 4.10.): miksaus WAV:iin, ulostulo nollattu; ajattelija kaappaa <s> [nimi].
+                AaniKaappaus.Aloita(double.Parse(arvo, System.Globalization.CultureInfo.InvariantCulture), osat.Length > 3 ? osat[3] : "ajattelija-aani",
+                    t => o.Kirjaa("ajattelija: " + t));
                 return;
             }
             else if (mita == "pcm" && arvo != null)

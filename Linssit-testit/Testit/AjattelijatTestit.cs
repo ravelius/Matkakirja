@@ -646,5 +646,12 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(nimi == "Marcus Aurelius" && m.Count == 1 && m[0].Tekija.StartsWith("Nico Kokkonen, CC BY 3.0"), "Marcus nimeaminen");
             Oleta.Sama(0, AjattelijaData.Kuvalahteet("ei jsonia").rivit.Count);
         }
+
+        [Testi] static void SavunPehmeysOletukset()
+        {
+            var aj = Lue("sokrates").Aikajana;
+            Oleta.Tosi(aj.SavuKuva != null && aj.SavuHarso == AjattelijaAikajanaData.OletusSavuHarso && aj.SavuPehmeys == AjattelijaAikajanaData.OletusSavuPehmeys,
+                $"savu {aj.SavuKuva} harso {aj.SavuHarso} pehmeys {aj.SavuPehmeys}");
+        }
     }
 }
