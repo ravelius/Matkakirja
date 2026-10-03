@@ -203,11 +203,11 @@ export const SOKRATES = Object.freeze({
      * V14 (omistaja 3.10.2026 klo 15.4x): päälainaus korttina (koko lause kerralla luettavissa, terävä ja kirkkain) ja
      * taustavirran rivit epäterävinä yksi kerrallaan kasvojen eri puolilta: ensimmäinen 12,3 s linssin ajassa
      * (kohtauksen ruutu 295, kertojan alku), sitten 0,5 s:n välein; rivi juoksee sisään kasvojen reunasta (rintama 3 ×
-     * tekstin nopeus, alku 55 % keilan puolileveydestä). Rivien voima 0,6 (päälainaus kirkkain); kortti väistää rivit.
+     * tekstin nopeus, alku 55 % keilan puolileveydestä). Rivien voima 0,4 (päälainaus kirkkain, kasvot näkyvät rivien välistä); kortti väistää rivit.
      */
     lauseKortti: { merkkeja: 20, leveys: 0.075 },
     virtaPorrastus: { alku: 295, vali: 15, haivytys: 12, rintama: 3, reuna: 0.55 },
-    virtaVoima: 0.6,
+    virtaVoima: 0.4,
     // V14: puhe = kertoja (sama William-otto, 9,5 s:sta kohtauksen alusta) + efektit; musiikki Linssisepän v14-sävellys
     // (iskut 2,0 / 3,9 / 4,5 / 5,1 / 6,1 s, −8 dB puheen alla). Zarathustralla ei ole v14-ajoitusta, joten vaihtoehto pois.
     // ÄMPÄRIIN vasta omistajan hyväksynnän jälkeen (ajattelijat/sokrates/v4/).
@@ -280,8 +280,11 @@ export const SOKRATES = Object.freeze({
    * Suomenkieliset aina kahdessa pienimmässä koossa ja himmeämpinä. Luuppaavat vaakasuunnassa saumattomasti.
    */
   taustavirta: {
-    // v14: rivit epäteräviä (sumennus atlakseen 0,2 em): tunnistettavaa tekstiä ja syvyyttä, ei luettavaa.
-    sumeus: 0.2,
+    // v14 (omistaja 3.10.2026 klo 16.0x): rivit pehmeinä kuin syväterävyyden ulkopuolinen tausta — sumennus ≈ kirjaimen
+    // korkeus (0,45 em), kirjaimet puolikokoisina 80 px:n nauhassa (riviTila 2), jotta pehmeä reuna mahtuu nauhaan.
+    sumeus: 0.45,
+    riviTila: 2,
+    riviKorkeus: 80,
     etaisyys: 0.9,
     blend: 0.5,
     voimaKerroin: 3.0,
@@ -295,9 +298,10 @@ export const SOKRATES = Object.freeze({
     projektorit: [   // (kohde, suunta kohteesta, kuva-alan leveys m, rivejä) — Blender-koordinaatit
       { kohde: [0.0, -0.10, 0.33], suunta: [0.0, -1.0, 0.10], ala: 0.30, riveja: 6 },   // kasvot ja parta
       { kohde: [0.0, -0.03, 0.47], suunta: [0.0, -0.55, 1.0], ala: 0.26, riveja: 5 },   // otsa ja päälaen etuosa
-      { kohde: [0.0, 0.05, 0.47], suunta: [0.0, 0.6, 1.0], ala: 0.24, riveja: 3 },      // päälaen takaosa
-      { kohde: [-0.09, -0.04, 0.38], suunta: [-1.0, -0.35, 0.15], ala: 0.22, riveja: 3 }, // vasen ohimo ja poski
-      { kohde: [0.09, -0.04, 0.38], suunta: [1.0, -0.35, 0.15], ala: 0.22, riveja: 3 },  // oikea ohimo ja poski
+      // v14: kauempana kasvojen pinnasta olevat rivit pehmeämpiä (pehmeys × sumeus).
+      { kohde: [0.0, 0.05, 0.47], suunta: [0.0, 0.6, 1.0], ala: 0.24, riveja: 3, pehmeys: 1.5 },      // päälaen takaosa
+      { kohde: [-0.09, -0.04, 0.38], suunta: [-1.0, -0.35, 0.15], ala: 0.22, riveja: 3, pehmeys: 1.3 }, // vasen ohimo ja poski
+      { kohde: [0.09, -0.04, 0.38], suunta: [1.0, -0.35, 0.15], ala: 0.22, riveja: 3, pehmeys: 1.3 },  // oikea ohimo ja poski
     ],
     // Kierros 1 (virta1): häivytys sisään, täysi, häivytys ulos (v12: v11 + 442 ruutua).
     ajat: [364, 442, 802, 852],   // v14: v12 −540

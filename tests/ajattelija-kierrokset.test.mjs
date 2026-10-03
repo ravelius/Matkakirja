@@ -65,7 +65,7 @@ test('taustavirran rivit kulkevat lähes samaa nopeutta pinnalla: 25 mm/s ±15 %
   assert.deepEqual(SOKRATES.taustavirta.nopeus, { mms: 25, vaihtelu: 0.15 });
   assert.match(MOOTTORI, /const nopeudet = tv\.rivit\.map\(\(_, k\) => 1 - vaihtelu \+ 2 \* vaihtelu \* k \/ Math\.max\(1, tv\.rivit\.length - 1\)\);/);
   // uv/ruutu = m/s / 30 / rivin laatan leveys pinnalla (Blender v11: nop /= kork × kuvan leveys / korkeus).
-  assert.match(MOOTTORI, /const riviLev = kork \* paikat\[i\]\.lev \/ paikat\[i\]\.korkeus;/);
+  assert.match(MOOTTORI, /const riviLev = kork \* TILA \* paikat\[i\]\.lev \/ paikat\[i\]\.korkeus;/);
   assert.match(MOOTTORI, /const nopeus = mms \/ 1000 \* nopeudet\[ri\] \/ RUUTUA_S \/ riviLev;/);
   assert.doesNotMatch(MOOTTORI, /0\.0007 \* 1\.18 \*\* k/);
 });
