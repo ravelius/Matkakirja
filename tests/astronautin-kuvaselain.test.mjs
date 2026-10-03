@@ -112,8 +112,10 @@ test('pienennetty selite on otsikkorivin kokoinen ja koko liukuu (js/tiivistys.j
 });
 
 test('selite luetaan ääneen kertoja-asetuksen mukaan, säilöön, ja luenta loppuu kuvan mukana', () => {
-  assert.match(lahde, /if \(!luentaKytkinPaalla\(\)\) return;/);
-  assert.match(lahde, /lueAaneen\(teksti, null, \{ persoona: 'kertoja', sailio: SELITTEEN_SAILIO \}\)/);
+  assert.match(lahde, /if \(!luentaKytkinPaalla\(\) && !autoKaytossa\(\)\) return;/);
+  assert.match(lahde, /lueAaneen\(teksti, null, \{\s*persoona: 'kertoja', sailio: SELITTEEN_SAILIO, onLoppu: \(\) => luentaLoppui\(vuoro\),/);
+  // Vain leipäteksti, ei "Nimi, seutu." -alkua (omistaja 2.10.2026).
+  assert.match(lahde, /const teksti = String\(h\?\.teksti \?\? kohde\.selite \?\? ''\)\.trim\(\);/);
   assert.match(lahde, /export const SELITTEEN_SAILIO = 'astro-selite';/);
   assert.match(lahde, /seliteTeksti\.textContent = h\.teksti \?\? kohde\.selite;\s*lueSelite\(h\);/);
   assert.match(lahde, /if \(luettu\) \{ try \{ pysaytaLukija\(\); \}/);

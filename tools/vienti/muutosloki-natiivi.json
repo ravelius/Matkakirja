@@ -2,9 +2,54 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
-   "versio": "1.1 (96)",
-   "paiva": "2026-10-01",
-   "teksti": "Lukijoilta-työkalun avain kulkee nyt suojatussa otsakkeessa eikä näy osoitteissa."
+   "versio": "1.1 (132)",
+   "paiva": "2026-10-03",
+   "teksti": "Ajattelijoiden alkukuvat ovat varjopuolelta, alussa kuuluu uusi kytkinääni, ja ✕ tulee esiin napautuksesta. Sokrateella ja Marcuksella on kolme kierrosta, ja kaikukuvat ovat oikein päin. Pulu on vaakatilassa alempana eikä peitä ISS:n lukemaa."
+  },
+  {
+   "versio": "1.1 (131)",
+   "paiva": "2026-10-03",
+   "teksti": "Vaakatilassa yläpalkkia ei enää ole, vaan ☰ avaa valikon, ja pystyssä palkki on matalampi. Julisteet ja Aarteet aukeavat omaan näkymäänsä, ja Topografian valikossa ovat korkeustasot. Astronautin kamerassa maapallo on suurempi, ja Pulu kulkee robottikädessä."
+  },
+  {
+   "versio": "1.1 (129)",
+   "paiva": "2026-10-02",
+   "teksti": "Yläpalkki on ommeltu, ja päivä ja rahat ovat samalla rivillä. Nostojen selaus mahtuu yhdelle riville, pelivalikko on siistimpi ja kaupunkien nimet pysyvät paikallaan."
+  },
+  {
+   "versio": "1.1 (128)",
+   "paiva": "2026-10-02",
+   "teksti": "Olavinlinnalla on uusi valikko ja pienoiskartta, ja napit ovat yhtenäisiä neliöitä. Kartalla on Linssit-nappi ja uusi pelivalikko, ja julisteet aukeavat omaan galleriaansa."
+  },
+  {
+   "versio": "1.1 (126)",
+   "paiva": "2026-10-02",
+   "teksti": "Ajattelijoiden kipsipäät kartalla, ja Pulu väistää niitä. Rahat ovat nyt punnissa (£), ja Olavinlinnan puhe ei enää katkaise luentoa."
+  },
+  {
+   "versio": "1.1 (124)",
+   "paiva": "2026-10-02",
+   "teksti": "Nostojen selausrivi ja AUTO ovat samalla rivillä, eikä puuttuva kuva jätä nostoon harmaata laatikkoa."
+  },
+  {
+   "versio": "1.1 (123)",
+   "paiva": "2026-10-02",
+   "teksti": "Linnassa kuuluu yksi puhe kerrallaan, eikä ääneen luettu repliikki näy tekstinä. Sulkunapit ovat taas harmaita, meren kiilto hehkuu ilmakehän läpi, ja Olavinlinna latautuu entistä sujuvammin."
+  },
+  {
+   "versio": "1.1 (120)",
+   "paiva": "2026-10-02",
+   "teksti": "Astronautin kameran kilpi kertoo, miksi kuvaa ei voi ottaa, esimerkiksi meren yllä. Pulun keskustelu on yhtenäisessä lasiasussa, ja Olavinlinna latautuu sujuvammin."
+  },
+  {
+   "versio": "1.1 (118)",
+   "paiva": "2026-10-02",
+   "teksti": "Astronautin kamerassa ISS:n napautus vie suoraan Cupolan ikkunaan, ja Pulun taulusta pääsee takaisin Cupolaan. Myllyssä on paperinen paneeli ja pehmennetty tausta."
+  },
+  {
+   "versio": "1.1 (116)",
+   "paiva": "2026-10-02",
+   "teksti": "Kortit, valikot ja asetukset yhtenäisessä paperiasussa, ja uusi Mylly-lautapeli. Astronautin kamerassa otat oman kuvan Euroopasta ISS:n Cupola-ikkunasta, uusi paneeli, vuodenaika ja yövalot. Lehti avaa Livian leikekirjan, ja kartalla on uusin pohjakuva."
   },
   {
    "versio": "1.1 (95)",

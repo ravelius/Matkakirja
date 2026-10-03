@@ -8,7 +8,7 @@
  *
  *   const k = luoPohjaKortti(data, { modaali: true, toiminnot: { aloita: () => … } });
  *
- * Data on KorttiData (js/pohjat/korttidata.js), tyylit css/pohjat.css (vain --tk-*-tokenit). Natiivi tekee saman
+ * Data on KorttiData (js/pohjat/korttidata.js), tyylit css/pohjat/ (POHJAT_TYYLIT; vain --tk-*-tokenit). Natiivi tekee saman
  * Pohja.cs:llä samasta datasta (Natiivi-UI); kuvapari tehdään samasta nostosta (Ateena/Akropolis).
  *
  * SULKU (yksi pino, kohta 5): Esc sulkee ylimmän pohjan; NOSTOKORTTI myös veto alas ja ohinapautus (ei ✕),
@@ -16,25 +16,32 @@
  */
 import { tarkistaKorttiData } from './korttidata.js';
 import { tarkistaPaneeliData } from './paneelidata.js';
+import { POHJAT_TYYLIT } from './tyylit.js';
 
 const POHJA_TYYLIN_TUNNUS = 'pohjat-tyyli';
 const POHJA_VETO_PX = 40;
-/** Kortin jatkeet, joiden napautus ei ole ohinapautus: Pulun chat ja -nappi sekä pohjan KORTTI (esim. visa). */
-const POHJA_EI_OHINAPAUTUS = '.pollo-paneeli, .pollo-nappi, .tk-kortti-tausta';
+/** Kortin jatkeet, joiden napautus ei ole ohinapautus: Pulun chat ja -nappi, PULU-pohjan kulma ja pohjan KORTTI (visa). */
+const POHJA_EI_OHINAPAUTUS = '.pollo-paneeli, .pollo-nappi, .tk-pulukulma, .tk-kortti-tausta';
 /** Avoimet pohjat avausjärjestyksessä: Esc sulkee ylimmän (yksi sulkupino). */
 const pohjaPino = [];
 
-/** css/pohjat.css kerran (yhden tiedoston versiossa tyylit ovat jo sivulla). */
+/**
+ * Pohjien tyylit kerran kiinteässä järjestyksessä (js/pohjat/tyylit.js POHJAT_TYYLIT); yhden tiedoston versiossa ne
+ * ovat jo sivulla. Linkit saavat data-pohjat-merkinnän (js/ui.js odottaa niiden latautumista ennen mittausta).
+ */
 export function pohjatLataaTyyli() {
   if (typeof document === 'undefined') return;
-  if (document.getElementById(POHJA_TYYLIN_TUNNUS)) return;
+  if (document.getElementById(POHJA_TYYLIN_TUNNUS) || document.querySelector('link[data-pohjat]')) return;
   const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
   if (!peruslinkki) return;
-  const linkki = document.createElement('link');
-  linkki.id = POHJA_TYYLIN_TUNNUS;
-  linkki.rel = 'stylesheet';
-  linkki.href = new URL('pohjat.css', peruslinkki.href).href;
-  document.head.appendChild(linkki);
+  POHJAT_TYYLIT.forEach((polku, i) => {
+    const linkki = document.createElement('link');
+    if (i === 0) linkki.id = POHJA_TYYLIN_TUNNUS;
+    linkki.rel = 'stylesheet';
+    linkki.dataset.pohjat = '';
+    linkki.href = new URL(polku.replace(/^css\//, ''), peruslinkki.href).href;
+    document.head.appendChild(linkki);
+  });
 }
 
 function pohjaSolmu(tagi, luokka, teksti) {
@@ -44,9 +51,15 @@ function pohjaSolmu(tagi, luokka, teksti) {
   return e;
 }
 
-function pohjaKuva(kuva, luokka, kuvaAuki = null, indeksi = 0) {
+/*
+ * PUUTTUVA KUVA POISTAA KUVAPAIKAN (omistaja 2.10.2026 klo 13.53: Bobovacin nostossa harmaa laatikko havainnekuvan
+ * paikalla, kun tiedosto puuttui ämpäristä). Sama sääntö kuin vanhalla kohdekortilla (js/fokuskohteet.js
+ * piirraKohdeKuva): virhe poistaa kehyksen, ja `poistui` antaa kutsujalle paikan korvata se (hero → viiva).
+ */
+function pohjaKuva(kuva, luokka, kuvaAuki = null, indeksi = 0, poistui = null) {
   const kehys = pohjaSolmu('figure', `tk-kuva ${luokka}`);
   const img = document.createElement('img');
+  img.addEventListener('error', () => { poistui?.(kehys); kehys.remove(); }, { once: true });
   img.src = kuva.url;
   img.alt = kuva.kuvateksti || '';
   img.loading = 'lazy';
@@ -59,6 +72,8 @@ function pohjaKuva(kuva, luokka, kuvaAuki = null, indeksi = 0) {
   }
   kehys.appendChild(img);
   if (kuva.kuvateksti) kehys.appendChild(pohjaSolmu('figcaption', 'tk-kuvateksti', kuva.kuvateksti));
+  // Kuvan tekijä ja lisenssi kuvan alle (CC BY vaatii maininnan siellä, missä kuva näkyy).
+  if (kuva.lahde) kehys.appendChild(pohjaSolmu('div', 'tk-lahde', kuva.lahde));
   return kehys;
 }
 
@@ -78,7 +93,10 @@ export function pohjaSisalto(isa, d, { kuvaAuki = null } = {}) {
   const hero = d.kuvat.find((k) => k.rooli === 'hero');
   const upotus = d.kuvat.find((k) => k.rooli === 'upotus');
   const galleria = d.kuvat.filter((k) => k.rooli === 'galleria');
-  if (hero) isa.appendChild(pohjaKuva(hero, 'tk-kuva--hero', kuvaAuki, d.kuvat.indexOf(hero)));
+  if (hero) {
+    isa.appendChild(pohjaKuva(hero, 'tk-kuva--hero', kuvaAuki, d.kuvat.indexOf(hero),
+      (kehys) => { if (d.otsikko) kehys.before(pohjaSolmu('hr', 'tk-viiva')); }));
+  }
   else if (d.otsikko) isa.appendChild(pohjaSolmu('hr', 'tk-viiva'));
   if (galleria.length) {
     const nauha = pohjaSolmu('div', 'tk-galleria');
@@ -87,6 +105,7 @@ export function pohjaSisalto(isa, d, { kuvaAuki = null } = {}) {
       b.type = 'button';
       b.setAttribute('aria-label', k.kuvateksti || `Kuva ${i + 2}`);
       const img = document.createElement('img');
+      img.addEventListener('error', () => { b.remove(); if (!nauha.children.length) nauha.remove(); }, { once: true });
       img.src = k.url;
       img.alt = '';
       img.loading = 'lazy';
@@ -172,6 +191,9 @@ export function luoPohjaNostokortti(data, {
   const el = pohjaSolmu('section', `tk-nostokortti tk-teema-${teema ?? d.teema} tk-piilossa`);
   el.setAttribute('role', 'dialog');
   el.setAttribute('aria-label', d.otsikko || d.yla || 'Nosto');
+  // Kortin painallus ei kuulu kartalle (kartan napautus sulkisi kortin ennen napin klikkausta): sama kuin vanhoilla
+  // korteilla. Oma ohinapautus kuuntelee dokumenttia kaappausvaiheessa, joten tämä ei estä sitä.
+  el.addEventListener('pointerdown', (e) => e.stopPropagation());
   const kahva = pohjaSolmu('button', 'tk-nostokortti__kahva');
   kahva.type = 'button';
   kahva.setAttribute('aria-label', 'Laajenna tai pienennä');
@@ -453,5 +475,257 @@ export function luoPohjaPaneeli(data, { teema, avaaja = null, sulje = null, esik
   }
   if (esikatselu) el.classList.add('tk-paneeli--esikatselu');
   paneeliSisalto(el, d, pohja);
+  return pohja;
+}
+
+/**
+ * KUVANÄKYMÄ: koko ruudun kuva- tai 3D-näkymä (tyylikirja: teema TUMMA, kuvia 1+, sulku ✕, veto alas, Esc). Natiivissa
+ * Kuvanakyma.cs (Astronautin kamera). ✕ on LASI-teemaa (Natiivi-UI 2.10.2026: kuvan päällä olevat ohjaimet ovat lasia,
+ * kuten linssin ohjaimessa), 44 pt, pyöreä, oikeassa yläkulmassa turva-alueen sisällä. Ohinapautusta ei ole, koska
+ * näkymä täyttää ruudun. Sisältö menee el.sisalto-solmuun; kutsuja vastaa omista eleistään.
+ *
+ * @param {{teema?: string, ohjainteema?: string, nimi?: string, sulje?: Function, vetoAlas?: boolean}} [asetukset]
+ */
+export function luoPohjaKuvanakyma({ teema = 'tumma', ohjainteema = 'lasi', nimi = '', sulje = null, vetoAlas = true } = {}) {
+  pohjatLataaTyyli();
+  const el = pohjaSolmu('section', `tk-kuvanakyma tk-teema-${teema} tk-piilossa`);
+  el.setAttribute('role', 'dialog');
+  if (nimi) el.setAttribute('aria-label', nimi);
+  const sisalto = pohjaSolmu('div', 'tk-kuvanakyma__sisalto');
+  const sulku = pohjaSolmu('button', `tk-kuvanakyma__sulku tk-teema-${ohjainteema}`, '✕');
+  sulku.type = 'button';
+  sulku.setAttribute('aria-label', 'Sulje');
+  el.append(sisalto, sulku);
+  let auki = false;
+  const pohja = {
+    el, sisalto, sulku,
+    modaali: false,
+    get auki() { return auki; },
+    avaa() {
+      if (auki) return pohja;
+      auki = true;
+      requestAnimationFrame(() => el.classList.remove('tk-piilossa'));
+      pohjaPinoon(pohja);
+      return pohja;
+    },
+    sulje() {
+      if (!auki) return;
+      auki = false;
+      el.classList.add('tk-piilossa');
+      pohjaPinosta(pohja);
+      sulje?.(pohja);
+    },
+  };
+  sulku.addEventListener('click', (e) => { e.stopPropagation(); pohja.sulje(); });
+  if (vetoAlas) {
+    // Veto alas sulkee: pystysuora liike yli 2 × POHJA_VETO_PX ja selvästi enemmän pysty- kuin vaakasuunnassa.
+    let alku = null;
+    el.addEventListener('pointerdown', (e) => { alku = { x: e.clientX, y: e.clientY }; });
+    el.addEventListener('pointerup', (e) => {
+      if (!alku) return;
+      const dx = e.clientX - alku.x, dy = e.clientY - alku.y;
+      alku = null;
+      if (dy > 2 * POHJA_VETO_PX && dy > 2 * Math.abs(dx)) pohja.sulje();
+    });
+    el.addEventListener('pointercancel', () => { alku = null; });
+  }
+  return pohja;
+}
+
+/** OHJAUSNAPIN ✕ viivakuvakkeena (tyylikirja OHJAUSNAPPI: 24-ruudukko, viiva 1,75, ei tekstimerkkiä ×). */
+function pohjaSulkuKuvake() {
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('viewBox', '0 0 24 24');
+  svg.setAttribute('aria-hidden', 'true');
+  const polku = document.createElementNS(ns, 'path');
+  polku.setAttribute('d', 'M6 6 18 18M18 6 6 18');
+  svg.appendChild(polku);
+  return svg;
+}
+
+/** '2:3' → '2 / 3' (CSS aspect-ratio); tuntematon suhde → juliste 2:3. */
+function galleriaSuhde(suhde) {
+  const m = /^(\d+(?:\.\d+)?):(\d+(?:\.\d+)?)$/.exec(String(suhde ?? ''));
+  return m ? `${m[1]} / ${m[2]}` : '2 / 3';
+}
+
+/**
+ * GALLERIA: kuvakokoelman ikkuna (tyylikirja.json pohjat.GALLERIA; omistaja 2.10.2026 klo 15.5x, Natiivi-UI määritteli).
+ * PANEELI-ikkuna PAPERI-teemalla keskellä ruutua hunnun päällä: otsikkorivi (kapiteeli + laskuri, ✕ OHJAUSNAPPINA) pysyy
+ * ylhäällä vieritettäessä, osiot kapiteeleina laskureineen, ruudukko sarakkeen vähimmäisleveydellä galleria.sarake ja
+ * välillä galleria.vali (puhelimessa pystyssä 3). Vedos kuvan suhteella (data.suhde, juliste 2:3), nimi alla enintään
+ * 2 riviä; lukossa oleva ruutu on pelkkä kehys (ei katoa). Napautus avaa KUVANÄKYMÄN saman osion avoimista kuvista
+ * (‹ › reunakaistat, vaakaveto, nuolinäppäimet; ✕, veto alas ja Esc sulkevat). Sulku: ✕, ohinapautus (huntu), Esc.
+ *
+ * Data: { otsikko, laskuri?, nimi?, suhde?: '2:3' | '3:2', osiot: [{ nimi, laskuri?, ruudut: [{ nimi, kuva, vara?,
+ * lukossa?, suuri?: { url, otsikko?, kuvateksti?, lahde? } }] }] }. `kuva` on ruudukon pikkukuva, `vara` sen varaosoite
+ * ja `suuri` kuvanäkymän täysi koko (oletus kuva).
+ *
+ * @param {object} data GalleriaData (yllä)
+ * @param {{teema?: string, sulje?: Function, esikatselu?: boolean, avattu?: Function}} [asetukset]
+ *   `avattu(ruutu)` kutsutaan, kun kuva avataan kuvanäkymään (pinnan ääni tms.).
+ */
+export function luoPohjaGalleria(data, { teema = 'paperi', sulje = null, esikatselu = false, avattu = null } = {}) {
+  if (!data || !Array.isArray(data.osiot)) return null;
+  pohjatLataaTyyli();
+  const tausta = pohjaSolmu('div', 'tk-kokoelma-tausta tk-piilossa');
+  const el = pohjaSolmu('section', `tk-kokoelma tk-teema-${teema} tk-piilossa`);
+  el.setAttribute('role', 'dialog');
+  el.setAttribute('aria-label', data.nimi || data.otsikko || 'Galleria');
+  el.style.setProperty('--tk-kokoelma-suhde', galleriaSuhde(data.suhde));
+
+  const yla = pohjaSolmu('header', 'tk-kokoelma__yla');
+  const otsikko = pohjaSolmu('h2', 'tk-kapiteeli tk-kokoelma__otsikko', data.otsikko ?? '');
+  if (data.laskuri) otsikko.append(' ', pohjaSolmu('span', 'tk-kokoelma__laskuri', data.laskuri));
+  const sulku = pohjaSolmu('button', 'tk-kokoelma__sulku');
+  sulku.type = 'button';
+  sulku.setAttribute('aria-label', 'Sulje');
+  sulku.appendChild(pohjaSulkuKuvake());
+  yla.append(otsikko, sulku);
+  el.appendChild(yla);
+
+  let auki = false;
+  let kuvanakyma = null;
+  const pohja = {
+    el, tausta, sulku,
+    modaali: false,
+    get auki() { return auki; },
+    get kuvanakyma() { return kuvanakyma; },
+    avaa() {
+      if (auki) return pohja;
+      auki = true;
+      requestAnimationFrame(() => { el.classList.remove('tk-piilossa'); tausta.classList.remove('tk-piilossa'); });
+      if (!esikatselu) pohjaPinoon(pohja);
+      return pohja;
+    },
+    sulje() {
+      if (!auki) return;
+      auki = false;
+      kuvanakyma?.sulje();
+      el.classList.add('tk-piilossa');
+      tausta.classList.add('tk-piilossa');
+      pohjaPinosta(pohja);
+      sulje?.(pohja);
+    },
+    /** Avaa osion avoimet kuvat kuvanäkymään kohdasta `kohdalla`. */
+    avaaKuva(kuvat, kohdalla = 0) {
+      kuvanakyma?.sulje();
+      kuvanakyma = galleriaKuvanakyma(kuvat, kohdalla, () => { kuvanakyma = null; sulku.focus?.({ preventScroll: true }); });
+      (el.parentNode ?? document.body).appendChild(kuvanakyma.el);
+      kuvanakyma.avaa();
+      return kuvanakyma;
+    },
+  };
+  sulku.addEventListener('click', (e) => { e.stopPropagation(); pohja.sulje(); });
+  tausta.addEventListener('click', () => pohja.sulje());
+
+  for (const osio of data.osiot) {
+    const lohko = pohjaSolmu('section', 'tk-kokoelma__osio');
+    const nimi = pohjaSolmu('h3', 'tk-kapiteeli tk-kokoelma__osiootsikko', osio.nimi ?? '');
+    if (osio.laskuri) nimi.append(' ', pohjaSolmu('span', 'tk-kokoelma__laskuri', osio.laskuri));
+    lohko.appendChild(nimi);
+    const ruudukko = pohjaSolmu('div', 'tk-kokoelma__ruudukko');
+    const avoimet = (osio.ruudut ?? []).filter((r) => !r.lukossa);
+    for (const ruutu of osio.ruudut ?? []) {
+      if (ruutu.lukossa) {
+        const lukossa = pohjaSolmu('div', 'tk-kokoelma__vedos tk-kokoelma__vedos--lukossa');
+        lukossa.setAttribute('aria-hidden', 'true');
+        lukossa.appendChild(pohjaSolmu('span', 'tk-kokoelma__kuva'));
+        ruudukko.appendChild(lukossa);
+        continue;
+      }
+      const vedos = pohjaSolmu('button', 'tk-kokoelma__vedos');
+      vedos.type = 'button';
+      vedos.setAttribute('aria-label', `${ruutu.suuri?.otsikko || ruutu.nimi || ''} — katso isona`.trim());
+      const kehys = pohjaSolmu('span', 'tk-kokoelma__kuva');
+      const img = document.createElement('img');
+      img.alt = '';
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      // Pikkukuva ensin, sitten varaosoite; kumpikin puuttuu → tyhjä kehys nimen kanssa (ruutu ei katoa).
+      img.addEventListener('error', function virhe() {
+        if (ruutu.vara && img.src !== new URL(ruutu.vara, document.baseURI).href) { img.src = ruutu.vara; return; }
+        img.removeEventListener('error', virhe);
+        img.remove();
+        vedos.classList.add('tk-kokoelma__vedos--kuvaton');
+      });
+      img.src = ruutu.kuva;
+      kehys.appendChild(img);
+      vedos.append(kehys, pohjaSolmu('span', 'tk-kokoelma__nimi', ruutu.nimi ?? ''));
+      const kohdalla = avoimet.indexOf(ruutu);
+      vedos.addEventListener('click', () => {
+        avattu?.(ruutu);
+        pohja.avaaKuva(avoimet, kohdalla);
+      });
+      ruudukko.appendChild(vedos);
+    }
+    lohko.appendChild(ruudukko);
+    el.appendChild(lohko);
+  }
+  if (esikatselu) {
+    el.classList.add('tk-kokoelma--esikatselu');
+    el.classList.remove('tk-piilossa');
+  }
+  return pohja;
+}
+
+/**
+ * GALLERIAN KUVANÄKYMÄ: KUVANÄKYMÄ-pohja, jossa yksi kuva kerrallaan (object-fit contain) ja kuvateksti alhaalla.
+ * Selaus ‹ › -reunakaistoilla (sisällön omat ohjaimet, ei OHJAUSNAPPEJA), vaakavedolla ja nuolinäppäimillä.
+ */
+function galleriaKuvanakyma(kuvat, kohdalla, suljettu) {
+  const nimi = kuvat[kohdalla]?.suuri?.otsikko || kuvat[kohdalla]?.nimi || 'Kuva';
+  const pohja = luoPohjaKuvanakyma({ nimi, sulje: () => {
+    document.removeEventListener('keydown', nuolet);
+    // Häivytys (kesto-sulku) loppuun ennen poistoa.
+    setTimeout(() => pohja.el.remove(), 250);
+    suljettu?.();
+  } });
+  pohja.el.classList.add('tk-kokoelma-kuvanakyma');
+  const img = document.createElement('img');
+  img.className = 'tk-kokoelma-kuvanakyma__kuva';
+  img.alt = '';
+  img.decoding = 'async';
+  const teksti = pohjaSolmu('div', 'tk-kokoelma-kuvanakyma__teksti');
+  pohja.sisalto.append(img, teksti);
+  let i = kohdalla;
+  const nayta = (uusi) => {
+    i = (uusi + kuvat.length) % kuvat.length;
+    const k = kuvat[i];
+    const suuri = k.suuri ?? {};
+    img.src = suuri.url || k.vara || k.kuva;
+    img.alt = suuri.otsikko || k.nimi || '';
+    pohja.el.setAttribute('aria-label', img.alt || 'Kuva');
+    teksti.replaceChildren();
+    if (suuri.otsikko || k.nimi) teksti.appendChild(pohjaSolmu('p', 'tk-kokoelma-kuvanakyma__otsikko', suuri.otsikko || k.nimi));
+    if (suuri.kuvateksti) teksti.appendChild(pohjaSolmu('p', 'tk-kokoelma-kuvanakyma__kuvateksti', suuri.kuvateksti));
+    if (suuri.lahde) teksti.appendChild(pohjaSolmu('p', 'tk-lahde', suuri.lahde));
+    if (kuvat.length > 1) teksti.appendChild(pohjaSolmu('p', 'tk-kokoelma-kuvanakyma__laskuri', `${i + 1}/${kuvat.length}`));
+  };
+  if (kuvat.length > 1) {
+    for (const [suunta, merkki, luokka] of [[-1, '‹', 'edellinen'], [1, '›', 'seuraava']]) {
+      const kaista = pohjaSolmu('button', `tk-kokoelma-kuvanakyma__kaista tk-kokoelma-kuvanakyma__kaista--${luokka}`, merkki);
+      kaista.type = 'button';
+      kaista.setAttribute('aria-label', suunta < 0 ? 'Edellinen kuva' : 'Seuraava kuva');
+      kaista.addEventListener('click', (e) => { e.stopPropagation(); nayta(i + suunta); });
+      pohja.sisalto.appendChild(kaista);
+    }
+    let alku = null;
+    pohja.sisalto.addEventListener('pointerdown', (e) => { alku = { x: e.clientX, y: e.clientY }; });
+    pohja.sisalto.addEventListener('pointerup', (e) => {
+      if (!alku) return;
+      const dx = e.clientX - alku.x, dy = e.clientY - alku.y;
+      alku = null;
+      if (Math.abs(dx) > POHJA_VETO_PX && Math.abs(dx) > 2 * Math.abs(dy)) nayta(i + (dx < 0 ? 1 : -1));
+    });
+  }
+  function nuolet(e) {
+    if (!pohja.auki || kuvat.length < 2) return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); nayta(i + 1); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); nayta(i - 1); }
+  }
+  document.addEventListener('keydown', nuolet);
+  nayta(kohdalla);
   return pohja;
 }

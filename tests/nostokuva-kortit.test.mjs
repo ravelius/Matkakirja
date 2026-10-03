@@ -641,7 +641,7 @@ test('nostoPalstoiksi jakaa kohdekortin kaltaisen pinon: kuva gallerian sisäll�
 
 test('kaikki kartan korttimoduulit avaavat kuvan edellä', () => {
   for (const polku of ['js/skandaalit.js', 'js/historian-hetket.js', 'js/syvennys.js',
-    'js/elaintaky.js', 'js/fokusnosto.js', 'js/fokuskohteet.js']) {
+    'js/elaintaky.js', 'js/fokusnosto.js']) {
     const src = lue(polku);
     assert.ok(src.includes('nostokuvaAloita'), `${polku} ei käytä kuva edellä -avausta`);
     // Löydös 135: kuvaton haara on lohko, joka latoo tekstin ja antaa
@@ -654,7 +654,7 @@ test('kaikki kartan korttimoduulit avaavat kuvan edellä', () => {
 
 test('kaikki kuva edellä -kortit pyytävät kaksipalstataiton (omistaja 22.9.2026)', () => {
   for (const polku of ['js/skandaalit.js', 'js/historian-hetket.js', 'js/syvennys.js',
-    'js/elaintaky.js', 'js/fokusnosto.js', 'js/fokuskohteet.js']) {
+    'js/elaintaky.js', 'js/fokusnosto.js']) {
     const src = lue(polku);
     const kutsu = src.slice(src.indexOf('nostokuvaAloita({'));
     const loppu = kutsu.indexOf('}) : null;');

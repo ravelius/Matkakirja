@@ -450,6 +450,8 @@ const MODULES = [
   'js/apuraha.js',
   // PANEELI-pohjan tietomalli: ennen js/pohjat/pohjat.js:ää, joka tuo sen.
   'js/pohjat/paneelidata.js',
+  // UI-pohjien tyylilista (pohjat.js tuo sen; yhden tiedoston versiossa tyylit ovat jo sivulla).
+  'js/pohjat/tyylit.js',
   'js/linssit/omistus.js',
   'js/linssit/aarteet.js',
   'js/packs/valokuvat-paikalliset.js',
@@ -779,6 +781,7 @@ const MODULES = [
   'js/livia-chat-tila.js',
   'js/livia-svg-paa.js',
   'js/livia-astronautti.js',
+  'js/livia-eva.js',
   'js/livia-svg.js',
   'js/livia-uudet-versiot.js',
   'js/livia-nostotila.js',
@@ -971,6 +974,8 @@ const MODULES = [
    * päivityskutsun). Se tuo valojen koneiston, symbolikirjaston,
    * mapartin, ui-apurit ja peukalolevyn — kaikki jo yllä.
    */
+  // PANEELI-lippu ja pillerivalikon puku: ennen js/karttaselite.js:ää (sama lippu) ja js/main.js:ää.
+  'js/pilleri-paneeli.js',
   'js/karttaselite.js',
   'js/vakasikoni.js',
   'js/ylapalkki-vaaka.js',
@@ -1116,6 +1121,8 @@ const MODULES = [
   'js/pelaajanakyma.js',
   'js/kokoelmanakyma.js',
   'js/pilleri-animaatio.js',
+  // Visa KORTTI-pohjalla (versio B): js/ui.js puee #quiz-dialogin.
+  'js/visa-pohja.js',
   'js/ui.js',
 
   'js/muutokset.js',
@@ -1132,8 +1139,12 @@ const MODULES = [
   // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
   'js/kehittaja-pikatie.js',
   'js/lehtikuori.js',
-  // Pillerivalikko PANEELI-pohjalla: js/main.js puee #paavalikon käynnistyksessä.
-  'js/pilleri-paneeli.js',
+  'js/linssit/ajattelija-sokrates-aikajana.js',
+  'js/linssit/ajattelija-sokrates.js',
+  'js/linssit/ajattelija-marcus.js',
+  'js/linssit/ajattelija-projektori.js',
+  'js/linssit/ajattelija.js',
+  'js/ajattelijapaat.js',
   'js/main.js',
 ];
 
@@ -1184,7 +1195,25 @@ const STYLES = [
   'css/saapumistraileri.css',
   'css/fokuskohteet.css',
   'css/fokusnosto.css',
-  'css/pohjat.css',
+  // UI-pohjien tyylit (js/pohjat/tyylit.js POHJAT_TYYLIT, sama järjestys).
+  'css/pohjat/perus.css',
+  'css/pohjat/nostokortti.css',
+  'css/pohjat/kortti.css',
+  'css/pohjat/paneeli.css',
+  'css/pohjat/kentta.css',
+  'css/pohjat/auto.css',
+  'css/pohjat/kuvanakyma.css',
+  'css/pohjat/pulu.css',
+  'css/pohjat/erikoisnostot.css',
+  'css/pohjat/galleria.css',
+  'css/pohjat/esikatselu.css',
+  'css/pohjat/pinnat/dialogit.css',
+  'css/pohjat/pinnat/pillerivalikko.css',
+  'css/pohjat/pinnat/visa.css',
+  'css/pohjat/pinnat/karttaselite.css',
+  'css/pohjat/pinnat/linssin-valikko.css',
+  'css/pohjat/pinnat/linssivalitsin.css',
+  'css/pohjat/pinnat/ajattelija.css',
   'css/kuvasarja.css',
   // Sähkepinta on osa peruspeliä (js/ui.js ja js/main.js tuovat
   // js/sahke.js:n), eikä css/styles.css sisällä yhtään sahke-sääntöä.

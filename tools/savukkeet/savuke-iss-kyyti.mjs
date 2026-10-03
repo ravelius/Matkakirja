@@ -79,7 +79,8 @@ const vaadi = (nimi, ok, lisa = '') => {
 };
 
 async function avaaPeli(s) {
-  await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo`, { waitUntil: 'load' });
+  // ?issseuranta: seuranta on poistettu pelistä (omistaja 2.10.2026), mutta sen siirtymät testataan kehittäjälipulla.
+  await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo&issseuranta`, { waitUntil: 'load' });
   await s.waitForTimeout(2500);
   await s.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();

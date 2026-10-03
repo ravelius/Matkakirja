@@ -1240,11 +1240,11 @@ test('lehtivinkin kupla on ruksiton ja puhuu pulun äänellä', async () => {
   // Kertalippu Livian omasta moduulista, ei enää kaupunkikohtaista muistia.
   assert.match(virta, /if \(!livianLehtivinkkiOdottaa\(\)\) return false;/);
   assert.doesNotMatch(virta, /fokusvinkkiNaytetty/);
-  // Lippu kuluu vasta kun kupla oikeasti näkyi.
-  assert.match(virta, /if \(!naytaPolloKupla\(ui, LIVIAN_LEHTIVINKKI\)\) return;\s*\n\s*merkitseLehtivinkkiNahdyksi\(\);/);
+  // Lippu kuluu vasta kun kupla tai lehden ympyröinti oikeasti näkyi.
+  assert.match(virta, /if \(!naytaPolloKupla\(ui, teksti\)\) return false;\s*\n\s*merkitseLehtivinkkiNahdyksi\(\);/);
   // Avainsana ympyröidään ja repliikki luetaan pulun äänellä.
   assert.match(virta, /LIVIAN_LEHTIVINKIN_SANA, \{ tyyppi: 'circle'/);
-  assert.match(virta, /soitaLivianAani\(ui, 'lehtivinkki', 0, \{ teksti: LIVIAN_LEHTIVINKKI \}\);/);
+  assert.match(virta, /soitaLivianAani\(ui, 'lehtivinkki', 0, \{ teksti: LIVIAN_LEHTIVINKKI \}\)/);
 });
 
 /* ---------- matkakirjakortin otsikko (omistaja 8.9.2026) ---------- */

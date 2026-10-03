@@ -10,7 +10,7 @@
  * TAULUSSA OVAT VAIN LINSSIN MOODIT (koodista luettuina):
  *
  *   pallo     Maapallo avaruudesta — kaukonäkymä, ISS-kyydin TILA.kauko
- *   seuranta  ISS:n rinnalla — kyydin TILA.seuranta (asema 3D-mallina)
+ *   (seuranta  ISS:n rinnalla — POISTETTU pelistä, omistaja 2.10.2026 klo 10.4x; vain kehittäjälippu ?issseuranta)
  *   ikkuna    ISS:n sisälle — kyydin TILA.ikkuna (Cupola); myös TILA.kohde
  *             (ylilento) on aseman sisältä katsomista, joten sama rivi
  *             näkyy silloin valittuna
@@ -29,9 +29,8 @@
  *
  * NYKYINEN MOODI ON VALITTUNA. Valinta vie moodista toiseen samoilla
  * kahvoilla kuin pelaajan omat eleet (ISS:n napautus, kyydin ✕, pisteen
- * napautus, kuvan ✕), eikä rinnakkaista polkua synny: esim. pallo →
- * ISS:n sisälle on kaksi napautusta (kauko → seuranta → ikkuna), ja
- * jälkimmäinen odottaa ensimmäisen lennon loppuun.
+ * napautus, kuvan ✕), eikä rinnakkaista polkua synny: pallo → ISS:n
+ * sisälle on yksi napautus (kauko → ikkuna, 2.10.2026).
  *
  * ── PULU EI PUHU PÄÄLLEKKÄIN ─────────────────────────────────────────
  *
@@ -149,11 +148,6 @@ export const ASTRO_TAULUN_RIVIT = Object.freeze([
     saatavilla: () => true,
   }),
   Object.freeze({
-    tunnus: 'iss-rinnalla', moodi: 'seuranta',
-    otsikko: 'ISS:n rinnalla', selite: 'Asema radallaan',
-    saatavilla: onKyyti,
-  }),
-  Object.freeze({
     tunnus: 'iss-sisalle', moodi: 'ikkuna',
     otsikko: 'ISS:n sisälle', selite: 'Cupolan ikkunasta alas',
     saatavilla: onKyyti,
@@ -204,7 +198,7 @@ export function moodinAskel(tavoite, { kuva = false, kyyti = null } = {}) {
   if (tavoite === 'ikkuna') {
     if (t === 'ikkuna') return 'perilla';
     if (siirtyy) return 'odota';
-    return 'napauta'; // kauko → seuranta → ikkuna, kohde → seuranta → ikkuna
+    return 'napauta'; // kauko → ikkuna, kohde → ikkuna (kehittäjälipulla seurannan kautta)
   }
   return 'ei';
 }

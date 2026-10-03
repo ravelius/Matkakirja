@@ -3,10 +3,11 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { tarkistaPaneeliData, PANEELI_RIVITYYPIT } from '../js/pohjat/paneelidata.js';
+import { pohjatCss } from './pohjat-css.mjs';
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 const POHJAT = lue('../js/pohjat/pohjat.js').replace(/\/\*[\s\S]*?\*\//g, '').replace(/\/\/.*$/gm, '');
-const CSS = lue('../css/pohjat.css');
+const CSS = pohjatCss();
 
 test('PaneeliData: tyhjä hylätään, tyhjät rivit ja ryhmät pois, tuntematon tyyppi toiminnoksi', () => {
   assert.equal(tarkistaPaneeliData(null), null);
@@ -41,7 +42,9 @@ test('PaneeliData: kytkin totuusarvoksi, säätimen arvo rajoihin, teema vain pa
 });
 
 test('PANEELI: sulkupino (Esc), ohinapautus ohittaa avaajan, ei ✕:ää eikä kuvia', () => {
-  const p = POHJAT.slice(POHJAT.indexOf('export function luoPohjaPaneeli'));
+  // Vain PANEELIN funktio: perässä tuleva KUVANÄKYMÄ saa ✕:n (tyylikirja).
+  const loppu = POHJAT.indexOf('export function luoPohjaKuvanakyma');
+  const p = POHJAT.slice(POHJAT.indexOf('export function luoPohjaPaneeli'), loppu > 0 ? loppu : undefined);
   assert.match(p, /pohjaPinoon\(pohja\)/);
   assert.match(p, /addEventListener\('pointerdown', ohi, true\)/);
   assert.match(p, /avaaja\?\.contains\?\.\(e\.target\)/);
