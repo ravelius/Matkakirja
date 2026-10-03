@@ -1143,10 +1143,17 @@ namespace Matkakirja.Natiivi
                 // Pelaajan veto tai nipistys päättää ISS-seurannan (web otePalloon); napautus AstronauttiKerros.Napautuksessa.
                 if (o.kierto != null) o.kierto.PelaajanEle += linssi.PelaajanEle;
                 mustaAlku = Time.realtimeSinceStartup;
+                // Kyydissä päivitys ennen Cesiumin laattavalintaa (KyydinKameraEnnen): kääntyvä näkymä ei näytä aukkoja.
+                if (o.GetComponent<KyydinKameraEnnen>() == null) o.gameObject.AddComponent<KyydinKameraEnnen>();
+                KyydinKameraEnnen.Ajo = () => { if (linssi != null && linssi.Kyydissa) Paivita(); };
             }
             float mustaAlku = -1f;
+            int paivitetty = -1;
             public void Paivita()
             {
+                // Kerran kehyksessä: kyydissä jo KyydinKameraEnnen-vaiheessa (−50), jolloin LinssiOhjaimen ajo ohitetaan.
+                if (paivitetty == Time.frameCount) return;
+                paivitetty = Time.frameCount;
                 // Cupolan katseen veto ennen linssin päivitystä: veto näkyy samassa kehyksessä (CupolaVeto, omistaja 3.10.).
                 if (kerros != null && linssi != null) kerros.Veto.Paivita(linssi, o.kierto);
                 linssi?.Paivita();
@@ -1160,7 +1167,8 @@ namespace Matkakirja.Natiivi
             {
                 if (linssi != null && o.kierto != null) o.kierto.PelaajanEle -= linssi.PelaajanEle;
                 if (kerros != null) kerros.Veto.Pois();
-                linssi?.Sulje(); linssi = null; kerros = null; mustaAlku = -1f;
+                KyydinKameraEnnen.Ajo = null;
+                linssi?.Sulje(); linssi = null; kerros = null; mustaAlku = -1f; paivitetty = -1;
             }
         }
 
