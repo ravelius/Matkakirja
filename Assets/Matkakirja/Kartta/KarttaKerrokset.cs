@@ -1599,7 +1599,7 @@ namespace Matkakirja
             var ala = SaapumisLaatat.Alue(t.Lat, t.Lon, h, fov, kuvasuhde);
             var polut = new List<string>();
             var nahty = new HashSet<string>();
-            int pohjaN = 0, maastoN = 0;
+            int pohjaN = 0, maastoN = 0, z10Ohi = 0;
             // Pohja (Web Mercator, {reverseY} = XYZ-rivi): päätaso ja kaksi esivanhempaa.
             string pm = PohjaMalli();
             int pohjaMax = pohja is CesiumUrlTemplateRasterOverlay pu ? pu.maximumLevel : 9;
@@ -1609,6 +1609,9 @@ namespace Matkakirja
                 var (z0, z1) = SaapumisLaatat.Tasot(rasteri);
                 foreach (var (z, x, y) in SaapumisLaatat.Mercator(ala, z0, z1))
                 {
+                    // Kaupunkitason Z10, jota ei ole poltettu (merellä kaupungin ympärillä): palvelin tekee sen Cesiumille
+                    // Z9-vanhemmasta, ja esilataukselle se olisi 404 (Valletta 24/242 "epäonnistui", Päätoimittaja 3.10.2026).
+                    if (KaupunkiRasteri.Paalla && z == KaupunkiRasteri.Taso && KaupunkiRasteri.Onko(z, x, y) == false) { z10Ohi++; continue; }
                     string p = pm.Replace("{z}", z.ToString()).Replace("{x}", x.ToString()).Replace("{reverseY}", y.ToString());
                     if (nahty.Add(p)) { polut.Add(p); pohjaN++; }
                 }
@@ -1633,7 +1636,7 @@ namespace Matkakirja
             var e = new Laattapalvelin.Esilataus { Tausta = !kiire, Saapuminen = kiire };
             float alku = Time.realtimeSinceStartup;
             Debug.Log($"MATKAKIRJA saapumislaatat: {kaupunki} ({maa}, {taso}{(kiire ? ", KIIRE" : "")}{(maaRajaus ? "" : ", kaupunkinäkymä")}) " +
-                      $"pohja {pohjaN} (z{SaapumisLaatat.Tasot(rasteri).min}–{rasteri}), " +
+                      $"pohja {pohjaN} (z{SaapumisLaatat.Tasot(rasteri).min}–{rasteri}{(z10Ohi > 0 ? $", Z{KaupunkiRasteri.Taso} vanhemmasta {z10Ohi}" : "")}), " +
                       $"maasto {maastoN}, reliefi {reliefi?.Count ?? 0}; näkymä {ala}");
             PyyntoLoki.Merkki($"saapumislaatat {kaupunki} alkaa {polut.Count} + kerma + reliefi {reliefi?.Count ?? 0}");
             StartCoroutine(Esilataaja.Tehtava(taso, "saapuminen-" + kaupunki,
