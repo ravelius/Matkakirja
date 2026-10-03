@@ -1141,6 +1141,7 @@ const MODULES = [
   'js/lehtikuori.js',
   'js/linssit/ajattelija-sokrates-aikajana.js',
   'js/linssit/ajattelija-sokrates.js',
+  'js/linssit/ajattelija-marcus-aikajana.js',
   'js/linssit/ajattelija-marcus.js',
   'js/linssit/ajattelija-projektori.js',
   'js/linssit/ajattelija.js',
