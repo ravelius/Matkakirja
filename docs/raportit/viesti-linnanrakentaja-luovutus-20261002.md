@@ -3,6 +3,11 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
+## 3.10. 15.x: MARCUS v13 (v13_marcus, --kohde marcus --kertoja …/marcus-aurelius/kertoja-v1/ajat.json): luvut marcus-luvut-v13.json
+## (6f314058e) Pelikoodarilla, stillit Päätoimittajalla, leikkausajat Linssisepällä. ODOTTAA: Sisältökirjurin rajatut värittömät
+## kaiut (kaiku-sade/uhri/kuolinvuode.png → proto-3d/_lahteet/marcus-aurelius/gobot-v13/, sitten luvut uudelleen ja stillit).
+## Savu v5 (savu-v5/savu-atlas-v5.png) Pelikoodarilla; omistaja päätti 14.2x savu oletukseksi, väritön, oma musiikki.
+
 ## 3.10. 10.x: v13c (--v13c: rajatut kaiut viistosti, ei reunahehkua, virta väistää; --kaikuvari seepia|neutraali;
 ## --savu <kansio>: savukiekuran maski kaikkiin projektoreihin, sokrates_savu.py → proto-3d/_lahteet/sokrates/savu-v1/) luvut
 ## sokrates-luvut-v13c.json + gobot-v13cA Pelikoodarilla (lippuina A/B, väri, savu). Savun koevideo v13c-savu-koe.mp4 (df639c875).
