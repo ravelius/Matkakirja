@@ -1429,6 +1429,17 @@ export const RAAMATTU = {
       otsikko: 'Karttalinssit',
       tila: 'luonnos',
       kohdat: [
+        'AJATTELIJALINSSI JA KULTTUURIPERINNÖN ARKKI (omistaja 1.–3.10.2026; yksityiskohdat lokissa, grep AJATTELIJ): '
+          + 'yksi ajattelija kerrallaan kipsibystinä valokeilassa. Alku pimeästä: kytkin napsahtaa (aito äänite ja salikaiku), '
+          + 'ääriviivavalo, sitten musiikki levytyksen alusta leikkaamattomana loppuun (oma sävellys tai Zarathustra, valinta '
+          + 'auki); leikkaukset vain kuuluviin iskuihin; avainvalo sivulta, jotta kipsin muoto näkyy. Kertoja yhtenä ottona '
+          + 'yhdestä yhtenäisestä kertomuksesta, jossa elämä ja muutama lainaus vuorottelevat (ääni Iv4 William, eleven_v4, '
+          + 'oletusvakaus, välimerkit mukana). Kasvoille heijastetaan valona lauseita ja kaikukuvia: kaikukuva on yksi rajattu, '
+          + 'yksinkertainen hahmo ilman taustaa ja kehystä, viistosti kasvojen mukaan taipuva, ei hehkua; tekstit liikkuvat '
+          + 'lähes samalla nopeudella. Yläkulman ✕ piilossa, kunnes ruutua napautetaan. Neljä hillittyä ääniefektiä '
+          + '(projektorin naksahdus, hallin ovi, savimalja, kytkin pois). LUKITTU 3.10.2026: kaikki ajattelijat ja tulevat '
+          + 'taideteokset ovat YHDESSÄ koko maailman kulttuuriperinnön varastossa (arkki), ei maanosakohtaisia halleja; '
+          + 'maanosa tai kulttuuri tarvittaessa osastona saman hallin sisällä. Varasto on vielä havainnekuvavaiheessa.',
         'ISOISÄN LINSSI — VUOSI 1873 (omistaja 21.09.2026 klo 09.07, Fablen linjaus): oma vahvasti retro linssi '
           + 'VAIN vuodesta 1873, isoisän matkan vuodesta: sen vuoden rajat ja maiden nimet '
           + '(27 poliittista nimeä nimistöstä aika=1873; raja-aineisto historical-basemaps '
