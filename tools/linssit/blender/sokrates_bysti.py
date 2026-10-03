@@ -1489,9 +1489,11 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
                          liuku=0.02, haivytys=haiv, varjo=0.0, savy=(1.0, 1.0, 1.0) if KAIKUVARI == 'neutraali' else (1.0, 0.78, 0.52))
         kaiut.append({'nimi': nimi, 'kuva': kuva, 'alku_s': round(a_t, 2), 'loppu_s': round(l_t, 2)})
     sade_t = w_('taivas', k_('04', 0) + 3.5); uhri_t = w_('uhrasi', k_('06', 0)); sair_t = w_('sairastui', k_('08', 0) + 1.5)
-    kaiku('kaiku-sade', 'kaiku-sade.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, sade_t, k_('05', 0) - 0.3, 26.0)
+    kaiku('kaiku-sade', 'kaiku-sade.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.121 if V14 else 0.10,   # v14: yksinkertainen (pää + parta), sama pinta-ala
+          sade_t, k_('05', 0) - 0.3, 26.0)
     kaiku('kaiku-uhri', 'kaiku-uhri.png', sp, sn, SIVU * 0.55 + YLOS * 0.30, 0.08, uhri_t, k_('07', 0) - 0.3, 22.0)
-    kaiku('kaiku-kuolinvuode', 'kaiku-kuolinvuode.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.11, sair_t, k_('09', 0) - 0.2, 50.0, haiv=24)
+    kaiku('kaiku-kuolinvuode', 'kaiku-kuolinvuode.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.102 if V14 else 0.11,   # v14: pää + ylävartalo
+          sair_t, k_('09', 0) - 0.2, 50.0, haiv=24)
     lainaukset = []
     def lainaus(nimi, kuva, q, suunta, ala, kork, kap, raja=None):
         if V14:   # Päätoimittaja 3.10.: lainaus luettavissa KOKONAAN → kiinteä 2–3-rivinen heijastus (ei vierivää ikkunaa)
