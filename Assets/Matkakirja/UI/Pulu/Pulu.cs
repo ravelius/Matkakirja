@@ -306,7 +306,20 @@ namespace Matkakirja.Natiivi
                 float ky = juuri.height * LasiKypara, d = ky - lasi.y, r = lasi.z - LasiVali;
                 float lasinOikea = r > Mathf.Abs(d) ? lasi.x + Mathf.Sqrt(r * r - d * d) : lasi.x;
                 float oikea = Mathf.Min(lasinOikea, alue.parent.layout.width - reunat.z - 8f);
-                alue.style.left = oikea - RobottiPuluOikea * RobottiSkaala;
+                float vasen = oikea - RobottiPuluOikea * RobottiSkaala;
+                // Varsi kehyksen taakse (Päätoimittaja 3.10.: pystyssä varsi päättyi keskelle lasia, kun vaakaosa jäi ruudun ulkopuolelle):
+                // jos lasin alareuna näkyy ruudulla kyynärpään kohdalla, Pulu laskee, kunnes varren alin kohta on 8 pt lasin reunan alla.
+                if (!float.IsNaN(kuva.VarrenAlinEvasta) && lasi.z > 0f)
+                {
+                    float kyynarX = vasen + RobottiNivelX * RobottiSkaala, dxl = kyynarX - lasi.x;
+                    if (lasi.z > Mathf.Abs(dxl))
+                    {
+                        float reunaY = lasi.y + Mathf.Sqrt(lasi.z * lasi.z - dxl * dxl) + 8f;
+                        float varsiKyparasta = kuva.VarrenAlinEvasta - kuva.KyparaEvasta;
+                        if (reunaY < juuri.height) ky = Mathf.Max(ky, reunaY - varsiKyparasta);
+                    }
+                }
+                alue.style.left = vasen;
                 alue.style.bottom = juuri.height - ky + kuva.KyparaEvasta + (kuva.EvaAla - alue.worldBound.yMax);
             }
             alue.style.transformOrigin = new TransformOrigin(Length.Percent(0), Length.Percent(100));
