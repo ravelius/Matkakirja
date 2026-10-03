@@ -185,28 +185,21 @@ namespace Matkakirja.Natiivi
             };
 
             // Elävä linna (käsikirjoitus kohta 3): ‹-nappi vasempaan yläkulmaan tilassa → takaisin yleisnäkymään.
-            paluuNappi = Rakenne.Nappi("‹", "mk-dioraama__paluu", DioraamaSovitin.PyydaPaluu, juuri);
+            // OHJAUSNAPPI-neliöinä (omistaja 2.10.2026 klo 14.2x: kuvakenapit yhtenäisiä neliöitä pyöristetyin kulmin, EI OVAALEJA;
+            // Päätoimittaja 3.10.): paperiteema kuten ennen pergamentti, 40 pt samalla keskipisteellä kuin vanha 44 pt:n ympyrä.
+            paluuNappi = Ohjausnappi.Nappi(Ikonit.Takaisin, "Takaisin", DioraamaSovitin.PyydaPaluu, juuri, "paperi");
+            paluuNappi.AddToClassList("mk-dioraama__paluu");
             paluuNappi.style.position = Position.Absolute;
-            paluuNappi.style.left = 14; paluuNappi.style.top = 58;
-            paluuNappi.style.width = 44; paluuNappi.style.height = 44;
-            paluuNappi.style.backgroundColor = new Color(Pergamentti.r, Pergamentti.g, Pergamentti.b, 0.9f);
-            paluuNappi.style.borderTopLeftRadius = 22; paluuNappi.style.borderTopRightRadius = 22;
-            paluuNappi.style.borderBottomLeftRadius = 22; paluuNappi.style.borderBottomRightRadius = 22;
-            var paluuTeksti = paluuNappi.Q<Label>();
-            if (paluuTeksti != null) { paluuTeksti.style.fontSize = 24; paluuTeksti.style.color = Teksti; paluuTeksti.style.unityTextAlign = TextAnchor.MiddleCenter; }
+            paluuNappi.style.left = 16; paluuNappi.style.top = 60;
             paluuNappi.style.display = DisplayStyle.None;
 
             // Uusintanappi (↻) samaan kulmaan kuin ‹: näkyy yleisnäkymässä, kun kertojan kierros on käyty.
             // ↻-merkkiä ei ole kirjasimessa (1.1 (73) -kuva: laatikko), joten ikoni: Ikonit.PaivitaVersio (kaareva nuoli).
-            uusintaNappi = Rakenne.Nappi(null, "mk-dioraama__uusinta", () => DioraamaSovitin.Linssi?.KertojaUudelleen(DioraamaSovitin.ViimeisinT), juuri, Ikonit.PaivitaVersio);
+            uusintaNappi = Ohjausnappi.Nappi(Ikonit.PaivitaVersio, "Kertoja uudelleen",
+                () => DioraamaSovitin.Linssi?.KertojaUudelleen(DioraamaSovitin.ViimeisinT), juuri, "paperi");
+            uusintaNappi.AddToClassList("mk-dioraama__uusinta");
             uusintaNappi.style.position = Position.Absolute;
-            uusintaNappi.style.left = 14; uusintaNappi.style.top = 58;
-            uusintaNappi.style.width = 44; uusintaNappi.style.height = 44;
-            uusintaNappi.style.backgroundColor = new Color(Pergamentti.r, Pergamentti.g, Pergamentti.b, 0.9f);
-            uusintaNappi.style.borderTopLeftRadius = 22; uusintaNappi.style.borderTopRightRadius = 22;
-            uusintaNappi.style.borderBottomLeftRadius = 22; uusintaNappi.style.borderBottomRightRadius = 22;
-            uusintaNappi.style.color = Teksti;
-            uusintaNappi.style.alignItems = Align.Center; uusintaNappi.style.justifyContent = Justify.Center;
+            uusintaNappi.style.left = 16; uusintaNappi.style.top = 60;
             uusintaNappi.tooltip = "Kertoja uudelleen";
             uusintaNappi.style.display = DisplayStyle.None;
 
