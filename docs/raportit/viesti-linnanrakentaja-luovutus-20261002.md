@@ -3,6 +3,9 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
+## 3.10. 20.x: MYLLYN LAUDAT PR #3906 (haara linnanrakentaja-mylly-lauta-2, kerrokset _valmiit/mylly-laudat/v2, SHA fea53f6a7ea25ee7)
+## Julkaisijan junaan. KUN MAINISSA → ilmoita Siirtosepälle (local_86d0c984…) kytkentä natiiviin (ASTC 6×6). Sen jälkeen ei linnatyötä ennen Allymes-päätöstä.
+
 ## 3.10. 19.00 OMISTAJA: "Ei webiä lainkaan" → ajattelijoiden luvut Linssiseppä 2:lle (moottori, Sokrates) ja Linssiseppä 1:lle (Marcus), EI Pelikoodarille.
 ## Webin AnimationMixer peruttu (linna jää natiiviin). Myllyn laudat v2 (54a1eff45, _valmiit/mylly-laudat/v2) Päätoimittajalla → OK:n jälkeen PR.
 
