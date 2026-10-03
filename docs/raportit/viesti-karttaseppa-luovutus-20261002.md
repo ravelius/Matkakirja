@@ -1,3 +1,20 @@
+# Karttasepän luovutus 3.10.2026 klo 23.5x (PÄIVITYS)
+
+## Tila
+- **Viety:** P-Afrikka + Lähi-itä (2.10. 22.51) ja **Amerikka (3.10. 23.45, 91 394 laattaa)**. Vienti PID 67566 odottaa `aasia-australia/tarkistettu.ok`.
+- **Merijääkorjaus `maailmamosaiikki-v2.mjs` (v2c)** = nyt myös `maailmamosaiikki.mjs` (v1 tallessa `-v1`):
+  1. GSHHG-merimaski (`pyramidi-poltto/gshhs-data-j27b/ne_10m_ocean.geojson`, parillisuussääntö): meren pikseli ilman kelpo-dataa → avomeri.
+  2. Napaseutu |lat| > 50°: kaikki kanavat > 0,08, TAI harmaa > 0,05, TAI maaksi luokiteltu > 6 px GSHHG-rannasta → avomeri.
+  Ennen tätä merijää ja pilvet näkyivät MGRS-ruutujen rajaamina valkoisina suorakulmioina.
+- **Aasia-australia** (PID 46687, VANHA v1-koodi) 219/361 klo 22.4x → valmis noin su 4.10. klo 6.30, indeksi noin 1 h, sitten ketju aloittaa tropiikin (v2c).
+  **Ennen tarkistusmerkkiä:** napalohkot listataan (`ALUE=aasia-australia node koe-jaa/kaukomeri.mjs`, raja n > 40, sekä `jaalohkot.mjs` n > 150),
+  poistetaan `aasia-australia/tila.json`:n `valmiit`-kohdasta (varmuuskopio ensin) ja ajetaan
+  `ALUE=aasia-australia LOHKOT=… node maailmamosaiikki-v2.mjs` setsid-kaavalla. Tarkista sitten yleiskuva (`esik.py`-malli) ja z8-lohkorajat.
+- **#3910 mergetty** (v2593): tuotannon 2026-09-30-pohjan jokikoodi mainissa; #3635 suljettu.
+- MLT-kerma: ei tehty (MLT:llä ei kerma-kenttää eikä webin väritasoa). Maltan merisauma on natiivin piirrossa (data ok, web-kuva `proto-3d/lokit/natiiviseppa-sauma-web/`).
+
+---
+
 # Karttasepän luovutus 2.10.2026 klo 22.5x (PÄIVITYS, uusi tili)
 
 ## Muuttunut 22.25–22.51
