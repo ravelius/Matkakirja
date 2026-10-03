@@ -3,6 +3,9 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
+## ODOTTAA Sisältökirjurilta: yksinkertaiset kaikuhahmot (Sokrates oraakkeli + David, Marcus sade + uhri + kuolinvuode; omistaja TF 133).
+## Tullessa: sovita (kaiun ala + kamera), stillit Päätoimittajalle, luvut Linssiseppä 2 (Sokrates) / Linssiseppä 1 (Marcus), juna 135.
+
 ## 3.10. 20.x: MYLLYN LAUDAT PR #3906 (haara linnanrakentaja-mylly-lauta-2, kerrokset _valmiit/mylly-laudat/v2, SHA fea53f6a7ea25ee7)
 ## Julkaisijan junaan. KUN MAINISSA → ilmoita Siirtosepälle (local_86d0c984…) kytkentä natiiviin (ASTC 6×6). Sen jälkeen ei linnatyötä ennen Allymes-päätöstä.
 
