@@ -1198,7 +1198,7 @@ KAIKU_LAHTEET = {   # v14: kaikukuvien lähteet tekijätietoihin (Päätoimittaj
                             'tekija': 'Davide Mauro', 'lisenssi': 'CC BY-SA 4.0 (rajattu johdannainen CC BY-SA 4.0)', 'lahde': 'Wikimedia Commons: Reconstrunction of a bronze tripod cauldron.jpg',
                             'nimea': 'Davide Mauro, CC BY-SA 4.0, Wikimedia Commons'},
     'kaiku-kuolema.png': {'kohde': 'Sokrates: kuolema (David)', 'teos': 'Jacques-Louis David, Sokrateen kuolema 1787, The Metropolitan Museum of Art 31.45',
-                          'tekija': 'Jacques-Louis David', 'lisenssi': 'CC0 (The Met Open Access)', 'lahde': 'Wikimedia Commons: The_Death_of_Socrates_MET_DP-13139-001.jpg'},
+                          'tekija': 'kuva The Metropolitan Museum of Art', 'lisenssi': 'CC0 (The Met Open Access)', 'lahde': 'Wikimedia Commons: The_Death_of_Socrates_MET_DP-13139-001.jpg'},
     'kaiku-sade.png': {'kohde': 'Marcus: sadeihme', 'teos': 'Marcus Aureliuksen pylväs, Rooma: sadeihme (sadejumala)',
                        'tekija': 'kuva Nico Kokkonen 2009', 'lisenssi': 'CC BY 3.0', 'lahde': 'Wikimedia Commons: Column_of_Marcus_Aurelius_-_detail2.jpg',
                        'nimea': 'Nico Kokkonen, CC BY 3.0, Wikimedia Commons'},
@@ -1207,7 +1207,7 @@ KAIKU_LAHTEET = {   # v14: kaikukuvien lähteet tekijätietoihin (Päätoimittaj
                        'lahde': 'Wikimedia Commons: Marcus Aurelius showing sacrifice - Arch of Marcus Aurelius - Musei Capitolini - Rome 2016.jpg',
                        'nimea': 'José Luiz, CC BY-SA 4.0, Wikimedia Commons'},
     'kaiku-kuolinvuode.png': {'kohde': 'Marcus: kuolinvuode', 'teos': 'Eugène Delacroix, Marcus Aureliuksen viimeiset sanat 1844, Musée des Beaux-Arts de Lyon',
-                              'tekija': 'Eugène Delacroix', 'lisenssi': 'CC0',
+                              'tekija': 'kuva Romainbehar', 'lisenssi': 'CC0',
                               'lahde': "Wikimedia Commons: Lyon 1er - Musée des Beaux-Arts - Salle 221 - Dernières paroles de l'empereur Marc Aurèle (Eugène Delacroix).jpg"},
 }
 V14_AUR = []           # v14: tekstivaiheen auringon avaimet (ruutu, suunta, energia ×0,3, väri) ennen kattoa
