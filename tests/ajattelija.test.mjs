@@ -186,3 +186,12 @@ test('Marcus: elämä-lappu ja Pulun viisi kysymystä (Sisältökirjuri 2.10.)',
   assert.equal(MARCUS.pulunKysymykset.length, 5);
   assert.match(lue('../js/linssit/ajattelija.js'), /const kytkinAani = new Audio\(`\$\{R2\}\$\{AJATTELIJA_KYTKIN\}`\);/);
 });
+
+test('ääniraita v12: yhtenäinen puhe (--puhe, --puhe-alku) vaimentaa musiikin puheen ajaksi; musiikki on parametri', () => {
+  const tyokalu = readFileSync(new URL('../tools/ajattelija-aaniraita.mjs', import.meta.url), 'utf8');
+  assert.match(tyokalu, /const MUSIIKKI = A\.includes\('--musiikki'\) \? resolve\(LAHTEET, arvo\('--musiikki'\)\) : join\(LAHTEET, R\.musiikki\);/);
+  assert.match(tyokalu, /const LUENNAT = PUHE \? \[\[PUHE, PUHE_ALKU\]\]/);
+  assert.match(tyokalu, /const OSAT = \(V12 && \[\[0, kestoS\(MUSIIKKI\)\]\]\)/);   // koko levytys, ei silmukkaa
+  assert.match(tyokalu, /const SILMUKKA = V12 \? null : R\.silmukka;/);
+  assert.match(tyokalu, /\$\{V12 \? `apad=whole_dur=\$\{KESTO\},` : ''\}/);
+});
