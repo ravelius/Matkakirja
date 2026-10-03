@@ -157,13 +157,16 @@ namespace Matkakirja.Linssit.Ajattelijat
         }
 
         /// <summary>
-        /// Ohitettavat näytteet raidan alusta: jos dekooderi EI leikannut (näytteitä ≈ kehykset × näytteet), viive + 529;
-        /// jos leikkasi (tai tagia ei ole), 0.
+        /// Ohitettavat näytteet raidan alusta: jos dekooderi EI leikannut (näytteitä ≈ kehykset × näytteet), viive + 529; jos se
+        /// dekoodasi lisäksi Xing/Info-tagikehyksen hiljaisuudeksi (näytteitä ≥ (kehykset + 1) × näytteet; Unityn FMOD iOS:llä:
+        /// ristikorrelaatio ffmpeg:tä vasten 4.10.2026 = 2257 = 1152 + 576 + 529), vielä yksi kehys. Leikattu tai ei tagia: 0.
         /// </summary>
         public static int Mp3Ohitus(Mp3Tiedot? t, long naytteita)
         {
             if (t == null || t.Value.Kehyksia <= 0 || t.Value.Viive <= 0) return 0;
-            return naytteita >= t.Value.Naytteita - t.Value.KehyksenNaytteet / 2 ? t.Value.Viive + DekooderinViive : 0;
+            int n = t.Value.KehyksenNaytteet;
+            if (naytteita < t.Value.Naytteita - n / 2) return 0;
+            return t.Value.Viive + DekooderinViive + (naytteita >= t.Value.Naytteita + n ? n : 0);
         }
 
         /// <summary>

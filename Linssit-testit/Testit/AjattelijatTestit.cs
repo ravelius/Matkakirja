@@ -615,6 +615,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(576, t.Value.Viive);
             // Leikkaamaton dekoodaus (kaikki kehykset) → ohitetaan 1105; leikattu → 0.
             Oleta.Sama(1105, AjattelijaTahti.Mp3Ohitus(t, 4528L * 1152));
+            // Unity (FMOD) dekoodaa myös tagikehyksen: klipissä 5 263 488 näytettä, ristikorrelaatio ffmpeg:tä vasten 2257 (47,0 ms).
+            Oleta.Sama(2257, AjattelijaTahti.Mp3Ohitus(t, 5263488));
             Oleta.Sama(0, AjattelijaTahti.Mp3Ohitus(t, 4528L * 1152 - 1105 - t.Value.Tayte));
             Oleta.Sama(0, AjattelijaTahti.Mp3Ohitus(null, 123456));
             Oleta.Tosi(!AjattelijaTahti.Mp3Alku(new byte[300]).HasValue, "ei MP3:a");
