@@ -968,14 +968,15 @@ if V14:
         (1, (-0.85, 0.30, 0.52), (0.0, -0.04, 0.38), 35),             # alkuajo ~2 s: pään siluetti takaviistosta, pimeä
         (_L(V14_INTRO['c1']) - 1, (-0.80, 0.10, 0.48), (0.0, -0.05, 0.38), 35),
         (_L(V14_INTRO['c1']), (-0.72, -0.08, 0.35), (0.0, -0.08, 0.34), 45),   # 1) profiilin ääriviiva otsasta partaan
-        (_L(V14_INTRO['c2']), (0.16, -0.43, 0.395), (0.040, -0.125, 0.378), 50), # 2) silmä ja kulmakaari silmän korkeudelta, silmä saa valoa
-        (_L(V14_INTRO['c3']), (-0.16, -0.58, 0.29), (0.0, -0.12, 0.27), 50),    # 3) suu ja parta kokonaan kuvassa, edestä
+        (_L(V14_INTRO['c2']), (0.22, -0.55, 0.425), (0.030, -0.12, 0.392), 50),   # 2) silmä, kulmakaari ja nenänvarsi; silmä ~¼ leveydestä
+        (_L(V14_INTRO['c3']), (-0.05, -0.50, 0.30), (0.0, -0.13, 0.285), 50),   # 3) suu ja parta täyttävät kuvan, suoraan edestä
         (_L(V14_INTRO['c4']), (-0.42, -0.52, 0.82), (0.0, -0.07, 0.40), 35),    # 4) ¾-kuva ylhäältä
         (V12_REM, (-0.36, -1.24, 0.24), (-0.075, -0.06, 0.39), 35),             # Rembrandt + nimi (toimii, pidetään)
     )
     V7_PEHMEAT = {1}
-    _S = {'alku': (1.0, 0.55, 0.40), 'profiili': (1.0, -0.20, 0.35), 'silma': (1.0, -0.20, 0.75), 'suu': (1.0, -0.30, 0.55),
-          'yla': (0.9, -0.45, 0.65)}   # sivuvalo muotoilee; silmä saa valoa, ei litteä
+    _S = {'alku': (1.0, 0.55, 0.40), 'profiili': (1.0, -0.45, 0.35), 'silma': (0.70, -0.70, 0.85),   # silmä: Rembrandt-suunta osuu silmämunaan
+      'suu': (0.65, -0.75, 0.60),
+          'yla': (0.30, -0.85, 0.70)}   # ¾ ylhäältä: valo edestä ylhäältä otsaan, silmään ja poskeen   # sivuvalo muotoilee; silmä saa valoa, ei litteä
     V7_VALO = ((1, _S['alku']), (_L(V14_INTRO['c1']) - 1, _S['alku']), (_L(V14_INTRO['c1']), _S['profiili']),
                (_L(V14_INTRO['c2']) - 1, _S['profiili']), (_L(V14_INTRO['c2']), _S['silma']),
                (_L(V14_INTRO['c3']) - 1, _S['silma']), (_L(V14_INTRO['c3']), _S['suu']),
