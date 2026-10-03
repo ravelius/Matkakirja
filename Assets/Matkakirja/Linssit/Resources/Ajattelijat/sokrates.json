@@ -449,7 +449,7 @@
  "syke": "ajattelijat/sokrates/v1/syke-musiikki.json",
  "aikajana": {
   "versio": "v13",
-  "lahde": "linnanrakentaja-sokrates-bysti ad3f687b0 docs/raportit/ajattelijat-v11/sokrates-luvut-v14.json",
+  "lahde": "linnanrakentaja-sokrates-bysti 5b79c21d5 docs/raportit/ajattelijat-v11/sokrates-luvut-v14.json",
   "loppu": 2938,
   "kertoja": {
    "alku": 9.5,
@@ -3307,5 +3307,40 @@
     ]
    }
   ]
- }
+ },
+ "kuvalahteet": [
+  {
+   "kuva": "kaiku-jumala.png",
+   "kohde": "Sokrates: jumalankuva",
+   "teos": "Artemisionin Zeus (tai Poseidon), pronssi n. 460 eaa., Ateenan kansallinen arkeologinen museo X 15161",
+   "tekija": "kuva Jebulon",
+   "lisenssi": "CC0",
+   "lahde": "Wikimedia Commons: Bronze_Zeus_or_Poseidon_NAMA_X_15161_Athens_Greece.jpg"
+  },
+  {
+   "kuva": "kaiku-sotilas.png",
+   "kohde": "Sokrates: hopliitti",
+   "teos": "Kreikkalainen hopliitti, pronssi, Altes Museum Berlin",
+   "tekija": "kuva Gary Todd / WorldHistoryPics.com",
+   "lisenssi": "CC0",
+   "lahde": "Wikimedia Commons: Ancient Greece Bronze Hoplite Warrior Statue (28660212241).jpg"
+  },
+  {
+   "kuva": "kaiku-oraakkeli.png",
+   "kohde": "Sokrates: Delfoin oraakkeli (kolmijalka)",
+   "teos": "Pronssikolmijalkakattilan rekonstruktio (700-l. eaa.), Olympian arkeologinen museo",
+   "tekija": "Davide Mauro",
+   "lisenssi": "CC BY-SA 4.0 (rajattu johdannainen CC BY-SA 4.0)",
+   "lahde": "Wikimedia Commons: Reconstrunction of a bronze tripod cauldron.jpg",
+   "nimea": "Davide Mauro, CC BY-SA 4.0, Wikimedia Commons"
+  },
+  {
+   "kuva": "kaiku-kuolema.png",
+   "kohde": "Sokrates: kuolema (David)",
+   "teos": "Jacques-Louis David, Sokrateen kuolema 1787, The Metropolitan Museum of Art 31.45",
+   "tekija": "Jacques-Louis David",
+   "lisenssi": "CC0 (The Met Open Access)",
+   "lahde": "Wikimedia Commons: The_Death_of_Socrates_MET_DP-13139-001.jpg"
+  }
+ ]
 }

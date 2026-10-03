@@ -653,5 +653,24 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(aj.SavuKuva != null && aj.SavuHarso == AjattelijaAikajanaData.OletusSavuHarso && aj.SavuPehmeys == AjattelijaAikajanaData.OletusSavuPehmeys,
                 $"savu {aj.SavuKuva} harso {aj.SavuHarso} pehmeys {aj.SavuPehmeys}");
         }
+
+        [Testi] static void JokaisellaKaiullaOnKuvalahde()
+        {
+            // Juna 135 (Päätoimittaja 4.10.): oraakkeli (CC BY-SA 4.0) ja uhri eivät lähde ilman attribuutiota: jokaisella aikajanan
+            // kaikukuvalla on kuvalähde, ja BY-lisenssillä nimeämisrivi.
+            foreach (var tunnus in new[] { "sokrates" })
+            {
+                var json = File.ReadAllText(Kansio + tunnus + ".json");
+                var a = Lue(tunnus);
+                var (_, lahteet) = AjattelijaData.Kuvalahteet(json);
+                foreach (var k in a.Aikajana.Kaiut)
+                {
+                    var kuva = Path.GetFileName(k.Kuva);
+                    var l = lahteet.FirstOrDefault(x => x.Kuva == kuva);
+                    Oleta.Tosi(l != null && l.Tekija != null && l.Lisenssi != null && l.Lahde != null, $"{tunnus} {kuva}: kuvalähde");
+                    if (l?.Lisenssi != null && l.Lisenssi.Contains("BY")) Oleta.Tosi(!string.IsNullOrEmpty(l.Nimea), $"{tunnus} {kuva}: nimeämisrivi");
+                }
+            }
+        }
     }
 }
