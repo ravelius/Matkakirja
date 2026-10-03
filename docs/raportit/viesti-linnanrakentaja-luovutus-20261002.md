@@ -3,6 +3,10 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
+## 3.10. 15.3x: v14-INTRO (--v14 [--intro c1=…,c2=…,c3=…,c4=…,rem=…,kys=…,kertoja=…], linssin aika, prologi 2,5 s):
+## alkuajo + 4 eri kasvojen osaa omin valoin; luvut {sokrates,marcus}-luvut-v14.json (822739628) Pelikoodarilla. ODOTTAA:
+## Linssisepän tarkat iskut → --intro → luvut uudelleen samoilla nimillä; Marcuksen rajatut kaiut.
+
 ## 3.10. 15.x: MARCUS v13 (v13_marcus, --kohde marcus --kertoja …/marcus-aurelius/kertoja-v1/ajat.json): luvut marcus-luvut-v13.json
 ## (6f314058e) Pelikoodarilla, stillit Päätoimittajalla, leikkausajat Linssisepällä. ODOTTAA: Sisältökirjurin rajatut värittömät
 ## kaiut (kaiku-sade/uhri/kuolinvuode.png → proto-3d/_lahteet/marcus-aurelius/gobot-v13/, sitten luvut uudelleen ja stillit).
