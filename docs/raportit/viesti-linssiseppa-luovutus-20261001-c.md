@@ -18,6 +18,11 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
   uudelleen → tarkista FYYSISELLÄ iPadilla äänen kanssa (iPad-testien ehdot muistiossa ipad-testit-omistajan-lupa).
 - ISKUT (4.10.): raidan iskut 0–5 ms nimellisistä (lahde/iskut.py); moottorin off-by-one (ruudut 1-pohjaisia) korjattu LS2:n 7054e2e1:ssä
   + LAME-alkuviiveen ohitus. Marcus-haara rebasetaan LS2:n kärkeen ennen junaa 135.
+- MARCUS 135 DATA (4.10. 01.2x): proto linssiseppa/marcus-v15 60c68465 (LS2:n linssiseppa2/ajattelija-tahti:n päällä), generoitu
+  tools/ajattelija-natiivi.mjs (PR #3916 versio) luvuilla 5b79c21d5 → kaiut v5 + kuvalahteet[]. Kaikukuvat ämpärissä marcus/v5 (vienti
+  _valmiit/marcus-kaiut-vienti-20261004). Main-PR:t: #3918 (data/ajattelijat/marcus.json osoitin), #3917 (vain musiikkirivi lahteet.js).
+  Web-worktree /Users/Shared/Claude/wt/linssiseppa-lahteet-ajattelijat (haarat lahteet-ajattelijat-v5 + marcus-data-v5). ODOTTAA:
+  LS2:n tahtimoottori + Pelikoodarin uudet taustarivien atlakset → generoi uudelleen → käännös → fyysinen iPad äänen kanssa.
 
 ## TILA 3.10. KLO 19.3x (MARCUS v14 NATIIVI — MERGE-PYYNNÖSSÄ)
 - linssiseppa/marcus-v14 2848bfe2 (LOPULLINEN 20.3x; proto, LS2:n linssiseppa2/sokrates-v14 649651b2:n päällä, käännös 9bb5418d, kuvat lokit/linssiseppa-marcus-v14-d-20261003; vain data: tyokalut/ajattelijat-natiiviin.mjs,
