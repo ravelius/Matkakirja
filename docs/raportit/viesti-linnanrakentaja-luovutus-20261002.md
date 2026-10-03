@@ -3,6 +3,11 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
+## 4.10. ~01.x: KAIKKI 7 KAIKUA HYVÄKSYTTY (5b79c21d5). Sokrates-luvut → LS2, Marcus-luvut → LS1 (juna 135), lähteet v13.kaiut[].lahde.
+## sokrates_kaiku.py rajattu: --reuna (ala 0,25 / muut 0,14 oletus), --kayra, --musta, --tiivis, --pehmea. OPIT: kova reuna = ylivalotus
+## (laske voimaa: David 30, uhri 14, kuolinvuode 7) tai geometrian varjo (nenä → siirrä kaikua); mitoita lev vanhan pinta-alan mukaan.
+## Leikkaukset: luvut 1-pohjaisia (ruutu 1 = 0,0 s), LS2 korjaa moottorin. Lainaukset --kehys (9/9).
+
 ## ODOTTAA Sisältökirjurilta: yksinkertaiset kaikuhahmot (Sokrates oraakkeli + David, Marcus sade + uhri + kuolinvuode; omistaja TF 133).
 ## Tullessa: sovita (kaiun ala + kamera), stillit Päätoimittajalle, luvut Linssiseppä 2 (Sokrates) / Linssiseppä 1 (Marcus), juna 135.
 
