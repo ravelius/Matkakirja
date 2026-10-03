@@ -40,6 +40,7 @@ namespace Matkakirja.Natiivi
             k.kirjaa = kirjaa;
             k.enabled = true;
             Kaynnissa = true;
+            TestiMykistys.KaappausNollaa = true;   // testimykistys (ennen tätä ketjussa) jättää nollauksen tälle
             kirjaa($"kaappaus alkaa: {sekunnit:F0} s, {k.taajuus} Hz, {k.kanavia} kan");
         }
 
@@ -58,6 +59,7 @@ namespace Matkakirja.Natiivi
         {
             if (puskuri == null || kirjoitettu < puskuri.Length) return;
             Kaynnissa = false;
+            TestiMykistys.KaappausNollaa = false;
             AudioListener.volume = taso;
             var polku = Path.Combine(Application.persistentDataPath, nimi + ".wav");
             File.WriteAllBytes(polku, Wav(puskuri, kirjoitettu, kanavia, taajuus));
@@ -66,7 +68,7 @@ namespace Matkakirja.Natiivi
             enabled = false;
         }
 
-        void OnDisable() { if (puskuri != null) { Kaynnissa = false; AudioListener.volume = taso; } }
+        void OnDisable() { TestiMykistys.KaappausNollaa = false; if (puskuri != null) { Kaynnissa = false; AudioListener.volume = taso; } }
 
         static byte[] Wav(float[] d, int n, int kan, int f)
         {

@@ -25,6 +25,12 @@ namespace Matkakirja.Natiivi
             !Application.isEditor && !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("SIMULATOR_DEVICE_NAME"));
 
         static volatile bool paalla;
+
+        /// <summary>
+        /// Äänikaappaus (AaniKaappaus, Linssiseppä 2 4.10.2026): suodinketjussa tämän JÄLKEEN oleva kaappaus kopioi miksauksen ja
+        /// nollaa ulostulon itse, joten tämä ei nollaa sillä välin. Ei tallennu (PlayerPrefs ennallaan): kaatuminen ei jätä ääntä päälle.
+        /// </summary>
+        public static volatile bool KaappausNollaa;
         static TestiMykistys instanssi;
 
         /// <summary>Nollataanko lopullinen ulostulo (peli-komento aani mykistys).</summary>
@@ -77,7 +83,7 @@ namespace Matkakirja.Natiivi
                 k = (k + 1) % Pituus;
             }
             kohta = k;
-            Array.Clear(data, 0, data.Length);
+            if (!KaappausNollaa) Array.Clear(data, 0, data.Length);
         }
     }
 }
