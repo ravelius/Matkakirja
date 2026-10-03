@@ -97,9 +97,11 @@ export const SOKRATES = Object.freeze({
     kytkin: 30, taysi: 58, loppu: 75,
     kamera: { paikka: [-0.22, -1.15, 0.34], katse: [0.0, -0.04, 0.30], mm: 35 },
     vari: [1.0, 0.86, 0.66],
+    // v14 (Linnanrakentaja 78b883452, v14.prologi_valot): ääriviiva vahvemmaksi, kolmas reunavalo päälaelle.
     valot: [
-      { paikka: [-0.30, 0.55, 0.42], kohde: [0.0, -0.06, 0.42], teho: 45, keila: 26, blend: 0.45 }, // reunavalo vasemmalta takaa
-      { paikka: [0.30, 0.55, 0.42], kohde: [0.0, -0.06, 0.42], teho: 45, keila: 26, blend: 0.45 },  // reunavalo oikealta takaa
+      { paikka: [-0.36, 0.5, 0.3], kohde: [0.0, -0.08, 0.38], teho: 75, keila: 22, blend: 0.45 },  // reuna-v vasemmalta takaa
+      { paikka: [0.36, 0.5, 0.3], kohde: [0.0, -0.08, 0.38], teho: 75, keila: 22, blend: 0.45 },   // reuna-o oikealta takaa
+      { paikka: [0.0, 0.35, 0.95], kohde: [0.0, -0.05, 0.5], teho: 60, keila: 15, blend: 0.45 },    // reuna-y päälaelle
     ],
   },
   // INTRO (v7): leikkaukset Zarathustran iskuihin (CONSTANT) ja aurinko kiertää takaa kohti Rembrandtia.
@@ -125,7 +127,7 @@ export const SOKRATES = Object.freeze({
       [60, [-0.8, 0.1, 0.48], [0, -0.05, 0.38], 35],
       [61, [-0.72, -0.08, 0.35], [0, -0.08, 0.34], 45],
       [118, [0.22, -0.55, 0.445], [0.03, -0.12, 0.412], 50],   // silmä (rakovalo)
-      [136, [-0.36, -0.1, 0.245], [0, -0.1, 0.245], 50],       // parta sivulta
+      [136, [-0.5, -0.06, 0.26], [0, -0.06, 0.26], 50],        // parta sivulta (78b883452)
       [154, [-0.42, -0.52, 0.82], [0, -0.07, 0.4], 35],
     ],
     // Auringon suunta (paikka − aurinko_kohde) v14-avaimista.

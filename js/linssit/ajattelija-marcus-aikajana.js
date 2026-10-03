@@ -4,7 +4,7 @@
  */
 export const MARCUS_AIKAJANA = Object.freeze({
  "versio": "v13",
- "lahde": "linnanrakentaja-sokrates-bysti 6c506d581 docs/raportit/ajattelijat-v11/marcus-luvut-v14.json",
+ "lahde": "linnanrakentaja-sokrates-bysti 78b883452 docs/raportit/ajattelijat-v11/marcus-luvut-v14.json",
  "loppu": 3089,
  "kertoja": {
   "alku": 9.5,

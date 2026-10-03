@@ -1,10 +1,10 @@
 /*
- * GENEROITU — älä muokkaa käsin: node tools/ajattelija-aikajana.mjs <sokrates-luvut-v13.json> js/linssit/ajattelija-sokrates-aikajana.js
- * Sokrateen v13-aikajana Linnanrakentajan Blender-luvuista (js/linssit/ajattelija.js aikajana-tila).
+ * GENEROITU — älä muokkaa käsin: node tools/ajattelija-aikajana.mjs <luvut-v13.json> js/linssit/ajattelija-sokrates-aikajana.js
+ * v13-aikajana Linnanrakentajan Blender-luvuista (js/linssit/ajattelija.js aikajana-tila).
  */
 export const SOKRATES_AIKAJANA = Object.freeze({
  "versio": "v13",
- "lahde": "linnanrakentaja-sokrates-bysti 6c506d581 docs/raportit/ajattelijat-v11/sokrates-luvut-v14.json",
+ "lahde": "linnanrakentaja-sokrates-bysti 78b883452 docs/raportit/ajattelijat-v11/sokrates-luvut-v14.json",
  "loppu": 2938,
  "kertoja": {
   "alku": 9.5,
@@ -38,8 +38,8 @@ export const SOKRATES_AIKAJANA = Object.freeze({
    [0.03, -0.12, 0.412], 50,
    "CONSTANT"],
   [136,
-   [-0.36, -0.1, 0.245],
-   [0, -0.1, 0.245], 50,
+   [-0.5, -0.06, 0.26],
+   [0, -0.06, 0.26], 50,
    "CONSTANT"],
   [154,
    [-0.42, -0.52, 0.82],
@@ -536,16 +536,16 @@ export const SOKRATES_AIKAJANA = Object.freeze({
     [-0.4561, 0.8615, -0.223], 0.004,
     [0.34, 0.02], 2.2],
    [136,
-    [-0.6092, 0.2427, 0.2881],
-    [0.8703, -0.4895, -0.0544], 0,
+    [-0.2417, 0.556, 0.2845],
+    [0.3453, -0.9372, -0.0493], 0.03,
     [0.12, 0.12], 12],
    [153,
-    [-0.6092, 0.2427, 0.2881],
-    [0.8703, -0.4895, -0.0544], 0,
+    [-0.2417, 0.556, 0.2845],
+    [0.3453, -0.9372, -0.0493], 0.03,
     [0.12, 0.12], 12],
    [154,
-    [-0.6092, 0.2427, 0.2881],
-    [0.8703, -0.4895, -0.0544], 0,
+    [-0.2417, 0.556, 0.2845],
+    [0.3453, -0.9372, -0.0493], 0,
     [0.25, 0.25], 30]],
   "vari": [1, 0.97, 0.92]
  },

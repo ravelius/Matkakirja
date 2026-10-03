@@ -49,7 +49,7 @@ test('projektori on valoa pinnalla: lisäys diffuusiin valoon, ei emissioon', ()
 test('vaihe 3: prologi, intron leikkaukset, nimi ja kysymys, kaiku ja ääniraita kellona (Blender v7–v10)', () => {
   const pr = SOKRATES.prologi;
   assert.deepEqual([pr.kytkin, pr.taysi, pr.loppu], [30, 58, 75]);   // v14: 2,5 s
-  assert.equal(pr.valot.length, 2);   // v9-palaute: vain reunavalot
+  assert.equal(pr.valot.length, 3);   // v9-palaute: vain reunavalot (v14: kolmas päälaelle)
   // Ruudut ja leikkaukset: v12 (tests/ajattelija-kierrokset.test.mjs); Marcus pitää v7–v11:n ajat.
   assert.ok(SOKRATES.intro.otokset.length >= 2);
   assert.ok(SOKRATES.ajat.nimi[0] < SOKRATES.ajat.kysymys[0] && SOKRATES.ajat.kysymys[0] < SOKRATES.ajat.lahesty[0]);
