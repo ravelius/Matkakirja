@@ -293,7 +293,7 @@ export const MARCUS_AIKAJANA = Object.freeze({
    "leveys": 0.10522
   }],
  "kaiut": [{
-   "kuva": "ajattelijat/marcus/v3/kaiut-v13/kaiku-sade.png",
+   "kuva": "ajattelijat/marcus/v4/kaiut-paikka/kaiku-sade.png",
    "paikka": [0.2337, -0.5948, 0.6703],
    "suunta": [-0.3978, 0.8154, -0.4205],
    "ala": 0.1,
@@ -308,7 +308,7 @@ export const MARCUS_AIKAJANA = Object.freeze({
     [1489, 0]]
   },
   {
-   "kuva": "ajattelijat/marcus/v3/kaiut-v13/kaiku-uhri.png",
+   "kuva": "ajattelijat/marcus/v4/kaiut-paikka/kaiku-uhri.png",
    "paikka": [0.4666, -0.5098, 0.3181],
    "suunta": [-0.7109, 0.6971, 0.0931],
    "ala": 0.08,
@@ -323,7 +323,7 @@ export const MARCUS_AIKAJANA = Object.freeze({
     [2015, 0]]
   },
   {
-   "kuva": "ajattelijat/marcus/v3/kaiut-v13/kaiku-kuolinvuode.png",
+   "kuva": "ajattelijat/marcus/v4/kaiut-paikka/kaiku-kuolinvuode.png",
    "paikka": [0.3159, -0.5961, 0.5355],
    "suunta": [-0.4341, 0.8602, -0.2675],
    "ala": 0.11,
