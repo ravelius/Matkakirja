@@ -3,6 +3,17 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 3.10. KLO 22.2x (AURINGON KIILTO CUPOLAN KULMISSA — KESKEN, juna 134)
+- Päätoimittajan erä 21.2x: sunglint Cupolan vedon kulmissa iso tasainen kermaläiskä → aidon ISS-kiillon kaltainen. Proto-haara
+  linssiseppa/glint (LS2:n linssiseppa2/cupola-veto 4aa02624:n päällä), kärki c2d70795 (TARKISTAMATTA SIMULLA, yötauko).
+  Yokuori.shader: aallokon normaalin värähtely arvokohinalla (koordinaatit lon/lat km — EI p·paikallinen tangentti, joka on ≈ 0 ja teki
+  pikselirakeet), karheuslaikut 25 km, hopeanvalkoinen läpäisy (ilmamassat − 2), logaritminen sävykäyrä 0…3 (ei bloom-usvaa);
+  Yokuori.cs KiiltoVanha + LinssiOhjain `astro kyyti kiiltovanha 1` (A/B samalla hetkellä). _VesiTerava taas vain kuvaputkessa.
+  Ajot: tyokalut/linssiseppa-ajot/ajo-kiilto-cupola.sh (S, APP, OUT; portti $S/sim-nyt-ki), kuvat lokit/linssiseppa-kiilto-cupola-{,b..e}-20261003.
+  Tila e (3559411b): juovat liian voimakkaat (siveltimenvedot, ei ydintä) → c2d70795 pienensi värähtelyä. SEURAAVAKSI: simu aamulla,
+  tarkista pysty-45-90 suurennos (ydin yhtenäinen + juovat reunoilla), oletus ennallaan → kuvapari Päätoimittajalle → merge-pyyntö.
+- Marcus v14 2848bfe2 ja linssihampurilainen/natrium: junissa 133 (hyväksytty). BUILD 133 natrium tarkistettu silmin (ok).
+
 ## TILA 3.10. KLO 19.3x (MARCUS v14 NATIIVI — MERGE-PYYNNÖSSÄ)
 - linssiseppa/marcus-v14 2848bfe2 (LOPULLINEN 20.3x; proto, LS2:n linssiseppa2/sokrates-v14 649651b2:n päällä, käännös 9bb5418d, kuvat lokit/linssiseppa-marcus-v14-d-20261003; vain data: tyokalut/ajattelijat-natiiviin.mjs,
   web 088b64d0c, luvut 78b883452). Päätoimittaja hyväksyi; merge-pyyntö Natiivisepälle junaan 133 Sokrateen kanssa (muuten 134).
