@@ -10339,3 +10339,7 @@ Omistaja 3.10.2026 klo 15.4x sanatarkasti: "Eli sen selkeän Rembrandt-valon jä
 ## TARKENNUS: TAUSTAVIRRAN RIVIT VIELÄ PEHMEÄMMIKSI (omistaja) (3.10.2026 klo 16.04)
 
 Omistaja 3.10.2026 klo 16.0x sanatarkasti: "Lisätekstit näyttävät myös vielä liian teräviltä, ainakin tässä puhelimessa, kun katsoin, että pitäisivätkö ne olla vielä pehmeämpiä." Päätoimittaja: kyllä. Tavoite puhelimen ruudulla: taustarivien kirjaimia ei voi lukea (sumennus noin kirjaimen korkeuden verran, kauempana olevat rivit pehmeämpiä), vain tekstirivin muoto erottuu syvyytenä; ainoa terävä teksti on päälainaus. Sama Marcukselle. Pelikoodari webissä; tarkistus iPhonen ruutukoossa 1:1.
+
+## TARKENNUS: TAUSTARIVIT TUNNISTETTAVINA TEKSTINÄ MUTTA LUKEMATTOMINA (3.10.2026 klo 17.33)
+
+Omistaja 3.10.2026 klo 17.4x sanatarkasti: "Tunnistaako pehmennettyä tekstiä enää tekstiksi?" Päätoimittajan arvio v14c-tallenteesta: ei tunnista (sumennus noin kirjaimen korkeuden verran → pehmeitä katkoviivoja ja valoraitoja). Linja: taustarivien sumennus noin 0,3 × kirjaimen korkeus, jolloin kirjaimet näkyvät möykkyinä ja sanojen rytmi erottuu ja rivin tunnistaa heti tekstiksi, mutta yhtäkään sanaa ei voi lukea (kuin tarkentamaton teksti valokuvassa); kirkkaus noin 50 % päälainauksesta; lähemmät rivit hieman tarkempia, kauemmat pehmeämpiä. Sama Marcukselle.
