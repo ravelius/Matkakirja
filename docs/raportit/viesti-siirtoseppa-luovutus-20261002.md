@@ -38,6 +38,8 @@ JONO (Päätoimittaja 3.10.): 2) myllyn laudat natiiviin (ASTC 6×6), kun Linnan
 mergetty (Pelikoodari vie junaan v14:n jälkeen). Allymes vasta näiden jälkeen ja omistajan päätöksellä.
 TEHTY 19.39: myllyn äänet v2 = proto siirtoseppa/mylly-aanet-v2 b8002db5 (worktree wt/proto-siirtoseppa-mylly), todennettu e6729076 (lokit/siirtoseppa-mylly-v2).
 AVOIN: merge-pyyntö Natiivisepälle vasta kun #3815 on mergetty. Laudat: odottaa Linnanrakentajan PR:ää.
+TEHTY 19.53: myllyn laudat v2 = proto siirtoseppa/mylly-laudat-v2 989f121a (worktree wt/proto-siirtoseppa-laudat), tarkistettu iPhone+iPad
+(87c04b2f, lokit/siirtoseppa-laudat-v2). AVOIN: merge-pyyntö Natiivisepälle kun #3906 on mainissa. Säännöt 3.10.: ei poistoja checkoutin/worktreen ulkopuolelta.
 
 1. **Linnan hahmojen jalkavarjo (omistaja 20.2x: "kävelijä tarvitsee vielä varjon jalkojensa alle") — EI VIELÄ NÄY.**
    Haara `siirtoseppa/linna-skin`, kärki **39a396e3** (KÄÄNNETTY 8219c063, app lokit/siirtoseppa-skin16-app).
