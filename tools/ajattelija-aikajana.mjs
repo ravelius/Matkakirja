@@ -91,6 +91,14 @@ const savu = c.savu && SAVU ? {
   ydin: YDIN, vahvuus: 0.95,
 } : null;
 
+// v14: rakovalo (Blender AREA, suorakaide koko × koko_y, spread ~1°): kapea kaista (silmät); koko Blender-koodin arvoista,
+// jos luvuissa ei ole niitä (sokrates_bysti.py rako_avain).
+const rk = d.valot.rako;
+const rako = rk && rk.energia_avaimet.some(([, e]) => e > 0) ? {
+  paikka: pv(rk.sijainti), suunta: pv(rk.suunta), energia: energia(rk), koko: rk.koko ?? [0.34, 0.014],
+  ...(rk.vari ? { vari: pv(rk.vari) } : {}),
+} : null;
+
 // v13b: tekstiprojektorien (tykki-*, virta-*) väri, jos viety (värittömässä tilassa 1/1/1); kaikilla sama.
 const tykkiVari = d.valot[v.lainaukset[0]?.nimi]?.vari;
 
@@ -103,6 +111,7 @@ const aikajana = {
   ...(vaisto.length ? { vaisto } : {}),
   ...(savu ? { savu } : {}),
   ...(tykkiVari ? { tykkiVari: pv(tykkiVari) } : {}),
+  ...(rako ? { rako } : {}),
   efektit: v.efektit.map((e) => [e.efekti, e.s]),
 };
 

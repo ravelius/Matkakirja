@@ -60,7 +60,7 @@ export const MARCUS = Object.freeze({
       korkeus: 0.022,
     },
   },
-  // v13 (Linnanrakentaja marcus-luvut-v13.json 6c2fb3c51, v13b): intro ja leikkaukset samat kuin Sokrateen v12:ssa (+442).
+  // v13 (Linnanrakentaja marcus-luvut-v13.json 6c2fb3c51, v13b): intro ja leikkaukset samat kuin Sokrateen (v14: tiivis alku, prologi 75).
   ajat: SOKRATES.ajat,
   prologi: SOKRATES.prologi,
   intro: SOKRATES.intro,
@@ -115,7 +115,7 @@ export const MARCUS = Object.freeze({
    *   kierros 2: 4.49 nauhana poskella → uhrireliefi silmämunassa ainoana valona (d-luenta: rutto ja Lucius Verus)
    *   kierros 3: 2.11 nauhana kasvojen sivulla → Delacroix'n "Marcus Aureliuksen viimeiset sanat" (f-luenta)
    * Ääni: Eroica jatkuu yhtenäisenä 111 s (tools/ajattelija-aaniraita.mjs --ajattelija marcus --kierrokset).
-   * v13: ruudut +442 kuten Sokrateella (intro v12); aikajana-tilassa kierrokset jää käyttämättä.
+   * v14: ruudut kuten Sokrateella (v12 +442, v14 −540); aikajana-tilassa kierrokset jää käyttämättä.
    */
   /*
    * AIKAJANA (v13, Päätoimittaja 3.10.2026 klo 14.4x: Sokrateen v13c-mallin mukaan; Linnanrakentaja marcus-luvut-v13.json
@@ -129,45 +129,50 @@ export const MARCUS = Object.freeze({
    */
   aikajana: {
     ...MARCUS_AIKAJANA,
-    aani: { puhe: 'ajattelijat/marcus/v3/v13-puhe.mp3', musiikki: 'ajattelijat/marcus/v3/v13-musiikki.mp3' },
-    syke: 'ajattelijat/marcus/v3/syke-v13.json',
+    // v14 (omistaja 3.10.2026 klo 15.4x): sama tekstilinja kuin Sokrateella (kortti, epäterävät porrastetut rivit).
+    lauseKortti: SOKRATES.aikajana.lauseKortti,
+    virtaPorrastus: SOKRATES.aikajana.virtaPorrastus,
+    virtaVoima: SOKRATES.aikajana.virtaVoima,
+    // v14: kertoja 9,5 s:sta, Linssisepän v14-sävellys; ÄMPÄRIIN vasta omistajan hyväksynnän jälkeen (ajattelijat/marcus/v4/).
+    aani: { puhe: 'ajattelijat/marcus/v4/v14-puhe.mp3', musiikki: 'ajattelijat/marcus/v4/v14-musiikki.mp3' },
+    syke: 'ajattelijat/marcus/v4/syke-v14.json',
   },
   kierrokset: {
     aani: { puhe: 'ajattelijat/marcus/v1/kierrokset-puhe.mp3', musiikki: 'ajattelijat/marcus/v1/kierrokset-musiikki.mp3' },
     syke: 'ajattelijat/marcus/v1/syke-kierrokset.json',
-    loppu: 3772,
+    loppu: 3232,
     lista: [
       {
-        paalause: 'itselleen-4-49', vieritys: [1922, 2197], lahde: [2204, 2252], virta: [1892, 1942, 2202, 2252], siemen: 21,
+        paalause: 'itselleen-4-49', vieritys: [1382, 1657], lahde: [1664, 1712], virta: [1352, 1402, 1662, 1712], siemen: 21,
         kaiku: {
           kuva: 'ajattelijat/marcus/v1/kaiku-uhri.png',   // Marcuksen uhrireliefi, Musei Capitolini (kuva D. Angeli 1908, PD)
           kohde: { sade: [0.040, 0.374] },
-          ruudut: [2312, 2742], vino: [-0.15, 0.0, 0.10], etaisyys: 0.5, lev: 0.03, voima: 15, liuku: 0.08,
+          ruudut: [1772, 2202], vino: [-0.15, 0.0, 0.10], etaisyys: 0.5, lev: 0.03, voima: 15, liuku: 0.08,
           tayte: { suunta: [-0.55, -0.55, 0.6] },
         },
       },
       {
-        paalause: 'itselleen-2-11', vieritys: [2772, 3037], lahde: [3044, 3092], virta: [2742, 2792, 3042, 3092], siemen: 49,
+        paalause: 'itselleen-2-11', vieritys: [2232, 2497], lahde: [2504, 2552], virta: [2202, 2252, 2502, 2552], siemen: 49,
         kaiku: {
           kuva: 'ajattelijat/marcus/v1/kaiku-kuolema.png',   // Delacroix 1844, Musée des Beaux-Arts de Lyon (PD)
           kohde: { sivulta: [-0.08, 0.375] },
-          ruudut: [3097, 3692], vino: [0.0, -0.10, 0.05], etaisyys: 0.6, lev: 0.07, voima: 30, liuku: 0.05,
+          ruudut: [2557, 3152], vino: [0.0, -0.10, 0.05], etaisyys: 0.6, lev: 0.07, voima: 30, liuku: 0.05,
           tayte: { suunta: [0.45, 0.75, 0.55] },
         },
       },
     ],
     kamera: [   // [ruutu, kameran paikka, katsepiste, mm]; loppu takaisin otokset.rembrandt
-      [1892, [0.0011, -0.245, 0.4355], [-0.002, -0.1058, 0.418], 35],
-      [1952, [-0.0866, -0.1345, 0.2729], [-0.0376, -0.0873, 0.36], 18],
-      [2252, [-0.0441, -0.1571, 0.2729], [-0.0324, -0.0901, 0.36], 18],
-      [2312, [0.0682, -0.1507, 0.3375], [0.04, -0.0915, 0.374], 50],
-      [2742, [0.0699, -0.1509, 0.3392], [0.04, -0.0915, 0.374], 50],
-      [2802, [0.0875, -0.1567, 0.301], [0.0531, -0.082, 0.375], 18],
-      [3092, [0.1272, -0.1219, 0.301], [0.0577, -0.078, 0.375], 18],
-      [3142, [0.1578, -0.2157, 0.3756], [0.0554, -0.08, 0.375], 35],
-      [3692, [0.1578, -0.2024, 0.3755], [0.0584, -0.0774, 0.375], 35],
-      [3752, [-0.36, -1.24, 0.24], [-0.075, -0.06, 0.39], 35],
-      [3772, [-0.36, -1.24, 0.24], [-0.075, -0.06, 0.39], 35],
+      [1352, [0.0011, -0.245, 0.4355], [-0.002, -0.1058, 0.418], 35],
+      [1412, [-0.0866, -0.1345, 0.2729], [-0.0376, -0.0873, 0.36], 18],
+      [1712, [-0.0441, -0.1571, 0.2729], [-0.0324, -0.0901, 0.36], 18],
+      [1772, [0.0682, -0.1507, 0.3375], [0.04, -0.0915, 0.374], 50],
+      [2202, [0.0699, -0.1509, 0.3392], [0.04, -0.0915, 0.374], 50],
+      [2262, [0.0875, -0.1567, 0.301], [0.0531, -0.082, 0.375], 18],
+      [2552, [0.1272, -0.1219, 0.301], [0.0577, -0.078, 0.375], 18],
+      [2602, [0.1578, -0.2157, 0.3756], [0.0554, -0.08, 0.375], 35],
+      [3152, [0.1578, -0.2024, 0.3755], [0.0584, -0.0774, 0.375], 35],
+      [3212, [-0.36, -1.24, 0.24], [-0.075, -0.06, 0.39], 35],
+      [3232, [-0.36, -1.24, 0.24], [-0.075, -0.06, 0.39], 35],
     ],
   },
   // Kierroksen lopussa "Marcus Aureliuksen elämä" -lappu (Sisältökirjuri 2.10.2026, sisaltokirjuri-marcus-aurelius-20261002.md
