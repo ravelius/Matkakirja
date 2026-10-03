@@ -130,7 +130,8 @@ export const MARCUS = Object.freeze({
   aikajana: {
     ...MARCUS_AIKAJANA,
     // v14 (omistaja 3.10.2026 klo 15.4x): sama tekstilinja kuin Sokrateella (kortti, epäterävät porrastetut rivit).
-    lauseKortti: SOKRATES.aikajana.lauseKortti,
+    // Kortti 2 cm alemmas: ylin rivi pois hiusrajan kiharoilta (tallenteen tarkistus 3.10.2026, 4.49 ja 2.11).
+    lauseKortti: { ...SOKRATES.aikajana.lauseKortti, siirto: -0.02 },
     virtaPorrastus: SOKRATES.aikajana.virtaPorrastus,
     virtaVoima: SOKRATES.aikajana.virtaVoima,
     // v14: kertoja 9,5 s:sta, Linssisepän v14-sävellys; ÄMPÄRIIN vasta omistajan hyväksynnän jälkeen (ajattelijat/marcus/v4/).
