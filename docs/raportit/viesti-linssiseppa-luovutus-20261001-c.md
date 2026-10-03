@@ -3,13 +3,12 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
-## TILA 3.10. (SOKRATES, OMA MUSIIKKI — WILLIAM, LEVOSSA)
-- Raita proto-3d/_lahteet/sokrates/musiikki-oma/sokrates-oma-koko-vsco.mp3 (126,7 s) kertojalle Iv4 William (valimerkit-otto),
-  ajat ja kohdistus kansiosta musiikki-oma/kertoja-iv4/ (linkit). Omistajan palaute 06.2x korjattu: nuottien loput hiipuvat
-  (naytteet.VAPAUTUS), kaiku Liverpool Philharmonic Hall IR (Freesound 423866, CC0). Ilmoitettu Pelikoodarille (−8 dB vaimennus).
-- AUKI: omistaja vertaa Williamin vakaata ja oletusottoa (Iv4-william-oletus.mp3). Jos oletus: vaihda kertoja-iv4/-linkit
-  (ajat.json, *valittu.mp3, otto1*) oletusottoon ja aja `naytteet.py koko` + kuuntelumiksaus (VAIMENNUS=8) → Päätoimittajalle
-  ja polku Pelikoodarille. Partituuri lahde/savellys.py, näytesoitin lahde/naytteet.py, Python proto-3d/_lahteet/venv-laser.
+## TILA 3.10. (SOKRATES, OMA MUSIIKKI — LOPULLINEN, WILLIAM OLETUS; LEVOSSA)
+- Raita proto-3d/_lahteet/sokrates/musiikki-oma/sokrates-oma-koko-vsco.mp3 (127,1 s) kertojalle Iv4 William, oletusvakauden otto
+  (omistajan valinta), ajat ja kohdistus kansiosta musiikki-oma/kertoja-iv4/ (linkit Iv4-william-oletus*). Nuottien loput
+  hiipuvat (naytteet.VAPAUTUS), kaiku Liverpool Philharmonic Hall IR (Freesound 423866, CC0). Ilmoitettu Pelikoodarille
+  (−8 dB vaimennus), kuunteluversio sokrates-oma-william-kuuntelu-8db.mp3 Päätoimittajalle. Kertojan vaihto: päivitä
+  kertoja-iv4/-linkit ja aja `naytteet.py koko` + kuuntelumiksaus (VAIMENNUS=8). Python proto-3d/_lahteet/venv-laser.
 - Omistajan luvat tässä sessiossa 3.10.: VSCO 2 CE (proto-3d/_lahteet/vsco2-ce), brew cmake/libsndfile/pkg-config,
   sfizz 1.2.3 → proto-3d/_tyokalut/sfizz/sfizz_render (käännetty, ei käytössä).
 
