@@ -17,7 +17,7 @@ Omistajalle vain suomeksi; kellonaika `date`:lla; omistajalle vain pelistä otet
 3. Seuraava ajattelija (Platon suositus) — omistaja katsoo ensin korjatun version. Arkki vs Allymes ja erikoismallit erä 7 jäivät kortissa 20.06 vastaamatta → kysy, kun ajattelijat ovat kunnossa.
 
 ## JUNAT
-- **TF 134 (VIE annettu 00.2x):** master 137108e2 = BUILD 133 + kerma-erä + minipallo-selain (pyöritettävä) + Natiivi-UI pyöreät napit neliöiksi + muunnin-vaihto. Julkaisija ilmoittaa → kerro omistajalle lyhyesti (hän odottaa minipalloa).
+- **TF 134 (VIE annettu 00.2x):** master 137108e2 = BUILD 133 + kerma-erä + minipallo-selain (pyöritettävä) + Natiivi-UI pyöreät napit neliöiksi + muunnin-vaihto. **Testaajilla 00.38** (lataus 37155166782, ulkoinen ajo 37155788902 success, 2/12); omistajalle kerrottu.
 - **Juna 135 (Natiiviseppä kokoaa):** Cupola-veto 4aa02624 (hyväksytty, siirretty 134:stä) + glint (Linssiseppä 1, linssiseppa/glint c2d70795, KESKEN: aaltojuovat liian vahvat; aamun simuvuoro; vaatimus: hopeanvalkoinen, rakeinen, venyvä, vain vedessä) + ajattelijakorjaukset (alla). TF 135 vasta kun kaikki tarkistettu.
 
 ## AJATTELIJAT: OMISTAJAN TF 133 -PALAUTE (loki 23.53) — KORJAUKSET
