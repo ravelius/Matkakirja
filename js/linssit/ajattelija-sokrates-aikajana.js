@@ -4,7 +4,7 @@
  */
 export const SOKRATES_AIKAJANA = Object.freeze({
  "versio": "v13",
- "lahde": "linnanrakentaja-sokrates-bysti 34b5f06a5 docs/raportit/ajattelijat-v11/sokrates-luvut-v13c.json",
+ "lahde": "linnanrakentaja-sokrates-bysti 09a06abfd docs/raportit/ajattelijat-v11/sokrates-luvut-v13c.json",
  "loppu": 3493,
  "kertoja": {
   "alku": 28,
@@ -430,6 +430,7 @@ export const SOKRATES_AIKAJANA = Object.freeze({
   "ydin": 0.286,
   "vahvuus": 0.95
  },
+ "tykkiVari": [1, 1, 1],
  "efektit": [["01-projektori-naksahdus", 42.68],
   ["01-projektori-naksahdus", 44.56],
   ["01-projektori-naksahdus", 54.3],

@@ -183,3 +183,8 @@ test('v13c: tekstivirran väistökehät kaikujen ympärillä ja savumaski lipull
   assert.match(pr, /if \(pSavuTila\.x > 0\.5\) t \*= pSavuNayte\(jx \* pA\[i\]\.x, jy \* pA\[i\]\.x\);/);
   assert.match(pr, /smoothstep\(0\.85 \* pVaisto\[j\]\.w, pVaisto\[j\]\.w,/);
 });
+
+test('väritön koskee kaikkia projektoreita (omistaja 3.10.2026): tekstien väri aikajanasta, seepiatilassa lämmin', () => {
+  assert.deepEqual(SOKRATES.aikajana.tykkiVari, [1, 1, 1]);
+  assert.match(MOOTTORI, /const AJV = a\.aikajana\?\.tykkiVari && haku\.get\('kaikuvari'\) !== 'seepia' \? a\.aikajana\.tykkiVari : null;\s*u\.pVari\.value\.setRGB\(\.\.\.\(AJV \?\? a\.tykki\.vari\)\);/);
+});

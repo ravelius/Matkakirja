@@ -400,7 +400,9 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   detalji.colorSpace = THREE.NoColorSpace;
   detalji.anisotropy = renderoija.capabilities.getMaxAnisotropy();
   lisaaKipsinPinta(THREE, mat, detalji);
-  u.pVari.value.setRGB(...a.tykki.vari);
+  // Tekstiprojektorien väri: aikajanan oma (v13b: väritön 1/1/1), seepiatilassa ajattelijan lämmin tykki.vari.
+  const AJV = a.aikajana?.tykkiVari && haku.get('kaikuvari') !== 'seepia' ? a.aikajana.tykkiVari : null;
+  u.pVari.value.setRGB(...(AJV ?? a.tykki.vari));
   const os = osuma(THREE, mesh, lause.sade);
   // Blender: tykin teho 220 W vs. auringon 95 W samalla säteilymallilla → sama suhde three.js:n voimiin.
   const TYKKI = AVAIN * 220 / 95 * (Number(haku.get('tykki')) || 1.6);
