@@ -14,9 +14,14 @@ namespace Matkakirja.Linssit.Testit
     {
         const string Kansio = "../Assets/Matkakirja/Linssit/Resources/Ajattelijat/";
 
+        // Kierrosmoottorin (v11) fixtuuri: Marcuksen v11-data säilytetään tässä, kun pelin marcus.json siirtyy v14:n aikajanaan
+        // (Linssiseppä 1:n Marcus v14, 3.10.2026). Lue("marcus-v11") lukee sen; muut tunnukset pelin Resources-kansiosta.
+        const string Fixtuurit = "kultaiset/ajattelijat/";
+
         static AjattelijaData Lue(string tunnus)
         {
-            var (d, virhe) = AjattelijaData.Jasenna(File.ReadAllText(Kansio + tunnus + ".json"));
+            string polku = File.Exists(Fixtuurit + tunnus + ".json") ? Fixtuurit + tunnus + ".json" : Kansio + tunnus + ".json";
+            var (d, virhe) = AjattelijaData.Jasenna(File.ReadAllText(polku));
             Oleta.Tosi(d != null, tunnus + ": " + virhe);
             return d;
         }
@@ -63,7 +68,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(5, a.PulunKysymykset.Count);
             Oleta.Tosi(a.Kaiku != null && a.Kaiku.KameraMatka[1] == 0.14, "kaiun kamera");
             Oleta.Sama("Sokrates", a.NimiRivit.Single());
-            Oleta.Sama(2, Lue("marcus").NimiRivit.Count);
+            Oleta.Sama(2, Lue("marcus-v11").NimiRivit.Count);
         }
 
         [Testi] static void SiemenlukuOnWebinMulberry32()
@@ -98,9 +103,9 @@ namespace Matkakirja.Linssit.Testit
             var a = Lue("sokrates");
             Oleta.Tosi(a.Taustavirta.Mms == 25 && a.Taustavirta.Vaihtelu == 0.15, "nopeus { mms: 25, vaihtelu: 0.15 }");
             // Kierroksen 3 siemen 49 ja Marcus (eri koot → eri uv-nopeus, sama mm/s).
-            var r49 = AjattelijaAikajana.Taustavirta(Lue("marcus"), 49)[4];
+            var r49 = AjattelijaAikajana.Taustavirta(Lue("marcus-v11"), 49)[4];
             Oleta.Tosi(Math.Abs(r49.Mms - 28.75) < 1e-9, "siemen 49: " + r49.Mms);
-            var m7 = AjattelijaAikajana.Taustavirta(Lue("marcus"))[7];
+            var m7 = AjattelijaAikajana.Taustavirta(Lue("marcus-v11"))[7];
             Oleta.Tosi(m7.Korkeus == 0.012 && Math.Abs(m7.Nopeus - 0.00322950932018) < 1e-13, "Marcus rivi 7: " + m7.Nopeus);
             // Projektorit 6 + 5 + 3 + 3 + 3 riviä.
             Oleta.Sama(6, v.Count(r => r.Projektori == 0));
@@ -109,7 +114,7 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void AikajanaVaiheet()
         {
-            var a = Lue("marcus");   // kierrosmoottori (v11-data; Sokrates on v14:stä lähtien aikajana-tilassa)
+            var a = Lue("marcus-v11");   // kierrosmoottori (v11-data; Sokrates on v14:stä lähtien aikajana-tilassa)
             Oleta.Sama(0.0, AjattelijaAikajana.Hehku(a.Prologi, 29));
             Oleta.Sama(1.0, AjattelijaAikajana.Hehku(a.Prologi, 60));
             Oleta.Tosi(AjattelijaAikajana.Hehku(a.Prologi, 44) is var h && h > 0.15 && h < 0.4, "hehkulanka");
@@ -195,7 +200,7 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void KierrosRuudulle()
         {
-            var a = Lue("marcus");   // kierrosmoottori (Marcuksen v11-kierrokset: samat ruudut kuin Sokrateen v11)
+            var a = Lue("marcus-v11");   // kierrosmoottori (Marcuksen v11-kierrokset: samat ruudut kuin Sokrateen v11)
             // Kierros vaihtuu kierroksen virran alussa (web kierrosRuudussa: r ≥ alku).
             Oleta.Sama(0, AjattelijaAikajana.KierrosRuudussa(a, 1449));
             Oleta.Sama(1, AjattelijaAikajana.KierrosRuudussa(a, 1450));
@@ -306,7 +311,7 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void MarcuksenKierrokset()
         {
-            var m = Lue("marcus");
+            var m = Lue("marcus-v11");
             var kr = m.Kierrokset;
             Oleta.Tosi(kr != null && kr.Loppu == 3330, "Marcuksen kierrokset");
             Oleta.Tosi(kr.Lista.Select(k => k.PaalauseAvain).SequenceEqual(new[] { "itselleen-4-49", "itselleen-2-11" }), "päälauseet");
