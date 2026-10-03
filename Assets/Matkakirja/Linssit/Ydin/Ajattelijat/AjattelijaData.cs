@@ -248,6 +248,8 @@ namespace Matkakirja.Linssit.Ajattelijat
     public sealed class AjattelijaKuvalahde
     {
         public string Kuva, Kohde, Teos, Tekija, Lisenssi, Lahde;
+        /// <summary>Lisenssin vaatima nimeämisrivi sellaisenaan (CC BY / BY-SA), muuten null.</summary>
+        public string Nimea;
     }
 
     public sealed class AjattelijaData
@@ -684,7 +686,7 @@ namespace Matkakirja.Linssit.Ajattelijat
         /// <summary>
         /// KUVALÄHTEET (Päätoimittaja 4.10.2026: Tekijätiedot ja lähteet -sivulle oma Ajattelijat-osio, kaikki kaikukuvat: kohde, teos,
         /// tekijä, lisenssi ja lähde; jakoehtoinen lisenssi lähteeseen ja attribuutioon). Datan "kuvalahteet": [{ kuva, kohde, teos,
-        /// tekija, lisenssi, lahde }] (käsin kirjoitettu sisältö, muunnin kopioi sellaisenaan); vanha kaiku.nimeaminen (Marcus v11)
+        /// tekija, lisenssi, lahde, nimea? }] (muunnin luvuista: v13.kaiut[].lahde + kuva); vanha kaiku.nimeaminen (Marcus v11)
         /// tulee tekijäksi, ellei samaa kuvaa ole kuvalähteissä. Palauttaa ajattelijan nimen ja rivit; virheellinen data = tyhjä.
         /// </summary>
         public static (string nimi, List<AjattelijaKuvalahde> rivit) Kuvalahteet(string json)
@@ -697,7 +699,7 @@ namespace Matkakirja.Linssit.Ajattelijat
                 foreach (var x in l)
                     if (x is Dictionary<string, object> r && T(r, "kuva") is string kuva)
                         rivit.Add(new AjattelijaKuvalahde { Kuva = kuva, Kohde = T(r, "kohde"), Teos = T(r, "teos"), Tekija = T(r, "tekija"),
-                            Lisenssi = T(r, "lisenssi"), Lahde = T(r, "lahde") });
+                            Lisenssi = T(r, "lisenssi"), Lahde = T(r, "lahde"), Nimea = T(r, "nimea") });
             if (O(o, "kaiku") is Dictionary<string, object> kk && T(kk, "nimeaminen") is string n && n.Length > 0)
             {
                 string kuva = System.IO.Path.GetFileName(T(kk, "kuva") ?? "");

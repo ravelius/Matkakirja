@@ -640,7 +640,7 @@ namespace Matkakirja.Linssit.Testit
             var (_, r) = AjattelijaData.Kuvalahteet(File.ReadAllText(Fixtuurit + "kuvalahteet-esimerkki.json"));
             Oleta.Sama(4, r.Count);
             var o = r.First(x => x.Kuva == "kaiku-oraakkeli.png");
-            Oleta.Tosi(o.Tekija == "Davide Mauro" && o.Lisenssi.StartsWith("CC BY-SA 4.0") && o.Kohde == "Delfoin oraakkeli", "oraakkeli");
+            Oleta.Tosi(o.Tekija == "Davide Mauro" && o.Lisenssi.StartsWith("CC BY-SA 4.0") && o.Nimea == "Davide Mauro, CC BY-SA 4.0, Wikimedia Commons", "oraakkeli");
             // Vanha kaiku.nimeaminen (Marcus v11) tekijäksi, kun kuvalähdettä ei ole.
             var (nimi, m) = AjattelijaData.Kuvalahteet(File.ReadAllText(Fixtuurit + "marcus-v11.json"));
             Oleta.Tosi(nimi == "Marcus Aurelius" && m.Count == 1 && m[0].Tekija.StartsWith("Nico Kokkonen, CC BY 3.0"), "Marcus nimeaminen");
