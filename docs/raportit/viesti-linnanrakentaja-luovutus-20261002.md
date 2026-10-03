@@ -3,6 +3,10 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
+## 3.10. 17.x: aadd632ff luvut Pelikoodarilla: lainaukset pysyvät ruudussa (--kehys tarkistaa, 9/9 OK; Marcus 4.49/2.11 kamerapito);
+## tumma katto vain tekstin aikana (v14_aurinko_katto, tekstivälit = lainaukset + kysymys + virta), tekstittömät 08/03 kova valo ~40–55/255;
+## pyyhkäisy ≤ 12 (V14_PYYHKAISY). Mittaus: kasvoalueen mediaani (rajaus 30–75 % × 35–75 %).
+
 ## 3.10. 16.39: v14c (361cb8091) Päätoimittajalla, luvut Pelikoodarilla: Sokrateen parta sivulta 90° takavalolla (kamera (-0.36,-0.10,0.245),
 ## 'suu' (0.62,-0.78,0.08), varjolevy 3×3 m z 0,197); tekstivaiheen kasvovalon katto V14_KATTO 0,9 / max(0,068, osuma otsaan) → mediaani 11–24/255.
 ## Stillit v14c-parta-ja-tumma-tekstivaihe.jpg. HYVÄKSYTTY (Päätoimittaja 3.10.); Pelikoodari tekee tallenteen.
