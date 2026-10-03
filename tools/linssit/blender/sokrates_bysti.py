@@ -954,6 +954,34 @@ if V12:
     V9 = {k: (a + S_, b + S_) for k, (a, b) in V9.items()}
     V9_RENDER = list(range(V7_KAARI_LOPPU + 1, V9['loppu'][1] + 1))
     V7_RENDER = list(range(1, V12_REM + 1)) + list(range(V7_LAHESTY[0], V7_KAARI_LOPPU + 1)) + [V7_PITO]
+V14 = '--v14' in A   # Sokrates/Marcus v14 (omistaja 3.10. 14.5x: "alku liian hidas") — käytetään yhdessä --v13:n kanssa
+V14_INTRO = dict(prologi=2.5, c1=4.5, c2=6.4, c3=7.0, c4=7.6, rem=8.6, kys=10.8, kertoja=12.0)   # LINSSIN aika (s), prologi mukana
+if V14:
+    if '--intro' in A:   # Linssisepän tarkat iskut: --intro c1=4.52,c2=6.38,...
+        for kv_ in A[A.index('--intro') + 1].split(','):
+            k__, v__ = kv_.split('='); V14_INTRO[k__] = float(v__)
+    _L = lambda t: round((t - V14_INTRO['prologi']) * 30) + 1   # linssin aika → kohtauksen ruutu (ruutu 1 = prologin jälkeen)
+    V12_REM = _L(V14_INTRO['rem'])
+    # Neljä ERI kasvojen osaa, tunnistettavissa alle sekunnissa (Päätoimittaja 3.10.); varjopuoli ja ääriviivavalo (v11),
+    # leikkaukset vain kuuluviin iskuihin (v12). Kullakin kuvalla oma valon suunta (vaihtuu leikkauksessa).
+    V7_OTOKSET = (
+        (1, (-0.85, 0.30, 0.52), (0.0, -0.04, 0.38), 35),             # alkuajo ~2 s: pään siluetti takaviistosta, pimeä
+        (_L(V14_INTRO['c1']) - 1, (-0.80, 0.10, 0.48), (0.0, -0.05, 0.38), 35),
+        (_L(V14_INTRO['c1']), (-0.72, -0.08, 0.35), (0.0, -0.08, 0.34), 45),   # 1) profiilin ääriviiva otsasta partaan
+        (_L(V14_INTRO['c2']), (0.16, -0.43, 0.395), (0.040, -0.125, 0.378), 50), # 2) silmä ja kulmakaari silmän korkeudelta, silmä saa valoa
+        (_L(V14_INTRO['c3']), (-0.16, -0.58, 0.29), (0.0, -0.12, 0.27), 50),    # 3) suu ja parta kokonaan kuvassa, edestä
+        (_L(V14_INTRO['c4']), (-0.42, -0.52, 0.82), (0.0, -0.07, 0.40), 35),    # 4) ¾-kuva ylhäältä
+        (V12_REM, (-0.36, -1.24, 0.24), (-0.075, -0.06, 0.39), 35),             # Rembrandt + nimi (toimii, pidetään)
+    )
+    V7_PEHMEAT = {1}
+    _S = {'alku': (1.0, 0.55, 0.40), 'profiili': (1.0, -0.20, 0.35), 'silma': (1.0, -0.20, 0.75), 'suu': (1.0, -0.30, 0.55),
+          'yla': (0.9, -0.45, 0.65)}   # sivuvalo muotoilee; silmä saa valoa, ei litteä
+    V7_VALO = ((1, _S['alku']), (_L(V14_INTRO['c1']) - 1, _S['alku']), (_L(V14_INTRO['c1']), _S['profiili']),
+               (_L(V14_INTRO['c2']) - 1, _S['profiili']), (_L(V14_INTRO['c2']), _S['silma']),
+               (_L(V14_INTRO['c3']) - 1, _S['silma']), (_L(V14_INTRO['c3']), _S['suu']),
+               (_L(V14_INTRO['c4']) - 1, _S['suu']), (_L(V14_INTRO['c4']), _S['yla']),
+               (V12_REM - 1, _S['yla']), (V12_REM, V12_REM_AURINKO))
+    V7_RENDER = list(range(1, V12_REM + 1))
 
 
 def _kipsin_pinta(o):
@@ -1185,7 +1213,7 @@ def syke_kaikuun(valo, ikkuna, voima, syke, askel=2):
 # (04, 08, 10); muuten kamera liikkuu yhtenä hitaana ajona. Kaiut keskisävyisinä viistosta (kipsi varjostaa kuvaa),
 # kamera niin kaukana, että kasvojen ääriviiva kehystää kaiun.
 KERTOJA_OLETUS = '/Users/Shared/Claude/proto-3d/_lahteet/sokrates/kertoja-aanikoe-v4/Iv4-william-oletus-ajat.json'
-V13_KERTOJA_ALKAA = 28.0
+V13_KERTOJA_ALKAA = (V14_INTRO['kertoja'] - V14_INTRO['prologi']) if V14 else 28.0   # kohtauksen aika (prologin jälkeen)
 V13_NAUHA_MS = 0.055   # lainausnauhojen nopeus pinnalla (m/s); nauha näkyy lainauksen ajan ±0,6 s
 V13C = '--v13c' in A   # v13c (omistaja 3.10. 08.0x): rajatut kaikuhahmot viistosti, ei reunahehkua, virta väistää kaiun
 
@@ -1648,13 +1676,16 @@ if '--v7' in A:
         for r in sorted(set(kayrien_ruudut(ao)) | set(kayrien_ruudut(aur))): sc.frame_set(r); aurinko.append({'ruutu': r, 'sijainti': pyor(ao.matrix_world.translation), 'energia': round(aur.energy, 2), 'vari': pyor(aur.color)})
         json.dump({'kohde': KOHDE, 'versio': 'v12' if V12 else 'v11' if V11 else 'v10',
                    'v13': V13_AIKA if V13 else None,
+                   'v14': {'intro_linssin_aika_s': V14_INTRO, 'prologi_ruutua': 75, 'kytkin_ruutu': 30, 'valo_taysi_ruutu': 58,
+                           'leikkaukset_kohtauksen_ruutu': [r_ for r_, *_ in V7_OTOKSET[2:]], 'kertoja_kohtauksen_s': V13_KERTOJA_ALKAA,
+                           'huom': 'kohtauksen ruutu 1 = prologin jälkeen; linssin aika = kohtauksen aika + prologi'} if V14 else None,
                    'v13c': {'kaikuvari': KAIKUVARI, 'virta_vaisto': [{'kohde': pyor(q_), 'sade_m': round(r_, 4), 'ruudut': [a_, l_]}
                                                                   for q_, r_, a_, l_ in VIRTA_VAISTO],
                             'savu': {'ala_m': SAVU_ALA, 'kesto_s': 8.0, 'fps': 30, 'maski': 'savu-0001…0240.png (1 = täysi valo)',
                                      'koskee': 'kaiku-*, tykki-*, virta-* (kuva-ala: projektorin suunta X/Z · etäisyys / ala_m + 0,5)'}}
                            if V13C else None,
                    'v12': {'musiikki_alkaa_ruutu': 1, 'siirto_ruutua': V12_SIIRTO, 'rembrandt': V12_REM, 'kysymys': V7_LAHESTY[0] - 89,
-                           'lahesty': V7_LAHESTY, 'teksti_38a': V7_PROJ, 'kaiku1': V7_KAIKU} if V12 else None, 'ruudut_30fps': V9 if '--v9' in A else None, 'kamera': kamera,
+                           'lahesty': V7_LAHESTY, 'teksti_38a': V7_PROJ, 'kaiku1': V7_KAIKU} if V12 and not V14 else None, 'ruudut_30fps': V9 if '--v9' in A else None, 'kamera': kamera,
                    'aurinko': aurinko, 'aurinko_kohde': pyor(tahtays), 'valot': valot,
                    'taustavirta': {'mm_s': V11_VIRTA_MS * 1000, 'vaihtelu': 0.15, 'rivit': VIRTA_LOKI} if V11 else None},
                   open(ulos_j, 'w'), ensure_ascii=False, indent=1)
@@ -1670,7 +1701,7 @@ if '--v7' in A:
 # 0–1 s pimeää → kytkin napsahtaa (ääni erikseen) → takavalo bystin takana syttyy 0,3–1 s:ssa: vain ääriviivat ja
 # reunavalo siluettina hehkuvaa taustaa vasten → pito → leikkaus nykyiseen introon. 120 ruutua (4 s), 30 r/s.
 #   Blender -b -P sokrates_bysti.py -- [--kohde ...] --prologi <ulos> --koko L K [--ruudut ...]
-PROLOGI = dict(kytkin=30, taysi=58, loppu=120)
+PROLOGI = dict(kytkin=30, taysi=58, loppu=75 if '--v14' in A else 120)   # v14: prologi tiiviimpi (1 s pimeää, valo täysi ~1,9 s, leikkaus 2,5 s)
 
 
 if '--prologi' in A:
