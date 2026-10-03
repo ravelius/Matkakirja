@@ -42,11 +42,18 @@ function kokoa(tunnus) {
   if (!luvut) return s;
   const teksti = lutuPolut[tunnus] ? readFileSync(lutuPolut[tunnus], 'utf8')
     : execFileSync('git', ['show', `${luvut.versio}:${luvut.tiedosto}`], { cwd: JUURI, encoding: 'utf8', maxBuffer: 64 << 20 });
-  const gen = aikajanaLuvuista(JSON.parse(teksti), {
+  const d = JSON.parse(teksti);
+  const gen = aikajanaLuvuista(d, {
     kaiut: luvut.kaiut, savu: luvut.savu, savuYdin: luvut.savuYdin, paalauseet: luvut.paalauseet ?? {},
     lahde: luvut.tiedosto, lahdeNimi: `${luvut.haara} ${luvut.versio} ${luvut.tiedosto}`,
   });
-  return { ...s, aikajana: { ...gen, ...omat } };
+  /*
+   * Kaikukuvien lähteet (Linnanrakentajan luvut v13.kaiut[].lahde = {kohde, teos, tekija, lisenssi, lahde, nimea?};
+   * Päätoimittaja 4.10.2026: kaikki kaikukuvat pelin lähteisiin). Natiivi lukee juuren kuvalahteet-kentän
+   * (AjattelijaData.Kuvalahteet); nimea on CC BY / BY-SA -kuvan pakollinen maininta.
+   */
+  const kuvalahteet = (d.v13?.kaiut ?? []).filter((k) => k.lahde).map((k) => ({ kuva: k.kuva, ...k.lahde }));
+  return { ...s, aikajana: { ...gen, ...omat }, ...(kuvalahteet.length ? { kuvalahteet } : {}) };
 }
 
 /*
