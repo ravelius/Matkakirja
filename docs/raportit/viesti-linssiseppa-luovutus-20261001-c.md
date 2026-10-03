@@ -3,12 +3,16 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
-## TILA 4.10. KLO 02.2x (MARCUS 135 — MERGE-PYYNTÖ ODOTTAA LS2:TA)
-- Proto linssiseppa/marcus-v15b 92d46875 (LS2 659c903c:n päällä), luvut f55de4076, käännös a12ba471, Linssit 596/596. Tallenne B
-  lokit/linssiseppa-marcus-tallenne-b-20261004: ääni = kytkinajastus −1 ms; kuvan leikkaukset 52–69 ms ennen ääntä (näkyy pelkästä videosta).
-- Koodista: c093efe5 EI muuttanut merkin ajoitusta (vain AudioSource lapsiolioon); välähdys raaka dspTime ≥ T + viive, mutta moottori
-  käyttää Kello.Nyt-interpolointia (≤ 100 ms raa'an edellä) → todennäköinen ero. Lähetetty LS2:lle + Päätoimittajalle 02.2x.
-  SEURAAVAKSI: LS2:n vastaus (merkki samaan kelloon?) → tallenne uudelleen → merge-pyyntö Natiivisepälle (kopio Päätoimittajalle).
+## TILA 4.10. KLO 02.5x (MARCUS 135 + YKSI KELLO — ODOTTAA LS2:N KUITTAUSTA)
+- Juurisyy: AjattelijaTahti.Kello interpoloi dspTime + reaaliaika (≤ 0,1 s) raa'an kellon edelle → leikkaukset 52–69 ms ennen ääntä
+  (tallenne B). Merkki c093efe5 ei muuttanut ajoitusta (vain AudioSource lapsiolioon).
+- Korjaus (Päätoimittajan käsky, LS2 jumissa): proto linssiseppa/yksi-kello = 659c903c + 052a782b (Kello välillä [raaka − 0,1, raaka],
+  leikkaus-/kytkinkiinnitys raakaan, ajastukset raa'asta) + 7ab396b3 (mittariin raaka yli / merkki yli). Linssit-testit 596/596.
+  Mittaushaara linssiseppa/marcus-v15c (v15b + samat commitit, e3b7efe9), käännös 072c1384.
+- Mittaus (tyokalut/linssiseppa-ajot/mittaa-tahti.py + ketju-tahti.sh; lokit/linssiseppa-tahti-{sokrates,marcus}-20261004-c):
+  Sokrates −18…+4 ms (korjattu −9…+2), Marcus −17…+18 ms (korjattu +2…+16). Marcus vain PEILI=pois (LS2:n peilissä ei Marcusta).
+- SEURAAVAKSI: LS2 päättää (minun commitit vai oma) → merge-pyyntö Natiivisepälle (marcus-v15c tai LS2:n kärjen päälle rebasettu),
+  kopio Päätoimittajalle. Ei ennen LS2:n kuittausta.
 
 ## TILA 3.10. KLO 22.2x (AURINGON KIILTO CUPOLAN KULMISSA — KESKEN, juna 134)
 - Päätoimittajan erä 21.2x: sunglint Cupolan vedon kulmissa iso tasainen kermaläiskä → aidon ISS-kiillon kaltainen. Proto-haara
