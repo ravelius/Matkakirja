@@ -4,7 +4,7 @@
  */
 export const SOKRATES_AIKAJANA = Object.freeze({
  "versio": "v13",
- "lahde": "linnanrakentaja-sokrates-bysti ffa1c9c94 docs/raportit/ajattelijat-v11/sokrates-luvut-v13.json",
+ "lahde": "linnanrakentaja-sokrates-bysti 34b5f06a5 docs/raportit/ajattelijat-v11/sokrates-luvut-v13c.json",
  "loppu": 3493,
  "kertoja": {
   "alku": 28,
@@ -326,7 +326,7 @@ export const SOKRATES_AIKAJANA = Object.freeze({
    "kiintea": true
   }],
  "kaiut": [{
-   "kuva": "ajattelijat/sokrates/v3/kaiku-jumala.png",
+   "kuva": "ajattelijat/sokrates/v3/kaiut-v13c/kaiku-jumala.png",
    "paikka": [0.305, -0.5325, 0.7382],
    "suunta": [-0.5167, 0.6695, -0.5336],
    "ala": 0.1104,
@@ -341,12 +341,12 @@ export const SOKRATES_AIKAJANA = Object.freeze({
     [1374, 0]]
   },
   {
-   "kuva": "ajattelijat/sokrates/v3/kaiku-sotilas.png",
+   "kuva": "ajattelijat/sokrates/v3/kaiut-v13c/kaiku-sotilas.png",
    "paikka": [0.305, -0.5325, 0.7382],
    "suunta": [-0.5167, 0.6695, -0.5336],
-   "ala": 0.115,
+   "ala": 0.1186,
    "lev": 0.1,
-   "kork": 0.115,
+   "kork": 0.11866,
    "blend": 0.3,
    "liuku": 0.02,
    "ruudut": [1338, 1501],
@@ -356,22 +356,22 @@ export const SOKRATES_AIKAJANA = Object.freeze({
     [1501, 0]]
   },
   {
-   "kuva": "ajattelijat/sokrates/v3/kaiku-oraakkeli.png",
-   "paikka": [0.1554, -0.691, 0.459],
-   "suunta": [-0.1923, 0.971, -0.1417],
-   "ala": 0.07,
-   "lev": 0.07,
-   "kork": 0.06996,
+   "kuva": "ajattelijat/sokrates/v3/kaiut-v13c/kaiku-oraakkeli.png",
+   "paikka": [0.3368, -0.6041, 0.5357],
+   "suunta": [-0.4947, 0.8263, -0.2695],
+   "ala": 0.1609,
+   "lev": 0.08,
+   "kork": 0.16094,
    "blend": 0.3,
    "liuku": 0.02,
    "ruudut": [1630, 2004],
    "energia": [[1630, 0],
-    [1675, 32],
-    [1959, 32],
+    [1675, 12],
+    [1959, 12],
     [2004, 0]]
   },
   {
-   "kuva": "ajattelijat/sokrates/v3/kaiku-kuolema.png",
+   "kuva": "ajattelijat/sokrates/v3/kaiut-v13c/kaiku-kuolema.png",
    "paikka": [0.4482, -0.5409, 0.4448],
    "suunta": [-0.6296, 0.7682, -0.1163],
    "ala": 0.1488,
@@ -387,14 +387,6 @@ export const SOKRATES_AIKAJANA = Object.freeze({
   }],
  "virta": [[841, 0],
   [871, 1],
-  [1266, 1],
-  [1296, 0],
-  [1453, 0],
-  [1477, 1],
-  [1619, 1],
-  [1621, 0],
-  [1986, 0],
-  [2010, 1],
   [2115, 1],
   [2133, 2.2],
   [2204, 2.2],
@@ -403,14 +395,39 @@ export const SOKRATES_AIKAJANA = Object.freeze({
   [2425, 0],
   [2910, 0],
   [2934, 1],
-  [3051, 1],
-  [3069, 0],
-  [3257, 0],
+  [3257, 1],
   [3269, 0],
   [3337, 0],
   [3361, 1.8],
   [3462, 1.8],
   [3463, 0]],
+ "vaisto": [{
+   "kohde": [-0.005, -0.1308, 0.418],
+   "sade": 0.0819,
+   "ruudut": [1281, 1374]
+  },
+  {
+   "kohde": [-0.005, -0.1308, 0.418],
+   "sade": 0.0853,
+   "ruudut": [1338, 1501]
+  },
+  {
+   "kohde": [0.04, -0.1083, 0.374],
+   "sade": 0.0989,
+   "ruudut": [1630, 2004]
+  },
+  {
+   "kohde": [0.0704, -0.08, 0.375],
+   "sade": 0.1018,
+   "ruudut": [3051, 3266]
+  }],
+ "savu": {
+  "kuva": "ajattelijat/sokrates/v3/savu-atlas-v1.png",
+  "ala": 0.28,
+  "kesto": 8,
+  "fps": 30,
+  "ruutuja": 240
+ },
  "efektit": [["01-projektori-naksahdus", 42.68],
   ["01-projektori-naksahdus", 44.56],
   ["01-projektori-naksahdus", 54.3],

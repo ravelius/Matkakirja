@@ -6,7 +6,7 @@
  * pyyhkäisyvalo, videotykit, kaiut, taustavirran kerroin); moottori js/linssit/ajattelija.js `aikajana`-tilassa.
  * Korjatut luvut vaihtuvat ajamalla tämä uudelleen — käsin ei muokata generoitua tiedostoa.
  *
- *   node tools/ajattelija-aikajana.mjs <luvut.json> <ulos.js> [--kaiut <ämpärikansio>]
+ *   node tools/ajattelija-aikajana.mjs <luvut.json> <ulos.js> [--kaiut <ämpärikansio>] [--savu <ämpäripolku atlas.png>]
  *
  * Ruudut ovat Blenderin 30 r/s -ruutuja (ruutu 1 = musiikin 0,0 s heti prologin jälkeen), koordinaatit Blenderin
  * (z ylös, kasvot −y); moottori muuntaa ne three.js:n koordinaatteihin (b2t).
@@ -74,12 +74,20 @@ const v0 = d.valot['virta-0'].energia_avaimet;
 const perus = v0.find(([, e]) => e > 0)[1];
 const virta = v0.filter(([r]) => r > 1).map(([r, e]) => [r, pyor(e / perus)]);
 
+// v13c: tekstivirran väistökehät kaikujen ympärillä ja savumaski (jos viety).
+const c = d.v13c ?? {};
+const vaisto = (c.virta_vaisto ?? []).map((x) => ({ kohde: pv(x.kohde), sade: x.sade_m, ruudut: x.ruudut }));
+const SAVU = A.includes('--savu') ? A[A.indexOf('--savu') + 1] : null;
+const savu = c.savu && SAVU ? { kuva: SAVU, ala: c.savu.ala_m, kesto: c.savu.kesto_s, fps: c.savu.fps, ruutuja: Math.round(c.savu.kesto_s * c.savu.fps) } : null;
+
 const aikajana = {
   versio: 'v13',
   lahde: A.includes('--lahde-nimi') ? A[A.indexOf('--lahde-nimi') + 1] : LAHDE.split('/').pop(),
   loppu: v.loppu,
   kertoja: { alku: v.kertoja_alkaa_s, kappaleet: v.kappaleet_s },
   kamera, aurinko, pyyhkaisy, tykit, kaiut, virta,
+  ...(vaisto.length ? { vaisto } : {}),
+  ...(savu ? { savu } : {}),
   efektit: v.efektit.map((e) => [e.efekti, e.s]),
 };
 

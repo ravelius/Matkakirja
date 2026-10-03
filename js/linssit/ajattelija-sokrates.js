@@ -196,13 +196,16 @@ export const SOKRATES = Object.freeze({
     },
     syke: 'ajattelijat/sokrates/v3/syke-v13.json',
     /*
-     * KAIKUSARJAT omistajan vertailuun (?kaikusarja=a|v13b; ?kaikuvari=seepia): oletus A = Sisältökirjurin rajatut hahmot
-     * alfalla (ajattelijat/sokrates/v3/kaiut/, harmaa ja seepia valmiina); Davidilla nykyinen. B (Codexin yksinkertaistetut)
-     * lisätään, kun kuvat tulevat. v13b = aikajanan omat kuvat (Linnanrakentajan gobot-v13).
+     * KAIKUSARJAT omistajan vertailuun (Päätoimittaja 3.10.2026; ?kaikusarja=<nimi>, ?kaikuvari=seepia, ?savu=1):
+     * oletus A = Linnanrakentajan v13c:n rajatut hahmot (gobot-v13cA: Zeus, hopliitti v2, Themis yksin; David
+     * paikkamerkkinä) aikajanan omina kuvina, väri valosta. v13b = edellinen sarja; sk = Sisältökirjurin rajatut omina
+     * harmaa- ja seepiaversioina. B (Codex) lisätään samoilla nimillä, kun kuvat tulevat.
      */
     kaikusarja: 'a',
     kaikusarjat: {
-      a: [
+      v13b: ['ajattelijat/sokrates/v3/kaiku-jumala.png', 'ajattelijat/sokrates/v3/kaiku-sotilas.png',
+        'ajattelijat/sokrates/v3/kaiku-oraakkeli.png', 'ajattelijat/sokrates/v3/kaiku-kuolema.png'],
+      sk: [
         { harmaa: 'ajattelijat/sokrates/v3/kaiut/jumala-harmaa.png', seepia: 'ajattelijat/sokrates/v3/kaiut/jumala-seepia.png' },
         { harmaa: 'ajattelijat/sokrates/v3/kaiut/sotilas-v2-harmaa.png', seepia: 'ajattelijat/sokrates/v3/kaiut/sotilas-v2-seepia.png' },
         { harmaa: 'ajattelijat/sokrates/v3/kaiut/themis-harmaa.png', seepia: 'ajattelijat/sokrates/v3/kaiut/themis-seepia.png' },

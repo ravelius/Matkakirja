@@ -844,6 +844,24 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     u.pKaikuVari.value.setRGB(...kaikuValo);
     u.pMaara.value = kaikuIndeksi + 2;
     const virranAlku = AJ.virta.find(([, k]) => k > 0)?.[0] ?? 0;
+    // v13c: väistökehät (kaiun ajan; säde kasvaa ja kutistuu 15 ruudussa, ettei kehä ponnahda).
+    const vaistot = (AJ.vaisto ?? []).map((v) => ({ ...v, kohdeT: b2t(THREE, v.kohde) }));
+    /*
+     * SAVU (omistaja vertaa; ?savu=1, oletus pois): Linnanrakentajan varjomaski 8 s silmukkana kaikkiin projektoreihin.
+     * Atlas: 240 ruutua neljänä kanavana 8 × 8 laatassa (tools-käsittely Pelikoodari, savu-v1).
+     */
+    const savuPaalla = haku.get('savu') === '1' && AJ.savu?.kuva;
+    if (savuPaalla) {
+      new THREE.TextureLoader().loadAsync(`${R2}${AJ.savu.kuva}`).then((tk) => {
+        tk.colorSpace = THREE.NoColorSpace;
+        tk.flipY = false;
+        tk.generateMipmaps = false;
+        tk.minFilter = THREE.LinearFilter;
+        u.pSavu.value = tk;
+        u.pSavuTila.value.x = 1;
+        u.pSavuTila.value.y = AJ.savu.ala;
+      }).catch((syy) => console.warn('ajattelija: savumaski', syy));
+    }
 
     asetaAikajana = (r) => {
       for (const v of prologiValot) v.s.intensity = 0;
@@ -888,6 +906,22 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
         if (kaikuPaikassa[s] !== i) { u.pB.value[ind].w = 0; continue; }
         u.pA.value[ind].w = -k.liuku + 2 * k.liuku * Math.min(1, Math.max(0, valilla(r, k.liukuAlku, k.liukuLoppu)));
         u.pB.value[ind].w = avainArvo(k.energia, r) * W * KAIKU_VOIMA * (syke[String(Math.round(r))] ?? 1);
+      }
+
+      // Väistökehät: enintään kaksi samanaikaista.
+      const aktiiviset = vaistot.filter((v) => r > v.ruudut[0] && r < v.ruudut[1]).slice(0, 2);
+      for (let j = 0; j < 2; j += 1) {
+        const v = aktiiviset[j];
+        if (!v) { u.pVaisto.value[j].w = 0; continue; }
+        const kasvu = Math.min(1, (r - v.ruudut[0]) / 15, (v.ruudut[1] - r) / 15);
+        u.pVaisto.value[j].set(v.kohdeT.x, v.kohdeT.y, v.kohdeT.z, v.sade * kasvu);
+      }
+      if (savuPaalla && u.pSavu.value) {
+        const ruutu = Math.floor(((r / RUUTUA_S) % AJ.savu.kesto) * AJ.savu.fps) % AJ.savu.ruutuja;
+        const laatta = Math.floor(ruutu / 4);
+        u.pSavuTila.value.z = (laatta % 8) / 8;
+        u.pSavuTila.value.w = Math.floor(laatta / 8) / 8;
+        u.pSavuKanava.value.set(ruutu % 4 === 0 ? 1 : 0, ruutu % 4 === 1 ? 1 : 0, ruutu % 4 === 2 ? 1 : 0, ruutu % 4 === 3 ? 1 : 0);
       }
 
       // Taustavirta: vaiheittainen kerroin, siirto = nopeus × ruudut virran alusta.

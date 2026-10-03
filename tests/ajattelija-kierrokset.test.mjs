@@ -124,7 +124,7 @@ test('v13 aikajana (Linnanrakentaja ffa1c9c94): Blenderin avaimet sellaisinaan, 
   assert.deepEqual(aj.tykit.map((t) => t.paalause), ['38a', '21d', '30e', '49b', 'kysymys']);
   assert.equal(aj.tykit.at(-1).kiintea, true);
   assert.deepEqual(aj.kaiut.map((k) => k.kuva.split('/').pop()), ['kaiku-jumala.png', 'kaiku-sotilas.png', 'kaiku-oraakkeli.png', 'kaiku-kuolema.png']);
-  assert.ok(aj.kaiut.every((k) => k.kuva.startsWith('ajattelijat/sokrates/v3/')));
+  assert.ok(aj.kaiut.every((k) => k.kuva.startsWith('ajattelijat/sokrates/v3/kaiut-v13c/')));
   assert.deepEqual(aj.efektit.map(([e]) => e).filter((e, i, l) => l.indexOf(e) === i),
     ['01-projektori-naksahdus', '02-hallin-ovi', '03-malja-kivelle', '04-kytkin-pois']);
   assert.ok(aj.aurinko.avaimet.every((x) => x[3]?.length === 3));   // v13b: väri jokaisessa avaimessa
@@ -163,9 +163,23 @@ test('kehitysliput omistajan vertailuun: kaikujen väri (oletus väritön, ?kaik
 test('kehitysliput: kaikusarja (oletus A, harmaa ja seepia kuvina) ja väritön valo sarjan värikuville', () => {
   const aj = SOKRATES.aikajana;
   assert.equal(aj.kaikusarja, 'a');
-  assert.equal(aj.kaikusarjat.a.length, aj.kaiut.length);
-  assert.ok(aj.kaikusarjat.a.slice(0, 3).every((e) => e.harmaa.includes('/v3/kaiut/') && e.seepia.includes('/v3/kaiut/')));
+  assert.equal(aj.kaikusarjat.a, undefined);   // A = aikajanan omat kuvat (v13c gobot-v13cA)
+  assert.ok(aj.kaiut.every((k) => k.kuva.startsWith('ajattelijat/sokrates/v3/kaiut-v13c/')));
+  assert.equal(aj.kaikusarjat.v13b.length, aj.kaiut.length);
+  assert.ok(aj.kaikusarjat.sk.slice(0, 3).every((e) => e.harmaa.includes('/v3/kaiut/') && e.seepia.includes('/v3/kaiut/')));
   assert.match(MOOTTORI, /const sarjanNimi = haku\.get\('kaikusarja'\) \?\? AJ\.kaikusarja;/);
   assert.match(MOOTTORI, /u\.pKaikuVari\.value\.setRGB\(\.\.\.\(k\.varissa \? \[1, 1, 1\] : kaikuValo\)\);/);
   assert.match(lue('../js/linssit/ajattelija-projektori.js'), /return c\.rgb \/ max\(l, 1e-3\) \* smoothstep\(0\.08, 0\.9, l\) \* c\.a \* reunaK;/);
+});
+
+test('v13c: tekstivirran väistökehät kaikujen ympärillä ja savumaski lipulla (Linnanrakentaja 34b5f06a5)', () => {
+  const aj = SOKRATES.aikajana;
+  assert.equal(aj.vaisto.length, 4);
+  assert.ok(aj.vaisto.every((v) => v.sade > 0.05 && v.sade < 0.2 && v.ruudut[1] > v.ruudut[0]));
+  assert.deepEqual(aj.savu, { kuva: 'ajattelijat/sokrates/v3/savu-atlas-v1.png', ala: 0.28, kesto: 8, fps: 30, ruutuja: 240 });
+  assert.match(MOOTTORI, /const savuPaalla = haku\.get\('savu'\) === '1' && AJ\.savu\?\.kuva;/);
+  const pr = lue('../js/linssit/ajattelija-projektori.js');
+  assert.match(pr, /if \(pD\[i\]\.w > 0\.5\) t \*= pVaistoKerroin\(vMaailma\);/);
+  assert.match(pr, /if \(pSavuTila\.x > 0\.5\) t \*= pSavuNayte\(jx \* pA\[i\]\.x, jy \* pA\[i\]\.x\);/);
+  assert.match(pr, /smoothstep\(0\.85 \* pVaisto\[j\]\.w, pVaisto\[j\]\.w,/);
 });

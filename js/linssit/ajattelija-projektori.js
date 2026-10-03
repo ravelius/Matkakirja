@@ -87,6 +87,12 @@ export function lisaaProjektorit(THREE, materiaali, atlasTekstuuri) {
     pVari: { value: new THREE.Color(1, 1, 1) },
     pKaiku: { value: null },
     pKaiku2: { value: null },   // toinen kaikukuva: kaksi kaikua voi olla päällekkäin (v13 ristihäivytys)
+    // v13c: tekstivirran väistökehät kaikujen ympärillä (xyz maailmassa, w = säde m; 0 = pois).
+    pVaisto: { value: [new THREE.Vector4(), new THREE.Vector4()] },
+    // v13c: savukiekuran varjomaski (atlas: 4 ruutua RGBA-kanavissa, 8 × 8 laattaa); tila = (päällä, ala m, laatan u, v).
+    pSavu: { value: null },
+    pSavuTila: { value: new THREE.Vector4() },
+    pSavuKanava: { value: new THREE.Vector4(1, 0, 0, 0) },
     pKaikuVari: { value: new THREE.Color(1, 1, 1) },
   };
   materiaali.onBeforeCompile = (shader) => {
@@ -111,6 +117,24 @@ uniform vec4 pF[P_ENINTAAN]; // keilan cos sisäreuna, keskitys (0,5 päälause,
 uniform vec3 pVari;
 uniform sampler2D pKaiku;     // kaikukuva (v8): harmaasävy, valoa vain sisällössä
 uniform sampler2D pKaiku2;    // toinen kaikukuva (pF.z = 2)
+uniform vec4 pVaisto[2];
+uniform sampler2D pSavu;
+uniform vec4 pSavuTila;
+uniform vec4 pSavuKanava;
+/* Väistö: taustavirta jättää kaiun ympärille tyhjän kehän, reuna pehmenee 15 % säteestä (Linnanrakentaja v13c). */
+float pVaistoKerroin(vec3 p) {
+  float k = 1.0;
+  for (int j = 0; j < 2; j++) {
+    if (pVaisto[j].w > 0.0) k *= smoothstep(0.85 * pVaisto[j].w, pVaisto[j].w, distance(p, pVaisto[j].xyz));
+  }
+  return k;
+}
+/* Savu: maskin uv = (X/Z · etäisyys) / ala + 0,5 projektorin omassa kuvatasossa; 1 = täysi valo, ulkopuolella täysi. */
+float pSavuNayte(float x, float y) {
+  vec2 uv = vec2(x, y) / pSavuTila.y + 0.5;
+  if (uv.x <= 0.0 || uv.x >= 1.0 || uv.y <= 0.0 || uv.y >= 1.0) return 1.0;
+  return dot(texture2D(pSavu, pSavuTila.zw + uv * 0.125), pSavuKanava);
+}
 uniform vec3 pKaikuVari;      // seepia
 float pNayte(int i, float jx, float jy, float sk, float sumeus) {
   vec4 a = pA[i]; vec4 b = pB[i]; vec4 c = pC[i]; vec4 d = pD[i];
@@ -164,6 +188,8 @@ vec3 projektoriValo(vec3 nW) {
       : (ca > 0.0
         ? vec3(pNayte(i, jx, jy, 1.0 + ca, sumeus), pNayte(i, jx, jy, 1.0, sumeus), pNayte(i, jx, jy, 1.0 - ca, sumeus))
         : vec3(pNayte(i, jx, jy, 1.0, sumeus))) * pVari;
+    if (pD[i].w > 0.5) t *= pVaistoKerroin(vMaailma);              // vain taustavirran toistorivit
+    if (pSavuTila.x > 0.5) t *= pSavuNayte(jx * pA[i].x, jy * pA[i].x);   // kaikki projektorit
     summa += t * (pB[i].w * keila * nl / (r * r));
   }
   return summa;
