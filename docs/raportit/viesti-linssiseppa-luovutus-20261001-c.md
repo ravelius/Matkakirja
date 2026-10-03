@@ -16,6 +16,8 @@ Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20
 - MARCUS JUNAAN 135 (Päätoimittaja 22.2x, omistajan TF 133 -löydökset): odota LS2:n moottori (dspTime + latenssikompensaatio, pehmeämpi savu),
   Pelikoodarin uudet taustarivien atlakset ja Sisältökirjurin/Linnanrakentajan Marcus-kaikukuvat (sade, uhri, kuolinvuode) → aja muunnin
   uudelleen → tarkista FYYSISELLÄ iPadilla äänen kanssa (iPad-testien ehdot muistiossa ipad-testit-omistajan-lupa).
+- ISKUT (4.10.): raidan iskut 0–5 ms nimellisistä (lahde/iskut.py); moottorin off-by-one (ruudut 1-pohjaisia) korjattu LS2:n 7054e2e1:ssä
+  + LAME-alkuviiveen ohitus. Marcus-haara rebasetaan LS2:n kärkeen ennen junaa 135.
 
 ## TILA 3.10. KLO 19.3x (MARCUS v14 NATIIVI — MERGE-PYYNNÖSSÄ)
 - linssiseppa/marcus-v14 2848bfe2 (LOPULLINEN 20.3x; proto, LS2:n linssiseppa2/sokrates-v14 649651b2:n päällä, käännös 9bb5418d, kuvat lokit/linssiseppa-marcus-v14-d-20261003; vain data: tyokalut/ajattelijat-natiiviin.mjs,
