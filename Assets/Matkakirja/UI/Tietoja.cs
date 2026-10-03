@@ -143,10 +143,8 @@ namespace Matkakirja.Natiivi
                 new Rivi { Nimi = "Lennon pinta", Tekija = "NASA Earth Observatory (Blue Marble Next Generation)", EiLisenssia = true },
                 // Radiolinssin yövalot (Karttasepän sarja yovalot/2026-09-25, VIIRS, public domain; RadioMastot.YovaloUrl).
                 new Rivi { Nimi = "Radion yövalot", Tekija = "NASA Earth Observatory (Black Marble)", EiLisenssia = true },
-                // Cupolan ääni (Pelikoodari 1.10.2026, CupolaAani.cs): tekijätieto natiiviin samaan aikaan kuin äänet (junat 83–84);
-                // sama rivi tulee webin js/lahteet.js:ään PR #3723:ssa, jolloin tämä poistetaan päällekkäisenä.
-                new Rivi { Nimi = "Cupolan äänimaisema (radio ja humina)", Tekija = "Ääni: NASA (Johnson Space Center): EVA 38 -radioliikenne 6.1.2017 ja aseman sisätilan humina (Life On Station B-Roll, 2013); matala pohjahumina pelin oma",
-                    Lisenssi = "Public domain (Yhdysvaltain liittovaltion teos)" },
+                // Cupolan ääni: NASA:n radio ja sisätilahumina poistuivat käytöstä 3.10.2026 (omistaja: rätinä pois); humina v2 on pelin oma
+                // generoitu ääni, joten rivi poistettiin (CupolaAani.cs).
                 new Rivi { Nimi = "Lennon pinta, pilvetön",Tekija = "EOxCloudless https://cloudless.eox.at by EOX IT Services GmbH (Contains modified Copernicus Sentinel data 2016 & 2017)", EiLisenssia = true },
                 new Rivi { Nimi = "Lentokone (DC-3-tyyppinen potkurikone)", Tekija = "Pelin oma malli", Lisenssi = "CC0 (public domain)" },
                 // Myllyn naksahdukset (Siirtoseppä 2.10.2026, omistajan OK): Resources/Pelit/Mylly/mylly-asetus|poisto.wav.

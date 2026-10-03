@@ -1,6 +1,11 @@
 // CUPOLAN ÄÄNI (Pelikoodari 30.9.2026; omistaja Päätoimittajan kautta: "iss ääni hyvä, tosin siihen voisi lisätä oman
 // huminan taustalle, jossa olisi matalia taajuuksia mukana vielä lisäksi ja soittaa tuota vähän hiljemmalla sen päällä").
 //
+// RÄTINÄ POIS (omistaja 3.10.2026 klo 06.3x: "ottaa iss linssin huminasta Ratina pois. Pidä pelkkä generoitu kohina jossa matala
+// taajuus mukana"): rätinä tuli NASA:n radiosilmukasta (noin 1 napsahdus/s) ja v1-huminan NASA-nauhoitteesta (~0,13/s). Nyt soi
+// vain kokonaan generoitu humina v2 (aanet/cupola/v2/cupola-humina-gen-90s.wav: ruskea kohina 22–160 Hz, tuuletin 180–1100 Hz,
+// 41 Hz yläsävelineen; 0 napsahdusta), eikä radiota ladata (RadioKaytossa = false). Alla oleva kuvaus on v1:n historia.
+//
 // Kaksi kerrosta Cupolassa (KyydinTila.Ikkuna; AstronauttiKerros.Kyyti/Pois kutsuvat Tila-metodia):
 //   humina  oma 90 s:n saumaton silmukka (matala jyrinä 30–120 Hz, pohjasävy 41 Hz yläsävelineen, tuuletinkohina ja
 //           NASA:n sisätilahumina), soi jatkuvasti; väistää puhetta vain vähän.
@@ -28,9 +33,11 @@ namespace Matkakirja.Natiivi
 {
     public sealed class CupolaAani : MonoBehaviour
     {
-        public const string HuminaUrl = "https://media.matkakirja.app/aanet/cupola/v1/cupola-humina-90s.wav";
+        public const string HuminaUrl = "https://media.matkakirja.app/aanet/cupola/v2/cupola-humina-gen-90s.wav";
         public const string RadioUrl = "https://media.matkakirja.app/aanet/cupola/v1/cupola-radio-eva38-23min.mp3";
         public const float RadioPituusS = 1380f;
+        /// <summary>NASA:n radiosilmukka (rätinä) pois käytöstä (omistaja 3.10.2026); tiedostoa ei ladata eikä kerrosta avata.</summary>
+        public static bool RadioKaytossa = false;
         const int Humina = 0, Radio = 1;
         /// <summary>Perustasot (humina −26 LUFS, radio −20 LUFS tiedostossa → radio 6 dB huminaa hiljempänä).</summary>
         public static float HuminaVoima = 0.9f, RadioVoima = 0.45f;
@@ -130,15 +137,15 @@ namespace Matkakirja.Natiivi
         {
             string humina = null, radio = null;
             yield return Hae(HuminaUrl, p => humina = p);
-            yield return Hae(RadioUrl, p => radio = p);
+            if (RadioKaytossa) yield return Hae(RadioUrl, p => radio = p);
             if (oma != vuoro || !paalla) yield break;
-            if (humina == null || radio == null) { Debug.Log("MATKAKIRJA cupola-aani: tiedosto puuttuu: " + viimeVirhe); yield break; }
+            if (humina == null || (RadioKaytossa && radio == null)) { Debug.Log("MATKAKIRJA cupola-aani: tiedosto puuttuu: " + viimeVirhe); yield break; }
             taso[Humina] = taso[Radio] = 0f;
             MatkakirjaSilmukka_Avaa(Humina, humina, 0, 1);
             float alku = Random.Range(0f, RadioPituusS - 5f);
-            MatkakirjaSilmukka_Avaa(Radio, radio, alku, 0);
+            if (RadioKaytossa) MatkakirjaSilmukka_Avaa(Radio, radio, alku, 0);
             soi = true;
-            Debug.Log($"MATKAKIRJA cupola-aani: soi, radio kohdasta {alku:0} s");
+            Debug.Log(RadioKaytossa ? $"MATKAKIRJA cupola-aani: soi, radio kohdasta {alku:0} s" : "MATKAKIRJA cupola-aani: soi (humina v2, ei radiota)");
         }
 
         void Lopeta()
@@ -190,7 +197,7 @@ namespace Matkakirja.Natiivi
             bool puhe = tila != null && tila.Voimassa < 0.999;
             bool kuuluisi = paalla && (tila?.Aanimaisema ?? true);
             tavoite[Humina] = kuuluisi ? HuminaVoima * tausta * (puhe ? HuminaVaisto : 1f) : 0f;
-            tavoite[Radio] = kuuluisi && cupolassa ? RadioVoima * tausta * (puhe ? RadioVaisto : 1f) : 0f;   // radio vain Cupolassa
+            tavoite[Radio] = kuuluisi && cupolassa && RadioKaytossa ? RadioVoima * tausta * (puhe ? RadioVaisto : 1f) : 0f;   // radio vain Cupolassa
             puheNyt = puhe;
             float h = kuuluu && !TestiMykistys.Paalla ? tavoite[Humina] : 0f;
             float r = kuuluu && !TestiMykistys.Paalla ? tavoite[Radio] : 0f;
