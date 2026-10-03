@@ -50,6 +50,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Kiillon voima ja aallokon kaltevuus σ² (A/B `astro kyyti kiiltovoima x`, `astro kyyti aalto x`; Linssiseppä 2:n
         /// juliste 1.10.: matalan auringon heijastuspolun reuna näytti ylivalottuneena pystysuoralta seinältä).</summary>
         public static float KiillonVoima = 6f, Aallokko = 0.02f;
+        /// <summary>A/B `astro kyyti kiiltovanha 1`: sileä Gaussin kiilto ennen 3.10.2026 aallokon kimallusta.</summary>
+        public static bool KiiltoVanha;
         Texture2D valotEu, valotMaa;
         readonly Texture2D[] tarkat = new Texture2D[4];
         /// <summary>
@@ -295,6 +297,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetFloat(IdValot, ValotPois || valotEu == null && valotMaa == null ? 0f : ValojenVoima * ValojenOsuus);
             materiaali.SetFloat(IdKiilto, KiiltoPois ? 0f : KiillonVoima);
             materiaali.SetFloat("_Aalto", Aallokko);
+            materiaali.SetFloat("_KiiltoVanha", KiiltoVanha ? 1f : 0f);
             materiaali.SetFloat(IdVarjo, VarjoPois ? 0f : VarjonVoima);
             // Fotorealismi 3–4 (30.9.): pilvien varjot ja kuunvalo.
             materiaali.SetFloat("_PilviVarjo", PilviVarjoPois ? 0f : PilviVarjonVoima);
@@ -307,7 +310,8 @@ namespace Matkakirja.Natiivi
             materiaali.SetFloat("_KuuVoima", KuunvaloPois ? 0f : KuunvalonVoima);
             bool kuva = Matkakirja.Natiivi.Avaruus.KuvaputkiAsetettu;   // pelaajan ISS-kamera: kapeampi heijastus, terävä vesiraja
             materiaali.SetFloat("_TaivasHeijastus", TaivasHeijastusPois ? 0f : kuva ? 0.15f : 0.3f);
-            materiaali.SetFloat("_VesiTerava", kuva ? 1f : 0f);
+            // Terävä vesiraja aina (Päätoimittaja 3.10.: kiilto vain vedessä, rannat tarkasti rajattuina); ennen vain kuvaputkessa.
+            materiaali.SetFloat("_VesiTerava", kuva || !KiiltoVanha ? 1f : 0f);
             materiaali.SetFloat("_AamuVoima", Matkakirja.Natiivi.Avaruus.Kuvaputki ? Matkakirja.Natiivi.Avaruus.KuvanNousu : 0f);
         }
 

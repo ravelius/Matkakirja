@@ -1740,6 +1740,7 @@ namespace Matkakirja.Natiivi
                                 Yokuori.ValojenOsuus = Mathf.Clamp01(osuus);
                         }
                         else if (a == "kiilto" && osat.Length > 3) Yokuori.KiiltoPois = osat[3] == "0"; // A/B auringon heijastus
+                        else if (a == "kiiltovanha" && osat.Length > 3) { Yokuori.KiiltoVanha = osat[3] == "1"; Kirjaa($"astro kiiltovanha {Yokuori.KiiltoVanha}"); }
                         else if (a == "kiiltovoima" && osat.Length > 3) { Yokuori.KiillonVoima = (float)Luku(osat[3]); Kirjaa($"astro kiiltovoima {Yokuori.KiillonVoima:0.0}"); }
                         else if (a == "aalto" && osat.Length > 3) { Yokuori.Aallokko = (float)Luku(osat[3]); Kirjaa($"astro aalto {Yokuori.Aallokko:0.000}"); }
                         else if (a == "varjo" && osat.Length > 3) Yokuori.VarjoPois = osat[3] == "0";   // A/B päiväpuolen varjostus
