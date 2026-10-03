@@ -404,7 +404,7 @@ namespace Matkakirja.Natiivi
         void AsetaVirta(uint siemen)
         {
             var tv = a.Taustavirta;
-            virta = AjattelijaAikajana.Taustavirta(tv, siemen);
+            virta = AjattelijaAikajana.Taustavirta(a, siemen);
             virtaVoima.Clear();
             foreach (var v in virta)
             {
@@ -695,8 +695,10 @@ namespace Matkakirja.Natiivi
                 Spotti(0, valoP, tahtays, a.AvainKeila, 1.0, new Vector3(1f, 0.95f, 0.88f), Avain * hiipuu, varjo: true);
                 Spotti(1, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0);
                 Spotti(2, Vector3.zero, Vector3.forward, 1, 0, Vector3.zero, 0);
-                mat.SetVector(IdTaivas, new Vector4(0.9f, 0.92f, 1.0f, 0) * (Tayte * hiipuu));
-                mat.SetVector(IdMaa, new Vector4(0.25f, 0.25f, 0.28f, 0) * (Tayte * hiipuu));
+                // v11 (web #3892): alkukuvissa maailman täyte intro.tayte-kertaiseksi, varjopuoli lähes mustaksi.
+                float maailma = Tayte * hiipuu * (float)AjattelijaAikajana.MaailmaKerroin(a, r);
+                mat.SetVector(IdTaivas, new Vector4(0.9f, 0.92f, 1.0f, 0) * maailma);
+                mat.SetVector(IdMaa, new Vector4(0.25f, 0.25f, 0.28f, 0) * maailma);
                 float kaikuK = 1 - hiipuu;
                 // Täyte kierroksen kaiun kohdassa (paikka jää edellisen kaiun kohdalle kierroksella, jolla kaikua ei ole).
                 if (tayteAsetettu)

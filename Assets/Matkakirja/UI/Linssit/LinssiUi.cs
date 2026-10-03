@@ -69,6 +69,8 @@ namespace Matkakirja.Natiivi
         Linssirekisteri kuunneltu;
         // Sulkupillerin peittäjät: astronautin kuvanäkymä, vertailuarkki ja aikajanan hampurilainen.
         bool kuvaPeittaa, arkkiPeittaa, valikkoKorvaa, avausPeittaa, valitsinAuki;
+        /// <summary>Ajattelijan kohtaus (KUVANÄKYMÄ) auki: sen oma ✕ korvaa pillerin (web #3891, Päätoimittaja 3.10.).</summary>
+        bool ajattelijaPeittaa;
 
         /// <summary>Aikajanan aloituslaatikko auki (web: .aikajana-avaus peittää ✕:n): sulkupilleri piiloon.</summary>
         public void AvausPeittaa(bool peittaa)
@@ -169,7 +171,8 @@ namespace Matkakirja.Natiivi
                 PaivitaPelielementit();
             };
             Maat.ArkkiMuuttui += auki => { arkkiPeittaa = auki; PaivitaSulku(); };
-            // Ajattelijat: valintakortti ja kohtauksen ✕ sulkevat linssin, joten pilleri ei tule tuplana (kuten astronautin kuva).
+            // Ajattelijat: kohtauksen ✕ sulkee linssin, joten pilleri ei tule tuplana (kuten astronautin kuva).
+            Ajattelija.Peittaa += p => { ajattelijaPeittaa = p; PaivitaSulku(); };
             Aikajana.ValikkoKaytettavissa += kaytossa => { valikkoKorvaa = kaytossa; PaivitaSulku(); };
             // Laitetestaaja 29.9. (savukierros 1051): Linssivalitsin (kerros 25) aukeaa auki olevan linssin päälle, mutta
             // ✕ (38) ja dioraaman taulu/laput (36) piirtyivät sen päälle ja siirsivät Aktivoi-napin. Valitsimen ajaksi pois.
@@ -402,9 +405,9 @@ namespace Matkakirja.Natiivi
 
         internal void PaivitaSulku()
         {
-            // Linnassa ✕ korvautuu valikon "Sulje linna" -rivillä (omistaja 2.10. 14.44, LinnaValikko). Ajattelijat käyttävät
-            // linssien yhteistä sulkua (0f703701), joten niille ei ole omaa ehtoa.
-            bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa && !valitsinAuki
+            // Linnassa ✕ korvautuu valikon "Sulje linna" -rivillä (omistaja 2.10. 14.44, LinnaValikko). Ajattelijan kohtauksessa
+            // kuvanäkymän oma ✕ (valinnassa yhä linssien yhteinen sulku).
+            bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa && !valitsinAuki && !ajattelijaPeittaa
                          && !(Dioraama != null && Dioraama.Kytketty);
             bool topo = Auki?.Tiedot?.Id == TopografiaId;
             topoRyhma.style.display = nakyy && topo ? DisplayStyle.Flex : DisplayStyle.None;

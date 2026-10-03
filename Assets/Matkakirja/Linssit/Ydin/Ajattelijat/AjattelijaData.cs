@@ -107,6 +107,8 @@ namespace Matkakirja.Linssit.Ajattelijat
     public sealed class AjattelijaTaustavirta
     {
         public double Etaisyys, Blend, VoimaKerroin, Kulma;
+        /// <summary>Tahti pinnalla (web #3891 nopeus, Blender v11): mm/s ja vaihtelu ± (kertoimet tasavälein 1 ± vaihtelu).</summary>
+        public double Mms, Vaihtelu;
         public uint Siemen;
         public double[] Rivikork, Ajat;
         public Dictionary<string, double[]> Kirkkaus = new Dictionary<string, double[]>();
@@ -147,6 +149,8 @@ namespace Matkakirja.Linssit.Ajattelijat
         public List<AjattelijaOtos> IntroOtokset = new List<AjattelijaOtos>();
         /// <summary>Auringon polku introssa: (ruutu, suunta).</summary>
         public List<(double R, double[] Suunta)> IntroValo = new List<(double, double[])>();
+        /// <summary>Maailman täyte alkukuvissa (web #3892 intro.tayte, osuus TAYTE:sta ennen nimeä); puuttuu → 1.</summary>
+        public double IntroTayte = 1;
         public AjattelijaKaiku Kaiku;
         /// <summary>Kierrokset 2– (valinnainen; Marcuksella ei vielä ole).</summary>
         public AjattelijaKierrokset Kierrokset;
@@ -182,7 +186,7 @@ namespace Matkakirja.Linssit.Ajattelijat
             var intro = O(a, "intro");
             Vaadi(Pituus(K(intro, "otokset")) > 0 && Pituus(K(intro, "valo")) > 0, "intro");
             var tv = O(a, "taustavirta");
-            Vaadi(Pituus(K(tv, "rivit")) > 0 && Pituus(K(tv, "projektorit")) > 0, "taustavirta");
+            Vaadi(Pituus(K(tv, "rivit")) > 0 && Pituus(K(tv, "projektorit")) > 0 && Nro0(K(O(tv, "nopeus"), "mms")) > 0, "taustavirta");
             Vaadi(K(O(a, "fontit"), "iowan") != null, "fontit.iowan");
             var kaiku = K(a, "kaiku");
             if (kaiku != null) Vaadi(Tosi(K(kaiku as Dictionary<string, object>, "kuva")) && Tosi(K(kaiku as Dictionary<string, object>, "kamera")), "kaiku");
@@ -267,6 +271,7 @@ namespace Matkakirja.Linssit.Ajattelijat
                 var l = (List<object>)x;
                 d.IntroValo.Add((Nro(l[0]), Vek(l[1])));
             }
+            d.IntroTayte = Lv(intro, "tayte", 1);
             if (K(a, "kaiku") is Dictionary<string, object> kk)
             {
                 var kam = O(kk, "kamera"); var tay = O(kk, "tayte");
@@ -320,6 +325,7 @@ namespace Matkakirja.Linssit.Ajattelijat
             {
                 Etaisyys = L(tv, "etaisyys"), Blend = L(tv, "blend"), VoimaKerroin = L(tv, "voimaKerroin"), Kulma = L(tv, "kulma"),
                 Siemen = (uint)L(tv, "siemen"), Rivikork = V(tv, "rivikork"), Ajat = V(tv, "ajat"),
+                Mms = L(O(tv, "nopeus"), "mms"), Vaihtelu = Lv(O(tv, "nopeus"), "vaihtelu", 0),
             };
             foreach (var kv in O(tv, "kirkkaus")) d.Taustavirta.Kirkkaus[kv.Key] = Vek(kv.Value);
             foreach (var x in MiniJson.TaulukkoTaiTyhja(K(tv, "projektorit")))
