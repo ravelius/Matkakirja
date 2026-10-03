@@ -3,12 +3,12 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
-## TILA 3.10. KLO 19.xx (MARCUS v14 NATIIVIIN, juna 134)
-- linssiseppa/marcus-v14 0fcf0809 (proto, LS2:n linssiseppa2/sokrates-v14 d5d16316:n päällä): vain data (tyokalut/ajattelijat-natiiviin.mjs
-  web 088b64d0c = PR #3902, worktree /Users/Shared/Claude/wt/linssiseppa-marcus-web). Käännös 88fa468a simu PASS; vertailu webiin
-  lokit/linssiseppa-marcus-v14-20261003/vertailu-*.png (tools: tyokalut/linssiseppa-ajot/vertaa_ajattelija.py, ajo-marcus-v14.sh).
-  Lähetetty Päätoimittajalle kuitattavaksi. LS2 korjaa moottorista lämpimän taustan/punahehkun/8 % himmeyden + prologin kellon →
-  uusi SHA → rebase, käännös, uusi nauhoitus ja uusi vertailu ennen merge-pyyntöä.
+## TILA 3.10. KLO 19.3x (MARCUS v14 NATIIVI — MERGE-PYYNNÖSSÄ)
+- linssiseppa/marcus-v14 ee01111b (proto, LS2:n linssiseppa2/sokrates-v14 69e7438c:n päällä; vain data: tyokalut/ajattelijat-natiiviin.mjs,
+  web 088b64d0c, luvut 78b883452). Päätoimittaja hyväksyi; merge-pyyntö Natiivisepälle junaan 133 Sokrateen kanssa (muuten 134).
+  Käännös d41204e0 simu PASS; vertailu lokit/linssiseppa-marcus-v14-b-20261003/vertailu-*.png (korrelaatio 0,991). Punahehku/lämmin
+  tausta korjattu LS2:n 69e7438c:ssä; rinta ~17 % webiä kirkkaampi kerrottu LS2:lle (ei estä). Omistaja 19.00: ajattelijat vain natiiviin.
+- Web-worktree /Users/Shared/Claude/wt/linssiseppa-marcus-web (pr3902) poistettavissa mergen jälkeen (tools/uusi-worktree.sh --poista).
 
 ## TILA 3.10. (AJATTELIJOIDEN ALKU v14)
 - Omistaja 14.5x: alku liian hidas → v14: kertoja musiikin 9,5 s:n kohdalla (linssissä 12,0 s), suuri sointu 2,0, iskut 3,9/4,5/5,1,
