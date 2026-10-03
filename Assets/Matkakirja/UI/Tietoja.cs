@@ -241,7 +241,7 @@ namespace Matkakirja.Natiivi
             ajo = sisus.schedule.Execute(() =>
             {
                 var o = sisus.Query<Label>(className: "mk-tietoja__ryhma").Where(l => l.text.ToLowerInvariant().StartsWith(osio.ToLowerInvariant())).First();
-                if (o != null && o.layout.height > 0) { vieritys.ScrollTo(o); ajo.Pause(); }
+                if (o != null && o.layout.height > 0) { vieritys.scrollOffset = new Vector2(0f, o.layout.y); ajo.Pause(); }   // otsikko yläreunaan
                 else if (Time.unscaledTime - alku > 8f) ajo.Pause();
             }).Every(200);
         }
