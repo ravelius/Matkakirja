@@ -78,7 +78,7 @@ namespace Matkakirja.Natiivi
         /// <param name="aanet">false = ei Kertoja-, Taustamusiikki- eikä Tekstitys-rivejä (Topografia, omistaja 2.10.2026 klo 21.3x:
         /// "hampurilaiseen ylimmäksi korkeustasot-nappi ja sen alapuolelle sulje-nappi").</param>
         /// <param name="kytkimet">linssin omat kytkimet komentojen jälkeen (web luoLinssivalikko kohdat `{ teksti, lue, kirjoita }`):
-        /// tila PÄÄLLÄ/POIS rivin oikeassa reunassa, napautus kääntää ja sulkee valikon. Topografia: Korkeustasot.</param>
+        /// tila PÄÄLLÄ/POIS rivin oikeassa reunassa, napautus kääntää ja sulkee valikon. Topografia: Korkeustasot, Vesistöt: Joet ja järvet.</param>
         /// <param name="teema">napin OHJAUSNAPPI-teema (tk-teema-*); karttalinssin hampurilainen "lasi" = webin tumma ruskea
         /// (web luoLinssivalikko teema 'lasi', --tk-lasi-pinta; Päätoimittaja 2.10.2026 klo 23.0x).</param>
         public LinssiValikko(UiKerros kerros, IEnumerable<(string Nimi, Action Teko)> valinnat, string sulkuNimi, Action sulje, bool aanet = true,
