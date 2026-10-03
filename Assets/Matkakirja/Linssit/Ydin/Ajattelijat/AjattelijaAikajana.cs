@@ -300,6 +300,16 @@ namespace Matkakirja.Linssit.Ajattelijat
 
         // ── AIKAJANA (v13–v14, web asetaAikajana; 088b64d0c) ─────────────────────────────────────────
 
+        /*
+         * LEIKKAUSRUUTU (Päätoimittaja 3.10.2026, välähdys silmä → parta): Blender vie leikkauksen kahtena vierekkäisenä
+         * avaimena (esim. aurinko 135: 0 W, 136: 80 W uudessa paikassa) ja renderöi vain kokonaiset ruudut. Kello on puheraita,
+         * joten ruutu on murtoluku: ruutujen 135–136 välissä lineaarinen arvo nosti auringon jo vanhassa (silmä)otoksessa,
+         * jonka kamera pysyy CONSTANT-avaimessa 136:een asti → yksi täysin valaistu ruutu. Avainväli ≤ 1 ruutu on siksi askel
+         * (vanha arvo r < r1, uusi r ≥ r1), samassa ruudussa kuin kameran leikkaus ja askelavaimet (rako, ympäristö, varjolevy).
+         */
+        public static double Valinta(double r, double r0, double r1) =>
+            r1 - r0 <= 1 ? (r >= r1 ? 1 : 0) : r1 > r0 ? (r - r0) / (r1 - r0) : 1;
+
         /// <summary>Webin avainArvo: lineaarinen arvo avaimista [[ruutu, arvo], …]; päiden ulkopuolella ensimmäinen tai viimeinen.</summary>
         public static double AvainArvo(IReadOnlyList<double[]> avaimet, double r)
         {
@@ -310,7 +320,7 @@ namespace Matkakirja.Linssit.Ajattelijat
                 if (r <= r1)
                 {
                     double r0 = avaimet[i - 1][0], a = avaimet[i - 1][1], b = avaimet[i][1];
-                    double t = r1 > r0 ? (r - r0) / (r1 - r0) : 1;
+                    double t = Valinta(r, r0, r1);
                     return a + (b - a) * t;
                 }
             }
@@ -326,7 +336,7 @@ namespace Matkakirja.Linssit.Ajattelijat
                 if (r <= avaimet[i].R)
                 {
                     var (r0, a) = avaimet[i - 1]; var (r1, b) = avaimet[i];
-                    double t = r1 > r0 ? (r - r0) / (r1 - r0) : 1;
+                    double t = Valinta(r, r0, r1);
                     return a.Select((x, j) => x + (b[j] - x) * t).ToArray();
                 }
             }
@@ -386,7 +396,7 @@ namespace Matkakirja.Linssit.Ajattelijat
                 int i = suhteessa.FindIndex(x => r <= x.r);
                 if (i <= 0) i = i < 0 ? suhteessa.Count - 1 : 0;
                 var b = suhteessa[i]; var a = suhteessa[Math.Max(0, i - 1)];
-                double t = b.r > a.r ? Rajaa((r - a.r) / (b.r - a.r)) : 1;
+                double t = b.r > a.r ? Rajaa(Valinta(r, a.r, b.r)) : 1;
                 var s = a.suunta.Select((x, j) => x + (b.suunta[j] - x) * t).ToArray();
                 double n = Math.Sqrt(s[0] * s[0] + s[1] * s[1] + s[2] * s[2]);
                 if (n == 0) n = 1;

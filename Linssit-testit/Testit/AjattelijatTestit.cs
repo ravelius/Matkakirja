@@ -501,5 +501,29 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(!g.prologi && g.ruutu == 2938 && g.loppu, "lappu aikajanan lopussa");
             Oleta.Tosi(AjattelijaAikajana.Globaali(a, 75).prologi && !AjattelijaAikajana.Globaali(a, 76).prologi, "prologi 75 ruutua");
         }
+        [Testi] static void V14LeikkausruutuOnAskel()
+        {
+            // Välähdys silmä → parta (Päätoimittaja 3.10.2026): ruutujen 135–136 välissä aurinko pysyy sammuksissa, kunnes kamera
+            // leikkaa ruudussa 136; samoin kaikki vierekkäiset avaimet (Blender renderöi vain kokonaiset ruudut).
+            var aj = Lue("sokrates").Aikajana;
+            var au = AjattelijaAikajana.AikajanaAurinko(aj.AurinkoKohde, aj.Aurinko);
+            var k = AjattelijaAikajana.AikajanaKamera(aj.Kamera);
+            foreach (var (ennen, leikkaus) in new[] { (60.0, 61.0), (117.0, 118.0), (135.0, 136.0), (153.0, 154.0), (183.0, 184.0), (1065.0, 1066.0), (1869.0, 1870.0), (2495.0, 2496.0) })
+            {
+                foreach (var r in new[] { ennen + 0.25, ennen + 0.5, leikkaus - 0.01 })
+                {
+                    Oleta.Tosi(Lahella(au(r).paikka, au(ennen).paikka) && au(r).energia == au(ennen).energia, $"aurinko {r} = {ennen}");
+                    Oleta.Tosi(Lahella(k(r).Paikka, k(ennen).Paikka), $"kamera {r} = {ennen}");
+                }
+                Oleta.Tosi(Lahella(au(leikkaus).paikka, au(leikkaus + 0.5).paikka, 1e-3) || au(leikkaus).energia != au(ennen).energia
+                    || !Lahella(au(leikkaus).paikka, au(ennen).paikka), $"aurinko vaihtuu ruudussa {leikkaus}");
+            }
+            Oleta.Sama(0.0, au(135.5).energia);
+            Oleta.Sama(80.0, au(136).energia);
+            Oleta.Sama(1.0, AjattelijaAikajana.AvainArvo(aj.Virta, 1869.6));
+            Oleta.Sama(0.0, AjattelijaAikajana.AvainArvo(aj.Virta, 1870));
+            // Pidemmät välit pysyvät lineaarisina (lainauksen 6 ruudun nousu).
+            Oleta.Sama(88.0, AjattelijaAikajana.AvainArvo(aj.Tykit[0].Energia, 907));
+        }
     }
 }
