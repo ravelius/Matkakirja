@@ -2,7 +2,8 @@
 // mykkä). AudioListenerin OnAudioFilterRead kopioi koko miksauksen muistiin ja NOLLAA ulostulon: mitään ei kuulu kaiuttimista (omistajan
 // kaiuttimet, yö), mutta WAV:ssa on sama ääni kuin laitteella. Kaappauksen ajan ajattelijan lähteet soivat täysillä mykistyksestä
 // huolimatta (Kaynnissa). Kirjoittaa Documents/<nimi>.wav (16 bit PCM) ja kirjaa alun dspTime-hetken (kohdistus kytkimeen).
-// Testikomento: ajattelija kaappaa <s> [nimi]. Vain testikäyttöön (kehittäjätila).
+// Testikomento: ajattelija kaappaa <s> [nimi] ja ajattelija merkki. Vain testikomennoilla (linssi-komento.txt, LueKomennot
+// #if !MATKAKIRJA_APPSTORE; TF-sovellukseen ei voi kirjoittaa komentoja), joten TF:ssä ei koskaan välähdystä eikä piippausta.
 using System;
 using System.IO;
 using UnityEngine;
@@ -82,7 +83,11 @@ namespace Matkakirja.Natiivi
             if (kuuntelija == null) return double.NaN;
             if (piippi == null)
             {
-                piippi = kuuntelija.gameObject.AddComponent<AudioSource>();
+                // Oma lapsiolio: AudioSource samassa oliossa kuin kuuntelija ja sen OnAudioFilterRead-suotimet (TestiMykistys, tämä)
+                // antoi Unityn virheen "multiple AudioSources and/or AudioListeners" kehityskonsoliin (tallenne d, Päätoimittaja).
+                var go = new GameObject("Tahdistusmerkki");
+                go.transform.SetParent(kuuntelija.transform, false);
+                piippi = go.AddComponent<AudioSource>();
                 int f = AudioSettings.outputSampleRate, n = f / 10;
                 var c = AudioClip.Create("tahdistus", n, 1, f, false);
                 var d = new float[n];
