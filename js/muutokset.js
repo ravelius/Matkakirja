@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2593, teksti: 'Joet rauhallisiksi, järvien kevyt ranta ja raet… (#3910)' },
   { v: 2592, teksti: 'Tyylikirja: linssien hampurilaislista, työkalu (#3909)' },
   { v: 2591, teksti: 'Ääniputki: lyhyt isku tasoon (#3907)' },
   { v: 2590, teksti: 'Myllyn laudat: majatalo, luostari ja viikinkila… (#3906)' },
