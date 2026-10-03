@@ -10255,3 +10255,7 @@ Omistaja 3.10.2026 klo 05.5x sanatarkasti: 'Puheääni hyppii kun on koottu eri 
 ## OMISTAJA: AJATTELIJOIDEN KERTOJAKSI IV4 WILLIAM (ELEVEN_V4) VÄLIMERKEILLÄ (3.10.2026) (3.10.2026 klo 06.16)
 
 Omistaja 3.10.2026 klo 06.2x Sokrateen kertojan äänikokeen jälkeen sanatarkasti: 'Viimeisin luenta hyvä. Tallenna tuo kertoja muistiin.' Valittu: Iv4 William – Soothing and Calm (oae6GCCzwoEbfc5FHdEu, isoisäkokeen 28.9. suosikki), malli eleven_v4, vakaus 1.0 (Robust), style 0, ei tunnetageja, teksti välimerkkeineen (lainaukset lainausmerkeissä), yksi pyyntö ja yksi otto (with-timestamps), tasoitus keskitasoon −17,2 dB ja limitteri 0,97. Sokrateen kertoja on tämä otto (86,4 s, proto-3d/_lahteet/sokrates/kertoja-aanikoe-v4/Iv4-william-valimerkit.mp3). Marcus ja tulevat ajattelijat tehdään samalla äänellä, ellei omistaja toisin päätä. Isoisän ääni on erillinen ja yhä avoin päätös.
+
+## OMISTAJA: AJATTELIJOIDEN KERTOJA WILLIAM OLETUSVAKAUDELLA (3.10.2026) (3.10.2026 klo 06.22)
+
+Omistaja 3.10.2026 klo 06.2x: 'Voi kokeilla vakaan sijasta myös oletus asetusta.' ja kuunneltuaan oton: 'Tuo on aavistuksen parempi. Pidetään se'. Tarkennus klo 06.16 kirjaukseen: Iv4 William, eleven_v4, vakaus mallin oletus (stability-kenttä jätetään pois pyynnöstä, Natural noin 0,5), style 0, ei tunnetageja, välimerkeillä, yksi otto, keskitaso −17,2 dB ja limitteri 0,97. Sokrateen kertoja on proto-3d/_lahteet/sokrates/kertoja-aanikoe-v4/Iv4-william-oletus.mp3 (86,8 s).
