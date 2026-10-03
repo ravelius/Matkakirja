@@ -14,6 +14,11 @@
  * f 88,833 s lisätään, kesto 111,0 s (3330 ruutua). Tiedostot kierrokset-puhe.mp3 ja kierrokset-musiikki.mp3, jotta
  * kierroksen 1 v1-tiedostot jäävät ämpäriin ennalleen.
  *
+ * V12 (--v12, vain Sokrates; omistaja 3.10.2026 klo 04.5x): musiikki alkaa levytyksen alusta 0,0 s heti prologin jälkeen ja
+ * soi leikkaamattomana loppuun (levytys hiljenee ~84–86 s); ei otteita, hyppyjä eikä urkusilmukkaa, ja raita jatkuu
+ * hiljaisuutena kohtauksen loppuun. Vaimennus säilyy. Ajat tulevat Linnanrakentajan Blender v12 -luvuista:
+ *   --kesto <s> --luennat a:<s>,b:<s>,c:<s>,… [--vaimennus <alku s>]  → v12-puhe.mp3, v12-musiikki.mp3
+ *
  *   node tools/ajattelija-aaniraita.mjs --ajattelija sokrates|marcus --ulos <kansio> [--lahteet <kansio>] [--kierrokset]
  * Ääni ei kuulu repoon; Julkaisija vie tiedostot ämpäriin (ajattelijat/sokrates/v1/).
  */
@@ -32,6 +37,7 @@ const RESEPTIT = {
   sokrates: {
     lahteet: '/Users/Shared/Claude/proto-3d/_lahteet/sokrates',
     musiikki: 'musiikki/zarathustra-sascha-ende.mp3',   // Sascha Ende, CC BY 4.0
+    v12: { osat: [[0, 91.27]] },                        // koko levytys alusta loppuun (91,27 s), ei silmukkaa
     osat: [[13.0, 22.517], [60.5, 80.0]],               // trumpetit → loppusointu (levytys hiljenee 80 s:n jälkeen)
     silmukka: [66.0, 80.0],                             // urkupohja (sokrates_aani_v10.py)
     luennat: [['luennat/a-otto1.mp3', 20.0], ['luennat/b-otto1.mp3', 32.0]],
@@ -60,16 +66,22 @@ const R = RESEPTIT[AJATTELIJA];
 if (!R) throw new Error(`tuntematon ajattelija ${AJATTELIJA}`);
 const LAHTEET = resolve(arvo('--lahteet', R.lahteet));
 const ULOS = resolve(arvo('--ulos', '.'));
+const V12 = A.includes('--v12');
+if (V12 && !R.v12) throw new Error(`${AJATTELIJA}: ei v12-reseptiä`);
+if (V12 && !(A.includes('--kesto') && A.includes('--luennat'))) throw new Error('--v12 vaatii --kesto ja --luennat (Blender v12 -luvut)');
 const KIERROKSET = A.includes('--kierrokset');
 if (KIERROKSET && !R.kierrokset) throw new Error(`${AJATTELIJA}: ei kierrosten 2–3 reseptiä`);
-const KESTO = KIERROKSET ? R.kierrokset.kesto : 48.333;
-const LUENNAT = KIERROKSET ? [...R.luennat, ...R.kierrokset.luennat] : R.luennat;
-const ETULIITE = KIERROKSET ? 'kierrokset' : 'kierros1';
-const OSAT = (KIERROKSET && R.kierrokset.osat) || R.osat;
+const KESTO = V12 ? Number(arvo('--kesto')) : KIERROKSET ? R.kierrokset.kesto : 48.333;
+const LUENNAT = V12
+  ? arvo('--luennat').split(',').map((pari) => { const [k, t] = pari.split(':'); return [`luennat/${k}-otto1.mp3`, Number(t)]; })
+  : KIERROKSET ? [...R.luennat, ...R.kierrokset.luennat] : R.luennat;
+const ETULIITE = V12 ? 'v12' : KIERROKSET ? 'kierrokset' : 'kierros1';
+const OSAT = (V12 && R.v12.osat) || (KIERROKSET && R.kierrokset.osat) || R.osat;
+const SILMUKKA = V12 ? null : R.silmukka;
 const SILMUKAN_HAIVYTYS = 3;
 // Vaimennus (s, kierroksen ajassa): päälause ja lähderivi 17,5–31,7 sekä luennat → yhtenäinen ikkuna 17,5 s → loppu;
 // nimi ja kysymys (9,4–15,4 s) saavat musiikin täytenä. v10: ×0,22 (−13 dB), ramppi 2 s, viimeiset 2,7 s ×0,7.
-const VAIMENNUS = { alku: 17.5, taso: 0.22, ramppi: 2 };
+const VAIMENNUS = { alku: Number(arvo('--vaimennus', 17.5)), taso: 0.22, ramppi: 2 };
 const LOPPU = { kesto: 2.7, taso: 0.7 };
 mkdirSync(ULOS, { recursive: true });
 const ff = (...args) => execFileSync('ffmpeg', ['-y', '-loglevel', 'error', ...args], { stdio: 'inherit' });
@@ -83,8 +95,8 @@ ff(...LUENNAT.flatMap(([f]) => ['-i', join(LAHTEET, f)]), '-filter_complex',
 
 // Musiikki: osat ristihäivytettyinä, sitten (valinnainen) urkupohjan silmukka ristihäivytettyinä, kunnes kesto täyttyy.
 const pituus = OSAT.reduce((s, [a, l]) => s + l - a, 0) - 0.15 * (OSAT.length - 1);
-const kopioita = R.silmukka && pituus < KESTO
-  ? Math.ceil((KESTO - pituus + SILMUKAN_HAIVYTYS) / (R.silmukka[1] - R.silmukka[0] - SILMUKAN_HAIVYTYS)) + 1 : 0;
+const kopioita = SILMUKKA && pituus < KESTO
+  ? Math.ceil((KESTO - pituus + SILMUKAN_HAIVYTYS) / (SILMUKKA[1] - SILMUKKA[0] - SILMUKAN_HAIVYTYS)) + 1 : 0;
 const { alku: va, taso, ramppi } = VAIMENNUS;
 const vaimennus = `'if(lt(t,${va}),1,max(${taso},1-(1-${taso})*(t-${va})/${ramppi}))`
   + `*if(gt(t,${(KESTO - LOPPU.kesto).toFixed(3)}),${LOPPU.taso},1)':eval=frame`;
@@ -97,8 +109,9 @@ for (const i of kopiot) { ketju += `[${viimeinen}][s${i}]acrossfade=d=${SILMUKAN
 ff('-i', join(LAHTEET, R.musiikki), '-filter_complex',
   `[0]aformat=sample_rates=48000:channel_layouts=stereo,asplit=${OSAT.length + kopioita}${osaNimet.map((n) => `[r${n}]`).join('')}${kopiot.map((i) => `[u${i}]`).join('')};`
   + OSAT.map(([a, l], i) => `[ro${i}]atrim=${a}:${l},asetpts=PTS-STARTPTS[o${i}];`).join('')
-  + kopiot.map((i) => `[u${i}]atrim=${R.silmukka[0]}:${R.silmukka[1]},asetpts=PTS-STARTPTS[s${i}];`).join('')
+  + kopiot.map((i) => `[u${i}]atrim=${SILMUKKA[0]}:${SILMUKKA[1]},asetpts=PTS-STARTPTS[s${i}];`).join('')
   + ketju
-  + `[${viimeinen}]atrim=0:${KESTO},volume=${vaimennus},volume=0.75,alimiter=limit=0.95[out]`,
+  // v12: levytys loppuu ennen kohtausta → hiljaisuutta loppuun asti (muuten raita jäisi lyhyeksi).
+  + `[${viimeinen}]${V12 ? `apad=whole_dur=${KESTO},` : ''}atrim=0:${KESTO},volume=${vaimennus},volume=0.75,alimiter=limit=0.95[out]`,
   '-map', '[out]', '-c:a', 'libmp3lame', '-b:a', '160k', join(ULOS, `${ETULIITE}-musiikki.mp3`));
 console.log('valmis:', ULOS);
