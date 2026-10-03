@@ -725,6 +725,15 @@ namespace Matkakirja.Natiivi
                 case "mittaa": MittaaKoko(1.2f); break;
                 case "auto": AsetaAuto(true); break;          // AUTO päälle (web PR #3817)
                 case "auto-pois": AsetaAuto(false); break;
+                default:
+                    // ui linssi kuvaselite zoomi:<x>: kuva x-kertaiseksi keskeltä (rajattu ylärajaan Suurin = 8×), tila lokiin.
+                    if (komento.StartsWith("zoomi:") && float.TryParse(komento.Substring(6), System.Globalization.NumberStyles.Float,
+                            System.Globalization.CultureInfo.InvariantCulture, out float z))
+                    {
+                        ZoomaaKohtaan(z, new Vector2(lava.layout.width / 2f, lava.layout.height / 2f));
+                        return $"zoomi {zoomi:0.##} (yläraja {Suurin:0.##}, kuva {tekstuuri?.width ?? 0} px, näytetty {sovitus.width:0} pt)";
+                    }
+                    break;
             }
             return SeliteTila;
         }
