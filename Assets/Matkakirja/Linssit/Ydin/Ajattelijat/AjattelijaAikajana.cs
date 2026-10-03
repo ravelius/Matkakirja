@@ -227,8 +227,12 @@ namespace Matkakirja.Linssit.Ajattelijat
         {
             double pl = a.Prologi.Loppu, loppu = Loppu(a);
             if (g <= pl) return (true, Math.Max(1, g), false);
-            double r = Math.Min(g - pl, loppu);
-            return (false, r, g - pl >= loppu);
+            // AIKAJANA ON 1-POHJAINEN (Linnanrakentajan luvut = Blender: ruutu 1 = 0,0 s, aika = (ruutu − 1) / 30; Linssiseppä 1
+            // 4.10.2026): puheraidan alku (g = pl) on ruutu 1. Ennen luettiin 0-pohjaisena, ja kaikki avaimet (leikkaukset, valot,
+            // tykit) näkyivät 33 ms raidan iskujen jälkeen (omistaja TF 133: iskut "eivät ihan osu"). Kierrokset (webin oma data) ennallaan.
+            double r0 = g - pl + (a.Aikajana != null ? 1 : 0);
+            double r = Math.Min(r0, loppu);
+            return (false, r, r0 >= loppu);
         }
 
         /// <summary>Webin ajattelijaSiemenluku (mulberry32): sama siemen → sama jono kuin webissä.</summary>

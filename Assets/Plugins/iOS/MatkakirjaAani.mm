@@ -151,6 +151,15 @@ extern "C" bool MatkakirjaAani_Varmista(void)
 
 // Bluetooth-reitti (omistaja 29.9.2026: luennan alku jäi kuulematta AirPodseilla): Puhe esilämmittää linkin lyhyellä
 // hiljaisella viiveellä ennen uutta klippiä, kun jokin ulostulo on Bluetooth (A2DP, LE tai HFP).
+// ULOSTULON VIIVE (Linssiseppä 2, 3.10.2026; omistaja TF 133: ajattelijan iskut "lähellä mutta eivät ihan osu"): aika, jonka
+// ääninäyte kulkee Unityn miksauksesta korvaan laitteen puolella: outputLatency (reitti: kaiutin, kuulokkeet, Bluetooth ~0,15–0,25 s)
+// + IOBufferDuration (Core Audion puskuri). Sekunteina; AjattelijatSovitin siirtää kohtauksen kelloa tämän verran (AaniIstunto.Viive).
+extern "C" double MatkakirjaAani_Viive(void)
+{
+    AVAudioSession* istunto = [AVAudioSession sharedInstance];
+    return istunto.outputLatency + istunto.IOBufferDuration;
+}
+
 extern "C" bool MatkakirjaAani_Bluetooth(void)
 {
     for (AVAudioSessionPortDescription* p in [AVAudioSession sharedInstance].currentRoute.outputs)

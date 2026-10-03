@@ -1,0 +1,37 @@
+{
+ "kuvalahteet": [
+  {
+   "kuva": "kaiku-jumala.png",
+   "kohde": "Jumalankuva (Alkibiadeen vertaus satyyripatsaista)",
+   "teos": "Zeus tai Poseidon, Artemisionin pronssipatsas n. 460 eaa., Ateenan kansallinen arkeologinen museo",
+   "tekija": "Kuva: Jebulon",
+   "lisenssi": "CC0",
+   "lahde": "Wikimedia Commons: Bronze_Zeus_or_Poseidon_NAMA_X_15161_Athens_Greece.jpg"
+  },
+  {
+   "kuva": "kaiku-sotilas.png",
+   "kohde": "Sotilas (Potidaia, Amfipolis ja Delion)",
+   "teos": "Kreikkalaisen hopliitin pronssipatsas, Altes Museum, Berliini",
+   "tekija": "Kuva: Gary Todd / WorldHistoryPics.com",
+   "lisenssi": "CC0",
+   "lahde": "Wikimedia Commons: Ancient Greece Bronze Hoplite Warrior Statue (28660212241).jpg"
+  },
+  {
+   "kuva": "kaiku-oraakkeli.png",
+   "kohde": "Delfoin oraakkeli",
+   "teos": "Pronssikolmijalan rekonstruktio, Olympian arkeologinen museo",
+   "tekija": "Davide Mauro",
+   "lisenssi": "CC BY-SA 4.0 (rajattu harmaasävyjohdannainen samalla lisenssillä)",
+   "lahde": "Wikimedia Commons: Reconstrunction of a bronze tripod cauldron.jpg",
+   "nimea": "Davide Mauro, CC BY-SA 4.0, Wikimedia Commons"
+  },
+  {
+   "kuva": "kaiku-kuolema.png",
+   "kohde": "Sokrateen kuolema",
+   "teos": "Jacques-Louis David: Sokrateen kuolema (1787), The Metropolitan Museum of Art, New York",
+   "tekija": "Jacques-Louis David",
+   "lisenssi": "Public domain (The Met Open Access, CC0)",
+   "lahde": "The Metropolitan Museum of Art, Open Access"
+  }
+ ]
+}
