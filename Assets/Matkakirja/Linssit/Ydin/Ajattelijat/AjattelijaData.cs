@@ -209,6 +209,12 @@ namespace Matkakirja.Linssit.Ajattelijat
         // Savumaski (v13c): 240 ruutua neljänä kanavana 8 × 8 laatassa; null = ei savua.
         public string SavuKuva;
         public double SavuAla, SavuKesto, SavuFps, SavuRuutuja, SavuYdin = 0.28, SavuVahvuus;
+        /// <summary>
+        /// Pehmeä savu (omistaja TF 133): maskin sumennus laatan uv:nä ja harso (tummennuksen osuus, 1 = webin v5-varjo).
+        /// Oletukset natiivin itsetarkistuksesta; data voi antaa omat (savu.pehmeys, savu.harso).
+        /// </summary>
+        public double SavuPehmeys = OletusSavuPehmeys, SavuHarso = OletusSavuHarso;
+        public const double OletusSavuPehmeys = 0.04, OletusSavuHarso = 0.5;
         public double[] TykkiVari, KaikuVari;
         // Rakovalo (v14b), ympäristövalon kerroin [[ruutu, kerroin]] ja varjolevy (vain varjo).
         public List<RakoAvain> Rako;
@@ -550,6 +556,7 @@ namespace Matkakirja.Linssit.Ajattelijat
             {
                 aj.SavuKuva = sk; aj.SavuAla = L(sa, "ala"); aj.SavuKesto = L(sa, "kesto"); aj.SavuFps = L(sa, "fps"); aj.SavuRuutuja = L(sa, "ruutuja");
                 aj.SavuYdin = Lv(sa, "ydin", 0.28); aj.SavuVahvuus = Lv(sa, "vahvuus", 0);
+                aj.SavuPehmeys = Lv(sa, "pehmeys", AjattelijaAikajanaData.OletusSavuPehmeys); aj.SavuHarso = Lv(sa, "harso", AjattelijaAikajanaData.OletusSavuHarso);
             }
             aj.TykkiVari = K(o, "tykkiVari") is object tv ? Vek(tv) : null;
             aj.KaikuVari = K(o, "kaikuVari") is object kv ? Vek(kv) : null;

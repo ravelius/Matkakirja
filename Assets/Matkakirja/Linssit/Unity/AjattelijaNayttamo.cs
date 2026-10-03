@@ -906,6 +906,18 @@ namespace Matkakirja.Natiivi
             mat.SetTexture("_Savu", savu);
             double vahvuus = aj.SavuVahvuus, ydin = aj.SavuYdin;
             mat.SetFloat("_SavuC0", vahvuus > 1 - ydin ? (float)((ydin - (1 - vahvuus)) / vahvuus) : 0f);
+            AsetaSavunPehmeys();
+        }
+
+        /// <summary>Testikomento `ajattelija savupehmeys <säde>` / `savuharso <0..1>` (NaN = datan arvo); vaikuttaa heti.</summary>
+        public static double PehmeysOhitus = double.NaN, HarsoOhitus = double.NaN;
+
+        public void AsetaSavunPehmeys()
+        {
+            if (aj == null || mat == null) return;
+            double r = double.IsNaN(PehmeysOhitus) ? aj.SavuPehmeys : PehmeysOhitus;
+            double h = double.IsNaN(HarsoOhitus) ? aj.SavuHarso : HarsoOhitus;
+            mat.SetVector("_SavuPehmeys", new Vector4((float)r, (float)h, 0, 0));
         }
 
         /// <summary>Lähin osuma bystiin (Möller–Trumbore kaikkiin kolmioihin); normaali säteen puolelle.</summary>

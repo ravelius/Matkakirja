@@ -725,6 +725,14 @@ namespace Matkakirja.Natiivi
                 ruutuOhitus = arvo == "pois" ? double.NaN : (Valittu?.Prologi.Loppu ?? 120) + double.Parse(arvo, System.Globalization.CultureInfo.InvariantCulture);
             else if (mita == "prologi" && arvo != null) ruutuOhitus = double.Parse(arvo, System.Globalization.CultureInfo.InvariantCulture);
             else if (mita == "lappu") { Lopussa = true; Muuttui?.Invoke(); }
+            else if ((mita == "savupehmeys" || mita == "savuharso") && arvo != null)
+            {
+                double v = arvo == "pois" ? double.NaN : double.Parse(arvo, System.Globalization.CultureInfo.InvariantCulture);
+                if (mita == "savupehmeys") AjattelijaNayttamo.PehmeysOhitus = v; else AjattelijaNayttamo.HarsoOhitus = v;
+                nayttamo?.AsetaSavunPehmeys();
+                o.Kirjaa($"ajattelija: savu pehmeys {AjattelijaNayttamo.PehmeysOhitus} harso {AjattelijaNayttamo.HarsoOhitus} (NaN = data)");
+                return;
+            }
             else if (mita == "viive" && arvo != null)
             {
                 // Mittauksen kalibrointi: lisäsiirto ms (+ = kuva myöhemmin); vaikuttaa heti (kello lasketaan joka ruutu).

@@ -76,6 +76,7 @@ Shader "Matkakirja/AjattelijaKipsi"
             float4 _SavuTila;       // päällä, ala (m), laatan u, v (webin kuvasuunnassa)
             float4 _SavuKanava;
             float _SavuC0;
+            float4 _SavuPehmeys;    // x: sumennuksen säde laatan uv:nä, y: harso (0 = ei savua, 1 = webin täysi varjo)
 
             struct Tulo { float4 paikka : POSITION; float3 normaali : NORMAL; float4 tangentti : TANGENT; float2 uv : TEXCOORD0; };
             struct Ulos
@@ -236,13 +237,27 @@ Shader "Matkakirja/AjattelijaKipsi"
 
             /* Savu (v13c): maskin uv = (X/Z · etäisyys) / ala + 0,5 projektorin kuvatasossa; 1 = täysi valo, ulkopuolella täysi.
                Webin v (flipY false, rivi 0 ylhäällä) → Unityn 1 − v (LoadImage: rivi 0 alimpana). */
+            float SavuMaski(float2 uv)
+            {
+                // Laatan sisällä (8 × 8 atlas, 256 px laatta): puolen tekselin reuna, ettei naapuriruutu vuoda sumennukseen.
+                float2 w = _SavuTila.zw + clamp(uv, 0.002, 0.998) * 0.125;
+                return dot(SAMPLE_TEXTURE2D_LOD(_Savu, sampler_Savu, float2(w.x, 1.0 - w.y), 0), _SavuKanava);
+            }
+
+            /* PEHMEÄ SAVU (omistaja TF 133: kiehkurat "aivan terävinä varjoina"; Päätoimittaja: ohut savuharso valossa, ei varjo):
+               maski sumennetaan viidellä näytteellä (keskus + neljä kierrettyä kulmaa säteellä _SavuPehmeys.x; bilineaarinen
+               suodatus pehmentää loput) ja tummennus laimennetaan harsoksi: valo = lerp(1, maski, _SavuPehmeys.y). */
             float SavuNayte(float x, float y)
             {
                 float2 uv = float2(x, y) / _SavuTila.y + 0.5;
                 if (uv.x <= 0.0 || uv.x >= 1.0 || uv.y <= 0.0 || uv.y >= 1.0) return 1.0;
-                float2 w = _SavuTila.zw + uv * 0.125;
-                float m = dot(SAMPLE_TEXTURE2D_LOD(_Savu, sampler_Savu, float2(w.x, 1.0 - w.y), 0), _SavuKanava);
-                return saturate((m - _SavuC0) / (1.0 - _SavuC0));
+                float r = _SavuPehmeys.x;
+                float m = SavuMaski(uv);
+                if (r > 0.0)
+                    m = 0.2 * (m + SavuMaski(uv + float2(r, 0.4 * r)) + SavuMaski(uv + float2(-0.4 * r, r))
+                             + SavuMaski(uv + float2(-r, -0.4 * r)) + SavuMaski(uv + float2(0.4 * r, -r)));
+                float s = saturate((m - _SavuC0) / (1.0 - _SavuC0));
+                return lerp(1.0, s, _SavuPehmeys.y);
             }
 
             float3 ProjektoriValo(float3 p, float3 n)
