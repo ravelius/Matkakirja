@@ -1395,10 +1395,10 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
         kulma = math.radians(-20 + 720 * i_ / 16); sade_ = Vector((math.cos(kulma), math.sin(kulma), 0.0)) * 0.9 + Vector((0, 0, 0.5))
         aur_avain(a6 + (l6 - a6) * i_ / 16, tuple(sade_), 60)
     aur_avain(k_('07', 0) - 0.2, R, 70, LAMMIN); aur_avain(k_('08', 0) - 0.05, R, 70, LAMMIN)   # 07 lämmin valo, 30e
-    KOVA = (0.12, -0.50, 1.0)   # v13b: "kova kuin kuulustelussa" — yksi kova valo ylhäältä hieman edestä, ei täyttöä
-    aur_avain(k_('08', 0), KOVA, 200 if V14 else 110); aur_avain(k_('09', 0) - 0.5, KOVA, 20 if V14 else 110);
+    KOVA = (0.80, -0.80, 0.30) if V14 else (0.12, -0.50, 1.0)   # v13b: "kova kuin kuulustelussa" — yksi kova valo ylhäältä hieman edestä, ei täyttöä; v14 (Päätoimittaja 17.x): 45° sivulta edestä silmien yläpuolelta → ei pääkalloa
+    aur_avain(k_('08', 0), KOVA, 42 if V14 else 110); aur_avain(k_('09', 0) - 0.5, KOVA, 18 if V14 else 110);
     if V14:   # kamera kääntyy alaviistosta eteen → sama näkyvä kirkkaus (mitattu kasvojen mediaani ~35–60/255)
-        for dt_, e_ in ((5.0, 150), (8.0, 50), (11.0, 30)): aur_avain(k_('08', 0) + dt_, KOVA, e_)   # v14: tekstitön 08 näkyy (mediaani ~40–60), kamera kääntyy eteen → energia laskee
+        for dt_, e_ in ((5.0, 38), (8.0, 28), (11.0, 22)): aur_avain(k_('08', 0) + dt_, KOVA, e_)   # v14: tekstitön 08 näkyy (mediaani ~40–60), kamera kääntyy eteen → energia laskee
     aur_avain(k_('09', 0) + 0.3, KOVA, 60); aur_avain(illan_t - 0.05, KOVA, 60)            # 08–09: kova, suora valo
     malja_t = T(W.get('myrkkymaljan', K['10'][0] + 1.5))
     ILTASUUNTA = (1.0, -0.15, 0.22)
@@ -1527,11 +1527,11 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
         ao.keyframe_insert('location', frame=F(t_)); ao.keyframe_insert('rotation_euler', frame=F(t_))
         aur.energy = e; aur.keyframe_insert('energy', frame=F(t_)); aur.color = vari; aur.keyframe_insert('color', frame=F(t_))
     # Päätoimittaja 3.10.: kipsi ei saa olla tasaisen beige → 06–07 neutraali avainvalo, ilta (08) vain lievästi lämmin
-    R = V12_REM_AURINKO; LAMMIN = (1.0, 0.95, 0.88); ILTA = (1.0, 0.82, 0.62); KOVA = (0.12, -0.50, 1.0)
+    R = V12_REM_AURINKO; LAMMIN = (1.0, 0.95, 0.88); ILTA = (1.0, 0.82, 0.62); KOVA = (0.80, -0.80, 0.30) if V14 else (0.12, -0.50, 1.0)
     if V14: aur_avain(T(0) - 1.0, R, 95); aur_avain(T(0), V14_REUNA, 19)                               # Rembrandt → tummenee 11–12 s (linssi)
     else: aur_avain(T(0) - 0.6, R, 95); aur_avain(T(0) + 1.0, R, 45)                             # 01
-    aur_avain(k_('03', 0) - 0.05, R, 45); aur_avain(k_('03', 0), KOVA, 160 if V14 else 110)                      # 03 sota ja rutto: kova yläviisto
-    aur_avain(sade_t - 0.6, KOVA, 30 if V14 else 110); aur_avain(sade_t + 0.8, R, 16)                           # 04 sadeihme: kaiku, ääriviiva kehystää
+    aur_avain(k_('03', 0) - 0.05, R, 45); aur_avain(k_('03', 0), KOVA, 45 if V14 else 110)                      # 03 sota ja rutto: kova yläviisto
+    aur_avain(sade_t - 0.6, KOVA, 25 if V14 else 110); aur_avain(sade_t + 0.8, R, 16)                           # 04 sadeihme: kaiku, ääriviiva kehystää
     a5, l5 = k_('05', 0), k_('05', 1)                                                              # 05 niemi: valo keinuu kuin aallot
     for i_ in range(9):
         kulma = math.radians(-20 + 40 * (i_ % 2)); aur_avain(a5 + (l5 - a5) * i_ / 8, (math.cos(kulma), -0.3 + 0.5 * math.sin(kulma), 0.5), 50)
