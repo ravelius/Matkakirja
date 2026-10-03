@@ -3,9 +3,9 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
-## SOKRATES v12–v13 (3.10. 07.x): sokrates_bysti.py --v13 TAUSTA SYKE [--kertoja ajat.json] (= v12 intro: musiikki alusta,
+## SOKRATES v12–v13b VALMIS (Päätoimittaja hyväksyi 3.10.; sotilaan kuva paikkamerkki, Codex korvaa): sokrates_bysti.py --v13 TAUSTA SYKE [--kertoja ajat.json] (= v12 intro: musiikki alusta,
 ## leikkaukset 17,35/20,85/21,6/22,4, Rembrandt 24,1 s, sivuvalo; + v13 kierrokset kertojan Iv4 William -oletusoton mukaan, alku 28,0 s).
-## Luvut docs/raportit/ajattelijat-v11/sokrates-luvut-v13.json (haara linnanrakentaja-sokrates-bysti 847976897) Pelikoodarilla,
+## Luvut docs/raportit/ajattelijat-v11/sokrates-luvut-v13.json (haara linnanrakentaja-sokrates-bysti ffa1c9c94) Pelikoodarilla,
 ## stillit Päätoimittajalla. Kaiut keskisävy (sokrates_kaiku.py keski) → proto-3d/_lahteet/sokrates/gobot-v13/. Marcus ei muuttunut.
 ## Ajo: --v7 <gobot-v13> <ulos> --koko 540 1170 --naytteita 24 --v13 <gobot-v10> <syke.json> --vinjetti 32 --terava --ruudut …
 ## (syötteet scratchpad ef21bbc6…/ajat). Linssiseppä sai intron leikkausajat.
