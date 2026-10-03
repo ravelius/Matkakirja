@@ -1204,7 +1204,7 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     jum_t = T(W.get('jumalankuvia', K['01'][1] - 1.4))
     kaiku('kaiku-jumala', 'kaiku-jumala.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, jum_t, k_('02', 0) + 1.2, 9.0, haiv=30)   # himmeä
     kaiku('kaiku-sotilas', 'kaiku-sotilas.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, k_('02', 0), k_('03', 0) + 0.8, 26.0)
-    kaiku('kaiku-oraakkeli', 'kaiku-oraakkeli.png', sp, sn, (SIVU * 0.55 + YLOS * 0.30) if V13C else (SIVU * 0.15 + YLOS * 0.12), 0.08 if V13C else 0.07, k_('04', 0) + 0.3, k_('05', 0) - 0.2, 32.0)
+    kaiku('kaiku-oraakkeli', 'kaiku-oraakkeli.png', sp, sn, (SIVU * 0.55 + YLOS * 0.30) if V13C else (SIVU * 0.15 + YLOS * 0.12), 0.08 if V13C else 0.07, k_('04', 0) + 0.3, k_('05', 0) - 0.2, 12.0 if V13C else 32.0)   # v13c: rajattu punakuvio on lähes kokonaan vaaleaa
     illan_t = T(W.get('Illan', K['10'][0])); rivi_t = T(W.get('riviäkään', K['10'][0] + 6.8))
     kaiku('kaiku-david', 'kaiku-kuolema.png', vp, vn, Vector((0.0, -0.55, 0.30)), 0.11, illan_t, rivi_t + 0.3, 70.0, haiv=24)
     # --- lainaukset nauhoina (vierivät tasaisella nopeudella, näkyvät lainauksen ajan) ---

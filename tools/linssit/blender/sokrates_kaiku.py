@@ -16,7 +16,9 @@ if tapa == 'rajattu':
     rgba = src.convert('RGBA').crop((x0, y0, x1, y1)); rgba.thumbnail((2048, 2048), Image.LANCZOS)
     alfa = rgba.getchannel('A'); im = ImageOps.autocontrast(rgba.convert('L'), cutoff=1.0, mask=alfa.point(lambda v: 255 if v > 128 else 0))
     s_ = lambda x: 0.5 + 0.5 * _m.tanh(2.6 * (x - 0.5)) / _m.tanh(1.3)
-    im = im.point(lambda v: int(8 + 247 * s_(v / 255))).filter(ImageFilter.UnsharpMask(1.5, 80, 2))
+    # projektorissa musta = ei valoa: alfa kerrotaan sävyyn (maski), ja hahmon sisäsävyt nostetaan välille 0,27–1,0,
+    # jotta tummakin hahmo (hopliittipronssi) piirtyy valona eikä katoa varjoon
+    im = im.point(lambda v: int(70 + 185 * s_(v / 255))).filter(ImageFilter.UnsharpMask(1.5, 80, 2))
     ImageChops.multiply(im, alfa).save(ulos); print('KAIKU', ulos, tapa, im.size); sys.exit()
 if src.mode in ('RGBA', 'LA') or 'transparency' in src.info:
     tausta = Image.new('RGBA', src.size, (255, 255, 255, 255)); tausta.alpha_composite(src.convert('RGBA')); src = tausta
