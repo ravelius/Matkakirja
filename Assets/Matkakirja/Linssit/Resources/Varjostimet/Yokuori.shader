@@ -306,7 +306,7 @@ Shader "Matkakirja/Linssit/Yokuori"
                     // Kohinan koordinaatit pituus- ja leveyspiiristä km:nä. (Ei p·tangentti: paikallinen tangentti on kohtisuorassa p:tä
                     // vastaan, joten pistetulo on ≈ 0 ± pyöristys ja solu vaihtui pikseleittäin — simulla rakeina 3.10.)
                     float2 q = float2(lon * cos(lat), lat) * 6371.0;
-                    float2 tq = float2(q.x * 0.2, q.y);                                // tuuli itä–länsi: juovat venyvät 5 ×
+                    float2 tq = float2(q.x * 0.33, q.y);                               // tuuli itä–länsi: juovat venyvät 3 ×
                     float karheus = 0.75 + 0.45 * Arvokohina(q / 25.0 + 17.0);
                     // Aaltojuovat 8 km ja 2,5 km (simu c0e73c4e: 1,4 / 0,35 km näkyi pikselikohinana, ei juovina). Oktaavi on
                     // täysin mukana, kun solu on ≥ 5 kuvapikseliä, ja poissa ≤ 3 pikselillä; puuttuva vaihtelu siirtyy σ²:een.
@@ -314,10 +314,12 @@ Shader "Matkakirja/Linssit/Yokuori"
                     float w1 = saturate((8.0 / pk - 3.0) * 0.5), w2 = saturate((2.5 / pk - 3.0) * 0.5);
                     float sx = 0.65 * w1 * Arvokohina(tq / 8.0) + 0.35 * w2 * Arvokohina(tq / 2.5 + 41.0);
                     float sy = 0.65 * w1 * Arvokohina(tq / 8.0 + 93.0) + 0.35 * w2 * Arvokohina(tq / 2.5 + 7.0);
-                    float sig = sqrt(_Aalto * 0.6) * 1.6 * karheus;                   // normaalin värähtelyn hajonta
+                    // Simu 3559411b: hajonta 1,6·√(0,6σ²) ja paikallinen 0,4σ² hajottivat kiillon siveltimenvedoiksi ilman ydintä;
+                    // nyt paikallinen 0,6σ² ja värähtely 1,2·√(0,4σ²), joten ydin pysyy yhtenäisenä ja juovat näkyvät reunoilla.
+                    float sig = sqrt(_Aalto * 0.4) * 1.2 * karheus;                   // normaalin värähtelyn hajonta
                     nw = normalize(ng + (ita * sx + poh * sy) * sig);
                     float puuttuu = 1.0 - (0.4225 * w1 * w1 + 0.1225 * w2 * w2) / 0.545;
-                    aaltoS = _Aalto * (0.4 + 0.6 * puuttuu) * karheus * karheus;
+                    aaltoS = _Aalto * (0.6 + 0.4 * puuttuu) * karheus * karheus;
                 }
                 float nh = saturate(dot(nw, hv));
                 float nh2 = max(nh * nh, 1e-4);
