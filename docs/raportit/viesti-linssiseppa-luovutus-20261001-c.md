@@ -3,6 +3,12 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 3.10. (AJATTELIJOIDEN ALKU v14)
+- Omistaja 14.5x: alku liian hidas → v14: kertoja musiikin 9,5 s:n kohdalla (linssissä 12,0 s), suuri sointu 2,0, iskut 3,9/4,5/5,1,
+  huippu 6,1, kysymys 8,3. Sokrates (savellys.py AJAT) ja Marcus (marcus.py AJAT) *-v14.mp3 + kuunteluversiot −8 dB.
+  Ajat lähetetty Linnanrakentajalle, Pelikoodarille ja Päätoimittajalle. EI ämpäriin ennen omistajan hyväksyntää.
+- linssihampurilainen 1e2ea061 ja yovalot-natrium 486d8dfc merge-pyynnössä Natiivisepällä (juna 133). Taikalasiero tarkoituksellinen.
+
 ## TILA 3.10. KLO 15.xx
 - YÖVALOT NATRIUMORANSSI (omistaja 14.2x): linssiseppa/yovalot-natrium 486d8dfc (1 rivi Yokuori.shader), käännös d815dc0f,
   simu PASS; Päätoimittaja kuittasi, MERGE-PYYNNÖSSÄ Natiivisepällä junaan 133. Kuvapari lokit/linssiseppa-yovalot-natrium-20261003-iphone.
