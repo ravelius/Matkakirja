@@ -855,6 +855,13 @@ namespace Matkakirja.Natiivi
                     t => o.Kirjaa("ajattelija: " + t));
                 return;
             }
+            else if (mita == "merkki")
+            {
+                // Tallenteen tahdistusmerkki (välähdys + piippaus samaan äänikellon hetkeen), kaappauksen aikana.
+                double T = AaniKaappaus.Merkki(0.5, Viive());
+                o.Kirjaa($"ajattelija: merkki dsp {T:F4} s, viive {Viive() * 1000:F0} ms");
+                return;
+            }
             else if (mita == "pcm" && arvo != null)
             {
                 // Mittaus (Linssiseppä 2 4.10.): Unityn dekoodaama musiikki 1 s hetkestä <s> (raidan näyte, ei ohitusta) monona

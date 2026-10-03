@@ -68,6 +68,44 @@ namespace Matkakirja.Natiivi
             enabled = false;
         }
 
+        // TAHDISTUSMERKKI (Päätoimittaja 4.10.: tallenne c:n ääni oli yhdistetty 0,8 s myöhään, koska kohdistin valon täyteen kirkkauteen):
+        // valkoinen koko ruudun välähdys ja 1 kHz:n piippaus samaan äänikellon hetkeen. Piippaus PlayScheduledilla hetkeen T, välähdys
+        // näkyy, kun äänikello + viive on välillä T … T + 0,1 s (sama kompensaatio kuin ajattelijan kuvalla). Yhdistys etsii välähdyksen
+        // videon aikaleimoista ja piippauksen WAV:sta.
+        static double merkkiT = double.NaN, merkkiViive;
+        static AudioSource piippi;
+
+        /// <summary>Merkki etumatkalla s (äänikello); viive = ulostulon viive − näyttö (kuten AjattelijatSovitin).</summary>
+        public static double Merkki(double etumatka, double viive)
+        {
+            var kuuntelija = FindAnyObjectByType<AudioListener>();
+            if (kuuntelija == null) return double.NaN;
+            if (piippi == null)
+            {
+                piippi = kuuntelija.gameObject.AddComponent<AudioSource>();
+                int f = AudioSettings.outputSampleRate, n = f / 10;
+                var c = AudioClip.Create("tahdistus", n, 1, f, false);
+                var d = new float[n];
+                for (int i = 0; i < n; i++) d[i] = 0.6f * Mathf.Sin(2 * Mathf.PI * 1000f * i / f);
+                c.SetData(d, 0);
+                piippi.clip = c; piippi.playOnAwake = false; piippi.spatialBlend = 0;
+            }
+            merkkiT = AudioSettings.dspTime + etumatka;
+            merkkiViive = viive;
+            piippi.volume = 1f;
+            piippi.PlayScheduled(merkkiT);
+            return merkkiT;
+        }
+
+        void OnGUI()
+        {
+            if (double.IsNaN(merkkiT)) return;
+            double t = AudioSettings.dspTime - merkkiViive;
+            if (t >= merkkiT && t < merkkiT + 0.1)
+                GUI.DrawTexture(new Rect(0, 0, Screen.width, Screen.height), Texture2D.whiteTexture);
+            else if (t >= merkkiT + 0.1) merkkiT = double.NaN;
+        }
+
         void OnDisable() { TestiMykistys.KaappausNollaa = false; if (puskuri != null) { Kaynnissa = false; AudioListener.volume = taso; } }
 
         static byte[] Wav(float[] d, int n, int kan, int f)
