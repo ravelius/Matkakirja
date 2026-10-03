@@ -109,8 +109,11 @@ namespace Matkakirja.Natiivi
             peliTaso.style.display = DisplayStyle.None;
             lauta = new MyllyLauta(Napautus);
             peliTaso.Add(lauta);
-            var rasti = Rakenne.Nappi("×", "mk-peli__sulje", Sulje, peliTaso);
-            Kirjasimet.Aseta(rasti, Kirjasin.Luku);
+            // ✕ OHJAUSNAPPI-neliönä (omistaja 2.10.2026 klo 14.2x: kuvakenapit yhtenäisiä neliöitä, EI OVAALEJA; Päätoimittaja 3.10.):
+            // Tumma teema (Päätoimittaja 3.10. klo 20.2x: harmaa läpikuultava jäi vaalean kartan päällä heikoksi iPhonessa ja näytti
+            // iPadissa eri napilta), rasti-ikoni kuten GALLERIAssa.
+            var rasti = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje", Sulje, peliTaso, "tumma");
+            rasti.AddToClassList("mk-peli__sulje");
             paneeli = Rakenne.El("mk-peli__paneeli " + PaneelinTeema, peliTaso); // omistaja 2.10. 11.0x: PAPERI
             kapiteeli = Rakenne.Teksti("", "mk-kortti__kapiteeli", paneeli);
             Kirjasimet.Aseta(kapiteeli, Tyylikirja.Kirjain.Kapiteeli);
@@ -516,7 +519,7 @@ namespace Matkakirja.Natiivi
             float w = peliTaso.layout.width, h = peliTaso.layout.height;
             if (float.IsNaN(w) || w <= 0 || h <= 0) return;
             var t = UiKerros.Hae().Reunat(UiKerros.Pelidialogit);
-            float m = Tyylikirja.Vali.M, osuma = Tyylikirja.Nappi.Osuma;
+            float m = Tyylikirja.Vali.M, osuma = Tyylikirja.Nappi.Ohjaus; // ✕:n näkyvä korkeus
             var rasti = peliTaso.Q(className: "mk-peli__sulje");
             rasti.style.top = t.y + m; rasti.style.right = t.z + m;
             bool kapea = Pohja.Leveys(w - t.x - t.z) == Pohja.Luokka.Kapea && h > w;

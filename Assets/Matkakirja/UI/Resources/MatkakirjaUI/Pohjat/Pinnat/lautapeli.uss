@@ -30,23 +30,9 @@
     background-color: initial;
 }
 
+/* ✕ on OHJAUSNAPPI (tumma teema, Pohjat/ohjausnappi.uss); täällä vain sijoitus. */
 .mk-peli__sulje {
     position: absolute;
-    width: var(--tk-nappi-osuma);
-    height: var(--tk-nappi-osuma);
-    min-height: var(--tk-nappi-osuma);
-    padding: 0;
-    border-width: 1px;
-    border-radius: var(--tk-kulma-pilleri);
-    border-color: var(--tk-tumma-reunus);
-    background-color: var(--tk-tumma-pinta);
-    color: var(--tk-tumma-muste);
-    justify-content: center;
-}
-
-.mk-peli__sulje > .mk-nappi__teksti {
-    font-size: var(--tk-koko-valiotsikko);
-    -unity-text-align: middle-center;
 }
 
 .mk-peli__paneeli {
