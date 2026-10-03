@@ -39,6 +39,10 @@ KOHDE = A[A.index('--kohde') + 1] if '--kohde' in A else 'sokrates'
 STL, KORKEUS = KOHTEET[KOHDE]
 PH = '/Users/Shared/Claude/proto-3d/_lahteet/polyhaven'   # CC0-tekstuurit (v7: grey_plaster_02)
 GOBO_LEV, GOBO_KORK = 0.172, 0.129     # gobon ala projisointietäisyydellä (m), kuvasuhde 4:3 kuten sokrates_gobo.py
+# prologin ääriviivavalot (yhteinen kaikille ajattelijoille; Päätoimittaja 3.10.: vahvemmat, pään + parran kaari)
+PROLOGI_VALOT = (('reuna-v', (-0.36, 0.50, 0.30), (0.0, -0.08, 0.38), 75.0, 22.0),   # (nimi, paikka, kohde, W, keila °), blend 0,45
+                 ('reuna-o', (0.36, 0.50, 0.30), (0.0, -0.08, 0.38), 75.0, 22.0),
+                 ('reuna-y', (0.0, 0.35, 0.95), (0.0, -0.05, 0.50), 60.0, 15.0))   # 3.10.: päälaen kaari
 
 
 def tuo():
@@ -969,7 +973,7 @@ if V14:
         (_L(V14_INTRO['c1']) - 1, (-0.80, 0.10, 0.48), (0.0, -0.05, 0.38), 35),
         (_L(V14_INTRO['c1']), (-0.72, -0.08, 0.35), (0.0, -0.08, 0.34), 45),   # 1) profiilin ääriviiva otsasta partaan
         (_L(V14_INTRO['c2']), (0.22, -0.55, 0.425) if KOHDE == 'marcus' else (0.22, -0.55, 0.445), (0.030, -0.12, 0.392) if KOHDE == 'marcus' else (0.030, -0.12, 0.412), 50),   # Sokrates: alareuna nenänpäässä   # 2) silmä, kulmakaari ja nenänvarsi; silmä ~¼ leveydestä
-        (_L(V14_INTRO['c3']), (-0.04, -0.68, 0.31) if KOHDE == 'marcus' else (-0.36, -0.10, 0.245), (0.0, -0.13, 0.27) if KOHDE == 'marcus' else (0.0, -0.10, 0.245), 50),   # 3) parta (Sokrates 3.10. 16.3x: sivulta 90°, takavalo piirtää kiharoiden siluetin mustaa vasten; suu ja kasvot rajattu pois — vanha: alakulmasta suun alta, ulkopuolella)
+        (_L(V14_INTRO['c3']), (-0.04, -0.68, 0.31) if KOHDE == 'marcus' else (-0.50, -0.06, 0.26), (0.0, -0.13, 0.27) if KOHDE == 'marcus' else (0.0, -0.06, 0.26), 50),   # 3) parta (Sokrates 3.10. 16.3x: sivulta 90°, takavalo piirtää kiharoiden siluetin mustaa vasten; suu ja kasvot rajattu pois — vanha: alakulmasta suun alta, ulkopuolella)
         (_L(V14_INTRO['c4']), (-0.42, -0.52, 0.82), (0.0, -0.07, 0.40), 35),    # 4) ¾-kuva ylhäältä
         (V12_REM, (-0.36, -1.24, 0.24), (-0.075, -0.06, 0.39), 35),             # Rembrandt + nimi (toimii, pidetään)
     )
@@ -1615,7 +1619,7 @@ if '--v7' in A:
             ro.location = paikka; kohdista(ro, kohde); ro.keyframe_insert('location', frame=r); ro.keyframe_insert('rotation_euler', frame=r)
             rd.energy, rd.size, rd.size_y, rd.spread = e_, koko, koko_y, math.radians(levi)
             for k__ in ('energy', 'size', 'size_y', 'spread'): rd.keyframe_insert(k__, frame=r)
-        A_ = (silmat + Vector((0.45, -0.85, 0.22)).normalized() * 0.9, silmat); B_ = (parta + Vector((-0.80, 0.45, 0.05)).normalized() * 0.7, parta)
+        A_ = (silmat + Vector((0.45, -0.85, 0.22)).normalized() * 0.9, silmat); B_ = (parta + (Vector((-0.80, 0.45, 0.05)) if KOHDE == 'marcus' else Vector((-0.35, 0.95, 0.05))).normalized() * 0.7, parta)
         rako_avain(1, *A_, 0.0, 0.34, 0.014, 1.2); rako_avain(V14_RAKO[0] - 1, *A_, 0.0, 0.34, 0.014, 1.2)
         rako_avain(V14_RAKO[0], *A_, 0.004, 0.34, 0.02, 2.2); rako_avain(V14_RAKO[1], *A_, 0.004, 0.34, 0.02, 2.2)   # kaista silmien yli: ei valkoiseksi, pehmeät reunat
         wt_ = sc.world.node_tree.nodes['Background'].inputs['Strength']   # muu kasvo varjoon silmäkuvan ajan
@@ -1623,7 +1627,7 @@ if '--v7' in A:
             ((1, 1.0), (V14_RAKO[0] - 1, 1.0), (V14_RAKO[0], 0.0), (V14_PARTA[1], 0.0), (V14_PARTA[1] + 1, 1.0))   # Sokrates: myös parta ilman ympäristövaloa (rinta ei kirkastu)
         for r__, v__ in V14_YMPARISTO:
             wt_.default_value = v__; wt_.keyframe_insert('default_value', frame=r__)
-        e_b = 0.5 if KOHDE == 'marcus' else 0.0
+        e_b = 0.5 if KOHDE == 'marcus' else 0.03   # Sokrates (Päätoimittaja, omistaja hyväksyi v14): heikko liukuva takavalo kameran puolelta → kiharat ja posken muoto tunnistettaviksi
         rako_avain(V14_RAKO[1] + 1, *B_, e_b, 0.12, 0.12, 12); rako_avain(V14_PARTA[1], *B_, e_b, 0.12, 0.12, 12)   # parran toinen reuna takaviistosta
         rako_avain(V14_PARTA[1] + 1, *B_, 0.0, 0.25, 0.25, 30)
         if KOHDE != 'marcus':   # Sokrateen parta: matala sivuvalo pois rintakehältä (parran alareuna z 0,195) — näkymätön varjolevy
@@ -1837,6 +1841,8 @@ if '--v7' in A:
                    'v13': V13_AIKA if V13 else None,
                    'v14': {'intro_linssin_aika_s': V14_INTRO, 'prologi_ruutua': 75, 'kytkin_ruutu': 30, 'valo_taysi_ruutu': 58,
                            'leikkaukset_kohtauksen_ruutu': [r_ for r_, *_ in V7_OTOKSET[2:]], 'kertoja_kohtauksen_s': V13_KERTOJA_ALKAA,
+                           'prologi_valot': [{'nimi': n_, 'paikka': p_, 'kohde': k_, 'teho_w': e_, 'keila_aste': kk_, 'blend': 0.45, 'vari': (1.0, 0.86, 0.66)}
+                                             for n_, p_, k_, e_, kk_ in PROLOGI_VALOT],
                            'ymparisto_voima_avaimet': [list(x_) for x_ in V14_YMPARISTO],
                            'varjolevy': ({'keski': VARJOLEVY['keski'], 'leveys_x_m': VARJOLEVY['koko'][0], 'syvyys_y_m': VARJOLEVY['koko'][1],
                                           'normaali': (0, 0, 1), 'ruudut': list(V14_PARTA),
@@ -1875,8 +1881,9 @@ if '--prologi' in A:
     for nimi in ('sivu', 'reuna', 'tayte'): bpy.data.objects[nimi].hide_render = True
     sc.world.node_tree.nodes['Background'].inputs['Strength'].default_value = 0.0
     # omistaja 2.10. 10.3x: ei valoa taustaan (kehä pois), vain ääriviivavalo kohteeseen — "saa olla salamyhkäinen"
-    for nimi_, paikka, kohde_, e, koko_ in (('reuna-v', (-0.30, 0.55, 0.42), (0.0, -0.06, 0.42), 45.0, 26.0),  # reunavalot takaa, keila vain päähän
-                                            ('reuna-o', (0.30, 0.55, 0.42), (0.0, -0.06, 0.42), 45.0, 26.0)):
+    # Päätoimittaja 3.10. (omistaja hyväksyi v14): puhelimella näkyi vain kipinöitä → reunavalot vahvemmiksi ja pään + parran
+    # korkeudelle, kolmas takaa ylhäältä piirtää päälaen kaaren; edelleen vain ääriviivavaloa (ei taustaa, ei kehää)
+    for nimi_, paikka, kohde_, e, koko_ in PROLOGI_VALOT:
         if koko_ == 0.0:   # taustan kehä: pehmeäreunainen spotti, vain pään taakse
             d = bpy.data.lights.new(nimi_, 'SPOT'); d.spot_size = math.radians(70); d.spot_blend = 1.0; d.shadow_soft_size = 0.05
         else:   # Päätoimittaja: hartiat ja sokkeli saivat leveää valoa → kapea keila pään korkeudelle, hartioihin enintään ohut viiva
