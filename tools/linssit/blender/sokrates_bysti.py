@@ -645,6 +645,7 @@ def v4_projektori(nimi, p, suunta, etaisyys, ala, nauha_kuva, nauha_kork, ruudut
     out = nt.nodes.new('ShaderNodeOutputLight'); nt.links.new(em.outputs['Emission'], out.inputs['Surface'])
     o = bpy.data.objects.new(nimi, d); bpy.context.scene.collection.objects.link(o)
     o.location = Vector(p) + suunta.normalized() * etaisyys; kohdista(o, p)
+    o['ala_m'] = ala; o['nauha_kork_m'] = nauha_kork; o['nauha_lev_m'] = nauha_lev; o['kiintea'] = kiintea
     alku, loppu = ruudut; s0 = 0.5 + ala / 2 / nauha_lev; sv = siirto.outputs['Value']
     for r, v in ((alku, -s0), (loppu, s0)) if not kiintea else ((alku, 0.0),):   # v13: kiintea = keskellä paikallaan
         sv.default_value = v; sv.keyframe_insert('default_value', frame=r)
@@ -1009,6 +1010,7 @@ def kaiku_projektori(nimi, p, suunta, etaisyys, lev, kuva, ruudut, voima, savy=(
     out = nt.nodes.new('ShaderNodeOutputLight'); nt.links.new(em.outputs['Emission'], out.inputs['Surface'])
     o = bpy.data.objects.new(nimi, d); bpy.context.scene.collection.objects.link(o)
     o.location = Vector(p) + suunta.normalized() * etaisyys; kohdista(o, p)
+    o['lev_m'] = lev; o['kork_m'] = kork; o['liuku_uv'] = liuku; o['haivytys_ruutua'] = haivytys   # web (Pelikoodari 3.10.)
     alku, loppu = ruudut; sv = siirto.outputs['Value']
     for r, v_ in ((alku, -liuku), (loppu, liuku)):
         sv.default_value = v_; sv.keyframe_insert('default_value', frame=r)
@@ -1169,7 +1171,7 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
     kaiut = []
     def kaiku(nimi, kuva, q, nn, viisto, lev, a_t, l_t, voima, haiv=45):
         kaiku_projektori(nimi, q, (nn + viisto).normalized(), 0.6, lev, os.path.join(gobot, kuva), (F(a_t), F(l_t)), voima,
-                         liuku=0.02, haivytys=haiv, varjo=0.002)
+                         liuku=0.02, haivytys=haiv, varjo=0.0)   # v13b: pistemäinen projektori = kuva terävä pinnalla
         kaiut.append({'nimi': nimi, 'kuva': kuva, 'alku_s': round(a_t, 2), 'loppu_s': round(l_t, 2)})
     jum_t = T(W.get('jumalankuvia', K['01'][1] - 1.4))
     kaiku('kaiku-jumala', 'kaiku-jumala.png', p, n, SIVU * 0.55 + YLOS * 0.25, 0.10, jum_t, k_('02', 0) + 1.2, 9.0, haiv=30)   # himmeä
@@ -1219,8 +1221,8 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
         kulma = math.radians(-20 + 720 * i_ / 16); sade_ = Vector((math.cos(kulma), math.sin(kulma), 0.0)) * 0.9 + Vector((0, 0, 0.5))
         aur_avain(a6 + (l6 - a6) * i_ / 16, tuple(sade_), 60)
     aur_avain(k_('07', 0) - 0.2, R, 70, LAMMIN); aur_avain(k_('08', 0) - 0.05, R, 70, LAMMIN)   # 07 lämmin valo, 30e
-    KOVA = (0.35, -1.0, 0.45)
-    aur_avain(k_('08', 0), KOVA, 60); aur_avain(k_('09', 0) - 0.5, KOVA, 60); aur_avain(k_('09', 0) + 0.3, KOVA, 38); aur_avain(illan_t - 0.05, KOVA, 38)            # 08–09: kova, suora valo
+    KOVA = (0.12, -0.50, 1.0)   # v13b: "kova kuin kuulustelussa" — yksi kova valo ylhäältä hieman edestä, ei täyttöä
+    aur_avain(k_('08', 0), KOVA, 110); aur_avain(k_('09', 0) - 0.5, KOVA, 110); aur_avain(k_('09', 0) + 0.3, KOVA, 60); aur_avain(illan_t - 0.05, KOVA, 60)            # 08–09: kova, suora valo
     malja_t = T(W.get('myrkkymaljan', K['10'][0] + 1.5))
     ILTASUUNTA = (1.0, -0.15, 0.22)
     aur_avain(illan_t, ILTASUUNTA, 22, ILTA); aur_avain(malja_t + 0.2, ILTASUUNTA, 22, ILTA)   # 10: lämmin, laskee
@@ -1459,7 +1461,15 @@ if '--v7' in A:
                             if getattr(n, 'image', None)})
             valot[ob.name] = {'sijainti': pyor(ob.matrix_world.translation), 'suunta': pyor(suunta),
                               'keila_aste': round(math.degrees(ob.data.spot_size), 2) if ob.data.type == 'SPOT' else None,
-                              'energia_avaimet': energia, 'kuvat': kuvat}
+                              'spot_blend': round(ob.data.spot_blend, 3) if ob.data.type == 'SPOT' else None,
+                              'vari': pyor(ob.data.color), 'energia_avaimet': energia, 'kuvat': kuvat,
+                              **{k: (round(ob[k], 5) if isinstance(ob[k], float) else ob[k]) for k in ob.keys()
+                                 if k in ('lev_m', 'kork_m', 'liuku_uv', 'haivytys_ruutua', 'ala_m', 'nauha_kork_m', 'nauha_lev_m', 'kiintea')}}
+            if ob.name == 'pyyhkaisy':   # v13: valo kääntyy nenästä silmiin → suunta jokaisessa avaimessa
+                sk = []
+                for r in kayrien_ruudut(ob):
+                    sc.frame_set(r); sk.append([r, pyor((ob.matrix_world.to_3x3() @ Vector((0, 0, -1))).normalized())])
+                valot[ob.name]['suunta_avaimet'] = sk
         ulos_j = A[A.index('--luvut') + 1]
         sisalla = []   # v13: kamera kipsin sisällä (ensimmäinen osuma tahtaimeen päin osoittaa poispäin)
         dg_ = bpy.context.evaluated_depsgraph_get()
@@ -1470,7 +1480,7 @@ if '--v7' in A:
             if osui and nn_.dot(d_.normalized()) > 0: sisalla.append(r)
         print('SOKRATES: kamera kipsin sisällä ruuduissa', sisalla[:40] if sisalla else 'ei yhtään')
         aurinko = []   # v11: alkukuvien valo (varjon puoli) — webin aurinko samoista avaimista
-        for r in sorted(set(kayrien_ruudut(ao)) | set(kayrien_ruudut(aur))): sc.frame_set(r); aurinko.append({'ruutu': r, 'sijainti': pyor(ao.matrix_world.translation), 'energia': round(aur.energy, 2)})
+        for r in sorted(set(kayrien_ruudut(ao)) | set(kayrien_ruudut(aur))): sc.frame_set(r); aurinko.append({'ruutu': r, 'sijainti': pyor(ao.matrix_world.translation), 'energia': round(aur.energy, 2), 'vari': pyor(aur.color)})
         json.dump({'kohde': KOHDE, 'versio': 'v12' if V12 else 'v11' if V11 else 'v10',
                    'v13': V13_AIKA if V13 else None,
                    'v12': {'musiikki_alkaa_ruutu': 1, 'siirto_ruutua': V12_SIIRTO, 'rembrandt': V12_REM, 'kysymys': V7_LAHESTY[0] - 89,
