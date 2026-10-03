@@ -50,6 +50,7 @@ namespace Matkakirja.Natiivi
         static Texture2D kyparaKuva;
         static readonly string[] EvaKerrokset = { "turvakoysi", "perus", "kasvovalo", "kyparalamput", "maavalo" };
         static Texture2D[] evaKuvat;
+        static Texture2D kasvoKuva;
         /// <summary>A/B: avaruuskävelyasu pois (vanha kypäräpulu).</summary>
         public static bool EvaPois;
         static readonly string[] RobottiKerrokset = { "robotin-varsi", "robotin-reunavalo", "robotin-turvakoysi", "robotin-pidikkeet" };
@@ -179,6 +180,9 @@ namespace Matkakirja.Natiivi
                 {
                     evaKuvat = new Texture2D[EvaKerrokset.Length];
                     for (int i = 0; i < EvaKerrokset.Length; i++) evaKuvat[i] = Resources.Load<Texture2D>("LiviaEva/" + EvaKerrokset[i]);
+                    // Kasvot kypärävalossa (omistaja 3.10.2026 "pulun kasvot pitää näkyä"): perus.png:n visiirin alue lämpimästi
+                    // valaistuna (kertova valo R 2,4 / G 2,05 / B 1,55 keskeltä reunaa kohti; pupillit pysyvät tummina). Vain Soikio käyttää.
+                    kasvoKuva = Resources.Load<Texture2D>("LiviaEva/perus-kasvot");
                 }
                 return evaKuvat[1] != null;
             }
@@ -514,7 +518,7 @@ namespace Matkakirja.Natiivi
                 // Kasvovalo ensin ja kasvot sen päälle (Päätoimittajan kuvatarkistus 2.10.: valo peitti silmät ja nokan, visiirissä
                 // näkyi vain vaalea soikio): valo jää kasvojen ympärille sädekehäksi.
                 Kuva(evaKuvat[2], 304, 0.6f, true, valo);                // kasvot loistavat kypärävalossa
-                Soikio(evaKuvat[1], 113.5f, 258.5f, 21f, 19f, valo);     // kasvot visiirin alla sävyttämättä
+                Soikio(kasvoKuva != null ? kasvoKuva : evaKuvat[1], 113.5f, 258.5f, 21f, 19f, valo);   // kasvot kypärävalossa
                 Kuva(evaKuvat[3], 304, t.EvaLamput, true, valo);
                 Kuva(evaKuvat[4], 304, t.EvaMaa, true, valo);            // Maan reunavalo piirtää siluetin reunan
                 // robotin turvaköysi (vanha vapaa köysi pois); 152 × 400, koska lenkki ulottuu y ≈ 322:een

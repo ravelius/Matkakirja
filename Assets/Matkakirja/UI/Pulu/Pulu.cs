@@ -224,7 +224,8 @@ namespace Matkakirja.Natiivi
 
         // ROBOTTIKÄSI (omistaja 2.10. 21.3x, Päätoimittajan tarkennus): Pulu vasempaan alakulmaan 60 %:iin varjokuvana (kasvot
         // loistavat), ja varsi kulkee ruudun yli oikeaan reunaan aluksen suuntaan (LiviaKuva.Robotti) — kaukonäkymässä ja Cupolassa.
-        const float RobottiSkaala = 0.6f;
+        // 0,6 → 0,78 (+30 %; Päätoimittaja 3.10.: varsi on lyhyt ja Pulu lähellä kameraa, kasvojen pitää erottua puhelimessa).
+        const float RobottiSkaala = 0.78f;
         // viewBox-yksiköt: Pulun vasen reuna x 88, varren alin kohta (kyynärnivel vaakaan käännettynä) y 381 (viewBox 304).
         const float RobottiPuluVasen = 88f, RobottiAlin = 381f, RobottiReuna = 12f;
         /// <summary>Varren nivel (viewBox x 124, LiviaKuva.NivelX) ja oikean reunan tilassa nivelen etäisyys turvareunasta (pt).</summary>
@@ -258,7 +259,8 @@ namespace Matkakirja.Natiivi
             // OIKEA REUNA (omistaja 3.10.2026 klo 06.3x: "pulu saisi olla oikeassa reunassa ja lyhyen varren päässä"; korvaa 2.10.:n
             // vasemman alakulman ja koko ruudun yli kulkevan varren Cupolassa): nivel OikeaVarsiPt:n päähän ruudun oikeasta
             // turvareunasta, jolloin vaakaosa on lyhyt (LiviaKuva venyttää sen oikeaan reunaan). Korkeus kuten ennen (AlaVara).
-            if (OikeallaReunalla && alue.parent != null && alue.parent.layout.width > 0f)
+            // Myös kaukonäkymässä (Päätoimittaja 3.10.): robottikäden Pulu aina oikealla, kun A/B on päällä.
+            if ((OikeallaReunalla || IssKyytiNakyma.PuluOikealla) && alue.parent != null && alue.parent.layout.width > 0f)
                 alue.style.left = alue.parent.layout.width - reunat.z - OikeaVarsiPt - RobottiNivelX * RobottiSkaala;
             // Vaakana pienen paneelin yli kulkeva puomi (VarrenEste): Pulu vasempaan alakulmaan turva-alueen alareunaan, puomi nousee.
             kuva.VarrenEste = VarrenEste;
