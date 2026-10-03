@@ -197,8 +197,18 @@ namespace Matkakirja.Linssit.Iss
             double theta = zeta - eta;
             double rho = eta > 1e-9 ? r * Math.Sin(theta) / Math.Sin(eta) : h;
             Kohde(iss.Paikka.Lat, iss.Paikka.Lon, iss.Suuntima, theta / Deg, out double lat, out double lon, out double loppu);
+            // Suoraan alas (Cupolan veto 90°, IssKatse): kohde = alapiste, jolloin isoympyrän loppusuunta on määrittelemätön
+            // (0 tai 180 pyöristyksen mukaan). Ruudun yläreuna pysyy katseen suunnassa kuten juuri ennen nadiiria.
+            if (theta < 1e-7) loppu = iss.Suuntima;
             return new Kuvakulma(lat, lon, rho, zeta / Deg, loppu, 0);
         }
+
+        /// <summary>
+        /// Ikkuna vedetyllä katseella (IssKatse): katse <paramref name="alas"/> astetta alas, ilmansuunta maajäljen suunnasta
+        /// <paramref name="suunta"/> astetta oikealle. Suunta 0 = <see cref="Ikkuna(in IssHetki, double)"/> sellaisenaan.
+        /// </summary>
+        public static Kuvakulma Ikkuna(in IssHetki iss, double alas, double suunta) => suunta == 0 ? Ikkuna(iss, alas)
+            : Ikkuna(new IssHetki(iss.Paikka, iss.KorkeusM, ((iss.Suuntima + suunta) % 360 + 360) % 360), alas);
 
         /// <summary>Ulkona: katse radan suunnasta näin monta astetta oikealle (sivulle), vaakatason alapuolelle ja kenttäkulma.</summary>
         public const double UlkonaSivulle = 90, UlkonaKentta = 70;
@@ -391,6 +401,12 @@ namespace Matkakirja.Linssit.Iss
         public static bool SeurantaKaytossa;
 
         /// <summary>
+        /// CUPOLAN KATSE VETÄMÄLLÄ (omistaja 3.10.2026, IssKatse): katseen kulma ja ilmansuunta Cupolassa. Nollautuu, kun kyytiin
+        /// tullaan kaukaa ja kun kyydistä poistutaan; kohteen ylle ja avaruuskävelylle mentäessä valinta säilyy paluuta varten.
+        /// </summary>
+        public readonly IssKatse Katse = new IssKatse();
+
+        /// <summary>
         /// Napautus: kauko → ikkuna (Cupola); kohteen yltä takaisin ikkunaan; ulkona ei mitään (avaruuskävely). Kehittäjän
         /// seurantatilassa (<see cref="SeurantaKaytossa"/>) vanha kierto kauko → seuranta → ikkuna → seuranta. <paramref name="nykyinen"/>
         /// on kameran asento nyt.
@@ -400,6 +416,7 @@ namespace Matkakirja.Linssit.Iss
             switch (Tila)
             {
                 case KyydinTila.Kauko:
+                    Katse.Nollaa();
                     double kaari = IssKuvakulma.Kaari(nykyinen.Lat, nykyinen.Lon, iss.Paikka.Lat, iss.Paikka.Lon);
                     // Suoraan Cupolaan: kyytiin lennon kesto + ikkunaan siirtymän kesto (sama kokonaisaika kuin kahdella napautuksella).
                     if (!SeurantaKaytossa)
@@ -449,11 +466,12 @@ namespace Matkakirja.Linssit.Iss
         {
             if (!Kyydissa || (Tila == KyydinTila.Kauko && siirtyy)) return;
             paluuKorkeus = kaukoKorkeusM;
+            Katse.Nollaa();
             Aloita(KyydinTila.Kauko, viimeisin, viimeisinKentta, nyt, vahennetty ? 0 : KaukoonS);
         }
 
         /// <summary>Kyyti pois heti (linssi suljetaan): ei asentoa, kenttäkulma palautetaan kutsujan puolella.</summary>
-        public void Nollaa() { Tila = KyydinTila.Kauko; siirtyy = false; OnAsento = false; }
+        public void Nollaa() { Tila = KyydinTila.Kauko; siirtyy = false; OnAsento = false; Katse.Nollaa(); }
 
         void Aloita(KyydinTila uusi, in Kuvakulma nykyinen, double kentta, double nyt, double kestoS)
         {
@@ -480,7 +498,13 @@ namespace Matkakirja.Linssit.Iss
             switch (Tila)
             {
                 case KyydinTila.Seuranta: kohde = IssKuvakulma.Seuranta(iss); break;
-                case KyydinTila.Ikkuna: kohde = IssKuvakulma.Ikkuna(iss); kohdeKentta = IssKuvakulma.IkkunanKentta; break;
+                case KyydinTila.Ikkuna:
+                    // Vedetty katse (IssKatse): ilman vetoa oletus (IkkunanKatse) ja suunta 0, eli sama asento kuin ennen.
+                    double oletus = IssKuvakulma.IkkunanKatse(iss.KorkeusM);
+                    Katse.Askel(nyt, oletus, IssKatse.Alaraja(iss.KorkeusM));
+                    kohde = IssKuvakulma.Ikkuna(iss, Katse.AlasNyt(oletus), Katse.Suunta);
+                    kohdeKentta = IssKuvakulma.IkkunanKentta;
+                    break;
                 case KyydinTila.Ulkona: kohde = IssKuvakulma.Ulkona(iss, UlkonaSuunta?.Invoke()); kohdeKentta = IssKuvakulma.UlkonaKentta; break;
                 case KyydinTila.Kohde when onKohde:
                     kohde = IssKuvakulma.KohteenKulma(iss, kohdePaikka.Lat, kohdePaikka.Lon);

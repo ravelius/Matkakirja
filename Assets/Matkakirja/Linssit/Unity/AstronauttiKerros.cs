@@ -85,6 +85,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Linssi, jolle napautukset välitetään.</summary>
         public AstronauttiLinssi Linssi;
+        /// <summary>Cupolan katse vetämällä lasista (omistaja 3.10.2026; LinssiOhjain kutsuu ennen linssin päivitystä).</summary>
+        public readonly CupolaVeto Veto = new CupolaVeto();
 
         public static AstronauttiKerros Luo(PalloKierto kierto, string pilvienOsoite = null)
         {
@@ -562,6 +564,7 @@ namespace Matkakirja.Natiivi
         public void Pois()
         {
             CupolaAani.LinssiPois(); // Pelikoodari: Cupolan äänikerrokset pois linssin mukana
+            Veto.Pois();   // pallon yhden sormen veto palautuu
             Matkakirja.Linssit.Kyytipino.Paivita(kamera, false);
             Matkakirja.Linssit.IssSiluetti.Paivita(kamera, georeferenssi, false);
             if (cupola != null) Destroy(cupola.gameObject);
