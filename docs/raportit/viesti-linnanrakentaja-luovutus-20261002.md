@@ -3,6 +3,9 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
+## 3.10. 19.00 OMISTAJA: "Ei webiä lainkaan" → ajattelijoiden luvut Linssiseppä 2:lle (moottori, Sokrates) ja Linssiseppä 1:lle (Marcus), EI Pelikoodarille.
+## Webin AnimationMixer peruttu (linna jää natiiviin). Myllyn laudat v2 (54a1eff45, _valmiit/mylly-laudat/v2) Päätoimittajalla → OK:n jälkeen PR.
+
 ## 3.10. 18.x: OMISTAJA HYVÄKSYI v14. 78b883452: prologi 3 reunavaloa (PROLOGI_VALOT, luvut v14.prologi_valot; web-arvot ajattelija-sokrates.js:ssä
 ## päivitettävä), Sokrateen parta (-0,50,-0,06,0,26) + rako 0,03 takaa kameran puolelta. Pelikoodari avaa PR:n.
 
