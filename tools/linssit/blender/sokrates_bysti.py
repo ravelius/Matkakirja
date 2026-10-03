@@ -969,7 +969,7 @@ if V14:
         (_L(V14_INTRO['c1']) - 1, (-0.80, 0.10, 0.48), (0.0, -0.05, 0.38), 35),
         (_L(V14_INTRO['c1']), (-0.72, -0.08, 0.35), (0.0, -0.08, 0.34), 45),   # 1) profiilin ääriviiva otsasta partaan
         (_L(V14_INTRO['c2']), (0.22, -0.55, 0.425) if KOHDE == 'marcus' else (0.22, -0.55, 0.445), (0.030, -0.12, 0.392) if KOHDE == 'marcus' else (0.030, -0.12, 0.412), 50),   # Sokrates: alareuna nenänpäässä   # 2) silmä, kulmakaari ja nenänvarsi; silmä ~¼ leveydestä
-        (_L(V14_INTRO['c3']), (-0.04, -0.68, 0.31) if KOHDE == 'marcus' else (-0.17, -0.44, 0.275), (0.0, -0.13, 0.27) if KOHDE == 'marcus' else (0.0, -0.11, 0.252), 50),   # 3) parta (Sokrates: rajattu suun alapuolelta — leuka ja kiharat, suu yläreunan ulkopuolella)
+        (_L(V14_INTRO['c3']), (-0.04, -0.68, 0.31) if KOHDE == 'marcus' else (-0.36, -0.10, 0.245), (0.0, -0.13, 0.27) if KOHDE == 'marcus' else (0.0, -0.10, 0.245), 50),   # 3) parta (Sokrates 3.10. 16.3x: sivulta 90°, takavalo piirtää kiharoiden siluetin mustaa vasten; suu ja kasvot rajattu pois — vanha: alakulmasta suun alta, ulkopuolella)
         (_L(V14_INTRO['c4']), (-0.42, -0.52, 0.82), (0.0, -0.07, 0.40), 35),    # 4) ¾-kuva ylhäältä
         (V12_REM, (-0.36, -1.24, 0.24), (-0.075, -0.06, 0.39), 35),             # Rembrandt + nimi (toimii, pidetään)
     )
@@ -979,7 +979,7 @@ if V14:
     _S = {'alku': (1.0, 0.55, 0.40),                                                   # siluetti takaviistosta
           'profiili': (1.0, -0.65, 0.40) if KOHDE == 'marcus' else (1.0, -0.45, 0.35),  # profiilin ääriviiva (v14 hyvä)
           'silma': (1.0, -0.45, 0.35),                                                # aurinko lähes pois; rakovalo silmien yli
-          'suu': (0.85, 0.55, 0.15) if KOHDE == 'marcus' else (1.0, -0.10, 0.08),                                                  # takaviistosta matalalta (+ rakovalo toiselta puolelta): kiharoiden reunat
+          'suu': (0.85, 0.55, 0.15) if KOHDE == 'marcus' else (0.62, -0.78, 0.08),                                                  # takaviistosta matalalta (+ rakovalo toiselta puolelta): kiharoiden reunat
           'yla': (0.25, 0.55, 1.0)}                                                   # takaa ylhäältä: kaljun ja kulmakaaren kaari
     V7_VALO = ((1, _S['alku']), (_L(V14_INTRO['c1']) - 1, _S['alku']), (_L(V14_INTRO['c1']), _S['profiili']),
                (_L(V14_INTRO['c2']) - 1, _S['profiili']), (_L(V14_INTRO['c2']), _S['silma']),
@@ -991,7 +991,7 @@ if V14:
     V14_RAKO = (_L(V14_INTRO['c2']), _L(V14_INTRO['c3']) - 1)                       # rakovalon ruudut (silmäkuva)
     V14_PARTA = (_L(V14_INTRO['c3']), _L(V14_INTRO['c4']) - 1)
     V14_YMPARISTO = []   # maailman (ympäristövalon) voima: (ruutu, kerroin)
-    VARJOLEVY = {'keski': (0.20, -0.10, 0.197), 'koko': (1.2, 0.8)}   # vaakalevy parran alareunan tasolla: x-leveys, y-syvyys; alapuoli varjoon
+    VARJOLEVY = {'keski': (0.0, 0.0, 0.197), 'koko': (3.0, 3.0)}   # vaakalevy parran alareunan tasolla: x-leveys, y-syvyys; alapuoli varjoon
     V7_RENDER = list(range(1, V12_REM + 1))
 
 
@@ -1233,6 +1233,7 @@ def syke_kaikuun(valo, ikkuna, voima, syke, askel=2):
 KERTOJA_OLETUS = '/Users/Shared/Claude/proto-3d/_lahteet/sokrates/kertoja-aanikoe-v4/Iv4-william-oletus-ajat.json'
 V13_KERTOJA_ALKAA = (V14_INTRO['kertoja'] - V14_INTRO['prologi']) if V14 else 28.0   # kohtauksen aika (prologin jälkeen)
 V14_TEKSTI_K = 0.3; V14_REUNA = (1.0, 0.35, 0.45)   # v14: tekstivaiheen aurinko ×0,3 ja reunavalon suunta
+V14_KATTO = 0.9   # tekstivaiheen kasvojen valon katto: reunavalo ~13 (38a:n taso), suoraan otsaan ~1,0 (mitattu kasvojen mediaani ≤ 20/255)
 VIRTA_PORRAS = 0.45 if '--v14' in A else 0.0   # v14: taustavirran rivit lähtevät yksi kerrallaan (s/rivi)
 V13_NAUHA_MS = 0.055   # lainausnauhojen nopeus pinnalla (m/s); nauha näkyy lainauksen ajan ±0,6 s
 V13C = '--v13c' in A   # v13c (omistaja 3.10. 08.0x): rajatut kaikuhahmot viistosti, ei reunahehkua, virta väistää kaiun
@@ -1333,6 +1334,9 @@ def v13_kierrokset(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
         if V14 and t_ > T(0) + 0.05:   # omistaja 15.4x: tekstivaiheessa kasvot tummina, teksti erottuu; heikko reunavalo pitää muodon
             e *= V14_TEKSTI_K
             if tuple(suunta) == tuple(V12_REM_AURINKO): suunta = V14_REUNA
+            # Päätoimittaja 16.3x: tarinavalo (LÄMMIN/KOVA/ILTA) näkyy värissä ja suunnassa, ei kirkkaudessa → kasvojen
+            # valaistus rajataan tummalle tasolle: katto / kuinka suoraan valo osuu otsaan ja kasvoihin
+            e = min(e, V14_KATTO / max(0.068, Vector(suunta).normalized().dot(Vector((0.0, -0.7, 0.7)).normalized())))
         ao.location = PAA + Vector(suunta).normalized() * 1.3; kohdista(ao, PAA)
         ao.keyframe_insert('location', frame=F(t_)); ao.keyframe_insert('rotation_euler', frame=F(t_))
         aur.energy = e; aur.keyframe_insert('energy', frame=F(t_)); aur.color = vari; aur.keyframe_insert('color', frame=F(t_))
@@ -1468,6 +1472,9 @@ def v13_marcus(sc, cam, tahtain, cd, avain, ao, aur, p, n, gobot, tausta):
         if V14 and t_ > T(0) + 0.05:   # omistaja 15.4x: tekstivaiheessa kasvot tummina, teksti erottuu; heikko reunavalo pitää muodon
             e *= V14_TEKSTI_K
             if tuple(suunta) == tuple(V12_REM_AURINKO): suunta = V14_REUNA
+            # Päätoimittaja 16.3x: tarinavalo (LÄMMIN/KOVA/ILTA) näkyy värissä ja suunnassa, ei kirkkaudessa → kasvojen
+            # valaistus rajataan tummalle tasolle: katto / kuinka suoraan valo osuu otsaan ja kasvoihin
+            e = min(e, V14_KATTO / max(0.068, Vector(suunta).normalized().dot(Vector((0.0, -0.7, 0.7)).normalized())))
         ao.location = PAA + Vector(suunta).normalized() * 1.3; kohdista(ao, PAA)
         ao.keyframe_insert('location', frame=F(t_)); ao.keyframe_insert('rotation_euler', frame=F(t_))
         aur.energy = e; aur.keyframe_insert('energy', frame=F(t_)); aur.color = vari; aur.keyframe_insert('color', frame=F(t_))
