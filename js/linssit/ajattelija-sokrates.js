@@ -79,9 +79,12 @@ export const SOKRATES = Object.freeze({
   // 38a, lähderivi, kaiku (b-luenta) ja pito. Ääniraita alkaa ruudusta 0 (sokrates_aani.sh).
   // V12 (omistaja 3.10.2026 klo 04.5x/05.0x; Linnanrakentaja sokrates-luvut-v12.json a6308b998): intro pitenee 442 ruutua
   // (musiikki alusta leikkaamattomana, leikkaukset vain kuuluviin iskuihin); Rembrandt + nimi 724, kysymys 815.
+  // V14 (omistaja 3.10.2026 klo 14.5x; sokrates-luvut-v14.json 822739628): tiivis alku. Rembrandt + nimi ruudussa 184
+  // (musiikin huippu 6,1 s), kysymys 250 (8,3 s), kertoja 286 (9,5 s; linssin ajassa 12,0 s). Muut v12:n ajat −540
+  // (käytössä vain ilman aikajanaa).
   ajat: {
-    nimi: [724, 814], kysymys: [815, 903], lahesty: [904, 997], vieritys: [967, 1337], proj: [997, 1342],
-    lahde: [1344, 1392], kaariLoppu: 1407, kaiku: [1407, 1882], pito: 1892,
+    nimi: [184, 249], kysymys: [250, 338], lahesty: [364, 457], vieritys: [427, 797], proj: [457, 802],
+    lahde: [804, 852], kaariLoppu: 867, kaiku: [867, 1342], pito: 1352,
   },
   /*
    * PROLOGI (omistaja 2.10. 08.5x; kaikkien ajattelijoiden vakioaloitus, sokrates_bysti.py --prologi): 0–1 s pimeää →
@@ -89,7 +92,9 @@ export const SOKRATES = Object.freeze({
    * Omistaja 2.10. klo 10.3x (v9-palaute): ei taustavaloa eikä kehää, vain ääriviivavalo (levy ja takavalo pois).
    */
   prologi: {
-    kytkin: 30, taysi: 58, loppu: 120,
+    // V14 (omistaja 3.10.2026 klo 14.5x: alku liian hidas; sokrates-luvut-v14.json 822739628): 75 ruutua (2,5 s),
+    // musiikki alkaa heti prologin jälkeen. Kytkin 30 ja täysi valo 58 ennallaan.
+    kytkin: 30, taysi: 58, loppu: 75,
     kamera: { paikka: [-0.22, -1.15, 0.34], katse: [0.0, -0.04, 0.30], mm: 35 },
     vari: [1.0, 0.86, 0.66],
     valot: [
@@ -110,15 +115,22 @@ export const SOKRATES = Object.freeze({
      * kuuluviin iskuihin (521, 627, 649, 673). Kamera varjon puolella (v11). Aurinko sivulta (omistajan toive):
      * intro (1,0 / −0,45 / 0,5), Rembrandtista (724) eteenpäin (0,95 / −0,30 / 0,55). Tausta pimeä, ei täyttöä.
      */
+    /*
+     * V14 (omistaja 3.10.2026 klo 14.5x; sokrates-luvut-v14.json 822739628): lyhyt ajo 1 → 60, sitten leikkaukset
+     * musiikin iskuihin: suuri sointu 61 (2,0 s), patarummut 118 / 136 / 154 (3,9 / 4,5 / 5,1 s), huippu ja
+     * Rembrandt 184 (6,1 s). Aikajana-tilassa kamera ja aurinko tulevat aikajanasta; nämä samat avaimet ilman sitä.
+     */
     otokset: [   // [ruutu, kameran paikka, katsepiste, mm, tapa?]
-      [1, [-0.62, -0.1, 0.38], [0.0, -0.1, 0.38], 50, 'BEZIER'],
-      [520, [-0.5, -0.45, 0.42], [0.0, -0.1, 0.39], 50],
-      [521, [-0.3, -0.27, 0.47], [0.0, -0.11, 0.43], 50],
-      [627, [-0.3, -0.34, 0.42], [0.03, -0.1, 0.38], 50],
-      [649, [-0.3, -0.36, 0.22], [0.02, -0.11, 0.3], 50],
-      [673, [-0.26, -0.3, 0.72], [0.0, -0.09, 0.4], 35],
+      [1, [-0.85, 0.3, 0.52], [0, -0.04, 0.38], 35, 'BEZIER'],
+      [60, [-0.8, 0.1, 0.48], [0, -0.05, 0.38], 35],
+      [61, [-0.72, -0.08, 0.35], [0, -0.08, 0.34], 45],
+      [118, [0.16, -0.43, 0.395], [0.04, -0.125, 0.378], 50],
+      [136, [-0.16, -0.58, 0.29], [0, -0.12, 0.27], 50],
+      [154, [-0.42, -0.52, 0.82], [0, -0.07, 0.4], 35],
     ],
-    valo: [[1, [1.0, -0.45, 0.5]], [723, [1.0, -0.45, 0.5]], [724, [0.95, -0.30, 0.55]]],
+    // Auringon suunta (paikka − aurinko_kohde) v14-avaimista.
+    valo: [[1, [1.075, 0.591, 0.43]], [61, [1.206, -0.241, 0.422]], [118, [1.027, -0.205, 0.77]],
+      [136, [1.102, -0.331, 0.606]], [154, [0.977, -0.488, 0.705]], [184, [1.085, -0.343, 0.628]]],
     tayte: 0,
   },
   /*
@@ -187,14 +199,14 @@ export const SOKRATES = Object.freeze({
    */
   aikajana: {
     ...SOKRATES_AIKAJANA,
-    // Puhe = kertoja (ajattelijat/sokrates/v3/kertoja.mp3, 28,0 s) + efektit; musiikki Linssisepän oma (−8 dB puheen alla).
-    // Zarathustra testikomennolla ?ajattelijamusiikki=zarathustra (−13 dB), samalla ajoituksella.
+    // V14: puhe = kertoja (sama William-otto, 9,5 s:sta kohtauksen alusta) + efektit; musiikki Linssisepän v14-sävellys
+    // (iskut 2,0 / 3,9 / 4,5 / 5,1 / 6,1 s, −8 dB puheen alla). Zarathustralla ei ole v14-ajoitusta, joten vaihtoehto pois.
+    // ÄMPÄRIIN vasta omistajan hyväksynnän jälkeen (ajattelijat/sokrates/v4/).
     aani: {
-      puhe: 'ajattelijat/sokrates/v3/v13-puhe.mp3',
-      musiikki: 'ajattelijat/sokrates/v3/v13-musiikki.mp3',
-      vaihtoehdot: { zarathustra: 'ajattelijat/sokrates/v3/v13-musiikki-zarathustra.mp3' },
+      puhe: 'ajattelijat/sokrates/v4/v14-puhe.mp3',
+      musiikki: 'ajattelijat/sokrates/v4/v14-musiikki.mp3',
     },
-    syke: 'ajattelijat/sokrates/v3/syke-v13.json',
+    syke: 'ajattelijat/sokrates/v4/syke-v14.json',
     /*
      * KAIKUSARJAT (omistaja 3.10.2026: oletus A väritön, savu päällä; vertailuun ?kaikusarja=<nimi>, ?kaikuvari=seepia,
      * ?savu=0): oletus A = Linnanrakentajan v13c:n rajatut hahmot (gobot-v13cA: Zeus, hopliitti v2, Themis yksin; David
@@ -216,40 +228,40 @@ export const SOKRATES = Object.freeze({
   kierrokset: {
     aani: { puhe: 'ajattelijat/sokrates/v1/kierrokset-puhe.mp3', musiikki: 'ajattelijat/sokrates/v1/kierrokset-musiikki.mp3' },
     syke: 'ajattelijat/sokrates/v1/syke-kierrokset.json',
-    loppu: 3772,   // ALUSTAVA (v12 +442): kierrosten ajat sidotaan lopullisesti uuden kertojan puheen mukaan
+    loppu: 3232,   // ALUSTAVA (v12 +442): kierrosten ajat sidotaan lopullisesti uuden kertojan puheen mukaan
     lista: [
       {
-        paalause: '21d', vieritys: [1922, 2197], lahde: [2204, 2252], virta: [1892, 1942, 2202, 2252], siemen: 21,
+        paalause: '21d', vieritys: [1382, 1657], lahde: [1664, 1712], virta: [1352, 1402, 1662, 1712], siemen: 21,
         kaiku: {
           kuva: 'ajattelijat/sokrates/v1/kaiku-oraakkeli.png',   // Kodros-maalarin kylix (PD), positiivinen
           kohde: { sade: [0.040, 0.374] },                       // vasen silmämuna
-          ruudut: [2312, 2742], vino: [-0.15, 0.0, 0.10], etaisyys: 0.5, lev: 0.03, voima: 15, liuku: 0.08,
+          ruudut: [1772, 2202], vino: [-0.15, 0.0, 0.10], etaisyys: 0.5, lev: 0.03, voima: 15, liuku: 0.08,
           tayte: { suunta: [-0.55, -0.55, 0.6] },                // vasemmalta edestä ylhäältä
         },
       },
       {
-        paalause: '49b', vieritys: [2772, 3037], lahde: [3044, 3092], virta: [2742, 2792, 3042, 3092], siemen: 49,
+        paalause: '49b', vieritys: [2232, 2497], lahde: [2504, 2552], virta: [2202, 2252, 2502, 2552], siemen: 49,
         kaiku: {
           kuva: 'ajattelijat/sokrates/v1/kaiku-kuolema.png',     // David 1787 (The Met, CC0), ilman maljaa
           kohde: { sivulta: [-0.08, 0.375] },                    // kasvojen sivu valon puolella
-          ruudut: [3097, 3692], vino: [0.0, -0.10, 0.05], etaisyys: 0.6, lev: 0.07, voima: 30, liuku: 0.05,
+          ruudut: [2557, 3152], vino: [0.0, -0.10, 0.05], etaisyys: 0.6, lev: 0.07, voima: 30, liuku: 0.05,
           tayte: { suunta: [0.45, 0.75, 0.55] },                 // takaviistosta oikealta
         },
       },
     ],
     kamera: [   // [ruutu, kameran paikka, katsepiste, mm]
-      [1892, [0.0301, -0.2589, 0.4641], [-0.002, -0.1304, 0.418], 35],
-      [1952, [-0.0983, -0.1598, 0.2678], [-0.0579, -0.1008, 0.352], 18],
-      [2252, [-0.0524, -0.1741, 0.2678], [-0.0521, -0.1026, 0.352], 18],
-      [2312, [0.0498, -0.1824, 0.3675], [0.04, -0.1083, 0.374], 50],
-      [2742, [0.0519, -0.1823, 0.3696], [0.04, -0.1083, 0.374], 50],
-      [2802, [0.1078, -0.1321, 0.284], [0.0689, -0.0826, 0.375], 18],
-      [3092, [0.1342, -0.0864, 0.284], [0.0719, -0.0774, 0.375], 18],
-      [3142, [0.205, -0.1767, 0.337], [0.0704, -0.08, 0.375], 35],
-      [3692, [0.2011, -0.1641, 0.3393], [0.0724, -0.0765, 0.375], 35],
+      [1352, [0.0301, -0.2589, 0.4641], [-0.002, -0.1304, 0.418], 35],
+      [1412, [-0.0983, -0.1598, 0.2678], [-0.0579, -0.1008, 0.352], 18],
+      [1712, [-0.0524, -0.1741, 0.2678], [-0.0521, -0.1026, 0.352], 18],
+      [1772, [0.0498, -0.1824, 0.3675], [0.04, -0.1083, 0.374], 50],
+      [2202, [0.0519, -0.1823, 0.3696], [0.04, -0.1083, 0.374], 50],
+      [2262, [0.1078, -0.1321, 0.284], [0.0689, -0.0826, 0.375], 18],
+      [2552, [0.1342, -0.0864, 0.284], [0.0719, -0.0774, 0.375], 18],
+      [2602, [0.205, -0.1767, 0.337], [0.0704, -0.08, 0.375], 35],
+      [3152, [0.2011, -0.1641, 0.3393], [0.0724, -0.0765, 0.375], 35],
       // Paluu Rembrandt-otokseen: webin oma otokset.rembrandt.
-      [3752, [-0.3, -1.02, 0.25], [-0.06, -0.06, 0.4], 35],
-      [3772, [-0.3, -1.02, 0.25], [-0.06, -0.06, 0.4], 35],
+      [3212, [-0.3, -1.02, 0.25], [-0.06, -0.06, 0.4], 35],
+      [3232, [-0.3, -1.02, 0.25], [-0.06, -0.06, 0.4], 35],
     ],
   },
   /*
@@ -277,7 +289,7 @@ export const SOKRATES = Object.freeze({
       { kohde: [0.09, -0.04, 0.38], suunta: [1.0, -0.35, 0.15], ala: 0.22, riveja: 3 },  // oikea ohimo ja poski
     ],
     // Kierros 1 (virta1): häivytys sisään, täysi, häivytys ulos (v12: v11 + 442 ruutua).
-    ajat: [904, 982, 1342, 1392],
+    ajat: [364, 442, 802, 852],   // v14: v12 −540
     // Sisältökirjurin 18 varmennettua kreikkalaista katkelmaa (Stephanus-viite) ja 2 suomenkielistä (21d, Kriton 49b),
     // fontit riveittäin (Linnanrakentaja tekstit.json taustarivit 08efbe694; docs/raportit/sokrates-taustavirta-20261002.json).
     rivit: [

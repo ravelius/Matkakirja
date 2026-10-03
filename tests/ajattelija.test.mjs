@@ -48,7 +48,7 @@ test('projektori on valoa pinnalla: lisäys diffuusiin valoon, ei emissioon', ()
 
 test('vaihe 3: prologi, intron leikkaukset, nimi ja kysymys, kaiku ja ääniraita kellona (Blender v7–v10)', () => {
   const pr = SOKRATES.prologi;
-  assert.deepEqual([pr.kytkin, pr.taysi, pr.loppu], [30, 58, 120]);
+  assert.deepEqual([pr.kytkin, pr.taysi, pr.loppu], [30, 58, 75]);   // v14: 2,5 s
   assert.equal(pr.valot.length, 2);   // v9-palaute: vain reunavalot
   // Ruudut ja leikkaukset: v12 (tests/ajattelija-kierrokset.test.mjs); Marcus pitää v7–v11:n ajat.
   assert.ok(SOKRATES.intro.otokset.length >= 2);
@@ -126,7 +126,7 @@ test('Marcus Aurelius pelkkänä datana: Itselleen 10.16, kaksirivinen nimi, sad
   assert.equal(MARCUS.kaiku.kuva, 'ajattelijat/marcus/v1/kaiku-sade.png');
   assert.match(MARCUS.kaiku.nimeaminen, /Nico Kokkonen, CC BY 3.0/);
   assert.equal(MARCUS.taustavirta.rivit.length, 20);
-  assert.equal(MARCUS.prologi, SOKRATES.prologi, 'vakioaloitus on yhteinen');
+  assert.deepEqual({ ...MARCUS.prologi, loppu: 75 }, SOKRATES.prologi, 'vakioaloitus on yhteinen (Marcus v13: 120 ruutua)');
   const tyokalu = lue('../tools/ajattelija-aaniraita.mjs');
   assert.match(tyokalu, /marcus: \{[\s\S]*?eroica-marcia-funebre-musopen\.ogg[\s\S]*?osat: \[\[75\.48, 75\.48 \+ 48\.333\]\]/);
   const js = lue('../js/linssit/ajattelija.js');

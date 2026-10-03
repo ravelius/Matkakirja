@@ -10,10 +10,10 @@ const MOOTTORI = lue('../js/linssit/ajattelija.js');
 
 test('kierrokset jatkavat kierrosta 1 Blenderin v9-ruuduin; tarkistus vaatii kokonaiset kierrokset', () => {
   const kr = SOKRATES.kierrokset;
-  assert.equal(kr.loppu, 3772);   // v12: v11 + 442 (alustava, sidotaan uuteen kertojan puheeseen)
+  assert.equal(kr.loppu, 3232);   // v14: v12 − 540 (aikajana-tilassa ei käytössä)
   assert.deepEqual(kr.lista.map((k) => k.paalause), ['21d', '49b']);
-  assert.deepEqual(kr.lista.map((k) => k.vieritys), [[1922, 2197], [2772, 3037]]);   // v10-sääntö, v12 +442
-  assert.deepEqual(kr.lista.map((k) => k.kaiku.ruudut), [[2312, 2742], [3097, 3692]]);   // sokrates-luvut-v12.json r2_kaiku, r3_kaiku
+  assert.deepEqual(kr.lista.map((k) => k.vieritys), [[1382, 1657], [2232, 2497]]);   // v10-sääntö, v12 +442, v14 −540
+  assert.deepEqual(kr.lista.map((k) => k.kaiku.ruudut), [[1772, 2202], [2557, 3152]]);   // sokrates-luvut-v12.json r2_kaiku, r3_kaiku; v14 −540
   assert.deepEqual(kr.lista.map((k) => k.siemen), [21, 49]);
   assert.equal(kr.kamera[0][0], SOKRATES.ajat.pito);
   assert.deepEqual(tarkistaAjattelija(SOKRATES), []);
@@ -83,13 +83,14 @@ test('v11 (omistaja 3.10.2026): alkukuvat varjopuolelta, kaiku 1 lähempänä ja
   const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
   const { AJATTELIJA_KYTKIN } = await import('../js/linssit/ajattelija.js');
   for (const a of [SOKRATES, MARCUS]) {
-    assert.ok(a.intro.otokset.every(([, c]) => c[0] <= 0), `${a.tunnus}: introkamera ei ole valon vastapuolella`);
+    // v14 (Sokrates): patarummun lähikuva 118 lähes edestä (x 0,16), muut varjon puolelta.
+    assert.ok(a.intro.otokset.every(([, c]) => c[0] <= 0.2), `${a.tunnus}: introkamera ei ole valon vastapuolella`);
     assert.ok(a.intro.tayte < 1);
     assert.equal(a.kaiku.lev, 0.07);
     assert.deepEqual(a.kaiku.kamera.matka, [0.15, 0.14]);
   }
   assert.deepEqual(MARCUS.intro.valo[0][1], [1.0, -0.35, 0.45]);   // Marcus v11
-  assert.deepEqual(SOKRATES.kierrokset.kamera.find(([r]) => r === 3142)[1], [0.205, -0.1767, 0.337]);   // v11:n 2700 → v12 +442
+  assert.deepEqual(SOKRATES.kierrokset.kamera.find(([r]) => r === 2602)[1], [0.205, -0.1767, 0.337]);   // v11:n 2700 → v12 +442 → v14 −540
   assert.equal(AJATTELIJA_KYTKIN, 'ajattelijat/yhteiset/v2/kytkin-kaiku.mp3');
   assert.match(MOOTTORI, /maailma\.intensity = TAYTE \* hiipuu \* \(r < T\.nimi\[0\] \? \(a\.intro\.tayte \?\? 1\) : 1\);/);
 });
@@ -98,18 +99,23 @@ test('auringon suunta normalisoidaan avainten välissä (valo pysyy 1,3 m:n pä�
   assert.match(MOOTTORI, /return e\.suunta\.clone\(\)\.lerp\(v\.suunta, pehmea\(valilla\(r, e\.r, v\.r\)\)\)\.normalize\(\);/);
 });
 
-test('v12 Sokrates (omistaja 3.10.2026 klo 04.5x; sokrates-luvut-v12.json a6308b998): pidempi intro, aurinko sivulta, Marcus ennallaan', async () => {
+test('v14 Sokrates (omistaja 3.10.2026 klo 14.5x; sokrates-luvut-v14.json 822739628): tiivis alku iskuihin, kertoja 12 s', async () => {
   const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
   const o = SOKRATES.intro.otokset;
-  assert.deepEqual(o.map(([r]) => r), [1, 520, 521, 627, 649, 673]);
-  assert.equal(o[0][4], 'BEZIER');   // yksi hidas ajo 1 → 520
-  assert.ok(o.slice(1).every((x) => x[4] === undefined));   // leikkaukset kuuluviin iskuihin
-  assert.deepEqual(SOKRATES.ajat.nimi, [724, 814]);
-  assert.deepEqual(SOKRATES.ajat.kysymys[0], 815);
-  assert.deepEqual(SOKRATES.ajat.kaiku, [1407, 1882]);
-  assert.deepEqual(SOKRATES.intro.valo.at(-1), [724, [0.95, -0.30, 0.55]]);
+  assert.deepEqual(o.map(([r]) => r), [1, 60, 61, 118, 136, 154]);
+  assert.equal(o[0][4], 'BEZIER');   // lyhyt ajo 1 → 60
+  assert.ok(o.slice(1).every((x) => x[4] === undefined));   // leikkaukset iskuihin
+  // Iskut musiikin ajassa (Linssiseppä v14): sointu 2,0, patarummut 3,9 / 4,5 / 5,1, huippu 6,1 s → ruutu = s · 30 + 1.
+  const leikkaukset = SOKRATES.aikajana.kamera.filter((k) => k[4] === 'CONSTANT' && k[0] > 60 && k[0] <= 184).map(([r]) => r);
+  assert.deepEqual(leikkaukset, [61, 118, 136, 154, 184].map((r) => r));
+  assert.deepEqual([2.0, 3.9, 4.5, 5.1, 6.1].map((t) => Math.round(t * 30) + 1), leikkaukset);
+  assert.equal(SOKRATES.prologi.loppu, 75);
+  assert.deepEqual(SOKRATES.ajat.nimi, [184, 249]);
+  assert.deepEqual(SOKRATES.ajat.kysymys, [250, 338]);
+  // Kertoja linssin ajassa ~12 s: prologi 2,5 s + 9,5 s.
+  assert.equal(SOKRATES.prologi.loppu / 30 + SOKRATES.aikajana.kertoja.alku, 12);
   assert.equal(SOKRATES.intro.tayte, 0);
-  assert.deepEqual(SOKRATES.taustavirta.ajat, [904, 982, 1342, 1392]);
+  assert.deepEqual(SOKRATES.taustavirta.ajat, [364, 442, 802, 852]);
   // Marcus ei muutu: omat kierroksen 1 ajat ja taustavirran ajat.
   assert.deepEqual(MARCUS.ajat.nimi, [282, 372]);
   assert.deepEqual(MARCUS.taustavirta.ajat, [462, 540, 900, 950]);
@@ -119,8 +125,8 @@ test('v12 Sokrates (omistaja 3.10.2026 klo 04.5x; sokrates-luvut-v12.json a6308b
 test('v13 aikajana (Linnanrakentaja ffa1c9c94): Blenderin avaimet sellaisinaan, kierrokset eivät ole käytössä', () => {
   const aj = SOKRATES.aikajana;
   assert.equal(aj.versio, 'v13');
-  assert.equal(aj.loppu, 3493);
-  assert.equal(aj.kertoja.alku, 28);
+  assert.equal(aj.loppu, 2938);   // v14: tiivis alku, kaikki 18,5 s aiemmin
+  assert.equal(aj.kertoja.alku, 9.5);
   assert.deepEqual(aj.tykit.map((t) => t.paalause), ['38a', '21d', '30e', '49b', 'kysymys']);
   assert.equal(aj.tykit.at(-1).kiintea, true);
   assert.deepEqual(aj.kaiut.map((k) => k.kuva.split('/').pop()), ['kaiku-jumala.png', 'kaiku-sotilas.png', 'kaiku-oraakkeli.png', 'kaiku-kuolema.png']);

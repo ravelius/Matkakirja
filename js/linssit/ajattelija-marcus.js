@@ -56,7 +56,7 @@ export const MARCUS = Object.freeze({
     nimi: [282, 372], kysymys: [373, 461], lahesty: [462, 555], vieritys: [525, 895], proj: [555, 900],
     lahde: [902, 950], kaariLoppu: 965, kaiku: [965, 1440], pito: 1450,
   },
-  prologi: SOKRATES.prologi,
+  prologi: { ...SOKRATES.prologi, loppu: 120 },   // Marcus pitää v13-alun, kunnes sen v14-luvut tulevat
   intro: {
     // v11 (omistaja 3.10.2026, marcus-luvut-v11.json): alkukuvat varjon puolelta kuten Sokrateella (ajattelija-sokrates.js intro).
     otokset: [
