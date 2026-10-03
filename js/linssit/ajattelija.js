@@ -805,7 +805,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     const RK = AJ.rako ?? null;
     const rakoAvaimet = RK && (RK.avaimet ?? [[1, RK.paikka, RK.suunta, 0, RK.koko, 1.2]]);
     const RD = 0.9;
-    const RAKO_KERROIN = 10;   // kalibroitu Linnanrakentajan v14b-stilliin (silmäkaista)
+    const RAKO_KERROIN = 30;   // kalibroitu Linnanrakentajan v14b-stilliin (silmäkaista)
     let rako = null;
     let rakoNyt = null;
     const rakoKuvio = document.createElement('canvas');
@@ -814,19 +814,26 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       if (avain === rakoNyt) return;
       rakoNyt = avain;
       const [, paikka, suunta, , [k, ky], spread] = avain;
-      rako.angle = Math.atan(k / 2 / RD) * 1.05;
+      /*
+       * Jalanjälki etäisyydellä RD: suorakaide k × ky levenee spreadin verran (RD · tan(spread/2) joka reunalla); teho
+       * jakautuu jalanjäljelle (E = P / A'). Keila kattaa jalanjäljen, kuvio on suorakaide pehmeällä reunalla.
+       */
+      const levea = RD * Math.tan(spread / 2 * Math.PI / 180);
+      const kx = k + 2 * levea, kyy = ky + 2 * levea;
+      const puoli = Math.max(kx, kyy) / 2 * 1.1;
+      rako.angle = Math.atan(puoli / RD);
       rako.position.copy(b2t(THREE, paikka));
       rako.target.position.copy(b2t(THREE, paikka.map((x, i) => x + suunta[i] * RD)));
-      // Kuvio: suorakaide size × size_y keilan alalla; spread pehmentää reunan (≈ RD · tan(spread) pinnalla).
       const ck = rakoKuvio.getContext('2d');
-      const h = Math.max(2, Math.round(512 * ky / k));
-      const pehmea = Math.max(1, 512 * RD * Math.tan(spread / 2 * Math.PI / 180) / k / 2);
+      const px = 256 / puoli;   // kuvion pikseleitä metriä kohden (kuvio kattaa ±puoli)
       ck.filter = 'none'; ck.fillStyle = '#000'; ck.fillRect(0, 0, 512, 512);
-      ck.filter = `blur(${pehmea}px)`; ck.fillStyle = '#fff'; ck.fillRect(16, 256 - h / 2, 480, h);
+      ck.filter = `blur(${Math.max(1, levea * px / 2)}px)`;
+      ck.fillStyle = '#fff';
+      ck.fillRect(256 - k / 2 * px, 256 - ky / 2 * px, k * px, ky * px);
       if (rako.map) rako.map.needsUpdate = true;
       else rako.map = new THREE.CanvasTexture(rakoKuvio);
       // ?rako=<kerroin> kalibrointiin (Blenderin AREA-valon säteily vs. webin spotti).
-      rako.userData.kerroin = W * RD * RD / (k * ky) * (Number(haku.get('rako')) || RAKO_KERROIN);
+      rako.userData.kerroin = W * RD * RD / (kx * kyy) * (Number(haku.get('rako')) || RAKO_KERROIN);
     };
     if (RK) {
       rako = new THREE.SpotLight(new THREE.Color(...(RK.vari ?? [1, 1, 1])), 0, 0, 0.2, 0, 2);
