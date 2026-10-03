@@ -288,6 +288,7 @@ namespace Matkakirja.Natiivi
                 Odota0(HaeAani(ajv != null ? ajv.Musiikki : krv != null ? krv.Musiikki : a.Musiikki, musiikki, s));
                 Odota0(HaeMp3Tagi(ajv != null ? ajv.Puhe : krv != null ? krv.Puhe : a.Puhe));
                 Odota0(HaeMp3Tagi(ajv != null ? ajv.Musiikki : krv != null ? krv.Musiikki : a.Musiikki));
+                Odota0(HaeMp3Tagi(Kytkin));
                 Odota0(HaeAani(Kytkin, kytkin, s));
                 while (k0 > 0) { yield return null; if (s != sukupolvi) yield break; }
                 Latautuu = false;
@@ -331,6 +332,7 @@ namespace Matkakirja.Natiivi
             Odota(HaeAani(aj != null ? aj.Musiikki : kr != null ? kr.Musiikki : a.Musiikki, musiikki, s));
             Odota(HaeMp3Tagi(aj != null ? aj.Puhe : kr != null ? kr.Puhe : a.Puhe));
             Odota(HaeMp3Tagi(aj != null ? aj.Musiikki : kr != null ? kr.Musiikki : a.Musiikki));
+            Odota(HaeMp3Tagi(Kytkin));
             Odota(HaeAani(Kytkin, kytkin, s));
             // Haut päättyvät aina (onnistui, virhe tai 30 s:n aikaraja); puuttuva aineisto ei estä kohtausta (kuten web).
             while (kesken > 0)
@@ -626,6 +628,8 @@ namespace Matkakirja.Natiivi
                     {
                         kytkinSoi = true;
                         kytkin.volume = !AaniKaappaus.Kaynnissa && (EsityksenAani.Mykistetty?.Invoke() ?? false) ? 0f : 1f;
+                        // Kytkinkin on MP3: sama alkuviiveen ohitus (tallenne 4.10.: ääni 54 ms ajastettua myöhemmin ilman sitä).
+                        kytkin.timeSamples = Math.Min(kytkin.clip.samples - 1, Mp3Ohitus(kytkin.clip));
                         kytkin.PlayScheduled(AjattelijaTahti.Hetki(dspNolla, a.Prologi.Kytkin));
                         o.Kirjaa($"ajattelija: tahti kytkin ajastettu dsp {AjattelijaTahti.Hetki(dspNolla, a.Prologi.Kytkin):F4} s");
                     }
@@ -681,7 +685,7 @@ namespace Matkakirja.Natiivi
         {
             mitattavat.Clear();
             // MP3:n alkuviive (LAME 1105 näytettä): ffmpeg ja selaimet leikkaavat sen tagin mukaan; näytemäärä kertoo, tekeekö Unity samoin.
-            foreach (var (nimi, l) in new[] { ("puhe", puhe), ("musiikki", musiikki) })
+            foreach (var (nimi, l) in new[] { ("puhe", puhe), ("musiikki", musiikki), ("kytkin", kytkin) })
                 if (l?.clip != null)
                 {
                     klipinPolku.TryGetValue(l.clip, out var pp);
