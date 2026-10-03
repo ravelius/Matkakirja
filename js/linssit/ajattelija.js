@@ -380,11 +380,43 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   await lataaAjattelijaFontit(a, tv.rivit.map(([, f]) => f));
   // Päälause: kirjaimet 1,15 × gobon mittasuhde (mitattu v10-kuvasta: v10:n päälausegobo oli väljempi kuin v4:n).
   const lauseRivi = (l) => ({ teksti: l.fi, fontti: fontti('iowan').perhe, paino: fontti('iowan').paino, korkeus: 192, sumea: true, emOsuus: 1.15 });
+  /*
+   * PÄÄLAINAUS KORTTINA (v14, omistaja 3.10.2026 klo 15.4x: "vain se yksi teksti aina isompana ja terävänä", luettavissa
+   * kokonaan puhelimen ruudulla ilman että reuna leikkaa): aikajanan lainaus rivitetään tasapainoisiksi riveiksi
+   * (AJ.lauseKortti.merkkeja) ja heijastetaan paikallaan koko korttina, ei vierivänä nauhana.
+   */
+  const KORTTI = AJ?.lauseKortti ?? null;
+  const korttiRivit = (teksti, merkkeja) => {
+    const sanat = teksti.split(/\s+/);
+    const n = Math.max(1, Math.ceil(teksti.length / merkkeja));
+    const tavoite = teksti.length / n;
+    const rivit = [''];
+    for (const sana of sanat) {
+      const nyt = rivit.at(-1);
+      if (nyt && nyt.length + 1 + sana.length > tavoite + 4 && rivit.length < n) rivit.push(sana);
+      else rivit[rivit.length - 1] = nyt ? `${nyt} ${sana}` : sana;
+    }
+    return rivit;
+  };
+  // Kortti on terävä ilman syvyyssumeutta, joten sumeaa paria ei piirretä (atlas pysyy 4096 × 4096:ssa).
+  const lauseKortti = (l) => ({ ...lauseRivi(l), korkeus: 128, sumea: false, kortti: korttiRivit(l.fi, KORTTI.merkkeja), emOsuus: 1.0 });
+  /*
+   * TAUSTAVIRRAN PEHMEYS (v14; omistaja 3.10.2026 klo 16.0x: "kirjaimia ei voi lukea, ne sulautuvat toisiinsa, jäljelle
+   * jää vain tekstirivin muoto"): sumennuksen säde ≈ kirjaimen korkeus (tv.sumeus em-osuutena). Pehmeä rivi tarvitsee
+   * tilaa ylä- ja alapuolelle: kirjaimet piirretään 1 / tv.riviTila -kokoisina ja nauha heijastetaan riviTila-kertaisena,
+   * joten kirjainten koko pinnalla ei muutu. Kauempana pinnasta (päälaen takaosa, ohimot) projektorin pehmeyskerroin.
+   */
+  const TILA = tv.riviTila ?? 1;
+  const SUMEUS = Number(haku.get('virtasumeus')) || tv.sumeus;   // ?virtasumeus= kokeiluun (em-osuus)
+  const riviProjektori = tv.projektorit.flatMap((pj) => Array(pj.riveja).fill(pj));
   const { kangas, paikat } = piirraAtlas([
-    lauseRivi(lause),
-    ...tv.rivit.map(([, f, teksti]) => ({ teksti, fontti: fontti(f).perhe, paino: fontti(f).paino, korkeus: 96, toisto: true })),
+    AJ ? { ...lauseRivi(lause), korkeus: 16, sumea: false } : lauseRivi(lause),   // aikajana-tilassa käyttämätön
+    ...tv.rivit.map(([, f, teksti], ri) => ({
+      teksti, fontti: fontti(f).perhe, paino: fontti(f).paino, korkeus: tv.riviKorkeus ?? 96, toisto: true,
+      emOsuus: 1 / TILA, sumeus: SUMEUS && SUMEUS * (riviProjektori[ri]?.pehmeys ?? 1),
+    })),
     ...(KR?.lista ?? []).map((k) => lauseRivi(a.paalauseet[k.paalause])),
-    ...(AJ?.tykit ?? []).map((t) => lauseRivi(a.paalauseet[t.paalause])),
+    ...(AJ?.tykit ?? []).map((t) => (KORTTI ? lauseKortti : lauseRivi)(a.paalauseet[t.paalause])),
   ]);
   const atlas = new THREE.CanvasTexture(kangas);
   atlas.flipY = false;
@@ -436,19 +468,27 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       for (let k = 0; k < pj.riveja && ri < tv.rivit.length; k += 1, ri += 1) {
         const [kieli] = tv.rivit[ri];
         const koot = kieli === 'fi' ? [...tv.rivikork].sort((x, y) => x - y).slice(0, 2) : tv.rivikork;
-        const kork = koot[Math.floor(satunnainen() * koot.length)];
+        // v14: riviKoko ohentaa pehmeät rivit (Päätoimittaja 3.10.2026: "tekstiriveiltä, ei valkoisilta palkeilta"); ?rivikoko=.
+        const kork = koot[Math.floor(satunnainen() * koot.length)] * (Number(haku.get('rivikoko')) || tv.riviKoko || 1);
         const [kMin, kMax] = tv.kirkkaus[kieli] ?? tv.kirkkaus.el;
         const kirkkaus = kMin + (kMax - kMin) * satunnainen();
         const vM = (-0.4 + 0.8 * (k + 0.5) / pj.riveja) * pj.ala + (satunnainen() * 2 - 1) * 0.01;
         const kulma = (satunnainen() * 2 - 1) * tv.kulma * Math.PI / 180;
         const i = 1 + ri;
         asetaProjektori(THREE, u, i, {
-          paikka, kohde, etaisyys: tv.etaisyys, nauhaKork: kork, rivi: paikat[i], ala: pj.ala, blend: tv.blend,
+          paikka, kohde, etaisyys: tv.etaisyys, nauhaKork: kork * TILA, rivi: paikat[i], ala: pj.ala, blend: tv.blend,
           kulma, vM, toisto: true, atlasKorkeus: kangas.height,
         });
-        const riviLev = kork * paikat[i].lev / paikat[i].korkeus;   // laatta pinnalla (m), u:n yksikkö
+        const riviLev = kork * TILA * paikat[i].lev / paikat[i].korkeus;   // laatta pinnalla (m), u:n yksikkö
         const nopeus = mms / 1000 * nopeudet[ri] / RUUTUA_S / riviLev;
-        lista.push({ i, nopeus: nopeus * (ri % 2 ? 1 : -1), mms: mms * nopeudet[ri], voima: TYKKI * tv.voimaKerroin * kirkkaus * RIVIT });
+        // v14: kasvojen puoli porrastettua sisääntuloa varten (vasen/oikea ohimo, ylhäällä otsa ja päälaki, alhaalla parta).
+        const pjNro = tv.projektorit.indexOf(pj);
+        const puoli = pj.suunta[0] < -0.5 ? 'vasen' : pj.suunta[0] > 0.5 ? 'oikea'
+          : pj.suunta[2] > 0.5 || vM > 0 ? 'yla' : 'ala';
+        lista.push({
+          i, nopeus: nopeus * (ri % 2 ? 1 : -1), mms: mms * nopeudet[ri], voima: TYKKI * tv.voimaKerroin * kirkkaus * RIVIT,
+          puoli, pjNro, ala: pj.ala, mPerRuutu: mms / 1000 * nopeudet[ri] / RUUTUA_S,
+        });
       }
     }
     return lista;
@@ -758,6 +798,71 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       pyyhkaisy.shadow.bias = -0.0004;
       kohtaus.add(pyyhkaisy, pyyhkaisy.target);
     }
+    /*
+     * RAKOVALO (v14, omistaja 3.10.2026 klo 15.3x: mystinen intro, "kapea kaista silmien yli"; Blender AREA 0,34 × 0,014 m,
+     * spread 1,2°): kapea spotti, jonka kuvio (map) on vaakasuora kaista. Voima: Blenderin teho / pinta-ala = säteilytys
+     * kuten auringolla (W/m²) → three.js: I = E · W · d² (decay 2).
+     */
+    // v14b: avaimet [ruutu, paikka, suunta, energia, [koko, koko_y], spread°] askelina (vaihtuvat leikkausruuduissa).
+    const RK = AJ.rako ?? null;
+    const rakoAvaimet = RK && (RK.avaimet ?? [[1, RK.paikka, RK.suunta, 0, RK.koko, 1.2]]);
+    const RD = 0.9;
+    const RAKO_KERROIN = 30;   // kalibroitu Linnanrakentajan v14b-stilliin (silmäkaista)
+    let rako = null;
+    let rakoNyt = null;
+    const rakoKuvio = document.createElement('canvas');
+    rakoKuvio.width = rakoKuvio.height = 512;
+    const asetaRako = (avain) => {
+      if (avain === rakoNyt) return;
+      rakoNyt = avain;
+      const [, paikka, suunta, , [k, ky], spread] = avain;
+      /*
+       * Jalanjälki etäisyydellä RD: suorakaide k × ky levenee spreadin verran (RD · tan(spread/2) joka reunalla); teho
+       * jakautuu jalanjäljelle (E = P / A'). Keila kattaa jalanjäljen, kuvio on suorakaide pehmeällä reunalla.
+       */
+      const levea = RD * Math.tan(spread / 2 * Math.PI / 180);
+      const kx = k + 2 * levea, kyy = ky + 2 * levea;
+      const puoli = Math.max(kx, kyy) / 2 * 1.1;
+      rako.angle = Math.atan(puoli / RD);
+      rako.position.copy(b2t(THREE, paikka));
+      rako.target.position.copy(b2t(THREE, paikka.map((x, i) => x + suunta[i] * RD)));
+      // Kankaan oma suodatin (ctx.filter) esilaskee pehmeyden kuvioon; ei SVG-suodatinta (tests/sw.test.mjs).
+      const ctx = rakoKuvio.getContext('2d');
+      const px = 256 / puoli;   // kuvion pikseleitä metriä kohden (kuvio kattaa ±puoli)
+      ctx.filter = 'none'; ctx.fillStyle = '#000'; ctx.fillRect(0, 0, 512, 512);
+      ctx.filter = `blur(${Math.max(1, levea * px / 2)}px)`;
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(256 - k / 2 * px, 256 - ky / 2 * px, k * px, ky * px);
+      if (rako.map) rako.map.needsUpdate = true;
+      else rako.map = new THREE.CanvasTexture(rakoKuvio);
+      // ?rako=<kerroin> kalibrointiin (Blenderin AREA-valon säteily vs. webin spotti).
+      rako.userData.kerroin = W * RD * RD / (kx * kyy) * (Number(haku.get('rako')) || RAKO_KERROIN);
+    };
+    if (RK) {
+      rako = new THREE.SpotLight(new THREE.Color(...(RK.vari ?? [1, 1, 1])), 0, 0, 0.2, 0, 2);
+      rako.castShadow = true;
+      rako.shadow.mapSize.set(1024, 1024);
+      rako.shadow.camera.near = 0.3;
+      rako.shadow.camera.far = 1.8;
+      kohtaus.add(rako, rako.target);
+      asetaRako(rakoAvaimet[0]);
+    }
+    /*
+     * VARJOLEVY (v14b, Sokrates): näkymätön vaakalevy, joka vain varjostaa auringon (rintakehä varjoon partakuvassa).
+     * Ei piirrä väriä eikä syvyyttä; castShadow vain levyn ruuduilla.
+     */
+    let varjolevy = null;
+    if (AJ.varjolevy) {
+      const vl = AJ.varjolevy;
+      varjolevy = new THREE.Mesh(new THREE.PlaneGeometry(vl.koko[0], vl.koko[1]),
+        new THREE.MeshBasicMaterial({ colorWrite: false, depthWrite: false, side: THREE.DoubleSide }));
+      varjolevy.rotation.x = -Math.PI / 2;   // Blenderin vaakataso (normaali z) → three:n xz-taso
+      varjolevy.position.copy(b2t(THREE, vl.keski));
+      varjolevy.castShadow = true;
+      varjolevy.visible = false;
+      kohtaus.add(varjolevy);
+    }
+    const askelAvain = (avaimet, r) => avaimet.filter(([rr]) => rr <= r).at(-1) ?? avaimet[0];
     const pyyhkaisynKohde = (r) => {
       if (py.kohteet) {
         const k = avainArvo(py.kohteet.map(([rr, q]) => [rr, q]), r);
@@ -771,11 +876,14 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       const rivi = paikat[1 + tv.rivit.length + j];
       const paikka = b2t(THREE, t.paikka);
       const kohde = b2t(THREE, t.paikka.map((x, i) => x + t.suunta[i] * 0.6));
-      const korkeus = t.korkeus ?? l.korkeus;
+      // Kortti (v14): koko kortti mahtuu leveyteen KORTTI.leveys (m, 0,6 m:n tasolla), keila hieman leveämpi, ei vieritystä.
+      const lev = t.leveys ?? KORTTI?.leveys;   // v14b: luvuista (nauha_lev_m), muuten ajattelijan oletus
+      const korkeus = KORTTI ? lev * rivi.korkeus / rivi.lev : t.korkeus ?? l.korkeus;
       const nauhaLev = korkeus * rivi.lev / rivi.korkeus;
+      const ala = KORTTI ? lev * 1.15 : t.ala;
       return {
-        ...t, korkeus, lause: l, rivi, paikkaT: paikka, kohdeT: kohde, s0: 0.5 + t.ala / 2 / nauhaLev,
-        alku: t.energia[0][0], loppu: t.energia.at(-1)[0],
+        ...t, korkeus, ala, kiintea: KORTTI ? true : t.kiintea, lause: l, rivi, paikkaT: paikka, kohdeT: kohde,
+        s0: 0.5 + ala / 2 / nauhaLev, alku: t.energia[0][0], loppu: t.energia.at(-1)[0],
       };
     });
     let tykkiNyt = -1;
@@ -785,7 +893,10 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       const t = tykitAj[j];
       asetaProjektori(THREE, u, 0, {
         paikka: t.paikkaT, kohde: t.kohdeT, etaisyys: 0.6, nauhaKork: t.korkeus, rivi: t.rivi, ala: t.ala, blend: t.blend,
-        ca: a.ca, syvyys: a.syvyys, atlasKorkeus: kangas.height,
+        // v14-kortti terävänä (Päätoimittaja 3.10.2026): ei kromaattista kaksoisvalotusta eikä syvyyssumeuden hehkua.
+        ca: KORTTI ? 0 : a.ca, syvyys: KORTTI ? 0 : a.syvyys, atlasKorkeus: kangas.height,
+        // Kortin pystysiirto (m, + = alas): ylin rivi pois hiusrajan kiharoilta (Marcus); ?korttisiirto= kokeiluun.
+        vM: KORTTI ? Number(haku.get('korttisiirto') ?? KORTTI.siirto ?? 0) : 0,
       });
     };
     /*
@@ -846,8 +957,50 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     u.pKaikuVari.value.setRGB(...kaikuValo);
     u.pMaara.value = kaikuIndeksi + 2;
     const virranAlku = AJ.virta.find(([, k]) => k > 0)?.[0] ?? 0;
+    /*
+     * Porrastus (v14): lähtöjärjestys kiertää alhaalla → vasen → oikea → ylhäällä; ylhäällä olevat (otsa ja päälaki)
+     * vasta kysymyksen jälkeen, ettei kysymys jää rivien alle. Tahti PORRAS.vali ruutua.
+     */
+    const PORRAS = AJ.virtaPorrastus ?? null;
+    // v14: rivien voima suhteessa päälainaukseen (epäterävät rivit himmeämpiä, päälainaus kirkkain); ?virtavoima=.
+    const VV = Number(haku.get('virtavoima')) || AJ.virtaVoima || 1;
+    let porrasLoppu = 0;
+    if (PORRAS) {
+      const jonot = { vasen: [], oikea: [], yla: [], ala: [] };
+      for (const v of virta) jonot[v.puoli].push(v);
+      // Ensimmäinen kasvojen etupuolelta (ala = parta ja suu, näkyy heti), sitten ohimot ja otsa vuorotellen.
+      const kierto = ['ala', 'vasen', 'oikea', 'yla'];
+      let r0 = PORRAS.alku, k = 0;
+      while (kierto.some((p) => jonot[p].length)) {
+        let p = null;
+        for (let n = 0; n < 4 && !p; n += 1) {
+          const ehdokas = kierto[(k + n) % 4];
+          if (!jonot[ehdokas].length) continue;
+          if (ehdokas === 'yla' && r0 < T.kysymys[1] && kierto.some((q) => q !== 'yla' && jonot[q].length)) continue;
+          p = ehdokas; k += n;
+        }
+        jonot[p].shift().lahto = r0;
+        r0 += PORRAS.vali; k += 1;
+      }
+      porrasLoppu = r0 + PORRAS.haivytys;
+    }
     // v13c: väistökehät (kaiun ajan; säde kasvaa ja kutistuu 15 ruudussa, ettei kehä ponnahda).
     const vaistot = (AJ.vaisto ?? []).map((v) => ({ ...v, kohdeT: b2t(THREE, v.kohde) }));
+    /*
+     * v14: taustavirta väistää myös päälainauskorttia sen palaessa (omistaja 3.10.2026: vain päälainaus terävänä, kysymys
+     * ei rivien alle). Kortin keskipiste pinnalla säteenheitolla tykin suunnassa, säde 0,6 × kortin leveys.
+     */
+    if (KORTTI) {
+      const sade = new THREE.Raycaster();
+      for (const t of tykitAj) {
+        sade.set(t.paikkaT, t.kohdeT.clone().sub(t.paikkaT).normalize());
+        const osuma = sade.intersectObject(mesh, true)[0];
+        // Luvuissa (v14b) on jo kehä, jos jokin kehä kattaa kortin ajasta yli puolet: silloin ei kaksoiskehää.
+        const kattaa = vaistot.some((v) => Math.min(v.ruudut[1], t.loppu) - Math.max(v.ruudut[0], t.alku) > (t.loppu - t.alku) / 2
+          && v.kohdeT.distanceTo(osuma?.point ?? v.kohdeT) < 0.05);
+        if (osuma && !kattaa) vaistot.push({ kohdeT: osuma.point, sade: (t.leveys ?? KORTTI.leveys) * 0.6, ruudut: [t.alku, t.loppu] });
+      }
+    }
     /*
      * SAVU (omistaja 3.10.2026: oletuksena päällä, v5 95 %; ?savu=0 pois): Linnanrakentajan varjomaski 8 s silmukkana
      * kaikkiin projektoreihin. Atlas: 240 ruutua neljänä kanavana 8 × 8 laatassa (tools-käsittely Pelikoodari).
@@ -885,8 +1038,17 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       valo.target.position.copy(auringonKohde);
       valo.intensity = au.energia * W;
       valo.color.setRGB(...(au.vari ?? PERUSVARI));
-      maailma.intensity = TAYTE * (a.intro.tayte ?? 1);
+      // v14b: ympäristövalo avaimittain (0 silmä- ja partakuvissa), askelina.
+      maailma.intensity = TAYTE * (a.intro.tayte ?? 1) * (AJ.ymparisto ? askelAvain(AJ.ymparisto, r)[1] : 1);
       if (kaikuTayte) kaikuTayte.intensity = 0;
+      if (rako) {
+        const avain = askelAvain(rakoAvaimet, r);
+        asetaRako(avain);
+        const e = RK.avaimet ? avain[3] : avainArvo(RK.energia, r);
+        rako.visible = e > 0;
+        rako.intensity = e * rako.userData.kerroin;
+      }
+      if (varjolevy) varjolevy.visible = r >= AJ.varjolevy.ruudut[0] && r <= AJ.varjolevy.ruudut[1];
       if (pyyhkaisy) {
         pyyhkaisy.intensity = avainArvo(py.energia, r) * W;
         pyyhkaisy.target.position.copy(pyyhkaisynKohde(r));
@@ -914,9 +1076,9 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
         u.pB.value[ind].w = avainArvo(k.energia, r) * W * KAIKU_VOIMA * (syke[String(Math.round(r))] ?? 1);
       }
 
-      // Väistökehät: enintään kaksi samanaikaista.
-      const aktiiviset = vaistot.filter((v) => r > v.ruudut[0] && r < v.ruudut[1]).slice(0, 2);
-      for (let j = 0; j < 2; j += 1) {
+      // Väistökehät: enintään neljä samanaikaista (kaiut ja v14:n päälainauskortit).
+      const aktiiviset = vaistot.filter((v) => r > v.ruudut[0] && r < v.ruudut[1]).slice(0, 4);
+      for (let j = 0; j < 4; j += 1) {
         const v = aktiiviset[j];
         if (!v) { u.pVaisto.value[j].w = 0; continue; }
         const kasvu = Math.min(1, (r - v.ruudut[0]) / 15, (v.ruudut[1] - r) / 15);
@@ -932,9 +1094,29 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
 
       // Taustavirta: vaiheittainen kerroin, siirto = nopeus × ruudut virran alusta.
       const vk = avainArvo(AJ.virta, r);
-      for (const v of virta) {
-        u.pA.value[v.i].w = v.nopeus * (r - virranAlku);
-        u.pB.value[v.i].w = v.voima * vk;
+      if (PORRAS) {
+        /*
+         * PORRASTETTU SISÄÄNTULO (v14, omistaja 3.10.2026 klo 15.4x): rivit lähtevät liikkeelle yksi kerrallaan kasvojen
+         * eri puolilta. Rivi juoksee sisään keilan reunasta (rintama kulkee PORRAS.rintama × tekstin nopeus) ja syttyy
+         * PORRAS.haivytys ruudussa; aikajanan virtakerroin ohjaa vasta, kun kaikki ovat lähteneet.
+         */
+        const kaikki = r >= porrasLoppu;
+        for (const v of virta) {
+          const ika = r - v.lahto;
+          if (ika <= 0) { u.pB.value[v.i].w = 0; u.pF.value[v.i].w = 0; continue; }
+          u.pA.value[v.i].w = v.nopeus * ika;
+          // Rintama alkaa keilan reunan sisäpuolelta (PORRAS.reuna × puoli leveyttä ≈ kasvojen ääriviiva), ettei alku kulu
+          // pään ohi menevään valoon.
+          const etu = (PORRAS.reuna ?? 1) * v.ala / 2 - PORRAS.rintama * v.mPerRuutu * ika;
+          const sd = v.nopeus > 0 ? 1 : -1;
+          u.pF.value[v.i].w = etu > -v.ala / 2 ? sd * 10 + sd * etu : 0;
+          u.pB.value[v.i].w = v.voima * VV * Math.min(1, ika / PORRAS.haivytys) * (kaikki ? vk : Math.max(vk, 1));
+        }
+      } else {
+        for (const v of virta) {
+          u.pA.value[v.i].w = v.nopeus * (r - virranAlku);
+          u.pB.value[v.i].w = v.voima * VV * vk;
+        }
       }
     };
   }
