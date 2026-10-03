@@ -63,6 +63,9 @@ namespace Matkakirja.Natiivi
         static IssKameraKuva olio;
         bool kaynnissa;
 
+        /// <summary>Kuvaputki käynnissä (laukaisusta valmiiseen): Cupolan katseen veto ohitetaan (CupolaVeto, IssKatse.Lukittu).</summary>
+        public static bool Kaynnissa => olio != null && olio.kaynnissa;
+
         public static IssKameraKuva Hae()
         {
             if (olio == null) olio = new GameObject("IssKameraKuva").AddComponent<IssKameraKuva>();
