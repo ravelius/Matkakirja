@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2587, teksti: 'Ajattelijat: Sokrateen tekstiprojektorit väritt… (#3900)' },
   { v: 2586, teksti: 'Ajattelijat: Sokrates v12–v13 (#3897)' },
   { v: 2585, teksti: 'Cupola: pelkkä generoitu humina v2, NASA-radio… (#3896)' },
   { v: 2584, teksti: 'Ajattelijat v11 + Marcuksen kierrokset 2–3 + ky… (#3892)' },
