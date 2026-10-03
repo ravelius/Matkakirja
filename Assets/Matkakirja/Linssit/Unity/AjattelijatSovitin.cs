@@ -635,6 +635,9 @@ namespace Matkakirja.Natiivi
         void Mitattavat(AjattelijaData a, double pl)
         {
             mitattavat.Clear();
+            // MP3:n alkuviive (LAME 1105 näytettä): ffmpeg ja selaimet leikkaavat sen tagin mukaan; näytemäärä kertoo, tekeekö Unity samoin.
+            foreach (var (nimi, l) in new[] { ("puhe", puhe), ("musiikki", musiikki) })
+                if (l?.clip != null) o.Kirjaa($"ajattelija: tahti {nimi} {l.clip.samples} näytettä {l.clip.frequency} Hz {l.clip.channels} kan, {l.clip.length:F4} s");
             if (kytkin.clip != null) mitattavat.Add((a.Prologi.Kytkin, "kytkin", double.NaN));
             if (a.Aikajana == null) return;
             foreach (var n in AjattelijaTahti.Leikkaukset(a.Aikajana.Kamera, 300))
