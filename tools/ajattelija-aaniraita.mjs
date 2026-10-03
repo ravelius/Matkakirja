@@ -73,8 +73,14 @@ const RESEPTIT = {
     },
   },
 };
-const R = RESEPTIT[AJATTELIJA];
-if (!R) throw new Error(`tuntematon ajattelija ${AJATTELIJA}`);
+/*
+ * UUSI AJATTELIJA ilman omaa reseptiä (tools/ajattelija-putki.mjs): v12-tila, yhtenäinen puhe ja oma musiikki riittävät
+ * (koko levytys alusta loppuun), joten resepti on yleinen eikä vaadi koodimuutosta.
+ */
+const YLEINEN = A.includes('--v12') && A.includes('--puhe') && A.includes('--musiikki')
+  ? { lahteet: '.', v12: { osat: 'koko' } } : null;
+const R = RESEPTIT[AJATTELIJA] ?? YLEINEN;
+if (!R) throw new Error(`tuntematon ajattelija ${AJATTELIJA} (uudelle: --v12 --puhe … --musiikki …)`);
 const LAHTEET = resolve(arvo('--lahteet', R.lahteet));
 const ULOS = resolve(arvo('--ulos', '.'));
 const V12 = A.includes('--v12');
