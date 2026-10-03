@@ -836,8 +836,8 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       }).catch((syy) => console.warn('ajattelija: kaikukuva', k.kuva, syy));
     }
     /*
-     * KAIKUJEN VÄRI (omistaja vertaa, Päätoimittaja 3.10.2026): oletus väritön (projektorin valo neutraali), seepia
-     * kehityslipulla ?kaikuvari=seepia. Oletus voimassa, kunnes omistaja päättää.
+     * KAIKUJEN VÄRI (omistaja 3.10.2026): oletus väritön (projektorin valo neutraali), seepia kehityslipulla
+     * ?kaikuvari=seepia.
      */
     const SEEPIA = a.kaiku?.savy ?? [1.0, 0.78, 0.52];
     const kaikuValo = haku.get('kaikuvari') === 'seepia' ? SEEPIA : (AJ.kaikuVari ?? [1.0, 1.0, 1.0]);
@@ -847,10 +847,10 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     // v13c: väistökehät (kaiun ajan; säde kasvaa ja kutistuu 15 ruudussa, ettei kehä ponnahda).
     const vaistot = (AJ.vaisto ?? []).map((v) => ({ ...v, kohdeT: b2t(THREE, v.kohde) }));
     /*
-     * SAVU (omistaja vertaa; ?savu=1, oletus pois): Linnanrakentajan varjomaski 8 s silmukkana kaikkiin projektoreihin.
-     * Atlas: 240 ruutua neljänä kanavana 8 × 8 laatassa (tools-käsittely Pelikoodari, savu-v1).
+     * SAVU (omistaja 3.10.2026: oletuksena päällä, v5 95 %; ?savu=0 pois): Linnanrakentajan varjomaski 8 s silmukkana
+     * kaikkiin projektoreihin. Atlas: 240 ruutua neljänä kanavana 8 × 8 laatassa (tools-käsittely Pelikoodari).
      */
-    const savuPaalla = haku.get('savu') === '1' && AJ.savu?.kuva;
+    const savuPaalla = haku.get('savu') !== '0' && AJ.savu?.kuva;
     if (savuPaalla) {
       new THREE.TextureLoader().loadAsync(`${R2}${AJ.savu.kuva}`).then((tk) => {
         tk.colorSpace = THREE.NoColorSpace;
@@ -939,7 +939,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
 
   // Ääniraita on kierroksen kello (luennat ja leikkaukset osuvat musiikkiin); prologi kulkee omalla kellollaan.
   /*
-   * Musiikkiversio (omistaja vertaa, Päätoimittaja 3.10.2026): oletus aikajanan oma musiikki; testikomento
+   * Musiikkiversio (omistaja 3.10.2026): oletus aikajanan oma musiikki (Linssisepän); testikomento
    * ?ajattelijamusiikki=<nimi> valitsee aani.vaihtoehdot-kentästä (esim. zarathustra). Ajoitus on sama kaikissa.
    */
   const aaniPohja = AJ?.aani ?? KR?.aani ?? a.aani;

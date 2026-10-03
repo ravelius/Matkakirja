@@ -196,8 +196,8 @@ export const SOKRATES = Object.freeze({
     },
     syke: 'ajattelijat/sokrates/v3/syke-v13.json',
     /*
-     * KAIKUSARJAT omistajan vertailuun (Päätoimittaja 3.10.2026; ?kaikusarja=<nimi>, ?kaikuvari=seepia, ?savu=1):
-     * oletus A = Linnanrakentajan v13c:n rajatut hahmot (gobot-v13cA: Zeus, hopliitti v2, Themis yksin; David
+     * KAIKUSARJAT (omistaja 3.10.2026: oletus A väritön, savu päällä; vertailuun ?kaikusarja=<nimi>, ?kaikuvari=seepia,
+     * ?savu=0): oletus A = Linnanrakentajan v13c:n rajatut hahmot (gobot-v13cA: Zeus, hopliitti v2, Themis yksin; David
      * paikkamerkkinä) aikajanan omina kuvina, väri valosta. v13b = edellinen sarja; sk = Sisältökirjurin rajatut omina
      * harmaa- ja seepiaversioina. B (Codex) lisätään samoilla nimillä, kun kuvat tulevat.
      */
