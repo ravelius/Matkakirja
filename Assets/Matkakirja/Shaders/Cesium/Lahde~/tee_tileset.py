@@ -308,6 +308,9 @@ for o in list(kaavio):
 # kameran alapisteen geosentristä normaalia n0 = normalize(_WorldSpaceCameraPos − c): tasamaa saa koko ruudulla saman
 # N·L:n (matala aurinko ei vaalenna luodetta eikä tummenna kaakkoa), rinteiden kulma n:ään nähden säilyy. w = 0 →
 # normaali täsmälleen ennallaan (pallon mittakaava, lento, linssit).
+# MERI TASAISEKSI (Maltan merisauma 3.10.2026, Natiiviseppä): meren pisteen (h ≤ 2 m) normaali on ellipsoidinormaali n eikä
+# maastolaatan oma normaali, joka vaihtelee laatan tarkkuustason mukaan (rinnevalossa suorakulmaiset sävylohkot merellä,
+# A/B lokit/natiiviseppa-sauma-ab-20261003-1722: valo pois tai maasto pois → ei saumaa). Data on kunnossa (Karttaseppä).
 KORKEUS_RUNKO = (
     "posOut = posOS; nrmOut = nrmOS;\n"
     "float k = kerroin > 0.0 ? kerroin : 1.0;\n"
@@ -322,11 +325,13 @@ KORKEUS_RUNKO = (
     "    float z = dot(d, ak);\n"
     "    float3 n = normalize(d + ak * z * (ekv * ekv / (nap * nap) - 1.0));\n"
     "    float3 nw = TransformObjectToWorldNormal(nrmOS);\n"
+    "    float uz = z / r;\n"
+    "    float sade = ekv * nap / sqrt(nap * nap * (1.0 - uz * uz) + ekv * ekv * uz * uz);\n"
+    "    float h = max(r - sade, 0.0);\n"
+    "    // Sea is flat: ellipsoid normal instead of the tile's own (Malta seam 3.10.2026: tile-level normals differ).\n"
+    "    if (r - sade <= 2.0) nw = n;\n"
     "    if (k != 1.0)\n"
     "    {\n"
-    "        float uz = z / r;\n"
-    "        float sade = ekv * nap / sqrt(nap * nap * (1.0 - uz * uz) + ekv * ekv * uz * uz);\n"
-    "        float h = max(r - sade, 0.0);\n"
     "        posOut = posOS + mul((float3x3)GetWorldToObjectMatrix(), n * (h * (k - 1.0)));\n"
     "        float nr = dot(nw, n);\n"
     "        nw = normalize((nw - n * nr) * k + n * nr);\n"
