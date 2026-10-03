@@ -801,27 +801,58 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
      * spread 1,2°): kapea spotti, jonka kuvio (map) on vaakasuora kaista. Voima: Blenderin teho / pinta-ala = säteilytys
      * kuten auringolla (W/m²) → three.js: I = E · W · d² (decay 2).
      */
+    // v14b: avaimet [ruutu, paikka, suunta, energia, [koko, koko_y], spread°] askelina (vaihtuvat leikkausruuduissa).
     const RK = AJ.rako ?? null;
+    const rakoAvaimet = RK && (RK.avaimet ?? [[1, RK.paikka, RK.suunta, 0, RK.koko, 1.2]]);
+    const RD = 0.9;
+    const RAKO_KERROIN = 10;   // kalibroitu Linnanrakentajan v14b-stilliin (silmäkaista)
     let rako = null;
+    let rakoNyt = null;
+    const rakoKuvio = document.createElement('canvas');
+    rakoKuvio.width = rakoKuvio.height = 512;
+    const asetaRako = (avain) => {
+      if (avain === rakoNyt) return;
+      rakoNyt = avain;
+      const [, paikka, suunta, , [k, ky], spread] = avain;
+      rako.angle = Math.atan(k / 2 / RD) * 1.05;
+      rako.position.copy(b2t(THREE, paikka));
+      rako.target.position.copy(b2t(THREE, paikka.map((x, i) => x + suunta[i] * RD)));
+      // Kuvio: suorakaide size × size_y keilan alalla; spread pehmentää reunan (≈ RD · tan(spread) pinnalla).
+      const ck = rakoKuvio.getContext('2d');
+      const h = Math.max(2, Math.round(512 * ky / k));
+      const pehmea = Math.max(1, 512 * RD * Math.tan(spread / 2 * Math.PI / 180) / k / 2);
+      ck.filter = 'none'; ck.fillStyle = '#000'; ck.fillRect(0, 0, 512, 512);
+      ck.filter = `blur(${pehmea}px)`; ck.fillStyle = '#fff'; ck.fillRect(16, 256 - h / 2, 480, h);
+      if (rako.map) rako.map.needsUpdate = true;
+      else rako.map = new THREE.CanvasTexture(rakoKuvio);
+      // ?rako=<kerroin> kalibrointiin (Blenderin AREA-valon säteily vs. webin spotti).
+      rako.userData.kerroin = W * RD * RD / (k * ky) * (Number(haku.get('rako')) || RAKO_KERROIN);
+    };
     if (RK) {
-      const RD = 0.9;
-      rako = new THREE.SpotLight(new THREE.Color(...(RK.vari ?? [1, 1, 1])), 0, 0, Math.atan(RK.koko[0] / 2 / RD) * 1.05, 0, 2);
-      rako.position.copy(b2t(THREE, RK.paikka));
-      rako.target.position.copy(b2t(THREE, RK.paikka.map((x, i) => x + RK.suunta[i] * RD)));
-      const kuvio = document.createElement('canvas');
-      kuvio.width = kuvio.height = 512;
-      const ck = kuvio.getContext('2d');
-      const kaista = Math.max(2, Math.round(512 * RK.koko[1] / RK.koko[0]));
-      ck.fillStyle = '#000'; ck.fillRect(0, 0, 512, 512);
-      ck.filter = 'blur(2px)'; ck.fillStyle = '#fff'; ck.fillRect(8, 256 - kaista / 2, 496, kaista);
-      rako.map = new THREE.CanvasTexture(kuvio);
+      rako = new THREE.SpotLight(new THREE.Color(...(RK.vari ?? [1, 1, 1])), 0, 0, 0.2, 0, 2);
       rako.castShadow = true;
       rako.shadow.mapSize.set(1024, 1024);
       rako.shadow.camera.near = 0.3;
       rako.shadow.camera.far = 1.8;
-      rako.userData.kerroin = W * RD * RD / (RK.koko[0] * RK.koko[1]);
       kohtaus.add(rako, rako.target);
+      asetaRako(rakoAvaimet[0]);
     }
+    /*
+     * VARJOLEVY (v14b, Sokrates): näkymätön vaakalevy, joka vain varjostaa auringon (rintakehä varjoon partakuvassa).
+     * Ei piirrä väriä eikä syvyyttä; castShadow vain levyn ruuduilla.
+     */
+    let varjolevy = null;
+    if (AJ.varjolevy) {
+      const vl = AJ.varjolevy;
+      varjolevy = new THREE.Mesh(new THREE.PlaneGeometry(vl.koko[0], vl.koko[1]),
+        new THREE.MeshBasicMaterial({ colorWrite: false, depthWrite: false, side: THREE.DoubleSide }));
+      varjolevy.rotation.x = -Math.PI / 2;   // Blenderin vaakataso (normaali z) → three:n xz-taso
+      varjolevy.position.copy(b2t(THREE, vl.keski));
+      varjolevy.castShadow = true;
+      varjolevy.visible = false;
+      kohtaus.add(varjolevy);
+    }
+    const askelAvain = (avaimet, r) => avaimet.filter(([rr]) => rr <= r).at(-1) ?? avaimet[0];
     const pyyhkaisynKohde = (r) => {
       if (py.kohteet) {
         const k = avainArvo(py.kohteet.map(([rr, q]) => [rr, q]), r);
@@ -836,9 +867,10 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       const paikka = b2t(THREE, t.paikka);
       const kohde = b2t(THREE, t.paikka.map((x, i) => x + t.suunta[i] * 0.6));
       // Kortti (v14): koko kortti mahtuu leveyteen KORTTI.leveys (m, 0,6 m:n tasolla), keila hieman leveämpi, ei vieritystä.
-      const korkeus = KORTTI ? KORTTI.leveys * rivi.korkeus / rivi.lev : t.korkeus ?? l.korkeus;
+      const lev = t.leveys ?? KORTTI?.leveys;   // v14b: luvuista (nauha_lev_m), muuten ajattelijan oletus
+      const korkeus = KORTTI ? lev * rivi.korkeus / rivi.lev : t.korkeus ?? l.korkeus;
       const nauhaLev = korkeus * rivi.lev / rivi.korkeus;
-      const ala = KORTTI ? KORTTI.leveys * 1.15 : t.ala;
+      const ala = KORTTI ? lev * 1.15 : t.ala;
       return {
         ...t, korkeus, ala, kiintea: KORTTI ? true : t.kiintea, lause: l, rivi, paikkaT: paikka, kohdeT: kohde,
         s0: 0.5 + ala / 2 / nauhaLev, alku: t.energia[0][0], loppu: t.energia.at(-1)[0],
@@ -950,7 +982,10 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       for (const t of tykitAj) {
         sade.set(t.paikkaT, t.kohdeT.clone().sub(t.paikkaT).normalize());
         const osuma = sade.intersectObject(mesh, true)[0];
-        if (osuma) vaistot.push({ kohdeT: osuma.point, sade: KORTTI.leveys * 0.6, ruudut: [t.alku, t.loppu] });
+        // Luvuissa (v14b) on jo kehä, jos jokin kehä kattaa kortin ajasta yli puolet: silloin ei kaksoiskehää.
+        const kattaa = vaistot.some((v) => Math.min(v.ruudut[1], t.loppu) - Math.max(v.ruudut[0], t.alku) > (t.loppu - t.alku) / 2
+          && v.kohdeT.distanceTo(osuma?.point ?? v.kohdeT) < 0.05);
+        if (osuma && !kattaa) vaistot.push({ kohdeT: osuma.point, sade: (t.leveys ?? KORTTI.leveys) * 0.6, ruudut: [t.alku, t.loppu] });
       }
     }
     /*
@@ -990,13 +1025,17 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
       valo.target.position.copy(auringonKohde);
       valo.intensity = au.energia * W;
       valo.color.setRGB(...(au.vari ?? PERUSVARI));
-      maailma.intensity = TAYTE * (a.intro.tayte ?? 1);
+      // v14b: ympäristövalo avaimittain (0 silmä- ja partakuvissa), askelina.
+      maailma.intensity = TAYTE * (a.intro.tayte ?? 1) * (AJ.ymparisto ? askelAvain(AJ.ymparisto, r)[1] : 1);
       if (kaikuTayte) kaikuTayte.intensity = 0;
       if (rako) {
-        const e = avainArvo(RK.energia, r);
+        const avain = askelAvain(rakoAvaimet, r);
+        asetaRako(avain);
+        const e = RK.avaimet ? avain[3] : avainArvo(RK.energia, r);
         rako.visible = e > 0;
         rako.intensity = e * rako.userData.kerroin;
       }
+      if (varjolevy) varjolevy.visible = r >= AJ.varjolevy.ruudut[0] && r <= AJ.varjolevy.ruudut[1];
       if (pyyhkaisy) {
         pyyhkaisy.intensity = avainArvo(py.energia, r) * W;
         pyyhkaisy.target.position.copy(pyyhkaisynKohde(r));

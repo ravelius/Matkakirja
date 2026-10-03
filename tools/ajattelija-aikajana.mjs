@@ -55,6 +55,7 @@ const tykit = v.lainaukset.map((l) => {
     paikka: pv(valo.sijainti), suunta: pv(valo.suunta), ala: valo.ala_m ?? alaKeilasta(valo.keila_aste),
     blend: valo.spot_blend ?? 0.45, energia: energia(valo), ...(valo.nauha_kork_m ? { korkeus: valo.nauha_kork_m } : {}),
     ...(l.kiintea ? { kiintea: true } : { vierii: [F(l.vierii_s[0]), F(l.vierii_s[1])] }),
+    ...(valo.nauha_lev_m ? { leveys: valo.nauha_lev_m } : {}),   // v14b: kortin leveys (kiinteä lainaus otsalla)
   };
 });
 
@@ -87,11 +88,18 @@ const savu = c.savu && SAVU ? {
 
 // v14: rakovalo (Blender AREA, suorakaide koko × koko_y, spread ~1°): kapea kaista (silmät); koko Blender-koodin arvoista,
 // jos luvuissa ei ole niitä (sokrates_bysti.py rako_avain).
+// v14b: rako.avaimet = [[ruutu, sijainti, suunta, energia, size, size_y, spread_aste], …] (paikka ja koko avaimittain).
 const rk = d.valot.rako;
-const rako = rk && rk.energia_avaimet.some(([, e]) => e > 0) ? {
-  paikka: pv(rk.sijainti), suunta: pv(rk.suunta), energia: energia(rk), koko: rk.koko ?? [0.34, 0.014],
+const rako = rk && (rk.avaimet ?? rk.energia_avaimet).some((x) => (rk.avaimet ? x[3] : x[1]) > 0) ? {
+  ...(rk.avaimet
+    ? { avaimet: rk.avaimet.map(([r, p, su, e, k, ky, sp]) => [r, pv(p), pv(su), e, [k, ky], sp]) }
+    : { paikka: pv(rk.sijainti), suunta: pv(rk.suunta), energia: energia(rk), koko: rk.koko ?? [0.34, 0.014] }),
   ...(rk.vari ? { vari: pv(rk.vari) } : {}),
 } : null;
+// v14b: ympäristövalon kerroin avaimittain (0 = ei täytettä; silmä- ja partakuvat) ja näkymätön varjolevy (vain varjo).
+const ymparisto = d.v14?.ymparisto_voima_avaimet ?? null;
+const vl = d.v14?.varjolevy;
+const varjolevy = vl ? { keski: pv(vl.keski), koko: [vl.leveys_x_m, vl.syvyys_y_m], ruudut: vl.ruudut } : null;
 
 // v13b: tekstiprojektorien (tykki-*, virta-*) väri, jos viety (värittömässä tilassa 1/1/1); kaikilla sama.
 const tykkiVari = d.valot[v.lainaukset[0]?.nimi]?.vari;
@@ -106,6 +114,8 @@ const aikajana = {
   ...(savu ? { savu } : {}),
   ...(tykkiVari ? { tykkiVari: pv(tykkiVari) } : {}),
   ...(rako ? { rako } : {}),
+  ...(ymparisto ? { ymparisto } : {}),
+  ...(varjolevy ? { varjolevy } : {}),
   efektit: v.efektit.map((e) => [e.efekti, e.s]),
 };
 

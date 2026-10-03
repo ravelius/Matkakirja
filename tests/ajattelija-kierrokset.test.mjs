@@ -180,7 +180,7 @@ test('kehitysliput: kaikusarja (oletus A, harmaa ja seepia kuvina) ja väritön 
 
 test('v13c: tekstivirran väistökehät kaikujen ympärillä ja savumaski lipulla (Linnanrakentaja 34b5f06a5)', () => {
   const aj = SOKRATES.aikajana;
-  assert.equal(aj.vaisto.length, 4);
+  assert.equal(aj.vaisto.length, 9);   // v14b: kaiut 4 + lainaukset 4 + kysymys
   assert.ok(aj.vaisto.every((v) => v.sade > 0.05 && v.sade < 0.2 && v.ruudut[1] > v.ruudut[0]));
   assert.deepEqual(aj.savu, { kuva: 'ajattelijat/sokrates/v3/savu-atlas-v5.png', ala: 0.28, kesto: 8, fps: 30, ruutuja: 240, ydin: 0.286, vahvuus: 0.95 });
   assert.match(MOOTTORI, /const savuPaalla = haku\.get\('savu'\) !== '0' && AJ\.savu\?\.kuva;/);
