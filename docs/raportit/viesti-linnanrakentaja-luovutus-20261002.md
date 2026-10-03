@@ -3,6 +3,11 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
+## 3.10. 16.x: v14 MYSTINEN (omistaja 15.3x/15.4x): leikkaukset 70–80 % varjossa (V14_ENERGIA, rakovalo 'rako' silmiin ja
+## Marcuksen partaan), Sokrateen parta liukuvalla sivuvalolla (takavalo = kita), tekstivaihe ×0,3 + reunavalo, tummennus 11–12 s,
+## virran porrastus 0,45 s/rivi. Luvut v14 64394e148 Pelikoodarilla, stillit Päätoimittajalla. Linssisepän iskut = likiarvot.
+## Ajo: --v7 GOBOT ULOS --v13 TAUSTA SYKE --v14 --v13c --kaikuvari neutraali --savu …/savu-v5 [--kohde marcus --kertoja …ajat.json]
+
 ## 3.10. 15.3x: v14-INTRO (--v14 [--intro c1=…,c2=…,c3=…,c4=…,rem=…,kys=…,kertoja=…], linssin aika, prologi 2,5 s):
 ## alkuajo + 4 eri kasvojen osaa omin valoin; luvut {sokrates,marcus}-luvut-v14.json (822739628) Pelikoodarilla. ODOTTAA:
 ## Linssisepän tarkat iskut → --intro → luvut uudelleen samoilla nimillä; Marcuksen rajatut kaiut.
