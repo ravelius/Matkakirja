@@ -76,6 +76,8 @@ Shader "Matkakirja/AjattelijaKipsi"
             float4 _SavuTila;       // päällä, ala (m), laatan u, v (webin kuvasuunnassa)
             float4 _SavuKanava;
             float _SavuC0;
+            float4 _RiviRaja;       // taustarivit: x nauhan suurin korkeus ruudun korkeudesta (0 = pois), y pehmeä väli (× x),
+                                    // z, w geometrisen N·L:n häivytys (alle z pois, yli w täysi)
             float4 _SavuPehmeys;    // x: sumennuksen säde laatan uv:nä, y: harso (0 = ei savua, 1 = webin täysi varjo)
 
             struct Tulo { float4 paikka : POSITION; float3 normaali : NORMAL; float4 tangentti : TANGENT; float2 uv : TEXCOORD0; };
@@ -260,7 +262,26 @@ Shader "Matkakirja/AjattelijaKipsi"
                 return lerp(1.0, s, _SavuPehmeys.y);
             }
 
-            float3 ProjektoriValo(float3 p, float3 n)
+            /* TAUSTARIVIEN RAJAT (Päätoimittaja 4.10., omistaja TF 133): (1) kameraa lähellä oleva rivi heijastui ruudulla lähes
+               päälainauksen kokoiseksi → nauhan korkeus pikseleinä (atlaksen v:n gradientti ruudulla, analyyttisesti maailman
+               derivaatoista, koska silmukan haarat eivät salli ddx:ää) rajataan: yli rajan rivi häivyttyy. (2) Hipaisukulmassa
+               (kasvojen reunat) rivi venyi läiskäksi → häivytys geometrisen normaalin N·L:n mukaan. */
+            float RivinRaja(int i, float3 p, float3 ng, float3 kohti, float3 dpx, float3 dpy)
+            {
+                float k = smoothstep(_RiviRaja.z, _RiviRaja.w, dot(ng, kohti));
+                if (_RiviRaja.x <= 0.0 || k <= 0.0) return k;
+                float4 hp = float4(p, 1.0);
+                float z = dot(_PF[i], hp), lx = dot(_PX[i], hp), ly = dot(_PY[i], hp);
+                float3 djx = (_PX[i].xyz * z - lx * _PF[i].xyz) / (z * z);
+                float3 djy = (_PY[i].xyz * z - ly * _PF[i].xyz) / (z * z);
+                float3 dvdp = _PA[i].x * (djx * _PB[i].y + djy * _PB[i].x) / _PA[i].z;
+                float2 dv = float2(dot(dvdp, dpx), dot(dvdp, dpy));
+                float kaista = 1.0 / max(length(dv), 1e-6);          // nauhan korkeus pikseleinä
+                float raja = _RiviRaja.x * _ScreenParams.y;
+                return k * (1.0 - smoothstep(raja, raja * _RiviRaja.y, kaista));
+            }
+
+            float3 ProjektoriValo(float3 p, float3 n, float3 ng, float3 dpx, float3 dpy)
             {
                 float3 summa = 0;
                 for (int i = 0; i < P_ENINTAAN; i++)
@@ -287,7 +308,7 @@ Shader "Matkakirja/AjattelijaKipsi"
                             : PNayte(i, jx, jy, 1.0, sumeus).xxx;
                         t *= _PG[i].z > 0.5 ? _PKaikuVari.rgb : _PVari.rgb;
                     }
-                    if (_PD[i].w > 0.5) t *= VaistoKerroin(p);                                 // vain taustavirran toistorivit
+                    if (_PD[i].w > 0.5) t *= VaistoKerroin(p) * RivinRaja(i, p, ng, kohti / r, dpx, dpy);   // vain taustavirran toistorivit
                     if (_SavuTila.x > 0.5) t *= SavuNayte(jx * _PA[i].x, jy * _PA[i].x);   // kaikki projektorit
                     summa += t * (_PB[i].w * keila * nl / (r * r));
                 }
@@ -326,6 +347,8 @@ Shader "Matkakirja/AjattelijaKipsi"
             half4 frag(Ulos i) : SV_Target
             {
                 float3 n = normalize(i.normaali);
+                float3 ng = n;                                          // geometrinen normaali (taustarivien N·L-raja)
+                float3 dpx = ddx(i.maailma), dpy = ddy(i.maailma);      // tasaisessa ohjausvuossa (RivinRaja)
                 // three.js MeshStandardMaterial: karheus += geometrinen karheus (näkymäavaruuden geometrianormaalin derivaatat,
                 // ennen normaalikarttaa), enintään 1. Pehmentää spekulaaria vinoissa kulmissa (prologin takavalot).
                 float3 nNakyma = mul((float3x3)UNITY_MATRIX_V, n);
@@ -366,7 +389,7 @@ Shader "Matkakirja/AjattelijaKipsi"
                     suora += sateily * (lambert + Ggx(l, v, n, karheus) * _Spekulaari);
                 }
                 float3 puolipallo = lerp(_Maa.rgb, _Taivas.rgb, 0.5 * n.y + 0.5);
-                float3 vari = suora + puolipallo * lambert + lambert * ProjektoriValo(i.maailma, n);
+                float3 vari = suora + puolipallo * lambert + lambert * ProjektoriValo(i.maailma, n, ng, dpx, dpy);
                 return half4(PeiteLineaariseen(AgX(vari), i.ruutu.xy / i.ruutu.w), 1.0);
             }
             ENDHLSL

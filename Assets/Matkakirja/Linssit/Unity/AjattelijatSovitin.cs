@@ -776,6 +776,15 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa($"ajattelija: savu pehmeys {AjattelijaNayttamo.PehmeysOhitus} harso {AjattelijaNayttamo.HarsoOhitus} (NaN = data)");
                 return;
             }
+            else if (mita == "rivinraja" && arvo != null)
+            {
+                var rr = osat.Skip(2).ToArray();
+                double L(int k) => rr.Length > k && rr[k] != "pois" ? double.Parse(rr[k], System.Globalization.CultureInfo.InvariantCulture) : double.NaN;
+                AjattelijaNayttamo.RajaOhitus = L(0); AjattelijaNayttamo.KulmaOhitus0 = L(1); AjattelijaNayttamo.KulmaOhitus1 = L(2);
+                nayttamo?.AsetaRivinRaja();
+                o.Kirjaa($"ajattelija: rivinraja {AjattelijaNayttamo.RajaOhitus} kulma {AjattelijaNayttamo.KulmaOhitus0}–{AjattelijaNayttamo.KulmaOhitus1} (NaN = data)");
+                return;
+            }
             else if (mita == "viive" && arvo != null)
             {
                 // Mittauksen kalibrointi: lisäsiirto ms (+ = kuva myöhemmin); vaikuttaa heti (kello lasketaan joka ruutu).

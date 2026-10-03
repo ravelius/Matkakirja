@@ -116,6 +116,13 @@ namespace Matkakirja.Linssit.Ajattelijat
         /// riviKorkeus (atlaksen nauha px) ja riviKoko (rivikorkeuden kerroin pinnalla). Puuttuvat: 0, 1, 96, 1.
         /// </summary>
         public double Sumeus, RiviTila = 1, RiviKorkeus = 96, RiviKoko = 1;
+        /// <summary>
+        /// Natiivin rajat (Päätoimittaja 4.10., omistaja TF 133): nauhan suurin korkeus ruudun korkeudesta (rajaKoko, 0 = pois;
+        /// yli rajan rivi häivyttyy välillä raja … raja × 1,3) ja geometrisen N·L:n häivytys rajaKulma [pois alle, täysi yli].
+        /// </summary>
+        public double RajaKoko = OletusRajaKoko;
+        public double[] RajaKulma = { 0.2, 0.4 };
+        public const double OletusRajaKoko = 0.05;
         public uint Siemen;
         public double[] Rivikork, Ajat;
         public Dictionary<string, double[]> Kirkkaus = new Dictionary<string, double[]>();
@@ -455,7 +462,9 @@ namespace Matkakirja.Linssit.Ajattelijat
                 Siemen = (uint)L(tv, "siemen"), Rivikork = V(tv, "rivikork"), Ajat = V(tv, "ajat"),
                 Mms = L(O(tv, "nopeus"), "mms"), Vaihtelu = Lv(O(tv, "nopeus"), "vaihtelu", 0),
                 Sumeus = Lv(tv, "sumeus", 0), RiviTila = Lv(tv, "riviTila", 1), RiviKorkeus = Lv(tv, "riviKorkeus", 96), RiviKoko = Lv(tv, "riviKoko", 1),
+                RajaKoko = Lv(tv, "rajaKoko", AjattelijaTaustavirta.OletusRajaKoko),
             };
+            if (K(tv, "rajaKulma") != null) d.Taustavirta.RajaKulma = V(tv, "rajaKulma");
             foreach (var kv in O(tv, "kirkkaus")) d.Taustavirta.Kirkkaus[kv.Key] = Vek(kv.Value);
             foreach (var x in MiniJson.TaulukkoTaiTyhja(K(tv, "projektorit")))
             {
