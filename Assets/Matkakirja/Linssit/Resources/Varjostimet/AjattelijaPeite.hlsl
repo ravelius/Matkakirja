@@ -16,7 +16,7 @@ float3 PeiteLineaariseksi(float3 c) { return lerp(pow((c + 0.055) / 1.055, 2.4),
 float3 PeiteSrgb(float3 c) { c = max(c, 0.0); return lerp(1.055 * pow(c, 1.0 / 2.4) - 0.055, c * 12.92, step(c, 0.0031308)); }
 float PeiteVali(float y, float a, float b, float pa, float pb) { return lerp(pa, pb, saturate((y - a) / (b - a))); }
 
-/// Leikkausavaruuden paikasta CSS:n uv (0,0 vasen yläkulma), sama kuva molemmissa varjostimissa.
+/// Koko ruudun kolmion (projektioton leikkausavaruus) uv: y = 0 kuvan alareunassa kuten ComputeScreenPos (kipsi).
 float2 PeiteUv(float4 leikkaus)
 {
     float2 uv = leikkaus.xy / leikkaus.w * 0.5 + 0.5;
@@ -26,7 +26,7 @@ float2 PeiteUv(float4 leikkaus)
     return uv;
 }
 
-/// CSS-kerrokset sRGB-värin päälle (uv: x vasemmalta, y = 1 − uv.y ylhäältä kuten CSS).
+/// CSS-kerrokset sRGB-värin päälle (uv: x vasemmalta, y alhaalta; CSS:n y = 1 − uv.y ylhäältä).
 float3 PeiteSrgbVariin(float3 c, float2 uv)
 {
     float y = 1.0 - uv.y;   // 0 ylhäällä kuten CSS

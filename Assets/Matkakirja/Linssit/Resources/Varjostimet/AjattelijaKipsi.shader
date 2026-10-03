@@ -85,7 +85,7 @@ Shader "Matkakirja/AjattelijaKipsi"
                 float3 normaali : TEXCOORD1;
                 float4 tangentti : TEXCOORD2;
                 float2 uv : TEXCOORD3;
-                float4 leikkaus : TEXCOORD4;   // leikkausavaruuden paikka (peitteen uv kuten AjattelijaPeite)
+                float4 ruutu : TEXCOORD4;   // ruudun paikka (ComputeScreenPos: y = 0 kuvan alareunassa myös RT:hen piirrettäessä)
             };
 
             Ulos vert(Tulo t)
@@ -93,7 +93,9 @@ Shader "Matkakirja/AjattelijaKipsi"
                 Ulos o;
                 o.maailma = TransformObjectToWorld(t.paikka.xyz);
                 o.paikka = TransformWorldToHClip(o.maailma);
-                o.leikkaus = o.paikka;
+                // Ei leikkausavaruuden y:tä suoraan: RenderTextureen piirrettäessä projektio on Metalissa käännetty, jolloin peite
+                // osui bystiin peilattuna (vinjetti ylös, alareuna ~17 % liian kirkas; Marcuksen nimiruutu 3.10.2026).
+                o.ruutu = ComputeScreenPos(o.paikka);
                 o.normaali = TransformObjectToWorldNormal(t.normaali);
                 o.tangentti = float4(TransformObjectToWorldDir(t.tangentti.xyz), t.tangentti.w * GetOddNegativeScale());
                 o.uv = t.uv;
@@ -350,7 +352,7 @@ Shader "Matkakirja/AjattelijaKipsi"
                 }
                 float3 puolipallo = lerp(_Maa.rgb, _Taivas.rgb, 0.5 * n.y + 0.5);
                 float3 vari = suora + puolipallo * lambert + lambert * ProjektoriValo(i.maailma, n);
-                return half4(PeiteLineaariseen(AgX(vari), PeiteUv(i.leikkaus)), 1.0);
+                return half4(PeiteLineaariseen(AgX(vari), i.ruutu.xy / i.ruutu.w), 1.0);
             }
             ENDHLSL
         }
