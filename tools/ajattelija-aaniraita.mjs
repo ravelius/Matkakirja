@@ -22,6 +22,7 @@
  *   --puhe <tiedosto> --puhe-alku <s>  (puhe yhtenä raitana; musiikki vaimennettuna puheen koko keston, ramppi 2 s)
  * OMA MUSIIKKI (Linssiseppä säveltää rinnalle toisen version samalla ajoituksella):
  *   --musiikki <tiedosto>  (polku tai lähdekansion suhteen; v12:ssa soi alusta loppuun, pituus luetaan tiedostosta)
+ *   --vaimennus-db <dB>    vaimennuksen taso (oletus −13 dB)
  * Ilman --kestoa kesto = puheen loppu + 3 s.
  * ÄÄNIEFEKTIT (omistaja 3.10.2026 klo 05.3x: diaprojektorin naksahdus kaiun syttyessä, hallin ovi, savimalja, kytkin pois):
  *   --efektit <json>  [[tiedosto, aika s, taso dB], …]; miksataan PUHERAITAAN (kohtauksen kello), joten ne ovat samassa
@@ -100,7 +101,12 @@ const SILMUKKA = V12 ? null : R.silmukka;
 const SILMUKAN_HAIVYTYS = 3;
 // Vaimennus (s, kierroksen ajassa): päälause ja lähderivi 17,5–31,7 sekä luennat → yhtenäinen ikkuna 17,5 s → loppu;
 // nimi ja kysymys (9,4–15,4 s) saavat musiikin täytenä. v10: ×0,22 (−13 dB), ramppi 2 s, viimeiset 2,7 s ×0,7.
-const VAIMENNUS = { alku: Number(arvo('--vaimennus', 17.5)), taso: 0.22, ramppi: 2 };
+// --vaimennus-db (esim. −8, Päätoimittaja 3.10.2026 omalle musiikille); oletus ×0,22 ≈ −13 dB kuten v10.
+const VAIMENNUS = {
+  alku: Number(arvo('--vaimennus', 17.5)),
+  taso: A.includes('--vaimennus-db') ? Number((10 ** (Number(arvo('--vaimennus-db')) / 20)).toFixed(4)) : 0.22,
+  ramppi: 2,
+};
 const LOPPU = { kesto: 2.7, taso: 0.7 };
 // Yhtenäinen puhe: vaimennus puheen ajaksi (täysi taso puheen alkaessa, palautus puheen loputtua).
 mkdirSync(ULOS, { recursive: true });
