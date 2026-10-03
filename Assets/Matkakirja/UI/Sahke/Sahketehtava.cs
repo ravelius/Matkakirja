@@ -137,9 +137,9 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(ylarivi, Kirjasin.Kone);
             otsikko = Rakenne.Teksti("", "mk-st__otsikko", paateksti);
             Kirjasimet.Aseta(otsikko, Kirjasin.KoneLihava);
-            // ✕ puuttuu kirjasimista: kertomerkki (kuten sähkeliuskassa).
-            var sulje = Rakenne.Nappi("×", "mk-st__sulje", SuljeKasin, paa);
-            sulje.tooltip = "Sulje sähke";
+            // ✕ OHJAUSNAPPI-neliönä paperiteemalla, rasti viivakuvakkeena (omistaja 2.10.2026 klo 14.2x EI OVAALEJA, Päätoimittaja 3.10.).
+            var sulje = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje sähke", SuljeKasin, paa, "paperi");
+            sulje.AddToClassList("mk-st__sulje");
 
             vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-st__vieritys");

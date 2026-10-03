@@ -165,6 +165,9 @@ namespace Matkakirja.Natiivi
         {
             var b = new Button(painettu) { text = "", tooltip = vihje };
             b.AddToClassList("mk-issohjaus__sulkunappi");
+            // Varatyyli (perus-nahka ilman kuvaa) OHJAUSNAPPI-neliönä rasti-viivakuvakkeella (Päätoimittaja 3.10., EI OVAALEJA);
+            // nahan kuvalla ikoni on piilossa (USS).
+            Rakenne.Ikoni(Ikonit.Viiva["rasti"], "mk-issohjaus__sulkuikoni", b);
             isanta.Add(b);
             return Pue(b, Osa.Sulku);
         }

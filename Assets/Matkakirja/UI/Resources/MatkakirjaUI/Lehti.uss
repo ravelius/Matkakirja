@@ -1719,25 +1719,11 @@
 
 /* Nähtävyysarkin ☰-valikko ja ‹ › -nuolet (web .nahtavyys-valikko-nappi, .nahtavyys-nuoli). */
 .mk-nahtavyys__valikkonappi {
+    /* OHJAUSNAPPI (Pohjat/ohjausnappi.uss, paperi, 40 pt); keskipiste sama kuin entisellä 34 pt:n napilla. */
     position: absolute;
-    top: 9px;
-    right: 10px;
-    width: 34px;
-    height: 34px;
-    min-height: 34px;
-    padding: 0;
-    border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.35);
-    border-radius: 6px;
-    background-color: rgba(246, 231, 198, 0.9);
-    color: #46331f;
-    justify-content: center;
-}
-
-.mk-nahtavyys__valikkonappi > .mk-ikoni {
-    width: 17px;
-    height: 17px;
-    margin-right: 0;
+    top: 6px;
+    right: 7px;
+    margin: 0;
 }
 
 .mk-nahtavyys__valikko {
@@ -1794,34 +1780,21 @@
 }
 
 .mk-nahtavyys__nuoli {
+    /* OHJAUSNAPPI (Pohjat/ohjausnappi.uss, teema paperi; Päätoimittaja 3.10. EI OVAALEJA): 40 pt, puoliksi kortin reunan yli. */
     position: absolute;
     top: 50%;
-    width: 32px;
-    height: 32px;
-    min-height: 32px;
-    margin-top: -16px;
-    padding: 0;
-    border-width: 1px;
-    border-color: rgba(70, 51, 31, 0.35);
-    border-radius: 16px;
-    background-color: rgba(246, 231, 198, 0.9);
-    color: #46331f;
-}
-
-.mk-nahtavyys__nuoli .mk-nappi__teksti {
-    font-size: 18px;
-    -unity-text-align: middle-center;
+    margin: -20px 0 0 0;
 }
 
 /* Omistaja 30.9. (TF 1.0.68): nuolet kortin reunoille kuvan ulkopuolelle (web .nahtavyys-nuoli.edellinen
  * left: -1rem): kortin reunan päällä puoliksi ulkona. Kuva alkaa 18 pt:n täytteen jälkeen, joten 32 pt:n nuoli
  * (−16…+16) ei osu kuvaan. Puhelimessa kortti 90 % leveydestä → reunaan jää ≥ 19 pt, nuoli mahtuu ruudulle. */
 .mk-nahtavyys__nuoli--vasen {
-    left: -16px;
+    left: -20px;
 }
 
 .mk-nahtavyys__nuoli--oikea {
-    right: -16px;
+    right: -20px;
 }
 
 /* Listaryhmän otsikko ja sen pieni reaktionappi samalla rivillä (web h4.vinkki-ryhma + .reaktiot-otsikko). */

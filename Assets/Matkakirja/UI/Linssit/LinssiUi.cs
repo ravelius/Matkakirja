@@ -103,8 +103,10 @@ namespace Matkakirja.Natiivi
 
             // Pieni pilleri oikeassa yläkulmassa, taikalasien vasemmalla puolella.
             var turva = kerros.Turva(SulkuKerros);
-            sulje = Rakenne.Nappi("Sulje linssi", "mk-linssiSulje", SuljeLinssi, turva);
-            sulje.Insert(0, Rakenne.Teksti("×", "mk-linssiSulje__risti"));
+            // OHJAUSNAPPI-mitoin harmaalla teemalla (Päätoimittaja 3.10.: kutistunut ✕ täsmälleen kuin KUVANÄKYMÄn ✕): 40 pt korkea,
+            // rasti viivakuvakkeena 22 pt; teksti sulaa pois kuten ennen (löydös 32), jolloin jää 40 × 40 -neliö.
+            sulje = Rakenne.Nappi("Sulje linssi", "mk-linssiSulje tk-teema-harmaa", SuljeLinssi, turva);
+            sulje.Insert(0, Rakenne.Ikoni(Ikonit.Viiva["rasti"], "mk-linssiSulje__risti"));
             sulkuTeksti = sulje.Q<Label>(className: "mk-nappi__teksti");
             Kirjasimet.Aseta(sulje, Kirjasin.Kone);
             sulje.tooltip = "Sulje linssi";
@@ -200,7 +202,7 @@ namespace Matkakirja.Natiivi
             // Tavallisesti taikalasien vasemmalla puolella; astronautin kamerassa (ei yläpalkkia
             // eikä taikalaseja) oikeassa yläkulmassa kuten webin .satelliitti-linssisulku.
             var s = sulje.style;
-            s.top = astroTila ? 12 : Ylapalkki.Varaus + 8 + 4;
+            s.top = astroTila ? 12 : Ylapalkki.Varaus + 8; // 40 pt kuten taikalasit (ennen 34 pt keskitettynä +4)
             s.right = astroTila ? 12 : 10 + 40 + 8;
             // Topografian hampurilainen ✕:n paikalle (taikalasien vasemmalle puolelle).
             foreach (var (_, ryhma) in karttaValikot.Values)
