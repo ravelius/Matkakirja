@@ -3,6 +3,11 @@
 ## TILA 23.4x: OMISTAJA HYVÄKSYI skinnatut hahmot (peili dad4d0f39cd2c9c2). PR #3885 mainiin (Julkaisijan juna),
 ## Siirtoseppä vaihtaa osoittimen. Seuraavaksi: webin AnimationMixer vasta Päätoimittajan käskystä; Allymes odottaa.
 
+## 3.10. 16.2x: v14-KORJAUKSET (b7c36890c, haara linnanrakentaja-sokrates-bysti) Päätoimittajalla, luvut Pelikoodarilla:
+## lainaukset kiinteinä 2–3 rivinä otsalla (lainaus-<id>.png gobot-kansioissa, virta väistää), kysymys ca 0,004; silmäkaista 0,004;
+## Sokrateen parta suun alta + vaakavarjolevy z 0,197 + ympäristövalo 0 (luvut: v14.varjolevy, ymparisto_voima_avaimet, valot.rako.avaimet).
+## Stillit docs/raportit/kuvat/sokrates-20261001/v14b-korjaukset.jpg. ODOTTAA: Päätoimittajan arvio; Marcuksen rajatut kaiut.
+
 ## 3.10. 16.x: v14 MYSTINEN (omistaja 15.3x/15.4x): leikkaukset 70–80 % varjossa (V14_ENERGIA, rakovalo 'rako' silmiin ja
 ## Marcuksen partaan), Sokrateen parta liukuvalla sivuvalolla (takavalo = kita), tekstivaihe ×0,3 + reunavalo, tummennus 11–12 s,
 ## virran porrastus 0,45 s/rivi. Luvut v14 64394e148 Pelikoodarilla, stillit Päätoimittajalla. Linssisepän iskut = likiarvot.
