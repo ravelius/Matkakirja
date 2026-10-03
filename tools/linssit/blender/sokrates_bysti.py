@@ -992,13 +992,17 @@ SAVU_ALA = float(A[A.index("--savuala") + 1]) if "--savuala" in A else 0.28    #
 def savu_kerroin(nt, m, jx, jy, etaisyys):
     """Savun varjo projektorin kuvaan (omistaja 3.10. 08.2x): silmukoituva harmaasävymaski projektorin kuva-alassa,
     1 = täysi valo. Sama sarja webille ja natiiville (kerrotaan projektorin kuvaan)."""
+    # Kuvasarja (source SEQUENCE) ei löytänyt ruutuja taustarenderöinnissä (puuttuvan kuvan väri tummensi koko kuvan
+    # tasaisesti) → yksi kuva, jonka tiedosto vaihdetaan ruudun vaihtuessa (frame_change_pre).
     tied = sorted(f for f in os.listdir(SAVU) if f.startswith('savu-') and f.endswith('.png'))
-    img = bpy.data.images.get('savu') or bpy.data.images.load(os.path.join(SAVU, tied[0]))
-    img.name = 'savu'; img.colorspace_settings.name = 'Non-Color'
-    if not os.environ.get('SAVU_STILL'): img.source = 'SEQUENCE'
+    img = bpy.data.images.get('savu')
+    if img is None:
+        img = bpy.data.images.load(os.path.join(SAVU, tied[0])); img.name = 'savu'; img.colorspace_settings.name = 'Non-Color'
+        def vaihda(scene, *_):
+            uusi = os.path.join(SAVU, tied[(scene.frame_current - 1) % len(tied)])
+            if img.filepath != uusi: img.filepath = uusi; img.reload()
+        bpy.app.handlers.frame_change_pre.append(vaihda)
     t = nt.nodes.new('ShaderNodeTexImage'); t.image = img; t.extension = 'EXTEND'
-    t.image_user.frame_duration = len(tied); t.image_user.frame_start = 1; t.image_user.use_cyclic = True
-    t.image_user.use_auto_refresh = True
     u = m('MULTIPLY_ADD', jx, etaisyys / SAVU_ALA, 0.5); v = m('MULTIPLY_ADD', jy, etaisyys / SAVU_ALA, 0.5)
     yh = nt.nodes.new('ShaderNodeCombineXYZ'); nt.links.new(u, yh.inputs['X']); nt.links.new(v, yh.inputs['Y'])
     nt.links.new(yh.outputs['Vector'], t.inputs['Vector'])

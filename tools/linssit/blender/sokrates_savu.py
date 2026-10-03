@@ -11,7 +11,7 @@ from PIL import Image, ImageDraw, ImageFilter
 A = sys.argv[1:]; ULOS = A[0]; os.makedirs(ULOS, exist_ok=True)
 arg = lambda k, o: type(o)(A[A.index(k) + 1]) if k in A else o
 KESTO, FPS, KOKO, ETAISYYS = arg('--kesto', 8.0), arg('--fps', 30), arg('--koko', 512), arg('--etaisyys', 0.07)
-N = int(KESTO * FPS); TUMMUUS = 0.45           # Päätoimittaja 3.10.: kiekuran ydin tummentaa projektorin valoa ~35–50 %
+N = int(KESTO * FPS); TUMMUUS = 0.50           # Päätoimittaja 3.10.: kiekuran ydin tummentaa projektorin valoa ~35–50 %
 PEHMEYS = KOKO * (0.002 + 0.03 * ETAISYYS)   # reuna pehmenee muutaman kuvapisteen matkalla      # reunan sumeus kuvapisteinä: lähellä pintaa terävämpi
 
 
@@ -23,13 +23,13 @@ def nauha(t):
         s = i / 239                                   # 0 alhaalla → 1 ylhäällä
         v = 1.05 - 1.1 * s
         # saumaton silmukka: ajan kertoimet kokonaislukuja (t = 0 ja t = 1 sama kuva)
-        u = (0.5 + 0.07 * math.sin(w * (0.9 * s - t)) + 0.035 * math.sin(w * (2.3 * s - 2 * t) + 0.3)
+        u = (0.5 + 0.13 * math.sin(w * (0.9 * s - t)) + 0.035 * math.sin(w * (2.3 * s - 2 * t) + 0.3)
              + 0.02 * math.sin(w * (t + 0.6 * s)))
         # kiekura: selvä silmukka, joka nousee kuva-alan läpi yhden kierron aikana (ääripäissä nauha on ohut)
         ds = ((s - t + 0.5) % 1.0) - 0.5; kiemura = math.exp(-(ds * 5.0) ** 2)   # jaksollinen: ei hyppyä saumassa
         fii = w * 5.0 * ds   # yksi täysi kierros kiemuran leveydellä: säde 0,06 > nousunopeus → nauha kiertyy silmukaksi
-        u += 0.10 * kiemura * math.sin(fii); v += 0.10 * kiemura * (math.cos(fii) - 1.0)   # iso, selvä kiekura
-        paksuus = (0.060 + 0.035 * math.sin(w * (1.7 * s - t)) ** 2)   # yksi selvä nauha (2–3 cm pinnalla) * (0.35 + 0.65 * math.sin(math.pi * s))
+        u += 0.08 * kiemura * math.sin(fii); v += 0.08 * kiemura * (math.cos(fii) - 1.0)   # iso, selvä kiekura
+        paksuus = (0.030 + 0.020 * math.sin(w * (1.7 * s - t)) ** 2)   # yksi selvä nauha (~1–1,4 cm pinnalla: muoto erottuu kaikuhahmon päällä) * (0.35 + 0.65 * math.sin(math.pi * s))
         pts.append((u, v, paksuus))
     return pts
 

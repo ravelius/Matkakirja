@@ -107,7 +107,7 @@ sok = bysti(f'{SMK}/KAS635/smk-inv-635.stl', 0.51, (0, 0, yla), 0.0, KIPSI, 'sok
 PAA = Vector((0, -0.06, yla + 0.38))
 
 # --- varasto: suljettu lautahalli (raot seinissä ja katossa), lattia ---
-X0, X1, Y0, Y1, Z1 = -8.0, 8.0, -6.0, 15.0, 7.5
+X0, X1, Y0, Y1, Z1 = -8.0, 8.0, -6.0, 62.0, 7.5   # omistaja 09.0x: halli jatkuu pimeyteen asti
 laatikko('lattia', ((X0 + X1) / 2, (Y0 + Y1) / 2, -0.05), (X1 - X0, Y1 - Y0, 0.1), LATTIA)
 def lautaseina(alku, loppu, z0, z1, akseli, paikka, rako=0.012, leveys=0.22):
     """Pystylaudat raoilla: akseli 'x' = seinä x-suunnassa (paikka = y), 'y' = seinä y-suunnassa (paikka = x)."""
@@ -121,7 +121,7 @@ lautaseina(X0, X1, 0, Z1, 'x', Y1); lautaseina(X0, X1, 0, Z1, 'x', Y0)
 lautaseina(Y0, Y1, 0, Z1, 'y', X0); lautaseina(Y0, Y1, 0, Z1, 'y', X1, rako=0.0)   # oikea seinä umpinainen (ei kovia viivoja)
 y_ = Y0                                                     # katto: poikittaiset laudat, muutama leveä rako (kattoluukut)
 while y_ < Y1:
-    lev = 0.25; rako = 0.09 if rnd.random() < 0.12 else (0.006 if rnd.random() < 0.25 else 0.0)
+    lev = 0.25; rako = (0.09 if rnd.random() < 0.12 else (0.006 if rnd.random() < 0.25 else 0.0)) if y_ < 18 else 0.0   # raot vain lähellä
     laatikko('katto', (0, y_ + lev / 2, Z1), (X1 - X0, lev - rako, 0.04), PUU); y_ += lev
 for x_ in (-6, -2, 2, 6):                                    # kattopalkit
     laatikko('palkki', (x_, (Y0 + Y1) / 2, Z1 - 0.25), (0.25, Y1 - Y0, 0.4), PUU)
@@ -134,24 +134,25 @@ def kopio(pohja, paikka, kierto, skaala):
     o.scale = (skaala,) * 3; return o
 varatut = [(0.0, 0.0, 1.6)]
 def vapaa(x, y, r):
+    if y > 3.0 and abs(x) < 2.1 + r: return False   # keskikäytävä pimeyteen ja kaukovaloon pidetään tyhjänä
     return all(math.hypot(x - a, y - b) > r + c for a, b, c in varatut)
-for k in range(26):                                          # jalustat + bystit hajallaan
+for k in range(80):                                          # jalustat + bystit hajallaan, syvälle
     for _ in range(40):
-        x, y = rnd.uniform(-7, 7), rnd.uniform(2.5, 12.5)
+        x, y = rnd.uniform(-7, 7), rnd.uniform(2.5, 55)
         if vapaa(x, y, 0.5): break
     varatut.append((x, y, 0.5)); kork = rnd.uniform(0.7, 1.4)
     laatikko('jalusta', (x, y, kork / 2), (0.45, 0.45, kork), KIPSI_T if rnd.random() < 0.5 else PUU, rnd.uniform(-0.3, 0.3))
     kopio(rnd.choice(pohjat), (x, y, kork), rnd.uniform(-math.pi, math.pi), rnd.uniform(0.85, 1.25))
-for y in (9.0, 12.0):                                        # hyllyrivit
-    for x0 in (-6.5, -1.5, 3.5):
-        varatut.append((x0 + 1.5, y, 1.8))
+for y in (9.0, 12.0, 16.0, 20.5, 25.5, 31.0, 37.0, 43.5, 50.0, 56.5):   # hyllyrivit toistuvat pimeyteen
+    for x0 in (-7.2, -4.6, 2.2, 4.8):                        # keskikäytävä |x| < 2,2 jää auki pimeyteen asti
+        HL = 2.4; varatut.append((x0 + HL / 2, y, 1.5))
         for zt in (0.05, 1.05, 2.05, 3.05):
-            laatikko('hylly', (x0 + 1.5, y, zt), (3.0, 0.7, 0.05), PUU)
-        for xt in (x0, x0 + 3.0):
+            laatikko('hylly', (x0 + HL / 2, y, zt), (HL, 0.7, 0.05), PUU)
+        for xt in (x0, x0 + HL):
             laatikko('pysty', (xt, y, 1.6), (0.07, 0.7, 3.2), PUU)
         for zt in (0.1, 1.1, 2.1):                           # hyllyillä bystejä, laatikoita, ruukkuja
             xt = x0 + 0.2
-            while xt < x0 + 2.8:
+            while xt < x0 + HL - 0.2:
                 v = rnd.random()
                 if v < 0.45: kopio(rnd.choice(pohjat), (xt + 0.15, y, zt), rnd.uniform(-1, 1) + math.pi * (y > 10), rnd.uniform(0.6, 0.85)); xt += 0.45
                 elif v < 0.8:
@@ -165,9 +166,9 @@ LAKANA = mat('lakana', (0.86, 0.83, 0.76), 0.9, f'{PH}/hessian_230/hessian_230_d
 for b_ in LAKANA.node_tree.nodes:
     if b_.type == 'MIX': b_.inputs['Factor'].default_value = 0.25   # pellavan kuvio vain häivähdyksenä
 bpy.ops.mesh.primitive_plane_add(size=40, location=(0, 4, 0)); maa = bpy.context.object; maa.modifiers.new('t', 'COLLISION'); maa.hide_render = True
-for k in range(5):
+for k in range(10):
     for _ in range(60):
-        x, y = rnd.uniform(-6.5, 6.5), rnd.uniform(8.0, 13.2)
+        x, y = rnd.uniform(-6.5, 6.5), rnd.uniform(8.0, 45.0)
         if vapaa(x, y, 0.8): break
     varatut.append((x, y, 0.8)); kork = rnd.uniform(1.7, 2.2); puoli = rnd.choice((-1, 1))
     muodot = []
@@ -189,15 +190,15 @@ for k in range(5):
     kan.data.materials.append(LAKANA); bpy.ops.object.shade_smooth()
     for o_ in muodot: o_.hide_render = True
 sc.frame_set(1)
-for k in range(30):                                          # taulut kehyksissä: nojaamassa hyllyihin, seinään ja toisiinsa
+for k in range(54):                                          # taulut kehyksissä: nojaamassa hyllyihin, seinään ja toisiinsa
     kuva = KUVAT[k % len(KUVAT)]; img = bpy.data.images.load(kuva, check_existing=True); sk = img.size[1] / max(img.size[0], 1)
     lev = rnd.uniform(0.6, 1.4); kork = lev * sk
     paikka_ = k % 3   # 0 = takaseinä, 1 = hyllyrivin eteen, 2 = vapaasti lattialle
     for _ in range(60):
         if paikka_ == 0: x, y = rnd.uniform(-7.0, 7.0), Y1 - 0.35
-        elif paikka_ == 1: x, y = rnd.uniform(-6.3, 6.3), rnd.choice((9.0, 12.0)) - 0.55
-        else: x, y = rnd.uniform(-6.5, 6.5), rnd.uniform(3.5, 11)
-        if paikka_ != 2 or vapaa(x, y, lev * 0.5): break
+        elif paikka_ == 1: x, y = rnd.uniform(-6.3, 6.3), rnd.choice((9.0, 12.0, 16.0, 20.5, 25.5, 31.0, 37.0)) - 0.55
+        else: x, y = rnd.uniform(-6.5, 6.5), rnd.uniform(3.5, 40)
+        if (paikka_ == 0 or abs(x) > 2.2 + lev / 2) and (paikka_ != 2 or vapaa(x, y, lev * 0.5)): break
     varatut.append((x, y, lev * 0.5)); kierto = (0.0 if rnd.random() < 0.8 else math.pi) + rnd.uniform(-0.6, 0.6)   # useimmat kasvot kameraan päin
     bpy.ops.mesh.primitive_plane_add(size=1, location=(0, 0, 0)); taulu = bpy.context.object
     taulu.scale = (lev, kork, 1); bpy.ops.object.transform_apply(scale=True)
@@ -209,9 +210,9 @@ for k in range(30):                                          # taulut kehyksiss�
     for o in kehys: o.parent = taulu
     taulu.rotation_euler = (math.radians(rnd.uniform(72, 82)), 0, kierto)
     taulu.location = (x, y, kork / 2 * math.sin(math.radians(77)) + 0.04)
-for k in range(30):                                          # laatikkopinot
+for k in range(70):                                          # laatikkopinot
     for _ in range(40):
-        x, y = rnd.uniform(-7.4, 7.4), rnd.uniform(3, 14.5)
+        x, y = rnd.uniform(-7.4, 7.4), rnd.uniform(3, 58)
         if vapaa(x, y, 0.45): break
     varatut.append((x, y, 0.45)); z = 0.0
     for _ in range(rnd.randint(1, 3)):
@@ -220,23 +221,32 @@ for o in pohjat: bpy.data.objects.remove(o, do_unlink=True)
 
 # --- valot ---
 w = bpy.data.worlds.new('w'); sc.world = w; w.use_nodes = True
-w.node_tree.nodes['Background'].inputs['Color'].default_value = (0.35, 0.55, 1.0, 1); w.node_tree.nodes['Background'].inputs['Strength'].default_value = 0.9
+w.node_tree.nodes['Background'].inputs['Color'].default_value = (0.35, 0.55, 1.0, 1); w.node_tree.nodes['Background'].inputs['Strength'].default_value = 0.4
 vol = bpy.data.materials.new('pöly'); vol.use_nodes = True; vn = vol.node_tree; vn.nodes.remove(vn.nodes['Principled BSDF'])
 vs = vn.nodes.new('ShaderNodeVolumeScatter'); vs.inputs['Density'].default_value = 0.035; vs.inputs['Anisotropy'].default_value = 0.65
 nz = vn.nodes.new('ShaderNodeTexNoise'); nz.inputs['Scale'].default_value = 0.6
-ma = vn.nodes.new('ShaderNodeMath'); ma.operation = 'MULTIPLY_ADD'; ma.inputs[1].default_value = 0.06; ma.inputs[2].default_value = 0.035
+ma = vn.nodes.new('ShaderNodeMath'); ma.operation = 'MULTIPLY_ADD'; ma.inputs[1].default_value = 0.03; ma.inputs[2].default_value = 0.018   # ohuempi: rivit häipyvät vähitellen pimeyteen
 vn.links.new(nz.outputs['Fac'], ma.inputs[0]); vn.links.new(ma.outputs['Value'], vs.inputs['Density'])
 vn.links.new(vs.outputs['Volume'], vn.nodes['Material Output'].inputs['Volume'])
 ilma = laatikko('ilma', ((X0 + X1) / 2, (Y0 + Y1) / 2, Z1 / 2), (X1 - X0 - 0.1, Y1 - Y0 - 0.1, Z1 - 0.1), vol)
 ilma.visible_shadow = False
-aur = bpy.data.lights.new('aurinko', 'SUN'); aur.energy = 30.0; aur.color = (0.70, 0.82, 1.0); aur.angle = math.radians(3.0)   # säde leviää raosta
+aur = bpy.data.lights.new('aurinko', 'SUN'); aur.energy = 17.0; aur.color = (0.70, 0.82, 1.0); aur.angle = math.radians(3.0)   # säde leviää raosta
 ao = bpy.data.objects.new('aurinko', aur); sc.collection.objects.link(ao); ao.rotation_euler = (math.radians(38), 0, math.radians(200))
 kp = bpy.data.lights.new('keila', 'SPOT'); kp.energy = 700; kp.spot_size = math.radians(13); kp.spot_blend = 0.55
 kp.color = (1.0, 0.80, 0.58); kp.shadow_soft_size = 0.05
 ko = bpy.data.objects.new('keila', kp); sc.collection.objects.link(ko); ko.location = PAA + Vector((0.7, -1.1, 2.9))
 ko.rotation_euler = (PAA + Vector((0, 0, -0.08)) - ko.location).to_track_quat('-Z', 'Y').to_euler()
-tay = bpy.data.lights.new('sini', 'AREA'); tay.energy = 560; tay.size = 8; tay.color = (0.55, 0.68, 1.0)
+tay = bpy.data.lights.new('sini', 'AREA'); tay.energy = 220; tay.size = 8; tay.color = (0.55, 0.68, 1.0)
 to = bpy.data.objects.new('sini', tay); sc.collection.objects.link(to); to.location = (0, 8, Z1 - 0.6)
+# kaukainen valonheitin pimeydessä kameraa kohti (syvyys): pieni kirkas lähde + keila pölyssä
+kd = bpy.data.lights.new('kaukovalo', 'SPOT'); kd.energy = 1500; kd.spot_size = math.radians(28); kd.spot_blend = 0.6
+kd.color = (1.0, 0.88, 0.70); kd.shadow_soft_size = 0.05
+kv = bpy.data.objects.new('kaukovalo', kd); sc.collection.objects.link(kv); kv.location = (-1.3, 38.0, 2.8)   # keskikäytävän päässä, näkyy bystin vasemmalla
+kv.rotation_euler = (Vector((0.0, -6.0, 1.5)) - kv.location).to_track_quat('-Z', 'Y').to_euler()
+bpy.ops.mesh.primitive_circle_add(vertices=32, radius=0.09, fill_type='NGON', location=kv.location); lam = bpy.context.object
+lam.rotation_euler = kv.rotation_euler; lm = bpy.data.materials.new('lamppu'); lm.use_nodes = True
+em_ = lm.node_tree.nodes.new('ShaderNodeEmission'); em_.inputs['Color'].default_value = (1.0, 0.9, 0.75, 1); em_.inputs['Strength'].default_value = 60
+lm.node_tree.links.new(em_.outputs[0], lm.node_tree.nodes['Material Output'].inputs['Surface']); lam.data.materials.append(lm)
 # pölyhiukkaset keilassa ja suikaleissa (pienet tetraedrit, valaistuina vain valossa)
 import bmesh
 me = bpy.data.meshes.new('poly'); bm = bmesh.new()
