@@ -458,22 +458,14 @@ namespace Matkakirja.Natiivi
             tykkiNyt = -1;
             // Kaiut: kaksi paikkaa vuorotellen (kaiut 1, 3 → _Kaiku; 2, 4 → _Kaiku2). Kaikusarja (web ?kaikusarja, oletus
             // aikajanan kaikusarja): sarjan kuva sovitetaan suurimpaan mittaan omalla mittasuhteellaan; seepiaversio lipulla.
-            aj.Kaikusarjat.TryGetValue(aj.Kaikusarja ?? "", out var sarja);
             kaiutAj.Clear();
             for (int j = 0; j < aj.Kaiut.Count; j++)
             {
                 var k = aj.Kaiut[j];
-                var e = sarja != null && j < sarja.Count ? sarja[j] : null;
-                string kuva = k.Kuva; bool varissa = false;
-                if (e != null)
-                {
-                    if (e.Kuva != null && e.Harmaa == null && e.Seepia == null) kuva = e.Kuva;
-                    else if (Seepia && e.Seepia != null) { kuva = e.Seepia; varissa = true; }
-                    else kuva = e.Harmaa ?? e.Kuva ?? k.Kuva;
-                }
+                string kuva = KaikunKuva(aj, j, out bool varissa, out bool sovita);
                 kaiutAj.Add(new AjKaiku
                 {
-                    K = k, Kuva = kuva, Varissa = varissa, Sovita = e != null, PaikkaT = B(k.Paikka),
+                    K = k, Kuva = kuva, Varissa = varissa, Sovita = sovita, PaikkaT = B(k.Paikka),
                     KohdeT = B(new[] { k.Paikka[0] + k.Suunta[0] * 0.6, k.Paikka[1] + k.Suunta[1] * 0.6, k.Paikka[2] + k.Suunta[2] * 0.6 }),
                 });
             }
@@ -514,6 +506,44 @@ namespace Matkakirja.Natiivi
             AsetaAikajananVarit();
             mat.SetVector(IdSavuTila, Vector4.zero);
             pMaara = kaikuIndeksi + 2;
+        }
+
+        /// <summary>Aikajanan kaiun j kuva kaikusarjasta (web sarjanKuva): pelkkä kuva, seepialla seepiaversio, muuten harmaa.</summary>
+        static string KaikunKuva(AjattelijaAikajanaData aj, int j, out bool varissa, out bool sovita)
+        {
+            aj.Kaikusarjat.TryGetValue(aj.Kaikusarja ?? "", out var sarja);
+            var e = sarja != null && j < sarja.Count ? sarja[j] : null;
+            varissa = false;
+            sovita = e != null;
+            if (e == null) return aj.Kaiut[j].Kuva;
+            if (e.Kuva != null && e.Harmaa == null && e.Seepia == null) return e.Kuva;
+            if (Seepia && e.Seepia != null) { varissa = true; return e.Seepia; }
+            return e.Harmaa ?? e.Kuva ?? aj.Kaiut[j].Kuva;
+        }
+
+        /// <summary>
+        /// Kohtauksen ämpäriaineistot (esilataus valintakortin aikana, AjattelijatSovitin): malli, kipsi, kaikukuvat, syke ja
+        /// savu tavuina; äänet erikseen (AanetPolut). Samat polut, joita näyttämö pyytää kohtauksen alussa.
+        /// </summary>
+        public static IEnumerable<string> Aineistot(AjattelijaData a)
+        {
+            yield return a.Malli;
+            yield return a.Kipsi;
+            var aj = a.Aikajana;
+            if (aj != null)
+            {
+                for (int j = 0; j < aj.Kaiut.Count; j++) yield return KaikunKuva(aj, j, out _, out _);
+                if (!string.IsNullOrEmpty(aj.Syke)) yield return aj.Syke;
+                if (aj.SavuKuva != null && !SavuPois) yield return aj.SavuKuva;
+                yield break;
+            }
+            if (a.Kaiku != null) yield return a.Kaiku.Kuva;
+            if (a.Kierrokset != null)
+            {
+                foreach (var k in a.Kierrokset.Lista) if (k.Kaiku != null) yield return k.Kaiku.Kuva;
+                if (!string.IsNullOrEmpty(a.Kierrokset.Syke)) yield return a.Kierrokset.Syke;
+            }
+            else if (!string.IsNullOrEmpty(a.Syke)) yield return a.Syke;
         }
 
         /// <summary>Tykki- ja kaikuväri (web: aikajanan tykkiVari, väritön 1/1/1; seepialla ajattelijan lämmin tykki.vari ja kaiun sävy).</summary>

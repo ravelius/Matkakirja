@@ -11,6 +11,11 @@
 // paikallisesta kansiosta (simulaattori: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-ajattelijat-peili), kunnes
 // vienti on ämpärissä.
 //
+// ESILATAUS (Päätoimittaja 3.10.2026, juna 133): valintakortin avautuessa haetaan jokaisen valittavan ajattelijan
+// aineistot (malli, kipsi, kaikukuvat, syke, savu, puhe ja musiikki) ja kytkimen ääni muistiin; valinta vapauttaa muut.
+// Kohtauksen kuva (näyttämön RenderTexture, musta) näkyy heti napautuksesta, ja prologin kello käy: purku tapahtuu
+// prologin pimeässä (ruudut 0–30), ja jos aineistoja on vielä kesken, prologi odottaa pimeässä ennen kytkintä.
+//
 // AIKAJANA (v13–v14, web 088b64d0c, data a.Aikajana): ääni, syke, kaikukuvat ja savumaski aikajanan poluista; kierrokset
 // jäävät käyttämättä. Lähderiviä ei näytetä (web lahde.style.opacity 0); lappu aikajanan lopussa.
 //
@@ -106,14 +111,23 @@ namespace Matkakirja.Natiivi
         bool aaniSoi, kytkinSoi;
         double ruutuOhitus = double.NaN;
         /// <summary>
-        /// Prologin kello (s): alkaa nollasta ensimmäisellä ruudulla, jolla kohtauksen kuva näkyy (Latautuu false), ja etenee
-        /// ruutujen välillä enintään ProloginAskelS (latauksen tai varjostimen kääntämisen pätkintä ei syö prologia).
+        /// Prologin kello (s): alkaa nollasta ensimmäisellä ruudulla valinnan jälkeen (kohtauksen kuva näkyy mustana), etenee
+        /// ruutujen välillä enintään ProloginAskelS (purun tai varjostimen kääntämisen pätkintä ei syö prologia) ja odottaa
+        /// ennen kytkintä, kunnes aineistot on purettu (Latautuu false).
         /// </summary>
         double prologiAika;
         bool kelloAlkanut;
         const double ProloginAskelS = 0.1;
         int sukupolvi;
         readonly List<float> valit = new List<float>();
+
+        /// <summary>Esiladattu aineisto (polku → tavut tai äänileike); Tunnus "*" = yhteinen (kytkin), ei vapauteta.</summary>
+        sealed class Esilataus
+        {
+            public string Tunnus; public bool Valmis; public byte[] Tavut; public AudioClip Klippi;
+        }
+        readonly Dictionary<string, Esilataus> esiladatut = new Dictionary<string, Esilataus>();
+        const string Yhteinen = "*";
 
         public AjattelijatSovitin(LinssiOhjain o)
         {
@@ -132,6 +146,7 @@ namespace Matkakirja.Natiivi
             Valittu = null;
             Lopussa = false;
             LueAjattelijat();
+            foreach (var a in lista) Esilataa(a);
             Muuttui?.Invoke();
             o.Kirjaa($"ajattelijat: valinta ({string.Join(", ", lista.Select(a => a.Tunnus))})");
         }
@@ -152,10 +167,18 @@ namespace Matkakirja.Natiivi
             var a = lista.FirstOrDefault(x => x.Tunnus == tunnus);
             if (!AukiNyt || a == null) { o.Kirjaa("ajattelija: ei ajattelijaa " + tunnus); return; }
             PuraKohtaus();
+            // Valitsematta jääneiden esilataukset pois muistista; valitun (jos jo kesken tai valmis) käytetään.
+            Vapauta(tunnus);
+            Esilataa(a);
             Valittu = a;
             Lopussa = false;
             Latautuu = true;
             int s = ++sukupolvi;
+            // Prologin kello alkaa heti (kuva on musta, aineistot purkautuvat pimeässä; Paivita pitää kytkintä odottamassa).
+            kelloAlkanut = false;
+            aaniSoi = false;
+            kytkinSoi = false;
+            valit.Clear();
             // Pallo piiloon (Dioraaman näkymäpeitto) ja kartan musiikki pitoon kohtauksen ajaksi.
             SyoteLukko.LisaaNakymaPeitto(nakymaPeitto);
             y.Pelikerrokset(false);
@@ -185,11 +208,9 @@ namespace Matkakirja.Natiivi
         IEnumerator Lataa(AjattelijaData a, int s)
         {
             float t0 = Time.realtimeSinceStartup;
-            // Malli ensin (ilman sitä ei ole kohtausta); muut rinnakkain. PROLOGI VASTA LATAUKSEN JÄLKEEN (Fable 3.10.2026, löydös:
-            // kello käynnistyi heti mallin jälkeen, ja kipsin, kaikukuvien, savun ja äänten (PCM) purku pääsäikeellä pätki
-            // ~1,9 s, joten pelaaja näki prologista vain lopun). Web aloittaa kellon vasta latausten jälkeen (alku =
-            // performance.now() ennen ensimmäistä requestAnimationFramea) ja purkaa kuvat ja äänen taustalla; natiivi odottaa
-            // raskaat aineistot Latautuu-tilassa (tumma pinta) ja aloittaa prologin ruudusta 0, kun kuva on näkyvissä.
+            // Malli ensin (ilman sitä ei ole kohtausta); muut rinnakkain, esiladattuina muistista. PROLOGIN VALO VASTA LATAUKSEN
+            // JÄLKEEN (Fable 3.10.2026: kello kulki ennen purkua, ja pelaaja näki prologista vain lopun): prologi alkaa ruudusta 0
+            // mustana kuvana, ja Paivita pitää sen ennen kytkintä (ruutu 30), kunnes kaikki aineistot on purettu.
             byte[] glb = null;
             yield return Hae(a.Malli, b => glb = b);
             if (s != sukupolvi) yield break;
@@ -227,10 +248,6 @@ namespace Matkakirja.Natiivi
                 if (s != sukupolvi) yield break;
             }
             Latautuu = false;
-            kelloAlkanut = false;   // prologi ruudusta 0 ensimmäisellä Paivita-kierroksella (kuva näkyvissä)
-            aaniSoi = false;
-            kytkinSoi = false;
-            valit.Clear();
             o.Kirjaa($"ajattelija: {a.Tunnus} auki, malli {(Time.realtimeSinceStartup - t0) * 1000:F0} ms, {nayttamo.Kuvaus()}");
             Muuttui?.Invoke();
         }
@@ -243,6 +260,12 @@ namespace Matkakirja.Natiivi
 
         IEnumerator Hae(string polku, Action<byte[]> valmis)
         {
+            if (esiladatut.TryGetValue(polku, out var l))
+            {
+                while (!l.Valmis) yield return null;
+                if (l.Tunnus != Yhteinen && esiladatut.TryGetValue(polku, out var l2) && l2 == l) esiladatut.Remove(polku);   // käytetty
+                if (l.Tavut != null) { valmis(l.Tavut); yield break; }
+            }
             using var p = UnityWebRequest.Get(Osoite(polku));
             p.timeout = 30;
             yield return p.SendWebRequest();
@@ -257,6 +280,19 @@ namespace Matkakirja.Natiivi
 
         IEnumerator HaeAani(string polku, AudioSource kohde, int s)
         {
+            if (esiladatut.TryGetValue(polku, out var l))
+            {
+                while (!l.Valmis) yield return null;
+                if (l.Klippi != null)
+                {
+                    bool yhteinen = l.Tunnus == Yhteinen;
+                    if (!yhteinen && esiladatut.TryGetValue(polku, out var l2) && l2 == l) esiladatut.Remove(polku);   // omistus lähteelle
+                    if (s != sukupolvi || kohde == null) { if (!yhteinen) UnityEngine.Object.Destroy(l.Klippi); yield break; }
+                    kohde.clip = l.Klippi;
+                    if (aaniSoi && kohde == puhe) aaniSoi = false;
+                    yield break;
+                }
+            }
             using var p = UnityWebRequestMultimedia.GetAudioClip(Osoite(polku), AudioType.MPEG);
             var dh = (DownloadHandlerAudioClip)p.downloadHandler;
             dh.streamAudio = false;
@@ -269,9 +305,68 @@ namespace Matkakirja.Natiivi
             if (aaniSoi && kohde == puhe) aaniSoi = false;
         }
 
+        /// <summary>Aloittaa ajattelijan aineistojen haun muistiin (jo haetut ja kesken olevat ohitetaan).</summary>
+        void Esilataa(AjattelijaData a)
+        {
+            foreach (var polku in AjattelijaNayttamo.Aineistot(a))
+                if (!string.IsNullOrEmpty(polku) && !esiladatut.ContainsKey(polku))
+                {
+                    var l = esiladatut[polku] = new Esilataus { Tunnus = a.Tunnus };
+                    o.StartCoroutine(EsiHae(polku, l));
+                }
+            var aj = a.Aikajana;
+            var kr = aj != null ? null : a.Kierrokset;
+            foreach (var (polku, tunnus) in new[]
+            {
+                (aj != null ? aj.Puhe : kr != null ? kr.Puhe : a.Puhe, a.Tunnus), (aj != null ? aj.Musiikki : kr != null ? kr.Musiikki : a.Musiikki, a.Tunnus),
+                (Kytkin, Yhteinen),
+            })
+                if (!string.IsNullOrEmpty(polku) && !esiladatut.ContainsKey(polku))
+                {
+                    var l = esiladatut[polku] = new Esilataus { Tunnus = tunnus };
+                    o.StartCoroutine(EsiHaeAani(polku, l));
+                }
+        }
+
+        IEnumerator EsiHae(string polku, Esilataus l)
+        {
+            using var p = UnityWebRequest.Get(Osoite(polku));
+            p.timeout = 30;
+            yield return p.SendWebRequest();
+            // Vapautettu kesken haun: tavut jäävät roskienkerääjälle.
+            if (p.result == UnityWebRequest.Result.Success && esiladatut.TryGetValue(polku, out var x) && x == l) l.Tavut = p.downloadHandler.data;
+            l.Valmis = true;
+        }
+
+        IEnumerator EsiHaeAani(string polku, Esilataus l)
+        {
+            using var p = UnityWebRequestMultimedia.GetAudioClip(Osoite(polku), AudioType.MPEG);
+            var dh = (DownloadHandlerAudioClip)p.downloadHandler;
+            dh.streamAudio = false;
+            dh.compressed = false;   // PCM kuten HaeAani (kello AudioSource.time)
+            yield return p.SendWebRequest();
+            if (p.result == UnityWebRequest.Result.Success)
+            {
+                var klippi = DownloadHandlerAudioClip.GetContent(p);
+                if (esiladatut.TryGetValue(polku, out var x) && x == l) l.Klippi = klippi;
+                else UnityEngine.Object.Destroy(klippi);   // vapautettu kesken haun
+            }
+            l.Valmis = true;
+        }
+
+        /// <summary>Vapauttaa esilataukset (paitsi ajattelijan sailyta ja yhteiset); null = kaikki ajattelijakohtaiset.</summary>
+        void Vapauta(string sailyta)
+        {
+            foreach (var kv in esiladatut.Where(kv => kv.Value.Tunnus != Yhteinen && kv.Value.Tunnus != sailyta).ToList())
+            {
+                if (kv.Value.Klippi != null) UnityEngine.Object.Destroy(kv.Value.Klippi);
+                esiladatut.Remove(kv.Key);
+            }
+        }
+
         public void Paivita()
         {
-            if (nayttamo == null || Latautuu || Valittu == null) return;
+            if (nayttamo == null || Valittu == null) return;
             var a = Valittu;
             double pl = a.Prologi.Loppu;
             double g;
@@ -288,6 +383,12 @@ namespace Matkakirja.Natiivi
                 if (!kelloAlkanut) { kelloAlkanut = true; prologiAika = 0; }
                 else prologiAika += Math.Min(Time.unscaledDeltaTime, ProloginAskelS);
                 g = prologiAika * AjattelijaAikajana.RuutuaSekunnissa;
+                // Aineistot kesken: prologi odottaa pimeässä ennen kytkintä (ruutu 30); kytkin ja valo vasta valmiina.
+                if (Latautuu && g > a.Prologi.Kytkin - 1)
+                {
+                    g = a.Prologi.Kytkin - 1;
+                    prologiAika = g / AjattelijaAikajana.RuutuaSekunnissa;
+                }
                 if (g > pl && !aaniSoi && puhe.clip != null)
                 {
                     aaniSoi = true;
@@ -340,6 +441,9 @@ namespace Matkakirja.Natiivi
                 y?.Pelikerrokset(true);
                 y?.MusiikkiPitoon(false);
             }
+            // Kohtauksen äänileikkeet (PCM ~17 Mt kukin) pois muistista; kytkimen leike on yhteinen esilataus.
+            foreach (var l in new[] { puhe, musiikki })
+                if (l != null && l.clip != null) { var c = l.clip; l.clip = null; UnityEngine.Object.Destroy(c); }
             puhe = musiikki = kytkin = null;
             aaniSoi = false;
             ruutuOhitus = double.NaN;
@@ -350,6 +454,7 @@ namespace Matkakirja.Natiivi
         {
             sukupolvi++;
             PuraKohtaus();
+            Vapauta(null);
             AukiNyt = false;
             Valittu = null;
             Lopussa = false;

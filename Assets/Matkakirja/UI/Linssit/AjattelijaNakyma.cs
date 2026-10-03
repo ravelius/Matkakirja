@@ -3,8 +3,8 @@
 // kuten DioraamaTaulu ja DioraamaSovitin):
 //   VALINTA   AukiNyt && Valittu == null: KORTTI-pohja (Kortti pohja: true) himmennyksellä, nappi per ajattelija → Valitse;
 //             himmennyksen napautus ja Esc → PyydaSulku (web luoPohjaKortti ei-modaali, sulje ilman valintaa → poistu).
-//   KUVA      Valittu != null: KUVANÄKYMÄ-pohja, teema tumma; AjattelijaNayttamo.NykyinenKuva koko ruudulle (Latautuu: vain
-//             tumma pinta). ✕ on astronautin kuvanäkymän sulkunappipohja (mk-kuvanakyma__sulku--harmaa + sulkurengas; Päätoimittaja
+//   KUVA      Valittu != null: KUVANÄKYMÄ-pohja, teema tumma; AjattelijaNayttamo.NykyinenKuva koko ruudulle heti (latauksen
+//             aikana musta prologin pimeä). ✕ on astronautin kuvanäkymän sulkunappipohja (mk-kuvanakyma__sulku--harmaa + sulkurengas; Päätoimittaja
 //             3.10., web #3891): piilossa, kunnes ruutua napautetaan, ja häipyy 4 s viimeisen napautuksen jälkeen (Kuvanakyma
 //             NaytaAutoNapit/AjastaAutoPiilotus: Kesto.Sulku/Avaus; piilossa ei ota kosketuksia). Kohtauksen ajan LinssiUi:n
 //             sulkupilleri on piilossa (Peittaa), veto alas ja Esc → PyydaSulku kuten ennen.
@@ -191,8 +191,9 @@ namespace Matkakirja.Natiivi
                 NaytaSulku(false, heti: true);   // kohtaus alkaa ✕ piilossa
             }
             if (kuvaNakyy != peittaa) { peittaa = kuvaNakyy; Peittaa?.Invoke(kuvaNakyy); }
-            // Lataus: vain tumma pinta (näyttämön kuva voi olla edellisen kohtauksen tai musta).
-            kuva.style.display = a != null && !AjattelijatSovitin.Latautuu ? DisplayStyle.Flex : DisplayStyle.None;
+            // Kuva näkyy heti napautuksesta (Päätoimittaja 3.10.2026): uuden näyttämön kuva on musta, kunnes prologin valo syttyy,
+            // joten latauksen ajan näkyy prologin pimeä eikä näkymäpinnan ruskea (#201a14).
+            kuva.style.display = a != null ? DisplayStyle.Flex : DisplayStyle.None;
 
             bool lopussa = a != null && AjattelijatSovitin.Lopussa;
             if (lopussa && !lappuAuki && !lappuSuljettu && a.Elama.Count > 0) AvaaLappu();
