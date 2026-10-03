@@ -46,13 +46,14 @@ Seurantanäkymää ei ole (omistaja poisti 2.10.).
   Cupolan katse vetämällä. Yhden ruudun laatta-aukot korjattu KyydinKameraEnnen-komponentilla (−50, kamera ennen Cesiumin laattavalintaa).
   Kuvat ja videot ovat kansiossa lokit/linssiseppa2-cupola-veto-c-20261003 (maan yllä: cupola-veto.sh, KOHDE=etna). Sunglint-läiskä on Linssiseppä 1:llä.
 - Sokrates v14 on BUILD 133:ssa (f15ce189). Minipallo ja veto on testattu myös BUILD 133:n päällä.
-- Kun #3905 on mergetty: ajattelijoiden muunnin vaihdetaan Pelikoodarin tools/ajattelija-natiivi.mjs:ään (#3905). Omistajan
-  linja (3.10. 19.00) on "ei webiä lainkaan".
+- Muunnin vaihdettu: `linssiseppa2/muunnin-vaihto` 40e450ab, merge-pyyntö Natiivisepällä juna 134:ään. Pelikoodarin tools/ajattelija-natiivi.mjs
+  (#3905) tuotti nykyisen datan tavulleen samana, ja vanha webistä lukeva muunnin on poistettu. Uusi ajattelija (esim. Platon):
+  data/ajattelijat/<tunnus>.json mainiin ja ajo `node tools/ajattelija-natiivi.mjs --ulos <proto>/Assets/Matkakirja/Linssit/Resources/Ajattelijat`.
 - #3842 (avaruuskävely webiin) on suljettu ja haara säilytetty (web-jono #3908); worktree on poistettu.
 - Lokien .app-kopioita ei poisteta itse (yösiivous hoitaa ne).
 
 ## 3. Seuraavaksi
-- Platon datana, kun web saa sen (muunnin tyokalut/ajattelijat-natiiviin.mjs).
+- Platon datana: data/ajattelijat/platon.json ja muuntimen ajo (ei webiä).
 - TF 132:n palaute (Pulun korkeus, ajattelijat).
 - Sokrateen lopullinen kertoja (Iv4 William) ämpärissä ajattelijat/sokrates/v3/kertoja.mp3 + ajat.json (Sisältökirjuri 3.10.;
   ei v2:een). Natiiviin vasta, kun webin data viittaa siihen: aja muunnin webin mainista ja peilaa uusi raita ajoon.
