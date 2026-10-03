@@ -19,6 +19,8 @@ const R2 = 'https://media.matkakirja.app/';
 /** Prologin kytkimen napsahdus, yhteinen kaikille ajattelijoille (ämpärissä 2.10.2026). */
 export const AJATTELIJA_KYTKIN = 'ajattelijat/yhteiset/v1/kytkin-kaiku.mp3';
 export const AJATTELIJA_KIRJASTO = `${R2}vendor/three-gltf-r185.min.js`;
+/** ✕ häipyy näin kauan viimeisen napautuksen jälkeen (sama kuin astronautin kameran AUTO_HILJAA_MS). */
+export const AJATTELIJA_SULKU_PIILOON_MS = 4000;
 /*
  * AJATTELIJAT OVAT DATAA (Päätoimittaja 2.10.2026): uusi ajattelija = uusi js/linssit/ajattelija-<nimi>.js samalla
  * rakenteella kuin SOKRATES + rivi tähän rekisteriin; ?ajattelija=<nimi> avaa sen. Moottori ei tunne yhtäkään ajattelijaa
@@ -41,7 +43,7 @@ export function tarkistaAjattelija(a) {
   for (const k of ['nimi', 'kysymys', 'lahesty', 'vieritys', 'lahde', 'kaariLoppu', 'kaiku', 'pito']) vaadi(a.ajat?.[k] != null, `ajat.${k}`);
   vaadi(a.prologi?.valot?.length, 'prologi');
   vaadi(a.intro?.otokset?.length && a.intro?.valo?.length, 'intro');
-  vaadi(a.taustavirta?.rivit?.length && a.taustavirta?.projektorit?.length, 'taustavirta');
+  vaadi(a.taustavirta?.rivit?.length && a.taustavirta?.projektorit?.length && a.taustavirta?.nopeus?.mms > 0, 'taustavirta');
   vaadi(a.fontit?.iowan, 'fontit.iowan');
   // Valinnaiset: kaiku (null = ei kaikua), syke, elama (lappu), pulunKysymykset (PULU); jos annettu, oltava kokonaisia.
   if (a.kaiku != null) vaadi(a.kaiku.kuva && a.kaiku.kamera, 'kaiku');
@@ -206,6 +208,19 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
   const pohja = luoPohjaKuvanakyma({ nimi: `${a.nimi}: ajattelija`, sulje: () => sulje() });
   const juuri = pohja.sisalto;
   pohja.el.classList.add('ajattelija');
+  /*
+   * ✕ PIILOSSA, KUNNES NAPAUTETAAN (omistaja 3.10.2026 klo 00.1x: "yläreunan x saa olla piilossa kunnes pelaaja
+   * napauttaa ruutua, ja katoaa sitten taas hetken päästä"). Sama mekanismi ja ajoitus kuin astronautin kameran
+   * AUTO-hiljaisuudessa (js/linssit/satelliitti.js AUTO_HILJAA_MS): napautus mihin tahansa tuo ✕:n, ja se häipyy
+   * AJATTELIJA_SULKU_PIILOON_MS:n kuluttua viimeisestä napautuksesta. Esc ja veto alas sulkevat kuten ennenkin.
+   */
+  pohja.el.classList.add('ajattelija-sulku-piilossa');
+  let sulkuAjastin = 0;
+  pohja.el.addEventListener('pointerdown', () => {
+    pohja.el.classList.remove('ajattelija-sulku-piilossa');
+    clearTimeout(sulkuAjastin);
+    sulkuAjastin = setTimeout(() => pohja.el.classList.add('ajattelija-sulku-piilossa'), AJATTELIJA_SULKU_PIILOON_MS);
+  }, true);
   const renderoija = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
   renderoija.setPixelRatio(Math.min(globalThis.devicePixelRatio || 1, 2));
   renderoija.toneMapping = THREE.AgXToneMapping;
@@ -328,7 +343,14 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
    */
   function asetaVirta(siemen) {
     const satunnainen = ajattelijaSiemenluku(siemen);
-    const nopeudet = tv.rivit.map((_, k) => 0.0007 * 1.18 ** k);
+    /*
+     * NOPEUDET LÄHES SAMAT (omistaja 3.10.2026 klo 00.0x: "tekstit saisivat liikkua suurinpiirtein samalla nopeudella
+     * vaikka pieniä eroja nopeudessa on hyvä olla. nyt erot liian suuria"; Blender v11): nopeus PINNALLA mm/s ± vaihtelu,
+     * kertoimet tasavälein ja sekoitettuina samalla siemenellä kuin ennen. uv/ruutu = m/s / 30 / rivin leveys pinnalla.
+     * (v10:n 0,0007 × 1,18^k uv/ruutu teki pinnalla 4,5–102 mm/s.)
+     */
+    const { mms, vaihtelu } = tv.nopeus;
+    const nopeudet = tv.rivit.map((_, k) => 1 - vaihtelu + 2 * vaihtelu * k / Math.max(1, tv.rivit.length - 1));
     sekoitaSiemenella(nopeudet, satunnainen);
     const lista = [];
     let ri = 0;
@@ -348,7 +370,9 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
           paikka, kohde, etaisyys: tv.etaisyys, nauhaKork: kork, rivi: paikat[i], ala: pj.ala, blend: tv.blend,
           kulma, vM, toisto: true, atlasKorkeus: kangas.height,
         });
-        lista.push({ i, nopeus: nopeudet[ri] * (ri % 2 ? 1 : -1), voima: TYKKI * tv.voimaKerroin * kirkkaus * RIVIT });
+        const riviLev = kork * paikat[i].lev / paikat[i].korkeus;   // laatta pinnalla (m), u:n yksikkö
+        const nopeus = mms / 1000 * nopeudet[ri] / RUUTUA_S / riviLev;
+        lista.push({ i, nopeus: nopeus * (ri % 2 ? 1 : -1), mms: mms * nopeudet[ri], voima: TYKKI * tv.voimaKerroin * kirkkaus * RIVIT });
       }
     }
     return lista;
@@ -765,6 +789,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     if (!kaynnissa) return;
     kaynnissa = false;
     clearInterval(mittariAjastin);
+    clearTimeout(sulkuAjastin);
     kokoVahti.disconnect();
     pohja.sulje();
     for (const x of [aani, musiikkiAani, kytkinAani]) { x.pause(); x.src = ''; }
@@ -793,6 +818,7 @@ export async function avaaAjattelija(tunnus, { koti = document.body, malliUrl = 
     paikat: () => ({
       tykit: kierrokset.map((kt) => ({ paikka: t2b(kt.paikka), kohde: t2b(kt.kohde) })),
       kaiut: kaiut.map((e) => e && { paikka: t2b(e.paikka), kohde: t2b(e.kohde) }),
+      virta: virta.map((v) => Math.round(v.mms * 10) / 10),
     }),
     aanitila: () => ({ puhe: aani.currentTime, musiikki: musiikkiAani.currentTime, soi: !aani.paused, musiikkiSoi: !musiikkiAani.paused }),
   };
