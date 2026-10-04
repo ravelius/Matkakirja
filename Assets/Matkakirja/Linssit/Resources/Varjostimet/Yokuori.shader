@@ -314,6 +314,12 @@ Shader "Matkakirja/Linssit/Yokuori"
                     float w1 = saturate((8.0 / pk - 3.0) * 0.5), w2 = saturate((2.5 / pk - 3.0) * 0.5);
                     float sx = 0.65 * w1 * Arvokohina(tq / 8.0) + 0.35 * w2 * Arvokohina(tq / 2.5 + 41.0);
                     float sy = 0.65 * w1 * Arvokohina(tq / 8.0 + 93.0) + 0.35 * w2 * Arvokohina(tq / 2.5 + 7.0);
+                    // Tuulikaistat 30 km (simu 4.10. ajo g: matalalla auringolla kaukaa 8 ja 2,5 km:n oktaavit häipyivät alle 5 px:n
+                    // ja kiilto jäi tasaiseksi kermaläiskäksi). Laaja oktaavi näkyy myös horisontin lähellä.
+                    // Vain kun hienot oktaavit häipyvät (lähellä juovat pysyvät heikkoina, Päätoimittaja 4.10.).
+                    float w0 = saturate((30.0 / pk - 3.0) * 0.5) * (1.0 - w1);
+                    sx += 0.8 * w0 * Arvokohina(tq / 30.0 + 55.0);
+                    sy += 0.8 * w0 * Arvokohina(tq / 30.0 + 71.0);
                     // Simu 3559411b: hajonta 1,6·√(0,6σ²) ja paikallinen 0,4σ² hajottivat kiillon siveltimenvedoiksi ilman ydintä;
                     // Päätoimittaja 4.10. (juna 139): aaltojuovat yhä liian vahvat → paikallinen 0,75σ² ja värähtely 0,9·√(0,25σ²):
                     // ydin yhtenäinen, juovat heikkoina venymänä (offline-malli tyokalut/linssiseppa-ajot/kiilto_malli.py).
@@ -349,7 +355,8 @@ Shader "Matkakirja/Linssit/Yokuori"
                     // VAIN VEDESSÄ (Päätoimittaja 4.10.): sävykäyrä nosti pehmeän vesimaskin rantareunan (vesi 0,1 → kiilto ~1,4)
                     // kirkkaaksi juovaksi maalle. Nyt käyrä vesimaskista riippumatta ja terävä maski (0,42…0,58) vasta sen jälkeen.
                     float kv = kRaaka * max(1.0 + 0.96 * rae, 0.0) * (float)lapi;
-                    kiilto = (half)(3.0 * pow(saturate(log2(1.0 + kv) / 7.91), 1.4) * smoothstep(0.42, 0.58, (float)vesi));
+                    // Katto 2,0 (ennen 3,0): ytimen kaistat ja rakeet jäivät ylivalottuneen valkoisen alle (ajo g).
+                    kiilto = (half)(2.0 * pow(saturate(log2(1.0 + kv) / 7.91), 1.4) * smoothstep(0.42, 0.58, (float)vesi));
                 }
                 c += lapaisy * kiilto * (1.0h - a);
                 // Fotorealismi osa 2 (30.9.): taivaan Fresnel-heijastus vesiltä. Katsekulman Fresnel (Schlick, F0 0,02) kasvaa
