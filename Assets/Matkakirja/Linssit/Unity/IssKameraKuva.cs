@@ -171,11 +171,19 @@ namespace Matkakirja.Natiivi
                 return true;
             }
             if (VainKuvauspaikat) { Tila = "ei kuvauspaikkaa"; Loki("kuvaa: katse ei ole kuvauspaikalla"); return false; }
-            StartCoroutine(Ajo(kamera, g, leveys, leveys * mh / mw, muoto));
+            StartCoroutine(Ajo(kamera, g, leveys, leveys * mh / mw, muoto, kerros.Linssi));
             return true;
         }
 
-        IEnumerator Ajo(Camera kamera, CesiumGeoreference g, int W, int H, string muoto)
+        /// <summary>
+        /// KUVAN BUDJETTI (Päätoimittaja 4.10.2026: kuva missä tahansa laitteella enintään ~30 Mt ja ~10 s; simussa Saharan Cupola-näkymä
+        /// haki 173 Mt): kuvan pystykenttä enintään MaxKentta (kamera katsoo samaan katsepisteeseen kapeammalla objektiivilla) ja
+        /// tarkkuus karkeutuu kaksinkertaisin askelin, kunnes TCI- ja SCL-laattojen arvioitu haku mahtuu Budjettiin (enintään 5 askelta).
+        /// Testikomennot `astro kyyti kuvaa budjetti <Mt>` ja `astro kyyti kuvaa kentta <°>`.
+        /// </summary>
+        public static double BudjettiMt = 30, MaxKentta = 20;
+
+        IEnumerator Ajo(Camera kamera, CesiumGeoreference g, int W, int H, string muoto, AstronauttiLinssi linssi = null)
         {
             kaynnissa = true; Edistyminen = 0; string loppuTila = "keskeytyi";
             var kello = System.Diagnostics.Stopwatch.StartNew();
@@ -192,8 +200,16 @@ namespace Matkakirja.Natiivi
             if (kaariAsetettu) AsetaKaari(KaariVoima, KaariHr, KaariSini, KaariUtu, KaariYdin, KaariSyva);
             var utc = IssNyt.Kello();
             RenderTexture rt = null;
+            bool kenttaRajattu = false;
             try
             {
+                // 0) kentän katto: sama katsepiste, kapeampi objektiivi (Vertailu ohittaa kyydin asennon kuvan ajaksi)
+                if (linssi != null && kamera.fieldOfView > MaxKentta + 0.01 && linssi.Kyydissa)
+                {
+                    AstronauttiLinssi.Vertailu = linssi.KyydinAsento; AstronauttiLinssi.VertailuKentta = MaxKentta;
+                    kenttaRajattu = true;
+                    yield return null; yield return null;   // kamera uuteen kenttään ennen kuvasuunnitelmaa
+                }
                 // 1) kamera ECEF:ksi (pystykenttä kuten näkymässä; kuvan muoto rajaa leveyden)
                 var gt = g.transform;
                 double3 Pos(Vector3 p) => g.TransformUnityPositionToEarthCenteredEarthFixed((float3)gt.InverseTransformPoint(p));
@@ -302,7 +318,21 @@ namespace Matkakirja.Natiivi
                     }
                 }
                 foreach (var ru in ruudut) if (tci.TryGetValue(ru.Tunnus, out var o)) ty.Data.Ruudut.Add((ru, o));
-                ty.Suunnittele(naytteet);   // laattajoukko ensin: haku lehtilaattojen alueesta
+                // Budjetti: suunnitelma karkeammaksi, kunnes arvioitu COG-haku (TCI + SCL, ennen mosaiikin säästöä) ≤ BudjettiMt.
+                double karkeus = 1; long arvio = 0;
+                for (int kierros = 0; ; kierros++)
+                {
+                    ty.Suunnittele(karkeus == 1 ? naytteet : naytteet.Select(n => { var k = n; k.MetriaPikseli *= karkeus; return k; }).ToList());
+                    arvio = 0;
+                    foreach (var (ru, o) in ty.Data.Ruudut)
+                    {
+                        foreach (var (taso, tx, tyy) in ty.HaettavatLaatat(ru, o, null)) arvio += o.Tasot[taso].Alue(tx, tyy).Item2;
+                        if (scl.TryGetValue(ru.Tunnus, out var so)) foreach (var (taso, tx, tyy) in ty.HaettavatLaatat(ru, so, null)) arvio += so.Tasot[taso].Alue(tx, tyy).Item2;
+                    }
+                    if (arvio <= BudjettiMt * 1e6 || kierros >= 5) break;
+                    karkeus *= 2;
+                }
+                Loki($"budjetti: karkeus {karkeus:0}×, arvio {arvio / 1e6:0.0} Mt (raja {BudjettiMt:0} Mt), kenttä {kamera.fieldOfView:0.0}°{(kenttaRajattu ? " (rajattu)" : "")}");
 
                 // 3b) kaukoalue S2-mosaiikista (lehdet z ≤ 10; 50 mm: ~100 Mt COG:ia → ~10–20 Mt): ladataan ja puretaan ensin,
                 // jotta COG-haku ohittaa vain onnistuneet (404 tai mosaiikin ulkopuolella → COG).
@@ -540,6 +570,7 @@ namespace Matkakirja.Natiivi
             }
             finally
             {
+                if (kenttaRajattu) AstronauttiLinssi.Vertailu = null;
                 if (rt != null) { kamera.targetTexture = null; kamera.ResetAspect(); rt.Release(); Destroy(rt); }
                 GC.Collect(); Resources.UnloadUnusedAssets();
                 Loki($"muisti kuvan jälkeen: vapaata {VapaaMuistiMt()} Mt");
