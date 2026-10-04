@@ -72,11 +72,15 @@ namespace Matkakirja.Natiivi
                 nuoli.style.rotate = new Rotate(new Angle(i == 1 ? 0 : i == 2 ? 180 : i == 3 ? 270 : 90));
             }
             napa = Rakenne.El("mk-issohjaamo__napa", joystick, PickingMode.Ignore);
-            joystick.RegisterCallback<PointerDownEvent>(e => { joystick.CapturePointer(e.pointerId); Ohjaa(e.localPosition); e.StopPropagation(); });
-            joystick.RegisterCallback<PointerMoveEvent>(e => { if (joystick.HasPointerCapture(e.pointerId)) Ohjaa(e.localPosition); });
-            joystick.RegisterCallback<PointerUpEvent>(e => { joystick.ReleasePointer(e.pointerId); AsetaSuunta(JoystickSuunta.Ei); });
-            joystick.RegisterCallback<PointerCancelEvent>(_ => AsetaSuunta(JoystickSuunta.Ei));
-            joystick.RegisterCallback<PointerCaptureOutEvent>(_ => AsetaSuunta(JoystickSuunta.Ei));
+            // Osuma-ala näkymättömänä 132 × 132 pt (Päätoimittaja 4.10.: jokaiselle varrelle ≥ 44 × 44 pt; varsi 32 pt, ulkoasu ennallaan).
+            joystick.pickingMode = PickingMode.Ignore;
+            var osuma = Rakenne.El("mk-issohjaamo__joyosuma", joystick);
+            Vector2 Paikka(Vector3 ruutu) => joystick.WorldToLocal(ruutu);
+            osuma.RegisterCallback<PointerDownEvent>(e => { osuma.CapturePointer(e.pointerId); Ohjaa(Paikka(e.position)); e.StopPropagation(); });
+            osuma.RegisterCallback<PointerMoveEvent>(e => { if (osuma.HasPointerCapture(e.pointerId)) Ohjaa(Paikka(e.position)); });
+            osuma.RegisterCallback<PointerUpEvent>(e => { osuma.ReleasePointer(e.pointerId); AsetaSuunta(JoystickSuunta.Ei); });
+            osuma.RegisterCallback<PointerCancelEvent>(_ => AsetaSuunta(JoystickSuunta.Ei));
+            osuma.RegisterCallback<PointerCaptureOutEvent>(_ => AsetaSuunta(JoystickSuunta.Ei));
 
             // --- LCD: kohde isolla, maa alla ---------------------------------------------------------------------
             lcd = Rakenne.El("mk-issohjaamo__lcd", paneeli);
@@ -100,7 +104,7 @@ namespace Matkakirja.Natiivi
             luvut = Rakenne.El("mk-issohjaamo__luvut", rumpu, PickingMode.Ignore);
             rumpuA = Rakenne.Teksti("1", "mk-issohjaamo__luku", luvut);
             rumpuB = Rakenne.Teksti("", "mk-issohjaamo__luku", luvut);
-            foreach (var t in new[] { rumpuA, rumpuB }) { t.pickingMode = PickingMode.Ignore; Kirjasimet.Aseta(t, Kirjasin.Segmentti); }
+            foreach (var t in new[] { rumpuA, rumpuB }) { t.pickingMode = PickingMode.Ignore; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
             rumpuB.style.translate = new Translate(0, Length.Percent(100));
             Kirjasimet.Aseta(Rakenne.Teksti("×", "mk-issohjaamo__kerta", rumpu), Kirjasin.Lcd);
             kaasu.RegisterCallback<PointerDownEvent>(e => { kaasu.CapturePointer(e.pointerId); Vipu(e.localPosition.y); e.StopPropagation(); });

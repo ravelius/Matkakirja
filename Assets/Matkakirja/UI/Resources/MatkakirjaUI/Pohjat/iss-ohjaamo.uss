@@ -55,6 +55,15 @@
     background-color: var(--tk-lcd-pinta);
 }
 
+/* Joystickin näkymätön osuma-ala: 132 × 132 pt keskitettynä (varren suunta-alue ≥ 44 × 44 pt). */
+.mk-issohjaamo__joyosuma {
+    position: absolute;
+    left: -18px;
+    top: -18px;
+    width: 132px;
+    height: 132px;
+}
+
 .mk-issohjaamo__varsi.mk-painettu {
     background-color: var(--tk-lcd-reunus);
 }
@@ -199,7 +208,7 @@
 }
 
 .mk-issohjaamo__luvut {
-    height: 20px;
+    height: 26px;
     width: 10px;
     overflow: hidden;
 }
@@ -209,10 +218,11 @@
     left: 0;
     right: 0;
     top: 0;
-    height: 20px;
+    height: 26px;
     margin: 0;
     padding: 0;
-    font-size: var(--tk-koko-rumpu);
+    /* Selkeä LCD-kirjasin (Päätoimittaja 4.10.: DSEG7 näytti pienenä "1x":n muodossa "¦x"). */
+    font-size: var(--tk-koko-lcd-mini);
     color: var(--tk-lcd-muste);
     -unity-text-align: middle-right;
 }
@@ -225,7 +235,7 @@
 .mk-issohjaamo__kerta {
     margin: 0 0 0 1px;
     padding: 0;
-    font-size: var(--tk-koko-leipa);
+    font-size: var(--tk-koko-lcd-mini);
     color: var(--tk-lcd-muste);
 }
 
