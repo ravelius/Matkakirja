@@ -89,6 +89,19 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(ilman.Ala, pysyy.Ala);
         }
 
+        [Testi] static void VaakanaPulunViereenLaskeutuen()
+        {
+            // Omistaja TF 140 (iPhone vaaka 874 × 402 pt): Pulu oikealla (y 251–315), taulu 300 pt ei mahdu Pulun yläpuolelle eikä
+            // Pulun alareunasta ylöspäin linssin ✕:n alle (ylaMin 54) → Pulun viereen, alareuna alempana, koko korkeus näkyvissä.
+            const float W = 874, H = 402, w = 232, h = 300;
+            var pulu = new Laatikko(700, 251 - PulunTaulu.PulunEleenVaraPt, 750, 315);
+            var p = PulunTaulu.Sijoita(pulu, W, H, w, h, new List<Laatikko>(), ylaMin: 54);
+            Oleta.Sama("vieres", p.Nimi);
+            Oleta.Tosi(p.Alue.Yla >= 54f, "ylaMin:n alla " + p.Alue);
+            Oleta.Tosi(H - p.Alue.Ala >= PulunTaulu.AlaMin, "alareuna ruudulla " + p.Alue);
+            Oleta.Tosi(p.Alue.Oikea <= pulu.Vasen, "ei Pulun päällä " + p.Alue);
+        }
+
         [Testi] static void CupolassaYlhaallaTaydellaKorkeudella()
         {
             // Laitekuva 1.0.54 (iPhone 402 × 874): Pulu ikkunan takana ruudun keskellä (y ≈ 380–480), lukemarivi ylhäällä → taulu

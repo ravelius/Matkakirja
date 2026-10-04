@@ -372,7 +372,7 @@ namespace Matkakirja.Natiivi
             paneeli.style.right = valittu.Oikea ?? PulunTaulu.OikeaReuna;
             // Yläreuna ei koskaan ylaMinin yläpuolelle (linssin ✕:n alle): ennen raja salli 12 pt:n ja vaakana taulun oma ✕ osui
             // linssin ✕:n viereen. Yli jäävät rivit vierittyvät.
-            paneeli.style.maxHeight = Mathf.Max(120f, H - valittu.Ala - ylaMin);
+            paneeli.style.maxHeight = Mathf.Max(44f, H - valittu.Ala - ylaMin);
         }
 
         /// <summary>Taulun luontainen korkeus (otsikko, kaikki rivit ja linkki) rajauksesta riippumatta.</summary>

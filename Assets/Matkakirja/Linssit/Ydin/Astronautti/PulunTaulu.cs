@@ -155,6 +155,9 @@ namespace Matkakirja.Linssit.Astronautti
             // Leijunta heiluttaa Pulua myös sivuttain, joten sama vara kuin yläpaikassa (+ eleen sivuvara).
             float vierOikea = (float)Math.Round(W - pulu.Vasen + RakoPt + LeijunnanVaraPt + PulunEleenSivuvaraPt);
             float vierAla = Math.Max(AlaMin, (float)Math.Round(H - pulu.Ala));
+            // Matala ruutu (iPhone vaaka, omistaja TF 140 22.4x): Pulun alareunasta ylöspäin taulu ei mahdu ylaMin:n alle, joten
+            // vieres-paikka laskeutuu (alareuna alemmas, enintään AlaMin:iin). Pulun vieressä se ei osu Pulun päälle.
+            if (H - vierAla - h < ylaMin) vierAla = Math.Max(AlaMin, (float)Math.Round(H - ylaMin - h));
             if (W - vierOikea - w >= YlaMin)
                 ehdokkaat.Add(new TaulunPaikka("vieres", vierAla, vierOikea, new Laatikko(W - vierOikea - w, H - vierAla - h, W - vierOikea, H - vierAla)));
             bool Osuu(Laatikko a)
