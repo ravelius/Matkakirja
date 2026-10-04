@@ -176,11 +176,14 @@ namespace Matkakirja.Linssit.Iss
         /// <summary>Kuten Lahin, lisäksi painotettu etäisyys (km, tärkeys vähennettynä) vertailuun.</summary>
         static (Paikka? p, double km) LahinKm(List<Paikka> p, double lat, double lon, double maxKm, string maa)
         {
-            Paikka? paras = null; double parasKm = maxKm;
+            // Raja todellisesta etäisyydestä (simu 58e081a1: MADRID 105 km:n päästä tärkeyspainon takia), paino vain vertailuun.
+            Paikka? paras = null; double parasKm = double.PositiveInfinity;
             foreach (var x in p)
             {
                 if (maa != null && x.Maa != maa) continue;
-                double km = Ylilennot.MaaEtaisyysKm(lat, lon, x.Lat, x.Lon) - 10 * x.Tarkeys;
+                double km = Ylilennot.MaaEtaisyysKm(lat, lon, x.Lat, x.Lon);
+                if (km > maxKm) continue;
+                km -= 10 * x.Tarkeys;
                 if (km <= parasKm) { parasKm = km; paras = x; }
             }
             return (paras, parasKm);
