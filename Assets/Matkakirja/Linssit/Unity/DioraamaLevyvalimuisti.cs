@@ -8,6 +8,7 @@
 // hash-kansiot poistetaan (Siivoa). iOS saa tyhjentää temporaryCachePathin, jolloin tiedostot vain ladataan uudelleen.
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 using System.Threading.Tasks;
 using UnityEngine;
@@ -22,6 +23,10 @@ namespace Matkakirja.Natiivi
         static string juuri, kansio;
 
         public static int Osumia { get; private set; }
+        /// <summary>Esilataus (DioraamaEsilataus) ja linssi voivat pyytää samaa tiedostoa yhtä aikaa: haussa oleva url ja sen
+        /// levykirjoitus odotetaan loppuun, jolloin toinen pyyntö saa osuman eikä lataa tiedostoa toista kertaa.</summary>
+        static readonly HashSet<string> haussa = new HashSet<string>(StringComparer.Ordinal);
+        static readonly Dictionary<string, Task> kirjoitukset = new Dictionary<string, Task>(StringComparer.Ordinal);
         public static int Latauksia { get; private set; }
 
         /// <summary>DioraamaSovitin.LataaRakennus: uusin.json luettu. ampariJuuri = …/dioraama/&lt;r&gt;/, hash ilman kauttaviivoja.</summary>
@@ -48,6 +53,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Tavut välimuistista tai verkosta (onnistunut lataus tallennetaan taustasäikeessä). null = epäonnistui.</summary>
         public static IEnumerator Hae(string url, int aikakatkaisu, Action<byte[]> valmis)
         {
+            yield return OdotaKesken(url);
             string paikka = Paikka(url);
             if (paikka != null && File.Exists(paikka))
             {
@@ -57,12 +63,15 @@ namespace Matkakirja.Natiivi
                 if (luettu != null && luettu.Length > 0) { Osumia++; valmis(luettu); yield break; }
             }
             byte[] tavut = null;
-            using (var p = UnityWebRequest.Get(url))
+            haussa.Add(url);
+            try
             {
+                using var p = UnityWebRequest.Get(url);
                 p.timeout = aikakatkaisu;
                 yield return p.SendWebRequest();
                 if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data;
             }
+            finally { haussa.Remove(url); }
             if (tavut != null)
             {
                 Latauksia++;
@@ -70,7 +79,7 @@ namespace Matkakirja.Natiivi
                 {
                     // Kirjoitus väliaikaiseen ja siirto, ettei keskeytynyt kirjoitus jää puolikkaaksi osumaksi.
                     var kopio = tavut;
-                    _ = Task.Run(() =>
+                    kirjoitukset[url] = Task.Run(() =>
                     {
                         try
                         {
@@ -92,6 +101,7 @@ namespace Matkakirja.Natiivi
         /// ensilataus kulkee Hae:n kautta ja kopioidaan kerran. default = epäonnistui. Kutsuja vapauttaa (Dispose).</summary>
         public static IEnumerator HaeNatiivi(string url, int aikakatkaisu, Action<Unity.Collections.NativeArray<byte>> valmis)
         {
+            yield return OdotaKesken(url);
             string paikka = Paikka(url);
             if (paikka != null && File.Exists(paikka))
             {
@@ -128,6 +138,16 @@ namespace Matkakirja.Natiivi
             byte[] tavut = null;
             yield return Hae(url, aikakatkaisu, t => tavut = t);
             valmis(tavut == null ? default : new Unity.Collections.NativeArray<byte>(tavut, Unity.Collections.Allocator.Persistent));
+        }
+
+        static IEnumerator OdotaKesken(string url)
+        {
+            while (url != null && haussa.Contains(url)) yield return null;
+            if (url != null && kirjoitukset.TryGetValue(url, out var k))
+            {
+                while (!k.IsCompleted) yield return null;
+                kirjoitukset.Remove(url);
+            }
         }
 
         static void Siivoa(string rakennusKansio, string pidettava)
