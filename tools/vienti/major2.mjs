@@ -32,7 +32,7 @@ export const SKEEMAVERSIO_2 = '2.0';
 export const NATIIVIN_MODUULIT = [
   /^js\/(aani-ehdokkaat|fokusnosto-symbolit|fokustehtavat|karttatyokalu-maakunnat|lahteet|ui-tekstit)\.js$/,
   /^js\/tyohuone-(musiikki|pelit|raamattu|tilanne)\.js$/,
-  /^js\/linssit\/(astronaut-kysymykset|ihmisen-matka|ihmisen-matka-data|ihmisen-matka-kertomus|ihmisen-matka-kysymykset|keksinnot|maatiedot|radio|satelliitti-data|vertailu|vesistot)\.js$/,
+  /^js\/linssit\/(astro-kysymykset|astronaut-kysymykset|ihmisen-matka|ihmisen-matka-data|ihmisen-matka-kertomus|ihmisen-matka-kysymykset|keksinnot|maatiedot|radio|satelliitti-data|vertailu|vesistot)\.js$/,
   /^js\/packs\/(maailmankartta|maailmankartta-maasto|maailmankartta-nimet|maakunnat-luonnehdinnat|maakunnat-pulu|nimisto-1873|pollo-poiminnat|radiot|saatiedot|syvennyspaikat|uutislahteet|vanhat-aanet|viritysaanet)\.js$/,
   // NostoSisalto: <tiedosto>-<iso>.js maittain.
   /^js\/packs\/(fokuskohteet|maastokohteet|hahmotelma|nakyvat-kaupungit)-[a-z]{3}\.js$/,
