@@ -636,7 +636,9 @@ namespace Matkakirja.Natiivi
         static void MuistaLahde(string avain, UnityWebRequest r)
         {
             string l = r.GetResponseHeader("x-puhe-lahde");
-            puheLahde[avain] = $"{(l ?? "?")} {r.responseCode}";
+            // Moottori mukaan (juna 142, Eleven-äänten selvitys): eleven | xai (päiväkatto tai varapolku) | openai.
+            string m = r.GetResponseHeader("x-puhe-moottori");
+            puheLahde[avain] = $"{(l ?? "?")} {m ?? "?"} {r.responseCode}";
             if (puheLahde.Count > 64) puheLahde.Clear();
         }
 
