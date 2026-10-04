@@ -322,7 +322,8 @@ namespace Matkakirja.Natiivi
             var v = UiNakymat.Olemassa ? UiNakymat.Hae().Linssit?.Valitsin : null;
             if (v == null) return;
             if (!v.Auki) v.Avaa();
-            v.NaytaNakyma(Linssivalitsin.Nakyma.Linssit);
+            // Pelit-kategoria (omistaja 4.10.2026): ilman linssejä nappi avaa Pelit-näkymän.
+            v.NaytaNakyma(LinssiUi.Rekisteri?.Valittavat.Count > 0 ? Linssivalitsin.Nakyma.Linssit : Linssivalitsin.Nakyma.Pelit);
         }
 
         /// <summary>Linssi ei päällä eikä aloitusnäkymä auki (web: aloituksessa ei selitteen nappia).</summary>
@@ -333,7 +334,8 @@ namespace Matkakirja.Natiivi
             bool sallittu = nappiSallittu && !Aloitusnakyma.AloitusAuki && (Automaattinen || !Ylapalkki.PalkkiPiilossa);
             if (!sallittu) Sulje();
             nappi.style.display = sallittu && !Automaattinen ? DisplayStyle.Flex : DisplayStyle.None;
-            bool linsseja = LinssiUi.Rekisteri?.Valittavat.Count > 0;
+            // Pelit-kategoria samassa napissa (omistaja 4.10.2026): nappi näkyy myös, kun on vain pelejä.
+            bool linsseja = LinssiUi.Rekisteri?.Valittavat.Count > 0 || Linssivalitsin.PelejaAvattu;
             // Myös piilotetulla palkilla (iPhonen vaaka) ☰:n vieressä: linssit eivät ole enää valikossa (Päätoimittaja 2.10. 19.0x;
             // omistajan 24.9. "vaakana vain ☰" koski yläpalkin nappeja).
             linssit.style.display = nappiSallittu && linsseja && !LinssiPaalla && !Aloitusnakyma.AloitusAuki ? DisplayStyle.Flex : DisplayStyle.None;
