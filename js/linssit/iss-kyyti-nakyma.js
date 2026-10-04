@@ -472,6 +472,22 @@ export function ylilennonKohteet(kohteet = SATELLIITTI_KOHTEET) {
     .sort((a, b) => a.nimi.localeCompare(b.nimi, 'fi'));
 }
 
+/**
+ * VALIKOSSA ENINTÄÄN 30 LÄHINTÄ (Päätoimittaja 4.10.2026: Euroopan astronauttikohteita on pian lähes 100, ei koko
+ * aakkoslistaa). Sama laskutapa natiivissa (sovittu Natiivi-UI:n kanssa): isoympyräetäisyys ISS:n alapisteestä valikon
+ * avaushetkellä (simuloitu kello), lähin ensin, tasapelissä nimi fi-järjestyksessä. Oma sijainti ei kuulu 30:een.
+ */
+export const YLILENNON_VALIKKO_MAX = 30;
+
+export function rajaaLahimmat(kohteet, lat, lon, n = YLILENNON_VALIKKO_MAX) {
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) return (kohteet ?? []).slice(0, n);
+  return (kohteet ?? [])
+    .map((k) => ({ k, km: keskuskulma(lat, lon, k.lat, k.lon) * ASTE_KM }))
+    .sort((a, b) => a.km - b.km || a.k.nimi.localeCompare(b.k.nimi, 'fi'))
+    .slice(0, n)
+    .map((x) => x.k);
+}
+
 /*
  * ═══════════ ISS-SÄÄTÖPANEELI (Codex-elementtisarja 28.9.2026, kytkentä 29.9.2026) ═══════════
  *
@@ -844,13 +860,28 @@ export function luoIssKyytiNakyma({
     const tyhja = doc.createElement('option');
     tyhja.value = '';
     tyhja.textContent = 'Lennä kohteen ylle…';
-    valikko.append(tyhja, ...kohteet.map((k) => {
-      const o = doc.createElement('option');
-      o.value = k.tunnus;
-      o.textContent = k.nimi;
-      return o;
-    }));
+    // Valikon rivit: Oma sijainti kärjessä ja 30 aluksen alapistettä lähintä (rajaaLahimmat); lasketaan joka avauksella
+    // uudelleen (focus / painallus), auki ollessa lista ei vaihdu. `kohteet` pysyy koko listana (lennaKohteeseen).
+    let valikkoAuki = false;
+    const taytaValikko = () => {
+      let p = null;
+      try { p = issNyt.paikka(simu.nyt()); } catch { p = null; }
+      const oma = kohteet.filter((k) => k.tunnus === 'oma');
+      const rivit = [...oma, ...rajaaLahimmat(kohteet.filter((k) => k.tunnus !== 'oma'), p?.lat, p?.lon)].map((k) => {
+        const o = doc.createElement('option');
+        o.value = k.tunnus;
+        o.textContent = k.nimi;
+        return o;
+      });
+      if (valikko.replaceChildren) valikko.replaceChildren(tyhja, ...rivit);
+      else { valikko.children.length = 0; valikko.append(tyhja, ...rivit); }
+    };
+    taytaValikko();
+    const avautuu = () => { if (!valikkoAuki) { valikkoAuki = true; taytaValikko(); } };
+    for (const tapahtuma of ['pointerdown', 'mousedown', 'focus']) valikko.addEventListener(tapahtuma, avautuu);
+    valikko.addEventListener('blur', () => { valikkoAuki = false; });
     valikko.addEventListener('change', () => {
+      valikkoAuki = false;
       const t = valikko.value;
       valikko.value = '';
       if (t) lennaKohteeseen(t);
@@ -866,12 +897,8 @@ export function luoIssKyytiNakyma({
       haeOmaSijainti({ ikkuna }).then((oma) => {
         if (!oma || purettu || kohteet.some((k) => k.tunnus === 'oma')) return;
         kohteet.unshift(oma);
-        const o = doc.createElement('option');
-        o.value = oma.tunnus;
-        o.textContent = oma.nimi;
-        // listan kärkeen, tyhjän valinnan jälkeen (reaalissa DOM:issa; testien vale-DOM ei kutsu tätä haaraa).
-        if (valikko.insertBefore) valikko.insertBefore(o, valikko.children[1] ?? null);
-        else valikko.append(o);
+        // Oma sijainti listan kärkeen (taytaValikko); auki olevaa listaa ei vaihdeta kesken valinnan.
+        if (!valikkoAuki) taytaValikko();
       }).catch(() => {});
     };
 
