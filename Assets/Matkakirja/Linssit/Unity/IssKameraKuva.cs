@@ -12,8 +12,8 @@
 // kohdalla, yksi ilmainen kuva ja sitten kuvapaketit): Cupolan katseen ollessa kuvauspaikalla (AstronauttiLinssi.Kuvauspaikka)
 // laukaisu käyttää Karttasepän valmista kuvauspaikan kuvaa (kuvauspaikat/v1/<tunniste>.jpg, 20 × 20 km) COG-haun sijaan:
 // PaikanLaatat tekee siitä kuvan pinnan, kamera rajataan paikkaan ISS:ltä (Kuvauspaikat.Rajaus, AstronauttiLinssi.Vertailu kuvan
-// ajaksi), ja laitteella tulevat ilmakehä, valo, pilvet ja kameran tuntu kuten ennen. Muualla nappi ei kuvaa (VainKuvauspaikat;
-// kehittäjän COG-polku `astro kyyti kuvaa vapaa 1`). Ilmaisia kuvia Ilmaisia (PlayerPrefs iss-kuvia-otettu); paketit myöhemmin.
+// ajaksi), ja laitteella tulevat ilmakehä, valo, pilvet ja kameran tuntu kuten ennen. Muualla Euroopassa COG-polku (kirjaus
+// "vain kuvauspaikoilla" kumottu 4.10., loki #3934; A/B `astro kyyti kuvaa vapaa 0`). Ilmaisia kuvia Ilmaisia; paketit myöhemmin.
 //   testikomennot  astro kyyti kuvaa paikka (tila), kuvaa nollaa (ilmainen kuva takaisin), kuvaa vapaa 0|1
 //   aineisto       Documents/iss-kamera/kuvauspaikat.json ja kuvauspaikat/<tunniste>.jpg, jos on (testi), muuten ämpäri
 // Käyttöliittymä (KUVAA-nappi, rajausruutu, edistyminen) tulee UI-pohjista (omistajan päätös 1.10.: A + Natiivi-UI).
@@ -75,8 +75,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Kuvaputki käynnissä (laukaisusta valmiiseen): Cupolan katseen veto ohitetaan (CupolaVeto, IssKatse.Lukittu).</summary>
         public static bool Kaynnissa => olio != null && olio.kaynnissa;
 
-        /// <summary>Kameranappi kuvaa vain kuvauspaikoilla (omistaja 4.10.); false = kehittäjän vanha COG-polku kaikkialla.</summary>
-        public static bool VainKuvauspaikat = true;
+        /// <summary>
+        /// true = kameranappi vain kuvauspaikoilla. Päätoimittaja 4.10. klo 14.0x (loki #3934): kirjaus "vain kuvauspaikoilla" kumottu,
+        /// pelaaja kuvaa koko Euroopassa (2.10. linja, COG-polku); kuvauspaikalla käytetään valmista kuvaa (nopea, pilvetön).
+        /// </summary>
+        public static bool VainKuvauspaikat = false;
         /// <summary>Ilmaisia tarkkoja kuvia (omistaja: "yksi ilmainen kuva ja sitten kuvapaketit"); paketit (Ostettu) myöhemmin.</summary>
         public const int Ilmaisia = 1;
         public static int Ostettu = 0;
