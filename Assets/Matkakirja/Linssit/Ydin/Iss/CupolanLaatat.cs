@@ -23,14 +23,13 @@ namespace Matkakirja.Linssit.Iss
         /// kalibroitu 1,52 (alla).</summary>
         public const double RasteriLisa = 1.52;
         /// <summary>
-        /// Kalibrointi iPad 8023e34c -hakulokiin (Cupolan ensiavaus, Cesiumin S2- ja BMNG-pyynnöt): maastotason kynnyksen kerroin
-        /// (renderöinnin mittakaava ja tilesetin näyttövirhe yhdessä), rasterin tasolisä ja rajauksen reunavara. Lisä 1,52, kerroin 3
-        /// ja vara 0,15 kattavat Cesiumin pyynnöistä S2 307/307 (541 laattaa, tarkin z8 kuten Cesiumilla) ja BMNG 337/353 (845;
-        /// puuttuvat ovat näkymän ulkopuolella Aasiassa, entisen kaukonäkymän laatoista).
+        /// Kalibrointi iPad-hakulokeihin (Cupolan ensiavaus, Cesiumin pyynnöt): maastotason kynnyksen kerroin (renderöinnin
+        /// mittakaava ja tilesetin näyttövirhe yhdessä) ja rajauksen reunavara (Cesiumin rajausvolyymi on laattaa väljempi, osuus
+        /// laatan koosta). Maasto (c629a303: tasot L6–L7): kerroin 1,5, vara 0,3 → 96/100 laattaa. Rasterit (8023e34c): kerroin 3,
+        /// lisä 1,52, vara 0,15 → S2 307/307 (tarkin z8 kuten Cesiumilla), BMNG 337/353 (puuttuvat näkymän ulkopuolella Aasiassa).
+        /// Yksi yhteinen sovitus ei kata molempia (maasto tarkentuu Cesiumissa tasoa pidemmälle kuin rasteri seuraa).
         /// </summary>
-        public const double PikseliKerroin = 3;
-        /// <summary>Laatan rajauksen reunavara laatan koon osuutena.</summary>
-        public const double RajausVara = 0.15;
+        public const double MaastoKerroin = 1.5, MaastoVara = 0.3, RasteriKerroin = 3, RasteriVara = 0.15;
         /// <summary>Rasterin laattoja enintään akselilla yhdelle maastolaatalle (maximumTextureSize 2048 / 256).</summary>
         public const int MaxLaattojaAkselilla = 8;
         /// <summary>Näytteitä ruudun kummallakin akselilla (laatta on ruudulla ≥ 256 px, näyteväli ~100 px iPadilla).</summary>
@@ -43,13 +42,14 @@ namespace Matkakirja.Linssit.Iss
         /// </summary>
         public static SortedSet<(int z, int x, int y)> Laske(in Kuvakulma a, double kentta, double suhde, double korkeusPx, int zMin, int zMax,
             (double W, double S, double E, double N)? alue = null)
-            => Rasterit(Maastolaatat(a, kentta, suhde, korkeusPx), zMin, zMax, alue);
+            => Rasterit(Maastolaatat(a, kentta, suhde, korkeusPx, RasteriKerroin, RasteriVara), zMin, zMax, alue);
 
         /// <summary>
         /// Maastolaatat (maantieteellinen nelipuu 2 × 1 juurta, TMS: y = 0 etelässä, kuten quantized-mesh -maasto), jotka Cesium
         /// lataa asennolle: näkyvät tarkentuen, sisarukset ja esivanhemmat. Sama joukko maaston esihakuun ja rasterien laskuun.
         /// </summary>
-        public static HashSet<(int l, int x, int y)> Maastolaatat(in Kuvakulma a, double kentta, double suhde, double korkeusPx)
+        public static HashSet<(int l, int x, int y)> Maastolaatat(in Kuvakulma a, double kentta, double suhde, double korkeusPx,
+            double kerroin = MaastoKerroin, double rajausVara = MaastoVara)
         {
             var maasto = new HashSet<(int l, int x, int y)>();
             // Kamera maan keskipisteen kehyksessä (pallo).
@@ -82,16 +82,16 @@ namespace Matkakirja.Linssit.Iss
                     osumat.Add((Math.Asin(Math.Max(-1, Math.Min(1, g.z / R))) / Deg, Math.Atan2(g.y, g.x) / Deg, t));
                 }
             // Cesiumin läpikäynti maantieteellisessä nelipuussa (2 × 1 juurta): laatta, jossa on näkyvä piste, tarkentuu, kun
-            // geometrinen virhe / lähin etäisyys · (korkeus / 2 tan(kenttä/2)) > 2 · PikseliKerroin; lapset tulevat neljänä
+            // geometrinen virhe / lähin etäisyys · (korkeus / 2 tan(kenttä/2)) > 2 · kerroin; lapset tulevat neljänä
             // (forbidHoles), esivanhemmat ovat mukana (preloadAncestors). Lähin etäisyys = pienin näkyvän pisteen ja laatan
             // kulmien, reunojen keskipisteiden ja keskipisteen etäisyys silmästä (Cesiumin rajausvolyymin lähin piste).
-            double kynnys = 2 * PikseliKerroin * 2 * tv / Math.Max(1, korkeusPx);   // virhe / etäisyys -raja
+            double kynnys = 2 * kerroin * 2 * tv / Math.Max(1, korkeusPx);   // virhe / etäisyys -raja
             void Kay(int l, int x, int y, List<(double lat, double lon, double t)> pisteet)
             {
                 maasto.Add((l, x, y));
                 double koko = 180.0 / (1 << l), w = x * koko - 180, s0 = y * koko - 90;
-                // Cesiumin rajausvolyymi on laattaa väljempi (suuret laatat leikkaavat kartiota helpommin): reunavara RajausVara · koko.
-                double vara = RajausVara * koko;
+                // Cesiumin rajausvolyymi on laattaa väljempi (suuret laatat leikkaavat kartiota helpommin): reunavara rajausVara · koko.
+                double vara = rajausVara * koko;
                 var omat = pisteet.FindAll(q => q.lon >= w - vara && q.lon < w + koko + vara && q.lat >= s0 - vara && q.lat < s0 + koko + vara);
                 if (omat.Count == 0 || l >= MaastoMaxTaso) return;
                 double lahin = double.MaxValue;

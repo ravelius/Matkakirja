@@ -91,7 +91,10 @@ namespace Matkakirja.Natiivi
             Peru();
             esihaku = new Laattapalvelin.Esilataus { Saapuminen = true };
             esihakuAlku = Time.unscaledTime; esihakuKirjattu = false;
-            var maasto = CupolanLaatat.Maastolaatat(a, IssKuvakulma.IkkunanKentta, (double)Screen.width / Mathf.Max(1, Screen.height), Screen.height);
+            double kentta = IssKuvakulma.IkkunanKentta, suhde = (double)Screen.width / Mathf.Max(1, Screen.height);
+            // Maasto ja rasterit omilla kalibroinneillaan (CupolanLaatat: maasto tarkentuu Cesiumissa tasoa pidemmälle).
+            var maasto = CupolanLaatat.Maastolaatat(a, kentta, suhde, Screen.height);
+            var rasterinMaasto = CupolanLaatat.Maastolaatat(a, kentta, suhde, Screen.height, CupolanLaatat.RasteriKerroin, CupolanLaatat.RasteriVara);
             // Karkeat ensin (mustan aikana Cesium pyytää ensin S2:n juuret ja BMNG:n z2–z4, iPad 8023e34c): avain = Web Mercator
             // -taso, maastolle L + 2 (rasteri seuraa maastolaattaa noin kaksi tasoa tarkempana).
             var kaikki = new List<(int z, string polku)>();
@@ -107,7 +110,7 @@ namespace Matkakirja.Natiivi
             foreach (var sa in sarjat)
             {
                 int ennen = kaikki.Count;
-                foreach (var t in CupolanLaatat.Rasterit(maasto, sa.ZMin, sa.ZMax, sa.Alue))
+                foreach (var t in CupolanLaatat.Rasterit(rasterinMaasto, sa.ZMin, sa.ZMax, sa.Alue))
                 {
                     var p = CupolanLaatat.Polut(sa.Malli, new[] { t }, Laattapalvelin.Ampari, sa.JuuriZ, sa.JuuriX, sa.JuuriY);
                     if (p.Count > 0) kaikki.Add((t.z, p[0]));
