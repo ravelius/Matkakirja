@@ -52,6 +52,8 @@ namespace Matkakirja.Natiivi
         // Jakso = kaukonäkymä, jossa ennakko olisi päällä (myös A/B 0: sama mittaus vertailuun). Kehysajat linssin liikkeen
         // hidastumisen mittaamiseen (Päätoimittajan ehto 1).
         bool jaksossa;
+        int mittaus;
+        static readonly float[] Mittaukset = { 2f, 6f, 12f, 20f };
         float jaksoAlku, pisinMs;
         int kehyksia, hitaita;
         double summaMs;
@@ -72,7 +74,16 @@ namespace Matkakirja.Natiivi
             if (kauko && !jaksossa)
             {
                 jaksossa = true; jaksoAlku = Time.unscaledTime; kehyksia = hitaita = 0; summaMs = 0; pisinMs = 0;
-                AlkuTavut = Laattapalvelin.VerkostaTavuja; haettu = null; esihakuja = esihakuLaattoja = 0;
+                AlkuTavut = Laattapalvelin.VerkostaTavuja; haettu = null; esihakuja = esihakuLaattoja = 0; mittaus = 0;
+            }
+            // Kaukonäkymän lataus jakson alusta (Natiiviseppä juna 140: Cupolan jälkeen pallolla suorakulmioita vielä 12 s:ssa).
+            if (jaksossa && mittaus < Mittaukset.Length && Time.unscaledTime - jaksoAlku >= Mittaukset[mittaus])
+            {
+                var kk = KarttaKerrokset.Instanssi;
+                var (puuttuu, nakyy) = kk != null ? kk.LataamattomatLaatat() : (-1, -1);
+                Debug.Log($"MATKAKIRJA linssit: kaukonäkymä {Mittaukset[mittaus]:0} s: lataus {(kk?.pallo != null ? kk.pallo.ComputeLoadProgress() : -1):0} %, " +
+                    $"lataamattomia laattoja {puuttuu}/{nakyy}, karkeita {kk?.KarkeatLaatat}");
+                mittaus++;
             }
             else if (!kauko && jaksossa) { jaksossa = false; Kirjaa(); }
             if (!Kaytossa || !kauko) { Peru(); Tila = Kaytossa ? "odottaa" : "pois"; return; }
