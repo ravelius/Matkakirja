@@ -3,6 +3,15 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 4.10. KLO 18.0x (KIILTO KESKEN 5b6b9d46; LENTOPELI VAIHE 1 TOIMITETTU OMISTAJALLE; VAIHE 2 ODOTTAA)
+- Kiilto: ajo g (284fa65f = 3de304db) — VAIN VEDESSÄ ok (maalla ka 8,2/255 = kohdistusjäännöksen taso), mutta matalalla
+  auringolla kaukaa yhä kermaläiskä → 5b6b9d46 (30 km tuulikaistat vain kaukonäkymään, katto 2,0) KÄÄNTÄMÄTTÄ. Seuraavaksi käännös +
+  ajo-kiilto-cupola-3.sh (katse kiiltokulma.py:llä heijastuspisteeseen; LIVE-aika, joten korkea aurinko vain aamupäivällä ~8–10 UTC).
+  Huom: kiiltokulma vaatii katse oletus ennen laskua (kameran suunt = maajälki vain oletuksella). maavuoto.py kohdistaa vaihekorrelaatiolla.
+- Lentopeli vaihe 1 omistajalle: lokit/linssiseppa-lentopeli-esittely-20261004/omistajalle/ (6 stilliä + 29 s video äänellä) lähetetty
+  Päätoimittajalle puute- ja vikalistan kanssa. Vaihe 2 odottaa omistajaa ("jatketaan myöhemmin") ja Kauppa-kysymystä (natiivissa ei Kauppaa).
+- Opittu: älä tee vahtia `pgrep -f <skriptin nimi>`:llä — osui vahtiin itseensä (17.49, harmiton: vain oma UDID). Tallenna pid:t.
+
 ## TILA 4.10. KLO 16.5x (AURINGON KIILTO JUNAAN 139 — ODOTTAA KÄÄNNÖS-/SIMUVUOROA)
 - Päätoimittajan erä: hopeanvalkoinen, rakeinen, venyvä, VAIN vedessä; juovat liian vahvat. Proto linssiseppa/glint-2 = BUILD 137
   80b7dcf0 + glint-commitit (cherry-pick) + 3de304db: sävykäyrä vesimaskista riippumatta ja terävä maski 0,42…0,58 sen jälkeen (vuoto maalle
