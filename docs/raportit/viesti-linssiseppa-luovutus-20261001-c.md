@@ -3,6 +3,12 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 4.10. (KELLOPÄÄTÖS: A 659c903c JUNAAN; MARCUS 92d46875 MERGE-PYYNNÖSSÄ)
+- Päätoimittaja: junaan LS2:n kello (659c903c); yksi-kello 7ab396b3 EI junaan (haara säilyy, piirtää leikkauksen vasta raa'an dsp-askeleen
+  jälkeen). Marcus linssiseppa/marcus-v15b 92d46875 merge-pyynnössä Natiivisepälle (yhdistyy 9c071068:aan). Jatkohuomiot: kytkimen
+  valon häivytys 170–210 ms äänen jälkeen (webin v14, ei muutosta ilman omistajaa). Mittaustyökalu mittaa-tahti.py toimii myös LS2:lle.
+- SEURAAVAKSI: auringon kiilto (glint c2d70795) simulla aamulla → kuvapari Päätoimittajalle.
+
 ## TILA 4.10. KLO 03.1x (YKSI KELLO PIDOSSA — LS2 MITTAA)
 - Päätoimittaja perui hyväksynnän: merkki piirtyy raa'an dspTimen mukaan, joten mittaus kohtauksen samalla kellolla näyttää sopua
   rakenteellisesti. LS2 korjaa merkin reaaliaikaan ja vertaa 659c903c vs. yksi-kello 7ab396b3; voittaja junaan 135, Marcus (marcus-v15b)
