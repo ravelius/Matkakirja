@@ -1712,6 +1712,17 @@ namespace Matkakirja.Natiivi
                         // veto <dx> <dy> [ms] simuloi sormen vedon pisteinä (ms > 0 jättää inertian).
                         else if (a == "katse" && osat.Length > 3) Kirjaa("astro kyyti katse: " + KyydinKatse(l, osat.Skip(3).ToArray()));
                         else if (a == "veto") Kirjaa("astro kyyti veto: " + KyydinVeto(l, osat.Skip(3).ToArray()));
+                        else if (a == "varakartta" && osat.Length > 3) { AstronauttiKerros.KyydinVarakartta = osat[3] != "0"; Kirjaa("astro kyyti varakartta: " + AstronauttiKerros.KyydinVarakartta); }
+                        else if (a == "suora" && osat.Length > 3) { Matkakirja.Linssit.Iss.IssKyyti.SuoraAvaus = osat[3] != "0"; Kirjaa("astro kyyti suora: " + Matkakirja.Linssit.Iss.IssKyyti.SuoraAvaus); }
+                        else if (a == "asento")
+                        {
+                            // Kohteen valinnan todiste (omistaja 4.10.): katsepiste, kallistus ja suuntima; tunnuksella etäisyys kohteeseen.
+                            var ka = l.KyydinAsento;
+                            var kh = osat.Length > 3 ? l.YlilennonKohteet.FirstOrDefault(x => x.Tunnus == osat[3]) : null;
+                            string ero = kh == null ? "" : $", kohteeseen {Matkakirja.Linssit.Iss.Ylilennot.MaaEtaisyysKm(ka.Lat, ka.Lon, kh.Lat, kh.Lon):0.0} km";
+                            Kirjaa($"astro kyyti asento: katse {ka.Lat:0.000}, {ka.Lon:0.000}, kallistus {ka.Kallistus:0.0}°, suuntima {ka.Suuntima:0.0}°, "
+                                + $"etäisyys {ka.EtaisyysM / 1000:0} km{ero}, siirretty {l.AlusSiirretty}, {l.CupolanKatse?.Tila(KatseenOletus())}");
+                        }
                         else if (a == "tumma" && osat.Length > 3 && float.TryParse(osat[3].Replace(',', '.'),
                                      System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float tumma))
                         {
@@ -2245,6 +2256,7 @@ namespace Matkakirja.Natiivi
             if (l.YlilennonKohteet.All(x => x.Tunnus != tunnus))
                 return $"tuntematon kohde {tunnus}; kohteet: " + string.Join(" ", l.YlilennonKohteet.Select(x => x.Tunnus));
             var y = l.LennaKohteeseen(tunnus, valoisa);
+            if (!y.HasValue && l.AlusSiirretty && l.YlilennonRivi() == null) return $"{tunnus}: alus siirtyy (katse säilyy)";
             return y.HasValue ? $"{tunnus}{(valoisa ? " (valoisa)" : "")}: {y.Value}; {l.YlilennonRivi()}" : l.YlilennonRivi() ?? "ei ylilentoa";
         }
 

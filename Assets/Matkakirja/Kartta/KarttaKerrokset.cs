@@ -389,19 +389,66 @@ namespace Matkakirja
         /// Lennon varjostinglobaalit sen mukaan, mitä paikoissa 1 ja 2 on: meren värjäys vain Sentinelille (paikassa 2
         /// on muulloin väritaso tai linssi, joita ei saa värjätä) ja varakartta vain Blue Marblelle.
         /// </summary>
+        /// <summary>
+        /// VARAKARTTA MYÖS ISS-KYYDISSÄ (Päätoimittaja 4.10.2026, Cupolan suora avaus b38947e5: häivytyksen jälkeen ~2 s tasainen
+        /// vaaleanharmaa pinta): kamera hyppää Cupolaan kerralla, ja rasterittomat laatat näyttivät materiaalin perusvärin kuten
+        /// lennon harmaat suorakulmiot. Sama Z2-varakartta (Blue Marble) täyttää ne kyydin ajan. Esilataa = haku jo linssin auetessa.
+        /// </summary>
+        public void LinssinVarakartta(bool paalla, bool esilataa = false)
+        {
+            if (esilataa || paalla) VarmistaVarakartta();
+            if (linssiVara == paalla) return;
+            linssiVara = paalla;
+            PaivitaLennonVarjostin();
+        }
+        bool linssiVara;
+        static readonly int Rasteri1Id = Shader.PropertyToID("_overlayTexture_1"), Rasteri2Id = Shader.PropertyToID("_overlayTexture_2");
+        static readonly Plane[] lataamatonTasot = new Plane[6];
+        static readonly List<MeshRenderer> lataamatonRenderit = new List<MeshRenderer>();
+
+        /// <summary>
+        /// LATAAMATTOMAT LAATAT NÄKYMÄSSÄ (Päätoimittaja 4.10.2026: Cupolan musta odottaa, kunnes näkymässä ei ole yhtään
+        /// lataamatonta laattaa, enintään 4 s): aktiiviset pallon laatat kameran näkökartiossa, joilla ei ole rasteria paikoissa 1
+        /// eikä 2 (linssien ja kyydin BMNG/S2). Cesium piirtää ne ilman tekstuuria (detachRaster → null), jolloin näkyy
+        /// materiaalin vaalea perusväri (ks. LENNON VARAKARTTA). Palauttaa (lataamattomat, näkyvät); −1 = ei palloa tai kameraa.
+        /// </summary>
+        public (int Lataamattomat, int Nakyvat) LataamattomatLaatat(Camera kamera)
+        {
+            if (pallo == null || kamera == null) return (-1, -1);
+            GeometryUtility.CalculateFrustumPlanes(kamera, lataamatonTasot);
+            pallo.GetComponentsInChildren(false, lataamatonRenderit);
+            int puuttuu = 0, nakyy = 0;
+            foreach (var r in lataamatonRenderit)
+            {
+                if (!r.enabled || !GeometryUtility.TestPlanesAABB(lataamatonTasot, r.bounds)) continue;
+                var m = r.sharedMaterial;
+                if (m == null) continue;
+                nakyy++;
+                bool r1 = m.HasProperty(Rasteri1Id) && m.GetTexture(Rasteri1Id) != null;
+                bool r2 = m.HasProperty(Rasteri2Id) && m.GetTexture(Rasteri2Id) != null;
+                if (!r1 && !r2) puuttuu++;
+            }
+            lataamatonRenderit.Clear();
+            return (puuttuu, nakyy);
+        }
+
+        /// <summary>Varakartta (näkymän karkein taso) valmiina: Cupolan musta ruutu odottaa tätä enintään 4 s.</summary>
+        public static bool VarakarttaValmis => varaKartta != null && varaKarttaAvain == SatelliittiAvain();
+
         void PaivitaLennonVarjostin()
         {
             Color v = QualitySettings.activeColorSpace == ColorSpace.Linear ? S2MeriVari.linear : S2MeriVari;
             Shader.SetGlobalVector(S2MeriVariId, new Vector4(v.r, v.g, v.b, 1f));
             Shader.SetGlobalFloat(S2MeriKynnysId, sentinel != null ? (LentoTestiS2 ? -1f : S2MeriKynnys) : 0f);
-            bool vara = satelliittiLento && varaKartta != null && varaKarttaAvain == SatelliittiAvain();
+            bool varaKaytossa = satelliittiLento || linssiVara;
+            bool vara = varaKaytossa && varaKartta != null && varaKarttaAvain == SatelliittiAvain();
             if (vara) Shader.SetGlobalTexture(LentoVaraKarttaId, varaKartta);
             // Testitila (lentoharmaa): 2 magenta missä vara laukeaisi, 3 paikan 1 kattavuus, 4 varakartan UV;
             // "varapois" pitää varan pois. Testitilat eivät tarvitse varakarttaa (4 näyttää pelkän UV:n).
-            float arvo = !satelliittiLento || LentoTestiVaraPois ? 0f : LentoTesti >= 2 ? LentoTesti : vara ? 1f : 0f;
+            float arvo = !varaKaytossa || LentoTestiVaraPois ? 0f : LentoTesti >= 2 ? LentoTesti : vara ? 1f : 0f;
             Shader.SetGlobalFloat(LentoVaraId, arvo);
             Shader.SetGlobalFloat(LentoVaraTasoId, VaraTaso);
-            if (satelliittiLento)
+            if (varaKaytossa)
             {
                 // Maan akselit (_maaNolla/_maaIta/_maaAkseli) uudelleen lennon alussa: varakartan UV ei saa riippua siitä,
                 // oliko georeferenssi alustettu KarttaKerrokset.Awakessa (muuten UV = kulma → valkoinen Etelämanner).
