@@ -1305,6 +1305,13 @@ namespace Matkakirja.Natiivi
                 {
                     var o = loput.Split(' ');
                     if (o.Length >= 2 && o[0] == "raja" && long.TryParse(o[1], out var mt)) Kuvat.AsetaRaja(mt);
+                    // "ui kuvat hae <url>" (juna 142, isot Gateway-kuvat): koko ja muisti latauksen jälkeen.
+                    if (o.Length >= 2 && o[0] == "hae")
+                    {
+                        string url = o[1];
+                        Kuvat.Hae(url, t => Kirjaa($"kuvat hae: {(t != null ? $"{t.width}×{t.height}, " : "ei kuvaa, ")}{Kuvat.Tila()}"));
+                        return "=kuvat hae aloitettu";
+                    }
                     return Kuvat.Tila();
                 }
                 default: return "tuntematon ui-komento";
