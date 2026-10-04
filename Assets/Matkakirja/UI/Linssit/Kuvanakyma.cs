@@ -385,6 +385,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Minipulun laatikko Pulun taulun sijoitukseen (web pulunLaatikko: kuvan ollessa auki minipulu).</summary>
         public Rect MinipulunLaatikko => Auki && pulunappi.panel != null ? pulunappi.worldBound : default;
 
+        /// <summary>Alarivin AUTO ‹ › -ryhmä Pulun taulun väistöön (laite 4.10.: taulu peitti AUTOn kuvamoodissa).</summary>
+        public Rect KohdenappienLaatikko => Auki && kohdeNapit.panel != null && kohdeNapit.resolvedStyle.display == DisplayStyle.Flex
+            ? kohdeNapit.worldBound : default;
+
         void Valitse(int i)
         {
             if (kohde == null) return;

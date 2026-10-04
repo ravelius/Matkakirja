@@ -1,13 +1,16 @@
 // PULUN TAULU (Linssiseppä 29.9.2026; web js/linssit/pulu-taulu.js ja css/satelliitti.css .astro-paneeli, PR #3590;
 // omistaja 28.9.: moodien välillä "aina esille napauttamalla pulua"; logiikka Linssit/Ydin/Astronautti/PulunTaulu.cs).
 //
-//   Minne katsotaan?                        ✕     otsikko 13 pt himmeä, ✕ 44 pt:n osuma-ala ja 28 pt:n harmaa ympyrä
+//   Minne katsotaan?                        ✕     otsikko 13 pt himmeä, ✕ OHJAUSNAPPI (harmaa)
 //   Maapallo              Koko Maa avaruudesta     rivi ≥ 44 pt: otsikko 15 pt lihava, selite 12 pt himmeä
-//   ISS:n rinnalla        Asema radallaan          ISS-rivit vain, kun kyyti on; nykyinen moodi vihreänä
-//   ISS:n sisälle         Cupolan ikkunasta alas
-//   Astronauttien kuvat   Valokuvat avaruudesta
+//   Astronauttien kuvat   Valokuvat avaruudesta    nykyinen tila hennolla punaisella pyöristetyllä laatikolla
+//   ISS-ohjaamo           Cupolan ikkunasta alas   ISS-rivi vain, kun kyyti on
+//   Poistu                Takaisin karttaan        sulkee linssin
 //   ─────────────────────────────────────
-//   Kysy Pululta                                   linkki 44 pt: vie kuvamoodiin ja avaa minipulun kysymyskortin
+//   Kysy Pululta                                   linkki 44 pt: Pulun chat tilan viidellä valmiilla kysymyksellä
+//
+// Rivijärjestys, Poistu, punainen laatikko ja tilakohtaiset kysymykset: omistaja 4.10.2026 klo 11.40 (ISS-OHJAAMO
+// UUSIKSI, vaihe 1); kysymykset Sisältökirjurin moduulista linssit/astro-kysymykset (LinssiKysymykset.AstroTila).
 //
 // Leveys min(232, ruutu − 32) pt, tumma lasi rgba(6,13,10,0.8), vihreä reuna 0,28, kulmat 12 pt, ei varjoa.
 // AVAAJAT: Pulun napautus linssissä (UiNakymat, Pulu.NapautusEstetty), valokuvan minipulu (Kuvanakyma) ja "Näkymät"-nappi
@@ -20,7 +23,8 @@
 // päällä; auki ollessa mitataan 400 ms:n välein. AVAUS JA SULKU (Raamattu PR #3602, omistaja 29.9.2026): taulu kasvaa ja
 // häivyttyy esiin avaajan (Pulu, minipulu, Näkymät) suunnasta ja sulkeutuu samaa reittiä (Ponnahdus, webin arvot 220/200 ms);
 // pieni liike pois: suoraan.
-// LAAJENNUS: LisaaRivi lisää rivin ISS-rivien jälkeen (Linssiseppä 2:n avaruuskävely, Päätoimittaja 29.9.2026).
+// LAAJENNUS: LisaaRivi lisää rivin ISS-rivien jälkeen (Linssiseppä 2:n avaruuskävely, Päätoimittaja 29.9.2026; omistaja
+// 4.10.2026 klo 11.44: avaruuskävely pois valikosta, AstronautinNakyma.AvaruuskavelyValikossa).
 using System;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Astronautti;
@@ -96,6 +100,8 @@ namespace Matkakirja.Natiivi
 
             astro.Kuva.MinipuluNapautettu += () => Vaihda("minipulu");
             Tervetulo = new PulunTervetuloNakyma(kerros);
+            // Chatin valmiit kysymykset linssin nykyisestä tilasta (pallo, kuvat, ohjaamo).
+            LinssiKysymykset.AstroTila = () => linssiAuki ? KysymysTila(Nykyinen(Linssi())) : null;
         }
 
         readonly HashSet<VisualElement> kuunnellut = new HashSet<VisualElement>();
@@ -130,6 +136,7 @@ namespace Matkakirja.Natiivi
                 return;
             }
             linssiAlkoi = Time.unscaledTime;
+            LinssiKysymykset.LataaAstro();
             // Tervetulo (kerran per laite) ja taulu itsestään heti paljastuksen jälkeen (omistaja 29.9.2026).
             Tervetulo.Aloita();
             automaatti = Automaatti.Odottaa;
@@ -332,7 +339,14 @@ namespace Matkakirja.Natiivi
             if (float.IsNaN(h) || h <= 0) h = 290f;
             var vaista = new List<Laatikko>();
             var l = UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>();
-            if (l != null && l.IssRuudulla(out var px) && Screen.width > 0 && Screen.height > 0)
+            // ISS-merkki ei näy valokuvan alla, joten kuvamoodissa väistetään sen sijaan alarivin AUTO ‹ › (laite 4.10.: taulu
+            // vieres-paikassa AUTOn päällä, koska näkymätön ISS-merkki esti yläpaikan).
+            if (astro.Kuva.Auki)
+            {
+                var n = astro.Kuva.KohdenappienLaatikko;
+                if (n.width > 0) vaista.Add(new Laatikko(n.xMin, n.yMin, n.xMax, n.yMax));
+            }
+            else if (l != null && l.IssRuudulla(out var px) && Screen.width > 0 && Screen.height > 0)
                 vaista.Add(PulunTaulu.IssAlue(px.x * W / Screen.width, (Screen.height - px.y) * H / Screen.height));
             // Ylin sallittu yläreuna: turva-alue ja kyydissä lukemarivi (LIVE · ISS …, noin 44 pt) sen alla. Aina vähintään linssin
             // harmaan ✕:n alapuolella (12 + 34 + 8 pt; Natiivisepän savuke 1121: taulun oma ✕ jäi linssin ✕:n alle).
@@ -398,6 +412,13 @@ namespace Matkakirja.Natiivi
             if (rivi == null && lisa == null) return;
             loki.Add("valitse:" + tunnus);
             Sulje("valinta");
+            if (rivi != null && rivi.Toiminto)
+            {
+                // Poistu: linssi kiinni (sama polku kuin Sulje linssi -nappi), takaisin karttaan.
+                PeruVaihto();
+                if (UiNakymat.Olemassa) UiNakymat.Hae().Linssit?.SuljeLinssi();
+                return;
+            }
             if (lisa != null)
             {
                 if (Kysy(lisa.Aktiivinen)) return;   // jo käynnissä (esim. avaruuskävely): ei aloiteta alusta
@@ -415,20 +436,38 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// "KYSY PULULTA" (Pelikoodari 1.10.2026; omistaja 30.9. klo 23.5x: "tee pululle aina samat napit kaikkialle
-        /// peliin", Päätoimittaja: linjaus koskee kaikkia näkymiä, myös ISS:ää ja Cupolaa): Pulun yhteinen chat avautuu
-        /// PAIKALLAAN linssin teemalla. Kuvamoodissa minipulun kohdalle kohteen valmiine kysymyksineen (MinipulunKortti),
-        /// muissa moodeissa (Maapallo, ISS:n rinnalla, Cupola) Pulun kohdalle ilman moodin vaihtoa. Ennen linkki vei aina
-        /// kuvamoodiin, koska linssin ainoa chatti oli valokuvan minipulun kortti.
+        /// "KYSY PULULTA" (omistaja 4.10.2026 klo 11.40: "nappi kysy pululta, mistä aukeaa normaali chat ikkuna viidellä
+        /// valmiilla kysymyksellä"; ennen Pelikoodari 1.10.2026): Pulun yhteinen chat avautuu PAIKALLAAN linssin teemalla
+        /// kaikissa tiloissa, myös kuvissa (ennen minipulun kortti). Valmiit kysymykset tulevat tilan mukaan
+        /// (LinssiKysymykset.AstroTila: pallo, kuvat, ohjaamo); valmis vastaus lähteineen ilman palvelinta.
         /// </summary>
         void KysyPululta()
         {
             loki.Add("kysy");
             Sulje("kysy");
-            if (Nykyinen(Linssi()) == AstroMoodi.Kuvat) { astro.Kuva.AvaaPulukortti(); return; }
+            var nyt = Nykyinen(Linssi());
             var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
-            chat?.AvaaLinssissa(() => Pulu.Hae().Nakyvissa ? Pulu.Hae().Lintu : default, "astro:" + Nykyinen(Linssi()), null);
+            chat?.AvaaLinssissa(ChatinAnkkuri, "astro:" + nyt, null);
         }
+
+        /// <summary>
+        /// Chat Pulun yläpuolelle: kuvassa minipulu, muuten Pulun lintu. Cupolan robottikäden Pulu (OikeallaReunalla) piirtyy
+        /// kosketusalueen yläpuolelle, joten ankkuriin myös Pulun koko alue (Päätoimittaja 4.10.: chat peitti Pulun ohjaamossa).
+        /// </summary>
+        Rect ChatinAnkkuri()
+        {
+            if (astro.Kuva.Auki && astro.Kuva.MinipulunLaatikko.width > 0) return astro.Kuva.MinipulunLaatikko;
+            var p = Pulu.Hae();
+            if (!p.Nakyvissa) return default;
+            var r = p.Lintu;
+            var a = p.Laatikko;
+            if (p.OikeallaReunalla && a.width > 0 && r.width > 0) r = Rect.MinMaxRect(r.xMin, Mathf.Min(r.yMin, a.yMin), r.xMax, r.yMax);
+            return r;
+        }
+
+        /// <summary>Kysymysmoduulin avain tilasta: ohjaamo kattaa Cupolan, ylilennon ja kehittäjän seurannan.</summary>
+        static string KysymysTila(AstroMoodi m) =>
+            m == AstroMoodi.Kuvat ? "kuvat" : m == AstroMoodi.Pallo ? "pallo" : "ohjaamo";
 
         void PeruVaihto() { vaihto?.Ajo?.Pause(); vaihto = null; }
 
@@ -491,8 +530,8 @@ namespace Matkakirja.Natiivi
 
         /// <summary>
         /// Testikomento `ui linssi taulu [auki|kiinni|pulu|valitse <tunnus>|kysy|ilman-pulua|pulu-takaisin|testirivi|tila]`: auki/kiinni
-        /// suoraan, pulu = Pulun napautuksen polku (vaientaa puheen), valitse = rivin napautus (pallo|iss-rinnalla|iss-sisalle|
-        /// kuvat), kysy = Kysy Pululta, ilman-pulua = Näkymät-nappi. Palauttaa tilan (paikka, alue, Pulun laatikko, moodi, loki).
+        /// suoraan, pulu = Pulun napautuksen polku (vaientaa puheen), valitse = rivin napautus (pallo|kuvat|iss-sisalle|
+        /// iss-rinnalla|poistu), kysy = Kysy Pululta, ilman-pulua = Näkymät-nappi. Palauttaa tilan (paikka, alue, Pulun laatikko, moodi, loki).
         /// </summary>
         public string Testaa(string a1, string a2)
         {

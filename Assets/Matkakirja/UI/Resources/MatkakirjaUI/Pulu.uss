@@ -694,6 +694,15 @@
     color: rgba(234, 255, 243, 0.65);
 }
 
+/* Valmiin vastauksen lähderivi lasiteemoissa (laite 4.10.: paperin ruskea ja korostus hukkuivat tummaan lasiin). */
+.mk-chat--linssi .mk-chat__valmislahde {
+    color: rgba(234, 255, 243, 0.65);
+}
+
+.mk-chat--linssi .mk-chat__valmislinkki .mk-nappi__teksti {
+    color: var(--tk-lasi-avaruus-korostus);
+}
+
 .mk-chat--linssi .mk-chat__siru {
     border-color: rgba(93, 255, 168, 0.4);
     background-color: rgba(93, 255, 168, 0.08);
