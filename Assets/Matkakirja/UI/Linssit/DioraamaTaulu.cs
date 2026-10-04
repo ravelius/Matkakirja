@@ -828,7 +828,9 @@ namespace Matkakirja.Natiivi
                     float skK = Screen.width > 0 ? pw / Screen.width : 1f;
                     float vasenT = 12f + Screen.safeArea.xMin * skK, oikeaT = pw - 12f - (Screen.width - Screen.safeArea.xMax) * skK;
                     float ylaT = 70f + (Screen.height - Screen.safeArea.yMax) * skK, alaT = ph - 12f - Screen.safeArea.yMin * skK;
-                    lauta.style.width = Mathf.Clamp(pw * (pw > ph ? 0.32f : 0.78f), 220f, 340f);
+                    // Vaaka (iPhone 874 × 402): leveämpi kortti, jotta kolmen rivin teksti ja lainaus mahtuvat 45 %:n korkeuteen
+                    // (kuvatarkistus 4.10. 22.1x: Keittiön lainaus valui alareunan kehyksen yli).
+                    lauta.style.width = Mathf.Clamp(pw * (pw > ph ? 0.44f : 0.78f), 220f, 390f);
                     var a = kp.Value;
                     bool oikealle = a.x < pw * 0.5f;
                     x = Mathf.Clamp(oikealle ? a.x + 44f : a.x - 44f - tauluLeveys, vasenT, oikeaT - tauluLeveys);
