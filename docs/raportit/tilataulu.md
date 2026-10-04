@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 4.10. 14:24 (puolenpäivän kooste):** 12:29–14:24 vakaa, levy heilahteli 46–60 Gi (poltot/käännökset), hälytysraja laski 45 Gi:iin omistajan kuittauksella; muutama lyhyt pudotus rajan tuntumaan, aina palautunut nopeasti. wt/ 24–29. Kävijälaskuri kasvoi 37→38 (13.42, ilmoitettu). Päätoimittaja odotti kerran lupaa (AskUserQuestion, 14.03–14.08, ilmoitettu pushilla). Ei muita poikkeamia.
+
 **Päivitetty 4.10. 12:29:** Päätoimittaja nollasi oman sessionsa (konteksti oli korkea), käynnistyi itse uudelleen ~1 min nollauksesta — ei vaatinut aloitusviestiä Postivahdilta. notify_when_idle ei tue tätä session-tyyppiä (Remote Control), pollattu manuaalisesti get_usage+ListAgents. Kävijälaskuri 37, levy 54–60 Gi (laskenut hieman aamupäivästä, wt/ 34–36, raja 40). Ei poikkeamia.
 
 **Päivitetty 4.10. 11:05 (aamupäiväkooste):** 08:14–11:05 täysin vakaa, levy 61–65 Gi, kävijälaskuri kasvoi 34→36 (08.31, ilmoitettu). Ei yhtään roolia waiting-tilassa. Ei poikkeamia.
