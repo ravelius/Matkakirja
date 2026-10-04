@@ -412,6 +412,7 @@ namespace Matkakirja.Natiivi
 
         System.Collections.IEnumerator LataaAstronautti()
         {
+            StartCoroutine(IssSijaintiLataaja.Lataa());   // ohjaamon LCD:n paikkadata (omistaja 4.10.)
             string data = null, kysymykset = null;
             yield return LinssiSisalto.Hae("moduulit/js/linssit/satelliitti-data.json", t => data = t);
             yield return LinssiSisalto.Hae("moduulit/js/linssit/astronaut-kysymykset.json", t => kysymykset = t);
@@ -1715,6 +1716,7 @@ namespace Matkakirja.Natiivi
                         // Ohjaamo (omistaja 4.10.): joystick <ylos|alas|vasen|oikea|ei> ja kaasu <1|10|100|1000>.
                         else if (a == "joy" && osat.Length > 3 && Enum.TryParse<Matkakirja.Linssit.Iss.JoystickSuunta>(osat[3], true, out var js))
                         { l.Joystick(js); Ruudunpaivitys.Herata(1f); Kirjaa($"astro kyyti joy: {js}, {l.CupolanKatse.Tila(KatseenOletus())}"); }
+                        else if (a == "sijainti") { var (k1, m1) = l.Sijainti(); Kirjaa($"astro kyyti sijainti: {k1} / {m1}"); }
                         else if (a == "kaasu" && osat.Length > 3 && int.TryParse(osat[3], out int kk))
                             Kirjaa($"astro kyyti kaasu: {(l.AsetaKaasu(kk) ? kk + "×" : "ei pykälää")}, {Matkakirja.Linssit.Iss.IssNyt.Simu}");
                         else if (a == "tumma" && osat.Length > 3 && float.TryParse(osat[3].Replace(',', '.'),

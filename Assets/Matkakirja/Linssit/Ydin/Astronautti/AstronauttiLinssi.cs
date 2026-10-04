@@ -523,6 +523,22 @@ namespace Matkakirja.Linssit.Astronautti
         /// <summary>Joystick pidossa ja katse liikkuu (suhinaääni, paneelin animaatio).</summary>
         public bool JoystickLiikkuu => kyyti.Katse.JoystickLiikkuu;
 
+        /// <summary>
+        /// LCD:n sijainti (omistaja: "ROOMA, ITALIA", lähin kaupunki, meri tai vuori; maa alle): ISS:n alapisteestä nyt (simuloitu
+        /// kello), isoilla kirjaimilla. Lasketaan enintään kerran sekunnissa; ("", "") ennen paikkadatan latausta.
+        /// </summary>
+        public (string Kohde, string Maa) Sijainti()
+        {
+            double t = y?.Aika ?? 0;
+            if (sijaintiAika >= 0 && t - sijaintiAika < 1.0 && !string.IsNullOrEmpty(sijainti.Kohde)) return sijainti;
+            sijaintiAika = t;
+            var p = Iss.IssNyt.Paikka(Iss.IssNyt.Kello());
+            sijainti = Iss.IssSijainti.Hae(Iss.IssSijainti.Nykyinen, p.Lat, p.Lon);
+            return sijainti;
+        }
+        (string Kohde, string Maa) sijainti = ("", "");
+        double sijaintiAika = -1;
+
         /// <summary>Kaasun asento (ajan kerroin 1, 10, 100 tai 1000).</summary>
         public int Kaasu { get; private set; } = 1;
 
