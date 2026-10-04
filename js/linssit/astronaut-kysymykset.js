@@ -6020,7 +6020,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
   "peloponnesos": {
     "kysymykset": [
       "Mikä kannas erottaa Peloponnesoksen muusta Kreikasta?",
-      "Ketä sanktuaria Peloponnesos oli antiikin aikana koti?"
+      "Minkä antiikin kaupunkivaltion koti Peloponnesos oli?"
     ],
     "vastaukset": [
       {
@@ -6035,7 +6035,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
         "havaintoId": "iss039e003505"
       },
       {
-        "kysymys": "Ketä sanktuaria Peloponnesos oli antiikin aikana koti?",
+        "kysymys": "Minkä antiikin kaupunkivaltion koti Peloponnesos oli?",
         "vastaus": "Peloponnesos oli antiikin Spartan koti. Alue on tunnettu vuoristoisesta maastostaan ja lumihuippuisista vuoristaan, jotka erottuvat myös tässä maaliskuussa 2014 otetussa kuvassa.",
         "lahteet": [
           {
@@ -6079,13 +6079,13 @@ export const ASTRONAUTIN_KYSYMYKSET = {
   },
   "mallorca": {
     "kysymykset": [
-      "Mikä kaupunki sijaitsee Mallorcan keskellä?",
-      "Mikä pieni saari näkyy Mallorcan lounaispuolella?"
+      "Missä kohtaa Mallorcaa sijaitsee pääkaupunki Palma?",
+      "Mikä pieni saari sijaitsee Mallorcan eteläpuolella?"
     ],
     "vastaukset": [
       {
-        "kysymys": "Mikä kaupunki sijaitsee Mallorcan keskellä?",
-        "vastaus": "Mallorcan pääkaupunki Palma sijaitsee saaren keskellä. Mallorca on Baleaarien saariryhmän suurin saari, noin 5 400 neliökilometrin kokoinen.",
+        "kysymys": "Missä kohtaa Mallorcaa sijaitsee pääkaupunki Palma?",
+        "vastaus": "Mallorcan pääkaupunki Palma sijaitsee saaren lounaisrannikolla, Palman lahden pohjukassa. Mallorca on Baleaarien saariryhmän suurin saari, noin 3 600 neliökilometrin kokoinen.",
         "lahteet": [
           {
             "url": "https://images.nasa.gov/details/iss030e030290",
@@ -6095,8 +6095,8 @@ export const ASTRONAUTIN_KYSYMYKSET = {
         "havaintoId": "iss030e030290"
       },
       {
-        "kysymys": "Mikä pieni saari näkyy Mallorcan lounaispuolella?",
-        "vastaus": "Cabreran saari näkyy kuvassa Mallorcan lounaispuolella, ja sen ympärillä on kansallispuisto. Saaren keskiosa on tasaista viljelymaata, kun taas vuoristo kohoaa luoteisrannikolla.",
+        "kysymys": "Mikä pieni saari sijaitsee Mallorcan eteläpuolella?",
+        "vastaus": "Cabreran saari sijaitsee Mallorcan eteläpuolella, ja sen ympärillä on kansallispuisto. Mallorcan keskiosa on tasaista viljelymaata, kun taas vuoristo kohoaa luoteisrannikolla.",
         "lahteet": [
           {
             "url": "https://images.nasa.gov/details/iss030e030290",
@@ -6109,13 +6109,13 @@ export const ASTRONAUTIN_KYSYMYKSET = {
   },
   "mont-saint-michel-lahti": {
     "kysymykset": [
-      "Mitkä kaksi maakuntaa kohtaavat tässä kuvassa?",
-      "Kuinka korkealta avaruusasema kuvasi tätä rannikkoa?"
+      "Mikä joki on Bretagnen ja Normandian raja tässä kuvassa?",
+      "Mitkä kaksi pistettä näkyvät hiekkasärkillä?"
     ],
     "vastaukset": [
       {
-        "kysymys": "Mitkä kaksi maakuntaa kohtaavat tässä kuvassa?",
-        "vastaus": "Bretagnen ja Normandian rannikkoalueet Luoteis-Ranskassa kohtaavat Englannin kanaalin rannalla. Kuva on otettu helmikuussa 2023.",
+        "kysymys": "Mikä joki on Bretagnen ja Normandian raja tässä kuvassa?",
+        "vastaus": "Couesnon-joki on Bretagnen ja Normandian raja. Maakuntien rannikkoalueet Luoteis-Ranskassa kohtaavat tässä Englannin kanaalin rannalla, kuvassa helmikuulta 2023.",
         "lahteet": [
           {
             "url": "https://images.nasa.gov/details/iss068e053846",
@@ -6125,8 +6125,8 @@ export const ASTRONAUTIN_KYSYMYKSET = {
         "havaintoId": "iss068e053846"
       },
       {
-        "kysymys": "Kuinka korkealta avaruusasema kuvasi tätä rannikkoa?",
-        "vastaus": "Avaruusasema kiersi noin 425 kilometrin korkeudessa kuvan ottohetkellä. Kuvassa erottuu rannikon sakara- ja lahtimuodostelmia Englannin kanaalin rannalla.",
+        "kysymys": "Mitkä kaksi pistettä näkyvät hiekkasärkillä?",
+        "vastaus": "Hiekkasärkillä erottuu kaksi tummaa pistettä: eteläisempi on Mont-Saint-Michelin luostarisaari ja pohjoisempi pienempi Tombelaine. Avaruusasema kiersi tuolloin noin 425 kilometrin korkeudessa.",
         "lahteet": [
           {
             "url": "https://images.nasa.gov/details/iss068e053846",
@@ -6169,12 +6169,12 @@ export const ASTRONAUTIN_KYSYMYKSET = {
   },
   "malta-sisilia": {
     "kysymykset": [
-      "Missä kohdassa Siciliaa kuvassa näkyvä Etna sijaitsee?",
+      "Missä kohdassa Sisiliaa kuvassa näkyvä Etna sijaitsee?",
       "Mitkä pienet saaret näkyvät kuvassa Sisilian eteläpuolella?"
     ],
     "vastaukset": [
       {
-        "kysymys": "Missä kohdassa Siciliaa kuvassa näkyvä Etna sijaitsee?",
+        "kysymys": "Missä kohdassa Sisiliaa kuvassa näkyvä Etna sijaitsee?",
         "vastaus": "Lumihuippuinen Etna kohoaa Sisilian koilliskärjessä. Se on yksi maailman tarkimmin valvotuista tulivuorista.",
         "lahteet": [
           {
@@ -6186,7 +6186,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
       },
       {
         "kysymys": "Mitkä pienet saaret näkyvät kuvassa Sisilian eteläpuolella?",
-        "vastaus": "Maltan pienet saaret näkyvät kuvan etäisyydessä Sisilian eteläpuolella. Kuva otettiin huhtikuussa 2001 sukkulalennolta.",
+        "vastaus": "Maltan pienet saaret näkyvät kaukana taustalla Sisilian eteläpuolella. Kuva otettiin huhtikuussa 2001 sukkulalennolta.",
         "lahteet": [
           {
             "url": "https://images.nasa.gov/details/STS100-713-064",
@@ -6199,13 +6199,13 @@ export const ASTRONAUTIN_KYSYMYKSET = {
   },
   "ambrakia-ioonianmeri": {
     "kysymykset": [
-      "Minkä lahden yllä tämä kuva on otettu?",
-      "Minkä meren yllä avaruusasema kiersi tätä kuvatessaan?"
+      "Mikä lahti näkyy kuvan vasemmassa yläkulmassa?",
+      "Mikä vuori kohoaa lumihuippuisena Kefalonialla?"
     ],
     "vastaukset": [
       {
-        "kysymys": "Minkä lahden yllä tämä kuva on otettu?",
-        "vastaus": "Kuva on otettu Ambrakian lahden yllä Kreikan länsirannikolla. Lahti näkyy kuvassa vasemmalla ylhäällä.",
+        "kysymys": "Mikä lahti näkyy kuvan vasemmassa yläkulmassa?",
+        "vastaus": "Ambrakian lahti näkyy kuvan vasemmassa yläkulmassa Kreikan länsirannikolla. Avaruusasema kiersi kuvan ottohetkellä Joonianmeren yllä.",
         "lahteet": [
           {
             "url": "https://images.nasa.gov/details/iss070e035893",
@@ -6215,8 +6215,8 @@ export const ASTRONAUTIN_KYSYMYKSET = {
         "havaintoId": "iss070e035893"
       },
       {
-        "kysymys": "Minkä meren yllä avaruusasema kiersi tätä kuvatessaan?",
-        "vastaus": "Avaruusasema kiersi noin 420 kilometrin korkeudessa Joonianmeren yllä. Kuvassa näkyy useita saaria Kreikan länsirannikolla.",
+        "kysymys": "Mikä vuori kohoaa lumihuippuisena Kefalonialla?",
+        "vastaus": "Lumihuippuinen Ainos-vuori kohoaa Kefalonialla, suuremmalla kahdesta kuvassa näkyvästä saaresta. Lähempänä mannerta näkyy kapeampi Lefkas, joka on yhdistetty mantereeseen kannaksella.",
         "lahteet": [
           {
             "url": "https://images.nasa.gov/details/iss070e035893",
@@ -6229,13 +6229,13 @@ export const ASTRONAUTIN_KYSYMYKSET = {
   },
   "odessa": {
     "kysymykset": [
-      "Minkä meren rannalla Odesa sijaitsee?",
-      "Mitä kuvassa näkyy Odesan kaupungin lisäksi?"
+      "Minkä meren rannalla Odessa sijaitsee?",
+      "Mitä kuvassa näkyy Odessan kaupungin lisäksi?"
     ],
     "vastaukset": [
       {
-        "kysymys": "Minkä meren rannalla Odesa sijaitsee?",
-        "vastaus": "Odesa sijaitsee Mustanmeren rannalla Ukrainassa. Kuva on otettu päivällä huhtikuussa 2020.",
+        "kysymys": "Minkä meren rannalla Odessa sijaitsee?",
+        "vastaus": "Odessa sijaitsee Mustanmeren rannalla Ukrainassa. Kuva on otettu päivällä huhtikuussa 2020.",
         "lahteet": [
           {
             "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS062&roll=E&frame=142201",
@@ -6245,8 +6245,8 @@ export const ASTRONAUTIN_KYSYMYKSET = {
         "havaintoId": "ISS062-E-142201"
       },
       {
-        "kysymys": "Mitä kuvassa näkyy Odesan kaupungin lisäksi?",
-        "vastaus": "Kuvassa erottuvat kaupungin satama-alue, rannan kaarre sekä sisämaan järvet ja viljelymaa. Odesa on tärkeä ukrainalainen satamakaupunki.",
+        "kysymys": "Mitä kuvassa näkyy Odessan kaupungin lisäksi?",
+        "vastaus": "Kuvassa erottuvat kaupungin satama-alue, rannan kaarre sekä sisämaan järvet ja viljelymaa. Odessa on tärkeä ukrainalainen satamakaupunki.",
         "lahteet": [
           {
             "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS062&roll=E&frame=142201",
@@ -6295,7 +6295,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
     "vastaukset": [
       {
         "kysymys": "Mikä kansallispuisto näkyy Marseillen itäpuolella?",
-        "vastaus": "Calanques-kansallispuiston jyrkät kalkkikivivuoret kohoavat Marseillen itäpuolella suoraan merestä. Marseille on Ranskan suurin Välimeren satamakaupunki.",
+        "vastaus": "Marseillen itäpuolella kohoavat kalkkikivivuoret jatkuvat kaakkoon Calanques-kansallispuiston jyrkkinä rantajyrkänteinä. Marseille on Ranskan suurin Välimeren satamakaupunki.",
         "lahteet": [
           {
             "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS050&roll=E&frame=51867",
@@ -6366,7 +6366,7 @@ export const ASTRONAUTIN_KYSYMYKSET = {
       },
       {
         "kysymys": "Mikä alue erottuu kirkkaana kuvan oikeassa yläkulmassa?",
-        "vastaus": "Kuvan oikeassa yläkulmassa erottuu kirkkaasti valaistu satama- tai teollisuusalue. Bryssel on Belgian pääkaupunki ja EU:n kotikaupunki.",
+        "vastaus": "Kuvan oikeassa yläkulmassa erottuu kirkkaasti valaistu Zaventemin lentoasema kiitoteineen. Bryssel on Belgian pääkaupunki ja EU:n kotikaupunki.",
         "lahteet": [
           {
             "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS065&roll=E&frame=393478",

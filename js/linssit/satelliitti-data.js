@@ -5783,7 +5783,7 @@ export const SATELLIITTI_KOHTEET = [
       {
         "id": "iss030e030290",
         "aika": "2011-12-31",
-        "teksti": "Joulukuussa 2011 otetussa kuvassa näkyy Mallorca, Baleaarien saariryhmän suurin saari, noin 5 400 neliökilometrin kokoinen. Saaren pääkaupunki Palma sijaitsee kuvan keskellä. Vasemmalla ylhäällä näkyy pieni Cabreran saari, jonka ympärillä on kansallispuisto. Saaren keskiosa on tasaista viljelymaata, kun taas vuoristo kohoaa luoteisrannikolla ja saaren itäosassa.",
+        "teksti": "Joulukuussa 2011 otetussa kuvassa näkyy Mallorca, Baleaarien saariryhmän suurin saari, noin 3 600 neliökilometrin kokoinen. Saaren pääkaupunki Palma sijaitsee lounaisrannikolla Palman lahden pohjukassa. Mallorcan eteläpuolella sijaitsee pieni Cabreran saari, jonka ympärillä on kansallispuisto. Saaren keskiosa on tasaista viljelymaata, kun taas vuoristo kohoaa luoteisrannikolla ja saaren itäosassa.",
         "kuvaustapa": "Kansainväliseltä avaruusasemalta",
         "retkikunta": "Retkikunta 30",
         "kuvaaja": null,
@@ -5799,7 +5799,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "mont-saint-michel-lahti",
-    "nimi": "Bretagnen ja Normandian rannikko",
+    "nimi": "Mont-Saint-Michelin lahti",
     "seutu": "Ranska",
     "selite": "Kahden historiallisen maakunnan raja Englannin kanaalin rannalla.",
     "lat": 48.64,
@@ -5809,7 +5809,7 @@ export const SATELLIITTI_KOHTEET = [
       {
         "id": "iss068e053846",
         "aika": "2023-02-12",
-        "teksti": "Helmikuussa 2023 otetussa kuvassa Bretagnen ja Normandian rannikkoalueet Luoteis-Ranskassa kohtaavat Englannin kanaalin rannalla. Avaruusasema kiersi tuolloin noin 425 kilometrin korkeudessa.",
+        "teksti": "Helmikuussa 2023 otetussa kuvassa Bretagnen ja Normandian rannikkoalueet Luoteis-Ranskassa kohtaavat Englannin kanaalin rannalla; Couesnon-joki on maakuntien raja. Hiekkasärkillä erottuu kaksi tummaa pistettä: eteläisempi on Mont-Saint-Michelin luostarisaari ja pohjoisempi Tombelaine. Avaruusasema kiersi tuolloin noin 425 kilometrin korkeudessa.",
         "kuvaustapa": "Kansainväliseltä avaruusasemalta",
         "retkikunta": "Retkikunta 68",
         "kuvaaja": null,
@@ -5853,7 +5853,7 @@ export const SATELLIITTI_KOHTEET = [
     "tunnus": "malta-sisilia",
     "nimi": "Malta",
     "seutu": "Malta",
-    "selite": "Pieni saarivaltio Sisilian eteläpuolella, näkyy kuvassa kaukana Etnan varjossa.",
+    "selite": "Pieni saarivaltio Sisilian eteläpuolella, näkyy kuvassa kaukana Sisilian takana.",
     "lat": 35.94,
     "lon": 14.38,
     "oletus": "STS100-713-064",
@@ -5861,7 +5861,7 @@ export const SATELLIITTI_KOHTEET = [
       {
         "id": "STS100-713-064",
         "aika": "2001-04-24",
-        "teksti": "Huhtikuussa 2001 otetussa kuvassa näkyy kolmionmuotoinen Sisilia, jonka koilliskärjessä kohoaa lumihuippuinen Etna. Kuvan etäisyydessä, Sisilian eteläpuolella, erottuvat Maltan pienet saaret.",
+        "teksti": "Huhtikuussa 2001 otetussa kuvassa näkyy kolmionmuotoinen Sisilia, jonka koilliskärjessä kohoaa lumihuippuinen Etna. Kaukana taustalla, Sisilian eteläpuolella, erottuvat Maltan pienet saaret.",
         "kuvaustapa": "Avaruussukkulasta",
         "retkikunta": null,
         "kuvaaja": null,
@@ -5887,7 +5887,7 @@ export const SATELLIITTI_KOHTEET = [
       {
         "id": "iss070e035893",
         "aika": "2023-12-04",
-        "teksti": "Joulukuussa 2023 otetussa kuvassa näkyy saaria Kreikan länsirannikolla sekä Ambrakian lahti (vasemmalla ylhäällä). Kuva otettiin avaruusasemalta sen kiertäessä noin 420 kilometrin korkeudessa Joonianmeren yllä.",
+        "teksti": "Joulukuussa 2023 otetussa kuvassa näkyy saaria Kreikan länsirannikolla; Ambrakian lahti näkyy kuvan vasemmassa yläkulmassa. Lähempänä erottuu kapea Lefkas, joka on yhdistetty mantereeseen kannaksella, ja kauempana suurempi, lumihuippuisen Ainos-vuoren kohottava Kefalonia. Avaruusasema kiersi tuolloin noin 420 kilometrin korkeudessa Joonianmeren yllä.",
         "kuvaustapa": "Kansainväliseltä avaruusasemalta",
         "retkikunta": "Retkikunta 70",
         "kuvaaja": null,
@@ -5903,7 +5903,7 @@ export const SATELLIITTI_KOHTEET = [
   },
   {
     "tunnus": "odessa",
-    "nimi": "Odesa",
+    "nimi": "Odessa",
     "seutu": "Ukraina",
     "selite": "Mustanmeren satamakaupunki lahden kaartuvalla rannalla.",
     "lat": 46.477,
@@ -5913,7 +5913,7 @@ export const SATELLIITTI_KOHTEET = [
       {
         "id": "ISS062-E-142201",
         "aika": "2020-04-11T14:28:02Z",
-        "teksti": "Huhtikuussa 2020 otetussa päiväkuvassa näkyy Odesa, Mustanmeren rannalla sijaitseva ukrainalainen satamakaupunki. Kuvassa erottuvat kaupungin satama-alue, rannan kaarre sekä sisämaan järvet ja viljelymaa.",
+        "teksti": "Huhtikuussa 2020 otetussa päiväkuvassa näkyy Odessa, Mustanmeren rannalla sijaitseva ukrainalainen satamakaupunki. Kuvassa erottuvat kaupungin satama-alue, rannan kaarre sekä sisämaan järvet ja viljelymaa.",
         "kuvaustapa": "Kansainväliseltä avaruusasemalta",
         "retkikunta": "Retkikunta 62",
         "kuvaaja": null,
@@ -5965,7 +5965,7 @@ export const SATELLIITTI_KOHTEET = [
       {
         "id": "ISS050-E-51867",
         "aika": "2017-02-19T10:28:41Z",
-        "teksti": "Helmikuussa 2017 otetussa päiväkuvassa näkyy Marseille, Ranskan suurin Välimeren satamakaupunki. Kaupungin itäpuolella kohoavat Calanques-kansallispuiston jyrkät kalkkikivivuoret suoraan merestä, ja satama-alue näkyy kuvan vasemmassa alakulmassa.",
+        "teksti": "Helmikuussa 2017 otetussa päiväkuvassa näkyy Marseille, Ranskan suurin Välimeren satamakaupunki. Kaupungin itäpuolella kohoavat kalkkikivivuoret, jotka jatkuvat kaakkoon Calanques-kansallispuiston jyrkkinä rantajyrkänteinä. Satama-alue näkyy kuvan vasemmassa alakulmassa.",
         "kuvaustapa": "Kansainväliseltä avaruusasemalta",
         "retkikunta": "Retkikunta 50",
         "kuvaaja": null,
@@ -6017,7 +6017,7 @@ export const SATELLIITTI_KOHTEET = [
       {
         "id": "ISS065-E-393478",
         "aika": "2021-09-17T22:55:28Z",
-        "teksti": "Syyskuussa 2021 otetussa yökuvassa näkyy Bryssel, Belgian pääkaupunki, kirkkaana valotäplänä Senne-joen varrella. Kuvan oikeassa yläkulmassa erottuu kirkkaasti valaistu satama- tai teollisuusalue.",
+        "teksti": "Syyskuussa 2021 otetussa yökuvassa näkyy Bryssel, Belgian pääkaupunki, kirkkaana valotäplänä Senne-joen varrella. Kuvan oikeassa yläkulmassa erottuu kirkkaasti valaistu Zaventemin lentoasema kiitoteineen ja asematasoineen.",
         "kuvaustapa": "Kansainväliseltä avaruusasemalta",
         "retkikunta": "Retkikunta 65",
         "kuvaaja": null,

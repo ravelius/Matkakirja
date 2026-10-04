@@ -3152,17 +3152,17 @@ export const KOHTEET = [
       {
         id: 'iss030e030290',
         teksti: 'Joulukuussa 2011 otetussa kuvassa näkyy Mallorca, '
-          + 'Baleaarien saariryhmän suurin saari, noin 5 400 neliökilometrin '
-          + 'kokoinen. Saaren pääkaupunki Palma sijaitsee kuvan keskellä. '
-          + 'Vasemmalla ylhäällä näkyy pieni Cabreran saari, jonka '
-          + 'ympärillä on kansallispuisto. Saaren keskiosa on tasaista '
-          + 'viljelymaata, kun taas vuoristo kohoaa luoteisrannikolla ja '
-          + 'saaren itäosassa.',
+          + 'Baleaarien saariryhmän suurin saari, noin 3 600 neliökilometrin '
+          + 'kokoinen. Saaren pääkaupunki Palma sijaitsee lounaisrannikolla '
+          + 'Palman lahden pohjukassa. Mallorcan eteläpuolella sijaitsee '
+          + 'pieni Cabreran saari, jonka ympärillä on kansallispuisto. '
+          + 'Saaren keskiosa on tasaista viljelymaata, kun taas vuoristo '
+          + 'kohoaa luoteisrannikolla ja saaren itäosassa.',
       },
     ],
   },
   {
-    tunnus: 'mont-saint-michel-lahti', nimi: 'Bretagnen ja Normandian rannikko', seutu: 'Ranska', lat: 48.64, lon: -1.51,
+    tunnus: 'mont-saint-michel-lahti', nimi: 'Mont-Saint-Michelin lahti', seutu: 'Ranska', lat: 48.64, lon: -1.51,
     selite: 'Kahden historiallisen maakunnan raja Englannin kanaalin rannalla.',
     oletus: 'iss068e053846',
     kuvat: [
@@ -3170,8 +3170,10 @@ export const KOHTEET = [
         id: 'iss068e053846',
         teksti: 'Helmikuussa 2023 otetussa kuvassa Bretagnen ja Normandian '
           + 'rannikkoalueet Luoteis-Ranskassa kohtaavat Englannin kanaalin '
-          + 'rannalla. Avaruusasema kiersi tuolloin noin 425 kilometrin '
-          + 'korkeudessa.',
+          + 'rannalla; Couesnon-joki on maakuntien raja. Hiekkasärkillä '
+          + 'erottuu kaksi tummaa pistettä: eteläisempi on Mont-Saint-'
+          + 'Michelin luostarisaari ja pohjoisempi Tombelaine. Avaruusasema '
+          + 'kiersi tuolloin noin 425 kilometrin korkeudessa.',
       },
     ],
   },
@@ -3194,14 +3196,14 @@ export const KOHTEET = [
   },
   {
     tunnus: 'malta-sisilia', nimi: 'Malta', seutu: 'Malta', lat: 35.94, lon: 14.38,
-    selite: 'Pieni saarivaltio Sisilian eteläpuolella, näkyy kuvassa kaukana Etnan varjossa.',
+    selite: 'Pieni saarivaltio Sisilian eteläpuolella, näkyy kuvassa kaukana Sisilian takana.',
     oletus: 'STS100-713-064',
     kuvat: [
       {
         id: 'STS100-713-064',
         teksti: 'Huhtikuussa 2001 otetussa kuvassa näkyy kolmionmuotoinen '
           + 'Sisilia, jonka koilliskärjessä kohoaa lumihuippuinen Etna. '
-          + 'Kuvan etäisyydessä, Sisilian eteläpuolella, erottuvat Maltan '
+          + 'Kaukana taustalla, Sisilian eteläpuolella, erottuvat Maltan '
           + 'pienet saaret.',
       },
     ],
@@ -3214,20 +3216,22 @@ export const KOHTEET = [
       {
         id: 'iss070e035893',
         teksti: 'Joulukuussa 2023 otetussa kuvassa näkyy saaria Kreikan '
-          + 'länsirannikolla sekä Ambrakian lahti (vasemmalla ylhäällä). '
-          + 'Kuva otettiin avaruusasemalta sen kiertäessä noin 420 '
-          + 'kilometrin korkeudessa Joonianmeren yllä.',
+          + 'länsirannikolla; Ambrakian lahti näkyy kuvan vasemmassa '
+          + 'yläkulmassa. Lähempänä erottuu kapea Lefkas, joka on yhdistetty '
+          + 'mantereeseen kannaksella, ja kauempana suurempi, lumihuippuisen '
+          + 'Ainos-vuoren kohottava Kefalonia. Avaruusasema kiersi tuolloin '
+          + 'noin 420 kilometrin korkeudessa Joonianmeren yllä.',
       },
     ],
   },
   {
-    tunnus: 'odessa', nimi: 'Odesa', seutu: 'Ukraina', lat: 46.477, lon: 30.733,
+    tunnus: 'odessa', nimi: 'Odessa', seutu: 'Ukraina', lat: 46.477, lon: 30.733,
     selite: 'Mustanmeren satamakaupunki lahden kaartuvalla rannalla.',
     oletus: 'ISS062-E-142201',
     kuvat: [
       {
         id: 'ISS062-E-142201',
-        teksti: 'Huhtikuussa 2020 otetussa päiväkuvassa näkyy Odesa, '
+        teksti: 'Huhtikuussa 2020 otetussa päiväkuvassa näkyy Odessa, '
           + 'Mustanmeren rannalla sijaitseva ukrainalainen satamakaupunki. '
           + 'Kuvassa erottuvat kaupungin satama-alue, rannan kaarre sekä '
           + 'sisämaan järvet ja viljelymaa.',
@@ -3258,9 +3262,9 @@ export const KOHTEET = [
         id: 'ISS050-E-51867',
         teksti: 'Helmikuussa 2017 otetussa päiväkuvassa näkyy Marseille, '
           + 'Ranskan suurin Välimeren satamakaupunki. Kaupungin itäpuolella '
-          + 'kohoavat Calanques-kansallispuiston jyrkät kalkkikivivuoret '
-          + 'suoraan merestä, ja satama-alue näkyy kuvan vasemmassa '
-          + 'alakulmassa.',
+          + 'kohoavat kalkkikivivuoret, jotka jatkuvat kaakkoon Calanques-'
+          + 'kansallispuiston jyrkkinä rantajyrkänteinä. Satama-alue näkyy '
+          + 'kuvan vasemmassa alakulmassa.',
       },
     ],
   },
@@ -3287,8 +3291,8 @@ export const KOHTEET = [
         id: 'ISS065-E-393478',
         teksti: 'Syyskuussa 2021 otetussa yökuvassa näkyy Bryssel, Belgian '
           + 'pääkaupunki, kirkkaana valotäplänä Senne-joen varrella. Kuvan '
-          + 'oikeassa yläkulmassa erottuu kirkkaasti valaistu satama- tai '
-          + 'teollisuusalue.',
+          + 'oikeassa yläkulmassa erottuu kirkkaasti valaistu Zaventemin '
+          + 'lentoasema kiitoteineen ja asematasoineen.',
       },
     ],
   },
