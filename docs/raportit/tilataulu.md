@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 4.10. 19:58 (iltakooste 2):** 17:59–19:58 levy heilahteli 42–52 Gi 45 Gi -rajan molemmin puolin, 2 hälytystä Päätoimittajalle, molemmat palautuivat nopeasti. wt/ 26–33. Kävijälaskuri kasvoi 39→40. Kaksi lupaodotusta: Päätoimittaja odotti omistajan AskUserQuestion-valintaa (~18.3x, purkautui noin 10 min kuluttua) ja Pelikoodari odotti Bash-lupaa (~18.5x–19.1x, purkautui alle 30 min). Omistaja 19.1x: PushNotification-ilmoitukset odottavista rooleista lopetetaan (session oma popup riittää), jatketaan rivi-ilmoituksin Päätoimittajalle. Raamattu-PR #3956 Julkaisijan junassa (Päätoimittajan viesti). Ei muita poikkeamia.
+
 **Päivitetty 4.10. 17:59 (iltakooste):** 16:27–17:59 levy heilahteli edelleen 44–51 Gi 45 Gi -rajan molemmin puolin, 2 hälytystä Päätoimittajalle, molemmat palautuivat nopeasti itsekseen. wt/ 29–31. Kävijälaskuri kasvoi 38→39. Ei roolia waiting-tilassa tällä jaksolla. Ei muita poikkeamia.
 
 **Päivitetty 4.10. 16:27 (iltapäiväkooste):** 14:24–16:27 levy heilahteli tiheästi 43–60 Gi 45 Gi -rajan molemmin puolin (poltot/käännökset, Julkaisijan+Siirtosepän siivoukset), 4 hälytystä Päätoimittajalle, kaikki palautuivat nopeasti itsekseen. wt/ 29–35. Kävijälaskuri ennallaan 38. Ei roolia waiting-tilassa tällä jaksolla. Ei muita poikkeamia.
