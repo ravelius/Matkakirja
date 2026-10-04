@@ -3,7 +3,7 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
-## TILA 4.10. KLO 17.1x (AURINGON KIILTO JUNAAN 139 — ODOTTAA KÄÄNNÖS-/SIMUVUOROA)
+## TILA 4.10. KLO 16.5x (AURINGON KIILTO JUNAAN 139 — ODOTTAA KÄÄNNÖS-/SIMUVUOROA)
 - Päätoimittajan erä: hopeanvalkoinen, rakeinen, venyvä, VAIN vedessä; juovat liian vahvat. Proto linssiseppa/glint-2 = BUILD 137
   80b7dcf0 + glint-commitit (cherry-pick) + 3de304db: sävykäyrä vesimaskista riippumatta ja terävä maski 0,42…0,58 sen jälkeen (vuoto maalle
   oli sävykäyrän nostama pehmeä rantareuna), paikallinen σ² 0,75, värähtely 0,9·√(0,25σ²), rakeisuus 1,5/0,75 km (≥ 5 px:n häivytys).
