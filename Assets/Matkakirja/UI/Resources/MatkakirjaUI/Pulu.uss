@@ -684,9 +684,13 @@
     color: #eafff3;
 }
 
+/* ISS-CHATIN LAATIKOT ILMAN TÄYTTÖÄ (omistaja 4.10.2026 klo 13.54: "Poista laatikoiden vihreä pohjaväri. Riittää että teksti ja
+   kehys on vihreä"): kysytty kysymys, kysymyspillerit, kenttä sekä näppäimistö- ja mikrofoninappi läpinäkyvinä, vihreä kehys ja teksti. */
 .mk-chat--linssi .mk-chat__pelaaja {
-    background-color: rgba(93, 255, 168, 0.12);
-    color: #eafff3;
+    border-width: 1px;
+    border-color: var(--tk-lasi-avaruus-korostus);
+    background-color: rgba(0, 0, 0, 0);
+    color: var(--tk-lasi-avaruus-korostus);
 }
 
 .mk-chat--linssi .mk-chat__odottaa,
@@ -704,9 +708,13 @@
 }
 
 .mk-chat--linssi .mk-chat__siru {
-    border-color: rgba(93, 255, 168, 0.4);
-    background-color: rgba(93, 255, 168, 0.08);
+    border-color: var(--tk-lasi-avaruus-korostus);
+    background-color: rgba(0, 0, 0, 0);
     color: var(--tk-lasi-avaruus-korostus);
+}
+
+.mk-chat--linssi .mk-chat__siru:active {
+    background-color: var(--tk-lasi-avaruus-reunus);
 }
 
 .mk-chat--linssi .mk-chat__ikoninappi,
@@ -725,8 +733,8 @@
 .mk-chat--linssi .mk-chat__nappula,
 .mk-chat--linssi .mk-chat__kentta,
 .mk-chat--linssi .mk-chat__laheta {
-    background-color: rgba(93, 255, 168, 0.08);
-    border-color: rgba(93, 255, 168, 0.35);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: var(--tk-lasi-avaruus-korostus);
 }
 
 .mk-chat--linssi .mk-chat__syote {
