@@ -548,6 +548,8 @@ namespace Matkakirja.Natiivi
 
                 // 4b) S2:n omat pilvet (SCL 3/8/9/10): varakuva (valinta 1) vain pilvisille lehdille (Päätoimittaja 1.10.)
                 var pilviset = ty.PilvisetLehdet();
+                var datattomat = ty.DatattomatLehdet();   // radan välinen kiila: varakuva toiselta päivältä tai radalta
+                pilviset.UnionWith(datattomat);
                 if (pilviset.Count > 0)
                 {
                     var varat = new List<(S2Ruutu vara, UnityWebRequest tq, UnityWebRequest sq)>();
@@ -575,7 +577,7 @@ namespace Matkakirja.Natiivi
                         catch (Exception x) { Loki($"varakuva {vara.Tunnus}: {x.Message}"); }
                         finally { tq.Dispose(); sq?.Dispose(); }
                     }
-                    Loki($"pilvimaski: {pilviset.Count} pilvistä lehteä, {varoja} varakuvaa, {haku.Sum(x => x.pit) / 1e6:0.0} Mt");
+                    Loki($"pilvimaski: {pilviset.Count} pilvistä tai datatonta ({datattomat.Count}) lehteä, {varoja} varakuvaa, {haku.Sum(x => x.pit) / 1e6:0.0} Mt");
                     if (haku.Count > 0) yield return Lataa(haku, tila);
                 }
                 long saatu = tila[0];
