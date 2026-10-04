@@ -37,8 +37,14 @@ namespace Matkakirja.Linssit.Iss
         static readonly CultureInfo Fi = new CultureInfo("fi-FI");
 
         /// <summary>LCD:n rivit: kohde (isolla) ja maa (isolla, tyhjä merellä tai kun kohde on itse maa).</summary>
-        public static (string Kohde, string Maa) Hae(Aineisto a, double lat, double lon)
+        public static (string Kohde, string Maa) Hae(Aineisto a, double lat, double lon) => Hae(a, lat, lon, true);
+
+        /// <summary>Kuten Hae, mutta nimet sellaisinaan (kuvateksti: "Oma kuva · Helsinki · …"; LCD käyttää versaaleja).</summary>
+        public static (string Kohde, string Maa) Nimet(Aineisto a, double lat, double lon) => Hae(a, lat, lon, false);
+
+        static (string Kohde, string Maa) Hae(Aineisto a, double lat, double lon, bool versaalit)
         {
+            Func<string, string> Iso = versaalit ? (Func<string, string>)IssSijainti.Iso : x => x ?? "";
             if (a == null) return ("", "");
             var maa = a.Maa?.Invoke(lat, lon);
             if (maa.HasValue)

@@ -414,6 +414,7 @@ namespace Matkakirja.Natiivi
         {
             StartCoroutine(IssSijaintiLataaja.Lataa());   // ohjaamon LCD:n paikkadata (omistaja 4.10.)
             StartCoroutine(IssKameraKuva.LataaPaikat());   // tarkan ISS-kuvan kuvauspaikat (omistaja 4.10.)
+            IssKuvaKauppa.Lataa();   // kuvan osto: tuote, hinta ja keskeytyneiden hyvitys (omistaja #3939)
             StartCoroutine(OhjaamonAanet.Lataa());   // kaasun naksahdus ja kameran laukaisin (Sisältökirjuri, CC0)
             string data = null, kysymykset = null;
             yield return LinssiSisalto.Hae("moduulit/js/linssit/satelliitti-data.json", t => data = t);
@@ -1510,6 +1511,14 @@ namespace Matkakirja.Natiivi
                     // kaappaa <s> [nimi] → Documents/<nimi>.wav, ulostulo nollattu (AaniKaappaus).
                     AaniKaappaus.Aloita(double.Parse(osat[1], System.Globalization.CultureInfo.InvariantCulture),
                         osat.Length > 2 ? osat[2] : "kaappaus", t => Kirjaa("aani: " + t));
+                else if (osat[0] == "kauppa")
+                {
+                    // Kuvan osto (omistaja #3939): kauppa tila | kauppa koe osta|odota|peru|virhe|pois | kauppa nollaa | kauppa osta
+                    if (osat.Length > 2 && osat[1] == "koe") IssKuvaKauppa.Koe = osat[2] == "pois" ? null : osat[2];
+                    else if (osat.Length > 1 && osat[1] == "nollaa") { IssKuvaKauppa.Nollaa(); IssKameraKuva.NollaaKuvat(); }
+                    else if (osat.Length > 1 && osat[1] == "osta") IssKameraKuva.OstaJaKuvaa("4:5", 1080, t => Kirjaa("kauppa osta: " + t + ", kuva " + IssKameraKuva.Tila));
+                    Kirjaa(IssKuvaKauppa.TilaTeksti() + $", kuvia jäljellä {(IssKameraKuva.Rajaton ? "rajaton" : IssKameraKuva.KuviaJaljella.ToString())}, otettu {IssKameraKuva.Otettu}, kamera {IssKameraKuva.Tila}");
+                }
                 else if (osat[0] == "merkki")
                     // Tahdistusmerkki ilman linssiä (välähdys + piippaus samaan äänikellon hetkeen; kaappauksen aikana).
                     Kirjaa($"aani: merkki dsp {AaniKaappaus.Merkki(0.5, AjattelijatSovitin.Ulostuloviive):F4} s");

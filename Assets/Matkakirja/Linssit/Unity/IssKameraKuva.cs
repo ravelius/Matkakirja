@@ -82,11 +82,65 @@ namespace Matkakirja.Natiivi
         public static bool VainKuvauspaikat = false;
         /// <summary>Ilmaisia tarkkoja kuvia (omistaja: "yksi ilmainen kuva ja sitten kuvapaketit"); paketit (Ostettu) myöhemmin.</summary>
         public const int Ilmaisia = 1;
-        public static int Ostettu = 0;
         const string OtettuAvain = "iss-kuvia-otettu";
         public static int Otettu => PlayerPrefs.GetInt(OtettuAvain, 0);
-        public static int KuviaJaljella => Math.Max(0, Ilmaisia + Ostettu - Otettu);
+        /// <summary>Pöllön kehittäjäkoodilla rajaton (omistaja #3939; vain TF- ja kehityskäännökset, App Storessa Kehittaja aina false).</summary>
+        public static bool Rajaton => Asetukset.Kehittaja;
+        public static int KuviaJaljella => Rajaton ? int.MaxValue : Math.Max(0, Ilmaisia + IssKuvaKauppa.Ostettu - Otettu);
+
+        /// <summary>Valmis oma kuva kuvanäkymälle (Natiivi-UI: AvaaOmaKuva) ja jakoon; kutsutaan pääsäikeessä tallennuksen jälkeen.</summary>
+        public readonly struct OmaKuva
+        {
+            public readonly string Polku, Paikka, Maa, Kuvateksti; public readonly DateTime Utc; public readonly double Lat, Lon;
+            public OmaKuva(string polku, string paikka, string maa, DateTime utc, double lat, double lon)
+            {
+                Polku = polku; Paikka = paikka ?? ""; Maa = maa ?? ""; Utc = utc; Lat = lat; Lon = lon;
+                var d = TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(utc, DateTimeKind.Utc), TimeZoneInfo.Local);
+                // Päätoimittaja 4.10.: "Oma kuva · Helsinki · 4.10.2026 klo 15.20" (paikka kuten LCD:ssä, kuvaushetki pelaajan vyöhykkeellä).
+                Kuvateksti = "Oma kuva" + (Paikka.Length > 0 ? " · " + Paikka : "") + $" · {d.Day}.{d.Month}.{d.Year} klo {d.Hour}.{d.Minute:00}";
+            }
+        }
+        public static event Action<OmaKuva> Valmis;
+
+        /// <summary>Kirjanpito, Kuviin tallennus ja tapahtuma valmiille kuvalle (molemmat polut).</summary>
+        static void KuvaValmis(string polku, string paikka, string maa, DateTime utc, double lat, double lon)
+        {
+            if (!Rajaton) { PlayerPrefs.SetInt(OtettuAvain, Otettu + 1); PlayerPrefs.Save(); }
+            var k = new OmaKuva(polku, paikka, maa, utc, lat, lon);
+            Loki($"oma kuva: {k.Kuvateksti}, kuvia jäljellä {(Rajaton ? "rajaton (kehittäjä)" : KuviaJaljella.ToString())}");
+            TallennaKuviin(polku);
+            try { Valmis?.Invoke(k); } catch (Exception e) { Debug.LogException(e); }
+        }
+
+        static void TallennaKuviin(string polku)
+        {
+#if UNITY_IOS && !UNITY_EDITOR
+            try { MatkakirjaValokuva_Tallenna(0, polku, KuviinValmis); } catch (Exception e) { Loki("Kuviin: " + e.Message); }
+#endif
+        }
+#if UNITY_IOS && !UNITY_EDITOR
+        delegate void KuviinFn(int pyynto, int tulos);
+        static readonly KuviinFn KuviinValmis = KuviinTulos;
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern void MatkakirjaValokuva_Tallenna(int pyynto, string polku, KuviinFn valmis);
+        [AOT.MonoPInvokeCallback(typeof(KuviinFn))]
+        static void KuviinTulos(int pyynto, int tulos) => Loki("Kuviin: " + (tulos == 1 ? "tallennettu" : tulos == 0 ? "ei lupaa" : "virhe"));
+#endif
         public static void NollaaKuvat() { PlayerPrefs.DeleteKey(OtettuAvain); PlayerPrefs.Save(); }
+        /// <summary>
+        /// Kameranappi, kun kuvia ei ole jäljellä (Tila "osta", kilvessä hinta): Applen ostoikkuna ja onnistuessa kuva heti.
+        /// valmis(tulos) UI:lle (Peruttu → kilpi hintaan, Odottaa → ODOTTAA, Epaonnistui → EI ONNISTUNUT ~3 s).
+        /// </summary>
+        public static void OstaJaKuvaa(string muoto = "4:5", int leveys = 3240, Action<IssKuvaKauppa.Tulos> valmis = null)
+        {
+            Tila = "osto";
+            IssKuvaKauppa.Osta(t =>
+            {
+                Tila = t == IssKuvaKauppa.Tulos.Onnistui ? "valmis" : t == IssKuvaKauppa.Tulos.Odottaa ? "odottaa" : "osta";
+                if (t == IssKuvaKauppa.Tulos.Onnistui) Hae().Laukaise(muoto, leveys);
+                valmis?.Invoke(t);
+            });
+        }
+
         /// <summary>Kuvauspaikka-aineiston ämpäripolku (Karttaseppä: kooste kuvauspaikat.json).</summary>
         public const string PaikatPolku = "kuvauspaikat/v1/kuvauspaikat.json";
         static bool paikatLadattu;
@@ -163,7 +217,7 @@ namespace Matkakirja.Natiivi
             int mw = m.Length == 2 && int.TryParse(m[0], out var a) ? a : 4, mh = m.Length == 2 && int.TryParse(m[1], out var b) ? b : 5;
             var paikka = kerros.Linssi?.Kuvauspaikka();
             // Ilmaisen kuvan laskuri molemmille poluille (Päätoimittaja 4.10.: muuten COG antaa rajattomasti ilmaisia kuvia).
-            if (KuviaJaljella <= 0) { Tila = "ei kuvia"; Loki($"kuvaa: ei kuvia jäljellä (otettu {Otettu})"); return false; }
+            if (KuviaJaljella <= 0) { Tila = "osta"; Loki($"kuvaa: ei kuvia jäljellä (otettu {Otettu}), osto {IssKuvaKauppa.Hinta ?? IssKuvaKauppa.HintaOletus}"); return false; }
             if (paikka != null)
             {
                 Aanet.Tehoste(OhjaamonAanet.Laukaisin);   // laukaisimen aito naksahdus (Sisältökirjuri)
@@ -562,11 +616,14 @@ namespace Matkakirja.Natiivi
                 }
                 ViimeisinKuva = Path.Combine(albumi, id + ".jpg");
                 File.WriteAllBytes(ViimeisinKuva, jpg);
-                PlayerPrefs.SetInt(OtettuAvain, Otettu + 1); PlayerPrefs.Save();   // ilmainen kuva käytetty myös COG-polulla
                 loppuTila = "valmis";
                 File.WriteAllText(Path.ChangeExtension(ViimeisinKuva, ".json"), Tiedot(id, utc, kk, naytteet, muoto, az, korkeus, ruudut, ehdokkaat, saatu));
                 Edistyminen = 1;
-                Loki($"VALMIS {ViimeisinKuva} ({jpg.Length / 1e6:0.0} Mt, {W}×{H}), yhteensä {kello.ElapsedMilliseconds / 1000.0:0.0} s, pallo {(pallo != null ? pallo.ComputeLoadProgress() : 0):0.0} %");
+                Loki($"VALMIS {ViimeisinKuva} ({jpg.Length / 1e6:0.0} Mt, {W}×{H}), yhteensä {kello.ElapsedMilliseconds / 1000.0:0.0} s, haettu {saatu / 1e6:0.0} Mt, pallo {(pallo != null ? pallo.ComputeLoadProgress() : 0):0.0} %");
+                // Paikka kuten LCD:ssä (lähin kaupunki, vuori tai meri + maa) kuvan keskipisteestä, nimet sellaisinaan.
+                var keskus = naytteet.OrderBy(n => Math.Abs(n.Sx - 24) + Math.Abs(n.Sy - 18)).First();
+                var (kp, km2) = IssSijainti.Nimet(IssSijainti.Nykyinen, keskus.Lat, keskus.Lon);
+                KuvaValmis(ViimeisinKuva, kp, km2, utc, keskus.Lat, keskus.Lon);
             }
             finally
             {
@@ -696,7 +753,6 @@ namespace Matkakirja.Natiivi
                 string albumi = Path.Combine(Application.persistentDataPath, "iss-albumi"); Directory.CreateDirectory(albumi);
                 ViimeisinKuva = Path.Combine(albumi, id + ".jpg");
                 File.WriteAllBytes(ViimeisinKuva, jpg);
-                PlayerPrefs.SetInt(OtettuAvain, Otettu + 1); PlayerPrefs.Save();
                 var iss = IssNyt.Paikka(utc); double km = IssNyt.KorkeusKm(utc);
                 var ic = System.Globalization.CultureInfo.InvariantCulture;
                 File.WriteAllText(Path.ChangeExtension(ViimeisinKuva, ".json"), string.Format(ic,
@@ -706,7 +762,8 @@ namespace Matkakirja.Natiivi
                     id, utc, muoto, W, H, p.Tunniste, p.Nimi, p.Maa, p.Lat, p.Lon, km, IssNyt.NopeusKmh(km), asento.EtaisyysM / 1000, pysty,
                     (p.Lahde ?? "").Replace("\"", "'")));
                 loppuTila = "valmis"; Edistyminen = 1;
-                Loki($"VALMIS {ViimeisinKuva} ({p.Nimi}, {jpg.Length / 1e6:0.0} Mt, {W}×{H}), yhteensä {kello.ElapsedMilliseconds / 1000.0:0.0} s, kuvia jäljellä {KuviaJaljella}");
+                Loki($"VALMIS {ViimeisinKuva} ({p.Nimi}, {jpg.Length / 1e6:0.0} Mt, {W}×{H}), yhteensä {kello.ElapsedMilliseconds / 1000.0:0.0} s");
+                KuvaValmis(ViimeisinKuva, p.Nimi, p.Maa, utc, p.Lat, p.Lon);
             }
             finally
             {
