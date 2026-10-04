@@ -270,6 +270,22 @@ namespace Matkakirja.Natiivi
             kuunnelma = new KuunnelmaKaistale();
             Viimeisin = this;
 
+            // NIMIRUUTU (Päätoimittaja 4.10.): saapumisen latausodotuksen ajan ISS-avausruudun pohja (mk-astroavaus, ei uutta tyyliä):
+            // rakennuksen nimi, viiva ja alarivi; häivytetään, kun kevyt kuori on valmis ja linna nousee sumusta.
+            nimiruutu = Rakenne.El("mk-astroavaus", kerros.Juuri(LinssiUi.Ylakerros), PickingMode.Ignore);
+            nimiruutu.style.display = DisplayStyle.None;
+            var nimiOtsikko = Rakenne.El("mk-astroavaus__otsikko", nimiruutu, PickingMode.Ignore);
+            Kirjasimet.Aseta(nimiOtsikko, Kirjasin.Kone);
+            nimiruudunNimi = Rakenne.Teksti("", "mk-astroavaus__nimi", nimiOtsikko);
+            Kirjasimet.Aseta(nimiruudunNimi, Kirjasin.KoneLihava);
+            Rakenne.El("mk-astroavaus__viiva", nimiOtsikko, PickingMode.Ignore);
+            Rakenne.Teksti(DioraamaSovitin.SaapumisAlarivi, "mk-astroavaus__lahde", nimiOtsikko);
+            // Omistaja 4.10. (14.5x): yli 4 s "Linna latautuu…", yli 9 s "Vielä pieni hetki…" — sama pohja, rauhallinen häivytys.
+            latausRivi = Rakenne.Teksti("", "mk-astroavaus__lahde", nimiOtsikko);
+            latausRivi.AddToClassList("mk-astroavaus__otsikko--haipyy");
+            latausRivi.style.marginTop = 22;
+            latausRivi.style.opacity = 0f;
+
             DioraamaSovitin.PeittaaRuutu = OsuukoPaneeliin;
             DioraamaSovitin.Vaihtui += Kytke;
             kerros.JokaRuutu += Paivita;
@@ -333,8 +349,67 @@ namespace Matkakirja.Natiivi
             return lauta.worldBound.Contains(paneelipiste);
         }
 
+        readonly VisualElement nimiruutu;
+        readonly Label nimiruudunNimi, latausRivi;
+        bool nimiruutuAuki, virheIlmoitettu;
+        float nimiruutuAlku;
+        int latausVaihe;   // 0 = ei riviä, 1 = "Linna latautuu…", 2 = "Vielä pieni hetki…"
+        const float LatausRivi1S = 4f, LatausRivi2S = 9f;
+
+        void PaivitaNimiruutu()
+        {
+            // Lataushäiriö: olemassa oleva virheviesti tilarivillä ja linssi kiinni (ei loputonta odotusta).
+            if (DioraamaSovitin.LatausVirhe != null && !virheIlmoitettu)
+            {
+                virheIlmoitettu = true;
+                UiNakymat.Hae()?.Tilarivi.Viesti(DioraamaSovitin.LatausVirhe, 5f);
+                UiNakymat.Hae()?.Linssit?.SuljeLinssi();
+            }
+            bool odotus = (DioraamaSovitin.SaapumisOdotus || DioraamaSovitin.RakennusLatautuu) && DioraamaSovitin.LatausVirhe == null;
+            if (odotus && nimiruudunNimi.text != DioraamaSovitin.SaapumisNimi) nimiruudunNimi.text = DioraamaSovitin.SaapumisNimi;
+            if (odotus && !nimiruutuAuki)
+            {
+                nimiruutuAuki = true;
+                virheIlmoitettu = false;
+                nimiruutuAlku = Time.unscaledTime;
+                latausVaihe = 0;
+                latausRivi.style.opacity = 0f;
+                nimiruutu.RemoveFromClassList("mk-astroavaus--haipyy");
+                nimiruutu.style.opacity = 1f;
+                nimiruutu.style.display = DisplayStyle.Flex;
+            }
+            if (odotus)
+            {
+                float kulunut = Time.unscaledTime - nimiruutuAlku;
+                int vaihe = kulunut >= LatausRivi2S ? 2 : kulunut >= LatausRivi1S ? 1 : 0;
+                if (vaihe != latausVaihe)
+                {
+                    int edellinen = latausVaihe;
+                    latausVaihe = vaihe;
+                    string teksti = vaihe == 1 ? "Linna latautuu…" : "Vielä pieni hetki…";
+                    Debug.Log($"MATKAKIRJA linssit: nimiruutu: rivi {vaihe} \"{teksti}\" {kulunut:F1} s");
+                    if (edellinen == 0) { latausRivi.text = teksti; latausRivi.style.opacity = 1f; }
+                    else
+                    {
+                        // Ristihäivytys: vanha rivi pois (0,7 s), uusi teksti tilalle ja esiin.
+                        latausRivi.style.opacity = 0f;
+                        latausRivi.schedule.Execute(() => { if (latausVaihe == 2) { latausRivi.text = teksti; latausRivi.style.opacity = 1f; } }).StartingIn(750);
+                    }
+                }
+            }
+            else if (!odotus && nimiruutuAuki)
+            {
+                nimiruutuAuki = false;
+                Debug.Log($"MATKAKIRJA linssit: nimiruutu: häivytys {Time.unscaledTime - nimiruutuAlku:F1} s avauksesta");
+                nimiruutu.AddToClassList("mk-astroavaus--haipyy");
+                nimiruutu.style.opacity = 0f;
+                nimiruutu.schedule.Execute(() => { if (!nimiruutuAuki) nimiruutu.style.display = DisplayStyle.None; }).StartingIn(1200);
+            }
+        }
+
         void Paivita()
         {
+            PaivitaNimiruutu();
             var linssi = DioraamaSovitin.Linssi;
             var rakennus = linssi?.Rakennus;
             // Kehittäjän Kuori-nappi ×:n alle oikeaan reunaan (katselmus 1.1 (78): kiinteä top 110 osui × -nappiin).
