@@ -272,7 +272,7 @@ namespace Matkakirja.Natiivi
             var c = Resources.Load<AudioClip>(MyllyLauta.KansioPolku + nimi);
             if (c == null) { Debug.LogWarning("MATKAKIRJA mylly: ääni puuttuu " + nimi); return; }
             if (c.loadState != AudioDataLoadState.Loaded) c.LoadAudioData();
-            Aanet.RekisteroiTehoste(nimi, c);
+            Aanet.RekisteroiTehoste(nimi, c, omaIsku: true);
         }
 
         /// <summary>TAUSTAN PEHMENNYS (omistaja 2.10. klo 11.0x, loki 11.01: "pehmennä kaikki elementit taustalla, myös
