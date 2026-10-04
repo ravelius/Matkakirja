@@ -131,7 +131,7 @@ namespace Matkakirja.Natiivi
             var d = TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(k.Utc, DateTimeKind.Utc), TimeZoneInfo.Local);
             string paikka = k.Paikka ?? "", maa = k.Maa ?? "";
             if (maa.Length > 0 && !string.Equals(maa, paikka, StringComparison.OrdinalIgnoreCase)) paikka = paikka.Length > 0 ? paikka + ", " + maa : maa;
-            return "Oma kuva" + (paikka.Length > 0 ? " · " + paikka : "") + $" · {d.Day}.{d.Month}.{d.Year} klo {d.Hour}.{d.Minute:00}";
+            return "Oma kuva" + (paikka.Length > 0 ? " · " + paikka : "") + $" · {d.Day}.{d.Month}.{d.Year}\u00a0klo\u00a0{d.Hour}.{d.Minute:00}";   // päiväys ja kello samalla rivillä
         }
 
         void Nayta(int i)
