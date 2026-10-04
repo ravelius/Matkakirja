@@ -855,6 +855,15 @@ namespace Matkakirja.Natiivi
             syke = piste.schedule.Execute(() => { himmea = !himmea; piste.EnableInClassList("mk-isskyyti__piste--himmea", himmea); }).Every(900);
         }
 
+        /// <summary>
+        /// Cupolan kehyskuvat valmiiksi jo linssin avautuessa (Linssiseppä 2, 4.10.: Cupola avautuu suoraan mustan ruudun kautta, ja
+        /// simussa kehyksen haku kesti 3–8 s Cupolaan tulosta, jolloin häivytyksen jälkeen näkyi kehyksetön pallo).
+        /// </summary>
+        public void Esilataa()
+        {
+            if (!kuva2Haettu && CupolaKerros.Tyyli == CupolaKerros.Tyylit.Kuva) HaeKuvat2();
+        }
+
         /// <summary>Codexin Cupola 2 (kolme kerrosta); kehys ratkaisee (ulko-osat ja heijastus ovat valinnaisia).</summary>
         void HaeKuvat2()
         {

@@ -48,7 +48,7 @@ namespace Matkakirja.Natiivi
         /// Enimmäisodotus: musta pysyy, kunnes Cupolan kehys on ladattu (IssKyytiNakyma.Kuva2Tila) ja pallon laatat ovat paikallaan
         /// (simu 6e8576ff: kehys valmis vasta ~3 s:n kohdalla, ja häivytyksen jälkeen näkyi ensin kehyksetön harmaa pallo).
         /// </summary>
-        public const int CupolanMustaMaxMs = 8000;
+        public const int CupolanMustaMaxMs = 4000;
         float cupolaAlku;
 
         public AvauksenVaihe Vaihe { get; private set; } = AvauksenVaihe.Pois;
@@ -182,10 +182,11 @@ namespace Matkakirja.Natiivi
                 if (ms < CupolanMustaMs) return;
                 var pallo = KarttaKerrokset.Instanssi?.pallo;
                 bool kehys = IssKyytiNakyma.Kuva2Tila != null || CupolaKerros.Tyyli != CupolaKerros.Tyylit.Kuva;
-                bool laatat = pallo == null || pallo.ComputeLoadProgress() >= 99.5f;
+                float lataus = pallo != null ? pallo.ComputeLoadProgress() : 100f;
+                bool laatat = lataus >= 95f;
                 if (ms < CupolanMustaMaxMs && (!kehys || !laatat)) return;
                 cupolaHaivytys.Pause();
-                Debug.Log($"MATKAKIRJA linssit: cupolan musta häivyy {ms:0} ms (kehys {(kehys ? "valmis" : "kesken")}, laatat {(laatat ? "valmiit" : "kesken")})");
+                Debug.Log($"MATKAKIRJA linssit: cupolan musta häivyy {ms:0} ms (kehys {(kehys ? "valmis" : "kesken")}, laatat {lataus:0} %)");
                 cupolaMusta.pickingMode = PickingMode.Ignore;
                 cupolaMusta.style.opacity = 0f;
                 cupolaPiilotus = cupolaMusta.schedule.Execute(() => CupolaPois()).StartingIn(MustanHaivytysMs + 100);
@@ -208,7 +209,7 @@ namespace Matkakirja.Natiivi
         public void Vaihtui(bool astronauttiAuki)
         {
             Taulu.LinssiVaihtui(astronauttiAuki);
-            if (astronauttiAuki) return;
+            if (astronauttiAuki) { Kyyti.Esilataa(); return; }
             if (Vaihe != AvauksenVaihe.Pois) Avaus(AvauksenVaihe.Pois);
             CupolaPois();
             Sumu.Aseta(0);
