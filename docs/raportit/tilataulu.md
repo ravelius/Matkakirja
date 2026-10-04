@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 4.10. 11:05 (aamupäiväkooste):** 08:14–11:05 täysin vakaa, levy 61–65 Gi, kävijälaskuri kasvoi 34→36 (08.31, ilmoitettu). Ei yhtään roolia waiting-tilassa. Ei poikkeamia.
+
 **Päivitetty 4.10. 08:14 (aamukooste):** Yö 04:59–08:14 täysin vakaa, levy 59–66 Gi (ei poikkeamia), kävijälaskuri kasvoi 32→34 (06.30, 07.24, molemmat ilmoitettu). 06.30 poltto-ajo alkoi suunnitellusti, levy hyvässä tilassa (65 Gi, raja 40). Ei yhtään roolia waiting-tilassa koko aamuyöllä. Ei muita poikkeamia.
 
 **Päivitetty 4.10. 04:59:** Yö 01:1x–04:59 vakaa, levy 39–59 Gi (yksi lyhyt pudotus 39 Gi:iin 02.0x, Linssiseppä 2:n scratchpad-siivous vapautti 56 Gi:iin), kävijälaskuri kasvoi 31→32 (01.52, ilmoitettu). Uusi lupakysely-seuranta (ListAgents waiting): Päätoimittaja odotti Bash-lupaa 02.51–04.5x (~2h, 4 muistutuspushia 30 min välein), Linssiseppä 2 odotti scratchpad-siivouksen lupaa 02.05 alkaen — Päätoimittaja ohjeisti 02.3x, ettei siitä muistuteta enää yöksi (ei kiireellinen, levy OK). Molemmat odotukset purkautuivat 04.5x mennessä. Ei muita poikkeamia.
