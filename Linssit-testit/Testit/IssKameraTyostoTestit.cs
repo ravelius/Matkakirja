@@ -11,6 +11,25 @@ namespace Matkakirja.Linssit.Testit
     static class IssKameraTyostoTestit
     {
         [Testi]
+        static void DatatonMaallaLapinakyvaMerellaMerenvari()
+        {
+            // Simu d753d794: rataleveyden reunan dataton kiila maalla täyttyi merenvärillä (sininen kiila Saharassa).
+            var meri = new byte[] { 10, 20, 60 };
+            var ty = new KuvanTyosto { Maalla = (la, lo) => lo < 9.0 };   // laatan länsipuoli maata
+            // z11-laatta, jonka keskellä pituuspiiri 9,0° kulkee (x = (9 + 180) / 360 · 2048 = 1075,2).
+            var rgba = new byte[256 * 256 * 4];
+            ty.TaytaMeri(11, 1075, 900, rgba, meri);
+            int lansi = (128 * 256 + 5) * 4, ita = (128 * 256 + 250) * 4;
+            Oleta.Sama((byte)0, rgba[lansi + 3], "maalla läpinäkyvä");
+            Oleta.Sama((byte)254, rgba[ita + 3], "merellä merenväri");
+            Oleta.Sama((byte)60, rgba[ita + 2]);
+            var vanha = new KuvanTyosto();
+            var r2 = new byte[256 * 256 * 4];
+            vanha.TaytaMeri(11, 1075, 900, r2, meri);
+            Oleta.Tosi(Enumerable.Range(0, 256 * 256).All(k => r2[k * 4 + 3] == 254), "ilman maatietoa kaikki merta (entinen)");
+        }
+
+        [Testi]
         static void LaattajoukkoJaJuurijako()
         {
             var k = IssKameraSuunnitelmaTestit.Kamera(60.17, 24.94, 420, 60.17, 24.94, 400, 1024);

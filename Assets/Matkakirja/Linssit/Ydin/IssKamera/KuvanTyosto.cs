@@ -224,12 +224,46 @@ namespace Matkakirja.Linssit.IssKamera
                             for (int y = 0; y < 128; y++) Buffer.BlockCopy(lapset[k], y * 512, rgba, ((oy + y) * 256 + ox) * 4, 512);
                         }
                     }
-                    for (int i = 0; i < rgba.Length; i += 4) if (rgba[i + 3] == 0) { rgba[i] = meri[0]; rgba[i + 1] = meri[1]; rgba[i + 2] = meri[2]; rgba[i + 3] = 254; }
+                    TaytaMeri(l.z, l.x, l.y, rgba, meri);
                     seuraavat[l] = Puolita(rgba);
                     kirjoita(l, rgba);
                     edistyminen?.Invoke(System.Threading.Interlocked.Increment(ref tehty));
                 });
                 nelj = seuraavat;
+            }
+        }
+
+        /// <summary>
+        /// Maa vai meri (lat, lon) S2-datattomalle pikselille; null = kaikki datattomat merta (entinen). Maailmakamera (simu
+        /// d753d794): rataleveyden reunan datattomat kiilat maalla täyttyivät merenvärillä (sininen kiila Saharassa ja Amazoniassa);
+        /// maalla pikseli jää läpinäkyväksi, jolloin alla oleva BMNG näkyy. Kutsutaan rinnakkain (lukufunktio).
+        /// </summary>
+        public Func<double, double, bool> Maalla;
+        const int MaaRuudukko = 16;
+
+        /// <summary>Datattomat (alfa 0) pikselit: meri → merenväri (alfa 254), maa (Maalla) → läpinäkyvä.</summary>
+        internal void TaytaMeri(int z, int x, int y, byte[] rgba, byte[] meri)
+        {
+            bool[] maa = null;
+            for (int i = 0; i < rgba.Length; i += 4)
+            {
+                if (rgba[i + 3] != 0) continue;
+                if (Maalla != null)
+                {
+                    if (maa == null)
+                    {
+                        maa = new bool[MaaRuudukko * MaaRuudukko];
+                        for (int cy = 0; cy < MaaRuudukko; cy++)
+                            for (int cx = 0; cx < MaaRuudukko; cx++)
+                            {
+                                var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, (cx + 0.5) * 256.0 / MaaRuudukko, (cy + 0.5) * 256.0 / MaaRuudukko);
+                                maa[cy * MaaRuudukko + cx] = Maalla(la, lo);
+                            }
+                    }
+                    int px = (i / 4) % 256, py = (i / 4) / 256;
+                    if (maa[(py * MaaRuudukko / 256) * MaaRuudukko + px * MaaRuudukko / 256]) continue;
+                }
+                rgba[i] = meri[0]; rgba[i + 1] = meri[1]; rgba[i + 2] = meri[2]; rgba[i + 3] = 254;
             }
         }
 

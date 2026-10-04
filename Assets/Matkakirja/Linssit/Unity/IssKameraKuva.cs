@@ -186,6 +186,11 @@ namespace Matkakirja.Natiivi
 
         static void Loki(string t) => Debug.Log("MATKAKIRJA linssit: iss-kamera: " + t);
 
+        static Matkakirja.Linssit.Maat.MaaOsuma maaOsuma;
+        /// <summary>Maarajojen osumatesti (LinssiOhjain.MaatAineisto) kerran luotuna; null, jos aineistoa ei ole vielä ladattu.</summary>
+        static Matkakirja.Linssit.Maat.MaaOsuma MaaOsuma() =>
+            maaOsuma ??= LinssiOhjain.MaatAineisto != null ? new Matkakirja.Linssit.Maat.MaaOsuma(LinssiOhjain.MaatAineisto) : null;
+
         /// <summary>Laukaisee kuvan (muoto "4:5" oletus, leveys pikseleinä). false = työstö jo käynnissä tai ei kyydissä.</summary>
 #if UNITY_IOS && !UNITY_EDITOR
         [System.Runtime.InteropServices.DllImport("__Internal")] static extern ulong os_proc_available_memory();
@@ -580,6 +585,9 @@ namespace Matkakirja.Natiivi
                     if (scl.TryGetValue(ru.Tunnus, out var so)) ty.LisaaMaamaski(ru, so, (x, y) => sclPuretut.TryGetValue((ru.Tunnus, x, y), out var l) ? l : null);
                 var (az, korkeus) = AurinkoPisteessa(utc, naytteet.Average(n => n.Lat), naytteet.Average(n => n.Lon));
                 ty.Pilvet = new Pilvikentta { MaaOsuus = ty.MaaOsuus, AurinkoAz = az, AurinkoKorkeus = korkeus }.Kalibroi();
+                // Datattomat kiilat maalla läpinäkyviksi (BMNG alla), merellä merenväri (simu d753d794: sininen kiila Saharassa).
+                var maaOsuma = MaaOsuma();
+                if (maaOsuma != null) ty.Maalla = (la, lo) => maaOsuma.HaeMaa(la, lo) != null;
                 ty.MaanSini = MaanSini; ty.Kamera = kk.Paikka; ty.AurinkoEcef = (aEcef.x, aEcef.y, aEcef.z);   // pilvipeitto kasvaa etäisyyden mukaan (Cupola-mallikuva)
                 var lista = ty.Laatat.ToList(); int kirjoitettu = 0;
                 int ytimia = Math.Max(1, SystemInfo.processorCount - 1);   // vain pääsäikeessä (laitekoe 1.10.: säikeessä poikkeus)
