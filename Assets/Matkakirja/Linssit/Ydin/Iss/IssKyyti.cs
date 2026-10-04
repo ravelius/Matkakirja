@@ -588,12 +588,15 @@ namespace Matkakirja.Linssit.Iss
         /// </summary>
         public static Rivi Tietorivi(double korkeusKm, double nopeusKmh, bool arvio, double? kerroin = null)
         {
-            string km = Luku(korkeusKm), kmh = Luku(Math.Floor(nopeusKmh / 10 + 0.5) * 10);
+            string km = Luku(korkeusKm), kmh = Nopeus(nopeusKmh);
             string k = kerroin.HasValue ? NopeudenMerkki(kerroin.Value) : null;
             string merkki = k ?? (arvio ? null : "LIVE");
             return new Rivi(!arvio && k == null, merkki,
                 (merkki != null ? "· " : "") + $"ISS · {km} km · {kmh} km/h" + (arvio ? " · rata-arvio" : ""));
         }
+
+        /// <summary>Ratanopeus kymmeniin (tietorivi, LCD ja Cupolan avausruutu samalla pyöristyksellä): "27 560".</summary>
+        public static string Nopeus(double nopeusKmh) => Luku(Math.Floor(nopeusKmh / 10 + 0.5) * 10);
 
         /// <summary>Nopeuskerroin pilleriin kahdella merkitsevällä numerolla: 1×, 10×, 870×, 1 000×.</summary>
         public static string NopeudenMerkki(double k)
