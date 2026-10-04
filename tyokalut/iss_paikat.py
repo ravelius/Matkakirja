@@ -7,10 +7,33 @@ populated places (public domain, naturalearthdata.com, 7 342 paikkaa) → Assets
 Nimi: maan oma kieli, kun Natural Earthissa on sille kenttä (Puola NAME_PL "Warszawa", Saksa ja Itävalta NAME_DE "München",
 Unkari, Italia, Espanja, Ranska, Portugali, Alankomaat, Ruotsi, Turkki), muuten NAME (paikallinen latinalainen kirjoitus,
 esim. "Poznań", "Brno"). Pelin suomenkielinen nimi (Varsova, Krakova) valitaan pelissä (IssSijainti: pelin kaupunki voittaa
-Natural Earthin paikan saman maan ≤ 15 km:n päässä). Rivit: [nimi, lat, lon, maa (ISO3), väkiluku]. Näkymättömät
+Natural Earthin paikan saman maan ≤ 15 km:n päässä). Vakiintuneet suomenkieliset eksonyymit (EKSONYYMIT: Viipuri, Harkova,
+Belgrad, Haag, Geneve, Nizza …) ensin. Kyrillisten ja kreikkalaisten maiden nimet ovat NE:n NAME-kentästä valmiiksi latinalaisina
+(Vyborg, Kharkiv, Thessaloniki); muu kuin latinalainen kirjain (≥ U+0250) → NAMEASCII. Rivit: [nimi, lat, lon, maa (ISO3), väkiluku]. Näkymättömät
 ohjausmerkit (U+200E ym.) poistetaan; VT323 kattaa kaikki Euroopan latinalaiset kirjaimet (Ń Ł Ż Ś Č Ř Ő Ş Ğ İ).
 """
 import json, struct, sys, unicodedata
+
+# Vakiintuneet suomenkieliset eksonyymit (Päätoimittaja 4.10. 23.0x, Kotuksen suositukset): (maa, NAMEASCII) → nimi. Pelin
+# kaupungit saavat pelin nimen joka tapauksessa (IssSijainti, ≤ 15 km); tämä kattaa pelin ulkopuoliset.
+EKSONYYMIT = {
+    ("RUS", "Vyborg"): "Viipuri", ("RUS", "Petrozavodsk"): "Petroskoi", ("RUS", "Arkhangelsk"): "Arkangeli",
+    ("RUS", "Archangel"): "Arkangeli", ("RUS", "St. Petersburg"): "Pietari", ("RUS", "Saint Petersburg"): "Pietari",
+    ("RUS", "Moscow"): "Moskova", ("RUS", "Priozersk"): "Käkisalmi", ("RUS", "Pskov"): "Pihkova",
+    ("RUS", "Kandalaksha"): "Kantalahti", ("RUS", "Kostomuksha"): "Kostamus", ("RUS", "Velikiy Novgorod"): "Novgorod",
+    ("RUS", "Sortavala"): "Sortavala", ("RUS", "Olonets"): "Aunus", ("RUS", "Belomorsk"): "Sorokka",
+    ("UKR", "Kyiv"): "Kiova", ("UKR", "Kiev"): "Kiova", ("UKR", "Kharkiv"): "Harkova", ("UKR", "Kharkov"): "Harkova",
+    ("UKR", "Odesa"): "Odessa", ("UKR", "Odessa"): "Odessa",
+    ("EST", "Tartu"): "Tarto", ("EST", "Tallinn"): "Tallinna", ("LVA", "Riga"): "Riika", ("LTU", "Vilnius"): "Vilna",
+    ("SRB", "Belgrade"): "Belgrad", ("NLD", "The Hague"): "Haag", ("NLD", "Den Haag"): "Haag", ("BEL", "Brussels"): "Bryssel",
+    ("CHE", "Geneva"): "Geneve", ("CHE", "Zurich"): "Zürich", ("FRA", "Nice"): "Nizza", ("FRA", "Paris"): "Pariisi",
+    ("ITA", "Rome"): "Rooma", ("ITA", "Venice"): "Venetsia", ("GRC", "Athens"): "Ateena", ("GRC", "Piraievs"): "Pireus",
+    ("GRC", "Piraeus"): "Pireus", ("DNK", "Copenhagen"): "Kööpenhamina", ("DNK", "Kobenhavn"): "Kööpenhamina", ("SWE", "Stockholm"): "Tukholma",
+    ("GBR", "London"): "Lontoo", ("PRT", "Lisbon"): "Lissabon", ("POL", "Warsaw"): "Varsova", ("POL", "Krakow"): "Krakova",
+    ("DEU", "Hamburg"): "Hampuri", ("DEU", "Lubeck"): "Lyypekki", ("ROU", "Bucharest"): "Bukarest",
+    ("CZE", "Prague"): "Praha", ("CYP", "Nicosia"): "Nikosia", ("LUX", "Luxembourg"): "Luxemburg",
+    ("BLR", "Minsk"): "Minsk", ("TUR", "Istanbul"): "Istanbul",
+}
 
 KIELI = {"POL": "NAME_PL", "DEU": "NAME_DE", "AUT": "NAME_DE", "HUN": "NAME_HU", "ITA": "NAME_IT", "ESP": "NAME_ES",
          "FRA": "NAME_FR", "PRT": "NAME_PT", "BRA": "NAME_PT", "NLD": "NAME_NL", "SWE": "NAME_SV", "TUR": "NAME_TR"}
@@ -35,11 +58,17 @@ def puhdas(s):
     return "".join(c for c in s if unicodedata.category(c)[0] != "C").strip()
 
 
+def latinalainen(s):
+    """VT323:n kattama: latinalainen perus, Latin-1 ja Latin Extended-A/B (ei U+1E00-lisämerkkejä, kyrillisiä, kreikkaa)."""
+    return all(ord(c) < 0x250 for c in s)
+
+
 def main():
     paikat = []
     for r in lue(sys.argv[1]):
         maa = r["ADM0_A3"]
-        nimi = puhdas(r.get(KIELI.get(maa, ""), "") or "") or puhdas(r["NAME"])
+        nimi = EKSONYYMIT.get((maa, r["NAMEASCII"])) or puhdas(r.get(KIELI.get(maa, ""), "") or "") or puhdas(r["NAME"])
+        if not latinalainen(nimi): nimi = puhdas(r["NAMEASCII"])   # esim. Ṭarābulus → Tarabulus (ei tofua LCD:llä)
         if not nimi: continue
         paikat.append([nimi, round(float(r["LATITUDE"]), 4), round(float(r["LONGITUDE"]), 4), maa, int(float(r["POP_MAX"] or 0))])
     paikat.sort(key=lambda p: (p[3], -p[4]))

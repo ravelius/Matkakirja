@@ -1775,8 +1775,9 @@ namespace Matkakirja.Natiivi
                             int lkm = osat.Length > 4 && int.TryParse(osat[4], out int nn) ? nn : 20;
                             var rnd = new System.Random(osat.Length > 5 && int.TryParse(osat[5], out int sie) ? sie : 1);
                             var ai = Matkakirja.Linssit.Iss.IssSijainti.Nykyinen;
-                            var pisteet = new List<(string, double, double)> { ("Poznań", 52.41, 16.93), ("Brno", 49.20, 16.61), ("Bergen", 60.39, 5.32) };
-                            while (pisteet.Count < lkm + 3) pisteet.Add(("satunnainen", 36 + rnd.NextDouble() * 32, -10 + rnd.NextDouble() * 42));
+                            var pisteet = new List<(string, double, double)> { ("Poznań", 52.41, 16.93), ("Brno", 49.20, 16.61), ("Bergen", 60.39, 5.32),
+                                ("Viipuri", 60.71, 28.75), ("Harkova", 50.00, 36.23), ("Thessaloniki", 40.64, 22.94) };
+                            while (pisteet.Count < lkm + 6) pisteet.Add(("satunnainen", 36 + rnd.NextDouble() * 32, -10 + rnd.NextDouble() * 42));
                             var sb = new System.Text.StringBuilder("piste\tlat\tlon\tLCD\tmaa\tlaji\tkm\n");
                             foreach (var (nimi, la, lo) in pisteet)
                             {
