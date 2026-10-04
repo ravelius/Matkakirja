@@ -54,6 +54,12 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public const int CupolanMustaMaxMs = 4000;
         float cupolaAlku;
+        long cupolaTavut;
+        static double VerkostaMt(long alku) => (Matkakirja.Laattapalvelin.VerkostaTavuja - alku) / 1048576.0;
+        /// <summary>Testi (`ui linssi astro cupolakuvat 1`): ruutukaappaus Documents/cupola-&lt;ms&gt;.png jälkitarkistusten hetkillä
+        /// (iPad-todiste ilman tallennetta, Päätoimittaja 4.10.: maasto heti häivytyksen jälkeen).</summary>
+        public static bool CupolaKuvat;
+        static int cupolaAvauksia;
 
         public AvauksenVaihe Vaihe { get; private set; } = AvauksenVaihe.Pois;
 
@@ -180,6 +186,8 @@ namespace Matkakirja.Natiivi
             cupolaMusta.style.display = DisplayStyle.Flex;
             cupolaMusta.BringToFront();
             cupolaAlku = Time.realtimeSinceStartup;
+            cupolaAvauksia++;
+            cupolaTavut = Matkakirja.Laattapalvelin.VerkostaTavuja;
             Ruudunpaivitys.Herata(CupolanMustaMaxMs / 1000f + MustanHaivytysMs / 1000f + 0.5f);
             // Häivytyksen siirtymä luokkana jo ennen häivytystä (sama kehys kuin peiton muutos ei aina käynnistänyt siirtymää).
             cupolaMusta.schedule.Execute(() => cupolaMusta.AddToClassList("mk-astroavaus--haipyy")).StartingIn(100);
@@ -192,19 +200,27 @@ namespace Matkakirja.Natiivi
                 float lataus = pallo != null ? pallo.ComputeLoadProgress() : 100f;
                 bool karkein = !AstronauttiKerros.KyydinVarakartta || KarttaKerrokset.VarakarttaValmis;
                 // Päätoimittaja 4.10.: kriteeri on, ettei näkymässä ole yhtään lataamatonta (harmaata) laattaa, ei latausprosentti.
-                var (puuttuu, nakyy) = KarttaKerrokset.Instanssi?.LataamattomatLaatat(Camera.main) ?? (-1, -1);
+                var (puuttuu, nakyy) = KarttaKerrokset.Instanssi?.LataamattomatLaatat() ?? (-1, -1);
                 // Simu 9b1d4af1: häivytyksessä 0/0 = yhtään laattaa ei vielä piirretty, jolloin näkyy pohjapallon harmaa; valmis vasta,
-                // kun näkymässä on laattoja ja niistä yhdeltäkään ei puutu rasteria.
-                bool laatat = nakyy > 0 && puuttuu == 0;
+                // kun näkymässä on laattoja ja niistä yhdeltäkään ei puutu rasteria. Mittari ei käytettävissä (< 0: ei palloa tai
+                // kameraa, savuke 1137) → ei odoteta 4 s:n kattoon, häivytys 2 s:n jälkeen ja syy lokiin.
+                // Tarkka taso (Päätoimittaja 4.10.: 0/1 ja lataus 5 % → maasto vasta ~17 s): ei esivanhemman rasteria yhdelläkään
+                // näkyvällä laatalla ja pallon lataus ≥ 90 % (valitut laatat ladattu); enintään CupolanMustaMaxMs.
+                int karkeat = KarttaKerrokset.Instanssi?.KarkeatLaatat ?? 0;
+                bool laatat = puuttuu < 0 || (nakyy > 0 && puuttuu == 0 && karkeat == 0 && lataus >= 90f);
                 if (ms < CupolanMustaMaxMs && (!kehys || !karkein || !laatat)) return;
                 cupolaHaivytys.Pause();
-                Debug.Log($"MATKAKIRJA linssit: cupolan musta häivyy {ms:0} ms (kehys {(kehys ? "valmis" : "kesken")}, karkein taso {(karkein ? "valmis" : "kesken")}, lataamattomia laattoja {puuttuu}/{nakyy}, lataus {lataus:0} %)");
+                Debug.Log($"MATKAKIRJA linssit: cupolan musta häivyy {ms:0} ms (kehys {(kehys ? "valmis" : "kesken")}, karkein taso {(karkein ? "valmis" : "kesken")}, lataamattomia laattoja {puuttuu}/{nakyy}, karkeita {karkeat}, lataus {lataus:0} %)");
                 // Jälkitarkistus: lataamattomat laatat 0,5, 1, 2 ja 4 s häivytyksen alusta (todiste, ettei harmaata näy).
                 foreach (int jalkeen in new[] { 500, 1000, 2000, 4000 })
                     cupolaMusta.schedule.Execute(() =>
                     {
-                        var (p2, n2) = KarttaKerrokset.Instanssi?.LataamattomatLaatat(Camera.main) ?? (-1, -1);
-                        Debug.Log($"MATKAKIRJA linssit: cupolan jälkeen {jalkeen} ms: lataamattomia laattoja {p2}/{n2}");
+                        var (p2, n2) = KarttaKerrokset.Instanssi?.LataamattomatLaatat() ?? (-1, -1);
+                        var pl = KarttaKerrokset.Instanssi?.pallo;
+                        Debug.Log($"MATKAKIRJA linssit: cupolan jälkeen {jalkeen} ms: lataamattomia laattoja {p2}/{n2}, karkeita {KarttaKerrokset.Instanssi?.KarkeatLaatat}, "
+                            + $"lataus {(pl != null ? pl.ComputeLoadProgress() : 100f):0} %, verkosta avauksesta {VerkostaMt(cupolaTavut):0.0} Mt"
+                            + $" (ennakosta {(CupolaEnnakko.AlkuTavut >= 0 ? VerkostaMt(CupolaEnnakko.AlkuTavut) : 0):0.0} Mt)");
+                        if (CupolaKuvat) ScreenCapture.CaptureScreenshot($"cupola-{cupolaAvauksia}-{jalkeen}.png");
                     }).StartingIn(jalkeen);
                 cupolaMusta.pickingMode = PickingMode.Ignore;
                 cupolaMusta.style.opacity = 0f;

@@ -403,6 +403,9 @@ namespace Matkakirja
         }
         bool linssiVara;
         static readonly int Rasteri1Id = Shader.PropertyToID("_overlayTexture_1"), Rasteri2Id = Shader.PropertyToID("_overlayTexture_2");
+        static readonly int Skaala1Id = Shader.PropertyToID("_overlayTranslationAndScale_1"), Skaala2Id = Shader.PropertyToID("_overlayTranslationAndScale_2");
+        /// <summary>Viimeisimmän LataamattomatLaatat-kutsun karkeat laatat: rasteri on esivanhemman (UV-skaala &lt; 1), ei laatan oma.</summary>
+        public int KarkeatLaatat { get; private set; }
         static readonly Plane[] lataamatonTasot = new Plane[6];
         static readonly List<MeshRenderer> lataamatonRenderit = new List<MeshRenderer>();
 
@@ -410,14 +413,18 @@ namespace Matkakirja
         /// LATAAMATTOMAT LAATAT NÄKYMÄSSÄ (Päätoimittaja 4.10.2026: Cupolan musta odottaa, kunnes näkymässä ei ole yhtään
         /// lataamatonta laattaa, enintään 4 s): aktiiviset pallon laatat kameran näkökartiossa, joilla ei ole rasteria paikoissa 1
         /// eikä 2 (linssien ja kyydin BMNG/S2). Cesium piirtää ne ilman tekstuuria (detachRaster → null), jolloin näkyy
-        /// materiaalin vaalea perusväri (ks. LENNON VARAKARTTA). Palauttaa (lataamattomat, näkyvät); −1 = ei palloa tai kameraa.
+        /// materiaalin vaalea perusväri (ks. LENNON VARAKARTTA). Palauttaa (lataamattomat, näkyvät); −1 = ei palloa, −2 = ei kameraa.
+        /// Kamera: annettu, muuten pallon kamera (PalloKierto), viimeisenä Camera.main (savuke 1137: Camera.main puuttui iPhone-simulla
+        /// → −1/−1 ja musta 4 s:n kattoon).
         /// </summary>
-        public (int Lataamattomat, int Nakyvat) LataamattomatLaatat(Camera kamera)
+        public (int Lataamattomat, int Nakyvat) LataamattomatLaatat(Camera kamera = null)
         {
-            if (pallo == null || kamera == null) return (-1, -1);
+            if (pallo == null) return (-1, -1);
+            if (kamera == null) kamera = FindAnyObjectByType<PalloKierto>()?.GetComponent<Camera>() ?? Camera.main;
+            if (kamera == null) return (-2, -2);
             GeometryUtility.CalculateFrustumPlanes(kamera, lataamatonTasot);
             pallo.GetComponentsInChildren(false, lataamatonRenderit);
-            int puuttuu = 0, nakyy = 0;
+            int puuttuu = 0, nakyy = 0, karkeat = 0;
             foreach (var r in lataamatonRenderit)
             {
                 if (!r.enabled || !GeometryUtility.TestPlanesAABB(lataamatonTasot, r.bounds)) continue;
@@ -426,9 +433,15 @@ namespace Matkakirja
                 nakyy++;
                 bool r1 = m.HasProperty(Rasteri1Id) && m.GetTexture(Rasteri1Id) != null;
                 bool r2 = m.HasProperty(Rasteri2Id) && m.GetTexture(Rasteri2Id) != null;
-                if (!r1 && !r2) puuttuu++;
+                if (!r1 && !r2) { puuttuu++; continue; }
+                // Tarkka taso (Päätoimittaja 4.10.: 0/1 häivytyksessä, mutta maasto vasta ~17 s): Cesium kiinnittää lataavalle laatalle
+                // esivanhemman rasterin osana (UV-skaala < 1, RasterMappedTo3DTile) → karkea. Oma rasteri: skaala 1.
+                bool oma1 = r1 && m.HasProperty(Skaala1Id) && m.GetVector(Skaala1Id).z > 0.999f;
+                bool oma2 = r2 && m.HasProperty(Skaala2Id) && m.GetVector(Skaala2Id).z > 0.999f;
+                if (!oma1 && !oma2) karkeat++;
             }
             lataamatonRenderit.Clear();
+            KarkeatLaatat = karkeat;
             return (puuttuu, nakyy);
         }
 
@@ -1758,6 +1771,17 @@ namespace Matkakirja
         /// <summary>Maaston tiles-pohja ja saatavuus (EsilataaAloitusMaasto lukee layer.jsonin; EsilataaAvaus käyttää).</summary>
         string maastoPohja;
         List<(int x0, int y0, int x1, int y1)>[] maastoSaatavuus;
+
+        /// <summary>
+        /// Maastolaatan (quantized-mesh, TMS, y = 0 etelässä) ämpäripolku esilataukseen (Cupolan ennakko, Linssiseppä 2 4.10.2026);
+        /// null, jos layer.jsonia ei ole vielä luettu tai laattaa ei ole saatavilla (Cesium ei pyydä sitä).
+        /// </summary>
+        public string MaastonPolku(int z, int x, int y)
+        {
+            if (maastoPohja == null || Laattapalvelin.MaastoPolku == null || maastoSaatavuus == null || z >= maastoSaatavuus.Length) return null;
+            if (!MaastoLaatat.Saatavilla(maastoSaatavuus, z, x, y)) return null;
+            return Laattapalvelin.MaastoPolku + maastoPohja.Replace("{z}", z.ToString()).Replace("{x}", x.ToString()).Replace("{y}", y.ToString());
+        }
 
         static readonly (int z, int sade)[] AloitusMaasto = { (6, 1), (7, 1), (8, 2), (9, 2), (10, 3) };
 

@@ -1071,6 +1071,7 @@ namespace Matkakirja
                     // palvelin | palvelin loki paalle|pois | palvelin maastouusinta paalle|pois (löydös 119)
                     // | palvelin yksiportti paalle|pois (löydös 176: PlayerPrefs, vaikuttaa seuraavasta käynnistyksestä)
                     if (o.Length > 2 && o[1] == "loki") Laattapalvelin.Loki = o[2] == "paalle";
+                    else if (o.Length > 2 && o[1] == "hakuloki") Laattapalvelin.HakuLoki = o[2] == "paalle";
                     else if (o.Length > 2 && o[1] == "maastouusinta") Laattapalvelin.MaastoUusinta = o[2] == "paalle";
                     else if (o.Length > 3 && o[1] == "varavika") Laattapalvelin.AsetaVaraVika(D(2), D(3));
                     // palvelin uudelleen: kuuntelijoiden uudelleenavaus kuten taustalta palatessa (löydös 29.9. klo 22.4x)
