@@ -30,7 +30,7 @@ namespace Matkakirja.Natiivi
             n.Avaa();
         }
 
-        /// <summary>Uusintapeli Aarteiden Pelit-riviltä (ei paikkaa eikä maata).</summary>
+        /// <summary>Uusintapeli kartan Linssit-napin Pelit-kategoriasta (ei paikkaa eikä maata).</summary>
         public static void AvaaPeli(string id)
         {
             // id = "mylly" tai ansaitun laudan rivi "mylly:luostari" (avaa valinnan sillä laudalla).
@@ -461,8 +461,8 @@ namespace Matkakirja.Natiivi
             tulosPalkkioRivi.style.display = palkkio > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             tulosPalkkio.text = $"+£{palkkio}";
             tulosKirjattu.style.display = matka != null ? DisplayStyle.Flex : DisplayStyle.None;
-            // Ansaitut laudat (omistaja 1.10.): uusi lauta auki / majatalon lauta Aarteisiin.
-            tulosLaudat.text = string.Join("\n", ansaitut.ConvertAll(l => l.Avautuu == null ? l.Esine + " tallentui Aarteisiin." : "Uusi lauta: " + l.Nimi + "."));
+            // Ansaitut laudat (omistaja 1.10.): uusi lauta auki / majatalon lauta Peleihin (4.10.: pelit pois Aarteista).
+            tulosLaudat.text = string.Join("\n", ansaitut.ConvertAll(l => l.Avautuu == null ? l.Esine + " tallentui Peleihin." : "Uusi lauta: " + l.Nimi + "."));
             tulosLaudat.style.display = ansaitut.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             Aanet.Tehoste(palkkio > 0 ? "coin" : voittaja == 0 || kaveri ? "correct" : "wrong");
             UiKerros.Hae().StartCoroutine(Viive());
