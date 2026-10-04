@@ -76,6 +76,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { laskeKierros } from '../js/linssit/astronautin-kierros.js';
 import { kierrosLohko } from './laske-astronautin-kierros.mjs';
+import { gatewayOsoitteet, gatewayTunnus, jasennaKuvasivu } from './astronaut/gateway.mjs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -3370,9 +3371,9 @@ export function kuvaustapa(id) {
   return 'NASAn miehitetyltä lennolta';
 }
 
-/** Retkikunta kuvatunnuksesta: iss074e0459342 → "Retkikunta 74". */
+/** Retkikunta kuvatunnuksesta: iss074e0459342 tai Gatewayn ISS026-E-26514 → "Retkikunta 74" / "Retkikunta 26". */
 export function retkikunta(id) {
-  const m = String(id).match(/^iss(\d{2,3})e/i);
+  const m = String(id).match(/^iss(\d{2,3})-?e/i);
   return m ? `Retkikunta ${Number(m[1])}` : null;
 }
 
@@ -3419,8 +3420,41 @@ async function erissa(lista, tyo, koko = 8) {
   return ulos;
 }
 
-/** Yhden kuvan tiedot NASAn rajapinnasta, tai null jos se ei kelpaa. */
+/**
+ * GATEWAY-KUVA (Pelikoodari 4.10.2026, tools/astronaut/ehdokkaat.mjs): tunnus muotoa ISS026-E-26514 haetaan NASAn
+ * Gatewaysta (eol.jsc.nasa.gov), koska suurin osa sen kuvista ei ole images-api:ssa. Aika ja ison kuvan mitat kuvasivulta,
+ * osoitteet tools/astronaut/gateway.mjs:stä; palkkitarkistus ja KUVAPOIKKEUKSET koskevat näitäkin.
+ */
+export async function haeGatewayKuva({ id, teksti }) {
+  const os = gatewayOsoitteet(id);
+  const vastaus = await fetch(os.sivu);
+  if (!vastaus.ok) return null;
+  const { aika, mitat } = jasennaKuvasivu(await vastaus.text());
+  if (!aika || !await kuvaVastaa(os.kuva) || !await kuvaVastaa(os.pikku)) return null;
+  return {
+    id,
+    aika,
+    teksti,
+    kuvaustapa: kuvaustapa(id),
+    retkikunta: retkikunta(id),
+    kuvaaja: null,
+    mitat,
+    kuva: KUVAPOIKKEUKSET.has(id) ? `${OMA_AMPARI}${KUVAPOIKKEUKSET.get(id)}${id}~large.jpg` : os.kuva,
+    pikku: KUVAPOIKKEUKSET.has(id) ? `${OMA_AMPARI}${KUVAPOIKKEUKSET.get(id)}${id}~small.jpg` : os.pikku,
+    sivu: os.sivu,
+  };
+}
+
+/** Yhden kuvan tiedot NASAn rajapinnasta (tai Gatewaysta), tai null jos se ei kelpaa. */
 export async function haeKuva({ id, teksti }) {
+  // Sisältökirjuri 4.10.2026: joitakin vanhoja STS-tunnuksia (esim. STS062-85-021) tunnistetaan
+  // Gateway-tunnuksiksi (gatewayTunnus-säännön mukaan oikein, ks. gateway.mjs:n kommentti), mutta
+  // Gateway-haku epäonnistuu niille (eri kuvasivun muoto) vaikka images-api tuntee ne. Siksi Gateway-
+  // haun epäonnistuessa yritetään vielä images-api, sen sijaan että kohde jäisi kokonaan ilman kuvaa.
+  if (gatewayTunnus(id)) {
+    const g = await haeGatewayKuva({ id, teksti });
+    if (g) return g;
+  }
   const haku = await haeJson(`${RAJAPINTA}/search?nasa_id=${encodeURIComponent(id)}`);
   const tietue = haku.collection?.items?.[0];
   if (!tietue) return null;

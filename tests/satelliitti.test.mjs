@@ -808,9 +808,12 @@ test('jokaisella kuvalla on aika, kuvateksti, osoitteet ja lähdesivu', () => {
       const nasaKuva = /^https:\/\/images-assets\.nasa\.gov\/image\/.*~large\.jpg$/;
       const nasaPikku = /^https:\/\/images-assets\.nasa\.gov\/image\/.*~(small|thumb)\.jpg$/;
       const omaAmpari = /^https:\/\/media\.matkakirja\.app\/linssit\/astronautin-kamera\/.*~(large|small)\.jpg$/;
-      assert.ok(nasaKuva.test(h.kuva) || omaAmpari.test(h.kuva), `${h.id}: outo kuva-osoite`);
-      assert.ok(nasaPikku.test(h.pikku) || omaAmpari.test(h.pikku), `${h.id}: outo pikku-osoite`);
-      assert.match(h.sivu, /^https:\/\/images\.nasa\.gov\/details\//);
+      // Gatewayn kuvat (Pelikoodari 4.10.2026, tools/astronaut/gateway.mjs): eol.jsc.nasa.gov ja kuvasivu photo.pl.
+      const gwKuva = /^https:\/\/eol\.jsc\.nasa\.gov\/DatabaseImages\/(ESC\/large|ISD\/highres)\/[A-Z0-9]+\/[A-Z0-9-]+\.JPG$/;
+      const gwPikku = /^https:\/\/eol\.jsc\.nasa\.gov\/DatabaseImages\/(ESC\/small|ISD\/lowres)\/[A-Z0-9]+\/[A-Z0-9-]+\.JPG$/;
+      assert.ok(nasaKuva.test(h.kuva) || omaAmpari.test(h.kuva) || gwKuva.test(h.kuva), `${h.id}: outo kuva-osoite`);
+      assert.ok(nasaPikku.test(h.pikku) || omaAmpari.test(h.pikku) || gwPikku.test(h.pikku), `${h.id}: outo pikku-osoite`);
+      assert.match(h.sivu, /^https:\/\/(images\.nasa\.gov\/details\/|eol\.jsc\.nasa\.gov\/SearchPhotos\/photo\.pl\?)/);
       assert.ok(h.kuvaustapa, `${h.id}: kuvaustapa puuttuu`);
       // KUVATEKSTI ON TÄRKEIN: se on ainoa teksti, jonka pelaaja näkee.
       assert.ok(typeof h.teksti === 'string' && h.teksti.length >= 80,
@@ -838,6 +841,7 @@ test('kohteet ja kuvatekstit ovat työkalun käsin katsotussa luettelossa', () =
   assert.equal(tyokalu.siistiAika('2013-10-23T18:42:00Z'), '2013-10-23T18:42:00Z');
   assert.equal(tyokalu.kuvaustapa('iss074e0459342'), 'Kansainväliseltä avaruusasemalta');
   assert.equal(tyokalu.retkikunta('iss005e19024'), 'Retkikunta 5');
+  assert.equal(tyokalu.retkikunta('ISS026-E-26514'), 'Retkikunta 26');
   // Työkalu tarkistaa jokaisen osoitteen eikä arvaa niitä.
   assert.match(tyokalunLahde, /kuvaVastaa\(kuva\)/);
 });

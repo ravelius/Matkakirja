@@ -1630,18 +1630,18 @@ export const SATELLIITTI_KOHTEET = [
     "havainnot": [
       {
         "id": "STS100-716-176",
-        "aika": "2001-04-30",
+        "aika": "2001-04-30T16:57:47Z",
         "teksti": "Colorado on uurtanut itsensä syvälle tasangon sisään, ja pato on täyttänyt uoman vedellä. Järvi ei siksi ole leveä allas vaan kapea, haarautuva kiemura — se noudattaa tarkasti sitä muotoa, jonka joki ehti kaivertaa.",
         "kuvaustapa": "Avaruussukkulasta",
         "retkikunta": null,
         "kuvaaja": null,
         "mitat": [
-          1920,
-          1920
+          1031,
+          1024
         ],
-        "kuva": "https://images-assets.nasa.gov/image/STS100-716-176/STS100-716-176~large.jpg",
-        "pikku": "https://images-assets.nasa.gov/image/STS100-716-176/STS100-716-176~small.jpg",
-        "sivu": "https://images.nasa.gov/details/STS100-716-176"
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ISD/highres/STS100/STS100-716-176.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ISD/lowres/STS100/STS100-716-176.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=STS100&roll=716&frame=176"
       },
       {
         "id": "iss031e006398",
