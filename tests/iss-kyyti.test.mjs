@@ -13,7 +13,7 @@ import { readFileSync } from 'node:fs';
 import {
   ikkunanKulma, seurannanKulma, kuvakulma, sekoita, kaari, suunta, kameranAsento, pisteelta,
   luoKyyti, tietorivi, kaarenKirkkaus, kaarenSavy, kaarenAurinko, TILA,
-  SEURANNAN_ETAISYYS_M, IKKUNAN_KENTTA, KYYTIIN_S, IKKUNAAN_S, KAUKOON_S,
+  SEURANNAN_ETAISYYS_M, IKKUNAN_KENTTA, KYYTIIN_S, KYYTIIN_LISA_S, IKKUNAAN_S, KAUKOON_S,
   KAAREN_VAALEA, KAAREN_SYVA, KAAREN_YO,
 } from '../js/linssit/iss-kyyti.js';
 
@@ -63,8 +63,28 @@ test('sekoitus lyhintä tietä ja etäisyys logaritmisesti', () => {
   assert.equal(m.katseKorkeusM, 200000);
 });
 
-test('tilakone: kauko → seuranta → ikkuna → seuranta → ✕ → kauko', () => {
-  const k = luoKyyti();
+test('ISS:n rinnalla pois pelistä (omistaja 2.10.2026): yksi napautus kaukaa Cupolaan, ei seurantaa', () => {
+  const k = luoKyyti({ seuranta: false });
+  assert.equal(k.seuranta, false);
+  const kauko = kuvakulma(50, 10, 18000000, 0, 0);
+  k.napauta(kauko, ISS, 50, 0, false);
+  assert.equal(k.tila, TILA.ikkuna, 'suoraan Cupolaan');
+  const p = k.paivita(KYYTIIN_S + KYYTIIN_LISA_S + IKKUNAAN_S + 0.01, ISS, 50);
+  assert.equal(p.kentta, IKKUNAN_KENTTA);
+  assert.equal(k.siirtyy, false);
+  k.napauta(p.asento, ISS, p.kentta, 9, false);
+  assert.equal(k.tila, TILA.ikkuna, 'ikkunassa napautus ei vie seurantaan');
+  assert.equal(k.siirtyy, false);
+  k.kohteeseen({ lat: 41, lon: 29 }, p.asento, p.kentta, 10, true);
+  assert.equal(k.tila, TILA.kohde);
+  k.napauta(k.paivita(10, ISS, 50).asento, ISS, 80, 11, true);
+  assert.equal(k.tila, TILA.ikkuna, 'kohteen yltä takaisin Cupolaan');
+  k.poistu(18000000, 12, true);
+  assert.equal(k.tila, TILA.kauko);
+});
+
+test('tilakone: kauko → seuranta → ikkuna → seuranta → ✕ → kauko (kehittäjälippu)', () => {
+  const k = luoKyyti({ seuranta: true });   // kehittäjälippu ?issseuranta
   const kauko = kuvakulma(50, 10, 18000000, 0, 0);
   assert.equal(k.paivita(0, ISS, 50), null, 'kaukonäkymässä kamera on pelaajan');
   k.napauta(kauko, ISS, 50, 0, false);
@@ -99,8 +119,8 @@ test('tilakone: kauko → seuranta → ikkuna → seuranta → ✕ → kauko', (
   assert.equal(k.kyydissa, false);
 });
 
-test('vähennetty liike: siirtymät heti', () => {
-  const k = luoKyyti();
+test('vähennetty liike: siirtymät heti (kehittäjälippu)', () => {
+  const k = luoKyyti({ seuranta: true });   // kehittäjälippu ?issseuranta
   k.napauta(kuvakulma(50, 10, 18000000, 0, 0), ISS, 50, 0, true);
   assert.equal(k.paivita(0, ISS, 50).asento.etaisyysM, SEURANNAN_ETAISYYS_M);
   k.napauta(k.paivita(0, ISS, 50).asento, ISS, 50, 0, true);
@@ -216,8 +236,8 @@ test('kohteen yllä: silmä ISS:ssä, katse kohteeseen, kenttäkulma pitkä obje
   assert.ok(Math.abs(suoraan.kallistus) < 1e-6 && Math.abs(suoraan.etaisyysM - 420000) < 1);
 });
 
-test('tilakone: kohteen ylle ja napautuksella takaisin seurantaan', () => {
-  const k = luoKyyti();
+test('tilakone: kohteen ylle ja napautuksella takaisin seurantaan (kehittäjälippu)', () => {
+  const k = luoKyyti({ seuranta: true });   // kehittäjälippu ?issseuranta
   k.napauta(kuvakulma(50, 10, 18000000, 0, 0), ISS, 50, 0, true);
   k.kohteeseen({ lat: 48, lon: 13 }, k.paivita(0, ISS, 50).asento, 50, 1, true);
   assert.equal(k.tila, TILA.kohde);
@@ -427,7 +447,7 @@ test('realismikoukut: rakenna kerran, paivita joka kehys simuloidulla ajalla, pu
   n.paivita(32);
   assert.equal(kutsut.rakenna, 1);
   const eka = kutsut.paivita.at(-1);
-  assert.equal(eka.tila, 'seuranta');
+  assert.equal(eka.tila, 'ikkuna');   // ISS:n rinnalla pois pelistä 2.10.2026: napautus vie suoraan Cupolaan
   assert.ok(Array.isArray(eka.silma) && eka.kamera && eka.iss && Number.isFinite(eka.osuus));
   assert.equal(eka.ms, kello.nyt());
   n.asetaNopeus(1000);

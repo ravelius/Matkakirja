@@ -1,0 +1,1018 @@
+{
+ "tunnus": "sokrates",
+ "nimi": "Sokrates",
+ "vuodet": "n. 470–399 eaa.",
+ "kysymys": "Miten pitäisi elää?",
+ "malli": "ajattelijat/sokrates/v1/sokrates-L1.glb",
+ "kartta": {
+  "glb": "ajattelijat/kartta/v1/sokrates-kartta.glb",
+  "maa": "GRC",
+  "piste": [
+   39.49,
+   23.98
+  ]
+ },
+ "kipsi": "ajattelijat/yhteiset/kipsi-nor-1k.jpg",
+ "korkeus": 0.51,
+ "paa": [
+  0,
+  -0.06,
+  0.38
+ ],
+ "avainvalo": {
+  "suunta": [
+   0.95,
+   -0.3,
+   0.55
+  ],
+  "etaisyys": 1.3,
+  "keila": 32,
+  "tahtays": [
+   0,
+   -0.06,
+   0.43
+  ]
+ },
+ "tausta": 0.012,
+ "otokset": {
+  "rembrandt": {
+   "paikka": [
+    -0.3,
+    -1.02,
+    0.25
+   ],
+   "katse": [
+    -0.06,
+    -0.06,
+    0.4
+   ],
+   "mm": 35
+  }
+ },
+ "kierros": {
+  "paalause": "38a"
+ },
+ "linssi": 18,
+ "kierto": 22,
+ "liuku": 0.008,
+ "paalauseet": {
+  "38a": {
+   "fi": "Tutkimaton elämä ei ole elämisen arvoinen ihmiselle.",
+   "el": "ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ",
+   "viite": "Platon, Puolustuspuhe 38a",
+   "sade": [
+    -0.005,
+    0.418
+   ],
+   "vino": [
+    -0.4,
+    -0.15,
+    -0.3
+   ],
+   "ala": 0.075,
+   "etaisyys": 0.6,
+   "korkeus": 0.025625,
+   "kameraKulma": 55,
+   "kameraMatka": 0.11
+  },
+  "21d": {
+   "fi": "Mitä en tiedä, en luulekaan tietäväni.",
+   "el": "ἃ μὴ οἶδα οὐδὲ οἴομαι εἰδέναι",
+   "viite": "Platon, Puolustuspuhe 21d",
+   "sade": [
+    -0.055,
+    0.352
+   ],
+   "vino": [
+    -0.55,
+    -0.15,
+    -0.3
+   ],
+   "ala": 0.065,
+   "etaisyys": 0.6,
+   "korkeus": 0.02125
+  },
+  "30e": {
+   "fi": "Olen kuin paarma, jonka jumala on kiinnittänyt suureen ja laiskaan hevoseen herättämään sitä.",
+   "el": "προσκείμενον τῇ πόλει ὑπὸ τοῦ θεοῦ ὥσπερ ἵππῳ μεγάλῳ μὲν καὶ γενναίῳ, ὑπὸ μεγέθους δὲ νωθεστέρῳ καὶ δεομένῳ ἐγείρεσθαι ὑπὸ μύωπός τινος",
+   "viite": "Platon, Puolustuspuhe 30e",
+   "korkeus": 0.025625
+  },
+  "kysymys": {
+   "fi": "Miten pitäisi elää?",
+   "el": "",
+   "viite": "",
+   "korkeus": 0.022
+  },
+  "49b": {
+   "fi": "Vääryyttä ei siis saa tehdä koskaan.",
+   "el": "οὐδαμῶς ἄρα δεῖ ἀδικεῖν",
+   "viite": "Platon, Kriton 49b",
+   "sivulta": [
+    -0.08,
+    0.375
+   ],
+   "vino": [
+    0,
+    -0.45,
+    -0.25
+   ],
+   "ala": 0.075,
+   "etaisyys": 0.6,
+   "korkeus": 0.02375
+  }
+ },
+ "ajat": {
+  "nimi": [
+   184,
+   249
+  ],
+  "kysymys": [
+   250,
+   338
+  ],
+  "lahesty": [
+   364,
+   457
+  ],
+  "vieritys": [
+   427,
+   797
+  ],
+  "proj": [
+   457,
+   802
+  ],
+  "lahde": [
+   804,
+   852
+  ],
+  "kaariLoppu": 867,
+  "kaiku": [
+   867,
+   1342
+  ],
+  "pito": 1352
+ },
+ "prologi": {
+  "kytkin": 30,
+  "taysi": 58,
+  "loppu": 75,
+  "kamera": {
+   "paikka": [
+    -0.22,
+    -1.15,
+    0.34
+   ],
+   "katse": [
+    0,
+    -0.04,
+    0.3
+   ],
+   "mm": 35
+  },
+  "vari": [
+   1,
+   0.86,
+   0.66
+  ],
+  "valot": [
+   {
+    "paikka": [
+     -0.36,
+     0.5,
+     0.3
+    ],
+    "kohde": [
+     0,
+     -0.08,
+     0.38
+    ],
+    "teho": 75,
+    "keila": 22,
+    "blend": 0.45
+   },
+   {
+    "paikka": [
+     0.36,
+     0.5,
+     0.3
+    ],
+    "kohde": [
+     0,
+     -0.08,
+     0.38
+    ],
+    "teho": 75,
+    "keila": 22,
+    "blend": 0.45
+   },
+   {
+    "paikka": [
+     0,
+     0.35,
+     0.95
+    ],
+    "kohde": [
+     0,
+     -0.05,
+     0.5
+    ],
+    "teho": 60,
+    "keila": 15,
+    "blend": 0.45
+   }
+  ]
+ },
+ "intro": {
+  "otokset": [
+   [
+    1,
+    [
+     -0.85,
+     0.3,
+     0.52
+    ],
+    [
+     0,
+     -0.04,
+     0.38
+    ],
+    35,
+    "BEZIER"
+   ],
+   [
+    60,
+    [
+     -0.8,
+     0.1,
+     0.48
+    ],
+    [
+     0,
+     -0.05,
+     0.38
+    ],
+    35
+   ],
+   [
+    61,
+    [
+     -0.72,
+     -0.08,
+     0.35
+    ],
+    [
+     0,
+     -0.08,
+     0.34
+    ],
+    45
+   ],
+   [
+    118,
+    [
+     0.22,
+     -0.55,
+     0.445
+    ],
+    [
+     0.03,
+     -0.12,
+     0.412
+    ],
+    50
+   ],
+   [
+    136,
+    [
+     -0.5,
+     -0.06,
+     0.26
+    ],
+    [
+     0,
+     -0.06,
+     0.26
+    ],
+    50
+   ],
+   [
+    154,
+    [
+     -0.42,
+     -0.52,
+     0.82
+    ],
+    [
+     0,
+     -0.07,
+     0.4
+    ],
+    35
+   ]
+  ],
+  "valo": [
+   [
+    1,
+    [
+     1.075,
+     0.591,
+     0.43
+    ]
+   ],
+   [
+    61,
+    [
+     1.129,
+     -0.508,
+     0.395
+    ]
+   ],
+   [
+    136,
+    [
+     0.806,
+     -1.014,
+     0.104
+    ]
+   ],
+   [
+    154,
+    [
+     0.278,
+     0.612,
+     1.113
+    ]
+   ],
+   [
+    184,
+    [
+     1.085,
+     -0.343,
+     0.628
+    ]
+   ]
+  ],
+  "tayte": 0
+ },
+ "kaiku": {
+  "kuva": "ajattelijat/sokrates/v1/kaiku-sotilas-v2.png",
+  "lev": 0.07,
+  "vino": [
+   -0.1,
+   -0.05,
+   -0.08
+  ],
+  "etaisyys": 0.6,
+  "voima": 20,
+  "liuku": 0.05,
+  "savy": [
+   1,
+   0.78,
+   0.52
+  ],
+  "blend": 0.3,
+  "kamera": {
+   "suunta": [
+    0.08,
+    -0.05,
+    -0.12
+   ],
+   "matka": [
+    0.15,
+    0.14
+   ],
+   "liuku": 0.006,
+   "mm": 35,
+   "siirtyma": 45
+  },
+  "tayte": {
+   "osuus": 0.1,
+   "suunta": [
+    -0.65,
+    -0.25,
+    0.7
+   ],
+   "vari": [
+    0.9,
+    0.94,
+    1
+   ],
+   "keila": 45,
+   "blend": 0.7
+  }
+ },
+ "elama": {
+  "otsikko": "Sokrateen elämä",
+  "kappaleet": [
+   {
+    "otsikko": "Kivenhakkaajan poika",
+    "teksti": "Sokrates syntyi Ateenassa vuonna 470 tai 469 eaa. kivenhakkaaja Sofroniskoksen ja kätilö Fainaretan poikana."
+   },
+   {
+    "otsikko": "Sotilas",
+    "teksti": "Peloponnesolaissodassa hän taisteli raskaana jalkaväkimiehenä Potidaiassa, Amfipoliksessa ja Delionissa. Platonin Pidoissa Alkibiades kertoo, että Sokrates käveli talvella jäällä paljain jaloin, seisoi kerran aamusta seuraavaan aamuun paikallaan ajatuksiinsa vaipuneena ja pelasti haavoittuneen Alkibiadeen taistelussa."
+   },
+   {
+    "otsikko": "Delfoin oraakkeli",
+    "teksti": "Ystävä Khairefon kysyi Delfoin oraakkelilta, onko kukaan Sokratesta viisaampi. Oraakkeli vastasi, ettei ole. Sokrates ryhtyi sen jälkeen kysymään ateenalaisilta viisailta, mitä he oikeasti tiesivät."
+   },
+   {
+    "otsikko": "Oikeudenkäynti",
+    "teksti": "Vuonna 399 eaa. kolme ateenalaista syytti häntä jumalattomuudesta ja nuorison turmelemisesta, ja tuomaristo julisti hänet syylliseksi ja tuomitsi hänet kuolemaan."
+   },
+   {
+    "otsikko": "Ei pakoa",
+    "teksti": "Ystävät tarjosivat hänelle keinoa paeta vankilasta, mutta hän kieltäytyi: Platonin Kritonissa hän sanoo, ettei vääryyttä saa tehdä koskaan, ei edes vääryyden vastaukseksi."
+   },
+   {
+    "otsikko": "Viimeiset sanat",
+    "teksti": "Hän joi maljallisen myrkkykatkoa, käveli, kunnes jalat tuntuivat raskailta, ja asettui sitten makuulle. Platonin mukaan hänen viimeiset sanansa olivat: \"Kriton, olemme Asklepiokselle kukon velkaa. Maksakaa se, älkää unohtako.\""
+   },
+   {
+    "teksti": "Sokrates ei kirjoittanut itse mitään. Lähes kaikki, mitä hänestä tiedetään, tulee Platonilta, Ksenofonilta ja Aristofanekselta; myös Aristoteles kertoo hänestä, mutta toisen käden tietoon perustuen."
+   }
+  ]
+ },
+ "pulunKysymykset": [
+  "Mitä sokraattinen kysyminen tarkoittaa?",
+  "Mitä Sokrates tarkoitti tietämättömyydellään?",
+  "Millaista Sokrateen arki Ateenassa oli?",
+  "Miten Sokrates vaikutti Platoniin ja filosofiaan?",
+  "Missä sokraattinen kysyminen näkyy nykyään?"
+ ],
+ "aani": {
+  "puhe": "ajattelijat/sokrates/v1/kierros1-puhe.mp3",
+  "musiikki": "ajattelijat/sokrates/v1/kierros1-musiikki.mp3"
+ },
+ "syke": "ajattelijat/sokrates/v1/syke-musiikki.json",
+ "aikajana": {
+  "luvut": {
+   "tiedosto": "docs/raportit/ajattelijat-v11/sokrates-luvut-v14.json",
+   "haara": "linnanrakentaja-sokrates-bysti",
+   "versio": "b9e8aabf9",
+   "kaiut": "ajattelijat/sokrates/v3/kaiut-v14c",
+   "savu": "ajattelijat/sokrates/v3/savu-atlas-v5.png",
+   "savuYdin": 0.286,
+   "paalauseet": {}
+  },
+  "lauseKortti": {
+   "merkkeja": 24,
+   "leveys": 0.11
+  },
+  "virtaPorrastus": {
+   "alku": 286,
+   "vali": 15,
+   "haivytys": 9,
+   "rintama": 4,
+   "reuna": 0.35
+  },
+  "virtaVoima": 0.065,
+  "aani": {
+   "puhe": "ajattelijat/sokrates/v4/v14-puhe.mp3",
+   "musiikki": "ajattelijat/sokrates/v4/v14-musiikki.mp3"
+  },
+  "syke": "ajattelijat/sokrates/v4/syke-v14.json",
+  "kaikusarja": "a",
+  "kaikusarjat": {
+   "v13b": [
+    "ajattelijat/sokrates/v3/kaiku-jumala.png",
+    "ajattelijat/sokrates/v3/kaiku-sotilas.png",
+    "ajattelijat/sokrates/v3/kaiku-oraakkeli.png",
+    "ajattelijat/sokrates/v3/kaiku-kuolema.png"
+   ],
+   "sk": [
+    {
+     "harmaa": "ajattelijat/sokrates/v3/kaiut/jumala-harmaa.png",
+     "seepia": "ajattelijat/sokrates/v3/kaiut/jumala-seepia.png"
+    },
+    {
+     "harmaa": "ajattelijat/sokrates/v3/kaiut/sotilas-v2-harmaa.png",
+     "seepia": "ajattelijat/sokrates/v3/kaiut/sotilas-v2-seepia.png"
+    },
+    {
+     "harmaa": "ajattelijat/sokrates/v3/kaiut/themis-harmaa.png",
+     "seepia": "ajattelijat/sokrates/v3/kaiut/themis-seepia.png"
+    },
+    "ajattelijat/sokrates/v3/kaiku-kuolema.png"
+   ]
+  }
+ },
+ "kierrokset": {
+  "aani": {
+   "puhe": "ajattelijat/sokrates/v1/kierrokset-puhe.mp3",
+   "musiikki": "ajattelijat/sokrates/v1/kierrokset-musiikki.mp3"
+  },
+  "syke": "ajattelijat/sokrates/v1/syke-kierrokset.json",
+  "loppu": 3232,
+  "lista": [
+   {
+    "paalause": "21d",
+    "vieritys": [
+     1382,
+     1657
+    ],
+    "lahde": [
+     1664,
+     1712
+    ],
+    "virta": [
+     1352,
+     1402,
+     1662,
+     1712
+    ],
+    "siemen": 21,
+    "kaiku": {
+     "kuva": "ajattelijat/sokrates/v1/kaiku-oraakkeli.png",
+     "kohde": {
+      "sade": [
+       0.04,
+       0.374
+      ]
+     },
+     "ruudut": [
+      1772,
+      2202
+     ],
+     "vino": [
+      -0.15,
+      0,
+      0.1
+     ],
+     "etaisyys": 0.5,
+     "lev": 0.03,
+     "voima": 15,
+     "liuku": 0.08,
+     "tayte": {
+      "suunta": [
+       -0.55,
+       -0.55,
+       0.6
+      ]
+     }
+    }
+   },
+   {
+    "paalause": "49b",
+    "vieritys": [
+     2232,
+     2497
+    ],
+    "lahde": [
+     2504,
+     2552
+    ],
+    "virta": [
+     2202,
+     2252,
+     2502,
+     2552
+    ],
+    "siemen": 49,
+    "kaiku": {
+     "kuva": "ajattelijat/sokrates/v1/kaiku-kuolema.png",
+     "kohde": {
+      "sivulta": [
+       -0.08,
+       0.375
+      ]
+     },
+     "ruudut": [
+      2557,
+      3152
+     ],
+     "vino": [
+      0,
+      -0.1,
+      0.05
+     ],
+     "etaisyys": 0.6,
+     "lev": 0.07,
+     "voima": 30,
+     "liuku": 0.05,
+     "tayte": {
+      "suunta": [
+       0.45,
+       0.75,
+       0.55
+      ]
+     }
+    }
+   }
+  ],
+  "kamera": [
+   [
+    1352,
+    [
+     0.0301,
+     -0.2589,
+     0.4641
+    ],
+    [
+     -0.002,
+     -0.1304,
+     0.418
+    ],
+    35
+   ],
+   [
+    1412,
+    [
+     -0.0983,
+     -0.1598,
+     0.2678
+    ],
+    [
+     -0.0579,
+     -0.1008,
+     0.352
+    ],
+    18
+   ],
+   [
+    1712,
+    [
+     -0.0524,
+     -0.1741,
+     0.2678
+    ],
+    [
+     -0.0521,
+     -0.1026,
+     0.352
+    ],
+    18
+   ],
+   [
+    1772,
+    [
+     0.0498,
+     -0.1824,
+     0.3675
+    ],
+    [
+     0.04,
+     -0.1083,
+     0.374
+    ],
+    50
+   ],
+   [
+    2202,
+    [
+     0.0519,
+     -0.1823,
+     0.3696
+    ],
+    [
+     0.04,
+     -0.1083,
+     0.374
+    ],
+    50
+   ],
+   [
+    2262,
+    [
+     0.1078,
+     -0.1321,
+     0.284
+    ],
+    [
+     0.0689,
+     -0.0826,
+     0.375
+    ],
+    18
+   ],
+   [
+    2552,
+    [
+     0.1342,
+     -0.0864,
+     0.284
+    ],
+    [
+     0.0719,
+     -0.0774,
+     0.375
+    ],
+    18
+   ],
+   [
+    2602,
+    [
+     0.205,
+     -0.1767,
+     0.337
+    ],
+    [
+     0.0704,
+     -0.08,
+     0.375
+    ],
+    35
+   ],
+   [
+    3152,
+    [
+     0.2011,
+     -0.1641,
+     0.3393
+    ],
+    [
+     0.0724,
+     -0.0765,
+     0.375
+    ],
+    35
+   ],
+   [
+    3212,
+    [
+     -0.3,
+     -1.02,
+     0.25
+    ],
+    [
+     -0.06,
+     -0.06,
+     0.4
+    ],
+    35
+   ],
+   [
+    3232,
+    [
+     -0.3,
+     -1.02,
+     0.25
+    ],
+    [
+     -0.06,
+     -0.06,
+     0.4
+    ],
+    35
+   ]
+  ]
+ },
+ "taustavirta": {
+  "sumeus": 0.04,
+  "riviTila": 2,
+  "riviKorkeus": 80,
+  "riviKoko": 0.8,
+  "etaisyys": 0.9,
+  "blend": 0.5,
+  "voimaKerroin": 3,
+  "siemen": 38,
+  "nopeus": {
+   "mms": 25,
+   "vaihtelu": 0.15
+  },
+  "rivikork": [
+   0.009,
+   0.012,
+   0.015,
+   0.019
+  ],
+  "kirkkaus": {
+   "el": [
+    0.1,
+    0.28
+   ],
+   "fi": [
+    0.08,
+    0.13
+   ]
+  },
+  "kulma": 7,
+  "projektorit": [
+   {
+    "kohde": [
+     0,
+     -0.1,
+     0.33
+    ],
+    "suunta": [
+     0,
+     -1,
+     0.1
+    ],
+    "ala": 0.3,
+    "riveja": 6
+   },
+   {
+    "kohde": [
+     0,
+     -0.03,
+     0.47
+    ],
+    "suunta": [
+     0,
+     -0.55,
+     1
+    ],
+    "ala": 0.26,
+    "riveja": 5
+   },
+   {
+    "kohde": [
+     0,
+     0.05,
+     0.47
+    ],
+    "suunta": [
+     0,
+     0.6,
+     1
+    ],
+    "ala": 0.24,
+    "riveja": 3,
+    "pehmeys": 1.5
+   },
+   {
+    "kohde": [
+     -0.09,
+     -0.04,
+     0.38
+    ],
+    "suunta": [
+     -1,
+     -0.35,
+     0.15
+    ],
+    "ala": 0.22,
+    "riveja": 3,
+    "pehmeys": 1.3
+   },
+   {
+    "kohde": [
+     0.09,
+     -0.04,
+     0.38
+    ],
+    "suunta": [
+     1,
+     -0.35,
+     0.15
+    ],
+    "ala": 0.22,
+    "riveja": 3,
+    "pehmeys": 1.3
+   }
+  ],
+  "ajat": [
+   364,
+   442,
+   802,
+   852
+  ],
+  "rivit": [
+   [
+    "el",
+    "gentium-plus",
+    "οὗτος ὑμῶν, ὦ ἄνθρωποι, σοφώτατός ἐστιν, ὅστις ὥσπερ Σωκράτης ἔγνωκεν ὅτι οὐδενὸς ἄξιός ἐστι τῇ ἀληθείᾳ πρὸς σοφίαν."
+   ],
+   [
+    "el",
+    "gfs-didot",
+    "ἕωσπερ ἂν ἐμπνέω καὶ οἷός τε ὦ, οὐ μὴ παύσωμαι φιλοσοφῶν"
+   ],
+   [
+    "el",
+    "gfs-solomos",
+    "προσκείμενον τῇ πόλει ὑπὸ τοῦ θεοῦ ὥσπερ ἵππῳ μεγάλῳ μὲν καὶ γενναίῳ, ὑπὸ μεγέθους δὲ νωθεστέρῳ καὶ δεομένῳ ἐγείρεσθαι ὑπὸ μύωπός τινος"
+   ],
+   [
+    "el",
+    "gentium-plus",
+    "καὶ τυγχάνει μέγιστον ἀγαθὸν ὂν ἀνθρώπῳ τοῦτο, ἑκάστης ἡμέρας περὶ ἀρετῆς τοὺς λόγους ποιεῖσθαι καὶ τῶν ἄλλων περὶ ὧν ὑμεῖς ἐμοῦ ἀκούετε διαλεγομένου καὶ ἐμαυτὸν καὶ ἄλλους ἐξετάζοντος, ὁ δὲ ἀνεξέταστος βίος οὐ βιωτὸς ἀνθρώπῳ"
+   ],
+   [
+    "fi",
+    "iowan-ohut",
+    "Mitä en tiedä, en luulekaan tietäväni."
+   ],
+   [
+    "el",
+    "gfs-solomos",
+    "ἢ γὰρ οἷον μηδὲν εἶναι μηδὲ αἴσθησιν μηδεμίαν μηδενὸς ἔχειν τὸν τεθνεῶτα"
+   ],
+   [
+    "el",
+    "gentium-plus",
+    "οὐκ ἔστιν ἀνδρὶ ἀγαθῷ κακὸν οὐδὲν οὔτε ζῶντι οὔτε τελευτήσαντι, οὐδὲ ἀμελεῖται ὑπὸ θεῶν τὰ τούτου πράγματα"
+   ],
+   [
+    "fi",
+    "iowan-ohut",
+    "Vääryyttä ei siis saa tehdä koskaan."
+   ],
+   [
+    "el",
+    "gfs-solomos",
+    "οὐ τὸ ζῆν περὶ πλείστου ποιητέον, ἀλλὰ τὸ εὖ ζῆν"
+   ],
+   [
+    "el",
+    "gentium-plus",
+    "ταῦτα, ὦ φίλε ἑταῖρε Κρίτων, εὖ ἴσθι ὅτι ἐγὼ δοκῶ ἀκούειν, ὥσπερ οἱ κορυβαντιῶντες τῶν αὐλῶν δοκοῦσιν ἀκούειν, καὶ ἐν ἐμοὶ αὕτη ἡ ἠχὴ τούτων τῶν λόγων βομβεῖ"
+   ],
+   [
+    "el",
+    "gfs-didot",
+    "κινδυνεύουσι γὰρ ὅσοι τυγχάνουσιν ὀρθῶς ἁπτόμενοι φιλοσοφίας λεληθέναι τοὺς ἄλλους ὅτι οὐδὲν ἄλλο αὐτοὶ ἐπιτηδεύουσιν ἢ ἀποθνῄσκειν τε καὶ τεθνάναι."
+   ],
+   [
+    "el",
+    "gfs-solomos",
+    "οὐ πείθω, ὦ ἄνδρες, Κρίτωνα, ὡς ἐγώ εἰμι οὗτος Σωκράτης, ὁ νυνὶ διαλεγόμενος καὶ διατάττων ἕκαστον τῶν λεγομένων, ἀλλ᾽ οἴεταί με ἐκεῖνον εἶναι, ὃν ὄψεται ὀλίγον ὕστερον νεκρόν"
+   ],
+   [
+    "el",
+    "gentium-plus",
+    "ὦ Κρίτων, τῷ Ἀσκληπιῷ ὀφείλομεν ἀλεκτρυόνα· ἀλλὰ ἀπόδοτε καὶ μὴ ἀμελήσητε."
+   ],
+   [
+    "el",
+    "gfs-didot",
+    "ἑστήκει ἐξ ἑωθινοῦ φροντίζων τι"
+   ],
+   [
+    "el",
+    "gfs-solomos",
+    "οὐ δύναμαί πω κατὰ τὸ Δελφικὸν γράμμα γνῶναι ἐμαυτόν· γελοῖον δή μοι φαίνεται"
+   ],
+   [
+    "el",
+    "gentium-plus",
+    "φιλομαθὴς γάρ εἰμι· τὰ μὲν οὖν χωρία καὶ τὰ δένδρα οὐδέν μ᾽ ἐθέλει διδάσκειν, οἱ δ᾽ ἐν τῷ ἄστει ἄνθρωποι"
+   ],
+   [
+    "el",
+    "gfs-didot",
+    "ἰδὲ γὰρ ἀνθρώπους οἷον ἐν καταγείῳ οἰκήσει σπηλαιώδει, ἀναπεπταμένην πρὸς τὸ φῶς τὴν εἴσοδον ἐχούσῃ μακρὰν παρὰ πᾶν τὸ σπήλαιον, ἐν ταύτῃ ἐκ παίδων ὄντας ἐν δεσμοῖς"
+   ],
+   [
+    "el",
+    "gfs-solomos",
+    "τὸ δὲ αἴτιον τούτου τόδε· μαιεύεσθαί με ὁ θεὸς ἀναγκάζει, γεννᾶν δὲ ἀπεκώλυσεν."
+   ],
+   [
+    "el",
+    "gentium-plus",
+    "βουλοίμην μὲν ἂν ἔγωγε οὐδέτερα· εἰ δ᾽ ἀναγκαῖον εἴη ἀδικεῖν ἢ ἀδικεῖσθαι, ἑλοίμην ἂν μᾶλλον ἀδικεῖσθαι ἢ ἀδικεῖν."
+   ],
+   [
+    "el",
+    "gfs-didot",
+    "ἐμαυτὸν καταμέμφομαι ὡς οὐκ εἰδὼς περὶ ἀρετῆς τὸ παράπαν· ὃ δὲ μὴ οἶδα τί ἐστιν, πῶς ἂν ὁποῖόν γέ τι εἰδείην;"
+   ]
+  ]
+ },
+ "fontit": {
+  "iowan": {
+   "perhe": "\"Iowan Old Style\", Charter, Palatino, serif",
+   "paino": "bold"
+  },
+  "baskerville": {
+   "perhe": "Baskerville, \"Baskerville Old Face\", \"Times New Roman\", serif",
+   "paino": "normal"
+  },
+  "times": {
+   "perhe": "\"Times New Roman\", Times, serif",
+   "paino": "italic normal"
+  },
+  "iowan-ohut": {
+   "perhe": "\"Iowan Old Style\", Charter, Palatino, serif",
+   "paino": "italic normal"
+  },
+  "gentium-plus": {
+   "perhe": "\"Gentium Plus\", serif",
+   "paino": "normal",
+   "tiedosto": "ajattelijat/fontit/v1/GentiumPlus-Regular.ttf"
+  },
+  "gfs-didot": {
+   "perhe": "\"GFS Didot\", serif",
+   "paino": "normal",
+   "tiedosto": "ajattelijat/fontit/v1/GFSDidot-Regular.ttf"
+  },
+  "gfs-solomos": {
+   "perhe": "\"GFS Solomos\", serif",
+   "paino": "normal",
+   "tiedosto": "ajattelijat/fontit/v1/GFSSolomos.otf"
+  }
+ },
+ "ca": 0.014,
+ "syvyys": 0.022,
+ "tykki": {
+  "vari": [
+   1,
+   0.93,
+   0.8
+  ]
+ }
+}

@@ -320,7 +320,7 @@ function piirraSyvennysVisa(ui, sisalto, cityId, taky) {
   // visalle (omistaja 1.9.2026: "lopussa oleva kysymys ei mainitse,
   // mitä siitä voi voittaa").
   laatikko.appendChild(html('p', 'fokusvirta-visa-palkkio',
-    `Oikeasta vastauksesta saat ${TAKY_PALKKIO} puntaa.`));
+    `Oikeasta vastauksesta saat £${TAKY_PALKKIO}.`));
   const vaihtoehdot = html('div', 'fokusvirta-vaihtoehdot');
   visa.vaihtoehdot.forEach((tekstiRivi, i) => {
     const nap = html('button', '', tekstiRivi);
@@ -332,14 +332,14 @@ function piirraSyvennysVisa(ui, sisalto, cityId, taky) {
       vaihtoehdot.replaceChildren();
       tulos.className = `fokusvirta-visa-tulos ${oikein ? 'oikein-tulos' : 'vaarin-tulos'}`;
       tulos.textContent = (oikein
-        ? `Oikein! +${TAKY_PALKKIO} puntaa. `
+        ? `Oikein! +£${TAKY_PALKKIO}. `
         : `Oikea vastaus: ${visa.vaihtoehdot[visa.oikea]}. `) + (visa.fakta ?? '');
       sfx.play(oikein ? 'correct' : 'wrong');
       natiiviVastaus(oikein);
       if (oikein) {
         const leima = ui.buildToast?.({
           kind: 'stamp', icon: 'kukkaro',
-          text: `+${TAKY_PALKKIO} puntaa`, sub: 'Livian täky ratkesi',
+          text: `+£${TAKY_PALKKIO}`, sub: 'Livian täky ratkesi',
         });
         if (leima) setTimeout(() => ui.removeToast(leima), TOAST_MS.default);
         const juliste = kaupunginJuliste(cityId);

@@ -108,6 +108,33 @@ test('kuoren detalji (hybridi-PBR, menetelmä B): vain jos maski ja 4 kirjastoma
   assert.equal(d.maski, 'blender/ulkokuori/hybridi/kuori-materiaali-2k.png');
   assert.deepEqual(d.kanavat.map((k) => k.id), idt);
   for (const k of d.kanavat) assert.ok(k.diff.startsWith('blender/kirjasto/') && k.nor.endsWith('_nor_gl.jpg') && k.toisto_m > 0, k.id);
+  assert.ok(d.kanavat.every((k) => !k.diff_astc && k.keski === undefined), 'ASTC ja keski vain jos .astcm viety');
+  const astc = idt.flatMap((id) => [`kirjasto/materiaali/${id}/${id}_diff-4x4.astcm`, `kirjasto/materiaali/${id}/${id}_nor_gl-4x4.astcm`])
+    .map((polku) => ({ polku, sha256: 'c'.repeat(64), tavuja: 1 }));
+  const a = kopio(RAKENNUS); lisaaBlender(a, { ...B, tiedostot: [...perus, ...lisa, ...astc] });
+  for (const k of a.ulkokuori.detalji.kanavat) {
+    assert.match(k.diff_astc, /_diff-4x4\.astcm$/); assert.match(k.nor_astc, /_nor_gl-4x4\.astcm$/);
+    assert.ok(k.keski > 0 && k.keski < 1, `${k.id} keski`); assert.match(k.diff, /_diff\.jpg$/);
+  }
+});
+
+test('maastokerrokset: ASTC + keski (lineaarinen luminanssi) vain jos .astcm viety, jpg-kentät jäävät', () => {
+  const MAA = JSON.parse(readFileSync(new URL('../js/dioraama/rakennukset/olavinlinna/ymparisto-maasto.json', import.meta.url), 'utf8'));
+  for (const k of MAA.kerrokset) assert.ok(k.keski > 0 && k.keski < 1, k.id);
+  const Y = ['ymparisto_huippu.glb', 'ymparisto_normaali.glb', 'ymparisto_kevyt.glb', 'puut.json', 'puukortit.png',
+    'puukortit-hamara.png', 'puukortit.json', 'horisontti.glb', 'horisontti-1k.jpg', 'horisontti-hamara-1k.jpg', 'syvyys.png',
+    ...['8k', '4k', '2k'].flatMap((k) => [`ymparisto-${k}-4x4.astcm`, `ymparisto-hamara-${k}-4x4.astcm`]),
+    'splat-0.png', 'splat-1.png', 'splat-normaali-0.png', ...MAA.kerrokset.flatMap((k) => [`maasto/${k.lahde}_diff_1k.jpg`, `maasto/${k.lahde}_nor_gl_1k.jpg`])];
+  const A = MAA.kerrokset.flatMap((k) => [`maasto/${k.lahde}_diff_1k-4x4.astcm`, `maasto/${k.lahde}_nor_gl_1k-4x4.astcm`]);
+  const t = (l) => l.map((p) => ({ polku: `ymparisto/${p}`, sha256: 'd'.repeat(64), tavuja: 1 }));
+  const perus = B.tiedostot.filter((x) => !x.polku.startsWith('ymparisto/'));
+  const ilman = kopio(RAKENNUS); lisaaBlender(ilman, { ...B, tiedostot: [...perus, ...t(Y)] });
+  assert.ok(ilman.ymparisto.maasto.kerrokset.every((k) => !k.diff_astc && k.keski === undefined));
+  const r = kopio(RAKENNUS); lisaaBlender(r, { ...B, tiedostot: [...perus, ...t(Y), ...t(A)] });
+  for (const k of r.ymparisto.maasto.kerrokset) {
+    assert.match(k.diff_astc, /_diff_1k-4x4\.astcm$/); assert.match(k.nor_astc, /_nor_gl_1k-4x4\.astcm$/);
+    assert.match(k.diff, /_diff_1k\.jpg$/); assert.ok(k.keski > 0 && k.keski < 1, k.id);
+  }
 });
 
 test('ympäristö (vaihe 5, n1500): vain jos kaikki tiedostot ovat blender.json:ssa; Siirtosepän kenttänimet', () => {
@@ -156,4 +183,37 @@ test('ympäristön lähimaasto ja aluskasvit: mukana vain jos tiedostot ovat ble
   assert.ok(!taivas.ymparisto.puukortit_normaali);
   const nor = kopio(RAKENNUS); lisaaBlender(nor, { ...B, tiedostot: [...perus, ...t(Y), ...t(['puukortit-normaali.png'])] });
   assert.match(nor.ymparisto.puukortit_normaali, /puukortit-normaali\.png$/);
+});
+
+test('ympäristön ASTC-mipketjut (ensilataus v2): *_astc vain jos .astcm viety, png/jpg-kentät jäävät', () => {
+  const MAA = JSON.parse(readFileSync(new URL('../js/dioraama/rakennukset/olavinlinna/ymparisto-maasto.json', import.meta.url), 'utf8'));
+  const Y = ['ymparisto_huippu.glb', 'ymparisto_normaali.glb', 'ymparisto_kevyt.glb', 'puut.json', 'puukortit.png',
+    'puukortit-hamara.png', 'puukortit.json', 'horisontti.glb', 'horisontti-1k.jpg', 'horisontti-hamara-1k.jpg', 'syvyys.png',
+    ...['8k', '4k', '2k'].flatMap((k) => [`ymparisto-${k}-4x4.astcm`, `ymparisto-hamara-${k}-4x4.astcm`]),
+    'splat-0.png', 'splat-1.png', 'splat-normaali-0.png', ...MAA.kerrokset.flatMap((k) => [`maasto/${k.lahde}_diff_1k.jpg`, `maasto/${k.lahde}_nor_gl_1k.jpg`]),
+    'aluskasvit.png', 'aluskasvit-hamara.png', 'aluskasvit.json', 'aluskasvit-lista.json', 'puukortit-normaali.png',
+    'taivas-2k.jpg', 'taivas-hamara-2k.jpg'];
+  const A = ['puukortit', 'puukortit-hamara', 'puukortit-normaali', 'horisontti-1k', 'horisontti-hamara-1k', 'taivas-2k',
+    'taivas-hamara-2k', 'aluskasvit', 'aluskasvit-hamara'].map((n) => `${n}-4x4.astcm`);
+  const t = (l) => l.map((p) => ({ polku: `ymparisto/${p}`, sha256: 'd'.repeat(64), tavuja: 1 }));
+  const perus = B.tiedostot.filter((x) => !x.polku.startsWith('ymparisto/'));
+  const ilman = kopio(RAKENNUS); lisaaBlender(ilman, { ...B, tiedostot: [...perus, ...t(Y)] });
+  assert.ok(!ilman.ymparisto.puukortit_astc && !ilman.ymparisto.taivas_astc && !ilman.ymparisto.aluskasvit.atlas_astc);
+  const y = (() => { const r = kopio(RAKENNUS); lisaaBlender(r, { ...B, tiedostot: [...perus, ...t(Y), ...t(A)] }); return r.ymparisto; })();
+  assert.match(y.puukortit, /puukortit\.png$/); assert.match(y.puukortit_astc, /puukortit-4x4\.astcm$/);
+  assert.match(y.hamara.puukortit_astc, /puukortit-hamara-4x4\.astcm$/);
+  assert.match(y.puukortit_normaali_astc, /puukortit-normaali-4x4\.astcm$/);
+  assert.match(y.horisontti_kuva_astc, /horisontti-1k-4x4\.astcm$/); assert.match(y.hamara.horisontti_kuva_astc, /horisontti-hamara-1k-4x4\.astcm$/);
+  assert.match(y.taivas_astc, /taivas-2k-4x4\.astcm$/); assert.match(y.taivas_hamara_astc, /taivas-hamara-2k-4x4\.astcm$/);
+  assert.match(y.aluskasvit.atlas_astc, /aluskasvit-4x4\.astcm$/); assert.match(y.aluskasvit.atlas_hamara_astc, /aluskasvit-hamara-4x4\.astcm$/);
+});
+
+test('kohdistamaton tila (tunnelma) ilman JSON-liekkejä: liekit leivotun glb:n liekki:-tyhjistä, jotka leikataan telineineen (erä 1b)', () => {
+  const json = kopio(RAKENNUS);
+  assert.ok(RAKENNUS.tilat.find((t) => t.id === 'tunnelma')?.liekit?.length > 0, 'lähteessä tunnelman liekit');
+  lisaaBlender(json, B);
+  const tunnelma = json.tilat.find((t) => t.id === 'tunnelma');
+  assert.ok(tunnelma?.glb, 'tunnelma-glb puuttuu');
+  assert.equal(tunnelma.liekit, undefined);
+  for (const t of json.tilat.filter((x) => x.kohdistettava !== false && RAKENNUS.tilat.find((r) => r.id === x.id)?.liekit?.length)) assert.ok(t.liekit.length > 0, t.id);
 });

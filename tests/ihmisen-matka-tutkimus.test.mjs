@@ -239,6 +239,16 @@ test('tyylit kattavat hehkun, napit, lapun ja kortin', () => {
   assert.match(CSS, /prefers-reduced-motion/);
 });
 
+// Kaksi kuvaa (omistaja 1.10.2026): maisema koko leveydelle, toinen kuva tekstin oikealle, teksti kiertää.
+test('kahden kuvan nostokortti: toinen kuva kelluu tekstin oikealla puolella', () => {
+  const k = koodi(KORTTI);
+  assert.match(k, /kuvat\.childElementCount === 2/);
+  assert.match(k, /classList\.add\('kellu'\)/);
+  assert.match(k, /runko\.append\(sivukuva, teksti\)/);
+  assert.match(CSS, /\.ihmisen-nostokortti-runko \{\s*display: flow-root;/);
+  assert.match(CSS, /\.ihmisen-nostokortti-kuvakehys\.kellu \{\s*float: right;/);
+});
+
 /* ==================== yksi palkki, ei karusellia ==================== */
 
 test('kertomuskaari saa yhden palkin yläpalkin tilalle eikä karusellia', () => {

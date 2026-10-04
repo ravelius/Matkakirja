@@ -79,7 +79,7 @@ import { startQuizTimer, stopQuizTimer } from './visa.js';
  *                          → {koodi, jasenId, avain}
  *   POST /retkikunta/liity {koodi, nimimerkki}
  *                          → {jasenId, avain, jasenet}
- *   GET  /retkikunta/tila?koodi&jasenId&avain
+ *   GET  /retkikunta/tila?koodi&jasenId (avain otsakkeessa x-sahke-avain)
  *                          → {jasenet,
  *                             sahkeet:      [{id, lahettaja, pohjaId, paikkaId, aika}],
  *                             apupyynnot:   [{apuId, kysyja, kysymys, vaihtoehdot, aika}],
@@ -105,20 +105,23 @@ const SAHKE_AIKAKATKO_MS = 12000;
  * "Adjektiivi Substantiivi".
  */
 
-/** 24 adjektiivia (sitova lista; sama workerille). */
+/**
+ * 24 adjektiivia: TÄSMÄLLEEN worker/sahke/nimimerkit.js:n ADJEKTIIVIT samassa järjestyksessä (1.10.2026: lista oli
+ * erkaantunut, ja worker hylkäsi osan arvotuista nimistä "Nimimerkki ei ole sanalistoilta"; tests/sahke.test.mjs valvoo).
+ */
 const SAHKE_ADJEKTIIVIT = [
-  'Utelias', 'Höyryävä', 'Vaitelias', 'Ripeä', 'Uskalias', 'Verkkainen',
-  'Tarkkanäköinen', 'Kärsivällinen', 'Salaperäinen', 'Kohtelias', 'Sitkeä', 'Valpas',
-  'Rohkea', 'Huolellinen', 'Levoton', 'Sinnikäs', 'Oivaltava', 'Vakaa',
-  'Nokkela', 'Hiljainen', 'Iloinen', 'Peloton', 'Tarmokas', 'Viisas',
+  'Utelias', 'Höyryävä', 'Rohkea', 'Salaperäinen', 'Vaitelias', 'Sitkeä',
+  'Nokinen', 'Tarkkasilmäinen', 'Kärsivällinen', 'Vikkelä', 'Tyyni', 'Uljas',
+  'Ovela', 'Väsymätön', 'Hajamielinen', 'Ripeä', 'Ponteva', 'Verkkainen',
+  'Peloton', 'Juhlallinen', 'Kohtelias', 'Räiskyvä', 'Vankka', 'Iloinen',
 ];
 
 /** 24 substantiivia: eläimiä ja 1873-matkan esineitä (sitova lista). */
 const SAHKE_SUBSTANTIIVIT = [
-  'Ilves', 'Majakka', 'Kompassi', 'Näätä', 'Höyrylaiva', 'Kurki',
-  'Lennätin', 'Ahma', 'Kiikari', 'Peltosirkku', 'Postivaunu', 'Saukko',
-  'Tiimalasi', 'Kärppä', 'Kartturi', 'Merikotka', 'Ankkuri', 'Mursu',
-  'Karavaani', 'Naali', 'Sekstantti', 'Haikara', 'Matkalaukku', 'Sorsa',
+  'Ilves', 'Majakka', 'Kompassi', 'Hylje', 'Kurki', 'Höyryveturi',
+  'Ankkuri', 'Näätä', 'Merikotka', 'Sekstantti', 'Karhu', 'Priki',
+  'Karttapallo', 'Susi', 'Peura', 'Lyhty', 'Kirjekyyhky', 'Taskukello',
+  'Saukko', 'Huuhkaja', 'Postivaunu', 'Kiikari', 'Mursu', 'Villihanhi',
 ];
 
 /** Yksi satunnainen nimimerkki generaattorista. */
@@ -332,7 +335,7 @@ function sahkeMerkitseNahdyksi(...tunnukset) {
  * verkkovirhettä pelin läpi. Aikakatkaisu on oma, koska selaimen oma
  * odotus voi olla minuutteja — ja sähke on nopea tai sitä ei ole.
  */
-async function sahkeKutsu(polku, { method = 'GET', body = null } = {}) {
+async function sahkeKutsu(polku, { method = 'GET', body = null, otsakkeet = {} } = {}) {
   if (!SAHKE_OSOITE) throw new Error('Sähkelinjaa ei ole kytketty');
   const ohjain = new AbortController();
   const katko = setTimeout(() => ohjain.abort(), SAHKE_AIKAKATKO_MS);
@@ -340,7 +343,8 @@ async function sahkeKutsu(polku, { method = 'GET', body = null } = {}) {
     const vastaus = await fetch(`${SAHKE_OSOITE}${polku}`, {
       method,
       signal: ohjain.signal,
-      ...(body ? { headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) } : {}),
+      headers: { ...otsakkeet, ...(body ? { 'content-type': 'application/json' } : {}) },
+      ...(body ? { body: JSON.stringify(body) } : {}),
     });
     let data = null;
     try { data = await vastaus.json(); } catch { /* tyhjä runko */ }
@@ -363,10 +367,9 @@ function sahkeLiityRetkikuntaan(koodi, nimimerkki) {
 
 /** Retkikunnan tila: jäsenet, sähkeet, apupyynnöt ja apuvastaukset. */
 function sahkeHaeTila(tunnus) {
-  const kysely = new URLSearchParams({
-    koodi: tunnus.koodi, jasenId: tunnus.jasenId, avain: tunnus.avain,
-  });
-  return sahkeKutsu(`/retkikunta/tila?${kysely}`);
+  // Jäsenavain otsakkeessa, ei osoitteessa (1.10.2026: ?avain= jäi palvelinlokeihin; worker AVAIN_OTSAKE).
+  const kysely = new URLSearchParams({ koodi: tunnus.koodi, jasenId: tunnus.jasenId });
+  return sahkeKutsu(`/retkikunta/tila?${kysely}`, { otsakkeet: { 'x-sahke-avain': tunnus.avain } });
 }
 
 /** Sähke retkikunnalle. */
@@ -1048,7 +1051,7 @@ function sahkePaivitaApu(ui) {
   nappi.disabled = Boolean(quiz.kaveriapu);
   nappi.textContent = quiz.kaveriapu
     ? 'Kaverilta kysytty'
-    : `Kysy kaverilta (${KAVERIAPU_HINTA}\u00a0£)`;
+    : `Kysy kaverilta (£${KAVERIAPU_HINTA})`;
   /*
    * onclick eikä addEventListener: nappi asuu index.html:n pysyvässä
    * kysymysdialogissa ja elää yli pelikertojen, mutta UI-olio vaihtuu

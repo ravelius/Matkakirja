@@ -1,0 +1,998 @@
+{
+ "tunnus": "marcus",
+ "nimi": "Marcus Aurelius",
+ "nimiRivit": [
+  "MARCUS",
+  "AURELIUS"
+ ],
+ "vuodet": "121–180 jaa.",
+ "kysymys": "Miten pitäisi elää?",
+ "malli": "ajattelijat/marcus/v1/marcus-L1.glb",
+ "kartta": {
+  "glb": "ajattelijat/kartta/v1/marcus-kartta.glb",
+  "maa": "ITA",
+  "piste": [
+   42.82,
+   12.17
+  ]
+ },
+ "kipsi": "ajattelijat/yhteiset/kipsi-nor-1k.jpg",
+ "korkeus": 0.51,
+ "paa": [
+  0,
+  -0.06,
+  0.38
+ ],
+ "avainvalo": {
+  "suunta": [
+   0.7,
+   -0.7,
+   0.85
+  ],
+  "etaisyys": 1.3,
+  "keila": 32,
+  "tahtays": [
+   0,
+   -0.06,
+   0.43
+  ]
+ },
+ "tausta": 0.012,
+ "otokset": {
+  "rembrandt": {
+   "paikka": [
+    -0.36,
+    -1.24,
+    0.24
+   ],
+   "katse": [
+    -0.075,
+    -0.06,
+    0.39
+   ],
+   "mm": 35
+  }
+ },
+ "kierros": {
+  "paalause": "itselleen-10-16"
+ },
+ "linssi": 18,
+ "kierto": 22,
+ "liuku": 0.008,
+ "paalauseet": {
+  "itselleen-10-16": {
+   "fi": "Älä enää puhu siitä, millainen hyvän ihmisen pitäisi olla. Ole sellainen.",
+   "el": "Μηκέθ᾽ ὅλως περὶ τοῦ οἷόν τινα εἶναι τὸν ἀγαθὸν ἄνδρα διαλέγεσθαι, ἀλλὰ εἶναι τοιοῦτον.",
+   "viite": "Marcus Aurelius, Itselleen 10.16",
+   "sade": [
+    -0.005,
+    0.418
+   ],
+   "vino": [
+    -0.4,
+    -0.15,
+    -0.3
+   ],
+   "ala": 0.075,
+   "etaisyys": 0.6,
+   "korkeus": 0.025625,
+   "kameraKulma": 55,
+   "kameraMatka": 0.11
+  },
+  "itselleen-4-49": {
+   "fi": "Ole kuin niemi, johon aallot lyövät lakkaamatta. Se pysyy paikallaan, ja vesi tyyntyy sen ympärillä.",
+   "el": "Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται· ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος.",
+   "viite": "Marcus Aurelius, Itselleen 4.49",
+   "sade": [
+    -0.035,
+    0.36
+   ],
+   "vino": [
+    -0.55,
+    -0.15,
+    -0.3
+   ],
+   "ala": 0.065,
+   "etaisyys": 0.6,
+   "korkeus": 0.02125
+  },
+  "itselleen-2-11": {
+   "fi": "Tee, sano ja ajattele kaikki niin, kuin voisit jo nyt lähteä elämästä.",
+   "el": "Ὡς ἤδη δυνατοῦ ὄντος ἐξιέναι τοῦ βίου, οὕτως ἕκαστα ποιεῖν καὶ λέγειν καὶ διανοεῖσθαι.",
+   "viite": "Marcus Aurelius, Itselleen 2.11",
+   "sivulta": [
+    -0.08,
+    0.375
+   ],
+   "vino": [
+    0,
+    -0.45,
+    -0.25
+   ],
+   "ala": 0.075,
+   "etaisyys": 0.6,
+   "korkeus": 0.02375
+  },
+  "kysymys": {
+   "fi": "Miten pitäisi elää?",
+   "el": "",
+   "viite": "",
+   "korkeus": 0.022
+  }
+ },
+ "ajat": {
+  "nimi": [
+   184,
+   249
+  ],
+  "kysymys": [
+   250,
+   338
+  ],
+  "lahesty": [
+   364,
+   457
+  ],
+  "vieritys": [
+   427,
+   797
+  ],
+  "proj": [
+   457,
+   802
+  ],
+  "lahde": [
+   804,
+   852
+  ],
+  "kaariLoppu": 867,
+  "kaiku": [
+   867,
+   1342
+  ],
+  "pito": 1352
+ },
+ "prologi": {
+  "kytkin": 30,
+  "taysi": 58,
+  "loppu": 75,
+  "kamera": {
+   "paikka": [
+    -0.22,
+    -1.15,
+    0.34
+   ],
+   "katse": [
+    0,
+    -0.04,
+    0.3
+   ],
+   "mm": 35
+  },
+  "vari": [
+   1,
+   0.86,
+   0.66
+  ],
+  "valot": [
+   {
+    "paikka": [
+     -0.36,
+     0.5,
+     0.3
+    ],
+    "kohde": [
+     0,
+     -0.08,
+     0.38
+    ],
+    "teho": 75,
+    "keila": 22,
+    "blend": 0.45
+   },
+   {
+    "paikka": [
+     0.36,
+     0.5,
+     0.3
+    ],
+    "kohde": [
+     0,
+     -0.08,
+     0.38
+    ],
+    "teho": 75,
+    "keila": 22,
+    "blend": 0.45
+   },
+   {
+    "paikka": [
+     0,
+     0.35,
+     0.95
+    ],
+    "kohde": [
+     0,
+     -0.05,
+     0.5
+    ],
+    "teho": 60,
+    "keila": 15,
+    "blend": 0.45
+   }
+  ]
+ },
+ "intro": {
+  "otokset": [
+   [
+    1,
+    [
+     -0.85,
+     0.3,
+     0.52
+    ],
+    [
+     0,
+     -0.04,
+     0.38
+    ],
+    35,
+    "BEZIER"
+   ],
+   [
+    60,
+    [
+     -0.8,
+     0.1,
+     0.48
+    ],
+    [
+     0,
+     -0.05,
+     0.38
+    ],
+    35
+   ],
+   [
+    61,
+    [
+     -0.72,
+     -0.08,
+     0.35
+    ],
+    [
+     0,
+     -0.08,
+     0.34
+    ],
+    45
+   ],
+   [
+    118,
+    [
+     0.22,
+     -0.55,
+     0.445
+    ],
+    [
+     0.03,
+     -0.12,
+     0.412
+    ],
+    50
+   ],
+   [
+    136,
+    [
+     -0.5,
+     -0.06,
+     0.26
+    ],
+    [
+     0,
+     -0.06,
+     0.26
+    ],
+    50
+   ],
+   [
+    154,
+    [
+     -0.42,
+     -0.52,
+     0.82
+    ],
+    [
+     0,
+     -0.07,
+     0.4
+    ],
+    35
+   ]
+  ],
+  "valo": [
+   [
+    1,
+    [
+     1.075,
+     0.591,
+     0.43
+    ]
+   ],
+   [
+    61,
+    [
+     1.129,
+     -0.508,
+     0.395
+    ]
+   ],
+   [
+    136,
+    [
+     0.806,
+     -1.014,
+     0.104
+    ]
+   ],
+   [
+    154,
+    [
+     0.278,
+     0.612,
+     1.113
+    ]
+   ],
+   [
+    184,
+    [
+     1.085,
+     -0.343,
+     0.628
+    ]
+   ]
+  ],
+  "tayte": 0
+ },
+ "taustavirta": {
+  "sumeus": 0.04,
+  "riviTila": 2,
+  "riviKorkeus": 80,
+  "riviKoko": 0.8,
+  "etaisyys": 0.9,
+  "blend": 0.5,
+  "voimaKerroin": 3,
+  "siemen": 38,
+  "nopeus": {
+   "mms": 25,
+   "vaihtelu": 0.15
+  },
+  "rivikork": [
+   0.009,
+   0.012,
+   0.015,
+   0.019
+  ],
+  "kirkkaus": {
+   "el": [
+    0.1,
+    0.28
+   ],
+   "fi": [
+    0.08,
+    0.13
+   ]
+  },
+  "kulma": 7,
+  "projektorit": [
+   {
+    "kohde": [
+     0,
+     -0.1,
+     0.33
+    ],
+    "suunta": [
+     0,
+     -1,
+     0.1
+    ],
+    "ala": 0.3,
+    "riveja": 6
+   },
+   {
+    "kohde": [
+     0,
+     -0.03,
+     0.47
+    ],
+    "suunta": [
+     0,
+     -0.55,
+     1
+    ],
+    "ala": 0.26,
+    "riveja": 5
+   },
+   {
+    "kohde": [
+     0,
+     0.05,
+     0.47
+    ],
+    "suunta": [
+     0,
+     0.6,
+     1
+    ],
+    "ala": 0.24,
+    "riveja": 3,
+    "pehmeys": 1.5
+   },
+   {
+    "kohde": [
+     -0.09,
+     -0.04,
+     0.38
+    ],
+    "suunta": [
+     -1,
+     -0.35,
+     0.15
+    ],
+    "ala": 0.22,
+    "riveja": 3,
+    "pehmeys": 1.3
+   },
+   {
+    "kohde": [
+     0.09,
+     -0.04,
+     0.38
+    ],
+    "suunta": [
+     1,
+     -0.35,
+     0.15
+    ],
+    "ala": 0.22,
+    "riveja": 3,
+    "pehmeys": 1.3
+   }
+  ],
+  "ajat": [
+   364,
+   442,
+   802,
+   852
+  ],
+  "rivit": [
+   [
+    "el",
+    "times",
+    "Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται· ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος."
+   ],
+   [
+    "el",
+    "baskerville",
+    "Ὡς ἤδη δυνατοῦ ὄντος ἐξιέναι τοῦ βίου, οὕτως ἕκαστα ποιεῖν καὶ λέγειν καὶ διανοεῖσθαι."
+   ],
+   [
+    "el",
+    "times",
+    "Μηκέθ᾽ ὅλως περὶ τοῦ οἷόν τινα εἶναι τὸν ἀγαθὸν ἄνδρα διαλέγεσθαι, ἀλλὰ εἶναι τοιοῦτον."
+   ],
+   [
+    "el",
+    "baskerville",
+    "Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται· ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος."
+   ],
+   [
+    "el",
+    "times",
+    "Ὡς ἤδη δυνατοῦ ὄντος ἐξιέναι τοῦ βίου, οὕτως ἕκαστα ποιεῖν καὶ λέγειν καὶ διανοεῖσθαι."
+   ],
+   [
+    "el",
+    "baskerville",
+    "Μηκέθ᾽ ὅλως περὶ τοῦ οἷόν τινα εἶναι τὸν ἀγαθὸν ἄνδρα διαλέγεσθαι, ἀλλὰ εἶναι τοιοῦτον."
+   ],
+   [
+    "el",
+    "times",
+    "Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται· ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος."
+   ],
+   [
+    "el",
+    "baskerville",
+    "Ὡς ἤδη δυνατοῦ ὄντος ἐξιέναι τοῦ βίου, οὕτως ἕκαστα ποιεῖν καὶ λέγειν καὶ διανοεῖσθαι."
+   ],
+   [
+    "el",
+    "times",
+    "Μηκέθ᾽ ὅλως περὶ τοῦ οἷόν τινα εἶναι τὸν ἀγαθὸν ἄνδρα διαλέγεσθαι, ἀλλὰ εἶναι τοιοῦτον."
+   ],
+   [
+    "el",
+    "baskerville",
+    "Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται· ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος."
+   ],
+   [
+    "el",
+    "times",
+    "Ὡς ἤδη δυνατοῦ ὄντος ἐξιέναι τοῦ βίου, οὕτως ἕκαστα ποιεῖν καὶ λέγειν καὶ διανοεῖσθαι."
+   ],
+   [
+    "el",
+    "baskerville",
+    "Μηκέθ᾽ ὅλως περὶ τοῦ οἷόν τινα εἶναι τὸν ἀγαθὸν ἄνδρα διαλέγεσθαι, ἀλλὰ εἶναι τοιοῦτον."
+   ],
+   [
+    "el",
+    "times",
+    "Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται· ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος."
+   ],
+   [
+    "el",
+    "baskerville",
+    "Ὡς ἤδη δυνατοῦ ὄντος ἐξιέναι τοῦ βίου, οὕτως ἕκαστα ποιεῖν καὶ λέγειν καὶ διανοεῖσθαι."
+   ],
+   [
+    "el",
+    "times",
+    "Μηκέθ᾽ ὅλως περὶ τοῦ οἷόν τινα εἶναι τὸν ἀγαθὸν ἄνδρα διαλέγεσθαι, ἀλλὰ εἶναι τοιοῦτον."
+   ],
+   [
+    "el",
+    "baskerville",
+    "Ὅμοιον εἶναι τῇ ἄκρᾳ, ᾗ διηνεκῶς τὰ κύματα προσρήσσεται· ἡ δὲ ἕστηκε καὶ περὶ αὐτὴν κοιμίζεται τὰ φλεγμήναντα τοῦ ὕδατος."
+   ],
+   [
+    "el",
+    "times",
+    "Ὡς ἤδη δυνατοῦ ὄντος ἐξιέναι τοῦ βίου, οὕτως ἕκαστα ποιεῖν καὶ λέγειν καὶ διανοεῖσθαι."
+   ],
+   [
+    "el",
+    "baskerville",
+    "Μηκέθ᾽ ὅλως περὶ τοῦ οἷόν τινα εἶναι τὸν ἀγαθὸν ἄνδρα διαλέγεσθαι, ἀλλὰ εἶναι τοιοῦτον."
+   ],
+   [
+    "fi",
+    "iowan-ohut",
+    "Ole kuin niemi, johon aallot lyövät lakkaamatta."
+   ],
+   [
+    "fi",
+    "iowan-ohut",
+    "Tee, sano ja ajattele kaikki niin, kuin voisit jo nyt lähteä elämästä."
+   ]
+  ]
+ },
+ "fontit": {
+  "iowan": {
+   "perhe": "\"Iowan Old Style\", Charter, Palatino, serif",
+   "paino": "bold"
+  },
+  "baskerville": {
+   "perhe": "Baskerville, \"Baskerville Old Face\", \"Times New Roman\", serif",
+   "paino": "normal"
+  },
+  "times": {
+   "perhe": "\"Times New Roman\", Times, serif",
+   "paino": "italic normal"
+  },
+  "iowan-ohut": {
+   "perhe": "\"Iowan Old Style\", Charter, Palatino, serif",
+   "paino": "italic normal"
+  },
+  "gentium-plus": {
+   "perhe": "\"Gentium Plus\", serif",
+   "paino": "normal",
+   "tiedosto": "ajattelijat/fontit/v1/GentiumPlus-Regular.ttf"
+  },
+  "gfs-didot": {
+   "perhe": "\"GFS Didot\", serif",
+   "paino": "normal",
+   "tiedosto": "ajattelijat/fontit/v1/GFSDidot-Regular.ttf"
+  },
+  "gfs-solomos": {
+   "perhe": "\"GFS Solomos\", serif",
+   "paino": "normal",
+   "tiedosto": "ajattelijat/fontit/v1/GFSSolomos.otf"
+  }
+ },
+ "ca": 0.014,
+ "syvyys": 0.022,
+ "tykki": {
+  "vari": [
+   1,
+   0.93,
+   0.8
+  ]
+ },
+ "kaiku": {
+  "kuva": "ajattelijat/marcus/v1/kaiku-sade.png",
+  "lev": 0.07,
+  "vino": [
+   -0.1,
+   -0.05,
+   -0.08
+  ],
+  "etaisyys": 0.6,
+  "voima": 20,
+  "liuku": 0.05,
+  "savy": [
+   1,
+   0.78,
+   0.52
+  ],
+  "blend": 0.3,
+  "kamera": {
+   "suunta": [
+    0.08,
+    -0.05,
+    -0.12
+   ],
+   "matka": [
+    0.15,
+    0.14
+   ],
+   "liuku": 0.006,
+   "mm": 35,
+   "siirtyma": 45
+  },
+  "tayte": {
+   "osuus": 0.1,
+   "suunta": [
+    -0.65,
+    -0.25,
+    0.7
+   ],
+   "vari": [
+    0.9,
+    0.94,
+    1
+   ],
+   "keila": 45,
+   "blend": 0.7
+  },
+  "nimeaminen": "Nico Kokkonen, CC BY 3.0, Wikimedia Commons (Column_of_Marcus_Aurelius_-_detail2.jpg)"
+ },
+ "aani": {
+  "puhe": "ajattelijat/marcus/v1/kierros1-puhe.mp3",
+  "musiikki": "ajattelijat/marcus/v1/kierros1-musiikki.mp3"
+ },
+ "syke": "ajattelijat/marcus/v1/syke-musiikki.json",
+ "aikajana": {
+  "luvut": {
+   "tiedosto": "docs/raportit/ajattelijat-v11/marcus-luvut-v14.json",
+   "haara": "linnanrakentaja-sokrates-bysti",
+   "versio": "f55de4076",
+   "kaiut": "ajattelijat/marcus/v5/kaiut-paikka",
+   "savu": "ajattelijat/sokrates/v3/savu-atlas-v5.png",
+   "savuYdin": 0.286,
+   "paalauseet": {
+    "211": "itselleen-2-11",
+    "449": "itselleen-4-49",
+    "1016": "itselleen-10-16"
+   }
+  },
+  "lauseKortti": {
+   "merkkeja": 24,
+   "leveys": 0.11,
+   "siirto": -0.02
+  },
+  "virtaPorrastus": {
+   "alku": 286,
+   "vali": 15,
+   "haivytys": 9,
+   "rintama": 4,
+   "reuna": 0.35
+  },
+  "virtaVoima": 0.065,
+  "aani": {
+   "puhe": "ajattelijat/marcus/v4/v14-puhe.mp3",
+   "musiikki": "ajattelijat/marcus/v4/v14-musiikki.mp3"
+  },
+  "syke": "ajattelijat/marcus/v4/syke-v14.json"
+ },
+ "kierrokset": {
+  "aani": {
+   "puhe": "ajattelijat/marcus/v1/kierrokset-puhe.mp3",
+   "musiikki": "ajattelijat/marcus/v1/kierrokset-musiikki.mp3"
+  },
+  "syke": "ajattelijat/marcus/v1/syke-kierrokset.json",
+  "loppu": 3232,
+  "lista": [
+   {
+    "paalause": "itselleen-4-49",
+    "vieritys": [
+     1382,
+     1657
+    ],
+    "lahde": [
+     1664,
+     1712
+    ],
+    "virta": [
+     1352,
+     1402,
+     1662,
+     1712
+    ],
+    "siemen": 21,
+    "kaiku": {
+     "kuva": "ajattelijat/marcus/v1/kaiku-uhri.png",
+     "kohde": {
+      "sade": [
+       0.04,
+       0.374
+      ]
+     },
+     "ruudut": [
+      1772,
+      2202
+     ],
+     "vino": [
+      -0.15,
+      0,
+      0.1
+     ],
+     "etaisyys": 0.5,
+     "lev": 0.03,
+     "voima": 15,
+     "liuku": 0.08,
+     "tayte": {
+      "suunta": [
+       -0.55,
+       -0.55,
+       0.6
+      ]
+     }
+    }
+   },
+   {
+    "paalause": "itselleen-2-11",
+    "vieritys": [
+     2232,
+     2497
+    ],
+    "lahde": [
+     2504,
+     2552
+    ],
+    "virta": [
+     2202,
+     2252,
+     2502,
+     2552
+    ],
+    "siemen": 49,
+    "kaiku": {
+     "kuva": "ajattelijat/marcus/v1/kaiku-kuolema.png",
+     "kohde": {
+      "sivulta": [
+       -0.08,
+       0.375
+      ]
+     },
+     "ruudut": [
+      2557,
+      3152
+     ],
+     "vino": [
+      0,
+      -0.1,
+      0.05
+     ],
+     "etaisyys": 0.6,
+     "lev": 0.07,
+     "voima": 30,
+     "liuku": 0.05,
+     "tayte": {
+      "suunta": [
+       0.45,
+       0.75,
+       0.55
+      ]
+     }
+    }
+   }
+  ],
+  "kamera": [
+   [
+    1352,
+    [
+     0.0011,
+     -0.245,
+     0.4355
+    ],
+    [
+     -0.002,
+     -0.1058,
+     0.418
+    ],
+    35
+   ],
+   [
+    1412,
+    [
+     -0.0866,
+     -0.1345,
+     0.2729
+    ],
+    [
+     -0.0376,
+     -0.0873,
+     0.36
+    ],
+    18
+   ],
+   [
+    1712,
+    [
+     -0.0441,
+     -0.1571,
+     0.2729
+    ],
+    [
+     -0.0324,
+     -0.0901,
+     0.36
+    ],
+    18
+   ],
+   [
+    1772,
+    [
+     0.0682,
+     -0.1507,
+     0.3375
+    ],
+    [
+     0.04,
+     -0.0915,
+     0.374
+    ],
+    50
+   ],
+   [
+    2202,
+    [
+     0.0699,
+     -0.1509,
+     0.3392
+    ],
+    [
+     0.04,
+     -0.0915,
+     0.374
+    ],
+    50
+   ],
+   [
+    2262,
+    [
+     0.0875,
+     -0.1567,
+     0.301
+    ],
+    [
+     0.0531,
+     -0.082,
+     0.375
+    ],
+    18
+   ],
+   [
+    2552,
+    [
+     0.1272,
+     -0.1219,
+     0.301
+    ],
+    [
+     0.0577,
+     -0.078,
+     0.375
+    ],
+    18
+   ],
+   [
+    2602,
+    [
+     0.1578,
+     -0.2157,
+     0.3756
+    ],
+    [
+     0.0554,
+     -0.08,
+     0.375
+    ],
+    35
+   ],
+   [
+    3152,
+    [
+     0.1578,
+     -0.2024,
+     0.3755
+    ],
+    [
+     0.0584,
+     -0.0774,
+     0.375
+    ],
+    35
+   ],
+   [
+    3212,
+    [
+     -0.36,
+     -1.24,
+     0.24
+    ],
+    [
+     -0.075,
+     -0.06,
+     0.39
+    ],
+    35
+   ],
+   [
+    3232,
+    [
+     -0.36,
+     -1.24,
+     0.24
+    ],
+    [
+     -0.075,
+     -0.06,
+     0.39
+    ],
+    35
+   ]
+  ]
+ },
+ "elama": {
+  "otsikko": "Marcus Aureliuksen elämä",
+  "kappaleet": [
+   {
+    "otsikko": "Rikkaan suvun poika",
+    "teksti": "Marcus syntyi Roomassa 26.4.121. Hänen isänsä kuoli, kun Marcus oli kolmevuotias, ja poika kasvoi isoisänsä hoivissa."
+   },
+   {
+    "otsikko": "Hadrianuksen valinta",
+    "teksti": "Vuonna 138 keisari Hadrianus määräsi, että hänen seuraajansa Antoninus Pius adoptoi nuoren Marcuksen. Marcus oli nyt tulevan keisarin perillinen."
+   },
+   {
+    "otsikko": "Stoalainen opettaja",
+    "teksti": "Filosofian opettaja Rusticus antoi hänelle Epiktetoksen muistiinpanot, ja Marcus kääntyi stoalaisuuteen."
+   },
+   {
+    "otsikko": "Kaksi keisaria",
+    "teksti": "Vuonna 161 hän nousi valtaan mutta kieltäytyi hallitsemasta yksin: kanssakeisariksi tuli Lucius Verus. Valtakuntaa hallitsi ensimmäistä kertaa kaksi keisaria."
+   },
+   {
+    "otsikko": "Sota ja rutto",
+    "teksti": "Tonavan rajalla käytiin vuosina 166–180 sotia germaanikansoja vastaan. Samaan aikaan Antoninuksen rutto tappoi arvioiden mukaan miljoonia ihmisiä."
+   },
+   {
+    "otsikko": "Kuolema Tonavalla",
+    "teksti": "Marcus kuoli 17.3.180 Tonavan rajalla sotaretkellä. Vallan peri hänen poikansa Commodus."
+   },
+   {
+    "teksti": "Marcus kirjoitti muistiinpanonsa itselleen kreikaksi; teos Itselleen on yksi tärkeimmistä lähteistä, joiden kautta stoalaisuutta tunnetaan."
+   }
+  ]
+ },
+ "pulunKysymykset": [
+  "Mitä stoalaisuus on?",
+  "Miksi Marcus kirjoitti itselleen muistiinpanoja?",
+  "Millainen ihminen Marcus Aurelius oli?",
+  "Miten Marcus Aurelius vaikutti stoalaisuuteen?",
+  "Missä Marcuksen ajatukset näkyvät nykyään?"
+ ]
+}

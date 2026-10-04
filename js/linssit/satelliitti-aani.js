@@ -201,9 +201,25 @@ export function astronautinKanavaPaalla(nimi) {
   return astronautinKanava(nimi) === 'musiikki' ? musiikkiPaalla() : Boolean(sfx?.enabled);
 }
 
+/*
+ * CUPOLASSA LINSSIN HUMINA VAIKENEE (30.9.2026). ISS-kyydin Cupola-
+ * ikkunalla on oma humina ja radio (js/linssit/cupola-aani.js); kaksi
+ * aseman huminaa päällekkäin olisi puuroa. Soitin jää käyntiin nollassa,
+ * joten ikkunasta palattaessa humina nousee takaisin ilman uutta latausta.
+ */
+let huminaPois = false;
+
+export function asetaAstronautinHuminaPois(pois) {
+  const uusi = Boolean(pois);
+  if (uusi === huminaPois) return;
+  huminaPois = uusi;
+  nykyinen?.paivita?.(1200);
+}
+
 export function astronautinTaso(nimi) {
   const kerros = KERROKSET[nimi];
   if (!kerros || !astronautinKanavaPaalla(nimi)) return 0;
+  if (nimi === 'humina' && huminaPois) return 0;
   const oma = vaistonSyyt.includes(LINSSIN_HILJENNYS) ? vaistonPohja : vaisto;
   const saadin = astronautinKanava(nimi) === 'musiikki'
     ? musiikinKerroin()

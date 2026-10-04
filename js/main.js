@@ -3,7 +3,10 @@
 import { MUUTOKSET } from './muutokset.js';
 import { asetaKehittajanKerroin, kehittajanKerroin } from './kehittajan-voimat.js';
 import { Game } from './game.js';
-import { UI } from './ui.js';
+import { UI, korttiPohjalla, puePohjaDialogiksi } from './ui.js';
+import { paneeliPohjalla, puePilleriPaneeliksi } from './pilleri-paneeli.js';
+import { LINSSIT_AVAA_TAPAHTUMA } from './karttaselite.js';
+import { PAAVALIKKO_NAPILTA } from './ylapalkki-vaaka.js';
 import { asetaLiike, liikePaalla } from './kartta-liike.js';
 import {
   PIIRTOKOKEIDEN_VAIHTOEHDOT, asetaKehysprofiili, asetaPiirtokoe,
@@ -89,6 +92,9 @@ import { kytkeOsiohakKuvat } from './lehtiosiot-kuvat.js';
 import { kytkePulunPaikannus } from './pulu-paikka.js';
 import { animoiAvaus, asennaDialogianimaatiot, haamuSulku } from './avausanimaatio.js';
 import { lahetaKaynti, merkitseOmistajaOsoitteesta } from './kaynti.js';
+import { luoPohjaKortti } from './pohjat/pohjat.js';
+import { ajattelijaLipusta, avaaAjattelija } from './linssit/ajattelija.js';
+import { kytkeAjattelijaPaat } from './ajattelijapaat.js';
 
 // Dialogien avaus ja sulku animoiden (omistaja 29.9.2026, js/avausanimaatio.js erä B).
 asennaDialogianimaatiot();
@@ -172,7 +178,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-09-21.2489';
+const APP_VERSION = '2026-09-21.2600';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -323,7 +329,7 @@ function paivitaWidget(game) {
     kaupunki: city.name,
     maa: maa ?? '',
     paiva: game.dayCount(),
-    raha: `${game.player.money}\u00a0£`,
+    raha: `£${game.player.money}`,
   });
 }
 
@@ -537,6 +543,13 @@ function attach(game) {
     onNewGame: startGame, onChange: saveGame, onJatkaTurvasta: jatkaTurvasta, turvaOlemassa: () => Boolean(lataaTurva()),
   });
   ui.mount();
+  // PILLERIVALIKKO PANEELI-pohjalla (peruttava ?paneeli=vanha): puetaan kerran, nappien kohde on aina nykyinen UI.
+  if (paneeliPohjalla()) puePilleriPaneeliksi(() => ui);
+  // AJATTELIJAT-LINSSI, vaihe 1 (Päätoimittaja 2.10.2026): vain kehityslipulla ?ajattelija=sokrates, ei pelaajille.
+  // Ajattelijoiden päät kartuutsin lipun alla (omistaja 2.10.2026 klo 12.34): toistaiseksi vain kehittäjätilassa.
+  if (kehittajaTilaPaalla()) kytkeAjattelijaPaat(ui, { kehittaja: kehittajaTilaPaalla });
+  const ajattelija = ajattelijaLipusta();
+  if (ajattelija) avaaAjattelija(ajattelija).catch((syy) => console.warn('ajattelija', syy));
   // Kehityksen apuri konsolia varten. Vanha nimi jää rinnalle, koska
   // työkalut ja kuvakaappausskriptit käyttävät sitä.
   window.matkakirja = { game, ui, sfx };
@@ -620,7 +633,8 @@ const AANIKYTKIMET = [
   },
   {
     avain: 'tausta',
-    nimi: 'Äänimaisema',
+    // Valikossa "Tila" (omistaja 2.10.2026 klo 15.0x: "muuta äänimaisema muotoon tila").
+    nimi: 'Tila',
     seloste: 'Paikkojen äänitykset ja tehosteet — myös koko pelin mykistys',
     ikoni: '<path d="M4.5 9.4h2.8l4.2-3.4v12l-4.2-3.4H4.5z"/><path d="M15.4 8.6a4.4 4.4 0 0 1 0 6.8"/><path d="M18.2 6.2a7.6 7.6 0 0 1 0 11.6"/>',
     paalla: () => sfx.enabled,
@@ -1245,6 +1259,20 @@ const vaihdaValikko = (tapahtuma) => {
 
 menuBtn.addEventListener('click', vaihdaValikko);
 
+// Vaakatilan kartan hampurilainen (js/ylapalkki-vaaka.js; omistaja 2.10.2026 klo 23.07): ei yläpalkkia, valikko
+// avautuu suoraan napin päälle (js/pilleri-paneeli.js ankkuroi paneelin napin kulmaan).
+document.addEventListener(PAAVALIKKO_NAPILTA, (tapahtuma) => {
+  const lahde = tapahtuma.detail?.lahde ?? menuBtn;
+  if (paavalikko.hidden) avaaPaavalikko(lahde); else suljeValikko(lahde);
+});
+
+// Kartan Linssit-nappi (js/karttaselite.js, omistaja 2.10.2026 klo 13.56): pillerivalikko suoraan Linssit-näkymään.
+document.addEventListener(LINSSIT_AVAA_TAPAHTUMA, (tapahtuma) => {
+  const lahde = tapahtuma.detail?.lahde ?? menuBtn;
+  if (paavalikko.hidden) avaaPaavalikko(lahde);
+  ui?.naytaPilleriNakyma('linssit', { animoi: false });
+});
+
 /*
  * Valinta sulkee valikon. Kuuntelija on valikossa itsessään, joten
  * nappien omat toiminnot pysyvät siellä missä ne on määritelty.
@@ -1279,7 +1307,9 @@ menuBtn.addEventListener('click', vaihdaValikko);
 paavalikko.addEventListener('click', (event) => {
   const nappi = event.target.closest('button');
   if (!nappi) return;
-  if (nappi.closest('.kertoja-kotelo, .pilleri-pikanapit, .pilleri-alanakyma')) return;
+  // PANEELI-pohja: kytkinryhmä ja Asetukset-nappi vaihtavat tilaa tai näkymää; Ehdota sisältöä vie pois (sulkee).
+  if (!nappi.matches('[data-paneeli-sulje]')
+    && nappi.closest('.kertoja-kotelo, .pilleri-pikanapit, .pilleri-alanakyma, [data-paneeli-pysy]')) return;
   suljeValikko();
 }, true);
 
@@ -1310,7 +1340,7 @@ paavalikko.addEventListener('click', (event) => {
  *                laukaise pointerdownia).
  */
 document.addEventListener('pointerdown', (event) => {
-  if (!event.target.closest?.('.valikko-kotelo, #turn-pill, #paavalikko')) suljeValikko();
+  if (!event.target.closest?.('.valikko-kotelo, #turn-pill, #paavalikko, .ylapalkki-nappi')) suljeValikko();
 });
 
 document.addEventListener('keydown', (event) => {
@@ -1450,7 +1480,8 @@ function paivitaVersioKulma() {
   const numero = `v${APP_VERSION.split('.').pop()}`;
   // Kehittäjätila merkitään numeron perään (omistajan päätös 13.8.2026,
   // kumoaa 8.8. linjan): valikossa merkintä ei häiritse pelinäkymää.
-  versioKulma.textContent = kehittajaTilaPaalla() ? `${numero} · kehittäjä` : numero;
+  // Kehittäjätilassa versio suluissa kuten natiivin "v1.1 (120)" (omistaja 2.10.2026 klo 14.03); pelaajalle ennallaan.
+  versioKulma.textContent = kehittajaTilaPaalla() ? `kehittäjä (${numero})` : numero;
 }
 paivitaVersioKulma();
 
@@ -1497,6 +1528,8 @@ function avaaMuutokset() {
     for (const m of MUUTOKSET) muutoksetLista.appendChild(muutosRivi(m));
     lokiRakennettu = true;
   }
+  // KORTTI-pohja (peruttava ?kortti=vanha), kun lista on rakennettu.
+  if (korttiPohjalla()) puePohjaDialogiksi(muutoksetDialog, { sulje: '#muutokset-sulje' });
   muutoksetDialog.showModal();
 }
 
@@ -1583,7 +1616,55 @@ async function tyhjennaMuistit() {
   location.replace(osoite.toString());
 }
 
-document.getElementById('newgame-btn').addEventListener('click', () => nollaaDialog.showModal());
+/*
+ * UUDEN PELIN VAHVISTUS KORTTI-POHJALLA (UI-pohjat, omistaja 1.10.2026: ensin NOSTOKORTTI ja KORTTI, myös webiin).
+ * Modaali: sulkeutuu vain napeista. Teksti on sama kuin nollaa-dialogissa. Peruttavissa: KORTTI_VAHVISTUS_POHJA =
+ * false tai ?kortti=vanha (localStorage matkakirja-kortti = 'vanha'), jolloin vanha <dialog> aukeaa kuten ennen.
+ */
+const KORTTI_VAHVISTUS_POHJA = true;
+function vahvistusPohjalla() {
+  try {
+    const valinta = new URLSearchParams(location.search).get('kortti') ?? localStorage.getItem('matkakirja-kortti');
+    if (valinta === 'vanha') return false;
+    if (valinta === 'pohja') return true;
+  } catch { /* yksityinen selaus */ }
+  return KORTTI_VAHVISTUS_POHJA;
+}
+function avaaNollausKortti() {
+  const kortti = luoPohjaKortti({
+    yla: 'Uusi peli',
+    otsikko: 'Aloitetaanko uusi matka?',
+    kappaleet: [
+      { teksti: 'Matka alkaa alusta ja kaikki muistit tyhjennetään: tallennettu peli, passin leimat, laukun tavarat, ääniasetukset ja välimuisti.' },
+      { teksti: 'Tätä ei voi perua.', korostus: true },
+    ],
+    napit: [
+      { teksti: 'Peruuta', tyyppi: 'toiminto', toiminto: 'peruuta' },
+      { teksti: 'Aloita alusta', tyyppi: 'ensisijainen', toiminto: 'aloita' },
+    ],
+  }, {
+    modaali: true,
+    toiminnot: {
+      peruuta: () => {},
+      aloita: (_nappi, pohja) => {
+        const ok = pohja.kortti.querySelector('.tk-nappi--ensisijainen');
+        if (ok) { ok.disabled = true; ok.textContent = 'Tyhjennetään…'; }
+        merkitsePaivitys();
+        tyhjennaMuistit();
+        return false; // kortti jää auki, kunnes sivu latautuu uudelleen
+      },
+    },
+    sulje: (pohja) => setTimeout(() => pohja.el.remove(), 240),
+  });
+  if (!kortti) { nollaaDialog.showModal(); return; }
+  document.body.appendChild(kortti.el);
+  kortti.avaa();
+}
+
+document.getElementById('newgame-btn').addEventListener('click', () => {
+  if (vahvistusPohjalla()) avaaNollausKortti();
+  else nollaaDialog.showModal();
+});
 document.getElementById('nollaa-peru').addEventListener('click', () => nollaaDialog.close());
 document.getElementById('nollaa-ok').addEventListener('click', () => {
   const nappi = document.getElementById('nollaa-ok');
@@ -1933,6 +2014,7 @@ if (paivitysTapahtui && edellinenVersio && !katseluPack && !suoraanKartallePaall
   paivitysDialog.addEventListener('click', (e) => {
     if (e.target === paivitysDialog) paivitysDialog.close();
   });
+  if (korttiPohjalla()) puePohjaDialogiksi(paivitysDialog, { sulje: '#paivitys-sulje' });
   paivitysDialog.showModal();
 }
 

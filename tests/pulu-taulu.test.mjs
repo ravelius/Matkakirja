@@ -65,8 +65,8 @@ function luoPallo(kello, { kyyti = true, kesto = 500, paljastettu = true } = {})
     kyytiMoodi: kyyti ? () => ({ tila, siirtyy: kello.nyt() < siirtyyAsti }) : () => null,
     napautaIss() {
       p.napautuksia += 1;
-      if (tila === 'kauko') tila = 'seuranta';
-      else tila = tila === 'seuranta' ? 'ikkuna' : 'seuranta';
+      // Kuten js/linssit/iss-kyyti.js ilman kehittäjälippua: kauko → ikkuna, kohde → ikkuna (ISS:n rinnalla pois 2.10.2026).
+      if (tila !== 'ikkuna') tila = 'ikkuna';
       siirtyyAsti = kello.nyt() + kesto;
       return true;
     },
@@ -141,7 +141,9 @@ const soitin = () => ({ paused: false, ended: false });
 /* ---------- rivit ja moodi ---------- */
 
 test('rivit ovat dataa: tunnus, otsikko, moodi ja saatavilla(); vain moodit, ei kyydin säätimiä', () => {
-  assert.deepEqual(ASTRO_TAULUN_RIVIT.map((r) => r.tunnus), ['pallo', 'iss-rinnalla', 'iss-sisalle', 'kuvat']);
+  // ISS:n rinnalla poistettu pelistä (omistaja 2.10.2026 klo 10.4x).
+  assert.deepEqual(ASTRO_TAULUN_RIVIT.map((r) => r.tunnus), ['pallo', 'iss-sisalle', 'kuvat']);
+  assert.doesNotMatch(ASTRO_TAULUN_RIVIT.map((r) => r.otsikko).join(' '), /rinnalla/);
   for (const r of ASTRO_TAULUN_RIVIT) {
     assert.equal(typeof r.otsikko, 'string');
     assert.equal(typeof r.saatavilla, 'function');
@@ -155,11 +157,11 @@ test('rivit ovat dataa: tunnus, otsikko, moodi ja saatavilla(); vain moodit, ei 
 test('saatavuus: ISS-rivit vain kyydin kanssa, kuvat vain kuvallisilla kohteilla', () => {
   const kello = luoKello();
   const kaikki = taulunRivit({ avaruus: luoPallo(kello), kuvaAuki: () => false, kuviaOn: () => true });
-  assert.deepEqual(kaikki.map((r) => r.tunnus), ['pallo', 'iss-rinnalla', 'iss-sisalle', 'kuvat']);
+  assert.deepEqual(kaikki.map((r) => r.tunnus), ['pallo', 'iss-sisalle', 'kuvat']);
   const ilmanKyytia = taulunRivit({ avaruus: luoPallo(kello, { kyyti: false }), kuvaAuki: () => false, kuviaOn: () => true });
   assert.deepEqual(ilmanKyytia.map((r) => r.tunnus), ['pallo', 'kuvat']);
   const ilmanKuvia = taulunRivit({ avaruus: luoPallo(kello), kuvaAuki: () => false, kuviaOn: () => false });
-  assert.deepEqual(ilmanKuvia.map((r) => r.tunnus), ['pallo', 'iss-rinnalla', 'iss-sisalle']);
+  assert.deepEqual(ilmanKuvia.map((r) => r.tunnus), ['pallo', 'iss-sisalle']);
   // Kaatuva saatavuus piilottaa rivin eikä kaada taulua.
   const kaatuva = [{ tunnus: 'x', moodi: 'pallo', otsikko: 'x', selite: '', saatavilla: () => { throw new Error('x'); } }];
   assert.deepEqual(taulunRivit({}, kaatuva), []);
@@ -172,8 +174,8 @@ test('nykyinen moodi on valittuna: pallo, seuranta, ikkuna (myös ylilento), kuv
   const valittu = () => taulunRivit(k).filter((r) => r.aktiivinen).map((r) => r.tunnus);
   assert.equal(nykyinenMoodi(k), 'pallo');
   assert.deepEqual(valittu(), ['pallo']);
-  pallo.asetaTila('seuranta');
-  assert.deepEqual(valittu(), ['iss-rinnalla']);
+  pallo.asetaTila('seuranta');   // vain kehittäjälipulla ?issseuranta: taulussa ei ole sille riviä
+  assert.deepEqual(valittu(), []);
   pallo.asetaTila('ikkuna');
   assert.deepEqual(valittu(), ['iss-sisalle']);
   pallo.asetaTila('kohde');
@@ -207,23 +209,19 @@ test('moodin askeleet: yksi toimi kerrallaan, siirtymän aikana odotetaan', () =
 
 /* ---------- moodista toiseen taulun kautta ---------- */
 
-test('ISS:n sisälle pallonäkymästä: kaksi napautusta, jälkimmäinen lennon jälkeen', () => {
+test('ISS:n sisälle pallonäkymästä: yksi napautus suoraan Cupolaan (ISS:n rinnalla pois 2.10.2026)', () => {
   const { taulu, kello, pallo } = luoTaulu({ automaatti: false });
   taulu.avaa();
   assert.ok(taulu.valitse('iss-sisalle'));
   assert.equal(taulu.tila().auki, false, 'valinta sulkee taulun');
   assert.equal(pallo.napautuksia, 1);
-  kello.kulje(MOODIN_ASKEL_MS * 2);
-  assert.equal(pallo.napautuksia, 1, 'lento seurantaan kesken: ei toista napautusta');
-  kello.kulje(600);
-  assert.equal(pallo.napautuksia, 2);
-  kello.kulje(1000);
+  kello.kulje(MOODIN_ASKEL_MS * 2 + 1600);
+  assert.equal(pallo.napautuksia, 1, 'ei toista napautusta: ei välivaihetta seurannassa');
   assert.equal(pallo.kyytiMoodi().tila, 'ikkuna');
   assert.equal(taulu.tila().moodi, 'ikkuna');
   assert.equal(taulu.tila().vaihto, null);
   assert.ok(taulu.tila().loki.includes('moodi:ikkuna:perilla'));
 });
-
 test('kyydistä kuviin: ensin pois kyydistä, kuvat vasta paluun jälkeen; kuvista palloon sulkee kuvan', () => {
   const { taulu, kello, pallo, kuvaToimet, kuva } = luoTaulu({ automaatti: false });
   pallo.asetaTila('seuranta');
@@ -239,16 +237,15 @@ test('kyydistä kuviin: ensin pois kyydistä, kuvat vasta paluun jälkeen; kuvis
   assert.equal(taulu.tila().moodi, 'pallo');
 });
 
-test('kuvista ISS:n rinnalle: kuva kiinni ensin, sitten napautus', () => {
+test('kuvista ISS:n sisälle: kuva kiinni ensin, sitten yksi napautus suoraan Cupolaan', () => {
   const { taulu, kello, pallo, kuvaToimet } = luoTaulu({ automaatti: false, kuva: { auki: true } });
-  taulu.valitse('iss-rinnalla');
+  taulu.valitse('iss-sisalle');
   assert.deepEqual(kuvaToimet, ['sulje']);
   kello.kulje(MOODIN_ASKEL_MS);
   assert.equal(pallo.napautuksia, 1);
   kello.kulje(1000);
-  assert.equal(pallo.kyytiMoodi().tila, 'seuranta');
+  assert.equal(pallo.kyytiMoodi().tila, 'ikkuna');
 });
-
 test('valittu (nykyinen) moodi vain sulkee taulun; uusi valinta korvaa kesken olevan', () => {
   const { taulu, kello, pallo } = luoTaulu({ automaatti: false });
   taulu.avaa();

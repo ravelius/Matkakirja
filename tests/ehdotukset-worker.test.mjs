@@ -246,6 +246,26 @@ test('kohde palauttaa kuvan vain avaimella', async () => {
   assert.equal(kanssa.headers.get('content-type'), 'image/jpeg');
 });
 
+// Avain otsakkeessa (1.10.2026, tietoturvakorjaus): ei osoitteessa lokeihin. Kysely kelpaa siirtymän ajan.
+test('avain kelpaa x-matkakirja-avain-otsakkeesta, väärä otsake hylätään, CORS sallii otsakkeen', async () => {
+  const { ymparisto } = await ampariKahdella();
+  const otsake = (a) => new Request('https://x.dev/lista', { headers: { 'x-matkakirja-avain': a } });
+  assert.equal((await kasittele(otsake(AVAIN), ymparisto)).status, 200);
+  assert.equal((await kasittele(otsake('huti'), ymparisto)).status, 401);
+  const esikysely = await kasittele(new Request('https://x.dev/lista', {
+    method: 'OPTIONS', headers: { origin: PELI },
+  }), ymparisto);
+  assert.match(esikysely.headers.get('access-control-allow-headers') ?? '', /x-matkakirja-avain/);
+});
+
+test('web-asiakas ei laita avainta osoitteeseen', async () => {
+  const { readFileSync } = await import('node:fs');
+  for (const f of ['../js/ehdotukset.js', '../js/reaktiot.js']) {
+    const koodi = readFileSync(new URL(f, import.meta.url), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+    assert.ok(!/[?&]avain=/.test(koodi), `${f}: avain osoitteessa`);
+  }
+});
+
 test('kuratointi kirjaa kommentin, tilan, palkkion ja koodin', async () => {
   const ampari = teeAmpari();
   const ymparisto = teeYmparisto(ampari);

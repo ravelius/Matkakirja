@@ -327,6 +327,13 @@ export function lisaaBlender(rakennusJson, blender) {
   const on8k = on.has('ulkokuori/ulkokuori-8k-4x4.astcm') && on.has('ulkokuori/ulkokuori-hamara-8k-4x4.astcm')
     && on.has('ulkokuori/ulkokuori-hamara-8k.jpg');
   const tasot = { huippu: on8k ? '8k' : '4k', normaali: '4k', kevyt: '2k' };
+  // Skinnatut hahmot (omistaja 2.10. 18.0x): blender/hahmot/<henkilo>.glb + js/dioraama/hahmot-skin.json → henkilot[id].malli3d.skin
+  // (natiivi: DioraamaGlb skin + sekoitin; nivelhahmo malli3d.glb jää varalle). Vain henkilöille, joiden glb on viety.
+  const SKIN = JSON.parse(readFileSync(new URL('../../js/dioraama/hahmot-skin.json', import.meta.url), 'utf8'));
+  for (const [id, h] of Object.entries(rakennusJson.henkilot || {})) {
+    if (!SKIN[id] || !on.has(`hahmot/${id}.glb`) || !h.malli3d) continue;
+    h.malli3d = { ...h.malli3d, skin: { glb: B(`hahmot/${id}.glb`), ...SKIN[id] } };
+  }
   rakennusJson.tunnelma = 'hamara';
   rakennusJson.ulkokuori = {
     ...Object.fromEntries(Object.keys(tasot).map((t) => [t, B(`ulkokuori/ulkokuori_${t}.glb`)])),
@@ -346,7 +353,11 @@ export function lisaaBlender(rakennusJson, blender) {
     rakennusJson.ulkokuori.detalji = {
       maski: B('ulkokuori/hybridi/kuori-materiaali-2k.png'), voimakkuus: 0.8, normaali: 0.7,
       kanavat: DETALJI.map((id) => ({ id, diff: B(kp(id, 'diff.jpg')), nor: B(kp(id, 'nor_gl.jpg')),
-        toisto_m: kirjasto[`materiaali/${id}`].toisto_m })),
+        toisto_m: kirjasto[`materiaali/${id}`].toisto_m,
+        // ASTC (Siirtoseppä 1.10.: ei runtime-pakkausta) + keski = diff-kuvan lineaarinen luminanssi (0,299/0,587/0,114),
+        // jonka natiivi ennen laski GetPixelsillä; vain jos .astcm on viety (keski_luminanssi.py → lahteet.json).
+        ...(on.has(kp(id, 'diff-4x4.astcm')) && on.has(kp(id, 'nor_gl-4x4.astcm'))
+          ? { diff_astc: B(kp(id, 'diff-4x4.astcm')), nor_astc: B(kp(id, 'nor_gl-4x4.astcm')), keski: kirjasto[`materiaali/${id}`].keski } : {}) })),
     };
   }
   // Ympäristö (laatusuunnitelman vaihe 5, aikakerros n1500; Siirtosepän kenttänimet 1.10.): Kyrönsalmen maasto
@@ -379,7 +390,10 @@ export function lisaaBlender(rakennusJson, blender) {
         alue: MAA.alue, lahi_m: MAA.lahi_m,
         maski: [B(Y('splat-0.png')), B(Y('splat-1.png'))], maski_normaali: B(Y('splat-normaali-0.png')),
         kerrokset: MAA.kerrokset.map((k) => ({ id: k.id, diff: B(Y(`maasto/${k.lahde}_diff_1k.jpg`)),
-          nor: B(Y(`maasto/${k.lahde}_nor_gl_1k.jpg`)), toisto_m: k.toisto_m })),
+          nor: B(Y(`maasto/${k.lahde}_nor_gl_1k.jpg`)), toisto_m: k.toisto_m,
+          // ASTC + keski (lineaarinen luminanssi 0,2126/0,7152/0,0722, ymparisto-maasto.json), vain jos .astcm on viety.
+          ...([`maasto/${k.lahde}_diff_1k-4x4.astcm`, `maasto/${k.lahde}_nor_gl_1k-4x4.astcm`].every((p) => on.has(Y(p)))
+            ? { diff_astc: B(Y(`maasto/${k.lahde}_diff_1k-4x4.astcm`)), nor_astc: B(Y(`maasto/${k.lahde}_nor_gl_1k-4x4.astcm`)), keski: k.keski } : {}) })),
       };
     }
     // Puukorttien normaalikartta (v3, Siirtoseppä 1.10.: tangenttiavaruus, OpenGL), jos viety.
@@ -393,6 +407,15 @@ export function lisaaBlender(rakennusJson, blender) {
       rakennusJson.ymparisto.aluskasvit = { atlas: B(Y('aluskasvit.png')), atlas_hamara: B(Y('aluskasvit-hamara.png')),
         kortit: B(Y('aluskasvit.json')), lista: B(Y('aluskasvit-lista.json')) };
     }
+    // ASTC-mipketjut (Siirtoseppä 1.10., ensilataus v2: iPadin LoadImage-purkupiikit pois). png/jpg-kentät jäävät
+    // (simulaattori ja vanhat natiivit); *_astc vain, jos .astcm on viety. Lohko 4×4, alfa säilyy, normaalikartta lineaarisena.
+    const ya = rakennusJson.ymparisto;
+    const astc = (o, k, p) => { if (o && on.has(Y(p))) o[k] = B(Y(p)); };
+    astc(ya, 'puukortit_astc', 'puukortit-4x4.astcm'); astc(ya.hamara, 'puukortit_astc', 'puukortit-hamara-4x4.astcm');
+    if (ya.puukortit_normaali) astc(ya, 'puukortit_normaali_astc', 'puukortit-normaali-4x4.astcm');
+    astc(ya, 'horisontti_kuva_astc', 'horisontti-1k-4x4.astcm'); astc(ya.hamara, 'horisontti_kuva_astc', 'horisontti-hamara-1k-4x4.astcm');
+    if (ya.taivas) { astc(ya, 'taivas_astc', 'taivas-2k-4x4.astcm'); astc(ya, 'taivas_hamara_astc', 'taivas-hamara-2k-4x4.astcm'); }
+    astc(ya.aluskasvit, 'atlas_astc', 'aluskasvit-4x4.astcm'); astc(ya.aluskasvit, 'atlas_hamara_astc', 'aluskasvit-hamara-4x4.astcm');
   }
   const atlas = (id, v) => ({
     tiedosto: B(`valot/${id}${v}.jpg`), puoli: B(`valot/${id}${v}-2k.jpg`),
@@ -410,6 +433,10 @@ export function lisaaBlender(rakennusJson, blender) {
   for (const t of rakennusJson.tilat) {
     const g = on.get(`tilat/${t.id}.glb`);
     t.glb = { tiedosto: B(`tilat/${t.id}.glb`), sha256: g.sha256, tavuja: g.tavuja };
+    // Kohdistamaton tila (tunnelma; erä 1b, Päätoimittaja 2.10. 23.xx): liekit tulevat leivotun glb:n liekki:-tyhjistä,
+    // jotka natiivi leikkaa leikkauskäytävästä telineidensä kanssa. JSON-liekit jäivät näkyviin ilman telinettä
+    // (fatabuuri, keittiö, laituri: liekki "tyhjässä"), joten ne jätetään pois paketista.
+    if (t.kohdistettava === false) delete t.liekit;
     if (on.has(`valot/${t.id}.jpg`)) {
       t.valoatlas = atlas(t.id, '');
       if (on.has(`valot/${t.id}-hamara.jpg`)) t.valoatlas.hamara = atlas(t.id, '-hamara');
@@ -631,6 +658,17 @@ export async function rakennaData(rakennus, {
   // 'massa'-tilalla ei ole omaa taulua — se käyttää tätä yhteistä linnan taulua).
   for (const kohta of rakennus.taulu?.kohdat ?? []) {
     if (kohta.aani != null) kaytetytAanet.add(kohta.aani);
+  }
+  // Uuden linnan puheet (#3742, Siirtoseppä 1.10.2026: kuiva paketti 353b5142 ilman näitä → 43/133 ääntä puuttui
+  // pankista, eikä natiivi soittanut niitä): kertojan jaksot, Pulun kertomukset (rakennus ja tilat), tilan kuunnelma
+  // ja etsinnän repliikit.
+  const lisaaAani = (id) => { if (typeof id === 'string') kaytetytAanet.add(id); };
+  for (const jakso of rakennus.kertoja?.jaksot ?? []) lisaaAani(jakso?.aani);
+  lisaaAani(rakennus.pulu?.aani);
+  for (const tila of rakennus.tilat) {
+    lisaaAani(tila.pulu?.aani);
+    for (const rivi of tila.kuunnelma ?? []) lisaaAani(rivi?.aani);
+    for (const vaihe of tila.etsinta ?? []) { lisaaAani(vaihe?.aani); lisaaAani(vaihe?.repliikki?.aani); }
   }
 
   // Käytetyt liekit (erä 2, era2-speksin kohta 2 "LIEKIT"): kerätty tilojen omista

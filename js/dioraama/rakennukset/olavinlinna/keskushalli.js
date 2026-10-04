@@ -13,9 +13,9 @@ const TAULU = {
   // Sisältökirjurin tarkistus 30.9. (docs/raportit/sisaltokirjuri-olavinlinna-era5-tarkistus-20260930.md). H1–H3
   tila: 'tarkistettu',
   kohdat: [
-    { teksti: 'Keskushallin alakerrassa oli väentupa, sotaväen ruokasali; toisessa kerroksessa voudin asunto.', lahde: 'Kansallismuseo: Keskushalli' },
-    { teksti: 'Linnaa lämmitettiin avotakoin, ja lämpö johdettiin hormien kautta.', lahde: 'Apu: Suomen keskiaikaiset kivilinnat 6/6' },
-    { teksti: 'Linnassa asui 1500-luvun tilikirjojen mukaan 150–200 henkeä: sotilaita, virkamiehiä, käsityöläisiä.', lahde: 'Apu: Suomen keskiaikaiset kivilinnat 6/6; Yle Tiede' },
+    { aani: 'keskushalli-kohta-0', teksti: 'Keskushallin alakerrassa oli väentupa, sotaväen ruokasali; toisessa kerroksessa voudin asunto.', lahde: 'Kansallismuseo: Keskushalli' },
+    { aani: 'keskushalli-kohta-1', teksti: 'Linnaa lämmitettiin avotakoin, ja lämpö johdettiin hormien kautta.', lahde: 'Apu: Suomen keskiaikaiset kivilinnat 6/6' },
+    { aani: 'keskushalli-kohta-2', teksti: 'Linnassa asui 1500-luvun tilikirjojen mukaan 150–200 henkeä: sotilaita, virkamiehiä, käsityöläisiä.', lahde: 'Apu: Suomen keskiaikaiset kivilinnat 6/6; Yle Tiede' },
   ],
 };
 
@@ -26,43 +26,44 @@ const HAHMOT = [
     id: 'apulainen', henkilo: 'apulainen-1500', paikka: [-8.4, 0, -15.25], suunta: 270, peilattu: false,
     silmukka: 'kanto', heraa: 1,
     reitti: {
-      pisteet: [[-8.4, 0, -15.25], [-9.1, 0, -14.4], [-9.1, 0, -10.5], [-13.1, 0, -10.5], [-14.75, 0, -11.1],
-        [-13.1, 0, -10.5], [-9.1, 0, -10.5], [-9.1, 0, -14.4], [-8.4, 0, -15.25]],
+      // 2.10.: pöydän ohitus z -9,9 (ennen -10,5 kulki 0,5 m:n päästä istuvista vartijoista, skin-video)
+      pisteet: [[-8.4, 0, -15.25], [-9.1, 0, -14.4], [-9.1, 0, -9.9], [-13.1, 0, -9.9], [-14.75, 0, -11.1],
+        [-13.1, 0, -9.9], [-9.1, 0, -9.9], [-9.1, 0, -14.4], [-8.4, 0, -15.25]],
       nopeus: 0.9, tauko: 2,
     },
     repliikit: [
-      { id: 'tarjoilija-1', teksti: 'Antakaa tietä, antakaa tietä! Tämä vati polttaa jo sormiani.' },
-      { id: 'tarjoilija-2', teksti: 'Ylhäällä vouti syö omassa pöydässään. Täällä riittää puuroa, kalaa ja leipää.' },
+      { id: 'tarjoilija-1', aani: 'keskushalli-tarjoilija-1', teksti: 'Antakaa tietä, antakaa tietä! Tämä vati polttaa jo sormiani.' },
+      { id: 'tarjoilija-2', aani: 'keskushalli-tarjoilija-2', teksti: 'Ylhäällä vouti syö omassa pöydässään. Täällä riittää puuroa, kalaa ja leipää.' },
     ],
-    reaktio: { id: 'pulu-tarjoilija-r1', teksti: 'Kolme vatia yhdellä kädellä! Nykyajan ravintolassa hän saisi vakituisen paikan.' },
+    reaktio: { id: 'pulu-tarjoilija-r1', aani: 'keskushalli-pulu-tarjoilija-r1', teksti: 'Kolme vatia yhdellä kädellä! Nykyajan ravintolassa hän saisi vakituisen paikan.' },
   },
   {
     // Erä 3 (elävä linna, käsikirjoitus kohta 2–3): vartijat noppapelissä pelilaudan ääressä (pöydän B eteläpään edessä kasvot pohjoiseen; penkit ovat pöydän kyljillä).
     id: 'vartija', henkilo: 'vartija-1500', paikka: [-11.05, 0, -11.0], suunta: 15, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
-      { id: 'vartija-1', teksti: 'Vouti syö ylhäällä, me täällä alhaalla. Sopii minulle, tuli on lähempänä.' },
-      { id: 'vartija-2', teksti: 'Vuoro vaihtuu aamuhämärässä. Juo nyt, kun kannu vielä on täysi.' },
+      { id: 'vartija-1', aani: 'keskushalli-vartija-1', teksti: 'Vouti syö ylhäällä, me täällä alhaalla. Sopii minulle, tuli on lähempänä.' },
+      { id: 'vartija-2', aani: 'keskushalli-vartija-2', teksti: 'Vuoro vaihtuu aamuhämärässä. Juo nyt, kun kannu vielä on täysi.' },
     ],
-    reaktio: { id: 'pulu-vartija-r1', teksti: 'Noin viisi litraa olutta päivässä kuului vartijan muonaan. Minulle riittäisi pisara – ja murunen leipää.' },
+    reaktio: { id: 'pulu-vartija-r1', aani: 'keskushalli-pulu-vartija-r1', teksti: 'Noin viisi litraa olutta päivässä kuului vartijan muonaan. Minulle riittäisi pisara – ja murunen leipää.' },
   },
   {
     id: 'vartija2', henkilo: 'vartija-1500', paikka: [-10.15, 0, -11.0], suunta: 345, peilattu: true,
     silmukka: 'tyo', heraa: 2, reitti: null,
     repliikit: [
-      { id: 'vartija2-1', teksti: 'Kolme kuutosta! Onni suosii rohkeaa. Maksa, kun vielä kehtaat.' },
-      { id: 'vartija2-2', teksti: 'Yksi heitto vielä ennen vuoroa. Voudin ei tarvitse tietää, mistä pelataan.' },
+      { id: 'vartija2-1', aani: 'keskushalli-vartija2-1', teksti: 'Kolme kuutosta! Onni suosii rohkeaa. Maksa, kun vielä kehtaat.' },
+      { id: 'vartija2-2', aani: 'keskushalli-vartija2-2', teksti: 'Yksi heitto vielä ennen vuoroa. Voudin ei tarvitse tietää, mistä pelataan.' },
     ],
-    reaktio: { id: 'pulu-vartija2-r1', teksti: 'Noppapeli linnassa, ja vouti ylhäällä. Minä en kerro, jos te ette kerro.' },
+    reaktio: { id: 'pulu-vartija2-r1', aani: 'keskushalli-pulu-vartija2-r1', teksti: 'Noppapeli linnassa, ja vouti ylhäällä. Minä en kerro, jos te ette kerro.' },
   },
   {
     id: 'talonpoika', henkilo: 'talonpoika-1500', paikka: [-17.65, 0, -12.6], suunta: 235, peilattu: false,
     silmukka: 'idle', heraa: 2, reitti: null,
     repliikit: [
-      { id: 'talonpoika-1', teksti: 'Kävelin kolme päivää verokalojen kanssa. Antakaa penkinkulma ja kuppi olutta.' },
-      { id: 'talonpoika-2', teksti: 'Hormia myöten lämpö menee voudin saliin. Meille jää tämä tuli.' },
+      { id: 'talonpoika-1', aani: 'keskushalli-talonpoika-1', teksti: 'Kävelin kolme päivää verokalojen kanssa. Antakaa penkinkulma ja kuppi olutta.' },
+      { id: 'talonpoika-2', aani: 'keskushalli-talonpoika-2', teksti: 'Hormia myöten lämpö menee voudin saliin. Meille jää tämä tuli.' },
     ],
-    reaktio: { id: 'pulu-talonpoika-r1', teksti: 'Lämpöä hormissa ja kaupan päälle tarina. Ei huono vaihtokauppa.' },
+    reaktio: { id: 'pulu-talonpoika-r1', aani: 'keskushalli-pulu-talonpoika-r1', teksti: 'Lämpöä hormissa ja kaupan päälle tarina. Ei huono vaihtokauppa.' },
   },
 ];
 
@@ -263,15 +264,15 @@ export const TILA = {
   // kohtaus = rivijono; puhuja = tämän tilan hahmon id tai 'pulu' (huom = esim. oven takaa, ei näkyvissä).
   // id = tuleva ääni-id; aani null, kunnes omistaja valitsee äänet (ei generointia ennen lupaa).
   kuunnelma: [
-    { id: 'keskushalli-k1', puhuja: 'apulainen', nimi: 'Tarjoilija', aani: null,
-      teksti: 'Tietä, tietä! Kalakeittoa väentupaan ja voudin pöytään ylös toiseen kerrokseen – kumpikaan ei odota.' },
-    { id: 'keskushalli-k2', puhuja: 'vartija', nimi: 'Vartija', aani: null,
+    { id: 'keskushalli-k1', puhuja: 'apulainen', nimi: 'Tarjoilija', aani: 'keskushalli-k1',
+      teksti: 'Tietä, tietä! Kalakeittoa Linnantupaan ja voudin pöytään ylös toiseen kerrokseen – kumpikaan ei odota.' },
+    { id: 'keskushalli-k2', puhuja: 'vartija2', nimi: 'Vartija 2', aani: 'keskushalli-k2',
       teksti: 'Kolme kuutosta! Maksa, kun vielä kehtaat.' },
-    { id: 'keskushalli-k3', puhuja: 'vartija2', nimi: 'Vartija 2', aani: null,
-      teksti: 'Puhu hiljempaa. Vouti ravaa tänään portaissa kuin kana ilman päätä – jotain on hukassa.' },
-    { id: 'keskushalli-k4', puhuja: 'talonpoika', nimi: 'Talonpoika', aani: null,
+    { id: 'keskushalli-k3', puhuja: 'vartija', nimi: 'Vartija', aani: 'keskushalli-k3',
+      teksti: 'Puhu hiljempaa. Vouti ravaa tänään portaissa kuin päätön kana – jotain on hukassa.' },
+    { id: 'keskushalli-k4', puhuja: 'talonpoika', nimi: 'Talonpoika', aani: 'keskushalli-k4',
       teksti: 'Ja me lämmitellään täällä alhaalla. Hormeja myöten paras lämpö nousee voudin kamariin.' },
-    { id: 'keskushalli-k5', puhuja: 'pulu', nimi: 'Pulu', aani: null,
+    { id: 'keskushalli-k5', puhuja: 'pulu', nimi: 'Pulu', aani: 'keskushalli-k5',
       teksti: 'Sataviisikymmentä, jopa kaksisataa asukasta samassa linnassa. Ei ihme, ettei täällä kukaan kuule omia ajatuksiaan.' },
   ],
   kohdistettava: true,
@@ -285,9 +286,9 @@ export const TILA = {
   kamera: { kohde: [-14.75, 1.6, -13.8], atsimuutti: 170, korkeus: 22, etaisyys: 17, fov: 38, aukko: 0.8 },
   kameraPysty: { kohde: [-13.02, -4, -14.04], // pysty 30.9.: noppapeli ja apulainen näkyviin (x 0,63–0,86)
      atsimuutti: 172, korkeus: 24, etaisyys: 43, fov: 38, aukko: 0.8 },
-  pulu: { laskeutuminen: [-14.0, 0.8, -12.2], taulupuoli: 'oikea',
-    // Pulun kertomus (napautus reunakuvasta), tekstit v1 Päätoimittajalta; ääni vasta omistajan luvalla.
-    teksti: 'Alakerrassa oli väentupa, sotaväen ruokasali, ja toisessa kerroksessa asui vouti. Linnaa lämmitettiin avotakoilla, ja lämpö johdettiin hormien kautta. 1500-luvun tilikirjojen mukaan linnassa asui 150–200 henkeä – ei ihme, että täällä on hälinää.', aani: null },
+  pulu: { aani: 'keskushalli-pulu', laskeutuminen: [-14.0, 0.8, -12.2], taulupuoli: 'oikea',
+    // Pulun kertomus (napautus reunakuvasta), tekstit v1 Päätoimittajalta; ääni 1.10.2026 (omistajan lupa 30.9. klo 23.4x).
+    teksti: 'Alakerrassa oli Linnantupa, sotaväen ruokasali, ja toisessa kerroksessa asui vouti. Linnaa lämmitettiin avotakoilla, ja lämpö johdettiin hormien kautta. 1500-luvun tilikirjojen mukaan linnassa asui 150–200 henkeä – ei ihme, että täällä on hälinää.' },
   taulu: TAULU,
   // Elävä linna (29.9.): pohjoissiiven pihajulkisivu (ikkunoista valo ja sorina).
   elava: { kohde: [-14.75, 3.5, -9.2], sade: 6 },

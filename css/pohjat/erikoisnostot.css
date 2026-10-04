@@ -1,0 +1,54 @@
+/*
+ * ERIKOISNOSTOT (tyylikirja.json pohjat.ERIKOISNOSTOT; omistaja 2.10.2026 klo 12.34, 16.4x ja 16.5x, Natiivi-UI:n
+ * tarkennukset). Kartalla jokainen pää on KARTTAOBJEKTI omassa kiinteässä karttapisteessään (js/ajattelijapaat.js
+ * kytkeAjattelijaPaat): liikkuu kartan mukana, koko pysyy ruudulla vakiona, ei väistä kartuutsia (avattu kortti saa
+ * peittää sen). Osa PÄÄ: 3D-pää ja sen varjo paperilla läpinäkyvällä kankaalla (1,5 × pää), ilman kehystä; osuma ≥ 44;
+ * nimi vain VoiceOverille ja vihjeenä. Piiloon, kun linssi, nosto, valikko, aikajana tai lento on auki (maakortti ei
+ * piilota). Galleriassa (esikatselu) päät ovat sarakkeena. Osa UI-pohjien tyylejä; VAIN --tk-*-tokenit.
+ */
+
+.tk-erikoisnostot {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+.tk-erikoisnostot[hidden] { display: none; }
+/* Kartalla: pallon säiliössä kankaan ja merkkikerroksen välissä, kaupunki- ja maakorttien alla (js:n kiinnita). */
+.tk-erikoisnostot.tk-erikoisnostot--kartalla { position: absolute; z-index: 0; overflow: hidden; }
+
+.tk-erikoisnosto-paa,
+button.tk-erikoisnosto-paa:hover:not(:disabled),
+button.tk-erikoisnosto-paa:active:not(:disabled),
+button.tk-erikoisnosto-paa:focus:not(:disabled) {
+  position: absolute;
+  display: block;
+  width: calc(var(--tk-nappi-laukaisin) * 1.5);
+  height: calc(var(--tk-nappi-laukaisin) * 1.5);
+  min-width: var(--tk-nappi-osuma);
+  min-height: var(--tk-nappi-osuma);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: translate(-50%, -50%);   /* keskipiste karttapisteen kohdalla (js asettaa left/top) */
+  pointer-events: auto;
+  cursor: pointer;
+}
+.tk-erikoisnosto-paa[hidden] { display: none; }
+.tk-erikoisnosto-paa canvas { display: block; width: 100%; height: 100%; }
+.tk-erikoisnosto-paa:focus-visible { outline: 2px solid var(--tk-korostus); outline-offset: 2px; }
+
+body:is(.linssi-paalla, .nosto-popup-auki, .pilleri-auki, .aikajana-paalla,
+  .lento-kesken, .flight-active, .kartalento, .aloitusverho-paalla) .tk-erikoisnostot { display: none; }
+
+/* Tyylikirjan galleria: päät sarakkeena virrassa. */
+.tk-erikoisnostot--esikatselu {
+  position: static;
+  display: flex;
+  flex-direction: column;
+  gap: var(--tk-vali-s);
+}
+.tk-erikoisnostot--esikatselu .tk-erikoisnosto-paa { position: static; transform: none; }

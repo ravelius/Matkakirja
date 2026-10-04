@@ -31,6 +31,8 @@ export function tarkistaApuraha(d) {
     .map((k) => ({
       ...k,
       teksti: k.webTeksti ?? k.teksti,
+      // Korostus (omistaja 1.10.2026): kappale lihavoituna samassa koossa.
+      korostus: k.korostus === true,
       lista: Array.isArray(k.lista) ? k.lista.map(web).filter((r) => typeof r === 'string') : k.lista,
     }));
   const kuvat = (Array.isArray(d.kuvat) ? d.kuvat : []).filter((k) => k && typeof k.tiedosto === 'string');

@@ -119,6 +119,31 @@ function loydaLahinKarkiIndeksi(paikat, kohde) {
   return paras;
 }
 
+/* ==================== 0: linnan puheet pankkiin (#3742) ==================== */
+test('rakennus.json:n aanet kattaa kertojan, Pulun, kuunnelman ja etsinnän puheet', async () => {
+  const ulos = uusiTilapaisinenKansio();
+  try {
+    const rakennus = {
+      ...FIXTURE_RAKENNUS,
+      pulu: { ...FIXTURE_RAKENNUS.pulu, aani: 'laituri-pulu' },
+      kertoja: { jaksot: [{ id: 'j1', teksti: 'T.', aani: 'linna-kertoja-jarvelta' }, { id: 'j2', teksti: 'U.', aani: null }] },
+      tilat: [
+        { ...TUPA, pulu: { ...TUPA.pulu, aani: 'fatabuuri-k1' }, kuunnelma: [{ id: 'k1', aani: 'laituri-k1' }, { id: 'k2' }],
+          etsinta: [{ tyyppi: 'repliikki', repliikki: { aani: 'keittio-etsinta-0', teksti: 'x' } }] },
+        AITTA,
+      ],
+    };
+    const tulos = await rakennaData(rakennus, { ulos, saateita: SAATEITA_TESTISSA });
+    const aanet = JSON.parse(readFileSync(join(tulos.kansio, 'rakennus.json'), 'utf8')).aanet;
+    for (const id of ['laituri-pulu', 'linna-kertoja-jarvelta', 'fatabuuri-k1', 'laituri-k1', 'keittio-etsinta-0']) {
+      assert.ok(aanet[id], `ääni '${id}' puuttuu rakennus.json:n aanet-pankista`);
+      assert.match(aanet[id].tiedosto, new RegExp(`^aanet/v\\d+/${id}\\.mp3$`));
+    }
+  } finally {
+    rmSync(ulos, { recursive: true, force: true });
+  }
+});
+
 /* ==================== 1: putki tuottaa glb:t, jotka lueGlb jäsentää ==================== */
 
 test('rakennaData tuottaa glb:t joita lueGlb jäsentää (molemmat tilat)', async () => {
