@@ -112,7 +112,7 @@
     margin: 2px 0 0 0;
     padding: 0;
     font-size: var(--tk-koko-lcd-pieni);
-    letter-spacing: 4px;
+    letter-spacing: 27px; /* web 0.27em: tyylikirja lcd-pieni harvennus (UITK em/100) */
     color: var(--tk-lcd-muste-pehmea);
     white-space: nowrap;
     -unity-text-align: middle-left;
@@ -349,7 +349,7 @@
     margin: 0 0 var(--tk-vali-s) 0;
     padding: 0;
     font-size: var(--tk-koko-kapiteeli);
-    letter-spacing: 1.44px; /* tyylikirja kapiteeli harvennus 0,12 */
+    letter-spacing: 12px; /* web 0.12em: tyylikirja kapiteeli harvennus (UITK em/100) */
     color: var(--tk-lcd-muste-pehmea);
 }
 
