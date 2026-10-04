@@ -463,7 +463,7 @@ namespace Matkakirja.Natiivi
                 nayttamo.Ulkokuori.LisaaVesi(null, 0, 1);
                 // 4.10.: ympäristö ei enää odota kuorta — linna näytetään vasta kaiken valmistuttua, joten rinnakkaisuus lyhentää odotusta
                 // (iPad esiladattuna: ympäristö odotti kuorta 0,9 s ennen omaa latausta).
-                o.StartCoroutine(nayttamo.Ymparisto.Lataa(rakennus.Ymparisto ?? new Ymparisto(), (float)rakennus.Ulkokuori.VesiY, s => peili(paketinJuuri + s), o.Kirjaa));
+                o.StartCoroutine(nayttamo.Ymparisto.Lataa(rakennus.Ymparisto ?? new Ymparisto(), (float)rakennus.Ulkokuori.VesiY, s => peili(paketinJuuri + s), o.Kirjaa, null, o.StartCoroutine));
                 return;
             }
             // Järvi kuoren alle rakennuksen omalla "vesi"-pinnalla (Lataa tyhjentää vanhan ensin, joten tämä sen jälkeen).

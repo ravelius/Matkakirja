@@ -63,7 +63,8 @@ namespace Matkakirja.Natiivi
 
         public DioraamaYmparisto(Transform juuri) { this.juuri = juuri; }
 
-        public IEnumerator Lataa(Ymparisto y, float vesiTaso, Func<string, string> url, Action<string> kirjaa, Func<bool> kuoriValmis = null)
+        public IEnumerator Lataa(Ymparisto y, float vesiTaso, Func<string, string> url, Action<string> kirjaa, Func<bool> kuoriValmis = null,
+            Func<IEnumerator, Coroutine> aja = null)
         {
             Tyhjenna();
             if (y == null) yield break;
@@ -88,13 +89,12 @@ namespace Matkakirja.Natiivi
             bool hamaraTaivas = DioraamaValot.TunnelmaTaivas < 0.99f && !string.IsNullOrEmpty(y.TaivasHamara);
             string taivasKuva = hamaraTaivas ? y.TaivasHamara : y.Taivas;
             string taivasAstc = hamaraTaivas ? y.TaivasHamaraAstc : y.TaivasAstc;
-            if (!string.IsNullOrEmpty(taivasKuva)) yield return LataaTaivas(taivasKuva, (float)y.TaivasSuunta, url, kirjaa, oma, taivasAstc);
-            if (oma != kerta) yield break;
+            var osat = new List<IEnumerator>();
+            if (!string.IsNullOrEmpty(taivasKuva)) osat.Add(LataaTaivas(taivasKuva, (float)y.TaivasSuunta, url, kirjaa, oma, taivasAstc));
             Tila = "vesi";
 
             // Kehittäjän koe ("poikki vesi syvyys 0"): syvyyskartta pois, jotta piikin syy erottuu (linnan piikit 2.10.).
-            if (!string.IsNullOrEmpty(y.SyvyysKuva) && SyvyysPaalla) yield return LataaSyvyys(y, url, kirjaa, oma);
-            if (oma != kerta) yield break;
+            if (!string.IsNullOrEmpty(y.SyvyysKuva) && SyvyysPaalla) osat.Add(LataaSyvyys(y, url, kirjaa, oma));
 
             // NOPEA ENSILATAUS (Päätoimittaja 1.10.: TF 91 huippu 93 s ennen kuin maastoa näkyi): ensin kevyt maasto glb:n omalla
             // 2k-kuvalla (≈ 2 Mt, ei erillistä ortoa), sitten horisontti, puut ja aluskasvit, ja lopuksi laitteen oma taso
@@ -110,16 +110,22 @@ namespace Matkakirja.Natiivi
             bool porrastus = false;
             // Ensilataus v2: esikatselun kuva kevyen tason ASTC-ortosta (ei runtime-pakkausta); tukematon → glb:n kuva.
             string esiOrto = y.OrtoKevyt != null && y.OrtoKevyt.EndsWith(".astcm", StringComparison.OrdinalIgnoreCase) ? y.OrtoKevyt : null;
-            if (porrastus) yield return LataaMalli("maasto-esikatselu", y.Kevyt, esiOrto, url, kirjaa, oma, null, DioraamaUlkokuori.Laatu.Kevyt, esikatselu);
-            else if (!string.IsNullOrEmpty(maasto)) yield return LataaMalli("maasto", maasto, orto, url, kirjaa, oma, y.Maasto, taso);
+            // 4.10. (Päätoimittaja: esiladattu avaus ~2,5–3 s): taivas, syvyys, maasto, horisontti, puut ja aluskasvit eivät riipu
+            // toisistaan → rinnakkain, kun kutsuja antaa korutiinien käynnistäjän (iPad esiladattuna ne olivat peräkkäin 3,8 s).
+            if (porrastus) osat.Add(LataaMalli("maasto-esikatselu", y.Kevyt, esiOrto, url, kirjaa, oma, null, DioraamaUlkokuori.Laatu.Kevyt, esikatselu));
+            else if (!string.IsNullOrEmpty(maasto)) osat.Add(LataaMalli("maasto", maasto, orto, url, kirjaa, oma, y.Maasto, taso));
+            if (!string.IsNullOrEmpty(y.Horisontti)) osat.Add(LataaMalli("horisontti", y.Horisontti, y.HorisonttiKuva, url, kirjaa, oma, astc: y.HorisonttiKuvaAstc));
+            if (!string.IsNullOrEmpty(y.Puut) && !string.IsNullOrEmpty(y.PuukortitTiedot ?? y.Puukortit)) osat.Add(LataaPuut(y, taso, url, kirjaa, oma));
+            osat.Add(DioraamaAluskasvit.Lataa(y, taso, url, kirjaa, go.transform, luodut, () => oma == kerta));   // Linssiseppä 2, 1.10.
+            if (aja == null) { foreach (var osa in osat) { yield return osa; if (oma != kerta) yield break; } }
+            else
+            {
+                int kesken = osat.Count;
+                foreach (var osa in osat) aja(Valmistuu(osa, () => kesken--));
+                while (kesken > 0) { if (oma != kerta) yield break; yield return null; }
+            }
             if (oma != kerta) yield break;
-            kirjaa?.Invoke($"poikki: ympäristö: ensimmäinen maasto näkyvissä {Time.realtimeSinceStartup - alku:F1} s");
-            if (!string.IsNullOrEmpty(y.Horisontti)) yield return LataaMalli("horisontti", y.Horisontti, y.HorisonttiKuva, url, kirjaa, oma, astc: y.HorisonttiKuvaAstc);
-            if (oma != kerta) yield break;
-            if (!string.IsNullOrEmpty(y.Puut) && !string.IsNullOrEmpty(y.PuukortitTiedot ?? y.Puukortit)) yield return LataaPuut(y, taso, url, kirjaa, oma);
-            if (oma != kerta) yield break;
-            yield return DioraamaAluskasvit.Lataa(y, taso, url, kirjaa, go.transform, luodut, () => oma == kerta);   // Linssiseppä 2, 1.10.
-            if (oma != kerta) yield break;
+            kirjaa?.Invoke($"poikki: ympäristö: osat valmiit {Time.realtimeSinceStartup - alku:F1} s{(aja != null ? " (rinnakkain)" : "")}");
             if (porrastus && !string.IsNullOrEmpty(maasto))
             {
                 yield return LataaMalli("maasto", maasto, orto, url, kirjaa, oma, y.Maasto, taso);
@@ -129,6 +135,11 @@ namespace Matkakirja.Natiivi
             }
             Tila = $"valmis ({taso}, heijastus {HeijastusSkaala(taso):F2})";
             kirjaa?.Invoke($"poikki: ympäristö valmis ({taso}, {Time.realtimeSinceStartup - alku:F1} s)");
+        }
+
+        static IEnumerator Valmistuu(IEnumerator osa, Action valmis)
+        {
+            try { yield return osa; } finally { valmis(); }
         }
 
         // --- JÄRVI ----------------------------------------------------------------------------------------------------
