@@ -454,6 +454,15 @@ namespace Matkakirja.Linssit.Dioraama
         public Asento? KameraPysty;
         public double? KestoS;
         public double Kesto => KestoS ?? Math.Max(6.0, (Teksti?.Length ?? 0) / 14.0);
+        /// <summary>Luennan tukisanat (Päätoimittaja 5.10., omistajan TF 141 -palaute): `avainsanat: [{ t_s, vuosi?, sanat }]`,
+        /// t_s sekunteina kertojan klipin alusta (Linnanrakentaja mittaa kohdistuksesta).</summary>
+        public List<Avainsana> Avainsanat = new List<Avainsana>();
+    }
+
+    public sealed class Avainsana
+    {
+        public double Ts;
+        public string Vuosi, Sanat;
     }
 
     /// <summary>Tilan etsintävaihe (tila.etsinta[]): repliikki (hahmo kertoo), vihje (esine/kaiverrus) tai löytö (kansi + esine).</summary>
@@ -750,6 +759,9 @@ namespace Matkakirja.Linssit.Dioraama
                         ? LueAsento(jkp) : (Asento?)null,
                     KestoS = MiniJson.Luku(j, "kesto_s"),
                 });
+                foreach (var ao in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "avainsanat")))
+                    if (MiniJson.ObjektiTaiNull(ao) is Dictionary<string, object> a && MiniJson.Luku(a, "t_s") is double ts)
+                        r.Kertoja[r.Kertoja.Count - 1].Avainsanat.Add(new Avainsana { Ts = ts, Vuosi = MiniJson.Teksti(a, "vuosi"), Sanat = MiniJson.Teksti(a, "sanat") });
             }
             r.Taulu = LueTaulu(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "taulu")));
             r.Valaistus = LueValaistus(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "valaistus")));

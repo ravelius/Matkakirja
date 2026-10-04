@@ -291,6 +291,18 @@ namespace Matkakirja.Natiivi
             latausRivi.style.marginTop = 22;
             latausRivi.style.opacity = 0f;
 
+            avainsana = Rakenne.El("mk-astroavaus__otsikko--haipyy", kerros.Juuri(LinssiUi.Ylakerros), PickingMode.Ignore);
+            avainsana.style.position = Position.Absolute;
+            avainsana.style.left = 28; avainsana.style.bottom = 24;
+            avainsana.style.alignItems = Align.FlexStart;
+            avainsana.style.opacity = 0f;
+            avainsanaVuosi = Rakenne.Teksti("", "mk-aikajana-havainne__otsikko", avainsana);
+            Kirjasimet.Aseta(avainsanaVuosi, Kirjasin.Goottilainen);
+            avainsanaVuosi.style.fontSize = 44; avainsanaVuosi.style.unityTextAlign = TextAnchor.LowerLeft;
+            avainsanaSanat = Rakenne.Teksti("", "mk-aikajana-havainne__kuvateksti", avainsana);
+            Kirjasimet.Aseta(avainsanaSanat, Kirjasin.Antiikva);
+            avainsanaSanat.style.fontSize = 19; avainsanaSanat.style.unityTextAlign = TextAnchor.UpperLeft;
+
             DioraamaSovitin.PeittaaRuutu = OsuukoPaneeliin;
             DioraamaSovitin.Vaihtui += Kytke;
             kerros.JokaRuutu += Paivita;
@@ -368,6 +380,13 @@ namespace Matkakirja.Natiivi
         }
 
         readonly VisualElement nimiruutu;
+        // AVAINSANAT (Päätoimittaja 5.10., omistajan TF 141 -palaute "muutamia vuosilukuja sekä muita lyhyitä sanoja luennan tueksi"):
+        // vasen alakulma ilman laatikkoa, vuosiluku goottilaisella ja 1–3 sanaa antiikvalla (havainteen kultaiset varjostetut tyylit),
+        // häivytys sisään kun kertoja sanoo asian (kertojan klipin soittokohta ≥ t_s) ja pois AvainsanaS:n jälkeen.
+        readonly VisualElement avainsana;
+        readonly Label avainsanaVuosi, avainsanaSanat;
+        Avainsana avainsanaNyt;
+        const float AvainsanaS = 4f;
         readonly Label nimiruudunNimi, latausRivi;
         bool nimiruutuAuki, virheIlmoitettu;
         float nimiruutuAlku;
@@ -425,6 +444,28 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        void PaivitaAvainsana(Rakennus rakennus, Nakyma nakyma)
+        {
+            Avainsana nyt = null;
+            if (nakyma.KertojaJakso >= 0 && nakyma.KertojaJakso < rakennus.Kertoja.Count && !(Linna?.Auki ?? false))
+            {
+                var j = rakennus.Kertoja[nakyma.KertojaJakso];
+                if (j.Avainsanat.Count > 0 && DioraamaAanet.PuheenKohta(j.Aani) is float kohta)
+                    foreach (var a in j.Avainsanat)
+                        if (kohta >= a.Ts && kohta < a.Ts + AvainsanaS) nyt = a;
+            }
+            if (nyt == avainsanaNyt) return;
+            if (nyt != null)
+            {
+                avainsanaVuosi.text = nyt.Vuosi ?? "";
+                avainsanaVuosi.style.display = string.IsNullOrEmpty(nyt.Vuosi) ? DisplayStyle.None : DisplayStyle.Flex;
+                avainsanaSanat.text = nyt.Sanat ?? "";
+                Debug.Log($"MATKAKIRJA linssit: avainsana {nyt.Vuosi} {nyt.Sanat} ({nyt.Ts:F1} s)");
+            }
+            avainsana.style.opacity = nyt != null ? 1f : 0f;
+            avainsanaNyt = nyt;
+        }
+
         void Paivita()
         {
             PaivitaNimiruutu();
@@ -472,6 +513,7 @@ namespace Matkakirja.Natiivi
             bool infoAuki = nakyma.KohdeTila != null && rakennus.Tila(nakyma.KohdeTila)?.Infotaulu != null;
             kuoriNappi.style.display = KuoriRuudulla && Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki && !kierros && !infoAuki
                 ? DisplayStyle.Flex : DisplayStyle.None;
+            PaivitaAvainsana(rakennus, nakyma);
             if (nakyma.KertojaTeksti != null) kertojaTeksti.text = nakyma.KertojaTeksti;
             // Omistaja 2.10. 14.1x (loki 14.09, kumoaa 30.9.:n tekstilaatikon): kertojan jakso puheen aikana ilman tekstiä;
             // koko teksti vain, jos jaksolla ei ole ääntä tai Kertoja on pois. (Jaksoilla ei ole lyhyttä otsikkoa.)

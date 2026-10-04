@@ -478,6 +478,12 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Kertojan jakso tai Pulun kertomus omalta, pysäytettävältä lähteeltä (puheväylä −3 dB, taustat väistävät
         /// puheen ajan). Katkaisee edellisen erillisen puheen. Lataamaton klippi jää soittamatta (esiladattu avatessa).</summary>
+        string erillinenId;
+        /// <summary>Avainsanojen ajoitus (DioraamaTaulu): kertojan klipin soittokohta sekunteina, jos juuri tämä puhe soi; muuten null.</summary>
+        public static float? PuheenKohta(string aaniId) =>
+            aktiivinen != null && aaniId != null && aktiivinen.erillinenId == aaniId && aktiivinen.puheKuiva != null && aktiivinen.puheKuiva.isPlaying
+                ? aktiivinen.puheKuiva.time : (float?)null;
+
         bool SoitaErillinen(string aaniId, bool kayttaja)
         {
             if (string.IsNullOrEmpty(aaniId) || rakennus == null || !rakennus.Aanet.TryGetValue(aaniId, out var aani) || puheKuiva == null) return false;
@@ -486,6 +492,7 @@ namespace Matkakirja.Natiivi
             if (!AloitaPuhe(kayttaja, aaniId)) return false;
             puheKuiva.clip = k; puheKuiva.volume = PuheTaso; puheKuiva.Play();
             puheLoppuu = Time.unscaledTime + k.length;
+            erillinenId = aaniId;
             Debug.Log($"MATKAKIRJA linssit: poikki: erillinen puhe {aaniId} {k.length:F1} s");
             return true;
         }
