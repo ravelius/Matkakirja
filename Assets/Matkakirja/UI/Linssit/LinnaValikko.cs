@@ -148,6 +148,7 @@ namespace Matkakirja.Natiivi
         void Rakenna()
         {
             valikko.Clear();
+            huoneRivit = null;
             switch (nakyma)
             {
                 case Nakyma.Paa:
@@ -161,9 +162,15 @@ namespace Matkakirja.Natiivi
                 case Nakyma.Huoneet:
                     Takaisin("Huoneet");
                     string nyt = DioraamaAanet.NykyinenHuone;
+                    // Natiivisepän itsetarkistus 4.10. (juna 141, vaaka): seitsemän huonetta ylitti ruudun korkeuden → rivit omaan
+                    // vieritykseensä, ja valikko rajataan turva-alueelle (SovitaKorkeus tiivistää rivit, jos tila ei riitä).
+                    huoneRivit = new ScrollView(ScrollViewMode.Vertical)
+                    { verticalScrollerVisibility = ScrollerVisibility.Hidden, horizontalScrollerVisibility = ScrollerVisibility.Hidden };
+                    huoneRivit.style.flexShrink = 1;
+                    valikko.Add(huoneRivit);
                     foreach (var (id, nimi) in Huoneet())
                     {
-                        var b = Komento(nimi, () => DioraamaSovitin.PyydaTila(id));
+                        var b = Komento(nimi, () => DioraamaSovitin.PyydaTila(id), huoneRivit);
                         b.EnableInClassList("mk-valittu", id == nyt);
                     }
                     break;
@@ -185,6 +192,7 @@ namespace Matkakirja.Natiivi
                         Kirjasimet.Aseta(Rakenne.Teksti(l, "mk-linssivalikko__lahde", vieritys), Kirjasin.Luku);
                     break;
             }
+            if (Auki) SovitaKorkeus();
         }
 
         /// <summary>Huoneet linnan järjestyksessä: tilat, joilla on infotaulu (ei massaa eikä tunnelmaa).</summary>
@@ -225,9 +233,9 @@ namespace Matkakirja.Natiivi
                 DioraamaSovitin.Linssi?.KertojaUudelleen(DioraamaSovitin.ViimeisinT)).StartingIn(150);
         }
 
-        Button Komento(string teksti, Action teko)
+        Button Komento(string teksti, Action teko, VisualElement isa = null)
         {
-            var b = Rakenne.Nappi(teksti, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => { Sulje(); teko(); }, valikko);
+            var b = Rakenne.Nappi(teksti, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => { Sulje(); teko(); }, isa ?? valikko);
             Kirjasimet.Aseta(b, Kirjasin.Luku);
             b.tooltip = teksti;
             return b;
@@ -310,6 +318,31 @@ namespace Matkakirja.Natiivi
             float leveys = isa.resolvedStyle.width;
             valikko.style.top = yla.y + 8;
             valikko.style.right = float.IsNaN(leveys) ? 10 : Mathf.Max(0, leveys - yla.x);
+            SovitaKorkeus();
+        }
+
+        ScrollView huoneRivit;
+
+        /// <summary>Valikko turva-alueen sisään (vaaka-iPhone 402 pt: seitsemän huonetta ei mahtunut). Huoneriveistä tiiviit
+        /// (30 pt, väli 2), jos täysikokoiset eivät mahdu; loput vierittyvät.</summary>
+        void SovitaKorkeus()
+        {
+            if (!Auki) return;
+            var isa = valikko.parent;
+            float korkeus = isa != null ? isa.resolvedStyle.height : float.NaN;
+            float ylaR = valikko.resolvedStyle.top;
+            if (float.IsNaN(korkeus) || korkeus <= 0 || float.IsNaN(ylaR)) { valikko.schedule.Execute(SovitaKorkeus).StartingIn(16); return; }
+            float sk = Screen.height > 0 ? korkeus / Screen.height : 1f;
+            float vapaa = korkeus - ylaR - Screen.safeArea.yMin * sk - 8f;
+            valikko.style.maxHeight = Mathf.Max(120f, vapaa);
+            if (nakyma != Nakyma.Huoneet || huoneRivit == null) return;
+            int rivit = huoneRivit.contentContainer.childCount;
+            bool tiivis = (rivit + 1) * (Tyylikirja.Nappi.Korkeus + 4f) + 40f > vapaa;
+            foreach (var r in huoneRivit.contentContainer.Children())
+            {
+                r.style.minHeight = tiivis ? (StyleLength)30f : StyleKeyword.Null;
+                r.style.marginBottom = tiivis ? (StyleLength)2f : StyleKeyword.Null;
+            }
         }
 
         void TarkistaOhiNapautus()
