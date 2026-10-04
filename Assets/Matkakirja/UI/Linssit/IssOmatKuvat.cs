@@ -126,12 +126,14 @@ namespace Matkakirja.Natiivi
         /// Kuvateksti paikalla ja maalla (Päätoimittaja 4.10.: "Oma kuva · Etna, Italia · 4.10.2026 klo 15.20"), kuvaushetki pelaajan
         /// aikavyöhykkeellä; maa jää pois, jos se on paikan nimi (esim. UKRAINA) tai puuttuu.
         /// </summary>
-        public static string Teksti(IssKameraKuva.OmaKuva k)
+        public static string Teksti(IssKameraKuva.OmaKuva k, bool kahdelleRiville = false)
         {
             var d = TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(k.Utc, DateTimeKind.Utc), TimeZoneInfo.Local);
             string paikka = k.Paikka ?? "", maa = k.Maa ?? "";
             if (maa.Length > 0 && !string.Equals(maa, paikka, StringComparison.OrdinalIgnoreCase)) paikka = paikka.Length > 0 ? paikka + ", " + maa : maa;
-            return "Oma kuva" + (paikka.Length > 0 ? " · " + paikka : "") + $" · {d.Day}.{d.Month}.{d.Year}\u00a0klo\u00a0{d.Hour}.{d.Minute:00}";   // päiväys ja kello samalla rivillä
+            // Ikkunassa päiväys ja kello omalle rivilleen (Päätoimittaja 4.10.: "klo / 18.10" katkesi; U+00A0 piirtyy Luku-fontissa
+            // leveänä aukkona, LS2:n Cupola-ruutu), jakoarkissa yhdelle riville.
+            return "Oma kuva" + (paikka.Length > 0 ? " · " + paikka : "") + (kahdelleRiville ? "\n" : " · ") + $"{d.Day}.{d.Month}.{d.Year} klo {d.Hour}.{d.Minute:00}";
         }
 
         void Nayta(int i)
@@ -139,7 +141,7 @@ namespace Matkakirja.Natiivi
             if (kuvat.Count == 0) return;
             nyt = Mathf.Clamp(i, 0, kuvat.Count - 1);
             var k = kuvat[nyt];
-            teksti.text = Teksti(k);
+            teksti.text = Teksti(k, true);
             edellinen.SetEnabled(nyt < kuvat.Count - 1);
             seuraava.SetEnabled(nyt > 0);
             edellinen.style.visibility = seuraava.style.visibility = kuvat.Count > 1 ? Visibility.Visible : Visibility.Hidden;
