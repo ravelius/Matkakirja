@@ -457,6 +457,37 @@ namespace Matkakirja.Natiivi
             AsetaS2Savy();
         }
 
+        /// <summary>Cupolan rasterisarja ennakkoon (CupolaEnnakko): URL-malli, Web Mercator -tasot, kattavuus ja jaon juuri.</summary>
+        public struct CupolanSarja
+        {
+            public string Malli; public int ZMin, ZMax, JuuriZ, JuuriX, JuuriY;
+            public (double W, double S, double E, double N)? Alue;
+        }
+
+        /// <summary>
+        /// Rasterit, jotka Cupola lisää tultaessa (PaivitaKuukaudenPintaBmng ja PaivitaS2 samoin ehdoin), jotta CupolaEnnakko hakee
+        /// niiden laatat levylle jo kaukonäkymässä. Kuukauden ämpäritarkistus (HEAD) käynnistetään tässä, ettei Cupola odota sitä.
+        /// Tyhjä, jos kuukausi ei ole vielä tiedossa tai pinta on pois.
+        /// </summary>
+        public void CupolanSarjat(List<CupolanSarja> r)
+        {
+            r.Clear();
+            if (KuukaudenPintaPois || KuvanPinta.HasValue) return;
+            int kuukausi = KuukausiPakotettu is >= 1 and <= 12 ? KuukausiPakotettu : Vuodenaika.Kuukausi(Vuodenaika.Kausi(IssNyt.Kello().Month));
+            if (!kuukausiAmparissa.TryGetValue(kuukausi, out bool amparissa))
+            {
+                if (kuukausiKokeillaan < 0) StartCoroutine(KokeileKuukausi(kuukausi));
+                return;
+            }
+            if (!amparissa) return;
+            r.Add(new CupolanSarja { Malli = KuukaudenPintaJuuri + kuukausi.ToString("00") + "/{z}/{x}/{reverseY}.jpg", ZMin = 0, ZMax = KuukaudenPintaMaxTaso });
+            if (!S2Kaytossa || !Vuodenaika.S2Nakyy(Vuodenaika.Kausi(kuukausi))) return;
+            int juuriZ = 6, maxTaso = S2Kevyt ? S2MaxTaso - 1 : S2MaxTaso;
+            var j = Matkakirja.Linssit.Iss.CupolanLaatat.Juuri(S2W, S2N, juuriZ);
+            r.Add(new CupolanSarja { Malli = S2Osoite ?? S2Juuri + "{z}/{x}/{reverseY}.jpg", ZMin = juuriZ, ZMax = juuriZ + maxTaso,
+                JuuriZ = juuriZ, JuuriX = j.x, JuuriY = j.y, Alue = (S2W, S2S, S2E, S2N) });
+        }
+
         /// <summary>S2-sävy (Kyytipino.S2, varjostimen _s2Savy) seuraa S2-kerrosta: päällä vain, kun S2 on pinnalla.</summary>
         void AsetaS2Savy()
         {

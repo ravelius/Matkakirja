@@ -1,9 +1,14 @@
-// CUPOLAN ENNAKKOKAMERA (iPad 75ddd638, 4.10.2026: kylmä ensiavaus jäi 4 s:n kattoon karkeana, lataus 10 %; lämpimät avaukset
-// häivyttivät 2,1–2,4 s:ssa tarkkoina). Cesium valitsee laatat vain kameroille, joten Cupolan näkymä alkoi latautua vasta
-// napautuksesta. Linssin kaukonäkymässä piirtämätön kamera (pois päältä, cullingMask 0) pidetään asennossa, johon Cupola juuri
-// nyt avautuisi (AstronauttiLinssi.CupolanEnnakko), kaikkien tilesettien CesiumCameraManager.additionalCamerasissa (native
-// getAllCameras ei vaadi enabled-tilaa; sama kaava kuin Nappula.Aloitusrata.EnnakkoAsentoon). Kyydissä ja linssin ulkopuolella
-// pois. Asento päivitetään kerran sekunnissa (ISS 7,7 km/s, näkymä ~2 000 km). A/B `ui linssi astro ennakko 0|1`.
+// CUPOLAN ENNAKKO (iPad 75ddd638 ja 36a05beb, 4.10.2026: kylmä ensiavaus jäi 4 s:n kattoon karkeana; lämpimät avaukset
+// häivyttivät 2,0–2,4 s:ssa tarkkoina). Kaksi osaa linssin kaukonäkymässä, asennossa johon Cupola juuri nyt avautuisi
+// (AstronauttiLinssi.CupolanEnnakko):
+//   1) Piirtämätön kamera (pois päältä, cullingMask 0) kaikkien tilesettien CesiumCameraManager.additionalCamerasissa (native
+//      getAllCameras ei vaadi enabled-tilaa; kaava Nappula.Aloitusrata.EnnakkoAsentoon): maasto- ja geometrialaatat valmiiksi.
+//   2) Rasteriesihaku (juurisyy, iPad 36a05beb: kamera yksin ei auttanut, koska kyydin BMNG- ja S2-kerrokset lisätään vasta
+//      Cupolaan tultaessa ja niiden laatat tulivat verkosta): CupolanLaatat laskee näkymän laatat ja Laattapalvelin.Esilataa
+//      hakee ne levylle. Esilataus odottaa näkyvän kartan jonon tyhjenemistä, joten linssin avaus ja liike eivät hidastu
+//      (Päätoimittajan ehto 1); sama kaikilla verkoilla (Raamattu #3938). Uusi haku, kun asento on siirtynyt ≥ 1°; jakson
+//      yläraja EsihakuKattoMt. Cupolaan tultaessa kesken jäänyt esihaku perutaan (Cesium hakee loput itse).
+// Kyydissä ja linssin ulkopuolella pois. Asento päivitetään kerran sekunnissa. A/B `ui linssi astro ennakko 0|1`.
 using System.Collections.Generic;
 using CesiumForUnity;
 using Matkakirja.Linssit.Iss;
@@ -24,6 +29,14 @@ namespace Matkakirja.Natiivi
         Camera paa, ennakko;
         readonly List<CesiumCameraManager> hallinnat = new List<CesiumCameraManager>();
         float seuraava;
+        /// <summary>Uusi esihaku, kun Cupolan katsepiste on siirtynyt vähintään tämän (°; ISS ~1° / 15 s).</summary>
+        public const double EsihakuSiirtymaAst = 1;
+        /// <summary>Kaukonäkymäjakson verkkotavujen yläraja, jonka jälkeen uusia esihakuja ei aloiteta (Mt).</summary>
+        public const int EsihakuKattoMt = 30;
+        readonly List<AstronauttiKerros.CupolanSarja> sarjat = new List<AstronauttiKerros.CupolanSarja>();
+        Laattapalvelin.Esilataus esihaku;
+        Matkakirja.Linssit.Kuvakulma? haettu;
+        int esihakuja, esihakuLaattoja;
 
         /// <summary>Viimeisin tila (tilakomento): "pois", "odottaa" tai asento.</summary>
         public static string Tila { get; private set; } = "pois";
@@ -57,18 +70,45 @@ namespace Matkakirja.Natiivi
             var l = kerros != null ? kerros.Linssi : null;
             var a = default(Matkakirja.Linssit.Kuvakulma);
             bool kauko = l != null && paa != null && georeferenssi != null && l.CupolanEnnakko(out a);
-            if (kauko && !jaksossa) { jaksossa = true; jaksoAlku = Time.unscaledTime; kehyksia = hitaita = 0; summaMs = 0; pisinMs = 0; AlkuTavut = Laattapalvelin.VerkostaTavuja; }
+            if (kauko && !jaksossa) { jaksossa = true; jaksoAlku = Time.unscaledTime; kehyksia = hitaita = 0; summaMs = 0; pisinMs = 0; AlkuTavut = Laattapalvelin.VerkostaTavuja; haettu = null; esihakuja = esihakuLaattoja = 0; }
             else if (!kauko && jaksossa) { jaksossa = false; Kirjaa(); }
             if (!Kaytossa || !kauko) { Irrota(); Tila = Kaytossa ? "odottaa" : "pois"; return; }
             Asentoon(a);
-            Tila = $"asento {a}";
+            Esihae(a);
+            Tila = $"asento {a}, esihaku {(esihaku != null ? $"{esihaku.Valmis}/{esihaku.Yhteensa}" : "-")}";
+        }
+
+        void Esihae(in Matkakirja.Linssit.Kuvakulma a)
+        {
+            if (haettu is Matkakirja.Linssit.Kuvakulma h && Matkakirja.Linssit.Laattalista.Etaisyys(h.Lat, h.Lon, a.Lat, a.Lon) < EsihakuSiirtymaAst) return;
+            if (Laattapalvelin.VerkostaTavuja - AlkuTavut > EsihakuKattoMt * 1048576L) return;
+            kerros.CupolanSarjat(sarjat);
+            if (sarjat.Count == 0) return;   // kuukauden tarkistus kesken: uusi yritys seuraavalla sekunnilla
+            esihaku?.Peru();
+            esihaku = null;
+            int n = 0;
+            var rivi = new System.Text.StringBuilder();
+            foreach (var sa in sarjat)
+            {
+                var laatat = CupolanLaatat.Laske(a, IssKuvakulma.IkkunanKentta, (double)Screen.width / Mathf.Max(1, Screen.height), Screen.height,
+                    sa.ZMin, sa.ZMax, sa.Alue);
+                var polut = CupolanLaatat.Polut(sa.Malli, laatat, Laattapalvelin.Ampari, sa.JuuriZ, sa.JuuriX, sa.JuuriY);
+                if (polut.Count == 0) continue;
+                esihaku = Laattapalvelin.Esilataa(polut, esihaku);
+                n += polut.Count;
+                rivi.Append(rivi.Length > 0 ? ", " : "").Append(polut.Count).Append(sa.JuuriZ > 0 ? " S2" : " BMNG");
+            }
+            haettu = a;
+            esihakuja++; esihakuLaattoja += n;
+            Debug.Log($"MATKAKIRJA linssit: cupolan esihaku {esihakuja}: {n} laattaa ({rivi}) asennolle {a}");
         }
 
         void Kirjaa()
         {
             double mt = (Laattapalvelin.VerkostaTavuja - AlkuTavut) / 1048576.0;
             Debug.Log($"MATKAKIRJA linssit: cupolan ennakko {(Kaytossa ? "päällä" : "pois")}: jakso {Time.unscaledTime - jaksoAlku:0.0} s, " +
-                $"kehyksiä {kehyksia}, keskim. {(kehyksia > 0 ? summaMs / kehyksia : 0):0.0} ms, pisin {pisinMs:0} ms, yli 50 ms {hitaita}, verkosta {mt:0.0} Mt");
+                $"kehyksiä {kehyksia}, keskim. {(kehyksia > 0 ? summaMs / kehyksia : 0):0.0} ms, pisin {pisinMs:0} ms, yli 50 ms {hitaita}, verkosta {mt:0.0} Mt, " +
+                $"esihakuja {esihakuja} ({esihakuLaattoja} laattaa, viimeisin {(esihaku != null ? $"{esihaku.Valmis}/{esihaku.Yhteensa} valmiina" : "-")})");
         }
 
         void Asentoon(in Matkakirja.Linssit.Kuvakulma a)
@@ -112,6 +152,8 @@ namespace Matkakirja.Natiivi
 
         void Irrota()
         {
+            esihaku?.Peru();
+            esihaku = null;
             foreach (var h in hallinnat)
                 if (h != null && ennakko != null) h.additionalCameras.Remove(ennakko);
             hallinnat.Clear();
