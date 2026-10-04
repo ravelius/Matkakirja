@@ -144,6 +144,37 @@ namespace Matkakirja.Natiivi
             valmis(tavut == null ? default : new Unity.Collections.NativeArray<byte>(tavut, Unity.Collections.Allocator.Persistent));
         }
 
+        /// <summary>Esilataus (DioraamaEsilataus): tiedosto suoraan levylle (DownloadHandlerFile, ei muistikopiota — kuoren 8k-tekstuuri
+        /// 90 Mt kartalla). Jo levyllä → heti true. Vain nykyisen hash-paketin tiedostot; muut false.</summary>
+        public static IEnumerator Esilataa(string url, int aikakatkaisu, Action<bool> valmis)
+        {
+            yield return OdotaKesken(url);
+            string paikka = Paikka(url);
+            if (paikka == null) { valmis(false); yield break; }
+            if (File.Exists(paikka)) { valmis(true); yield break; }
+            bool ok = false;
+            haussa.Add(url);
+            try
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(paikka));
+                string tmp = paikka + ".esi";
+                using (var p = new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET, new DownloadHandlerFile(tmp) { removeFileOnAbort = true }, null))
+                {
+                    p.timeout = aikakatkaisu;
+                    yield return p.SendWebRequest();
+                    ok = p.result == UnityWebRequest.Result.Success;
+                }
+                if (ok)
+                {
+                    try { if (File.Exists(paikka)) File.Delete(paikka); File.Move(tmp, paikka); Latauksia++; }
+                    catch (Exception e) { ok = false; Debug.LogWarning("MATKAKIRJA dioraama: esilataus ei siirtynyt välimuistiin: " + e.Message); }
+                }
+                else { try { if (File.Exists(tmp)) File.Delete(tmp); } catch (Exception) { } Epaonnistui++; }
+            }
+            finally { haussa.Remove(url); }
+            valmis(ok);
+        }
+
         static IEnumerator OdotaKesken(string url)
         {
             while (url != null && haussa.Contains(url)) yield return null;
