@@ -730,6 +730,15 @@ namespace Matkakirja.Natiivi
                 case "mittaa": MittaaKoko(1.2f); break;
                 case "auto": AsetaAuto(true); break;          // AUTO päälle (web PR #3817)
                 case "auto-pois": AsetaAuto(false); break;
+                case "luettu":
+                {
+                    // Testi: selitteen luenta päättyy nyt (AUTO-vaihdot tallenteeseen odottamatta koko luentaa).
+                    int v = luentaVuoro;
+                    var p = Puhe.Instanssi;
+                    if (luennanUrl != null && p != null && p.SoivaUrl == luennanUrl) p.Pysayta(0.1f);
+                    LuentaLoppui(v);
+                    return $"luenta päättyi, AUTO {(AutoKaytossa ? "päällä" : "pois")}, zoomi {zoomi:0.##}, kuva {indeksi}";
+                }
                 default:
                     // ui linssi kuvaselite zoomi:<x>: kuva x-kertaiseksi keskeltä (rajattu ylärajaan Suurin = 8×), tila lokiin.
                     if (komento.StartsWith("zoomi:") && float.TryParse(komento.Substring(6), System.Globalization.NumberStyles.Float,
