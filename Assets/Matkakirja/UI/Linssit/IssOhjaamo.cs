@@ -325,6 +325,8 @@ namespace Matkakirja.Natiivi
                 foreach (var e in new[] { joystick, lcd, kamera, kaasu, rumpu, laajennus }) Vapauta(e);
                 osuma.style.left = StyleKeyword.Null; osuma.style.top = StyleKeyword.Null; osuma.style.width = StyleKeyword.Null; osuma.style.height = StyleKeyword.Null;
                 foreach (var e in new VisualElement[] { maa, rumpuA, rumpuB, kerta, luvut }) { e.style.fontSize = StyleKeyword.Null; e.style.height = StyleKeyword.Null; }
+                kerta.style.display = StyleKeyword.Null;
+                foreach (var t in new[] { rumpuA, rumpuB }) if (!string.IsNullOrEmpty(t.text)) t.text = t.text.TrimEnd('×');
                 laajennus.style.paddingLeft = laajennus.style.paddingTop = laajennus.style.paddingRight = laajennus.style.paddingBottom = StyleKeyword.Null;
                 mittakaava = 1f;
                 SovitaKohde();
@@ -409,9 +411,16 @@ namespace Matkakirja.Natiivi
             // Tekstit pohjan mittakaavassa (Linnanrakentaja: LCD:n rivi 1 ~15 pt, rivi 2 ≥ 10–11 pt; rummun numerot täyttävät aukon).
             mittakaava = s;
             maa.style.fontSize = MaaPt * s;
-            foreach (var t in new[] { rumpuA, rumpuB }) { t.style.fontSize = a.Rumpu.height * 0.72f * s; t.style.height = a.Rumpu.height * s; }
             luvut.style.height = a.Rumpu.height * s;
-            kerta.style.fontSize = a.Rumpu.height * 0.6f * s;
+            kerta.style.display = DisplayStyle.None;
+            foreach (var t in new[] { rumpuA, rumpuB })
+            {
+                t.style.height = a.Rumpu.height * s;
+                if (!string.IsNullOrEmpty(t.text) && int.TryParse(t.text.TrimEnd('×'), out int k)) t.text = RummunTeksti(k);
+                SovitaRumpu(t);
+            }
+            var nakyva = rumpuANakyy ? rumpuA : rumpuB;
+            if (!string.IsNullOrEmpty(nakyva.text)) luvut.style.width = nakyva.MeasureTextSize(nakyva.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x + 1f;
             SovitaKohde();
         }
 
@@ -511,13 +520,14 @@ namespace Matkakirja.Natiivi
             var vanha = rumpuANakyy ? rumpuA : rumpuB;
             var uusi = rumpuANakyy ? rumpuB : rumpuA;
             rumpuANakyy = !rumpuANakyy;
-            uusi.text = kerroin.ToString();
+            uusi.text = RummunTeksti(kerroin);
+            if (ankkurit != null) SovitaRumpu(uusi);
             // Kolon leveys luvun mukaan, jolloin "1 ×" ja "1000 ×" ovat kolossa keskellä (siirtymän ajan leveämmän mukaan).
             float Lev(Label t) => string.IsNullOrEmpty(t.text) ? 0f
                 : t.MeasureTextSize(t.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
             float lu = Lev(uusi), lv = Lev(vanha);
             if (lu > 0) luvut.style.width = Mathf.Max(lu, lv) + 1f;
-            luvut.schedule.Execute(() => { if (uusi.text == kerroin.ToString() && lu > 0) luvut.style.width = lu + 1f; }).ExecuteLater(230);
+            luvut.schedule.Execute(() => { if (uusi.text == RummunTeksti(kerroin) && lu > 0) luvut.style.width = lu + 1f; }).ExecuteLater(230);
             uusi.RemoveFromClassList("mk-issohjaamo__luku--liukuu");
             uusi.style.translate = new Translate(0, Length.Percent(-suuntaY * 100));
             // Seuraavassa ruudussa siirtymä käyntiin: vanha liukuu piiloon, uusi esiin (USS translate 200 ms).
@@ -528,6 +538,19 @@ namespace Matkakirja.Natiivi
                 vanha.style.translate = new Translate(0, Length.Percent(suuntaY * 100));
                 uusi.style.translate = new Translate(0, 0);
             }).ExecuteLater(16);
+        }
+
+        /// <summary>Rummun teksti: kuvapaneelin mekaanisessa laskurissa "1000×" yhtenä (×-merkki mittarifontissa), muuten numero.</summary>
+        string RummunTeksti(int kerroin) => ankkurit != null ? kerroin + "×" : kerroin.ToString();
+
+        /// <summary>Laskurin luku täyttää ikkunan: korkeintaan 0,72 × korkeus, pitkä luku pienenee ikkunan leveyteen (90 %).</summary>
+        void SovitaRumpu(Label t)
+        {
+            if (ankkurit == null || string.IsNullOrEmpty(t.text)) return;
+            float max = ankkurit.Rumpu.height * 0.72f * mittakaava, w = ankkurit.Rumpu.width * 0.9f * mittakaava;
+            t.style.fontSize = max;
+            float l = t.MeasureTextSize(t.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+            if (l > w) t.style.fontSize = Mathf.Floor(max * w / l * 10f) / 10f;
         }
 
         void AsetaKahva()
