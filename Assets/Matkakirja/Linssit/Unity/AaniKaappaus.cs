@@ -15,6 +15,20 @@ namespace Matkakirja.Natiivi
         /// <summary>Kaappaus käynnissä: ajattelijan lähteet soivat täysillä (ulostulo on nollattu).</summary>
         public static bool Kaynnissa { get; private set; }
 
+        /*
+         * NATIIVIKAAPPAUS (Päätoimittaja 4.10.2026; sovittu Linssiseppä 2:n kanssa): AVAudioEnginessä soivat äänet (Cupolan humina,
+         * MatkakirjaSilmukat.mm) eivät kulje tämän suotimen kautta. Aloita käynnistää samalla natiivin tapin samaksi ajaksi
+         * (Documents/<nimi>-natiivi.wav; kaiuttimet hiljaa kuten tässä) ja Merkki soittaa saman piippauksen natiivimoottorissa,
+         * joten tallenne-yhdista.py kohdistaa kummankin WAVin piippauksesta. Vain testikomennoista (LueKomennot #if !MATKAKIRJA_APPSTORE).
+         */
+#if UNITY_IOS && !UNITY_EDITOR
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern void MatkakirjaSilmukka_Kaappaa(string polku, double sekunnit);
+        [System.Runtime.InteropServices.DllImport("__Internal")] static extern void MatkakirjaSilmukka_Merkki(double etumatka);
+#else
+        static void MatkakirjaSilmukka_Kaappaa(string polku, double sekunnit) { }
+        static void MatkakirjaSilmukka_Merkki(double etumatka) { }
+#endif
+
         float[] puskuri;
         int kirjoitettu, kanavia, taajuus;
         double alkuDsp = double.NaN;
@@ -42,7 +56,9 @@ namespace Matkakirja.Natiivi
             k.enabled = true;
             Kaynnissa = true;
             TestiMykistys.KaappausNollaa = true;   // testimykistys (ennen tätä ketjussa) jättää nollauksen tälle
-            kirjaa($"kaappaus alkaa: {sekunnit:F0} s, {k.taajuus} Hz, {k.kanavia} kan");
+            var natiivi = Path.Combine(Application.persistentDataPath, nimi + "-natiivi.wav");
+            MatkakirjaSilmukka_Kaappaa(natiivi, sekunnit);
+            kirjaa($"kaappaus alkaa: {sekunnit:F0} s, {k.taajuus} Hz, {k.kanavia} kan; natiivi {Path.GetFileName(natiivi)}");
         }
 
         void OnAudioFilterRead(float[] data, int kan)
@@ -96,6 +112,7 @@ namespace Matkakirja.Natiivi
                 piippi.clip = c; piippi.playOnAwake = false; piippi.spatialBlend = 0;
             }
             merkkiT = AudioSettings.dspTime + etumatka;
+            MatkakirjaSilmukka_Merkki(etumatka);   // sama piippaus natiivimoottoriin (natiivi-WAVin kohdistus)
             merkkiViive = viive;
             piippi.volume = 1f;
             piippi.PlayScheduled(merkkiT);

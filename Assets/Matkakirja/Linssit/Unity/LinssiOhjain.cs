@@ -1506,6 +1506,9 @@ namespace Matkakirja.Natiivi
                     if (!AineistoValmis && rekisteri.Kaikki.All(l => l.Tiedot.Id != osat[1])) StartCoroutine(ValitseKunValmis(osat[1]));
                     else rekisteri.Valitse(osat[1]);
                 }
+                else if (osat[0] == "esilataa" && osat.Length > 1 && osat[1] == "linna")
+                    // Linnan esilataus heti (testi; pelissä DioraamaEsilataus käynnistyy, kun pelaaja lähestyy Olavinlinnaa).
+                    DioraamaEsilataus.Aloita("testikomento");
                 else if (osat[0] == "kaappaa" && osat.Length > 1)
                     // Yleinen äänikaappaus tallenteeseen (Päätoimittaja 4.10.: kaikille linsseille, ei vain ajattelijalle):
                     // kaappaa <s> [nimi] → Documents/<nimi>.wav, ulostulo nollattu (AaniKaappaus).

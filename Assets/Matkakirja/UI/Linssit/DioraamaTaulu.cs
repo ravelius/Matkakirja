@@ -270,6 +270,24 @@ namespace Matkakirja.Natiivi
             kuunnelma = new KuunnelmaKaistale();
             Viimeisin = this;
 
+            // NIMIRUUTU (Päätoimittaja 4.10.): saapumisen latausodotuksen ajan ISS-avausruudun pohja (mk-astroavaus, ei uutta tyyliä):
+            // rakennuksen nimi, viiva ja alarivi; häivytetään, kun kevyt kuori on valmis ja linna nousee sumusta.
+            nimiruutu = Rakenne.El("mk-astroavaus", kerros.Juuri(LinssiUi.Ylakerros), PickingMode.Ignore);
+            nimiruutu.style.display = DisplayStyle.None;
+            var nimiOtsikko = Rakenne.El("mk-astroavaus__otsikko", nimiruutu, PickingMode.Ignore);
+            Kirjasimet.Aseta(nimiOtsikko, Kirjasin.Kone);
+            nimiruudunNimi = Rakenne.Teksti("", "mk-astroavaus__nimi", nimiOtsikko);
+            Kirjasimet.Aseta(nimiruudunNimi, Kirjasin.KoneLihava);
+            Rakenne.El("mk-astroavaus__viiva", nimiOtsikko, PickingMode.Ignore);
+            Rakenne.Teksti(DioraamaSovitin.SaapumisAlarivi, "mk-astroavaus__lahde", nimiOtsikko);
+            // Omistaja 4.10. (14.5x): yli 4 s "Linna latautuu…", yli 9 s "Vielä pieni hetki…" — sama pohja, rauhallinen häivytys.
+            // Päätoimittaja 4.10. (juna 138 VIE): tyhjä rivi oli 0 pt korkea, ja otsikko nousi ~7 pt rivin ilmestyessä → rivin
+            // teksti on alusta asti paikallaan läpinäkyvänä (sama yksirivinen korkeus kummallekin tekstille), joten mikään ei liiku.
+            latausRivi = Rakenne.Teksti("Linna latautuu…", "mk-astroavaus__lahde", nimiOtsikko);
+            latausRivi.AddToClassList("mk-astroavaus__otsikko--haipyy");
+            latausRivi.style.marginTop = 22;
+            latausRivi.style.opacity = 0f;
+
             DioraamaSovitin.PeittaaRuutu = OsuukoPaneeliin;
             DioraamaSovitin.Vaihtui += Kytke;
             kerros.JokaRuutu += Paivita;
@@ -328,13 +346,85 @@ namespace Matkakirja.Natiivi
                 if (el != null && el.resolvedStyle.display != DisplayStyle.None && el.panel != null
                     && el.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(el.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
                     return true;
+            // Savuke 1139 (4.10.): linnan valikko (LinnaValikko, mk-linssivalikko) ja muut napit ruudulla eivät välitä
+            // napautusta dioraamalle (valikon huonevalinnan irrotus kohdisti edellisen huoneen uudelleen). Valikko on omassa
+            // kerroksessaan, joten auki oleva valikko estää koko eleen (myös sulkevan napautuksen valikon ulkopuolelle).
+            if (Linna != null && Linna.Auki) return true;
+            if (juuri.panel != null)
+            {
+                for (var el = juuri.panel.Pick(RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(ruutu.x, Screen.height - ruutu.y)));
+                     el != null; el = el.parent)
+                {
+                    if (el is Button) return true;
+                    foreach (var luokka in el.GetClasses()) if (luokka.StartsWith("mk-linssivalikko", System.StringComparison.Ordinal)) return true;
+                }
+            }
             if (juuri.style.display == DisplayStyle.None || lauta.resolvedStyle.display == DisplayStyle.None) return false;
             var paneelipiste = RuntimePanelUtils.ScreenToPanel(lauta.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
             return lauta.worldBound.Contains(paneelipiste);
         }
 
+        readonly VisualElement nimiruutu;
+        readonly Label nimiruudunNimi, latausRivi;
+        bool nimiruutuAuki, virheIlmoitettu;
+        float nimiruutuAlku;
+        int latausVaihe;   // 0 = ei riviä, 1 = "Linna latautuu…", 2 = "Vielä pieni hetki…"
+        const float LatausRivi1S = 4f, LatausRivi2S = 9f;
+
+        void PaivitaNimiruutu()
+        {
+            // Lataushäiriö: olemassa oleva virheviesti tilarivillä ja linssi kiinni (ei loputonta odotusta).
+            if (DioraamaSovitin.LatausVirhe != null && !virheIlmoitettu)
+            {
+                virheIlmoitettu = true;
+                UiNakymat.Hae()?.Tilarivi.Viesti(DioraamaSovitin.LatausVirhe, 5f);
+                UiNakymat.Hae()?.Linssit?.SuljeLinssi();
+            }
+            bool odotus = (DioraamaSovitin.SaapumisOdotus || DioraamaSovitin.RakennusLatautuu) && DioraamaSovitin.LatausVirhe == null;
+            if (odotus && nimiruudunNimi.text != DioraamaSovitin.SaapumisNimi) nimiruudunNimi.text = DioraamaSovitin.SaapumisNimi;
+            if (odotus && !nimiruutuAuki)
+            {
+                nimiruutuAuki = true;
+                virheIlmoitettu = false;
+                nimiruutuAlku = Time.unscaledTime;
+                latausVaihe = 0;
+                latausRivi.style.opacity = 0f;
+                nimiruutu.RemoveFromClassList("mk-astroavaus--haipyy");
+                nimiruutu.style.opacity = 1f;
+                nimiruutu.style.display = DisplayStyle.Flex;
+            }
+            if (odotus)
+            {
+                float kulunut = Time.unscaledTime - nimiruutuAlku;
+                int vaihe = kulunut >= LatausRivi2S ? 2 : kulunut >= LatausRivi1S ? 1 : 0;
+                if (vaihe != latausVaihe)
+                {
+                    int edellinen = latausVaihe;
+                    latausVaihe = vaihe;
+                    string teksti = vaihe == 1 ? "Linna latautuu…" : "Vielä pieni hetki…";
+                    Debug.Log($"MATKAKIRJA linssit: nimiruutu: rivi {vaihe} \"{teksti}\" {kulunut:F1} s");
+                    if (edellinen == 0) { latausRivi.text = teksti; latausRivi.style.opacity = 1f; }
+                    else
+                    {
+                        // Ristihäivytys: vanha rivi pois (0,7 s), uusi teksti tilalle ja esiin.
+                        latausRivi.style.opacity = 0f;
+                        latausRivi.schedule.Execute(() => { if (latausVaihe == 2) { latausRivi.text = teksti; latausRivi.style.opacity = 1f; } }).StartingIn(750);
+                    }
+                }
+            }
+            else if (!odotus && nimiruutuAuki)
+            {
+                nimiruutuAuki = false;
+                Debug.Log($"MATKAKIRJA linssit: nimiruutu: häivytys {Time.unscaledTime - nimiruutuAlku:F1} s avauksesta");
+                nimiruutu.AddToClassList("mk-astroavaus--haipyy");
+                nimiruutu.style.opacity = 0f;
+                nimiruutu.schedule.Execute(() => { if (!nimiruutuAuki) nimiruutu.style.display = DisplayStyle.None; }).StartingIn(1200);
+            }
+        }
+
         void Paivita()
         {
+            PaivitaNimiruutu();
             var linssi = DioraamaSovitin.Linssi;
             var rakennus = linssi?.Rakennus;
             // Kehittäjän Kuori-nappi ×:n alle oikeaan reunaan (katselmus 1.1 (78): kiinteä top 110 osui × -nappiin).
@@ -361,7 +451,7 @@ namespace Matkakirja.Natiivi
                 puluAlue.style.display = DisplayStyle.None;
                 uusintaNappi.style.display = DisplayStyle.None;
                 kertojaLaatikko.RemoveFromClassList("mk-nakyy");
-                LopetaKuunnelma();
+                LopetaKuunnelma("ei näkymää");
                 return;
             }
             Nakyma nakyma = nakymaTaiEi.Value;
@@ -385,7 +475,7 @@ namespace Matkakirja.Natiivi
                 pulu.style.display = DisplayStyle.None;
                 puluAlue.style.display = DisplayStyle.None;
                 for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
-                LopetaKuunnelma();
+                LopetaKuunnelma("kierros");
                 return;
             }
             var infoTila = nakyma.KohdeTila != null ? rakennus.Tila(nakyma.KohdeTila) : null;
@@ -395,7 +485,7 @@ namespace Matkakirja.Natiivi
             if (nakyma.KohdeTila == null && rakennus.Kertoja != null && rakennus.Kertoja.Count > 0)
             {
                 // Tilasta palattaessa kuunnelma loppuu (dccb82a5: keittiön kaistale jäi yleisnäkymään).
-                LopetaKuunnelma();
+                LopetaKuunnelma("yleisnäkymä");
                 for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
                 lauta.style.display = DisplayStyle.None;
                 float ph2 = juuri.layout.height; if (float.IsNaN(ph2) || ph2 <= 0) ph2 = Screen.height;
@@ -417,7 +507,7 @@ namespace Matkakirja.Natiivi
                 if (kupla) { puluAlue.style.left = vasen2 + 12; puluAlue.style.top = ph2 - ala2 - koko2 - 102; puluAlue.style.width = koko2 * 58f / 70f + 12; puluAlue.style.height = koko2 + 12; }
                 return;
             }
-            LopetaKuunnelma();
+            LopetaKuunnelma("muu tila");
             puluAlue.style.display = DisplayStyle.None;
 
             // Pulu: 3D-laskeutumispiste → ruutupiste → paneelikoordinaatit (MaapallonVuosiSovitin-kommentin malli).
@@ -524,12 +614,15 @@ namespace Matkakirja.Natiivi
         void PaivitaInfotaulu(PoikkileikkausLinssi linssi, Tila tila, Nakyma nakyma, double t)
         {
             for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
-            bool perilla = linssi.LeikkausHetkella(t).osuus >= 0.99;
+            // 4.10. (iPad v28: huoneesta toiseen siirryttäessä k1 alkoi kahdesti, myös BUILD 137): siirtymän alussa leikkaus on
+            // vielä EDELLISEN tilan (osuus ≈ 1) → perillä vain, kun leikkaus on tämän tilan.
+            var leikkaus = linssi.LeikkausHetkella(t);
+            bool perilla = leikkaus.tila == tila.Id && leikkaus.osuus >= 0.99;
             var info = tila.Infotaulu;
             lauta.style.display = perilla ? DisplayStyle.Flex : DisplayStyle.None;
             lauta.style.opacity = perilla ? 1f : 0f;
             lauta.style.translate = new Translate(0, perilla ? 0 : 8);
-            if (!perilla) { pulu.style.display = DisplayStyle.None; puluAlue.style.display = DisplayStyle.None; LopetaKuunnelma(); return; }
+            if (!perilla) { pulu.style.display = DisplayStyle.None; puluAlue.style.display = DisplayStyle.None; LopetaKuunnelma("ei perillä"); return; }
 
             float pw = juuri.layout.width, ph = juuri.layout.height;
             if (float.IsNaN(pw) || pw <= 0) { pw = Screen.width; ph = Screen.height; }
@@ -557,8 +650,8 @@ namespace Matkakirja.Natiivi
 
             // Kuunnelma alkaa, kun tilaan on tultu perille (kierroksen aikana tänne ei tulla).
             bool kuunneltava = tila.Kuunnelma != null && tila.Kuunnelma.Count > 0;
-            if (kuunneltava && kuunnelma.TilaId != tila.Id) { kuunnelmaTila = tila; kuunnelma.Aloita(tila); }
-            else if (!kuunneltava) LopetaKuunnelma();
+            if (kuunneltava && kuunnelma.TilaId != tila.Id) { Debug.Log($"MATKAKIRJA linssit: poikki: kuunnelma {tila.Id} alkaa (edellinen {kuunnelma.TilaId ?? "-"})"); kuunnelmaTila = tila; kuunnelma.Aloita(tila); }
+            else if (!kuunneltava) LopetaKuunnelma("ei kuunneltava");
             kuunnelma.Paivita();
 
             // Puhuja kortin kapiteelina otsikon yläpuolella ja repliikki samaan korttiin vain, jos sitä ei puhuta ääneen
@@ -601,10 +694,11 @@ namespace Matkakirja.Natiivi
             puluAlue.style.width = puluLeveys + 12f; puluAlue.style.height = koko + 12f;
         }
 
-        void LopetaKuunnelma()
+        void LopetaKuunnelma(string syy)
         {
             if (kuunnelma == null) return;
-            if (kuunnelma.TilaId != null) kuunnelma.Lopeta();
+            // 4.10. iPad v28: huoneesta toiseen siirryttäessä k1 alkoi kahdesti → syy lokiin (kuunnelma alkaa alusta seuraavalla Aloita).
+            if (kuunnelma.TilaId != null) { Debug.Log($"MATKAKIRJA linssit: poikki: kuunnelma {kuunnelma.TilaId} loppui ({syy})"); kuunnelma.Lopeta(); }
             kuunnelmaTila = null;
             kuunteleNappi.style.display = DisplayStyle.None;
         }

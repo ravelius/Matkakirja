@@ -158,6 +158,25 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(y.Katto == null && y.Lattia == null, "sulku palauttaa pelin rajat");
         }
 
+        [Testi] static void CupolanEnnakkoOnAvautuvaAsento()
+        {
+            // iPad 75ddd638: kylmä Cupola karkeana 4 s; ennakkokamera lataa laatat jo kaukonäkymässä samaan asentoon.
+            var (l, y, _) = Luo();
+            l.Avaa(y);
+            y.Vale.Tilat[AstronauttiLinssi.Kerros] = KerrosTila.Luovutti;
+            Aja(l, y, 0.2);
+            Oleta.Tosi(l.CupolanEnnakko(out var e), "kaukonäkymässä ennakko");
+            l.NapautaIss();
+            Aja(l, y, 0.05);
+            Oleta.Sama(Matkakirja.Linssit.Iss.KyydinTila.Ikkuna, l.Kyyti);
+            var a = l.KyydinAsento;
+            double km = Matkakirja.Linssit.Iss.IssKuvakulma.Kaari(e.Lat, e.Lon, a.Lat, a.Lon) * 111.2;
+            Oleta.Tosi(km < 30 && Math.Abs(e.Kallistus - a.Kallistus) < 1, $"ennakko {e} vs. Cupola {a}: {km:0.0} km");
+            Oleta.Tosi(!l.CupolanEnnakko(out _), "kyydissä ei ennakkoa");
+            l.Sulje();
+            Oleta.Tosi(!l.CupolanEnnakko(out _), "suljettuna ei ennakkoa");
+        }
+
         [Testi] static void IssSeurantaPaattyyKuvaanJaKyytiin()
         {
             var (l, y, _) = Luo();

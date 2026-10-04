@@ -90,6 +90,7 @@ namespace Matkakirja.Natiivi
         public IEnumerator Lataa(Ulkokuori kuori, Func<string, string> url, Action<string> kirjaa, bool hamara = false)
         {
             Tyhjenna();
+            KaikkiValmis = false;
             if (kuori == null) yield break;
             if (varjostin == null) { kirjaa?.Invoke("poikki: DioraamaKuori-varjostin puuttuu"); yield break; }
             int oma = ++kerta;
@@ -103,6 +104,7 @@ namespace Matkakirja.Natiivi
             string AstcPaiva(Laatu l) => l == Laatu.Huippu ? kuori.AstcHuippu : l == Laatu.Normaali ? kuori.AstcNormaali : kuori.AstcKevyt;
             string AstcHamara(Laatu l) => l == Laatu.Huippu ? kuori.HamaraHuippu : l == Laatu.Normaali ? kuori.HamaraNormaali : kuori.HamaraKevyt;
             string JpgHamara(Laatu l) => l == Laatu.Huippu ? kuori.HamaraJpgHuippu : l == Laatu.Normaali ? kuori.HamaraJpgNormaali : kuori.HamaraJpgKevyt;
+            string JpgPaiva(Laatu l) => l == Laatu.Huippu ? kuori.JpgHuippu : l == Laatu.Normaali ? kuori.JpgNormaali : kuori.JpgKevyt;
             string AstcPolku(Laatu l) => hamara && !string.IsNullOrEmpty(AstcHamara(l)) ? AstcHamara(l) : AstcPaiva(l);
             // Kevyt ensin (12,7 Mt + 2k-tekstuuri): nopea esikatselu ja joka tapauksessa kaukotaso; sitten laitteen oma taso.
             // 30.9. (Linnanrakentajan havainto): aiempi järjestys normaali → kevyt → huippu latasi huippu-laitteella 162 Mt,
@@ -177,13 +179,24 @@ namespace Matkakirja.Natiivi
                     if (kuva != null && tauot) yield return null;
                     if (kuva == null) kirjaa?.Invoke($"poikki: kuori {taso} ASTC ei käytössä ({(!ladattiin ? "ei latautunut" : syy)}), JPEG varalla");
                 }
+                bool hamaraJpg = false;
                 if (kuva == null && hamara && !string.IsNullOrEmpty(JpgHamara(taso)))
                 {
                     byte[] jpg = null;
                     yield return DioraamaLevyvalimuisti.Hae(url(JpgHamara(taso)), 120, t => jpg = t);
                     if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
-                    if (jpg != null) koottu.Kuva = jpg; // sama JPEG-polku alla
+                    if (jpg != null) { koottu.Kuva = jpg; hamaraJpg = true; } // sama JPEG-polku alla
                     else kirjaa?.Invoke($"poikki: kuori {taso} hämärä-JPEG ei latautunut, päivätekstuuri");
+                }
+                // Päivän JPEG erillisestä tiedostosta (tekstuurit.jpg, 4.10.): kun hämärää ei käytetä tai sen JPEG puuttuu. Ennen
+                // kuin glb:n upotettu kuva poistetaan, tämä on ASTC:tä tukemattoman laitteen ainoa päiväkuva.
+                if (kuva == null && !hamaraJpg && !string.IsNullOrEmpty(JpgPaiva(taso)))
+                {
+                    byte[] jpg = null;
+                    yield return DioraamaLevyvalimuisti.Hae(url(JpgPaiva(taso)), 120, t => jpg = t);
+                    if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
+                    if (jpg != null) { koottu.Kuva = jpg; kirjaa?.Invoke($"poikki: kuori {taso} päivä-JPEG erillisestä tiedostosta ({jpg.Length / 1048576f:F1} Mt)"); }
+                    else kirjaa?.Invoke($"poikki: kuori {taso} päivä-JPEG ei latautunut{(koottu.Kuva != null ? ", glb:n kuva" : "")}");
                 }
                 if (kuva == null && koottu.Kuva != null)
                 {
@@ -210,7 +223,12 @@ namespace Matkakirja.Natiivi
                 yield return null;
             }
             if (kuori.Detalji != null) yield return LataaDetalji(kuori.Detalji, url, kirjaa, oma);
+            if (oma == kerta) KaikkiValmis = true;
         }
+
+        /// <summary>Kaikki tasot (kevyt + laitteen taso) ja detalji käsitelty (Päätoimittaja 4.10.: linna näytetään vasta täydellä
+        /// tarkkuudella). Epäonnistunut taso näkyy DioraamaLevyvalimuisti.Epaonnistui-laskurissa.</summary>
+        public bool KaikkiValmis { get; private set; }
 
         // --- LÄHIDETALJI (menetelmä B, Päätoimittaja 30.9.2026; DioraamaKuori.shader) -------------------------------------
         static readonly int IdDetaljiMaski = Shader.PropertyToID("_DetaljiMaski"), IdDetaljiToisto = Shader.PropertyToID("_DetaljiToisto"),

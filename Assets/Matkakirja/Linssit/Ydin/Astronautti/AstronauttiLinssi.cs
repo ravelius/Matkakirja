@@ -372,6 +372,24 @@ namespace Matkakirja.Linssit.Astronautti
         public bool PaivanvaloSiirto { get; private set; }
         int paivaKelaus;
 
+        /// <summary>
+        /// CUPOLAN ENNAKKO (iPad 75ddd638: kylmä ensiavaus jäi 4 s:n kattoon karkeana, lämpimät 2,1–2,4 s tarkkoina): asento, johon
+        /// Cupola avautuisi juuri nyt kaukonäkymästä (NapautaIss → suora avaus, katse nollattu, LIVEnä yöpuolelta päivänvaloon
+        /// kelattu hetki). Unity-puoli pitää piirtämättömän ennakkokameran tässä, jotta Cesium lataa näkymän laatat jo ennen
+        /// napautusta. false = ei kaukonäkymässä (kyydissä oma kamera lataa, avauksen aikana ei vielä).
+        /// </summary>
+        public bool CupolanEnnakko(out Kuvakulma asento)
+        {
+            asento = default;
+            if (!Auki || Vaihe == AvauksenVaihe.Musta || kyyti.Kyydissa || !Iss.IssKyyti.SuoraAvaus) return false;
+            var utc = Iss.IssNyt.Kello();
+            var simu = Iss.IssNyt.Simu;
+            if (CupolaPaivanvaloon && simu.Live && lento == null && Iss.Avaruuskavely.Yopuolella(utc))
+                utc = Iss.Avaruuskavely.SeuraavaPaivanvalo(Iss.IssNyt.Paikka, utc) ?? utc;
+            asento = Iss.IssKuvakulma.Ikkuna(AlusHetki(utc, Nyt / 1000));
+            return true;
+        }
+
         void PaivanvaloonJosYo(DateTime utc, bool heti = false)
         {
             var simu = Iss.IssNyt.Simu;
