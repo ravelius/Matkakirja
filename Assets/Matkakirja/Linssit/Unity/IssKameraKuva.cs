@@ -246,7 +246,12 @@ namespace Matkakirja.Natiivi
         /// tarkkuus karkeutuu kaksinkertaisin askelin, kunnes TCI- ja SCL-laattojen arvioitu haku mahtuu Budjettiin (enintään 5 askelta).
         /// Testikomennot `astro kyyti kuvaa budjetti <Mt>` ja `astro kyyti kuvaa kentta <°>`.
         /// </summary>
-        public static double BudjettiMt = 30, MaxKentta = 20;
+        public static double BudjettiMt = 30, MaxKentta = 14;
+        /// <summary>
+        /// Reunojen lisäkarkeus (Päätoimittaja 4.10.: "karkeammat COG-tasot reunoilla ja kaukana"; simu b3a14902: tasainen 4× karkeus teki
+        /// Saharan koko kuvasta suttuisen z10:n): solun karkeus = budjettikerroin × (1 + ReunaKarkeus · r²), r = 0 keskellä … 1 kulmassa.
+        /// </summary>
+        public static double ReunaKarkeus = 3;
 
         IEnumerator Ajo(Camera kamera, CesiumGeoreference g, int W, int H, string muoto, AstronauttiLinssi linssi = null)
         {
@@ -387,7 +392,13 @@ namespace Matkakirja.Natiivi
                 double karkeus = 1; long arvio = 0;
                 for (int kierros = 0; ; kierros++)
                 {
-                    ty.Suunnittele(karkeus == 1 ? naytteet : naytteet.Select(n => { var k = n; k.MetriaPikseli *= karkeus; return k; }).ToList());
+                    ty.Suunnittele(naytteet.Select(n =>
+                    {
+                        var k = n;
+                        double dx = (n.Sx + 0.5 - 24) / 24.0, dy = (n.Sy + 0.5 - 18) / 18.0, r2 = (dx * dx + dy * dy) / 2;
+                        k.MetriaPikseli *= karkeus * (1 + ReunaKarkeus * r2);
+                        return k;
+                    }).ToList());
                     arvio = 0;
                     foreach (var (ru, o) in ty.Data.Ruudut)
                     {
@@ -397,7 +408,7 @@ namespace Matkakirja.Natiivi
                     if (arvio <= BudjettiMt * 1e6 || kierros >= 5) break;
                     karkeus *= 2;
                 }
-                Loki($"budjetti: karkeus {karkeus:0}×, arvio {arvio / 1e6:0.0} Mt (raja {BudjettiMt:0} Mt), kenttä {kamera.fieldOfView:0.0}°{(kenttaRajattu ? " (rajattu)" : "")}");
+                Loki($"budjetti: karkeus {karkeus:0}× (reunoilla +{ReunaKarkeus:0}×), arvio {arvio / 1e6:0.0} Mt (raja {BudjettiMt:0} Mt), kenttä {kamera.fieldOfView:0.0}°{(kenttaRajattu ? " (rajattu)" : "")}");
 
                 // 3b) kaukoalue S2-mosaiikista (lehdet z ≤ 10; 50 mm: ~100 Mt COG:ia → ~10–20 Mt): ladataan ja puretaan ensin,
                 // jotta COG-haku ohittaa vain onnistuneet (404 tai mosaiikin ulkopuolella → COG).
