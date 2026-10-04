@@ -66,6 +66,48 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Alusta kutsuu, kun puhe ja lehti on kytketty.</summary>
+        /// <summary>Linssin avauksen häivytys (omistaja TF 135: "lyhyellä häivytyksellä", Päätoimittaja ~0,2 s).</summary>
+        const float LinssinKatkaisuS = 0.2f;
+
+        /// <summary>
+        /// LINSSI KATKAISEE KAIKEN ÄÄNEN (omistaja TF 135, 4.10.2026: "kun mikä tahansa linssi alkaa niin kaikki audio pitää
+        /// katkaista. Nyt luenta kuuluu taustalla jos linssin aloittaa sen aikana"). Kutsutaan ennen linssin omaa Avaa-kutsua:
+        /// saapumisluenta ohitetaan (lykätty luento ja pulun kommentti perutaan, kuplat lähtevät), muu puhe, Pulu, kertoja ja
+        /// tehosteet häivytetään 0,2 s:ssa, Pulun äänikeskustelu ja sanelu lopetetaan, ja taustamusiikki sekä maisema pitoon 200 ms:n
+        /// häivytyksellä. Sulkeutuessa vain maisema palaa (LinssiSuljettuKasittelija); luenta ei jatku. Soivat lähteet lokiin ennen
+        /// ja 0,4 s jälkeen (todiste).
+        /// </summary>
+        void KatkaiseAanetLinssille(string linssi)
+        {
+            string ennen = SoivatAanet();
+            if (soivaLuento != null || odottavaLuento != null || saapumisluenta.Kesken) VaiennaPaikanPuhe("linssi", LinssinKatkaisuS);
+            puhe?.Pysayta(LinssinKatkaisuS);
+            Aanet.Haivyta(AaniKanava.Puhe, LinssinKatkaisuS);
+            Aanet.Haivyta(AaniKanava.Kertoja, LinssinKatkaisuS);
+            Aanet.Haivyta(AaniKanava.Tehoste, LinssinKatkaisuS);
+            if (PuluRealtime.Instanssi != null) PuluRealtime.Instanssi.Lopeta();
+            if (Sanelu.Kaynnissa) Sanelu.Peruuta();
+            aanisoitin?.Koukut.LinssiPito(true, (int)(LinssinKatkaisuS * 1000));
+            Debug.Log($"MATKAKIRJA aani: linssi {linssi} avautuu, katkaistaan: {ennen}");
+            StartCoroutine(KirjaaSoivatMyohemmin(linssi, 0.4f));
+        }
+
+        IEnumerator KirjaaSoivatMyohemmin(string linssi, float s)
+        {
+            yield return new WaitForSecondsRealtime(s);
+            Debug.Log($"MATKAKIRJA aani: linssi {linssi} {s:0.0} s avauksesta, soivat: {SoivatAanet()}");
+        }
+
+        /// <summary>Kaikki soivat AudioSourcet (nimi, klippi, taso; hiljaiset 0-tason lähteet erikseen) lokiin.</summary>
+        public static string SoivatAanet()
+        {
+            var r = new List<string>();
+            foreach (var s in FindObjectsByType<AudioSource>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+                if (s.isPlaying) r.Add($"{s.gameObject.name}[{(s.clip != null ? s.clip.name : "-")} {s.volume:0.00}]");
+            r.Sort(StringComparer.Ordinal);
+            return r.Count == 0 ? "ei mitään" : string.Join(", ", r);
+        }
+
         void AlustaAanet()
         {
             var go = new GameObject("Aanisoitin");
@@ -106,6 +148,9 @@ namespace Matkakirja.Natiivi
             // Linssin musiikin pito (Raamattu 14.9.): pohja pitoon, hiljennys 'linssi', maisema pois.
             // Suora asetus korvaa LinssiUi:n tyhjän oletuksen (se asettaa omansa vain ??=).
             LinssiOhjain.MusiikkiKasittelija = paalla => { if (aanisoitin != null) aanisoitin.Koukut.LinssiPito(paalla); };
+            // Linssi katkaisee kaiken äänen (omistaja TF 135) ja sulkeutuessa vapauttaa vain maiseman (luenta ei jatku).
+            LinssiOhjain.LinssiAvautuuKasittelija = KatkaiseAanetLinssille;
+            LinssiOhjain.LinssiSuljettuKasittelija = () => { if (aanisoitin != null) aanisoitin.Koukut.LinssiPito(false); };
             // Linssin oma raita (Linssiseppä: keksinnot / ihmisen-matka, null = pois) ja sen himmennys.
             LinssiOhjain.LinssiMusiikkiKasittelija = Aanisoitin.LinssiMusiikki;
             LinssiOhjain.LinssiHimmennysKasittelija = Aanisoitin.LinssiHimmennys;

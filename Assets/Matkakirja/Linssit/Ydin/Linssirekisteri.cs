@@ -93,6 +93,13 @@ namespace Matkakirja.Linssit
         public event Action<ILinssi> Vaihtui;
 
         /// <summary>
+        /// Linssi on avautumassa (omistaja TF 135, 4.10.2026: "kun mikä tahansa linssi alkaa, kaikki audio pitää katkaista"):
+        /// kutsutaan jokaisessa avauksessa (myös linssistä toiseen) edellisen sulkemisen JÄLKEEN ja ennen uuden Avaa-kutsua,
+        /// jottei katkaisu osu linssin omaan ääneen.
+        /// </summary>
+        public event Action<ILinssi> Avautuu;
+
+        /// <summary>
         /// PROFILOINTIKOUKKU (linssi, vaihe, alku): LinssiOhjain avaa ja sulkee tällä ProfilerMarkerin
         /// vaiheille Avaus, Paivitys, Sulku ja Vaihtui (Natiivi-UI:n kuuntelijat), jotta `ui piikit`
         /// erottelee linssien oman ajan (ydin ei viittaa Unityyn).
@@ -150,6 +157,7 @@ namespace Matkakirja.Linssit
             if (Auki == linssi) { Sulje(); return false; }
             if (!Saatavilla(id)) return Auki != null;
             SuljeHiljaa();
+            Avautuu?.Invoke(linssi);   // käsittelijät hoitavat omat virheensä (LinssiOhjain)
             Auki = linssi;
             var m = Mittaa;
             m?.Invoke(id, Avaus, true);

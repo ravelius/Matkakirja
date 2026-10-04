@@ -19,6 +19,32 @@ namespace Matkakirja.Linssit.Testit
             public void Sulje() { Auki = false; }
         }
 
+        [Testi] static void AvautuuEnnenAvaaKutsuaJaVaihdossa()
+        {
+            // Omistaja TF 135: kaikki ääni katkeaa linssin alkaessa → Avautuu ennen linssin Avaa-kutsua (ei katkaise linssin omaa
+            // ääntä), myös linssistä toiseen; Vaihtui(null) vain kun mikään ei jää auki.
+            bool kehittaja = Linssirekisteri.Kehittajatila;
+            try
+            {
+                Linssirekisteri.Kehittajatila = true;
+                var r = new Linssirekisteri(new ValeYmparisto());
+                var a = new Koe(IhmisenMatkaLinssi.IhmisenMatkaTiedot);
+                var b = new Koe(IhmisenMatkaLinssi.IhmisenMatka2Tiedot);
+                r.Lisaa(a); r.Lisaa(b);
+                var tapahtumat = new System.Collections.Generic.List<string>();
+                r.Avautuu += l => tapahtumat.Add($"avautuu {l.Tiedot.Id} (auki a {a.Auki}, b {b.Auki})");
+                r.Vaihtui += l => tapahtumat.Add("vaihtui " + (l?.Tiedot.Id ?? "-"));
+                r.Valitse(a.Tiedot.Id);
+                r.Valitse(b.Tiedot.Id);
+                r.Sulje();
+                Oleta.Sama(string.Join(" | ", new[] {
+                    "avautuu ihmisen-matka (auki a False, b False)", "vaihtui ihmisen-matka",
+                    "avautuu ihmisen-matka-2 (auki a False, b False)", "vaihtui ihmisen-matka-2", "vaihtui -" }),
+                    string.Join(" | ", tapahtumat));
+            }
+            finally { Linssirekisteri.Kehittajatila = kehittaja; }
+        }
+
         [Testi] static void OmaTunnusJaVierekkainValitsimessa()
         {
             var i = IhmisenMatkaLinssi.IhmisenMatkaTiedot;

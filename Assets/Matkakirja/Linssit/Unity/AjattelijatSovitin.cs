@@ -740,6 +740,9 @@ namespace Matkakirja.Natiivi
         /// Kuvan ja äänen ero (s): laitteen ulostulo (AVAudioSession outputLatency + IOBufferDuration) + Unityn miksauspuskuri
         /// − näytön viive (ruutu piirretään ja näytetään seuraavalla näytön päivityksellä) + testikomennon lisä.
         /// </summary>
+        /// <summary>Kuvan ja äänen ero (s) muille testikomennoille (yleinen tahdistusmerkki, LinssiOhjain "merkki").</summary>
+        public static double Ulostuloviive => Viive();
+
         static double Viive() => AaniIstunto.Viive() + UnityPuskuri() - NaytonViive + ViiveLisaMs / 1000.0;
 
         /// <summary>Näytön viive: yksi 60 Hz:n päivitys (Unity piirtää ruudun, Core Animation näyttää sen seuraavalla vsyncillä).</summary>

@@ -23,14 +23,14 @@ namespace Matkakirja.Natiivi
         public bool LuentoOhitettu { get; private set; }
 
         /// <summary>Web vaiennaPaikanPuhe: kertoja häipyy, pulu vaikenee ja kuplat lähtevät (heitto, siirto, hyppy).</summary>
-        void VaiennaPaikanPuhe(string syy = "lähtö")
+        void VaiennaPaikanPuhe(string syy = "lähtö", float haivytysS = 0.3f)
         {
             LuentoOhitettu = true;
             PeruLykkays();
             // Löydös 162: Ohita tai paikasta lähtö päättää kesken olevan saapumisluennan (ennen puheen pysäytystä,
             // jotta syy on ohita/lähtö eikä loppu).
             SaapumisluentaVaiennettu(syy);
-            if (soivaLuento != null || odottavaLuento != null) { odottavaLuento = null; puhe?.Pysayta(0.3f); }
+            if (soivaLuento != null || odottavaLuento != null) { odottavaLuento = null; puhe?.Pysayta(haivytysS); }
             try { PaikanPuheVaiennettu?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
         }
 

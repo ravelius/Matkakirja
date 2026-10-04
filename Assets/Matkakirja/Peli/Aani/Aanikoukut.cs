@@ -213,11 +213,11 @@ namespace Matkakirja.Peli
         }
 
         /// <summary>Linssin musiikin pito (LinssiOhjain.MusiikkiKasittelija).</summary>
-        public void LinssiPito(bool paalla)
+        public void LinssiPito(bool paalla, int laskuMs = -1)
         {
             if (paalla == pito) return;
             pito = paalla;
-            tila.LinssiPito(paalla);
+            tila.LinssiPito(paalla, laskuMs);
             // Kone palaa pidosta viimeksi lähetettyyn paikkaan; muuttunut paikka lähtee seuraavassa päivityksessä.
         }
 
