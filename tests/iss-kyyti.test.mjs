@@ -263,7 +263,11 @@ test('tietorivi nopeutettuna: kerroin ilman LIVE-sanaa', async () => {
 test('ylilennon kohteet: Euroopan NASA-kohteet, ei revontulia', async () => {
   const { ylilennonKohteet } = await import('../js/linssit/iss-kyyti-nakyma.js');
   const l = ylilennonKohteet();
-  assert.ok(l.length >= 20 && l.length <= 40, `${l.length} kohdetta`);
+  // Yläraja nostettu 40→90 (4.10.2026): Sisältökirjuri lisää Euroopan
+  // satelliittikohteita omistajan tilauksesta kohti noin sataa uutta
+  // kohdetta, ja suurin osa osuu tähän laatikkoon — raja vain kiinniottaa
+  // täysin virheellisen (esim. koko KOHTEET-listan) tuloksen.
+  assert.ok(l.length >= 20 && l.length <= 90, `${l.length} kohdetta`);
   assert.ok(l.every((k) => k.lat >= 34 && k.lat <= 56 && k.lon >= -25 && k.lon <= 45));
   assert.ok(l.some((k) => k.tunnus === 'venetsia') && !l.some((k) => k.tunnus === 'aurora-scandinavia'));
 });
