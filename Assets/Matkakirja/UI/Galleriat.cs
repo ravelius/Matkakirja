@@ -50,7 +50,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(Rakenne.Teksti("JULISTEET", "mk-galleria__otsikko", yla), Kirjasin.Kone);
             luku = Rakenne.Teksti("", "mk-galleria__luku", yla);
             Kirjasimet.Aseta(luku, Kirjasin.Kone);
-            Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje", Sulje, yla);
+            // Ei ✕:ää (omistaja 5.10.2026 klo 00.1x: "pyritään aina välttämään turhia x nappeja"; Päätoimittajan ✕-inventaario): himmennyksen napautus sulkee.
             var v = new ScrollView(ScrollViewMode.Vertical);
             v.AddToClassList("mk-galleria__vieritys");
             v.verticalScrollerVisibility = ScrollerVisibility.Hidden;

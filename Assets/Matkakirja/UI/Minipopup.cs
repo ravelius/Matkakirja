@@ -43,7 +43,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(kehys, Kirjasin.Luku);
             var yla = Rakenne.El("mk-minipopup__ylarivi", kehys, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(otsikko, "mk-minipopup__otsikko", yla), Kirjasin.Kone);
-            Rakenne.Nappi("×", "mk-minipopup__sulje", Sulje, yla);
+            // Ei ✕:ää (omistaja 5.10.2026 klo 00.1x: "pyritään aina välttämään turhia x nappeja"; Päätoimittajan ✕-inventaario): himmennyksen napautus sulkee.
             var v = new ScrollView(ScrollViewMode.Vertical);
             v.AddToClassList("mk-minipopup__vieritys");
             v.verticalScrollerVisibility = ScrollerVisibility.Hidden;
@@ -120,7 +120,7 @@ namespace Matkakirja.Natiivi
             laatikko = Rakenne.El("mk-pikkuseloste", juuri);
             Rakenne.Tausta(laatikko, Kuviot.Pergamentti);
             Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-pikkuseloste__teksti", laatikko), Kirjasin.Luku);
-            Rakenne.Nappi("×", "mk-pikkuseloste__sulje", Sulje, laatikko);
+            // Ei ✕:ää (omistaja 5.10.2026 klo 00.1x: "pyritään aina välttämään turhia x nappeja"; Päätoimittajan ✕-inventaario): ohinapautus ja i uudelleen sulkevat.
             laatikko.style.opacity = 0;
             asemoitu = false;
             laatikko.RegisterCallback<GeometryChangedEvent>(Asemoi);
