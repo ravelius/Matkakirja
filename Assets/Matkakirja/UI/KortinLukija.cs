@@ -572,6 +572,16 @@ namespace Matkakirja.Natiivi
             var valinta = new DropdownField(nimet, indeksi);
             valinta.AddToClassList("mk-lukija-saadot__valinta");
             Kirjasimet.Aseta(valinta, Kirjasin.Luku);
+            // ‹ › SELAUS (omistaja 4.10.2026 klo 23.0x: "selaus napit jotta ääniä olisi helpompi selata"): edellinen ja seuraava
+            // ääni kiertäen, kelausnappien pohjalla (mk-lukija-valikko__kelausnappi, oikea marginaali erottaa napit); valinta
+            // kulkee samaa reittiä kuin listasta, joten soiva luenta jatkuu heti uudella äänellä (AaniVaihtui).
+            foreach (var (merkki, suunta, nimi) in new[] { ("‹", -1, "Edellinen ääni"), ("›", 1, "Seuraava ääni") })
+            {
+                var b = Rakenne.Nappi(merkki, "mk-lukija-valikko__kelausnappi mk-lukija-saadot__selaus", () =>
+                    valinta.index = (valinta.index + suunta + nimet.Count) % nimet.Count, aaniRivi);
+                b.tooltip = nimi;
+                Kirjasimet.Aseta(b, Kirjasin.LukuLihava);
+            }
             aaniRivi.Add(valinta);
             valinta.RegisterValueChangedCallback(_ =>
             {
