@@ -10511,3 +10511,23 @@ Omistaja 4.10.2026 klo 22.5x sanatarkasti: "Radiokanavia pitäisi pystyä selaam
 ## OMISTAJA: LUKIJAÄÄNET — ELEVEN-ÄÄNET, HETI-LATAUS, SELAUS, OHINAPAUTUS (5.10.2026 klo 00.14)
 
 Omistaja 4.10.2026 klo 23.0x–23.1x sanatarkasti: "Iso osa elevenin lukijoista ei toimi. Ja voisiko peli ladata heti uuden äänen kun ääntä vaihtaa ja saisiko tuohon vielä selaus napit jotta ääniä olisi helpompi selata" ja "Jos klikkaan juttua sulkea se sulkeakseni äänen valinta ikkunan koko nostoikkuna sulkeutuu ja palaa kartalle" (kaappaus eleven-aanet-eivat-toimi-2307.jpg). Pelikoodari: kaikki 24 ääntä toimivat ElevenLabsissa ja workerissa → vika sovelluksessa (diagnoosi simussa); äänen vaihto lataa heti saman kappaleen; äänilista säätöpaneeliin kappalerivien pohjilla ja ‹ › kelausnappipohjilla (ei uutta pohjaa, ei ponnahduskerrosta); ohinapautus sulkee vain paneelin. Juna 142. Lisäksi Gateway-alkuperäiskuvien purku sivurajalla (≤ 2732 px, ImageIO) ennen #3966:n mergeä. Pelikoodarin yölepo peruttu: omistaja kysyi "Miksi lepää?" (kiintiö ei ole peruste).
+
+## OMISTAJA: LIPPUTANKO LUKITTU YHTEEN PAIKKAAN MAATA KOHDEN (5.10.2026 klo 00.41)
+
+Omistaja 5.10.2026 klo 00.3x sanatarkasti: "Tanskassa 3d lippu vaihtaa paikkaa. Pitäisi olla lukittu yhteen paikkaan.tarkista muut maat myös". Syy: Kartuschan väistö siirsi tangon paneelin alle ja takaisin. Linja: jokaisella maalla yksi kiinteä tangon paikka (Lippukulma.Laske ilman kelpaa-ehtoa, välimuisti maittain); paneelin peittäessä tanko vain piiloutuu (oma lippu, erillään Myllyn piilotuksesta). Natiivi-UI, juna 142; todisteena lokiajo kaikista maista (lat/lon pysyy) + stillit Tanska, Kreikka, Norja, Italia.
+
+## OMISTAJA: SEURAAVA MINIPELI TAVLI (5.10.2026 klo 00.41)
+
+Omistaja valitsi kortilla 5.10.2026 klo 00.5x seuraavaksi minipeliksi Tavlin (pelikatalogi GRC-1; vaihtoehdot Tavli, Hnefatafl, Mangala). Päätoimittajan linja: v1 Portes (perus-backgammon), yksi erä, botti kolmella tasolla kuten Myllyssä; YKSI KOTI kafeneio Ateenassa (voitosta esine Peleihin), Pelit-välilehdellä yksi rivi; LAUTAPELI-pohja + JULISTE-otsikko TAVLI ja laudan nimi, Poistu/Säännöt/Luovuta, ei ✕:ää. Siirtoseppä vetää (suunnitelmasivu ensin docs/raportit/tavli-suunnitelma-20261005.md, Päätoimittaja hyväksyy), Linnanrakentaja lauta ja 3D-nopat, Pelikoodari äänet, Sisältökirjuri säännöt, historia ja lähteet. Plakoto ja Fevga myöhemmin.
+
+## OMISTAJA: JATKA MATKAA EI LUENTAA EIKÄ KUVAA, OHITA AINA — KORJATTAVA NYT (5.10.2026 klo 00.41)
+
+Omistaja 5.10.2026 klo 00.5x–01.0x TF 141:stä sanatarkasti: "V141 pulun luenta tulee edelleen kun valitsen aloituksessa Jatka matkaa", "Eikä siinä ole Ohita nappia. Hidastaa uuden testausta. Pitää korjata nyt kuntoon" ja "Myös pulun kuva tulee silloin näkyville". Juurisyy (Natiivi-UI): jatkohiljaisuuden portti vain Puhe.Soitassa, ei Puhe.Luessa → Saapumisesitys.LueSaapuminen luki saapumismerkinnän sekunti Jatkan jälkeen kaupungeissa ilman fokusvirtaa; Ohita näytettiin vain fokusluennalle. Linja: Jatkan jälkeen mitään ei käynnisty ennen pelaajan omaa toimintoa (kaikki puhetavat); jos Pulun luenta soi missä tahansa, Ohita on aina näkyvissä samalla pohjalla ja lopettaa heti. Juna 142 ei lähde ilman tätä; todisteet ääniraidallisina (Sarajevo, toinen kaupunki ilman fokusvirtaa, Berliini, Ohita-painallus). Päätoimittajan virhe: hyväksyi 109baf8d:n lokin ja äänettömän videon perusteella (muistisääntö: myös ei-ääntä-ehdot ääniraidalla).
+
+## OMISTAJA: KOHDEKAUPUNGIN NOSTOKUVAKE KATOAA (5.10.2026 klo 00.41)
+
+Omistaja 5.10.2026 klo 01.0x TF 141:stä sanatarkasti: "Myös kohdekaupungin nosto kuvake ei näy aina tai katoaa". Pelikoodari (Kuvat.cs, LRU-kiinnitys ja näkyvyyslogiikka; epäily sama kuin b20-ui-1 valkoinen neliö), juna 142 jos ehtii, muuten 143; todisteena stillit ennen ja jälkeen samasta polusta.
+
+## PÄÄTOIMITTAJA: ✕-INVENTAARIO — POISTOT JA JÄÄVÄT (5.10.2026 klo 00.41)
+
+Raamatun EI TURHIA ✕-NAPPEJA -linjan (omistaja 5.10. 00.1x) mukaan Natiivi-UI:n inventaario (21 nappia): pois julistegalleria, maakuntalappu, minipopup, pikkuseloste, nähtävyysnäkymä, lehden sisällys, sähketehtävä ja tiedeliite (ensin ohinapautus); ISS-kytkimen tekstistä ×-merkki pois (POISTU); jäävät kokoruudun kohdekartta, sähke-liuska kartalla, linssin sulkupilleri, astronautin kuvanäkymä ja ajattelijat (napautus panoroi, zoomaa tai selaa, tai muuta sulkutapaa ei ole); Myllyn ✕ jo pois (Siirtoseppä, Poistu-nappi); 6 piilotettua tai kuollutta siivotaan; Sulje-tekstinapit jäävät (linja koskee ✕-nappeja). Natiivi-UI, juna 143; todisteena ennen/jälkeen-stillit ja oikea ohinapautus.
