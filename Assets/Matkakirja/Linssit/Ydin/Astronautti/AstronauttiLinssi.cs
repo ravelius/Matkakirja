@@ -287,6 +287,13 @@ namespace Matkakirja.Linssit.Astronautti
         public Kuvakulma KyydinAsento => kyyti.Viimeisin;
         public bool AlusSiirretty => siirto.Siirretty;
 
+        /// <summary>Aluksen nykyinen alapiste siirto mukaan lukien (Natiivi-UI:n kohdevalikko: ≤ 30 lähintä maajälkeä, juna 141).</summary>
+        public (double Lat, double Lon) AlusAlapiste()
+        {
+            var p = AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000).Paikka;
+            return (p.Lat, p.Lon);
+        }
+
         /// <summary>Cupolan aluksen hetki: todellinen rata kierrettynä (Iss.AlusSiirto); suunta aluksen omasta liikkeestä.</summary>
         Iss.IssHetki AlusHetki(DateTime utc, double nyt)
         {
