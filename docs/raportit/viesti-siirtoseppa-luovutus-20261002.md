@@ -178,3 +178,22 @@ Natiivisepälle, viestit Päätoimittajalle ≤ 8 riviä, osoitin vain omistajan
   Linssivalitsin.Pelit.cs — kerro hänelle). Stillit lokit/siirtoseppa-mylly142-omistajalle/ Päätoimittajalla.
 - AVOIN: Myllyn äänet (omistaja 22.5x): ajo-mylly-aani.sh (kaveripeli, natiivikaappaus + video, asetus/siirto/mylly/poisto) simuvuorolla
   ~23.41 → jos eivät soi, korjaa; ehdota puuttuvat (siirto, mylly syntyy, voitto, häviö) Pelikoodarille (CC0 WAV, isku 0–5 ms, −6 dBFS).
+
+### 5.10. klo 02.0x — JUNA 142: MYLLY JA LINNAPALAUTE, TAVLI JA LINNAN UNITY-UUDISTUS SUUNNITELTU
+- Mylly (siirtoseppa/mylly-142 @ d621bd31, worktree wt/proto-siirtoseppa-mylly): 099c2531 Aanet.RekisteroiTehoste(omaIsku) —
+  webin 10 ms:n nousuverho söi naksun iskun; 3309b113 Pulu.Peita(false) = StyleKeyword.Null (Pulu ei Myllyn päälle Pelit-riviltä);
+  58bb0abc/d621bd31 vahvistus 1,6 (1,1:llä huiput −15…−17 dBFS, tavoite −12…−15). Päätoimittaja kuittaa junaan 142 mittauksen jälkeen.
+- Linna (siirtoseppa/linna-palaute-142 @ efba0cc5, worktree wt/proto-siirtoseppa-141, juna/b13:n päällä): 648c6015 asentoloki (KUITATTU
+  142, merge-pyyntö Natiivisepällä); 5b1f49c0 DioraamaKameraJousi (jousi + jatkuva elliptinen orbit, "poikki orbit 0|1"); 7bdbf2ad
+  ääniryhmät + väistö kaikille + mikserisäätimet; f94f054e käsipyöritys 360° inertialla (Ytimen PelaajanAsento rajaa ±20 → atsimuutti
+  lisätään Syötteessä), kuorivalinta hampurilaiseen; 8b460355/14a0153e avainsanat (kertoja.jaksot[].avainsanat, "poikki avainsana");
+  ce4797e9/b2a5dfe6 yleisnäkymässä/esittelyssä vain tuuli + laineet; 87eb2184 LAITURIN JUURISYY (ulkotila ilman leikkausta ei leikkaa
+  kuorta); b06d9813 mitatut oletustasot (RyhmaOletus, väistö 0,55) + vanhat linna-mikseriarvot pois kerran; efba0cc5 kertaääniloki.
+  Todisteet docs/raportit/kaappaukset/siirtoseppa-20261005/ (ei committoitu). AVOIN: Kappelin kuoro lokirivillä + Myllyn taso,
+  simu ~02.25 (lokit/siirtoseppa-linna142d-app = 08ec720a; ajo-linna-kappeli.sh + ajo-mylly-aani.sh), sitten merge-pyynnöt.
+- Tavli (HYVÄKSYTTY, docs/raportit/tavli-suunnitelma-20261005.md): worktree wt/proto-siirtoseppa-tavli (siirtoseppa/tavli), Opus-agentti
+  tekee säännöt + botin + Peli-testit. Linnanrakentajan Kafeneio + nopat _valmiit/tavli-laudat/v1/, Pelikoodarin äänet
+  _valmiit/tavli-aanet-vienti-20261005/tavli/ (esikuuntelu-mp3:sta). Sisältökirjuri aloittaa aamulla.
+- Linnan Unity-uudistus (HYVÄKSYTTY, docs/raportit/linna-unity-suunnitelma-20261005.md): juna 143, Cinemachine + Timeline datasta,
+  Volume/tilt-shift, leivottu valo (Linnanrakentaja suoraan atlakseen, A/B peileillä), Stylized Water, Steam Audio. zstd: Natiiviseppä
+  tekee (muoto { polku, sha256, tavuja, zst: {…} }, varastoon purettuna), minä katselmoin.
