@@ -528,6 +528,9 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Hämärätekstuurit (tunnelma, omistaja 29.9. 21.4x): `tekstuurit.hamara` (.astcm) ja `tekstuurit.hamaraJpg`
         /// (varalle, esim. simulaattori ilman ASTC:tä) tasoittain; sama UV kuin päivällä.</summary>
         public string HamaraHuippu, HamaraNormaali, HamaraKevyt, HamaraJpgHuippu, HamaraJpgNormaali, HamaraJpgKevyt;
+        /// <summary>Päivän JPEG-vara tasoittain (`tekstuurit.jpg`, Linnanrakentaja 4.10.): ennen kuin glb:n upotettu JPEG
+        /// poistetaan, ASTC:tä tukematon laite (simulaattori) hakee päiväkuvan tästä; puuttuva = glb:n upotettu JPEG.</summary>
+        public string JpgHuippu, JpgNormaali, JpgKevyt;
         /// <summary>Järven pinnan korkeus metreinä (`vesi`, oletus −7): fotogrammetriasta vesi on poistettu, ja natiivi
         /// piirtää järven pinnan "vesi" tälle korkeudelle.</summary>
         public double VesiY = -7;
@@ -721,6 +724,9 @@ namespace Matkakirja.Linssit.Dioraama
                 r.Ulkokuori.HamaraKevyt = MiniJson.Teksti(h, "kevyt");
                 r.Ulkokuori.HamaraJpgHuippu = MiniJson.Teksti(hj, "huippu"); r.Ulkokuori.HamaraJpgNormaali = MiniJson.Teksti(hj, "normaali");
                 r.Ulkokuori.HamaraJpgKevyt = MiniJson.Teksti(hj, "kevyt");
+                var pj = MiniJson.ObjektiTaiNull(MiniJson.Kentta(kuoriTekstuurit, "jpg"));
+                r.Ulkokuori.JpgHuippu = MiniJson.Teksti(pj, "huippu"); r.Ulkokuori.JpgNormaali = MiniJson.Teksti(pj, "normaali");
+                r.Ulkokuori.JpgKevyt = MiniJson.Teksti(pj, "kevyt");
             }
             var yleiskamera = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "yleiskamera"));
             r.YleisVaaka = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(yleiskamera, "vaaka")));
