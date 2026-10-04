@@ -18,6 +18,7 @@ using System;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Astronautti;
 using Matkakirja.Linssit.Iss;
+using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -171,7 +172,13 @@ namespace Matkakirja.Natiivi
         public void KaytaNahka()
         {
             nahkaKuvat.Clear();
-            nahka = Pukeudu(paneeli, "pohja", PohjaSlicePt);
+            // Kuva-asettelu: pohja kokonaisena (ei 9-slice), rumpu omaan ankkuriinsa paneeliin, osat ohjaamo.json:n mukaan.
+            ankkurit = NahkaKuva("pohja") != null ? LueAnkkurit() : null;
+            nahka = Pukeudu(paneeli, "pohja", ankkurit != null ? 0f : PohjaSlicePt);
+            paneeli.EnableInClassList("mk-issohjaamo--asettelu", ankkurit != null);
+            if (ankkurit != null && rumpu.parent != paneeli) paneeli.Add(rumpu);
+            else if (ankkurit == null && rumpu.parent != kaasu) kaasu.Add(rumpu);
+            if (turvaLeveys > 0) Asettele(turvaLeveys);
             Pukeudu(lcd, "lcd-kehys", KehysSlicePt);
             Pukeudu(laajennus, "lcd-iso", KehysSlicePt);
             Pukeudu(mini, "mini-kehys", KehysSlicePt);
@@ -292,12 +299,89 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Paneelin leveys: turva-alue − 24, enintään 560 pt, keskellä; alareuna turva-alueen sisällä 8 pt.</summary>
+        float turvaLeveys;
+
         public void Asettele(float turvanLeveys)
         {
             if (!(turvanLeveys > 0)) return;
+            turvaLeveys = turvanLeveys;
             float w = Mathf.Min(Enintaan, turvanLeveys - 24f);
             paneeli.style.width = w;
             Juuri.style.left = 0; Juuri.style.right = 0;
+            if (ankkurit != null) AsetteleKuvat(w);
+            else { paneeli.style.height = StyleKeyword.Null; foreach (var e in new[] { joystick, lcd, kamera, kaasu, rumpu, laajennus }) Vapauta(e); }
+        }
+
+        // --- KUVA-ASETTELU (Linnanrakentajan konsepti v1, omistaja 4.10.2026 klo 17.2x; juna 139) -----------------------------
+        // Resources/IssOhjaamo/ohjaamo.json: {"koko":{w,h}, "sauva"|"lcd"|"kamera"|"rumpu"|"kaasu"|"lcdIso":{x,y,w,h} pt pohjan
+        // vasemmasta yläkulmasta, "kaasu":{…, "pykalat":[y1, y10, y100, y1000]} pt kaasun laatikon yläreunasta}. Paneeli skaalautuu
+        // leveyden mukaan (korkeus koon suhteessa) ja osat sijoitetaan ankkureihin; ilman tiedostoa piirretty asettelu kuten ennen.
+
+        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, Kaasu, LcdIso; public float[] Pykalat; }
+        Ankkurit ankkurit;
+
+        static Rect LueRect(Dictionary<string, object> o, string avain)
+        {
+            var r = Rakenne.Olio(MiniJson.Kentta(o, avain));
+            float F(string k) => r != null && MiniJson.Kentta(r, k) is object v ? Convert.ToSingle(v, System.Globalization.CultureInfo.InvariantCulture) : 0f;
+            return r == null ? default : new Rect(F("x"), F("y"), F("w"), F("h"));
+        }
+
+        static Ankkurit LueAnkkurit()
+        {
+            var ta = NahkaKaytossa ? Resources.Load<TextAsset>(NahkaKansio + "ohjaamo") : null;
+            if (ta == null) return null;
+            try
+            {
+                var o = Rakenne.Olio(MiniJson.Jasenna(ta.text));
+                var k = Rakenne.Olio(MiniJson.Kentta(o, "koko"));
+                var a = new Ankkurit
+                {
+                    Koko = new Rect(0, 0, Convert.ToSingle(MiniJson.Kentta(k, "w")), Convert.ToSingle(MiniJson.Kentta(k, "h"))),
+                    Sauva = LueRect(o, "sauva"), Lcd = LueRect(o, "lcd"), Kamera = LueRect(o, "kamera"),
+                    Rumpu = LueRect(o, "rumpu"), Kaasu = LueRect(o, "kaasu"), LcdIso = LueRect(o, "lcdIso"),
+                };
+                var p = Rakenne.Lista(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "kaasu")), "pykalat"));
+                if (p != null && p.Count == Kertoimet.Length) { a.Pykalat = new float[p.Count]; for (int i = 0; i < p.Count; i++) a.Pykalat[i] = Convert.ToSingle(p[i]); }
+                return a.Koko.width > 0 && a.Koko.height > 0 ? a : null;
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA linssit: ohjaamo.json: " + e.Message); return null; }
+        }
+
+        static void Aseta(VisualElement e, Rect r, float s)
+        {
+            e.style.position = Position.Absolute;
+            e.style.left = r.x * s; e.style.top = r.y * s; e.style.width = r.width * s; e.style.height = r.height * s;
+            e.style.marginLeft = 0; e.style.marginRight = 0; e.style.marginTop = 0; e.style.marginBottom = 0;
+        }
+
+        static void Vapauta(VisualElement e)
+        {
+            e.style.position = StyleKeyword.Null; e.style.left = StyleKeyword.Null; e.style.top = StyleKeyword.Null;
+            e.style.width = StyleKeyword.Null; e.style.height = StyleKeyword.Null;
+            e.style.marginLeft = StyleKeyword.Null; e.style.marginRight = StyleKeyword.Null; e.style.marginTop = StyleKeyword.Null; e.style.marginBottom = StyleKeyword.Null;
+        }
+
+        void AsetteleKuvat(float w)
+        {
+            var a = ankkurit;
+            float s = w / a.Koko.width;
+            paneeli.style.height = a.Koko.height * s;
+            Aseta(joystick, a.Sauva, s);
+            Aseta(lcd, a.Lcd, s);
+            Aseta(kamera, a.Kamera, s);
+            Aseta(kaasu, a.Kaasu, s);
+            Aseta(rumpu, a.Rumpu, s);
+            if (a.LcdIso.width > 0) Aseta(laajennus, a.LcdIso, s);
+        }
+
+        /// <summary>Kuva-asettelussa vivun pykälä lähimmästä ankkurin y-arvosta (pt kaasun laatikon yläreunasta).</summary>
+        int PykalaKuvasta(float y)
+        {
+            float s = ankkurit.Koko.width > 0 ? paneeli.layout.width / ankkurit.Koko.width : 1f;
+            int paras = 0; float ero = float.MaxValue;
+            for (int i = 0; i < ankkurit.Pykalat.Length; i++) { float d = Mathf.Abs(ankkurit.Pykalat[i] * s - y); if (d < ero) { ero = d; paras = i; } }
+            return paras;
         }
 
         /// <summary>Paneelin (tai mininäytön) näkyvä yläreuna isän koordinaateissa: Pulu ja taulu väistävät.</summary>
@@ -355,6 +439,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Vivun veto tai napautus: lähin pykälä (ylin = 1000×).</summary>
         void Vipu(float y)
         {
+            if (ankkurit?.Pykalat != null) { AsetaKaasu(Kertoimet[PykalaKuvasta(y)]); return; }
             var u = ura.layout;
             if (!(u.height > 0)) return;
             float t = Mathf.Clamp01(1f - (y - u.y) / u.height);

@@ -531,3 +531,14 @@
 .mk-issohjaamo--kuvanappi > .mk-ikoni {
     display: none;
 }
+
+/* KUVA-ASETTELU (ohjaamo.json): paneeli on pohjakuva kokonaisena, osat ankkureissaan (koodi asettaa paikat). */
+.mk-issohjaamo--asettelu {
+    padding: 0;
+}
+
+.mk-issohjaamo--asettelu .mk-issohjaamo__sauvakuva,
+.mk-issohjaamo--asettelu .mk-issohjaamo__kaasukuva {
+    width: 100%;
+    height: 100%;
+}
