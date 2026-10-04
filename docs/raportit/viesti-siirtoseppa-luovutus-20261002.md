@@ -168,3 +168,13 @@ Natiivisepälle, viestit Päätoimittajalle ≤ 8 riviä, osoitin vain omistajan
 - PNG/TTF .meta: kopioi tuoja (Radio/radio-kotelo.png.meta, LiberationSerif-Italic.ttf.meta) — pelkkä guid → DefaultAsset → null.
 - AVOIN: simu ~21.58 lopulliset C-stillit (perus vasen/oikea, Kappeli, Keittiö, zoom 130/100/80) → Päätoimittaja → omistaja → juna 141
   (koodi + Linnanrakentajan lappujarjestys-PR + osoitin Päätoimittajan luvalla).
+
+### 4.10. klo 23.0x — JUNA 141 KOOSTUMUKSESSA, MYLLY JUNAAN 142
+- Juna 141: omistaja hyväksyi C-laput (22.4x), Natiiviseppä kokosi siirtoseppa/linna-ui-141 a6cae731 (natiiviseppa/juna-141-c aea6bcf4),
+  ajaa itsetarkistuksen. #3964 Julkaisijan junaan; osoitin c116f02f Päätoimittajan luvalla 141:n VIE-hetkellä.
+- Juna 142 Mylly (haara siirtoseppa/mylly-142, worktree wt/proto-siirtoseppa-mylly, masterin 9663df99 päällä): ca07a77c ✕ pois →
+  Poistu nappiriviin, JULISTE-otsikko (MYLLY + laudan nimi; Aloitusnakyma.Kapea/JulisteRivi/Viiva nyt internal), kapiteeli vain
+  paikallisnimelle; c452f6bb otsikko Ylapalkki.Varauksen alle (iPad); c81c7de6 Pelit-välilehdellä yksi Mylly-rivi (Pelikoodarin
+  Linssivalitsin.Pelit.cs — kerro hänelle). Stillit lokit/siirtoseppa-mylly142-omistajalle/ Päätoimittajalla.
+- AVOIN: Myllyn äänet (omistaja 22.5x): ajo-mylly-aani.sh (kaveripeli, natiivikaappaus + video, asetus/siirto/mylly/poisto) simuvuorolla
+  ~23.41 → jos eivät soi, korjaa; ehdota puuttuvat (siirto, mylly syntyy, voitto, häviö) Pelikoodarille (CC0 WAV, isku 0–5 ms, −6 dBFS).
