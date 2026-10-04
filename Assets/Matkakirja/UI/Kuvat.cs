@@ -387,8 +387,10 @@ namespace Matkakirja.Natiivi
             // ≥ IsoKuvaTavut-tiedosto puretaan ImageIO:lla pitkä sivu ≤ PurkuSivu taustasäikeessä (MatkakirjaKuvat_Pura).
             if (tulos == null && !OnWebpOsoite(reitit[0]) && File.Exists(levy) && new FileInfo(levy).Length >= IsoKuvaTavut)
             {
-                var w = LataaWebp(avain, new[] { reitit[0] }, levy, null, t => tulos = t);
+                var w = LataaWebp(avain, new[] { reitit[0] }, levy, null, t => tulos = t, PurkuSivu);
                 while (w.MoveNext()) yield return w.Current;
+                // 3) Vara: täysikokoinen GetTexture alla; muistipiikki näkyviin lokiin.
+                if (tulos == null) Debug.LogWarning($"MATKAKIRJA ui kuva: iso levykuva ei purkautunut sivurajalla, täysikokoinen GetTexture ({new FileInfo(levy).Length / 1024} kt)");
             }
 #endif
             if (tulos == null && !OnWebpOsoite(reitit[0]) && File.Exists(levy))
@@ -415,8 +417,8 @@ namespace Matkakirja.Natiivi
                 {
                     var pura = PuraTavut(tavut, avain, PurkuSivu, t => tulos = t);
                     while (pura.MoveNext()) yield return pura.Current;
-                    if (tulos != null) Debug.Log($"MATKAKIRJA ui kuva: iso {tavut.Length / 1024} kt purettu {tulos.width}×{tulos.height}");
-                    continue;
+                    if (tulos != null) { Debug.Log($"MATKAKIRJA ui kuva: iso {tavut.Length / 1024} kt purettu {tulos.width}×{tulos.height}"); continue; }
+                    Debug.LogWarning($"MATKAKIRJA ui kuva: iso verkkokuva ei purkautunut sivurajalla, täysikokoinen GetTexture ({tavut.Length / 1024} kt)");
                 }
                 while (!kirjoitus.IsCompleted) yield return null;
                 if (!kirjoitus.Result || !File.Exists(levy)) continue;
@@ -424,7 +426,8 @@ namespace Matkakirja.Natiivi
                 yield return l.SendWebRequest();
                 tulos = l.result == UnityWebRequest.Result.Success ? Nimea(DownloadHandlerTexture.GetContent(l), avain) : null;
             }
-#endif
+#else
+            // Muut alustat (editori): GetTexture suoraan verkosta kuten ennen (iOS:n silmukka yllä on jo yrittänyt reitit).
             for (int i = 0; tulos == null && !OnWebpOsoite(reitit[0]) && i < reitit.Length; i++)
             {
                 string reitti = reitit[i];
@@ -452,6 +455,7 @@ namespace Matkakirja.Natiivi
                     catch (IOException e) { Debug.LogWarning("MATKAKIRJA ui kuva: " + e.Message); }
                 });
             }
+#endif
             if (tulos != null && muunna != null)
             {
                 Texture2D pieni = null;
@@ -491,7 +495,7 @@ namespace Matkakirja.Natiivi
         /// esikerrottu alfa, rivi 0 alhaalla) ja alfa takaisin suoraksi, koska UI Toolkit piirtää suoralla
         /// alfalla (esikerrottu tummentaisi piirrosten häivytetyt reunat). Editorissa ei purkua (null).
         /// </summary>
-        static IEnumerator LataaWebp(string avain, string[] reitit, string levy, string mukana, Action<Texture2D> valmis)
+        static IEnumerator LataaWebp(string avain, string[] reitit, string levy, string mukana, Action<Texture2D> valmis, int sivu = 0)
         {
             byte[] tavut = null;
             string lahde = File.Exists(levy) ? levy : mukana;
@@ -511,7 +515,7 @@ namespace Matkakirja.Natiivi
             if (tavut == null || tavut.Length < 16) { valmis(null); yield break; }
 #if UNITY_IOS && !UNITY_EDITOR
             Texture2D purettu = null;
-            var pura = PuraTavut(tavut, avain, PurkuSivu, t => purettu = t);
+            var pura = PuraTavut(tavut, avain, sivu, t => purettu = t);
             while (pura.MoveNext()) yield return pura.Current;
             if (purettu == null) { valmis(null); yield break; }
             if (verkosta)
