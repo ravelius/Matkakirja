@@ -329,7 +329,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kameranapin keskipiste ruudulla (uusi kuva kasvaa siitä).</summary>
         public Vector2 KameraKeski => kamera.worldBound.center;
 
-        /// <summary>Kameranapin painallus testikomennolle (sama polku kuin kosketus, myös osto).</summary>
+        /// <summary>Kameranapin painallus testikomennolle (sama polku kuin kosketus).</summary>
         public void PainaKamera() => Laukaise();
 
         /// <summary>Kameranappi: tarkka ISS-kuva (omistaja 4.10. klo 15.2x: ostot pois, kuvia rajattomasti; LS2 IssKameraKuva).</summary>
