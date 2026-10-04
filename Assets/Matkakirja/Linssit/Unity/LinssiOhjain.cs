@@ -1922,6 +1922,11 @@ namespace Matkakirja.Natiivi
                             }
                             else if (osat.Length > 4 && osat[3] == "budjetti") { Matkakirja.Natiivi.IssKameraKuva.BudjettiMt = Luku(osat[4]); Kirjaa("astro kyyti kuvaa budjetti: " + osat[4] + " Mt"); }
                             else if (osat.Length > 4 && osat[3] == "kentta") { Matkakirja.Natiivi.IssKameraKuva.MaxKentta = Luku(osat[4]); Kirjaa("astro kyyti kuvaa kentta: " + osat[4] + "°"); }
+                            else if (osat.Length > 3 && osat[3] == "albumi")
+                            {
+                                var al = Matkakirja.Natiivi.IssKameraKuva.Albumi();
+                                Kirjaa($"astro kyyti kuvaa albumi: {al.Count} kuvaa" + string.Concat(al.Take(5).Select(k => $"; {k.Kuvateksti} ({System.IO.Path.GetFileName(k.Pikkukuva)})")));
+                            }
                             else if (osat.Length > 3 && osat[3] == "nollaa") { Matkakirja.Natiivi.IssKameraKuva.NollaaKuvat(); Kirjaa("astro kyyti kuvaa: ilmainen kuva palautettu"); }
                             else if (osat.Length > 4 && osat[3] == "vapaa") Matkakirja.Natiivi.IssKameraKuva.VainKuvauspaikat = osat[4] == "0";
                             else Kirjaa("astro kyyti kuvaa: " + (Matkakirja.Natiivi.IssKameraKuva.Hae().Laukaise(osat.Length > 3 ? osat[3] : "4:5",

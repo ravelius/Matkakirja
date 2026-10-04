@@ -91,10 +91,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Valmis oma kuva kuvanäkymälle (Natiivi-UI: AvaaOmaKuva) ja jakoon; kutsutaan pääsäikeessä tallennuksen jälkeen.</summary>
         public readonly struct OmaKuva
         {
-            public readonly string Polku, Paikka, Maa, Kuvateksti; public readonly DateTime Utc; public readonly double Lat, Lon;
-            public OmaKuva(string polku, string paikka, string maa, DateTime utc, double lat, double lon)
+            public readonly string Polku, Pikkukuva, Paikka, Maa, Kuvateksti; public readonly DateTime Utc; public readonly double Lat, Lon;
+            public OmaKuva(string polku, string paikka, string maa, DateTime utc, double lat, double lon, string pikkukuva = null)
             {
-                Polku = polku; Paikka = paikka ?? ""; Maa = maa ?? ""; Utc = utc; Lat = lat; Lon = lon;
+                Polku = polku; Pikkukuva = pikkukuva ?? polku; Paikka = paikka ?? ""; Maa = maa ?? ""; Utc = utc; Lat = lat; Lon = lon;
                 var d = TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(utc, DateTimeKind.Utc), TimeZoneInfo.Local);
                 // Päätoimittaja 4.10.: "Oma kuva · Helsinki · 4.10.2026 klo 15.20" (paikka kuten LCD:ssä, kuvaushetki pelaajan vyöhykkeellä).
                 Kuvateksti = "Oma kuva" + (Paikka.Length > 0 ? " · " + Paikka : "") + $" · {d.Day}.{d.Month}.{d.Year} klo {d.Hour}.{d.Minute:00}";
@@ -102,11 +102,19 @@ namespace Matkakirja.Natiivi
         }
         public static event Action<OmaKuva> Valmis;
 
-        /// <summary>Kirjanpito, Kuviin tallennus ja tapahtuma valmiille kuvalle (molemmat polut).</summary>
-        static void KuvaValmis(string polku, string paikka, string maa, DateTime utc, double lat, double lon)
+        /// <summary>
+        /// Pelaajan kaikki kuvat uusin ensin (IssAlbumi: säilyy uudelleenkäynnistyksen yli; Natiivi-UI:n pikkukuvapino ja nuolet,
+        /// myöhemmin Matkalaukun Julisteet).
+        /// </summary>
+        public static IReadOnlyList<OmaKuva> Albumi() =>
+            IssAlbumi.Lista().Select(a => new OmaKuva(a.Polku, a.Paikka, a.Maa, a.Utc, a.Lat, a.Lon, a.Pikkukuva)).ToList();
+
+        /// <summary>Kirjanpito, albumi (pikkukuva + tiedot), Kuviin tallennus ja tapahtuma valmiille kuvalle (molemmat polut).</summary>
+        static void KuvaValmis(string polku, string paikka, string maa, DateTime utc, double lat, double lon, string lahde)
         {
             if (!Rajaton) { PlayerPrefs.SetInt(OtettuAvain, Otettu + 1); PlayerPrefs.Save(); }
-            var k = new OmaKuva(polku, paikka, maa, utc, lat, lon);
+            var a = IssAlbumi.Lisaa(new OmaKuva(polku, paikka, maa, utc, lat, lon), lahde);
+            var k = new OmaKuva(polku, paikka, maa, utc, lat, lon, a.Pikkukuva);
             Loki($"oma kuva: {k.Kuvateksti}, kuvia jäljellä {(Rajaton ? "rajaton (kehittäjä)" : KuviaJaljella.ToString())}");
             TallennaKuviin(polku);
             try { Valmis?.Invoke(k); } catch (Exception e) { Debug.LogException(e); }
@@ -623,7 +631,7 @@ namespace Matkakirja.Natiivi
                 // Paikka kuten LCD:ssä (lähin kaupunki, vuori tai meri + maa) kuvan keskipisteestä, nimet sellaisinaan.
                 var keskus = naytteet.OrderBy(n => Math.Abs(n.Sx - 24) + Math.Abs(n.Sy - 18)).First();
                 var (kp, km2) = IssSijainti.Nimet(IssSijainti.Nykyinen, keskus.Lat, keskus.Lon);
-                KuvaValmis(ViimeisinKuva, kp, km2, utc, keskus.Lat, keskus.Lon);
+                KuvaValmis(ViimeisinKuva, kp, km2, utc, keskus.Lat, keskus.Lon, "Contains modified Copernicus Sentinel data");
             }
             finally
             {
@@ -763,7 +771,7 @@ namespace Matkakirja.Natiivi
                     (p.Lahde ?? "").Replace("\"", "'")));
                 loppuTila = "valmis"; Edistyminen = 1;
                 Loki($"VALMIS {ViimeisinKuva} ({p.Nimi}, {jpg.Length / 1e6:0.0} Mt, {W}×{H}), yhteensä {kello.ElapsedMilliseconds / 1000.0:0.0} s");
-                KuvaValmis(ViimeisinKuva, p.Nimi, p.Maa, utc, p.Lat, p.Lon);
+                KuvaValmis(ViimeisinKuva, p.Nimi, p.Maa, utc, p.Lat, p.Lon, p.Lahde);
             }
             finally
             {
