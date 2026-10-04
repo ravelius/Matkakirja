@@ -99,11 +99,11 @@ on:
   workflow_dispatch:
     inputs:
       tila:
-        description: 'ehdokkaat = kuunneltavia ehdokkaita; pulu-tehosteet, ihmisen-matka-maisemat ja mylly-tehosteet = ajaa listan ja vie ämpäriin'
+        description: 'ehdokkaat = kuunneltavia ehdokkaita; pulu-tehosteet, ihmisen-matka-maisemat, mylly-tehosteet ja tavli-tehosteet = ajaa listan ja vie ämpäriin'
         required: true
         type: choice
         default: 'ehdokkaat'
-        options: ['ehdokkaat', 'pulu-tehosteet', 'ihmisen-matka-maisemat', 'mylly-tehosteet']
+        options: ['ehdokkaat', 'pulu-tehosteet', 'ihmisen-matka-maisemat', 'mylly-tehosteet', 'tavli-tehosteet']
       kori:
         description: '[ehdokkaat] Valmis kori (meri, basaari, aavikko, sademetsä…) — jätä tyhjäksi jos käytät omaa hakua'
         required: false
@@ -270,6 +270,24 @@ jobs:
         if: inputs.tila == 'mylly-tehosteet'
         run: |
           args="--lista tools/tehosteet/mylly-tehosteet.json --ulos ehdokkaat.json"
+          if [ -n "${{ inputs.lahteet }}" ]; then
+            args="$args --lahteet ${{ inputs.lahteet }}"
+          fi
+          if [ -n "${{ inputs.tunnus }}" ]; then
+            args="$args --tunnus ${{ inputs.tunnus }}"
+          fi
+          if [ "${{ inputs.kuiva }}" = "true" ]; then
+            args="$args --kuiva"
+          fi
+          eval node tools/hae-freesound.mjs $args
+
+      # ── TILA 5: tavli-tehosteet (Siirtosepän tilaus Pelikoodarille 5.10.2026, Päätoimittajan hyväksymä Tavli) ──
+      # Tavlin nopat, nappulat, voitto ja häviö: lista tools/tehosteet/tavli-tehosteet.json, vain CC0,
+      # vienti ämpäriin aanet/tehosteet/tavli/ (natiivin WAV-jälkikäsittely paikallisesti).
+      - name: Aja Tavlin tehosteet
+        if: inputs.tila == 'tavli-tehosteet'
+        run: |
+          args="--lista tools/tehosteet/tavli-tehosteet.json --ulos ehdokkaat.json"
           if [ -n "${{ inputs.lahteet }}" ]; then
             args="$args --lahteet ${{ inputs.lahteet }}"
           fi
