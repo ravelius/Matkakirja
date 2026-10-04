@@ -247,6 +247,8 @@ namespace Matkakirja.Natiivi
         /// Testikomennot `astro kyyti kuvaa budjetti <Mt>` ja `astro kyyti kuvaa kentta <°>`.
         /// </summary>
         public static double BudjettiMt = 30, MaxKentta = 14;
+        /// <summary>COG-kuvan zeniittikulman yläraja (Päätoimittaja 4.10.: ≤ 55°, kamera virtuaalisesti radalla lähempänä kohdetta).</summary>
+        public static double MaxKallistus = 55;
         /// <summary>
         /// Reunojen lisäkarkeus (Päätoimittaja 4.10.: "karkeammat COG-tasot reunoilla ja kaukana"; simu b3a14902: tasainen 4× karkeus teki
         /// Saharan koko kuvasta suttuisen z10:n): solun karkeus = budjettikerroin × (1 + ReunaKarkeus · r²), r = 0 keskellä … 1 kulmassa.
@@ -273,12 +275,17 @@ namespace Matkakirja.Natiivi
             bool kenttaRajattu = false;
             try
             {
-                // 0) kentän katto: sama katsepiste, kapeampi objektiivi (Vertailu ohittaa kyydin asennon kuvan ajaksi)
-                if (linssi != null && kamera.fieldOfView > MaxKentta + 0.01 && linssi.Kyydissa)
+                // 0) kamera: kohde = pelaajan näkymän keskipiste, kamera virtuaalisesti radalla lähempänä (zeniittikulma ≤ MaxKallistus)
+                // ja kenttä enintään MaxKentta (Vertailu ohittaa kyydin asennon kuvan ajaksi).
+                if (linssi != null && linssi.Kyydissa)
                 {
-                    AstronauttiLinssi.Vertailu = linssi.KyydinAsento; AstronauttiLinssi.VertailuKentta = MaxKentta;
+                    var keski = linssi.KyydinAsento;
+                    AstronauttiLinssi.Vertailu = linssi.JyrkkaKuvakulma(keski.Lat, keski.Lon, MaxKallistus);
+                    AstronauttiLinssi.VertailuKentta = Math.Min(kamera.fieldOfView, MaxKentta);
                     kenttaRajattu = true;
-                    yield return null; yield return null;   // kamera uuteen kenttään ennen kuvasuunnitelmaa
+                    Loki($"kamera: kohde ({keski.Lat:0.000}, {keski.Lon:0.000}), kallistus {keski.Kallistus:0.0}° → {AstronauttiLinssi.Vertailu.Value.Kallistus:0.0}°, "
+                        + $"etäisyys {AstronauttiLinssi.Vertailu.Value.EtaisyysM / 1000:0} km, kenttä {AstronauttiLinssi.VertailuKentta:0.0}°");
+                    yield return null; yield return null;   // kamera uuteen asentoon ennen kuvasuunnitelmaa
                 }
                 // 1) kamera ECEF:ksi (pystykenttä kuten näkymässä; kuvan muoto rajaa leveyden)
                 var gt = g.transform;

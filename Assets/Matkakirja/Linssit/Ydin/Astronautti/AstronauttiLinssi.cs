@@ -621,6 +621,25 @@ namespace Matkakirja.Linssit.Astronautti
             return p;
         }
 
+        /// <summary>
+        /// COG-KUVAN KAMERA (Päätoimittaja 4.10.2026): kohde on pelaajan näkymän keskipiste maassa (lat, lon), ja kamera siirretään
+        /// virtuaalisesti radan korkeudella kohti kohdetta niin, että kohde näkyy zeniittikulmassa enintään <paramref name="maxKallistus"/>
+        /// ("kuin otettu hetkeä myöhemmin, kun ISS on lähempänä"); suunta kohteesta alukseen säilyy, joten kuva on samalta puolelta.
+        /// Loiva Cupolan katse (~74°) toi pitkän ilmakehäpolun ja violetin usvan.
+        /// </summary>
+        public Kuvakulma JyrkkaKuvakulma(double lat, double lon, double maxKallistus)
+        {
+            var h = AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000);
+            var nyt = Iss.IssKuvakulma.KohteenKulma(h, lat, lon);
+            if (nyt.Kallistus <= maxKallistus) return nyt;
+            const double R = 6_371_000, D = Math.PI / 180;
+            double z = maxKallistus * D, eta = Math.Asin(R / (R + Math.Max(1000, h.KorkeusM)) * Math.Sin(z));
+            double kaari = (z - eta) / D;
+            double suunta = Iss.IssKuvakulma.Suunta(lat, lon, h.Paikka.Lat, h.Paikka.Lon);
+            Iss.IssKuvakulma.Kohde(lat, lon, suunta, kaari, out double plat, out double plon, out _);
+            return Iss.IssKuvakulma.KohteenKulma(new Iss.IssHetki(new LatLon(plat, plon), h.KorkeusM, h.Suuntima), lat, lon);
+        }
+
         /// <summary>Tarkan kuvan kamera kuvauspaikkaan aluksen nykyisestä paikasta (Iss.Kuvauspaikat.Rajaus).</summary>
         public (Kuvakulma Asento, double Pystykentta) KuvausRajaus(Iss.Kuvauspaikka p, double leveysPerKorkeus) =>
             Iss.Kuvauspaikat.Rajaus(AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000), p, leveysPerKorkeus);
