@@ -1,3 +1,18 @@
+# >>> TILANNE 4.10.2026 KLO 12.2x (Päätoimittajan oma nollaus 81 %:ssa) — LUE ENSIN <<<
+
+**Testaajilla:** TF 1.1 (136) 11.11 (master b824e2d1): Jatka matkaa ilman saapumisluentaa + linssi katkaisee kaiken audion. TF 135 06.07 (ajattelijakorjaukset, minipallo, zoomi 8×).
+
+**OMISTAJAN LINJAT TÄNÄÄN (kaikki lokissa, mainissa paitsi 12.24-merkintä):**
+- 12.2x: **ODOTA kaikkea ajattelijatyötä**, kunnes omistaja antaa korjauslistan ("odota ennen kuin teet ajattelijoille mitään lisää, koska siinä paljon korjattavaa"). Ei Platonia, arkkia eikä Allymesia ennen kuin nykyiset valmiit; **Olavinlinna ensin kuntoon** (Linnanrakentaja + Siirtoseppä kokoavat avoimet asiat Päätoimittajalle → yksi katsaus omistajalle). Kytkimen valo samaan hetkeen kuin naksahdus (odottaa ajattelijalistaa). Omistaja kuuntelee kaiuttimesta.
+- 11.3x–11.5x: ISS-ohjaamo uusiksi (joystick, kaasu 1×–1000×, kamera, vihreä LCD, Pulun valikko Maapallo/Astronauttien kuvat/ISS ohjaamo/Poistu + Kysy Pululta); Avaruuskävely pois; kameranappi VAIN tarkka ISS-kuva (kuvauspaikat, 1 ilmainen, paketit myöhemmin); Cupola avautuu mustan ISS-ruudun kautta (korkeus, nopeus, päivämäärä+kello, 2 s, häivytys) ilman lentoa; kohteen valinta säilyttää katseen.
+- 11.4x: Jatka matkaa hiljaa myös Pulun omista repliikeistä ennen pelaajan ensimmäistä toimintoa.
+
+**JUNA 137 (Natiiviseppä kokoaa):** natiivi-ui/jatko-hiljaisuus d2c29960 (HYVÄKSYTTY) + LS2:n Cupola-korjaukset omana haaranaan BUILD 136:n päältä (EI iss-ohjaamo-haarasta; videot avaus + Etna 40°/30° + Pariisi 70°/−60° tarkistettava) + Natiivi-UI ISS-vaihe 1 (Pulun valikko, stilli+video tarkistettava) + glint (LS1) ja S2 v2 jos ehtivät. Pulun kysymykset #3929 (.js-moduuliksi, sisältö hyväksytty) Julkaisijan junaan. VIE vasta itsetarkistuksen + savukkeen jälkeen; muutosloki ≤ 280 merkkiä.
+**JUNA 138:** ISS-ohjaamo vaihe 2 (LS2 linssiseppa2/iss-ohjaamo + Natiivi-UI paneeli; äänet WAV valmiit _lahteet/iss-ohjaamo/aanet/) + tarkka ISS-kuva (Karttasepän 25 kuvauspaikan pilotti → kooste Päätoimittajalle ennen latausta).
+**KARTTASEPPÄ:** etusija kuvauspaikkapilotti > Euroopan kausiketju (v2d) > maailman S2 v2 (kuvaparit Australia/Sahel/preeria/lumi/Algeria Päätoimittajalle ennen polun vaihtoa; Eurooppa ei tarvinnut korjausta).
+**TEKEMÄTTÄ:** loki-merkintä 12.24 (ei uusia ennen nykyisiä, kytkin, ajattelijatyö pysäytetty) on haarassa claude/bold-ride-vow4ki → PR mainiin (worktree tools/uusi-worktree.sh fable loki-…, cherry-pick, Julkaisija mergeää, poista worktree).
+**ODOTTAA OMISTAJAA:** ajattelijoiden korjauslista (hän palaa niihin), Olavinlinnan katsaus (kun lista koottu), tarkan ISS-kuvan hinnoittelu myöhemmin.
+
 # Päätoimittajan luovutus 4.10.2026 klo 00.3x (oma kontekstinollaus, konteksti 64 %)
 
 Sessio "Päätoimittaja (Opus, max)" **local_5df52e10-10e4-4b72-9554-0049db300dfe** (id säilyy nollauksessa), haara claude/bold-ride-vow4ki, RC päällä.
