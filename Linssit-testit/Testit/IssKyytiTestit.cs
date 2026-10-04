@@ -213,10 +213,27 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void KaukaaIssiinPidempiLento()
         {
+            // Vanha lento (A/B astro kyyti suora 0); oletuksena Cupola avautuu suoraan (CupolaAvautuuSuoraan).
+            IssKyyti.SuoraAvaus = false;
+            try
+            {
+                var k = new IssKyyti();
+                k.Napauta(new Kuvakulma(-50, -170, 18_000_000, 0, 0), Iss, 50, 0, false);
+                k.Paivita(IssKyyti.KyytiinS + 0.01, Iss, 50, out var a, out _, out _);
+                Oleta.Tosi(a.EtaisyysM > IssKuvakulma.SeurannanEtaisyysM, "pallon toiselta puolelta lento kestää pidempään");
+            }
+            finally { IssKyyti.SuoraAvaus = true; }
+        }
+
+        [Testi] static void CupolaAvautuuSuoraan()
+        {
+            // Omistaja 4.10.: ei kameran lentoa kaukaa Cupolaan; ensimmäinen kehys on jo Cupolan asento.
             var k = new IssKyyti();
-            k.Napauta(new Kuvakulma(-50, -170, 18_000_000, 0, 0), Iss, 50, 0, false);
-            k.Paivita(IssKyyti.KyytiinS + 0.01, Iss, 50, out var a, out _, out _);
-            Oleta.Tosi(a.EtaisyysM > IssKuvakulma.SeurannanEtaisyysM, "pallon toiselta puolelta lento kestää pidempään");
+            k.Napauta(new Kuvakulma(-50, -170, 18_000_000, 0, 0), Iss, 50, 10, false);
+            Oleta.Sama(KyydinTila.Ikkuna, k.Tila);
+            k.Paivita(10, Iss, 50, out var a, out _, out _);
+            var odotus = IssKuvakulma.Ikkuna(Iss, IssKuvakulma.IkkunanKatse(Iss.KorkeusM));
+            Oleta.Tosi(Math.Abs(a.Lat - odotus.Lat) < 1e-9 && Math.Abs(a.Lon - odotus.Lon) < 1e-9 && !k.Siirtyy, "suoraan: " + a);
         }
 
         [Testi] static void KohteenYllaSilmaIssissaJaPitkaObjektiivi()

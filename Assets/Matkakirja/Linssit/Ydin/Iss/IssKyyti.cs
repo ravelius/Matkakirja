@@ -407,6 +407,12 @@ namespace Matkakirja.Linssit.Iss
         public readonly IssKatse Katse = new IssKatse();
 
         /// <summary>
+        /// CUPOLA SUORAAN (omistaja 4.10.2026 klo 11.5x "kartta ei saa lentää sinne"): kaukonäkymästä Cupolaan ilman kameran
+        /// lentoa; UI peittää vaihdon mustalla ruudulla (AstronauttiLinssi.CupolaAvautuu). A/B `astro kyyti suora 0|1`.
+        /// </summary>
+        public static bool SuoraAvaus = true;
+
+        /// <summary>
         /// Napautus: kauko → ikkuna (Cupola); kohteen yltä takaisin ikkunaan; ulkona ei mitään (avaruuskävely). Kehittäjän
         /// seurantatilassa (<see cref="SeurantaKaytossa"/>) vanha kierto kauko → seuranta → ikkuna → seuranta. <paramref name="nykyinen"/>
         /// on kameran asento nyt.
@@ -420,7 +426,7 @@ namespace Matkakirja.Linssit.Iss
                     double kaari = IssKuvakulma.Kaari(nykyinen.Lat, nykyinen.Lon, iss.Paikka.Lat, iss.Paikka.Lon);
                     // Suoraan Cupolaan: kyytiin lennon kesto + ikkunaan siirtymän kesto (sama kokonaisaika kuin kahdella napautuksella).
                     if (!SeurantaKaytossa)
-                        Aloita(KyydinTila.Ikkuna, nykyinen, kentta, nyt, vahennetty ? 0 : KyytiinS + KyytiinLisaS * kaari / 180 + IkkunaanS);
+                        Aloita(KyydinTila.Ikkuna, nykyinen, kentta, nyt, vahennetty || SuoraAvaus ? 0 : KyytiinS + KyytiinLisaS * kaari / 180 + IkkunaanS);
                     else
                         Aloita(KyydinTila.Seuranta, nykyinen, kentta, nyt, vahennetty ? 0 : KyytiinS + KyytiinLisaS * kaari / 180);
                     break;
