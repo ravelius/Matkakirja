@@ -396,10 +396,33 @@ namespace Matkakirja.Natiivi
                 foreach (var t in tiedot) if (!t.Kesken) LuoRivi(t);
                 if (tiedot.Exists(t => t.Kesken))
                 {
-                    var o = Rakenne.Teksti("KESKENERÄISET", "mk-selite__otsikko mk-linssivalitsin__valiotsikko", lista);
+                    // KESKENERÄISET VÄKÄSEN TAAKSE (omistaja 4.10.2026 klo 23.0x: "Kokoa keskeneräiset väkäsen taakse piiloon valikossa
+                    // jonka saa kuitenkin klikkaamalla auki"): väliotsikko + olemassa oleva väkänen (mk-linssivalitsin__vakanen),
+                    // oletuksena kiinni; napautus avaa ja sulkee, tila säilyy istunnon ajan. Väkänen kääntyy alas auki ollessa.
+                    var otsikkorivi = Rakenne.El("mk-linssivalitsin__keskenrivi", lista);
+                    otsikkorivi.style.flexDirection = FlexDirection.Row;
+                    otsikkorivi.style.alignItems = Align.Center;
+                    otsikkorivi.style.minHeight = 44f;   // osuma-ala
+                    var o = Rakenne.Teksti("KESKENERÄISET", "mk-selite__otsikko mk-linssivalitsin__valiotsikko", otsikkorivi);
+                    o.pickingMode = PickingMode.Ignore;
                     Kirjasimet.Aseta(o, Kirjasin.Kone);
+                    var vakanen = Rakenne.Teksti("›", "mk-linssivalitsin__vakanen", otsikkorivi);
+                    vakanen.pickingMode = PickingMode.Ignore;
+                    var kesken = Rakenne.El("mk-linssivalitsin__keskeneraiset", lista, PickingMode.Ignore);
+                    void Nayta()
+                    {
+                        kesken.style.display = KeskenAuki ? DisplayStyle.Flex : DisplayStyle.None;
+                        vakanen.style.rotate = new Rotate(KeskenAuki ? 90f : 0f);
+                    }
+                    otsikkorivi.AddManipulator(new Clickable(() =>
+                    {
+                        KeskenAuki = !KeskenAuki;
+                        Nayta();
+                        Debug.Log("MATKAKIRJA linssit: keskeneräiset " + (KeskenAuki ? "auki" : "kiinni"));
+                    }));
                     // Maininta vain otsikossa, ei linssin nimessä (omistaja 29.9.2026 klo 23.0x, 1.0.56).
-                    foreach (var t in tiedot) if (t.Kesken) LuoRivi(t);
+                    foreach (var t in tiedot) if (t.Kesken) LuoRivi(t, kesken);
+                    Nayta();
                 }
             }
             else foreach (var t in tiedot) LuoRivi(t);
@@ -407,6 +430,8 @@ namespace Matkakirja.Natiivi
         }
 
         readonly Dictionary<string, LinssiTiedot> linssiTiedot = new Dictionary<string, LinssiTiedot>();
+        /// <summary>KESKENERÄISET-osio auki (oletuksena kiinni; istunnon ajan, testikomento ui pilleri kesken).</summary>
+        public static bool KeskenAuki;
         static string EsikatselunKuva(LinssiTiedot t) => string.IsNullOrEmpty(t.Havainnekuva) ? Matkalaukku.VarusteKuva(t.Id) : t.Havainnekuva;
         static string EsikatselunTeksti(LinssiTiedot t) => string.IsNullOrEmpty(t.Esittely) ? t.Lyhyt : t.Esittely;
 
@@ -444,7 +469,7 @@ namespace Matkakirja.Natiivi
             rivit.Add((EiLinssia, b, tila));
         }
 
-        void LuoRivi(LinssiTiedot t, string nimenPerassa = "")
+        void LuoRivi(LinssiTiedot t, VisualElement isa = null, string nimenPerassa = "")
         {
             string id = t.Id;
             linssiTiedot[id] = t;
@@ -466,7 +491,7 @@ namespace Matkakirja.Natiivi
                 }
                 Sulje();
                 Valittu?.Invoke(id);
-            }, lista);
+            }, isa ?? lista);
             b.tooltip = t.Nimi;
             if (PilleriValikko) b.AddToClassList("mk-linssirivi--aktivoi");
             var ikoni = new SvgIkoni(string.IsNullOrEmpty(t.Ikoni) ? Ikonit.Viiva["taikalasit"] : t.Ikoni);

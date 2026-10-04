@@ -1187,6 +1187,8 @@ namespace Matkakirja.Natiivi
                     var o = loput.Split(' ');
                     string nk = o.Length > 0 && o[0].Length > 0 ? o[0] : "paa";
                     int n = o.Length > 1 && int.TryParse(o[1], out int nn) ? nn : -1;
+                    // ui pilleri kesken [0|1]: KESKENERÄISET-osio kiinni/auki (oletus auki) ja Linssit-näkymä uudelleen.
+                    if (nk == "kesken") { Linssivalitsin.KeskenAuki = n != 0; return "=" + ui.Linssit.Valitsin.TestaaNakyma("linssit", -1); }
                     return "=" + ui.Linssit.Valitsin.TestaaNakyma(nk, n);
                 }
                 case "maakunnat":

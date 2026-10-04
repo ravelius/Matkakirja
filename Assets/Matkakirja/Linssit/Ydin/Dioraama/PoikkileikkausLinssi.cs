@@ -104,10 +104,10 @@ namespace Matkakirja.Linssit.Dioraama
         public static readonly LinssiTiedot PoikkiTiedot = new LinssiTiedot
         {
             Id = "poikkileikkaus",
-            Nimi = "Poikkileikkaus",
-            Lyhyt = "Olavinlinna aukileikattuna",
+            // Omistaja 4.10.2026 klo 23.0x: "tuo linna valmiisiin ... luo parempi nimi linnalle" (nimi ja lyhyt Päätoimittajalta).
+            Nimi = "Muurien sisällä",
+            Lyhyt = "Olavinlinna vuonna 1475 aukileikattuna: kurkista saleihin ja tapaa linnan väki.",
             Jarjestys = 250,
-            Kesken = true,
             // 24×24: kevyt porrastettu torni + vino leikkausviiva (ei svg-kuorta).
             Ikoni = "<path d=\"M8 21V13H7V10H9V7H11V5H13V7H15V10H17V13H16V21Z\"/>"
                 + "<path d=\"M8 16H16\"/>"
