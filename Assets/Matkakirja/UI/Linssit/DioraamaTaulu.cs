@@ -436,7 +436,7 @@ namespace Matkakirja.Natiivi
                 puluAlue.style.display = DisplayStyle.None;
                 uusintaNappi.style.display = DisplayStyle.None;
                 kertojaLaatikko.RemoveFromClassList("mk-nakyy");
-                LopetaKuunnelma();
+                LopetaKuunnelma("ei näkymää");
                 return;
             }
             Nakyma nakyma = nakymaTaiEi.Value;
@@ -460,7 +460,7 @@ namespace Matkakirja.Natiivi
                 pulu.style.display = DisplayStyle.None;
                 puluAlue.style.display = DisplayStyle.None;
                 for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
-                LopetaKuunnelma();
+                LopetaKuunnelma("kierros");
                 return;
             }
             var infoTila = nakyma.KohdeTila != null ? rakennus.Tila(nakyma.KohdeTila) : null;
@@ -470,7 +470,7 @@ namespace Matkakirja.Natiivi
             if (nakyma.KohdeTila == null && rakennus.Kertoja != null && rakennus.Kertoja.Count > 0)
             {
                 // Tilasta palattaessa kuunnelma loppuu (dccb82a5: keittiön kaistale jäi yleisnäkymään).
-                LopetaKuunnelma();
+                LopetaKuunnelma("yleisnäkymä");
                 for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
                 lauta.style.display = DisplayStyle.None;
                 float ph2 = juuri.layout.height; if (float.IsNaN(ph2) || ph2 <= 0) ph2 = Screen.height;
@@ -492,7 +492,7 @@ namespace Matkakirja.Natiivi
                 if (kupla) { puluAlue.style.left = vasen2 + 12; puluAlue.style.top = ph2 - ala2 - koko2 - 102; puluAlue.style.width = koko2 * 58f / 70f + 12; puluAlue.style.height = koko2 + 12; }
                 return;
             }
-            LopetaKuunnelma();
+            LopetaKuunnelma("muu tila");
             puluAlue.style.display = DisplayStyle.None;
 
             // Pulu: 3D-laskeutumispiste → ruutupiste → paneelikoordinaatit (MaapallonVuosiSovitin-kommentin malli).
@@ -599,12 +599,15 @@ namespace Matkakirja.Natiivi
         void PaivitaInfotaulu(PoikkileikkausLinssi linssi, Tila tila, Nakyma nakyma, double t)
         {
             for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
-            bool perilla = linssi.LeikkausHetkella(t).osuus >= 0.99;
+            // 4.10. (iPad v28: huoneesta toiseen siirryttäessä k1 alkoi kahdesti, myös BUILD 137): siirtymän alussa leikkaus on
+            // vielä EDELLISEN tilan (osuus ≈ 1) → perillä vain, kun leikkaus on tämän tilan.
+            var leikkaus = linssi.LeikkausHetkella(t);
+            bool perilla = leikkaus.tila == tila.Id && leikkaus.osuus >= 0.99;
             var info = tila.Infotaulu;
             lauta.style.display = perilla ? DisplayStyle.Flex : DisplayStyle.None;
             lauta.style.opacity = perilla ? 1f : 0f;
             lauta.style.translate = new Translate(0, perilla ? 0 : 8);
-            if (!perilla) { pulu.style.display = DisplayStyle.None; puluAlue.style.display = DisplayStyle.None; LopetaKuunnelma(); return; }
+            if (!perilla) { pulu.style.display = DisplayStyle.None; puluAlue.style.display = DisplayStyle.None; LopetaKuunnelma("ei perillä"); return; }
 
             float pw = juuri.layout.width, ph = juuri.layout.height;
             if (float.IsNaN(pw) || pw <= 0) { pw = Screen.width; ph = Screen.height; }
@@ -632,8 +635,8 @@ namespace Matkakirja.Natiivi
 
             // Kuunnelma alkaa, kun tilaan on tultu perille (kierroksen aikana tänne ei tulla).
             bool kuunneltava = tila.Kuunnelma != null && tila.Kuunnelma.Count > 0;
-            if (kuunneltava && kuunnelma.TilaId != tila.Id) { kuunnelmaTila = tila; kuunnelma.Aloita(tila); }
-            else if (!kuunneltava) LopetaKuunnelma();
+            if (kuunneltava && kuunnelma.TilaId != tila.Id) { Debug.Log($"MATKAKIRJA linssit: poikki: kuunnelma {tila.Id} alkaa (edellinen {kuunnelma.TilaId ?? "-"})"); kuunnelmaTila = tila; kuunnelma.Aloita(tila); }
+            else if (!kuunneltava) LopetaKuunnelma("ei kuunneltava");
             kuunnelma.Paivita();
 
             // Puhuja kortin kapiteelina otsikon yläpuolella ja repliikki samaan korttiin vain, jos sitä ei puhuta ääneen
@@ -676,10 +679,11 @@ namespace Matkakirja.Natiivi
             puluAlue.style.width = puluLeveys + 12f; puluAlue.style.height = koko + 12f;
         }
 
-        void LopetaKuunnelma()
+        void LopetaKuunnelma(string syy)
         {
             if (kuunnelma == null) return;
-            if (kuunnelma.TilaId != null) kuunnelma.Lopeta();
+            // 4.10. iPad v28: huoneesta toiseen siirryttäessä k1 alkoi kahdesti → syy lokiin (kuunnelma alkaa alusta seuraavalla Aloita).
+            if (kuunnelma.TilaId != null) { Debug.Log($"MATKAKIRJA linssit: poikki: kuunnelma {kuunnelma.TilaId} loppui ({syy})"); kuunnelma.Lopeta(); }
             kuunnelmaTila = null;
             kuunteleNappi.style.display = DisplayStyle.None;
         }
