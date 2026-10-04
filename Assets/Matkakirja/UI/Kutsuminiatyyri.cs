@@ -39,8 +39,12 @@ namespace Matkakirja.Natiivi
         const float Reunavara = 4f, EsiinMs = 350f, PoisMs = 250f;
         /// <summary>Piilotuksen ja paluun hystereesi: peiton/vapauden kesto (s) ja paluun lisävara (pt).</summary>
         const float PiiloS = 0.4f, Vara = 6f;
-        /// <summary>Herokuvan uusintaväli epäonnistuneen latauksen jälkeen (s).</summary>
-        const float UusintaS = 5f;
+        /// <summary>
+        /// Herokuvan uusintavälit epäonnistuneen latauksen jälkeen (Päätoimittaja 5.10.2026: ei loputonta 5 s:n kyselyä, joka
+        /// kuluttaa akkua ja tukkii jonoa ilman verkkoa): 5, 15 ja 45 s, sen jälkeen vasta kun kortti tulee uudelleen näkyviin
+        /// tai verkko palaa (Application.internetReachability, kuten OfflineTilaUi). Ilman verkkoa ei yritetä.
+        /// </summary>
+        static readonly float[] Uusinnat = { 5f, 15f, 45f };
         static readonly float[] Renkaat = { 8f, 20f, 36f };
 
         readonly UiKerros kerros;
@@ -59,6 +63,8 @@ namespace Matkakirja.Natiivi
         Texture2D kiinnitetty;
         /// <summary>Epäonnistunut lataus (verkko) yritetään uudelleen aikaisintaan tästä hetkestä; ennen jäi pelkäksi pohjaksi.</summary>
         float uusintaHetki;
+        int yrityksia;
+        bool verkkoOli = true;
         float esiinAlku = float.NaN;
         /// <summary>Häivytyksen alku (ms) ja alkupeitto; NaN = ei häivytystä.</summary>
         float poisAlku = float.NaN, poisPeitto = 1f;
@@ -87,10 +93,14 @@ namespace Matkakirja.Natiivi
         public bool Nakyy => nakyy;
         public Rect Laatikko => nakyy ? nappi.worldBound : default;
 
+        /// <summary>Uusinnat alusta: kaupunki vaihtui, kortti tuli uudelleen näkyviin tai verkko palasi.</summary>
+        void NollaaUusinta() { yrityksia = 0; uusintaHetki = 0f; }
+
         void Nayta(bool b)
         {
             if (b == nakyy) return;
             nakyy = b;
+            if (b && kiinnitetty == null) NollaaUusinta();
             bool liike = !LinssiUi.VahennettyLiike();
             if (b)
             {
@@ -163,19 +173,29 @@ namespace Matkakirja.Natiivi
                 kuvanTiedosto = null;
                 Kuvat.Vapauta(kiinnitetty);
                 kiinnitetty = null;
-                uusintaHetki = 0f;
+                NollaaUusinta();
                 // Herokuva tulee kaupunkilehden avauskuvista; aloituskaupungissa lehteä ei ole vielä pyydetty
                 // (EsilataaSaapuminen ajetaan vain lennolla), joten kutsu jäi pelkäksi pohjaksi.
                 UiSisalto.LataaLehti(id);
             }
             string tiedosto = Avauskortti.HeroTiedosto(k);
-            if (tiedosto != null && tiedosto != kuvanTiedosto && Time.unscaledTime >= uusintaHetki)
+            bool verkko = Application.internetReachability != NetworkReachability.NotReachable;
+            if (verkko && !verkkoOli) NollaaUusinta(); // verkko palasi
+            verkkoOli = verkko;
+            if (tiedosto != null && tiedosto != kuvanTiedosto && Time.unscaledTime >= uusintaHetki && (verkko || yrityksia == 0))
             {
                 kuvanTiedosto = tiedosto;
                 Kuvat.Hae(tiedosto, tex =>
                 {
                     if (kuvanTiedosto != tiedosto) return;
-                    if (tex == null) { kuvanTiedosto = null; uusintaHetki = Time.unscaledTime + UusintaS; return; }
+                    if (tex == null)
+                    {
+                        kuvanTiedosto = null;
+                        yrityksia++;
+                        uusintaHetki = yrityksia <= Uusinnat.Length ? Time.unscaledTime + Uusinnat[yrityksia - 1] : float.PositiveInfinity;
+                        return;
+                    }
+                    yrityksia = 0;
                     if (kiinnitetty != tex) { Kuvat.Vapauta(kiinnitetty); Kuvat.Kiinnita(tex); kiinnitetty = tex; }
                     kuva.style.backgroundImage = new StyleBackground(tex);
                 });
