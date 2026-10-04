@@ -339,7 +339,14 @@ namespace Matkakirja.Natiivi
             if (float.IsNaN(h) || h <= 0) h = 290f;
             var vaista = new List<Laatikko>();
             var l = UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>();
-            if (l != null && l.IssRuudulla(out var px) && Screen.width > 0 && Screen.height > 0)
+            // ISS-merkki ei näy valokuvan alla, joten kuvamoodissa väistetään sen sijaan alarivin AUTO ‹ › (laite 4.10.: taulu
+            // vieres-paikassa AUTOn päällä, koska näkymätön ISS-merkki esti yläpaikan).
+            if (astro.Kuva.Auki)
+            {
+                var n = astro.Kuva.KohdenappienLaatikko;
+                if (n.width > 0) vaista.Add(new Laatikko(n.xMin, n.yMin, n.xMax, n.yMax));
+            }
+            else if (l != null && l.IssRuudulla(out var px) && Screen.width > 0 && Screen.height > 0)
                 vaista.Add(PulunTaulu.IssAlue(px.x * W / Screen.width, (Screen.height - px.y) * H / Screen.height));
             // Ylin sallittu yläreuna: turva-alue ja kyydissä lukemarivi (LIVE · ISS …, noin 44 pt) sen alla. Aina vähintään linssin
             // harmaan ✕:n alapuolella (12 + 34 + 8 pt; Natiivisepän savuke 1121: taulun oma ✕ jäi linssin ✕:n alle).
