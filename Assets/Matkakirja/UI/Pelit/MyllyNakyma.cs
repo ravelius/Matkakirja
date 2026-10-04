@@ -81,6 +81,8 @@ namespace Matkakirja.Natiivi
             set { lauta_ = Mathf.Clamp(value, 0, Laudat.Length - 1); PlayerPrefs.SetInt(LautaAvain, lauta_); PlayerPrefs.Save(); }
         }
         readonly Label tulosKapiteeli, tulosOtsikko, tulosApuri, tulosPalkkio, tulosKirjattu, tulosLaudat;
+        readonly VisualElement otsikko;
+        readonly Label otsikkoLauta;
         readonly VisualElement tulosPalkkioRivi;
 
         Mylly peli;
@@ -110,12 +112,17 @@ namespace Matkakirja.Natiivi
             peliTaso.style.display = DisplayStyle.None;
             lauta = new MyllyLauta(Napautus);
             peliTaso.Add(lauta);
-            // ✕ OHJAUSNAPPI-neliönä (omistaja 2.10.2026 klo 14.2x: kuvakenapit yhtenäisiä neliöitä, EI OVAALEJA; Päätoimittaja 3.10.):
-            // Tumma teema (Päätoimittaja 3.10. klo 20.2x: harmaa läpikuultava jäi vaalean kartan päällä heikoksi iPhonessa ja näytti
-            // iPadissa eri napilta), rasti-ikoni kuten GALLERIAssa.
-            var rasti = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje", Sulje, peliTaso, "tumma");
-            rasti.AddToClassList("mk-peli__sulje");
+            // OTSIKKO (omistaja 4.10. 22.3x TF 140: "Ota x nappi pois. Lisää pelille logo otsikko … Laudan nimi saisi olla myös
+            // esillä"; Päätoimittaja): aloitusruudun JULISTE-pohja laudan yläpuolelle — viiva / MYLLY / laudan nimi / viiva.
+            otsikko = Rakenne.El("mk-juliste mk-peli__otsikko", peliTaso, PickingMode.Ignore);
+            otsikko.style.position = Position.Absolute;
+            Aloitusnakyma.Kapea(otsikko);
+            Aloitusnakyma.Viiva(otsikko);
+            Aloitusnakyma.JulisteRivi(otsikko, "MYLLY", "mk-juliste__nimi");
+            otsikkoLauta = Aloitusnakyma.JulisteRivi(otsikko, "", "mk-juliste__osa");
+            Aloitusnakyma.Viiva(otsikko);
             paneeli = Rakenne.El("mk-peli__paneeli " + PaneelinTeema, peliTaso); // omistaja 2.10. 11.0x: PAPERI
+            // Paneelin "Mylly"-yläotsikko pois (otsikko kertoo saman); kapiteeli vain paikallisnimelle ja maalle.
             kapiteeli = Rakenne.Teksti("", "mk-kortti__kapiteeli", paneeli);
             Kirjasimet.Aseta(kapiteeli, Tyylikirja.Kirjain.Kapiteeli);
             vuoroRivi = Rakenne.Teksti("", "mk-peli__vuoro", paneeli);
@@ -127,6 +134,8 @@ namespace Matkakirja.Natiivi
             var napit = Rakenne.El("mk-kortti__napit", paneeli, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Nappi("Säännöt", "mk-nappi--toiminto", NaytaSaannot, napit), Kirjasin.Kone);
             Kirjasimet.Aseta(Rakenne.Nappi("Luovuta", "mk-nappi--toiminto", Luovuta, napit), Kirjasin.Kone);
+            // ✕ pois (omistaja 4.10.): pelistä poistutaan nappirivin Poistu-napilla, toiminta kuten ✕:llä ennen.
+            Kirjasimet.Aseta(Rakenne.Nappi("Poistu", "mk-nappi--toiminto", Sulje, napit), Kirjasin.Kone);
             peliTaso.RegisterCallback<GeometryChangedEvent>(_ => Asettele());
 
             // KORTIT (valinta, tulos, säännöt) himmennyksellä pelin päälle.
@@ -484,7 +493,9 @@ namespace Matkakirja.Natiivi
         {
             if (peli == null) return;
             bool kaveri = vastustaja == Vastustaja.Kaveri;
-            kapiteeli.text = "Mylly" + (PaikallinenNimi != null ? " · " + PaikallinenNimi : "") + (Maa != null ? " · " + Maa : "");
+            kapiteeli.text = (PaikallinenNimi ?? "") + (PaikallinenNimi != null && Maa != null ? " · " : "") + (Maa ?? "");
+            kapiteeli.style.display = string.IsNullOrEmpty(kapiteeli.text) ? DisplayStyle.None : DisplayStyle.Flex;
+            otsikkoLauta.text = Laudat[Lauta].Nimi.ToUpperInvariant();
             nimi0.text = kaveri ? "Vaalea" : "Sinä";
             nimi1.text = kaveri ? "Tumma" : Pelikehys.VastustajanNimi(vastustaja).Replace("botti (", "Botti · ").TrimEnd(')');
             lukema0.text = Lukema(0); lukema1.text = Lukema(1);
@@ -520,27 +531,37 @@ namespace Matkakirja.Natiivi
             float w = peliTaso.layout.width, h = peliTaso.layout.height;
             if (float.IsNaN(w) || w <= 0 || h <= 0) return;
             var t = UiKerros.Hae().Reunat(UiKerros.Pelidialogit);
-            float m = Tyylikirja.Vali.M, osuma = Tyylikirja.Nappi.Ohjaus; // ✕:n näkyvä korkeus
-            var rasti = peliTaso.Q(className: "mk-peli__sulje");
-            rasti.style.top = t.y + m; rasti.style.right = t.z + m;
+            float m = Tyylikirja.Vali.M;
+            // Otsikko laudan yläpuolelle; sen korkeus mitataan (ensimmäisellä kerralla arvio).
+            float oKork = float.IsNaN(otsikko.layout.height) || otsikko.layout.height <= 0 ? 104f : otsikko.layout.height;
             bool kapea = Pohja.Leveys(w - t.x - t.z) == Pohja.Luokka.Kapea && h > w;
             if (kapea)
             {
-                float koko = w - t.x - t.z - 2 * m;
-                float yla = t.y + m + osuma + Tyylikirja.Vali.S;
-                Sijoita(lauta, t.x + m, yla, koko, koko);
+                float yla = t.y + m + oKork;
+                float pKork = float.IsNaN(paneeli.layout.height) || paneeli.layout.height <= 0 ? 300f : paneeli.layout.height;
+                float koko = Mathf.Min(w - t.x - t.z - 2 * m, h - yla - t.w - pKork - 2 * m);
+                Sijoita(lauta, (w - koko) / 2f, yla, koko, koko);
+                SijoitaOtsikko(w / 2f, t.y + m, w - t.x - t.z);
                 paneeli.style.left = t.x + m; paneeli.style.right = t.z + m; paneeli.style.width = StyleKeyword.Auto;
                 paneeli.style.top = yla + koko + m; paneeli.style.bottom = StyleKeyword.Auto;
             }
             else
             {
                 float pw = Tyylikirja.Leveys.Paneeli;
-                float koko = Mathf.Min(h - t.y - t.w - 2 * m, w - t.x - t.z - pw - 3 * m);
+                float koko = Mathf.Min(h - t.y - t.w - 2 * m - oKork, w - t.x - t.z - pw - 3 * m);
                 float vasen = t.x + m + Mathf.Max(0, (w - t.x - t.z - pw - 3 * m - koko) / 2f);
-                Sijoita(lauta, vasen, t.y + m, koko, koko);
+                Sijoita(lauta, vasen, t.y + m + oKork, koko, koko);
+                SijoitaOtsikko(vasen + koko / 2f, t.y + m, koko);
                 paneeli.style.left = StyleKeyword.Auto; paneeli.style.right = t.z + m; paneeli.style.width = pw;
-                paneeli.style.top = t.y + m + osuma + Tyylikirja.Vali.S; paneeli.style.bottom = StyleKeyword.Auto;
+                paneeli.style.top = t.y + m + oKork; paneeli.style.bottom = StyleKeyword.Auto;
             }
+        }
+
+        /// <summary>Otsikko keskelle annettua kohtaa (leveys enintään laudan tai ruudun leveys).</summary>
+        void SijoitaOtsikko(float keskiX, float yla, float leveys)
+        {
+            otsikko.style.width = Mathf.Round(leveys); otsikko.style.maxWidth = StyleKeyword.None;
+            otsikko.style.left = Mathf.Round(keskiX - leveys / 2f); otsikko.style.top = Mathf.Round(yla);
         }
 
         static void Sijoita(VisualElement e, float x, float y, float w, float h)
