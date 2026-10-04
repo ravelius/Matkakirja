@@ -1712,6 +1712,7 @@ namespace Matkakirja.Natiivi
                         // veto <dx> <dy> [ms] simuloi sormen vedon pisteinä (ms > 0 jättää inertian).
                         else if (a == "katse" && osat.Length > 3) Kirjaa("astro kyyti katse: " + KyydinKatse(l, osat.Skip(3).ToArray()));
                         else if (a == "veto") Kirjaa("astro kyyti veto: " + KyydinVeto(l, osat.Skip(3).ToArray()));
+                        else if (a == "varakartta" && osat.Length > 3) { AstronauttiKerros.KyydinVarakartta = osat[3] != "0"; Kirjaa("astro kyyti varakartta: " + AstronauttiKerros.KyydinVarakartta); }
                         else if (a == "suora" && osat.Length > 3) { Matkakirja.Linssit.Iss.IssKyyti.SuoraAvaus = osat[3] != "0"; Kirjaa("astro kyyti suora: " + Matkakirja.Linssit.Iss.IssKyyti.SuoraAvaus); }
                         else if (a == "asento")
                         {
