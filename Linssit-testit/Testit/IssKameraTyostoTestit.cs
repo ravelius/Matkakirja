@@ -11,6 +11,35 @@ namespace Matkakirja.Linssit.Testit
     static class IssKameraTyostoTestit
     {
         [Testi]
+        static void UsvatasoitusTummimpaanRuutuun()
+        {
+            // Simu d753d794 (Amazonia): sameampi ruutu = tummat kohteet vaaleampia → erotus vähennetään ennen lutia.
+            var d = new KuvaData();
+            byte[] Laatta(byte tumma, byte vaalea)
+            {
+                var l = new byte[512 * 512 * 3];
+                for (int k = 0; k < 512 * 512; k++) { byte v = k % 10 == 0 ? tumma : vaalea; l[k * 3] = v; l[k * 3 + 1] = v; l[k * 3 + 2] = (byte)(v + 5); }
+                return l;
+            }
+            var a = new S2Ruutu { Tunnus = "20MQB" }; var b = new S2Ruutu { Tunnus = "21MTS" }; var c = new S2Ruutu { Tunnus = "21MUS" };
+            d.Ruudut.Add((a, null)); d.Ruudut.Add((b, null)); d.Ruudut.Add((c, null));
+            d.Laatat[("20MQB", 3, 0, 0)] = Laatta(12, 90);
+            d.Laatat[("21MTS", 3, 0, 0)] = Laatta(37, 110);
+            var t = Uudelleenprojisointi.TasaaUsva(d);
+            Oleta.Sama(2, t.Count, "kolmas ruutu ilman dataa ohitetaan");
+            Oleta.Sama(0.0, a.UsvaR); Oleta.Sama(25.0, b.UsvaR); Oleta.Sama(25.0, b.UsvaB); Oleta.Sama(0.0, c.UsvaR);
+            // Yläraja: erittäin samea ruutu tummuu enintään MaxUsva.
+            d.Laatat[("21MTS", 3, 0, 0)] = Laatta(80, 150);
+            Uudelleenprojisointi.TasaaUsva(d);
+            Oleta.Sama(Uudelleenprojisointi.MaxUsva, b.UsvaG);
+            // Aavikko- tai lumiruutu ilman tummia kohteita (1 % > TummaRaja) jää tasoittamatta.
+            d.Laatat[("21MTS", 3, 0, 0)] = Laatta(200, 230);
+            b.UsvaR = b.UsvaG = b.UsvaB = 0;
+            Oleta.Sama(0, Uudelleenprojisointi.TasaaUsva(d).Count, "vain yksi tumma ruutu → ei vertailua");
+            Oleta.Sama(0.0, b.UsvaG);
+        }
+
+        [Testi]
         static void DatatonMaallaLapinakyvaMerellaMerenvari()
         {
             // Simu d753d794: rataleveyden reunan dataton kiila maalla täyttyi merenvärillä (sininen kiila Saharassa).

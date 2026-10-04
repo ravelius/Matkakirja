@@ -25,6 +25,8 @@ namespace Matkakirja.Linssit.IssKamera
         public double W, S, E, N;
         /// <summary>Ruudun alueen tci_lut (maailman indeksi); null = KuvaData.Lut.</summary>
         public byte[] Lut;
+        /// <summary>Usvatasoitus (Uudelleenprojisointi.TasaaUsva): TCI-arvosta vähennettävä usva kanavittain ennen lutia.</summary>
+        public double UsvaR, UsvaG, UsvaB;
         /// <summary>Valinnan nodata-osuus (%, indeksistä): > 0,5 → ruutu ei voi yksin kattaa lehteä (rataleveyden reuna).</summary>
         public double Nodata;
         /// <summary>SCL-COG (luokitus, 20 m) pilvimaskiin; null = ei maskia.</summary>

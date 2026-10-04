@@ -170,6 +170,7 @@ namespace Matkakirja.Linssit.IssKamera
                     double cr = (p00.r * (1 - ax) + p10.r * ax) * (1 - ay) + (p01.r * (1 - ax) + p11.r * ax) * ay;
                     double cg = (p00.g * (1 - ax) + p10.g * ax) * (1 - ay) + (p01.g * (1 - ax) + p11.g * ax) * ay;
                     double cb = (p00.b * (1 - ax) + p10.b * ax) * (1 - ay) + (p01.b * (1 - ax) + p11.b * ax) * ay;
+                    cr = Math.Max(0, cr - ru.UsvaR); cg = Math.Max(0, cg - ru.UsvaG); cb = Math.Max(0, cb - ru.UsvaB);
                     if (luokka == 6 && d.VesiTasoitus > 0)
                     {
                         double w = d.VesiTasoitus;
@@ -191,6 +192,58 @@ namespace Matkakirja.Linssit.IssKamera
             r = (byte)Math.Min(255, Math.Round(sr / summa)); g = (byte)Math.Min(255, Math.Round(sg / summa)); b = (byte)Math.Min(255, Math.Round(sb / summa));
             return true;
         }
+
+        /// <summary>
+        /// USVATASOITUS (simu d753d794, Amazonia: eri päivien S2-ruudut 2023–2025 erottuivat sameina, sinivihreinä lohkoina): ruudun
+        /// tummien kohteiden taso (1 % -persentiili kanavittain haetuista laatoista, nodata pois) verrataan saman kuvan
+        /// tummimpaan ruutuun, ja erotus (additiivinen usva) vähennetään ruudun pikseleistä ennen lutia (enintään MaxUsva). Ruutu,
+        /// jonka tummat ovat yli TummaRajan (aavikko, lumi), jätetään tasoittamatta.
+        /// Ruutuja oltava ≥ 2 riittävällä otoksella; muuten ennallaan. Palauttaa (tunnus, vähennys) kirjausta varten.
+        /// </summary>
+        public static List<(string tunnus, double r, double g, double b)> TasaaUsva(KuvaData d, int laattojaRuudusta = 24, int askel = 7)
+        {
+            var tummat = new Dictionary<string, (double r, double g, double b)>();
+            var avaimet = new List<(string tunnus, int taso, int tx, int ty)>(d.Laatat.Keys);
+            avaimet.AddRange(d.Pakatut.Keys);
+            foreach (var (ru, _) in d.Ruudut)
+            {
+                var r = new List<byte>(); var g = new List<byte>(); var b = new List<byte>();
+                int n = 0;
+                foreach (var a in avaimet)
+                {
+                    if (a.tunnus != ru.Tunnus || n >= laattojaRuudusta) continue;
+                    var l = d.Hae(a);
+                    if (l == null) continue;
+                    n++;
+                    for (int i = 0; i + 2 < l.Length; i += 3 * askel)
+                    {
+                        if (l[i] == 0 && l[i + 1] == 0 && l[i + 2] == 0) continue;
+                        r.Add(l[i]); g.Add(l[i + 1]); b.Add(l[i + 2]);
+                    }
+                }
+                if (r.Count < 500) continue;
+                r.Sort(); g.Sort(); b.Sort();
+                int p = r.Count / 100;
+                // Vain ruudut, joissa on tummia kohteita (vesi, metsä, varjot): aavikko- tai lumiruudun 1 % on kirkas, eikä se ole usvaa.
+                if (Math.Max(r[p], Math.Max(g[p], b[p])) <= TummaRaja) tummat[ru.Tunnus] = (r[p], g[p], b[p]);
+            }
+            var tulos = new List<(string, double, double, double)>();
+            if (tummat.Count < 2) return tulos;
+            double mr = double.MaxValue, mg = double.MaxValue, mb = double.MaxValue;
+            foreach (var t in tummat.Values) { mr = Math.Min(mr, t.r); mg = Math.Min(mg, t.g); mb = Math.Min(mb, t.b); }
+            foreach (var (ru, _) in d.Ruudut)
+            {
+                if (!tummat.TryGetValue(ru.Tunnus, out var t)) continue;
+                ru.UsvaR = Math.Min(MaxUsva, t.r - mr); ru.UsvaG = Math.Min(MaxUsva, t.g - mg); ru.UsvaB = Math.Min(MaxUsva, t.b - mb);
+                tulos.Add((ru.Tunnus, ru.UsvaR, ru.UsvaG, ru.UsvaB));
+            }
+            return tulos;
+        }
+
+        /// <summary>Usvatasoituksen yläraja TCI-tavuina (varjeltu väärä tulkinta, esim. lumi- tai aavikkoruutu ilman tummia kohteita).</summary>
+        public const double MaxUsva = 40;
+        /// <summary>Ruudun tummien kohteiden taso (TCI), jonka ylittävä ruutu jätetään tasoittamatta (ei tummia kohteita).</summary>
+        public const int TummaRaja = 90;
 
         /// <summary>Lut murtoarvolle (lineaarinen väli kahden tavun välillä).</summary>
         static double Lutilla(byte[] lut, double v)

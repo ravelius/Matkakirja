@@ -43,6 +43,8 @@ namespace Matkakirja.Natiivi
         public static string ViimeisinKuva;
         /// <summary>Testissä laatat jäävät talteen (iss-kamera/laatat-<id>).</summary>
         public static bool SailytaLaatat;
+        /// <summary>Ruutujen usvatasoitus (Uudelleenprojisointi.TasaaUsva); A/B `astro kyyti kuvaa usva 0|1`.</summary>
+        public static bool UsvaTasoitus = true;
         /// <summary>Lisäodotus (s) latauksen tasaannuttua ennen kaappausta (laitekoe 5: 400 mm:n z14-kaistat; ComputeLoadProgress
         /// ei ilmeisesti laske rasterilatauksia). Testikomento `astro kyyti kuvaa odotus <s>`.</summary>
         public static float LisaOdotus = 8f;
@@ -598,6 +600,15 @@ namespace Matkakirja.Natiivi
                 // Maailman indeksissä lut on ruuduittain: avomeren täyttö ensimmäisen näkymän ruudun alueen lutilla.
                 var meriLut = ty.Data.Lut ?? ruudut.Select(x => x.Lut).FirstOrDefault(l => l != null);
                 if (meriLut != null) for (int c = 0; c < 3; c++) meri[c] = meriLut[meri[c]];
+                // Usvatasoitus ruuduittain (simu d753d794: Amazonian eri päivien ruudut sameina lohkoina), taustasäikeessä (purku).
+                if (UsvaTasoitus)
+                {
+                    var ut = Task.Run(() => Uudelleenprojisointi.TasaaUsva(ty.Data));
+                    while (!ut.IsCompleted) yield return null;
+                    if (ut.IsFaulted) Loki("usvatasoitus: " + ut.Exception?.GetBaseException().Message);
+                    else Loki($"usvatasoitus {ut.Result.Count} ruutua: " + string.Join(", ", ut.Result.Where(u => u.r + u.g + u.b > 0.5)
+                        .Select(u => $"{u.tunnus} −({u.r:0},{u.g:0},{u.b:0})")));
+                }
                 // Tasot tarkimmasta juureen (KuvanTyosto.PiirraKaikki): lehti datasta, isä lapsistaan.
                 var tyot = Task.Run(() => ty.PiirraKaikki((l, rgba) =>
                 {
