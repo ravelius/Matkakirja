@@ -588,8 +588,10 @@ namespace Matkakirja.Natiivi
                 var (az, korkeus) = AurinkoPisteessa(utc, naytteet.Average(n => n.Lat), naytteet.Average(n => n.Lon));
                 ty.Pilvet = new Pilvikentta { MaaOsuus = ty.MaaOsuus, AurinkoAz = az, AurinkoKorkeus = korkeus }.Kalibroi();
                 // Datattomat kiilat maalla läpinäkyviksi (BMNG alla), merellä merenväri (simu d753d794: sininen kiila Saharassa).
+                // Maa: S2-ruutujen SCL-maamaski (rataväli ruudun neliön sisällä on SCL:ssä nodata = maa; avomerellä ei ruutuja)
+                // tai pelin maarajat (simu 0cc5ad75: maarajoissa vain pelin 135 maata, Algeria puuttuu → kiila jäi).
                 var maaOsuma = MaaOsuma();
-                if (maaOsuma != null) ty.Maalla = (la, lo) => maaOsuma.HaeMaa(la, lo) != null;
+                ty.Maalla = (la, lo) => ty.MaaOsuus(la, lo) > 0.5 || (maaOsuma != null && maaOsuma.HaeMaa(la, lo) != null);
                 ty.MaanSini = MaanSini; ty.Kamera = kk.Paikka; ty.AurinkoEcef = (aEcef.x, aEcef.y, aEcef.z);   // pilvipeitto kasvaa etäisyyden mukaan (Cupola-mallikuva)
                 var lista = ty.Laatat.ToList(); int kirjoitettu = 0;
                 int ytimia = Math.Max(1, SystemInfo.processorCount - 1);   // vain pääsäikeessä (laitekoe 1.10.: säikeessä poikkeus)
