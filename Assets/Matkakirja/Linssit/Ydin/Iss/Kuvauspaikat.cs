@@ -27,6 +27,8 @@ namespace Matkakirja.Linssit.Iss
         public static double KuvausKm = 150;
         /// <summary>Kuvan osuus kuvauspaikan koosta lyhyemmällä sivulla (reunaan jää varaa, ettei aineiston ulkopuoli näy).</summary>
         public const double RajausOsuus = 0.9;
+        /// <summary>Vinon kuvan epäsymmetrian varmuuskerroin rajaukseen.</summary>
+        public const double Varmuus = 0.95;
         /// <summary>Ämpärin juuri: kuva-kentän R2-polku lisätään tähän.</summary>
         public const string Juuri = "https://media.matkakirja.app/";
 
@@ -85,10 +87,16 @@ namespace Matkakirja.Linssit.Iss
         public static (Kuvakulma Asento, double Pystykentta) Rajaus(in IssHetki iss, Kuvauspaikka p, double leveysPerKorkeus)
         {
             var a = IssKuvakulma.KohteenKulma(iss, p.Lat, p.Lon);
-            double puoli = RajausOsuus * p.KokoM / 2, rho = Math.Max(1, a.EtaisyysM), cz = Math.Cos(a.Kallistus * Math.PI / 180);
-            // Pystysuunta: maan puolikorkeus ≈ ρ tan(v/2) / cos ζ ≤ puoli; vaaka: ρ tan(v/2) · suhde ≤ puoli.
-            double tPysty = puoli * Math.Max(0.05, cz) / rho, tVaaka = puoli / rho / Math.Max(0.1, leveysPerKorkeus);
-            return (a, 2 * Math.Atan(Math.Min(tPysty, tVaaka)) * 180 / Math.PI);
+            double puoli = RajausOsuus * p.KokoM / 2, rho = Math.Max(1, a.EtaisyysM), cz = Math.Max(0.05, Math.Cos(a.Kallistus * Math.PI / 180));
+            // Kuvan alue maassa on suorakulmio (puolileveys ρ t · suhde, puolipituus ρ t / cos ζ, t = tan(v/2)), joka on kiertynyt
+            // kameran suuntiman verran pohjoiseen nähden; sen akselien suuntainen ympäröivä laatikko pysyy kuvauspaikan neliön sisällä
+            // (Päätoimittaja 4.10.: Helsingin kuvan yläkulmissa näkyi kierretyn rajauksen vino kiila lähdekuvan ulkopuolelta).
+            // Vinon kuvan kaukoreuna venyy hieman enemmän kuin lähireuna; Varmuus kattaa sen (kenttä ~2°).
+            double s = Math.Abs(Math.Sin(a.Suuntima * Math.PI / 180)), c = Math.Abs(Math.Cos(a.Suuntima * Math.PI / 180));
+            double k = Math.Max(0.1, leveysPerKorkeus);
+            double x = k * c + s / cz, y = k * s + c / cz;
+            double t = Varmuus * puoli / (rho * Math.Max(x, y));
+            return (a, 2 * Math.Atan(t) * 180 / Math.PI);
         }
 
         static string Teksti(Dictionary<string, object> o, string k) => Matkakirja.Peli.MiniJson.Kentta(o, k) as string;

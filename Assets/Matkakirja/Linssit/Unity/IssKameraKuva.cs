@@ -162,9 +162,10 @@ namespace Matkakirja.Natiivi
             var m = muoto.Split(':');
             int mw = m.Length == 2 && int.TryParse(m[0], out var a) ? a : 4, mh = m.Length == 2 && int.TryParse(m[1], out var b) ? b : 5;
             var paikka = kerros.Linssi?.Kuvauspaikka();
+            // Ilmaisen kuvan laskuri molemmille poluille (Päätoimittaja 4.10.: muuten COG antaa rajattomasti ilmaisia kuvia).
+            if (KuviaJaljella <= 0) { Tila = "ei kuvia"; Loki($"kuvaa: ei kuvia jäljellä (otettu {Otettu})"); return false; }
             if (paikka != null)
             {
-                if (KuviaJaljella <= 0) { Tila = "ei kuvia"; Loki($"kuvaa: {paikka.Tunniste}, ei kuvia jäljellä (otettu {Otettu})"); return false; }
                 Aanet.Tehoste(OhjaamonAanet.Laukaisin);   // laukaisimen aito naksahdus (Sisältökirjuri)
                 StartCoroutine(AjoPaikka(kamera, kerros.Linssi, paikka, leveys, leveys * mh / mw, muoto));
                 return true;
@@ -505,6 +506,7 @@ namespace Matkakirja.Natiivi
                 }
                 ViimeisinKuva = Path.Combine(albumi, id + ".jpg");
                 File.WriteAllBytes(ViimeisinKuva, jpg);
+                PlayerPrefs.SetInt(OtettuAvain, Otettu + 1); PlayerPrefs.Save();   // ilmainen kuva käytetty myös COG-polulla
                 loppuTila = "valmis";
                 File.WriteAllText(Path.ChangeExtension(ViimeisinKuva, ".json"), Tiedot(id, utc, kk, naytteet, muoto, az, korkeus, ruudut, ehdokkaat, saatu));
                 Edistyminen = 1;

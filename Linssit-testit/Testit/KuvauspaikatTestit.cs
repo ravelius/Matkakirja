@@ -33,6 +33,49 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Kuvauspaikat.Lahin(p, double.NaN, 0) == null, "ei katsetta");
         }
 
+        [Testi] static void KierrettyRajausPysyyLahdekuvanSisalla()
+        {
+            // Kuvan neljä kulmaa projisoidaan maahan (kameran säde ISS:ltä, pallomaa) ja tarkistetaan, että ne ovat bboxin sisällä.
+            var h = Kuvauspaikat.Jasenna(Helsinki)[0];
+            foreach (var (lat, lon) in new[] { (58.0, 30.0), (62.5, 20.0), (57.5, 22.0), (60.17, 28.5) })
+            {
+                var iss = new IssHetki(new LatLon(lat, lon), 420_000, 60);
+                var (a, v) = Kuvauspaikat.Rajaus(iss, h, 4.0 / 5);
+                foreach (var (sx, sy) in new[] { (-1.0, -1.0), (1.0, -1.0), (-1.0, 1.0), (1.0, 1.0) })
+                {
+                    var (klat, klon) = Kulma(a, v, 4.0 / 5, sx, sy);
+                    Oleta.Tosi(klat >= h.S && klat <= h.N && klon >= h.W && klon <= h.E,
+                        $"ISS ({lat}, {lon}) suuntima {a.Suuntima:0}°: kulma ({sx}, {sy}) → ({klat:0.0000}, {klon:0.0000}) bboxin ulkopuolella");
+                }
+            }
+        }
+
+        /// <summary>Kuvan kulma (sx, sy ∈ ±1) maahan: kameran ortonormaali kanta katsepisteestä ja säteen leikkaus pallon kanssa.</summary>
+        static (double lat, double lon) Kulma(Matkakirja.Linssit.Kuvakulma a, double pystyAst, double suhde, double sx, double sy)
+        {
+            const double R = 6_371_000, D = Math.PI / 180;
+            double[] V(double la, double lo) => new[] { Math.Cos(la * D) * Math.Cos(lo * D), Math.Cos(la * D) * Math.Sin(lo * D), Math.Sin(la * D) };
+            var p = V(a.Lat, a.Lon); for (int i = 0; i < 3; i++) p[i] *= R;
+            var up = V(a.Lat, a.Lon);
+            var ita = new[] { -Math.Sin(a.Lon * D), Math.Cos(a.Lon * D), 0 };
+            var poh = new[] { -Math.Sin(a.Lat * D) * Math.Cos(a.Lon * D), -Math.Sin(a.Lat * D) * Math.Sin(a.Lon * D), Math.Cos(a.Lat * D) };
+            double b = a.Suuntima * D, z = a.Kallistus * D;
+            var f = new double[3]; for (int i = 0; i < 3; i++) f[i] = Math.Cos(b) * poh[i] + Math.Sin(b) * ita[i];
+            // silmä: katsepisteestä taaksepäin (vastakkaiseen suuntaan kuin f) ja ylös; katse = -(sin ζ · (−f) + cos ζ · up)
+            var e = new double[3]; for (int i = 0; i < 3; i++) e[i] = p[i] + a.EtaisyysM * (-Math.Sin(z) * f[i] + Math.Cos(z) * up[i]);
+            var d = new double[3]; for (int i = 0; i < 3; i++) d[i] = (p[i] - e[i]) / a.EtaisyysM;
+            var oik = new[] { d[1] * up[2] - d[2] * up[1], d[2] * up[0] - d[0] * up[2], d[0] * up[1] - d[1] * up[0] };
+            double on = Math.Sqrt(oik[0] * oik[0] + oik[1] * oik[1] + oik[2] * oik[2]); for (int i = 0; i < 3; i++) oik[i] /= on;
+            var yl = new[] { oik[1] * d[2] - oik[2] * d[1], oik[2] * d[0] - oik[0] * d[2], oik[0] * d[1] - oik[1] * d[0] };
+            double t = Math.Tan(pystyAst / 2 * D);
+            var r = new double[3]; for (int i = 0; i < 3; i++) r[i] = d[i] + sx * t * suhde * oik[i] + sy * t * yl[i];
+            double rn = Math.Sqrt(r[0] * r[0] + r[1] * r[1] + r[2] * r[2]); for (int i = 0; i < 3; i++) r[i] /= rn;
+            double bb = 2 * (e[0] * r[0] + e[1] * r[1] + e[2] * r[2]), cc = e[0] * e[0] + e[1] * e[1] + e[2] * e[2] - R * R;
+            double s = (-bb - Math.Sqrt(bb * bb - 4 * cc)) / 2;
+            var q = new double[3]; for (int i = 0; i < 3; i++) q[i] = e[i] + s * r[i];
+            return (Math.Asin(q[2] / R) / D, Math.Atan2(q[1], q[0]) / D);
+        }
+
         [Testi] static void RajausPysyyPaikanSisalla()
         {
             var h = Kuvauspaikat.Jasenna(Helsinki)[0];
@@ -43,9 +86,11 @@ namespace Matkakirja.Linssit.Testit
             double puoliPysty = a.EtaisyysM * Math.Tan(v / 2 * Math.PI / 180) / Math.Cos(a.Kallistus * Math.PI / 180);
             double puoliVaaka = a.EtaisyysM * Math.Tan(v / 2 * Math.PI / 180) * 4 / 5;
             Oleta.Tosi(puoliPysty <= 9000.5 && puoliVaaka <= 9000.5, $"pysty {puoliPysty:0} m, vaaka {puoliVaaka:0} m");
-            Oleta.Tosi(Math.Max(puoliPysty, puoliVaaka) > 8900, "ei turhan pieni");
+            Oleta.Tosi(Math.Max(puoliPysty, puoliVaaka) > 0.6 * 9000, $"ei turhan pieni ({Math.Max(puoliPysty, puoliVaaka):0} m)");
             var (_, v2) = Kuvauspaikat.Rajaus(new IssHetki(new LatLon(60.17, 24.94), 420_000, 60), h, 1);
-            Oleta.Tosi(Math.Abs(v2 - 2 * Math.Atan(9000.0 / 420_000) * 180 / Math.PI) < 0.01, $"suoraan alla {v2:0.000}°");
+            // Suoraan alla, suuntima 60°: neliökuvan kierretty laatikko (sin + cos) · ρ t ≤ 0,95 · 9 km.
+            double odotus = 2 * Math.Atan(Kuvauspaikat.Varmuus * 9000.0 / (420_000 * (Math.Sin(Math.PI / 3) + Math.Cos(Math.PI / 3)))) * 180 / Math.PI;
+            Oleta.Tosi(Math.Abs(v2 - odotus) < 0.01, $"suoraan alla {v2:0.000}° (odotus {odotus:0.000}°)");
         }
     }
 }
