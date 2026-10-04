@@ -3351,6 +3351,237 @@ export const KOHTEET = [
       },
     ],
   },
+  // Eurooppa-erä 4 (Sisältökirjuri, Päätoimittajan ohje 4.10.2026: vähintään
+  // 15 kohdetta). Osa kuvista haettu Pelikoodarin uudella Gateway-haulla
+  // (ISS062-E-142201-tyyppiset tunnukset, #3960) — eol.jsc.nasa.gov, ei
+  // images-api.nasa.gov. Jokainen kuva tarkistettu silmämääräisesti ja
+  // astro-palkki.mjs:llä; kaksi alkuperäistä ehdokasta (Split, Eoliansaaret)
+  // jätettiin pois, koska niissä oli vanha tunnuspalkki eikä rajaukseen
+  // ollut tällä kierroksella aikaa — korvattu Dubrovnikilla ja Varsovalla.
+  {
+    tunnus: 'sardinia-korsika', nimi: 'Sardinia', seutu: 'Italia', lat: 40.09, lon: 9.14,
+    selite: 'Välimeren toiseksi suurin saari; Korsika näkyy vieressä pohjoisessa.',
+    oletus: 'iss067e123679',
+    kuvat: [
+      {
+        id: 'iss067e123679',
+        teksti: 'Kesäkuussa 2022 otetussa kuvassa näkyy Italian Sardinia-saari '
+          + 'ja sen pohjoispuolella Ranskan Korsika (oikealla ylhäällä). '
+          + 'Avaruusasema kiersi tuolloin noin 420 kilometrin korkeudessa '
+          + 'Tyrrhenanmeren yllä, Napolin edustalla.',
+      },
+    ],
+  },
+  {
+    tunnus: 'peloponnesos', nimi: 'Peloponnesos', seutu: 'Kreikka', lat: 37.5, lon: 22.3,
+    selite: 'Kreikan suuri niemimaa, jonka Korinthin kannas erottaa mantereesta.',
+    oletus: 'iss039e003505',
+    kuvat: [
+      {
+        id: 'iss039e003505',
+        teksti: 'Maaliskuussa 2014 otetussa kuvassa näkyy Peloponnesos, '
+          + 'antiikin Spartan koti, kapean Korinthin kannaksen erottamana '
+          + 'muusta Kreikasta. Kannaksen poikki kaivettiin laivakanava '
+          + 'vuonna 1893 yhdistämään sen länsi- ja itäpuoliset lahdet. '
+          + 'Kuvassa erottuvat myös lumihuippuiset vuoret, vihreät '
+          + 'viljelylaaksot ja tuulen meren pintaan piirtämät juovat.',
+      },
+    ],
+  },
+  {
+    tunnus: 'feneos-palo', nimi: 'Feneoksen metsäpalo', seutu: 'Kreikka', lat: 37.97, lon: 22.40,
+    selite: 'Metsäpalon savupilvi leviää Korinthinlahden eteläpuolella.',
+    oletus: 'iss073e0421317',
+    kuvat: [
+      {
+        id: 'iss073e0421317',
+        teksti: 'Heinäkuussa 2025 otetussa kuvassa metsäpalo roihuaa '
+          + 'Feneoksen kylän lähellä, Korinthinlahden eteläpuolella '
+          + 'Kreikassa. Kuva otettiin avaruusasemalta sen kiertäessä noin '
+          + '420 kilometrin korkeudessa Etelä-Euroopan yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'mallorca', nimi: 'Mallorca', seutu: 'Baleaarit, Espanja', lat: 39.57, lon: 2.65,
+    selite: 'Baleaarien suurin saari, suosittu matkailukohde Espanjan edustalla.',
+    oletus: 'iss030e030290',
+    kuvat: [
+      {
+        id: 'iss030e030290',
+        teksti: 'Joulukuussa 2011 otetussa kuvassa näkyy Mallorca, '
+          + 'Baleaarien saariryhmän suurin saari, noin 3 600 neliökilometrin '
+          + 'kokoinen. Saaren pääkaupunki Palma sijaitsee lounaisrannikolla '
+          + 'Palman lahden pohjukassa. Mallorcan eteläpuolella sijaitsee '
+          + 'pieni Cabreran saari, jonka ympärillä on kansallispuisto. '
+          + 'Saaren keskiosa on tasaista viljelymaata, kun taas vuoristo '
+          + 'kohoaa luoteisrannikolla ja saaren itäosassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'mont-saint-michel-lahti', nimi: 'Mont-Saint-Michelin lahti', seutu: 'Ranska', lat: 48.64, lon: -1.51,
+    selite: 'Kahden historiallisen maakunnan raja Englannin kanaalin rannalla.',
+    oletus: 'iss068e053846',
+    kuvat: [
+      {
+        id: 'iss068e053846',
+        teksti: 'Helmikuussa 2023 otetussa kuvassa Bretagnen ja Normandian '
+          + 'rannikkoalueet Luoteis-Ranskassa kohtaavat Englannin kanaalin '
+          + 'rannalla; Couesnon-joki on maakuntien raja. Hiekkasärkillä '
+          + 'erottuu kaksi tummaa pistettä: eteläisempi on Mont-Saint-'
+          + 'Michelin luostarisaari ja pohjoisempi Tombelaine. Avaruusasema '
+          + 'kiersi tuolloin noin 425 kilometrin korkeudessa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'le-havre', nimi: 'Le Havre', seutu: 'Ranska', lat: 49.49, lon: 0.11,
+    selite: 'Ranskan suurin konttisatama Seine-joen suulla.',
+    oletus: 'iss037e021618',
+    kuvat: [
+      {
+        id: 'iss037e021618',
+        teksti: 'Lokakuussa 2013 otetussa kuvassa näkyy Le Havren satama '
+          + 'Seine-joen ja Englannin kanaalin yhtymäkohdassa Pohjois-'
+          + 'Ranskassa. Le Havre on Ranskan suurin konttisatama, ja sen '
+          + 'laitureilla näkyy suuria rahtilaivoja. Kaupunki rakennettiin '
+          + 'suurelta osin uudelleen toisen maailmansodan jälkeen '
+          + 'arkkitehti Auguste Perret’n suunnitelman mukaan betonista, '
+          + 'mikä teki siitä Unescon maailmanperintökohteen.',
+      },
+    ],
+  },
+  {
+    tunnus: 'malta-sisilia', nimi: 'Malta', seutu: 'Malta', lat: 35.94, lon: 14.38,
+    selite: 'Pieni saarivaltio Sisilian eteläpuolella, näkyy kuvassa kaukana Sisilian takana.',
+    oletus: 'STS100-713-064',
+    kuvat: [
+      {
+        id: 'STS100-713-064',
+        teksti: 'Huhtikuussa 2001 otetussa kuvassa näkyy kolmionmuotoinen '
+          + 'Sisilia, jonka koilliskärjessä kohoaa lumihuippuinen Etna. '
+          + 'Kaukana taustalla, Sisilian eteläpuolella, erottuvat Maltan '
+          + 'pienet saaret.',
+      },
+    ],
+  },
+  {
+    tunnus: 'ambrakia-ioonianmeri', nimi: 'Ambrakian lahti', seutu: 'Kreikka', lat: 38.85, lon: 20.75,
+    selite: 'Saaria Kreikan länsirannikolla Joonianmeren tuntumassa.',
+    oletus: 'iss070e035893',
+    kuvat: [
+      {
+        id: 'iss070e035893',
+        teksti: 'Joulukuussa 2023 otetussa kuvassa näkyy saaria Kreikan '
+          + 'länsirannikolla; Ambrakian lahti näkyy kuvan vasemmassa '
+          + 'yläkulmassa. Lähempänä erottuu kapea Lefkas, joka on yhdistetty '
+          + 'mantereeseen kannaksella, ja kauempana suurempi, lumihuippuisen '
+          + 'Ainos-vuoren kohottava Kefalonia. Avaruusasema kiersi tuolloin '
+          + 'noin 420 kilometrin korkeudessa Joonianmeren yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'odessa', nimi: 'Odessa', seutu: 'Ukraina', lat: 46.477, lon: 30.733,
+    selite: 'Mustanmeren satamakaupunki lahden kaartuvalla rannalla.',
+    oletus: 'ISS062-E-142201',
+    kuvat: [
+      {
+        id: 'ISS062-E-142201',
+        teksti: 'Huhtikuussa 2020 otetussa päiväkuvassa näkyy Odessa, '
+          + 'Mustanmeren rannalla sijaitseva ukrainalainen satamakaupunki. '
+          + 'Kuvassa erottuvat kaupungin satama-alue, rannan kaarre sekä '
+          + 'sisämaan järvet ja viljelymaa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'praha', nimi: 'Praha', seutu: 'Tšekki', lat: 50.087, lon: 14.421,
+    selite: 'Tšekin pääkaupunki Vltava-joen mutkassa.',
+    oletus: 'ISS052-E-78028',
+    kuvat: [
+      {
+        id: 'ISS052-E-78028',
+        teksti: 'Elokuussa 2017 otetussa päiväkuvassa näkyy Praha, Tšekin '
+          + 'pääkaupunki, Vltava-joen jyrkän mutkan ympärillä. Kaupungin '
+          + 'tiivis keskusta erottuu vaaleana laikkuna joen molemmin '
+          + 'puolin, ja ympäröivä maaseutu näkyy peltoina ja '
+          + 'metsälaikkuina.',
+      },
+    ],
+  },
+  {
+    tunnus: 'marseille', nimi: 'Marseille', seutu: 'Ranska', lat: 43.297, lon: 5.381,
+    selite: 'Ranskan suurin Välimeren satamakaupunki; vieressä Calanques-kansallispuiston jyrkät kalkkikivirannikot.',
+    oletus: 'ISS050-E-51867',
+    kuvat: [
+      {
+        id: 'ISS050-E-51867',
+        teksti: 'Helmikuussa 2017 otetussa päiväkuvassa näkyy Marseille, '
+          + 'Ranskan suurin Välimeren satamakaupunki. Kaupungin itäpuolella '
+          + 'kohoavat kalkkikivivuoret, jotka jatkuvat kaakkoon Calanques-'
+          + 'kansallispuiston jyrkkinä rantajyrkänteinä. Satama-alue näkyy '
+          + 'kuvan vasemmassa alakulmassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sarajevo', nimi: 'Sarajevo', seutu: 'Bosnia ja Hertsegovina', lat: 43.867, lon: 18.417,
+    selite: 'Bosnia ja Hertsegovinan pääkaupunki kapeassa laaksossa Dinaaristen Alppien keskellä.',
+    oletus: 'ISS036-E-3068',
+    kuvat: [
+      {
+        id: 'ISS036-E-3068',
+        teksti: 'Toukokuussa 2013 otetussa päiväkuvassa näkyy Sarajevo, '
+          + 'kapeaan vuoristolaaksoon rakentunut Bosnia ja Hertsegovinan '
+          + 'pääkaupunki. Kaupunkia ympäröivät joka puolelta Dinaaristen '
+          + 'Alppien metsäiset vuorenrinteet ja laaksot.',
+      },
+    ],
+  },
+  {
+    tunnus: 'bryssel', nimi: 'Bryssel', seutu: 'Belgia', lat: 50.847, lon: 4.353,
+    selite: 'Belgian pääkaupunki ja EU:n kotikaupunki yöllä avaruudesta kuvattuna.',
+    oletus: 'ISS065-E-393478',
+    kuvat: [
+      {
+        id: 'ISS065-E-393478',
+        teksti: 'Syyskuussa 2021 otetussa yökuvassa näkyy Bryssel, Belgian '
+          + 'pääkaupunki, kirkkaana valotäplänä Senne-joen varrella. Kuvan '
+          + 'oikeassa yläkulmassa erottuu kirkkaasti valaistu Zaventemin '
+          + 'lentoasema kiitoteineen ja asematasoineen.',
+      },
+    ],
+  },
+  {
+    tunnus: 'dubrovnik', nimi: 'Dubrovnik', seutu: 'Kroatia', lat: 42.64, lon: 18.108,
+    selite: 'Kroatian Dalmatian-rannikon kaupunki ja edustan saaret.',
+    oletus: 'ISS052-E-84306',
+    kuvat: [
+      {
+        id: 'ISS052-E-84306',
+        teksti: 'Syyskuussa 2017 otetussa päiväkuvassa näkyy Dubrovnikin '
+          + 'seutu Kroatian Dalmatian-rannikolla. Kaupungin edustalla '
+          + 'erottuu Lokrumin saari, ja rannikon tuntumassa näkyy muitakin '
+          + 'pieniä saaria pirstaleisen Adrianmeren rannikon tapaan.',
+      },
+    ],
+  },
+  {
+    tunnus: 'varsova', nimi: 'Varsova', seutu: 'Puola', lat: 52.23, lon: 21.011,
+    selite: 'Puolan pääkaupunki Veiksel-joen (Wisła) molemmin puolin.',
+    oletus: 'ISS056-E-153400',
+    kuvat: [
+      {
+        id: 'ISS056-E-153400',
+        teksti: 'Elokuussa 2018 otetussa päiväkuvassa näkyy Varsova, Puolan '
+          + 'pääkaupunki, Veiksel-joen molemmin puolin. Joki halkoo '
+          + 'kaupungin kahtia, ja kuvassa erottuu myös kaupungin '
+          + 'lentokenttä.',
+      },
+    ],
+  },
 ];
 
 /**
