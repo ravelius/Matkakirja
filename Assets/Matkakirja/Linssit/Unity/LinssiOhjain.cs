@@ -1219,10 +1219,24 @@ namespace Matkakirja.Natiivi
             if (alku) m.Begin(); else m.End();
         }
 
+        // Linnan kuoren esilataus (Päätoimittaja 4.10.): kun Olavinlinnan linssi on saatavilla, kevyt kuori levyvälimuistiin
+        // taustalla (DioraamaEsilataus); aikaisintaan 20 s käynnistyksestä, ettei se kilpaile pelin alun latausten kanssa.
+        float esilatausKello = 20f;
+        bool esilatausAloitettu;
+
         void Update()
         {
             using (KytkeMerkki.Auto()) kerrokset.Kytke();
             rekisteri.Paivita();
+            if (!esilatausAloitettu && (esilatausKello -= Time.unscaledDeltaTime) <= 0f)
+            {
+                esilatausKello = 10f;
+                if (rekisteri.Saatavilla(Matkakirja.Linssit.Dioraama.PoikkileikkausLinssi.PoikkiTiedot.Id))
+                {
+                    esilatausAloitettu = true;
+                    StartCoroutine(DioraamaEsilataus.Kuori(t => Kirjaa(t)));
+                }
+            }
             // Suljettujen linssien jälkiajot (radion ulosliuku): true = jatkuu.
             if (jalkiajot.Count > 0) jalkiajot.RemoveAll(j => !j.Ajo());
 #if !MATKAKIRJA_APPSTORE
