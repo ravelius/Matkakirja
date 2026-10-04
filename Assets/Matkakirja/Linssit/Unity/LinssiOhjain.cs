@@ -1722,6 +1722,7 @@ namespace Matkakirja.Natiivi
                         { Matkakirja.Linssit.Astronautti.AstronauttiLinssi.SuhinaUrl = osat[3] == "pois" ? null : osat[3]; Kirjaa("astro kyyti suhina: " + osat[3]); }
                         else if (a == "siirra" && osat.Length > 4 && LukuOk(osat[3], out double sLat) && LukuOk(osat[4], out double sLon))
                             Kirjaa($"astro kyyti siirra: {(l.SiirraAlus(sLat, sLon) ? "alus siirtyy" : "ei Cupolassa")} ({sLat:0.000}, {sLon:0.000})");
+                        else if (a == "varakartta" && osat.Length > 3) { AstronauttiKerros.KyydinVarakartta = osat[3] != "0"; Kirjaa("astro kyyti varakartta: " + AstronauttiKerros.KyydinVarakartta); }
                         else if (a == "suora" && osat.Length > 3) { Matkakirja.Linssit.Iss.IssKyyti.SuoraAvaus = osat[3] != "0"; Kirjaa("astro kyyti suora: " + Matkakirja.Linssit.Iss.IssKyyti.SuoraAvaus); }
                         else if (a == "asento")
                         {

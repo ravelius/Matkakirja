@@ -185,7 +185,7 @@ namespace Matkakirja.Natiivi
                 var pallo = KarttaKerrokset.Instanssi?.pallo;
                 bool kehys = IssKyytiNakyma.Kuva2Tila != null || CupolaKerros.Tyyli != CupolaKerros.Tyylit.Kuva;
                 float lataus = pallo != null ? pallo.ComputeLoadProgress() : 100f;
-                bool karkein = KarttaKerrokset.VarakarttaValmis;   // rasterittomat laatat Blue Marblena (ei harmaata)
+                bool karkein = !AstronauttiKerros.KyydinVarakartta || KarttaKerrokset.VarakarttaValmis;
                 if (ms < CupolanMustaMaxMs && (!kehys || !karkein)) return;
                 cupolaHaivytys.Pause();
                 Debug.Log($"MATKAKIRJA linssit: cupolan musta häivyy {ms:0} ms (kehys {(kehys ? "valmis" : "kesken")}, karkein taso {(karkein ? "valmis" : "kesken")}, laatat {lataus:0} %)");
