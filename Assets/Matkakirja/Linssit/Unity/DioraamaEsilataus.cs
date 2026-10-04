@@ -14,6 +14,62 @@ namespace Matkakirja.Natiivi
 {
     public static class DioraamaEsilataus
     {
+        // LAUKAISIN (omistaja 4.10. 14.5x: "linna olisi hyvä esiladata jo siinä vaiheessa kun pelaaja lähestyy sitä"): kun matkan kohde
+        // (PeliOhjain.SaapuminenTiedossa) tai pelaajan kaupunki on Olavinlinnan seudulla (Etelä-Savo ja Savonlinnan lähikaupungit,
+        // LahestymisKm), tai testikomennolla "esilataa linna". Valmistumisen etumatka saapumiseen kirjataan (MatkaPerilla).
+        const double LinnaLat = 61.8644, LinnaLon = 28.9003, LahestymisKm = 140;
+        static PeliOhjain kytketty;
+        static float valmisHetki = -1f;
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+        static void Nollaa() { kytketty = null; aloitettu = false; valmisHetki = -1f; Tila = "ei aloitettu"; }
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        static void Kaynnista() => Esilataaja.AjaTaustalla(Seuraa());
+
+        static IEnumerator Seuraa()
+        {
+            var odotus = new WaitForSecondsRealtime(2f);
+            while (true)
+            {
+                var o = PeliOhjain.Instanssi;
+                if (o != kytketty)
+                {
+                    if (kytketty != null) { kytketty.SaapuminenTiedossa -= KohdeTiedossa; kytketty.MatkaPerilla -= Perilla; }
+                    kytketty = o;
+                    if (o != null) { o.SaapuminenTiedossa += KohdeTiedossa; o.MatkaPerilla += Perilla; }
+                }
+                if (!aloitettu && o != null && Lahella(o.PelaajanKaupunki)) Aloita("pelaaja seudulla: " + o.PelaajanKaupunki);
+                yield return odotus;
+            }
+        }
+
+        static bool Lahella(string kaupunki)
+        {
+            var v = kytketty?.Verkko;
+            if (kaupunki == null || v == null || !v.Kaupungit.TryGetValue(kaupunki, out var k)) return false;
+            double r = Math.PI / 180, dLat = (k.Lat - LinnaLat) * r, dLon = (k.Lon - LinnaLon) * r;
+            double a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) + Math.Cos(LinnaLat * r) * Math.Cos(k.Lat * r) * Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
+            return 2 * 6371 * Math.Asin(Math.Min(1, Math.Sqrt(a))) <= LahestymisKm;
+        }
+
+        static void KohdeTiedossa(string kaupunki) { if (!aloitettu && Lahella(kaupunki)) Aloita("matkan kohde: " + kaupunki); }
+
+        static void Perilla(string kaupunki)
+        {
+            if (!Lahella(kaupunki)) return;
+            Debug.Log("MATKAKIRJA linssit: dioraama: esilataus saavuttaessa " + kaupunki + ": " +
+                      (valmisHetki >= 0 ? $"valmis {Time.realtimeSinceStartup - valmisHetki:F0} s ennen saapumista" : aloitettu ? "kesken (" + Tila + ")" : "ei aloitettu"));
+        }
+
+        /// <summary>Käynnistää esilatauksen taustalla (kerran käynnistystä kohti).</summary>
+        public static void Aloita(string syy)
+        {
+            if (aloitettu) return;
+            Debug.Log("MATKAKIRJA linssit: dioraama: esilataus alkaa (" + syy + ")");
+            Esilataaja.AjaTaustalla(Kuori(t => Debug.Log("MATKAKIRJA linssit: " + t)));
+        }
+
         static bool aloitettu;
         /// <summary>Tila lokiin ja testikomentoon ("ei aloitettu", "käynnissä", "valmis …", "virhe …").</summary>
         public static string Tila { get; private set; } = "ei aloitettu";
@@ -57,6 +113,7 @@ namespace Matkakirja.Natiivi
                 yield return DioraamaLevyvalimuisti.Esilataa(paketti + polkuP, 300, b => onnistui = b);
                 if (onnistui) ok++; else virheita++;
             }
+            valmisHetki = Time.realtimeSinceStartup;
             Loppu(kirjaa, $"valmis: {ok}/{tiedostot.Count} tiedostoa levyllä{(virheita > 0 ? $", {virheita} epäonnistui" : "")}", alku);
         }
 
