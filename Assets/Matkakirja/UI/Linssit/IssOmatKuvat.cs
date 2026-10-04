@@ -119,7 +119,19 @@ namespace Matkakirja.Natiivi
                 else Ponnahdus.Lenna(ikkuna, pino.worldBound, true);
             }
             PaivitaPino();
-            Debug.Log($"MATKAKIRJA linssit: oma kuva auki {nyt + 1}/{kuvat.Count} \"{kuvat[nyt].Kuvateksti}\"");
+            Debug.Log($"MATKAKIRJA linssit: oma kuva auki {nyt + 1}/{kuvat.Count} \"{Teksti(kuvat[nyt])}\"");
+        }
+
+        /// <summary>
+        /// Kuvateksti paikalla ja maalla (Päätoimittaja 4.10.: "Oma kuva · Etna, Italia · 4.10.2026 klo 15.20"), kuvaushetki pelaajan
+        /// aikavyöhykkeellä; maa jää pois, jos se on paikan nimi (esim. UKRAINA) tai puuttuu.
+        /// </summary>
+        public static string Teksti(IssKameraKuva.OmaKuva k)
+        {
+            var d = TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(k.Utc, DateTimeKind.Utc), TimeZoneInfo.Local);
+            string paikka = k.Paikka ?? "", maa = k.Maa ?? "";
+            if (maa.Length > 0 && !string.Equals(maa, paikka, StringComparison.OrdinalIgnoreCase)) paikka = paikka.Length > 0 ? paikka + ", " + maa : maa;
+            return "Oma kuva" + (paikka.Length > 0 ? " · " + paikka : "") + $" · {d.Day}.{d.Month}.{d.Year} klo {d.Hour}.{d.Minute:00}";
         }
 
         void Nayta(int i)
@@ -127,7 +139,7 @@ namespace Matkakirja.Natiivi
             if (kuvat.Count == 0) return;
             nyt = Mathf.Clamp(i, 0, kuvat.Count - 1);
             var k = kuvat[nyt];
-            teksti.text = k.Kuvateksti;
+            teksti.text = Teksti(k);
             edellinen.SetEnabled(nyt < kuvat.Count - 1);
             seuraava.SetEnabled(nyt > 0);
             edellinen.style.visibility = seuraava.style.visibility = kuvat.Count > 1 ? Visibility.Visible : Visibility.Hidden;
@@ -177,7 +189,7 @@ namespace Matkakirja.Natiivi
             if (!Auki || kuvat.Count == 0) return;
             var k = kuvat[nyt];
             Debug.Log("MATKAKIRJA linssit: oma kuva jakoon " + System.IO.Path.GetFileName(k.Polku));
-            Jakaminen.JaaKuva(k.Polku, k.Kuvateksti, jaettu => Debug.Log("MATKAKIRJA linssit: oma kuva jaettu " + jaettu));
+            Jakaminen.JaaKuva(k.Polku, Teksti(k), jaettu => Debug.Log("MATKAKIRJA linssit: oma kuva jaettu " + jaettu));
         }
 
         /// <summary>Sulku (✕, ohinapautus, veto alas): ikkuna lentää pinoon ja pino tulee näkyviin.</summary>
