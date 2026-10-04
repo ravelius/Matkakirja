@@ -15,9 +15,9 @@ namespace Matkakirja.Natiivi
     public static class DioraamaEsilataus
     {
         // LAUKAISIN (omistaja 4.10. 14.5x: "linna olisi hyvä esiladata jo siinä vaiheessa kun pelaaja lähestyy sitä"): kun matkan kohde
-        // (PeliOhjain.SaapuminenTiedossa) tai pelaajan kaupunki on Olavinlinnan seudulla (Etelä-Savo ja Savonlinnan lähikaupungit,
-        // LahestymisKm), tai testikomennolla "esilataa linna". Valmistumisen etumatka saapumiseen kirjataan (MatkaPerilla).
-        const double LinnaLat = 61.8644, LinnaLon = 28.9003, LahestymisKm = 140;
+        // (PeliOhjain.SaapuminenTiedossa) tai pelaajan kaupunki on Olavinlinnan lähestymisalueella (Euroopan pelissä lähimmät: Pietari 228 km,
+        // Tampere 274 km, Helsinki 285 km; LahestymisKm), tai testikomennolla "esilataa linna". Valmistumisen etumatka saapumiseen kirjataan (MatkaPerilla).
+        const double LinnaLat = 61.8644, LinnaLon = 28.9003, LahestymisKm = 300;
         static PeliOhjain kytketty;
         static float valmisHetki = -1f;
 
@@ -106,6 +106,9 @@ namespace Matkakirja.Natiivi
             // Koko laitekohtainen paketti levylle tärkeysjärjestyksessä (kevyt kuori ensin). Omistaja 4.10.: sama kaikilla verkoilla,
             // ei verkkotyypin ehtoja. Ympäristö (maasto, puut, aluskasvit; iPadilla ~29 Mt) latautuu linssin avauksessa.
             var tiedostot = Tiedostot(rakennus);
+            // Ympäristö (Päätoimittaja 4.10.: esiladattu avaus ei odota verkkoa lainkaan) rakennus.jsonin ymparisto-puusta.
+            try { foreach (var yp in YmparistonTiedostot(Matkakirja.Peli.MiniJson.Jasenna(json) as Dictionary<string, object>, rakennus)) if (!tiedostot.Contains(yp)) tiedostot.Add(yp); }
+            catch (Exception e) { kirjaa?.Invoke("dioraama: esilataus: ympäristön luettelo ei onnistunut: " + e.Message); }
             int ok = 0, virheita = 0;
             foreach (var polkuP in tiedostot)
             {
@@ -177,6 +180,39 @@ namespace Matkakirja.Natiivi
                 foreach (var pinta in r.Pinnat.Values) Lisaa(pieni && !string.IsNullOrEmpty(pinta.TekstuuriPuoli) ? pinta.TekstuuriPuoli : pinta.Tekstuuri);
             if (r.Liekit != null)
                 foreach (var liekki in r.Liekit.Values) Lisaa(liekki.Atlas);
+            return l;
+        }
+
+        /// <summary>Ympäristön tiedostot (DioraamaYmparisto.Lataa): maaston glb ja orto vain kevyt + laitteen taso (puhelimessa huipun orto
+        /// normaalina) ja tunnelman mukainen orto; muut (puut, puukortit, horisontti, taivas, syvyys, splat, maastokerrokset, aluskasvit)
+        /// kaikki, koska ne ovat pieniä ja osa valitaan vasta ajossa (taivaan tunnelma).</summary>
+        static List<string> YmparistonTiedostot(Dictionary<string, object> juuriJson, Rakennus r)
+        {
+            var l = new List<string>();
+            if (juuriJson == null || !juuriJson.TryGetValue("ymparisto", out var yo) || !(yo is Dictionary<string, object> y)) return l;
+            string taso = DioraamaUlkokuori.Valittu.ToString().ToLowerInvariant();
+            bool puhelin = SystemInfo.deviceModel != null && SystemInfo.deviceModel.StartsWith("iPhone");
+            string ortoTaso = taso == "huippu" && puhelin ? "normaali" : taso;
+            bool hamara = DioraamaTunnelma.Hamara(r);
+            var hamaraOrto = y.TryGetValue("hamara", out var ho) && ho is Dictionary<string, object> hd && hd.TryGetValue("orto", out var hoo) ? hoo as Dictionary<string, object> : null;
+            void Keraa(object o, string polku)
+            {
+                if (o is Dictionary<string, object> d) { foreach (var kv in d) Keraa(kv.Value, polku + "." + kv.Key); return; }
+                if (o is List<object> lista) { foreach (var v in lista) Keraa(v, polku + "[]"); return; }
+                if (!(o is string p) || p.IndexOf('/') < 0 || p.LastIndexOf('.') < p.LastIndexOf('/')) return;
+                if (polku == ".huippu" || polku == ".normaali" || polku == ".kevyt") { if (polku == ".kevyt" || polku == "." + taso) l.Add(p); return; }
+                if (polku.StartsWith(".orto.", StringComparison.Ordinal) || polku.StartsWith(".hamara.orto.", StringComparison.Ordinal))
+                {
+                    string q = polku.Substring(polku.LastIndexOf('.') + 1);
+                    if (q != "kevyt" && q != ortoTaso) return;
+                    bool hamaraPolku = polku.StartsWith(".hamara.", StringComparison.Ordinal);
+                    bool hamaraLoytyy = hamaraOrto != null && hamaraOrto.ContainsKey(q);
+                    if (hamaraPolku == (hamara && hamaraLoytyy)) l.Add(p);
+                    return;
+                }
+                l.Add(p);
+            }
+            Keraa(y, "");
             return l;
         }
 
