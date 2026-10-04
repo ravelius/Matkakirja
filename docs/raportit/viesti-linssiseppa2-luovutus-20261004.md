@@ -27,3 +27,9 @@ Omistajan TF 133 -palaute (3.10. 23.4x): iskut eivät ihan osu, savu terävinä 
 - Kehityskonsolin punainen loki (tallenne d) tuli tahdistusmerkin AudioSourcesta kuuntelijan oliossa; korjattu lapsiolioon (c093efe5).
 - Marcuksen ääniraidallinen tallenne: ohjeet lähetetty Linssiseppä 1:lle (ajattelija-tallenne.sh LUPA=<oma>, tallenne-yhdista.py,
   spektrivuo.py). Rooli levossa; seuraavaksi TF 135 -palaute.
+
+## Päivitys 4.10. klo 10.0x
+- Kellovertailu A (oma 659c903c) vs. B (LS1 yksi-kello): reaaliaikainen merkki epäluotettava; suositus A, Marcus vain data 92d46875
+  (LS1 lähetti niin). Lokit lokit/linssiseppa2-kello-{a,b}-20261004-*/tahti.txt.
+- Juna 136: linssiseppa2/linssi-hiljentaa 2f4d4adb merge-pyynnössä (omistaja TF 135: linssi katkaisee kaiken äänen). Todiste
+  lokit/linssiseppa2-linssi-hiljennys-20261004 (tallenne-aanella.mp4, mittaus.txt).
