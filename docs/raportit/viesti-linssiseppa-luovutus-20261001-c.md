@@ -3,6 +3,16 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 4.10. KLO 17.1x (AURINGON KIILTO JUNAAN 139 — ODOTTAA KÄÄNNÖS-/SIMUVUOROA)
+- Päätoimittajan erä: hopeanvalkoinen, rakeinen, venyvä, VAIN vedessä; juovat liian vahvat. Proto linssiseppa/glint-2 = BUILD 137
+  80b7dcf0 + glint-commitit (cherry-pick) + 3de304db: sävykäyrä vesimaskista riippumatta ja terävä maski 0,42…0,58 sen jälkeen (vuoto maalle
+  oli sävykäyrän nostama pehmeä rantareuna), paikallinen σ² 0,75, värähtely 0,9·√(0,25σ²), rakeisuus 1,5/0,75 km (≥ 5 px:n häivytys).
+- Offline-malli tyokalut/linssiseppa-ajot/kiilto_malli.py (sama hajautus/kohina/BRDF/käyrä): maalla 0 (ennen max 0,46 matalalla auringolla).
+- Ajo: ketju-kiilto-2.sh (käännös → ajo-kiilto-cupola-2.sh: ennen/jälkeen/pois-kuvat + 2 videota → maavuoto.py). Julkaisija: käännös
+  TF 137:n ja junan 138 jälkeen, simu D0D2CD1E Natiivisepän itsetarkistuksen jälkeen (~17.30–18); simuportti $S/sim-nyt-ki käsin NYT:llä.
+- SEURAAVAKSI: tarkista kuvat suurennoksina (ydin, rakeet, juovat heikot, ei maalle) → stilli + video + maavuoto Päätoimittajalle →
+  merge-pyyntö Natiivisepälle junaan 139. LinssiOhjain: vain `astro kyyti kiiltovanha` -testirivi (Yokuorin A/B, ei Cupola-koodia).
+
 ## TILA 4.10. (KELLOPÄÄTÖS: A 659c903c JUNAAN; MARCUS 92d46875 MERGE-PYYNNÖSSÄ)
 - Päätoimittaja: junaan LS2:n kello (659c903c); yksi-kello 7ab396b3 EI junaan (haara säilyy, piirtää leikkauksen vasta raa'an dsp-askeleen
   jälkeen). Marcus linssiseppa/marcus-v15b 92d46875 merge-pyynnössä Natiivisepälle (yhdistyy 9c071068:aan). Jatkohuomiot: kytkimen
