@@ -175,6 +175,8 @@ namespace Matkakirja.Linssit.IssKamera
                         double w = d.VesiTasoitus;
                         cr += (d.Meri[0] - cr) * w; cg += (d.Meri[1] - cg) * w; cb += (d.Meri[2] - cb) * w;
                     }
+                    // Maailman indeksi: ruudun alueen oma lut ennen saumasekoitusta (Laatta ei silloin sovella KuvaData.Lutia).
+                    if (ru.Lut != null) { cr = Lutilla(ru.Lut, cr); cg = Lutilla(ru.Lut, cg); cb = Lutilla(ru.Lut, cb); }
                     // Saumapehmennys: paino kasvaa ruudun UTM-reunasta sisään 4 km:n matkalla; ruudun keskellä ensimmäinen voittaa.
                     double koko = o.Tasot[0].Leveys * o.PikseliM;
                     double reuna = Math.Min(Math.Min(e - o.Ita0, o.Ita0 + koko - e), Math.Min(o.Pohjoinen0 - n, n - (o.Pohjoinen0 - koko)));
@@ -188,6 +190,13 @@ namespace Matkakirja.Linssit.IssKamera
             if (summa <= 0) return false;
             r = (byte)Math.Min(255, Math.Round(sr / summa)); g = (byte)Math.Min(255, Math.Round(sg / summa)); b = (byte)Math.Min(255, Math.Round(sb / summa));
             return true;
+        }
+
+        /// <summary>Lut murtoarvolle (lineaarinen väli kahden tavun välillä).</summary>
+        static double Lutilla(byte[] lut, double v)
+        {
+            v = Math.Max(0, Math.Min(255, v)); int i = (int)v; double a = v - i;
+            return i >= 255 ? lut[255] : lut[i] * (1 - a) + lut[i + 1] * a;
         }
 
         static bool Musta((byte r, byte g, byte b) p) => p.r == 0 && p.g == 0 && p.b == 0;

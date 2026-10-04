@@ -18,12 +18,16 @@ namespace Matkakirja.Linssit.IssKamera
         public string Tunnus;
         public double W, S, E, N;
         public double[] Vesisiirto;
+        /// <summary>Alueen tci_lut (maailman indeksi: jokaisella alueella oma sävytys); null = yhteinen KuvaData.Lut.</summary>
+        public byte[] Lut;
+        /// <summary>Alue, jonka indeksistä ruutu tuli (maailma.json; null = yksi indeksi).</summary>
+        public string Alue;
         public readonly List<S2Valinta> Valinnat = new List<S2Valinta>();
 
         /// <summary>Valinta k (0 = paras) kuvasuunnitelman ruuduksi.</summary>
         public S2Ruutu Ruutu(int k = 0) => k < Valinnat.Count
             ? new S2Ruutu { Tunnus = k == 0 ? Tunnus : Tunnus + "#" + k, Url = Valinnat[k].Tci, Scl = Valinnat[k].Scl, Valinta = k,
-                W = W, S = S, E = E, N = N, Nodata = Valinnat[k].Nodata } : null;
+                W = W, S = S, E = E, N = N, Nodata = Valinnat[k].Nodata, Lut = Lut } : null;
     }
 
     public sealed class S2Indeksi
@@ -60,11 +64,104 @@ namespace Matkakirja.Linssit.IssKamera
             return r;
         }
 
+        /// <summary>
+        /// KOKO MAAILMA (omistaja 4.10.2026 klo 14.0x, loki #3936; Karttaseppä: alueindeksit samaa muotoa, maailma.json): alueiden
+        /// indeksit yhdeksi etusijajärjestyksessä. Sama MGRS useammassa alueessa → ensimmäinen (etusijaltaan korkein) voittaa. Jokainen
+        /// ruutu saa oman alueensa lutin (Uudelleenprojisointi soveltaa ruuduittain ennen saumasekoitusta), joten yhdistetyn Lut = null.
+        /// </summary>
+        public static S2Indeksi Yhdista(IEnumerable<(string alue, S2Indeksi indeksi)> etusijassa)
+        {
+            var r = new S2Indeksi { Versio = "maailma" };
+            foreach (var (alue, ix) in etusijassa)
+            {
+                if (ix == null) continue;
+                foreach (var kv in ix.Ruudut)
+                {
+                    if (r.Ruudut.ContainsKey(kv.Key)) continue;
+                    kv.Value.Lut = ix.Lut;
+                    kv.Value.Alue = alue;
+                    r.Ruudut[kv.Key] = kv.Value;
+                }
+            }
+            return r;
+        }
+
         /// <summary>Ruudut, joiden bbox leikkaa alueen (kuvasuunnitelman esikarsinta).</summary>
         public IEnumerable<S2IndeksiRuutu> Alueella(double w, double s, double e, double n)
         {
             foreach (var ru in Ruudut.Values)
                 if (!(ru.E < w || ru.W > e || ru.N < s || ru.S > n)) yield return ru;
+        }
+    }
+
+    /// <summary>
+    /// Maailman S2-indeksin luettelo (Karttaseppä 4.10.2026: s2-indeksi/v1/maailma.json): {juuri, merkinta, etusija[], alueet{alue:
+    /// {tiedosto, bbox [w, s, e, n], ruutuja}}}. Aluebboxit menevät päällekkäin (tropiikki kiertää maapallon); näkymän alueet
+    /// etusijajärjestyksessä, vain tarvittavat ladataan (2,7–9 Mt kukin).
+    /// </summary>
+    public sealed class S2Maailma
+    {
+        public const string Osoite = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-indeksi/v1/maailma.json";
+        public string Juuri, Merkinta;
+        public readonly List<string> Etusija = new List<string>();
+        public readonly Dictionary<string, (string Tiedosto, double W, double S, double E, double N, int Ruutuja)> Alueet =
+            new Dictionary<string, (string, double, double, double, double, int)>();
+
+        public static S2Maailma Jasenna(string json, string oletusJuuri = null)
+        {
+            var j = MiniJson.Objekti(MiniJson.Jasenna(json));
+            var m = new S2Maailma { Juuri = MiniJson.Teksti(j, "juuri") ?? oletusJuuri, Merkinta = MiniJson.Teksti(j, "merkinta") };
+            foreach (var e in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "etusija"))) if (e is string t) m.Etusija.Add(t);
+            var alueet = MiniJson.ObjektiTaiNull(MiniJson.Kentta(j, "alueet"));
+            if (alueet != null)
+                foreach (var kv in alueet)
+                {
+                    var o = MiniJson.ObjektiTaiNull(kv.Value); if (o == null) continue;
+                    var b = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "bbox"));
+                    string tiedosto = MiniJson.Teksti(o, "tiedosto");
+                    if (b.Count != 4 || tiedosto == null) continue;
+                    m.Alueet[kv.Key] = (tiedosto, Convert.ToDouble(b[0]), Convert.ToDouble(b[1]), Convert.ToDouble(b[2]), Convert.ToDouble(b[3]),
+                        (int)(MiniJson.Luku(o, "ruutuja") ?? 0));
+                    if (!m.Etusija.Contains(kv.Key)) m.Etusija.Add(kv.Key);   // luettelon ulkopuolinen alue viimeiseksi
+                }
+            return m;
+        }
+
+        /// <summary>Alueen indeksin osoite (juuri + tiedosto; tiedosto voi olla myös täysi osoite).</summary>
+        public string Osoitteeksi(string alue)
+        {
+            var t = Alueet[alue].Tiedosto;
+            if (t.StartsWith("http")) return t;
+            string j = Juuri ?? Osoite.Substring(0, Osoite.LastIndexOf('/') + 1);
+            return j.EndsWith("/") ? j + t : j + "/" + t;
+        }
+
+        /// <summary>Alueet, joiden bbox leikkaa näkymän rajauksen, etusijajärjestyksessä (w &gt; e = vaihtopäivän yli).</summary>
+        public List<string> Nakymassa(double w, double s, double e, double n)
+        {
+            var r = new List<string>();
+            foreach (var a in Etusija)
+            {
+                if (!Alueet.TryGetValue(a, out var b)) continue;
+                if (b.N < s || b.S > n) continue;
+                if (LonLeikkaa(b.W, b.E, w, e)) r.Add(a);
+            }
+            return r;
+        }
+
+        static bool LonLeikkaa(double aw, double ae, double bw, double be)
+        {
+            // Välit voivat kiertää vaihtopäivän yli (w > e): jaetaan kahteen osaan.
+            foreach (var (x0, x1) in Osat(aw, ae))
+                foreach (var (y0, y1) in Osat(bw, be))
+                    if (!(x1 < y0 || x0 > y1)) return true;
+            return false;
+        }
+
+        static IEnumerable<(double, double)> Osat(double w, double e)
+        {
+            if (w <= e) { yield return (w, e); yield break; }
+            yield return (w, 180); yield return (-180, e);
         }
     }
 }

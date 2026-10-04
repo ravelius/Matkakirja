@@ -211,18 +211,41 @@ namespace Matkakirja.Natiivi
                 if (naytteet.Count == 0) { Loki("näkymässä ei maata"); loppuTila = "ei maata"; yield break; }
                 Tila = "indeksi"; Loki($"laukaisu {id} {muoto} {W}×{H}, kenttä {kamera.fieldOfView:0.0}°, {naytteet.Count} solua, {utc:yyyy-MM-dd HH:mm:ss} UTC, vapaata {VapaaMuistiMt()} Mt");
 
-                // 2) indeksi
-                S2Indeksi indeksi = null;
-                string indeksiTiedosto = Path.Combine(juuri, "indeksi.json");
-                if (!File.Exists(indeksiTiedosto))
-                {
-                    using var q = UnityWebRequest.Get(S2Indeksi.Osoite);
-                    yield return q.SendWebRequest();
-                    if (q.result == UnityWebRequest.Result.Success) File.WriteAllBytes(indeksiTiedosto, q.downloadHandler.data);
-                    else { Loki("indeksi: " + q.error); yield break; }
-                }
-                indeksi = S2Indeksi.Jasenna(File.ReadAllText(indeksiTiedosto));
+                // 2) indeksi: KOKO MAAILMA (omistaja 4.10.2026 klo 14.0x, loki #3936): maailma.json → näkymän alueet etusijassa,
+                // vain niiden indeksit ladataan (2,7–9 Mt kukin, välimuisti Documents/iss-kamera/), ja ne yhdistetään (sama MGRS:
+                // etusija voittaa, ruudulle alueen oma lut). Ilman luetteloa (ei vielä ämpärissä) Euroopan indeksi kuten ennen.
                 double w = naytteet.Min(n => n.LonMin), s = naytteet.Min(n => n.LatMin), e = naytteet.Max(n => n.LonMax), nn = naytteet.Max(n => n.LatMax);
+                S2Indeksi indeksi = null;
+                bool maailma = false;
+                string mJson = null;
+                yield return HaeTeksti(S2Maailma.Osoite, Path.Combine(juuri, "maailma.json"), t => mJson = t);
+                if (!string.IsNullOrEmpty(mJson))
+                {
+                    S2Maailma m = null;
+                    try { m = S2Maailma.Jasenna(mJson); } catch (Exception x) { Loki("maailma.json: " + x.Message); }
+                    var nakymassa = m?.Nakymassa(w, s, e, nn) ?? new List<string>();
+                    var osat = new List<(string, S2Indeksi)>();
+                    foreach (var a in nakymassa)
+                    {
+                        string ij = null;
+                        yield return HaeTeksti(m.Osoitteeksi(a), Path.Combine(juuri, "indeksi-" + a + ".json"), t => ij = t);
+                        if (string.IsNullOrEmpty(ij)) continue;
+                        try { osat.Add((a, S2Indeksi.Jasenna(ij))); } catch (Exception x) { Loki($"indeksi {a}: {x.Message}"); }
+                    }
+                    if (m != null)
+                    {
+                        indeksi = S2Indeksi.Yhdista(osat);
+                        maailma = true;
+                        Loki($"maailma: alueet {string.Join(" ", osat.Select(o => o.Item1))} (näkymässä {nakymassa.Count}), ruutuja {indeksi.Ruudut.Count}");
+                    }
+                }
+                if (indeksi == null)
+                {
+                    string ej = null;
+                    yield return HaeTeksti(S2Indeksi.Osoite, Path.Combine(juuri, "indeksi.json"), t => ej = t);
+                    if (string.IsNullOrEmpty(ej)) { Loki("indeksi: ei saatu"); yield break; }
+                    indeksi = S2Indeksi.Jasenna(ej);
+                }
                 var ehdokkaat = indeksi.Alueella(w, s, e, nn).ToList();
                 var ruudut = Kuvasuunnitelma.Ruudut(naytteet, ehdokkaat.Select(x => x.Ruutu()).Where(x => x != null)).Keys.ToList();
                 Loki($"indeksi {indeksi.Ruudut.Count} ruutua, näkymässä {ruudut.Count}: {string.Join(" ", ruudut.Select(x => x.Tunnus))}");
@@ -235,6 +258,7 @@ namespace Matkakirja.Natiivi
                     // Savuke 1119: Mikronesian meren yllä muutama saari- tai kaukorannikon näyte antoi VAIN EUROOPPA →
                     // maata vasta, kun ≥ 3 % näytteistä (ja vähintään 3) on maalla.
                     if (Yokuori.VesiMaailma != null && maalla.Count < Math.Max(3, naytteet.Count * 0.03)) loppuTila = "ei maata";
+                    else if (maailma) loppuTila = "ei kuvauspaikkaa";   // koko maailma: VAIN EUROOPPA -kilpi poistui (4.10.)
                     else
                     {
                         var pist = maalla.Count > 0 ? maalla : naytteet;
@@ -448,7 +472,9 @@ namespace Matkakirja.Natiivi
                 byte[] meri = { 14, 22, 30 };
                 // Vesi tasoitetaan merenväriin (Ateena 8648c410: eri päivien meri suorina ruuturajoina), rannikon matala vesi 25 % jää.
                 ty.Data.VesiTasoitus = 0.75; ty.Data.Meri = (byte[])meri.Clone();
-                if (ty.Data.Lut != null) for (int c = 0; c < 3; c++) meri[c] = ty.Data.Lut[meri[c]];
+                // Maailman indeksissä lut on ruuduittain: avomeren täyttö ensimmäisen näkymän ruudun alueen lutilla.
+                var meriLut = ty.Data.Lut ?? ruudut.Select(x => x.Lut).FirstOrDefault(l => l != null);
+                if (meriLut != null) for (int c = 0; c < 3; c++) meri[c] = meriLut[meri[c]];
                 // Tasot tarkimmasta juureen (KuvanTyosto.PiirraKaikki): lehti datasta, isä lapsistaan.
                 var tyot = Task.Run(() => ty.PiirraKaikki((l, rgba) =>
                 {
@@ -664,6 +690,17 @@ namespace Matkakirja.Natiivi
                 GC.Collect();
                 Tila = loppuTila; kaynnissa = false;
             }
+        }
+
+        /// <summary>Teksti välimuistista (tiedosto) tai verkosta (tallennetaan onnistuessa); null = ei saatu (404 ei välimuistiin).</summary>
+        static IEnumerator HaeTeksti(string url, string tiedosto, Action<string> valmis)
+        {
+            if (File.Exists(tiedosto)) { valmis(File.ReadAllText(tiedosto)); yield break; }
+            using var q = UnityWebRequest.Get(url);
+            yield return q.SendWebRequest();
+            if (q.result != UnityWebRequest.Result.Success) { Loki($"haku {Path.GetFileName(tiedosto)}: {q.error}"); valmis(null); yield break; }
+            File.WriteAllBytes(tiedosto, q.downloadHandler.data);
+            valmis(q.downloadHandler.text);
         }
 
         /// <summary>Range-haut enintään Rinnakkain kerrallaan, purku säikeissä; tila: [0] saatu, [1] virheet.</summary>

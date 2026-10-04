@@ -23,6 +23,8 @@ namespace Matkakirja.Linssit.IssKamera
     {
         public string Tunnus, Url;
         public double W, S, E, N;
+        /// <summary>Ruudun alueen tci_lut (maailman indeksi); null = KuvaData.Lut.</summary>
+        public byte[] Lut;
         /// <summary>Valinnan nodata-osuus (%, indeksistä): > 0,5 → ruutu ei voi yksin kattaa lehteä (rataleveyden reuna).</summary>
         public double Nodata;
         /// <summary>SCL-COG (luokitus, 20 m) pilvimaskiin; null = ei maskia.</summary>
