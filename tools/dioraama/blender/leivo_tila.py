@@ -428,12 +428,14 @@ if '--leivo' in argv:
         tyhjat.append(e)
     # Siirtosepän sopimus: extras.koko = liekin korkeus metreinä. Lepatus enintään 8 liekille nimijärjestyksessä,
     # joten tärkeimmät ensin (tulisija, soihdut, kynttilät lähdejärjestyksessä) ja numero nollilla täytettynä.
-    LIEKKIKOOT = {'tulisija': (0.45, 1.0, 1.2, 0), 'soihtu': (0.25, 0.4, 0.8, 1), 'kynttila': (0.045, 0.1, 0.4, 2)}
+    # 4.10.2026: korkeus = liekkipankin koko_m[1] (js/dioraama/pankit/liekit.js), kuten JSON-polussa ennen glb-liekkejä
+    # (oli 0,45 / 0,25 / 0,045 → soihdut ja kynttilät kutistuivat natiivissa). koko_pankki = korjattu arvo.
+    LIEKKIKOOT = {'tulisija': (0.52, 1.0, 1.2, 0), 'soihtu': (0.6, 0.4, 0.8, 1), 'kynttila': (0.1, 0.1, 0.4, 2)}
     liekit = sorted(tila.get('liekit', []), key=lambda l: LIEKKIKOOT.get(l.get('liekki'), (0, 0, 0, 3))[3])
     for j, l in enumerate(liekit):
         k0, savu0, kork0, _ = LIEKKIKOOT.get(l.get('liekki'), (0.3, 0.2, 1.0, 3))
         tyhja(f"liekki:{j:02d}-{l.get('liekki', 'liekki')}", l['paikka'], koko=round(k0 * l.get('koko', 1), 3),
-              savu=savu0, korkeus=kork0, sade=2.5)
+              savu=savu0, korkeus=kork0, sade=2.5, koko_pankki=1)
     # Tunnelma (Siirtosepän sopimus 29.9.): savu:NN {leveys, korkeus, voima, vari}, lokit:NN {maara, sade, korkeus}.
     for j, sv in enumerate(tila.get('savut', [])):
         tyhja(f'savu:{j:02d}', sv['paikka'], leveys=sv.get('leveys', 0.5), korkeus=sv.get('korkeus', 5.0),
