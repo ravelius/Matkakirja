@@ -61,6 +61,7 @@ namespace Matkakirja.Natiivi
         DioraamaRakennus rakennus3D;
         DioraamaHahmot hahmot3D;
         DioraamaSyote syote;
+        readonly DioraamaKameraJousi jousi = new DioraamaKameraJousi();
         // ERA 2 (dioraama-aanirajapinta-ehdotus.md): PYSYVÄ kenttä (ei nollata Sulje:ssa, ks. DioraamaAanet.cs:n
         // alkukommentti) -- klippivälimuisti säilyy sulkemisen ja uudelleenavaamisen yli. HUOM (UUDELLEENAVAUS-
         // korjaus 29.9.2026, katselmointi): ladatutPinnat/ladatutLiekkiAtlakset EIVÄT enää säily samoin --
@@ -149,6 +150,7 @@ namespace Matkakirja.Natiivi
             if (rakennus3D == null) rakennus3D = new DioraamaRakennus(nayttamo.transform);
             if (hahmot3D == null) hahmot3D = new DioraamaHahmot(nayttamo.transform);
             if (syote == null) syote = new DioraamaSyote(this, nayttamo);
+            jousi.Nollaa();
             if (aanet == null) aanet = new DioraamaAanet(o, this);
             aanet.Avaa(ymparisto, rakennus, nayttamo.transform);
 
@@ -243,7 +245,17 @@ namespace Matkakirja.Natiivi
             ViimeisinNakyma = nakyma;
             ViimeisinT = t;
 
-            var kameraAsento = pakotettuKamera ?? syote.Sovita(nakyma.Kamera);
+            // Omistajan TF 141 -palaute (5.10.): pehmeät liikkeet ja aina käynnissä oleva orbit (DioraamaKameraJousi). Odotuksen
+            // aikana (nimiruutu, kamera järvellä) ja pakotetulla kameralla jousi asettuu suoraan, jottei saapuminen ala jousesta.
+            float dt = Time.unscaledDeltaTime;
+            Asento kameraAsento;
+            if (pakotettuKamera is Asento pk) { jousi.Nollaa(); kameraAsento = pk; }
+            else
+            {
+                if (SaapumisOdotus) jousi.Nollaa();
+                bool veto = linssi.VetoKaynnissa;
+                kameraAsento = jousi.Askel(syote.Sovita(jousi.Orbit(nakyma.Kamera, dt, veto, y.VahennettyLiike)), dt, veto);
+            }
             // t mukaan (era 2): DioraamaNayttamo.Paivita antaa sen liekkinäkymälle (DioraamaLiekit.Paivita, ruutu
             // ajasta) -- nayttamo-kentän kommentti kutsui juuri tätä ("Sovitin voi jatkossa antaa Ydin-ajan tähän").
             nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t);
@@ -943,6 +955,12 @@ namespace Matkakirja.Natiivi
                 nayttamo?.Savu?.Tyhjenna(); nayttamo?.Ikkunat?.Tyhjenna(); nayttamo?.Ulkokuori?.Tyhjenna(); nayttamo?.Ymparisto?.Tyhjenna(); nayttamo?.Lokit?.Tyhjenna(); // Olavinlinna: ei tuplia
                 if (avoinna) { latausKaynnissa = true; o.StartCoroutine(LataaRakennus()); }
                 o.Kirjaa("poikki: lataa uudelleen");
+                return;
+            }
+            if (mita == "orbit")
+            {
+                DioraamaKameraJousi.OrbitPaalla = arvo != "0";
+                o.Kirjaa("poikki: orbit " + (DioraamaKameraJousi.OrbitPaalla ? "päällä" : "pois"));
                 return;
             }
             if (mita == "dof")

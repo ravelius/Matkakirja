@@ -42,6 +42,8 @@ namespace Matkakirja.Natiivi
         bool kaksiKaynnissa;
         float kaksiAlkuVali;
         double kokonaisDa, kokonaisDk, kokonaisZoom = 1;
+        // Eleen alun poikkeama (omistajan TF 141 -palaute 5.10.: uusi veto nollasi edellisen, kamera napsahti takaisin).
+        double vetoAlkuDa, vetoAlkuDk, zoomAlku = 1;
 
         public DioraamaSyote(DioraamaSovitin sovitin, DioraamaNayttamo nayttamo)
         {
@@ -62,7 +64,7 @@ namespace Matkakirja.Natiivi
 
         float aloitusAika;
 
-        public void NollaaPoikkeama() { kokonaisDa = 0; kokonaisDk = 0; kokonaisZoom = 1; kaksiKaynnissa = false; }
+        public void NollaaPoikkeama() { kokonaisDa = 0; kokonaisDk = 0; kokonaisZoom = 1; vetoAlkuDa = vetoAlkuDk = 0; zoomAlku = 1; kaksiKaynnissa = false; }
 
         public void Paivita(Rakennus rakennus, double t)
         {
@@ -94,6 +96,7 @@ namespace Matkakirja.Natiivi
                 aloitusKohta = edellinenYhdenSormenKohta = sormet[0].screenPosition;
                 aloitusAika = Time.unscaledTime;
                 liikeSitenAlusta = 0f;
+                vetoAlkuDa = kokonaisDa; vetoAlkuDk = kokonaisDk;
                 tamaEleEstetty = DioraamaSovitin.PeittaaRuutu != null && DioraamaSovitin.PeittaaRuutu(aloitusKohta);
             }
 
@@ -106,7 +109,8 @@ namespace Matkakirja.Natiivi
             if (n == 1)
             {
                 // Paluu kahdesta sormesta yhteen: jatketaan nykyisestä kohdasta (ei hyppyä nipistystä edeltävään pisteeseen).
-                if (kaksiKaynnissa) edellinenYhdenSormenKohta = sormet[0].screenPosition;
+                // Uusi alku myös vedolle, jottei kahden sormen jälkeen yhden sormen veto napsahda eleen alun kohtaan.
+                if (kaksiKaynnissa) { edellinenYhdenSormenKohta = aloitusKohta = sormet[0].screenPosition; vetoAlkuDa = kokonaisDa; vetoAlkuDk = kokonaisDk; liikeSitenAlusta = NapautusKynnysPx; }
                 kaksiKaynnissa = false;
                 Vector2 p = sormet[0].screenPosition;
                 liikeSitenAlusta += Vector2.Distance(p, edellinenYhdenSormenKohta);
@@ -114,20 +118,20 @@ namespace Matkakirja.Natiivi
                 if (liikeSitenAlusta >= NapautusKynnysPx)
                 {
                     Vector2 d = p - aloitusKohta;
-                    kokonaisDa = Mathf.Clamp(-d.x * AstettaPerPikseli, -20f, 20f);
-                    kokonaisDk = Mathf.Clamp(d.y * AstettaPerPikseli, -10f, 10f);
+                    kokonaisDa = Mathf.Clamp((float)vetoAlkuDa - d.x * AstettaPerPikseli, -20f, 20f);
+                    kokonaisDk = Mathf.Clamp((float)vetoAlkuDk + d.y * AstettaPerPikseli, -10f, 10f);
                 }
             }
             else // n >= 2: nipistys (zoom) + kahden sormen kierto siirtää da:ta samalla tavalla kuin veto
             {
                 Vector2 a = sormet[0].screenPosition, b = sormet[1].screenPosition;
                 float vali = Vector2.Distance(a, b);
-                if (!kaksiKaynnissa) { kaksiAlkuVali = Mathf.Max(1f, vali); kaksiKaynnissa = true; }
+                if (!kaksiKaynnissa) { kaksiAlkuVali = Mathf.Max(1f, vali); kaksiKaynnissa = true; zoomAlku = kokonaisZoom; }
                 else
                 {
                     double raakaZoom = kaksiAlkuVali / Mathf.Max(1f, vali);
                     if (raakaZoom > ZoomYliRajan) { sovitin.Yleisnakymaan(t); edellisetSormet = n; return; }
-                    kokonaisZoom = raakaZoom;
+                    kokonaisZoom = zoomAlku * raakaZoom;
                 }
             }
             edellisetSormet = n;
