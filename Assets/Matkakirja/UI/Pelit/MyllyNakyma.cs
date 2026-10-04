@@ -255,6 +255,9 @@ namespace Matkakirja.Natiivi
         // v2 (Pelikoodari 3.10., ämpäri aanet/tehosteet/mylly-v2/, Kenney CC0): molemmat samalla tasolla (huiput −1,5 / −1,4 dBFS),
         // joten tehosteiden oletusvahvistus ilman omaa kerrointa; v1:n asetus oli ~10 dB hiljaisempi ja tarvitsi 0,5:n.
         const string AaniAsetus = "mylly-asetus", AaniPoisto = "mylly-poisto";
+        /// <summary>Päätoimittaja 5.10. (kaappaus bc863309): oletusvahvistuksella 0,35 nappulat soivat −23…−25 dBFS, puhelimen kaiuttimesta
+        /// heikosti. 1,1 (+10 dB) → huiput ≈ −13 dBFS (tavoite −12…−15), AudioSource.volume 1,1 × tehosteväylä 0,296 ≈ 0,33.</summary>
+        const float Vahvistus = 1.1f;
 
         static void SiirronAani(MyllySiirto s, float voima)
         {
@@ -272,7 +275,7 @@ namespace Matkakirja.Natiivi
             var c = Resources.Load<AudioClip>(MyllyLauta.KansioPolku + nimi);
             if (c == null) { Debug.LogWarning("MATKAKIRJA mylly: ääni puuttuu " + nimi); return; }
             if (c.loadState != AudioDataLoadState.Loaded) c.LoadAudioData();
-            Aanet.RekisteroiTehoste(nimi, c, omaIsku: true);
+            Aanet.RekisteroiTehoste(nimi, c, Vahvistus, omaIsku: true);
         }
 
         /// <summary>TAUSTAN PEHMENNYS (omistaja 2.10. klo 11.0x, loki 11.01: "pehmennä kaikki elementit taustalla, myös
