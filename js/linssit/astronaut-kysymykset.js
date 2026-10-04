@@ -5806,6 +5806,186 @@ export const ASTRONAUTIN_KYSYMYKSET = {
         "havaintoId": "iss059e019410"
       }
     ]
+  },
+  "ateena-yolla": {
+    "kysymykset": [
+      "Kuinka vanha kaupunki Ateena on?",
+      "Mihin aikaan Ateenan yökuva otettiin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka vanha kaupunki Ateena on?",
+        "vastaus": "Ateena on yksi maailman vanhimmista jatkuvasti asutuista kaupungeista — sen historia ulottuu yli 3 400 vuoden taakse. Kaupunkiseudulla asuu nykyään noin 3,15 miljoonaa ihmistä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss074e0416472",
+            "title": "Athens, Greece – NASA"
+          }
+        ],
+        "havaintoId": "iss074e0416472"
+      },
+      {
+        "kysymys": "Mihin aikaan Ateenan yökuva otettiin?",
+        "vastaus": "Kuva otettiin maaliskuussa 2026 noin kello 22 paikallista aikaa, jolloin kaupungin valot erottuvat selvästi pimeää taustaa vasten. Kansainvälinen avaruusasema kiersi tuolloin noin 425 kilometrin korkeudessa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss074e0416472",
+            "title": "Athens, Greece – NASA"
+          }
+        ],
+        "havaintoId": "iss074e0416472"
+      }
+    ]
+  },
+  "budapest-yolla": {
+    "kysymykset": [
+      "Mikä järvi näkyy Budapestin kuvassa?",
+      "Miksi Budapestin valot erottuvat niin kirkkaina?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä järvi näkyy Budapestin kuvassa?",
+        "vastaus": "Kuvan keskellä kimmeltää Balaton, Keski-Euroopan suurin järvi. Sitä ympäröivät tulivuoriperäiset kukkulat, viinitarhat ja vanhat kirkot.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss074e0149554",
+            "title": "The city lights of Budapest – NASA"
+          }
+        ],
+        "havaintoId": "iss074e0149554"
+      },
+      {
+        "kysymys": "Miksi Budapestin valot erottuvat niin kirkkaina?",
+        "vastaus": "Budapest on paljon suurempi ja tiheämmin asuttu kuin sitä ympäröivät pienet unkarilaiskylät, joten sen valot muodostavat kirkkaan laikun muuten vaimeasti valaistulle seudulle. Kuva otettiin tammikuussa 2026 noin kello 21 paikallista aikaa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss074e0149554",
+            "title": "The city lights of Budapest – NASA"
+          }
+        ],
+        "havaintoId": "iss074e0149554"
+      }
+    ]
+  },
+  "barcelona-yolla": {
+    "kysymykset": [
+      "Mikä kaupunginosa erottuu Barcelonan kuvassa?",
+      "Mitä merta Barcelona reunustaa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä kaupunginosa erottuu Barcelonan kuvassa?",
+        "vastaus": "Kuvassa erottuu selvästi Barcelonan tunnettu Eixample-kaupunginosa, jonka kadut on suunniteltu säännölliseksi, lähes kahdeksankulmaisten korttelien ruudukoksi. Kaupunki on Espanjan toiseksi suurin, ja sen kaupunkiseudulla asuu 5,74 miljoonaa ihmistä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e0078528",
+            "title": "Barcelona, Spain – NASA"
+          }
+        ],
+        "havaintoId": "iss073e0078528"
+      },
+      {
+        "kysymys": "Mitä merta Barcelona reunustaa?",
+        "vastaus": "Barcelona sijaitsee Välimeren rannalla, ja sen satama näkyy kuvassa kaupungin eteläreunassa. Kuva otettiin toukokuussa 2025 Kansainväliseltä avaruusasemalta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e0078528",
+            "title": "Barcelona, Spain – NASA"
+          }
+        ],
+        "havaintoId": "iss073e0078528"
+      }
+    ]
+  },
+  "bukarest-yolla": {
+    "kysymykset": [
+      "Miksi Bukarestin valot ovat eri värisiä eri puolilla?",
+      "Kuinka paljon väkeä Bukarestin kaupunkiseudulla asuu?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Miksi Bukarestin valot ovat eri värisiä eri puolilla?",
+        "vastaus": "Bukarestin keskustassa on vielä käytössä vanhoja, keltaiseen taittuvia natriumlamppuja, kun taas esikaupunkialueilla on siirrytty uudempaan, valkoisempaan LED-valaistukseen. Väriero näkyy selvästi yökuvassa avaruudesta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e1047246",
+            "title": "Bucharest, Romania – NASA"
+          }
+        ],
+        "havaintoId": "iss073e1047246"
+      },
+      {
+        "kysymys": "Kuinka paljon väkeä Bukarestin kaupunkiseudulla asuu?",
+        "vastaus": "Romanian pääkaupungin kaupunkiseudulla asuu noin 1,78 miljoonaa ihmistä. Kuva otettiin marraskuussa 2025 noin kello 23 paikallista aikaa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e1047246",
+            "title": "Bucharest, Romania – NASA"
+          }
+        ],
+        "havaintoId": "iss073e1047246"
+      }
+    ]
+  },
+  "lissabon-suisto": {
+    "kysymykset": [
+      "Mikä joki virtaa Lissabonin läpi?",
+      "Miksi Lissabonin kuva on otettu päivällä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä joki virtaa Lissabonin läpi?",
+        "vastaus": "Lissabonin läpi virtaa Tejo-joki, joka laskee kaupungin kohdalla leveänä suistona Atlantin valtamereen. Joen muoto erottuu kuvassa selvästi ilman kaupungin valojakin, koska kuva on otettu päivällä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e0078399",
+            "title": "Lisbon, Portugal – NASA"
+          }
+        ],
+        "havaintoId": "iss073e0078399"
+      },
+      {
+        "kysymys": "Miksi Lissabonin kuva on otettu päivällä?",
+        "vastaus": "Toisin kuin monet tämän linssin yökuvat, Lissabonin kuva näyttää Tejo-joen suiston muodot ja maaston parhaiten päivänvalossa. Kuva otettiin toukokuussa 2025 Iberian niemimaan rannikon yllä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e0078399",
+            "title": "Lisbon, Portugal – NASA"
+          }
+        ],
+        "havaintoId": "iss073e0078399"
+      }
+    ]
+  },
+  "thessaloniki-yolla": {
+    "kysymykset": [
+      "Kuinka vanha kaupunki Thessaloniki on?",
+      "Mitä yhteistä Thessalonikin ja Bukarestin kuvilla on?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka vanha kaupunki Thessaloniki on?",
+        "vastaus": "Thessaloniki on yli 2 300 vuotta vanha satamakaupunki Thermaicos-lahden rannalla. Sen kaupunkiseudulla asuu nykyään noin 815 000 ihmistä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e1047210",
+            "title": "Thessaloniki, Greece – NASA"
+          }
+        ],
+        "havaintoId": "iss073e1047210"
+      },
+      {
+        "kysymys": "Mitä yhteistä Thessalonikin ja Bukarestin kuvilla on?",
+        "vastaus": "Molemmissa kaupungeissa keskustan vanhat keltaiset natriumlamput vaihtuvat esikaupungeissa valkoisempaan LED-valoon — ero näkyy selvästi avaruudesta. Thessalonikin kuva otettiin marraskuussa 2025 samana iltana kuin Bukarestin kuva.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e1047210",
+            "title": "Thessaloniki, Greece – NASA"
+          }
+        ],
+        "havaintoId": "iss073e1047210"
+      }
+    ]
   }
 };
 

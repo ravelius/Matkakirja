@@ -2995,6 +2995,103 @@ export const KOHTEET = [
       },
     ],
   },
+  // Eurooppa-erä 1 (Sisältökirjuri, omistaja "lisätään niitä vain" 4.10.2026):
+  // eurooppalaisia kaupunkeja, joilta puuttui vielä satelliittikuva.
+  {
+    tunnus: 'ateena-yolla', nimi: 'Ateena', seutu: 'Kreikka', lat: 37.9838, lon: 23.7275,
+    selite: 'Yksi maailman vanhimmista jatkuvasti asutuista kaupungeista kuvattuna yöllä.',
+    oletus: 'iss074e0416472',
+    kuvat: [
+      {
+        id: 'iss074e0416472',
+        teksti: 'Maaliskuussa 2026 otettu kuva näyttää Ateenan, yhden maailman '
+          + 'vanhimmista jatkuvasti asutuista kaupungeista — sen historia ulottuu '
+          + 'yli 3 400 vuoden taakse. Kaupunkiseudulla asuu nykyään noin 3,15 '
+          + 'miljoonaa ihmistä. Kuva otettiin noin kello 22.11 paikallista aikaa '
+          + 'Kansainväliseltä avaruusasemalta, joka kiersi tuolloin noin 425 '
+          + 'kilometrin korkeudessa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'budapest-yolla', nimi: 'Budapest', seutu: 'Unkari', lat: 47.4979, lon: 19.0402,
+    selite: 'Unkarin pääkaupungin valot hallitsevat yömaisemaa Balaton-järven lähellä.',
+    oletus: 'iss074e0149554',
+    kuvat: [
+      {
+        id: 'iss074e0149554',
+        teksti: 'Tammikuussa 2026 otettu kuva näyttää Budapestin valojen hallitsevan '
+          + 'Unkarin yömaisemaa, jota koristavat pienet kylät. Kuvan keskellä '
+          + 'kimmeltää Balaton, Keski-Euroopan suurin järvi, jota ympäröivät '
+          + 'tulivuoriperäiset kukkulat, viinitarhat ja vanhat kirkot. '
+          + 'Kansainvälinen avaruusasema kiersi noin 422 kilometrin '
+          + 'korkeudessa, kun kuva otettiin noin kello 21.10 paikallista aikaa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'barcelona-yolla', nimi: 'Barcelona', seutu: 'Espanja', lat: 41.3851, lon: 2.1734,
+    selite: 'Espanjan toiseksi suurimman kaupungin tunnistettava ruutukaava Välimeren rannalla.',
+    oletus: 'iss073e0078528',
+    kuvat: [
+      {
+        id: 'iss073e0078528',
+        teksti: 'Toukokuussa 2025 otetussa kuvassa näkyy Barcelona, Espanjan '
+          + 'toiseksi suurin kaupunki, jonka kaupunkiseudulla asuu 5,74 '
+          + 'miljoonaa ihmistä. Kaupungin tunnetun Eixample-kaupunginosan '
+          + 'säännöllinen ruutukaava erottuu selvästi valaistuna Välimeren '
+          + 'rannalla. Kuva otettiin Kansainväliseltä avaruusasemalta sen '
+          + 'kiertäessä noin 420 kilometrin korkeudessa Välimeren yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'bukarest-yolla', nimi: 'Bukarest', seutu: 'Romania', lat: 44.4268, lon: 26.1025,
+    selite: 'Romanian pääkaupunki yöllä, vanhat ja uudet katuvalot erottuvat väreiltään.',
+    oletus: 'iss073e1047246',
+    kuvat: [
+      {
+        id: 'iss073e1047246',
+        teksti: 'Marraskuussa 2025 otetussa kuvassa Romanian pääkaupunki '
+          + 'Bukarest, jonka kaupunkiseudulla asuu noin 1,78 miljoonaa '
+          + 'ihmistä, näkyy yöllä. Kaupungin keskustan vanhat, keltaiset '
+          + 'natriumlamput vaihtuvat esikaupunkialueilla uudempaan, '
+          + 'valkoisempaan LED-valaistukseen. Kuva otettiin Kansainväliseltä '
+          + 'avaruusasemalta sen kiertäessä noin 420 kilometrin korkeudessa '
+          + 'Itä-Euroopan yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'lissabon-suisto', nimi: 'Lissabon', seutu: 'Portugali', lat: 38.7223, lon: -9.1393,
+    selite: 'Portugalin pääkaupunki ja sen Tejo-joen suisto päivänvalossa.',
+    oletus: 'iss073e0078399',
+    kuvat: [
+      {
+        id: 'iss073e0078399',
+        teksti: 'Toukokuussa 2025 otetussa päiväkuvassa näkyy Lissabon, '
+          + 'Portugalin pääkaupunki ja suurin kaupunki, esikaupunkeineen '
+          + 'Tejo-joen rannalla. Joki laskee tässä kohtaa leveänä suistona '
+          + 'Atlantin valtamereen. Kuva otettiin Kansainväliseltä '
+          + 'avaruusasemalta sen kiertäessä Iberian niemimaan rannikon yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'thessaloniki-yolla', nimi: 'Thessaloniki', seutu: 'Kreikka', lat: 40.6401, lon: 22.9444,
+    selite: 'Yli 2 300 vuotta vanha satamakaupunki Thermaicos-lahden rannalla.',
+    oletus: 'iss073e1047210',
+    kuvat: [
+      {
+        id: 'iss073e1047210',
+        teksti: 'Marraskuussa 2025 otetussa kuvassa näkyy Thessaloniki, yli '
+          + '2 300 vuotta vanha satamakaupunki Thermaicos-lahden rannalla. '
+          + 'Kaupunkiseudulla asuu noin 815 000 ihmistä. Kuten Bukarestissa, '
+          + 'myös täällä keskustan vanhat keltaiset natriumlamput vaihtuvat '
+          + 'esikaupungeissa valkoisempaan LED-valoon.',
+      },
+    ],
+  },
 ];
 
 /**
