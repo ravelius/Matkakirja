@@ -282,6 +282,11 @@ export const TILA = {
     { tee: 'reaktio', hahmo: 'kokki' },
     { tee: 'kohta', n: 1 },
     { tee: 'repliikki', hahmo: 'vesipoika' },
+    // 4.10. (Päätoimittaja, Siirtosepän havainto): apulaisen repliikit (ääni C v2) olivat vain hahmossa, eivät käsikirjoituksessa → natiivissa apulainen ei puhunut.
+    // Natiivi soittaa vain käsikirjoituksen askeleet (Siirtoseppä 4.10.), joten -2 tarvitsee oman askeleen (n: 1); Pulun reaktio vastaa jauhosäkkiin.
+    { tee: 'repliikki', hahmo: 'apulainen' },
+    { tee: 'repliikki', hahmo: 'apulainen', n: 1 },
+    { tee: 'reaktio', hahmo: 'apulainen' },
     { tee: 'kohta', n: 2 },
   ],
 };
