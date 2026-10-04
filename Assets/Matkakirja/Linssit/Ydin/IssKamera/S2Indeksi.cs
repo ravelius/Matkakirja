@@ -104,8 +104,9 @@ namespace Matkakirja.Linssit.IssKamera
         public const string Osoite = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-indeksi/v1/maailma.json";
         public string Juuri, Merkinta;
         public readonly List<string> Etusija = new List<string>();
-        public readonly Dictionary<string, (string Tiedosto, double W, double S, double E, double N, int Ruutuja)> Alueet =
-            new Dictionary<string, (string, double, double, double, double, int)>();
+        /// <summary>Alue → tiedosto, rajaukset (bbox tai bboxit: päivämäärärajan ylittävä alue useana osana, aina w &lt; e) ja ruutumäärä.</summary>
+        public readonly Dictionary<string, (string Tiedosto, List<(double W, double S, double E, double N)> Rajaukset, int Ruutuja)> Alueet =
+            new Dictionary<string, (string, List<(double, double, double, double)>, int)>();
 
         public static S2Maailma Jasenna(string json, string oletusJuuri = null)
         {
@@ -117,11 +118,17 @@ namespace Matkakirja.Linssit.IssKamera
                 foreach (var kv in alueet)
                 {
                     var o = MiniJson.ObjektiTaiNull(kv.Value); if (o == null) continue;
-                    var b = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "bbox"));
                     string tiedosto = MiniJson.Teksti(o, "tiedosto");
-                    if (b.Count != 4 || tiedosto == null) continue;
-                    m.Alueet[kv.Key] = (tiedosto, Convert.ToDouble(b[0]), Convert.ToDouble(b[1]), Convert.ToDouble(b[2]), Convert.ToDouble(b[3]),
-                        (int)(MiniJson.Luku(o, "ruutuja") ?? 0));
+                    var rajaukset = new List<(double, double, double, double)>();
+                    var lista = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "bboxit"));
+                    if (lista.Count == 0) lista = new List<object> { MiniJson.Kentta(o, "bbox") };
+                    foreach (var x in lista)
+                    {
+                        var b = MiniJson.TaulukkoTaiTyhja(x);
+                        if (b.Count == 4) rajaukset.Add((Convert.ToDouble(b[0]), Convert.ToDouble(b[1]), Convert.ToDouble(b[2]), Convert.ToDouble(b[3])));
+                    }
+                    if (rajaukset.Count == 0 || tiedosto == null) continue;
+                    m.Alueet[kv.Key] = (tiedosto, rajaukset, (int)(MiniJson.Luku(o, "ruutuja") ?? 0));
                     if (!m.Etusija.Contains(kv.Key)) m.Etusija.Add(kv.Key);   // luettelon ulkopuolinen alue viimeiseksi
                 }
             return m;
@@ -142,9 +149,9 @@ namespace Matkakirja.Linssit.IssKamera
             var r = new List<string>();
             foreach (var a in Etusija)
             {
-                if (!Alueet.TryGetValue(a, out var b)) continue;
-                if (b.N < s || b.S > n) continue;
-                if (LonLeikkaa(b.W, b.E, w, e)) r.Add(a);
+                if (!Alueet.TryGetValue(a, out var al)) continue;
+                foreach (var b in al.Rajaukset)
+                    if (!(b.N < s || b.S > n) && LonLeikkaa(b.W, b.E, w, e)) { r.Add(a); break; }
             }
             return r;
         }

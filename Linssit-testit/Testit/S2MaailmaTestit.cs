@@ -40,6 +40,20 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(m.Nakymassa(-40, -70, -20, -60).Count == 0, "Etelämanner: ei aluetta");
         }
 
+        [Testi] static void KarttasepanTestiluetteloBboxit()
+        {
+            // Karttasepän muoto 4.10. (maailma-testi-4-aluetta.json): "bboxit", aasia-australia kahtena osana päivämäärärajan yli.
+            const string j = @"{""etusija"": [""eurooppa"", ""amerikka"", ""aasia-australia""], ""alueet"": {
+              ""eurooppa"": {""tiedosto"": ""indeksi.json"", ""bboxit"": [[-30.9, 31.5, 48.4, 73.0]]},
+              ""amerikka"": {""tiedosto"": ""indeksi-amerikka.json"", ""bboxit"": [[-180.0, -57.8, -38.9, 73.0]]},
+              ""aasia-australia"": {""tiedosto"": ""indeksi-aasia-australia.json"", ""bboxit"": [[-0.07, -56.0, 180, 73.0], [-180, -41.6, -4.03, 71.2]]}}}";
+            var m = S2Maailma.Jasenna(j, "https://x/");
+            Oleta.Sama(2, m.Alueet["aasia-australia"].Rajaukset.Count);
+            Oleta.Sama("aasia-australia", string.Join(" ", m.Nakymassa(130, -26, 132, -24)), "Uluru");
+            Oleta.Sama("amerikka aasia-australia", string.Join(" ", m.Nakymassa(-160, 20, -155, 22)), "Havaiji: kumpikin");
+            Oleta.Sama("https://x/indeksi.json", m.Osoitteeksi("eurooppa"));
+        }
+
         [Testi] static void YhdistaEtusijaJaLut()
         {
             var eu = Ix(11, ("33UXP", 15, 50, 16, 51), ("31TFJ", 4, 43, 5, 44));
