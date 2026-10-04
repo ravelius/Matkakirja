@@ -297,7 +297,10 @@ namespace Matkakirja.Natiivi
         static bool paluuPyydetty;
 
         /// <summary>Linnan valikon Huoneet-lista (omistaja 2.10. 14.44): siirtyy tilaan seuraavassa Paivitassa.</summary>
-        public static void PyydaTila(string tilaId) => pyydettyTila = tilaId;
+        public static void PyydaTila(string tilaId) { pyydettyTila = tilaId; ValikkoPyysi = Time.unscaledTime; }
+        /// <summary>Savuke 1139 (4.10.): linnan valikon huonevalinnan hetki — saman kosketuksen irrotus ei saa kohdistaa
+        /// dioraamaa (DioraamaSyote), muuten näkymä palasi edelliseen huoneeseen.</summary>
+        public static float ValikkoPyysi { get; private set; } = -1e9f;
         static string pyydettyTila;
 
         /// <summary>Äänen URL (era 2, DioraamaAanet.cs): Rakennus.Aanet[id].Tiedosto on suhteessa RAKENNUKSEN

@@ -346,6 +346,19 @@ namespace Matkakirja.Natiivi
                 if (el != null && el.resolvedStyle.display != DisplayStyle.None && el.panel != null
                     && el.worldBound.Contains(RuntimePanelUtils.ScreenToPanel(el.panel, new Vector2(ruutu.x, Screen.height - ruutu.y))))
                     return true;
+            // Savuke 1139 (4.10.): linnan valikko (LinnaValikko, mk-linssivalikko) ja muut napit ruudulla eivät välitä
+            // napautusta dioraamalle (valikon huonevalinnan irrotus kohdisti edellisen huoneen uudelleen). Valikko on omassa
+            // kerroksessaan, joten auki oleva valikko estää koko eleen (myös sulkevan napautuksen valikon ulkopuolelle).
+            if (Linna != null && Linna.Auki) return true;
+            if (juuri.panel != null)
+            {
+                for (var el = juuri.panel.Pick(RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(ruutu.x, Screen.height - ruutu.y)));
+                     el != null; el = el.parent)
+                {
+                    if (el is Button) return true;
+                    foreach (var luokka in el.GetClasses()) if (luokka.StartsWith("mk-linssivalikko", System.StringComparison.Ordinal)) return true;
+                }
+            }
             if (juuri.style.display == DisplayStyle.None || lauta.resolvedStyle.display == DisplayStyle.None) return false;
             var paneelipiste = RuntimePanelUtils.ScreenToPanel(lauta.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
             return lauta.worldBound.Contains(paneelipiste);

@@ -74,6 +74,8 @@ namespace Matkakirja.Natiivi
 
             if (n == 0)
             {
+                // Savuke 1139 (4.10.): valikon huonevalinta saman kosketuksen aikana → irrotus ei ole dioraaman napautus.
+                if (DioraamaSovitin.ValikkoPyysi >= aloitusAika - 0.05f) tamaEleEstetty = true;
                 if (edellisetSormet == 1 && !tamaEleEstetty && liikeSitenAlusta < NapautusKynnysPx) Napauta(rakennus, aloitusKohta, t);
                 // Elävä linna (käsikirjoitus kohta 3): nopea pyyhkäisy alas tilassa → takaisin yleisnäkymään.
                 else if (edellisetSormet == 1 && !tamaEleEstetty && rakennus?.Saapuminen != null && DioraamaSovitin.ViimeisinNakyma?.KohdeTila != null)
