@@ -188,6 +188,8 @@ namespace Matkakirja.Natiivi
         /// web lukija → ilmoitaLivianKasvopuhe): nokka liikkuu, eikä tämä vaienna pulua kertojana.
         /// </summary>
         public bool PuluaaniSoi => puhuu && SoivaPersoona == "pollo";
+        /// <summary>Automaattinen luenta soi (ei pelaajan pyyntö eikä Pulun chat-vastaus): Ohita näkyy kartalla (Luentakuvasarja).</summary>
+        public bool AutomaattinenSoi => (puhuu || lataus != null) && !soiPyynnosta && SoivaPersoona != "pollo";
         public float Aika => lahde != null && lahde.clip != null ? lahde.time : 0;
         /// <summary>Soiva puhe tauolla (Tauko/Jatka, nostokortin kaiutin: omistaja 27.9.2026 klo 09.3x).</summary>
         public bool Tauolla => tauolla;
@@ -369,6 +371,9 @@ namespace Matkakirja.Natiivi
         {
             // pyynnosta: kaiuttimen painallus lukee aina (omistaja 27.9.2026 klo 15.5x); automaattista ohjaa Kertoja.
             if (!Paalla && !PulunPuhe(persoona) && !pyynnosta) return false;
+            // Jatkohiljaisuus (omistaja TF 141 4.10.2026 klo 00.5x: "pulun luenta tulee edelleen kun valitsen aloituksessa Jatka
+            // matkaa"): sama portti kuin Soitassa, myös synteesi (saapumismerkinnän luenta Saapumisesitys.LueSaapuminen).
+            if (!pyynnosta && PeliOhjain.EstaJatkohiljaisuudessa("luennan " + persoona)) return false;
             soiPyynnosta = pyynnosta;
             return Syntetisoi(teksti, persoona, TagiLohko(lohko ?? Lukijaaani.OletusLohko(persoona), loppuTagi), true, viiveS, loppu, loppuTagi);
         }

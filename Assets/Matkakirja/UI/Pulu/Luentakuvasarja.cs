@@ -40,6 +40,10 @@ namespace Matkakirja.Natiivi
             ohita = Rakenne.Nappi("Ohita", "mk-ohita", Ohita, turva);
             Kirjasimet.Aseta(ohita, Kirjasin.Kone);
             ohita.style.display = DisplayStyle.None;
+            // OHITA AINA LUENNAN AIKANA (omistaja TF 141, 5.10.2026 klo 00.5x: "Eikä siinä ole Ohita nappia"): myös muu
+            // automaattinen luenta kuin fokusluento (saapumismerkinnän synteesi, kysymyksen repliikki) tuo saman Ohitan samaan
+            // paikkaan kartalla. Tarkistus 4 kertaa sekunnissa.
+            pakka.schedule.Execute(SeuraaMuutaLuentaa).Every(250);
 
             suurennos = new Kuvasuurennos(kerros.Juuri(UiKerros.Valikot));
         }
@@ -226,6 +230,34 @@ namespace Matkakirja.Natiivi
             // Lento ensin: OhitaLuento herättää PaikanPuheVaiennettu-tapahtuman, joka tyhjentää pakan.
             Tyhjenna(true);
             PeliOhjain.Instanssi?.OhitaLuento();
+            // Muu automaattinen luenta (ei fokusluento, jota OhitaLuento pysäyttää) loppuu heti samasta napista.
+            var p = Puhe.Instanssi;
+            if (p != null && p.AutomaattinenSoi) p.Pysayta(0.15f);
+            muuLuenta = false;
+            Debug.Log("MATKAKIRJA ui ohita: luenta ohitettu");
+        }
+
+        bool muuLuenta;
+
+        /// <summary>Muu automaattinen luenta kartalla (ei linssiä, ei lehteä): Ohita näkyviin, luennan loputtua pois.</summary>
+        void SeuraaMuutaLuentaa()
+        {
+            var p = Puhe.Instanssi;
+            var o = PeliOhjain.Instanssi;
+            bool kartalla = o != null && (o.Tila == SilmukanTila.Kartta || o.Tila == SilmukanTila.Matkalla) && !o.AloituslentoKaynnissa
+                && LinssiOhjain.Rekisteri?.Auki == null && !o.LehtiAuki;
+            bool soi = kartalla && p != null && p.AutomaattinenSoi && !luentoKaynnissa;
+            if (soi == muuLuenta) return;
+            muuLuenta = soi;
+            if (luentoKaynnissa) return;
+            ohita.style.display = soi ? DisplayStyle.Flex : DisplayStyle.None;
+            if (soi)
+            {
+                AsetaPaikka();
+                paikanSeuranta ??= pakka.schedule.Execute(AsetaPaikka).Every(250);
+                paikanSeuranta.Resume();
+                Debug.Log("MATKAKIRJA ui ohita: näkyviin (automaattinen luenta " + (p.SoivaPersoona ?? "äänite") + ")");
+            }
         }
 
         /// <summary>Suurennos sarjasta (luennan kuvat), alkaen kohdasta alku; ‹ › selaa.</summary>
