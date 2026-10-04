@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "916731d7cbf72741",
-  "kansio": "dioraama/olavinlinna/blender/916731d7cbf72741/",
+  "hash": "c3654322ede2ee91",
+  "kansio": "dioraama/olavinlinna/blender/c3654322ede2ee91/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500.glb",
@@ -140,43 +140,43 @@
     },
     {
       "polku": "tilat/fatabuuri.glb",
-      "sha256": "2504fa1cbcbccc9b160f0c65055524bac10c7bfc3dd134a4f0e4b719c03e9840",
-      "tavuja": 1584428
+      "sha256": "0cde3dacae11d22af194c611cd84d8a0fe92b6267f07e371b47f33d5e919bb2a",
+      "tavuja": 1584484
     },
     {
       "polku": "tilat/kappeli.glb",
-      "sha256": "2f6f23f17e76f08ccc11d0c249c9f6c2de9e62919029d2ffbc3da63b0297c87d",
-      "tavuja": 842432
+      "sha256": "5c180f81b7d5c16209b6461e5f56aaa7b872a11c6fb017037bb97bc835482b47",
+      "tavuja": 842664
     },
     {
       "polku": "tilat/keittio.glb",
-      "sha256": "aa923165f0ff683861d71160d7d694ff93838bac6ec276f7fcecfcb128e4a7c9",
-      "tavuja": 1526832
+      "sha256": "ceb73441571e9e4fb4548c330d901779748f3c9e93de2b60f96bb285982675ba",
+      "tavuja": 1526892
     },
     {
       "polku": "tilat/keskushalli.glb",
-      "sha256": "b44963a177d68525a0e837b361c33fd533c00b48c736414daaa14c968f99200c",
-      "tavuja": 2573348
+      "sha256": "3fffb6111f84ae3e3131bd4fafd6eb25aa788f6245cd7bf7bce227f428be3c8f",
+      "tavuja": 2573596
     },
     {
       "polku": "tilat/kierreportaat.glb",
-      "sha256": "4ba9b2e16f4d3dec0a33e25f27a1e479140d72c0f6eb688054c25f01c80312d4",
-      "tavuja": 1576824
+      "sha256": "96f0bb8d79beb2e5c675b13af73fb4cf7e56debdd16cfbe2f2af7a90646b10e5",
+      "tavuja": 1576884
     },
     {
       "polku": "tilat/laituri.glb",
-      "sha256": "6ef68d8fa231945694da4a8bbea95d3dacf00e3248d91077b4a5e1b5f81bb38f",
-      "tavuja": 711796
+      "sha256": "38a1035d2d7142d3444a97c2677b6bc71667f55981e5f609153075bee53d985e",
+      "tavuja": 711828
     },
     {
       "polku": "tilat/muurinharja.glb",
-      "sha256": "c22e2ff4c781a5463ccd14307dc04fb62af906c0a948ae2b293e312edc5e076c",
-      "tavuja": 1197308
+      "sha256": "00461e5050b106ae7a3bd6b1afd16b4c82cd75a3f12dc2a7557a5dbd2139de2c",
+      "tavuja": 1197340
     },
     {
       "polku": "tilat/tunnelma.glb",
-      "sha256": "c428068767432fd321ce3d0213c9659fa2714a1440bc9ce4fd600af93abd41d0",
-      "tavuja": 972032
+      "sha256": "ad84786c04ff34dfe2b30b7eb213f79389b85ea876a32ad596ade89f4eb4c57b",
+      "tavuja": 972452
     },
     {
       "polku": "ulkokuori/hybridi/kuori-materiaali-2k.png",
