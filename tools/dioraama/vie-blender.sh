@@ -102,7 +102,7 @@ done
 TMP=$(mktemp -d); trap 'rm -rf "$TMP"' EXIT
 YHT=0
 for r in "${LISTA[@]}"; do
-  p=${r%%|*}; l=${r#*|}; [[ $l == @* ]] && f=${l#@} || f="$LAHDE/$l"; s=$(shasum -a 256 "$f" | cut -d' ' -f1); b=$(stat -f %z "$f")
+  p=${r%%|*}; l=${r#*|}; [[ $l == @* ]] && f=${l#@} || f="$LAHDE/$l"; s=$(shasum -a 256 "$f" | cut -d' ' -f1); b=$(stat -L -f %z "$f")
   YHT=$((YHT + b)); echo "$p $s $b" >> "$TMP/rivit"; echo "$p $f" >> "$TMP/lahteet"
 done
 sort -o "$TMP/rivit" "$TMP/rivit"
