@@ -267,6 +267,7 @@ namespace Matkakirja.Natiivi
             napa.style.translate = new Translate(s == JoystickSuunta.Vasen ? -kallistus : s == JoystickSuunta.Oikea ? kallistus : 0,
                 s == JoystickSuunta.Ylos ? -kallistus : s == JoystickSuunta.Alas ? kallistus : 0);
             linssi()?.Joystick(s);
+            Debug.Log("MATKAKIRJA linssit: ohjaamon joystick " + s);
         }
 
         public JoystickSuunta Suunta => suunta;
