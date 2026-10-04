@@ -19,7 +19,10 @@ OBJ=/Users/Shared/Claude/proto-3d/_lahteet/olavinlinna-senaatti/source/Olavinlin
 ESRGAN=/Users/Shared/Claude/proto-3d/_lahteet/realesrgan
 ASTC=/Users/Shared/Claude/proto-3d/tyokalut/astc-mip.swift
 U=$ULOS/ulkokuori; mkdir -p $U $ULOS/raaka $ULOS/hamara
-VAIHEET=(kuori lod reiat esrgan hamara reiatvalo delight ikkunat ranta astc maski); ajo=0
+VAIHEET=(kuori lod reiat esrgan hamara reiatvalo delight ao ikkunat ranta astc maski); ajo=0
+# 5.10. (Päätoimittaja, linnan ilmeen A/B): VALO = hämärän valokartan koko (oletus 4096; 8192 terävöittää kontaktivarjot),
+# AO_KERROIN = kontakti-AO:n voimakkuus hämärätekstuuriin (tyhjä = ei ao-vaihetta; esim. 0.6, etäisyys AO_ETAISYYS m).
+VALO=${VALO:-4096}; VK=$((VALO / 1024))k; AO_KERROIN=${AO_KERROIN:-}; AO_ETAISYYS=${AO_ETAISYYS:-0.5}
 PY=/Users/Shared/Claude/proto-3d/_lahteet/venv-laser/bin/python
 vaihe() {  # vaihe <nimi>: tosi, jos vaihe ajetaan (--alkaen); odottaa kevyen tilan ohi
   [ "$1" = "$ALKAEN" ] && ajo=1
@@ -54,25 +57,30 @@ if vaihe esrgan; then
   rm -f $ULOS/raaka/albedo-16k.png
 fi
 if vaihe hamara; then
-  bl $H/kuori_hamara.py -- $U/ulkokuori_huippu.glb $RAK $ULOS/hamara 128 4096 --tavoite --albedo $ULOS/raaka/albedo-8k.png \
+  bl $H/kuori_hamara.py -- $U/ulkokuori_huippu.glb $RAK $ULOS/hamara 128 $VALO --tavoite --albedo $ULOS/raaka/albedo-8k.png \
     --tasoita $ULOS/raaka/siivousmaski.png
 fi
 if vaihe reiatvalo; then
   # täytteen valo ympäröivistä teksteleistä (pienet kartat leipoutuivat tummiksi); delight-vaihe käyttää korjattua valokarttaa
-  bl $H/kuori_ranta.py -- $U 4096
-  bl $H/kuori_reiat.py -- --valo $U $ULOS/hamara/ulkokuori-valokartta-4k.exr; rm -f $U/sijainti-4096.npy
+  bl $H/kuori_ranta.py -- $U $VALO
+  bl $H/kuori_reiat.py -- --valo $U $ULOS/hamara/ulkokuori-valokartta-$VK.exr; rm -f $U/sijainti-$VALO.npy
 fi
 if vaihe delight; then
   # hämärä delightatusta albedosta samalla valokartalla (päivätekstuuri ennallaan)
   bl $H/kuori_delight.py -- $U/ulkokuori_huippu.glb $ULOS/delight 2048
   nice -n 15 $PY $H/kuori_delight.py $ULOS/raaka/albedo-8k.png $ULOS/delight | tail -2
-  bl $H/kuori_hamara.py -- $U/ulkokuori_huippu.glb $RAK $ULOS/hamara 1 4096 --tavoite --albedo $ULOS/delight/albedo-delight-8k.png \
-    --valokartta $ULOS/hamara/ulkokuori-valokartta-4k.exr
+  bl $H/kuori_hamara.py -- $U/ulkokuori_huippu.glb $RAK $ULOS/hamara 1 $VALO --tavoite --albedo $ULOS/delight/albedo-delight-8k.png \
+    --valokartta $ULOS/hamara/ulkokuori-valokartta-$VK.exr
+fi
+if vaihe ao && [ -n "$AO_KERROIN" ]; then
+  # kontakti-AO (lyhyt etäisyys) hämärätekstuuriin: vain nurkat ja saumat syvenevät, keskikirkkaus ennallaan
+  bl $H/kuori_maski_ao.py -- $U/ulkokuori_huippu.glb $ULOS/ao --koko 4096 --ao-naytteita 128 --ao-etaisyys $AO_ETAISYYS
+  nice -n 15 $PY $H/kuori_ao_kerroin.py $ULOS/hamara/ulkokuori-hamara-8k.jpg $ULOS/ao/kuori-ao-4k.png $AO_KERROIN | tail -2
 fi
 if vaihe ikkunat; then
   bl $H/kuori_ikkunat.py -- $U/ulkokuori_huippu.glb $U/ulkokuori-4k.jpg $ULOS/hamara/ulkokuori-hamara-8k.jpg $U \
     --luettelo $H/olavinlinna-ikkunat.json --kaikki
-  cp $ULOS/hamara/ulkokuori-valokartta-4k.exr $U/
+  cp $ULOS/hamara/ulkokuori-valokartta-$VK.exr $U/
 fi
 if vaihe ranta; then
   rm -f $U/*-ennen-ranta.jpg(N)  # vanhat lähtökuvat pois: kuori_ranta lähtee aina tämän ajon tekstuureista
