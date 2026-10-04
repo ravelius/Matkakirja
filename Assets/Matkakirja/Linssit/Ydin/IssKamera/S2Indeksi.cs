@@ -32,7 +32,7 @@ namespace Matkakirja.Linssit.IssKamera
 
     public sealed class S2Indeksi
     {
-        public const string Osoite = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-indeksi/v1/indeksi.json";
+        public const string Osoite = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-indeksi/" + S2Maailma.Versio + "/indeksi.json";
         public string Versio;
         public byte[] Lut;
         public readonly Dictionary<string, S2IndeksiRuutu> Ruudut = new Dictionary<string, S2IndeksiRuutu>();
@@ -101,7 +101,9 @@ namespace Matkakirja.Linssit.IssKamera
     /// </summary>
     public sealed class S2Maailma
     {
-        public const string Osoite = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-indeksi/v1/maailma.json";
+        /// <summary>Indeksin versio (polku ja laitteen välimuistin tiedostonimet): vaihto vain tästä, vanha välimuisti ei jää käyttöön.</summary>
+        public const string Versio = "v1";
+        public const string Osoite = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-indeksi/" + Versio + "/maailma.json";
         public string Juuri, Merkinta;
         public readonly List<string> Etusija = new List<string>();
         /// <summary>Alue → tiedosto, rajaukset (bbox tai bboxit: päivämäärärajan ylittävä alue useana osana, aina w &lt; e) ja ruutumäärä.</summary>

@@ -320,7 +320,14 @@ namespace Matkakirja.Natiivi
                 S2Indeksi indeksi = null;
                 bool maailma = false;
                 string mJson = null;
-                yield return HaeTeksti(S2Maailma.Osoite, Path.Combine(juuri, "maailma.json"), t => mJson = t);
+                // Välimuisti versioittain (Karttaseppä 5.10.: v2 = toisen radan varakuvat): versioton tai vanha versio pois.
+                foreach (var vanha in Directory.GetFiles(juuri, "*.json"))
+                {
+                    var nimi = Path.GetFileName(vanha);
+                    if (System.Text.RegularExpressions.Regex.IsMatch(nimi, @"^(v\d+-)?(maailma|indeksi)[^/]*\.json$") && !nimi.StartsWith(S2Maailma.Versio + "-"))
+                        try { File.Delete(vanha); } catch { }
+                }
+                yield return HaeTeksti(S2Maailma.Osoite, Path.Combine(juuri, S2Maailma.Versio + "-maailma.json"), t => mJson = t);
                 if (!string.IsNullOrEmpty(mJson))
                 {
                     S2Maailma m = null;
@@ -330,7 +337,7 @@ namespace Matkakirja.Natiivi
                     foreach (var a in nakymassa)
                     {
                         string ij = null;
-                        yield return HaeTeksti(m.Osoitteeksi(a), Path.Combine(juuri, "indeksi-" + a + ".json"), t => ij = t);
+                        yield return HaeTeksti(m.Osoitteeksi(a), Path.Combine(juuri, S2Maailma.Versio + "-indeksi-" + a + ".json"), t => ij = t);
                         if (string.IsNullOrEmpty(ij)) continue;
                         try { osat.Add((a, S2Indeksi.Jasenna(ij))); } catch (Exception x) { Loki($"indeksi {a}: {x.Message}"); }
                     }
@@ -344,7 +351,7 @@ namespace Matkakirja.Natiivi
                 if (indeksi == null)
                 {
                     string ej = null;
-                    yield return HaeTeksti(S2Indeksi.Osoite, Path.Combine(juuri, "indeksi.json"), t => ej = t);
+                    yield return HaeTeksti(S2Indeksi.Osoite, Path.Combine(juuri, S2Maailma.Versio + "-indeksi.json"), t => ej = t);
                     if (string.IsNullOrEmpty(ej)) { Loki("indeksi: ei saatu"); yield break; }
                     indeksi = S2Indeksi.Jasenna(ej);
                 }
