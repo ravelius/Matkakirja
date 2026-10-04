@@ -192,15 +192,17 @@ namespace Matkakirja.Natiivi
         {
             if (!soi) return;
             var tila = Aanisoitin.Instanssi?.Tila;
-            bool kuuluu = paalla && !TestiMykistys.Paalla && (tila?.Aanimaisema ?? true);
+            // Äänikaappauksen ajan humina soi testimykistyksestä huolimatta (natiivikaappaus nollaa kaiuttimet itse).
+            bool mykka = TestiMykistys.Paalla && !AaniKaappaus.Kaynnissa;
+            bool kuuluu = paalla && !mykka && (tila?.Aanimaisema ?? true);
             float tausta = (float)(tila?.TaustanKerroin ?? 1);
             bool puhe = tila != null && tila.Voimassa < 0.999;
             bool kuuluisi = paalla && (tila?.Aanimaisema ?? true);
             tavoite[Humina] = kuuluisi ? HuminaVoima * tausta * (puhe ? HuminaVaisto : 1f) : 0f;
             tavoite[Radio] = kuuluisi && cupolassa && RadioKaytossa ? RadioVoima * tausta * (puhe ? RadioVaisto : 1f) : 0f;   // radio vain Cupolassa
             puheNyt = puhe;
-            float h = kuuluu && !TestiMykistys.Paalla ? tavoite[Humina] : 0f;
-            float r = kuuluu && !TestiMykistys.Paalla ? tavoite[Radio] : 0f;
+            float h = kuuluu ? tavoite[Humina] : 0f;
+            float r = kuuluu ? tavoite[Radio] : 0f;
             Liu(Humina, h, puhe ? VaistoS : NousuS);
             Liu(Radio, r, puhe ? VaistoS : NousuS);
         }
