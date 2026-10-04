@@ -2,7 +2,7 @@
 // nykyisen sijainnin reilun kokoisilla kirjaimilla, esim. ROOMA, ITALIA (lähin tunnistettava karttakohde, kaupunki, meri, vuori).
 // Maan nimi tulee kohteen alapuolelle"). Vain olemassa oleva paikkadata (Unity-puoli täyttää Aineiston: maat MaaOsumalla,
 // kaupungit, vuoristot, meret ja valtameret). Säännöt:
-//   maalla:  lähin kaupunki ≤ KaupunkiKm (saman maan kaupunki ensin) → KAUPUNKI / MAA; muuten lähin vuoristo ≤ VuoriKm → VUORI / MAA;
+//   maalla:  lähin saman maan kaupunki ≤ KaupunkiKm → KAUPUNKI / MAA; muuten lähin vuoristo ≤ VuoriKm → VUORI / MAA;
 //            muuten MAA (ja maa-rivi tyhjä);
 //   merellä (ei maata pisteessä): lähin nimetty meri ≤ MeriKm → MERI; muuten lähin valtameri (aina jokin).
 // Puhdas C#: Linssit-testit IssSijaintiTestit.
@@ -52,14 +52,10 @@ namespace Matkakirja.Linssit.Iss
             if (maa.HasValue)
             {
                 string m = Iso(maa.Value.Nimi);
-                var k = Lahin(a.Kaupungit, lat, lon, KaupunkiKm, maa.Value.Iso) ?? Lahin(a.Kaupungit, lat, lon, KaupunkiKm, null);
-                // Kaupungin oma maa (Päätoimittaja 4.10.: "BERLIINI / PUOLA" — alapiste Puolassa, lähin kaupunki Berliini): nimi ja
-                // maa kuuluvat aina yhteen; vain jos kaupungin maata ei tunneta, pisteen maa.
-                if (k.HasValue)
-                {
-                    string km = k.Value.Maa != null && k.Value.Maa != maa.Value.Iso ? a.MaanNimi?.Invoke(k.Value.Maa) : null;
-                    return (Iso(k.Value.Nimi), string.IsNullOrEmpty(km) ? m : Iso(km));
-                }
+                // Päätoimittaja 4.10.: maa on aina pisteen maa (jonka yllä ISS on) ja kaupunki lähin SAMAN maan kaupunki (ei "BERLIINI /
+                // PUOLA" eikä rajan takainen "LONTOO" Ranskan pisteessä). Kaupunki, jonka maata ei tunneta, kelpaa vain sellaisenaan.
+                var k = Lahin(a.Kaupungit, lat, lon, KaupunkiKm, maa.Value.Iso);
+                if (k.HasValue) return (Iso(k.Value.Nimi), m);
                 var v = Lahin(a.Vuoret, lat, lon, VuoriKm, null);
                 if (v.HasValue) return (Iso(v.Value.Nimi), m);
                 return (m, "");

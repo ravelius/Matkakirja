@@ -50,18 +50,20 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(("", ""), IssSijainti.Hae(null, 0, 0), "ei aineistoa");
         }
     
-        [Testi] static void KaupunkiOmanMaansaKanssa()
+        [Testi] static void PisteenMaaJaSamanMaanKaupunki()
         {
-            // Päätoimittaja 4.10.: alapiste Puolassa, lähin kaupunki Berliini → "BERLIINI / SAKSA", ei "BERLIINI / PUOLA".
+            // Päätoimittaja 4.10.: maa = pisteen maa, kaupunki samasta maasta; rajan takainen Berliini ei kelpaa Puolan pisteessä.
             var a = new IssSijainti.Aineisto
             {
                 Maa = (lat, lon) => lon > 14.6 ? ("POL", "Puola") : ("DEU", "Saksa"),
                 MaanNimi = iso => iso == "DEU" ? "Saksa" : iso == "POL" ? "Puola" : null,
             };
             a.Kaupungit.Add(new IssSijainti.Paikka("Berliini", 52.52, 13.40, "DEU", 3));
-            Oleta.Sama(("BERLIINI", "SAKSA"), IssSijainti.Hae(a, 52.40, 15.20), "Puolan puolelta");
+            a.Kaupungit.Add(new IssSijainti.Paikka("Poznań", 52.41, 16.93, "POL", 1));
+            Oleta.Sama(("POZNAŃ", "PUOLA"), IssSijainti.Hae(a, 52.40, 15.20), "Puolan puolelta");
             Oleta.Sama(("BERLIINI", "SAKSA"), IssSijainti.Hae(a, 52.50, 13.50));
-            Oleta.Sama(("Berliini", "Saksa"), IssSijainti.Nimet(a, 52.40, 15.20), "kuvateksti");
+            a.Kaupungit.RemoveAt(1);
+            Oleta.Sama(("PUOLA", ""), IssSijainti.Hae(a, 52.40, 15.20), "ei saman maan kaupunkia → maa");
         }
     }
 }
