@@ -234,6 +234,10 @@ namespace Matkakirja.Natiivi
                 if (!huoneenAanet) tavoite = 0;
                 foreach (var ap in tila.Aanet)
                 {
+                    // Massan yleisäänissä on myös soihtujen rätinä ja keskushallin ambienssi: ne ovat huoneen ääniä, eivät
+                    // "hiljaista ympäristöä" (tuuli, laineet), joten yleisnäkymässä ja esittelyssä ne vaikenevat.
+                    if (tila.Id == Aanimaisema.MassaTilaId && (nakyma.KohdeTila == null || nakyma.KertojaJakso >= 0)
+                        && (Ryhma(ap.AaniId, true) != "taustat" || ap.AaniId.EndsWith("-ambienssi", StringComparison.Ordinal))) continue;
                     double pankinVoimakkuus = rak.Aanet.TryGetValue(ap.AaniId, out var aani) ? aani.Voimakkuus : 1;
                     double taso01Raw = aanimaisemaPaalla ? tavoite * ap.Voimakkuus * pankinVoimakkuus
                         * Kerroin(HuoneKerroin, tila.Id) * Kerroin(TaustaKerroin, ap.AaniId) * Kerroin(RyhmaKerroin, Ryhma(ap.AaniId, true)) : 0;
