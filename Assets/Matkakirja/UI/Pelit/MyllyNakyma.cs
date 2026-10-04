@@ -66,7 +66,8 @@ namespace Matkakirja.Natiivi
         /// miten avautuu. Linnanrakentajan Blender-kerrokset samalla 24 pisteen tiedostolla, peli ei muutu.</summary>
         static PeliLauta[] Laudat => Peliluettelo.Mylly.Laudat;
         static Pelaaja Pelaaja => PeliOhjain.Instanssi != null && PeliOhjain.Instanssi.Matka != null ? PeliOhjain.Instanssi.Matka.Tila.Pelaaja : null;
-        static bool LautaKaytossa(int i) => Peliluettelo.Kaytossa(Pelaaja, Peliluettelo.Mylly, Laudat[i]);
+        /// <summary>Kehittäjätilassa kaikki laudat ilman ansaitsemista (Pelit-kategoria, omistaja 4.10.2026).</summary>
+        static bool LautaKaytossa(int i) => Asetukset.Kehittaja || Peliluettelo.Kaytossa(Pelaaja, Peliluettelo.Mylly, Laudat[i]);
         const string LautaAvain = "mylly-lauta";
         int lauta_ = -1;
         /// <summary>Valittu lauta (0 = Majatalo, oletus); viimeisin valinta muistetaan laitteella.</summary>

@@ -23,7 +23,7 @@ namespace Matkakirja.Natiivi
         public static bool PilleriValikko => true;
 
         /// <summary>Pääsivu ja sen alinäkymät (omistaja 29.9.2026 klo 20.2x: Matka-nappi ja Asetukset samaan paneeliin).</summary>
-        public enum Nakyma { Paa, Linssit, Aarteet, Matka, Asetukset }
+        public enum Nakyma { Paa, Linssit, Aarteet, Matka, Asetukset, Pelit }
         public Nakyma NykyinenNakyma { get; private set; }
 
         ScrollView vieritys;
@@ -61,6 +61,7 @@ namespace Matkakirja.Natiivi
             var oikea = Rakenne.El("mk-linssivalitsin__oikea", runko, PickingMode.Ignore);
             oikea.Add(lista);
             aarteet = Rakenne.El("mk-linssivalitsin__aarteet", oikea, PickingMode.Ignore);
+            LuoPelit(oikea);
             tiedot = Rakenne.El("mk-linssivalitsin__tiedot", vieritys, PickingMode.Ignore);
             asetukset = Rakenne.El("mk-linssivalitsin__asetukset", vieritys, PickingMode.Ignore);
             pohja = Rakenne.El("mk-pudotus__pohjarivi mk-linssivalitsin__pohja", vieritys, PickingMode.Ignore);
@@ -175,15 +176,18 @@ namespace Matkakirja.Natiivi
             asetukset.style.display = D(n == Nakyma.Asetukset);
             pohja.style.display = D(paa);
             lista.style.display = D(n == Nakyma.Linssit);
-            paneeli.EnableInClassList("mk-linssivalitsin--kapea", n == Nakyma.Linssit || n == Nakyma.Aarteet);
-            runko.style.display = D(n == Nakyma.Linssit || n == Nakyma.Aarteet);
+            paneeli.EnableInClassList("mk-linssivalitsin--kapea", n == Nakyma.Linssit || n == Nakyma.Aarteet || n == Nakyma.Pelit);
+            runko.style.display = D(n == Nakyma.Linssit || n == Nakyma.Aarteet || n == Nakyma.Pelit);
             aarteet.style.display = D(n == Nakyma.Aarteet);
+            pelit.style.display = D(n == Nakyma.Pelit);
             alaTakaisin.style.display = D(!paa);
             // Valikko v2 (omistaja 2.10.2026 klo 20.2x: "ota x ja kaikki vaakaviivat paitsi alin vaakaviiva pois"): pääsivulla ei
             // yläriviä (× ja sen alla viiva); valikko sulkeutuu ohinapautuksella. Alinäkymissä ‹ Takaisin ja otsikko jäävät.
             if (V2) { ylarivi.style.display = D(!paa); ylaSulje.style.display = DisplayStyle.None; }
-            otsikko.text = n switch { Nakyma.Linssit => "LINSSIT", Nakyma.Aarteet => "AARTEET", Nakyma.Matka => V2 ? "TIETÄJÄTASO" : "MATKA", Nakyma.Asetukset => "ASETUKSET", _ => "" };
+            otsikko.text = n switch { Nakyma.Linssit => "LINSSIT", Nakyma.Aarteet => "AARTEET", Nakyma.Matka => V2 ? "TIETÄJÄTASO" : "MATKA", Nakyma.Asetukset => "ASETUKSET", Nakyma.Pelit => "PELIT", _ => "" };
+            NaytaValilehdet(n);
             if (n == Nakyma.Aarteet) RakennaAarteet();
+            if (n == Nakyma.Pelit) RakennaPelit();
             if (n == Nakyma.Matka && V2) RakennaTasot();
             if (n == Nakyma.Asetukset)
             {
@@ -358,33 +362,35 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        void Osio(string nimi, int n, int kaikki)
+        void Osio(string nimi, int n, int kaikki, VisualElement isa = null)
         {
-            var r = Rakenne.El("mk-linssivalitsin__aarreosio", aarteet, PickingMode.Ignore);
+            var r = Rakenne.El("mk-linssivalitsin__aarreosio", isa ?? aarteet, PickingMode.Ignore);
             var o = Rakenne.Teksti(nimi.ToUpperInvariant(), "mk-selite__otsikko mk-linssivalitsin__valiotsikko", r);
             Kirjasimet.Aseta(o, Kirjasin.Kone);
+            if (n < 0) return; // ei lukua (Pelit: Lentopeli)
             var l = Rakenne.Teksti(kaikki >= 0 ? $"{n} / {kaikki}" : n.ToString(), "mk-linssivalitsin__aarreluku", r);
             Kirjasimet.Aseta(l, Kirjasin.Kone);
         }
 
-        void AarreRivi(string id, string nimi, string kuvaUrl, string selite, Action nayta)
+        void AarreRivi(string id, string nimi, string kuvaUrl, string selite, Action nayta, VisualElement isa = null, string ikoni = null)
         {
+            ikoni ??= Ikonit.Laukku;
             ensimmainenAarre ??= (id, kuvaUrl, nimi, selite);
             Button b = null;
             Label tila = null;
             b = Rakenne.Nappi(null, "mk-linssirivi mk-linssivalitsin__aarrerivi mk-linssirivi--aktivoi", () =>
             {
                 if (V2) { nayta?.Invoke(); return; } // yksi ikkuna: napautus avaa kuvan suoraan (omistaja 21.4x)
-                if (esiId != id) { Esikatsele(id, b, tila, kuvaUrl, nimi, selite, "Näytä", nayta, Ikonit.Laukku); return; }
+                if (esiId != id) { Esikatsele(id, b, tila, kuvaUrl, nimi, selite, "Näytä", nayta, ikoni); return; }
                 nayta?.Invoke();
-            }, aarteet);
+            }, isa ?? aarteet);
             b.tooltip = nimi;
             // Valikko v2: rivikuvakkeena aarteen kuva pyöreänä (web kokoelma-rivi-kuvake, kuvaPieni), kuten Linssit-riveillä;
             // laukkukuvake, kun kuvaa ei ole tai se ei lataudu.
             if (V2)
             {
                 var kehys = Rakenne.El("mk-linssirivi__ikoni mk-linssirivi__kuva", b, PickingMode.Ignore);
-                var vara = new SvgIkoni(Ikonit.Laukku);
+                var vara = new SvgIkoni(ikoni);
                 vara.AddToClassList("mk-linssirivi__varaikoni");
                 kehys.Add(vara);
                 if (!string.IsNullOrEmpty(kuvaUrl))
@@ -410,7 +416,7 @@ namespace Matkakirja.Natiivi
 
         // --- testikomento -------------------------------------------------------------------------
 
-        /// <summary>Testi (ui pilleri linssit|aarteet|matka|tasot|asetukset|paa [n]): näkymä auki ja n:s rivi napautettuna kerran (esikatselu).</summary>
+        /// <summary>Testi (ui pilleri linssit|pelit|aarteet|matka|tasot|asetukset|paa [n]): näkymä auki ja n:s rivi napautettuna kerran (esikatselu).</summary>
         public string TestaaNakyma(string nimi, int rivi)
         {
             if (!Auki) Avaa();
@@ -428,9 +434,9 @@ namespace Matkakirja.Natiivi
                 }).StartingIn(300);
                 return $"rivi {haku} napautettu";
             }
-            NaytaNakyma(nimi switch { "linssit" => Nakyma.Linssit, "aarteet" => Nakyma.Aarteet, "matka" or "tasot" => Nakyma.Matka, "asetukset" => Nakyma.Asetukset, _ => Nakyma.Paa });
+            NaytaNakyma(nimi switch { "linssit" => Nakyma.Linssit, "aarteet" => Nakyma.Aarteet, "pelit" => Nakyma.Pelit, "matka" or "tasot" => Nakyma.Matka, "asetukset" => Nakyma.Asetukset, _ => Nakyma.Paa });
             if (rivi < 0) return $"näkymä {NykyinenNakyma}";
-            var isa = NykyinenNakyma == Nakyma.Linssit ? lista : aarteet;
+            var isa = NykyinenNakyma == Nakyma.Linssit ? lista : NykyinenNakyma == Nakyma.Pelit ? pelit : aarteet;
             var napit = isa.Query<Button>(className: "mk-linssirivi").ToList();
             if (rivi >= napit.Count) return $"näkymä {NykyinenNakyma}, rivejä {napit.Count}";
             var nappi = napit[rivi];

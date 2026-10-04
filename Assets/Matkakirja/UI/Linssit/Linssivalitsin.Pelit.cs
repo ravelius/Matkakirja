@@ -1,0 +1,96 @@
+// PELIT-KATEGORIA (omistaja 4.10.2026 klo 18.3x Päätoimittajan kautta: "Kehittäjällä pitää olla kaikki minipelit suoraan pelien
+// alla. Tee uusi peli kategoria linssien viereen saman napin alle joka on kartan yläreunassa"; Pelikoodari, Natiivi-UI:n kuittaus).
+// Kartan Linssit-nappi avaa saman kapean näkymän; ylärivin otsikon tilalla välilehdet LINSSIT | PELIT karttaselitteen pohjalla
+// (Kartta.uss .mk-selite__valilehdet / __valilehti, valittu mk-valittu). Kun toinen kategoria on tyhjä, ylärivillä on pelkkä
+// otsikko kuten ennen (ei tyhjää näkymää). Pelit-rivit Aarteiden rivipohjalla (mk-linssirivi, osiot mk-linssivalitsin__aarreosio).
+//   Kehittäjä (Asetukset.Kehittaja): kaikki minipelit ilman ansaitsemista — Mylly jokaisella laudalla (valintakortissa vastustaja)
+//                                     ja Lentopeli (vaihe 1, lähtö pelaajan kaupungista tai Ateenasta).
+//   Pelaaja: vain avatut pelit — Mylly kohtaamisen (Berliini) jälkeen, laudat jotka ovat käytössä. Aarteiden Pelit-osio ennallaan.
+using System.Collections.Generic;
+using System.Linq;
+using Matkakirja.Peli;
+using Matkakirja.Peli.Pelit;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+namespace Matkakirja.Natiivi
+{
+    public sealed partial class Linssivalitsin
+    {
+        VisualElement pelit, valilehdet;
+        Button valilehtiLinssit, valilehtiPelit;
+
+        static Pelaaja PeliPelaaja => PeliOhjain.Instanssi?.Matka?.Tila.Pelaaja;
+
+        /// <summary>Myllyn laudat, jotka saa avata Pelit-näkymästä: kehittäjällä kaikki, pelaajalla kohtaamisen jälkeen käytössä olevat.</summary>
+        static List<PeliLauta> MyllynLaudat()
+        {
+            var p = PeliPelaaja;
+            var m = Peliluettelo.Mylly;
+            if (Asetukset.Kehittaja) return m.Laudat.ToList();
+            if (p == null || !Peliluettelo.Pelattu(p, m.Id)) return new List<PeliLauta>();
+            return m.Laudat.Where(l => Peliluettelo.Kaytossa(p, m, l)).ToList();
+        }
+
+        /// <summary>Pelit-kategoriassa on jotain (Karttaselitteen Linssit-nappi näkyy myös ilman linssejä).</summary>
+        public static bool PelejaAvattu => Asetukset.Kehittaja || MyllynLaudat().Count > 0;
+
+        static bool LinssejaOn => LinssiUi.Rekisteri?.Valittavat.Count > 0;
+
+        void LuoPelit(VisualElement oikea)
+        {
+            pelit = Rakenne.El("mk-linssivalitsin__aarteet mk-linssivalitsin__pelit", oikea, PickingMode.Ignore);
+            pelit.style.display = DisplayStyle.None;
+            valilehdet = Rakenne.El("mk-selite__valilehdet", null, PickingMode.Ignore);
+            ylarivi.Insert(ylarivi.IndexOf(otsikko), valilehdet);
+            valilehtiLinssit = Rakenne.Nappi("LINSSIT", "mk-selite__valilehti", () => NaytaNakyma(Nakyma.Linssit), valilehdet);
+            valilehtiPelit = Rakenne.Nappi("PELIT", "mk-selite__valilehti", () => NaytaNakyma(Nakyma.Pelit), valilehdet);
+            valilehdet.style.display = DisplayStyle.None;
+        }
+
+        /// <summary>Linssit ja Pelit: välilehdet otsikon tilalle, kun molemmissa on sisältöä; muuten pelkkä otsikko.</summary>
+        void NaytaValilehdet(Nakyma n)
+        {
+            bool kumpikin = (n == Nakyma.Linssit || n == Nakyma.Pelit) && LinssejaOn && PelejaAvattu;
+            valilehdet.style.display = kumpikin ? DisplayStyle.Flex : DisplayStyle.None;
+            otsikko.style.display = kumpikin ? DisplayStyle.None : DisplayStyle.Flex;
+            valilehtiLinssit.EnableInClassList("mk-valittu", n == Nakyma.Linssit);
+            valilehtiPelit.EnableInClassList("mk-valittu", n == Nakyma.Pelit);
+        }
+
+        void RakennaPelit()
+        {
+            pelit.Clear();
+            var laudat = MyllynLaudat();
+            if (laudat.Count > 0)
+            {
+                var m = Peliluettelo.Mylly;
+                Osio(m.Nimi, laudat.Count, m.Laudat.Length, pelit);
+                foreach (var l in laudat)
+                {
+                    string id = m.Id + ":" + l.Id;
+                    AarreRivi("peli:" + id, l.Nimi, null, l.Historia, () => { Sulje(); MyllyNakyma.AvaaPeli(id); }, pelit, Ikonit.Viiva["noppa"]);
+                }
+            }
+            if (Asetukset.Kehittaja)
+            {
+                Osio("Lentopeli", -1, -1, pelit);
+                AarreRivi("peli:lentopeli", "Lentopeli", null, null, AloitaLentopeli, pelit, Ikonit.Viiva["kone"]);
+            }
+            if (laudat.Count == 0 && !Asetukset.Kehittaja)
+                Rakenne.Teksti("Ei vielä pelejä.", "mk-linssivalitsin__tyhja", pelit);
+        }
+
+        /// <summary>Lentopeli vaihe 1 kuten "lentopeli aloita": lähtö pelaajan kaupungista, jos sillä on kotirengas, muuten Ateenasta.</summary>
+        void AloitaLentopeli()
+        {
+            Sulje();
+            var np = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.nappula : null;
+            if (np == null) return;
+            var p = PeliPelaaja;
+            string kaupunki = p != null && p.Sijainti.Kaupungissa ? p.Sijainti.Kaupunki : null;
+            bool ok = (kaupunki != null && np.AloitaLentopeli(kaupunki)) || np.AloitaLentopeli("ateena");
+            Debug.Log($"MATKAKIRJA ui pelit: lentopeli {(ok ? "aloitettu" : "ei voitu aloittaa")} ({kaupunki ?? "ei kaupunkia"} → {Nappula.LentopeliKuvaus()})");
+        }
+    }
+}
