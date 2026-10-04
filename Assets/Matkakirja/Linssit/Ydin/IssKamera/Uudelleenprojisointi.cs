@@ -217,7 +217,7 @@ namespace Matkakirja.Linssit.IssKamera
                     n++;
                     for (int i = 0; i + 2 < l.Length; i += 3 * askel)
                     {
-                        if (l[i] == 0 && l[i + 1] == 0 && l[i + 2] == 0) continue;
+                        if (l[i] <= NodataRaja && l[i + 1] <= NodataRaja && l[i + 2] <= NodataRaja) continue;
                         r.Add(l[i]); g.Add(l[i + 1]); b.Add(l[i + 2]);
                     }
                 }
@@ -252,7 +252,13 @@ namespace Matkakirja.Linssit.IssKamera
             return i >= 255 ? lut[255] : lut[i] * (1 - a) + lut[i + 1] * a;
         }
 
-        static bool Musta((byte r, byte g, byte b) p) => p.r == 0 && p.g == 0 && p.b == 0;
+        /// <summary>
+        /// Nodata: TCI:n nodata on 0, mutta JPEG-pakattu COG jättää rataleveyden reunaan lähes mustia pikseleitä (simu e3f98b5b:
+        /// kahden radan välinen kiila piirtyi datana ja usva teki siitä tummansinisen kiilan Saharaan ja Amazoniaan). Tumminkin
+        /// todellinen pinta (syvä vesi, varjo) on TCI:ssä selvästi yli NodataRajan.
+        /// </summary>
+        static bool Musta((byte r, byte g, byte b) p) => p.r <= NodataRaja && p.g <= NodataRaja && p.b <= NodataRaja;
+        public const byte NodataRaja = 6;
         static byte Seka(byte a, byte b, byte c, byte d, double ax, double ay)
             => (byte)Math.Round((a * (1 - ax) + b * ax) * (1 - ay) + (c * (1 - ax) + d * ax) * ay);
 
