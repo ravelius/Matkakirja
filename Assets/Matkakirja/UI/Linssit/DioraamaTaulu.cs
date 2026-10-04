@@ -26,7 +26,7 @@ namespace Matkakirja.Natiivi
         readonly Label otsikko, teksti, lainaus, lahde, laskuri, seuraava, puhuja;
         readonly LiviaKuva pulu;
         readonly List<Label> laput = new List<Label>();
-        readonly List<(Label Lappu, Rect Rect)> sijoitukset = new List<(Label, Rect)>();
+        readonly List<VisualElement> nastat = new List<VisualElement>(), viivat = new List<VisualElement>();
 
         bool puluPiilotettu;
         readonly Button kuoriNappi, paluuNappi;
@@ -451,6 +451,7 @@ namespace Matkakirja.Natiivi
                 puluAlue.style.display = DisplayStyle.None;
                 uusintaNappi.style.display = DisplayStyle.None;
                 kertojaLaatikko.RemoveFromClassList("mk-nakyy");
+                PiilotaLaput();
                 LopetaKuunnelma("ei näkymää");
                 return;
             }
@@ -474,19 +475,18 @@ namespace Matkakirja.Natiivi
                 lauta.style.display = DisplayStyle.None;
                 pulu.style.display = DisplayStyle.None;
                 puluAlue.style.display = DisplayStyle.None;
-                for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
+                PiilotaLaput();
                 LopetaKuunnelma("kierros");
                 return;
             }
             var infoTila = nakyma.KohdeTila != null ? rakennus.Tila(nakyma.KohdeTila) : null;
-            if (infoTila?.Infotaulu != null) { PaivitaInfotaulu(linssi, infoTila, nakyma, tNyt); return; }
+            if (infoTila?.Infotaulu != null) { PaivitaInfotaulu(linssi, infoTila, nakyma, tNyt, kamera); return; }
             // Uusi linna, yleisnäkymä (Natiivi-UI:n katselmus 30.9.): Pulu vasempaan alakulmaan, ei linnan päälle; napautus
             // näyttää linnan pulu.teksti-kuplan, jos sellainen on.
             if (nakyma.KohdeTila == null && rakennus.Kertoja != null && rakennus.Kertoja.Count > 0)
             {
                 // Tilasta palattaessa kuunnelma loppuu (dccb82a5: keittiön kaistale jäi yleisnäkymään).
                 LopetaKuunnelma("yleisnäkymä");
-                for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
                 lauta.style.display = DisplayStyle.None;
                 float ph2 = juuri.layout.height; if (float.IsNaN(ph2) || ph2 <= 0) ph2 = Screen.height;
                 const float koko2 = 64f;
@@ -501,6 +501,8 @@ namespace Matkakirja.Natiivi
                     ala2 = Screen.safeArea.yMin * sk2;
                 }
                 pulu.style.left = vasen2 + 18; pulu.style.top = ph2 - ala2 - koko2 - 96;
+                // Nimilaput (omistaja 4.10. 18.4x): aina yleisnäkymässä esittelyn jälkeen; Pulun alue varataan lapuilta.
+                PaivitaLaput(rakennus, kamera, nakyma, new Rect(vasen2 + 8, ph2 - ala2 - koko2 - 106, koko2 + 20, koko2 + 20));
                 puluKupla = rakennus.PuluTeksti; puluAani = rakennus.PuluAani;
                 bool kupla = !string.IsNullOrEmpty(puluKupla);
                 puluAlue.style.display = kupla ? DisplayStyle.Flex : DisplayStyle.None;
@@ -606,14 +608,192 @@ namespace Matkakirja.Natiivi
             seuraava.style.display = seuraavaRivi != null ? DisplayStyle.Flex : DisplayStyle.None;
         }
 
+        // KESKIAIKAISET LAPUT (omistaja 4.10. 20.4x: "linna vaaka … laput vielä enemmän keskiaikaisen näköisiä … mahdollisimman
+        // lähellä selitettävää kohdetta"): tyylit a (pergamentti + sinettivaha), b (tammilauta, kultakirjaimet), c (käsikirjoitus +
+        // initiaali) Linnanrakentajan toimituksesta olavinlinna-laput-v1 (Resources/LinnaLaput/<tyyli>/, mitat.json; fontit
+        // Resources/Fontit, OFL). Kortti ja nimilaput samalla tyylillä; kortti selitettävän kohteen viereen osoitinviivalla.
+        // Omistaja 4.10. 21.1x valitsi tyylin C (käsikirjoituksen sivu): se on uuden linnan (kertojan esittely) lappujen tyyli;
+        // vanhat dioraamat pysyvät paperikortissa. Tyylikirjaan linnan teemana Natiivi-UI:n kuittauksella.
+        const string LinnanTyyli = "c";
+        string LappuTyyli;
+        void PaivitaTyyli(Rakennus r) => LappuTyyli = r?.Kertoja != null && r.Kertoja.Count > 0 ? LinnanTyyli : null;
+        StyleColor alkuTausta, alkuReuna, alkuMuste, alkuPehmea;
+        bool alkuTallessa;
+        string kaytossaTyyli = "", lapuissaTyyli = "";
+        sealed class KeskiaikaTyyli
+        {
+            public Texture2D Kortti, Nimilappu, Sinetti, Initiaali;
+            public int[] KorttiSlice = { 0, 0, 0, 0 }, LappuSlice = { 0, 0, 0, 0 };
+            public float[] KorttiSis = { 18, 16, 18, 16 }, LappuSis = { 9, 3, 9, 3 };
+            public Color Otsikko, Teksti, Kapiteeli, LappuTeksti, Viiva, InitiaaliVari;
+        }
+        readonly Dictionary<string, KeskiaikaTyyli> keskiaikaTyylit = new Dictionary<string, KeskiaikaTyyli>();
+        VisualElement korttiViiva, korttiNasta, sinettiEl, initiaaliEl;
+        Label initiaaliKirjain;
+        bool initiaaliKaytossa;
+
+        // Värit tulevat datasta (mitat.json), eivät koodin vakioista: heksa → Color Vector4-muunnoksella.
+        static Color Heksa(string h, Color oletus)
+        {
+            if (string.IsNullOrEmpty(h) || h[0] != '#' || h.Length < 7) return oletus;
+            try
+            {
+                float Kanava(int i) => System.Convert.ToInt32(h.Substring(i, 2), 16) / 255f;
+                return (Color)new Vector4(Kanava(1), Kanava(3), Kanava(5), h.Length >= 9 ? Kanava(7) : 1f);
+            }
+            catch (System.FormatException) { return oletus; }
+        }
+
+        KeskiaikaTyyli KeskiaikaTyyliHae(string t)
+        {
+            if (keskiaikaTyylit.TryGetValue(t, out var k)) return k;
+            k = new KeskiaikaTyyli
+            {
+                Kortti = Resources.Load<Texture2D>($"LinnaLaput/{t}/kortti"), Nimilappu = Resources.Load<Texture2D>($"LinnaLaput/{t}/nimilappu"),
+                Sinetti = Resources.Load<Texture2D>($"LinnaLaput/{t}/sinetti"), Initiaali = Resources.Load<Texture2D>($"LinnaLaput/{t}/initiaali"),
+                Otsikko = Teksti, Teksti = Teksti, Kapiteeli = Teksti, LappuTeksti = Teksti, Viiva = Pergamentti, InitiaaliVari = Teksti,
+            };
+            var mitat = Resources.Load<TextAsset>("LinnaLaput/mitat");
+            try
+            {
+                var juuriJ = mitat != null ? Matkakirja.Peli.MiniJson.Jasenna(mitat.text) as Dictionary<string, object> : null;
+                var o = juuriJ != null && juuriJ.TryGetValue(t, out var ov) ? ov as Dictionary<string, object> : null;
+                if (juuriJ != null && juuriJ.TryGetValue("fontit", out var fv) && fv is Dictionary<string, object> fd && fd.TryGetValue("otsikko", out var fo) && fo is string fs)
+                    Kirjasimet.AsetaLinnanOtsikko("Fontit/" + System.IO.Path.GetFileNameWithoutExtension(fs));
+                int[] Luvut(object x, int[] oletus) { if (!(x is List<object> l) || l.Count < 4) return oletus; var r = new int[4]; for (int i = 0; i < 4; i++) r[i] = System.Convert.ToInt32(l[i]); return r; }
+                float[] Desim(object x, float[] oletus) { if (!(x is List<object> l) || l.Count < 4) return oletus; var r = new float[4]; for (int i = 0; i < 4; i++) r[i] = System.Convert.ToSingle(l[i]); return r; }
+                object K(Dictionary<string, object> d, params string[] polku) { object c = d; foreach (var p in polku) { if (!(c is Dictionary<string, object> dd) || !dd.TryGetValue(p, out c)) return null; } return c; }
+                if (o != null)
+                {
+                    k.KorttiSlice = Luvut(K(o, "kortti", "slice"), k.KorttiSlice); k.LappuSlice = Luvut(K(o, "nimilappu", "slice"), k.LappuSlice);
+                    k.KorttiSis = Desim(K(o, "sisennys", "kortti"), k.KorttiSis); k.LappuSis = Desim(K(o, "sisennys", "nimilappu"), k.LappuSis);
+                    k.Otsikko = Heksa(K(o, "varit", "otsikko") as string, k.Otsikko); k.Teksti = Heksa(K(o, "varit", "teksti") as string, k.Teksti);
+                    k.Kapiteeli = Heksa(K(o, "varit", "kapiteeli") as string, k.Kapiteeli); k.LappuTeksti = Heksa(K(o, "varit", "nimilappu") as string, k.LappuTeksti);
+                    k.Viiva = Heksa(K(o, "varit", "viiva") as string, k.Viiva); k.InitiaaliVari = Heksa(K(o, "initiaali", "vari") as string, k.Otsikko);
+                }
+            }
+            catch (System.Exception e) { Debug.LogWarning("MATKAKIRJA linssit: lapputyyli " + t + ": mitat.json: " + e.Message); }
+            Debug.Log($"MATKAKIRJA linssit: poikki: lapputyyli {t}: kortti {(k.Kortti != null ? k.Kortti.width + "×" + k.Kortti.height : "puuttuu")}, nimilappu {(k.Nimilappu != null ? "ok" : "puuttuu")}, mitat {(mitat != null ? "ok" : "puuttuu")}");
+            keskiaikaTyylit[t] = k;
+            return k;
+        }
+
+        static void AsetaTausta(VisualElement e, Texture2D tex, int[] slice)
+        {
+            e.style.backgroundImage = tex != null ? new StyleBackground(tex) : (StyleBackground)StyleKeyword.Null;
+            e.style.unitySliceLeft = slice[0]; e.style.unitySliceTop = slice[1]; e.style.unitySliceRight = slice[2]; e.style.unitySliceBottom = slice[3];
+            e.style.unitySliceScale = 1f / 3f; // @3x-kuvat pisteinä
+            e.style.backgroundColor = StyleKeyword.Null;
+            e.style.borderTopWidth = e.style.borderBottomWidth = e.style.borderLeftWidth = e.style.borderRightWidth = 0;
+        }
+
+        void AsetaKeskiaikainen()
+        {
+            // Paperikortin alkuperäiset värit talteen ennen ensimmäistä vaihtoa (ei uusia värivakioita, pohjavahti).
+            if (!alkuTallessa)
+            {
+                alkuTallessa = true; alkuTausta = lauta.style.backgroundColor; alkuReuna = lauta.style.borderTopColor;
+                alkuMuste = otsikko.style.color; alkuPehmea = laskuri.style.color;
+            }
+            if (string.IsNullOrEmpty(LappuTyyli))
+            {
+                lauta.style.backgroundImage = StyleKeyword.Null;
+                lauta.style.backgroundColor = alkuTausta;
+                lauta.style.borderTopColor = lauta.style.borderBottomColor = lauta.style.borderLeftColor = lauta.style.borderRightColor = alkuReuna;
+                lauta.style.borderTopWidth = lauta.style.borderBottomWidth = lauta.style.borderLeftWidth = lauta.style.borderRightWidth = 8;
+                otsikko.style.color = teksti.style.color = lainaus.style.color = kuunteleNappi.style.color = alkuMuste;
+                laskuri.style.color = lahde.style.color = seuraava.style.color = alkuPehmea; puhuja.style.color = StyleKeyword.Null;
+                Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava); Kirjasimet.Aseta(teksti, Kirjasin.Luku); Kirjasimet.Aseta(lainaus, Kirjasin.LukuKursiivi);
+                Kirjasimet.Aseta(puhuja, Kirjasin.Kone);
+                otsikko.style.fontSize = 16; otsikko.style.marginLeft = 0; puhuja.style.marginLeft = 0;
+                lauta.style.paddingTop = 12; lauta.style.paddingBottom = 12; lauta.style.paddingLeft = 14; lauta.style.paddingRight = 14;
+                if (sinettiEl != null) { sinettiEl.style.display = DisplayStyle.None; initiaaliEl.style.display = DisplayStyle.None; initiaaliKaytossa = false; teksti.style.marginLeft = 0; }
+                return;
+            }
+            var k = KeskiaikaTyyliHae(LappuTyyli);
+            AsetaTausta(lauta, k.Kortti, k.KorttiSlice);
+            lauta.style.paddingLeft = k.KorttiSis[0]; lauta.style.paddingTop = k.KorttiSis[1]; lauta.style.paddingRight = k.KorttiSis[2]; lauta.style.paddingBottom = k.KorttiSis[3];
+            Kirjasimet.Aseta(otsikko, Kirjasin.Goottilainen); Kirjasimet.Aseta(teksti, Kirjasin.Antiikva); Kirjasimet.Aseta(lainaus, Kirjasin.AntiikvaKursiivi);
+            Kirjasimet.Aseta(puhuja, Kirjasin.Antiikva);
+            otsikko.style.fontSize = 22;
+            otsikko.style.color = k.Otsikko; teksti.style.color = lainaus.style.color = kuunteleNappi.style.color = k.Teksti;
+            puhuja.style.color = laskuri.style.color = lahde.style.color = seuraava.style.color = k.Kapiteeli;
+            if (korttiViiva == null)
+            {
+                korttiViiva = Rakenne.El("mk-dioraama__lappuviiva", lauta, PickingMode.Ignore);
+                korttiViiva.style.position = Position.Absolute; korttiViiva.style.height = 1.5f;
+                korttiViiva.style.transformOrigin = new TransformOrigin(Length.Percent(0), Length.Percent(50));
+                korttiNasta = Rakenne.El("mk-dioraama__lappunasta", lauta, PickingMode.Ignore);
+                korttiNasta.style.position = Position.Absolute; korttiNasta.style.width = 7; korttiNasta.style.height = 7;
+                korttiNasta.style.borderTopLeftRadius = korttiNasta.style.borderTopRightRadius = korttiNasta.style.borderBottomLeftRadius = korttiNasta.style.borderBottomRightRadius = 4;
+                sinettiEl = Rakenne.El("mk-dioraama__sinetti", lauta, PickingMode.Ignore);
+                sinettiEl.style.position = Position.Absolute; sinettiEl.style.width = 32; sinettiEl.style.height = 32; sinettiEl.style.right = -10; sinettiEl.style.bottom = -10;
+                initiaaliEl = Rakenne.El("mk-dioraama__initiaali", lauta, PickingMode.Ignore);
+                initiaaliEl.style.position = Position.Absolute; initiaaliEl.style.width = 28; initiaaliEl.style.height = 28;
+                initiaaliKirjain = Rakenne.Teksti("", "mk-dioraama__initiaalikirjain", initiaaliEl);
+                initiaaliKirjain.style.unityTextAlign = TextAnchor.MiddleCenter; initiaaliKirjain.style.fontSize = 22;
+                initiaaliKirjain.style.width = Length.Percent(100); initiaaliKirjain.style.height = Length.Percent(100);
+                Kirjasimet.Aseta(initiaaliKirjain, Kirjasin.Goottilainen);
+            }
+            korttiViiva.style.backgroundColor = k.Viiva; korttiNasta.style.backgroundColor = k.Viiva;
+            sinettiEl.style.backgroundImage = k.Sinetti != null ? new StyleBackground(k.Sinetti) : (StyleBackground)StyleKeyword.Null;
+            sinettiEl.style.display = k.Sinetti != null ? DisplayStyle.Flex : DisplayStyle.None;
+            initiaaliEl.style.backgroundImage = k.Initiaali != null ? new StyleBackground(k.Initiaali) : (StyleBackground)StyleKeyword.Null;
+            initiaaliKaytossa = k.Initiaali != null;
+            initiaaliEl.style.display = initiaaliKaytossa ? DisplayStyle.Flex : DisplayStyle.None;
+            initiaaliEl.style.left = k.KorttiSis[0]; initiaaliEl.style.top = k.KorttiSis[1];
+            initiaaliKirjain.style.color = k.InitiaaliVari;
+            // Initiaali aloittaa leipätekstin kuten käsikirjoituksessa (kuvatarkistus 4.10. 21.4x: otsikosta lohkaistu kirjain
+            // luki "appeli"); teksti riippuu initiaalin oikealla puolella, otsikko ja kapiteeli ehjinä.
+            teksti.style.marginLeft = k.Initiaali != null ? 34f : 0f;
+            otsikko.style.marginLeft = 0; puhuja.style.marginLeft = 0;
+        }
+
+        void AsetaNimilappuTyyli(Label lappu, VisualElement nasta, VisualElement viiva)
+        {
+            if (string.IsNullOrEmpty(LappuTyyli))
+            {
+                lappu.style.backgroundImage = StyleKeyword.Null; lappu.style.backgroundColor = Pergamentti; lappu.style.color = Teksti;
+                Kirjasimet.Aseta(lappu, Kirjasin.Kone); lappu.style.fontSize = 12;
+                lappu.style.paddingLeft = 8; lappu.style.paddingRight = 8; lappu.style.paddingTop = 3; lappu.style.paddingBottom = 3;
+                nasta.style.backgroundColor = Pergamentti; viiva.style.backgroundColor = Pergamentti;
+                return;
+            }
+            var k = KeskiaikaTyyliHae(LappuTyyli);
+            AsetaTausta(lappu, k.Nimilappu, k.LappuSlice);
+            lappu.style.color = k.LappuTeksti;
+            Kirjasimet.Aseta(lappu, Kirjasin.Goottilainen); lappu.style.fontSize = 15;
+            lappu.style.paddingLeft = k.LappuSis[0]; lappu.style.paddingTop = k.LappuSis[1]; lappu.style.paddingRight = k.LappuSis[2]; lappu.style.paddingBottom = k.LappuSis[3];
+            nasta.style.backgroundColor = k.Viiva; viiva.style.backgroundColor = k.Viiva;
+        }
+
+        /// <summary>Tilan leikkausikkunan rajat paneelin koordinaateissa (leikkauslaatikon kulmat ruudulle), tai null.</summary>
+        Rect? LeikkausRuudulla(Camera kamera, Tila tila)
+        {
+            if (kamera == null || juuri.panel == null) return null;
+            var a = tila.LeikkausMin ?? tila.RajaMin; var b = tila.LeikkausMax ?? tila.RajaMax;
+            float x0 = float.MaxValue, y0 = float.MaxValue, x1 = float.MinValue, y1 = float.MinValue;
+            for (int i = 0; i < 8; i++)
+            {
+                var v = new Matkakirja.Linssit.Dioraama.V3((i & 1) == 0 ? a.X : b.X, (i & 2) == 0 ? a.Y : b.Y, (i & 4) == 0 ? a.Z : b.Z);
+                var r = kamera.WorldToScreenPoint(DioraamaNayttamo.UnityPiste(v));
+                if (r.z <= 0f) continue;
+                var p = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(r.x, Screen.height - r.y));
+                x0 = Mathf.Min(x0, p.x); y0 = Mathf.Min(y0, p.y); x1 = Mathf.Max(x1, p.x); y1 = Mathf.Max(y1, p.y);
+            }
+            return x1 > x0 ? Rect.MinMaxRect(x0, y0, x1, y1) : (Rect?)null;
+        }
+
         /// <summary>
         /// UUSI LINNA (omistaja 30.9.2026): huoneen infotaulu ruudun alaosaan (nimi, 1–2 riviä, lähteet) ja aktiivisen
         /// etsintävaiheen rivi korostettuna; Pulu istuu taulun vasemmassa yläkulmassa, napautus näyttää pulu.teksti-kuplan.
         /// Näkyy, kun tilaan on lennetty perille (leikkausikkuna auki).
         /// </summary>
-        void PaivitaInfotaulu(PoikkileikkausLinssi linssi, Tila tila, Nakyma nakyma, double t)
+        void PaivitaInfotaulu(PoikkileikkausLinssi linssi, Tila tila, Nakyma nakyma, double t, Camera kamera = null)
         {
-            for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
+            PaivitaTyyli(DioraamaSovitin.Linssi?.Rakennus);
+            if ((LappuTyyli ?? "") != kaytossaTyyli) { kaytossaTyyli = LappuTyyli ?? ""; AsetaKeskiaikainen(); }
+            PiilotaLaput();
             // 4.10. (iPad v28: huoneesta toiseen siirryttäessä k1 alkoi kahdesti, myös BUILD 137): siirtymän alussa leikkaus on
             // vielä EDELLISEN tilan (osuus ≈ 1) → perillä vain, kun leikkaus on tämän tilan.
             var leikkaus = linssi.LeikkausHetkella(t);
@@ -630,10 +810,51 @@ namespace Matkakirja.Natiivi
             float tauluLeveys = float.IsNaN(lauta.layout.width) || lauta.layout.width <= 0 ? 300f : lauta.layout.width;
             float tauluKorkeus = float.IsNaN(lauta.layout.height) || lauta.layout.height <= 0 ? 140f : lauta.layout.height;
             float x = (pw - tauluLeveys) * 0.5f, y = ph - tauluKorkeus - Mathf.Max(24f, ph * 0.05f);
+            Vector2? kohdeRuutu = null;
+            if (!string.IsNullOrEmpty(LappuTyyli) && kamera != null && juuri.panel != null)
+            {
+                // Kortti selitettävän kohteen viereen (tilan elävä kohde, muuten leikkauksen keskus), sille puolelle, jossa tilaa.
+                var lr = LeikkausRuudulla(kamera, tila);
+                Vector2? kp = null;
+                if (tila.Elava != null)
+                {
+                    var r = kamera.WorldToScreenPoint(DioraamaNayttamo.UnityPiste(tila.Elava.Kohde));
+                    if (r.z > 0f) kp = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(r.x, Screen.height - r.y));
+                }
+                if (!kp.HasValue && lr.HasValue) kp = lr.Value.center;
+                if (kp.HasValue)
+                {
+                    kohdeRuutu = kp;
+                    float skK = Screen.width > 0 ? pw / Screen.width : 1f;
+                    float vasenT = 12f + Screen.safeArea.xMin * skK, oikeaT = pw - 12f - (Screen.width - Screen.safeArea.xMax) * skK;
+                    float ylaT = 70f + (Screen.height - Screen.safeArea.yMax) * skK, alaT = ph - 12f - Screen.safeArea.yMin * skK;
+                    lauta.style.width = Mathf.Clamp(pw * (pw > ph ? 0.32f : 0.78f), 220f, 340f);
+                    var a = kp.Value;
+                    bool oikealle = a.x < pw * 0.5f;
+                    x = Mathf.Clamp(oikealle ? a.x + 44f : a.x - 44f - tauluLeveys, vasenT, oikeaT - tauluLeveys);
+                    y = Mathf.Clamp(a.y - tauluKorkeus * 0.5f, ylaT, alaT - tauluKorkeus);
+                }
+            }
             lauta.style.left = x; lauta.style.top = y;
+            if (korttiViiva != null)
+            {
+                bool viivaNakyy = kohdeRuutu.HasValue;
+                korttiViiva.style.display = korttiNasta.style.display = viivaNakyy ? DisplayStyle.Flex : DisplayStyle.None;
+                if (viivaNakyy)
+                {
+                    // Osoitinviiva kortin lähimmästä reunapisteestä kohteeseen (lauta-koordinaateissa).
+                    var a = kohdeRuutu.Value - new Vector2(x, y);
+                    var reunaP = new Vector2(Mathf.Clamp(a.x, 0f, tauluLeveys), Mathf.Clamp(a.y, 0f, tauluKorkeus));
+                    float pit = Vector2.Distance(reunaP, a);
+                    korttiViiva.style.left = reunaP.x; korttiViiva.style.top = reunaP.y - 0.75f; korttiViiva.style.width = pit;
+                    korttiViiva.style.rotate = new Rotate(new Angle(Mathf.Atan2(a.y - reunaP.y, a.x - reunaP.x) * Mathf.Rad2Deg, AngleUnit.Degree));
+                    korttiNasta.style.left = a.x - 3.5f; korttiNasta.style.top = a.y - 3.5f;
+                }
+            }
 
             laskuri.text = "";
             otsikko.text = info.Nimi ?? tila.Nimi ?? "";
+            bool initiaali = initiaaliEl != null && initiaaliKaytossa && !string.IsNullOrEmpty(LappuTyyli);
             var rivit = new List<string>(); var lahteet = new List<string>();
             foreach (var (rt, rl) in info.Rivit)
             {
@@ -641,6 +862,13 @@ namespace Matkakirja.Natiivi
                 if (!string.IsNullOrEmpty(rl) && rl != "TARKISTAMATTA" && !lahteet.Contains(rl)) lahteet.Add(rl);
             }
             teksti.text = string.Join("\n", rivit);
+            if (initiaaliEl != null) initiaaliEl.style.display = initiaali && teksti.text.Length > 1 ? DisplayStyle.Flex : DisplayStyle.None;
+            if (initiaali && teksti.text.Length > 1)
+            {
+                initiaaliKirjain.text = teksti.text.Substring(0, 1); teksti.text = teksti.text.Substring(1);
+                if (!float.IsNaN(teksti.layout.y)) initiaaliEl.style.top = teksti.layout.y + 1f;
+                initiaaliEl.style.left = teksti.layout.x - 34f >= 0f ? teksti.layout.x - 34f : 0f;
+            }
             teksti.style.display = rivit.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             // Lähderivi pois paikkakortista (omistaja 2.10. 14.44): lähteet valikon Lähteet-näkymässä.
             lahde.text = "";
@@ -737,61 +965,207 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Yleisnäkymässä kohdistettavien tilojen nimilaput tilan rajojen keskelle (napautettavat tilat).</summary>
-        void PaivitaLaput(Rakennus rakennus, Camera kamera, Nakyma nakyma)
+        // NIMILAPUT (omistaja 4.10.): 18.4x tuotantoon yleisnäkymään; 19.1x "liian sekava … laput vasta kun kohteet näkyvät
+        // selvemmin"; 19.3x "lappuja voi näkyä myös kauempaa mutta ei kaikkia" ja "kannattaakin näkyä ainakin yksi". Laput käydään
+        // läpi tärkeysjärjestyksessä (tila.lappujarjestys); ensimmäinen ruudulla oleva näkyy aina, ja kukin muu, jos sen nasta on
+        // vähintään Kynnys pt:n päässä jo valittujen nastoista eikä sen nasta jää valitun
+        // lapun alle ja lappu mahtuu päällekkäisyyttä ja risteäviä viivoja välttäen. Kukin lappu häivytetään erikseen (0,35 s).
+        // 4.10. 21.1x (Päätoimittaja: vaakana perusnäkymässä noin 3): 70 pt, ja saman pohjan kerrokset (Fatabuuri/Kierreportaat)
+        // ovat yksi paikka — alempi tärkeysjärjestyksessä tulee esiin vasta zoomattaessa.
+        public static float Kynnys = 70f;
+        const float LappuHaivytysS = 0.35f;
+        /// <summary>"poikki laput": viimeisin valinta (näkyvät laput järjestyksessä ja piilotettujen syyt).</summary>
+        public static string LappuMittaus { get; private set; } = "ei mitattu";
+        sealed class LappuTila { public Label Lappu; public VisualElement Nasta, Viiva; public float Alfa; public Rect Paikka; public Vector2 Ankkuri, Kohta; public bool Sijoitettu; }
+        readonly Dictionary<string, LappuTila> lappuTilat = new Dictionary<string, LappuTila>();
+        string edellinenValinta = "";
+
+        LappuTila Lappu(Tila tila)
         {
-            int n = 0;
-            sijoitukset.Clear();
-            if (nakyma.KohdeTila == null && rakennus.Nimilaput)
-            {
+            if (lappuTilat.TryGetValue(tila.Id, out var lt)) return lt;
+            var uusi = Rakenne.Teksti("", "mk-dioraama__lappu", lappuKerros);
+            uusi.pickingMode = PickingMode.Ignore;
+            Kirjasimet.Aseta(uusi, Kirjasin.Kone);
+            uusi.style.position = Position.Absolute;
+            uusi.style.fontSize = 12;
+            uusi.style.color = Teksti;
+            uusi.style.backgroundColor = Pergamentti;
+            uusi.style.paddingLeft = 8; uusi.style.paddingRight = 8; uusi.style.paddingTop = 3; uusi.style.paddingBottom = 3;
+            uusi.style.borderTopLeftRadius = Tyylikirja.Kulma.Pieni; uusi.style.borderTopRightRadius = Tyylikirja.Kulma.Pieni;
+            uusi.style.borderBottomLeftRadius = Tyylikirja.Kulma.Pieni; uusi.style.borderBottomRightRadius = Tyylikirja.Kulma.Pieni;
+            uusi.text = tila.Nimi ?? tila.Id;
+            var viiva = Rakenne.El("mk-dioraama__lappuviiva", lappuKerros, PickingMode.Ignore);
+            viiva.style.position = Position.Absolute; viiva.style.height = 1.5f; viiva.style.backgroundColor = Pergamentti;
+            viiva.style.transformOrigin = new TransformOrigin(Length.Percent(0), Length.Percent(50));
+            var nasta = Rakenne.El("mk-dioraama__lappunasta", lappuKerros, PickingMode.Ignore);
+            nasta.style.position = Position.Absolute; nasta.style.width = 7; nasta.style.height = 7;
+            nasta.style.backgroundColor = Pergamentti;
+            nasta.style.borderTopLeftRadius = 4; nasta.style.borderTopRightRadius = 4; nasta.style.borderBottomLeftRadius = 4; nasta.style.borderBottomRightRadius = 4;
+            nasta.style.borderTopWidth = 1; nasta.style.borderBottomWidth = 1; nasta.style.borderLeftWidth = 1; nasta.style.borderRightWidth = 1;
+            nasta.style.borderTopColor = Teksti; nasta.style.borderBottomColor = Teksti; nasta.style.borderLeftColor = Teksti; nasta.style.borderRightColor = Teksti;
+            laput.Add(uusi); nastat.Add(nasta); viivat.Add(viiva);
+            foreach (var el in new VisualElement[] { uusi, nasta, viiva }) { el.style.display = DisplayStyle.None; el.style.opacity = 0f; }
+            lt = new LappuTila { Lappu = uusi, Nasta = nasta, Viiva = viiva };
+            AsetaNimilappuTyyli(uusi, nasta, viiva);
+            lappuTilat[tila.Id] = lt;
+            return lt;
+        }
+
+        static bool SamaPohja(Tila a, Tila b) =>
+            System.Math.Min(a.RajaMax.X, b.RajaMax.X) > System.Math.Max(a.RajaMin.X, b.RajaMin.X)
+            && System.Math.Min(a.RajaMax.Z, b.RajaMax.Z) > System.Math.Max(a.RajaMin.Z, b.RajaMin.Z);
+
+        int Jarjestys(Rakennus rakennus, Tila t)
+        {
+            return t.LappuJarjestys ?? 1000 + rakennus.Tilat.IndexOf(t);
+        }
+
+        void PaivitaLaput(Rakennus rakennus, Camera kamera, Nakyma nakyma, Rect? estetty = null)
+        {
+            // Uusi linna (kertojan esittely): laput yleisnäkymässä (omistaja 4.10.); vanhat dioraamat datan nimilaput-kentän mukaan.
+            bool uusiLinna = rakennus.Kertoja != null && rakennus.Kertoja.Count > 0;
+            var ehdokkaat = new List<(Tila Tila, Vector2 Nasta)>();
+            float pw = juuri.layout.width, ph = juuri.layout.height;
+            if (float.IsNaN(pw) || pw <= 0) { pw = Screen.width; ph = Screen.height; }
+            if (nakyma.KohdeTila == null && (rakennus.Nimilaput || uusiLinna))
                 foreach (var tila in rakennus.Tilat)
                 {
                     if (!tila.Kohdistettava) continue;
                     var keski = new Matkakirja.Linssit.Dioraama.V3((tila.RajaMin.X + tila.RajaMax.X) / 2, (tila.RajaMin.Y + tila.RajaMax.Y) / 2, (tila.RajaMin.Z + tila.RajaMax.Z) / 2);
                     Vector3 r = kamera.WorldToScreenPoint(DioraamaNayttamo.UnityPiste(keski));
-                    if (r.z <= 0f) continue;
-                    if (n == laput.Count)
-                    {
-                        var uusi = Rakenne.Teksti("", "mk-dioraama__lappu", lappuKerros);
-                        uusi.pickingMode = PickingMode.Ignore;
-                        Kirjasimet.Aseta(uusi, Kirjasin.Kone);
-                        uusi.style.position = Position.Absolute;
-                        uusi.style.fontSize = 12;
-                        uusi.style.color = Teksti;
-                        uusi.style.backgroundColor = Pergamentti;
-                        uusi.style.paddingLeft = 8; uusi.style.paddingRight = 8; uusi.style.paddingTop = 3; uusi.style.paddingBottom = 3;
-                        uusi.style.borderTopLeftRadius = Tyylikirja.Kulma.Pieni; uusi.style.borderTopRightRadius = Tyylikirja.Kulma.Pieni;
-                        uusi.style.borderBottomLeftRadius = Tyylikirja.Kulma.Pieni; uusi.style.borderBottomRightRadius = Tyylikirja.Kulma.Pieni;
-                        laput.Add(uusi);
-                    }
-                    var lappu = laput[n++];
-                    var p = RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(r.x, Screen.height - r.y));
-                    lappu.text = tila.Nimi ?? tila.Id;
-                    float lw = float.IsNaN(lappu.layout.width) ? 60f : lappu.layout.width;
-                    float lh = float.IsNaN(lappu.layout.height) || lappu.layout.height <= 0 ? 22f : lappu.layout.height;
-                    sijoitukset.Add((lappu, new Rect(p.x - lw * 0.5f, p.y - 10f, lw, lh)));
-                    lappu.style.display = DisplayStyle.Flex;
+                    // Ruudun tai turva-alueen ulkopuolella oleva tila ei saa lappua eikä nastaa (lähempi kamera rajaa osan linnasta
+                    // pois; vaakana Dynamic Island on vasemmassa tai oikeassa reunassa, Päätoimittaja 4.10.).
+                    if (r.z <= 0f || !Screen.safeArea.Contains(new Vector2(r.x, r.y))) continue;
+                    ehdokkaat.Add((tila, RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(r.x, Screen.height - r.y))));
                 }
-                // Olavinlinna (1.0.55: viisi tilaa Kellotornin ja pohjoissiiven kohdalla päällekkäin): lähekkäiset laput
-                // porrastetaan ylöspäin ruudun y-järjestyksessä, kunnes ne eivät peitä toisiaan (3 pt väli).
-                sijoitukset.Sort((a, b) => b.Rect.y.CompareTo(a.Rect.y));
-                var varatut = new List<Rect>();
-                foreach (var (lappu, rect) in sijoitukset)
+            PaivitaTyyli(rakennus);
+            ehdokkaat.Sort((a, b) => Jarjestys(rakennus, a.Tila).CompareTo(Jarjestys(rakennus, b.Tila)));
+            if ((LappuTyyli ?? "") != lapuissaTyyli) { lapuissaTyyli = LappuTyyli ?? ""; foreach (var lt0 in lappuTilat.Values) AsetaNimilappuTyyli(lt0.Lappu, lt0.Nasta, lt0.Viiva); }
+
+            // Sijoitusalue: turva-alueen sisällä, Pulu ja yläkulmien pienoiskartta ja valikko vapaina.
+            const float reuna = 10f, vali = 3f;
+            float sk = Screen.width > 0 ? pw / Screen.width : 1f, ylaTurva = (Screen.height - Screen.safeArea.yMax) * sk;
+            float xMin = reuna + Screen.safeArea.xMin * sk, xMax = pw - reuna - (Screen.width - Screen.safeArea.xMax) * sk;
+            float yMin = reuna + 60f + ylaTurva, yMax = ph - reuna - Screen.safeArea.yMin * sk;
+            var esteet = new List<Rect>();
+            if (estetty.HasValue) esteet.Add(estetty.Value);
+            esteet.Add(new Rect(0, 0, Screen.safeArea.xMin * sk + 90f, ylaTurva + 140f));
+            esteet.Add(new Rect(pw - (Screen.width - Screen.safeArea.xMax) * sk - 90f, 0, 90f + (Screen.width - Screen.safeArea.xMax) * sk, ylaTurva + 140f));
+            // Laput säteittäin nastaryhmän keskeltä ulospäin (kuvatarkistus 4.10.).
+            var keskus = Vector2.zero;
+            foreach (var e in ehdokkaat) keskus += e.Nasta;
+            if (ehdokkaat.Count > 0) keskus /= ehdokkaat.Count;
+
+            var valitut = new List<(Tila Tila, Vector2 Nasta, Rect Lappu)>();
+            var janat = new List<(Vector2 A, Vector2 B)>();
+            var syyt = new List<string>();
+            var nakyvat = new HashSet<string>();
+            foreach (var (tila, nasta) in ehdokkaat)
+            {
+                var lt = Lappu(tila);
+                bool ensimmainen = valitut.Count == 0;
+                string syy = null;
+                if (!ensimmainen)
+                    foreach (var v in valitut)
+                    {
+                        if (Vector2.Distance(v.Nasta, nasta) < Kynnys) { syy = $"{tila.Id}: {Vector2.Distance(v.Nasta, nasta):F0} pt {v.Tila.Id}"; break; }
+                        if (v.Lappu.Contains(nasta)) { syy = $"{tila.Id}: nasta {v.Tila.Id}-lapun alla"; break; }
+                    }
+                if (syy == null)
                 {
-                    var r2 = rect;
-                    for (int kierros = 0; kierros < 12; kierros++)
+                    float w = float.IsNaN(lt.Lappu.layout.width) || lt.Lappu.layout.width <= 0 ? 60f : lt.Lappu.layout.width;
+                    float h = float.IsNaN(lt.Lappu.layout.height) || lt.Lappu.layout.height <= 0 ? 22f : lt.Lappu.layout.height;
+                    var varatut = new List<Rect>(esteet);
+                    foreach (var v in valitut) { varatut.Add(v.Lappu); varatut.Add(new Rect(v.Nasta.x - 4f, v.Nasta.y - 4f, 8f, 8f)); }
+                    varatut.Add(new Rect(nasta.x - 4f, nasta.y - 4f, 8f, 8f));
+                    var ulos = nasta - keskus;
+                    ulos = ulos.sqrMagnitude < 1f ? Vector2.down : ulos.normalized;
+                    Rect paras = default; bool loytyi = false;
+                    for (int etaisyys = 1; etaisyys <= 4 && !loytyi; etaisyys++)
                     {
-                        bool osuu = false;
-                        foreach (var v in varatut)
-                            if (r2.xMin < v.xMax + 3f && r2.xMax > v.xMin - 3f && r2.yMin < v.yMax + 3f && r2.yMax > v.yMin - 3f)
-                            { r2.y = v.yMin - r2.height - 3f; osuu = true; }
-                        if (!osuu) break;
+                        float dy = (h * 0.5f + 8f) * etaisyys, dx = (w * 0.5f + 10f) * etaisyys;
+                        var suunnat = new List<Vector2> { new Vector2(0, -dy), new Vector2(0, dy), new Vector2(dx, 0), new Vector2(-dx, 0),
+                            new Vector2(dx, -dy), new Vector2(-dx, -dy), new Vector2(dx, dy), new Vector2(-dx, dy) };
+                        suunnat.Sort((e1, e2) => Vector2.Dot(e2.normalized, ulos).CompareTo(Vector2.Dot(e1.normalized, ulos)));
+                        foreach (var e in suunnat)
+                        {
+                            var c = nasta + e;
+                            var r2 = new Rect(c.x - w * 0.5f, c.y - h * 0.5f, w, h);
+                            r2.x = Mathf.Clamp(r2.x, xMin, xMax - w); r2.y = Mathf.Clamp(r2.y, yMin, yMax - h);
+                            bool osuu = false;
+                            foreach (var v in varatut)
+                                if (r2.xMin < v.xMax + vali && r2.xMax > v.xMin - vali && r2.yMin < v.yMax + vali && r2.yMax > v.yMin - vali) { osuu = true; break; }
+                            var k2 = new Vector2(Mathf.Clamp(nasta.x, r2.xMin, r2.xMax), Mathf.Clamp(nasta.y, r2.yMin, r2.yMax));
+                            if (!osuu) foreach (var (ja, jb) in janat) if (Risteaa(nasta, k2, ja, jb) || JanaOsuu(ja, jb, r2)) { osuu = true; break; }
+                            if (!osuu) foreach (var v in valitut) if (JanaOsuu(nasta, k2, v.Lappu)) { osuu = true; break; }
+                            if (!osuu) { paras = r2; loytyi = true; break; }
+                        }
                     }
-                    varatut.Add(r2);
-                    lappu.style.left = r2.x;
-                    lappu.style.top = r2.y;
+                    if (!loytyi && ensimmainen)
+                    { paras = new Rect(Mathf.Clamp(nasta.x - w * 0.5f, xMin, xMax - w), Mathf.Clamp(nasta.y - h - 8f, yMin, yMax - h), w, h); loytyi = true; }
+                    if (!loytyi) syy = $"{tila.Id}: ei tilaa";
+                    else
+                    {
+                        var kohta = new Vector2(Mathf.Clamp(nasta.x, paras.xMin, paras.xMax), Mathf.Clamp(nasta.y, paras.yMin, paras.yMax));
+                        valitut.Add((tila, nasta, paras));
+                        janat.Add((nasta, kohta));
+                        lt.Paikka = paras; lt.Ankkuri = nasta; lt.Kohta = kohta; lt.Sijoitettu = true;
+                        nakyvat.Add(tila.Id);
+                    }
                 }
+                if (syy != null) syyt.Add(syy);
             }
-            for (int k = n; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
+
+            // Häivytys lappukohtaisesti; piiloon menevä lappu häipyy viimeisessä paikassaan, ruudulta poistunut heti.
+            var ruudulla = new HashSet<string>();
+            foreach (var e in ehdokkaat) ruudulla.Add(e.Tila.Id);
+            foreach (var kv in lappuTilat)
+            {
+                var lt = kv.Value;
+                float tavoite = nakyvat.Contains(kv.Key) ? 1f : 0f;
+                lt.Alfa = ruudulla.Contains(kv.Key) ? Mathf.MoveTowards(lt.Alfa, tavoite, Time.unscaledDeltaTime / LappuHaivytysS) : 0f;
+                bool nakyy = lt.Alfa > 0.001f && lt.Sijoitettu;
+                lt.Lappu.style.display = lt.Nasta.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
+                float pituus = Vector2.Distance(lt.Ankkuri, lt.Kohta);
+                lt.Viiva.style.display = nakyy && pituus > 4f ? DisplayStyle.Flex : DisplayStyle.None;
+                if (!nakyy) { if (lt.Alfa <= 0.001f) lt.Sijoitettu = nakyvat.Contains(kv.Key); continue; }
+                lt.Lappu.style.opacity = lt.Nasta.style.opacity = lt.Viiva.style.opacity = lt.Alfa;
+                lt.Lappu.style.left = lt.Paikka.x; lt.Lappu.style.top = lt.Paikka.y;
+                lt.Nasta.style.left = lt.Ankkuri.x - 3.5f; lt.Nasta.style.top = lt.Ankkuri.y - 3.5f;
+                lt.Viiva.style.left = lt.Ankkuri.x; lt.Viiva.style.top = lt.Ankkuri.y - 0.75f; lt.Viiva.style.width = pituus;
+                lt.Viiva.style.rotate = new Rotate(new Angle(Mathf.Atan2(lt.Kohta.y - lt.Ankkuri.y, lt.Kohta.x - lt.Ankkuri.x) * Mathf.Rad2Deg, AngleUnit.Degree));
+                lt.Lappu.BringToFront();
+            }
+            lappuKerros.style.opacity = 1f;
+            lappuKerros.style.display = DisplayStyle.Flex;
+            string valinta = string.Join(",", System.Linq.Enumerable.Select(valitut, v => v.Tila.Id));
+            if (valinta != edellinenValinta && ehdokkaat.Count > 0)
+            {
+                edellinenValinta = valinta;
+                Debug.Log($"MATKAKIRJA linssit: poikki: nimilaput {valitut.Count}/{ehdokkaat.Count}: {valinta}");
+            }
+            LappuMittaus = $"näkyvät {valitut.Count}/{ehdokkaat.Count} [{valinta}], piilossa: {(syyt.Count > 0 ? string.Join("; ", syyt) : "-")}, kynnys {Kynnys:F0} pt";
+        }
+
+        /// <summary>Kulkeeko jana suorakulmion läpi (päätepiste sisällä tai leikkaa reunan).</summary>
+        static bool JanaOsuu(Vector2 a, Vector2 b, Rect r)
+        {
+            if (r.Contains(a) || r.Contains(b)) return true;
+            var p1 = new Vector2(r.xMin, r.yMin); var p2 = new Vector2(r.xMax, r.yMin); var p3 = new Vector2(r.xMax, r.yMax); var p4 = new Vector2(r.xMin, r.yMax);
+            return Risteaa(a, b, p1, p2) || Risteaa(a, b, p2, p3) || Risteaa(a, b, p3, p4) || Risteaa(a, b, p4, p1);
+        }
+
+        static bool Risteaa(Vector2 a, Vector2 b, Vector2 c, Vector2 d)
+        {
+            float Ristitulo(Vector2 o, Vector2 p, Vector2 q) => (p.x - o.x) * (q.y - o.y) - (p.y - o.y) * (q.x - o.x);
+            float d1 = Ristitulo(c, d, a), d2 = Ristitulo(c, d, b), d3 = Ristitulo(a, b, c), d4 = Ristitulo(a, b, d);
+            return ((d1 > 0 && d2 < 0) || (d1 < 0 && d2 > 0)) && ((d3 > 0 && d4 < 0) || (d3 < 0 && d4 > 0));
+        }
+
+        void PiilotaLaput()
+        {
+            for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
+            for (int k = 0; k < nastat.Count; k++) { nastat[k].style.display = DisplayStyle.None; viivat[k].style.display = DisplayStyle.None; }
         }
 
         static bool TaulunPuoliOikealla(Rakennus rakennus, string kohdeTilaId)
