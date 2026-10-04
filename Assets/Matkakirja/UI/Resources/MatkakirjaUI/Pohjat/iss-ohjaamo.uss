@@ -376,11 +376,14 @@
 }
 
 .mk-isssijainti__kohde {
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .mk-isssijainti__kohde .mk-nappi__teksti {
+    flex-grow: 1;
+    flex-shrink: 1;
     margin: 0;
     padding: 0;
     -unity-text-align: middle-left;

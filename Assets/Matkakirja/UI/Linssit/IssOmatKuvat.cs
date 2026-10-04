@@ -8,8 +8,10 @@
 //   PINO     vasemmassa alareunassa ohjaamopaneelin yläpuolella: uusin päällimmäisenä, kaksi vanhempaa vinossa alla
 //            (tyylikirja ISS-OHJAAMO.kuvapino); napautus avaa uusimman. Näkyy kyydissä, kun kuvia on.
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
@@ -98,7 +100,7 @@ namespace Matkakirja.Natiivi
                 e.style.display = DisplayStyle.Flex;
                 string polku = kuvat[i].Polku, pikku = kuvat[i].Pikkukuva;
                 int j = i;
-                Kuvat.Hae("file://" + pikku, t => { if (t != null && j < kuvat.Count && kuvat[j].Polku == polku) e.style.backgroundImage = new StyleBackground(t); });
+                Lataa(pikku, t => { if (t != null && j < kuvat.Count && kuvat[j].Polku == polku) e.style.backgroundImage = new StyleBackground(t); });
             }
         }
 
@@ -131,7 +133,7 @@ namespace Matkakirja.Natiivi
             edellinen.style.visibility = seuraava.style.visibility = kuvat.Count > 1 ? Visibility.Visible : Visibility.Hidden;
             kuva.style.backgroundImage = StyleKeyword.None;
             string polku = k.Polku;
-            Kuvat.Hae("file://" + polku, t =>
+            Lataa(polku, t =>
             {
                 if (t == null || kuvat.Count == 0 || kuvat[nyt].Polku != polku) return;
                 kuva.style.backgroundImage = new StyleBackground(t);
@@ -139,6 +141,35 @@ namespace Matkakirja.Natiivi
                 kuva.style.height = Length.Percent(0);
                 kuva.style.paddingTop = Length.Percent(100f * t.height / Mathf.Max(1, t.width));
             });
+        }
+
+        // Levyn JPG:t omalla latauksella (Kuvat.Hae on verkko- ja peilireitti): purku taustalla (UnityWebRequestTexture,
+        // nonReadable), pikkukuvat ja nykyinen iso kuva muistissa; vanha iso vapautetaan vaihdossa.
+        readonly Dictionary<string, Texture2D> tekstuurit = new Dictionary<string, Texture2D>();
+        string isoPolku;
+
+        void Lataa(string polku, Action<Texture2D> valmis)
+        {
+            if (string.IsNullOrEmpty(polku)) { valmis(null); return; }
+            if (tekstuurit.TryGetValue(polku, out var t) && t != null) { valmis(t); return; }
+            UiKerros.Hae().StartCoroutine(LataaLevylta(polku, valmis));
+        }
+
+        IEnumerator LataaLevylta(string polku, Action<Texture2D> valmis)
+        {
+            using var k = UnityWebRequestTexture.GetTexture("file://" + polku, true);
+            yield return k.SendWebRequest();
+            if (k.result != UnityWebRequest.Result.Success) { Debug.LogWarning("MATKAKIRJA linssit: oma kuva ei latautunut " + polku + ": " + k.error); valmis(null); yield break; }
+            var t = DownloadHandlerTexture.GetContent(k);
+            bool iso = !polku.EndsWith("-pieni.jpg", StringComparison.Ordinal);
+            if (iso)
+            {
+                if (isoPolku != null && isoPolku != polku && tekstuurit.TryGetValue(isoPolku, out var vanha) && vanha != null)
+                { tekstuurit.Remove(isoPolku); UnityEngine.Object.Destroy(vanha); }
+                isoPolku = polku;
+            }
+            tekstuurit[polku] = t;
+            valmis(t);
         }
 
         void Jaa()
