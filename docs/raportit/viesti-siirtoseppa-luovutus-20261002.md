@@ -104,3 +104,13 @@ Natiivisepälle, viestit Päätoimittajalle ≤ 8 riviä, osoitin vain omistajan
   kevyen kuoren esilataus (DioraamaEsilataus, LinssiOhjain.Update, linssi saatavilla). AVOIN: simu ~15.40 (tyokalut/siirtoseppa-ajot/
   ajo-vapaa-tila.sh: vapaan tilan still + keittiön napautukset ääni C:lle), iPad laite-sha ~16.00 (saapumisaika ennen 8,2 s / jälkeen),
   sitten merge-pyyntö Natiivisepälle junaan 138.
+
+### 4.10. klo 15.2x — JUNA 138 -ERÄ (omistajan linja 14.5x: linna vasta täydellä tarkkuudella)
+- Kärki: proto siirtoseppa/kuori-esilataus b80d034a (worktree wt/proto-siirtoseppa-kuori), käännös 318f75e8 (lokit/siirtoseppa-esi3-app).
+  Sisältö: nimiruutu "OLAVINLINNA / Savonlinna · 1475" linssin avauksesta; odotus kunnes kuori+detalji, tilat valoatlaksineen, hahmot ja
+  ympäristö valmiina; rivit "Linna latautuu…" 4 s ja "Vielä pieni hetki…" 9 s; latausvirhe / 60 s ilman edistystä → tilarivi
+  "Linnaa ei saatu ladattua. Tarkista verkkoyhteys." + linssi kiinni; esilataus (DioraamaEsilataus) koko laitekohtainen paketti +
+  ympäristö suoraan levylle, sama kaikilla verkoilla; laukaisin: pelaajan kaupunki/matkan kohde Suomessa tai linna ruudulla ≤ 600 km;
+  testikomento linssi-komento "esilataa linna".
+- AVOIN: simu ~15.40 (ajo-vapaa-tila.sh: latausrivit 5/10 s, vapaa tila, keittiö ääni C, välimuistin koko), iPad (laite-sha b80d034a +
+  ajo-ipad-saapuminen.sh A/B) → Päätoimittajalle, sitten merge-pyyntö Natiivisepälle junaan 138.
