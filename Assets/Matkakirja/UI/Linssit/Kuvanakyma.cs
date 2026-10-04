@@ -606,8 +606,11 @@ namespace Matkakirja.Natiivi
             LueSelite(h);
         }
 
-        /// <summary>Tämän kuvan selitteen luenta soi juuri nyt (puhekanavalla sama osoite).</summary>
-        bool LuentaSoi => luennanUrl != null && Puhe.Instanssi != null && Puhe.Instanssi.Soi && Puhe.Instanssi.SoivaUrl == luennanUrl;
+        /// <summary>
+        /// Tämän kuvan selitteen luenta on käynnissä: puhekanavan osoite on sama synteesin latauksesta (ennen ensimmäistä palaa)
+        /// loppuun asti, myös tauolla (Pelikoodari 4.10.: Puhe.Soi on epätosi latauksen ja tauon aikana).
+        /// </summary>
+        bool LuentaSoi => luennanUrl != null && Puhe.Instanssi != null && Puhe.Instanssi.SoivaUrl == luennanUrl;
 
         /// <summary>Luenta loppui: AUTO päällä → lappu ja 3 s:n päästä seuraava kohde (vain tämän kuvan tuorein luenta).</summary>
         void LuentaLoppui(int vuoro)
