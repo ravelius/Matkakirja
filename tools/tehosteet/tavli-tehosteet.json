@@ -40,9 +40,9 @@
       "peliavain": "tavli.noppa3",
       "kuvaus": "Nopat laudalle, kolmas muunnelma",
       "hakusanat": [
-        "dice shake throw",
-        "dice roll board game",
-        "throwing dice"
+        "dice throw wood",
+        "dice landing table",
+        "dice thrown board"
       ],
       "kestoMin": 0.3,
       "kestoMax": 2.0,
@@ -85,9 +85,9 @@
       "peliavain": "tavli.poisto",
       "kuvaus": "Nappula pois laudalta: pehmeä nosto ja kopsahdus laatikkoon",
       "hakusanat": [
-        "wood piece drop box",
-        "soft wooden drop",
-        "chip drop wood"
+        "wooden piece drop",
+        "wood token drop",
+        "game piece drop wood"
       ],
       "kestoMin": 0.05,
       "kestoMax": 1.0,
@@ -115,9 +115,9 @@
       "peliavain": "tavli.havio",
       "kuvaus": "Lyhyt häviön merkki: pehmeä laskeva sävel, ei pilkkaava",
       "hakusanat": [
-        "error soft",
-        "minimize",
-        "soft descending tone"
+        "lose game short",
+        "failure tone soft",
+        "game over short"
       ],
       "kestoMin": 0.4,
       "kestoMax": 2.0,
