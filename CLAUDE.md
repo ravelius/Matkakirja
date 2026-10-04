@@ -37,6 +37,11 @@ nosto ja paneeli käyttää olemassa olevia tyylimäärittelyjä ja pohjia. Jos 
 puuttuu, omaa ratkaisua ei tehdä: kysy ensin Päätoimittajalta, joka kysyy omistajalta,
 miten se toteutetaan. Raamattu, Ydinajatus kohta 2, UI-POHJAT JA TYYLIMÄÄRITTELYT.
 
+LATAUS SAMA KAIKILLA VERKOILLA (omistaja 25.9. ja 4.10.2026, sitova): Wi-Fiä ja mobiilidataa
+EI erotella missään latauksessa, esilatauksessa tai päivityksessä; ei verkkotyyppiehtoja, ei
+kokorajoja, ei "vain Wi-Fillä", eikä sellaisia ehdotuksia omistajalle. Raamattu, Ydinajatus,
+LATAUS ON SAMA KAIKILLA VERKOILLA.
+
 ## Lue ensin
 
 - **Raamatun Ydinajatus-osion kohta 2 "TYÖTAPA JA SESSIOT"** (sitova
