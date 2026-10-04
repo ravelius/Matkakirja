@@ -1739,6 +1739,19 @@
     flex-direction: column;
 }
 
+/* Matalassa ruudussa (iPhone vaaka) vain rivit vierittyvät: otsikko, rivit ja Kysy Pululta eivät kutistu päällekkäin
+   (omistaja TF 140, 4.10.2026 klo 22.4x). */
+.mk-astroTaulu__vieritys {
+    flex-shrink: 1;
+    min-height: 0;
+}
+
+.mk-astroTaulu__ylarivi,
+.mk-astroTaulu__rivi,
+.mk-astroTaulu__linkki {
+    flex-shrink: 0;
+}
+
 .mk-astroTaulu__rivi {
     flex-direction: column;
     align-items: flex-start;
