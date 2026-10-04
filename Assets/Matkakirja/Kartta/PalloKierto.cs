@@ -402,6 +402,17 @@ namespace Matkakirja
         /// Kuten yllä; ulos = true palauttaa myös ruudun ulkopuolisen pisteen (pallon etupuolella), jotta liikkeen ajaksi
         /// lukittu UI (kaupungin kuvakortti, Natiivi-UI 28.9.2026) jatkaa kaupungin mukana reunan yli kuten webissä.
         /// </summary>
+        /// <summary>Kameran etäisyys maanpinnan pisteeseen metreinä (Unity-yksikkö = m); NaN ilman georeferenssiä. Linnan esilatauksen
+        /// laukaisin (DioraamaEsilataus, Siirtoseppä 4.10.2026): kartta katsoo linnan seutua.</summary>
+        public double Etaisyys(double lat, double lon)
+        {
+            var kamera = GetComponent<Camera>();
+            if (georeferenssi == null || kamera == null) return double.NaN;
+            double3 ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, 0));
+            Vector3 p = georeferenssi.transform.TransformPoint((float3)georeferenssi.TransformEarthCenteredEarthFixedPositionToUnity(ecef));
+            return Vector3.Distance(kamera.transform.position, p);
+        }
+
         public bool RuutuPiste(double lat, double lon, out Vector2 ruutu, double korkeus, bool ulos)
         {
             ruutu = default;

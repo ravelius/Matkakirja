@@ -90,6 +90,7 @@ namespace Matkakirja.Natiivi
         public IEnumerator Lataa(Ulkokuori kuori, Func<string, string> url, Action<string> kirjaa, bool hamara = false)
         {
             Tyhjenna();
+            KaikkiValmis = false;
             if (kuori == null) yield break;
             if (varjostin == null) { kirjaa?.Invoke("poikki: DioraamaKuori-varjostin puuttuu"); yield break; }
             int oma = ++kerta;
@@ -210,7 +211,12 @@ namespace Matkakirja.Natiivi
                 yield return null;
             }
             if (kuori.Detalji != null) yield return LataaDetalji(kuori.Detalji, url, kirjaa, oma);
+            if (oma == kerta) KaikkiValmis = true;
         }
+
+        /// <summary>Kaikki tasot (kevyt + laitteen taso) ja detalji käsitelty (Päätoimittaja 4.10.: linna näytetään vasta täydellä
+        /// tarkkuudella). Epäonnistunut taso näkyy DioraamaLevyvalimuisti.Epaonnistui-laskurissa.</summary>
+        public bool KaikkiValmis { get; private set; }
 
         // --- LÄHIDETALJI (menetelmä B, Päätoimittaja 30.9.2026; DioraamaKuori.shader) -------------------------------------
         static readonly int IdDetaljiMaski = Shader.PropertyToID("_DetaljiMaski"), IdDetaljiToisto = Shader.PropertyToID("_DetaljiToisto"),
