@@ -256,8 +256,8 @@ namespace Matkakirja.Natiivi
         // joten tehosteiden oletusvahvistus ilman omaa kerrointa; v1:n asetus oli ~10 dB hiljaisempi ja tarvitsi 0,5:n.
         const string AaniAsetus = "mylly-asetus", AaniPoisto = "mylly-poisto";
         /// <summary>Päätoimittaja 5.10. (kaappaus bc863309): oletusvahvistuksella 0,35 nappulat soivat −23…−25 dBFS, puhelimen kaiuttimesta
-        /// heikosti. 1,1 (+10 dB) → huiput ≈ −13 dBFS (tavoite −12…−15), AudioSource.volume 1,1 × tehosteväylä 0,296 ≈ 0,33.</summary>
-        const float Vahvistus = 1.1f;
+        /// heikosti. 1,6 (+13 dB; 1,1 mitattiin 5.10. 01.52: huiput −15,3…−17,2) → ≈ −12…−14 dBFS (tavoite −12…−15), AudioSource.volume 1,6 × 0,296 ≈ 0,47.</summary>
+        const float Vahvistus = 1.6f;
 
         static void SiirronAani(MyllySiirto s, float voima)
         {
