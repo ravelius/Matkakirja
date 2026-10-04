@@ -344,6 +344,11 @@ export function lisaaBlender(rakennusJson, blender) {
       hamaraJpg: Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-hamara-${k}.jpg`)])),
     },
   };
+  // Päivätilan JPEG-vara ilman ASTC:tä (Siirtoseppä 4.10.; ennen glb:n upotettu JPEG, joka poistetaan, kun natiivi lukee
+  // tämän): vain jos kaikki tasojen JPEG:t on viety blender.json:iin.
+  if (Object.values(tasot).every((k) => on.has(`ulkokuori/ulkokuori-${k}.jpg`))) {
+    rakennusJson.ulkokuori.tekstuurit.jpg = Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-${k}.jpg`)]));
+  }
   // Hybridi-PBR (menetelmä B, Siirtosepän muoto 30.9.): maski + kirjaston 4 materiaalia maskin kanavajärjestyksessä,
   // vain jos viety blender.json:iin. Toisto metreinä kirjaston manifestista (js/dioraama/kirjasto/lahteet.json).
   const DETALJI = ['graniittilohkomuuri', 'paanukatto', 'kivilaatta', 'kallio'];
