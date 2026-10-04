@@ -403,6 +403,9 @@ namespace Matkakirja
         }
         bool linssiVara;
         static readonly int Rasteri1Id = Shader.PropertyToID("_overlayTexture_1"), Rasteri2Id = Shader.PropertyToID("_overlayTexture_2");
+        static readonly int Skaala1Id = Shader.PropertyToID("_overlayTranslationAndScale_1"), Skaala2Id = Shader.PropertyToID("_overlayTranslationAndScale_2");
+        /// <summary>Viimeisimmän LataamattomatLaatat-kutsun karkeat laatat: rasteri on esivanhemman (UV-skaala &lt; 1), ei laatan oma.</summary>
+        public int KarkeatLaatat { get; private set; }
         static readonly Plane[] lataamatonTasot = new Plane[6];
         static readonly List<MeshRenderer> lataamatonRenderit = new List<MeshRenderer>();
 
@@ -421,7 +424,7 @@ namespace Matkakirja
             if (kamera == null) return (-2, -2);
             GeometryUtility.CalculateFrustumPlanes(kamera, lataamatonTasot);
             pallo.GetComponentsInChildren(false, lataamatonRenderit);
-            int puuttuu = 0, nakyy = 0;
+            int puuttuu = 0, nakyy = 0, karkeat = 0;
             foreach (var r in lataamatonRenderit)
             {
                 if (!r.enabled || !GeometryUtility.TestPlanesAABB(lataamatonTasot, r.bounds)) continue;
@@ -430,9 +433,15 @@ namespace Matkakirja
                 nakyy++;
                 bool r1 = m.HasProperty(Rasteri1Id) && m.GetTexture(Rasteri1Id) != null;
                 bool r2 = m.HasProperty(Rasteri2Id) && m.GetTexture(Rasteri2Id) != null;
-                if (!r1 && !r2) puuttuu++;
+                if (!r1 && !r2) { puuttuu++; continue; }
+                // Tarkka taso (Päätoimittaja 4.10.: 0/1 häivytyksessä, mutta maasto vasta ~17 s): Cesium kiinnittää lataavalle laatalle
+                // esivanhemman rasterin osana (UV-skaala < 1, RasterMappedTo3DTile) → karkea. Oma rasteri: skaala 1.
+                bool oma1 = r1 && m.HasProperty(Skaala1Id) && m.GetVector(Skaala1Id).z > 0.999f;
+                bool oma2 = r2 && m.HasProperty(Skaala2Id) && m.GetVector(Skaala2Id).z > 0.999f;
+                if (!oma1 && !oma2) karkeat++;
             }
             lataamatonRenderit.Clear();
+            KarkeatLaatat = karkeat;
             return (puuttuu, nakyy);
         }
 
