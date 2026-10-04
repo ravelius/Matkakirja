@@ -583,6 +583,7 @@ namespace Matkakirja.Natiivi
             }
             AsetaAikajananVarit();
             mat.SetVector(IdSavuTila, Vector4.zero);
+            AsetaRivinRaja();
             pMaara = kaikuIndeksi + 2;
         }
 
@@ -906,6 +907,31 @@ namespace Matkakirja.Natiivi
             mat.SetTexture("_Savu", savu);
             double vahvuus = aj.SavuVahvuus, ydin = aj.SavuYdin;
             mat.SetFloat("_SavuC0", vahvuus > 1 - ydin ? (float)((ydin - (1 - vahvuus)) / vahvuus) : 0f);
+            AsetaSavunPehmeys();
+        }
+
+        /// <summary>Testikomento `ajattelija rivinraja <osuus> [kulma0 kulma1]` (NaN = datan arvo); vaikuttaa heti.</summary>
+        public static double RajaOhitus = double.NaN, KulmaOhitus0 = double.NaN, KulmaOhitus1 = double.NaN;
+
+        /// <summary>Taustarivien koko- ja kulmaraja varjostimeen (_RiviRaja; RivinRaja AjattelijaKipsi.shaderissa).</summary>
+        public void AsetaRivinRaja()
+        {
+            var tv = a?.Taustavirta;
+            if (tv == null || mat == null) return;
+            double raja = double.IsNaN(RajaOhitus) ? tv.RajaKoko : RajaOhitus;
+            double k0 = double.IsNaN(KulmaOhitus0) ? tv.RajaKulma[0] : KulmaOhitus0, k1 = double.IsNaN(KulmaOhitus1) ? tv.RajaKulma[1] : KulmaOhitus1;
+            mat.SetVector("_RiviRaja", new Vector4((float)raja, 1.3f, (float)k0, (float)k1));
+        }
+
+        /// <summary>Testikomento `ajattelija savupehmeys <säde>` / `savuharso <0..1>` (NaN = datan arvo); vaikuttaa heti.</summary>
+        public static double PehmeysOhitus = double.NaN, HarsoOhitus = double.NaN;
+
+        public void AsetaSavunPehmeys()
+        {
+            if (aj == null || mat == null) return;
+            double r = double.IsNaN(PehmeysOhitus) ? aj.SavuPehmeys : PehmeysOhitus;
+            double h = double.IsNaN(HarsoOhitus) ? aj.SavuHarso : HarsoOhitus;
+            mat.SetVector("_SavuPehmeys", new Vector4((float)r, (float)h, 0, 0));
         }
 
         /// <summary>Lähin osuma bystiin (Möller–Trumbore kaikkiin kolmioihin); normaali säteen puolelle.</summary>

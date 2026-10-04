@@ -255,6 +255,9 @@ namespace Matkakirja.Linssit.Astronautti
         public Iss.KyydinTila Kyyti => kyyti.Tila;
         public bool Kyydissa => kyyti.Kyydissa;
 
+        /// <summary>Cupolan katse vetämällä lasista (omistaja 3.10.2026; Unity CupolaVeto syöttää eleen, IssKyyti käyttää).</summary>
+        public Iss.IssKatse CupolanKatse => kyyti.Katse;
+
         /// <summary>Kyydin siirtymä kesken (Pulun taulun askelkone odottaa sen loppuun, web kyytiMoodi siirtyy).</summary>
         public bool KyytiSiirtyy => kyyti.Siirtyy;
 
@@ -360,6 +363,7 @@ namespace Matkakirja.Linssit.Astronautti
             }
             if (kavely.Kaynnissa) kavely.Paivita(nyt, utc);
             double perus = double.IsNaN(kentta0) ? y.Nakokulma : kentta0;
+            kyyti.Katse.Vahennetty = y.VahennettyLiike;
             if (!kyyti.Paivita(nyt, Hetki(utc, paikka), perus, out var asento, out double kentta, out bool paluuValmis)) return;
             // NASA-vertailu (fotorealismi 30.9.): kamera astronauttikuvan paikkaan, suuntaan ja objektiiviin (astro kyyti vertailu).
             if (Vertailu.HasValue) { asento = Vertailu.Value; kentta = VertailuKentta; }

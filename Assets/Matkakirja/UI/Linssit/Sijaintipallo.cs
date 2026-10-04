@@ -128,6 +128,21 @@ namespace Matkakirja.Natiivi
             ajo.Resume();
         }
 
+        /// <summary>
+        /// Pallosta valittu kohde (omistaja 4.10.2026): vain kohdemerkki uuteen kohteeseen; pallo ei kierry keskittämään sitä vaan
+        /// pysyy asennossa, johon sormi sen jätti (‹ ›, pyyhkäisy ja AUTO kiertävät edelleen Kohteeseen-kutsulla).
+        /// </summary>
+        public void MerkitseKohde(double lat, double lon)
+        {
+            if (!Paalla || !Varmista()) return;
+            kohde = Suunta(lat, lon);
+            materiaali.SetVector("_Kohde", kohde);
+            piirtoKehyksia = 2;
+            kamera.enabled = true;
+            ajo ??= el.schedule.Execute(Paivita).Every(0);
+            ajo.Resume();
+        }
+
         public VisualElement Isa => el.parent;
 
         /// <summary>
@@ -308,7 +323,9 @@ namespace Matkakirja.Natiivi
 
         void Irti(bool pidaVauhti)
         {
-            valitsin.Irti(Time.unscaledTime, inertia: !LinssiUi.VahennettyLiike(), pidaVauhti: pidaVauhti);
+            // LUKITUS (omistaja 4.10.2026, TF 134: "sormen nosto ei aiheuttaisi pallon pyörimistä. Se saisi lukittua valittuun paikkaan
+            // kunnes palloa pyöritettäiskin uudelleen"): ei inertiaa, ei nopeassakaan heitossa; pallo jää sormen jättämään asentoon.
+            valitsin.Irti(Time.unscaledTime, inertia: false, pidaVauhti: false);
             // Ruutu päivittyy valintaan asti, vaikka mikään muu ei liiku.
             Ruudunpaivitys.Herata((float)Pallovalitsin.ValintaViiveS + 1.5f);
             ajo?.Resume();

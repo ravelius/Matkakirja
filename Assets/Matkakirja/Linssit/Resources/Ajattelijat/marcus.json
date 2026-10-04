@@ -355,10 +355,10 @@
   "tayte": 0
  },
  "taustavirta": {
-  "sumeus": 0.15,
+  "sumeus": 0.04,
   "riviTila": 2,
   "riviKorkeus": 80,
-  "riviKoko": 0.6,
+  "riviKoko": 0.8,
   "etaisyys": 0.9,
   "blend": 0.5,
   "voimaKerroin": 3,
@@ -665,7 +665,7 @@
  "syke": "ajattelijat/marcus/v1/syke-musiikki.json",
  "aikajana": {
   "versio": "v13",
-  "lahde": "linnanrakentaja-sokrates-bysti 78b883452 docs/raportit/ajattelijat-v11/marcus-luvut-v14.json",
+  "lahde": "linnanrakentaja-sokrates-bysti f55de4076 docs/raportit/ajattelijat-v11/marcus-luvut-v14.json",
   "loppu": 3089,
   "kertoja": {
    "alku": 9.5,
@@ -892,14 +892,14 @@
    [
     1304,
     [
-     -0.0688,
-     -0.6531,
-     0.4673
+     0.4247,
+     -0.5963,
+     0.4326
     ],
     [
-     0,
-     -0.08,
-     0.41
+     0.03,
+     -0.07,
+     0.38
     ],
     50,
     "BEZIER"
@@ -1784,20 +1784,20 @@
   ],
   "kaiut": [
    {
-    "kuva": "ajattelijat/marcus/v4/kaiut-paikka/kaiku-sade.png",
+    "kuva": "ajattelijat/marcus/v5/kaiut-paikka/kaiku-sade.png",
     "paikka": [
-     0.2337,
-     -0.5948,
-     0.6703
+     0.3159,
+     -0.5961,
+     0.5355
     ],
     "suunta": [
-     -0.3978,
-     0.8154,
-     -0.4205
+     -0.4341,
+     0.8602,
+     -0.2675
     ],
-    "ala": 0.1,
-    "lev": 0.1,
-    "kork": 0.095,
+    "ala": 0.121,
+    "lev": 0.121,
+    "kork": 0.0784,
     "blend": 0.3,
     "liuku": 0.02,
     "ruudut": [
@@ -1824,7 +1824,7 @@
     ]
    },
    {
-    "kuva": "ajattelijat/marcus/v4/kaiut-paikka/kaiku-uhri.png",
+    "kuva": "ajattelijat/marcus/v5/kaiut-paikka/kaiku-uhri.png",
     "paikka": [
      0.4666,
      -0.5098,
@@ -1835,9 +1835,9 @@
      0.6971,
      0.0931
     ],
-    "ala": 0.08,
-    "lev": 0.08,
-    "kork": 0.07955,
+    "ala": 0.09,
+    "lev": 0.09,
+    "kork": 0.0712,
     "blend": 0.3,
     "liuku": 0.02,
     "ruudut": [
@@ -1851,11 +1851,11 @@
      ],
      [
       1812,
-      22
+      14
      ],
      [
       1970,
-      22
+      14
      ],
      [
       2015,
@@ -1864,20 +1864,20 @@
     ]
    },
    {
-    "kuva": "ajattelijat/marcus/v4/kaiut-paikka/kaiku-kuolinvuode.png",
+    "kuva": "ajattelijat/marcus/v5/kaiut-paikka/kaiku-kuolinvuode.png",
     "paikka": [
-     0.3159,
+     0.3239,
      -0.5961,
-     0.5355
+     0.5175
     ],
     "suunta": [
      -0.4341,
      0.8602,
      -0.2675
     ],
-    "ala": 0.11,
-    "lev": 0.11,
-    "kork": 0.0825,
+    "ala": 0.0851,
+    "lev": 0.072,
+    "kork": 0.08504,
     "blend": 0.3,
     "liuku": 0.02,
     "ruudut": [
@@ -1891,11 +1891,11 @@
      ],
      [
       2318,
-      50
+      7
      ],
      [
       2699,
-      50
+      7
      ],
      [
       2723,
@@ -1981,11 +1981,11 @@
   "vaisto": [
    {
     "kohde": [
-     -0.005,
-     -0.1056,
-     0.418
+     0.0554,
+     -0.08,
+     0.375
     ],
-    "sade": 0.0759,
+    "sade": 0.0793,
     "ruudut": [
      1304,
      1489
@@ -1997,7 +1997,7 @@
      -0.0915,
      0.374
     ],
-    "sade": 0.0621,
+    "sade": 0.0631,
     "ruudut": [
      1767,
      2015
@@ -2005,11 +2005,11 @@
    },
    {
     "kohde": [
-     0.0554,
+     0.0634,
      -0.08,
-     0.375
+     0.357
     ],
-    "sade": 0.0756,
+    "sade": 0.0613,
     "ruudut": [
      2294,
      2723
@@ -2292,7 +2292,7 @@
    "rintama": 4,
    "reuna": 0.35
   },
-  "virtaVoima": 0.1,
+  "virtaVoima": 0.065,
   "aani": {
    "puhe": "ajattelijat/marcus/v4/v14-puhe.mp3",
    "musiikki": "ajattelijat/marcus/v4/v14-musiikki.mp3"
@@ -2825,5 +2825,33 @@
     ]
    }
   ]
- }
+ },
+ "kuvalahteet": [
+  {
+   "kuva": "kaiku-sade.png",
+   "kohde": "Marcus: sadeihme",
+   "teos": "Marcus Aureliuksen pylväs, Rooma: sadeihme (sadejumala)",
+   "tekija": "kuva Nico Kokkonen 2009",
+   "lisenssi": "CC BY 3.0",
+   "lahde": "Wikimedia Commons: Column_of_Marcus_Aurelius_-_detail2.jpg",
+   "nimea": "Nico Kokkonen, CC BY 3.0, Wikimedia Commons"
+  },
+  {
+   "kuva": "kaiku-uhri.png",
+   "kohde": "Marcus: uhri",
+   "teos": "Marcus Aurelius uhraa, Marcus Aureliuksen kaaren reliefi 176–180 jaa., Musei Capitolini",
+   "tekija": "José Luiz",
+   "lisenssi": "CC BY-SA 4.0 (rajattu johdannainen CC BY-SA 4.0)",
+   "lahde": "Wikimedia Commons: Marcus Aurelius showing sacrifice - Arch of Marcus Aurelius - Musei Capitolini - Rome 2016.jpg",
+   "nimea": "José Luiz, CC BY-SA 4.0, Wikimedia Commons"
+  },
+  {
+   "kuva": "kaiku-kuolinvuode.png",
+   "kohde": "Marcus: kuolinvuode",
+   "teos": "Eugène Delacroix, Marcus Aureliuksen viimeiset sanat 1844, Musée des Beaux-Arts de Lyon",
+   "tekija": "kuva Romainbehar",
+   "lisenssi": "CC0",
+   "lahde": "Wikimedia Commons: Lyon 1er - Musée des Beaux-Arts - Salle 221 - Dernières paroles de l'empereur Marc Aurèle (Eugène Delacroix).jpg"
+  }
+ ]
 }

@@ -99,6 +99,13 @@ namespace Matkakirja
         public float napautusLiike = 10f;
         public float napautusAika = 0.35f;
 
+        /// <summary>
+        /// Yhden sormen veto ohjataan muualla (ISS-kyydin Cupola, Linssiseppä 3.10.2026: veto kääntää ikkunan katsetta,
+        /// CupolaVeto): pallo ei siirrä kameraa eikä jätä liukua, mutta napautukset, tuplanapautus ja PelaajanEle toimivat
+        /// kuten ennen. Asettaja nollaa (oletus false = ennallaan).
+        /// </summary>
+        [NonSerialized] public bool YhdenSormenVetoMuualla;
+
         [Header("Kamera-ajo")]
         [Tooltip("Verkkopelin SAATON_RAMPPI.")]
         public double ajonRamppi = 0.3;
@@ -1153,7 +1160,7 @@ namespace Matkakirja
                         }
                         else vetoNopeus = 0; // ennen lukitusta kamera ei liiku
                     }
-                    else Kierra(siirto, dt);
+                    else if (!YhdenSormenVetoMuualla) Kierra(siirto, dt);
                 }
                 else if (n >= 2)
                 {

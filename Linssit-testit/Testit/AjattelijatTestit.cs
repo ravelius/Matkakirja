@@ -82,14 +82,15 @@ namespace Matkakirja.Linssit.Testit
         {
             var v = AjattelijaAikajana.Taustavirta(Lue("sokrates"));
             Oleta.Sama(20, v.Count);
-            // (rivi, korkeus, kirkkaus, vM, kulma, nopeus uv/ruutu, mm/s) webin asetaVirta (088b64d0c, v14: riviKoko 0,6,
-            // riviTila 2, 80 px:n nauha) nodella natiivin atlaksen paikoista 3.10.; kirkkaudet ja asettelu ennallaan (sama siemen).
+            // (rivi, korkeus, kirkkaus, vM, kulma, nopeus uv/ruutu, mm/s) webin asetaVirta (088b64d0c, v14: riviTila 2, 80 px:n nauha)
+            // nodella natiivin atlaksen paikoista 3.10.; kirkkaudet ja asettelu ennallaan (sama siemen). Omistaja TF 133 (rivit liian
+            // sumeita, Pelikoodari #3913): riviKoko 0,6 → 0,8, joten korkeus × 4/3 ja uv-nopeus × 3/4; pinnan mm/s ennallaan.
             var odotetut = new[]
             {
-                (0, 0.009, 0.267322949637, -0.101083351336, -0.0578257875064, -0.00393099719785575, 27.1710526316),
-                (4, 0.0054, 0.106924289309, 0.0607134358166, -0.120095068305, -0.01926632807423652, 22.8289473684),
-                (7, 0.0054, 0.117068000645, -0.0373129654754, 0.106374477445, 0.02242714805677388, 24.8026315789),
-                (19, 0.0054, 0.18325603181, 0.0497238574733, 0.0350482896975, 0.0064564804662118275, 26.7763157895),
+                (0, 0.012, 0.267322949637, -0.101083351336, -0.0578257875064, -0.0029482478983918125, 27.1710526316),
+                (4, 0.0072, 0.106924289309, 0.0607134358166, -0.120095068305, -0.014449746055677387, 22.8289473684),
+                (7, 0.0072, 0.117068000645, -0.0373129654754, 0.106374477445, 0.01682036104258041, 24.8026315789),
+                (19, 0.0072, 0.18325603181, 0.0497238574733, 0.0350482896975, 0.00484236034965887, 26.7763157895),
             };
             foreach (var (i, k, kir, vm, ku, n, mms) in odotetut)
             {
@@ -346,7 +347,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(aj.Tykit.All(t => t.Kiintea) && aj.Tykit[0].Leveys == 0.11 && aj.Tykit[4].Leveys == 0.10522, "kortit, leveys luvuista");
             Oleta.Tosi(aj.Kortti && aj.KorttiMerkkeja == 24 && aj.KorttiLeveys == 0.11 && aj.KorttiSiirto == 0, "lauseKortti");
             Oleta.Tosi(aj.Porrastus && aj.PorrasAlku == 286 && aj.PorrasVali == 15 && aj.PorrasHaivytys == 9 && aj.PorrasRintama == 4 && aj.PorrasReuna == 0.35, "virtaPorrastus");
-            Oleta.Sama(0.1, aj.VirtaVoima);
+            Oleta.Sama(0.065, aj.VirtaVoima);   // #3913 (omistaja TF 133): 0,1 → 0,065
             Oleta.Tosi(aj.TykkiVari.SequenceEqual(new[] { 1.0, 1, 1 }), "tekstiprojektorit värittömiä");
             Oleta.Tosi(aj.Puhe == "ajattelijat/sokrates/v4/v14-puhe.mp3" && aj.Musiikki == "ajattelijat/sokrates/v4/v14-musiikki.mp3"
                 && aj.Syke == "ajattelijat/sokrates/v4/syke-v14.json", "v4-raidat");
@@ -357,7 +358,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(aj.Ymparisto.Select(x => x[1]).SequenceEqual(new[] { 1.0, 1, 0, 0, 1 }), "ympäristö 0 silmä- ja partakuvissa");
             Oleta.Tosi(aj.VarjolevyRuudut.SequenceEqual(new[] { 136.0, 153 }) && aj.VarjolevyKeski[2] == 0.197, "varjolevy");
             var tv = a.Taustavirta;
-            Oleta.Tosi(tv.Sumeus == 0.15 && tv.RiviTila == 2 && tv.RiviKorkeus == 80 && tv.RiviKoko == 0.6, "taustavirran pehmeys");
+            Oleta.Tosi(tv.Sumeus == 0.04 && tv.RiviTila == 2 && tv.RiviKorkeus == 80 && tv.RiviKoko == 0.8, "taustavirran pehmeys (#3913)");
             Oleta.Tosi(tv.Projektorit.Select(p => p.Pehmeys).SequenceEqual(new[] { 1.0, 1, 1.5, 1.3, 1.3 }), "kauemmat pehmeämpiä");
             // Kortit atlaksessa: monirivinen laatta ilman sumeaa paria.
             var kortti = a.Atlas.Paikat[21];
@@ -430,10 +431,10 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(v.Where(x => x.Puoli == VirtaPuoli.Yla).All(x => x.Lahto >= 338), "ylärivit kysymyksen jälkeen");
             // Rintama ja häivytys (web asetaAikajana): rivi 0 ja 7, 5 ja 40 ruutua lähdöstä.
             var t0 = AjattelijaAikajana.PorrasTila(v[0], 286 + 5, 9, 4, 0.35, 0, false);
-            Oleta.Tosi(Math.Abs(t0.siirto - -0.019654985989278752) < 1e-15 && Math.Abs(t0.rintama - -10.03438596491228) < 1e-12
+            Oleta.Tosi(Math.Abs(t0.siirto - -0.019654985989278752 * 0.75) < 1e-15 && Math.Abs(t0.rintama - -10.03438596491228) < 1e-12
                 && Math.Abs(t0.voima - 0.5555555555555556) < 1e-12, $"rivi 0: {t0}");
             var t7 = AjattelijaAikajana.PorrasTila(v[7], 481 + 40, 9, 4, 0.35, 0.5, false);
-            Oleta.Tosi(Math.Abs(t7.siirto - 0.8970859222709553) < 1e-12 && Math.Abs(t7.rintama - 9.913219298245615) < 1e-12 && t7.voima == 1,
+            Oleta.Tosi(Math.Abs(t7.siirto - 0.8970859222709553 * 0.75) < 1e-12 && Math.Abs(t7.rintama - 9.913219298245615) < 1e-12 && t7.voima == 1,
                 $"rivi 7: {t7}");
             // Ennen lähtöä pimeä; kaikkien lähdettyä aikajanan kerroin sellaisenaan (myös alle 1).
             Oleta.Tosi(AjattelijaAikajana.PorrasTila(v[0], 286, 9, 4, 0.35, 1, false) == (0, 0, 0), "ennen lähtöä");
@@ -541,6 +542,135 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(255, Max(4096 - (int)(r.Y + r.Korkeus), 4096 - (int)r.Y));
             Oleta.Sama(0, Max(4096 - 3500 - 500, 4096 - 3500));   // kankaan rivit 3500–4000 tyhjiä
             Oleta.Tosi(AjattelijaData.PuraHarmaaPng(new byte[] { 1, 2, 3 }) == null, "muu muoto → varatie");
+        }
+
+        [Testi] static void TahtiAnkkuriJaRuutu()
+        {
+            // Omistaja TF 133 (iskut eivät ihan osu): kuva ruudussa g näkyy, kun sen ääni kuuluu (viive = ulostulo − näyttö).
+            double viive = 0.040, dsp = 100.0;
+            double nolla = AjattelijaTahti.Ankkuri(dsp, 12, viive);
+            Oleta.Tosi(Math.Abs(AjattelijaTahti.Ruutu(dsp, nolla, viive) - 12) < 1e-9, "ankkuri jatkaa samasta ruudusta");
+            Oleta.Tosi(Math.Abs(AjattelijaTahti.Ruutu(dsp + 1, nolla, viive) - 42) < 1e-9, "30 ruutua sekunnissa");
+            // Ruudun 30 ääni ajastetaan hetkeen, jona kuva on ruudussa 30 miinus viive: kuuluu viiveen jälkeen, kun kuva näkyy.
+            double h = AjattelijaTahti.Hetki(nolla, 30);
+            Oleta.Tosi(Math.Abs(AjattelijaTahti.Ruutu(h + viive, nolla, viive) - 30) < 1e-9, "ääni + viive = kuva");
+        }
+
+        [Testi] static void TahtiSuuriViiveOdottaaMustassa()
+        {
+            // Bluetooth 0,25 s: kytkin (ruutu 30) ei ehtisi, jos kuva jatkaisi ruudusta 29 → ankkuri siirtyy, kuva odottaa.
+            double viive = 0.25, dsp = 50.0;
+            double nolla = AjattelijaTahti.Ankkuri(dsp, 29, viive, 30);
+            Oleta.Tosi(AjattelijaTahti.Hetki(nolla, 30) >= dsp + AjattelijaTahti.Etumatka - 1e-9, "kytkin ajastetaan tulevaisuuteen");
+            Oleta.Tosi(AjattelijaTahti.Ruutu(dsp, nolla, viive) < 29, "kuva odottaa (ruutu pienempi kuin ennen ankkuria)");
+            // Pieni viive: ankkuri ei siirry.
+            double n2 = AjattelijaTahti.Ankkuri(dsp, 10, 0.02, 30);
+            Oleta.Tosi(Math.Abs(AjattelijaTahti.Ruutu(dsp, n2, 0.02) - 10) < 1e-9, "pieni viive: jatkuu samasta ruudusta");
+        }
+
+        [Testi] static void TahtiMyohainenRaitaLiittyyKesken()
+        {
+            double nolla = 10.0;   // ruutu 75 (prologin loppu) = 12,5 s
+            var (h0, k0) = AjattelijaTahti.Ajastus(11.0, nolla, 75);
+            Oleta.Tosi(Math.Abs(h0 - 12.5) < 1e-9 && k0 == 0, "ajoissa: alku prologin lopussa");
+            var (h1, k1) = AjattelijaTahti.Ajastus(14.0, nolla, 75);
+            Oleta.Tosi(Math.Abs(h1 - (14.0 + AjattelijaTahti.Etumatka)) < 1e-9, "myöhässä: alku Etumatkan päähän");
+            Oleta.Tosi(Math.Abs(k1 - (h1 - 12.5)) < 1e-9, "kohta raidassa = sama ruutu kuin ajoissa alkaneella");
+        }
+
+        [Testi] static void TahtiKelloTasainenJaKasvava()
+        {
+            var k = new AjattelijaTahti.Kello();
+            Oleta.Sama(5.0, k.Nyt(5.0, 100.0));
+            Oleta.Tosi(Math.Abs(k.Nyt(5.0, 100.010) - 5.010) < 1e-9, "puskurin välissä interpoloidaan reaaliajalla");
+            Oleta.Tosi(Math.Abs(k.Nyt(5.0, 101.0) - (5.0 + AjattelijaTahti.Kello.Raja)) < 1e-9, "interpolointi rajattu");
+            Oleta.Tosi(k.Nyt(5.0, 100.020) >= 5.0 + AjattelijaTahti.Kello.Raja, "ei koskaan taaksepäin");
+            Oleta.Tosi(Math.Abs(k.Nyt(5.2, 101.1) - 5.2) < 1e-9, "uusi puskuri: dspTime");
+        }
+
+        [Testi] static void TahtiIntronLeikkauksetJaIsku()
+        {
+            // Sokrateen intro: kameran CONSTANT-leikkaukset (61 silmä, 118, 136, 154, 184) mittariin.
+            var l = AjattelijaTahti.Leikkaukset(Lue("sokrates").Aikajana.Kamera, 300);
+            Oleta.Tosi(l.SequenceEqual(new[] { 61.0, 118, 136, 154, 184 }), string.Join(" ", l));
+            // Isku: hiljaisuus + napsahdus 2,03 s kohdalla → löytyy 5 ms:n tarkkuudella; tasainen kohina → NaN.
+            int f = 48000; var m = new float[f / 2];
+            for (int i = 0; i < m.Length; i++) m[i] = 0.001f * (float)Math.Sin(i * 0.37);
+            int isku = (int)((2.03 - 1.8) * f);
+            for (int i = isku; i < isku + 2400; i++) m[i] = 0.6f * (float)Math.Sin(i * 0.2) * (1 - (i - isku) / 2400f);
+            double h = AjattelijaTahti.Isku(m, f, 1.8, 2.0);
+            Oleta.Tosi(Math.Abs(h - 2.03) <= 0.006, $"isku {h}");
+            var tasainen = new float[f / 2];
+            for (int i = 0; i < tasainen.Length; i++) tasainen[i] = 0.3f * (float)Math.Sin(i * 0.2);
+            Oleta.Tosi(double.IsNaN(AjattelijaTahti.Isku(tasainen, f, 1.8, 2.0)), "ei iskua");
+        }
+
+        [Testi] static void TahtiMp3AlkuviiveTagista()
+        {
+            // v14-musiikki.mp3 (Lavf, 48 kHz, ämpäri 3.10.): ffmpeg "skip 1105" = enkooderi 576 + dekooderi 529; kehyksiä 4528.
+            var t = AjattelijaTahti.Mp3Alku(File.ReadAllBytes(Fixtuurit + "v14-musiikki-alku.bin"));
+            Oleta.Tosi(t.HasValue, "tagi löytyy ID3:n jälkeen");
+            Oleta.Sama(4528, t.Value.Kehyksia);
+            Oleta.Sama(1152, t.Value.KehyksenNaytteet);
+            Oleta.Sama(576, t.Value.Viive);
+            // Leikkaamaton dekoodaus (kaikki kehykset) → ohitetaan 1105; leikattu → 0.
+            Oleta.Sama(1105, AjattelijaTahti.Mp3Ohitus(t, 4528L * 1152));
+            // Unity (FMOD) dekoodaa myös tagikehyksen: klipissä 5 263 488 näytettä, ristikorrelaatio ffmpeg:tä vasten 2257 (47,0 ms).
+            Oleta.Sama(2257, AjattelijaTahti.Mp3Ohitus(t, 5263488));
+            Oleta.Sama(0, AjattelijaTahti.Mp3Ohitus(t, 4528L * 1152 - 1105 - t.Value.Tayte));
+            Oleta.Sama(0, AjattelijaTahti.Mp3Ohitus(null, 123456));
+            Oleta.Tosi(!AjattelijaTahti.Mp3Alku(new byte[300]).HasValue, "ei MP3:a");
+        }
+
+        [Testi] static void AikajanaOnYksipohjainen()
+        {
+            // Linnanrakentajan luvut (Blender): ruutu 1 = 0,0 s. Leikkaus 61 = raidan 2,000 s = globaali pl + 60 (Linssiseppä 1 4.10.).
+            var a = Lue("sokrates");
+            double pl = a.Prologi.Loppu;
+            Oleta.Tosi(Math.Abs(AjattelijaAikajana.Globaali(a, pl + 0.5).ruutu - 1.5) < 1e-12, "raidan alku = ruutu 1");
+            Oleta.Tosi(Math.Abs(AjattelijaAikajana.Globaali(a, pl + 2.0 * AjattelijaAikajana.RuutuaSekunnissa).ruutu - 61) < 1e-12, "2,000 s = ruutu 61");
+            // Kierrostila (webin oma data) ennallaan: 0-pohjainen.
+            var k = Lue("marcus-v11");
+            Oleta.Tosi(k.Aikajana != null || Math.Abs(AjattelijaAikajana.Globaali(k, k.Prologi.Loppu + 10).ruutu - 10) < 1e-12, "kierrokset ennallaan");
+        }
+
+        [Testi] static void KuvalahteetDatasta()
+        {
+            // Tekijätiedot ja lähteet -sivun Ajattelijat-osio (Päätoimittaja 4.10.): kuvalahteet [{ kuva, kohde, teos, tekija, lisenssi, lahde }].
+            var (_, r) = AjattelijaData.Kuvalahteet(File.ReadAllText(Fixtuurit + "kuvalahteet-esimerkki.json"));
+            Oleta.Sama(4, r.Count);
+            var o = r.First(x => x.Kuva == "kaiku-oraakkeli.png");
+            Oleta.Tosi(o.Tekija == "Davide Mauro" && o.Lisenssi.StartsWith("CC BY-SA 4.0") && o.Nimea == "Davide Mauro, CC BY-SA 4.0, Wikimedia Commons", "oraakkeli");
+            // Vanha kaiku.nimeaminen (Marcus v11) tekijäksi, kun kuvalähdettä ei ole.
+            var (nimi, m) = AjattelijaData.Kuvalahteet(File.ReadAllText(Fixtuurit + "marcus-v11.json"));
+            Oleta.Tosi(nimi == "Marcus Aurelius" && m.Count == 1 && m[0].Tekija.StartsWith("Nico Kokkonen, CC BY 3.0"), "Marcus nimeaminen");
+            Oleta.Sama(0, AjattelijaData.Kuvalahteet("ei jsonia").rivit.Count);
+        }
+
+        [Testi] static void SavunPehmeysOletukset()
+        {
+            var aj = Lue("sokrates").Aikajana;
+            Oleta.Tosi(aj.SavuKuva != null && aj.SavuHarso == AjattelijaAikajanaData.OletusSavuHarso && aj.SavuPehmeys == AjattelijaAikajanaData.OletusSavuPehmeys,
+                $"savu {aj.SavuKuva} harso {aj.SavuHarso} pehmeys {aj.SavuPehmeys}");
+        }
+
+        [Testi] static void JokaisellaKaiullaOnKuvalahde()
+        {
+            // Juna 135 (Päätoimittaja 4.10.): oraakkeli (CC BY-SA 4.0) ja uhri eivät lähde ilman attribuutiota: jokaisella aikajanan
+            // kaikukuvalla on kuvalähde, ja BY-lisenssillä nimeämisrivi.
+            foreach (var tunnus in new[] { "sokrates" })
+            {
+                var json = File.ReadAllText(Kansio + tunnus + ".json");
+                var a = Lue(tunnus);
+                var (_, lahteet) = AjattelijaData.Kuvalahteet(json);
+                foreach (var k in a.Aikajana.Kaiut)
+                {
+                    var kuva = Path.GetFileName(k.Kuva);
+                    var l = lahteet.FirstOrDefault(x => x.Kuva == kuva);
+                    Oleta.Tosi(l != null && l.Tekija != null && l.Lisenssi != null && l.Lahde != null, $"{tunnus} {kuva}: kuvalähde");
+                    if (l?.Lisenssi != null && l.Lisenssi.Contains("BY")) Oleta.Tosi(!string.IsNullOrEmpty(l.Nimea), $"{tunnus} {kuva}: nimeämisrivi");
+                }
+            }
         }
     }
 }

@@ -1143,10 +1143,19 @@ namespace Matkakirja.Natiivi
                 // Pelaajan veto tai nipistys päättää ISS-seurannan (web otePalloon); napautus AstronauttiKerros.Napautuksessa.
                 if (o.kierto != null) o.kierto.PelaajanEle += linssi.PelaajanEle;
                 mustaAlku = Time.realtimeSinceStartup;
+                // Kyydissä päivitys ennen Cesiumin laattavalintaa (KyydinKameraEnnen): kääntyvä näkymä ei näytä aukkoja.
+                if (o.GetComponent<KyydinKameraEnnen>() == null) o.gameObject.AddComponent<KyydinKameraEnnen>();
+                KyydinKameraEnnen.Ajo = () => { if (linssi != null && linssi.Kyydissa) Paivita(); };
             }
             float mustaAlku = -1f;
+            int paivitetty = -1;
             public void Paivita()
             {
+                // Kerran kehyksessä: kyydissä jo KyydinKameraEnnen-vaiheessa (−50), jolloin LinssiOhjaimen ajo ohitetaan.
+                if (paivitetty == Time.frameCount) return;
+                paivitetty = Time.frameCount;
+                // Cupolan katseen veto ennen linssin päivitystä: veto näkyy samassa kehyksessä (CupolaVeto, omistaja 3.10.).
+                if (kerros != null && linssi != null) kerros.Veto.Paivita(linssi, o.kierto);
                 linssi?.Paivita();
                 // Musta ruutu odottaa reliefiä (AvauksenVaihe.Musta): mittari "linssi satelliitti:musta" (esiladattu
                 // avausnäkymä lyhentää sitä minimiaikaan PaljastuksenMinimiMs asti).
@@ -1157,7 +1166,9 @@ namespace Matkakirja.Natiivi
             public void Sulje()
             {
                 if (linssi != null && o.kierto != null) o.kierto.PelaajanEle -= linssi.PelaajanEle;
-                linssi?.Sulje(); linssi = null; kerros = null; mustaAlku = -1f;
+                if (kerros != null) kerros.Veto.Pois();
+                KyydinKameraEnnen.Ajo = null;
+                linssi?.Sulje(); linssi = null; kerros = null; mustaAlku = -1f; paivitetty = -1;
             }
         }
 
@@ -1670,10 +1681,11 @@ namespace Matkakirja.Natiivi
                         else if (a == "kehysmusta" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.KehysMustana = osat[3] != "0";
                         else if (a == "paiva" && osat.Length > 3) Matkakirja.Linssit.Astronautti.AstronauttiLinssi.CupolaPaivanvaloon = osat[3] != "0"; // A/B (30.9.)
                         else if (a == "horisonttikulma" && osat.Length > 3) Matkakirja.Linssit.Iss.IssKuvakulma.Horisonttikulma = osat[3] != "0"; // A/B (30.9.)
-                        else if (a == "katse" && osat.Length > 3)   // katse <astetta vaakatason alapuolelle> | pois (tilan mukaan)
-                            Matkakirja.Linssit.Iss.IssKuvakulma.KatseAlasPakotettu = double.TryParse(osat[3].Replace(',', '.'),
-                                System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double katse)
-                                ? Math.Max(0, Math.Min(90, katse)) : double.NaN;
+                        // CUPOLAN KATSE VETÄMÄLLÄ (omistaja 3.10.2026, IssKatse / CupolaVeto): katse <alas°> <suunta°> | oletus | tila,
+                        // katse <alas°> yksin = vanha A/B (KatseAlasPakotettu, rajauksen oletus), katse pois = A/B pois ja oletukseen heti;
+                        // veto <dx> <dy> [ms] simuloi sormen vedon pisteinä (ms > 0 jättää inertian).
+                        else if (a == "katse" && osat.Length > 3) Kirjaa("astro kyyti katse: " + KyydinKatse(l, osat.Skip(3).ToArray()));
+                        else if (a == "veto") Kirjaa("astro kyyti veto: " + KyydinVeto(l, osat.Skip(3).ToArray()));
                         else if (a == "tumma" && osat.Length > 3 && float.TryParse(osat[3].Replace(',', '.'),
                                      System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float tumma))
                         {
@@ -2208,6 +2220,59 @@ namespace Matkakirja.Natiivi
                 return $"tuntematon kohde {tunnus}; kohteet: " + string.Join(" ", l.YlilennonKohteet.Select(x => x.Tunnus));
             var y = l.LennaKohteeseen(tunnus, valoisa);
             return y.HasValue ? $"{tunnus}{(valoisa ? " (valoisa)" : "")}: {y.Value}; {l.YlilennonRivi()}" : l.YlilennonRivi() ?? "ei ylilentoa";
+        }
+
+        static bool LukuOk(string s, out double v) => double.TryParse(s.Replace(',', '.'), System.Globalization.NumberStyles.Float,
+            System.Globalization.CultureInfo.InvariantCulture, out v);
+
+        /// <summary>Cupolan katseen oletus nyt (rajauksen katse ISS:n korkeudella) tilariviä varten.</summary>
+        static double KatseenOletus() =>
+            Matkakirja.Linssit.Iss.IssKuvakulma.IkkunanKatse(Matkakirja.Linssit.Iss.IssNyt.KorkeusKm(Matkakirja.Linssit.Iss.IssNyt.Kello()) * 1000);
+
+        /// <summary>
+        /// Testikomento `astro kyyti katse &lt;alas°&gt; &lt;suunta°&gt; | oletus | tila | pois | &lt;alas°&gt;` (Cupolan katse ilman kosketusta).
+        /// </summary>
+        static string KyydinKatse(Matkakirja.Linssit.Astronautti.AstronauttiLinssi l, string[] a)
+        {
+            var k = l?.CupolanKatse;
+            if (a.Length >= 2 && LukuOk(a[0], out double alas) && LukuOk(a[1], out double suunta))
+            {
+                if (k == null) return "ei astronautin kameraa";
+                k.Aseta(alas, suunta);
+                Ruudunpaivitys.Herata();
+            }
+            else if (a.Length >= 1 && a[0] == "oletus") { if (k == null) return "ei astronautin kameraa"; k.Oletukseen(Time.realtimeSinceStartupAsDouble); Ruudunpaivitys.Herata(1f); }
+            else if (a.Length >= 1 && a[0] == "pois") { Matkakirja.Linssit.Iss.IssKuvakulma.KatseAlasPakotettu = double.NaN; k?.Nollaa(); }
+            else if (a.Length >= 1 && LukuOk(a[0], out double pakko))   // vanha A/B: rajauksen oletus pakotettuna
+                Matkakirja.Linssit.Iss.IssKuvakulma.KatseAlasPakotettu = Math.Max(0, Math.Min(90, pakko));
+            else if (a.Length < 1 || a[0] != "tila") return "käyttö: astro kyyti katse <alas°> <suunta°> | oletus | tila | pois | <alas°> (A/B oletus)";
+            string pakotettu = double.IsNaN(Matkakirja.Linssit.Iss.IssKuvakulma.KatseAlasPakotettu) ? ""
+                : $", A/B oletus pakotettu {Matkakirja.Linssit.Iss.IssKuvakulma.KatseAlasPakotettu:0.#}°";
+            var veto = FindAnyObjectByType<AstronauttiKerros>()?.Veto;
+            return (k == null ? "ei astronautin kameraa" : k.Tila(KatseenOletus())) + $", oletus {KatseenOletus():0.0}°{pakotettu}"
+                + (veto != null ? " · " + veto.Tila() : "") + $" · kyyti {l?.Kyyti}";
+        }
+
+        /// <summary>
+        /// Testikomento `astro kyyti veto &lt;dx&gt; &lt;dy&gt; [ms]`: sormen veto pisteinä (x oikealle, y alas) kerralla. ms &gt; 0 antaa
+        /// vauhdin (siirto / ms) ja jättää inertian; 0 tai puuttuva = siirto ilman liukua. Vain Cupolassa, ei kuvaputken aikana.
+        /// </summary>
+        static string KyydinVeto(Matkakirja.Linssit.Astronautti.AstronauttiLinssi l, string[] a)
+        {
+            var k = l?.CupolanKatse;
+            if (k == null) return "ei astronautin kameraa";
+            if (a.Length < 2 || !LukuOk(a[0], out double dx) || !LukuOk(a[1], out double dy)) return "käyttö: astro kyyti veto <dx> <dy> [ms]";
+            if (l.Kyyti != Matkakirja.Linssit.Iss.KyydinTila.Ikkuna) return $"ei Cupolassa ({l.Kyyti})";
+            if (k.Lukittu) return "kuvaputki käynnissä: veto ohitetaan";
+            double ms = a.Length > 2 && LukuOk(a[2], out double m) ? Math.Max(0, m) : 0;
+            double t = Time.realtimeSinceStartupAsDouble;
+            if (IssKyytiNakyma.VedonLasi(out _, out _, out float h) && h > 1f)
+                k.AsteitaPisteelle = Matkakirja.Linssit.Iss.IssKuvakulma.IkkunanKentta / h;
+            k.Tartu(t);
+            k.VetoPt(dx, dy, t, ms > 0 ? ms / 1000 : double.NaN);
+            k.Irti(t, inertia: ms > 0, pidaVauhti: true);
+            Ruudunpaivitys.Herata(1.5f);
+            return k.Tila(KatseenOletus());
         }
 
         /// <summary>Kyydin simuloitu aika ja ylilento (astro kyyti tila): kello, nopeus, kohde ja pillerin alla näkyvä rivi.</summary>

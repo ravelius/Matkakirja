@@ -464,6 +464,22 @@ namespace Matkakirja.Natiivi
             return kupuKaannetty ? new Vector3(W * 0.5f - dy, H * 0.5f + dx, lasiKuvussa.z) : new Vector3(W * 0.5f + dx, H * 0.5f + dy, lasiKuvussa.z);
         }
 
+        /// <summary>
+        /// Cupolan katseen veto (CupolaVeto, omistaja 3.10.2026): lasin ympyrä ruudun pisteinä (x, y alas, säde) ja ruudun koko
+        /// pisteinä. Cupola 3:ssa mitattu lasi (LasiRuudulla), muuten pyöreä ikkuna keskellä (0,46 · lyhyempi sivu, kuten Pulun
+        /// alue). false = ei kyytinäkymää tai asettelu puuttuu.
+        /// </summary>
+        public static bool VedonLasi(out Vector3 lasi, out float W, out float H)
+        {
+            lasi = default; W = H = 0f;
+            var n = instanssi;
+            if (n == null || n.juuri.panel == null) return false;
+            W = n.juuri.layout.width; H = n.juuri.layout.height;
+            if (!(W > 1f) || !(H > 1f)) return false;
+            lasi = n.LasiRuudulla(W, H) ?? new Vector3(W * 0.5f, H * 0.5f, 0.46f * Mathf.Min(W, H));
+            return true;
+        }
+
         void PaivitaPulu()
         {
             if (!UiNakymat.Olemassa) return;

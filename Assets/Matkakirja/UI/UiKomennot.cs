@@ -636,7 +636,10 @@ namespace Matkakirja.Natiivi
                     if (loput == "mikki") { ui.Chat.MikkiTesti(); Kirjaa("ui chat mikki: " + ui.Chat.PuheTilaTeksti); return null; }
                     if (loput.Length > 0) ui.Chat.Kysy(loput); else ui.Chat.Vaihda();
                     return null;
-                case "tietoja": ui.Aloitus.Apuraha.Sulje(); ui.Tietoja.Avaa(); return null; // kortti (kerros 45) jäi tietojen päälle
+                case "tietoja":   // ui tietoja [osio]: osio = ryhmän otsikon alku (esim. ajattelijat), vieritys siihen
+                    ui.Aloitus.Apuraha.Sulje(); // kortti (kerros 45) jäi tietojen päälle
+                    if (loput.Length > 0) ui.Tietoja.AvaaOsioon(loput); else ui.Tietoja.Avaa();
+                    return null;
                 // Lukijan moottori (omistaja 30.9.2026, ElevenLabs v4 Turbo -vertailu): "ui moottori eleven|xai [ääni-id]".
                 case "moottori":
                 {

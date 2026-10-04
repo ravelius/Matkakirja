@@ -116,6 +116,13 @@ namespace Matkakirja.Linssit.Ajattelijat
         /// riviKorkeus (atlaksen nauha px) ja riviKoko (rivikorkeuden kerroin pinnalla). Puuttuvat: 0, 1, 96, 1.
         /// </summary>
         public double Sumeus, RiviTila = 1, RiviKorkeus = 96, RiviKoko = 1;
+        /// <summary>
+        /// Natiivin rajat (Päätoimittaja 4.10., omistaja TF 133): nauhan suurin korkeus ruudun korkeudesta (rajaKoko, 0 = pois;
+        /// yli rajan rivi häivyttyy välillä raja … raja × 1,3) ja geometrisen N·L:n häivytys rajaKulma [pois alle, täysi yli].
+        /// </summary>
+        public double RajaKoko = OletusRajaKoko;
+        public double[] RajaKulma = { 0.1, 0.25 };
+        public const double OletusRajaKoko = 0.08;
         public uint Siemen;
         public double[] Rivikork, Ajat;
         public Dictionary<string, double[]> Kirkkaus = new Dictionary<string, double[]>();
@@ -209,6 +216,12 @@ namespace Matkakirja.Linssit.Ajattelijat
         // Savumaski (v13c): 240 ruutua neljänä kanavana 8 × 8 laatassa; null = ei savua.
         public string SavuKuva;
         public double SavuAla, SavuKesto, SavuFps, SavuRuutuja, SavuYdin = 0.28, SavuVahvuus;
+        /// <summary>
+        /// Pehmeä savu (omistaja TF 133): maskin sumennus laatan uv:nä ja harso (tummennuksen osuus, 1 = webin v5-varjo).
+        /// Oletukset natiivin itsetarkistuksesta; data voi antaa omat (savu.pehmeys, savu.harso).
+        /// </summary>
+        public double SavuPehmeys = OletusSavuPehmeys, SavuHarso = OletusSavuHarso;
+        public const double OletusSavuPehmeys = 0.04, OletusSavuHarso = 0.5;
         public double[] TykkiVari, KaikuVari;
         // Rakovalo (v14b), ympäristövalon kerroin [[ruutu, kerroin]] ja varjolevy (vain varjo).
         public List<RakoAvain> Rako;
@@ -229,6 +242,14 @@ namespace Matkakirja.Linssit.Ajattelijat
     public sealed class AjattelijaKappale
     {
         public string Otsikko, Teksti;
+    }
+
+    /// <summary>Ajattelijan kuvan lähde Tekijätiedot ja lähteet -sivulle (AjattelijaData.Kuvalahteet).</summary>
+    public sealed class AjattelijaKuvalahde
+    {
+        public string Kuva, Kohde, Teos, Tekija, Lisenssi, Lahde;
+        /// <summary>Lisenssin vaatima nimeämisrivi sellaisenaan (CC BY / BY-SA), muuten null.</summary>
+        public string Nimea;
     }
 
     public sealed class AjattelijaData
@@ -449,7 +470,9 @@ namespace Matkakirja.Linssit.Ajattelijat
                 Siemen = (uint)L(tv, "siemen"), Rivikork = V(tv, "rivikork"), Ajat = V(tv, "ajat"),
                 Mms = L(O(tv, "nopeus"), "mms"), Vaihtelu = Lv(O(tv, "nopeus"), "vaihtelu", 0),
                 Sumeus = Lv(tv, "sumeus", 0), RiviTila = Lv(tv, "riviTila", 1), RiviKorkeus = Lv(tv, "riviKorkeus", 96), RiviKoko = Lv(tv, "riviKoko", 1),
+                RajaKoko = Lv(tv, "rajaKoko", AjattelijaTaustavirta.OletusRajaKoko),
             };
+            if (K(tv, "rajaKulma") != null) d.Taustavirta.RajaKulma = V(tv, "rajaKulma");
             foreach (var kv in O(tv, "kirkkaus")) d.Taustavirta.Kirkkaus[kv.Key] = Vek(kv.Value);
             foreach (var x in MiniJson.TaulukkoTaiTyhja(K(tv, "projektorit")))
             {
@@ -550,6 +573,7 @@ namespace Matkakirja.Linssit.Ajattelijat
             {
                 aj.SavuKuva = sk; aj.SavuAla = L(sa, "ala"); aj.SavuKesto = L(sa, "kesto"); aj.SavuFps = L(sa, "fps"); aj.SavuRuutuja = L(sa, "ruutuja");
                 aj.SavuYdin = Lv(sa, "ydin", 0.28); aj.SavuVahvuus = Lv(sa, "vahvuus", 0);
+                aj.SavuPehmeys = Lv(sa, "pehmeys", AjattelijaAikajanaData.OletusSavuPehmeys); aj.SavuHarso = Lv(sa, "harso", AjattelijaAikajanaData.OletusSavuHarso);
             }
             aj.TykkiVari = K(o, "tykkiVari") is object tv ? Vek(tv) : null;
             aj.KaikuVari = K(o, "kaikuVari") is object kv ? Vek(kv) : null;
@@ -657,6 +681,31 @@ namespace Matkakirja.Linssit.Ajattelijat
             if (puuttuu.Count > 0) return (null, "puuttuvat kentät: " + string.Join(", ", puuttuu));
             try { return (Lue(o), null); }
             catch (Exception e) { return (null, "luku: " + e.Message); }
+        }
+
+        /// <summary>
+        /// KUVALÄHTEET (Päätoimittaja 4.10.2026: Tekijätiedot ja lähteet -sivulle oma Ajattelijat-osio, kaikki kaikukuvat: kohde, teos,
+        /// tekijä, lisenssi ja lähde; jakoehtoinen lisenssi lähteeseen ja attribuutioon). Datan "kuvalahteet": [{ kuva, kohde, teos,
+        /// tekija, lisenssi, lahde, nimea? }] (muunnin luvuista: v13.kaiut[].lahde + kuva); vanha kaiku.nimeaminen (Marcus v11)
+        /// tulee tekijäksi, ellei samaa kuvaa ole kuvalähteissä. Palauttaa ajattelijan nimen ja rivit; virheellinen data = tyhjä.
+        /// </summary>
+        public static (string nimi, List<AjattelijaKuvalahde> rivit) Kuvalahteet(string json)
+        {
+            var rivit = new List<AjattelijaKuvalahde>();
+            Dictionary<string, object> o;
+            try { o = MiniJson.Objekti(MiniJson.Jasenna(json)); }
+            catch (Exception) { return (null, rivit); }
+            if (K(o, "kuvalahteet") is List<object> l)
+                foreach (var x in l)
+                    if (x is Dictionary<string, object> r && T(r, "kuva") is string kuva)
+                        rivit.Add(new AjattelijaKuvalahde { Kuva = kuva, Kohde = T(r, "kohde"), Teos = T(r, "teos"), Tekija = T(r, "tekija"),
+                            Lisenssi = T(r, "lisenssi"), Lahde = T(r, "lahde"), Nimea = T(r, "nimea") });
+            if (O(o, "kaiku") is Dictionary<string, object> kk && T(kk, "nimeaminen") is string n && n.Length > 0)
+            {
+                string kuva = System.IO.Path.GetFileName(T(kk, "kuva") ?? "");
+                if (!rivit.Any(r => r.Kuva == kuva)) rivit.Add(new AjattelijaKuvalahde { Kuva = kuva, Tekija = n });
+            }
+            return (T(o, "nimi"), rivit);
         }
 
         static object K(Dictionary<string, object> o, string k) => o != null && o.TryGetValue(k, out var v) ? v : null;

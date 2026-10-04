@@ -66,6 +66,7 @@ namespace Matkakirja.Natiivi
         [DllImport("__Internal")] static extern bool MatkakirjaAani_Bluetooth();
         [DllImport("__Internal")] static extern void MatkakirjaAani_Vahti();
         [DllImport("__Internal")] static extern bool MatkakirjaAani_Varmista();
+        [DllImport("__Internal")] static extern double MatkakirjaAani_Viive();
 
         /// <summary>
         /// ISTUNTOVAHTI (kärki 30.9.2026, omistaja äänettömässä tilassa: luennan alusta puuttui 1–2 virkettä): Unityn FMOD
@@ -92,6 +93,21 @@ namespace Matkakirja.Natiivi
             try { return BluetoothTesti || MatkakirjaAani_Bluetooth(); }
             catch (Exception) { return false; }
         }
+
+        /// <summary>
+        /// Laitteen ulostulon viive (s): AVAudioSession outputLatency + IOBufferDuration (MatkakirjaAani.mm). Luetaan enintään
+        /// kerran sekunnissa (reitti voi vaihtua kesken: Bluetooth-kuulokkeet), muuten välimuistista.
+        /// </summary>
+        public static double Viive()
+        {
+            double nyt = Time.realtimeSinceStartupAsDouble;
+            if (nyt - viiveLuettu < 1.0) return viive;
+            viiveLuettu = nyt;
+            try { viive = Math.Max(0, Math.Min(0.5, MatkakirjaAani_Viive())); }
+            catch (Exception) { viive = 0; }
+            return viive;
+        }
+        static double viive, viiveLuettu = -10;
 
         /// <summary>Mittauksen istunnon vaihto (peli-komento aani istunto): playback | puhe | ambient.</summary>
         public static string Vaihda(string luokka)
@@ -120,6 +136,8 @@ namespace Matkakirja.Natiivi
         public static bool Bluetooth() => BluetoothTesti;
         static void Vahti() { }
         public static bool Varmista() => false;
+        /// <summary>Muualla kuin iOS-laitteella laitteen viivettä ei tunneta (editori, simulaattori: 0).</summary>
+        public static double Viive() => 0;
 #endif
         /// <summary>Testikomento (puhe bt 1|0): esilämmitys ilman oikeaa Bluetooth-reittiä (editori ja simulaattori).</summary>
         public static bool BluetoothTesti;
