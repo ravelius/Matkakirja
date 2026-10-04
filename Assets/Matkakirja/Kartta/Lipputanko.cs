@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using CesiumForUnity;
 using Unity.Mathematics;
 using UnityEngine;
@@ -127,6 +128,15 @@ namespace Matkakirja
 
         /// <summary>Tanko pois (maa vaihtuu tai kartta sulkeutuu).</summary>
         public static void Pois() { if (instanssi != null) instanssi.PoisNyt(); }
+
+        /// <summary>Näkymät, jotka peittävät kartan ja haluavat tangon piiloon ajakseen (Päätoimittaja 4.10.: Myllyn otsikon
+        /// vieressä kirkas lippu vei katseen). Ankkuri säilyy; tanko palaa, kun viimeinen piilottaja vapauttaa.</summary>
+        static readonly HashSet<object> piilottajat = new HashSet<object>();
+        public static void Piilota(object kuka, bool piiloon)
+        {
+            if (piiloon) piilottajat.Add(kuka); else piilottajat.Remove(kuka);
+            PallonLepo.Muuttui("lipputanko");
+        }
 
         /// <summary>
         /// Tangon ja kankaan ala ruudulla (Unityn ruutupikselit, y ylös) viimeisimmästä piirrosta, tai null, kun tanko ei näy.
@@ -310,7 +320,7 @@ namespace Matkakirja
         {
             if (!asetettu || kamera == null) { if (nakyi) Nayta(false); return; }
             var kk = KarttaKerrokset.Instanssi;
-            bool sallittu = !PalloKierto.PorttiSumea && !(kk != null && kk.LinssiPaalla) && !(aurinko != null && aurinko.Paalla);
+            bool sallittu = !PalloKierto.PorttiSumea && !(kk != null && kk.LinssiPaalla) && !(aurinko != null && aurinko.Paalla) && piilottajat.Count == 0;
             var gt = georeferenssi.transform;
             Vector3 p = gt.TransformPoint(perusPaikka);
             Vector3 n = gt.TransformDirection(normaaliPaikallinen).normalized;
