@@ -144,3 +144,15 @@ Natiivisepälle, viestit Päätoimittajalle ≤ 8 riviä, osoitin vain omistajan
   kulmakoe) → stillit Päätoimittajalle → hyväksytyt arvot dataan (olavinlinna.js yleiskamera) Linnanrakentajan pakettiin; osoitin vain
   Päätoimittajan luvalla. Huom: natiivi sovittaa yleisetäisyyden pohjan rajoihin (SovitaKuvasuhteeseen), pystyssä linna täyttää jo leveyden.
 - Osoitin klo 18.13 → v28 44beb2ba (Julkaisija, Päätoimittajan lupa).
+
+### 4.10. klo 20.2x — 1139-KORJAUS, NIMILAPUT/KULMAT/HUONEKORTTI OMISTAJALLE
+- Savuke 1139 (Keittiö → valikko → Fatabuuri palasi Keittiöön, vika jo BUILD 138:ssa 2.10. alkaen): valikon napautus läpäisi
+  dioraamalle. Korjaus siirtoseppa/valikko-lapaisy c1d84a94 (auki oleva LinnaValikko + napit estävät eleen, ValikkoPyysi ohittaa
+  saman kosketuksen napautuksen). Natiiviseppä todensi oikeilla napautuksilla junakoostumuksessa 1010d940 → juna 139.
+  Minulla EI ole sim-tap-oikeutta (omistaja ei myöntänyt) — kosketusviat todentaa Natiiviseppä.
+- Juna 140: siirtoseppa/sisaltovarasto 34967f35 kuitattu.
+- Haara siirtoseppa/nimilaput 2a4babf7 (worktree wt/proto-siirtoseppa-opaste, 7ae37251:n päällä, EI junassa): nimilaput
+  lappukohtaisesti (tärkeysjärjestys tila.lappujarjestys / "poikki laput jarjestys", ensimmäinen aina, muut nasta ≥ 42 pt valituista
+  eikä päällekkäisyyttä, häivytys 0,35 s), "poikki yleiskamera …" kulmakoe, huonekortti "poikki huonekortti 0|1|2" (1 = PANEELI LASI).
+  Stillit lokit/siirtoseppa-omistajalle-2010/ Päätoimittajalle; suositus kulma 255°/50°, kortti 1. AVOIN: omistajan valinta → data
+  (lappujarjestys + yleiskamera Linnanrakentajan pakettiin), kortin kytkin pois (valittu tuotantoon), pysty+vaaka+iPad-stillit.
