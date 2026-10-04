@@ -1,3 +1,17 @@
+# Karttasepän luovutus 4.10.2026 klo 16.2x (PÄIVITYS)
+
+- **BOA-offset-vika:** Earth Searchin 04.00-näkymistä (2022) osa on +1000 DN, eikä lippu earthsearch:boa_offset_applied ole luotettava.
+  Korjaus **v2d**: offset mitataan näkymäkohtaisesti (B02–B04, tummat pikselit tai erotus) kaikissa skripteissä (maailmamosaiikki-v2.mjs,
+  euromosaiikki-v2.mjs, kausimosaiikki.mjs, kuvauspaikat-v2.mjs). TCI-kuviin vika EI vaikuta.
+- **Eurooppa v1 ehjä** (v2 = v1 pikseleittäin), ei uutta vientiä. Euroopan kausiketju (kevät → syksy → talvi) ajossa v2d:llä (PID ketju-kaudet).
+- **Maailman v2** kansioissa `iss-maailma-s2/v2/<alue>` (P-Afrikka ja tropiikki kokonaan, Amerikka 73 ja Aasia 112 lohkoa v1-kloonin päälle).
+  Vienti `s2-maailma/v2` vasta, kun Päätoimittaja on kuitannut kuvaparit ja luvut. Viikonloppuvienti pysäytetty (`iss-maailma-s2/PYSAYTA`).
+- **Kuvauspaikat v1 VIETY** (25 kpl, `linssit/astronautin-kamera/kuvauspaikat/v1/`), LS2:n natiivi käyttää niitä.
+- **ISS-kamera koko maailmaan VIETY:** `s2-indeksi/v1/maailma.json` + 5 alueindeksiä (noin 22 600 ruutua).
+- Avoinna: aluekohtainen tci_lut-ehdotus LS2:n esimerkkikuvista (aavikko), maailman v2:n kuvaparit, Euroopan kausien kuvapari (talvi = omistajan päätös).
+
+---
+
 # Karttasepän luovutus 3.10.2026 klo 23.5x (PÄIVITYS)
 
 ## Tila
