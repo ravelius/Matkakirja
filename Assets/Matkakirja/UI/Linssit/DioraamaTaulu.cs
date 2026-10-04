@@ -30,6 +30,9 @@ namespace Matkakirja.Natiivi
 
         bool puluPiilotettu;
         readonly Button kuoriNappi, paluuNappi;
+        /// <summary>Omistaja 5.10. (TF 141): "Piilota kuori valinta nappi hampurilaiseen" — kehittäjän kuorivalinta on LinnaValikon
+        /// päänäkymässä; ruudun nappi pysyy rakennettuna mutta piilossa.</summary>
+        static readonly bool KuoriRuudulla = false;
         readonly VisualElement etsintaKortti;
         readonly Label etsintaOtsikko, etsintaTeksti;
         float etsintaLoppuu;
@@ -177,7 +180,7 @@ namespace Matkakirja.Natiivi
             kuoriNappi.style.borderBottomLeftRadius = 8; kuoriNappi.style.borderBottomRightRadius = 8;
             var kuoriTeksti = kuoriNappi.Q<Label>();
             if (kuoriTeksti != null) { kuoriTeksti.style.color = Color.white; kuoriTeksti.style.fontSize = 12; }
-            kuoriNappi.style.display = Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki ? DisplayStyle.Flex : DisplayStyle.None;
+            kuoriNappi.style.display = KuoriRuudulla && Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki ? DisplayStyle.Flex : DisplayStyle.None;
             DioraamaUlkokuori.PakotusVaihtui += () =>
             {
                 var l = kuoriNappi?.Q<Label>();
@@ -323,7 +326,7 @@ namespace Matkakirja.Natiivi
         void Kytke(PoikkileikkausLinssi uusi)
         {
             kytketty = uusi != null;
-            if (kuoriNappi != null) kuoriNappi.style.display = Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki ? DisplayStyle.Flex : DisplayStyle.None;
+            if (kuoriNappi != null) kuoriNappi.style.display = KuoriRuudulla && Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki ? DisplayStyle.Flex : DisplayStyle.None;
             juuri.style.display = kytketty && !peitetty ? DisplayStyle.Flex : DisplayStyle.None;
             Linna?.Nayta(kytketty && !peitetty);
             UiNakymat.Hae()?.Linssit?.PaivitaSulku();
@@ -467,7 +470,7 @@ namespace Matkakirja.Natiivi
             bool kierros = nakyma.KertojaJakso >= 0 || linssi.KertojaKaynnissa(tNyt);
             // Kehittäjän kuorinappi: ei esittelylinssien reitillä eikä kertojan tai infotaulun aikana (Päätoimittaja 30.9.).
             bool infoAuki = nakyma.KohdeTila != null && rakennus.Tila(nakyma.KohdeTila)?.Infotaulu != null;
-            kuoriNappi.style.display = Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki && !kierros && !infoAuki
+            kuoriNappi.style.display = KuoriRuudulla && Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki && !kierros && !infoAuki
                 ? DisplayStyle.Flex : DisplayStyle.None;
             if (nakyma.KertojaTeksti != null) kertojaTeksti.text = nakyma.KertojaTeksti;
             // Omistaja 2.10. 14.1x (loki 14.09, kumoaa 30.9.:n tekstilaatikon): kertojan jakso puheen aikana ilman tekstiä;

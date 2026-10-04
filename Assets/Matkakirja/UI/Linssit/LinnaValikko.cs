@@ -156,6 +156,9 @@ namespace Matkakirja.Natiivi
                     Komento("Esittely uudelleen", EsittelyUudelleen);
                     Alanakyma("Äänet", Nakyma.Aanet);
                     Alanakyma("Lähteet", Nakyma.Lahteet);
+                    // Kehittäjän kuorivalinta (omistaja 5.10.: pois ruudulta hampurilaiseen): auto → huippu → normaali → kevyt.
+                    if (Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki)
+                        Komento(DioraamaUlkokuori.ValintaTeksti(), DioraamaUlkokuori.SeuraavaPakotus);
                     Viiva();
                     Komento("Sulje linna", () => UiNakymat.Hae()?.Linssit?.SuljeLinssi());
                     break;
