@@ -1,0 +1,66 @@
+[
+  {
+    "taso": "L0",
+    "kolmiot": 197982,
+    "korkeus_m": 0.5099999904632568,
+    "origo": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ei_manifold_reunoja": 0,
+    "normaalikartta": [
+      2048,
+      2048
+    ],
+    "korjatut_nollatangentit": 1
+  },
+  {
+    "taso": "L1",
+    "kolmiot": 49997,
+    "korkeus_m": 0.5099999904632568,
+    "origo": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ei_manifold_reunoja": 3,
+    "normaalikartta": [
+      1024,
+      1024
+    ],
+    "korjatut_nollatangentit": 0
+  },
+  {
+    "taso": "L2",
+    "kolmiot": 11997,
+    "korkeus_m": 0.5099999904632568,
+    "origo": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ei_manifold_reunoja": 9,
+    "normaalikartta": [
+      512,
+      512
+    ],
+    "korjatut_nollatangentit": 0
+  },
+  {
+    "taso": "symboli",
+    "kolmiot": 2997,
+    "korkeus_m": 0.5099999904632568,
+    "origo": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "ei_manifold_reunoja": 9,
+    "normaalikartta": [
+      256,
+      256
+    ],
+    "korjatut_nollatangentit": 0
+  }
+]
