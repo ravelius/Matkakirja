@@ -105,7 +105,9 @@ namespace Matkakirja.Natiivi
             string orto = taso == DioraamaUlkokuori.Laatu.Huippu ? (puhelin && !string.IsNullOrEmpty(y.OrtoNormaali) ? y.OrtoNormaali : y.OrtoHuippu)
                 : taso == DioraamaUlkokuori.Laatu.Normaali ? y.OrtoNormaali : y.OrtoKevyt;
             var esikatselu = new List<UnityEngine.Object>();
-            bool porrastus = taso != DioraamaUlkokuori.Laatu.Kevyt && !string.IsNullOrEmpty(y.Kevyt) && y.Kevyt != maasto;
+            // 4.10. (omistajan linja: linna vasta täydellä tarkkuudella, DioraamaSovitin odottaa ympäristön): kevyttä esikatselumaastoa
+            // ei enää ladata ensin — se ei koskaan näkyisi ja hidasti valmistumista (iPad esiladattuna 3,5 s + korvaus).
+            bool porrastus = false;
             // Ensilataus v2: esikatselun kuva kevyen tason ASTC-ortosta (ei runtime-pakkausta); tukematon → glb:n kuva.
             string esiOrto = y.OrtoKevyt != null && y.OrtoKevyt.EndsWith(".astcm", StringComparison.OrdinalIgnoreCase) ? y.OrtoKevyt : null;
             if (porrastus) yield return LataaMalli("maasto-esikatselu", y.Kevyt, esiOrto, url, kirjaa, oma, null, DioraamaUlkokuori.Laatu.Kevyt, esikatselu);
