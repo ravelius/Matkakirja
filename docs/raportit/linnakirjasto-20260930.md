@@ -50,3 +50,19 @@ Tunnus on `<laji>/<id>`, jossa id on pienaakkosin ja väliviivoin, suomeksi. Rak
    kivilaatta, kallio = kallio.
 2. Esiasetus `hamara` (tavoitekuvan valaistus), vesi `jarvi`, taivas.
 3. Osat huoneittain sitä mukaa, kun hybridi korvaa kuoren heikkoja kohtia (soihtu + pidike ensin).
+
+## 5. Tila 4.10.2026 (erä 2, omistajan linja "nykyinen linna ensin kuntoon", ei uusia malleja)
+
+| Laji | Kirjastossa | Työkalu |
+|---|---|---|
+| `materiaali/` | 11: graniittilohkomuuri, kalkkirappaus, kallio, kivilaatta, kuparikatto, lankku, liuskekatto, paanukatto, rauta, tervattu-puu, tiili (4 ensimmäistä ASTC:llä Olavinlinnan hybridissä) | `tools/dioraama/blender/kirjasto_valmista.py` |
+| `tarra/` | 4: halkeama, noki, sammal, vesijalki | sama |
+| `hahmo/` | 11 Olavinlinnan skinnattua hahmoa (`<henkilo>-1500`, Quaternius CC0, omistaja hyväksyi 2.10.): glb + json (leikkeet, kävelysykli) | `tools/dioraama/kirjasto_lisaa.py` (+ `tools/dioraama/blender/hahmo_skin.py`) |
+| `taivas/` | hamara (qwantani_dusk_2_puresky), pilvinen (kloofendal_48d_partly_cloudy_puresky), Poly Haven CC0 4k HDR | sama |
+| `esiasetus/` | paiva ja hamara: aurinko, taivas, sävytys, tilavalot ja liekkikorkeudet, joilla Olavinlinna leivottiin | sama |
+| `osa/`, `efekti/`, `vesi/` | ei vielä (uusia malleja ei tehdä ennen omistajan päätöstä seuraavasta linnasta) | — |
+
+Vienti: `tools/dioraama/vie-kirjasto.sh` (muuttumaton `dioraama/kirjasto/<hash>/`, `js/dioraama/kirjasto/kirjasto.json`
+hash, kansio, sisältö ja tiedostot sha256:lla). Olavinlinnan blender-paketti kantaa yhä omat kopionsa neljästä
+hybridimateriaalista, joten natiivi ei muutu. Seuraava linna (Allymes, kun omistaja päättää) viittaa kirjastoon tunnuksin.
+Testi `tests/dioraama-kirjasto.test.mjs` valvoo lisenssit, tiedostot lajeittain ja että kirjasto.json kattaa manifestin.

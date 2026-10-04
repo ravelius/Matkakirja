@@ -1,4 +1,576 @@
 {
+ "esiasetus/hamara": {
+  "nimi": "Iltahämärä (tunnelma 29.9., tavoitekuva 1.10.): soihdut päävalona, ikkunoista ei päivänvaloa",
+  "lahde": "https://github.com/ravelius/Matkakirja/blob/main/docs/raportit/linnakirjasto-20260930.md",
+  "tekijat": [
+   "Matkakirja (Linnanrakentaja)"
+  ],
+  "lisenssi": "CC0 1.0 (oma työ)",
+  "muokkaukset": [],
+  "toisto_m": 1.0,
+  "tiedostot": [
+   {
+    "polku": "esiasetus/hamara/hamara.json",
+    "sha256": "6b8f028033452ccdcc0846a0ac6c69bf0e9a44ea782be89eef37c26b8f184563",
+    "tavuja": 921
+   }
+  ]
+ },
+ "esiasetus/paiva": {
+  "nimi": "Päivä (Olavinlinna, omistajan valopäätös 29.9.: \"B + tummempi valo\")",
+  "lahde": "https://github.com/ravelius/Matkakirja/blob/main/docs/raportit/linnakirjasto-20260930.md",
+  "tekijat": [
+   "Matkakirja (Linnanrakentaja)"
+  ],
+  "lisenssi": "CC0 1.0 (oma työ)",
+  "muokkaukset": [],
+  "toisto_m": 1.0,
+  "tiedostot": [
+   {
+    "polku": "esiasetus/paiva/paiva.json",
+    "sha256": "c483c7df0e35c33d43f1d78c2e772f3edb8be8b630af6bbf6bea7e9641f5a14a",
+    "tavuja": 677
+   }
+  ]
+ },
+ "hahmo/apulainen-1500": {
+  "lahde": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+  "tekijat": [
+   "Quaternius"
+  ],
+  "lisenssi": "CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "palvelu": "Quaternius",
+  "osat": [
+   "Modular Character Outfits – Fantasy [Standard] (asut)",
+   "Universal Base Characters [Standard] (pää, hiukset, parta)",
+   "Universal Animation Library [Standard] (leikkeet idle, kavely, puhe, tyo)"
+  ],
+  "muokkaukset": [
+   "vaatteiden sävytys henkilön värillä (js/dioraama/pankit/henkilot.js, savyta.py)",
+   "perusväri 1,35·p^0,8 (hämärävalo), hiusten väri kuvaan",
+   "kampaus noin vuodelta 1500",
+   "Decimate ~9 000 kolmiota, normaali/ORM pois",
+   "kasvot +Z, kävely paikallaan (kavely_sykli_m)"
+  ],
+  "tyokalut": [
+   "tools/dioraama/blender/hahmo_skin.py",
+   "proto-3d/_valmiit/linna-hahmot/v1/{savyta.py,era1.sh}"
+  ],
+  "nimi": "Linnan hahmo: apulainen-1500 (aikakerros n1500)",
+  "toisto_m": 1.0,
+  "kavely_sykli_m": 1.254,
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "tiedostot": [
+   {
+    "polku": "hahmo/apulainen-1500/apulainen-1500.glb",
+    "sha256": "818a37b494a2fb4bd100803def40e627606e5351712b49fba607e0463d9cde19",
+    "tavuja": 1017656
+   },
+   {
+    "polku": "hahmo/apulainen-1500/apulainen-1500.json",
+    "sha256": "214c43a29ed0c5337a803371ec77ad34b08cfcbb8b93629684b53321fc03d88b",
+    "tavuja": 621
+   }
+  ],
+  "huom": "Skin 65 luuta, perusväri 512 px; skaala = henkilot.js pituus / json pituus_m (js/dioraama/hahmot-skin.json)."
+ },
+ "hahmo/kappalainen-1500": {
+  "lahde": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+  "tekijat": [
+   "Quaternius"
+  ],
+  "lisenssi": "CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "palvelu": "Quaternius",
+  "osat": [
+   "Modular Character Outfits – Fantasy [Standard] (asut)",
+   "Universal Base Characters [Standard] (pää, hiukset, parta)",
+   "Universal Animation Library [Standard] (leikkeet idle, kavely, puhe, tyo)"
+  ],
+  "muokkaukset": [
+   "vaatteiden sävytys henkilön värillä (js/dioraama/pankit/henkilot.js, savyta.py)",
+   "perusväri 1,35·p^0,8 (hämärävalo), hiusten väri kuvaan",
+   "kampaus noin vuodelta 1500",
+   "Decimate ~9 000 kolmiota, normaali/ORM pois",
+   "kasvot +Z, kävely paikallaan (kavely_sykli_m)"
+  ],
+  "tyokalut": [
+   "tools/dioraama/blender/hahmo_skin.py",
+   "proto-3d/_valmiit/linna-hahmot/v1/{savyta.py,era1.sh}"
+  ],
+  "nimi": "Linnan hahmo: kappalainen-1500 (aikakerros n1500)",
+  "toisto_m": 1.0,
+  "kavely_sykli_m": 1.273,
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "tiedostot": [
+   {
+    "polku": "hahmo/kappalainen-1500/kappalainen-1500.glb",
+    "sha256": "80f852e4fba07630e805cd375e8f379354a08bba2b5e262949cbaf349b991d77",
+    "tavuja": 980644
+   },
+   {
+    "polku": "hahmo/kappalainen-1500/kappalainen-1500.json",
+    "sha256": "33a7ae837522a692a9c3862897ff4ca4722ced39f6f6d3513021a85ec134928a",
+    "tavuja": 624
+   }
+  ],
+  "huom": "Skin 65 luuta, perusväri 512 px; skaala = henkilot.js pituus / json pituus_m (js/dioraama/hahmot-skin.json)."
+ },
+ "hahmo/kirjuri-1500": {
+  "lahde": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+  "tekijat": [
+   "Quaternius"
+  ],
+  "lisenssi": "CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "palvelu": "Quaternius",
+  "osat": [
+   "Modular Character Outfits – Fantasy [Standard] (asut)",
+   "Universal Base Characters [Standard] (pää, hiukset, parta)",
+   "Universal Animation Library [Standard] (leikkeet idle, kavely, puhe, tyo)"
+  ],
+  "muokkaukset": [
+   "vaatteiden sävytys henkilön värillä (js/dioraama/pankit/henkilot.js, savyta.py)",
+   "perusväri 1,35·p^0,8 (hämärävalo), hiusten väri kuvaan",
+   "kampaus noin vuodelta 1500",
+   "Decimate ~9 000 kolmiota, normaali/ORM pois",
+   "kasvot +Z, kävely paikallaan (kavely_sykli_m)"
+  ],
+  "tyokalut": [
+   "tools/dioraama/blender/hahmo_skin.py",
+   "proto-3d/_valmiit/linna-hahmot/v1/{savyta.py,era1.sh}"
+  ],
+  "nimi": "Linnan hahmo: kirjuri-1500 (aikakerros n1500)",
+  "toisto_m": 1.0,
+  "kavely_sykli_m": 1.273,
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "tiedostot": [
+   {
+    "polku": "hahmo/kirjuri-1500/kirjuri-1500.glb",
+    "sha256": "dea9477d12d8e41136cdcdaf05afb71b58c261be69cfbdc973ad2ea997a0a49a",
+    "tavuja": 976356
+   },
+   {
+    "polku": "hahmo/kirjuri-1500/kirjuri-1500.json",
+    "sha256": "4d29f0641e070b2422ce49812af1a8216f7a9547ab27209ce2e560347258c41c",
+    "tavuja": 621
+   }
+  ],
+  "huom": "Skin 65 luuta, perusväri 512 px; skaala = henkilot.js pituus / json pituus_m (js/dioraama/hahmot-skin.json)."
+ },
+ "hahmo/kokki-1500": {
+  "lahde": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+  "tekijat": [
+   "Quaternius"
+  ],
+  "lisenssi": "CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "palvelu": "Quaternius",
+  "osat": [
+   "Modular Character Outfits – Fantasy [Standard] (asut)",
+   "Universal Base Characters [Standard] (pää, hiukset, parta)",
+   "Universal Animation Library [Standard] (leikkeet idle, kavely, puhe, tyo)"
+  ],
+  "muokkaukset": [
+   "vaatteiden sävytys henkilön värillä (js/dioraama/pankit/henkilot.js, savyta.py)",
+   "perusväri 1,35·p^0,8 (hämärävalo), hiusten väri kuvaan",
+   "kampaus noin vuodelta 1500",
+   "Decimate ~9 000 kolmiota, normaali/ORM pois",
+   "kasvot +Z, kävely paikallaan (kavely_sykli_m)"
+  ],
+  "tyokalut": [
+   "tools/dioraama/blender/hahmo_skin.py",
+   "proto-3d/_valmiit/linna-hahmot/v1/{savyta.py,era1.sh}"
+  ],
+  "nimi": "Linnan hahmo: kokki-1500 (aikakerros n1500)",
+  "toisto_m": 1.0,
+  "kavely_sykli_m": 1.273,
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "tiedostot": [
+   {
+    "polku": "hahmo/kokki-1500/kokki-1500.glb",
+    "sha256": "9615792e4c8facdb8390016397760b1494d61227ba920bc33615183f9fdb5940",
+    "tavuja": 967756
+   },
+   {
+    "polku": "hahmo/kokki-1500/kokki-1500.json",
+    "sha256": "9d2ae2e9d066a5d332036ff43278a98ed8b7bba60b5e2f12119258609661979f",
+    "tavuja": 617
+   }
+  ],
+  "huom": "Skin 65 luuta, perusväri 512 px; skaala = henkilot.js pituus / json pituus_m (js/dioraama/hahmot-skin.json)."
+ },
+ "hahmo/portinvartija-1500": {
+  "lahde": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+  "tekijat": [
+   "Quaternius"
+  ],
+  "lisenssi": "CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "palvelu": "Quaternius",
+  "osat": [
+   "Modular Character Outfits – Fantasy [Standard] (asut)",
+   "Universal Base Characters [Standard] (pää, hiukset, parta)",
+   "Universal Animation Library [Standard] (leikkeet idle, kavely, puhe, tyo)"
+  ],
+  "muokkaukset": [
+   "vaatteiden sävytys henkilön värillä (js/dioraama/pankit/henkilot.js, savyta.py)",
+   "perusväri 1,35·p^0,8 (hämärävalo), hiusten väri kuvaan",
+   "kampaus noin vuodelta 1500",
+   "Decimate ~9 000 kolmiota, normaali/ORM pois",
+   "kasvot +Z, kävely paikallaan (kavely_sykli_m)"
+  ],
+  "tyokalut": [
+   "tools/dioraama/blender/hahmo_skin.py",
+   "proto-3d/_valmiit/linna-hahmot/v1/{savyta.py,era1.sh}"
+  ],
+  "nimi": "Linnan hahmo: portinvartija-1500 (aikakerros n1500)",
+  "toisto_m": 1.0,
+  "kavely_sykli_m": 1.273,
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "tiedostot": [
+   {
+    "polku": "hahmo/portinvartija-1500/portinvartija-1500.glb",
+    "sha256": "cceb9d6c8d90f78cfa70a483450d63fc72b685b9142fc536a5683d0fe9d01232",
+    "tavuja": 1189776
+   },
+   {
+    "polku": "hahmo/portinvartija-1500/portinvartija-1500.json",
+    "sha256": "95a83c8938d047ce42811c6308875f03bd95f9f022bb0bf1551e5185019c8980",
+    "tavuja": 624
+   }
+  ],
+  "huom": "Skin 65 luuta, perusväri 512 px; skaala = henkilot.js pituus / json pituus_m (js/dioraama/hahmot-skin.json)."
+ },
+ "hahmo/renki-1500": {
+  "lahde": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+  "tekijat": [
+   "Quaternius"
+  ],
+  "lisenssi": "CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "palvelu": "Quaternius",
+  "osat": [
+   "Modular Character Outfits – Fantasy [Standard] (asut)",
+   "Universal Base Characters [Standard] (pää, hiukset, parta)",
+   "Universal Animation Library [Standard] (leikkeet idle, kavely, puhe, tyo)"
+  ],
+  "muokkaukset": [
+   "vaatteiden sävytys henkilön värillä (js/dioraama/pankit/henkilot.js, savyta.py)",
+   "perusväri 1,35·p^0,8 (hämärävalo), hiusten väri kuvaan",
+   "kampaus noin vuodelta 1500",
+   "Decimate ~9 000 kolmiota, normaali/ORM pois",
+   "kasvot +Z, kävely paikallaan (kavely_sykli_m)"
+  ],
+  "tyokalut": [
+   "tools/dioraama/blender/hahmo_skin.py",
+   "proto-3d/_valmiit/linna-hahmot/v1/{savyta.py,era1.sh}"
+  ],
+  "nimi": "Linnan hahmo: renki-1500 (aikakerros n1500)",
+  "toisto_m": 1.0,
+  "kavely_sykli_m": 1.273,
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "tiedostot": [
+   {
+    "polku": "hahmo/renki-1500/renki-1500.glb",
+    "sha256": "bb427be547530410c9f3a89889aa73296b5239d1b768b77abdd102032a39b17b",
+    "tavuja": 999948
+   },
+   {
+    "polku": "hahmo/renki-1500/renki-1500.json",
+    "sha256": "57e9f674f9315e78c303b5754280a4aab568c31ef89202392c3f97e5aa5c1247",
+    "tavuja": 619
+   }
+  ],
+  "huom": "Skin 65 luuta, perusväri 512 px; skaala = henkilot.js pituus / json pituus_m (js/dioraama/hahmot-skin.json)."
+ },
+ "hahmo/soutaja-1500": {
+  "lahde": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+  "tekijat": [
+   "Quaternius"
+  ],
+  "lisenssi": "CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "palvelu": "Quaternius",
+  "osat": [
+   "Modular Character Outfits – Fantasy [Standard] (asut)",
+   "Universal Base Characters [Standard] (pää, hiukset, parta)",
+   "Universal Animation Library [Standard] (leikkeet idle, kavely, puhe, tyo)"
+  ],
+  "muokkaukset": [
+   "vaatteiden sävytys henkilön värillä (js/dioraama/pankit/henkilot.js, savyta.py)",
+   "perusväri 1,35·p^0,8 (hämärävalo), hiusten väri kuvaan",
+   "kampaus noin vuodelta 1500",
+   "Decimate ~9 000 kolmiota, normaali/ORM pois",
+   "kasvot +Z, kävely paikallaan (kavely_sykli_m)"
+  ],
+  "tyokalut": [
+   "tools/dioraama/blender/hahmo_skin.py",
+   "proto-3d/_valmiit/linna-hahmot/v1/{savyta.py,era1.sh}"
+  ],
+  "nimi": "Linnan hahmo: soutaja-1500 (aikakerros n1500)",
+  "toisto_m": 1.0,
+  "kavely_sykli_m": 1.273,
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "tiedostot": [
+   {
+    "polku": "hahmo/soutaja-1500/soutaja-1500.glb",
+    "sha256": "881e99ed09ce3ec96c714b334f9ea6de98f1556bcf86871bb87b82f83853b420",
+    "tavuja": 975484
+   },
+   {
+    "polku": "hahmo/soutaja-1500/soutaja-1500.json",
+    "sha256": "31fc30b58c533b85049b4b7e6d946adaf3d85a14a3e18a64e533e1099eb6bcd1",
+    "tavuja": 621
+   }
+  ],
+  "huom": "Skin 65 luuta, perusväri 512 px; skaala = henkilot.js pituus / json pituus_m (js/dioraama/hahmot-skin.json)."
+ },
+ "hahmo/talonpoika-1500": {
+  "lahde": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+  "tekijat": [
+   "Quaternius"
+  ],
+  "lisenssi": "CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "palvelu": "Quaternius",
+  "osat": [
+   "Modular Character Outfits – Fantasy [Standard] (asut)",
+   "Universal Base Characters [Standard] (pää, hiukset, parta)",
+   "Universal Animation Library [Standard] (leikkeet idle, kavely, puhe, tyo)"
+  ],
+  "muokkaukset": [
+   "vaatteiden sävytys henkilön värillä (js/dioraama/pankit/henkilot.js, savyta.py)",
+   "perusväri 1,35·p^0,8 (hämärävalo), hiusten väri kuvaan",
+   "kampaus noin vuodelta 1500",
+   "Decimate ~9 000 kolmiota, normaali/ORM pois",
+   "kasvot +Z, kävely paikallaan (kavely_sykli_m)"
+  ],
+  "tyokalut": [
+   "tools/dioraama/blender/hahmo_skin.py",
+   "proto-3d/_valmiit/linna-hahmot/v1/{savyta.py,era1.sh}"
+  ],
+  "nimi": "Linnan hahmo: talonpoika-1500 (aikakerros n1500)",
+  "toisto_m": 1.0,
+  "kavely_sykli_m": 1.273,
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "tiedostot": [
+   {
+    "polku": "hahmo/talonpoika-1500/talonpoika-1500.glb",
+    "sha256": "b6dc74a98603457f0a699ddc549a7c7253ef9158ff038f2abafe23711b89f630",
+    "tavuja": 1009956
+   },
+   {
+    "polku": "hahmo/talonpoika-1500/talonpoika-1500.json",
+    "sha256": "241e577dc4000aea67810a0a50abfbb2d8cdb3dded7321b40195793463380622",
+    "tavuja": 624
+   }
+  ],
+  "huom": "Skin 65 luuta, perusväri 512 px; skaala = henkilot.js pituus / json pituus_m (js/dioraama/hahmot-skin.json)."
+ },
+ "hahmo/vartija-1500": {
+  "lahde": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+  "tekijat": [
+   "Quaternius"
+  ],
+  "lisenssi": "CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "palvelu": "Quaternius",
+  "osat": [
+   "Modular Character Outfits – Fantasy [Standard] (asut)",
+   "Universal Base Characters [Standard] (pää, hiukset, parta)",
+   "Universal Animation Library [Standard] (leikkeet idle, kavely, puhe, tyo)"
+  ],
+  "muokkaukset": [
+   "vaatteiden sävytys henkilön värillä (js/dioraama/pankit/henkilot.js, savyta.py)",
+   "perusväri 1,35·p^0,8 (hämärävalo), hiusten väri kuvaan",
+   "kampaus noin vuodelta 1500",
+   "Decimate ~9 000 kolmiota, normaali/ORM pois",
+   "kasvot +Z, kävely paikallaan (kavely_sykli_m)"
+  ],
+  "tyokalut": [
+   "tools/dioraama/blender/hahmo_skin.py",
+   "proto-3d/_valmiit/linna-hahmot/v1/{savyta.py,era1.sh}"
+  ],
+  "nimi": "Linnan hahmo: vartija (aikakerros n1500)",
+  "toisto_m": 1.0,
+  "kavely_sykli_m": 1.273,
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo"
+  },
+  "tiedostot": [
+   {
+    "polku": "hahmo/vartija-1500/vartija-1500.glb",
+    "sha256": "a3ffaebcf9ba4915b80d7c7020e3c6897b6bef8a416650b62d7753c31c403a05",
+    "tavuja": 1206608
+   },
+   {
+    "polku": "hahmo/vartija-1500/vartija-1500.json",
+    "sha256": "ee84016fb21d17e1f0c2c8cff565d078b1223033512b15c718aad3eb5b4f26fe",
+    "tavuja": 595
+   }
+  ],
+  "huom": "Skin 65 luuta, perusväri 512 px; skaala = henkilot.js pituus / json pituus_m (js/dioraama/hahmot-skin.json)."
+ },
+ "hahmo/vesipoika-1500": {
+  "lahde": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+  "tekijat": [
+   "Quaternius"
+  ],
+  "lisenssi": "CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "palvelu": "Quaternius",
+  "osat": [
+   "Modular Character Outfits – Fantasy [Standard] (asut)",
+   "Universal Base Characters [Standard] (pää, hiukset, parta)",
+   "Universal Animation Library [Standard] (leikkeet idle, kavely, puhe, tyo)"
+  ],
+  "muokkaukset": [
+   "vaatteiden sävytys henkilön värillä (js/dioraama/pankit/henkilot.js, savyta.py)",
+   "perusväri 1,35·p^0,8 (hämärävalo), hiusten väri kuvaan",
+   "kampaus noin vuodelta 1500",
+   "Decimate ~9 000 kolmiota, normaali/ORM pois",
+   "kasvot +Z, kävely paikallaan (kavely_sykli_m)"
+  ],
+  "tyokalut": [
+   "tools/dioraama/blender/hahmo_skin.py",
+   "proto-3d/_valmiit/linna-hahmot/v1/{savyta.py,era1.sh}"
+  ],
+  "nimi": "Linnan hahmo: vesipoika-1500 (aikakerros n1500)",
+  "toisto_m": 1.0,
+  "kavely_sykli_m": 1.273,
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "tiedostot": [
+   {
+    "polku": "hahmo/vesipoika-1500/vesipoika-1500.glb",
+    "sha256": "e866bb4ef552eb36e1c2670125f044fa0a9c343d923eaae89f7b53ef81499e07",
+    "tavuja": 1009336
+   },
+   {
+    "polku": "hahmo/vesipoika-1500/vesipoika-1500.json",
+    "sha256": "9de00bfd3c91b72ae95a0ca87a2cf9b6c1b3d240682a178e7d811aa8e4812eca",
+    "tavuja": 622
+   }
+  ],
+  "huom": "Skin 65 luuta, perusväri 512 px; skaala = henkilot.js pituus / json pituus_m (js/dioraama/hahmot-skin.json)."
+ },
+ "hahmo/vouti-1500": {
+  "lahde": "https://quaternius.itch.io/modular-character-outfits-fantasy",
+  "tekijat": [
+   "Quaternius"
+  ],
+  "lisenssi": "CC0 1.0 (https://creativecommons.org/publicdomain/zero/1.0/)",
+  "palvelu": "Quaternius",
+  "osat": [
+   "Modular Character Outfits – Fantasy [Standard] (asut)",
+   "Universal Base Characters [Standard] (pää, hiukset, parta)",
+   "Universal Animation Library [Standard] (leikkeet idle, kavely, puhe, tyo)"
+  ],
+  "muokkaukset": [
+   "vaatteiden sävytys henkilön värillä (js/dioraama/pankit/henkilot.js, savyta.py)",
+   "perusväri 1,35·p^0,8 (hämärävalo), hiusten väri kuvaan",
+   "kampaus noin vuodelta 1500",
+   "Decimate ~9 000 kolmiota, normaali/ORM pois",
+   "kasvot +Z, kävely paikallaan (kavely_sykli_m)"
+  ],
+  "tyokalut": [
+   "tools/dioraama/blender/hahmo_skin.py",
+   "proto-3d/_valmiit/linna-hahmot/v1/{savyta.py,era1.sh}"
+  ],
+  "nimi": "Linnan hahmo: vouti-1500 (aikakerros n1500)",
+  "toisto_m": 1.0,
+  "kavely_sykli_m": 1.273,
+  "leikkeet": {
+   "idle": "idle",
+   "kavely": "kavely",
+   "katselu": "idle",
+   "kaanto": null,
+   "puhe": "puhe",
+   "tyo": "tyo",
+   "kanto": "kavely"
+  },
+  "tiedostot": [
+   {
+    "polku": "hahmo/vouti-1500/vouti-1500.glb",
+    "sha256": "b2c56b0f5a32521cd772210d2d81e4af3bfd6b2d9cdb49d3680baf6dc1494fef",
+    "tavuja": 1152504
+   },
+   {
+    "polku": "hahmo/vouti-1500/vouti-1500.json",
+    "sha256": "5002336826c3b5a7c85d04fe293dc98aa981240314ecf2e6c2ec0b683665435f",
+    "tavuja": 619
+   }
+  ],
+  "huom": "Skin 65 luuta, perusväri 512 px; skaala = henkilot.js pituus / json pituus_m (js/dioraama/hahmot-skin.json)."
+ },
  "materiaali/graniittilohkomuuri": {
   "nimi": "Broken Wall",
   "lahde": "https://polyhaven.com/a/broken_wall",
@@ -335,6 +907,46 @@
     "polku": "materiaali/tiili/tiili_nor_gl.jpg",
     "sha256": "bdb1e04f5e4d4b7e5716749ef597ae709766a9961f501e3af5da327c4467ca01",
     "tavuja": 4720254
+   }
+  ]
+ },
+ "taivas/hamara": {
+  "nimi": "Qwantani Dusk 2 (Pure Sky)",
+  "lahde": "https://polyhaven.com/a/qwantani_dusk_2_puresky",
+  "tekijat": [
+   "Greg Zaal",
+   "Jarod Guest"
+  ],
+  "lisenssi": "CC0 1.0 (https://polyhaven.com/license)",
+  "palvelu": "Poly Haven",
+  "muokkaukset": [],
+  "toisto_m": 1.0,
+  "kaytto": "hämärän taivas: kuoren, maaston ja tilojen hämäräleivonta",
+  "tiedostot": [
+   {
+    "polku": "taivas/hamara/hamara-4k.hdr",
+    "sha256": "dbe5f750e4753f51ef8d178553318ad8550035cac0ce5cfab058e76cf8f021d2",
+    "tavuja": 17976514
+   }
+  ]
+ },
+ "taivas/pilvinen": {
+  "nimi": "Kloofendal 48d Partly Cloudy (Pure Sky)",
+  "lahde": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky",
+  "tekijat": [
+   "Greg Zaal",
+   "Jarod Guest"
+  ],
+  "lisenssi": "CC0 1.0 (https://polyhaven.com/license)",
+  "palvelu": "Poly Haven",
+  "muokkaukset": [],
+  "toisto_m": 1.0,
+  "kaytto": "päivän taivas: kuoren ja maaston päiväleivonta",
+  "tiedostot": [
+   {
+    "polku": "taivas/pilvinen/pilvinen-4k.hdr",
+    "sha256": "3061c00a16ecae748e84fd6c44c04804f539c118bb66325db858bad87b11bf88",
+    "tavuja": 20674857
    }
   ]
  },

@@ -17,7 +17,7 @@ test('kirjasto: tunnukset, lähteet ja sallitut lisenssit', () => {
     assert.ok(LAJIT.has(laji) && /^[a-z0-9-]+$/.test(id), tunnus);
     assert.ok(/^https:\/\//.test(a.lahde) && a.tekijat.length > 0, `${tunnus}: lähde ja tekijät`);
     assert.ok(/^(CC0|CC BY( |-SA|$)|PD)/.test(a.lisenssi), `${tunnus}: lisenssi ${a.lisenssi}`);
-    assert.ok(a.toisto_m > 0, `${tunnus}: toisto_m`);
+    if (['materiaali', 'tarra'].includes(laji)) assert.ok(a.toisto_m > 0, `${tunnus}: toisto_m`);
     for (const t of a.tiedostot) assert.ok(/^[0-9a-f]{64}$/.test(t.sha256) && t.tavuja > 0 && t.polku.startsWith(`${tunnus}/`), t.polku);
   }
 });
@@ -29,4 +29,24 @@ test('kirjasto: materiaaleilla diff, nor_gl ja arm; tarroilla alfallinen diff', 
     if (tunnus.startsWith('materiaali/')) for (const k of ['_diff.jpg', '_nor_gl.jpg', '_arm.png']) assert.ok(p.includes(id + k), `${tunnus}${k}`);
     if (tunnus.startsWith('tarra/')) assert.ok(p.includes(`${id}_diff.png`), tunnus);
   }
+});
+
+test('kirjasto: hahmoilla glb + json, taivailla hdr, esiasetuksilla json (erä 2, 4.10.2026)', () => {
+  for (const [tunnus, a] of Object.entries(M)) {
+    const p = a.tiedostot.map((t) => t.polku.split('/').pop());
+    const id = tunnus.split('/')[1];
+    if (tunnus.startsWith('hahmo/')) for (const k of ['.glb', '.json']) assert.ok(p.includes(id + k), `${tunnus}${k}`);
+    if (tunnus.startsWith('taivas/')) assert.ok(p.some((f) => f.endsWith('.hdr')), tunnus);
+    if (tunnus.startsWith('esiasetus/')) assert.ok(p.includes(`${id}.json`), tunnus);
+  }
+  assert.ok(Object.keys(M).filter((t) => t.startsWith('hahmo/')).length >= 11, 'Olavinlinnan 11 hahmoa');
+});
+
+test('kirjasto: kirjasto.json kattaa manifestin (vie-kirjasto.sh)', () => {
+  const K = JSON.parse(readFileSync(new URL('../js/dioraama/kirjasto/kirjasto.json', import.meta.url), 'utf8'));
+  assert.match(K.hash, /^[0-9a-f]{16}$/);
+  assert.equal(K.kansio, `dioraama/kirjasto/${K.hash}/`);
+  assert.deepEqual(K.sisalto, Object.keys(M).sort());
+  const polut = new Set(K.tiedostot.map((t) => t.polku));
+  for (const a of Object.values(M)) for (const t of a.tiedostot) assert.ok(polut.has(t.polku), t.polku);
 });
