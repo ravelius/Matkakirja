@@ -169,7 +169,11 @@ namespace Matkakirja.Linssit.Testit
             // Ennakko 20 s eteenpäin: ISS ~7,7 km/s → katsepiste ~150 km radan suuntaan (Natiiviseppä juna 140).
             Oleta.Tosi(l.CupolanEnnakko(out var e20, 20));
             double eteenKm = Matkakirja.Linssit.Iss.IssKuvakulma.Kaari(e.Lat, e.Lon, e20.Lat, e20.Lon) * 111.2;
-            Oleta.Tosi(eteenKm > 100 && eteenKm < 200, $"20 s eteenpäin {eteenKm:0} km");
+            // Yöpuolella molemmat kelautuvat samaan päivänvalon hetkeen (Cupola avautuisi siihen), pysäytetty kello ei liiku.
+            double kerroin = Matkakirja.Linssit.Iss.IssNyt.Simu.Nopeus();
+            bool yo = Matkakirja.Linssit.Iss.Avaruuskavely.Yopuolella(Matkakirja.Linssit.Iss.IssNyt.Kello());
+            if (kerroin > 0 && !yo)
+                Oleta.Tosi(eteenKm / kerroin > 100 && eteenKm / kerroin < 200, $"20 s eteenpäin {eteenKm:0} km (kello ×{kerroin})");
             l.NapautaIss();
             Aja(l, y, 0.05);
             Oleta.Sama(Matkakirja.Linssit.Iss.KyydinTila.Ikkuna, l.Kyyti);
