@@ -3,6 +3,14 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 4.10. KLO 20.1x (PÄÄT OMASSA MAASSA MERGE-PYYNNÖSSÄ; KIILTO AAMULLA)
+- Omistaja 19.4x: ajattelijapäät vain pelaajan ollessa ajattelijan maassa. Proto linssiseppa/paat-maassa 26b34eb8 (BUILD 138 1374f627):
+  ErikoisnostoMitat.OmaMaa/Haivytys + UI/Erikoisnostot.cs (NostoKerros.NykyinenMaa, häivytys syttyminenS). Kartta-testit 444/444.
+  Todennus käännös 3674ed53 (+ glint-2): lokit/linssiseppa-paat-maassa-20261004 (omistajalle/ 4 kuvaa + häivytysvideo). Merge-pyyntö
+  Natiivisepälle junaan 140 klo 20.1x.
+- Kiilto: sama käännös 3674ed53 sisältää 5b6b9d46:n → AAMULLA (aurinko korkealla, ~8–10 UTC) ketju: APP=$S/paat-app, OUT=...-kiilto-cupola-h,
+  ajo-kiilto-cupola-3.sh (portti sim-nyt-ki) + maavuoto.py → kuvapari Päätoimittajalle → merge-pyyntö glint-2 (junaan 140/141).
+
 ## TILA 4.10. KLO 17.5x (KIILTO KESKEN 5b6b9d46; LENTOPELI VAIHE 1 TOIMITETTU OMISTAJALLE; VAIHE 2 ODOTTAA)
 - Kiilto: ajo g (284fa65f = 3de304db) — VAIN VEDESSÄ ok (maalla ka 8,2/255 = kohdistusjäännöksen taso), mutta matalalla
   auringolla kaukaa yhä kermaläiskä → 5b6b9d46 (30 km tuulikaistat vain kaukonäkymään, katto 2,0) KÄÄNTÄMÄTTÄ. Seuraavaksi käännös +
