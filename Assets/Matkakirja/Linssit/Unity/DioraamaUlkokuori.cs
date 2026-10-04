@@ -195,7 +195,7 @@ namespace Matkakirja.Natiivi
                     byte[] jpg = null;
                     yield return DioraamaLevyvalimuisti.Hae(url(JpgPaiva(taso)), 120, t => jpg = t);
                     if (oma != kerta) { UnityEngine.Object.Destroy(mesh); yield break; }
-                    if (jpg != null) koottu.Kuva = jpg;
+                    if (jpg != null) { koottu.Kuva = jpg; kirjaa?.Invoke($"poikki: kuori {taso} päivä-JPEG erillisestä tiedostosta ({jpg.Length / 1048576f:F1} Mt)"); }
                     else kirjaa?.Invoke($"poikki: kuori {taso} päivä-JPEG ei latautunut{(koottu.Kuva != null ? ", glb:n kuva" : "")}");
                 }
                 if (kuva == null && koottu.Kuva != null)
