@@ -547,7 +547,7 @@ namespace Matkakirja.Natiivi
         /// soiva luenta aloittaa saman palan heti uudella äänellä ja jatkaa siitä. Välimuistiavaimessa on ääni
         /// (Lukijaaani.Valimuistiavain), joten pala haetaan uudella äänellä eikä vanha soi välimuistista.
         /// </summary>
-        static void AaniVaihtui()
+        internal static void AaniVaihtui()
         {
             var l = ajossa;
             if (l == null || !l.luetaan || l.palat.Count == 0) return;

@@ -966,6 +966,19 @@ namespace Matkakirja.Natiivi
                     UiKerros.Hae().StartCoroutine(NostoSisalto.Pooli(pk, l => Kirjaa("ui pooli " + pk + ": " + l.Count + (l.Count > 0 ? " · " + string.Join(", ", l) : ""))));
                     return null;
                 }
+                case "lukijaaani":
+                {
+                    // "ui lukijaaani eleven|xai [n]" (juna 142): moottori ja n:s ääni kuten lukijan valikosta (soiva pala alkaa
+                    // uudella äänellä, KortinLukija.AaniVaihtui); ilman n:ää tila.
+                    var la = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    if (la.Length > 0) Striimiaani.Moottori = la[0];
+                    if (la.Length > 1 && int.TryParse(la[1], out int ln) && ln >= 0 && ln < Striimiaani.ElevenAanet.Count)
+                        Striimiaani.ElevenAani = Striimiaani.ElevenAanet[ln].Tunnus;
+                    if (la.Length > 0) KortinLukija.AaniVaihtui();
+                    var mv = Striimiaani.MoottoriValinta();
+                    return $"=lukijaaani: sallittu {Striimiaani.MoottoriSallittu}, moottori {Striimiaani.Moottori}, valinta {(mv == null ? "xai" : mv.Value.Moottori + ":" + mv.Value.Aani)}, "
+                        + $"ääni {Striimiaani.ElevenAanet.FirstOrDefault(x => x.Tunnus == Striimiaani.ElevenAani).Nimi}, koodi {(Asetukset.PolloKoodi != null ? "on" : "ei")}";
+                }
                 case "nostonappi":
                 {
                     string tulos = "ok";
