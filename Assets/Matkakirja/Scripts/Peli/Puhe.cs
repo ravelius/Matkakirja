@@ -338,6 +338,8 @@ namespace Matkakirja.Natiivi
         {
             // pyynnosta: pelaaja painoi kaiutinta — soi kertojakytkimestä riippumatta (web lukija: ei porttia).
             if ((!Paalla && !pyynnosta) || string.IsNullOrEmpty(url)) return false;
+            // Jatkohiljaisuus (PeliOhjain): automaattinen puhe ei ala ennen pelaajan ensimmäistä toimintoa; kaiutin (pyynnöstä) soi.
+            if (!pyynnosta && PeliOhjain.EstaJatkohiljaisuudessa("puheen " + System.IO.Path.GetFileName(url.Split('?')[0]))) return false;
             soiPyynnosta = pyynnosta;
             AsetaIstunto();
             PuraTauko();

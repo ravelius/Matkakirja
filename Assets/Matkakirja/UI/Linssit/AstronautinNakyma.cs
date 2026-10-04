@@ -27,6 +27,9 @@ namespace Matkakirja.Natiivi
 {
     public sealed class AstronautinNakyma
     {
+        /// <summary>Avaruuskävelyn rivi Pulun valikossa (omistaja 4.10.2026 klo 11.44: pois; koodi talteen palautusta varten).</summary>
+        public static readonly bool AvaruuskavelyValikossa = false;
+
         public const int OtsikonHaivytysMs = (int)AstronauttiLinssi.OtsikonHaivytysMs;
         public const int MustanHaivytysMs = (int)AstronauttiLinssi.MustanHaivytysMs;
 
@@ -80,9 +83,11 @@ namespace Matkakirja.Natiivi
             // Taulu kuvanäkymän ja kyydin päälle (web z-index 50 > kyydin kosketuskerros 48).
             Taulu = new PulunTauluNakyma(kerros, this);
             // Avaruuskävely Pulun taulusta (Päätoimittaja 29.9.): rivi ISS-rivien jälkeen; valinta vie ensin Cupolaan (kuva kiinni,
-            // kyytiin; ISS:n rinnalla pois pelistä 2.10.) ja aloittaa kävelyn perillä.
-            Taulu.LisaaRivi("avaruuskavely", "Avaruuskävely", "Ulos kaiteelle katsomaan auringonnousua",
-                () => AstroLinssi()?.Kavely?.Kaynnissa == true, () => { AstroLinssi()?.AloitaKavely(); }, AstroMoodi.Ikkuna);
+            // kyytiin; ISS:n rinnalla pois pelistä 2.10.) ja aloittaa kävelyn perillä. Omistaja 4.10.2026 klo 11.44: pois
+            // valikosta, koodi jää talteen (AvaruuskavelyValikossa palauttaa rivin).
+            if (AvaruuskavelyValikossa)
+                Taulu.LisaaRivi("avaruuskavely", "Avaruuskävely", "Ulos kaiteelle katsomaan auringonnousua",
+                    () => AstroLinssi()?.Kavely?.Kaynnissa == true, () => { AstroLinssi()?.AloitaKavely(); }, AstroMoodi.Ikkuna);
             // Laite 29.9. kavely1: linssin avauksen automaattitaulu jäi auki kävelyn päälle (kehittäjäkomennolla aloitettu).
             Kavely.Alkoi += () => { if (Taulu.Auki) Taulu.Sulje("avaruuskavely"); };
             // PULU KYYDIN PÄÄLLÄ (web body.satelliitti-kyyti .pollo-nappi z-index 49 > kyydin kerros 48): Cupola-kehys peitti

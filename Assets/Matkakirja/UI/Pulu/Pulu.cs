@@ -797,6 +797,8 @@ namespace Matkakirja.Natiivi
             bool naytaAina = false)
         {
             if (string.IsNullOrEmpty(teksti)) return null;
+            // Jatkohiljaisuus (PeliOhjain): ei Livian repliikkiä (kuplaa eikä ääntä) ennen pelaajan ensimmäistä toimintoa.
+            if (PeliOhjain.EstaJatkohiljaisuudessa("Livian repliikin")) return null;
             viimeRepliikki = teksti;
             viimeToimi = Aika;
             // Karttaväistö: puhuva pulu palaa heti näkyviin, myös "blink"-repliikillä, joka ei kutsu Toistaa (muuten ääni

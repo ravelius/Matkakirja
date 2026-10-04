@@ -141,8 +141,9 @@ namespace Matkakirja.Natiivi
             // rinnalla). Historia jää vieritettäväksi yläpuolelle; uudet napit ovat lopussa, ja virta vierii niihin.
             PoistaSirut();
             NaytaKohteenValmiit(valmiit);
-            // Ilman kohteen kysymyksiä avaus silti uusimpaan viestiin.
-            if (valmiit == null || valmiit.Count == 0)
+            // Ilman kohteen kysymyksiä linssin tilan valmiit kysymykset (astronautin kamera 4.10.2026: pallo, kuvat, ohjaamo),
+            // muuten avaus silti uusimpaan viestiin.
+            if ((valmiit == null || valmiit.Count == 0) && !NaytaLinssinValmiit())
                 virta.schedule.Execute(() => virta.scrollOffset = new Vector2(0f, Mathf.Max(0f, virta.contentContainer.layout.height - virta.contentViewport.layout.height))).ExecuteLater(30);
             Asettele();
         }

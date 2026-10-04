@@ -271,6 +271,11 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>Linna esiin sumusta (TF 136 -kierros 4.10.: odotuksen jälkeen linna ilmestyi kerralla): sumu peittää aluksi
+        /// kohteen etäisyyden (0,45–0,85 d) ja palaa normaaliksi s sekunnissa (smoothstep); linna nousee taustaväristä.</summary>
+        public void Haivyta(float s) { haivytysAlku = Time.unscaledTime; haivytysKesto = Mathf.Max(0.01f, s); }
+        float haivytysAlku = -10f, haivytysKesto = 1f;
+
         public void Paivita(Asento kameranAsento, bool vahennettyLiike, double t = 0)
         {
             VarmistaKuva();
@@ -293,6 +298,14 @@ namespace Matkakirja.Natiivi
             Kamera.farClipPlane = ymparisto ? 16000f : 2000f;
             float sumuLoppu = ymparisto ? 9000f : Mathf.Min(d * SumuLoppuKerroin, Kamera != null ? Kamera.farClipPlane * 0.9f : 1800f);
             float sumuAlku = ymparisto ? Mathf.Max(d * 3f, 300f) : Mathf.Min(d * SumuAlkuKerroin, sumuLoppu * 0.6f);
+            float h = Mathf.Clamp01((Time.unscaledTime - haivytysAlku) / haivytysKesto);
+            if (h < 1f)
+            {
+                h = h * h * (3f - 2f * h);
+                // Vain linnan etäisyysvyöhyke (kohde d:n päässä) sumuun: lähivesi pysyy ennallaan, linna nousee taustaväristä.
+                sumuLoppu = Mathf.Lerp(Mathf.Min(d * 0.85f, sumuLoppu), sumuLoppu, h);
+                sumuAlku = Mathf.Lerp(Mathf.Min(d * 0.45f, sumuAlku), sumuAlku, h);
+            }
             Shader.SetGlobalVector(IdSumu, new Vector4(sumuAlku, sumuLoppu, 0, 0));
             Ymparisto?.Paivita(Kamera);
             if (syvyys != null)

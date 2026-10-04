@@ -49,7 +49,7 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void PulunTaulussaEiRinnallaRivia()
         {
             var rivit = PulunTaulu.Rivit(true, true, AstroMoodi.Pallo).Select(r => r.Tunnus);
-            Oleta.Sama("pallo iss-sisalle kuvat", string.Join(" ", rivit));
+            Oleta.Sama("pallo kuvat iss-sisalle poistu", string.Join(" ", rivit));
             Oleta.Sama(MoodinAskel.Napauta, PulunTaulu.Askel(AstroMoodi.Ikkuna, false, KyydinTila.Kauko, false), "Cupola yhdellä napautuksella");
             Oleta.Sama(MoodinAskel.Ei, PulunTaulu.Askel(AstroMoodi.Seuranta, false, KyydinTila.Ikkuna, false), "ei tietä seurantaan");
             Oleta.Sama(MoodinAskel.Napauta, PulunTaulu.Askel(AstroMoodi.Ikkuna, false, KyydinTila.Kohde, false), "kohteen yltä Cupolaan");

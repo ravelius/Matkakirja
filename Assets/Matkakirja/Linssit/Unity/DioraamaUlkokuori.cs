@@ -120,6 +120,7 @@ namespace Matkakirja.Natiivi
                 yield return DioraamaLevyvalimuisti.Hae(url(polku), 180, t => tavut = t);
                 if (oma != kerta) yield break;
                 if (tavut == null) { kirjaa?.Invoke($"poikki: kuori {taso} ei latautunut"); continue; }
+                float vLataus = Time.realtimeSinceStartup; // vaiheajat valmis-riville (Päätoimittaja 4.10.)
 
                 // Jäsennys ja kärkitaulukot taustasäikeessä.
                 Koottu koottu = null; string virhe = null;
@@ -129,6 +130,7 @@ namespace Matkakirja.Natiivi
                 tavut = null;
                 if (oma != kerta) yield break;
                 if (koottu == null) { kirjaa?.Invoke($"poikki: kuori {taso} virhe: {virhe}"); continue; }
+                float vPurku = Time.realtimeSinceStartup;
 
                 // Ensilataus v2 (1.10.): raskaat pääsäikeen vaiheet omiin ruutuihinsa (DioraamaRuutu); kevyt taso (linnan
                 // ensikuva) ilman välitaukoja, jottei se myöhästy.
@@ -149,6 +151,7 @@ namespace Matkakirja.Natiivi
                 mesh.UploadMeshData(true); DioraamaRuutu.Mesh(kirjaa, mesh); // kärjet vain GPU:lle, CPU-kopio vapautuu
                 DioraamaRuutu.Kirjaa(kirjaa, $"kuori {taso} mesh-lataus", r0);
                 if (tauot) yield return null;
+                float vMesh = Time.realtimeSinceStartup;
 
                 // ASTC-mipketju (tekstuurit.<taso>) ensin: 4×4 on laadultaan lähes JPEG (PSNR ≈ 40 dB) ja jää GPU:lle
                 // pakattuna; puuttuva tai tukematon → glb:n JPEG ja Compress kuten ennen.
@@ -202,7 +205,8 @@ namespace Matkakirja.Natiivi
                 if (koottu.Pohja.HasValue) Pohja = koottu.Pohja;
                 AsetaTaso(taso, mesh, kuva);
                 kirjaa?.Invoke($"poikki: kuori {taso.ToString().ToLowerInvariant()} valmis ({koottu.Kolmiot.Length / 3} kolmiota, " +
-                               $"{(kuva != null ? kuva.width + "² " + kuva.format : "ei kuvaa")}, {Time.realtimeSinceStartup - alku:F1} s)");
+                               $"{(kuva != null ? kuva.width + "² " + kuva.format : "ei kuvaa")}, {Time.realtimeSinceStartup - alku:F1} s: lataus {vLataus - alku:F1}, " +
+                               $"purku {vPurku - vLataus:F1}, mesh {vMesh - vPurku:F1}, kuva (ASTC/JPEG) {Time.realtimeSinceStartup - vMesh:F1} s)");
                 yield return null;
             }
             if (kuori.Detalji != null) yield return LataaDetalji(kuori.Detalji, url, kirjaa, oma);
