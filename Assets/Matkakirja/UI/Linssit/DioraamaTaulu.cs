@@ -270,6 +270,17 @@ namespace Matkakirja.Natiivi
             kuunnelma = new KuunnelmaKaistale();
             Viimeisin = this;
 
+            // NIMIRUUTU (Päätoimittaja 4.10.): saapumisen latausodotuksen ajan ISS-avausruudun pohja (mk-astroavaus, ei uutta tyyliä):
+            // rakennuksen nimi, viiva ja alarivi; häivytetään, kun kevyt kuori on valmis ja linna nousee sumusta.
+            nimiruutu = Rakenne.El("mk-astroavaus", kerros.Juuri(LinssiUi.Ylakerros), PickingMode.Ignore);
+            nimiruutu.style.display = DisplayStyle.None;
+            var nimiOtsikko = Rakenne.El("mk-astroavaus__otsikko", nimiruutu, PickingMode.Ignore);
+            Kirjasimet.Aseta(nimiOtsikko, Kirjasin.Kone);
+            nimiruudunNimi = Rakenne.Teksti("", "mk-astroavaus__nimi", nimiOtsikko);
+            Kirjasimet.Aseta(nimiruudunNimi, Kirjasin.KoneLihava);
+            Rakenne.El("mk-astroavaus__viiva", nimiOtsikko, PickingMode.Ignore);
+            Rakenne.Teksti(DioraamaSovitin.SaapumisAlarivi, "mk-astroavaus__lahde", nimiOtsikko);
+
             DioraamaSovitin.PeittaaRuutu = OsuukoPaneeliin;
             DioraamaSovitin.Vaihtui += Kytke;
             kerros.JokaRuutu += Paivita;
@@ -333,8 +344,33 @@ namespace Matkakirja.Natiivi
             return lauta.worldBound.Contains(paneelipiste);
         }
 
+        readonly VisualElement nimiruutu;
+        readonly Label nimiruudunNimi;
+        bool nimiruutuAuki;
+
+        void PaivitaNimiruutu()
+        {
+            bool odotus = DioraamaSovitin.SaapumisOdotus;
+            if (odotus && !nimiruutuAuki)
+            {
+                nimiruutuAuki = true;
+                nimiruudunNimi.text = DioraamaSovitin.SaapumisNimi;
+                nimiruutu.RemoveFromClassList("mk-astroavaus--haipyy");
+                nimiruutu.style.opacity = 1f;
+                nimiruutu.style.display = DisplayStyle.Flex;
+            }
+            else if (!odotus && nimiruutuAuki)
+            {
+                nimiruutuAuki = false;
+                nimiruutu.AddToClassList("mk-astroavaus--haipyy");
+                nimiruutu.style.opacity = 0f;
+                nimiruutu.schedule.Execute(() => { if (!nimiruutuAuki) nimiruutu.style.display = DisplayStyle.None; }).StartingIn(1200);
+            }
+        }
+
         void Paivita()
         {
+            PaivitaNimiruutu();
             var linssi = DioraamaSovitin.Linssi;
             var rakennus = linssi?.Rakennus;
             // Kehittäjän Kuori-nappi ×:n alle oikeaan reunaan (katselmus 1.1 (78): kiinteä top 110 osui × -nappiin).

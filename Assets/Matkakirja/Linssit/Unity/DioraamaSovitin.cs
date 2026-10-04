@@ -194,7 +194,8 @@ namespace Matkakirja.Natiivi
                 }
                 // Päätoimittaja 4.10. (Linnanrakentajan mittaus): linna esiin heti kevyen kuoren valmistuttua; tilat ja hahmot latautuvat
                 // perässä, ja kukin tila pysyy piilossa valoatlaksensa valmistumiseen asti (LataaTila).
-                if (kuoriValmis || odotettu > KuoriOdotusMax || rakennus.Ulkokuori == null)
+                // Nimiruutu (Päätoimittaja 4.10., DioraamaTaulu) näkyy odotuksen ajan vähintään NimiruutuMinS.
+                if ((kuoriValmis && odotettu >= NimiruutuMinS) || odotettu > KuoriOdotusMax || rakennus.Ulkokuori == null)
                 {
                     kuoriOdotusAlku = -1f;
                     if (tilatOdottavat) { tilatOdottavat = false; TaydennaLataamattomat(); }
@@ -377,7 +378,10 @@ namespace Matkakirja.Natiivi
         // kuorta ei vielä ollut ja harmaat tilapalikat näkyivät veden päällä. Odotuksen ajan aika on jäädytetty kaaren
         // alkuun (kamera kaukana järvellä), ja näyttämö piilottaa kaiken paitsi veden (DioraamaNayttamo.Odota).
         // 4.10.: 10 → 45 s (kuori ensin, tilat perässä, ks. Paivita); yli tämän näytetään se mitä on.
-        const float KuoriOdotusMax = 45f, HaivytysS = 2.5f;
+        const float KuoriOdotusMax = 45f, HaivytysS = 2.5f, NimiruutuMinS = 2f;
+        /// <summary>Saapumisodotuksen nimiruudun tekstit (DioraamaTaulu): rakennuksen nimi versaalina ja alarivi.</summary>
+        public static string SaapumisNimi => (Linssi?.Rakennus?.Nimi ?? "").ToUpperInvariant();
+        public const string SaapumisAlarivi = "Savonlinna · 1475";
         float kuoriOdotusAlku = -1f;
         /// <summary>Tilojen ja hahmojen lataus odottaa kuorta (TaydennaLataamattomat vasta kuoren valmistuttua).</summary>
         bool tilatOdottavat;
