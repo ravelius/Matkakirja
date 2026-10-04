@@ -1716,6 +1716,8 @@ namespace Matkakirja.Natiivi
                         // Ohjaamo (omistaja 4.10.): joystick <ylos|alas|vasen|oikea|ei> ja kaasu <1|10|100|1000>.
                         else if (a == "joy" && osat.Length > 3 && Enum.TryParse<Matkakirja.Linssit.Iss.JoystickSuunta>(osat[3], true, out var js))
                         { l.Joystick(js); Ruudunpaivitys.Herata(1f); Kirjaa($"astro kyyti joy: {js}, {l.CupolanKatse.Tila(KatseenOletus())}"); }
+                        else if (a == "suhina" && osat.Length > 3)
+                        { Matkakirja.Linssit.Astronautti.AstronauttiLinssi.SuhinaUrl = osat[3] == "pois" ? null : osat[3]; Kirjaa("astro kyyti suhina: " + osat[3]); }
                         else if (a == "sijainti") { var (k1, m1) = l.Sijainti(); Kirjaa($"astro kyyti sijainti: {k1} / {m1}"); }
                         else if (a == "kaasu" && osat.Length > 3 && int.TryParse(osat[3], out int kk))
                             Kirjaa($"astro kyyti kaasu: {(l.AsetaKaasu(kk) ? kk + "×" : "ei pykälää")}, {Matkakirja.Linssit.Iss.IssNyt.Simu}");
