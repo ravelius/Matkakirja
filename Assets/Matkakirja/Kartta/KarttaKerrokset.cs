@@ -402,6 +402,36 @@ namespace Matkakirja
             PaivitaLennonVarjostin();
         }
         bool linssiVara;
+        static readonly int Rasteri1Id = Shader.PropertyToID("_overlayTexture_1"), Rasteri2Id = Shader.PropertyToID("_overlayTexture_2");
+        static readonly Plane[] lataamatonTasot = new Plane[6];
+        static readonly List<MeshRenderer> lataamatonRenderit = new List<MeshRenderer>();
+
+        /// <summary>
+        /// LATAAMATTOMAT LAATAT NÄKYMÄSSÄ (Päätoimittaja 4.10.2026: Cupolan musta odottaa, kunnes näkymässä ei ole yhtään
+        /// lataamatonta laattaa, enintään 4 s): aktiiviset pallon laatat kameran näkökartiossa, joilla ei ole rasteria paikoissa 1
+        /// eikä 2 (linssien ja kyydin BMNG/S2). Cesium piirtää ne ilman tekstuuria (detachRaster → null), jolloin näkyy
+        /// materiaalin vaalea perusväri (ks. LENNON VARAKARTTA). Palauttaa (lataamattomat, näkyvät); −1 = ei palloa tai kameraa.
+        /// </summary>
+        public (int Lataamattomat, int Nakyvat) LataamattomatLaatat(Camera kamera)
+        {
+            if (pallo == null || kamera == null) return (-1, -1);
+            GeometryUtility.CalculateFrustumPlanes(kamera, lataamatonTasot);
+            pallo.GetComponentsInChildren(false, lataamatonRenderit);
+            int puuttuu = 0, nakyy = 0;
+            foreach (var r in lataamatonRenderit)
+            {
+                if (!r.enabled || !GeometryUtility.TestPlanesAABB(lataamatonTasot, r.bounds)) continue;
+                var m = r.sharedMaterial;
+                if (m == null) continue;
+                nakyy++;
+                bool r1 = m.HasProperty(Rasteri1Id) && m.GetTexture(Rasteri1Id) != null;
+                bool r2 = m.HasProperty(Rasteri2Id) && m.GetTexture(Rasteri2Id) != null;
+                if (!r1 && !r2) puuttuu++;
+            }
+            lataamatonRenderit.Clear();
+            return (puuttuu, nakyy);
+        }
+
         /// <summary>Varakartta (näkymän karkein taso) valmiina: Cupolan musta ruutu odottaa tätä enintään 4 s.</summary>
         public static bool VarakarttaValmis => varaKartta != null && varaKarttaAvain == SatelliittiAvain();
 
