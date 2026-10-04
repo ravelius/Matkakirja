@@ -17,7 +17,7 @@ using UnityEngine.UIElements;
 namespace Matkakirja.Natiivi
 {
     /// <summary>Atlas = web --font-atlas (Liberation Serif kursiivi, UI/Resources/Fontit, OFL): kartan nimiöt ja kaupunkiliuska.</summary>
-    public enum Kirjasin { Kone, KoneLihava, Luku, LukuLihava, LukuKursiivi, Kauno, KoneBold, Atlas }
+    public enum Kirjasin { Kone, KoneLihava, Luku, LukuLihava, LukuKursiivi, Kauno, KoneBold, Atlas, Goottilainen, Antiikva, AntiikvaKursiivi }
 
     public static class Kirjasimet
     {
@@ -36,11 +36,34 @@ namespace Matkakirja.Natiivi
             _ => new (string, string)[0],
         };
 
+        /// <summary>Linnan lappujen otsikkofontti (Resources-polku): mitat.json "fontit.otsikko" voi vaihtaa sen (Päätoimittaja 4.10.:
+        /// UnifrakturMaguntian K näytti R:ltä → luettavampi goottilainen).</summary>
+        public static string LinnanOtsikko { get; private set; } = "Fontit/GrenzeGotisch-SemiBold";
+        public static void AsetaLinnanOtsikko(string resurssi)
+        {
+            if (string.IsNullOrEmpty(resurssi) || resurssi == LinnanOtsikko) return;
+            LinnanOtsikko = resurssi;
+            valimuisti.Remove(Kirjasin.Goottilainen);
+        }
+
         /// <summary>Fontin määritys (null = ei löytynyt: käytetään teeman varafonttia).</summary>
         public static FontDefinition? Hae(Kirjasin k)
         {
             if (valimuisti.TryGetValue(k, out var d)) return d;
             d = null;
+            // Linnan keskiaikaiset laput (omistaja 4.10. 20.4x, Päätoimittaja): goottilainen otsikko ja vanha antiikva, OFL
+            // (Linnanrakentajan toimitus olavinlinna-laput-v1, LAHTEET.md); puuttuva → varafontti.
+            string linnanFontti = k == Kirjasin.Goottilainen ? LinnanOtsikko : k == Kirjasin.Antiikva ? "Fontit/IMFellEnglish-Regular"
+                : k == Kirjasin.AntiikvaKursiivi ? "Fontit/IMFellEnglish-Italic" : null;
+            if (linnanFontti != null)
+            {
+                var lf = Resources.Load<Font>(linnanFontti);
+                var la = lf != null ? FontAsset.CreateFontAsset(lf) : null;
+                if (la != null) { la.name = lf.name; d = FontDefinition.FromSDFFont(la); }
+                else Debug.LogWarning("MATKAKIRJA ui: linnan fontti puuttuu (Resources/" + linnanFontti + ")");
+                valimuisti[k] = d;
+                return d;
+            }
             if (k == Kirjasin.Atlas)
             {
                 var fontti = Resources.Load<Font>("Fontit/LiberationSerif-Italic");

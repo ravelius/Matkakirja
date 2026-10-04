@@ -295,6 +295,9 @@ namespace Matkakirja.Linssit.Dioraama
     {
         public string Id, Nimi;
         public bool Kohdistettava;
+        /// <summary>Nimilapun tärkeys (`lappujarjestys`, 1 = ensin; omistaja 4.10.: kauempaa näkyvät tärkeimmät, ainakin yksi).
+        /// Puuttuva = tilojen järjestyksessä niiden jälkeen, joilla kenttä on.</summary>
+        public int? LappuJarjestys;
         /// <summary>Ulkotila (erä 3: laituri, muurinharja): kohdistettuna aurinko ja taivas pysyvät täysinä
         /// (Valaistus.Sisalla-kertoimia ei käytetä). Puuttuva = false.</summary>
         public bool Ulkona;
@@ -969,6 +972,7 @@ namespace Matkakirja.Linssit.Dioraama
                 Id = MiniJson.Teksti(o, "id"),
                 Nimi = MiniJson.Teksti(o, "nimi"),
                 Kohdistettava = MiniJson.Totuus(o, "kohdistettava"),
+                LappuJarjestys = MiniJson.Luku(o, "lappujarjestys") is double lj ? (int)lj : (int?)null,
                 Ulkona = MiniJson.Totuus(o, "ulkona"),
                 Kamera = LueAsento(MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "kamera"))),
                 KameraPysty = MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "kameraPysty")) is Dictionary<string, object> kp

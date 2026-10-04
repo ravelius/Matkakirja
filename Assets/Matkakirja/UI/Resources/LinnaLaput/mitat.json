@@ -1,0 +1,165 @@
+{
+ "huom": "Linnanrakentaja 4.10.2026. slice = PNG-pikselit @3x [vasen, ylä, oikea, ala]; sisennys = pt tekstialueelle kortin reunasta [vasen, ylä, oikea, ala]. Kortti 300 × 150 pt pohjakoossa (venyy 220–350 × 110–180), nimilappu 90 × 22 pt (3-slice, korkeus kiinteä). Fontit: otsikko ja initiaali Grenze Gotisch SemiBold (Päätoimittaja 4.10.: UnifrakturMaguntian K luettiin R:ksi), leipäteksti IM Fell English (Regular/Italic).",
+ "a": {
+  "kortti": {
+   "slice": [
+    72,
+    72,
+    72,
+    72
+   ],
+   "koko_pt": [
+    300,
+    150
+   ]
+  },
+  "nimilappu": {
+   "slice": [
+    24,
+    0,
+    24,
+    0
+   ],
+   "koko_pt": [
+    90,
+    22
+   ]
+  },
+  "sisennys": {
+   "kortti": [
+    22,
+    20,
+    22,
+    20
+   ],
+   "nimilappu": [
+    8,
+    3,
+    8,
+    3
+   ]
+  },
+  "varit": {
+   "otsikko": "#3a1a0c",
+   "teksti": "#2b1d10",
+   "kapiteeli": "#7a1a10",
+   "nimilappu": "#2b1d10",
+   "viiva": "#8a6a40"
+  },
+  "sinetti": {
+   "koko_pt": [
+    32,
+    32
+   ],
+   "huom": "oikeaan alakulmaan reunan yli"
+  }
+ },
+ "b": {
+  "kortti": {
+   "slice": [
+    72,
+    72,
+    72,
+    72
+   ],
+   "koko_pt": [
+    300,
+    150
+   ]
+  },
+  "nimilappu": {
+   "slice": [
+    24,
+    0,
+    24,
+    0
+   ],
+   "koko_pt": [
+    90,
+    22
+   ]
+  },
+  "sisennys": {
+   "kortti": [
+    22,
+    20,
+    22,
+    20
+   ],
+   "nimilappu": [
+    8,
+    3,
+    8,
+    3
+   ]
+  },
+  "varit": {
+   "otsikko": "#e2bc62",
+   "teksti": "#e8d6a8",
+   "kapiteeli": "#d2a24a",
+   "nimilappu": "#e2bc62",
+   "viiva": "#c9a24e"
+  }
+ },
+ "c": {
+  "kortti": {
+   "slice": [
+    72,
+    72,
+    72,
+    72
+   ],
+   "koko_pt": [
+    300,
+    150
+   ]
+  },
+  "nimilappu": {
+   "slice": [
+    24,
+    0,
+    24,
+    0
+   ],
+   "koko_pt": [
+    90,
+    22
+   ]
+  },
+  "sisennys": {
+   "kortti": [
+    22,
+    20,
+    22,
+    20
+   ],
+   "nimilappu": [
+    8,
+    3,
+    8,
+    3
+   ]
+  },
+  "varit": {
+   "otsikko": "#2a1f14",
+   "teksti": "#2a1f14",
+   "kapiteeli": "#8a1c12",
+   "nimilappu": "#2a1f14",
+   "viiva": "#8a1c12"
+  },
+  "initiaali": {
+   "vari": "#e6c068",
+   "koko_pt": [
+    28,
+    28
+   ],
+   "huom": "kirjain kultaisena sinisen kentän päälle"
+  }
+ },
+ "fontit": {
+  "otsikko": "GrenzeGotisch-SemiBold.ttf",
+  "teksti": "IMFellEnglish-Regular.ttf",
+  "kursiivi": "IMFellEnglish-Italic.ttf",
+  "initiaali": "GrenzeGotisch-SemiBold.ttf"
+ }
+}

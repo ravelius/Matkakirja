@@ -154,6 +154,7 @@ namespace Matkakirja.Natiivi
 
             Linssi = linssi;
             Vaihtui?.Invoke(linssi);
+            LukitseVaaka(true);
 
             if (rakennus == null)
             {
@@ -283,6 +284,27 @@ namespace Matkakirja.Natiivi
             ViimeisinNakyma = null;
             Linssi = null;
             Vaihtui?.Invoke(null);
+            LukitseVaaka(false);
+        }
+
+        // LINNA AUKEAA VAAKANA (omistaja 4.10. 20.2x): iPhonella poikkileikkaus lukittuu vaaka-asentoon avattaessa (laitteen
+        // vaakasuunta, jos puhelin on jo vaakana) ja palaa suljettaessa pelaajan aiempaan asentoon; iPad ennallaan.
+        static ScreenOrientation? asentoEnnen;
+        static void LukitseVaaka(bool paalle)
+        {
+            if (paalle)
+            {
+                if (asentoEnnen.HasValue || !Application.isMobilePlatform || UiKerros.Tabletti) return;
+                asentoEnnen = Screen.orientation;
+                Screen.orientation = Input.deviceOrientation == DeviceOrientation.LandscapeRight ? ScreenOrientation.LandscapeRight : ScreenOrientation.LandscapeLeft;
+                Debug.Log($"MATKAKIRJA linssit: poikki: linna vaakaan ({asentoEnnen} → {Screen.orientation})");
+            }
+            else if (asentoEnnen.HasValue)
+            {
+                Screen.orientation = asentoEnnen.Value;
+                Debug.Log($"MATKAKIRJA linssit: poikki: linna suljettu, asento palautettu ({asentoEnnen})");
+                asentoEnnen = null;
+            }
         }
 
         /// <summary>Kohdistus (napautus tilan AABB:hen, "poikki tila"/"poikki yleis" -komennot): nollaa pelaajan vedon/nipistyksen.</summary>
@@ -762,6 +784,14 @@ namespace Matkakirja.Natiivi
         {
             string mita = osat.Length > 1 ? osat[1] : "tila";
             string arvo = osat.Length > 2 ? osat[2] : null;
+            // "poikki laput": nimilappujen viimeisin valinta lokiin (näkyvät ja piilotettujen syyt; kuvaukset ja savukkeet).
+            // "poikki vaakasuunta vasen|oikea": testi molemmille vaakasuunnille (turva-alue, Dynamic Island) ilman laitteen kääntöä.
+            if (mita == "vaakasuunta" && asentoEnnen.HasValue)
+            {
+                Screen.orientation = arvo == "oikea" ? ScreenOrientation.LandscapeRight : ScreenOrientation.LandscapeLeft;
+                o.Kirjaa("poikki: vaakasuunta " + Screen.orientation); return;
+            }
+            if (mita == "laput") { o.Kirjaa("poikki: nimilaput: " + DioraamaTaulu.LappuMittaus); return; }
             if (mita == "peili")
             {
                 peiliHttps = false;
