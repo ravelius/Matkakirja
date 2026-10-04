@@ -89,7 +89,7 @@ namespace Matkakirja.Natiivi
             esiNappi = Rakenne.Nappi("", "mk-linssivalitsin__esinappi", () => esiToiminto?.Invoke(), esiSisus);
             Kirjasimet.Aseta(esiNappi, Kirjasin.KoneLihava);
             esikatselu.style.display = DisplayStyle.None;
-            turva.RegisterCallback<GeometryChangedEvent>(_ => AsetteleEsikatselu());
+            turva.RegisterCallback<GeometryChangedEvent>(_ => Asettele());   // myös vaakavalikon korkeus turva-alueesta
             suurennos = new Kuvasuurennos(kerros.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
         }
 
@@ -409,6 +409,18 @@ namespace Matkakirja.Natiivi
         // --- testikomento -------------------------------------------------------------------------
 
         /// <summary>Testi (ui pilleri linssit|pelit|aarteet|matka|tasot|asetukset|paa [n]): näkymä auki ja n:s rivi napautettuna kerran (esikatselu).</summary>
+        /// <summary>Testi: KESKENERÄISET-osio auki/kiinni Linssit-näkymässä ja vieritys osioon (ui pilleri kesken [0|1]).</summary>
+        public string TestaaKesken(bool auki)
+        {
+            TestaaNakyma("linssit", -1);
+            KeskenAuki = auki;
+            Rakenna();
+            var r = lista.Q(className: "mk-linssivalitsin__keskenrivi");
+            if (r != null) vieritys.schedule.Execute(() => vieritys.ScrollTo(lista.Q(className: "mk-linssivalitsin__keskeneraiset") ?? r)).ExecuteLater(50);
+            int n = lista.Q(className: "mk-linssivalitsin__keskeneraiset")?.childCount ?? 0;
+            return $"keskeneräiset {(auki ? "auki" : "kiinni")}, {n} linssiä";
+        }
+
         public string TestaaNakyma(string nimi, int rivi)
         {
             if (!Auki) Avaa();
