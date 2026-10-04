@@ -60,6 +60,24 @@ namespace Matkakirja.Natiivi
         public static IReadOnlyList<(string Tila, string AaniId, float Taso)> SoivatTaustat => soivatTaustat;
         static readonly List<(string Tila, string AaniId, float Taso)> soivatTaustat = new List<(string, string, float)>();
         static DioraamaAanet aktiivinen;
+        // ÄÄNIRYHMÄT (Siirtoseppä 5.10.2026, omistajan TF 141 -palaute: "Äänisäätimiä ei ole kaikille äänille. Nyt kuuluu askelia ja
+        // kuorolaulua yms. alku esittelyn aikana mikä menee puheen päälle"): jokainen linnan ääni kuuluu yhteen ryhmään, jolla on
+        // mikserin säädin (RyhmaKerroin, avain "ryhma:<id>"), ja KAIKKI ryhmät väistävät puhetta samalla kertoimella. Kertaäänet
+        // soivat ryhmänsä omasta lähteestä, jonka volume liukuu joka kehys: myös jo soiva 40 s:n laulu väistää kesken soiton.
+        public static readonly string[] Ryhmat = { "askeleet", "kuoro", "tehosteet", "liekit", "taustat" };
+        public static readonly Dictionary<string, float> RyhmaKerroin = new Dictionary<string, float>();
+        /// <summary>Ääni-id:n ryhmä nimen perusteella (pankissa ei ole ryhmäkenttää).</summary>
+        public static string Ryhma(string aaniId, bool silmukka)
+        {
+            if (string.IsNullOrEmpty(aaniId)) return "tehosteet";
+            if (aaniId.EndsWith("-ratina", StringComparison.Ordinal)) return "liekit";
+            if (silmukka) return "taustat";
+            if (aaniId.StartsWith("askel", StringComparison.Ordinal)) return "askeleet";
+            if (aaniId.StartsWith("laulu", StringComparison.Ordinal) || aaniId.StartsWith("kello", StringComparison.Ordinal)) return "kuoro";
+            return "tehosteet";
+        }
+        readonly Dictionary<string, AudioSource> kertaLahteet = new Dictionary<string, AudioSource>();
+        float viimeDuck = 1f;
         static float Kerroin(Dictionary<string, float> d, string avain, float oletus = 1f) =>
             avain != null && d.TryGetValue(avain, out var v) ? v : oletus;
         AudioSource puheKuiva, puheKaiku;
@@ -113,6 +131,12 @@ namespace Matkakirja.Natiivi
                 kertaAaniLahde = go.AddComponent<AudioSource>();
                 kertaAaniLahde.playOnAwake = false;
                 kertaAaniLahde.spatialBlend = 0;
+                foreach (var ryhma in Ryhmat)
+                {
+                    var l = go.AddComponent<AudioSource>();
+                    l.playOnAwake = false; l.spatialBlend = 0;
+                    kertaLahteet[ryhma] = l;
+                }
                 puheKuiva = go.AddComponent<AudioSource>(); puheKuiva.playOnAwake = false; puheKuiva.spatialBlend = 0;
                 puheKaiku = go.AddComponent<AudioSource>(); puheKaiku.playOnAwake = false; puheKaiku.spatialBlend = 0;
             }
@@ -207,7 +231,7 @@ namespace Matkakirja.Natiivi
                 {
                     double pankinVoimakkuus = rak.Aanet.TryGetValue(ap.AaniId, out var aani) ? aani.Voimakkuus : 1;
                     double taso01Raw = aanimaisemaPaalla ? tavoite * ap.Voimakkuus * pankinVoimakkuus
-                        * Kerroin(HuoneKerroin, tila.Id) * Kerroin(TaustaKerroin, ap.AaniId) : 0;
+                        * Kerroin(HuoneKerroin, tila.Id) * Kerroin(TaustaKerroin, ap.AaniId) * Kerroin(RyhmaKerroin, Ryhma(ap.AaniId, true)) : 0;
                     ehdokkaat.Add((tila.Id, ap.AaniId, taso01Raw));
                 }
                 if (aanimaisemaPaalla)
@@ -216,7 +240,8 @@ namespace Matkakirja.Natiivi
                         // "soi vain kun tilan taso ≥ 1": ajastinta ei edes tikitetä matalammalla tasolla.
                         if (taso < 1) continue;
                         string aaniId = aanimaisema.TehosteenLaukaisu(tila.Id, ti, tila.Tehosteet[ti], t);
-                        if (aaniId != null) SoitaKertaAani(aaniId, (float)tila.Tehosteet[ti].Voimakkuus);
+                        // Yleisnäkymässä kaikkien huoneiden ajastimet tikittävät (taso 1): sama × 0,3 kuin huoneiden silmukoille.
+                        if (aaniId != null) SoitaKertaAani(aaniId, (float)(tila.Tehosteet[ti].Voimakkuus * (nakyma.KohdeTila == null ? 0.3 : 1.0)));
                     }
             }
 
@@ -237,9 +262,14 @@ namespace Matkakirja.Natiivi
 
             string huone = nakyma.KohdeTila;
             if (huone != NykyinenHuone) { NykyinenHuone = huone; HuoneVaihtui?.Invoke(huone); aanettomat.Clear(); }
-            bool puheSoi = puhuu || Time.unscaledTime < puheLoppuu;
+            bool puheSoi = puhuu || Time.unscaledTime < puheLoppuu || MuuPuheSoi;
             // Sovittimen duckaus puheen ajaksi (0,15); mikserin VaistoKerroin skaalaa väistön (1 = nykyinen, 0 = ei väistöä).
             double duck = puheSoi ? 1.0 - 0.85 * Kerroin(VaistoKerroin, huone ?? "") : 1.0;
+            viimeDuck = (float)duck;
+            // Kertaäänten ryhmät: sama väistö ja liuku (0,4 s) kuin silmukoilla, kerrottuna ryhmän mikserikertoimella.
+            foreach (var kv in kertaLahteet)
+                if (kv.Value != null)
+                    kv.Value.volume = Mathf.MoveTowards(kv.Value.volume, (float)duck * Kerroin(RyhmaKerroin, kv.Key), Time.unscaledDeltaTime / 0.4f);
             soivatTaustat.Clear();
             foreach (var e in ehdokkaat) if (sallitut.Contains((e.Tila, e.Aani))) soivatTaustat.Add((e.Tila, e.Aani, (float)(e.Taso * duck)));
             foreach (var e in ehdokkaat)
@@ -329,6 +359,7 @@ namespace Matkakirja.Natiivi
             silmukat.Clear();
             hiljaisuusAlkoi.Clear();
             if (kertaAaniLahde != null) kertaAaniLahde.Stop();
+            foreach (var l in kertaLahteet.Values) if (l != null) l.Stop();
             if (puheKuiva != null) puheKuiva.Stop();
             if (puheKaiku != null) puheKaiku.Stop();
             puheLoppuu = -1f;
@@ -362,7 +393,8 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(aaniId) || rakennus == null || !rakennus.Aanet.TryGetValue(aaniId, out var aani)) return;
             string url = sovitin.AaniUrl(aani.Tiedosto);
             if (url == null) return;
-            if (klipit.TryGetValue(url, out var klippi) && klippi != null) kertaAaniLahde.PlayOneShot(klippi, voimakkuus);
+            var lahde = kertaLahteet.TryGetValue(Ryhma(aaniId, false), out var rl) && rl != null ? rl : kertaAaniLahde;
+            if (klipit.TryGetValue(url, out var klippi) && klippi != null) lahde.PlayOneShot(klippi, voimakkuus);
             else VarmistaLadattu(url);
         }
 
@@ -589,7 +621,9 @@ namespace Matkakirja.Natiivi
         {
             int soivia = 0;
             foreach (var s in silmukat.Values) if (s != null) soivia++;
-            return $"poikki aanet: {(Paalla ? "päällä" : "pois")}, äänimaisema-kytkin {(Asetukset.Paalla(Kytkin.Aanimaisema) ? "päällä" : "POIS (silmukat hiljaa)")}, " +
+            var ryhmat = new List<string>();
+            foreach (var kv in kertaLahteet) if (kv.Value != null) ryhmat.Add($"{kv.Key} {kv.Value.volume:0.00}");
+            return $"poikki aanet: {(Paalla ? "päällä" : "pois")}, väistö {viimeDuck:0.00}, kertaäänet [{string.Join(", ", ryhmat)}], äänimaisema-kytkin {(Asetukset.Paalla(Kytkin.Aanimaisema) ? "päällä" : "POIS (silmukat hiljaa)")}, " +
                    $"kertoja-kytkin {(Asetukset.Paalla(Kytkin.Kertoja) ? "päällä" : "pois")}, klippejä ladattu {klipit.Count} (jonossa {klipitJonossa.Count}), " +
                    $"silmukoita {silmukat.Count} (kahvoja {soivia}: {string.Join(", ", SilmukkaIdt())}), puhuja {(puhuu ? "kyllä" : "ei")}, " +
                    $"limitteri {(DioraamaLimitteri.Instanssi != null && DioraamaLimitteri.Instanssi.enabled ? "päällä, pienin vahvistus " + DioraamaLimitteri.Instanssi.PieninVahvistusJaNollaa().ToString("0.000") : "pois")}";
