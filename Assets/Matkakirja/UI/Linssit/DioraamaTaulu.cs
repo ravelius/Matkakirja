@@ -599,7 +599,10 @@ namespace Matkakirja.Natiivi
         void PaivitaInfotaulu(PoikkileikkausLinssi linssi, Tila tila, Nakyma nakyma, double t)
         {
             for (int k = 0; k < laput.Count; k++) laput[k].style.display = DisplayStyle.None;
-            bool perilla = linssi.LeikkausHetkella(t).osuus >= 0.99;
+            // 4.10. (iPad v28: huoneesta toiseen siirryttäessä k1 alkoi kahdesti, myös BUILD 137): siirtymän alussa leikkaus on
+            // vielä EDELLISEN tilan (osuus ≈ 1) → perillä vain, kun leikkaus on tämän tilan.
+            var leikkaus = linssi.LeikkausHetkella(t);
+            bool perilla = leikkaus.tila == tila.Id && leikkaus.osuus >= 0.99;
             var info = tila.Infotaulu;
             lauta.style.display = perilla ? DisplayStyle.Flex : DisplayStyle.None;
             lauta.style.opacity = perilla ? 1f : 0f;
