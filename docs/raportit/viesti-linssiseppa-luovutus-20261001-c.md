@@ -3,6 +3,11 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 4.10. KLO 03.0x (MARCUS 135 + YKSI KELLO — MERGE-PYYNNÖSSÄ)
+- Päätoimittaja hyväksyi (tarkisti itse: kaikki leikkaukset alle 33 ms:n ruudun). Merge-pyyntö Natiivisepälle junaan 135:
+  linssiseppa/yksi-kello 7ab396b3 + linssiseppa/marcus-v15b 92d46875 (yhdistelmä = mitattu puu c365db85). LS2 katselmoi ennen VIE:tä;
+  huomautukset korjataan ennen TF:ää. Jatkohuomio (ei muutosta ilman omistajaa): kytkimen valo alkaa 170–210 ms äänen jälkeen (webin v14).
+
 ## TILA 4.10. KLO 02.5x (MARCUS 135 + YKSI KELLO — ODOTTAA LS2:N KUITTAUSTA)
 - Juurisyy: AjattelijaTahti.Kello interpoloi dspTime + reaaliaika (≤ 0,1 s) raa'an kellon edelle → leikkaukset 52–69 ms ennen ääntä
   (tallenne B). Merkki c093efe5 ei muuttanut ajoitusta (vain AudioSource lapsiolioon).
