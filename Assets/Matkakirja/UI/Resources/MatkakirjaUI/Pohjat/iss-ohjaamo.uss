@@ -491,3 +491,43 @@
     rotate: 6deg;
     translate: 3px 3px;
 }
+
+/* KUVANAHKA (Codexin grafiikka, Resources/IssOhjaamo/*.png): kuvallinen osa ilman piirrettyä kehystä ja taustaa; sauva ja vipu
+ * omina kuvaelementteinään tilan mukaan, piirretyt varret, napa, ura ja kahva piiloon. Ilman kuvia mikään näistä ei vaikuta. */
+.mk-issohjaamo--kuva {
+    border-width: 0;
+    background-color: initial;
+    -unity-background-scale-mode: stretch-to-fill;
+}
+
+.mk-issohjaamo__sauvakuva {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 96px;
+    height: 96px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-issohjaamo--kuvat > .mk-issohjaamo__varsi,
+.mk-issohjaamo--kuvat > .mk-issohjaamo__keski,
+.mk-issohjaamo--kuvat > .mk-issohjaamo__napa {
+    display: none;
+}
+
+.mk-issohjaamo__kaasukuva {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 56px;
+    height: 52px;
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.mk-issohjaamo--kuvat > .mk-issohjaamo__ura {
+    visibility: hidden;
+}
+
+.mk-issohjaamo--kuvanappi > .mk-ikoni {
+    display: none;
+}

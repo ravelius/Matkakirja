@@ -15,6 +15,7 @@
 // poistu) pois; vuodenaika, vuorokausi ja kohdelista tulevat LCD:n laajennukseen (vaihe 3).
 // Peitto puhelimella noin 15 % (paneeli 128 pt / 874 pt); mininäyttö 36 pt.
 using System;
+using System.Collections.Generic;
 using Matkakirja.Linssit.Astronautti;
 using Matkakirja.Linssit.Iss;
 using UnityEngine;
@@ -95,6 +96,9 @@ namespace Matkakirja.Natiivi
             kamera = Rakenne.Nappi(null, "mk-issohjaamo__kamera", Laukaise, paneeli, Kamera);
             kamera.tooltip = "Ota tarkka ISS-kuva";
             kamera.SetEnabled(false);
+            kamera.RegisterCallback<PointerDownEvent>(_ => PaivitaNahkaTila(true), TrickleDown.TrickleDown);
+            kamera.RegisterCallback<PointerUpEvent>(_ => PaivitaNahkaTila(false), TrickleDown.TrickleDown);
+            kamera.RegisterCallback<PointerLeaveEvent>(_ => PaivitaNahkaTila(false));
             kaasu = Rakenne.El("mk-issohjaamo__kaasu", paneeli);
             kaasu.tooltip = "Kaasu: ajan nopeus";
             ura = Rakenne.El("mk-issohjaamo__ura", kaasu, PickingMode.Ignore);
@@ -113,6 +117,7 @@ namespace Matkakirja.Natiivi
             ura.RegisterCallback<GeometryChangedEvent>(_ => AsetaKahva());
 
             RakennaLaajennus();
+            KaytaNahka();
 
             // --- mininäyttö --------------------------------------------------------------------------------------
             mini = Rakenne.El("mk-issohjaamo__mini", Juuri);
@@ -123,6 +128,78 @@ namespace Matkakirja.Natiivi
             mini.style.display = DisplayStyle.None;
             mini.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             mini.AddManipulator(new Clickable(() => AsetaMini(false)));
+        }
+
+        // --- KUVANAHKA (omistaja 4.10.2026 klo 16.4x: "ei näytä avaruusaluksen ohjaimilta"; Codexin grafiikka, Päätoimittaja) ---------
+        // Resources/IssOhjaamo/*.png (@3x, alfa) korvaavat piirretyt osat tiloineen; puuttuva kuva = osa piirretään kuten ennen.
+        //   pohja (9-slice 24 pt)            paneelin tausta          lcd-kehys, lcd-iso, mini-kehys (9-slice 10 pt)
+        //   sauva-ei|ylos|alas|vasen|oikea   joystick 96 × 96 pt      kaasu-1|10|100|1000   vipu 56 × 52 pt
+        //   kamera, kamera-painettu          Ø 48 pt                  rumpu-kolo            Ø 56 pt (numerot koodissa)
+        // A/B `astro kyyti ohjaamo nahka 0|1`.
+
+        public static bool NahkaKaytossa = true;
+        public const string NahkaKansio = "IssOhjaamo/";
+        public const float NahkaSkaala = 3f, PohjaSlicePt = 24f, KehysSlicePt = 10f;
+        static readonly Dictionary<string, Texture2D> nahkaKuvat = new Dictionary<string, Texture2D>();
+        VisualElement sauvaKuva, kaasuKuva;
+        bool nahka;
+
+        static Texture2D NahkaKuva(string nimi)
+        {
+            if (!NahkaKaytossa) return null;
+            if (!nahkaKuvat.TryGetValue(nimi, out var t)) nahkaKuvat[nimi] = t = Resources.Load<Texture2D>(NahkaKansio + nimi);
+            return t;
+        }
+
+        /// <summary>Kuva osalle: tausta kuvaksi ja piirretty ulkoasu pois (luokka mk-issohjaamo--kuva); 9-slice pt-reunoilla.</summary>
+        static bool Pukeudu(VisualElement e, string nimi, float slicePt = 0f)
+        {
+            var t = NahkaKuva(nimi);
+            e.EnableInClassList("mk-issohjaamo--kuva", t != null);
+            if (t == null) { e.style.backgroundImage = StyleKeyword.Null; return false; }
+            e.style.backgroundImage = new StyleBackground(t);
+            if (slicePt > 0f)
+            {
+                int px = Mathf.RoundToInt(slicePt * NahkaSkaala);
+                e.style.unitySliceLeft = px; e.style.unitySliceRight = px; e.style.unitySliceTop = px; e.style.unitySliceBottom = px;
+                e.style.unitySliceScale = 1f / NahkaSkaala;
+            }
+            return true;
+        }
+
+        /// <summary>Nahka osiin (kuvien puuttuessa ei mitään); kutsutaan rakennettaessa ja A/B-vaihdossa.</summary>
+        public void KaytaNahka()
+        {
+            nahkaKuvat.Clear();
+            nahka = Pukeudu(paneeli, "pohja", PohjaSlicePt);
+            Pukeudu(lcd, "lcd-kehys", KehysSlicePt);
+            Pukeudu(laajennus, "lcd-iso", KehysSlicePt);
+            Pukeudu(mini, "mini-kehys", KehysSlicePt);
+            Pukeudu(rumpu, "rumpu-kolo");
+            Pukeudu(kamera, "kamera");
+            kamera.EnableInClassList("mk-issohjaamo--kuvanappi", NahkaKuva("kamera") != null);
+            // Sauva ja vipu: kuvaelementti piirrettyjen osien päälle, tila vaihtaa kuvan.
+            sauvaKuva ??= Rakenne.El("mk-issohjaamo__sauvakuva", joystick, PickingMode.Ignore);
+            kaasuKuva ??= Rakenne.El("mk-issohjaamo__kaasukuva", kaasu, PickingMode.Ignore);
+            joystick.EnableInClassList("mk-issohjaamo--kuvat", NahkaKuva("sauva-ei") != null);
+            kaasu.EnableInClassList("mk-issohjaamo--kuvat", NahkaKuva("kaasu-1") != null);
+            PaivitaNahkaTila();
+            Debug.Log($"MATKAKIRJA linssit: ohjaamon nahka {(nahka ? "kuvat" : "piirretty")} (pohja {(NahkaKuva("pohja") != null)}, sauva {(NahkaKuva("sauva-ei") != null)}, kaasu {(NahkaKuva("kaasu-1") != null)}, kamera {(NahkaKuva("kamera") != null)})");
+        }
+
+        void PaivitaNahkaTila(bool painettu = false)
+        {
+            string sauva = suunta switch
+            {
+                JoystickSuunta.Ylos => "sauva-ylos", JoystickSuunta.Alas => "sauva-alas",
+                JoystickSuunta.Vasen => "sauva-vasen", JoystickSuunta.Oikea => "sauva-oikea", _ => "sauva-ei",
+            };
+            var st = NahkaKuva(sauva) ?? NahkaKuva("sauva-ei");
+            sauvaKuva.style.backgroundImage = st != null ? new StyleBackground(st) : StyleKeyword.Null;
+            var kt = NahkaKuva("kaasu-" + kaasuNyt);
+            kaasuKuva.style.backgroundImage = kt != null ? new StyleBackground(kt) : StyleKeyword.Null;
+            var kk = painettu ? NahkaKuva("kamera-painettu") ?? NahkaKuva("kamera") : NahkaKuva("kamera");
+            if (kk != null) kamera.style.backgroundImage = new StyleBackground(kk);
         }
 
         // --- LCD:n laajennus (vaihe 3) ----------------------------------------------------------------------------
@@ -268,6 +345,7 @@ namespace Matkakirja.Natiivi
                 s == JoystickSuunta.Ylos ? -kallistus : s == JoystickSuunta.Alas ? kallistus : 0);
             linssi()?.Joystick(s);
             Debug.Log("MATKAKIRJA linssit: ohjaamon joystick " + s);
+            if (nahka || sauvaKuva != null) PaivitaNahkaTila();
         }
 
         public JoystickSuunta Suunta => suunta;
@@ -298,6 +376,7 @@ namespace Matkakirja.Natiivi
             int suuntaY = kerroin > kaasuNyt ? -1 : 1;   // kaasu ylös: rumpu pyörii ylöspäin (uusi luku alhaalta)
             kaasuNyt = kerroin;
             AsetaKahva();
+            if (kaasuKuva != null) PaivitaNahkaTila();
             var vanha = rumpuANakyy ? rumpuA : rumpuB;
             var uusi = rumpuANakyy ? rumpuB : rumpuA;
             rumpuANakyy = !rumpuANakyy;
