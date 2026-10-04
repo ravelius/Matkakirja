@@ -147,9 +147,14 @@ namespace Matkakirja.Natiivi
             edellinen.style.visibility = seuraava.style.visibility = kuvat.Count > 1 ? Visibility.Visible : Visibility.Hidden;
             kuva.style.backgroundImage = StyleKeyword.None;
             string polku = k.Polku;
+            bool taysi = false;
+            // Pikkukuva heti (256 px, valmiina pinossa), täysi kuva sen tilalle purun jälkeen (simussa ~2 s tyhjä ikkuna, 4.10.).
+            if (!string.IsNullOrEmpty(k.Pikkukuva) && k.Pikkukuva != polku)
+                Lataa(k.Pikkukuva, t => { if (t != null && !taysi && kuvat.Count > 0 && kuvat[nyt].Polku == polku) kuva.style.backgroundImage = new StyleBackground(t); });
             Lataa(polku, t =>
             {
                 if (t == null || kuvat.Count == 0 || kuvat[nyt].Polku != polku) return;
+                taysi = true;
                 kuva.style.backgroundImage = new StyleBackground(t);
                 // Kuvan oma suhde (4:5 tai muu muoto): korkeus leveydestä.
                 kuva.style.height = Length.Percent(0);
