@@ -584,13 +584,16 @@ namespace Matkakirja.Natiivi
             var l = linssi();
             if (l == null || !l.Auki) return;
             var (k, m) = l.Sijainti();
+            // Kuvapaneelissa (omistajan valitsema konsepti v1, Päätoimittaja 4.10. klo 20): rivi 2 = korkeus ja nopeus
+            // ("419 km · 27 570 km/h"), molemmat rivit keskitettyinä; piirretyssä paneelissa rivi 2 = maa.
+            if (ankkurit != null) m = Lukemat();
             if (k != lcdKohde || m != lcdMaa)
             {
                 lcdKohde = k; lcdMaa = m;
                 kohde.text = string.IsNullOrEmpty(k) ? "…" : k;
                 maa.text = m ?? "";
                 maa.style.display = string.IsNullOrEmpty(m) ? DisplayStyle.None : DisplayStyle.Flex;
-                miniTeksti.text = string.IsNullOrEmpty(m) ? kohde.text : kohde.text + " · " + m;
+                miniTeksti.text = string.IsNullOrEmpty(m) || ankkurit != null ? kohde.text : kohde.text + " · " + m;
                 SovitaKohde();
             }
             if (Laajennettu) PaivitaLaajennus();
@@ -601,6 +604,13 @@ namespace Matkakirja.Natiivi
             bool kuvattavissa = l.Kyyti == KyydinTila.Ikkuna && !IssKameraKuva.Kaynnissa
                 && (!IssKameraKuva.VainKuvauspaikat || l.Kuvauspaikka() != null);
             if (kamera.enabledSelf != kuvattavissa) kamera.SetEnabled(kuvattavissa);
+        }
+
+        /// <summary>Radan lukemat LCD:n riville 2: korkeus ja nopeus ISS-kellosta (tuhaterotin tavallisena välilyöntinä).</summary>
+        static string Lukemat()
+        {
+            double km = IssNyt.KorkeusKm(IssNyt.Kello());
+            return KyydinTeksti.Luku(km).Replace('\u00a0', ' ') + " km · " + KyydinTeksti.Nopeus(IssNyt.NopeusKmh(km)).Replace('\u00a0', ' ') + " km/h";
         }
 
         /// <summary>

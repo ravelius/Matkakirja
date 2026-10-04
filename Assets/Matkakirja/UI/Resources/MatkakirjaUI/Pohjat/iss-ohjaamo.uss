@@ -565,3 +565,17 @@
     border-width: 0;
     background-color: initial;
 }
+
+/* Konseptin LCD: kaksi keskitettyä riviä (nimi, alla korkeus ja nopeus). */
+.mk-issohjaamo--asettelu > .mk-issohjaamo__lcd {
+    align-items: center;
+}
+
+.mk-issohjaamo--asettelu > .mk-issohjaamo__lcd > .mk-issohjaamo__kohde,
+.mk-issohjaamo--asettelu > .mk-issohjaamo__lcd > .mk-issohjaamo__maa {
+    -unity-text-align: middle-center;
+}
+
+.mk-issohjaamo--asettelu > .mk-issohjaamo__lcd > .mk-issohjaamo__maa {
+    letter-spacing: 2px; /* web 0.02em: konseptin lukemarivi lähes harventamatta (UITK em/100) */
+}
