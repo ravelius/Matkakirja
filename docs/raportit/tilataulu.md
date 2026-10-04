@@ -1,5 +1,7 @@
 # Tilataulu
 
+**Päivitetty 4.10. 12:29:** Päätoimittaja nollasi oman sessionsa (konteksti oli korkea), käynnistyi itse uudelleen ~1 min nollauksesta — ei vaatinut aloitusviestiä Postivahdilta. notify_when_idle ei tue tätä session-tyyppiä (Remote Control), pollattu manuaalisesti get_usage+ListAgents. Kävijälaskuri 37, levy 54–60 Gi (laskenut hieman aamupäivästä, wt/ 34–36, raja 40). Ei poikkeamia.
+
 **Päivitetty 4.10. 11:05 (aamupäiväkooste):** 08:14–11:05 täysin vakaa, levy 61–65 Gi, kävijälaskuri kasvoi 34→36 (08.31, ilmoitettu). Ei yhtään roolia waiting-tilassa. Ei poikkeamia.
 
 **Päivitetty 4.10. 08:14 (aamukooste):** Yö 04:59–08:14 täysin vakaa, levy 59–66 Gi (ei poikkeamia), kävijälaskuri kasvoi 32→34 (06.30, 07.24, molemmat ilmoitettu). 06.30 poltto-ajo alkoi suunnitellusti, levy hyvässä tilassa (65 Gi, raja 40). Ei yhtään roolia waiting-tilassa koko aamuyöllä. Ei muita poikkeamia.
