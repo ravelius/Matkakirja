@@ -214,6 +214,7 @@ namespace Matkakirja.Natiivi
             Auki = true;
             SyoteLukko.Esta(this);
             UiKerros.Hae().Juuri(Pulu.Kerros).style.visibility = Visibility.Hidden;
+            Lipputanko.Piilota(this, true); // Päätoimittaja 4.10.: kirkas lippu otsikon vieressä vei katseen
             Pehmenna(true);
             if (PalloKierto.Pysaytyskuva != null) AsetaPysaytys(PalloKierto.Pysaytyskuva);
             peli ??= new Mylly();
@@ -235,6 +236,7 @@ namespace Matkakirja.Natiivi
             Rakenne.Nayta(peliTaso, false, Tyylikirja.Kesto.Sulku);
             SyoteLukko.Vapauta(this);
             UiKerros.Hae().Juuri(Pulu.Kerros).style.visibility = StyleKeyword.Null;
+            Lipputanko.Piilota(this, false);
             Pehmenna(false);
             // Kerrokset ja äänet muistista sulkuanimaation jälkeen (Natiiviseppä: Resources.UnloadUnusedAssets suljettaessa).
             int k = kerta;
