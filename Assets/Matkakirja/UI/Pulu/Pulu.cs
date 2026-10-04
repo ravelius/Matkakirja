@@ -917,7 +917,9 @@ namespace Matkakirja.Natiivi
         /// Pelkkä linnun näkyvyys (astronautin kuvaselain, jossa minipulu korvaa ison): puhe jatkuu ja kuplat jäävät näkyviin
         /// kuvanäkymän himmennyksen taakse kuten webissä (Linssisepän huomio 29.9.: tervetulon C1-kupla iPadilla).
         /// </summary>
-        public void Peita(bool peitossa) => nayttamo.style.visibility = peitossa ? Visibility.Hidden : Visibility.Visible;
+        /// Näkyvä = StyleKeyword.Null eikä Visible (Siirtoseppä 5.10.2026): eksplisiittinen Visible ohitti kerrosjuuren Hidden-arvon,
+        /// ja Pelit-valikon sulkeutuminen Mylly-rivin napautuksen jälkeen nosti Pulun pelilaudan tilarivin päälle.
+        public void Peita(bool peitossa) => nayttamo.style.visibility = peitossa ? (StyleEnum<Visibility>)Visibility.Hidden : StyleKeyword.Null;
 
         /// <summary>Pulu näkyviin tai piiloon (lehti, linssin oma näkymä).</summary>
         public void Nayta(bool nakyy)

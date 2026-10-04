@@ -81,6 +81,8 @@ namespace Matkakirja.Natiivi
             set { lauta_ = Mathf.Clamp(value, 0, Laudat.Length - 1); PlayerPrefs.SetInt(LautaAvain, lauta_); PlayerPrefs.Save(); }
         }
         readonly Label tulosKapiteeli, tulosOtsikko, tulosApuri, tulosPalkkio, tulosKirjattu, tulosLaudat;
+        readonly VisualElement otsikko;
+        readonly Label otsikkoLauta;
         readonly VisualElement tulosPalkkioRivi;
 
         Mylly peli;
@@ -110,12 +112,17 @@ namespace Matkakirja.Natiivi
             peliTaso.style.display = DisplayStyle.None;
             lauta = new MyllyLauta(Napautus);
             peliTaso.Add(lauta);
-            // ✕ OHJAUSNAPPI-neliönä (omistaja 2.10.2026 klo 14.2x: kuvakenapit yhtenäisiä neliöitä, EI OVAALEJA; Päätoimittaja 3.10.):
-            // Tumma teema (Päätoimittaja 3.10. klo 20.2x: harmaa läpikuultava jäi vaalean kartan päällä heikoksi iPhonessa ja näytti
-            // iPadissa eri napilta), rasti-ikoni kuten GALLERIAssa.
-            var rasti = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje", Sulje, peliTaso, "tumma");
-            rasti.AddToClassList("mk-peli__sulje");
+            // OTSIKKO (omistaja 4.10. 22.3x TF 140: "Ota x nappi pois. Lisää pelille logo otsikko … Laudan nimi saisi olla myös
+            // esillä"; Päätoimittaja): aloitusruudun JULISTE-pohja laudan yläpuolelle — viiva / MYLLY / laudan nimi / viiva.
+            otsikko = Rakenne.El("mk-juliste mk-peli__otsikko", peliTaso, PickingMode.Ignore);
+            otsikko.style.position = Position.Absolute;
+            Aloitusnakyma.Kapea(otsikko);
+            Aloitusnakyma.Viiva(otsikko);
+            Aloitusnakyma.JulisteRivi(otsikko, "MYLLY", "mk-juliste__nimi");
+            otsikkoLauta = Aloitusnakyma.JulisteRivi(otsikko, "", "mk-juliste__osa");
+            Aloitusnakyma.Viiva(otsikko);
             paneeli = Rakenne.El("mk-peli__paneeli " + PaneelinTeema, peliTaso); // omistaja 2.10. 11.0x: PAPERI
+            // Paneelin "Mylly"-yläotsikko pois (otsikko kertoo saman); kapiteeli vain paikallisnimelle ja maalle.
             kapiteeli = Rakenne.Teksti("", "mk-kortti__kapiteeli", paneeli);
             Kirjasimet.Aseta(kapiteeli, Tyylikirja.Kirjain.Kapiteeli);
             vuoroRivi = Rakenne.Teksti("", "mk-peli__vuoro", paneeli);
@@ -127,6 +134,8 @@ namespace Matkakirja.Natiivi
             var napit = Rakenne.El("mk-kortti__napit", paneeli, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Nappi("Säännöt", "mk-nappi--toiminto", NaytaSaannot, napit), Kirjasin.Kone);
             Kirjasimet.Aseta(Rakenne.Nappi("Luovuta", "mk-nappi--toiminto", Luovuta, napit), Kirjasin.Kone);
+            // ✕ pois (omistaja 4.10.): pelistä poistutaan nappirivin Poistu-napilla, toiminta kuten ✕:llä ennen.
+            Kirjasimet.Aseta(Rakenne.Nappi("Poistu", "mk-nappi--toiminto", Sulje, napit), Kirjasin.Kone);
             peliTaso.RegisterCallback<GeometryChangedEvent>(_ => Asettele());
 
             // KORTIT (valinta, tulos, säännöt) himmennyksellä pelin päälle.
@@ -205,11 +214,13 @@ namespace Matkakirja.Natiivi
             Auki = true;
             SyoteLukko.Esta(this);
             UiKerros.Hae().Juuri(Pulu.Kerros).style.visibility = Visibility.Hidden;
+            Lipputanko.Piilota(this, true); // Päätoimittaja 4.10.: kirkas lippu otsikon vieressä vei katseen
             Pehmenna(true);
             if (PalloKierto.Pysaytyskuva != null) AsetaPysaytys(PalloKierto.Pysaytyskuva);
             peli ??= new Mylly();
             lauta.Lataa();
             RekisteroiAani(AaniAsetus); RekisteroiAani(AaniPoisto);
+            foreach (var n in new[] { AaniSiirto, AaniMylly, AaniVoitto, AaniHavio }) RekisteroiAani(n, LisaVahvistus);
             Paivita();
             peliTaso.style.display = DisplayStyle.Flex;
             Rakenne.Nayta(peliTaso, true, Tyylikirja.Kesto.Avaus);
@@ -226,6 +237,7 @@ namespace Matkakirja.Natiivi
             Rakenne.Nayta(peliTaso, false, Tyylikirja.Kesto.Sulku);
             SyoteLukko.Vapauta(this);
             UiKerros.Hae().Juuri(Pulu.Kerros).style.visibility = StyleKeyword.Null;
+            Lipputanko.Piilota(this, false);
             Pehmenna(false);
             // Kerrokset ja äänet muistista sulkuanimaation jälkeen (Natiiviseppä: Resources.UnloadUnusedAssets suljettaessa).
             int k = kerta;
@@ -235,6 +247,7 @@ namespace Matkakirja.Natiivi
                 lauta.Pura();
                 Aanet.RekisteroiTehoste(AaniAsetus, (AudioClip)null);
                 Aanet.RekisteroiTehoste(AaniPoisto, (AudioClip)null);
+                foreach (var n in new[] { AaniSiirto, AaniMylly, AaniVoitto, AaniHavio }) Aanet.RekisteroiTehoste(n, (AudioClip)null);
                 Resources.UnloadUnusedAssets();
             }).StartingIn(Tyylikirja.Kesto.Sulku + 50);
         }
@@ -244,24 +257,32 @@ namespace Matkakirja.Natiivi
         // v2 (Pelikoodari 3.10., ämpäri aanet/tehosteet/mylly-v2/, Kenney CC0): molemmat samalla tasolla (huiput −1,5 / −1,4 dBFS),
         // joten tehosteiden oletusvahvistus ilman omaa kerrointa; v1:n asetus oli ~10 dB hiljaisempi ja tarvitsi 0,5:n.
         const string AaniAsetus = "mylly-asetus", AaniPoisto = "mylly-poisto";
+        // Lisä-äänet (Pelikoodari 5.10., Freesound CC0, huiput −6 dBFS eli 4,5 dB vanhoja hiljaisempia → vahvistus × 1,68):
+        // liuku siirron alussa, lukitusisku heti kun mylly syntyy (ennen poistoa), voitto ja häviö lopputuloksessa.
+        const string AaniSiirto = "mylly-siirto", AaniMylly = "mylly-mylly", AaniVoitto = "mylly-voitto", AaniHavio = "mylly-havio";
+        const float LisaVahvistus = Vahvistus * 1.68f;
+        /// <summary>Päätoimittaja 5.10. (kaappaus bc863309): oletusvahvistuksella 0,35 nappulat soivat −23…−25 dBFS, puhelimen kaiuttimesta
+        /// heikosti. 1,6 (+13 dB; 1,1 mitattiin 5.10. 01.52: huiput −15,3…−17,2) → ≈ −12…−14 dBFS (tavoite −12…−15), AudioSource.volume 1,6 × 0,296 ≈ 0,47.</summary>
+        const float Vahvistus = 1.6f;
 
         static void SiirronAani(MyllySiirto s, float voima)
         {
             float lasku = s.Mista >= 0 ? Tyylikirja.Kesto.Liuku / 1000f * 0.9f : 0f;
+            if (s.Mista >= 0) Aanet.Tehoste(AaniSiirto, voima);
             bool oma = Aanet.Tehoste(AaniAsetus, voima, lasku);
             if (!oma) Aanet.Tehoste("click", voima);
             if (s.Poista >= 0 && !Aanet.Tehoste(AaniPoisto, voima, lasku + 0.12f)) Aanet.Tehoste("wrong", voima);
-            Debug.Log($"MATKAKIRJA mylly: ääni {(oma ? AaniAsetus : "click")}{(s.Poista >= 0 ? " + " + AaniPoisto : "")}");
+            Debug.Log($"MATKAKIRJA mylly: ääni {(s.Mista >= 0 ? AaniSiirto + " + " : "")}{(oma ? AaniAsetus : "click")}{(s.Poista >= 0 ? " + " + AaniPoisto : "")}");
         }
 
         /// <summary>Savuke 1113: naksua ei todennettu. Klippi ladataan muistiin heti (preloadAudioData + LoadAudioData), jotta
         /// ensimmäinen soitto leikkaa siivun eikä jää latauksen taakse; puuttuva klippi lokiin.</summary>
-        static void RekisteroiAani(string nimi)
+        static void RekisteroiAani(string nimi, float vahvistus = Vahvistus)
         {
             var c = Resources.Load<AudioClip>(MyllyLauta.KansioPolku + nimi);
             if (c == null) { Debug.LogWarning("MATKAKIRJA mylly: ääni puuttuu " + nimi); return; }
             if (c.loadState != AudioDataLoadState.Loaded) c.LoadAudioData();
-            Aanet.RekisteroiTehoste(nimi, c);
+            Aanet.RekisteroiTehoste(nimi, c, vahvistus, omaIsku: true);
         }
 
         /// <summary>TAUSTAN PEHMENNYS (omistaja 2.10. klo 11.0x, loki 11.01: "pehmennä kaikki elementit taustalla, myös
@@ -377,7 +398,8 @@ namespace Matkakirja.Natiivi
             {
                 // Mylly: näytetään siirto ja odotetaan poistettavan valintaa.
                 poistoKohde = piste; poistoLahde = lahde;
-                Aanet.Tehoste("correct", 0.7f);
+                if (!Aanet.Tehoste(AaniMylly)) Aanet.Tehoste("correct", 0.7f);
+                Debug.Log("MATKAKIRJA mylly: ääni " + AaniMylly);
                 Paivita();
                 return;
             }
@@ -414,6 +436,7 @@ namespace Matkakirja.Natiivi
                 var s = tehtava.Result;
                 peli.Tee(s);
                 lauta.Animoi(s, peli.Nappula(s.Mihin));
+                if (s.Poista >= 0) Aanet.Tehoste(AaniMylly, 0.8f, s.Mista >= 0 ? Tyylikirja.Kesto.Liuku / 1000f * 0.9f + 0.05f : 0.05f);
                 SiirronAani(s, 0.8f);
                 Paivita();
                 TarkistaLoppu();
@@ -447,6 +470,9 @@ namespace Matkakirja.Natiivi
             var ansaitut = new List<PeliLauta>();
             if (matka != null) { var k = Pelikehys.Kirjaa(matka, tulos, PelinTalous.Minipeli); palkkio = k.Palkkio; ansaitut = k.Laudat; }
             Debug.Log("MATKAKIRJA mylly: " + Pelikehys.Matkakirjarivi(tulos) + (palkkio > 0 ? $" +£{palkkio}" : ""));
+            // Voitto (myös kaveripelin voittaja) tai häviö botille; tasapeli ja luovutus ilman ääntä.
+            string loppuAani = voittaja < 0 ? null : vastustaja == Vastustaja.Kaveri || voittaja == 0 ? AaniVoitto : AaniHavio;
+            if (loppuAani != null) { Aanet.Tehoste(loppuAani, 1f, 0.35f); Debug.Log("MATKAKIRJA mylly: ääni " + loppuAani); }
             Paivita();
 
             bool kaveri = vastustaja == Vastustaja.Kaveri;
@@ -484,7 +510,9 @@ namespace Matkakirja.Natiivi
         {
             if (peli == null) return;
             bool kaveri = vastustaja == Vastustaja.Kaveri;
-            kapiteeli.text = "Mylly" + (PaikallinenNimi != null ? " · " + PaikallinenNimi : "") + (Maa != null ? " · " + Maa : "");
+            kapiteeli.text = (PaikallinenNimi ?? "") + (PaikallinenNimi != null && Maa != null ? " · " : "") + (Maa ?? "");
+            kapiteeli.style.display = string.IsNullOrEmpty(kapiteeli.text) ? DisplayStyle.None : DisplayStyle.Flex;
+            otsikkoLauta.text = Laudat[Lauta].Nimi.ToUpperInvariant();
             nimi0.text = kaveri ? "Vaalea" : "Sinä";
             nimi1.text = kaveri ? "Tumma" : Pelikehys.VastustajanNimi(vastustaja).Replace("botti (", "Botti · ").TrimEnd(')');
             lukema0.text = Lukema(0); lukema1.text = Lukema(1);
@@ -520,27 +548,40 @@ namespace Matkakirja.Natiivi
             float w = peliTaso.layout.width, h = peliTaso.layout.height;
             if (float.IsNaN(w) || w <= 0 || h <= 0) return;
             var t = UiKerros.Hae().Reunat(UiKerros.Pelidialogit);
-            float m = Tyylikirja.Vali.M, osuma = Tyylikirja.Nappi.Ohjaus; // ✕:n näkyvä korkeus
-            var rasti = peliTaso.Q(className: "mk-peli__sulje");
-            rasti.style.top = t.y + m; rasti.style.right = t.z + m;
+            float m = Tyylikirja.Vali.M;
+            // Otsikko laudan yläpuolelle; sen korkeus mitataan (ensimmäisellä kerralla arvio).
+            float oKork = float.IsNaN(otsikko.layout.height) || otsikko.layout.height <= 0 ? 104f : otsikko.layout.height;
+            // Yläpalkin alle (iPad 4.10.: turva-alueen reuna jäi palkin alle ja MYLLY-otsikko peittyi), kuten muut ylhäältä
+            // asemoituvat näkymät (Ylapalkki.Varaus: iPhonen saaririvi, iPadin palkki, 0 kun piilossa).
+            float ylin = t.y + Ylapalkki.Varaus + m;
             bool kapea = Pohja.Leveys(w - t.x - t.z) == Pohja.Luokka.Kapea && h > w;
             if (kapea)
             {
-                float koko = w - t.x - t.z - 2 * m;
-                float yla = t.y + m + osuma + Tyylikirja.Vali.S;
-                Sijoita(lauta, t.x + m, yla, koko, koko);
+                float yla = ylin + oKork;
+                float pKork = float.IsNaN(paneeli.layout.height) || paneeli.layout.height <= 0 ? 300f : paneeli.layout.height;
+                float koko = Mathf.Min(w - t.x - t.z - 2 * m, h - yla - t.w - pKork - 2 * m);
+                Sijoita(lauta, (w - koko) / 2f, yla, koko, koko);
+                SijoitaOtsikko(w / 2f, ylin, w - t.x - t.z);
                 paneeli.style.left = t.x + m; paneeli.style.right = t.z + m; paneeli.style.width = StyleKeyword.Auto;
                 paneeli.style.top = yla + koko + m; paneeli.style.bottom = StyleKeyword.Auto;
             }
             else
             {
                 float pw = Tyylikirja.Leveys.Paneeli;
-                float koko = Mathf.Min(h - t.y - t.w - 2 * m, w - t.x - t.z - pw - 3 * m);
+                float koko = Mathf.Min(h - ylin - t.w - m - oKork, w - t.x - t.z - pw - 3 * m);
                 float vasen = t.x + m + Mathf.Max(0, (w - t.x - t.z - pw - 3 * m - koko) / 2f);
-                Sijoita(lauta, vasen, t.y + m, koko, koko);
+                Sijoita(lauta, vasen, ylin + oKork, koko, koko);
+                SijoitaOtsikko(vasen + koko / 2f, ylin, koko);
                 paneeli.style.left = StyleKeyword.Auto; paneeli.style.right = t.z + m; paneeli.style.width = pw;
-                paneeli.style.top = t.y + m + osuma + Tyylikirja.Vali.S; paneeli.style.bottom = StyleKeyword.Auto;
+                paneeli.style.top = ylin + oKork; paneeli.style.bottom = StyleKeyword.Auto;
             }
+        }
+
+        /// <summary>Otsikko keskelle annettua kohtaa (leveys enintään laudan tai ruudun leveys).</summary>
+        void SijoitaOtsikko(float keskiX, float yla, float leveys)
+        {
+            otsikko.style.width = Mathf.Round(leveys); otsikko.style.maxWidth = StyleKeyword.None;
+            otsikko.style.left = Mathf.Round(keskiX - leveys / 2f); otsikko.style.top = Mathf.Round(yla);
         }
 
         static void Sijoita(VisualElement e, float x, float y, float w, float h)

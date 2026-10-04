@@ -384,23 +384,25 @@ namespace Matkakirja.Natiivi
         /// luodaan kerran PCM-klipeiksi (AudioClip.Create) ja rekisteröidään tähän. Ne soivat Tehoste(nimi)-väylällä samalla
         /// Masterilla, voimalla, mykistyksellä ja sanelutauolla kuin taulun tehosteet. Siivu on koko klippi (alusta).
         /// </summary>
-        public static void RekisteroiTehoste(string nimi, AudioClip klippi, float gain = 0.35f, bool tasavire = true) =>
-            RekisteroiTehoste(nimi, klippi == null ? null : new[] { klippi }, gain, tasavire);
+        public static void RekisteroiTehoste(string nimi, AudioClip klippi, float gain = 0.35f, bool tasavire = true, bool omaIsku = false) =>
+            RekisteroiTehoste(nimi, klippi == null ? null : new[] { klippi }, gain, tasavire, omaIsku);
 
         /// <summary>
         /// Muunnelmat (Linssiseppä: keksinnöllä 4, vuodella 8, webin ±3 %:n heiton sijaan): jokainen soitto arpoo yhden.
-        /// Tyhjä tai null lista poistaa rekisteröinnin.
+        /// Tyhjä tai null lista poistaa rekisteröinnin. omaIsku (Siirtoseppä 4.10.2026, Myllyn kaappaus): klipin isku on jo
+        /// alussa (Kenney-naksut, huippu 5 ms:n kohdalla), joten webin 10 ms:n nousuverho jätetään pois — se vaimensi
+        /// mylly-asetuksen huipun 9 dB taustan tasolle. Loppuverho säilyy.
         /// </summary>
-        public static void RekisteroiTehoste(string nimi, IReadOnlyList<AudioClip> klipit, float gain = 0.35f, bool tasavire = true)
+        public static void RekisteroiTehoste(string nimi, IReadOnlyList<AudioClip> klipit, float gain = 0.35f, bool tasavire = true, bool omaIsku = false)
         {
             if (string.IsNullOrEmpty(nimi)) return;
             var lista = klipit?.Where(k => k != null).ToArray();
             if (lista == null || lista.Length == 0) { omatTehosteet.Remove(nimi); return; }
-            omatTehosteet[nimi] = (lista, gain, tasavire);
+            omatTehosteet[nimi] = (lista, gain, tasavire, omaIsku);
         }
 
-        static readonly Dictionary<string, (AudioClip[] Klipit, float Gain, bool Tasavire)> omatTehosteet =
-            new Dictionary<string, (AudioClip[], float, bool)>();
+        static readonly Dictionary<string, (AudioClip[] Klipit, float Gain, bool Tasavire, bool OmaIsku)> omatTehosteet =
+            new Dictionary<string, (AudioClip[], float, bool, bool)>();
 
         public static bool Tehoste(string nimi, float voima = 1f, float viive = 0f)
         {
@@ -408,7 +410,7 @@ namespace Matkakirja.Natiivi
             {
                 if (Mykistetty || sanelussa) return true;
                 var klippi = oma.Klipit[UnityEngine.Random.Range(0, oma.Klipit.Length)];
-                SoitaSiivu(klippi, "oma:" + nimi, "alusta", klippi.length, oma.Gain * voima, null, oma.Tasavire, viive);
+                SoitaSiivu(klippi, "oma:" + nimi, "alusta", klippi.length, oma.Gain * voima, null, oma.Tasavire, viive, oma.OmaIsku);
                 return true;
             }
             TehosteRivi t = Tehostetaulu.Hae(nimi);
@@ -455,7 +457,7 @@ namespace Matkakirja.Natiivi
             });
         }
 
-        static void SoitaSiivu(AudioClip klippi, string url, string aloitus, float kesto, float gain, float? vire, bool tasavire, float viive)
+        static void SoitaSiivu(AudioClip klippi, string url, string aloitus, float kesto, float gain, float? vire, bool tasavire, float viive, bool omaIsku = false)
         {
             // Vireheitto elävöittää kolahduksia; nimetty vire soittaa matalampana/korkeampana.
             float nopeus = vire.HasValue ? Heitto(vire.Value, Tehostetaulu.NimettyVireHeitto) : tasavire ? 1f : Heitto(1f, Tehostetaulu.VireHeitto);
@@ -477,7 +479,7 @@ namespace Matkakirja.Natiivi
             // seinäkelloajassa ja sulkee äänen kohdassa kesto. Puskurista luetaan siis
             // min(kesto × nopeus, kesto + 0,03) ja käyrä venytetään nopeudella.
             float luku = Mathf.Min(kesto * nopeus, kesto + Tehostetaulu.SoittoLisaS);
-            var siivu = Leikkaa(klippi, alku, luku, gain, verho: true, nopeus: nopeus, kayraKesto: kesto);
+            var siivu = Leikkaa(klippi, alku, luku, gain, verho: true, nopeus: nopeus, kayraKesto: kesto, omaIsku: omaIsku);
             var s = Soitin(AaniKanava.Tehoste);
             s.loop = false;
             s.pitch = nopeus;
@@ -543,7 +545,7 @@ namespace Matkakirja.Natiivi
         /// Leikkaa klipistä [alku, alku + kesto] omaksi klipikseen. verho = webin gain-käyrä
         /// näytteisiin (normalisoituna: 1 = gain). null = klippiä ei voi lukea (varareitti).
         /// </summary>
-        static AudioClip Leikkaa(AudioClip c, float alku, float kesto, float gain, bool verho, float nopeus = 1f, float kayraKesto = -1f)
+        static AudioClip Leikkaa(AudioClip c, float alku, float kesto, float gain, bool verho, float nopeus = 1f, float kayraKesto = -1f, bool omaIsku = false)
         {
             try
             {
@@ -554,7 +556,7 @@ namespace Matkakirja.Natiivi
                 if (n <= 0 || kanavat <= 0) return null;
                 var data = new float[n * kanavat];
                 if (!c.GetData(data, a)) return null;
-                if (verho) Verho(data, kanavat, taajuus, gain, nopeus, kayraKesto > 0f ? kayraKesto : kesto);
+                if (verho) Verho(data, kanavat, taajuus, gain, nopeus, kayraKesto > 0f ? kayraKesto : kesto, omaIsku);
                 var siivu = AudioClip.Create("siivu " + c.name, n, kanavat, taajuus, false);
                 siivu.SetData(data, 0);
                 return siivu;
@@ -571,11 +573,11 @@ namespace Matkakirja.Natiivi
         /// gain → 0,0001 eksponentiaalisesti LaskuS:ssa ennen kohtaa kesto (lasku alkaa aikaisintaan
         /// 20 ms:n kohdalla). Näyte i soi hetkellä i / taajuus / nopeus. Normalisoitu: gain AudioSource.volumeen.
         /// </summary>
-        static void Verho(float[] data, int kanavat, int taajuus, float gain, float nopeus, float kesto)
+        static void Verho(float[] data, int kanavat, int taajuus, float gain, float nopeus, float kesto, bool omaIsku = false)
         {
             int n = data.Length / kanavat;
             float pohja = Mathf.Min(1f, Hiljaisuus / Mathf.Max(gain, Hiljaisuus));
-            float nousu = Tehostetaulu.NousuS;
+            float nousu = omaIsku ? 0f : Tehostetaulu.NousuS;
             float laskuAlku = Mathf.Max(Tehostetaulu.PitoMinS, kesto - Tehostetaulu.LaskuS);
             float lasku = Mathf.Max(1e-4f, kesto - laskuAlku);
             float r = Mathf.Max(0.01f, nopeus);
