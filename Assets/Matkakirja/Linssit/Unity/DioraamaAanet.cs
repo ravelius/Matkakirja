@@ -418,7 +418,11 @@ namespace Matkakirja.Natiivi
             string url = sovitin.AaniUrl(aani.Tiedosto);
             if (url == null) return;
             var lahde = kertaLahteet.TryGetValue(Ryhma(aaniId, false), out var rl) && rl != null ? rl : kertaAaniLahde;
-            if (klipit.TryGetValue(url, out var klippi) && klippi != null) lahde.PlayOneShot(klippi, voimakkuus);
+            if (klipit.TryGetValue(url, out var klippi) && klippi != null)
+            {
+                lahde.PlayOneShot(klippi, voimakkuus);
+                Debug.Log($"MATKAKIRJA linssit: poikki: kertaääni {aaniId} ({Ryhma(aaniId, false)}) {voimakkuus:0.00} × {lahde.volume:0.00}");
+            }
             else VarmistaLadattu(url);
         }
 
