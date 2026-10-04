@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2601, teksti: 'Kysy Pululta -kysymykset: ISS-ohjaamon uudistus (#3929)' },
   { v: 2600, teksti: 'Ajattelijat (#3918)' },
   { v: 2599, teksti: 'Tekijätiedot: ajattelijoiden oma musiikki (#3917)' },
   { v: 2598, teksti: 'Ajattelijat (#3919)' },
