@@ -10491,3 +10491,23 @@ Omistaja 4.10.2026 klo 22.3x–22.5x TF 140:n Myllystä sanatarkasti: "Ota x nap
 ## OMISTAJA: VAAKATILAN VALIKOT — LINSSIVALIKKO PIDEMMÄLLE, ISS-VALIKKO RIKKI (4.10.2026 klo 22.50)
 
 Omistaja 4.10.2026 klo 22.4x iPhone vaakana sanatarkasti: "Vaaka tilassa pitäisi näkyä valikko pidemmälle" (linssivalikko loppuu ~70 %:iin ruudun korkeudesta, kaappaus docs/raportit/kaappaukset/omistaja-20261004/vaaka-linssivalikko-lyhyt-2248.jpg) ja "Vaaka tilassa valikko menee rikki ja yrittää rakentua kokoajan uudestaan" (Pulun ISS-valikko: kaksi ✕-nappia, Kysy Pululta ISS-ohjaamo-rivin päällä, lista katkeaa; kaappaus vaaka-iss-valikko-rikki-2248.jpg). Linja: vaakana valikot ulottuvat turva-alueen alareunaan samoilla pohjilla; ISS-valikon asettelusilmukka korjataan kiireellisenä. Natiivi-UI, juna 142 (ISS-valikko junaan 141, jos mahtuu).
+
+## OMISTAJA: EI TURHIA ✕-NAPPEJA — ISS-TAULUN ✕ POIS (RAAMATTUUN) (5.10.2026 klo 00.14)
+
+Omistaja 5.10.2026 klo 00.1x sanatarkasti: "Ota valikon x pois koska sen voi sulkea klikkaamalla muualta. Raamattuun voi kirjata että pyritään aina välttämään turhia x nappeja jos saman voi tehdä jollain toisella tavalla esim. Klikkaamalla tyhjää kohtaa". Kumoaa Päätoimittajan klo 00.0x päätöksen jättää ISS:n Minne katsotaan? -taulun oma ✕ (perusteena pysty ja web). Raamattuun (Ydinajatus, UI): EI TURHIA ✕-NAPPEJA — ✕ vain, kun sulkemiseen ei ole muuta luontevaa tapaa. Natiivi-UI poistaa taulun ✕:n (pysty ja vaaka, juna 142) ja tekee inventaarion natiivin kaikista ✕-napeista (docs/raportit/x-napit-inventaario-20261005.md) → Päätoimittaja päättää loput.
+
+## OMISTAJA: LINSSIVALIKKO — KESKENERÄISET VÄKÄSEN TAAKSE, LINNA VALMIISIIN NIMELLÄ MUURIEN SISÄLLÄ (5.10.2026 klo 00.14)
+
+Omistaja 4.10.2026 klo 23.0x sanatarkasti: "Siirrä ihmis 2 linssi keskeneräisiin ja tuo linna valmiisiin. Kokoa keskeneräiset väkäsen taakse piiloon valikossa jonka saa kuitenkin klikkaamalla auki. Generoi kuvake ja luo parempi nimi linnalle". Päätoimittaja: linnan linssin nimi Muurien sisällä (Id poikkileikkaus säilyy), lyhyt teksti "Olavinlinna vuonna 1475 aukileikattuna: kurkista saleihin ja tapaa linnan väki."; Ihmisen matka II keskeneräisiin; KESKENERÄISET-väliotsikko väkäsellä, oletuksena kiinni. Kuvake Codexilta samaan akvarellisarjaan (assets/varusteet/varuste-poikkileikkaus.jpg; posti 83fcd0b4). Natiivi-UI a4ce9696 kuitattu junaan 142 (samassa vaakavalikon pidennys).
+
+## OMISTAJA: ISS AUTO PYSYY PÄÄLLÄ, ZOOMI SÄILYY (5.10.2026 klo 00.14)
+
+Omistaja 4.10.2026 klo 22.5x sanatarkasti: "Iss auto tila ei saa mennä pois päältä kuin vasta jos pelaaja klikkaa sen itse pois. Jos kuvan suurentaa kokonäytön kokoiseksi, seuraava kuva tulee aueta auto tilassa samalla zoom tasolla". Linja: AUTO sammuu vain AUTO-napista (ja lapun Pysäytä); zoomaus, panorointi, kuvan vaihto ja koko näyttö eivät sammuta sitä; seuraava kuva avautuu samalla zoomilla. Natiivi-UI (natiivi-ui/iss-taulu-vaaka), juna 142.
+
+## OMISTAJA: RADIO — KAIKKI KANAVAT ASTEIKOLLE, PALLO SUORAAN YLHÄÄLTÄ (5.10.2026 klo 00.14)
+
+Omistaja 4.10.2026 klo 22.5x sanatarkasti: "Radiokanavia pitäisi pystyä selaamaan vieritys palkista paremmin. Nyt ei voi vierittää kuin muutamaan lähimpään kanavaan. Pitäisi olla kaikki kanavat selattavissa. Näytä maapallo suoraan ylhäältä älä kulmasta" (kaappaus docs/raportit/kaappaukset/omistaja-20261004/radio-asteikko-kulma-2258.jpg). Linssiseppä 1 linssiseppa/radio-kaikki e9fe4b9e (kuitattu junaan 142): kaikki 182 kanavaa yhtenä nauhana maantieteellisessä reittijärjestyksessä (lähin naapuri + 2-opt), jatkuva veto ja heitto, kamera 0°.
+
+## OMISTAJA: LUKIJAÄÄNET — ELEVEN-ÄÄNET, HETI-LATAUS, SELAUS, OHINAPAUTUS (5.10.2026 klo 00.14)
+
+Omistaja 4.10.2026 klo 23.0x–23.1x sanatarkasti: "Iso osa elevenin lukijoista ei toimi. Ja voisiko peli ladata heti uuden äänen kun ääntä vaihtaa ja saisiko tuohon vielä selaus napit jotta ääniä olisi helpompi selata" ja "Jos klikkaan juttua sulkea se sulkeakseni äänen valinta ikkunan koko nostoikkuna sulkeutuu ja palaa kartalle" (kaappaus eleven-aanet-eivat-toimi-2307.jpg). Pelikoodari: kaikki 24 ääntä toimivat ElevenLabsissa ja workerissa → vika sovelluksessa (diagnoosi simussa); äänen vaihto lataa heti saman kappaleen; äänilista säätöpaneeliin kappalerivien pohjilla ja ‹ › kelausnappipohjilla (ei uutta pohjaa, ei ponnahduskerrosta); ohinapautus sulkee vain paneelin. Juna 142. Lisäksi Gateway-alkuperäiskuvien purku sivurajalla (≤ 2732 px, ImageIO) ennen #3966:n mergeä. Pelikoodarin yölepo peruttu: omistaja kysyi "Miksi lepää?" (kiintiö ei ole peruste).
