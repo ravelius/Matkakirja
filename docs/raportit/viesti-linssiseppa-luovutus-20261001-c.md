@@ -3,6 +3,18 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 5.10. KLO 02.1x (LINNAN KUVA VAIHE 3 TEHTY, ODOTTAA VUOROA; KIILTO 11–13)
+- Lupakortin rivit (Cinemachine 3.1.7 12,2 Mt + Splines 2.9.1; Steam Audio Unity 4.8.1 132,2 Mt Apache-2.0, iOS-simulaattoriviipale
+  epävarma) lähetetty Päätoimittajalle; mitään ei ladattu.
+- Siivottu: wt/linssiseppa-erikoisnostot-malli (jäänne, vain poistoja), proto-linssiseppa-iss-hionta ja -yokartta (puhtaat; haarat tallessa).
+- Siirtosepän linna-unity-suunnitelma vaihe 3: proto linssiseppa/linna-kuva e8712e9c (BUILD 141 5a0b9add): DioraamaViimeistely.cs
+  (tilt-shift ScriptableRenderPass ajonaikaisesti vain dioraaman kameralle, renderer-asset ennallaan; sävy Neutral/ACES profiilin
+  Tonemapping), Resources/Varjostimet/TiltShift.shader, Resources/DioraamaSavyAces.asset (ACES-variantti säilyy). Kosketuskohdat
+  sovittu Siirtosepän kanssa: Kiinnita Volumen luonnin jälkeen, Irrota Tuhoassa, komennot dof/hehku-kohtaan (poikki tiltshift
+  0|1|tila|aseta…, poikki savy neutral|aces). Oletus ennallaan. Ajo: ketju-linna-kuva.sh (portti sim-nyt-linna) → A/B-stillit
+  lokit/linssiseppa-linna-kuva-20261005 → kuvapari Päätoimittajalle → merge-pyyntö (Siirtoseppä rebasettaa Cinemachinen päälle).
+- Kiilto: varaus 5.10. 11–13 (ketju-kiilto-aamu.sh, portti sim-nyt-ki).
+
 ## TILA 4.10. KLO 23.5x (RADIO KAIKKI KANAVAT MERGE-PYYNNÖSSÄ, JUNA 142; KIILTO AAMULLA)
 - Omistaja TF 140 (22.5x): kaikki kanavat asteikolle, pallo suoraan ylhäältä. Proto linssiseppa/radio-kaikki e9fe4b9e (BUILD 140
   9663df99): 45aff510 RadioLinssi (NakymanAsteikko = koko reitti 182 asemaa, KartanKallistus 0), 59c44233 + e9fe4b9e RadioNakyma
