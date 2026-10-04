@@ -1,3 +1,27 @@
+# >>> TILANNE 4.10.2026 KLO 16.4x (Päätoimittajan oma nollaus ~66 %) — LUE ENSIN <<<
+
+**TF 137:** VIE annettu 15.5x (BUILD 137 = master 80b7dcf0, juna 68c3ee8e, käännös b94f1c7d; savuke 1137 PASS; muutosloki #3943 mergetty). Julkaisija ilmoittaa, kun testaajilla — tarkista ja kerro omistajalle. Sisältö: jatkohiljaisuus, ISS Pulun valikko + chat vihreillä kehyksillä, Cupola mustan ISS-ruudun kautta (ei harmaata), Olavinlinna kuori ensin (ei palikoita).
+
+**JUNA 138 (Natiiviseppä kokoaa; kuittaa jokainen osa ennen käännöstä):**
+- natiivi-ui/iss-ohjaamo-paneeli **9e8dd843** KUITATTU (joystick, kaasu, LCD+laajennus, mininäyttö, sijaintilista, oma kuva isoon ikkunaan + kuvapino; kuvateksti kahdella rivillä). LISÄKORJAUS kesken: kaasurummun lukema selkeällä fontilla ("1x" näkyi DSEG7:llä "¦x") + osuma-alat ≥ 44 pt → Natiivi-UI:n stilli ennen merge-pyyntöä.
+- LS2 linssiseppa2/iss-ohjaamo: maailman ISS-kamera (Karttasepän indeksit ämpärissä, ~22 600 ruutua), LCD-maahaku korjattu (b98abaee; sijaintilistan automaattitarkistuksen luvut tulossa), Cupola-mittari korjattu (pallon kamera). KESKEN: COG-kuvat pehmeitä + violetti usva → linja: kohde = näkymän keskipiste, kamera siirretään virtuaalisesti radalla zeniittikulmaan ≤ 55°, usva neutraaliksi sinivalkoiseksi (NASA-viistokuvat); esimerkkikuvat (Sahara, tropiikki, Uluru/Etelä, P-Amerikka, kuvauspaikka) Päätoimittajalle ennen TF:ää. Oman kuvan violetti sävy samassa.
+- pelikoodari/natiivi-aanikaappaus db3437f7 KUITATTU (kehittäjätila; humina natiivi-WAViin).
+- natiiviseppa/kauppa-kuvat-plist 5e9d2c7f (NSPhotoLibraryAddUsageDescription; StoreKit linkitetty, ostot kytkimellä pois).
+- siirtoseppa/kuori-esilataus **6bdf9fc3**: nimiruutu OLAVINLINNA · Savonlinna · 1475 kunnes KAIKKI täydellä tarkkuudella; "Linna latautuu…" 4 s, "Vielä pieni hetki…" 9 s; virheviesti 60 s; esilataus koko paketti (myös ympäristö) kun pelaaja Suomessa tai linnan merkki ruudulla, SAMA KAIKILLA VERKOILLA. iPad: esiladattu 4,6 s, ilman 78,7 s. Optimointi 2,5–3 s junaan 138 jos ehtii, muuten 139.
+- Linnanrakentaja: ASTC 6×6 -koe (iPad 460 → ~315 Mt, peili 72baa9339c82ca7e, ei osoitinvaihtoa) odottaa Siirtosepän iPad-kuvapareja → jos silmällä erottamaton, omistajalle; JPEG-poisto vaatii #3944 + Siirtosepän natiivipolun.
+
+**OLAVINLINNA:** osoitin 8b8a623bbbe3ee93 (ääni C + liekit) tuotannossa. Apulaisen repliikit #3942 (paketti dcd122307aa43189) odottaa Siirtosepän napautustodennusta → Julkaisija merge + osoitin (Päätoimittajan lupa). OPASTEET (omistajan kysymys): esittelyn jälkeen EI mitään opasteita; Siirtoseppä tekee uuden arkin (nimilaput oman huoneen kohdalle + kertaluonteinen Pulun kortti "Napauta huonetta, niin astut sisään. Huoneet ja mylly löytyvät myös oikean yläkulman valikosta. Löydätkö voudin kadonneen sinetin?") → OMISTAJALLE ennen kytkentää. Viivapiirros: Codex (omistaja patistaa).
+
+**ISS-KAMERA (omistajan linjat tänään):** koko maailma (#3936); 0,50 €/kuva (#3939) mutta OSTOT MYÖHEMMIN (#3941: kytkin pois, kaikille rajattomasti, ei IAP-tuotetta); Pöllön koodi vain TF/kehitys (Apple 3.1.1); kuva Cupolan isoon ikkunaan → pino vasempaan alakulmaan → myöhemmin Matkalaukun Julisteet (GALLERIA-pohja) omana eränä (#3940); valmis kuva automaattisesti Kuviin.
+
+**RAAMATTU (#3938, mainissa):** LATAUS ON SAMA KAIKILLA VERKOILLA — Wi-Fi/mobiili-eroa EI koskaan, ei ehdotuksia omistajalle (omistaja toisti 4.10.; myös CLAUDE.md).
+
+**ILMOITA/NÄYTÄ OMISTAJALLE:** (1) "Sano kun linnan esittely on valmis" (juna 138 + opasteet); (2) opastekuvat ennen kytkentää; (3) 6×6-kuvaparit jos erottamaton; (4) ISS-ohjaamon kuva lähetetty 16.3x — korjaukset (kaasun fontti, violetti sävy) kerrotaan valmistuttua; (5) TF 137 testaajilla.
+**ODOTTAA OMISTAJAA:** ajattelijoiden korjauslista (KAIKKI ajattelijatyö tauolla), viivapiirros Codexilta.
+
+**LEVY:** kulutus 10–25 Gi/h iltapäivällä (.app-kopiot ~0,44 Gt/käännös, raakatallenteet). Siivous: `/Users/Shared/Claude/Matkakirja-fable/scratchpad/siivoa-lokit.sh` (kuiva-ajo; `--aja` poistaa: 3 uusinta .app/rooli jää, juna-* 2, alle 60 min ei; raaka-.mov > 150 Mt > 2 h jos mp4 vieressä; ajattelijatallenteet suojattu). Mergetyt worktreet uusi-worktree.sh --poista (PR MERGED + esi-isä + puhdas). Roolisimuja EI eraseta (Laitetestaajan laitteet). Postivahti hälyttää < 45 Gi.
+**OPIT:** oma Raamattu/loki-PR junassa → ei suoria loki-mergejä (Julkaisijalle); kuvan kohde ei saa vaihtua kameran geometriakorjauksessa; esilataus/lataus ei koskaan verkkotyypin mukaan.
+
 # >>> TILANNE 4.10.2026 KLO 12.2x (Päätoimittajan oma nollaus 81 %:ssa) — LUE ENSIN <<<
 
 **Testaajilla:** TF 1.1 (136) 11.11 (master b824e2d1): Jatka matkaa ilman saapumisluentaa + linssi katkaisee kaiken audion. TF 135 06.07 (ajattelijakorjaukset, minipallo, zoomi 8×).

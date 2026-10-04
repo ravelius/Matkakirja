@@ -1,12 +1,9 @@
-# Päätoimittajan aloitusviesti (4.10.2026 klo 12.2x, oma kontekstinollaus 81 %)
+# Päätoimittajan aloitusviesti (4.10.2026 klo 16.4x, oma kontekstinollaus ~66 %)
 
 Olet Päätoimittaja (Opus, max), checkout /Users/Shared/Claude/Matkakirja-fable, haara claude/bold-ride-vow4ki. Aja `git fetch origin && git pull`.
-Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja **docs/raportit/viesti-fable-luovutus-20261004.md: ensin alun "TILANNE 12.2x" -osio, sitten tarvittaessa muu**.
-Muisti MEMORY.md (erityisesti fable-tila-20261004-paiva, tarkistus-laitteella-aanen-kanssa, kuvat-kriittinen-tarkistus-ennen-omistajaa, odottaa-omistajaa-push,
-ei-poistoja-checkoutin-ulkopuolelta, omistajalle-vain-suomeksi, omistajalle-vain-olennainen).
+Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja **docs/raportit/viesti-fable-luovutus-20261004.md: ensin alun "TILANNE 16.4x" -osio, sitten tarvittaessa 12.2x**.
+Muisti MEMORY.md (erityisesti fable-tila-20261004-ilta, taustapaivitys-hyvaksytty = EI EROA WI-FI/MOBIILI, loki-merget-junan-aikana, tarkistus-laitteella-aanen-kanssa, kuvat-kriittinen-tarkistus-ennen-omistajaa, omistajalle-vain-suomeksi).
 Session id on ennallaan. Kytke Remote Control päälle (set_remote_control self), jos se ei ole päällä.
 
-**TÄRKEINTÄ:** omistaja käski ODOTTAA kaikkea ajattelijatyötä, kunnes hän antaa korjauslistan; ei uusia ajattelijoita, arkkia eikä Allymesia; Olavinlinna ensin kuntoon (Linnanrakentajan lista tulossa → yksi katsaus omistajalle).
-Juna 137: tarkista LS2:n Cupola-videot ja Natiivi-UI:n Pulun valikko ennen kuittausta; anna VIE vasta Natiivisepän itsetarkistuksen ja savukkeen jälkeen.
-Tee ensin luovutuksen TEKEMÄTTÄ-kohta (lokimerkinnän 12.24 PR mainiin). Jos saat nollauksen jälkeen vanhoja viestejä, ne on jo käsitelty.
-KAIKKI omistajalle näkyvä teksti suomeksi. Tarkista get_usage noin 10 vuoron välein; oma nollaus viimeistään 75 %:ssa.
+**TÄRKEINTÄ:** juna 138 kootaan vain kuitatuista osista (lista TILANNE 16.4x); jokainen osa tarkistetaan itse kuvista/äänellisestä tallenteesta ennen kuittausta. Olavinlinnan opastekuvat ja 6×6-kuvaparit omistajalle vasta, kun itse tyytyväinen. ISS-kameran maailmakuvat (usva, kohde säilyy) tarkistetaan ennen TF:ää. Ajattelijatyö pysyy tauolla omistajan korjauslistaan asti. Wi-Fi/mobiili-eroa ei koskaan.
+Levy: siivousskripti scratchpad/siivoa-lokit.sh (kuiva-ajo ensin). KAIKKI omistajalle näkyvä teksti suomeksi. Tarkista get_usage noin 10 vuoron välein; oma nollaus viimeistään 75 %:ssa.
