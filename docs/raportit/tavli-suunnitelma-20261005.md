@@ -1,4 +1,4 @@
-# Tavli — suunnitelma (Siirtoseppä 5.10.2026, luonnos Päätoimittajan hyväksyttäväksi)
+# Tavli — suunnitelma (Siirtoseppä 5.10.2026, HYVÄKSYTTY Päätoimittaja 5.10. klo 01.1x)
 
 Omistaja valitsi 4.–5.10. klo 00.5x kortilla seuraavaksi minipeliksi Tavlin (pelikatalogi GRC-1, kortti 7).
 Rakennetaan Myllyn kehykseen (Peli/Pelit, UI/Pelit). Koodi aloitetaan vasta, kun Päätoimittaja on hyväksynyt
