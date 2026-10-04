@@ -249,6 +249,21 @@ namespace Matkakirja.Linssit.Astronautti
         // ---- ISS:n kyyti (omistajan kysymys 27.9.2026 klo 23.5x, suositus docs/raportit/iss-kyyti-suositus-20260928.md) ----
 
         readonly Iss.IssKyyti kyyti = new Iss.IssKyyti();
+        /// <summary>Cupolan alus todellisen radan kierrettynä kopiona (kohteen valinta, Iss.AlusSiirto); nollautuu kyydistä poistuttaessa.</summary>
+        readonly Iss.AlusSiirto siirto = new Iss.AlusSiirto();
+
+        /// <summary>
+        /// CUPOLA AVAUTUU SUORAAN (omistaja 4.10.2026 klo 11.5x: "kun cupola näkymä avautuu, kartta ei saa lentää sinne ... cupolan
+        /// näkymä voisi avautua vaikka mustan näkymän kautta jossa lukee ISS ja lentokorkeus ja sitten feidaa oikeaan näkymään 2sek
+        /// jälkeen"; lisäksi nopeus sekä päivämäärä ja kellonaika): kaukonäkymästä Cupolaan kamera asettuu heti oikeaan asentoon ja
+        /// UI näyttää mustan ruudun (ISS, lentokorkeus, nopeus, linssin aika) 2 s ja häivyttää sen. Tapahtuma kertoo arvot.
+        /// </summary>
+        public static event Action<CupolanAvaus> CupolaAvautuu;
+        public readonly struct CupolanAvaus
+        {
+            public readonly double KorkeusKm, NopeusKmh; public readonly DateTime Utc;
+            public CupolanAvaus(double korkeusKm, double nopeusKmh, DateTime utc) { KorkeusKm = korkeusKm; NopeusKmh = nopeusKmh; Utc = utc; }
+        }
         double kentta0 = double.NaN, tietoAika = -1;
         Iss.KyydinTila ilmoitettu = Iss.KyydinTila.Kauko;
         bool kuvataan, ilmoitettuLive = true;
@@ -268,6 +283,46 @@ namespace Matkakirja.Linssit.Astronautti
         Iss.IssHetki Hetki(DateTime utc, LatLon paikka) =>
             new Iss.IssHetki(paikka, Iss.IssNyt.KorkeusKm(utc) * 1000, Iss.IssNyt.Suuntima(utc));
 
+        /// <summary>Kyydin viimeisin kamera-asento (katsepiste, kallistus, suuntima) testeille; Siirretty = alus pois todelliselta radalta.</summary>
+        public Kuvakulma KyydinAsento => kyyti.Viimeisin;
+        public bool AlusSiirretty => siirto.Siirretty;
+
+        /// <summary>Cupolan aluksen hetki: todellinen rata kierrettynä (Iss.AlusSiirto); suunta aluksen omasta liikkeestä.</summary>
+        Iss.IssHetki AlusHetki(DateTime utc, double nyt)
+        {
+            var p = Iss.IssNyt.Paikka(utc);
+            if (!siirto.Siirretty) return Hetki(utc, p);
+            var a = siirto.Paikka(Iss.IssNyt.Paikka(utc.AddSeconds(-1)), nyt);
+            var b = siirto.Paikka(Iss.IssNyt.Paikka(utc.AddSeconds(1)), nyt);
+            return new Iss.IssHetki(siirto.Paikka(p, nyt), Iss.IssNyt.KorkeusKm(utc) * 1000, Iss.IssKuvakulma.Suunta(a.Lat, a.Lon, b.Lat, b.Lon));
+        }
+
+        /// <summary>
+        /// KOHTEEN VALINTA CUPOLASSA (omistaja 4.10. klo 11.5x, korvaa ylilennon kelauksen ja kohteen ylle kääntymisen): alus
+        /// siirtyy pehmeästi (Iss.AlusSiirto.SiirtoS) niin, että nykyinen katse (kulma alas ja ilmansuunta) osuu kohteeseen
+        /// näkymän keskellä; korkeus on radan. Siirron loppuhetki lasketaan kellon nopeudella, jotta kohde on keskellä perillä.
+        /// </summary>
+        public bool SiirraAlus(double lat, double lon)
+        {
+            if (!Auki || !kyyti.Kyydissa || kavely.Kaynnissa) return false;
+            if (kyyti.Tila == Iss.KyydinTila.Kohde) NapautaIss();
+            if (kyyti.Tila != Iss.KyydinTila.Ikkuna) return false;
+            var utc = Iss.IssNyt.Kello();
+            double nyt = Nyt / 1000;
+            var h = AlusHetki(utc, nyt);
+            double alas = kyyti.Katse.AlasNyt(Iss.IssKuvakulma.IkkunanKatse(h.KorkeusM));
+            var katse = Iss.IssKuvakulma.Ikkuna(h, alas, kyyti.Katse.Suunta);
+            double kaari = Iss.IssKuvakulma.Kaari(h.Paikka.Lat, h.Paikka.Lon, katse.Lat, katse.Lon);
+            double kesto = y.VahennettyLiike ? 0 : Iss.AlusSiirto.SiirtoS;
+            var loppu = utc.AddSeconds(kesto * Iss.IssNyt.Simu.Nopeus());
+            var uusi = Iss.AlusSiirto.Kohteeseen(lat, lon, kaari, kyyti.Katse.Suunta, katse.Suuntima, h.Suuntima);
+            siirto.Aseta(Iss.IssNyt.Paikka(loppu), Iss.IssNyt.Suuntima(loppu), uusi.Paikka, uusi.Suunta, nyt, kesto);
+            lento = null;
+            tietoAika = -1;
+            sijaintiAika = -1;
+            return true;
+        }
+
         /// <summary>
         /// ISS:ää napautettiin (AstronauttiKerros, 44 pt): kauko → Cupola (kohteen yltä Cupolaan); seuranta vain kehittäjälle
         /// (Iss.IssKyyti.SeurantaKaytossa).
@@ -281,9 +336,18 @@ namespace Matkakirja.Linssit.Astronautti
             LopetaSeuranta();
             var utc = Iss.IssNyt.Kello();
             if (!kyyti.Kyydissa) kentta0 = y.Nakokulma;
-            kyyti.Napauta(Nykyinen(), Hetki(utc, Iss.IssNyt.Paikka(utc)), y.Nakokulma, Nyt / 1000, y.VahennettyLiike);
-            if (kyyti.Tila == Iss.KyydinTila.Ikkuna) PaivanvaloonJosYo(utc);
+            bool kaukaa = !kyyti.Kyydissa;
+            kyyti.Napauta(Nykyinen(), AlusHetki(utc, Nyt / 1000), y.Nakokulma, Nyt / 1000, y.VahennettyLiike);
+            // Suora avaus: päivänvaloon kelataan heti mustan ruudun aikana (ei näkyvää kelausta häivytyksen jälkeen).
+            bool suoraan = kaukaa && kyyti.Tila == Iss.KyydinTila.Ikkuna && Iss.IssKyyti.SuoraAvaus;
+            if (kyyti.Tila == Iss.KyydinTila.Ikkuna) PaivanvaloonJosYo(utc, suoraan);
             tietoAika = -1;
+            if (suoraan)
+            {
+                var hetki = Iss.IssNyt.Kello();
+                double km = Iss.IssNyt.KorkeusKm(hetki);
+                CupolaAvautuu?.Invoke(new CupolanAvaus(km, Iss.IssNyt.NopeusKmh(km), hetki));
+            }
         }
 
         /// <summary>
@@ -308,13 +372,13 @@ namespace Matkakirja.Linssit.Astronautti
         public bool PaivanvaloSiirto { get; private set; }
         int paivaKelaus;
 
-        void PaivanvaloonJosYo(DateTime utc)
+        void PaivanvaloonJosYo(DateTime utc, bool heti = false)
         {
             var simu = Iss.IssNyt.Simu;
             if (!CupolaPaivanvaloon || !simu.Live || lento != null || !Iss.Avaruuskavely.Yopuolella(utc)) return;
             var hetki = Iss.Avaruuskavely.SeuraavaPaivanvalo(Iss.IssNyt.Paikka, utc);
             if (!hetki.HasValue) return;
-            paivaKelaus = simu.KelaaHetkeen(hetki.Value, vahennetty: y.VahennettyLiike);
+            paivaKelaus = simu.KelaaHetkeen(hetki.Value, vahennetty: heti || y.VahennettyLiike);
             PaivanvaloSiirto = true;
         }
 
@@ -336,6 +400,7 @@ namespace Matkakirja.Linssit.Astronautti
             kavely.Lopeta(Nyt / 1000);
             // Web poistu: ylilento unohtuu ja aika kelautuu todelliseen hetkeen paluulennon ajassa (ei hyppyä).
             lento = null;
+            siirto.Nollaa();
             Iss.IssNyt.Simu.PalaaLive(Iss.IssKyyti.KaukoonS, y.VahennettyLiike);
             kyyti.Poistu(avaus * Iss.IssKyyti.PaluuKorkeus, Nyt / 1000, y.VahennettyLiike);
             tietoAika = -1;
@@ -365,7 +430,7 @@ namespace Matkakirja.Linssit.Astronautti
             if (kavely.Kaynnissa) kavely.Paivita(nyt, utc);
             double perus = double.IsNaN(kentta0) ? y.Nakokulma : kentta0;
             kyyti.Katse.Vahennetty = y.VahennettyLiike;
-            if (!kyyti.Paivita(nyt, Hetki(utc, paikka), perus, out var asento, out double kentta, out bool paluuValmis)) return;
+            if (!kyyti.Paivita(nyt, AlusHetki(utc, nyt), perus, out var asento, out double kentta, out bool paluuValmis)) return;
             // NASA-vertailu (fotorealismi 30.9.): kamera astronauttikuvan paikkaan, suuntaan ja objektiiviin (astro kyyti vertailu).
             if (Vertailu.HasValue) { asento = Vertailu.Value; kentta = VertailuKentta; }
             y.Kuvaa(asento);
@@ -399,6 +464,7 @@ namespace Matkakirja.Linssit.Astronautti
         {
             kavely.Lopeta(Nyt / 1000);
             kyyti.Nollaa();
+            siirto.Nollaa();
             if (kuvataan)
             {
                 kuvataan = false;
@@ -532,7 +598,7 @@ namespace Matkakirja.Linssit.Astronautti
             double t = y?.Aika ?? 0;
             if (sijaintiAika >= 0 && t - sijaintiAika < 1.0 && !string.IsNullOrEmpty(sijainti.Kohde)) return sijainti;
             sijaintiAika = t;
-            var p = Iss.IssNyt.Paikka(Iss.IssNyt.Kello());
+            var p = siirto.Paikka(Iss.IssNyt.Paikka(Iss.IssNyt.Kello()), t);
             sijainti = Iss.IssSijainti.Hae(Iss.IssSijainti.Nykyinen, p.Lat, p.Lon);
             return sijainti;
         }
@@ -622,6 +688,9 @@ namespace Matkakirja.Linssit.Astronautti
         Iss.Ylilento? Lenna(Havaintokohde k, bool valoisa, double? hakuLat = null)
         {
             if (k == null || !kyyti.Kyydissa || kyyti.Tila == Iss.KyydinTila.Kauko || kavely.Kaynnissa) return null;
+            // Cupolassa (omistaja 4.10.): alus siirtyy kohteeseen katse säilyttäen, ei ylilennon kelausta eikä kääntöä alas.
+            // Ylilento kelauksineen jää kehittäjän seurantatilaan.
+            if (!Iss.IssKyyti.SeurantaKaytossa) { SiirraAlus(k.Lat, k.Lon); return null; }
             var yl = Iss.Ylilennot.Seuraava(hakuLat ?? k.Lat, k.Lon, Iss.IssNyt.Kello(), valoisa: valoisa);
             tietoAika = -1;
             if (yl == null) { lento = new Lento { Kohde = k }; return null; }
