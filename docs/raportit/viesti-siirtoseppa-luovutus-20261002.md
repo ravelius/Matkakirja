@@ -128,3 +128,19 @@ Natiivisepälle, viestit Päätoimittajalle ≤ 8 riviä, osoitin vain omistajan
 - OPASTEKOE (ei junaan): haara siirtoseppa/opasteet-koe bbaab893 (worktree wt/proto-siirtoseppa-opaste): laput säteittäin nastaryhmästä,
   viivat eivät risteä. Edellinen still (lokit/siirtoseppa-opasteet3/) ei kelvannut (viivat ristissä). AVOIN: käännös kuori-esilataus+
   bbaab893, ajo-opasteet.sh (ABSOLUUTTISET polut L/APP — simctl --stdout ei toimi suhteellisella), arkki Päätoimittajalle vasta kun kelpaa.
+
+### 4.10. klo 19.0x — JUNA 139/140, NIMILAPUT, YLEISKAMERA
+- JUNA 139 (Päätoimittaja kuittasi): siirtoseppa/kuori-esilataus 7ae37251 = 3f7895ca (k1 kerran huoneesta toiseen, etsintävaihe ei
+  välähdä, tilat 9/9, päivä-JPEG-vara) + nimiruudun tilavaraus (otsikko ei nouse). Todennettu simulla (58afbc05): kertojan 4 jaksoa
+  äänitallenteessa BUILD 138:lla ja 3f7895ca:lla (lokit/siirtoseppa-kertoja-*), nimiruutu y 1182 px 2/5,5/10,5 s.
+  Laituri-"vika" oli skriptin 300 s aikaraja + hidas verkko (lataus 270 s) → skriptit odottavat nyt saapumisen ilman rajaa.
+- JUNA 140 (merkitty, odottaa Päätoimittajan kuittausta): siirtoseppa/sisaltovarasto 34967f35 — välimuisti sha256:n mukaan
+  (dioraama/<r>/sisalto/<sha>, manifestit/<hash>.json), yksi istunnon osoitin (LueOsoitin 30 min, testiosoitin "poikki osoitin"),
+  erotuslataus, kertasiirto vanhasta muodosta, siivous saapumisen/esilatauksen jälkeen, "poikki valimuisti". iPad: siirto 106 (459 Mt),
+  osoitinvaihdon jälkeen 9/78 verkosta, 16,6 s, siivous 715 → 601 Mt (lokit/siirtoseppa-ipad-varasto/).
+- NIMILAPUT (omistaja 18.4x: vain laput, aina yleisnäkymässä esittelyn jälkeen, ei opastekorttia): haara siirtoseppa/nimilaput
+  (worktree wt/proto-siirtoseppa-opaste) 436e0b76 tuotantokoodi + 1b0321d7 kehittäjän "poikki yleiskamera vaaka|pysty az kork et [fov]"
+  ja "poikki yleiskamera sovitus 0|1". AVOIN: simu ~19.30 ajo-simuvuoro-1930.sh (pysty, vaaka, iPad-simu D5900D45: esittely + jälkeen +
+  kulmakoe) → stillit Päätoimittajalle → hyväksytyt arvot dataan (olavinlinna.js yleiskamera) Linnanrakentajan pakettiin; osoitin vain
+  Päätoimittajan luvalla. Huom: natiivi sovittaa yleisetäisyyden pohjan rajoihin (SovitaKuvasuhteeseen), pystyssä linna täyttää jo leveyden.
+- Osoitin klo 18.13 → v28 44beb2ba (Julkaisija, Päätoimittajan lupa).
