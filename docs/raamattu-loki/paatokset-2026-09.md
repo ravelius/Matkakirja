@@ -10379,3 +10379,7 @@ Omistaja 4.10.2026 klo 11.3x sanatarkasti: "ISS ohjaamon napit täytyy tehdä uu
 ## TARKENNUS: JATKA MATKAA HILJAA MYÖS PULUN OMISTA REPLIIKEISTÄ (omistaja) (4.10.2026 klo 11.41)
 
 Omistaja 4.10.2026 klo 11.4x TF 136:sta sanatarkasti: "pulun luenta lähtee vieläkin käyntiin itsestään noin kymmenen sekunnin tai enemmän tauon jälkeen kun pelaaja on klikannut aloitusnäytöllä jatka matkaa, vaikka näin ei pitäisi tapahtua." (kuva: Sarajevo, Pulun puhekupla). Tarkennus 09.3x:n linjaan: Jatka matkaa -napin jälkeen mikään automaattinen puhe (luento, Pulun repliikit, traileri, viivästetyt ajastimet) ei ala ennen pelaajan ensimmäistä omaa toimintoa (heitto, Pulun napautus, luennan käynnistys, linssi, kohteen avaus); sen jälkeen Pulu toimii normaalisti. Natiivi-UI, juna 137.
+
+## OMISTAJA: AVARUUSKÄVELY POIS VALIKOSTA, KAMERANAPPI VAIN TARKKA ISS-KUVA (4.10.2026 klo 11.44)
+
+Omistaja 4.10.2026 klo 11.4x kortilla: 1) Avaruuskävely pois Pulun valikosta (suositus; koodi jää talteen, rivi voidaan palauttaa). 2) ISS-ohjaamon kameranappi tekee ensimmäisestä versiosta alkaen VAIN tarkan ISS-kuvan (pelaajan kuva S2-kuvauspaikoista, ks. 30.9.–1.10. linja: kuvauspaikkalista R2:ssa, laitteella ilmakehä/valo/kameran tuntu, 1 ilmainen kuva ja sitten kuvapaketit) — ei näkymän tallennusta. Nappi toimii vain kuvauspaikoilla; odottaa kuvauspaikka-aineistoa (Karttaseppä, pilotti Euroopassa) ja omistajan hinnoittelupäätöstä. Linssiseppä 2 johtaa.
