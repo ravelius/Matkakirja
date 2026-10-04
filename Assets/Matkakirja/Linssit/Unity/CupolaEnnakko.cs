@@ -25,6 +25,8 @@ namespace Matkakirja.Natiivi
         public const double EsihakuSiirtymaAst = 1;
         /// <summary>Kaukonäkymäjakson verkkotavujen yläraja, jonka jälkeen uusia esihakuja ei aloiteta (Mt).</summary>
         public const int EsihakuKattoMt = 30;
+        /// <summary>Esihaku kattaa myös asennon näin monen sekunnin päästä (ISS ~1° / 15 s; uusi haku 1°:n välein).</summary>
+        public const double EteenS = 20;
 
         AstronauttiKerros kerros;
         float seuraava;
@@ -65,7 +67,8 @@ namespace Matkakirja.Natiivi
             seuraava = Time.unscaledTime + 1f;
             var l = kerros != null ? kerros.Linssi : null;
             var a = default(Matkakirja.Linssit.Kuvakulma);
-            bool kauko = l != null && l.CupolanEnnakko(out a);
+            var eteen = default(Matkakirja.Linssit.Kuvakulma);
+            bool kauko = l != null && l.CupolanEnnakko(out a) && l.CupolanEnnakko(out eteen, EteenS);
             if (kauko && !jaksossa)
             {
                 jaksossa = true; jaksoAlku = Time.unscaledTime; kehyksia = hitaita = 0; summaMs = 0; pisinMs = 0;
@@ -73,7 +76,7 @@ namespace Matkakirja.Natiivi
             }
             else if (!kauko && jaksossa) { jaksossa = false; Kirjaa(); }
             if (!Kaytossa || !kauko) { Peru(); Tila = Kaytossa ? "odottaa" : "pois"; return; }
-            Esihae(a);
+            Esihae(a, eteen);
             if (esihaku != null && !esihakuKirjattu && esihaku.Yhteensa > 0 && esihaku.Valmis + esihaku.Epaonnistui >= esihaku.Yhteensa)
             {
                 esihakuKirjattu = true;
@@ -82,7 +85,7 @@ namespace Matkakirja.Natiivi
             Tila = $"asento {a}, esihaku {(esihaku != null ? $"{esihaku.Valmis}/{esihaku.Yhteensa}" : "-")}";
         }
 
-        void Esihae(in Matkakirja.Linssit.Kuvakulma a)
+        void Esihae(in Matkakirja.Linssit.Kuvakulma a, in Matkakirja.Linssit.Kuvakulma eteen)
         {
             if (haettu is Matkakirja.Linssit.Kuvakulma h && Matkakirja.Linssit.Laattalista.Etaisyys(h.Lat, h.Lon, a.Lat, a.Lon) < EsihakuSiirtymaAst) return;
             if (Laattapalvelin.VerkostaTavuja - AlkuTavut > EsihakuKattoMt * 1048576L) return;
@@ -93,8 +96,12 @@ namespace Matkakirja.Natiivi
             esihakuAlku = Time.unscaledTime; esihakuKirjattu = false;
             double kentta = IssKuvakulma.IkkunanKentta, suhde = (double)Screen.width / Mathf.Max(1, Screen.height);
             // Maasto ja rasterit omilla kalibroinneillaan (CupolanLaatat: maasto tarkentuu Cesiumissa tasoa pidemmälle).
+            // Nykyinen asento ja asento EteenS myöhemmin (seuraava esihaku vasta 1°:n päästä, joten välissä avattu Cupola löytää
+            // laattansa valmiina).
             var maasto = CupolanLaatat.Maastolaatat(a, kentta, suhde, Screen.height);
+            maasto.UnionWith(CupolanLaatat.Maastolaatat(eteen, kentta, suhde, Screen.height));
             var rasterinMaasto = CupolanLaatat.Maastolaatat(a, kentta, suhde, Screen.height, CupolanLaatat.RasteriKerroin, CupolanLaatat.RasteriVara);
+            rasterinMaasto.UnionWith(CupolanLaatat.Maastolaatat(eteen, kentta, suhde, Screen.height, CupolanLaatat.RasteriKerroin, CupolanLaatat.RasteriVara));
             // Karkeat ensin (mustan aikana Cesium pyytää ensin S2:n juuret ja BMNG:n z2–z4, iPad 8023e34c): avain = Web Mercator
             // -taso, maastolle L + 2 (rasteri seuraa maastolaattaa noin kaksi tasoa tarkempana).
             var kaikki = new List<(int z, string polku)>();

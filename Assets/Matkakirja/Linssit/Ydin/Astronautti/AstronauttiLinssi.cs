@@ -385,15 +385,18 @@ namespace Matkakirja.Linssit.Astronautti
         /// kelattu hetki). Unity-puoli pitää piirtämättömän ennakkokameran tässä, jotta Cesium lataa näkymän laatat jo ennen
         /// napautusta. false = ei kaukonäkymässä (kyydissä oma kamera lataa, avauksen aikana ei vielä).
         /// </summary>
-        public bool CupolanEnnakko(out Kuvakulma asento)
+        /// <param name="sekuntiaEteen">Asento näin monta (reaali)sekuntia myöhemmin radalla (Natiiviseppä juna 140: alus oli siirtynyt
+        /// 1° ja uusi esihaku vasta alkanut, kun Cupola avattiin → 4,0 s / 86 %); 0 = nyt.</param>
+        public bool CupolanEnnakko(out Kuvakulma asento, double sekuntiaEteen = 0)
         {
             asento = default;
-            if (!Auki || Vaihe == AvauksenVaihe.Musta || kyyti.Kyydissa || !Iss.IssKyyti.SuoraAvaus) return false;
-            var utc = Iss.IssNyt.Kello();
+            // Myös linssin avauksen mustan aikana (Natiiviseppä ab-b139: Cupola 2,4 s linssin avauksesta, esihaku 107/892).
+            if (!Auki || kyyti.Kyydissa || !Iss.IssKyyti.SuoraAvaus) return false;
             var simu = Iss.IssNyt.Simu;
+            var utc = Iss.IssNyt.Kello().AddSeconds(sekuntiaEteen * simu.Nopeus());
             if (CupolaPaivanvaloon && simu.Live && lento == null && Iss.Avaruuskavely.Yopuolella(utc))
                 utc = Iss.Avaruuskavely.SeuraavaPaivanvalo(Iss.IssNyt.Paikka, utc) ?? utc;
-            asento = Iss.IssKuvakulma.Ikkuna(AlusHetki(utc, Nyt / 1000));
+            asento = Iss.IssKuvakulma.Ikkuna(AlusHetki(utc, Nyt / 1000 + sekuntiaEteen));
             return true;
         }
 
