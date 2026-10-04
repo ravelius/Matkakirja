@@ -347,6 +347,13 @@ namespace Matkakirja.Natiivi
                     if (ok) yokuori?.Pilvet(Pilvikuori.JaettuKuva);
                 });
             }
+            // Kaukonäkymään palatessa oma pilvikuva takaisin (Natiiviseppä juna 140: Cupolan jälkeen pallon pilvet läikikkäitä ja
+            // päivän GIBS-kuvan rataväleistä pilvettömiä suorakulmioita Afrikassa ja Brasiliassa). Välimuistista, ei uutta latausta.
+            if (tila == KyydinTila.Kauko && paivanPilvetHaettu && pilvet != null)
+            {
+                paivanPilvetHaettu = false;
+                pilvet.VaihdaKuva(pilvienOsoite ?? Pilvikuori.OletusOsoite, ok => { if (ok) paivanPilvet = false; });
+            }
             // Kyydissä oikeat tähdet ja Kuu (KyydinTaivas); satunnainen kenttä pois, kun oikeat ovat ladattu (muuten himmeänä 0,3).
             if (tila != KyydinTila.Kauko && kyydinTaivas == null) kyydinTaivas = KyydinTaivas.Luo(georeferenssi, kamera);
             kyydinTaivas?.Nayta(tila != KyydinTila.Kauko);
