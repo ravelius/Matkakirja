@@ -226,6 +226,8 @@ namespace Matkakirja
 
         /// <summary>Tilastot testaukseen: osumat paketti / offline / välimuisti / verkko, virheet, varakuvat.</summary>
         public static int Paketista, Offline, Valimuistista, Verkosta, Virheita, Varakuvia;
+        /// <summary>Verkosta haettujen laattojen tavut yhteensä (Cupolan ennakon datamäärä, Päätoimittaja 4.10.2026).</summary>
+        public static long VerkostaTavuja;
 
         /// <summary>
         /// Buildin laattapaketti (null = ei paketissa, rikki tai kehittäjälipulla pois). Avataan kerran; laatat luetaan
@@ -1303,6 +1305,7 @@ namespace Matkakirja
             if (tila == 200 && data != null)
             {
                 Interlocked.Increment(ref Verkosta);
+                Interlocked.Add(ref VerkostaTavuja, data.Length);
                 if (maasto)
                 {
                     Interlocked.Increment(ref MaastoVerkosta);

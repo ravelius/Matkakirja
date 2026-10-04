@@ -35,14 +35,40 @@ namespace Matkakirja.Natiivi
             return e;
         }
 
+        /// <summary>Verkosta haetut tavut (Laattapalvelin.VerkostaTavuja) ennakkojakson alussa; −1 = ei jaksoa vielä.</summary>
+        public static long AlkuTavut { get; private set; } = -1;
+
+        // Jakso = kaukonäkymä, jossa ennakko olisi päällä (myös A/B 0: sama mittaus vertailuun). Kehysajat linssin liikkeen
+        // hidastumisen mittaamiseen (Päätoimittajan ehto 1: linssin avaus tai liike ei hidastu).
+        bool jaksossa;
+        float jaksoAlku, pisinMs;
+        int kehyksia, hitaita;
+        double summaMs;
+
         void Update()
         {
+            if (jaksossa)
+            {
+                float ms = Time.unscaledDeltaTime * 1000f;
+                kehyksia++; summaMs += ms; pisinMs = Mathf.Max(pisinMs, ms); if (ms > 50f) hitaita++;
+            }
             if (Time.unscaledTime < seuraava) return;
             seuraava = Time.unscaledTime + 1f;
             var l = kerros != null ? kerros.Linssi : null;
-            if (!Kaytossa || l == null || paa == null || georeferenssi == null || !l.CupolanEnnakko(out var a)) { Irrota(); Tila = Kaytossa ? "odottaa" : "pois"; return; }
+            var a = default(Matkakirja.Linssit.Kuvakulma);
+            bool kauko = l != null && paa != null && georeferenssi != null && l.CupolanEnnakko(out a);
+            if (kauko && !jaksossa) { jaksossa = true; jaksoAlku = Time.unscaledTime; kehyksia = hitaita = 0; summaMs = 0; pisinMs = 0; AlkuTavut = Laattapalvelin.VerkostaTavuja; }
+            else if (!kauko && jaksossa) { jaksossa = false; Kirjaa(); }
+            if (!Kaytossa || !kauko) { Irrota(); Tila = Kaytossa ? "odottaa" : "pois"; return; }
             Asentoon(a);
             Tila = $"asento {a}";
+        }
+
+        void Kirjaa()
+        {
+            double mt = (Laattapalvelin.VerkostaTavuja - AlkuTavut) / 1048576.0;
+            Debug.Log($"MATKAKIRJA linssit: cupolan ennakko {(Kaytossa ? "päällä" : "pois")}: jakso {Time.unscaledTime - jaksoAlku:0.0} s, " +
+                $"kehyksiä {kehyksia}, keskim. {(kehyksia > 0 ? summaMs / kehyksia : 0):0.0} ms, pisin {pisinMs:0} ms, yli 50 ms {hitaita}, verkosta {mt:0.0} Mt");
         }
 
         void Asentoon(in Matkakirja.Linssit.Kuvakulma a)
