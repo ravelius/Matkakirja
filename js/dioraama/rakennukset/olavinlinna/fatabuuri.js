@@ -189,6 +189,7 @@ const soihduLiekki = (a, y) => lok(pol(a, 5.455, 0), a + 180, 0, y + 0.47, 0.262
 
 export const TILA = {
   id: 'fatabuuri',
+  lappujarjestys: 4,
   nimi: 'Fatabuuri',
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.

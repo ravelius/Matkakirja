@@ -256,6 +256,7 @@ const KRUUNU_LIEKIT = [0, 1, 2, 3, 4].map((i) => {
 
 export const TILA = {
   id: 'keskushalli',
+  lappujarjestys: 5,
   nimi: 'Keskushalli',
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
