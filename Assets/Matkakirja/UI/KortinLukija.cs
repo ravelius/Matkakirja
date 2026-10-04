@@ -515,28 +515,21 @@ namespace Matkakirja.Natiivi
         {
             if (Striimiaani.MoottoriSallittu)
             {
-                var moottoriRivi = Rakenne.El("mk-lukija-saadot__rivi", saadot, PickingMode.Ignore);
-                Kirjasimet.Aseta(Rakenne.Teksti("Moottori", "mk-lukija-saadot__nimi", moottoriRivi), Kirjasin.Luku);
-                var moottorit = new List<string>();
-                foreach (var m in Striimiaani.Moottorit) moottorit.Add(m.Nimi);
-                int mi = Striimiaani.Moottori == Striimiaani.Eleven ? 1 : 0;
-                var moottori = new DropdownField(moottorit, mi);
-                moottori.AddToClassList("mk-lukija-saadot__valinta");
-                Kirjasimet.Aseta(moottori, Kirjasin.Luku);
-                moottoriRivi.Add(moottori);
-                VisualElement aaniRivi = null;
-                moottori.RegisterValueChangedCallback(_ =>
+                var nimet = new List<string>();
+                foreach (var m in Striimiaani.Moottorit) nimet.Add(m.Nimi);
+                VisualElement aanet = null;
+                ValintaRivi(saadot, "Moottori", nimet, Striimiaani.Moottori == Striimiaani.Eleven ? 1 : 0, "moottori", k =>
                 {
-                    Striimiaani.Moottori = Striimiaani.Moottorit[moottori.index].Tunnus;
+                    Striimiaani.Moottori = Striimiaani.Moottorit[k].Tunnus;
                     Debug.Log("MATKAKIRJA lukija: moottori " + Striimiaani.Moottori);
                     // Äänilista vaihtuu moottorin mukaan samaan kohtaan.
-                    int paikka = aaniRivi != null ? saadot.IndexOf(aaniRivi) : -1;
-                    aaniRivi?.RemoveFromHierarchy();
-                    aaniRivi = AaniRivi(saadot);
-                    if (paikka >= 0) { aaniRivi.RemoveFromHierarchy(); saadot.Insert(paikka, aaniRivi); }
+                    int paikka = aanet != null ? saadot.IndexOf(aanet) : -1;
+                    aanet?.RemoveFromHierarchy();
+                    aanet = AaniRivi(saadot);
+                    if (paikka >= 0) { aanet.RemoveFromHierarchy(); saadot.Insert(paikka, aanet); }
                     AaniVaihtui();
                 });
-                aaniRivi = AaniRivi(saadot);
+                aanet = AaniRivi(saadot);
                 return;
             }
             AaniRivi(saadot);
@@ -559,8 +552,6 @@ namespace Matkakirja.Natiivi
         /// <summary>Äänirivi valitun moottorin äänistä (ElevenLabs vain sallitulla laitteella).</summary>
         static VisualElement AaniRivi(VisualElement saadot)
         {
-            var aaniRivi = Rakenne.El("mk-lukija-saadot__rivi", saadot, PickingMode.Ignore);
-            Kirjasimet.Aseta(Rakenne.Teksti("Ääni", "mk-lukija-saadot__nimi", aaniRivi), Kirjasin.Luku);
             bool eleven = Striimiaani.MoottoriSallittu && Striimiaani.Moottori == Striimiaani.Eleven;
             var lista = eleven ? Striimiaani.ElevenAanet : Striimiaani.Pelinimet;
             // Pelinimet: näytössä nimi, pyynnössä tunnus (web AANTEN_PELINIMET). Oletus ensin "Aino (oletus)".
@@ -569,28 +560,104 @@ namespace Matkakirja.Natiivi
             string valittu = eleven ? Striimiaani.ElevenAani : Striimiaani.Valittu;
             int indeksi = 0;
             for (int i = 1; i < lista.Count; i++) if (lista[i].Tunnus == valittu) indeksi = i;
-            var valinta = new DropdownField(nimet, indeksi);
-            valinta.AddToClassList("mk-lukija-saadot__valinta");
-            Kirjasimet.Aseta(valinta, Kirjasin.Luku);
-            // ‹ › SELAUS (omistaja 4.10.2026 klo 23.0x: "selaus napit jotta ääniä olisi helpompi selata"): edellinen ja seuraava
-            // ääni kiertäen, kelausnappien pohjalla (mk-lukija-valikko__kelausnappi, oikea marginaali erottaa napit); valinta
-            // kulkee samaa reittiä kuin listasta, joten soiva luenta jatkuu heti uudella äänellä (AaniVaihtui).
-            foreach (var (merkki, suunta, nimi) in new[] { ("‹", -1, "Edellinen ääni"), ("›", 1, "Seuraava ääni") })
+            return ValintaRivi(saadot, "Ääni", nimet, indeksi, "ääni", k =>
             {
-                var b = Rakenne.Nappi(merkki, "mk-lukija-valikko__kelausnappi mk-lukija-saadot__selaus", () =>
-                    valinta.index = (valinta.index + suunta + nimet.Count) % nimet.Count, aaniRivi);
+                if (eleven) Striimiaani.ElevenAani = lista[k].Tunnus;
+                else Striimiaani.Aseta(k > 0 ? lista[k].Tunnus : null);
+                Debug.Log($"MATKAKIRJA ui lukija: ääni {nimet[k]}");
+                AaniVaihtui();
+            });
+        }
+
+        /// <summary>Avoimen valikon valintarivit testikomennolle (ui lukija valinta …): otsikko → (nimi-nappi, lista).</summary>
+        static readonly Dictionary<string, (Button Nimi, ScrollView Lista)> valintaRivit = new Dictionary<string, (Button, ScrollView)>();
+
+        /// <summary>
+        /// VALINTARIVI ILMAN PONNAHDUSLISTAA (omistaja 4.10.2026 klo 23.0x–23.1x: äänilista hankala selata, harmaa
+        /// vierityspalkillinen pudotusvalikko, ja sen sulkeva napautus sulki koko nostokortin; Päätoimittaja 23.3x: ei uutta
+        /// pohjaa eikä erillistä ponnahduskerrosta). Rivi: nimi, ‹ › ja valittu arvo kelausnappipohjilla
+        /// (mk-lukija-valikko__kelausnappi); arvon napautus avaa listan SAMAAN säätöpaneeliin kappalerivien pohjilla
+        /// (mk-lukija-valikko__kappaleet, __kappale, nykyinen __kappale--nykyinen, vieritys ilman palkkia). ‹ › kiertää.
+        /// </summary>
+        static VisualElement ValintaRivi(VisualElement saadot, string otsikko, List<string> nimet, int indeksi, string mika, Action<int> valittu)
+        {
+            var kotelo = Rakenne.El("mk-lukija-saadot__valintakotelo", saadot, PickingMode.Ignore);
+            var rivi = Rakenne.El("mk-lukija-saadot__rivi", kotelo, PickingMode.Ignore);
+            Kirjasimet.Aseta(Rakenne.Teksti(otsikko, "mk-lukija-saadot__nimi", rivi), Kirjasin.Luku);
+            int nyt = Mathf.Clamp(indeksi, 0, nimet.Count - 1);
+            Button arvo = null;
+            ScrollView lista = null;
+            var rivit = new List<Button>();
+            void Valitse(int k, bool sulje)
+            {
+                k = (k % nimet.Count + nimet.Count) % nimet.Count;
+                if (sulje) lista.style.display = DisplayStyle.None;
+                if (k == nyt) return;
+                rivit[nyt].RemoveFromClassList("mk-lukija-valikko__kappale--nykyinen");
+                nyt = k;
+                rivit[nyt].AddToClassList("mk-lukija-valikko__kappale--nykyinen");
+                arvo.text = nimet[nyt];
+                if (lista.style.display == DisplayStyle.Flex) lista.ScrollTo(rivit[nyt]);
+                Ruudunpaivitys.Herata(0.2f);
+                valittu?.Invoke(nyt);
+            }
+            foreach (var (merkki, suunta, nimi) in new[] { ("‹", -1, "Edellinen " + mika), ("›", 1, "Seuraava " + mika) })
+            {
+                var b = Rakenne.Nappi(merkki, "mk-lukija-valikko__kelausnappi mk-lukija-saadot__selaus", () => Valitse(nyt + suunta, false), rivi);
                 b.tooltip = nimi;
                 Kirjasimet.Aseta(b, Kirjasin.LukuLihava);
             }
-            aaniRivi.Add(valinta);
-            valinta.RegisterValueChangedCallback(_ =>
+            arvo = Rakenne.Nappi(nimet[nyt], "mk-lukija-valikko__kelausnappi mk-lukija-saadot__arvonappi", () =>
             {
-                int k = valinta.index;
-                if (eleven) Striimiaani.ElevenAani = lista[k].Tunnus;
-                else Striimiaani.Aseta(k > 0 ? lista[k].Tunnus : null);
-                AaniVaihtui();
-            });
-            return aaniRivi;
+                bool auki = lista.style.display != DisplayStyle.Flex;
+                lista.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
+                if (auki) lista.schedule.Execute(() => lista.ScrollTo(rivit[nyt])).StartingIn(16);
+                Ruudunpaivitys.Herata(0.3f);
+            }, rivi);
+            arvo.tooltip = $"Valitse {mika} listasta";
+            // Arvo täyttää rivin loppuun ja katkeaa "…":lla kuten kappalerivi (ei uutta tyyliä: sama tekstiluokka).
+            arvo.style.flexGrow = 1;
+            arvo.style.flexShrink = 1;
+            arvo.style.marginRight = 0;
+            Kirjasimet.Aseta(arvo, Kirjasin.Luku);
+            arvo.Q<Label>()?.AddToClassList("mk-lukija-valikko__alku");
+
+            lista = new ScrollView(ScrollViewMode.Vertical);
+            lista.AddToClassList("mk-lukija-valikko__kappaleet");
+            lista.verticalScrollerVisibility = ScrollerVisibility.Hidden;
+            lista.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
+            // Noin kuusi riviä näkyvissä; loput vierittyvät paneelin sisällä.
+            lista.style.maxHeight = 6 * 30f;
+            lista.style.display = DisplayStyle.None;
+            kotelo.Add(lista);
+            for (int i = 0; i < nimet.Count; i++)
+            {
+                int k = i;
+                var b = Rakenne.Nappi(null, "mk-lukija-valikko__kappale" + (i == nyt ? " mk-lukija-valikko__kappale--nykyinen" : ""), () => Valitse(k, true), lista);
+                var t = Rakenne.Teksti(nimet[i], "mk-lukija-valikko__alku", b);
+                t.enableRichText = false;
+                Kirjasimet.Aseta(t, Kirjasin.Luku);
+                b.tooltip = nimet[i];
+                rivit.Add(b);
+            }
+            valintaRivit[otsikko] = (arvo, lista);
+            return kotelo;
+        }
+
+        /// <summary>Testi (ui lukija valinta Ääni|Moottori [avaa|n|+|-]): valintarivin tila, listan avaus tai valinta kuten napautus.</summary>
+        public static string TestaaValinta(string otsikko, string toiminto)
+        {
+            if (!valintaRivit.TryGetValue(otsikko, out var v) || v.Nimi.panel == null) return $"valintariviä {otsikko} ei ole auki";
+            Button kohde = toiminto switch
+            {
+                "avaa" => v.Nimi,
+                "+" => v.Nimi.parent.Query<Button>(className: "mk-lukija-saadot__selaus").AtIndex(1),
+                "-" => v.Nimi.parent.Query<Button>(className: "mk-lukija-saadot__selaus").AtIndex(0),
+                _ when int.TryParse(toiminto, out int n) => v.Lista.Query<Button>(className: "mk-lukija-valikko__kappale").AtIndex(n),
+                _ => null,
+            };
+            if (kohde != null) using (var e = NavigationSubmitEvent.GetPooled()) { e.target = kohde; kohde.SendEvent(e); }
+            return $"{otsikko}: {v.Nimi.text}, lista {(v.Lista.style.display == DisplayStyle.Flex ? "auki" : "kiinni")} ({v.Lista.contentContainer.childCount} riviä)";
         }
 
         int nykyinenRivi = -1;

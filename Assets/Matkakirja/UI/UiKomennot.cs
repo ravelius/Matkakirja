@@ -966,6 +966,12 @@ namespace Matkakirja.Natiivi
                     UiKerros.Hae().StartCoroutine(NostoSisalto.Pooli(pk, l => Kirjaa("ui pooli " + pk + ": " + l.Count + (l.Count > 0 ? " · " + string.Join(", ", l) : ""))));
                     return null;
                 }
+                case "lukijavalinta":
+                {
+                    // "ui lukijavalinta Ääni|Moottori [avaa|+|-|n]" (juna 142): lukijan valikon valintarivi kuten napautus.
+                    var lv = loput.Split(new[] { ' ' }, 2, System.StringSplitOptions.RemoveEmptyEntries);
+                    return "=" + KortinLukija.TestaaValinta(lv.Length > 0 ? lv[0] : "Ääni", lv.Length > 1 ? lv[1] : "");
+                }
                 case "lukijaaani":
                 {
                     // "ui lukijaaani eleven|xai [n]" (juna 142): moottori ja n:s ääni kuten lukijan valikosta (soiva pala alkaa
