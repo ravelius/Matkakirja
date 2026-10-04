@@ -106,18 +106,33 @@ for r in "${LISTA[@]}"; do
   YHT=$((YHT + b)); echo "$p $s $b" >> "$TMP/rivit"; echo "$p $f" >> "$TMP/lahteet"
 done
 sort -o "$TMP/rivit" "$TMP/rivit"
-HASH=$(cut -d' ' -f1,2 "$TMP/rivit" | shasum -a 256 | cut -c1-16)
+# 2b. Siirtopakkaus (5.10.2026, Päätoimittaja: Brotli; muoto Siirtosepän ja Natiivisepän kanssa, tools/dioraama/pakkaus.mjs): .astcm/.glb/.json → <polku>.br,
+# jos vähintään 5 % pienempi. Välimuisti sisällön sha256:n mukaan (sama lähde = sama pakattu, ei uudelleenpakkausta).
+M=${PAKKAUS:-br}; [ "$M" = zst ] || M=br   # Brotli (.br, kenttä "br", Päätoimittaja 5.10.); PAKKAUS=zst mittauksiin
+ZV=${PAKKAUS_VALIMUISTI:-/Users/Shared/Claude/proto-3d/_valmiit/pakkaus-valimuisti}; mkdir -p "$ZV"; : > "$TMP/zst"
+while read -r p s b; do
+  case "$p" in *.astcm|*.glb|*.json) ;; *) continue ;; esac
+  if [ ! -f "$ZV/$s.$M.info" ]; then
+    f=$(awk -v p="$p" '$1 == p { print $2; exit }' "$TMP/lahteet")
+    PAKKAUS=$M nice -n 15 node "$REPO/tools/dioraama/pakkaus.mjs" tiedosto "$f" "$ZV/$s.$M" > "$ZV/$s.$M.info"
+  fi
+  read -r zs zb < "$ZV/$s.$M.info"; [ "$zs" = ohita ] || echo "$p $zs $zb" >> "$TMP/zst"
+done < "$TMP/rivit"
+# hash kattaa myös pakatut tiedostot: pakattu paketti saa oman muuttumattoman kansionsa
+HASH=$( { cut -d' ' -f1,2 "$TMP/rivit"; awk -v m="$M" '{ print $1 "." m " " $2 }' "$TMP/zst"; } | shasum -a 256 | cut -c1-16)
 N=$(wc -l < "$TMP/rivit" | tr -d ' ')
 node -e '
-const fs = require("fs"); const [, rivit, rakennus, hash, ulos] = process.argv.slice(1);
-const tiedostot = fs.readFileSync(rivit, "utf8").trim().split("\n").map((l) => { const [polku, sha256, t] = l.split(" "); return { polku, sha256, tavuja: Number(t) }; });
+const fs = require("fs"); const [, rivit, rakennus, hash, ulos, zst, muoto] = process.argv.slice(1);
+const Z = Object.fromEntries(fs.readFileSync(zst, "utf8").trim().split("\n").filter(Boolean).map((l) => { const [p, s, t] = l.split(" "); return [p, { sha256: s, tavuja: Number(t) }]; }));
+const tiedostot = fs.readFileSync(rivit, "utf8").trim().split("\n").map((l) => { const [polku, sha256, t] = l.split(" "); return Z[polku] ? { polku, sha256, tavuja: Number(t), [muoto]: Z[polku] } : { polku, sha256, tavuja: Number(t) }; });
 fs.writeFileSync(ulos, JSON.stringify({ rakennus, hash, kansio: `dioraama/${rakennus}/blender/${hash}/`, tiedostot }, null, 2) + "\n");
-' _ "$TMP/rivit" "$RAKENNUS" "$HASH" "$ULOS_JSON"
+' _ "$TMP/rivit" "$RAKENNUS" "$HASH" "$ULOS_JSON" "$TMP/zst" "$M"
 cp "$ULOS_JSON" "$TMP/blender.json"
 KOHDE="dioraama/$RAKENNUS/blender/$HASH"
 echo "== Blender-vienti: $RAKENNUS → $KOHDE/"
-echo "   tiedostoja $N (+ blender.json), yhteensä $((YHT / 1048576)) Mt"
-echo "   PUT-arvio: $((N + 1)) PUT-pyyntöä (R2 luokka A), ei poistoja; kansio on muuttumaton"
+NZ=$(wc -l < "$TMP/zst" | tr -d ' '); ZYHT=$(awk '{ s += $3 } END { print s + 0 }' "$TMP/zst")
+echo "   tiedostoja $N (+ blender.json), yhteensä $((YHT / 1048576)) Mt; $M-tiedostoja $NZ ($((ZYHT / 1048576)) Mt)"
+echo "   PUT-arvio: $((N + NZ + 1)) PUT-pyyntöä (R2 luokka A), ei poistoja; kansio on muuttumaton"
 echo "   blender.json kirjoitettu: $ULOS_JSON"
 [ "$KUIVA" = 1 ] && { echo "   (kuiva-ajo: ei latausta)"; exit 0; }
 
@@ -135,6 +150,13 @@ else
     aws s3 cp "$f" "s3://$AMPARI/$KOHDE/$p" --endpoint-url "$PAATE" --no-progress --only-show-errors \
       --content-type "$ct" --cache-control 'public, max-age=31536000, immutable'
   done < "$TMP/rivit"
+  while read -r p zs zb; do
+    s=$(awk -v p="$p" '$1 == p { print $2; exit }' "$TMP/rivit")
+    # EI Content-Encoding-otsaketta: pakattu tiedosto ladataan sellaisenaan ja natiivi purkaa (HTTP-asiakas ei saa purkaa itse)
+    [ "$M" = br ] && ct=application/octet-stream || ct=application/zstd
+    aws s3 cp "$ZV/$s.$M" "s3://$AMPARI/$KOHDE/$p.$M" --endpoint-url "$PAATE" --no-progress --only-show-errors \
+      --content-type $ct --cache-control 'public, max-age=31536000, immutable'
+  done < "$TMP/zst"
   aws s3 cp "$TMP/blender.json" "s3://$AMPARI/$KOHDE/blender.json" --endpoint-url "$PAATE" --only-show-errors \
     --content-type application/json --cache-control 'public, max-age=31536000, immutable'
 fi

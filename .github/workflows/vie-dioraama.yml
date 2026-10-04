@@ -103,6 +103,9 @@ jobs:
             [ -f "js/dioraama/rakennukset/$r.js" ] || { echo "::error::ei rakennusta $r"; exit 1; }
             node tools/dioraama/rakenna.mjs "$r" --ulos dist/dioraama
             d="dist/dioraama/$r"
+            # Siirtopakkaus (5.10.2026, Brotli): .br paketin omien .astcm/.glb/.json viereen ja br-kentät manifestiin
+            # (blender/-merkinnöille blender.json:sta). Ennen hashia, jotta hash kattaa myös pakatut.
+            PAKKAUS=${PAKKAUS:-br} node tools/dioraama/pakkaus.mjs paketti "$d" "js/dioraama/rakennukset/$r/blender.json"
             [ -f "$d/manifest.json" ] || { echo "::error::$d/manifest.json puuttuu"; exit 1; }
             hash=$(sha256sum "$d/manifest.json" | cut -c1-16)
             kohde="dioraama/$r/$hash"
@@ -116,7 +119,7 @@ jobs:
             # täydennetään myös uusintaajossa: osoitin ei koskaan osoita pakettiin, jonka Blender-tiedostot puuttuvat.
             bj="js/dioraama/rakennukset/$r/blender.json"
             if [ -f "$bj" ]; then
-              bk=$(node -p "require('./$bj').kansio"); bn=$(node -p "require('./$bj').tiedostot.length")
+              bk=$(node -p "require('./$bj').kansio"); bn=$(node -p "const t=require('./$bj').tiedostot; t.length + t.filter((x) => x.zst || x.br).length")
               loytyi=$(aws s3 ls "s3://$AMPARI/$bk" --recursive --endpoint-url "$PAATE" | grep -vc 'blender.json$' || true)
               echo "  - blender: $bk ($loytyi/$bn tiedostoa ämpärissä)" >> "$GITHUB_STEP_SUMMARY"
               if [ "$loytyi" != "$bn" ]; then
@@ -138,6 +141,12 @@ jobs:
               aws s3 cp "$d" "s3://$AMPARI/$kohde/" --recursive --endpoint-url "$PAATE" --no-progress \
                 --exclude '*' --include '*.jpg' \
                 --content-type image/jpeg --cache-control 'public, max-age=31536000, immutable'
+              aws s3 cp "$d" "s3://$AMPARI/$kohde/" --recursive --endpoint-url "$PAATE" --no-progress \
+                --exclude '*' --include '*.zst' --exclude 'blender/*' \
+                --content-type application/zstd --cache-control 'public, max-age=31536000, immutable'
+              aws s3 cp "$d" "s3://$AMPARI/$kohde/" --recursive --endpoint-url "$PAATE" --no-progress \
+                --exclude '*' --include '*.br' --exclude 'blender/*' \
+                --content-type application/octet-stream --cache-control 'public, max-age=31536000, immutable'
             fi
             if [ -f "$bj" ]; then
               # aws s3 ls palauttaa 1, kun kansiota ei vielä ole; pipefail + set -e katkaisi ajon hiljaa (30.9. ajo 36671228175).
@@ -150,7 +159,7 @@ jobs:
                 aws s3 cp "s3://$AMPARI/$bk" "$tb/" --recursive --endpoint-url "$PAATE" \
                   --no-progress --only-show-errors --exclude 'blender.json'
                 # png ja json mukana 1.10.2026: v17 listaa png:n (vienti jäi 88/89:ään), ympäristövienti tuo json-tiedostoja (blender.json itse suljetaan pois latauksessa).
-                for tyyppi in 'glb model/gltf-binary' 'jpg image/jpeg' 'png image/png' 'json application/json' 'astcm application/octet-stream'; do
+                for tyyppi in 'glb model/gltf-binary' 'jpg image/jpeg' 'png image/png' 'json application/json' 'astcm application/octet-stream' 'zst application/zstd' 'br application/octet-stream'; do
                   aws s3 cp "$tb/" "s3://$AMPARI/$kohde/blender/" --recursive --endpoint-url "$PAATE" \
                     --no-progress --only-show-errors --exclude '*' --include "*.${tyyppi%% *}" \
                     --content-type "${tyyppi#* }" --cache-control 'public, max-age=31536000, immutable'
