@@ -164,7 +164,7 @@ namespace Matkakirja.Natiivi
                 TaydennaPinnatJaLiekit();
                 LataaUlkokuori();
                 AloitaKuoriOdotus(ymparisto.Aika);
-                if (kuoriOdotusAlku < 0f) TaydennaLataamattomat(); else tilatOdottavat = true;
+                TaydennaLataamattomat();
             }
             o.Kirjaa(Tilaraportti());
         }
@@ -184,28 +184,36 @@ namespace Matkakirja.Natiivi
             if (kuoriOdotusAlku >= 0f)
             {
                 float odotettu = Time.realtimeSinceStartup - kuoriOdotusAlku;
-                bool kuoriValmis = nayttamo.Ulkokuori?.Lahitaso != null;
-                // TF 136 -kierros 4.10.: tilat ja hahmot latautuivat kuoren kanssa yhtä aikaa, kuori ehti vasta 30–73 s:ssa ja
-                // saapuminen alkoi 10 s:n jälkeen valkoisten tilapalikoiden päällä kertojan puhuessa. Nyt kuori ladataan ensin,
-                // tilat sen valmistuttua, ja linna tulee esiin sumusta, kun kuori on valmis (tai KuoriOdotusMax).
-                if (kuoriValmis && tilatOdottavat)
-                {
-                    tilatOdottavat = false;
-                    TaydennaLataamattomat();
-                    o.Kirjaa($"poikki: kuori valmis {odotettu:F1} s:ssa, tilat latautuvat");
-                }
-                // Päätoimittaja 4.10. (Linnanrakentajan mittaus): linna esiin heti kevyen kuoren valmistuttua; tilat ja hahmot latautuvat
-                // perässä, ja kukin tila pysyy piilossa valoatlaksensa valmistumiseen asti (LataaTila).
-                // Nimiruutu (Päätoimittaja 4.10., DioraamaTaulu) näkyy odotuksen ajan vähintään NimiruutuMinS.
-                if ((kuoriValmis && odotettu >= NimiruutuMinS) || odotettu > KuoriOdotusMax || rakennus.Ulkokuori == null)
+                // OMISTAJAN LINJA 4.10. (14.5x): "olavinlinna saisi latautua täydellä tarkkuudella ennen kuin linssi alkaa." Nimiruutu
+                // (DioraamaTaulu, latausrivit 4 ja 9 s) pysyy, kunnes kuori (kevyt + laitteen taso + detalji), tilat valoatlaksineen,
+                // hahmot ja ympäristö ovat valmiit; vasta sitten linna sumusta ja kertojan kierros. Kevyestä täyteen ei vaihdeta kesken.
+                bool kuoriValmis = nayttamo.Ulkokuori == null || nayttamo.Ulkokuori.KaikkiValmis;
+                bool tilatValmiit = tilojaKasitelty >= TilojaGlb();
+                bool hahmotValmiit = hahmojaKasitelty >= hahmoGlbJonossaTaiValmiit.Count;
+                bool ymparistoValmis = rakennus.Ymparisto == null || nayttamo.Ymparisto == null || nayttamo.Ymparisto.Valmis;
+                int valmistuneita = DioraamaLevyvalimuisti.Valmistuneita;
+                if (valmistuneita != viimeValmistuneita) { viimeValmistuneita = valmistuneita; viimeEdistys = Time.realtimeSinceStartup; }
+                // Lataushäiriö tai offline: olemassa oleva virheviesti (DioraamaTaulu → tilarivi) ja linssi kiinni, ei loputonta odotusta.
+                bool virhe = DioraamaLevyvalimuisti.Epaonnistui > virheitaAlussa;
+                bool jumissa = Time.realtimeSinceStartup - viimeEdistys > JumiS;
+                if (virhe || jumissa)
                 {
                     kuoriOdotusAlku = -1f;
-                    if (tilatOdottavat) { tilatOdottavat = false; TaydennaLataamattomat(); }
+                    LatausVirhe = "Linnaa ei saatu ladattua. Tarkista verkkoyhteys.";
+                    o.Kirjaa($"poikki: latausvirhe ({(virhe ? "lataus epäonnistui" : $"ei edistystä {JumiS:F0} s")}, odotettiin {odotettu:F1} s, " +
+                             $"kuori {(kuoriValmis ? "ok" : "kesken")}, tilat {tilojaKasitelty}/{TilojaGlb()}, hahmot {hahmojaKasitelty}/{hahmoGlbJonossaTaiValmiit.Count}, ympäristö {(ymparistoValmis ? "ok" : "kesken")})");
+                    nayttamo.Odota(true); t = kuoriOdotusT;
+                }
+                else if ((kuoriValmis && tilatValmiit && hahmotValmiit && ymparistoValmis && odotettu >= NimiruutuMinS) || rakennus.Ulkokuori == null)
+                {
+                    kuoriOdotusAlku = -1f;
                     nayttamo.Odota(false);
                     nayttamo.Haivyta(HaivytysS);
                     linssi.Avaa(rakennus, y.Aika, SaapuminenNahty); // kaari (ja kertoja) alusta tästä hetkestä
                     t = pysaytettyT ?? y.Aika;
-                    o.Kirjaa($"poikki: saapuminen alkaa ({(kuoriValmis ? "kuori valmis" : "kuori ei ehtinyt")}, tilat {rakennus3D?.TilojaLadattu ?? 0}/{TilojaGlb()}, odotettiin {odotettu:F1} s)");
+                    o.Kirjaa($"poikki: saapuminen alkaa (kaikki valmiina täydellä tarkkuudella: kuori, tilat {tilojaKasitelty}/{TilojaGlb()}, " +
+                             $"hahmot {hahmojaKasitelty}/{hahmoGlbJonossaTaiValmiit.Count}, ympäristö; odotettiin {odotettu:F1} s, " +
+                             $"välimuistista {DioraamaLevyvalimuisti.Osumia - osumiaAlussa}, verkosta {DioraamaLevyvalimuisti.Latauksia - latauksiaAlussa})");
                 }
                 else { nayttamo.Odota(true); t = kuoriOdotusT; }
             }
@@ -248,7 +256,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             linssi.Sulje();
-            kuoriOdotusAlku = -1f; SaapumisOdotus = false; tilatOdottavat = false; RakennusLatautuu = false; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
+            kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             rakennus3D?.Tyhjenna(); rakennus3D = null;
             hahmot3D?.Tyhjenna(); hahmot3D = null;
             nayttamo?.Tuhoa(); nayttamo = null;
@@ -324,6 +332,7 @@ namespace Matkakirja.Natiivi
         void NollaaNakymanLataukset()
         {
             avauskerta++;
+            tilojaKasitelty = hahmojaKasitelty = 0;
             tilatJonossaTaiValmiit.Clear();
             atlaksetJonossaTaiValmiit.Clear();
             hahmoGlbJonossaTaiValmiit.Clear();
@@ -360,7 +369,7 @@ namespace Matkakirja.Natiivi
             string json = null;
             yield return HaeTeksti(peili(paketinJuuri + "rakennus.json"), t => json = t);
             latausKaynnissa = false;
-            if (json == null) { o.Kirjaa("poikki: rakennus.json ei latautunut"); yield break; }
+            if (json == null) { o.Kirjaa("poikki: rakennus.json ei latautunut"); LatausVirhe = "Linnaa ei saatu ladattua. Tarkista verkkoyhteys."; yield break; }
             try { rakennus = DioraamaData.Lue(json); }
             catch (Exception e) { o.Kirjaa("poikki: rakennus.json jäsennys: " + e.Message); yield break; }
             if (rakennus?.Tilat == null) { o.Kirjaa("poikki: rakennus.json ilman tiloja"); yield break; }
@@ -372,15 +381,15 @@ namespace Matkakirja.Natiivi
                 TaydennaPinnatJaLiekit();
                 LataaUlkokuori();
                 AloitaKuoriOdotus(y.Aika);
-                if (kuoriOdotusAlku < 0f) TaydennaLataamattomat(); else tilatOdottavat = true;
+                TaydennaLataamattomat();
             }
         }
 
-        // Saapumiskaari odottaa kevyttä kuorta (enintään KuoriOdotusMax s): 1.0.64-puhdasajossa kaaren 3. sekunnilla
+        // Saapumiskaari odottaa linnaa (4.10.: täysi tarkkuus, ks. Paivita; ennen kevyttä kuorta): 1.0.64-puhdasajossa kaaren 3. sekunnilla
         // kuorta ei vielä ollut ja harmaat tilapalikat näkyivät veden päällä. Odotuksen ajan aika on jäädytetty kaaren
         // alkuun (kamera kaukana järvellä), ja näyttämö piilottaa kaiken paitsi veden (DioraamaNayttamo.Odota).
-        // 4.10.: 10 → 45 s (kuori ensin, tilat perässä, ks. Paivita); yli tämän näytetään se mitä on.
-        const float KuoriOdotusMax = 45f, HaivytysS = 2.5f, NimiruutuMinS = 2f;
+        // 4.10.: odotus päättyy, kun kaikki on valmiina tai lataus häiriintyy (JumiS ilman edistystä), ei kiinteää enimmäisaikaa.
+        const float HaivytysS = 2.5f, NimiruutuMinS = 2f;
         /// <summary>Saapumisodotuksen nimiruudun tekstit (DioraamaTaulu): rakennuksen nimi versaalina ja alarivi.</summary>
         public static string SaapumisNimi
         {
@@ -396,8 +405,20 @@ namespace Matkakirja.Natiivi
         public static bool RakennusLatautuu { get; private set; }
         public const string SaapumisAlarivi = "Savonlinna · 1475";
         float kuoriOdotusAlku = -1f;
-        /// <summary>Tilojen ja hahmojen lataus odottaa kuorta (TaydennaLataamattomat vasta kuoren valmistuttua).</summary>
-        bool tilatOdottavat;
+        /// <summary>Täyden tarkkuuden odotus: käsitellyt tilat ja hahmomallit (onnistuneet tai epäonnistuneet), lataushäiriön tunnistus.</summary>
+        int tilojaKasitelty, hahmojaKasitelty, virheitaAlussa, viimeValmistuneita, osumiaAlussa, latauksiaAlussa;
+        float viimeEdistys;
+        const float JumiS = 60f;
+        /// <summary>Lataushäiriö (DioraamaTaulu näyttää tilarivillä ja sulkee linssin); null = ei virhettä.</summary>
+        public static string LatausVirhe { get; private set; }
+
+        /// <summary>Ajaa latauksen loppuun ja laskee sen käsitellyksi (myös yield break -perääntyminen ja virhe).</summary>
+        IEnumerator Kasitelty(IEnumerator lataus, Action valmis)
+        {
+            int kerta = avauskerta;
+            yield return lataus;
+            if (kerta == avauskerta) valmis();
+        }
 
         int TilojaGlb()
         {
@@ -411,8 +432,12 @@ namespace Matkakirja.Natiivi
         {
             kuoriOdotusAlku = -1f;
             if (rakennus?.Saapuminen == null || rakennus.Ulkokuori == null || nayttamo?.Ulkokuori == null) return;
-            if (nayttamo.Ulkokuori.Lahitaso != null) return;
+            // 4.10.: myös uudelleenavauksessa (tilat latautuvat uudelleen, välimuistista nopeasti) linna vasta täydellä tarkkuudella.
             kuoriOdotusAlku = Time.realtimeSinceStartup; kuoriOdotusT = t;
+            LatausVirhe = null;
+            virheitaAlussa = DioraamaLevyvalimuisti.Epaonnistui; viimeValmistuneita = DioraamaLevyvalimuisti.Valmistuneita;
+            osumiaAlussa = DioraamaLevyvalimuisti.Osumia; latauksiaAlussa = DioraamaLevyvalimuisti.Latauksia;
+            viimeEdistys = Time.realtimeSinceStartup;
         }
 
         const string SaapuminenAvain = "dioraama-saapuminen-nahty";
@@ -472,7 +497,7 @@ namespace Matkakirja.Natiivi
             {
                 if (tilatJonossaTaiValmiit.Contains(tila.Id)) continue;
                 tilatJonossaTaiValmiit.Add(tila.Id);
-                o.StartCoroutine(LataaTila(tila));
+                o.StartCoroutine(Kasitelty(LataaTila(tila), () => tilojaKasitelty++));
                 var tila2d = SuodataHahmot3dPois(tila);
                 hahmot3D.LisaaTila(rakennus, tila2d, o.Kirjaa);
                 // era 2b kohta 4 (ali-agentti P4b): 3D-pienoisfiguurit, alkuperäisellä (suodattamattomalla)
@@ -502,7 +527,7 @@ namespace Matkakirja.Natiivi
                 {
                     if (hahmoGlbJonossaTaiValmiit.Contains(glb)) continue;
                     hahmoGlbJonossaTaiValmiit.Add(glb);
-                    o.StartCoroutine(LataaHahmoGlb(glb));
+                    o.StartCoroutine(Kasitelty(LataaHahmoGlb(glb), () => hahmojaKasitelty++));
                 }
             }
         }

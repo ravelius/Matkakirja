@@ -59,6 +59,7 @@ namespace Matkakirja.Natiivi
         float vesiY;
 
         public string Tila { get; private set; } = "ei ladattu";
+        public bool Valmis => Tila.StartsWith("valmis", StringComparison.Ordinal);
 
         public DioraamaYmparisto(Transform juuri) { this.juuri = juuri; }
 

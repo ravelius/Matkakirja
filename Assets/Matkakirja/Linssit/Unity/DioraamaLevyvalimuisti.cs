@@ -28,6 +28,9 @@ namespace Matkakirja.Natiivi
         static readonly HashSet<string> haussa = new HashSet<string>(StringComparer.Ordinal);
         static readonly Dictionary<string, Task> kirjoitukset = new Dictionary<string, Task>(StringComparer.Ordinal);
         public static int Latauksia { get; private set; }
+        /// <summary>Epäonnistuneet verkkolataukset (linnan latausvirhe, Päätoimittaja 4.10.) ja kaikki valmistuneet (edistyminen).</summary>
+        public static int Epaonnistui { get; private set; }
+        public static int Valmistuneita => Osumia + Latauksia + Epaonnistui;
 
         /// <summary>DioraamaSovitin.LataaRakennus: uusin.json luettu. ampariJuuri = …/dioraama/&lt;r&gt;/, hash ilman kauttaviivoja.</summary>
         public static void Aseta(string ampariJuuri, string hash)
@@ -72,6 +75,7 @@ namespace Matkakirja.Natiivi
                 if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data;
             }
             finally { haussa.Remove(url); }
+            if (tavut == null) Epaonnistui++;
             if (tavut != null)
             {
                 Latauksia++;
