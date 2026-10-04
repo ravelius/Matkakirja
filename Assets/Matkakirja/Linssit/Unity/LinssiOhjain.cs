@@ -47,6 +47,13 @@ namespace Matkakirja.Natiivi
         public static Action<bool> PeiteKasittelija;
         /// <summary>Taustamusiikin pito (Pelikoodarin äänet asettavat).</summary>
         public static Action<bool> MusiikkiKasittelija;
+        /// <summary>
+        /// LINSSI KATKAISEE KAIKEN ÄÄNEN (omistaja TF 135, 4.10.2026: "kun mikä tahansa linssi alkaa niin kaikki audio pitää
+        /// katkaista. Nyt luenta kuuluu taustalla"). Avautuu: ennen linssin omaa Avaa-kutsua (Linssirekisteri.Avautuu), myös
+        /// linssistä toiseen; Suljettu: mikään linssi ei ole auki (äänimaisema saa palata, luenta ei). PeliOhjain.Aanet asettaa.
+        /// </summary>
+        public static Action<string> LinssiAvautuuKasittelija;
+        public static Action LinssiSuljettuKasittelija;
 
         /// <summary>
         /// Linssin portti (web linssikarttaEstaa): true = auki oleva linssi estää Liikun, siirrot ja lehdet.
@@ -234,6 +241,15 @@ namespace Matkakirja.Natiivi
             StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
+            rekisteri.Avautuu += l =>
+            {
+                try { LinssiAvautuuKasittelija?.Invoke(l.Tiedot.Id); } catch (Exception e) { Debug.LogException(e); }
+            };
+            rekisteri.Vaihtui += l =>
+            {
+                if (l != null) return;
+                try { LinssiSuljettuKasittelija?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
+            };
             // Zoomikaista pois aina, kun mikään linssi ei ole auki (linssin oma Sulje palauttaa sen myös vaihdossa).
             rekisteri.Vaihtui += l => { if (l == null) kierto?.LinssinRajat(null, null); };
             // ESILATAUSPOLITIIKKA kohdat 6 (linssi aukeaa) ja 4 (joutilaana): Linssisepän listat Esilataajan jonoon.
@@ -1486,6 +1502,16 @@ namespace Matkakirja.Natiivi
                     if (!AineistoValmis && rekisteri.Kaikki.All(l => l.Tiedot.Id != osat[1])) StartCoroutine(ValitseKunValmis(osat[1]));
                     else rekisteri.Valitse(osat[1]);
                 }
+                else if (osat[0] == "kaappaa" && osat.Length > 1)
+                    // Yleinen äänikaappaus tallenteeseen (Päätoimittaja 4.10.: kaikille linsseille, ei vain ajattelijalle):
+                    // kaappaa <s> [nimi] → Documents/<nimi>.wav, ulostulo nollattu (AaniKaappaus).
+                    AaniKaappaus.Aloita(double.Parse(osat[1], System.Globalization.CultureInfo.InvariantCulture),
+                        osat.Length > 2 ? osat[2] : "kaappaus", t => Kirjaa("aani: " + t));
+                else if (osat[0] == "merkki")
+                    // Tahdistusmerkki ilman linssiä (välähdys + piippaus samaan äänikellon hetkeen; kaappauksen aikana).
+                    Kirjaa($"aani: merkki dsp {AaniKaappaus.Merkki(0.5, AjattelijatSovitin.Ulostuloviive):F4} s");
+                else if (osat[0] == "soivat")
+                    Kirjaa("aani: soivat: " + PeliOhjain.SoivatAanet());   // linssin avauksen todiste (omistaja TF 135)
                 else if (osat[0] == "erikois")
                     ErikoismalliElavat.Testi(osat.Length > 1 ? string.Join(" ", osat, 1, osat.Length - 1) : "tila", this);
                 else if (osat[0] == "elava")

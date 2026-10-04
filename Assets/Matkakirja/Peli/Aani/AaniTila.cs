@@ -257,15 +257,17 @@ namespace Matkakirja.Peli
         });
 
         /// <summary>Linssi auki/kiinni (ILinssiYmparisto.MusiikkiPitoon): pohja pitoon, hiljennys 'linssi', maisema pois.</summary>
-        public void LinssiPito(bool paalla) => Tee(() =>
+        /// <param name="laskuMs">Pohjan ja maiseman häivytys (ms); oletus HaivytysMs. Linssin avaus 200 ms (omistaja TF 135: kaikki
+        /// ääni katkeaa heti linssin alkaessa).</param>
+        public void LinssiPito(bool paalla, int laskuMs = -1) => Tee(() =>
         {
             if (paalla == pito) return;
             if (paalla)
             {
                 pito = true;
-                LopetaPohja();
+                LopetaPohja(laskuMs);
                 Hiljenna(AaniVakiot.LinssinHiljennys);
-                LopetaMaisema();
+                LopetaMaisema(laskuMs);
             }
             else
             {
@@ -663,13 +665,13 @@ namespace Matkakirja.Peli
             });
         }
 
-        void LopetaPohja()
+        void LopetaPohja(int laskuMs = -1)
         {
             var vanha = pohja;
             pohja = null;
             pohjaPolku = null;
             if (vanha == null) return;
-            Ramppi(vanha, 0, AaniVakiot.HaivytysMs);
+            Ramppi(vanha, 0, laskuMs >= 0 ? laskuMs : AaniVakiot.HaivytysMs);
             Vapauta(vanha);
         }
 
@@ -746,13 +748,13 @@ namespace Matkakirja.Peli
             });
         }
 
-        void LopetaMaisema()
+        void LopetaMaisema(int laskuMs = -1)
         {
             var vanha = nykyinen;
             nykyinen = null;
             if (vanha == null) return;
-            // Linssin taustaääni laskee webin tahtiin (satelliitti-aani LASKU_MS 600), maisema omaansa.
-            int lasku = vanha.Linssi ? LinssinTaustanLaskuMs : AaniVakiot.HaivytysMs;
+            // Linssin taustaääni laskee webin tahtiin (satelliitti-aani LASKU_MS 600), maisema omaansa; linssin avaus nopeasti.
+            int lasku = laskuMs >= 0 ? laskuMs : vanha.Linssi ? LinssinTaustanLaskuMs : AaniVakiot.HaivytysMs;
             if (vanha.Vaistyva != null) { Ramppi(vanha.Vaistyva, 0, lasku); Vapauta(vanha.Vaistyva); }
             if (vanha.Audio == null) return; // kerran läpi soinut maisema on jo hiljaa
             Ramppi(vanha.Audio, 0, lasku);

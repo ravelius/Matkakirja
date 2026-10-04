@@ -812,6 +812,7 @@ namespace Matkakirja.Natiivi
         {
             matka = null;
             jatkettava = null;
+            jatkoHiljaa = false;
             if (File.Exists(TallennusPolku))
             {
                 try
@@ -866,9 +867,18 @@ namespace Matkakirja.Natiivi
             if (jatkettava == null) return "tallennusta ei ole";
             matka = jatkettava;
             jatkettava = null;
+            // JATKA HILJAA (omistaja 4.10.2026, TF 135: "Kun aloitus sivulta painaa Jatka matkaa ja peli siirtyy johonkin kaupunkiin
+            // niin silloin kuuluu pulun luenta. Muuta että silloin ei kuulu mitään luentaa eli peli tulisi alkaa kuin pelaaja olisi
+            // painanut Ohita nappia."): kesken jäänyt siirto jatkuu perille, ja saapuminen ohittaa trailerin ja luennan (Perilla).
+            jatkoHiljaa = true;
             JatkaMatkaa();
+            // Ei siirtoa (kaupungissa tai reitillä ilman tavoitetta): mitään ei ala soida, joten lippu ei saa jäädä seuraavaan saapumiseen.
+            if (Tila != SilmukanTila.Matkalla) jatkoHiljaa = false;
             return null;
         }
+
+        /// <summary>Aloitusnäkymän Jatka vei pelaajan matkalle: seuraava saapuminen ilman traileria ja luentaa (kuin Ohita).</summary>
+        bool jatkoHiljaa;
 
         /// <summary>
         /// Uusi matka lähtökaupungista (aloitusnäkymä, voiton Uusi matka). null = Pariisi.
@@ -884,6 +894,7 @@ namespace Matkakirja.Natiivi
                 return "ei lähtökaupunki: " + lahtokaupunki;
             if (Tila != SilmukanTila.Aloitus && Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             jatkettava = null;
+            jatkoHiljaa = false;
             PeruLykkays();
             UusiPeli(siemen, lahtokaupunki);
             // Aloituskaava (omistaja 24.9.2026 klo 16.1x): intro soi avausruudulla ennen karttaa (Natiivi-UI,
@@ -1580,6 +1591,10 @@ namespace Matkakirja.Natiivi
             saapumisKaupunki = null;
             // Uusi paikka: edellisen kaupungin ohitus ei koske tämän kerrontaa (web luennanOhitus per saapuminen).
             if (kaupunki != null) LuentoOhitettu = false;
+            // Jatka matkaa (aloitusnäkymä): tämä saapuminen kuin Ohita olisi painettu: ei traileria (sen saapumispuhe) eikä luentaa.
+            bool hiljaa = jatkoHiljaa && kaupunki != null;
+            jatkoHiljaa = false;
+            if (hiljaa) trailerinaytetty.Add(kaupunki);
             // Löydös 162: saapumisluenta kesken heti, ENNEN MatkaPerilla-tapahtumaa (kartan saapumisanimaatio odottaa sitä).
             SaapumisluentaAlkaa(kaupunki);
             // C16: aloituslennon kohteen luenta voi odottaa pulun paljastusta (PeliOhjain.Lykkays.cs).
@@ -1616,6 +1631,13 @@ namespace Matkakirja.Natiivi
                 return;
             }
             SaavuLehteen(kaupunki);
+            // Luento on jonossa (0,6 s viive): vaiennus samaa reittiä kuin Ohita-nappi (luentakuvat matkakirjakorttiin,
+            // Pulun kommentti ei ala). Pelaaja voi aloittaa luennan itse kaiuttimesta.
+            if (hiljaa)
+            {
+                Debug.Log("MATKAKIRJA peli: jatko hiljaa, saapumisluenta ohitettu " + kaupunki);
+                VaiennaPaikanPuhe("ohita");
+            }
         }
 
         readonly HashSet<string> trailerinaytetty = new HashSet<string>();
