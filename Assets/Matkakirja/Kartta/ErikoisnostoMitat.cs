@@ -13,6 +13,9 @@ namespace Matkakirja
     ///  - KÄÄNTÖ (web kaantoKeskustaa): nenä kohti näkymän keskustaa enintään 30° (+ = katsojan oikealle).
     ///  - HEILAHDUS (web HEILAHDUS): kartan pituusasteen muutos korkeudella jaettuna potkaisee jousta (jousi 0,12,
     ///    vaimennus 0,82, kerroin 1,4, korkeus vähintään 0,05 maan sädettä).
+    ///  - OMA MAA (omistaja 4.10.2026 klo 19.4x, natiivi: "Ajattelijoiden päät saavat näkyä vain kohde maassa oltaessa"): pää
+    ///    näkyy vain, kun pelaaja on ajattelijan maassa (kartta.maa ISO3 = pelaajan maa), myös kaukozoomissa piilossa muualla;
+    ///    maan vaihtuessa pää häivytetään esiin tai pois nostojen syttymisen ajassa (NostoKerros.syttyminenS).
     /// </summary>
     public static class ErikoisnostoMitat
     {
@@ -54,6 +57,18 @@ namespace Matkakirja
         /// <summary>Lopullinen kääntö: keskustaa kohti + heilahdus, rajattu ±30°.</summary>
         public static float Kaanto(float paaKeskiX, float leveys, double heilahdus) =>
             (float)Math.Max(-KaantoAste, Math.Min(KaantoAste, KaantoKeskustaa(paaKeskiX, leveys) + heilahdus));
+
+        /// <summary>Saako pää näkyä: ajattelijan maa (ISO3) on pelaajan maa. Tuntematon kumpi tahansa = ei.</summary>
+        public static bool OmaMaa(string paanMaa, string pelaajanMaa) =>
+            !string.IsNullOrEmpty(paanMaa) && !string.IsNullOrEmpty(pelaajanMaa)
+            && string.Equals(paanMaa, pelaajanMaa, StringComparison.OrdinalIgnoreCase);
+
+        /// <summary>Häivytys: peitto kohti 1 (näkyy) tai 0 (piilossa) tasaisesti kestoS:ssa (dt s), rajattu 0…1.</summary>
+        public static float Haivytys(float peitto, bool nakyy, float dt, float kestoS)
+        {
+            float askel = kestoS > 0f ? dt / kestoS : 1f;
+            return Math.Max(0f, Math.Min(1f, peitto + (nakyy ? askel : -askel)));
+        }
 
         /// <summary>Jatkuuko liike (web: nopeus &gt; 0,01 tai kulma &gt; 0,05 tai potku &gt; 0,001).</summary>
         public static bool Liikkuu(double kulma, double nopeus, double potku) =>

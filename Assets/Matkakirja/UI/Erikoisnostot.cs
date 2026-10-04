@@ -4,8 +4,10 @@
 //  - Jokaisella ajattelijalla on kiinteä karttapiste (AjattelijaData.KarttaPiste = web kartta.piste; ei kaupunki). Pää liikkuu
 //    kartan mukana ja pysyy ruudulla vakiokokoisena kuten karttamerkit: napin keskipiste x = pisteen x, y = pisteen y − 0,35 ×
 //    64 pt (pää seisoo pisteen päällä). Nappi on 1,5 × pää (96 pt), koska varjo paperilla ulottuu pään ohi.
-//  - Näkyy aina, kun piste on näkyvissä (web, Päätoimittajan täsmennys): ei riipu kartuutsin maasta eikä väistä kartuutsia
-//    (avattu kortti saa peittää sen). Piilossa pallon takapuolella, ruudun ulkopuolella sekä linssin, lentopelin,
+//  - Näkyy vain pelaajan ollessa ajattelijan maassa (omistaja 4.10.2026 klo 19.4x, natiivi: "Ajattelijoiden päät saavat näkyä
+//    vain kohde maassa oltaessa"; ennen web: aina kun piste näkyvissä): kartta.maa (ISO3) = NostoKerros.NykyinenMaa, muualla
+//    piilossa myös kaukozoomissa; maan vaihtuessa peitto häivyttyy nostojen syttymisen ajassa (ErikoisnostoMitat.Haivytys).
+//    Ei väistä kartuutsia (avattu kortti saa peittää sen). Piilossa pallon takapuolella, ruudun ulkopuolella sekä linssin, lentopelin,
 //    kaupunkikortin, valikon ja muun kuin karttatilan aikana (web body-luokat).
 //  - Nenä kohti näkymän keskustaa ±30°, kartan liike heilauttaa (jousi); valo ylhäältä kuten webin pallolaudan suuntavalo,
 //    korkeus kiinnitetty 58°:een (web kartanValo), varjo paperille samasta valosta (UI/AjattelijaPaat.cs). Piirto vain, kun
@@ -31,6 +33,8 @@ namespace Matkakirja.Natiivi
             public double Kulma, Nopeus;
             public string Piirretty;
             public bool Nakyy;
+            /// <summary>Häivytys 0…1 (oma maa → 1, muu → 0).</summary>
+            public float Peitto;
         }
 
         /// <summary>RenderTexturen sivu: 64 pt × 1,5 (varjo) × min(pikselisuhde, 2) kuten web (iPhone 3× → 192).</summary>
@@ -42,6 +46,7 @@ namespace Matkakirja.Natiivi
         readonly List<Paa> paat = new List<Paa>();
         bool rakennettu;
         double? edellinenLon;
+        string edellinenMaa = "";
         PalloKierto kierto;
 
         public Erikoisnostot(UiKerros kerros, Kartuscha kartuscha)
@@ -119,10 +124,22 @@ namespace Matkakirja.Natiivi
             double potku = edellinenLon.HasValue ? ErikoisnostoMitat.Potku(edellinenLon.Value, kierto.pituus, korkeus) : 0;
             edellinenLon = kierto.pituus;
             var valo = KartanValo();
+            // Oma maa (omistaja 4.10.): pelaajan maa nostokerroksesta; häivytys nostojen syttymisen ajassa.
+            var nk = NostoKerros.Instanssi;
+            string maa = nk != null ? nk.NykyinenMaa : null;
+            float kesto = nk != null ? nk.syttyminenS : 0.3f;
+            if (maa != edellinenMaa)
+            {
+                edellinenMaa = maa;
+                Debug.Log($"MATKAKIRJA erikoisnostot: maa {maa ?? "-"}, näkyvät: " + string.Join(", ",
+                    paat.Where(x => ErikoisnostoMitat.OmaMaa(x.A.KarttaMaa, maa)).Select(x => x.A.Tunnus).DefaultIfEmpty("-")));
+            }
             foreach (var p in paat)
             {
-                // Karttapiste ruudulle; false = pallon takana tai ruudun ulkopuolella.
-                if (!p.P.Valmis || !kierto.RuutuPiste(p.A.KarttaPiste[0], p.A.KarttaPiste[1], out var r))
+                bool oma = ErikoisnostoMitat.OmaMaa(p.A.KarttaMaa, maa);
+                p.Peitto = ErikoisnostoMitat.Haivytys(p.Peitto, oma, Time.unscaledDeltaTime, kesto);
+                // Karttapiste ruudulle; false = pallon takana tai ruudun ulkopuolella. Muu maa: piilossa, kun häivytys on ohi.
+                if (p.Peitto <= 0f || !p.P.Valmis || !kierto.RuutuPiste(p.A.KarttaPiste[0], p.A.KarttaPiste[1], out var r))
                 {
                     Nayta(p, false);
                     continue;
@@ -132,6 +149,8 @@ namespace Matkakirja.Natiivi
                 float koko = ErikoisnostoMitat.PaaPt * Kangas;
                 p.Nappi.style.left = x - koko / 2f;
                 p.Nappi.style.top = y - koko / 2f;
+                p.Nappi.style.opacity = p.Peitto;
+                p.Nappi.pickingMode = oma ? PickingMode.Position : PickingMode.Ignore;   // pois häivyttyvää ei napauteta
                 Nayta(p, true);
                 (p.Kulma, p.Nopeus) = ErikoisnostoMitat.Heilahda(p.Kulma, p.Nopeus, potku);
                 float kaanto = ErikoisnostoMitat.Kaanto(x, W, p.Kulma);
@@ -181,10 +200,11 @@ namespace Matkakirja.Natiivi
             var osat = paat.Select(p =>
             {
                 var b = p.Nappi.worldBound;
-                return string.Format(CultureInfo.InvariantCulture, "{0} {1} {2}", p.A.Tunnus, p.P.Valmis ? "valmis" : p.P.Virhe ?? "latautuu",
-                    p.Nakyy ? $"näkyy {b.center.x:0},{b.center.y:0}" : "piilossa");
+                return string.Format(CultureInfo.InvariantCulture, "{0} ({1}) {2} {3} peitto {4:0.00}", p.A.Tunnus, p.A.KarttaMaa ?? "-",
+                    p.P.Valmis ? "valmis" : p.P.Virhe ?? "latautuu", p.Nakyy ? $"näkyy {b.center.x:0},{b.center.y:0}" : "piilossa", p.Peitto);
             });
-            return $"erikoisnostot: kehittäjä {Asetukset.Kehittaja}, sallittu {Sallittu()}, päitä {paat.Count} [{string.Join("; ", osat)}]";
+            return $"erikoisnostot: kehittäjä {Asetukset.Kehittaja}, sallittu {Sallittu()}, maa {NostoKerros.Instanssi?.NykyinenMaa ?? "-"}, "
+                   + $"päitä {paat.Count} [{string.Join("; ", osat)}]";
         }
 
         /// <summary>A/B `ui erikoisnostot kipsi r g b`: kipsin sävykerroin, päät piirretään uudelleen.</summary>
