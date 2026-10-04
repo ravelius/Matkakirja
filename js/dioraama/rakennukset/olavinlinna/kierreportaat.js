@@ -100,6 +100,7 @@ const LAMMIN = '#ff9a4a';
 
 export const TILA = {
   id: 'kierreportaat',
+  lappujarjestys: 7,
   nimi: 'Kierreportaat',
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.

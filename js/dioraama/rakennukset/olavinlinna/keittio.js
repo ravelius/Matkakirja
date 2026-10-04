@@ -58,6 +58,8 @@ const KEITTIO_HAHMOT = [
 
 export const TILA = {
   id: 'keittio',
+  // Nimilappujen tärkeysjärjestys (Siirtoseppä 4.10., omistajan lapputyyli C; vaakana ≤ 3 näkyvissä): 1 = ensin. Web ohittaa.
+  lappujarjestys: 1,
   nimi: 'Keittiö',
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
