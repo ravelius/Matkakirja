@@ -22,12 +22,15 @@ A = sys.argv[sys.argv.index('--') + 1:]
 if A[0] == '--valo':
     # Vaihe 'reiatvalo' (hämärän leivonnan jälkeen): täytteen pienet UV-kartat leipoutuivat tummiksi ja rosoisiksi
     # (v22-koe 1.10.), joten täytetekselien valo = ympäröivien alkuperäisten tekselien valon keskiarvo 0,5 m:n
-    # vokseleista (3×3×3, haku laajenee 5×5×5 ja 7×7×7). Tarvitsee <U>/sijainti-4096.npy (kuori_ranta.py:n leivonta).
+    # vokseleista (3×3×3, haku laajenee 5×5×5 ja 7×7×7). Tarvitsee <U>/sijainti-<koko>.npy (kuori_ranta.py:n leivonta valokartan koossa).
     U, EXR = A[1:3]
     vk = bpy.data.images.load(EXR); K = vk.size[0]
     L = np.empty(K * K * 4, np.float32); vk.pixels.foreach_get(L); L = L.reshape(K, K, 4)
-    m = np.unpackbits(np.load(os.path.join(U, 'reiat-maski.npy')))[:K * K].reshape(K, K).astype(bool)
-    P = np.load(os.path.join(U, 'sijainti-4096.npy'))[::-1]  # rivi 0 = alareuna kuten Blenderin pikselit
+    # 5.10.: valokartta voi olla 8k (kuori_putki.sh VALO=8192); aukkomaski on 4k → toisto lähimpänä, sijainti valokartan koossa
+    bitit = np.unpackbits(np.load(os.path.join(U, 'reiat-maski.npy'))); Km = 4096 if len(bitit) < K * K else K
+    m = bitit[:Km * Km].reshape(Km, Km).astype(bool)
+    if Km != K: m = np.repeat(np.repeat(m, K // Km, 0), K // Km, 1)
+    P = np.load(os.path.join(U, f'sijainti-{K}.npy'))[::-1]  # rivi 0 = alareuna kuten Blenderin pikselit
     ok = P[..., 2] > 900; P = P - 1000
     alue_lo = P[m & ok].min(0) - 4; alue_hi = P[m & ok].max(0) + 4
     lahde = ok & ~m & np.all((P >= alue_lo) & (P <= alue_hi), -1)
@@ -46,6 +49,16 @@ if A[0] == '--valo':
                     v = np.clip(vt + [dx, dy, dz], 0, dims - 1); ss += S[v[:, 0], v[:, 1], v[:, 2]]; cc += C[v[:, 0], v[:, 1], v[:, 2]]
         uus = ~tehty & (cc > 20); uusi[uus] = (ss[uus] / cc[uus, None]); tehty |= uus
     L[kohde] = np.c_[np.where(tehty[:, None], uusi, L[kohde][:, :3]), np.ones(len(vt))]
+    # 5.10.: vokselikeskiarvo (0,5 m) näkyi 8k-valokartassa ruutuina → pehmennys täyttötekselien kesken (laatikkosumennus
+    # 3× ≈ gauss, säde K/512 tekseliä), vain täyttöalueella; alkuperäiset tekselit ennallaan.
+    def laatikko(X, r):
+        for ax in (0, 1):
+            c = np.cumsum(np.pad(X, [(r + 1, r) if a_ == ax else (0, 0) for a_ in range(X.ndim)], mode='edge'), axis=ax)
+            X = (np.take(c, range(2 * r + 1, c.shape[ax]), axis=ax) - np.take(c, range(0, c.shape[ax] - 2 * r - 1), axis=ax)) / (2 * r + 1)
+        return X
+    r = max(2, K // 512); mk = kohde.astype(np.float32); num = L[..., :3] * mk[..., None]; den = mk
+    for _ in range(3): num = np.stack([laatikko(num[..., c], r) for c in range(3)], -1); den = laatikko(den, r)
+    L[kohde, :3] = num[kohde] / np.maximum(den[kohde], 1e-6)[:, None]
     vk.pixels.foreach_set(L.ravel()); vk.update()
     sc = bpy.context.scene; ims = sc.render.image_settings; ims.file_format = 'OPEN_EXR'; ims.color_depth = '16'; ims.exr_codec = 'DWAA'
     sc.view_settings.view_transform = 'Standard'; vk.save_render(EXR, scene=sc)
