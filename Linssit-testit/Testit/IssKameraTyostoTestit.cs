@@ -11,6 +11,21 @@ namespace Matkakirja.Linssit.Testit
     static class IssKameraTyostoTestit
     {
         [Testi]
+        static void MaanAukkoTaydentyyLaatanDatasta()
+        {
+            // Simu e9f59947: radan välinen kiila (maata) täytetään laatan omasta datasta, ei BMNG:tä eikä merenväriä.
+            var ty = new KuvanTyosto { Maalla = (la, lo) => true };
+            var rgba = new byte[256 * 256 * 4];
+            for (int y = 0; y < 256; y++)
+                for (int x = 0; x < 256; x++)
+                    if (x < 100 || x > 140) { int o = (y * 256 + x) * 4; rgba[o] = 40; rgba[o + 1] = 90; rgba[o + 2] = 50; rgba[o + 3] = 255; }
+            ty.TaytaMeri(11, 1075, 900, rgba, new byte[] { 10, 20, 60 });
+            int k = (128 * 256 + 120) * 4;
+            Oleta.Sama((byte)255, rgba[k + 3], "aukko täyttyi");
+            Oleta.Sama((byte)90, rgba[k + 1], "naapurien väri (metsä), ei merenväri");
+        }
+
+        [Testi]
         static void UsvatasoitusTummimpaanRuutuun()
         {
             // Simu d753d794 (Amazonia): sameampi ruutu = tummat kohteet vaaleampia → erotus vähennetään ennen lutia.

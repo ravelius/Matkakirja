@@ -270,6 +270,7 @@ namespace Matkakirja.Linssit.IssKamera
         internal void TaytaMeri(int z, int x, int y, byte[] rgba, byte[] meri)
         {
             bool[] maa = null;
+            List<int> aukko = null, meriPikselit = null;
             for (int i = 0; i < rgba.Length; i += 4)
             {
                 if (rgba[i + 3] != 0) continue;
@@ -286,9 +287,48 @@ namespace Matkakirja.Linssit.IssKamera
                             }
                     }
                     int px = (i / 4) % 256, py = (i / 4) / 256;
-                    if (maa[(py * MaaRuudukko / 256) * MaaRuudukko + px * MaaRuudukko / 256]) continue;
+                    if (maa[(py * MaaRuudukko / 256) * MaaRuudukko + px * MaaRuudukko / 256]) { (aukko ??= new List<int>()).Add(i / 4); continue; }
                 }
-                rgba[i] = meri[0]; rgba[i + 1] = meri[1]; rgba[i + 2] = meri[2]; rgba[i + 3] = 254;
+                (meriPikselit ??= new List<int>()).Add(i / 4);
+            }
+            // Ensin maan aukot todellisesta datasta (ei merenvärin täytöstä), sitten meri.
+            if (aukko != null) Taydenna(rgba, aukko);
+            if (meriPikselit != null)
+                foreach (int k in meriPikselit) { int i = k * 4; rgba[i] = meri[0]; rgba[i + 1] = meri[1]; rgba[i + 2] = meri[2]; rgba[i + 3] = 254; }
+        }
+
+        /// <summary>
+        /// Maan datattomat pikselit (radan välinen kiila) täytetään laatan omasta datasta reunoilta sisäänpäin (diffuusio: naapurien
+        /// keskiarvo kierros kerrallaan, enintään TaydennysKierroksia). Simu e9f59947 -laattavedos: Amazonian kiila oli läpinäkyvä,
+        /// eikä yksikään varakuva (sama rata) peittänyt sitä; alta näkyvä BMNG oli tumma kiila. Laatta, jossa ei ole dataa, jää
+        /// läpinäkyväksi.
+        /// </summary>
+        public const int TaydennysKierroksia = 256;
+
+        static void Taydenna(byte[] rgba, List<int> aukko)
+        {
+            var jono = aukko;
+            var paivitys = new List<(int i, byte r, byte g, byte b)>();
+            for (int k = 0; k < TaydennysKierroksia && jono.Count > 0; k++)
+            {
+                var seuraava = new List<int>(); paivitys.Clear();
+                foreach (int i in jono)
+                {
+                    int px = i % 256, py = i / 256, n = 0, sr = 0, sg = 0, sb = 0;
+                    for (int dy = -1; dy <= 1; dy++)
+                        for (int dx = -1; dx <= 1; dx++)
+                        {
+                            int qx = px + dx, qy = py + dy;
+                            if ((dx == 0 && dy == 0) || qx < 0 || qy < 0 || qx > 255 || qy > 255) continue;
+                            int o = (qy * 256 + qx) * 4;
+                            if (rgba[o + 3] == 0) continue;
+                            sr += rgba[o]; sg += rgba[o + 1]; sb += rgba[o + 2]; n++;
+                        }
+                    if (n > 0) paivitys.Add((i, (byte)(sr / n), (byte)(sg / n), (byte)(sb / n))); else seuraava.Add(i);
+                }
+                if (paivitys.Count == 0) break;
+                foreach (var (i, r, g, b) in paivitys) { int o = i * 4; rgba[o] = r; rgba[o + 1] = g; rgba[o + 2] = b; rgba[o + 3] = 255; }
+                jono = seuraava;
             }
         }
 
