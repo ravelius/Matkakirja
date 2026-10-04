@@ -120,6 +120,7 @@ namespace Matkakirja.Natiivi
             k.nelio = Nelio();
             k.pilvienOsoite = pilvienOsoite;
             kierto.Napautettu += k.Napautus;
+            CupolaEnnakko.Luo(k, g, k.kamera);   // kylmä Cupolan avaus: laatat ladataan jo kaukonäkymässä
             return k;
         }
 

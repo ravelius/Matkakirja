@@ -94,6 +94,7 @@ namespace Matkakirja.Natiivi
                     {
                         case "musta": l.Astronautti.Avaus(AvauksenVaihe.Musta); return null;
                         case "cupola": return "=cupolan musta: " + l.Astronautti.CupolanMustaTila();
+                        case "ennakko": if (a2 != null) CupolaEnnakko.Kaytossa = a2 != "0"; return "=ennakko " + CupolaEnnakko.Kaytossa + " (" + CupolaEnnakko.Tila + ")";
                         case "cupolakuvat": AstronautinNakyma.CupolaKuvat = a2 != "0"; return "=cupolakuvat " + AstronautinNakyma.CupolaKuvat;
                         case "otsikko": l.Astronautti.Avaus(AvauksenVaihe.OtsikkoPois); return null;
                         case "paljastus": l.Astronautti.Avaus(AvauksenVaihe.MustaPois); return null;
