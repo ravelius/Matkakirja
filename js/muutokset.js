@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2605, teksti: 'Raamattu: lataus sama kaikilla verkoilla (#3938)' },
   { v: 2604, teksti: 'Linnakirjasto erä 2: hahmot, taivaat, esiasetuk… (#3933)' },
   { v: 2603, teksti: 'Olavinlinna: liekkien koot takaisin liekkipanki… (#3932)' },
   { v: 2602, teksti: 'Olavinlinnan keittiö: apulaisen ääni C, repliik… (#3740)' },
