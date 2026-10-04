@@ -34,8 +34,12 @@ test('blender.json: kuoren kaikki laatutasot ja tekstuurit sekä jokaisen kohdis
   }
 });
 
-test('blender.json: ei lähdemallia eikä käyttämättömiä tiedostoja (senaatti-alkup, ulkokuori-4k.jpg)', () => {
-  for (const p of on) assert.ok(!p.includes('senaatti-alkup') && p !== 'ulkokuori/ulkokuori-4k.jpg' && p !== 'ulkokuori/ulkokuori-2k.jpg', p);
+test('blender.json: ei lähdemallia (senaatti-alkup); kuoren päivä-JPEG:t vain kokonaisena varapolkuna', () => {
+  for (const p of on) assert.ok(!p.includes('senaatti-alkup'), p);
+  // 4.10. (#3944): ulkokuori-{2k,4k,8k}.jpg = päivätilan JPEG-vara ilman ASTC:tä (rakennus.json ulkokuori.tekstuurit.jpg);
+  // ennen niitä ei käytetty mihinkään. Joko kaikki kolme tai ei yhtään (rakenna.mjs kirjoittaa avaimen vain kokonaisena).
+  const jpg = ['2k', '4k', '8k'].filter((k) => on.has(`ulkokuori/ulkokuori-${k}.jpg`)).length;
+  assert.ok(jpg === 0 || jpg === 3, `päivä-JPEG:itä ${jpg}/3`);
 });
 
 // Palikkapaketin vartija (Päätoimittaja 30.9.): kun blender.json on olemassa, paketti ilman ulkokuorta hylätään.
