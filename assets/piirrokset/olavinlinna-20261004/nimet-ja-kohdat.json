@@ -1,0 +1,446 @@
+[
+  {
+    "name": "Kellotorni",
+    "target": [
+      691.0,
+      568.5
+    ],
+    "side": "left",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Kellotornin fatabuuri",
+    "target": [
+      691.0,
+      813.5
+    ],
+    "side": "left",
+    "source": "Peli: fatabuuri.js; Hakanpää 2019, s. 183",
+    "kind": "tila",
+    "detail": "Sisätila, B 101",
+    "sub": "sisätila"
+  },
+  {
+    "name": "Päälinnan pohjoissiipi",
+    "target": [
+      767.4,
+      670.4
+    ],
+    "side": "left",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Keskushalli ja väentupa",
+    "target": [
+      787.3,
+      751.3
+    ],
+    "side": "left",
+    "source": "Peli: keskushalli.js; Hakanpää 2019, s. 193",
+    "kind": "tila",
+    "detail": "Pelin nimi; pohjoissiiven keskushalli D 101",
+    "sub": "sisätila"
+  },
+  {
+    "name": "Adjutantin rakennus",
+    "target": [
+      802.6,
+      789.6
+    ],
+    "side": "left",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Päälinna (pääkastelli)",
+    "target": [
+      804.6,
+      702.1
+    ],
+    "side": "left",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Päälinnan piha",
+    "target": [
+      869.4,
+      896.9
+    ],
+    "side": "left",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6; s. 33",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Läntinen kehämuuri",
+    "target": [
+      820.2,
+      873.7
+    ],
+    "side": "left",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "Päälinnan läntinen kehämuuri",
+    "sub": ""
+  },
+  {
+    "name": "Tornin kierreportaat (tulkinta)",
+    "target": [
+      671.4,
+      739.9
+    ],
+    "side": "left",
+    "source": "Peli: kierreportaat.js",
+    "kind": "tulkinta",
+    "detail": "Pelin sisätilan tulkinta, ei rakennusinventointi",
+    "sub": "pelin tulkinta"
+  },
+  {
+    "name": "Kellobastioni",
+    "target": [
+      592.4,
+      843.9
+    ],
+    "side": "left",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Uusi esilinna",
+    "target": [
+      755.9,
+      875.4
+    ],
+    "side": "left",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Pääportti",
+    "target": [
+      659.6,
+      916.6
+    ],
+    "side": "left",
+    "source": "Hakanpää 2019, s. 56",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Vesiportin bastioni",
+    "target": [
+      751.6,
+      980.1
+    ],
+    "side": "left",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Ponttonisilta",
+    "target": [
+      625.8,
+      1050.8
+    ],
+    "side": "left",
+    "source": "Hakanpää 2019, s. 56",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Laituri ja kavassit",
+    "target": [
+      645.4,
+      1026.4
+    ],
+    "side": "left",
+    "source": "Peli: laituri.js",
+    "kind": "tulkinta",
+    "detail": "Nimi on pelistä; nykyisen laiturin paikka on kaaviollinen. Kavasseja ei ole piirretty nykyasuun.",
+    "sub": "pelin tulkinta"
+  },
+  {
+    "name": "Kirkkotorni",
+    "target": [
+      858.5,
+      502.0
+    ],
+    "side": "top",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Kirkkotornin kappeli",
+    "target": [
+      858.5,
+      621.0
+    ],
+    "side": "top",
+    "source": "Peli: kappeli.js",
+    "kind": "tila",
+    "detail": "Tornin kappeli, kolmas kerros",
+    "sub": "sisätila"
+  },
+  {
+    "name": "Muurinharja",
+    "target": [
+      777.2,
+      672.2
+    ],
+    "side": "top",
+    "source": "Peli: muurinharja.js",
+    "kind": "tila",
+    "detail": "Pelin kulkutila päälinnan pohjoisreunalla",
+    "sub": "kulkutila"
+  },
+  {
+    "name": "Esilinnan pohjoissiipi",
+    "target": [
+      1026.3,
+      596.8
+    ],
+    "side": "top",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Kijlin torni",
+    "target": [
+      1215.8000000000002,
+      362.79999999999995
+    ],
+    "side": "top",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Suvorovin esilinna",
+    "target": [
+      1361.8000000000002,
+      597.3
+    ],
+    "side": "right",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Itäpatteri",
+    "target": [
+      1297.9,
+      627.4
+    ],
+    "side": "right",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Kotkaportti",
+    "target": [
+      1310.6,
+      710.6
+    ],
+    "side": "right",
+    "source": "Hakanpää 2019, s. 17 / K 104",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Tykistökasarmi",
+    "target": [
+      1066.2,
+      688.7
+    ],
+    "side": "right",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Esilinnan piha",
+    "target": [
+      1182.7,
+      812.7
+    ],
+    "side": "right",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6; s. 17",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Päälinnan itäsiipi",
+    "target": [
+      913.5,
+      709.0
+    ],
+    "side": "right",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Linnan keittiö",
+    "target": [
+      888.9000000000001,
+      844.4
+    ],
+    "side": "right",
+    "source": "Peli: keittio.js",
+    "kind": "tila",
+    "detail": "Pieni linnanpiha, itäsiiven alakerta; paikka pelin tulkinta",
+    "sub": "sisätila / pelin paikka"
+  },
+  {
+    "name": "Päälinnan porttikäytävä",
+    "target": [
+      936.1,
+      878.1
+    ],
+    "side": "right",
+    "source": "Hakanpää 2019, s. 17 / E 102",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Kansliarakennus",
+    "target": [
+      995.4000000000001,
+      819.4
+    ],
+    "side": "right",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Vartiotupa (tulkinta)",
+    "target": [
+      973.2,
+      860.7
+    ],
+    "side": "right",
+    "source": "Peli: vartiotupa.js",
+    "kind": "tulkinta",
+    "detail": "Pelin tulkinta; tämän kuvan johtoviivan paikka ei todista nykyistä huonejakoa",
+    "sub": "pelin tulkinta"
+  },
+  {
+    "name": "Paksu bastioni",
+    "target": [
+      1380.2,
+      745.2
+    ],
+    "side": "right",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Eteläpatteri",
+    "target": [
+      1247.4,
+      804.4
+    ],
+    "side": "right",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Panimoportti",
+    "target": [
+      1205.6,
+      884.1
+    ],
+    "side": "right",
+    "source": "Hakanpää 2019, s. 17 / N 109",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Pikkuportin bastioni",
+    "target": [
+      1218.3,
+      925.3
+    ],
+    "side": "right",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "",
+    "sub": ""
+  },
+  {
+    "name": "Rautaportin paikka",
+    "target": [
+      1005.6,
+      932.9
+    ],
+    "side": "bottom",
+    "source": "Hakanpää 2019, s. 17–18",
+    "kind": "raunio",
+    "detail": "Keskiaikaisen portin kaivauksessa todettu paikka, ei nykyinen sisäänkäynti",
+    "sub": "historiallinen paikka"
+  },
+  {
+    "name": "Kurtiini",
+    "target": [
+      1013.1,
+      910.6
+    ],
+    "side": "bottom",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6",
+    "kind": "osa",
+    "detail": "Bastionien välinen muuri",
+    "sub": ""
+  },
+  {
+    "name": "Pyhän Eerikin tornin jäännös",
+    "target": [
+      971.0,
+      930.5
+    ],
+    "side": "bottom",
+    "source": "Senaatti / Hakanpää 2019, paikannuskartta s. 6; s. 19",
+    "kind": "raunio",
+    "detail": "Purettu torni: merkitty vain säilyneen alapohjan paikaksi",
+    "sub": "purettu torni"
+  }
+]

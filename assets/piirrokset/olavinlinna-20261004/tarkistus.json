@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-04",
+  "svgGroups": [
+    "piirros",
+    "nimet",
+    "viittausviivat"
+  ],
+  "labels": 37,
+  "requiredGameLabels": 8,
+  "dimensions": [
+    4096,
+    3120
+  ],
+  "alphaExtrema": [
+    0,
+    255
+  ],
+  "contentBounds": [
+    140,
+    126,
+    3629,
+    2986
+  ],
+  "paperColor": "#f3e6d0",
+  "ink": "#44372c",
+  "rasterColorTolerance": 1,
+  "visualReview": "Whole drawing and all margins inspected; labels readable; three surviving towers, two historical places.",
+  "scope": "Artifact validation; no game code or version changes."
+}
