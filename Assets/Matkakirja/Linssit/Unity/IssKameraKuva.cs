@@ -84,8 +84,11 @@ namespace Matkakirja.Natiivi
         public const int Ilmaisia = 1;
         const string OtettuAvain = "iss-kuvia-otettu";
         public static int Otettu => PlayerPrefs.GetInt(OtettuAvain, 0);
-        /// <summary>Pöllön kehittäjäkoodilla rajaton (omistaja #3939; vain TF- ja kehityskäännökset, App Storessa Kehittaja aina false).</summary>
-        public static bool Rajaton => Asetukset.Kehittaja;
+        /// <summary>
+        /// Rajaton: ostot pois (IssKuvaKauppa.Kaytossa, omistaja 15.2x "otetaan ostot myöhemmin käyttöön") tai Pöllön kehittäjäkoodi
+        /// (omistaja #3939; vain TF- ja kehityskäännökset, App Storessa Kehittaja aina false). Rajattomana ei laskuria eikä hintaa.
+        /// </summary>
+        public static bool Rajaton => !IssKuvaKauppa.Kaytossa || Asetukset.Kehittaja;
         public static int KuviaJaljella => Rajaton ? int.MaxValue : Math.Max(0, Ilmaisia + IssKuvaKauppa.Ostettu - Otettu);
 
         /// <summary>Valmis oma kuva kuvanäkymälle (Natiivi-UI: AvaaOmaKuva) ja jakoon; kutsutaan pääsäikeessä tallennuksen jälkeen.</summary>

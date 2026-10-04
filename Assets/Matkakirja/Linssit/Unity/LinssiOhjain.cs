@@ -1515,6 +1515,7 @@ namespace Matkakirja.Natiivi
                 {
                     // Kuvan osto (omistaja #3939): kauppa tila | kauppa koe osta|odota|peru|virhe|pois | kauppa nollaa | kauppa osta
                     if (osat.Length > 2 && osat[1] == "koe") IssKuvaKauppa.Koe = osat[2] == "pois" ? null : osat[2];
+                    else if (osat.Length > 2 && osat[1] == "kaytossa") { IssKuvaKauppa.Kaytossa = osat[2] != "0"; IssKuvaKauppa.Lataa(); }
                     else if (osat.Length > 1 && osat[1] == "nollaa") { IssKuvaKauppa.Nollaa(); IssKameraKuva.NollaaKuvat(); }
                     else if (osat.Length > 1 && osat[1] == "osta") IssKameraKuva.OstaJaKuvaa("4:5", 1080, t => Kirjaa("kauppa osta: " + t + ", kuva " + IssKameraKuva.Tila));
                     Kirjaa(IssKuvaKauppa.TilaTeksti() + $", kuvia jäljellä {(IssKameraKuva.Rajaton ? "rajaton" : IssKameraKuva.KuviaJaljella.ToString())}, otettu {IssKameraKuva.Otettu}, kamera {IssKameraKuva.Tila}");

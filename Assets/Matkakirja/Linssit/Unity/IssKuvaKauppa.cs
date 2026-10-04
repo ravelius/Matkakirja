@@ -21,6 +21,12 @@ namespace Matkakirja.Natiivi
 {
     public static class IssKuvaKauppa
     {
+        /// <summary>
+        /// OSTOT KÄYTÖSSÄ (omistaja 4.10.2026 klo 15.2x: "otetaan ostot myöhemmin käyttöön"): pois = kuvat rajattomia kaikille, ei
+        /// laskuria, ei hintaa, eikä StoreKitia alusteta. Koodi valmiina tämän takana; testikomento `kauppa kaytossa 1|0`.
+        /// </summary>
+        public static bool Kaytossa = false;
+
         /// <summary>Tuotetunnus (Julkaisija vahvistaa App Store Connectissa).</summary>
         public static string Tuote = "fi.matkakirja.peli.isskuva";
         public enum Tulos { Onnistui, Peruttu, Odottaa, Epaonnistui }
@@ -44,7 +50,7 @@ namespace Matkakirja.Natiivi
 
         public static void Lataa()
         {
-            if (ladattu) return;
+            if (!Kaytossa || ladattu) return;
             ladattu = true;
 #if UNITY_IOS && !UNITY_EDITOR
             try { MatkakirjaKauppa_Kuuntele(UusiKutsu); MatkakirjaKauppa_Lataa(Tuote, LadattuKutsu); }
@@ -54,6 +60,7 @@ namespace Matkakirja.Natiivi
 
         public static void Osta(Action<Tulos> valmis)
         {
+            if (!Kaytossa) { valmis?.Invoke(Tulos.Onnistui); return; }   // ostot pois: kuva kuten ilmainen
             if (Kesken) { valmis?.Invoke(Tulos.Epaonnistui); return; }
             Kesken = true;
             Debug.Log($"MATKAKIRJA kauppa: osto {Tuote} ({Hinta ?? HintaOletus}){(Koe != null ? " koe " + Koe : "")}");
@@ -108,7 +115,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Testi: ostetut ja hyvitetyt tapahtumat nollaan (`kauppa koe nollaa`).</summary>
         public static void Nollaa() { PlayerPrefs.DeleteKey(OstettuAvain); PlayerPrefs.DeleteKey(TapahtumatAvain); PlayerPrefs.Save(); }
 
-        public static string TilaTeksti() => $"kauppa: tuote {Tuote}, hinta {Hinta ?? "-"}, ostettu {Ostettu}, kesken {Kesken}, odottaa {Odottaa}, koe {Koe ?? "-"}";
+        public static string TilaTeksti() => $"kauppa: käytössä {Kaytossa}, tuote {Tuote}, hinta {Hinta ?? "-"}, ostettu {Ostettu}, kesken {Kesken}, odottaa {Odottaa}, koe {Koe ?? "-"}";
 
 #if UNITY_IOS && !UNITY_EDITOR
         delegate void LadattuFn(int ok, IntPtr hinta);
