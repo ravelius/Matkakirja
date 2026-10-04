@@ -14,8 +14,17 @@ const B = JSON.parse(readFileSync(new URL('../js/dioraama/rakennukset/olavinlinn
 const on = new Set(B.tiedostot.map((t) => t.polku));
 
 test('blender.json: hash = sisältö (sama laskenta kuin vie-blender.sh), kansio muuttumaton hash-polku', () => {
-  const rivit = [...B.tiedostot].sort((a, b) => (a.polku < b.polku ? -1 : 1)).map((t) => `${t.polku} ${t.sha256}\n`).join('');
+  const jarj = [...B.tiedostot].sort((a, b) => (a.polku < b.polku ? -1 : 1));
+  // 5.10.: hash kattaa myös pakatut (.br / .zst) samassa järjestyksessä alkuperäisten jälkeen (vie-blender.sh 2b)
+  const pakattu = (t) => (t.br ? ['br', t.br] : t.zst ? ['zst', t.zst] : null);
+  const rivit = jarj.map((t) => `${t.polku} ${t.sha256}\n`).join('')
+    + jarj.filter(pakattu).map((t) => { const [m, z] = pakattu(t); return `${t.polku}.${m} ${z.sha256}\n`; }).join('');
   assert.equal(B.hash, createHash('sha256').update(rivit).digest('hex').slice(0, 16));
+  for (const t of jarj.filter(pakattu)) {
+    const [, z] = pakattu(t);
+    assert.ok(/^[0-9a-f]{64}$/.test(z.sha256) && z.tavuja > 0 && z.tavuja <= t.tavuja * 0.95, `${t.polku}: pakattu ≥ 5 % pienempi`);
+    assert.ok(/\.(astcm|glb|json)$/.test(t.polku), `${t.polku}: vain astcm/glb/json pakataan`);
+  }
   assert.equal(B.kansio, `dioraama/${RAKENNUS.id}/blender/${B.hash}/`);
   for (const t of B.tiedostot) assert.ok(/^[0-9a-f]{64}$/.test(t.sha256) && t.tavuja > 0, t.polku);
 });
