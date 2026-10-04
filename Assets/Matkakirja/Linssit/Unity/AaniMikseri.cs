@@ -140,6 +140,15 @@ namespace Matkakirja.Natiivi
                 int i = rivi.LastIndexOf('=');
                 if (i > 0 && float.TryParse(rivi.Substring(i + 1), NumberStyles.Float, Inv, out var v)) tallennettu[rivi.Substring(0, i)] = v;
             }
+            // Omistaja 5.10.: "Mikseriin ei jää nollia" — uudet linnan oletustasot (DioraamaAanet.RyhmaOletus, väistö): vanhat
+            // tallennetut linna-arvot (esim. taustat 0 %) pois kerran; Cupolan säädöt säilyvät.
+            if (PlayerPrefs.GetInt(Avain + "-linna-oletus2", 0) == 0)
+            {
+                foreach (var k in tallennettu.Keys.Where(k => k.StartsWith("linna|", StringComparison.Ordinal)).ToList()) tallennettu.Remove(k);
+                PlayerPrefs.SetString(Avain, string.Join(";", tallennettu.Select(p => p.Key + "=" + p.Value.ToString("0.###", Inv))));
+                PlayerPrefs.SetInt(Avain + "-linna-oletus2", 1);
+                PlayerPrefs.Save();
+            }
             muokattu.Clear();
             foreach (var p in tallennettu) muokattu[p.Key] = p.Value;
         }

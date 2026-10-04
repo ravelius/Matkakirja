@@ -66,6 +66,17 @@ namespace Matkakirja.Natiivi
         // soivat ryhmänsä omasta lähteestä, jonka volume liukuu joka kehys: myös jo soiva 40 s:n laulu väistää kesken soiton.
         public static readonly string[] Ryhmat = { "askeleet", "kuoro", "tehosteet", "liekit", "taustat" };
         public static readonly Dictionary<string, float> RyhmaKerroin = new Dictionary<string, float>();
+        /// <summary>OLETUSTASOT (omistaja 5.10. "Aseta kaikki äänet valmiiksi järkeville tasoille"; mitattu sovelluksen kaappauksesta ja
+        /// klippien momentaariäänekkyydestä, simu 5.10. 01.2x): kertoja ≈ −20 LUFS. Taustat ilman puhetta −35 → ×1,8 ≈ −30 (10 dB alle),
+        /// kuoro ja kellot (laulu-kaukaa M −22, kello −23) ×0,32 ≈ −32 (12 dB alle), tehosteet (lokit −25,5, ovi −21) ×0,35 ≈ −30…−35,
+        /// askeleet −31 ennallaan, liekit huoneen taustojen tasolla. Mikserin 100 % = tämä oletus.</summary>
+        public static readonly Dictionary<string, float> RyhmaOletus = new Dictionary<string, float>
+            { ["askeleet"] = 1f, ["kuoro"] = 0.32f, ["tehosteet"] = 0.35f, ["liekit"] = 1f, ["taustat"] = 1.8f };
+        /// <summary>Väistön syvyys puheen alla (mikserin "Väistö puheessa" 100 %): 0,55 → taso 0,45 ≈ −7 dB, jolloin taustat ovat puheen
+        /// aikana ≈ 17 dB kertojan alla (tavoite 15–20 dB; aiempi 0,85 → −16,5 dB vei ne yli 25 dB alle).</summary>
+        const double VaistonSyvyys = 0.55;
+        static float RyhmanKerroin(string ryhma) =>
+            (RyhmaOletus.TryGetValue(ryhma, out var o) ? o : 1f) * Kerroin(RyhmaKerroin, ryhma);
         /// <summary>Ääni-id:n ryhmä nimen perusteella (pankissa ei ole ryhmäkenttää).</summary>
         public static string Ryhma(string aaniId, bool silmukka)
         {
@@ -240,7 +251,7 @@ namespace Matkakirja.Natiivi
                         && (Ryhma(ap.AaniId, true) != "taustat" || ap.AaniId.EndsWith("-ambienssi", StringComparison.Ordinal))) continue;
                     double pankinVoimakkuus = rak.Aanet.TryGetValue(ap.AaniId, out var aani) ? aani.Voimakkuus : 1;
                     double taso01Raw = aanimaisemaPaalla ? tavoite * ap.Voimakkuus * pankinVoimakkuus
-                        * Kerroin(HuoneKerroin, tila.Id) * Kerroin(TaustaKerroin, ap.AaniId) * Kerroin(RyhmaKerroin, Ryhma(ap.AaniId, true)) : 0;
+                        * Kerroin(HuoneKerroin, tila.Id) * Kerroin(TaustaKerroin, ap.AaniId) * RyhmanKerroin(Ryhma(ap.AaniId, true)) : 0;
                     ehdokkaat.Add((tila.Id, ap.AaniId, taso01Raw));
                 }
                 if (aanimaisemaPaalla)
@@ -273,12 +284,12 @@ namespace Matkakirja.Natiivi
             if (huone != NykyinenHuone) { NykyinenHuone = huone; HuoneVaihtui?.Invoke(huone); aanettomat.Clear(); }
             bool puheSoi = puhuu || Time.unscaledTime < puheLoppuu || MuuPuheSoi;
             // Sovittimen duckaus puheen ajaksi (0,15); mikserin VaistoKerroin skaalaa väistön (1 = nykyinen, 0 = ei väistöä).
-            double duck = puheSoi ? 1.0 - 0.85 * Kerroin(VaistoKerroin, huone ?? "") : 1.0;
+            double duck = puheSoi ? 1.0 - VaistonSyvyys * Kerroin(VaistoKerroin, huone ?? "") : 1.0;
             viimeDuck = (float)duck;
             // Kertaäänten ryhmät: sama väistö ja liuku (0,4 s) kuin silmukoilla, kerrottuna ryhmän mikserikertoimella.
             foreach (var kv in kertaLahteet)
                 if (kv.Value != null)
-                    kv.Value.volume = Mathf.MoveTowards(kv.Value.volume, (float)duck * Kerroin(RyhmaKerroin, kv.Key), Time.unscaledDeltaTime / 0.4f);
+                    kv.Value.volume = Mathf.MoveTowards(kv.Value.volume, (float)duck * RyhmanKerroin(kv.Key), Time.unscaledDeltaTime / 0.4f);
             soivatTaustat.Clear();
             foreach (var e in ehdokkaat) if (sallitut.Contains((e.Tila, e.Aani))) soivatTaustat.Add((e.Tila, e.Aani, (float)(e.Taso * duck)));
             foreach (var e in ehdokkaat)
