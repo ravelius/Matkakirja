@@ -8,6 +8,14 @@
 //   testikomento   astro kyyti kuvaa [4:5|9:16|4:3] [leveys px], astro kyyti kuvaa tila
 //   indeksi        Documents/iss-kamera/indeksi.json, jos on (testi), muuten S2Indeksi.Osoite (välimuistiin samaan paikkaan)
 //   loki           "MATKAKIRJA linssit: iss-kamera: …" (vaiheet, megatavut, kestot)
+// TARKKA ISS-KUVA (omistaja 4.10.2026 klo 11.44: "Kameranappi tekee VAIN tarkan ISS-kuvan", nappi aktiivinen vain kuvauspaikan
+// kohdalla, yksi ilmainen kuva ja sitten kuvapaketit): Cupolan katseen ollessa kuvauspaikalla (AstronauttiLinssi.Kuvauspaikka)
+// laukaisu käyttää Karttasepän valmista kuvauspaikan kuvaa (kuvauspaikat/v1/<tunniste>.jpg, 20 × 20 km) COG-haun sijaan:
+// PaikanLaatat tekee siitä kuvan pinnan, kamera rajataan paikkaan ISS:ltä (Kuvauspaikat.Rajaus, AstronauttiLinssi.Vertailu kuvan
+// ajaksi), ja laitteella tulevat ilmakehä, valo, pilvet ja kameran tuntu kuten ennen. Muualla nappi ei kuvaa (VainKuvauspaikat;
+// kehittäjän COG-polku `astro kyyti kuvaa vapaa 1`). Ilmaisia kuvia Ilmaisia (PlayerPrefs iss-kuvia-otettu); paketit myöhemmin.
+//   testikomennot  astro kyyti kuvaa paikka (tila), kuvaa nollaa (ilmainen kuva takaisin), kuvaa vapaa 0|1
+//   aineisto       Documents/iss-kamera/kuvauspaikat.json ja kuvauspaikat/<tunniste>.jpg, jos on (testi), muuten ämpäri
 // Käyttöliittymä (KUVAA-nappi, rajausruutu, edistyminen) tulee UI-pohjista (omistajan päätös 1.10.: A + Natiivi-UI).
 using System;
 using System.Collections;
@@ -17,6 +25,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using CesiumForUnity;
+using Matkakirja.Linssit.Astronautti;
 using Matkakirja.Linssit.Iss;
 using Matkakirja.Linssit.IssKamera;
 using Unity.Mathematics;
@@ -65,6 +74,39 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Kuvaputki käynnissä (laukaisusta valmiiseen): Cupolan katseen veto ohitetaan (CupolaVeto, IssKatse.Lukittu).</summary>
         public static bool Kaynnissa => olio != null && olio.kaynnissa;
+
+        /// <summary>Kameranappi kuvaa vain kuvauspaikoilla (omistaja 4.10.); false = kehittäjän vanha COG-polku kaikkialla.</summary>
+        public static bool VainKuvauspaikat = true;
+        /// <summary>Ilmaisia tarkkoja kuvia (omistaja: "yksi ilmainen kuva ja sitten kuvapaketit"); paketit (Ostettu) myöhemmin.</summary>
+        public const int Ilmaisia = 1;
+        public static int Ostettu = 0;
+        const string OtettuAvain = "iss-kuvia-otettu";
+        public static int Otettu => PlayerPrefs.GetInt(OtettuAvain, 0);
+        public static int KuviaJaljella => Math.Max(0, Ilmaisia + Ostettu - Otettu);
+        public static void NollaaKuvat() { PlayerPrefs.DeleteKey(OtettuAvain); PlayerPrefs.Save(); }
+        /// <summary>Kuvauspaikka-aineiston ämpäripolku (Karttaseppä: kooste kuvauspaikat.json).</summary>
+        public const string PaikatPolku = "kuvauspaikat/v1/kuvauspaikat.json";
+        static bool paikatLadattu;
+
+        /// <summary>Kuvauspaikat kerran (LinssiOhjain.LataaAstronautti): testitiedosto Documents/iss-kamera/kuvauspaikat.json tai ämpäri.</summary>
+        public static IEnumerator LataaPaikat()
+        {
+            if (paikatLadattu) yield break;
+            paikatLadattu = true;
+            string json = null, testi = Path.Combine(Application.persistentDataPath, "iss-kamera", "kuvauspaikat.json");
+            if (File.Exists(testi)) json = File.ReadAllText(testi);
+            else
+            {
+                using var q = UnityWebRequest.Get(Kuvauspaikat.Juuri + PaikatPolku);
+                yield return q.SendWebRequest();
+                if (q.result == UnityWebRequest.Result.Success) json = q.downloadHandler.text;
+                else Loki("kuvauspaikat: " + q.error);
+            }
+            if (string.IsNullOrEmpty(json)) yield break;
+            try { Kuvauspaikat.Nykyiset = Kuvauspaikat.Jasenna(json); }
+            catch (Exception e) { Loki("kuvauspaikat: " + e.Message); }
+            Loki($"kuvauspaikat {Kuvauspaikat.Nykyiset.Count}: {string.Join(" ", Kuvauspaikat.Nykyiset.Select(p => p.Tunniste))}");
+        }
 
         public static IssKameraKuva Hae()
         {
@@ -116,6 +158,14 @@ namespace Matkakirja.Natiivi
             if (kerros == null || kamera == null || g == null) { Loki("ei kyytiä tai kameraa"); return false; }
             var m = muoto.Split(':');
             int mw = m.Length == 2 && int.TryParse(m[0], out var a) ? a : 4, mh = m.Length == 2 && int.TryParse(m[1], out var b) ? b : 5;
+            var paikka = kerros.Linssi?.Kuvauspaikka();
+            if (paikka != null)
+            {
+                if (KuviaJaljella <= 0) { Tila = "ei kuvia"; Loki($"kuvaa: {paikka.Tunniste}, ei kuvia jäljellä (otettu {Otettu})"); return false; }
+                StartCoroutine(AjoPaikka(kamera, kerros.Linssi, paikka, leveys, leveys * mh / mw, muoto));
+                return true;
+            }
+            if (VainKuvauspaikat) { Tila = "ei kuvauspaikkaa"; Loki("kuvaa: katse ei ole kuvauspaikalla"); return false; }
             StartCoroutine(Ajo(kamera, g, leveys, leveys * mh / mw, muoto));
             return true;
         }
@@ -469,6 +519,142 @@ namespace Matkakirja.Natiivi
                 if (kaariAsetettu) AsetaKaari(1f, 1f, 1f, 1f, 1f, 0f);
                 IssNyt.Simu.AsetaKerroin(kerroin0 > 0 ? kerroin0 : 1);
                 if (!SailytaLaatat) try { if (Directory.Exists(laatat)) Directory.Delete(laatat, true); } catch { }
+                Tila = loppuTila; kaynnissa = false;
+            }
+        }
+
+        /// <summary>
+        /// Tarkka kuva kuvauspaikalta: valmis kuva laatoiksi kuvan pinnaksi, kamera ISS:ltä paikkaan rajattuna, odotus kunnes pallo on
+        /// ladattu, kaappaus albumiin kuten COG-polussa. Kello seis ja kuvaputken asetukset kuvan ajan.
+        /// </summary>
+        IEnumerator AjoPaikka(Camera kamera, AstronauttiLinssi linssi, Kuvauspaikka p, int W, int H, string muoto)
+        {
+            kaynnissa = true; Edistyminen = 0; string loppuTila = "keskeytyi";
+            var kello = System.Diagnostics.Stopwatch.StartNew();
+            string id = DateTime.UtcNow.ToString("yyyyMMdd-HHmmss");
+            string juuri = Path.Combine(Application.persistentDataPath, "iss-kamera"), laatat = Path.Combine(juuri, "laatat-" + id);
+            Directory.CreateDirectory(juuri);
+            double kerroin0 = IssNyt.Simu.Kerroin;
+            IssNyt.Simu.AsetaKerroin(0);
+            Avaruus.KuvaputkiAsetettu = true;
+            float aallokko0 = Yokuori.Aallokko, kiilto0 = Yokuori.KiillonVoima;
+            Yokuori.Aallokko = 0.008f; Yokuori.KiillonVoima = 3.5f;
+            bool kaariAsetettu = KaariOletuksissa();
+            if (kaariAsetettu) AsetaKaari(KaariVoima, KaariHr, KaariSini, KaariUtu, KaariYdin, KaariSyva);
+            var utc = IssNyt.Kello();
+            RenderTexture rt = null;
+            try
+            {
+                // 1) kuvauspaikan kuva: testitiedosto tai ämpäri (välimuistiin samaan paikkaan)
+                Tila = "haku"; Loki($"tarkka kuva {id} {p.Tunniste} {muoto} {W}×{H}, {utc:yyyy-MM-dd HH:mm:ss} UTC");
+                string tiedosto = Path.Combine(juuri, "kuvauspaikat", p.Tunniste + ".jpg");
+                byte[] data = File.Exists(tiedosto) ? File.ReadAllBytes(tiedosto) : null;
+                if (data == null)
+                {
+                    using var q = UnityWebRequest.Get(Kuvauspaikat.Juuri + p.Kuva);
+                    yield return q.SendWebRequest();
+                    if (q.result != UnityWebRequest.Result.Success) { Loki($"kuva {p.Kuva}: {q.error}"); yield break; }
+                    data = q.downloadHandler.data;
+                    Directory.CreateDirectory(Path.GetDirectoryName(tiedosto)); File.WriteAllBytes(tiedosto, data);
+                }
+                Edistyminen = 0.1f;
+                var tex = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+                if (!tex.LoadImage(data)) { Destroy(tex); Loki("kuvan purku epäonnistui"); yield break; }
+                int kw = tex.width, kh = tex.height; var rgb = new byte[kw * kh * 3];
+                // LoadImage: JPG → RGB24 (3 tavua), rivi 0 = alin → rgb rivi 0 = pohjoinen.
+                int bpp = tex.format == TextureFormat.RGB24 ? 3 : tex.format == TextureFormat.RGBA32 ? 4 : 0;
+                if (bpp > 0)
+                {
+                    var raw = tex.GetPixelData<byte>(0);
+                    for (int yy = 0; yy < kh; yy++)
+                        for (int xx = 0; xx < kw; xx++)
+                        { int i = ((kh - 1 - yy) * kw + xx) * bpp, o = (yy * kw + xx) * 3; rgb[o] = raw[i]; rgb[o + 1] = raw[i + 1]; rgb[o + 2] = raw[i + 2]; }
+                }
+                else
+                {
+                    var px = tex.GetPixels32();
+                    for (int yy = 0; yy < kh; yy++)
+                        for (int xx = 0; xx < kw; xx++)
+                        { var c = px[(kh - 1 - yy) * kw + xx]; int o = (yy * kw + xx) * 3; rgb[o] = c.r; rgb[o + 1] = c.g; rgb[o + 2] = c.b; }
+                }
+                Destroy(tex);
+
+                // 2) laatat levylle säikeissä
+                Tila = "työstö";
+                double mpx = p.MPx > 0 ? p.MPx : p.KokoM / Math.Max(1, kw);
+                var pl = new PaikanLaatat(rgb, kw, kh, p.W, p.S, p.E, p.N, mpx);
+                var lista = pl.Laatat.ToList(); int kirjoitettu = 0;
+                var tyot = Task.Run(() => System.Threading.Tasks.Parallel.ForEach(lista,
+                    new ParallelOptions { MaxDegreeOfParallelism = Math.Max(1, SystemInfo.processorCount - 1) }, l =>
+                {
+                    var rgba = pl.Piirra(l.z, l.x, l.y);
+                    var kaanto = new byte[rgba.Length];   // EncodeArrayToPNG: rivi 0 alin
+                    for (int y = 0; y < 256; y++) Buffer.BlockCopy(rgba, y * 1024, kaanto, (255 - y) * 1024, 1024);
+                    var png = ImageConversion.EncodeArrayToPNG(kaanto, UnityEngine.Experimental.Rendering.GraphicsFormat.R8G8B8A8_SRGB, 256, 256);
+                    var polku = Path.Combine(laatat, $"{l.z - KuvanTyosto.JuuriZ}/{l.x - (pl.X0 << (l.z - KuvanTyosto.JuuriZ))}/{l.y - (pl.Y0 << (l.z - KuvanTyosto.JuuriZ))}.png");
+                    Directory.CreateDirectory(Path.GetDirectoryName(polku)); File.WriteAllBytes(polku, png);
+                    System.Threading.Interlocked.Increment(ref kirjoitettu);
+                }));
+                while (!tyot.IsCompleted) { Edistyminen = 0.15f + 0.45f * kirjoitettu / Math.Max(1, lista.Count); yield return null; }
+                if (tyot.IsFaulted) { Loki("työstö: " + tyot.Exception?.GetBaseException().Message); yield break; }
+                rgb = null; GC.Collect();
+                Loki($"laatat {lista.Count} (z6–{pl.ZMax}, juuri {pl.Rx}×{pl.Ry}), kuva {kw}×{kh} {mpx:0.0} m/px, {kello.ElapsedMilliseconds / 1000.0:0.0} s");
+
+                // 3) pinta, kamera paikkaan ISS:ltä (Vertailu = kyydin asennon ohitus) ja kuvan kokoinen tekstuuri
+                Tila = "renderöinti";
+                AstronauttiKerros.KuvanPinta = new AstronauttiKerros.Pinta { Url = "file://" + laatat + "/{z}/{x}/{reverseY}.png",
+                    W = pl.JuuriW, S = pl.JuuriS, E = pl.JuuriE, N = pl.JuuriN, Rx = pl.Rx, Ry = pl.Ry, MaxTaso = pl.ZMax - KuvanTyosto.JuuriZ };
+                var (asento, pysty) = linssi.KuvausRajaus(p, (double)W / H);
+                AstronauttiLinssi.Vertailu = asento; AstronauttiLinssi.VertailuKentta = pysty;
+                rt = new RenderTexture(W, H, 24, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB) { name = "IssKameraKuva", antiAliasing = 1 };
+                rt.Create();
+                kamera.targetTexture = rt; kamera.ResetAspect();
+                var pallo = KarttaKerrokset.Instanssi?.pallo;
+                float alku2 = Time.realtimeSinceStartup, vakaa = -1;
+                yield return new WaitForSecondsRealtime(2f);
+                while (Time.realtimeSinceStartup - alku2 < 90)
+                {
+                    float lataus = pallo != null ? pallo.ComputeLoadProgress() : 100;
+                    Edistyminen = 0.6f + 0.39f * lataus / 100f;
+                    if (lataus >= 99.9f) { if (vakaa < 0) vakaa = Time.realtimeSinceStartup; else if (Time.realtimeSinceStartup - vakaa > 1.5f) break; }
+                    else vakaa = -1;
+                    yield return null;
+                }
+                Loki($"lataus tasaantui {Time.realtimeSinceStartup - alku2:0.0} s, kenttä {pysty:0.00}°, etäisyys {asento.EtaisyysM / 1000:0} km, kallistus {asento.Kallistus:0.0}°");
+                yield return new WaitForSecondsRealtime(LisaOdotus);
+                yield return new WaitForEndOfFrame();
+                var lukija = AsyncGPUReadback.Request(rt, 0, TextureFormat.RGBA32);
+                while (!lukija.done) yield return null;
+                if (lukija.hasError) { Loki("luku epäonnistui"); yield break; }
+                var kuva = new Texture2D(W, H, TextureFormat.RGBA32, false);
+                kuva.LoadRawTextureData(lukija.GetData<byte>()); kuva.Apply(false);
+                var jpg = kuva.EncodeToJPG(93); Destroy(kuva);
+                string albumi = Path.Combine(Application.persistentDataPath, "iss-albumi"); Directory.CreateDirectory(albumi);
+                ViimeisinKuva = Path.Combine(albumi, id + ".jpg");
+                File.WriteAllBytes(ViimeisinKuva, jpg);
+                PlayerPrefs.SetInt(OtettuAvain, Otettu + 1); PlayerPrefs.Save();
+                var iss = IssNyt.Paikka(utc); double km = IssNyt.KorkeusKm(utc);
+                var ic = System.Globalization.CultureInfo.InvariantCulture;
+                File.WriteAllText(Path.ChangeExtension(ViimeisinKuva, ".json"), string.Format(ic,
+                    "{{\"id\":\"{0}\",\"aika_utc\":\"{1:yyyy-MM-ddTHH:mm:ssZ}\",\"muoto\":\"{2}\",\"leveys\":{3},\"korkeus\":{4},\"kuvauspaikka\":\"{5}\"," +
+                    "\"paikka\":\"{6}\",\"maa\":\"{7}\",\"kohde\":{{\"lat\":{8:0.000},\"lon\":{9:0.000}}},\"korkeus_km\":{10:0.0},\"nopeus_kmh\":{11:0}," +
+                    "\"etaisyys_km\":{12:0},\"kenttakulma\":{13:0.00},\"lahde\":\"{14}\"}}",
+                    id, utc, muoto, W, H, p.Tunniste, p.Nimi, p.Maa, p.Lat, p.Lon, km, IssNyt.NopeusKmh(km), asento.EtaisyysM / 1000, pysty,
+                    (p.Lahde ?? "").Replace("\"", "'")));
+                loppuTila = "valmis"; Edistyminen = 1;
+                Loki($"VALMIS {ViimeisinKuva} ({p.Nimi}, {jpg.Length / 1e6:0.0} Mt, {W}×{H}), yhteensä {kello.ElapsedMilliseconds / 1000.0:0.0} s, kuvia jäljellä {KuviaJaljella}");
+            }
+            finally
+            {
+                AstronauttiLinssi.Vertailu = null;
+                if (rt != null) { kamera.targetTexture = null; kamera.ResetAspect(); rt.Release(); Destroy(rt); }
+                AstronauttiKerros.KuvanPinta = null;
+                Avaruus.KuvaputkiAsetettu = false;
+                Yokuori.Aallokko = aallokko0; Yokuori.KiillonVoima = kiilto0;
+                if (kaariAsetettu) AsetaKaari(1f, 1f, 1f, 1f, 1f, 0f);
+                IssNyt.Simu.AsetaKerroin(kerroin0 > 0 ? kerroin0 : 1);
+                if (!SailytaLaatat) try { if (Directory.Exists(laatat)) Directory.Delete(laatat, true); } catch { }
+                GC.Collect();
                 Tila = loppuTila; kaynnissa = false;
             }
         }

@@ -44,6 +44,12 @@ namespace Matkakirja.Natiivi
         IVisualElementScheduledItem cupolaHaivytys, cupolaPiilotus;
         /// <summary>Musta ruutu näkyy näin kauan ennen häivytystä (omistaja: "feidaa oikeaan näkymään 2sek jälkeen").</summary>
         public const int CupolanMustaMs = 2000;
+        /// <summary>
+        /// Enimmäisodotus: musta pysyy, kunnes Cupolan kehys on ladattu (IssKyytiNakyma.Kuva2Tila) ja pallon laatat ovat paikallaan
+        /// (simu 6e8576ff: kehys valmis vasta ~3 s:n kohdalla, ja häivytyksen jälkeen näkyi ensin kehyksetön harmaa pallo).
+        /// </summary>
+        public const int CupolanMustaMaxMs = 8000;
+        float cupolaAlku;
 
         public AvauksenVaihe Vaihe { get; private set; } = AvauksenVaihe.Pois;
 
@@ -90,8 +96,8 @@ namespace Matkakirja.Natiivi
                 tila != KyydinTila.Kauko && (tila != KyydinTila.Ikkuna || (!LiviaKuva.RobottiPois && !IssKyytiNakyma.PuluOikealla))
                     ? LinssiUi.SulkuKerros : Pulu.Kerros);
 
-            // Cupolan suora avaus: musta ruutu kaiken linssin UI:n päälle (luodaan viimeisenä samaan kerrokseen).
-            cupolaMusta = Rakenne.El("mk-astroavaus tk-teema-tumma", kerros.Juuri(LinssiUi.Ylakerros));
+            // Cupolan suora avaus: musta ruutu kaiken linssin UI:n päälle, myös Pulun (38) ja mikserinapin (39); valikot (40) yllä.
+            cupolaMusta = Rakenne.El("mk-astroavaus tk-teema-tumma", kerros.Juuri(MikseriPaneeli.Kerros));
             cupolaMusta.style.display = DisplayStyle.None;
             var lohko = Rakenne.El("mk-ajattelija__teksti mk-ajattelija__nimilohko", cupolaMusta, PickingMode.Ignore);
             lohko.style.opacity = 1f;
@@ -156,8 +162,9 @@ namespace Matkakirja.Natiivi
         {
             cupolaHaivytys?.Pause();
             cupolaPiilotus?.Pause();
-            cupolaKorkeus.text = $"Lentokorkeus {KyydinTeksti.Luku(a.KorkeusKm)} km";
-            cupolaNopeus.text = $"Nopeus {KyydinTeksti.Luku(Math.Floor(a.NopeusKmh / 100 + 0.5) * 100)} km/h";
+            // Tuhaterotin tavallisena välilyöntinä (simu 6e8576ff: lukukirjaimessa U+00A0 näkyi leveänä aukkona "27  600").
+            cupolaKorkeus.text = $"Lentokorkeus {KyydinTeksti.Luku(a.KorkeusKm).Replace('\u00a0', ' ')} km";
+            cupolaNopeus.text = $"Nopeus {KyydinTeksti.Luku(Math.Floor(a.NopeusKmh / 100 + 0.5) * 100).Replace('\u00a0', ' ')} km/h";
             var d = TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(a.Utc, DateTimeKind.Utc), TimeZoneInfo.Local);
             cupolaAika.text = $"{d.Day}.{d.Month}.{d.Year} klo {d.Hour}.{d.Minute:00}";
             cupolaMusta.RemoveFromClassList("mk-astroavaus--haipyy");
@@ -165,14 +172,24 @@ namespace Matkakirja.Natiivi
             cupolaMusta.pickingMode = PickingMode.Position;
             cupolaMusta.style.display = DisplayStyle.Flex;
             cupolaMusta.BringToFront();
-            Ruudunpaivitys.Herata(CupolanMustaMs / 1000f + MustanHaivytysMs / 1000f + 0.5f);
+            cupolaAlku = Time.realtimeSinceStartup;
+            Ruudunpaivitys.Herata(CupolanMustaMaxMs / 1000f + MustanHaivytysMs / 1000f + 0.5f);
+            // Häivytyksen siirtymä luokkana jo ennen häivytystä (sama kehys kuin peiton muutos ei aina käynnistänyt siirtymää).
+            cupolaMusta.schedule.Execute(() => cupolaMusta.AddToClassList("mk-astroavaus--haipyy")).StartingIn(100);
             cupolaHaivytys = cupolaMusta.schedule.Execute(() =>
             {
+                float ms = (Time.realtimeSinceStartup - cupolaAlku) * 1000f;
+                if (ms < CupolanMustaMs) return;
+                var pallo = KarttaKerrokset.Instanssi?.pallo;
+                bool kehys = IssKyytiNakyma.Kuva2Tila != null || CupolaKerros.Tyyli != CupolaKerros.Tyylit.Kuva;
+                bool laatat = pallo == null || pallo.ComputeLoadProgress() >= 99.5f;
+                if (ms < CupolanMustaMaxMs && (!kehys || !laatat)) return;
+                cupolaHaivytys.Pause();
+                Debug.Log($"MATKAKIRJA linssit: cupolan musta häivyy {ms:0} ms (kehys {(kehys ? "valmis" : "kesken")}, laatat {(laatat ? "valmiit" : "kesken")})");
                 cupolaMusta.pickingMode = PickingMode.Ignore;
-                cupolaMusta.AddToClassList("mk-astroavaus--haipyy");
                 cupolaMusta.style.opacity = 0f;
-            }).StartingIn(CupolanMustaMs);
-            cupolaPiilotus = cupolaMusta.schedule.Execute(() => CupolaPois()).StartingIn(CupolanMustaMs + MustanHaivytysMs + 100);
+                cupolaPiilotus = cupolaMusta.schedule.Execute(() => CupolaPois()).StartingIn(MustanHaivytysMs + 100);
+            }).Every(100);
         }
 
         void CupolaPois()

@@ -413,6 +413,7 @@ namespace Matkakirja.Natiivi
         System.Collections.IEnumerator LataaAstronautti()
         {
             StartCoroutine(IssSijaintiLataaja.Lataa());   // ohjaamon LCD:n paikkadata (omistaja 4.10.)
+            StartCoroutine(IssKameraKuva.LataaPaikat());   // tarkan ISS-kuvan kuvauspaikat (omistaja 4.10.)
             string data = null, kysymykset = null;
             yield return LinssiSisalto.Hae("moduulit/js/linssit/satelliitti-data.json", t => data = t);
             yield return LinssiSisalto.Hae("moduulit/js/linssit/astronaut-kysymykset.json", t => kysymykset = t);
@@ -1894,6 +1895,17 @@ namespace Matkakirja.Natiivi
                             else if (osat.Length > 4 && osat[3] == "sini") Matkakirja.Natiivi.IssKameraKuva.MaanSini = (float)Luku(osat[4]);
                             else if (osat.Length > 4 && osat[3] == "nousu") Matkakirja.Natiivi.IssKameraKuva.NousuKerroin = (float)Luku(osat[4]);
                             else if (osat.Length > 4 && osat[3] == "sarja") Matkakirja.Natiivi.IssKameraKuva.Sarja = (int)Luku(osat[4]);
+                            // Tarkka kuva (omistaja 4.10.): kuvaa paikka (katseen kuvauspaikka ja kuvat), kuvaa nollaa, kuvaa vapaa 0|1
+                            else if (osat.Length > 3 && osat[3] == "paikka")
+                            {
+                                var kp = l.Kuvauspaikka(); var a0 = l.KyydinAsento;
+                                var lahin = Matkakirja.Linssit.Iss.Kuvauspaikat.Lahin(Matkakirja.Linssit.Iss.Kuvauspaikat.Nykyiset, a0.Lat, a0.Lon, 20000);
+                                Kirjaa($"astro kyyti kuvaa paikka: {(kp != null ? kp.Tunniste + " (nappi aktiivinen)" : "ei kuvauspaikkaa")}, lähin "
+                                    + (lahin == null ? "-" : $"{lahin.Tunniste} {Matkakirja.Linssit.Iss.Ylilennot.MaaEtaisyysKm(a0.Lat, a0.Lon, lahin.Lat, lahin.Lon):0.0} km")
+                                    + $", paikkoja {Matkakirja.Linssit.Iss.Kuvauspaikat.Nykyiset.Count}, kuvia jäljellä {Matkakirja.Natiivi.IssKameraKuva.KuviaJaljella}");
+                            }
+                            else if (osat.Length > 3 && osat[3] == "nollaa") { Matkakirja.Natiivi.IssKameraKuva.NollaaKuvat(); Kirjaa("astro kyyti kuvaa: ilmainen kuva palautettu"); }
+                            else if (osat.Length > 4 && osat[3] == "vapaa") Matkakirja.Natiivi.IssKameraKuva.VainKuvauspaikat = osat[4] == "0";
                             else Kirjaa("astro kyyti kuvaa: " + (Matkakirja.Natiivi.IssKameraKuva.Hae().Laukaise(osat.Length > 3 ? osat[3] : "4:5",
                                 osat.Length > 4 ? (int)Luku(osat[4]) : 3240) ? "laukaistu" : "ei laukaistu (käynnissä tai ei kyytiä)"));
                         }

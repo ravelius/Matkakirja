@@ -605,6 +605,21 @@ namespace Matkakirja.Linssit.Astronautti
         (string Kohde, string Maa) sijainti = ("", "");
         double sijaintiAika = -1;
 
+        /// <summary>
+        /// Kuvauspaikka, jonka kohdalla Cupolan katse on (omistaja 4.10.: kameranappi aktiivinen vain kuvauspaikan kohdalla):
+        /// katsepiste enintään Iss.Kuvauspaikat.KuvausKm keskipisteestä, ei siirtymän aikana; null = nappi ei aktiivinen.
+        /// </summary>
+        public Iss.Kuvauspaikka Kuvauspaikka()
+        {
+            if (!Auki || kyyti.Tila != Iss.KyydinTila.Ikkuna || kyyti.Siirtyy || !kyyti.OnAsento || siirto.Siirtyy(Nyt / 1000)) return null;
+            var a = kyyti.Viimeisin;
+            return Iss.Kuvauspaikat.Lahin(Iss.Kuvauspaikat.Nykyiset, a.Lat, a.Lon);
+        }
+
+        /// <summary>Tarkan kuvan kamera kuvauspaikkaan aluksen nykyisestä paikasta (Iss.Kuvauspaikat.Rajaus).</summary>
+        public (Kuvakulma Asento, double Pystykentta) KuvausRajaus(Iss.Kuvauspaikka p, double leveysPerKorkeus) =>
+            Iss.Kuvauspaikat.Rajaus(AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000), p, leveysPerKorkeus);
+
         /// <summary>Kaasun asento (ajan kerroin 1, 10, 100 tai 1000).</summary>
         public int Kaasu { get; private set; } = 1;
 
