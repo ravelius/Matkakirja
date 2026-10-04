@@ -96,3 +96,11 @@ Natiivisepälle, viestit Päätoimittajalle ≤ 8 riviä, osoitin vain omistajan
   simutodennusta (kuormitettu kone = hidas lataus, äänellinen kierros) → merge-pyyntö Natiivisepälle junaan 138.
 - Avoin: apulaisen ääni C (#3740, paketti f3c055a2) + liekit → todennus #3932:n mergen jälkeisellä paketilla, osoitin Päätoimittajan luvalla.
 - Säännöt 3.10.: ei poistoja checkoutin/worktreen ulkopuolelta; tarkista itse pelistä ennen lähetystä.
+
+### 4.10. klo 14.4x
+- JUNA 137: kuori-ensin ff560e9d (Natiiviseppä yhdisti). Osoitin uusin.json = 8b8a623bbbe3ee93 (ääni C + liekit), todennettu 14.2x.
+- JUNA 138 -erä: proto siirtoseppa/kuori-esilataus b5e68c38 (worktree wt/proto-siirtoseppa-kuori), käännös 3db75122:
+  nimiruutu "OLAVINLINNA / Savonlinna · 1475" (Päätoimittaja hyväksyi) linssin avauksesta, levyvälimuistin rinnakkaislatauksen esto,
+  kevyen kuoren esilataus (DioraamaEsilataus, LinssiOhjain.Update, linssi saatavilla). AVOIN: simu ~15.40 (tyokalut/siirtoseppa-ajot/
+  ajo-vapaa-tila.sh: vapaan tilan still + keittiön napautukset ääni C:lle), iPad laite-sha ~16.00 (saapumisaika ennen 8,2 s / jälkeen),
+  sitten merge-pyyntö Natiivisepälle junaan 138.
