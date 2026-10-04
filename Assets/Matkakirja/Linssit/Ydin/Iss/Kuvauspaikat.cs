@@ -29,8 +29,8 @@ namespace Matkakirja.Linssit.Iss
         public const double RajausOsuus = 0.9;
         /// <summary>Vinon kuvan epäsymmetrian varmuuskerroin rajaukseen.</summary>
         public const double Varmuus = 0.95;
-        /// <summary>Ämpärin juuri: kuva-kentän R2-polku lisätään tähän.</summary>
-        public const string Juuri = "https://media.matkakirja.app/";
+        /// <summary>Ämpärin juuri (Karttaseppä 4.10.): kuva-kentän suhteellinen polku (kuvauspaikat/v1/<tunniste>.jpg) lisätään tähän.</summary>
+        public const string Juuri = "https://media.matkakirja.app/linssit/astronautin-kamera/";
 
         /// <summary>Ladattu aineisto (Unity täyttää); tyhjä = ei kuvauspaikkoja, nappi ei koskaan aktiivinen.</summary>
         public static List<Kuvauspaikka> Nykyiset = new List<Kuvauspaikka>();
