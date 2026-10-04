@@ -1,4 +1,4 @@
-{
+export const ASTRO_KYSYMYKSET = {
   "ohjaamo": [
     {
       "kysymys": "Mikä ISS on ja mihin sitä käytetään?",
@@ -155,4 +155,4 @@
       ]
     }
   ]
-}
+};
