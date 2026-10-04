@@ -585,8 +585,9 @@ namespace Matkakirja.Natiivi
                 double mpx = p.MPx > 0 ? p.MPx : p.KokoM / Math.Max(1, kw);
                 var pl = new PaikanLaatat(rgb, kw, kh, p.W, p.S, p.E, p.N, mpx);
                 var lista = pl.Laatat.ToList(); int kirjoitettu = 0;
-                var tyot = Task.Run(() => System.Threading.Tasks.Parallel.ForEach(lista,
-                    new ParallelOptions { MaxDegreeOfParallelism = Math.Max(1, SystemInfo.processorCount - 1) }, l =>
+                // SystemInfo vain pääsäikeessä (simu 38fa740d: "GetProcessorCount can only be called from the main thread").
+                var rinnakkain = new ParallelOptions { MaxDegreeOfParallelism = Math.Max(1, SystemInfo.processorCount - 1) };
+                var tyot = Task.Run(() => System.Threading.Tasks.Parallel.ForEach(lista, rinnakkain, l =>
                 {
                     var rgba = pl.Piirra(l.z, l.x, l.y);
                     var kaanto = new byte[rgba.Length];   // EncodeArrayToPNG: rivi 0 alin
