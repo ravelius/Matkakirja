@@ -86,3 +86,13 @@ TEHTY 19.53: myllyn laudat v2 = proto siirtoseppa/mylly-laudat-v2 989f121a (work
 Käännös vain Julkaisijan NYT KÄÄNNÖS -viestillä (proto-kaanna.sh, nice 15; tarkista merge-SHA:n esivanhempi ennen .app-kopiota),
 simulaattori vain SIMULAATTORI NYT -vuorolla (F989814A / D5900D45), lopuksi uninstall + shutdown + "simu vapaa". Merge-pyynnöt
 Natiivisepälle, viestit Päätoimittajalle ≤ 8 riviä, osoitin vain omistajan OK:lla Päätoimittajan ja Julkaisijan kautta.
+
+## 4.10.2026 (TF 136 -linnakierros, Olavinlinnan avoimet)
+
+- Kierros tehty: docs/raportit/siirtoseppa-tf136-linnakierros-20261004.md (tallenteet ääniraidalla, lokit/siirtoseppa-tf136-aani).
+  Skriptit: tyokalut/siirtoseppa-ajot/ajo-linnakierros-aani.sh (pelin äänikaappaus + merkit, aikajana) ja tallenne-yhdista.py (RAJA=25 iPadille).
+- Liekit #3932 (peili a9c0e02a) kuitattu ok Julkaisijalle.
+- Löydös 1 korjattu: proto siirtoseppa/kuori-ensin 4f526391 (worktree wt/proto-siirtoseppa-kuori), käännös 67f6d005 — odottaa
+  simutodennusta (kuormitettu kone = hidas lataus, äänellinen kierros) → merge-pyyntö Natiivisepälle junaan 138.
+- Avoin: apulaisen ääni C (#3740, paketti f3c055a2) + liekit → todennus #3932:n mergen jälkeisellä paketilla, osoitin Päätoimittajan luvalla.
+- Säännöt 3.10.: ei poistoja checkoutin/worktreen ulkopuolelta; tarkista itse pelistä ennen lähetystä.
