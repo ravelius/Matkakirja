@@ -45,8 +45,8 @@
       "vastaus": "ISS:llä on asunut miehistö keskeytyksettä marraskuusta 2000 lähtien — pisin yhtäjaksoinen ihmisten oleskelu avaruudessa. Asemalla on tavallisesti seitsemän hengen miehistö kerrallaan, joskus hetkellisesti enemmänkin vaihdon aikana.",
       "lahteet": [
         {
-          "url": "https://www.thalesgroup.com/en/worldwide/space/magazine/where-can-you-marvel-16-sunrises-each-day-ask-astronauts-cupola-400",
-          "title": "Where can you marvel at 16 sunrises each day? – Thales Group"
+          "url": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+          "title": "Space Station Facts and Figures – NASA"
         }
       ]
     }
@@ -74,17 +74,17 @@
     },
     {
       "kysymys": "Näkyvätkö valtioiden rajat avaruudesta?",
-      "vastaus": "Ei — rajat ovat ihmisten sopimia viivoja, eivätkä ne näy maastossa mistään korkeudesta. Avaruudesta sen sijaan erottuvat esimerkiksi kaupunkien valot öisin ja viljelysmaiden suorakulmaiset kuviot.",
+      "vastaus": "Yleensä eivät — rajat ovat ihmisten sopimia viivoja, eivätkä ne näy maastossa. Tunnettuja poikkeuksia kuitenkin on: Intian ja Pakistanin raja erottuu yöllä valaistuna, ja Haitin ja Dominikaanisen tasavallan raja näkyy metsäkadon vuoksi, kun toisella puolella on metsää ja toisella ei.",
       "lahteet": [
         {
-          "url": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
-          "title": "Space Station Facts and Figures – NASA"
+          "url": "https://eol.jsc.nasa.gov/Collections/EarthObservatory/articles/IndiaPakistanBorderatNight.htm",
+          "title": "India-Pakistan Border at Night – NASA Earth Observatory"
         }
       ]
     },
     {
       "kysymys": "Miksi ilmakehä näyttää ohuelta siniseltä viivalta?",
-      "vastaus": "Suurin osa hengitettävästä ilmakehästä mahtuu vain noin 100 kilometrin paksuiseen kerrokseen, joka on häviävän ohut verrattuna Maan halkaisijaan. Sininen väri syntyy samasta ilmiöstä kuin taivaan sininen väri maasta katsottuna: ilmamolekyylit sirottavat sinistä valoa enemmän kuin muita värejä.",
+      "vastaus": "Lähes koko ilmakehän massa on alle 30 kilometrin korkeudella, häviävän ohuena kerroksena verrattuna Maan halkaisijaan — siksi se näyttää avaruudesta vain ohuelta viivalta. Avaruuden rajana pidetään noin 100 kilometrin korkeutta, ja sininen väri syntyy samasta ilmiöstä kuin taivaan sininen väri maasta katsottuna: ilmamolekyylit sirottavat sinistä valoa enemmän kuin muita värejä.",
       "lahteet": [
         {
           "url": "https://en.wikipedia.org/wiki/International_Space_Station",
@@ -126,11 +126,11 @@
     },
     {
       "kysymys": "Kuinka monta kuvaa Maasta on otettu avaruudesta?",
-      "vastaus": "Astronautit ovat kuvanneet Maata käsikameroilla jo yli 60 vuotta, aina 1960-luvun Mercury-lennoista lähtien, ja kuvia on kertynyt yli 1,5 miljoonaa. Ne löytyvät julkisesta \"Gateway to Astronaut Photography of Earth\" -tietokannasta.",
+      "vastaus": "Astronautit ovat kuvanneet Maata käsikameroilla jo yli 60 vuotta, aina 1960-luvun Mercury-lennoista lähtien, ja kuvia on kertynyt miljoonia. Ne löytyvät julkisesta \"Gateway to Astronaut Photography of Earth\" -tietokannasta.",
       "lahteet": [
         {
-          "url": "https://gulfnews.com/amp/story/technology%2Fmedia%2Fnasa-astronaut-photographs-earth-with-nikon-d4-1.1596752",
-          "title": "NASA astronaut photographs Earth with Nikon D4 – Gulf News"
+          "url": "https://ntrs.nasa.gov/api/citations/20230005919/downloads/CEO_ISSRD23_final.pdf",
+          "title": "Crew Earth Observations: New Tools to Support Your Research – NASA"
         }
       ]
     },
