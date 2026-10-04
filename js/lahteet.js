@@ -356,6 +356,13 @@ export const LAHTEET = [
         lisenssi: 'CC BY 4.0',
       },
       {
+        nimi: 'Ajattelijat-linssi: oma musiikki Sokrateelle ja Marcus Aureliukselle (sävelletty pelille, v14)',
+        tekija: 'Matkakirja (Linssiseppä); soitinnäytteet Versilian Studios VS Chamber Orchestra 2 Community Edition; '
+          + 'salin kaiku Liverpool Philharmonic Hall -impulssivaste (johnnyguitar01, Freesound 423866)',
+        lisenssi: 'Oma teos; näytteet ja impulssivaste CC0',
+        huom: 'Partituuri ja lähteet: proto-3d/_lahteet/sokrates/musiikki-oma/LAHTEET.md ja marcus-aurelius/musiikki-oma/LAHTEET.md.',
+      },
+      {
         nimi: 'Ajattelijat-linssi: prologin kytkimen napsahdus (Impact Sounds, kaksi iskua kerroksina, oma kaiku)',
         tekija: 'Kenney (kenney.nl)',
         lisenssi: 'CC0',

@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2599, teksti: 'Tekijätiedot: ajattelijoiden oma musiikki (#3917)' },
   { v: 2598, teksti: 'Ajattelijat (#3919)' },
   { v: 2597, teksti: 'Ajattelijat (#3916)' },
   { v: 2596, teksti: 'Ajattelijat (#3913)' },
