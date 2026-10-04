@@ -876,6 +876,15 @@ namespace Matkakirja.Natiivi
             JatkaMatkaa();
             // Ei siirtoa (kaupungissa tai reitillä ilman tavoitetta): mitään ei ala soida, joten lippu ei saa jäädä seuraavaan saapumiseen.
             if (Tila != SilmukanTila.Matkalla) jatkoHiljaa = false;
+            // JATKA KAUPUNGISSA (omistaja TF 140, 4.10.2026 klo 22.2x: "pulun ottama kuva ilmestyy Jatka seikkailua napin jälkeen"):
+            // ilman siirtoa saapumisesitys kirjoitti merkinnän luentoa odotettuaan ja aloitti Livian kommenttiketjun, jonka
+            // PuluCam-kuvat nousivat kartalle (vain puhe oli estetty). Kuin Ohita: kuvasarja suoraan matkakirjakorttiin
+            // (Saapumisesitys.Saapui → AsetaPikkukuvat), ei kommenttia eikä luentaa tässä kaupungissa.
+            if (Tila == SilmukanTila.Kartta && matka.Tila.Pelaaja.Sijainti.Kaupungissa)
+            {
+                Debug.Log("MATKAKIRJA peli: jatko kaupungissa, paikan puhe ohitettu " + matka.Tila.Pelaaja.Sijainti.Kaupunki);
+                VaiennaPaikanPuhe("ohita");
+            }
             return null;
         }
 
