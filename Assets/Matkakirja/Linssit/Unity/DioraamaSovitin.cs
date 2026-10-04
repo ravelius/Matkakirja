@@ -296,8 +296,12 @@ namespace Matkakirja.Natiivi
             {
                 if (asentoEnnen.HasValue || !Application.isMobilePlatform || UiKerros.Tabletti) return;
                 asentoEnnen = Screen.orientation;
-                Screen.orientation = Input.deviceOrientation == DeviceOrientation.LandscapeRight ? ScreenOrientation.LandscapeRight : ScreenOrientation.LandscapeLeft;
-                Debug.Log($"MATKAKIRJA linssit: poikki: linna vaakaan ({asentoEnnen} → {Screen.orientation})");
+                var pyydetty = Input.deviceOrientation == DeviceOrientation.LandscapeRight ? ScreenOrientation.LandscapeRight : ScreenOrientation.LandscapeLeft;
+                Screen.orientation = pyydetty;
+                // Screen.orientation vaihtuu vasta seuraavissa kehyksissä (savuke 1141: loki "Portrait → Portrait" tulkittiin
+                // FAILiksi): lokiin pyydetty asento heti ja toteutunut, kun kierto on ehtinyt tapahtua.
+                Debug.Log($"MATKAKIRJA linssit: poikki: linna vaakaan ({asentoEnnen} → pyydetty {pyydetty})");
+                UiKerros.Hae().StartCoroutine(KirjaaToteutunutAsento(pyydetty));
             }
             else if (asentoEnnen.HasValue)
             {
@@ -305,6 +309,14 @@ namespace Matkakirja.Natiivi
                 Debug.Log($"MATKAKIRJA linssit: poikki: linna suljettu, asento palautettu ({asentoEnnen})");
                 asentoEnnen = null;
             }
+        }
+
+        static IEnumerator KirjaaToteutunutAsento(ScreenOrientation pyydetty)
+        {
+            float loppu = Time.unscaledTime + 2f;
+            while (Screen.orientation != pyydetty && asentoEnnen.HasValue && Time.unscaledTime < loppu) yield return null;
+            if (asentoEnnen.HasValue)
+                Debug.Log($"MATKAKIRJA linssit: poikki: linnan asento toteutui {Screen.orientation}{(Screen.orientation == pyydetty ? "" : " (pyydetty " + pyydetty + ", ei toteutunut 2 s:ssa)")}");
         }
 
         /// <summary>Kohdistus (napautus tilan AABB:hen, "poikki tila"/"poikki yleis" -komennot): nollaa pelaajan vedon/nipistyksen.</summary>
