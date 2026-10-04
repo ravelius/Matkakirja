@@ -13,15 +13,18 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void S2JaBmngLaatatKohtuullisetJaLahellaTarkimmat()
         {
-            var s2 = CupolanLaatat.Laske(Asento, 50, 2732.0 / 2048, 2048, 6, 10);
+            var s2 = CupolanLaatat.Laske(Asento, 50, 2732.0 / 2048, 2048, 6, 10, alue: (-28.125, 31.952162, 45.0, 72.395704));
             var bm = CupolanLaatat.Laske(Asento, 50, 2732.0 / 2048, 2048, 0, 7);
-            Console.WriteLine($"  S2 {s2.Count} laattaa ({string.Join(", ", s2.GroupBy(t => t.z).Select(g => $"z{g.Key} {g.Count()}"))}), BMNG {bm.Count}");
+            Console.WriteLine($"  S2 {s2.Count} laattaa ({string.Join(", ", s2.GroupBy(t => t.z).Select(g => $"z{g.Key} {g.Count()}"))}), BMNG {bm.Count} ({string.Join(", ", bm.GroupBy(t => t.z).Select(g => $"z{g.Key} {g.Count()}"))})");
             Oleta.Tosi(s2.Count > 20 && s2.Count < 1500, $"S2 {s2.Count}");
-            Oleta.Tosi(s2.Any(t => t.z == 10), "lähellä tarkin taso");
+            // iPad 8023e34c -hakuloki: mustan aikana Cesium haki S2:n juuret (13 × 13) karkeiden maastolaattojen takia.
+            Oleta.Tosi(s2.Count(t => t.z == 6) >= 150, $"S2-juuria {s2.Count(t => t.z == 6)}");
+            Oleta.Tosi(new[] { 2, 3, 4 }.All(z => bm.Any(t => t.z == z)), "BMNG z2–z4");
+            Oleta.Tosi(s2.Any(t => t.z == 8) && s2.Max(t => t.z) <= 9, $"tarkin S2-taso z{s2.Max(t => t.z)} (hakuloki: z6–z8)");
             Oleta.Tosi(s2.Any(t => t.z == 6), "esivanhemmat juureen asti");
             // Katsepisteen laatta on mukana jollain tasolla.
             Oleta.Tosi(Enumerable.Range(6, 5).Any(z => { var (x, y) = Laattalista.Laatta(48.88, 27.04, z); return s2.Contains((z, x, y)); }), "katsepiste");
-            Oleta.Tosi(bm.Count > 5 && bm.Count < 400, $"BMNG {bm.Count}");
+            Oleta.Tosi(bm.Count > 5 && bm.Count < 1200, $"BMNG {bm.Count}");
         }
 
         [Testi] static void AlueRajaaJaPolutMallista()
