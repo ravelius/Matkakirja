@@ -15,7 +15,7 @@ kaappauksessa; MatkakirjaSilmukat (AVAudioEngine) on vain ISS:n Cupolassa.
 | # | Vika | Huone | Laite | Tallenteen aika | Tekijä |
 |---|---|---|---|---|---|
 | 1 | Puhtaalla asennuksella kertojan kierros alkaa ennen kuin linna on ladattu: jakso 1 "järveltä" soi sumun ja valkoisten paikkamerkkipalikoiden päällä, linna näkyy vasta n. 46 s:ssa. Ympäristö valmis 66 s (iPhone) / 81 s (iPad), ensimmäisellä kierroksella 91 / 122 s; 2.10. kuittauksessa 33 s. | yleisnäkymä (saapuminen) | molemmat | 22–45 s | Siirtoseppä (kierroksen alku odottamaan tilojen/kuoren latausta) |
-| 2 | Keittiön kortissa näkyy koko kuunnelman ajan kursiivirivi "Kokki: vouti kiirehti kappeliin ennen iltarukousta.", myös vesipojan, voudin ja Pulun rivien alla. | keittiö | molemmat | iPhone 270–303 s (5 ruutua), iPad 302 s | Siirtoseppä selvittää (repliikki vs. kuunnelma), tarvittaessa Natiivi-UI |
+| 2 | EI VIKA (tarkistettu koodista): keittiön kortin kursiivirivi "Kokki: vouti kiirehti kappeliin ennen iltarukousta." on etsinnän vihje (DioraamaEtsinta.AktiivinenRivi), joka näytetään suunnitellusti repliikin paikalla; ajo nollasi etsinnän (poikki vihje alusta). | keittiö | molemmat | iPhone 270–303 s, iPad 302 s | – |
 | 3 | Apulaisen ääni on vanha (odotettu: TF 136:n paketti dad4d0f3 on ennen #3740:tä). Uusi paketti f3c055a2 + liekit (#3932) todennetaan yhdellä puhtaalla asennuksella mergen jälkeen. | keittiö | – | – | Siirtoseppä |
 
 ## Kunnossa
