@@ -977,6 +977,10 @@ namespace Matkakirja.Natiivi
             a.loop = true;
             a.volume = 0f;
             a.clip = l.K.Clip;
+            // Saumattomat linssin silmukat satunnaisesta kohdasta (simu 5.10. 02.40: tuulen ja laineiden lähteiden omat 5 ms:n
+            // reunahäivytykset osuivat yhteen 9,000 s välein, notko −12 dB / 10 ms). Eri vaihe → saumat eivät osu päällekkäin.
+            if (l.Saumaton && l.K.Clip != null && l.K.Clip.samples > 0 && l.K.Avain != null)
+                a.timeSamples = UnityEngine.Random.Range(0, l.K.Clip.samples);
             a.Play();
             l.A = a;
             l.Kaynnistetty = true;
