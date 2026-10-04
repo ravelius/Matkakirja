@@ -281,7 +281,9 @@ namespace Matkakirja.Natiivi
             Rakenne.El("mk-astroavaus__viiva", nimiOtsikko, PickingMode.Ignore);
             Rakenne.Teksti(DioraamaSovitin.SaapumisAlarivi, "mk-astroavaus__lahde", nimiOtsikko);
             // Omistaja 4.10. (14.5x): yli 4 s "Linna latautuu…", yli 9 s "Vielä pieni hetki…" — sama pohja, rauhallinen häivytys.
-            latausRivi = Rakenne.Teksti("", "mk-astroavaus__lahde", nimiOtsikko);
+            // Päätoimittaja 4.10. (juna 138 VIE): tyhjä rivi oli 0 pt korkea, ja otsikko nousi ~7 pt rivin ilmestyessä → rivin
+            // teksti on alusta asti paikallaan läpinäkyvänä (sama yksirivinen korkeus kummallekin tekstille), joten mikään ei liiku.
+            latausRivi = Rakenne.Teksti("Linna latautuu…", "mk-astroavaus__lahde", nimiOtsikko);
             latausRivi.AddToClassList("mk-astroavaus__otsikko--haipyy");
             latausRivi.style.marginTop = 22;
             latausRivi.style.opacity = 0f;
