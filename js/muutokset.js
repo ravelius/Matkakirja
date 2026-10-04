@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2607, teksti: 'Olavinlinna blender v28: valoatlakset ja kuoren… (#3947)' },
   { v: 2606, teksti: 'Keittiö: apulaisen repliikit käsikirjoitukseen (#3942)' },
   { v: 2605, teksti: 'Raamattu: lataus sama kaikilla verkoilla (#3938)' },
   { v: 2604, teksti: 'Linnakirjasto erä 2: hahmot, taivaat, esiasetuk… (#3933)' },
