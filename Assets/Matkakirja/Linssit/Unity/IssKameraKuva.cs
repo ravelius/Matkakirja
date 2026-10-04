@@ -56,7 +56,9 @@ namespace Matkakirja.Natiivi
         /// sinisyys 1,3, utu 1,2, ydin 1, syvänsininen hehku 1,5. Asetetaan kuvan ajaksi, jos säätimet ovat oletuksissaan
         /// (testikomennoilla `astro kyyti kaarivoima|kaarihr|kaarisini|utu|kaariydin|kaarisyva` asetetut arvot pysyvät).
         /// </summary>
-        const float KaariVoima = 6f, KaariHr = 1.5f, KaariSini = 1.3f, KaariUtu = 1.2f, KaariYdin = 1f, KaariSyva = 1.5f;
+        // Päätoimittaja 4.10. (maailmakamera): usva neutraaliksi sinivalkoiseksi; simu a10a2777 A/B: Rayleigh-kerros 1,5, sinisyys 1,3, utu 1,2
+        // ja syvänsininen hehku 1,5 tekivät COG-kuvista violetteja (Sahara, Grand Canyon) → Rayleigh 1, sinisyys 1, utu 0,8, ei syvää hehkua.
+        const float KaariVoima = 6f, KaariHr = 1f, KaariSini = 1f, KaariUtu = 0.8f, KaariYdin = 1f, KaariSyva = 0f;
 
         static bool KaariOletuksissa() => Avaruus.KuvanKaariVoima == 1f && Avaruus.KuvanHrKerroin == 1f && Avaruus.KuvanSiniKerroin == 1f
             && Avaruus.KuvanUtuKerroin == 1f && Avaruus.KuvanKaariYdin == 1f && Avaruus.KuvanKaariSyva == 0f;
