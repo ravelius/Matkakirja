@@ -1502,6 +1502,16 @@ namespace Matkakirja.Natiivi
                     if (!AineistoValmis && rekisteri.Kaikki.All(l => l.Tiedot.Id != osat[1])) StartCoroutine(ValitseKunValmis(osat[1]));
                     else rekisteri.Valitse(osat[1]);
                 }
+                else if (osat[0] == "kaappaa" && osat.Length > 1)
+                    // Yleinen äänikaappaus tallenteeseen (Päätoimittaja 4.10.: kaikille linsseille, ei vain ajattelijalle):
+                    // kaappaa <s> [nimi] → Documents/<nimi>.wav, ulostulo nollattu (AaniKaappaus).
+                    AaniKaappaus.Aloita(double.Parse(osat[1], System.Globalization.CultureInfo.InvariantCulture),
+                        osat.Length > 2 ? osat[2] : "kaappaus", t => Kirjaa("aani: " + t));
+                else if (osat[0] == "merkki")
+                    // Tahdistusmerkki ilman linssiä (välähdys + piippaus samaan äänikellon hetkeen; kaappauksen aikana).
+                    Kirjaa($"aani: merkki dsp {AaniKaappaus.Merkki(0.5, AjattelijatSovitin.Ulostuloviive):F4} s");
+                else if (osat[0] == "soivat")
+                    Kirjaa("aani: soivat: " + PeliOhjain.SoivatAanet());   // linssin avauksen todiste (omistaja TF 135)
                 else if (osat[0] == "erikois")
                     ErikoismalliElavat.Testi(osat.Length > 1 ? string.Join(" ", osat, 1, osat.Length - 1) : "tila", this);
                 else if (osat[0] == "elava")
