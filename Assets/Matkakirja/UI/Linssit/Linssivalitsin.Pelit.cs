@@ -5,7 +5,8 @@
 // otsikko kuten ennen (ei tyhjää näkymää). Pelit-rivit Aarteiden rivipohjalla (mk-linssirivi, osiot mk-linssivalitsin__aarreosio).
 //   Kehittäjä (Asetukset.Kehittaja): kaikki minipelit ilman ansaitsemista — Mylly jokaisella laudalla (valintakortissa vastustaja)
 //                                     ja Lentopeli (vaihe 1, lähtö pelaajan kaupungista tai Ateenasta).
-//   Pelaaja: vain avatut pelit — Mylly kohtaamisen (Berliini) jälkeen, laudat jotka ovat käytössä. Aarteiden Pelit-osio ennallaan.
+//   Pelaaja: vain pelatut ja avatut pelit — Mylly kohtaamisen (Berliini) jälkeen, laudat jotka ovat käytössä. Pelit eivät enää
+//            ole Aarteissa (omistaja 18.3x: "Ota pelit pois aarteista"), vaan vain täällä.
 using System.Collections.Generic;
 using System.Linq;
 using Matkakirja.Peli;

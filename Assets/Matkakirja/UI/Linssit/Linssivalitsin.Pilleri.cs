@@ -320,7 +320,7 @@ namespace Matkakirja.Natiivi
             // Kehittäjätilassa kaikki aarteet näkyvät avattuina (omistaja 2.10.2026 klo 21.4x, kuten julisteet galleriassa).
             var loydetyt = d.AarninLuettelo.Where(a => a.Loydetty || Asetukset.Kehittaja).ToList();
             // Valikko v2 (web piirraKokoelma, #3877): tyhjät ryhmät pois, ja jos mitään ei ole, pelkkä "Ei vielä mitään kerättyä.".
-            if (V2 && loydetyt.Count == 0 && d.Tavarat.Count == 0 && !(d.Matkamuistot?.Count > 0) && !(d.Pelit?.Count > 0))
+            if (V2 && loydetyt.Count == 0 && d.Tavarat.Count == 0 && !(d.Matkamuistot?.Count > 0))
             {
                 Rakenne.Teksti("Ei vielä mitään kerättyä.", "mk-linssivalitsin__tyhja", aarteet);
                 return;
@@ -337,16 +337,8 @@ namespace Matkakirja.Natiivi
                 Osio("Matkamuistot", d.Matkamuistot.Count, -1);
                 foreach (var m in d.Matkamuistot) AarreRivi("muisto:" + m.Id, m.Nimi, m.KuvaUrl, m.Selite, () => Suurenna(m.KuvaUrl, m.Nimi));
             }
-            // PELIT (Siirtoseppä 1.10.2026, Päätoimittajan linjaus): pelatut lautapelit; napautus avaa pelin uudelleen.
-            if (d.Pelit?.Count > 0)
-            {
-                Osio("Pelit", d.Pelit.Count, -1);
-                foreach (var g in d.Pelit)
-                {
-                    var id = g.Id;
-                    AarreRivi("peli:" + id, g.Nimi, null, g.Selite, () => { Sulje(); MyllyNakyma.AvaaPeli(id); });
-                }
-            }
+            // Pelatut ja avatut pelit eivät ole Aarteissa vaan kartan Linssit-napin Pelit-kategoriassa (omistaja 4.10.2026 klo 18.3x:
+            // "Ota pelit pois aarteista"; Linssivalitsin.Pelit.cs).
             // Valikko v2: julisteilla on oma rivinsä ja ikkunansa (GALLERIA), joten Aarteet-ikkunassa vain aarteet (omistaja 21.4x).
             if (V2) return;
             Osio("Julisteet", d.Julisteet.Count, d.JulisteitaKaikkiaan);
