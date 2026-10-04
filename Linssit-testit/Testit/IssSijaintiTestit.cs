@@ -42,14 +42,27 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(("INTIAN VALTAMERI", ""), IssSijainti.Hae(a, -30, 70), "muualla lähin valtameri");
         }
 
-        [Testi] static void MaallaAinaSamanMaanKaupunkiTaiVuori()
+        [Testi] static void KaupunkiVain40KmSateellaMuutenVuoriTaiMaa()
         {
-            // Omistaja 4.10. 21.5x: maalla aina tarkempi kohde kuin pelkkä maa (ei etäisyysrajaa kaupungille).
+            // Päätoimittaja 4.10.: kaupunki vain ~40 km:n säteellä (Poznańin yllä ei "VARSOVA" 280 km:n päästä).
             var a = Pieni();
-            Oleta.Sama(("NAPOLI", "ITALIA"), IssSijainti.Hae(a, 38.2, 16.0), "Calabria: lähin Italian kaupunki yli 200 km:n päästä");
+            Oleta.Sama(("ITALIA", ""), IssSijainti.Hae(a, 38.2, 16.0), "Calabria: pelin kaupungit kaukana, ei paikkaa");
+            a.Paikat.Add(new IssSijainti.Paikka("Cosenza", 39.30, 16.25, "ITA", 70000));
+            a.Paikat.Add(new IssSijainti.Paikka("Catanzaro", 38.90, 16.60, "ITA", 90000));
+            Oleta.Sama(("CATANZARO", "ITALIA"), IssSijainti.Hae(a, 38.8, 16.4), "Natural Earthin lähin paikka");
             a.Kaupungit.Add(new IssSijainti.Paikka("Zürich", 47.37, 8.54, "CHE", 2));
-            Oleta.Sama(("ALPIT", "SVEITSI"), IssSijainti.Hae(a, 46.5, 9.7), "vuoristossa vuori, vaikka maassa on kaupunki");
-            Oleta.Sama(("ZÜRICH", "SVEITSI"), IssSijainti.Hae(a, 47.3, 8.0), "kaupunki lähempänä kuin vuoristo");
+            Oleta.Sama(("ALPIT", "SVEITSI"), IssSijainti.Hae(a, 46.5, 9.7), "ei kaupunkia 40 km:n säteellä → vuoristo");
+            Oleta.Sama(("ZÜRICH", "SVEITSI"), IssSijainti.Hae(a, 47.3, 8.4), "kaupunki säteellä");
+        }
+
+        [Testi] static void PelinSuomenkielinenNimiPaikalle()
+        {
+            var a = new IssSijainti.Aineisto { Maa = (lat, lon) => ("POL", "Puola") };
+            a.Kaupungit.Add(new IssSijainti.Paikka("Varsova", 52.23, 21.01, "POL", 3));
+            a.Paikat.Add(new IssSijainti.Paikka("Warszawa", 52.2519, 20.9981, "POL", 1707000));
+            a.Paikat.Add(new IssSijainti.Paikka("Poznań", 52.4058, 16.8999, "POL", 623997));
+            Oleta.Sama(("VARSOVA", "PUOLA"), IssSijainti.Hae(a, 52.10, 21.20), "pelin nimi Natural Earthin paikalle");
+            Oleta.Sama(("POZNAŃ", "PUOLA"), IssSijainti.Hae(a, 52.30, 16.70), "paikallinen nimi, kun paikka ei ole pelissä");
         }
 
         [Testi] static void PelkkaMaaKunEiKohdetta()
@@ -70,10 +83,10 @@ namespace Matkakirja.Linssit.Testit
             };
             a.Kaupungit.Add(new IssSijainti.Paikka("Berliini", 52.52, 13.40, "DEU", 3));
             a.Kaupungit.Add(new IssSijainti.Paikka("Poznań", 52.41, 16.93, "POL", 1));
-            Oleta.Sama(("POZNAŃ", "PUOLA"), IssSijainti.Hae(a, 52.40, 15.20), "Puolan puolelta");
+            Oleta.Sama(("POZNAŃ", "PUOLA"), IssSijainti.Hae(a, 52.40, 16.60), "Puolan puolelta");
             Oleta.Sama(("BERLIINI", "SAKSA"), IssSijainti.Hae(a, 52.50, 13.50));
             a.Kaupungit.RemoveAt(1);
-            Oleta.Sama(("PUOLA", ""), IssSijainti.Hae(a, 52.40, 15.20), "ei saman maan kaupunkia → maa");
+            Oleta.Sama(("PUOLA", ""), IssSijainti.Hae(a, 52.40, 16.60), "ei saman maan kaupunkia → maa");
         }
     }
 }

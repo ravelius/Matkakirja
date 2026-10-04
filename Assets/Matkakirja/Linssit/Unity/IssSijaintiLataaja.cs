@@ -8,6 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Iss;
 using Matkakirja.Linssit.Maat;
+using System.Globalization;
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
@@ -41,6 +42,27 @@ namespace Matkakirja.Natiivi
                     else if (k.tyyppi == "aavikko") a.Vuoret.Add(p);   // maastokohde kuten vuoristo (Sahara)
                     else a.Kaupungit.Add(p);
                 }
+            // Natural Earthin asutut paikat (PD, ~7 300; tyokalut/iss_paikat.py): LCD:n tarkka kaupunki ≤ 40 km (Päätoimittaja 4.10.).
+            var paikatTeksti = Resources.Load<TextAsset>("IssPaikat/paikat");
+            if (paikatTeksti != null)
+            {
+                string json = paikatTeksti.text;
+                var jasennys = System.Threading.Tasks.Task.Run(() =>
+                {
+                    var r = new List<IssSijainti.Paikka>();
+                    var juuri = Matkakirja.Peli.MiniJson.Jasenna(json) as Dictionary<string, object>;
+                    if (Matkakirja.Peli.MiniJson.Kentta(juuri, "paikat") is List<object> rivit)
+                        foreach (var o in rivit)
+                            if (o is List<object> x && x.Count >= 5)
+                                r.Add(new IssSijainti.Paikka(x[0] as string, Convert.ToDouble(x[1], CultureInfo.InvariantCulture),
+                                    Convert.ToDouble(x[2], CultureInfo.InvariantCulture), x[3] as string, Convert.ToInt32(x[4], CultureInfo.InvariantCulture)));
+                    return r;
+                });
+                while (!jasennys.IsCompleted) yield return null;
+                if (jasennys.IsFaulted) Debug.LogWarning("MATKAKIRJA linssit: iss-sijainti: paikat: " + jasennys.Exception?.GetBaseException().Message);
+                else a.Paikat.AddRange(jasennys.Result);
+                Resources.UnloadAsset(paikatTeksti);
+            }
             var nimisto = Nimikerros.Instanssi?.Nimisto;
             if (nimisto != null)
                 foreach (var n in nimisto.Nimet)
@@ -70,7 +92,7 @@ namespace Matkakirja.Natiivi
             }
             IssSijainti.Nykyinen = a;
             kaynnissa = false;
-            Debug.Log($"MATKAKIRJA linssit: iss-sijainti: maat {(a.Maa != null ? "on" : "ei")}, kaupunkeja {a.Kaupungit.Count}, vuoria {a.Vuoret.Count}, "
+            Debug.Log($"MATKAKIRJA linssit: iss-sijainti: maat {(a.Maa != null ? "on" : "ei")}, kaupunkeja {a.Kaupungit.Count}, paikkoja {a.Paikat.Count}, vuoria {a.Vuoret.Count}, "
                 + $"meriä {a.Meret.Count}, valtameriä {a.Valtameret.Count}");
         }
 

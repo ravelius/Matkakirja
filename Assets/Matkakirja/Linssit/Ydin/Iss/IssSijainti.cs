@@ -2,9 +2,10 @@
 // nykyisen sijainnin reilun kokoisilla kirjaimilla, esim. ROOMA, ITALIA (lähin tunnistettava karttakohde, kaupunki, meri, vuori).
 // Maan nimi tulee kohteen alapuolelle"). Vain olemassa oleva paikkadata (Unity-puoli täyttää Aineiston: maat MaaOsumalla,
 // kaupungit, vuoristot, meret ja valtameret). Säännöt:
-//   maalla (omistaja 4.10. 21.5x Natiivi-UI:n kautta: "miksi ei ole tarkempaa sijaintia"): vuoristossa (vuoristo ≤ VuoriKm ja
-//            lähempänä kuin kaupunki) VUORI / MAA, muuten lähin saman maan kaupunki ilman etäisyysrajaa → KAUPUNKI / MAA; pelkkä
-//            MAA vain, jos aineistossa ei ole yhtään sen maan kaupunkia eikä vuoristoa lähellä;
+//   maalla (omistaja 4.10. 21.5x "miksi ei ole tarkempaa sijaintia"; Päätoimittaja: Poznańin yllä "VARSOVA" 280 km:n päästä):
+//            lähin saman maan kaupunki ≤ KaupunkiKm (40 km) pelin kaupungeista ja Natural Earthin paikoista (Paikat, ~7 300,
+//            Resources/IssPaikat) → KAUPUNKI / MAA; Natural Earthin paikka saa pelin suomenkielisen nimen, kun pelin kaupunki on
+//            samassa maassa ≤ PelinNimiKm päässä siitä (Varsova, Krakova); muuten vuoristo ≤ VuoriKm → VUORI / MAA; muuten MAA;
 //   merellä (ei maata pisteessä): lähin nimetty meri ≤ MeriKm → MERI; muuten lähin valtameri (aina jokin).
 // Puhdas C#: Linssit-testit IssSijaintiTestit.
 using System;
@@ -15,8 +16,8 @@ namespace Matkakirja.Linssit.Iss
 {
     public static class IssSijainti
     {
-        /// <summary>KaupunkiKm: Nimet-reitin ja vanhan säännön raja (ei enää LCD:n maalla); VuoriKm: "vuoristossa".</summary>
-        public const double KaupunkiKm = 200, VuoriKm = 150, MeriKm = 600;
+        /// <summary>KaupunkiKm: kaupunki näytetään vain tämän säteellä pisteestä; VuoriKm: "vuoristossa"; PelinNimiKm: pelin nimi.</summary>
+        public const double KaupunkiKm = 40, VuoriKm = 150, MeriKm = 600, PelinNimiKm = 15;
 
         public readonly struct Paikka
         {
@@ -33,6 +34,8 @@ namespace Matkakirja.Linssit.Iss
             public Func<string, string> MaanNimi;
             public readonly List<Paikka> Kaupungit = new List<Paikka>(), Vuoret = new List<Paikka>(),
                 Meret = new List<Paikka>(), Valtameret = new List<Paikka>();
+            /// <summary>Natural Earthin asutut paikat (Tarkeys = väkiluku); paikallinen nimi.</summary>
+            public readonly List<Paikka> Paikat = new List<Paikka>();
         }
 
         /// <summary>Unityn täyttämä aineisto (null = ei vielä ladattu).</summary>
@@ -56,14 +59,54 @@ namespace Matkakirja.Linssit.Iss
                 string m = Iso(maa.Value.Nimi);
                 // Päätoimittaja 4.10.: maa on aina pisteen maa (jonka yllä ISS on) ja kaupunki lähin SAMAN maan kaupunki (ei "BERLIINI /
                 // PUOLA" eikä rajan takainen "LONTOO" Ranskan pisteessä). Kaupunki, jonka maata ei tunneta, kelpaa vain sellaisenaan.
-                var (k, kKm) = LahinKm(a.Kaupungit, lat, lon, double.PositiveInfinity, maa.Value.Iso);
-                var (v, vKm) = LahinKm(a.Vuoret, lat, lon, VuoriKm, null);
-                if (v.HasValue && (!k.HasValue || vKm < kKm)) return (Iso(v.Value.Nimi), m);
+                var (k, kKm) = LahinKm(a.Kaupungit, lat, lon, KaupunkiKm, maa.Value.Iso);
+                var (ne, neKm) = LahinVakiluvulla(a.Paikat, lat, lon, KaupunkiKm, maa.Value.Iso);
+                if (ne.HasValue && (!k.HasValue || neKm < kKm))
+                {
+                    // Pelin kaupunki samassa paikassa → pelin suomenkielinen nimi (Warszawa → Varsova).
+                    var (peli, _) = LahinKm(a.Kaupungit, ne.Value.Lat, ne.Value.Lon, PelinNimiKm + 30, maa.Value.Iso);
+                    bool sama = peli.HasValue && Ylilennot.MaaEtaisyysKm(ne.Value.Lat, ne.Value.Lon, peli.Value.Lat, peli.Value.Lon) <= PelinNimiKm;
+                    return (Iso(sama ? peli.Value.Nimi : ne.Value.Nimi), m);
+                }
                 if (k.HasValue) return (Iso(k.Value.Nimi), m);
+                var (v, _) = LahinKm(a.Vuoret, lat, lon, VuoriKm, null);
+                if (v.HasValue) return (Iso(v.Value.Nimi), m);
                 return (m, "");
             }
             var meri = Lahin(a.Meret, lat, lon, MeriKm, null) ?? Lahin(a.Valtameret, lat, lon, double.PositiveInfinity, null);
             return (meri.HasValue ? Iso(meri.Value.Nimi) : "", "");
+        }
+
+        /// <summary>
+        /// Testitaulukolle: LCD:n kohteen (isolla) lähimmän samannimisen paikan etäisyys pisteestä (km) ja laji (kaupunki, paikka,
+        /// vuori, meri, valtameri); maa-kohteelle (−1, "maa").
+        /// </summary>
+        public static (double Km, string Laji) Selitys(Aineisto a, string kohde, double lat, double lon)
+        {
+            if (a == null || string.IsNullOrEmpty(kohde)) return (-1, "");
+            foreach (var (lista, laji) in new[] { (a.Kaupungit, "kaupunki"), (a.Paikat, "paikka"), (a.Vuoret, "vuori"), (a.Meret, "meri"), (a.Valtameret, "valtameri") })
+            {
+                double paras = double.MaxValue;
+                foreach (var x in lista)
+                    if (Iso(x.Nimi) == kohde) paras = Math.Min(paras, Ylilennot.MaaEtaisyysKm(lat, lon, x.Lat, x.Lon));
+                if (paras < double.MaxValue) return (paras, laji);
+            }
+            return (-1, "maa");
+        }
+
+        /// <summary>Lähin paikka säteellä (km), suurempi väkiluku voittaa lievästi (2 km per kymmenkertainen väkiluku yli 10 000).</summary>
+        static (Paikka? p, double km) LahinVakiluvulla(List<Paikka> p, double lat, double lon, double maxKm, string maa)
+        {
+            Paikka? paras = null; double parasKm = double.PositiveInfinity;
+            foreach (var x in p)
+            {
+                if (maa != null && x.Maa != maa) continue;
+                double km = Ylilennot.MaaEtaisyysKm(lat, lon, x.Lat, x.Lon);
+                if (km > maxKm) continue;
+                km -= 2 * Math.Log10(Math.Max(1, x.Tarkeys / 10000.0));
+                if (km < parasKm) { parasKm = km; paras = x; }
+            }
+            return (paras, parasKm);
         }
 
         /// <summary>Kuten Lahin, lisäksi painotettu etäisyys (km, tärkeys vähennettynä) vertailuun.</summary>
