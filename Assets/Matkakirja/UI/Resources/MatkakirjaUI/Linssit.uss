@@ -1747,7 +1747,7 @@
     margin: 0 0 2px 0;
     padding: 5px 10px;
     /* Läpinäkyvä reuna kaikilla riveillä: valitun rivin punainen reuna ei siirrä tekstiä. */
-    border-width: 1.5px;
+    border-width: 1px;
     border-color: rgba(0, 0, 0, 0);
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0);
@@ -1760,7 +1760,7 @@
 .mk-astroTaulu__rivi.mk-valittu {
     /* Omistaja 4.10.2026 klo 11.40: nykyinen tila hennolla punaisella pyöristetyllä laatikolla (ennen vihreä pohja). */
     border-color: var(--tk-tila-virhe);
-    background-color: rgba(176, 58, 43, 0.12);
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .mk-astroTaulu__riviOtsikko {

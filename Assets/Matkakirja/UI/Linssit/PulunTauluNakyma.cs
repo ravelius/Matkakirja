@@ -4,7 +4,7 @@
 //   Minne katsotaan?                        ✕     otsikko 13 pt himmeä, ✕ OHJAUSNAPPI (harmaa)
 //   Maapallo              Koko Maa avaruudesta     rivi ≥ 44 pt: otsikko 15 pt lihava, selite 12 pt himmeä
 //   Astronauttien kuvat   Valokuvat avaruudesta    nykyinen tila hennolla punaisella pyöristetyllä laatikolla
-//   ISS ohjaamo           Cupolan ikkunasta alas   ISS-rivi vain, kun kyyti on
+//   ISS-ohjaamo           Cupolan ikkunasta alas   ISS-rivi vain, kun kyyti on
 //   Poistu                Takaisin karttaan        sulkee linssin
 //   ─────────────────────────────────────
 //   Kysy Pululta                                   linkki 44 pt: Pulun chat tilan viidellä valmiilla kysymyksellä
@@ -447,8 +447,22 @@ namespace Matkakirja.Natiivi
             Sulje("kysy");
             var nyt = Nykyinen(Linssi());
             var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
-            chat?.AvaaLinssissa(() => astro.Kuva.Auki && astro.Kuva.MinipulunLaatikko.width > 0 ? astro.Kuva.MinipulunLaatikko
-                : Pulu.Hae().Nakyvissa ? Pulu.Hae().Lintu : default, "astro:" + nyt, null);
+            chat?.AvaaLinssissa(ChatinAnkkuri, "astro:" + nyt, null);
+        }
+
+        /// <summary>
+        /// Chat Pulun yläpuolelle: kuvassa minipulu, muuten Pulun lintu. Cupolan robottikäden Pulu (OikeallaReunalla) piirtyy
+        /// kosketusalueen yläpuolelle, joten ankkuriin myös Pulun koko alue (Päätoimittaja 4.10.: chat peitti Pulun ohjaamossa).
+        /// </summary>
+        Rect ChatinAnkkuri()
+        {
+            if (astro.Kuva.Auki && astro.Kuva.MinipulunLaatikko.width > 0) return astro.Kuva.MinipulunLaatikko;
+            var p = Pulu.Hae();
+            if (!p.Nakyvissa) return default;
+            var r = p.Lintu;
+            var a = p.Laatikko;
+            if (p.OikeallaReunalla && a.width > 0 && r.width > 0) r = Rect.MinMaxRect(r.xMin, Mathf.Min(r.yMin, a.yMin), r.xMax, r.yMax);
+            return r;
         }
 
         /// <summary>Kysymysmoduulin avain tilasta: ohjaamo kattaa Cupolan, ylilennon ja kehittäjän seurannan.</summary>

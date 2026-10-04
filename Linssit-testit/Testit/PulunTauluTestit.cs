@@ -13,9 +13,9 @@ namespace Matkakirja.Linssit.Testit
         { Matkakirja.Linssit.Iss.IssKyyti.SeurantaKaytossa = true;   // kehittäjän seurantapolku (ISS:n rinnalla pois pelistä 2.10.)
             try {
             var kaikki = PulunTaulu.Rivit(true, true, AstroMoodi.Pallo);
-            // Omistaja 4.10.2026 klo 11.40: Maapallo, Astronauttien kuvat, ISS ohjaamo, Poistu (seuranta vain kehittäjälle).
+            // Omistaja 4.10.2026 klo 11.40: Maapallo, Astronauttien kuvat, ISS-ohjaamo, Poistu (seuranta vain kehittäjälle).
             Oleta.Sama("pallo kuvat iss-sisalle iss-rinnalla poistu", string.Join(" ", kaikki.Select(r => r.Tunnus)));
-            Oleta.Sama("Maapallo|Astronauttien kuvat|ISS ohjaamo|ISS:n rinnalla|Poistu", string.Join("|", kaikki.Select(r => r.Otsikko)));
+            Oleta.Sama("Maapallo|Astronauttien kuvat|ISS-ohjaamo|ISS:n rinnalla|Poistu", string.Join("|", kaikki.Select(r => r.Otsikko)));
             Oleta.Sama("Koko Maa avaruudesta|Valokuvat avaruudesta|Cupolan ikkunasta alas|Asema radallaan|Takaisin karttaan", string.Join("|", kaikki.Select(r => r.Selite)));
             Oleta.Sama("pallo", kaikki.Single(r => r.Aktiivinen).Tunnus);
             // Ilman kyytiä ISS-rivit puuttuvat, ilman kohteita kuvat; Poistu aina viimeisenä eikä koskaan valittuna.

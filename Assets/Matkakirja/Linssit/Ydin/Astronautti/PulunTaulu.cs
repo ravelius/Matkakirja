@@ -2,7 +2,7 @@
 // pulua"; web js/linssit/pulu-taulu.js, PR #3590): puhdas logiikka natiiville (Linssiseppä 29.9.2026). UI on
 // UI/Linssit/PulunTauluNakyma.cs.
 //
-//   Rivit        Maapallo · Astronauttien kuvat · ISS ohjaamo · Poistu (omistaja 4.10.2026 klo 11.40 ISS-OHJAAMO UUSIKSI;
+//   Rivit        Maapallo · Astronauttien kuvat · ISS-ohjaamo · Poistu (omistaja 4.10.2026 klo 11.40 ISS-OHJAAMO UUSIKSI;
 //                ennen web ASTRO_TAULUN_RIVIT). ISS-rivi vain, kun kyyti on olemassa, kuvat, kun linssillä on kohteita;
 //                Poistu sulkee linssin, aina viimeisenä. Nykyinen moodi valittuna (ei koskaan Poistu).
 //   Moodi        kuva auki → Kuvat; kyydin tila Seuranta → Seuranta; Ikkuna tai Kohde (ylilento) → Ikkuna; muuten Pallo.
@@ -66,7 +66,7 @@ namespace Matkakirja.Linssit.Astronautti
         {
             new TaulunRivi { Tunnus = "pallo", Moodi = AstroMoodi.Pallo, Otsikko = "Maapallo", Selite = "Koko Maa avaruudesta" },
             new TaulunRivi { Tunnus = "kuvat", Moodi = AstroMoodi.Kuvat, Otsikko = "Astronauttien kuvat", Selite = "Valokuvat avaruudesta" },
-            new TaulunRivi { Tunnus = "iss-sisalle", Moodi = AstroMoodi.Ikkuna, Otsikko = "ISS ohjaamo", Selite = "Cupolan ikkunasta alas" },
+            new TaulunRivi { Tunnus = "iss-sisalle", Moodi = AstroMoodi.Ikkuna, Otsikko = "ISS-ohjaamo", Selite = "Cupolan ikkunasta alas" },
             // Vain kehittäjän seurantatilassa (ISS:n rinnalla pois pelistä 2.10.2026).
             new TaulunRivi { Tunnus = "iss-rinnalla", Moodi = AstroMoodi.Seuranta, Otsikko = "ISS:n rinnalla", Selite = "Asema radallaan" },
             new TaulunRivi { Tunnus = "poistu", Toiminto = true, Otsikko = "Poistu", Selite = "Takaisin karttaan" },
