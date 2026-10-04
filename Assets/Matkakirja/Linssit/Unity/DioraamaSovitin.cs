@@ -92,6 +92,7 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, Texture2D> ladatutValoAtlakset = new Dictionary<string, Texture2D>(StringComparer.Ordinal);
         string peiliKuvaus = "pois (ämpäri)";
         Func<string, string> peili = s => s;
+        bool peiliPaalla;
         bool peiliHttps;
         /// <summary>Paketin juuri: AmpariJuuri + uusin.json:n polku, tai AmpariJuuri (kehityspeili).</summary>
         string paketinJuuri = AmpariJuuri;
@@ -214,6 +215,7 @@ namespace Matkakirja.Natiivi
                     o.Kirjaa($"poikki: saapuminen alkaa (kaikki valmiina täydellä tarkkuudella: kuori, tilat {tilojaKasitelty}/{TilojaGlb()}, " +
                              $"hahmot {hahmojaKasitelty}/{hahmoGlbJonossaTaiValmiit.Count}, ympäristö; odotettiin {odotettu:F1} s, " +
                              $"välimuistista {DioraamaLevyvalimuisti.Osumia - osumiaAlussa}, verkosta {DioraamaLevyvalimuisti.Latauksia - latauksiaAlussa})");
+                    DioraamaLevyvalimuisti.SiivoaVanhat(o.Kirjaa); // vanhan pakettiversion sisältö pois vasta, kun uusi on valmis
                 }
                 else { nayttamo.Odota(true); t = kuoriOdotusT; }
             }
@@ -350,9 +352,25 @@ namespace Matkakirja.Natiivi
         IEnumerator LataaRakennus()
         {
             string uusin = null;
-            yield return HaeTeksti(peili(AmpariJuuri + "uusin.json"), t => uusin = t);
             paketinJuuri = AmpariJuuri;
-            DioraamaLevyvalimuisti.Aseta(AmpariJuuri, null);
+            if (!peiliPaalla)
+            {
+                // Sisältövarasto (4.10.): sama istunnon osoitin kuin esilatauksella, ja manifesti ennen ensimmäistä hakua.
+                string osoitin = null;
+                yield return DioraamaLevyvalimuisti.LueOsoitin(AmpariJuuri, pv => osoitin = pv);
+                if (!string.IsNullOrEmpty(osoitin))
+                {
+                    paketinJuuri = AmpariJuuri + osoitin.TrimEnd('/') + "/";
+                    DioraamaLevyvalimuisti.Aseta(AmpariJuuri, osoitin.Trim('/'));
+                    yield return DioraamaLevyvalimuisti.Valmistele(o.Kirjaa);
+                }
+                else DioraamaLevyvalimuisti.Aseta(AmpariJuuri, null);
+            }
+            else
+            {
+                yield return HaeTeksti(peili(AmpariJuuri + "uusin.json"), t => uusin = t);
+                DioraamaLevyvalimuisti.Aseta(AmpariJuuri, null);
+            }
             if (uusin != null)
             {
                 try
@@ -744,6 +762,7 @@ namespace Matkakirja.Natiivi
             if (mita == "peili")
             {
                 peiliHttps = false;
+                peiliPaalla = !(arvo == null || arvo == "pois");
                 if (arvo == null || arvo == "pois") { peili = s => s; peiliKuvaus = "pois (ämpäri)"; }
                 else
                 {
@@ -755,6 +774,15 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: peili " + peiliKuvaus);
                 return;
             }
+            // "poikki osoitin <hash>|pois" (sisältövarasto 4.10.): testiosoitin uusin.jsonin tilalle seuraavaan lataukseen
+            // (esilataus ja linssi); "poikki välimuisti": välimuistin tila ja levynkäyttö lokiin.
+            if (mita == "osoitin")
+            {
+                DioraamaLevyvalimuisti.TestiOsoitin = arvo == null || arvo == "pois" ? null : arvo.Trim('/');
+                o.Kirjaa("poikki: testiosoitin " + (DioraamaLevyvalimuisti.TestiOsoitin ?? "pois (uusin.json)"));
+                return;
+            }
+            if (mita == "valimuisti" || mita == "välimuisti") { DioraamaLevyvalimuisti.KirjaaKoko(); return; }
             // "poikki saapuminen alusta": seuraava avaus näyttää täyden saapumiskaaren (kehittäjä, kuvaukset).
             if (mita == "etsinta")
             {
