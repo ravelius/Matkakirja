@@ -957,6 +957,15 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: lataa uudelleen");
                 return;
             }
+            if (mita == "avainsana")
+            {
+                // Testi ennen dataa: poikki avainsana <jakso> <t_s> <vuosi|-> <sanat…> (lisää jakson avainsanoihin).
+                var o2 = osat.Length > 4 && rakennus != null && int.TryParse(osat[2], out int ji) && ji >= 0 && ji < rakennus.Kertoja.Count
+                    ? new Avainsana { Ts = Luku(osat[3]), Vuosi = osat[4] == "-" ? null : osat[4], Sanat = string.Join(" ", osat, 5, osat.Length - 5) } : null;
+                if (o2 != null) rakennus.Kertoja[int.Parse(osat[2])].Avainsanat.Add(o2);
+                o.Kirjaa("poikki: avainsana " + (o2 != null ? $"lisätty jaksoon {osat[2]}: {o2.Vuosi} {o2.Sanat} @ {o2.Ts:F1} s" : "käyttö: poikki avainsana <jakso> <t_s> <vuosi|-> <sanat>"));
+                return;
+            }
             if (mita == "orbit")
             {
                 DioraamaKameraJousi.OrbitPaalla = arvo != "0";
