@@ -425,6 +425,11 @@ namespace Matkakirja.Natiivi
         void Paivita()
         {
             PaivitaNimiruutu();
+            // Natiivisepän itsetarkistus 4.10. (juna 141, vaaka): auki olevan linnan valikon läpi näkyi huonekortti ja Kuuntele
+            // piirtyi rivien päälle → kortti, Kuuntele, Pulu ja nimilaput piiloon valikon ajaksi (näkyvyys; asettelu jatkuu).
+            var valikonAikana = Linna != null && Linna.Auki ? (StyleEnum<Visibility>)Visibility.Hidden : StyleKeyword.Null;
+            lauta.style.visibility = kuunteleNappi.style.visibility = pulu.style.visibility = puluAlue.style.visibility
+                = lappuKerros.style.visibility = valikonAikana;
             var linssi = DioraamaSovitin.Linssi;
             var rakennus = linssi?.Rakennus;
             // Kehittäjän Kuori-nappi ×:n alle oikeaan reunaan (katselmus 1.1 (78): kiinteä top 110 osui × -nappiin).
