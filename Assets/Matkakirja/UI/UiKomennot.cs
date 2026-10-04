@@ -1312,11 +1312,21 @@ namespace Matkakirja.Natiivi
                         Kuvat.Hae(url, t => Kirjaa($"kuvat hae: {(t != null ? $"{t.width}×{t.height}, " : "ei kuvaa, ")}{Kuvat.Tila()}"));
                         return "=kuvat hae aloitettu";
                     }
+                    // "ui kuvat nayta <url> | sulje": kuva koko ruudulle (Kuvasuurennos, sama Kuvat.Hae-polku) still-todisteeseen.
+                    if (o.Length >= 1 && o[0] == "sulje") { testiSuurennos?.Sulje(); return "=suljettu"; }
+                    if (o.Length >= 2 && o[0] == "nayta")
+                    {
+                        testiSuurennos ??= new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
+                        testiSuurennos.Avaa(new List<LehtiKuva> { new LehtiKuva { Lahde = o[1], Otsikko = "testi" } }, 0);
+                        return "=kuvat nayta";
+                    }
                     return Kuvat.Tila();
                 }
                 default: return "tuntematon ui-komento";
             }
         }
+
+        static Kuvasuurennos testiSuurennos;
 
         // --- ui livia ------------------------------------------------------------------
 
