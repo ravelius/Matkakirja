@@ -1,7 +1,7 @@
 // TARKKA ISS-KUVA KUVAUSPAIKOILLA (omistaja 4.10.2026 klo 11.44: "Kameranappi tekee VAIN tarkan ISS-kuvan ... Nappi on aktiivinen
 // vain kuvauspaikan kohdalla"; Karttasepän kuvauspaikat: 25 Euroopan kohdetta, kukin 2048² jpg 20 × 20 km kesämediaanista,
 // ylin rivi pohjoinen, pikselit tasavälein lon/lat-bboxissa). Aineisto: kuvauspaikat.json ({"paikat": [...]}) tai yksittäinen
-// paikka-olio. Kuvausehto: Cupolan katsepiste enintään KuvausKm kuvauspaikan keskipisteestä. Kuvan rajaus (Rajaus): kamera ISS:ssä
+// paikka-olio. Kuvausehto: Cupolan katsepiste enintään KuvausKm (150 km) kuvauspaikan keskipisteestä. Kuvan rajaus (Rajaus): kamera ISS:ssä
 // katsoo keskipisteeseen ja kenttä niin, että kuva pysyy kuvauspaikan sisällä (vino katse venyttää maan pystysuunnassa).
 // Puhdas C#: Linssit-testit KuvauspaikatTestit.
 using System;
@@ -19,8 +19,12 @@ namespace Matkakirja.Linssit.Iss
 
     public static class Kuvauspaikat
     {
-        /// <summary>Katsepisteen enimmäisetäisyys kuvauspaikan keskipisteestä (km), jotta kameranappi on aktiivinen.</summary>
-        public static double KuvausKm = 15;
+        /// <summary>
+        /// Katsepisteen enimmäisetäisyys kuvauspaikan keskipisteestä (km), jotta kameranappi on aktiivinen. 150 km: alus kulkee
+        /// 7,7 km/s, joten 15 km:n säteellä nappi olisi ollut aktiivinen vain ~4 s; 150 km:llä ~40 s. Kuva rajataan silti ISS:ltä
+        /// paikan keskipisteeseen (Rajaus), joten katseen ei tarvitse osua tarkasti.
+        /// </summary>
+        public static double KuvausKm = 150;
         /// <summary>Kuvan osuus kuvauspaikan koosta lyhyemmällä sivulla (reunaan jää varaa, ettei aineiston ulkopuoli näy).</summary>
         public const double RajausOsuus = 0.9;
         /// <summary>Ämpärin juuri: kuva-kentän R2-polku lisätään tähän.</summary>

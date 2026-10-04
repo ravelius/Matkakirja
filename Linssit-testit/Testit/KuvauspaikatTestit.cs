@@ -28,7 +28,8 @@ namespace Matkakirja.Linssit.Testit
         {
             var p = Kuvauspaikat.Jasenna(Helsinki);
             Oleta.Sama("helsinki", Kuvauspaikat.Lahin(p, 60.20, 24.90)?.Tunniste, "~4 km");
-            Oleta.Tosi(Kuvauspaikat.Lahin(p, 60.40, 24.94) == null, "~26 km ei");
+            Oleta.Sama("helsinki", Kuvauspaikat.Lahin(p, 61.30, 24.94)?.Tunniste, "~126 km (alus 7,7 km/s: ikkuna ~40 s)");
+            Oleta.Tosi(Kuvauspaikat.Lahin(p, 61.60, 24.94) == null, "~159 km ei");
             Oleta.Tosi(Kuvauspaikat.Lahin(p, double.NaN, 0) == null, "ei katsetta");
         }
 
