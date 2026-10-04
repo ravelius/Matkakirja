@@ -77,6 +77,7 @@ namespace Matkakirja.Natiivi
             return "tehosteet";
         }
         readonly Dictionary<string, AudioSource> kertaLahteet = new Dictionary<string, AudioSource>();
+        readonly Dictionary<(string, string), double> edellinenTaso = new Dictionary<(string, string), double>();
         float viimeDuck = 1f;
         static float Kerroin(Dictionary<string, float> d, string avain, float oletus = 1f) =>
             avain != null && d.TryGetValue(avain, out var v) ? v : oletus;
@@ -226,7 +227,11 @@ namespace Matkakirja.Natiivi
                 double tavoite = aanimaisema.SilmukanTavoitetaso(tila.Id, taso, nakyma.KohdeTila, t);
                 // Yleisnäkymässä huoneiden silmukat vaimeina (× 0,3): linnan yleisäänet (massa: tuuli, laineet) johtavat, eikä
                 // kuuden kahvan raja pudota niitä (1.1 (75) -mittaus: jarvi-laineet 0,35 jäi keittiön silmukoiden alle).
-                if (nakyma.KohdeTila == null && tila.Id != Aanimaisema.MassaTilaId) tavoite *= 0.3;
+                // Omistaja 5.10. 00.5x ("Eikö kuoro yms äänet pitäisi tulla vasta myöhemmissä vaiheissa eikä yleisesittelyssä?"):
+                // yleisnäkymässä ja kertojan esittelyssä vain linnan yleisäänet (massa: tuuli, laineet); huoneen äänet vain, kun kamera
+                // on siinä huoneessa. Häivytys pehmeästi (Aanimaisema-liuku + kahvan 1,2 s:n liuku alla).
+                bool huoneenAanet = tila.Id == Aanimaisema.MassaTilaId || (nakyma.KohdeTila == tila.Id && nakyma.KertojaJakso < 0);
+                if (!huoneenAanet) tavoite = 0;
                 foreach (var ap in tila.Aanet)
                 {
                     double pankinVoimakkuus = rak.Aanet.TryGetValue(ap.AaniId, out var aani) ? aani.Voimakkuus : 1;
@@ -240,8 +245,8 @@ namespace Matkakirja.Natiivi
                         // "soi vain kun tilan taso ≥ 1": ajastinta ei edes tikitetä matalammalla tasolla.
                         if (taso < 1) continue;
                         string aaniId = aanimaisema.TehosteenLaukaisu(tila.Id, ti, tila.Tehosteet[ti], t);
-                        // Yleisnäkymässä kaikkien huoneiden ajastimet tikittävät (taso 1): sama × 0,3 kuin huoneiden silmukoille.
-                        if (aaniId != null) SoitaKertaAani(aaniId, (float)(tila.Tehosteet[ti].Voimakkuus * (nakyma.KohdeTila == null ? 0.3 : 1.0)));
+                        // Kertaäänet (askeleet, kuoro, tehosteet) vain siinä huoneessa, jossa kamera on (ei yleisnäkymässä eikä esittelyssä).
+                        if (aaniId != null && huoneenAanet && tila.Id != Aanimaisema.MassaTilaId) SoitaKertaAani(aaniId, (float)tila.Tehosteet[ti].Voimakkuus);
                     }
             }
 
@@ -280,13 +285,17 @@ namespace Matkakirja.Natiivi
                     hiljaisuusAlkoi.Remove(avainSilmukka);
                     var kahva = HaeTaiLuoSilmukka(e.Tila, e.Aani);
                     if (kahva == null) continue;
-                    kahva.Voimakkuus((float)Math.Clamp(e.Taso * duck, 0.0, 1.0), 0.4f);
+                    // Väistö 0,4 s (puhe alkaa), huoneen vaihto 1,2 s (pehmeä sisään/ulos).
+                    float liuku = Math.Abs(e.Taso - (edellinenTaso.TryGetValue(avainSilmukka, out var et) ? et : 0)) > 0.05 ? 1.2f : 0.4f;
+                    edellinenTaso[avainSilmukka] = e.Taso;
+                    kahva.Voimakkuus((float)Math.Clamp(e.Taso * duck, 0.0, 1.0), liuku);
                 }
                 else if (silmukat.TryGetValue(avainSilmukka, out var kahva) && kahva != null)
                 {
-                    kahva.Voimakkuus(0f, 0.4f); // häivytys kesken 1,5 s hiljaisuusikkunan (ei napsahda hiljaiseksi)
+                    kahva.Voimakkuus(0f, 1.2f); // häivytys kesken hiljaisuusikkunan (ei napsahda hiljaiseksi; huoneesta poistuminen pehmeästi)
+                    edellinenTaso.Remove(avainSilmukka);
                     if (!hiljaisuusAlkoi.TryGetValue(avainSilmukka, out var alkoi)) hiljaisuusAlkoi[avainSilmukka] = t;
-                    else if (t - alkoi >= 1.5)
+                    else if (t - alkoi >= 2.0)
                     {
                         kahva.Lopeta();
                         silmukat.Remove(avainSilmukka);
