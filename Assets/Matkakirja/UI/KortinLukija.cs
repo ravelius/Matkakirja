@@ -586,6 +586,7 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(Rakenne.Teksti(otsikko, "mk-lukija-saadot__nimi", rivi), Kirjasin.Luku);
             int nyt = Mathf.Clamp(indeksi, 0, nimet.Count - 1);
             Button arvo = null;
+            Label arvoTeksti = null;
             ScrollView lista = null;
             var rivit = new List<Button>();
             void Valitse(int k, bool sulje)
@@ -596,16 +597,17 @@ namespace Matkakirja.Natiivi
                 rivit[nyt].RemoveFromClassList("mk-lukija-valikko__kappale--nykyinen");
                 nyt = k;
                 rivit[nyt].AddToClassList("mk-lukija-valikko__kappale--nykyinen");
-                arvo.text = nimet[nyt];
+                arvoTeksti.text = nimet[nyt]; // napin oma teksti (Button.text) piirtyisi Labelin päälle
                 if (lista.style.display == DisplayStyle.Flex) lista.ScrollTo(rivit[nyt]);
                 Ruudunpaivitys.Herata(0.2f);
                 valittu?.Invoke(nyt);
             }
-            foreach (var (merkki, suunta, nimi) in new[] { ("‹", -1, "Edellinen " + mika), ("›", 1, "Seuraava " + mika) })
+            // Kulmakuvakkeet kuten kelausnappien ikonit (Ikonit.Takaisin / NuoliOikea, mk-lukija-valikko__kelausikoni).
+            foreach (var (ikoni, suunta, nimi) in new[] { (Ikonit.Takaisin, -1, "Edellinen " + mika), (Ikonit.NuoliOikea, 1, "Seuraava " + mika) })
             {
-                var b = Rakenne.Nappi(merkki, "mk-lukija-valikko__kelausnappi mk-lukija-saadot__selaus", () => Valitse(nyt + suunta, false), rivi);
+                var b = Rakenne.Nappi(null, "mk-lukija-valikko__kelausnappi mk-lukija-saadot__selaus", () => Valitse(nyt + suunta, false), rivi);
                 b.tooltip = nimi;
-                Kirjasimet.Aseta(b, Kirjasin.LukuLihava);
+                Rakenne.Ikoni(ikoni, "mk-lukija-valikko__kelausikoni", b);
             }
             arvo = Rakenne.Nappi(nimet[nyt], "mk-lukija-valikko__kelausnappi mk-lukija-saadot__arvonappi", () =>
             {
@@ -620,7 +622,8 @@ namespace Matkakirja.Natiivi
             arvo.style.flexShrink = 1;
             arvo.style.marginRight = 0;
             Kirjasimet.Aseta(arvo, Kirjasin.Luku);
-            arvo.Q<Label>()?.AddToClassList("mk-lukija-valikko__alku");
+            arvoTeksti = arvo.Q<Label>();
+            arvoTeksti.AddToClassList("mk-lukija-valikko__alku");
 
             lista = new ScrollView(ScrollViewMode.Vertical);
             lista.AddToClassList("mk-lukija-valikko__kappaleet");
@@ -657,7 +660,7 @@ namespace Matkakirja.Natiivi
                 _ => null,
             };
             if (kohde != null) using (var e = NavigationSubmitEvent.GetPooled()) { e.target = kohde; kohde.SendEvent(e); }
-            return $"{otsikko}: {v.Nimi.text}, lista {(v.Lista.style.display == DisplayStyle.Flex ? "auki" : "kiinni")} ({v.Lista.contentContainer.childCount} riviä)";
+            return $"{otsikko}: {v.Nimi.Q<Label>()?.text}, lista {(v.Lista.style.display == DisplayStyle.Flex ? "auki" : "kiinni")} ({v.Lista.contentContainer.childCount} riviä)";
         }
 
         int nykyinenRivi = -1;

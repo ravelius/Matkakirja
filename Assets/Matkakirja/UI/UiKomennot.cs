@@ -411,7 +411,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Testinapautus paneelin pisteeseen: ylin kerros, jonka poiminta osuu (ei juuri), saa Down + Up.</summary>
-        static string Napauta(Vector2 piste)
+        static string Napauta(Vector2 piste, bool klikki = false)
         {
             foreach (var (kerros, juuri) in UiKerros.Hae().Juuret.OrderByDescending(x => x.Kerros))
             {
@@ -424,6 +424,7 @@ namespace Matkakirja.Natiivi
                 var ylos = new Event { type = EventType.MouseUp, mousePosition = piste, button = 0, clickCount = 1 };
                 using (var e = PointerDownEvent.GetPooled(alas)) { e.target = osuma; osuma.SendEvent(e); }
                 using (var e = PointerUpEvent.GetPooled(ylos)) { e.target = osuma; osuma.SendEvent(e); }
+                if (klikki && osuma.panel != null) using (var c = ClickEvent.GetPooled(ylos)) { c.target = osuma; osuma.SendEvent(c); }
                 var nappi = osuma as Button ?? osuma.GetFirstAncestorOfType<Button>();
                 if (nappi == null)
                     // Laajennuksen selvitys: lähimmät kosketusnapit (keskipiste alle 40 yksikön päässä).
@@ -703,11 +704,14 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "napauta":
+                case "napautaklik":
                 {
+                    // napautaklik (juna 142): kuten napauta, mutta irrotuksen perään ClickEvent poimitulle kohteelle kuten
+                    // sormella (UI Toolkit synnyttää Clickin; kortin ohinapautus sulkee Clickistä).
                     var nk = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
                     if (nk.Length < 2 || !float.TryParse(nk[0], NumberStyles.Float, CultureInfo.InvariantCulture, out var nx)
                         || !float.TryParse(nk[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var ny)) return "käyttö: ui napauta x y";
-                    Kirjaa(Napauta(new Vector2(nx, ny)));
+                    Kirjaa(Napauta(new Vector2(nx, ny), osat[1].ToLowerInvariant() == "napautaklik"));
                     return null;
                 }
                 case "peitteet":
