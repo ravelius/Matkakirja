@@ -295,10 +295,10 @@ Shader "Matkakirja/Linssit/Yokuori"
                 // AALLOKON KIMALLUS (Päätoimittaja 3.10. Cupolan vedon jälkeen: "iso tasainen kermanvärinen läiskä, kuin usva tai
                 // linssiheijastus"): ISS-kuvissa kiilto on rakeinen ja juovainen, koska pinnan kaltevuus vaihtelee aaltojen mukaan.
                 // Pinnan normaali värähtelee kahdella mittakaavalla (8 km ja 2,5 km, tuulen suuntaan viisi kertaa venytetty
-                // eli juovat poikittain) ja karheus vaihtelee 25 km:n laikuittain (tuulen vaihtelu). Paikallinen σ² on 40 % ja
+                // eli juovat poikittain) ja karheus vaihtelee 25 km:n laikuittain (tuulen vaihtelu). Paikallinen σ² on 75 % ja
                 // loput tulee normaalin värähtelystä, joten kiillon kokonaisleveys pysyy Cox–Munk-luokassa (σ² = _Aalto).
                 float3 nw = ng;
-                float aaltoS = _Aalto;
+                float aaltoS = _Aalto, rae = 0.0;
                 if (_KiiltoVanha < 0.5)
                 {
                     float3 ita = normalize(cross(z, ng) + float3(1e-6, 0, 0));
@@ -315,11 +315,18 @@ Shader "Matkakirja/Linssit/Yokuori"
                     float sx = 0.65 * w1 * Arvokohina(tq / 8.0) + 0.35 * w2 * Arvokohina(tq / 2.5 + 41.0);
                     float sy = 0.65 * w1 * Arvokohina(tq / 8.0 + 93.0) + 0.35 * w2 * Arvokohina(tq / 2.5 + 7.0);
                     // Simu 3559411b: hajonta 1,6·√(0,6σ²) ja paikallinen 0,4σ² hajottivat kiillon siveltimenvedoiksi ilman ydintä;
-                    // nyt paikallinen 0,6σ² ja värähtely 1,2·√(0,4σ²), joten ydin pysyy yhtenäisenä ja juovat näkyvät reunoilla.
-                    float sig = sqrt(_Aalto * 0.4) * 1.2 * karheus;                   // normaalin värähtelyn hajonta
+                    // Päätoimittaja 4.10. (juna 139): aaltojuovat yhä liian vahvat → paikallinen 0,75σ² ja värähtely 0,9·√(0,25σ²):
+                    // ydin yhtenäinen, juovat heikkoina venymänä (offline-malli tyokalut/linssiseppa-ajot/kiilto_malli.py).
+                    float sig = sqrt(_Aalto * 0.25) * 0.9 * karheus;                  // normaalin värähtelyn hajonta
                     nw = normalize(ng + (ita * sx + poh * sy) * sig);
                     float puuttuu = 1.0 - (0.4225 * w1 * w1 + 0.1225 * w2 * w2) / 0.545;
-                    aaltoS = _Aalto * (0.6 + 0.4 * puuttuu) * karheus * karheus;
+                    aaltoS = _Aalto * (0.75 + 0.25 * puuttuu) * karheus * karheus;
+                    // Rakeisuus: kirkkauden hienot välkkeet 1,5 ja 0,75 km (tuulen suuntaan 2 × venytetty), kumpikin vain ≥ 5 px:n
+                    // soluilla (pienemmät näkyivät simulla pikselikohinana). Moduloi kirkkautta, ei normaalia, joten ydin ei hajoa.
+                    float2 rq = float2(q.x * 0.5, q.y);
+                    float pr = max(length(fwidth(rq)), 1e-4);
+                    float r1 = saturate((1.5 / pr - 3.0) * 0.5), r2 = saturate((0.75 / pr - 3.0) * 0.5);
+                    rae = 0.7 * r1 * Arvokohina(rq / 1.5 + 3.0) + 0.3 * r2 * Arvokohina(rq / 0.75 + 9.0);
                 }
                 float nh = saturate(dot(nw, hv));
                 float nh2 = max(nh * nh, 1e-4);
@@ -328,7 +335,8 @@ Shader "Matkakirja/Linssit/Yokuori"
                 // Ilmakehän läpäisy (kiillon pystyleikkaus 2.10.2026, Päätoimittajan OK): auringon ja katseen tie ilmamassoina
                 // (Kasten–Young), τ RGB 0,15 / 0,20 / 0,33. Matalalla auringolla kiilto himmenee oranssiksi; ennen kiinteä oranssi ja
                 // täysi voima jo 4,8°:sta, jolloin ruudun ulkopuolisen huipun sivuliepe puhkesi valkoiseksi tasanteeksi (pystyreuna).
-                half kiilto = (half)(vesi * osuu * saturate(nl * 60.0) * min(D * F / (4.0 * max(nv, 0.08)), 40.0) * _Kiilto) * lapi;
+                float kRaaka = osuu * saturate(nl * 60.0) * min(D * F / (4.0 * max(nv, 0.08)), 40.0) * _Kiilto;
+                half kiilto = (half)(vesi * kRaaka) * lapi;
                 half3 lapaisy = (half3)exp(-float3(0.15, 0.20, 0.33) * (Ilmamassa(nl) + Ilmamassa(nv)));
                 if (_KiiltoVanha < 0.5)
                 {
@@ -338,7 +346,10 @@ Shader "Matkakirja/Linssit/Yokuori"
                     // bloomin kermaista usvaa rannoille (ennen huippu 240 suoraan).
                     lapaisy = (half3)min(exp(-float3(0.15, 0.20, 0.33) * max(Ilmamassa(nl) + Ilmamassa(nv) - 2.0, 0.0)), 1.0);
                     lapaisy *= half3(1.0h, 0.995h, 0.98h);
-                    kiilto = (half)(3.0 * pow(saturate(log2(1.0 + (float)kiilto) / 7.91), 1.4));
+                    // VAIN VEDESSÄ (Päätoimittaja 4.10.): sävykäyrä nosti pehmeän vesimaskin rantareunan (vesi 0,1 → kiilto ~1,4)
+                    // kirkkaaksi juovaksi maalle. Nyt käyrä vesimaskista riippumatta ja terävä maski (0,42…0,58) vasta sen jälkeen.
+                    float kv = kRaaka * max(1.0 + 0.96 * rae, 0.0) * (float)lapi;
+                    kiilto = (half)(3.0 * pow(saturate(log2(1.0 + kv) / 7.91), 1.4) * smoothstep(0.42, 0.58, (float)vesi));
                 }
                 c += lapaisy * kiilto * (1.0h - a);
                 // Fotorealismi osa 2 (30.9.): taivaan Fresnel-heijastus vesiltä. Katsekulman Fresnel (Schlick, F0 0,02) kasvaa
