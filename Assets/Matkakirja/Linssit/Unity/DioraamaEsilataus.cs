@@ -14,10 +14,12 @@ namespace Matkakirja.Natiivi
 {
     public static class DioraamaEsilataus
     {
-        // LAUKAISIN (omistaja 4.10. 14.5x: "linna olisi hyvä esiladata jo siinä vaiheessa kun pelaaja lähestyy sitä"): kun matkan kohde
-        // (PeliOhjain.SaapuminenTiedossa) tai pelaajan kaupunki on Olavinlinnan lähestymisalueella (Euroopan pelissä lähimmät: Pietari 228 km,
-        // Tampere 274 km, Helsinki 285 km; LahestymisKm), tai testikomennolla "esilataa linna". Valmistumisen etumatka saapumiseen kirjataan (MatkaPerilla).
-        const double LinnaLat = 61.8644, LinnaLon = 28.9003, LahestymisKm = 300;
+        // LAUKAISIN (omistaja 4.10. 14.5x: "linna olisi hyvä esiladata jo siinä vaiheessa kun pelaaja lähestyy sitä"; Päätoimittaja
+        // 4.10.): A) pelaajan kaupunki tai matkan kohde (PeliOhjain.SaapuminenTiedossa) on Suomessa (Pietari ei yksinään), tai
+        // B) kartta katsoo linnan seutua: Olavinlinnan paikka on ruudulla ja kamera enintään NakymaKm päässä. Myös testikomento
+        // "esilataa linna". Valmistumisen etumatka saapumiseen kirjataan (MatkaPerilla, suomalainen kaupunki).
+        const double LinnaLat = 61.8644, LinnaLon = 28.9003, NakymaKm = 600;
+        static readonly HashSet<string> SuomalaisetKaupungit = new HashSet<string>(StringComparer.Ordinal) { "helsinki", "tampere", "turku", "savonlinna" };
         static PeliOhjain kytketty;
         static float valmisHetki = -1f;
 
@@ -39,18 +41,30 @@ namespace Matkakirja.Natiivi
                     kytketty = o;
                     if (o != null) { o.SaapuminenTiedossa += KohdeTiedossa; o.MatkaPerilla += Perilla; }
                 }
-                if (!aloitettu && o != null && Lahella(o.PelaajanKaupunki)) Aloita("pelaaja seudulla: " + o.PelaajanKaupunki);
+                if (!aloitettu && o != null && Lahella(o.PelaajanKaupunki)) Aloita("pelaaja Suomessa: " + o.PelaajanKaupunki);
+                if (!aloitettu && LinnaNakyy()) Aloita("linnan seutu kartalla");
                 yield return odotus;
             }
         }
 
         static bool Lahella(string kaupunki)
         {
+            if (kaupunki == null) return false;
+            if (SuomalaisetKaupungit.Contains(kaupunki)) return true;
             var v = kytketty?.Verkko;
-            if (kaupunki == null || v == null || !v.Kaupungit.TryGetValue(kaupunki, out var k)) return false;
-            double r = Math.PI / 180, dLat = (k.Lat - LinnaLat) * r, dLon = (k.Lon - LinnaLon) * r;
-            double a = Math.Sin(dLat / 2) * Math.Sin(dLat / 2) + Math.Cos(LinnaLat * r) * Math.Cos(k.Lat * r) * Math.Sin(dLon / 2) * Math.Sin(dLon / 2);
-            return 2 * 6371 * Math.Asin(Math.Min(1, Math.Sqrt(a))) <= LahestymisKm;
+            if (v == null || !v.Kaupungit.TryGetValue(kaupunki, out var k)) return false;
+            string maa = k.Maa ?? "";
+            return maa == "FI" || maa == "FIN" || maa.Equals("Suomi", StringComparison.OrdinalIgnoreCase) || maa.Equals("Finland", StringComparison.OrdinalIgnoreCase);
+        }
+
+        static PalloKierto kierto;
+        /// <summary>B: Olavinlinnan paikka ruudulla ja kamera enintään NakymaKm päässä (kartta katsoo linnan seutua).</summary>
+        static bool LinnaNakyy()
+        {
+            if (kierto == null) kierto = UnityEngine.Object.FindAnyObjectByType<PalloKierto>();
+            if (kierto == null || !kierto.RuutuPiste(LinnaLat, LinnaLon, out _)) return false;
+            double d = kierto.Etaisyys(LinnaLat, LinnaLon);
+            return !double.IsNaN(d) && d <= NakymaKm * 1000;
         }
 
         static void KohdeTiedossa(string kaupunki) { if (!aloitettu && Lahella(kaupunki)) Aloita("matkan kohde: " + kaupunki); }
