@@ -55,9 +55,9 @@
       "peliavain": "mylly.havio",
       "kuvaus": "Lyhyt häviön merkki: pehmeä laskeva sävel, ei pilkkaava",
       "hakusanat": [
-        "game lose soft",
-        "negative result short",
-        "failure tone soft"
+        "game knocked out",
+        "result tone short",
+        "lose game short"
       ],
       "kestoMin": 0.4,
       "kestoMax": 2.0,
