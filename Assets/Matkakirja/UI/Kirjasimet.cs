@@ -21,7 +21,9 @@ namespace Matkakirja.Natiivi
         /// <summary>ISS-ohjaamon vihreä LCD (VT323, OFL; omistaja 4.10.2026, Sisältökirjurin ehdotus).</summary>
         Lcd,
         /// <summary>Kaasun numerorumpu (DSEG7 Classic Bold, OFL): vain numerot, ×-merkki erikseen.</summary>
-        Segmentti }
+        Segmentti,
+        /// <summary>ISS-ohjaamon mittaristo (Linnanrakentajan paneeli v1: DIN Condensed kuten kaiverrukset; järjestelmäfontti).</summary>
+        Mittari }
 
     public static class Kirjasimet
     {
@@ -37,6 +39,7 @@ namespace Matkakirja.Natiivi
             Kirjasin.LukuLihava => new[] { ("Iowan Old Style", "Bold"), ("Charter", "Bold"), ("Palatino", "Bold"), ("Georgia", "Bold") },
             Kirjasin.LukuKursiivi => new[] { ("Iowan Old Style", "Italic"), ("Charter", "Italic"), ("Palatino", "Italic"), ("Georgia", "Italic") },
             Kirjasin.Kauno => new[] { ("Snell Roundhand", "Regular"), ("Savoye LET", "Plain"), ("Bradley Hand", "Bold") },
+            Kirjasin.Mittari => new[] { ("DIN Condensed", "Bold"), ("DIN Alternate", "Bold"), ("Avenir Next Condensed", "Demi Bold"), ("Helvetica Neue", "Condensed Bold") },
             _ => new (string, string)[0],
         };
 

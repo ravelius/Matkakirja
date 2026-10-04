@@ -542,3 +542,26 @@
     width: 100%;
     height: 100%;
 }
+
+/* Mekaaninen laskuri kuvapaneelissa (Linnanrakentajan v1): vaalea rumpu ja tummat numerot kolon alla. */
+.mk-issohjaamo__rumpu--mekaaninen {
+    border-width: 0;
+    border-radius: 0;
+    background-color: var(--tk-paperi-pinta);
+}
+
+.mk-issohjaamo__rumpu--mekaaninen .mk-issohjaamo__luku,
+.mk-issohjaamo__rumpu--mekaaninen .mk-issohjaamo__kerta {
+    color: var(--tk-paperi-muste);
+}
+
+.mk-issohjaamo__rumpukolo {
+    position: absolute;
+}
+
+/* LCD-lasi on pohjakuvassa: teksti suoraan lasille ilman piirrettyä kehystä. */
+.mk-issohjaamo--asettelu > .mk-issohjaamo__lcd {
+    padding: 1px 3px;
+    border-width: 0;
+    background-color: initial;
+}

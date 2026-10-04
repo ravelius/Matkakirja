@@ -76,7 +76,7 @@ namespace Matkakirja.Natiivi
             napa = Rakenne.El("mk-issohjaamo__napa", joystick, PickingMode.Ignore);
             // Osuma-ala näkymättömänä 132 × 132 pt (Päätoimittaja 4.10.: jokaiselle varrelle ≥ 44 × 44 pt; varsi 32 pt, ulkoasu ennallaan).
             joystick.pickingMode = PickingMode.Ignore;
-            var osuma = Rakenne.El("mk-issohjaamo__joyosuma", joystick);
+            osuma = Rakenne.El("mk-issohjaamo__joyosuma", joystick);
             Vector2 Paikka(Vector3 ruutu) => joystick.WorldToLocal(ruutu);
             osuma.RegisterCallback<PointerDownEvent>(e => { osuma.CapturePointer(e.pointerId); Ohjaa(Paikka(e.position)); e.StopPropagation(); });
             osuma.RegisterCallback<PointerMoveEvent>(e => { if (osuma.HasPointerCapture(e.pointerId)) Ohjaa(Paikka(e.position)); });
@@ -111,7 +111,8 @@ namespace Matkakirja.Natiivi
             rumpuB = Rakenne.Teksti("", "mk-issohjaamo__luku", luvut);
             foreach (var t in new[] { rumpuA, rumpuB }) { t.pickingMode = PickingMode.Ignore; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
             rumpuB.style.translate = new Translate(0, Length.Percent(100));
-            Kirjasimet.Aseta(Rakenne.Teksti("×", "mk-issohjaamo__kerta", rumpu), Kirjasin.Lcd);
+            kerta = Rakenne.Teksti("×", "mk-issohjaamo__kerta", rumpu);
+            Kirjasimet.Aseta(kerta, Kirjasin.Lcd);
             kaasu.RegisterCallback<PointerDownEvent>(e => { kaasu.CapturePointer(e.pointerId); Vipu(e.localPosition.y); e.StopPropagation(); });
             kaasu.RegisterCallback<PointerMoveEvent>(e => { if (kaasu.HasPointerCapture(e.pointerId)) Vipu(e.localPosition.y); });
             kaasu.RegisterCallback<PointerUpEvent>(e => kaasu.ReleasePointer(e.pointerId));
@@ -178,11 +179,19 @@ namespace Matkakirja.Natiivi
             paneeli.EnableInClassList("mk-issohjaamo--asettelu", ankkurit != null);
             if (ankkurit != null && rumpu.parent != paneeli) paneeli.Add(rumpu);
             else if (ankkurit == null && rumpu.parent != kaasu) kaasu.Add(rumpu);
-            if (turvaLeveys > 0) Asettele(turvaLeveys);
             Pukeudu(lcd, "lcd-kehys", KehysSlicePt);
-            Pukeudu(laajennus, "lcd-iso", KehysSlicePt);
-            Pukeudu(mini, "mini-kehys", KehysSlicePt);
-            Pukeudu(rumpu, "rumpu-kolo");
+            Pukeudu(laajennus, "lcd-iso", ankkurit != null ? 0f : KehysSlicePt);
+            Pukeudu(mini, "mini-kehys", ankkurit != null && ankkurit.MiniSlice > 0 ? ankkurit.MiniSlice : KehysSlicePt);
+            // Rummun kolo numeroiden päälle omana elementtinään (piirtojärjestys pohja → numerot → kolo); piirretyssä tilassa kolo
+            // on rummun oma kehys.
+            rumpuKoloKuva ??= Rakenne.El("mk-issohjaamo__rumpukolo", paneeli, PickingMode.Ignore);
+            if (ankkurit != null) { Pukeudu(rumpuKoloKuva, "rumpu-kolo"); rumpuKoloKuva.style.display = DisplayStyle.Flex; rumpuKoloKuva.BringToFront(); laajennus.BringToFront(); }
+            else { rumpuKoloKuva.style.display = DisplayStyle.None; Pukeudu(rumpu, "rumpu-kolo"); }
+            rumpu.EnableInClassList("mk-issohjaamo__rumpu--mekaaninen", ankkurit != null);
+            // Mittarifontti kuvapaneelissa (DIN Condensed kuten kaiverrukset), muuten LCD-fontti VT323.
+            var kirjain = ankkurit != null ? Kirjasin.Mittari : Kirjasin.Lcd;
+            foreach (var t in new[] { kohde, maa, rumpuA, rumpuB, kerta, miniTeksti }) Kirjasimet.Aseta(t, kirjain);
+            if (turvaLeveys > 0) Asettele(turvaLeveys);
             Pukeudu(kamera, "kamera");
             kamera.EnableInClassList("mk-issohjaamo--kuvanappi", NahkaKuva("kamera") != null);
             // Sauva ja vipu: kuvaelementti piirrettyjen osien päälle, tila vaihtaa kuvan.
@@ -309,7 +318,16 @@ namespace Matkakirja.Natiivi
             paneeli.style.width = w;
             Juuri.style.left = 0; Juuri.style.right = 0;
             if (ankkurit != null) AsetteleKuvat(w);
-            else { paneeli.style.height = StyleKeyword.Null; foreach (var e in new[] { joystick, lcd, kamera, kaasu, rumpu, laajennus }) Vapauta(e); }
+            else
+            {
+                paneeli.style.height = StyleKeyword.Null;
+                foreach (var e in new[] { joystick, lcd, kamera, kaasu, rumpu, laajennus }) Vapauta(e);
+                osuma.style.left = StyleKeyword.Null; osuma.style.top = StyleKeyword.Null; osuma.style.width = StyleKeyword.Null; osuma.style.height = StyleKeyword.Null;
+                foreach (var e in new VisualElement[] { maa, rumpuA, rumpuB, kerta, luvut }) { e.style.fontSize = StyleKeyword.Null; e.style.height = StyleKeyword.Null; }
+                laajennus.style.paddingLeft = laajennus.style.paddingTop = laajennus.style.paddingRight = laajennus.style.paddingBottom = StyleKeyword.Null;
+                mittakaava = 1f;
+                SovitaKohde();
+            }
         }
 
         // --- KUVA-ASETTELU (Linnanrakentajan konsepti v1, omistaja 4.10.2026 klo 17.2x; juna 139) -----------------------------
@@ -317,7 +335,7 @@ namespace Matkakirja.Natiivi
         // vasemmasta yläkulmasta, "kaasu":{…, "pykalat":[y1, y10, y100, y1000]} pt kaasun laatikon yläreunasta}. Paneeli skaalautuu
         // leveyden mukaan (korkeus koon suhteessa) ja osat sijoitetaan ankkureihin; ilman tiedostoa piirretty asettelu kuten ennen.
 
-        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, Kaasu, LcdIso; public float[] Pykalat; }
+        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, RumpuKolo, Kaasu, LcdIso, LcdIsoKuva; public float[] Pykalat; public float MiniSlice; }
         Ankkurit ankkurit;
 
         static Rect LueRect(Dictionary<string, object> o, string avain)
@@ -340,7 +358,10 @@ namespace Matkakirja.Natiivi
                     Koko = new Rect(0, 0, Convert.ToSingle(MiniJson.Kentta(k, "w")), Convert.ToSingle(MiniJson.Kentta(k, "h"))),
                     Sauva = LueRect(o, "sauva"), Lcd = LueRect(o, "lcd"), Kamera = LueRect(o, "kamera"),
                     Rumpu = LueRect(o, "rumpu"), Kaasu = LueRect(o, "kaasu"), LcdIso = LueRect(o, "lcdIso"),
+                    RumpuKolo = LueRect(o, "rumpuKolo"), LcdIsoKuva = LueRect(o, "lcdIsoKuva"),
                 };
+                var ms = Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "mini")), "slice"));
+                a.MiniSlice = ms != null && MiniJson.Kentta(ms, "vasen") is object v ? Convert.ToSingle(v) : 0f;
                 var p = Rakenne.Lista(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "kaasu")), "pykalat"));
                 if (p != null && p.Count == Kertoimet.Length) { a.Pykalat = new float[p.Count]; for (int i = 0; i < p.Count; i++) a.Pykalat[i] = Convert.ToSingle(p[i]); }
                 return a.Koko.width > 0 && a.Koko.height > 0 ? a : null;
@@ -368,12 +389,36 @@ namespace Matkakirja.Natiivi
             float s = w / a.Koko.width;
             paneeli.style.height = a.Koko.height * s;
             Aseta(joystick, a.Sauva, s);
+            // Osuma-ala sauvan laatikon ympärille: vähintään 132 pt korkea ja 18 pt yli reunojen (varsi ≥ 44 × 44 pt).
+            float jw = a.Sauva.width * s, jh = a.Sauva.height * s, oh = Mathf.Max(132f, jh + 36f);
+            osuma.style.left = -18f; osuma.style.width = jw + 36f; osuma.style.top = (jh - oh) * 0.5f; osuma.style.height = oh;
             Aseta(lcd, a.Lcd, s);
             Aseta(kamera, a.Kamera, s);
             Aseta(kaasu, a.Kaasu, s);
             Aseta(rumpu, a.Rumpu, s);
-            if (a.LcdIso.width > 0) Aseta(laajennus, a.LcdIso, s);
+            if (a.RumpuKolo.width > 0 && rumpuKoloKuva != null) Aseta(rumpuKoloKuva, a.RumpuKolo, s);
+            // Laajennus: lcd-iso-kuvan laatikko, sisältö lasin sisäalueelle (lcdIso) täytteenä.
+            var iso = a.LcdIsoKuva.width > 0 ? a.LcdIsoKuva : a.LcdIso;
+            if (iso.width > 0)
+            {
+                Aseta(laajennus, iso, s);
+                laajennus.style.paddingLeft = (a.LcdIso.x - iso.x) * s; laajennus.style.paddingTop = (a.LcdIso.y - iso.y) * s;
+                laajennus.style.paddingRight = (iso.xMax - a.LcdIso.xMax) * s; laajennus.style.paddingBottom = (iso.yMax - a.LcdIso.yMax) * s;
+            }
+            // Tekstit pohjan mittakaavassa (Linnanrakentaja: LCD:n rivi 1 ~15 pt, rivi 2 ≥ 10–11 pt; rummun numerot täyttävät aukon).
+            mittakaava = s;
+            maa.style.fontSize = MaaPt * s;
+            foreach (var t in new[] { rumpuA, rumpuB }) { t.style.fontSize = a.Rumpu.height * 0.72f * s; t.style.height = a.Rumpu.height * s; }
+            luvut.style.height = a.Rumpu.height * s;
+            kerta.style.fontSize = a.Rumpu.height * 0.6f * s;
+            SovitaKohde();
         }
+
+        /// <summary>Kuva-asettelun tekstikoot pohjan mittakaavassa (374 pt): LCD:n rivit ja niiden alaraja.</summary>
+        public const float KuvaKohdePt = 15f, KuvaKohdeMinPt = 9f, MaaPt = 10.5f;
+        float mittakaava = 1f;
+        VisualElement rumpuKoloKuva, osuma;
+        Label kerta;
 
         /// <summary>Kuva-asettelussa vivun pykälä lähimmästä ankkurin y-arvosta (pt kaasun laatikon yläreunasta).</summary>
         int PykalaKuvasta(float y)
@@ -544,6 +589,15 @@ namespace Matkakirja.Natiivi
             if (!(w > 0) || string.IsNullOrEmpty(kohde.text)) return;
             float Leveys(string t) => kohde.MeasureTextSize(t, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
             kohde.style.whiteSpace = WhiteSpace.NoWrap;
+            if (ankkurit != null)
+            {
+                // Kuvapaneelin pieni LCD: yksi rivi, pienenee leveyteen.
+                float max = KuvaKohdePt * mittakaava;
+                kohde.style.fontSize = max;
+                float l1 = Leveys(kohde.text);
+                kohde.style.fontSize = Mathf.Max(KuvaKohdeMinPt * mittakaava, l1 > w ? Mathf.Floor(max * w / l1 * 10f) / 10f : max);
+                return;
+            }
             kohde.style.fontSize = KohdePt;
             float yksi = Leveys(kohde.text);
             float koko = yksi > w ? Mathf.Floor(KohdePt * w / yksi) : KohdePt;
