@@ -479,6 +479,7 @@ namespace Matkakirja.Natiivi
         {
             PaivitaKuukaudenPintaBmng(kyydissa);
             PaivitaS2(kyydissa);
+            KarttaKerrokset.Instanssi?.LinssinVarakartta(kyydissa);   // rasterittomat laatat Blue Marblena, ei harmaana (4.10.)
             // Reliefi palaa vasta, kun BMNG ja S2 ovat poissa (kyydin loppu tai BMNG puuttuu ämpäristä): paikka 1 on silloin vapaa.
             if (reliefPoissa && kuukausiLisatty < 0 && !s2Lisatty)
             {
@@ -904,6 +905,7 @@ namespace Matkakirja.Natiivi
 
         void OnEnable()
         {
+            KarttaKerrokset.Instanssi?.LinssinVarakartta(false, esilataa: true);   // Z2-varakartta valmiiksi ennen kyytiä
             IssNyt.AurinkoViite = KatseViite;
             Aurinko.KyydinAurinko = KyydinAurinkoArvo;
         }
@@ -916,6 +918,7 @@ namespace Matkakirja.Natiivi
             Matkakirja.Linssit.Kyytipino.S2 = false;
             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
             AsetaS2Reuna(false);
+            KarttaKerrokset.Instanssi?.LinssinVarakartta(false);
         }
 
         void OnDestroy()

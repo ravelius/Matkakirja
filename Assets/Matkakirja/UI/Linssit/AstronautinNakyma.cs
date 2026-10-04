@@ -45,8 +45,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Musta ruutu näkyy näin kauan ennen häivytystä (omistaja: "feidaa oikeaan näkymään 2sek jälkeen").</summary>
         public const int CupolanMustaMs = 2000;
         /// <summary>
-        /// Enimmäisodotus: musta jatkuu 2 s:n yli vain, jos Cupolan kehys ei ole vielä ladattu (IssKyytiNakyma.Kuva2Tila; kehys
-        /// esiladataan linssin avautuessa). Laattoja ei odoteta (Päätoimittaja 4.10.: simussa 4 s toi vain 12 %).
+        /// Enimmäisodotus: musta jatkuu 2 s:n yli vain, jos Cupolan kehys (IssKyytiNakyma.Kuva2Tila) tai näkymän karkein taso
+        /// (KarttaKerrokset.VarakarttaValmis, Blue Marble rasterittomille laatoille) ei ole valmis; molemmat esiladataan linssin
+        /// avautuessa (Päätoimittaja 4.10.). Tarkkoja laattoja ei odoteta: niiden lataus alkaa mustan alussa (kamera on jo paikallaan).
         /// </summary>
         public const int CupolanMustaMaxMs = 4000;
         float cupolaAlku;
@@ -184,9 +185,10 @@ namespace Matkakirja.Natiivi
                 var pallo = KarttaKerrokset.Instanssi?.pallo;
                 bool kehys = IssKyytiNakyma.Kuva2Tila != null || CupolaKerros.Tyyli != CupolaKerros.Tyylit.Kuva;
                 float lataus = pallo != null ? pallo.ComputeLoadProgress() : 100f;
-                if (ms < CupolanMustaMaxMs && !kehys) return;
+                bool karkein = KarttaKerrokset.VarakarttaValmis;   // rasterittomat laatat Blue Marblena (ei harmaata)
+                if (ms < CupolanMustaMaxMs && (!kehys || !karkein)) return;
                 cupolaHaivytys.Pause();
-                Debug.Log($"MATKAKIRJA linssit: cupolan musta häivyy {ms:0} ms (kehys {(kehys ? "valmis" : "kesken")}, laatat {lataus:0} %)");
+                Debug.Log($"MATKAKIRJA linssit: cupolan musta häivyy {ms:0} ms (kehys {(kehys ? "valmis" : "kesken")}, karkein taso {(karkein ? "valmis" : "kesken")}, laatat {lataus:0} %)");
                 cupolaMusta.pickingMode = PickingMode.Ignore;
                 cupolaMusta.style.opacity = 0f;
                 cupolaPiilotus = cupolaMusta.schedule.Execute(() => CupolaPois()).StartingIn(MustanHaivytysMs + 100);
