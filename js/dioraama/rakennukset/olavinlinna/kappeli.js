@@ -124,6 +124,7 @@ const KAPPELI_HAHMOT = [
 
 export const TILA = {
   id: 'kappeli',
+  lappujarjestys: 2,
   nimi: 'Kappeli',
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.

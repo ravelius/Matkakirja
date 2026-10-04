@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 2612, teksti: 'Olavinlinna: tiloille lappujarjestys (#3964)' },
   { v: 2611, teksti: 'ISS-kamera: 16 uutta eurooppalaista kohdetta (#3957)' },
   { v: 2610, teksti: 'ISS-paneelin Kohde-valikko: 30 lähintä aluksen… (#3961)' },
   { v: 2609, teksti: 'Raamattu: Postivahdin push-ilmoitukset pois (#3956)' },
