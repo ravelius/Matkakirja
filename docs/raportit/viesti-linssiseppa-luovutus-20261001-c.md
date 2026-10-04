@@ -3,7 +3,7 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
-## TILA 4.10. KLO 18.0x (KIILTO KESKEN 5b6b9d46; LENTOPELI VAIHE 1 TOIMITETTU OMISTAJALLE; VAIHE 2 ODOTTAA)
+## TILA 4.10. KLO 17.5x (KIILTO KESKEN 5b6b9d46; LENTOPELI VAIHE 1 TOIMITETTU OMISTAJALLE; VAIHE 2 ODOTTAA)
 - Kiilto: ajo g (284fa65f = 3de304db) — VAIN VEDESSÄ ok (maalla ka 8,2/255 = kohdistusjäännöksen taso), mutta matalalla
   auringolla kaukaa yhä kermaläiskä → 5b6b9d46 (30 km tuulikaistat vain kaukonäkymään, katto 2,0) KÄÄNTÄMÄTTÄ. Seuraavaksi käännös +
   ajo-kiilto-cupola-3.sh (katse kiiltokulma.py:llä heijastuspisteeseen; LIVE-aika, joten korkea aurinko vain aamupäivällä ~8–10 UTC).
