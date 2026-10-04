@@ -96,18 +96,25 @@ namespace Matkakirja.Natiivi
             // esilatausjonossa 509/908 valmiina avaushetkellä, verkosta silti 5 Mt mustan aikana).
             esihaku = new Laattapalvelin.Esilataus { Etusija = true };
             esihakuAlku = Time.unscaledTime; esihakuKirjattu = false;
-            int n = 0;
+            // Molempien sarjojen laatat tasojärjestyksessä (karkeat ensin): mustan aikana Cesium pyytää ensin S2:n juuret ja
+            // BMNG:n z2–z4 (iPad 8023e34c -hakuloki), ja esihaku etenee ~45 laattaa/s.
+            var kaikki = new List<(int z, string polku)>();
             var rivi = new System.Text.StringBuilder();
             foreach (var sa in sarjat)
             {
                 var laatat = CupolanLaatat.Laske(a, IssKuvakulma.IkkunanKentta, (double)Screen.width / Mathf.Max(1, Screen.height), Screen.height,
                     sa.ZMin, sa.ZMax, sa.Alue);
-                var polut = CupolanLaatat.Polut(sa.Malli, laatat, Laattapalvelin.Ampari, sa.JuuriZ, sa.JuuriX, sa.JuuriY);
-                if (polut.Count == 0) continue;
-                Laattapalvelin.Esilataa(polut, esihaku);
-                n += polut.Count;
-                rivi.Append(rivi.Length > 0 ? ", " : "").Append(polut.Count).Append(sa.JuuriZ > 0 ? " S2" : " BMNG");
+                int ennen = kaikki.Count;
+                foreach (var t in laatat)
+                {
+                    var p = CupolanLaatat.Polut(sa.Malli, new[] { t }, Laattapalvelin.Ampari, sa.JuuriZ, sa.JuuriX, sa.JuuriY);
+                    if (p.Count > 0) kaikki.Add((t.z, p[0]));
+                }
+                rivi.Append(rivi.Length > 0 ? ", " : "").Append(kaikki.Count - ennen).Append(sa.JuuriZ > 0 ? " S2" : " BMNG");
             }
+            kaikki.Sort((x, y) => x.z.CompareTo(y.z));
+            int n = kaikki.Count;
+            if (n > 0) Laattapalvelin.Esilataa(kaikki.ConvertAll(k => k.polku), esihaku);
             haettu = a;
             esihakuja++; esihakuLaattoja += n;
             Debug.Log($"MATKAKIRJA linssit: cupolan esihaku {esihakuja}: {n} laattaa ({rivi}) asennolle {a}");
