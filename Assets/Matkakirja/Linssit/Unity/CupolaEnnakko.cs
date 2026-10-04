@@ -5,8 +5,8 @@
 //      getAllCameras ei vaadi enabled-tilaa; kaava Nappula.Aloitusrata.EnnakkoAsentoon): maasto- ja geometrialaatat valmiiksi.
 //   2) Rasteriesihaku (juurisyy, iPad 36a05beb: kamera yksin ei auttanut, koska kyydin BMNG- ja S2-kerrokset lisätään vasta
 //      Cupolaan tultaessa ja niiden laatat tulivat verkosta): CupolanLaatat laskee näkymän laatat ja Laattapalvelin.Esilataa
-//      hakee ne levylle. Esilataus odottaa näkyvän kartan jonon tyhjenemistä, joten linssin avaus ja liike eivät hidastu
-//      (Päätoimittajan ehto 1); sama kaikilla verkoilla (Raamattu #3938). Uusi haku, kun asento on siirtynyt ≥ 1°; jakson
+//      hakee ne levylle kohdejonossa (Etusija: omat paikat, näkyvä jono palvellaan omillaan; ehto 1 mitataan kehysajoista);
+//      sama kaikilla verkoilla (Raamattu #3938). Uusi haku, kun asento on siirtynyt ≥ 1°; jakson
 //      yläraja EsihakuKattoMt. Cupolaan tultaessa kesken jäänyt esihaku perutaan (Cesium hakee loput itse).
 // Kyydissä ja linssin ulkopuolella pois. Asento päivitetään kerran sekunnissa. A/B `ui linssi astro ennakko 0|1`.
 using System.Collections.Generic;
@@ -37,6 +37,8 @@ namespace Matkakirja.Natiivi
         Laattapalvelin.Esilataus esihaku;
         Matkakirja.Linssit.Kuvakulma? haettu;
         int esihakuja, esihakuLaattoja;
+        float esihakuAlku;
+        bool esihakuKirjattu;
 
         /// <summary>Viimeisin tila (tilakomento): "pois", "odottaa" tai asento.</summary>
         public static string Tila { get; private set; } = "pois";
@@ -75,6 +77,11 @@ namespace Matkakirja.Natiivi
             if (!Kaytossa || !kauko) { Irrota(); Tila = Kaytossa ? "odottaa" : "pois"; return; }
             Asentoon(a);
             Esihae(a);
+            if (esihaku != null && !esihakuKirjattu && esihaku.Yhteensa > 0 && esihaku.Valmis + esihaku.Epaonnistui >= esihaku.Yhteensa)
+            {
+                esihakuKirjattu = true;
+                Debug.Log($"MATKAKIRJA linssit: cupolan esihaku {esihakuja} valmis {Time.unscaledTime - esihakuAlku:0.0} s: {esihaku.Valmis}/{esihaku.Yhteensa}, virheitä {esihaku.Epaonnistui}");
+            }
             Tila = $"asento {a}, esihaku {(esihaku != null ? $"{esihaku.Valmis}/{esihaku.Yhteensa}" : "-")}";
         }
 
@@ -85,7 +92,10 @@ namespace Matkakirja.Natiivi
             kerros.CupolanSarjat(sarjat);
             if (sarjat.Count == 0) return;   // kuukauden tarkistus kesken: uusi yritys seuraavalla sekunnilla
             esihaku?.Peru();
-            esihaku = null;
+            // Kohdejono (Etusija, kuten lennon kohdealue): omat paikkansa, ei odota näkyvän jonon tyhjenemistä (iPad abe4712b:
+            // esilatausjonossa 509/908 valmiina avaushetkellä, verkosta silti 5 Mt mustan aikana).
+            esihaku = new Laattapalvelin.Esilataus { Etusija = true };
+            esihakuAlku = Time.unscaledTime; esihakuKirjattu = false;
             int n = 0;
             var rivi = new System.Text.StringBuilder();
             foreach (var sa in sarjat)
@@ -94,7 +104,7 @@ namespace Matkakirja.Natiivi
                     sa.ZMin, sa.ZMax, sa.Alue);
                 var polut = CupolanLaatat.Polut(sa.Malli, laatat, Laattapalvelin.Ampari, sa.JuuriZ, sa.JuuriX, sa.JuuriY);
                 if (polut.Count == 0) continue;
-                esihaku = Laattapalvelin.Esilataa(polut, esihaku);
+                Laattapalvelin.Esilataa(polut, esihaku);
                 n += polut.Count;
                 rivi.Append(rivi.Length > 0 ? ", " : "").Append(polut.Count).Append(sa.JuuriZ > 0 ? " S2" : " BMNG");
             }

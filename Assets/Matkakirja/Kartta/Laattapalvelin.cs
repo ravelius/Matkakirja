@@ -228,6 +228,8 @@ namespace Matkakirja
         public static int Paketista, Offline, Valimuistista, Verkosta, Virheita, Varakuvia;
         /// <summary>Verkosta haettujen laattojen tavut yhteensä (Cupolan ennakon datamäärä, Päätoimittaja 4.10.2026).</summary>
         public static long VerkostaTavuja;
+        /// <summary>Hakuloki (Cupolan esihaun todennus): jokainen verkkohaku ja Cesiumin välimuistiosuma lokiin (`palvelin hakuloki paalle`).</summary>
+        public static bool HakuLoki;
 
         /// <summary>
         /// Buildin laattapaketti (null = ei paketissa, rikki tai kehittäjälipulla pois). Avataan kerran; laatat luetaan
@@ -1218,6 +1220,7 @@ namespace Matkakirja
                 {
                     if (esi) return (200, null);
                     Interlocked.Increment(ref Valimuistista);
+                    if (HakuLoki) Debug.Log($"MATKAKIRJA palvelin haku levy cesium {polku} {sisalto.Length}");
                     VerkkoOdotus.Osuma("laatta", true);
                     LaattaOsumat.Levylta(polku, true);
                     try { File.SetLastWriteTimeUtc(f, DateTime.UtcNow); } catch { }
@@ -1306,6 +1309,7 @@ namespace Matkakirja
             {
                 Interlocked.Increment(ref Verkosta);
                 Interlocked.Add(ref VerkostaTavuja, data.Length);
+                if (HakuLoki) Debug.Log($"MATKAKIRJA palvelin haku verkko {(esi ? "esi" : "cesium")} {polku} {data.Length}");
                 if (maasto)
                 {
                     Interlocked.Increment(ref MaastoVerkosta);
