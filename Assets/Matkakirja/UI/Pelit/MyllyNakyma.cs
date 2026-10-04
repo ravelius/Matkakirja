@@ -534,26 +534,29 @@ namespace Matkakirja.Natiivi
             float m = Tyylikirja.Vali.M;
             // Otsikko laudan yläpuolelle; sen korkeus mitataan (ensimmäisellä kerralla arvio).
             float oKork = float.IsNaN(otsikko.layout.height) || otsikko.layout.height <= 0 ? 104f : otsikko.layout.height;
+            // Yläpalkin alle (iPad 4.10.: turva-alueen reuna jäi palkin alle ja MYLLY-otsikko peittyi), kuten muut ylhäältä
+            // asemoituvat näkymät (Ylapalkki.Varaus: iPhonen saaririvi, iPadin palkki, 0 kun piilossa).
+            float ylin = t.y + Ylapalkki.Varaus + m;
             bool kapea = Pohja.Leveys(w - t.x - t.z) == Pohja.Luokka.Kapea && h > w;
             if (kapea)
             {
-                float yla = t.y + m + oKork;
+                float yla = ylin + oKork;
                 float pKork = float.IsNaN(paneeli.layout.height) || paneeli.layout.height <= 0 ? 300f : paneeli.layout.height;
                 float koko = Mathf.Min(w - t.x - t.z - 2 * m, h - yla - t.w - pKork - 2 * m);
                 Sijoita(lauta, (w - koko) / 2f, yla, koko, koko);
-                SijoitaOtsikko(w / 2f, t.y + m, w - t.x - t.z);
+                SijoitaOtsikko(w / 2f, ylin, w - t.x - t.z);
                 paneeli.style.left = t.x + m; paneeli.style.right = t.z + m; paneeli.style.width = StyleKeyword.Auto;
                 paneeli.style.top = yla + koko + m; paneeli.style.bottom = StyleKeyword.Auto;
             }
             else
             {
                 float pw = Tyylikirja.Leveys.Paneeli;
-                float koko = Mathf.Min(h - t.y - t.w - 2 * m - oKork, w - t.x - t.z - pw - 3 * m);
+                float koko = Mathf.Min(h - ylin - t.w - m - oKork, w - t.x - t.z - pw - 3 * m);
                 float vasen = t.x + m + Mathf.Max(0, (w - t.x - t.z - pw - 3 * m - koko) / 2f);
-                Sijoita(lauta, vasen, t.y + m + oKork, koko, koko);
-                SijoitaOtsikko(vasen + koko / 2f, t.y + m, koko);
+                Sijoita(lauta, vasen, ylin + oKork, koko, koko);
+                SijoitaOtsikko(vasen + koko / 2f, ylin, koko);
                 paneeli.style.left = StyleKeyword.Auto; paneeli.style.right = t.z + m; paneeli.style.width = pw;
-                paneeli.style.top = t.y + m + oKork; paneeli.style.bottom = StyleKeyword.Auto;
+                paneeli.style.top = ylin + oKork; paneeli.style.bottom = StyleKeyword.Auto;
             }
         }
 
