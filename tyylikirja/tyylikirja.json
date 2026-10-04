@@ -223,9 +223,11 @@
       "_selite": "ISS-ohjaamon paneeli Cupolan alareunaan (omistaja 4.10.2026 klo 11.40 'ISS-OHJAAMO UUSIKSI'; vain natiivi, UI/Linssit/IssOhjaamo.cs ja Pohjat/iss-ohjaamo.uss). Pinta teema tumma, näytöt teema lcd.",
       "joystick": "plus-muoto 96 pt (varret 32 pt), yksi suunta kerrallaan, liike pidon ajan, irrotus pysäyttää; painettu varsi lcd-korostuksella, napa kallistuu 7 pt",
       "lcd": "vihreä LCD (teema lcd): lähin kohde koolla lcd (pitkä nimi pienenee yhdellä rivillä 22 pt:iin ja rivittyy sitten kahdelle riville, vähintään 17 pt), maa alla koolla lcd-pieni harvennettuna; kirjasin Lcd (VT323, OFL)",
-      "kamera": "pyöreä 48 pt kamerakuvake; tarkka ISS-kuva koko Euroopassa (loki #3934); himmeä (peitto 0,35) Cupolan ulkopuolella ja kuvan työstön aikana",
+      "kamera": "pyöreä 48 pt kamerakuvake; tarkka ISS-kuva kaikkialla (loki #3934, #3936); himmeä (peitto 0,35) Cupolan ulkopuolella ja kuvan työstön aikana",
       "kaasu": "vipu neljällä pykälällä (1, 10, 100, 1000 alhaalta ylös), juuressa pyöreä kolo ja numerorumpu koolla rumpu (Segmentti = DSEG7, OFL), ×-merkki Lcd-kirjasimella; vanha luku liukuu piiloon ja uusi esiin 200 ms",
       "mininaytto": "napautus ohjaamon ulkopuolelle pienentää yksiriviseksi LCD-näytöksi (36 pt, koko lcd-mini, 'KOHDE · MAA'); napautus palauttaa; siirtymä liike.avaus ja liike.sulku",
+      "laajennus": "LCD:n napautus: LCD kasvaa ohjainten päälle (teema lcd, Ponnahdus LCD:n kohdalta); vasemmalla tuplakorkea SIJAINTI ja oikealla OK (72 pt), keskellä rivit TALVI KEVÄT KESÄ SYKSY ja AAMU PÄIVÄ ILTA YÖ LCD-nappeina koolla lcd-pieni; valittu käänteisenä (pohja lcd-muste, teksti lcd-pinta); OK palaa sijaintiin",
+      "sijainti": "perinteinen pelin ikkuna ilman LCD-efektiä: pohja lasi-avaruus pinta-peitto (musta), kehys lcd-reunus, kulma kortti, leveys 92 % enintään 520 pt, korkeus enintään 70 %; otsikko SIJAINTI kapiteelina, kohteet (Oma sijainti + astronauttikierros) kahteen sarakkeeseen kirjasimella Luku koolla leipa ja värillä lcd-muste, rivi ≥ nappi.osuma; vieritys; valinta tai ohinapautus sulkee",
       "peitto": "paneeli 128 pt (puhelimella noin 15 % korkeudesta), leveys ruutu − 24, enintään 560 pt"
     },
     "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)" }
