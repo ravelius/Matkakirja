@@ -63,6 +63,31 @@ namespace Matkakirja.Natiivi
                 else a.Paikat.AddRange(jasennys.Result);
                 Resources.UnloadAsset(paikatTeksti);
             }
+            // Natural Earthin merialueet (PD, 306; tyokalut/iss_meret.py): merellä piste polygonissa (Päätoimittaja 4.10. 23.2x).
+            var meretTeksti = Resources.Load<TextAsset>("IssPaikat/meret");
+            if (meretTeksti != null)
+            {
+                string json = meretTeksti.text;
+                var jasennys = System.Threading.Tasks.Task.Run(() =>
+                {
+                    var r = new List<IssSijainti.MeriAlue>();
+                    var juuri = Matkakirja.Peli.MiniJson.Jasenna(json) as Dictionary<string, object>;
+                    if (Matkakirja.Peli.MiniJson.Kentta(juuri, "alueet") is List<object> rivit)
+                        foreach (var o in rivit)
+                        {
+                            if (!(o is List<object> x) || x.Count < 4 || !(x[3] is List<object> renkaat)) continue;
+                            var rr = new List<double[]>();
+                            foreach (var rg in renkaat)
+                                if (rg is List<object> lv) { var d = new double[lv.Count]; for (int i = 0; i < lv.Count; i++) d[i] = Convert.ToDouble(lv[i], CultureInfo.InvariantCulture); rr.Add(d); }
+                            r.Add(new IssSijainti.MeriAlue(x[0] as string, x[1] as string, rr));
+                        }
+                    return r;
+                });
+                while (!jasennys.IsCompleted) yield return null;
+                if (jasennys.IsFaulted) Debug.LogWarning("MATKAKIRJA linssit: iss-sijainti: meret: " + jasennys.Exception?.GetBaseException().Message);
+                else a.MeriAlueet.AddRange(jasennys.Result);
+                Resources.UnloadAsset(meretTeksti);
+            }
             var nimisto = Nimikerros.Instanssi?.Nimisto;
             if (nimisto != null)
                 foreach (var n in nimisto.Nimet)
@@ -92,7 +117,7 @@ namespace Matkakirja.Natiivi
             }
             IssSijainti.Nykyinen = a;
             kaynnissa = false;
-            Debug.Log($"MATKAKIRJA linssit: iss-sijainti: maat {(a.Maa != null ? "on" : "ei")}, kaupunkeja {a.Kaupungit.Count}, paikkoja {a.Paikat.Count}, vuoria {a.Vuoret.Count}, "
+            Debug.Log($"MATKAKIRJA linssit: iss-sijainti: maat {(a.Maa != null ? "on" : "ei")}, kaupunkeja {a.Kaupungit.Count}, paikkoja {a.Paikat.Count}, merialueita {a.MeriAlueet.Count}, vuoria {a.Vuoret.Count}, "
                 + $"meriä {a.Meret.Count}, valtameriä {a.Valtameret.Count}");
         }
 

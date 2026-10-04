@@ -3,10 +3,11 @@
 // Maan nimi tulee kohteen alapuolelle"). Vain olemassa oleva paikkadata (Unity-puoli täyttää Aineiston: maat MaaOsumalla,
 // kaupungit, vuoristot, meret ja valtameret). Säännöt:
 //   maalla (omistaja 4.10. 21.5x "miksi ei ole tarkempaa sijaintia"; Päätoimittaja: Poznańin yllä "VARSOVA" 280 km:n päästä):
-//            lähin saman maan kaupunki ≤ KaupunkiKm (40 km) pelin kaupungeista ja Natural Earthin paikoista (Paikat, ~7 300,
+//            lähin saman maan kaupunki ≤ KaupunkiKm (80 km, Päätoimittaja 23.2x: 40 km:llä yli puolet maapisteistä vain maa) pelin kaupungeista ja Natural Earthin paikoista (Paikat, ~7 300,
 //            Resources/IssPaikat) → KAUPUNKI / MAA; Natural Earthin paikka saa pelin suomenkielisen nimen, kun pelin kaupunki on
 //            samassa maassa ≤ PelinNimiKm päässä siitä (Varsova, Krakova); muuten vuoristo ≤ VuoriKm → VUORI / MAA; muuten MAA;
-//   merellä (ei maata pisteessä): lähin nimetty meri ≤ MeriKm → MERI; muuten lähin valtameri (aina jokin).
+//   merellä (ei maata pisteessä): Natural Earthin merialue, jonka sisällä piste on (pienin; suomeksi taulukosta tai pelin oma
+//            nimipiste alueessa); muuten lähin nimetty meri ≤ MeriKm → MERI; muuten lähin valtameri (aina jokin).
 // Puhdas C#: Linssit-testit IssSijaintiTestit.
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace Matkakirja.Linssit.Iss
     public static class IssSijainti
     {
         /// <summary>KaupunkiKm: kaupunki näytetään vain tämän säteellä pisteestä; VuoriKm: "vuoristossa"; PelinNimiKm: pelin nimi.</summary>
-        public const double KaupunkiKm = 40, VuoriKm = 150, MeriKm = 600, PelinNimiKm = 15;
+        public const double KaupunkiKm = 80, VuoriKm = 150, MeriKm = 600, PelinNimiKm = 15;
 
         public readonly struct Paikka
         {
@@ -36,6 +37,42 @@ namespace Matkakirja.Linssit.Iss
                 Meret = new List<Paikka>(), Valtameret = new List<Paikka>();
             /// <summary>Natural Earthin asutut paikat (Tarkeys = väkiluku); paikallinen nimi.</summary>
             public readonly List<Paikka> Paikat = new List<Paikka>();
+            /// <summary>Natural Earthin merialueet (piste polygonissa; Resources/IssPaikat/meret.json).</summary>
+            public readonly List<MeriAlue> MeriAlueet = new List<MeriAlue>();
+        }
+
+        /// <summary>Merialue: englanninkielinen ja suomenkielinen nimi (tyhjä = ei taulukossa), renkaat [lon, lat, …], rajaus.</summary>
+        public sealed class MeriAlue
+        {
+            public readonly string NimiEn, NimiFi;
+            public readonly List<double[]> Renkaat;
+            public readonly double W, S, E, N;
+            internal string PelinNimi; internal bool PelinNimiHaettu;
+            public MeriAlue(string en, string fi, List<double[]> renkaat)
+            {
+                NimiEn = en; NimiFi = fi ?? ""; Renkaat = renkaat;
+                W = S = double.MaxValue; E = N = double.MinValue;
+                foreach (var r in renkaat)
+                    for (int i = 0; i + 1 < r.Length; i += 2)
+                    { W = Math.Min(W, r[i]); E = Math.Max(E, r[i]); S = Math.Min(S, r[i + 1]); N = Math.Max(N, r[i + 1]); }
+            }
+            public double Ala => (E - W) * (N - S);
+            /// <summary>Piste alueessa (parillisuussääntö kaikkien renkaiden yli; reiät ja saaret).</summary>
+            public bool Sisalla(double lat, double lon)
+            {
+                if (lon < W || lon > E || lat < S || lat > N) return false;
+                bool sisalla = false;
+                foreach (var r in Renkaat)
+                {
+                    int n = r.Length / 2;
+                    for (int i = 0, j = n - 1; i < n; j = i++)
+                    {
+                        double xi = r[2 * i], yi = r[2 * i + 1], xj = r[2 * j], yj = r[2 * j + 1];
+                        if ((yi > lat) != (yj > lat) && lon < (xj - xi) * (lat - yi) / (yj - yi) + xi) sisalla = !sisalla;
+                    }
+                }
+                return sisalla;
+            }
         }
 
         /// <summary>Unityn täyttämä aineisto (null = ei vielä ladattu).</summary>
@@ -73,8 +110,35 @@ namespace Matkakirja.Linssit.Iss
                 if (v.HasValue) return (Iso(v.Value.Nimi), m);
                 return (m, "");
             }
+            // Merialue polygonista (Päätoimittaja 4.10. 23.2x: SKAGERRAK keskellä Pohjanmerta oli lähimmän nimipisteen virhe): pienin
+            // pisteen sisältävä alue; nimi suomeksi taulukosta, muuten pelin oma meren nimipiste alueen sisällä.
+            MeriAlue alue = null;
+            foreach (var m2 in a.MeriAlueet)
+                if ((alue == null || m2.Ala < alue.Ala) && m2.Sisalla(lat, lon)) alue = m2;
+            if (alue != null)
+            {
+                if (alue.NimiFi.Length > 0) return (Iso(alue.NimiFi), "");
+                string peli = PelinNimiAlueelle(a, alue);
+                if (!string.IsNullOrEmpty(peli)) return (Iso(peli), "");
+            }
             var meri = Lahin(a.Meret, lat, lon, MeriKm, null) ?? Lahin(a.Valtameret, lat, lon, double.PositiveInfinity, null);
             return (meri.HasValue ? Iso(meri.Value.Nimi) : "", "");
+        }
+
+        /// <summary>Pelin meren tai valtameren nimipiste alueen sisällä (alueen keskikohtaa lähin); kerran per alue.</summary>
+        static string PelinNimiAlueelle(Aineisto a, MeriAlue alue)
+        {
+            if (alue.PelinNimiHaettu) return alue.PelinNimi;
+            alue.PelinNimiHaettu = true;
+            double kLat = (alue.S + alue.N) / 2, kLon = (alue.W + alue.E) / 2, paras = double.MaxValue;
+            foreach (var lista in new[] { a.Meret, a.Valtameret })
+                foreach (var x in lista)
+                    if (alue.Sisalla(x.Lat, x.Lon))
+                    {
+                        double km = Ylilennot.MaaEtaisyysKm(kLat, kLon, x.Lat, x.Lon);
+                        if (km < paras) { paras = km; alue.PelinNimi = x.Nimi; }
+                    }
+            return alue.PelinNimi;
         }
 
         /// <summary>

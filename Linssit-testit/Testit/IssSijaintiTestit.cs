@@ -42,16 +42,16 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(("INTIAN VALTAMERI", ""), IssSijainti.Hae(a, -30, 70), "muualla lähin valtameri");
         }
 
-        [Testi] static void KaupunkiVain40KmSateellaMuutenVuoriTaiMaa()
+        [Testi] static void KaupunkiVain80KmSateellaMuutenVuoriTaiMaa()
         {
-            // Päätoimittaja 4.10.: kaupunki vain ~40 km:n säteellä (Poznańin yllä ei "VARSOVA" 280 km:n päästä).
+            // Päätoimittaja 4.10.: kaupunki vain 80 km:n säteellä (Poznańin yllä ei "VARSOVA" 280 km:n päästä).
             var a = Pieni();
             Oleta.Sama(("ITALIA", ""), IssSijainti.Hae(a, 38.2, 16.0), "Calabria: pelin kaupungit kaukana, ei paikkaa");
             a.Paikat.Add(new IssSijainti.Paikka("Cosenza", 39.30, 16.25, "ITA", 70000));
             a.Paikat.Add(new IssSijainti.Paikka("Catanzaro", 38.90, 16.60, "ITA", 90000));
             Oleta.Sama(("CATANZARO", "ITALIA"), IssSijainti.Hae(a, 38.8, 16.4), "Natural Earthin lähin paikka");
             a.Kaupungit.Add(new IssSijainti.Paikka("Zürich", 47.37, 8.54, "CHE", 2));
-            Oleta.Sama(("ALPIT", "SVEITSI"), IssSijainti.Hae(a, 46.5, 9.7), "ei kaupunkia 40 km:n säteellä → vuoristo");
+            Oleta.Sama(("ALPIT", "SVEITSI"), IssSijainti.Hae(a, 46.5, 9.7), "ei kaupunkia 80 km:n säteellä → vuoristo");
             Oleta.Sama(("ZÜRICH", "SVEITSI"), IssSijainti.Hae(a, 47.3, 8.4), "kaupunki säteellä");
         }
 
@@ -63,6 +63,20 @@ namespace Matkakirja.Linssit.Testit
             a.Paikat.Add(new IssSijainti.Paikka("Poznań", 52.4058, 16.8999, "POL", 623997));
             Oleta.Sama(("VARSOVA", "PUOLA"), IssSijainti.Hae(a, 52.10, 21.20), "pelin nimi Natural Earthin paikalle");
             Oleta.Sama(("POZNAŃ", "PUOLA"), IssSijainti.Hae(a, 52.30, 16.70), "paikallinen nimi, kun paikka ei ole pelissä");
+        }
+
+        [Testi] static void MerialuePolygonistaEiLahimmastaNimipisteesta()
+        {
+            // Päätoimittaja 4.10. 23.2x: Pohjanmeren keskiosa sai lähimmän nimipisteen SKAGERRAK.
+            var a = new IssSijainti.Aineisto { Maa = (lat, lon) => null };
+            a.Meret.Add(new IssSijainti.Paikka("Skagerrak", 57.8, 9.0));
+            a.Meret.Add(new IssSijainti.Paikka("Pohjanmeri", 54.0, 3.0));
+            a.Meret.Add(new IssSijainti.Paikka("Testilahti", 59.5, -1.5));
+            a.MeriAlueet.Add(new IssSijainti.MeriAlue("North Sea", "Pohjanmeri", new List<double[]> { new double[] { -4, 51, 9, 51, 9, 62, -4, 62, -4, 51 } }));
+            a.MeriAlueet.Add(new IssSijainti.MeriAlue("Test Bay", "", new List<double[]> { new double[] { -2, 59, -1, 59, -1, 60, -2, 60, -2, 59 } }));
+            Oleta.Sama(("POHJANMERI", ""), IssSijainti.Hae(a, 58.5, 6.5), "polygoni voittaa lähimmän nimipisteen (Skagerrak 160 km)");
+            Oleta.Sama(("TESTILAHTI", ""), IssSijainti.Hae(a, 59.4, -1.6), "pienin alue; nimi pelin nimipisteestä alueen sisällä");
+            Oleta.Sama(("SKAGERRAK", ""), IssSijainti.Hae(a, 57.8, 10.5), "alueen ulkopuolella lähin nimipiste kuten ennen");
         }
 
         [Testi] static void PelkkaMaaKunEiKohdetta()
