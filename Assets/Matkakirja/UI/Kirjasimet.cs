@@ -17,7 +17,11 @@ using UnityEngine.UIElements;
 namespace Matkakirja.Natiivi
 {
     /// <summary>Atlas = web --font-atlas (Liberation Serif kursiivi, UI/Resources/Fontit, OFL): kartan nimiöt ja kaupunkiliuska.</summary>
-    public enum Kirjasin { Kone, KoneLihava, Luku, LukuLihava, LukuKursiivi, Kauno, KoneBold, Atlas }
+    public enum Kirjasin { Kone, KoneLihava, Luku, LukuLihava, LukuKursiivi, Kauno, KoneBold, Atlas,
+        /// <summary>ISS-ohjaamon vihreä LCD (VT323, OFL; omistaja 4.10.2026, Sisältökirjurin ehdotus).</summary>
+        Lcd,
+        /// <summary>Kaasun numerorumpu (DSEG7 Classic Bold, OFL): vain numerot, ×-merkki erikseen.</summary>
+        Segmentti }
 
     public static class Kirjasimet
     {
@@ -41,12 +45,20 @@ namespace Matkakirja.Natiivi
         {
             if (valimuisti.TryGetValue(k, out var d)) return d;
             d = null;
-            if (k == Kirjasin.Atlas)
+            // Sovelluksen mukana tulevat OFL-fontit (Resources/Fontit; lisenssit samassa kansiossa).
+            var oma = k switch
             {
-                var fontti = Resources.Load<Font>("Fontit/LiberationSerif-Italic");
+                Kirjasin.Atlas => ("Fontit/LiberationSerif-Italic", "Liberation Serif Italic"),
+                Kirjasin.Lcd => ("Fontit/VT323-Regular", "VT323"),
+                Kirjasin.Segmentti => ("Fontit/DSEG7Classic-Bold", "DSEG7 Classic Bold"),
+                _ => (null, null),
+            };
+            if (oma.Item1 != null)
+            {
+                var fontti = Resources.Load<Font>(oma.Item1);
                 var atlas = fontti != null ? FontAsset.CreateFontAsset(fontti) : null;
-                if (atlas != null) { atlas.name = "Liberation Serif Italic"; d = FontDefinition.FromSDFFont(atlas); }
-                else Debug.LogWarning("MATKAKIRJA ui: Liberation Serif puuttuu (Resources/Fontit)");
+                if (atlas != null) { atlas.name = oma.Item2; d = FontDefinition.FromSDFFont(atlas); }
+                else Debug.LogWarning("MATKAKIRJA ui: " + oma.Item2 + " puuttuu (Resources/Fontit)");
                 valimuisti[k] = d;
                 return d;
             }

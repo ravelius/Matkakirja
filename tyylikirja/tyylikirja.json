@@ -75,6 +75,15 @@
       "korostus": "#ffffff",
       "reunus": "#aaaaaa",
       "toiminto": "rgba(170, 170, 170, 0.55)"
+    },
+    "lcd": {
+      "pinta": "#0c2214",
+      "pinta-peitto": "#0c2214",
+      "muste": "#84ffa0",
+      "muste-pehmea": "rgba(132, 255, 160, 0.62)",
+      "korostus": "#84ffa0",
+      "reunus": "rgba(124, 255, 158, 0.28)",
+      "toiminto": "#84ffa0"
     }
   },
   "himmennys": {
@@ -110,16 +119,20 @@
     "otsikko": { "koko": 21, "kirjasin": "LukuLihava" },
     "arkki": { "koko": 26, "kirjasin": "LukuLihava" },
     "nimio": { "koko": 34, "kirjasin": "KoneBold" },
-    "leveaLisa": 2
+    "leveaLisa": 2,
+    "lcd": { "koko": 30, "kirjasin": "Lcd" },
+    "lcd-pieni": { "koko": 15, "kirjasin": "Lcd", "harvennus": 0.27 },
+    "lcd-mini": { "koko": 20, "kirjasin": "Lcd" },
+    "rumpu": { "koko": 12, "kirjasin": "Segmentti" }
   },
   "fontit": {
     "punta": { "kirjasin": "Luku", "vali": 1, "_selite": "£-merkki aina Luku-kirjasimella (Iowan Old Style) ja 1 pt:n väli numeroon, myös Kone-teksteissä: American Typewriterin £ näytti koukulta ja '−£20' luettiin '−&20' (omistaja ja Päätoimittaja 2.10.2026). Web: @font-face 'Matkakirja Punta' src: local('Iowan Old Style Roman'), local('IowanOldStyle-Roman'), local('Iowan Old Style'), local('Charter Roman'), local('Charter-Roman'), local('Georgia'), local('Palatino Linotype'), local('Palatino-Roman'), local('Cambria'), local('Noto Serif'), local('NotoSerif-Regular'), local('DejaVu Serif'), local('Times New Roman') (local() vaatii kasvon koko nimen tai PostScript-nimen, Pelikoodari mittasi Chromiumilla; Iowan on Applen järjestelmäfontti eikä upotettavissa), unicode-range U+00A3, jokaisen fonttipinon alkuun. Natiivi: £ omana Luku-tekstinään (Ylapalkki.AsetaRahaTeksti; muut näytöt samalla apurilla)." },
     "_selite": "web = CSS-pino (sama kuin ennen), natiivi = Kirjasimet.cs:n ehdokkaat (perhe, tyyli) järjestyksessä.",
     "web": {
-      "font-type": "\"American Typewriter\", \"Courier Prime\", \"Courier New\", Courier, monospace",
-      "font-luku": "\"Iowan Old Style\", Charter, \"Palatino Linotype\", Palatino,\n    Georgia, \"Times New Roman\", serif",
-      "font-kauno": "\"Snell Roundhand\", \"Savoye LET\", \"Bradley Hand\",\n    \"Segoe Script\", \"Comic Sans MS\", cursive",
-      "font-atlas": "\"Liberation Serif\", \"Times New Roman\", Times, serif"
+      "font-type": "\"Matkakirja Punta\", \"American Typewriter\", \"Courier Prime\", \"Courier New\", Courier, monospace",
+      "font-luku": "\"Matkakirja Punta\", \"Iowan Old Style\", Charter, \"Palatino Linotype\", Palatino,\n    Georgia, \"Times New Roman\", serif",
+      "font-kauno": "\"Matkakirja Punta\", \"Snell Roundhand\", \"Savoye LET\", \"Bradley Hand\",\n    \"Segoe Script\", \"Comic Sans MS\", cursive",
+      "font-atlas": "\"Matkakirja Punta\", \"Liberation Serif\", \"Times New Roman\", Times, serif"
     },
     "natiivi": {
       "Kone": [["American Typewriter", "Regular"], ["Courier New", "Regular"], ["Courier", "Regular"]],
@@ -188,19 +201,34 @@
       "kuvake": "24-ruudukon viivakuvake kokoa nappi.ohjaus-kuvake, viiva 1,75, ei tekstimerkkejä (×, ‹)",
       "ryhma": "yksi ohjausryhmä näkymää kohden oikeaan yläkulmaan turva-alueen sisään: ‹ ensin, näkymän toiminnot, ✕ viimeisenä; väli vali.s; puhelimessa pystyssä enintään 4, loput valikkoon",
       "ulkopuolella": "sisällön omat ohjaimet (kuvan ‹ › -reunakaistat, vetokahva, liukusäätimet) ja Pulu; paneelin sisäinen ‹ Takaisin pysyy tekstinä",
+      "linssivalikot": {
+        "_selite": "linssin hampurilaisvalikko: OHJAUSNAPPI-neliö (harmaa, kuvake valikko) ✕:n paikalla oikeassa yläkulmassa, lista LINSSIN VALIKKO -pohjalla; rivit ylhäältä alas, Sulje linssi viimeisenä; kartalta poistuvat vastaavat napit ja ✕ (omistaja 2.10.2026 klo 21.3x, ensimmäinen käyttäjä Topografia; muut linssit linssivalikot.md:n mukaan omistajan päätöksellä)",
+        "topografia": ["Korkeustasot", "Sulje linssi"]
+      },
       "_selite": "kaikki kuvakenapit yhtenäisiksi neliöiksi ja yhteen ryhmään (omistaja 2.10.2026 klo 14.16; linnassa yksi hampurilaisvalikko klo 14.44; Päätoimittajan päätökset 15.1x). Malli taikalasinappi (#linssi-btn)."
     },
     "ERIKOISNOSTOT": {
-      "paikka": "sarake kartuutsin lipun alla kartuutsin rungon vieressä: x = max(lipun vasen reuna, kartuutsin oikea reuna + vali-s), ei kartuutsin rivien päällä; turva-alueen ja yläpalkin alapuolella; iPadilla sama sääntö kartuutsin tablettimitoilla",
+      "paikka": "karttaobjekti: jokaisella ajattelijalla kiinteä karttapiste (kartta.piste [lat, lng], maan alueella tai rannikon tuntumassa, ei kaupunki eikä nimien päällä); liikkuu kartan mukana, koko ruudulla vakio; ei väistä kartuutsia (avattu kortti saa peittää); Pulu väistää (pulu-vaistettava)",
       "osat": ["PÄÄ (ajattelijan 3D-pää, nappi-laukaisin 64, läpinäkyvä tausta kuten minipulu, ei kehystä; osuma ≥ 44)"],
       "vali": "vali-s",
-      "liike": "nenä kohti näkymän keskustaa ≤ 30°, kartan liike heiluttaa (sisältöanimaatio, ei UI-rajaa)",
-      "valo": "pallolaudan suuntavalo kameran koordinaateissa",
+      "liike": "nenä kohti näkymän keskustaa ≤ 30°, kartan liike heilauttaa hieman (jousi), pää ei liu'u",
+      "valo": "lämmin vaalea kipsi (valaistun puolen keskisävy ~210/202/185, ei sinistä ympäristövaloa); suunta kartan auringosta, korkeus 58°; pehmeä varjo paperille (peitto 0,26, VSM-säde 10)",
       "avaus": "napautus avaa ajattelijan (KUVANÄKYMÄ)",
-      "nakyvyys": "piiloon, kun kortti, lehti, paneeli tai linssi on auki (kuten minipulu); enintään 3 allekkain, ei vieritystä vaan karsinta tärkeysjärjestyksessä",
+      "nakyvyys": "piiloon, kun linssi, nosto, valikko, aikajana tai lento on auki; näkyy maakortin (maataulu) aikana; enintään 3",
       "nimi": "jokaisella osalla nimi (VoiceOver ja pitkä painallus), ei näkyvää tekstiä",
       "teemat": [],
       "_selite": "omistaja 2.10.2026 klo 12.34 (vaihtoehto B): ajattelijoiden päät kartalla, myöhemmin muut erikoisnostot allekkain; Natiivi-UI:n tarkennukset 2.10."
+    },
+    "ISS-OHJAAMO": {
+      "_selite": "ISS-ohjaamon paneeli Cupolan alareunaan (omistaja 4.10.2026 klo 11.40 'ISS-OHJAAMO UUSIKSI'; vain natiivi, UI/Linssit/IssOhjaamo.cs ja Pohjat/iss-ohjaamo.uss). Pinta teema tumma, näytöt teema lcd.",
+      "joystick": "plus-muoto 96 pt (varret 32 pt), yksi suunta kerrallaan, liike pidon ajan, irrotus pysäyttää; painettu varsi lcd-korostuksella, napa kallistuu 7 pt",
+      "lcd": "vihreä LCD (teema lcd): lähin kohde koolla lcd (pitkä nimi pienenee yhdellä rivillä 22 pt:iin ja rivittyy sitten kahdelle riville, vähintään 17 pt), maa alla koolla lcd-pieni harvennettuna; kirjasin Lcd (VT323, OFL)",
+      "kamera": "pyöreä 48 pt kamerakuvake; tarkka ISS-kuva kaikkialla (loki #3934, #3936); himmeä (peitto 0,35) Cupolan ulkopuolella ja kuvan työstön aikana",
+      "kaasu": "vipu neljällä pykälällä (1, 10, 100, 1000 alhaalta ylös), juuressa pyöreä kolo ja numerorumpu koolla rumpu (Segmentti = DSEG7, OFL), ×-merkki Lcd-kirjasimella; vanha luku liukuu piiloon ja uusi esiin 200 ms",
+      "mininaytto": "napautus ohjaamon ulkopuolelle pienentää yksiriviseksi LCD-näytöksi (36 pt, koko lcd-mini, 'KOHDE · MAA'); napautus palauttaa; siirtymä liike.avaus ja liike.sulku",
+      "laajennus": "LCD:n napautus: LCD kasvaa ohjainten päälle (teema lcd, Ponnahdus LCD:n kohdalta); vasemmalla tuplakorkea SIJAINTI ja oikealla OK (72 pt), keskellä rivit TALVI KEVÄT KESÄ SYKSY ja AAMU PÄIVÄ ILTA YÖ LCD-nappeina koolla lcd-pieni; valittu käänteisenä (pohja lcd-muste, teksti lcd-pinta); OK palaa sijaintiin",
+      "sijainti": "perinteinen pelin ikkuna ilman LCD-efektiä: pohja lasi-avaruus pinta-peitto (musta), kehys lcd-reunus, kulma kortti, leveys 92 % enintään 520 pt, korkeus enintään 70 %; otsikko SIJAINTI kapiteelina, kohteet (Oma sijainti + astronauttikierros) kahteen sarakkeeseen kirjasimella Luku koolla leipa ja värillä lcd-muste, rivi ≥ nappi.osuma; vieritys; valinta tai ohinapautus sulkee",
+      "peitto": "paneeli 128 pt (puhelimella noin 15 % korkeudesta), leveys ruutu − 24, enintään 560 pt"
     },
     "_poikkeukset": { "KORTTI/visa": "tiimalasi ja 50:50 (80 p) -oljenkorsi pohjan poikkeuksena (omistaja 1.10.2026, versio B)" }
   }

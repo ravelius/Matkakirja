@@ -1,0 +1,498 @@
+/* ISS-OHJAAMO-pohja (omistaja 4.10.2026 klo 11.40 "ISS-OHJAAMO UUSIKSI", vaihe 2; UI/Linssit/IssOhjaamo.cs):
+ * paneeli Cupolan alareunaan keskelle: JOYSTICK plus-muotoinen vasemmalla, vihreä LCD keskellä (VT323), pyöreä KAMERA ja
+ * KAASU-vipu oikealla (juuressa pyöreä kolo ja numerorumpu DSEG7), MININÄYTTÖ yksirivisenä LCD:nä. Pinta tk-teema-tumma.
+ * Näytöt teeman lcd tokeneilla (--tk-lcd-*), kirjasinkoot typografia lcd, lcd-pieni, lcd-mini ja rumpu. VAIN --tk-*-tokenit. */
+.mk-issohjaamo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: var(--tk-vali-s);
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.mk-issohjaamo__paneeli {
+    flex-direction: row;
+    align-items: center;
+    height: 128px;
+    padding: 10px 12px;
+    border-width: 1px;
+    border-radius: 18px;
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta);
+}
+
+/* JOYSTICK: 96 × 96, varret 32 pt leveitä, napa keskellä (puhelimella LCD:lle tilaa). */
+.mk-issohjaamo__joystick {
+    width: 96px;
+    height: 96px;
+    flex-shrink: 0;
+}
+
+.mk-issohjaamo__varsi {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-width: 1px;
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-lcd-pinta);
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-issohjaamo__varsi--ylos { left: 32px; top: 0; border-top-left-radius: 9px; border-top-right-radius: 9px; border-bottom-width: 0; }
+.mk-issohjaamo__varsi--alas { left: 32px; top: 64px; border-bottom-left-radius: 9px; border-bottom-right-radius: 9px; border-top-width: 0; }
+.mk-issohjaamo__varsi--vasen { left: 0; top: 32px; border-top-left-radius: 9px; border-bottom-left-radius: 9px; border-right-width: 0; }
+.mk-issohjaamo__varsi--oikea { left: 64px; top: 32px; border-top-right-radius: 9px; border-bottom-right-radius: 9px; border-left-width: 0; }
+
+/* Plus-kuvion keskiruutu: varret yhtenäiseksi ristiksi (ei aukkoa navan alla). */
+.mk-issohjaamo__keski {
+    position: absolute;
+    left: 31px;
+    top: 31px;
+    width: 34px;
+    height: 34px;
+    background-color: var(--tk-lcd-pinta);
+}
+
+.mk-issohjaamo__varsi.mk-painettu {
+    background-color: var(--tk-lcd-reunus);
+}
+
+.mk-issohjaamo__nuoli {
+    width: 22px;
+    height: 22px;
+    color: var(--tk-muste);
+}
+
+.mk-issohjaamo__varsi.mk-painettu .mk-issohjaamo__nuoli {
+    color: var(--tk-lcd-muste);
+}
+
+.mk-issohjaamo__napa {
+    position: absolute;
+    left: 37px;
+    top: 37px;
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    border-width: 1px;
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-muste-pehmea);
+    transition-property: translate;
+    transition-duration: 120ms;
+}
+
+/* LCD: kohde isolla, maa alla pienempänä ja harvemmin. */
+.mk-issohjaamo__lcd {
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 84px;
+    margin: 0 8px;
+    padding: 4px 8px;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: var(--tk-lcd-reunus);
+    background-color: var(--tk-lcd-pinta);
+    justify-content: center;
+    overflow: hidden;
+}
+
+.mk-issohjaamo__kohde {
+    margin: 0;
+    padding: 0;
+    font-size: var(--tk-koko-lcd);
+    color: var(--tk-lcd-muste);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -unity-text-align: middle-left;
+}
+
+.mk-issohjaamo__maa {
+    margin: 2px 0 0 0;
+    padding: 0;
+    font-size: var(--tk-koko-lcd-pieni);
+    letter-spacing: 4px;
+    color: var(--tk-lcd-muste-pehmea);
+    white-space: nowrap;
+    -unity-text-align: middle-left;
+}
+
+/* KAMERA: pyöreä 48 pt, himmeä muualla kuin kuvauspaikalla. */
+.mk-issohjaamo__kamera {
+    width: 48px;
+    height: 48px;
+    min-height: 48px;
+    margin: 0 8px 0 0;
+    padding: 0;
+    flex-shrink: 0;
+    border-width: 1px;
+    border-radius: 24px;
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-lcd-pinta);
+    color: var(--tk-muste);
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-issohjaamo__kamera:disabled {
+    opacity: 0.35;
+}
+
+.mk-issohjaamo__kamera .mk-ikoni,
+.mk-issohjaamo__kamera > * {
+    width: 26px;
+    height: 26px;
+}
+
+/* KAASU: vipu (ura + kahva, neljä pykälää) ja juuressa pyöreä kolo numerorummulla. */
+.mk-issohjaamo__kaasu {
+    width: 56px;
+    height: 108px;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.mk-issohjaamo__ura {
+    width: 12px;
+    height: 44px;
+    margin-top: 2px;
+    border-radius: 6px;
+    background-color: var(--tk-lcd-pinta-peitto);
+    border-width: 1px;
+    border-color: var(--tk-reunus);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mk-issohjaamo__pykala {
+    width: 22px;
+    height: 1px;
+    background-color: var(--tk-reunus);
+}
+
+.mk-issohjaamo__kahva {
+    position: absolute;
+    left: -14px;
+    width: 40px;
+    height: 16px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-muste-pehmea);
+    transition-property: top;
+    transition-duration: 160ms;
+}
+
+.mk-issohjaamo__rumpu {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    margin-top: 6px;
+    border-radius: 28px;
+    border-width: 2px;
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-lcd-pinta);
+    overflow: hidden;
+}
+
+.mk-issohjaamo__luvut {
+    height: 20px;
+    width: 10px;
+    overflow: hidden;
+}
+
+.mk-issohjaamo__luku {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    font-size: var(--tk-koko-rumpu);
+    color: var(--tk-lcd-muste);
+    -unity-text-align: middle-right;
+}
+
+.mk-issohjaamo__luku--liukuu {
+    transition-property: translate;
+    transition-duration: 200ms;
+}
+
+.mk-issohjaamo__kerta {
+    margin: 0 0 0 1px;
+    padding: 0;
+    font-size: var(--tk-koko-leipa);
+    color: var(--tk-lcd-muste);
+}
+
+/* MININÄYTTÖ: yksirivinen LCD. */
+.mk-issohjaamo__mini {
+    height: 36px;
+    min-width: 160px;
+    padding: 0 14px;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: var(--tk-lcd-reunus);
+    background-color: var(--tk-lcd-pinta);
+    justify-content: center;
+    align-items: center;
+}
+
+.mk-issohjaamo__miniteksti {
+    margin: 0;
+    padding: 0;
+    font-size: var(--tk-koko-lcd-mini);
+    color: var(--tk-lcd-muste);
+    white-space: nowrap;
+}
+
+/* LCD:N LAAJENNUS (vaihe 3): koko paneelin päälle, vasemmalla tuplakorkea SIJAINTI, keskellä vuodenaika- ja vuorokausirivit
+ * LCD-nappeina, oikealla tuplakorkea OK. Valittu nappi käänteisenä (vihreä pohja, tumma teksti) kuten LCD-segmentti. */
+.mk-issohjaamo__laajennus {
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    flex-direction: row;
+    padding: 6px;
+    border-width: 1px;
+    border-radius: 12px;
+    border-color: var(--tk-lcd-reunus);
+    background-color: var(--tk-lcd-pinta);
+}
+
+.mk-issohjaamo__rivit {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0 6px;
+}
+
+.mk-issohjaamo__rivi {
+    flex-direction: row;
+    flex-grow: 1;
+    margin: 2px 0;
+}
+
+.mk-issohjaamo__lcdnappi {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 0;
+    min-height: 0;
+    margin: 0 2px;
+    padding: 0;
+    border-width: 1px;
+    border-radius: 6px;
+    border-color: var(--tk-lcd-reunus);
+    background-color: var(--tk-lcd-pinta);
+    color: var(--tk-lcd-muste);
+    font-size: var(--tk-koko-lcd-pieni);
+    justify-content: center;
+    align-items: center;
+}
+
+.mk-issohjaamo__lcdnappi .mk-nappi__teksti {
+    margin: 0;
+    padding: 0;
+    font-size: var(--tk-koko-lcd-pieni);
+    color: var(--tk-lcd-muste);
+    white-space: nowrap;
+}
+
+.mk-issohjaamo__lcdnappi.mk-valittu {
+    background-color: var(--tk-lcd-muste);
+}
+
+.mk-issohjaamo__lcdnappi.mk-valittu .mk-nappi__teksti {
+    color: var(--tk-lcd-pinta);
+}
+
+.mk-issohjaamo__lcdnappi:active {
+    background-color: var(--tk-lcd-reunus);
+}
+
+.mk-issohjaamo__iso {
+    flex-grow: 0;
+    flex-basis: auto;
+    width: 72px;
+    margin: 2px 0;
+}
+
+/* SIJAINTI-IKKUNA (vaihe 3): perinteinen pelin ikkuna mustalla pohjalla ja vihreällä tekstillä ilman LCD-efektiä (kirjasin Luku),
+ * kohteet kahteen sarakkeeseen, vieritys; peite sulkee ikkunan napautuksella ohi. */
+.mk-isssijainti {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-isssijainti__ikkuna {
+    width: 92%;
+    max-width: 520px;
+    max-height: 70%;
+    padding: var(--tk-vali-m);
+    border-width: 1px;
+    border-radius: var(--tk-kulma-kortti);
+    border-color: var(--tk-lcd-reunus);
+    background-color: var(--tk-lasi-avaruus-pinta-peitto);
+}
+
+.mk-isssijainti__otsikko {
+    margin: 0 0 var(--tk-vali-s) 0;
+    padding: 0;
+    font-size: var(--tk-koko-kapiteeli);
+    letter-spacing: 1.44px; /* tyylikirja kapiteeli harvennus 0,12 */
+    color: var(--tk-lcd-muste-pehmea);
+}
+
+.mk-isssijainti__vieritys {
+    flex-shrink: 1;
+}
+
+.mk-isssijainti__lista {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mk-isssijainti__kohde {
+    width: 50%;
+    min-height: var(--tk-nappi-osuma);
+    margin: 0;
+    padding: 0 var(--tk-vali-s);
+    border-width: 0;
+    background-color: var(--tk-lasi-avaruus-pinta-peitto);
+    color: var(--tk-lcd-muste);
+    font-size: var(--tk-koko-leipa);
+    -unity-text-align: middle-left;
+    white-space: normal;
+}
+
+.mk-isssijainti__kohde {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.mk-isssijainti__kohde .mk-nappi__teksti {
+    margin: 0;
+    padding: 0;
+    -unity-text-align: middle-left;
+    white-space: normal;
+    color: var(--tk-lcd-muste);
+    font-size: var(--tk-koko-leipa);
+}
+
+.mk-isssijainti__kohde:active {
+    background-color: var(--tk-lcd-pinta);
+}
+
+/* Kameranapin kilpi (hinta, ODOTTAA, EI ONNISTUNUT): pieni LCD-lappu napin yläpuolella. */
+.mk-issohjaamo__kilpi {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    translate: -50% 0;
+    height: 18px;
+    margin: 0;
+    padding: 0 5px;
+    border-width: 1px;
+    border-radius: 4px;
+    border-color: var(--tk-lcd-reunus);
+    background-color: var(--tk-lcd-pinta);
+    color: var(--tk-lcd-muste);
+    font-size: var(--tk-koko-rumpu);
+    white-space: nowrap;
+    -unity-text-align: middle-center;
+}
+
+/* OMAT KUVAT (omistaja 4.10.2026 klo 15.2x): iso ikkuna KUVANÄKYMÄ-pohjalla (teema tumma) Cupolan päällä ja kuvapino vasempaan
+ * alareunaan ohjaamopaneelin yläpuolelle (tyylikirja ISS-OHJAAMO.kuvapino). */
+.mk-issomakuva {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.mk-issomakuva__ikkuna {
+    width: 92%;
+    max-width: 520px;
+    padding: var(--tk-vali-s);
+    border-width: 1px;
+    border-radius: var(--tk-kulma-kortti);
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta);
+}
+
+.mk-issomakuva__ikkuna > .mk-ohjausryhma {
+    top: var(--tk-vali-m);
+    right: var(--tk-vali-m);
+}
+
+.mk-issomakuva__kuva {
+    width: 100%;
+    padding-top: 125%;
+    border-radius: var(--tk-kulma-pieni);
+    background-size: cover;
+    background-color: var(--tk-pinta-peitto);
+}
+
+.mk-issomakuva__alarivi {
+    flex-direction: row;
+    align-items: center;
+    margin-top: var(--tk-vali-s);
+}
+
+.mk-issomakuva__alarivi > .mk-ohjausnappi {
+    margin: 0;
+}
+
+.mk-issomakuva__teksti {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0 var(--tk-vali-s);
+    padding: 0;
+    font-size: var(--tk-koko-apuri);
+    color: var(--tk-muste);
+    white-space: normal;
+    -unity-text-align: middle-center;
+}
+
+.mk-issomakuva__pino {
+    position: absolute;
+    width: 52px;
+    height: 65px;
+}
+
+.mk-issomakuva__pikku {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 52px;
+    height: 65px;
+    border-width: 2px;
+    border-radius: var(--tk-kulma-pieni);
+    border-color: var(--tk-tumma-muste);
+    background-color: var(--tk-tumma-pinta);
+    background-size: cover;
+}
+
+.mk-issomakuva__pikku--1 {
+    rotate: -7deg;
+    translate: -3px 2px;
+}
+
+.mk-issomakuva__pikku--2 {
+    rotate: 6deg;
+    translate: 3px 3px;
+}
