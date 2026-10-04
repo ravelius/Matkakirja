@@ -1,0 +1,13 @@
+{
+  "kuvaus": "Myllyn puuttuvat äänet (Päätoimittaja 5.10.2026, juna 143; Siirtoseppä kytkee): siirto, mylly syntyy, voitto ja häviö. Vain CC0; ei generointia. Oma kansio, koska ämpärin mylly-v2 on muuttumaton. Natiiviin WAV, isku 0–5 ms ja huippu −6 dBFS (jälkikäsittely paikallisesti kuten Tavlissa).",
+  "amparinKansio": "aanet/tehosteet/mylly-v3",
+  "manifesti": "manifesti.json",
+  "tavoiteLufs": -14,
+  "peliavainEtuliite": "mylly",
+  "tehosteet": [
+    { "tunnus": "mylly-siirto", "peliavain": "mylly.siirto", "kuvaus": "Puunappula liukuu laudalla ja kopsahtaa paikalleen", "hakusanat": ["wood slide knock", "wooden piece slide", "board game piece slide"], "kestoMin": 0.1, "kestoMax": 1.0, "lisenssit": ["Creative Commons 0"] },
+    { "tunnus": "mylly-mylly", "peliavain": "mylly.mylly", "kuvaus": "Mylly syntyy: lyhyt, varma lukitusisku (kolme samalla viivalla)", "hakusanat": ["lock click heavy", "latch close", "wooden lock click"], "kestoMin": 0.05, "kestoMax": 0.8, "lisenssit": ["Creative Commons 0"] },
+    { "tunnus": "mylly-voitto", "peliavain": "mylly.voitto", "kuvaus": "Lyhyt voiton merkki: kirkas nouseva kilahdus, ei fanfaaria", "hakusanat": ["success chime short", "positive bell short", "win short chime"], "kestoMin": 0.4, "kestoMax": 2.0, "lisenssit": ["Creative Commons 0"] },
+    { "tunnus": "mylly-havio", "peliavain": "mylly.havio", "kuvaus": "Lyhyt häviön merkki: pehmeä laskeva sävel, ei pilkkaava", "hakusanat": ["lose game short", "failure tone soft", "game over short"], "kestoMin": 0.4, "kestoMax": 2.0, "lisenssit": ["Creative Commons 0"] }
+  ]
+}
