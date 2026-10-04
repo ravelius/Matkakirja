@@ -197,7 +197,7 @@ namespace Matkakirja.Natiivi
             return l;
         }
 
-        /// <summary>Ympäristön tiedostot (DioraamaYmparisto.Lataa): maaston glb ja päivän orto vain kevyt + laitteen taso (puhelimessa huipun
+        /// <summary>Ympäristön tiedostot (DioraamaYmparisto.Lataa): maaston glb ja päivän orto vain laitteen tasolta (puhelimessa huipun
         /// orto normaalina); muut (puut, puukortit, horisontti, taivas, syvyys, splat, maastokerrokset, aluskasvit)
         /// kaikki, koska ne ovat pieniä ja osa valitaan vasta ajossa (taivaan tunnelma).</summary>
         static List<string> YmparistonTiedostot(Dictionary<string, object> juuriJson, Rakennus r)
@@ -212,13 +212,13 @@ namespace Matkakirja.Natiivi
                 if (o is Dictionary<string, object> d) { foreach (var kv in d) Keraa(kv.Value, polku + "." + kv.Key); return; }
                 if (o is List<object> lista) { foreach (var v in lista) Keraa(v, polku + "[]"); return; }
                 if (!(o is string p) || p.IndexOf('/') < 0 || p.LastIndexOf('.') < p.LastIndexOf('/')) return;
-                if (polku == ".huippu" || polku == ".normaali" || polku == ".kevyt") { if (polku == ".kevyt" || polku == "." + taso) l.Add(p); return; }
+                if (polku == ".huippu" || polku == ".normaali" || polku == ".kevyt") { if (polku == "." + taso) l.Add(p); return; }
                 // Orto: DioraamaYmparisto käyttää aina päivän ortoa (iPad 4.10.: hämäräorto esiladattu turhaan, 8k-päiväorto verkosta).
                 if (polku.StartsWith(".hamara.orto.", StringComparison.Ordinal)) return;
                 if (polku.StartsWith(".orto.", StringComparison.Ordinal))
                 {
                     string q = polku.Substring(polku.LastIndexOf('.') + 1);
-                    if (q == "kevyt" || q == ortoTaso) l.Add(p);
+                    if (q == ortoTaso) l.Add(p);
                     return;
                 }
                 l.Add(p);
