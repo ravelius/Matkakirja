@@ -1,6 +1,414 @@
 {
- "huom": "Linnakirjaston sijainti ämpärissä (docs/raportit/linnakirjasto-20260930.md). Ensimmäinen erä kulkee Olavinlinnan Blender-viennin mukana (omistaja 30.9.2026); oma vie-kirjasto.sh + kirjasto/<hash>/ myöhemmin.",
- "hash": "7c470d2e110344eb",
- "kansio": "dioraama/olavinlinna/blender/7c470d2e110344eb/kirjasto/",
- "sisalto": ["materiaali/graniittilohkomuuri", "materiaali/paanukatto", "materiaali/kivilaatta", "materiaali/kallio"]
+  "huom": "Linnakirjasto (docs/raportit/linnakirjasto-20260930.md). Oma muuttumaton kansio tools/dioraama/vie-kirjasto.sh:lla 4.10.2026; Olavinlinnan blender-paketti kantaa yhä omat kopionsa neljästä hybridimateriaalista. Lähteet ja lisenssit: lahteet.json.",
+  "hash": "e5149473a2af9bdb",
+  "kansio": "dioraama/kirjasto/e5149473a2af9bdb/",
+  "sisalto": [
+    "esiasetus/hamara",
+    "esiasetus/paiva",
+    "hahmo/apulainen-1500",
+    "hahmo/kappalainen-1500",
+    "hahmo/kirjuri-1500",
+    "hahmo/kokki-1500",
+    "hahmo/portinvartija-1500",
+    "hahmo/renki-1500",
+    "hahmo/soutaja-1500",
+    "hahmo/talonpoika-1500",
+    "hahmo/vartija-1500",
+    "hahmo/vesipoika-1500",
+    "hahmo/vouti-1500",
+    "materiaali/graniittilohkomuuri",
+    "materiaali/kalkkirappaus",
+    "materiaali/kallio",
+    "materiaali/kivilaatta",
+    "materiaali/kuparikatto",
+    "materiaali/lankku",
+    "materiaali/liuskekatto",
+    "materiaali/paanukatto",
+    "materiaali/rauta",
+    "materiaali/tervattu-puu",
+    "materiaali/tiili",
+    "taivas/hamara",
+    "taivas/pilvinen",
+    "tarra/halkeama",
+    "tarra/noki",
+    "tarra/sammal",
+    "tarra/vesijalki"
+  ],
+  "tiedostot": [
+    {
+      "polku": "esiasetus/hamara/hamara.json",
+      "sha256": "6b8f028033452ccdcc0846a0ac6c69bf0e9a44ea782be89eef37c26b8f184563",
+      "tavuja": 921
+    },
+    {
+      "polku": "esiasetus/paiva/paiva.json",
+      "sha256": "c483c7df0e35c33d43f1d78c2e772f3edb8be8b630af6bbf6bea7e9641f5a14a",
+      "tavuja": 677
+    },
+    {
+      "polku": "hahmo/apulainen-1500/apulainen-1500.glb",
+      "sha256": "818a37b494a2fb4bd100803def40e627606e5351712b49fba607e0463d9cde19",
+      "tavuja": 1017656
+    },
+    {
+      "polku": "hahmo/apulainen-1500/apulainen-1500.json",
+      "sha256": "214c43a29ed0c5337a803371ec77ad34b08cfcbb8b93629684b53321fc03d88b",
+      "tavuja": 621
+    },
+    {
+      "polku": "hahmo/kappalainen-1500/kappalainen-1500.glb",
+      "sha256": "80f852e4fba07630e805cd375e8f379354a08bba2b5e262949cbaf349b991d77",
+      "tavuja": 980644
+    },
+    {
+      "polku": "hahmo/kappalainen-1500/kappalainen-1500.json",
+      "sha256": "33a7ae837522a692a9c3862897ff4ca4722ced39f6f6d3513021a85ec134928a",
+      "tavuja": 624
+    },
+    {
+      "polku": "hahmo/kirjuri-1500/kirjuri-1500.glb",
+      "sha256": "dea9477d12d8e41136cdcdaf05afb71b58c261be69cfbdc973ad2ea997a0a49a",
+      "tavuja": 976356
+    },
+    {
+      "polku": "hahmo/kirjuri-1500/kirjuri-1500.json",
+      "sha256": "4d29f0641e070b2422ce49812af1a8216f7a9547ab27209ce2e560347258c41c",
+      "tavuja": 621
+    },
+    {
+      "polku": "hahmo/kokki-1500/kokki-1500.glb",
+      "sha256": "9615792e4c8facdb8390016397760b1494d61227ba920bc33615183f9fdb5940",
+      "tavuja": 967756
+    },
+    {
+      "polku": "hahmo/kokki-1500/kokki-1500.json",
+      "sha256": "9d2ae2e9d066a5d332036ff43278a98ed8b7bba60b5e2f12119258609661979f",
+      "tavuja": 617
+    },
+    {
+      "polku": "hahmo/portinvartija-1500/portinvartija-1500.glb",
+      "sha256": "cceb9d6c8d90f78cfa70a483450d63fc72b685b9142fc536a5683d0fe9d01232",
+      "tavuja": 1189776
+    },
+    {
+      "polku": "hahmo/portinvartija-1500/portinvartija-1500.json",
+      "sha256": "95a83c8938d047ce42811c6308875f03bd95f9f022bb0bf1551e5185019c8980",
+      "tavuja": 624
+    },
+    {
+      "polku": "hahmo/renki-1500/renki-1500.glb",
+      "sha256": "bb427be547530410c9f3a89889aa73296b5239d1b768b77abdd102032a39b17b",
+      "tavuja": 999948
+    },
+    {
+      "polku": "hahmo/renki-1500/renki-1500.json",
+      "sha256": "57e9f674f9315e78c303b5754280a4aab568c31ef89202392c3f97e5aa5c1247",
+      "tavuja": 619
+    },
+    {
+      "polku": "hahmo/soutaja-1500/soutaja-1500.glb",
+      "sha256": "881e99ed09ce3ec96c714b334f9ea6de98f1556bcf86871bb87b82f83853b420",
+      "tavuja": 975484
+    },
+    {
+      "polku": "hahmo/soutaja-1500/soutaja-1500.json",
+      "sha256": "31fc30b58c533b85049b4b7e6d946adaf3d85a14a3e18a64e533e1099eb6bcd1",
+      "tavuja": 621
+    },
+    {
+      "polku": "hahmo/talonpoika-1500/talonpoika-1500.glb",
+      "sha256": "b6dc74a98603457f0a699ddc549a7c7253ef9158ff038f2abafe23711b89f630",
+      "tavuja": 1009956
+    },
+    {
+      "polku": "hahmo/talonpoika-1500/talonpoika-1500.json",
+      "sha256": "241e577dc4000aea67810a0a50abfbb2d8cdb3dded7321b40195793463380622",
+      "tavuja": 624
+    },
+    {
+      "polku": "hahmo/vartija-1500/vartija-1500.glb",
+      "sha256": "a3ffaebcf9ba4915b80d7c7020e3c6897b6bef8a416650b62d7753c31c403a05",
+      "tavuja": 1206608
+    },
+    {
+      "polku": "hahmo/vartija-1500/vartija-1500.json",
+      "sha256": "ee84016fb21d17e1f0c2c8cff565d078b1223033512b15c718aad3eb5b4f26fe",
+      "tavuja": 595
+    },
+    {
+      "polku": "hahmo/vesipoika-1500/vesipoika-1500.glb",
+      "sha256": "e866bb4ef552eb36e1c2670125f044fa0a9c343d923eaae89f7b53ef81499e07",
+      "tavuja": 1009336
+    },
+    {
+      "polku": "hahmo/vesipoika-1500/vesipoika-1500.json",
+      "sha256": "9de00bfd3c91b72ae95a0ca87a2cf9b6c1b3d240682a178e7d811aa8e4812eca",
+      "tavuja": 622
+    },
+    {
+      "polku": "hahmo/vouti-1500/vouti-1500.glb",
+      "sha256": "b2c56b0f5a32521cd772210d2d81e4af3bfd6b2d9cdb49d3680baf6dc1494fef",
+      "tavuja": 1152504
+    },
+    {
+      "polku": "hahmo/vouti-1500/vouti-1500.json",
+      "sha256": "5002336826c3b5a7c85d04fe293dc98aa981240314ecf2e6c2ec0b683665435f",
+      "tavuja": 619
+    },
+    {
+      "polku": "materiaali/graniittilohkomuuri/graniittilohkomuuri_arm.png",
+      "sha256": "c74c1a857a1dbb14488022ef2404fa79b9003423f216d21bdcd6d14117347bab",
+      "tavuja": 7138337
+    },
+    {
+      "polku": "materiaali/graniittilohkomuuri/graniittilohkomuuri_diff-4x4.astcm",
+      "sha256": "70d4845ef2b55d7012b2c4c2c93abbeadd0e53211b6f0a8c33a6c207fb8a0587",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "materiaali/graniittilohkomuuri/graniittilohkomuuri_diff.jpg",
+      "sha256": "35615ed619b14ab8991205e887a24cadcf8edffdf15b36b153421604b9ba29ce",
+      "tavuja": 2382913
+    },
+    {
+      "polku": "materiaali/graniittilohkomuuri/graniittilohkomuuri_nor_gl-4x4.astcm",
+      "sha256": "7e558bb074cfd8d7f015e836dd1e752fff67c0d00f375900f66544fc3a6b16a0",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "materiaali/graniittilohkomuuri/graniittilohkomuuri_nor_gl.jpg",
+      "sha256": "ce7935ef7b418a7e20ade08311443deb0b30a0f77559879780bba2e2e07f5a44",
+      "tavuja": 3578159
+    },
+    {
+      "polku": "materiaali/kalkkirappaus/kalkkirappaus_arm.png",
+      "sha256": "11a4d2b8fe4cf00f19f5d92d5ddff50ab8c2d5d29199124c64e2a03b575d3b6c",
+      "tavuja": 6957484
+    },
+    {
+      "polku": "materiaali/kalkkirappaus/kalkkirappaus_diff.jpg",
+      "sha256": "4fb1f54ac26b28b23c8f8efa708d3062684fe6122e3f001b18bcd268027fcb17",
+      "tavuja": 2828405
+    },
+    {
+      "polku": "materiaali/kalkkirappaus/kalkkirappaus_nor_gl.jpg",
+      "sha256": "75668cb16a244c3647e78fd3dd4601616a15bf59e90bb090655b19a8095da71c",
+      "tavuja": 2551147
+    },
+    {
+      "polku": "materiaali/kallio/kallio_arm.png",
+      "sha256": "a609e25b8ad823f6b3053013ed77b61f040d24c5d860a8b9ee800606e4fc02ec",
+      "tavuja": 7087024
+    },
+    {
+      "polku": "materiaali/kallio/kallio_diff-4x4.astcm",
+      "sha256": "e712ac0a981489340fc24f994dcf31e097a36c2b12a4cc0e6989b97f8c4c4e04",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "materiaali/kallio/kallio_diff.jpg",
+      "sha256": "f2ec7a10c6cb929653278e00dcfb0e7e07aea178136a37eac7478d2b9cdd5e96",
+      "tavuja": 4010129
+    },
+    {
+      "polku": "materiaali/kallio/kallio_nor_gl-4x4.astcm",
+      "sha256": "59c12d6b6464beda39a9ba77d9cc97b3f417172353d95abd13bd8183c055073a",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "materiaali/kallio/kallio_nor_gl.jpg",
+      "sha256": "89b28336282a07492080a20725d18c7649ae69b1d8e10187ffe143c804bd6d2c",
+      "tavuja": 4844348
+    },
+    {
+      "polku": "materiaali/kivilaatta/kivilaatta_arm.png",
+      "sha256": "3f90504a75d254805d9d01129b62523b6bb3129b5b6fdd35596b691cc835b2bb",
+      "tavuja": 7721892
+    },
+    {
+      "polku": "materiaali/kivilaatta/kivilaatta_diff-4x4.astcm",
+      "sha256": "034bad53285952563dce4de258416ce849d990a573525a74b48aa328ff8b44fd",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "materiaali/kivilaatta/kivilaatta_diff.jpg",
+      "sha256": "bf405e4e8a2d720976f710c4bb6de7734bc0bea613657e6c9362d3716418cc51",
+      "tavuja": 3569941
+    },
+    {
+      "polku": "materiaali/kivilaatta/kivilaatta_nor_gl-4x4.astcm",
+      "sha256": "bb52a99b8994aac9cc224b5d9aef7c8375bd14ff76309358d918a8ef647163bb",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "materiaali/kivilaatta/kivilaatta_nor_gl.jpg",
+      "sha256": "b4c84fd11853cceab87aa1d9e5fbe5699e12993bc2abbf06908a35b0dbf0c548",
+      "tavuja": 3947495
+    },
+    {
+      "polku": "materiaali/kuparikatto/kuparikatto_arm.png",
+      "sha256": "2b5d78bb19c9f8d73dfc5701bdc289ab22708bdd9417ead1fade5a5d28995393",
+      "tavuja": 7728599
+    },
+    {
+      "polku": "materiaali/kuparikatto/kuparikatto_diff.jpg",
+      "sha256": "be0e8af48979ca04207f1503c6e9292851157229deadb2ad6dfc0df9cbd2a30e",
+      "tavuja": 6393911
+    },
+    {
+      "polku": "materiaali/kuparikatto/kuparikatto_nor_gl.jpg",
+      "sha256": "fedf5dc7f8c043ec503a1977ec40e9cc3b9b3474ba892ec7c6c0a9669a00014a",
+      "tavuja": 4730733
+    },
+    {
+      "polku": "materiaali/lankku/lankku_arm.png",
+      "sha256": "2da78081a44963731bf7b317aa22eacfb6cf6130ce38d04829dd31efc4c4c66d",
+      "tavuja": 6762627
+    },
+    {
+      "polku": "materiaali/lankku/lankku_diff.jpg",
+      "sha256": "5f07d01e98599d2cd90355145ef71733afda8f3756c94e0d0de26aa92f826400",
+      "tavuja": 3116403
+    },
+    {
+      "polku": "materiaali/lankku/lankku_nor_gl.jpg",
+      "sha256": "17765f0cfc94a8e38cba2e8de29de25f0b0bd7dd6e940b385ea15989751fbfe3",
+      "tavuja": 2927156
+    },
+    {
+      "polku": "materiaali/liuskekatto/liuskekatto_arm.png",
+      "sha256": "6ae6e039b83a20c6cbd47e6cd8aa596b7d7b94ce01bc547087011a48b4410fcd",
+      "tavuja": 4713802
+    },
+    {
+      "polku": "materiaali/liuskekatto/liuskekatto_diff.jpg",
+      "sha256": "955eb467fc609e4509c2354f0b88755ffa137dac352b651efed95026f4a6aa5c",
+      "tavuja": 2083015
+    },
+    {
+      "polku": "materiaali/liuskekatto/liuskekatto_nor_gl.jpg",
+      "sha256": "f797ad9756e6584736831cf07f79872440a6a4811c80f9bcedd3b20b05c7596d",
+      "tavuja": 2741713
+    },
+    {
+      "polku": "materiaali/paanukatto/paanukatto_arm.png",
+      "sha256": "3af42df5e7e1cd385e0b1800c92d755c6e8f9df956878510309bd6b672b75d29",
+      "tavuja": 6070467
+    },
+    {
+      "polku": "materiaali/paanukatto/paanukatto_diff-4x4.astcm",
+      "sha256": "5de98e9a1f9df3a6b287ede421c0075a554c141be90d2d566daac42e83c783a3",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "materiaali/paanukatto/paanukatto_diff.jpg",
+      "sha256": "880583ff7508599b1dd6e83a6c70604120ad35f7ad187b1e98457c1a9d7b54ed",
+      "tavuja": 1388588
+    },
+    {
+      "polku": "materiaali/paanukatto/paanukatto_nor_gl-4x4.astcm",
+      "sha256": "64b1ef93cd1a811cb984044d80a331f891ac6aae5141aa627f17e99103bb60ee",
+      "tavuja": 5592448
+    },
+    {
+      "polku": "materiaali/paanukatto/paanukatto_nor_gl.jpg",
+      "sha256": "2e2dbd57a8a1a09936b2a92373408c7658033966ffee25eddfe98b5988491da3",
+      "tavuja": 1750511
+    },
+    {
+      "polku": "materiaali/rauta/rauta_arm.png",
+      "sha256": "41b2b1a5d7bc0f3506b7050750aa25f92b8386ddda2702e1bd049ac43d3fb6b0",
+      "tavuja": 6114988
+    },
+    {
+      "polku": "materiaali/rauta/rauta_diff.jpg",
+      "sha256": "dc17baa7c113af0a8db59a7166dbebd1d8bc842e69b1f07b89d9e90531ebbd22",
+      "tavuja": 3463347
+    },
+    {
+      "polku": "materiaali/rauta/rauta_nor_gl.jpg",
+      "sha256": "b230568d198778afbf3d104d2951e2e2306ddb276bc1ed2f441b9040c58af537",
+      "tavuja": 3582694
+    },
+    {
+      "polku": "materiaali/tervattu-puu/tervattu-puu_arm.png",
+      "sha256": "c2ef8de15e4fa3ea80a4a23358914311a132a0ec9cb010051c4bacb51e65e981",
+      "tavuja": 6184451
+    },
+    {
+      "polku": "materiaali/tervattu-puu/tervattu-puu_diff.jpg",
+      "sha256": "ec61c4917a389a7b164acc4a5aae4db5120c85f38da84acabca008f1f3681011",
+      "tavuja": 1681749
+    },
+    {
+      "polku": "materiaali/tervattu-puu/tervattu-puu_nor_gl.jpg",
+      "sha256": "a4d4f9d9ebffadece0b7d1aebbf69c86df579b42c8c800acf3cd5c1725201f70",
+      "tavuja": 2119724
+    },
+    {
+      "polku": "materiaali/tiili/tiili_arm.png",
+      "sha256": "46f20ece041d7e4dbe5d278e23eddc7e99e75e4a7e82e7bf80c7cc9aff730ff7",
+      "tavuja": 6866647
+    },
+    {
+      "polku": "materiaali/tiili/tiili_diff.jpg",
+      "sha256": "6115ef3edd7c27a68dce57606ac6050b60313262565dcdc473c9a2ba8fd421e7",
+      "tavuja": 3392093
+    },
+    {
+      "polku": "materiaali/tiili/tiili_nor_gl.jpg",
+      "sha256": "bdb1e04f5e4d4b7e5716749ef597ae709766a9961f501e3af5da327c4467ca01",
+      "tavuja": 4720254
+    },
+    {
+      "polku": "taivas/hamara/hamara-4k.hdr",
+      "sha256": "dbe5f750e4753f51ef8d178553318ad8550035cac0ce5cfab058e76cf8f021d2",
+      "tavuja": 17976514
+    },
+    {
+      "polku": "taivas/pilvinen/pilvinen-4k.hdr",
+      "sha256": "3061c00a16ecae748e84fd6c44c04804f539c118bb66325db858bad87b11bf88",
+      "tavuja": 20674857
+    },
+    {
+      "polku": "tarra/halkeama/halkeama_diff.png",
+      "sha256": "9e64efe5f365630acfcb06f767ae266264616767c115b4b8b7fef6ac24cf4183",
+      "tavuja": 9414774
+    },
+    {
+      "polku": "tarra/halkeama/halkeama_nor_gl.jpg",
+      "sha256": "4ef95ba459b02412130ecbfddb1cac81bdd3846b66c46139d41fe444dfd363ab",
+      "tavuja": 7689523
+    },
+    {
+      "polku": "tarra/noki/noki_diff.png",
+      "sha256": "f8f326b9ad276dee089a331ecfc385f0239b55495ceedb29b30832951fc87981",
+      "tavuja": 3343826
+    },
+    {
+      "polku": "tarra/noki/noki_nor_gl.jpg",
+      "sha256": "cdba80d81db34cf731ce2caba7d91e518b375c8026086e3b89ae3eb9e01bf3d2",
+      "tavuja": 1893729
+    },
+    {
+      "polku": "tarra/sammal/sammal_diff.png",
+      "sha256": "c14695a73deec361c4992bfde9f66ce16414948c3f34be45b50d72ed1430aa6a",
+      "tavuja": 11747649
+    },
+    {
+      "polku": "tarra/sammal/sammal_nor_gl.jpg",
+      "sha256": "c74daa9810de11b97702267125f061f8540bb04f915fc778e80b7d703f7e8b7a",
+      "tavuja": 10653102
+    },
+    {
+      "polku": "tarra/vesijalki/vesijalki_diff.png",
+      "sha256": "7b10b0de8ece919d807c53b5ca9ce57ae0f8e8173dac155f259686f5d8925cf1",
+      "tavuja": 1019405
+    },
+    {
+      "polku": "tarra/vesijalki/vesijalki_nor_gl.jpg",
+      "sha256": "7327bd902e3aa76b772a89efd605ccdb0599c976276d2a2823db78524b892a29",
+      "tavuja": 622068
+    }
+  ]
 }
