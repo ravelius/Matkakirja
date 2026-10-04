@@ -812,6 +812,7 @@ namespace Matkakirja.Natiivi
         {
             matka = null;
             jatkettava = null;
+            jatkoHiljaa = false;
             if (File.Exists(TallennusPolku))
             {
                 try
@@ -893,6 +894,7 @@ namespace Matkakirja.Natiivi
                 return "ei lähtökaupunki: " + lahtokaupunki;
             if (Tila != SilmukanTila.Aloitus && Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             jatkettava = null;
+            jatkoHiljaa = false;
             PeruLykkays();
             UusiPeli(siemen, lahtokaupunki);
             // Aloituskaava (omistaja 24.9.2026 klo 16.1x): intro soi avausruudulla ennen karttaa (Natiivi-UI,
