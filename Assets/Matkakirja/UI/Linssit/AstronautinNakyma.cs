@@ -187,10 +187,11 @@ namespace Matkakirja.Natiivi
                 float lataus = pallo != null ? pallo.ComputeLoadProgress() : 100f;
                 bool karkein = !AstronauttiKerros.KyydinVarakartta || KarttaKerrokset.VarakarttaValmis;
                 // Päätoimittaja 4.10.: kriteeri on, ettei näkymässä ole yhtään lataamatonta (harmaata) laattaa, ei latausprosentti.
-                var (puuttuu, nakyy) = KarttaKerrokset.Instanssi?.LataamattomatLaatat(Camera.main) ?? (-1, -1);
+                var (puuttuu, nakyy) = KarttaKerrokset.Instanssi?.LataamattomatLaatat() ?? (-1, -1);
                 // Simu 9b1d4af1: häivytyksessä 0/0 = yhtään laattaa ei vielä piirretty, jolloin näkyy pohjapallon harmaa; valmis vasta,
-                // kun näkymässä on laattoja ja niistä yhdeltäkään ei puutu rasteria.
-                bool laatat = nakyy > 0 && puuttuu == 0;
+                // kun näkymässä on laattoja ja niistä yhdeltäkään ei puutu rasteria. Mittari ei käytettävissä (< 0: ei palloa tai
+                // kameraa, savuke 1137) → ei odoteta 4 s:n kattoon, häivytys 2 s:n jälkeen ja syy lokiin.
+                bool laatat = puuttuu < 0 || (nakyy > 0 && puuttuu == 0);
                 if (ms < CupolanMustaMaxMs && (!kehys || !karkein || !laatat)) return;
                 cupolaHaivytys.Pause();
                 Debug.Log($"MATKAKIRJA linssit: cupolan musta häivyy {ms:0} ms (kehys {(kehys ? "valmis" : "kesken")}, karkein taso {(karkein ? "valmis" : "kesken")}, lataamattomia laattoja {puuttuu}/{nakyy}, lataus {lataus:0} %)");
@@ -198,7 +199,7 @@ namespace Matkakirja.Natiivi
                 foreach (int jalkeen in new[] { 500, 1000, 2000, 4000 })
                     cupolaMusta.schedule.Execute(() =>
                     {
-                        var (p2, n2) = KarttaKerrokset.Instanssi?.LataamattomatLaatat(Camera.main) ?? (-1, -1);
+                        var (p2, n2) = KarttaKerrokset.Instanssi?.LataamattomatLaatat() ?? (-1, -1);
                         Debug.Log($"MATKAKIRJA linssit: cupolan jälkeen {jalkeen} ms: lataamattomia laattoja {p2}/{n2}");
                     }).StartingIn(jalkeen);
                 cupolaMusta.pickingMode = PickingMode.Ignore;
