@@ -3,7 +3,12 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
-## TILA 4.10. KLO 03.0x (MARCUS 135 + YKSI KELLO — MERGE-PYYNNÖSSÄ)
+## TILA 4.10. KLO 03.1x (YKSI KELLO PIDOSSA — LS2 MITTAA)
+- Päätoimittaja perui hyväksynnän: merkki piirtyy raa'an dspTimen mukaan, joten mittaus kohtauksen samalla kellolla näyttää sopua
+  rakenteellisesti. LS2 korjaa merkin reaaliaikaan ja vertaa 659c903c vs. yksi-kello 7ab396b3; voittaja junaan 135, Marcus (marcus-v15b)
+  heti perään. Natiiviseppä palautti koostumuksen 9c071068:aan. ODOTA LS2:n tulosta; ei uutta merge-pyyntöä ennen sitä.
+
+## TILA 4.10. KLO 03.0x (MARCUS 135 + YKSI KELLO — MERGE-PYYNNÖSSÄ, PERUTTU 03.1x)
 - Päätoimittaja hyväksyi (tarkisti itse: kaikki leikkaukset alle 33 ms:n ruudun). Merge-pyyntö Natiivisepälle junaan 135:
   linssiseppa/yksi-kello 7ab396b3 + linssiseppa/marcus-v15b 92d46875 (yhdistelmä = mitattu puu c365db85). LS2 katselmoi ennen VIE:tä;
   huomautukset korjataan ennen TF:ää. Jatkohuomio (ei muutosta ilman omistajaa): kytkimen valo alkaa 170–210 ms äänen jälkeen (webin v14).
