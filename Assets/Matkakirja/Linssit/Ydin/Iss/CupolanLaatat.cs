@@ -43,8 +43,14 @@ namespace Matkakirja.Linssit.Iss
         /// </summary>
         public static SortedSet<(int z, int x, int y)> Laske(in Kuvakulma a, double kentta, double suhde, double korkeusPx, int zMin, int zMax,
             (double W, double S, double E, double N)? alue = null)
+            => Rasterit(Maastolaatat(a, kentta, suhde, korkeusPx), zMin, zMax, alue);
+
+        /// <summary>
+        /// Maastolaatat (maantieteellinen nelipuu 2 × 1 juurta, TMS: y = 0 etelässä, kuten quantized-mesh -maasto), jotka Cesium
+        /// lataa asennolle: näkyvät tarkentuen, sisarukset ja esivanhemmat. Sama joukko maaston esihakuun ja rasterien laskuun.
+        /// </summary>
+        public static HashSet<(int l, int x, int y)> Maastolaatat(in Kuvakulma a, double kentta, double suhde, double korkeusPx)
         {
-            var r = new SortedSet<(int, int, int)>();
             var maasto = new HashSet<(int l, int x, int y)>();
             // Kamera maan keskipisteen kehyksessä (pallo).
             double la = a.Lat * Deg, lo = a.Lon * Deg;
@@ -102,6 +108,14 @@ namespace Matkakirja.Linssit.Iss
                 for (int cx = 2 * x; cx <= 2 * x + 1; cx++) for (int cy = 2 * y; cy <= 2 * y + 1; cy++) Kay(l + 1, cx, cy, omat);
             }
             Kay(0, 0, 0, osumat); Kay(0, 1, 0, osumat);
+            return maasto;
+        }
+
+        /// <summary>Maastolaattojen rasterit tasoilla zMin–zMax: kunkin laatan suorakulmio sen rasteritasolla (katto 8 × 8).</summary>
+        public static SortedSet<(int z, int x, int y)> Rasterit(HashSet<(int l, int x, int y)> maasto, int zMin, int zMax,
+            (double W, double S, double E, double N)? alue = null)
+        {
+            var r = new SortedSet<(int, int, int)>();
             foreach (var (l, gx, gy) in maasto)
             {
                 double koko = 180.0 / (1 << l), aw = gx * koko - 180, ae = aw + koko, as_ = gy * koko - 90, an = as_ + koko;

@@ -1772,6 +1772,17 @@ namespace Matkakirja
         string maastoPohja;
         List<(int x0, int y0, int x1, int y1)>[] maastoSaatavuus;
 
+        /// <summary>
+        /// Maastolaatan (quantized-mesh, TMS, y = 0 etelässä) ämpäripolku esilataukseen (Cupolan ennakko, Linssiseppä 2 4.10.2026);
+        /// null, jos layer.jsonia ei ole vielä luettu tai laattaa ei ole saatavilla (Cesium ei pyydä sitä).
+        /// </summary>
+        public string MaastonPolku(int z, int x, int y)
+        {
+            if (maastoPohja == null || Laattapalvelin.MaastoPolku == null || maastoSaatavuus == null || z >= maastoSaatavuus.Length) return null;
+            if (!MaastoLaatat.Saatavilla(maastoSaatavuus, z, x, y)) return null;
+            return Laattapalvelin.MaastoPolku + maastoPohja.Replace("{z}", z.ToString()).Replace("{x}", x.ToString()).Replace("{y}", y.ToString());
+        }
+
         static readonly (int z, int sade)[] AloitusMaasto = { (6, 1), (7, 1), (8, 2), (9, 2), (10, 3) };
 
         /// <summary>

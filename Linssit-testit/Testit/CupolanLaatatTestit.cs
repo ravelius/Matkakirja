@@ -27,6 +27,17 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(bm.Count > 5 && bm.Count < 1200, $"BMNG {bm.Count}");
         }
 
+        [Testi] static void MaastolaatatNelipuuna()
+        {
+            var m = CupolanLaatat.Maastolaatat(Asento, 50, 2732.0 / 2048, 2048);
+            Oleta.Tosi(m.Contains((0, 0, 0)) && m.Contains((0, 1, 0)), "juuret 2 × 1");
+            // TMS: y = 0 etelässä; katsepisteen (48,88, 27,04) taso 6 -laatta: x = (27,04 + 180) / 2,8125, y = (48,88 + 90) / 2,8125.
+            Oleta.Tosi(m.Contains((6, 73, 49)), "katsepisteen L6-laatta");
+            foreach (var (l, x, y) in m)
+                if (l > 0) Oleta.Tosi(m.Contains((l, x ^ 1, y)) && m.Contains((l, x, y ^ 1)) && m.Contains((l - 1, x >> 1, y >> 1)), $"sisarukset ja isä {l}/{x}/{y}");
+            Console.WriteLine($"  maastolaattoja {m.Count}, tarkin L{m.Max(t => t.l)}");
+        }
+
         [Testi] static void AlueRajaaJaPolutMallista()
         {
             var kaikki = CupolanLaatat.Laske(Asento, 50, 1.33, 2048, 6, 10);
