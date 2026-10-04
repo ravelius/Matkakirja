@@ -903,6 +903,10 @@ namespace Matkakirja.Natiivi
         static void AloitaJatkohiljaisuus()
         {
             Jatkohiljaisuus = true;
+            // Jatka-napautus itse ei ole pelaajan ensimmäinen toiminto (Natiivisepän itsetarkistus 19220d2b: napautuksen irrotus
+            // päätti hiljaisuuden heti): odotetaan, että sormi/hiiri on irti, ja uusi painallus aikaisintaan JatkonVaraS:n päästä.
+            jatkoAlku = Time.unscaledTime;
+            odotaIrti = true;
             Debug.Log("MATKAKIRJA peli: jatkohiljaisuus päälle (automaattinen puhe odottaa pelaajan ensimmäistä toimintoa)");
         }
 
@@ -922,9 +926,20 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
+        static float jatkoAlku;
+        static bool odotaIrti;
+        const float JatkonVaraS = 0.5f;
+
         static void VahdiJatkohiljaisuutta()
         {
             if (!Jatkohiljaisuus) return;
+            if (odotaIrti)
+            {
+                bool painettu = (Pointer.current != null && Pointer.current.press.isPressed)
+                    || (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed);
+                if (!painettu && Time.unscaledTime - jatkoAlku >= JatkonVaraS) odotaIrti = false;
+                return;
+            }
             if ((Pointer.current != null && Pointer.current.press.wasPressedThisFrame)
                 || (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
                 || (Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame))
