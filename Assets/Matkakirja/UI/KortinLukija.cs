@@ -534,11 +534,26 @@ namespace Matkakirja.Natiivi
                     aaniRivi?.RemoveFromHierarchy();
                     aaniRivi = AaniRivi(saadot);
                     if (paikka >= 0) { aaniRivi.RemoveFromHierarchy(); saadot.Insert(paikka, aaniRivi); }
+                    AaniVaihtui();
                 });
                 aaniRivi = AaniRivi(saadot);
                 return;
             }
             AaniRivi(saadot);
+        }
+
+        /// <summary>
+        /// Ääni tai moottori vaihtui (omistaja 4.10.2026 klo 23.0x: "voisiko peli ladata heti uuden äänen kun ääntä vaihtaa"):
+        /// soiva luenta aloittaa saman palan heti uudella äänellä ja jatkaa siitä. Välimuistiavaimessa on ääni
+        /// (Lukijaaani.Valimuistiavain), joten pala haetaan uudella äänellä eikä vanha soi välimuistista.
+        /// </summary>
+        static void AaniVaihtui()
+        {
+            var l = ajossa;
+            if (l == null || !l.luetaan || l.palat.Count == 0) return;
+            int pala = Mathf.Clamp(l.kohta, 0, l.palat.Count - 1);
+            Debug.Log($"MATKAKIRJA ui lukija: ääni vaihtui, pala {pala + 1}/{l.palat.Count} uudella äänellä");
+            l.Aloita(pala);
         }
 
         /// <summary>Äänirivi valitun moottorin äänistä (ElevenLabs vain sallitulla laitteella).</summary>
@@ -563,6 +578,7 @@ namespace Matkakirja.Natiivi
                 int k = valinta.index;
                 if (eleven) Striimiaani.ElevenAani = lista[k].Tunnus;
                 else Striimiaani.Aseta(k > 0 ? lista[k].Tunnus : null);
+                AaniVaihtui();
             });
             return aaniRivi;
         }
@@ -683,6 +699,13 @@ namespace Matkakirja.Natiivi
             var kohde = e.target as VisualElement;
             var poimittu = paneeli.panel?.PickAll(e.position, null) ?? kohde; // tuore, ei välimuistia (ks. Nostokortti.Poimi)
             var puu = paneeli.panel?.visualTree;
+            // Avoimen pudotusvalikon ohi (sen koko ruudun taustaan, ei listaan): valikko sulkee itsensä, mutta saman kosketuksen
+            // Click osui listan alta paljastuvaan korttiin ja sulki koko nostokortin (omistaja 4.10.2026 klo 23.1x).
+            if (PudotusvalikonTaustassa(poimittu))
+            {
+                if (puu != null) NieleKlikki(puu, e.pointerId);
+                return;
+            }
             if (Valikossa(poimittu))
             {
                 var nappi = NappiAlta(poimittu);
@@ -737,6 +760,35 @@ namespace Matkakirja.Natiivi
             for (; v != null; v = v.hierarchy.parent)
                 if (v.ClassListContains(GenericDropdownMenu.ussClassName)) return true;
             return false;
+        }
+
+        /// <summary>Piste on avoimen pudotusvalikon koko ruudun taustassa (unity-base-dropdown) mutta ei sen listassa.</summary>
+        static bool PudotusvalikonTaustassa(VisualElement v)
+        {
+            bool tausta = false;
+            for (; v != null; v = v.hierarchy.parent)
+            {
+                if (v.ClassListContains(GenericDropdownMenu.containerOuterUssClassName)) return false;
+                if (v.ClassListContains(GenericDropdownMenu.ussClassName)) tausta = true;
+            }
+            return tausta;
+        }
+
+        /// <summary>Vain saman kosketuksen Click nielaistaan (painallus ja irrotus jäävät pudotusvalikolle, joka sulkee itsensä).</summary>
+        static void NieleKlikki(VisualElement puu, int sormi)
+        {
+            EventCallback<ClickEvent> klikki = null;
+            EventCallback<PointerUpEvent> ylos = null;
+            klikki = c => { c.StopPropagation(); puu.UnregisterCallback(klikki, TrickleDown.TrickleDown); };
+            ylos = u =>
+            {
+                if (u.pointerId != sormi) return;
+                puu.UnregisterCallback(ylos, TrickleDown.TrickleDown);
+                puu.schedule.Execute(() => puu.UnregisterCallback(klikki, TrickleDown.TrickleDown));
+            };
+            puu.RegisterCallback(klikki, TrickleDown.TrickleDown);
+            puu.RegisterCallback(ylos, TrickleDown.TrickleDown);
+            Debug.Log("MATKAKIRJA ui lukija: napautus pudotusvalikon ohi, vain valikko sulkeutuu");
         }
 
         void SuljePaneeli()
