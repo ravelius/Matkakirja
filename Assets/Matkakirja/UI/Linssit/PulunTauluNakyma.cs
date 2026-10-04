@@ -88,10 +88,8 @@ namespace Matkakirja.Natiivi
             paneeli.RegisterCallback<GeometryChangedEvent>(_ => OrigoAvaajaan());
             var ylarivi = Rakenne.El("mk-astroTaulu__ylarivi", paneeli, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(PulunTaulu.Otsikko, "mk-astroTaulu__otsikko", ylarivi), Kirjasin.LukuLihava);
-            // ✕ OHJAUSNAPPI-neliönä harmaalla teemalla kuten KUVANÄKYMÄn ✕ (omistaja 2.10.2026 klo 14.2x EI OVAALEJA, Päätoimittaja
-            // 3.10.); taulun oma teema jätti neliön näkymättömäksi saman värisenä kuin taulu.
-            var sulku = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje taulu", () => Sulje("sulku"), ylarivi, "harmaa");
-            sulku.AddToClassList("mk-astroTaulu__sulku");
+            // Ei omaa ✕:ää (omistaja 5.10.2026 klo 00.1x: "Ota valikon x pois koska sen voi sulkea klikkaamalla muualta"): taulu
+            // sulkeutuu ohinapautuksella (UlkoNapautus), Pulusta ja valinnasta; linssin ✕ jää.
             // Rivit vierityksessä: matalassa ruudussa (iPhone vaaka) rivit vierittyvät eivätkä kutistu päällekkäin (omistaja TF 140, 22.4x).
             vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-astroTaulu__vieritys");

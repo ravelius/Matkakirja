@@ -1729,12 +1729,6 @@
     -unity-text-align: middle-left;
 }
 
-/* ✕: 44 pt:n osuma-ala ja 28 pt:n harmaa ympyrä (web .astro-sulku::before). */
-.mk-astroTaulu__sulku {
-    /* OHJAUSNAPPI (Pohjat/ohjausnappi.uss); otsikkorivi ei kasva napin mukana. */
-    margin: -6px 0 -6px var(--tk-vali-s);
-}
-
 .mk-astroTaulu__rivit {
     flex-direction: column;
 }
