@@ -39,6 +39,8 @@ namespace Matkakirja.Natiivi
         const float Reunavara = 4f, EsiinMs = 350f, PoisMs = 250f;
         /// <summary>Piilotuksen ja paluun hystereesi: peiton/vapauden kesto (s) ja paluun lisävara (pt).</summary>
         const float PiiloS = 0.4f, Vara = 6f;
+        /// <summary>Herokuvan uusintaväli epäonnistuneen latauksen jälkeen (s).</summary>
+        const float UusintaS = 5f;
         static readonly float[] Renkaat = { 8f, 20f, 36f };
 
         readonly UiKerros kerros;
@@ -49,6 +51,14 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, bool> kutsuttavat = new Dictionary<string, bool>();
         PalloKierto kierto;
         string kaupunki, kuvanTiedosto;
+        /// <summary>
+        /// Näkyvä herokuva kiinnitettynä LRU:lta (omistajan löydös TF 141 5.10.2026 klo 01.0x: "kohdekaupungin nosto kuvake ei
+        /// näy aina tai katoaa"): Kuvat-LRU tuhosi kortin tekstuurin, kun muut kuvat (astronauttikuvat, nostot) täyttivät
+        /// rajan, ja sama tiedosto ei latautunut uudelleen. Vapautetaan kaupungin vaihtuessa (b20-ui-1:n kaltainen juurisyy).
+        /// </summary>
+        Texture2D kiinnitetty;
+        /// <summary>Epäonnistunut lataus (verkko) yritetään uudelleen aikaisintaan tästä hetkestä; ennen jäi pelkäksi pohjaksi.</summary>
+        float uusintaHetki;
         float esiinAlku = float.NaN;
         /// <summary>Häivytyksen alku (ms) ja alkupeitto; NaN = ei häivytystä.</summary>
         float poisAlku = float.NaN, poisPeitto = 1f;
@@ -151,15 +161,24 @@ namespace Matkakirja.Natiivi
                 nimi.text = k.Nimi ?? id;
                 kuva.style.backgroundImage = StyleKeyword.None;
                 kuvanTiedosto = null;
+                Kuvat.Vapauta(kiinnitetty);
+                kiinnitetty = null;
+                uusintaHetki = 0f;
                 // Herokuva tulee kaupunkilehden avauskuvista; aloituskaupungissa lehteä ei ole vielä pyydetty
                 // (EsilataaSaapuminen ajetaan vain lennolla), joten kutsu jäi pelkäksi pohjaksi.
                 UiSisalto.LataaLehti(id);
             }
             string tiedosto = Avauskortti.HeroTiedosto(k);
-            if (tiedosto != null && tiedosto != kuvanTiedosto)
+            if (tiedosto != null && tiedosto != kuvanTiedosto && Time.unscaledTime >= uusintaHetki)
             {
                 kuvanTiedosto = tiedosto;
-                Kuvat.Hae(tiedosto, tex => { if (tex != null && kuvanTiedosto == tiedosto) kuva.style.backgroundImage = new StyleBackground(tex); });
+                Kuvat.Hae(tiedosto, tex =>
+                {
+                    if (kuvanTiedosto != tiedosto) return;
+                    if (tex == null) { kuvanTiedosto = null; uusintaHetki = Time.unscaledTime + UusintaS; return; }
+                    if (kiinnitetty != tex) { Kuvat.Vapauta(kiinnitetty); Kuvat.Kiinnita(tex); kiinnitetty = tex; }
+                    kuva.style.backgroundImage = new StyleBackground(tex);
+                });
             }
             if (kierto == null) kierto = Object.FindAnyObjectByType<PalloKierto>();
             bool levossa = kierto == null || kierto.Levossa;
