@@ -26,6 +26,40 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi]
+        static void LimitysRistihaivytetaanVarakuvaVainAukkoon()
+        {
+            // Simu d26351c2 (Coloradon suisto): limityksessä "ensimmäinen voittaa" näkyi eri päivän suorareunaisena kaistana.
+            // Nyt limitys (SaumaM) ristihäivytetään lineaarisesti; saman ruudun varakuva ei sekoitu, kun ruudulla on dataa.
+            const double pm = 600; const int L = 183;   // 109,8 km / 600 m
+            var d = new KuvaData();
+            (S2Ruutu, CogOtsake) Ruutu(string tunnus, int valinta, double ita0, byte arvo)
+            {
+                var o = new CogOtsake { Ita0 = ita0, Pohjoinen0 = 6_700_000, PikseliM = pm };
+                o.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 3 });
+                var (s, w) = Utm.Taakse(ita0, 6_700_000 - L * pm, 35); var (nn, e) = Utm.Taakse(ita0 + L * pm, 6_700_000, 35);
+                var ru = new S2Ruutu { Tunnus = tunnus, Valinta = valinta, W = w - 1, S = s - 1, E = e + 1, N = nn + 1 };
+                var l = new byte[L * L * 3]; for (int i = 0; i < l.Length; i++) l[i] = arvo;
+                d.Laatat[(tunnus, 0, 0, 0)] = l;
+                return (ru, o);
+            }
+            d.Ruudut.Add(Ruutu("35VLG", 0, 300_000, 100));
+            d.Ruudut.Add(Ruutu("35VMG", 0, 400_000, 200));
+            d.Ruudut.Add(Ruutu("35VLG#1", 1, 300_000, 30));   // varakuva A:n neliöön
+            byte Arvo(double ita)
+            {
+                var (la, lo) = Utm.Taakse(ita, 6_650_000, 35);
+                Oleta.Tosi(Uudelleenprojisointi.Nayte(d, la, lo, pm, out var r, out _, out _), $"dataa {ita}");
+                return r;
+            }
+            Oleta.Sama((byte)100, Arvo(350_000), "A:n keskellä vain A (ei varakuvaa)");
+            Oleta.Sama((byte)200, Arvo(450_000), "B:n keskellä vain B");
+            int puoli = Arvo(404_900);
+            Oleta.Tosi(Math.Abs(puoli - 150) <= 3, $"limityksen keskellä puoliksi: {puoli}");
+            int neljannes = Arvo(402_450);
+            Oleta.Tosi(Math.Abs(neljannes - 125) <= 4, $"neljänneksellä lineaarisesti (A:n paino 0,75): {neljannes}");
+        }
+
+        [Testi]
         static void UsvatasoitusTummimpaanRuutuun()
         {
             // Simu d753d794 (Amazonia): sameampi ruutu = tummat kohteet vaaleampia → erotus vähennetään ennen lutia.

@@ -129,6 +129,9 @@ namespace Matkakirja.Linssit.IssKamera
             return peitto;
         }
 
+        /// <summary>S2-ruutujen limitys (109,8 km ruutu, 100 km ruudukko): saumasekoituksen ramppi ruudun reunasta.</summary>
+        public const double SaumaM = 9800;
+
         /// <summary>Bilineaarinen näyte ensimmäisestä ruudusta, jolla on dataa pisteessä (karkein riittävä haettu taso).</summary>
         public static bool Nayte(KuvaData d, double lat, double lon, double metria, out byte r, out byte g, out byte b)
         {
@@ -148,12 +151,14 @@ namespace Matkakirja.Linssit.IssKamera
             }
             if (alku == int.MaxValue) return false;
             (double e, double n)[] utm = null;
-            double sr = 0, sg = 0, sb = 0, summa = 0, jaljella = 1;
+            double sr = 0, sg = 0, sb = 0, summa = 0;
             for (int taso = alku; taso < tasoja; taso++)
             {
+                int valinnat = int.MaxValue;   // pienin valinta, jolla tällä tasolla on jo dataa
                 for (int k = 0; k < lkm; k++)
                 {
                     var (ru, o) = d.Ruudut[k];
+                    if (ru.Valinta > valinnat) continue;   // varakuva vain, kun paremmalla valinnalla ei ole dataa
                     if (taso >= o.Tasot.Count || lon < ru.W || lon > ru.E || lat < ru.S || lat > ru.N) continue;
                     utm ??= new (double, double)[lkm];
                     if (utm[k].e == 0 && utm[k].n == 0) utm[k] = Utm.Eteen(lat, lon, ru.Vyohyke);
@@ -178,13 +183,14 @@ namespace Matkakirja.Linssit.IssKamera
                     }
                     // Maailman indeksi: ruudun alueen oma lut ennen saumasekoitusta (Laatta ei silloin sovella KuvaData.Lutia).
                     if (ru.Lut != null) { cr = Lutilla(ru.Lut, cr); cg = Lutilla(ru.Lut, cg); cb = Lutilla(ru.Lut, cb); }
-                    // Saumapehmennys: paino kasvaa ruudun UTM-reunasta sisään 4 km:n matkalla; ruudun keskellä ensimmäinen voittaa.
+                    // Saumapehmennys: ristihäivytys koko S2-limityksen (SaumaM) yli, paino kasvaa ruudun UTM-reunasta sisään.
+                    // Simu d26351c2 (Coloradon suisto): 4 km:n rampilla ja "ensimmäinen voittaa" -säännöllä 2022- ja 2023-kuvien
+                    // limityskaista näkyi vuoroveden tasankojen poikki vaaleana suorareunaisena kaistana.
                     double koko = o.Tasot[0].Leveys * o.PikseliM;
                     double reuna = Math.Min(Math.Min(e - o.Ita0, o.Ita0 + koko - e), Math.Min(o.Pohjoinen0 - n, n - (o.Pohjoinen0 - koko)));
-                    double paino = Math.Max(0.02, Math.Min(1, reuna / 4000));
-                    sr += cr * paino * jaljella; sg += cg * paino * jaljella; sb += cb * paino * jaljella; summa += paino * jaljella;
-                    jaljella *= 1 - paino;
-                    if (jaljella < 0.02) break;
+                    double paino = Math.Max(0.02, Math.Min(1, reuna / SaumaM));
+                    sr += cr * paino; sg += cg * paino; sb += cb * paino; summa += paino;
+                    valinnat = Math.Min(valinnat, ru.Valinta);
                 }
                 if (summa > 0) break;   // tällä tasolla dataa: ei karkeampaa
             }
