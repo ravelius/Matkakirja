@@ -1,3 +1,16 @@
+# >>> TILANNE 4.10.2026 KLO 21.5x (Päätoimittajan oma nollaus 67 %) — LUE ENSIN, sitten 21.0x <<<
+
+**TF 140** (BUILD 140 = master 9663df99, savuke 1140 PASS) viennissä → kerro omistajalle kun testaajilla (Julkaisija ilmoittaa).
+**JUNA 141 (Natiiviseppä kokoaa wt/proto-natiiviseppa-j141, kuittaa jokainen osa itse):**
+- ISS-ohjaamokokonaisuus: Natiivi-UI natiivi-ui/iss-ohjaamo-paneeli (viimeisin 9ac236fd + tuleva LCD-muutos) + LS2 iss-ohjaamo (e63c33d6/f4408804) + plist 5e9d2c7f. EHDOT: (a) LS2:n maailmakameran esimerkkikuvat (usva/valotus, Meksiko täysikokoisena) hyväksytty, (b) OMISTAJA 21.5x (loki #3965): LCD rivi 1 = tarkka sijainti (lähin kaupunki/meri/vuori), rivi 2 = maa, km/km/h-rivi POIS → Natiivi-UI:n stillit (kaupunki, meri, vuori; lepo + mini) → omistajalle, (c) kaiverrukset ALKUPERÄINEN stensiili (Linnanrakentaja palauttaa pohja.png:n; korjattua A-versiota EI käytetä). Kohde-valikko 30 lähintä on mukana (web #3961).
+- LS2: pallon pilvisuorakulmiot Cupolan jälkeen (vanha vika) + Cupola-esihaku ohjaamon reitillä (4,0 s vs 2,9 s).
+- Siirtosepän LINNAN UI (haara siirtoseppa/nimilaput, 67e7f6df → 5377504d): omistaja valitsi 21.1x tyylin C (käsikirjoitus, Grenze Gotisch + IM Fell English, initiaali leipätekstin alussa), vaakalukitus iPhonella (65e0439e), nimilaput kynnys 70 pt (vaakana perus 3/6), turva-alue. Lopulliset VAAKA-stillit C:stä tulossa → tarkista → omistajalle → kuittaus. Linnanrakentajan lappujärjestyspeili c116f02f (data tilat[].lappujarjestys) → OSOITINLUPA vasta junan 141 kanssa (ei linna-ajoja käynnissä).
+**KARTTASEPPÄ S2 v2 maailma:** kuvaparit hyväksytty (Australia/pampa korjattu); OMISTAJALLE annettu Run-rivi vie-s2-maailma-v2.sh (taustavienti alue kerrallaan, tarkistettu.ok-merkeillä) — kysy onko käynnistetty; polun vaihto LS2:lle vasta lopputarkistusarkin jälkeen (Australia, Amerikka, Jemen/Oman, Aasia + Eurooppa-kontrolli).
+**ASTRONAUTTIKUVAT:** 211 kohdetta (#3957 junassa), Pelikoodarin ehdokastyökalu #3960; Sisältökirjuri yksi erä vielä, yötauko 23 →; Pelikoodari lepää aamuun (aamulla pieni PR images-api ennen Gatewayta).
+**KIILTO (LS1):** kuvataan aamulla, EI kuitattu. Päät omassa maassa → BUILD 140.
+**OMISTAJAN KYSYMYKSET VASTATTU:** esittely alkaa automaattisesti vain 1. käynnillä (muutos jos hän haluaa); minipelit: Mylly Berliinissä + Pelit-välilehti (140); lentopeli myöhemmin.
+**VIIKKO 79 % (21.5x)**, ~3,7 %/h → 99 % noin 02–03 → yövauhti (vain build/hyväksyntä), 99 %:ssa luovutukset + siirtoprompti. **LEVY** ~40–45 Gi: scratchpad/siivoa-lokit.sh (zsh, --aja) tunnin välein, wt/ 25 (raja 20).
+
 # >>> TILANNE 4.10.2026 KLO 21.0x (Päätoimittaja, konteksti ~62 %) — LUE ENSIN <<<
 
 **TF:t:** 137 (16.54), 138 (18.17), 139 (20.32, k1 + Huoneet-valikon läpäisy c1d84a94 + nimiruutu + Cupola-esihaku 06ce558b) testaajilla. **Juna 140 VIE annettu 21.0x** = 52f412be (käännös 6a1d547d): sisältövarasto 34967f35 + Pelit-kategoria 8768f898 + päät omassa maassa 26b34eb8 + AUTO-luenta 098bfcd1; muutosloki Julkaisijalla. Ilmoita omistajalle kun 140 testaajilla.
