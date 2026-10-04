@@ -175,6 +175,10 @@ namespace Matkakirja.Linssit.Astronautti
             // Pulun eleen vara (90 pt yläpuolella) saa jäädä taulun alle; itse Pulu ei.
             var pulunKeho = new Laatikko(pulu.Vasen, pulu.Yla + PulunEleenVaraPt, pulu.Oikea, pulu.Ala);
             if (ylhAla >= AlaMin && !ylhaalla.Alue.Leikkaa(pulunKeho) && !Osuu(ylhaalla.Alue)) return ylhaalla;
+            // Matala ruutu (iPhone vaaka, omistaja TF 140): kokonaan näkyvä taulu Pulun vieressä on parempi kuin rivit piiloon
+            // puristava yläpaikka, vaikka se peittäisi ISS-merkin taulun auki olon ajan.
+            // Vain kun yläpaikkakaan ei mahdu (muuten ISS-merkin peittävä tilanne pysyy yläpaikassa kuten ennen).
+            if (ylla.Alue.Yla < ylaMin) foreach (var e in ehdokkaat) if (e.Nimi == "vieres" && e.Alue.Yla >= ylaMin) return e;
             return ylla;
         }
 

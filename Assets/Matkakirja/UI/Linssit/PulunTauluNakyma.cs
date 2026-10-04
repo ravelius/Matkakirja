@@ -375,6 +375,17 @@ namespace Matkakirja.Natiivi
             paneeli.style.maxHeight = Mathf.Max(44f, H - valittu.Ala - ylaMin);
         }
 
+        float RivienKorkeus()
+        {
+            float h = 0;
+            foreach (var r in rivit.Children())
+            {
+                if (float.IsNaN(r.layout.height)) return float.NaN;
+                h += r.layout.height + r.resolvedStyle.marginTop + r.resolvedStyle.marginBottom;
+            }
+            return h;
+        }
+
         /// <summary>Taulun luontainen korkeus (otsikko, kaikki rivit ja linkki) rajauksesta riippumatta.</summary>
         float LuontainenKorkeus()
         {
@@ -383,7 +394,8 @@ namespace Matkakirja.Natiivi
             foreach (var c in paneeli.Children())
             {
                 if (c.resolvedStyle.display == DisplayStyle.None) continue;
-                float ch = c == vieritys ? rivit.layout.height : c.layout.height;
+                // Vierityksen sisältö mitataan riveistä (rivit-laatikko kutistuu näkymän mukaan; rivit eivät).
+                float ch = c == vieritys ? RivienKorkeus() : c.layout.height;
                 if (float.IsNaN(ch)) return float.NaN;
                 h += ch + c.resolvedStyle.marginTop + c.resolvedStyle.marginBottom;
             }

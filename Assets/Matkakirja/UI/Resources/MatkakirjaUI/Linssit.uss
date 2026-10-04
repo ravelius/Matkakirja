@@ -1747,6 +1747,7 @@
 }
 
 .mk-astroTaulu__ylarivi,
+.mk-astroTaulu__rivit,
 .mk-astroTaulu__rivi,
 .mk-astroTaulu__linkki {
     flex-shrink: 0;

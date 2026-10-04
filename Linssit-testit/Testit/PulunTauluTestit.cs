@@ -100,6 +100,11 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(p.Alue.Yla >= 54f, "ylaMin:n alla " + p.Alue);
             Oleta.Tosi(H - p.Alue.Ala >= PulunTaulu.AlaMin, "alareuna ruudulla " + p.Alue);
             Oleta.Tosi(p.Alue.Oikea <= pulu.Vasen, "ei Pulun päällä " + p.Alue);
+            // Laitekuva 6f1dc85f: ISS ruudun keskellä osuu vieres-paikkaan → silti vieres (koko taulu näkyvissä), ei ylhäällä Pulun päällä.
+            var iss = PulunTaulu.IssAlue(437, 201);
+            var q = PulunTaulu.Sijoita(pulu, W, H, w, h, new[] { iss }, ylaMin: 54);
+            Oleta.Sama("vieres", q.Nimi);
+            Oleta.Tosi(q.Alue.Yla >= 54f, "ylaMin:n alla " + q.Alue);
         }
 
         [Testi] static void CupolassaYlhaallaTaydellaKorkeudella()
