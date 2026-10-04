@@ -76,7 +76,7 @@ namespace Matkakirja.Natiivi
                     x[i] += v[i] * hh;
                 }
             if (x[3] > 3600 || x[3] < -3600) x[3] %= 360; // ei kasva rajatta jatkuvassa kierrossa
-            return new Asento(new V3(x[0], x[1], x[2]), x[3], x[4], Math.Exp(x[5]), x[6], x[7], a.Kierto);
+            return new Asento(new Matkakirja.Linssit.Dioraama.V3(x[0], x[1], x[2]), x[3], x[4], Math.Exp(x[5]), x[6], x[7], a.Kierto);
         }
     }
 }
