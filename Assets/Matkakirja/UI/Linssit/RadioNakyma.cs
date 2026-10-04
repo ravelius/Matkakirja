@@ -643,16 +643,28 @@ namespace Matkakirja.Natiivi
         /// Vedon siirto dx (pt): keskus siirtyy aseman kerrallaan, kun siirto ylittää puoli paikkaa, joten yksi veto kulkee koko
         /// asteikon (ennen ±perPuoli asemaa). Nauha seuraa sormea jäännöksellä, ja rahina kulkee asemaväleittäin.
         /// </summary>
-        void VetoSiirto(float dx)
+        /// <returns>true, kun asteikon pää rajasi siirron (heitto pysähtyy reunaan).</returns>
+        bool VetoSiirto(float dx)
         {
             float paikka = Paikka;
             vetoDx = dx;
+            bool reuna = false;
             if (paikka > 0 && vetoKeski != null)
             {
                 var idt = AsteikonIdt();
                 // Veto oikealle tuo lännen asemat keskelle (keskus länteen) ja vasemmalle idän asemat.
                 while (vetoDx > paikka * 0.5f && SiirraKeskus(idt, -1)) { vetoX0 += paikka; vetoDx -= paikka; }
                 while (vetoDx < -paikka * 0.5f && SiirraKeskus(idt, +1)) { vetoX0 -= paikka; vetoDx += paikka; }
+                // Asteikon pää (Natiivi-UI:n katselmointi): nauha ei liu'u tyhjälle reunan yli. Ylitys siirtyy vetoX0:aan,
+                // joten suunnan vaihto liikuttaa nauhaa heti.
+                float raja = paikka * 0.5f;
+                if (Mathf.Abs(vetoDx) > raja)
+                {
+                    float rajattu = Mathf.Clamp(vetoDx, -raja, raja);
+                    vetoX0 += vetoDx - rajattu;
+                    vetoDx = rajattu;
+                    reuna = true;
+                }
             }
             AsetaSiirto(vetoDx);
             if (paikka > 0)
@@ -660,6 +672,7 @@ namespace Matkakirja.Natiivi
                 float u = vetoDx / paikka;
                 linssi?.Veto(Mathf.Abs(u - Mathf.Round(u)));
             }
+            return reuna;
         }
 
         bool Vetaa => (painettu && vetoAlkoi) || liike == Liike.Heitto || liike == Liike.Testiveto;
@@ -832,8 +845,8 @@ namespace Matkakirja.Natiivi
                     float uusi = vetoNopeus * Mathf.Exp(-dt / HeittoTau);
                     float matka = (vetoNopeus - uusi) * HeittoTau;   // eksponentiaalisen hidastumisen tarkka matka
                     vetoNopeus = uusi;
-                    VetoSiirto(vetoDx + matka);
-                    if (Mathf.Abs(vetoNopeus) < HeitonLoppu) { liike = Liike.Ei; PaataVeto(); }
+                    bool reuna = VetoSiirto(vetoDx + matka);
+                    if (reuna || Mathf.Abs(vetoNopeus) < HeitonLoppu) { liike = Liike.Ei; PaataVeto(); }
                     break;
                 }
                 case Liike.Testiveto:
