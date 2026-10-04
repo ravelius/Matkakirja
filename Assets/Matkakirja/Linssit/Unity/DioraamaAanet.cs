@@ -480,7 +480,7 @@ namespace Matkakirja.Natiivi
                 if (Puhe.Instanssi != null && Puhe.Instanssi.Soi) Puhe.Instanssi.Pysayta();
             }
             finally { katkaiseeMuita = false; }
-            Debug.Log("MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu)");
+            Debug.Log("MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu)" + (aaniId != null ? ": " + aaniId : ""));
             return true;
         }
 
