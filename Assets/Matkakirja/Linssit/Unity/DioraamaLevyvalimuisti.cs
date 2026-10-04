@@ -30,8 +30,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Nykyisen paketin hash-juuri (https://…/dioraama/&lt;r&gt;/&lt;hash&gt;/), rakennuksen välimuistikansio ja
         /// sisältövarasto; null = ei välimuistia (kehityspeili tai uusin.json puuttui).</summary>
         static string juuri, hashNyt, rakennusKansio, varasto;
-        /// <summary>Nykyisen paketin manifesti: polku → (sha256 pienin kirjaimin, tavuja). null = ei vielä luettu → ei välimuistia.</summary>
-        static Dictionary<string, (string Sha, long Tavuja)> manifesti;
+        /// <summary>Nykyisen paketin manifesti: polku → (sha256 pienin kirjaimin, tavuja; Brotli-pakattu .br: sha256, tavuja tai
+        /// null, -1). Ylätaso on purettu tiedosto. null = ei vielä luettu → ei välimuistia.</summary>
+        static Dictionary<string, Merkinta> manifesti;
 
         public static int Osumia { get; private set; }
         /// <summary>Esilataus (DioraamaEsilataus) ja linssi voivat pyytää samaa tiedostoa yhtä aikaa: haussa oleva url ja sen
@@ -142,13 +143,15 @@ namespace Matkakirja.Natiivi
             yield return SiirraVanhaMuoto(kirjaa);
         }
 
-        static Dictionary<string, (string, long)> JasennaManifesti(string teksti)
+        struct Merkinta { public string Sha; public long Tavuja; public string BrSha; public long BrTavuja; }
+
+        static Dictionary<string, Merkinta> JasennaManifesti(string teksti)
         {
             try
             {
                 var o = Matkakirja.Peli.MiniJson.Jasenna(teksti) as Dictionary<string, object>;
                 if (o == null || !o.TryGetValue("tiedostot", out var t) || !(t is List<object> lista)) return null;
-                var m = new Dictionary<string, (string, long)>(StringComparer.Ordinal);
+                var m = new Dictionary<string, Merkinta>(StringComparer.Ordinal);
                 foreach (var x in lista)
                 {
                     if (!(x is Dictionary<string, object> d)) continue;
@@ -156,7 +159,15 @@ namespace Matkakirja.Natiivi
                     string sha = d.TryGetValue("sha256", out var sv) ? sv as string : null;
                     long tavuja = d.TryGetValue("tavuja", out var tv) && tv != null ? Convert.ToInt64(tv) : -1;
                     if (string.IsNullOrEmpty(polku) || sha == null || sha.Length != 64) continue;
-                    m[polku] = (sha.ToLowerInvariant(), tavuja);
+                    // Häviötön pakkaus (juna 143): br-kenttä = ladattava <polku>.br; ylätaso pysyy puretun tiedoston tietoina.
+                    string brSha = null; long brTavuja = -1;
+                    if (d.TryGetValue(DioraamaPakkaus.Kentta, out var bv) && bv is Dictionary<string, object> br)
+                    {
+                        brSha = br.TryGetValue("sha256", out var bs) ? bs as string : null;
+                        brTavuja = br.TryGetValue("tavuja", out var bt) && bt != null ? Convert.ToInt64(bt) : -1;
+                        if (brSha == null || brSha.Length != 64) { brSha = null; brTavuja = -1; }
+                    }
+                    m[polku] = new Merkinta { Sha = sha.ToLowerInvariant(), Tavuja = tavuja, BrSha = brSha?.ToLowerInvariant(), BrTavuja = brTavuja };
                 }
                 return m.Count > 0 ? m : null;
             }
@@ -170,7 +181,7 @@ namespace Matkakirja.Natiivi
         {
             if (siirtoTehty || manifesti == null || rakennusKansio == null || !Directory.Exists(rakennusKansio)) yield break;
             siirtoTehty = true;
-            var m = new Dictionary<string, (string Sha, long Tavuja)>(manifesti);
+            var m = new Dictionary<string, Merkinta>(manifesti);
             string rk = rakennusKansio, va = varasto;
             int siirretty = 0; long tavuja = 0;
             var tyo = Task.Run(() =>
@@ -209,6 +220,25 @@ namespace Matkakirja.Natiivi
             return manifesti.TryGetValue(rel, out var e) ? (Path.Combine(varasto, e.Sha), e.Sha) : (null, null);
         }
 
+        /// <summary>Brotli-pakattu versio (juna 143): (url + ".br", pakatun sha256, puretut tavut), tai Url = null, jos
+        /// merkinnällä ei ole br-kenttää tai purku ei ole käytössä (editori, testikytkin pois).</summary>
+        static (string Url, string Sha, long Tavuja) Pakattu(string url)
+        {
+            if (!DioraamaPakkaus.Kaytossa || juuri == null || manifesti == null || url == null || !url.StartsWith(juuri, StringComparison.Ordinal)) return (null, null, -1);
+            return manifesti.TryGetValue(url.Substring(juuri.Length), out var e) && e.BrSha != null && e.Tavuja > 0
+                ? (url + DioraamaPakkaus.Paate, e.BrSha, e.Tavuja) : (null, null, -1);
+        }
+
+        /// <summary>Puretut tiedostot, niiden tavut ja purkuaika taustasäikeessä yhteensä (Raportti, "poikki välimuisti").</summary>
+        public static int Purettuja { get; private set; }
+        static long purettuTavuja, pakattuTavuja;
+        static double purkuMs;
+        static readonly object purkuLukko = new object();
+        static void KirjaaPurku(long pakattu, long purettu, double ms)
+        {
+            lock (purkuLukko) { Purettuja++; pakattuTavuja += pakattu; purettuTavuja += purettu; purkuMs += ms; }
+        }
+
         static string Heksa(byte[] h)
         {
             var c = new char[h.Length * 2];
@@ -239,13 +269,47 @@ namespace Matkakirja.Natiivi
                 if (luettu != null && luettu.Length > 0) { Osumia++; valmis(luettu); yield break; }
             }
             byte[] tavut = null;
+            var pak = Pakattu(url);
             haussa.Add(url);
             try
             {
-                using var p = UnityWebRequest.Get(url);
-                p.timeout = aikakatkaisu;
-                yield return p.SendWebRequest();
-                if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data;
+                // Häviötön pakkaus (juna 143): ladataan <polku>.br, pakatun tiiviste ja purku taustasäikeessä ennen palautusta;
+                // puretun tiiviste tarkistetaan alla ennen varastoon kirjoitusta kuten ennenkin. Virhe → pakkaamaton polku.
+                if (pak.Url != null)
+                {
+                    byte[] pakattu = null;
+                    using (var p = UnityWebRequest.Get(pak.Url))
+                    {
+                        p.timeout = aikakatkaisu;
+                        yield return p.SendWebRequest();
+                        if (p.result == UnityWebRequest.Result.Success) pakattu = p.downloadHandler.data;
+                    }
+                    if (pakattu != null)
+                    {
+                        byte[] purettu = null;
+                        var tyo = Task.Run(() =>
+                        {
+                            try
+                            {
+                                var kello = System.Diagnostics.Stopwatch.StartNew();
+                                if (TavujenSha(pakattu) != pak.Sha) { VaariaTiivisteita++; return; }
+                                purettu = DioraamaPakkaus.PuraPuskuri(pakattu, pak.Tavuja);
+                                if (purettu != null) KirjaaPurku(pakattu.Length, purettu.Length, kello.Elapsed.TotalMilliseconds);
+                            }
+                            catch (Exception) { purettu = null; }
+                        });
+                        while (!tyo.IsCompleted) yield return null;
+                        tavut = purettu;
+                    }
+                    if (tavut == null) Debug.LogWarning("MATKAKIRJA dioraama: pakattu ei kelvannut, ladataan pakkaamaton: " + pak.Url);
+                }
+                if (tavut == null)
+                {
+                    using var p = UnityWebRequest.Get(url);
+                    p.timeout = aikakatkaisu;
+                    yield return p.SendWebRequest();
+                    if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data;
+                }
             }
             finally { haussa.Remove(url); }
             if (tavut == null) Epaonnistui++;
@@ -332,12 +396,44 @@ namespace Matkakirja.Natiivi
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(paikka));
                 string tmp = paikka + ".esi";
-                using (var p = new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET, new DownloadHandlerFile(tmp) { removeFileOnAbort = true }, null))
+                // Häviötön pakkaus (juna 143): <polku>.br levylle → pakatun tiiviste → virtapurku tiedostoon taustasäikeessä;
+                // puretun tiiviste tarkistetaan alla ennen siirtoa kuten ennenkin. Virhe → pakkaamaton polku.
+                var pak = Pakattu(url);
+                if (pak.Url != null)
                 {
-                    p.timeout = aikakatkaisu;
-                    yield return p.SendWebRequest();
-                    ok = p.result == UnityWebRequest.Result.Success;
+                    string tmpBr = paikka + ".esi" + DioraamaPakkaus.Paate;
+                    bool ladattu;
+                    using (var p = new UnityWebRequest(pak.Url, UnityWebRequest.kHttpVerbGET, new DownloadHandlerFile(tmpBr) { removeFileOnAbort = true }, null))
+                    {
+                        p.timeout = aikakatkaisu;
+                        yield return p.SendWebRequest();
+                        ladattu = p.result == UnityWebRequest.Result.Success;
+                    }
+                    if (ladattu)
+                    {
+                        var tyo = Task.Run(() =>
+                        {
+                            try
+                            {
+                                var kello = System.Diagnostics.Stopwatch.StartNew();
+                                if (TiedostonSha(tmpBr) != pak.Sha) { VaariaTiivisteita++; return; }
+                                long pakTavuja = new FileInfo(tmpBr).Length;
+                                if (DioraamaPakkaus.PuraTiedosto(tmpBr, tmp, pak.Tavuja)) { ok = true; KirjaaPurku(pakTavuja, pak.Tavuja, kello.Elapsed.TotalMilliseconds); }
+                            }
+                            catch (Exception) { ok = false; }
+                        });
+                        while (!tyo.IsCompleted) yield return null;
+                    }
+                    try { if (File.Exists(tmpBr)) File.Delete(tmpBr); if (!ok && File.Exists(tmp)) File.Delete(tmp); } catch (Exception) { }
+                    if (!ok) Debug.LogWarning("MATKAKIRJA dioraama: esilataus: pakattu ei kelvannut, ladataan pakkaamaton: " + pak.Url);
                 }
+                if (!ok)
+                    using (var p = new UnityWebRequest(url, UnityWebRequest.kHttpVerbGET, new DownloadHandlerFile(tmp) { removeFileOnAbort = true }, null))
+                    {
+                        p.timeout = aikakatkaisu;
+                        yield return p.SendWebRequest();
+                        ok = p.result == UnityWebRequest.Result.Success;
+                    }
                 if (ok)
                 {
                     bool oikea = false;
@@ -419,7 +515,15 @@ namespace Matkakirja.Natiivi
         public static string Raportti() =>
             juuri == null ? "välimuisti pois (peili tai ei hashia)"
             : manifesti == null ? $"välimuisti {hashNyt}: manifesti puuttuu (ei välimuistia)"
-            : $"välimuisti {hashNyt} ({manifesti.Count} tiedostoa manifestissa): {Osumia} osumaa, {Latauksia} latausta{(VaariaTiivisteita > 0 ? $", {VaariaTiivisteita} väärää tiivistettä" : "")}";
+            : $"välimuisti {hashNyt} ({manifesti.Count} tiedostoa manifestissa): {Osumia} osumaa, {Latauksia} latausta{(VaariaTiivisteita > 0 ? $", {VaariaTiivisteita} väärää tiivistettä" : "")}{PurkuRaportti()}";
+
+        /// <summary>Häviötön pakkaus: puretut tiedostot, ladattu → purettu ja purkuaika taustasäikeessä yhteensä.</summary>
+        static string PurkuRaportti()
+        {
+            lock (purkuLukko)
+                return Purettuja == 0 ? (DioraamaPakkaus.Kaytossa ? "; pakattuja ei purettu" : "; pakkaus ei käytössä")
+                    : $"; purettu {Purettuja} ({pakattuTavuja / 1048576f:F0} → {purettuTavuja / 1048576f:F0} Mt, {purkuMs / 1000:F2} s taustalla)";
+        }
 
         /// <summary>"poikki välimuisti": levynkäyttö (taustasäikeessä, loki).</summary>
         public static void KirjaaKoko()

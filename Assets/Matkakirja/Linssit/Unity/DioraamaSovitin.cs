@@ -816,6 +816,13 @@ namespace Matkakirja.Natiivi
                 return;
             }
             if (mita == "valimuisti" || mita == "välimuisti") { DioraamaLevyvalimuisti.KirjaaKoko(); return; }
+            // "poikki pakkaus pois|paalle" (häviötön pakkaus, juna 143): pois = ladataan aina pakkaamaton polku (A/B-mittaus).
+            if (mita == "pakkaus")
+            {
+                if (arvo == "pois" || arvo == "paalle") DioraamaPakkaus.Sallittu = arvo == "paalle";
+                o.Kirjaa("poikki: pakkaus " + (DioraamaPakkaus.Kaytossa ? "käytössä (Brotli)" : DioraamaPakkaus.Sallittu ? "ei tällä alustalla" : "pois"));
+                return;
+            }
             // "poikki saapuminen alusta": seuraava avaus näyttää täyden saapumiskaaren (kehittäjä, kuvaukset).
             if (mita == "etsinta")
             {
