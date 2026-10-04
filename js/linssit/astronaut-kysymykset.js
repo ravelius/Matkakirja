@@ -5986,6 +5986,66 @@ export const ASTRONAUTIN_KYSYMYKSET = {
         "havaintoId": "iss073e1047210"
       }
     ]
+  },
+  "dublin-revontulet": {
+    "kysymykset": [
+      "Mikä toinen kaupunki näkyy Dublinin kuvassa?",
+      "Mikä vihreä hehku näkyy Dublinin kuvan horisontissa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä toinen kaupunki näkyy Dublinin kuvassa?",
+        "vastaus": "Kuvassa näkyy myös Lontoo suurempana valoläiskänä kauempana oikealla. Dublin erottuu silti omana selvänä kirkkaana alueenaan Irlannin itärannikolla.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss034e050137",
+            "title": "Earth Observations taken by Expedition 34 crewmember – NASA"
+          }
+        ],
+        "havaintoId": "iss034e050137"
+      },
+      {
+        "kysymys": "Mikä vihreä hehku näkyy Dublinin kuvan horisontissa?",
+        "vastaus": "Horisontissa näkyvä vihreä hehku on revontulia, jotka syntyvät auringosta tulevien hiukkasten törmätessä ilmakehän kaasuihin. Kuva otettiin helmikuussa 2013 Kansainväliseltä avaruusasemalta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss034e050137",
+            "title": "Earth Observations taken by Expedition 34 crewmember – NASA"
+          }
+        ],
+        "havaintoId": "iss034e050137"
+      }
+    ]
+  },
+  "sofia-vitosha": {
+    "kysymykset": [
+      "Mikä vuori kohoaa Sofian vieressä?",
+      "Miksi Sofian kuva otettiin päivällä eikä yöllä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä vuori kohoaa Sofian vieressä?",
+        "vastaus": "Sofian eteläpuolella kohoaa Vitosha, lumihuippuinen vuori aivan Bulgarian pääkaupungin kyljessä. Se on suosittu retkeily- ja hiihtokohde, joka erottuu kuvassa selvästi valkoisena laikkuna kaupungin vieressä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss039e002766",
+            "title": "Earth Observations taken by the Expedition 39 Crew – NASA"
+          }
+        ],
+        "havaintoId": "iss039e002766"
+      },
+      {
+        "kysymys": "Miksi Sofian kuva otettiin päivällä eikä yöllä?",
+        "vastaus": "Päiväkuva näyttää parhaiten kaupungin sijainnin laaja-alaisessa vuoristolaaksossa ja vieressä kohoavan Vitosha-vuoren muodon, jotka eivät erottuisi yhtä selvästi pelkistä yövaloista. Kuva julkaistiin alun perin astronautin omassa Twitter-viestissä vuonna 2014.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss039e002766",
+            "title": "Earth Observations taken by the Expedition 39 Crew – NASA"
+          }
+        ],
+        "havaintoId": "iss039e002766"
+      }
+    ]
   }
 };
 

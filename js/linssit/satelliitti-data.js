@@ -10,7 +10,7 @@
  * NASAn kuvat ovat public domainia; kuvat EIVÄT ole repossa vaan
  * ladataan NASAn omasta ämpäristä.
  *
- * Haettu: 2026-10-04. Kohteita 195, kuvia 235.
+ * Haettu: 2026-10-04. Kohteita 197, kuvia 237.
  */
 
 export const SATELLIITTI_LAHDE = {
@@ -5692,6 +5692,58 @@ export const SATELLIITTI_KOHTEET = [
         "sivu": "https://images.nasa.gov/details/iss073e1047210"
       }
     ]
+  },
+  {
+    "tunnus": "dublin-revontulet",
+    "nimi": "Dublin",
+    "seutu": "Irlanti",
+    "selite": "Irlannin pääkaupunki yöllä revontulten alla, Lontoo näkyy kauempana.",
+    "lat": 53.3498,
+    "lon": -6.2603,
+    "oletus": "iss034e050137",
+    "havainnot": [
+      {
+        "id": "iss034e050137",
+        "aika": "2013-02-14",
+        "teksti": "Helmikuussa 2013 otetussa kuvassa näkyvät Brittein saaret yöllä. Dublin, Irlannin pääkaupunki, erottuu vasemmalla keskellä omana kirkkaana laikkunaan, kun taas Lontoo näkyy kauempana oikealla alakulmassa suurempana valoläiskänä. Horisontin vihreä hehku on revontulia.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 34",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss034e050137/iss034e050137~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss034e050137/iss034e050137~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss034e050137"
+      }
+    ]
+  },
+  {
+    "tunnus": "sofia-vitosha",
+    "nimi": "Sofia",
+    "seutu": "Bulgaria",
+    "selite": "Bulgarian pääkaupunki laaksossa, vieressä lumihuippuinen Vitosha-vuori.",
+    "lat": 42.6977,
+    "lon": 23.3219,
+    "oletus": "iss039e002766",
+    "havainnot": [
+      {
+        "id": "iss039e002766",
+        "aika": "2014-03-19",
+        "teksti": "Vuonna 2014 otetussa päiväkuvassa Sofia, Bulgarian pääkaupunki, näkyy laajassa vuoristolaaksossa. Kaupungin eteläpuolella kohoaa Vitosha, lumihuippuinen vuori, joka on suosittu retkeily- ja hiihtokohde aivan pääkaupungin kyljessä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 39",
+        "kuvaaja": "Koichi Wakata",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss039e002766/iss039e002766~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss039e002766/iss039e002766~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss039e002766"
+      }
+    ]
   }
 ];
 
@@ -5784,14 +5836,20 @@ export const SATELLIITTI_KIERROS = [
   "santorini",
   "ateena-yolla",
   "thessaloniki-yolla",
+  "sofia-vitosha",
   "bukarest-yolla",
   "valakian-tasanko",
-  "budapest-yolla",
-  "wien",
-  "tanska",
   "tshernobyl",
   "moskova",
   "aurora-scandinavia",
+  "tanska",
+  "budapest-yolla",
+  "wien",
+  "pariisi",
+  "zeeland",
+  "englanninkanaali-yolla",
+  "lontoo",
+  "dublin-revontulet",
   "gronlannin-vuonot",
   "labradorin-jaameri",
   "merijaa",
@@ -5806,10 +5864,6 @@ export const SATELLIITTI_KIERROS = [
   "iberia-yolla",
   "ebron-suisto",
   "barcelona-yolla",
-  "lontoo",
-  "englanninkanaali-yolla",
-  "zeeland",
-  "pariisi",
   "geneven-jarvi",
   "aletsch",
   "venetsia",

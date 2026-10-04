@@ -3092,6 +3092,39 @@ export const KOHTEET = [
       },
     ],
   },
+  // Eurooppa-erä 2 (Sisältökirjuri, jatkoa erään 1): Madrid jätettiin pois,
+  // koska ainoa löytämäni kuva (iss030e010008) on sama kuin olemassa olevan
+  // iberia-yolla-kohteen kuva lähes samasta lat/lon-pisteestä — ei lisätty
+  // duplikaattia.
+  {
+    tunnus: 'dublin-revontulet', nimi: 'Dublin', seutu: 'Irlanti', lat: 53.3498, lon: -6.2603,
+    selite: 'Irlannin pääkaupunki yöllä revontulten alla, Lontoo näkyy kauempana.',
+    oletus: 'iss034e050137',
+    kuvat: [
+      {
+        id: 'iss034e050137',
+        teksti: 'Helmikuussa 2013 otetussa kuvassa näkyvät Brittein saaret '
+          + 'yöllä. Dublin, Irlannin pääkaupunki, erottuu vasemmalla '
+          + 'keskellä omana kirkkaana laikkunaan, kun taas Lontoo '
+          + 'näkyy kauempana oikealla alakulmassa suurempana valoläiskänä. '
+          + 'Horisontin vihreä hehku on revontulia.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sofia-vitosha', nimi: 'Sofia', seutu: 'Bulgaria', lat: 42.6977, lon: 23.3219,
+    selite: 'Bulgarian pääkaupunki laaksossa, vieressä lumihuippuinen Vitosha-vuori.',
+    oletus: 'iss039e002766',
+    kuvat: [
+      {
+        id: 'iss039e002766',
+        teksti: 'Vuonna 2014 otetussa päiväkuvassa Sofia, Bulgarian '
+          + 'pääkaupunki, näkyy laajassa vuoristolaaksossa. Kaupungin '
+          + 'eteläpuolella kohoaa Vitosha, lumihuippuinen vuori, joka on '
+          + 'suosittu retkeily- ja hiihtokohde aivan pääkaupungin kyljessä.',
+      },
+    ],
+  },
 ];
 
 /**
