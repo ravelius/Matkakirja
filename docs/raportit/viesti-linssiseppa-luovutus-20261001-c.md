@@ -3,6 +3,15 @@
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-b.md`. Muistitiedosto:
 `linssiseppa-tila-20261001-paiva.md`.
 
+## TILA 4.10. KLO 23.5x (RADIO KAIKKI KANAVAT MERGE-PYYNNÖSSÄ, JUNA 142; KIILTO AAMULLA)
+- Omistaja TF 140 (22.5x): kaikki kanavat asteikolle, pallo suoraan ylhäältä. Proto linssiseppa/radio-kaikki e9fe4b9e (BUILD 140
+  9663df99): 45aff510 RadioLinssi (NakymanAsteikko = koko reitti 182 asemaa, KartanKallistus 0), 59c44233 + e9fe4b9e RadioNakyma
+  (jatkuva veto, heitto tau 325 ms, reunassa pysähtyy; `radio veto <dx> [ms]`). Natiivi-UI katselmoi ja hyväksyi. Päätoimittaja
+  hyväksyi reittijärjestyksen. Simu ca827fe4: lokit/linssiseppa-radio-kaikki-20261004 (omistajalle/ + sormi/: oikeat pyyhkäisyt
+  Rooma→Ateena, Ateena→Madrid). Merge-pyyntö Natiivisepälle 23.5x.
+- Huom: asemien lähetys natiivia äänipolkua (polku engine) → ei näy kaappaa-WAV:ssa; rahina näkyy.
+- Opittu: SORMI-ikkuna ohi, kun odotin tekstillä silmukassa → reagoi Monitor-tapahtumaan heti; attach ennen (ei detachia).
+
 ## TILA 4.10. KLO 20.1x (PÄÄT OMASSA MAASSA MERGE-PYYNNÖSSÄ; KIILTO AAMULLA)
 - Omistaja 19.4x: ajattelijapäät vain pelaajan ollessa ajattelijan maassa. Proto linssiseppa/paat-maassa 26b34eb8 (BUILD 138 1374f627):
   ErikoisnostoMitat.OmaMaa/Haivytys + UI/Erikoisnostot.cs (NostoKerros.NykyinenMaa, häivytys syttyminenS). Kartta-testit 444/444.
