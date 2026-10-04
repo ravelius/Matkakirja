@@ -185,15 +185,16 @@ namespace Matkakirja.Natiivi
                 bool kuoriValmis = nayttamo.Ulkokuori?.Lahitaso != null;
                 // TF 136 -kierros 4.10.: tilat ja hahmot latautuivat kuoren kanssa yhtä aikaa, kuori ehti vasta 30–73 s:ssa ja
                 // saapuminen alkoi 10 s:n jälkeen valkoisten tilapalikoiden päällä kertojan puhuessa. Nyt kuori ladataan ensin,
-                // tilat sen valmistuttua, ja linna tulee esiin sumusta vasta, kun kuori ja tilat ovat valmiit (tai KuoriOdotusMax).
+                // tilat sen valmistuttua, ja linna tulee esiin sumusta, kun kuori on valmis (tai KuoriOdotusMax).
                 if (kuoriValmis && tilatOdottavat)
                 {
                     tilatOdottavat = false;
                     TaydennaLataamattomat();
                     o.Kirjaa($"poikki: kuori valmis {odotettu:F1} s:ssa, tilat latautuvat");
                 }
-                bool tilatValmiit = kuoriValmis && !tilatOdottavat && rakennus3D != null && rakennus3D.TilojaLadattu >= TilojaGlb();
-                if ((kuoriValmis && tilatValmiit) || odotettu > KuoriOdotusMax || rakennus.Ulkokuori == null)
+                // Päätoimittaja 4.10. (Linnanrakentajan mittaus): linna esiin heti kevyen kuoren valmistuttua; tilat ja hahmot latautuvat
+                // perässä, ja kukin tila pysyy piilossa valoatlaksensa valmistumiseen asti (LataaTila).
+                if (kuoriValmis || odotettu > KuoriOdotusMax || rakennus.Ulkokuori == null)
                 {
                     kuoriOdotusAlku = -1f;
                     if (tilatOdottavat) { tilatOdottavat = false; TaydennaLataamattomat(); }
@@ -375,7 +376,7 @@ namespace Matkakirja.Natiivi
         // Saapumiskaari odottaa kevyttä kuorta (enintään KuoriOdotusMax s): 1.0.64-puhdasajossa kaaren 3. sekunnilla
         // kuorta ei vielä ollut ja harmaat tilapalikat näkyivät veden päällä. Odotuksen ajan aika on jäädytetty kaaren
         // alkuun (kamera kaukana järvellä), ja näyttämö piilottaa kaiken paitsi veden (DioraamaNayttamo.Odota).
-        // 4.10.: 10 → 45 s, kun odotus kattaa myös tilat (kuori ensin, ks. Paivita); yli tämän näytetään se mitä on.
+        // 4.10.: 10 → 45 s (kuori ensin, tilat perässä, ks. Paivita); yli tämän näytetään se mitä on.
         const float KuoriOdotusMax = 45f, HaivytysS = 2.5f;
         float kuoriOdotusAlku = -1f;
         /// <summary>Tilojen ja hahmojen lataus odottaa kuorta (TaydennaLataamattomat vasta kuoren valmistuttua).</summary>
@@ -528,13 +529,21 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"poikki: {tila.Id} valmis ({rakennus3D.Kolmiot} kolmiota yhteensä)");
             // Olavinlinna (Siirtoseppä 29.9.2026): Blenderin tyhjät → 3D-liekit ja savu; leivottu valoatlas.
             var tyhjat = rakennus3D.Tyhjat(tila.Id);
-            if (tyhjat.Count > 0 && rakennus3D.Tilat.TryGetValue(tila.Id, out var tilaGo) && tilaGo != null)
+            rakennus3D.Tilat.TryGetValue(tila.Id, out var tilaGo);
+            // Kukin liekki kerran (2.10.2026): glb:n liekki:-solmut korvaavat tilan JSON-liekit (sama kohta, piirtyi kahdesti).
+            int solmuja = 0;
+            foreach (var t in tyhjat) if (t.Laji == "liekki") solmuja++;
+            int pois = solmuja > 0 ? nayttamo?.Liekit?.PoistaJsonLiekit(tila.Id) ?? 0 : 0;
+            if (pois > 0) o.Kirjaa($"poikki: {tila.Id} liekit glb:n {solmuja} liekki:-solmusta, JSON-liekit {pois} pois");
+            // TF 136 -kierros 4.10.: ilman valoatlasta leivottu tila piirtyi valkoisena palikkana. Tila (ja sen liekit, savu ja
+            // valot) näkyviin vasta, kun valoatlas on ladattu.
+            bool piiloon = tilaGo != null && !string.IsNullOrEmpty(tila.ValoAtlas);
+            if (piiloon) tilaGo.SetActive(false);
+            if (!string.IsNullOrEmpty(tila.ValoAtlas)) yield return LataaValoAtlas(tila);
+            if (kerta != avauskerta || rakennus3D == null) yield break;
+            if (piiloon && tilaGo != null) tilaGo.SetActive(true);
+            if (tyhjat.Count > 0 && tilaGo != null)
             {
-                // Kukin liekki kerran (2.10.2026): glb:n liekki:-solmut korvaavat tilan JSON-liekit (sama kohta, piirtyi kahdesti).
-                int solmuja = 0;
-                foreach (var t in tyhjat) if (t.Laji == "liekki") solmuja++;
-                int pois = solmuja > 0 ? nayttamo?.Liekit?.PoistaJsonLiekit(tila.Id) ?? 0 : 0;
-                if (pois > 0) o.Kirjaa($"poikki: {tila.Id} liekit glb:n {solmuja} liekki:-solmusta, JSON-liekit {pois} pois");
                 foreach (var t in tyhjat)
                     if (t.Laji == "liekki") nayttamo?.Liekit?.LisaaTyhja(tila.Id, t, tilaGo.transform.TransformPoint(t.Paikka), o.Kirjaa);
                 nayttamo?.Savu?.LisaaTila(tila.Id, tilaGo.transform, tyhjat, o.Kirjaa);
@@ -543,7 +552,6 @@ namespace Matkakirja.Natiivi
                 foreach (var t in tyhjat)
                     if (t.Laji == "valo") nayttamo?.Valot?.LisaaTyhja(tila.Id, t, tilaGo.transform.TransformPoint(t.Paikka));
             }
-            if (!string.IsNullOrEmpty(tila.ValoAtlas)) yield return LataaValoAtlas(tila);
             // Elävä linna: tilan irtoesineet (arkun kansi, sinetti) etsintää varten.
             if (tila.Esineet.Count > 0 && nayttamo?.Etsinta != null)
                 yield return nayttamo.Etsinta.LataaEsineet(rakennus, tila, s => peili(paketinJuuri + s), o.Kirjaa);
