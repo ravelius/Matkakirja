@@ -422,9 +422,9 @@ namespace Matkakirja.Natiivi
 
         int TilojaGlb()
         {
-            int n = 0;
-            if (rakennus?.Tilat != null) foreach (var tl in rakennus.Tilat) if (!string.IsNullOrEmpty(tl.GlbTiedosto)) n++;
-            return n;
+            // 4.10.: jokainen tila kulkee Kasitelty-käärön läpi (myös glb:ttömät) → odotetaan kaikkia; glb-laskenta antoi 9/8 ja
+            // saattoi päästää saapumisen alkamaan ennen viimeistä glb-tilaa.
+            return rakennus?.Tilat?.Count ?? 0;
         }
         double kuoriOdotusT;
 
