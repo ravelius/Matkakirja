@@ -220,6 +220,7 @@ namespace Matkakirja.Natiivi
             peli ??= new Mylly();
             lauta.Lataa();
             RekisteroiAani(AaniAsetus); RekisteroiAani(AaniPoisto);
+            foreach (var n in new[] { AaniSiirto, AaniMylly, AaniVoitto, AaniHavio }) RekisteroiAani(n, LisaVahvistus);
             Paivita();
             peliTaso.style.display = DisplayStyle.Flex;
             Rakenne.Nayta(peliTaso, true, Tyylikirja.Kesto.Avaus);
@@ -246,6 +247,7 @@ namespace Matkakirja.Natiivi
                 lauta.Pura();
                 Aanet.RekisteroiTehoste(AaniAsetus, (AudioClip)null);
                 Aanet.RekisteroiTehoste(AaniPoisto, (AudioClip)null);
+                foreach (var n in new[] { AaniSiirto, AaniMylly, AaniVoitto, AaniHavio }) Aanet.RekisteroiTehoste(n, (AudioClip)null);
                 Resources.UnloadUnusedAssets();
             }).StartingIn(Tyylikirja.Kesto.Sulku + 50);
         }
@@ -255,6 +257,10 @@ namespace Matkakirja.Natiivi
         // v2 (Pelikoodari 3.10., ämpäri aanet/tehosteet/mylly-v2/, Kenney CC0): molemmat samalla tasolla (huiput −1,5 / −1,4 dBFS),
         // joten tehosteiden oletusvahvistus ilman omaa kerrointa; v1:n asetus oli ~10 dB hiljaisempi ja tarvitsi 0,5:n.
         const string AaniAsetus = "mylly-asetus", AaniPoisto = "mylly-poisto";
+        // Lisä-äänet (Pelikoodari 5.10., Freesound CC0, huiput −6 dBFS eli 4,5 dB vanhoja hiljaisempia → vahvistus × 1,68):
+        // liuku siirron alussa, lukitusisku heti kun mylly syntyy (ennen poistoa), voitto ja häviö lopputuloksessa.
+        const string AaniSiirto = "mylly-siirto", AaniMylly = "mylly-mylly", AaniVoitto = "mylly-voitto", AaniHavio = "mylly-havio";
+        const float LisaVahvistus = Vahvistus * 1.68f;
         /// <summary>Päätoimittaja 5.10. (kaappaus bc863309): oletusvahvistuksella 0,35 nappulat soivat −23…−25 dBFS, puhelimen kaiuttimesta
         /// heikosti. 1,6 (+13 dB; 1,1 mitattiin 5.10. 01.52: huiput −15,3…−17,2) → ≈ −12…−14 dBFS (tavoite −12…−15), AudioSource.volume 1,6 × 0,296 ≈ 0,47.</summary>
         const float Vahvistus = 1.6f;
@@ -262,20 +268,21 @@ namespace Matkakirja.Natiivi
         static void SiirronAani(MyllySiirto s, float voima)
         {
             float lasku = s.Mista >= 0 ? Tyylikirja.Kesto.Liuku / 1000f * 0.9f : 0f;
+            if (s.Mista >= 0) Aanet.Tehoste(AaniSiirto, voima);
             bool oma = Aanet.Tehoste(AaniAsetus, voima, lasku);
             if (!oma) Aanet.Tehoste("click", voima);
             if (s.Poista >= 0 && !Aanet.Tehoste(AaniPoisto, voima, lasku + 0.12f)) Aanet.Tehoste("wrong", voima);
-            Debug.Log($"MATKAKIRJA mylly: ääni {(oma ? AaniAsetus : "click")}{(s.Poista >= 0 ? " + " + AaniPoisto : "")}");
+            Debug.Log($"MATKAKIRJA mylly: ääni {(s.Mista >= 0 ? AaniSiirto + " + " : "")}{(oma ? AaniAsetus : "click")}{(s.Poista >= 0 ? " + " + AaniPoisto : "")}");
         }
 
         /// <summary>Savuke 1113: naksua ei todennettu. Klippi ladataan muistiin heti (preloadAudioData + LoadAudioData), jotta
         /// ensimmäinen soitto leikkaa siivun eikä jää latauksen taakse; puuttuva klippi lokiin.</summary>
-        static void RekisteroiAani(string nimi)
+        static void RekisteroiAani(string nimi, float vahvistus = Vahvistus)
         {
             var c = Resources.Load<AudioClip>(MyllyLauta.KansioPolku + nimi);
             if (c == null) { Debug.LogWarning("MATKAKIRJA mylly: ääni puuttuu " + nimi); return; }
             if (c.loadState != AudioDataLoadState.Loaded) c.LoadAudioData();
-            Aanet.RekisteroiTehoste(nimi, c, Vahvistus, omaIsku: true);
+            Aanet.RekisteroiTehoste(nimi, c, vahvistus, omaIsku: true);
         }
 
         /// <summary>TAUSTAN PEHMENNYS (omistaja 2.10. klo 11.0x, loki 11.01: "pehmennä kaikki elementit taustalla, myös
@@ -391,7 +398,8 @@ namespace Matkakirja.Natiivi
             {
                 // Mylly: näytetään siirto ja odotetaan poistettavan valintaa.
                 poistoKohde = piste; poistoLahde = lahde;
-                Aanet.Tehoste("correct", 0.7f);
+                if (!Aanet.Tehoste(AaniMylly)) Aanet.Tehoste("correct", 0.7f);
+                Debug.Log("MATKAKIRJA mylly: ääni " + AaniMylly);
                 Paivita();
                 return;
             }
@@ -428,6 +436,7 @@ namespace Matkakirja.Natiivi
                 var s = tehtava.Result;
                 peli.Tee(s);
                 lauta.Animoi(s, peli.Nappula(s.Mihin));
+                if (s.Poista >= 0) Aanet.Tehoste(AaniMylly, 0.8f, s.Mista >= 0 ? Tyylikirja.Kesto.Liuku / 1000f * 0.9f + 0.05f : 0.05f);
                 SiirronAani(s, 0.8f);
                 Paivita();
                 TarkistaLoppu();
@@ -461,6 +470,9 @@ namespace Matkakirja.Natiivi
             var ansaitut = new List<PeliLauta>();
             if (matka != null) { var k = Pelikehys.Kirjaa(matka, tulos, PelinTalous.Minipeli); palkkio = k.Palkkio; ansaitut = k.Laudat; }
             Debug.Log("MATKAKIRJA mylly: " + Pelikehys.Matkakirjarivi(tulos) + (palkkio > 0 ? $" +£{palkkio}" : ""));
+            // Voitto (myös kaveripelin voittaja) tai häviö botille; tasapeli ja luovutus ilman ääntä.
+            string loppuAani = voittaja < 0 ? null : vastustaja == Vastustaja.Kaveri || voittaja == 0 ? AaniVoitto : AaniHavio;
+            if (loppuAani != null) { Aanet.Tehoste(loppuAani, 1f, 0.35f); Debug.Log("MATKAKIRJA mylly: ääni " + loppuAani); }
             Paivita();
 
             bool kaveri = vastustaja == Vastustaja.Kaveri;
