@@ -156,3 +156,15 @@ Natiivisepälle, viestit Päätoimittajalle ≤ 8 riviä, osoitin vain omistajan
   eikä päällekkäisyyttä, häivytys 0,35 s), "poikki yleiskamera …" kulmakoe, huonekortti "poikki huonekortti 0|1|2" (1 = PANEELI LASI).
   Stillit lokit/siirtoseppa-omistajalle-2010/ Päätoimittajalle; suositus kulma 255°/50°, kortti 1. AVOIN: omistajan valinta → data
   (lappujarjestys + yleiskamera Linnanrakentajan pakettiin), kortin kytkin pois (valittu tuotantoon), pysty+vaaka+iPad-stillit.
+
+### 4.10. klo 21.5x — LINNAN UI-ERÄ JUNAAN 141 (omistajan valinnat)
+- Omistaja: linna aukeaa iPhonella VAAKANA (65e0439e, LukitseVaaka; iPad ennallaan), kameran kulma ennallaan (165°/30° vaaka),
+  laput keskiaikaisina tyylillä C (käsikirjoituksen sivu; Grenze Gotisch + IM Fell English, OFL; Linnanrakentajan taustat
+  _valmiit/olavinlinna-laput-v1/ → Resources/LinnaLaput/c, Fontit), kortti selitettävän kohteen vieressä osoitinviivalla,
+  nimilaput lappukohtaisesti tärkeysjärjestyksessä (tilat[].lappujarjestys, Linnanrakentajan peili c116f02f, PR tulossa),
+  kynnys 70 pt, ensimmäinen aina, nastat turva-alueella; perusnäkymä vaakana 3/6.
+- Haara siirtoseppa/nimilaput (wt/proto-siirtoseppa-opaste) kärki 5377504d (initiaali leipätekstin alkuun). Kokeilukytkimet poistettu
+  90a73c3a:ssa. Historiassa on OPASTEKOE- ja LASI-kokeiluja → junaan 141 SQUASH-haaraksi masterin päälle (siirtoseppa/linna-ui-141).
+- PNG/TTF .meta: kopioi tuoja (Radio/radio-kotelo.png.meta, LiberationSerif-Italic.ttf.meta) — pelkkä guid → DefaultAsset → null.
+- AVOIN: simu ~21.58 lopulliset C-stillit (perus vasen/oikea, Kappeli, Keittiö, zoom 130/100/80) → Päätoimittaja → omistaja → juna 141
+  (koodi + Linnanrakentajan lappujarjestys-PR + osoitin Päätoimittajan luvalla).
