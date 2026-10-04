@@ -1,0 +1,158 @@
+{
+  "ohjaamo": [
+    {
+      "kysymys": "Mikä ISS on ja mihin sitä käytetään?",
+      "vastaus": "ISS on Maata kiertävä laboratorio, jossa kansainvälinen miehistö tekee tieteellisiä kokeita painottomuudessa. Asema on rakennettu usean maan yhteistyönä, ja sillä tutkitaan muun muassa lääketiedettä, materiaaleja ja ihmiskehon sopeutumista pitkiin avaruuslentoihin.",
+      "lahteet": [
+        {
+          "url": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+          "title": "Space Station Facts and Figures – NASA"
+        }
+      ]
+    },
+    {
+      "kysymys": "Kuinka nopeasti ISS kiertää Maata?",
+      "vastaus": "ISS lentää noin 7,7 kilometriä sekunnissa eli noin 27 600 kilometriä tunnissa. Tällä vauhdilla se kiertää koko Maan kerran noin 90–93 minuutissa.",
+      "lahteet": [
+        {
+          "url": "https://en.wikipedia.org/wiki/International_Space_Station",
+          "title": "International Space Station – Wikipedia"
+        }
+      ]
+    },
+    {
+      "kysymys": "Millä korkeudella ISS lentää Maan yläpuolella?",
+      "vastaus": "ISS kiertää noin 400–430 kilometrin korkeudessa Maan pinnasta. Ilmanvastus hidastaa rataa hitaasti koko ajan, joten asemaa pitää säännöllisesti nostaa takaisin korkeammalle.",
+      "lahteet": [
+        {
+          "url": "https://en.wikipedia.org/wiki/International_Space_Station",
+          "title": "International Space Station – Wikipedia"
+        }
+      ]
+    },
+    {
+      "kysymys": "Mistä ISS saa sähkönsä toimintaansa?",
+      "vastaus": "ISS saa kaiken sähkönsä valtavista aurinkopaneeleista, jotka kääntyvät seuraamaan aurinkoa kiertoradalla. Osa energiasta varastoidaan akkuihin, jotta virtaa riittää myös sillä puolella rataa, jossa Maa peittää auringon.",
+      "lahteet": [
+        {
+          "url": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+          "title": "Space Station Facts and Figures – NASA"
+        }
+      ]
+    },
+    {
+      "kysymys": "Kuinka kauan ISS:llä on asunut väkeä yhtäjaksoisesti?",
+      "vastaus": "ISS:llä on asunut miehistö keskeytyksettä marraskuusta 2000 lähtien — pisin yhtäjaksoinen ihmisten oleskelu avaruudessa. Asemalla on tavallisesti seitsemän hengen miehistö kerrallaan, joskus hetkellisesti enemmänkin vaihdon aikana.",
+      "lahteet": [
+        {
+          "url": "https://www.thalesgroup.com/en/worldwide/space/magazine/where-can-you-marvel-16-sunrises-each-day-ask-astronauts-cupola-400",
+          "title": "Where can you marvel at 16 sunrises each day? – Thales Group"
+        }
+      ]
+    }
+  ],
+  "pallo": [
+    {
+      "kysymys": "Miksi astronautit näkevät 16 auringonnousua vuorokaudessa?",
+      "vastaus": "ISS kiertää Maan noin 90 minuutissa, joten aurinko nousee ja laskee asemalla noin 16 kertaa vuorokaudessa. Yksi täysi kierros Maan ympäri vastaa siis astronauteille yhtä \"päivää\".",
+      "lahteet": [
+        {
+          "url": "https://www.thalesgroup.com/en/worldwide/space/magazine/where-can-you-marvel-16-sunrises-each-day-ask-astronauts-cupola-400",
+          "title": "Where can you marvel at 16 sunrises each day? – Thales Group"
+        }
+      ]
+    },
+    {
+      "kysymys": "Voiko avaruusasemalta nähdä revontulet?",
+      "vastaus": "Kyllä — ISS lentää usein revontulivyöhykkeen yläpuolella, ja astronautit ovat kuvanneet vihreitä ja punaisia valonauhoja Maan yläpuolelta monta kertaa. Revontulet syntyvät, kun Auringosta tulevat varatut hiukkaset törmäävät ilmakehän kaasuihin.",
+      "lahteet": [
+        {
+          "url": "https://www.earthobservatory.nasa.gov/images/151043/a-dazzling-aurora-borealis",
+          "title": "A Dazzling Aurora Borealis – NASA Earth Observatory"
+        }
+      ]
+    },
+    {
+      "kysymys": "Näkyvätkö valtioiden rajat avaruudesta?",
+      "vastaus": "Ei — rajat ovat ihmisten sopimia viivoja, eivätkä ne näy maastossa mistään korkeudesta. Avaruudesta sen sijaan erottuvat esimerkiksi kaupunkien valot öisin ja viljelysmaiden suorakulmaiset kuviot.",
+      "lahteet": [
+        {
+          "url": "https://www.nasa.gov/international-space-station/space-station-facts-and-figures/",
+          "title": "Space Station Facts and Figures – NASA"
+        }
+      ]
+    },
+    {
+      "kysymys": "Miksi ilmakehä näyttää ohuelta siniseltä viivalta?",
+      "vastaus": "Suurin osa hengitettävästä ilmakehästä mahtuu vain noin 100 kilometrin paksuiseen kerrokseen, joka on häviävän ohut verrattuna Maan halkaisijaan. Sininen väri syntyy samasta ilmiöstä kuin taivaan sininen väri maasta katsottuna: ilmamolekyylit sirottavat sinistä valoa enemmän kuin muita värejä.",
+      "lahteet": [
+        {
+          "url": "https://en.wikipedia.org/wiki/International_Space_Station",
+          "title": "International Space Station – Wikipedia"
+        }
+      ]
+    },
+    {
+      "kysymys": "Kuinka nopeasti maisema vaihtuu ISS:ltä katsottuna?",
+      "vastaus": "Koska ISS kiertää Maan kerran noin 90 minuutissa, maisema vaihtuu mantereesta valtamereen vain muutamassa minuutissa. Esimerkiksi koko Suomen ylittäminen kestää asemalta katsottuna vain parisen minuuttia.",
+      "lahteet": [
+        {
+          "url": "https://en.wikipedia.org/wiki/International_Space_Station",
+          "title": "International Space Station – Wikipedia"
+        }
+      ]
+    }
+  ],
+  "kuvat": [
+    {
+      "kysymys": "Millä kameroilla astronautit kuvaavat Maata?",
+      "vastaus": "ISS:llä on käytetty Nikonin kameroita vuodesta 1999 lähtien, viime vuosina erityisesti Nikon D5- ja D6-järjestelmäkameroita. Niitä korvaamaan on tuotu peilittömiä Nikon Z9 -kameroita, joiden laiteohjelmisto on muokattu kestämään avaruuden olosuhteita.",
+      "lahteet": [
+        {
+          "url": "https://www.digitaltrends.com/space/new-nikon-camera-gear-for-space-station-marks-end-of-an-era/",
+          "title": "New Nikon camera gear for space station marks end of an era – Digital Trends"
+        }
+      ]
+    },
+    {
+      "kysymys": "Miksi astronautit kuvaavat Maata niin paljon?",
+      "vastaus": "Kuvat kuuluvat NASAn Crew Earth Observations -ohjelmaan, joka kerää tutkijoille tietoa esimerkiksi jäätiköistä, kaupungeista, koralliriutoista ja luonnonkatastrofeista, kuten hirmumyrskyistä ja tulivuorenpurkauksista. Pitkä, vuosikymmenten mittainen kuvasarja samoista paikoista auttaa näkemään muutokset ajan myötä.",
+      "lahteet": [
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/20230005919/downloads/CEO_ISSRD23_final.pdf",
+          "title": "Crew Earth Observations: New Tools to Support Your Research – NASA"
+        }
+      ]
+    },
+    {
+      "kysymys": "Kuinka monta kuvaa Maasta on otettu avaruudesta?",
+      "vastaus": "Astronautit ovat kuvanneet Maata käsikameroilla jo yli 60 vuotta, aina 1960-luvun Mercury-lennoista lähtien, ja kuvia on kertynyt yli 1,5 miljoonaa. Ne löytyvät julkisesta \"Gateway to Astronaut Photography of Earth\" -tietokannasta.",
+      "lahteet": [
+        {
+          "url": "https://gulfnews.com/amp/story/technology%2Fmedia%2Fnasa-astronaut-photographs-earth-with-nikon-d4-1.1596752",
+          "title": "NASA astronaut photographs Earth with Nikon D4 – Gulf News"
+        }
+      ]
+    },
+    {
+      "kysymys": "Miten astronautin kuva paikannetaan kartalle?",
+      "vastaus": "Kuvat eivät yleensä tallenna sijaintia automaattisesti, koska astronautti pitelee kameraa käsin vaihtelevissa kulmissa. Johnson Space Centerin asiantuntijat paikantavat kuvat jälkikäteen vertaamalla niitä satelliittikarttoihin, kuten Landsat-kuviin ja Google Earthiin.",
+      "lahteet": [
+        {
+          "url": "https://ntrs.nasa.gov/api/citations/20230005919/downloads/CEO_ISSRD23_final.pdf",
+          "title": "Crew Earth Observations: New Tools to Support Your Research – NASA"
+        }
+      ]
+    },
+    {
+      "kysymys": "Mikä on Cupola ja miksi se on tärkeä kuvaamiselle?",
+      "vastaus": "Cupola on ISS:n kupolimainen tarkkailumoduuli, jossa on seitsemän ikkunaa — kuusi sivuikkunaa ja 80 senttimetrin pyöreä kattoikkuna, avaruuden suurin ikkuna. Suurin osa astronauttien parhaista Maa-kuvista on otettu juuri Cupolasta.",
+      "lahteet": [
+        {
+          "url": "https://www.eoportal.org/satellite-missions/iss-cupola",
+          "title": "ISS: Cupola – eoPortal"
+        }
+      ]
+    }
+  ]
+}
