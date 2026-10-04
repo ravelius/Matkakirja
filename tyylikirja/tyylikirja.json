@@ -221,9 +221,9 @@
     },
     "ISS-OHJAAMO": {
       "_selite": "ISS-ohjaamon paneeli Cupolan alareunaan (omistaja 4.10.2026 klo 11.40 'ISS-OHJAAMO UUSIKSI'; vain natiivi, UI/Linssit/IssOhjaamo.cs ja Pohjat/iss-ohjaamo.uss). Pinta teema tumma, näytöt teema lcd.",
-      "joystick": "plus-muoto 108 pt (varret 36 pt), yksi suunta kerrallaan, liike pidon ajan, irrotus pysäyttää; painettu varsi lcd-korostuksella, napa kallistuu 7 pt",
-      "lcd": "vihreä LCD (teema lcd): lähin kohde koolla lcd (pitkä nimi pienenee 17 pt:iin asti), maa alla koolla lcd-pieni harvennettuna; kirjasin Lcd (VT323, OFL)",
-      "kamera": "pyöreä 52 pt kamerakuvake; himmeä (peitto 0,35) muualla kuin kuvauspaikalla",
+      "joystick": "plus-muoto 96 pt (varret 32 pt), yksi suunta kerrallaan, liike pidon ajan, irrotus pysäyttää; painettu varsi lcd-korostuksella, napa kallistuu 7 pt",
+      "lcd": "vihreä LCD (teema lcd): lähin kohde koolla lcd (pitkä nimi pienenee yhdellä rivillä 22 pt:iin ja rivittyy sitten kahdelle riville, vähintään 17 pt), maa alla koolla lcd-pieni harvennettuna; kirjasin Lcd (VT323, OFL)",
+      "kamera": "pyöreä 48 pt kamerakuvake; tarkka ISS-kuva koko Euroopassa (loki #3934); himmeä (peitto 0,35) Cupolan ulkopuolella ja kuvan työstön aikana",
       "kaasu": "vipu neljällä pykälällä (1, 10, 100, 1000 alhaalta ylös), juuressa pyöreä kolo ja numerorumpu koolla rumpu (Segmentti = DSEG7, OFL), ×-merkki Lcd-kirjasimella; vanha luku liukuu piiloon ja uusi esiin 200 ms",
       "mininaytto": "napautus ohjaamon ulkopuolelle pienentää yksiriviseksi LCD-näytöksi (36 pt, koko lcd-mini, 'KOHDE · MAA'); napautus palauttaa; siirtymä liike.avaus ja liike.sulku",
       "peitto": "paneeli 128 pt (puhelimella noin 15 % korkeudesta), leveys ruutu − 24, enintään 560 pt"
