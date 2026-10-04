@@ -1,6 +1,6 @@
 {
  "_selite": "Astronautin kameran kuvien palkkitarkistus (tools/astro-palkki.mjs). palkki=true: NASAn alkuperäisessä oli valkoinen tunnuspalkki, rajattu kopio omassa ämpärissä (rajattu = versiokansio linssit/astronautin-kamera/<kansio>/; 20260921 = vanha juurikansio). Uusi havainto lisätään aineistoon vasta, kun sen id on tässä.",
- "tarkistettu": "2026-10-01",
+ "tarkistettu": "2026-10-04",
  "havainnot": {
   "STS062-85-021": {
    "palkki": false,
@@ -694,6 +694,14 @@
    "palkki": false,
    "rajattu": null
   },
+  "iss073e0078399": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0078528": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss073e0078538": {
    "palkki": false,
    "rajattu": null
@@ -786,6 +794,14 @@
    "palkki": false,
    "rajattu": null
   },
+  "iss073e1047210": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e1047246": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss073e1197819": {
    "palkki": false,
    "rajattu": null
@@ -795,6 +811,10 @@
    "rajattu": null
   },
   "iss074e0044445": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0149554": {
    "palkki": false,
    "rajattu": null
   },
@@ -823,6 +843,10 @@
    "rajattu": null
   },
   "iss074e0405029": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0416472": {
    "palkki": false,
    "rajattu": null
   },
