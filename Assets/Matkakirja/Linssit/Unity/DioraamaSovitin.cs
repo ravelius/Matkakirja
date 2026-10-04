@@ -161,10 +161,10 @@ namespace Matkakirja.Natiivi
             else
             {
                 linssi.Avaa(rakennus, ymparisto.Aika, SaapuminenNahty);
-                TaydennaLataamattomat();
                 TaydennaPinnatJaLiekit();
                 LataaUlkokuori();
                 AloitaKuoriOdotus(ymparisto.Aika);
+                if (kuoriOdotusAlku < 0f) TaydennaLataamattomat(); else tilatOdottavat = true;
             }
             o.Kirjaa(Tilaraportti());
         }
@@ -183,13 +183,25 @@ namespace Matkakirja.Natiivi
             {
                 float odotettu = Time.realtimeSinceStartup - kuoriOdotusAlku;
                 bool kuoriValmis = nayttamo.Ulkokuori?.Lahitaso != null;
-                if (kuoriValmis || odotettu > KuoriOdotusMax || rakennus.Ulkokuori == null)
+                // TF 136 -kierros 4.10.: tilat ja hahmot latautuivat kuoren kanssa yhtä aikaa, kuori ehti vasta 30–73 s:ssa ja
+                // saapuminen alkoi 10 s:n jälkeen valkoisten tilapalikoiden päällä kertojan puhuessa. Nyt kuori ladataan ensin,
+                // tilat sen valmistuttua, ja linna tulee esiin sumusta vasta, kun kuori ja tilat ovat valmiit (tai KuoriOdotusMax).
+                if (kuoriValmis && tilatOdottavat)
+                {
+                    tilatOdottavat = false;
+                    TaydennaLataamattomat();
+                    o.Kirjaa($"poikki: kuori valmis {odotettu:F1} s:ssa, tilat latautuvat");
+                }
+                bool tilatValmiit = kuoriValmis && !tilatOdottavat && rakennus3D != null && rakennus3D.TilojaLadattu >= TilojaGlb();
+                if ((kuoriValmis && tilatValmiit) || odotettu > KuoriOdotusMax || rakennus.Ulkokuori == null)
                 {
                     kuoriOdotusAlku = -1f;
+                    if (tilatOdottavat) { tilatOdottavat = false; TaydennaLataamattomat(); }
                     nayttamo.Odota(false);
-                    linssi.Avaa(rakennus, y.Aika, SaapuminenNahty); // kaari alusta tästä hetkestä
+                    nayttamo.Haivyta(HaivytysS);
+                    linssi.Avaa(rakennus, y.Aika, SaapuminenNahty); // kaari (ja kertoja) alusta tästä hetkestä
                     t = pysaytettyT ?? y.Aika;
-                    o.Kirjaa($"poikki: saapuminen alkaa ({(kuoriValmis ? "kuori valmis" : "kuori ei ehtinyt")}, odotettiin {odotettu:F1} s)");
+                    o.Kirjaa($"poikki: saapuminen alkaa ({(kuoriValmis ? "kuori valmis" : "kuori ei ehtinyt")}, tilat {rakennus3D?.TilojaLadattu ?? 0}/{TilojaGlb()}, odotettiin {odotettu:F1} s)");
                 }
                 else { nayttamo.Odota(true); t = kuoriOdotusT; }
             }
@@ -232,7 +244,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             linssi.Sulje();
-            kuoriOdotusAlku = -1f; SaapumisOdotus = false; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
+            kuoriOdotusAlku = -1f; SaapumisOdotus = false; tilatOdottavat = false; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             rakennus3D?.Tyhjenna(); rakennus3D = null;
             hahmot3D?.Tyhjenna(); hahmot3D = null;
             nayttamo?.Tuhoa(); nayttamo = null;
@@ -353,18 +365,28 @@ namespace Matkakirja.Natiivi
             {
                 linssi.Avaa(rakennus, y.Aika, SaapuminenNahty);
                 aanet?.RakennusValmis(rakennus); // rakennus oli null Avaa-kutsun hetkellä: äänet saavat sen vasta nyt.
-                TaydennaLataamattomat();
                 TaydennaPinnatJaLiekit();
                 LataaUlkokuori();
                 AloitaKuoriOdotus(y.Aika);
+                if (kuoriOdotusAlku < 0f) TaydennaLataamattomat(); else tilatOdottavat = true;
             }
         }
 
         // Saapumiskaari odottaa kevyttä kuorta (enintään KuoriOdotusMax s): 1.0.64-puhdasajossa kaaren 3. sekunnilla
         // kuorta ei vielä ollut ja harmaat tilapalikat näkyivät veden päällä. Odotuksen ajan aika on jäädytetty kaaren
         // alkuun (kamera kaukana järvellä), ja näyttämö piilottaa kaiken paitsi veden (DioraamaNayttamo.Odota).
-        const float KuoriOdotusMax = 10f;
+        // 4.10.: 10 → 45 s, kun odotus kattaa myös tilat (kuori ensin, ks. Paivita); yli tämän näytetään se mitä on.
+        const float KuoriOdotusMax = 45f, HaivytysS = 2.5f;
         float kuoriOdotusAlku = -1f;
+        /// <summary>Tilojen ja hahmojen lataus odottaa kuorta (TaydennaLataamattomat vasta kuoren valmistuttua).</summary>
+        bool tilatOdottavat;
+
+        int TilojaGlb()
+        {
+            int n = 0;
+            if (rakennus?.Tilat != null) foreach (var tl in rakennus.Tilat) if (!string.IsNullOrEmpty(tl.GlbTiedosto)) n++;
+            return n;
+        }
         double kuoriOdotusT;
 
         void AloitaKuoriOdotus(double t)
