@@ -1746,6 +1746,26 @@ namespace Matkakirja.Natiivi
                             Kirjaa($"astro kyyti asento: katse {ka.Lat:0.000}, {ka.Lon:0.000}, kallistus {ka.Kallistus:0.0}°, suuntima {ka.Suuntima:0.0}°, "
                                 + $"etäisyys {ka.EtaisyysM / 1000:0} km{ero}, siirretty {l.AlusSiirretty}, {l.CupolanKatse?.Tila(KatseenOletus())}");
                         }
+                        else if (a == "sijainti" && osat.Length > 3 && osat[3] == "tarkista")
+                        {
+                            // Päätoimittaja 4.10.: koko kohdelista automaattisesti (kohde → maa). Rivi per kohde tiedostoon, poikkeamat lokiin:
+                            // LCD:n maa eri kuin pisteen maa (sallittu vain, kun lähin kaupunki on rajan takana ja sen oma maa näytetään).
+                            var ai = Matkakirja.Linssit.Iss.IssSijainti.Nykyinen;
+                            var sb = new System.Text.StringBuilder(); int eri = 0, tyhja = 0, n = 0;
+                            foreach (var kh in l.Kohteet)
+                            {
+                                n++;
+                                var (lk, lm) = Matkakirja.Linssit.Iss.IssSijainti.Hae(ai, kh.Lat, kh.Lon);
+                                var pm = ai?.Maa?.Invoke(kh.Lat, kh.Lon);
+                                string piste = pm.HasValue ? pm.Value.Nimi.ToUpper(new System.Globalization.CultureInfo("fi-FI")) : "(meri)";
+                                bool poikkeaa = lm.Length > 0 && lm != piste;
+                                if (poikkeaa) eri++;
+                                if (lk.Length == 0) tyhja++;
+                                sb.AppendLine($"{kh.Tunnus}\t{kh.Nimi}\t{kh.Lat:0.00},{kh.Lon:0.00}\tLCD {lk} / {lm}\tpiste {piste}{(poikkeaa ? "\tERI MAA" : "")}");
+                            }
+                            System.IO.File.WriteAllText(System.IO.Path.Combine(Application.persistentDataPath, "sijainti-tarkistus.txt"), sb.ToString());
+                            Kirjaa($"astro kyyti sijainti tarkista: {n} kohdetta, LCD:n maa eri kuin pisteen {eri}, tyhjä {tyhja} (Documents/sijainti-tarkistus.txt)");
+                        }
                         else if (a == "sijainti") { var (k1, m1) = l.Sijainti(); Kirjaa($"astro kyyti sijainti: {k1} / {m1}"); }
                         else if (a == "kaasu" && osat.Length > 3 && int.TryParse(osat[3], out int kk))
                             Kirjaa($"astro kyyti kaasu: {(l.AsetaKaasu(kk) ? kk + "×" : "ei pykälää")}, {Matkakirja.Linssit.Iss.IssNyt.Simu}");

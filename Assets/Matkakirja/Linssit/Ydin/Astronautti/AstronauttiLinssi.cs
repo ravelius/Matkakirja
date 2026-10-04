@@ -613,7 +613,12 @@ namespace Matkakirja.Linssit.Astronautti
         {
             if (!Auki || kyyti.Tila != Iss.KyydinTila.Ikkuna || kyyti.Siirtyy || !kyyti.OnAsento || siirto.Siirtyy(Nyt / 1000)) return null;
             var a = kyyti.Viimeisin;
-            return Iss.Kuvauspaikat.Lahin(Iss.Kuvauspaikat.Nykyiset, a.Lat, a.Lon);
+            var p = Iss.Kuvauspaikat.Lahin(Iss.Kuvauspaikat.Nykyiset, a.Lat, a.Lon);
+            // Vain kun paikka näkyy ISS:ltä riittävän jyrkästi (Natiivi-UI 4.10.: Etna 1 782 km:n päästä kallistuksella 83,8° →
+            // kenttä 0,06° ja tasaisen sininen kuva); muuten COG-polku kuten muualla.
+            if (p != null && Iss.IssKuvakulma.KohteenKulma(AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000), p.Lat, p.Lon).Kallistus > Iss.Kuvauspaikat.MaxKallistus)
+                return null;
+            return p;
         }
 
         /// <summary>Tarkan kuvan kamera kuvauspaikkaan aluksen nykyisestä paikasta (Iss.Kuvauspaikat.Rajaus).</summary>

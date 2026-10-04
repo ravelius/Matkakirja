@@ -26,6 +26,8 @@ namespace Matkakirja.Natiivi
             {
                 var osuma = new MaaOsuma(LinssiOhjain.MaatAineisto);
                 a.Maa = (lat, lon) => { var m = osuma.HaeMaa(lat, lon, 0.3); return m == null ? ((string, string)?)null : (m.Id, m.Nimi); };
+                var maat = LinssiOhjain.MaatAineisto.Maat;
+                a.MaanNimi = iso => iso != null && maat.TryGetValue(iso, out var mm) ? mm.Nimi : null;
             }
             for (float t = 0; KarttaKerrokset.Instanssi?.merkit == null && t < 20f; t += Time.unscaledDeltaTime) yield return null;
             var merkit = KarttaKerrokset.Instanssi?.merkit;

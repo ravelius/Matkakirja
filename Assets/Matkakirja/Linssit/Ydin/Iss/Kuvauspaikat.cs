@@ -27,6 +27,8 @@ namespace Matkakirja.Linssit.Iss
         public static double KuvausKm = 150;
         /// <summary>Kuvan osuus kuvauspaikan koosta lyhyemmällä sivulla (reunaan jää varaa, ettei aineiston ulkopuoli näy).</summary>
         public const double RajausOsuus = 0.9;
+        /// <summary>Kuvauspaikan zeniittikulman yläraja (°): loivemmin näkyvä paikka kuvataan COG-polulla (horisontti ja usva).</summary>
+        public const double MaxKallistus = 60;
         /// <summary>Vinon kuvan epäsymmetrian varmuuskerroin rajaukseen.</summary>
         public const double Varmuus = 0.95;
         /// <summary>Ämpärin juuri (Karttaseppä 4.10.): kuva-kentän suhteellinen polku (kuvauspaikat/v1/<tunniste>.jpg) lisätään tähän.</summary>

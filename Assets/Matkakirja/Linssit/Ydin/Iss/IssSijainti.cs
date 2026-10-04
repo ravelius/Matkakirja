@@ -27,6 +27,8 @@ namespace Matkakirja.Linssit.Iss
         public sealed class Aineisto
         {
             public Func<double, double, (string Iso, string Nimi)?> Maa;
+            /// <summary>ISO3 → maan nimi (kaupungin oma maa LCD:n toiselle riville); null = pisteen maa.</summary>
+            public Func<string, string> MaanNimi;
             public readonly List<Paikka> Kaupungit = new List<Paikka>(), Vuoret = new List<Paikka>(),
                 Meret = new List<Paikka>(), Valtameret = new List<Paikka>();
         }
@@ -51,7 +53,13 @@ namespace Matkakirja.Linssit.Iss
             {
                 string m = Iso(maa.Value.Nimi);
                 var k = Lahin(a.Kaupungit, lat, lon, KaupunkiKm, maa.Value.Iso) ?? Lahin(a.Kaupungit, lat, lon, KaupunkiKm, null);
-                if (k.HasValue) return (Iso(k.Value.Nimi), m);
+                // Kaupungin oma maa (Päätoimittaja 4.10.: "BERLIINI / PUOLA" — alapiste Puolassa, lähin kaupunki Berliini): nimi ja
+                // maa kuuluvat aina yhteen; vain jos kaupungin maata ei tunneta, pisteen maa.
+                if (k.HasValue)
+                {
+                    string km = k.Value.Maa != null && k.Value.Maa != maa.Value.Iso ? a.MaanNimi?.Invoke(k.Value.Maa) : null;
+                    return (Iso(k.Value.Nimi), string.IsNullOrEmpty(km) ? m : Iso(km));
+                }
                 var v = Lahin(a.Vuoret, lat, lon, VuoriKm, null);
                 if (v.HasValue) return (Iso(v.Value.Nimi), m);
                 return (m, "");

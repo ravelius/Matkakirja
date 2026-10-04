@@ -49,5 +49,19 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(("ITALIA", ""), IssSijainti.Hae(a, 41.9, 12.5));
             Oleta.Sama(("", ""), IssSijainti.Hae(null, 0, 0), "ei aineistoa");
         }
+    
+        [Testi] static void KaupunkiOmanMaansaKanssa()
+        {
+            // Päätoimittaja 4.10.: alapiste Puolassa, lähin kaupunki Berliini → "BERLIINI / SAKSA", ei "BERLIINI / PUOLA".
+            var a = new IssSijainti.Aineisto
+            {
+                Maa = (lat, lon) => lon > 14.6 ? ("POL", "Puola") : ("DEU", "Saksa"),
+                MaanNimi = iso => iso == "DEU" ? "Saksa" : iso == "POL" ? "Puola" : null,
+            };
+            a.Kaupungit.Add(new IssSijainti.Paikka("Berliini", 52.52, 13.40, "DEU", 3));
+            Oleta.Sama(("BERLIINI", "SAKSA"), IssSijainti.Hae(a, 52.40, 15.20), "Puolan puolelta");
+            Oleta.Sama(("BERLIINI", "SAKSA"), IssSijainti.Hae(a, 52.50, 13.50));
+            Oleta.Sama(("Berliini", "Saksa"), IssSijainti.Nimet(a, 52.40, 15.20), "kuvateksti");
+        }
     }
 }
