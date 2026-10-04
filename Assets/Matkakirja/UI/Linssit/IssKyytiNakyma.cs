@@ -483,20 +483,19 @@ namespace Matkakirja.Natiivi
             omatKuvat.AsetaPino(kyydissa, t.x + 12f, Mathf.Max(0f, H - yla + 10f));
         }
 
-        /// <summary>Sijaintilista: Oma sijainti (karkea, maan keskipiste) ja astronauttikierroksen kohteet aakkosjärjestyksessä.</summary>
+        /// <summary>Sijaintilista: Oma sijainti (karkea, maan keskipiste) ja enintään 30 lähintä astronauttikierroksen kohdetta.</summary>
         static IReadOnlyList<IssSijaintiIkkuna.Kohde> SijaintiKohteet()
         {
             var l = new List<IssSijaintiIkkuna.Kohde>();
             if (OmaSijaintiHaku.Paikka(out var nimi, out var lat, out var lon)) l.Add(new IssSijaintiIkkuna.Kohde($"Oma sijainti ({nimi})", lat, lon));
             else if (!OmaSijaintiHaku.Haettu) OmaSijaintiHaku.Aloita();
-            var kohteet = Linssi()?.Kohteet;
-            if (kohteet != null)
+            var linssi = Linssi();
+            if (linssi?.Kohteet != null)
             {
-                var j = new List<IssSijaintiIkkuna.Kohde>();
-                foreach (var k in kohteet) if (!string.IsNullOrEmpty(k.Nimi)) j.Add(new IssSijaintiIkkuna.Kohde(k.Nimi, k.Lat, k.Lon));
-                var fi = System.Globalization.CultureInfo.GetCultureInfo("fi-FI").CompareInfo;
-                j.Sort((x, y) => fi.Compare(x.Nimi, y.Nimi));
-                l.AddRange(j);
+                // Enintään 30 lähintä aluksen alapistettä etäisyysjärjestyksessä (Päätoimittaja 4.10.2026; sama sääntö webissä).
+                var (aLat, aLon) = linssi.AlusAlapiste();
+                foreach (var k in KohdeRajaus.Lahimmat(linssi.Kohteet.FindAll(x => !string.IsNullOrEmpty(x.Nimi)), x => x.Lat, x => x.Lon, x => x.Nimi, aLat, aLon))
+                    l.Add(new IssSijaintiIkkuna.Kohde(k.Nimi, k.Lat, k.Lon));
             }
             return l;
         }
@@ -638,10 +637,13 @@ namespace Matkakirja.Natiivi
         void VaihdaLista()
         {
             if (lista.style.display == DisplayStyle.Flex) { SuljeLista(); return; }
-            if (!listaTaytetty)
+            // Joka avauksella uudelleen: enintään 30 kohdetta lähimpänä aluksen alapistettä (Päätoimittaja 4.10.2026, KohdeRajaus).
             {
-                var kohteet = Linssi()?.YlilennonKohteet;
-                if (kohteet == null || kohteet.Count == 0) return;
+                var l = Linssi();
+                if (l?.YlilennonKohteet == null || l.YlilennonKohteet.Count == 0) return;
+                var (aLat, aLon) = l.AlusAlapiste();
+                var kohteet = KohdeRajaus.Lahimmat(l.YlilennonKohteet, k => k.Lat, k => k.Lon, k => k.Nimi, aLat, aLon);
+                lista.Clear();
                 listaTaytetty = true;
                 // Oma sijainti ensin (karkea: maan keskipiste IP:n maasta, ilman lupakyselyä; OmaSijaintiHaku).
                 omaNappi = Rakenne.Nappi(OmaSijaintiHaku.Rivi(), "mk-isskyyti__kohde", () => { SuljeLista(); omaLento = true; LennaOmaan(); }, lista);
