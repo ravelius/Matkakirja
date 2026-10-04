@@ -651,7 +651,7 @@ namespace Matkakirja.Linssit.Astronautti
         /// Joystickin liikkeen suhina (omistaja: "kun alus liikkuu, pitäisi kuulua äänitehoste, vaikka vähän voimakkaampi suhina"):
         /// aito äänite silmukkana (Sisältökirjuri), soi kun JoystickLiikkuu, häivytys SuhinaLiukuS. null = ei ääntä.
         /// </summary>
-        public static string SuhinaUrl = "https://media.matkakirja.app/aanet/cupola/ohjaamo/v1/joystick-suhina.mp3";
+        public static string SuhinaUrl = "https://media.matkakirja.app/aanet/cupola/ohjaamo/v1/iss-kaasu-suhina-loop.wav";
         public const float SuhinaLiukuS = 0.1f;
         ISilmukka suhina;
 

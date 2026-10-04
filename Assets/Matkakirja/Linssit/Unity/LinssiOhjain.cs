@@ -414,6 +414,7 @@ namespace Matkakirja.Natiivi
         {
             StartCoroutine(IssSijaintiLataaja.Lataa());   // ohjaamon LCD:n paikkadata (omistaja 4.10.)
             StartCoroutine(IssKameraKuva.LataaPaikat());   // tarkan ISS-kuvan kuvauspaikat (omistaja 4.10.)
+            StartCoroutine(OhjaamonAanet.Lataa());   // kaasun naksahdus ja kameran laukaisin (Sisältökirjuri, CC0)
             string data = null, kysymykset = null;
             yield return LinssiSisalto.Hae("moduulit/js/linssit/satelliitti-data.json", t => data = t);
             yield return LinssiSisalto.Hae("moduulit/js/linssit/astronaut-kysymykset.json", t => kysymykset = t);

@@ -162,6 +162,7 @@ namespace Matkakirja.Natiivi
             if (paikka != null)
             {
                 if (KuviaJaljella <= 0) { Tila = "ei kuvia"; Loki($"kuvaa: {paikka.Tunniste}, ei kuvia jäljellä (otettu {Otettu})"); return false; }
+                Aanet.Tehoste(OhjaamonAanet.Laukaisin);   // laukaisimen aito naksahdus (Sisältökirjuri)
                 StartCoroutine(AjoPaikka(kamera, kerros.Linssi, paikka, leveys, leveys * mh / mw, muoto));
                 return true;
             }
