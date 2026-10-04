@@ -1942,6 +1942,12 @@ namespace Matkakirja.Natiivi
                                     + $", paikkoja {Matkakirja.Linssit.Iss.Kuvauspaikat.Nykyiset.Count}, kuvia jäljellä {Matkakirja.Natiivi.IssKameraKuva.KuviaJaljella}");
                             }
                             else if (osat.Length > 4 && osat[3] == "budjetti") { Matkakirja.Natiivi.IssKameraKuva.BudjettiMt = Luku(osat[4]); Kirjaa("astro kyyti kuvaa budjetti: " + osat[4] + " Mt"); }
+                            else if (osat.Length > 4 && osat[3] == "valotus")
+                            {
+                                Matkakirja.Natiivi.IssKameraKuva.ValotusTavoite = (float)Luku(osat[4]);
+                                if (osat.Length > 5) Matkakirja.Natiivi.IssKameraKuva.ValotusMax = (float)Luku(osat[5]);
+                                Kirjaa($"astro kyyti kuvaa valotus: tavoite {Matkakirja.Natiivi.IssKameraKuva.ValotusTavoite}, max {Matkakirja.Natiivi.IssKameraKuva.ValotusMax}");
+                            }
                             else if (osat.Length > 4 && osat[3] == "reuna") { Matkakirja.Natiivi.IssKameraKuva.ReunaKarkeus = Luku(osat[4]); Kirjaa("astro kyyti kuvaa reuna: " + osat[4]); }
                             else if (osat.Length > 4 && osat[3] == "kentta") { Matkakirja.Natiivi.IssKameraKuva.MaxKentta = Luku(osat[4]); Kirjaa("astro kyyti kuvaa kentta: " + osat[4] + "°"); }
                             else if (osat.Length > 3 && osat[3] == "albumi")

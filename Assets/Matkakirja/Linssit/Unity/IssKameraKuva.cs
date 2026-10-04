@@ -642,6 +642,7 @@ namespace Matkakirja.Natiivi
                     var kuva = new Texture2D(W, H, TextureFormat.RGBA32, false);
                     kuva.LoadRawTextureData(lukija.GetData<byte>()); kuva.Apply(false);
                     if (Avaruus.KuvanNousu > 0.01f) Heijastukset(kuva, kamera, W, H, Avaruus.KuvanNousu);
+                    Valota(kuva);
                     var j = kuva.EncodeToJPG(93); Destroy(kuva);
                     if (k == 0) jpg = j; else { File.WriteAllBytes(Path.Combine(albumi, $"{id}-{k}.jpg"), j); Loki($"sarjakuva {k} (+{10 * k} s)"); }
                 }
@@ -780,6 +781,7 @@ namespace Matkakirja.Natiivi
                 if (lukija.hasError) { Loki("luku epäonnistui"); yield break; }
                 var kuva = new Texture2D(W, H, TextureFormat.RGBA32, false);
                 kuva.LoadRawTextureData(lukija.GetData<byte>()); kuva.Apply(false);
+                Valota(kuva);
                 var jpg = kuva.EncodeToJPG(93); Destroy(kuva);
                 string albumi = Path.Combine(Application.persistentDataPath, "iss-albumi"); Directory.CreateDirectory(albumi);
                 ViimeisinKuva = Path.Combine(albumi, id + ".jpg");
@@ -820,6 +822,30 @@ namespace Matkakirja.Natiivi
             if (q.result != UnityWebRequest.Result.Success) { Loki($"haku {Path.GetFileName(tiedosto)}: {q.error}"); valmis(null); yield break; }
             File.WriteAllBytes(tiedosto, q.downloadHandler.data);
             valmis(q.downloadHandler.text);
+        }
+
+        /// <summary>
+        /// Kuvan automaattivalotus kuten kamerassa (Päätoimittaja 4.10.: usva ja valotus; simu a10a2777: Amazonia liian tumma): kuvan
+        /// keskikirkkaus (Rec. 709, sRGB-tavuina) kohti ValotusTavoite; vain kirkastus, enintään ValotusMax-kertaiseksi (tummaa ei
+        /// nosteta harmaaksi), kirkkaita kuvia ei tummenneta. Testikomento `astro kyyti kuvaa valotus <tavoite> [max]`.
+        /// </summary>
+        public static float ValotusTavoite = 0.36f, ValotusMax = 1.8f;
+
+        static void Valota(Texture2D kuva)
+        {
+            var px = kuva.GetPixelData<Color32>(0);
+            double summa = 0; int n = 0;
+            for (int i = 0; i < px.Length; i += 37) { var c = px[i]; summa += 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b; n++; }
+            double keski = n > 0 ? summa / n / 255.0 : 1;
+            float k = (float)Math.Max(1.0, Math.Min(ValotusMax, ValotusTavoite / Math.Max(0.01, keski)));
+            Loki($"valotus: keskikirkkaus {keski:0.000}, kerroin {k:0.00}");
+            if (k <= 1.01f) return;
+            for (int i = 0; i < px.Length; i++)
+            {
+                var c = px[i];
+                px[i] = new Color32((byte)Math.Min(255, c.r * k + 0.5f), (byte)Math.Min(255, c.g * k + 0.5f), (byte)Math.Min(255, c.b * k + 0.5f), c.a);
+            }
+            kuva.Apply(false);
         }
 
         /// <summary>Range-haut enintään Rinnakkain kerrallaan, purku säikeissä; tila: [0] saatu, [1] virheet.</summary>
