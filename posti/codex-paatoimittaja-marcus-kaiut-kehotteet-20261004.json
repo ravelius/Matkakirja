@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-04",
+  "request": "posti/fable-codex-marcus-kaiut-yksinkertaiset-20261003.md",
+  "requestCommit": "3e426b426763d86cbf8edd28db0fac4b822e9867",
+  "state": "local-reviewed-delivery",
+  "images": [
+    {
+      "key": "sade",
+      "file": "posti/codex-paatoimittaja-marcus-kaiku-sade-20261003.png",
+      "nativeFile": "output/marcus-kaiut-20261004/alkuperaiset/sade.png",
+      "nativeDimensions": [
+        1254,
+        1254
+      ],
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "LA",
+      "alphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBBoxAlpha16": [
+        122,
+        58,
+        1925,
+        1988
+      ],
+      "channelDifference": 0,
+      "sha256": "60badf16f212e457eade10434caffcfbefe4632dba2885d413a1bcf148dc59e4",
+      "tool": "built-in image_gen",
+      "transparent_background": true,
+      "prompt": "One isolated, simple white plaster sculpture photographed with soft side light. Strict neutral grayscale, no color. The ancient Roman rain god from the Column of Marcus Aurelius: one mature bearded man with two wings, both arms spread sideways; thin sculpted water streams and rounded drops descend from his beard and undersides of both arms. No other people. Readable uncluttered broad forms, pale marble or plaster, calm closed mouth. Entire wings, hands and water visible. Square composition, subject occupies 80 percent of canvas with at least 8 percent EMPTY TRANSPARENT margin on all sides. TRUE TRANSPARENT BACKGROUND, alpha zero outside the sculpture and in every gap. No backdrop, no glow, no halo, no gradient, no floor, no cast shadows outside the sculpture, no pedestal, no frame, no text. The figure and its water are the only visible pixels. Long edge 2048 pixels if available.",
+      "export": "sips grayscale ICC conversion and resizing; alpha retained; enlargement adds no original detail"
+    },
+    {
+      "key": "uhri",
+      "file": "posti/codex-paatoimittaja-marcus-kaiku-uhri-20261003.png",
+      "nativeFile": "output/marcus-kaiut-20261004/alkuperaiset/uhri.png",
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "dimensions": [
+        2048,
+        3072
+      ],
+      "mode": "LA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleBBoxAlpha16": [
+        156,
+        52,
+        1772,
+        2922
+      ],
+      "channelDifference": 0,
+      "sha256": "9dea77609301b7eb1d1bff3ca1e356239607c10d73ae3e559d6a181629316a0b",
+      "tool": "built-in image_gen",
+      "transparent_background": true,
+      "prompt": "One isolated, simple white marble sculpture photographed with soft side light. Strict neutral grayscale, no color. Marcus Aurelius alone, curly hair and full beard, full standing figure in a Roman toga pulled over his head, performing a sacrifice. His anatomical RIGHT hand extends toward viewer's left, holding a shallow patera bowl directly over one small plain low altar. His left hand gathers toga at his waist. Entire head, both hands, sandal-clad feet and altar visible. Broad simple drapery folds. No assistants, bull, temple, flames or other people. Portrait composition, figure occupies 80 percent of canvas, at least 8 percent EMPTY TRANSPARENT margin on all sides. TRUE TRANSPARENT BACKGROUND, alpha zero outside figure and altar and in every gap. No backdrop, no glow, no halo, no gradient, no floor, no cast shadows outside objects, no pedestal or plinth under feet, no frame, no text. Only white sculpted figure, bowl and small altar are visible. Long edge 2048 pixels if available.",
+      "export": "sips grayscale ICC conversion and resizing; alpha retained; enlargement adds no original detail"
+    },
+    {
+      "key": "kuolinvuode",
+      "file": "posti/codex-paatoimittaja-marcus-kaiku-kuolinvuode-20261003.png",
+      "nativeFile": "output/marcus-kaiut-20261004/alkuperaiset/kuolinvuode.png",
+      "nativeDimensions": [
+        1536,
+        1024
+      ],
+      "dimensions": [
+        3072,
+        2048
+      ],
+      "mode": "LA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "visibleBBoxAlpha16": [
+        110,
+        281,
+        2934,
+        1847
+      ],
+      "channelDifference": 0,
+      "sha256": "da3bd514ba96edf40622c4b61e04fb2854278105622e16f8ffaa0a83384b606d",
+      "tool": "built-in image_gen",
+      "transparent_background": true,
+      "prompt": "One isolated simple white marble sculpture photographed with soft side light. Strict neutral grayscale, no color. Marcus Aurelius alone on his deathbed, inspired by Delacroix's Last Words of Marcus Aurelius pose: mature curly-haired bearded emperor reclining on a plain narrow bed, head and upper torso gently raised by one pillow on the viewer's left, legs extending to the right beneath simple Roman drapery, one hand extended calmly forward with open relaxed fingers, other hand resting on drapery. One man, two arms and two hands. Entire man, pillow and short plain bed legs visible. Broad simple forms, no decorated bed, no friends or attendants. Landscape composition, subject occupies 80 percent of canvas with at least 8 percent EMPTY TRANSPARENT margin all around. TRUE TRANSPARENT BACKGROUND, alpha zero outside man and bed and in every gap. No backdrop, no glow, no halo, no gradient, no floor, no cast shadows outside objects, no pedestal, no frame, no text. Only white sculpture of man and simple bed are visible. Long edge 2048 pixels if available.",
+      "export": "sips grayscale ICC conversion and resizing; alpha retained; enlargement adds no original detail"
+    }
+  ],
+  "qa": {
+    "allSubjectsComplete": true,
+    "singleFigures": true,
+    "noUnrequestedCharacters": true,
+    "waterFromBeardAndArms": true,
+    "sacrificeRightHandPateraAboveAltar": true,
+    "deathbedCalmReachingHand": true,
+    "actualAlphaCompositedOnBlack": true,
+    "actualGameProjectionTested": false
+  },
+  "deliveryState": "validated-branch-delivery",
+  "gameIntegrated": false,
+  "published": false
+}
