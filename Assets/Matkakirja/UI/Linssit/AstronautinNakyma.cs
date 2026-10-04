@@ -45,8 +45,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Musta ruutu näkyy näin kauan ennen häivytystä (omistaja: "feidaa oikeaan näkymään 2sek jälkeen").</summary>
         public const int CupolanMustaMs = 2000;
         /// <summary>
-        /// Enimmäisodotus: musta pysyy, kunnes Cupolan kehys on ladattu (IssKyytiNakyma.Kuva2Tila) ja pallon laatat ovat paikallaan
-        /// (simu 6e8576ff: kehys valmis vasta ~3 s:n kohdalla, ja häivytyksen jälkeen näkyi ensin kehyksetön harmaa pallo).
+        /// Enimmäisodotus: musta jatkuu 2 s:n yli vain, jos Cupolan kehys ei ole vielä ladattu (IssKyytiNakyma.Kuva2Tila; kehys
+        /// esiladataan linssin avautuessa). Laattoja ei odoteta (Päätoimittaja 4.10.: simussa 4 s toi vain 12 %).
         /// </summary>
         public const int CupolanMustaMaxMs = 4000;
         float cupolaAlku;
@@ -164,7 +164,8 @@ namespace Matkakirja.Natiivi
             cupolaPiilotus?.Pause();
             // Tuhaterotin tavallisena välilyöntinä (simu 6e8576ff: lukukirjaimessa U+00A0 näkyi leveänä aukkona "27  600").
             cupolaKorkeus.text = $"Lentokorkeus {KyydinTeksti.Luku(a.KorkeusKm).Replace('\u00a0', ' ')} km";
-            cupolaNopeus.text = $"Nopeus {KyydinTeksti.Luku(Math.Floor(a.NopeusKmh / 100 + 0.5) * 100).Replace('\u00a0', ' ')} km/h";
+            // Sama lähde ja pyöristys kuin ohjaamon tietorivillä (Päätoimittaja 4.10.: musta 27 600 vs. LCD 27 560).
+            cupolaNopeus.text = $"Nopeus {KyydinTeksti.Nopeus(a.NopeusKmh).Replace('\u00a0', ' ')} km/h";
             var d = TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(a.Utc, DateTimeKind.Utc), TimeZoneInfo.Local);
             cupolaAika.text = $"{d.Day}.{d.Month}.{d.Year} klo {d.Hour}.{d.Minute:00}";
             cupolaMusta.RemoveFromClassList("mk-astroavaus--haipyy");
@@ -183,8 +184,7 @@ namespace Matkakirja.Natiivi
                 var pallo = KarttaKerrokset.Instanssi?.pallo;
                 bool kehys = IssKyytiNakyma.Kuva2Tila != null || CupolaKerros.Tyyli != CupolaKerros.Tyylit.Kuva;
                 float lataus = pallo != null ? pallo.ComputeLoadProgress() : 100f;
-                bool laatat = lataus >= 95f;
-                if (ms < CupolanMustaMaxMs && (!kehys || !laatat)) return;
+                if (ms < CupolanMustaMaxMs && !kehys) return;
                 cupolaHaivytys.Pause();
                 Debug.Log($"MATKAKIRJA linssit: cupolan musta häivyy {ms:0} ms (kehys {(kehys ? "valmis" : "kesken")}, laatat {lataus:0} %)");
                 cupolaMusta.pickingMode = PickingMode.Ignore;
