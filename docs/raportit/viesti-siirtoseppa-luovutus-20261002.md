@@ -114,3 +114,17 @@ Natiivisepälle, viestit Päätoimittajalle ≤ 8 riviä, osoitin vain omistajan
   testikomento linssi-komento "esilataa linna".
 - AVOIN: simu ~15.40 (ajo-vapaa-tila.sh: latausrivit 5/10 s, vapaa tila, keittiö ääni C, välimuistin koko), iPad (laite-sha b80d034a +
   ajo-ipad-saapuminen.sh A/B) → Päätoimittajalle, sitten merge-pyyntö Natiivisepälle junaan 138.
+
+### 4.10. klo 16.4x — JUNA 138 YHDISTETTY, AVOIMET
+- JUNA 138: siirtoseppa/juna138-esilataus = fad924af (sis. 6bdf9fc3 + ympäristö ei odota kuorta 0abd54bb + ympäristön osat rinnakkain),
+  Natiiviseppä yhdisti (0e759cf5). iPad Release: esiladattu odotus 2,7 s / häivytys 3,4 s (ennen 3,8 / 4,6), puhdas 62,5 s (ennen 78,7).
+- kuori-esilataus-haaran kärki d93368d3 (EI junassa, todentamatta): f9296d52 täyden tarkkuuden odotus laskee kaikki tilat (oli glb-tilat,
+  näkyi 9/8); d93368d3 päivä-JPEG-vara ulkokuori.tekstuurit.jpg.{kevyt,normaali,huippu}. AVOIN: Linnanrakentajan paketti jpg-avaimilla →
+  simulla todennus (simu ei tue ASTC:tä → JPEG-polku) → merge-pyyntö junaan 139.
+- 6×6-koe 72baa933 iPadilla (lokit/siirtoseppa-6x6-ipad/, ajo-ipad-6x6.sh): kuoren 167–209 ms piikki poistuu, laatuero ei näy;
+  raportoitu Linnanrakentajalle ja Päätoimittajalle.
+- Apulaisen ääni dcd12230 keittiössä soi (lokit/siirtoseppa-keittio-c/); mikseritiedostot /aanet/mikseri/v2/apulainen-* ovat 30.9. →
+  Linnanrakentaja vahvistaa, onko se ääni C.
+- OPASTEKOE (ei junaan): haara siirtoseppa/opasteet-koe bbaab893 (worktree wt/proto-siirtoseppa-opaste): laput säteittäin nastaryhmästä,
+  viivat eivät risteä. Edellinen still (lokit/siirtoseppa-opasteet3/) ei kelvannut (viivat ristissä). AVOIN: käännös kuori-esilataus+
+  bbaab893, ajo-opasteet.sh (ABSOLUUTTISET polut L/APP — simctl --stdout ei toimi suhteellisella), arkki Päätoimittajalle vasta kun kelpaa.
