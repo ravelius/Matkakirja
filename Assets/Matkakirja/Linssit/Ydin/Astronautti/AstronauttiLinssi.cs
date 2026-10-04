@@ -188,6 +188,7 @@ namespace Matkakirja.Linssit.Astronautti
         public void Paivita()
         {
             if (!Auki) return;
+            PaivitaSuhina();
             double nyt = Nyt;
             PaivitaAvaus(nyt);
             double s = Suhde;
@@ -511,6 +512,59 @@ namespace Matkakirja.Linssit.Astronautti
         public (Havaintokohde Kohde, Iss.Ylilento? Hetki, bool Perilla)? ViimeisinLento =>
             lento == null ? ((Havaintokohde, Iss.Ylilento?, bool)?)null : (lento.Kohde, lento.Ylilento, lento.Perilla);
 
+        // ---- OHJAAMO (omistaja 4.10.2026 klo 11.3x "ISS-OHJAAMO UUSIKSI"; UI Natiivi-UI, logiikka tässä) ----
+
+        /// <summary>
+        /// Joystick (plus-muotoinen): kutsu vain muutoksessa (painallus, suunnan vaihto, irrotus = Ei). Katse liikkuu Cupolassa
+        /// IssKatse.Askeleessa pidon ajan, kiihtyy hieman ja pysähtyy heti irrotettaessa (ei inertiaa).
+        /// </summary>
+        public void Joystick(Iss.JoystickSuunta suunta) => kyyti.Katse.Ohjaa(suunta, y?.Aika ?? 0);
+
+        /// <summary>Joystick pidossa ja katse liikkuu (suhinaääni, paneelin animaatio).</summary>
+        public bool JoystickLiikkuu => kyyti.Katse.JoystickLiikkuu;
+
+        /// <summary>Kaasun asento (ajan kerroin 1, 10, 100 tai 1000).</summary>
+        public int Kaasu { get; private set; } = 1;
+
+        /// <summary>Kaasun asento vaihtui (Unity: vivun naksahdus).</summary>
+        public event Action<int> KaasuVaihtui;
+
+        /// <summary>
+        /// Kaasu (omistaja: "kaasu, jolla voi säätää ajan kulumisen nopeutta", 1×/10×/100×/1000×): ajan kerroin tästä hetkestä ilman
+        /// hyppyä, myös 1× (toisin kuin AsetaNopeus, jonka 1 palaa LIVE-hetkeen). Ylilento unohtuu. false = ei auki tai ei pykälä.
+        /// </summary>
+        public bool AsetaKaasu(int kerroin)
+        {
+            if (!Auki || Array.IndexOf(Iss.Simukello.Nopeudet, kerroin) < 0) return false;
+            lento = null;
+            Iss.IssNyt.Simu.AsetaKerroin(kerroin);
+            tietoAika = -1;
+            if (kerroin != Kaasu)
+            {
+                Kaasu = kerroin;
+                y?.Tehoste(KaasuTehoste, 1f);   // vivun pykälän aito naksahdus (Sisältökirjuri, Tehostetaulu)
+                KaasuVaihtui?.Invoke(kerroin);
+            }
+            return true;
+        }
+
+        /// <summary>Vivun naksahduksen tehostetunnus Tehostetaulussa (Sisältökirjuri: aito äänite, ei generoitua).</summary>
+        public const string KaasuTehoste = "iss-kaasu";
+        /// <summary>
+        /// Joystickin liikkeen suhina (omistaja: "kun alus liikkuu, pitäisi kuulua äänitehoste, vaikka vähän voimakkaampi suhina"):
+        /// aito äänite silmukkana (Sisältökirjuri), soi kun JoystickLiikkuu, häivytys SuhinaLiukuS. null = ei ääntä.
+        /// </summary>
+        public static string SuhinaUrl = "https://media.matkakirja.app/aanet/cupola/ohjaamo/v1/joystick-suhina.mp3";
+        public const float SuhinaLiukuS = 0.1f;
+        ISilmukka suhina;
+
+        void PaivitaSuhina()
+        {
+            bool cupola = kyyti.Tila == Iss.KyydinTila.Ikkuna;
+            if (suhina == null && cupola && !string.IsNullOrEmpty(SuhinaUrl) && y != null) suhina = y.Silmukka(SuhinaUrl);
+            suhina?.Voimakkuus(cupola && JoystickLiikkuu ? 1f : 0f, SuhinaLiukuS);
+        }
+
         /// <summary>Nopeutus (web asetaNopeus): 1 = Palaa LIVE (pehmeä kelaus todelliseen hetkeen), 10, 100 tai 1000. Ylilento unohtuu.</summary>
         public bool AsetaNopeus(int kerroin)
         {
@@ -716,6 +770,10 @@ namespace Matkakirja.Linssit.Astronautti
             if (!Auki) return;
             LopetaSeuranta();
             LopetaKyyti();
+            kyyti.Katse.Ohjaa(Iss.JoystickSuunta.Ei, y?.Aika ?? 0);
+            suhina?.Lopeta(SuhinaLiukuS);
+            suhina = null;
+            Kaasu = 1;
             // Web pura: linssi suljetaan, aika heti todelliseksi (testikellon siirto säilyy).
             lento = null;
             Iss.IssNyt.Simu.PalaaLive(vahennetty: true);

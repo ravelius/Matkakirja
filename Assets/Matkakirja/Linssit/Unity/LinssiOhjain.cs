@@ -1712,6 +1712,11 @@ namespace Matkakirja.Natiivi
                         // veto <dx> <dy> [ms] simuloi sormen vedon pisteinä (ms > 0 jättää inertian).
                         else if (a == "katse" && osat.Length > 3) Kirjaa("astro kyyti katse: " + KyydinKatse(l, osat.Skip(3).ToArray()));
                         else if (a == "veto") Kirjaa("astro kyyti veto: " + KyydinVeto(l, osat.Skip(3).ToArray()));
+                        // Ohjaamo (omistaja 4.10.): joystick <ylos|alas|vasen|oikea|ei> ja kaasu <1|10|100|1000>.
+                        else if (a == "joy" && osat.Length > 3 && Enum.TryParse<Matkakirja.Linssit.Iss.JoystickSuunta>(osat[3], true, out var js))
+                        { l.Joystick(js); Ruudunpaivitys.Herata(1f); Kirjaa($"astro kyyti joy: {js}, {l.CupolanKatse.Tila(KatseenOletus())}"); }
+                        else if (a == "kaasu" && osat.Length > 3 && int.TryParse(osat[3], out int kk))
+                            Kirjaa($"astro kyyti kaasu: {(l.AsetaKaasu(kk) ? kk + "×" : "ei pykälää")}, {Matkakirja.Linssit.Iss.IssNyt.Simu}");
                         else if (a == "tumma" && osat.Length > 3 && float.TryParse(osat[3].Replace(',', '.'),
                                      System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float tumma))
                         {
