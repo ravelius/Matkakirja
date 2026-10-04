@@ -10455,3 +10455,15 @@ Omistaja 4.10.2026 klo 18.4x Siirtosepän opastekuvista (proto-3d/lokit/siirtose
 ## OMISTAJA: POSTIVAHDIN PUSH-ILMOITUKSET POIS — SESSION OMA PONNAHDUSIKKUNA RIITTÄÄ (4.10.2026 klo 19.17)
 
 Omistaja 4.10.2026 klo 19.1x sanatarkasti: "Posti vahdin popup ilmoituksen voi ottaa pois koska oikean session pop up tulee myös perille". Linja (muuttaa 3.10. klo 18.1x säännön ODOTTAA OMISTAJAA → PUSH): kun rooli odottaa omistajan lupaa tai päätöstä, omistaja saa ilmoituksen session omasta ponnahdusikkunasta, eikä Postivahti tai Päätoimittaja lähetä erillistä PushNotificationia. Postivahti seuraa roolien tiloja edelleen 5 min välein ja kertoo odotuksen rivillä Päätoimittajalle. Kaikkien sessioiden Remote Control pidetään päällä. Raamattu päivitetty (Ydinajatus 2 E).
+
+## OMISTAJA: OLAVINLINNAN NIMILAPUT VASTA KUN KOHTEET EROTTUVAT, LAPPUKOHTAISESTI, AINA VÄHINTÄÄN YKSI (4.10.2026 klo 19.49)
+
+Omistaja 4.10.2026 klo 19.1x puhelimelta opastearkista (kaappaus docs/raportit/kaappaukset/omistaja-20261004/opasteet-liian-sekava-1917.png) sanatarkasti: "Tämä on liian sekava näkymä. Laput saa tulla näkyviin vasta kun itse kohteet näkyvät selvemmin." Tarkennukset 19.3x: "Lappuja voi näkyä myös kauempaa mutta ei kaikkia" ja "Ja kannattaakin näkyä ainakin yksi". Linja (muuttaa 18.4x "aina yleisnäkymässä"): nimilaput käydään läpi tärkeysjärjestyksessä (datakenttä tilat[].lappujarjestys; ehdotus Keittiö, Kappeli, Fatabuuri, Laituri, Keskushalli, Muurinharja, Kierreportaat). Ensimmäinen ruudulla oleva näkyy aina, ja muut näkyvät, kun niiden nasta on vähintään 42 pt valituista eikä lappu mene päällekkäin. Kukin häivytetään erikseen (0,35 s). Siirtoseppä (haara siirtoseppa/nimilaput 4b04964b); vertailustillit Päätoimittajalle ennen omistajaa.
+
+## OMISTAJA: ISS-KUVANÄKYMÄN AUTO EI ALOITA LUENTAA ALUSTA (4.10.2026 klo 19.49)
+
+Omistaja 4.10.2026 klo 19.4x sanatarkasti: "Iss : kun pelaaja painaa auto moden päälle, niin luennan pitää jatkua ilman että se hyppää tekstin alkuun". Linja: astronauttien kuvanäkymässä AUTOn kytkeminen päälle tai pois kesken luennan ei katkaise eikä aloita luentaa alusta. Luenta jatkuu kohdastaan, ja AUTO siirtyy seuraavaan vasta luennan loputtua. Natiivi-UI, juna 140, todisteena äänellinen natiivikaappaus.
+
+## OMISTAJA: AJATTELIJOIDEN PÄÄT NÄKYVÄT KARTALLA VAIN AJATTELIJAN MAASSA (4.10.2026 klo 19.49)
+
+Omistaja 4.10.2026 klo 19.4x sanatarkasti: "Ajattelijoiden päät saavat näkyä vain kohde maassa oltaessa". Linja: kartan ajattelijapäät (kipsipäät) näkyvät vain, kun pelaaja on ajattelijan maassa (Sokrates Kreikassa, Marcus Italiassa, Kierkegaard Tanskassa); muualla ne ovat piilossa myös kaukozoomissa. Omistajan oma käsky, joten ajattelijoiden tauko korjauslistaan asti ei koske tätä. Linssiseppä 1, natiivi, juna 140.
