@@ -876,6 +876,8 @@ namespace Matkakirja.Editori
             // ISS-kameran osto (Päätoimittaja 4.10.2026, juna 138; LS2:n MatkakirjaKauppa.swift, StoreKit 2): kehys linkitetään
             // UnityFrameworkiin (iOS 17 → ei heikkoa linkitystä), ja Swift-liitännäinen tarvitsee kielen version samaan kohteeseen.
             projekti.AddFrameworkToProject(kehys, "StoreKit.framework", false);
+            // ISS-kuvan tallennus Kuviin (LS2:n MatkakirjaValokuva.mm, PHPhotoLibrary .addOnly).
+            projekti.AddFrameworkToProject(kehys, "Photos.framework", false);
             projekti.SetBuildProperty(kehys, "SWIFT_VERSION", "5.0");
             projekti.WriteToFile(projektiPolku);
         }
