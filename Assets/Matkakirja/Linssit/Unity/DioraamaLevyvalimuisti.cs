@@ -1,15 +1,24 @@
 // DIORAAMAN LEVYVÄLIMUISTI (Siirtoseppä 30.9.2026): TF 1.0.61 -löydöksen jälkeen Blender-paketti (kuori, leivotut
 // atlakset) tulee ämpäristä, ja iPhone lataa linssiä avattaessa 150–250 Mt (iPad Pro ~400 Mt). Ilman välimuistia
-// jokainen avaus latasi kaiken uudelleen. Hash-kansion tiedostot ovat muuttumattomia (vie-dioraama.yml: immutable),
-// joten polku riittää avaimeksi:
-//   <temporaryCachePath>/dioraama/<rakennus>/<hash>/<paketin sisäinen polku>
-// Vain https-osoitteet, jotka alkavat nykyisen paketin hash-juurella, tallennetaan. Peili (file://), uusin.json ja
-// juuren äänet (aanet/v<n>/) haetaan aina verkosta. Kun uusi hash otetaan käyttöön, saman rakennuksen vanhat
-// hash-kansiot poistetaan (Siivoa). iOS saa tyhjentää temporaryCachePathin, jolloin tiedostot vain ladataan uudelleen.
+// jokainen avaus latasi kaiken uudelleen.
+// SISÄLTÖVARASTO (Päätoimittaja 4.10.2026, juna 139): osoittimen vaihto (uusi hash) mitätöi ennen koko välimuistin, vaikka
+// uusi paketti erosi edellisestä vain muutaman tiedoston osalta. Nyt tiedosto tallennetaan sisältönsä sha256:n nimellä:
+//   <temporaryCachePath>/dioraama/<rakennus>/sisalto/<sha256>
+// ja paketin manifest.json (polku → sha256, tavuja; CI kirjoittaa sen hash-kansioon) kertoo, mikä sisältö kuuluu mihinkin
+// polkuun. Muuttumattomat tiedostot käytetään siis uudelleen pakettiversiosta toiseen ja vain erotus ladataan.
+// Ladattu tiedosto tarkistetaan sha256:ta vasten taustasäikeessä ennen kuin se menee varastoon (väärä → ei välimuistiin).
+// Manifestit: <rakennus>/manifestit/<hash>.json. Vanha muoto <rakennus>/<hash>/<polku> siirretään kerran varastoon
+// (koko ja sha256 täsmäävät uuteen manifestiin), ja loput siivotaan, kun uusi paketti on valmis (SiivoaVanhat).
+// Vain https-osoitteet nykyisen paketin hash-juuren alla ja manifestissa luetellut polut tallennetaan. Peili (file://),
+// uusin.json ja juuren äänet (aanet/v<n>/) haetaan aina verkosta. iOS saa tyhjentää temporaryCachePathin, jolloin
+// tiedostot vain ladataan uudelleen.
+// OSOITIN: esilataus ja linssi lukevat uusin.jsonin yhden kerran saman istunnon aikana (LueOsoitin, 30 min), joten ne
+// käyttävät samaa pakettia; testiosoitin ("poikki osoitin <hash>") korvaa sen kehittäjän kokeissa.
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -18,9 +27,11 @@ namespace Matkakirja.Natiivi
 {
     public static class DioraamaLevyvalimuisti
     {
-        /// <summary>Nykyisen paketin hash-juuri (https://…/dioraama/&lt;r&gt;/&lt;hash&gt;/) ja sen paikallinen kansio;
-        /// null = ei välimuistia (kehityspeili tai uusin.json puuttui).</summary>
-        static string juuri, kansio;
+        /// <summary>Nykyisen paketin hash-juuri (https://…/dioraama/&lt;r&gt;/&lt;hash&gt;/), rakennuksen välimuistikansio ja
+        /// sisältövarasto; null = ei välimuistia (kehityspeili tai uusin.json puuttui).</summary>
+        static string juuri, hashNyt, rakennusKansio, varasto;
+        /// <summary>Nykyisen paketin manifesti: polku → (sha256 pienin kirjaimin, tavuja). null = ei vielä luettu → ei välimuistia.</summary>
+        static Dictionary<string, (string Sha, long Tavuja)> manifesti;
 
         public static int Osumia { get; private set; }
         /// <summary>Esilataus (DioraamaEsilataus) ja linssi voivat pyytää samaa tiedostoa yhtä aikaa: haussa oleva url ja sen
@@ -31,33 +42,195 @@ namespace Matkakirja.Natiivi
         /// <summary>Epäonnistuneet verkkolataukset (linnan latausvirhe, Päätoimittaja 4.10.) ja kaikki valmistuneet (edistyminen).</summary>
         public static int Epaonnistui { get; private set; }
         public static int Valmistuneita => Osumia + Latauksia + Epaonnistui;
+        /// <summary>Tiivisteeltään väärät lataukset (eivät menneet varastoon).</summary>
+        public static int VaariaTiivisteita { get; private set; }
 
-        /// <summary>DioraamaSovitin.LataaRakennus: uusin.json luettu. ampariJuuri = …/dioraama/&lt;r&gt;/, hash ilman kauttaviivoja.</summary>
+        // --- OSOITIN ---------------------------------------------------------------------------------------------------
+        /// <summary>Kehittäjän testiosoitin ("poikki osoitin &lt;hash&gt;|pois"): korvaa uusin.jsonin, null = tuotanto.</summary>
+        public static string TestiOsoitin;
+        static string osoitinJuuri, osoitinPolku;
+        static float osoitinLuettu = -1e9f;
+        static bool osoitinHaussa;
+        const float OsoitinVoimassaS = 1800f;
+
+        /// <summary>uusin.jsonin polku ("&lt;hash&gt;/") — sama esilataukselle ja linssille saman istunnon aikana (30 min),
+        /// testiosoitin ensin. null = ei saatu.</summary>
+        public static IEnumerator LueOsoitin(string ampariJuuri, Action<string> polku)
+        {
+            if (!string.IsNullOrEmpty(TestiOsoitin)) { polku(TestiOsoitin.Trim('/') + "/"); yield break; }
+            while (osoitinHaussa) yield return null;
+            if (osoitinPolku != null && osoitinJuuri == ampariJuuri && Time.realtimeSinceStartup - osoitinLuettu < OsoitinVoimassaS)
+            { polku(osoitinPolku); yield break; }
+            osoitinHaussa = true;
+            string teksti = null;
+            try
+            {
+                using var p = UnityWebRequest.Get(ampariJuuri + "uusin.json?t=" + DateTime.UtcNow.Ticks);
+                p.timeout = 20;
+                yield return p.SendWebRequest();
+                if (p.result == UnityWebRequest.Result.Success) teksti = p.downloadHandler.text;
+            }
+            finally { osoitinHaussa = false; }
+            string uusi = null;
+            try
+            {
+                var o = teksti != null ? Matkakirja.Peli.MiniJson.Jasenna(teksti) as Dictionary<string, object> : null;
+                uusi = o != null && o.TryGetValue("polku", out var pv) ? pv as string : null;
+            }
+            catch (Exception) { uusi = null; }
+            if (!string.IsNullOrEmpty(uusi))
+            {
+                if (osoitinPolku != null && osoitinPolku != uusi)
+                    Debug.Log($"MATKAKIRJA linssit: poikki: osoitin vaihtui {osoitinPolku} → {uusi} (vain erotus ladataan)");
+                osoitinJuuri = ampariJuuri; osoitinPolku = uusi; osoitinLuettu = Time.realtimeSinceStartup;
+            }
+            polku(string.IsNullOrEmpty(uusi) ? osoitinPolku : uusi);
+        }
+
+        // --- PAKETTI JA MANIFESTI --------------------------------------------------------------------------------------
+        /// <summary>DioraamaSovitin / DioraamaEsilataus: paketti valittu. ampariJuuri = …/dioraama/&lt;r&gt;/, hash ilman
+        /// kauttaviivoja; null = välimuisti pois. Manifesti luetaan levyltä, jos se on jo haettu; muuten Valmistele hakee sen.</summary>
         public static void Aseta(string ampariJuuri, string hash)
         {
-            juuri = kansio = null;
+            if (hash != null && hash == hashNyt && juuri != null && ampariJuuri != null && juuri.StartsWith(ampariJuuri, StringComparison.Ordinal)) return;
+            juuri = hashNyt = rakennusKansio = varasto = null;
+            manifesti = null;
             if (string.IsNullOrEmpty(hash) || ampariJuuri == null || !ampariJuuri.StartsWith("https://", StringComparison.Ordinal)) return;
             string rakennus = Path.GetFileName(ampariJuuri.TrimEnd('/'));
             if (string.IsNullOrEmpty(rakennus) || hash.IndexOfAny(new[] { '/', '\\', '.' }) >= 0) return;
             juuri = ampariJuuri + hash + "/";
-            kansio = Path.Combine(Application.temporaryCachePath, "dioraama", rakennus, hash);
-            Siivoa(Path.Combine(Application.temporaryCachePath, "dioraama", rakennus), hash);
+            hashNyt = hash;
+            rakennusKansio = Path.Combine(Application.temporaryCachePath, "dioraama", rakennus);
+            varasto = Path.Combine(rakennusKansio, "sisalto");
+            try
+            {
+                string mp = ManifestinPolku(hash);
+                if (File.Exists(mp)) manifesti = JasennaManifesti(File.ReadAllText(mp));
+            }
+            catch (Exception) { manifesti = null; }
         }
 
-        /// <summary>Paikallinen polku url:lle, tai null jos url ei ole nykyisen hash-paketin tiedosto.</summary>
-        static string Paikka(string url)
+        static string ManifestinPolku(string hash) => Path.Combine(rakennusKansio, "manifestit", hash + ".json");
+
+        /// <summary>Hakee nykyisen paketin manifest.jsonin (jos ei levyllä) ja siirtää vanhan muodon tiedostot kerran
+        /// varastoon. Ilman manifestia välimuisti on pois (lataukset toimivat verkosta).</summary>
+        public static IEnumerator Valmistele(Action<string> kirjaa)
         {
-            if (juuri == null || url == null || !url.StartsWith(juuri, StringComparison.Ordinal)) return null;
-            string rel = url.Substring(juuri.Length);
-            if (rel.Length == 0 || rel.Contains("..") || rel.Contains("?")) return null;
-            return Path.Combine(kansio, rel.Replace('/', Path.DirectorySeparatorChar));
+            if (juuri == null) yield break;
+            string omaHash = hashNyt;
+            if (manifesti == null)
+            {
+                string teksti = null;
+                using (var p = UnityWebRequest.Get(juuri + "manifest.json"))
+                {
+                    p.timeout = 20;
+                    yield return p.SendWebRequest();
+                    if (p.result == UnityWebRequest.Result.Success) teksti = p.downloadHandler.text;
+                }
+                if (omaHash != hashNyt) yield break;
+                var m = teksti != null ? JasennaManifesti(teksti) : null;
+                if (m == null) { kirjaa?.Invoke("poikki: välimuisti: manifest.json puuttuu, välimuisti pois tältä kerralta"); yield break; }
+                manifesti = m;
+                string mp = ManifestinPolku(omaHash);
+                var tallennus = Task.Run(() =>
+                {
+                    try { Directory.CreateDirectory(Path.GetDirectoryName(mp)); File.WriteAllText(mp + ".tmp", teksti); if (File.Exists(mp)) File.Delete(mp); File.Move(mp + ".tmp", mp); }
+                    catch (Exception e) { Debug.LogWarning("MATKAKIRJA dioraama: manifestia ei tallennettu: " + e.Message); }
+                });
+                while (!tallennus.IsCompleted) yield return null;
+            }
+            yield return SiirraVanhaMuoto(kirjaa);
         }
 
-        /// <summary>Tavut välimuistista tai verkosta (onnistunut lataus tallennetaan taustasäikeessä). null = epäonnistui.</summary>
+        static Dictionary<string, (string, long)> JasennaManifesti(string teksti)
+        {
+            try
+            {
+                var o = Matkakirja.Peli.MiniJson.Jasenna(teksti) as Dictionary<string, object>;
+                if (o == null || !o.TryGetValue("tiedostot", out var t) || !(t is List<object> lista)) return null;
+                var m = new Dictionary<string, (string, long)>(StringComparer.Ordinal);
+                foreach (var x in lista)
+                {
+                    if (!(x is Dictionary<string, object> d)) continue;
+                    string polku = d.TryGetValue("polku", out var pv) ? pv as string : null;
+                    string sha = d.TryGetValue("sha256", out var sv) ? sv as string : null;
+                    long tavuja = d.TryGetValue("tavuja", out var tv) && tv != null ? Convert.ToInt64(tv) : -1;
+                    if (string.IsNullOrEmpty(polku) || sha == null || sha.Length != 64) continue;
+                    m[polku] = (sha.ToLowerInvariant(), tavuja);
+                }
+                return m.Count > 0 ? m : null;
+            }
+            catch (Exception) { return null; }
+        }
+
+        static bool siirtoTehty;
+        /// <summary>Kertasiirto (yhteensopivuus juna 138:n välimuistin kanssa): vanhan muodon &lt;r&gt;/&lt;hash&gt;/&lt;polku&gt;
+        /// -tiedostot, joiden koko ja sha256 täsmäävät nykyiseen manifestiin, siirretään varastoon taustasäikeessä.</summary>
+        static IEnumerator SiirraVanhaMuoto(Action<string> kirjaa)
+        {
+            if (siirtoTehty || manifesti == null || rakennusKansio == null || !Directory.Exists(rakennusKansio)) yield break;
+            siirtoTehty = true;
+            var m = new Dictionary<string, (string Sha, long Tavuja)>(manifesti);
+            string rk = rakennusKansio, va = varasto;
+            int siirretty = 0; long tavuja = 0;
+            var tyo = Task.Run(() =>
+            {
+                try
+                {
+                    foreach (var d in Directory.GetDirectories(rk))
+                    {
+                        string nimi = Path.GetFileName(d);
+                        if (nimi == "sisalto" || nimi == "manifestit") continue;
+                        foreach (var e in m)
+                        {
+                            string kohde = Path.Combine(va, e.Value.Sha);
+                            if (File.Exists(kohde)) continue;
+                            string vanha = Path.Combine(d, e.Key.Replace('/', Path.DirectorySeparatorChar));
+                            if (!File.Exists(vanha) || (e.Value.Tavuja >= 0 && new FileInfo(vanha).Length != e.Value.Tavuja)) continue;
+                            if (TiedostonSha(vanha) != e.Value.Sha) continue;
+                            Directory.CreateDirectory(va);
+                            File.Move(vanha, kohde);
+                            siirretty++; tavuja += e.Value.Tavuja;
+                        }
+                    }
+                }
+                catch (Exception e) { Debug.LogWarning("MATKAKIRJA dioraama: vanhan välimuistin siirto keskeytyi: " + e.Message); }
+            });
+            while (!tyo.IsCompleted) yield return null;
+            if (siirretty > 0) kirjaa?.Invoke($"poikki: välimuisti: vanhasta muodosta siirretty {siirretty} tiedostoa ({tavuja / 1048576f:F0} Mt) sisältövarastoon");
+        }
+
+        /// <summary>Paikallinen polku ja odotettu sha256 url:lle, tai (null, null), jos url ei ole nykyisen paketin manifestin tiedosto.</summary>
+        static (string Paikka, string Sha) Paikka(string url)
+        {
+            if (juuri == null || manifesti == null || url == null || !url.StartsWith(juuri, StringComparison.Ordinal)) return (null, null);
+            string rel = url.Substring(juuri.Length);
+            if (rel.Length == 0 || rel.Contains("..") || rel.Contains("?")) return (null, null);
+            return manifesti.TryGetValue(rel, out var e) ? (Path.Combine(varasto, e.Sha), e.Sha) : (null, null);
+        }
+
+        static string Heksa(byte[] h)
+        {
+            var c = new char[h.Length * 2];
+            const string merkit = "0123456789abcdef";
+            for (int i = 0; i < h.Length; i++) { c[2 * i] = merkit[h[i] >> 4]; c[2 * i + 1] = merkit[h[i] & 15]; }
+            return new string(c);
+        }
+
+        static string TavujenSha(byte[] tavut) { using var s = SHA256.Create(); return Heksa(s.ComputeHash(tavut)); }
+        static string TiedostonSha(string polku)
+        {
+            using var s = SHA256.Create();
+            using var f = new FileStream(polku, FileMode.Open, FileAccess.Read, FileShare.Read, 1 << 20);
+            return Heksa(s.ComputeHash(f));
+        }
+
+        // --- HAUT ------------------------------------------------------------------------------------------------------
+        /// <summary>Tavut välimuistista tai verkosta (onnistunut lataus tarkistetaan ja tallennetaan taustasäikeessä). null = epäonnistui.</summary>
         public static IEnumerator Hae(string url, int aikakatkaisu, Action<byte[]> valmis)
         {
             yield return OdotaKesken(url);
-            string paikka = Paikka(url);
+            var (paikka, sha) = Paikka(url);
             if (paikka != null && File.Exists(paikka))
             {
                 byte[] luettu = null;
@@ -81,17 +254,17 @@ namespace Matkakirja.Natiivi
                 Latauksia++;
                 if (paikka != null)
                 {
-                    // Kirjoitus väliaikaiseen ja siirto, ettei keskeytynyt kirjoitus jää puolikkaaksi osumaksi.
+                    // Tiiviste ensin, sitten kirjoitus väliaikaiseen ja siirto, ettei keskeytynyt kirjoitus jää puolikkaaksi osumaksi.
                     var kopio = tavut;
                     kirjoitukset[url] = Task.Run(() =>
                     {
                         try
                         {
+                            if (TavujenSha(kopio) != sha) { VaariaTiivisteita++; Debug.LogWarning("MATKAKIRJA dioraama: väärä tiiviste, ei välimuistiin: " + url); return; }
                             Directory.CreateDirectory(Path.GetDirectoryName(paikka));
-                            string tmp = paikka + ".tmp";
+                            string tmp = paikka + "." + System.Threading.Thread.CurrentThread.ManagedThreadId + ".tmp";
                             File.WriteAllBytes(tmp, kopio);
-                            if (File.Exists(paikka)) File.Delete(paikka);
-                            File.Move(tmp, paikka);
+                            if (File.Exists(paikka)) File.Delete(tmp); else File.Move(tmp, paikka);
                         }
                         catch (Exception e) { Debug.LogWarning("MATKAKIRJA dioraama: välimuistiin ei kirjoitettu: " + e.Message); }
                     });
@@ -106,7 +279,7 @@ namespace Matkakirja.Natiivi
         public static IEnumerator HaeNatiivi(string url, int aikakatkaisu, Action<Unity.Collections.NativeArray<byte>> valmis)
         {
             yield return OdotaKesken(url);
-            string paikka = Paikka(url);
+            var (paikka, _) = Paikka(url);
             if (paikka != null && File.Exists(paikka))
             {
                 var data = default(Unity.Collections.NativeArray<byte>);
@@ -145,13 +318,14 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Esilataus (DioraamaEsilataus): tiedosto suoraan levylle (DownloadHandlerFile, ei muistikopiota — kuoren 8k-tekstuuri
-        /// 90 Mt kartalla). Jo levyllä → heti true. Vain nykyisen hash-paketin tiedostot; muut false.</summary>
+        /// 90 Mt kartalla), tiiviste tarkistetaan taustasäikeessä ennen varastoon siirtoa. Jo varastossa → heti true (myös
+        /// edellisen pakettiversion samasisältöinen tiedosto). Vain nykyisen paketin manifestin tiedostot; muut false.</summary>
         public static IEnumerator Esilataa(string url, int aikakatkaisu, Action<bool> valmis)
         {
             yield return OdotaKesken(url);
-            string paikka = Paikka(url);
+            var (paikka, sha) = Paikka(url);
             if (paikka == null) { valmis(false); yield break; }
-            if (File.Exists(paikka)) { valmis(true); yield break; }
+            if (File.Exists(paikka)) { Osumia++; valmis(true); yield break; }
             bool ok = false;
             haussa.Add(url);
             try
@@ -166,10 +340,17 @@ namespace Matkakirja.Natiivi
                 }
                 if (ok)
                 {
-                    try { if (File.Exists(paikka)) File.Delete(paikka); File.Move(tmp, paikka); Latauksia++; }
+                    bool oikea = false;
+                    var tarkistus = Task.Run(() => { try { oikea = TiedostonSha(tmp) == sha; } catch (Exception) { oikea = false; } });
+                    while (!tarkistus.IsCompleted) yield return null;
+                    if (!oikea) { ok = false; VaariaTiivisteita++; Debug.LogWarning("MATKAKIRJA dioraama: esilataus: väärä tiiviste, hylätty: " + url); }
+                }
+                if (ok)
+                {
+                    try { if (File.Exists(paikka)) File.Delete(tmp); else File.Move(tmp, paikka); Latauksia++; }
                     catch (Exception e) { ok = false; Debug.LogWarning("MATKAKIRJA dioraama: esilataus ei siirtynyt välimuistiin: " + e.Message); }
                 }
-                else { try { if (File.Exists(tmp)) File.Delete(tmp); } catch (Exception) { } Epaonnistui++; }
+                if (!ok) { try { if (File.Exists(tmp)) File.Delete(tmp); } catch (Exception) { } Epaonnistui++; }
             }
             finally { haussa.Remove(url); }
             valmis(ok);
@@ -185,18 +366,68 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        static void Siivoa(string rakennusKansio, string pidettava)
+        // --- SIIVOUS ---------------------------------------------------------------------------------------------------
+        static bool siivousKaynnissa;
+        /// <summary>Kun nykyinen paketti on valmis (linnan saapuminen alkoi / esilataus valmis): varastosta pois sisältö, jota
+        /// nykyinen manifesti ei käytä, vanhan muodon hash-kansiot ja muut manifestit. Levynkäyttö ennen ja jälkeen lokiin.</summary>
+        public static void SiivoaVanhat(Action<string> kirjaa)
         {
-            try
+            if (siivousKaynnissa || manifesti == null || rakennusKansio == null || haussa.Count > 0) return;
+            foreach (var k in kirjoitukset.Values) if (!k.IsCompleted) return;
+            siivousKaynnissa = true;
+            var kaytossa = new HashSet<string>(StringComparer.Ordinal);
+            foreach (var e in manifesti.Values) kaytossa.Add(e.Sha);
+            string rk = rakennusKansio, va = varasto, h = hashNyt;
+            Task.Run(() =>
             {
-                if (!Directory.Exists(rakennusKansio)) return;
-                foreach (var d in Directory.GetDirectories(rakennusKansio))
-                    if (Path.GetFileName(d) != pidettava) Directory.Delete(d, true);
-            }
-            catch (Exception e) { Debug.LogWarning("MATKAKIRJA dioraama: vanhaa välimuistia ei poistettu: " + e.Message); }
+                long ennen = 0, jalkeen = 0; int poistettu = 0;
+                try
+                {
+                    ennen = Koko(rk);
+                    if (Directory.Exists(va))
+                        foreach (var f in Directory.GetFiles(va))
+                        {
+                            string nimi = Path.GetFileName(f);
+                            bool keskenerainen = nimi.Contains(".");
+                            if (keskenerainen ? File.GetLastWriteTimeUtc(f) < DateTime.UtcNow.AddHours(-1) : !kaytossa.Contains(nimi))
+                            { File.Delete(f); poistettu++; }
+                        }
+                    foreach (var d in Directory.GetDirectories(rk))
+                    {
+                        string nimi = Path.GetFileName(d);
+                        if (nimi != "sisalto" && nimi != "manifestit") { Directory.Delete(d, true); poistettu++; }
+                    }
+                    string mk = Path.Combine(rk, "manifestit");
+                    if (Directory.Exists(mk))
+                        foreach (var f in Directory.GetFiles(mk)) if (Path.GetFileName(f) != h + ".json") { File.Delete(f); poistettu++; }
+                    jalkeen = Koko(rk);
+                }
+                catch (Exception e) { Debug.LogWarning("MATKAKIRJA dioraama: vanhaa välimuistia ei poistettu: " + e.Message); }
+                finally { siivousKaynnissa = false; }
+                Debug.Log($"MATKAKIRJA linssit: poikki: välimuistin siivous: {ennen / 1048576f:F0} Mt → {jalkeen / 1048576f:F0} Mt ({poistettu} poistettu, paketti {h})");
+            });
+        }
+
+        static long Koko(string kansio)
+        {
+            long s = 0;
+            if (!Directory.Exists(kansio)) return 0;
+            foreach (var f in Directory.GetFiles(kansio, "*", SearchOption.AllDirectories)) { try { s += new FileInfo(f).Length; } catch (Exception) { } }
+            return s;
         }
 
         public static string Raportti() =>
-            juuri == null ? "välimuisti pois (peili tai ei hashia)" : $"välimuisti {kansio}: {Osumia} osumaa, {Latauksia} latausta";
+            juuri == null ? "välimuisti pois (peili tai ei hashia)"
+            : manifesti == null ? $"välimuisti {hashNyt}: manifesti puuttuu (ei välimuistia)"
+            : $"välimuisti {hashNyt} ({manifesti.Count} tiedostoa manifestissa): {Osumia} osumaa, {Latauksia} latausta{(VaariaTiivisteita > 0 ? $", {VaariaTiivisteita} väärää tiivistettä" : "")}";
+
+        /// <summary>"poikki välimuisti": levynkäyttö (taustasäikeessä, loki).</summary>
+        public static void KirjaaKoko()
+        {
+            string rk = rakennusKansio;
+            if (rk == null) { Debug.Log("MATKAKIRJA linssit: poikki: " + Raportti()); return; }
+            string r = Raportti();
+            Task.Run(() => Debug.Log($"MATKAKIRJA linssit: poikki: {r}; levyllä {Koko(rk) / 1048576f:F0} Mt"));
+        }
     }
 }

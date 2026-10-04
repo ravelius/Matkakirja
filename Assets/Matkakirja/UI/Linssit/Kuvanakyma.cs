@@ -594,9 +594,23 @@ namespace Matkakirja.Natiivi
             if (!paalle) { LopetaSiirto(); NaytaAutoNapit(true); return; }
             autoKosketus = Time.unscaledTime;
             AjastaAutoPiilotus();
+            if (kohde == null || indeksi < 0) return;
+            var h = indeksi < kohde.Havainnot.Count ? kohde.Havainnot[indeksi] : null;
+            // Omistaja 4.10.2026 klo 19.4x: "kun pelaaja painaa auto moden päälle, niin luennan pitää jatkua ilman että se hyppää
+            // tekstin alkuun". Kesken oleva saman selitteen luenta jatkuu kohdastaan, ja AUTO siirtyy seuraavaan vasta sen loputtua
+            // (LuentaLoppui saman vuoron loppukutsusta). Jo luettu selite → suoraan siirtoon; muuten luenta alkaa nyt.
+            string t = kohde.Luettava(h);
+            if (LuentaSoi && t == luettu) { Debug.Log("MATKAKIRJA kuvaselite: AUTO päälle, luenta jatkuu kohdastaan"); return; }
+            if (!string.IsNullOrEmpty(t) && t == luettu && luennanUrl != null) { Debug.Log("MATKAKIRJA kuvaselite: AUTO päälle, selite jo luettu → siirto"); LuentaLoppui(luentaVuoro); return; }
             luettu = null;
-            if (kohde != null && indeksi >= 0) LueSelite(indeksi < kohde.Havainnot.Count ? kohde.Havainnot[indeksi] : null);
+            LueSelite(h);
         }
+
+        /// <summary>
+        /// Tämän kuvan selitteen luenta on käynnissä: puhekanavan osoite on sama synteesin latauksesta (ennen ensimmäistä palaa)
+        /// loppuun asti, myös tauolla (Pelikoodari 4.10.: Puhe.Soi on epätosi latauksen ja tauon aikana).
+        /// </summary>
+        bool LuentaSoi => luennanUrl != null && Puhe.Instanssi != null && Puhe.Instanssi.SoivaUrl == luennanUrl;
 
         /// <summary>Luenta loppui: AUTO päällä → lappu ja 3 s:n päästä seuraava kohde (vain tämän kuvan tuorein luenta).</summary>
         void LuentaLoppui(int vuoro)

@@ -10,6 +10,32 @@ namespace Matkakirja.Kartta.Testit
         static bool Lahella(double a, double b, double tol = 1e-4) => Math.Abs(a - b) <= tol;
 
         [Testi]
+        static void PaaVainAjattelijanMaassa()
+        {
+            // Omistaja 4.10.: Sokrates (GRC) näkyy Ateenassa, Marcus (ITA) Roomassa, Helsingissä ei kumpikaan.
+            Oleta.Tosi(ErikoisnostoMitat.OmaMaa("GRC", "GRC"), "Sokrates Kreikassa");
+            Oleta.Tosi(!ErikoisnostoMitat.OmaMaa("ITA", "GRC"), "Marcus ei Kreikassa");
+            Oleta.Tosi(ErikoisnostoMitat.OmaMaa("ITA", "ita"), "kirjainkoko");
+            Oleta.Tosi(!ErikoisnostoMitat.OmaMaa("GRC", "FIN") && !ErikoisnostoMitat.OmaMaa("ITA", "FIN"), "Helsingissä ei kumpikaan");
+            Oleta.Tosi(!ErikoisnostoMitat.OmaMaa("GRC", null) && !ErikoisnostoMitat.OmaMaa(null, "GRC") && !ErikoisnostoMitat.OmaMaa("", ""), "tuntematon = ei");
+        }
+
+        [Testi]
+        static void HaivytysTasainenJaRajattu()
+        {
+            float a = 0f;
+            for (int i = 0; i < 15; i++) a = ErikoisnostoMitat.Haivytys(a, true, 0.02f, 0.3f);
+            Oleta.Tosi(Lahella(a, 1.0, 1e-5), $"0,3 s:ssa esiin ({a})");
+            a = ErikoisnostoMitat.Haivytys(a, true, 0.5f, 0.3f);
+            Oleta.Tosi(a == 1f, "rajattu ylhäältä");
+            a = ErikoisnostoMitat.Haivytys(a, false, 0.15f, 0.3f);
+            Oleta.Tosi(Lahella(a, 0.5, 1e-5), $"puolivälissä pois ({a})");
+            a = ErikoisnostoMitat.Haivytys(a, false, 1f, 0.3f);
+            Oleta.Tosi(a == 0f, "rajattu alhaalta");
+            Oleta.Tosi(ErikoisnostoMitat.Haivytys(0f, true, 0.01f, 0f) == 1f, "kesto 0 = heti");
+        }
+
+        [Testi]
         static void NenaKohtiKeskustaaEnintaan30()
         {
             Oleta.Tosi(ErikoisnostoMitat.KaantoAste == 30f, "30°");
