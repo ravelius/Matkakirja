@@ -97,18 +97,13 @@ namespace Matkakirja.Natiivi
             float alku = Time.realtimeSinceStartup;
             string juuri = DioraamaSovitin.AmpariJuuri;
 
-            string uusin = null;
-            yield return Teksti(juuri + "uusin.json", t => uusin = t);
+            // Sama istunnon osoitin kuin linssillä (sisältövarasto 4.10.: osoittimen vaihto kesken ei enää mitätöi esilatausta).
             string polku = null;
-            try
-            {
-                var o = uusin != null ? Matkakirja.Peli.MiniJson.Jasenna(uusin) as Dictionary<string, object> : null;
-                polku = o != null && o.TryGetValue("polku", out var p) ? p as string : null;
-            }
-            catch (Exception) { polku = null; }
+            yield return DioraamaLevyvalimuisti.LueOsoitin(juuri, pv => polku = pv);
             if (string.IsNullOrEmpty(polku)) { Loppu(kirjaa, "virhe: uusin.json", alku); yield break; }
             string paketti = juuri + polku.TrimEnd('/') + "/";
             DioraamaLevyvalimuisti.Aseta(juuri, polku.Trim('/'));
+            yield return DioraamaLevyvalimuisti.Valmistele(kirjaa);
 
             string json = null;
             yield return Teksti(paketti + "rakennus.json", t => json = t);
@@ -132,6 +127,7 @@ namespace Matkakirja.Natiivi
             }
             valmisHetki = Time.realtimeSinceStartup;
             Loppu(kirjaa, $"valmis: {ok}/{tiedostot.Count} tiedostoa levyllä{(virheita > 0 ? $", {virheita} epäonnistui" : "")}", alku);
+            if (virheita == 0) DioraamaLevyvalimuisti.SiivoaVanhat(kirjaa);
         }
 
         /// <summary>Linssin tällä laitteella lataamat paketin tiedostot (samat valinnat kuin DioraamaUlkokuori.Lataa,
@@ -154,7 +150,9 @@ namespace Matkakirja.Natiivi
                     string ham = q == DioraamaUlkokuori.Laatu.Huippu ? k.HamaraHuippu : q == DioraamaUlkokuori.Laatu.Normaali ? k.HamaraNormaali : k.HamaraKevyt;
                     string jpg = q == DioraamaUlkokuori.Laatu.Huippu ? k.HamaraJpgHuippu : q == DioraamaUlkokuori.Laatu.Normaali ? k.HamaraJpgNormaali : k.HamaraJpgKevyt;
                     if (astc) return hamara && !string.IsNullOrEmpty(ham) ? ham : paiva;
-                    return hamara ? jpg : null;   // muuten glb:n oma kuva
+                    // Päivän JPEG-vara (tekstuurit.jpg, 4.10.) kuten DioraamaUlkokuori; puuttuva = glb:n oma kuva.
+                    string paivaJpg = q == DioraamaUlkokuori.Laatu.Huippu ? k.JpgHuippu : q == DioraamaUlkokuori.Laatu.Normaali ? k.JpgNormaali : k.JpgKevyt;
+                    return hamara && !string.IsNullOrEmpty(jpg) ? jpg : string.IsNullOrEmpty(paivaJpg) ? null : paivaJpg;
                 }
                 Lisaa(k.Kevyt); Lisaa(Tekstuuri(DioraamaUlkokuori.Laatu.Kevyt));
                 var tavoite = DioraamaUlkokuori.Valittu;
