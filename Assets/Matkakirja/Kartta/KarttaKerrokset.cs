@@ -410,11 +410,15 @@ namespace Matkakirja
         /// LATAAMATTOMAT LAATAT NÄKYMÄSSÄ (Päätoimittaja 4.10.2026: Cupolan musta odottaa, kunnes näkymässä ei ole yhtään
         /// lataamatonta laattaa, enintään 4 s): aktiiviset pallon laatat kameran näkökartiossa, joilla ei ole rasteria paikoissa 1
         /// eikä 2 (linssien ja kyydin BMNG/S2). Cesium piirtää ne ilman tekstuuria (detachRaster → null), jolloin näkyy
-        /// materiaalin vaalea perusväri (ks. LENNON VARAKARTTA). Palauttaa (lataamattomat, näkyvät); −1 = ei palloa tai kameraa.
+        /// materiaalin vaalea perusväri (ks. LENNON VARAKARTTA). Palauttaa (lataamattomat, näkyvät); −1 = ei palloa, −2 = ei kameraa.
+        /// Kamera: annettu, muuten pallon kamera (PalloKierto), viimeisenä Camera.main (savuke 1137: Camera.main puuttui iPhone-simulla
+        /// → −1/−1 ja musta 4 s:n kattoon).
         /// </summary>
-        public (int Lataamattomat, int Nakyvat) LataamattomatLaatat(Camera kamera)
+        public (int Lataamattomat, int Nakyvat) LataamattomatLaatat(Camera kamera = null)
         {
-            if (pallo == null || kamera == null) return (-1, -1);
+            if (pallo == null) return (-1, -1);
+            if (kamera == null) kamera = FindAnyObjectByType<PalloKierto>()?.GetComponent<Camera>() ?? Camera.main;
+            if (kamera == null) return (-2, -2);
             GeometryUtility.CalculateFrustumPlanes(kamera, lataamatonTasot);
             pallo.GetComponentsInChildren(false, lataamatonRenderit);
             int puuttuu = 0, nakyy = 0;
