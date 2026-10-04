@@ -350,11 +350,11 @@ namespace Matkakirja.Natiivi
 
         void PaivitaNimiruutu()
         {
-            bool odotus = DioraamaSovitin.SaapumisOdotus;
+            bool odotus = DioraamaSovitin.SaapumisOdotus || DioraamaSovitin.RakennusLatautuu;
+            if (odotus && nimiruudunNimi.text != DioraamaSovitin.SaapumisNimi) nimiruudunNimi.text = DioraamaSovitin.SaapumisNimi;
             if (odotus && !nimiruutuAuki)
             {
                 nimiruutuAuki = true;
-                nimiruudunNimi.text = DioraamaSovitin.SaapumisNimi;
                 nimiruutu.RemoveFromClassList("mk-astroavaus--haipyy");
                 nimiruutu.style.opacity = 1f;
                 nimiruutu.style.display = DisplayStyle.Flex;

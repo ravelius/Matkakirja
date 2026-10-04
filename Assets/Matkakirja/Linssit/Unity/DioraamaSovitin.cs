@@ -171,6 +171,8 @@ namespace Matkakirja.Natiivi
 
         public void Paivita()
         {
+            // Nimiruutu jo rakennus.jsonin latauksen ajan (simu 4.10.: ensimmäinen sekunti oli vaalea tyhjä ruutu).
+            RakennusLatautuu = avoinna && rakennus == null && latausKaynnissa;
             // rakennus == null: "poikki lataa" kesken (1.0.54-ajossa DioraamaAanet.Paivita kaatui NullReferenceen).
             if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
             double t = pysaytettyT ?? y.Aika;
@@ -246,7 +248,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             linssi.Sulje();
-            kuoriOdotusAlku = -1f; SaapumisOdotus = false; tilatOdottavat = false; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
+            kuoriOdotusAlku = -1f; SaapumisOdotus = false; tilatOdottavat = false; RakennusLatautuu = false; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             rakennus3D?.Tyhjenna(); rakennus3D = null;
             hahmot3D?.Tyhjenna(); hahmot3D = null;
             nayttamo?.Tuhoa(); nayttamo = null;
@@ -380,7 +382,18 @@ namespace Matkakirja.Natiivi
         // 4.10.: 10 → 45 s (kuori ensin, tilat perässä, ks. Paivita); yli tämän näytetään se mitä on.
         const float KuoriOdotusMax = 45f, HaivytysS = 2.5f, NimiruutuMinS = 2f;
         /// <summary>Saapumisodotuksen nimiruudun tekstit (DioraamaTaulu): rakennuksen nimi versaalina ja alarivi.</summary>
-        public static string SaapumisNimi => (Linssi?.Rakennus?.Nimi ?? "").ToUpperInvariant();
+        public static string SaapumisNimi
+        {
+            get
+            {
+                string n = Linssi?.Rakennus?.Nimi;
+                // Ennen rakennus.jsonia linssin oma lyhyt kuvaus ("Olavinlinna aukileikattuna") → ensimmäinen sana.
+                if (string.IsNullOrEmpty(n)) n = (PoikkileikkausLinssi.PoikkiTiedot.Lyhyt ?? "").Split(' ')[0];
+                return n.ToUpperInvariant();
+            }
+        }
+        /// <summary>Linssi auki ja rakennus.json latautuu (nimiruutu näkyy jo silloin).</summary>
+        public static bool RakennusLatautuu { get; private set; }
         public const string SaapumisAlarivi = "Savonlinna · 1475";
         float kuoriOdotusAlku = -1f;
         /// <summary>Tilojen ja hahmojen lataus odottaa kuorta (TaydennaLataamattomat vasta kuoren valmistuttua).</summary>
