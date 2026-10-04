@@ -5,6 +5,10 @@
 //
 // Tilan (kertomus + esityksen indeksi) antaa AikajanaNakyma, aineisto on paketin moduulissa
 // moduulit/js/linssit/ihmisen-matka-kysymykset.json (IHMISEN_MATKAN_KYSYMYKSET).
+//
+// ASTRONAUTIN KAMERA (omistaja 4.10.2026 klo 11.40, ISS-OHJAAMO UUSIKSI): Kysy Pululta avaa chatin viidellä tilan
+// valmiilla kysymyksellä. Tilan (pallo, kuvat, ohjaamo) antaa PulunTauluNakyma (AstroTila), aineisto on moduulissa
+// moduulit/js/linssit/astro-kysymykset.json (ASTRO_KYSYMYKSET: { tila: [{ kysymys, vastaus, lahteet }] }, Sisältökirjuri).
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,9 +37,21 @@ namespace Matkakirja.Natiivi
         /// <summary>Ihmisen matkan tila (AikajanaNakyma): kertomus ja esityksen jakso, tai null kun linssi ei ole auki.</summary>
         public static Func<(IReadOnlyList<KertomusJakso> Kertomus, int Indeksi)?> Tila;
 
+        const string AstroModuuli = "moduulit/js/linssit/astro-kysymykset.json";
+        static Dictionary<string, LinssiKysymys> astro;
+        static bool astroHaussa;
+
+        /// <summary>Astronautin kameran tila kysymyksille ("pallo", "kuvat", "ohjaamo"), tai null kun linssi ei ole auki.</summary>
+        public static Func<string> AstroTila;
+
         /// <summary>Nykyisen jakson kysymykset (web pulunKysymystilanne), tai null.</summary>
         public static LinssiKysymys Nykyinen()
         {
+            if (AstroTila?.Invoke() is string astroTila)
+            {
+                if (astro == null) { LataaAstro(); return null; }
+                return astro.TryGetValue(astroTila, out var a) && a.Kysymykset.Count > 0 ? a : null;
+            }
             var t = Tila?.Invoke();
             if (t == null) return null;
             if (aineisto == null) { Lataa(); return null; }
@@ -81,20 +97,54 @@ namespace Matkakirja.Natiivi
                         var k = new LinssiKysymys { Avain = "jakso:" + kv.Key };
                         k.Kysymykset = (Rakenne.Lista(MiniJson.Kentta(o, "kysymykset")) ?? new List<object>()).OfType<string>().ToList();
                         foreach (var v in (Rakenne.Lista(MiniJson.Kentta(o, "vastaukset")) ?? new List<object>()).Select(Rakenne.Olio).Where(x => x != null))
-                        {
-                            string kysymys = MiniJson.Teksti(v, "kysymys"), vastaus = MiniJson.Teksti(v, "vastaus");
-                            if (kysymys == null || vastaus == null) continue;
-                            var lahteet = new List<(string, string)>();
-                            foreach (var l in (Rakenne.Lista(MiniJson.Kentta(v, "lahteet")) ?? new List<object>()).Select(Rakenne.Olio).Where(x => x != null))
-                                if (MiniJson.Teksti(l, "url") is string u && u.StartsWith("https://")) lahteet.Add((u, MiniJson.Teksti(l, "title") ?? u));
-                            k.Vastaukset[kysymys.Trim()] = (vastaus, lahteet);
-                        }
+                            LisaaVastaus(k, v);
                         tulos[kv.Key] = k;
                     }
                 }
                 catch (FormatException e) { Debug.LogWarning("MATKAKIRJA ui linssikysymykset: " + e.Message); }
                 aineisto = tulos;
                 haussa = false;
+            }));
+        }
+
+        /// <summary>Valmis vastaus lähteineen (kysymys, vastaus, lahteet[{url, title}]); palauttaa kysymyksen tai null.</summary>
+        static string LisaaVastaus(LinssiKysymys k, Dictionary<string, object> v)
+        {
+            string kysymys = MiniJson.Teksti(v, "kysymys"), vastaus = MiniJson.Teksti(v, "vastaus");
+            if (kysymys == null || vastaus == null) return null;
+            var lahteet = new List<(string, string)>();
+            foreach (var l in (Rakenne.Lista(MiniJson.Kentta(v, "lahteet")) ?? new List<object>()).Select(Rakenne.Olio).Where(x => x != null))
+                if (MiniJson.Teksti(l, "url") is string u && u.StartsWith("https://")) lahteet.Add((u, MiniJson.Teksti(l, "title") ?? u));
+            k.Vastaukset[kysymys.Trim()] = (vastaus, lahteet);
+            return kysymys.Trim();
+        }
+
+        /// <summary>Astronautin kameran kysymykset (linssin auetessa); ilman moduulia chat avautuu ilman valmiita kysymyksiä.</summary>
+        public static void LataaAstro()
+        {
+            if (astro != null || astroHaussa) return;
+            astroHaussa = true;
+            UiKerros.Hae().StartCoroutine(LinssiSisalto.Hae(AstroModuuli, teksti =>
+            {
+                var tulos = new Dictionary<string, LinssiKysymys>();
+                try
+                {
+                    var exportit = Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(teksti != null ? MiniJson.Jasenna(teksti) : null), "exportit"));
+                    var vienti = Rakenne.Olio(MiniJson.Kentta(exportit, "ASTRO_KYSYMYKSET"));
+                    var arvo = Rakenne.Olio(MiniJson.Kentta(vienti, "arvo")) ?? vienti;
+                    foreach (var kv in arvo ?? new Dictionary<string, object>())
+                    {
+                        var k = new LinssiKysymys { Avain = "astro:" + kv.Key };
+                        foreach (var v in (Rakenne.Lista(kv.Value) ?? new List<object>()).Select(Rakenne.Olio).Where(x => x != null))
+                            if (LisaaVastaus(k, v) is string kysymys) k.Kysymykset.Add(kysymys);
+                        tulos[kv.Key] = k;
+                    }
+                }
+                catch (FormatException e) { Debug.LogWarning("MATKAKIRJA ui astrokysymykset: " + e.Message); }
+                Debug.Log("MATKAKIRJA ui astrokysymykset: " + string.Join(", ", tulos.Select(x => x.Key + " " + x.Value.Kysymykset.Count)));
+                // Ilman moduulia (teksti null) uusi haku seuraavalla linssin avauksella.
+                astro = teksti != null ? tulos : null;
+                astroHaussa = false;
             }));
         }
     }

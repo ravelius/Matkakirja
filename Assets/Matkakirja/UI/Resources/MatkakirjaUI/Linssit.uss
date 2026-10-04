@@ -1746,7 +1746,9 @@
     min-height: 44px;
     margin: 0 0 2px 0;
     padding: 5px 10px;
-    border-width: 0;
+    /* Läpinäkyvä reuna kaikilla riveillä: valitun rivin punainen reuna ei siirrä tekstiä. */
+    border-width: 1.5px;
+    border-color: rgba(0, 0, 0, 0);
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0);
 }
@@ -1756,7 +1758,9 @@
 }
 
 .mk-astroTaulu__rivi.mk-valittu {
-    background-color: rgba(93, 255, 168, 0.14);
+    /* Omistaja 4.10.2026 klo 11.40: nykyinen tila hennolla punaisella pyöristetyllä laatikolla (ennen vihreä pohja). */
+    border-color: var(--tk-tila-virhe);
+    background-color: rgba(176, 58, 43, 0.12);
 }
 
 .mk-astroTaulu__riviOtsikko {
@@ -1765,10 +1769,6 @@
     font-size: 15px;
     color: rgba(233, 250, 240, 0.92);
     -unity-text-align: middle-left;
-}
-
-.mk-astroTaulu__rivi.mk-valittu .mk-astroTaulu__riviOtsikko {
-    color: rgb(93, 255, 168);
 }
 
 .mk-astroTaulu__riviSelite {

@@ -2,8 +2,9 @@
 // pulua"; web js/linssit/pulu-taulu.js, PR #3590): puhdas logiikka natiiville (Linssiseppä 29.9.2026). UI on
 // UI/Linssit/PulunTauluNakyma.cs.
 //
-//   Rivit        Maapallo · ISS:n rinnalla · ISS:n sisälle · Astronauttien kuvat (web ASTRO_TAULUN_RIVIT). ISS-rivit
-//                vain, kun kyyti on olemassa, kuvat, kun linssillä on kohteita. Nykyinen moodi valittuna.
+//   Rivit        Maapallo · Astronauttien kuvat · ISS ohjaamo · Poistu (omistaja 4.10.2026 klo 11.40 ISS-OHJAAMO UUSIKSI;
+//                ennen web ASTRO_TAULUN_RIVIT). ISS-rivi vain, kun kyyti on olemassa, kuvat, kun linssillä on kohteita;
+//                Poistu sulkee linssin, aina viimeisenä. Nykyinen moodi valittuna (ei koskaan Poistu).
 //   Moodi        kuva auki → Kuvat; kyydin tila Seuranta → Seuranta; Ikkuna tai Kohde (ylilento) → Ikkuna; muuten Pallo.
 //   Askel        moodinAskel: yksi toimi kerrallaan, siirtymän aikana odotetaan (web 120 ms:n kierros, enintään 4 toimea,
 //                katto 15 s). Kuvasta minne tahansa ensin kuva kiinni; pallolta ISS:n sisälle kaksi napautusta.
@@ -25,6 +26,8 @@ namespace Matkakirja.Linssit.Astronautti
         public string Tunnus, Otsikko, Selite;
         public AstroMoodi Moodi;
         public bool Aktiivinen;
+        /// <summary>Toimintorivi (Poistu): ei moodi, ei koskaan valittuna.</summary>
+        public bool Toiminto;
     }
 
     /// <summary>Suorakaide ruudun pisteinä (vasen, yläreuna, oikea, alareuna; y kasvaa alaspäin).</summary>
@@ -62,12 +65,14 @@ namespace Matkakirja.Linssit.Astronautti
         static readonly TaulunRivi[] rivit =
         {
             new TaulunRivi { Tunnus = "pallo", Moodi = AstroMoodi.Pallo, Otsikko = "Maapallo", Selite = "Koko Maa avaruudesta" },
-            new TaulunRivi { Tunnus = "iss-rinnalla", Moodi = AstroMoodi.Seuranta, Otsikko = "ISS:n rinnalla", Selite = "Asema radallaan" },
-            new TaulunRivi { Tunnus = "iss-sisalle", Moodi = AstroMoodi.Ikkuna, Otsikko = "ISS:n sisälle", Selite = "Cupolan ikkunasta alas" },
             new TaulunRivi { Tunnus = "kuvat", Moodi = AstroMoodi.Kuvat, Otsikko = "Astronauttien kuvat", Selite = "Valokuvat avaruudesta" },
+            new TaulunRivi { Tunnus = "iss-sisalle", Moodi = AstroMoodi.Ikkuna, Otsikko = "ISS ohjaamo", Selite = "Cupolan ikkunasta alas" },
+            // Vain kehittäjän seurantatilassa (ISS:n rinnalla pois pelistä 2.10.2026).
+            new TaulunRivi { Tunnus = "iss-rinnalla", Moodi = AstroMoodi.Seuranta, Otsikko = "ISS:n rinnalla", Selite = "Asema radallaan" },
+            new TaulunRivi { Tunnus = "poistu", Toiminto = true, Otsikko = "Poistu", Selite = "Takaisin karttaan" },
         };
 
-        /// <summary>Kaikki rivit tunnuksineen (web ASTRO_TAULUN_RIVIT).</summary>
+        /// <summary>Kaikki rivit tunnuksineen.</summary>
         public static IReadOnlyList<TaulunRivi> KaikkiRivit => rivit;
 
         /// <summary>Nykyinen moodi (web nykyinenMoodi): kyyti null = ei kyytiä.</summary>
@@ -87,9 +92,10 @@ namespace Matkakirja.Linssit.Astronautti
             {
                 // ISS:n rinnalla pois pelistä (omistaja 2.10.2026); kehittäjän seurantatilassa rivi palaa.
                 if (r.Moodi == AstroMoodi.Seuranta && !Iss.IssKyyti.SeurantaKaytossa) continue;
-                bool saatavilla = r.Moodi == AstroMoodi.Pallo || (r.Moodi == AstroMoodi.Kuvat ? kuviaOn : kyytiOn);
+                bool saatavilla = r.Toiminto || r.Moodi == AstroMoodi.Pallo || (r.Moodi == AstroMoodi.Kuvat ? kuviaOn : kyytiOn);
                 if (!saatavilla) continue;
-                l.Add(new TaulunRivi { Tunnus = r.Tunnus, Otsikko = r.Otsikko, Selite = r.Selite, Moodi = r.Moodi, Aktiivinen = r.Moodi == nykyinen });
+                l.Add(new TaulunRivi { Tunnus = r.Tunnus, Otsikko = r.Otsikko, Selite = r.Selite, Moodi = r.Moodi, Toiminto = r.Toiminto,
+                    Aktiivinen = !r.Toiminto && r.Moodi == nykyinen });
             }
             return l;
         }
