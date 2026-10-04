@@ -799,6 +799,7 @@ namespace Matkakirja.Natiivi
         {
             if (l == null) return "luentoa ei ole";
             if (!Puhe.Paalla) return "luennat pois päältä";
+            if (EstaJatkohiljaisuudessa("luennon " + (l.Id ?? l.Kaupunki))) return "jatkohiljaisuus";
             if (LuentaSallittu != null && !LuentaSallittu()) return "radio soi";
             odottavaLuento = l;
             if (!puhe.Soita(l.Url, viiveS)) { odottavaLuento = null; return "ei soi"; }
@@ -871,6 +872,7 @@ namespace Matkakirja.Natiivi
             // niin silloin kuuluu pulun luenta. Muuta että silloin ei kuulu mitään luentaa eli peli tulisi alkaa kuin pelaaja olisi
             // painanut Ohita nappia."): kesken jäänyt siirto jatkuu perille, ja saapuminen ohittaa trailerin ja luennan (Perilla).
             jatkoHiljaa = true;
+            AloitaJatkohiljaisuus();
             JatkaMatkaa();
             // Ei siirtoa (kaupungissa tai reitillä ilman tavoitetta): mitään ei ala soida, joten lippu ei saa jäädä seuraavaan saapumiseen.
             if (Tila != SilmukanTila.Matkalla) jatkoHiljaa = false;
@@ -879,6 +881,46 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Aloitusnäkymän Jatka vei pelaajan matkalle: seuraava saapuminen ilman traileria ja luentaa (kuin Ohita).</summary>
         bool jatkoHiljaa;
+
+        /// <summary>
+        /// JATKOHILJAISUUS (omistaja 4.10.2026, TF 136: "pulun luenta lähtee vieläkin käyntiin itsestään noin kymmenen sekunnin tai
+        /// enemmän tauon jälkeen kun pelaaja on klikannut aloitusnäytöllä jatka matkaa"): Jatka matkaa -napin jälkeen mikään
+        /// automaattinen puhe (luento, Livian repliikit ja kuplat, traileri, viivästetyt ajastimet) ei ala ennen pelaajan ensimmäistä
+        /// omaa toimintoa (kosketus, klikkaus tai näppäin; Update). Estetty puhe jätetään väliin, ei jonoon. Sen jälkeen kaikki
+        /// toimii normaalisti. Portit: SoitaLuento, Puhe.Soita (paitsi pelaajan pyynnöstä), Pulu.Sano ja Aanet.Soita(Puhe).
+        /// </summary>
+        public static bool Jatkohiljaisuus { get; private set; }
+
+        static void AloitaJatkohiljaisuus()
+        {
+            Jatkohiljaisuus = true;
+            Debug.Log("MATKAKIRJA peli: jatkohiljaisuus päälle (automaattinen puhe odottaa pelaajan ensimmäistä toimintoa)");
+        }
+
+        /// <summary>Pelaajan ensimmäinen toiminto (tai uusi matka) päättää jatkohiljaisuuden.</summary>
+        public static void LopetaJatkohiljaisuus(string syy)
+        {
+            if (!Jatkohiljaisuus) return;
+            Jatkohiljaisuus = false;
+            Debug.Log("MATKAKIRJA peli: jatkohiljaisuus pois (" + syy + ")");
+        }
+
+        /// <summary>Estetty automaattinen puhe lokiin (todennus: jatkon jälkeen ei "puhe: alkoi" ennen toimintoa).</summary>
+        public static bool EstaJatkohiljaisuudessa(string mika)
+        {
+            if (!Jatkohiljaisuus) return false;
+            Debug.Log("MATKAKIRJA peli: jatkohiljaisuus esti " + mika);
+            return true;
+        }
+
+        static void VahdiJatkohiljaisuutta()
+        {
+            if (!Jatkohiljaisuus) return;
+            if ((Pointer.current != null && Pointer.current.press.wasPressedThisFrame)
+                || (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.wasPressedThisFrame)
+                || (Keyboard.current != null && Keyboard.current.anyKey.wasPressedThisFrame))
+                LopetaJatkohiljaisuus("pelaajan toiminto");
+        }
 
         /// <summary>
         /// Uusi matka lähtökaupungista (aloitusnäkymä, voiton Uusi matka). null = Pariisi.
@@ -895,6 +937,7 @@ namespace Matkakirja.Natiivi
             if (Tila != SilmukanTila.Aloitus && Tila != SilmukanTila.Kartta && Tila != SilmukanTila.Dialogi) return "silmukka on tilassa " + Tila;
             jatkettava = null;
             jatkoHiljaa = false;
+            LopetaJatkohiljaisuus("uusi matka");
             PeruLykkays();
             UusiPeli(siemen, lahtokaupunki);
             // Aloituskaava (omistaja 24.9.2026 klo 16.1x): intro soi avausruudulla ennen karttaa (Natiivi-UI,
@@ -2198,6 +2241,7 @@ namespace Matkakirja.Natiivi
 
         void Update()
         {
+            VahdiJatkohiljaisuutta();
             if (ajoValmis != null && Time.unscaledTime > ajoLoppuu) AjoValmis();
             if (noppaLiike != null && Time.unscaledTime > noppaLoppuu) NoppaValmis();
             KytkeRekisteri();

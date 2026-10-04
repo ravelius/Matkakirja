@@ -93,6 +93,7 @@ namespace Matkakirja.Natiivi
                     switch (a1)
                     {
                         case "musta": l.Astronautti.Avaus(AvauksenVaihe.Musta); return null;
+                        case "cupola": return "=cupolan musta: " + l.Astronautti.CupolanMustaTila();
                         case "otsikko": l.Astronautti.Avaus(AvauksenVaihe.OtsikkoPois); return null;
                         case "paljastus": l.Astronautti.Avaus(AvauksenVaihe.MustaPois); return null;
                         case "pois": l.Astronautti.Avaus(AvauksenVaihe.Pois); return null;

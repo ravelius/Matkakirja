@@ -184,6 +184,10 @@ namespace Matkakirja.Natiivi
                 }
                 case "heita":
                     return ohjain.Heita();
+                case "toiminto":
+                    // Pelaajan ensimmäinen toiminto ilman kosketusta (simulaattoriskripti): jatkohiljaisuus pois.
+                    PeliOhjain.LopetaJatkohiljaisuus("testikomento");
+                    return null;
                 case "vaihda":
                     return ohjain.VaihdaKulkutapa();
                 case "kulkutapa":

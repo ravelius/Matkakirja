@@ -479,6 +479,7 @@ namespace Matkakirja.Natiivi
         {
             PaivitaKuukaudenPintaBmng(kyydissa);
             PaivitaS2(kyydissa);
+            KarttaKerrokset.Instanssi?.LinssinVarakartta(kyydissa && KyydinVarakartta);
             // Reliefi palaa vasta, kun BMNG ja S2 ovat poissa (kyydin loppu tai BMNG puuttuu ämpäristä): paikka 1 on silloin vapaa.
             if (reliefPoissa && kuukausiLisatty < 0 && !s2Lisatty)
             {
@@ -902,8 +903,16 @@ namespace Matkakirja.Natiivi
             return m;
         }
 
+        /// <summary>
+        /// Lennon Z2-varakartta rasterittomille laatoille kyydissä (A/B `astro kyyti varakartta 0|1`). POIS oletuksena: simu 1f087d10
+        /// (Eurooppa päivällä) näytti harmaan tilalla ~10 s tasaisen sinisen pinnan maan päällä, eli varakartan UV ei osu kyydin
+        /// pallolla oikein. Jää A/B:ksi juurisyyn selvitykseen.
+        /// </summary>
+        public static bool KyydinVarakartta;
+
         void OnEnable()
         {
+            if (KyydinVarakartta) KarttaKerrokset.Instanssi?.LinssinVarakartta(false, esilataa: true);
             IssNyt.AurinkoViite = KatseViite;
             Aurinko.KyydinAurinko = KyydinAurinkoArvo;
         }
@@ -916,6 +925,7 @@ namespace Matkakirja.Natiivi
             Matkakirja.Linssit.Kyytipino.S2 = false;
             Matkakirja.Linssit.Kyytipino.AsetaS2Savy();
             AsetaS2Reuna(false);
+            KarttaKerrokset.Instanssi?.LinssinVarakartta(false);
         }
 
         void OnDestroy()

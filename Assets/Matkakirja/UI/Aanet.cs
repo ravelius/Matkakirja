@@ -278,6 +278,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static void Soita(AaniKanava k, string urlTaiAvain, Action<AudioClip> alkoi = null, float vaimennus = 1f)
         {
+            // Jatkohiljaisuus (PeliOhjain): Livian puhekanava ei soi ennen pelaajan ensimmäistä toimintoa.
+            if (k == AaniKanava.Puhe && PeliOhjain.EstaJatkohiljaisuudessa("Livian äänen")) { alkoi?.Invoke(null); return; }
             Hae(urlTaiAvain, klippi =>
             {
                 if (klippi == null) { alkoi?.Invoke(null); return; }
