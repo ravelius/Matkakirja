@@ -1,9 +1,10 @@
-# Päätoimittajan aloitusviesti (4.10.2026 klo 21.5x, oma kontekstinollaus 67 %)
+# Päätoimittajan aloitusviesti (5.10.2026 klo 01.4x, oma kontekstinollaus 75 %)
 
 Olet Päätoimittaja (Opus, max), checkout /Users/Shared/Claude/Matkakirja-fable, haara claude/bold-ride-vow4ki. Aja `git fetch origin && git pull`.
-Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja **docs/raportit/viesti-fable-luovutus-20261004.md: ensin alun "TILANNE 21.5x" ja "TILANNE 21.0x" -osiot, sitten tarvittaessa 16.4x**.
-Muisti MEMORY.md (erityisesti fable-tila-20261004-ilta (PÄIVITYS 18.1x + LOKI ODOTTAA -rivit), huonesiirtymat-napautuksin, taustapaivitys-hyvaksytty = EI EROA WI-FI/MOBIILI, loki-merget-junan-aikana, tarkistus-laitteella-aanen-kanssa, kuvat-kriittinen-tarkistus-ennen-omistajaa, omistajalle-vain-suomeksi).
+Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja **docs/raportit/viesti-fable-luovutus-20261004.md: ensin alun "TILANNE 5.10. KLO 01.4x", sitten tarvittaessa 21.5x**.
+Muisti MEMORY.md (erityisesti fable-tila-20261005-yo, tarkistus-laitteella-aanen-kanssa (myös "ei puhetta" ääniraidalla), kellonaika-date-komennosta, huonesiirtymat-napautuksin, taustapaivitys-hyvaksytty = EI EROA WI-FI/MOBIILI, omistajalle-vain-suomeksi, omistajan-neljae-tilia (kiintiö ei peruste levolle)).
 Session id on ennallaan. Kytke Remote Control päälle (set_remote_control self), jos se ei ole päällä.
 
-**TÄRKEINTÄ:** juna 138 kootaan vain kuitatuista osista (lista TILANNE 16.4x); jokainen osa tarkistetaan itse kuvista/äänellisestä tallenteesta ennen kuittausta. Olavinlinnan opastekuvat ja 6×6-kuvaparit omistajalle vasta, kun itse tyytyväinen. ISS-kameran maailmakuvat (usva, kohde säilyy) tarkistetaan ennen TF:ää. Ajattelijatyö pysyy tauolla omistajan korjauslistaan asti. Wi-Fi/mobiili-eroa ei koskaan.
-Levy: siivousskripti scratchpad/siivoa-lokit.sh (kuiva-ajo ensin). KAIKKI omistajalle näkyvä teksti suomeksi. Tarkista get_usage noin 10 vuoron välein; oma nollaus viimeistään 75 %:ssa.
+**TÄRKEINTÄ NYT:** juna 142 kootaan vain kuitatuista osista (lista TILANNE 01.4x); VIE vasta kun Pelikoodarin purkuraja 9291781b ja Jatka 2f56284a ovat mukana; jokainen osa tarkistetaan itse kuvista JA ääniraidasta (mittaa RMS/huiput itse). Ohjaamo vasta kun LS2:n maailmakuvat hyväksytty. Juna 143 = linnan Unity-uudistus + zstd + ✕-poistot + Tavli.
+Muistuta omistajaa aamulla Stylized Water 3 -ostosta. Viikko 89 % → 99 % noin 05.00: silloin luovutukset + siirtoprompti (tilinvaihto omistajan päätös).
+Levy: scratchpad/siivoa-lokit.sh (kuiva-ajo ensin). KAIKKI omistajalle näkyvä teksti suomeksi. Kellonaika aina `date`:lla. Tarkista get_usage noin 10 vuoron välein; oma nollaus viimeistään 75 %:ssa.
