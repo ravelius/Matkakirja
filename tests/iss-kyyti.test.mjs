@@ -263,9 +263,47 @@ test('tietorivi nopeutettuna: kerroin ilman LIVE-sanaa', async () => {
 test('ylilennon kohteet: Euroopan NASA-kohteet, ei revontulia', async () => {
   const { ylilennonKohteet } = await import('../js/linssit/iss-kyyti-nakyma.js');
   const l = ylilennonKohteet();
-  assert.ok(l.length >= 20 && l.length <= 40, `${l.length} kohdetta`);
+  // Kohdemäärällä ei ole ylärajaa (Päätoimittaja 4.10.2026): valikon koko rajataan rajaaLahimmat-funktiolla.
+  assert.ok(l.length >= 20, `${l.length} kohdetta`);
   assert.ok(l.every((k) => k.lat >= 34 && k.lat <= 56 && k.lon >= -25 && k.lon <= 45));
   assert.ok(l.some((k) => k.tunnus === 'venetsia') && !l.some((k) => k.tunnus === 'aurora-scandinavia'));
+});
+
+test('kohdevalikko: enintään 30 lähintä ISS:n alapisteestä, lähin ensin, tasapelissä nimi (sama natiivissa)', async () => {
+  const { rajaaLahimmat, YLILENNON_VALIKKO_MAX, ylilennonKohteet } = await import('../js/linssit/iss-kyyti-nakyma.js');
+  assert.equal(YLILENNON_VALIKKO_MAX, 30);
+  // 100 kohdetta Euroopan yllä: valikkoon 30, etäisyys nouseva.
+  const sata = Array.from({ length: 100 }, (_, i) => ({ tunnus: `k${i}`, nimi: `Kohde ${i}`, lat: 36 + (i % 10) * 2, lon: -10 + Math.floor(i / 10) * 5 }));
+  const l = rajaaLahimmat(sata, 48, 10);
+  assert.equal(l.length, 30);
+  const km = (k) => Math.hypot(k.lat - 48, (k.lon - 10) * Math.cos((48 * Math.PI) / 180));
+  for (let i = 1; i < l.length; i += 1) assert.ok(km(l[i]) >= km(l[i - 1]) - 0.5, 'nouseva järjestys');
+  assert.equal(l[0].tunnus, 'k46', 'lähin = (48, 10) ensin');
+  // Tasapeli: sama paikka → nimi fi-järjestyksessä.
+  const tasan = rajaaLahimmat([{ tunnus: 'b', nimi: 'Öljy', lat: 50, lon: 10 }, { tunnus: 'a', nimi: 'Aamu', lat: 50, lon: 10 }], 48, 10);
+  assert.deepEqual(tasan.map((k) => k.tunnus), ['a', 'b']);
+  // Oikeat kohteet: valikko ei koskaan yli 30, vaikka kohteita olisi enemmän.
+  assert.ok(rajaaLahimmat(ylilennonKohteet(), 45, 20).length <= 30);
+  // Ilman paikkaa (rata ei vielä tiedossa) silti enintään 30.
+  assert.ok(rajaaLahimmat(sata, NaN, NaN).length === 30);
+});
+
+test('kohdevalikon <select>: tyhjä rivi + enintään 30 kohdetta', async () => {
+  const { luoIssKyytiNakyma } = await import('../js/linssit/iss-kyyti-nakyma.js');
+  const { luoIssNyt, luoSimukello } = await import('../js/linssit/iss-rata.js');
+  const luodut = [];
+  const doc = { createElement: (t) => { const e = valeElementti(); e.tagName = t; luodut.push(e); return e; }, body: valeElementti() };
+  const r = Date.UTC(2026, 8, 28, 9);
+  const n = luoIssKyytiNakyma({
+    pallo: valePallo(), issNyt: luoIssNyt(), kello: luoSimukello({ reaali: () => r }), reduced: true,
+    ikkuna: { document: doc, performance: { now: () => r }, innerWidth: 393, innerHeight: 852, location: { search: '' }, Image: class { set src(v) { this.s = v; } } },
+  });
+  n?.napauta?.();
+  const valikko = luodut.find((e) => e.className === 'iss-kyyti-kohteet');
+  assert.ok(valikko, 'kohdevalikko rakentui');
+  assert.ok(valikko.children.length >= 2 && valikko.children.length <= 31, `${valikko.children.length} riviä`);
+  assert.equal(valikko.children[0].value, '');
+  n?.pura?.();
 });
 
 /*
