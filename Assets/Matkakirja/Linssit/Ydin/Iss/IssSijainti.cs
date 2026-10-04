@@ -2,8 +2,9 @@
 // nykyisen sijainnin reilun kokoisilla kirjaimilla, esim. ROOMA, ITALIA (lähin tunnistettava karttakohde, kaupunki, meri, vuori).
 // Maan nimi tulee kohteen alapuolelle"). Vain olemassa oleva paikkadata (Unity-puoli täyttää Aineiston: maat MaaOsumalla,
 // kaupungit, vuoristot, meret ja valtameret). Säännöt:
-//   maalla:  lähin saman maan kaupunki ≤ KaupunkiKm → KAUPUNKI / MAA; muuten lähin vuoristo ≤ VuoriKm → VUORI / MAA;
-//            muuten MAA (ja maa-rivi tyhjä);
+//   maalla (omistaja 4.10. 21.5x Natiivi-UI:n kautta: "miksi ei ole tarkempaa sijaintia"): vuoristossa (vuoristo ≤ VuoriKm ja
+//            lähempänä kuin kaupunki) VUORI / MAA, muuten lähin saman maan kaupunki ilman etäisyysrajaa → KAUPUNKI / MAA; pelkkä
+//            MAA vain, jos aineistossa ei ole yhtään sen maan kaupunkia eikä vuoristoa lähellä;
 //   merellä (ei maata pisteessä): lähin nimetty meri ≤ MeriKm → MERI; muuten lähin valtameri (aina jokin).
 // Puhdas C#: Linssit-testit IssSijaintiTestit.
 using System;
@@ -14,7 +15,8 @@ namespace Matkakirja.Linssit.Iss
 {
     public static class IssSijainti
     {
-        public const double KaupunkiKm = 200, VuoriKm = 300, MeriKm = 600;
+        /// <summary>KaupunkiKm: Nimet-reitin ja vanhan säännön raja (ei enää LCD:n maalla); VuoriKm: "vuoristossa".</summary>
+        public const double KaupunkiKm = 200, VuoriKm = 150, MeriKm = 600;
 
         public readonly struct Paikka
         {
@@ -54,14 +56,27 @@ namespace Matkakirja.Linssit.Iss
                 string m = Iso(maa.Value.Nimi);
                 // Päätoimittaja 4.10.: maa on aina pisteen maa (jonka yllä ISS on) ja kaupunki lähin SAMAN maan kaupunki (ei "BERLIINI /
                 // PUOLA" eikä rajan takainen "LONTOO" Ranskan pisteessä). Kaupunki, jonka maata ei tunneta, kelpaa vain sellaisenaan.
-                var k = Lahin(a.Kaupungit, lat, lon, KaupunkiKm, maa.Value.Iso);
+                var (k, kKm) = LahinKm(a.Kaupungit, lat, lon, double.PositiveInfinity, maa.Value.Iso);
+                var (v, vKm) = LahinKm(a.Vuoret, lat, lon, VuoriKm, null);
+                if (v.HasValue && (!k.HasValue || vKm < kKm)) return (Iso(v.Value.Nimi), m);
                 if (k.HasValue) return (Iso(k.Value.Nimi), m);
-                var v = Lahin(a.Vuoret, lat, lon, VuoriKm, null);
-                if (v.HasValue) return (Iso(v.Value.Nimi), m);
                 return (m, "");
             }
             var meri = Lahin(a.Meret, lat, lon, MeriKm, null) ?? Lahin(a.Valtameret, lat, lon, double.PositiveInfinity, null);
             return (meri.HasValue ? Iso(meri.Value.Nimi) : "", "");
+        }
+
+        /// <summary>Kuten Lahin, lisäksi painotettu etäisyys (km, tärkeys vähennettynä) vertailuun.</summary>
+        static (Paikka? p, double km) LahinKm(List<Paikka> p, double lat, double lon, double maxKm, string maa)
+        {
+            Paikka? paras = null; double parasKm = maxKm;
+            foreach (var x in p)
+            {
+                if (maa != null && x.Maa != maa) continue;
+                double km = Ylilennot.MaaEtaisyysKm(lat, lon, x.Lat, x.Lon) - 10 * x.Tarkeys;
+                if (km <= parasKm) { parasKm = km; paras = x; }
+            }
+            return (paras, parasKm);
         }
 
         /// <summary>Lähin paikka säteellä (km); maa != null rajaa saman maan paikkoihin. Tasapelissä tärkeämpi.</summary>

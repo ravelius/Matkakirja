@@ -42,6 +42,16 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(("INTIAN VALTAMERI", ""), IssSijainti.Hae(a, -30, 70), "muualla lähin valtameri");
         }
 
+        [Testi] static void MaallaAinaSamanMaanKaupunkiTaiVuori()
+        {
+            // Omistaja 4.10. 21.5x: maalla aina tarkempi kohde kuin pelkkä maa (ei etäisyysrajaa kaupungille).
+            var a = Pieni();
+            Oleta.Sama(("NAPOLI", "ITALIA"), IssSijainti.Hae(a, 38.2, 16.0), "Calabria: lähin Italian kaupunki yli 200 km:n päästä");
+            a.Kaupungit.Add(new IssSijainti.Paikka("Zürich", 47.37, 8.54, "CHE", 2));
+            Oleta.Sama(("ALPIT", "SVEITSI"), IssSijainti.Hae(a, 46.5, 9.7), "vuoristossa vuori, vaikka maassa on kaupunki");
+            Oleta.Sama(("ZÜRICH", "SVEITSI"), IssSijainti.Hae(a, 47.3, 8.0), "kaupunki lähempänä kuin vuoristo");
+        }
+
         [Testi] static void PelkkaMaaKunEiKohdetta()
         {
             var a = Pieni();
