@@ -121,6 +121,9 @@ namespace Matkakirja.Natiivi
             Asettele();
         }
 
+        /// <summary>Vaakavalikon väli turva-alueen alareunaan (sama kuin yläreunan 8 pt).</summary>
+        const float AlaVara = 8f;
+
         void Asettele()
         {
             // Karttaselitteen nappi on paikallaan myös linssin aikana (löydös 42), joten taikalasit pysyvät sen alla.
@@ -129,14 +132,16 @@ namespace Matkakirja.Natiivi
             nappi.style.top = yla;
             // iPhonen valikkona suoraan saaren rivin alle (turva-alueen yläreuna + 8).
             paneeli.style.top = Valikkona ? Ylapalkki.Varaus + 8 : yla + 48;
-            // Vaaka-iPhone ja -iPad ilman palkkia (web-malli 2.10.2026 klo 23.3x, iPad 3.10. klo 14.2x; tk-peitto-paneeli): enintään 70 % RUUDUN korkeudesta
-            // (webissä näkymän 390 → 273; turva-alueen prosentti jätti alareunan 21 pt pois, eikä seuraava otsikko pilkottanut
-            // vierityksen vihjeenä, Päätoimittaja 23.5x), yli jäävä vierittyy valikon sisällä; pystyssä USS:n 82 %.
-            // Ruudun korkeus paneelin yksiköissä Screenistä (kääntyessä visualTree.layout on vielä edellisen asennon).
+            // Vaaka-iPhone ja -iPad ilman palkkia: lista ulottuu TURVA-ALUEEN ALAREUNAAN asti (omistaja TF 140, 4.10.2026 klo 22.4x,
+            // iPhone vaaka: "Vaaka tilassa pitäisi näkyä valikko pidemmälle"; korvaa 2.10. web-mallin 70 % ruudusta, jolla kuudes rivi
+            // jäi puoliksi näkyviin). Yli jäävä vierittyy valikon sisällä; pystyssä USS:n 82 %. Turva-alueen korkeus kerroksesta
+            // (TurvaMuuttui ja GeometryChanged kutsuvat tätä kääntyessä); ennen ensimmäistä asettelua varana 70 % ruudusta.
+            float turvaK = paneeli.parent != null ? paneeli.parent.layout.height : float.NaN;
             float ruutu = paneeli.panel != null ? RuntimePanelUtils.ScreenToPanel(paneeli.panel, new Vector2(0f, Screen.height)).y : float.NaN;
-            paneeli.style.maxHeight = Valikkona && Ylapalkki.Piilossa
-                ? (float.IsNaN(ruutu) || ruutu <= 0f ? Length.Percent(Tyylikirja.Peitto.Paneeli) : new Length(Mathf.Round(ruutu * Tyylikirja.Peitto.Paneeli / 100f)))
-                : (StyleLength)StyleKeyword.Null;
+            float top = paneeli.style.top.value.value;
+            paneeli.style.maxHeight = !(Valikkona && Ylapalkki.Piilossa) ? (StyleLength)StyleKeyword.Null
+                : !float.IsNaN(turvaK) && turvaK > 0f ? new Length(Mathf.Floor(turvaK - top - AlaVara))
+                : float.IsNaN(ruutu) || ruutu <= 0f ? Length.Percent(Tyylikirja.Peitto.Paneeli) : new Length(Mathf.Round(ruutu * Tyylikirja.Peitto.Paneeli / 100f));
             AsetteleEsikatselu();
         }
 

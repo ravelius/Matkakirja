@@ -815,7 +815,9 @@ namespace Matkakirja.Natiivi
                     Kirjaa($"pelaaja: kehittäjätila {(Asetukset.Kehittaja ? "päällä" : "pois")} (pakotettu pelaaja {Asetukset.PakotaPelaaja})");
                     return null;
                 case "kierto":
+                    // vaaka2 = toinen vaakasuunta (Dynamic Island oikealla), kuvapareihin molemmat suunnat.
                     Screen.orientation = loput == "vaaka" ? ScreenOrientation.LandscapeLeft
+                        : loput == "vaaka2" ? ScreenOrientation.LandscapeRight
                         : loput == "pysty" ? ScreenOrientation.Portrait : ScreenOrientation.AutoRotation;
                     return null;
                 case "haku":

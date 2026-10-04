@@ -89,7 +89,7 @@ namespace Matkakirja.Natiivi
             esiNappi = Rakenne.Nappi("", "mk-linssivalitsin__esinappi", () => esiToiminto?.Invoke(), esiSisus);
             Kirjasimet.Aseta(esiNappi, Kirjasin.KoneLihava);
             esikatselu.style.display = DisplayStyle.None;
-            turva.RegisterCallback<GeometryChangedEvent>(_ => AsetteleEsikatselu());
+            turva.RegisterCallback<GeometryChangedEvent>(_ => Asettele());   // myös vaakavalikon korkeus turva-alueesta
             suurennos = new Kuvasuurennos(kerros.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
         }
 

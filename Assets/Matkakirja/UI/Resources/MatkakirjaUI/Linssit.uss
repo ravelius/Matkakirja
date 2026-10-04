@@ -3163,6 +3163,8 @@
 .mk-linssivalitsin--valikko .mk-selite__ylarivi {
     padding: 0 2px 2px 5.6px;
     margin-bottom: 2px;
+    /* Ei kutistu korkeusrajassa (omistaja TF 140, iPhone vaaka: "‹ Takaisin" ja välilehdet koskivat paneelin yläreunaan). */
+    flex-shrink: 0;
 }
 
 .mk-linssivalitsin--valikko .mk-selite__sulje {
