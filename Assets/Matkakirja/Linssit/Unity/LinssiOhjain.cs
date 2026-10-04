@@ -47,6 +47,13 @@ namespace Matkakirja.Natiivi
         public static Action<bool> PeiteKasittelija;
         /// <summary>Taustamusiikin pito (Pelikoodarin äänet asettavat).</summary>
         public static Action<bool> MusiikkiKasittelija;
+        /// <summary>
+        /// LINSSI KATKAISEE KAIKEN ÄÄNEN (omistaja TF 135, 4.10.2026: "kun mikä tahansa linssi alkaa niin kaikki audio pitää
+        /// katkaista. Nyt luenta kuuluu taustalla"). Avautuu: ennen linssin omaa Avaa-kutsua (Linssirekisteri.Avautuu), myös
+        /// linssistä toiseen; Suljettu: mikään linssi ei ole auki (äänimaisema saa palata, luenta ei). PeliOhjain.Aanet asettaa.
+        /// </summary>
+        public static Action<string> LinssiAvautuuKasittelija;
+        public static Action LinssiSuljettuKasittelija;
 
         /// <summary>
         /// Linssin portti (web linssikarttaEstaa): true = auki oleva linssi estää Liikun, siirrot ja lehdet.
@@ -234,6 +241,15 @@ namespace Matkakirja.Natiivi
             StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
+            rekisteri.Avautuu += l =>
+            {
+                try { LinssiAvautuuKasittelija?.Invoke(l.Tiedot.Id); } catch (Exception e) { Debug.LogException(e); }
+            };
+            rekisteri.Vaihtui += l =>
+            {
+                if (l != null) return;
+                try { LinssiSuljettuKasittelija?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
+            };
             // Zoomikaista pois aina, kun mikään linssi ei ole auki (linssin oma Sulje palauttaa sen myös vaihdossa).
             rekisteri.Vaihtui += l => { if (l == null) kierto?.LinssinRajat(null, null); };
             // ESILATAUSPOLITIIKKA kohdat 6 (linssi aukeaa) ja 4 (joutilaana): Linssisepän listat Esilataajan jonoon.

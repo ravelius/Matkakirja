@@ -230,6 +230,8 @@ namespace Matkakirja.Natiivi
             Ajastin.Execute(() =>
             {
                 if (kortti.Avain != m.Avain || !Asetukset.Paalla(Kytkin.Kertoja)) return;
+                // Linssi auki (avattu hengähdyksen aikana): ei luentaa sen taustalle (omistaja TF 135, linssi katkaisee äänen).
+                if (LinssiOhjain.Rekisteri?.Auki != null) return;
                 if (m.AaniUrl != null) Puhe.Hae().Soita(m.AaniUrl);
                 else Puhe.Hae().Lue(m.Lukija);
             }).StartingIn(1000);

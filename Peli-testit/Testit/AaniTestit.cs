@@ -550,6 +550,19 @@ namespace Matkakirja.Peli.Testit
             Oleta.Tosi(tila.Toive(Kanava.Pohja).Url != null && tila.Toive(Kanava.Maisema).Url != null, "palaa samaan paikkaan");
         }
 
+        [Testi] static void LinssinAvausKatkaiseeNopeasti()
+        {
+            // Omistaja TF 135: linssin avaus katkaisee äänen 0,2 s:ssa (oletus HaivytysMs vain linssin omalle pidolle).
+            var tila = new AaniTila(Taulut(), new Satunnainen(1).Seuraava);
+            tila.Paikka("pariisi", "kaupunki");
+            tila.LinssiPito(true, 200);
+            Oleta.Sama(null, tila.Toive(Kanava.Maisema).Url, "maisema pois");
+            Oleta.Sama(200, tila.Toive(Kanava.Maisema).PoisMs, "maisema 200 ms");
+            Oleta.Sama(200, tila.Toive(Kanava.Pohja).PoisMs, "pohja 200 ms");
+            tila.LinssiPito(false);
+            Oleta.Tosi(tila.Toive(Kanava.Maisema).Url != null, "maisema palaa sulkiessa");
+        }
+
         [Testi] static void LinssinTaustaaaniMaisemanPaikalla()
         {
             // ILinssiYmparisto.Taustaaani (Pelikoodari 26.9.): astronautin humina maiseman soittimella, ei linssiväistöä.

@@ -302,6 +302,45 @@ namespace Matkakirja.Natiivi
             });
         }
 
+        /// <summary>
+        /// Häivyttää kanavan s sekunnissa ja pysäyttää sen (linssin avaus katkaisee kaiken äänen, omistaja TF 135). Tehosteet ja
+        /// lentoääni pysähtyvät heti (lyhyitä); puhe- ja kertojalähteen taso palautetaan pysäytyksen jälkeen seuraavaa soittoa varten.
+        /// </summary>
+        public static void Haivyta(AaniKanava k, float s)
+        {
+            if (k == AaniKanava.Tehoste)
+            {
+                foreach (var x in soivat.ToArray()) Vapauta(x);   // myös lento
+                return;
+            }
+            var soitin = k == AaniKanava.Puhe ? puhe : kertoja;
+            if (soitin == null || !soitin.isPlaying) return;
+            UiKerros.Hae().StartCoroutine(HaivytaJaPysayta(soitin, s));
+        }
+
+        static IEnumerator HaivytaJaPysayta(AudioSource s, float kesto)
+        {
+            float alku = s.volume, t = 0f;
+            var klippi = s.clip;
+            while (t < kesto && s != null && s.isPlaying && s.clip == klippi)
+            {
+                t += Time.unscaledDeltaTime;
+                s.volume = alku * Mathf.Clamp01(1f - t / kesto);
+                yield return null;
+            }
+            if (s == null) yield break;
+            if (s.clip == klippi) s.Stop();   // uusi klippi kesken häivytyksen: ei katkaista sitä
+            s.volume = alku;
+        }
+
+        /// <summary>Soivat lähteet lokiin (linssin avauksen todiste): kanava, klippi, taso.</summary>
+        public static IEnumerable<string> Soivat()
+        {
+            if (puhe != null && puhe.isPlaying) yield return $"Aanet.puhe {puhe.clip?.name} {puhe.volume:0.00}";
+            if (kertoja != null && kertoja.isPlaying) yield return $"Aanet.kertoja {kertoja.clip?.name} {kertoja.volume:0.00}";
+            foreach (var x in soivat) if (x.Lahde != null && x.Lahde.isPlaying) yield return $"Aanet.tehoste {x.Lahde.clip?.name}{(x.Lento ? " (lento)" : "")}";
+        }
+
         public static void Pysayta(AaniKanava k)
         {
             if (k == AaniKanava.Tehoste)
