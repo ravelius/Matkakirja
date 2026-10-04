@@ -31,7 +31,10 @@
 // viivain. Pinnat kuvaputken tekstuureista (Resources/Radio/, tyokalut/radiopinnat.py, ambientCG CC0) 9-slicenä:
 // kotelo puuta, kehykset messinkiä, lasin päällyskuva LCD:n ja VU:n päällä, viivain paperia. Ilman kuvia
 // (vanha käännös) kotelo ja paperi piirretään entisellä tavalla. Viivainta voi vetää: rahina asteikkoetäisyyden
-// mukaan (RadioLinssi.Veto), irrotus lukitsee lähimpään asemaan.
+// mukaan (RadioLinssi.Veto), irrotus lukitsee lähimpään asemaan. JATKUVA VETO JA HEITTO (omistaja TF 140, 4.10.2026 klo
+// 22.5x: "Nyt ei voi vierittää kuin muutamaan lähimpään kanavaan. Pitäisi olla kaikki kanavat selattavissa"; Linssiseppä):
+// vedon aikana nimirivin keskus siirtyy aseman kerrallaan, kun siirto ylittää puoli paikkaa (yksi veto kulkee koko asteikon),
+// ja irrotuksen vauhti jatkuu hidastuen (HeittoTau) ennen lukitusta; asteikolla kaikki kanavat (RadioLinssi.NakymanAsteikko).
 //   iPad (> 700 pt)  kotelo 640, VU 118 × 84, LCD-lasi 424 × 84 (näyttö 408 × 68), lamppu ⌀ 30, viivain 42
 //   iPhone           kotelo koko leveys, VU 76 × 56, LCD-lasi 240 × 58 (näyttö 224 × 42), lamppu ⌀ 20, viivain 36
 //
@@ -109,7 +112,7 @@ namespace Matkakirja.Natiivi
         public System.Action SuljePyynto;
 
         // Nimirivin liike (webin radio-liuku / radio-haku / radio-lukko).
-        enum Liike { Ei, Liuku, Haku, Lukko }
+        enum Liike { Ei, Liuku, Haku, Lukko, Heitto, Testiveto }
         Liike liike;
         float liikeAlku, liuku, siirto, lukkoLahto, lukkoYli;
         readonly List<Vector2> kaari = new List<Vector2>();
@@ -455,6 +458,8 @@ namespace Matkakirja.Natiivi
 
         void PaivitaAsteikko(bool mitaLiuku)
         {
+            // Vedon ja heiton aikana nimirivi on vedon keskuksen ympärillä (VetoSiirto); päivitys irrotuksen jälkeen.
+            if (Vetaa) return;
             var idt = AsteikonIdt();
             string uusi = LaskeKeskus(idt);
             if (uusi != null) viimeisinKeskus = uusi;
@@ -491,9 +496,16 @@ namespace Matkakirja.Natiivi
             vetoJaannos = null;
             keskus = uusi;
 
-            // Naapurit näkymän asemista: lännessä vasemmalla, idässä oikealla, reunoilla tyhjää (ei kiertoa itäisimmästä
-            // läntisimpään, omistaja 28.9.2026). Testiasteikko kiertää kuten ennen.
-            int nIdt = idt.Count, ic = uusi == null ? -1 : IndexOf(idt, uusi);
+            TaytaNimet(idt, uusi);
+        }
+
+        /// <summary>
+        /// Nimirivi keskuksen keski ympärille: lännessä vasemmalla, idässä oikealla, reunoilla tyhjää (ei kiertoa itäisimmästä
+        /// läntisimpään, omistaja 28.9.2026). Testiasteikko kiertää kuten ennen. Vedon aikana keski = vedon keskus.
+        /// </summary>
+        void TaytaNimet(IReadOnlyList<string> idt, string keski)
+        {
+            int nIdt = idt.Count, ic = keski == null ? -1 : IndexOf(idt, keski);
             int vasen = ic < 0 ? 0 : testi ? System.Math.Min(perPuoli, (nIdt - 1) / 2) : System.Math.Min(perPuoli, ic);
             int oikea = ic < 0 ? 0 : testi ? System.Math.Min(perPuoli, nIdt - 1 - vasen) : System.Math.Min(perPuoli, nIdt - 1 - ic);
             for (int i = 0; i < paikat.Count; i++)
@@ -539,8 +551,15 @@ namespace Matkakirja.Natiivi
         // --- viivaimen veto (radiouudistus, suunnitelma luku 7) ---------------------------
 
         const float VedonKynnys = 6f;
+        /// <summary>Heiton hidastuvuuden aikavakio (ms, iOS-vierityksen tuntuma), alaraja heitolle ja loppuraja (pt/ms).</summary>
+        const float HeittoTau = 325f, HeitonKynnys = 0.25f, HeitonLoppu = 0.03f;
         bool vetoAlkoi, painettu;
         float vetoX0, vetoDx;
+        /// <summary>Nimirivin keskus vedon ja heiton aikana (siirtyy aseman kerrallaan); vauhti pt/ms.</summary>
+        string vetoKeski;
+        float vetoNopeus, vetoEdellinenAika, heittoAika;
+        // Testiveto (radio veto dx ms): sama polku kuin sormella.
+        float testiDx, testiMs;
         Vector2 vetoAlku;
         int vetoOsoitin = -1;
         float? vetoJaannos;
@@ -551,10 +570,14 @@ namespace Matkakirja.Natiivi
             {
                 if (!nakyvissa || (linssi == null && !testi)) return;
                 painettu = true;
-                vetoAlkoi = false;
                 vetoAlku = e.position;
-                vetoX0 = e.position.x;
-                vetoDx = 0;
+                // Kosketus heiton aikana pysäyttää heiton ja jatkaa samasta kohdasta (rahina jatkuu).
+                bool jatka = liike == Liike.Heitto && vetoKeski != null;
+                if (jatka) { liike = Liike.Ei; vetoAlkoi = true; }
+                else { vetoAlkoi = false; vetoKeski = keskus; vetoDx = 0; }
+                vetoX0 = e.position.x - vetoDx;
+                vetoNopeus = 0;
+                vetoEdellinenAika = Nyt;
                 vetoOsoitin = e.pointerId;
                 // Kaappaus heti: ennen nimien Clickable kaappasi osoittimen, eikä asteikon PointerMove saanut
                 // liikettä (Laitetestaaja 25.9.: veto ei liikuttanut nauhaa).
@@ -564,21 +587,18 @@ namespace Matkakirja.Natiivi
             asteikko.RegisterCallback<PointerMoveEvent>(e =>
             {
                 if (!painettu || e.pointerId != vetoOsoitin) return;
-                vetoDx = e.position.x - vetoX0;
-                if (!vetoAlkoi && Mathf.Abs(vetoDx) >= VedonKynnys)
+                float uusiDx = e.position.x - vetoX0;
+                if (!vetoAlkoi && Mathf.Abs(uusiDx) >= VedonKynnys)
                 {
                     vetoAlkoi = true;
                     liike = Liike.Ei;
                     linssi?.VetoAlkaa();
                 }
-                if (!vetoAlkoi) return;
-                AsetaSiirto(vetoDx);
-                float paikka = Paikka;
-                if (paikka > 0)
-                {
-                    float u = vetoDx / paikka;
-                    linssi?.Veto(Mathf.Abs(u - Mathf.Round(u)));
-                }
+                if (!vetoAlkoi) { vetoDx = uusiDx; return; }
+                float nyt = Nyt, dt = Mathf.Max(1f, nyt - vetoEdellinenAika);
+                vetoNopeus = Mathf.Lerp(vetoNopeus, (uusiDx - vetoDx) / dt, 0.5f);
+                vetoEdellinenAika = nyt;
+                VetoSiirto(uusiDx);
                 e.StopPropagation();
             }, TrickleDown.TrickleDown);
             asteikko.RegisterCallback<PointerUpEvent>(e => LopetaVeto(e.pointerId, true), TrickleDown.TrickleDown);
@@ -614,19 +634,119 @@ namespace Matkakirja.Natiivi
                 return;
             }
             vetoAlkoi = false;
+            // Liike jatkuu, jos sormi oli vauhdissa (yli 60 ms sitten pysähtynyt sormi ei heitä).
+            if (Nyt - vetoEdellinenAika > 60f) vetoNopeus = 0;
+            VetoIrti(vetoNopeus);
+        }
+
+        /// <summary>
+        /// Vedon siirto dx (pt): keskus siirtyy aseman kerrallaan, kun siirto ylittää puoli paikkaa, joten yksi veto kulkee koko
+        /// asteikon (ennen ±perPuoli asemaa). Nauha seuraa sormea jäännöksellä, ja rahina kulkee asemaväleittäin.
+        /// </summary>
+        /// <returns>true, kun asteikon pää rajasi siirron (heitto pysähtyy reunaan).</returns>
+        bool VetoSiirto(float dx)
+        {
+            float paikka = Paikka;
+            vetoDx = dx;
+            bool reuna = false;
+            if (paikka > 0 && vetoKeski != null)
+            {
+                var idt = AsteikonIdt();
+                // Veto oikealle tuo lännen asemat keskelle (keskus länteen) ja vasemmalle idän asemat.
+                while (vetoDx > paikka * 0.5f && SiirraKeskus(idt, -1)) { vetoX0 += paikka; vetoDx -= paikka; }
+                while (vetoDx < -paikka * 0.5f && SiirraKeskus(idt, +1)) { vetoX0 -= paikka; vetoDx += paikka; }
+                // Asteikon pää (Natiivi-UI:n katselmointi): nauha ei liu'u tyhjälle reunan yli. Ylitys siirtyy vetoX0:aan,
+                // joten suunnan vaihto liikuttaa nauhaa heti.
+                float raja = paikka * 0.5f;
+                if (Mathf.Abs(vetoDx) > raja)
+                {
+                    float rajattu = Mathf.Clamp(vetoDx, -raja, raja);
+                    vetoX0 += vetoDx - rajattu;
+                    vetoDx = rajattu;
+                    reuna = true;
+                }
+            }
+            AsetaSiirto(vetoDx);
+            if (paikka > 0)
+            {
+                float u = vetoDx / paikka;
+                linssi?.Veto(Mathf.Abs(u - Mathf.Round(u)));
+            }
+            return reuna;
+        }
+
+        bool Vetaa => (painettu && vetoAlkoi) || liike == Liike.Heitto || liike == Liike.Testiveto;
+
+        bool SiirraKeskus(IReadOnlyList<string> idt, int suunta)
+        {
+            int i = IndexOf(idt, vetoKeski), j = i + suunta;
+            if (i < 0 || (!testi && (j < 0 || j >= idt.Count))) return false;
+            vetoKeski = idt[((j % idt.Count) + idt.Count) % idt.Count];
+            TaytaNimet(idt, vetoKeski);
+            return true;
+        }
+
+        /// <summary>Irrotus: vauhdilla heitto (Tikki hidastaa), muuten lukitus lähimpään asemaan heti.</summary>
+        void VetoIrti(float nopeus)
+        {
+            if (Mathf.Abs(nopeus) >= HeitonKynnys && LiikeSallittu)
+            {
+                vetoNopeus = nopeus;
+                heittoAika = Nyt;
+                Aloita(Liike.Heitto);
+                return;
+            }
+            PaataVeto();
+        }
+
+        /// <summary>Viisari lukittuu lähimpään asemaan (keskus vedon jäljiltä) ja linssi virittää sen.</summary>
+        void PaataVeto()
+        {
             float paikka = Paikka;
             int askel = paikka > 0 ? Mathf.RoundToInt(vetoDx / paikka) : 0;
             int sija = Mathf.Clamp(perPuoli - askel, 0, naytetyt.Count - 1);
             string lahin = naytetyt.Count > 0 ? naytetyt[sija] : null;
-            if (lahin == null || lahin == kaupunki || sija == perPuoli)
+            // Asteikon pään yli: lähin on vedon keskus (reunan asema).
+            if (lahin == null && vetoKeski != null) { lahin = vetoKeski; sija = perPuoli; }
+            if (lahin == null || lahin == kaupunki)
             {
-                // Sama asema: nauha palaa lukituksen liikkeellä, lähetys nousee rampilla (RadioLinssi.VetoLoppuu).
+                // Sama asema: nimirivi soivan ympärille (keskus voi olla vedon jäljiltä muualla) samassa kohdassa ruudulla,
+                // sitten nauha palaa lukituksen liikkeellä ja lähetys nousee rampilla (RadioLinssi.VetoLoppuu).
+                if (lahin != null && paikka > 0 && vetoKeski != kaupunki)
+                {
+                    TaytaNimet(AsteikonIdt(), kaupunki);
+                    AsetaSiirto(vetoDx - (perPuoli - sija) * paikka);
+                }
+                vetoKeski = null;
                 linssi?.VetoLoppuu(kaupunki);
                 AloitaLukko();
                 return;
             }
             vetoJaannos = vetoDx - (perPuoli - sija) * paikka;
+            vetoKeski = null;
+            Debug.Log($"MATKAKIRJA radio: veto lukittuu {lahin} (asteikolla {AsteikonIdt().Count})");
             linssi?.VetoLoppuu(lahin);
+        }
+
+        /// <summary>
+        /// Testikomento `radio veto &lt;dx&gt; [ms]` (LinssiOhjain): sormen veto dx pt ms:ssa samaa polkua kuin kosketus
+        /// (VetoSiirto, loppuvauhti → heitto). Palauttaa tilarivin.
+        /// </summary>
+        public static string TestiVeto(float dx, float ms)
+        {
+            var n = instanssi;
+            if (n == null || !n.nakyvissa || n.linssi == null) return "radio: kuori ei näkyvissä";
+            n.vetoKeski = n.keskus;
+            n.vetoDx = 0;
+            n.vetoX0 = 0;
+            n.vetoNopeus = 0;
+            n.testiDx = dx;
+            n.testiMs = Mathf.Max(16f, ms);
+            n.linssi.VetoAlkaa();
+            if (!n.LiikeSallittu) { n.VetoSiirto(dx); n.VetoIrti(0); return $"radio: testiveto {dx:0} pt heti (vähennetty liike)"; }
+            n.liikeAlku = Nyt;
+            n.liike = Liike.Testiveto;
+            return $"radio: testiveto {dx:0} pt {ms:0} ms keskuksesta {n.keskus ?? "-"}, asteikolla {n.AsteikonIdt().Count}";
         }
 
         // --- merkkivalo ja linkki -------------------------------------------------------
@@ -718,6 +838,26 @@ namespace Matkakirja.Natiivi
                 case Liike.Haku:
                     AsetaSiirto(Haku((t % HakuMs) / HakuMs));
                     break;
+                case Liike.Heitto:
+                {
+                    float nyt = Nyt, dt = Mathf.Min(50f, nyt - heittoAika);
+                    heittoAika = nyt;
+                    float uusi = vetoNopeus * Mathf.Exp(-dt / HeittoTau);
+                    float matka = (vetoNopeus - uusi) * HeittoTau;   // eksponentiaalisen hidastumisen tarkka matka
+                    vetoNopeus = uusi;
+                    bool reuna = VetoSiirto(vetoDx + matka);
+                    if (reuna || Mathf.Abs(vetoNopeus) < HeitonLoppu) { liike = Liike.Ei; PaataVeto(); }
+                    break;
+                }
+                case Liike.Testiveto:
+                {
+                    // Sormi kulkee tasaisesti testiDx:n testiMs:ssa; loppuvauhti jää heitoksi kuten irrotuksessa.
+                    // VetoSiirto siirtää vetoX0:aa keskuksen vaihtuessa: sormen siirto suhteessa nykyiseen keskukseen.
+                    float u = Mathf.Clamp01(t / testiMs);
+                    VetoSiirto(testiDx * u - vetoX0);
+                    if (u >= 1f) { liike = Liike.Ei; VetoIrti(testiDx / testiMs); }
+                    break;
+                }
                 case Liike.Lukko:
                 {
                     float u = Mathf.Clamp01(t / LukkoMs);
