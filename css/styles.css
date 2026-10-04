@@ -90,7 +90,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde c3d473fe00d4 */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde e80185e507dc */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -159,6 +159,13 @@ body.paivittyy .app { visibility: hidden; }
   --tk-harmaa-korostus: #ffffff;
   --tk-harmaa-reunus: #aaaaaa;
   --tk-harmaa-toiminto: rgba(170, 170, 170, 0.55);
+  --tk-lcd-pinta: #0c2214;
+  --tk-lcd-pinta-peitto: #0c2214;
+  --tk-lcd-muste: #84ffa0;
+  --tk-lcd-muste-pehmea: rgba(132, 255, 160, 0.62);
+  --tk-lcd-korostus: #84ffa0;
+  --tk-lcd-reunus: rgba(124, 255, 158, 0.28);
+  --tk-lcd-toiminto: #84ffa0;
   --tk-himmennys-tumma: rgba(14, 9, 4, 0.72);
   --tk-himmennys-kevyt: rgba(14, 9, 4, 0.35);
   --tk-himmennys-kuva: rgba(14, 9, 4, 0.92);
@@ -183,6 +190,10 @@ body.paivittyy .app { visibility: hidden; }
   --tk-koko-arkki: 26px;
   --tk-koko-nimio: 34px;
   --tk-koko-leveaLisa: 2px;
+  --tk-koko-lcd: 30px;
+  --tk-koko-lcd-pieni: 15px;
+  --tk-koko-lcd-mini: 20px;
+  --tk-koko-rumpu: 12px;
   --tk-vali-xs: 4px;
   --tk-vali-s: 8px;
   --tk-vali-m: 12px;
@@ -259,6 +270,15 @@ body.paivittyy .app { visibility: hidden; }
   --tk-korostus: var(--tk-harmaa-korostus);
   --tk-reunus: var(--tk-harmaa-reunus);
   --tk-toiminto: var(--tk-harmaa-toiminto);
+}
+.tk-teema-lcd {
+  --tk-pinta: var(--tk-lcd-pinta);
+  --tk-pinta-peitto: var(--tk-lcd-pinta-peitto);
+  --tk-muste: var(--tk-lcd-muste);
+  --tk-muste-pehmea: var(--tk-lcd-muste-pehmea);
+  --tk-korostus: var(--tk-lcd-korostus);
+  --tk-reunus: var(--tk-lcd-reunus);
+  --tk-toiminto: var(--tk-lcd-toiminto);
 }
 /* TYYLIKIRJA LOPPU */
 
