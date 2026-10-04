@@ -119,7 +119,6 @@ namespace Matkakirja.Natiivi
             ura.RegisterCallback<GeometryChangedEvent>(_ => AsetaKahva());
 
             RakennaLaajennus();
-            KaytaNahka();
 
             // --- mininäyttö --------------------------------------------------------------------------------------
             mini = Rakenne.El("mk-issohjaamo__mini", Juuri);
@@ -130,6 +129,8 @@ namespace Matkakirja.Natiivi
             mini.style.display = DisplayStyle.None;
             mini.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             mini.AddManipulator(new Clickable(() => AsetaMini(false)));
+            // Kuvanahka vasta kaikkien osien (myös mininäytön) jälkeen.
+            KaytaNahka();
         }
 
         // --- KUVANAHKA (omistaja 4.10.2026 klo 16.4x: "ei näytä avaruusaluksen ohjaimilta"; Codexin grafiikka, Päätoimittaja) ---------
