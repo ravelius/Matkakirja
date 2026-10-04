@@ -393,24 +393,6 @@
     background-color: var(--tk-lcd-pinta);
 }
 
-/* Kameranapin kilpi (hinta, ODOTTAA, EI ONNISTUNUT): pieni LCD-lappu napin yläpuolella. */
-.mk-issohjaamo__kilpi {
-    position: absolute;
-    top: -22px;
-    left: 50%;
-    translate: -50% 0;
-    height: 18px;
-    margin: 0;
-    padding: 0 5px;
-    border-width: 1px;
-    border-radius: 4px;
-    border-color: var(--tk-lcd-reunus);
-    background-color: var(--tk-lcd-pinta);
-    color: var(--tk-lcd-muste);
-    font-size: var(--tk-koko-rumpu);
-    white-space: nowrap;
-    -unity-text-align: middle-center;
-}
 
 /* OMAT KUVAT (omistaja 4.10.2026 klo 15.2x): iso ikkuna KUVANÄKYMÄ-pohjalla (teema tumma) Cupolan päällä ja kuvapino vasempaan
  * alareunaan ohjaamopaneelin yläpuolelle (tyylikirja ISS-OHJAAMO.kuvapino). */

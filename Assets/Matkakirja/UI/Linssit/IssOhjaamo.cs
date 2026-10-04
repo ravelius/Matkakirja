@@ -30,8 +30,6 @@ namespace Matkakirja.Natiivi
         readonly VisualElement[] varret = new VisualElement[5];
         readonly Label kohde, maa, miniTeksti, rumpuA, rumpuB;
         readonly Button kamera;
-        readonly Label kilpi;
-        float virheAsti;
         readonly Func<AstronauttiLinssi> linssi;
         readonly Action kuvaa;
         JoystickSuunta suunta = JoystickSuunta.Ei;
@@ -93,11 +91,6 @@ namespace Matkakirja.Natiivi
             kamera = Rakenne.Nappi(null, "mk-issohjaamo__kamera", Laukaise, paneeli, Kamera);
             kamera.tooltip = "Ota tarkka ISS-kuva";
             kamera.SetEnabled(false);
-            // Kilpi kameranapin yllä: hinta, kun ilmaisia kuvia ei ole jäljellä, ODOTTAA tai EI ONNISTUNUT (LS2:n IssKuvaKauppa).
-            kilpi = Rakenne.Teksti("", "mk-issohjaamo__kilpi", kamera);
-            kilpi.pickingMode = PickingMode.Ignore;
-            Kirjasimet.Aseta(kilpi, Kirjasin.Lcd);
-            kilpi.style.display = DisplayStyle.None;
             kaasu = Rakenne.El("mk-issohjaamo__kaasu", paneeli);
             kaasu.tooltip = "Kaasu: ajan nopeus";
             ura = Rakenne.El("mk-issohjaamo__ura", kaasu, PickingMode.Ignore);
@@ -339,32 +332,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Kameranapin painallus testikomennolle (sama polku kuin kosketus, myös osto).</summary>
         public void PainaKamera() => Laukaise();
 
-        /// <summary>Ostettava kuva: ilmaiset käytetty eikä kehittäjän rajaton tila (Pöllön koodi).</summary>
-        static bool Ostettava => !IssKameraKuva.Rajaton && IssKameraKuva.KuviaJaljella <= 0;
-
-        /// <summary>Kameranappi: kuva heti tai ensin osto (Applen ostoikkuna; onnistuessa kuva otetaan heti).</summary>
+        /// <summary>Kameranappi: tarkka ISS-kuva (omistaja 4.10. klo 15.2x: ostot pois, kuvia rajattomasti; LS2 IssKameraKuva).</summary>
         void Laukaise()
         {
             if (!kamera.enabledSelf) return;
-            if (!Ostettava) { kuvaa?.Invoke(); return; }
-            Debug.Log("MATKAKIRJA linssit: ohjaamon kamera: osto " + (IssKuvaKauppa.Hinta ?? IssKuvaKauppa.HintaOletus));
-            IssKameraKuva.OstaJaKuvaa(valmis: t =>
-            {
-                Debug.Log("MATKAKIRJA linssit: ohjaamon kamera: osto " + t);
-                if (t == IssKuvaKauppa.Tulos.Epaonnistui) virheAsti = Time.unscaledTime + 3f;
-                PaivitaKilpi();
-            });
-            PaivitaKilpi();
-        }
-
-        void PaivitaKilpi()
-        {
-            string t = Time.unscaledTime < virheAsti ? "EI ONNISTUNUT"
-                : IssKuvaKauppa.Odottaa || IssKameraKuva.Tila == "odottaa" ? "ODOTTAA"
-                : IssKuvaKauppa.Kesken || IssKameraKuva.Tila == "osto" ? "…"
-                : Ostettava ? IssKuvaKauppa.Hinta ?? IssKuvaKauppa.HintaOletus : null;
-            kilpi.text = t ?? "";
-            kilpi.style.display = t != null ? DisplayStyle.Flex : DisplayStyle.None;
+            kuvaa?.Invoke();
         }
 
         // --- LCD ja kamera ----------------------------------------------------------------------------------------
@@ -388,9 +360,8 @@ namespace Matkakirja.Natiivi
             if (l.Kaasu != kaasuNyt) NaytaKaasu(l.Kaasu);
             // Kamera kaikkialla (loki #3934 koko Eurooppa 13.52, #3936 koko maailma 14.0x; kilpi kertoo, jos kuvaa ei saada):
             // aktiivinen Cupolassa, kun kuva ei ole jo työn alla; A/B VainKuvauspaikat rajaa kuvauspaikkoihin.
-            bool kuvattavissa = l.Kyyti == KyydinTila.Ikkuna && !IssKameraKuva.Kaynnissa && !IssKuvaKauppa.Kesken
+            bool kuvattavissa = l.Kyyti == KyydinTila.Ikkuna && !IssKameraKuva.Kaynnissa
                 && (!IssKameraKuva.VainKuvauspaikat || l.Kuvauspaikka() != null);
-            PaivitaKilpi();
             if (kamera.enabledSelf != kuvattavissa) kamera.SetEnabled(kuvattavissa);
         }
 
@@ -424,7 +395,7 @@ namespace Matkakirja.Natiivi
         public string Tila()
         {
             var r = Nakyva;
-            return $"ohjaamo {(Juuri.resolvedStyle.display == DisplayStyle.None ? "piilossa" : Mini ? "mini" : "iso")}, kilpi \"{kilpi.text}\", "
+            return $"ohjaamo {(Juuri.resolvedStyle.display == DisplayStyle.None ? "piilossa" : Mini ? "mini" : "iso")}, "
                 + $"{r.xMin:0},{r.yMin:0}–{r.xMax:0},{r.yMax:0}, joystick {suunta}, kaasu {kaasuNyt}×, kamera {(kamera.enabledSelf ? "aktiivinen" : "himmeä")}, "
                 + $"LCD \"{kohde.text}\" / \"{maa.text}\" ({kohde.resolvedStyle.fontSize:0} pt)"
                 + (Laajennettu ? $", laajennettu: kausi {KausiNyt?.Invoke()}, vuorokausi {VuorokausiNyt?.Invoke()}" : "");
