@@ -548,6 +548,8 @@ namespace Matkakirja.Natiivi
 
                 // 4b) S2:n omat pilvet (SCL 3/8/9/10): varakuva (valinta 1) vain pilvisille lehdille (Päätoimittaja 1.10.)
                 var pilviset = ty.PilvisetLehdet();
+                var datattomat = ty.DatattomatLehdet();   // radan välinen kiila: varakuva toiselta päivältä tai radalta
+                pilviset.UnionWith(datattomat);
                 if (pilviset.Count > 0)
                 {
                     var varat = new List<(S2Ruutu vara, UnityWebRequest tq, UnityWebRequest sq)>();
@@ -575,7 +577,7 @@ namespace Matkakirja.Natiivi
                         catch (Exception x) { Loki($"varakuva {vara.Tunnus}: {x.Message}"); }
                         finally { tq.Dispose(); sq?.Dispose(); }
                     }
-                    Loki($"pilvimaski: {pilviset.Count} pilvistä lehteä, {varoja} varakuvaa, {haku.Sum(x => x.pit) / 1e6:0.0} Mt");
+                    Loki($"pilvimaski: {pilviset.Count} pilvistä tai datatonta ({datattomat.Count}) lehteä, {varoja} varakuvaa, {haku.Sum(x => x.pit) / 1e6:0.0} Mt");
                     if (haku.Count > 0) yield return Lataa(haku, tila);
                 }
                 long saatu = tila[0];
@@ -591,7 +593,11 @@ namespace Matkakirja.Natiivi
                 // Maa: S2-ruutujen SCL-maamaski (rataväli ruudun neliön sisällä on SCL:ssä nodata = maa; avomerellä ei ruutuja)
                 // tai pelin maarajat (simu 0cc5ad75: maarajoissa vain pelin 135 maata, Algeria puuttuu → kiila jäi).
                 var maaOsuma = MaaOsuma();
-                ty.Maalla = (la, lo) => ty.MaaOsuus(la, lo) > 0.5 || (maaOsuma != null && maaOsuma.HaeMaa(la, lo) != null);
+                // Simu 2eebe57b: Amazonian kiila joen vieressä sai merenvärin (SCL-maamaskissa vettä). Rataväli on aina jonkin S2-ruudun
+                // neliön sisällä, avomerellä ruutuja ei ole: ruudun neliössä dataton = läpinäkyvä (BMNG alla).
+                var neliot = ty.Data.Ruudut.Select(r => r.ruutu).ToArray();
+                bool Neliossa(double la, double lo) { foreach (var r in neliot) if (lo >= r.W && lo <= r.E && la >= r.S && la <= r.N) return true; return false; }
+                ty.Maalla = (la, lo) => Neliossa(la, lo) || ty.MaaOsuus(la, lo) > 0.5 || (maaOsuma != null && maaOsuma.HaeMaa(la, lo) != null);
                 ty.MaanSini = MaanSini; ty.Kamera = kk.Paikka; ty.AurinkoEcef = (aEcef.x, aEcef.y, aEcef.z);   // pilvipeitto kasvaa etäisyyden mukaan (Cupola-mallikuva)
                 var lista = ty.Laatat.ToList(); int kirjoitettu = 0;
                 int ytimia = Math.Max(1, SystemInfo.processorCount - 1);   // vain pääsäikeessä (laitekoe 1.10.: säikeessä poikkeus)

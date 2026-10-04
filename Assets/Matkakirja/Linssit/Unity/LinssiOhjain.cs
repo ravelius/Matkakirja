@@ -1770,6 +1770,27 @@ namespace Matkakirja.Natiivi
                             System.IO.File.WriteAllText(System.IO.Path.Combine(Application.persistentDataPath, "sijainti-tarkistus.txt"), sb.ToString());
                             Kirjaa($"astro kyyti sijainti tarkista: {n} kohdetta, LCD:n maa eri kuin pisteen {eri}, tyhjä {tyhja} (Documents/sijainti-tarkistus.txt)");
                         }
+                        else if (a == "sijainti" && osat.Length > 3 && osat[3] == "satunnaiset")
+                        {
+                            // Päätoimittaja 4.10.: taulukko satunnaisista pisteistä (lat, lon → LCD, etäisyys) + kiinteät todistepisteet.
+                            int lkm = osat.Length > 4 && int.TryParse(osat[4], out int nn) ? nn : 20;
+                            var rnd = new System.Random(osat.Length > 5 && int.TryParse(osat[5], out int sie) ? sie : 1);
+                            var ai = Matkakirja.Linssit.Iss.IssSijainti.Nykyinen;
+                            var pisteet = new List<(string, double, double)> { ("Poznań", 52.41, 16.93), ("Brno", 49.20, 16.61), ("Bergen", 60.39, 5.32),
+                                ("Viipuri", 60.71, 28.75), ("Harkova", 50.00, 36.23), ("Thessaloniki", 40.64, 22.94),
+                                ("Pohjanmeren keskiosa", 56.00, 3.00), ("Biskajanlahti", 45.50, -4.50), ("Pohjanlahti", 62.50, 20.00),
+                                ("Tyrrhenanmeri", 40.00, 12.00), ("Atlantti Irlannin länsipuolella", 53.00, -14.00) };
+                            while (pisteet.Count < lkm + 11) pisteet.Add(("satunnainen", 36 + rnd.NextDouble() * 32, -10 + rnd.NextDouble() * 42));
+                            var sb = new System.Text.StringBuilder("piste\tlat\tlon\tLCD\tmaa\tlaji\tkm\n");
+                            foreach (var (nimi, la, lo) in pisteet)
+                            {
+                                var (k2, m2) = Matkakirja.Linssit.Iss.IssSijainti.Hae(ai, la, lo);
+                                var (km, laji) = Matkakirja.Linssit.Iss.IssSijainti.Selitys(ai, k2, la, lo);
+                                sb.AppendLine(System.FormattableString.Invariant($"{nimi}\t{la:0.00}\t{lo:0.00}\t{k2}\t{m2}\t{laji}\t{(km < 0 ? "" : km.ToString("0"))}"));
+                            }
+                            System.IO.File.WriteAllText(System.IO.Path.Combine(Application.persistentDataPath, "sijainti-taulukko.txt"), sb.ToString());
+                            Kirjaa($"astro kyyti sijainti satunnaiset: {pisteet.Count} pistettä, paikkoja {ai?.Paikat.Count ?? 0} (Documents/sijainti-taulukko.txt)");
+                        }
                         else if (a == "sijainti") { var (k1, m1) = l.Sijainti(); Kirjaa($"astro kyyti sijainti: {k1} / {m1}"); }
                         else if (a == "kaasu" && osat.Length > 3 && int.TryParse(osat[3], out int kk))
                             Kirjaa($"astro kyyti kaasu: {(l.AsetaKaasu(kk) ? kk + "×" : "ei pykälää")}, {Matkakirja.Linssit.Iss.IssNyt.Simu}");

@@ -139,6 +139,31 @@ namespace Matkakirja.Linssit.IssKamera
         /// Näkymän lehdet, joissa jonkin ruudun SCL näyttää pilveä tai pilven varjoa (8 × 8 näytettä per lehti): niille haetaan
         /// varakuva (valinta 1), jonka pikselit täyttävät maskatut kohdat.
         /// </summary>
+        /// <summary>
+        /// Näkyvät lehdet, joissa ensisijaisen ruudun neliön sisällä on dataton kohta (kahden radan välinen kiila; simu 284afecc:
+        /// Sahara ja Amazonia, BMNG näkyi kiilana): varakuva (toinen päivä tai rata) haetaan näille kuten pilvisille.
+        /// </summary>
+        public HashSet<(int z, int x, int y)> DatattomatLehdet()
+        {
+            var r = new HashSet<(int, int, int)>();
+            foreach (var (z, x, y) in Lehdet())
+            {
+                if (nakyvat != null && !nakyvat.Contains((z, x, y))) continue;
+                double m = Uudelleenprojisointi.PikseliM(z, Uudelleenprojisointi.Pikseli(z, x, y, 128, 128).lat);
+                bool aukko = false;
+                for (int i = 0; i < 8 && !aukko; i++) for (int j = 0; j < 8 && !aukko; j++)
+                {
+                    var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, i * 32 + 16, j * 32 + 16);
+                    bool neliossa = false;
+                    foreach (var (ru, _) in Data.Ruudut)
+                        if (ru.Valinta == 0 && lo >= ru.W && lo <= ru.E && la >= ru.S && la <= ru.N) { neliossa = true; break; }
+                    if (neliossa && !Uudelleenprojisointi.Nayte(Data, la, lo, m, out _, out _, out _)) aukko = true;
+                }
+                if (aukko) r.Add((z, x, y));
+            }
+            return r;
+        }
+
         public HashSet<(int z, int x, int y)> PilvisetLehdet()
         {
             var r = new HashSet<(int, int, int)>();
