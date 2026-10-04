@@ -387,6 +387,7 @@ namespace Matkakirja.Natiivi
                     int edellinen = latausVaihe;
                     latausVaihe = vaihe;
                     string teksti = vaihe == 1 ? "Linna latautuu…" : "Vielä pieni hetki…";
+                    Debug.Log($"MATKAKIRJA linssit: nimiruutu: rivi {vaihe} \"{teksti}\" {kulunut:F1} s");
                     if (edellinen == 0) { latausRivi.text = teksti; latausRivi.style.opacity = 1f; }
                     else
                     {
@@ -399,6 +400,7 @@ namespace Matkakirja.Natiivi
             else if (!odotus && nimiruutuAuki)
             {
                 nimiruutuAuki = false;
+                Debug.Log($"MATKAKIRJA linssit: nimiruutu: häivytys {Time.unscaledTime - nimiruutuAlku:F1} s avauksesta");
                 nimiruutu.AddToClassList("mk-astroavaus--haipyy");
                 nimiruutu.style.opacity = 0f;
                 nimiruutu.schedule.Execute(() => { if (!nimiruutuAuki) nimiruutu.style.display = DisplayStyle.None; }).StartingIn(1200);
