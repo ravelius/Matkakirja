@@ -150,7 +150,9 @@ namespace Matkakirja.Natiivi
                     string ham = q == DioraamaUlkokuori.Laatu.Huippu ? k.HamaraHuippu : q == DioraamaUlkokuori.Laatu.Normaali ? k.HamaraNormaali : k.HamaraKevyt;
                     string jpg = q == DioraamaUlkokuori.Laatu.Huippu ? k.HamaraJpgHuippu : q == DioraamaUlkokuori.Laatu.Normaali ? k.HamaraJpgNormaali : k.HamaraJpgKevyt;
                     if (astc) return hamara && !string.IsNullOrEmpty(ham) ? ham : paiva;
-                    return hamara ? jpg : null;   // muuten glb:n oma kuva
+                    // Päivän JPEG-vara (tekstuurit.jpg, 4.10.) kuten DioraamaUlkokuori; puuttuva = glb:n oma kuva.
+                    string paivaJpg = q == DioraamaUlkokuori.Laatu.Huippu ? k.JpgHuippu : q == DioraamaUlkokuori.Laatu.Normaali ? k.JpgNormaali : k.JpgKevyt;
+                    return hamara && !string.IsNullOrEmpty(jpg) ? jpg : string.IsNullOrEmpty(paivaJpg) ? null : paivaJpg;
                 }
                 Lisaa(k.Kevyt); Lisaa(Tekstuuri(DioraamaUlkokuori.Laatu.Kevyt));
                 var tavoite = DioraamaUlkokuori.Valittu;
