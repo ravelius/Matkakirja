@@ -1,0 +1,77 @@
+{
+  "title": "Sokrates suojaa haavoittunutta Alkibiadesta",
+  "date": "2026-10-02",
+  "type": "havainnekuva",
+  "method": "built-in image_gen",
+  "requestCommit": "531073ce486e76125315275d00313793b9b5e633",
+  "branch": "codex/sokrates-alkibiades-20261002",
+  "sourceDimensions": {
+    "width": 1448,
+    "height": 1086
+  },
+  "deliveryResize": "1448 x 1086 -> 2048 x 1536; alkuperainen alpha sailytetty",
+  "prompt": "kehote.txt",
+  "files": [
+    {
+      "file": "sokrates-alkibiades.png",
+      "width": 2048,
+      "height": 1536,
+      "hasAlpha": true,
+      "bytes": 834522,
+      "sha256": "a24c3f80ea785415ede942ebdcd2da50a036074bfccc3d6bada58974edff1c76",
+      "transparentPixels": 2528674,
+      "opaquePixels": 9183,
+      "meanAlpha": 19.704564412434895,
+      "nonTransparentBounds": {
+        "minX": 57,
+        "minY": 45,
+        "maxX": 2019,
+        "maxY": 1455
+      },
+      "lightVisiblePixels": 0
+    },
+    {
+      "file": "esikatselu.png",
+      "width": 512,
+      "height": 384,
+      "hasAlpha": true,
+      "bytes": 69815,
+      "sha256": "3bf3f9201b92412d4fba43fd2e2493574ef45c29db0b9f2eb3f1eefd2da82515",
+      "transparentPixels": 152742,
+      "opaquePixels": 1859,
+      "meanAlpha": 20.220408121744793,
+      "nonTransparentBounds": {
+        "minX": 14,
+        "minY": 11,
+        "maxX": 504,
+        "maxY": 363
+      },
+      "lightVisiblePixels": 0
+    },
+    {
+      "file": "esikatselu-valkoisella.png",
+      "width": 768,
+      "height": 576,
+      "hasAlpha": false,
+      "bytes": 205551,
+      "sha256": "605c3008a8ba280ff6b0dee6be6c342780cc363c583e74eebc4af3af759a7c66",
+      "transparentPixels": 0,
+      "opaquePixels": 442368,
+      "meanAlpha": 255,
+      "nonTransparentBounds": {
+        "minX": 0,
+        "minY": 0,
+        "maxX": 767,
+        "maxY": 575
+      },
+      "lightVisiblePixels": 418616
+    }
+  ],
+  "status": {
+    "created": true,
+    "visuallyReviewed": true,
+    "gameIntegrated": false,
+    "projectionVerified": false,
+    "published": false
+  }
+}

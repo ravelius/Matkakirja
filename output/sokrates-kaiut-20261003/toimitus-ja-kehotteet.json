@@ -1,0 +1,194 @@
+{
+  "date": "2026-10-03",
+  "deliveryState": "validated-branch-delivery",
+  "requestCommits": [
+    "b4b81c6f58e7a21177289740694390ad46b6d7e9",
+    "654e049fce31893056a13c4e4c9ddf7b155235b6"
+  ],
+  "images": [
+    {
+      "key": "oraakkeli",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex/2026-10-02/sokrates-alkibiades/posti/codex-paatoimittaja-sokrates-kaiku-oraakkeli-20261003.png",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex/2026-10-02/sokrates-alkibiades/output/sokrates-kaiut-20261003/alkuperaiset/oraakkeli-1024x1536.png",
+      "size": [
+        2048,
+        3072
+      ],
+      "mode": "LA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 3736417,
+      "alphaBBoxByThreshold": {
+        "1": [
+          278,
+          46,
+          1792,
+          2948
+        ],
+        "16": [
+          282,
+          74,
+          1788,
+          2929
+        ],
+        "128": [
+          283,
+          76,
+          1786,
+          2928
+        ],
+        "240": [
+          285,
+          78,
+          1785,
+          2925
+        ]
+      },
+      "boundaryAlphaMax": 0,
+      "rgbChannelDifferenceMax": 0,
+      "sha256": "ce168af8d996a8ea575ce31f8758deea55b4244e1c720a795632ef211dc801a9",
+      "nativeSha256": "1c41d892fd562158bb7b27418cc183b9433d97ad0f88536094be31a6e3b49a08",
+      "generationTool": "built-in image_gen",
+      "generationArguments": {
+        "transparent_background": true,
+        "prompt": "Create one isolated full-length subject as a realistic studio photograph of an imagined classical WHITE MARBLE / WHITE PLASTER sculpture. This is a simple light-projection asset, so the subject must be bright and readable at a very small size. Strictly neutral black-and-white grayscale, no sepia, no warm tint, no color. White material throughout, large smooth carved forms, restrained broad drapery folds, little small detail. Soft side lighting with generous fill: luminous white and pale-gray surfaces, clear gentle midtones and shallow shadows; avoid large dark areas or dramatic chiaroscuro. Clearly sculpted stone rather than a living person, blank carved eyes. TRUE transparent PNG alpha background, empty transparent space around the complete silhouette and inside gaps; no backdrop, floor, horizon, cast shadow outside the subject, pedestal, plinth, decorative border, frame, lettering, signature or watermark. One subject only. Portrait composition, intended resolution 2048 x 3072 pixels or higher, long edge at least 2048 pixels. Complete head, hands, feet and all props visible, centered, subject occupies about 85% of canvas height, at least 5% empty safety margin at every edge. High-quality clean alpha edges. Not a drawing, painting, illustration, bronze statue, or CGI-looking toy.\n\nSUBJECT: The Delphic oracle Pythia / Themis alone, the seated pose inspired by the Kodros Painter's Berlin F2538 cup. One adult Greek woman in a simple long chiton with a draped shawl over the back of her head, seated upright but contemplative on a HIGH SIMPLE THREE-LEGGED TRIPOD stool. Show her in a clear three-quarter side view, facing toward the viewer's right. Head slightly lowered, looking down toward a shallow libation bowl held calmly in one hand just ahead of her torso. In the other hand hold ONE small recognizable laurel branch with a few broad simple leaves. The bowl and branch must both be visible, separate and readable; exactly two anatomically correct hands. The tripod consists only of one small circular seat and three plain slender pale stone legs, all three feet visible, NO column, NO pillar, NO horizontal crossbar or broad intermediate beam, NO pedestal, NO elaborate chair, NO altar. Both bare feet descend naturally beneath the dress, visible together near the bottom. Calm, dignified, simple clean silhouette. No Aegeus, consultant, attendants, other people, smoke, temple, scenery or decorative objects."
+      },
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "export": "sips: neutral grayscale profile; 2x resize to 2048 x 3072; source alpha retained"
+    },
+    {
+      "key": "sotilas",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex/2026-10-02/sokrates-alkibiades/posti/codex-paatoimittaja-sokrates-kaiku-sotilas-20261003.png",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex/2026-10-02/sokrates-alkibiades/output/sokrates-kaiut-20261003/alkuperaiset/sotilas-1024x1536.png",
+      "size": [
+        2048,
+        3072
+      ],
+      "mode": "LA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 4163894,
+      "alphaBBoxByThreshold": {
+        "1": [
+          130,
+          64,
+          1828,
+          3072
+        ],
+        "16": [
+          418,
+          70,
+          1793,
+          2995
+        ],
+        "128": [
+          420,
+          72,
+          1792,
+          2993
+        ],
+        "240": [
+          421,
+          74,
+          1790,
+          2991
+        ]
+      },
+      "boundaryAlphaMax": 1,
+      "rgbChannelDifferenceMax": 0,
+      "sha256": "be6cb31e48dc8ad4d2a8694736e5d7e2935da9f105fa088df02ace09a3396411",
+      "nativeSha256": "680b0e30024341f190022d954c80d382025d53e7aee0efe6b7c148107cfb365d",
+      "generationTool": "built-in image_gen",
+      "generationArguments": {
+        "transparent_background": true,
+        "prompt": "Create one isolated full-length subject as a realistic studio photograph of an imagined classical WHITE MARBLE / WHITE PLASTER sculpture. This is a simple light-projection asset, so the subject must be bright and readable at a very small size. Strictly neutral black-and-white grayscale, no sepia, no warm tint, no color. White material throughout, large smooth carved forms, restrained broad drapery folds, little small detail. Soft side lighting with generous fill: luminous white and pale-gray surfaces, clear gentle midtones and shallow shadows; avoid large dark areas or dramatic chiaroscuro. Clearly sculpted stone rather than a living person, blank carved eyes. TRUE transparent PNG alpha background, empty transparent space around the complete silhouette and inside gaps; no backdrop, floor, horizon, cast shadow outside the subject, pedestal, plinth, decorative border, frame, lettering, signature or watermark. One subject only. Portrait composition, intended resolution 2048 x 3072 pixels or higher, long edge at least 2048 pixels. Complete head, hands, feet and all props visible, centered, subject occupies about 85% of canvas height, at least 5% empty safety margin at every edge. High-quality clean alpha edges. Not a drawing, painting, illustration, bronze statue, or CGI-looking toy.\n\nSUBJECT: One ancient GREEK HOPLITE soldier in a composed upright standing pose, full body. A recognizable simple crested Greek helmet, crest made of the same bright white sculptural material; a plain Greek cuirass and a short tunic, bare lower legs and simple sandals. A large perfectly ROUND unornamented shield carried on his anatomical LEFT arm (on viewer's right) slightly clear of the torso so its circular silhouette is readable. A single straight spear held vertically by the anatomical RIGHT hand (on viewer's left), with a clearly readable simple spearhead, fully inside the frame. Plain shield without insignia, minimal armor details, restrained broad shapes, no intricate engravings. Sculpted statue, not a living person dressed in armor. White marble helmet, white marble shield, white marble spear; absolutely no dark bronze, dark crest, dark metal, dark clothing. Slight three-quarter frontal view and dignified balanced stance with both feet clearly visible and two correct arms/hands. Only the warrior, shield and spear. No scene, no companions, no weapons rack or base."
+      },
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "export": "sips: neutral grayscale profile; 2x resize to 2048 x 3072; source alpha retained"
+    },
+    {
+      "key": "david",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex/2026-10-02/sokrates-alkibiades/posti/codex-paatoimittaja-sokrates-kaiku-david-20261003.png",
+      "original": "/Volumes/T7 4TB/ChatGPT-Codex-active/Codex/2026-10-02/sokrates-alkibiades/output/sokrates-kaiut-20261003/alkuperaiset/david-1024x1536.png",
+      "size": [
+        2048,
+        3072
+      ],
+      "mode": "LA",
+      "alphaExtrema": [
+        0,
+        254
+      ],
+      "alphaZeroPixels": 3464542,
+      "alphaBBoxByThreshold": {
+        "1": [
+          146,
+          154,
+          1942,
+          2940
+        ],
+        "16": [
+          214,
+          157,
+          1936,
+          2931
+        ],
+        "128": [
+          216,
+          158,
+          1934,
+          2929
+        ],
+        "240": [
+          218,
+          160,
+          1932,
+          2927
+        ]
+      },
+      "boundaryAlphaMax": 0,
+      "rgbChannelDifferenceMax": 0,
+      "sha256": "e7a754ed0f11280bc8a16bd815ec4346ac7acee1a4ff18e01b0bec1e34c61572",
+      "nativeSha256": "c74179b94e67c10020498b4e2b12f0fb0b3412675d73387bd17917f4081eb377",
+      "generationTool": "built-in image_gen",
+      "generationArguments": {
+        "transparent_background": true,
+        "prompt": "Create one isolated full-length subject as a realistic studio photograph of an imagined classical WHITE MARBLE / WHITE PLASTER sculpture. This is a simple light-projection asset, so the subject must be bright and readable at a very small size. Strictly neutral black-and-white grayscale, no sepia, no warm tint, no color. White material throughout, large smooth carved forms, restrained broad drapery folds, little small detail. Soft side lighting with generous fill: luminous white and pale-gray surfaces, clear gentle midtones and shallow shadows; avoid large dark areas or dramatic chiaroscuro. Clearly sculpted stone rather than a living person, blank carved eyes. TRUE transparent PNG alpha background, empty transparent space around the complete silhouette and inside gaps; no backdrop, floor, horizon, cast shadow outside the subject, pedestal, plinth, decorative border, frame, lettering, signature or watermark. One subject only. Portrait composition, intended resolution 2048 x 3072 pixels or higher, long edge at least 2048 pixels. Complete head, hands, feet and all props visible, centered, subject occupies about 85% of canvas height, at least 5% empty safety margin at every edge. High-quality clean alpha edges. Not a drawing, painting, illustration, bronze statue, or CGI-looking toy.\n\nSUBJECT: Socrates alone in a simplified seated pose inspired by Jacques-Louis David's The Death of Socrates (1787), but obey these anatomical hand assignments exactly. One mature Greek philosopher, bald crown, short curly hair at the sides and a full broad curly beard, dignified calm expression, simple Greek draped cloth over one shoulder and around the waist. He sits on the near EDGE OF A LOW PLAIN BED, torso upright, bare feet on an implied floor with no actual floor shown. Keep the bed minimal and narrow: only a small simple mattress edge and unobtrusive short legs beneath the seated body, no long bed frame, horizontal rail, platform, stage or pedestal. Show Socrates from a frontal slight three-quarter viewpoint so anatomy is clear. His ANATOMICAL RIGHT ARM (appearing on the VIEWER'S LEFT) is raised, elbow bent, RIGHT INDEX FINGER POINTING STRAIGHT UP in a teaching gesture, the other four fingers naturally curled. His ANATOMICAL LEFT ARM (appearing on the VIEWER'S RIGHT) extends calmly forward and outward at lower-chest height, LEFT HAND OPEN with palm gently upward. Leave the cup out for a simpler image. Exactly one complete human figure, exactly two arms and two hands, no other people, no foreign arms or reaching hands. Full figure and both feet visible; raised finger entirely inside the frame. Spacious clear silhouette, broad simple stone drapery folds, pale midtones, no painting texture."
+      },
+      "nativeDimensions": [
+        1024,
+        1536
+      ],
+      "export": "sips: neutral grayscale profile; 2x resize to 2048 x 3072; source alpha retained"
+    }
+  ],
+  "visualQA": {
+    "singleSubjects": true,
+    "noOtherPeople": true,
+    "whiteSculptureAppearance": true,
+    "silhouettesReviewedOnBlackAtSmallSize": true,
+    "socratesAnatomicalRightIndexRaised": true,
+    "socratesLeftHandOpen": true,
+    "hopliteShieldAndSpearVisible": true,
+    "oracleBowlAndLaurelVisible": true,
+    "oracleTripodThirdLeg": "hidden by drapery",
+    "actualGameProjectionTested": false,
+    "preview": "tarkistus-mustalla-taustalla.jpg"
+  },
+  "reference": {
+    "oraclePose": "https://commons.wikimedia.org/wiki/File:Themis_Aigeus_Antikensammlung_Berlin_F2538_n2.jpg",
+    "referencePixelsUsedAsToolInput": false
+  },
+  "gameIntegrated": false,
+  "published": false
+}
