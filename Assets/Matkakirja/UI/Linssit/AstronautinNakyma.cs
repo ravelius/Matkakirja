@@ -188,7 +188,9 @@ namespace Matkakirja.Natiivi
                 bool karkein = !AstronauttiKerros.KyydinVarakartta || KarttaKerrokset.VarakarttaValmis;
                 // Päätoimittaja 4.10.: kriteeri on, ettei näkymässä ole yhtään lataamatonta (harmaata) laattaa, ei latausprosentti.
                 var (puuttuu, nakyy) = KarttaKerrokset.Instanssi?.LataamattomatLaatat(Camera.main) ?? (-1, -1);
-                bool laatat = puuttuu <= 0;
+                // Simu 9b1d4af1: häivytyksessä 0/0 = yhtään laattaa ei vielä piirretty, jolloin näkyy pohjapallon harmaa; valmis vasta,
+                // kun näkymässä on laattoja ja niistä yhdeltäkään ei puutu rasteria.
+                bool laatat = nakyy > 0 && puuttuu == 0;
                 if (ms < CupolanMustaMaxMs && (!kehys || !karkein || !laatat)) return;
                 cupolaHaivytys.Pause();
                 Debug.Log($"MATKAKIRJA linssit: cupolan musta häivyy {ms:0} ms (kehys {(kehys ? "valmis" : "kesken")}, karkein taso {(karkein ? "valmis" : "kesken")}, lataamattomia laattoja {puuttuu}/{nakyy}, lataus {lataus:0} %)");
