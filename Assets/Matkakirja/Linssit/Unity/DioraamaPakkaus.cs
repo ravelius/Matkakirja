@@ -3,7 +3,7 @@
 // Manifestin merkintä { polku, sha256, tavuja, br: { sha256, tavuja } }: ylätaso on PURETTU tiedosto (välimuistin avain ja
 // puskurin koko), br on ladattava pakattu. Alkuperäiset jäävät ämpäriin (vanhat TF-versiot ja peili lataavat niitä).
 // Purku iOS:n omalla Compression-kehyksellä (Plugins/iOS/MatkakirjaPurku.mm, COMPRESSION_BROTLI), ei kolmannen osapuolen
-// koodia. Muualla (editori, Mac) purkua ei ole: DioraamaLevyvalimuisti lataa silloin pakkaamattoman polun.
+// koodia. iOS-laitteella ja -simulaattorissa purku on käytössä; editorissa ja Macilla ei (pakkaamaton polku).
 // Kutsutaan taustasäikeestä (Task.Run); ei Unityn API:a.
 using System;
 #if UNITY_IOS && !UNITY_EDITOR
