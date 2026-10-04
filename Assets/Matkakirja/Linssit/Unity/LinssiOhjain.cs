@@ -1984,6 +1984,8 @@ namespace Matkakirja.Natiivi
                     else if (osat[1] == "esikuuntelu" && osat.Length > 2) { EsikuunteluPois = osat[2] == "pois"; Kirjaa($"radio: esikuuntelu {(EsikuunteluPois ? "pois" : "päällä")}"); }
                     else if (osat[1] == "tila") Kirjaa($"radio: {r.Tila.Vaihe}{(r.Tauolla ? " (tauolla)" : "")} {r.Tila.AsemaId} {r.Tila.Rivi1} / {r.Tila.Rivi2}, asteikolla {r.Asteikko.Count}, taajuus {r.Tila.Taajuus:F4}, esikuuntelu {r.Esikuunneltu ?? "-"}, näkyvissä {r.Nakyvat.Count}, VU {r.Mittari.Osuus:F2}{(r.Mittari.Jaljitelty ? " (varakuvio)" : "")}, rms {((r.Virta as Matkakirja.Natiivi.RadioVirta)?.Taso ?? -1):F4}, {VuSyy((r.Virta as Matkakirja.Natiivi.RadioVirta)?.Kuvaus)}");
                     else if (osat[1] == "kaupunki" && osat.Length > 2) r.SoitaKaupunki(osat[2]);
+                    // Asteikon veto kuten sormella (omistaja TF 140: kaikki kanavat selattavissa): radio veto <dx pt> [ms].
+                    else if (osat[1] == "veto" && osat.Length > 2) Kirjaa(RadioNakyma.TestiVeto((float)Luku(osat[2]), osat.Length > 3 ? (float)Luku(osat[3]) : 600f));
                     // A/B kartta (omistaja 29.9.): yksinkertainen (oletus) ↔ 3D-mastot; voimaan seuraavasta avauksesta.
                     else if (osat[1] == "kartta" && osat.Length > 2) { Matkakirja.Linssit.Radio.RadioLinssi.Yksinkertainen = osat[2] != "mastot"; Kirjaa($"radio: kartta {osat[2]} (avaa linssi uudelleen)"); }
                     else r.Viritä(osat[1].ToUpperInvariant());
