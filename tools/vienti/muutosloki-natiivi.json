@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (138)",
+   "paiva": "2026-10-04",
+   "teksti": "Olavinlinna latautuu valmiiksi ennen esittelyä: nimiruudussa kerrotaan, että linna latautuu. Kun olet Suomessa tai linnan merkki on näkyvissä, linna ladataan valmiiksi taustalla, ja se aukeaa muutamassa sekunnissa."
+  },
+  {
    "versio": "1.1 (137)",
    "paiva": "2026-10-04",
    "teksti": "Jatka matkaa -napin jälkeen peli on hiljaa, kunnes kosket ruutuun. ISS-linssissä on Pulun valikko ja Kysy Pululta -kysymykset, ja Cupola avautuu suoraan mustan ISS-ruudun kautta, ja kohteen valinta säilyttää katseen suunnan. Olavinlinna nousee sumusta vasta latauduttuaan."
