@@ -69,6 +69,21 @@ export function vertailuTunnus(id) {
   return f ? `${f[1]}-${f[2]}-${f[3]}` : String(id ?? '').toLowerCase();
 }
 
+/**
+ * Gatewayn hakunimet (luettelo on englanniksi isoin ASCII-kirjaimin, osin vanhoin nimin): Wikipedian nimi, sama ilman
+ * diakriittejä ja hallintoliitteitä ("Luxembourg City", "Tromsø Municipality"), ja vanhat tai muut kirjoitusasut.
+ */
+const MUUT_NIMET = {
+  kiova: ['Kiev'], odessa: ['Odessa'], pietari: ['St Petersburg', 'Leningrad'], tallinna: ['Tallin'],
+  lappi: ['Lapland'], islanti: ['Reykjavik'], kobenhavn: ['Kobenhavn'], praha: ['Praha'], varsova: ['Warszawa'],
+  sisilia: ['Sicilia'], kreeta: ['Kriti'], alpit: ['Alpen'], firenze: ['Firenze'], tukholma: ['Stockholms'],
+};
+export function hakunimet(en, kid) {
+  const ascii = (t) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/ø/g, 'o').replace(/Ø/g, 'O');
+  const perus = en.replace(/\s+(City|Municipality)$/i, '');
+  return [...new Set([en, perus, ascii(perus), ...(MUUT_NIMET[kid] ?? [])])];
+}
+
 /** Gatewayn tulostaulukon (ShowQueryResults-TextTable.pl) rivit. */
 export function jasennaGatewayTaulu(html) {
   const rivit = [];
@@ -233,13 +248,24 @@ async function kaupunginEhdokkaat(k, en, enint, nykyiset) {
     .map((r) => ({ ...r, km: Number.isFinite(r.lat) ? etaisyysKm(k, r) : null }))
     .filter((r) => r.km != null && r.km <= (r.keskipiste ? maxKm : 2 * maxKm))
     .map((r) => ({ ...r, pilvisyys, lahde: r.keskipiste ? 'Gateway' : 'Gateway, ei keskipistettä', ...gatewayOsoitteet(r.id) }));
-  const selkeat = await gatewayHaku(en).catch(() => []);
+  const nimet = hakunimet(en, k.id);
+  const monella = async (pilvet) => {
+    const rivit = new Map();
+    // eslint-disable-next-line no-await-in-loop
+    for (const n of nimet) for (const x of await gatewayHaku(n, pilvet).catch(() => [])) rivit.set(x.id, x);
+    return [...rivit.values()];
+  };
+  const selkeat = await monella();
   let gw = lahella(selkeat, '≤ 10 %');
   // Seutukohde (Islanti, Alpit, Lappi, Kreeta, Sisilia): pelin piste on seudun keskellä → alle 6 ehdokasta → 300 km.
   if (karsiSarjat(gw).length < 6) gw = lahella(selkeat, '≤ 10 %', 300);
   // Pilvinen seutu (esim. Helsinki: 3 kuvaa ≤ 10 %): yhä alle 6 → myös 11–25 %, merkittynä arkkiin.
-  if (karsiSarjat(gw).length < 6) gw = [...gw, ...lahella(await gatewayHaku(en, ['clouds25']).catch(() => []), '11–25 %', 300)];
-  const kirjasto = (await kirjastoHaku(en).catch(() => [])).map((e) => ({ ...e, lahde: 'images-api' }));
+  if (karsiSarjat(gw).length < 6) gw = [...gw, ...lahella(await monella(['clouds25']), '11–25 %', 300)];
+  const kirjasto = [];
+  for (const n of nimet.slice(0, 3)) {
+    // eslint-disable-next-line no-await-in-loop
+    for (const e of await kirjastoHaku(n).catch(() => [])) if (!kirjasto.some((x) => x.id === e.id)) kirjasto.push({ ...e, lahde: 'images-api' });
+  }
   // Sama kuva molemmista lähteistä: images-api:n rivi jää (sen tiedot tulevat suoraan kirjastosta).
   const kirjastossa = new Set(kirjasto.map((e) => vertailuTunnus(e.id)));
   const kaikki = [...gw.filter((e) => !kirjastossa.has(vertailuTunnus(e.id))), ...kirjasto]

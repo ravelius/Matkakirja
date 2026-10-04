@@ -2,7 +2,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {
-  etaisyysKm, gatewayOsoitteet, gatewayTunnus, jarjesta, jasennaGatewayTaulu, karsiSarjat, kohteetLohko, vertailuTunnus,
+  etaisyysKm, gatewayOsoitteet, hakunimet, gatewayTunnus, jarjesta, jasennaGatewayTaulu, karsiSarjat, kohteetLohko, vertailuTunnus,
 } from '../tools/astronaut/ehdokkaat.mjs';
 import { jasennaKuvasivu } from '../tools/astronaut/gateway.mjs';
 
@@ -63,4 +63,10 @@ test('valinnat → KOHTEET-lohko pelin kaupungin paikalla', () => {
 
 test('etäisyys km', () => {
   assert.ok(Math.abs(etaisyysKm({ lat: 60.17, lon: 24.94 }, { lat: 61.5, lon: 23.76 }) - 162) < 3);
+});
+
+test('hakunimet: ilman diakriittejä ja hallintoliitettä, vanhat nimet', () => {
+  assert.deepEqual(hakunimet('Luxembourg City', 'luxemburg'), ['Luxembourg City', 'Luxembourg']);
+  assert.deepEqual(hakunimet('Tromsø Municipality', 'tromssa'), ['Tromsø Municipality', 'Tromsø', 'Tromso']);
+  assert.ok(hakunimet('Kyiv', 'kiova').includes('Kiev'));
 });
