@@ -1,4 +1,4 @@
-# 03 Linssivalikko: Linssit-nappi (mk-linssitNappi, oikea tap) → LINSSIT-valitsin → "Astronautin kamera" 1. tap = esikatselu
+# 03 Linssivalikko (valitsin oikealla x 160–392, esikatselu vasemmalla ylhäällä → ohinapautus vasemmalle alas 80,650): Linssit-nappi (mk-linssitNappi, oikea tap) → LINSSIT-valitsin → "Astronautin kamera" 1. tap = esikatselu
 # (rivin tila "Aktivoi"), 2. tap rivin Aktivoi-kohtaan = aktivointi (esikatselun otsikko on ylempänä samalla tekstillä) → linssi auki → Poistu → ohinapautus sulkee valitsimen.
 tap-teksti mk-linssitNappi
 nakyy 6 Astronautin kamera -- Linssit-nappi avasi valitsimen
@@ -14,6 +14,6 @@ oleta 10 linssit: auki: ei mitään -- linssi pois
 odota 3
 tap-teksti mk-linssitNappi
 nakyy 6 Astronautin kamera -- valitsin auki uudelleen
-tap 200 150
+tap 80 650
 ei-nay 6 Astronautin kamera -- ohinapautus sulki valitsimen
 kuva 03c-suljettu Valitsin suljettu ohinapautuksella

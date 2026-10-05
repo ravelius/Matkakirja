@@ -11,7 +11,8 @@ nakyy 5 mk-issohjaamo__kohde -- LCD:n kohdeteksti näkyy
 nakyy 5 mk-issohjaamo__kamera -- kameranappi näkyy
 odota 6
 kuva 07b-cupola Cupola: ohjaamo alareunassa (joystick vasemmalla, LCD, kamera, kaasu oikealla)
-aanitaso 3
+# Humina soi natiivissa AVAudioEngine-moottorissa (CupolaAani.cs), joten Unityn mikseri (aanitaso) on 0: kaappaa natiivi.
+aani 4 cupola-humina
 ui linssi taulu auki
 nakyy 10 Minne katsotaan -- taulu auki uudelleen
 tap-teksti Poistu
