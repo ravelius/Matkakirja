@@ -34,6 +34,15 @@ namespace Matkakirja.Natiivi
             return pxPerPt / pxPerYks;
         }
 
+        /// <summary>
+        /// OSM-PERÄINEN DATA NÄKYVISSÄ (omistaja 5.10. 22.3x "lisää Nominatim", juna 146): oppaan korostusviivan reittipisteet
+        /// tulevat Pöllön workerista Nominatimista (OpenStreetMap). ODbL vaatii tekijätiedon: "© OpenStreetMap contributors"
+        /// lisätään Cesiumin krediittien joukkoon (kapealla ruudulla Data sources -listaan, leveällä ruutukrediittien perään).
+        /// </summary>
+        public static bool OsmNakyvissa;
+        public const string OsmTeksti = "© OpenStreetMap contributors";
+        static Label osm;
+
         static Label nappi;
         static VisualElement lahteet;
 
@@ -48,6 +57,14 @@ namespace Matkakirja.Natiivi
             var on = juuri?.Q("OnScreenCredits");
             var pop = juuri?.Q("PopupCredits");
             if (on == null || pop == null) return;
+            // OSM-tekijätieto: luodaan kerran, sijoitetaan joka kehys (Cesium rakentaa puun uudelleen krediittien muuttuessa).
+            if (paalla && OsmNakyvissa)
+            {
+                osm ??= new Label(OsmTeksti) { name = "MatkakirjaOsm", pickingMode = PickingMode.Ignore };
+                var kohde = Kapea ? (lahteet != null && lahteet.parent == pop ? lahteet : pop) : on;
+                if (osm.parent != kohde) { osm.RemoveFromHierarchy(); kohde.Add(osm); }
+            }
+            else if (osm != null && osm.parent != null) osm.RemoveFromHierarchy();
             if (!paalla || !Kapea)
             {
                 if (nappi != null && nappi.parent != null) nappi.RemoveFromHierarchy();
@@ -66,7 +83,7 @@ namespace Matkakirja.Natiivi
                     lapsi.style.marginRight = TyhjaSivuPt * pt;
                     continue;
                 }
-                if (lapsi == nappi || !(lapsi is Label l)) continue;
+                if (lapsi == nappi || lapsi == osm || !(lapsi is Label l)) continue;
                 if (l.text != null && l.text.Contains("Data Attribution")) { l.style.display = DisplayStyle.None; continue; }
                 if (lahteet == null || lahteet.parent != pop)
                 {

@@ -205,6 +205,8 @@ namespace Matkakirja.Natiivi
                 puhuu = false; y.Repliikki(false); silmukka.AaniLoppui();
             }
             kaupunki.PidaMaski();
+            // OSM-tekijätieto aina oppaan ajan: worker käyttää Nominatimia koordinaatteihin ja reittiviivoihin (ODbL, juna 146).
+            KrediititTiivis.OsmNakyvissa = true;
             KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
@@ -604,6 +606,7 @@ namespace Matkakirja.Natiivi
             OpasKorostusKuva.Piilota(true);
             KyydinKameraEnnen.Ajo = null;
             KytkeNimilappu(false);
+            KrediititTiivis.OsmNakyvissa = false;
             KrediititTiivis.Paivita(false);
             Hiljenna();
             KytkeChat(false);
