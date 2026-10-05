@@ -1079,8 +1079,8 @@
    "rajattu": null
   },
   "STS060-94-2": {
-   "palkki": false,
-   "rajattu": null
+   "palkki": true,
+   "rajattu": "20261005"
   },
   "iss056e032555": {
    "palkki": false,

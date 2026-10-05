@@ -118,9 +118,10 @@ const UUDET_20261001 = [
   'iss021e026475', 'iss022e019513', 'iss023e027737', 'iss023e029806',
   'iss023e035670', 'iss025e005259', 'iss026e006255', 'iss027e034290',
 ];
-// 20261005/ = Sisältökirjurin erä 5 (omistaja 5.10.2026 klo 08.01): Berliini, Amsterdam, Madrid, Sevilla, Krakova, Milano.
+// 20261005/ = Sisältökirjurin erä 5 (omistaja 5.10.2026 klo 08.01): Berliini, Amsterdam, Madrid, Sevilla, Krakova, Milano, Bergen.
 const UUDET_20261005 = [
   'ISS027-E-7390', 'ISS023-E-48029', 'ISS023-E-48969', 'ISS014-E-15604', 'ISS006-E-31123', 'iss026e028829',
+  'STS060-94-2', // Bergen: filmikehys ja tunnusteksti rajattu pois (Päätoimittaja 5.10.)
 ];
 export const KUVAPOIKKEUKSET = new Map([
   ...VANHAT_POIKKEUKSET.map((id) => [id, '']),

@@ -6586,8 +6586,8 @@ export const SATELLIITTI_KOHTEET = [
           5700,
           5900
         ],
-        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ISD/highres/STS060/STS060-94-2.JPG",
-        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ISD/lowres/STS060/STS060-94-2.JPG",
+        "kuva": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/STS060-94-2~large.jpg",
+        "pikku": "https://media.matkakirja.app/linssit/astronautin-kamera/20261005/STS060-94-2~small.jpg",
         "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=STS060&roll=94&frame=2"
       }
     ]
