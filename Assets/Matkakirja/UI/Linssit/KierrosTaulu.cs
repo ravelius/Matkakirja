@@ -19,6 +19,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement ruutu, nimiOtsikko, otsikko, kosketus, kertojaKehys, kertojaLaatikko;
         readonly Label ruudunNimi, ruudunAlarivi, nimi, alarivi, kertojaTeksti;
         KierrosSovitin sovitin;
+        OpasSovitin opas;
         bool ruutuAuki, virheKasitelty;
         int naytettyPysahdys = -1;
         float loppuAlku = -1f;
@@ -63,12 +64,60 @@ namespace Matkakirja.Natiivi
             ruudunAlarivi = Rakenne.Teksti("", "mk-astroavaus__lahde", nimiOtsikko);
 
             KierrosSovitin.Vaihtui += Kytke;
+            OpasSovitin.Vaihtui += KytkeOpas;
             kerros.JokaRuutu += Paivita;
+        }
+
+        /// <summary>Elävä opas (5.10. 17.5x): sama näkymä — avausruutu, kohteen nimi ja teksti vain ilman ääntä.</summary>
+        void KytkeOpas(OpasSovitin s)
+        {
+            opas = s;
+            sovitin = null;
+            virheKasitelty = false;
+            naytettyPysahdys = -1;
+            loppuAlku = -1f;
+            bool auki = s != null;
+            kosketus.style.display = DisplayStyle.None;
+            kertojaKehys.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
+            kertojaLaatikko.EnableInClassList("mk-nakyy", false);
+            otsikko.style.opacity = 0f;
+            if (auki) { ruudunNimi.text = OpasSovitin.Otsikko; ruudunAlarivi.text = OpasSovitin.Alaotsikko; NaytaRuutu(true, heti: true); }
+            else { ruutuAuki = false; ruutu.style.display = DisplayStyle.None; }
+        }
+
+        OpasKohde naytettyKohde;
+
+        void PaivitaOpas(OpasSovitin s)
+        {
+            if (s.Virhe != null)
+            {
+                if (virheKasitelty) return;
+                virheKasitelty = true;
+                UiNakymat.Hae()?.Tilarivi.Viesti(s.Virhe, 5f);
+                UiNakymat.Hae()?.Linssit?.SuljeLinssi();
+                return;
+            }
+            var l = s.Silmukka;
+            if (l == null) return;
+            // Avausruutu pois, kun ensimmäinen lento alkaa (laatat latautuvat lennon aikana).
+            if (ruutuAuki && l.Vaihe == OpasVaihe.Lentaa) NaytaRuutu(false);
+            bool puhuu = l.Vaihe == OpasVaihe.Puhuu || l.Vaihe == OpasVaihe.Odottaa;
+            if (puhuu && l.Nykyinen != null && naytettyKohde != l.Nykyinen)
+            {
+                naytettyKohde = l.Nykyinen;
+                nimi.text = l.Nykyinen.Nimi;
+                alarivi.text = l.Nykyinen.Alarivi ?? "";
+            }
+            otsikko.style.opacity = puhuu && l.Nykyinen != null ? 1f : 0f;
+            string teksti = s.TekstiRuudulle;
+            if (teksti != null && kertojaTeksti.text != teksti) kertojaTeksti.text = teksti;
+            kertojaLaatikko.EnableInClassList("mk-nakyy", teksti != null && l.VaiheAika > 0.8);
         }
 
         void Kytke(KierrosSovitin s)
         {
             sovitin = s;
+            if (s != null) opas = null;
             virheKasitelty = false;
             naytettyPysahdys = -1;
             loppuAlku = -1f;
@@ -101,6 +150,7 @@ namespace Matkakirja.Natiivi
 
         void Paivita()
         {
+            if (opas != null) { PaivitaOpas(opas); return; }
             var s = sovitin;
             if (s == null) return;
             if (s.Virhe != null)

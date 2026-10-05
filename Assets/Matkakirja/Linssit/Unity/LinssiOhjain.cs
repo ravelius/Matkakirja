@@ -25,7 +25,8 @@
 // linssien äänille "aani tila | keksinto | vuosi | humina [pois]" (soitto ja lähteen aika hetken päästä, humina
 // Pelikoodarin maisemakanavalla ilman linssiä); elävälle kartalle "elava kreikka [alku s] [nopeus] | kuva <s> | jatka |
 // saapuminen <kaupunki> | saato | ui | pois | tila" (ElavaKartta); ISS:n radalle "iss tila | lataa" (IssTleLataaja).
-// Lontoo-pilotille (Linssiseppä 5.10.2026) "linssi lontoo" ja "lontoo ohita | data google|ion|oma | tila" (LontooSovitin; kehitystunnus
+// Lontoo-pilotille (Linssiseppä 5.10.2026) "linssi lontoo" ja "lontoo ohita | data google|ion|oma | tila"; elävälle
+// oppaalle "linssi opas" ja "opas testi 0|1 | kaupunki <nimi> | toive <teksti> | data google|ion|oma | tila" (LontooSovitin; kehitystunnus
 // Documents/cesium-ion-tunnus.txt).
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
@@ -127,6 +128,7 @@ namespace Matkakirja.Natiivi
         AjattelijatSovitin ajattelijat;
         DioraamaSovitin poikki;
         KierrosSovitin lontoo;
+        OpasSovitin opas;
         Linssirekisteri rekisteri;
 
         /// <summary>PlayerPrefs-avain astronautin reliefin kylläisyydelle (Natiivi-UI:n kehittäjävalikko).</summary>
@@ -243,6 +245,8 @@ namespace Matkakirja.Natiivi
             rekisteri.Lisaa(ajattelijat = new AjattelijatSovitin(this));
             // Lontoo-pilotti (Linssiseppä 5.10.2026, omistaja 16.3x): vain natiivi, kehittäjätilassa (Cesium ion -lento).
             rekisteri.Lisaa(lontoo = new KierrosSovitin(this, k, Matkakirja.Linssit.Kierros.LontooReitti.Kierros));
+            // Elävä opas (Linssiseppä 5.10.2026, omistaja 17.5x): vain natiivi, kehittäjätilassa.
+            rekisteri.Lisaa(opas = new OpasSovitin(this, k));
             StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
@@ -2001,6 +2005,14 @@ namespace Matkakirja.Natiivi
                         ? $"isoisä 1873: näkyvissä {ik.Nakyvia} nimeä, kamera {Kamera}" : "isoisä 1873: linssi ei ole auki");
                 else if (osat[0] == "vuosi")
                     vuosi.Komento(osat);
+                else if (osat[0] == "opas")
+                {
+                    if (osat.Length > 2 && osat[1] == "testi") OpasSovitin.Testi = osat[2] == "1";
+                    else if (osat.Length > 2 && osat[1] == "kaupunki") OpasSovitin.Aloituskaupunki = string.Join(" ", osat.Skip(2));
+                    else if (osat.Length > 2 && osat[1] == "toive") OpasSovitin.Toive(string.Join(" ", osat.Skip(2)));
+                    else if (osat.Length > 2 && osat[1] == "data" && Enum.TryParse<CesiumKaupunki.Lahde>(osat[2], true, out var od)) CesiumKaupunki.Data = od;
+                    Kirjaa(opas?.Tila() ?? "opas: ei sovitinta");
+                }
                 else if (osat[0] == "lontoo")
                 {
                     if (osat.Length > 1 && osat[1] == "ohita") lontoo?.Ohita();
