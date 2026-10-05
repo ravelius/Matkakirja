@@ -68,7 +68,9 @@ export function opasElevenPaivaAvain(nyt = new Date()) {
 }
 
 export function opasPaivaAvain(ip, nyt = new Date()) {
-  return `opas:p:${nyt.toISOString().slice(0, 10)}:${tiiviste(String(ip ?? 'tuntematon'))}`;
+  // p2 (5.10.2026 ilta): avain vaihdettiin, kun natiivin uusintasilmukka täytti Macin/kodin IP:n päivärajan; julkaisu
+  // nollasi laskurit (ei KV-käsityötä). Tiheysraja (worker oppaanTiheysYlittyy) estää toiston.
+  return `opas:p2:${nyt.toISOString().slice(0, 10)}:${tiiviste(String(ip ?? 'tuntematon'))}`;
 }
 
 /*
