@@ -4,6 +4,13 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovu
 
 ## TILA HETI
 
+- **JUNA 144: VIE klo 20 (Päätoimittaja) kokeella ec0038f4** (simukäännös 5f257c20, .app lokit/natiiviseppa-app-144koe-5f257c20).
+  Ehto (a): Pelikoodarin 5 min todistusajo kuvaselitteen kaiuttimesta tästä kokeesta ennen VIE:tä (pyydetty, simuvuoro Julkaisijalta).
+  Ehto (b): ISS-ohjaamo vain jos Meksikon pari hyväksytty + koe käännetty ja tarkistettu klo 19.00 mennessä, muuten ilman.
+  Klo 20: Julkaisijan NYT → git update-ref refs/heads/juna/b13 <ec0038f4> <91220fb6> (proto-repo) + rivi juna.logiin; vahti kääntää;
+  BUILD 144 -master (merge --no-ff juna/b13 master a5a18288:n päälle, viestiin käännös-SHA) + kopioi-juna-app.sh 1.1.144 <käännös>.
+  Kohta 1 ("1.1 (144)") tarkistetaan TF 144:stä. Laitetestaajan raportti docs/raportit/kuittaus-juna144-koe-5f257c20-20261005.md.
+
 - **Juna 144 -koe a1cfce55** (natiiviseppa/juna-144-koe, worktree /Users/Shared/Claude/wt/proto-natiiviseppa-j144) = master a5a18288
   + latauspalkki 62bafb4a + kytkentä da6b8a27 (Siirtosepän pieni haara; palkki vain kytkennän kanssa) + testimykistys-natiivi
   8ff03da0 + lukija-william f5e5372c + asetukset 89ba8062 (todistus lokit/natiiviseppa-asetus-todistus/). Testit 0/444/415/625.
