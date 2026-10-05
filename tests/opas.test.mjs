@@ -141,7 +141,7 @@ async function ajaOpas(otsakkeet, runko, verkko, varasto = muisti()) {
 test('worker /opas/seuraava: Sonnet valitsee, koordinaatit Wikipediasta nimellä, Williamin ääni; testiotsakkeella ei ääntä', async () => {
   const verkko = tynka();
   const varasto = muisti();
-  const { tila, data } = await ajaOpas({ 'x-pollo-kehittaja': 'k' }, { kaupunki: 'Kööpenhamina', nahdyt: ['Q1394197'] }, verkko, varasto);
+  const { tila, data } = await ajaOpas({ 'x-pollo-kehittaja': 'k' }, { kaupunki: 'Kööpenhamina', nahdyt: ['Q1394197'], toive: 'Tivoli' }, verkko, varasto);
   assert.equal(tila, 200);
   assert.equal(data.tyyppi, 'pysahdys');
   assert.equal(data.id, 'Q110289');
