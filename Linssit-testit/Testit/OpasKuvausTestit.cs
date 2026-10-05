@@ -33,7 +33,13 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(katu.EtaisyysM >= OpasKuvaus.KatuEtMinM && alue.EtaisyysM <= OpasKuvaus.AlueEtMaxM);
             Oleta.Tosi(Ero(katu.Suuntima, 90 + OpasKuvaus.SivuKulma) < 1e-9, "katse sivukulman verran tulosuunnasta");
             var torni = OpasKuvaus.Kehysta(K(30, 120), 5, 0, "torni");
-            Oleta.Tosi(torni.KatseKorkeusM > 5 + 40, $"tornin katse ylempänä ({torni.KatseKorkeusM})");
+            Oleta.Tosi(torni.KatseKorkeusM > 5 + 25, $"tornin katse ylempänä ({torni.KatseKorkeusM})");
+            // Tiukka kehys (omistaja 20.5x): Raatihuone 110 m / 105 m → ~150–220 m (aiemmin ~650 m); patsas ei mene liian lähelle.
+            var raati = OpasKuvaus.Kehysta(K(110, 105), 5, 0, "rakennus");
+            Oleta.Tosi(raati.EtaisyysM > 140 && raati.EtaisyysM < 230, $"Raatihuone {raati.EtaisyysM:F0} m");
+            Oleta.Sama(OpasKuvaus.RakennusEtMinM, OpasKuvaus.Kehysta(K(8, 4), 5, 0, "patsas").EtaisyysM, "patsas vähimmäisetäisyydellä");
+            var nyhavn = OpasKuvaus.Kehysta(K(250, 15), 5, 0, "kanava");
+            Oleta.Tosi(nyhavn.EtaisyysM > 300 && nyhavn.EtaisyysM < 420, $"Nyhavn {nyhavn.EtaisyysM:F0} m");
         }
 
         [Testi] static void PysahdysAlkaaKehyksestaJaKiertaaHitaasti()
