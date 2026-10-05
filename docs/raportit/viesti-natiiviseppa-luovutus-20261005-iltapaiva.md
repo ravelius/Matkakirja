@@ -4,6 +4,19 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovu
 
 ## TILA HETI
 
+- **6.10. 00.0x: BUILD 145 = master eff8d65c** (juna/b13 c2d40258, käännös f16f7fa7, app lokit/juna-1.1.145-f16f7fa7). BUILD 144 =
+  d8d89704 (juna 921a1a80, käännös 72645b63; omistajan VIE tunnetulla Amsterdam-vialla). Muutosloki 1.1 (145) PR #4034
+  (Julkaisija mergeää ja vie; Actions-häiriö). Tunnetut viat → 146: kaupunkivalinta vaatii joskus toisen napautuksen, tumma vyö.
+- **JUNA 146 RUNKO 79ccbffb** (haara natiiviseppa/juna-146, worktree wt/proto-natiiviseppa-j144) = c2d40258 + natiivi-ui c29f57af
+  (⊇ 7cd1b88d ⊇ d26cc56a ⊇ c7fb7875, LS1 5f4e8d56 + 3bbb18d2 ⊇ 7ac53d22, orbit 388b8707) + pelikoodari 0630b15b (⊇ 2a32671a) +
+  siirtoseppa 85c0a6bb + natiivi-ui d1d1f0ee — kaikki Päätoimittajan suoraan kuittaamia. Testit 0/707/415/444.
+  Lopullinen käännös KLO 10 (ei välikäännöksiä, #4030), sitten savu + yhteinen video (Amsterdam 5/5, pin-, +N-kuva- ja
+  korttistillit, siltalauseet, nimiäänet), VIE klo 12. Odottaa: LS1:n loput (odotus, tumma vyö) kuittauksella; Final IK
+  544cd079 vain erillisellä merge-pyynnöllä. Muutosloki 1.1 (146) kirjoitetaan junan mukana (Natiiviseppä → Päätoimittaja).
+  Käännösskripti: scratchpadin kaanna-145vie.sh-malli (sha + nimi), Julkaisijan KÄÄNNÖS NYT.
+
+## AIEMPI (5.10. ilta)
+
 - **20.36: JUNA 144 -koe 92b2bad6** (natiiviseppa/juna-144-ohjaamo-koe) = e636bc55 + lontoo b3aee96b (OpasKuvaus-kamera) + 429-korjaus
   6895f050 + opas-kevyt-144 a6af31b8. Odotetaan hionnat (krediittien koko, otsikon varjo; Natiivi-UI/Linssiseppä lähettävät SHA:t,
   Päätoimittaja kuittasi etukäteen) ENINTÄÄN 21.15, sitten simu + iPad-laite kerralla (MATKAKIRJA_KIRJASTOT-ohitus; laitteen Unity
