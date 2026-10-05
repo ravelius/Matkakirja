@@ -17,6 +17,9 @@ namespace Matkakirja.Linssit.Testit
             var k = OpasKohde.Lue(j);
             Oleta.Tosi(k != null && k.Nimi == "Rundetaarn" && Math.Abs(k.KokoM - 40) < 1e-9 && Math.Abs(k.KestoS - 21.4) < 1e-9);
             Oleta.Tosi(OpasKohde.Lue((Dictionary<string, object>)MiniJson.Jasenna("{\"nimi\":\"x\",\"lat\":95,\"lon\":0}")) == null, "lat yli 90");
+            var pcm = OpasKohde.Lue((Dictionary<string, object>)MiniJson.Jasenna("{\"nimi\":\"N\",\"lat\":55,\"lon\":12,\"aani\":\"https://x/a.mp3\",\"aani_pcm\":\"https://x/a.pcm\",\"aani_taajuus\":24000}"));
+            Oleta.Sama("https://x/a.pcm", pcm.AaniAvain, "PCM ensisijainen"); Oleta.Sama(24000, pcm.AaniTaajuus);
+            Oleta.Sama("https://x/a.mp3", k.AaniAvain, "ilman PCM:ää mp3");
             Oleta.Tosi(OpasKohde.Lue((Dictionary<string, object>)MiniJson.Jasenna("{\"lat\":1,\"lon\":2}")) == null, "nimi puuttuu");
         }
 

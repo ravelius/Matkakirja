@@ -14,6 +14,13 @@ namespace Matkakirja.Linssit.Kierros
     public sealed class OpasKohde
     {
         public string Id, Nimi, Alarivi, Teksti, Aani;
+        /// <summary>PCM-virta (Pöllö, juna 145): raaka s16le mono AaniTaajuus Hz, chunked; ensimmäiset tavut ~0,3 s. null = vain mp3.</summary>
+        public string AaniPcm;
+        /// <summary>Kohteen luokka workerilta (valinnainen, esim. katu, kanava, aukio, torni, kirkko, linnoitus, puisto); OpasKuvaus.Kehysta käyttää.</summary>
+        public string Luokka;
+        public int AaniTaajuus = 24000;
+        /// <summary>Äänen tunniste (PCM ensisijainen, muuten mp3); null = ei ääntä.</summary>
+        public string AaniAvain => !string.IsNullOrEmpty(AaniPcm) ? AaniPcm : Aani;
         public double Lat, Lon, KokoM = 60, KorkeusM, KestoS;
         /// <summary>Workerin kysymys (tyyppi "kysymys"): opas kysyy ääneen, vaihtoehdot chattiin; ei sijaintia.</summary>
         public bool Kysymys;
@@ -30,11 +37,13 @@ namespace Matkakirja.Linssit.Kierros
             {
                 var vaihtoehdot = new List<string>();
                 if (j.TryGetValue("vaihtoehdot", out var vo) && vo is IList<object> lista) foreach (var x in lista) if (x is string t && t.Length > 0) vaihtoehdot.Add(t);
-                return string.IsNullOrEmpty(S("teksti")) ? null : new OpasKohde { Kysymys = true, Teksti = S("teksti"), Aani = S("aani"), KestoS = D("kesto_s", 0), Vaihtoehdot = vaihtoehdot.ToArray() };
+                return string.IsNullOrEmpty(S("teksti")) ? null : new OpasKohde { Kysymys = true, Teksti = S("teksti"), Aani = S("aani"), AaniPcm = S("aani_pcm"), Luokka = S("luokka"),
+                    AaniTaajuus = (int)D("aani_taajuus", 24000), KestoS = D("kesto_s", 0), Vaihtoehdot = vaihtoehdot.ToArray() };
             }
             var k = new OpasKohde
             {
-                Id = S("id"), Nimi = S("nimi"), Alarivi = S("alarivi"), Teksti = S("teksti"), Aani = S("aani"),
+                Id = S("id"), Nimi = S("nimi"), Alarivi = S("alarivi"), Teksti = S("teksti"), Aani = S("aani"), AaniPcm = S("aani_pcm"),
+                AaniTaajuus = (int)D("aani_taajuus", 24000),
                 Lat = D("lat", double.NaN), Lon = D("lon", double.NaN), KokoM = D("koko_m", 60), KorkeusM = D("korkeus_m", 0), KestoS = D("kesto_s", 0),
             };
             if (j.TryGetValue("vaihtoehdot", out var pv) && pv is IList<object> pl)
@@ -118,7 +127,9 @@ namespace Matkakirja.Linssit.Kierros
 
         readonly HashSet<string> nahdyt = new HashSet<string>(StringComparer.Ordinal);
         int pyynto, odotettu;
-        double odotusAlku, kierto;
+        double odotusAlku;
+        /// <summary>Aika saapumisesta nykyiseen kehykseen (s); OpasKuvaus.Pysahdyksella laskee kierron ja dollyn.</summary>
+        double kierto;
         bool aaniLoppui;
         Kuvakulma lahto;
         Pysahdys kohdeKehys;
@@ -240,7 +251,7 @@ namespace Matkakirja.Linssit.Kierros
             {
                 case OpasVaihe.Alku:
                 case OpasVaihe.Odottaa:
-                    if (NykyinenKehys != null) { kierto += KiertoAsteS * dt; Asento = KehysAsento(NykyinenKehys, kierto); }
+                    if (NykyinenKehys != null) { kierto += dt; Asento = OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto); }
                     else
                     {
                         // Avaus: kamera lähtee heti laskeutumaan kaupungin ylle, kun worker suunnittelee (ei pysähtynyttä kuvaa).
@@ -252,15 +263,15 @@ namespace Matkakirja.Linssit.Kierros
                     if (Seuraava != null && aaniLoppuiTaiAlku() && !OdottaaVastausta) AloitaLento(maaKorkeus);
                     break;
                 case OpasVaihe.Puhuu:
-                    kierto += KiertoAsteS * dt;
-                    Asento = KehysAsento(NykyinenKehys, kierto);
+                    kierto += dt;   // aika saapumisesta: ei nollaudu Puhuu ↔ Odottaa eikä "kerro lisää" -kappaleessa (Siirtoseppä, juna 145)
+                    Asento = OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto);
                     if (aaniLoppui && VaiheAika >= TaukoS && Seuraava != null) AloitaLento(maaKorkeus);
                     else if (aaniLoppui && Seuraava == null && odotettu == 0) { Vaihe = OpasVaihe.Odottaa; VaiheAika = 0; }
                     break;
                 case OpasVaihe.Lentaa:
                 {
                     double t = Math.Min(1, VaiheAika / LentoKestoS);
-                    Asento = Lennossa(lahto, KehysAsento(kohdeKehys, 0), t);
+                    Asento = OpasKuvaus.Lennossa(lahto, KehysAsento(kohdeKehys, 0), t);
                     // Puhe alkaa PuheEnnenS ennen saapumista, kuitenkin aikaisintaan PuheAikaisinS nousun jälkeen (simu 19.54: tauko ~5 s → ≤ 3 s).
                     if (!puheAloitettu && VaiheAika >= Math.Max(PuheAikaisinS, LentoKestoS - PuheEnnenS)) { puheAloitettu = true; aaniLoppui = false; AlkaaPuhua?.Invoke(Nykyinen); }
                     // Saapuminen odottaa laattoja enintään SaapumisOdotusS (simu 18.39: saapuessa laatat 28–45 %).
@@ -299,7 +310,7 @@ namespace Matkakirja.Linssit.Kierros
             if (double.IsNaN(maa)) maa = 45;
             double tulo = Suunta(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
             if (KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, k.Lat, k.Lon) < 150) tulo = Asento.Suuntima;
-            kohdeKehys = Kehysta(k, maa, tulo);
+            kohdeKehys = OpasKuvaus.Kehysta(k, maa, tulo);   // luokka k.Luokasta, muuten koosta ja korkeudesta
             Nykyinen = k;
             lahto = Asento;
             LentoKestoS = LennonKesto(KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon));
