@@ -1,7 +1,7 @@
 #!/bin/zsh
 # Linnan 11 hahmoa Mixamo-leikkeillä (Linnanrakentaja 5.10.2026; omistajan päätös 10.50 ja 12.30: laajennus kaikille).
 # Lähde: v26:n hahmot (hahmo_skin.py, UAL-leikkeet) → hahmo_mixamo.py korvaa natiivin leikkeet idle, puhe ja tyo.
-# Kävely pysyy UAL:n (natiivin askelpituus mitattu siitä). Kokki, apulainen ja renki pitävät UAL-työleikkeen (Mixamossa ei
+# Kävely pysyy UAL:n (natiivin askelpituus mitattu siitä). Kokki, apulainen, renki ja kirjuri pitävät UAL-työleikkeen (Mixamossa ei
 # vastinetta: stirring, cooking, sweeping eivät löytyneet 5.10.). Pitkät leikkeet lyhennetään silmukaksi (:<s>).
 #   tools/dioraama/blender/hahmot_mixamo.sh <ulos-kansio>
 set -euo pipefail
@@ -15,7 +15,7 @@ tee() {  # nimi [lisäleikkeet...] -- korvaukset
   nice -n 15 $B -b --factory-startup -P $H/hahmo_mixamo.py -- $V/$n.glb $U/$n.glb $YHT $l --korvaa $k 2>&1 | grep -E "^MIXAMO valmis|Error|Traceback" | sed "s#^#$n: #" | cut -c1-160
 }
 tee kappalainen-1500 "$M/Praying.fbx=rukous" "$M/Sitting Idle.fbx=istuu:12" "$M/Sitting Talking.fbx=istuu_puhe:12" -- idle=hengitys,puhe=puhe_m,tyo=rukous
-tee kirjuri-1500 "$M/Writing.fbx=kirjoitus:12" -- idle=hengitys,puhe=puhe_m,tyo=kirjoitus
+tee kirjuri-1500 -- idle=hengitys,puhe=puhe_m  # työ UAL: kirjuri seisoo pulpetin ääressä (istuva Writing leijui 5.10.)
 tee vouti-1500 "$M/Pointing Forward.fbx=osoitus:12" -- idle=hengitys,puhe=puhe_m,tyo=osoitus
 tee vartija-1500 "$M/Looking Around.fbx=katselu_m:12" -- idle=hengitys,puhe=puhe_m,tyo=katselu_m
 tee portinvartija-1500 "$M/Looking Around.fbx=katselu_m:12" -- idle=hengitys,puhe=puhe_m,tyo=katselu_m
