@@ -298,6 +298,9 @@ namespace Matkakirja.Natiivi
         {
             var (portti, vertailu, radio, paalla) = pelielementit;
             portti |= kyytiPelkkaKartta;
+            // Cesium-kaupunkinäkymä (opas, kaupunkikierros; Linssiseppä 5.10.): Googlen ehdot — ei pelin karttaa samaan kuvaan,
+            // joten kartuscha ("ISO-BRITANNIA"), nostot ja maakuntanimet pois kuten portilla (simu 18.47).
+            portti |= OpasSovitin.Auki || (KierrosSovitin.Viimeisin != null && KierrosSovitin.Viimeisin.Auki);
             bool ok = true;
             void Aseta(string nimi, Action a)
             {
