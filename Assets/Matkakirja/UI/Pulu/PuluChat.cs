@@ -157,9 +157,13 @@ namespace Matkakirja.Natiivi
             // rinnalla). Historia jää vieritettäväksi yläpuolelle; uudet napit ovat lopussa, ja virta vierii niihin.
             PoistaSirut();
             NaytaKohteenValmiit(valmiit);
+            // Astronautin kuva auki (juna 147, simu 6.10. 01.2x: linssin yleiset valmiit peittivät kuvan sirut): kuvan omat
+            // sirut workerilta (kuva-kenttä, #4038), jos kohteella ei ole omia valmiita kysymyksiä.
+            string kuva = KuvaKentta();
+            if ((valmiit == null || valmiit.Count == 0) && kuva.Length > 0) { edellinenKuva = kuva; HaeEhdotukset(); }
             // Ilman kohteen kysymyksiä linssin tilan valmiit kysymykset (astronautin kamera 4.10.2026: pallo, kuvat, ohjaamo),
             // muuten avaus silti uusimpaan viestiin.
-            if ((valmiit == null || valmiit.Count == 0) && !NaytaLinssinValmiit())
+            else if ((valmiit == null || valmiit.Count == 0) && !NaytaLinssinValmiit())
                 virta.schedule.Execute(() => virta.scrollOffset = new Vector2(0f, Mathf.Max(0f, virta.contentContainer.layout.height - virta.contentViewport.layout.height))).ExecuteLater(30);
             Asettele();
         }
@@ -1478,6 +1482,7 @@ namespace Matkakirja.Natiivi
             if (lista == null) yield break;
             var tekstit = new List<string>();
             foreach (var x in lista) if (x is string s && s.Length > 0) tekstit.Add(s);
+            if (KuvaKentta().Length > 0) Debug.Log($"MATKAKIRJA pulu: kuvan sirut {tekstit.Count}: {string.Join(" | ", tekstit)}");
             Sirut(tekstit, "mk-chat__ehdotukset", false);
         }
 
