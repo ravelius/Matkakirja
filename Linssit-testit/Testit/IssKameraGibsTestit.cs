@@ -78,5 +78,41 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(g.Nayte(la2, lo2).varjo > 0.2, $"varjo pohjoispuolella: {g.Nayte(la2, lo2).varjo}");
             Oleta.Tosi(g.Nayte(la3, lo3).varjo < 0.02, $"ei varjoa eteläpuolella: {g.Nayte(la3, lo3).varjo}");
         }
+
+        [Testi]
+        static void PakotettuPaivaJaTarkkaLahialue()
+        {
+            // Pakotettu päivä voittaa selkeimmän (laajan kuvan karkea taso käyttää lähialueen päivää).
+            var p = new List<(DateTime, byte[][])>
+            {
+                (new DateTime(2026, 10, 4), new[] { Kuva((x, y) => y < 20 ? Pilvi : Meri), null, null, null }),
+                (new DateTime(2026, 10, 3), new[] { Kuva((x, y) => Meri), null, null, null }),
+            };
+            Oleta.Sama(new DateTime(2026, 10, 3), GibsPilvet.Kokoa(0, 0, W, H, p).Paiva, "ilman pakotusta selkein");
+            Oleta.Sama(new DateTime(2026, 10, 4), GibsPilvet.Kokoa(0, 0, W, H, p, GibsPilvet.Z, new DateTime(2026, 10, 4)).Paiva, "pakotettu");
+
+            // Karkea z8 (pilvetön) ja tarkka z9 (pilveä) sen keskellä: tarkan sisällä tarkka, ulkona karkea, reunalla välissä.
+            (double la, double lo) Piste(double gx, double gy, int z)
+            {
+                double n = 256.0 * (1 << z), lo = gx / n * 360 - 180, yy = Math.PI * (1 - 2 * gy / n);
+                return (Math.Atan(Math.Sinh(yy)) * 180 / Math.PI, lo);
+            }
+            var (gx8, gy8) = GibsPilvet.Pikseli(60, 25, 8);
+            int x8 = (int)gx8 - 20, y8 = (int)gy8 - 20;
+            var karkea = new GibsPilvet(x8, y8, W, H, new byte[W * H], new byte[W * H], 8);
+            var a9 = new byte[W * H]; var k9 = new byte[W * H];
+            for (int i = 0; i < W * H; i++) { a9[i] = 255; k9[i] = 255; }
+            int x9 = 2 * (x8 + 10), y9 = 2 * (y8 + 10);   // z9: karkean keskiosa 20 × 20 z8-pikseliä = 40 × 40
+            karkea.Tarkka = new GibsPilvet(x9, y9, W, H, a9, k9, 9);
+            var (la1, lo1) = Piste(x9 + 20, y9 + 20, 9);
+            Oleta.Tosi(karkea.Nayte(la1, lo1).alfa > 0.9, "tarkan keskellä tarkka (pilvi)");
+            var (la2, lo2) = Piste(x8 + 3, y8 + 3, 8);
+            Oleta.Tosi(karkea.Nayte(la2, lo2).alfa < 0.01, "tarkan ulkopuolella karkea (ei pilveä)");
+            var (la3, lo3) = Piste(x9 + 1.2, y9 + 20, 9);
+            double reuna = karkea.Nayte(la3, lo3).alfa;
+            Oleta.Tosi(reuna > 0.05 && reuna < 0.95, $"reunalla sekoitus: {reuna}");
+            karkea.Aseta(150, 30, null);
+            Oleta.Sama(150.0, karkea.Tarkka.AurinkoAz, "aurinko myös tarkalle");
+        }
     }
 }

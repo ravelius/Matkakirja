@@ -51,7 +51,7 @@ namespace Matkakirja.Natiivi
             if (!Kaytossa || !Siluetti || siluettiAsetettu || Matkakirja.Linssit.IssSiluetti.Paalla) return;
             siluettiAsettelu0 = Matkakirja.Linssit.IssSiluetti.Asettelu; siluettiPituus0 = Matkakirja.Linssit.IssSiluetti.Pituus;
             Matkakirja.Linssit.IssSiluetti.Asettelu = new Vector4(-0.06f, 1.04f, -30f, 0.10f);
-            Matkakirja.Linssit.IssSiluetti.Pituus = 0.30f;
+            Matkakirja.Linssit.IssSiluetti.Pituus = 0.24f;   // Päätoimittaja 6.10.: uloimmassa 30 %:ssa, ei logon päällä
             Matkakirja.Linssit.IssSiluetti.Paalla = true;
             siluettiAsetettu = true;
         }

@@ -286,11 +286,13 @@ namespace Matkakirja.Natiivi
         /// <summary>COG-kuvan zeniittikulman yläraja (Päätoimittaja 4.10.: ≤ 55°, kamera virtuaalisesti radalla lähempänä kohdetta).</summary>
         public static double MaxKallistus = 55;
         /// <summary>
-        /// LAAJAN KUVAN KALLISTUS (omistaja 6.10.: "laajakuva helsingistä, missä näkyy itämerta", julisteen yläreunassa logo maapallon
-        /// kaaren yläpuolella): zeniittikulma täsmälleen tämä, jolloin 30°:n kentän yläreuna on ~77° ja horisontti (~70° 420 km:ssä)
-        /// noin neljänneksen alempana. Testi `astro kyyti kuvaa kallistus <°>`.
+        /// LAAJAN KUVAN SOMMITTELU (omistaja 6.10.: "laajakuva helsingistä, missä näkyy itämerta", logo maapallon kaaren yläpuolella;
+        /// Päätoimittaja: kaari ~20–25 % yläreunasta, logo mustassa avaruudessa): horisontin ja kohteen paikka osuutena kuvan
+        /// yläreunasta (AstronauttiLinssi.LaajaKuvakulma). Testi `astro kyyti kuvaa sommittelu <kaari> <kohde>`.
         /// </summary>
-        public static double LaajaKallistus = 62;
+        public static double LaajaKaari = 0.22, LaajaKohde = 0.62;
+        /// <summary>Testikomento `astro kyyti kuvaa kohde lat lon`: seuraavan kuvan kohde (muuten Cupolan katseen keskipiste).</summary>
+        public static (double Lat, double Lon)? KuvanKohde;
         /// <summary>
         /// Reunojen lisäkarkeus (Päätoimittaja 4.10.: "karkeammat COG-tasot reunoilla ja kaukana"; simu b3a14902: tasainen 4× karkeus teki
         /// Saharan koko kuvasta suttuisen z10:n): solun karkeus = budjettikerroin × (1 + ReunaKarkeus · r²), r = 0 keskellä … 1 kulmassa.
@@ -316,6 +318,7 @@ namespace Matkakirja.Natiivi
             var utc = IssNyt.Kello();
             RenderTexture rt = null;
             bool kenttaRajattu = false;
+            (double Lat, double Lon)? kohdePiste = null;
             try
             {
                 // 0) kamera: kohde = pelaajan näkymän keskipiste, kamera virtuaalisesti radalla lähempänä (zeniittikulma ≤ MaxKallistus)
@@ -323,9 +326,12 @@ namespace Matkakirja.Natiivi
                 if (linssi != null && linssi.Kyydissa)
                 {
                     var keski = linssi.KyydinAsento;
-                    AstronauttiLinssi.Vertailu = Laaja ? linssi.JyrkkaKuvakulma(keski.Lat, keski.Lon, LaajaKallistus, tarkka: true)
-                                                       : linssi.JyrkkaKuvakulma(keski.Lat, keski.Lon, MaxKallistus);
+                    if (KuvanKohde is (double, double) kohde) { kohdePiste = kohde; KuvanKohde = null; }
+                    else kohdePiste = (keski.Lat, keski.Lon);
                     AstronauttiLinssi.VertailuKentta = Math.Min(kamera.fieldOfView, KuvanMaxKentta);
+                    // Laaja: kaari ~22 % yläreunasta, logo avaruudessa sen yllä, kohde hieman keskikohdan alla (Päätoimittaja 6.10.).
+                    AstronauttiLinssi.Vertailu = Laaja ? linssi.LaajaKuvakulma(kohdePiste.Value.Lat, kohdePiste.Value.Lon, AstronauttiLinssi.VertailuKentta, LaajaKaari, LaajaKohde)
+                                                       : linssi.JyrkkaKuvakulma(kohdePiste.Value.Lat, kohdePiste.Value.Lon, MaxKallistus);
                     kenttaRajattu = true;
                     Loki($"kamera: kohde ({keski.Lat:0.000}, {keski.Lon:0.000}), kallistus {keski.Kallistus:0.0}° → {AstronauttiLinssi.Vertailu.Value.Kallistus:0.0}°, "
                         + $"etäisyys {AstronauttiLinssi.Vertailu.Value.EtaisyysM / 1000:0} km, kenttä {AstronauttiLinssi.VertailuKentta:0.0}°");
@@ -648,13 +654,27 @@ namespace Matkakirja.Natiivi
                 {
                     Tila = "pilvet";
                     GibsPilvet gp = null;
-                    yield return HaeGibs(w, s, e, nn, x => gp = x);
+                    // Laaja kuva: alue ulottuu horisonttiin, joten koko alueen taso jää karkeaksi (z5–z6; juliste 6.10.: lähialueen
+                    // pilvet litteinä laattoina). Lähempi puolisko (näytteet, joiden tarvittu resoluutio on mediaania tarkempi) haetaan
+                    // tarkemmalta tasolta ensin; sen selkein päivä on myös koko alueen päivä (Päätoimittaja: selkein 7 vrk:sta siitä,
+                    // mikä kuvassa näkyy tarkkana).
+                    var mp = naytteet.Select(x => x.MetriaPikseli).OrderBy(x => x).ToList();
+                    double raja = mp[mp.Count / 2];
+                    var lahi = naytteet.Where(x => x.MetriaPikseli <= raja).ToList();
+                    double lw = lahi.Min(x => x.LonMin), ls = lahi.Min(x => x.LatMin), le = lahi.Max(x => x.LonMax), ln = lahi.Max(x => x.LatMax);
+                    GibsPilvet tarkka = null;
+                    int zKoko = GibsPilvet.TasoAlueelle(w, s, e, nn);
+                    if (zKoko < GibsPilvet.Z - 1 && GibsPilvet.TasoAlueelle(lw, ls, le, ln) > zKoko)
+                        yield return HaeGibs(lw, ls, le, ln, x => tarkka = x);
+                    yield return HaeGibs(w, s, e, nn, x => gp = x, tarkka?.Paiva);
+                    if (gp != null && tarkka != null && tarkka.Taso > gp.Taso) gp.Tarkka = tarkka;
+                    else if (gp == null && tarkka != null) gp = tarkka;
                     if (gp != null)
                     {
-                        gp.AurinkoAz = az; gp.AurinkoKorkeus = korkeus; gp.Yksityiskohta = kentta;
+                        gp.Aseta(az, korkeus, kentta);
                         ty.Pilvet = gp; ty.PintaRajaaPilvet = true;
                         kuvanLahde += " · clouds " + GibsPilvet.Merkinta;
-                        pilviTieto = $"GIBS {gp.Paiva:yyyy-MM-dd} z{gp.Taso}, peitto {gp.Peitto * 100:0} %";
+                        pilviTieto = $"GIBS {gp.Paiva:yyyy-MM-dd} z{gp.Taso}{(gp.Tarkka != null ? $" + lähialue z{gp.Tarkka.Taso}" : "")}, peitto {gp.Peitto * 100:0} %";
                     }
                 }
                 // Datattomat kiilat maalla läpinäkyviksi (BMNG alla), merellä merenväri (simu d753d794: sininen kiila Saharassa).
@@ -737,7 +757,9 @@ namespace Matkakirja.Natiivi
                 string albumi = Path.Combine(Application.persistentDataPath, "iss-albumi"); Directory.CreateDirectory(albumi);
                 byte[] jpg = null;
                 // Paikka kuten LCD:ssä (lähin kaupunki, vuori tai meri + maa) kuvan keskipisteestä, nimet sellaisinaan; julisteeseen.
+                // Laajassa kuvassa kohde on keskikohdan alapuolella: nimi ja koordinaatit kohteesta.
                 var keskus = naytteet.OrderBy(n => Math.Abs(n.Sx - 24) + Math.Abs(n.Sy - 18)).First();
+                if (kohdePiste is (double, double) kpp) keskus = new Nayte { Sx = keskus.Sx, Sy = keskus.Sy, Lat = kpp.Lat, Lon = kpp.Lon, MetriaPikseli = keskus.MetriaPikseli };
                 var (kp, km2) = IssSijainti.Nimet(IssSijainti.Nykyinen, keskus.Lat, keskus.Lon);
                 for (int k = 0; k <= Sarja; k++)
                 {
@@ -754,7 +776,7 @@ namespace Matkakirja.Natiivi
                     byte[] j = null;
                     if (k == 0 && IssJuliste.Kaytossa)
                     {
-                        var jt = new IssJuliste.Tiedot { Paikka = kp, Maa = km2, Lat = keskus.Lat, Lon = keskus.Lon, Paikallinen = PaikallinenAika(utc),
+                        var jt = new IssJuliste.Tiedot { Paikka = kp, Maa = km2, Lat = keskus.Lat, Lon = keskus.Lon, Paikallinen = PaikallinenAika(utc, keskus.Lat, keskus.Lon),
                             Kamera = KameraRivi(kk, naytteet, korkeus), Lahde = kuvanLahde };
                         yield return IssJuliste.Tee(kuva, jt, b => j = b);
                         Loki(j != null ? "juliste: valmis" : "juliste: ei paneelia → pelkkä kuva");
@@ -918,7 +940,7 @@ namespace Matkakirja.Natiivi
                 byte[] jpg = null;
                 if (IssJuliste.Kaytossa)
                 {
-                    var jt = new IssJuliste.Tiedot { Paikka = p.Nimi, Maa = p.Maa, Lat = p.Lat, Lon = p.Lon, Paikallinen = PaikallinenAika(utc), Lahde = paikanLahde };
+                    var jt = new IssJuliste.Tiedot { Paikka = p.Nimi, Maa = p.Maa, Lat = p.Lat, Lon = p.Lon, Paikallinen = PaikallinenAika(utc, p.Lat, p.Lon), Lahde = paikanLahde };
                     yield return IssJuliste.Tee(kuva, jt, b => jpg = b);
                     Loki(jpg != null ? "juliste: valmis" : "juliste: ei paneelia → pelkkä kuva");
                 }
@@ -1024,7 +1046,7 @@ namespace Matkakirja.Natiivi
         /// kerros kerrallaan kaikille päiville rinnakkain: seuraava kerros (SNPP → NOAA-20 → Terra → Aqua) vain päiville, joilla
         /// edellisistä jäi aukkoja. Tyhjä ruutu on 1665 tavun musta JPEG.
         /// </summary>
-        IEnumerator HaeGibs(double w, double s, double e, double n, Action<GibsPilvet> valmis)
+        IEnumerator HaeGibs(double w, double s, double e, double n, Action<GibsPilvet> valmis, DateTime? paiva = null)
         {
             int z = GibsPilvet.TasoAlueelle(w, s, e, n);
             var (fx0, fy0) = GibsPilvet.Pikseli(n, w, z); var (fx1, fy1) = GibsPilvet.Pikseli(s, e, z);
@@ -1075,7 +1097,7 @@ namespace Matkakirja.Natiivi
                     }
                 }
             }
-            var t = Task.Run(() => GibsPilvet.Kokoa(x0, y0, W, H, paivat, z));
+            var t = Task.Run(() => GibsPilvet.Kokoa(x0, y0, W, H, paivat, z, paiva));
             while (!t.IsCompleted) yield return null;
             var g = t.IsFaulted ? null : t.Result;
             Loki($"gibs: z{z} {W}×{H} px, {pyyntoja} ruutua {tavut / 1e3:0} kt, {kello.ElapsedMilliseconds / 1000.0:0.0} s → "
@@ -1211,7 +1233,8 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Julisteen päiväys: pelin aika laitteen aikavyöhykkeellä (albumin kuvateksti käyttää samaa).</summary>
-        static DateTime PaikallinenAika(DateTime utc) => DateTime.SpecifyKind(utc, DateTimeKind.Utc).ToLocalTime();
+        /// <summary>Kuvauspaikan oma aika (IssSijainti.PaikallinenAika; Päätoimittaja 6.10.).</summary>
+        static DateTime PaikallinenAika(DateTime utc, double lat, double lon) => IssSijainti.PaikallinenAika(IssSijainti.Nykyinen, lat, lon, utc);
 
         /// <summary>Julisteen kamerarivi "55 mm · f/5.6 · 1/1000 s · ISO 100" (sama malli kuin Tiedot).</summary>
         static string KameraRivi(KuvaKamera kk, List<Nayte> naytteet, double korkeus)
