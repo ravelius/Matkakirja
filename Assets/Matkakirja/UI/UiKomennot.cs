@@ -761,9 +761,6 @@ namespace Matkakirja.Natiivi
                         : t == "flush-ilman" ? "<align=flush>" : "<align=\"justified\">";
                     return "tasaus: " + (Lehtinakyma.TasausTagi.Length > 0 ? Lehtinakyma.TasausTagi.Replace("<", "‹") : "pois");
                 }
-                case "opasvalikko":
-                    // Elävän oppaan valikko (OpasValikko): ui opasvalikko valikko|maanosat|maat <maanosa>|kaupungit <maanosa>|<maa>|sulje.
-                    return "=" + OpasValikko.Hae().Komento(loput);
                 case "kuunnelma":
                 {
                     // Olavinlinnan kuunnelman tekstitys (KuunnelmaKaistale): ui kuunnelma [tila] | ohita | alusta.
@@ -1120,6 +1117,9 @@ namespace Matkakirja.Natiivi
                     else if (pk.Length > 1 && pk[0] == "alku") Matkakirja.Pelikello.AlkuKelloUtc = luku;
                     return ui.Kellonaytto.Kuvaus;
                 }
+                case "opasvalikko":
+                    // Elävän oppaan valikko (OpasValikko): ui opasvalikko valikko|maanosat|maat <maanosa>|kaupungit <maanosa>|<maa>|sulje.
+                    return "=" + OpasValikko.Hae().Komento(loput);
                 case "mitauutta":
                     if (loput == "paivittyi") ui.Valikko.MitaUutta.TarkistaPaivitys(true);
                     else if (loput.StartsWith("paivittyi "))
