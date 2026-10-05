@@ -20,7 +20,7 @@
 
 import { kirjaaKaynti, lueKaynnit } from './kaynnit.js';
 import {
-  OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, haeEhdokkaat, oppaanViesti, jasennaOpas,
+  OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
 } from './opas.js';
 import {
   HISTORIAN_KATTO,
@@ -2699,7 +2699,7 @@ async function hoidaOppaanAani(pyynto, env) {
 
 async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   if (!env.ANTHROPIC_API_KEY) return vastaa({ virhe: 'asetus', viesti: 'Opas ei ole vielä käytössä.' }, { status: 503, ...kors });
-  const p = siivoaOpasPyynto({ ...runko, kaydyt: runko?.kaydyt ?? runko?.nahdyt });
+  const p = siivoaOpasPyynto(runko);
   const kehittaja = kehittajaOhitus(pyynto, env);
   const kv = env.POLLO_KV ?? null;
   if (!kehittaja) {
@@ -2710,20 +2710,26 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     const kirjoitus = kasvataLaskuri(kv, avain, 60 * 60 * 30);
     if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
   }
-  const sijainti = p.sijainti ?? (p.kaupunki ? await kaupunginSijainti(fetch, p.kaupunki) : null);
-  if (!sijainti) return vastaa({ virhe: 'kysely', viesti: 'Kaupunki tai sijainti puuttuu.' }, { status: 400, ...kors });
-  const ehdokkaat = await haeEhdokkaat(fetch, sijainti, p.kaupunki ? [...p.kaydyt, p.kaupunki] : p.kaydyt);
-  if (!ehdokkaat.length) return vastaa({ virhe: 'ei-kohteita', viesti: 'Läheltä ei löytynyt kerrottavaa.' }, { status: 404, ...kors });
+  if (!p.sijainti && !p.kaupunki) return vastaa({ virhe: 'kysely', viesti: 'Kaupunki tai sijainti puuttuu.' }, { status: 400, ...kors });
+  // Sonnet valitsee paikan omasta tiedostaan (omistaja 18.0x); worker hakee vain koordinaatit nimellä.
+  const [sijainti, kaydytNimet] = await Promise.all([
+    p.sijainti ?? kaupunginSijainti(fetch, p.kaupunki), kaydytNimiksi(fetch, p.kaydyt)]);
   const kutsu = {
     jarjestelma: OPAS_KEHOTE,
-    viestit: [{ role: 'user', content: oppaanViesti(p, ehdokkaat) }],
+    viestit: [{ role: 'user', content: oppaanViesti({ ...p, sijainti }, kaydytNimet) }],
     maxTokens: 700,
     malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
   };
   let tulos = null;
   try {
     for (let yritys = 0; yritys < 2 && !tulos; yritys += 1) {
-      tulos = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti, ehdokkaat);
+      const vastaus = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti);
+      if (vastaus?.tyyppi !== 'pysahdys') { tulos = vastaus; continue; }
+      const paikka = await paikanKoordinaatit(fetch, vastaus, sijainti);
+      if (!paikka) { console.log(`opas: paikkaa ei löytynyt (${vastaus.wikipedia ?? vastaus.nimi})`); continue; }
+      tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi: vastaus.nimi, alarivi: paikka.alarivi, lat: paikka.lat, lon: paikka.lon,
+        koko_m: vastaus.koko_m, ...(vastaus.korkeus_m ? { korkeus_m: vastaus.korkeus_m } : {}), teksti: vastaus.teksti,
+        wiki: paikka.wiki, kuva: null, vaihtoehdot: vastaus.vaihtoehdot, koordinaatit: paikka.lahde };
     }
   } catch (virhe) {
     console.log(`opas: mallikutsu epäonnistui (${virhe?.status ?? 'verkko'})`);
