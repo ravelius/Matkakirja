@@ -20,6 +20,9 @@ namespace Matkakirja.Linssit.Kierros
         public string Luokka;
         /// <summary>Kohteen korostus maassa (Pelikoodari #4018+, juna 145; valinnainen): piste, alue tai reitti.</summary>
         public OpasKorostus Korostus;
+        /// <summary>Siltalauseiden ryhmät (Pelikoodari #4026, juna 146): vaihtoehtojen järjestyksessä, ja pelaajan toiveen ryhmä.</summary>
+        public string[] VaihtoehtojenRyhmat;
+        public string ToiveenRyhma;
         public int AaniTaajuus = 24000;
         /// <summary>Äänen tunniste (PCM ensisijainen, muuten mp3); null = ei ääntä.</summary>
         public string AaniAvain => !string.IsNullOrEmpty(AaniPcm) ? AaniPcm : Aani;
@@ -56,6 +59,13 @@ namespace Matkakirja.Linssit.Kierros
             }
             k.Kuvat = OpasKuva.Lue(j.TryGetValue("kuvat", out var ko) ? ko as IList<object> : null);
             k.Korostus = OpasKorostus.Lue(j.TryGetValue("korostus", out var kr) ? kr as Dictionary<string, object> : null);
+            if (j.TryGetValue("vaihtoehtojen_ryhmat", out var vr) && vr is IList<object> vrl)
+            {
+                var ryhmat = new List<string>();
+                foreach (var x in vrl) ryhmat.Add(x as string);
+                k.VaihtoehtojenRyhmat = ryhmat.ToArray();
+            }
+            k.ToiveenRyhma = j.TryGetValue("toiveen_ryhma", out var tr) ? tr as string : null;
             if (string.IsNullOrEmpty(k.Nimi) || double.IsNaN(k.Lat) || double.IsNaN(k.Lon) || Math.Abs(k.Lat) > 90 || Math.Abs(k.Lon) > 180) return null;
             return k;
         }
@@ -145,6 +155,8 @@ namespace Matkakirja.Linssit.Kierros
         public double LentoKestoS { get; private set; }
         /// <summary>Lähtevä pyyntö: toive (tai null) — sovitin lähettää workerille. Palauttaa pyynnön järjestysnumeron.</summary>
         public event Action<int, string> Pyyda;
+        /// <summary>Lento seuraavaan alkoi (kohde, matka m, pelaajan toiveesta): siltalause kierroksen siirtymään (juna 146).</summary>
+        public event Action<OpasKohde, double, bool> LentoAlkaa;
         /// <summary>Saapui kohteeseen: sovitin aloittaa äänen ja näyttää nimen.</summary>
         public event Action<OpasKohde> Saapui;
         /// <summary>Kappale alkaa PuheEnnenS ennen saapumista (sovitin soittaa; Saapui ei enää aloita puhetta uudelleen).</summary>
@@ -216,7 +228,7 @@ namespace Matkakirja.Linssit.Kierros
         public void Toive(string teksti)
         {
             if (string.IsNullOrWhiteSpace(teksti) || Vaihe == OpasVaihe.Valmis) return;
-            toive = teksti.Trim();
+            toive = teksti.Trim(); toiveesta = true;
             Seuraava = null;
             OdottaaVastausta = false; kysymysAika = -1;
             if (Vaihe == OpasVaihe.Puhuu) Hiljenna?.Invoke();
@@ -229,7 +241,7 @@ namespace Matkakirja.Linssit.Kierros
         {
             if (Vaihe == OpasVaihe.Valmis) return;
             nahdyt.Clear();
-            toive = null;
+            toive = null; toiveesta = true;
             Seuraava = null;
             OdottaaVastausta = false; kysymysAika = -1;
             if (Vaihe == OpasVaihe.Puhuu) Hiljenna?.Invoke();
@@ -400,6 +412,8 @@ namespace Matkakirja.Linssit.Kierros
         public readonly OpasOhjaus Ohjaus = new OpasOhjaus();
         public (double kierto, double korkeus, double etaisyys) Tapit;
         public bool PelaajaOhjaa;
+        /// <summary>Seuraava lento on pelaajan toiveen tai paikan vaihdon seuraus (siltalause soitettiin jo valinnasta).</summary>
+        bool toiveesta;
         public const double OhjausTaukoS = 4;
         double ohjausLepoS = double.MaxValue;
         /// <summary>Pelaaja ohjaa tai irrotti alle OhjausTaukoS sitten: ei lähdetä seuraavaan.</summary>
@@ -433,6 +447,8 @@ namespace Matkakirja.Linssit.Kierros
             Ohjaus.Nollaa();   // lento alkaa pelaajan kulmasta (Asento sisältää jo ohjauksen), ei hyppyä
             lahto = Asento;
             LentoKestoS = LennonKesto(KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon));
+            LentoAlkaa?.Invoke(k, KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon), toiveesta);
+            toiveesta = false;
             Vaihe = OpasVaihe.Lentaa; VaiheAika = 0;
             puheAloitettu = false;
         }

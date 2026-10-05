@@ -121,6 +121,7 @@ namespace Matkakirja.Natiivi
             using (var r = UnityEngine.Networking.UnityWebRequest.Get(PuluChat.Palvelin + TunnusReitti))
             {
                 r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+                PolloTestitunnus.Lisaa(r);
                 r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
                 r.timeout = 15;
                 yield return r.SendWebRequest();
