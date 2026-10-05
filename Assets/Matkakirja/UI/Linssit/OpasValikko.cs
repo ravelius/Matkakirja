@@ -129,14 +129,15 @@ namespace Matkakirja.Natiivi
                 VaihdaKuvat, ryhma);
             nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
 
-            valikko = Rakenne.El("mk-linssivalikko mk-linssivalikko--pohja", kerros.Juuri(kerrosNro));
+            // Elävä opas nykyajassa (omistaja 5.10.2026 klo 20.5x): LASI-lista harmaan lasin tokeneilla ja modernilla kirjasimella.
+            valikko = Rakenne.El("mk-linssivalikko mk-linssivalikko--pohja tk-teema-harmaa", kerros.Juuri(kerrosNro));
             valikko.style.display = DisplayStyle.None;
-            Kirjasimet.Aseta(valikko, Kirjasin.Luku);
+            Kirjasimet.Aseta(valikko, Kirjasin.Moderni);
             valikko.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             kerros.JokaRuutu += TarkistaOhiNapautus;
 
             // Irrallinen sirurivi alareunan keskelle (Googlen ja Cesiumin merkinnät jäävät sen alle).
-            sirurivi = Rakenne.El("mk-chat--lasi mk-chat__sirut mk-chat__sirut--irrallaan", Juuri, PickingMode.Ignore);
+            sirurivi = Rakenne.El("tk-teema-harmaa mk-chat__sirut mk-chat__sirut--irrallaan", Juuri, PickingMode.Ignore);
             sirurivi.style.display = DisplayStyle.None;
             sirurivi.style.opacity = 0f;
             puhuSiru = Rakenne.Nappi(null, "mk-chat__siru mk-chat__siru--ikoni", () => { NaytaTeksti(); UiNakymat.Hae()?.Chat?.AloitaSanelu(); }, null, PuluChat.MikkiIkoni);
@@ -145,7 +146,7 @@ namespace Matkakirja.Natiivi
             // Googlen ja Cesiumin krediitit (logot muuttamattomina, Googlen ehdot): sirurivi niiden yläpuolelle, tarkistus 2 × s.
             sirurivi.schedule.Execute(SovitaKrediitteihin).Every(500);
 
-            kuvaKortti = Rakenne.El("mk-nosto", Juuri, PickingMode.Position);
+            kuvaKortti = Rakenne.El("mk-nosto tk-teema-harmaa", Juuri, PickingMode.Position);
             kuvaKortti.style.position = Position.Absolute;
             kuvaKortti.style.right = 0;
             kuvaKortti.style.width = KuvaLeveys;
@@ -161,7 +162,7 @@ namespace Matkakirja.Natiivi
             kuvaMerkki = Rakenne.El("mk-nosto__kuvateksti mk-nosto__kuvateksti--kotelo", kuvaKortti, PickingMode.Ignore);
             var hm = Rakenne.Teksti("Havainnekuva".ToUpperInvariant(), "mk-nosto__havainne", kuvaMerkki);
             hm.tooltip = "Havainnekuva";
-            Kirjasimet.Aseta(hm, Kirjasin.Kone);
+            Kirjasimet.Aseta(hm, Kirjasin.Moderni);
             kuvaKortti.RegisterCallback<ClickEvent>(_ => SuurennaKuva());
             kuvaKortti.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             kerros.JokaRuutu += PaivitaKuva;
@@ -229,7 +230,7 @@ namespace Matkakirja.Natiivi
                 {
                     string t = j;
                     var b = Rakenne.Nappi(t, "mk-chat__siru", () => Valitse(t), sirurivi);
-                    Kirjasimet.Aseta(b, Kirjasin.Kone);
+                    Kirjasimet.Aseta(b, Kirjasin.Moderni);
                 }
                 sirurivi.Add(puhuSiru);
             }
@@ -465,7 +466,7 @@ namespace Matkakirja.Natiivi
         Button Komento(string teksti, Action teko, VisualElement isa = null)
         {
             var b = Rakenne.Nappi(teksti, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => { Sulje(); teko(); }, isa ?? valikko);
-            Kirjasimet.Aseta(b, Kirjasin.Luku);
+            Kirjasimet.Aseta(b, Kirjasin.Moderni);
             b.tooltip = teksti;
             return b;
         }
@@ -474,20 +475,20 @@ namespace Matkakirja.Natiivi
         {
             var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta " + (toiminto ? "mk-linssivalikko__komento" : "mk-linssivalikko__kytkin"), avaa, isa ?? valikko);
             if (toiminto) { b.style.flexDirection = FlexDirection.Row; b.style.alignItems = Align.Center; b.style.justifyContent = Justify.SpaceBetween; }
-            Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-linssivalikko__nimi", b), Kirjasin.Luku);
-            Kirjasimet.Aseta(Rakenne.Teksti("›", "mk-linssivalikko__tila", b), Kirjasin.KoneBold);
+            Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-linssivalikko__nimi", b), Kirjasin.Moderni);
+            Kirjasimet.Aseta(Rakenne.Teksti("›", "mk-linssivalikko__tila", b), Kirjasin.ModerniLihava);
             b.tooltip = teksti;
         }
 
         void Takaisin(string otsikko, Nakyma minne)
         {
             var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__kytkin", () => Avaa(minne), valikko);
-            Kirjasimet.Aseta(Rakenne.Teksti("‹ " + otsikko, "mk-linssivalikko__nimi", b), Kirjasin.LukuLihava);
+            Kirjasimet.Aseta(Rakenne.Teksti("‹ " + otsikko, "mk-linssivalikko__nimi", b), Kirjasin.ModerniLihava);
             b.tooltip = "Takaisin";
             Viiva();
         }
 
-        void Tyhja(string teksti) => Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-linssivalikko__lahde", valikko), Kirjasin.Luku);
+        void Tyhja(string teksti) => Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-linssivalikko__lahde", valikko), Kirjasin.Moderni);
 
         void Viiva() => Rakenne.El("mk-linssivalikko__viiva", valikko, PickingMode.Ignore);
 

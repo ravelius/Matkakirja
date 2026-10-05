@@ -17,7 +17,50 @@ namespace Matkakirja.Linssit.Testit
             var k = OpasKohde.Lue(j);
             Oleta.Tosi(k != null && k.Nimi == "Rundetaarn" && Math.Abs(k.KokoM - 40) < 1e-9 && Math.Abs(k.KestoS - 21.4) < 1e-9);
             Oleta.Tosi(OpasKohde.Lue((Dictionary<string, object>)MiniJson.Jasenna("{\"nimi\":\"x\",\"lat\":95,\"lon\":0}")) == null, "lat yli 90");
+            var pcm = OpasKohde.Lue((Dictionary<string, object>)MiniJson.Jasenna("{\"nimi\":\"N\",\"lat\":55,\"lon\":12,\"aani\":\"https://x/a.mp3\",\"aani_pcm\":\"https://x/a.pcm\",\"aani_taajuus\":24000}"));
+            Oleta.Sama("https://x/a.pcm", pcm.AaniAvain, "PCM ensisijainen"); Oleta.Sama(24000, pcm.AaniTaajuus);
+            Oleta.Sama("https://x/a.mp3", k.AaniAvain, "ilman PCM:ää mp3");
             Oleta.Tosi(OpasKohde.Lue((Dictionary<string, object>)MiniJson.Jasenna("{\"lat\":1,\"lon\":2}")) == null, "nimi puuttuu");
+        }
+
+        [Testi] static void VirheTaukoKasvaaJaOpasLuovuttaa()
+        {
+            // Natiivi-UI 5.10. iPad: 429 → 9 800 pyyntöä 6 min. Nyt: tauko 2–4–8–16 s, viides virhe luovuttaa, ei pyyntöjä sen jälkeen.
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var pyynnot = new List<int>();
+            s.Pyyda += (n, t) => pyynnot.Add(n);
+            s.Aloita("Kööpenhamina");
+            double aika = 0;
+            for (int i = 0; i < 600 * 10; i++)   // 10 min, 10 fps
+            {
+                if (pyynnot.Count > 0 && !s.Luovutti && i % 5 == 0) s.Vastaus(pyynnot[pyynnot.Count - 1], null, 503);
+                s.Paivita(0.1, _ => 40); aika += 0.1;
+            }
+            Oleta.Sama(OpasSilmukka.VirheitaMax, pyynnot.Count, "yritykset ennen luovutusta");
+            Oleta.Tosi(s.Luovutti);
+            Oleta.Sama(2.0, OpasSilmukka.Tauko(1)); Oleta.Sama(16.0, OpasSilmukka.Tauko(4)); Oleta.Sama(60.0, OpasSilmukka.Tauko(10));
+            // Pelaajan toive purkaa luovutuksen: yksi uusi pyyntö.
+            s.Toive("Nyhavn");
+            Oleta.Sama(OpasSilmukka.VirheitaMax + 1, pyynnot.Count);
+            Oleta.Tosi(!s.Luovutti);
+        }
+
+        [Testi] static void RetryAfterPitkaLuovuttaaHetiJaLyhytPidentaaTaukoa()
+        {
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var pyynnot = new List<int>();
+            s.Pyyda += (n, t) => pyynnot.Add(n);
+            s.Aloita("x");
+            s.Vastaus(pyynnot[0], null, 429, 30);
+            Oleta.Sama(30.0, s.VirheTauko, "Retry-After 30 s > tauko 2 s");
+            for (int i = 0; i < 290; i++) s.Paivita(0.1, _ => 40);
+            Oleta.Sama(1, pyynnot.Count, "ei uusintaa ennen Retry-Afteria");
+            for (int i = 0; i < 20; i++) s.Paivita(0.1, _ => 40);
+            Oleta.Sama(2, pyynnot.Count);
+            s.Vastaus(pyynnot[1], null, 429, 6 * 3600);   // päiväraja
+            Oleta.Tosi(s.Luovutti, "Retry-After yli 60 s → luovutus heti");
+            for (int i = 0; i < 1000; i++) s.Paivita(0.1, _ => 40);
+            Oleta.Sama(2, pyynnot.Count);
         }
 
         [Testi] static void KehysKoonMukaan()
@@ -80,10 +123,11 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(k != null && k.Kysymys && k.Vaihtoehdot.Length == 2);
             s.Vastaus(1, k);
             Oleta.Tosi(kysytty == k && s.OdottaaVastausta);
+            Oleta.Sama(2, pyynnot.Count, "ensimmäinen vaihtoehto esihaetaan heti"); Oleta.Sama("Linnoja", pyynnot[1]);
             for (int i = 0; i < 40; i++) s.Paivita(0.1, _ => 50);
-            Oleta.Sama(1, pyynnot.Count, "ei esihakua kysymyksen aikana");
+            Oleta.Sama(2, pyynnot.Count);
             s.Toive("Satama");
-            Oleta.Sama(2, pyynnot.Count); Oleta.Sama("Satama", pyynnot[1]); Oleta.Tosi(!s.OdottaaVastausta);
+            Oleta.Sama(3, pyynnot.Count); Oleta.Sama("Satama", pyynnot[2]); Oleta.Tosi(!s.OdottaaVastausta);
         }
 
         [Testi] static void VastaamatonKysymysValitseeEnsimmaisen()
@@ -93,9 +137,13 @@ namespace Matkakirja.Linssit.Testit
             s.Pyyda += (n, t) => pyynnot.Add(t);
             s.Aloita("Kööpenhamina");
             s.Vastaus(1, new OpasKohde { Kysymys = true, Teksti = "Mitä?", Vaihtoehdot = new[] { "Linnoja", "Satama" } });
-            s.AaniLoppui();
-            for (int i = 0; i < 200; i++) s.Paivita(0.1, _ => 50);
             Oleta.Sama(2, pyynnot.Count); Oleta.Sama("Linnoja", pyynnot[1]);
+            s.Vastaus(2, K("linna", 55.6858, 12.5773));
+            s.AaniLoppui();
+            for (int i = 0; i < 50; i++) s.Paivita(0.1, _ => 50);
+            Oleta.Tosi(s.Vaihe != OpasVaihe.Lentaa, "ei lennä ennen vastausaikaa");
+            for (int i = 0; i < 200 && s.Vaihe != OpasVaihe.Lentaa; i++) s.Paivita(0.1, _ => 50);
+            Oleta.Sama(OpasVaihe.Lentaa, s.Vaihe, "oletukseen vastausajan jälkeen");
         }
 
         [Testi] static void SamaPaikkaUudelleenEiLenna()
@@ -129,7 +177,8 @@ namespace Matkakirja.Linssit.Testit
             s.AlkaaPuhua += _ => puheT = t; s.Saapui += _ => saapuiT = t;
             s.Aloita(null); s.Vastaus(1, K("a", 55.6757, 12.5696));
             while (saapuiT < 0 && t < 60) { s.Paivita(0.05, _ => 50, () => true); t += 0.05; }
-            Oleta.Tosi(puheT > 0 && Math.Abs(saapuiT - puheT - OpasSilmukka.PuheEnnenS) < 0.2, $"puhe {puheT:F2}, saapui {saapuiT:F2}");
+            double lento = OpasSilmukka.LennonKesto(KierrosLento.EtaisyysM(55.68, 12.57, 55.6757, 12.5696));
+            Oleta.Tosi(puheT > 0 && Math.Abs(puheT - Math.Max(OpasSilmukka.PuheAikaisinS, lento - OpasSilmukka.PuheEnnenS)) < 0.2, $"puhe {puheT:F2}, lento {lento:F1}");
         }
 
         [Testi] static void AvausLiukuuKaupunginYlleOdottaessa()

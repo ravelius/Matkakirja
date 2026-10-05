@@ -20,6 +20,19 @@ namespace Matkakirja.Natiivi
         /// <summary>Ruudun leveys tuumina, jonka alle krediitit tiivistetään (iPhone vaaka ~5,7", iPad 10"+).</summary>
         public const float KapeaTuumaa = 7.5f;
         public const string NapinTeksti = "Data sources";
+        /// <summary>Logojen korkeus (pt; Googlen policy 16–19 dp, simu 5.10.: ~23 pt liian suuri), tyhjä logon sivuilla ja yllä (10 dp)
+        /// ja alla (5 dp), sekä "Data sources" -napin kirjainkoko (pt) — Päätoimittaja 5.10. 20.5x.</summary>
+        public const float LogoPt = 18f, TyhjaSivuPt = 10f, TyhjaAlaPt = 5f, NappiPt = 11.5f;
+
+        /// <summary>Paneelin yksikköä per iOS-piste: ruudun pikselit / paneelin korkeus ja pikseliä per piste dpi:stä (iPhone 3, iPad 2).</summary>
+        static float YksikkoaPerPt(VisualElement juuri)
+        {
+            float ph = juuri.worldBound.height;
+            if (ph <= 0 || Screen.height <= 0) return 1f;
+            float pxPerYks = Screen.height / ph;
+            float pxPerPt = Screen.dpi > 0 ? Mathf.Max(1f, Mathf.Round(Screen.dpi / 160f)) : 2f;
+            return pxPerPt / pxPerYks;
+        }
 
         static Label nappi;
         static VisualElement lahteet;
@@ -40,9 +53,20 @@ namespace Matkakirja.Natiivi
                 if (nappi != null && nappi.parent != null) nappi.RemoveFromHierarchy();
                 return;
             }
+            float pt = YksikkoaPerPt(juuri);
+            on.style.paddingTop = TyhjaSivuPt * pt; on.style.paddingBottom = TyhjaAlaPt * pt; on.style.paddingLeft = TyhjaSivuPt * pt;
             foreach (var lapsi in on.Children().ToList())
             {
-                if (lapsi == nappi || !(lapsi is Label l)) continue;   // kuvalogot jäävät
+                // Kuvalogot jäävät paikalleen; vain koko policyn rajoihin (kuvasuhde säilyy) ja tyhjä sivuille.
+                var kuva = lapsi.style.backgroundImage.value.texture;
+                if (!(lapsi is Label) && kuva != null && kuva.height > 0)
+                {
+                    float h = LogoPt * pt;
+                    lapsi.style.height = h; lapsi.style.width = h * kuva.width / kuva.height;
+                    lapsi.style.marginRight = TyhjaSivuPt * pt;
+                    continue;
+                }
+                if (lapsi == nappi || !(lapsi is Label l)) continue;
                 if (l.text != null && l.text.Contains("Data Attribution")) { l.style.display = DisplayStyle.None; continue; }
                 if (lahteet == null || lahteet.parent != pop)
                 {
@@ -67,6 +91,7 @@ namespace Matkakirja.Natiivi
                     if (p != null) p.style.display = p.style.display == DisplayStyle.Flex ? DisplayStyle.None : DisplayStyle.Flex;
                 }));
             }
+            nappi.style.fontSize = NappiPt * pt;
             if (nappi.parent != on) on.Add(nappi);
         }
     }
