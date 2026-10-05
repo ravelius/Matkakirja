@@ -270,7 +270,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Linssit-näkymässä ikkunassa on avauksesta asti aktiivisen linssin esikatselu (tai "Ei linssiä"), Aarteissa ensimmäinen
+        /// Linssit-näkymässä ikkunassa on avauksesta asti aktiivisen linssin esikatselu (ilman linssiä kiinni), Aarteissa ensimmäinen
         /// kerätty rivi (Aarnin luettelo → Tavarat → Julisteet); ilman kerättyjä ikkuna on kiinni. Muissa näkymissä ja valikon
         /// ollessa kiinni ikkuna on piilossa.
         /// </summary>
@@ -278,10 +278,10 @@ namespace Matkakirja.Natiivi
         {
             if (esikatselu == null || esiId != null) return;
             (string Id, string Kuva, string Nimi, string Selite, string Ikoni)? sisalto = null;
-            if (Auki && Valikkona && NykyinenNakyma == Nakyma.Linssit)
-                sisalto = aukiId != null && linssiTiedot.TryGetValue(aukiId, out var t)
-                    ? ("aktiivinen:" + aukiId, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t), LinssinIkoni(t))
-                    : ("aktiivinen:", null, "Ei linssiä", "Kartta sellaisena kuin isoisä sen piirsi.", EiLinssiaIkoni);
+            // Normaalilla kartalla (ei linssiä) ikkuna on piilossa (omistaja 5.10.2026 klo 11.35: "Piilotetaan normaalilla
+            // kartalla"); se avautuu linssin napautuksesta (Esikatsele) tai näyttää päällä olevan linssin. Paneeli ei liiku.
+            if (Auki && Valikkona && NykyinenNakyma == Nakyma.Linssit && aukiId != null && linssiTiedot.TryGetValue(aukiId, out var t))
+                sisalto = ("aktiivinen:" + aukiId, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t), LinssinIkoni(t));
             // Valikko v2 (omistaja 2.10.2026 klo 21.4x: "ei kahta erillistä ikkunaa"): Aarteet on yksi ikkuna ilman esikatselua.
             else if (Auki && Valikkona && NykyinenNakyma == Nakyma.Aarteet && !V2)
             {
