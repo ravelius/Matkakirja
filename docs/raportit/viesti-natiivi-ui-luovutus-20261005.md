@@ -65,6 +65,11 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   tk-teema-tumma. DioraamaTaulu: tekstit pois, palkki nimiruudun alle (esiin 1 s), DioraamaTaulu.LatausEdistyminen
   (Func<float>, Siirtoseppä kytkee). Testi `ui linnapalkki 0.35|pois`. Seuraava: käännös + stillit iPhone FB234D08 ja
   iPad AD119F7B (kesken ~0,35 ja lähes valmis ~0,92) → Päätoimittaja → omistaja ennen junaa.
+  13.4x: haara nyt 688d6b4e (tyylikirja.json peruttu: luodaan webistä, tiivistetarkistus; luettelorivi Päätoimittajalle).
+  Koehaara natiivi-ui/latauspalkki-koe 2ea2528f (+ kytkentärivi, EI mergetä) käännetty siirtoseppa/linna-143:n kanssa
+  → b274b20c (MATKAKIRJA_KIRJASTOT=…/_lahteet/unity-paketit-siirtoseppa/kirjastot pakollinen Cinemachinen takia).
+  Stillit latauspalkki/latauspalkki-arkki.jpg lähetetty Päätoimittajalle 13.4x (odottaa omistajaa). Löydös Siirtosepälle:
+  LatausOsuus 99 % jo 13 s, avaus 27,6 s. Kytkentärivin lisää Siirtoseppä omaan haaraansa.
 
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
