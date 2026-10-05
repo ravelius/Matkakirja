@@ -45,18 +45,41 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void PysahdysAlkaaKehyksestaJaKiertaaHitaasti()
         {
-            var p = OpasKuvaus.Kehysta(K(80), 5, 0);
+            var p = OpasKuvaus.Kehysta(K(80), 5, 0, "katu");
             var a0 = OpasKuvaus.Pysahdyksella(p, 0);
             Oleta.Tosi(Ero(a0.Suuntima, p.Suuntima) < 1e-9 && Math.Abs(a0.EtaisyysM - p.EtaisyysM) < 1e-9, "t = 0 on kehys");
-            double k40 = KierrosLento.Kiedo(OpasKuvaus.Pysahdyksella(p, 40).Suuntima - p.Suuntima);
-            Oleta.Tosi(k40 > 10 && k40 < 20, $"40 s kappaleessa 10–20° ({k40:F1}°)");
-            // Pehmeä alku: ensimmäisen sekunnin kierto selvästi pienempi kuin täydellä nopeudella.
             double k1 = KierrosLento.Kiedo(OpasKuvaus.Pysahdyksella(p, 1).Suuntima - p.Suuntima);
             Oleta.Tosi(k1 < OpasKuvaus.KiertoAsteS * 0.5, $"pehmeä alku ({k1:F3}°)");
-            // Jatkuvuus kiihdytyksen rajalla ja dolly sisään.
-            double ennen = OpasKuvaus.Pysahdyksella(p, OpasKuvaus.KiertoAlkuS - 1e-4).Suuntima, jalkeen = OpasKuvaus.Pysahdyksella(p, OpasKuvaus.KiertoAlkuS + 1e-4).Suuntima;
-            Oleta.Tosi(Ero(ennen, jalkeen) < 1e-3, "kierto jatkuva");
-            Oleta.Tosi(OpasKuvaus.Pysahdyksella(p, 60).EtaisyysM < p.EtaisyysM && OpasKuvaus.Pysahdyksella(p, 60).EtaisyysM > p.EtaisyysM * (1 - OpasKuvaus.DollyOsuus), "dolly");
+            // Nopeampi orbit (omistaja 23.3x): 4 s → 9 s noin 0,9°/s.
+            double nopeus = KierrosLento.Kiedo(OpasKuvaus.Pysahdyksella(p, 9).Suuntima - OpasKuvaus.Pysahdyksella(p, 4).Suuntima) / 5;
+            Oleta.Tosi(Math.Abs(nopeus - OpasKuvaus.KiertoAsteS) < 0.01, $"orbit {nopeus:F2}°/s");
+            Oleta.Tosi(OpasKuvaus.Pysahdyksella(p, 10).EtaisyysM < p.EtaisyysM, "dolly sisään");
+        }
+
+        [Testi] static void ToinenKehysKadullaToinenPuoliRakennuksellaLahemmas()
+        {
+            double loppu = OpasKuvaus.VaiheS + OpasKuvaus.SiirtoS;
+            var katu = OpasKuvaus.Kehysta(K(80), 5, 0, "katu");
+            double ennen = OpasKuvaus.Pysahdyksella(katu, OpasKuvaus.VaiheS).Suuntima, jalkeen = OpasKuvaus.Pysahdyksella(katu, loppu).Suuntima;
+            double siirto = KierrosLento.Kiedo(jalkeen - ennen - OpasKuvaus.KiertoAsteS * OpasKuvaus.SiirtoS);
+            Oleta.Tosi(Math.Abs(siirto - OpasKuvaus.SiirtoKulma) < 0.5, $"katu: toiselle puolelle ({siirto:F1}°)");
+            var rak = OpasKuvaus.Kehysta(K(60, 40), 5, 0, "rakennus");
+            double r0 = OpasKuvaus.Pysahdyksella(rak, OpasKuvaus.VaiheS).EtaisyysM, r1 = OpasKuvaus.Pysahdyksella(rak, loppu).EtaisyysM;
+            Oleta.Tosi(r1 < r0 * 0.75, $"rakennus: lähemmäs ({r0:F0} → {r1:F0} m)");
+            // Orbit jatkuu toisessa kehyksessä samalla nopeudella.
+            double v2 = KierrosLento.Kiedo(OpasKuvaus.Pysahdyksella(katu, loppu + 6).Suuntima - OpasKuvaus.Pysahdyksella(katu, loppu + 1).Suuntima) / 5;
+            Oleta.Tosi(Math.Abs(v2 - OpasKuvaus.KiertoAsteS) < 0.01, $"orbit jatkuu {v2:F2}°/s");
+            // Jatkuvuus koko pysähdyksen ajan 60 fps:llä: ei hyppyjä (suunta < 1,6°/kehys, etäisyys < 3 m/kehys).
+            foreach (var p in new[] { katu, rak })
+            {
+                var ed = OpasKuvaus.Pysahdyksella(p, 0); double maxS = 0, maxE = 0;
+                for (int i = 1; i <= 60 * 30; i++)
+                {
+                    var n = OpasKuvaus.Pysahdyksella(p, i / 60.0);
+                    maxS = Math.Max(maxS, Ero(n.Suuntima, ed.Suuntima)); maxE = Math.Max(maxE, Math.Abs(n.EtaisyysM - ed.EtaisyysM)); ed = n;
+                }
+                Oleta.Tosi(maxS < 1.6 && maxE < 3, $"jatkuva ({maxS:F2}°/kehys, {maxE:F2} m/kehys)");
+            }
         }
 
         [Testi] static void LentoNouseeLiukuuJaLaskeeIlmanHyppyja()
