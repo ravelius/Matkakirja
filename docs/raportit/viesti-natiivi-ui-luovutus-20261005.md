@@ -53,6 +53,13 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   pyytää, kun kuvaparit on hyväksytty. Worktreet: wt/proto-natiivi-ui-{xsiivous,eilinssia,kerning} poistetaan, kun
   haarat ovat masterissa (git worktree remove, omat).
 
+## Latauspalkki (omistaja 5.10. 12.5x) — avoinna
+- natiivi-ui/latauspalkki 36853057 (juna-143-koe 91220fb6:n päällä): Latauspalkki.cs (+.meta) EDISTYMINEN-pohjan kääre,
+  pohjan kulma 0 (Päätoimittaja A 13.0x, koskee myös sisällön latauksen palkkia), .mk-edistyminen--latauspalkki 140×3,
+  tk-teema-tumma. DioraamaTaulu: tekstit pois, palkki nimiruudun alle (esiin 1 s), DioraamaTaulu.LatausEdistyminen
+  (Func<float>, Siirtoseppä kytkee). Testi `ui linnapalkki 0.35|pois`. Seuraava: käännös + stillit iPhone FB234D08 ja
+  iPad AD119F7B (kesken ~0,35 ja lähes valmis ~0,92) → Päätoimittaja → omistaja ennen junaa.
+
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
 iss-taulu-vaaka.sh (TAP_OHI=1), auto-zoom.sh (TAP_SEUR=1), lippu-kaikki.sh, chat-linna.sh, kartoitus.sh (+ k:-etuliite
