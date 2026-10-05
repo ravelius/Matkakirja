@@ -1,4 +1,27 @@
-# Siirtosepän luovutus 5.10.2026 — TILA KLO 11.0x (Opus 5.5, high)
+# Siirtosepän luovutus 5.10.2026 — TILA KLO 14.2x (Opus 5.5, high)
+
+## Nyt (14.2x)
+- **Proto-haarat (kaikki ilman pushia, proto-git):**
+  - `siirtoseppa/linna-143` @ 5c12cc5c (worktree wt/proto-siirtoseppa-141): Cinemachine (e9a7915b, blendikäyrä e5c7867b), laineiden uusinta,
+    Pulu vain napautuksesta + kuunnelma ainoa keskustelu (cf079e40), kohtaukset v2 -tuki (vuorot, puhuva hahmo, faktat kohteisiin f57f3e20, 7dd23594),
+    latauspalkki (3be07c30, todennettu Natiivi-UI 1e32f0b1) + natiivi-ui/latauspalkki mergetty + kytkentä. App lokit/siirtoseppa-5c12-app (fc420a3b).
+    MR Natiivisepälle vasta kun Cinemachine ja Pulu-todiste kuitattu (Laitetestaaja toiminnallinen, Päätoimittaja sisältö).
+  - `siirtoseppa/latauspalkki-kytkenta` @ da6b8a27 (wt/proto-siirtoseppa-lp): master + latauspalkki + vain LatausOsuus → Natiivisepälle junaan 144.
+  - `siirtoseppa/tavli` @ ea02bae1: KUITATTU, MR Natiivisepällä (TF vasta otsikkokorjauksen kanssa, Natiivi-UI 46b62059).
+  - `siirtoseppa/vesi` @ 1a4e4804: Stylized Water 3 A/B (oletus pois); kuva vielä huonompi kuin oma (ei heijastusta) → jatkotyö.
+  - `siirtoseppa/steam-audio` @ 11518dbd: kappelin leivottu kaiku (DioraamaKaiku, agentin suunnitelma docs-steam-audio-suunnitelma.md),
+    simulaattorissa pois. SEURAAVAKSI: leivonta `nice -n 15 tyokalut/kaiku-leivonta.sh kappeli` (Julkaisijan Unity-batch-vuoro) →
+    Natiivisepän laitekäännös + koko → iPad A/B (poikki kaiku 0|1) Päätoimittajalle.
+- **Odottaa simuvuoroa (~15.05, 25 min):** `ajo-linna-v3.sh` (VANHA=lokit/juna-1.1.143-81ac41ea, UUSI=lokit/siirtoseppa-5c12-app,
+  HASH=Linnanrakentajan v3-peili) = osoitinehto: TF 143 lukee v3-datan; Pulu-todiste (ajo-linna-pulu.sh); kirjuri/soutaja (ajo-linna-hahmot.sh
+  KIERROKSET=A AHASH=c97dd7e515c71824).
+- **v3-äänet:** Pelikoodari _valmiit/linna-kohtaukset-v3; Linnanrakentajalle datasäännöt (kasikirjoitus vain pulu-lenna+taulu, kuunnelma
+  kertoja + keskustelu vuoroineen, nimi tyhjä). Osoitinvaihto vasta Päätoimittajan todisteen jälkeen.
+- **Käännöksissä aina** `MATKAKIRJA_KIRJASTOT=/Users/Shared/Claude/proto-3d/_lahteet/unity-paketit-siirtoseppa/kirjastot`.
+- **Kehitystahti (#3992):** VIE 12 ja 20; toiminnallinen kuittaus ensin Laitetestaajalta; todistusajo (tyokalut/todistusajo) kun Pelikoodari
+  ilmoittaa mykistyksen valmiiksi.
+
+## Aiempi tila 11.05
 
 ## Nyt (päivitetty 11.05)
 - **Tavli KUITATTU** (Päätoimittaja ~10.55): proto `siirtoseppa/tavli` @ **ea02bae1** (tekstit HYVÄKSYTTY + laudat v2), merge-pyyntö Natiivisepällä.
