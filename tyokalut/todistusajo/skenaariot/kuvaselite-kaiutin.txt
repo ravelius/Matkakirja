@@ -11,10 +11,11 @@ oleta 5 lukija näkyy -- striimilukija näkyy otsikkorivillä
 kuva k1-lepo Kuvaselite, lukija levossa (ei luentaa)
 tap-teksti mk-kaiutin__osa
 oleta 20 ui lukija: aloita -- kaiutin aloitti luennan
-aani 10 selite
-kuva k2-soi Kuvaselite, lukija soi (VU)
+oleta 20 puhe: alkoi -- luenta soi (worker-moottori palalokissa)
 ui linssi kuvaselite tila
 oleta 5 luenta (soi|latautuu) -- luenta käynnissä
+kuva k2-soi Kuvaselite, lukija soi (VU)
+aani 8 selite
 tap-teksti mk-kaiutin__osa
 odota 2
 linssi linssi pois
