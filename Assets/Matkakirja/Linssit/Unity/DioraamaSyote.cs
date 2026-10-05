@@ -178,11 +178,11 @@ namespace Matkakirja.Natiivi
             DioraamaAanet.Napautettu();
             // Elävä linna: saapumiskaaren aikana napautus ohittaa kaaren (loppuun 1 s:ssa), ei kohdista.
             var linssi = DioraamaSovitin.Linssi;
-            if (linssi != null && linssi.SaapuminenKaynnissa(t)) { linssi.Napauta(t); return; }
+            if (linssi != null && linssi.SaapuminenKaynnissa(t)) { Haara("saapumisen ohitus"); linssi.Napauta(t); return; }
             // Uusi linna (30.9.): kertojan kierroksella napautus siirtää seuraavaan jaksoon, ei kohdista huonetta.
-            if (linssi != null && linssi.KertojaKaynnissa(t)) { linssi.Napauta(t); return; }
+            if (linssi != null && linssi.KertojaKaynnissa(t)) { Haara("kertojan jakso ohi"); linssi.Napauta(t); return; }
             // Etsintä (voudin sinetti): aktiivisen vaiheen kimallus ensin.
-            if (nayttamo?.Etsinta != null && nayttamo.Etsinta.Napauta(rakennus, ruutu, kamera)) return;
+            if (nayttamo?.Etsinta != null && nayttamo.Etsinta.Napauta(rakennus, ruutu, kamera)) { Haara("etsintä"); return; }
             // Pulu napautuksesta (omistajan linnapalaute 5.10.): huoneessa napautus hahmoon → Pulun reaktio siihen hahmoon,
             // napautus huoneeseen → Pulun seuraava faktakohta (PoikkileikkausLinssi.Napauta(t, hahmo)). Muu huone kohdistuu kuten ennen.
             string nykyinen = DioraamaSovitin.ViimeisinNakyma?.KohdeTila;
@@ -194,6 +194,7 @@ namespace Matkakirja.Natiivi
                 if (hahmo != null || kohta >= 0 || UnityAabb(oma.RajaMin, oma.RajaMax).IntersectRay(sade0))
                 {
                     // Keskustelun (kuunnelman) aikana Pulu odottaa vuoroaan: puhuu, kun keskustelu päättyy (ei keskeytä).
+                    Haara($"pulu {(KuunnelmaKaistale.SoiNyt ? "jonoon" : "nyt")} ({nykyinen}/{hahmo ?? "-"}/{kohta})");
                     if (KuunnelmaKaistale.SoiNyt) DioraamaSovitin.PuluJonoon(nykyinen, hahmo, kohta);
                     else linssi.Napauta(t, hahmo, kohta);
                     return;
@@ -214,7 +215,7 @@ namespace Matkakirja.Natiivi
                 float d = Vector2.Distance(new Vector2(r.x, r.y), ruutu);
                 if (d <= sadePx && d < elavaLahin) { elavaLahin = d; elava = tila.Id; }
             }
-            if (elava != null) { sovitin.Kohdista(elava, t); return; }
+            if (elava != null) { Haara("elävä kohde → kohdista " + elava); sovitin.Kohdista(elava, t); return; }
 
             var sade = kamera.ScreenPointToRay(new Vector3(ruutu.x, ruutu.y, 0));
             string osuma = null;
@@ -225,8 +226,12 @@ namespace Matkakirja.Natiivi
                 var rajat = UnityAabb(tila.RajaMin, tila.RajaMax);
                 if (rajat.IntersectRay(sade, out float etaisyys) && etaisyys < lahin) { lahin = etaisyys; osuma = tila.Id; }
             }
+            Haara(osuma != null ? "kohdista " + osuma + " (nykyinen " + (nykyinen ?? "-") + ")" : "tyhjä");
             if (osuma != null) sovitin.Kohdista(osuma, t); // napautus tyhjään: ei tehdä mitään
         }
+
+        /// <summary>Napautuksen käsittelyhaara lokiin (Pulun jonon todennus oikealla tapilla, Siirtoseppä 5.10.).</summary>
+        static void Haara(string h) => Debug.Log("MATKAKIRJA linssit: napautus → " + h);
 
         /// <summary>Huoneen hahmo, jonka vartalon (paikka + 0,9 m) ruutupisteen lähelle napautus osuu: säde on 0,6 m ruudulle
         /// projisoituna, vähintään 36 pt (sama mitoitus kuin elävällä kohteella). Vain hahmot, joilla on Pulun reaktio.</summary>

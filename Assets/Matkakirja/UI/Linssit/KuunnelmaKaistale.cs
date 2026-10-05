@@ -43,6 +43,9 @@ namespace Matkakirja.Natiivi
         public static bool IlmanPulua;
         /// <summary>Soiko jokin kuunnelma juuri nyt (Pulun napautusvuoro odottaa keskustelun loppuun).</summary>
         public static bool SoiNyt;
+        /// <summary>Hahmojen keskustelurivi soi (vuorojen välitauot mukaan lukien; ei kertojan eikä Pulun riviä):
+        /// huonekortti tiivistyy tämän ajaksi, jotta puhujien vartalot ja eleet näkyvät (Päätoimittaja 5.10.).</summary>
+        public static bool Keskustelu { get; private set; }
         public string Tila => toisto == null ? "ei kuunnelmaa"
             : $"tila {tilaId}, rivi {toisto.Indeksi + 1}/{toisto.Maara}" + (toisto.Rivi != null ? $" ({toisto.Rivi.Nimi}: {toisto.Rivi.Teksti})" : " (loppu)");
 
@@ -81,7 +84,7 @@ namespace Matkakirja.Natiivi
         {
             toisto = null;
             tilaId = null;
-            SoiNyt = false;
+            SoiNyt = false; Keskustelu = false;
             PuhuvaHahmo = null; PuhuvaIlme = null; PuhuvaEle = null; TulevaPuhuja = null; naytettyVuoro = null;
             naytetty = -2;
             Nimi = null; Teksti = null;
@@ -94,6 +97,7 @@ namespace Matkakirja.Natiivi
             SoiNyt = Kaynnissa;
             // Kohtaukset v2: keskustelurivin vuoro vaihtuu kesken rivin (yksi äänitiedosto, puhujittaiset aikaleimat).
             var r = toisto?.Rivi;
+            Keskustelu = SoiNyt && r != null && !r.Pulu && (r.Vuorot.Count > 0 || (r.Puhuja != null && r.Puhuja != "kertoja"));
             if (r != null && r.Vuorot.Count > 0)
             {
                 var v = toisto.Vuoro(Time.unscaledTimeAsDouble);
