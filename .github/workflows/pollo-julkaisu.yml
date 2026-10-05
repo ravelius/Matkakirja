@@ -224,6 +224,13 @@ jobs:
             --originit "$POLLO_ORIGINIT"
           echo "POLLO_ASETUS=tools/pollo/wrangler.ci.json" >> "$GITHUB_ENV"
 
+      # ELÄVÄN OPPAAN AINEISTO (Päätoimittaja 5.10.2026): isoisän merkinnät ja kaupunkilehdet pelin sisältöpaketeista
+      # taustatiedoksi. Repossa on tynkä; täysi aineisto (~1,7 Mt) generoidaan tässä juuri ennen deployta.
+      - name: Generoi oppaan aineisto
+        run: |
+          set -euo pipefail
+          node tools/pollo/tee-opas-aineisto.mjs
+
       - name: Julkaise worker
         run: |
           set -euo pipefail

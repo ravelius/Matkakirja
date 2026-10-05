@@ -21,7 +21,9 @@
 import { kirjaaKaynti, lueKaynnit } from './kaynnit.js';
 import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
+  kaupunginAineisto, kuvatPaikalle, wikidataKuva,
 } from './opas.js';
+import { OPAS_AINEISTO } from './opas-aineisto.js';
 import {
   HISTORIAN_KATTO,
   KONTEKSTIN_KATTO,
@@ -2729,11 +2731,15 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   }
   if (!p.sijainti && !p.kaupunki) return vastaa({ virhe: 'kysely', viesti: 'Kaupunki tai sijainti puuttuu.' }, { status: 400, ...kors });
   // Sonnet valitsee paikan omasta tiedostaan (omistaja 18.0x); worker hakee vain koordinaatit nimellä.
-  const [sijainti, kaydytNimet] = await Promise.all([
-    p.sijainti ?? kaupunginSijainti(fetch, p.kaupunki), kaydytNimiksi(fetch, p.kaydyt)]);
+  // Isoisään viitataan kerran istunnossa (Päätoimittaja 5.10.): muisti KV:ssä natiivin istunto-tunnuksella.
+  const isoisaAvain = p.istunto ? `opas:isoisa:${p.istunto}` : null;
+  const [sijainti, kaydytNimet, isoisaKaytetty] = await Promise.all([
+    p.sijainti ?? kaupunginSijainti(fetch, p.kaupunki), kaydytNimiksi(fetch, p.kaydyt),
+    isoisaAvain && kv ? kv.get(isoisaAvain).then(Boolean).catch(() => false) : false]);
+  const aineisto = kaupunginAineisto(env.OPAS_AINEISTO_TESTI ?? OPAS_AINEISTO, p.kaupunki);
   const kutsu = {
     jarjestelma: OPAS_KEHOTE,
-    viestit: [{ role: 'user', content: oppaanViesti({ ...p, sijainti }, kaydytNimet) }],
+    viestit: [{ role: 'user', content: oppaanViesti({ ...p, sijainti, isoisaKaytetty }, kaydytNimet, aineisto) }],
     maxTokens: 700,
     malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
   };
@@ -2746,14 +2752,24 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       if (!paikka) { console.log(`opas: paikkaa ei löytynyt (${vastaus.wikipedia ?? vastaus.nimi})`); continue; }
       tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi: vastaus.nimi, alarivi: paikka.alarivi, lat: paikka.lat, lon: paikka.lon,
         koko_m: vastaus.koko_m, ...(vastaus.korkeus_m ? { korkeus_m: vastaus.korkeus_m } : {}), teksti: vastaus.teksti,
-        wiki: paikka.wiki, kuva: null, vaihtoehdot: vastaus.vaihtoehdot, koordinaatit: paikka.lahde };
+        wiki: paikka.wiki, kuva: null, vaihtoehdot: vastaus.vaihtoehdot, koordinaatit: paikka.lahde,
+        kuvat: kuvatPaikalle(aineisto, [vastaus.nimi, vastaus.wikipedia, paikka.wiki?.otsikko].filter(Boolean)) };
     }
   } catch (virhe) {
     console.log(`opas: mallikutsu epäonnistui (${virhe?.status ?? 'verkko'})`);
   }
   if (!tulos) return vastaa({ virhe: 'palvelin', viesti: 'Opas ei saanut seuraavaa paikkaa kiinni. Yritä uudelleen.' }, { status: 502, ...kors });
-  const aani = await oppaanAani(pyynto, env, ctx, tulos.teksti, kehittaja);
-  console.log(`opas: ${tulos.tyyppi} ${tulos.id ?? ''} ${p.kaydyt.length} käyty, ääni ${aani ? 'kyllä' : 'ei'}`);
+  // Ääni ja kuvan varahaku (Wikidatan P18) rinnakkain; pelin oma kuva voittaa.
+  const [aani, p18] = await Promise.all([
+    oppaanAani(pyynto, env, ctx, tulos.teksti, kehittaja),
+    tulos.tyyppi === 'pysahdys' && !tulos.kuvat.length ? wikidataKuva(fetch, tulos.id) : [],
+  ]);
+  if (tulos.tyyppi === 'pysahdys' && !tulos.kuvat.length) tulos.kuvat = p18;
+  if (isoisaAvain && kv && !isoisaKaytetty && tulos.tyyppi === 'pysahdys' && /isoisä/i.test(tulos.teksti)) {
+    const kirjoitus = kv.put(isoisaAvain, '1', { expirationTtl: 60 * 60 * 48 }).catch(() => {});
+    if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
+  }
+  console.log(`opas: ${tulos.tyyppi} ${tulos.id ?? ''} ${p.kaydyt.length} käyty, ääni ${aani ? 'kyllä' : 'ei'}, kuvia ${tulos.kuvat?.length ?? 0}`);
   return vastaa({ ...tulos, aani: aani?.aani ?? null, kesto_s: aani?.kesto_s ?? null }, kors);
 }
 
