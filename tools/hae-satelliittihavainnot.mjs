@@ -3676,16 +3676,20 @@ export async function haeGatewayKuva({ id, teksti }) {
   };
 }
 
-/** Yhden kuvan tiedot NASAn rajapinnasta (tai Gatewaysta), tai null jos se ei kelpaa. */
+/**
+ * Yhden kuvan tiedot: NASAn kuvakirjasto (images-api) ENSIN, Gateway vasta jos kirjasto ei tunne tunnusta (Pelikoodari
+ * 5.10.2026, Sisältökirjurin löydös 4.10.: viisi vanhaa kirjaston kuvaa STS062-85-021-muodossa tulkittiin Gateway-
+ * tunnuksiksi ja epäonnistui, koska Gatewayn tiedosto on ilman etunollaa STS062-85-21). Järjestys takaa, ettei olemassa
+ * olevan kohteen osoite koskaan vaihdu images-assetsista Gatewayhin; hinta on yksi kirjastohaku per Gateway-kuva.
+ */
 export async function haeKuva({ id, teksti }) {
-  // Sisältökirjuri 4.10.2026: joitakin vanhoja STS-tunnuksia (esim. STS062-85-021) tunnistetaan
-  // Gateway-tunnuksiksi (gatewayTunnus-säännön mukaan oikein, ks. gateway.mjs:n kommentti), mutta
-  // Gateway-haku epäonnistuu niille (eri kuvasivun muoto) vaikka images-api tuntee ne. Siksi Gateway-
-  // haun epäonnistuessa yritetään vielä images-api, sen sijaan että kohde jäisi kokonaan ilman kuvaa.
-  if (gatewayTunnus(id)) {
-    const g = await haeGatewayKuva({ id, teksti });
-    if (g) return g;
-  }
+  const kirjastosta = await haeKirjastoKuva({ id, teksti });
+  if (kirjastosta) return kirjastosta;
+  return gatewayTunnus(id) ? haeGatewayKuva({ id, teksti }) : null;
+}
+
+/** Kuva NASAn kuvakirjastosta (images-api), tai null jos sitä ei ole tai se ei kelpaa. */
+async function haeKirjastoKuva({ id, teksti }) {
   const haku = await haeJson(`${RAJAPINTA}/search?nasa_id=${encodeURIComponent(id)}`);
   const tietue = haku.collection?.items?.[0];
   if (!tietue) return null;
