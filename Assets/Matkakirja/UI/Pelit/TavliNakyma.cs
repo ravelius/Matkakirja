@@ -361,6 +361,9 @@ namespace Matkakirja.Natiivi
             {
                 var s = peli.EtsiAskel(valittu, kohde);
                 if (s.HasValue) { Tee(s.Value); return; }
+                // OSUMA-ALA (Päätoimittaja 5.10.: kolmio ~21 pt pystyssä): valitun nappulan kohde hyväksyy myös viereisen sarakkeen
+                // (± 1, sama rivi, lähin napautuskohtaan), ellei napautettu piste ole itse valittava oma nappula. Ei visuaalista muutosta.
+                if (kohde < Tavli.Pisteita && !askeleet.Exists(a => a.Mista == kohde) && Lahin(kohde) is TavliAskel l) { Tee(l); return; }
             }
             if (kohde >= 0 && kohde != Tavli.Pois && askeleet.Exists(a => a.Mista == kohde))
             {
@@ -370,6 +373,21 @@ namespace Matkakirja.Natiivi
                 return;
             }
             if (valittu >= 0) { valittu = -1; Paivita(); }
+        }
+
+        TavliAskel? Lahin(int kohde)
+        {
+            TavliAskel? paras = null; float etaisyys = float.MaxValue;
+            foreach (int d in new[] { -1, 1 })
+            {
+                int n = kohde + d;
+                if (n < 0 || n >= Tavli.Pisteita || (n < 12) != (kohde < 12)) continue;
+                var s = peli.EtsiAskel(valittu, n);
+                float e = Mathf.Abs(lauta.SarakeX(n) - lauta.ViimeX);
+                if (s.HasValue && e < etaisyys) { paras = s; etaisyys = e; }
+            }
+            if (paras.HasValue) Debug.Log($"MATKAKIRJA tavli: osuma-ala: a{kohde} → a{paras.Value.Mihin}");
+            return paras;
         }
 
         /// <summary>Heittää vuorossa olevan nopat (pakotettu heitto tai Satunnainen) ja käynnistää vierinnän; palauttaa keston.</summary>
@@ -929,11 +947,18 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Napautuksen kohde: poistolokero, palkki, kolmio (koko sarake laudan puolikkaassa) tai −1 muualla.</summary>
+        /// <summary>Viimeisimmän napautuksen x laudan pikseleinä (Lahin: lähin laillinen piste ± 1 saraketta).</summary>
+        public float ViimeX { get; private set; }
+
+        /// <summary>Sarakkeen keskikohta laudan pikseleinä.</summary>
+        public float SarakeX(int piste) => (Mitat.KantaA[piste].x + Mitat.KantaB[piste].x) / 2f;
+
         int Osuma(Vector2 paikallinen)
         {
             float s = contentRect.width / Mitat.Koko.x;
             if (s <= 0) return -1;
             var q = paikallinen / s;
+            ViimeX = q.x;
             if (Mitat.PoistoYla.Contains(q) || Mitat.PoistoAla.Contains(q)) return Tavli.Pois;
             if (Mitat.Palkki.Contains(q)) return Tavli.Palkki;
             float keski = Mitat.Koko.y / 2f;
