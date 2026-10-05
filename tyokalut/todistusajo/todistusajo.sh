@@ -29,6 +29,8 @@
 #   palaute <s> <regex> -- <palaute>    sama, mutta kohtaan 6 (aiempi palaute tarkistettu)
 #   nakyy <s> <teksti> [-- selite]      tila UI-puusta: näkyvä elementti, jonka teksti/nimi sisältää tekstin (ilman lokiriviä)
 #   ei-nay <s> <teksti> [-- selite]     sama käänteisenä (esim. ohinapautus sulki paneelin)
+#   maara <s> <luokka> <n> [-- selite]  näkyviä elementtejä luokalla täsmälleen n (UI-puusta)
+#   video-alku [nimi] / video-loppu     ruutuvideo L/<nimi>.mp4 (ei ääntä)
 #   kuva <tunnus> <tilan selite>        still → kuvat/<tunnus>.png merkinnöin
 #   aani <s> <nimi>                     äänikaappaus s sekuntia (linssi-kanava `kaappaa`), odottaa valmistumisen
 #   aanitaso <s>                        `aani mittaa <s>` (Unityn mikseri) → rms/huippu raporttiin
@@ -191,6 +193,25 @@ while IFS= read -r rivi || [[ -n $rivi ]]; do
       if [[ -n $ok ]]; then napautus_kirjaus "  ui-puu: $kuvaus" "OK: '$ehto' $([[ $sana == nakyy ]] && echo "näkyy ($xy)" || echo "ei näy")"
       else napautus_kirjaus "  ui-puu: $kuvaus" "PUUTE"; tulos 2 PUUTE "$kuvaus: '$ehto' $([[ $sana == nakyy ]] && echo "ei näy" || echo "näkyy yhä")"; fi ;;
     kuva) kuva ${=loput} ;;
+    maara)
+      # maara <s> <luokka> <n> [-- selite]: näkyviä elementtejä, joilla luokka, täsmälleen n (esim. Pulun sirut = 2).
+      s=${loput%% *}; r1=${loput#* }; luokka=${r1%% *}; r2=${r1#* }; n=${r2%% *}; selite=""
+      [[ $r2 == *" -- "* ]] && selite=${r2#* -- }
+      ok=""; saatu=0
+      for i in {1..$(( s > 1 ? s : 1 ))}; do
+        rm -f "$D/ui-puu.json"; kirjoita ui-komento.txt "ui puu"
+        for j in {1..12}; do [[ -s "$D/ui-puu.json" ]] && break; sleep 0.25; done
+        saatu=$(python3 $TYOKALUT/todistusraportti.py laske "$D/ui-puu.json" "$luokka" 2>/dev/null || echo 0)
+        [[ $saatu == $n ]] && { ok=1; break; }; sleep 1
+      done
+      if [[ -n $ok ]]; then napautus_kirjaus "  määrä: ${selite:-$luokka}" "OK: $luokka × $saatu"
+      else napautus_kirjaus "  määrä: ${selite:-$luokka}" "PUUTE: $saatu ≠ $n"; tulos 2 PUUTE "${selite:-$luokka}: $saatu kpl, odotettiin $n"; fi ;;
+    video-alku)
+      # Video simulaattorin ruudusta (ei ääntä; testimykistys). video-loppu lopettaa.
+      nohup xcrun simctl io $UDID recordVideo --codec=h264 --force "$L/${loput:-video}.mp4" > $L/video.log 2>&1 &
+      VIDEO_PID=$!; sleep 1.5; kirjaa "video alkoi: ${loput:-video}.mp4" ;;
+    video-loppu)
+      [[ -n ${VIDEO_PID:-} ]] && { kill -INT $VIDEO_PID; sleep 3; kirjaa "video valmis"; VIDEO_PID=""; } ;;
     aani)
       s=${loput%% *}; nimi=${loput#* }
       rm -f "$D/$nimi.wav" "$D/$nimi-natiivi.wav"; kirjoita linssi-komento.txt "kaappaa $s $nimi"

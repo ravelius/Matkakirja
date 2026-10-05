@@ -41,6 +41,12 @@ def etsi(puu, haku, kw, kh):
         print(f"{cx * kw / pw:.1f} {cy * kh / ph:.1f}")
 
 
+def laske(puu, luokka):
+    d = json.load(open(puu))
+    n = sum(1 for e in d["elementit"] if luokka in (e.get("luokat") or "").split() and e.get("opasiteetti", 1) >= 0.3)
+    print(n)
+
+
 def fontti(koko):
     from PIL import ImageFont
     for p in ("/System/Library/Fonts/Supplemental/Arial Bold.ttf", "/System/Library/Fonts/Helvetica.ttc",
@@ -214,5 +220,7 @@ def raportti(L, era, versio, laite, udid, skenaario):
 if __name__ == "__main__":
     if sys.argv[1] == "etsi":
         etsi(*sys.argv[2:6])
+    elif sys.argv[1] == "laske":
+        laske(*sys.argv[2:4])
     elif sys.argv[1] == "raportti":
         raportti(*sys.argv[2:8])
