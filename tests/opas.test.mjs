@@ -77,6 +77,7 @@ function tynka({ malli = 'NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nLAT: 55.67\nL
     }
     if (u.includes('api.elevenlabs.io')) {
       kutsut.eleven = JSON.parse(init.body);
+      kutsut.elevenUrl = u;
       return new Response(new Uint8Array(16000), { status: 200, headers: { 'content-type': 'audio/mpeg' } });
     }
     return new Response('{}', { status: 404 });
@@ -160,6 +161,21 @@ test('worker /opas/seuraava: Sonnet valitsee, koordinaatit Wikipediasta nimellä
     assert.equal((await worker.fetch(new Request(data.aani), env, {})).status, 200);
     assert.equal(verkko.kutsut.eleven, undefined, 'toinen GET R2:sta');
     assert.equal((await worker.fetch(new Request(data.aani.replace(/[0-9a-f]{32}/, '0'.repeat(32))), env, {})).status, 404);
+    // PCM-suoratoisto (juna 145): sama teksti, raaka s16le 24 kHz virtana, tallennus R2:een.
+    assert.equal(data.aani_pcm, data.aani.replace(/\.mp3$/, '.pcm'));
+    assert.equal(data.aani_taajuus, 24000);
+    const odotukset = [];
+    const pcm = await worker.fetch(new Request(data.aani_pcm), env, { waitUntil: (x) => odotukset.push(x) });
+    assert.equal(pcm.status, 200);
+    assert.equal(pcm.headers.get('content-type'), 'audio/L16;rate=24000;channels=1');
+    assert.match(verkko.kutsut.elevenUrl, /output_format=pcm_24000/);
+    assert.equal((await pcm.arrayBuffer()).byteLength, 16000);
+    await Promise.all(odotukset);
+    assert.ok(varasto.r2.has(data.aani_pcm.replace(/^.*\/aani\//, 'opas/')), 'virta tallennettu R2:een');
+    verkko.kutsut.eleven = undefined;
+    const toinen = await worker.fetch(new Request(data.aani_pcm), env, {});
+    assert.equal(toinen.status, 200);
+    assert.equal(verkko.kutsut.eleven, undefined, 'toinen .pcm R2:sta');
   } finally {
     globalThis.fetch = vanha;
   }

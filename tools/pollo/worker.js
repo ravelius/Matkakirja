@@ -267,12 +267,12 @@ export function elevenTagit(teksti) {
 
 // vakaus: numero lähetetään stability-kenttänä (Pulu ja muut äänet 0,5); null jättää kentän pois (mallin oletus, William),
 // tyyli: style-kenttä jos annettu (William 0).
-async function kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani = PULU_ELEVEN_AANI, vakaus = 0.5, tyyli }) {
+async function kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani = PULU_ELEVEN_AANI, vakaus = 0.5, tyyli, ulostulo = ELEVEN_ULOSTULO }) {
   const ohjain = new AbortController();
   const ajastin = setTimeout(() => ohjain.abort(), ELEVEN_AIKARAJA_MS);
   let ylavirta;
   try {
-    ylavirta = await fetch(`${ELEVEN_PUHE_RAJAPINTA}/${aani}/stream?output_format=${ELEVEN_ULOSTULO}`, {
+    ylavirta = await fetch(`${ELEVEN_PUHE_RAJAPINTA}/${aani}/stream?output_format=${ulostulo}`, {
       method: 'POST',
       headers: { 'content-type': 'application/json', 'xi-api-key': env.ELEVEN_API_KEY },
       body: JSON.stringify({
@@ -2691,15 +2691,29 @@ async function oppaanAani(pyynto, env, ctx, teksti, kehittaja) {
     const laskuri = kasvataLaskuri(kv, opasElevenPaivaAvain(nyt), 60 * 60 * 30, teksti.length);
     if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(laskuri); else await laskuri;
   }
-  return { aani: `${new URL(pyynto.url).origin}/opas/aani/${sha}.mp3`, kesto_s: Math.round((teksti.length / OPAS_MERKKIA_SEKUNNISSA) * 10) / 10 };
+  const juuri = `${new URL(pyynto.url).origin}/opas/aani/${sha}`;
+  return { aani: `${juuri}.mp3`, aani_pcm: `${juuri}.pcm`, aani_taajuus: OPAS_PCM_TAAJUUS,
+    kesto_s: Math.round((teksti.length / OPAS_MERKKIA_SEKUNNISSA) * 10) / 10 };
 }
+
+/*
+ * PCM-SUORATOISTO (Päätoimittaja 5.10.2026 ilta, muoto sovittu Linssisepän kanssa; natiivi junaan 145): GET .pcm virtaa
+ * ElevenLabsin pcm_24000:n suoraan (raaka s16le, mono, 24 kHz, ei otsaketta, chunked), ensimmäiset tavut ~0,3 s, noin
+ * kaksinkertainen reaaliaika. Natiivi soittaa latauksen aikana (DownloadHandlerScript → rengaspuskuri → AudioClip-stream);
+ * iOS ei jäsennä striimattua mp3:a (TF 1.0.29), raaka PCM ei tarvitse jäsennintä. Sama virta tallennetaan R2:een, joten
+ * toistuva GET palauttaa saman kokonaisena. mp3-polku säilyy varana ja junan 144 natiiveille.
+ */
+const OPAS_PCM_TAAJUUS = 24000;
+const PCM_OTSAKKEET = { 'content-type': `audio/L16;rate=${OPAS_PCM_TAAJUUS};channels=1`, 'cache-control': 'public, max-age=604800',
+  'x-aani-taajuus': String(OPAS_PCM_TAAJUUS) };
 
 const mp3Vastaus = (data) => new Response(data, { headers: { 'content-type': 'audio/mpeg', 'cache-control': 'public, max-age=604800' } });
 
 /** GET /opas/aani/<sha>.mp3: valmis ääni (välimuisti, R2) tai tuotetaan nyt ja palautetaan kokonaisena. */
 async function hoidaOppaanAani(pyynto, env, ctx) {
-  const m = /^\/opas\/aani\/([0-9a-f]{32})\.mp3$/.exec(new URL(pyynto.url).pathname);
+  const m = /^\/opas\/aani\/([0-9a-f]{32})\.(mp3|pcm)$/.exec(new URL(pyynto.url).pathname);
   if (!m) return new Response('Ei löydy', { status: 404 });
+  if (m[2] === 'pcm') return hoidaOppaanPcm(pyynto, env, ctx, m[1]);
   const sha = m[1];
   const avain = `opas/${sha}.mp3`;
   const valmis = async () => {
@@ -2755,6 +2769,41 @@ function hoidaOppaanTunnus(pyynto, env) {
   }
   if (!env.CESIUM_ION_TOKEN) return new Response(JSON.stringify({ virhe: 'asetus' }), { status: 503, headers: otsakkeet });
   return new Response(JSON.stringify({ tunnus: env.CESIUM_ION_TOKEN }), { headers: otsakkeet });
+}
+
+/** GET /opas/aani/<sha>.pcm: R2:sta kokonaisena tai ElevenLabsista virtana (tallennus R2:een samalla). */
+async function hoidaOppaanPcm(pyynto, env, ctx, sha) {
+  const avain = `opas/${sha}.pcm`;
+  const r2 = async () => (env.PUHE_R2 ? env.PUHE_R2.get(avain) : null);
+  const valmis = await r2();
+  if (valmis) return new Response(valmis.body, { headers: PCM_OTSAKKEET });
+  const kv = env.POLLO_KV ?? null;
+  const teksti = kv ? await kv.get(`opas:teksti:${sha}`) : null;
+  if (!teksti || !env.ELEVEN_API_KEY) return new Response('Ei löydy', { status: 404 });
+  const lukko = `opas:tuotanto-pcm:${sha}`;
+  if (await kv.get(lukko)) {
+    for (let odotettu = 0; odotettu < OPAS_TUOTANTO_ODOTUS_MS; odotettu += 500) {
+      await new Promise((r) => setTimeout(r, 500));
+      const olio = await r2();
+      if (olio) return new Response(olio.body, { headers: PCM_OTSAKKEET });
+    }
+  }
+  await kv.put(lukko, '1', { expirationTtl: 60 }).catch(() => {});
+  let v;
+  try {
+    v = await kutsuElevenPuhetta(env, { teksti, malli: 'eleven_v4_turbo', nopeus: 1, aani: KERTOJA_ELEVEN_AANI, vakaus: null, tyyli: 0,
+      ulostulo: `pcm_${OPAS_PCM_TAAJUUS}` });
+  } catch (virhe) {
+    console.log(`opas: pcm-ääni epäonnistui (${virhe?.status ?? 'verkko'})`);
+    await kv.delete?.(lukko)?.catch?.(() => {});
+    return new Response('Ääni epäonnistui', { status: 502 });
+  }
+  const [natiiville, talteen] = v.body.tee();
+  const tallennus = new Response(talteen).arrayBuffer()
+    .then((data) => (data.byteLength && env.PUHE_R2 ? env.PUHE_R2.put(avain, data, { httpMetadata: { contentType: PCM_OTSAKKEET['content-type'] } }) : null))
+    .catch(() => {});
+  if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(tallennus);
+  return new Response(natiiville, { headers: PCM_OTSAKKEET });
 }
 
 async function hoidaOpas(pyynto, env, kors, runko, ctx) {
@@ -2876,7 +2925,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
   }
   console.log(`opas: ${tulos.tyyppi} ${tulos.id ?? ''} ${p.kaydyt.length} käyty, ääni ${aani ? 'kyllä' : 'ei'}, kuvia ${tulos.kuvat?.length ?? 0}`);
-  return vastaa({ ...tulos, aani: aani?.aani ?? null, kesto_s: aani?.kesto_s ?? null }, kors);
+  return vastaa({ ...tulos, aani: aani?.aani ?? null, aani_pcm: aani?.aani_pcm ?? null, aani_taajuus: aani?.aani_taajuus ?? null,
+    kesto_s: aani?.kesto_s ?? null }, kors);
 }
 
 export default {
