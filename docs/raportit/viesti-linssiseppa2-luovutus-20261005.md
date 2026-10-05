@@ -71,3 +71,14 @@ Kuvat: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-maailma-10c31692/kuvat. 
 - Avoinna: Kanarian pari a693e5e1:n ajosta (käännös junan 143 jälkeen, simu ~13.15; skripti scratchpad/aja-a693.sh,
   LUPA-tiedosto simu-lupa), Meksikon pari kun Karttasepän v2c valmis (13–15; vaihda Versio "v2c" vasta kuittauksella).
   Sitten Natiivi-UI:lle iss-ohjaamon kärjen merge-pyyntö junaan 144.
+
+## Päivitys 5.10. klo 15.4x
+- Proto iss-ohjaamo-kärki 962ff4ee: d9bc4a58 vesitaso tasona (sunglint-liuku) · 962ff4ee pilvikuori pois ISS-kuvan
+  renderöinnistä (Päätoimittaja hyväksyi). Kanaria HYVÄKSYTTY (pari kanaria-10c31692-8b780990.png). Sahara/Amazonia/20MRC hyväksytty.
+- Käännökset tehdään yhdistelmänä `linssiseppa2/iss-ohjaamo+pelikoodari/testimykistys-natiivi`, kunnes mykistys on masterissa;
+  maailma-kuvat.sh asettaa `aani mykistys 1` ja kirjaa tilan.
+- Avoinna: Meksiko odottaa v2c:tä (vahti; vaihda Versio "v2c" vasta kuittauksella → käännös → kuvapari). Sitten Natiivi-UI:lle
+  iss-ohjaamon merge-pyyntö junaan 144 (VIE 20). Euromosaiikin saarisädekehät: Karttasepän korjaussarja uuteen polkuun →
+  vaihda AstronauttiKerros.S2Juuri.
+- SEURAAVA ERÄ (Päätoimittaja hyväksyi): GIBS 250 m -pilvimaski ISS-kuvaan (VIIRS paikkaa MODIS-raot, pinta S2, attribuutio
+  "NASA EOSDIS GIBS"), kuvapari pilvinen/pilvetön + Cupola samaan aikaan; tavoite juna 145.
