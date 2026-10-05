@@ -46,7 +46,9 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   kysymys: Linssit-näkymän esikatseluikkuna "Ei linssiä" normaalilla kartalla (suositus: jätetään). Kuittauksen jälkeen
   merge-pyynnöt Natiivisepälle (kirjainvali-kerning Tavlin TF-ehtona, ei-linssia juna 144).
   KUITATTU molemmat 11.3x → merge-pyyntö Natiivisepälle junan 143 lisäerään (kirjainvali-kerning tavlin kanssa, ei-linssia
-  samassa). Esikatseluikkuna "Ei linssiä": Päätoimittaja kysyy omistajalta — EI muutoksia ennen vastausta.
+  samassa). Omistaja 11.35: esikatseluikkuna piiloon normaalilla kartalla → ei-linssia 7837ac54 (käännös db99e1f5,
+  todennettu 11.4x, eilinssia/ei-linssia-v2-arkki.jpg); lähetetty Päätoimittajalle kuitattavaksi, Natiiviseppä pidättää
+  ei-linssian siihen asti (muuten juna 144).
 
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
