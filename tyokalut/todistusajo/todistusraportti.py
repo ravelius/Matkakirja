@@ -66,9 +66,12 @@ def merkitse(raaka, ulos, teksti):
             rivi = koe
     rivit.append(rivi)
     rk = int(f.size * 1.25)
-    dr.rectangle([0, 0, w, rk * len(rivit) + rk // 2], fill=(0, 0, 0, 165))
+    # Merkintä ALAREUNAAN (5.10.: yläreunan palkki peitti iPadilla kuvaselitteen, eli juuri todistettavan kohdan).
+    korkeus = rk * len(rivit) + rk // 2
+    y0 = h - korkeus
+    dr.rectangle([0, y0, w, h], fill=(0, 0, 0, 165))
     for i, r in enumerate(rivit):
-        dr.text((int(w * 0.03), rk // 4 + i * rk), r, font=f, fill=(255, 255, 255, 255))
+        dr.text((int(w * 0.03), y0 + rk // 4 + i * rk), r, font=f, fill=(255, 255, 255, 255))
     Image.alpha_composite(im.convert("RGBA"), kerros).convert("RGB").save(ulos, optimize=True)
     return w, h
 
@@ -133,7 +136,8 @@ def raportti(L, era, versio, laite, udid, skenaario):
         w, h = Image.open(raaka).size
         suunta = "pysty" if h >= w else "vaaka"
         merkitse(raaka, ulos, f"{selite} · {laite} {suunta} · {versio}")
-        os.remove(raaka)
+        os.makedirs(f"{L}/kuvat/raaka", exist_ok=True)
+        os.replace(raaka, f"{L}/kuvat/raaka/{tunnus}.png")   # merkitsemätön talteen (merkintä ei saa hävittää sisältöä)
         valmiit.append(ulos)
         tulokset["4"].append(("OK", f"[{tunnus}.png](kuvat/{tunnus}.png): {selite} ({w}×{h} px, {suunta})"))
     if valmiit:
