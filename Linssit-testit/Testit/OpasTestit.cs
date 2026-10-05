@@ -86,6 +86,17 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(2, pyynnot.Count); Oleta.Sama("Satama", pyynnot[1]); Oleta.Tosi(!s.OdottaaVastausta);
         }
 
+        [Testi] static void SamaPaikkaUudelleenEiLenna()
+        {
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            int saapui = 0; s.Saapui += _ => saapui++;
+            s.Aloita(null); s.Vastaus(1, K("a", 55.6757, 12.5696));
+            for (int i = 0; i < 400 && saapui == 0; i++) s.Paivita(0.05, _ => 50);
+            s.Vastaus(2, K("a", 55.6757, 12.5696)); s.AaniLoppui();
+            for (int i = 0; i < 30 && saapui == 1; i++) s.Paivita(0.05, _ => 50);
+            Oleta.Sama(2, saapui); Oleta.Sama(OpasVaihe.Puhuu, s.Vaihe);
+        }
+
         [Testi] static void PuheenJalkeenOdottaaSeuraavaa()
         {
             var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));

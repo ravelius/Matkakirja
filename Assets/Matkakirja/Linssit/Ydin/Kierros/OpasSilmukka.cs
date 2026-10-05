@@ -228,6 +228,15 @@ namespace Matkakirja.Linssit.Kierros
         void AloitaLento(Func<OpasKohde, double> maaKorkeus)
         {
             var k = Seuraava; Seuraava = null;
+            // "Kerro lisää" (Pelikoodari #4009): sama paikka uudelleen → kamera jää kiertämään, kappale alkaa heti.
+            if (NykyinenKehys != null && KierrosLento.EtaisyysM(NykyinenKehys.Lat, NykyinenKehys.Lon, k.Lat, k.Lon) < 50)
+            {
+                Nykyinen = k;
+                Vaihe = OpasVaihe.Puhuu; VaiheAika = 0; aaniLoppui = false;
+                Saapui?.Invoke(k);
+                if (!OdottaaVastausta) UusiPyynto();
+                return;
+            }
             double maa = maaKorkeus?.Invoke(k) ?? double.NaN;
             if (double.IsNaN(maa)) maa = 45;
             double tulo = Suunta(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
