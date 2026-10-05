@@ -1,0 +1,14 @@
+# Esimerkkiskenaario (todistusajo.sh --skenaario): nostokortti auki, Kysy oikealla kosketuksella, sulku ohinapautuksella.
+# Koordinaatit pisteinä; tap-teksti hakee elementin `ui puu`:sta. oleta = lokirivi, nakyy/ei-nay = tila UI-puusta.
+ui nosto kohde:pompeji@ITA
+oleta 10 ui nosto kohde:pompeji@ITA: auki -- nostokortti avautui
+nakyy 5 Pompejin Forum -- kortin kuvateksti näkyy
+odota 3
+kuva 01-nosto-auki Nostokortti auki (Pompeji)
+tap-teksti Kysy
+nakyy 6 Olen Livia -- Kysy avasi Pulun chatin
+kuva 02-chat-auki Pulun chat auki nostokortista
+tap 200 250
+ei-nay 6 Olen Livia -- ohinapautus kartalle sulki chatin
+kuva 03-chat-suljettu Chat suljettu ohinapautuksella
+aanitaso 3

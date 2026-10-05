@@ -13,6 +13,35 @@
 
 #import <AVFoundation/AVFoundation.h>
 #import <UIKit/UIKit.h>
+#include <atomic>
+
+// TESTIMYKISTYS NATIIVEILLE MOOTTOREILLE (Pelikoodari 5.10.2026, Päätoimittajan KIIRE 13.15: simulaattoriajon ääntä kuului
+// omistajan kaiuttimista). Unityn TestiMykistys nollaa vain Unityn miksauksen (kuuntelijan suodin); omat AVAudioEnginet
+// (MatkakirjaSilmukat: Cupola, kaappaus; MatkakirjaRadio: radiostriimi; MatkakirjaPuhekanava: Pulun realtime-puhe)
+// soittavat sen ohi suoraan laitteeseen. Yksi lippu kaikille: TestiMykistys.Paalla → MatkakirjaAani_TestiMykistys(1)
+// ennen kuin mikään moottori käynnistyy. Jokainen moottori lukee lipun käynnistyessään (MatkakirjaAani_TestiMykka) ja
+// kuuntelee ilmoitusta MatkakirjaTestiMykistysMuuttui: mainMixerNode.outputVolume = 0 (tapit ja kaappaus näkevät signaalin
+// ennen ulostuloa, kaiuttimiin ei mene mitään). Oletus pois: laitteella ja TF:ssä mikään ei muutu.
+static std::atomic<bool> testiMykka(false);
+NSString* const MatkakirjaTestiMykistysMuuttui = @"MatkakirjaTestiMykistysMuuttui";
+
+extern "C" bool MatkakirjaAani_TestiMykka(void) { return testiMykka.load(); }
+
+extern "C" void MatkakirjaAani_TestiMykistys(int paalla)
+{
+    bool uusi = paalla != 0;
+    if (testiMykka.exchange(uusi) == uusi) return;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [[NSNotificationCenter defaultCenter] postNotificationName:MatkakirjaTestiMykistysMuuttui object:nil];
+    });
+}
+
+/// Mykistää tai palauttaa moottorin ulostulon lipun mukaan (kutsu käynnistyksessä ja ilmoituksesta).
+extern "C" void MatkakirjaAani_SovitaMykistys(AVAudioEngine* moottori)
+{
+    if (moottori == nil) return;
+    moottori.mainMixerNode.outputVolume = testiMykka.load() ? 0.0f : 1.0f;
+}
 
 extern "C" void MatkakirjaAani_Toisto(void)
 {

@@ -54,7 +54,7 @@ namespace Matkakirja.Peli
 
     public static class Silmukka
     {
-        public const double RistiS = AaniVakiot.SilmukkaRistiMs / 1000.0;
+        public static double RistiS => AaniVakiot.SilmukkaRistiMs / 1000.0;
 
         /// <summary>
         /// Onko maiseman uuden kierroksen aika (webin timeupdate: currentTime ≥ duration − 2,6 s).
@@ -83,7 +83,7 @@ namespace Matkakirja.Peli
         /// <summary>Uusi verkkoyritys, kun kanava jäi hiljaiseksi verkon puuttuessa.</summary>
         public const double UusintaS = 15;
         /// <summary>Lataus katkaistaan, jos tavuja ei tule tässä ajassa (webin 6 s:n latausvahti).</summary>
-        public const double LatausvahtiS = AaniVakiot.LatausvahtiMs / 1000.0;
+        public static double LatausvahtiS => AaniVakiot.LatausvahtiMs / 1000.0;
 
         public static bool Striimataan(long tavuja) => tavuja > StriimausRaja;
 

@@ -513,7 +513,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         static void RakennaAaniValinta(VisualElement saadot)
         {
-            if (Striimiaani.MoottoriSallittu)
+            if (Striimiaani.MoottoriSallittu && Striimiaani.Moottorit.Count > 1)   // 5.10.2026: vain ElevenLabs → ei Moottori-riviä
             {
                 var nimet = new List<string>();
                 foreach (var m in Striimiaani.Moottorit) nimet.Add(m.Nimi);
@@ -552,7 +552,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Äänirivi valitun moottorin äänistä (ElevenLabs vain sallitulla laitteella).</summary>
         static VisualElement AaniRivi(VisualElement saadot)
         {
-            bool eleven = Striimiaani.MoottoriSallittu && Striimiaani.Moottori == Striimiaani.Eleven;
+            bool eleven = Striimiaani.Moottori == Striimiaani.Eleven;   // aina (xAI pois, omistaja 5.10.2026)
             var lista = eleven ? Striimiaani.ElevenAanet : Striimiaani.Pelinimet;
             // Pelinimet: näytössä nimi, pyynnössä tunnus (web AANTEN_PELINIMET). Oletus ensin "Aino (oletus)".
             var nimet = new List<string> { lista[0].Nimi + " (oletus)" };

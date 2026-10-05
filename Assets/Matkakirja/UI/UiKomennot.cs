@@ -764,6 +764,9 @@ namespace Matkakirja.Natiivi
                 case "linnapalkki":
                     // Linnan nimiruudun LATAUSPALKKI (Latauspalkki.cs): ui linnapalkki <0–1> | pois — nimiruutu auki annetulla arvolla.
                     return DioraamaTaulu.TestiPalkki(loput);
+                case "puhujakuva":
+                    // PUHUJAKUVA (Puhujakuva.cs): ui puhujakuva <kuva> [x y] | pois — Resources/Puhujakuvat/<kuva> pisteeseen tai ankkuriin.
+                    return "=" + Puhujakuva.Testi(loput);
                 case "kuunnelma":
                 {
                     // Olavinlinnan kuunnelman tekstitys (KuunnelmaKaistale): ui kuunnelma [tila] | ohita | alusta.
@@ -1022,7 +1025,7 @@ namespace Matkakirja.Natiivi
                     // ui kutsu [napauta]: avauskortin kutsuminiatyyrin tila / napautus.
                     if (loput == "napauta") return ui.Kutsu.Napauta();
                     Kirjaa("kutsu " + (ui.Kutsu.Nakyy ? "näkyy " + ui.Kutsu.Laatikko : "piilossa") + ", nostojen kerroin " + ui.Nostot.Karttakerroin.ToString("0.00", CultureInfo.InvariantCulture)
-                        + ", maan näkymässä " + (Object.FindAnyObjectByType<PalloKierto>()?.MaanNakymassa ?? false));
+                        + ", maan näkymässä " + (Object.FindAnyObjectByType<PalloKierto>()?.MaanNakymassa ?? false) + ", syy: " + ui.Kutsu.Syy());
                     return null;
                 case "avauskortti":
                 {
@@ -1120,6 +1123,9 @@ namespace Matkakirja.Natiivi
                     else if (pk.Length > 1 && pk[0] == "alku") Matkakirja.Pelikello.AlkuKelloUtc = luku;
                     return ui.Kellonaytto.Kuvaus;
                 }
+                case "opasvalikko":
+                    // Elävän oppaan valikko (OpasValikko): ui opasvalikko valikko|maanosat|maat <maanosa>|kaupungit <maanosa>|<maa>|sulje.
+                    return "=" + OpasValikko.Hae().Komento(loput);
                 case "mitauutta":
                     if (loput == "paivittyi") ui.Valikko.MitaUutta.TarkistaPaivitys(true);
                     else if (loput.StartsWith("paivittyi "))

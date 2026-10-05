@@ -172,8 +172,17 @@ namespace Matkakirja
             return false;
         }
 
+        /// <summary>
+        /// Cesium-kaupunkinäkymä auki (CesiumKaupunki, juna 144): kerros ei käynnisty, koska kaupunki vaihtaa pääkameran maskin
+        /// omaan kerrokseensa. Muuten kaappaus tallentaisi kaupungin maskin alkuMaskiksi ja palauttaisi sen oppaan sulkemisen
+        /// jälkeen → pallo ei piirry, näkyy vain taustaväri (Laitetestaaja 5.10., juna 144 e95826b4).
+        /// </summary>
+        public static bool Estetty;
+        /// <summary>Pääkameran oma maski, jos kerros on sen tallentanut (Kaappaus/Kerros), muuten null.</summary>
+        public static int? TallennettuMaski => instanssi != null && instanssi.tila != Tila.Taysi ? instanssi.alkuMaski : (int?)null;
+
         static bool Kaytettavissa() =>
-            Kaytossa && !Staattinen && Taso >= 0 && instanssi != null && instanssi.materiaali != null
+            Kaytossa && !Estetty && !Staattinen && Taso >= 0 && instanssi != null && instanssi.materiaali != null
             && !PalloKierto.PorttiSumea && !PalloKierto.KuvaSumea;
 
         static bool Kysy(Animaatio a)

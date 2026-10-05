@@ -43,7 +43,28 @@ namespace Matkakirja.Natiivi
             try { valmis?.Invoke(false); } catch (Exception e) { Debug.LogException(e); }
         }
 
+        /// <summary>
+        /// Kuvan jako (Linssiseppä 2, 4.10.2026; ISS-kameran oma kuva): iOS:n jakoarkki kuvalla (Tallenna kuva, Viestit, …) ja
+        /// valinnaisella tekstillä. valmis(true) = jaettu tai tallennettu.
+        /// </summary>
+        public static void JaaKuva(string polku, string teksti, Action<bool> valmis = null)
+        {
 #if UNITY_IOS && !UNITY_EDITOR
+            if (Saatavilla && !string.IsNullOrEmpty(polku))
+            {
+                int id;
+                lock (kesken) { id = ++seuraava; kesken[id] = valmis; }
+                try { MatkakirjaJako_JaaKuva(id, polku, teksti ?? "", ValmisKutsu); return; }
+                catch (Exception e) { Debug.LogWarning("MATKAKIRJA jako: " + e.Message); lock (kesken) kesken.Remove(id); }
+            }
+#endif
+            try { valmis?.Invoke(false); } catch (Exception e) { Debug.LogException(e); }
+        }
+
+#if UNITY_IOS && !UNITY_EDITOR
+        [DllImport("__Internal")]
+        static extern void MatkakirjaJako_JaaKuva(int pyynto, string polku, string teksti, ValmisFn valmis);
+
         delegate void ValmisFn(int pyynto, int jaettu);
         static readonly ValmisFn ValmisKutsu = Valmis;
         static readonly Dictionary<int, Action<bool>> kesken = new Dictionary<int, Action<bool>>();
