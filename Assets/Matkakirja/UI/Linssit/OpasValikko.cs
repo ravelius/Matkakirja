@@ -468,9 +468,24 @@ namespace Matkakirja.Natiivi
 
         // --- rivit (LinnaValikon pohja) ---------------------------------------------------------------
 
+        /// <summary>
+        /// JUNA 144 FAIL (Laitetestaaja 5.10., Amsterdam; toistettu kokeessa 3 22.36): rivin klikki rakensi listan uudelleen tai
+        /// sulki valikon kesken oman PointerUp-käsittelynsä. Osoittimen kaappaus jäi irrotetulle elementille (rivi tai sen
+        /// ScrollView), ja SEURAAVA napautus (kaupunkirivi tai ☰) katosi siihen; vasta toinen napautus toimi. Nyt kaappaukset
+        /// vapautetaan heti klikissä ja varsinainen teko (uusi näkymä, sulku, kohteen vaihto) ajetaan seuraavassa ruudussa.
+        /// </summary>
+        void Rivilta(Action teko)
+        {
+            var p = valikko.panel;
+            if (p != null)
+                for (int id = 0; id < PointerId.maxPointers; id++)
+                    if (p.GetCapturingElement(id) is VisualElement c) c.ReleasePointer(id);
+            valikko.schedule.Execute(() => teko());
+        }
+
         Button Komento(string teksti, Action teko, VisualElement isa = null)
         {
-            var b = Rakenne.Nappi(teksti, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => { Sulje(); teko(); }, isa ?? valikko);
+            var b = Rakenne.Nappi(teksti, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => Rivilta(() => { Sulje(); teko(); }), isa ?? valikko);
             Kirjasimet.Aseta(b, Kirjasin.Moderni);
             b.tooltip = teksti;
             return b;
@@ -478,7 +493,7 @@ namespace Matkakirja.Natiivi
 
         void Alanakyma(string teksti, Action avaa, VisualElement isa = null, bool toiminto = false)
         {
-            var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta " + (toiminto ? "mk-linssivalikko__komento" : "mk-linssivalikko__kytkin"), avaa, isa ?? valikko);
+            var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta " + (toiminto ? "mk-linssivalikko__komento" : "mk-linssivalikko__kytkin"), () => Rivilta(avaa), isa ?? valikko);
             if (toiminto) { b.style.flexDirection = FlexDirection.Row; b.style.alignItems = Align.Center; b.style.justifyContent = Justify.SpaceBetween; }
             Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-linssivalikko__nimi", b), Kirjasin.Moderni);
             Kirjasimet.Aseta(Rakenne.Teksti("›", "mk-linssivalikko__tila", b), Kirjasin.ModerniLihava);
@@ -487,7 +502,7 @@ namespace Matkakirja.Natiivi
 
         void Takaisin(string otsikko, Nakyma minne)
         {
-            var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__kytkin", () => Avaa(minne), valikko);
+            var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__kytkin", () => Rivilta(() => Avaa(minne)), valikko);
             Kirjasimet.Aseta(Rakenne.Teksti("‹ " + otsikko, "mk-linssivalikko__nimi", b), Kirjasin.ModerniLihava);
             b.tooltip = "Takaisin";
             Viiva();
