@@ -439,7 +439,7 @@ namespace Matkakirja.Linssit.IssKamera
             return m != null && (z > 10 ? m.Onko(10, x >> 1, y >> 1) : m.Onko(z, x, y));
         }
 
-        /// <summary>Euroopan mosaiikin 13 × 13 z6-lohkossa (s2-eurooppa/v1).</summary>
+        /// <summary>Euroopan mosaiikin 13 × 13 z6-lohkossa (s2-eurooppa/{Laattapalvelin.S2EuroopanVersio}).</summary>
         public static bool Euroopassa(int z, int x, int y)
         {
             if (z < JuuriZ) return false;

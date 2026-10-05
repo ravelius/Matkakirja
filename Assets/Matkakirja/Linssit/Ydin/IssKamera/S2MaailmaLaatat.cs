@@ -1,7 +1,7 @@
 // S2-MAAILMA v2 (Karttaseppä 5.10.2026, Päätoimittaja: juna 145): Sentinel-2-mediaanimosaiikki Euroopan ulkopuolelle,
 // absoluuttinen XYZ {z}/{x}/{y}.jpg (y pohjoisesta), z6–z10, 80 m. laatat.json: saatavuus[z] = base64-bittikartta
 // (bitti i = rivi · 2^z + sarake; tavu i >> 3, bitti i & 7; 1 = laatta on olemassa). Avomerellä ei laattoja (oma meri alla).
-// Eurooppa on erikseen s2-eurooppa/v1:ssä (rajattu jako, KuvanTyosto.Euroopassa), joten Euroopan lohkon laatat tulevat sieltä.
+// Eurooppa on erikseen s2-eurooppa-sarjassa (rajattu jako, KuvanTyosto.Euroopassa), joten Euroopan lohkon laatat tulevat sieltä.
 // Natiivisepän ehdot 5.10.: purku taustasäikeessä; hakuvirhe = nykyinen käytös (Eurooppa v1, muualla BMNG).
 using System;
 using System.Collections.Generic;
