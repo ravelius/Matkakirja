@@ -77,6 +77,14 @@ namespace Matkakirja.Natiivi
         public static event Action<CesiumKaupunki> Avattu, Suljettu;
         /// <summary>Pallon kamera (näkymän ajan) ja tilesetit: Google tai maasto (Pinta) ja OSM-rakennukset (null Googlella).</summary>
         public Camera Kamera => kamera;
+        /// <summary>Maantieteellinen piste (korkeus ellipsoidista, m) Unityn maailmaan georeferenssin kautta; null, jos näkymä kiinni.</summary>
+        public Vector3? MaailmaPiste(double lat, double lon, double korkeus)
+        {
+            if (!auki || georef == null || !georef.isActiveAndEnabled) return null;
+            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, korkeus));
+            var u = georef.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+            return new Vector3((float)u.x, (float)u.y, (float)u.z);
+        }
         /// <summary>Joka kehys näkymän ajan (sovitin): pääkamera piirtää vain kaupungin kerroksen, vaikka elävä kerros olisi
         /// palauttanut avauskehyksessä oman tallennetun maskinsa.</summary>
         public void PidaMaski()
@@ -145,11 +153,13 @@ namespace Matkakirja.Natiivi
             if (georef == null || kamera == null) { Virhe = "pallon kamera puuttuu"; return false; }
             auki = true;
 
-            // Vain pallon tileset-komponentti pois (simu 5.10. 18.0x: pallo on samassa oliossa kuin georeferenssi, ja koko olion
-            // SetActive(false) sammutti georeferenssin → SetOrigin heitti "Initialize"-poikkeuksen).
+            // Pallon tileset: ei SetActivea (pallo on samassa oliossa kuin georeferenssi → SetOrigin heitti "Initialize"-poikkeuksen, simu 18.0x).
             palloTileset = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
-            palloOli = palloTileset != null && palloTileset.enabled;
-            if (palloTileset != null) palloTileset.enabled = false;
+            // EI enabled = false (simu 23.16, BUILD 144: tilesetin sammutus ja käynnistys jätti pallon pohjarasterin pois →
+            // meri tumma, maa kermaa, "tumma vinovyö"). Pallo jää ladatuksi mutta sen päivitys pysäytetään (ei uusia laattoja
+            // kaupungin kameralle), ja pääkamera piirtää vain kaupungin kerroksen (Kerros), joten pallo ei näy.
+            palloOli = palloTileset != null && palloTileset.suspendUpdate;
+            if (palloTileset != null) palloTileset.suspendUpdate = true;
             // Pohjapallo on myös georeferenssin oliossa: piilotus sen omalla tilalla (komento "pallo pohja pois"), ei SetActivella.
             pohjaTila = Pohjapallo.Tila;
             pohjaOli = true;
@@ -368,7 +378,7 @@ namespace Matkakirja.Natiivi
                 kierto.Aseta();
                 kirjaa($"kaupunki: pallon kamera palautettu ({vanhaAsento.Item1:F2}, {vanhaAsento.Item2:F2}, {vanhaAsento.Item3 / 1000:F0} km)");
             }
-            if (palloTileset != null && palloOli) palloTileset.enabled = true;
+            if (palloTileset != null) palloTileset.suspendUpdate = palloOli;
             if (pohjaOli) Pohjapallo.Tila = pohjaTila;
             palloTileset = null; pohjaOli = false;
             if (kamera != null) { kamera.clearFlags = vanhaTyhjennys; kamera.backgroundColor = vanhaTausta; kamera.cullingMask = vanhaMaski; }

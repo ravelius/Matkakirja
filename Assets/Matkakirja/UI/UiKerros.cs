@@ -445,6 +445,16 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
+        /// Näkymä rakensi rivinsä uudelleen napautuksen jälkeen (oppaan valikko, juna 144 FAIL): välimuisti voi osoittaa
+        /// ScrollViewn mukana poistettuun riviin, jolloin seuraava kosketus katoaa. Mitätöidään heti ja 3 seuraavassa ruudussa.
+        /// </summary>
+        public void MitatoiKosketusvalimuisti()
+        {
+            mitatoiKehyksiaJaljella = 3;
+            TyhjennaKosketusValimuisti();
+        }
+
+        /// <summary>
         /// Kutsuu BaseVisualElementPanel.ClearCachedElementUnderPointeria (heijastuksella, sisäinen metodi)
         /// jokaiselle kosketuspointerille kaikilla kerroksilla. Jos metodia ei löydy tai Invoke heittää,
         /// kirjaa varoituksen kerran ja ohittaa pysyvästi (ei kaadu).

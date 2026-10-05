@@ -111,6 +111,8 @@ namespace Matkakirja.Natiivi
         bool nakyy, siruNakyy;
         OpasKohde odotettuKysymys;
         float krediittiAla = 40f;
+        readonly OpasTapit tapit;
+        readonly OpasNimilappu nimilappu;
         int siruPoletti = -1;
         readonly Button nappi;
         Nakyma nakyma;
@@ -134,6 +136,8 @@ namespace Matkakirja.Natiivi
             valikko.style.display = DisplayStyle.None;
             Kirjasimet.Aseta(valikko, Kirjasin.Moderni);
             valikko.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
+            valikko.RegisterCallback<PointerDownEvent>(e => Uudelleenohjaa(e, true, e), TrickleDown.TrickleDown);
+            valikko.RegisterCallback<PointerUpEvent>(e => Uudelleenohjaa(e, false, e), TrickleDown.TrickleDown);
             // Juna 144 FAIL (Laitetestaaja 5.10., Amsterdam-rivi ei lauennut joka kerta): UITK:n ScrollView aloitti oman
             // kosketusvierityksensä jo sormen pienestä värinästä ja kaappasi osoittimen, jolloin rivin napautus peruuntui.
             // Oma liitos (kuten nostokortti ja lehti) pysäyttää ScrollViewin kosketusliikkeet; vieritys alkaa vasta 8 pt:n
@@ -171,6 +175,11 @@ namespace Matkakirja.Natiivi
             kuvaKortti.RegisterCallback<ClickEvent>(_ => SuurennaKuva());
             kuvaKortti.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             kerros.JokaRuutu += PaivitaKuva;
+
+            // Kameran tapit (juna 145): alakulmiin vain pysähdyksellä (OpasTapit).
+            tapit = new OpasTapit(Juuri);
+            nimilappu = new OpasNimilappu(Juuri);
+            kerros.JokaRuutu += PaivitaTapit;
             Viimeisin = this;
         }
 
@@ -270,8 +279,8 @@ namespace Matkakirja.Natiivi
                 float alaVara = juuriH - Juuri.worldBound.yMax; // turva-alueen alareuna ruudun alareunasta
                 ala = Mathf.Max(ala, Mathf.Round(k / ch * juuriH - alaVara + KuvaRako));
             }
+            if (krediittiAla != ala) Debug.Log($"MATKAKIRJA opas: sirut krediittien yläpuolelle {ala:0} pt (krediitit {k:0}/{ch:0})");
             krediittiAla = ala;
-            if (sirurivi.style.bottom.value.value != ala) { sirurivi.style.bottom = ala; Debug.Log($"MATKAKIRJA opas: sirut krediittien yläpuolelle {ala:0} pt (krediitit {k:0}/{ch:0})"); }
         }
 
         /// <summary>
@@ -292,11 +301,37 @@ namespace Matkakirja.Natiivi
             }
             if (siruNakyy) foreach (var c in sirurivi.Children()) Lisaa("siru", c);
             if (kuvaNakyy) Lisaa("kuva", kuvaKortti);
+            if (tapit.Nakyy) foreach (var t in Juuri.Query(className: "mk-tappi").ToList()) Lisaa("tappi", t);
+            if (nimilappu.Nakyy) Lisaa("nimilappu", Juuri.Q(className: "mk-opas-nimilappu"));
             foreach (var c in ryhma.Children()) Lisaa("nappi", c);
             if (Auki) Lisaa("valikko", valikko);
             foreach (var o in juuri.Query(className: "mk-astroavaus__otsikko--haipyy").ToList())
                 if (o.resolvedStyle.opacity > 0.05f) foreach (var t in o.Children()) Lisaa("otsikko", t);
             return $"opas: peitto {ala / koko * 100f:0.0} % ({string.Join(", ", osat)})";
+        }
+
+        /// <summary>
+        /// Tapit näkyvät pysähdyksellä (Puhuu/Odottaa), eivät lennon, valikon tai chatin aikana. Sirurivi on niiden välissä; jos se
+        /// ei mahdu tappien väliin (kapea pystyruutu), se nousee tappien yläpuolelle.
+        /// </summary>
+        void PaivitaTapit()
+        {
+            if (!nakyy) { tapit.Paivita(false, krediittiAla); nimilappu.Paivita(null); return; }
+            var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+            var l = OpasSovitin.Viimeisin?.Silmukka;
+            bool pysahdys = l != null && l.Nykyinen != null && (l.Vaihe == OpasVaihe.Puhuu || l.Vaihe == OpasVaihe.Odottaa);
+            tapit.Paivita(pysahdys && !Auki && !(chat?.Auki ?? false), krediittiAla);
+            // Kohteen nimilappu pysähdyksellä (myös valikon aikana; chat peittää sen joka tapauksessa).
+            nimilappu.Paivita(pysahdys && !(chat?.Auki ?? false) ? l.Nykyinen.Nimi : null);
+            float siruAla = krediittiAla;
+            if (tapit.Nakyy && siruNakyy)
+            {
+                float leveys = 0f;
+                foreach (var c in sirurivi.Children()) leveys += c.layout.width + 8f;
+                float vapaa = Juuri.layout.width - 2f * (OpasTapit.Reuna + OpasTapit.Halkaisija + KuvaRako);
+                if (leveys > vapaa) siruAla = krediittiAla + OpasTapit.Halkaisija + KuvaRako;
+            }
+            if (sirurivi.style.bottom.value.value != siruAla) sirurivi.style.bottom = siruAla;
         }
 
         // --- oppaan kuvat --------------------------------------------------------------------------------
@@ -347,7 +382,8 @@ namespace Matkakirja.Natiivi
             }
             if (!kuvaNakyy) return;
             float h = Juuri.resolvedStyle.height;
-            float ala = krediittiAla;
+            // Kortti oikean tapin yläpuolelle, kun tapit näkyvät.
+            float ala = tapit.Nakyy ? krediittiAla + OpasTapit.Halkaisija + KuvaRako : krediittiAla;
             if (siruNakyy && !float.IsNaN(h) && sirurivi.layout.height > 0) ala = Mathf.Max(ala, h - sirurivi.layout.yMin + KuvaRako);
             if (kuvaKortti.style.bottom.value.value != ala) kuvaKortti.style.bottom = ala;
         }
@@ -417,8 +453,20 @@ namespace Matkakirja.Natiivi
 
         void Rakenna()
         {
+            // Vanhat rivit eivät irtoa heti (juna 144 FAIL, koe 4): UITK voi lähettää seuraavan kosketuksen vielä vanhalle
+            // riville (kosketusvälimuisti). Piilossa valikon sisällä ne pysyvät valikon lapsina, joten Uudelleenohjaa näkee
+            // kosketuksen ja ohjaa sen kosketuskohdan nykyiselle riville. Edellinen sukupolvi poistetaan seuraavassa rakennuksessa.
+            if (vanhat == null)
+            {
+                vanhat = new VisualElement { pickingMode = PickingMode.Ignore };
+                vanhat.style.position = Position.Absolute; vanhat.style.display = DisplayStyle.None;
+            }
+            vanhat.Clear();
+            foreach (var c in valikko.Children().Where(c => c != vanhat).ToList()) vanhat.Add(c);
             valikko.Clear();
+            valikko.Add(vanhat);
             rivit = null;
+            nykyiset.Clear();
             var kaikki = Kaupungit?.Invoke();
             switch (nakyma)
             {
@@ -480,12 +528,39 @@ namespace Matkakirja.Natiivi
             if (p != null)
                 for (int id = 0; id < PointerId.maxPointers; id++)
                     if (p.GetCapturingElement(id) is VisualElement c) c.ReleasePointer(id);
-            valikko.schedule.Execute(() => teko());
+            valikko.schedule.Execute(() =>
+            {
+                teko();
+                // Koe 4 (22.48): kaappauksen vapautus ei riittänyt. UITK:n kosketusvälimuisti ("element under pointer") osoitti
+                // ScrollViewn mukana poistettuun riviin, ja seuraava napautus meni sille. Mitätöinti uudelleenrakennuksen jälkeen.
+                UiKerros.Hae()?.MitatoiKosketusvalimuisti();
+            });
+        }
+
+        VisualElement vanhat;
+        /// <summary>Nykyisen näkymän rivit ja niiden teot (Uudelleenohjaa).</summary>
+        readonly List<(VisualElement Rivi, Action Teko)> nykyiset = new List<(VisualElement, Action)>();
+        int painettuVanhalle = -1;
+
+        /// <summary>
+        /// Kosketus, joka osuu piilotetulle vanhalle riville (UITK:n vanhentunut kohde), ohjataan kosketuskohdan nykyiselle
+        /// riville: painallus muistetaan ja irrotus samalla rivillä laukaisee sen teon (kuten klikki).
+        /// </summary>
+        void Uudelleenohjaa(IPointerEvent e, bool alas, EventBase eb)
+        {
+            if (vanhat == null || !(eb.target is VisualElement t) || !vanhat.Contains(t)) return;
+            eb.StopPropagation();
+            int osuma = nykyiset.FindIndex(r => r.Rivi.panel != null && r.Rivi.worldBound.Contains(e.position));
+            if (alas) { painettuVanhalle = osuma; Debug.Log($"MATKAKIRJA opas: kosketus vanhalle riville → nykyinen rivi {osuma}"); return; }
+            if (osuma >= 0 && osuma == painettuVanhalle) Rivilta(nykyiset[osuma].Teko);
+            painettuVanhalle = -1;
         }
 
         Button Komento(string teksti, Action teko, VisualElement isa = null)
         {
-            var b = Rakenne.Nappi(teksti, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => Rivilta(() => { Sulje(); teko(); }), isa ?? valikko);
+            Action t = () => { Sulje(); teko(); };
+            var b = Rakenne.Nappi(teksti, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => Rivilta(t), isa ?? valikko);
+            nykyiset.Add((b, t));
             Kirjasimet.Aseta(b, Kirjasin.Moderni);
             b.tooltip = teksti;
             return b;
@@ -494,6 +569,7 @@ namespace Matkakirja.Natiivi
         void Alanakyma(string teksti, Action avaa, VisualElement isa = null, bool toiminto = false)
         {
             var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta " + (toiminto ? "mk-linssivalikko__komento" : "mk-linssivalikko__kytkin"), () => Rivilta(avaa), isa ?? valikko);
+            nykyiset.Add((b, avaa));
             if (toiminto) { b.style.flexDirection = FlexDirection.Row; b.style.alignItems = Align.Center; b.style.justifyContent = Justify.SpaceBetween; }
             Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-linssivalikko__nimi", b), Kirjasin.Moderni);
             Kirjasimet.Aseta(Rakenne.Teksti("›", "mk-linssivalikko__tila", b), Kirjasin.ModerniLihava);
@@ -502,7 +578,9 @@ namespace Matkakirja.Natiivi
 
         void Takaisin(string otsikko, Nakyma minne)
         {
-            var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__kytkin", () => Rivilta(() => Avaa(minne)), valikko);
+            Action t = () => Avaa(minne);
+            var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__kytkin", () => Rivilta(t), valikko);
+            nykyiset.Add((b, t));
             Kirjasimet.Aseta(Rakenne.Teksti("‹ " + otsikko, "mk-linssivalikko__nimi", b), Kirjasin.ModerniLihava);
             b.tooltip = "Takaisin";
             Viiva();
@@ -578,6 +656,8 @@ namespace Matkakirja.Natiivi
                 case "kuvat": VaihdaKuvat(); return "opas: kuvat " + (KuvatPaalla ? "päällä" : "pois");
                 case "suurenna": SuurennaKuva(); return "opas: suurennos " + (naytettyKuva != null ? "auki" : "ei kuvaa");
                 case "peitto": return Peitto();
+                case "tapit": return "opas: " + tapit.Kuvaus();
+                case "nimilappu": return "opas: " + nimilappu.Kuvaus();
                 case "kuva":
                     var kb = kuvaKortti.worldBound;
                     return $"opas: kuva {(kuvaNakyy ? "näkyy" : "piilossa")} {naytettyKuva?.Url ?? "-"}, kortti {kb.xMin:0},{kb.yMin:0} {kb.width:0}×{kb.height:0}, kytkin {(KuvatPaalla ? "päällä" : "pois")}";
