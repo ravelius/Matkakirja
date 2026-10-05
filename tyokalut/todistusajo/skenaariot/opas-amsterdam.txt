@@ -1,4 +1,4 @@
-# 11 Elävä opas: avaus (Kööpenhamina) → tervetulo + 2 sirua → "Esittele kaupunki" (oikea tap) → 1. kohde saapuu ääni soi →
+# Elävä opas (EI vakiosarjassa: generoi maksullista ääntä): avaus (Kööpenhamina) → tervetulo + 2 sirua → "Esittele kaupunki" (oikea tap) → 1. kohde saapuu ääni soi →
 # ☰ → Vaihda kohde → Eurooppa → Alankomaat → Amsterdam → Amsterdamin vastaus. Oikea worker (Pöllö): ElevenLabs-ääni
 # generoituu kohteille (~1–2 k merkkiä/ajo, päiväkatto 50 000) → aja vain kun opasta tai sen polkua on muutettu.
 linssi linssi opas
