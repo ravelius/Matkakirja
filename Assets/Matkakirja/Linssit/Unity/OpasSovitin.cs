@@ -176,7 +176,7 @@ namespace Matkakirja.Natiivi
             silmukka.Aloita(Aloituskaupunki);
             PaivitaKamera();
             Vaihtui?.Invoke(this);
-            o.Kirjaa($"opas: auki, data {kaupunki.Kaytossa}, {(Testi ? "TESTI (ei workeria)" : "worker " + PuluChat.Palvelin + Polku)}");
+            o.Kirjaa($"opas: auki, data {kaupunki.Kaytossa}, {(Testi ? "TESTI (ei workeria)" : "worker " + PuluChat.Palvelin + Polku)}{(PolloTestitunnus.Asetettu ? ", testitunnus asetettu" : "")}");
         }
 
         // Natiivi-UI:n koukku (PuluChat.Sieppaa, haara natiivi-ui/pulu-sieppaus) heijastuksella, jotta tämä kääntyy myös ilman sitä.
@@ -436,6 +436,7 @@ namespace Matkakirja.Natiivi
             };
             r.SetRequestHeader("Content-Type", "application/json");
             r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            PolloTestitunnus.Lisaa(r);
             r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             string koodi = Asetukset.PolloKoodi;   // kehittäjäkoodi Keychainista kuten Pulun chatissa; ei lokiin
             if (!string.IsNullOrEmpty(koodi)) r.SetRequestHeader(Lukijaaani.KoodiOtsake, koodi);
@@ -478,6 +479,7 @@ namespace Matkakirja.Natiivi
             pcmVirrat[avain] = virta;
             using var p = new UnityWebRequest(avain, "GET") { downloadHandler = virta, timeout = AikarajaS + 30, disposeDownloadHandlerOnDispose = false };   // virta elää klipin mukana
             p.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            PolloTestitunnus.Lisaa(p);
             p.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             float t0 = Time.realtimeSinceStartup;
             var op = p.SendWebRequest();
@@ -512,6 +514,7 @@ namespace Matkakirja.Natiivi
             using var p = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
             ((DownloadHandlerAudioClip)p.downloadHandler).streamAudio = false;
             p.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            PolloTestitunnus.Lisaa(p);
             p.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             p.timeout = AikarajaS;
             yield return p.SendWebRequest();
