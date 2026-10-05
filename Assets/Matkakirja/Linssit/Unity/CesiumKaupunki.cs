@@ -301,6 +301,18 @@ namespace Matkakirja.Natiivi
             if (georef == null || !georef.isActiveAndEnabled) return;
             georef.Initialize();
             georef.SetOriginLongitudeLatitudeHeight(lon, lat, korkeus);
+            PaivitaKorkeusKerroin();
+        }
+
+        /// <summary>
+        /// Pallon tileset-varjostimen shaderglobaalit (maan keskipiste, akseli, LentoVaraUV-akselit) lasketaan georeferenssin
+        /// origosta vain KorkeusKerroin.Asetassa, eikä niitä päivitetä origon siirtyessä. Kaupunkinäkymän jälkeen pallon rinnevalon
+        /// tasaus käänsi normaalit kaupunkiorigon kehyksessä → tumma vyö ja kermareuna (Siirtoseppä 6.10. 00.3x; toisto simulla).
+        /// Sama kerroin, joten Muuttui ei laukea.
+        /// </summary>
+        void PaivitaKorkeusKerroin()
+        {
+            if (georef != null) Matkakirja.KorkeusKerroin.Aseta(Matkakirja.KorkeusKerroin.Arvo, georef);
         }
 
         /// <summary>Esilatauskamera kuvakulmaan: sama laskenta kuin PalloKierto (kohde, suuntima, kallistus pystystä, etäisyys).</summary>
@@ -361,7 +373,7 @@ namespace Matkakirja.Natiivi
             juuri = null; maasto = null; rakennukset = null; esikamera = null; hallinta = null;
             KarttaKerrokset.RuutukrediititNakyviin = false;
             PallonViivat(true);
-            if (georef != null && georef.isActiveAndEnabled) { georef.Initialize(); georef.SetOriginLongitudeLatitudeHeight(vanhaOrigo.x, vanhaOrigo.y, vanhaOrigo.z); }
+            if (georef != null && georef.isActiveAndEnabled) { georef.Initialize(); georef.SetOriginLongitudeLatitudeHeight(vanhaOrigo.x, vanhaOrigo.y, vanhaOrigo.z); PaivitaKorkeusKerroin(); }
             if (asentoTalteen && kierto != null)
             {
                 asentoTalteen = false;
