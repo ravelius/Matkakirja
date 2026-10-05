@@ -368,8 +368,8 @@ namespace Matkakirja.Natiivi
             DioraamaHahmot3D.PuhujanTila = nakyma.KohdeTila;
             // Puhujakuva: henkilö + ilme vuoron mukaan, kertojan ja hiljaisuuden aikana pois (saman arvon toisto ei tee mitään).
             string henkilo = null;
-            if (puhuva != null && nakyma.KohdeTila != null && rakennus.Tila(nakyma.KohdeTila) is Tila pt)
-                foreach (var h in pt.Hahmot) if (h.Id == puhuva) { henkilo = h.HenkiloId; break; }
+            if (puhuva != null && nakyma.KohdeTila != null && rakennus.Tila(nakyma.KohdeTila) is Tila puhTila)
+                foreach (var h in puhTila.Hahmot) if (h.Id == puhuva) { henkilo = h.HenkiloId; break; }
             Puhujakuva.Viimeisin?.Aseta(henkilo, henkilo != null ? KuunnelmaKaistale.PuhuvaIlme : null);
             if (puhuva != null && nakyma.KohdeTila != null && nakyma.Hahmot != null)
                 for (int hi = 0; hi < nakyma.Hahmot.Count; hi++)
