@@ -64,3 +64,11 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   (FBX-tuoja vaihtaa scene-fps:n). Human Basic Motions -FBX:t: _lahteet/kevin-iglesias-hbm/fbx (409 kpl, ei repossa).
 - Levy: siirretty T7:lle 6,62 Gt (/Volumes/T7 4TB/Matkakirja-arkisto/linnanrakentaja/_valmiit/). Paketit v30–v36 ehjiä.
 - Odottaa: Tripo-koe VOUDILLA Codexin kasvokuvien jälkeen (omistaja kirjautuu sisäiseen selaimeen). Codex-tilaus Päätoimittajalla (4 kuvaa).
+
+## Päivitys 5.10. klo 23.1x
+- TYÖTAPA (Päätoimittaja 23.1x): VIKA TOISTETAAN ENNEN KORJAUSTA. Näytä todistusajolla tai testillä vika oikealla polulla ja
+  oikeilla napautuksilla, sitten sama ajo korjattuna. Ilman toistoa ei korjausta eikä SHA:ta.
+- Kappelikorjaus (kappalainen polvituolin päältä lattialle, alttarivalo y 10,9 → 12,1) on #4004:ssä (linnanrakentaja-eleet 802bb9299),
+  peili db8630b07d17411d. Toisto ja korjaus: Siirtosepän A/B-video (56e98a88 vika vs. db8630b0) Päätoimittajalle. Juna 145.
+- #4006 (Final IK -data) pidossa #4004:n jälkeen. Varakanava: mcp__ccd_session_mgmt__send_message session id:llä heti, kun SendMessage
+  epäonnistuu (ENOENT tai raja).
