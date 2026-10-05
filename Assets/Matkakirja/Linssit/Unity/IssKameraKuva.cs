@@ -720,6 +720,7 @@ namespace Matkakirja.Natiivi
                 rt = new RenderTexture(W, H, 24, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB) { name = "IssKameraKuva", antiAliasing = 1 };
                 rt.Create();
                 kamera.targetTexture = rt; kamera.ResetAspect();
+                IssJuliste.SiluettiKuvaan();
                 var pallo = KarttaKerrokset.Instanssi?.pallo;
                 float alku2 = Time.realtimeSinceStartup, vakaa = -1;
                 yield return new WaitForSecondsRealtime(2f);   // S2-paikka vaihtuu Kyyti-kierroksella (≤ 1 s)
@@ -772,6 +773,7 @@ namespace Matkakirja.Natiivi
             finally
             {
                 if (kenttaRajattu) AstronauttiLinssi.Vertailu = null;
+                IssJuliste.SiluettiPois();
                 if (rt != null) { kamera.targetTexture = null; kamera.ResetAspect(); rt.Release(); Destroy(rt); }
                 GC.Collect(); Resources.UnloadUnusedAssets();
                 Loki($"muisti kuvan jälkeen: vapaata {VapaaMuistiMt()} Mt");
@@ -891,6 +893,7 @@ namespace Matkakirja.Natiivi
                 rt = new RenderTexture(W, H, 24, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB) { name = "IssKameraKuva", antiAliasing = 1 };
                 rt.Create();
                 kamera.targetTexture = rt; kamera.ResetAspect();
+                IssJuliste.SiluettiKuvaan();
                 var pallo = KarttaKerrokset.Instanssi?.pallo;
                 float alku2 = Time.realtimeSinceStartup, vakaa = -1;
                 yield return new WaitForSecondsRealtime(2f);
@@ -938,6 +941,7 @@ namespace Matkakirja.Natiivi
             finally
             {
                 AstronauttiLinssi.Vertailu = null;
+                IssJuliste.SiluettiPois();
                 if (rt != null) { kamera.targetTexture = null; kamera.ResetAspect(); rt.Release(); Destroy(rt); }
                 AstronauttiKerros.KuvanPinta = null;
                 Avaruus.KuvaputkiAsetettu = false;

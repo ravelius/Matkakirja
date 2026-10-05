@@ -39,6 +39,32 @@ namespace Matkakirja.Natiivi
         /// <summary>A/B `astro kyyti kuvaa juliste 0|1` (0 = pelkkä kuva kuten ennen).</summary>
         public static bool Kaytossa = true;
 
+        /// <summary>ISS-siluetti julisteen kuvaan ylävasempaan kulmaan (E v2b, Päätoimittaja 1.10.: "siluetti yläkulmaan isompana";
+        /// 6.10.: "ISS-siluetti yläkulmaan kuten E v2b:ssä"). A/B `astro kyyti kuvaa siluetti 0|1`. Jos kehittäjä on jo kytkenyt
+        /// siluetin (`astro kyyti siluetti`), sen asettelu säilyy.</summary>
+        public static bool Siluetti = true;
+        static bool siluettiAsetettu; static Vector4 siluettiAsettelu0; static float siluettiPituus0;
+
+        /// <summary>Kuvauksen alussa (ennen renderöintiä): siluetti päälle julisteen asettelulla.</summary>
+        public static void SiluettiKuvaan()
+        {
+            if (!Kaytossa || !Siluetti || siluettiAsetettu || Matkakirja.Linssit.IssSiluetti.Paalla) return;
+            siluettiAsettelu0 = Matkakirja.Linssit.IssSiluetti.Asettelu; siluettiPituus0 = Matkakirja.Linssit.IssSiluetti.Pituus;
+            Matkakirja.Linssit.IssSiluetti.Asettelu = new Vector4(-0.06f, 1.04f, -30f, 0.10f);
+            Matkakirja.Linssit.IssSiluetti.Pituus = 0.30f;
+            Matkakirja.Linssit.IssSiluetti.Paalla = true;
+            siluettiAsetettu = true;
+        }
+
+        /// <summary>Kuvauksen lopussa (finally): siluetti ennalleen.</summary>
+        public static void SiluettiPois()
+        {
+            if (!siluettiAsetettu) return;
+            Matkakirja.Linssit.IssSiluetti.Paalla = false;
+            Matkakirja.Linssit.IssSiluetti.Asettelu = siluettiAsettelu0; Matkakirja.Linssit.IssSiluetti.Pituus = siluettiPituus0;
+            siluettiAsetettu = false;
+        }
+
         /// <summary>Julisteen enimmäisleveys (Instagram 2160 × 2700; Päätoimittaja 6.10.: "vähintään 1080 × 1350, mieluiten 2160 × 2700").</summary>
         public const int MaxLeveys = 2160;
         // Suhteet julisteen leveyteen W (E v3: nimi 44 ja koordinaatit 29 px 1080 px:n julisteessa; sinetti 120 px).
