@@ -113,6 +113,7 @@ namespace Matkakirja.Natiivi
         {
             if (instanssi != null && instanssi != this) { Destroy(gameObject); return; }
             instanssi = this;
+            gameObject.AddComponent<UiKameranJalkeen>();
             Ruudunpaivitys.UiRauhassa = Rauhassa;
             teema = Resources.Load<ThemeStyleSheet>(TeemaPolku);
             if (teema == null) Debug.LogWarning("MATKAKIRJA ui: teemaa Resources/" + TeemaPolku + " ei löytynyt");
@@ -346,6 +347,15 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Joka ruudussa (esim. napautus paneelin ohi pallolle, jota UI ei näe).</summary>
         public event Action JokaRuutu;
+
+        /// <summary>
+        /// KAMERAN JÄLKEEN (omistajan bugi 5.10.2026 klo 14.4x: pieni kohdekortti heilui panoroidessa): joka ruudussa kartan
+        /// kameran (PalloKierto.Update, järjestys 0) jälkeen ja ennen UI Toolkitin paneelipäivitystä (PreLateUpdate). Kartan
+        /// pisteeseen kiinnitetyt elementit asetetaan tässä, jolloin ne ovat samassa ruudussa kameran kanssa (JokaRuutu ajetaan
+        /// samassa vaiheessa määrittämättömässä järjestyksessä ja jäi usein ruudun jälkeen).
+        /// </summary>
+        public event Action KameranJalkeen;
+        internal void AjaKameranJalkeen() => KameranJalkeen?.Invoke();
 
         void Update()
         {
@@ -602,5 +612,14 @@ namespace Matkakirja.Natiivi
             }
             if (muuttui) TurvaMuuttui?.Invoke();
         }
+    }
+
+    /// <summary>UiKerros.KameranJalkeen: Update järjestyksessä 20, eli kartan kameran (0) jälkeen ja ennen PreLateUpdatea.</summary>
+    [DefaultExecutionOrder(20)]
+    public sealed class UiKameranJalkeen : MonoBehaviour
+    {
+        UiKerros kerros;
+        void Awake() => kerros = GetComponent<UiKerros>();
+        void Update() { if (kerros != null) kerros.AjaKameranJalkeen(); }
     }
 }

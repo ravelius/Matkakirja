@@ -86,7 +86,9 @@ namespace Matkakirja.Natiivi
             nimi = Rakenne.Teksti("", "mk-kutsu__nimi", nappi);
             Kirjasimet.Aseta(nimi, Kirjasin.LukuLihava);
             nappi.style.display = DisplayStyle.None;
-            kerros.JokaRuutu += Paivita;
+            // Kartan pisteeseen kiinnitetty: asetetaan kameran jälkeen samassa ruudussa (omistaja 5.10.2026 klo 14.4x: "heiluu
+            // kartalla … kun panoroi. se saisi pysyä aivan paikallaan koko ajan"), ei JokaRuutu-vaiheessa.
+            kerros.KameranJalkeen += Paivita;
         }
 
         /// <summary>Kutsu näkyvissä (testikomento).</summary>
@@ -290,7 +292,10 @@ namespace Matkakirja.Natiivi
 
         void Aseta(Rect rr)
         {
-            float x = Mathf.Round(rr.x), y = Mathf.Round(rr.y);
+            // Pikselikohdistus fyysisiin pikseleihin (ei kokonaisiin pisteisiin): 3× näytöllä askel 1/3 pt, joten kortti ei
+            // nytki kaupungin pisteen suhteen (ero ≤ 0,17 pt).
+            float px = juuri.panel != null && juuri.panel.visualTree.layout.width > 0 ? Screen.width / juuri.panel.visualTree.layout.width : 1f;
+            float x = Mathf.Round(rr.x * px) / px, y = Mathf.Round(rr.y * px) / px;
             if (nappi.resolvedStyle.left != x) nappi.style.left = x;
             if (nappi.resolvedStyle.top != y) nappi.style.top = y;
         }
