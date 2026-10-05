@@ -51,8 +51,33 @@ namespace Matkakirja.Natiivi
                     || lantio.position.y - lattia.point.y > 0.65f;
                 g.weight = Mathf.MoveTowards(g.weight, seisoo ? 1f : 0f, Time.unscaledDeltaTime * 2f);
             }
+            Kadet(e);
             e.Ik.solver.Update();
             MittaaJalat(e);
+        }
+
+        /// <summary>KÄDET ESINEISIIN (Linnanrakentaja 5.10., `kadet[]`): "tartu" vie käden efektorin kahvaan (sijoitettu paikka →
+        /// UnityPiste), kun silmukka vastaa `milloin`-ehtoa; paino häivytetään 0,3 s:ssa. Vaihe 1: vain paikka (kämmenen kierto
+        /// animaatiosta; kierto vaatii luun ja kämmenkehyksen kalibroinnin). "kanna" (esine luuhun) ei vielä käytössä.</summary>
+        void Kadet(Esiintyma e)
+        {
+            var kadet = e.Hahmo.Kadet;
+            if (kadet == null || kadet.Count == 0) return;
+            float tavoiteR = 0f, tavoiteL = 0f;
+            foreach (var k in kadet)
+            {
+                if (k.Tyyppi != "tartu") continue;
+                bool voimassa = k.Milloin == "aina" || k.Milloin == e.Silmukka || (k.Milloin == "puhe" && e.EleNimi != null);
+                if (!voimassa) continue;
+                var eff = k.Kasi == "l" ? e.Ik.solver.leftHandEffector : e.Ik.solver.rightHandEffector;
+                eff.position = DioraamaNayttamo.UnityPiste(k.Paikka);
+                if (k.Kasi == "l") tavoiteL = (float)k.Paino; else tavoiteR = (float)k.Paino;
+            }
+            float askel = Time.unscaledDeltaTime / 0.3f;
+            e.KasiPainoR = Mathf.MoveTowards(e.KasiPainoR, tavoiteR, askel);
+            e.KasiPainoL = Mathf.MoveTowards(e.KasiPainoL, tavoiteL, askel);
+            e.Ik.solver.rightHandEffector.positionWeight = e.KasiPainoR;
+            e.Ik.solver.leftHandEffector.positionWeight = e.KasiPainoL;
         }
 
         /// <summary>A/B-mittari: 2 s välein kummankin nilkan korkeus lattiasta (säde IkKerrokseen) lokiin, IK päällä tai pois.
@@ -71,6 +96,19 @@ namespace Matkakirja.Natiivi
                 return "?";
             }
             Debug.Log($"MATKAKIRJA linssit: ik jalat {e.HahmoId} ik={(IkPaalla ? 1 : 0)} vasen {Korkeus("foot_l")} cm oikea {Korkeus("foot_r")} cm");
+            if (e.Hahmo.Kadet != null)
+                foreach (var k in e.Hahmo.Kadet)
+                {
+                    if (k.Tyyppi != "tartu") continue;
+                    string luu = k.Kasi == "l" ? "hand_l" : "hand_r";
+                    foreach (var tr in e.SolmuT)
+                        if (tr != null && tr.name == luu)
+                        {
+                            float d = Vector3.Distance(tr.position, DioraamaNayttamo.UnityPiste(k.Paikka)) * 100f;
+                            Debug.Log($"MATKAKIRJA linssit: ik käsi {e.HahmoId} {k.Kasi} {k.Esine} ik={(IkPaalla ? 1 : 0)} silmukka {e.Silmukka} paino {(k.Kasi == "l" ? e.KasiPainoL : e.KasiPainoR):0.00} etäisyys {d:0} cm");
+                            break;
+                        }
+                }
         }
 
         FullBodyBipedIK LuoIk(Esiintyma e)

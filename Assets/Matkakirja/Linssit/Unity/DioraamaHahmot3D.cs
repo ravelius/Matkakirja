@@ -89,6 +89,7 @@ namespace Matkakirja.Natiivi
             public Quaternion PaaKierto = Quaternion.identity;
             public RootMotion.FinalIK.FullBodyBipedIK Ik; // Final IK (DioraamaHahmot3D.IK.cs): luodaan ensimmäisellä kohdistuksella
             public bool IkYritetty; public float JalkaMittausT;
+            public string Silmukka; public float KasiPainoR, KasiPainoL; // kädet esineisiin (kadet[].milloin)
             public string EleNimi; public double EleAlku; // kertaeleen (ele_<ele>) vuoro ja alkuhetki
         }
 
@@ -528,6 +529,7 @@ namespace Matkakirja.Natiivi
             bool reitilla = e.Hahmo.Reitti != null && silmukka == "kavely";
             double kavely = reitilla ? ReittiPaikkaJaSuunta(e, t).kavely : 1;
             string tavoite = reitilla && kavely < 0.5 ? "idle" : silmukka;
+            e.Silmukka = tavoite;
             string leike = Leike(m3, tavoite);
             bool ensimmainen = e.Sekoitin.Nykyinen == null;
             // Idle ↔ puhe: pidempi häivytys (omistaja 5.10.: siirtymät "outoja"), muut ennallaan.

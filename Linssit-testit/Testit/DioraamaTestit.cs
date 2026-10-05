@@ -61,7 +61,9 @@ namespace Matkakirja.Linssit.Testit
               ""hahmot"":[
                 {""id"":""kokki"",""henkilo"":""kokki-1500"",""paikka"":[0.5,0,0.3],""suunta"":90,""peilattu"":false,""silmukka"":""tyo"",""heraa"":1,""reitti"":null,
                   ""repliikit"":[{""id"":""kokki-r1"",""teksti"":""Keitto kiehuu."",""aani"":null}],
-                  ""reaktio"":{""id"":""kokki-react"",""teksti"":""Kokki hätkähtää."",""aani"":null}},
+                  ""reaktio"":{""id"":""kokki-react"",""teksti"":""Kokki hätkähtää."",""aani"":null},
+                  ""kadet"":[{""tyyppi"":""tartu"",""esine"":""pata"",""kasi"":""r"",""paikka"":[0.7,1.0,0.3],""kierto"":[0.071,0.9,0.159,-0.401],""milloin"":""tyo"",""paino"":0.8},
+                             {""tyyppi"":""kanna"",""esine"":""kauha"",""kasi"":""l"",""siirto"":[0.05,0,0.1]}]},
                 {""id"":""apulainen"",""henkilo"":""apulainen-1500"",""paikka"":[1.2,0,-0.4],""suunta"":180,""peilattu"":true,""silmukka"":""kavely"",""heraa"":2,
                   ""reitti"":{""pisteet"":[[1.2,0,-0.4],[2.0,0,-0.4]],""nopeus"":0.8,""tauko"":1.0},
                   ""repliikit"":[],""reaktio"":null}
@@ -144,6 +146,20 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1, kokki.Repliikit.Count);
             Oleta.Sama("Keitto kiehuu.", kokki.Repliikit[0].Teksti);
             Oleta.Sama("Kokki hätkähtää.", kokki.Reaktio.Teksti);
+            Oleta.Sama(2, kokki.Kadet.Count);
+            Oleta.Sama("tartu", kokki.Kadet[0].Tyyppi);
+            Oleta.Sama("pata", kokki.Kadet[0].Esine);
+            Oleta.Sama("r", kokki.Kadet[0].Kasi);
+            Oleta.Sama("tyo", kokki.Kadet[0].Milloin);
+            Oleta.Sama(0.8, kokki.Kadet[0].Paino);
+            SamaV3(new V3(0.7, 1.0, 0.3), kokki.Kadet[0].Paikka, "tartu-paikka");
+            Oleta.Sama(0.9, kokki.Kadet[0].Kierto[1]);
+            Oleta.Sama("kanna", kokki.Kadet[1].Tyyppi);
+            Oleta.Sama("l", kokki.Kadet[1].Kasi);
+            Oleta.Sama("aina", kokki.Kadet[1].Milloin);
+            Oleta.Sama(1.0, kokki.Kadet[1].Paino);
+            Oleta.Tosi(kokki.Kadet[1].Kierto == null, "kanna ilman kiertoa");
+            SamaV3(new V3(0.05, 0, 0.1), kokki.Kadet[1].Siirto, "kanna-siirto");
 
             var apulainen = keittio.Hahmot[1];
             Oleta.Tosi(apulainen.Peilattu, "apulainen peilattu");
@@ -153,6 +169,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1.0, apulainen.Reitti.Tauko);
             Oleta.Sama(0, apulainen.Repliikit.Count);
             Oleta.Tosi(apulainen.Reaktio == null, "apulaisella ei reaktiota");
+            Oleta.Sama(0, apulainen.Kadet.Count);
 
             Oleta.Sama(5, keittio.Kasikirjoitus.Count);
             Oleta.Sama("pulu-lenna", keittio.Kasikirjoitus[0].Tee);
