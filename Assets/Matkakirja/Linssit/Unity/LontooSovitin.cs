@@ -1,10 +1,14 @@
 // LONTOO-PILOTTI vaihe 1 (Päätoimittaja 5.10.2026, omistaja 16.3x; Linssiseppä): Unity-osa. Lennon logiikka ja reitti ovat
 // moottorittomassa ytimessä (Linssit/Ydin/Lontoo), UI (pysähdyksen nimi, kertojan teksti, avausruutu) UI/Linssit/LontooTaulu.cs.
 //
-// DATA (omistajan linja 5.10. 11.45): kaikki Cesium ionista — World Terrain (1) + Bing Maps Aerial (2) rasterina sen päällä
-// ja Cesium OSM Buildings (96188). BING-EHTO: ei omaa palloa eikä pergamenttia samassa näkymässä → pallon tileset ja
-// Pohjapallo (pergamenttivarapinta) piiloon lennon ajaksi, siirtymä mustan avausruudun kautta, Cesiumin krediitit
-// (Bingin logo ja tekijätiedot) ruudulle (KarttaKerrokset.RuutukrediititNakyviin).
+// DATA (omistajan päätös 5.10. 17.4x, kehitys- ja testikäyttö): Google Photorealistic 3D Tiles Cesium ionin kautta (asset
+// 2275207) yksinään. Ehdot (Cesiumin B-2 ja Googlen ehdot): kaupunkinäkymässä vain Googlen laatat — ei World Terrainia,
+// Bingiä, OSM-rakennuksia eikä omaa palloa tai pergamenttia samassa kuvassa → pallon tileset ja Pohjapallo piiloon lennon
+// ajaksi, siirtymä mustan avausruudun kautta; Googlen logo ja tekijätiedot muuttamattomina ruudulle (Cesiumin krediitit,
+// KarttaKerrokset.RuutukrediititNakyviin); ei offline-tallennusta (vain Cesiumin oma välimuisti otsakkeiden max-age-rajoissa,
+// ei Laattapalvelinta eikä esilatausta levylle); ei omia malleja Googlen sisällöstä. Julkaisu vasta maksullisen lisenssin ja
+// Cesiumin kirjallisen vahvistuksen jälkeen. Aiempi linja (11.45) säilyy vaihtoehtona: World Terrain (1) + Bing (2) +
+// OSM Buildings (96188), komento "lontoo data ion".
 //
 // TUNNUS: ei repoon eikä käännökseen (lontoo-pilotti-suunnitelma §3). Kehitysvaiheessa tunnus luetaan laitteen
 // Documents/cesium-ion-tunnus.txt-tiedostosta; omistajan oma rajattu tunnus (assetit 1, 2, 96188) haetaan ennen TF:ää
@@ -29,8 +33,9 @@ namespace Matkakirja.Natiivi
     public sealed class LontooSovitin : ILinssi
     {
         /// <summary>Laattojen tarkkuus ja muistikatot (Lontoo-tutkimus 5.10.: SSE 32 → ~30 Mt siirtoa per kylmä lento).</summary>
-        public const float MaastoSse = 16f, RakennusSse = 24f;
-        public const long MaastoValimuisti = 128L << 20, RakennusValimuisti = 192L << 20;
+        public const float MaastoSse = 16f, RakennusSse = 24f, GoogleSse = 16f;
+        public const long MaastoValimuisti = 128L << 20, RakennusValimuisti = 192L << 20, GoogleValimuisti = 384L << 20;
+        public const long GoogleAsset = 2275207;
         public const uint Rinnakkain = 12;
         /// <summary>Laattojen valmiusraja (%): ComputeLoadProgress on arvio, joten 100 ei aina täyty.</summary>
         public const float ValmisProsentti = 99f;
@@ -43,10 +48,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Kehitystunnuksen polku laitteella (ei repoon).</summary>
         public static string TunnusPolku => Path.Combine(Application.persistentDataPath, "cesium-ion-tunnus.txt");
         /// <summary>
-        /// TESTITILA ilman ion-tunnusta (komento "lontoo omadata 1"): maasto pallon omasta ämpäristä, ei ilmakuvaa eikä
-        /// rakennuksia. Vain lennon, kameran, origon, UI:n ja sulun todentamiseen; ei pelaajalle.
+        /// Datalähde (komento "lontoo data google|ion|oma"): Google = Photorealistic 3D Tiles (omistaja 17.4x, oletus);
+        /// Ion = World Terrain + Bing + OSM Buildings; Oma = TESTITILA ilman ion-tunnusta (maasto pallon ämpäristä, ei
+        /// ilmakuvaa eikä rakennuksia; vain lennon, kameran, origon, UI:n ja sulun todentamiseen).
         /// </summary>
-        public static bool OmaData;
+        public enum Lahde { Google, Ion, Oma }
+        public static Lahde Data = Lahde.Google;
 
         readonly LinssiOhjain o;
         readonly PalloKierto kierto;
@@ -80,7 +87,8 @@ namespace Matkakirja.Natiivi
             Virhe = null;
             Viimeisin = this;
             string tunnus = LueTunnus();
-            bool oma = OmaData;
+            var data = Data;
+            bool oma = data == Lahde.Oma;
             if (string.IsNullOrEmpty(tunnus) && !oma)
             {
                 Virhe = "Lontoo: Cesium ion -tunnus puuttuu";
@@ -120,6 +128,11 @@ namespace Matkakirja.Natiivi
                 maasto.tilesetSource = CesiumDataSource.FromUrl;
                 maasto.url = KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.pallo != null ? KarttaKerrokset.Instanssi.pallo.url : null;
             }
+            else if (data == Lahde.Google)
+            {
+                // Yksi tileset: Googlen laatoissa on maasto ja rakennukset; ei rasteria eikä muuta dataa samaan kuvaan.
+                maasto = LuoTileset("Lontoo Google 3D", GoogleAsset, tunnus, GoogleSse, GoogleValimuisti);
+            }
             else
             {
                 maasto = LuoTileset("Lontoo maasto", 1, tunnus, MaastoSse, MaastoValimuisti);
@@ -145,7 +158,7 @@ namespace Matkakirja.Natiivi
             KyydinKameraEnnen.Ajo = PaivitaKamera;
             PaivitaKamera();
             Vaihtui?.Invoke(this);
-            o.Kirjaa((oma ? "lontoo: OMA TESTIDATA (ei ionia), " : "lontoo: ") + $"auki, arvio {lento.ArvioituKesto():F0} s, {lento.Reitti.Count} pysähdystä");
+            o.Kirjaa($"lontoo: data {data}" + (oma ? " (testi, ei ionia)" : "") + $", auki, arvio {lento.ArvioituKesto():F0} s, {lento.Reitti.Count} pysähdystä");
         }
 
         Cesium3DTileset LuoTileset(string nimi, long asset, string tunnus, float sse, long valimuisti)
