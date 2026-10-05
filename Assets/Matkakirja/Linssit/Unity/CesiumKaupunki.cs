@@ -73,10 +73,42 @@ namespace Matkakirja.Natiivi
         public float Latausaste => maasto == null ? 0f : rakennukset == null ? maasto.ComputeLoadProgress() : Mathf.Min(maasto.ComputeLoadProgress(), rakennukset.ComputeLoadProgress());
         public bool Valmis => Latausaste >= ValmisProsentti;
 
+        /// <summary>Workerista haettu tunnus (muistissa istunnon ajan, ei levylle eikä lokiin).</summary>
+        static string haettuTunnus;
+        /// <summary>Tunnuksen reitti Pöllössä (Pelikoodari; salaisuus CESIUM_ION_TOKEN workerin ympäristössä).</summary>
+        public const string TunnusReitti = "/opas/tunnus";
+
         static string LueTunnus()
         {
-            try { return File.Exists(TunnusPolku) ? File.ReadAllText(TunnusPolku).Trim() : null; }
-            catch (Exception) { return null; }
+            try { if (File.Exists(TunnusPolku)) { var t = File.ReadAllText(TunnusPolku).Trim(); if (t.Length > 0) return t; } }
+            catch (Exception) { }
+            return haettuTunnus;
+        }
+
+        /// <summary>Tunnus Pöllöstä (pelaajan laite): GET {PuluChat.Palvelin}/opas/tunnus → {"tunnus": "..."}; natiivin otsakkeet.</summary>
+        System.Collections.IEnumerator HaeTunnus(Lahde data)
+        {
+            using (var r = UnityEngine.Networking.UnityWebRequest.Get(PuluChat.Palvelin + TunnusReitti))
+            {
+                r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+                r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
+                r.timeout = 15;
+                yield return r.SendWebRequest();
+                if (!auki) yield break;
+                string t = null;
+                if (r.result == UnityEngine.Networking.UnityWebRequest.Result.Success)
+                    t = (Matkakirja.Peli.MiniJson.Jasenna(r.downloadHandler.text) as System.Collections.Generic.Dictionary<string, object>) is { } j
+                        && j.TryGetValue("tunnus", out var v) ? v as string : null;
+                if (string.IsNullOrEmpty(t))
+                {
+                    kirjaa($"kaupunki: tunnuksen haku epäonnistui (HTTP {r.responseCode})");
+                    Virhe = "Cesium ion -tunnus puuttuu";
+                    yield break;
+                }
+                haettuTunnus = tunnus = t;
+                kirjaa("kaupunki: tunnus haettu Pöllöstä");
+                LuoData(data);
+            }
         }
 
         /// <summary>Avaa näkymän origon ympärille. false = virhe (Virhe kertoo syyn; mitään ei muutettu).</summary>
@@ -85,7 +117,7 @@ namespace Matkakirja.Natiivi
             Virhe = null;
             var data = Data;
             tunnus = LueTunnus();
-            if (string.IsNullOrEmpty(tunnus) && data != Lahde.Oma) { Virhe = "Cesium ion -tunnus puuttuu"; kirjaa("kaupunki: ion-tunnus puuttuu (" + TunnusPolku + ")"); return false; }
+            bool haettava = string.IsNullOrEmpty(tunnus) && data != Lahde.Oma;
             georef = kierto != null ? kierto.georeferenssi : null;
             kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
             if (georef == null || kamera == null) { Virhe = "pallon kamera puuttuu"; return false; }
@@ -113,7 +145,9 @@ namespace Matkakirja.Natiivi
             esikamera.enabled = false;
             esikamera.cullingMask = 0;
             Cesium3DTileset.OnCesium3DTilesetLoadFailure += LatausVirhe;
-            LuoData(data);
+            // Pelaajan laitteella tunnus haetaan ensin Pöllöstä; tilesetit luodaan vasta sitten (ei 401-latausvirhettä).
+            if (haettava) kierto.StartCoroutine(HaeTunnus(data));
+            else LuoData(data);
             KarttaKerrokset.RuutukrediititNakyviin = true;
             return true;
         }
