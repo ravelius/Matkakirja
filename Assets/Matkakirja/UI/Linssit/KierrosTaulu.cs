@@ -37,15 +37,18 @@ namespace Matkakirja.Natiivi
             otsikko = Rakenne.El("mk-astroavaus__otsikko--haipyy", yla, PickingMode.Ignore);
             otsikko.style.position = Position.Absolute;
             otsikko.style.left = 28; otsikko.style.top = 24;
+            otsikko.style.right = 110;   // oikean yläkulman napit (kuvakytkin, ☰) ~100 pt (Natiivi-UI 5.10.)
             otsikko.style.alignItems = Align.FlexStart;
             otsikko.style.opacity = 0f;
             otsikko.style.transitionDuration = new StyleList<TimeValue>(new System.Collections.Generic.List<TimeValue> { new TimeValue(0.2f, TimeUnit.Second) });
             nimi = Rakenne.Teksti("", "mk-aikajana-havainne__otsikko", otsikko);
             Kirjasimet.Aseta(nimi, Kirjasin.Goottilainen);
             nimi.style.fontSize = 44; nimi.style.unityTextAlign = TextAnchor.LowerLeft;
+            nimi.style.whiteSpace = WhiteSpace.Normal;
             alarivi = Rakenne.Teksti("", "mk-aikajana-havainne__kuvateksti", otsikko);
             Kirjasimet.Aseta(alarivi, Kirjasin.Antiikva);
             alarivi.style.fontSize = 19; alarivi.style.unityTextAlign = TextAnchor.UpperLeft;
+            alarivi.style.whiteSpace = WhiteSpace.Normal;   // pitkä Wikipedia-kuvaus rivittyy (ei valu reunan yli)
 
             kertojaKehys = Rakenne.El("mk-aikajana-kertomus", yla, PickingMode.Ignore);
             kertojaKehys.style.bottom = 44;

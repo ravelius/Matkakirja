@@ -239,6 +239,26 @@ namespace Matkakirja.Natiivi
             if (auki && Kaytossa == Lahde.Google) LuoData(Lahde.Ion);
         }
 
+        /// <summary>
+        /// Cesiumin ruutukrediittien (Googlen/Bingin logo ja tekijätiedot, Cesium ion) korkeus pisteinä ruudun alareunasta, 0 = ei näkyvissä.
+        /// Natiivi-UI asettaa oppaan sirut tämän yläpuolelle. Krediittien sisältöä ja logojen kokoa ei muuteta (Googlen ehdot).
+        /// </summary>
+        public static float KrediititKorkeusPt
+        {
+            get
+            {
+                if (!KarttaKerrokset.RuutukrediititNakyviin) return 0f;
+                var cs = CesiumCreditSystem.GetDefaultCreditSystem();
+                var juuri = cs != null ? cs.GetComponent<UnityEngine.UIElements.UIDocument>()?.rootVisualElement : null;
+                if (juuri == null || juuri.panel == null) return 0f;
+                float ylin = float.MaxValue, ala = juuri.worldBound.yMax;
+                foreach (var e in UnityEngine.UIElements.UQueryExtensions.Query<UnityEngine.UIElements.VisualElement>(juuri).ToList())
+                    if (e != juuri && e.resolvedStyle.display != UnityEngine.UIElements.DisplayStyle.None && e.worldBound.height > 0 && e.childCount == 0)
+                        ylin = Mathf.Min(ylin, e.worldBound.yMin);
+                return ylin == float.MaxValue ? 0f : Mathf.Max(0f, ala - ylin);
+            }
+        }
+
         /// <summary>Alue- ja merinimet, rajat, rannikko, reitit ja napakannet (pelin oletus: näkyvissä); pelikerrokset hoitaa sovitin.</summary>
         static readonly string[] Viivat = { "aluenimet", "rajat", "rannikko", "reitit", "napakannet" };
         static void PallonViivat(bool nakyy)
