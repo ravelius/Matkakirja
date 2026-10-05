@@ -135,8 +135,12 @@ if ALBEDO:
             ruutu = push_pull((summa / np.maximum(lkm, 1)[..., None]).astype(np.float32), lkm > 0)
             q = np.pad(ruutu, ((1, 1), (1, 1), (0, 0)), mode='edge')
             ruutu = sum(q[dy:dy + n[1], dx:dx + n[0]] for dy in range(3) for dx in range(3)) / 9
-            kc = np.clip(((kp - lo) / R).astype(int), 0, n - 1)
-            L[ky[ks], kx[ks], :3] = ruutu[kc[:, 1], kc[:, 0]]
+            # 5.10.: bilineaarinen näytteistys (lähin solu teki 0,25 m:n ruutuja, jotka 8k-valokartta paljasti)
+            f = (kp - lo) / R - 0.5; i0 = np.clip(np.floor(f).astype(int), 0, n - 2); w = np.clip(f - i0, 0.0, 1.0)
+            wx, wy = w[:, 0:1], w[:, 1:2]
+            r00 = ruutu[i0[:, 1], i0[:, 0]]; r10 = ruutu[i0[:, 1], i0[:, 0] + 1]
+            r01 = ruutu[i0[:, 1] + 1, i0[:, 0]]; r11 = ruutu[i0[:, 1] + 1, i0[:, 0] + 1]
+            L[ky[ks], kx[ks], :3] = (r00 * (1 - wx) + r10 * wx) * (1 - wy) + (r01 * (1 - wx) + r11 * wx) * wy
         # Pystysuorat siivotut tekselit (v17: muurin juuren uudet pinnat): valo samansuuntaisesta muurista aukon
         # yläpuolelta (sektori 30°, syvyys 1 m:n kerroksina), muuten raon varjo piirsi tummia piikkejä.
         pysty = ~ylos & (np.hypot(nor[..., 0], nor[..., 1]) > 0.2)  # myös vinot (ramppi muurin juurella)
