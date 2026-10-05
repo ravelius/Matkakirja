@@ -54,6 +54,11 @@ namespace Matkakirja.Natiivi
         public static bool Pysaytetty;
         /// <summary>Testiotsake (komento "opas testiotsake 1"): worker palauttaa kerronnan ilman ääntä (ei ElevenLabs-kulutusta simussa).</summary>
         public static bool Testiotsake;
+        /// <summary>PCM-suoratoisto (Pöllön aani_pcm) käytössä. Oletus pois, kunnes virta on todennettu simulla äänen kanssa
+        /// (Päätoimittaja 5.10. 20.3x: juna 144 ilman riskiä); pois-tilassa käytetään mp3:a (aani) kuten ennen. Komento "opas pcm 0|1".</summary>
+        public static bool PcmKaytossa;
+        /// <summary>Kappaleen äänen avain: PCM-virta vain kytkimellä, muuten mp3.</summary>
+        static string AaniAvain(OpasKohde k) => k == null ? null : PcmKaytossa ? k.AaniAvain : (string.IsNullOrEmpty(k.Aani) ? null : k.Aani);
         /// <summary>Aloituskaupunki (komento "opas kaupunki <nimi>"); ensimmäinen pyyntö on tämä toive.</summary>
         public static string Aloituskaupunki = "Kööpenhamina";
 
@@ -282,7 +287,7 @@ namespace Matkakirja.Natiivi
         void Valmistele(OpasKohde k)
         {
             if (!k.Kysymys) o.StartCoroutine(Korkeus(k));
-            if (!string.IsNullOrEmpty(k.AaniPcm)) { if (!klipit.ContainsKey(k.AaniPcm) && !pcmVirrat.ContainsKey(k.AaniPcm)) o.StartCoroutine(LataaPcm(k)); }
+            if (PcmKaytossa && !string.IsNullOrEmpty(k.AaniPcm)) { if (!klipit.ContainsKey(k.AaniPcm) && !pcmVirrat.ContainsKey(k.AaniPcm)) o.StartCoroutine(LataaPcm(k)); }
             else if (!string.IsNullOrEmpty(k.Aani) && !klipit.ContainsKey(k.Aani)) o.StartCoroutine(LataaAani(k.Aani));
         }
 
@@ -358,7 +363,7 @@ namespace Matkakirja.Natiivi
             tekstina = null;
             bool kertoja = Asetukset.Paalla(Kytkin.Kertoja);
             // Ääni latautuu vielä (simu 19.0x: saapumiset ilman ääntä): odotetaan enintään AaniOdotusS ennen tekstiä.
-            string avain = k.AaniAvain;
+            string avain = AaniAvain(k);
             if (kertoja && !string.IsNullOrEmpty(avain) && !klipit.ContainsKey(avain) && aaniOdotus != k) { aaniOdotus = k; o.StartCoroutine(OdotaAani(k)); return; }
             aaniOdotus = null;
             if (kertoja && !string.IsNullOrEmpty(avain) && klipit.TryGetValue(avain, out var klippi) && klippi != null && puhe != null)
@@ -380,7 +385,7 @@ namespace Matkakirja.Natiivi
         IEnumerator OdotaAani(OpasKohde k)
         {
             float t0 = Time.realtimeSinceStartup;
-            string avain = k.AaniAvain;
+            string avain = AaniAvain(k);
             while (silmukka != null && !klipit.ContainsKey(avain) && Time.realtimeSinceStartup - t0 < AaniOdotusS) yield return null;
             if (silmukka == null || (silmukka.Nykyinen != k && !(silmukka.OdottaaVastausta && viimeKysymys == k))) yield break;
             o.Kirjaa($"opas: ääni {(klipit.ContainsKey(avain) ? "latautui" : "ei latautunut")} {Time.realtimeSinceStartup - t0:F1} s:ssa");
@@ -404,9 +409,9 @@ namespace Matkakirja.Natiivi
         void VapautaVanhatAanet(OpasKohde nyt)
         {
             var pidetaan = new HashSet<string>();
-            if (nyt?.AaniAvain != null) pidetaan.Add(nyt.AaniAvain);
-            if (silmukka?.Seuraava?.AaniAvain != null) pidetaan.Add(silmukka.Seuraava.AaniAvain);
-            if (viimeKysymys?.AaniAvain != null && silmukka != null && silmukka.OdottaaVastausta) pidetaan.Add(viimeKysymys.AaniAvain);
+            if (AaniAvain(nyt) != null) pidetaan.Add(AaniAvain(nyt));
+            if (AaniAvain(silmukka?.Seuraava) != null) pidetaan.Add(AaniAvain(silmukka.Seuraava));
+            if (AaniAvain(viimeKysymys) != null && silmukka != null && silmukka.OdottaaVastausta) pidetaan.Add(AaniAvain(viimeKysymys));
             var pois = new List<string>();
             foreach (var kv in klipit) if (!pidetaan.Contains(kv.Key)) pois.Add(kv.Key);
             foreach (var u in pois) { if (klipit[u] != null && (puhe == null || puhe.clip != klipit[u])) UnityEngine.Object.Destroy(klipit[u]); klipit.Remove(u); pcmVirrat.Remove(u); }
@@ -434,7 +439,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void Kysyy(OpasKohde k)
         {
-            if (string.IsNullOrEmpty(k.AaniPcm) && !string.IsNullOrEmpty(k.Aani) && !klipit.ContainsKey(k.Aani)) { o.StartCoroutine(SoitaLadattuna(k)); }
+            if ((!PcmKaytossa || string.IsNullOrEmpty(k.AaniPcm)) && !string.IsNullOrEmpty(k.Aani) && !klipit.ContainsKey(k.Aani)) { o.StartCoroutine(SoitaLadattuna(k)); }
             else Soita(k);   // PCM: Soita odottaa virtaa (OdotaAani)
             KysymysChattiin(k);
             o.Kirjaa($"opas: kysyy \"{k.Teksti}\" [{string.Join(" | ", k.Vaihtoehdot ?? Array.Empty<string>())}]");

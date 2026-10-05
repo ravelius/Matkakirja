@@ -2010,6 +2010,7 @@ namespace Matkakirja.Natiivi
                     if (osat.Length > 2 && osat[1] == "testi") OpasSovitin.Testi = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "testiotsake") OpasSovitin.Testiotsake = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "pysayta") OpasSovitin.Pysaytetty = osat[2] == "1";
+                    else if (osat.Length > 2 && osat[1] == "pcm") OpasSovitin.PcmKaytossa = osat[2] == "1";
                     else if (osat.Length > 1 && osat[1] == "muisti") Kirjaa(opas?.Muisti() ?? "opas: ei sovitinta");
                     else if (osat.Length > 2 && osat[1] == "kaupunki") OpasSovitin.Aloituskaupunki = string.Join(" ", osat.Skip(2));
                     else if (osat.Length > 2 && osat[1] == "toive") OpasSovitin.Toive(string.Join(" ", osat.Skip(2)));
