@@ -1,6 +1,20 @@
-# Siirtosepän luovutus 5.10.2026 — TILA KLO 17.3x (Opus 5.5, high)
+# Siirtosepän luovutus 5.10.2026 — TILA KLO 19.5x (Opus 5.5, high)
 
-## Nyt (17.3x)
+## Nyt (19.5x)
+
+- **Kaupunkikuva junaan 144 — HYVÄKSYTTY (Päätoimittaja 19.5x):** `siirtoseppa/kaupunki-kuva` @ **79a3582c**, worktree
+  `wt/proto-siirtoseppa-kk`, Linssisepän `linssiseppa/lontoo`:n päällä, vain `Linssit/Unity/KaupunkiKuva.cs` (tilaa
+  `CesiumKaupunki.Avattu/Suljettu`). Junan oletus: Google-SSE 16 (Päätoimittajan muistikatto), MSAA 4x, anisotropia 8–16; sumu
+  ja Volume POIS. Viritys ilman käännöstä: laitteen `Documents/kaupunki-kuva-asetukset.txt` (google/maasto/rakennus/msaa/sumu/
+  sumualku/sumuloppu/sumualkumin/sumuloppumin/volume/savytys/kontrasti/saturaatio/hehku), A/B `Documents/kaupunki-kuva-pois.txt`.
+  Kuvat `proto-3d/lokit/siirtoseppa-kaupunki3/` (A–D, pari-A-B*.png). Sumun/värien viritys jatkuu junan jälkeen; kuvapari
+  Päätoimittajalle ennen kuin mitään kytketään päälle. Skripti `ajo-kaupunki-kuva.sh` (KIERROKSET, ASETUKSET_<k>, UIKOMENTO).
+- **Final IK** jatkuu: `siirtoseppa/final-ik` @ **60ba4251** (kädet esineisiin, kadet[]-lukija + testi; Grounder pois
+  polvistujilta) — ajamatta; appi poistettu levyn takia, käännös uudelleen. Linnanrakentajan esimerkkipeili 9b44d146
+  (fatabuurin hoitaja, pulpetti). Skripti `ajo-vuoro-kadet.sh`.
+
+## Aiempi tila 17.3x
+
 
 - **Juna 144 — merge-pyyntö Natiivisepällä:** `siirtoseppa/linna-144` @ **03d02ee8** (linna-143 b10669da + Natiivi-UI kortti-tiivis a7757d06).
   Päätoimittaja KUITTASI 15.4x. Todisteet: Pulun oikea tap jonottaa keskustelun ajan (`lokit/siirtoseppa-pulutap2/`), lähempi
