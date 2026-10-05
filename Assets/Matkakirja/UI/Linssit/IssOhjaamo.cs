@@ -47,6 +47,14 @@ namespace Matkakirja.Natiivi
         public const float KohdePt = Tyylikirja.Koko.Lcd, KohdeMinPt = 17f;
         /// <summary>Kuolleen alueen säde joystickin keskellä (pt).</summary>
         public const float KuollutPt = 12f;
+        /// <summary>
+        /// KESKELTÄ TARTTUMINEN (omistaja 6.10.2026 klo 00.2x, TF 144: "jos tartun keskeltä niin peli alkaa kääntää alusta
+        /// vasemmalle"): sormen kosketus on laajempi kuin 12 pt:n kuollut alue, joten keskeltä tarttuminen antoi heti suunnan.
+        /// Keskiruudun (34 pt) sisältä alkava kosketus on nyt neutraali, ja suunta lasketaan liikkeestä tartuntakohdasta
+        /// (kynnys LiikePt); varresta alkava kosketus ohjaa heti kuten ennen.
+        /// </summary>
+        public const float KeskiPt = 20f, LiikePt = 14f;
+        Vector2? tartunta;
 
         public bool Mini { get; private set; }
         /// <summary>Paneelin koko vaihtui (iso ↔ mini): Pulu ja kerrosten väistöt mitataan uudelleen.</summary>
@@ -78,9 +86,9 @@ namespace Matkakirja.Natiivi
             joystick.pickingMode = PickingMode.Ignore;
             osuma = Rakenne.El("mk-issohjaamo__joyosuma", joystick);
             Vector2 Paikka(Vector3 ruutu) => joystick.WorldToLocal(ruutu);
-            osuma.RegisterCallback<PointerDownEvent>(e => { osuma.CapturePointer(e.pointerId); Ohjaa(Paikka(e.position)); e.StopPropagation(); });
+            osuma.RegisterCallback<PointerDownEvent>(e => { osuma.CapturePointer(e.pointerId); Tartu(Paikka(e.position)); e.StopPropagation(); });
             osuma.RegisterCallback<PointerMoveEvent>(e => { if (osuma.HasPointerCapture(e.pointerId)) Ohjaa(Paikka(e.position)); });
-            osuma.RegisterCallback<PointerUpEvent>(e => { osuma.ReleasePointer(e.pointerId); AsetaSuunta(JoystickSuunta.Ei); });
+            osuma.RegisterCallback<PointerUpEvent>(e => { osuma.ReleasePointer(e.pointerId); tartunta = null; AsetaSuunta(JoystickSuunta.Ei); });
             osuma.RegisterCallback<PointerCancelEvent>(_ => AsetaSuunta(JoystickSuunta.Ei));
             osuma.RegisterCallback<PointerCaptureOutEvent>(_ => AsetaSuunta(JoystickSuunta.Ei));
 
@@ -463,11 +471,26 @@ namespace Matkakirja.Natiivi
 
         // --- joystick ---------------------------------------------------------------------------------------------
 
-        void Ohjaa(Vector2 p)
+        /// <summary>Kosketuksen alku: keskiruudusta neutraali (suunta liikkeestä), varresta heti suunta.</summary>
+        void Tartu(Vector2 p)
         {
             var k = joystick.contentRect.center;
+            if (Mathf.Max(Mathf.Abs(p.x - k.x), Mathf.Abs(p.y - k.y)) < KeskiPt)
+            {
+                tartunta = p;
+                AsetaSuunta(JoystickSuunta.Ei);
+                Debug.Log($"MATKAKIRJA linssit: ohjaamon joystick tartunta keskeltä ({p.x - k.x:0},{p.y - k.y:0})");
+                return;
+            }
+            tartunta = null;
+            Ohjaa(p);
+        }
+
+        void Ohjaa(Vector2 p)
+        {
+            var k = tartunta ?? joystick.contentRect.center;
             float dx = p.x - k.x, dy = p.y - k.y;
-            if (Mathf.Max(Mathf.Abs(dx), Mathf.Abs(dy)) < KuollutPt) { AsetaSuunta(JoystickSuunta.Ei); return; }
+            if (Mathf.Max(Mathf.Abs(dx), Mathf.Abs(dy)) < (tartunta.HasValue ? LiikePt : KuollutPt)) { AsetaSuunta(JoystickSuunta.Ei); return; }
             // Plus-muoto: vain hallitseva akseli (yksi suunta kerrallaan).
             AsetaSuunta(Mathf.Abs(dx) > Mathf.Abs(dy) ? (dx < 0 ? JoystickSuunta.Vasen : JoystickSuunta.Oikea)
                 : (dy < 0 ? JoystickSuunta.Ylos : JoystickSuunta.Alas));
