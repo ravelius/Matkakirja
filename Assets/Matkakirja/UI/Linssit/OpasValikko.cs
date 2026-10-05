@@ -29,11 +29,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Asutuspaikka: nimi, maa (näkyvä nimi), maanosa (näkyvä nimi), sijainti ja väkiluku.</summary>
         public readonly struct Kaupunki
         {
-            public readonly string Nimi, Maa, Maanosa;
+            public readonly string Nimi, Maa, Maanosa, Iso;
             public readonly double Lat, Lon;
             public readonly long Vakiluku;
-            public Kaupunki(string nimi, string maa, string maanosa, double lat, double lon, long vakiluku)
-            { Nimi = nimi; Maa = maa; Maanosa = maanosa; Lat = lat; Lon = lon; Vakiluku = vakiluku; }
+            public Kaupunki(string nimi, string maa, string maanosa, double lat, double lon, long vakiluku, string iso = null)
+            { Nimi = nimi; Maa = maa; Maanosa = maanosa; Lat = lat; Lon = lon; Vakiluku = vakiluku; Iso = iso; }
         }
 
         /// <summary>Kaupunkiaineisto; oletuksena Resources/IssPaikat/paikat.json (LS2:n ISS-LCD:n Natural Earth -asutuspaikat).</summary>
@@ -66,7 +66,7 @@ namespace Matkakirja.Natiivi
                         string iso = c[3] as string;
                         string maa = LinssiOhjain.MaatAineisto?.Hae(iso)?.Nimi ?? iso;
                         string mo = c.Count > 5 && c[5] is string m ? (Maanosat.TryGetValue(m, out var fi) ? fi : m) : "Kaikki maat";
-                        tulos.Add(new Kaupunki(c[0] as string, maa, mo, Convert.ToDouble(c[1]), Convert.ToDouble(c[2]), Convert.ToInt64(c[4])));
+                        tulos.Add(new Kaupunki(c[0] as string, maa, mo, Convert.ToDouble(c[1]), Convert.ToDouble(c[2]), Convert.ToInt64(c[4]), iso));
                     }
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA opas: paikat.json: " + e.Message); return null; }
@@ -493,7 +493,8 @@ namespace Matkakirja.Natiivi
                                  .Where(m => !string.IsNullOrEmpty(m)).Distinct().OrderBy(m => m))
                     {
                         string mm = m;
-                        Alanakyma(mm, () => { maa = mm; Avaa(Nakyma.Kaupungit); }, rivit);
+                        string iso = (kaikki ?? Array.Empty<Kaupunki>()).FirstOrDefault(k => k.Maa == mm && k.Maanosa == maanosa).Iso;
+                        Alanakyma(mm, () => { maa = mm; Sano("MaaValittu", new[] { typeof(string) }, iso); Avaa(Nakyma.Kaupungit); }, rivit);
                     }
                     break;
                 case Nakyma.Kaupungit:
@@ -506,7 +507,10 @@ namespace Matkakirja.Natiivi
                         Komento(kk.Nimi, () =>
                         {
                             Debug.Log($"MATKAKIRJA opas: kohde {kk.Nimi} ({kk.Lat:0.###}, {kk.Lon:0.###})");
-                            KohdeValittu?.Invoke(kk.Nimi, kk.Lat, kk.Lon);
+                            // Juna 146 (Linssiseppä 7ac53d22): ISO:lla, jolloin William sanoo valinnan ja samannimiset kaupungit
+                            // (Jerusalem IL/PS) erottuvat; vanha 3-parametrinen koukku varalla.
+                            if (!Sano("VaihdaKaupunki", new[] { typeof(string), typeof(double), typeof(double), typeof(string) }, kk.Nimi, kk.Lat, kk.Lon, kk.Iso))
+                                KohdeValittu?.Invoke(kk.Nimi, kk.Lat, kk.Lon);
                         }, rivit);
                     }
                     break;
@@ -554,6 +558,22 @@ namespace Matkakirja.Natiivi
             if (alas) { painettuVanhalle = osuma; Debug.Log($"MATKAKIRJA opas: kosketus vanhalle riville → nykyinen rivi {osuma}"); return; }
             if (osuma >= 0 && osuma == painettuVanhalle) Rivilta(nykyiset[osuma].Teko);
             painettuVanhalle = -1;
+        }
+
+        /// <summary>
+        /// Oppaan valintakutsu heijastuksella (OpasSovitin junan 146 sillasta, Linssiseppä): MaaValittu(iso) ja
+        /// VaihdaKaupunki(nimi, lat, lon, iso) sanovat valinnan Williamin äänellä. true = metodi löytyi ja palautti true/void.
+        /// </summary>
+        static bool Sano(string metodi, Type[] tyypit, params object[] arvot)
+        {
+            try
+            {
+                var m = typeof(OpasSovitin).GetMethod(metodi, System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static, null, tyypit, null);
+                if (m == null) return false;
+                var r = m.Invoke(null, arvot);
+                return !(r is bool b) || b;
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA opas: " + metodi + ": " + e.GetType().Name); return false; }
         }
 
         Button Komento(string teksti, Action teko, VisualElement isa = null)
