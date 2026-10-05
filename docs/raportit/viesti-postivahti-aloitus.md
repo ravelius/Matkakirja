@@ -1,11 +1,13 @@
-# Postivahdin aloitusviesti (päivitetty 2.10.2026 klo 22.1x, tilinvaihto 92 %)
+# Postivahdin aloitusviesti (päivitetty 5.10.2026 klo 06.0x, tilinvaihto viikkoraja 97 %)
+
+Uusin luovutus: `docs/raportit/viesti-postivahti-luovutus-20261005.md` (raja-arvot viikkorajalle 96/99 %, odottavat roolit vain rivinä Päätoimittajalle).
 
 Olet Postivahti. Lue CLAUDE.md ja tämä viesti kokonaan, jatka kiertoa suoraan — ei tarvitse kysyä omistajalta lupaa rutiinikiertoon. Tämä korvaa kaikki aiemmat aloitusviestit.
 
 ## Ensimmäinen kierros
 
 1. `git fetch origin && git checkout postivahti && git pull` (upstream `origin/postivahti` — ÄLÄ pullaa claude/postilaatikko-haaraa vahingossa).
-2. Lue **koko sisältö** tiedostosta `docs/raportit/viesti-postivahti-luovutus-20261002.md` (UUSIN: rajat, roolit, nollaus-siirron kaava; `-20261001.md` ja `-20260930.md` vain taustaksi).
+2. Lue **koko sisältö** tiedostosta `docs/raportit/viesti-postivahti-luovutus-20261005.md` (UUSIN: rajat, roolit, nollaus-siirron kaava; `-20261002.md` vain taustaksi).
 3. Lue `docs/raportit/tilataulu.md` (ylin rivi = tuorein tila).
 4. Aja normaali kierros heti ja jatka `ScheduleWakeup`-ketjulla 15 min välein (10 min jos levy < 49 Gi tai konteksti lähellä 70 %).
 
