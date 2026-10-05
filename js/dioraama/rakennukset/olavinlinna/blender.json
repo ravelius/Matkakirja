@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "cb0cd92d688975cc",
-  "kansio": "dioraama/olavinlinna/blender/cb0cd92d688975cc/",
+  "hash": "1f203575ddd15184",
+  "kansio": "dioraama/olavinlinna/blender/1f203575ddd15184/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500.glb",
@@ -10,8 +10,8 @@
     },
     {
       "polku": "hahmot/kappalainen-1500.glb",
-      "sha256": "80f852e4fba07630e805cd375e8f379354a08bba2b5e262949cbaf349b991d77",
-      "tavuja": 980644
+      "sha256": "9c81f6faa509ab9d357cd67d63c88e233a919c9c78146b6dd6b386569fee340c",
+      "tavuja": 2247572
     },
     {
       "polku": "hahmot/kirjuri-1500.glb",
