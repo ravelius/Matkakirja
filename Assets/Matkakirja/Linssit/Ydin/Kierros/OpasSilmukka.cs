@@ -18,6 +18,8 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Workerin kysymys (tyyppi "kysymys"): opas kysyy ääneen, vaihtoehdot chattiin; ei sijaintia.</summary>
         public bool Kysymys;
         public string[] Vaihtoehdot;
+        /// <summary>Pysähdyksen kuvat (Natiivi-UI 5.10.2026, omistaja 19.3x; Pelikoodarin worker "kuvat"): pieni kuvakortti.</summary>
+        public OpasKuva[] Kuvat = Array.Empty<OpasKuva>();
 
         public static OpasKohde Lue(IDictionary<string, object> j)
         {
@@ -41,8 +43,32 @@ namespace Matkakirja.Linssit.Kierros
                 foreach (var x in pl) if (x is string t && t.Length > 0) v.Add(t);
                 k.Vaihtoehdot = v.ToArray();
             }
+            k.Kuvat = OpasKuva.Lue(j.TryGetValue("kuvat", out var ko) ? ko as IList<object> : null);
             if (string.IsNullOrEmpty(k.Nimi) || double.IsNaN(k.Lat) || double.IsNaN(k.Lon) || Math.Abs(k.Lat) > 90 || Math.Abs(k.Lon) > 180) return null;
             return k;
+        }
+    }
+
+    /// <summary>Workerin kuva: {url, tyyppi valokuva|havainnekuva, tekija, lisenssi, lahde}; url pakollinen.</summary>
+    public sealed class OpasKuva
+    {
+        public string Url, Tekija, Lisenssi, Lahde;
+        public bool Havainnekuva;
+
+        public static OpasKuva[] Lue(IList<object> lista)
+        {
+            var tulos = new List<OpasKuva>();
+            if (lista != null)
+                foreach (var x in lista)
+                {
+                    if (!(x is IDictionary<string, object> j)) continue;
+                    string S(string k) => j.TryGetValue(k, out var v) ? v as string : null;
+                    string url = S("url");
+                    if (string.IsNullOrEmpty(url) || !url.StartsWith("http", StringComparison.Ordinal)) continue;
+                    tulos.Add(new OpasKuva { Url = url, Havainnekuva = S("tyyppi") == "havainnekuva", Tekija = S("tekija") ?? S("tekijä"),
+                        Lisenssi = S("lisenssi"), Lahde = S("lahde") ?? S("lähde") });
+                }
+            return tulos.ToArray();
         }
     }
 
