@@ -85,3 +85,8 @@ Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), i
 - KEHITYSTAHTI (omistaja 5.10. 12.30, Raamattu kohta 2, #3992): VIE-ikkunat 12 ja 20 (vain valmis+kuitattu); iPad-mittaus ei VIE-ehto;
   rutiinierän kuittaus ensin Laitetestaajalta, Päätoimittajalle vain maku/sisältö; todisteet todistusajolla (proto tyokalut/todistusajo/,
   TODISTUS.md merge-pyyntöön) vasta kun Pelikoodari ilmoittaa natiivin testimykistyksen ja OHJE.md:n valmiiksi.
+- LONTOO VAIHE 1 (Päätoimittaja, omistaja 16.3x): proto linssiseppa/lontoo b89cdc51 (ydin LontooLento/LontooReitti + 7 testiä,
+  LontooSovitin, LontooTaulu, KarttaKerrokset.RuutukrediititNakyviin — Natiivisepän ja Natiivi-UI:n kuittaus merge-pyynnössä).
+  JUMI: ion-tunnus puuttuu (CesiumJS-arviointitunnuksen poiminta estetty) → omistajan tunnus avaintiedostoon CESIUM_ION_TOKEN.
+  Käännös ~20.30 jälkeen (Julkaisija), ketju $S/ketju-lontoo.sh (OMA=1 testitila omalla maastolla), ajo-lontoo.sh portti
+  $S/sim-nyt-lontoo, iPad-simu 903C2B91; tulos lokit/linssiseppa-lontoo-vaihe1-20261005-a.
