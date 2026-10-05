@@ -1,4 +1,31 @@
-# Siirtosepän luovutus 5.10.2026 — TILA KLO 14.2x (Opus 5.5, high)
+# Siirtosepän luovutus 5.10.2026 — TILA KLO 17.3x (Opus 5.5, high)
+
+## Nyt (17.3x)
+
+- **Juna 144 — merge-pyyntö Natiivisepällä:** `siirtoseppa/linna-144` @ **03d02ee8** (linna-143 b10669da + Natiivi-UI kortti-tiivis a7757d06).
+  Päätoimittaja KUITTASI 15.4x. Todisteet: Pulun oikea tap jonottaa keskustelun ajan (`lokit/siirtoseppa-pulutap2/`), lähempi
+  keskustelukamera, kortti otsikkoriviksi, ennen/jälkeen (`lokit/siirtoseppa-ennen-jalkeen/`). Käännös vaatii
+  `MATKAKIRJA_KIRJASTOT=…/unity-paketit-siirtoseppa/kirjastot` (Cinemachine + Splines). Osoitin TF 144:n jälkeen **56e98a88**
+  (#4003, mainista; tarkistettu junan 144 koeapilla 5f257c20 16.55, 0 virhettä).
+- **Juna 145 — merge-pyyntö Natiivisepällä:** `siirtoseppa/linna-145` @ **12eeab86** (= linna-144 + 6f7ac8f5 ele-kytkentä
+  `vuorot[].ele` → glb-leike `ele_<ele>` kertaliikkeenä + 12eeab86 ele-loki). Päätoimittaja KUITTASI 17.3x; Laitetestaaja
+  kuittaa rutiinin, Päätoimittaja katsoo videon `lokit/siirtoseppa-ele2/ik/kappeli-ik1/tallenne-aanella.mp4` ennen VIE 12.
+  Eleet näkyvät tuotannossa vasta elepeilillä (#4004, Linnanrakentajan 1f75d8ed-sisältö).
+- **Final IK** (omistaja osti 5.10.): `siirtoseppa/final-ik` @ **19944f2d**, worktree `wt/proto-siirtoseppa-fik`. Paketti
+  `_lahteet/unity-paketit-siirtoseppa/Final IK.unitypackage`; gitissä vain ajonaikaiset kansiot (ei demoja), LAHTEET.md
+  (Asset Store EULA: vain yksityinen proto-git). Tarkistusta varten esikäännetty `dll/RootMotion.FinalIK.dll` (symlinkki
+  kirjastot-kansioon). Vaihe 1 FBBIK + GrounderFBBIK (`DioraamaHahmot3D.IK.cs`, päivitys käsin Sekoittimen jälkeen, lattiat
+  MeshCollider kerros 30, `poikki ik 0|1`, jalkamittari lokiin). Mittaus (c5cbba3a): kirjuri portailla >5 cm poikkeamat
+  65 % → 35 %; seisovat ennallaan. 19944f2d (Grounder pois istuvilta/polvistuvilta) EI vielä ajettu. Seuraavat: Aim IK ja
+  Interaction System odottavat Linnanrakentajan dataa (pyydetty 17.3x). iPad-mittaus vasta junaehdokkaana (Päätoimittaja).
+- **Steam Audio:** kappelin kaiku leivottu (`siirtoseppa/steam-audio` cdfe7acd, RT60 1,30/1,01/0,85 s, 7 kt); odottaa
+  Natiivisepän laitekäännöstä ja iPad-A/B:tä. Ei junaan 144/145.
+- **Puhujakuva-koe** (`siirtoseppa/puhujakuva-koe` 1ae53205) odottaa Codexia; ei junaan.
+- Skriptit (`proto-3d/tyokalut/siirtoseppa-ajot/`): ajo-linna-ik.sh (OSAT, KAMERA_<huone>), ajo-linna-pulutap.sh,
+  ajo-linna-ennen-jalkeen.sh, ajo-vuoro-1715.sh / -1730.sh. Appi: `lokit/siirtoseppa-fik-app` (c5cbba3a) ja
+  `lokit/siirtoseppa-juna144koe-app` (5f257c20). Simupaneelin detach irrottaa kaikkien laitteiden paneelit — älä käytä.
+
+## Aiempi tila 14.2x
 
 ## Nyt (14.2x)
 - **Proto-haarat (kaikki ilman pushia, proto-git):**
