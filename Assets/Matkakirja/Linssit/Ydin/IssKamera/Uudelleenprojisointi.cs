@@ -47,6 +47,12 @@ namespace Matkakirja.Linssit.IssKamera
         /// poikkeama säilyy lutin kautta: ulos = MeriUlos + lut(Meri + poikkeama) − lut(Meri).
         /// </summary>
         public byte[] MeriUlos;
+        /// <summary>
+        /// Maa-osuus pisteessä (KuvanTyosto.MaaOsuus, SCL-maamaski ~8 km:n sumennuksella); null = poikkeama kaikkialla. Simu 55448455
+        /// (Kanaria v2c): avomeren COG-vedessä aallokko ja kiilto jäivät 25 %:n poikkeamana, ja tasaisen mosaiikkimeren rajalle tuli
+        /// pystyraja. Poikkeama jää vain rannikolle (maa-osuus 0,02 → 0,15), avomeri on merenväri kuten mosaiikissa.
+        /// </summary>
+        public Func<double, double, double> MaaLahella;
 
         /// <summary>Onko UTM-pisteessä (e, n) ruudun SCL:n mukaan pilvi tai pilven varjo (ei haettu → ei).</summary>
         public bool Pilvinen(string tunnus, int vyohyke, double e, double n, double metria)
@@ -200,7 +206,9 @@ namespace Matkakirja.Linssit.IssKamera
                             vr = Math.Max(0, ru.VesiTasoPisteessa(0, e, n) - ru.UsvaR); vg = Math.Max(0, ru.VesiTasoPisteessa(1, e, n) - ru.UsvaG);
                             vb = Math.Max(0, ru.VesiTasoPisteessa(2, e, n) - ru.UsvaB);
                         }
-                        cr = Math.Max(0, d.Meri[0] + (cr - vr) * (1 - w)); cg = Math.Max(0, d.Meri[1] + (cg - vg) * (1 - w)); cb = Math.Max(0, d.Meri[2] + (cb - vb) * (1 - w));
+                        double jaa = 1 - w;
+                        if (d.MaaLahella != null) { double mo = d.MaaLahella(lat, lon), tm = Math.Max(0, Math.Min(1, (mo - 0.02) / 0.13)); jaa *= tm * tm * (3 - 2 * tm); }
+                        cr = Math.Max(0, d.Meri[0] + (cr - vr) * jaa); cg = Math.Max(0, d.Meri[1] + (cg - vg) * jaa); cb = Math.Max(0, d.Meri[2] + (cb - vb) * jaa);
                     }
                     // Maailman indeksi: ruudun alueen oma lut ennen saumasekoitusta (Laatta ei silloin sovella KuvaData.Lutia).
                     if (ru.Lut != null)
