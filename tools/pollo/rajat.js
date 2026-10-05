@@ -42,10 +42,12 @@ export const PUHE_PAIVARAJA_OLETUS = 400000;
 export const PUHE_KUUKAUSIRAJA_OLETUS = 6000000;
 
 /*
- * LUKIJOIDEN ELEVENLABS-PÄIVÄKATTO (omistaja 30.9.2026, v4 Turbo -vertailu): globaali merkkimäärä vuorokaudessa kaikille
- * ElevenLabs-lukijapyynnöille yhteensä (ei IP-kohtainen). Katon ylittyessä luenta tehdään xAI:lla.
+ * LUKIJOIDEN ELEVENLABS-PÄIVÄKATTO: globaali merkkimäärä vuorokaudessa kaikille ElevenLabs-lukijapyynnöille yhteensä
+ * (ei IP-kohtainen). Omistaja 5.10.2026 klo 13.2x: kaikki pelaajat lukevat nyt ElevenLabsilla (William), joten oletus
+ * 20 000 → 200 000; säilöt (reunavälimuisti + R2) pitävät vakiotekstien hinnan kertaluontoisena. Katon ylittyessä luenta
+ * tehdään xAI-varapolulla, jotta se ei jää mykäksi.
  */
-export const ELEVEN_LUKIJA_PAIVARAJA_OLETUS = 20000;
+export const ELEVEN_LUKIJA_PAIVARAJA_OLETUS = 200000;
 
 /*
  * KUVAGENEROINNIN RAJAT (kehittäjän eräajot, tehtava: 'kuva').
