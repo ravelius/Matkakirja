@@ -111,6 +111,7 @@ namespace Matkakirja.Natiivi
         bool nakyy, siruNakyy;
         OpasKohde odotettuKysymys;
         float krediittiAla = 40f;
+        readonly OpasTapit tapit;
         int siruPoletti = -1;
         readonly Button nappi;
         Nakyma nakyma;
@@ -166,6 +167,10 @@ namespace Matkakirja.Natiivi
             kuvaKortti.RegisterCallback<ClickEvent>(_ => SuurennaKuva());
             kuvaKortti.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             kerros.JokaRuutu += PaivitaKuva;
+
+            // Kameran tapit (juna 145): alakulmiin vain pysähdyksellä (OpasTapit).
+            tapit = new OpasTapit(Juuri);
+            kerros.JokaRuutu += PaivitaTapit;
             Viimeisin = this;
         }
 
@@ -265,8 +270,8 @@ namespace Matkakirja.Natiivi
                 float alaVara = juuriH - Juuri.worldBound.yMax; // turva-alueen alareuna ruudun alareunasta
                 ala = Mathf.Max(ala, Mathf.Round(k / ch * juuriH - alaVara + KuvaRako));
             }
+            if (krediittiAla != ala) Debug.Log($"MATKAKIRJA opas: sirut krediittien yläpuolelle {ala:0} pt (krediitit {k:0}/{ch:0})");
             krediittiAla = ala;
-            if (sirurivi.style.bottom.value.value != ala) { sirurivi.style.bottom = ala; Debug.Log($"MATKAKIRJA opas: sirut krediittien yläpuolelle {ala:0} pt (krediitit {k:0}/{ch:0})"); }
         }
 
         /// <summary>
@@ -287,11 +292,34 @@ namespace Matkakirja.Natiivi
             }
             if (siruNakyy) foreach (var c in sirurivi.Children()) Lisaa("siru", c);
             if (kuvaNakyy) Lisaa("kuva", kuvaKortti);
+            if (tapit.Nakyy) foreach (var t in Juuri.Query(className: "mk-tappi").ToList()) Lisaa("tappi", t);
             foreach (var c in ryhma.Children()) Lisaa("nappi", c);
             if (Auki) Lisaa("valikko", valikko);
             foreach (var o in juuri.Query(className: "mk-astroavaus__otsikko--haipyy").ToList())
                 if (o.resolvedStyle.opacity > 0.05f) foreach (var t in o.Children()) Lisaa("otsikko", t);
             return $"opas: peitto {ala / koko * 100f:0.0} % ({string.Join(", ", osat)})";
+        }
+
+        /// <summary>
+        /// Tapit näkyvät pysähdyksellä (Puhuu/Odottaa), eivät lennon, valikon tai chatin aikana. Sirurivi on niiden välissä; jos se
+        /// ei mahdu tappien väliin (kapea pystyruutu), se nousee tappien yläpuolelle.
+        /// </summary>
+        void PaivitaTapit()
+        {
+            if (!nakyy) { tapit.Paivita(false, krediittiAla); return; }
+            var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+            var l = OpasSovitin.Viimeisin?.Silmukka;
+            bool pysahdys = l != null && l.Nykyinen != null && (l.Vaihe == OpasVaihe.Puhuu || l.Vaihe == OpasVaihe.Odottaa);
+            tapit.Paivita(pysahdys && !Auki && !(chat?.Auki ?? false), krediittiAla);
+            float siruAla = krediittiAla;
+            if (tapit.Nakyy && siruNakyy)
+            {
+                float leveys = 0f;
+                foreach (var c in sirurivi.Children()) leveys += c.layout.width + 8f;
+                float vapaa = Juuri.layout.width - 2f * (OpasTapit.Reuna + OpasTapit.Halkaisija + KuvaRako);
+                if (leveys > vapaa) siruAla = krediittiAla + OpasTapit.Halkaisija + KuvaRako;
+            }
+            if (sirurivi.style.bottom.value.value != siruAla) sirurivi.style.bottom = siruAla;
         }
 
         // --- oppaan kuvat --------------------------------------------------------------------------------
@@ -342,7 +370,8 @@ namespace Matkakirja.Natiivi
             }
             if (!kuvaNakyy) return;
             float h = Juuri.resolvedStyle.height;
-            float ala = krediittiAla;
+            // Kortti oikean tapin yläpuolelle, kun tapit näkyvät.
+            float ala = tapit.Nakyy ? krediittiAla + OpasTapit.Halkaisija + KuvaRako : krediittiAla;
             if (siruNakyy && !float.IsNaN(h) && sirurivi.layout.height > 0) ala = Mathf.Max(ala, h - sirurivi.layout.yMin + KuvaRako);
             if (kuvaKortti.style.bottom.value.value != ala) kuvaKortti.style.bottom = ala;
         }
@@ -558,6 +587,7 @@ namespace Matkakirja.Natiivi
                 case "kuvat": VaihdaKuvat(); return "opas: kuvat " + (KuvatPaalla ? "päällä" : "pois");
                 case "suurenna": SuurennaKuva(); return "opas: suurennos " + (naytettyKuva != null ? "auki" : "ei kuvaa");
                 case "peitto": return Peitto();
+                case "tapit": return "opas: " + tapit.Kuvaus();
                 case "kuva":
                     var kb = kuvaKortti.worldBound;
                     return $"opas: kuva {(kuvaNakyy ? "näkyy" : "piilossa")} {naytettyKuva?.Url ?? "-"}, kortti {kb.xMin:0},{kb.yMin:0} {kb.width:0}×{kb.height:0}, kytkin {(KuvatPaalla ? "päällä" : "pois")}";
