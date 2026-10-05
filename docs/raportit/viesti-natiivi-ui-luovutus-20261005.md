@@ -133,6 +133,9 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   `matkakirja-pollo-aani`), lukijan rivi piiloon chatissa. Odottaa: Pelikoodarin workerin julkaisu → käännös → kuvat kolmesta
   paikasta rinnakkain (kartta, astrokuva/ISS-taulu, maakuntakortti) Päätoimittajalle. Astrokohteiden 472 vastausta
   taustatiedoksi myöhemmin (AstronauttiAineisto, Linssiseppä).
+  Päätoimittaja 16.5x HYVÄKSYI suunnitelman 1–4. Todisteet: kuvat rinnakkain ISS-taulu / maakuntakortti / kartan Pulu (avaus +
+  yhden vastauksen jälkeen) + lyhyt ÄÄNELLINEN video kaiuttimesta (Auto lukee, viiva ei lue, tila säilyy paikasta toiseen;
+  ääni Unityn kaappauksesta, skriptit/jatka-aani.sh-malli, ei kaiuttimia).
 - Astrokuva: natiivi-ui/astrokuva-tauko-144 0062cd81 (junan 144 päällä; II lukijan kaiuttimen kanssa, Päätoimittaja hyväksyi)
   odottaa NYT käännös (~16.35) + simu iPhone/iPad → still + video. Vanha natiivi-ui/astrokuva-tauko 047844b1 vanhentunut.
 
