@@ -227,7 +227,11 @@ namespace Matkakirja.Natiivi
             sb.Append("\"nahdyt\":[");
             bool eka = true;
             foreach (var id in silmukka.Nahdyt) { if (!eka) sb.Append(','); sb.Append('"').Append(Escape(id)).Append('"'); eka = false; }
-            sb.Append("],\"kieli\":\"fi\"}");
+            sb.Append("],\"kieli\":\"fi\"");
+            // "Kerro lisää" ei toista edellistä kappaletta (Pelikoodari #4011).
+            var ed = silmukka.Nykyinen?.Teksti;
+            if (!string.IsNullOrEmpty(ed)) sb.Append(",\"edellinen_teksti\":\"").Append(Escape(ed)).Append('"');
+            sb.Append('}');
             using var r = new UnityWebRequest(PuluChat.Palvelin + Polku, "POST")
             {
                 uploadHandler = new UploadHandlerRaw(Encoding.UTF8.GetBytes(sb.ToString())),
