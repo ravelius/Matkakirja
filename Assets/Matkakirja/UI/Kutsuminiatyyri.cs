@@ -86,11 +86,32 @@ namespace Matkakirja.Natiivi
             nimi = Rakenne.Teksti("", "mk-kutsu__nimi", nappi);
             Kirjasimet.Aseta(nimi, Kirjasin.LukuLihava);
             nappi.style.display = DisplayStyle.None;
-            kerros.JokaRuutu += Paivita;
+            // Kartan pisteeseen kiinnitetty: asetetaan kameran jälkeen samassa ruudussa (omistaja 5.10.2026 klo 14.4x: "heiluu
+            // kartalla … kun panoroi. se saisi pysyä aivan paikallaan koko ajan"), ei JokaRuutu-vaiheessa.
+            kerros.KameranJalkeen += Paivita;
         }
 
         /// <summary>Kutsu näkyvissä (testikomento).</summary>
         public bool Nakyy => nakyy;
+
+        /// <summary>Testikomennon syy, miksi kutsu on piilossa (ensimmäinen täyttymätön ehto Paivitassa).</summary>
+        public string Syy()
+        {
+            var ui = UiNakymat.Hae();
+            var o = PeliOhjain.Instanssi;
+            if (ui == null) return "ei UiNakymat";
+            if (o == null || !o.Kaytossa) return "PeliOhjain ei käytössä";
+            if (o.Tila != SilmukanTila.Kartta) return "tila " + o.Tila;
+            string id = o.PelaajanKaupunki;
+            if (id == null) return "ei pelaajan kaupunkia";
+            if (ui.Linssit?.Auki != null) return "linssi auki";
+            if (ui.Kaupunkikortti.Nakyvissa) return "kaupunkikortti näkyvissä";
+            if (Nappula.Lentopelissa != null) return "lentopeli";
+            if (!Kutsuttava(id)) return $"{id}: ei kohdekarttaa eikä opasta (Kohdekartat.Ladattu {Kohdekartat.Ladattu})";
+            if (!(ui.Nostot.Karttakerroin >= Kerroin || MaanNakymassa())) return "kamera liian kaukana";
+            if (UiSisalto.Kaupunki(id) == null) return id + ": ei kaupunkia sisällössä";
+            return lukittu.HasValue ? (peitossa ? "peitossa (lukittu)" : "näkyy tai tulossa (lukittu)") : "paikka valitsematta tai ei mahdu";
+        }
         public Rect Laatikko => nakyy ? nappi.worldBound : default;
 
         /// <summary>Uusinnat alusta: kaupunki vaihtui, kortti tuli uudelleen näkyviin tai verkko palasi.</summary>
@@ -290,7 +311,10 @@ namespace Matkakirja.Natiivi
 
         void Aseta(Rect rr)
         {
-            float x = Mathf.Round(rr.x), y = Mathf.Round(rr.y);
+            // Pikselikohdistus fyysisiin pikseleihin (ei kokonaisiin pisteisiin): 3× näytöllä askel 1/3 pt, joten kortti ei
+            // nytki kaupungin pisteen suhteen (ero ≤ 0,17 pt).
+            float px = juuri.panel != null && juuri.panel.visualTree.layout.width > 0 ? Screen.width / juuri.panel.visualTree.layout.width : 1f;
+            float x = Mathf.Round(rr.x * px) / px, y = Mathf.Round(rr.y * px) / px;
             if (nappi.resolvedStyle.left != x) nappi.style.left = x;
             if (nappi.resolvedStyle.top != y) nappi.style.top = y;
         }
