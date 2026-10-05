@@ -1,16 +1,16 @@
 /**
  * JULKAISUN PUHEMOOTTORITARKISTUS (Fable 27.9.2026: "savukkeeseen tarkistus
- * x-puhe-moottori = xai tuotannossa").
+ * x-puhe-moottori = xai tuotannossa"; omistaja 5.10.2026: lukijat ElevenLabsilla → oletus eleven).
  *
  * Pyytää julkaistulta workerilta yhden lyhyen puhepalan ja vaatii, että
- * vastauksen x-puhe-moottori on odotettu (xai, kun XAI_API_KEY on
- * asetettu). Pala on lohkossa 'savuke', joten se generoidaan kerran ja
+ * vastauksen x-puhe-moottori on odotettu (eleven, kun ELEVEN_API_KEY on
+ * asetettu; xai on enää varapolku). Pala on lohkossa 'savuke', joten se generoidaan kerran ja
  * tulee sen jälkeen R2:sta — tarkistus ei maksa joka julkaisulla.
  * Salaisuuden asetus vaatii hetken levitä, siksi muutama uusinta.
  *
- *   node tools/pollo/tarkista-puhemoottori.mjs <workerin osoite> <origin> [odotettu=xai]
+ *   node tools/pollo/tarkista-puhemoottori.mjs <workerin osoite> <origin> [odotettu=eleven]
  */
-export async function tarkistaPuhemoottori(osoite, origin, odotettu = 'xai', {
+export async function tarkistaPuhemoottori(osoite, origin, odotettu = 'eleven', {
   yrityksia = 6, viiveMs = 5000, haku = fetch,
 } = {}) {
   let viimeinen = null;
@@ -35,7 +35,7 @@ export async function tarkistaPuhemoottori(osoite, origin, odotettu = 'xai', {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const [osoite, origin, odotettu = 'xai'] = process.argv.slice(2);
+  const [osoite, origin, odotettu = 'eleven'] = process.argv.slice(2);
   const tulos = await tarkistaPuhemoottori(osoite, origin, odotettu);
   console.log(`puhemoottori: ${JSON.stringify(tulos)}`);
   if (!tulos.ok) process.exit(1);
