@@ -75,6 +75,14 @@ namespace Matkakirja.Natiivi
         public static event Action<CesiumKaupunki> Avattu, Suljettu;
         /// <summary>Pallon kamera (näkymän ajan) ja tilesetit: Google tai maasto (Pinta) ja OSM-rakennukset (null Googlella).</summary>
         public Camera Kamera => kamera;
+        /// <summary>Maantieteellinen piste (korkeus ellipsoidista, m) Unityn maailmaan georeferenssin kautta; null, jos näkymä kiinni.</summary>
+        public Vector3? MaailmaPiste(double lat, double lon, double korkeus)
+        {
+            if (!auki || georef == null || !georef.isActiveAndEnabled) return null;
+            var ecef = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(lon, lat, korkeus));
+            var u = georef.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
+            return new Vector3((float)u.x, (float)u.y, (float)u.z);
+        }
         public Cesium3DTileset Rakennukset => rakennukset;
 
         /// <summary>Käytössä oleva lähde (Google voi vaihtua Ioniin latausvirheen jälkeen).</summary>

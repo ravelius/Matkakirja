@@ -140,6 +140,7 @@ namespace Matkakirja.Natiivi
                 return;
             }
             nakymaAuki = true;
+            KytkeNimilappu(true);
             istunto = Guid.NewGuid().ToString("N");
             testiIndeksi = 0;
             if (kierto != null) SyoteLukko.Esta(this);
@@ -233,6 +234,31 @@ namespace Matkakirja.Natiivi
         /// Akselit (Päätoimittaja 5.10. 21.4x, hyväksytty): oikea ↔ kiertää (Oikea.x), oikea ↕ nostaa/laskee (Oikea.y), vasen ylös
         /// lähentää ja alas loitontaa (etäisyys = −Vasen.y). Järjestys Siirtosepän OpasOhjaus.Paivita(kierto, korkeus, etäisyys).
         /// </summary>
+        /// <summary>
+        /// Kohteen nimilappu (Natiivi-UI OpasNimilappu, juna 145; UI-kokoonpano heijastuksella): nasta kohteen yläpuolella (maa + korkeus,
+        /// 5–80 m) pysähdyksellä, kamera kaupunkinäkymän pääkamera. Sulje irrottaa.
+        /// </summary>
+        void KytkeNimilappu(bool paalle)
+        {
+            var t = typeof(PuluChat).Assembly.GetType("Matkakirja.Natiivi.OpasNimilappu");
+            if (t == null) return;
+            const System.Reflection.BindingFlags F = System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static;
+            Func<Vector3?> kohde = null; Func<Camera> kamera = null;
+            if (paalle)
+            {
+                kohde = () =>
+                {
+                    var l = silmukka; var k = l?.Nykyinen; var kehys = l?.NykyinenKehys;
+                    if (k == null || kehys == null || k.Kysymys) return null;
+                    double nosto = Math.Max(5, Math.Min(80, k.KorkeusM > 0 ? k.KorkeusM : k.KokoM * 0.3));
+                    return kaupunki.MaailmaPiste(k.Lat, k.Lon, kehys.MaaM + nosto);
+                };
+                kamera = () => kaupunki.Kamera;
+            }
+            t.GetField("Kohde", F)?.SetValue(null, kohde);
+            t.GetField("Kamera", F)?.SetValue(null, kamera);
+        }
+
         void LueTapit()
         {
             if (Time.unscaledTime < tapitTestiLoppuu) { silmukka.Tapit = tapitTesti; silmukka.PelaajaOhjaa = true; return; }
@@ -573,6 +599,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             KyydinKameraEnnen.Ajo = null;
+            KytkeNimilappu(false);
             KrediititTiivis.Paivita(false);
             Hiljenna();
             KytkeChat(false);
