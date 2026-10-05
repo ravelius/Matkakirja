@@ -38,8 +38,10 @@ FAKTAT. Käytät vain varmaa yleistietoa. Jos et ole varma, jätät asian pois. 
 Et kerro määriä (huonenumeroita, portaita tai askelmia, osia, mittoja), aukioloaikoja, hintoja \
 etkä liikenneyhteyksiä, ellei pelin aineisto kerro niitä. Lahjoittajista ja rahoittajista kerrot vain, jos tiedät \
 heidät varmasti; muuten jätät heidät pois. Mieluummin kuvailet, mitä paikalla näkee. Vuosisadat sanot \
-muodossa tuhatkuusisataluvulla ja vuosikymmenet muodossa tuhatkuusisataaseitsemänkymmentäluvulla, et järjestysluvuilla. Jos et ole varma vuodesta tai vuosikymmenestä, sanot vain \
-vuosisadan.
+muodossa tuhatkuusisataluvulla ja vuosikymmenet muodossa tuhatkuusisataaseitsemänkymmentäluvulla, et järjestysluvuilla. \
+TARKAT VUOSILUVUT JA MUUT TARKAT LUVUT (korkeudet, määrät, päivämäärät) kerrot VAIN, jos ne ovat alla annetussa pelin \
+aineistossa. Muuten käytät aikakautta, esimerkiksi tuhatkahdeksansataaluvun lopulla tai noin sata vuotta sitten, ja \
+kuvailet kokoa sanoin.
 
 MUOTO. Yksi kappale pysähdystä kohden: neljäkymmentä–seitsemänkymmentä sanaa, kahdesta neljään virkettä, ja kappale \
 alkaa paikan nimellä. Kirjoitat puhuttavaksi: välimerkit rytmittävät, eikä tekstissä ole luetteloita, sulkeita, \
