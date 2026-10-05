@@ -16,11 +16,14 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 - natiivi-ui/lipputanko-kiintea 536783f0 — yksi kiinteä tangon paikka per maa, peitossa Lipputanko.Piilota.
 
 ## Juna 143 — avoinna
-- natiivi-ui/chat-linna b38360f4 — KUITATTU (chat estää linnan eleet ja sulkeutuu linssin avautuessa). Merge-pyyntö
-  Natiivisepälle puuttuu vielä → lähetä.
+- natiivi-ui/chat-linna b38360f4 — KUITATTU, Natiiviseppä mergesi juna-143-koeen (3a6c994e).
 - natiivi-ui/x-napit 9a688396 — ✕-inventaarion poistot, KAIKKI todennettu oikealla napautuksella (xt-arkki.jpg,
   xs3-6-sisallys-ohi.png, 06.53); KUITATTU junaan 143, merge-pyyntö lähetetty Natiivisepälle 06.5x.
-  Siivous 16/20/21 (IssKyytiNakyma sulkuVanha, Linssivalitsin ylaSulje ja Muut-paneeli), kun juna 142 on masterissa.
+  Natiiviseppä mergesi juna-143-koeen (a7cd8d44).
+- natiivi-ui/x-siivous 121b0840 (07.5x, BUILD 142:n päällä) — siivous 16/20/21: IssKyytiNakyma sulkuVanha (näkyi vain
+  avaruuskävelyllä, joka on pois valikosta), Linssivalitsin ylaSulje ja kuollut Muut-paneeli. unity-tarkistus 0 virhettä,
+  pohjavahti ok, merge juna-143-koeen puhdas. Käännös- ja simuvuoro pyydetty Julkaisijalta 08.0x; todisteet: valikon
+  pääsivu + Linssit-alinäkymä + ohinapautus oikealla napautuksella, ISS-kytkinpöytä ilman vanhaa ✕:ää ja POISTU.
 - natiivi-ui/iss-ohjaamo-lcd 0fdda21f — ohjaamo + LS2:n LCD-paikat; odottaa LS2:n maailmakuvia (Amazonia) ja S2-indeksiä.
 - Myöhemmin (Päätoimittaja): ISS-kuvan vihreä nimilappu hukkuu kirkkaalle hiekalle (az-3667-a4).
 
