@@ -6916,6 +6916,306 @@ export const ASTRONAUTIN_KYSYMYKSET = {
         "havaintoId": "ISS056-E-153400"
       }
     ]
+  },
+  "kobenhavn": {
+    "kysymykset": [
+      "Mikä salmi erottaa Tanskan Ruotsista kuvassa?",
+      "Mikä matala saari erottuu Juutinrauman keskellä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä salmi erottaa Tanskan Ruotsista kuvassa?",
+        "vastaus": "Kuvassa leveä vesialue on Juutinrauma eli Øresund. Se erottaa Tanskan Själlannin saaren Ruotsista, ja Kööpenhamina sijaitsee sen länsirannalla.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS034&roll=E&frame=66957",
+            "title": "ISS034-E-66957 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS034-E-66957"
+      },
+      {
+        "kysymys": "Mikä matala saari erottuu Juutinrauman keskellä?",
+        "vastaus": "Keskellä salmea erottuu matala Saltholmin saari. Sen yli kulkee Juutinrauman silta, joka näkyy kuvassa ohuena viivana.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS034&roll=E&frame=66957",
+            "title": "ISS034-E-66957 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS034-E-66957"
+      }
+    ]
+  },
+  "luzern": {
+    "kysymykset": [
+      "Minkä järven rannalla Luzern sijaitsee?",
+      "Mitkä vuoret erottuvat kuvan oikeassa reunassa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minkä järven rannalla Luzern sijaitsee?",
+        "vastaus": "Luzern sijaitsee Vierwaldstättersee-järven eli Luzernin järven pohjoisrannalla. Kuvassa järvi mutkittelee Alppien reunalla kuvan oikealla puolella.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS040&roll=E&frame=16849",
+            "title": "ISS040-E-16849 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS040-E-16849"
+      },
+      {
+        "kysymys": "Mitkä vuoret erottuvat kuvan oikeassa reunassa?",
+        "vastaus": "Kuvan oikeassa reunassa nousevat Sveitsin Alppien huiput. Ne näkyvät pilvien lomasta, ja kuva on otettu kesäkuussa 2014.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS040&roll=E&frame=16849",
+            "title": "ISS040-E-16849 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS040-E-16849"
+      }
+    ]
+  },
+  "bergen": {
+    "kysymykset": [
+      "Millainen maasto kuvassa on Bergenin ympärillä?",
+      "Millä aluksella kuva otettiin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Millainen maasto kuvassa on Bergenin ympärillä?",
+        "vastaus": "Kuvassa Norjan länsirannikko on jyrkkää vuonomaisemaa. Meren lahdet tunkeutuvat syvälle vuorten väliin Bergenin ympäristössä.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=STS060&roll=94&frame=2",
+            "title": "STS060-94-2 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "STS060-94-2"
+      },
+      {
+        "kysymys": "Millä aluksella kuva otettiin?",
+        "vastaus": "Kuva otettiin avaruussukkulasta lennolla STS-60 helmikuussa 1994. Sukkula kiersi noin 350 kilometrin korkeudessa, ja aurinko oli matalalla, joten vuonojen rinteet erottuvat varjoista.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=STS060&roll=94&frame=2",
+            "title": "STS060-94-2 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "STS060-94-2"
+      }
+    ]
+  },
+  "monaco": {
+    "kysymykset": [
+      "Mikä on Monacon tunnettu kaupunginosa kuvassa?",
+      "Mitkä kohteet NASA mainitsee Monacon kuvassa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä on Monacon tunnettu kaupunginosa kuvassa?",
+        "vastaus": "Kuvassa erottuu Monte Carlon kaupunginosa Monacon ruhtinaskunnassa. Kaupunkivaltio on pieni, ja se sijaitsee Välimeren rannalla Ranskan ja Italian rajalla.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss056e032555",
+            "title": "iss056e032555 – NASA"
+          }
+        ],
+        "havaintoId": "iss056e032555"
+      },
+      {
+        "kysymys": "Mitkä kohteet NASA mainitsee Monacon kuvassa?",
+        "vastaus": "NASAn mukaan kuvassa näkyvät Monte Carlon alue, Louis II -stadion ja Fontvieillen satama. Kuva otettiin kesäkuussa 2018 avaruusaseman kiertäessä Välimeren rannikon yllä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss056e032555",
+            "title": "iss056e032555 – NASA"
+          }
+        ],
+        "havaintoId": "iss056e032555"
+      }
+    ]
+  },
+  "berliini": {
+    "kysymykset": [
+      "Mikä joki kulkee Berliinin halki kuvassa?",
+      "Mikä entinen lentokenttä näkyy Berliinin kuvassa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä joki kulkee Berliinin halki kuvassa?",
+        "vastaus": "Berliinin halki kulkee Spree-joki. Se mutkittelee kaupungin keskustan läpi, ja kuva on otettu maaliskuussa 2011.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS027&roll=E&frame=7390",
+            "title": "ISS027-E-7390 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS027-E-7390"
+      },
+      {
+        "kysymys": "Mikä entinen lentokenttä näkyy Berliinin kuvassa?",
+        "vastaus": "Kuvassa näkyy entinen Tempelhofin lentokenttä. Sen laaja avoin alue erottuu tiiviistä kaupunkirakenteesta.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS027&roll=E&frame=7390",
+            "title": "ISS027-E-7390 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS027-E-7390"
+      }
+    ]
+  },
+  "amsterdam": {
+    "kysymykset": [
+      "Mikä järvi on Amsterdamin vieressä kuvassa?",
+      "Mitä Amsterdamin ympärillä kuvassa näkyy?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä järvi on Amsterdamin vieressä kuvassa?",
+        "vastaus": "Amsterdamin vieressä näkyy Markermeer-järvi. Kaupungin läpi virtaa Amstel-joki, josta Amsterdam on saanut nimensä.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS023&roll=E&frame=48029",
+            "title": "ISS023-E-48029 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS023-E-48029"
+      },
+      {
+        "kysymys": "Mitä Amsterdamin ympärillä kuvassa näkyy?",
+        "vastaus": "Kuvassa näkyvät satama-altaat, kanavat ja tiheä tieverkko. Kuva otettiin toukokuussa 2010 avaruusasemalta noin 340 kilometrin korkeudesta.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS023&roll=E&frame=48029",
+            "title": "ISS023-E-48029 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS023-E-48029"
+      }
+    ]
+  },
+  "madrid": {
+    "kysymykset": [
+      "Millaisella alueella Madrid sijaitsee kuvan mukaan?",
+      "Milloin Madridin kuva otettiin ja mistä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Millaisella alueella Madrid sijaitsee kuvan mukaan?",
+        "vastaus": "Madrid sijaitsee Espanjan keskiylängöllä Iberian niemimaan keskellä. Kuvassa kaupungin punertava tiivis rakennuskanta erottuu ympäröivästä maastosta.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS023&roll=E&frame=48969",
+            "title": "ISS023-E-48969 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS023-E-48969"
+      },
+      {
+        "kysymys": "Milloin Madridin kuva otettiin ja mistä?",
+        "vastaus": "Kuva otettiin toukokuussa 2010 kansainväliseltä avaruusasemalta. Asema kiersi tuolloin noin 340 kilometrin korkeudessa.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS023&roll=E&frame=48969",
+            "title": "ISS023-E-48969 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS023-E-48969"
+      }
+    ]
+  },
+  "sevilla": {
+    "kysymykset": [
+      "Mikä joki kulkee Sevillan kautta kuvassa?",
+      "Mihin Espanjan alueeseen Sevilla kuuluu?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä joki kulkee Sevillan kautta kuvassa?",
+        "vastaus": "Sevillan läpi kulkee Guadalquivir-joki. Se on Andalusian tärkein joki, ja se mutkittelee kaupungin ohi kohti Atlanttia.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS014&roll=E&frame=15604",
+            "title": "ISS014-E-15604 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS014-E-15604"
+      },
+      {
+        "kysymys": "Mihin Espanjan alueeseen Sevilla kuuluu?",
+        "vastaus": "Sevilla on Andalusian autonomisen alueen pääkaupunki Etelä-Espanjassa. Kuva otettiin helmikuussa 2007 avaruusasemalta.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS014&roll=E&frame=15604",
+            "title": "ISS014-E-15604 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS014-E-15604"
+      }
+    ]
+  },
+  "krakova": {
+    "kysymykset": [
+      "Miksi Krakovan seutu näyttää kuvassa valkoiselta?",
+      "Mikä joki virtaa Krakovan kautta?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Miksi Krakovan seutu näyttää kuvassa valkoiselta?",
+        "vastaus": "Kuva on otettu helmikuussa 2003, ja maa on lumen peitossa. Kaupungin tumma taajama erottuu valkeaa peltoaukeaa vasten.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS006&roll=E&frame=31123",
+            "title": "ISS006-E-31123 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS006-E-31123"
+      },
+      {
+        "kysymys": "Mikä joki virtaa Krakovan kautta?",
+        "vastaus": "Krakovan kautta virtaa Veikselin (Wisła) joki. Se on Puolan pisin joki ja virtaa Itämereen.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS006&roll=E&frame=31123",
+            "title": "ISS006-E-31123 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS006-E-31123"
+      }
+    ]
+  },
+  "milano": {
+    "kysymykset": [
+      "Miltä Milanon seutu näyttää yöllä kuvassa?",
+      "Milloin Milanon yökuva otettiin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Miltä Milanon seutu näyttää yöllä kuvassa?",
+        "vastaus": "Milanon suurkaupunkialue valaisee Lombardian tasangon kuin lappupeitto. Kaupungin tiheä ydin erottuu kirkkaana keskittymänä kuvan vasemmassa laidassa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss026e028829",
+            "title": "iss026e028829 – NASA"
+          }
+        ],
+        "havaintoId": "iss026e028829"
+      },
+      {
+        "kysymys": "Milloin Milanon yökuva otettiin?",
+        "vastaus": "Kuva otettiin 22. helmikuuta 2011 Expedition 26 -miehistön jäsenen toimesta. NASAn kuvauksen mukaan kirkkaat valkoiset valot osoittavat kaupungin historiallisen keskustan.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss026e028829",
+            "title": "iss026e028829 – NASA"
+          }
+        ],
+        "havaintoId": "iss026e028829"
+      }
+    ]
   }
 };
 
