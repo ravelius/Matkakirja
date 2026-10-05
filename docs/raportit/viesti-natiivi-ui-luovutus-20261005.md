@@ -73,6 +73,9 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   Päätoimittaja 13.5x: ulkoasu hyvä, stillit omistajalla; 99 %-pysähdys Siirtosepälle. Tyylikirja: web-PR #3998
   (Julkaisija mergeää vihreänä), natiivin kopio latauspalkki 62bafb4a (lähde f3ec57932a52). Merge-pyyntö Natiivisepälle
   vasta, kun omistaja hyväksyy JA Siirtosepän ajoituskorjaus on mukana.
+  14.04: ajoitus todennettu 1e32f0b1:llä (linna-143 3be07c30): 1. avaus 1→92 % 15 s, 100 % 15,4 s; 2. avaus 49→87 %,
+  100 % 6,6 s (lq-alku-stdout.txt, q1/q2-kuvat). ODOTTAA vain omistajan hyväksyntää → merge-pyyntö latauspalkki 62bafb4a;
+  kytkentärivi Siirtosepän haarassa.
 
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
