@@ -12,9 +12,11 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   paikat.json "maanimet", täkyjen varapolku). Todennettu käännöksellä 472a6a0e (+ LS1 444cd016 Amsterdam-lento), kuvat
   lokit/natiivi-ui-1035/amsterdam/146koe-*. Amsterdam-valikko 5/5 (3244207f). Odottaa: pin-, +N- ja korttistillit
   appilla lokit/natiiviseppa-app-146toisto2-7ac47be9 seuraavalla SIMU NYT -vuorolla, ennen VIE 12.
-- Juna 147: natiivi-ui/pulu-kuvakonteksti 20261915 (Pulun "kuva"-kenttä, Pelikoodari #4038; todisteet kun Pöllö julki).
-  Tekemättä: LAAJA/TELE-KYTKIN kameranapin viereen (hyväksytty), LCD "KEHITETÄÄN…" + latauspalkki + "KUVA VALMIS"
-  (LS2 linssiseppa2/iss-kamera-juliste 2b0c7d00: IssKameraKuva.Valmis(OmaKuva) Lahde/Laaja), maakuntakortti väistää chatin.
+- Juna 147 (01.5x): yksi haara natiivi-ui/koe-147 20a9680f (iss-kamera-lcd + pulu-kuvakonteksti + maakuntakortin väistö).
+  Todennettu simussa (lokit/natiivi-ui-1035/juna147/1–10): objektiivi LAAJA/TELE, maakuntakortti → PINNATTU PALKKI
+  (lappu piiloon mukana; Päätoimittajan kuittaus pyydetty), astrokuvan Pulu-sirut kuvan mukaan (Sarytšev/Tokio).
+  AVOIN: LCD "KEHITETÄÄN…"-palkki ja "KUVA VALMIS" eivät näkyneet (UI piilossa renderöinnin ajan, meri ilman maata):
+  odottaa LS2:n vastausta (nopein onnistuva kuva ja missä vaiheessa palkki näkyy).
 
 ## KEHITYSTAHTI (omistaja 5.10. 12.30, Raamattu kohta 2 #3992)
 VIE-ikkunat klo 12 ja 20 (valmis + kuitattu lähtee, keskeneräinen odottaa). iPad-mittaus ei ole VIE-ehto. Toiminnallinen
