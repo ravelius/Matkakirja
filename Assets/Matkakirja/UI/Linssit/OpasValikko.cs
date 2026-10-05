@@ -268,6 +268,31 @@ namespace Matkakirja.Natiivi
             if (sirurivi.style.bottom.value.value != ala) { sirurivi.style.bottom = ala; Debug.Log($"MATKAKIRJA opas: sirut krediittien yläpuolelle {ala:0} pt (krediitit {k:0}/{ch:0})"); }
         }
 
+        /// <summary>
+        /// Testi `ui opasvalikko peitto`: näkyvien oppaan elementtien pinta-ala osuutena ruudusta (sirut, kuvakortti, ohjausnapit,
+        /// avoin valikko, pysähdyksen otsikon tekstit). Päätoimittajan raja 45 %, tavoite ~15 %.
+        /// </summary>
+        string Peitto()
+        {
+            var juuri = Juuri.panel?.visualTree;
+            if (juuri == null) return "opas: peitto ei paneelia";
+            float koko = juuri.layout.width * juuri.layout.height, ala = 0f;
+            var osat = new List<string>();
+            void Lisaa(string nimi, VisualElement e)
+            {
+                if (e == null || e.resolvedStyle.display == DisplayStyle.None || e.resolvedStyle.opacity < 0.05f || e.worldBound.width <= 0) return;
+                float a = e.worldBound.width * e.worldBound.height;
+                ala += a; osat.Add($"{nimi} {a / koko * 100f:0.0}");
+            }
+            if (siruNakyy) foreach (var c in sirurivi.Children()) Lisaa("siru", c);
+            if (kuvaNakyy) Lisaa("kuva", kuvaKortti);
+            foreach (var c in ryhma.Children()) Lisaa("nappi", c);
+            if (Auki) Lisaa("valikko", valikko);
+            foreach (var o in juuri.Query(className: "mk-astroavaus__otsikko--haipyy").ToList())
+                if (o.resolvedStyle.opacity > 0.05f) foreach (var t in o.Children()) Lisaa("otsikko", t);
+            return $"opas: peitto {ala / koko * 100f:0.0} % ({string.Join(", ", osat)})";
+        }
+
         // --- oppaan kuvat --------------------------------------------------------------------------------
 
         void VaihdaKuvat()
@@ -529,6 +554,7 @@ namespace Matkakirja.Natiivi
                     return "opas: testikuva" + (testiKuva.Havainnekuva ? " (havainnekuva)" : "");
                 case "kuvat": VaihdaKuvat(); return "opas: kuvat " + (KuvatPaalla ? "päällä" : "pois");
                 case "suurenna": SuurennaKuva(); return "opas: suurennos " + (naytettyKuva != null ? "auki" : "ei kuvaa");
+                case "peitto": return Peitto();
                 case "kuva":
                     var kb = kuvaKortti.worldBound;
                     return $"opas: kuva {(kuvaNakyy ? "näkyy" : "piilossa")} {naytettyKuva?.Url ?? "-"}, kortti {kb.xMin:0},{kb.yMin:0} {kb.width:0}×{kb.height:0}, kytkin {(KuvatPaalla ? "päällä" : "pois")}";
