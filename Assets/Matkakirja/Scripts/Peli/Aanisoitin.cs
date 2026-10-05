@@ -1085,6 +1085,27 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>
+        /// Poolin tila testikomennolle (`astro kyyti suhina tila`, Natiivi-UI 4.10.: joystickin suhina −91 dB tallenteessa): tason
+        /// kertoimet (Äänimaisema, Tausta, väistö) ja jokaisen silmukan lataus, pyydetty taso ja AudioSourcen äänekkyys.
+        /// </summary>
+        public static string PooliTila(string suodin = null)
+        {
+            var s = Instanssi;
+            if (s == null) return "aanisoitin: ei käynnissä";
+            var ic = CultureInfo.InvariantCulture;
+            var sb = new StringBuilder();
+            sb.Append($"pooli: äänimaisema {s.Tila.Aanimaisema}, tausta {s.Tila.TaustanKerroin.ToString("0.00", ic)}, väistö {s.pooliVaisto.Arvo.ToString("0.00", ic)}, silmukoita {s.pooliElossa.Count}");
+            foreach (var l in s.pooliElossa)
+            {
+                if (suodin != null && (l.Url == null || !l.Url.Contains(suodin))) continue;
+                string nimi = l.Url == null ? "-" : l.Url.Substring(l.Url.LastIndexOf('/') + 1);
+                sb.Append($"; {nimi}: ladattu {l.Ladattu}, käynnissä {l.Kaynnistetty}, virhe {(l.K != null && l.K.Virhe)}, taso {l.Taso.Arvo.ToString("0.00", ic)}"
+                    + $" (kohde {l.Taso.Kohde.ToString("0.00", ic)}), volume {(l.A != null ? l.A.volume.ToString("0.00", ic) : "-")}, soi {(l.A != null && l.A.isPlaying)}");
+            }
+            return sb.ToString();
+        }
+
         // --- tila testikomennoille (PeliOhjain.TilaJson "musiikki") --------------
 
         public string Json()

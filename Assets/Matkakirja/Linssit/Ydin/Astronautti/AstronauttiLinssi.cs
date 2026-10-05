@@ -188,6 +188,7 @@ namespace Matkakirja.Linssit.Astronautti
         public void Paivita()
         {
             if (!Auki) return;
+            PaivitaSuhina();
             double nyt = Nyt;
             PaivitaAvaus(nyt);
             double s = Suhde;
@@ -286,6 +287,13 @@ namespace Matkakirja.Linssit.Astronautti
         public Kuvakulma KyydinAsento => kyyti.Viimeisin;
         public bool AlusSiirretty => siirto.Siirretty;
 
+        /// <summary>Aluksen nykyinen alapiste siirto mukaan lukien (Natiivi-UI:n kohdevalikko: ≤ 30 lähintä maajälkeä, juna 141).</summary>
+        public (double Lat, double Lon) AlusAlapiste()
+        {
+            var p = AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000).Paikka;
+            return (p.Lat, p.Lon);
+        }
+
         /// <summary>Cupolan aluksen hetki: todellinen rata kierrettynä (Iss.AlusSiirto); suunta aluksen omasta liikkeestä.</summary>
         Iss.IssHetki AlusHetki(DateTime utc, double nyt)
         {
@@ -318,6 +326,7 @@ namespace Matkakirja.Linssit.Astronautti
             siirto.Aseta(Iss.IssNyt.Paikka(loppu), Iss.IssNyt.Suuntima(loppu), uusi.Paikka, uusi.Suunta, nyt, kesto);
             lento = null;
             tietoAika = -1;
+            sijaintiAika = -1;
             return true;
         }
 
@@ -376,15 +385,18 @@ namespace Matkakirja.Linssit.Astronautti
         /// kelattu hetki). Unity-puoli pitää piirtämättömän ennakkokameran tässä, jotta Cesium lataa näkymän laatat jo ennen
         /// napautusta. false = ei kaukonäkymässä (kyydissä oma kamera lataa, avauksen aikana ei vielä).
         /// </summary>
-        public bool CupolanEnnakko(out Kuvakulma asento)
+        /// <param name="sekuntiaEteen">Asento näin monta (reaali)sekuntia myöhemmin radalla (Natiiviseppä juna 140: alus oli siirtynyt
+        /// 1° ja uusi esihaku vasta alkanut, kun Cupola avattiin → 4,0 s / 86 %); 0 = nyt.</param>
+        public bool CupolanEnnakko(out Kuvakulma asento, double sekuntiaEteen = 0)
         {
             asento = default;
-            if (!Auki || Vaihe == AvauksenVaihe.Musta || kyyti.Kyydissa || !Iss.IssKyyti.SuoraAvaus) return false;
-            var utc = Iss.IssNyt.Kello();
+            // Myös linssin avauksen mustan aikana (Natiiviseppä ab-b139: Cupola 2,4 s linssin avauksesta, esihaku 107/892).
+            if (!Auki || kyyti.Kyydissa || !Iss.IssKyyti.SuoraAvaus) return false;
             var simu = Iss.IssNyt.Simu;
+            var utc = Iss.IssNyt.Kello().AddSeconds(sekuntiaEteen * simu.Nopeus());
             if (CupolaPaivanvaloon && simu.Live && lento == null && Iss.Avaruuskavely.Yopuolella(utc))
                 utc = Iss.Avaruuskavely.SeuraavaPaivanvalo(Iss.IssNyt.Paikka, utc) ?? utc;
-            asento = Iss.IssKuvakulma.Ikkuna(AlusHetki(utc, Nyt / 1000));
+            asento = Iss.IssKuvakulma.Ikkuna(AlusHetki(utc, Nyt / 1000 + sekuntiaEteen));
             return true;
         }
 
@@ -594,6 +606,114 @@ namespace Matkakirja.Linssit.Astronautti
         public (Havaintokohde Kohde, Iss.Ylilento? Hetki, bool Perilla)? ViimeisinLento =>
             lento == null ? ((Havaintokohde, Iss.Ylilento?, bool)?)null : (lento.Kohde, lento.Ylilento, lento.Perilla);
 
+        // ---- OHJAAMO (omistaja 4.10.2026 klo 11.3x "ISS-OHJAAMO UUSIKSI"; UI Natiivi-UI, logiikka tässä) ----
+
+        /// <summary>
+        /// Joystick (plus-muotoinen): kutsu vain muutoksessa (painallus, suunnan vaihto, irrotus = Ei). Katse liikkuu Cupolassa
+        /// IssKatse.Askeleessa pidon ajan, kiihtyy hieman ja pysähtyy heti irrotettaessa (ei inertiaa).
+        /// </summary>
+        public void Joystick(Iss.JoystickSuunta suunta) => kyyti.Katse.Ohjaa(suunta, y?.Aika ?? 0);
+
+        /// <summary>Joystick pidossa ja katse liikkuu (suhinaääni, paneelin animaatio).</summary>
+        public bool JoystickLiikkuu => kyyti.Katse.JoystickLiikkuu;
+
+        /// <summary>
+        /// LCD:n sijainti (omistaja: "ROOMA, ITALIA", lähin kaupunki, meri tai vuori; maa alle): ISS:n alapisteestä nyt (simuloitu
+        /// kello), isoilla kirjaimilla. Lasketaan enintään kerran sekunnissa; ("", "") ennen paikkadatan latausta.
+        /// </summary>
+        public (string Kohde, string Maa) Sijainti()
+        {
+            double t = y?.Aika ?? 0;
+            if (sijaintiAika >= 0 && t - sijaintiAika < 1.0 && !string.IsNullOrEmpty(sijainti.Kohde)) return sijainti;
+            sijaintiAika = t;
+            var p = siirto.Paikka(Iss.IssNyt.Paikka(Iss.IssNyt.Kello()), t);
+            sijainti = Iss.IssSijainti.Hae(Iss.IssSijainti.Nykyinen, p.Lat, p.Lon);
+            return sijainti;
+        }
+        (string Kohde, string Maa) sijainti = ("", "");
+        double sijaintiAika = -1;
+
+        /// <summary>
+        /// Kuvauspaikka, jonka kohdalla Cupolan katse on (omistaja 4.10.: kameranappi aktiivinen vain kuvauspaikan kohdalla):
+        /// katsepiste enintään Iss.Kuvauspaikat.KuvausKm keskipisteestä, ei siirtymän aikana; null = nappi ei aktiivinen.
+        /// </summary>
+        public Iss.Kuvauspaikka Kuvauspaikka()
+        {
+            if (!Auki || kyyti.Tila != Iss.KyydinTila.Ikkuna || kyyti.Siirtyy || !kyyti.OnAsento || siirto.Siirtyy(Nyt / 1000)) return null;
+            var a = kyyti.Viimeisin;
+            var p = Iss.Kuvauspaikat.Lahin(Iss.Kuvauspaikat.Nykyiset, a.Lat, a.Lon);
+            // Vain kun paikka näkyy ISS:ltä riittävän jyrkästi (Natiivi-UI 4.10.: Etna 1 782 km:n päästä kallistuksella 83,8° →
+            // kenttä 0,06° ja tasaisen sininen kuva); muuten COG-polku kuten muualla.
+            if (p != null && Iss.IssKuvakulma.KohteenKulma(AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000), p.Lat, p.Lon).Kallistus > Iss.Kuvauspaikat.MaxKallistus)
+                return null;
+            return p;
+        }
+
+        /// <summary>
+        /// COG-KUVAN KAMERA (Päätoimittaja 4.10.2026): kohde on pelaajan näkymän keskipiste maassa (lat, lon), ja kamera siirretään
+        /// virtuaalisesti radan korkeudella kohti kohdetta niin, että kohde näkyy zeniittikulmassa enintään <paramref name="maxKallistus"/>
+        /// ("kuin otettu hetkeä myöhemmin, kun ISS on lähempänä"); suunta kohteesta alukseen säilyy, joten kuva on samalta puolelta.
+        /// Loiva Cupolan katse (~74°) toi pitkän ilmakehäpolun ja violetin usvan.
+        /// </summary>
+        public Kuvakulma JyrkkaKuvakulma(double lat, double lon, double maxKallistus)
+        {
+            var h = AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000);
+            var nyt = Iss.IssKuvakulma.KohteenKulma(h, lat, lon);
+            if (nyt.Kallistus <= maxKallistus) return nyt;
+            const double R = 6_371_000, D = Math.PI / 180;
+            double z = maxKallistus * D, eta = Math.Asin(R / (R + Math.Max(1000, h.KorkeusM)) * Math.Sin(z));
+            double kaari = (z - eta) / D;
+            double suunta = Iss.IssKuvakulma.Suunta(lat, lon, h.Paikka.Lat, h.Paikka.Lon);
+            Iss.IssKuvakulma.Kohde(lat, lon, suunta, kaari, out double plat, out double plon, out _);
+            return Iss.IssKuvakulma.KohteenKulma(new Iss.IssHetki(new LatLon(plat, plon), h.KorkeusM, h.Suuntima), lat, lon);
+        }
+
+        /// <summary>Tarkan kuvan kamera kuvauspaikkaan aluksen nykyisestä paikasta (Iss.Kuvauspaikat.Rajaus).</summary>
+        public (Kuvakulma Asento, double Pystykentta) KuvausRajaus(Iss.Kuvauspaikka p, double leveysPerKorkeus) =>
+            Iss.Kuvauspaikat.Rajaus(AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000), p, leveysPerKorkeus);
+
+        /// <summary>Kaasun asento (ajan kerroin 1, 10, 100 tai 1000).</summary>
+        public int Kaasu { get; private set; } = 1;
+
+        /// <summary>Kaasun asento vaihtui (Unity: vivun naksahdus).</summary>
+        public event Action<int> KaasuVaihtui;
+
+        /// <summary>
+        /// Kaasu (omistaja: "kaasu, jolla voi säätää ajan kulumisen nopeutta", 1×/10×/100×/1000×): ajan kerroin tästä hetkestä ilman
+        /// hyppyä, myös 1× (toisin kuin AsetaNopeus, jonka 1 palaa LIVE-hetkeen). Ylilento unohtuu. false = ei auki tai ei pykälä.
+        /// </summary>
+        public bool AsetaKaasu(int kerroin)
+        {
+            if (!Auki || Array.IndexOf(Iss.Simukello.Nopeudet, kerroin) < 0) return false;
+            lento = null;
+            Iss.IssNyt.Simu.AsetaKerroin(kerroin);
+            tietoAika = -1;
+            if (kerroin != Kaasu)
+            {
+                Kaasu = kerroin;
+                y?.Tehoste(KaasuTehoste, 1f);   // vivun pykälän aito naksahdus (Sisältökirjuri, Tehostetaulu)
+                KaasuVaihtui?.Invoke(kerroin);
+            }
+            return true;
+        }
+
+        /// <summary>Vivun naksahduksen tehostetunnus Tehostetaulussa (Sisältökirjuri: aito äänite, ei generoitua).</summary>
+        public const string KaasuTehoste = "iss-kaasu";
+        /// <summary>
+        /// Joystickin liikkeen suhina (omistaja: "kun alus liikkuu, pitäisi kuulua äänitehoste, vaikka vähän voimakkaampi suhina"):
+        /// aito äänite silmukkana (Sisältökirjuri), soi kun JoystickLiikkuu, häivytys SuhinaLiukuS. null = ei ääntä.
+        /// </summary>
+        public static string SuhinaUrl = "https://media.matkakirja.app/aanet/cupola/ohjaamo/v1/iss-kaasu-suhina-loop.wav";
+        public const float SuhinaLiukuS = 0.1f;
+        ISilmukka suhina;
+
+        void PaivitaSuhina()
+        {
+            bool cupola = kyyti.Tila == Iss.KyydinTila.Ikkuna;
+            if (suhina == null && cupola && !string.IsNullOrEmpty(SuhinaUrl) && y != null) suhina = y.Silmukka(SuhinaUrl);
+            suhina?.Voimakkuus(cupola && JoystickLiikkuu ? 1f : 0f, SuhinaLiukuS);
+        }
+
         /// <summary>Nopeutus (web asetaNopeus): 1 = Palaa LIVE (pehmeä kelaus todelliseen hetkeen), 10, 100 tai 1000. Ylilento unohtuu.</summary>
         public bool AsetaNopeus(int kerroin)
         {
@@ -802,6 +922,10 @@ namespace Matkakirja.Linssit.Astronautti
             if (!Auki) return;
             LopetaSeuranta();
             LopetaKyyti();
+            kyyti.Katse.Ohjaa(Iss.JoystickSuunta.Ei, y?.Aika ?? 0);
+            suhina?.Lopeta(SuhinaLiukuS);
+            suhina = null;
+            Kaasu = 1;
             // Web pura: linssi suljetaan, aika heti todelliseksi (testikellon siirto säilyy).
             lento = null;
             Iss.IssNyt.Simu.PalaaLive(vahennetty: true);

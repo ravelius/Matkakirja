@@ -128,10 +128,19 @@ namespace Matkakirja.Natiivi
             kuva.SetPixelData(tavut, 0);
             kuva.Apply(true, true);
             Destroy(lahde);
-            if (jaettu != null) Destroy(jaettu);
+            // Kahden kuvan välimuisti (Natiiviseppä juna 140: kaukonäkymän pilvikuva palautetaan Cupolasta palatessa lataamatta
+            // uudelleen; kolmas kuva korvaa vanhimman).
+            if (valimuisti.Count >= 2)
+            {
+                foreach (var v in valimuisti)
+                    if (v.Value != jaettu) { Destroy(v.Value); valimuisti.Remove(v.Key); break; }
+            }
+            valimuisti[osoite] = kuva;
             jaettu = kuva;
             jaetunOsoite = osoite;
         }
+
+        static readonly System.Collections.Generic.Dictionary<string, Texture2D> valimuisti = new System.Collections.Generic.Dictionary<string, Texture2D>();
 
         /// <summary>
         /// PÄIVÄN PILVET (ISS-realismi 2, omistajan kortti 28.9.): vaihtaa jaetun kuvan toiseen osoitteeseen (Julkaisijan
@@ -144,6 +153,13 @@ namespace Matkakirja.Natiivi
         {
             while (lataa) yield return null;
             if (jaettu != null && jaetunOsoite == osoite) { materiaali.SetTexture("_MainTex", jaettu); valmis?.Invoke(true); yield break; }
+            if (valimuisti.TryGetValue(osoite, out var muistissa) && muistissa != null)
+            {
+                jaettu = muistissa; jaetunOsoite = osoite;
+                materiaali.SetTexture("_MainTex", jaettu);
+                valmis?.Invoke(true);
+                yield break;
+            }
             var vanha = jaettu;
             lataa = true;
             try { yield return LataaKuva(osoite); }

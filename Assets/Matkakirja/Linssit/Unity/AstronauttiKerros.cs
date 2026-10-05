@@ -214,6 +214,9 @@ namespace Matkakirja.Natiivi
             if (kyyti != KyydinTila.Kauko)
                 peitto = PilvetKyydissa == "pois" ? 0 : Astronauttimatikka.PilvienPeittoHuippu;
             pilvienPeitto = Mathf.MoveTowards(pilvienPeitto, (float)peitto, Time.unscaledDeltaTime / 0.8f);
+            // ISS-kuvan renderöinnissä ei pilvikuorta (Päätoimittaja 5.10. klo 16.0x, simu 8aae2864 Kanaria: päivän pilvikuva
+            // ~20 km/px venyi kuvassa suttuiseksi): pilvet tulevat kuvan terävästä Pilvikentästä, Cupola ennallaan.
+            if (KuvanPinta.HasValue) pilvienPeitto = 0;
             // Päivän oikeat pilvet eivät ajelehdi maapallon ympäri (satunnaisen kuvan kierto vain kaukonäkymässä).
             pilvet?.Aseta(pilvienPeitto, paivanPilvet ? 0 : kiertoAsteina);
             pilvet?.Tarkkuus(kyyti != KyydinTila.Kauko && !TarkatPilvetPois ? 1f : 0f, TarkkojenPilvienKm);
@@ -347,6 +350,13 @@ namespace Matkakirja.Natiivi
                     if (ok) yokuori?.Pilvet(Pilvikuori.JaettuKuva);
                 });
             }
+            // Kaukonäkymään palatessa oma pilvikuva takaisin (Natiiviseppä juna 140: Cupolan jälkeen pallon pilvet läikikkäitä ja
+            // päivän GIBS-kuvan rataväleistä pilvettömiä suorakulmioita Afrikassa ja Brasiliassa). Välimuistista, ei uutta latausta.
+            if (tila == KyydinTila.Kauko && paivanPilvetHaettu && pilvet != null)
+            {
+                paivanPilvetHaettu = false;
+                pilvet.VaihdaKuva(pilvienOsoite ?? Pilvikuori.OletusOsoite, ok => { if (ok) paivanPilvet = false; });
+            }
             // Kyydissä oikeat tähdet ja Kuu (KyydinTaivas); satunnainen kenttä pois, kun oikeat ovat ladattu (muuten himmeänä 0,3).
             if (tila != KyydinTila.Kauko && kyydinTaivas == null) kyydinTaivas = KyydinTaivas.Luo(georeferenssi, kamera);
             kyydinTaivas?.Nayta(tila != KyydinTila.Kauko);
@@ -441,6 +451,7 @@ namespace Matkakirja.Natiivi
                     && (kuvan.HasValue ? kk.RasterinJako(S2Kerros, kuvan.Value.W, kuvan.Value.S, kuvan.Value.E, kuvan.Value.N, kuvan.Value.Rx, kuvan.Value.Ry)
                                        : kk.RasterinJako(S2Kerros, S2W, S2S, S2E, S2N, S2Rx, S2Ry));
                 s2Url = haluttu;
+                AsetaS2Reuna(s2Lisatty);   // S2 ↔ kuvan pinta: Kyytipino.S2 pysyy päällä, joten AsetaS2Savy ei kutsu tätä
                 long valimuisti = s2Lisatty ? kk.PallonValimuisti((kevyt ? S2ValimuistiKevytMt : S2ValimuistiMt) * 1024L * 1024) : -1;
                 Debug.Log($"MATKAKIRJA linssit: kyydin pinta: {(kuvan.HasValue ? "kuvan pinta" : "S2")} {(s2Lisatty ? "päällä" : "ei mahtunut")} (z{6}–z{6 + maxTaso}) {url}; " +
                     $"laite {(kevyt ? "kevyt" : "täysi")} (muisti {SystemInfo.systemMemorySize} Mt, {SystemInfo.deviceModel}), " +
@@ -502,9 +513,13 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// S2-kerroksen pehmeä reuna (Päätoimittaja 1.10.: 45°E- ja 32°N-saumat): tileset-varjostin liu'uttaa paikan 2 painon nollaan
         /// suorakulmion (länsi, etelä, itä, pohjoinen) 1,5°:n reunalla; nolla = pois, jolloin muut paikan 2 kerrokset ennallaan.
+        /// Kuvan pinnan (KuvanPinta: maailmakameran kuva tai kuvauspaikka) ollessa paikassa 2 reuna on pois: Euroopan suorakulmio
+        /// häivytti maailman kuvan pinnan nollaan (simu 64886756: Sahara, Grand Canyon, Uluru ja Amazonia BMNG:n ~1 km:n
+        /// tarkkuudella; Venetsia Euroopassa terävä), ja kuvan oman juurijaon reuna voisi osua kuva-alaan (juuri 5,6°, reuna 1,5°).
+        /// S2-sävy on varjostimessa kiinteästi Euroopan suorakulmiossa, joten maailman kuvat jäävät sävyttämättä.
         /// </summary>
         static void AsetaS2Reuna(bool paalla) => Shader.SetGlobalVector(S2ReunaId,
-            paalla ? new Vector4((float)S2W, (float)S2S, (float)S2E, (float)S2N) : Vector4.zero);
+            paalla && !KuvanPinta.HasValue ? new Vector4((float)S2W, (float)S2S, (float)S2E, (float)S2N) : Vector4.zero);
 
         /// <summary>Kutsutaan joka Kyyti-kutsulla (tietorivi sekunnin välein): kuukauden vaihtuessa kerros vaihtuu.</summary>
         void PaivitaKuukaudenPinta(bool kyydissa)
