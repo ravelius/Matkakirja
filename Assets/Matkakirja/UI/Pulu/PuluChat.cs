@@ -665,6 +665,18 @@ namespace Matkakirja.Natiivi
         /// Sieppaajan vastaus samaan chattiin: teksti Pulun kuplana ja tasan 2 jatkokysymystä kiinnitettyinä siruina (korvaavat
         /// edelliset). Kaiuttimen Auto-tilassa vastaus luetaan Pulun äänellä kuten workerin vastaus.
         /// </summary>
+        /// <summary>
+        /// ELÄVÄ OPAS (Linssiseppä 5.10.2026): chat auki oppaan linssissä lämpimällä lasiteemalla (oma paikka "opas", keskustelu alkaa
+        /// puhtaana); kappaleet tulevat Vastaa-kutsulla, pelaajan toiveet Sieppaa-koukun kautta. Ankkuri oletuksena Pulu.
+        /// </summary>
+        public void AvaaOppaalle(Func<Rect> ankkuri = null)
+        {
+            AvaaLinssissa(ankkuri ?? (() => pulu.Laatikko), "opas", null, "lasi");
+        }
+
+        /// <summary>Oppaan päättyessä chat kiinni (sama kuin Sulje; nimi oppaan kytkentää varten).</summary>
+        public void SuljeOppaalta() => Sulje();
+
         public void Vastaa(string teksti, IList<string> jatkot = null)
         {
             if (string.IsNullOrWhiteSpace(teksti)) return;
