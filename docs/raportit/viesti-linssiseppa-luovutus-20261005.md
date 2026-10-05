@@ -94,3 +94,14 @@ Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), i
   ja Cesiumin vahvistuksen jälkeen). Toteutettu 4317849a (lontoo data google|ion|oma, oletus google). Omistaja lisää assetin
   tunnukseen; ketju valitsee googlen automaattisesti, kun asset vastaa 200 (muuten ion). Rakennustasojen arkki lähetetty
   (lokit/linssiseppa-lontoo-tutkimus-20261005/lontoo-rakennustasot-kooste.png).
+
+## TILA 5.10. 18.5x — ELÄVÄ OPAS (omistaja 17.5x/18.0x) MERGE-PYYNNÖSSÄ JUNAAN 144
+- Proto: linssiseppa/lontoo 3a842d85 (CesiumKaupunki, KierrosSovitin, OpasSovitin, Ydin/Kierros/*, KierrosTaulu) + Siirtosepän
+  siirtoseppa/kaupunki-kuva 39244391 (KaupunkiKuva.cs, koukut Avattu/Suljettu) + Natiivi-UI:n natiivi-ui/opas-master 1ee62e19
+  (PuluChat.Sieppaa/Vastaa/AvaaOppaalle, OpasValikko). Yhteiskäännös 6d7a569e, simu 18.47 lokit/linssiseppa-opas-20261005-f OK.
+- Worker: Pöllö /opas/seuraava (#4008/#4009/#4011/#4012) ja /opas/tunnus (#4013, CESIUM_ION_TOKEN GitHub-salaisuudesta). Tunnus
+  laitteella: Documents/cesium-ion-tunnus.txt (kehitys) tai Pöllöstä ajossa; ei repoon eikä lokiin.
+- Komennot: linssi opas; opas testi|testiotsake|pysayta 0|1, kaupunki <nimi>, toive <teksti>, data google|ion|oma, tila.
+  Ajot: proto-3d/tyokalut/linssiseppa-ajot/ajo-opas-v2.sh (TUNNUS_POLLOSTA=1, TOIVE, UIKUVAT).
+- AUKI: himmeä "ISO-BRITANNIA" Googlen kuvassa (kysytty Natiivisepältä kerrosta); muisti simussa 5,3 Gt (Laitetestaaja iPad junan
+  jälkeen); ääni todentamatta simussa (testiotsake). Lontoon kierros (linssi lontoo) on mukana kehittäjätilassa.
