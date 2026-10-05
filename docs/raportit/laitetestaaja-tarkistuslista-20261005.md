@@ -30,3 +30,8 @@ yhdellä rivillä: **OK** tai **PUUTE: <kohta>**. Päätoimittaja katsoo vain om
 - Orbit-mittaus: `poikki mittaus` → kamera paikka; 200 pt veto ≈ 90°; kierros sulkeutuu 4 vedolla.
 - Mylly: `ui mylly peli helppo`; Luovuta/Jatka/Poistu oikeilla tapeilla.
 - Tiedostokanava: `Documents/{peli,ui,linssi}-komento.txt`; `ui puu` → `ui-puu.json` koordinaateille.
+
+## Simuäänisääntö (Pelikoodari 5.10. ~13.30)
+Testimykistys kattoi vain Unityn äänet: radiostriimi (AVPlayer), Cupola-silmukat, Pulun realtime-puhekanava ja ISS-striimilukija (Puhe.Lue) soivat Macin
+kaiuttimiin. Kunnes korjaus (pelikoodari/testimykistys-natiivi 8ff03da0) on käännöksessä: **ei radio-, astronauttilinssiä eikä Pulun puhekanavaa simussa.**
+Korjauksen jälkeen `aani mykistys` -vastauksessa pitää lukea "unity päällä, natiivi päällä" (todistusajo tarkistaa ja keskeyttää).
