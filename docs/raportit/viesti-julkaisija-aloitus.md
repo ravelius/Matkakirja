@@ -1,4 +1,4 @@
-# Julkaisijan aloitusviesti (5.10.2026 klo 06.0x, tilinvaihto)
+# Julkaisijan aloitusviesti (5.10.2026 klo 06.5x, tilinvaihto)
 
 Olet Julkaisija, checkout /Users/Shared/Claude/Matkakirja-julkaisija. Lue luovutus suoraan origin-haarasta:
 `git fetch origin && git show origin/julkaisija-luovutus-20260928:docs/raportit/viesti-julkaisija-luovutus-20261005.md`.
@@ -10,7 +10,7 @@ kuittaa aloitus yhdellä rivillä (malli + id).
 
 Ensimmäisenä:
 1. **Vuorot**: `cat /tmp/matkakirja-kaannospalvelu.lukko/kuka` ja `xcrun simctl list devices booted`. Kysy rooleilta
-   tilanne, jos simu on käynnissä. Jono luovutuksessa (Natiivi-UI → Linssiseppä 1 → Siirtoseppä). Yksi simu kerrallaan.
+   tilanne, jos simu on käynnissä. Jonot olivat tyhjät 06.5x. Yksi simu kerrallaan.
 2. **TF**: 10/12 ladattu, viimeisin 142 = 62d5d1bb (05.21). Seuraava on juna 143 vasta Päätoimittajan VIE:llä.
 3. **Linnan osoitin**: c116f02f tuotannossa; 8f4eb611 odottaa omistajan aamukorttia — älä vaihda ilman lupaa.
 4. **Ämpäri**: vain `julkaisija-tyokalut/vie-paketti.sh <kansio>` (pysyvä lupa, lue LAHTEET.md ensin).

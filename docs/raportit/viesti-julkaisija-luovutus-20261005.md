@@ -1,4 +1,4 @@
-# Julkaisijan luovutus 5.10.2026 klo 06.0x (viikko 97 %, tilinvaihto n. 07.15)
+# Julkaisijan luovutus 5.10.2026 klo 06.5x (viikko 99 %, tilinvaihto)
 
 Kirjoittaja: Julkaisija (Opus 5.5, high). Juokseva loki: /Users/Shared/Claude/julkaisija-tyokalut/tf-jono-20261002.txt
 (kaikki TF-, osoitin-, juna- ja vuorotapahtumat). Pitolista: julkaisija-tyokalut/pidossa.txt.
@@ -24,16 +24,23 @@ Kirjoittaja: Julkaisija (Opus 5.5, high). Juokseva loki: /Users/Shared/Claude/ju
 
 ## Web-juna
 
-- Tyhjä. Viimeisin: #3974 v2615 (d09aef689), tuotannossa v2615 03.58. #3981 (loki) suoraan dd9fd0b9c.
+- Tyhjä. 5.10.: #3974 v2615 (d09aef689, tuotannossa 03.58), #3981 loki suoraan, #3982 muutosloki 142 suoraan,
+  #3983 (astro images-api ensin, tools+tests, :docs ilman versiota) MERGED 06.2x. Avoimia junaan pyydettyjä PR:iä ei ole.
 
-## Käännös- ja simujono (06.0x)
+## Käännös- ja simujono (06.5x)
 
-- Lukko: Siirtoseppä bdd5be5e (05.58, ~3 min). Sen jälkeen jono tyhjä.
-- Simu: **Natiivi-UI FB234D08** (05.58–~06.15, junan 143 ✕-poistot, eb81f01e) → **Linssiseppä 1 D0D2CD1E** 10 min
-  (linna-kuva 5cc14f8a) → **Siirtoseppä F989814A** 10 min (latausvirheen todistus, bdd5be5e:n käännös).
+- **Molemmat tyhjät**, ei simuja käynnissä, lukko vapaa.
+- Viimeisimmät käännökset: Natiivi-UI 00d54775 (b38360f4+9a688396), LS1 46d3aca2 (linna-kuva e6fa10ea),
+  LS2 10c31692 (iss-ohjaamo 69e49d69, S2-indeksi v2), Siirtoseppä 698bf6d6 (bdd5be5e) ja 7dec0e86 (Timeline),
+  Natiiviseppä bc6a9af0 (zstd ca4251f5).
 - Varaus: Linssiseppä 1 kiilto 11–13, D0D2CD1E ~12 min, build 3674ed53.
 - Säännöt: yksi simu kerrallaan myös yöllä; lähetä "SIMU NYT" ja odota "simu vapaa"; jos rooli ei aloita, lähetä
   viesti uudelleen myös mcp__ccd_session_mgmt__send_message:llä (Laitetestaajan 03.31-viesti ei mennyt perille).
+
+## Levy
+
+- 34 Gi (raja TF:lle 30). En poistanut Päätoimittajan pyytämiä ~/Library/Developer/Xcode/DerivedData/Unity-iPhone-dfkisao…/
+  ArchiveIntermediates (5,7 G) enkä proto-kaannos/Build/yo (2,2 G): oman työtilan ulkopuolella → omistajan aamukortti.
 
 ## Ämpäri
 
@@ -45,5 +52,5 @@ Kirjoittaja: Julkaisija (Opus 5.5, high). Juokseva loki: /Users/Shared/Claude/ju
 
 - Juna 143 (Natiiviseppä kokoaa): linnan Unity-uudistus + zstd/Brotli (ca4251f5 → bc6a9af0, A/B 0 Exception) +
   ✕-poistot (Natiivi-UI eb81f01e) + Tavli (Siirtoseppä 8546d06a) + Timeline (7dec0e86) + LS2 ohjaamo (ecf0883f).
-- Oma worktree /Users/Shared/Claude/wt/julkaisija-muutosloki-1-1-142 jäi osittain poistamatta (hakemisto ei tyhjentynyt,
-  ~0,5 Gi, git worktree jo pruned). Yösiivous tai uusi `rm -rf` kun mikään ei kirjoita siihen.
+- Siirtoseppä otti 06.27–06.32 linnan A/B-kuvat (A c116f02f, B 27022c94 = junan 143 yhdistetty peili) omistajan osoitinpäätökseen.
+- Omia worktreeitä ei ole jäljellä.
