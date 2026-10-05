@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (144)",
+   "paiva": "2026-10-05",
+   "teksti": "Uutta: elävä opas, joka esittelee Kööpenhaminan reaaliajassa fotorealistisen 3D-kaupungin yllä. Ohjaa sitä vastausnapeilla tai puheella. ISS-ohjaamo on uudistettu, lukijana on William ja Olavinlinna latautuu latauspalkin kanssa."
+  },
+  {
    "versio": "1.1 (143)",
    "paiva": "2026-10-05",
    "teksti": "Uusi minipeli Tavli kolmella laudalla. Olavinlinna latautuu nopeammin, kertoja ja äänet soivat ilman katkoja, ja valaistus ja rantametsä ovat uudet. Linssivalikko on selkeämpi, ja auringon kiilto näkyy vain vedessä."
