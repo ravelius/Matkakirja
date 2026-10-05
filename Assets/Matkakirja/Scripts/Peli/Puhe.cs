@@ -191,6 +191,66 @@ namespace Matkakirja.Natiivi
         /// <summary>Automaattinen luenta soi (ei pelaajan pyyntö eikä Pulun chat-vastaus): Ohita näkyy kartalla (Luentakuvasarja).</summary>
         public bool AutomaattinenSoi => (puhuu || lataus != null) && !soiPyynnosta && SoivaPersoona != "pollo";
         public float Aika => lahde != null && lahde.clip != null ? lahde.time : 0;
+        /*
+         * PINNATTU LUENTA (omistaja, Raamattu PIN-KUVAKE JA PINNATTU PALKKI; juna 146–147; UI Natiivi-UI natiivi-ui/pin-palkki):
+         * pinnatun noston tai Pulun chatin luenta jatkuu taustalla, kun ikkuna pienenee palkiksi ja pelaaja liikkuu kartalla
+         * tai avaa nostoja. Pinnatun aikana tavalliset Pysayta-kutsut (~40 sulkemis- ja liikkumiskohtaa) ohitetaan ja
+         * automaattinen luenta (ei pyynnöstä) ei ala; vain uusi pelaajan pyytämä luenta (Soita/Lue pyynnöstä, Nayte,
+         * LueVirtana eli Pulun chat) sulkee pinnatun ja vaihtaa äänen, ja linssin avaus katkaisee sen (Pysayta pakota).
+         * Palkki: Tauko/Jatka, Edistyminen (aika, kesto 0,25 s välein), PysaytaPinnattu kun pinnaus poistetaan kuvakkeesta.
+         */
+        /// <summary>Pinnatun luennan omistaja (noston tai chatin tunniste) tai null.</summary>
+        public string Pinnattu { get; private set; }
+        /// <summary>Palkin otsikko (pinnaajan antama).</summary>
+        public string PinnattuOtsikko { get; private set; }
+        /// <summary>Pinnaus muuttui (pinnattu, irrotettu tai uuden luennan korvaama).</summary>
+        public static event Action PinnattuMuuttui;
+        /// <summary>Pinnatun luennan edistyminen palkille: (aika s, kesto s) 0,25 s välein soiton tai tauon aikana.</summary>
+        public static event Action<float, float> Edistyminen;
+        float edistymisKello;
+
+        /// <summary>
+        /// Pinnaa soivan (tai tauolla tai latauksessa olevan) luennan omistajalle. omistaja null = Irrota. Palauttaa true,
+        /// jos luenta soi tai on tulossa; false = ikkuna pinnataan hiljaisena (ei ääntä), pinnaus jää silti voimaan.
+        /// </summary>
+        public bool Pinnaa(string omistaja, string otsikko = null)
+        {
+            if (string.IsNullOrEmpty(omistaja)) { Irrota(); return false; }
+            Pinnattu = omistaja;
+            PinnattuOtsikko = otsikko;
+            Debug.Log($"MATKAKIRJA puhe: pinnattu {omistaja}");
+            PinnattuMuuttui?.Invoke();
+            return puhuu || tauolla || lataus != null;
+        }
+
+        /// <summary>Poistaa pinnauksen pysäyttämättä (luenta jatkuu tavallisena, jolloin seuraava Pysayta katkaisee sen).</summary>
+        public void Irrota()
+        {
+            if (Pinnattu == null) return;
+            Pinnattu = null;
+            PinnattuOtsikko = null;
+            PinnattuMuuttui?.Invoke();
+        }
+
+        /// <summary>Pinnaus pois ja luenta seis (pelaaja poisti pinnauksen kuvakkeesta).</summary>
+        public void PysaytaPinnattu(float haivytysS = Haivytys) => Pysayta(haivytysS, pakota: true);
+
+        /// <summary>Uusi pelaajan luenta korvaa pinnatun: pinnaus pois (ääni vaihtuu uuteen).</summary>
+        void KorvaaPinnattu()
+        {
+            if (Pinnattu == null) return;
+            Debug.Log($"MATKAKIRJA puhe: pinnattu {Pinnattu} korvattiin uudella luennalla");
+            Irrota();
+        }
+
+        /// <summary>Pinnatun aikana automaattinen luenta ei ala (pelaaja kuuntelee pinnattua).</summary>
+        bool PinnattuEstaa(bool pyynnosta, string mika)
+        {
+            if (Pinnattu == null || pyynnosta) return false;
+            Debug.Log($"MATKAKIRJA puhe: {mika} ohitettu, pinnattu luenta soi ({Pinnattu})");
+            return true;
+        }
+
         /// <summary>Soiva puhe tauolla (Tauko/Jatka, nostokortin kaiutin: omistaja 27.9.2026 klo 09.3x).</summary>
         public bool Tauolla => tauolla;
         bool tauolla;
@@ -342,6 +402,8 @@ namespace Matkakirja.Natiivi
             if ((!Paalla && !pyynnosta) || string.IsNullOrEmpty(url)) return false;
             // Jatkohiljaisuus (PeliOhjain): automaattinen puhe ei ala ennen pelaajan ensimmäistä toimintoa; kaiutin (pyynnöstä) soi.
             if (!pyynnosta && PeliOhjain.EstaJatkohiljaisuudessa("puheen " + System.IO.Path.GetFileName(url.Split('?')[0]))) return false;
+            if (PinnattuEstaa(pyynnosta, "äänite")) return false;
+            KorvaaPinnattu();
             soiPyynnosta = pyynnosta;
             AsetaIstunto();
             PuraTauko();
@@ -374,6 +436,9 @@ namespace Matkakirja.Natiivi
             // Jatkohiljaisuus (omistaja TF 141 4.10.2026 klo 00.5x: "pulun luenta tulee edelleen kun valitsen aloituksessa Jatka
             // matkaa"): sama portti kuin Soitassa, myös synteesi (saapumismerkinnän luenta Saapumisesitys.LueSaapuminen).
             if (!pyynnosta && PeliOhjain.EstaJatkohiljaisuudessa("luennan " + persoona)) return false;
+            // Pulun vastaus on pelaajan kysymyksen seuraus (kuten pyynnöstä): se korvaa pinnatun; muu automaattinen ohitetaan.
+            if (PinnattuEstaa(pyynnosta || PulunPuhe(persoona), "luenta " + persoona)) return false;
+            KorvaaPinnattu();
             soiPyynnosta = pyynnosta;
             return Syntetisoi(teksti, persoona, TagiLohko(lohko ?? Lukijaaani.OletusLohko(persoona), loppuTagi), true, viiveS, loppu, loppuTagi);
         }
@@ -391,6 +456,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public bool Nayte(string persoona)
         {
+            KorvaaPinnattu();   // näyte on aina pelaajan pyyntö
             // Näyte on aina pelaajan pyyntö; äänimaisema ei mykistä luentaa (omistaja 27.9.2026 klo 15.5x).
             soiPyynnosta = true;
             return Syntetisoi(Lukijaaani.NayteTeksti(persoona), persoona, null, false, 0, null);
@@ -539,6 +605,7 @@ namespace Matkakirja.Natiivi
         {
             persoona ??= "kertoja";
             if (!Paalla && !PulunPuhe(persoona)) return null;
+            KorvaaPinnattu();   // virta = pelaajan chat-vastaus tai luenta: uusi striimiluenta vaihtaa äänen
             soiPyynnosta = false;
             AsetaIstunto();
             PuraTauko();
@@ -756,9 +823,14 @@ namespace Matkakirja.Natiivi
             return raja > katto / 3 ? teksti.Substring(0, raja + 1) : teksti.Substring(0, katto);
         }
 
-        /// <summary>Pysäyttää häivyttäen (web haivytaAani); loppu-kutsua ei tehdä.</summary>
-        public void Pysayta(float haivytysS = Haivytys)
+        /// <summary>
+        /// Pysäyttää häivyttäen (web haivytaAani); loppu-kutsua ei tehdä. Pinnattua luentaa ei pysäytetä ilman pakota-lippua
+        /// (sulkeminen, liikkuminen ja nostojen avaus jättävät sen soimaan); pakota (linssin avaus, palkki) pysäyttää ja irrottaa.
+        /// </summary>
+        public void Pysayta(float haivytysS = Haivytys, bool pakota = false)
         {
+            if (Pinnattu != null && !pakota) { Debug.Log($"MATKAKIRJA puhe: pysäytys ohitettu, pinnattu ({Pinnattu})"); return; }
+            Irrota();
             tunnus++;
             loppu = null;
             PuraTauko();
@@ -1336,6 +1408,12 @@ namespace Matkakirja.Natiivi
             {
                 float kohde = Kohdetaso;
                 if (!Mathf.Approximately(lahde.volume, kohde)) lahde.volume = kohde;
+            }
+            // Pinnatun luennan edistyminen palkille 0,25 s välein (soi tai tauolla).
+            if (Pinnattu != null && (puhuu || tauolla) && Time.unscaledTime >= edistymisKello)
+            {
+                edistymisKello = Time.unscaledTime + 0.25f;
+                Edistyminen?.Invoke(Aika, Kesto);
             }
         }
 
