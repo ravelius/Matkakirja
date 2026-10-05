@@ -176,7 +176,9 @@ test('worker /opas/seuraava: Sonnet valitsee, koordinaatit Wikipediasta nimellä
     const odotukset = [];
     const pcm = await worker.fetch(new Request(data.aani_pcm), env, { waitUntil: (x) => odotukset.push(x) });
     assert.equal(pcm.status, 200);
-    assert.equal(pcm.headers.get('content-type'), 'audio/L16;rate=24000;channels=1');
+    assert.equal(pcm.headers.get('content-type'), 'application/octet-stream');
+    assert.equal(pcm.headers.get('x-aani-muoto'), 's16le');
+    assert.equal(pcm.headers.get('x-aani-taajuus'), '24000');
     assert.match(verkko.kutsut.elevenUrl, /output_format=pcm_24000/);
     assert.equal((await pcm.arrayBuffer()).byteLength, 16000);
     await Promise.all(odotukset);
@@ -378,9 +380,10 @@ test('korostus: piste rakennukselle, alue aukiolle/puistolle, reitti kadulle nim
   const { paikanKorostus, jasennaOpas } = await import('../tools/pollo/opas.js');
   const { fetch } = tynka();
   assert.deepEqual(await paikanKorostus(fetch, { lat: 55.1, lon: 12.2, koko_m: 120, luokka: 'rakennus' }, KOOPENHAMINA),
-    { tyyppi: 'piste', pisteet: [[55.1, 12.2]], sade_m: 60 });
+    { tyyppi: 'piste', pisteet: [[55.1, 12.2]], sade_m: 79 }, 'rengas ulkoreunan ulkopuolelle: 60 × 1,15 + 10');
   assert.equal((await paikanKorostus(fetch, { lat: 55.1, lon: 12.2, koko_m: 400, luokka: 'puisto' }, KOOPENHAMINA)).tyyppi, 'alue');
-  const r = await paikanKorostus(fetch, { lat: 55.1, lon: 12.2, luokka: 'katu', reitti: ['Tivoli Gardens', 'Kööpenhamina', 'Tuntematon'] }, KOOPENHAMINA);
+  const r = await paikanKorostus(fetch, { lat: 55.675, lon: 12.568, luokka: 'katu', reitti: ['Tivoli Gardens', 'Kööpenhamina', 'Tuntematon'] }, KOOPENHAMINA);
+  assert.equal((await paikanKorostus(fetch, { lat: 55.1, lon: 12.2, luokka: 'katu', reitti: ['Tivoli Gardens', 'Kööpenhamina'] }, KOOPENHAMINA)).tyyppi, 'piste', 'kaukaiset reittipisteet pois');
   assert.deepEqual(r, { tyyppi: 'reitti', pisteet: [[55.6737, 12.5681], [55.676, 12.568]] });
   assert.equal((await paikanKorostus(fetch, { lat: 55.1, lon: 12.2, luokka: 'katu', reitti: ['Tuntematon', 'Tivoli Gardens'] }, KOOPENHAMINA)).tyyppi, 'piste');
   const v = jasennaOpas('NIMI: Strøget\nLUOKKA: katu\nREITTI: Rådhuspladsen; Gammeltorv ; Amagertorv;Kongens Nytorv\nTEKSTI: Katu.');

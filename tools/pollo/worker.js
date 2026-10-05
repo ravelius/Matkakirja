@@ -2705,8 +2705,9 @@ async function oppaanAani(pyynto, env, ctx, teksti, kehittaja) {
  * toistuva GET palauttaa saman kokonaisena. mp3-polku säilyy varana ja junan 144 natiiveille.
  */
 const OPAS_PCM_TAAJUUS = 24000;
-const PCM_OTSAKKEET = { 'content-type': `audio/L16;rate=${OPAS_PCM_TAAJUUS};channels=1`, 'cache-control': 'public, max-age=604800',
-  'x-aani-taajuus': String(OPAS_PCM_TAAJUUS) };
+// audio/L16 on RFC 2586:n mukaan big-endian, mutta tavut ovat ElevenLabsin s16le → yleinen tavuvirta + muoto otsakkeissa.
+const PCM_OTSAKKEET = { 'content-type': 'application/octet-stream', 'cache-control': 'public, max-age=604800',
+  'x-aani-taajuus': String(OPAS_PCM_TAAJUUS), 'x-aani-muoto': 's16le', 'x-aani-kanavat': '1' };
 
 const mp3Vastaus = (data) => new Response(data, { headers: { 'content-type': 'audio/mpeg', 'cache-control': 'public, max-age=604800' } });
 
@@ -2908,6 +2909,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   };
   let tulos = null;
   let tuloksenPaikka = null;
+  let korostusLupaus = null;
   try {
     for (let yritys = 0; yritys < 2 && !tulos; yritys += 1) {
       const vastaus = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti, seuraava?.paikka.nimi ?? null);
@@ -2923,7 +2925,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
         wiki: paikka.wiki, kuva: null, vaihtoehdot: vastaus.vaihtoehdot, koordinaatit: paikka.lahde,
         ...(seuraava ? { kierros: { numero: seuraava.numero, maara: seuraava.maara } } : {}),
         kuvat: kuvatPaikalle(aineisto, [nimi, vastaus.nimi, seuraava?.paikka.wikipedia ?? vastaus.wikipedia, paikka.wiki?.otsikko].filter(Boolean)) };
-      tulos.korostus = await paikanKorostus(fetch, { lat: paikka.lat, lon: paikka.lon, koko_m: tulos.koko_m, luokka: vastaus.luokka,
+      // Reittipisteiden haku (kadut ja kanavat ~1–2 s) rinnakkain äänen ja kuvan kanssa, ei vastauksen kriittisellä polulla.
+      korostusLupaus = paikanKorostus(fetch, { lat: paikka.lat, lon: paikka.lon, koko_m: tulos.koko_m, luokka: vastaus.luokka,
         reitti: vastaus.reitti ?? [] }, sijainti);
     }
   } catch (virhe) {
@@ -2963,10 +2966,12 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   }
   if (!tulos) return vastaa({ virhe: 'palvelin', viesti: 'Opas ei saanut seuraavaa paikkaa kiinni. Yritä uudelleen.' }, { status: 502, ...kors });
   // Ääni ja kuvan varahaku (Wikidatan P18) rinnakkain; pelin oma kuva voittaa.
-  const [aani, p18] = await Promise.all([
+  const [aani, p18, korostus] = await Promise.all([
     oppaanAani(pyynto, env, ctx, tulos.teksti, kehittaja),
     tulos.tyyppi === 'pysahdys' && !tulos.kuvat.length ? wikidataKuva(fetch, tulos.id) : [],
+    tulos.tyyppi === 'pysahdys' ? korostusLupaus : null,
   ]);
+  if (korostus) tulos.korostus = korostus;
   if (tulos.tyyppi === 'pysahdys' && !tulos.kuvat.length) tulos.kuvat = p18;
   if (isoisaAvain && kv && !isoisaKaytetty && tulos.tyyppi === 'pysahdys' && /isoisä/i.test(tulos.teksti)) {
     const kirjoitus = kv.put(isoisaAvain, '1', { expirationTtl: 60 * 60 * 48 }).catch(() => {});
