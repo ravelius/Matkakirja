@@ -1,4 +1,20 @@
-# Siirtosepän luovutus 5.10.2026 klo 06.1x (Opus 5.5, high) — tilinvaihto noin 07.15
+# Siirtosepän luovutus 5.10.2026 — TILA KLO 11.1x (Opus 5.5, high)
+
+## Nyt (päivitetty 11.1x)
+- **Tavli KUITATTU** (Päätoimittaja ~10.55): proto `siirtoseppa/tavli` @ **ea02bae1** (tekstit HYVÄKSYTTY + laudat v2), merge-pyyntö Natiivisepällä.
+  EHTO: TF vain yhdessä Natiivi-UI:n otsikkokorjauksen kanssa ("TAVL I", kapiteelin kirjainväli; tilattu Natiivi-UI:lta). Muuten juna 144.
+  Todisteet oikeilla sim-tapeilla: kaappaukset/siirtoseppa-20261005/tavli-laudat-simtap-1052.png (käännös ddbadb73). Simulaattorin tap-lupa on nyt voimassa (omistaja 10.51).
+- **Cinemachine vaihe 1**: proto `siirtoseppa/linna-143` @ **c6271398** (e9a7915b Cinemachine + 0fb2fc7b laineiden uusinta + c6271398 blendin pehmennys).
+  A/B 566fb9a1 tehty (lokit/siirtoseppa-cm-ab, video kaappaukset/linna-cinemachine-AB-566fb9a1.mp4): levossa ero Ytimeen 0,000 m, napautus pehmeä;
+  huippunopeus ~30 % jousta suurempi → c6271398 (blendi + 0,6 s). Käännös jonossa ~11.45, simu ~12.10 (ajo-linna-cm.sh, vain cinemachine-kierros riittää).
+  KÄÄNNÖKSET: aina `MATKAKIRJA_KIRJASTOT=/Users/Shared/Claude/proto-3d/_lahteet/unity-paketit-siirtoseppa/kirjastot` (esitarkistuksen ScriptAssemblies ilman Cinemachinea).
+- **Laineet/tuuli** (Natiivisepän löydös): Aanisoitin.HaePooli uusii Levylle-latauksen 2/5/12 s (0fb2fc7b); A/B:ssä laineet soivat.
+- **Stylized Water 3**: proto `siirtoseppa/vesi` @ fb7f7ab2 (yksityinen proto-git, _Demo pois, LAHTEET.md ehtoineen; ei vielä koodissa, vaihe 5).
+- **Steam Audio 4.8.1** ladattu (_lahteet/unity-paketit-siirtoseppa, sha256 = GitHub): iOS-kirjastot vain laite-arm64 → simukäännöksissä pois-kytkin; ääni-A/B vain laitteella. Natiiviseppä kuittaa koon (lipo, .app-koko, UnityFramework) ennen junaa. Vaihe 6.
+- **Latvus-pari** (27022c94 vs 22968114) toimitettu Linnanrakentajalle; osoitin vaihdettu 22968114:ään 10.45.
+- Linnanrakentajan hahmo/Gaia-suositus: natiivikohdat tarkistettu (docs/raportit/suositus-hahmot-gaia-20261005.md, hänen haarassaan).
+
+## Aiempi tila 06.1x
 
 Edellinen luovutus on `viesti-siirtoseppa-luovutus-20261002.md` (5.10. osiot 02.0x ja 05.2x). Tämä korvaa sen jonon.
 
