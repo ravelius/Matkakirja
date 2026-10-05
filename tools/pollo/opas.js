@@ -105,7 +105,8 @@ KOKO: <kohteen halkaisija tai pituus metreinä kameran kehystystä varten, kokon
 KORKEUS: <kohteen korkeus metreinä, jos se on merkittävä (torni, kirkko); muuten jätä rivi pois>
 LUOKKA: <yksi sana: katu, kanava, aukio, rakennus, torni, kirkko, linnoitus, puisto, vesi, silta tai muu>
 KUVAUS: <lyhyt suomenkielinen kuvaus otsikon alle, enintään viisi sanaa, esimerkiksi Kööpenhaminan kaupungintalo>
-REITTI: <vain kadulle, kanavalle tai rantareitille: 3–6 tunnettua paikkaa reitin varrelta päästä päähän järjestyksessä, \
+REITTI: <vain kadulle, kanavalle tai rantareitille: 3–8 tunnettua paikkaa reitin varrelta kulkujärjestyksessä päästä \
+päähän, mutkien ja kääntymiskohtien kohdalla tiheämmin, jotta suora viiva pisteiden välillä seuraa reittiä, \
 puolipisteillä erotettuina, kukin englanninkielisen Wikipedian otsikolla, esimerkiksi Rådhuspladsen; Gammeltorv; \
 Amagertorv; Kongens Nytorv; muille paikoille jätä rivi pois>
 TEKSTI: <kappale>
@@ -330,7 +331,7 @@ export function jasennaOpas(teksti, varaNimi = null) {
     ...(Number.isFinite(korkeus) && korkeus > 0 ? { korkeus_m: Math.min(1000, korkeus) } : {}),
     ...(luokka ? { luokka } : {}),
     ...(kentta(teksti, 'KUVAUS') ? { kuvaus: siivoa(kentta(teksti, 'KUVAUS'), 80) } : {}),
-    ...(kentta(teksti, 'REITTI') ? { reitti: kentta(teksti, 'REITTI').split(';').map((x) => siivoa(x, 120)).filter(Boolean).slice(0, 6) } : {}),
+    ...(kentta(teksti, 'REITTI') ? { reitti: kentta(teksti, 'REITTI').split(';').map((x) => siivoa(x, 120)).filter(Boolean).slice(0, 8) } : {}),
     teksti: siivoa(tekstiOsa.replace(/^\s*(KORKEUS|LUOKKA|KUVAUS|REITTI)\s*:.*$/gim, ''), 900),
     vaihtoehdot,
   };
@@ -502,10 +503,14 @@ const REITTILUOKAT = new Set(['katu', 'kanava', 'vesi']);
 const pyorista = (x) => Math.round(x * 1e6) / 1e6;
 
 export async function paikanKorostus(haku, { lat, lon, koko_m: koko = 150, luokka = null, reitti = [] }, viite) {
-  const sade_m = Math.max(10, Math.round(koko / 2));
+  // Rengas maahan ulkoreunan ulkopuolelle, ei katolle (Siirtoseppä 5.10.): puolikas koko × 1,15 + 10 m.
+  const sade_m = Math.max(25, Math.round((koko / 2) * 1.15 + 10));
   if (REITTILUOKAT.has(luokka) && reitti.length >= 2) {
     const pisteet = (await Promise.all(reitti.map((nimi) => paikanKoordinaatit(haku, { nimi, wikipedia: nimi }, viite))))
-      .filter((x) => x && x.lahde === 'wikipedia').map((x) => [pyorista(x.lat), pyorista(x.lon)])
+      // Sivupisteet pois: reittipiste saa olla enintään 0,8 × koko (väh. 500 m) paikan keskipisteestä (koeajo:
+      // Christiansborg Christianshavnin kanavan reitillä leikkasi sataman).
+      .filter((x) => x && x.lahde === 'wikipedia' && etaisyys({ lat, lon }, x) <= Math.max(500, koko * 0.8))
+      .map((x) => [pyorista(x.lat), pyorista(x.lon)])
       .filter((x, i, kaikki) => kaikki.findIndex((y) => y[0] === x[0] && y[1] === x[1]) === i);
     if (pisteet.length >= 2) return { tyyppi: 'reitti', pisteet: jarjestaAkselille(pisteet) };
   }
