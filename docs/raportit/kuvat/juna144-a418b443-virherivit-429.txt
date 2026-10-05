@@ -1,0 +1,5 @@
+   1 linssit: opas: vastaus 5 VIRHE 429 HTTP/1.1 429 Too Many Requests (0,1 s), ääni ei
+   1 linssit: opas: vastaus 4 VIRHE 429 HTTP/1.1 429 Too Many Requests (0,0 s), ääni ei
+   1 linssit: opas: vastaus 3 VIRHE 429 HTTP/1.1 429 Too Many Requests (0,0 s), ääni ei
+   1 linssit: opas: vastaus 2 VIRHE 429 HTTP/1.1 429 Too Many Requests (0,1 s), ääni ei
+   1 linssit: opas: vastaus 1 VIRHE 429 HTTP/1.1 429 Too Many Requests (0,1 s), ääni ei
