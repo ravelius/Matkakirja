@@ -37,3 +37,14 @@ Kuvat lähtevät Päätoimittajalle vasta, kun olen tyytyväinen niihin: ei sume
 ## Muut
 - Poistettu wt/linssiseppa2-web-main (Päätoimittaja, levy). HEAD on mainissa squashina 5441e20e8.
 - Scratchpadin *-app-kopiot siivotaan käännösten jälkeen (~440 Mt kpl).
+
+## Päivitys 5.10. klo 06.5x: v2-ajo 10c31692 (kahdeksan kuvaa, laattavedos)
+Kuvat: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-maailma-10c31692/kuvat. Vedos: …/laatat/laatat-<id>/<taso>/<x>/<y>.png.
+- **Amazonian kiila on poistunut** toisen radan täytteellä (20261005-033346.jpg). Venetsia, Australia ja Pohjois-Amerikka ovat hyviä.
+- 20MRC (033507): täytteen raja näkyy lievänä pystysaumana, ja täyte on hieman samea. Karttaseppä tekee kiilan sävytasauksen.
+- Kanaria 28SCA (034056): avomerellä on selvät suorat heijastussaumat, eri ottopäivien auringon heijastus. Ei vielä kunnossa.
+- Meksikon suiston suorakulmio (033930) näkyy myös laatoissa (taso 4: x 9, y 16). Syy on 11SPR:n (2024-08-27) ja 11SQR:n
+  (2023-07-01) eri ottopäivä, koska vuorovesitasangon kirkkaus vaihtelee. Usvasiirto ei korjaa tätä. Pyyntö Karttasepälle:
+  naapuriruuduille sama datatake aina kun mahdollista. Offline-toisto v1-indeksillä ei näyttänyt tätä (eri lehtijako ja tarkkuus).
+- Viestit Päätoimittajalle ja Karttasepälle 06.5x. Kuvia EI ole lähetetty: Kanaria ja Meksiko eivät ole vielä kunnossa.
+- Seuraavaksi, kun Karttasepän indeksi päivittyy: sama kahdeksan kuvan ajo (vaihda vain APP ja OUT), sitten tarkistus ja lähetys.
