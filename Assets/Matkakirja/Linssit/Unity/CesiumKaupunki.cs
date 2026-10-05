@@ -44,6 +44,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public const int Kerros = 15;
         int vanhaMaski;
+        (double, double, double, double, double, double) vanhaAsento;
+        bool asentoTalteen;
 
         /// <summary>Datalähde (komennot "lontoo data …" ja "opas data …"): Google oletus, Ion, Oma = testitila ilman ionia.</summary>
         public enum Lahde { Google, Ion, Oma }
@@ -160,6 +162,10 @@ namespace Matkakirja.Natiivi
             kamera.cullingMask = 1 << Kerros;
 
             vanhaOrigo = new double3(georef.longitude, georef.latitude, georef.height);
+            // Pallon kameran oma asento talteen: kuvaus (PalloKierto.Kuvaa) jättää sen kaupungin korkeuteen (~300 m), ja suljettaessa
+            // pallo näkyi pelkkänä pergamenttina horisontin alla (Laitetestaaja 5.10., juna 144 e95826b4, toistettu simulla 22.11).
+            vanhaAsento = (kierto.leveys, kierto.pituus, kierto.korkeus, kierto.kallistus, kierto.suuntima, kierto.katseKorkeus);
+            asentoTalteen = true;
             SiirraOrigo(origoLat, origoLon, origoKorkeus);
 
             juuri = new GameObject("Cesium-kaupunki");
@@ -354,6 +360,14 @@ namespace Matkakirja.Natiivi
             KarttaKerrokset.RuutukrediititNakyviin = false;
             PallonViivat(true);
             if (georef != null && georef.isActiveAndEnabled) { georef.Initialize(); georef.SetOriginLongitudeLatitudeHeight(vanhaOrigo.x, vanhaOrigo.y, vanhaOrigo.z); }
+            if (asentoTalteen && kierto != null)
+            {
+                asentoTalteen = false;
+                (kierto.leveys, kierto.pituus, kierto.korkeus, kierto.kallistus, kierto.suuntima, kierto.katseKorkeus) = vanhaAsento;
+                kierto.SeurantaLoppui();
+                kierto.Aseta();
+                kirjaa($"kaupunki: pallon kamera palautettu ({vanhaAsento.Item1:F2}, {vanhaAsento.Item2:F2}, {vanhaAsento.Item3 / 1000:F0} km)");
+            }
             if (palloTileset != null && palloOli) palloTileset.enabled = true;
             if (pohjaOli) Pohjapallo.Tila = pohjaTila;
             palloTileset = null; pohjaOli = false;
