@@ -187,6 +187,7 @@ namespace Matkakirja.Natiivi
             if (silmukka == null || Virhe != null || paivitetty == Time.frameCount) return;
             paivitetty = Time.frameCount;
             if (puhuu && Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying)) { puhuu = false; y.Repliikki(false); silmukka.AaniLoppui(); }
+            KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
             silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => kaupunki.Valmis);
@@ -461,6 +462,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             KyydinKameraEnnen.Ajo = null;
+            KrediititTiivis.Paivita(false);
             Hiljenna();
             KytkeChat(false);
             ChatOppaalle(false);
