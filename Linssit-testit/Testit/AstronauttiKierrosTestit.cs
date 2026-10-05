@@ -132,7 +132,16 @@ namespace Matkakirja.Linssit.Testit
             l.Naapuri(1);
             Oleta.Sama(seur, l.AvoinKuva);
             Oleta.Sama($"kuva {seur.Tunnus} {seur.OletusIndeksi}", n.Loki.Last(), "alanappi: oletuskuva");
-            Oleta.Sama(seur.Lat, y.Ajo.Value.Lat, "kamera liukuu naapuriin");
+            // Taustapallo paikallaan selauksessa (omistaja 5.10.2026 klo 16.1x): kamera jää ensimmäisen kuvan ylle.
+            Oleta.Sama(eka.Lat, y.Ajo.Value.Lat, "selaus: taustapallo paikallaan");
+            AstronauttiLinssi.TaustaJaatyy = false;
+            try
+            {
+                l.Naapuri(1);
+                Oleta.Sama(a.Kohteet[r[2]].Lat, y.Ajo.Value.Lat, "A/B vanha: kamera liukuu naapuriin");
+                l.Naapuri(-1);
+            }
+            finally { AstronauttiLinssi.TaustaJaatyy = true; }
             l.Naapuri(-1, galleria: true);
             Oleta.Sama(eka, l.AvoinKuva, "takaisin samaa tietä");
             Oleta.Sama($"kuva {eka.Tunnus} {eka.Havainnot.Count - 1}", n.Loki.Last(), "galleria taaksepäin: viimeinen kuva");

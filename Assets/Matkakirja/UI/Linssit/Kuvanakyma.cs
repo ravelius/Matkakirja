@@ -89,6 +89,15 @@ namespace Matkakirja.Natiivi
         float autoKosketus;
         IVisualElementScheduledItem autoPiilotus;
         readonly Button autoNappi;
+        /// <summary>
+        /// II TAUKO (omistaja 5.10.2026 klo 16.1x: "auton vieressä voisi olla II pause nappi, jolla luennan saisi pysäytettyä"):
+        /// OHJAUSNAPPI AUTOn ja ‹ ›:n ryhmässä; pysäyttää selitteen luennan (Puhe.Tauko, näytteen tarkka jatko) ja AUTOn siirron
+        /// (laskuri seisoo), toinen painallus jatkaa. Uusi kohde ja sulku päättävät tauon.
+        /// </summary>
+        readonly Button taukoNappi;
+        readonly SvgIkoni taukoIkoni;
+        bool tauolla;
+        float taukoAlku;
         readonly Label autoNimi, autoAika;
         IVisualElementScheduledItem autoAjo;
         float autoAlku;
@@ -186,6 +195,10 @@ namespace Matkakirja.Natiivi
             Rakenne.El("mk-astrokuva__autopiste", autoNappi, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("AUTO", "mk-nappi__teksti mk-astrokuva__autoteksti", autoNappi), Kirjasin.KoneBold);
             autoNappi.tooltip = "Auto: lukee kohteen ja siirtyy seuraavaan";
+            taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, "Tauko", () => AsetaTauko(!tauolla), null, "lasi-avaruus");
+            taukoNappi.AddToClassList("mk-astrokuva__kohdenappi");
+            kohdeNapit.Insert(1, taukoNappi);
+            taukoIkoni = taukoNappi.Q<SvgIkoni>();
             autoLappu = Rakenne.El("mk-astrokuva__autolappu tk-teema-tumma", turva);
             autoLappu.style.display = DisplayStyle.None;
             var lappuTeksti = Rakenne.El("mk-astrokuva__autolapputeksti", autoLappu, PickingMode.Ignore);
@@ -311,8 +324,13 @@ namespace Matkakirja.Natiivi
                 RakennaNauha();
                 if (pulukortti.Auki) pulukortti.Avaa(k);
                 // Pallosta valittu kohde: pallo pysyy sormen jättämässä asennossa, vain merkki siirtyy (omistaja 4.10.2026).
+                if (tauolla) AsetaTauko(false);
                 if (palloValitsi) { palloValitsi = false; sijaintipallo.MerkitseKohde(k.Lat, k.Lon); }
-                else sijaintipallo.Kohteeseen(k.Lat, k.Lon, selaus && !LinssiUi.VahennettyLiike());
+                else
+                {
+                    sijaintipallo.Kohteeseen(k.Lat, k.Lon, selaus && !LinssiUi.VahennettyLiike());
+                    if (selaus) sijaintipallo.Sykahda();   // sijainti vaihtui: pieni pallo kasvaa hetkeksi (omistaja 16.1x)
+                }
             }
             PaivitaVanha();
             NaytaAutoTila();
@@ -332,6 +350,8 @@ namespace Matkakirja.Natiivi
             Auki = false;
             sijaintipallo.Piilota();
             autoOdottaa = false;
+            // Sulku päättää tauon jatkamatta luentaa (luenta lopetetaan alempana).
+            if (tauolla) { tauolla = false; if (taukoIkoni != null) taukoIkoni.Polku = Ikonit.Tauko; taukoNappi.tooltip = "Tauko"; taukoNappi.EnableInClassList("mk-valittu", false); }
             LopetaSiirto();
             NaytaAutoNapit(true);   // seuraava avaus alkaa napit näkyvissä
             autoPiilotus?.Pause();
@@ -660,11 +680,35 @@ namespace Matkakirja.Natiivi
             Ruudunpaivitys.Herata(AutoSiirtoS + 0.2f);
             autoAjo = autoLappu.schedule.Execute(() =>
             {
+                if (tauolla) return;   // II: laskuri seisoo
                 float t = Time.unscaledTime - autoAlku;
                 if (t >= AutoSiirtoS) { LopetaSiirto(); if (Auki && AutoKaytossa) VaihdaKohde(1); return; }
                 autoAika.text = Mathf.CeilToInt(AutoSiirtoS - t) + " s";
                 autoPalkki.style.width = Length.Percent(100f * t / AutoSiirtoS);
             }).Every(0);
+        }
+
+        /// <summary>II-tauko päälle tai pois (luenta ja AUTOn siirto); pois → jatkuu samasta kohdasta.</summary>
+        void AsetaTauko(bool paalle)
+        {
+            if (paalle == tauolla) return;
+            tauolla = paalle;
+            var puhe = Puhe.Instanssi;
+            if (paalle)
+            {
+                taukoAlku = Time.unscaledTime;
+                if (LuentaSoi) puhe?.Tauko();
+            }
+            else
+            {
+                autoAlku += Time.unscaledTime - taukoAlku;   // AUTOn laskuri jatkaa siitä, mihin jäi
+                if (puhe != null && puhe.Tauolla && LuentaSoi) puhe.Jatka();
+                if (autoAjo != null) Ruudunpaivitys.Herata(AutoSiirtoS + 0.2f);
+            }
+            if (taukoIkoni != null) taukoIkoni.Polku = paalle ? Ikonit.Toista : Ikonit.Tauko;
+            taukoNappi.tooltip = paalle ? "Jatka" : "Tauko";
+            taukoNappi.EnableInClassList("mk-valittu", paalle);
+            Debug.Log("MATKAKIRJA kuvaselite: II " + (paalle ? "tauko" : "jatkuu") + (LuentaSoi ? " (luenta)" : "") + (autoAjo != null ? " (AUTO-siirto)" : ""));
         }
 
         void LopetaSiirto()
@@ -1066,7 +1110,8 @@ namespace Matkakirja.Natiivi
             // AUTO ‹ ›:n ryhmässä (Päätoimittaja 2.10.) levittää ryhmää vasemmalle puolella omasta leveydestään (+ 7 pt:n väli).
             // 375 pt:n ruudulla raja on ~71 pt, joten kaksi pikkukuvaa rivittyy eikä mene ryhmän alle (web #3825: väli ~1 pt).
             float auto = autoKulma.style.display == DisplayStyle.None ? 0f
-                : (autoKulma.layout.width > 0f ? autoKulma.layout.width : 81f) + 7f;
+                : (autoKulma.layout.width > 0f ? autoKulma.layout.width : 81f) + 7f
+                  + (taukoNappi.layout.width > 0f ? taukoNappi.layout.width : 44f) + 7f;   // II AUTOn vieressä
             float vasen = float.IsNaN(sijaintipallo.NauhanVasen) ? Vasen : sijaintipallo.NauhanVasen;   // pallon oikealla puolella (vaaka)
             nauha.style.maxWidth = Mathf.Max(Pikkukuva, turvaLeveys / 2f - NappienPuolikas - auto / 2f - vasen - Vali);
         }
