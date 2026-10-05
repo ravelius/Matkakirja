@@ -21,7 +21,8 @@
 import { kirjaaKaynti, lueKaynnit } from './kaynnit.js';
 import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
-  kaupunginAineisto, kuvatPaikalle, wikidataKuva,
+  kaupunginAineisto, kuvatPaikalle, wikidataKuva, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
+  seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, jarjestaReitti,
 } from './opas.js';
 import { OPAS_AINEISTO } from './opas-aineisto.js';
 import {
@@ -2732,32 +2733,79 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   if (!p.sijainti && !p.kaupunki) return vastaa({ virhe: 'kysely', viesti: 'Kaupunki tai sijainti puuttuu.' }, { status: 400, ...kors });
   // Sonnet valitsee paikan omasta tiedostaan (omistaja 18.0x); worker hakee vain koordinaatit nimellä.
   // Isoisään viitataan kerran istunnossa (Päätoimittaja 5.10.): muisti KV:ssä natiivin istunto-tunnuksella.
-  const isoisaAvain = p.istunto ? `opas:isoisa:${p.istunto}` : null;
-  const [sijainti, kaydytNimet, isoisaKaytetty] = await Promise.all([
+  const isoisaAvain = p.istunto && kv ? `opas:isoisa:${p.istunto}` : null;
+  const kierrosAvain = p.istunto && kv ? `opas:kierros:${p.istunto}` : null;
+  const [sijainti, kaydytNimet, isoisaKaytetty, tallessa] = await Promise.all([
     p.sijainti ?? kaupunginSijainti(fetch, p.kaupunki), kaydytNimiksi(fetch, p.kaydyt),
-    isoisaAvain && kv ? kv.get(isoisaAvain).then(Boolean).catch(() => false) : false]);
+    isoisaAvain ? kv.get(isoisaAvain).then(Boolean).catch(() => false) : false,
+    kierrosAvain ? kv.get(kierrosAvain).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null]);
   const aineisto = kaupunginAineisto(env.OPAS_AINEISTO_TESTI ?? OPAS_AINEISTO, p.kaupunki);
+  const nahdyt = [...p.kaydyt, ...kaydytNimet];
+
+  // KIERROS (omistajan idea 19.3x): "Esittele kaupunki" / "Lisää tätä kaupunkia" suunnittelee ~8 pysähdystä yhdellä
+  // kutsulla; toive null jatkaa suunnitelmaa (myös natiivin esihaku), muu toive vastataan ja kierros jatkuu sen jälkeen.
+  let kierros = tallessa && tallessa.kaupunki === (p.kaupunki ?? '') ? tallessa : null;
+  if (kierrosAvain && onKierrosToive(p.toive)) {
+    try {
+      const suunnitelma = jasennaKierros((await kysyMallitiedot(env, {
+        jarjestelma: OPAS_KIERROS_KEHOTE, viestit: [{ role: 'user', content: kierroksenViesti({ ...p, sijainti }, kaydytNimet) }],
+        maxTokens: 700, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
+      })).teksti);
+      const paikat = (await Promise.all(suunnitelma.map(async (x) => {
+        const paikka = await paikanKoordinaatit(fetch, x, sijainti);
+        return paikka ? { nimi: paikanNimi(paikka, x.nimi), wikipedia: x.wikipedia, koko_m: x.koko_m, ...paikka } : null;
+      }))).filter(Boolean).filter((x, i, kaikki) => kaikki.findIndex((y) => y.id === x.id) === i);
+      if (paikat.length >= 3) {
+        kierros = { kaupunki: p.kaupunki ?? '', paikat: jarjestaReitti(paikat.slice(0, KIERROKSEN_PITUUS), sijainti) };
+        await kv.put(kierrosAvain, JSON.stringify(kierros), { expirationTtl: 60 * 60 * 6 }).catch(() => {});
+      }
+    } catch (virhe) {
+      console.log(`opas: kierroksen suunnittelu epäonnistui (${virhe?.status ?? 'verkko'})`);
+    }
+  }
+  const jatkaKierrosta = kierros && (!p.toive || onKierrosToive(p.toive));
+  const seuraava = jatkaKierrosta ? seuraavaKierrokselta(kierros, nahdyt) : null;
+  const kierrosLoppui = jatkaKierrosta && !seuraava;
+  const ohje = seuraava
+    ? `KIERROS: tämä on kierroksen pysähdys ${seuraava.numero}/${seuraava.maara}. Kerro paikasta ${seuraava.paikka.nimi} `
+      + `(Wikipedia: ${seuraava.paikka.wikipedia ?? seuraava.paikka.nimi}); käytä täsmälleen tätä paikkaa, nimeä ja Wikipedia-otsikkoa.`
+    : kierrosLoppui
+      ? `KIERROS PÄÄTTYI: kaikki kierroksen paikat on nähty. Vastaa KYSYMYS-muodossa: kysy lyhyesti ja lämpimästi, jatketaanko. `
+        + `Ensimmäinen VAIHTOEHTO on täsmälleen "${LISAA_KAUPUNKIA}", toinen vie tämän kaupungin toiseen suuntaan (ei kaupungin vaihtoa).`
+      : null;
   const kutsu = {
     jarjestelma: OPAS_KEHOTE,
-    viestit: [{ role: 'user', content: oppaanViesti({ ...p, sijainti, isoisaKaytetty }, kaydytNimet, aineisto) }],
+    viestit: [{ role: 'user', content: [oppaanViesti({ ...p, sijainti, isoisaKaytetty, toive: jatkaKierrosta ? null : p.toive }, kaydytNimet, aineisto), ohje]
+      .filter(Boolean).join('\n\n') }],
     maxTokens: 700,
     malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
   };
   let tulos = null;
   try {
     for (let yritys = 0; yritys < 2 && !tulos; yritys += 1) {
-      const vastaus = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti);
+      const vastaus = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti, seuraava?.paikka.nimi ?? null);
       if (vastaus?.tyyppi !== 'pysahdys') { tulos = vastaus; continue; }
-      const paikka = await paikanKoordinaatit(fetch, vastaus, sijainti);
+      // Kierroksen paikka on jo tarkistettu suunnitteluvaiheessa; muuten koordinaatit nimellä.
+      const paikka = seuraava ? seuraava.paikka : await paikanKoordinaatit(fetch, vastaus, sijainti);
       if (!paikka) { console.log(`opas: paikkaa ei löytynyt (${vastaus.wikipedia ?? vastaus.nimi})`); continue; }
-      tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi: vastaus.nimi, alarivi: paikka.alarivi, lat: paikka.lat, lon: paikka.lon,
-        koko_m: vastaus.koko_m, ...(vastaus.korkeus_m ? { korkeus_m: vastaus.korkeus_m } : {}), teksti: vastaus.teksti,
+      const nimi = seuraava ? seuraava.paikka.nimi : paikanNimi(paikka, vastaus.nimi);
+      tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi, alarivi: paikka.alarivi, lat: paikka.lat, lon: paikka.lon,
+        koko_m: seuraava?.paikka.koko_m ?? vastaus.koko_m, ...(vastaus.korkeus_m ? { korkeus_m: vastaus.korkeus_m } : {}), teksti: vastaus.teksti,
         wiki: paikka.wiki, kuva: null, vaihtoehdot: vastaus.vaihtoehdot, koordinaatit: paikka.lahde,
-        kuvat: kuvatPaikalle(aineisto, [vastaus.nimi, vastaus.wikipedia, paikka.wiki?.otsikko].filter(Boolean)) };
+        ...(seuraava ? { kierros: { numero: seuraava.numero, maara: seuraava.maara } } : {}),
+        kuvat: kuvatPaikalle(aineisto, [nimi, vastaus.nimi, seuraava?.paikka.wikipedia ?? vastaus.wikipedia, paikka.wiki?.otsikko].filter(Boolean)) };
     }
   } catch (virhe) {
     console.log(`opas: mallikutsu epäonnistui (${virhe?.status ?? 'verkko'})`);
   }
+  // Vaihtoehtojen järjestys koodissa, ei vain kehotteessa: aloituskysymys alkaa "Esittele kaupunki", kierroksen loppu
+  // "Lisää tätä kaupunkia".
+  const ensin = kierrosLoppui ? LISAA_KAUPUNKIA : !p.kaydyt.length && !p.toive ? ESITTELE_KAUPUNKI : null;
+  if (tulos?.tyyppi === 'kysymys' && ensin) {
+    const muut = (tulos.vaihtoehdot ?? []).filter((x) => !onKierrosToive(x));
+    tulos.vaihtoehdot = [ensin, muut[0] ?? 'Näytä jotain modernia'];
+  }
+  if (kierrosLoppui && tulos?.tyyppi === 'kysymys' && kierrosAvain) await kv.delete?.(kierrosAvain)?.catch?.(() => {});
   if (!tulos) return vastaa({ virhe: 'palvelin', viesti: 'Opas ei saanut seuraavaa paikkaa kiinni. Yritä uudelleen.' }, { status: 502, ...kors });
   // Ääni ja kuvan varahaku (Wikidatan P18) rinnakkain; pelin oma kuva voittaa.
   const [aani, p18] = await Promise.all([
