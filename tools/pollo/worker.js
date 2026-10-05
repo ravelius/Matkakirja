@@ -23,6 +23,7 @@ import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
   kaupunginAineisto, kuvatPaikalle, wikidataKuva, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
   seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, jarjestaReitti,
+  seuraavaSuunta, SUUNNANVAIHDOT,
 } from './opas.js';
 import { OPAS_AINEISTO } from './opas-aineisto.js';
 import {
@@ -2914,6 +2915,19 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     tulos.vaihtoehdot = [ensin, muut[0] ?? 'Näytä jotain modernia'];
   }
   if (kierrosLoppui && tulos?.tyyppi === 'kysymys' && kierrosAvain) await kv.delete?.(kierrosAvain)?.catch?.(() => {});
+  // Suunnanvaihtosiru koodissa (Päätoimittaja 5.10.): istunnon muisti KV:ssä, ilman istuntoa kierto nähtyjen määrällä.
+  if (tulos?.tyyppi === 'pysahdys') {
+    const suuntaAvain = p.istunto && kv ? `opas:suunnat:${p.istunto}` : null;
+    const kaytetyt = suuntaAvain ? await kv.get(suuntaAvain).then((x) => (x ? JSON.parse(x) : [])).catch(() => [])
+      : [SUUNNANVAIHDOT[(p.kaydyt.length + SUUNNANVAIHDOT.length - 1) % SUUNNANVAIHDOT.length]];
+    const { siru, kaytetyt: uudet } = seuraavaSuunta(kaytetyt, tulos.luokka ?? null);
+    const syventava = (tulos.vaihtoehdot ?? []).find((x) => !SUUNNANVAIHDOT.includes(x) && !/modernia|syödä|syödään/i.test(x)) ?? tulos.vaihtoehdot?.[0];
+    tulos.vaihtoehdot = [syventava ?? 'Mitä täällä näkee?', siru];
+    if (suuntaAvain) {
+      const kirjoitus = kv.put(suuntaAvain, JSON.stringify(uudet), { expirationTtl: 60 * 60 * 6 }).catch(() => {});
+      if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
+    }
+  }
   if (!tulos) return vastaa({ virhe: 'palvelin', viesti: 'Opas ei saanut seuraavaa paikkaa kiinni. Yritä uudelleen.' }, { status: 502, ...kors });
   // Ääni ja kuvan varahaku (Wikidatan P18) rinnakkain; pelin oma kuva voittaa.
   const [aani, p18] = await Promise.all([

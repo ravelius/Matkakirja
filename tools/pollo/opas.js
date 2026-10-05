@@ -468,3 +468,21 @@ export function jarjestaReitti(paikat, alku = null) {
   }
   return reitti;
 }
+
+/*
+ * SUUNNANVAIHTOSIRU (Päätoimittaja 5.10.2026 ilta): toinen vaihtoehto valitaan koodissa listasta, ei mallilta (malli
+ * tarjosi lähes aina "Näytä jotain modernia"). Ensin sellainen, jota istunnossa ei ole vielä tarjottu; sama ei koskaan
+ * kahdesti peräkkäin; ei paikkaa vastaavaa (puistossa ei "Jotain vihreää"). Kaikkien jälkeen kierros alkaa alusta.
+ */
+export const SUUNNANVAIHDOT = ['Missä voisi syödä?', 'Jotain vihreää', 'Veden äärelle', 'Kaupungin vanhin paikka', 'Jotain modernia'];
+const SUUNTA_EI_LUOKALLE = { 'Jotain vihreää': ['puisto'], 'Veden äärelle': ['vesi', 'kanava', 'silta'] };
+
+/** Seuraava suunnanvaihtosiru: { siru, kaytetyt } (kaytetyt tallennetaan istunnolle). */
+export function seuraavaSuunta(kaytetyt = [], luokka = null) {
+  const edellinen = kaytetyt.at(-1) ?? null;
+  const sopii = (x) => x !== edellinen && !(SUUNTA_EI_LUOKALLE[x] ?? []).includes(luokka);
+  let siru = SUUNNANVAIHDOT.find((x) => sopii(x) && !kaytetyt.includes(x));
+  let pohja = kaytetyt;
+  if (!siru) { pohja = edellinen ? [edellinen] : []; siru = SUUNNANVAIHDOT.find(sopii); }
+  return { siru, kaytetyt: [...pohja, siru].slice(-SUUNNANVAIHDOT.length) };
+}

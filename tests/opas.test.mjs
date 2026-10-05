@@ -146,7 +146,7 @@ test('worker /opas/seuraava: Sonnet valitsee, koordinaatit Wikipediasta nimellä
   assert.equal(data.tyyppi, 'pysahdys');
   assert.equal(data.id, 'Q110289');
   assert.equal(data.lat, 55.6737, 'Wikipedian koordinaatti, ei mallin arvio');
-  assert.deepEqual(data.vaihtoehdot, ['Lisää', 'Seuraava']);
+  assert.deepEqual(data.vaihtoehdot, ['Lisää', 'Jotain vihreää'], 'syventävä mallilta, suunnanvaihto koodista (kierto)');
   assert.equal(data.wikipedia, undefined);
   assert.equal(verkko.kutsut.malli, 'claude-sonnet-5-5');
   assert.match(verkko.kutsut.viesti, /Jo kerrotut paikat.*Nyhavn/, 'nahdyt nimiksi mallille');
@@ -357,4 +357,19 @@ test('worker: "Esittele kaupunki" suunnittelee kierroksen, toive null jatkaa, lo
   } finally {
     globalThis.fetch = vanha;
   }
+});
+
+test('suunnanvaihtosiru: ensin näkemättömät, ei kahdesti peräkkäin, ei paikkaa vastaavaa', async () => {
+  const { seuraavaSuunta, SUUNNANVAIHDOT } = await import('../tools/pollo/opas.js');
+  let kaytetyt = [];
+  const sirut = [];
+  for (let i = 0; i < 12; i += 1) {
+    const r = seuraavaSuunta(kaytetyt, i === 6 ? 'puisto' : null);
+    sirut.push(r.siru);
+    kaytetyt = r.kaytetyt;
+  }
+  assert.deepEqual(sirut.slice(0, 5), SUUNNANVAIHDOT, 'ensin kaikki eri');
+  for (let i = 1; i < sirut.length; i += 1) assert.notEqual(sirut[i], sirut[i - 1], `ei peräkkäin (${i})`);
+  assert.notEqual(sirut[6], 'Jotain vihreää', 'puistossa ei vihreää');
+  assert.equal(seuraavaSuunta(['Veden äärelle'], 'kanava').siru, 'Missä voisi syödä?');
 });
