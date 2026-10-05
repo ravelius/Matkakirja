@@ -2105,6 +2105,12 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "testiotsake") OpasSovitin.Testiotsake = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "pysayta") OpasSovitin.Pysaytetty = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "pcm") OpasSovitin.PcmKaytossa = osat[2] == "1";
+                    else if (osat.Length > 5 && osat[1] == "tapit"
+                        && double.TryParse(osat[2], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var tk)
+                        && double.TryParse(osat[3], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var th)
+                        && double.TryParse(osat[4], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var te)
+                        && float.TryParse(osat[5], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var ts))
+                        OpasSovitin.TestiTapit(tk, th, te, ts);
                     else if (osat.Length > 1 && osat[1] == "muisti") Kirjaa(opas?.Muisti() ?? "opas: ei sovitinta");
                     else if (osat.Length > 2 && osat[1] == "kaupunki") OpasSovitin.Aloituskaupunki = string.Join(" ", osat.Skip(2));
                     else if (osat.Length > 2 && osat[1] == "toive") OpasSovitin.Toive(string.Join(" ", osat.Skip(2)));

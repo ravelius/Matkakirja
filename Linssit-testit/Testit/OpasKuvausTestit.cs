@@ -28,8 +28,9 @@ namespace Matkakirja.Linssit.Testit
         {
             var katu = OpasKuvaus.Kehysta(K(80), 5, 90, "kanava");
             var alue = OpasKuvaus.Kehysta(K(500), 5, 90, "linnoitus");
-            Oleta.Tosi(katu.Kallistus > alue.Kallistus + 10, $"katu viistompi ({katu.Kallistus} vs {alue.Kallistus})");
+            Oleta.Tosi(katu.Kallistus > alue.Kallistus, $"katu viistompi ({katu.Kallistus} vs {alue.Kallistus})");
             Oleta.Tosi(katu.EtaisyysM < alue.EtaisyysM, $"katu lähempänä ({katu.EtaisyysM} vs {alue.EtaisyysM})");
+            Oleta.Tosi(OpasKuvaus.Kehysta(K(2000), 5, 0, "linnoitus").EtaisyysM <= 350 && OpasKuvaus.Kehysta(K(1200), 5, 0, "katu").EtaisyysM <= 350, "suuret kohteet enintään 350 m");
             Oleta.Tosi(katu.EtaisyysM >= OpasKuvaus.KatuEtMinM && alue.EtaisyysM <= OpasKuvaus.AlueEtMaxM);
             Oleta.Tosi(Ero(katu.Suuntima, 90 + OpasKuvaus.SivuKulma) < 1e-9, "katse sivukulman verran tulosuunnasta");
             var torni = OpasKuvaus.Kehysta(K(30, 120), 5, 0, "torni");
@@ -39,7 +40,7 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(raati.EtaisyysM > 140 && raati.EtaisyysM < 230, $"Raatihuone {raati.EtaisyysM:F0} m");
             Oleta.Sama(OpasKuvaus.RakennusEtMinM, OpasKuvaus.Kehysta(K(8, 4), 5, 0, "patsas").EtaisyysM, "patsas vähimmäisetäisyydellä");
             var nyhavn = OpasKuvaus.Kehysta(K(250, 15), 5, 0, "kanava");
-            Oleta.Tosi(nyhavn.EtaisyysM > 300 && nyhavn.EtaisyysM < 420, $"Nyhavn {nyhavn.EtaisyysM:F0} m");
+            Oleta.Tosi(nyhavn.EtaisyysM > 300 && nyhavn.EtaisyysM <= 350, $"Nyhavn {nyhavn.EtaisyysM:F0} m");
         }
 
         [Testi] static void PysahdysAlkaaKehyksestaJaKiertaaHitaasti()

@@ -84,6 +84,44 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(ennen.Value.EtaisyysM - esi.EtaisyysM) < 1e-6, "ennen lentoa sama kehys");
         }
 
+        [Testi] static void TappiPitaaPysahdyksenJaPaastaaTauonJalkeen()
+        {
+            // Juna 145: kosketus jäädyttää automaattikierron eikä lähde seuraavaan; irrotuksen jälkeen OhjausTaukoS, sitten lento.
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var pyynnot = new List<int>();
+            s.Pyyda += (n, t) => pyynnot.Add(n);
+            s.Aloita("x");
+            s.Vastaus(pyynnot[^1], K("a", 55.6760, 12.5700, 80));
+            for (int i = 0; i < 400 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(OpasVaihe.Puhuu, s.Vaihe);
+            s.Vastaus(pyynnot[^1], K("b", 55.6800, 12.5900, 80));   // esihaku valmis
+            s.PelaajaOhjaa = true; s.Tapit = (1, 0, 0);
+            s.AaniLoppui();
+            var ennen = s.Asento.Suuntima;
+            for (int i = 0; i < 100; i++) s.Paivita(0.1, _ => 5);   // 10 s kosketusta
+            Oleta.Sama(OpasVaihe.Puhuu, s.Vaihe, "kosketuksen aikana ei lähdetä");
+            Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(s.Asento.Suuntima - ennen)) > 5, "tappi kiertää kameraa");
+            s.PelaajaOhjaa = false; s.Tapit = default;
+            for (int i = 0; i < 35; i++) s.Paivita(0.1, _ => 5);   // 3,5 s irrotuksesta
+            Oleta.Sama(OpasVaihe.Puhuu, s.Vaihe, "tauko kesken");
+            var irti = s.Asento;
+            for (int i = 0; i < 10; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(OpasVaihe.Lentaa, s.Vaihe, "tauon jälkeen lento");
+            Oleta.Tosi(KierrosLento.EtaisyysM(irti.Lat, irti.Lon, s.Asento.Lat, s.Asento.Lon) < 50, "lento alkaa pelaajan kulmasta");
+        }
+
+        [Testi] static void KorostusLuetaan()
+        {
+            OpasKohde L(string json) => OpasKohde.Lue((Dictionary<string, object>)MiniJson.Jasenna(json));
+            var p = L("{\"nimi\":\"T\",\"lat\":55.68,\"lon\":12.57,\"korostus\":{\"tyyppi\":\"piste\",\"pisteet\":[[55.6814,12.5758]],\"sade_m\":20}}");
+            Oleta.Tosi(p.Korostus != null && !p.Korostus.Reitti && Math.Abs(p.Korostus.SadeM - 20) < 1e-9 && p.Korostus.Pisteet.Length == 1);
+            var r = L("{\"nimi\":\"S\",\"lat\":55.68,\"lon\":12.57,\"korostus\":{\"tyyppi\":\"reitti\",\"pisteet\":[[55.6757,12.5689],[55.6786,12.5737],[55.6797,12.5788]]}}");
+            Oleta.Tosi(r.Korostus.Reitti && r.Korostus.Pisteet.Length == 3 && r.Korostus.SadeM == 0);
+            Oleta.Tosi(L("{\"nimi\":\"x\",\"lat\":1,\"lon\":2,\"korostus\":{\"tyyppi\":\"reitti\",\"pisteet\":[[1,2]]}}").Korostus == null, "reitti < 2 pistettä");
+            Oleta.Tosi(L("{\"nimi\":\"x\",\"lat\":1,\"lon\":2,\"korostus\":{\"tyyppi\":\"ympyra\",\"pisteet\":[[1,2]]}}").Korostus == null, "tuntematon tyyppi");
+            Oleta.Tosi(L("{\"nimi\":\"x\",\"lat\":1,\"lon\":2}").Korostus == null);
+        }
+
         [Testi] static void KehysKoonMukaan()
         {
             var pieni = OpasSilmukka.Kehysta(K("a", 55, 12, 10), 40, 90);
