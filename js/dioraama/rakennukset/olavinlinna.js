@@ -24,6 +24,7 @@ import { TILA as TILA_KAPPELI } from './olavinlinna/kappeli.js';
 import { TILA as TILA_KESKUSHALLI } from './olavinlinna/keskushalli.js';
 import { TILA as TILA_KEITTIO } from './olavinlinna/keittio.js';
 import { TILA as TILA_TUNNELMA } from './olavinlinna/tunnelma.js';
+import { kohtauksetV3 } from './olavinlinna/kohtaukset-v3.js';
 
 // ---------------------------------------------------------------------------
 // Linnan taulu (RAKENNUS-tason opetustaulu, 3 ydinasiaa). Sisältökirjuri tarkisti 29.9. (Kansallismuseo, Museovirasto, Finna):
@@ -73,30 +74,30 @@ export const RAKENNUS = {
   // hioo kulmat natiivissa. Vanhat kentät (taulu, pulu, kasikirjoitus) säilyvät TF 1.0.57–72:n yhteensopivuutta varten. Ääni 1.10.2026: isoisä
   // (Viisas Kertoja, eleven_v3; omistaja 30.9. klo 23.5x), kesto_s vähintään äänen kesto + 0,5 s.
   // Avainsanat (Päätoimittaja 5.10. hyväksyi, omistajan toive): enintään 6; t_s = sekuntia kertojan klipin alusta (ElevenLabs-
-  // kohdistus 5.10., proto-3d/lokit/linnanrakentaja-avainsanat/), natiivi häivyttää sisään t_s:ssä ja pois noin 4 s:n jälkeen. Web ohittaa.
+  // kohdistus 5.10.; v3 Williamin äänellä: _valmiit/linna-kohtaukset-v3/ajat/avaus-avainsanat.json), natiivi häivyttää sisään t_s:ssä ja pois noin 4 s:n jälkeen. Web ohittaa.
   kertoja: {
     jaksot: [
       { id: 'jarvelta', kesto_s: 13, aani: 'linna-kertoja-jarvelta',
         kamera: { kohde: [0, 2, 0], atsimuutti: 200, korkeus: 10, etaisyys: 230, fov: 32 },
         kameraPysty: { kohde: [0, 0, 2], atsimuutti: 200, korkeus: 14, etaisyys: 420, fov: 40 },
         teksti: 'Olavinlinna nousee kalliosaarelta Kyrönsalmessa. Sen rakentaminen alkoi vuonna 1475, ja linnan tehtävä oli vartioida valtakunnan itärajaa.',
-        avainsanat: [{ t_s: 6.06, vuosi: '1475', sanat: 'Rakentaminen alkaa' }] },
+        avainsanat: [{ t_s: 5.52, vuosi: '1475', sanat: 'Rakentaminen alkaa' }] },
       { id: 'tornit', kesto_s: 13, aani: 'linna-kertoja-tornit',
         kamera: { kohde: [-27.4, 11, -12.8], atsimuutti: 230, korkeus: 16, etaisyys: 95, fov: 32 },
         kameraPysty: { kohde: [-27.4, 9, -12.8], atsimuutti: 230, korkeus: 20, etaisyys: 170, fov: 40 },
         teksti: 'Linnan perusti ritari Erik Akselinpoika Tott, ja se sai nimensä Pyhän Olavin mukaan. Sen kolme tornia ovat Kirkkotorni, Kellotorni ja Kijlin torni.',
-        avainsanat: [{ t_s: 1.54, sanat: 'Erik Akselinpoika Tott' }] },
-      { id: 'piha', kesto_s: 13, aani: 'linna-kertoja-piha',
+        avainsanat: [{ t_s: 1.6, sanat: 'Erik Akselinpoika Tott' }] },
+      { id: 'piha', kesto_s: 12, aani: 'linna-kertoja-piha',
         kamera: { kohde: [-14.75, 3.5, -9.2], atsimuutti: 160, korkeus: 42, etaisyys: 85, fov: 32 },
         kameraPysty: { kohde: [-14.75, 2, -9.2], atsimuutti: 160, korkeus: 48, etaisyys: 150, fov: 40 },
         teksti: 'Linnaa johti vouti, joka hoiti kuninkaan puolesta veroja, oikeutta ja puolustusta. Arki kulki tulisijojen, vahtivuorojen ja veneiden tahdissa.',
-        avainsanat: [{ t_s: 0.82, sanat: 'Linnanvouti' }] },
+        avainsanat: [{ t_s: 0.72, sanat: 'Linnanvouti' }] },
       // tila: kierroksen aikana laiturin leikkausikkuna aukeaa lennon jälkipuoliskolla (laituri on kuoren sisällä; Siirtoseppä 1.1 (74)),
       // ja natiivi käyttää laituri-tilan omaa kameraa (sijoitettu paikka). Jakson omat kamera-arvot poistettu (vanhentuneet).
       { id: 'laituri', tila: 'laituri', kesto_s: 21, aani: 'linna-kertoja-laituri',
         teksti: 'Linna jäi Turun rauhassa 1743 Venäjälle, ja vuonna 1812 Vanha Suomi liitettiin Suomen suuriruhtinaskuntaan. Nykyään Savonlinnan oopperajuhlat pidetään linnassa joka heinäkuu. Tutki linnaa: napauta huonetta.',
-        avainsanat: [{ t_s: 0.66, vuosi: '1743', sanat: 'Turun rauha' }, { t_s: 4.54, vuosi: '1812', sanat: 'Vanha Suomi' },
-          { t_s: 12.14, sanat: 'Oopperajuhlat' }] },
+        avainsanat: [{ t_s: 0.64, vuosi: '1743', sanat: 'Turun rauha' }, { t_s: 5.76, vuosi: '1812', sanat: 'Vanha Suomi' },
+          { t_s: 13.2, sanat: 'Oopperajuhlat' }] },
     ],
   },
   // Voudin sinetti (käsikirjoitus kohta 4, Päätoimittaja 29.9.): vapaaehtoinen kolmen vihjeen etsintä; vaiheet ovat
@@ -122,5 +123,5 @@ export const RAKENNUS = {
   tilat: [
     TILA_MASSA, TILA_LAITURI, TILA_FATABUURI, TILA_KIERREPORTAAT, TILA_MUURINHARJA,
     TILA_KAPPELI, TILA_KESKUSHALLI, TILA_KEITTIO, TILA_TUNNELMA,
-  ],
+  ].map(kohtauksetV3), // kohtaukset v3 (5.10.): kertoja + keskustelu, käsikirjoitus pulu-lenna + taulu (olavinlinna/kohtaukset-v3.js)
 };
