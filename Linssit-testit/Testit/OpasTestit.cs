@@ -122,6 +122,32 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(L("{\"nimi\":\"x\",\"lat\":1,\"lon\":2}").Korostus == null);
         }
 
+        [Testi] static void LennonAikainenToiveEiKatoa()
+        {
+            // Simu 23.05 (juna 145 koe 792745f0): toive "näytä Strøget" lennon aikana → vastaus tuli, mutta saapumisen esihaku
+            // korvasi sen (Kastellet), eikä Strøgetiin lennetty koskaan.
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var pyynnot = new List<(int n, string t)>();
+            s.Pyyda += (n, t) => pyynnot.Add((n, t));
+            s.Aloita("x");
+            s.Vastaus(pyynnot[^1].n, K("A", 55.6760, 12.5700));
+            for (int i = 0; i < 400 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.1, _ => 5);
+            s.Vastaus(pyynnot[^1].n, K("B", 55.6930, 12.5990));   // esihaku
+            s.AaniLoppui();
+            for (int i = 0; i < 50 && s.Vaihe != OpasVaihe.Lentaa; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(OpasVaihe.Lentaa, s.Vaihe);
+            s.Toive("näytä Strøget");
+            Oleta.Sama("näytä Strøget", pyynnot[^1].t);
+            s.Vastaus(pyynnot[^1].n, K("Strøget", 55.6786, 12.5737));   // vastaus lennon aikana
+            for (int i = 0; i < 400 && s.Nykyinen?.Id != "B"; i++) s.Paivita(0.1, _ => 5);
+            for (int i = 0; i < 400 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.1, _ => 5);   // saapui B
+            // Jos saapuminen pyysi uuden esihaun, se vastaa nyt "D" — toiveen on silti voitettava.
+            if (pyynnot[^1].t == null) s.Vastaus(pyynnot[^1].n, K("D", 55.6916, 12.5936));
+            s.AaniLoppui();
+            for (int i = 0; i < 100 && s.Vaihe != OpasVaihe.Lentaa; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama("Strøget", s.Nykyinen?.Id, "toiveen kohde seuraavaksi");
+        }
+
         [Testi] static void KehysKoonMukaan()
         {
             var pieni = OpasSilmukka.Kehysta(K("a", 55, 12, 10), 40, 90);
@@ -182,27 +208,11 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(k != null && k.Kysymys && k.Vaihtoehdot.Length == 2);
             s.Vastaus(1, k);
             Oleta.Tosi(kysytty == k && s.OdottaaVastausta);
-            Oleta.Sama(2, pyynnot.Count, "ensimmäinen vaihtoehto esihaetaan heti"); Oleta.Sama("Linnoja", pyynnot[1]);
+            Oleta.Sama(1, pyynnot.Count, "ei oletuksen esihakua (omistaja, TF 144: odotetaan valintaa)");
             for (int i = 0; i < 40; i++) s.Paivita(0.1, _ => 50);
-            Oleta.Sama(2, pyynnot.Count);
+            Oleta.Sama(1, pyynnot.Count);
             s.Toive("Satama");
-            Oleta.Sama(3, pyynnot.Count); Oleta.Sama("Satama", pyynnot[2]); Oleta.Tosi(!s.OdottaaVastausta);
-        }
-
-        [Testi] static void VastaamatonKysymysValitseeEnsimmaisen()
-        {
-            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
-            var pyynnot = new List<string>();
-            s.Pyyda += (n, t) => pyynnot.Add(t);
-            s.Aloita("Kööpenhamina");
-            s.Vastaus(1, new OpasKohde { Kysymys = true, Teksti = "Mitä?", Vaihtoehdot = new[] { "Linnoja", "Satama" } });
-            Oleta.Sama(2, pyynnot.Count); Oleta.Sama("Linnoja", pyynnot[1]);
-            s.Vastaus(2, K("linna", 55.6858, 12.5773));
-            s.AaniLoppui();
-            for (int i = 0; i < 50; i++) s.Paivita(0.1, _ => 50);
-            Oleta.Tosi(s.Vaihe != OpasVaihe.Lentaa, "ei lennä ennen vastausaikaa");
-            for (int i = 0; i < 200 && s.Vaihe != OpasVaihe.Lentaa; i++) s.Paivita(0.1, _ => 50);
-            Oleta.Sama(OpasVaihe.Lentaa, s.Vaihe, "oletukseen vastausajan jälkeen");
+            Oleta.Sama(2, pyynnot.Count); Oleta.Sama("Satama", pyynnot[1]); Oleta.Tosi(!s.OdottaaVastausta);
         }
 
         [Testi] static void SamaPaikkaUudelleenEiLenna()

@@ -20,6 +20,15 @@ namespace Matkakirja.Linssit.Kierros
         public string Luokka;
         /// <summary>Kohteen korostus maassa (Pelikoodari #4018+, juna 145; valinnainen): piste, alue tai reitti.</summary>
         public OpasKorostus Korostus;
+        /// <summary>Siltalauseiden ryhmät (Pelikoodari #4026, juna 146): vaihtoehtojen järjestyksessä, ja pelaajan toiveen ryhmä.</summary>
+        public string[] VaihtoehtojenRyhmat;
+        public string ToiveenRyhma;
+        /// <summary>Pysähdys kuuluu Esittele kaupunki -kierrokseen: opas jatkaa itse vaihtoehdoista huolimatta (omistaja, TF 144).</summary>
+        public bool Kierros;
+        /// <summary>Workerin "odota"-vastaus: ei pysähdystä, odotetaan pelaajan valintaa.</summary>
+        public bool Odota;
+        /// <summary>Pelaajan valintaa odottava pysähdys: vaihtoehtoja on, eikä se kuulu Esittele kaupunki -kierrokseen.</summary>
+        public bool OdottaaValintaa => !Kysymys && !Kierros && Vaihtoehdot != null && Vaihtoehdot.Length > 0;
         public int AaniTaajuus = 24000;
         /// <summary>Äänen tunniste (PCM ensisijainen, muuten mp3); null = ei ääntä.</summary>
         public string AaniAvain => !string.IsNullOrEmpty(AaniPcm) ? AaniPcm : Aani;
@@ -35,6 +44,8 @@ namespace Matkakirja.Linssit.Kierros
             if (j == null) return null;
             string S(string k) => j.TryGetValue(k, out var v) ? v as string : null;
             double D(string k, double o) => j.TryGetValue(k, out var v) && v != null ? Convert.ToDouble(v, System.Globalization.CultureInfo.InvariantCulture) : o;
+            // Worker #4034+: "odota" = ei uutta pysähdystä ilman pelaajan valintaa (vanhojen buildien esihaku), ei virhe.
+            if (S("tyyppi") == "odota") return new OpasKohde { Odota = true };
             if (S("tyyppi") == "kysymys")
             {
                 var vaihtoehdot = new List<string>();
@@ -56,6 +67,14 @@ namespace Matkakirja.Linssit.Kierros
             }
             k.Kuvat = OpasKuva.Lue(j.TryGetValue("kuvat", out var ko) ? ko as IList<object> : null);
             k.Korostus = OpasKorostus.Lue(j.TryGetValue("korostus", out var kr) ? kr as Dictionary<string, object> : null);
+            if (j.TryGetValue("vaihtoehtojen_ryhmat", out var vr) && vr is IList<object> vrl)
+            {
+                var ryhmat = new List<string>();
+                foreach (var x in vrl) ryhmat.Add(x as string);
+                k.VaihtoehtojenRyhmat = ryhmat.ToArray();
+            }
+            k.ToiveenRyhma = j.TryGetValue("toiveen_ryhma", out var tr) ? tr as string : null;
+            k.Kierros = j.TryGetValue("kierros", out var ki) && (ki is IDictionary<string, object> || ki is bool kb && kb);   // {"numero", "maara"}
             if (string.IsNullOrEmpty(k.Nimi) || double.IsNaN(k.Lat) || double.IsNaN(k.Lon) || Math.Abs(k.Lat) > 90 || Math.Abs(k.Lon) > 180) return null;
             return k;
         }
@@ -145,6 +164,8 @@ namespace Matkakirja.Linssit.Kierros
         public double LentoKestoS { get; private set; }
         /// <summary>Lähtevä pyyntö: toive (tai null) — sovitin lähettää workerille. Palauttaa pyynnön järjestysnumeron.</summary>
         public event Action<int, string> Pyyda;
+        /// <summary>Lento seuraavaan alkoi (kohde, matka m, pelaajan toiveesta): siltalause kierroksen siirtymään (juna 146).</summary>
+        public event Action<OpasKohde, double, bool> LentoAlkaa;
         /// <summary>Saapui kohteeseen: sovitin aloittaa äänen ja näyttää nimen.</summary>
         public event Action<OpasKohde> Saapui;
         /// <summary>Kappale alkaa PuheEnnenS ennen saapumista (sovitin soittaa; Saapui ei enää aloita puhetta uudelleen).</summary>
@@ -206,8 +227,14 @@ namespace Matkakirja.Linssit.Kierros
         }
 
         /// <summary>Käynnistys: ensimmäinen pyyntö (alkutoive, esim. "Kööpenhamina").</summary>
+        /// <summary>Pelaajan tauko: Paivita ei etene (ei lentoa, kiertoa eikä seuraavaa); sovitin pysäyttää äänet.</summary>
+        public bool Tauolla;
+        /// <summary>Ensimmäinen pyyntö on lähetetty (Aloita, toive tai paikan vaihto); täkyavauksessa vasta pelaajan valinnasta.</summary>
+        public bool Aloitettu { get; private set; }
+
         public void Aloita(string alkutoive)
         {
+            Aloitettu = true;
             toive = alkutoive;
             UusiPyynto();
         }
@@ -216,7 +243,7 @@ namespace Matkakirja.Linssit.Kierros
         public void Toive(string teksti)
         {
             if (string.IsNullOrWhiteSpace(teksti) || Vaihe == OpasVaihe.Valmis) return;
-            toive = teksti.Trim();
+            toive = teksti.Trim(); toiveesta = true;
             Seuraava = null;
             OdottaaVastausta = false; kysymysAika = -1;
             if (Vaihe == OpasVaihe.Puhuu) Hiljenna?.Invoke();
@@ -229,7 +256,7 @@ namespace Matkakirja.Linssit.Kierros
         {
             if (Vaihe == OpasVaihe.Valmis) return;
             nahdyt.Clear();
-            toive = null;
+            toive = null; toiveesta = true;
             Seuraava = null;
             OdottaaVastausta = false; kysymysAika = -1;
             if (Vaihe == OpasVaihe.Puhuu) Hiljenna?.Invoke();
@@ -240,6 +267,7 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Pelaajan toiminta: luovutus puretaan (uusi yritys), mutta kesken oleva virhetauko odotetaan loppuun.</summary>
         void PelaajanPyynto()
         {
+            Aloitettu = true;
             Luovutti = false; Virheita = 0;
             if (VirheTauko > 0) { odotettu = 0; virhe = true; return; }
             UusiPyynto();
@@ -290,15 +318,13 @@ namespace Matkakirja.Linssit.Kierros
             odotettu = 0;
             if (k == null) { Virhe(koodi, odotaS); return; }
             Virheita = 0; VirheTauko = 0; ViimeKoodi = 0;
+            if (k.Odota) return;
             if (k.Kysymys)
             {
                 // Kysymys ei liikuta kameraa: opas kysyy, ja pelaajan valinta (chat) tulee Toive-kutsuna.
+                // Omistaja (TF 144): opas odottaa pelaajan valintaa — ei oletusvaihtoehtoa eikä esihakua (siltalause täyttää odotuksen).
                 OdottaaVastausta = true; kysymysAika = 0;
-                kysymysOletus = k.Vaihtoehdot != null && k.Vaihtoehdot.Length > 0 ? k.Vaihtoehdot[0] : null;
                 Kysyy?.Invoke(k);
-                // Ensimmäinen vaihtoehto haetaan heti (simu 19.54: 31 s hiljaisuutta kysymyksen jälkeen); pelaajan valinta korvaa sen.
-                toive = kysymysOletus ?? "Valitse sinä paikka";
-                UusiPyynto();
                 return;
             }
             Seuraava = k;
@@ -314,7 +340,7 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         public void Paivita(double dt, Func<OpasKohde, double> maaKorkeus, Func<bool> laatatValmiit = null)
         {
-            if (Vaihe == OpasVaihe.Valmis) return;
+            if (Vaihe == OpasVaihe.Valmis || Tauolla) return;   // tauko: kerronta, lento ja kierto seis (omistaja TF 144)
             VaiheAika += Math.Max(0, dt);
             if (Luovutti) return;
             ohjausLepoS = PelaajaOhjaa ? 0 : (ohjausLepoS == double.MaxValue ? ohjausLepoS : ohjausLepoS + Math.Max(0, dt));
@@ -322,7 +348,7 @@ namespace Matkakirja.Linssit.Kierros
             if (VirheTauko > 0) VirheTauko = Math.Max(0, VirheTauko - Math.Max(0, dt));
             if (virhe && VirheTauko <= 0) { virhe = false; UusiPyynto(); }
             // Vastaamaton kysymys (simu 18.39: worker kysyi saman 9 kertaa): opas valitsee itse ensimmäisen vaihtoehdon.
-            if (OdottaaVastausta && aaniLoppui) { kysymysAika += dt; if (kysymysAika > KysymysOdotusS) OdottaaVastausta = false; }   // oletus on jo haettu
+            if (OdottaaVastausta && aaniLoppui) kysymysAika += dt;   // odotus kestää pelaajan valintaan asti (omistaja, TF 144)
 
             switch (Vaihe)
             {
@@ -359,7 +385,10 @@ namespace Matkakirja.Linssit.Kierros
                         if (!puheAloitettu) aaniLoppui = false;
                         if (Nykyinen.Id != null) nahdyt.Add(Nykyinen.Id);
                         Saapui?.Invoke(Nykyinen);
-                        if (!OdottaaVastausta) UusiPyynto();   // esihaku puheen ajaksi
+                        // Esihaku puheen ajaksi — ei, jos seuraava on jo tiedossa tai pyynnössä (lennon aikana annettu toive;
+                        // simu 23.05: saapumisen esihaku korvasi toiveen "näytä Strøget").
+                        // Vaihtoehdollinen pysähdys (ei kierros) odottaa pelaajan valintaa: ei esihakua (omistaja, TF 144).
+                        if (!OdottaaVastausta && Seuraava == null && odotettu == 0 && !Nykyinen.OdottaaValintaa) UusiPyynto();
                     }
                     break;
                 }
@@ -398,6 +427,8 @@ namespace Matkakirja.Linssit.Kierros
         public readonly OpasOhjaus Ohjaus = new OpasOhjaus();
         public (double kierto, double korkeus, double etaisyys) Tapit;
         public bool PelaajaOhjaa;
+        /// <summary>Seuraava lento on pelaajan toiveen tai paikan vaihdon seuraus (siltalause soitettiin jo valinnasta).</summary>
+        bool toiveesta;
         public const double OhjausTaukoS = 4;
         double ohjausLepoS = double.MaxValue;
         /// <summary>Pelaaja ohjaa tai irrotti alle OhjausTaukoS sitten: ei lähdetä seuraavaan.</summary>
@@ -423,7 +454,7 @@ namespace Matkakirja.Linssit.Kierros
                 Vaihe = OpasVaihe.Puhuu; VaiheAika = 0; aaniLoppui = false;
                 puheAloitettu = true; AlkaaPuhua?.Invoke(k);
                 Saapui?.Invoke(k);
-                if (!OdottaaVastausta) UusiPyynto();
+                if (!OdottaaVastausta && !k.OdottaaValintaa) UusiPyynto();
                 return;
             }
             kohdeKehys = KehysKohteelle(k, maaKorkeus);
@@ -431,6 +462,8 @@ namespace Matkakirja.Linssit.Kierros
             Ohjaus.Nollaa();   // lento alkaa pelaajan kulmasta (Asento sisältää jo ohjauksen), ei hyppyä
             lahto = Asento;
             LentoKestoS = LennonKesto(KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon));
+            LentoAlkaa?.Invoke(k, KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon), toiveesta);
+            toiveesta = false;
             Vaihe = OpasVaihe.Lentaa; VaiheAika = 0;
             puheAloitettu = false;
         }

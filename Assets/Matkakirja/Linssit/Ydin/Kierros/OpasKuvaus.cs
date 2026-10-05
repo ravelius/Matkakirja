@@ -5,8 +5,8 @@
 //  1) KEHYS kohteen luokan mukaan: katu/kanava/aukio matalalta ja viistosti läheltä (Nyhavn), torni/rakennus keskikorkealta
 //     korkeuden mukaan, linnoitus/puisto/vesi/alue korkealta ja jyrkästi kauempaa (Kastellet). Luokka workerin "luokka"-kentästä,
 //     muuten koosta ja korkeudesta. Kamera ei katso kohdetta suoraan tulosuunnasta vaan 25° sivusta (syvyys, ei litteä).
-//  2) PYSÄHDYS: hidas kierto (~0,35°/s eli ~14° 40 s:n kappaleessa) pehmeällä alulla (ei nykäisyä saapuessa) ja kevyt dolly
-//     sisään (−7 % etäisyydestä, eksponentiaalisesti).
+//  2) PYSÄHDYS: orbit ~0,9°/s pehmeällä alulla ja kevyt dolly sisään; 13 s:n jälkeen 4 s:n siirtolento toiseen kehykseen
+//     (katu/alue: kohteen toiselle puolelle +150°, rakennus: yksityiskohta 30 % lähempää), ja orbit jatkuu (omistaja 23.3x).
 //  3) LENTO: nousu – liuku – lasku. Sijainti minimum-jerk-käyrällä (smootherstep), korkeus tasanteena (nousu 0–30 %, liuku,
 //     lasku 70–100 %, kaikki pehmeästi), katse kääntyy lentosuuntaan ensimmäisen kolmanneksen aikana ja kohteen kehyssuuntaan
 //     viimeisen kolmanneksen aikana; liu'ussa kallistus hieman vaakaan (näkee eteen). Yli 20 km: OpasSilmukka.Lennossa (isoympyrä).
@@ -27,7 +27,11 @@ namespace Matkakirja.Linssit.Kierros
         public const double KatuEtMinM = 150, KatuEtMaxM = 350, RakennusEtMinM = 150, RakennusEtMaxM = 600, AlueEtMinM = 220, AlueEtMaxM = 350;   // Päätoimittaja 21.3x: Nyhavn/Tivoli/Strøget liian kaukaa → enintään ~350 m
         public const double SivuKulma = 25;
         // Pysähdys
-        public const double KiertoAsteS = 0.35, KiertoAlkuS = 4, DollyOsuus = 0.07, DollyAikaS = 25;
+        // KAKSI KEHYSTÄ (omistaja 5.10. 23.3x: "hidas orbit … saisi olla nopeampi ja näyttää samasta kohteesta myös toisen suunnan"):
+        // orbit KiertoAsteS VaiheS:n ajan, sitten pehmeä siirtolento SiirtoS: katu ja alue kohteen toiselle puolelle (+SiirtoKulma),
+        // rakennus ja torni yksityiskohtaan lähemmäs (×LahemmasOsuus, hieman viistommin), ja sama orbit jatkuu sieltä.
+        public const double KiertoAsteS = 0.9, KiertoAlkuS = 3, DollyOsuus = 0.07, DollyAikaS = 25;
+        public const double VaiheS = 13, SiirtoS = 4, SiirtoKulma = 150, LahemmasOsuus = 0.7, LahemmasKallistus = 4, SiirtoUlosOsuus = 0.15;
         // Lento
         public const double NousuLoppu = 0.3, LaskuAlku = 0.7, KaariOsuus = 0.35, KaariMinM = 250, KaariMaxM = 1600, LiukuKallistus = 6;   // liuku korkeammalle (laatat ehtivät)
         public const double LahiRajaM = 20000;
@@ -85,7 +89,13 @@ namespace Matkakirja.Linssit.Kierros
                 ? KiertoAsteS * KiertoAlkuS * SmoothstepIntegraali(t / KiertoAlkuS)
                 : KiertoAsteS * (KiertoAlkuS * 0.5 + (t - KiertoAlkuS));
             double dolly = 1 - DollyOsuus * (1 - Math.Exp(-t / DollyAikaS));
-            return new Kuvakulma(p.Lat, p.Lon, p.EtaisyysM * dolly, p.Kallistus, KierrosLento.Kiedo(p.Suuntima + kierto), p.KatseKorkeusM);
+            // Toinen kehys: siirtolento VaiheS → VaiheS + SiirtoS (smootherstep), kaarena hieman ulos (ei läpi kohteen).
+            double s = t <= VaiheS ? 0 : t >= VaiheS + SiirtoS ? 1 : KierrosLento.Smootherstep((t - VaiheS) / SiirtoS);
+            bool lahemmas = Math.Abs(p.Kallistus - RakennusKallistus) < 0.5;   // rakennus/torni: yksityiskohta lähempää
+            double lisaSuunta = lahemmas ? 0 : SiirtoKulma * s;
+            double etKerroin = (lahemmas ? 1 + (LahemmasOsuus - 1) * s : 1) * (1 + SiirtoUlosOsuus * Math.Sin(Math.PI * s));
+            double kall = p.Kallistus + (lahemmas ? LahemmasKallistus * s : 0);
+            return new Kuvakulma(p.Lat, p.Lon, p.EtaisyysM * dolly * etKerroin, kall, KierrosLento.Kiedo(p.Suuntima + kierto + lisaSuunta), p.KatseKorkeusM);
         }
 
         /// <summary>Lento a → b osuudella t (0…1): nousu – liuku – lasku, katse lentosuuntaan ja lopuksi kohteeseen.</summary>
