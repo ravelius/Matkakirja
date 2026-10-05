@@ -1,5 +1,7 @@
 # Tavli (pelikatalogi) — historiatekstit
 
+HYVÄKSYTTY Päätoimittaja 5.10. (korjaukset tehty: nimi tavli kaikkialla, tabulan rivi 2, Plakoto, Gloucester "lähes täydellinen" ilman linnamainintaa, leviämisyleistys pois). Valmiit tekstit: proto siirtoseppa/tavli Peliluettelo.cs.
+
 Tutkija (Sonnet 5.5), 5.10.2026. Tilaus: Siirtoseppä / Päätoimittaja. Kohderyhmä 13+ ja aikuiset.
 Faktat tarkistettu lähteistä (lähdeluettelo osiossa 5). Ei keksittyjä yksityiskohtia: jos fakta ei löytynyt
 lähteestä, sitä ei ole kirjoitettu. Mitä en voinut avata tai vahvistaa, on osiossa 6.
@@ -14,11 +16,11 @@ Tavli on kolmen pelin sarja (Portes, Plakoto ja Fevga), ja tämä peli noudattaa
 
 **Bysantin tabula n. 480**
 Bysantin keisari Zenon (hallitsi 474–475 ja 476–491) pelasi tabulaa, ja runoilija Agathias kuvasi 500-luvulla hänen epäonnisen heittonsa: nopat näyttivät 2, 6 ja 5.
-Tabulassa oli 24 pistettä, 15 nappulaa kummallakin pelaajalla ja kolme noppaa, joten se on nykyisen tavlan esi-isä mutta ei sama peli.
+Tabulassa oli tavlin tapaan 24 pistettä ja 15 nappulaa kummallakin, mutta noppia heitettiin kolme: se on tavlin esi-isä, ei sama peli.
 
 **Ottomaanien tavla**
 Ottomaanien Istanbulissa tehtiin 1600-luvulla ylellisiä pelilautoja, joihin oli upotettu kilpikonnankilpeä, helmiäistä, luuta ja norsunluuta.
-Turkissa tavlaa pelataan edelleen, ja siellä sitä kutsutaan nimellä tavla.
+Turkissa peliä pelataan yhä, ja siellä sen nimi on tavla.
 
 Huom. rivi 1 ("pelataan", nykyaika): lähde kertoo kafeneioista 1830-luvulta ja nykypelaamisesta, ei yksittäisestä vuodesta 1873
 (ks. varaus 1). Jos haluat tekstin tiukasti 1873-aikaiseksi, vaihtoehto: "Ateenassa kafeneiot ovat kuuluneet kaupunkielämään
@@ -28,7 +30,7 @@ Huom. rivi 1 ("pelataan", nykyaika): lähde kertoo kafeneioista 1830-luvulta ja 
 
 Voitat, kun saat kaikki 15 nappulaasi pois laudalta ennen vastustajaa.
 
-(Tavlan/backgammonin yleinen voittoehto; Fevgan kuvauksessa lähde sanoo "bear off all one's pieces". Jos pelissä on gammon-pisteytys,
+(Tavlin/backgammonin yleinen voittoehto; Fevgan kuvauksessa lähde sanoo "bear off all one's pieces". Jos pelissä on gammon-pisteytys,
 lisää erillinen apurivi.)
 
 ## 3. Lehtijuttu: Tavli – lauta, joka on kolme peliä
@@ -36,7 +38,7 @@ lisää erillinen apurivi.)
 **Kolme peliä yhdellä laudalla**
 
 Tavli on kahden pelaajan peli, jossa on kolme eri peliä: Portes, Plakoto ja Fevga. Portes muistuttaa eniten backgammonia, ja siinä
-voi lyödä vastustajan nappulan. Plakotossa nappulaa ei lyödä vaan painetaan alleen, ja Fevgassa nappulat vain kilpailevat laudan toiseen
+voi lyödä vastustajan nappulan. Plakotossa nappulaa ei lyödä vaan vangitaan oman nappulan alle, ja Fevgassa nappulat vain kilpailevat laudan toiseen
 päähän ilman lyöntejä. Pelejä pelataan peräkkäin, kunnes toinen saa sovitun pistemäärän, yleensä viisi tai seitsemän pistettä.
 
 **Nimi tulee latinan laudasta**
@@ -52,7 +54,7 @@ paikka oli miesten.
 
 **Keisari Zenonin epäonninen heitto**
 
-Vanhin tarkka kuvaus tavlan esi-isästä, tabulasta, on runo, jonka Agathias kirjoitti 500-luvulla. Runon mukaan keisari Zenon heitti kolme
+Vanhin tarkka kuvaus tavlin esi-isästä, tabulasta, on runo, jonka Agathias kirjoitti 500-luvulla. Runon mukaan keisari Zenon heitti kolme
 noppaa laatikosta ja sai 2, 6 ja 5, minkä jälkeen hänellä oli kahdeksan yksittäistä nappulaa, jotka olivat ennen olleet toistensa vieressä.
 Runo päättyy neuvoon välttää tabulaa, sillä edes kuningas ei päässyt sen sokeasta sattumasta. Runo on Kreikan antologiassa (Anthologia Graeca IX.482).
 
@@ -65,31 +67,28 @@ muita siirtoja.
 
 **Vanhin säilynyt sarja ja turkkilainen tavla**
 
-Vanhin säilynyt täydellinen tabula-sarja on löytynyt Gloucesterista Englannista vuonna 1983 Normannilinnan paikalta. Se on tehty
-luusta noin vuosina 1100–1120, ja siinä on 30 nappulaa; lauta on säilynyt vain osittain. Ottomaanien valtakunnassa peli levisi nimellä tavla.
-Siinä ei käytetä tuplauskuutiota, jonka keksittiin vasta 1920-luvulla New Yorkissa, joten 1873 pelattiin ilman sitä.
+Vanhin säilynyt lähes täydellinen tabula-sarja on löytynyt Gloucesterista Englannista vuonna 1983. Se on tehty
+luusta noin vuosina 1100–1120, ja siinä on 30 nappulaa; lauta on säilynyt vain osittain.
+Siinä ei käytetä tuplauskuutiota, joka keksittiin vasta 1920-luvulla New Yorkissa, joten 1873 pelattiin ilman sitä.
 
-(Lehtijutun kappale Gloucesteristä: lause "Ottomaanien valtakunnassa peli levisi nimellä tavla" on yleistys, ks. varaus 7. Jos haluat poistaa
-epävarmat kohdat, voi lopettaa kappaleen lauseeseen "Siinä ei käytetä tuplauskuutiota." ja siirtää tuplauskuutiotiedon pois.)
+(Leviämisyleistys poistettu Päätoimittajan kuittauksella 5.10.; ks. varaus 7.)
 
 ## 4. Alkuperätekstit Aarteet-näkymään (Alkupera, 2–3 lausetta)
 
 **Kafeneio 1873 — alkuperä**
-Lauta noudattaa tavlalaudan tavallista rakennetta: kaksi puoliskoa ja yhteensä 24 pistettä, kummallakin puolella 12. Se ei kopioi yhtä tiettyä
-esinettä, sillä 1800-luvun kreikkalaisesta tavlalaudasta ei löytynyt museoesinettä, jonka kuvaa saisi käyttää vapaasti. Pähkinäpuuta ja
-meanderikoristetta ei väitetä, koska niille ei löytynyt lähdettä.
+Lauta noudattaa tavlilaudan tavallista rakennetta: kaksi puoliskoa ja yhteensä 24 pistettä, kummallakin puolella 12. Se ei kopioi yhtä tiettyä esinettä, vaan tyypillistä kahvilan pelilautaa.
 
-(Viimeinen virke on huomautus Päätoimittajalle ja poistetaan valmiista tekstistä; valmis teksti on kaksi ensimmäistä virkettä.)
+(Huomautusvirke poistettu Päätoimittajan kuittauksella 5.10.: pähkinäpuulle ja meanderille ei löytynyt lähdettä, eikä 1800-luvun kreikkalaisesta tavlilaudasta vapaata museokuvaa.)
 
 **Bysantin tabula n. 480 — alkuperä**
 Lauta on piirretty Agathiaan runon (Anthologia Graeca IX.482) ja sen pohjalta tehtyjen rekonstruktioiden mukaan: 24 pistettä, 12 kummallakin
 puolella. Zenonin ajalta ei löytynyt säilynyttä lautaa eikä nappulasarjaa, joten ulkoasu on piirretty kuvauksen mukaan eikä esineestä.
-Peli käyttää nykyisen tavlan (Portes) sääntöjä, ei tabulan: tabulassa heitettiin kolmea noppaa.
+Peli käyttää tavlin (Portes) sääntöjä, ei tabulan: tabulassa heitettiin kolmea noppaa.
 
 **Ottomaanien tavla — alkuperä**
 Esikuvana on Lontoon Victoria and Albert Museumin kaksipuolinen taittolauta (museotunnus 861-1907), joka on tehty luultavasti Istanbulissa
-1600-luvulla. Puuhun on viilutettu kilpikonnankilpeä, helmiäistä, luuta, norsunluuta ja useita puulajeja, ja tavlapuolella on helmiäisestä
-tehtyjä kypressikuvioita. Toisella puolella on shakkilauta; peli käyttää vain tavlapuolta.
+1600-luvulla. Puuhun on viilutettu kilpikonnankilpeä, helmiäistä, luuta, norsunluuta ja useita puulajeja, ja tavlipuolella on helmiäisestä
+tehtyjä kypressikuvioita. Toisella puolella on shakkilauta; peli käyttää vain tavlipuolta.
 
 (Kuvan käytöstä ks. varaus 4: V&A:n kuvat ovat museon tekijänoikeuden alaisia, joten taiteilija työskentelee kuvauksen mukaan tai pyytää luvan.)
 
