@@ -29,7 +29,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Blendi saapumiskaaren lopusta lepoon ja lyhin lepojen välinen blendi (s). Jalkivenyma: blendi jatkuu tämän
         /// verran Ytimen lennon jälkeen (A/B 5.10.: pelkällä lennon ajalla huippunopeus oli ~30 % jousta suurempi, ruutuerojen p99
         /// 21,1 vs. 16,5); jousikin jäi Ytimestä jälkeen, joten leikkausikkuna ja teksti eivät kärsi.</summary>
-        const float SaapumisenLoppuS = 0.5f, LyhinBlendiS = 0.8f, JalkivenymaS = 0.6f;
+        const float SaapumisenLoppuS = 0.5f, LyhinBlendiS = 0.8f, JalkivenymaS = 0.8f;
+
+        /// <summary>Blendin käyrä (A/B 2, 50a2d578): EaseInOut kasasi liikkeen keskelle (huippu 1,5 × keskinopeus, ruutuerot
+        /// p99 19,8 vs. jousen 16,5). Tämä käyrä kiihtyy 20 %:ssa tasaiseen 1,25 × keskinopeuteen ja jarruttaa samoin.</summary>
+        static readonly AnimationCurve Kayra = new AnimationCurve(
+            new Keyframe(0f, 0f, 0f, 0f), new Keyframe(0.2f, 0.125f, 1.25f, 1.25f),
+            new Keyframe(0.8f, 0.875f, 1.25f, 1.25f), new Keyframe(1f, 1f, 0f, 0f));
         const string Lento = "lento";
 
         sealed class Lepo
@@ -164,8 +170,8 @@ namespace Matkakirja.Natiivi
             if (tavoite != Elava)
             {
                 float kesto = Elava == null ? 0f : Elava == Lento ? SaapumisenLoppuS : Mathf.Max(LyhinBlendiS, (float)lepo.Jaljella + JalkivenymaS);
-                aivot.DefaultBlend = new CinemachineBlendDefinition(
-                    kesto <= 0f ? CinemachineBlendDefinition.Styles.Cut : CinemachineBlendDefinition.Styles.EaseInOut, kesto);
+                aivot.DefaultBlend = kesto <= 0f ? new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Cut, 0f)
+                    : new CinemachineBlendDefinition(CinemachineBlendDefinition.Styles.Custom, kesto) { CustomCurve = Kayra };
                 (tavoite == Lento ? lento : lepot[tavoite].Cam).Priority = ++prioriteetti;
                 Elava = tavoite;
             }
