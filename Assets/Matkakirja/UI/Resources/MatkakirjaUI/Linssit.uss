@@ -448,6 +448,35 @@
     color: rgb(93, 255, 168);
 }
 
+/* Striimilukija kuvaselitteen otsikkorivin oikeassa päässä (omistaja 5.10.2026, Päätoimittajan hyväksyntä): lukijapohja
+ * (KortinLukija saatimet) kuten tiedeliitteessä; kuvakkeet lasi-avaruus-teeman tokeneilla (muste, pehmeä muste, korostus
+ * luennan aikana), ei uutta väriä eikä kokoa. */
+.mk-astrokuva__otsikkorivi {
+    flex-direction: row;
+    align-items: center;
+}
+
+.mk-astrokuva__otsikkorivi > .mk-astrokuva__otsikko {
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.mk-astrokuva__lukija .mk-lukija.mk-lukija--kortti {
+    color: var(--tk-muste);
+}
+
+.mk-astrokuva__lukija .mk-lukija.mk-lukija--kortti.mk-lukee {
+    color: var(--tk-korostus);
+}
+
+.mk-astrokuva__lukija .mk-lukija.mk-lukija__valikkonappi {
+    color: var(--tk-muste-pehmea);
+}
+
+.mk-astrokuva__lukija .mk-lukija.mk-lukija__valikkonappi.mk-valittu {
+    color: var(--tk-muste);
+}
+
 .mk-astrokuva__selite.mk-kiinni .mk-astrokuva__otsikko {
     font-size: 13px;
     white-space: nowrap;
