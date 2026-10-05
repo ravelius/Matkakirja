@@ -92,7 +92,7 @@ Kuvat: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-maailma-10c31692/kuvat. 
   ohjaamon junaa 144; sitten gibs-pilvet rebase/merge iss-ohjaamon junaversion päälle → juna 145.
 - Esiselvitys: lokit/linssiseppa2-gibs-esiselvitys-20261005/YHTEENVETO.md. Ajoskripti scratchpad/aja-gibs2.sh (KAARI2="kuvaa gibs 0").
 
-## Päivitys 5.10. klo 18.2x — OHJAAMO JUNAAN 144 (omistaja: lähtee joka tapauksessa)
+## Päivitys 5.10. klo 18.1x — OHJAAMO JUNAAN 144 (omistaja: lähtee joka tapauksessa)
 - Merge-pyyntö Natiivisepälle 18.0x: linssiseppa2/iss-ohjaamo **a2941f8f** (lopullinen): v2d, avomeri tasainen (f6d3a436),
   paikat.json maanosa (87863aae, Natiivi-UI:n elävä opas). Testit Linssit 651, Kartta 442, Peli 388, unity 0. Simu e3c7217b OK.
 - Avoinna indeksinä (ei koodia): Meksikon 11SPR radan reuna (pyydetty Karttasepältä v2e = koko suiston kattava päivä; vaihda
