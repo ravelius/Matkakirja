@@ -80,6 +80,12 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   kytkentärivillä). Web #3998 mergetty. Worktreet wt/natiivi-ui-tyylikirja-latauspalkki (web) ja proto latauspalkki
   poistetaan, kun juna 144 on masterissa.
 
+## Versio Peli päivittyi -ruutuun (omistaja 5.10. 14.2x) — avoinna
+- natiivi-ui/paivitys-versio ba181e97 (master a5a18288): MitaUutta.Dialogi lisää KORTIN kapiteelin "Versio 1.1 (144)"
+  (Application.version + MitaUutta.Build() = rakennus.txt ← PlayerSettings.iOS.buildNumber, Rakennus.cs) molempiin
+  dialogeihin; teksti näyttöhetkellä (PaivitaVersio). Simussa build = 0. Testi `ui mitauutta paivittyi`.
+  Seuraava: käännös + stillit iPhone/iPad → Päätoimittaja → merge-pyyntö Natiivisepälle junaan 144.
+
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
 iss-taulu-vaaka.sh (TAP_OHI=1), auto-zoom.sh (TAP_SEUR=1), lippu-kaikki.sh, chat-linna.sh, kartoitus.sh (+ k:-etuliite
