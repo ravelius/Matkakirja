@@ -64,6 +64,9 @@ namespace Matkakirja.Natiivi
         DioraamaHahmot hahmot3D;
         DioraamaSyote syote;
         readonly DioraamaKameraJousi jousi = new DioraamaKameraJousi();
+        static (string Tila, string Hahmo)? puluJono;
+        /// <summary>Pulun napautusvuoro keskustelun jälkeen (viimeisin napautus voittaa).</summary>
+        public static void PuluJonoon(string tila, string hahmo) => puluJono = (tila, hahmo);
         /// <summary>"poikki pulu napautus 0|1": Pulu vain napautuksesta (oletus päällä elävässä linnassa) vs. vanha käsikirjoitus.</summary>
         public static bool PuluNapautuksesta = true;
         /// <summary>Cinemachine-kamerat (suunnitelma kohta 1); luodaan näyttämön kanssa, tuhoutuu sen mukana.</summary>
@@ -246,6 +249,14 @@ namespace Matkakirja.Natiivi
             // Aloitus, uudelleenrakennus (napautus, uusinta, asento) ja pysäytys (huone, kierroksen loppu) Ytimen aikataulusta.
             // Omistajan linnapalaute 5.10. klo 12.4x: Pulu ei puhu keskustelujen väliin, vaan vain napautuksesta (elävä linna).
             linssi.PuluNapautuksesta = PuluNapautuksesta && rakennus.Saapuminen != null;
+            KuunnelmaKaistale.IlmanPulua = linssi.PuluNapautuksesta;
+            // Keskustelun aikana napautettu Pulun vuoro (DioraamaSyote): soi, kun kuunnelma on päättynyt, jos ollaan yhä samassa huoneessa.
+            if (puluJono.HasValue && !KuunnelmaKaistale.SoiNyt)
+            {
+                var (jTila, jHahmo) = puluJono.Value;
+                puluJono = null;
+                if (jTila == ViimeisinNakyma?.KohdeTila) { linssi.Napauta(t, jHahmo); o.Kirjaa($"poikki: pulu jonosta ({jHahmo ?? "kohta"})"); }
+            }
             timeline.Paivita(linssi, rakennus, t, pysty, pysaytettyT.HasValue || SaapumisOdotus);
             var nakyma = linssi.NakymaHetkella(t, pysty);
             timeline.Tarkista(nakyma.KertojaJakso, t);

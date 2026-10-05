@@ -728,10 +728,14 @@ namespace Matkakirja.Linssit.Dioraama
         {
             var r = new List<Askel>();
             bool raja = false, puhuttu = false;
+            // Huoneen kuunnelma (tila.Kuunnelma, KuunnelmaKaistale) ON henkilöiden keskustelu: käsikirjoituksen repliikit soivat
+            // muuten sen kanssa lomittain ja katkaisivat toisiaan (loki 5.10.: k1, kohta-0, kappalainen-1, k2, …).
+            bool kuunnelma = tila.Kuunnelma != null && tila.Kuunnelma.Count > 0;
             foreach (var a in tila.Kasikirjoitus)
             {
                 if (a.Tee == "kohta") { raja = true; continue; }
                 if (a.Tee == "reaktio") continue;
+                if (kuunnelma && (a.Tee == "repliikki" || a.Tee == "odota")) continue;
                 if (a.Tee == "repliikki")
                 {
                     r.Add(new Askel { Tee = "odota", S = puhuttu && raja ? KohtausTauko : VuoroTauko });

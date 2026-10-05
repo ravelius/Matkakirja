@@ -24,6 +24,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Tilan id, jonka kuunnelma on kesken tai käyty (sama tila ei ala uudelleen ilman Kuuntele-nappia).</summary>
         public string TilaId => tilaId;
         public bool Kaynnissa => toisto != null && toisto.Kaynnissa;
+        /// <summary>Pulu napautuksesta (DioraamaSovitin asettaa): kuunnelman Pulu-rivit pois.</summary>
+        public static bool IlmanPulua;
+        /// <summary>Soiko jokin kuunnelma juuri nyt (Pulun napautusvuoro odottaa keskustelun loppuun).</summary>
+        public static bool SoiNyt;
         public string Tila => toisto == null ? "ei kuunnelmaa"
             : $"tila {tilaId}, rivi {toisto.Indeksi + 1}/{toisto.Maara}" + (toisto.Rivi != null ? $" ({toisto.Rivi.Nimi}: {toisto.Rivi.Teksti})" : " (loppu)");
 
@@ -45,8 +49,13 @@ namespace Matkakirja.Natiivi
             if (tila == null || tila.Kuunnelma == null || tila.Kuunnelma.Count == 0) { Lopeta(); return; }
             if (!alusta && tilaId == tila.Id) return;
             tilaId = tila.Id;
-            toisto = new KuunnelmaToisto(tila.Kuunnelma,
-                r => AanenKesto != null && !string.IsNullOrEmpty(r.Aani) ? AanenKesto(r.Aani) : null);
+            // Omistajan linnapalaute 5.10. klo 12.4x: Pulu ei puhu keskustelun väliin (kuunnelman Pulu-rivit pois, Pulu vain
+            // napautuksesta) ja rivien väliin luonteva tauko.
+            bool ilmanPulua = IlmanPulua;
+            var rivit = ilmanPulua ? tila.Kuunnelma.FindAll(r => !r.Pulu) : tila.Kuunnelma;
+            toisto = new KuunnelmaToisto(rivit,
+                r => AanenKesto != null && !string.IsNullOrEmpty(r.Aani) ? AanenKesto(r.Aani) : null,
+                ilmanPulua ? PoikkileikkausLinssi.VuoroTauko : KuunnelmaToisto.Tauko);
             toisto.Aloita(Time.unscaledTimeAsDouble);
             naytetty = -2;
             Nayta();
@@ -57,6 +66,7 @@ namespace Matkakirja.Natiivi
         {
             toisto = null;
             tilaId = null;
+            SoiNyt = false;
             naytetty = -2;
             Nimi = null; Teksti = null;
         }
@@ -65,6 +75,7 @@ namespace Matkakirja.Natiivi
         public void Paivita()
         {
             if (toisto != null && toisto.Paivita(Time.unscaledTimeAsDouble)) Nayta();
+            SoiNyt = Kaynnissa;
         }
 
         void Nayta()

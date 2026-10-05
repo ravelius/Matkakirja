@@ -189,9 +189,14 @@ namespace Matkakirja.Natiivi
             if (linssi != null && linssi.PuluNapautuksesta && nykyinen != null && rakennus.Tila(nykyinen) is Tila oma)
             {
                 string hahmo = LahinHahmo(oma, ruutu, kamera);
-                if (hahmo != null) { linssi.Napauta(t, hahmo); return; }
                 var sade0 = kamera.ScreenPointToRay(new Vector3(ruutu.x, ruutu.y, 0));
-                if (UnityAabb(oma.RajaMin, oma.RajaMax).IntersectRay(sade0)) { linssi.Napauta(t); return; }
+                if (hahmo != null || UnityAabb(oma.RajaMin, oma.RajaMax).IntersectRay(sade0))
+                {
+                    // Keskustelun (kuunnelman) aikana Pulu odottaa vuoroaan: puhuu, kun keskustelu päättyy (ei keskeytä).
+                    if (KuunnelmaKaistale.SoiNyt) DioraamaSovitin.PuluJonoon(nykyinen, hahmo);
+                    else linssi.Napauta(t, hahmo);
+                    return;
+                }
             }
             // Elävä kohde (tila.elava): lähin kohde ruudulla, kun napautus osuu sen säteen (metreinä, ruudulle
             // projisoituna, vähintään 28 pt) sisään. Nimilappuja ei ole, joten kohde on se, mitä tilassa tapahtuu.
