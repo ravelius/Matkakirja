@@ -97,7 +97,16 @@ export const RAAMATTU = {
           + 'etukäteen pyydettyä lupaa. Syy on kustannus (omistaja: generointi maksaa, ja hän haluaa ensin nähdä '
           + 'tekstit, jotta rahaa ei kulu turhaan): lupapyynnössä omistaja näkee KAIKKI generoitavat tekstit '
           + '(tai ääniefektien kuvaukset) sanatarkasti sekä palvelun, määrän ja arvioidun merkkimäärän tai hinnan; '
-          + 'generointi vasta hyväksytyistä teksteistä. Lupa koskee vain nimettyä erää. Vapaat valmiit äänitteet (CC0/PD, lähde '
+          + 'generointi vasta hyväksytyistä teksteistä. Lupa koskee vain nimettyä erää. '
+          + 'MÄÄRÄN PÄÄTTÄÄ OMISTAJA (omistaja 5.10.2026 klo 22.0x, sitova, myös Päätoimittaja): "Kirjaa raamattuun '
+          + 'että koska generointi maksaa minä annan luvan. Et voi itse päättää kuinka paljon generoit." Generoinnin '
+          + 'määrä (leikkeet, otot, mallilauseet × nimet, merkit) on aina omistajan päätös: Päätoimittaja tai rooli ei '
+          + 'kasvata erää omalla päätöksellään eikä tulkitse idean hyväksyntää määrän luvaksi. Lupapyynnössä on tarkka '
+          + 'leikemäärä ja merkkimäärä, ja jokainen lisäys tai ylitys vaatii uuden luvan ennen generointia. Taustatapaus: '
+          + 'maiden ja pääkaupunkien erä paisui Päätoimittajan päätöksellä noin 2 300 lauseeseen (~60 000 merkkiä), vaikka '
+          + 'omistaja tarkoitti vain nimet ja jatkolauseet; ennen pysäytystä valmistuneet 1 813 lausetta (47 311 merkkiä) '
+          + 'jäivät omistajan luvalla peliin. '
+          + 'Vapaat valmiit äänitteet (CC0/PD, lähde '
           + 'ja lisenssi kirjattuna) ja jo hyväksyttyjen äänien uudelleenkoodaus eivät ole generointia. Pelin '
           + 'jo hyväksytyt ajonaikaiset puhetoiminnot (pelaajan käynnistämä luenta ja Pulun chat-puhe) jatkuvat '
           + 'ennallaan. Taustatapaus: Olavinlinnan keittiön 31 ElevenLabs-ääntä 29.9. tehtiin ilman lupaa; '
@@ -181,6 +190,10 @@ export const RAAMATTU = {
           + 'Kysy-nappi). OHJAUSNAPIT (omistaja 2.10.2026 klo 14.2x): kaikki kuvakenapit (✕, ‹, asetukset, linssi, '
           + 'lista ym.) ovat yhtenäisiä neliöitä pyöristetyin kulmin koko pelissä (yksi OHJAUSNAPPI-pohja: koko, teemat, '
           + 'kuvakkeet) ja näkymän napit ryhmitellään yhteen paikkaan; Pulu-hahmo ei ole nappi. '
+          + 'MODERNI-KIRJASIN JA TAPPI (omistajan kortit 5.10.2026 klo 20.49 ja 21.34): Kirjasin "Moderni" = iOS:n '
+          + 'SF Pro (webissä -apple-system, system-ui, sans-serif) vain nykyajan näkymiin (elävä opas) harmaassa '
+          + 'lasiteemassa (tk-teema-harmaa); muualla pelin omat kirjasimet. TAPPI-pohja: Ø 64/26 pt harmaa lasi, '
+          + 'himmeä levossa, alakulmissa, näkyy vain kun ohjattava kohde on ruudulla (oppaassa pysähdyksellä). '
           + 'EI TURHIA ✕-NAPPEJA (omistaja 5.10.2026 klo 00.1x, sitova): ✕-nappia vältetään aina, kun saman voi '
           + 'tehdä toisella tavalla, esim. napauttamalla tyhjää kohtaa (ohinapautus) tai muulla jo olemassa olevalla '
           + 'eleellä; ✕ jää vain, kun sulkemiseen ei ole muuta luontevaa tapaa. Ensimmäinen kohde: ISS:n "Minne '
@@ -1482,7 +1495,7 @@ export const RAAMATTU = {
       otsikko: 'Karttalinssit',
       tila: 'luonnos',
       kohdat: [
-        'ELÄVÄ OPAS KOKO MAAPALLOLLE (omistaja 5.10.2026 klo 17.4x, sitova; korvaa Lontoo-pilotin ja valmiin esittelyn): kertoja kysyy, mitä pelaaja haluaa nähdä, pelaaja vastaa, ja Sonnet tulkitsee vastauksen Pulun workerissa ja jatkaa. Vastaus annetaan aluksi Pulu-chatin kenttään, jossa iPhonen sanelu toimii mikrofonina; oma mikrofoninappi tehdään myöhemmin omistajan UI-päätöksellä. Kertojan tekstit syntyvät reaaliajassa, eikä mitään kirjoiteta etukäteen. Valmista paikkaluetteloa ei tehdä: worker hakee kohteen koordinaatit ja tiivistelmän Wikipediasta, jotta kamera osuu oikeaan paikkaan ja faktat pitävät. Kamera lentää ajonaikaisesti minkä tahansa kahden paikan välillä ja kehystää kohteen itse, ja seuraava kohde esiladataan lennon aikana. William lukee jokaisen pysähdyksen yhtenä ottona, ja lennot osuvat kappaleiden väliin. Ensimmäinen testikaupunki on Kööpenhamina. Kaupunkinäkymä käyttää Googlen fotorealistisia laattoja Cesium ionin kautta (asset 2275207) kehitys- ja testikäytössä; julkaisu vasta maksullisen lisenssin ja Cesiumin kirjallisen vahvistuksen jälkeen. Samassa näkymässä ei ole muuta karttaa, Googlen logo ja krediitit näkyvät, eikä laattoja tallenneta offline-käyttöön.',
+        'ELÄVÄ OPAS KOKO MAAPALLOLLE (omistaja 5.10.2026 klo 17.4x–22.0x, sitova; korvaa Lontoo-pilotin ja valmiin esittelyn): kertoja esittelee paikkoja reaaliajassa, eikä mitään kirjoiteta etukäteen. Sonnet kertoo Pulun workerissa ja tulkitsee pelaajan vastaukset. Aloitussiru Esittele kaupunki käynnistää noin 8 pysähdyksen kierroksen, joka jatkuu ilman valintaa ja päättyy kysymykseen. Vastausvaihtoehtoja on aina kaksi sirua (yksi paikkakohtainen syventävä kysymys ja yksi suunnanvaihto) sekä puhu/kirjoita-siru, joka avaa Pulu-chatin kentän ja iPhonen sanelun; sirut ovat PULU-pohjan irrallisella lasipinnalla (.mk-chat__sirut--irrallaan). Wikipedian tekstejä ei käytetä: Sonnet kertoo omasta tiedostaan, pelin tarkistetut kaupunkitekstit annetaan sille taustatiedoksi kuten Pulun valmiit vastaukset, isoisän 1873-merkintä kuullaan kerran oikeassa paikassa, vuosiluvut vain aineistosta, ja koordinaatit tarkistetaan Wikidatasta (P625). Ruudulla kaupunki on koko ruudulla, paikan nimi ja yksi rivi häivyttyvät noin 5 sekunnissa, chat ei ole oletuksena auki, ja hampurilaisessa ovat Vaihda kohde (maanosa → maa → maan suurimmat kaupungit), Näytä teksti ja Poistu linssistä (ei erillistä ✕:ää). Kuvat (nostojen havainnekuvat ja Commonsin vapaat kuvat lisenssiriveineen, ei lennossa luotuja) näkyvät kuvakorttina pysähdyksen ajan; kuvakytkin on oikeassa yläkulmassa, oletus päällä, ja valinta muistetaan. Päällys on Moderni-kirjasimella harmaassa lasiteemassa. Kamera lentää ajonaikaisesti minkä tahansa kahden paikan välillä korkeassa kaaressa, kiertää pysähdyksellä hitaasti ja kehystää kohteen tiukasti (noin 35–45 % ruudun leveydestä), ja seuraava kohde esiladataan lennon aikana. Pysähdyksellä pelaajalla on TAPPI-ohjaimet: oikea kiertää kohteen ympäri (↔) ja nostaa tai laskee (↕), vasen ylös vie lähemmäs ja alas kauemmas, ja kamera katsoo aina kohteeseen. Kohde korostetaan omilla 3D-objekteilla (nimilappu harmaalla lasilla, rengas maahan, viiva kadulle tai kanavalle reittipisteiden kautta; ei laatoista johdettuja). William lukee jokaisen pysähdyksen yhtenä ottona, ja lennot osuvat kappaleiden väliin; odotusajan täyttävät esigeneroidut siltalauseet sekä maiden ja pääkaupunkien nimet jatkolauseineen (erillisinä otoina omistajan luvalla, ks. MÄÄRÄN PÄÄTTÄÄ OMISTAJA). Ensimmäinen testikaupunki on Kööpenhamina. Kaupunkinäkymä käyttää Googlen fotorealistisia laattoja Cesium ionin kautta (asset 2275207) kehitys- ja testikäytössä; julkaisu vasta maksullisen lisenssin ja Cesiumin kirjallisen vahvistuksen jälkeen. Samassa näkymässä ei ole muuta karttaa, Googlen logo näkyy aina, datakrediitit ovat yhdellä rivillä Data sources -napin takana (Googlen Map Tiles -ehdot tarkistettu 5.10.2026), eikä laattoja tallenneta offline-käyttöön.',
         'AJATTELIJALINSSI JA KULTTUURIPERINNÖN ARKKI (omistaja 1.–3.10.2026; yksityiskohdat lokissa, grep AJATTELIJ): '
           + 'yksi ajattelija kerrallaan kipsibystinä valokeilassa. ALKU (v14, omistaja hyväksyi 3.10.2026): pimeästä kytkin '
           + 'napsahtaa (aito äänite ja salikaiku) ja ääriviivavalo syttyy (prologi 2,5 s); oma sävellys (Zarathustra lipun takana) '
