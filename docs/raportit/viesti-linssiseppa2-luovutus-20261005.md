@@ -53,7 +53,7 @@ Kuvat: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-maailma-10c31692/kuvat. 
   Päätoimittajan kuittauksen jälkeen, käännä ja aja kahdeksan kuvaa. Saman datataken indeksi (v2c, 3–4 h) odottaa
   Päätoimittajan etusijapäätöstä.
 
-## Päivitys 5.10. klo 10.3x (uusi Päätoimittaja local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31)
+## Päivitys 5.10. klo 09.5x (uusi Päätoimittaja local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31)
 - **78f1a7ed** radan reunan syövytys 2 px: Saharan tumma pisteviiva on COG-yleiskuvatasojen (40/80 m) keskiarvoistama reunapikseli
   (COG häviötön Deflate, ei JPEG). Kehä tarkistetaan vain nodatalaattojen lähellä (NodataLaatat-lippu).
 - **231c3c21** vesitaso ruuduittain (TasaaVesi): Kanarian meri on kaikkialla SCL 6, mutta sunglint-päivät (28SBA 2025-06-13,
