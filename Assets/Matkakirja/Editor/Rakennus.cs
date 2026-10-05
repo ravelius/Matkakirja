@@ -853,12 +853,16 @@ namespace Matkakirja.Editori
                 "Matkakirja käyttää mikrofonia, kun kysyt pöllöltä ääneen. Ääntä ei tallenneta.");
             plist.root.SetString("NSSpeechRecognitionUsageDescription",
                 "Puheesi muutetaan tekstiksi, jotta pöllö ymmärtää kysymyksesi. Tunnistus tehdään laitteella aina, kun se on mahdollista.");
+            // ISS-kameran kuvien tallennus Kuviin (Päätoimittaja 4.10.2026, juna 138, LS2 johtaa): vain lisäysoikeus
+            // (PHPhotoLibrary .addOnly), kirjastoa ei lueta.
+            plist.root.SetString("NSPhotoLibraryAddUsageDescription",
+                "Matkakirja tallentaa ottamasi ISS-kuvat Kuviin, jotta ne säilyvät.");
             plist.WriteToFile(plistPolku);
         }
 
         /// <summary>
-        /// Radion VU-mittari (MatkakirjaRadio.mm: MTAudioProcessingTap) tarvitsee MediaToolbox-kehyksen,
-        /// jota Unityn iOS-projekti ei linkitä oletuksena.
+        /// Radion VU-mittari (MatkakirjaRadio.mm: MTAudioProcessingTap) tarvitsee MediaToolbox-kehyksen ja ISS-kameran osto
+        /// (MatkakirjaKauppa.swift) StoreKit-kehyksen, joita Unityn iOS-projekti ei linkitä oletuksena.
         /// </summary>
         [UnityEditor.Callbacks.PostProcessBuild(195)]
         static void Kehykset(BuildTarget kohde, string polku)
@@ -867,7 +871,14 @@ namespace Matkakirja.Editori
             string projektiPolku = UnityEditor.iOS.Xcode.PBXProject.GetPBXProjectPath(polku);
             var projekti = new UnityEditor.iOS.Xcode.PBXProject();
             projekti.ReadFromFile(projektiPolku);
-            projekti.AddFrameworkToProject(projekti.GetUnityFrameworkTargetGuid(), "MediaToolbox.framework", false);
+            string kehys = projekti.GetUnityFrameworkTargetGuid();
+            projekti.AddFrameworkToProject(kehys, "MediaToolbox.framework", false);
+            // ISS-kameran osto (Päätoimittaja 4.10.2026, juna 138; LS2:n MatkakirjaKauppa.swift, StoreKit 2): kehys linkitetään
+            // UnityFrameworkiin (iOS 17 → ei heikkoa linkitystä), ja Swift-liitännäinen tarvitsee kielen version samaan kohteeseen.
+            projekti.AddFrameworkToProject(kehys, "StoreKit.framework", false);
+            // ISS-kuvan tallennus Kuviin (LS2:n MatkakirjaValokuva.mm, PHPhotoLibrary .addOnly).
+            projekti.AddFrameworkToProject(kehys, "Photos.framework", false);
+            projekti.SetBuildProperty(kehys, "SWIFT_VERSION", "5.0");
             projekti.WriteToFile(projektiPolku);
         }
 
