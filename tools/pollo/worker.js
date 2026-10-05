@@ -44,6 +44,8 @@ import {
   paivaAvain,
   poimiEhdotukset,
   poimiJatkot,
+  siivoaTaustatieto,
+  taustatietoKontekstiksi,
   poimiSahkeTuomio,
   puheKuukausiAvain,
   puhePaivaAvain,
@@ -1064,6 +1066,43 @@ Kirjoita täsmälleen kaksi riviä, yksi kysymys riville, ilman numerointia, \
 ilman ranskalaisia viivoja ja ilman johdantoa. Jokainen kysymys enintään 70 \
 merkkiä ja päättyy kysymysmerkkiin.`;
 
+/*
+ * TASAN KAKSI JATKOKYSYMYSTÄ (omistaja 5.10.2026 klo 16.4x: "pulun pitäisi antaa aina kaksi uutta kysymysvaihtoehtoa
+ * viimeisimmän vastauksen perään"). JATKOKEHOTE pyytää kaksi JATKOT-riviä; jos malli antaa vähemmän (unohtaa lohkon tai
+ * kirjoittaa ei-kysymyksen), puuttuvat täydennetään yhdellä pienellä kutsulla ennen loppua. Täydennys on harvinainen
+ * (vain vajaa lohko), lyhyt (150 tokenia) ja aikarajattu; jos sekin epäonnistuu, asiakas saa sen mitä on.
+ */
+export const JATKOJA = 2;
+const JATKOJEN_TAYDENNYS = `Keksi täsmälleen kaksi lyhyttä jatkokysymystä, jotka pelaaja voisi haluta \
+kysyä seuraavaksi juuri annetun vastauksen perusteella. Kysymysten pitää liittyä vastauksen sisältöön ja olla \
+tosimaailman kysymyksiä — EI pelin tehtäviin, pisteisiin tai juoneen liittyviä.
+
+Kirjoita täsmälleen kaksi riviä, yksi kysymys riville, ilman numerointia, ilman ranskalaisia viivoja ja ilman \
+johdantoa. Jokainen kysymys enintään 70 merkkiä ja päättyy kysymysmerkkiin.`;
+const JATKOJEN_AIKARAJA_MS = 6000;
+
+/** Palauttaa tasan JATKOJA jatkokysymystä (täydentää vajaan listan yhdellä kutsulla; virheessä mitä on). */
+async function varmistaJatkot(env, { jatkot, kysymys, vastaus }) {
+  const omat = [];
+  for (const j of jatkot ?? []) if (j && !omat.includes(j) && omat.length < JATKOJA) omat.push(j);
+  if (omat.length >= JATKOJA || !vastaus) return omat;
+  try {
+    const teksti = await Promise.race([
+      kysyMallilta(env, {
+        jarjestelma: `${JARJESTELMAKEHOTE}\n\n${JATKOJEN_TAYDENNYS}`,
+        viestit: [{ role: 'user', content: `Pelaajan kysymys: ${kysymys}\n\nVastauksesi:\n${String(vastaus).slice(0, 1500)}` }],
+        maxTokens: 150,
+      }),
+      new Promise((_, hylkaa) => { setTimeout(() => hylkaa(new Error('aikaraja')), JATKOJEN_AIKARAJA_MS); }),
+    ]);
+    for (const j of poimiEhdotukset(teksti, 3)) if (!omat.includes(j) && omat.length < JATKOJA) omat.push(j);
+    console.log(`pollo: jatkot täydennetty ${omat.length}/${JATKOJA}`);
+  } catch {
+    console.log('pollo: jatkojen täydennys epäonnistui');
+  }
+  return omat;
+}
+
 /* ------------------------------------------------------------------ */
 
 /**
@@ -1924,7 +1963,7 @@ async function jatkaKeskenJaanyt(env, { jarjestelma, viestit }, raaka) {
 }
 
 async function striimaaVastaus(env, kors, {
-  jarjestelma, viestit, maxTokens, lisaohje = null, ajat = null,
+  jarjestelma, kysymys = '', viestit, maxTokens, lisaohje = null, ajat = null,
 }) {
   const ylavirta = await kutsuRajapintaa(env, {
     jarjestelma, viestit, maxTokens, striimi: true, lisaohje,
@@ -2006,7 +2045,8 @@ async function striimaaVastaus(env, kors, {
       // eikä sitä ole koskaan lähetetty pelaajalle palana.
       const paikka = poimiPaikka(raaka);
       if (vastaus) {
-        await laheta('loppu', { vastaus, jatkot, syy: null, ...(paikka ? { paikka } : {}) });
+        const kaksi = await varmistaJatkot(env, { jatkot, kysymys, vastaus });
+        await laheta('loppu', { vastaus, jatkot: kaksi, syy: null, ...(paikka ? { paikka } : {}) });
       } else {
         /*
          * Tyhjä vastaus striimin jälkeen: syy voi olla virran virhe,
@@ -2021,6 +2061,7 @@ async function striimaaVastaus(env, kors, {
           { jarjestelma, viestit, maxTokens, lisaohje },
           { virhe: virtaVirhe, stop },
         );
+        if (paikattu.syy === null) paikattu.jatkot = await varmistaJatkot(env, { jatkot: paikattu.jatkot, kysymys, vastaus: paikattu.vastaus });
         await laheta('loppu', paikattu);
       }
     } catch {
@@ -2719,10 +2760,12 @@ export default {
       }
 
       const viestit = [];
-      if (konteksti) {
+      // Pelin valmiit vastaukset taustatiedoksi, ei koskaan näytettäväksi (omistaja 5.10.2026 klo 16.4x; rajat.js).
+      const tausta = taustatietoKontekstiksi(siivoaTaustatieto(runko?.taustatieto));
+      if (konteksti || tausta) {
         viestit.push({
           role: 'user',
-          content: `Pelaajan tilanne juuri nyt:\n\n${konteksti}`,
+          content: [konteksti ? `Pelaajan tilanne juuri nyt:\n\n${konteksti}` : '', tausta].filter(Boolean).join('\n\n'),
         });
         viestit.push({
           role: 'assistant',
@@ -2757,6 +2800,7 @@ export default {
       if (runko?.striimi) {
         return await striimaaVastaus(env, kors, {
           jarjestelma: kehote,
+          kysymys,
           viestit,
           maxTokens: MAX_TOKENS,
           lisaohje,
@@ -2775,12 +2819,15 @@ export default {
       // Sama tyhjän käsittely kuin striimissä: yksi uusinta, sitten
       // rehellinen teksti ja syyluokka asiakkaalle.
       if (!vastaus) {
-        return vastaa(await paikkaaTyhja(env, kutsu, { stop: kerralla.stop }), kors);
+        const paikattu = await paikkaaTyhja(env, kutsu, { stop: kerralla.stop });
+        if (paikattu.syy === null) paikattu.jatkot = await varmistaJatkot(env, { jatkot: paikattu.jatkot, kysymys, vastaus: paikattu.vastaus });
+        return vastaa(paikattu, kors);
       }
       // Valinnainen paikkakenttä mukaan vain, jos malli sen kirjoitti
       // (ks. PAIKKAKEHOTE). Puuttuva kenttä = vastaus kuten ennenkin.
       const paikka = poimiPaikka(kerralla.teksti);
-      return vastaa({ vastaus, jatkot, syy: null, ...(paikka ? { paikka } : {}) }, kors);
+      const kaksi = await varmistaJatkot(env, { jatkot, kysymys, vastaus });
+      return vastaa({ vastaus, jatkot: kaksi, syy: null, ...(paikka ? { paikka } : {}) }, kors);
     } catch (virhe) {
       // Vain tilakoodi lokiin — ei avainta, ei pelaajan tekstiä.
       console.log(`pollo: kutsu epäonnistui (${virhe?.status ?? 'verkko'})`);
