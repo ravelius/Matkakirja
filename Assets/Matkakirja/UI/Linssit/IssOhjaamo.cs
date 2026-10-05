@@ -32,6 +32,15 @@ namespace Matkakirja.Natiivi
         readonly VisualElement[] varret = new VisualElement[5];
         readonly Label kohde, maa, miniTeksti, rumpuA, rumpuB;
         readonly Button kamera;
+        // OBJEKTIIVI (Päätoimittaja 6.10., juna 147): LAAJA/TELE kahtena LCD-nappina kameranapin ja rummun yläpuolella
+        // (laajennuksen .mk-issohjaamo__lcdnappi, valittu käänteisenä); osuma-ala 48 pt korkea, päättyy kameranapin yläreunaan.
+        readonly VisualElement objektiivi;
+        readonly Button laajaNappi, teleNappi;
+        // KUVAUS LCD:SSÄ (omistaja 6.10.): kuvauksen ajan "KEHITETÄÄN…" ja LATAUSPALKKI LCD-väreissä (tk-teema-lcd),
+        // valmiin kuvan jälkeen "KUVA VALMIS" 2 s; sitten sijainti takaisin.
+        readonly Latauspalkki kehitys;
+        float valmisAsti = -1f;
+        public const float ValmisS = 2f, ObjektiiviPt = 12f;
         readonly Func<AstronauttiLinssi> linssi;
         readonly Action kuvaa;
         JoystickSuunta suunta = JoystickSuunta.Ei;
@@ -89,6 +98,13 @@ namespace Matkakirja.Natiivi
             kohde = Rakenne.Teksti("", "mk-issohjaamo__kohde", lcd);
             maa = Rakenne.Teksti("", "mk-issohjaamo__maa", lcd);
             foreach (var t in new[] { kohde, maa }) { t.pickingMode = PickingMode.Ignore; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
+            kehitys = new Latauspalkki(lcd);
+            kehitys.Juuri.AddToClassList("tk-teema-lcd");
+            kehitys.Juuri.style.width = Length.Percent(78);
+            kehitys.Juuri.style.alignSelf = Align.Center;
+            kehitys.Juuri.style.display = DisplayStyle.None;
+            IssKameraKuva.Aloitettu += () => UiKerros.PaaSaikeessa(() => { valmisAsti = -1f; kehitys.Nollaa(); Paivita(); });
+            IssKameraKuva.Valmis += _ => UiKerros.PaaSaikeessa(() => { valmisAsti = Time.unscaledTime + ValmisS; Paivita(); });
             lcd.RegisterCallback<GeometryChangedEvent>(_ => SovitaKohde());
             lcd.tooltip = "Näytön asetukset";
             lcd.AddManipulator(new Clickable(() => AsetaLaajennus(true)));
@@ -100,6 +116,12 @@ namespace Matkakirja.Natiivi
             kamera.RegisterCallback<PointerDownEvent>(_ => PaivitaNahkaTila(true), TrickleDown.TrickleDown);
             kamera.RegisterCallback<PointerUpEvent>(_ => PaivitaNahkaTila(false), TrickleDown.TrickleDown);
             kamera.RegisterCallback<PointerLeaveEvent>(_ => PaivitaNahkaTila(false));
+            objektiivi = Rakenne.El("mk-issohjaamo__objektiivi", paneeli, PickingMode.Ignore);
+            objektiivi.style.position = Position.Absolute;
+            objektiivi.style.flexDirection = FlexDirection.Row;
+            laajaNappi = ObjektiiviNappi("LAAJA", true);
+            teleNappi = ObjektiiviNappi("TELE", false);
+            PaivitaObjektiivi();
             kaasu = Rakenne.El("mk-issohjaamo__kaasu", paneeli);
             kaasu.tooltip = "Kaasu: ajan nopeus";
             ura = Rakenne.El("mk-issohjaamo__ura", kaasu, PickingMode.Ignore);
@@ -257,6 +279,57 @@ namespace Matkakirja.Natiivi
             Nappi("OK", "mk-issohjaamo__iso", laajennus, () => AsetaLaajennus(false)).tooltip = "Takaisin sijaintiin";
         }
 
+        /// <summary>Objektiivin nappi: osuma-ala (läpinäkyvä, 48 pt korkea) ja sen sisällä LCD-nappi (pohja .mk-issohjaamo__lcdnappi).</summary>
+        Button ObjektiiviNappi(string teksti, bool laaja)
+        {
+            var osa = Rakenne.El(null, objektiivi);
+            osa.style.flexGrow = 1; osa.style.flexBasis = 0; osa.style.justifyContent = Justify.FlexEnd;
+            osa.tooltip = laaja ? "Laaja objektiivi" : "Teleobjektiivi";
+            osa.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
+            osa.AddManipulator(new Clickable(() => ValitseObjektiivi(laaja)));
+            var b = Nappi(teksti, null, osa, null);
+            b.pickingMode = PickingMode.Ignore;
+            foreach (var c in b.Children()) c.pickingMode = PickingMode.Ignore;
+            return b;
+        }
+
+        void ValitseObjektiivi(bool laaja)
+        {
+            if (IssKameraKuva.Laaja == laaja) return;
+            IssKameraKuva.Laaja = laaja;
+            Debug.Log("MATKAKIRJA linssit: ohjaamon objektiivi " + (laaja ? "LAAJA" : "TELE"));
+            PaivitaObjektiivi();
+        }
+
+        void PaivitaObjektiivi()
+        {
+            laajaNappi.EnableInClassList("mk-valittu", IssKameraKuva.Laaja);
+            teleNappi.EnableInClassList("mk-valittu", !IssKameraKuva.Laaja);
+        }
+
+        /// <summary>Objektiivin paikka: LCD-napit kameranapin ja rummun yläpuolella (ohjaamo.json "objektiivi" ohittaa).</summary>
+        void AseteleObjektiivi(float s)
+        {
+            Rect r;
+            if (ankkurit != null)
+            {
+                var a = ankkurit;
+                r = a.Objektiivi.width > 0 ? a.Objektiivi
+                    : new Rect(a.Kamera.x, 15.5f, Mathf.Max(a.RumpuKolo.xMax, a.Kamera.xMax) - a.Kamera.x, 22f);
+            }
+            else r = new Rect(kamera.layout.x, 2f, Mathf.Max(96f, kamera.layout.width), 22f);
+            // Osuma-ala ylöspäin: 48 pt korkea, alareuna napin alareunassa (kameranapin osuma alkaa sen alta).
+            float h = r.height * s, osuma = Mathf.Max(48f, h);
+            objektiivi.style.left = r.x * s; objektiivi.style.width = r.width * s;
+            objektiivi.style.top = r.yMax * s - osuma; objektiivi.style.height = osuma;
+            foreach (var b in new[] { laajaNappi, teleNappi })
+            {
+                b.style.height = h; b.style.flexGrow = 0;
+                var t = b.Q<Label>(className: "mk-nappi__teksti");
+                if (t != null) t.style.fontSize = ObjektiiviPt * s;
+            }
+        }
+
         Button Nappi(string teksti, string lisa, VisualElement isa, Action painettu)
         {
             var b = Rakenne.Nappi(teksti, "mk-issohjaamo__lcdnappi" + (lisa != null ? " " + lisa : ""), painettu, isa);
@@ -329,6 +402,7 @@ namespace Matkakirja.Natiivi
                 foreach (var t in new[] { rumpuA, rumpuB }) if (!string.IsNullOrEmpty(t.text)) t.text = t.text.TrimEnd('×');
                 laajennus.style.paddingLeft = laajennus.style.paddingTop = laajennus.style.paddingRight = laajennus.style.paddingBottom = StyleKeyword.Null;
                 mittakaava = 1f;
+                objektiivi.schedule.Execute(() => { if (ankkurit == null) AseteleObjektiivi(1f); });
                 SovitaKohde();
             }
         }
@@ -338,7 +412,7 @@ namespace Matkakirja.Natiivi
         // vasemmasta yläkulmasta, "kaasu":{…, "pykalat":[y1, y10, y100, y1000]} pt kaasun laatikon yläreunasta}. Paneeli skaalautuu
         // leveyden mukaan (korkeus koon suhteessa) ja osat sijoitetaan ankkureihin; ilman tiedostoa piirretty asettelu kuten ennen.
 
-        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, RumpuKolo, Kaasu, LcdIso, LcdIsoKuva; public float[] Pykalat; public float MiniSlice; }
+        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, RumpuKolo, Kaasu, LcdIso, LcdIsoKuva; public float[] Pykalat; public float MiniSlice; public Rect Objektiivi; }
         Ankkurit ankkurit;
 
         static Rect LueRect(Dictionary<string, object> o, string avain)
@@ -361,7 +435,7 @@ namespace Matkakirja.Natiivi
                     Koko = new Rect(0, 0, Convert.ToSingle(MiniJson.Kentta(k, "w")), Convert.ToSingle(MiniJson.Kentta(k, "h"))),
                     Sauva = LueRect(o, "sauva"), Lcd = LueRect(o, "lcd"), Kamera = LueRect(o, "kamera"),
                     Rumpu = LueRect(o, "rumpu"), Kaasu = LueRect(o, "kaasu"), LcdIso = LueRect(o, "lcdIso"),
-                    RumpuKolo = LueRect(o, "rumpuKolo"), LcdIsoKuva = LueRect(o, "lcdIsoKuva"),
+                    RumpuKolo = LueRect(o, "rumpuKolo"), LcdIsoKuva = LueRect(o, "lcdIsoKuva"), Objektiivi = LueRect(o, "objektiivi"),
                 };
                 var ms = Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "mini")), "slice"));
                 a.MiniSlice = ms != null && MiniJson.Kentta(ms, "vasen") is object v ? Convert.ToSingle(v) : 0f;
@@ -397,6 +471,7 @@ namespace Matkakirja.Natiivi
             osuma.style.left = -18f; osuma.style.width = jw + 36f; osuma.style.top = (jh - oh) * 0.5f; osuma.style.height = oh;
             Aseta(lcd, a.Lcd, s);
             Aseta(kamera, a.Kamera, s);
+            AseteleObjektiivi(s);
             Aseta(kaasu, a.Kaasu, s);
             Aseta(rumpu, a.Rumpu, s);
             if (a.RumpuKolo.width > 0 && rumpuKoloKuva != null) Aseta(rumpuKoloKuva, a.RumpuKolo, s);
@@ -571,6 +646,18 @@ namespace Matkakirja.Natiivi
         public void PainaKamera() => Laukaise();
 
         /// <summary>Kameranappi: tarkka ISS-kuva (omistaja 4.10. klo 15.2x: ostot pois, kuvia rajattomasti; LS2 IssKameraKuva).</summary>
+        /// <summary>LCD:n kuvausrivi: "KEHITETÄÄN…" palkin kanssa kuvauksen ajan, "KUVA VALMIS" 2 s; muuten null (sijainti).</summary>
+        string KuvausTeksti()
+        {
+            bool kaynnissa = IssKameraKuva.Kaynnissa;
+            if (kaynnissa) kehitys.Arvo = IssKameraKuva.Edistyminen;
+            kehitys.Juuri.style.display = kaynnissa ? DisplayStyle.Flex : DisplayStyle.None;
+            kehitys.Nayta(kaynnissa);
+            if (kaynnissa) return "KEHITETÄÄN…";
+            if (Time.unscaledTime < valmisAsti) return "KUVA VALMIS";
+            return null;
+        }
+
         void Laukaise()
         {
             if (!kamera.enabledSelf) return;
@@ -584,6 +671,19 @@ namespace Matkakirja.Natiivi
             var l = linssi();
             if (l == null || !l.Auki) return;
             var (k, m) = l.Sijainti();
+            PaivitaObjektiivi();   // myös testikomento `astro kyyti kuvaa laaja 0|1`
+            string kuvaus = KuvausTeksti();
+            if (kuvaus != null)
+            {
+                if (kohde.text != kuvaus)
+                {
+                    kohde.text = kuvaus; miniTeksti.text = kuvaus;
+                    maa.style.display = DisplayStyle.None;
+                    lcdKohde = lcdMaa = null;   // kuvauksen jälkeen sijainti piirretään uudelleen
+                    SovitaKohde();
+                }
+                k = lcdKohde; m = lcdMaa;
+            }
             // Omistaja 4.10.2026 klo 21.5x: rivi 1 = tarkka sijainti (lähin saman maan kaupunki, meri, alue tai vuori), rivi 2 = maa;
             // korkeus ja nopeus näkyvät Cupolan mustassa ISS-ruudussa, eivät LCD:ssä. Kuvapaneelissa rivit keskitettyinä.
             if (k != lcdKohde || m != lcdMaa)
@@ -648,6 +748,8 @@ namespace Matkakirja.Natiivi
             return $"ohjaamo {(Juuri.resolvedStyle.display == DisplayStyle.None ? "piilossa" : Mini ? "mini" : "iso")}, "
                 + $"{r.xMin:0},{r.yMin:0}–{r.xMax:0},{r.yMax:0}, joystick {suunta}, kaasu {kaasuNyt}×, kamera {(kamera.enabledSelf ? "aktiivinen" : "himmeä")}, "
                 + $"LCD \"{kohde.text}\" / \"{maa.text}\" ({kohde.resolvedStyle.fontSize:0} pt)"
+                + $", objektiivi {(IssKameraKuva.Laaja ? "LAAJA" : "TELE")} @ {objektiivi.worldBound.xMin:0},{objektiivi.worldBound.yMin:0} {objektiivi.worldBound.width:0}×{objektiivi.worldBound.height:0}"
+                + (kehitys.Nakyy ? $", kehitys {kehitys.Arvo:0.00}" : "")
                 + (Laajennettu ? $", laajennettu: kausi {KausiNyt?.Invoke()}, vuorokausi {VuorokausiNyt?.Invoke()}" : "");
         }
 
