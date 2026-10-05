@@ -44,7 +44,8 @@ namespace Matkakirja.Natiivi
         CesiumCameraManager hallinta;
         CesiumGeoreference georef;
         double3 vanhaOrigo;
-        GameObject palloGo, pohjaGo;
+        Cesium3DTileset palloTileset;
+        Pohjapallolaskenta.Tila pohjaTila;
         bool palloOli, pohjaOli, auki;
         CameraClearFlags vanhaTyhjennys;
         Color vanhaTausta;
@@ -80,12 +81,15 @@ namespace Matkakirja.Natiivi
             if (georef == null || kamera == null) { Virhe = "pallon kamera puuttuu"; return false; }
             auki = true;
 
-            palloGo = KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.pallo != null ? KarttaKerrokset.Instanssi.pallo.gameObject : null;
-            palloOli = palloGo != null && palloGo.activeSelf;
-            if (palloGo != null) palloGo.SetActive(false);
-            pohjaGo = Pohjapallo.Instanssi != null ? Pohjapallo.Instanssi.gameObject : null;
-            pohjaOli = pohjaGo != null && pohjaGo.activeSelf;
-            if (pohjaGo != null) pohjaGo.SetActive(false);
+            // Vain pallon tileset-komponentti pois (simu 5.10. 18.0x: pallo on samassa oliossa kuin georeferenssi, ja koko olion
+            // SetActive(false) sammutti georeferenssin → SetOrigin heitti "Initialize"-poikkeuksen).
+            palloTileset = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
+            palloOli = palloTileset != null && palloTileset.enabled;
+            if (palloTileset != null) palloTileset.enabled = false;
+            // Pohjapallo on myös georeferenssin oliossa: piilotus sen omalla tilalla (komento "pallo pohja pois"), ei SetActivella.
+            pohjaTila = Pohjapallo.Tila;
+            pohjaOli = true;
+            Pohjapallo.Tila = Pohjapallolaskenta.Tila.Pois;
             vanhaTyhjennys = kamera.clearFlags; vanhaTausta = kamera.backgroundColor;
             kamera.clearFlags = CameraClearFlags.SolidColor; kamera.backgroundColor = Taivas;
 
@@ -166,7 +170,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Georeferenssin origo uuteen paikkaan (kamera lasketaan ECEF:stä joka kehys, joten kuva ei hyppää).</summary>
         public void SiirraOrigo(double lat, double lon, double korkeus)
         {
-            if (georef != null) georef.SetOriginLongitudeLatitudeHeight(lon, lat, korkeus);
+            if (georef == null || !georef.isActiveAndEnabled) return;
+            georef.Initialize();
+            georef.SetOriginLongitudeLatitudeHeight(lon, lat, korkeus);
         }
 
         /// <summary>Esilatauskamera kuvakulmaan: sama laskenta kuin PalloKierto (kohde, suuntima, kallistus pystystä, etäisyys).</summary>
@@ -205,10 +211,10 @@ namespace Matkakirja.Natiivi
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             juuri = null; maasto = null; rakennukset = null; esikamera = null; hallinta = null;
             KarttaKerrokset.RuutukrediititNakyviin = false;
-            if (georef != null) georef.SetOriginLongitudeLatitudeHeight(vanhaOrigo.x, vanhaOrigo.y, vanhaOrigo.z);
-            if (palloGo != null && palloOli) palloGo.SetActive(true);
-            if (pohjaGo != null && pohjaOli) pohjaGo.SetActive(true);
-            palloGo = null; pohjaGo = null;
+            if (georef != null && georef.isActiveAndEnabled) { georef.Initialize(); georef.SetOriginLongitudeLatitudeHeight(vanhaOrigo.x, vanhaOrigo.y, vanhaOrigo.z); }
+            if (palloTileset != null && palloOli) palloTileset.enabled = true;
+            if (pohjaOli) Pohjapallo.Tila = pohjaTila;
+            palloTileset = null; pohjaOli = false;
             if (kamera != null) { kamera.clearFlags = vanhaTyhjennys; kamera.backgroundColor = vanhaTausta; }
             georef = null; kamera = null; tunnus = null;
         }
