@@ -67,6 +67,21 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
+        /// <summary>
+        /// Kaupungin vaihto valikosta (Natiivi-UI OpasValikko.KohdeValittu): puhe katkeaa ja seuraava pyyntö menee valittuun
+        /// paikkaan (kaupunki ja sijainti). true = otettu oppaalle.
+        /// </summary>
+        public static bool VaihdaKaupunki(string nimi, double lat, double lon)
+        {
+            if (!Auki || string.IsNullOrWhiteSpace(nimi)) return false;
+            Aloituskaupunki = nimi.Trim();
+            Viimeisin.pakotettuSijainti = (lat, lon);
+            Viimeisin.o.Kirjaa($"opas: kaupunki vaihtuu → {Aloituskaupunki} ({lat:F3}, {lon:F3})");
+            Viimeisin.silmukka.VaihdaPaikka();
+            return true;
+        }
+        (double lat, double lon)? pakotettuSijainti;
+
         readonly LinssiOhjain o;
         readonly PalloKierto kierto;
         readonly CesiumKaupunki kaupunki;
@@ -91,7 +106,7 @@ namespace Matkakirja.Natiivi
         public string Virhe { get; private set; }
         public float Latausaste => kaupunki.Latausaste;
         /// <summary>Kertojan teksti ruudulle: vain kun puhe ei soi (PUHE ÄÄNENÄ -sääntö).</summary>
-        public string TekstiRuudulle => silmukka != null && !puhuu && tekstina != null ? tekstina.Teksti : null;
+        public string TekstiRuudulle => silmukka != null && !puhuu && tekstina != null && !ChatKaytossa ? tekstina.Teksti : null;
 
         public void Avaa(ILinssiYmparisto ymparisto)
         {
@@ -118,6 +133,7 @@ namespace Matkakirja.Natiivi
                 puhe.playOnAwake = false; puhe.spatialBlend = 0f; puhe.loop = false;
             }
             KytkeChat(true);
+            ChatOppaalle(true);
             silmukka.Pyyda += Pyyda;
             silmukka.Saapui += Saapui;
             silmukka.Hiljenna += Hiljenna;
@@ -134,6 +150,12 @@ namespace Matkakirja.Natiivi
         static Delegate vanhaSieppaus;
         static void KytkeChat(bool paalle)
         {
+            // Natiivi-UI:n OpasValikko (hampurilainen): KohdeValittu(nimi, lat, lon) ja Nayta(bool), jos luokka on käännöksessä.
+            var valikko = typeof(PuluChat).Assembly.GetType("Matkakirja.Natiivi.OpasValikko");
+            var kv = valikko?.GetField("KohdeValittu", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+            if (kv != null && kv.FieldType == typeof(Action<string, double, double>))
+                kv.SetValue(null, paalle ? (Action<string, double, double>)((n, la, lo) => VaihdaKaupunki(n, la, lo)) : null);
+            valikko?.GetMethod("Nayta", new[] { typeof(bool) })?.Invoke(null, new object[] { paalle });
             var kentta = typeof(PuluChat).GetField("Sieppaa", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
             if (kentta == null || kentta.FieldType != typeof(Func<string, bool>)) return;
             if (paalle) { vanhaSieppaus = kentta.GetValue(null) as Delegate; kentta.SetValue(null, (Func<string, bool>)Toive); }
@@ -186,12 +208,14 @@ namespace Matkakirja.Natiivi
         IEnumerator Hae(int n, string toive)
         {
             var a = silmukka.Asento;
+            double sLat = a.Lat, sLon = a.Lon;
+            if (pakotettuSijainti is (double, double) ps) { sLat = ps.lat; sLon = ps.lon; pakotettuSijainti = null; }
             var sb = new StringBuilder("{");
             sb.Append("\"istunto\":\"").Append(istunto).Append("\",");
             sb.Append("\"toive\":").Append(toive == null ? "null" : "\"" + Escape(toive) + "\"").Append(',');
             sb.Append("\"kaupunki\":\"").Append(Escape(Aloituskaupunki)).Append("\",");
-            sb.Append("\"sijainti\":{\"lat\":").Append(a.Lat.ToString("F5", System.Globalization.CultureInfo.InvariantCulture))
-              .Append(",\"lon\":").Append(a.Lon.ToString("F5", System.Globalization.CultureInfo.InvariantCulture)).Append("},");
+            sb.Append("\"sijainti\":{\"lat\":").Append(sLat.ToString("F5", System.Globalization.CultureInfo.InvariantCulture))
+              .Append(",\"lon\":").Append(sLon.ToString("F5", System.Globalization.CultureInfo.InvariantCulture)).Append("},");
             sb.Append("\"nahdyt\":[");
             bool eka = true;
             foreach (var id in silmukka.Nahdyt) { if (!eka) sb.Append(','); sb.Append('"').Append(Escape(id)).Append('"'); eka = false; }
@@ -253,6 +277,7 @@ namespace Matkakirja.Natiivi
         {
             kaupunki.SiirraOrigo(k.Lat, k.Lon, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45);
             Soita(k);
+            KysymysChattiin(k);   // kappale ja sen vaihtoehdot Pulu-chatiin (Natiivi-UI 18.0x)
             o.Kirjaa($"opas: saapui {k.Nimi} ({k.Lat:F4}, {k.Lon:F4}), ääni {(puhuu ? "soi" : "ei")}, laatat {kaupunki.Latausaste:F0} %");
         }
 
@@ -302,16 +327,38 @@ namespace Matkakirja.Natiivi
         public OpasKohde Kysymys => silmukka != null && silmukka.OdottaaVastausta ? viimeKysymys : null;
         OpasKohde viimeKysymys;
 
-        void KysymysChattiin(OpasKohde k)
+        /// <summary>Pulu-chat on käytettävissä (Natiivi-UI): kappale näytetään vain siellä, ei kertojalaatikossa.</summary>
+        public static bool ChatKaytossa => ChatVastaa(out _, out _) != null;
+
+        static System.Reflection.MethodInfo ChatVastaa(out object chat, out System.Reflection.ParameterInfo[] p)
         {
-            viimeKysymys = k;
+            chat = null; p = null;
+            var ui = UiNakymat.Hae();
+            chat = ui?.GetType().GetField("Chat")?.GetValue(ui) ?? ui?.GetType().GetProperty("Chat")?.GetValue(ui);
+            var m = chat?.GetType().GetMethod("Vastaa");
+            p = m?.GetParameters();
+            return m;
+        }
+
+        /// <summary>Chat auki oppaalle (Natiivi-UI: Chat.AvaaOppaalle()) tai kiinni (Chat.SuljeOppaalta()), jos metodit ovat olemassa.</summary>
+        static void ChatOppaalle(bool auki)
+        {
             try
             {
-                var ui = UiNakymat.Hae();
-                var chat = ui?.GetType().GetField("Chat")?.GetValue(ui) ?? ui?.GetType().GetProperty("Chat")?.GetValue(ui);
-                var vastaa = chat?.GetType().GetMethod("Vastaa");
+                ChatVastaa(out var chat, out _);
+                var m = chat?.GetType().GetMethod(auki ? "AvaaOppaalle" : "SuljeOppaalta", Type.EmptyTypes);
+                m?.Invoke(chat, null);
+            }
+            catch (Exception) { }
+        }
+
+        void KysymysChattiin(OpasKohde k)
+        {
+            if (k.Kysymys) viimeKysymys = k;
+            try
+            {
+                var vastaa = ChatVastaa(out var chat, out var p);
                 if (vastaa == null) return;
-                var p = vastaa.GetParameters();
                 object jatkot = k.Vaihtoehdot ?? Array.Empty<string>();
                 if (p.Length == 2 && !p[1].ParameterType.IsAssignableFrom(jatkot.GetType()))
                     jatkot = p[1].ParameterType.IsAssignableFrom(typeof(List<string>)) ? new List<string>(k.Vaihtoehdot ?? Array.Empty<string>()) : null;
@@ -335,6 +382,7 @@ namespace Matkakirja.Natiivi
             KyydinKameraEnnen.Ajo = null;
             Hiljenna();
             KytkeChat(false);
+            ChatOppaalle(false);
             y?.KuvausLoppui();
             bool avattiin = Virhe == null;
             kaupunki.Sulje();

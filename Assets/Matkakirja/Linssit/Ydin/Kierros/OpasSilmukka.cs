@@ -35,6 +35,12 @@ namespace Matkakirja.Linssit.Kierros
                 Id = S("id"), Nimi = S("nimi"), Alarivi = S("alarivi"), Teksti = S("teksti"), Aani = S("aani"),
                 Lat = D("lat", double.NaN), Lon = D("lon", double.NaN), KokoM = D("koko_m", 60), KorkeusM = D("korkeus_m", 0), KestoS = D("kesto_s", 0),
             };
+            if (j.TryGetValue("vaihtoehdot", out var pv) && pv is IList<object> pl)
+            {
+                var v = new List<string>();
+                foreach (var x in pl) if (x is string t && t.Length > 0) v.Add(t);
+                k.Vaihtoehdot = v.ToArray();
+            }
             if (string.IsNullOrEmpty(k.Nimi) || double.IsNaN(k.Lat) || double.IsNaN(k.Lon) || Math.Abs(k.Lat) > 90 || Math.Abs(k.Lon) > 180) return null;
             return k;
         }
@@ -126,6 +132,19 @@ namespace Matkakirja.Linssit.Kierros
         {
             if (string.IsNullOrWhiteSpace(teksti) || Vaihe == OpasVaihe.Valmis) return;
             toive = teksti.Trim();
+            Seuraava = null;
+            OdottaaVastausta = false; kysymysAika = -1;
+            if (Vaihe == OpasVaihe.Puhuu) Hiljenna?.Invoke();
+            aaniLoppui = true;
+            UusiPyynto();
+        }
+
+        /// <summary>Paikan vaihto valikosta (Natiivi-UI OpasValikko): kuten toive ilman tekstiä, nähdyt tyhjennetään.</summary>
+        public void VaihdaPaikka()
+        {
+            if (Vaihe == OpasVaihe.Valmis) return;
+            nahdyt.Clear();
+            toive = null;
             Seuraava = null;
             OdottaaVastausta = false; kysymysAika = -1;
             if (Vaihe == OpasVaihe.Puhuu) Hiljenna?.Invoke();
