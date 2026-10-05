@@ -29,10 +29,10 @@ namespace Matkakirja.Linssit.Kierros
         public const double LahiRajaM = 20000;
 
         /// <summary>Luokka workerin kentästä ("katu" | "kanava" | "aukio" | "rakennus" | "torni" | "linnoitus" | "puisto" |
-        /// "vesi" | …) tai, jos puuttuu, koosta ja korkeudesta.</summary>
+        /// "vesi" | …; oletus OpasKohde.Luokka) tai, jos puuttuu, koosta ja korkeudesta.</summary>
         public static Luokka Luokittele(OpasKohde k, string luokka = null)
         {
-            switch ((luokka ?? "").Trim().ToLowerInvariant())
+            switch ((luokka ?? k?.Luokka ?? "").Trim().ToLowerInvariant())
             {
                 case "katu": case "kanava": case "aukio": case "tori": case "silta": return Luokka.Katu;
                 case "rakennus": case "torni": case "kirkko": case "patsas": case "monumentti": return Luokka.Rakennus;

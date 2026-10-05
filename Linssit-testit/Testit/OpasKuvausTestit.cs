@@ -20,6 +20,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(OpasKuvaus.Luokka.Rakennus, OpasKuvaus.Luokittele(K(60, 40)), "korkea → rakennus");
             Oleta.Sama(OpasKuvaus.Luokka.Katu, OpasKuvaus.Luokittele(K(80)), "pieni ja matala → katu");
             Oleta.Sama(OpasKuvaus.Luokka.Rakennus, OpasKuvaus.Luokittele(K(200)), "keskikokoinen → rakennus");
+            var nyhavn = K(500); nyhavn.Luokka = "kanava";
+            Oleta.Sama(OpasKuvaus.Luokka.Katu, OpasKuvaus.Luokittele(nyhavn), "OpasKohde.Luokka (worker) oletuksena");
         }
 
         [Testi] static void KatuMatalaJaLahelleAlueKorkeaJaKauas()
