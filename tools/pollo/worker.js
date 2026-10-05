@@ -23,6 +23,7 @@ import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
   kaupunginAineisto, kuvatPaikalle, wikidataKuva, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
   seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, jarjestaReitti,
+  seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus,
 } from './opas.js';
 import { OPAS_AINEISTO } from './opas-aineisto.js';
 import {
@@ -267,12 +268,12 @@ export function elevenTagit(teksti) {
 
 // vakaus: numero lähetetään stability-kenttänä (Pulu ja muut äänet 0,5); null jättää kentän pois (mallin oletus, William),
 // tyyli: style-kenttä jos annettu (William 0).
-async function kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani = PULU_ELEVEN_AANI, vakaus = 0.5, tyyli }) {
+async function kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani = PULU_ELEVEN_AANI, vakaus = 0.5, tyyli, ulostulo = ELEVEN_ULOSTULO }) {
   const ohjain = new AbortController();
   const ajastin = setTimeout(() => ohjain.abort(), ELEVEN_AIKARAJA_MS);
   let ylavirta;
   try {
-    ylavirta = await fetch(`${ELEVEN_PUHE_RAJAPINTA}/${aani}/stream?output_format=${ELEVEN_ULOSTULO}`, {
+    ylavirta = await fetch(`${ELEVEN_PUHE_RAJAPINTA}/${aani}/stream?output_format=${ulostulo}`, {
       method: 'POST',
       headers: { 'content-type': 'application/json', 'xi-api-key': env.ELEVEN_API_KEY },
       body: JSON.stringify({
@@ -2649,17 +2650,34 @@ async function hoidaSahke(pyynto, env, kors, runko) {
  * jotta natiivi voi esihakea seuraavan pysähdyksen kappaleen aikana. Testiotsake → aani null (ei ElevenLabs-kulutusta).
  */
 const OPAS_MALLI_OLETUS = 'claude-sonnet-5-5';
-const OPAS_ULOS = 'mp3_44100_128';
 
 async function sha256Heksa(puskuri) {
   const h = await crypto.subtle.digest('SHA-256', puskuri);
   return [...new Uint8Array(h)].map((b) => b.toString(16).padStart(2, '0')).join('');
 }
 
-/** Williamin ääni valmiiksi: tallennus R2:een ja reunavälimuistiin, palauttaa { aani, kesto_s } tai null. */
+/*
+ * ÄÄNI VIIVEETTÖMÄSTI (Päätoimittaja 5.10.2026 ilta, Linssisepän malli): ElevenLabs tuottaa kappaleen 8–9 sekunnissa,
+ * joten POST ei enää odota sitä. POST tallentaa tekstin KV:hen (opas:teksti:<sha>) ja palauttaa aani-url:n heti
+ * Sonnetin jälkeen; natiivi lataa url:n heti (myös esihaussa) ja lentää kameran samaan aikaan. GET tuottaa äänen
+ * yhdellä pyynnöllä ja palauttaa sen KOKONAISENA (iOS ei jäsennä striimattua mp3:a, TF 1.0.29), tallentaa R2:een ja
+ * reunavälimuistiin. Rinnakkainen GET samasta äänestä odottaa (KV-lukko opas:tuotanto:<sha>) eikä tuota uudelleen.
+ * Tunniste on tekstin tiiviste, joten sama teksti tuotetaan kerran. Päiväkatto lasketaan POSTissa.
+ */
+const OPAS_AANI_TEKSTI_TTL = 60 * 60 * 48;
+const OPAS_TUOTANTO_ODOTUS_MS = 25000;
+/** Kesto-arvio ennen tuotantoa: Williamin suomi ~14,5 merkkiä/s (mitattu 5.10.); natiivi lukee todellisen keston leikkeestä. */
+const OPAS_MERKKIA_SEKUNNISSA = 14.5;
+
+async function oppaanAaniTunniste(teksti) {
+  return (await sha256Heksa(new TextEncoder().encode(`william|eleven_v4_turbo|${teksti}`))).slice(0, 32);
+}
+
+/** POST: ääni-url heti (teksti KV:hen, katto lasketaan nyt) → { aani, kesto_s } tai null. */
 async function oppaanAani(pyynto, env, ctx, teksti, kehittaja) {
   if (!env.ELEVEN_API_KEY || pyynto.headers.get(TESTI_OTSAKE) === '1' || !teksti) return null;
   const kv = env.POLLO_KV ?? null;
+  if (!kv) return null;
   const nyt = new Date();
   if (!kehittaja) {
     const kaytetty = await lueLaskuri(kv, opasElevenPaivaAvain(nyt));
@@ -2668,36 +2686,73 @@ async function oppaanAani(pyynto, env, ctx, teksti, kehittaja) {
       return null;
     }
   }
+  const sha = await oppaanAaniTunniste(teksti);
+  await kv.put(`opas:teksti:${sha}`, teksti, { expirationTtl: OPAS_AANI_TEKSTI_TTL });
+  if (!kehittaja) {
+    const laskuri = kasvataLaskuri(kv, opasElevenPaivaAvain(nyt), 60 * 60 * 30, teksti.length);
+    if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(laskuri); else await laskuri;
+  }
+  const juuri = `${new URL(pyynto.url).origin}/opas/aani/${sha}`;
+  return { aani: `${juuri}.mp3`, aani_pcm: `${juuri}.pcm`, aani_taajuus: OPAS_PCM_TAAJUUS,
+    kesto_s: Math.round((teksti.length / OPAS_MERKKIA_SEKUNNISSA) * 10) / 10 };
+}
+
+/*
+ * PCM-SUORATOISTO (Päätoimittaja 5.10.2026 ilta, muoto sovittu Linssisepän kanssa; natiivi junaan 145): GET .pcm virtaa
+ * ElevenLabsin pcm_24000:n suoraan (raaka s16le, mono, 24 kHz, ei otsaketta, chunked), ensimmäiset tavut ~0,3 s, noin
+ * kaksinkertainen reaaliaika. Natiivi soittaa latauksen aikana (DownloadHandlerScript → rengaspuskuri → AudioClip-stream);
+ * iOS ei jäsennä striimattua mp3:a (TF 1.0.29), raaka PCM ei tarvitse jäsennintä. Sama virta tallennetaan R2:een, joten
+ * toistuva GET palauttaa saman kokonaisena. mp3-polku säilyy varana ja junan 144 natiiveille.
+ */
+const OPAS_PCM_TAAJUUS = 24000;
+const PCM_OTSAKKEET = { 'content-type': `audio/L16;rate=${OPAS_PCM_TAAJUUS};channels=1`, 'cache-control': 'public, max-age=604800',
+  'x-aani-taajuus': String(OPAS_PCM_TAAJUUS) };
+
+const mp3Vastaus = (data) => new Response(data, { headers: { 'content-type': 'audio/mpeg', 'cache-control': 'public, max-age=604800' } });
+
+/** GET /opas/aani/<sha>.mp3: valmis ääni (välimuisti, R2) tai tuotetaan nyt ja palautetaan kokonaisena. */
+async function hoidaOppaanAani(pyynto, env, ctx) {
+  const m = /^\/opas\/aani\/([0-9a-f]{32})\.(mp3|pcm)$/.exec(new URL(pyynto.url).pathname);
+  if (!m) return new Response('Ei löydy', { status: 404 });
+  if (m[2] === 'pcm') return hoidaOppaanPcm(pyynto, env, ctx, m[1]);
+  const sha = m[1];
+  const avain = `opas/${sha}.mp3`;
+  const valmis = async () => {
+    const osuma = typeof caches === 'undefined' ? null : await caches.default.match(new Request(pyynto.url));
+    if (osuma) return osuma;
+    const olio = env.PUHE_R2 ? await env.PUHE_R2.get(avain) : null;
+    return olio ? mp3Vastaus(olio.body) : null;
+  };
+  const loytyi = await valmis();
+  if (loytyi) return loytyi;
+  const kv = env.POLLO_KV ?? null;
+  const teksti = kv ? await kv.get(`opas:teksti:${sha}`) : null;
+  if (!teksti || !env.ELEVEN_API_KEY) return new Response('Ei löydy', { status: 404 });
+  // Toinen GET samasta äänestä (esim. uudelleenyritys) odottaa ensimmäisen tuotantoa R2:sta.
+  const lukko = `opas:tuotanto:${sha}`;
+  if (await kv.get(lukko)) {
+    for (let odotettu = 0; odotettu < OPAS_TUOTANTO_ODOTUS_MS; odotettu += 500) {
+      await new Promise((r) => setTimeout(r, 500));
+      const r2 = await valmis();
+      if (r2) return r2;
+    }
+  }
+  await kv.put(lukko, '1', { expirationTtl: 60 }).catch(() => {});
   try {
     const v = await kutsuElevenPuhetta(env, { teksti, malli: 'eleven_v4_turbo', nopeus: 1, aani: KERTOJA_ELEVEN_AANI, vakaus: null, tyyli: 0 });
     const data = await v.arrayBuffer();
-    if (!data.byteLength) return null;
-    const sha = (await sha256Heksa(data)).slice(0, 32);
-    const osoite = `${new URL(pyynto.url).origin}/opas/aani/${sha}.mp3`;
-    const talteen = [
-      env.PUHE_R2 ? env.PUHE_R2.put(`opas/${sha}.mp3`, data, { httpMetadata: { contentType: 'audio/mpeg' } }) : null,
-      typeof caches === 'undefined' ? null : caches.default.put(new Request(osoite), new Response(data, {
-        headers: { 'content-type': 'audio/mpeg', 'cache-control': 'public, max-age=604800' },
-      })),
-    ].filter(Boolean);
-    await Promise.all(talteen).catch(() => {});
-    if (!kehittaja) await kasvataLaskuri(kv, opasElevenPaivaAvain(nyt), 60 * 60 * 30, teksti.length);
-    return { aani: osoite, kesto_s: Math.round((data.byteLength * 8 / 128000) * 10) / 10 };
+    if (!data.byteLength) return new Response('Ääni epäonnistui', { status: 502 });
+    const talteen = Promise.all([
+      env.PUHE_R2 ? env.PUHE_R2.put(avain, data, { httpMetadata: { contentType: 'audio/mpeg' } }) : null,
+      typeof caches === 'undefined' ? null : caches.default.put(new Request(pyynto.url), mp3Vastaus(data.slice(0))),
+    ]).catch(() => {});
+    if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(talteen); else await talteen;
+    return mp3Vastaus(data);
   } catch (virhe) {
     console.log(`opas: ääni epäonnistui (${virhe?.status ?? 'verkko'})`);
-    return null;
+    await kv.delete?.(lukko)?.catch?.(() => {});
+    return new Response('Ääni epäonnistui', { status: 502 });
   }
-}
-
-/** GET /opas/aani/<sha>.mp3: valmis opasääni R2:sta tai reunavälimuistista. */
-async function hoidaOppaanAani(pyynto, env) {
-  const m = /^\/opas\/aani\/([0-9a-f]{32})\.mp3$/.exec(new URL(pyynto.url).pathname);
-  if (!m) return new Response('Ei löydy', { status: 404 });
-  const osuma = typeof caches === 'undefined' ? null : await caches.default.match(new Request(pyynto.url));
-  if (osuma) return osuma;
-  const olio = env.PUHE_R2 ? await env.PUHE_R2.get(`opas/${m[1]}.mp3`) : null;
-  if (!olio) return new Response('Ei löydy', { status: 404 });
-  return new Response(olio.body, { headers: { 'content-type': 'audio/mpeg', 'cache-control': 'public, max-age=604800' } });
 }
 
 /*
@@ -2715,6 +2770,41 @@ function hoidaOppaanTunnus(pyynto, env) {
   }
   if (!env.CESIUM_ION_TOKEN) return new Response(JSON.stringify({ virhe: 'asetus' }), { status: 503, headers: otsakkeet });
   return new Response(JSON.stringify({ tunnus: env.CESIUM_ION_TOKEN }), { headers: otsakkeet });
+}
+
+/** GET /opas/aani/<sha>.pcm: R2:sta kokonaisena tai ElevenLabsista virtana (tallennus R2:een samalla). */
+async function hoidaOppaanPcm(pyynto, env, ctx, sha) {
+  const avain = `opas/${sha}.pcm`;
+  const r2 = async () => (env.PUHE_R2 ? env.PUHE_R2.get(avain) : null);
+  const valmis = await r2();
+  if (valmis) return new Response(valmis.body, { headers: PCM_OTSAKKEET });
+  const kv = env.POLLO_KV ?? null;
+  const teksti = kv ? await kv.get(`opas:teksti:${sha}`) : null;
+  if (!teksti || !env.ELEVEN_API_KEY) return new Response('Ei löydy', { status: 404 });
+  const lukko = `opas:tuotanto-pcm:${sha}`;
+  if (await kv.get(lukko)) {
+    for (let odotettu = 0; odotettu < OPAS_TUOTANTO_ODOTUS_MS; odotettu += 500) {
+      await new Promise((r) => setTimeout(r, 500));
+      const olio = await r2();
+      if (olio) return new Response(olio.body, { headers: PCM_OTSAKKEET });
+    }
+  }
+  await kv.put(lukko, '1', { expirationTtl: 60 }).catch(() => {});
+  let v;
+  try {
+    v = await kutsuElevenPuhetta(env, { teksti, malli: 'eleven_v4_turbo', nopeus: 1, aani: KERTOJA_ELEVEN_AANI, vakaus: null, tyyli: 0,
+      ulostulo: `pcm_${OPAS_PCM_TAAJUUS}` });
+  } catch (virhe) {
+    console.log(`opas: pcm-ääni epäonnistui (${virhe?.status ?? 'verkko'})`);
+    await kv.delete?.(lukko)?.catch?.(() => {});
+    return new Response('Ääni epäonnistui', { status: 502 });
+  }
+  const [natiiville, talteen] = v.body.tee();
+  const tallennus = new Response(talteen).arrayBuffer()
+    .then((data) => (data.byteLength && env.PUHE_R2 ? env.PUHE_R2.put(avain, data, { httpMetadata: { contentType: PCM_OTSAKKEET['content-type'] } }) : null))
+    .catch(() => {});
+  if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(tallennus);
+  return new Response(natiiville, { headers: PCM_OTSAKKEET });
 }
 
 /*
@@ -2742,7 +2832,8 @@ export function oppaanTiheysYlittyy(ip, nyt = Date.now(), raja = OPAS_MINUUTTIRA
 async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   if (!env.ANTHROPIC_API_KEY) return vastaa({ virhe: 'asetus', viesti: 'Opas ei ole vielä käytössä.' }, { status: 503, ...kors });
   const ip = pyynto.headers.get('cf-connecting-ip');
-  if (oppaanTiheysYlittyy(ip, Date.now(), lueLuku(env.OPAS_MINUUTTIRAJA, OPAS_MINUUTTIRAJA))) {
+  // cf-connecting-ip on Cloudflaressa aina; ilman sitä (paikalliset testit) tiheysrajaa ei lasketa.
+  if (ip && oppaanTiheysYlittyy(ip, Date.now(), lueLuku(env.OPAS_MINUUTTIRAJA, OPAS_MINUUTTIRAJA))) {
     console.log('opas: tiheysraja → 429 ilman kutsuja');
     const v = vastaa({ virhe: 'liian-tiheaan', viesti: 'Opas hengähtää hetken. Yritä uudelleen puolen minuutin päästä.' }, { status: 429, ...kors });
     v.headers.set('retry-after', '30');
@@ -2775,28 +2866,33 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   // KIERROS (omistajan idea 19.3x): "Esittele kaupunki" / "Lisää tätä kaupunkia" suunnittelee ~8 pysähdystä yhdellä
   // kutsulla; toive null jatkaa suunnitelmaa (myös natiivin esihaku), muu toive vastataan ja kierros jatkuu sen jälkeen.
   let kierros = tallessa && tallessa.kaupunki === (p.kaupunki ?? '') ? tallessa : null;
-  if (kierrosAvain && onKierrosToive(p.toive)) {
+  // Kierroksen alku (Päätoimittaja: suunnittelu ja ensimmäinen pysähdys yhtä aikaa): suunnitelma tehdään rinnakkain
+  // ensimmäisen kappaleen kanssa; kertoja aloittaa kaupungin tunnetuimmasta paikasta kameran läheltä, ja se lisätään
+  // kierroksen alkuun (muu reitti lähin naapuri sen jälkeen).
+  const aloitaKierros = Boolean(kierrosAvain && onKierrosToive(p.toive));
+  const suunnittelu = aloitaKierros ? (async () => {
     try {
       const suunnitelma = jasennaKierros((await kysyMallitiedot(env, {
         jarjestelma: OPAS_KIERROS_KEHOTE, viestit: [{ role: 'user', content: kierroksenViesti({ ...p, sijainti }, kaydytNimet) }],
         maxTokens: 700, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
       })).teksti);
-      const paikat = (await Promise.all(suunnitelma.map(async (x) => {
+      return (await Promise.all(suunnitelma.map(async (x) => {
         const paikka = await paikanKoordinaatit(fetch, x, sijainti);
         return paikka ? { nimi: paikanNimi(paikka, x.nimi), wikipedia: x.wikipedia, koko_m: x.koko_m, ...paikka } : null;
       }))).filter(Boolean).filter((x, i, kaikki) => kaikki.findIndex((y) => y.id === x.id) === i);
-      if (paikat.length >= 3) {
-        kierros = { kaupunki: p.kaupunki ?? '', paikat: jarjestaReitti(paikat.slice(0, KIERROKSEN_PITUUS), sijainti) };
-        await kv.put(kierrosAvain, JSON.stringify(kierros), { expirationTtl: 60 * 60 * 6 }).catch(() => {});
-      }
     } catch (virhe) {
       console.log(`opas: kierroksen suunnittelu epäonnistui (${virhe?.status ?? 'verkko'})`);
+      return [];
     }
-  }
-  const jatkaKierrosta = kierros && (!p.toive || onKierrosToive(p.toive));
+  })() : null;
+  if (aloitaKierros) kierros = null;
+  const jatkaKierrosta = Boolean(kierros && (!p.toive || onKierrosToive(p.toive)));
   const seuraava = jatkaKierrosta ? seuraavaKierrokselta(kierros, nahdyt) : null;
   const kierrosLoppui = jatkaKierrosta && !seuraava;
-  const ohje = seuraava
+  const ohje = aloitaKierros
+    ? `KIERROS ALKAA: tämä on kaupunkikierroksen ensimmäinen pysähdys. Kerro kaupungin tunnetuimmasta nähtävyydestä `
+      + 'kameran läheltä (ei jo kerrottuja paikkoja).'
+    : seuraava
     ? `KIERROS: tämä on kierroksen pysähdys ${seuraava.numero}/${seuraava.maara}. Kerro paikasta ${seuraava.paikka.nimi} `
       + `(Wikipedia: ${seuraava.paikka.wikipedia ?? seuraava.paikka.nimi}); käytä täsmälleen tätä paikkaa, nimeä ja Wikipedia-otsikkoa.`
     : kierrosLoppui
@@ -2805,12 +2901,13 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       : null;
   const kutsu = {
     jarjestelma: OPAS_KEHOTE,
-    viestit: [{ role: 'user', content: [oppaanViesti({ ...p, sijainti, isoisaKaytetty, toive: jatkaKierrosta ? null : p.toive }, kaydytNimet, aineisto), ohje]
+    viestit: [{ role: 'user', content: [oppaanViesti({ ...p, sijainti, isoisaKaytetty, toive: jatkaKierrosta || aloitaKierros ? null : p.toive }, kaydytNimet, aineisto), ohje]
       .filter(Boolean).join('\n\n') }],
     maxTokens: 700,
     malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
   };
   let tulos = null;
+  let tuloksenPaikka = null;
   try {
     for (let yritys = 0; yritys < 2 && !tulos; yritys += 1) {
       const vastaus = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti, seuraava?.paikka.nimi ?? null);
@@ -2819,14 +2916,29 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       const paikka = seuraava ? seuraava.paikka : await paikanKoordinaatit(fetch, vastaus, sijainti);
       if (!paikka) { console.log(`opas: paikkaa ei löytynyt (${vastaus.wikipedia ?? vastaus.nimi})`); continue; }
       const nimi = seuraava ? seuraava.paikka.nimi : paikanNimi(paikka, vastaus.nimi);
-      tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi, alarivi: paikka.alarivi, lat: paikka.lat, lon: paikka.lon,
-        koko_m: seuraava?.paikka.koko_m ?? vastaus.koko_m, ...(vastaus.korkeus_m ? { korkeus_m: vastaus.korkeus_m } : {}), teksti: vastaus.teksti,
+      tuloksenPaikka = { nimi, wikipedia: vastaus.wikipedia, koko_m: vastaus.koko_m, ...paikka };
+      tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi, alarivi: paikka.alarivi ?? vastaus.kuvaus ?? null, lat: paikka.lat, lon: paikka.lon,
+        koko_m: seuraava?.paikka.koko_m ?? vastaus.koko_m, ...(vastaus.korkeus_m ? { korkeus_m: vastaus.korkeus_m } : {}),
+        ...(vastaus.luokka ? { luokka: vastaus.luokka } : {}), teksti: vastaus.teksti,
         wiki: paikka.wiki, kuva: null, vaihtoehdot: vastaus.vaihtoehdot, koordinaatit: paikka.lahde,
         ...(seuraava ? { kierros: { numero: seuraava.numero, maara: seuraava.maara } } : {}),
         kuvat: kuvatPaikalle(aineisto, [nimi, vastaus.nimi, seuraava?.paikka.wikipedia ?? vastaus.wikipedia, paikka.wiki?.otsikko].filter(Boolean)) };
+      tulos.korostus = await paikanKorostus(fetch, { lat: paikka.lat, lon: paikka.lon, koko_m: tulos.koko_m, luokka: vastaus.luokka,
+        reitti: vastaus.reitti ?? [] }, sijainti);
     }
   } catch (virhe) {
     console.log(`opas: mallikutsu epäonnistui (${virhe?.status ?? 'verkko'})`);
+  }
+  if (suunnittelu) {
+    const suunnitelma = await suunnittelu;
+    const eka = tulos?.tyyppi === 'pysahdys' ? tuloksenPaikka : null;
+    const muut = suunnitelma.filter((x) => x.id !== eka?.id);
+    const paikat = eka ? [eka, ...jarjestaReitti(muut, eka)] : jarjestaReitti(muut, sijainti);
+    if (paikat.length >= 3) {
+      kierros = { kaupunki: p.kaupunki ?? '', paikat: paikat.slice(0, KIERROKSEN_PITUUS) };
+      await kv.put(kierrosAvain, JSON.stringify(kierros), { expirationTtl: 60 * 60 * 6 }).catch(() => {});
+      if (eka) tulos.kierros = { numero: 1, maara: kierros.paikat.length };
+    }
   }
   // Vaihtoehtojen järjestys koodissa, ei vain kehotteessa: aloituskysymys alkaa "Esittele kaupunki", kierroksen loppu
   // "Lisää tätä kaupunkia".
@@ -2836,6 +2948,19 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     tulos.vaihtoehdot = [ensin, muut[0] ?? 'Näytä jotain modernia'];
   }
   if (kierrosLoppui && tulos?.tyyppi === 'kysymys' && kierrosAvain) await kv.delete?.(kierrosAvain)?.catch?.(() => {});
+  // Suunnanvaihtosiru koodissa (Päätoimittaja 5.10.): istunnon muisti KV:ssä, ilman istuntoa kierto nähtyjen määrällä.
+  if (tulos?.tyyppi === 'pysahdys') {
+    const suuntaAvain = p.istunto && kv ? `opas:suunnat:${p.istunto}` : null;
+    const kaytetyt = suuntaAvain ? await kv.get(suuntaAvain).then((x) => (x ? JSON.parse(x) : [])).catch(() => [])
+      : [SUUNNANVAIHDOT[(p.kaydyt.length + SUUNNANVAIHDOT.length - 1) % SUUNNANVAIHDOT.length]];
+    const { siru, kaytetyt: uudet } = seuraavaSuunta(kaytetyt, tulos.luokka ?? null);
+    const syventava = (tulos.vaihtoehdot ?? []).find((x) => !SUUNNANVAIHDOT.includes(x) && !/modernia|syödä|syödään/i.test(x)) ?? tulos.vaihtoehdot?.[0];
+    tulos.vaihtoehdot = [syventava ?? 'Mitä täällä näkee?', siru];
+    if (suuntaAvain) {
+      const kirjoitus = kv.put(suuntaAvain, JSON.stringify(uudet), { expirationTtl: 60 * 60 * 6 }).catch(() => {});
+      if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
+    }
+  }
   if (!tulos) return vastaa({ virhe: 'palvelin', viesti: 'Opas ei saanut seuraavaa paikkaa kiinni. Yritä uudelleen.' }, { status: 502, ...kors });
   // Ääni ja kuvan varahaku (Wikidatan P18) rinnakkain; pelin oma kuva voittaa.
   const [aani, p18] = await Promise.all([
@@ -2848,7 +2973,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
   }
   console.log(`opas: ${tulos.tyyppi} ${tulos.id ?? ''} ${p.kaydyt.length} käyty, ääni ${aani ? 'kyllä' : 'ei'}, kuvia ${tulos.kuvat?.length ?? 0}`);
-  return vastaa({ ...tulos, aani: aani?.aani ?? null, kesto_s: aani?.kesto_s ?? null }, kors);
+  return vastaa({ ...tulos, aani: aani?.aani ?? null, aani_pcm: aani?.aani_pcm ?? null, aani_taajuus: aani?.aani_taajuus ?? null,
+    kesto_s: aani?.kesto_s ?? null }, kors);
 }
 
 export default {
@@ -2864,7 +2990,7 @@ export default {
     }
     // Elävän oppaan valmiit äänet (GET, ei originia: natiivin soitin hakee suoraan; tunniste on tiiviste).
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname.startsWith('/opas/aani/')) {
-      return hoidaOppaanAani(pyynto, env);
+      return hoidaOppaanAani(pyynto, env, ctx);
     }
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/tunnus') return hoidaOppaanTunnus(pyynto, env);
     if (pyynto.method !== 'POST') {

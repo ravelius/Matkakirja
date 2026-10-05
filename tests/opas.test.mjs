@@ -9,13 +9,18 @@ import worker from '../tools/pollo/worker.js';
 const KOOPENHAMINA = { lat: 55.676, lon: 12.568 };
 
 test('jäsennys: pysähdys mallin kentin, koko rajattu, teksti päättyy ennen vaihtoehtoja; kysymys', () => {
-  const p = jasennaOpas('NIMI: Nyhavn\nWIKIPEDIA: Nyhavn\nLAT: 55,6798\nLON: 12.5911\nKOKO: 9000\nKORKEUS: 12\n'
+  const p = jasennaOpas('NIMI: Nyhavn\nWIKIPEDIA: Nyhavn\nLAT: 55,6798\nLON: 12.5911\nKOKO: 9000\nKORKEUS: 12\nLUOKKA: Kanava.\n'
     + 'TEKSTI: Nyhavn on värikäs kanava.\nSe on vilkas.\nVAIHTOEHTO: Kerro lisää\nVAIHTOEHTO: Näytä jotain modernia');
   assert.equal(p.tyyppi, 'pysahdys');
   assert.equal(p.wikipedia, 'Nyhavn');
   assert.equal(p.lat, 55.6798);
   assert.equal(p.koko_m, 3000);
   assert.equal(p.korkeus_m, 12);
+  assert.equal(p.luokka, 'kanava', 'kameran luokka (juna 145)');
+  assert.equal(jasennaOpas('NIMI: X\nLUOKKA: avaruusasema\nTEKSTI: Y.').luokka, undefined, 'tuntematon luokka pois');
+  const kuv = jasennaOpas('NIMI: Raatihuone\nKUVAUS: Kööpenhaminan kaupungintalo\nTEKSTI: Y.');
+  assert.equal(kuv.kuvaus, 'Kööpenhaminan kaupungintalo');
+  assert.equal(kuv.teksti, 'Y.');
   assert.equal(p.teksti, 'Nyhavn on värikäs kanava. Se on vilkas.');
   assert.deepEqual(p.vaihtoehdot, ['Kerro lisää', 'Näytä jotain modernia']);
   assert.equal(jasennaOpas('NIMI: X'), null, 'ilman tekstiä ei pysähdystä');
@@ -34,7 +39,7 @@ test('pyyntö ja kehote: nahdyt, edellinen kappale, toive rajattu; kehotteessa o
   assert.match(viesti, /Jo kerrotut paikat.*Tivoli; Nyhavn/);
   assert.match(viesti, /Edellinen kappale: Edellinen\./);
   assert.doesNotMatch(OPAS_KEHOTE, /tiivistelm|ehdokka/i, 'ei Wikipedian tekstiä eikä ehdokaslistaa');
-  for (const sana of [/Hans Christian/, /NÄKYY ILMASTA/, /tuhatyhdeksänsataayhdeksänkymmentä jälkeen/, /PELIN AINEISTO/, /kappaleeseen kuuluu aina yksi lyhyt viittaus/, /huonenumeroita/, /tuhatkuusisataluvulla/, /TARKAT VUOSILUVUT JA MUUT TARKAT LUVUT/, /kokenut suomalainen opas/, /ristiriidassa/]) {
+  for (const sana of [/Hans Christian/, /NÄKYY ILMASTA/, /tuhatyhdeksänsataayhdeksänkymmentä jälkeen/, /PELIN AINEISTO/, /kappaleeseen kuuluu aina yksi lyhyt viittaus/, /huonenumeroita/, /tuhatkuusisataluvulla/, /TARKAT VUOSILUVUT JA MUUT TARKAT LUVUT/, /aueta yksinään/, /kokenut suomalainen opas/, /ristiriidassa/]) {
     assert.match(OPAS_KEHOTE, sana);
   }
 });
@@ -77,6 +82,7 @@ function tynka({ malli = 'NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nLAT: 55.67\nL
     }
     if (u.includes('api.elevenlabs.io')) {
       kutsut.eleven = JSON.parse(init.body);
+      kutsut.elevenUrl = u;
       return new Response(new Uint8Array(16000), { status: 200, headers: { 'content-type': 'audio/mpeg' } });
     }
     return new Response('{}', { status: 404 });
@@ -97,15 +103,31 @@ test('koordinaatit nimellä: otsikko, kaukainen samanniminen hylätään ja haku
   assert.equal(await paikanKoordinaatit(fetch, { nimi: 'Tuntematon', lat: 40, lon: -82 }, KOOPENHAMINA), null);
   const d = await paikanKoordinaatit(fetch, { nimi: 'Torvehallerne', wikipedia: 'Torvehallerne', lat: 55.7, lon: 12.6 }, KOOPENHAMINA);
   assert.deepEqual([d.id, d.lat, d.lahde], ['Q19409991', 55.6836, 'wikipedia'], 'Wikidatan nimihaku + P625, kun artikkelia ei ole');
+  const en = await paikanKoordinaatit(fetch, { nimi: 'Nyhavn', wikipedia: 'Tivoli Gardens', lat: 55.6, lon: 12.5 }, KOOPENHAMINA);
+  assert.equal(en.alarivi, 'huvipuisto Kööpenhaminassa', 'fi-kuvaus');
+  const eiFi = await paikanKoordinaatit(fetch, { nimi: 'Torvehallerne', lat: 55.7, lon: 12.6 }, KOOPENHAMINA);
+  assert.equal(eiFi.alarivi, null, 'ei englanninkielistä alariviä ruudulle (worker käyttää mallin KUVAUSta)');
   assert.equal(kutsut.tiivistelma, undefined, 'tekstiä ei haeta');
   assert.deepEqual(await kaydytNimiksi(fetch, ['Q110289', 'Q1394197', 'Raatihuone']), ['Kööpenhaminan Tivoli', 'Nyhavn', 'Raatihuone']);
 });
 
-async function ajaOpas(otsakkeet, runko, verkko) {
+/** Muistinvarainen KV ja R2 testeihin. */
+function muisti() {
+  const kv = new Map();
+  const r2 = new Map();
+  return {
+    kv, r2,
+    POLLO_KV: { get: async (x) => kv.get(x) ?? null, put: async (x, v) => { kv.set(x, v); }, delete: async (x) => { kv.delete(x); } },
+    PUHE_R2: { get: async (x) => (r2.has(x) ? { body: r2.get(x) } : null), put: async (x, v) => { r2.set(x, v); } },
+  };
+}
+
+async function ajaOpas(otsakkeet, runko, verkko, varasto = muisti()) {
   const alkuperainen = globalThis.fetch;
   globalThis.fetch = verkko.fetch;
   try {
-    const env = { ANTHROPIC_API_KEY: 'a', ELEVEN_API_KEY: 'e', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KEHITTAJAKOODI: 'k' };
+    const env = { ANTHROPIC_API_KEY: 'a', ELEVEN_API_KEY: 'e', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KEHITTAJAKOODI: 'k',
+      POLLO_KV: varasto.POLLO_KV, PUHE_R2: varasto.PUHE_R2 };
     const v = await worker.fetch(new Request('https://pollo.example/opas/seuraava', {
       method: 'POST', headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', ...otsakkeet },
       body: JSON.stringify(runko),
@@ -118,20 +140,54 @@ async function ajaOpas(otsakkeet, runko, verkko) {
 
 test('worker /opas/seuraava: Sonnet valitsee, koordinaatit Wikipediasta nimellä, Williamin ääni; testiotsakkeella ei ääntä', async () => {
   const verkko = tynka();
-  const { tila, data } = await ajaOpas({ 'x-pollo-kehittaja': 'k' }, { kaupunki: 'Kööpenhamina', nahdyt: ['Q1394197'] }, verkko);
+  const varasto = muisti();
+  const { tila, data } = await ajaOpas({ 'x-pollo-kehittaja': 'k' }, { kaupunki: 'Kööpenhamina', nahdyt: ['Q1394197'] }, verkko, varasto);
   assert.equal(tila, 200);
   assert.equal(data.tyyppi, 'pysahdys');
   assert.equal(data.id, 'Q110289');
   assert.equal(data.lat, 55.6737, 'Wikipedian koordinaatti, ei mallin arvio');
-  assert.deepEqual(data.vaihtoehdot, ['Lisää', 'Seuraava']);
+  assert.deepEqual(data.vaihtoehdot, ['Lisää', 'Jotain vihreää'], 'syventävä mallilta, suunnanvaihto koodista (kierto)');
   assert.equal(data.wikipedia, undefined);
   assert.equal(verkko.kutsut.malli, 'claude-sonnet-5-5');
   assert.match(verkko.kutsut.viesti, /Jo kerrotut paikat.*Nyhavn/, 'nahdyt nimiksi mallille');
   assert.equal(verkko.kutsut.tiivistelma, undefined);
   assert.match(data.aani, /^https:\/\/pollo\.example\/opas\/aani\/[0-9a-f]{32}\.mp3$/);
-  assert.equal(data.kesto_s, 1);
-  assert.equal(verkko.kutsut.eleven.model_id, 'eleven_v4_turbo');
-  assert.equal(verkko.kutsut.eleven.voice_settings.stability, undefined, 'William: oletusvakaus');
+  assert.equal(data.kesto_s, Math.round(('Tivoli on huvipuisto.'.length / 14.5) * 10) / 10, 'kesto-arvio tekstistä');
+  assert.equal(verkko.kutsut.eleven, undefined, 'POST ei odota ääntä (Päätoimittaja 5.10.: alle 6 s)');
+  // GET tuottaa äänen kokonaisena, tallentaa R2:een; toinen GET tulee R2:sta ilman uutta tuotantoa.
+  const env = { ELEVEN_API_KEY: 'e', POLLO_KV: varasto.POLLO_KV, PUHE_R2: varasto.PUHE_R2 };
+  const vanha = globalThis.fetch;
+  globalThis.fetch = verkko.fetch;
+  try {
+    const g = await worker.fetch(new Request(data.aani), env, {});
+    assert.equal(g.status, 200);
+    assert.equal(g.headers.get('content-type'), 'audio/mpeg');
+    assert.equal((await g.arrayBuffer()).byteLength, 16000, 'kokonaisena');
+    assert.equal(verkko.kutsut.eleven.model_id, 'eleven_v4_turbo');
+    assert.equal(verkko.kutsut.eleven.text, 'Tivoli on huvipuisto.');
+    assert.equal(verkko.kutsut.eleven.voice_settings.stability, undefined, 'William: oletusvakaus');
+    verkko.kutsut.eleven = undefined;
+    assert.equal((await worker.fetch(new Request(data.aani), env, {})).status, 200);
+    assert.equal(verkko.kutsut.eleven, undefined, 'toinen GET R2:sta');
+    assert.equal((await worker.fetch(new Request(data.aani.replace(/[0-9a-f]{32}/, '0'.repeat(32))), env, {})).status, 404);
+    // PCM-suoratoisto (juna 145): sama teksti, raaka s16le 24 kHz virtana, tallennus R2:een.
+    assert.equal(data.aani_pcm, data.aani.replace(/\.mp3$/, '.pcm'));
+    assert.equal(data.aani_taajuus, 24000);
+    const odotukset = [];
+    const pcm = await worker.fetch(new Request(data.aani_pcm), env, { waitUntil: (x) => odotukset.push(x) });
+    assert.equal(pcm.status, 200);
+    assert.equal(pcm.headers.get('content-type'), 'audio/L16;rate=24000;channels=1');
+    assert.match(verkko.kutsut.elevenUrl, /output_format=pcm_24000/);
+    assert.equal((await pcm.arrayBuffer()).byteLength, 16000);
+    await Promise.all(odotukset);
+    assert.ok(varasto.r2.has(data.aani_pcm.replace(/^.*\/aani\//, 'opas/')), 'virta tallennettu R2:een');
+    verkko.kutsut.eleven = undefined;
+    const toinen = await worker.fetch(new Request(data.aani_pcm), env, {});
+    assert.equal(toinen.status, 200);
+    assert.equal(verkko.kutsut.eleven, undefined, 'toinen .pcm R2:sta');
+  } finally {
+    globalThis.fetch = vanha;
+  }
 
   const testi = tynka();
   const t = await ajaOpas({ 'x-pollo-kehittaja': 'k', 'x-matkakirja-testi': '1' }, { kaupunki: 'Kööpenhamina' }, testi);
@@ -262,6 +318,7 @@ test('worker: "Esittele kaupunki" suunnittelee kierroksen, toive null jatkaa, lo
       vastaukset.push(runko.messages.at(-1).content);
       const teksti = runko.system?.[0]?.text?.startsWith?.('Suunnittelet') || JSON.stringify(runko.system).includes('Suunnittelet')
         ? 'PAIKKA: Tivoli | Tivoli Gardens | 55.6737 | 12.5681 | 300\nPAIKKA: Tivoli kopio | Tivoli Gardens | 55.6737 | 12.5681\nPAIKKA: Torvehallerne | Torvehallerne | 55.6838 | 12.5695\nPAIKKA: Tuntematon | Tuntematon | 55.68 | 12.59'
+        : /KIERROS ALKAA/.test(runko.messages.at(-1).content) ? 'NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nTEKSTI: Aloitus.\nVAIHTOEHTO: A?\nVAIHTOEHTO: B'
         : /KIERROS PÄÄTTYI/.test(runko.messages.at(-1).content) ? 'KYSYMYS: Jatketaanko?\nVAIHTOEHTO: Jotain\nVAIHTOEHTO: Lisää tätä kaupunkia'
           : /KIERROS:/.test(runko.messages.at(-1).content) ? 'TEKSTI: Kierroksen kappale.\nVAIHTOEHTO: Kysymys paikasta?\nVAIHTOEHTO: Missä voisi syödä?'
             : 'KYSYMYS: Mitä haluat nähdä?\nVAIHTOEHTO: Jotain vanhaa\nVAIHTOEHTO: Modernia';
@@ -300,4 +357,39 @@ test('worker: "Esittele kaupunki" suunnittelee kierroksen, toive null jatkaa, lo
   } finally {
     globalThis.fetch = vanha;
   }
+});
+
+test('suunnanvaihtosiru: ensin näkemättömät, ei kahdesti peräkkäin, ei paikkaa vastaavaa', async () => {
+  const { seuraavaSuunta, SUUNNANVAIHDOT } = await import('../tools/pollo/opas.js');
+  let kaytetyt = [];
+  const sirut = [];
+  for (let i = 0; i < 12; i += 1) {
+    const r = seuraavaSuunta(kaytetyt, i === 6 ? 'puisto' : null);
+    sirut.push(r.siru);
+    kaytetyt = r.kaytetyt;
+  }
+  assert.deepEqual(sirut.slice(0, 5), SUUNNANVAIHDOT, 'ensin kaikki eri');
+  for (let i = 1; i < sirut.length; i += 1) assert.notEqual(sirut[i], sirut[i - 1], `ei peräkkäin (${i})`);
+  assert.notEqual(sirut[6], 'Jotain vihreää', 'puistossa ei vihreää');
+  assert.equal(seuraavaSuunta(['Veden äärelle'], 'kanava').siru, 'Missä voisi syödä?');
+});
+
+test('korostus: piste rakennukselle, alue aukiolle/puistolle, reitti kadulle nimillä (alle 2 pistettä → piste)', async () => {
+  const { paikanKorostus, jasennaOpas } = await import('../tools/pollo/opas.js');
+  const { fetch } = tynka();
+  assert.deepEqual(await paikanKorostus(fetch, { lat: 55.1, lon: 12.2, koko_m: 120, luokka: 'rakennus' }, KOOPENHAMINA),
+    { tyyppi: 'piste', pisteet: [[55.1, 12.2]], sade_m: 60 });
+  assert.equal((await paikanKorostus(fetch, { lat: 55.1, lon: 12.2, koko_m: 400, luokka: 'puisto' }, KOOPENHAMINA)).tyyppi, 'alue');
+  const r = await paikanKorostus(fetch, { lat: 55.1, lon: 12.2, luokka: 'katu', reitti: ['Tivoli Gardens', 'Kööpenhamina', 'Tuntematon'] }, KOOPENHAMINA);
+  assert.deepEqual(r, { tyyppi: 'reitti', pisteet: [[55.6737, 12.5681], [55.676, 12.568]] });
+  assert.equal((await paikanKorostus(fetch, { lat: 55.1, lon: 12.2, luokka: 'katu', reitti: ['Tuntematon', 'Tivoli Gardens'] }, KOOPENHAMINA)).tyyppi, 'piste');
+  const v = jasennaOpas('NIMI: Strøget\nLUOKKA: katu\nREITTI: Rådhuspladsen; Gammeltorv ; Amagertorv;Kongens Nytorv\nTEKSTI: Katu.');
+  assert.deepEqual(v.reitti, ['Rådhuspladsen', 'Gammeltorv', 'Amagertorv', 'Kongens Nytorv']);
+  assert.equal(v.teksti, 'Katu.');
+});
+
+test('reittipisteet järjestetään päästä päähän', async () => {
+  const { jarjestaAkselille } = await import('../tools/pollo/opas.js');
+  assert.deepEqual(jarjestaAkselille([[55.680278, 12.585833], [55.679722, 12.590556], [55.680531, 12.589119]]),
+    [[55.680278, 12.585833], [55.680531, 12.589119], [55.679722, 12.590556]], 'Nyhavn: Kongens Nytorv → … → satama');
 });

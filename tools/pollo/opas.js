@@ -80,7 +80,9 @@ VAIHTOEHDOT. Jokaisen vastauksen perään kirjoitat tasan kaksi lyhyttä vastaus
 kuusi sanaa kumpikin, jotta hänen ei tarvitse kirjoittaa. Pysähdyksen jälkeen ensimmäinen on paikkakohtainen \
 syventävä kysymys juuri tästä paikasta, johon osaat vastata varmasti (esimerkiksi Nyhavnissa "Missä Andersen asui?"), \
 ja toinen vaihtaa suuntaa (esimerkiksi "Näytä jotain modernia" tai "Missä voisi syödä?"). Yleistä "Kerro tästä \
-lisää" et käytä. Vaihtoehdot pysyvät aina tässä kaupungissa: et koskaan ehdota kaupungin vaihtamista.
+lisää" et käytä. Paikkakohtaisen kysymyksen pitää aueta yksinään ilman kappaletta ja olla enintään noin \
+kolmekymmentä merkkiä: nimeä asia, josta kysyt ("Kuka on kultainen hahmo?", ei "Kuka hahmo on?"). Vaihtoehdot pysyvät \
+aina tässä kaupungissa: et koskaan ehdota kaupungin vaihtamista.
 
 ISOISÄ. Jos alla on isoisän päiväkirjamerkintä tästä kaupungista vuodelta tuhatkahdeksansataaseitsemänkymmentäkolme, \
 ja pysähdys on se paikka, josta merkintä kertoo, kappaleeseen kuuluu aina yksi lyhyt viittaus siihen omin sanoin, \
@@ -101,6 +103,11 @@ LAT: <leveysaste desimaaleina>
 LON: <pituusaste desimaaleina>
 KOKO: <kohteen halkaisija tai pituus metreinä kameran kehystystä varten, kokonaisluku>
 KORKEUS: <kohteen korkeus metreinä, jos se on merkittävä (torni, kirkko); muuten jätä rivi pois>
+LUOKKA: <yksi sana: katu, kanava, aukio, rakennus, torni, kirkko, linnoitus, puisto, vesi, silta tai muu>
+KUVAUS: <lyhyt suomenkielinen kuvaus otsikon alle, enintään viisi sanaa, esimerkiksi Kööpenhaminan kaupungintalo>
+REITTI: <vain kadulle, kanavalle tai rantareitille: 3–6 tunnettua paikkaa reitin varrelta päästä päähän järjestyksessä, \
+puolipisteillä erotettuina, kukin englanninkielisen Wikipedian otsikolla, esimerkiksi Rådhuspladsen; Gammeltorv; \
+Amagertorv; Kongens Nytorv; muille paikoille jätä rivi pois>
 TEKSTI: <kappale>
 VAIHTOEHTO: <ensimmäinen vastausvaihtoehto>
 VAIHTOEHTO: <toinen vastausvaihtoehto>
@@ -173,7 +180,8 @@ export async function wikidataTiedot(haku, ids) {
       for (const [id, e] of Object.entries(d?.entities ?? {})) {
         tulos[id] = { fi: e?.sitelinks?.fiwiki?.title ?? null,
           nimi: e?.labels?.fi?.value ?? e?.labels?.en?.value ?? null,
-          kuvaus: e?.descriptions?.fi?.value ?? e?.descriptions?.en?.value ?? null };
+          kuvaus: e?.descriptions?.fi?.value ?? e?.descriptions?.en?.value ?? null,
+          kuvausFi: e?.descriptions?.fi?.value ?? null };
       }
     } catch { /* ilman tietoja */ }
   }));
@@ -241,7 +249,8 @@ export async function paikanKoordinaatit(haku, p, viite) {
       const wd = e.id ? (await wikidataTiedot(haku, [e.id]))[e.id] : null;
       const wiki = wd?.fi ? { otsikko: wd.fi, kieli: 'fi', url: wikiUrl('fi', wd.fi) }
         : e.otsikko ? { otsikko: e.otsikko, kieli: 'en', url: wikiUrl('en', e.otsikko) } : null;
-      return { lat: k.lat, lon: k.lon, id: e.id ?? `en:${e.otsikko}`, alarivi: siivoa(wd?.kuvaus ?? e.kuvaus, 80) || null, wiki, lahde: 'wikipedia' };
+      // Alarivi näkyy ruudulla: vain suomenkielinen Wikidata-kuvaus (Natiivi-UI 5.10.), muuten mallin KUVAUS.
+      return { lat: k.lat, lon: k.lon, id: e.id ?? `en:${e.otsikko}`, alarivi: siivoa(wd?.kuvausFi, 80) || null, wiki, lahde: 'wikipedia' };
     }
   }
   if (lahella(p)) return { lat: p.lat, lon: p.lon, id: `en:${p.wikipedia ?? p.nimi}`, alarivi: null, wiki: null, lahde: 'malli' };
@@ -286,6 +295,9 @@ export async function kaydytNimiksi(haku, kaydyt) {
   return kaydyt.map((k) => (onTunnus(k) ? wd[k.toUpperCase()]?.fi ?? wd[k.toUpperCase()]?.nimi ?? null : k)).filter(Boolean);
 }
 
+/** Kameran kulman luokka (Linssiseppä, juna 145): matala ja viisto katu/kanava/aukio, korkea ja jyrkkä linnoitus/puisto. */
+export const OPAS_LUOKAT = ['katu', 'kanava', 'aukio', 'rakennus', 'torni', 'kirkko', 'linnoitus', 'puisto', 'vesi', 'silta', 'muu'];
+
 function kentta(teksti, nimi) {
   const m = new RegExp(`^\\s*${nimi}\\s*:\\s*(.+)$`, 'im').exec(String(teksti ?? ''));
   return m ? m[1].trim() : null;
@@ -307,6 +319,7 @@ export function jasennaOpas(teksti, varaNimi = null) {
   const lat = luku('LAT'), lon = luku('LON');
   const koko = Number.parseInt(kentta(teksti, 'KOKO') ?? '', 10);
   const korkeus = Number.parseInt(kentta(teksti, 'KORKEUS') ?? '', 10);
+  const luokka = OPAS_LUOKAT.find((x) => x === String(kentta(teksti, 'LUOKKA') ?? '').toLowerCase().replace(/[^a-zäö]/g, '')) ?? null;
   return {
     tyyppi: 'pysahdys',
     nimi: siivoa(nimi, 120),
@@ -315,7 +328,10 @@ export function jasennaOpas(teksti, varaNimi = null) {
     lon: Number.isFinite(lon) && Math.abs(lon) <= 180 ? lon : null,
     koko_m: Number.isFinite(koko) ? Math.min(3000, Math.max(20, koko)) : 150,
     ...(Number.isFinite(korkeus) && korkeus > 0 ? { korkeus_m: Math.min(1000, korkeus) } : {}),
-    teksti: siivoa(tekstiOsa.replace(/^\s*KORKEUS\s*:.*$/gim, ''), 900),
+    ...(luokka ? { luokka } : {}),
+    ...(kentta(teksti, 'KUVAUS') ? { kuvaus: siivoa(kentta(teksti, 'KUVAUS'), 80) } : {}),
+    ...(kentta(teksti, 'REITTI') ? { reitti: kentta(teksti, 'REITTI').split(';').map((x) => siivoa(x, 120)).filter(Boolean).slice(0, 6) } : {}),
+    teksti: siivoa(tekstiOsa.replace(/^\s*(KORKEUS|LUOKKA|KUVAUS|REITTI)\s*:.*$/gim, ''), 900),
     vaihtoehdot,
   };
 }
@@ -455,4 +471,55 @@ export function jarjestaReitti(paikat, alku = null) {
     reitti.push(nyt);
   }
   return reitti;
+}
+
+/*
+ * SUUNNANVAIHTOSIRU (Päätoimittaja 5.10.2026 ilta): toinen vaihtoehto valitaan koodissa listasta, ei mallilta (malli
+ * tarjosi lähes aina "Näytä jotain modernia"). Ensin sellainen, jota istunnossa ei ole vielä tarjottu; sama ei koskaan
+ * kahdesti peräkkäin; ei paikkaa vastaavaa (puistossa ei "Jotain vihreää"). Kaikkien jälkeen kierros alkaa alusta.
+ */
+export const SUUNNANVAIHDOT = ['Missä voisi syödä?', 'Jotain vihreää', 'Veden äärelle', 'Kaupungin vanhin paikka', 'Jotain modernia'];
+const SUUNTA_EI_LUOKALLE = { 'Jotain vihreää': ['puisto'], 'Veden äärelle': ['vesi', 'kanava', 'silta'] };
+
+/** Seuraava suunnanvaihtosiru: { siru, kaytetyt } (kaytetyt tallennetaan istunnolle). */
+export function seuraavaSuunta(kaytetyt = [], luokka = null) {
+  const edellinen = kaytetyt.at(-1) ?? null;
+  const sopii = (x) => x !== edellinen && !(SUUNTA_EI_LUOKALLE[x] ?? []).includes(luokka);
+  let siru = SUUNNANVAIHDOT.find((x) => sopii(x) && !kaytetyt.includes(x));
+  let pohja = kaytetyt;
+  if (!siru) { pohja = edellinen ? [edellinen] : []; siru = SUUNNANVAIHDOT.find(sopii); }
+  return { siru, kaytetyt: [...pohja, siru].slice(-SUUNNANVAIHDOT.length) };
+}
+
+/*
+ * KOROSTUS (Päätoimittaja 5.10.2026 ilta, juna 145; muoto Siirtosepälle ja Linssisepälle): { tyyppi: piste | alue |
+ * reitti, pisteet: [[lat, lon], …], sade_m? }. Rakennus, torni ja kirkko → piste; aukio, puisto ja linnoitus → alue
+ * (keskipiste + säde koko_m/2); katu, kanava ja rantareitti → reitti 3–6 pisteen kautta päästä päähän, pisteet nimellä
+ * Wikidatasta/Wikipediasta (paikanKoordinaatit). Ei OSM-geometriaa tässä versiossa. Alle 2 reittipistettä → piste.
+ */
+const ALUELUOKAT = new Set(['aukio', 'puisto', 'linnoitus']);
+const REITTILUOKAT = new Set(['katu', 'kanava', 'vesi']);
+const pyorista = (x) => Math.round(x * 1e6) / 1e6;
+
+export async function paikanKorostus(haku, { lat, lon, koko_m: koko = 150, luokka = null, reitti = [] }, viite) {
+  const sade_m = Math.max(10, Math.round(koko / 2));
+  if (REITTILUOKAT.has(luokka) && reitti.length >= 2) {
+    const pisteet = (await Promise.all(reitti.map((nimi) => paikanKoordinaatit(haku, { nimi, wikipedia: nimi }, viite))))
+      .filter((x) => x && x.lahde === 'wikipedia').map((x) => [pyorista(x.lat), pyorista(x.lon)])
+      .filter((x, i, kaikki) => kaikki.findIndex((y) => y[0] === x[0] && y[1] === x[1]) === i);
+    if (pisteet.length >= 2) return { tyyppi: 'reitti', pisteet: jarjestaAkselille(pisteet) };
+  }
+  return { tyyppi: ALUELUOKAT.has(luokka) ? 'alue' : 'piste', pisteet: [[pyorista(lat), pyorista(lon)]], sade_m };
+}
+
+/** Reittipisteet päästä päähän: kauimmaiset kaksi ovat päät, muut järjestetään projektiona niiden väliselle akselille. */
+export function jarjestaAkselille(pisteet) {
+  if (pisteet.length <= 2) return pisteet;
+  const p = (x) => ({ lat: x[0], lon: x[1] });
+  let a = pisteet[0], b = pisteet[1], pisin = -1;
+  for (const x of pisteet) for (const y of pisteet) { const d = etaisyys(p(x), p(y)); if (d > pisin) { pisin = d; a = x; b = y; } }
+  const kx = Math.cos((a[0] * Math.PI) / 180);
+  const ax = [(b[1] - a[1]) * kx, b[0] - a[0]];
+  const proj = (x) => ((x[1] - a[1]) * kx * ax[0] + (x[0] - a[0]) * ax[1]);
+  return [...pisteet].sort((x, y) => proj(x) - proj(y));
 }
