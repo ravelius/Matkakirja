@@ -154,6 +154,11 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
 - Junaan 145 lähetetty myös astrokuva-tauko-144 bc66e66d.
 - Lukematon: puhujakuvan ja tiivistetyn huonekortin otsikon päällekkäisyys (Siirtoseppä 15.4x) korjataan puhujakuvan kanssa.
 
+## Elävä opas (Linssiseppä, Päätoimittaja 17.5x) — avoinna
+- natiivi-ui/pulu-sieppaus bb27e664 (pulu-chat-yksi d1d1f0ee päällä): PuluChat.Sieppaa (Func<string,bool>) ja Vastaa(teksti,
+  jatkot). Linssiseppä kytkee OpasSovittimesta (linssiseppa/lontoo). Ei uusia UI-elementtejä. Todennus yhteiskäännöksessä hänen
+  haaransa kanssa; merge-pyyntö sen jälkeen.
+
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
 iss-taulu-vaaka.sh (TAP_OHI=1), auto-zoom.sh (TAP_SEUR=1), lippu-kaikki.sh, chat-linna.sh, kartoitus.sh (+ k:-etuliite
