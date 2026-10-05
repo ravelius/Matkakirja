@@ -133,6 +133,7 @@ namespace Matkakirja.Natiivi
                 paneeli.style.borderLeftColor = reuna; paneeli.style.borderRightColor = reuna;
             }
             linssiTunnus = tunnus;
+            Paikka("linssi:" + tunnus);
             linssiAuki = UiNakymat.Olemassa && UiNakymat.Hae().Linssit?.Auki != null;
             avataanLinssiin = true;
             if (!Auki) Avaa(false);
@@ -369,7 +370,33 @@ namespace Matkakirja.Natiivi
 
         public void Vaihda() { if (Auki) Sulje(); else Avaa(); }
 
-        public void Avaa() => Avaa(true);
+        public void Avaa()
+        {
+            var lk = LinssiKysymykset.Nykyinen();
+            Paikka(lk != null ? "linssi:" + lk.Avain : "kartta");
+            Avaa(true);
+        }
+
+        /// <summary>
+        /// KESKUSTELU PAIKOITTAIN (Päätoimittaja 5.10.2026 klo 17.2x: maakuntakortti näytti edellisen ISS-keskustelun vastauksen):
+        /// uudessa paikassa (eri linssi, kohde tai kortti) chat alkaa puhtaana kyseisen paikan avauksella; saman paikan uudelleenavaus
+        /// jatkaa samaa keskustelua. Kesken olevaa vastausta ei katkaista.
+        /// </summary>
+        void Paikka(string uusi)
+        {
+            if (uusi == paikka) return;
+            bool vaihtuu = paikka != null && !kysyy;
+            Debug.Log($"MATKAKIRJA ui chat: paikka {paikka ?? "-"} → {uusi}" + (vaihtuu ? " (uusi keskustelu)" : ""));
+            if (kysyy) return;   // vastaus tulossa: paikka vaihtuu seuraavalla avauksella
+            paikka = uusi;
+            if (!vaihtuu) return;
+            virta.Clear();
+            historia.Clear();
+            keskustelunAihe = null;
+            lukija.Vaihtui();
+            Tervehdi();
+        }
+        string paikka;
 
         /// <summary>
         /// NOSTOKORTTI-pohjan Kysy-nappi (omistaja 1.10.2026, kohdekortti kokeiluun, loki f344f1034): chat aukeaa kortin
@@ -377,6 +404,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public void AvaaKortista(Aihe aihe, IReadOnlyList<string> valmiit)
         {
+            Paikka("kortti:" + ValmiidenAvain(aihe));
             Avaa(false);
             PoistaSirut();
             NaytaKohteenValmiit(valmiit, aihe);
@@ -451,6 +479,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public void AvaaValmiilla(Aihe aihe, IReadOnlyList<(string Q, string A)> kysymykset)
         {
+            Paikka("kortti:" + ValmiidenAvain(aihe));
             if (!Auki) Avaa(false);
             PoistaSirut();
             valmiitAihe = aihe;
@@ -645,6 +674,8 @@ namespace Matkakirja.Natiivi
             kysymys = (kysymys ?? "").Trim();
             if (kysymys.Length == 0 || kysyy) return;
             kysymyksenAihe = aihe ?? keskustelunAihe;
+            // Kortin kysymys suljetusta chatista (nostokortin sirut ja korostetut sanat): kortti on oma paikkansa.
+            if (!Auki && aihe != null) Paikka("kortti:" + ValmiidenAvain(aihe));
             if (kysymys.Length > KysymysKatto) kysymys = kysymys.Substring(0, KysymysKatto);
             if (!Auki) Avaa(false);
             LopetaPuheVuoro();
