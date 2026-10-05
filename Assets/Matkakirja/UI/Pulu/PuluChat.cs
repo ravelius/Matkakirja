@@ -148,6 +148,7 @@ namespace Matkakirja.Natiivi
                 paneeli.style.borderLeftColor = reuna; paneeli.style.borderRightColor = reuna;
             }
             linssiTunnus = tunnus;
+            Paikka("linssi:" + tunnus);
             linssiAuki = UiNakymat.Olemassa && UiNakymat.Hae().Linssit?.Auki != null;
             avataanLinssiin = true;
             if (!Auki) Avaa(false);
@@ -173,20 +174,21 @@ namespace Matkakirja.Natiivi
             paneeli.style.borderTopColor = StyleKeyword.Null; paneeli.style.borderBottomColor = StyleKeyword.Null;
             paneeli.style.borderLeftColor = StyleKeyword.Null; paneeli.style.borderRightColor = StyleKeyword.Null;
             Kuviot.AsetaArkki(paneeli);
-            foreach (var e in virta.Query(className: "mk-chat__kohdevalmiit").ToList()) e.RemoveFromHierarchy();
+            foreach (var e in sirualue.Query(className: "mk-chat__kohdevalmiit").ToList()) e.RemoveFromHierarchy();
         }
 
         void NaytaKohteenValmiit(IReadOnlyList<string> valmiit, Aihe aihe = null)
         {
-            foreach (var e in virta.Query(className: "mk-chat__kohdevalmiit").ToList()) e.RemoveFromHierarchy();
+            foreach (var e in sirualue.Query(className: "mk-chat__kohdevalmiit").ToList()) e.RemoveFromHierarchy();
             if (valmiit == null || valmiit.Count == 0) return;
-            var ryhma = Rakenne.El("mk-chat__sirut mk-chat__kohdevalmiit", virta, PickingMode.Ignore);
-            foreach (var q in valmiit)
+            var ryhma = Rakenne.El("mk-chat__sirut mk-chat__kohdevalmiit", sirualue, PickingMode.Ignore);
+            // Avatessa tasan kaksi kysymystä (omistaja 16.4x); vastauksen jälkeen workerin kaksi jatkoa korvaavat ne.
+            foreach (var q in valmiit.Take(2))
             {
                 string kysymys = q;
                 Kirjasimet.Aseta(Rakenne.Nappi(kysymys, "mk-chat__siru", () => Kysy(kysymys, aihe: aihe), ryhma), Kirjasin.Kone);
             }
-            Vierita(ryhma);
+            Vierita(VirranLoppu());
         }
 
         /// <summary>Pulun äänikeskustelun koenappi (vain kehittäjätilassa; UI/Pulu/PuluRealtimeNappi.cs).</summary>
@@ -230,7 +232,12 @@ namespace Matkakirja.Natiivi
             // kappaleet, kelaus ja nopeus. Ääni-valitsimen paikalla auto-luennan kytkin (entinen alarivin kaiutinvipu).
             lukija = new KortinLukija(ylarivi, "Kuuntele Pulun vastaus", "mk-chat__lukija", saatimet: true,
                 rajaus: () => paneeli.worldBound, persoona: "pollo", aaniRivi: RakennaAutoluku);
-            lukija.Juuri.style.display = DisplayStyle.Flex;
+            // PULU-CHAT-POHJA (omistaja 5.10.2026 klo 16.4x–16.5x): kaiutin on kaikkialla kaksitilainen kytkin: Auto (kaiutin, jokainen
+            // vastaus luetaan) tai ei luentaa (kaiutin ja yksi vino viiva). Tila on yhteinen koko pelissä ja tallentuu (AaniAvain).
+            // Lukija jää taustalle luennan välineeksi; sen luku/tauko-nappia ja ≡-valikkoa ei näytetä chatissa.
+            lukija.Juuri.style.display = DisplayStyle.None;
+            kaiutinNappi = Rakenne.Nappi(null, "mk-chat__ikoninappi mk-chat__kaiutin", VaihdaAani, ylarivi, AaniPaalla ? Ikonit.Viiva["kaiutin"] : Ikonit.Viiva["kaiutin-pois"]);
+            PaivitaKaiutin();
             // Pulu lukee jo vastausta automaattisesti (virkevirta): kaiutin keskeyttää ja jatkaa sitä eikä aloita alusta.
             lukija.Nappi.RegisterCallback<PointerDownEvent>(e =>
             {
@@ -245,6 +252,9 @@ namespace Matkakirja.Natiivi
             virta.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             virta.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             paneeli.Add(virta);
+            // KYSYMYSSIRUT KIINNI (Päätoimittaja 5.10.2026 klo 17.2x: pitkän vastauksen jälkeen jatkot jäivät näkymän alle): sirut omaan
+            // alueeseensa vierityksen ulkopuolelle syöttökentän yläpuolelle, aina näkyviin; vastauksen alku jää luettavaksi.
+            sirualue = Rakenne.El("mk-chat__sirualue", paneeli, PickingMode.Ignore);
 
             // Syöte (web rakennaSyote): sanelun tilarivi, kirjoitusrivi (kenttä + →) ja matala nappirivi
             // (näppäimistö 1, mikrofoni 2; kaiutin siirtyi ylärivin lukijaan 29.9.2026). Sanelutilassa kirjoitusrivi on piilossa.
@@ -388,7 +398,34 @@ namespace Matkakirja.Natiivi
 
         public void Vaihda() { if (Auki) Sulje(); else Avaa(); }
 
-        public void Avaa() => Avaa(true);
+        public void Avaa()
+        {
+            var lk = LinssiKysymykset.Nykyinen();
+            Paikka(lk != null ? "linssi:" + lk.Avain : "kartta");
+            Avaa(true);
+        }
+
+        /// <summary>
+        /// KESKUSTELU PAIKOITTAIN (Päätoimittaja 5.10.2026 klo 17.2x: maakuntakortti näytti edellisen ISS-keskustelun vastauksen):
+        /// uudessa paikassa (eri linssi, kohde tai kortti) chat alkaa puhtaana kyseisen paikan avauksella; saman paikan uudelleenavaus
+        /// jatkaa samaa keskustelua. Kesken olevaa vastausta ei katkaista.
+        /// </summary>
+        void Paikka(string uusi)
+        {
+            if (uusi == paikka) return;
+            bool vaihtuu = paikka != null && !kysyy;
+            Debug.Log($"MATKAKIRJA ui chat: paikka {paikka ?? "-"} → {uusi}" + (vaihtuu ? " (uusi keskustelu)" : ""));
+            if (kysyy) return;   // vastaus tulossa: paikka vaihtuu seuraavalla avauksella
+            paikka = uusi;
+            if (!vaihtuu) return;
+            virta.Clear();
+            sirualue.Clear();
+            historia.Clear();
+            keskustelunAihe = null;
+            lukija.Vaihtui();
+            Tervehdi();
+        }
+        string paikka;
 
         /// <summary>
         /// NOSTOKORTTI-pohjan Kysy-nappi (omistaja 1.10.2026, kohdekortti kokeiluun, loki f344f1034): chat aukeaa kortin
@@ -396,6 +433,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public void AvaaKortista(Aihe aihe, IReadOnlyList<string> valmiit)
         {
+            Paikka("kortti:" + ValmiidenAvain(aihe));
             Avaa(false);
             PoistaSirut();
             NaytaKohteenValmiit(valmiit, aihe);
@@ -425,7 +463,12 @@ namespace Matkakirja.Natiivi
             Alku(historia.Count == 0);
             Asettele(); // lehti auki → pienempi pulu (web pieniPulu)
             // Linssin valmiit kysymykset tervehdyksen tilalla (web naytaValmiit → naytaLinssinValmiit).
-            if (!NaytaLinssinValmiit() && ehdotukset) HaeEhdotukset();
+            // AINA TASAN 2 KYSYMYSTÄ (omistaja 5.10.2026 klo 16.4x; simu 17.1x: uudelleen avattaessa edellisen vastauksen 2 jatkoa
+            // ja 2 uutta ehdotusta pinoutuivat 4:ksi): linssin kysymykset korvaavat vanhat; muuten edellisen vastauksen jatkot jäävät,
+            // ja uusia ehdotuksia haetaan vain, jos siruja ei ole.
+            bool vanhatSirut = sirualue.Q(className: "mk-chat__sirut") != null;
+            if (LinssiKysymykset.Nykyinen() != null) PoistaSirut();
+            if (!NaytaLinssinValmiit() && ehdotukset && !vanhatSirut) HaeEhdotukset();
         }
 
         // --- linssin valmiit kysymykset (web naytaLinssinValmiit, vastaaLinssinValmiilla) ------------
@@ -439,18 +482,18 @@ namespace Matkakirja.Natiivi
         {
             var lk = LinssiKysymykset.Nykyinen();
             if (lk == null) return false;
-            foreach (var e in virta.Query(className: "mk-chat__linssivalmiit").ToList()) e.RemoveFromHierarchy();
+            foreach (var e in sirualue.Query(className: "mk-chat__linssivalmiit").ToList()) e.RemoveFromHierarchy();
             linssiKysytyt.TryGetValue(lk.Avain, out var kysytyt);
-            var jaljella = lk.Kysymykset.Where(k => kysytyt == null || !kysytyt.Contains(k)).ToList();
+            var jaljella = lk.Kysymykset.Where(k => kysytyt == null || !kysytyt.Contains(k)).Take(2).ToList();   // tasan 2 (omistaja 16.4x)
             if (jaljella.Count == 0) return true;
-            var ryhma = Rakenne.El("mk-chat__sirut mk-chat__linssivalmiit", virta, PickingMode.Ignore);
+            var ryhma = Rakenne.El("mk-chat__sirut mk-chat__linssivalmiit", sirualue, PickingMode.Ignore);
             foreach (var t in jaljella)
             {
                 string kysymys = t;
                 var b = Rakenne.Nappi(kysymys, "mk-chat__siru", () => VastaaLinssinValmiilla(lk, kysymys), ryhma);
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
             }
-            Vierita(ryhma);
+            Vierita(VirranLoppu());
             return true;
         }
 
@@ -466,6 +509,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public void AvaaValmiilla(Aihe aihe, IReadOnlyList<(string Q, string A)> kysymykset)
         {
+            Paikka("kortti:" + ValmiidenAvain(aihe));
             if (!Auki) Avaa(false);
             PoistaSirut();
             valmiitAihe = aihe;
@@ -487,22 +531,27 @@ namespace Matkakirja.Natiivi
         /// <summary>Kysymättä jääneet napeiksi; palauttaa niiden määrän (0 = ei lohkoa).</summary>
         int NaytaJaljellaOlevat()
         {
-            foreach (var e in virta.Query(className: "mk-chat__kohdevalmiit").ToList()) e.RemoveFromHierarchy();
+            foreach (var e in sirualue.Query(className: "mk-chat__kohdevalmiit").ToList()) e.RemoveFromHierarchy();
             if (valmiit == null || valmiit.Count == 0) return 0;
             valmiitKysytyt.TryGetValue(ValmiidenAvain(valmiitAihe), out var kysytyt);
-            var jaljella = valmiit.Where(x => kysytyt == null || !kysytyt.Contains(x.Q.Trim())).ToList();
+            var jaljella = valmiit.Where(x => kysytyt == null || !kysytyt.Contains(x.Q.Trim())).Take(2).ToList();   // tasan 2 (omistaja 16.4x)
             if (jaljella.Count == 0) return 0;
             var aihe = valmiitAihe;
-            var ryhma = Rakenne.El("mk-chat__sirut mk-chat__kohdevalmiit", virta, PickingMode.Ignore);
+            var ryhma = Rakenne.El("mk-chat__sirut mk-chat__kohdevalmiit", sirualue, PickingMode.Ignore);
             foreach (var (q, a) in jaljella)
             {
                 string kysymys = q, vastaus = a;
                 Kirjasimet.Aseta(Rakenne.Nappi(kysymys, "mk-chat__siru", () => VastaaValmiilla(kysymys, vastaus, aihe), ryhma), Kirjasin.Kone);
             }
-            Vierita(ryhma);
+            Vierita(VirranLoppu());
             return jaljella.Count;
         }
 
+        /// <summary>
+        /// EI VALMIITA VASTAUKSIA (omistaja 5.10.2026 klo 16.4x: "pululla ei saisi olla koskaan valmiiksi kirjoitettuja vastauksia,
+        /// vain valmiita kysymyksiä"): kortin valmis vastaus on taustatietoa (Pelikoodarin worker, kenttä taustatieto) elävälle
+        /// vastaukselle, joka tulee samaa reittiä kuin kirjoitettu kysymys ja tuo kaksi uutta jatkokysymystä.
+        /// </summary>
         public void VastaaValmiilla(string kysymys, string vastaus, Aihe aihe)
         {
             kysymys = (kysymys ?? "").Trim();
@@ -510,58 +559,27 @@ namespace Matkakirja.Natiivi
             var avain = ValmiidenAvain(aihe);
             if (!valmiitKysytyt.TryGetValue(avain, out var kysytyt)) valmiitKysytyt[avain] = kysytyt = new HashSet<string>();
             kysytyt.Add(kysymys);
-            if (string.IsNullOrWhiteSpace(vastaus)) { Kysy(kysymys, aihe: aihe); keskustelunAihe = aihe; return; }
-            if (!Auki) Avaa(false);
+            if (!string.IsNullOrWhiteSpace(vastaus)) taustat[kysymys] = (vastaus, null, null);
             keskustelunAihe = aihe;
-            lukija.Vaihtui();
-            PoistaSirut();
-            ehdotusPoletti++;
-            Alku(false);
-            Viesti("mk-chat__pelaaja", kysymys);
-            var kupla = Viesti("mk-chat__livia mk-chat__valmisvastaus", Lukijaaani.PoistaPuhetagit(vastaus));
-            kupla.enableRichText = false;
-            LopetaPuheVuoro();
-            AsetaLukijalle(vastaus);
-            if (AaniPaalla) Puhe.Hae()?.Lue(vastaus, "pollo");
-            historia.Add(("kayttaja", kysymys));
-            historia.Add(("pollo", vastaus));
-            // Kysymättä jääneet saman kortin kysymykset vastauksen alle (web naytaLinssinValmiit).
-            int jaljella = valmiit != null && ValmiidenAvain(valmiitAihe) == avain ? NaytaJaljellaOlevat() : 0;
-            Debug.Log("MATKAKIRJA ui chat: valmis vastaus (" + (aihe?.Nimi ?? "-") + "): " + kysymys + ", jäljellä " + jaljella);
-            Vierita(kupla);
+            Kysy(kysymys, aihe: aihe);
         }
 
+        /// <summary>Linssin valmis kysymys: tallennettu vastaus ja lähde taustatiedoksi, vastaus elävänä (omistaja 16.4x).</summary>
         void VastaaLinssinValmiilla(LinssiKysymys lk, string kysymys)
         {
             if (kysyy) return;
             if (!linssiKysytyt.TryGetValue(lk.Avain, out var kysytyt)) linssiKysytyt[lk.Avain] = kysytyt = new HashSet<string>();
             kysytyt.Add(kysymys);
-            // Ilman valmista vastausta sama polku kuin kirjoitettu kysymys (web kysy).
-            if (!lk.Vastaukset.TryGetValue(kysymys.Trim(), out var v)) { Kysy(kysymys); return; }
-            PoistaSirut();
-            ehdotusPoletti++;
-            Alku(false);
-            Viesti("mk-chat__pelaaja", kysymys);
-            var kupla = Viesti("mk-chat__livia mk-chat__valmisvastaus", Lukijaaani.PoistaPuhetagit(v.Vastaus));
-            kupla.enableRichText = false;
-            if (v.Lahteet.Count > 0)
+            if (lk.Vastaukset.TryGetValue(kysymys.Trim(), out var v) && !string.IsNullOrWhiteSpace(v.Vastaus))
             {
-                var rivi = Rakenne.El("mk-chat__valmislahteet", virta, PickingMode.Ignore);
-                Kirjasimet.Aseta(Rakenne.Teksti("Lähde:", "mk-chat__valmislahde", rivi), Kirjasin.Luku);
-                foreach (var (url, otsikko) in v.Lahteet)
-                {
-                    string u = url;
-                    Kirjasimet.Aseta(Rakenne.Nappi(otsikko, "mk-chat__valmislinkki", () => Application.OpenURL(u), rivi), Kirjasin.Luku);
-                }
+                var l = v.Lahteet.Count > 0 ? v.Lahteet[0] : default;
+                taustat[kysymys.Trim()] = (v.Vastaus, l.Url, l.Otsikko);
             }
-            LopetaPuheVuoro();
-            AsetaLukijalle(v.Vastaus);
-            if (AaniPaalla) Puhe.Hae()?.Lue(v.Vastaus, "pollo");
-            historia.Add(("kayttaja", kysymys));
-            historia.Add(("pollo", v.Vastaus));
-            NaytaLinssinValmiit();
-            Vierita(kupla);
+            Kysy(kysymys);
         }
+
+        /// <summary>Valmiin kysymyksen taustatieto workerille (kysymys → valmis vastaus ja lähde); ei näytetä pelaajalle.</summary>
+        readonly Dictionary<string, (string Teksti, string Url, string Otsikko)> taustat = new Dictionary<string, (string, string, string)>();
 
         public void Sulje()
         {
@@ -630,22 +648,28 @@ namespace Matkakirja.Natiivi
 
         void Vierita(VisualElement e) => Rakenne.Vierita(virta, e, 30);
 
+        /// <summary>Kiinnitetyt kysymyssirut (vierityksen ulkopuolella syöttökentän yläpuolella).</summary>
+        VisualElement sirualue;
+
+        /// <summary>Virran viimeinen viesti (sirut ovat omassa alueessaan): avaus vierittää viimeisimpään.</summary>
+        VisualElement VirranLoppu() => virta.contentContainer.childCount > 0 ? virta.contentContainer[virta.contentContainer.childCount - 1] : virta.contentContainer;
+
         void Sirut(IList<string> tekstit, string luokka, bool jatko)
         {
             if (tekstit == null || tekstit.Count == 0) return;
-            var ryhma = Rakenne.El("mk-chat__sirut " + luokka, virta, PickingMode.Ignore);
+            var ryhma = Rakenne.El("mk-chat__sirut " + luokka, sirualue, PickingMode.Ignore);
             for (int i = 0; i < Mathf.Min(2, tekstit.Count); i++)
             {
                 string t = tekstit[i];
                 var b = Rakenne.Nappi(t, "mk-chat__siru", () => { ryhma.RemoveFromHierarchy(); Kysy(t, jatko); }, ryhma);
                 Kirjasimet.Aseta(b, Kirjasin.Kone);
             }
-            Vierita(ryhma);
+            Vierita(VirranLoppu());
         }
 
         void PoistaSirut()
         {
-            foreach (var e in virta.Query(className: "mk-chat__sirut").ToList()) e.RemoveFromHierarchy();
+            foreach (var e in sirualue.Query(className: "mk-chat__sirut").ToList()) e.RemoveFromHierarchy();
         }
 
         // --- kysymys ------------------------------------------------------------------
@@ -765,6 +789,8 @@ namespace Matkakirja.Natiivi
             kysymys = (kysymys ?? "").Trim();
             if (kysymys.Length == 0 || kysyy) return;
             kysymyksenAihe = aihe ?? keskustelunAihe;
+            // Kortin kysymys suljetusta chatista (nostokortin sirut ja korostetut sanat): kortti on oma paikkansa.
+            if (!Auki && aihe != null) Paikka("kortti:" + ValmiidenAvain(aihe));
             if (kysymys.Length > KysymysKatto) kysymys = kysymys.Substring(0, KysymysKatto);
             if (!Auki && !(oppaalle && Sieppaa != null)) Avaa(false);
             if (oppaalle) AsetaOppaanJatkot(null);
@@ -844,8 +870,17 @@ namespace Matkakirja.Natiivi
                 if (i > alku) runko.Append(',');
                 runko.Append("{\"rooli\":").Append(PeliApu.Json(historia[i].Rooli)).Append(",\"teksti\":").Append(PeliApu.Json(historia[i].Teksti)).Append('}');
             }
+            runko.Append(']');
+            // Valmiin kysymyksen taustatieto (Pelikoodarin worker 5.10.2026: "PULUN TAUSTATIETO", ei näytetä sellaisenaan).
+            if (taustat.TryGetValue(kysymys, out var tt))
+            {
+                string teksti = tt.Teksti.Length > 1200 ? tt.Teksti.Substring(0, 1200) : tt.Teksti;
+                runko.Append(",\"taustatieto\":[{\"teksti\":").Append(PeliApu.Json(teksti)).Append(",\"lahde\":")
+                    .Append(string.IsNullOrEmpty(tt.Url) ? "null" : "{\"url\":" + PeliApu.Json(tt.Url) + ",\"title\":" + PeliApu.Json(tt.Otsikko ?? "") + "}")
+                    .Append("}]");
+            }
             // Striimi (web pyydaStriimi, oletus): palat kuplaan heti, worker jatkaa sanarajaan pysähtyneen vastauksen.
-            runko.Append("],\"striimi\":true}");
+            runko.Append(",\"striimi\":true}");
 
             var t = new Tulos();
             var sse = new SseKasittelija(osittain, raaka);
@@ -1895,6 +1930,9 @@ namespace Matkakirja.Natiivi
             PlayerPrefs.SetInt(AaniAvain, AaniPaalla ? 0 : 1);
             PlayerPrefs.Save();
             PaivitaKaiutin();
+            Debug.Log("MATKAKIRJA ui chat: kaiutin " + (AaniPaalla ? "Auto" : "ei luentaa"));
+            // Ei luentaa: käynnissä oleva Pulun luenta loppuu heti.
+            if (!AaniPaalla && OmaLuentaKaynnissa) Puhe.Instanssi?.Pysayta(0.3f);
             if (AaniPaalla)
             {
                 var viimeinen = virta.Query<Label>(className: "mk-chat__livia").Last();
@@ -2003,9 +2041,15 @@ namespace Matkakirja.Natiivi
             AsetaSaneluTila(null);
         }
 
+        Button kaiutinNappi;
+
         void PaivitaKaiutin()
         {
             if (autolukuTila != null) autolukuTila.text = AaniPaalla ? "päällä" : "pois";
+            if (kaiutinNappi == null) return;
+            var ikoni = kaiutinNappi.Q<SvgIkoni>();
+            if (ikoni != null) ikoni.Polku = AaniPaalla ? Ikonit.Viiva["kaiutin"] : Ikonit.Viiva["kaiutin-pois"];
+            kaiutinNappi.tooltip = AaniPaalla ? "Pulu lukee vastaukset (napauta: ei luentaa)" : "Ei luentaa (napauta: Pulu lukee vastaukset)";
         }
 
         /// <summary>Lukijan valikon rivi ääni-valitsimen paikalla: "Lue vastaukset automaattisesti" (kaiutinvipu).</summary>
@@ -2031,8 +2075,8 @@ namespace Matkakirja.Natiivi
         {
             if (string.IsNullOrWhiteSpace(vastaus)) return;
             lukija.Aseta(new[] { Puhuttava(vastaus) }, "Kuuntele Pulun vastaus");
-            // Lyhytkin vastaus saa säätimet: chatissa rivi on aina näkyvissä (kortilla alle 80 merkkiä piilottaa).
-            lukija.Juuri.style.display = DisplayStyle.Flex;
+            // Chatissa lukijan rivi on piilossa (kaksitilainen kaiutin, omistaja 16.4x).
+            lukija.Juuri.style.display = DisplayStyle.None;
             lukija.Nappi.RemoveFromClassList("mk-lukija--keskeytetty");
         }
     }
