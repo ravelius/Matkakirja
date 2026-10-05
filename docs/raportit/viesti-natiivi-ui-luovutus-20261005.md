@@ -107,6 +107,14 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   masterissakaan (ui kutsu: piilossa) → todiste puuttuu. Haara nyt d7f859cf: UiKameranJalkeen omaan tiedostoon + ui kutsu
   kertoo piilon syyn (Syy()). Seuraava vuoro: syy → veto ennen/jälkeen, kutsu-ero.py (skriptit) mittaa kortti–nappula-eron.
 
+## Tila 15.5x
+- kutsu-paikallaan d7f859cf: todiste kutsu/kutsu-ennen-jalkeen.jpg + videot; vaakaero jälkeen ≤ 0,81 pt (180/197 ≤ 0,5),
+  ennen ≤ 16,7 pt (skriptit/kutsu-ero.py). Lähetetty Päätoimittajalle kuitattavaksi.
+- paivitys-versio 129a2513: merkinnät "1.1 (143)" ym. (versio/i-mitauutta-build.png) → kuitattavaksi.
+- kortti-tiivis a7757d06 (linna-143 e7ad0d38 päällä, mukana siirtoseppa/puhujakuva-koe 1ae53205:ssä): Siirtoseppä todensi
+  105c9ed8:lla; havainto: puhujakuva osuu tiivistetyn otsikkorivin päälle → korjattava (puhujakuva ei otsikkorivin alueelle).
+- Puhujakuva ei junaan 144 (Codexin kuvat + omistajan kappelikoe).
+
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
 iss-taulu-vaaka.sh (TAP_OHI=1), auto-zoom.sh (TAP_SEUR=1), lippu-kaikki.sh, chat-linna.sh, kartoitus.sh (+ k:-etuliite
