@@ -353,7 +353,8 @@ export function jasennaOpas(teksti, varaNimi = null) {
  *   2) muuten Wikidatan P18 Commonsista, vain vapailla lisensseillä (PD, CC0, CC BY, CC BY-SA; ei NC eikä ND),
  *      tekijä ja lisenssi extmetadatasta, kokorajattu (800 px) osoite. Havainnekuvia ei luoda lennossa.
  */
-export const OPAS_KUVIA = 3;
+export const OPAS_KUVIA = 3;          // pelin omat kuvat (nostot)
+export const OPAS_KUVIA_ENINTAAN = 8;  // pelin omat + Commons yhteensä (Natiivi-UI 5.10.: kortissa 1 + "+N", kokoruutuselaus)
 const YLEISET = new Set(['linna', 'kirkko', 'kirkon', 'tori', 'puisto', 'museo', 'satama', 'kanava', 'silta', 'torni', 'palatsi',
   'castle', 'church', 'palace', 'park', 'square', 'museum', 'tower', 'bridge', 'harbour', 'harbor', 'hotel', 'kaupungin',
   'the', 'and', 'garden', 'gardens', 'street', 'katu', 'house', 'talo', 'pieni', 'iso', 'suuri', 'vanha', 'uusi', 'saint', 'pyha',
@@ -589,4 +590,95 @@ export function siltaRyhma(teksti) {
   const osuma = RYHMA_SANOISTA.find(([, re]) => re.test(t));
   if (osuma) return osuma[0];
   return t.endsWith('?') ? 'syventava' : 'kuittaus';
+}
+
+/*
+ * LISÄKUVAT (omistaja 5.10.2026 klo 23.5x: "enemmän kuvia samasta kohteesta"; muoto Natiivi-UI:n kanssa): pelin omien
+ * kuvien perään Wikidatan P18 ja kohteen Commons-luokan (P373) kuvat, kunnes OPAS_KUVIA_ENINTAAN. Vain vapaat lisenssit,
+ * jpg/png, vähintään 1000 px leveä, ei karttoja/logoja/vaakunoita, vaakakuvat ensin; url ~1280 px. Ei lennossa luotuja.
+ */
+const EI_KUVAKSI = /\b(map|kartta|plan|logo|coat[ _]of[ _]arms|vaakuna|flag|lippu|diagram|seal|signature|location)\b/i;
+
+/** tiukka (luokan kuvat): jpg/png ≥ 1000 px ja nimisuodatin; P18 (Wikidatan pääkuva): vain vapaa lisenssi, ei svg. */
+/** Commonsin tekijäkenttä luettavaksi: "No machine-readable author provided. X assumed …" → X; "( Website )" pois. */
+export function siistiTekija(t) {
+  let s = ilmanHtml(t);
+  const m = /No machine-readable author provided\.\s*(.+?)\s+assumed\b/i.exec(s);
+  if (m) s = m[1].replace(/~\w+wiki$/i, '');
+  return s.replace(/\(\s*(website|homepage|kotisivu)\s*\)/gi, '').replace(/\s+/g, ' ').trim().slice(0, 120) || null;
+}
+
+function commonsKuvaksi(sivu, tiukka = true) {
+  const tieto = sivu?.imageinfo?.[0];
+  const meta = tieto?.extmetadata ?? {};
+  const lisenssi = ilmanHtml(meta.LicenseShortName?.value);
+  const nimi = String(sivu?.title ?? '').replace(/^File:/, '');
+  if (!tieto?.thumburl || !VAPAA_LISENSSI.test(lisenssi) || /\b(nc|nd)\b/i.test(lisenssi) || /svg/i.test(tieto.mime ?? '')) return null;
+  if (tiukka && (!/^image\/(jpeg|png)$/.test(tieto.mime ?? '') || (tieto.width ?? 0) < 1000 || EI_KUVAKSI.test(nimi.replace(/[_.-]/g, ' ')))) return null;
+  return {
+    url: tieto.thumburl, tyyppi: 'valokuva', tekija: siistiTekija(meta.Artist?.value),
+    lisenssi: /^public domain$/i.test(lisenssi) ? 'PD' : lisenssi, lahde: tieto.descriptionurl ?? null, selite: null,
+    _nimi: nimi, _vaaka: (tieto.width ?? 0) >= (tieto.height ?? 0),
+  };
+}
+
+const KUVAKENTAT = '&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize%7Cmime&iiurlwidth=1280';
+const tiedostonimi = (lahde) => decodeURIComponent(String(lahde ?? '').split('/').pop() ?? '').replace(/^File:/, '').replace(/_/g, ' ').toLowerCase();
+
+/** P18 + Commons-luokka (P373) → enintään `maara` kuvaa, `olemassa` (pelin omat) suodatetaan pois tiedostonimellä. */
+export async function lisaKuvat(haku, id, maara, olemassa = []) {
+  if (maara <= 0 || !/^Q\d+$/.test(id ?? '')) return [];
+  try {
+    const [p18, p373] = await Promise.all(['P18', 'P373'].map((ominaisuus) => haeJson(haku,
+      `https://www.wikidata.org/w/api.php?action=wbgetclaims&format=json&property=${ominaisuus}&entity=${id}`)
+      .then((d) => d?.claims?.[ominaisuus]?.[0]?.mainsnak?.datavalue?.value ?? null).catch(() => null)));
+    const [paa, luokka] = await Promise.all([
+      p18 ? haeJson(haku, `https://commons.wikimedia.org/w/api.php?action=query&format=json${KUVAKENTAT}&titles=${encodeURIComponent(`File:${p18}`)}`)
+        .then((c) => Object.values(c?.query?.pages ?? {})).catch(() => []) : [],
+      p373 ? haeJson(haku, 'https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=categorymembers'
+        + `&gcmtype=file&gcmlimit=40&gcmtitle=${encodeURIComponent(`Category:${p373}`)}${KUVAKENTAT}`)
+        .then((c) => Object.values(c?.query?.pages ?? {}).sort((a, b) => (a.index ?? 0) - (b.index ?? 0))).catch(() => []) : [],
+    ]);
+    const nahty = new Set(olemassa.map((k) => tiedostonimi(k.lahde)));
+    const ehdokkaat = [...paa.map((x) => commonsKuvaksi(x, false)), ...luokka.map((x) => commonsKuvaksi(x)).filter(Boolean).sort((a, b) => Number(b._vaaka) - Number(a._vaaka))];
+    const tulos = [];
+    for (const k of ehdokkaat) {
+      if (!k || nahty.has(k._nimi.toLowerCase())) continue;
+      nahty.add(k._nimi.toLowerCase());
+      const { _nimi, _vaaka, ...kuva } = k;
+      tulos.push(kuva);
+      if (tulos.length >= maara) break;
+    }
+    return tulos;
+  } catch {
+    return [];
+  }
+}
+
+/*
+ * LISÄKUVIEN VÄLIMUISTI (Päätoimittaja 6.10.: lisäkuvat eivät saa pidentää "teksti heti" -vastausta): Q-tunnuksen koko lista
+ * (OPAS_KUVIA_ENINTAAN) KV:hen 7 vrk:ksi; pelin omat suodatetaan pois vasta yhdistettäessä. Tyhjäkin tulos talteen (1 vrk).
+ */
+export async function lisaKuvatValimuistilla(haku, kv, id) {
+  if (!/^Q\d+$/.test(id ?? '')) return [];
+  const avain = `opas:kuvat:v1:${id}`;
+  const talletettu = kv ? await kv.get(avain).catch(() => null) : null;
+  if (talletettu) { try { return JSON.parse(talletettu); } catch { /* uusi haku */ } }
+  const kuvat = await lisaKuvat(haku, id, OPAS_KUVIA_ENINTAAN);
+  if (kv) await kv.put(avain, JSON.stringify(kuvat), { expirationTtl: kuvat.length ? 7 * 86400 : 86400 }).catch(() => {});
+  return kuvat;
+}
+
+/** Pelin omat ensin, sitten lisät ilman kaksoiskappaleita (tiedostonimi), yhteensä enintään OPAS_KUVIA_ENINTAAN. */
+export function yhdistaKuvat(omat, lisat) {
+  const nahty = new Set(omat.map((k) => tiedostonimi(k.lahde)).filter(Boolean));
+  const tulos = [...omat];
+  for (const k of lisat ?? []) {
+    const n = tiedostonimi(k.lahde);
+    if (tulos.length >= OPAS_KUVIA_ENINTAAN) break;
+    if (n && nahty.has(n)) continue;
+    if (n) nahty.add(n);
+    tulos.push(k);
+  }
+  return tulos;
 }
