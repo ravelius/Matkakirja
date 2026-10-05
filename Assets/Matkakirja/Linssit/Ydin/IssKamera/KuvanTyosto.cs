@@ -139,6 +139,31 @@ namespace Matkakirja.Linssit.IssKamera
         /// Näkymän lehdet, joissa jonkin ruudun SCL näyttää pilveä tai pilven varjoa (8 × 8 näytettä per lehti): niille haetaan
         /// varakuva (valinta 1), jonka pikselit täyttävät maskatut kohdat.
         /// </summary>
+        /// <summary>
+        /// Näkyvät lehdet, joissa ensisijaisen ruudun neliön sisällä on dataton kohta (kahden radan välinen kiila; simu 284afecc:
+        /// Sahara ja Amazonia, BMNG näkyi kiilana): varakuva (toinen päivä tai rata) haetaan näille kuten pilvisille.
+        /// </summary>
+        public HashSet<(int z, int x, int y)> DatattomatLehdet()
+        {
+            var r = new HashSet<(int, int, int)>();
+            foreach (var (z, x, y) in Lehdet())
+            {
+                if (nakyvat != null && !nakyvat.Contains((z, x, y))) continue;
+                double m = Uudelleenprojisointi.PikseliM(z, Uudelleenprojisointi.Pikseli(z, x, y, 128, 128).lat);
+                bool aukko = false;
+                for (int i = 0; i < 8 && !aukko; i++) for (int j = 0; j < 8 && !aukko; j++)
+                {
+                    var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, i * 32 + 16, j * 32 + 16);
+                    bool neliossa = false;
+                    foreach (var (ru, _) in Data.Ruudut)
+                        if (ru.Valinta == 0 && lo >= ru.W && lo <= ru.E && la >= ru.S && la <= ru.N) { neliossa = true; break; }
+                    if (neliossa && !Uudelleenprojisointi.Nayte(Data, la, lo, m, out _, out _, out _)) aukko = true;
+                }
+                if (aukko) r.Add((z, x, y));
+            }
+            return r;
+        }
+
         public HashSet<(int z, int x, int y)> PilvisetLehdet()
         {
             var r = new HashSet<(int, int, int)>();
@@ -224,12 +249,86 @@ namespace Matkakirja.Linssit.IssKamera
                             for (int y = 0; y < 128; y++) Buffer.BlockCopy(lapset[k], y * 512, rgba, ((oy + y) * 256 + ox) * 4, 512);
                         }
                     }
-                    for (int i = 0; i < rgba.Length; i += 4) if (rgba[i + 3] == 0) { rgba[i] = meri[0]; rgba[i + 1] = meri[1]; rgba[i + 2] = meri[2]; rgba[i + 3] = 254; }
+                    TaytaMeri(l.z, l.x, l.y, rgba, meri);
                     seuraavat[l] = Puolita(rgba);
                     kirjoita(l, rgba);
                     edistyminen?.Invoke(System.Threading.Interlocked.Increment(ref tehty));
                 });
                 nelj = seuraavat;
+            }
+        }
+
+        /// <summary>
+        /// Maa vai meri (lat, lon) S2-datattomalle pikselille; null = kaikki datattomat merta (entinen). Maailmakamera (simu
+        /// d753d794): rataleveyden reunan datattomat kiilat maalla täyttyivät merenvärillä (sininen kiila Saharassa ja Amazoniassa);
+        /// maalla pikseli jää läpinäkyväksi, jolloin alla oleva BMNG näkyy. Kutsutaan rinnakkain (lukufunktio).
+        /// </summary>
+        public Func<double, double, bool> Maalla;
+        const int MaaRuudukko = 16;
+
+        /// <summary>Datattomat (alfa 0) pikselit: meri → merenväri (alfa 254), maa (Maalla) → läpinäkyvä.</summary>
+        internal void TaytaMeri(int z, int x, int y, byte[] rgba, byte[] meri)
+        {
+            bool[] maa = null;
+            List<int> aukko = null, meriPikselit = null;
+            for (int i = 0; i < rgba.Length; i += 4)
+            {
+                if (rgba[i + 3] != 0) continue;
+                if (Maalla != null)
+                {
+                    if (maa == null)
+                    {
+                        maa = new bool[MaaRuudukko * MaaRuudukko];
+                        for (int cy = 0; cy < MaaRuudukko; cy++)
+                            for (int cx = 0; cx < MaaRuudukko; cx++)
+                            {
+                                var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, (cx + 0.5) * 256.0 / MaaRuudukko, (cy + 0.5) * 256.0 / MaaRuudukko);
+                                maa[cy * MaaRuudukko + cx] = Maalla(la, lo);
+                            }
+                    }
+                    int px = (i / 4) % 256, py = (i / 4) / 256;
+                    if (maa[(py * MaaRuudukko / 256) * MaaRuudukko + px * MaaRuudukko / 256]) { (aukko ??= new List<int>()).Add(i / 4); continue; }
+                }
+                (meriPikselit ??= new List<int>()).Add(i / 4);
+            }
+            // Ensin maan aukot todellisesta datasta (ei merenvärin täytöstä), sitten meri.
+            if (aukko != null) Taydenna(rgba, aukko);
+            if (meriPikselit != null)
+                foreach (int k in meriPikselit) { int i = k * 4; rgba[i] = meri[0]; rgba[i + 1] = meri[1]; rgba[i + 2] = meri[2]; rgba[i + 3] = 254; }
+        }
+
+        /// <summary>
+        /// Maan datattomat pikselit (radan välinen kiila) täytetään laatan omasta datasta reunoilta sisäänpäin (diffuusio: naapurien
+        /// keskiarvo kierros kerrallaan, enintään TaydennysKierroksia). Simu e9f59947 -laattavedos: Amazonian kiila oli läpinäkyvä,
+        /// eikä yksikään varakuva (sama rata) peittänyt sitä; alta näkyvä BMNG oli tumma kiila. Laatta, jossa ei ole dataa, jää
+        /// läpinäkyväksi.
+        /// </summary>
+        public const int TaydennysKierroksia = 256;
+
+        static void Taydenna(byte[] rgba, List<int> aukko)
+        {
+            var jono = aukko;
+            var paivitys = new List<(int i, byte r, byte g, byte b)>();
+            for (int k = 0; k < TaydennysKierroksia && jono.Count > 0; k++)
+            {
+                var seuraava = new List<int>(); paivitys.Clear();
+                foreach (int i in jono)
+                {
+                    int px = i % 256, py = i / 256, n = 0, sr = 0, sg = 0, sb = 0;
+                    for (int dy = -1; dy <= 1; dy++)
+                        for (int dx = -1; dx <= 1; dx++)
+                        {
+                            int qx = px + dx, qy = py + dy;
+                            if ((dx == 0 && dy == 0) || qx < 0 || qy < 0 || qx > 255 || qy > 255) continue;
+                            int o = (qy * 256 + qx) * 4;
+                            if (rgba[o + 3] == 0) continue;
+                            sr += rgba[o]; sg += rgba[o + 1]; sb += rgba[o + 2]; n++;
+                        }
+                    if (n > 0) paivitys.Add((i, (byte)(sr / n), (byte)(sg / n), (byte)(sb / n))); else seuraava.Add(i);
+                }
+                if (paivitys.Count == 0) break;
+                foreach (var (i, r, g, b) in paivitys) { int o = i * 4; rgba[o] = r; rgba[o + 1] = g; rgba[o + 2] = b; rgba[o + 3] = 255; }
+                jono = seuraava;
             }
         }
 
