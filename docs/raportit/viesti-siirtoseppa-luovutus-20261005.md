@@ -1,6 +1,20 @@
-# Siirtosepän luovutus 5.10.2026 — TILA KLO 23.1x (Opus 5.5, high)
+# Siirtosepän luovutus 5.–6.10.2026 — TILA KLO 00.4x (Opus 5.5, high)
 
-## Nyt (23.1x)
+## Nyt (6.10. 00.4x)
+
+- **Juna 146 (Linssiseppä kokoaa, juna146-silta b7e3e83e):** siirtoseppa/opas-kuvaus bfd0b8af = kaksivaiheinen orbit 388b8707
+  (0,9°/s 13 s → 4 s siirtolento: katu/alue +150°, rakennus 30 % lähemmäs, väh. 150 m), lento korkealla ja jyrkkänä 649b30c2
+  (TF 144 "mätkähtää"; simussa todennettu 1adcc9ef), OpasOhjaus perussuhteiset rajat bfd0b8af. Linnasta siirtoseppa/kortti-napautus
+  85c0a6bb (nimi 3 s, kortti ja nimilaput vain napautuksesta) Natiivisepällä.
+- **Pallon tumma vyö oppaan jälkeen:** juurisyy KorkeusKerroin-globaalit (maan keskipiste/akselit) jäivät kaupunkiorigoon;
+  Linssiseppä korjasi 229c60e8 (Aseta jokaisen SiirraOrigon jälkeen).
+- **Osoitin db8630b07d17411d** todennettu (BUILD 143 + koe 3); Julkaisija vaihtaa Päätoimittajan kuittauksella (#4030).
+- **Final IK** siirtoseppa/final-ik 544cd079 (c2d40258:n päällä) — ei junaehdokas ennen simutodistetta (kädet) ja iPad-mittausta (147).
+- **Omistajan linjat 5.10. (#4030):** simulaattori vain tarvittaessa (yksi yhteinen video per juna), vika toistetaan ennen
+  korjausta, natiivi on malli, pienet korjaukset roolin oman tarkistuksen varassa, nimikyltit 3 s ja kortit vain napautuksesta.
+
+## Aiempi tila 23.1x
+
 
 - **Juna 144 lähti** (e95826b4: kaupunkikuva 79a3582c, oppaan kamera OpasKuvaus 7d2a70ec + Linssisepän forbidHoles).
 - **Juna 145 (kokoaa Natiiviseppä/Linssiseppä):** kappeli = siirtoseppa/linna-146 767fb0e3 (ele-kytkentä + polvillaan puhuminen)
