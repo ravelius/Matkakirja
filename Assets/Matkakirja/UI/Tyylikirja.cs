@@ -1,12 +1,12 @@
 // TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi).
-// ÄLÄ MUOKKAA KÄSIN. lähde c192d6ef095f. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
+// ÄLÄ MUOKKAA KÄSIN. lähde e9c5e1040fd9. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class Tyylikirja
     {
-        public const string Lahde = "c192d6ef095f";
+        public const string Lahde = "e9c5e1040fd9";
 
         public static class Kehys
         {

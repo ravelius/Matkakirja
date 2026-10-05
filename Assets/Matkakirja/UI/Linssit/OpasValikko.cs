@@ -1,16 +1,22 @@
 // ELÄVÄN OPPAAN VALIKKO (Natiivi-UI 5.10.2026; omistaja 18.0x Päätoimittajan kautta): LinnaValikon pohja (OHJAUSNAPPI ☰ oikeaan
 // yläkulmaan, LINSSIN VALIKKO -lista .mk-linssivalikko--pohja alanäkymineen), ei uusia tyylejä.
 //
-//   Pää      Vaihda kohde › · ─ · Poistu linssistä
+//   Pää      Vaihda kohde › · Näytä teksti · ─ · Poistu linssistä
 //   Maanosat ‹ Vaihda kohde · Eurooppa › · Aasia › …
 //   Maat     ‹ <maanosa> · maat aakkosjärjestyksessä (vierittyy)
 //   Kaupungit ‹ <maa> · maan suurimmat kaupungit väkiluvun mukaan (enintään Kaupunkeja)
 //
 // Kaupungit: Natural Earthin asutuspaikat (sama aineisto kuin ISS-LCD:ssä) Kaupungit-koukusta (Linssiseppä/LS2 kytkee); valinta
 // kutsuu KohdeValittu(nimi, lat, lon), jonka elävä opas (OpasSovitin) kytkee. Poistu sulkee linssin (LinssiUi.SuljeLinssi).
+//
+// OPAS KEVYEKSI (omistaja 5.10.2026 Päätoimittajan kautta: "raskaan oloinen"): kaupunki koko ruudulla, chat ei auki eikä ✕:ää
+// (LinssiUi.PaivitaSulku), Pulun hahmo piilossa (UiNakymat.OpasPeittaaPulun). Kertojan lopetettua kappaleen tai kysyessä
+// alareunan keskellä kaksi vaihtoehtoa PULU-pohjan siruina (irrallinen sirurivi, omistaja hyväksyi 19.0x) ja pieni
+// puhu/kirjoita-siru, joka avaa nykyisen Pulu-chatin syöttöineen ja käynnistää sanelun; Näytä teksti avaa koko keskustelun samaan chattiin.
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Matkakirja.Linssit.Kierros;
 using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -82,8 +88,29 @@ namespace Matkakirja.Natiivi
 
         enum Nakyma { Paa, Maanosat, Maat, Kaupungit }
 
+        /// <summary>Oppaan linssi auki (✕ pois, LinssiUi.PaivitaSulku).</summary>
+        public static bool Nakyy => Viimeisin != null && Viimeisin.nakyy;
+
         public readonly VisualElement Juuri;
-        readonly VisualElement ryhma, valikko;
+        readonly VisualElement ryhma, valikko, sirurivi;
+        readonly Button puhuSiru, kuvaNappi;
+        // OPPAAN KUVAT (omistaja 5.10.2026 klo 19.3x): pieni kuvakortti NOSTOKORTTI-pohjan kuvakehyksellä pysähdyksen ajan,
+        // napautus → nostojen kuvasuurennos tekijä- ja lisenssirivein; havainnekuva aina merkitty HAVAINNEKUVA. Kytkin oikeassa
+        // yläkulmassa OHJAUSNAPPI-pohjalla (julistekuvake, pois-tilassa vino viiva), oletus päällä, valinta muistetaan.
+        const string KuvatAvain = "matkakirja-opas-kuvat";
+        const string KuvaPoisIkoni = Ikonit.PilleriJulisteet + "<path d=\"M3.2 3.6 20.8 20.4\"/>";
+        const float KuvaLeveys = 132f, KuvaRako = 8f;
+        readonly VisualElement kuvaKortti, kuvaKehys, kuvaEl, kuvaMerkki;
+        Kuvasuurennos suurennos;
+        OpasKuva naytettyKuva;
+        bool kuvaNakyy;
+        int kuvaVersio;
+        static bool KuvatPaalla { get => PlayerPrefs.GetInt(KuvatAvain, 1) == 1; set { PlayerPrefs.SetInt(KuvatAvain, value ? 1 : 0); PlayerPrefs.Save(); } }
+        /// <summary>Testikomento: kuva nykyiselle pysähdykselle ilman workerin kuvia.</summary>
+        OpasKuva testiKuva;
+        bool nakyy, siruNakyy;
+        OpasKohde odotettuKysymys;
+        int siruPoletti = -1;
         readonly Button nappi;
         Nakyma nakyma;
         string maanosa, maa;
@@ -97,6 +124,8 @@ namespace Matkakirja.Natiivi
             Juuri.style.left = 0; Juuri.style.right = 0; Juuri.style.top = 0; Juuri.style.bottom = 0;
             Juuri.style.display = DisplayStyle.None;
             ryhma = Ohjausnappi.Ryhma(Juuri);
+            kuvaNappi = Ohjausnappi.Nappi(KuvatPaalla ? Ikonit.PilleriJulisteet : KuvaPoisIkoni, KuvatPaalla ? "Kuvat päällä" : "Kuvat pois",
+                VaihdaKuvat, ryhma);
             nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
 
             valikko = Rakenne.El("mk-linssivalikko mk-linssivalikko--pohja", kerros.Juuri(kerrosNro));
@@ -104,14 +133,211 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(valikko, Kirjasin.Luku);
             valikko.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             kerros.JokaRuutu += TarkistaOhiNapautus;
+
+            // Irrallinen sirurivi alareunan keskelle (Googlen ja Cesiumin merkinnät jäävät sen alle).
+            sirurivi = Rakenne.El("mk-chat--lasi mk-chat__sirut mk-chat__sirut--irrallaan", Juuri, PickingMode.Ignore);
+            sirurivi.style.display = DisplayStyle.None;
+            sirurivi.style.opacity = 0f;
+            puhuSiru = Rakenne.Nappi(null, "mk-chat__siru mk-chat__siru--ikoni", () => { NaytaTeksti(); UiNakymat.Hae()?.Chat?.AloitaSanelu(); }, null, PuluChat.MikkiIkoni);
+            puhuSiru.tooltip = "Puhu tai kirjoita";
+            kerros.JokaRuutu += PaivitaSirut;
+
+            kuvaKortti = Rakenne.El("mk-nosto", Juuri, PickingMode.Position);
+            kuvaKortti.style.position = Position.Absolute;
+            kuvaKortti.style.right = 0;
+            kuvaKortti.style.width = KuvaLeveys;
+            kuvaKortti.style.maxWidth = KuvaLeveys;
+            kuvaKortti.style.paddingTop = 6; kuvaKortti.style.paddingBottom = 6; kuvaKortti.style.paddingLeft = 6; kuvaKortti.style.paddingRight = 6;
+            kuvaKortti.style.display = DisplayStyle.None;
+            kuvaKortti.style.opacity = 0f;
+            kuvaKortti.style.transitionProperty = new List<StylePropertyName> { new StylePropertyName("opacity") };
+            kuvaKortti.style.transitionDuration = new List<TimeValue> { new TimeValue(Tyylikirja.Kesto.Sulku / 1000f) };
+            kuvaKehys = Rakenne.El("mk-nosto__kuvakehys mk-nosto__kuvakehys--nyky", kuvaKortti, PickingMode.Ignore);
+            kuvaKehys.style.height = Mathf.Round((KuvaLeveys - 12f) * 2f / 3f);
+            kuvaEl = Rakenne.El("mk-nosto__kuva", kuvaKehys, PickingMode.Ignore);
+            kuvaMerkki = Rakenne.El("mk-nosto__kuvateksti mk-nosto__kuvateksti--kotelo", kuvaKortti, PickingMode.Ignore);
+            var hm = Rakenne.Teksti("Havainnekuva".ToUpperInvariant(), "mk-nosto__havainne", kuvaMerkki);
+            hm.tooltip = "Havainnekuva";
+            Kirjasimet.Aseta(hm, Kirjasin.Kone);
+            kuvaKortti.RegisterCallback<ClickEvent>(_ => SuurennaKuva());
+            kuvaKortti.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
+            kerros.JokaRuutu += PaivitaKuva;
             Viimeisin = this;
         }
 
         /// <summary>Oppaan linssi auki / kiinni.</summary>
         public void Nayta(bool nakyy)
         {
+            if (nakyy == this.nakyy && Juuri.style.display == (nakyy ? DisplayStyle.Flex : DisplayStyle.None)) return;
+            this.nakyy = nakyy;
             Juuri.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (!nakyy) Sulje();
+            var ui = UiNakymat.Olemassa ? UiNakymat.Hae() : null;
+            ui?.Chat?.OpasTila(nakyy);
+            ui?.OpasPeittaaPulun(nakyy);
+            ui?.Linssit?.PaivitaSulku();
+            siruPoletti = -1;
+            siruNakyy = false;
+            naytettyKuva = null; testiKuva = null; kuvaNakyy = false;
+            kuvaKortti.style.display = DisplayStyle.None;
+            kuvaKortti.style.opacity = 0f;
+            if (!nakyy && suurennos != null && suurennos.Auki) suurennos.Sulje();
+            sirurivi.style.display = DisplayStyle.None;
+            sirurivi.style.opacity = 0f;
+        }
+
+        /// <summary>Koko keskustelu ja syöttö nykyiseen Pulu-chatiin (valikon Näytä teksti ja puhu/kirjoita-siru).</summary>
+        void NaytaTeksti()
+        {
+            Sulje();
+            var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+            if (chat == null) return;
+            chat.AvaaOppaalle(() => sirurivi.worldBound.width > 0 ? sirurivi.worldBound : nappi.worldBound);
+            Debug.Log("MATKAKIRJA opas: teksti auki");
+        }
+
+        /// <summary>
+        /// Sirurivi joka ruudulla: kaksi vaihtoehtoa, kun kertoja on lopettanut (OpasSovitin.KertojaPuhuu) ja jatkoja on, sekä
+        /// puhu/kirjoita-siru; ei chatin eikä valikon ollessa auki. Häivytys --tk-kesto-sulku (200 ms).
+        /// </summary>
+        void PaivitaSirut()
+        {
+            if (!nakyy) return;
+            var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+            if (chat == null) return;
+            // Kysymyksen vaihtoehdot vanhenevat, kun silmukka lakkaa odottamasta (pelaaja ei valinnut, opas jatkoi itse).
+            var kys = OpasSovitin.Viimeisin?.Kysymys;
+            if (kys != null) odotettuKysymys = kys;
+            else if (odotettuKysymys != null)
+            {
+                var vanhat = odotettuKysymys.Vaihtoehdot ?? Array.Empty<string>();
+                odotettuKysymys = null;
+                if (chat.OppaanJatkot.Count > 0 && vanhat.Contains(chat.OppaanJatkot[0])) chat.TyhjennaOppaanJatkot();
+            }
+            var jatkot = chat.OppaanJatkot;
+            bool nayta = !chat.Auki && !Auki && !OpasSovitin.KertojaPuhuu;
+            int poletti = nayta ? jatkot.Count == 0 ? 0 : string.Join("\n", jatkot).GetHashCode() | 1 : -1;
+            if (poletti == siruPoletti) return;
+            siruPoletti = poletti;
+            if (nayta)
+            {
+                sirurivi.Clear();
+                foreach (var j in jatkot)
+                {
+                    string t = j;
+                    var b = Rakenne.Nappi(t, "mk-chat__siru", () => Valitse(t), sirurivi);
+                    Kirjasimet.Aseta(b, Kirjasin.Kone);
+                }
+                sirurivi.Add(puhuSiru);
+            }
+            if (nayta == siruNakyy) return;
+            siruNakyy = nayta;
+            if (nayta)
+            {
+                sirurivi.style.display = DisplayStyle.Flex;
+                sirurivi.schedule.Execute(() => { if (siruNakyy) sirurivi.style.opacity = 1f; });
+            }
+            else
+            {
+                sirurivi.style.opacity = 0f;
+                sirurivi.schedule.Execute(() => { if (!siruNakyy) sirurivi.style.display = DisplayStyle.None; }).StartingIn(Tyylikirja.Kesto.Sulku);
+            }
+        }
+
+        // --- oppaan kuvat --------------------------------------------------------------------------------
+
+        void VaihdaKuvat()
+        {
+            KuvatPaalla = !KuvatPaalla;
+            kuvaNappi.Clear();
+            kuvaNappi.Add(new SvgIkoni(KuvatPaalla ? Ikonit.PilleriJulisteet : KuvaPoisIkoni));
+            kuvaNappi.tooltip = KuvatPaalla ? "Kuvat päällä" : "Kuvat pois";
+            Debug.Log("MATKAKIRJA opas: kuvat " + (KuvatPaalla ? "päällä" : "pois"));
+        }
+
+        /// <summary>Pysähdyksen ensimmäinen kuva (tai testikuva), kun pysähdys on käynnissä ja kytkin päällä.</summary>
+        OpasKuva NykyinenKuva()
+        {
+            if (!KuvatPaalla) return null;
+            var l = OpasSovitin.Viimeisin?.Silmukka;
+            if (l == null || l.Nykyinen == null || !(l.Vaihe == OpasVaihe.Puhuu || l.Vaihe == OpasVaihe.Odottaa)) return null;
+            if (testiKuva != null) return testiKuva;
+            return l.Nykyinen.Kuvat != null && l.Nykyinen.Kuvat.Length > 0 ? l.Nykyinen.Kuvat[0] : null;
+        }
+
+        /// <summary>
+        /// Joka ruudulla: kortti oikeaan reunaan sirurivin yläpuolelle (ei peitä vastaussiruja), häivytys 200 ms. Kuva ladataan
+        /// nostojen kuvahaulla (NostoSisalto.HaeKuva); epäonnistunut lataus jättää kortin pois.
+        /// </summary>
+        void PaivitaKuva()
+        {
+            if (!nakyy) return;
+            var k = NykyinenKuva();
+            if (k != naytettyKuva)
+            {
+                naytettyKuva = k;
+                AsetaKuvaNakyviin(false);
+                if (k != null)
+                {
+                    int v = ++kuvaVersio;
+                    kuvaMerkki.style.display = k.Havainnekuva ? DisplayStyle.Flex : DisplayStyle.None;
+                    NostoSisalto.HaeKuva(k.Url, t =>
+                    {
+                        if (v != kuvaVersio || naytettyKuva != k) return;
+                        if (t == null) { Debug.Log("MATKAKIRJA opas: kuva ei latautunut: " + k.Url); return; }
+                        kuvaEl.style.backgroundImage = new StyleBackground(t);
+                        AsetaKuvaNakyviin(true);
+                    });
+                }
+            }
+            if (!kuvaNakyy) return;
+            float h = Juuri.resolvedStyle.height;
+            float ala = 40f;
+            if (siruNakyy && !float.IsNaN(h) && sirurivi.layout.height > 0) ala = Mathf.Max(ala, h - sirurivi.layout.yMin + KuvaRako);
+            if (kuvaKortti.style.bottom.value.value != ala) kuvaKortti.style.bottom = ala;
+        }
+
+        void AsetaKuvaNakyviin(bool nayta)
+        {
+            if (nayta == kuvaNakyy) return;
+            kuvaNakyy = nayta;
+            if (nayta)
+            {
+                kuvaKortti.style.display = DisplayStyle.Flex;
+                kuvaKortti.schedule.Execute(() => { if (kuvaNakyy) kuvaKortti.style.opacity = 1f; });
+            }
+            else
+            {
+                kuvaKortti.style.opacity = 0f;
+                kuvaKortti.schedule.Execute(() => { if (!kuvaNakyy) kuvaKortti.style.display = DisplayStyle.None; }).StartingIn(Tyylikirja.Kesto.Sulku);
+            }
+        }
+
+        /// <summary>Napautus: nostojen kuvasuurennos (koko ruutu), alla tekijä · lisenssi; havainnekuvan selite HAVAINNEKUVA.</summary>
+        void SuurennaKuva()
+        {
+            var k = naytettyKuva;
+            if (k == null) return;
+            if (suurennos == null) suurennos = new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
+            var l = OpasSovitin.Viimeisin?.Silmukka?.Nykyinen;
+            string teksti = !string.IsNullOrWhiteSpace(k.Selite) ? k.Selite : l?.Nimi;
+            string selite = k.Havainnekuva ? "HAVAINNEKUVA" + (teksti != null ? " · " + teksti : "") : teksti;
+            suurennos.Avaa(new List<LehtiKuva>
+            {
+                new LehtiKuva
+                {
+                    Lahde = k.Url, Lyhyt = selite, Selite = selite,
+                    LahdeRivi = string.Join(" · ", new[] { k.Tekija, k.Lisenssi }.Where(x => !string.IsNullOrEmpty(x))),
+                },
+            });
+            Debug.Log("MATKAKIRJA opas: kuva suurennettu " + k.Url);
+        }
+
+        /// <summary>Vaihtoehdon napautus: kysymys oppaalle saman chatin kautta (Sieppaa → OpasSovitin.Toive), chat pysyy kiinni.</summary>
+        void Valitse(string teksti)
+        {
+            Debug.Log("MATKAKIRJA opas: valinta \"" + teksti + "\"");
+            UiNakymat.Hae()?.Chat?.Kysy(teksti, true);
         }
 
         void Avaa(Nakyma n)
@@ -143,6 +369,7 @@ namespace Matkakirja.Natiivi
             {
                 case Nakyma.Paa:
                     Alanakyma("Vaihda kohde", () => Avaa(Nakyma.Maanosat));
+                    Komento("Näytä teksti", NaytaTeksti);
                     Viiva();
                     Komento("Poistu linssistä", () => UiNakymat.Hae()?.Linssit?.SuljeLinssi());
                     break;
@@ -265,6 +492,27 @@ namespace Matkakirja.Natiivi
             switch (k)
             {
                 case "sulje": Sulje(); return "opas: valikko kiinni";
+                case "teksti": NaytaTeksti(); return "opas: teksti auki";
+                case "kuvatesti":
+                    testiKuva = new OpasKuva
+                    {
+                        Url = o.Length > 1 && o[1].StartsWith("http") ? o[1]
+                            : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Nyhavn%2C_Copenhagen%2C_20220618_1728_7354.jpg/960px-Nyhavn%2C_Copenhagen%2C_20220618_1728_7354.jpg",
+                        Havainnekuva = o.Length > 1 && o[1] == "havainne", Tekija = o.Length > 1 && o[1] == "havainne" ? null : "Jakub Hałun", Lisenssi = "CC BY-SA 4.0",
+                        Lahde = "https://commons.wikimedia.org/wiki/File:Nyhavn,_Copenhagen,_20220618_1728_7354.jpg", Selite = "Nyhavnin kanava",
+                    };
+                    naytettyKuva = null;
+                    return "opas: testikuva" + (testiKuva.Havainnekuva ? " (havainnekuva)" : "");
+                case "kuvat": VaihdaKuvat(); return "opas: kuvat " + (KuvatPaalla ? "päällä" : "pois");
+                case "suurenna": SuurennaKuva(); return "opas: suurennos " + (naytettyKuva != null ? "auki" : "ei kuvaa");
+                case "kuva":
+                    var kb = kuvaKortti.worldBound;
+                    return $"opas: kuva {(kuvaNakyy ? "näkyy" : "piilossa")} {naytettyKuva?.Url ?? "-"}, kortti {kb.xMin:0},{kb.yMin:0} {kb.width:0}×{kb.height:0}, kytkin {(KuvatPaalla ? "päällä" : "pois")}";
+                case "sirut":
+                    var c = UiNakymat.Hae()?.Chat;
+                    var sb = sirurivi.worldBound;
+                    return $"opas: sirut {(siruNakyy ? "näkyy" : "piilossa")} [{string.Join(" | ", c?.OppaanJatkot ?? Array.Empty<string>())}], "
+                         + $"kertoja {(OpasSovitin.KertojaPuhuu ? "puhuu" : "hiljaa")}, rivi {sb.xMin:0},{sb.yMin:0} {sb.width:0}×{sb.height:0}";
                 case "maanosat": Avaa(Nakyma.Maanosat); return "opas: maanosat";
                 case "maat": maanosa = o.Length > 1 ? o[1] : maanosa; Avaa(Nakyma.Maat); return "opas: maat " + maanosa;
                 case "kaupungit":

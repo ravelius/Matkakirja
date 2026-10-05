@@ -260,6 +260,7 @@ namespace Matkakirja.Natiivi
         public void AsetaEsikamera(Kuvakulma k)
         {
             if (esikamera == null || georef == null) return;
+            if (hallinta != null && !hallinta.additionalCameras.Contains(esikamera)) hallinta.additionalCameras.Add(esikamera);
             double3 kohde = CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(k.Lon, k.Lat, k.KatseKorkeusM));
             double3 ylos = math.normalize(CesiumWgs84Ellipsoid.GeodeticSurfaceNormal(kohde));
             double3 ita = math.normalize(math.cross(new double3(0, 0, 1), ylos));
@@ -281,6 +282,25 @@ namespace Matkakirja.Natiivi
                 esikamera.farClipPlane = kamera.farClipPlane;
                 esikamera.pixelRect = kamera.pixelRect;
             }
+        }
+
+        /// <summary>
+        /// Esilatauskamera pois laattavalinnasta (Päätoimittaja 5.10. muistiepäily): kun seuraavaa kohdetta ei ole, piilokamera ei pidä
+        /// edellisen esilatauksen laattoja elossa. AsetaEsikamera kytkee sen takaisin.
+        /// </summary>
+        public void EsikameraPois()
+        {
+            if (hallinta != null && esikamera != null && hallinta.additionalCameras.Contains(esikamera)) hallinta.additionalCameras.Remove(esikamera);
+        }
+
+        /// <summary>Muistierittely lokiin (simun RSS:n kasvun syy): Unity-varaukset, tekstuurit, meshit, äänileikkeet ja Cesiumin laatat.</summary>
+        public string Muisti()
+        {
+            long Mt(long b) => b >> 20;
+            int laattoja = juuri != null ? juuri.GetComponentsInChildren<MeshFilter>(true).Length : 0;
+            return $"muisti: varattu {Mt(UnityEngine.Profiling.Profiler.GetTotalAllocatedMemoryLong())} Mt, varaus {Mt(UnityEngine.Profiling.Profiler.GetTotalReservedMemoryLong())} Mt, " +
+                   $"mono {Mt(UnityEngine.Profiling.Profiler.GetMonoUsedSizeLong())} Mt, tekstuurit {Mt((long)Texture.currentTextureMemory)} Mt ({Texture.nonStreamingTextureCount} kpl), " +
+                   $"meshejä {Resources.FindObjectsOfTypeAll<Mesh>().Length}, kaupungin laattoja {laattoja}, äänileikkeitä {Resources.FindObjectsOfTypeAll<AudioClip>().Length}";
         }
 
         public void Sulje()

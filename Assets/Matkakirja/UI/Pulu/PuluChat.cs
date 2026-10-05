@@ -672,6 +672,45 @@ namespace Matkakirja.Natiivi
         public void AvaaOppaalle(Func<Rect> ankkuri = null)
         {
             AvaaLinssissa(ankkuri ?? (() => pulu.Laatikko), "opas", null, "lasi");
+            Asetu(OppaanJatkot);
+        }
+
+        /// <summary>
+        /// OPAS KEVYEKSI (omistaja 5.10.2026 Päätoimittajan kautta: "raskaan oloinen"): oppaan aikana chat ei aukea itsestään eikä
+        /// lue (kertoja puhuu); kappaleet ja kaksi jatkoa kertyvät tähän keskusteluun, joka aukeaa valikon Näytä teksti -rivistä.
+        /// Jatkot näkyvät myös irrallisena sirurivinä (OpasValikko). Keskustelu alkaa ja päättyy puhtaana (ei tervehdystä).
+        /// </summary>
+        public void OpasTila(bool paalla)
+        {
+            if (paalla == oppaalle) return;
+            Nollaa();
+            oppaalle = paalla;
+            tervehditty = paalla;
+            AsetaOppaanJatkot(null);
+        }
+        bool oppaalle;
+
+        /// <summary>Oppaan viimeisimmän kappaleen tai kysymyksen kaksi vaihtoehtoa (tyhjä, kun pelaaja on jo valinnut).</summary>
+        public IReadOnlyList<string> OppaanJatkot => oppaanJatkot;
+        readonly List<string> oppaanJatkot = new List<string>();
+        public event Action OppaanJatkotMuuttui;
+
+        /// <summary>Oppaan kysymys vanheni ilman pelaajan valintaa (silmukka valitsi itse): irralliset sirut pois.</summary>
+        public void TyhjennaOppaanJatkot() { if (oppaanJatkot.Count > 0) AsetaOppaanJatkot(null); }
+
+        void AsetaOppaanJatkot(IList<string> jatkot)
+        {
+            oppaanJatkot.Clear();
+            if (jatkot != null) for (int i = 0; i < jatkot.Count && oppaanJatkot.Count < 2; i++)
+                    if (!string.IsNullOrWhiteSpace(jatkot[i])) oppaanJatkot.Add(jatkot[i]);
+            OppaanJatkotMuuttui?.Invoke();
+        }
+
+        /// <summary>Chatin avautuessa oppaalle viimeisimmät jatkot sen omiksi siruiksi (vain jos niitä ei jo ole).</summary>
+        void Asetu(IReadOnlyList<string> jatkot)
+        {
+            if (jatkot.Count == 0 || virta.Q(className: "mk-chat__sirut") != null) return;
+            Sirut(new List<string>(jatkot), "mk-chat__jatkot", true);
         }
 
         /// <summary>Oppaan päättyessä chat kiinni (sama kuin Sulje; nimi oppaan kytkentää varten).</summary>
@@ -680,14 +719,16 @@ namespace Matkakirja.Natiivi
         public void Vastaa(string teksti, IList<string> jatkot = null)
         {
             if (string.IsNullOrWhiteSpace(teksti)) return;
-            if (!Auki) Avaa(false);
+            if (!Auki && !oppaalle) Avaa(false);
             PoistaSirut();
             var kupla = Viesti("mk-chat__livia", Lukijaaani.PoistaPuhetagit(teksti));
             kupla.enableRichText = false;
             historia.Add(("pollo", teksti));
             AsetaLukijalle(teksti);
-            if (AaniPaalla) Puhe.Hae()?.Lue(teksti, "pollo");
+            // Oppaalla kertoja puhuu kappaleen itse: Pulun ääni ei lue päälle.
+            if (AaniPaalla && !oppaalle) Puhe.Hae()?.Lue(teksti, "pollo");
             if (jatkot != null && jatkot.Count > 0) Sirut(jatkot, "mk-chat__jatkot", true);
+            if (oppaalle) AsetaOppaanJatkot(jatkot);
             Vierita(kupla);
         }
 
@@ -697,7 +738,8 @@ namespace Matkakirja.Natiivi
             if (kysymys.Length == 0 || kysyy) return;
             kysymyksenAihe = aihe ?? keskustelunAihe;
             if (kysymys.Length > KysymysKatto) kysymys = kysymys.Substring(0, KysymysKatto);
-            if (!Auki) Avaa(false);
+            if (!Auki && !(oppaalle && Sieppaa != null)) Avaa(false);
+            if (oppaalle) AsetaOppaanJatkot(null);
             LopetaPuheVuoro();
             // Uusi kysymys: edellisen vastauksen luenta ylärivin lukijassa seis (uusi vastaus luetaan omana luentanaan).
             lukija.Vaihtui();
@@ -716,7 +758,13 @@ namespace Matkakirja.Natiivi
             Viesti("mk-chat__pelaaja", kysymys);
             // Toinen vastaaja (esim. Linssisepän elävä opas, OpasSovitin): sieppaus vastaa itse Vastaa-kutsulla eikä Pulun workeria
             // kutsuta. Sama chat, samat napit ja kaksi kysymystä (PULU-CHAT-pohja, omistaja 5.10.2026).
-            if (Sieppaa != null && Sieppaa(kysymys)) { historia.Add(("kayttaja", kysymys)); return; }
+            if (Sieppaa != null && Sieppaa(kysymys))
+            {
+                historia.Add(("kayttaja", kysymys));
+                // Saneltu toive: sieppaaja (opas) vastaa omalla äänellään, joten Pulun puhevuoro ei jää "Mietin…"-tilaan.
+                if (puhe) LopetaPuheVuoro(hiljaa: true);
+                return;
+            }
             bool paikkaa = Paikkakysymys.IsMatch(kysymys);
             // Oma paikkahakemisto ensin (webin ratkaisePaikka): kamera lähtee heti.
             bool lensi = paikkaa && LennaTunnettuun(kysymys);
@@ -1827,7 +1875,7 @@ namespace Matkakirja.Natiivi
         // --- sanelu (web vaihdaSanelu, aloitaNatiiviSanelu, saneluVirhe; Sanelu.cs Pelikoodarilta) -----
 
         const string SaneluKuuntelee = "Kuuntelen…", SaneluKaynnistyy = "Käynnistän mikrofonia…";
-        const string MikkiIkoni = "<rect x=\"9\" y=\"2.8\" width=\"6\" height=\"11.4\" rx=\"3\"/>"
+        internal const string MikkiIkoni = "<rect x=\"9\" y=\"2.8\" width=\"6\" height=\"11.4\" rx=\"3\"/>"
             + "<path d=\"M5.6 11.4a6.4 6.4 0 0 0 12.8 0\"/><path d=\"M12 17.8v3.4M8.6 21.2h6.8\"/>";
         const string PysaytysIkoni = "<rect class=\"taytto\" x=\"7.2\" y=\"7.2\" width=\"9.6\" height=\"9.6\" rx=\"1.6\"/>";
         const string NappaimistoIkoni = "<rect x=\"2.4\" y=\"6.2\" width=\"19.2\" height=\"11.6\" rx=\"2.2\"/>"
@@ -1877,6 +1925,12 @@ namespace Matkakirja.Natiivi
         public void MikkiTesti() => VaihdaSanelu();
 
         /// <summary>Mikkinappi: kuunnellessa lopettaa ja lähettää (Sanelu.Lopeta → valmis), muuten aloittaa.</summary>
+        /// <summary>Sanelu käyntiin, jos se ei jo ole (oppaan puhu/kirjoita-siru, omistaja 5.10.2026).</summary>
+        public void AloitaSanelu()
+        {
+            if (Sanelu.Saatavilla && !Sanelu.Kaynnissa && puheVuoro == null) VaihdaSanelu();
+        }
+
         void VaihdaSanelu()
         {
             // Puhevuoron aikana mikki hiljentää Pulun (web vaihdaSanelu): luenta seis, tilarivi tyhjäksi, vastaus jää.

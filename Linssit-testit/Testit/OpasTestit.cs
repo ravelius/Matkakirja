@@ -120,6 +120,27 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(t > lento + OpasSilmukka.SaapumisOdotusS - 0.2 && t < lento + OpasSilmukka.SaapumisOdotusS + 0.3, $"saapui {t:F1} s, lento {lento:F1} s");
         }
 
+        [Testi] static void PuheAlkaaKolmeSekuntiaEnnenSaapumistaJaLyhytLentoViisiSekuntia()
+        {
+            Oleta.Sama(OpasSilmukka.LyhytLentoS, OpasSilmukka.LennonKesto(800));
+            Oleta.Tosi(OpasSilmukka.LennonKesto(3000) >= OpasSilmukka.LentoMinS);
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            double puheT = -1, saapuiT = -1, t = 0;
+            s.AlkaaPuhua += _ => puheT = t; s.Saapui += _ => saapuiT = t;
+            s.Aloita(null); s.Vastaus(1, K("a", 55.6757, 12.5696));
+            while (saapuiT < 0 && t < 60) { s.Paivita(0.05, _ => 50, () => true); t += 0.05; }
+            Oleta.Tosi(puheT > 0 && Math.Abs(saapuiT - puheT - OpasSilmukka.PuheEnnenS) < 0.2, $"puhe {puheT:F2}, saapui {saapuiT:F2}");
+        }
+
+        [Testi] static void AvausLiukuuKaupunginYlleOdottaessa()
+        {
+            var a = new Kuvakulma(55.68, 12.57, 2000, 50, 0, 40);
+            var s = new OpasSilmukka(a);
+            s.Aloita(null);
+            for (int i = 0; i < 100; i++) s.Paivita(0.1, _ => 50);
+            Oleta.Tosi(s.Asento.EtaisyysM < 1600 && s.Asento.Kallistus > 52, $"etäisyys {s.Asento.EtaisyysM:F0}, kallistus {s.Asento.Kallistus:F1}");
+        }
+
         [Testi] static void PuheenJalkeenOdottaaSeuraavaa()
         {
             var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));

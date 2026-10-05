@@ -372,8 +372,11 @@ namespace Matkakirja.Natiivi
             Asettele();
             // Aikajanalinsseillä oma palkki korvaa Matkakirjan yläpalkin (web body.aikajana-palkki-auki .topbar).
             bool aikajana = id == AikajanaNakyma.KeksinnotId || global::Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.OnIhmisenMatka(id); // myös Ihmisen matka II
-            ui.Tilarivi.NaytaPalkki(!astro && !aikajana && !vuosi);
-            Valitsin.NaytaNappi(!astro && !aikajana && !vuosi);
+            // Elävä opas (Päätoimittaja 5.10.: kaupunki koko ruudulla): yläpalkki pois kuten astronautin kamerassa; ylhäällä vain
+            // pysähdyksen nimi ja kuvausrivi (KierrosTaulu) sekä kuvakytkin ja ☰ (OpasValikko).
+            bool opas = id == OpasSovitin.OpasTiedot.Id;
+            ui.Tilarivi.NaytaPalkki(!astro && !aikajana && !vuosi && !opas);
+            Valitsin.NaytaNappi(!astro && !aikajana && !vuosi && !opas);
             Pulu.Hae().Astronautti = astro;
             Astronautti.Vaihtui(astro);
             using (MerkkiAikajana.Auto())
@@ -431,7 +434,9 @@ namespace Matkakirja.Natiivi
             // Linnassa ✕ korvautuu valikon "Sulje linna" -rivillä (omistaja 2.10. 14.44, LinnaValikko). Ajattelijan kohtauksessa
             // kuvanäkymän oma ✕ (valinnassa yhä linssien yhteinen sulku).
             bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa && !valitsinAuki && !ajattelijaPeittaa
-                         && !(Dioraama != null && Dioraama.Kytketty);
+                         && !(Dioraama != null && Dioraama.Kytketty)
+                         // Elävä opas (Päätoimittaja 5.10.: EI TURHIA ✕-NAPPEJA): poistuminen valikon Poistu linssistä -rivillä.
+                         && !OpasValikko.Nakyy;
             var id = Auki?.Tiedot?.Id;
             bool kartta = id != null && karttaValikot.ContainsKey(id);
             foreach (var kv in karttaValikot)

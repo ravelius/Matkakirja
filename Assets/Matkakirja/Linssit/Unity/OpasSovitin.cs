@@ -57,6 +57,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Aloituskaupunki (komento "opas kaupunki <nimi>"); ensimmäinen pyyntö on tämä toive.</summary>
         public static string Aloituskaupunki = "Kööpenhamina";
 
+        /// <summary>Kertojan kappale soi (Natiivi-UI: vastaussirut vasta kappaleen jälkeen).</summary>
+        public static bool KertojaPuhuu => Viimeisin != null && Viimeisin.puhuu;
         /// <summary>Oppaan linssi auki (Natiivi-UI: chatin syöte oppaalle).</summary>
         public static bool Auki => Viimeisin != null && Viimeisin.silmukka != null && Viimeisin.Virhe == null;
 
@@ -139,12 +141,12 @@ namespace Matkakirja.Natiivi
                 puhe = o.gameObject.AddComponent<AudioSource>();
                 puhe.playOnAwake = false; puhe.spatialBlend = 0f; puhe.loop = false;
             }
-            KytkeChat(true);
-            ChatOppaalle(true);
+            KytkeChat(true);   // chat ei aukea itsestään (opas kevyeksi, Päätoimittaja 5.10.): vain valikon "Näytä teksti" -rivistä
             silmukka.Pyyda += Pyyda;
             silmukka.Saapui += Saapui;
             silmukka.Hiljenna += Hiljenna;
             silmukka.Kysyy += Kysyy;
+            silmukka.AlkaaPuhua += AlkaaPuhua;
             if (o.GetComponent<KyydinKameraEnnen>() == null) o.gameObject.AddComponent<KyydinKameraEnnen>();
             KyydinKameraEnnen.Ajo = PaivitaKamera;
             silmukka.Aloita(Aloituskaupunki);
@@ -196,6 +198,7 @@ namespace Matkakirja.Natiivi
                 kaupunki.AsetaEsikamera(OpasSilmukka.KehysAsento(OpasSilmukka.Kehysta(k, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45,
                     OpasSilmukka.Suunta(silmukka.Asento.Lat, silmukka.Asento.Lon, k.Lat, k.Lon)), 0));
             }
+            else kaupunki.EsikameraPois();   // ei esilattavaa: piilokamera ei pidä vanhoja laattoja elossa
         }
 
         double MaaKorkeus(OpasKohde k) => maaKorkeudet.TryGetValue(Avain(k), out var h) ? h : double.NaN;
@@ -255,7 +258,7 @@ namespace Matkakirja.Natiivi
             OpasKohde k = null;
             if (r.result == UnityWebRequest.Result.Success)
                 k = OpasKohde.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>);
-            o.Kirjaa($"opas: vastaus {n} {(k == null ? "VIRHE " + r.responseCode + " " + r.error : k.Kysymys ? "kysymys (" + (k.Vaihtoehdot?.Length ?? 0) + " vaihtoehtoa)" : k.Nimi)} ({Time.realtimeSinceStartup - t0:F1} s)");
+            o.Kirjaa($"opas: vastaus {n} {(k == null ? "VIRHE " + r.responseCode + " " + r.error : k.Kysymys ? "kysymys (" + (k.Vaihtoehdot?.Length ?? 0) + " vaihtoehtoa)" : k.Nimi)} ({Time.realtimeSinceStartup - t0:F1} s), ääni {(k?.Aani != null ? "url" : "ei")}");
             if (k != null) Valmistele(k);
             silmukka.Vastaus(n, k);
         }
@@ -283,9 +286,11 @@ namespace Matkakirja.Natiivi
         {
             using var p = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
             ((DownloadHandlerAudioClip)p.downloadHandler).streamAudio = false;
+            p.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            p.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             p.timeout = AikarajaS;
             yield return p.SendWebRequest();
-            if (p.result != UnityWebRequest.Result.Success) { o.Kirjaa("opas: ääni ei latautunut: " + p.error); yield break; }
+            if (p.result != UnityWebRequest.Result.Success) { o.Kirjaa("opas: ääni ei latautunut: " + p.error); klipit[url] = null; yield break; }
             klipit[url] = DownloadHandlerAudioClip.GetContent(p);
         }
 
@@ -293,8 +298,9 @@ namespace Matkakirja.Natiivi
         void Saapui(OpasKohde k)
         {
             kaupunki.SiirraOrigo(k.Lat, k.Lon, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45);
-            Soita(k);
-            KysymysChattiin(k);   // kappale ja sen vaihtoehdot Pulu-chatiin (Natiivi-UI 18.0x)
+            if (puhuttu != k) AlkaaPuhua(k);   // ei aloitettu lennon lopussa (esim. sama paikka): nyt
+            saapumisia++;
+            o.StartCoroutine(Siivoa());
             o.Kirjaa($"opas: saapui {k.Nimi} ({k.Lat:F4}, {k.Lon:F4}), ääni {(puhuu ? "soi" : "ei")}, laatat {kaupunki.Latausaste:F0} %");
         }
 
@@ -303,18 +309,68 @@ namespace Matkakirja.Natiivi
         {
             Hiljenna();
             tekstina = null;
-            if (Asetukset.Paalla(Kytkin.Kertoja) && !string.IsNullOrEmpty(k.Aani) && klipit.TryGetValue(k.Aani, out var klippi) && klippi != null && puhe != null)
+            bool kertoja = Asetukset.Paalla(Kytkin.Kertoja);
+            // Ääni latautuu vielä (simu 19.0x: saapumiset ilman ääntä): odotetaan enintään AaniOdotusS ennen tekstiä.
+            if (kertoja && !string.IsNullOrEmpty(k.Aani) && !klipit.ContainsKey(k.Aani) && aaniOdotus != k) { aaniOdotus = k; o.StartCoroutine(OdotaAani(k)); return; }
+            aaniOdotus = null;
+            if (kertoja && !string.IsNullOrEmpty(k.Aani) && klipit.TryGetValue(k.Aani, out var klippi) && klippi != null && puhe != null)
             {
                 puhe.clip = klippi; puhe.volume = 1f; puhe.Play();
                 puhuu = true; y.Repliikki(true);
                 puheLoppuu = Time.unscaledTime + klippi.length;
                 return;
             }
+            o.Kirjaa($"opas: kappale tekstinä ({(!kertoja ? "Kertoja pois" : string.IsNullOrEmpty(k.Aani) ? "ei ääntä vastauksessa" : "ääni ei latautunut")})");
             tekstina = k;
             double s = k.KestoS > 0 ? k.KestoS : KierrosLento.PysahdysKesto(k.Teksti);
             o.StartCoroutine(TekstiLoppuu(s, k));
         }
-        OpasKohde tekstina;
+        OpasKohde tekstina, aaniOdotus;
+        const float AaniOdotusS = 6f;
+
+        IEnumerator OdotaAani(OpasKohde k)
+        {
+            float t0 = Time.realtimeSinceStartup;
+            while (silmukka != null && !klipit.ContainsKey(k.Aani) && Time.realtimeSinceStartup - t0 < AaniOdotusS) yield return null;
+            if (silmukka == null || (silmukka.Nykyinen != k && !(silmukka.OdottaaVastausta && viimeKysymys == k))) yield break;
+            o.Kirjaa($"opas: ääni {(klipit.ContainsKey(k.Aani) ? "latautui" : "ei latautunut")} {Time.realtimeSinceStartup - t0:F1} s:ssa");
+            Soita(k);
+        }
+
+        int saapumisia;
+        OpasKohde puhuttu;
+
+        /// <summary>Kappale alkaa noin 3 s ennen saapumista (Päätoimittaja 5.10. 19.4x: hiljaisuus pysähdysten välissä enintään ~3 s).</summary>
+        void AlkaaPuhua(OpasKohde k)
+        {
+            if (k == null || puhuttu == k) return;
+            puhuttu = k;
+            VapautaVanhatAanet(k);
+            Soita(k);
+            KysymysChattiin(k);   // kappale ja sen vaihtoehdot Pulu-chatiin (Natiivi-UI 18.0x)
+        }
+
+        /// <summary>Muut kuin nykyinen ja esihaettu kappale pois muistista (AudioClip vapautetaan).</summary>
+        void VapautaVanhatAanet(OpasKohde nyt)
+        {
+            var pidetaan = new HashSet<string>();
+            if (nyt?.Aani != null) pidetaan.Add(nyt.Aani);
+            if (silmukka?.Seuraava?.Aani != null) pidetaan.Add(silmukka.Seuraava.Aani);
+            if (viimeKysymys?.Aani != null && silmukka != null && silmukka.OdottaaVastausta) pidetaan.Add(viimeKysymys.Aani);
+            var pois = new List<string>();
+            foreach (var kv in klipit) if (!pidetaan.Contains(kv.Key)) pois.Add(kv.Key);
+            foreach (var u in pois) { if (klipit[u] != null && (puhe == null || puhe.clip != klipit[u])) UnityEngine.Object.Destroy(klipit[u]); klipit.Remove(u); }
+        }
+
+        /// <summary>Pysähdyksen alussa (kamera kiertää hitaasti): käyttämättömät resurssit pois ja muistierittely lokiin.</summary>
+        IEnumerator Siivoa()
+        {
+            yield return new WaitForSecondsRealtime(1.5f);
+            if (silmukka == null) yield break;
+            var op = Resources.UnloadUnusedAssets();
+            while (!op.isDone) yield return null;
+            o.Kirjaa($"opas: {saapumisia}. pysähdys, " + kaupunki.Muisti());
+        }
 
         IEnumerator TekstiLoppuu(double s, OpasKohde k)
         {
@@ -389,6 +445,8 @@ namespace Matkakirja.Natiivi
             if (puhe != null && puhe.isPlaying) puhe.Stop();
             if (puhuu) { puhuu = false; y.Repliikki(false); }
         }
+
+        public string Muisti() => "opas: " + kaupunki.Muisti();
 
         public string Tila() => silmukka == null ? "opas: kiinni"
             : $"opas: {kaupunki.Kaytossa} {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "-")}, seuraava {(silmukka.Seuraava?.Nimi ?? "-")}, nähty {System.Linq.Enumerable.Count(silmukka.Nahdyt)}, laatat {kaupunki.Latausaste:F0} %"
