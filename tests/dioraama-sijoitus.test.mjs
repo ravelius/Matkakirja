@@ -175,3 +175,15 @@ test('elävä kohde ja elävä reitti kiertyvät ja siirtyvät kuten hahmot; muu
   assert.equal(u.elava.reitti.edestakaisin, true);
   assert.deepEqual(elava.kohde, [2, 1, 1], 'alkuperäistä ei muuteta');
 });
+
+test('taulun kohtien napautuskohde (kohtaukset v2) siirtyy kuten hahmo; kohdat ilman kohdetta ja muut kentät säilyvät', () => {
+  const taulu = { otsikko: 'x', kohdat: [{ teksti: 'a', aani: 'a-1', kohde: { paikka: [2, 1, 1], sade: 0.6 } }, { teksti: 'b', aani: 'b-1' }] };
+  const hahmot = [{ id: 'h', paikka: [2, 1, 1] }];
+  const u = sijoitaTila({ ...tila(), taulu, hahmot, sijoitus: S({ ankkuri: [1, 0, 1], paikka: [10, 2, 10], suunta: 180 }) });
+  lahella(u.taulu.kohdat[0].kohde.paikka, u.hahmot[0].paikka);
+  lahella(u.taulu.kohdat[0].kohde.paikka, [9, 3, 10]);
+  assert.equal(u.taulu.kohdat[0].kohde.sade, 0.6);
+  assert.equal(u.taulu.kohdat[0].aani, 'a-1');
+  assert.equal('kohde' in u.taulu.kohdat[1], false);
+  assert.deepEqual(taulu.kohdat[0].kohde.paikka, [2, 1, 1], 'alkuperäistä ei muuteta');
+});
