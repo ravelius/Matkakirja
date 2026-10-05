@@ -22,6 +22,8 @@ namespace Matkakirja.Natiivi
     public static class Kirjasimet
     {
         static readonly Dictionary<Kirjasin, FontDefinition?> valimuisti = new Dictionary<Kirjasin, FontDefinition?>();
+        /// <summary>Saman fontin parikerronnaton muunnelma harvennetulle tekstille (HaeHarva).</summary>
+        static readonly Dictionary<Kirjasin, FontDefinition?> harvat = new Dictionary<Kirjasin, FontDefinition?>();
 
         static (string Perhe, string Tyyli)[] Ehdokkaat(Kirjasin k) => k switch
         {
@@ -44,13 +46,39 @@ namespace Matkakirja.Natiivi
             if (string.IsNullOrEmpty(resurssi) || resurssi == LinnanOtsikko) return;
             LinnanOtsikko = resurssi;
             valimuisti.Remove(Kirjasin.Goottilainen);
+            harvat.Remove(Kirjasin.Goottilainen);
         }
 
         /// <summary>Fontin määritys (null = ei löytynyt: käytetään teeman varafonttia).</summary>
         public static FontDefinition? Hae(Kirjasin k)
         {
             if (valimuisti.TryGetValue(k, out var d)) return d;
-            d = null;
+            var fa = Luo(k, true);
+            d = fa != null ? FontDefinition.FromSDFFont(fa) : (FontDefinition?)null;
+            valimuisti[k] = d;
+            return d;
+        }
+
+        /// <summary>
+        /// KIRJAINVÄLI JA PARIKERRONTA (Natiivi-UI 5.10.2026, Tavlin "TAVL I" ja "O TTO M A A N I E N"): TextCore nollaa
+        /// letter-spacingin jokaisesta kirjainparista, jolla on fontin kerning-tietue (GlyphPairAdjustmentRecord, lippu
+        /// IgnoreSpacingAdjustments; UnityCsReference TextGeneratorParsing.cs), joten harvennettu kapiteeli on epätasainen:
+        /// TA, AV ja TT jäävät tiiviiksi, LI ja OT harvenevat. Harvennettu teksti käyttää siksi saman fontin muunnelmaa ilman
+        /// parikerrontaa (FontAsset.getFontFeatures = false); harvennus on silloin tasainen kuten webissä. Aseta valitsee tämän itse.
+        /// </summary>
+        public static FontDefinition? HaeHarva(Kirjasin k)
+        {
+            if (harvat.TryGetValue(k, out var d)) return d;
+            var fa = Luo(k, false);
+            d = fa != null ? FontDefinition.FromSDFFont(fa) : Hae(k);
+            harvat[k] = d;
+            return d;
+        }
+
+        /// <summary>Uusi dynaaminen FontAsset (null = ei löytynyt); kerronta = OpenType-parikerronta (GPOS) käytössä.</summary>
+        static FontAsset Luo(Kirjasin k, bool kerronta)
+        {
+            FontAsset tulos = null;
             // Linnan keskiaikaiset laput (omistaja 4.10. 20.4x, Päätoimittaja): goottilainen otsikko ja vanha antiikva, OFL
             // (Linnanrakentajan toimitus olavinlinna-laput-v1, LAHTEET.md); puuttuva → varafontti.
             string linnanFontti = k == Kirjasin.Goottilainen ? LinnanOtsikko : k == Kirjasin.Antiikva ? "Fontit/IMFellEnglish-Regular"
@@ -58,35 +86,32 @@ namespace Matkakirja.Natiivi
             if (linnanFontti != null)
             {
                 var lf = Resources.Load<Font>(linnanFontti);
-                var la = lf != null ? FontAsset.CreateFontAsset(lf) : null;
-                if (la != null) { la.name = lf.name; d = FontDefinition.FromSDFFont(la); }
+                tulos = lf != null ? FontAsset.CreateFontAsset(lf) : null;
+                if (tulos != null) tulos.name = lf.name;
                 else Debug.LogWarning("MATKAKIRJA ui: linnan fontti puuttuu (Resources/" + linnanFontti + ")");
-                valimuisti[k] = d;
-                return d;
             }
-            if (k == Kirjasin.Atlas)
+            else if (k == Kirjasin.Atlas)
             {
                 var fontti = Resources.Load<Font>("Fontit/LiberationSerif-Italic");
-                var atlas = fontti != null ? FontAsset.CreateFontAsset(fontti) : null;
-                if (atlas != null) { atlas.name = "Liberation Serif Italic"; d = FontDefinition.FromSDFFont(atlas); }
+                tulos = fontti != null ? FontAsset.CreateFontAsset(fontti) : null;
+                if (tulos != null) tulos.name = "Liberation Serif Italic";
                 else Debug.LogWarning("MATKAKIRJA ui: Liberation Serif puuttuu (Resources/Fontit)");
-                valimuisti[k] = d;
-                return d;
             }
-            foreach (var (perhe, tyyli) in Ehdokkaat(k))
+            else
             {
-                FontAsset fa = null;
-                try { fa = FontAsset.CreateFontAsset(perhe, tyyli, 90); }
-                catch (System.Exception e) { Debug.LogWarning($"MATKAKIRJA ui: fontti {perhe} {tyyli}: {e.Message}"); }
-                if (fa == null) continue;
-                fa.name = perhe + " " + tyyli;
-                d = FontDefinition.FromSDFFont(fa);
-                Debug.Log($"MATKAKIRJA ui: {k} = {perhe} {tyyli}");
-                break;
+                foreach (var (perhe, tyyli) in Ehdokkaat(k))
+                {
+                    try { tulos = FontAsset.CreateFontAsset(perhe, tyyli, 90); }
+                    catch (System.Exception e) { Debug.LogWarning($"MATKAKIRJA ui: fontti {perhe} {tyyli}: {e.Message}"); }
+                    if (tulos == null) continue;
+                    tulos.name = perhe + " " + tyyli;
+                    Debug.Log($"MATKAKIRJA ui: {k} = {perhe} {tyyli}{(kerronta ? "" : " (harva, ei parikerrontaa)")}");
+                    break;
+                }
+                if (tulos == null && kerronta) Debug.LogWarning("MATKAKIRJA ui: järjestelmäfonttia ei löytynyt: " + k + " (varafontti EB Garamond)");
             }
-            if (d == null) Debug.LogWarning("MATKAKIRJA ui: järjestelmäfonttia ei löytynyt: " + k + " (varafontti EB Garamond)");
-            valimuisti[k] = d;
-            return d;
+            if (tulos != null && !kerronta) { tulos.getFontFeatures = false; tulos.name += " harva"; }
+            return tulos;
         }
 
         // --- esilämmitys (UI-piikit 24.9.: fontin ensikäyttö 10–13 ms, GPOS-taulu ja glyfien rasterointi) ---------
@@ -105,9 +130,13 @@ namespace Matkakirja.Natiivi
         static IEnumerator Esilammita()
         {
             yield return new WaitForSecondsRealtime(1.5f);
-            foreach (Kirjasin k in System.Enum.GetValues(typeof(Kirjasin)))
+            // Harvat muunnelmat (HaeHarva) kapiteeleille ja julisteille: Kone, KoneLihava ja LukuLihava ovat yleisimmät.
+            var lammitettavat = new List<(Kirjasin K, bool Harva)>();
+            foreach (Kirjasin k in System.Enum.GetValues(typeof(Kirjasin))) lammitettavat.Add((k, false));
+            foreach (var k in new[] { Kirjasin.Kone, Kirjasin.KoneLihava, Kirjasin.LukuLihava }) lammitettavat.Add((k, true));
+            foreach (var (k, harva) in lammitettavat)
             {
-                var d = Hae(k);
+                var d = harva ? HaeHarva(k) : Hae(k);
                 yield return null;
                 var fa = d?.fontAsset;
                 if (fa == null) continue;
@@ -120,12 +149,37 @@ namespace Matkakirja.Natiivi
             }
         }
 
-        /// <summary>Asettaa elementin (ja perivien lasten) fontin.</summary>
+        /// <summary>Elementin fontti ja se, onko harva muunnelma käytössä (Aseta).</summary>
+        sealed class Valinta { public Kirjasin K; public bool Harva; }
+        static readonly System.Runtime.CompilerServices.ConditionalWeakTable<VisualElement, Valinta> valinnat =
+            new System.Runtime.CompilerServices.ConditionalWeakTable<VisualElement, Valinta>();
+
+        /// <summary>
+        /// Asettaa elementin (ja perivien lasten) fontin. Harvennettu teksti (ratkaistu letter-spacing > 0, esim. kapiteeli ja
+        /// juliste) saa parikerronnattoman muunnelman (HaeHarva), muu teksti parikerronnan; tarkistus asettelun jälkeen.
+        /// </summary>
         public static T Aseta<T>(T e, Kirjasin k) where T : VisualElement
         {
-            var d = Hae(k);
+            if (valinnat.TryGetValue(e, out var v)) v.K = k;
+            else
+            {
+                v = new Valinta { K = k };
+                valinnat.Add(e, v);
+                e.RegisterCallback<GeometryChangedEvent>(_ => Tarkista(e));
+            }
+            var d = v.Harva ? HaeHarva(k) : Hae(k);
             if (d.HasValue) e.style.unityFontDefinition = d.Value;
             return e;
+        }
+
+        static void Tarkista(VisualElement e)
+        {
+            if (!valinnat.TryGetValue(e, out var v)) return;
+            bool harva = e.resolvedStyle.letterSpacing > 0.01f;
+            if (harva == v.Harva) return;
+            v.Harva = harva;
+            var d = harva ? HaeHarva(v.K) : Hae(v.K);
+            if (d.HasValue) e.style.unityFontDefinition = d.Value;
         }
     }
 }
