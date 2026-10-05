@@ -34,6 +34,15 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 - natiivi-ui/iss-ohjaamo-lcd 0fdda21f — ohjaamo + LS2:n LCD-paikat; odottaa LS2:n maailmakuvia (Amazonia) ja S2-indeksiä.
 - Myöhemmin (Päätoimittaja): ISS-kuvan vihreä nimilappu hukkuu kirkkaalle hiekalle (az-3667-a4).
 
+## Juna 144 / Tavlin TF-ehto — avoinna (11.1x)
+- natiivi-ui/kirjainvali-kerning 46b62059 (master) — ENSIN (Tavlin TF-ehto, Päätoimittaja 11.0x): harvennettu teksti ilman
+  parikerrontaa (Kirjasimet.HaeHarva, Aseta valitsee letter-spacingin mukaan). Syy: TextCore nollaa letter-spacingin
+  kerning-pareilta (IgnoreSpacingAdjustments, UnityCsReference TextGeneratorParsing.cs) → "TAVL I", "O TTO M A A N I E N".
+  Todisteet: Tavli 3 lautaa, Mylly, Pelit-lista. Testikäännös yhdessä siirtoseppa/tavli ea02bae1:n kanssa.
+- natiivi-ui/ei-linssia dba06119 (x-siivouksen päällä) — omistaja 11.0x: "Ei linssiä" -rivi vain kun linssi päällä.
+  Todisteet: normaali kartta (rivi poissa) + topografialinssi (rivi näkyy ja palauttaa kartan).
+- Käännös ~11.27, simu ~11.50 (Julkaisija).
+
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
 iss-taulu-vaaka.sh (TAP_OHI=1), auto-zoom.sh (TAP_SEUR=1), lippu-kaikki.sh, chat-linna.sh, kartoitus.sh (+ k:-etuliite
