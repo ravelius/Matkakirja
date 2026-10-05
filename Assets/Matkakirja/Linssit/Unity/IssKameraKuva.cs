@@ -324,7 +324,7 @@ namespace Matkakirja.Natiivi
                 foreach (var vanha in Directory.GetFiles(juuri, "*.json"))
                 {
                     var nimi = Path.GetFileName(vanha);
-                    if (System.Text.RegularExpressions.Regex.IsMatch(nimi, @"^(v\d+-)?(maailma|indeksi)[^/]*\.json$") && !nimi.StartsWith(S2Maailma.Versio + "-"))
+                    if (System.Text.RegularExpressions.Regex.IsMatch(nimi, @"^(v\d+[a-z]?-)?(maailma|indeksi)[^/]*\.json$") && !nimi.StartsWith(S2Maailma.Versio + "-"))
                         try { File.Delete(vanha); } catch { }
                 }
                 yield return HaeTeksti(S2Maailma.Osoite, Path.Combine(juuri, S2Maailma.Versio + "-maailma.json"), t => mJson = t);
