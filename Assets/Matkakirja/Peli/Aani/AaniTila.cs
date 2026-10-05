@@ -231,7 +231,7 @@ namespace Matkakirja.Peli
         });
 
         /// <summary>Ääninäyte (kulttuurinäyte, zoom) soi: tausta 0,15:een (web vaimennaTausta/palautaTausta).</summary>
-        public void Nayte(bool soi, double kerroin = AaniVakiot.VaistoNayte) => Tee(() => SaadaVaistoa(soi ? kerroin : 1));
+        public void Nayte(bool soi, double? kerroin = null) => Tee(() => SaadaVaistoa(soi ? (kerroin ?? AaniVakiot.VaistoNayte) : 1));
 
         /// <summary>
         /// Visan raita alkaa/loppuu (web startQuizMusic/stopQuizMusic). Vaihe 2: VisaAuki on myös webin visaSoi-lippu

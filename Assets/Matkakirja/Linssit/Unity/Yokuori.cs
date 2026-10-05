@@ -325,6 +325,30 @@ namespace Matkakirja.Natiivi
         public static bool TaivasHeijastusPois = false;   // fotorealismi oletuksena päällä (Päätoimittaja 1.10.)
         public static float KuunvalonVoima = 0.35f;
 
+        /// <summary>
+        /// Asetukset datana (Natiiviseppä 5.10.2026): kokoelmat/asetukset.json "kamera.&lt;nimi&gt;" asettaa A/B-kenttien
+        /// lähtöarvot aina, kun asetukset vaihtuvat (oletus = koodin arvo). Testikomennot muuttavat kenttiä edelleen istunnon ajaksi.
+        /// </summary>
+        static Yokuori()
+        {
+            Matkakirja.Peli.Asetus.Vaihtui += LueAsetukset;
+            LueAsetukset();
+        }
+
+        static void LueAsetukset()
+        {
+            KiillonVoima = Matkakirja.Peli.Asetus.Luku("kamera.KiillonVoima", 6f);
+            Aallokko = Matkakirja.Peli.Asetus.Luku("kamera.Aallokko", 0.02f);
+            ValojenOsuus = Matkakirja.Peli.Asetus.Luku("kamera.ValojenOsuus", 1f);
+            PilviVarjonVoima = Matkakirja.Peli.Asetus.Luku("kamera.PilviVarjonVoima", 0.5f);
+            PilviKorkeusM = Matkakirja.Peli.Asetus.Luku("kamera.PilviKorkeusM", 8000f);
+            KuunvalonVoima = Matkakirja.Peli.Asetus.Luku("kamera.KuunvalonVoima", 0.35f);
+            KiiltoPois = Matkakirja.Peli.Asetus.Kytkin("kamera.KiiltoPois", false);
+            PilviVarjoPois = Matkakirja.Peli.Asetus.Kytkin("kamera.PilviVarjoPois", false);
+            KuunvaloPois = Matkakirja.Peli.Asetus.Kytkin("kamera.KuunvaloPois", false);
+            TaivasHeijastusPois = Matkakirja.Peli.Asetus.Kytkin("kamera.TaivasHeijastusPois", false);
+        }
+
         void OnDestroy()
         {
             if (TryGetComponent<MeshFilter>(out var f)) Destroy(f.sharedMesh);

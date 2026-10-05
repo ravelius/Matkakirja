@@ -47,8 +47,8 @@ namespace Matkakirja.Natiivi
 {
     public sealed class IssKyytiNakyma
     {
-        const string Juuri = "https://media.matkakirja.app/karttanostot/20260926/";
-        const string Juuri2 = "https://media.matkakirja.app/karttanostot/20260928/";
+        static string Juuri => Matkakirja.Peli.Asetus.Teksti("osoitteet.karttanostot-cupola1", "https://media.matkakirja.app/karttanostot/20260926/");
+        static string Juuri2 => Matkakirja.Peli.Asetus.Teksti("osoitteet.karttanostot-cupola2", "https://media.matkakirja.app/karttanostot/20260928/");
 
         readonly VisualElement juuri, kehys, heijastus, kupu, ulko2, heijastus2, kehys2, katto, polyt, turva, pilleri, piste, ohjaimet, peite;
         readonly VisualElement runko, ylilentoKilpi;
