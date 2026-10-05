@@ -140,8 +140,9 @@ namespace Matkakirja.Natiivi
             valikko.style.display = DisplayStyle.None;
             Kirjasimet.Aseta(valikko, Kirjasin.Moderni);
             valikko.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
-            valikko.RegisterCallback<PointerDownEvent>(e => Uudelleenohjaa(e, true, e), TrickleDown.TrickleDown);
-            valikko.RegisterCallback<PointerUpEvent>(e => Uudelleenohjaa(e, false, e), TrickleDown.TrickleDown);
+            valikko.RegisterCallback<PointerDownEvent>(e => Napautus(e, 0, e), TrickleDown.TrickleDown);
+            valikko.RegisterCallback<PointerMoveEvent>(e => Napautus(e, 1, e), TrickleDown.TrickleDown);
+            valikko.RegisterCallback<PointerUpEvent>(e => Napautus(e, 2, e), TrickleDown.TrickleDown);
             // Juna 144 FAIL (Laitetestaaja 5.10., Amsterdam-rivi ei lauennut joka kerta): UITK:n ScrollView aloitti oman
             // kosketusvierityksensä jo sormen pienestä värinästä ja kaappasi osoittimen, jolloin rivin napautus peruuntui.
             // Oma liitos (kuten nostokortti ja lehti) pysäyttää ScrollViewin kosketusliikkeet; vieritys alkaa vasta 8 pt:n
@@ -458,7 +459,7 @@ namespace Matkakirja.Natiivi
         void Rakenna()
         {
             // Vanhat rivit eivät irtoa heti (juna 144 FAIL, koe 4): UITK voi lähettää seuraavan kosketuksen vielä vanhalle
-            // riville (kosketusvälimuisti). Piilossa valikon sisällä ne pysyvät valikon lapsina, joten Uudelleenohjaa näkee
+            // riville (kosketusvälimuisti). Piilossa valikon sisällä ne pysyvät valikon lapsina, joten Napautus näkee
             // kosketuksen ja ohjaa sen kosketuskohdan nykyiselle riville. Edellinen sukupolvi poistetaan seuraavassa rakennuksessa.
             if (vanhat == null)
             {
@@ -546,22 +547,53 @@ namespace Matkakirja.Natiivi
         }
 
         VisualElement vanhat;
-        /// <summary>Nykyisen näkymän rivit ja niiden teot (Uudelleenohjaa).</summary>
+        /// <summary>Nykyisen näkymän rivit ja niiden teot (Napautus).</summary>
         readonly List<(VisualElement Rivi, Action Teko)> nykyiset = new List<(VisualElement, Action)>();
-        int painettuVanhalle = -1;
+        int painettuRivi = -1, painettuOsoitin = -1;
+        Vector2 painettuKohta;
 
         /// <summary>
-        /// Kosketus, joka osuu piilotetulle vanhalle riville (UITK:n vanhentunut kohde), ohjataan kosketuskohdan nykyiselle
-        /// riville: painallus muistetaan ja irrotus samalla rivillä laukaisee sen teon (kuten klikki).
+        /// RIVIN NAPAUTUS VALIKON TASOLLA (juna 144/145 FAIL, Amsterdam: ensimmäinen napautus uudelleen rakennettuun
+        /// ScrollView-listaan katosi kolmessa korjausyrityksessä; toinen toimi). Valikko ratkaisee rivin itse kosketuskohdasta
+        /// TrickleDown-vaiheessa ennen ScrollViewia ja rivin nappia, eikä tapahtuma jatku niille (ScrollView ei voi niellä sitä
+        /// liikkeen pysäytyksenä, eikä napin oma klikki laukea kahdesti). Yli 8 pt:n liike on vierityseleen alku (Kosketusvieritys
+        /// samalla valikolla) ja peruu napautuksen. Toimii myös, jos UITK:n kohde on vanha piilotettu rivi.
         /// </summary>
-        void Uudelleenohjaa(IPointerEvent e, bool alas, EventBase eb)
+        /// <summary>Vieritetyn listan rivi on napautettavissa vain listan näkyvällä alueella (ei otsikon alla).</summary>
+        static bool Nakyvissa(VisualElement rivi, Vector2 kohta)
         {
-            if (vanhat == null || !(eb.target is VisualElement t) || !vanhat.Contains(t)) return;
+            for (var v = rivi.parent; v != null; v = v.parent)
+                if (v is ScrollView sv) return sv.contentViewport.worldBound.Contains(kohta);
+            return true;
+        }
+
+        void Napautus(IPointerEvent e, int vaihe, EventBase eb)
+        {
+            if (vaihe == 0)
+            {
+                var kohta = (Vector2)e.position;
+                painettuRivi = nykyiset.FindIndex(r => r.Rivi.panel != null && r.Rivi.resolvedStyle.display != DisplayStyle.None
+                                                       && r.Rivi.worldBound.Contains(kohta) && Nakyvissa(r.Rivi, kohta));
+                if (painettuRivi < 0) return;
+                painettuOsoitin = e.pointerId;
+                painettuKohta = e.position;
+                eb.StopPropagation();
+                return;
+            }
+            if (painettuRivi < 0 || e.pointerId != painettuOsoitin) return;
+            if (vaihe == 1)
+            {
+                if (((Vector2)e.position - painettuKohta).sqrMagnitude > 64f) painettuRivi = -1; // veto: vieritys, ei napautus
+                return;
+            }
+            int rivi = painettuRivi;
+            painettuRivi = -1;
             eb.StopPropagation();
-            int osuma = nykyiset.FindIndex(r => r.Rivi.panel != null && r.Rivi.worldBound.Contains(e.position));
-            if (alas) { painettuVanhalle = osuma; Debug.Log($"MATKAKIRJA opas: kosketus vanhalle riville → nykyinen rivi {osuma}"); return; }
-            if (osuma >= 0 && osuma == painettuVanhalle) Rivilta(nykyiset[osuma].Teko);
-            painettuVanhalle = -1;
+            if (rivi < nykyiset.Count && nykyiset[rivi].Rivi.worldBound.Contains(e.position))
+            {
+                Debug.Log("MATKAKIRJA opas: valikon rivi " + rivi);
+                Rivilta(nykyiset[rivi].Teko);
+            }
         }
 
         /// <summary>
@@ -619,6 +651,10 @@ namespace Matkakirja.Natiivi
             rivit = new ScrollView(ScrollViewMode.Vertical)
             { verticalScrollerVisibility = ScrollerVisibility.Hidden, horizontalScrollerVisibility = ScrollerVisibility.Hidden };
             rivit.style.flexShrink = 1;
+            // UITK:n oma kosketusvieritys pois (Kosketusvieritys hoitaa vedon): ei elastista ylitystä eikä inertiaa, jonka
+            // pysäytys söi ensimmäisen napautuksen uuteen listaan.
+            rivit.touchScrollBehavior = ScrollView.TouchScrollBehavior.Clamped;
+            rivit.scrollDecelerationRate = 0f;
             valikko.Add(rivit);
         }
 
