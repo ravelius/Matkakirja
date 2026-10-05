@@ -209,7 +209,18 @@ namespace Matkakirja.Natiivi
             if (!auki || d.tileset == null || d.tileset != maasto) return;
             // Viesti voi sisältää osoitteen: ei kirjata sellaisenaan (tunnus kyselyparametrissa).
             kirjaa($"kaupunki: tilesetin lataus epäonnistui ({Kaytossa}, tyyppi {d.type}, HTTP {d.httpStatusCode})");
-            if (Kaytossa == Lahde.Google) LuoData(Lahde.Ion);
+            // Ei tuhota tilesetiä sen omassa virhekutsussa (simu 18.20: sovellus pysähtyi heti "data Ion" -rivin jälkeen):
+            // vaihto seuraavaan kehykseen.
+            if (Kaytossa == Lahde.Google && !vaihtoJonossa) { vaihtoJonossa = true; kierto.StartCoroutine(VaihdaIoniin()); }
+        }
+        bool vaihtoJonossa;
+
+        System.Collections.IEnumerator VaihdaIoniin()
+        {
+            yield return null;
+            yield return null;
+            vaihtoJonossa = false;
+            if (auki && Kaytossa == Lahde.Google) LuoData(Lahde.Ion);
         }
 
         /// <summary>Georeferenssin origo uuteen paikkaan (kamera lasketaan ECEF:stä joka kehys, joten kuva ei hyppää).</summary>
