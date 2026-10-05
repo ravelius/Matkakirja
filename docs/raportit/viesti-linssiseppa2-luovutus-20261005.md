@@ -52,3 +52,14 @@ Kuvat: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-maailma-10c31692/kuvat. 
   Juuri on yhä "v2". Karttasepän v2b valmistuu noin klo 8 polkuun s2-indeksi/v2b/. Vaihda S2Maailma.Versio = "v2b" VASTA
   Päätoimittajan kuittauksen jälkeen, käännä ja aja kahdeksan kuvaa. Saman datataken indeksi (v2c, 3–4 h) odottaa
   Päätoimittajan etusijapäätöstä.
+
+## Päivitys 5.10. klo 10.3x (uusi Päätoimittaja local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31)
+- **78f1a7ed** radan reunan syövytys 2 px: Saharan tumma pisteviiva on COG-yleiskuvatasojen (40/80 m) keskiarvoistama reunapikseli
+  (COG häviötön Deflate, ei JPEG). Kehä tarkistetaan vain nodatalaattojen lähellä (NodataLaatat-lippu).
+- **231c3c21** vesitaso ruuduittain (TasaaVesi): Kanarian meri on kaikkialla SCL 6, mutta sunglint-päivät (28SBA 2025-06-13,
+  28SCB 2023-06-27) ovat 40–50 kirkkaampia; ruudun oman meren mediaani → merenväri, vain poikkeama jää 25 %:lla. Linssit 649/649.
+- Avoin: radan reunan ristihäivytyksen askel (datapuolen paino hyppää ~0,56:sta 0:aan, eri päivät 7–26 % eri kirkkaus). Katso
+  kuvista ennen korjausta (vaatisi etäisyyskentän nodataan).
+- Jonossa: käännös 231c3c21 Siirtosepän jälkeen (~11.45), simu F2D9B022 ~12.20 (Julkaisija). Karttasepän v2b julkaisu ~11–12.
+  Jos v2b on ämpärissä simuvuoroon mennessä: toinen ajo MAAILMA=<v2b maailma.json> VERSIO=v2 (maailma-kuvat.sh kopioi nyt
+  versioidulle nimelle), jolloin v2b:n voi todentaa ilman versiovakion vaihtoa.
