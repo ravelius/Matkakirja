@@ -27,6 +27,12 @@ Vanhemmat vaiheet: `viesti-karttaseppa-luovutus-20261002.md` (päivitykset 2.–
   - Valmistuttua: `VERSIO=v2b python3 maailma-json.py`, kuvapari v2 vs. v2b (20MRB, 20MRC, 28SCA + yksi Euroopan ruutu) PT:lle.
   - `tci-kooste.mjs` pitää laajentaa soveltamaan `savy`-kenttää ennen kuvaparia.
   - **Odota LS2:n laitekuvia (20MRC ja Kanaria) ennen vientiä.**
+- **S2-indeksi v2b LAAJENNETTU (PT 5.10. 06.2x, LS2:n laitekuvat `lokit/linssiseppa2-maailma-10c31692/kuvat`).** Ongelmat: 20MRC lievä pystysauma ja samea täyte, 28SCA suorat heijastussaumat avomerellä, Meksikon suisto 11SPR (2024-08-27) vs. 11SQR (2023-07-01) vaalea suorakulmio.
+  Erä v2b = kolme osaa samaan uuteen polkuun `s2-indeksi/v2b/`:
+  1) **Sävytasaus** täytekuvalle (käynnissä, `savytasaus.mjs`, kenttä `valinta.savy`).
+  2) **Naapuriruuduille sama ottopäivä tai rata:** ehdokaslistat haetaan uudelleen (`s2-indeksi-v2.mjs`:n `ruutu()`-ehdokkaat tallennettava välimuistiin), sitten naapurisovitus. Valinta 0 vaihdetaan naapurin kanssa samaan datatakeen (sama päivä + satelliitti, tai sama rata), jos pisteet ovat enintään noin 25 % huonommat. Arvio 3–4 h STAC-hakuja.
+  3) **Avomeren ruuduille vähäheijasteinen kohtaus:** mittaa TCI-yleiskuvan vesipikselien kirkkaus (tai käytä aurinkogeometriaa `view:sun_elevation`/`view:sun_azimuth`) ja valitse himmein.
+  Lopuksi kuvapari v2 vs. v2b PT:lle (20MRB, 20MRC, 28SCA, 11SPR/11SQR + yksi Euroopan ruutu), sitten vienti vie-paketti.sh:lla. LS2 vaihtaa version.
 - **Euroopan kaudet:** `iss-eurooppa-s2/kaudet/ketju-kaudet.sh` (PID 52116); syksy käynnissä (PID 13778, 41/169), sen jälkeen talvi.
   - Kausiskriptiin lisätty 5.10.: merimaski, napasäännöt, v2e ja kevään lumenvälttely.
   - Kevät valmis (169/169) ja pohjoiskorjaus (65 lohkoa) tehty. Tarkistettu: lumineliöt ja merijää poissa. Avoin: yksi Onegan suunnan järvi punertava.
