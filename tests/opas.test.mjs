@@ -373,3 +373,23 @@ test('suunnanvaihtosiru: ensin näkemättömät, ei kahdesti peräkkäin, ei pai
   assert.notEqual(sirut[6], 'Jotain vihreää', 'puistossa ei vihreää');
   assert.equal(seuraavaSuunta(['Veden äärelle'], 'kanava').siru, 'Missä voisi syödä?');
 });
+
+test('korostus: piste rakennukselle, alue aukiolle/puistolle, reitti kadulle nimillä (alle 2 pistettä → piste)', async () => {
+  const { paikanKorostus, jasennaOpas } = await import('../tools/pollo/opas.js');
+  const { fetch } = tynka();
+  assert.deepEqual(await paikanKorostus(fetch, { lat: 55.1, lon: 12.2, koko_m: 120, luokka: 'rakennus' }, KOOPENHAMINA),
+    { tyyppi: 'piste', pisteet: [[55.1, 12.2]], sade_m: 60 });
+  assert.equal((await paikanKorostus(fetch, { lat: 55.1, lon: 12.2, koko_m: 400, luokka: 'puisto' }, KOOPENHAMINA)).tyyppi, 'alue');
+  const r = await paikanKorostus(fetch, { lat: 55.1, lon: 12.2, luokka: 'katu', reitti: ['Tivoli Gardens', 'Kööpenhamina', 'Tuntematon'] }, KOOPENHAMINA);
+  assert.deepEqual(r, { tyyppi: 'reitti', pisteet: [[55.6737, 12.5681], [55.676, 12.568]] });
+  assert.equal((await paikanKorostus(fetch, { lat: 55.1, lon: 12.2, luokka: 'katu', reitti: ['Tuntematon', 'Tivoli Gardens'] }, KOOPENHAMINA)).tyyppi, 'piste');
+  const v = jasennaOpas('NIMI: Strøget\nLUOKKA: katu\nREITTI: Rådhuspladsen; Gammeltorv ; Amagertorv;Kongens Nytorv\nTEKSTI: Katu.');
+  assert.deepEqual(v.reitti, ['Rådhuspladsen', 'Gammeltorv', 'Amagertorv', 'Kongens Nytorv']);
+  assert.equal(v.teksti, 'Katu.');
+});
+
+test('reittipisteet järjestetään päästä päähän', async () => {
+  const { jarjestaAkselille } = await import('../tools/pollo/opas.js');
+  assert.deepEqual(jarjestaAkselille([[55.680278, 12.585833], [55.679722, 12.590556], [55.680531, 12.589119]]),
+    [[55.680278, 12.585833], [55.680531, 12.589119], [55.679722, 12.590556]], 'Nyhavn: Kongens Nytorv → … → satama');
+});

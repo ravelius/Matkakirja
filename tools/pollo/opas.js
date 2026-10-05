@@ -105,6 +105,9 @@ KOKO: <kohteen halkaisija tai pituus metreinä kameran kehystystä varten, kokon
 KORKEUS: <kohteen korkeus metreinä, jos se on merkittävä (torni, kirkko); muuten jätä rivi pois>
 LUOKKA: <yksi sana: katu, kanava, aukio, rakennus, torni, kirkko, linnoitus, puisto, vesi, silta tai muu>
 KUVAUS: <lyhyt suomenkielinen kuvaus otsikon alle, enintään viisi sanaa, esimerkiksi Kööpenhaminan kaupungintalo>
+REITTI: <vain kadulle, kanavalle tai rantareitille: 3–6 tunnettua paikkaa reitin varrelta päästä päähän järjestyksessä, \
+puolipisteillä erotettuina, kukin englanninkielisen Wikipedian otsikolla, esimerkiksi Rådhuspladsen; Gammeltorv; \
+Amagertorv; Kongens Nytorv; muille paikoille jätä rivi pois>
 TEKSTI: <kappale>
 VAIHTOEHTO: <ensimmäinen vastausvaihtoehto>
 VAIHTOEHTO: <toinen vastausvaihtoehto>
@@ -327,7 +330,8 @@ export function jasennaOpas(teksti, varaNimi = null) {
     ...(Number.isFinite(korkeus) && korkeus > 0 ? { korkeus_m: Math.min(1000, korkeus) } : {}),
     ...(luokka ? { luokka } : {}),
     ...(kentta(teksti, 'KUVAUS') ? { kuvaus: siivoa(kentta(teksti, 'KUVAUS'), 80) } : {}),
-    teksti: siivoa(tekstiOsa.replace(/^\s*(KORKEUS|LUOKKA|KUVAUS)\s*:.*$/gim, ''), 900),
+    ...(kentta(teksti, 'REITTI') ? { reitti: kentta(teksti, 'REITTI').split(';').map((x) => siivoa(x, 120)).filter(Boolean).slice(0, 6) } : {}),
+    teksti: siivoa(tekstiOsa.replace(/^\s*(KORKEUS|LUOKKA|KUVAUS|REITTI)\s*:.*$/gim, ''), 900),
     vaihtoehdot,
   };
 }
@@ -485,4 +489,37 @@ export function seuraavaSuunta(kaytetyt = [], luokka = null) {
   let pohja = kaytetyt;
   if (!siru) { pohja = edellinen ? [edellinen] : []; siru = SUUNNANVAIHDOT.find(sopii); }
   return { siru, kaytetyt: [...pohja, siru].slice(-SUUNNANVAIHDOT.length) };
+}
+
+/*
+ * KOROSTUS (Päätoimittaja 5.10.2026 ilta, juna 145; muoto Siirtosepälle ja Linssisepälle): { tyyppi: piste | alue |
+ * reitti, pisteet: [[lat, lon], …], sade_m? }. Rakennus, torni ja kirkko → piste; aukio, puisto ja linnoitus → alue
+ * (keskipiste + säde koko_m/2); katu, kanava ja rantareitti → reitti 3–6 pisteen kautta päästä päähän, pisteet nimellä
+ * Wikidatasta/Wikipediasta (paikanKoordinaatit). Ei OSM-geometriaa tässä versiossa. Alle 2 reittipistettä → piste.
+ */
+const ALUELUOKAT = new Set(['aukio', 'puisto', 'linnoitus']);
+const REITTILUOKAT = new Set(['katu', 'kanava', 'vesi']);
+const pyorista = (x) => Math.round(x * 1e6) / 1e6;
+
+export async function paikanKorostus(haku, { lat, lon, koko_m: koko = 150, luokka = null, reitti = [] }, viite) {
+  const sade_m = Math.max(10, Math.round(koko / 2));
+  if (REITTILUOKAT.has(luokka) && reitti.length >= 2) {
+    const pisteet = (await Promise.all(reitti.map((nimi) => paikanKoordinaatit(haku, { nimi, wikipedia: nimi }, viite))))
+      .filter((x) => x && x.lahde === 'wikipedia').map((x) => [pyorista(x.lat), pyorista(x.lon)])
+      .filter((x, i, kaikki) => kaikki.findIndex((y) => y[0] === x[0] && y[1] === x[1]) === i);
+    if (pisteet.length >= 2) return { tyyppi: 'reitti', pisteet: jarjestaAkselille(pisteet) };
+  }
+  return { tyyppi: ALUELUOKAT.has(luokka) ? 'alue' : 'piste', pisteet: [[pyorista(lat), pyorista(lon)]], sade_m };
+}
+
+/** Reittipisteet päästä päähän: kauimmaiset kaksi ovat päät, muut järjestetään projektiona niiden väliselle akselille. */
+export function jarjestaAkselille(pisteet) {
+  if (pisteet.length <= 2) return pisteet;
+  const p = (x) => ({ lat: x[0], lon: x[1] });
+  let a = pisteet[0], b = pisteet[1], pisin = -1;
+  for (const x of pisteet) for (const y of pisteet) { const d = etaisyys(p(x), p(y)); if (d > pisin) { pisin = d; a = x; b = y; } }
+  const kx = Math.cos((a[0] * Math.PI) / 180);
+  const ax = [(b[1] - a[1]) * kx, b[0] - a[0]];
+  const proj = (x) => ((x[1] - a[1]) * kx * ax[0] + (x[0] - a[0]) * ax[1]);
+  return [...pisteet].sort((x, y) => proj(x) - proj(y));
 }
