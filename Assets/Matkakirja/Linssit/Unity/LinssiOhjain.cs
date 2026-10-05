@@ -25,6 +25,8 @@
 // linssien äänille "aani tila | keksinto | vuosi | humina [pois]" (soitto ja lähteen aika hetken päästä, humina
 // Pelikoodarin maisemakanavalla ilman linssiä); elävälle kartalle "elava kreikka [alku s] [nopeus] | kuva <s> | jatka |
 // saapuminen <kaupunki> | saato | ui | pois | tila" (ElavaKartta); ISS:n radalle "iss tila | lataa" (IssTleLataaja).
+// Lontoo-pilotille (Linssiseppä 5.10.2026) "linssi lontoo" ja "lontoo ohita | tila" (LontooSovitin; kehitystunnus
+// Documents/cesium-ion-tunnus.txt).
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
 using System.Collections.Generic;
@@ -124,6 +126,7 @@ namespace Matkakirja.Natiivi
         MaapallonVuosiSovitin vuosi;
         AjattelijatSovitin ajattelijat;
         DioraamaSovitin poikki;
+        LontooSovitin lontoo;
         Linssirekisteri rekisteri;
 
         /// <summary>PlayerPrefs-avain astronautin reliefin kylläisyydelle (Natiivi-UI:n kehittäjävalikko).</summary>
@@ -238,6 +241,8 @@ namespace Matkakirja.Natiivi
             rekisteri.Lisaa(poikki = new DioraamaSovitin(this, k));
             // Ajattelijat (Linssiseppä 2, 2.10.2026; web #3839/#3840): vain kehittäjätilassa (ei avauskynnystä).
             rekisteri.Lisaa(ajattelijat = new AjattelijatSovitin(this));
+            // Lontoo-pilotti (Linssiseppä 5.10.2026, omistaja 16.3x): vain natiivi, kehittäjätilassa (Cesium ion -lento).
+            rekisteri.Lisaa(lontoo = new LontooSovitin(this, k));
             StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
@@ -1996,6 +2001,11 @@ namespace Matkakirja.Natiivi
                         ? $"isoisä 1873: näkyvissä {ik.Nakyvia} nimeä, kamera {Kamera}" : "isoisä 1873: linssi ei ole auki");
                 else if (osat[0] == "vuosi")
                     vuosi.Komento(osat);
+                else if (osat[0] == "lontoo")
+                {
+                    if (osat.Length > 1 && osat[1] == "ohita") lontoo?.Ohita();
+                    Kirjaa(lontoo?.Tila() ?? "lontoo: ei sovitinta");
+                }
                 else if (osat[0] == "poikki")
                     poikki.Komento(osat);
                 else if (osat[0] == "ajattelija")
