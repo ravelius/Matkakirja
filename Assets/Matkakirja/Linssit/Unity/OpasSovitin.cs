@@ -186,7 +186,12 @@ namespace Matkakirja.Natiivi
         {
             if (silmukka == null || Virhe != null || paivitetty == Time.frameCount) return;
             paivitetty = Time.frameCount;
-            if (puhuu && Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying)) { puhuu = false; y.Repliikki(false); silmukka.AaniLoppui(); }
+            bool loppui = pcmNyt != null ? pcmNyt.Loppui : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying);
+            if (puhuu && loppui)
+            {
+                if (pcmNyt != null) { if (pcmNyt.Katkoja > 0) o.Kirjaa($"opas: PCM-virrassa {pcmNyt.Katkoja} katkoa"); pcmNyt = null; if (puhe != null) puhe.Stop(); }
+                puhuu = false; y.Repliikki(false); silmukka.AaniLoppui();
+            }
             KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
@@ -270,7 +275,41 @@ namespace Matkakirja.Natiivi
         void Valmistele(OpasKohde k)
         {
             if (!k.Kysymys) o.StartCoroutine(Korkeus(k));
-            if (!string.IsNullOrEmpty(k.Aani) && !klipit.ContainsKey(k.Aani)) o.StartCoroutine(LataaAani(k.Aani));
+            if (!string.IsNullOrEmpty(k.AaniPcm)) { if (!klipit.ContainsKey(k.AaniPcm) && !pcmVirrat.ContainsKey(k.AaniPcm)) o.StartCoroutine(LataaPcm(k)); }
+            else if (!string.IsNullOrEmpty(k.Aani) && !klipit.ContainsKey(k.Aani)) o.StartCoroutine(LataaAani(k.Aani));
+        }
+
+        /// <summary>PCM-virrat avaimittain (Pöllön aani_pcm) ja soiva virta (loppu tunnistetaan siitä, ei klipin pituudesta).</summary>
+        readonly Dictionary<string, PcmVirta> pcmVirrat = new Dictionary<string, PcmVirta>(StringComparer.Ordinal);
+        PcmVirta pcmNyt;
+        /// <summary>Toisto alkaa, kun virrassa on näin paljon puskuria (s) tai lataus on valmis.</summary>
+        const float PcmPuskuriS = 0.5f;
+
+        /// <summary>PCM-virran lataus: klippi valmiina (klipit[avain]), kun puskuria on PcmPuskuriS; lataus jatkuu taustalla loppuun.</summary>
+        IEnumerator LataaPcm(OpasKohde k)
+        {
+            string avain = k.AaniPcm;
+            var virta = new PcmVirta(k.AaniTaajuus, (float)k.KestoS);
+            pcmVirrat[avain] = virta;
+            using var p = new UnityWebRequest(avain, "GET") { downloadHandler = virta, timeout = AikarajaS + 30, disposeDownloadHandlerOnDispose = false };   // virta elää klipin mukana
+            p.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            p.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
+            float t0 = Time.realtimeSinceStartup;
+            var op = p.SendWebRequest();
+            while (!op.isDone && virta.PuskuroituS < PcmPuskuriS) yield return null;
+            if (p.result == UnityWebRequest.Result.ConnectionError || p.result == UnityWebRequest.Result.ProtocolError || virta.KirjoitettuS <= 0f)
+            {
+                while (!op.isDone) yield return null;
+                o.Kirjaa($"opas: PCM-virta epäonnistui ({p.responseCode} {p.error}), mp3-varapolku");
+                pcmVirrat.Remove(avain);
+                if (!string.IsNullOrEmpty(k.Aani) && !klipit.ContainsKey(k.Aani)) { yield return LataaAani(k.Aani); if (klipit.TryGetValue(k.Aani, out var mp3)) klipit[avain] = mp3; }
+                else klipit[avain] = null;
+                yield break;
+            }
+            klipit[avain] = virta.Klippi("opas-pcm", (float)k.KestoS);
+            o.Kirjaa($"opas: PCM-virta soittovalmis {Time.realtimeSinceStartup - t0:F1} s:ssa ({virta.PuskuroituS:F1} s puskurissa)");
+            while (!op.isDone) yield return null;
+            o.Kirjaa($"opas: PCM-virta valmis {Time.realtimeSinceStartup - t0:F1} s, {virta.KirjoitettuS:F1} s ääntä");
         }
 
         IEnumerator Korkeus(OpasKohde k)
@@ -312,16 +351,18 @@ namespace Matkakirja.Natiivi
             tekstina = null;
             bool kertoja = Asetukset.Paalla(Kytkin.Kertoja);
             // Ääni latautuu vielä (simu 19.0x: saapumiset ilman ääntä): odotetaan enintään AaniOdotusS ennen tekstiä.
-            if (kertoja && !string.IsNullOrEmpty(k.Aani) && !klipit.ContainsKey(k.Aani) && aaniOdotus != k) { aaniOdotus = k; o.StartCoroutine(OdotaAani(k)); return; }
+            string avain = k.AaniAvain;
+            if (kertoja && !string.IsNullOrEmpty(avain) && !klipit.ContainsKey(avain) && aaniOdotus != k) { aaniOdotus = k; o.StartCoroutine(OdotaAani(k)); return; }
             aaniOdotus = null;
-            if (kertoja && !string.IsNullOrEmpty(k.Aani) && klipit.TryGetValue(k.Aani, out var klippi) && klippi != null && puhe != null)
+            if (kertoja && !string.IsNullOrEmpty(avain) && klipit.TryGetValue(avain, out var klippi) && klippi != null && puhe != null)
             {
                 puhe.clip = klippi; puhe.volume = 1f; puhe.Play();
                 puhuu = true; y.Repliikki(true);
-                puheLoppuu = Time.unscaledTime + klippi.length;
+                pcmNyt = pcmVirrat.TryGetValue(avain, out var v) ? v : null;
+                puheLoppuu = pcmNyt != null ? float.MaxValue : Time.unscaledTime + klippi.length;
                 return;
             }
-            o.Kirjaa($"opas: kappale tekstinä ({(!kertoja ? "Kertoja pois" : string.IsNullOrEmpty(k.Aani) ? "ei ääntä vastauksessa" : "ääni ei latautunut")})");
+            o.Kirjaa($"opas: kappale tekstinä ({(!kertoja ? "Kertoja pois" : string.IsNullOrEmpty(avain) ? "ei ääntä vastauksessa" : "ääni ei latautunut")})");
             tekstina = k;
             double s = k.KestoS > 0 ? k.KestoS : KierrosLento.PysahdysKesto(k.Teksti);
             o.StartCoroutine(TekstiLoppuu(s, k));
@@ -332,9 +373,10 @@ namespace Matkakirja.Natiivi
         IEnumerator OdotaAani(OpasKohde k)
         {
             float t0 = Time.realtimeSinceStartup;
-            while (silmukka != null && !klipit.ContainsKey(k.Aani) && Time.realtimeSinceStartup - t0 < AaniOdotusS) yield return null;
+            string avain = k.AaniAvain;
+            while (silmukka != null && !klipit.ContainsKey(avain) && Time.realtimeSinceStartup - t0 < AaniOdotusS) yield return null;
             if (silmukka == null || (silmukka.Nykyinen != k && !(silmukka.OdottaaVastausta && viimeKysymys == k))) yield break;
-            o.Kirjaa($"opas: ääni {(klipit.ContainsKey(k.Aani) ? "latautui" : "ei latautunut")} {Time.realtimeSinceStartup - t0:F1} s:ssa");
+            o.Kirjaa($"opas: ääni {(klipit.ContainsKey(avain) ? "latautui" : "ei latautunut")} {Time.realtimeSinceStartup - t0:F1} s:ssa");
             Soita(k);
         }
 
@@ -355,12 +397,12 @@ namespace Matkakirja.Natiivi
         void VapautaVanhatAanet(OpasKohde nyt)
         {
             var pidetaan = new HashSet<string>();
-            if (nyt?.Aani != null) pidetaan.Add(nyt.Aani);
-            if (silmukka?.Seuraava?.Aani != null) pidetaan.Add(silmukka.Seuraava.Aani);
-            if (viimeKysymys?.Aani != null && silmukka != null && silmukka.OdottaaVastausta) pidetaan.Add(viimeKysymys.Aani);
+            if (nyt?.AaniAvain != null) pidetaan.Add(nyt.AaniAvain);
+            if (silmukka?.Seuraava?.AaniAvain != null) pidetaan.Add(silmukka.Seuraava.AaniAvain);
+            if (viimeKysymys?.AaniAvain != null && silmukka != null && silmukka.OdottaaVastausta) pidetaan.Add(viimeKysymys.AaniAvain);
             var pois = new List<string>();
             foreach (var kv in klipit) if (!pidetaan.Contains(kv.Key)) pois.Add(kv.Key);
-            foreach (var u in pois) { if (klipit[u] != null && (puhe == null || puhe.clip != klipit[u])) UnityEngine.Object.Destroy(klipit[u]); klipit.Remove(u); }
+            foreach (var u in pois) { if (klipit[u] != null && (puhe == null || puhe.clip != klipit[u])) UnityEngine.Object.Destroy(klipit[u]); klipit.Remove(u); pcmVirrat.Remove(u); }
         }
 
         /// <summary>Pysähdyksen alussa (kamera kiertää hitaasti): käyttämättömät resurssit pois ja muistierittely lokiin.</summary>
@@ -385,8 +427,8 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void Kysyy(OpasKohde k)
         {
-            if (!string.IsNullOrEmpty(k.Aani) && !klipit.ContainsKey(k.Aani)) { o.StartCoroutine(SoitaLadattuna(k)); }
-            else Soita(k);
+            if (string.IsNullOrEmpty(k.AaniPcm) && !string.IsNullOrEmpty(k.Aani) && !klipit.ContainsKey(k.Aani)) { o.StartCoroutine(SoitaLadattuna(k)); }
+            else Soita(k);   // PCM: Soita odottaa virtaa (OdotaAani)
             KysymysChattiin(k);
             o.Kirjaa($"opas: kysyy \"{k.Teksti}\" [{string.Join(" | ", k.Vaihtoehdot ?? Array.Empty<string>())}]");
         }
@@ -443,6 +485,7 @@ namespace Matkakirja.Natiivi
 
         void Hiljenna()
         {
+            pcmNyt = null;
             if (puhe != null && puhe.isPlaying) puhe.Stop();
             if (puhuu) { puhuu = false; y.Repliikki(false); }
         }
@@ -479,6 +522,7 @@ namespace Matkakirja.Natiivi
             silmukka = null; paivitetty = -1; Virhe = null; puhuu = false;
             foreach (var k in klipit.Values) if (k != null) UnityEngine.Object.Destroy(k);
             klipit.Clear();
+            pcmVirrat.Clear(); pcmNyt = null;
             maaKorkeudet.Clear();
             Vaihtui?.Invoke(null);
         }

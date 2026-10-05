@@ -14,6 +14,11 @@ namespace Matkakirja.Linssit.Kierros
     public sealed class OpasKohde
     {
         public string Id, Nimi, Alarivi, Teksti, Aani;
+        /// <summary>PCM-virta (Pöllö, juna 145): raaka s16le mono AaniTaajuus Hz, chunked; ensimmäiset tavut ~0,3 s. null = vain mp3.</summary>
+        public string AaniPcm;
+        public int AaniTaajuus = 24000;
+        /// <summary>Äänen tunniste (PCM ensisijainen, muuten mp3); null = ei ääntä.</summary>
+        public string AaniAvain => !string.IsNullOrEmpty(AaniPcm) ? AaniPcm : Aani;
         public double Lat, Lon, KokoM = 60, KorkeusM, KestoS;
         /// <summary>Workerin kysymys (tyyppi "kysymys"): opas kysyy ääneen, vaihtoehdot chattiin; ei sijaintia.</summary>
         public bool Kysymys;
@@ -30,11 +35,13 @@ namespace Matkakirja.Linssit.Kierros
             {
                 var vaihtoehdot = new List<string>();
                 if (j.TryGetValue("vaihtoehdot", out var vo) && vo is IList<object> lista) foreach (var x in lista) if (x is string t && t.Length > 0) vaihtoehdot.Add(t);
-                return string.IsNullOrEmpty(S("teksti")) ? null : new OpasKohde { Kysymys = true, Teksti = S("teksti"), Aani = S("aani"), KestoS = D("kesto_s", 0), Vaihtoehdot = vaihtoehdot.ToArray() };
+                return string.IsNullOrEmpty(S("teksti")) ? null : new OpasKohde { Kysymys = true, Teksti = S("teksti"), Aani = S("aani"), AaniPcm = S("aani_pcm"),
+                    AaniTaajuus = (int)D("aani_taajuus", 24000), KestoS = D("kesto_s", 0), Vaihtoehdot = vaihtoehdot.ToArray() };
             }
             var k = new OpasKohde
             {
-                Id = S("id"), Nimi = S("nimi"), Alarivi = S("alarivi"), Teksti = S("teksti"), Aani = S("aani"),
+                Id = S("id"), Nimi = S("nimi"), Alarivi = S("alarivi"), Teksti = S("teksti"), Aani = S("aani"), AaniPcm = S("aani_pcm"),
+                AaniTaajuus = (int)D("aani_taajuus", 24000),
                 Lat = D("lat", double.NaN), Lon = D("lon", double.NaN), KokoM = D("koko_m", 60), KorkeusM = D("korkeus_m", 0), KestoS = D("kesto_s", 0),
             };
             if (j.TryGetValue("vaihtoehdot", out var pv) && pv is IList<object> pl)
