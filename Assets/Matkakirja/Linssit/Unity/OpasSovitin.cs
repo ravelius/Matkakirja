@@ -96,6 +96,7 @@ namespace Matkakirja.Natiivi
         public static bool VaihdaKaupunki(string nimi, double lat, double lon, string iso)
         {
             if (!Auki || string.IsNullOrWhiteSpace(nimi)) return false;
+            (lat, lon) = Keskusta(lat, lon);   // Natural Earth -piste → kaupungin keskusta (Wikidata P625)
             Aloituskaupunki = nimi.Trim();
             Viimeisin.pakotettuSijainti = (lat, lon);
             Viimeisin.o.Kirjaa($"opas: kaupunki vaihtuu → {Aloituskaupunki} ({lat:F3}, {lon:F3})");
@@ -258,6 +259,28 @@ namespace Matkakirja.Natiivi
             if (Testi) { o.StartCoroutine(TestiVastaus(n)); return; }
             o.StartCoroutine(Hae(n, toive));
         }
+
+        // ---- KAUPUNKIEN KESKUSTAT (Päätoimittaja 6.10. 00.4x: Amsterdam laskeutui Natural Earthin pisteeseen 2,5 km keskustasta) ----
+        /// <summary>
+        /// Valikon kaupunkipisteet ovat Natural Earthin asutuspaikkoja, jotka voivat olla kilometrien päässä keskustasta. Korjaustaulu
+        /// Resources/Opas/keskustat.json: "lat,lon" (4 desimaalia, paikat.json:n arvot) → Wikidata P625 (NE:n WIKIDATAID), vain kun
+        /// ero on 250 m – 30 km. Muuten piste sellaisenaan.
+        /// </summary>
+        public static (double lat, double lon) Keskusta(double lat, double lon)
+        {
+            if (keskustat == null)
+            {
+                keskustat = new Dictionary<string, (double, double)>(StringComparer.Ordinal);
+                var ta = Resources.Load<TextAsset>("Opas/keskustat");
+                if (ta != null && MiniJson.Jasenna(ta.text) is Dictionary<string, object> j && j.TryGetValue("keskustat", out var ko) && ko is Dictionary<string, object> kd)
+                    foreach (var kv in kd)
+                        if (kv.Value is IList<object> l && l.Count >= 2)
+                            keskustat[kv.Key] = (Convert.ToDouble(l[0], System.Globalization.CultureInfo.InvariantCulture), Convert.ToDouble(l[1], System.Globalization.CultureInfo.InvariantCulture));
+            }
+            string avain = lat.ToString("F4", System.Globalization.CultureInfo.InvariantCulture) + "," + lon.ToString("F4", System.Globalization.CultureInfo.InvariantCulture);
+            return keskustat.TryGetValue(avain, out var k) ? k : (lat, lon);
+        }
+        static Dictionary<string, (double, double)> keskustat;
 
         // ---- TAUKO JA TÄKYLUETTELO (omistaja TF 144, juna 146; UI Natiivi-UI heijastuksella) ----
         /// <summary>UI asettaa true, kun se näyttää täkyluettelon avauksessa; muuten opas alkaa kuten ennen (vanha UI).</summary>
