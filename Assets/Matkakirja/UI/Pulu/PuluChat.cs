@@ -468,6 +468,13 @@ namespace Matkakirja.Natiivi
             // ja 2 uutta ehdotusta pinoutuivat 4:ksi): linssin kysymykset korvaavat vanhat; muuten edellisen vastauksen jatkot jäävät,
             // ja uusia ehdotuksia haetaan vain, jos siruja ei ole.
             bool vanhatSirut = sirualue.Q(className: "mk-chat__sirut") != null;
+            // Astronautin kuva auki (juna 147): kuvan omat sirut workerilta linssin yleisten valmiiden tilalle.
+            string kuva = KuvaKentta();
+            if (kuva.Length > 0)
+            {
+                if (kuva != edellinenKuva || !vanhatSirut) { edellinenKuva = kuva; PoistaSirut(); if (ehdotukset) HaeEhdotukset(); }
+                return;
+            }
             if (LinssiKysymykset.Nykyinen() != null) PoistaSirut();
             if (!NaytaLinssinValmiit() && ehdotukset && !vanhatSirut) HaeEhdotukset();
         }
@@ -1495,7 +1502,7 @@ namespace Matkakirja.Natiivi
             if (uusi == edellinenKuva) return;
             edellinenKuva = uusi;
             ehdotusPoletti++;
-            foreach (var e in sirualue.Query(className: "mk-chat__ehdotukset").ToList()) e.RemoveFromHierarchy();
+            PoistaSirut();
             foreach (var e in virta.Query(className: "mk-chat__ehdotus-odotus").ToList()) e.RemoveFromHierarchy();
             if (Auki && !kysyy) HaeEhdotukset();
         }

@@ -743,6 +743,8 @@ namespace Matkakirja.Natiivi
         // VÄISTÖ CHATILLE (Päätoimittaja 6.10. klo 00.5x, juna 147): chatin avautuessa kortti pienenee PINNATTU PALKKI
         // -palkiksi oikeaan yläreunaan ja palaa, kun chat suljetaan; palkin napautus palauttaa kortin heti (ja sulkee chatin).
         bool vaistetty, chatOliAuki;
+        /// <summary>Väistö alkoi/päättyi: karttaselitteen maakuntalappu väistää samaan palkkiin (simu 6.10. 01.0x: palkki lapun päällä).</summary>
+        public static event Action<bool> VaistoMuuttui;
         Pinnaus.Kohde vaistoKohde;
 
         void TarkistaVaisto()
@@ -760,6 +762,7 @@ namespace Matkakirja.Natiivi
                 Palauta = () => PalautaVaistosta(true), Irti = () => { vaistetty = false; Sulje(); } };
             if (!Pinnaus.Vaista(vaistoKohde)) return;
             vaistetty = true;
+            VaistoMuuttui?.Invoke(true);
             suurennos.Sulje();
             SuljeKartta(true);
             Rakenne.Nayta(himmennys, false, LinssiUi.VahennettyLiike() ? 0 : 240);
@@ -770,6 +773,7 @@ namespace Matkakirja.Natiivi
         {
             if (!vaistetty) return;
             vaistetty = false;
+            VaistoMuuttui?.Invoke(false);
             if (suljeChat) UiNakymat.Hae()?.Chat?.Sulje();
             if (!Auki) return;
             Rakenne.Nayta(himmennys, true);
@@ -909,7 +913,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             if (!Auki) return;
-            if (vaistetty) { vaistetty = false; Pinnaus.LopetaVaisto(vaistoKohde); }
+            if (vaistetty) { vaistetty = false; VaistoMuuttui?.Invoke(false); Pinnaus.LopetaVaisto(vaistoKohde); }
             Auki = JokinAuki = false;
             laajennettu = false;
             suurennos.Sulje();

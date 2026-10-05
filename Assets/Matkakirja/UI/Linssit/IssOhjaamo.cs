@@ -347,7 +347,8 @@ namespace Matkakirja.Natiivi
             objektiivi.style.top = r.yMax * s - osuma; objektiivi.style.height = osuma;
             foreach (var b in new[] { laajaNappi, teleNappi })
             {
-                b.style.height = h; b.style.flexGrow = 0;
+                // Pohjan lcdnappi on rivin solu (flex-basis 0): pystysarakkeessa korkeus tulee perusmitasta, ei heightistä.
+                b.style.height = h; b.style.flexBasis = h; b.style.flexGrow = 0; b.style.flexShrink = 0;
                 var t = b.Q<Label>(className: "mk-nappi__teksti");
                 if (t != null) t.style.fontSize = ObjektiiviPt * s;
             }
