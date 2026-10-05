@@ -64,6 +64,11 @@ static void Alusta(void)
     });
 }
 
+// Testimykistys (MatkakirjaAani.mm, Pelikoodari 5.10.2026): ulostulo 0 simulaattoriajoissa; kaappauksen tappi näkee signaalin.
+extern "C" bool MatkakirjaAani_TestiMykka(void);
+extern "C" void MatkakirjaAani_SovitaMykistys(AVAudioEngine* moottori);
+static id mykistysTarkkailija;
+
 // Jonossa.
 static void Istunto(void)
 {
@@ -87,6 +92,11 @@ static BOOL KaynnistaMoottori(void)
         kaappausMikseri = [AVAudioMixerNode new];
         [moottori attachNode:kaappausMikseri];
         [moottori connect:kaappausMikseri to:moottori.mainMixerNode format:nil];
+        MatkakirjaAani_SovitaMykistys(moottori);
+        mykistysTarkkailija = [[NSNotificationCenter defaultCenter] addObserverForName:@"MatkakirjaTestiMykistysMuuttui"
+            object:nil queue:nil usingBlock:^(NSNotification* n) {
+                dispatch_async(jono, ^{ if (kaappausTila != 1) MatkakirjaAani_SovitaMykistys(moottori); });
+            }];
         muutosTarkkailija = [[NSNotificationCenter defaultCenter] addObserverForName:AVAudioEngineConfigurationChangeNotification
             object:moottori queue:nil usingBlock:^(NSNotification* n) {
                 dispatch_async(jono, ^{
@@ -237,6 +247,7 @@ void MatkakirjaSilmukka_Kaappaa(const char* polku, double sekunnit)
                 dispatch_async(jono, ^{
                     [kaappausMikseri removeTapOnBus:0];
                     moottori.mainMixerNode.outputVolume = kaappausEdellinenUlos;
+                    if (MatkakirjaAani_TestiMykka()) moottori.mainMixerNode.outputVolume = 0;   // mykistys kytkettiin kesken
                     NSLog(@"MATKAKIRJA silmukat: natiivikaappaus valmis: %@, alku hostTime %.4f s, näytetaajuus %.0f Hz",
                           p, kaappausAlkuHost, kaappausTiedosto.processingFormat.sampleRate);
                     kaappausTiedosto = nil;

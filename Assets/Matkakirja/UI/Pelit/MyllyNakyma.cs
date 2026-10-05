@@ -146,7 +146,7 @@ namespace Matkakirja.Natiivi
             valintaKortti = new Kortti("mk-peli__kortti", pohja: true);
             var vk = Rakenne.Teksti("", "mk-kortti__kapiteeli mk-peli__valinta-kapiteeli", valintaKortti.Sisus);
             Kirjasimet.Aseta(vk, Tyylikirja.Kirjain.Kapiteeli);
-            Kirjasimet.Aseta(Rakenne.Teksti("Pelataanko myllyä?", "mk-kortti__otsikko", valintaKortti.Sisus), Tyylikirja.Kirjain.Otsikko);
+            Kirjasimet.Aseta(Rakenne.Teksti(Asetus.T("mylly.valinta.otsikko", "Pelataanko myllyä?"), "mk-kortti__otsikko", valintaKortti.Sisus), Tyylikirja.Kirjain.Otsikko);
             var ala = Rakenne.Teksti("", "mk-kortti__alaotsikko mk-peli__valinta-ala", valintaKortti.Sisus);
             Kirjasimet.Aseta(ala, Tyylikirja.Kirjain.Apuri);
             Rakenne.Teksti("Kolme nappulaa samalla viivalla on mylly: saat poistaa yhden vastustajan nappulan. Se, jolta jää alle kolme, häviää.",
@@ -260,10 +260,10 @@ namespace Matkakirja.Natiivi
         // Lisä-äänet (Pelikoodari 5.10., Freesound CC0, huiput −6 dBFS eli 4,5 dB vanhoja hiljaisempia → vahvistus × 1,68):
         // liuku siirron alussa, lukitusisku heti kun mylly syntyy (ennen poistoa), voitto ja häviö lopputuloksessa.
         const string AaniSiirto = "mylly-siirto", AaniMylly = "mylly-mylly", AaniVoitto = "mylly-voitto", AaniHavio = "mylly-havio";
-        const float LisaVahvistus = Vahvistus * 1.68f;
+        static float LisaVahvistus => Vahvistus * Asetus.Luku("aanet.MyllyLisaKerroin", 1.68f);
         /// <summary>Päätoimittaja 5.10. (kaappaus bc863309): oletusvahvistuksella 0,35 nappulat soivat −23…−25 dBFS, puhelimen kaiuttimesta
         /// heikosti. 1,6 (+13 dB; 1,1 mitattiin 5.10. 01.52: huiput −15,3…−17,2) → ≈ −12…−14 dBFS (tavoite −12…−15), AudioSource.volume 1,6 × 0,296 ≈ 0,47.</summary>
-        const float Vahvistus = 1.6f;
+        static float Vahvistus => Asetus.Luku("aanet.MyllyVahvistus", 1.6f);
 
         static void SiirronAani(MyllySiirto s, float voima)
         {
@@ -277,8 +277,9 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Savuke 1113: naksua ei todennettu. Klippi ladataan muistiin heti (preloadAudioData + LoadAudioData), jotta
         /// ensimmäinen soitto leikkaa siivun eikä jää latauksen taakse; puuttuva klippi lokiin.</summary>
-        static void RekisteroiAani(string nimi, float vahvistus = Vahvistus)
+        static void RekisteroiAani(string nimi, float vahvistus = -1f)
         {
+            if (vahvistus < 0f) vahvistus = Vahvistus;
             var c = Resources.Load<AudioClip>(MyllyLauta.KansioPolku + nimi);
             if (c == null) { Debug.LogWarning("MATKAKIRJA mylly: ääni puuttuu " + nimi); return; }
             if (c.loadState != AudioDataLoadState.Loaded) c.LoadAudioData();

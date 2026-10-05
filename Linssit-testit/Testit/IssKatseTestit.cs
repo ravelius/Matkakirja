@@ -212,5 +212,46 @@ namespace Matkakirja.Linssit.Testit
             kyyti.Nollaa();
             Oleta.Tosi(!kyyti.Katse.Muutettu, "linssin sulku nollaa katseen");
         }
+
+        [Testi] static void JoystickPlusPitoJaPysahdysHeti()
+        {
+            // Omistaja 4.10.2026: plus-muotoinen joystick, liike pidettäessä, pysähtyy heti irrotettaessa (ei inertiaa).
+            var k = new IssKatse();
+            k.Aseta(40, 0);
+            k.Askel(0, 30, 21);
+            k.Ohjaa(JoystickSuunta.Alas, 0);
+            for (int i = 1; i <= 30; i++) k.Askel(i / 60.0, 30, 21);   // 0,5 s
+            double alas = k.AlasNyt(30);
+            Oleta.Tosi(alas > 40 + 0.5 * IssKatse.JoyVauhti * 0.9 && alas < 40 + 0.5 * IssKatse.JoyVauhti * 1.3, $"0,5 s alas: {alas:0.00}");
+            Oleta.Sama(0.0, k.Suunta, "vain pystyakseli");
+            Oleta.Tosi(k.JoystickLiikkuu && k.Liikkuu, "liikkuu pidossa");
+            k.Ohjaa(JoystickSuunta.Ei, 0.5);
+            double irti = k.AlasNyt(30);
+            for (int i = 31; i <= 60; i++) k.Askel(i / 60.0, 30, 21);
+            Oleta.Sama(irti, k.AlasNyt(30), "pysähtyy heti, ei liukua");
+            Oleta.Tosi(!k.Liikkuu, "levossa");
+            // Vaaka-akseli: ilmansuunta, pystykulma ennallaan.
+            k.Ohjaa(JoystickSuunta.Oikea, 1.0);
+            for (int i = 61; i <= 90; i++) k.Askel(i / 60.0, 30, 21);
+            Oleta.Tosi(k.Suunta > 6 && Math.Abs(k.AlasNyt(30) - irti) < 1e-9, $"oikea: suunta {k.Suunta:0.0}");
+        }
+
+        [Testi] static void JoystickKiihtyyPitkassaPainalluksessa()
+        {
+            Oleta.Sama(IssKatse.JoyVauhti, IssKatse.JoyNopeus(0));
+            Oleta.Sama(IssKatse.JoyVauhti * IssKatse.JoyMaxKerroin, IssKatse.JoyNopeus(IssKatse.JoyKiihtymisS));
+            Oleta.Sama(IssKatse.JoyVauhti * IssKatse.JoyMaxKerroin, IssKatse.JoyNopeus(10), "katto");
+            Oleta.Tosi(IssKatse.JoyNopeus(0.75) > IssKatse.JoyNopeus(0.5), "kasvaa");
+            // Ylös = kohti horisonttia, alaraja pitää (ei läpi).
+            var k = new IssKatse();
+            k.Aseta(25, 0);
+            k.Askel(0, 30, 21);
+            k.Ohjaa(JoystickSuunta.Ylos, 0);
+            for (int i = 1; i <= 120; i++) k.Askel(i / 60.0, 30, 21);
+            Oleta.Sama(21.0, k.AlasNyt(30), "alaraja");
+            // Kuvaputken lukko pysäyttää joystickin.
+            k.Lukittu = true;
+            Oleta.Tosi(!k.JoystickLiikkuu, "lukko: ei liikettä eikä suhinaa");
+        }
     }
 }

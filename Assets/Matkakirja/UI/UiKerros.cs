@@ -113,6 +113,7 @@ namespace Matkakirja.Natiivi
         {
             if (instanssi != null && instanssi != this) { Destroy(gameObject); return; }
             instanssi = this;
+            gameObject.AddComponent<UiKameranJalkeen>();
             Ruudunpaivitys.UiRauhassa = Rauhassa;
             teema = Resources.Load<ThemeStyleSheet>(TeemaPolku);
             if (teema == null) Debug.LogWarning("MATKAKIRJA ui: teemaa Resources/" + TeemaPolku + " ei löytynyt");
@@ -347,6 +348,15 @@ namespace Matkakirja.Natiivi
         /// <summary>Joka ruudussa (esim. napautus paneelin ohi pallolle, jota UI ei näe).</summary>
         public event Action JokaRuutu;
 
+        /// <summary>
+        /// KAMERAN JÄLKEEN (omistajan bugi 5.10.2026 klo 14.4x: pieni kohdekortti heilui panoroidessa): joka ruudussa kartan
+        /// kameran (PalloKierto.Update, järjestys 0) jälkeen ja ennen UI Toolkitin paneelipäivitystä (PreLateUpdate). Kartan
+        /// pisteeseen kiinnitetyt elementit asetetaan tässä, jolloin ne ovat samassa ruudussa kameran kanssa (JokaRuutu ajetaan
+        /// samassa vaiheessa määrittämättömässä järjestyksessä ja jäi usein ruudun jälkeen).
+        /// </summary>
+        public event Action KameranJalkeen;
+        internal void AjaKameranJalkeen() => KameranJalkeen?.Invoke();
+
         void Update()
         {
             PaivitaTurvaalueet();
@@ -431,6 +441,16 @@ namespace Matkakirja.Natiivi
             kosketusPainettunaEdellinen = painettuna;
             if (mitatoiKehyksiaJaljella <= 0) return;
             mitatoiKehyksiaJaljella--;
+            TyhjennaKosketusValimuisti();
+        }
+
+        /// <summary>
+        /// Näkymä rakensi rivinsä uudelleen napautuksen jälkeen (oppaan valikko, juna 144 FAIL): välimuisti voi osoittaa
+        /// ScrollViewn mukana poistettuun riviin, jolloin seuraava kosketus katoaa. Mitätöidään heti ja 3 seuraavassa ruudussa.
+        /// </summary>
+        public void MitatoiKosketusvalimuisti()
+        {
+            mitatoiKehyksiaJaljella = 3;
             TyhjennaKosketusValimuisti();
         }
 
@@ -603,4 +623,5 @@ namespace Matkakirja.Natiivi
             if (muuttui) TurvaMuuttui?.Invoke();
         }
     }
+
 }

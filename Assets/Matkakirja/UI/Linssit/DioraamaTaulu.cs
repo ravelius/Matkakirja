@@ -271,6 +271,20 @@ namespace Matkakirja.Natiivi
             };
 
             kuunnelma = new KuunnelmaKaistale();
+            // Kohtaukset v2: vuoron puhuja (hahmon id) henkilön nimeksi kuten käsikirjoituksen repliikeissä.
+            KuunnelmaKaistale.PuhujanNimi = id =>
+            {
+                var r = DioraamaSovitin.Linssi?.Rakennus;
+                var tilaId = DioraamaSovitin.ViimeisinNakyma?.KohdeTila;
+                var tila = r != null && tilaId != null ? r.Tila(tilaId) : null;
+                if (tila != null)
+                    foreach (var h in tila.Hahmot)
+                        if (h.Id == id && h.HenkiloId != null && r.Henkilot != null && r.Henkilot.TryGetValue(h.HenkiloId, out var hk) && !string.IsNullOrEmpty(hk.Nimi))
+                            return hk.Nimi;
+                return id;
+            };
+            // PUHUJAKUVA (omistaja 5.10.2026 klo 14.3x): puhujan muotokuva pään yläpuolella; Siirtoseppä kytkee ankkurin ja puhujan.
+            puhujakuva = new Puhujakuva(juuri);
             Viimeisin = this;
 
             // NIMIRUUTU (Päätoimittaja 4.10.): saapumisen latausodotuksen ajan ISS-avausruudun pohja (mk-astroavaus, ei uutta tyyliä):
@@ -283,13 +297,11 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(nimiruudunNimi, Kirjasin.KoneLihava);
             Rakenne.El("mk-astroavaus__viiva", nimiOtsikko, PickingMode.Ignore);
             Rakenne.Teksti(DioraamaSovitin.SaapumisAlarivi, "mk-astroavaus__lahde", nimiOtsikko);
-            // Omistaja 4.10. (14.5x): yli 4 s "Linna latautuu…", yli 9 s "Vielä pieni hetki…" — sama pohja, rauhallinen häivytys.
-            // Päätoimittaja 4.10. (juna 138 VIE): tyhjä rivi oli 0 pt korkea, ja otsikko nousi ~7 pt rivin ilmestyessä → rivin
-            // teksti on alusta asti paikallaan läpinäkyvänä (sama yksirivinen korkeus kummallekin tekstille), joten mikään ei liiku.
-            latausRivi = Rakenne.Teksti("Linna latautuu…", "mk-astroavaus__lahde", nimiOtsikko);
-            latausRivi.AddToClassList("mk-astroavaus__otsikko--haipyy");
-            latausRivi.style.marginTop = 22;
-            latausRivi.style.opacity = 0f;
+            // LATAUSPALKKI (omistaja 5.10.2026 klo 12.5x) korvaa tekstit "Linna latautuu…" / "Vielä pieni hetki…": EDISTYMINEN-pohjan
+            // ohut palkki alarivin alla tumman teeman väreillä. Palkki on alusta asti paikallaan läpinäkyvänä, joten otsikko ei liiku
+            // sen ilmestyessä (Päätoimittaja 4.10.). Edistyminen: LatausEdistyminen (Siirtoseppä kytkee linnan latauksen).
+            latauspalkki = new Latauspalkki(nimiOtsikko);
+            latauspalkki.Juuri.AddToClassList("tk-teema-tumma");
 
             avainsana = Rakenne.El("mk-astroavaus__otsikko--haipyy", kerros.Juuri(LinssiUi.Ylakerros), PickingMode.Ignore);
             avainsana.style.position = Position.Absolute;
@@ -383,6 +395,7 @@ namespace Matkakirja.Natiivi
         }
 
         readonly VisualElement nimiruutu;
+        readonly Puhujakuva puhujakuva;
         // AVAINSANAT (Päätoimittaja 5.10., omistajan TF 141 -palaute "muutamia vuosilukuja sekä muita lyhyitä sanoja luennan tueksi"):
         // vasen alakulma ilman laatikkoa, vuosiluku goottilaisella ja 1–3 sanaa antiikvalla (havainteen kultaiset varjostetut tyylit),
         // häivytys sisään kun kertoja sanoo asian (kertojan klipin soittokohta ≥ t_s) ja pois AvainsanaS:n jälkeen.
@@ -390,11 +403,35 @@ namespace Matkakirja.Natiivi
         readonly Label avainsanaVuosi, avainsanaSanat;
         Avainsana avainsanaNyt;
         internal const float AvainsanaS = 4f; // myös DioraamaTimelinen avainsanaraidan klippien kesto
-        readonly Label nimiruudunNimi, latausRivi;
+        readonly Label nimiruudunNimi;
+        readonly Latauspalkki latauspalkki;
         bool nimiruutuAuki, virheIlmoitettu;
         float nimiruutuAlku;
-        int latausVaihe;   // 0 = ei riviä, 1 = "Linna latautuu…", 2 = "Vielä pieni hetki…"
-        const float LatausRivi1S = 4f, LatausRivi2S = 9f;
+        /// <summary>Kortin tiivistys keskustelun ajaksi (KuunnelmaKaistale.Keskustelu) ja vaihdon hetki häivytykseen.</summary>
+        bool korttiTiivis;
+        float tiivisVaihto = -1f;
+
+        /// <summary>Palkki näkyy vasta, kun odotus on kestänyt tämän verran (nopea lataus ei välähdä palkkia).</summary>
+        const float PalkkiS = 1f;
+
+        /// <summary>
+        /// Linnan latauksen edistyminen 0–1 (NaN tai null = ei tietoa: palkki ei näy). Siirtoseppä kytkee DioraamaSovittimen
+        /// latauksen tähän; Natiivi-UI vain näyttää arvon.
+        /// </summary>
+        public static System.Func<float> LatausEdistyminen;
+
+        /// <summary>Testi `ui linnapalkki &lt;0–1&gt;|pois`: nimiruutu auki annetulla edistymisellä ilman latausta (stillit).</summary>
+        static float? testiEdistyminen;
+        internal static string TestiPalkki(string arg)
+        {
+            arg = (arg ?? "").Trim();
+            if (arg == "pois" || arg.Length == 0) { testiEdistyminen = null; return "linnapalkki: pois"; }
+            if (!float.TryParse(arg, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var v))
+                return "linnapalkki: anna 0–1 tai pois";
+            testiEdistyminen = Mathf.Clamp01(v);
+            return "linnapalkki: " + testiEdistyminen.Value.ToString("0.00", System.Globalization.CultureInfo.InvariantCulture)
+                + (Viimeisin == null ? " (dioraamataulua ei ole: avaa linssi)" : "");
+        }
 
         void PaivitaNimiruutu()
         {
@@ -405,15 +442,16 @@ namespace Matkakirja.Natiivi
                 UiNakymat.Hae()?.Tilarivi.Viesti(DioraamaSovitin.LatausVirhe, 5f);
                 UiNakymat.Hae()?.Linssit?.SuljeLinssi();
             }
-            bool odotus = (DioraamaSovitin.SaapumisOdotus || DioraamaSovitin.RakennusLatautuu) && DioraamaSovitin.LatausVirhe == null;
-            if (odotus && nimiruudunNimi.text != DioraamaSovitin.SaapumisNimi) nimiruudunNimi.text = DioraamaSovitin.SaapumisNimi;
+            bool testi = testiEdistyminen.HasValue;
+            bool odotus = testi || (DioraamaSovitin.SaapumisOdotus || DioraamaSovitin.RakennusLatautuu) && DioraamaSovitin.LatausVirhe == null;
+            string nimi = testi && string.IsNullOrEmpty(DioraamaSovitin.SaapumisNimi) ? "OLAVINLINNA" : DioraamaSovitin.SaapumisNimi;
+            if (odotus && nimiruudunNimi.text != nimi) nimiruudunNimi.text = nimi;
             if (odotus && !nimiruutuAuki)
             {
                 nimiruutuAuki = true;
                 virheIlmoitettu = false;
                 nimiruutuAlku = Time.unscaledTime;
-                latausVaihe = 0;
-                latausRivi.style.opacity = 0f;
+                latauspalkki.Nollaa();
                 nimiruutu.RemoveFromClassList("mk-astroavaus--haipyy");
                 nimiruutu.style.opacity = 1f;
                 nimiruutu.style.display = DisplayStyle.Flex;
@@ -421,25 +459,19 @@ namespace Matkakirja.Natiivi
             if (odotus)
             {
                 float kulunut = Time.unscaledTime - nimiruutuAlku;
-                int vaihe = kulunut >= LatausRivi2S ? 2 : kulunut >= LatausRivi1S ? 1 : 0;
-                if (vaihe != latausVaihe)
+                float e = testiEdistyminen ?? (LatausEdistyminen != null ? LatausEdistyminen() : float.NaN);
+                if (!float.IsNaN(e)) latauspalkki.Arvo = e;
+                bool nayta = !float.IsNaN(e) && kulunut >= PalkkiS;
+                if (nayta != latauspalkki.Nakyy)
                 {
-                    int edellinen = latausVaihe;
-                    latausVaihe = vaihe;
-                    string teksti = vaihe == 1 ? "Linna latautuu…" : "Vielä pieni hetki…";
-                    Debug.Log($"MATKAKIRJA linssit: nimiruutu: rivi {vaihe} \"{teksti}\" {kulunut:F1} s");
-                    if (edellinen == 0) { latausRivi.text = teksti; latausRivi.style.opacity = 1f; }
-                    else
-                    {
-                        // Ristihäivytys: vanha rivi pois (0,7 s), uusi teksti tilalle ja esiin.
-                        latausRivi.style.opacity = 0f;
-                        latausRivi.schedule.Execute(() => { if (latausVaihe == 2) { latausRivi.text = teksti; latausRivi.style.opacity = 1f; } }).StartingIn(750);
-                    }
+                    latauspalkki.Nayta(nayta);
+                    Debug.Log($"MATKAKIRJA linssit: nimiruutu: latauspalkki {(nayta ? "esiin" : "pois")} {e:P0} {kulunut:F1} s");
                 }
             }
             else if (!odotus && nimiruutuAuki)
             {
                 nimiruutuAuki = false;
+                if (latauspalkki.Nakyy) latauspalkki.Arvo = 1f;   // valmis: täyttö loppuun nimiruudun häipyessä
                 Debug.Log($"MATKAKIRJA linssit: nimiruutu: häivytys {Time.unscaledTime - nimiruutuAlku:F1} s avauksesta");
                 nimiruutu.AddToClassList("mk-astroavaus--haipyy");
                 nimiruutu.style.opacity = 0f;
@@ -891,6 +923,23 @@ namespace Matkakirja.Natiivi
                     y = Mathf.Clamp(a.y - tauluKorkeus * 0.5f, ylaT, alaT - tauluKorkeus);
                 }
             }
+            // TIIVIS KORTTI KESKUSTELUN AJAN (omistaja 5.10.2026 Päätoimittajan kautta: kortti ei saa peittää näyttämöä, puhujien
+            // vartalot ja eleet näkyviin): KuunnelmaKaistale.Keskustelu (Siirtoseppä; tosi myös vuorojen välitauoilla) → kortista
+            // jää otsikkorivi näyttämön yläreunaan keskelle, teksti, lainaus ja osoitinviiva piiloon; täysi kortti palaa keskustelun
+            // jälkeen. Vaihto häivyttäen 200 ms (--tk-kesto-sulku).
+            bool tiivis = KuunnelmaKaistale.Keskustelu;
+            if (tiivis != korttiTiivis) { korttiTiivis = tiivis; tiivisVaihto = Time.unscaledTime; }
+            if (tiivis)
+            {
+                float skT = Screen.width > 0 ? pw / Screen.width : 1f;
+                lauta.style.width = StyleKeyword.Auto;
+                float tl = float.IsNaN(lauta.layout.width) || lauta.layout.width <= 0 ? 160f : lauta.layout.width;
+                x = (pw - tl) * 0.5f;
+                y = 12f + (Screen.height - Screen.safeArea.yMax) * skT;
+                kohdeRuutu = null;
+            }
+            lauta.style.opacity = Mathf.Clamp01((Time.unscaledTime - tiivisVaihto) / 0.2f);
+            if (lauta.style.opacity.value < 1f) Matkakirja.Ruudunpaivitys.Herata(0.25f);
             lauta.style.left = x; lauta.style.top = y;
             if (korttiViiva != null)
             {
@@ -925,7 +974,8 @@ namespace Matkakirja.Natiivi
                 if (!float.IsNaN(teksti.layout.y)) initiaaliEl.style.top = teksti.layout.y + 1f;
                 initiaaliEl.style.left = teksti.layout.x - 34f >= 0f ? teksti.layout.x - 34f : 0f;
             }
-            teksti.style.display = rivit.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            teksti.style.display = rivit.Count > 0 && !tiivis ? DisplayStyle.Flex : DisplayStyle.None;
+            if (tiivis && initiaaliEl != null) initiaaliEl.style.display = DisplayStyle.None;
             // Lähderivi pois paikkakortista (omistaja 2.10. 14.44): lähteet valikon Lähteet-näkymässä.
             lahde.text = "";
             lahde.style.display = DisplayStyle.None;
@@ -941,20 +991,23 @@ namespace Matkakirja.Natiivi
             // Puhuja kortin kapiteelina otsikon yläpuolella ja repliikki samaan korttiin vain, jos sitä ei puhuta ääneen
             // (omistaja 2.10. 17.4x, loki d6b00328f; 14.09: ääneen puhuttu ei tekstinä). Kuunnelman rivi ensin, sitten
             // hahmon repliikki. Pulun vanhat käsikirjoitusrivit eivät kuulu infotauluun (Pulu kertoo lisää kuplassa).
+            // Päätoimittaja 5.10. 15.0x: huonekortti on huoneen kortti; puhujan nimi vain tekstinä näytetyn repliikin
+            // yhteydessä (ääni tai Kertoja pois). Ääneen puhuttaessa puhujan näyttää puhujakuva, ei kortin kapiteeli.
             string nimi = null, repliikki = null;
-            if (kuunnelma.Nimi != null) { nimi = kuunnelma.Nimi; repliikki = kuunnelma.Teksti; }
-            else if (!string.IsNullOrEmpty(nakyma.Repliikki) && nakyma.Puhuja != null && nakyma.Puhuja != "pulu")
+            if (kuunnelma.Nimi != null) { if (kuunnelma.Teksti != null) { nimi = kuunnelma.Nimi; repliikki = kuunnelma.Teksti; } }
+            else if (!string.IsNullOrEmpty(nakyma.Repliikki) && nakyma.Puhuja != null && nakyma.Puhuja != "pulu"
+                     && !DioraamaAanet.Puhutaan(nakyma.AskeleenAani))
             {
                 nimi = PuhujanNimi(DioraamaSovitin.Linssi.Rakennus, nakyma).ToUpperInvariant();
-                if (!DioraamaAanet.Puhutaan(nakyma.AskeleenAani)) repliikki = nakyma.Repliikki;
+                repliikki = nakyma.Repliikki;
             }
             puhuja.text = nimi ?? "";
-            puhuja.style.display = string.IsNullOrEmpty(nimi) ? DisplayStyle.None : DisplayStyle.Flex;
+            puhuja.style.display = string.IsNullOrEmpty(nimi) || tiivis ? DisplayStyle.None : DisplayStyle.Flex;
             // Etsinnän vihje riviksi (korostettuna kursiivilla) repliikin sijaan.
             string vihje = DioraamaEtsinta.AktiivinenRivi;
             string puhe = !string.IsNullOrEmpty(vihje) ? vihje : repliikki != null ? "”" + repliikki + "”" : null;
             lainaus.text = puhe ?? "";
-            lainaus.style.display = puhe != null ? DisplayStyle.Flex : DisplayStyle.None;
+            lainaus.style.display = puhe != null && !tiivis ? DisplayStyle.Flex : DisplayStyle.None;
             seuraava.style.display = DisplayStyle.None;
 
             bool kuuntele = kuunneltava && !kuunnelma.Kaynnissa;

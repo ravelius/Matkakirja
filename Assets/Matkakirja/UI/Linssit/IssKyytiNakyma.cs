@@ -38,6 +38,7 @@
 // kohdelista aukeaa pöydän yläpuolelle. Kutistettuna pöydästä jää vain kutistusnappi. Codexin kytkinmoduulit
 // (posti/fable-codex-iss-kytkimet-20260929.md) vaihdetaan osiin, kun toimitus on omistajan näkemä.
 using System;
+using System.Collections.Generic;
 using Matkakirja.Linssit.Astronautti;
 using Matkakirja.Linssit.Iss;
 using UnityEngine;
@@ -47,8 +48,8 @@ namespace Matkakirja.Natiivi
 {
     public sealed class IssKyytiNakyma
     {
-        const string Juuri = "https://media.matkakirja.app/karttanostot/20260926/";
-        const string Juuri2 = "https://media.matkakirja.app/karttanostot/20260928/";
+        static string Juuri => Matkakirja.Peli.Asetus.Teksti("osoitteet.karttanostot-cupola1", "https://media.matkakirja.app/karttanostot/20260926/");
+        static string Juuri2 => Matkakirja.Peli.Asetus.Teksti("osoitteet.karttanostot-cupola2", "https://media.matkakirja.app/karttanostot/20260928/");
 
         readonly VisualElement juuri, kehys, heijastus, kupu, ulko2, heijastus2, kehys2, katto, polyt, turva, pilleri, piste, ohjaimet, peite;
         readonly VisualElement runko, ylilentoKilpi;
@@ -118,7 +119,16 @@ namespace Matkakirja.Natiivi
         readonly IssKytkinpoyta poyta;
         readonly VisualElement ylariviEl;
 
-        VisualElement Poyta => Kytkinpoyta ? poyta.Juuri : ohjaimet;
+        /// <summary>
+        /// ISS-OHJAAMO (omistaja 4.10.2026 klo 11.40, vaihe 2; IssOhjaamo): joystick, LCD, kamera ja kaasu korvaavat kytkinpöydän
+        /// ja välilehtipaneelin kyydissä. A/B `astro kyyti ohjaamo 0|1` (0 = kytkinpöytä kuten ennen).
+        /// </summary>
+        public static bool Ohjaamo = true;
+        readonly IssOhjaamo ohjaamo;
+        /// <summary>Kytkinpöytä käytössä (ei ohjaamoa): pöydän omat mitat (YlaReuna, Suuri, Nakyva) ja kohdelista pöydän yllä.</summary>
+        static bool KytkinKaytossa => Kytkinpoyta && !Ohjaamo;
+
+        VisualElement Poyta => Ohjaamo ? ohjaamo.Juuri : Kytkinpoyta ? poyta.Juuri : ohjaimet;
 
         /// <summary>Testikomento `astro kyyti kytkin lista|nopeus <i>|tila` (kuvaparit ilman kosketusta).</summary>
         public static string KytkinTesti(string[] a)
@@ -389,6 +399,23 @@ namespace Matkakirja.Natiivi
             poyta.SuuriMuuttui += suuri => { if (!suuri) SuljeLista(); PaivitaPulu(); };
             poyta.EstaPienennys = () => lista.style.display == DisplayStyle.Flex;
             poyta.KokoMuuttui += PaivitaPulu;
+            ohjaamo = new IssOhjaamo(turva, Linssi, Kuvaa);
+            ohjaamo.KokoMuuttui += PaivitaPulu;
+            // LCD:n laajennus (vaihe 3): samat vuodenaika- ja vuorokausivalinnat kuin kytkinpöydän nupeissa.
+            ohjaamo.AsetaKausi = k => AsetaKausi(k);
+            ohjaamo.KausiNyt = KausiNyt;
+            ohjaamo.AsetaVuorokausi = v => AsetaVuorokausi(v);
+            ohjaamo.VuorokausiNyt = () => Vuorokausi.Valittu ?? VuorokausiNyt();
+            // SIJAINTI-ikkuna (vaihe 3; Linssiseppä 2 4.10.: astronauttikierroksen kohteet koko maailmasta, Oma sijainti kärjessä):
+            // valinta siirtää aluksen niin, että nykyinen katse osuu kohteeseen (AstronauttiLinssi.SiirraAlus).
+            sijaintiIkkuna = new IssSijaintiIkkuna(kerros.Juuri(LinssiUi.Ylakerros), SijaintiKohteet,
+                k => { var l = Linssi(); bool ok = l != null && l.SiirraAlus(k.Lat, k.Lon); Debug.Log($"MATKAKIRJA linssit: siirto {k.Nimi}: {(ok ? "alus siirtyy" : "ei Cupolassa")}"); });
+            ohjaamo.AvaaSijainti = () => sijaintiIkkuna.Avaa(ohjaamo.LcdKeski);
+            // Omat ISS-kuvat (omistaja 4.10. klo 15.2x): valmis kuva isoon ikkunaan kameranapin kohdalta, sulkiessa pinoon
+            // vasempaan alareunaan ohjaamopaneelin yläpuolelle (LS2: IssKameraKuva.Valmis ja Albumi).
+            omatKuvat = new IssOmatKuvat(kerros.Juuri(LinssiUi.Ylakerros));
+            IssKameraKuva.Valmis += k => UiKerros.PaaSaikeessa(() => omatKuvat.Lisaa(k, ohjaamo.KameraKeski));
+            ohjaamo.KokoMuuttui += AsetaPino;
             PaivitaPoydat(KyydinTila.Kauko);
             juuri.RegisterCallback<GeometryChangedEvent>(_ =>
             {
@@ -401,6 +428,8 @@ namespace Matkakirja.Natiivi
                 AsetteleOhjaimet();
                 poyta.RuudunKorkeus = juuri.layout.height;
                 poyta.Asettele(poytaLeveys, r.w);
+                ohjaamo.Asettele(poytaLeveys);
+                if (omatKuvat != null) AsetaPino();
                 PaivitaKupu();   // ruutu kääntyi: pyöreän rajauksen kupu vaakaan tai pystyyn heti
                 PaivitaPulu();
             });
@@ -423,10 +452,82 @@ namespace Matkakirja.Natiivi
         void PaivitaPoydat(KyydinTila tila)
         {
             bool ulkona = tila == KyydinTila.Ulkona;
-            bool uusi = Kytkinpoyta && !ulkona;
+            bool uusi = KytkinKaytossa && !ulkona;
             poyta.Juuri.style.display = uusi ? DisplayStyle.Flex : DisplayStyle.None;
-            ohjaimet.style.display = !Kytkinpoyta && !ulkona ? DisplayStyle.Flex : DisplayStyle.None;
-            ylariviEl.style.display = uusi ? DisplayStyle.None : DisplayStyle.Flex;
+            ohjaimet.style.display = !Kytkinpoyta && !Ohjaamo && !ulkona ? DisplayStyle.Flex : DisplayStyle.None;
+            // Ohjaamossa ei lukemakilpeä eikä ✕:ää (omistaja: "Muut napit pois"; LCD kertoo sijainnin, Pulun valikko poistuu).
+            ylariviEl.style.display = uusi || Ohjaamo ? DisplayStyle.None : DisplayStyle.Flex;
+            bool ohjaamossa = Ohjaamo && !ulkona && tila != KyydinTila.Kauko;
+            ohjaamo.Nayta(ohjaamossa);
+            if (ohjaamossa) KytkePallo();
+            else { sijaintiIkkuna?.Sulje("kyyti"); ohjaamo.AsetaLaajennus(false); }
+            if (omatKuvat != null) juuri.schedule.Execute(AsetaPino).ExecuteLater(50);
+        }
+
+        readonly IssSijaintiIkkuna sijaintiIkkuna;
+        readonly IssOmatKuvat omatKuvat;
+        bool albumiLuettu;
+
+        /// <summary>Kuvapino vasempaan alareunaan: ohjaamopaneelin (tai mininäytön) yläreunan yläpuolelle 10 pt, turva-alueen vasen + 12.</summary>
+        void AsetaPino()
+        {
+            bool kyydissa = Ohjaamo && Tila != KyydinTila.Kauko && Tila != KyydinTila.Ulkona;
+            if (kyydissa && !albumiLuettu) { albumiLuettu = true; omatKuvat.AsetaAlbumi(IssKameraKuva.Albumi()); }
+            float H = juuri.layout.height;
+            var t = turva.layout;
+            float yla = ohjaamo.Nakyva.height > 0 ? ohjaamo.Nakyva.yMin - juuri.worldBound.yMin : H - 140f;
+            omatKuvat.AsetaPino(kyydissa, t.x + 12f, Mathf.Max(0f, H - yla + 10f));
+        }
+
+        /// <summary>Sijaintilista: Oma sijainti (karkea, maan keskipiste) ja enintään 30 lähintä astronauttikierroksen kohdetta.</summary>
+        static IReadOnlyList<IssSijaintiIkkuna.Kohde> SijaintiKohteet()
+        {
+            var l = new List<IssSijaintiIkkuna.Kohde>();
+            if (OmaSijaintiHaku.Paikka(out var nimi, out var lat, out var lon)) l.Add(new IssSijaintiIkkuna.Kohde($"Oma sijainti ({nimi})", lat, lon));
+            else if (!OmaSijaintiHaku.Haettu) OmaSijaintiHaku.Aloita();
+            var linssi = Linssi();
+            if (linssi?.Kohteet != null)
+            {
+                // Enintään 30 lähintä aluksen alapistettä etäisyysjärjestyksessä (Päätoimittaja 4.10.2026; sama sääntö webissä).
+                var (aLat, aLon) = linssi.AlusAlapiste();
+                foreach (var k in KohdeRajaus.Lahimmat(linssi.Kohteet.FindAll(x => !string.IsNullOrEmpty(x.Nimi)), x => x.Lat, x => x.Lon, x => x.Nimi, aLat, aLon))
+                    l.Add(new IssSijaintiIkkuna.Kohde(k.Nimi, k.Lat, k.Lon));
+            }
+            return l;
+        }
+
+        AstronauttiKerros palloKytketty;
+
+        /// <summary>Napautus ohjaamon ulkopuolelle (pallo, Cupolan lasi) pienentää ohjaamon mininäytöksi (omistaja 4.10.2026).</summary>
+        void KytkePallo()
+        {
+            var k = UnityEngine.Object.FindAnyObjectByType<AstronauttiKerros>();
+            if (k == palloKytketty) return;
+            if (palloKytketty != null) palloKytketty.PalloNapautettu -= ohjaamo.UlkoNapautus;
+            palloKytketty = k;
+            if (k != null) k.PalloNapautettu += ohjaamo.UlkoNapautus;
+        }
+
+        /// <summary>Testikomento `astro kyyti ohjaamo [0|1|mini|iso|joy <suunta>|kaasu <k>|lcd auki|kiinni|kausi <0–3>|vk <0–3>|sijainti|tila]`
+        /// (0/1 = A/B kytkinpöytää vastaan).</summary>
+        public static string OhjaamoTesti(string[] a)
+        {
+            var n = instanssi;
+            if (n == null) return "ohjaamo: ei kyytinäkymää";
+            string k = a.Length > 0 ? a[0] : "tila";
+            if (k == "0" || k == "1") { Ohjaamo = k == "1"; n.PaivitaPoydat(n.Tila); n.PaivitaPulu(); }
+            else if (k == "mini" || k == "iso") n.ohjaamo.AsetaMini(k == "mini");
+            else if (k == "joy" && a.Length > 1 && Enum.TryParse<JoystickSuunta>(a[1], true, out var s)) n.ohjaamo.AsetaSuunta(s);
+            else if (k == "kaasu" && a.Length > 1 && int.TryParse(a[1], out int kk)) n.ohjaamo.AsetaKaasu(kk);
+            else if (k == "lcd" && a.Length > 1) n.ohjaamo.AsetaLaajennus(a[1] == "auki");
+            else if (k == "kausi" && a.Length > 1 && int.TryParse(a[1], out int ka)) { n.AsetaKausi(ka); n.ohjaamo.AsetaLaajennus(true); }
+            else if (k == "vk" && a.Length > 1 && int.TryParse(a[1], out int vk)) { n.AsetaVuorokausi(vk); n.ohjaamo.AsetaLaajennus(true); }
+            else if (k == "sijainti") { if (!n.sijaintiIkkuna.Auki) n.ohjaamo.AvaaSijainti?.Invoke(); return n.sijaintiIkkuna.Testaa(a.Length > 1 ? string.Join(" ", a, 1, a.Length - 1) : null); }
+            else if (k == "sijainti-pois") n.sijaintiIkkuna.Sulje("testi");
+            else if (k == "kamera") n.ohjaamo.PainaKamera();
+            else if (k == "nahka" && a.Length > 1) { IssOhjaamo.NahkaKaytossa = a[1] != "0"; n.ohjaamo.KaytaNahka(); }
+            else if (k == "kuvat") return n.omatKuvat.Testaa(a.Length > 1 ? a[1] : "tila");
+            return n.ohjaamo.Tila();
         }
 
         /// <summary>A/B: Pulu vaakana Cupolan alakulmaan nousevan puomin kanssa (oletus päällä).</summary>
@@ -493,13 +594,13 @@ namespace Matkakirja.Natiivi
             // linnun alue pöydän näkyvän yläreunan (kupu) yläpuolelle 6 pt:n välillä.
             if (ikkunassa && poytaNakyy)
             {
-                float yla = pe.worldBound.yMin - juuri.worldBound.yMin + (Kytkinpoyta ? poyta.YlaReuna : 0f) - 6f;
+                float yla = pe.worldBound.yMin - juuri.worldBound.yMin + (KytkinKaytossa ? poyta.YlaReuna : 0f) - 6f;
                 kulma.y = Mathf.Min(kulma.y, yla);
             }
             p.IkkunanTakana = ikkunassa ? kulma : (Vector2?)null;
             // Suuri säätöpaneeli (Päätoimittajan kuvatarkistus 2.10.: Pulu nousi paneelin mukana säätönapin alle): lintu häivytetään
             // pienen paneelin yläpuolelle paikalleen koko suuren tilan ja liu'un ajaksi, ja AlaVara päivittyy vasta liu'un jälkeen.
-            bool suuri = Kytkinpoyta && poytaNakyy && (poyta.Suuri || poyta.Liukuu);
+            bool suuri = KytkinKaytossa && poytaNakyy && (poyta.Suuri || poyta.Liukuu);
             p.Haivyta(suuri);
             if (suuri) return;
             // VAAKA (Päätoimittaja 3.10., omistajan toive Pulusta vasempaan alakulmaan): Cupolassa Pulu alakulmaan, ja robottikäden
@@ -508,15 +609,15 @@ namespace Matkakirja.Natiivi
             p.OikeallaReunalla = ikkunassa && PuluOikealla;
             // Ikkunan takana avaruudessa (omistaja 3.10. klo 06.5x "Pulun pitäisi olla cupolan ulkopuolella"): lasin ympyrä Pululle.
             p.Lasi = p.OikeallaReunalla ? LasiRuudulla(W, H) : null;
-            p.VarrenEste = PuluAlas && !p.OikeallaReunalla && ikkunassa && poytaNakyy && Kytkinpoyta && W > H
+            p.VarrenEste = PuluAlas && !p.OikeallaReunalla && ikkunassa && poytaNakyy && KytkinKaytossa && W > H
                 ? new Vector2(poyta.Juuri.worldBound.xMin + poyta.Nakyva.x, pe.worldBound.yMin + poyta.YlaReuna)
                 : (Vector2?)null;
             // Robottikäden Pulu (vasen alakulma, omistaja 2.10. 21.3x) pysyy pöydän yläpuolella myös Cupolassa; ikkunan takana
             // olevaa Pulua (A/B ilman robottikättä) AlaVara ei siirrä, koska IkkunanTakana ohittaa sen.
-            p.AlaVara = poytaNakyy ? H - pe.worldBound.yMin - (Kytkinpoyta && ikkunassa ? poyta.YlaReuna : 0f) + 6f : 0f;
+            p.AlaVara = poytaNakyy ? H - pe.worldBound.yMin - (KytkinKaytossa && ikkunassa ? poyta.YlaReuna : 0f) + 6f : 0f;
             // Oikeassa reunassa Pulu ja lyhyt varsi ovat pöydän oikealla puolella: ei nostoa pöydän yli, vaan Pulu alareunaan (turva + 8 pt),
             // jos pöytä ei ulotu Pulun kaistalle (~70 pt oikeasta turvareunasta).
-            if (p.OikeallaReunalla && Kytkinpoyta)
+            if (p.OikeallaReunalla && KytkinKaytossa)
             {
                 var rr = UiKerros.Hae().Reunat(LinssiUi.Kerros);
                 float poytaOikea = poyta.Juuri.worldBound.xMin + poyta.Nakyva.xMax;
@@ -532,10 +633,13 @@ namespace Matkakirja.Natiivi
         void VaihdaLista()
         {
             if (lista.style.display == DisplayStyle.Flex) { SuljeLista(); return; }
-            if (!listaTaytetty)
+            // Joka avauksella uudelleen: enintään 30 kohdetta lähimpänä aluksen alapistettä (Päätoimittaja 4.10.2026, KohdeRajaus).
             {
-                var kohteet = Linssi()?.YlilennonKohteet;
-                if (kohteet == null || kohteet.Count == 0) return;
+                var l = Linssi();
+                if (l?.YlilennonKohteet == null || l.YlilennonKohteet.Count == 0) return;
+                var (aLat, aLon) = l.AlusAlapiste();
+                var kohteet = KohdeRajaus.Lahimmat(l.YlilennonKohteet, k => k.Lat, k => k.Lon, k => k.Nimi, aLat, aLon);
+                lista.Clear();
                 listaTaytetty = true;
                 // Oma sijainti ensin (karkea: maan keskipiste IP:n maasta, ilman lupakyselyä; OmaSijaintiHaku).
                 omaNappi = Rakenne.Nappi(OmaSijaintiHaku.Rivi(), "mk-isskyyti__kohde", () => { SuljeLista(); omaLento = true; LennaOmaan(); }, lista);
@@ -609,6 +713,10 @@ namespace Matkakirja.Natiivi
             AstronauttiKerros.KuukausiPakotettu = kausi == Vuodenaika.Kausi(IssNyt.Kello().Month) ? 0 : Vuodenaika.Kuukausi(kausi);
             PaivitaSaatimet();
         }
+
+        /// <summary>Näkyvä vuodenaika 0–3: pakotettu kuukausi tai ISS-kellon nykyinen.</summary>
+        static int KausiNyt() => AstronauttiKerros.KuukausiPakotettu is >= 1 and <= 12
+            ? Vuodenaika.Kausi(AstronauttiKerros.KuukausiPakotettu) : Vuodenaika.Kausi(IssNyt.Kello().Month);
 
         /// <summary>LIVE-hetken vuorokaudenaika ISS:n alapisteessä auringon korkeudesta: yö &lt; −6°, ilta/aamu −6…20° (iltapäivä/aamupäivä), muuten päivä.</summary>
         static int VuorokausiNyt()

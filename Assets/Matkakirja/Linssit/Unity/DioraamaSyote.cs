@@ -178,11 +178,28 @@ namespace Matkakirja.Natiivi
             DioraamaAanet.Napautettu();
             // Elävä linna: saapumiskaaren aikana napautus ohittaa kaaren (loppuun 1 s:ssa), ei kohdista.
             var linssi = DioraamaSovitin.Linssi;
-            if (linssi != null && linssi.SaapuminenKaynnissa(t)) { linssi.Napauta(t); return; }
+            if (linssi != null && linssi.SaapuminenKaynnissa(t)) { Haara("saapumisen ohitus"); linssi.Napauta(t); return; }
             // Uusi linna (30.9.): kertojan kierroksella napautus siirtää seuraavaan jaksoon, ei kohdista huonetta.
-            if (linssi != null && linssi.KertojaKaynnissa(t)) { linssi.Napauta(t); return; }
+            if (linssi != null && linssi.KertojaKaynnissa(t)) { Haara("kertojan jakso ohi"); linssi.Napauta(t); return; }
             // Etsintä (voudin sinetti): aktiivisen vaiheen kimallus ensin.
-            if (nayttamo?.Etsinta != null && nayttamo.Etsinta.Napauta(rakennus, ruutu, kamera)) return;
+            if (nayttamo?.Etsinta != null && nayttamo.Etsinta.Napauta(rakennus, ruutu, kamera)) { Haara("etsintä"); return; }
+            // Pulu napautuksesta (omistajan linnapalaute 5.10.): huoneessa napautus hahmoon → Pulun reaktio siihen hahmoon,
+            // napautus huoneeseen → Pulun seuraava faktakohta (PoikkileikkausLinssi.Napauta(t, hahmo)). Muu huone kohdistuu kuten ennen.
+            string nykyinen = DioraamaSovitin.ViimeisinNakyma?.KohdeTila;
+            if (linssi != null && linssi.PuluNapautuksesta && nykyinen != null && rakennus.Tila(nykyinen) is Tila oma)
+            {
+                string hahmo = LahinHahmo(oma, ruutu, kamera);
+                int kohta = hahmo == null ? LahinKohde(oma, ruutu, kamera) : -1;
+                var sade0 = kamera.ScreenPointToRay(new Vector3(ruutu.x, ruutu.y, 0));
+                if (hahmo != null || kohta >= 0 || UnityAabb(oma.RajaMin, oma.RajaMax).IntersectRay(sade0))
+                {
+                    // Keskustelun (kuunnelman) aikana Pulu odottaa vuoroaan: puhuu, kun keskustelu päättyy (ei keskeytä).
+                    Haara($"pulu {(KuunnelmaKaistale.SoiNyt ? "jonoon" : "nyt")} ({nykyinen}/{hahmo ?? "-"}/{kohta})");
+                    if (KuunnelmaKaistale.SoiNyt) DioraamaSovitin.PuluJonoon(nykyinen, hahmo, kohta);
+                    else linssi.Napauta(t, hahmo, kohta);
+                    return;
+                }
+            }
             // Elävä kohde (tila.elava): lähin kohde ruudulla, kun napautus osuu sen säteen (metreinä, ruudulle
             // projisoituna, vähintään 28 pt) sisään. Nimilappuja ei ole, joten kohde on se, mitä tilassa tapahtuu.
             string elava = null;
@@ -198,7 +215,7 @@ namespace Matkakirja.Natiivi
                 float d = Vector2.Distance(new Vector2(r.x, r.y), ruutu);
                 if (d <= sadePx && d < elavaLahin) { elavaLahin = d; elava = tila.Id; }
             }
-            if (elava != null) { sovitin.Kohdista(elava, t); return; }
+            if (elava != null) { Haara("elävä kohde → kohdista " + elava); sovitin.Kohdista(elava, t); return; }
 
             var sade = kamera.ScreenPointToRay(new Vector3(ruutu.x, ruutu.y, 0));
             string osuma = null;
@@ -209,7 +226,57 @@ namespace Matkakirja.Natiivi
                 var rajat = UnityAabb(tila.RajaMin, tila.RajaMax);
                 if (rajat.IntersectRay(sade, out float etaisyys) && etaisyys < lahin) { lahin = etaisyys; osuma = tila.Id; }
             }
+            Haara(osuma != null ? "kohdista " + osuma + " (nykyinen " + (nykyinen ?? "-") + ")" : "tyhjä");
             if (osuma != null) sovitin.Kohdista(osuma, t); // napautus tyhjään: ei tehdä mitään
+        }
+
+        /// <summary>Napautuksen käsittelyhaara lokiin (Pulun jonon todennus oikealla tapilla, Siirtoseppä 5.10.).</summary>
+        static void Haara(string h) => Debug.Log("MATKAKIRJA linssit: napautus → " + h);
+
+        /// <summary>Huoneen hahmo, jonka vartalon (paikka + 0,9 m) ruutupisteen lähelle napautus osuu: säde on 0,6 m ruudulle
+        /// projisoituna, vähintään 36 pt (sama mitoitus kuin elävällä kohteella). Vain hahmot, joilla on Pulun reaktio.</summary>
+        static string LahinHahmo(Tila tila, Vector2 ruutu, Camera kamera)
+        {
+            string paras = null;
+            float lahin = float.PositiveInfinity;
+            float minPx = 36f * (Screen.dpi > 0 ? Screen.dpi / 163f : 2f);
+            foreach (var h in tila.Hahmot)
+            {
+                if (h.Reaktio == null) continue;
+                var p = DioraamaNayttamo.UnityPiste(h.Paikka) + Vector3.up * 0.9f;
+                var r = kamera.WorldToScreenPoint(p);
+                if (r.z <= 0f) continue;
+                var reuna = kamera.WorldToScreenPoint(p + kamera.transform.right * 0.6f);
+                float sadePx = Mathf.Max(minPx, Vector2.Distance(r, reuna));
+                float d = Vector2.Distance(new Vector2(r.x, r.y), ruutu);
+                if (d <= sadePx && d < lahin) { lahin = d; paras = h.Id; }
+            }
+            return paras;
+        }
+
+        /// <summary>Taulun kohta, jonka kohteen (taulu.kohdat[].kohde, kohtaukset v2) lähelle napautus osuu, tai −1. Päällekkäisistä
+        /// valitaan pienin säde (Linnanrakentaja 5.10.: vihkimäristien 5,4 m:n kaari kattaa koko kappelin ja hagioskoopin 0,45 m).</summary>
+        static int LahinKohde(Tila tila, Vector2 ruutu, Camera kamera)
+        {
+            var kohdat = tila.Taulu?.Kohdat;
+            if (kohdat == null) return -1;
+            int paras = -1;
+            double pieninSade = double.PositiveInfinity;
+            float lahin = float.PositiveInfinity;
+            float minPx = 36f * (Screen.dpi > 0 ? Screen.dpi / 163f : 2f);
+            for (int i = 0; i < kohdat.Count; i++)
+            {
+                if (!(kohdat[i].KohdePaikka is V3 kp)) continue;
+                var p = DioraamaNayttamo.UnityPiste(kp);
+                var r = kamera.WorldToScreenPoint(p);
+                if (r.z <= 0f) continue;
+                var reuna = kamera.WorldToScreenPoint(p + kamera.transform.right * (float)Math.Max(0.3, kohdat[i].KohdeSade));
+                float sadePx = Mathf.Max(minPx, Vector2.Distance(r, reuna));
+                float d = Vector2.Distance(new Vector2(r.x, r.y), ruutu);
+                double sade = kohdat[i].KohdeSade;
+                if (d <= sadePx && (sade < pieninSade || (sade == pieninSade && d < lahin))) { pieninSade = sade; lahin = d; paras = i; }
+            }
+            return paras;
         }
 
         static Bounds UnityAabb(V3 min, V3 max)

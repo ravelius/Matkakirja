@@ -46,3 +46,59 @@
     min-height: var(--tk-nappi-ohjaus-iso);
     padding: var(--tk-vali-xs);
 }
+
+/* TAPPI (omistaja 5.10.2026 klo 21.3x, elävän oppaan kameraohjain; Päätoimittajan pohjaehdotus 21.3x): pyöreä lasi Ø 64 pt
+ * alakulmassa, nuppi Ø 26 pt. Levossa himmeä (0,55), kosketuksessa täysin näkyvä; häivytys --tk-kesto-sulku, nupin paluu
+ * 150 ms. Teema elementin tk-teema-*-luokasta (oppaassa harmaa). VAIN --tk-*-tokenit. Paikka ja alareuna koodista. */
+.mk-tappi {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-width: 1px;
+    border-color: var(--tk-reunus);
+    border-radius: 32px;
+    background-color: var(--tk-pinta);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-tappi--vasen {
+    left: 12px;
+}
+
+.mk-tappi--oikea {
+    right: 12px;
+}
+
+.mk-tappi.mk-tappi--nakyy {
+    opacity: 0.55;
+}
+
+.mk-tappi.mk-tappi--nakyy.mk-tappi--kosketus {
+    opacity: 1;
+}
+
+.mk-tappi__nuppi {
+    width: 26px;
+    height: 26px;
+    border-width: 1px;
+    border-color: var(--tk-korostus);
+    border-radius: 13px;
+    background-color: var(--tk-pinta-peitto);
+    justify-content: center;
+    align-items: center;
+}
+
+.mk-tappi__nuppi--palaa {
+    transition-property: translate;
+    transition-duration: 0.15s;
+}
+
+.mk-tappi__ikoni {
+    width: 14px;
+    height: 14px;
+    color: var(--tk-korostus);
+}

@@ -276,18 +276,23 @@ namespace Matkakirja.Natiivi
         public void Haivyta(float s) { haivytysAlku = Time.unscaledTime; haivytysKesto = Mathf.Max(0.01f, s); }
         float haivytysAlku = -10f, haivytysKesto = 1f;
 
-        public void Paivita(Asento kameranAsento, bool vahennettyLiike, double t = 0)
+        /// <param name="asetaKamera">false = Cinemachine (DioraamaCinemachine) on jo asettanut kameran paikan, suunnan ja fov:n;
+        /// asentoa käytetään silloin vain sumuun ja syväterävyyteen (etäisyys, aukko).</param>
+        public void Paivita(Asento kameranAsento, bool vahennettyLiike, double t = 0, bool asetaKamera = true)
         {
             VarmistaKuva();
             PaivitaDofTila();
-            var (sijainti, kohde) = Kameraliike.AsentoSijainti(kameranAsento);
-            Vector3 paikka = UnityPiste(sijainti), kohdeU = UnityPiste(kohde);
-            Kamera.transform.position = paikka;
-            Vector3 suunta = kohdeU - paikka;
-            if (suunta.sqrMagnitude > 1e-8f) Kamera.transform.rotation = Quaternion.LookRotation(suunta, Vector3.up);
-            // Datan fov on jo NakymaHetkella(t, pysty)-kutsussa sovitettu pysty/vaakakuvasuhteeseen (Unityn
-            // fieldOfView on aina pystykenttä).
-            Kamera.fieldOfView = Mathf.Clamp((float)kameranAsento.Fov, 1f, 179f);
+            if (asetaKamera)
+            {
+                var (sijainti, kohde) = Kameraliike.AsentoSijainti(kameranAsento);
+                Vector3 paikka = UnityPiste(sijainti), kohdeU = UnityPiste(kohde);
+                Kamera.transform.position = paikka;
+                Vector3 suunta = kohdeU - paikka;
+                if (suunta.sqrMagnitude > 1e-8f) Kamera.transform.rotation = Quaternion.LookRotation(suunta, Vector3.up);
+                // Datan fov on jo NakymaHetkella(t, pysty)-kutsussa sovitettu pysty/vaakakuvasuhteeseen (Unityn
+                // fieldOfView on aina pystykenttä).
+                Kamera.fieldOfView = Mathf.Clamp((float)kameranAsento.Fov, 1f, 179f);
+            }
             float d = (float)kameranAsento.Etaisyys;
             // Elävä linna (1.0.57): kaukaa saavuttaessa (600 m) järven taso katkesi kaukoleikkaukseen (2000 m) näkyvänä
             // reunana. Sumu on aina täysi ennen kaukotasoa, jolloin järvi häipyy taustaan saumatta.

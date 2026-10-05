@@ -13,7 +13,7 @@ using System;
 
 namespace Matkakirja.Linssit.IssKamera
 {
-    public sealed class Pilvikentta
+    public sealed class Pilvikentta : IKuvanPilvet
     {
         /// <summary>Maa-osuus 0…1 pisteessä (lat, lon), valmiiksi ~8 km:n sumennuksella; null = kaikki maata.</summary>
         public Func<double, double, double> MaaOsuus;
@@ -80,7 +80,7 @@ namespace Matkakirja.Linssit.IssKamera
         /// Lähikuvan pilvi (400 mm, laatan pikseli ≤ 40 m; laitekoe 2: pilvet pehmeinä möykkyinä): alfa ja kirkkaus pikselikohtaisesti
         /// kahdella lisäoktaavilla (200 m ja 80 m) — kumpupilven reunan kukkakaalirakenne ja kirkkaat huiput; varjo hilasta.
         /// </summary>
-        public (double alfa, double kirkkaus) Lahi(double lat, double lon, double peittoK = 1)
+        public (double alfa, double kirkkaus) Lahi(double lat, double lon, double peittoK = 1, double pikseliM = 0)
         {
             var (x, y) = Metrit(lat, lon);
             double d0 = Tiheys(x, y, lat, lon, true, peittoK);
@@ -92,6 +92,13 @@ namespace Matkakirja.Linssit.IssKamera
             double dk = Tiheys(x + sx * 380, y + sy * 380, lat, lon, true, peittoK) + 0.22 * Kohina((x + sx * 120) / 200, (y + sy * 120) / 200, 31);
             double kirkkaus = Math.Max(0.66, Math.Min(1.0, 0.96 - 0.45 * (dk - d) + 0.04 * kaksi));
             return (alfa, kirkkaus);
+        }
+
+        /// <summary>Kohina (hajonta ~1) pisteessä asteikolla asteikkoM (GibsPilvet.Lahi: lähikuvan reunarakenne).</summary>
+        public double KohinaPisteessa(double lat, double lon, double asteikkoM, int kanava)
+        {
+            var (x, y) = Metrit(lat, lon);
+            return Kohina(x / asteikkoM, y / asteikkoM, kanava);
         }
 
         /// <summary>Kaukoalueen paino 0 (peittoK ≤ 1) … 1 (peittoK ≥ 1,85).</summary>

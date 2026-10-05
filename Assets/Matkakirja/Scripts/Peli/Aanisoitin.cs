@@ -998,23 +998,29 @@ namespace Matkakirja.Natiivi
 
         static bool PooliVoimassa(PooliAani l, int vuoro) => !l.Vapautettu && l.Vuoro == vuoro;
 
+        /// <summary>Levylle-lataus epäonnistui: uusinnat näiden odotusten jälkeen (s). Natiivisepän löydös 5.10. (juna 143 -koe):
+        /// linnan 88 tiedoston rinnakkaislatauksen aikana Levylle-vahti katkaisi järven laineet, eivätkä ne soineet koko käynnillä.</summary>
+        static readonly float[] PooliUusinnatS = { 2f, 5f, 12f };
+
         /// <summary>Sama lataus/välimuistiputki kuin kanavilla (LevyPolku, Levylle, Pura, striimi > 3 Mt,
-        /// jaettu klipit-välimuisti); vain yksi yritys, ei uusintaa (Puuttuva/virheellinen: kahva ei koskaan soi).</summary>
+        /// jaettu klipit-välimuisti). Levylle saamatta jäänyt lataus uusitaan PooliUusinnatS:n mukaan (latauspiikin jälkeen);
+        /// purkuvirhettä ei uusita (virheellinen tiedosto: kahva ei koskaan soi).</summary>
         IEnumerator HaePooli(PooliAani l, int vuoro)
         {
             yield return null;
             if (!PooliVoimassa(l, vuoro)) yield break;
             string url = l.Url;
             string levy = LevyPolku(url);
-            if (!File.Exists(levy))
+            for (int yritys = 0; !File.Exists(levy); yritys++)
             {
                 if (ladataan.Contains(url)) { while (ladataan.Contains(url)) yield return null; }
                 else yield return Levylle(url, levy);
-                if (!File.Exists(levy))
-                {
-                    if (PooliVoimassa(l, vuoro)) PooliEpaonnistui(l, "levylle ei saatu");
-                    yield break;
-                }
+                if (File.Exists(levy)) break;
+                if (!PooliVoimassa(l, vuoro)) yield break;
+                if (yritys >= PooliUusinnatS.Length) { PooliEpaonnistui(l, $"levylle ei saatu, {yritys + 1} yritystä"); yield break; }
+                Debug.Log($"MATKAKIRJA ääni: silmukka {url} levylle ei saatu, uusinta {PooliUusinnatS[yritys]:0} s kuluttua");
+                yield return new WaitForSecondsRealtime(PooliUusinnatS[yritys]);
+                if (!PooliVoimassa(l, vuoro)) yield break;
             }
             if (!PooliVoimassa(l, vuoro)) yield break;
 
@@ -1077,6 +1083,27 @@ namespace Matkakirja.Natiivi
                 if (l.Kaynnistetty && l.A != null) l.A.volume = (float)Math.Min(1.0, l.Taso.Arvo * kerroin);
                 if (l.Lopetettu && !l.Taso.Kaynnissa) PooliVapauta(l);
             }
+        }
+
+        /// <summary>
+        /// Poolin tila testikomennolle (`astro kyyti suhina tila`, Natiivi-UI 4.10.: joystickin suhina −91 dB tallenteessa): tason
+        /// kertoimet (Äänimaisema, Tausta, väistö) ja jokaisen silmukan lataus, pyydetty taso ja AudioSourcen äänekkyys.
+        /// </summary>
+        public static string PooliTila(string suodin = null)
+        {
+            var s = Instanssi;
+            if (s == null) return "aanisoitin: ei käynnissä";
+            var ic = CultureInfo.InvariantCulture;
+            var sb = new StringBuilder();
+            sb.Append($"pooli: äänimaisema {s.Tila.Aanimaisema}, tausta {s.Tila.TaustanKerroin.ToString("0.00", ic)}, väistö {s.pooliVaisto.Arvo.ToString("0.00", ic)}, silmukoita {s.pooliElossa.Count}");
+            foreach (var l in s.pooliElossa)
+            {
+                if (suodin != null && (l.Url == null || !l.Url.Contains(suodin))) continue;
+                string nimi = l.Url == null ? "-" : l.Url.Substring(l.Url.LastIndexOf('/') + 1);
+                sb.Append($"; {nimi}: ladattu {l.Ladattu}, käynnissä {l.Kaynnistetty}, virhe {(l.K != null && l.K.Virhe)}, taso {l.Taso.Arvo.ToString("0.00", ic)}"
+                    + $" (kohde {l.Taso.Kohde.ToString("0.00", ic)}), volume {(l.A != null ? l.A.volume.ToString("0.00", ic) : "-")}, soi {(l.A != null && l.A.isPlaying)}");
+            }
+            return sb.ToString();
         }
 
         // --- tila testikomennoille (PeliOhjain.TilaJson "musiikki") --------------

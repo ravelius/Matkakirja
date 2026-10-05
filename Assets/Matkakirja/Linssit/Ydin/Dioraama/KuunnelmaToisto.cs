@@ -13,25 +13,30 @@ namespace Matkakirja.Linssit.Dioraama
 
         readonly List<KuunnelmaRivi> rivit;
         readonly Func<KuunnelmaRivi, double?> aanenKesto;
+        readonly double tauko;
         int i = -1;
         double alku;
 
         /// <param name="aanenKesto">Rivin äänen kesto sekunteina tai null (ei ääntä); null-funktio = aina tekstistä.</param>
-        public KuunnelmaToisto(List<KuunnelmaRivi> rivit, Func<KuunnelmaRivi, double?> aanenKesto = null)
+        /// <param name="tauko">Tauko äänellisten rivien välissä (oletus Tauko; Pulu napautuksesta -tilassa VuoroTauko 0,7 s).</param>
+        public KuunnelmaToisto(List<KuunnelmaRivi> rivit, Func<KuunnelmaRivi, double?> aanenKesto = null, double tauko = Tauko)
         {
             this.rivit = rivit ?? new List<KuunnelmaRivi>();
             this.aanenKesto = aanenKesto;
+            this.tauko = tauko;
         }
 
         public int Indeksi => i;
         public int Maara => rivit.Count;
         public bool Kaynnissa => i >= 0 && i < rivit.Count;
         public KuunnelmaRivi Rivi => Kaynnissa ? rivit[i] : null;
+        /// <summary>Nykyisen rivin vuoro hetkellä t (kohtaukset v2), tai null.</summary>
+        public KuunnelmaVuoro Vuoro(double t) => Kaynnissa ? rivit[i].VuoroHetkella(t - alku) : null;
 
         public double Kesto(KuunnelmaRivi r)
         {
             double? a = aanenKesto?.Invoke(r);
-            return a.HasValue && a.Value > 0 ? a.Value + Tauko : r.TekstinKesto;
+            return a.HasValue && a.Value > 0 ? a.Value + tauko : r.TekstinKesto;
         }
 
         /// <summary>Alusta ajassa t (s). False, jos rivejä ei ole.</summary>
