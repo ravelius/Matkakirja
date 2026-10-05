@@ -15,8 +15,10 @@ namespace Matkakirja.Linssit.IssKamera
         public const string Juuri = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/" + Versio + "/";
         public const string Polku = "linssit/astronautin-kamera/s2-maailma/" + Versio + "/";
         /// <summary>Korjaussarja (Karttaseppä: v2-korjaus/ + korjaus.json, sama bittikartta; 1 = laatta korjaussarjasta).</summary>
-        public const string KorjausJuuri = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/" + Versio + "-korjaus/";
-        public const string KorjausPolku = "linssit/astronautin-kamera/s2-maailma/" + Versio + "-korjaus/";
+        /// Kansio on vakio: Karttasepän uusi tasaus tulee uuteen polkuun (v2-korjaus2/), jolloin vaihto on tämä yksi rivi.
+        public const string KorjausKansio = "v2-korjaus";
+        public const string KorjausJuuri = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/" + KorjausKansio + "/";
+        public const string KorjausPolku = "linssit/astronautin-kamera/s2-maailma/" + KorjausKansio + "/";
         public readonly int ZMin, ZMax;
         readonly byte[][] bitit;
         /// <summary>Korjaussarjan saatavuus (null = ei korjauksia); asetetaan ennen kuin olio julkaistaan muille säikeille.</summary>
@@ -31,8 +33,9 @@ namespace Matkakirja.Linssit.IssKamera
         public static S2MaailmaLaatat Jasenna(string json)
         {
             if (!(MiniJson.Jasenna(json) is Dictionary<string, object> juuri)) return null;
+            // Korjaus.json (Karttaseppä 19.04): bittikartta kentässä "korjatut" ja ilman "tasot"-kenttää → tasot 6–10.
             var tasot = MiniJson.Kentta(juuri, "tasot") as Dictionary<string, object>;
-            if (!(MiniJson.Kentta(juuri, "saatavuus") is Dictionary<string, object> s) || tasot == null) return null;
+            if (!((MiniJson.Kentta(juuri, "saatavuus") ?? MiniJson.Kentta(juuri, "korjatut")) is Dictionary<string, object> s)) return null;
             int zmin = (int)(MiniJson.Luku(tasot, "min") ?? 6), zmax = (int)(MiniJson.Luku(tasot, "max") ?? 10);
             if (zmin < 0 || zmax > 16 || zmin > zmax) return null;
             var b = new byte[zmax + 1][];

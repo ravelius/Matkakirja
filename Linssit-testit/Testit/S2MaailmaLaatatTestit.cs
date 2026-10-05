@@ -28,6 +28,9 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(m.Onko(8, 84, 128), "z8");
             Oleta.Tosi(!m.Onko(5, 10, 16) && !m.Onko(9, 168, 256), "tasojen ulkopuolella ei");
             Oleta.Tosi(S2MaailmaLaatat.Jasenna("{\"x\":1}") == null, "väärä muoto → null (käytös ennallaan)");
+            // korjaus.json (Karttaseppä 19.04): "korjatut" ilman "tasot"-kenttää → tasot 6–10.
+            var k = S2MaailmaLaatat.Jasenna(Json(6, 10, (z, x, y) => z == 7 && x == 42 && y == 64).Replace("\"tasot\":{\"min\":6,\"max\":10},", "").Replace("\"saatavuus\"", "\"korjatut\""));
+            Oleta.Tosi(k != null && k.Onko(7, 42, 64) && !k.Onko(7, 43, 64), "korjatut-kenttä ja oletustasot");
         }
 
         [Testi]
