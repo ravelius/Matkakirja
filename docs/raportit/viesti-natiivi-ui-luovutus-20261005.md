@@ -28,6 +28,9 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 - POISTU-löydös selvitetty 10.5x kevyellä koneella: vain 0 s:n simutap (painallus ja irrotus samassa kehyksessä) pienentää
   pöydän (IssKytkinpoyta.Napautus PointerDown); 0,1 s toimii. Suositus Päätoimittajalle: ei korjausta junaan 144
   (xsiivous/xp-poistu-arkki.jpg). Todisteissa käytä kytkinpöydän painikkeille duration ≥ 0,1 s.
+  Päätoimittaja 10.5x: hyväksytty, ei korjausta. TUNNETTU RISKI: alhaisella fps:llä nopea tap voi osua samaan kehykseen.
+  Jos näkyy laitteella (Laitetestaaja kokeilee fyysisellä iPadilla), korjaus osumatestillä (onko painallus pöydän rajojen
+  sisällä), EI kehysjärjestyksellä.
 - natiivi-ui/iss-ohjaamo-lcd 0fdda21f — ohjaamo + LS2:n LCD-paikat; odottaa LS2:n maailmakuvia (Amazonia) ja S2-indeksiä.
 - Myöhemmin (Päätoimittaja): ISS-kuvan vihreä nimilappu hukkuu kirkkaalle hiekalle (az-3667-a4).
 
