@@ -1,0 +1,56 @@
+# Linssisepän luovutus 5.10.2026 klo 06.0x (viikkokiintiö 97 %, tilinvaihto ~07.15)
+
+Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-c.md` (TILA-osiot 2.–5.10.).
+Proto-worktree: /Users/Shared/Claude/wt/proto-linssiseppa-astro-auto (nyt haarassa linssiseppa/linna-kuva).
+Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), iPad 903C2B91. Vuorot aina Julkaisijalta
+("NYT"), ehto n == 0, lopuksi "simu vapaa"/"sammutettu".
+
+## AUKI NYT
+
+### 1. Linnan kuvan viimeistely (Siirtosepän linna-unity-suunnitelma vaihe 3, juna 143) — SIMUVUORO ~06.30
+- Haara **linssiseppa/linna-kuva 03223685** (BUILD 141 5a0b9add päällä), käännös **5cc14f8a** valmis
+  ($S/linnakuva-app). Tiedostot: Linssit/Unity/DioraamaViimeistely.cs (tilt-shift ScriptableRenderPass ajonaikaisesti vain
+  dioraaman kameralle, renderer-asset ennallaan; sumennus 1/4-resoluutiolla + yhdistys pystymaskilla; sävy Neutral/ACES
+  profiilin Tonemapping), Linssit/Resources/Varjostimet/TiltShift.shader, Linssit/Resources/DioraamaSavyAces.asset (ACES-
+  variantti säilyy URP:n karsinnassa). Kosketuskohdat sovittu Siirtosepän kanssa: DioraamaNayttamo kutsuu Kiinnita Volumen
+  luonnin jälkeen ja Irrota Tuhoassa; DioraamaSovitin.Komento: `poikki tiltshift 0|1|tila|aseta keski kaista liukuma
+  voimaYleisPt voimaHuonePt`, `poikki savy neutral|aces`. Oletus ennallaan (pois, Neutral) kuvaparin hyväksyntään.
+- Ajo: `proto-3d/tyokalut/linssiseppa-ajot/ketju-linna-kuva.sh` on käynnissä ja odottaa porttia **$S/sim-nyt-linna**
+  (touch Julkaisijan SIMU NYT:llä; ajo-linna-kuva.sh odottaa "poikki: saapuminen alkaa"). Tulos
+  lokit/linssiseppa-linna-kuva-20261005-c. Aiemmat: -a (latausruutua, hylätty), -b (sävy-A/B OK: ACES tummempi ja
+  kontrastisempi; tilt-shift toimii, mutta täyden resoluution versiossa porraskuvio valoissa → korjattu 03223685).
+- SEURAAVAKSI: tarkista -c suurennoksina (ei porraskuviota, terävä kaista) → kuvapari Päätoimittajalle (sävy yleis+kappeli,
+  tilt yleis/laituri/kappeli/keittiö, video tilt-yleis-kappeli.mov) → merge-pyyntö Natiivisepälle Päätoimittajan
+  kuittauksella; Siirtoseppä rebasettaa Cinemachine-vaiheen päälle.
+
+### 2. Auringon kiilto (glint, juna 140/141) — SIMUVARAUS 5.10. 11–13 (Julkaisijan jono tf-jono-20261002.txt)
+- Haarat: linssiseppa/glint-2 (BUILD 137 80b7dcf0 + glint-commitit + 3de304db vain vedessä / rakeinen + **5b6b9d46**
+  tuulikaistat 30 km kaukonäkymään, katto 2,0). Valmis käännös **3674ed53** = BUILD 138 + päät + glint-2 ($S/paat-app).
+- Ajo: `ketju-kiilto-aamu.sh` (portti $S/sim-nyt-ki) → ajo-kiilto-cupola-3.sh (katse heijastuspisteeseen
+  kiiltokulma.py:llä; LIVE-aika, joten korkea aurinko vain ~8–10 UTC) + maavuoto.py (kohdistus vaihekorrelaatiolla).
+  Tulos lokit/linssiseppa-kiilto-cupola-h-20261005.
+- Ajo g 4.10.: VAIN VEDESSÄ ok (maalla = kohdistusjäännös), mutta matala aurinko kaukaa = kermaläiskä → 5b6b9d46. Offline-malli
+  tyokalut/linssiseppa-ajot/kiilto_malli.py (kaava validoitu: kierroksen e 45 90 = laskettu 46 93).
+- SEURAAVAKSI: aamun ajo → suurennokset (rakeet, juovat heikot, ei maalle) → stilli + video + maavuoto Päätoimittajalle →
+  merge-pyyntö glint-2:sta (LinssiOhjaimessa vain `astro kyyti kiiltovanha` -testirivi).
+
+### 3. Lupakortin rivit junaan 143 (LÄHETETTY Päätoimittajalle 02.0x, mitään ei ladattu)
+- Cinemachine 3.1.7 (Unity-rekisteri, 12,2 Mt, Unity 2022.3+, riippuvuus com.unity.splines 2.9.1 14,3 Mt, Unity Companion
+  License; puhdas C# → IL2CPP ok myös simulaattorissa).
+- Steam Audio steamaudio_unity_4.8.1.zip (GitHub v4.8.1, 132,2 Mt, Apache-2.0, Unity 2017.3+, iOS 11+ arm64 laite;
+  iOS-simulaattoriviipale ja Apple Silicon -editori epävarmat → selviää paketista; lisäysversio Natiivisepän kuittaukseen).
+
+## VALMIIT TÄLLÄ JAKSOLLA (4.–5.10.)
+- Ajattelijapäät vain omassa maassa (omistaja 4.10. 19.4x): linssiseppa/paat-maassa 26b34eb8 → juna 140.
+- Radio kaikki kanavat + pallo ylhäältä + jatkuva veto ja heitto: linssiseppa/radio-kaikki e9fe4b9e → juna 142 (kuitattu;
+  Natiivi-UI katselmoi). Todisteet lokit/linssiseppa-radio-kaikki-20261004.
+- Marcus 92d46875 → juna 135; yksi-kello 7ab396b3 jäi pois (LS2:n kello A valittiin).
+- Lentopeli vaihe 1 kuvattu omistajalle (lokit/linssiseppa-lentopeli-esittely-20261004/omistajalle); vaihe 2 odottaa omistajaa
+  (Kauppa-kysymys: natiivissa ei Kauppaa).
+
+## OPITUT (lyhyesti)
+- Linnan valmiusmerkki on "poikki: saapuminen alkaa" (ei "valmis"-sana: liekkiatlakset). Tilt-shift: sumenna pienennetyllä
+  resoluutiolla, muuten suuri askel tekee porraskuvion.
+- Kiiltokulma: katse oletus ennen laskua (lokin "suunt" = maajälki vain oletuksella). LIVE-aika siirtää alusta ~460 km/min.
+- macOS grep: `\|` vain -E:llä. Älä vahdi `pgrep -f <oma skripti>`:llä. Odota SORMI-ikkunaa Monitor-tapahtumalla.
+- Simun ajoskripti odottaa porttia enintään 2 h; vuoron venyessä käynnistä ajo uudelleen samalla .appilla.

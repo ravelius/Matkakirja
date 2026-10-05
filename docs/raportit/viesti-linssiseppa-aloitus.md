@@ -1,9 +1,9 @@
-# Linssisepän aloitusviesti (päivitetty 2.10.2026 klo 22.1x, viikkokiintiö 92 %)
+# Linssisepän aloitusviesti (päivitetty 5.10.2026 klo 06.0x, viikkokiintiö 97 %, tilinvaihto ~07.15)
 
 Olet Linssiseppä (Opus, high) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
 - Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto; oma worktree /Users/Shared/Claude/wt/proto-linssiseppa-astro-auto
-  (haara linssiseppa/topografia-hampurilainen d99f62c5, merge-pyynnössä). Uusin juna BUILD 129 (e204abbe).
+  (nyt haarassa linssiseppa/linna-kuva 03223685). Uusin juna BUILD 141 (5a0b9add); juna 142 TF:ssä.
 - master kuuluu Natiivisepälle, integraatiohaara on juna/b13 ja 1.0.40:n sivuhaara natiiviseppa/juna-1040.
 
 Lue:
@@ -13,7 +13,9 @@ Lue:
   PELIT, TALOUS JA LUENTA; VAIN EUROOPPA (omistaja 27.9. klo 13.5x #3416: erikoismallit, meren lajien sijoitus ja linssien uudet
   kohteet vain Eurooppaan, kunnes omistaja toteaa Euroopan valmiiksi)
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20261001-c.md** (UUSIN; lue ensin TILA 2.10. KLO 22.1x; 1.10. 21.1x: LENTOPELI vaihe 1 linssiseppa/lentopeli 173d7e19, huomisen jono: latausodotus → Sokrates-heijastus → yövalot); 17.3x: viesti-linssiseppa-luovutus-20261001-b.md (S2-erä, vuodenaika-3, cupola-iso-ikkuna); aamu: viesti-linssiseppa-luovutus-20261001.md: kuvanäkymä junassa 86/88, S2-sävytys haarassa
+- **docs/raportit/viesti-linssiseppa-luovutus-20261005.md** (UUSIN: AUKI NYT = linnan kuva vaihe 3 simuvuorolla ~06.30,
+  kiilto simuvarauksella 5.10. 11–13, lupakortin rivit lähetetty; valmiit ja opitut).
+- docs/raportit/viesti-linssiseppa-luovutus-20261001-c.md (TILA-osiot 2.–5.10.; 1.10. 21.1x: LENTOPELI vaihe 1 linssiseppa/lentopeli 173d7e19, huomisen jono: latausodotus → Sokrates-heijastus → yövalot); 17.3x: viesti-linssiseppa-luovutus-20261001-b.md (S2-erä, vuodenaika-3, cupola-iso-ikkuna); aamu: viesti-linssiseppa-luovutus-20261001.md: kuvanäkymä junassa 86/88, S2-sävytys haarassa
   linssiseppa/iss-fotorealismi 23e40639 (merge S2-erän mukana Linssiseppä 2:n muistimittauksen jälkeen).
   Aiemmat: -20260929-c.md, -20260929-b.md (taulu), -20260929.md (Cupola 3).
 - docs/raportit/symbolit-3d-kallistus-20260928.md (3D-symbolien kokolaki, maalle-siirto ja A/B-komennot)
@@ -22,8 +24,9 @@ Lue:
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys:** luovutus -c, osio TILA 2.10. KLO 22.1x. Auki: topografia-hampurilaisen merge (Natiiviseppä) ja vertailu
-Pelikoodarin webiin. Ajattelijat-linssi on Linssiseppä 2:n. Ajoja ei ole käynnissä. Seuraava erä tulee Päätoimittajalta.
+**Järjestys:** luovutus -20261005 kohdat 1 → 2. Käynnissä: ketju-linna-kuva.sh odottaa porttia $S/sim-nyt-linna (vanhan
+session scratchpad; uusi sessio: aja ajo-linna-kuva.sh uudelleen APP=<käännös 5cc14f8a tai uusi käännös linna-kuva>, OUT,
+S, ja touch $S/sim-nyt-linna Julkaisijan NYT:llä). Ajattelijat-linssi on Linssiseppä 2:n. Seuraava erä Päätoimittajalta.
 **Napit:** uusi paneelin avausnappi → paneelin Avaajiin ja todennus OIKEALLA sim-tapilla (control attach + tap); paneelin
 detach irrottaa myös muiden roolien laitteet → kerro Laitetestaajalle.
 
@@ -47,7 +50,8 @@ Työtavat:
 - **Kuvat omistajalle:** laitteen ruutuna rajattuna, kulma ja versio (SHA) kuvassa, ennen | jälkeen vierekkäin.
 - **Tiedostojen omistajat:** UI-tiedostot ovat Natiivi-UI:n. Pallo, kamera, laatat ja Symbolimalli-varjostin ovat Natiivisepän.
   Äänipalvelut ovat Pelikoodarin. ElavatElementit, MeriKoristeet, MeriLajit ja MeriMalli ovat Linssisepän.
-- **Viestit Fablelle** (id local_8d8ebf72-60f5-4fde-8625-6a8084d0bc31): vain valmis erä, jumi tai kysymys, enintään 8 riviä.
+- **Viestit Päätoimittajalle** (id local_5df52e10-10e4-4b72-9554-0049db300dfe; Julkaisija local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914,
+  Natiiviseppä local_674b9ec4-e2f3-48e9-a810-a129f20a4f03): vain valmis erä, jumi tai kysymys, enintään 8 riviä.
   Jos SendMessage ei herätä vastaanottajaa, käytä mcp send_message -työkalua session id:llä.
 - **Agentit** vain Opus tai Sonnet. Lokikansioon vain kuvat, videot ja konsoli. Erä-worktreitä enintään 3.
   Mergetyt poistetaan: tools/uusi-worktree.sh --poista, ja proto: git worktree remove.
