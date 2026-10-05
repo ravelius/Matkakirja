@@ -5,6 +5,10 @@ Ei pelikoodia. Mittaukset CesiumJS 1.146:lla headless-Chromiumissa (CesiumJS:n o
 ei mihinkään koodiin), lähteet Cesium for Unityn lähdekoodista (proto: com.cesium.unity 1.25.1) ja Cesiumin dokumenteista.
 Kuvat: `proto-3d/lokit/linssiseppa-lontoo-tutkimus-20261005/` (kooste `lontoo-osm-s2-kooste.png`, 8 pysähdystä `kuvat/`).
 
+**OMISTAJAN LINJA 5.10. 11.45 (Karttaseppä 487a6e12c) korvaa tämän raportin data-osan:** kaikki Lontoon data ionista
+(World Terrain 1, Bing Aerial 2, OSM Buildings 96188), ei omaa S2:ta eikä GLO-30:tä Lontooseen, maksullinen taso tarvittaessa.
+Kamera-, esilataus-, origo- ja kertojasuositukset pysyvät. Pysähdykset ja Bing-stillit: `lontoo-pysahdykset-20261005.md`.
+
 ## SUOSITUS (yksi)
 
 **Lontoo rakennetaan nykyisen pallon päälle: maasto ja maakuva omasta ämpäristä, ionista vain OSM Buildings (96188),
