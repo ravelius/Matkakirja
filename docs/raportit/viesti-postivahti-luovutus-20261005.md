@@ -17,3 +17,5 @@ Päätoimittaja (Opus, max) local_5df52e10-10e4-4b72-9554-0049db300dfe (id ei mu
 
 ## Tila 5.10. 06.0x
 Levy 30–47 Gi (laskenut kuluvan yön poltoissa), wt/ 23–33, kävijälaskuri 40 (ennen 14.4x 39→40 ilmoitettu). Viikkoraja 97 % (reset 9.10. 05.00). 96 %:n hälytys jäi tulematta (oma virhe: raja-arvoja ei ollut päivitetty muistiin) — korjattu tässä luovutuksessa. Päätoimittaja nollasi itsensä 01.4x (aloitusviesti toimitettu, RC päällä).
+
+Viikkoraja 99 % (Päätoimittajan ilmoitus, tilinvaihto): kierrokset lopetettu. Levy 33 Gi, wt/ 31 viimeisellä kierroksella. Seuraava Postivahti aloittaa `viesti-postivahti-aloitus.md`:n mukaan uudella tilillä, rajat kuten yllä.
