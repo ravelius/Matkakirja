@@ -22,13 +22,15 @@ namespace Matkakirja.Natiivi
         /// <summary>A/B: false = Linssisepän alkuperäinen kaupunkikuva (vaikuttaa seuraavaan avaukseen).</summary>
         public static bool Paalla = true;
         // Linssiseppä 5.10. 18.5x: SSE 8 + MSAA 4x nosti simun RSS:n (Google) 7,7 Gt:iin → Google 12. Viritys ilman käännöstä:
-        // Documents/kaupunki-kuva-asetukset.txt "google 16 msaa 4 sumu 1 sumualku 15 sumuloppu 80 sumualkumin 3000 sumuloppumin 15000 savytys 1 kontrasti 12 saturaatio 10 hehku 0.2".
+        // Documents/kaupunki-kuva-asetukset.txt "google 16 msaa 4 sumu 1 sumualku 15 sumuloppu 80 sumualkumin 3000 sumuloppumin 15000 volume 1 savytys 1 kontrasti 12 saturaatio 10 hehku 0.2".
         public static float GoogleSse = 16f, MaastoSse = 10f, RakennusSse = 16f;
         public static int Msaa = 4;
         /// <summary>Sumun alku ja loppu kameran korkeuden kerrannaisina (vähintään AlkuMinM / LoppuMinM metriä).</summary>
         // A/B 5.10. 18.59: alku 6 × korkeus / 1,2 km haalisti koko Raatihuoneen kuvan → sumu vasta kauempana (horisontti).
         public static float AlkuKerroin = 15f, LoppuKerroin = 80f, AlkuMinM = 3000f, LoppuMinM = 15000f;
-        public static bool Sumu = true, Savytys = true;
+        // JUNAN OLETUS (Päätoimittajan sääntö 5.10. 19.1x): vain MSAA + aniso, kunnes kuvapari näyttää sumun ja Volumen
+        // selvästi paremmiksi; viritys asetustiedostolla ("sumu 1 volume 1").
+        public static bool Sumu = false, Savytys = true, Volyymi = false;
         public static float Kontrasti = 12f, Saturaatio = 10f, Hehku = 0.2f;
 
         static KaupunkiKuvaAjo ajo;
@@ -67,12 +69,12 @@ namespace Matkakirja.Natiivi
             { vanhaMsaa = urp.msaaSampleCount; urp.msaaSampleCount = Msaa; }
             vanhaAllowMsaa = kamera.allowMSAA; kamera.allowMSAA = true;
             var lisa = kamera.GetUniversalAdditionalCameraData();
-            if (lisa != null) { vanhaJalki = lisa.renderPostProcessing; lisa.renderPostProcessing = true; }
+            if (lisa != null) { vanhaJalki = lisa.renderPostProcessing; if (Volyymi) lisa.renderPostProcessing = true; }
 
-            LuoVolyymi();
+            if (Volyymi) LuoVolyymi();
             ajo = new GameObject("KaupunkiKuva").AddComponent<KaupunkiKuvaAjo>();
             ajo.Aloita(k);
-            Debug.Log($"MATKAKIRJA kaupunki: kuva päällä (SSE {(k.Kaytossa == CesiumKaupunki.Lahde.Google ? GoogleSse : MaastoSse)}/{RakennusSse}, MSAA {Msaa}x, aniso 8–16, sumu {(Sumu ? $"{AlkuKerroin}×/{AlkuMinM} m–{LoppuKerroin}×/{LoppuMinM} m" : "pois")}, {(Savytys ? "Neutral" : "ei sävytystä")}, kontrasti {Kontrasti}, saturaatio {Saturaatio}, hehku {Hehku})");
+            Debug.Log($"MATKAKIRJA kaupunki: kuva päällä (SSE {(k.Kaytossa == CesiumKaupunki.Lahde.Google ? GoogleSse : MaastoSse)}/{RakennusSse}, MSAA {Msaa}x, aniso 8–16, sumu {(Sumu ? $"{AlkuKerroin}×/{AlkuMinM} m–{LoppuKerroin}×/{LoppuMinM} m" : "pois")}, {(!Volyymi ? "ei Volumea" : Savytys ? "Neutral" : "ei sävytystä")}, kontrasti {Kontrasti}, saturaatio {Saturaatio}, hehku {Hehku})");
         }
 
         static void Suljettu(CesiumKaupunki k)
@@ -80,7 +82,7 @@ namespace Matkakirja.Natiivi
             if (!tallennettu) return;
             tallennettu = false;
             GoogleSse = 16f; MaastoSse = 10f; RakennusSse = 16f; Msaa = 4; // asetustiedosto luetaan uudelleen seuraavassa avauksessa
-            AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = true; Savytys = true;
+            AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = false; Savytys = true; Volyymi = false;
             Kontrasti = 12f; Saturaatio = 10f; Hehku = 0.2f;
             if (ajo != null) { ajo.Lopeta(); Object.Destroy(ajo.gameObject); ajo = null; }
             QualitySettings.anisotropicFiltering = vanhaAniso;
@@ -121,6 +123,7 @@ namespace Matkakirja.Natiivi
                         case "sumualkumin": AlkuMinM = v; break;
                         case "sumuloppumin": LoppuMinM = v; break;
                         case "savytys": Savytys = v != 0; break;
+                        case "volume": Volyymi = v != 0; break;
                         case "kontrasti": Kontrasti = v; break;
                         case "saturaatio": Saturaatio = v; break;
                         case "hehku": Hehku = v; break;
