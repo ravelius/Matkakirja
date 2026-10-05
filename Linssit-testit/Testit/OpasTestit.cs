@@ -80,10 +80,11 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(k != null && k.Kysymys && k.Vaihtoehdot.Length == 2);
             s.Vastaus(1, k);
             Oleta.Tosi(kysytty == k && s.OdottaaVastausta);
+            Oleta.Sama(2, pyynnot.Count, "ensimmäinen vaihtoehto esihaetaan heti"); Oleta.Sama("Linnoja", pyynnot[1]);
             for (int i = 0; i < 40; i++) s.Paivita(0.1, _ => 50);
-            Oleta.Sama(1, pyynnot.Count, "ei esihakua kysymyksen aikana");
+            Oleta.Sama(2, pyynnot.Count);
             s.Toive("Satama");
-            Oleta.Sama(2, pyynnot.Count); Oleta.Sama("Satama", pyynnot[1]); Oleta.Tosi(!s.OdottaaVastausta);
+            Oleta.Sama(3, pyynnot.Count); Oleta.Sama("Satama", pyynnot[2]); Oleta.Tosi(!s.OdottaaVastausta);
         }
 
         [Testi] static void VastaamatonKysymysValitseeEnsimmaisen()
@@ -93,9 +94,13 @@ namespace Matkakirja.Linssit.Testit
             s.Pyyda += (n, t) => pyynnot.Add(t);
             s.Aloita("Kööpenhamina");
             s.Vastaus(1, new OpasKohde { Kysymys = true, Teksti = "Mitä?", Vaihtoehdot = new[] { "Linnoja", "Satama" } });
-            s.AaniLoppui();
-            for (int i = 0; i < 200; i++) s.Paivita(0.1, _ => 50);
             Oleta.Sama(2, pyynnot.Count); Oleta.Sama("Linnoja", pyynnot[1]);
+            s.Vastaus(2, K("linna", 55.6858, 12.5773));
+            s.AaniLoppui();
+            for (int i = 0; i < 50; i++) s.Paivita(0.1, _ => 50);
+            Oleta.Tosi(s.Vaihe != OpasVaihe.Lentaa, "ei lennä ennen vastausaikaa");
+            for (int i = 0; i < 200 && s.Vaihe != OpasVaihe.Lentaa; i++) s.Paivita(0.1, _ => 50);
+            Oleta.Sama(OpasVaihe.Lentaa, s.Vaihe, "oletukseen vastausajan jälkeen");
         }
 
         [Testi] static void SamaPaikkaUudelleenEiLenna()
@@ -129,7 +134,8 @@ namespace Matkakirja.Linssit.Testit
             s.AlkaaPuhua += _ => puheT = t; s.Saapui += _ => saapuiT = t;
             s.Aloita(null); s.Vastaus(1, K("a", 55.6757, 12.5696));
             while (saapuiT < 0 && t < 60) { s.Paivita(0.05, _ => 50, () => true); t += 0.05; }
-            Oleta.Tosi(puheT > 0 && Math.Abs(saapuiT - puheT - OpasSilmukka.PuheEnnenS) < 0.2, $"puhe {puheT:F2}, saapui {saapuiT:F2}");
+            double lento = OpasSilmukka.LennonKesto(KierrosLento.EtaisyysM(55.68, 12.57, 55.6757, 12.5696));
+            Oleta.Tosi(puheT > 0 && Math.Abs(puheT - Math.Max(OpasSilmukka.PuheAikaisinS, lento - OpasSilmukka.PuheEnnenS)) < 0.2, $"puhe {puheT:F2}, lento {lento:F1}");
         }
 
         [Testi] static void AvausLiukuuKaupunginYlleOdottaessa()
