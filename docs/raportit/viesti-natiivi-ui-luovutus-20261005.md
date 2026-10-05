@@ -138,6 +138,8 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   ääni Unityn kaappauksesta, skriptit/jatka-aani.sh-malli, ei kaiuttimia).
 - Astrokuva: natiivi-ui/astrokuva-tauko-144 0062cd81 (junan 144 päällä; II lukijan kaiuttimen kanssa, Päätoimittaja hyväksyi)
   odottaa NYT käännös (~16.35) + simu iPhone/iPad → still + video. Vanha natiivi-ui/astrokuva-tauko 047844b1 vanhentunut.
+  16.4x kuvattu 5294a748:lla (astrokuva/astrokuva-arkki.jpg + i-astrokuva.mp4), lähetetty Päätoimittajalle. Löydös → bc66e66d:
+  AUTOn napit eivät piiloudu II-tauolla. Todennetaan seuraavassa käännöksessä ennen merge-pyyntöä (juna 145).
 
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
