@@ -69,7 +69,7 @@ muita siirtoja.
 
 Vanhin säilynyt lähes täydellinen tabula-sarja on löytynyt Gloucesterista Englannista vuonna 1983. Se on tehty
 luusta noin vuosina 1100–1120, ja siinä on 30 nappulaa; lauta on säilynyt vain osittain.
-Siinä ei käytetä tuplauskuutiota, joka keksittiin vasta 1920-luvulla New Yorkissa, joten 1873 pelattiin ilman sitä.
+Tavlissa ei käytetä tuplauskuutiota, joka keksittiin vasta 1920-luvulla New Yorkissa, joten 1873 pelattiin ilman sitä.
 
 (Leviämisyleistys poistettu Päätoimittajan kuittauksella 5.10.; ks. varaus 7.)
 
