@@ -22,11 +22,14 @@ namespace Matkakirja.Natiivi
         /// <summary>A/B: false = Linssisepän alkuperäinen kaupunkikuva (vaikuttaa seuraavaan avaukseen).</summary>
         public static bool Paalla = true;
         // Linssiseppä 5.10. 18.5x: SSE 8 + MSAA 4x nosti simun RSS:n (Google) 7,7 Gt:iin → Google 12. Viritys ilman käännöstä:
-        // Documents/kaupunki-kuva-asetukset.txt "google 12 maasto 10 rakennus 16 msaa 4" (puuttuva arvo = oletus).
+        // Documents/kaupunki-kuva-asetukset.txt "google 16 msaa 4 sumu 1 sumualku 15 sumuloppu 80 sumualkumin 3000 sumuloppumin 15000 savytys 1 kontrasti 12 saturaatio 10 hehku 0.2".
         public static float GoogleSse = 16f, MaastoSse = 10f, RakennusSse = 16f;
         public static int Msaa = 4;
         /// <summary>Sumun alku ja loppu kameran korkeuden kerrannaisina (vähintään AlkuMinM / LoppuMinM metriä).</summary>
-        public const float AlkuKerroin = 6f, LoppuKerroin = 30f, AlkuMinM = 1200f, LoppuMinM = 6000f;
+        // A/B 5.10. 18.59: alku 6 × korkeus / 1,2 km haalisti koko Raatihuoneen kuvan → sumu vasta kauempana (horisontti).
+        public static float AlkuKerroin = 15f, LoppuKerroin = 80f, AlkuMinM = 3000f, LoppuMinM = 15000f;
+        public static bool Sumu = true, Savytys = true;
+        public static float Kontrasti = 12f, Saturaatio = 10f, Hehku = 0.2f;
 
         static KaupunkiKuvaAjo ajo;
         static GameObject volyymiGo;
@@ -69,7 +72,7 @@ namespace Matkakirja.Natiivi
             LuoVolyymi();
             ajo = new GameObject("KaupunkiKuva").AddComponent<KaupunkiKuvaAjo>();
             ajo.Aloita(k);
-            Debug.Log($"MATKAKIRJA kaupunki: kuva päällä (SSE {(k.Kaytossa == CesiumKaupunki.Lahde.Google ? GoogleSse : MaastoSse)}/{RakennusSse}, MSAA {Msaa}x, aniso 8–16, sumu, Neutral)");
+            Debug.Log($"MATKAKIRJA kaupunki: kuva päällä (SSE {(k.Kaytossa == CesiumKaupunki.Lahde.Google ? GoogleSse : MaastoSse)}/{RakennusSse}, MSAA {Msaa}x, aniso 8–16, sumu {(Sumu ? $"{AlkuKerroin}×/{AlkuMinM} m–{LoppuKerroin}×/{LoppuMinM} m" : "pois")}, {(Savytys ? "Neutral" : "ei sävytystä")}, kontrasti {Kontrasti}, saturaatio {Saturaatio}, hehku {Hehku})");
         }
 
         static void Suljettu(CesiumKaupunki k)
@@ -77,6 +80,8 @@ namespace Matkakirja.Natiivi
             if (!tallennettu) return;
             tallennettu = false;
             GoogleSse = 16f; MaastoSse = 10f; RakennusSse = 16f; Msaa = 4; // asetustiedosto luetaan uudelleen seuraavassa avauksessa
+            AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = true; Savytys = true;
+            Kontrasti = 12f; Saturaatio = 10f; Hehku = 0.2f;
             if (ajo != null) { ajo.Lopeta(); Object.Destroy(ajo.gameObject); ajo = null; }
             QualitySettings.anisotropicFiltering = vanhaAniso;
             Texture.SetGlobalAnisotropicFilteringLimits(-1, -1);
@@ -110,6 +115,15 @@ namespace Matkakirja.Natiivi
                         case "maasto": MaastoSse = v; break;
                         case "rakennus": RakennusSse = v; break;
                         case "msaa": Msaa = (int)v; break;
+                        case "sumu": Sumu = v != 0; break;
+                        case "sumualku": AlkuKerroin = v; break;
+                        case "sumuloppu": LoppuKerroin = v; break;
+                        case "sumualkumin": AlkuMinM = v; break;
+                        case "sumuloppumin": LoppuMinM = v; break;
+                        case "savytys": Savytys = v != 0; break;
+                        case "kontrasti": Kontrasti = v; break;
+                        case "saturaatio": Saturaatio = v; break;
+                        case "hehku": Hehku = v; break;
                     }
                 }
             }
@@ -130,14 +144,14 @@ namespace Matkakirja.Natiivi
             profiili = ScriptableObject.CreateInstance<VolumeProfile>();
             profiili.name = "KaupunkiKuvaProfiili";
             var savy = profiili.Add<Tonemapping>(true);
-            savy.mode.Override(TonemappingMode.Neutral); // sama variantti kuin linnassa (Filmipino.asset) → säilyy buildissa
+            savy.mode.Override(Savytys ? TonemappingMode.Neutral : TonemappingMode.None); // Neutral kuten linnassa (Filmipino.asset)
             var bloom = profiili.Add<Bloom>(true);
             bloom.threshold.Override(1.1f);
-            bloom.intensity.Override(0.2f);
+            bloom.intensity.Override(Hehku);
             bloom.scatter.Override(0.6f);
             var varit = profiili.Add<ColorAdjustments>(true);
-            varit.contrast.Override(6f);
-            varit.saturation.Override(4f);
+            varit.contrast.Override(Kontrasti);
+            varit.saturation.Override(Saturaatio);
             v.profile = profiili;
         }
     }
@@ -166,6 +180,7 @@ namespace Matkakirja.Natiivi
         {
             var kamera = kaupunki?.Kamera;
             if (kamera == null) return;
+            if (!KaupunkiKuva.Sumu) { RenderSettings.fog = false; return; }
             var georef = kaupunki.Georef;
             float mitta = georef != null ? georef.transform.lossyScale.x : 1f;
             float korkeusM = georef != null ? Mathf.Max(30f, (kamera.transform.position.y - georef.transform.position.y) / Mathf.Max(1e-6f, mitta)) : 300f;
