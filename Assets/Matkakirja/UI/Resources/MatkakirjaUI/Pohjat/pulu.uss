@@ -70,8 +70,8 @@
 .mk-chat__sirut--irrallaan .mk-chat__siru {
     margin: 0 4px 6px 4px;
     border-color: var(--tk-reunus);
-    background-color: var(--tk-pinta);
-    color: var(--tk-muste);
+    background-color: var(--tk-pinta-peitto); /* peittävä: luettava punaisten kattojen päällä (Päätoimittaja 21.1x) */
+    color: var(--tk-korostus);
 }
 
 .mk-chat__sirut--irrallaan .mk-chat__siru:active {

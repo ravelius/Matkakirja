@@ -87,9 +87,10 @@
 
 /* ELÄVÄ OPAS NYKYAJASSA (omistaja 5.10.2026 klo 20.5x): sama LASI-lista ja oppaan kuvakortti harmaan lasin tokeneilla
  * (tk-teema-harmaa, OHJAUSNAPPI-pohjan oletus valokuvan ja 3D:n päällä); kirjasin Moderni koodista (OpasValikko). */
+/* Luettavuus kaupunkikuvan päällä (Päätoimittaja 5.10. klo 21.1x): teeman peittävä pinta, ei läpikuultavaa lasia. */
 .mk-linssivalikko.mk-linssivalikko--pohja.tk-teema-harmaa {
     border-color: var(--tk-reunus);
-    background-color: var(--tk-pinta);
+    background-color: var(--tk-pinta-peitto);
 }
 
 .tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__kohta,
