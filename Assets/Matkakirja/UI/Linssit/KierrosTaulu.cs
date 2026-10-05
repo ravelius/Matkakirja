@@ -106,8 +106,9 @@ namespace Matkakirja.Natiivi
             }
             var l = s.Silmukka;
             if (l == null) return;
-            // Avausruutu pois, kun ensimmäinen lento alkaa (laatat latautuvat lennon aikana).
-            if (ruutuAuki && l.Vaihe == OpasVaihe.Lentaa) NaytaRuutu(false);
+            // Avausruutu pois, kun ensimmäinen lento alkaa (laatat latautuvat lennon aikana) tai opas kysyy ensin: vaihtoehtosirut
+            // eivät saa jäädä mustan ruudun alle (Natiivi-UI 5.10., koeappi dc9b6022).
+            if (ruutuAuki && (l.Vaihe == OpasVaihe.Lentaa || l.OdottaaVastausta)) NaytaRuutu(false);
             bool puhuu = l.Vaihe == OpasVaihe.Puhuu || l.Vaihe == OpasVaihe.Odottaa;
             if (puhuu && l.Nykyinen != null && naytettyKohde != l.Nykyinen)
             {
