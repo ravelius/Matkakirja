@@ -11,8 +11,8 @@
 //
 // OPAS KEVYEKSI (omistaja 5.10.2026 Päätoimittajan kautta: "raskaan oloinen"): kaupunki koko ruudulla, chat ei auki eikä ✕:ää
 // (LinssiUi.PaivitaSulku), Pulun hahmo piilossa (UiNakymat.OpasPeittaaPulun). Kertojan lopetettua kappaleen tai kysyessä
-// alareunan keskellä kaksi vaihtoehtoa PULU-pohjan siruina (irrallinen sirurivi) ja pieni puhu/kirjoita-siru, joka avaa
-// nykyisen Pulu-chatin syöttöineen; Näytä teksti avaa koko keskustelun samaan chattiin.
+// alareunan keskellä kaksi vaihtoehtoa PULU-pohjan siruina (irrallinen sirurivi, omistaja hyväksyi 19.0x) ja pieni
+// puhu/kirjoita-siru, joka avaa nykyisen Pulu-chatin syöttöineen ja käynnistää sanelun; Näytä teksti avaa koko keskustelun samaan chattiin.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -120,7 +120,7 @@ namespace Matkakirja.Natiivi
             sirurivi = Rakenne.El("mk-chat--lasi mk-chat__sirut mk-chat__sirut--irrallaan", Juuri, PickingMode.Ignore);
             sirurivi.style.display = DisplayStyle.None;
             sirurivi.style.opacity = 0f;
-            puhuSiru = Rakenne.Nappi(null, "mk-chat__siru mk-chat__siru--ikoni", NaytaTeksti, null, PuluChat.MikkiIkoni);
+            puhuSiru = Rakenne.Nappi(null, "mk-chat__siru mk-chat__siru--ikoni", () => { NaytaTeksti(); UiNakymat.Hae()?.Chat?.AloitaSanelu(); }, null, PuluChat.MikkiIkoni);
             puhuSiru.tooltip = "Puhu tai kirjoita";
             kerros.JokaRuutu += PaivitaSirut;
             Viimeisin = this;

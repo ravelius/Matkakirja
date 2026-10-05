@@ -755,7 +755,13 @@ namespace Matkakirja.Natiivi
             Viesti("mk-chat__pelaaja", kysymys);
             // Toinen vastaaja (esim. Linssisepän elävä opas, OpasSovitin): sieppaus vastaa itse Vastaa-kutsulla eikä Pulun workeria
             // kutsuta. Sama chat, samat napit ja kaksi kysymystä (PULU-CHAT-pohja, omistaja 5.10.2026).
-            if (Sieppaa != null && Sieppaa(kysymys)) { historia.Add(("kayttaja", kysymys)); return; }
+            if (Sieppaa != null && Sieppaa(kysymys))
+            {
+                historia.Add(("kayttaja", kysymys));
+                // Saneltu toive: sieppaaja (opas) vastaa omalla äänellään, joten Pulun puhevuoro ei jää "Mietin…"-tilaan.
+                if (puhe) LopetaPuheVuoro(hiljaa: true);
+                return;
+            }
             bool paikkaa = Paikkakysymys.IsMatch(kysymys);
             // Oma paikkahakemisto ensin (webin ratkaisePaikka): kamera lähtee heti.
             bool lensi = paikkaa && LennaTunnettuun(kysymys);
@@ -1916,6 +1922,12 @@ namespace Matkakirja.Natiivi
         public void MikkiTesti() => VaihdaSanelu();
 
         /// <summary>Mikkinappi: kuunnellessa lopettaa ja lähettää (Sanelu.Lopeta → valmis), muuten aloittaa.</summary>
+        /// <summary>Sanelu käyntiin, jos se ei jo ole (oppaan puhu/kirjoita-siru, omistaja 5.10.2026).</summary>
+        public void AloitaSanelu()
+        {
+            if (Sanelu.Saatavilla && !Sanelu.Kaynnissa && puheVuoro == null) VaihdaSanelu();
+        }
+
         void VaihdaSanelu()
         {
             // Puhevuoron aikana mikki hiljentää Pulun (web vaihdaSanelu): luenta seis, tilarivi tyhjäksi, vastaus jää.
