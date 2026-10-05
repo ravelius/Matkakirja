@@ -79,7 +79,11 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Kehystys: etäisyys = koko × kerroin + lisä (rajattuna), kallistus pystystä, katse nostetaan osuuteen korkeudesta.</summary>
         public const double KokoKerroin = 3.0, KokoLisaM = 150, EtaisyysMinM = 220, EtaisyysMaxM = 1600, Kallistus = 62, KatseOsuus = 0.45;
         /// <summary>Lennon kesto: kaupungissa per km, kauas logaritmisesti; rajat.</summary>
-        public const double LentoMinS = 7, LentoMaxS = 22;
+        public const double LentoMinS = 7, LentoMaxS = 22, LyhytKm = 1.5, LyhytLentoS = 5;
+        /// <summary>Kertoja aloittaa kappaleen näin monta sekuntia ennen saapumista (nimi kuuluu, kun kamera laskeutuu).</summary>
+        public const double PuheEnnenS = 3;
+        /// <summary>Avauksen liuku kaupungin ylle odottaessa ensimmäistä kohdetta (s; etäisyys × kerroin, kallistus +).</summary>
+        public const double AlkuLiukuS = 14, AlkuLiukuKerroin = 0.5, AlkuLiukuKallistus = 8;
         /// <summary>Puheen jälkeen tauko ennen lentoa (s) ja kierto pysähdyksessä (°/s).</summary>
         public const double TaukoS = 0.8, KiertoAsteS = 0.6;
         /// <summary>Esihaun ja toiveen vastauksen enimmäisodotus (s), jonka jälkeen silmukka pyytää uudelleen.</summary>
@@ -98,12 +102,15 @@ namespace Matkakirja.Linssit.Kierros
         public event Action<int, string> Pyyda;
         /// <summary>Saapui kohteeseen: sovitin aloittaa äänen ja näyttää nimen.</summary>
         public event Action<OpasKohde> Saapui;
+        /// <summary>Kappale alkaa PuheEnnenS ennen saapumista (sovitin soittaa; Saapui ei enää aloita puhetta uudelleen).</summary>
+        public event Action<OpasKohde> AlkaaPuhua;
+        bool puheAloitettu;
         /// <summary>Puhe katkaistava (toive keskeytti).</summary>
         public event Action Hiljenna;
         /// <summary>Workerin kysymys: sovitin soittaa sen ja näyttää vaihtoehdot chatissa; vastaus tulee Toive-kutsuna.</summary>
         public event Action<OpasKohde> Kysyy;
         /// <summary>Kysymykseen ei vastattu: oma valinta tämän jälkeen (s puheen lopusta).</summary>
-        public const double KysymysOdotusS = 15;
+        public const double KysymysOdotusS = 8;
         /// <summary>Kysymys odottaa vastausta (esihakua ei tehdä).</summary>
         public bool OdottaaVastausta { get; private set; }
         double kysymysAika = -1;
@@ -145,6 +152,8 @@ namespace Matkakirja.Linssit.Kierros
         public static double LennonKesto(double matkaM)
         {
             double km = matkaM / 1000.0;
+            // Alle 1,5 km: 5 s (Päätoimittaja 5.10. 19.4x: esilataus hoitaa laatat, hiljaisuus pois).
+            if (km < LyhytKm) return LyhytLentoS;
             double s = km < 10 ? 6.5 + 0.55 * km : 12 + 2.2 * Math.Log10(km / 10.0) * 2.0;
             return Math.Max(LentoMinS, Math.Min(LentoMaxS, s));
         }
@@ -229,6 +238,14 @@ namespace Matkakirja.Linssit.Kierros
                 case OpasVaihe.Alku:
                 case OpasVaihe.Odottaa:
                     if (NykyinenKehys != null) { kierto += KiertoAsteS * dt; Asento = KehysAsento(NykyinenKehys, kierto); }
+                    else
+                    {
+                        // Avaus: kamera lähtee heti laskeutumaan kaupungin ylle, kun worker suunnittelee (ei pysähtynyttä kuvaa).
+                        alkuAsento ??= Asento;
+                        var a = alkuAsento.Value;
+                        var loppu = new Kuvakulma(a.Lat, a.Lon, a.EtaisyysM * AlkuLiukuKerroin, a.Kallistus + AlkuLiukuKallistus, a.Suuntima + 20, a.KatseKorkeusM);
+                        Asento = KierrosLento.Valissa(a, loppu, KierrosLento.Smootherstep(Math.Min(1, VaiheAika / AlkuLiukuS)), 0);
+                    }
                     if (Seuraava != null && aaniLoppuiTaiAlku()) AloitaLento(maaKorkeus);
                     break;
                 case OpasVaihe.Puhuu:
@@ -241,12 +258,14 @@ namespace Matkakirja.Linssit.Kierros
                 {
                     double t = Math.Min(1, VaiheAika / LentoKestoS);
                     Asento = Lennossa(lahto, KehysAsento(kohdeKehys, 0), t);
+                    if (!puheAloitettu && VaiheAika >= LentoKestoS - PuheEnnenS) { puheAloitettu = true; aaniLoppui = false; AlkaaPuhua?.Invoke(Nykyinen); }
                     // Saapuminen odottaa laattoja enintään SaapumisOdotusS (simu 18.39: saapuessa laatat 28–45 %).
                     if (t >= 1 && laatatValmiit != null && !laatatValmiit() && VaiheAika < LentoKestoS + SaapumisOdotusS) break;
                     if (t >= 1)
                     {
                         NykyinenKehys = kohdeKehys; kierto = 0;
-                        Vaihe = OpasVaihe.Puhuu; VaiheAika = 0; aaniLoppui = false;
+                        Vaihe = OpasVaihe.Puhuu; VaiheAika = 0;
+                        if (!puheAloitettu) aaniLoppui = false;
                         if (Nykyinen.Id != null) nahdyt.Add(Nykyinen.Id);
                         Saapui?.Invoke(Nykyinen);
                         if (!OdottaaVastausta) UusiPyynto();   // esihaku puheen ajaksi
@@ -257,6 +276,7 @@ namespace Matkakirja.Linssit.Kierros
         }
 
         bool aaniLoppuiTaiAlku() => Vaihe == OpasVaihe.Alku || aaniLoppui;
+        Kuvakulma? alkuAsento;
 
         void AloitaLento(Func<OpasKohde, double> maaKorkeus)
         {
@@ -266,6 +286,7 @@ namespace Matkakirja.Linssit.Kierros
             {
                 Nykyinen = k;
                 Vaihe = OpasVaihe.Puhuu; VaiheAika = 0; aaniLoppui = false;
+                puheAloitettu = true; AlkaaPuhua?.Invoke(k);
                 Saapui?.Invoke(k);
                 if (!OdottaaVastausta) UusiPyynto();
                 return;
@@ -279,6 +300,7 @@ namespace Matkakirja.Linssit.Kierros
             lahto = Asento;
             LentoKestoS = LennonKesto(KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon));
             Vaihe = OpasVaihe.Lentaa; VaiheAika = 0;
+            puheAloitettu = false;
         }
 
         public static Kuvakulma KehysAsento(Pysahdys p, double kierto) =>

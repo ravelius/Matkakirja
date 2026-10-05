@@ -146,6 +146,7 @@ namespace Matkakirja.Natiivi
             silmukka.Saapui += Saapui;
             silmukka.Hiljenna += Hiljenna;
             silmukka.Kysyy += Kysyy;
+            silmukka.AlkaaPuhua += AlkaaPuhua;
             if (o.GetComponent<KyydinKameraEnnen>() == null) o.gameObject.AddComponent<KyydinKameraEnnen>();
             KyydinKameraEnnen.Ajo = PaivitaKamera;
             silmukka.Aloita(Aloituskaupunki);
@@ -297,9 +298,7 @@ namespace Matkakirja.Natiivi
         void Saapui(OpasKohde k)
         {
             kaupunki.SiirraOrigo(k.Lat, k.Lon, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45);
-            VapautaVanhatAanet(k);
-            Soita(k);
-            KysymysChattiin(k);   // kappale ja sen vaihtoehdot Pulu-chatiin (Natiivi-UI 18.0x)
+            if (puhuttu != k) AlkaaPuhua(k);   // ei aloitettu lennon lopussa (esim. sama paikka): nyt
             saapumisia++;
             o.StartCoroutine(Siivoa());
             o.Kirjaa($"opas: saapui {k.Nimi} ({k.Lat:F4}, {k.Lon:F4}), ääni {(puhuu ? "soi" : "ei")}, laatat {kaupunki.Latausaste:F0} %");
@@ -339,6 +338,17 @@ namespace Matkakirja.Natiivi
         }
 
         int saapumisia;
+        OpasKohde puhuttu;
+
+        /// <summary>Kappale alkaa noin 3 s ennen saapumista (Päätoimittaja 5.10. 19.4x: hiljaisuus pysähdysten välissä enintään ~3 s).</summary>
+        void AlkaaPuhua(OpasKohde k)
+        {
+            if (k == null || puhuttu == k) return;
+            puhuttu = k;
+            VapautaVanhatAanet(k);
+            Soita(k);
+            KysymysChattiin(k);   // kappale ja sen vaihtoehdot Pulu-chatiin (Natiivi-UI 18.0x)
+        }
 
         /// <summary>Muut kuin nykyinen ja esihaettu kappale pois muistista (AudioClip vapautetaan).</summary>
         void VapautaVanhatAanet(OpasKohde nyt)
