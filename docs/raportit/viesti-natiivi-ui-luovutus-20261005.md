@@ -86,6 +86,14 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   dialogeihin; teksti näyttöhetkellä (PaivitaVersio). Simussa build = 0. Testi `ui mitauutta paivittyi`.
   Seuraava: käännös + stillit iPhone/iPad → Päätoimittaja → merge-pyyntö Natiivisepälle junaan 144.
 
+## PUHUJAKUVA (omistaja 5.10. 14.3x, kortti "Ensin kappelin koe") — avoinna
+- natiivi-ui/puhujakuva 48535d12 (master a5a18288): UI/Linssit/Puhujakuva.cs (+.meta) kehyksetön kuva, ellipsimaski alfaan
+  (GPU-kopio, 256 px), ankkuri maailmasta ruudulle joka ruudulla, häivytys 200 ms, ristiinhäivytys, leveys 22 % lyhyemmästä
+  sivusta (72–140 pt). Linssit.uss .mk-puhujakuva. Paikkamerkit Resources/Puhujakuvat/*.png (11 kpl, Linnanrakentajan CC0
+  rintakuvat _valmiit/linna-hahmot/rintakuvat-paikkamerkki, rajattu). Testi `ui puhujakuva <kuva> [x y]|pois`.
+  Kytkentä Siirtosepälle (Ankkuri, Kamera, Viimeisin.Aseta(henkilö, ilme)); odottaa hänen SHA:taan → yhteiskäännös →
+  still + video Päätoimittajalle. Myöhemmin: web tyylikirja.json PUHUJAKUVA-pohjan rivi (PR kuten #3998).
+
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
 iss-taulu-vaaka.sh (TAP_OHI=1), auto-zoom.sh (TAP_SEUR=1), lippu-kaikki.sh, chat-linna.sh, kartoitus.sh (+ k:-etuliite
