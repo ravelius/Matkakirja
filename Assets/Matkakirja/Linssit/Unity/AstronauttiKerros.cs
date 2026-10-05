@@ -490,7 +490,7 @@ namespace Matkakirja.Natiivi
                 s2Url = haluttu;
                 AsetaS2Reuna(s2Lisatty);   // S2 ↔ kuvan pinta: Kyytipino.S2 pysyy päällä, joten AsetaS2Savy ei kutsu tätä
                 long valimuisti = s2Lisatty ? kk.PallonValimuisti((kevyt ? S2ValimuistiKevytMt : S2ValimuistiMt) * 1024L * 1024) : -1;
-                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: {(kuvan.HasValue ? "kuvan pinta" : "S2")} {(s2Lisatty ? "päällä" : "ei mahtunut")} (z{6}–z{6 + maxTaso}) {url}; " +
+                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: {(kuvan.HasValue ? "kuvan pinta" : "S2")} {(s2Lisatty ? "päällä" : "ei mahtunut")} (z6–z{(maailma ? maxTaso : 6 + maxTaso)}{(maailma ? ", maailma" : "")}) {url}; " +
                     $"laite {(kevyt ? "kevyt" : "täysi")} (muisti {SystemInfo.systemMemorySize} Mt, {SystemInfo.deviceModel}), " +
                     $"pallon välimuisti {valimuisti / 1048576} Mt, S2 näyttövirhe {(kevyt ? 4 : 2)}, tekstuuri {(kevyt ? 1024 : 2048)}");
                 if (!s2Lisatty && !kuvan.HasValue) S2Kaytossa = false;   // ei yritetä joka sekunti uudelleen
