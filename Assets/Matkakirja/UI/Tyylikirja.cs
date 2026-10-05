@@ -1,12 +1,12 @@
 // TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi).
-// ÄLÄ MUOKKAA KÄSIN. lähde 1678319c1f14. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
+// ÄLÄ MUOKKAA KÄSIN. lähde fb2589ee7379. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class Tyylikirja
     {
-        public const string Lahde = "1678319c1f14";
+        public const string Lahde = "fb2589ee7379";
 
         public static class Kehys
         {
@@ -189,6 +189,6 @@ namespace Matkakirja.Natiivi
             public static readonly (string Perhe, string Tyyli)[] ModerniLihava = { ("SF Pro Display", "Semibold"), ("SF Pro", "Semibold"), (".SF UI Display", "Semibold"), ("Helvetica Neue", "Medium"), ("Helvetica Neue", "Bold"), ("Helvetica", "Bold") };
         }
 
-        public static readonly string[] Pohjat = { "NOSTOKORTTI", "LUKUARKKI", "KORTTI", "PANEELI", "KUVANÄKYMÄ", "LINSSIN OHJAIN", "PULU", "EDISTYMINEN", "KENTTÄ", "LAUTAPELI", "GALLERIA", "OHJAUSNAPPI", "ERIKOISNOSTOT", "ISS-OHJAAMO" };
+        public static readonly string[] Pohjat = { "NOSTOKORTTI", "LUKUARKKI", "KORTTI", "PANEELI", "KUVANÄKYMÄ", "LINSSIN OHJAIN", "PULU", "PINNATTU PALKKI", "EDISTYMINEN", "KENTTÄ", "LAUTAPELI", "GALLERIA", "OHJAUSNAPPI", "ERIKOISNOSTOT", "ISS-OHJAAMO" };
     }
 }

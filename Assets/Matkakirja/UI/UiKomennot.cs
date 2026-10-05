@@ -1123,6 +1123,9 @@ namespace Matkakirja.Natiivi
                     else if (pk.Length > 1 && pk[0] == "alku") Matkakirja.Pelikello.AlkuKelloUtc = luku;
                     return ui.Kellonaytto.Kuvaus;
                 }
+                case "pinnaus":
+                    // Pinnattu palkki (Pinnaus.cs): ui pinnaus [palkki <otsikko> | pois]
+                    return "=" + Pinnaus.Testi(loput);
                 case "opasvalikko":
                     // Elävän oppaan valikko (OpasValikko): ui opasvalikko valikko|maanosat|maat <maanosa>|kaupungit <maanosa>|<maa>|sulje.
                     return "=" + OpasValikko.Hae().Komento(loput);

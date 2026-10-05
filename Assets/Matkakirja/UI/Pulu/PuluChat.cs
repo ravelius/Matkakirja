@@ -82,6 +82,21 @@ namespace Matkakirja.Natiivi
         readonly UiKerros kerros;
         readonly Pulu pulu;
         readonly VisualElement sulkija, paneeli;
+        readonly Button pinNappi;
+        bool pienennetaan;
+        const string PinOmistaja = "pulu";
+        bool PinNakyvissa => Auki && Pinnaus.Nykyinen != null && Pinnaus.Nykyinen.Omistaja == PinOmistaja && !Pinnaus.Pienena;
+
+        /// <summary>Pinnattuna sulkija ja syötelukko pois: kartta liikkuu chatin ohi (pienentää sen palkiksi).</summary>
+        void PaivitaPin()
+        {
+            bool p = PinNakyvissa;
+            pinNappi.EnableInClassList("mk-valittu", p);
+            pinNappi.tooltip = p ? "Poista pinnaus" : "Pinnaa";
+            sulkija.pickingMode = p ? PickingMode.Ignore : PickingMode.Position;
+            if (!Auki) return;
+            if (p) SyoteLukko.Vapauta(this); else SyoteLukko.Esta(this);
+        }
         readonly ScrollView virta;
         readonly TextField kentta;
         readonly Button palaa;
@@ -200,6 +215,16 @@ namespace Matkakirja.Natiivi
             // "Ehdota sisältöä" (web .pollo-ehdota): chat väistyy ja ehdotuslomake aukeaa tilanteen kanssa.
             var ehdota = Rakenne.Nappi(null, "mk-chat__ikoninappi", EhdotaSisaltoa, ylarivi, Ikonit.Kyna);
             ehdota.tooltip = "Ehdota sisältöä";
+            // PIN-KUVAKE (omistaja 5.10.2026 klo 23.3x): samassa koossa kuin rivin muut kuvakkeet.
+            pinNappi = Rakenne.Nappi(null, "mk-chat__ikoninappi mk-chat__pin", () => Pinnaus.Vaihda(new Pinnaus.Kohde
+            {
+                Omistaja = PinOmistaja, Otsikko = "Pulu",
+                Pienenna = () => { if (Auki) { pienennetaan = true; Sulje(); pienennetaan = false; } },
+                Palauta = () => Avaa(false),
+                Irti = PaivitaPin,
+            }), ylarivi, Ikonit.Viiva["pin"]);
+            pinNappi.tooltip = "Pinnaa";
+            Pinnaus.Muuttui += PaivitaPin;
             Rakenne.El("mk-chat__ylarivi-vali", ylarivi, PickingMode.Ignore);
             // Nostokortin lukija Pulun äänellä: kaiutin lukee viimeisimmän vastauksen (keskeytys, jatko, VU), valikossa
             // kappaleet, kelaus ja nopeus. Ääni-valitsimen paikalla auto-luennan kytkin (entinen alarivin kaiutinvipu).
@@ -390,6 +415,7 @@ namespace Matkakirja.Natiivi
             // Web pollo.js animoiAvaus(paneeli, nappi): kasvaa avaajan (Pulun tai napin) kohdalta, 220/200 ms.
             Ponnahdus.Avaa(paneeli);
             SyoteLukko.Esta(this);
+            PaivitaPin();
             Aanisoitin.Hiljennys("pollo", true);
             pulu.Tilanne("chatOpen");
             naytaKuplat.style.display = pulu.KuplaPalautettavissa ? DisplayStyle.Flex : DisplayStyle.None;
@@ -539,6 +565,8 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
+            // Pinnattu chat ei sulkeudu (ohinapautus, Esc, linssin vahti): se pienenee palkiksi ja puhe jatkuu.
+            if (PinNakyvissa && !pienennetaan) { Pinnaus.Pienenna(); return; }
             keskustelunAihe = null;
             LopetaSanelu();
             // Web sulje: luenta pysähtyy ja puhevuoro päättyy. PUHE LOPPUU CHATIN MUKANA (omistaja TF 1.0.37: "se ei lopettanut

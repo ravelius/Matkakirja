@@ -53,6 +53,39 @@ namespace Matkakirja.Natiivi
     public sealed class Nostokortti
     {
         readonly VisualElement kerros, kortti;
+        readonly Button pinNappi;
+        string pinId;
+        bool pienennetaan;
+        string PinOmistaja => nosto?.Id == null ? null : "nosto:" + nosto.Id;
+        /// <summary>Tämä kortti näyttää pinnatun noston täysikokoisena.</summary>
+        bool PinNakyvissa => Auki && Pinnaus.Nykyinen != null && Pinnaus.Nykyinen.Omistaja == PinOmistaja && !Pinnaus.Pienena;
+
+        void VaihdaPin()
+        {
+            if (nosto == null) return;
+            string id = nosto.Id;
+            pinId = id;
+            Pinnaus.Vaihda(new Pinnaus.Kohde
+            {
+                Omistaja = PinOmistaja, Otsikko = nosto.Otsikko,
+                // Pienennys sulkee kortin vain, jos se yhä näyttää pinnattua nostoa (karttanapautus voi avata uuden ensin).
+                Pienenna = () => { if (Auki && nosto?.Id == id) { pienennetaan = true; Sulje(); pienennetaan = false; } },
+                Palauta = () => Avaa(id),
+                Irti = PaivitaPin,
+            });
+        }
+
+        /// <summary>Pinnattuna himmennys ja syötelukko pois: kartta liikkuu ja napautuu kortin ohi (pienentää sen palkiksi).</summary>
+        void PaivitaPin()
+        {
+            bool p = PinNakyvissa;
+            pinNappi.EnableInClassList("mk-valittu", p);
+            pinNappi.tooltip = p ? "Poista pinnaus" : "Pinnaa";
+            kerros.pickingMode = p ? PickingMode.Ignore : PickingMode.Position;
+            kerros.EnableInClassList("mk-himmennys--pin", p);
+            if (!Auki) return;
+            if (p) SyoteLukko.Vapauta(this); else SyoteLukko.Esta(this);
+        }
         // Suurennos selattavana sarjana (web fokuskohteet.js avaaKohdeSuurennos ‹ ›).
         readonly Kuvasuurennos suurennos;
         readonly ScrollView sisus;
@@ -121,6 +154,10 @@ namespace Matkakirja.Natiivi
                 loppui: LuentaLoppui);
             selain = new Nostoselain(kortti, sisus, id => Avaa(id), AutoVaihtui);
             selain.LisaaAuto();
+            // PIN-KUVAKE (omistaja 5.10.2026 klo 23.3x): ylärivillä kaiuttimen kokoisena (mk-lukija 34 pt), pinnattuna korostettu.
+            pinNappi = Rakenne.Nappi(null, "mk-lukija mk-nosto__pin", VaihdaPin, null, Ikonit.Viiva["pin"]);
+            pinNappi.tooltip = "Pinnaa";
+            Pinnaus.Muuttui += PaivitaPin;
             lukija.Juuri.RegisterCallback<GeometryChangedEvent>(_ => SijoitaLukija());
             // Napit näkyvät heti (omistaja 28.9.2026, TF 1.0.34, Korintin kanava): kiinni kortissa, ei vierityksessä.
             sisus.verticalScroller.valueChanged += _ => SijoitaLukija();
@@ -308,6 +345,8 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
+            // Pinnattu kortti ei sulkeudu (vetoalas, Esc, ohinapautus): se pienenee palkiksi ja puhe jatkuu.
+            if (PinNakyvissa && !pienennetaan) { Pinnaus.Pienenna(); return; }
             versio++;
             if (!Auki) return;
             Auki = false;
@@ -601,6 +640,7 @@ namespace Matkakirja.Natiivi
             // alkaa samalla ruudunpäivityksellä kuin napautus (Ponnahdus: alkutila heti, 220 ms kasvu ja häivytys).
             Ponnahdus.Avaa(kortti);
             SyoteLukko.Esta(this);
+            PaivitaPin();
         }
 
         // --- lisäkaupunki (web latoLisakaupunginKortti) -------------------------------------
@@ -825,8 +865,9 @@ namespace Matkakirja.Natiivi
             // Edellisen kortin ylärivi pois sivuilta.
             foreach (var paikka in new[] { selain.Vasen, selain.Oikea })
                 for (int i = paikka.childCount - 1; i >= 0; i--)
-                    if (paikka[i] != ylarivi && paikka[i] != lukijaPaikka) paikka.RemoveAt(i);
-            if (ylarivi == null || lukijaPaikka == null || !selain.Nakyvissa) return;
+                    if (paikka[i] != ylarivi && paikka[i] != lukijaPaikka && paikka[i] != pinNappi) paikka.RemoveAt(i);
+            if (ylarivi == null || lukijaPaikka == null || !selain.Nakyvissa) { if (ylarivi != null) ylarivi.Add(pinNappi); return; }
+            selain.Oikea.Insert(0, pinNappi); // pin ennen ≡:tä ja kaiutinta
             selain.Vasen.Add(ylarivi);       // kategoria (symboli ja nimi) vasemmalle
             selain.Oikea.Add(lukijaPaikka);  // ≡ ja kaiutin oikeaan reunaan
         }
