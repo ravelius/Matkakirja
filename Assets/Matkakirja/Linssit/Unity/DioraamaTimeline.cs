@@ -33,7 +33,7 @@ namespace Matkakirja.Natiivi
     public sealed class DioraamaTimeline
     {
         /// <summary>"poikki timeline 0|1" (kehittäjä; säilyy avausten yli). Oletus pois, ks. tiedoston alkukommentti.</summary>
-        public static bool Paalla;
+        public static bool Paalla = true; // Päätoimittaja 5.10. 06.0x: oletus päälle junaan 143 (A/B: ero ≤ 1 ms Ytimeen, napautus identtinen)
         /// <summary>Käynnissä olevan kertojan kierroksen alku Ytimen ajassa, NaN kun kierros ei ole käynnissä. Päivittyy joka
         /// ruutu kytkimestä riippumatta, jotta lokien kierrosaika (A/B-vertailu) on sama molemmissa tiloissa.</summary>
         public static double KierrosAlku { get; private set; } = double.NaN;
