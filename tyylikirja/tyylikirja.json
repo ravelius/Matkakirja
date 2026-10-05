@@ -160,7 +160,7 @@
     "KUVANÄKYMÄ": { "teemat": ["tumma"], "kuvat": "1+", "sulku": "✕, ohinapautus, veto alas, Esc" },
     "LINSSIN OHJAIN": { "teemat": ["lasi", "lasi-avaruus"], "kuvat": "0", "sulku": "Sulje linssi, Esc", "variantit": ["KAMERAN PÄÄLLYS"] },
     "PULU": { "osat": ["CHAT", "VALINTATAULU", "OPETUSTAULU"], "teemat": ["paperi", "lasi", "lasi-avaruus"], "_teema": "isännän teema: kartalla paperi, linssissä linssin lasi (lämmin linssi lasi, ISS ja satelliitti lasi-avaruus; Natiivi-UI 2.10.2026)", "sulku": "Pulun napautus, ohinapautus, Esc (ei ✕)" },
-    "EDISTYMINEN": { "osa": true, "teemat": ["paperi", "lasi", "lasi-avaruus", "tumma"], "kulma": "0 (ohut terävä viiva; Päätoimittaja 5.10.2026: ei kapselipäitä)", "variantit": ["LATAUSPALKKI (Latauspalkki.cs: odotusruudun nimen alla, 140 × 3 pt, arvo 0–1, häivytys; omistaja 5.10.2026: linnan ja vastaavien lataukset)"] },
+    "EDISTYMINEN": { "osa": true, "teemat": ["paperi", "lasi", "lasi-avaruus"] },
     "KENTTÄ": { "osa": true, "teemat": ["paperi"], "_selite": "tk-kentta (omistaja 1.10.2026)" },
     "LAUTAPELI": {
       "koostuu": ["KUVANÄKYMÄ (lauta)", "PANEELI (ohjaimet)", "KORTTI (valinta ja voitto)"],
