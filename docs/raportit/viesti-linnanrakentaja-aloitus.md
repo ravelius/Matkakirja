@@ -16,7 +16,7 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Kärki 5.10. klo 06.1x
 
 - Junan 143 linna: `_valmiit/olavinlinna-blender-v30`, blender 3d59b30a48c612f2 ämpärissä, KOE-blender.json haarassa
-  `linnanrakentaja-kuori-ao` (00d88a2b8). Peiliajo 37257924683: lähetä hash Päätoimittajalle ja Siirtosepälle.
+  `linnanrakentaja-kuori-ao` (00d88a2b8). Peili a23c432638f77338 lähetetty Päätoimittajalle ja Siirtosepälle (kuvaa A:ta vastaan).
   **Osoitinta ei vaihdeta** (omistajan Run-rivi: `docs/raportit/osoitin-8f4eb611-omistajalle.md`).
 - Kevennys (`docs/raportit/linna-kevennys-ehdotus-20261005.md`): A ja C Siirtosepälle iPad-mittauksen jälkeen. Välitaso
   `_valmiit/linna-laatu/kevennys/ulkokuori_valitaso.glb` vain, jos mittaus vaatii.

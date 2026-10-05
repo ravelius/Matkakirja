@@ -9,7 +9,7 @@ Edellinen luovutus: `viesti-linnanrakentaja-luovutus-20261002.md`. Olavinlinnan 
 - Paketti `_valmiit/olavinlinna-blender-v30` (MUUTOKSET.md): v29-ao (kontakti-AO kuoreen, keittiöön ja kappeliin) + 8k-valokartta
   + bilineaarinen täyttötasoitus. Blender **3d59b30a48c612f2** on ämpärissä. KOE-blender.json 00d88a2b8 on haarassa
   `linnanrakentaja-kuori-ao` (worktree `/Users/Shared/Claude/wt/linnanrakentaja-kuori-ao`).
-- Peiliajo `vie-dioraama.yml` (kuiva=false, osoitin=false): run 37257924683. Tarkista tulos ja lähetä peilin hash
+- Peili **a23c432638f77338** (ajo 37257924683, osoitin ennallaan c116f02f). Hash on lähetetty
   Päätoimittajalle ja Siirtosepälle. Siirtoseppä kuvaa sen A:ta (c116f02f) vastaan, ja Päätoimittaja vie parin omistajalle osoitinpäätöksen yhteydessä.
 - **Osoitinta ei vaihdeta.** Omistajan Run-rivi avainsanapaketille 8f4eb611 on tiedostossa `docs/raportit/osoitin-8f4eb611-omistajalle.md`
   (#3974 junassa 142).
