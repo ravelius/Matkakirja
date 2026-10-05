@@ -143,6 +143,42 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi]
+        static void VesitasoLiukuvalleHeijastukselle()
+        {
+            // Simu 025565c2 (Kanaria 28SBA): sunglint kirkastuu ruudun sisällä itään 66 → 132; mediaanilla jäännös (25 %) jätti
+            // portaan ruuturajalle. Tasosovitus vie liu'un merenväriin; paikallinen poikkeama (matala vesi) jää.
+            const double pm = 600; const int L = 183;
+            var d = new KuvaData { VesiTasoitus = 0.75, Meri = new byte[] { 14, 22, 30 } };
+            var o = new CogOtsake { Ita0 = 300_000, Pohjoinen0 = 6_700_000, PikseliM = pm };
+            o.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 3 });
+            var so = new CogOtsake { Ita0 = 300_000, Pohjoinen0 = 6_700_000, PikseliM = pm };
+            so.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 1 });
+            var (s0, w) = Utm.Taakse(300_000, 6_700_000 - L * pm, 35); var (nn, e) = Utm.Taakse(300_000 + L * pm, 6_700_000, 35);
+            var ru = new S2Ruutu { Tunnus = "35VLG", W = w + 0.01, S = s0 + 0.01, E = e - 0.01, N = nn - 0.01 };
+            var l = new byte[L * L * 3];
+            for (int y = 0; y < L; y++)
+                for (int x = 0; x < L; x++)
+                {
+                    bool matala = x >= 20 && x < 30 && y >= 90 && y < 100;   // pieni matalan veden läikkä
+                    byte v = (byte)Math.Round(66 + 66.0 * x / (L - 1) + (matala ? 40 : 0));
+                    int i = (y * L + x) * 3; l[i] = v; l[i + 1] = v; l[i + 2] = v;
+                }
+            d.Laatat[("35VLG", 0, 0, 0)] = l;
+            d.Laatat[("35VLG|scl", 0, 0, 0)] = Enumerable.Repeat((byte)6, L * L).ToArray();
+            d.Scl["35VLG"] = so; d.Ruudut.Add((ru, o));
+            Uudelleenprojisointi.TasaaVesi(d);
+            byte Arvo(double x, double y)
+            {
+                var (la, lo) = Utm.Taakse(300_000 + (x + 0.5) * pm, 6_700_000 - (y + 0.5) * pm, 35);
+                Oleta.Tosi(Uudelleenprojisointi.Nayte(d, la, lo, pm, out var r, out _, out _), $"dataa {x},{y}");
+                return r;
+            }
+            foreach (double x in new[] { 40.0, 90, 140, 170 })
+                Oleta.Tosi(Math.Abs(Arvo(x, 40) - 14) <= 1, $"liuku merenväriin x {x}: {Arvo(x, 40)}");
+            Oleta.Tosi(Math.Abs(Arvo(25, 95) - 24) <= 1, $"matala vesi jää (+40 · 0,25): {Arvo(25, 95)}");
+        }
+
+        [Testi]
         static void VesitasoMyosKulmastaHaetulle()
         {
             // Simu d9221669 (Kanaria 28SCB): ruudusta haettu vain kulma → 48 × 48 -otannassa alle 150 vesinäytettä, ruutu jäi

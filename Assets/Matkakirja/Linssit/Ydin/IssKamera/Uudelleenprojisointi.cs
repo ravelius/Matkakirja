@@ -195,7 +195,11 @@ namespace Matkakirja.Linssit.IssKamera
                         // Ruudun oma vesitaso (TasaaVesi) merenväriin, vain poikkeama siitä jää; ilman vesitasoa poikkeama merenväristä.
                         double w = d.VesiTasoitus;
                         double vr = d.Meri[0], vg = d.Meri[1], vb = d.Meri[2];
-                        if (ru.VesiTaso != null) { vr = Math.Max(0, ru.VesiTaso[0] - ru.UsvaR); vg = Math.Max(0, ru.VesiTaso[1] - ru.UsvaG); vb = Math.Max(0, ru.VesiTaso[2] - ru.UsvaB); }
+                        if (ru.VesiTaso != null)
+                        {
+                            vr = Math.Max(0, ru.VesiTasoPisteessa(0, e, n) - ru.UsvaR); vg = Math.Max(0, ru.VesiTasoPisteessa(1, e, n) - ru.UsvaG);
+                            vb = Math.Max(0, ru.VesiTasoPisteessa(2, e, n) - ru.UsvaB);
+                        }
                         cr = Math.Max(0, d.Meri[0] + (cr - vr) * (1 - w)); cg = Math.Max(0, d.Meri[1] + (cg - vg) * (1 - w)); cb = Math.Max(0, d.Meri[2] + (cb - vb) * (1 - w));
                     }
                     // Maailman indeksi: ruudun alueen oma lut ennen saumasekoitusta (Laatta ei silloin sovella KuvaData.Lutia).
@@ -305,28 +309,87 @@ namespace Matkakirja.Linssit.IssKamera
             for (int k = 0; k < d.Ruudut.Count; k++)
             {
                 var (ru, o) = d.Ruudut[k];
-                ru.VesiTaso = null;
+                ru.VesiTaso = null; ru.VesiKalte = null;
                 if (o == null) continue;
                 var vr = new List<double>(); var vg = new List<double>(); var vb = new List<double>();
+                var ve = new List<double>(); var vn = new List<double>();
                 // Tiheämpi otanta, jos ruudusta on haettu vain kulma (simu d9221669 Kanaria: 28SCB:n sunglint-meri jäi
                 // vesitasotta, koska 48 × 48 -ruudukkoon osui alle 150 haettua vesinäytettä → kirkas suorareunainen kiila).
                 foreach (int n in new[] { ruudukko, ruudukko * 4 })
                 {
-                    vr.Clear(); vg.Clear(); vb.Clear();
+                    vr.Clear(); vg.Clear(); vb.Clear(); ve.Clear(); vn.Clear();
                     for (int i = 0; i < n; i++)
                         for (int j = 0; j < n; j++)
                         {
                             double la = ru.S + (ru.N - ru.S) * (i + 0.5) / n, lo = ru.W + (ru.E - ru.W) * (j + 0.5) / n;
                             if (!RuudunArvo(d, k, la, lo, out var p, vesi: true)) continue;
                             vr.Add(p.r); vg.Add(p.g); vb.Add(p.b);
+                            var (pe, pn) = Utm.Eteen(la, lo, ru.Vyohyke); ve.Add(pe); vn.Add(pn);
                         }
                     if (vr.Count >= vahintaan) break;
                 }
                 if (vr.Count < vahintaan) continue;
-                ru.VesiTaso = new[] { Mediaani(vr), Mediaani(vg), Mediaani(vb) };
+                ru.VesiTaso = new[] { Mediaani(new List<double>(vr)), Mediaani(new List<double>(vg)), Mediaani(new List<double>(vb)) };
+                SovitaVesitaso(ru, ve, vn, vr, vg, vb);
                 tulos.Add((ru.Tunnus, ru.VesiTaso[0], ru.VesiTaso[1], ru.VesiTaso[2]));
             }
             return tulos;
+        }
+
+        /// <summary>
+        /// Vesitaso tasona (simu 025565c2 Kanaria: 28SBA:n sunglint kirkastuu ruudun sisällä itään 66 → 132; mediaanin jälkeen
+        /// 25 %:n jäännös jätti +10 tavun portaan suoralle ruuturajalle). Pienin neliösumma v = a + gE·(e − e0) + gN·(n − n0)
+        /// kanavittain, kahdesti: toisella kierroksella pois näytteet, joiden jäännös > 3σ (MAD; matala rannikkovesi, kiilto).
+        /// Ilman kunnollista hajontaa (kapea kaista) jää mediaani.
+        /// </summary>
+        static void SovitaVesitaso(S2Ruutu ru, List<double> ve, List<double> vn, List<double> vr, List<double> vg, List<double> vb)
+        {
+            int m = ve.Count;
+            double e0 = 0, n0 = 0;
+            for (int i = 0; i < m; i++) { e0 += ve[i]; n0 += vn[i]; }
+            e0 /= m; n0 /= m;
+            var mukana = new bool[m]; for (int i = 0; i < m; i++) mukana[i] = true;
+            var kanavat = new[] { vr, vg, vb };
+            double[] a = null, gE = null, gN = null;
+            for (int kierros = 0; kierros < 2; kierros++)
+            {
+                double s1 = 0, se = 0, sn = 0, see = 0, snn = 0, sen = 0;
+                for (int i = 0; i < m; i++)
+                {
+                    if (!mukana[i]) continue;
+                    double de = ve[i] - e0, dn = vn[i] - n0;
+                    s1++; se += de; sn += dn; see += de * de; snn += dn * dn; sen += de * dn;
+                }
+                double det = s1 * (see * snn - sen * sen) - se * (se * snn - sen * sn) + sn * (se * sen - see * sn);
+                if (s1 < 30 || Math.Abs(det) < 1e-6 * Math.Max(1, s1 * see * snn)) return;   // kapea kaista: mediaani
+                a = new double[3]; gE = new double[3]; gN = new double[3];
+                for (int c = 0; c < 3; c++)
+                {
+                    double y = 0, ye = 0, yn = 0;
+                    for (int i = 0; i < m; i++)
+                    {
+                        if (!mukana[i]) continue;
+                        double v = kanavat[c][i], de = ve[i] - e0, dn = vn[i] - n0;
+                        y += v; ye += v * de; yn += v * dn;
+                    }
+                    // Cramer: [[s1, se, sn], [se, see, sen], [sn, sen, snn]] · [a, gE, gN] = [y, ye, yn]
+                    a[c] = (y * (see * snn - sen * sen) - se * (ye * snn - sen * yn) + sn * (ye * sen - see * yn)) / det;
+                    gE[c] = (s1 * (ye * snn - sen * yn) - y * (se * snn - sen * sn) + sn * (se * yn - ye * sn)) / det;
+                    gN[c] = (s1 * (see * yn - ye * sen) - se * (se * yn - ye * sn) + y * (se * sen - see * sn)) / det;
+                }
+                if (kierros == 1) break;
+                var jaannos = new List<double>(m);
+                var j = new double[m];
+                for (int i = 0; i < m; i++)
+                {
+                    double de = ve[i] - e0, dn = vn[i] - n0, summa = 0;
+                    for (int c = 0; c < 3; c++) summa += Math.Abs(kanavat[c][i] - (a[c] + gE[c] * de + gN[c] * dn));
+                    j[i] = summa; jaannos.Add(summa);
+                }
+                double raja = Math.Max(6, 3 * 1.4826 * Mediaani(jaannos));
+                for (int i = 0; i < m; i++) mukana[i] = j[i] <= raja;
+            }
+            ru.VesiTaso = a; ru.VesiKalte = new[] { gE[0], gE[1], gE[2], gN[0], gN[1], gN[2] }; ru.VesiE0 = e0; ru.VesiN0 = n0;
         }
 
         static double Mediaani(List<double> x) { x.Sort(); return x.Count % 2 == 1 ? x[x.Count / 2] : (x[x.Count / 2 - 1] + x[x.Count / 2]) / 2; }

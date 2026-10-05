@@ -29,6 +29,12 @@ namespace Matkakirja.Linssit.IssKamera
         public double UsvaR, UsvaG, UsvaB;
         /// <summary>Ruudun oman meren (SCL 6) mediaani sävyn jälkeen, ennen usvaa (Uudelleenprojisointi.TasaaVesi); null = ei mitattu.</summary>
         public double[] VesiTaso;
+        /// <summary>Vesitason kaltevuus (TasaaVesi): [itä r, g, b, pohjoinen r, g, b] tavua/m UTM:ssä pisteestä (VesiE0, VesiN0).</summary>
+        public double[] VesiKalte;
+        public double VesiE0, VesiN0;
+        /// <summary>Vesitaso UTM-pisteessä kanavalle c (0–2) ilman usvaa.</summary>
+        public double VesiTasoPisteessa(int c, double e, double n)
+            => VesiTaso[c] + (VesiKalte == null ? 0 : VesiKalte[c] * (e - VesiE0) + VesiKalte[3 + c] * (n - VesiN0));
         /// <summary>Indeksin sävy (v2b, Karttaseppä 5.10.): TCI · Vahvistus + Siirto kanavittain ennen usvaa ja lutia; null = ennallaan.</summary>
         public double[] Vahvistus, Siirto;
         /// <summary>Valinnan nodata-osuus (%, indeksistä): > 0,5 → ruutu ei voi yksin kattaa lehteä (rataleveyden reuna).</summary>
