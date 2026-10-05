@@ -224,6 +224,13 @@ jobs:
             --originit "$POLLO_ORIGINIT"
           echo "POLLO_ASETUS=tools/pollo/wrangler.ci.json" >> "$GITHUB_ENV"
 
+      # ELÄVÄN OPPAAN AINEISTO (Päätoimittaja 5.10.2026): isoisän merkinnät ja kaupunkilehdet pelin sisältöpaketeista
+      # taustatiedoksi. Repossa on tynkä; täysi aineisto (~1,7 Mt) generoidaan tässä juuri ennen deployta.
+      - name: Generoi oppaan aineisto
+        run: |
+          set -euo pipefail
+          node tools/pollo/tee-opas-aineisto.mjs
+
       - name: Julkaise worker
         run: |
           set -euo pipefail
@@ -337,6 +344,21 @@ jobs:
             exit 0
           fi
           printf '%s' "$POLLO_KEHITTAJAKOODI" | "$WRANGLER" secret put POLLO_KEHITTAJAKOODI --config "$POLLO_ASETUS"
+
+      # CESIUM ION -TUNNUS (Päätoimittaja 5.10.2026, elävä opas juna 144): GET /opas/tunnus antaa sen natiiville kerran
+      # istunnossa, jotta tunnus ei ole käännöksessä eikä repossa. VAIN RAJATTU TUNNUS (assets:read, assetit 1, 2,
+      # 96188 ja 2275207); omistaja asettaa GitHubin salaisuuden. Vapaaehtoinen: ilman sitä reitti vastaa 503.
+      - name: Aseta Cesium ion -tunnus workerin salaisuudeksi (jos on)
+        env:
+          CESIUM_ION_TOKEN: ${{ secrets.CESIUM_ION_TOKEN }}
+        run: |
+          set -euo pipefail
+          set +x
+          if [ -z "${CESIUM_ION_TOKEN:-}" ]; then
+            echo "CESIUM_ION_TOKEN ei ole asetettu — ohitetaan (/opas/tunnus vastaa 503)."
+            exit 0
+          fi
+          printf '%s' "$CESIUM_ION_TOKEN" | "$WRANGLER" secret put CESIUM_ION_TOKEN --config "$POLLO_ASETUS"
 
       # PUHEMOOTTORIN TARKISTUS (Fable 27.9.2026; omistaja 5.10.2026 klo 13.2x: lukijat ElevenLabsin Williamilla, xAI vain
       # varapolkuna, #3996): kun ElevenLabs-avain on asetettu, julkaistun workerin on vastattava kertojan puheeseen
