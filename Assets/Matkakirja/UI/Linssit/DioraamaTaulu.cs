@@ -365,6 +365,9 @@ namespace Matkakirja.Natiivi
             // napautusta dioraamalle (valikon huonevalinnan irrotus kohdisti edellisen huoneen uudelleen). Valikko on omassa
             // kerroksessaan, joten auki oleva valikko estää koko eleen (myös sulkevan napautuksen valikon ulkopuolelle).
             if (Linna != null && Linna.Auki) return true;
+            // Pulun chat on auki: sen sulkija peittää koko ruudun (napautus sulkee chatin), joten mikään ele ei valu linnaan
+            // (Natiivisepän löydös juna 142e: chatin kysymysnapin napautus avasi Muurinharjan; chat on eri UI-kerroksessa).
+            if (UiNakymat.Olemassa && UiNakymat.Hae().Chat?.Auki == true) return true;
             if (juuri.panel != null)
             {
                 for (var el = juuri.panel.Pick(RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(ruutu.x, Screen.height - ruutu.y)));
