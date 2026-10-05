@@ -1,3 +1,15 @@
+# TILANNE 5.10. klo 06.5x (LOPULLINEN, tilinvaihto 99 %)
+
+- **Tropiikki v2e:** osa-ajot PID 45738/45742/45745/45748, kukin noin 12/47 lohkoa (yhteensä 8 + 47 = 55/196). Noin 14 min per lohko per osa → valmis noin klo 15–16.
+  Valmistuttua: tilat yhteen, tarkistus, kuvapari Karibia + Indonesia PT:lle, sitten `touch iss-maailma-s2/v2/tropiikki/tarkistettu.ok` → omistajan vienti (PID 4918) vie ja kirjoittaa laatat.json → ilmoita LS2:lle (polun vaihto luvallinen) ja rivi PT:lle.
+- **Korjaussarja v2e:** P-Afrikka 10/10 ja Aasia 28/28 valmiit; Amerikka 48/68 (PID 34664).
+- **S2-indeksi v2b (sävytasaus):** `aja-v2b.sh` PID 80467, tropiikki 1 600/1 802, sitten eurooppa → P-Afrikka → amerikka → aasia (valmis noin klo 8–9).
+  Sitten `VERSIO=v2b python3 maailma-json.py`, kuvapari v2 vs. v2b (`tci-kooste.mjs` soveltaa savy-kenttää) PT:lle ja vienti vie-paketti.sh:lla polkuun `s2-indeksi/v2b/` (LAHTEET.md). LS2:n koodi on valmis, ja hän vaihtaa version kuittauksen jälkeen.
+- **S2-indeksi v2c vaihe 1 (ehdokkaat):** `aja-v2c-ehdokkaat.sh` PID 25172, eurooppa 400/2 177, valmis noin klo 10–11. Vaihe 2 (naapurisovitus + avomeren himmein kohtaus) on kirjoittamatta, ks. alla.
+- **Euroopan kausiketju:** syksy 48/169 (PID 13778), sitten talvi uudella koodilla.
+
+---
+
 # Karttasepän luovutus 5.10.2026 klo 06.0x (viikkoraja 97 %, tilinvaihto noin 07.15)
 
 Ajot jatkuvat ilman sessiota. Ne on käynnistetty perl fork+setsid -kaavalla. Tarkista `ps` ennen uudelleenkäynnistystä, ja lopeta prosessi vain omalla PID:llä.
