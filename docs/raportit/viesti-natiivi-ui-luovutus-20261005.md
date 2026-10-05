@@ -19,7 +19,7 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 - natiivi-ui/chat-linna b38360f4 — KUITATTU (chat estää linnan eleet ja sulkeutuu linssin avautuessa). Merge-pyyntö
   Natiivisepälle puuttuu vielä → lähetä.
 - natiivi-ui/x-napit 9a688396 — ✕-inventaarion poistot, KAIKKI todennettu oikealla napautuksella (xt-arkki.jpg,
-  xs3-6-sisallys-ohi.png, 06.53); odottaa Päätoimittajan kuittausta → merge-pyyntö Natiivisepälle (63a4552e + 9a688396).
+  xs3-6-sisallys-ohi.png, 06.53); KUITATTU junaan 143, merge-pyyntö lähetetty Natiivisepälle 06.5x.
   Siivous 16/20/21 (IssKyytiNakyma sulkuVanha, Linssivalitsin ylaSulje ja Muut-paneeli), kun juna 142 on masterissa.
 - natiivi-ui/iss-ohjaamo-lcd 0fdda21f — ohjaamo + LS2:n LCD-paikat; odottaa LS2:n maailmakuvia (Amazonia) ja S2-indeksiä.
 - Myöhemmin (Päätoimittaja): ISS-kuvan vihreä nimilappu hukkuu kirkkaalle hiekalle (az-3667-a4).
