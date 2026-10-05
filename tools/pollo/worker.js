@@ -27,6 +27,9 @@ import {
 } from './opas.js';
 import { OPAS_AINEISTO } from './opas-aineisto.js';
 import {
+  siivoaKuva, kuvaKontekstiksi, kuvaSirujenAvain, lueKuvasirut, KUVASIRUKEHOTE, KUVASIRUJA, KUVASIRUJEN_TTL_S,
+} from './kuvasirut.js';
+import {
   HISTORIAN_KATTO,
   KONTEKSTIN_KATTO,
   KUUKAUSIRAJA_OLETUS,
@@ -3143,6 +3146,13 @@ export default {
     if (tehtava === 'vastaus' && !kysymys) {
       return vastaa({ virhe: 'kysely', viesti: 'Kysymys puuttuu.' }, { status: 400, ...kors });
     }
+    // Astronauttien kuva näytöllä (kuvasirut.js): ehdotukset kuvan tiedoista ja KV:stä; välimuistiosuma ei kuluta rajoja.
+    const kuva = siivoaKuva(runko?.kuva);
+    const kuvaAvain = tehtava === 'ehdotukset' && kuva ? await kuvaSirujenAvain(kuva) : null;
+    if (kuvaAvain) {
+      const valmiit = await lueKuvasirut(env.POLLO_KV ?? null, kuvaAvain);
+      if (valmiit) return vastaa({ ehdotukset: valmiit }, kors);
+    }
 
     // --- käyttörajat -------------------------------------------------
     const kv = env.POLLO_KV ?? null;
@@ -3176,6 +3186,20 @@ export default {
 
     // --- kutsu -------------------------------------------------------
     try {
+      if (tehtava === 'ehdotukset' && kuva) {
+        const teksti = await kysyMallilta(env, {
+          jarjestelma: `${JARJESTELMAKEHOTE}\n\n${KUVASIRUKEHOTE}`,
+          viestit: [{ role: 'user', content: kuvaKontekstiksi(kuva) }],
+          maxTokens: 250,
+        });
+        const ehdotukset = poimiEhdotukset(teksti, KUVASIRUJA);
+        // Vain täysi lista talteen: vajaa vastaus generoidaan seuraavalla katselulla uudelleen.
+        if (ehdotukset.length === KUVASIRUJA && env.POLLO_KV) {
+          const talletus = env.POLLO_KV.put(kuvaAvain, JSON.stringify(ehdotukset), { expirationTtl: KUVASIRUJEN_TTL_S }).catch(() => {});
+          if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(talletus); else await talletus;
+        }
+        return vastaa({ ehdotukset }, kors);
+      }
       if (tehtava === 'ehdotukset') {
         const teksti = await kysyMallilta(env, {
           jarjestelma: `${JARJESTELMAKEHOTE}\n\n${EHDOTUSKEHOTE}`,
@@ -3191,10 +3215,11 @@ export default {
       const viestit = [];
       // Pelin valmiit vastaukset taustatiedoksi, ei koskaan näytettäväksi (omistaja 5.10.2026 klo 16.4x; rajat.js).
       const tausta = taustatietoKontekstiksi(siivoaTaustatieto(runko?.taustatieto));
-      if (konteksti || tausta) {
+      const kuvateksti = kuvaKontekstiksi(kuva);
+      if (konteksti || tausta || kuvateksti) {
         viestit.push({
           role: 'user',
-          content: [konteksti ? `Pelaajan tilanne juuri nyt:\n\n${konteksti}` : '', tausta].filter(Boolean).join('\n\n'),
+          content: [konteksti ? `Pelaajan tilanne juuri nyt:\n\n${konteksti}` : '', kuvateksti, tausta].filter(Boolean).join('\n\n'),
         });
         viestit.push({
           role: 'assistant',
