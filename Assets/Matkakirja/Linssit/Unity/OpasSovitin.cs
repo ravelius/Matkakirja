@@ -187,7 +187,7 @@ namespace Matkakirja.Natiivi
             if (puhuu && Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying)) { puhuu = false; y.Repliikki(false); silmukka.AaniLoppui(); }
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
-            silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus);
+            silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => kaupunki.Valmis);
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             y.Kuvaa(silmukka.Asento);
             if (silmukka.Seuraava != null)

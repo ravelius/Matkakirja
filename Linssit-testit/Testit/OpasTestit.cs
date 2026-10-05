@@ -109,6 +109,17 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(2, saapui); Oleta.Sama(OpasVaihe.Puhuu, s.Vaihe);
         }
 
+        [Testi] static void SaapuminenOdottaaLaattojaEnintaanNeljaSekuntia()
+        {
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            int saapui = 0; s.Saapui += _ => saapui++;
+            s.Aloita(null); s.Vastaus(1, K("a", 55.6757, 12.5696));
+            s.Paivita(0.05, _ => 50, () => false);
+            double lento = s.LentoKestoS, t = 0.05;
+            while (saapui == 0 && t < 60) { s.Paivita(0.05, _ => 50, () => false); t += 0.05; }
+            Oleta.Tosi(t > lento + OpasSilmukka.SaapumisOdotusS - 0.2 && t < lento + OpasSilmukka.SaapumisOdotusS + 0.3, $"saapui {t:F1} s, lento {lento:F1} s");
+        }
+
         [Testi] static void PuheenJalkeenOdottaaSeuraavaa()
         {
             var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));

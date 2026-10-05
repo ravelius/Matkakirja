@@ -58,6 +58,8 @@ namespace Matkakirja.Linssit.Kierros
         public const double TaukoS = 0.8, KiertoAsteS = 0.6;
         /// <summary>Esihaun ja toiveen vastauksen enimmäisodotus (s), jonka jälkeen silmukka pyytää uudelleen.</summary>
         public const double VastausMaxS = 25;
+        /// <summary>Saapumisen enimmäisodotus laattoja varten (s) lennon päätyttyä.</summary>
+        public const double SaapumisOdotusS = 4;
 
         public OpasVaihe Vaihe { get; private set; } = OpasVaihe.Alku;
         public OpasKohde Nykyinen { get; private set; }
@@ -187,7 +189,7 @@ namespace Matkakirja.Linssit.Kierros
         /// Kerran kehyksessä. aika = monotoninen s; maaKorkeus(kohde) palauttaa maaston korkeuden ellipsoidista (tai NaN,
         /// jolloin käytetään arviota). Palauttaa true, kun kamera on uudessa asennossa (Asento).
         /// </summary>
-        public void Paivita(double dt, Func<OpasKohde, double> maaKorkeus)
+        public void Paivita(double dt, Func<OpasKohde, double> maaKorkeus, Func<bool> laatatValmiit = null)
         {
             if (Vaihe == OpasVaihe.Valmis) return;
             VaiheAika += Math.Max(0, dt);
@@ -213,6 +215,8 @@ namespace Matkakirja.Linssit.Kierros
                 {
                     double t = Math.Min(1, VaiheAika / LentoKestoS);
                     Asento = Lennossa(lahto, KehysAsento(kohdeKehys, 0), t);
+                    // Saapuminen odottaa laattoja enintään SaapumisOdotusS (simu 18.39: saapuessa laatat 28–45 %).
+                    if (t >= 1 && laatatValmiit != null && !laatatValmiit() && VaiheAika < LentoKestoS + SaapumisOdotusS) break;
                     if (t >= 1)
                     {
                         NykyinenKehys = kohdeKehys; kierto = 0;
