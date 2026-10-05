@@ -18,7 +18,8 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 ## Juna 143 — avoinna
 - natiivi-ui/chat-linna b38360f4 — KUITATTU (chat estää linnan eleet ja sulkeutuu linssin avautuessa). Merge-pyyntö
   Natiivisepälle puuttuu vielä → lähetä.
-- natiivi-ui/x-napit 63a4552e — ✕-inventaarion poistot (docs/raportit/x-napit-inventaario-20261005.md, päätökset
+- natiivi-ui/x-napit 9a688396 (oli 63a4552e; 9a688396 = lehden sisällyksen sulkeva napautus ei enää käännä sivua, todettu
+  oikealla napautuksella 06.45 xs-6-sisallys-ohi.png; kääntämättä ja todentamatta) — ✕-inventaarion poistot (docs/raportit/x-napit-inventaario-20261005.md, päätökset
   Päätoimittajalta). Oikeat napautukset tehty 8 pinnalle + maakuntalappu (natiivi-ui-pohjat/natiivi/xt-arkki.jpg);
   LEHDEN SISÄLLYKSEN ohinapautus uusittava (napautus osui Puluun): ui lehti ateena → ui lehti sisallys → oikea tap
   esim. (330, 300) artikkelikuvaan. Sitten tulokset Päätoimittajalle ja merge-pyyntö. Siivous 16/20/21
