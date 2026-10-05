@@ -230,7 +230,8 @@ namespace Matkakirja.Natiivi
         /// <summary>
         /// Tappiohjaus (juna 145): Natiivi-UI:n OpasTapit (UI-kokoonpano, luetaan heijastuksella kuten OpasValikko, jotta
         /// linssit kääntyy ilman UI-haaraa) silmukalle; komento "opas tapit kierto korkeus etäisyys s" ohittaa kestoksi (simutesti).
-        /// Akselit: Oikea.x = kierto, Vasen.y = korkeus, Vasen.x = etäisyys (Siirtosepän OpasOhjaus.Paivita-järjestys).
+        /// Akselit (Päätoimittaja 5.10. 21.4x, hyväksytty): oikea ↔ kiertää (Oikea.x), oikea ↕ nostaa/laskee (Oikea.y), vasen ylös
+        /// lähentää ja alas loitontaa (etäisyys = −Vasen.y). Järjestys Siirtosepän OpasOhjaus.Paivita(kierto, korkeus, etäisyys).
         /// </summary>
         void LueTapit()
         {
@@ -244,7 +245,7 @@ namespace Matkakirja.Natiivi
             }
             if (tapVasen == null || tapOikea == null || tapKosketaan == null) { silmukka.Tapit = default; silmukka.PelaajaOhjaa = false; return; }
             var v = (Vector2)tapVasen.GetValue(null); var o2 = (Vector2)tapOikea.GetValue(null);
-            silmukka.Tapit = (o2.x, v.y, v.x);
+            silmukka.Tapit = (o2.x, o2.y, -v.y);
             silmukka.PelaajaOhjaa = (bool)tapKosketaan.GetValue(null);
         }
         bool tapitHaettu;

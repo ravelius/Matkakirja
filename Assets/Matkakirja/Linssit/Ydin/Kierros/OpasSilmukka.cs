@@ -18,6 +18,8 @@ namespace Matkakirja.Linssit.Kierros
         public string AaniPcm;
         /// <summary>Kohteen luokka workerilta (valinnainen, esim. katu, kanava, aukio, torni, kirkko, linnoitus, puisto); OpasKuvaus.Kehysta käyttää.</summary>
         public string Luokka;
+        /// <summary>Kohteen korostus maassa (Pelikoodari #4018+, juna 145; valinnainen): piste, alue tai reitti.</summary>
+        public OpasKorostus Korostus;
         public int AaniTaajuus = 24000;
         /// <summary>Äänen tunniste (PCM ensisijainen, muuten mp3); null = ei ääntä.</summary>
         public string AaniAvain => !string.IsNullOrEmpty(AaniPcm) ? AaniPcm : Aani;
@@ -53,12 +55,46 @@ namespace Matkakirja.Linssit.Kierros
                 k.Vaihtoehdot = v.ToArray();
             }
             k.Kuvat = OpasKuva.Lue(j.TryGetValue("kuvat", out var ko) ? ko as IList<object> : null);
+            k.Korostus = OpasKorostus.Lue(j.TryGetValue("korostus", out var kr) ? kr as Dictionary<string, object> : null);
             if (string.IsNullOrEmpty(k.Nimi) || double.IsNaN(k.Lat) || double.IsNaN(k.Lon) || Math.Abs(k.Lat) > 90 || Math.Abs(k.Lon) > 180) return null;
             return k;
         }
     }
 
     /// <summary>Workerin kuva: {url, tyyppi valokuva|havainnekuva, tekija, lisenssi, lahde, selite}; url pakollinen.</summary>
+
+    /// <summary>
+    /// KOHTEEN KOROSTUS (Pelikoodari 5.10. 21.4x, juna 145): workerin "korostus": { "tyyppi": "piste"|"alue"|"reitti",
+    /// "pisteet": [[lat, lon], …], "sade_m": 60 }. Piste ja alue: yksi keskipiste ja säde; reitti: 2–6 pistettä järjestyksessä
+    /// (ei sädettä). Siirtoseppä piirtää (rengas tai viiva maahan). Virheellinen tai tyhjä → null.
+    /// </summary>
+    public sealed class OpasKorostus
+    {
+        public string Tyyppi;
+        public (double lat, double lon)[] Pisteet;
+        public double SadeM;
+        public bool Reitti => Tyyppi == "reitti";
+
+        public static OpasKorostus Lue(Dictionary<string, object> j)
+        {
+            if (j == null) return null;
+            string tyyppi = j.TryGetValue("tyyppi", out var t) ? t as string : null;
+            if (tyyppi != "piste" && tyyppi != "alue" && tyyppi != "reitti") return null;
+            var pisteet = new List<(double, double)>();
+            if (j.TryGetValue("pisteet", out var po) && po is IList<object> pl)
+                foreach (var x in pl)
+                {
+                    if (!(x is IList<object> pari) || pari.Count < 2 || pari[0] == null || pari[1] == null) continue;
+                    double la = Convert.ToDouble(pari[0], System.Globalization.CultureInfo.InvariantCulture);
+                    double lo = Convert.ToDouble(pari[1], System.Globalization.CultureInfo.InvariantCulture);
+                    if (Math.Abs(la) <= 90 && Math.Abs(lo) <= 180) pisteet.Add((la, lo));
+                }
+            if (pisteet.Count == 0 || (tyyppi == "reitti" && pisteet.Count < 2)) return null;
+            double sade = j.TryGetValue("sade_m", out var so) && so != null ? Convert.ToDouble(so, System.Globalization.CultureInfo.InvariantCulture) : 0;
+            return new OpasKorostus { Tyyppi = tyyppi, Pisteet = pisteet.ToArray(), SadeM = tyyppi == "reitti" ? 0 : Math.Max(0, sade) };
+        }
+    }
+
     public sealed class OpasKuva
     {
         public string Url, Tekija, Lisenssi, Lahde, Selite;

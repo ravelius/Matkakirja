@@ -110,6 +110,18 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(KierrosLento.EtaisyysM(irti.Lat, irti.Lon, s.Asento.Lat, s.Asento.Lon) < 50, "lento alkaa pelaajan kulmasta");
         }
 
+        [Testi] static void KorostusLuetaan()
+        {
+            OpasKohde L(string json) => OpasKohde.Lue((Dictionary<string, object>)MiniJson.Jasenna(json));
+            var p = L("{\"nimi\":\"T\",\"lat\":55.68,\"lon\":12.57,\"korostus\":{\"tyyppi\":\"piste\",\"pisteet\":[[55.6814,12.5758]],\"sade_m\":20}}");
+            Oleta.Tosi(p.Korostus != null && !p.Korostus.Reitti && Math.Abs(p.Korostus.SadeM - 20) < 1e-9 && p.Korostus.Pisteet.Length == 1);
+            var r = L("{\"nimi\":\"S\",\"lat\":55.68,\"lon\":12.57,\"korostus\":{\"tyyppi\":\"reitti\",\"pisteet\":[[55.6757,12.5689],[55.6786,12.5737],[55.6797,12.5788]]}}");
+            Oleta.Tosi(r.Korostus.Reitti && r.Korostus.Pisteet.Length == 3 && r.Korostus.SadeM == 0);
+            Oleta.Tosi(L("{\"nimi\":\"x\",\"lat\":1,\"lon\":2,\"korostus\":{\"tyyppi\":\"reitti\",\"pisteet\":[[1,2]]}}").Korostus == null, "reitti < 2 pistettä");
+            Oleta.Tosi(L("{\"nimi\":\"x\",\"lat\":1,\"lon\":2,\"korostus\":{\"tyyppi\":\"ympyra\",\"pisteet\":[[1,2]]}}").Korostus == null, "tuntematon tyyppi");
+            Oleta.Tosi(L("{\"nimi\":\"x\",\"lat\":1,\"lon\":2}").Korostus == null);
+        }
+
         [Testi] static void KehysKoonMukaan()
         {
             var pieni = OpasSilmukka.Kehysta(K("a", 55, 12, 10), 40, 90);
