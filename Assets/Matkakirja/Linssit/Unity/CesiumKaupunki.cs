@@ -23,9 +23,15 @@ namespace Matkakirja.Natiivi
     public sealed class CesiumKaupunki
     {
         public const float MaastoSse = 16f, RakennusSse = 24f, GoogleSse = 16f;
-        public const long MaastoValimuisti = 128L << 20, RakennusValimuisti = 192L << 20, GoogleValimuisti = 384L << 20;
+        /// <summary>
+        /// MUISTIKATTO (Päätoimittaja 5.10. 18.5x, pakollinen ennen koetta): simun RSS nousi Google-SSE 12:lla 1,6 → 5,3 Gt ja SSE 8:lla
+        /// 7,7 Gt. Välimuisti (maximumCachedBytes: käyttämättömät laatat) 256 Mt ja Googlen SSE vähintään GoogleSseMin
+        /// kuvanlaadun asetuksista riippumatta (KaupunkiKuva voi nostaa, ei laskea alle). Rinnakkaiset lataukset 8.
+        /// </summary>
+        public const long MaastoValimuisti = 128L << 20, RakennusValimuisti = 192L << 20, GoogleValimuisti = 256L << 20;
+        public const float GoogleSseMin = 16f;
         public const long GoogleAsset = 2275207;
-        public const uint Rinnakkain = 12;
+        public const uint Rinnakkain = 8;
         /// <summary>Laattojen valmiusraja (%): ComputeLoadProgress on arvio, joten 100 ei aina täyty.</summary>
         public const float ValmisProsentti = 99f;
         /// <summary>Taivaan väri kaupunkinäkymässä (pallon avaruuden musta ei sovi horisonttiin).</summary>
@@ -183,6 +189,14 @@ namespace Matkakirja.Natiivi
             if (hallinta != null && !hallinta.additionalCameras.Contains(esikamera)) hallinta.additionalCameras.Add(esikamera);
             kirjaa("kaupunki: data " + data);
             if (auki) Avattu?.Invoke(this);
+            // Muistikatto kuvanlaadun koukun jälkeen: Googlen SSE ei alle GoogleSseMin:n (asetin luo tilesetin uudelleen vain jos muuttuu).
+            if (data == Lahde.Google && maasto != null && maasto.maximumScreenSpaceError < GoogleSseMin)
+            {
+                kirjaa($"kaupunki: Google-SSE {maasto.maximumScreenSpaceError:F0} → {GoogleSseMin:F0} (muistikatto)");
+                maasto.maximumScreenSpaceError = GoogleSseMin;
+            }
+            if (maasto != null && maasto.maximumCachedBytes > (data == Lahde.Google ? GoogleValimuisti : MaastoValimuisti))
+                maasto.maximumCachedBytes = data == Lahde.Google ? GoogleValimuisti : MaastoValimuisti;
         }
 
         Cesium3DTileset LuoTileset(string nimi, long asset, float sse, long valimuisti)
