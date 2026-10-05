@@ -26,8 +26,10 @@ namespace Matkakirja.Natiivi
     {
         public static bool Paalla = true, Kohina = true;
 
-        /// <summary>Blendi saapumiskaaren lopusta lepoon ja lyhin lepojen välinen blendi (s).</summary>
-        const float SaapumisenLoppuS = 0.5f, LyhinBlendiS = 0.5f;
+        /// <summary>Blendi saapumiskaaren lopusta lepoon ja lyhin lepojen välinen blendi (s). Jalkivenyma: blendi jatkuu tämän
+        /// verran Ytimen lennon jälkeen (A/B 5.10.: pelkällä lennon ajalla huippunopeus oli ~30 % jousta suurempi, ruutuerojen p99
+        /// 21,1 vs. 16,5); jousikin jäi Ytimestä jälkeen, joten leikkausikkuna ja teksti eivät kärsi.</summary>
+        const float SaapumisenLoppuS = 0.5f, LyhinBlendiS = 0.8f, JalkivenymaS = 0.6f;
         const string Lento = "lento";
 
         sealed class Lepo
@@ -161,7 +163,7 @@ namespace Matkakirja.Natiivi
             string tavoite = lepo.Saapumassa ? Lento : lepo.Avain;
             if (tavoite != Elava)
             {
-                float kesto = Elava == null ? 0f : Elava == Lento ? SaapumisenLoppuS : Mathf.Max(LyhinBlendiS, (float)lepo.Jaljella);
+                float kesto = Elava == null ? 0f : Elava == Lento ? SaapumisenLoppuS : Mathf.Max(LyhinBlendiS, (float)lepo.Jaljella + JalkivenymaS);
                 aivot.DefaultBlend = new CinemachineBlendDefinition(
                     kesto <= 0f ? CinemachineBlendDefinition.Styles.Cut : CinemachineBlendDefinition.Styles.EaseInOut, kesto);
                 (tavoite == Lento ? lento : lepot[tavoite].Cam).Priority = ++prioriteetti;
