@@ -6,6 +6,11 @@ Olet Laitetestaaja (Sonnet), checkout /Users/Shared/Claude/Matkakirja-laitetesta
 sinun docs-muutoksiisi, peruuta merge ja pushaa suoraan omaan haaraasi, ks. luovutuksen kohta
 tästä jos epäselvää).
 
+## PÄIVITYS 5.10.2026 klo 05.58 — LUE TÄMÄ ENSIN (viikkoraja 99 %, tilinvaihto)
+- **docs/raportit/viesti-laitetestaaja-luovutus-20261005.md** on uusin luovutus (kärki, avoimet kohdat).
+- Viimeisin kierros: juna 142 koe 30488e2b, osittainen (lukijan ääni OK). Muut kohdat testaamatta, syy aika.
+- Simu 1572C658 sammutettu. Odota Julkaisijan "SIMU NYT" -viestiä ennen bootia.
+
 ## PÄIVITYS 2.10.2026 klo 22.1x — LUE TÄMÄ ENSIN (viikkoraja 92 %, Postivahdin/Päätoimittajan ohje)
 - **docs/raportit/viesti-laitetestaaja-luovutus-20261002.md** on uusin luovutus (kärki, avoimet kohdat, protokolla).
   Viimeisin savukierros: 1.1 (129) 745d8ff0 PASS (`savukierros-1129-20261002.md`); 2.10. kierrokset 119…129 + 128b raportoitu.
