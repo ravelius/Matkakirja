@@ -106,6 +106,7 @@ namespace Matkakirja.Natiivi
         const string KuvaPoisIkoni = Ikonit.PilleriJulisteet + "<path d=\"M3.2 3.6 20.8 20.4\"/>";
         const float KuvaLeveys = 132f, KuvaRako = 8f;
         readonly VisualElement kuvaKortti, kuvaKehys, kuvaEl, kuvaMerkki;
+        readonly Label kuvaLaskuri;
         Kuvasuurennos suurennos;
         OpasKuva naytettyKuva;
         bool kuvaNakyy;
@@ -176,6 +177,11 @@ namespace Matkakirja.Natiivi
             kuvaKehys = Rakenne.El("mk-nosto__kuvakehys mk-nosto__kuvakehys--nyky", kuvaKortti, PickingMode.Ignore);
             kuvaKehys.style.height = Mathf.Round((KuvaLeveys - 12f) * 2f / 3f);
             kuvaEl = Rakenne.El("mk-nosto__kuva", kuvaKehys, PickingMode.Ignore);
+            // USEAT KUVAT (omistaja 5.10.2026 klo 23.5x): kortissa yksi kuva ja nostokortin kuvalaskuri "+N" muiden määrästä.
+            kuvaLaskuri = Rakenne.Teksti("", "mk-nosto__laskuri", kuvaKehys);
+            kuvaLaskuri.pickingMode = PickingMode.Ignore;
+            Kirjasimet.Aseta(kuvaLaskuri, Kirjasin.Moderni);
+            kuvaLaskuri.style.display = DisplayStyle.None;
             kuvaMerkki = Rakenne.El("mk-nosto__kuvateksti mk-nosto__kuvateksti--kotelo", kuvaKortti, PickingMode.Ignore);
             var hm = Rakenne.Teksti("Havainnekuva".ToUpperInvariant(), "mk-nosto__havainne", kuvaMerkki);
             hm.tooltip = "Havainnekuva";
@@ -368,6 +374,16 @@ namespace Matkakirja.Natiivi
             return l.Nykyinen.Kuvat != null && l.Nykyinen.Kuvat.Length > 0 ? l.Nykyinen.Kuvat[0] : null;
         }
 
+        /// <summary>Pysähdyksen kaikki kuvat (testissä testikuvat), ensimmäinen on kortin kuva.</summary>
+        IReadOnlyList<OpasKuva> NykyisetKuvat()
+        {
+            if (testiKuvat != null) return testiKuvat;
+            var l = OpasSovitin.Viimeisin?.Silmukka?.Nykyinen;
+            return l?.Kuvat ?? (IReadOnlyList<OpasKuva>)Array.Empty<OpasKuva>();
+        }
+        /// <summary>Testi `ui opasvalikko kuvatesti sarja`: kolme kuvaa samasta kohteesta (+2).</summary>
+        OpasKuva[] testiKuvat;
+
         /// <summary>
         /// Joka ruudulla: kortti oikeaan reunaan sirurivin yläpuolelle (ei peitä vastaussiruja), häivytys 200 ms. Kuva ladataan
         /// nostojen kuvahaulla (NostoSisalto.HaeKuva); epäonnistunut lataus jättää kortin pois.
@@ -384,6 +400,9 @@ namespace Matkakirja.Natiivi
                 {
                     int v = ++kuvaVersio;
                     kuvaMerkki.style.display = k.Havainnekuva ? DisplayStyle.Flex : DisplayStyle.None;
+                    int muita = NykyisetKuvat().Count - 1;
+                    kuvaLaskuri.text = muita > 0 ? "+" + muita : "";
+                    kuvaLaskuri.style.display = muita > 0 ? DisplayStyle.Flex : DisplayStyle.None;
                     NostoSisalto.HaeKuva(k.Url, t =>
                     {
                         if (v != kuvaVersio || naytettyKuva != k) return;
@@ -424,17 +443,21 @@ namespace Matkakirja.Natiivi
             if (k == null) return;
             if (suurennos == null) suurennos = new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
             var l = OpasSovitin.Viimeisin?.Silmukka?.Nykyinen;
-            string teksti = !string.IsNullOrWhiteSpace(k.Selite) ? k.Selite : l?.Nimi;
-            string selite = k.Havainnekuva ? "HAVAINNEKUVA" + (teksti != null ? " · " + teksti : "") : teksti;
-            suurennos.Avaa(new List<LehtiKuva>
+            // Kokoruutuselaus: nostojen Kuvasuurennos sarjana (pyyhkäisy ja ‹ ›), lähderivi ja selite kuvakohtaisesti.
+            var kaikki = NykyisetKuvat();
+            var sarja = new List<LehtiKuva>();
+            foreach (var x in kaikki.Count > 0 ? kaikki : new[] { k })
             {
-                new LehtiKuva
+                string teksti = !string.IsNullOrWhiteSpace(x.Selite) ? x.Selite : l?.Nimi;
+                string selite = x.Havainnekuva ? "HAVAINNEKUVA" + (teksti != null ? " · " + teksti : "") : teksti;
+                sarja.Add(new LehtiKuva
                 {
-                    Lahde = k.Url, Lyhyt = selite, Selite = selite,
-                    LahdeRivi = string.Join(" · ", new[] { k.Tekija, k.Lisenssi }.Where(x => !string.IsNullOrEmpty(x))),
-                },
-            });
-            Debug.Log("MATKAKIRJA opas: kuva suurennettu " + k.Url);
+                    Lahde = x.Url, Lyhyt = selite, Selite = selite,
+                    LahdeRivi = string.Join(" · ", new[] { x.Tekija, x.Lisenssi }.Where(y => !string.IsNullOrEmpty(y))),
+                });
+            }
+            suurennos.Avaa(sarja, 0);
+            Debug.Log($"MATKAKIRJA opas: kuvat suurennettu ({sarja.Count})");
         }
 
         /// <summary>Vaihtoehdon napautus: kysymys oppaalle saman chatin kautta (Sieppaa → OpasSovitin.Toive), chat pysyy kiinni.</summary>
@@ -777,6 +800,16 @@ namespace Matkakirja.Natiivi
                     return "opas: testikuva" + (testiKuva.Havainnekuva ? " (havainnekuva)" : "");
                 case "kuvat": VaihdaKuvat(); return "opas: kuvat " + (KuvatPaalla ? "päällä" : "pois");
                 case "suurenna": SuurennaKuva(); return "opas: suurennos " + (naytettyKuva != null ? "auki" : "ei kuvaa");
+                case "kuvasarja":
+                    testiKuvat = new[]
+                    {
+                        new OpasKuva { Url = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Nyhavn%2C_Copenhagen%2C_20220618_1728_7354.jpg/960px-Nyhavn%2C_Copenhagen%2C_20220618_1728_7354.jpg", Tekija = "Jakub Hałun", Lisenssi = "CC BY-SA 4.0", Selite = "Nyhavnin kanava" },
+                        new OpasKuva { Url = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Copenhagen_-_Rundet%C3%A5rn_-_2013.jpg/960px-Copenhagen_-_Rundet%C3%A5rn_-_2013.jpg", Tekija = "Commons", Lisenssi = "CC BY-SA", Selite = "Pyöreä torni" },
+                        new OpasKuva { Url = "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Christiansborg_Slot.jpg/960px-Christiansborg_Slot.jpg", Tekija = "Commons", Lisenssi = "CC BY-SA", Selite = "Christiansborg" },
+                    };
+                    testiKuva = testiKuvat[0];
+                    naytettyKuva = null;
+                    return "opas: testikuvasarja (3)";
                 case "peitto": return Peitto();
                 case "tapit": return "opas: " + tapit.Kuvaus();
                 case "nimilappu": return "opas: " + nimilappu.Kuvaus();
