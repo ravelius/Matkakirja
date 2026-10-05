@@ -195,6 +195,8 @@ while IFS= read -r rivi || [[ -n $rivi ]]; do
       s=${loput%% *}; nimi=${loput#* }
       rm -f "$D/$nimi.wav" "$D/$nimi-natiivi.wav"; kirjoita linssi-komento.txt "kaappaa $s $nimi"
       for i in {1..$(( (s + 20) * 2 ))}; do [[ -s "$D/$nimi.wav" ]] && break; sleep 0.5; done; sleep 1
+      # Natiivikaappaus (MatkakirjaSilmukat) valmistuu omassa tahdissaan: odota sen valmis-riviä, ennen kuin kopioidaan.
+      for i in {1..20}; do cat $L/konsoli-*.log 2>/dev/null | grep -a -q "natiivikaappaus valmis: .*$nimi-natiivi.wav" && break; sleep 0.5; done
       cp "$D/$nimi.wav" "$D/$nimi-natiivi.wav" $L/aani/ 2>/dev/null
       [[ -s $L/aani/$nimi.wav ]] || tulos 5 PUUTE "kaappausta $nimi.wav ei syntynyt" ;;
     aanitaso)
