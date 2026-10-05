@@ -1145,6 +1145,18 @@ const KEHITTAJA_OTSAKE = 'x-pollo-kehittaja';
  */
 export const TESTI_OTSAKE = 'x-matkakirja-testi';
 
+/*
+ * TESTITUNNUS (Päätoimittaja 5.10.2026 ilta, juna 146): roolien simut ja todistusajot (kehittäjä- ja testikäännökset)
+ * lähettävät otsakkeen x-matkakirja-testitunnus = salaisuus POLLO_TESTITUNNUS (worker + avaintiedosto, ei repoon).
+ * Ohittaa VAIN per-IP-päivärajat (opas, Pulu-chat, puhe, sähke) ja nostaa oppaan minuuttirajan (silmukkasuoja jää).
+ * Koko palvelun kustannuskatot (kuukausirajat, ElevenLabsin päiväkatot) pysyvät; TF-käyttäjien rajat ennallaan.
+ */
+const TESTITUNNUS_OTSAKE = 'x-matkakirja-testitunnus';
+function testitunnusOhitus(pyynto, env) {
+  if (!env.POLLO_TESTITUNNUS) return false;
+  return vertaaSalaisuus(pyynto.headers.get(TESTITUNNUS_OTSAKE), env.POLLO_TESTITUNNUS);
+}
+
 function kehittajaOhitus(pyynto, env) {
   if (!env.POLLO_KEHITTAJAKOODI) return false;
   return vertaaSalaisuus(pyynto.headers.get(KEHITTAJA_OTSAKE), env.POLLO_KEHITTAJAKOODI);
@@ -1549,7 +1561,7 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   const kAvain = puheKuukausiAvain(nyt);
   const kehittaja = kehittajaOhitus(pyynto, env);
   const raja = kehittaja ? { ok: true } : tarkistaPuheRajat({
-    paiva: await lueLaskuri(kv, pAvain),
+    paiva: testitunnusOhitus(pyynto, env) ? 0 : await lueLaskuri(kv, pAvain),
     kuukausi: await lueHarvaLaskuri(kv, kAvain),
     paivaraja: lueLuku(env.PUHE_PAIVARAJA, PUHE_PAIVARAJA_OLETUS),
     kuukausiraja: lueLuku(env.PUHE_KUUKAUSIRAJA, PUHE_KUUKAUSIRAJA_OLETUS),
@@ -2598,7 +2610,7 @@ async function hoidaSahke(pyynto, env, kors, runko) {
   const pAvain = paivaAvain(pyynto.headers.get('cf-connecting-ip'), nyt);
   const kAvain = kuukausiAvain(nyt);
   const raja = kehittajaOhitus(pyynto, env) ? { ok: true } : tarkistaRajat({
-    paiva: await lueLaskuri(kv, pAvain),
+    paiva: testitunnusOhitus(pyynto, env) ? 0 : await lueLaskuri(kv, pAvain),
     kuukausi: await lueHarvaLaskuri(kv, kAvain),
     paivaraja: lueLuku(env.POLLO_PAIVARAJA, PAIVARAJA_OLETUS),
     kuukausiraja: lueLuku(env.POLLO_KUUKAUSIRAJA, KUUKAUSIRAJA_OLETUS),
@@ -2840,6 +2852,7 @@ async function hoidaOppaanPcm(pyynto, env, ctx, sha) {
  * suurempi KV:n ja tämän isolaatin oman laskun arvoista. Ylitys → heti 429 Retry-After, ei Sonnetia, ei ElevenLabsia.
  */
 const OPAS_MINUUTTIRAJA = 20;
+const OPAS_TESTI_MINUUTTIRAJA = 120;   // testitunnuksella (roolien simut), silmukkasuoja jää
 const OPAS_IKKUNA_MS = 60 * 1000;
 const opasTiheys = new Map();
 
@@ -2858,7 +2871,9 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   if (!env.ANTHROPIC_API_KEY) return vastaa({ virhe: 'asetus', viesti: 'Opas ei ole vielä käytössä.' }, { status: 503, ...kors });
   const ip = pyynto.headers.get('cf-connecting-ip');
   // cf-connecting-ip on Cloudflaressa aina; ilman sitä (paikalliset testit) tiheysrajaa ei lasketa.
-  if (ip && oppaanTiheysYlittyy(ip, Date.now(), lueLuku(env.OPAS_MINUUTTIRAJA, OPAS_MINUUTTIRAJA))) {
+  const testitunnus = testitunnusOhitus(pyynto, env);
+  const minuuttiraja = testitunnus ? lueLuku(env.OPAS_TESTI_MINUUTTIRAJA, OPAS_TESTI_MINUUTTIRAJA) : lueLuku(env.OPAS_MINUUTTIRAJA, OPAS_MINUUTTIRAJA);
+  if (ip && oppaanTiheysYlittyy(`${testitunnus ? 'testi:' : ''}${ip}`, Date.now(), minuuttiraja)) {
     console.log('opas: tiheysraja → 429 ilman kutsuja');
     const v = vastaa({ virhe: 'liian-tiheaan', viesti: 'Opas hengähtää hetken. Yritä uudelleen puolen minuutin päästä.' }, { status: 429, ...kors });
     v.headers.set('retry-after', '30');
@@ -2867,7 +2882,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   const p = siivoaOpasPyynto(runko);
   const kehittaja = kehittajaOhitus(pyynto, env);
   const kv = env.POLLO_KV ?? null;
-  if (!kehittaja) {
+  if (!kehittaja && !testitunnus) {
     const avain = opasPaivaAvain(ip);
     const kaytetty = Math.max(await lueLaskuri(kv, avain), muisti.get(avain) ?? 0);
     if (kaytetty >= lueLuku(env.OPAS_PAIVARAJA, OPAS_PAIVARAJA_OLETUS)) {
@@ -2886,6 +2901,9 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     isoisaAvain ? kv.get(isoisaAvain).then(Boolean).catch(() => false) : false,
     kierrosAvain ? kv.get(kierrosAvain).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null]);
   const aineisto = kaupunginAineisto(env.OPAS_AINEISTO_TESTI ?? OPAS_AINEISTO, p.kaupunki);
+  // OSM (Nominatim) vain asiakkaille, jotka näyttävät OSM-maininnan (Päätoimittaja: ODbL; vanhat natiivit TF 143–145
+  // eivät lähetä krediittejä → Wikidata-reitti kuten ennen).
+  const osm = p.krediitit.includes('osm') ? { env, kaupunki: p.kaupunki } : null;
   const nahdyt = [...p.kaydyt, ...kaydytNimet];
 
   // KIERROS (omistajan idea 19.3x): "Esittele kaupunki" / "Lisää tätä kaupunkia" suunnittelee ~8 pysähdystä yhdellä
@@ -2902,7 +2920,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
         maxTokens: 700, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
       })).teksti);
       return (await Promise.all(suunnitelma.map(async (x) => {
-        const paikka = await paikanKoordinaatit(fetch, x, sijainti);
+        const paikka = await paikanKoordinaatit(fetch, x, sijainti, osm);
         return paikka ? { nimi: paikanNimi(paikka, x.nimi), wikipedia: x.wikipedia, koko_m: x.koko_m, ...paikka } : null;
       }))).filter(Boolean).filter((x, i, kaikki) => kaikki.findIndex((y) => y.id === x.id) === i);
     } catch (virhe) {
@@ -2942,7 +2960,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       const vastaus = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti, seuraava?.paikka.nimi ?? null);
       if (vastaus?.tyyppi !== 'pysahdys') { tulos = vastaus; continue; }
       // Kierroksen paikka on jo tarkistettu suunnitteluvaiheessa; muuten koordinaatit nimellä.
-      const paikka = seuraava ? seuraava.paikka : await paikanKoordinaatit(fetch, vastaus, sijainti);
+      const paikka = seuraava ? seuraava.paikka : await paikanKoordinaatit(fetch, vastaus, sijainti, osm);
       if (!paikka) { console.log(`opas: paikkaa ei löytynyt (${vastaus.wikipedia ?? vastaus.nimi})`); continue; }
       const nimi = seuraava ? seuraava.paikka.nimi : paikanNimi(paikka, vastaus.nimi);
       tuloksenPaikka = { nimi, wikipedia: vastaus.wikipedia, koko_m: vastaus.koko_m, ...paikka };
@@ -2957,7 +2975,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       kuvaAlku = Date.now();
       kuvaLupaus = lisaKuvatValimuistilla(fetch, kv, paikka.id).catch(() => []);
       korostusLupaus = paikanKorostus(fetch, { lat: paikka.lat, lon: paikka.lon, koko_m: tulos.koko_m, luokka: vastaus.luokka,
-        reitti: vastaus.reitti ?? [] }, sijainti);
+        reitti: vastaus.reitti ?? [], nimi: seuraava?.paikka.wikipedia ?? vastaus.wikipedia ?? nimi, nimet: [vastaus.nimi, nimi], id: paikka.id },
+        sijainti, osm);
       // Kylmä kohde ilman pelin omaa kuvaa: vanha P18-polku (1 kuva) kriittisellä polulla kuten ennen (Päätoimittaja 6.10.:
       // kohde, jolla oli kuva, ei saa jäädä ilman). Alkaa heti koordinaattien jälkeen.
       p18Lupaus = !tulos.kuvat.length ? wikidataKuva(fetch, paikka.id).catch(() => []) : null;
@@ -2993,7 +3012,10 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     const suuntaAvain = p.istunto && kv ? `opas:suunnat:${p.istunto}` : null;
     const kaytetyt = suuntaAvain ? await kv.get(suuntaAvain).then((x) => (x ? JSON.parse(x) : [])).catch(() => [])
       : [SUUNNANVAIHDOT[(p.kaydyt.length + SUUNNANVAIHDOT.length - 1) % SUUNNANVAIHDOT.length]];
-    const { siru, kaytetyt: uudet } = seuraavaSuunta(kaytetyt, tulos.luokka ?? null);
+    // Juuri valittua suuntaa ei tarjota heti uudelleen ("Missä voisi syödä?" → ei taas "Missä voisi syödä?").
+    const valittu = SUUNNANVAIHDOT.find((x) => x === p.toive);
+    const { siru, kaytetyt: uudet } = seuraavaSuunta(valittu ? [...kaytetyt.filter((x) => x !== valittu), valittu] : kaytetyt,
+      tulos.luokka ?? null);
     const syventava = (tulos.vaihtoehdot ?? []).find((x) => !SUUNNANVAIHDOT.includes(x) && !/modernia|syödä|syödään/i.test(x)) ?? tulos.vaihtoehdot?.[0];
     tulos.vaihtoehdot = [syventava ?? 'Mitä täällä näkee?', siru];
     if (suuntaAvain) {
@@ -3165,7 +3187,7 @@ export default {
     const kAvain = kuukausiAvain(nyt);
     const kehittaja = kehittajaOhitus(pyynto, env);
     const raja = kehittaja ? { ok: true } : tarkistaRajat({
-      paiva: await lueLaskuri(kv, pAvain),
+      paiva: testitunnusOhitus(pyynto, env) ? 0 : await lueLaskuri(kv, pAvain),
       kuukausi: await lueHarvaLaskuri(kv, kAvain),
       paivaraja: lueLuku(env.POLLO_PAIVARAJA, PAIVARAJA_OLETUS),
       kuukausiraja: lueLuku(env.POLLO_KUUKAUSIRAJA, KUUKAUSIRAJA_OLETUS),

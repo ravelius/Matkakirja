@@ -60,7 +60,8 @@ export const PULU_ELEVEN_PAIVARAJA_OLETUS = 15000;
  * ELÄVÄN OPPAAN RAJAT (Päätoimittaja 5.10.2026 klo 17.5x): oma globaali äänikatto (William, merkkejä vuorokaudessa) ja
  * pysähdyspyyntöjen päiväraja IP:tä kohden (Sonnet-kutsu + Wikipedia). Kehittäjäkoodilla ei rajoja.
  */
-export const OPAS_ELEVEN_PAIVARAJA_OLETUS = 20000;
+// 20 000 → 50 000 (omistajan lupa "nosta" 5.10.2026 klo 23.2x): ~125 pysähdystä/vrk koko palvelulle.
+export const OPAS_ELEVEN_PAIVARAJA_OLETUS = 50000;
 // 80 → 400 (Päätoimittaja 5.10. ilta: rajaa ei ole tarkoitettu omistajan eikä roolien testailtaan; kodin/Macin IP on
 // yhteinen). Kulusuoja on nyt tiheysraja 20/min IP:ttäin (worker) + ElevenLabsin päiväkatto; junan 145 jälkeen
 // päiväraja laitekohtaiseksi IP:n sijaan.
