@@ -1964,6 +1964,7 @@ namespace Matkakirja.Natiivi
                             if (osat.Length > 3 && osat[3] == "tila") Kirjaa($"astro kyyti kuvaa: {Matkakirja.Natiivi.IssKameraKuva.Tila} {Matkakirja.Natiivi.IssKameraKuva.Edistyminen:P0} {Matkakirja.Natiivi.IssKameraKuva.ViimeisinKuva}");
                             else if (osat.Length > 4 && osat[3] == "laatat") Matkakirja.Natiivi.IssKameraKuva.SailytaLaatat = osat[4] != "0";
                             else if (osat.Length > 4 && osat[3] == "usva") Matkakirja.Natiivi.IssKameraKuva.UsvaTasoitus = osat[4] != "0";
+                            else if (osat.Length > 4 && osat[3] == "gibs") Matkakirja.Natiivi.IssKameraKuva.GibsPilvetPaalla = osat[4] != "0";
                             else if (osat.Length > 4 && osat[3] == "odotus") Matkakirja.Natiivi.IssKameraKuva.LisaOdotus = (float)Luku(osat[4]);
                             else if (osat.Length > 4 && osat[3] == "sini") Matkakirja.Natiivi.IssKameraKuva.MaanSini = (float)Luku(osat[4]);
                             else if (osat.Length > 4 && osat[3] == "nousu") Matkakirja.Natiivi.IssKameraKuva.NousuKerroin = (float)Luku(osat[4]);
