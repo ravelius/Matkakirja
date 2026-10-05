@@ -15,12 +15,21 @@ namespace Matkakirja.Linssit.Kierros
     {
         public string Id, Nimi, Alarivi, Teksti, Aani;
         public double Lat, Lon, KokoM = 60, KorkeusM, KestoS;
+        /// <summary>Workerin kysymys (tyyppi "kysymys"): opas kysyy ääneen, vaihtoehdot chattiin; ei sijaintia.</summary>
+        public bool Kysymys;
+        public string[] Vaihtoehdot;
 
         public static OpasKohde Lue(IDictionary<string, object> j)
         {
             if (j == null) return null;
             string S(string k) => j.TryGetValue(k, out var v) ? v as string : null;
             double D(string k, double o) => j.TryGetValue(k, out var v) && v != null ? Convert.ToDouble(v, System.Globalization.CultureInfo.InvariantCulture) : o;
+            if (S("tyyppi") == "kysymys")
+            {
+                var vaihtoehdot = new List<string>();
+                if (j.TryGetValue("vaihtoehdot", out var vo) && vo is IList<object> lista) foreach (var x in lista) if (x is string t && t.Length > 0) vaihtoehdot.Add(t);
+                return string.IsNullOrEmpty(S("teksti")) ? null : new OpasKohde { Kysymys = true, Teksti = S("teksti"), Aani = S("aani"), KestoS = D("kesto_s", 0), Vaihtoehdot = vaihtoehdot.ToArray() };
+            }
             var k = new OpasKohde
             {
                 Id = S("id"), Nimi = S("nimi"), Alarivi = S("alarivi"), Teksti = S("teksti"), Aani = S("aani"),
@@ -57,6 +66,13 @@ namespace Matkakirja.Linssit.Kierros
         public event Action<OpasKohde> Saapui;
         /// <summary>Puhe katkaistava (toive keskeytti).</summary>
         public event Action Hiljenna;
+        /// <summary>Workerin kysymys: sovitin soittaa sen ja näyttää vaihtoehdot chatissa; vastaus tulee Toive-kutsuna.</summary>
+        public event Action<OpasKohde> Kysyy;
+        /// <summary>Kysymykseen ei vastattu: oma valinta tämän jälkeen (s puheen lopusta).</summary>
+        public const double KysymysOdotusS = 25;
+        /// <summary>Kysymys odottaa vastausta (esihakua ei tehdä).</summary>
+        public bool OdottaaVastausta { get; private set; }
+        double kysymysAika = -1;
 
         readonly HashSet<string> nahdyt = new HashSet<string>(StringComparer.Ordinal);
         int pyynto, odotettu;
@@ -111,6 +127,7 @@ namespace Matkakirja.Linssit.Kierros
             if (string.IsNullOrWhiteSpace(teksti) || Vaihe == OpasVaihe.Valmis) return;
             toive = teksti.Trim();
             Seuraava = null;
+            OdottaaVastausta = false; kysymysAika = -1;
             if (Vaihe == OpasVaihe.Puhuu) Hiljenna?.Invoke();
             aaniLoppui = true;
             UusiPyynto();
@@ -131,6 +148,13 @@ namespace Matkakirja.Linssit.Kierros
             if (n != odotettu) return;
             odotettu = 0;
             if (k == null) { virhe = true; return; }
+            if (k.Kysymys)
+            {
+                // Kysymys ei liikuta kameraa: opas kysyy, ja pelaajan valinta (chat) tulee Toive-kutsuna.
+                OdottaaVastausta = true; kysymysAika = 0;
+                Kysyy?.Invoke(k);
+                return;
+            }
             Seuraava = k;
         }
         bool virhe;
@@ -148,6 +172,7 @@ namespace Matkakirja.Linssit.Kierros
             VaiheAika += Math.Max(0, dt);
             if (odotettu != 0) { if (odotusAlku < 0) odotusAlku = 0; odotusAlku += dt; if (odotusAlku > VastausMaxS) { odotettu = 0; virhe = true; } }
             if (virhe) { virhe = false; UusiPyynto(); }
+            if (OdottaaVastausta && aaniLoppui) { kysymysAika += dt; if (kysymysAika > KysymysOdotusS) { OdottaaVastausta = false; UusiPyynto(); } }
 
             switch (Vaihe)
             {
@@ -172,7 +197,7 @@ namespace Matkakirja.Linssit.Kierros
                         Vaihe = OpasVaihe.Puhuu; VaiheAika = 0; aaniLoppui = false;
                         if (Nykyinen.Id != null) nahdyt.Add(Nykyinen.Id);
                         Saapui?.Invoke(Nykyinen);
-                        UusiPyynto();   // esihaku puheen ajaksi
+                        if (!OdottaaVastausta) UusiPyynto();   // esihaku puheen ajaksi
                     }
                     break;
                 }

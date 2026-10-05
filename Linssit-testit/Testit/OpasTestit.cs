@@ -70,6 +70,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(2, saapui); Oleta.Sama("nyhavn", s.Nykyinen.Id);
         }
 
+        [Testi] static void KysymysOdottaaToivettaEikaLiikutaKameraa()
+        {
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var pyynnot = new List<string>(); OpasKohde kysytty = null;
+            s.Pyyda += (n, t) => pyynnot.Add(t); s.Kysyy += k => kysytty = k;
+            s.Aloita("Kööpenhamina");
+            var k = OpasKohde.Lue((Dictionary<string, object>)MiniJson.Jasenna("{\"tyyppi\":\"kysymys\",\"teksti\":\"Mitä haluaisit nähdä?\",\"vaihtoehdot\":[\"Linnoja\",\"Satama\"],\"kesto_s\":4}"));
+            Oleta.Tosi(k != null && k.Kysymys && k.Vaihtoehdot.Length == 2);
+            s.Vastaus(1, k);
+            Oleta.Tosi(kysytty == k && s.OdottaaVastausta);
+            for (int i = 0; i < 40; i++) s.Paivita(0.1, _ => 50);
+            Oleta.Sama(1, pyynnot.Count, "ei esihakua kysymyksen aikana");
+            s.Toive("Satama");
+            Oleta.Sama(2, pyynnot.Count); Oleta.Sama("Satama", pyynnot[1]); Oleta.Tosi(!s.OdottaaVastausta);
+        }
+
         [Testi] static void PuheenJalkeenOdottaaSeuraavaa()
         {
             var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));

@@ -50,6 +50,8 @@ namespace Matkakirja.Natiivi
         public static event Action<OpasSovitin> Vaihtui;
         /// <summary>Testitila ilman workeria (komento "opas testi 1|0").</summary>
         public static bool Testi;
+        /// <summary>Testiotsake (komento "opas testiotsake 1"): worker palauttaa kerronnan ilman ääntä (ei ElevenLabs-kulutusta simussa).</summary>
+        public static bool Testiotsake;
         /// <summary>Aloituskaupunki (komento "opas kaupunki <nimi>"); ensimmäinen pyyntö on tämä toive.</summary>
         public static string Aloituskaupunki = "Kööpenhamina";
 
@@ -89,7 +91,7 @@ namespace Matkakirja.Natiivi
         public string Virhe { get; private set; }
         public float Latausaste => kaupunki.Latausaste;
         /// <summary>Kertojan teksti ruudulle: vain kun puhe ei soi (PUHE ÄÄNENÄ -sääntö).</summary>
-        public string TekstiRuudulle => silmukka != null && silmukka.Vaihe == OpasVaihe.Puhuu && !puhuu ? silmukka.Nykyinen?.Teksti : null;
+        public string TekstiRuudulle => silmukka != null && !puhuu && tekstina != null ? tekstina.Teksti : null;
 
         public void Avaa(ILinssiYmparisto ymparisto)
         {
@@ -119,6 +121,7 @@ namespace Matkakirja.Natiivi
             silmukka.Pyyda += Pyyda;
             silmukka.Saapui += Saapui;
             silmukka.Hiljenna += Hiljenna;
+            silmukka.Kysyy += Kysyy;
             if (o.GetComponent<KyydinKameraEnnen>() == null) o.gameObject.AddComponent<KyydinKameraEnnen>();
             KyydinKameraEnnen.Ajo = PaivitaKamera;
             silmukka.Aloita(Aloituskaupunki);
@@ -201,13 +204,17 @@ namespace Matkakirja.Natiivi
             };
             r.SetRequestHeader("Content-Type", "application/json");
             r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
+            string koodi = Asetukset.PolloKoodi;   // kehittäjäkoodi Keychainista kuten Pulun chatissa; ei lokiin
+            if (!string.IsNullOrEmpty(koodi)) r.SetRequestHeader(Lukijaaani.KoodiOtsake, koodi);
+            if (Testiotsake) r.SetRequestHeader("x-matkakirja-testi", "1");
             float t0 = Time.realtimeSinceStartup;
             yield return r.SendWebRequest();
             if (silmukka == null) yield break;
             OpasKohde k = null;
             if (r.result == UnityWebRequest.Result.Success)
                 k = OpasKohde.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>);
-            o.Kirjaa($"opas: vastaus {n} {(k != null ? k.Nimi : "VIRHE " + r.responseCode + " " + r.error)} ({Time.realtimeSinceStartup - t0:F1} s)");
+            o.Kirjaa($"opas: vastaus {n} {(k == null ? "VIRHE " + r.responseCode + " " + r.error : k.Kysymys ? "kysymys (" + (k.Vaihtoehdot?.Length ?? 0) + " vaihtoehtoa)" : k.Nimi)} ({Time.realtimeSinceStartup - t0:F1} s)");
             if (k != null) Valmistele(k);
             silmukka.Vastaus(n, k);
         }
@@ -217,7 +224,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Vastauksen tultua: maaston korkeus näytteenä ja äänen lataus (molemmat ehtivät lennon aikana).</summary>
         void Valmistele(OpasKohde k)
         {
-            o.StartCoroutine(Korkeus(k));
+            if (!k.Kysymys) o.StartCoroutine(Korkeus(k));
             if (!string.IsNullOrEmpty(k.Aani) && !klipit.ContainsKey(k.Aani)) o.StartCoroutine(LataaAani(k.Aani));
         }
 
@@ -245,27 +252,72 @@ namespace Matkakirja.Natiivi
         void Saapui(OpasKohde k)
         {
             kaupunki.SiirraOrigo(k.Lat, k.Lon, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45);
-            bool kertoja = Asetukset.Paalla(Kytkin.Kertoja);
-            if (kertoja && !string.IsNullOrEmpty(k.Aani) && klipit.TryGetValue(k.Aani, out var klippi) && klippi != null && puhe != null)
+            Soita(k);
+            o.Kirjaa($"opas: saapui {k.Nimi} ({k.Lat:F4}, {k.Lon:F4}), ääni {(puhuu ? "soi" : "ei")}, laatat {kaupunki.Latausaste:F0} %");
+        }
+
+        /// <summary>Kappale tai kysymys ääneen; ilman ääntä (testi, Kertoja pois, lataus kesken) teksti ruudulle kestoksi.</summary>
+        void Soita(OpasKohde k)
+        {
+            Hiljenna();
+            tekstina = null;
+            if (Asetukset.Paalla(Kytkin.Kertoja) && !string.IsNullOrEmpty(k.Aani) && klipit.TryGetValue(k.Aani, out var klippi) && klippi != null && puhe != null)
             {
                 puhe.clip = klippi; puhe.volume = 1f; puhe.Play();
                 puhuu = true; y.Repliikki(true);
                 puheLoppuu = Time.unscaledTime + klippi.length;
+                return;
             }
-            else
-            {
-                puhuu = false;
-                // Ei ääntä (testi, Kertoja pois tai lataus kesken): teksti ruudulle kestoksi kesto_s tai lukunopeuden mukaan.
-                double s = k.KestoS > 0 ? k.KestoS : KierrosLento.PysahdysKesto(k.Teksti);
-                o.StartCoroutine(TekstiLoppuu(s, k));
-            }
-            o.Kirjaa($"opas: saapui {k.Nimi} ({k.Lat:F4}, {k.Lon:F4}), ääni {(puhuu ? "soi" : "ei")}, laatat {kaupunki.Latausaste:F0} %");
+            tekstina = k;
+            double s = k.KestoS > 0 ? k.KestoS : KierrosLento.PysahdysKesto(k.Teksti);
+            o.StartCoroutine(TekstiLoppuu(s, k));
         }
+        OpasKohde tekstina;
 
         IEnumerator TekstiLoppuu(double s, OpasKohde k)
         {
             yield return new WaitForSecondsRealtime((float)s);
-            if (silmukka != null && silmukka.Nykyinen == k && !puhuu) silmukka.AaniLoppui();
+            if (silmukka != null && tekstina == k && !puhuu) { tekstina = null; silmukka.AaniLoppui(); }
+        }
+
+        /// <summary>
+        /// Workerin kysymys: William kysyy ääneen, ja vaihtoehdot näkyvät Pulu-chatissa kahtena jatkokysymyksenä
+        /// (Natiivi-UI: UiNakymat.Chat.Vastaa, heijastuksella, jotta tämä kääntyy myös ilman sitä). Valinta tulee Toive-kutsuna.
+        /// </summary>
+        void Kysyy(OpasKohde k)
+        {
+            if (!string.IsNullOrEmpty(k.Aani) && !klipit.ContainsKey(k.Aani)) { o.StartCoroutine(SoitaLadattuna(k)); }
+            else Soita(k);
+            KysymysChattiin(k);
+            o.Kirjaa($"opas: kysyy \"{k.Teksti}\" [{string.Join(" | ", k.Vaihtoehdot ?? Array.Empty<string>())}]");
+        }
+
+        IEnumerator SoitaLadattuna(OpasKohde k)
+        {
+            yield return LataaAani(k.Aani);
+            if (silmukka != null && silmukka.OdottaaVastausta) Soita(k);
+        }
+
+        /// <summary>Viimeisin kysymys ja vaihtoehdot (UI näyttää ne myös ilman chattia).</summary>
+        public OpasKohde Kysymys => silmukka != null && silmukka.OdottaaVastausta ? viimeKysymys : null;
+        OpasKohde viimeKysymys;
+
+        void KysymysChattiin(OpasKohde k)
+        {
+            viimeKysymys = k;
+            try
+            {
+                var ui = UiNakymat.Hae();
+                var chat = ui?.GetType().GetField("Chat")?.GetValue(ui) ?? ui?.GetType().GetProperty("Chat")?.GetValue(ui);
+                var vastaa = chat?.GetType().GetMethod("Vastaa");
+                if (vastaa == null) return;
+                var p = vastaa.GetParameters();
+                object jatkot = k.Vaihtoehdot ?? Array.Empty<string>();
+                if (p.Length == 2 && !p[1].ParameterType.IsAssignableFrom(jatkot.GetType()))
+                    jatkot = p[1].ParameterType.IsAssignableFrom(typeof(List<string>)) ? new List<string>(k.Vaihtoehdot ?? Array.Empty<string>()) : null;
+                vastaa.Invoke(chat, p.Length == 2 ? new[] { (object)k.Teksti, jatkot } : new object[] { k.Teksti });
+            }
+            catch (Exception e) { o.Kirjaa("opas: kysymys chattiin epäonnistui: " + e.GetType().Name); }
         }
 
         void Hiljenna()
