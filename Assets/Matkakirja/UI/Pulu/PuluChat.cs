@@ -655,6 +655,42 @@ namespace Matkakirja.Natiivi
 
         /// <param name="puhe">saneltu kysymys = puhevuoro (web kysy { puhe: true }): vastaus luetaan aina</param>
         /// <param name="aihe">kortti, josta kysytään (NostonAihe); null = ei korttia</param>
+        /// <summary>
+        /// SIEPPAUS (Linssiseppä 5.10.2026, elävä opas): asetettuna ja tosi palauttaessaan kysymys ei mene Pulun workerille, vaan
+        /// sieppaaja vastaa <see cref="Vastaa"/>-kutsulla. Pelaajan viesti näkyy chatissa kuten aina.
+        /// </summary>
+        public static Func<string, bool> Sieppaa;
+
+        /// <summary>
+        /// Sieppaajan vastaus samaan chattiin: teksti Pulun kuplana ja tasan 2 jatkokysymystä kiinnitettyinä siruina (korvaavat
+        /// edelliset). Kaiuttimen Auto-tilassa vastaus luetaan Pulun äänellä kuten workerin vastaus.
+        /// </summary>
+        /// <summary>
+        /// ELÄVÄ OPAS (Linssiseppä 5.10.2026): chat auki oppaan linssissä lämpimällä lasiteemalla (oma paikka "opas", keskustelu alkaa
+        /// puhtaana); kappaleet tulevat Vastaa-kutsulla, pelaajan toiveet Sieppaa-koukun kautta. Ankkuri oletuksena Pulu.
+        /// </summary>
+        public void AvaaOppaalle(Func<Rect> ankkuri = null)
+        {
+            AvaaLinssissa(ankkuri ?? (() => pulu.Laatikko), "opas", null, "lasi");
+        }
+
+        /// <summary>Oppaan päättyessä chat kiinni (sama kuin Sulje; nimi oppaan kytkentää varten).</summary>
+        public void SuljeOppaalta() => Sulje();
+
+        public void Vastaa(string teksti, IList<string> jatkot = null)
+        {
+            if (string.IsNullOrWhiteSpace(teksti)) return;
+            if (!Auki) Avaa(false);
+            PoistaSirut();
+            var kupla = Viesti("mk-chat__livia", Lukijaaani.PoistaPuhetagit(teksti));
+            kupla.enableRichText = false;
+            historia.Add(("pollo", teksti));
+            AsetaLukijalle(teksti);
+            if (AaniPaalla) Puhe.Hae()?.Lue(teksti, "pollo");
+            if (jatkot != null && jatkot.Count > 0) Sirut(jatkot, "mk-chat__jatkot", true);
+            Vierita(kupla);
+        }
+
         public void Kysy(string kysymys, bool jatko = false, bool puhe = false, Aihe aihe = null)
         {
             kysymys = (kysymys ?? "").Trim();
@@ -678,6 +714,9 @@ namespace Matkakirja.Natiivi
             ehdotusPoletti++;
             Alku(false);
             Viesti("mk-chat__pelaaja", kysymys);
+            // Toinen vastaaja (esim. Linssisepän elävä opas, OpasSovitin): sieppaus vastaa itse Vastaa-kutsulla eikä Pulun workeria
+            // kutsuta. Sama chat, samat napit ja kaksi kysymystä (PULU-CHAT-pohja, omistaja 5.10.2026).
+            if (Sieppaa != null && Sieppaa(kysymys)) { historia.Add(("kayttaja", kysymys)); return; }
             bool paikkaa = Paikkakysymys.IsMatch(kysymys);
             // Oma paikkahakemisto ensin (webin ratkaisePaikka): kamera lähtee heti.
             bool lensi = paikkaa && LennaTunnettuun(kysymys);
