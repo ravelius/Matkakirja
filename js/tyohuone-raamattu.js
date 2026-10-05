@@ -3046,6 +3046,15 @@ export const RAAMATTU = {
       otsikko: 'Äänet ja luennat',
       tila: 'luonnos',
       kohdat: [
+        'ÄÄNIPANKKI (omistaja 5.10.2026 klo 13.1x, sitova): pelin henkilöäänet tulevat yhdestä 20 äänen pankista, joka on '
+          + 'suunniteltu ElevenLabsin Voice Designilla samalla pohjalla (studiolaatu, lähimikki, kuiva, ei kaikua, ei suomi-merkintää; '
+          + 'v4-äänet puhuvat hyvää suomea). Äänet nimetään tyypin mukaan (esim. mies-50-jamakka-karhea), ja henkilöt viittaavat '
+          + 'pankkiin; uutta ääntä ei suunnitella, jos pankista löytyy sopiva, eikä sama ääni puhu kahta henkilöä samassa paikassa. '
+          + 'Kaiku ja tila lisätään pelissä (Steam Audio), ei ääneen. Kertoja (William), Pulu ja isoisä ovat pankin ulkopuolella. '
+          + 'Vanhat kirjastoäänet poistetaan linnasta kokonaan.',
+        'LUKIJAÄÄNI WILLIAM, EI KONELUKIJAA (omistaja 5.10.2026 klo 13.2x, sitova): kuvaselitteet, nostokortit ja lehdet luetaan '
+          + 'Williamin äänellä (ElevenLabs-striimi), Pulun chatin vastaukset Pulun omalla äänellä; xAI:n Aino-ääntä ei käytetä. ISS:n '
+          + 'kuvaselitteitä ei lueta automaattisesti, vaan vain kaiutinnapista (pelaaja päättää, milloin kuulee lisää).',
         'STRIIMILUKIJAN KAKSI NAPPIA (omistaja 28.9.2026, sitova, web ja natiivi): kaikissa luentakohdissa näkyy vain '
           + 'kaiutin (toisto/tauko + VU) ja mini-hampurilainen; hammaspyörä-nappi poistuu. Hampurilainen avaa tiiviin valikon: '
           + 'tekstin kappaleet listana (napautus hyppää kappaleeseen, nykyinen korostettuna), alimpana kelausrivi — vasemmalla '
