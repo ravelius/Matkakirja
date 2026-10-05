@@ -310,7 +310,8 @@ namespace Matkakirja.Natiivi
             if (k == null) return;
             if (suurennos == null) suurennos = new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
             var l = OpasSovitin.Viimeisin?.Silmukka?.Nykyinen;
-            string selite = k.Havainnekuva ? "HAVAINNEKUVA" + (l?.Nimi != null ? " · " + l.Nimi : "") : l?.Nimi;
+            string teksti = !string.IsNullOrWhiteSpace(k.Selite) ? k.Selite : l?.Nimi;
+            string selite = k.Havainnekuva ? "HAVAINNEKUVA" + (teksti != null ? " · " + teksti : "") : teksti;
             suurennos.Avaa(new List<LehtiKuva>
             {
                 new LehtiKuva

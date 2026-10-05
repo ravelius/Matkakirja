@@ -49,10 +49,10 @@ namespace Matkakirja.Linssit.Kierros
         }
     }
 
-    /// <summary>Workerin kuva: {url, tyyppi valokuva|havainnekuva, tekija, lisenssi, lahde}; url pakollinen.</summary>
+    /// <summary>Workerin kuva: {url, tyyppi valokuva|havainnekuva, tekija, lisenssi, lahde, selite}; url pakollinen.</summary>
     public sealed class OpasKuva
     {
-        public string Url, Tekija, Lisenssi, Lahde;
+        public string Url, Tekija, Lisenssi, Lahde, Selite;
         public bool Havainnekuva;
 
         public static OpasKuva[] Lue(IList<object> lista)
@@ -66,7 +66,7 @@ namespace Matkakirja.Linssit.Kierros
                     string url = S("url");
                     if (string.IsNullOrEmpty(url) || !url.StartsWith("http", StringComparison.Ordinal)) continue;
                     tulos.Add(new OpasKuva { Url = url, Havainnekuva = S("tyyppi") == "havainnekuva", Tekija = S("tekija") ?? S("tekijä"),
-                        Lisenssi = S("lisenssi"), Lahde = S("lahde") ?? S("lähde") });
+                        Lisenssi = S("lisenssi"), Lahde = S("lahde") ?? S("lähde"), Selite = S("selite") });
                 }
             return tulos.ToArray();
         }
