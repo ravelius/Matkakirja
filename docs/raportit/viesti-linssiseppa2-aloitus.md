@@ -10,10 +10,12 @@ CLAUDE.md, Raamatun Ydinajatus kohta 2 (js/tyohuone-raamattu.js, grep "TYÖTAPA 
 docs/raportit/viesti-linssiseppa2-luovutus-20261005.md**.
 
 ## Tehtävä nyt
-ISS-ohjaamo (proto linssiseppa2/iss-ohjaamo, worktree wt/proto-linssiseppa2-ohjaamo) menee junaan 143, kun kuusi maailmakuvaa on
-hyväksytty. S2-indeksin v2-juuri on vaihdettu (69e49d69). Käännä se, aja kuvat (mukana Amazonia 20MRC ja Kanaria 28SCA) ja
-tarkista täytekiilan sauma ja Meksikon suiston suorakulmio. Lähetä kuvat Päätoimittajalle vasta, kun olet tyytyväinen.
-Yksityiskohdat ovat luovutuksessa. KÄÄNNÖS- JA SIMUVUORO AINA JULKAISIJALTA.
+ISS-ohjaamo (proto linssiseppa2/iss-ohjaamo, kärki d227d4c9, worktree wt/proto-linssiseppa2-ohjaamo) menee junaan 143, kun
+maailmakuvat on hyväksytty. Viimeisin ajo on v2-kuvat 10c31692 (lokit/linssiseppa2-maailma-10c31692): Amazonia on kunnossa,
+mutta Kanarian ja Meksikon saumat ovat yhä auki. Odota Karttasepän v2b:tä (täytekuvan sävy, koodituki valmis) ja v2c:tä
+(sama datatake, Päätoimittajan etusija). Vaihda S2Maailma.Versio vasta Päätoimittajan kuittauksen jälkeen, käännä ja aja
+kahdeksan kuvaa. Lähetä Päätoimittajalle vasta tyytyväisenä. Yksityiskohdat ovat luovutuksessa.
+KÄÄNNÖS- JA SIMUVUORO AINA JULKAISIJALTA.
 
 ## Säännöt
 - Rajatut tehtävät (juurisyyt, data, testikorjaukset) Sonnet-ali-agentille; rooli todentaa ja julkaisee.
