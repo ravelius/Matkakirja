@@ -417,7 +417,8 @@ namespace Matkakirja.Natiivi
             switch (nakyma)
             {
                 case Nakyma.Paa:
-                    Alanakyma("Vaihda kohde", () => Avaa(Nakyma.Maanosat));
+                    // Päätoimittaja 5.10. klo 20.4x: pään kolme riviä samalla TOIMINTO-rivipohjalla (kultareunus), Vaihda kohde ›-merkillä.
+                    Alanakyma("Vaihda kohde", () => Avaa(Nakyma.Maanosat), toiminto: true);
                     Komento("Näytä teksti", NaytaTeksti);
                     Viiva();
                     Komento("Poistu linssistä", () => UiNakymat.Hae()?.Linssit?.SuljeLinssi());
@@ -469,9 +470,10 @@ namespace Matkakirja.Natiivi
             return b;
         }
 
-        void Alanakyma(string teksti, Action avaa, VisualElement isa = null)
+        void Alanakyma(string teksti, Action avaa, VisualElement isa = null, bool toiminto = false)
         {
-            var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__kytkin", avaa, isa ?? valikko);
+            var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta " + (toiminto ? "mk-linssivalikko__komento" : "mk-linssivalikko__kytkin"), avaa, isa ?? valikko);
+            if (toiminto) { b.style.flexDirection = FlexDirection.Row; b.style.alignItems = Align.Center; b.style.justifyContent = Justify.SpaceBetween; }
             Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-linssivalikko__nimi", b), Kirjasin.Luku);
             Kirjasimet.Aseta(Rakenne.Teksti("›", "mk-linssivalikko__tila", b), Kirjasin.KoneBold);
             b.tooltip = teksti;
