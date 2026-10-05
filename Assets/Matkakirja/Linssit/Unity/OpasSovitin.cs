@@ -327,7 +327,7 @@ namespace Matkakirja.Natiivi
             o.StartCoroutine(TekstiLoppuu(s, k));
         }
         OpasKohde tekstina, aaniOdotus;
-        const float AaniOdotusS = 6f;
+        const float AaniOdotusS = 10f;   // #4018: mp3 valmistuu GETissä ~8–9 s tekstin jälkeen (toiveen polku)
 
         IEnumerator OdotaAani(OpasKohde k)
         {
