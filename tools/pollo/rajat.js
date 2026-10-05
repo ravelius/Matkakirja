@@ -57,6 +57,21 @@ export const ELEVEN_LUKIJA_PAIVARAJA_OLETUS = 50000;
 export const PULU_ELEVEN_PAIVARAJA_OLETUS = 15000;
 
 /*
+ * ELÄVÄN OPPAAN RAJAT (Päätoimittaja 5.10.2026 klo 17.5x): oma globaali äänikatto (William, merkkejä vuorokaudessa) ja
+ * pysähdyspyyntöjen päiväraja IP:tä kohden (Sonnet-kutsu + Wikipedia). Kehittäjäkoodilla ei rajoja.
+ */
+export const OPAS_ELEVEN_PAIVARAJA_OLETUS = 20000;
+export const OPAS_PAIVARAJA_OLETUS = 80;
+
+export function opasElevenPaivaAvain(nyt = new Date()) {
+  return `eleven:opas:p:${nyt.toISOString().slice(0, 10)}`;
+}
+
+export function opasPaivaAvain(ip, nyt = new Date()) {
+  return `opas:p:${nyt.toISOString().slice(0, 10)}:${tiiviste(String(ip ?? 'tuntematon'))}`;
+}
+
+/*
  * KUVAGENEROINNIN RAJAT (kehittäjän eräajot, tehtava: 'kuva').
  * Promptin katto on väljä, koska julistepromptit ovat pitkiä
  * tyylikuvauksia; päiväraja on turvaraja karanneelle silmukalle,
@@ -297,7 +312,7 @@ export const NATIIVIT_OLETUS = Object.freeze(['app.matkakirja.proto3d', 'app.mat
 /** Natiiville sallitut tehtävät; puuttuva tehtävä on chatin vastaus kuten selaimella. */
 // 'realtime' (Pulun äänikeskustelun koe, Fable 28.9.2026): natiivikin vain kehittäjäkoodilla (hoidaRealtime).
 // 'kaynti' (nimetön kävijälaskuri, omistaja 30.9.2026) ja 'kaynnit' (luku, vain kehittäjäkoodilla).
-export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset', 'sahke', 'realtime', 'kaynti', 'kaynnit']);
+export const NATIIVIN_TEHTAVAT = Object.freeze(['puhe', 'vastaus', 'ehdotukset', 'sahke', 'realtime', 'kaynti', 'kaynnit', 'opas']);
 
 /** Saako natiivi tehdä pyynnön tehtävän? */
 export function natiivilleSallittu(tehtava) {
