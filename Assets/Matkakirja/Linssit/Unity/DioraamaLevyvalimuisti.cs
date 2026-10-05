@@ -46,6 +46,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Tiivisteeltään väärät lataukset (eivät menneet varastoon).</summary>
         public static int VaariaTiivisteita => vaariaTiivisteita;
         static int vaariaTiivisteita;   // kasvatetaan myös taustasäikeistä (Interlocked)
+        static int esiLaskuri;
 
         // --- OSOITIN ---------------------------------------------------------------------------------------------------
         /// <summary>Kehittäjän testiosoitin ("poikki osoitin &lt;hash&gt;|pois"): korvaa uusin.jsonin, null = tuotanto.</summary>
@@ -418,13 +419,15 @@ namespace Matkakirja.Natiivi
             try
             {
                 Directory.CreateDirectory(Path.GetDirectoryName(paikka));
-                string tmp = paikka + ".esi";
+                // Väliaikainen nimi kutsukohtaisesti (Brotli-mittaus 5.10.): kaksi pakettiversiota (osoitin vaihtui kesken
+                // esilatauksen) voivat ladata saman sisällön samaan varastopolkuun yhtä aikaa, ja yhteinen .esi sotki tiivisteen.
+                string tmp = paikka + "." + System.Threading.Interlocked.Increment(ref esiLaskuri) + ".esi";
                 // Häviötön pakkaus (juna 143): <polku>.br levylle → pakatun tiiviste → virtapurku tiedostoon taustasäikeessä;
                 // puretun tiiviste tarkistetaan alla ennen siirtoa kuten ennenkin. Virhe → pakkaamaton polku.
                 var pak = Pakattu(url);
                 if (pak.Url != null)
                 {
-                    string tmpBr = paikka + ".esi" + DioraamaPakkaus.Paate;
+                    string tmpBr = tmp + DioraamaPakkaus.Paate;
                     bool ladattu;
                     using (var p = new UnityWebRequest(pak.Url, UnityWebRequest.kHttpVerbGET, new DownloadHandlerFile(tmpBr) { removeFileOnAbort = true }, null))
                     {
