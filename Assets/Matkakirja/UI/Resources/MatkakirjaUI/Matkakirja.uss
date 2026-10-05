@@ -1211,10 +1211,11 @@
     margin-top: 1px;
 }
 
+/* EDISTYMINEN-pohja: ohut terävä viiva (kulma 0, Päätoimittaja 5.10.2026 klo 13.0x: EI OVAALEJA, ei kapselipäitä). */
 .mk-edistyminen {
     height: 4px;
     margin-top: 5px;
-    border-radius: 2px;
+    border-radius: 0;
     background-color: var(--line);
     overflow: hidden;
 }
@@ -1223,6 +1224,23 @@
     height: 100%;
     width: 0;
     background-color: var(--kulta);
+}
+
+/* LATAUSPALKKI (Latauspalkki.cs, omistaja 5.10.2026 klo 12.5x): pieni EDISTYMINEN odotusruudun nimen alla; värit isännän
+ * tk-teemasta (linnan nimiruutu: tk-teema-tumma), häivytys --tk-kesto-avaus ja täytön liuku --tk-kesto-liuku. */
+.mk-edistyminen--latauspalkki {
+    width: 140px;
+    height: 3px;
+    margin-top: 24px;
+    background-color: var(--tk-reunus);
+    transition-property: opacity;
+    transition-duration: 220ms;
+}
+
+.mk-edistyminen--latauspalkki > .mk-edistyminen__taytto {
+    background-color: var(--tk-korostus);
+    transition-property: width;
+    transition-duration: 240ms;
 }
 
 .mk-pikkunappi {

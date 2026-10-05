@@ -761,6 +761,9 @@ namespace Matkakirja.Natiivi
                         : t == "flush-ilman" ? "<align=flush>" : "<align=\"justified\">";
                     return "tasaus: " + (Lehtinakyma.TasausTagi.Length > 0 ? Lehtinakyma.TasausTagi.Replace("<", "‹") : "pois");
                 }
+                case "linnapalkki":
+                    // Linnan nimiruudun LATAUSPALKKI (Latauspalkki.cs): ui linnapalkki <0–1> | pois — nimiruutu auki annetulla arvolla.
+                    return DioraamaTaulu.TestiPalkki(loput);
                 case "kuunnelma":
                 {
                     // Olavinlinnan kuunnelman tekstitys (KuunnelmaKaistale): ui kuunnelma [tila] | ohita | alusta.
