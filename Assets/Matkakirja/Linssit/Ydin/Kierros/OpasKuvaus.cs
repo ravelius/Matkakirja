@@ -19,13 +19,13 @@ namespace Matkakirja.Linssit.Kierros
         public enum Luokka { Katu, Rakennus, Alue }
 
         // Kehys: kallistus kohteen pystysuorasta (0 = suoraan alas, 90 = vaaka), etäisyys koosta, katseen nosto korkeudesta.
-        public const double KatuKallistus = 74, RakennusKallistus = 66, AlueKallistus = 50;
+        public const double KatuKallistus = 70, RakennusKallistus = 66, AlueKallistus = 50;   // katu 74 → 70 (simu 20.3x: matala kulma, laatat 53–59 % saapuessa)
         public const double KatuEtMinM = 180, KatuEtMaxM = 650, RakennusEtMinM = 240, RakennusEtMaxM = 900, AlueEtMinM = 450, AlueEtMaxM = 1800;
         public const double SivuKulma = 25;
         // Pysähdys
         public const double KiertoAsteS = 0.35, KiertoAlkuS = 4, DollyOsuus = 0.07, DollyAikaS = 25;
         // Lento
-        public const double NousuLoppu = 0.3, LaskuAlku = 0.7, KaariOsuus = 0.28, KaariMinM = 120, KaariMaxM = 1600, LiukuKallistus = 6;
+        public const double NousuLoppu = 0.3, LaskuAlku = 0.7, KaariOsuus = 0.35, KaariMinM = 250, KaariMaxM = 1600, LiukuKallistus = 6;   // liuku korkeammalle (laatat ehtivät)
         public const double LahiRajaM = 20000;
 
         /// <summary>Luokka workerin kentästä ("katu" | "kanava" | "aukio" | "rakennus" | "torni" | "linnoitus" | "puisto" |
