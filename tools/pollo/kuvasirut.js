@@ -56,14 +56,18 @@ näkyvästä paikasta, ilmiöstä tai yksityiskohdasta, tai siitä, miltä paikk
 kuvan tietoihin. Kysymysten pitää olla tosimaailman kysymyksiä — EI kuvan tunnuksesta, retkikunnan numerosta, pelin \
 tehtävistä, pisteistä tai juonesta.
 
-Kirjoita täsmälleen kolme riviä, yksi kysymys riville, ilman numerointia, ilman ranskalaisia viivoja ja ilman \
-johdantoa. Jokainen kysymys enintään 70 merkkiä ja päättyy kysymysmerkkiin.`;
+Jokainen kysymys on kokonainen, luonteva suomenkielinen kysymyslause verbin kanssa, enintään kuusi sanaa — \
+ei sähkösanomaa ilman verbiä. Hyviä: "Miksi meri on turkoosi?", "Mistä kalkkipohja on syntynyt?", "Miksi aavikko on \
+pimeä?", "Miksi Venetsia on laguunin keskellä?".
 
-/** KV-avain: tiiviste kuvan kaikista kentistä vakiojärjestyksessä. */
+Kirjoita täsmälleen kolme riviä, yksi kysymys riville, ilman numerointia, ilman ranskalaisia viivoja ja ilman \
+johdantoa. Jokainen kysymys päättyy kysymysmerkkiin.`;
+
+/** KV-avain: tiiviste kuvan kaikista kentistä vakiojärjestyksessä. v2 (6.10.): kuuden sanan kokonaiset lauseet, v1:n sirut eivät palaa. */
 export async function kuvaSirujenAvain(kuva) {
   const osat = [kuva.tunnus, ...KUVAN_KENTAT.map((k) => kuva[k] ?? '')];
   const h = new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(JSON.stringify(osat))));
-  return `pulu:kuvasirut:v1:${[...h].slice(0, 16).map((b) => b.toString(16).padStart(2, '0')).join('')}`;
+  return `pulu:kuvasirut:v2:${[...h].slice(0, 16).map((b) => b.toString(16).padStart(2, '0')).join('')}`;
 }
 
 /** Välimuistista luku: lista kysymyksiä tai null. Virhe = null (generoidaan). */
