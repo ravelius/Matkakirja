@@ -4,6 +4,23 @@ Omistajan päätös (kortti 5.10. ~10.45): pilotti ISS:n jälkeen Cesiumin strii
 Community-tasolla (alle 50 k$). Ensimmäinen pilotti on Lontoo. **Tutkitaan nyt; rakentaminen alkaa vasta, kun ISS-ohjaamo on junassa.**
 Aiempi vertailu: `oikea-maailma-linsseihin-20261005.md`.
 
+## 0. VOIMASSA OLEVA LINJA (omistaja 5.10. ~11.45, korvaa alla olevat ristiriitaiset kohdat)
+
+> "peliä ei ole vielä julkaistu, joten käytetään Cesiumia nyt täydellä teholla, eikä oteta muita vaihtoehtoja sen rinnalle.
+> Eli ei siirretä vielä ämpäriin mitään, jos ei ole pakko. Ja otetaan se maksullinen sitten käyttöön tarvittaessa."
+
+- **Kaikki Lontoon data tulee Cesium ionista:** World Terrain (asset 1), **Bing Maps Aerial (asset 2)** ja OSM Buildings (asset 96188).
+  Ei omaa Lontoo-S2:ta, ei omaa GLO-30-maastoa Lontooseen eikä omaa rakennusputkea (kohta 8 jää varalle, jos jokin on pakko).
+- **Kuvan valinta (Karttaseppä):** Bing Aerial. Se on Lontoossa noin 15–30 cm:n ilmakuvaa, ja reittikorkeudella 300–600 m
+  Thames, puistot ja kadut erottuvat. ionin Sentinel-2 (10 m) on yhtä sumea kuin oma s2-eurooppa, eikä Google 2D kuulu linjaan (ei Googlea).
+  Bingin ehdot ja riskit:
+  - "ei yhdistetä muihin kuin Bing-karttoihin": Lontoo-näkymässä ei piirretä samaan aikaan omaa S2-palloa eikä pergamenttikerroksia. Siirtymä pallolta Lontooseen tehdään häivytyksenä tai leikkauksena.
+  - Bingin logo ja tekijätiedot näkyviin (Cesiumin credit-järjestelmä).
+  - Bing on poistumassa: ion lupaa pääsyn "at least through September 2026", ja Cesiumin Enterprise-sopimus kattaa enintään 30.6.2028. Jos Bing poistuu, kuva vaihdetaan ionin seuraajaan (Azure Maps, nyt Technology Preview), ja vaihto on assetin vaihto.
+  - Community-taso: Global Imagery 1 000 istuntoa/kk, mikä riittää pilottiin. Maksullinen otetaan, kun rajat tulevat vastaan tai ennen julkaisua.
+- **Token:** rajataan assetteihin 1, 2 ja 96188 (`assets:read`). Haku ajossa ämpäristä LS2:n mukaan (pieni json on ainoa ämpäriin vietävä asia).
+- **Pallon oma S2-maailma pysyy ennallaan.** Rakentaminen vasta ISS-ohjaamon jälkeen, ja ion-tilin ja tokenin luo silloin omistaja.
+
 ## 1. ion-assetit ja ehdot (haettu 5.10.2026)
 
 | Asset | ion-id | Käyttö | Ehdot ja huomiot |
@@ -79,7 +96,7 @@ kohteen nimi ruudulle. Esitysmoottorin aikajana ja kamerakoreografia (linssikata
 
 | Erä | Rooli |
 |---|---|
-| S2-overlay Lontooseen (onko s2-eurooppa/v1 riittävä Lontoon kohdalla, kuvapari) | Karttaseppä (voidaan tutkia jo nyt) |
+| ~~S2-overlay Lontooseen~~ → ei tehdä (Bing Aerial ionista, linja 11.45). Karttaseppä: token-json ämpäriin ja ion-käytön seuranta | Karttaseppä |
 | Token-putki (.gitignore, ympäristömuuttuja, ajonaikainen asetus), World Terrain + OSM Buildings -tilesetit | Linssiseppä 2 |
 | Lentorata, kertojan synkka, attribuutiot ruudulle | Linssiseppä 2 |
 | Kertojateksti ja ääni | Fable + Sisältökirjuri |
@@ -91,12 +108,12 @@ kohteen nimi ruudulle. Esitysmoottorin aikajana ja kamerakoreografia (linssikata
 2. Luo tilillä Access Tokens → Create token:
    - nimi `matkakirja-lontoo-pilotti`
    - scope vain `assets:read`
-   - "Resources": valitse vain assetit **1 (Cesium World Terrain)** ja **96188 (Cesium OSM Buildings)**
+   - "Resources": valitse vain assetit **1 (Cesium World Terrain)**, **2 (Bing Maps Aerial)** ja **96188 (Cesium OSM Buildings)**
 3. Lisää token avaintiedostoon `~/.matkakirja-avaimet-koodaus.zsh` riville `export CESIUM_ION_TOKEN=...`; Karttaseppä tai
    Julkaisija tekee siitä ämpäriin tokenin jsonin, jonka natiivi hakee. Tokenia ei lähetetä chattiin.
 4. Lupa iPad-mittaukseen (00008103) jokaista testikertaa varten.
 
-## 8. Julkaisun oma rakennusputki (OSM → 3D Tiles, ODbL) — työarvio (Päätoimittajan tilaus 5.10. 11.1x)
+## 8. VARALLA (ei tehdä nyt, omistaja 11.45): oma rakennusputki (OSM → 3D Tiles, ODbL) — työarvio (Päätoimittajan tilaus 5.10. 11.1x)
 
 Pilotti käyttää ionin OSM Buildingsia (kokeilukäyttö). Julkaisuun rakennukset tehdään itse ja isännöidään omassa ämpärissä.
 Natiivissa vaihto on vain tilesetin URL.
