@@ -18,12 +18,9 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 ## Juna 143 — avoinna
 - natiivi-ui/chat-linna b38360f4 — KUITATTU (chat estää linnan eleet ja sulkeutuu linssin avautuessa). Merge-pyyntö
   Natiivisepälle puuttuu vielä → lähetä.
-- natiivi-ui/x-napit 9a688396 (oli 63a4552e; 9a688396 = lehden sisällyksen sulkeva napautus ei enää käännä sivua, todettu
-  oikealla napautuksella 06.45 xs-6-sisallys-ohi.png; käännös 00d54775 06.46; Päätoimittaja kuittaa 63a4552e+9a688396 junaan 143, kun sisällyksen uusinta näyttää levyn sulkeutuvan ilman sivun kääntymistä: ui lehti ateena → ui lehti sisallys → oikea tap LEVYN ALAPUOLELLE, esim. (150, 800); levy on iPhonella koko levyinen, (330, 330) osui riviin "Arki ja tavat" eikä ollut läpivalumista; 9a688396 on silti oikea suoja) — ✕-inventaarion poistot (docs/raportit/x-napit-inventaario-20261005.md, päätökset
-  Päätoimittajalta). Oikeat napautukset tehty 8 pinnalle + maakuntalappu (natiivi-ui-pohjat/natiivi/xt-arkki.jpg);
-  LEHDEN SISÄLLYKSEN ohinapautus uusittava (napautus osui Puluun): ui lehti ateena → ui lehti sisallys → oikea tap
-  esim. (330, 300) artikkelikuvaan. Sitten tulokset Päätoimittajalle ja merge-pyyntö. Siivous 16/20/21
-  (IssKyytiNakyma sulkuVanha, Linssivalitsin ylaSulje ja Muut-paneeli) kun juna 142 on masterissa.
+- natiivi-ui/x-napit 9a688396 — ✕-inventaarion poistot, KAIKKI todennettu oikealla napautuksella (xt-arkki.jpg,
+  xs3-6-sisallys-ohi.png, 06.53); odottaa Päätoimittajan kuittausta → merge-pyyntö Natiivisepälle (63a4552e + 9a688396).
+  Siivous 16/20/21 (IssKyytiNakyma sulkuVanha, Linssivalitsin ylaSulje ja Muut-paneeli), kun juna 142 on masterissa.
 - natiivi-ui/iss-ohjaamo-lcd 0fdda21f — ohjaamo + LS2:n LCD-paikat; odottaa LS2:n maailmakuvia (Amazonia) ja S2-indeksiä.
 - Myöhemmin (Päätoimittaja): ISS-kuvan vihreä nimilappu hukkuu kirkkaalle hiekalle (az-3667-a4).
 

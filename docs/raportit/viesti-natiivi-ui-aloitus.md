@@ -7,4 +7,4 @@ skriptit). Käännös vain Julkaisijan "NYT käännös" ja simu vain "SIMU NYT" 
 <sha>" / "simu vapaa". Stillit ja tallenteet Päätoimittajalle ennen merge-pyyntöä; merge-pyyntö Natiivisepälle
 Päätoimittajan kuittauksen jälkeen. Todisteissa simun oikea napautus (ei `ui napauta`), ääni Unityn kaappauksesta.
 Ensimmäiset tehtävät: (1) lähetä chat-linna b38360f4:n merge-pyyntö Natiivisepälle (kuitattu junaan 143);
-(2) käännä x-napit 9a688396 (+chat-linna), uusi lehden sisällyksen oikea ohinapautus (sivu ei saa kääntyä) ja raportoi Päätoimittajalle; (3) ohjaamo odottaa LS2:ta.
+(2) x-napit 9a688396 on todennettu: lähetä merge-pyyntö Natiivisepälle heti Päätoimittajan kuittauksen jälkeen; (3) ohjaamo odottaa LS2:ta.
