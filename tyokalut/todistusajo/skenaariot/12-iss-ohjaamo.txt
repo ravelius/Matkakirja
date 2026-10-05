@@ -6,12 +6,12 @@ oleta 30 linssit: auki: satelliitti -- astronautin kamera aukesi
 odota 8
 linssi astro kyyti
 oleta 30 astro kyyti: Ikkuna -- Cupolaan (kyyti Ikkuna)
-nakyy 30 mk-issohjaamo__joyosuma -- joystick näkyy
+nakyy 30 mk-issohjaamo__sauvakuva -- joystick näkyy (kuvanahka: sauvakuva; osuma-ala ei piirry ui-puuhun)
 odota 4
-veto-kohta 0.5 0.5 0.5 0.5 1 mk-issohjaamo__joyosuma
+veto-kohta 0.5 0.5 0.5 0.5 1 mk-issohjaamo__sauvakuva
 ei-oleta 3 ohjaamon joystick (Ylos|Alas|Vasen|Oikea) -- joystick keskeltä: ei suuntaa (kuollut alue)
 kuva 12a-keski Joystick painettu keskeltä: ei liikettä
-veto-kohta 0.5 0.5 0.9 0.5 2 mk-issohjaamo__joyosuma
+veto-kohta 0.5 0.5 0.9 0.5 2 mk-issohjaamo__sauvakuva
 oleta 6 ohjaamon joystick Oikea -- veto oikealle: suunta Oikea
 oleta 6 ohjaamon joystick Ei -- irrotus: suunta Ei
 kuva 12b-oikea Joystick oikealle ja irti

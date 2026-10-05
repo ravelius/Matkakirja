@@ -1,7 +1,7 @@
-# 08 Asetukset: ☰ (oikea tap) → pillerivalikko → Asetukset → ÄÄNENTASOT, KARTTA ja MUUT näkyvät → ‹ Takaisin →
+# 08 Asetukset: yläpalkin pilleri (mk-pilleri, oikea tap; puhelimella ei ☰-nappia) → pillerivalikko → Asetukset → ÄÄNENTASOT, KARTTA ja MUUT näkyvät → ‹ Takaisin →
 # ohinapautus sulkee valikon. Kytkimiä ei vaihdeta (tallennettu tila säilyy).
-tap-teksti mk-ikoninappi
-nakyy 6 Asetukset -- ☰ avasi pillerivalikon
+tap-teksti mk-pilleri
+nakyy 6 Asetukset -- pilleri avasi valikon
 kuva 08a-valikko Pillerivalikko auki
 tap-teksti Asetukset
 nakyy 6 ASETUKSET -- Asetukset-näkymä auki

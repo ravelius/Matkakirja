@@ -4,7 +4,7 @@ ui nosto kohde:pompeji@ITA
 oleta 60 ui nosto kohde:pompeji@ITA: auki -- nostokortti auki
 nakyy 20 Pompejin Forum -- kortin kuvateksti näkyy
 odota 2
-tap-teksti mk-nosto__kuvakehys
+tap-teksti mk-nosto__kuva
 nakyy 6 mk-nosto__suurennoskuva -- kuvan napautus avasi suurennoksen
 odota 2
 kuva 10a-suurennos Kuvasuurennos auki

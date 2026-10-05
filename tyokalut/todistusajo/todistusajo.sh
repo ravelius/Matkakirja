@@ -147,7 +147,8 @@ while IFS= read -r rivi || [[ -n $rivi ]]; do
   sana=${rivi%% *}; loput=${rivi#* }; [[ $loput == $rivi ]] && loput=""
   case $sana in
     peli|linssi) VIIM=$(rivit); kirjoita $sana-komento.txt "$loput"; kirjaa "→ $sana $loput"
-      if [[ $sana == linssi && $loput == linssi* ]]; then sleep 2; m=$(mykistys) || keskeyta_aani "linssin jälkeen: $m"; VIIM=$(rivit); fi ;;
+      # VIIM jää komennon alkuun: linssin avausrivi (linssit: auki: …) tulee usein ennen mykistystarkistusta (5.10. ajo).
+      if [[ $sana == linssi && $loput == linssi* ]]; then sleep 2; m=$(mykistys) || keskeyta_aani "linssin jälkeen: $m"; fi ;;
     ui) VIIM=$(rivit); kirjoita ui-komento.txt "ui $loput"; kirjaa "→ ui $loput" ;;
     komento) VIIM=$(rivit); kirjoita komento.txt "$loput" ;;
     odota) sleep $loput ;;
@@ -209,7 +210,7 @@ while IFS= read -r rivi || [[ -n $rivi ]]; do
       done
       kuvaus="${selite:-$sana $ehto}"
       if [[ -n $ok ]]; then napautus_kirjaus "  ui-puu: $kuvaus" "OK: '$ehto' $([[ $sana == nakyy ]] && echo "näkyy ($xy)" || echo "ei näy")"
-      else napautus_kirjaus "  ui-puu: $kuvaus" "PUUTE"; tulos 2 PUUTE "$kuvaus: '$ehto' $([[ $sana == nakyy ]] && echo "ei näy" || echo "näkyy yhä")"; fi ;;
+      else napautus_kirjaus "  ui-puu: $kuvaus" "PUUTE"; cp "$D/ui-puu.json" "$L/ui-puu-$(date +%H%M%S).json" 2>/dev/null; tulos 2 PUUTE "$kuvaus: '$ehto' $([[ $sana == nakyy ]] && echo "ei näy" || echo "näkyy yhä")"; fi ;;
     kuva) kuva ${=loput} ;;
     maara)
       # maara <s> <luokka> <n> [-- selite]: näkyviä elementtejä, joilla luokka, täsmälleen n (esim. Pulun sirut = 2).
