@@ -431,7 +431,9 @@ namespace Matkakirja.Natiivi
             // Linnassa ✕ korvautuu valikon "Sulje linna" -rivillä (omistaja 2.10. 14.44, LinnaValikko). Ajattelijan kohtauksessa
             // kuvanäkymän oma ✕ (valinnassa yhä linssien yhteinen sulku).
             bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa && !valitsinAuki && !ajattelijaPeittaa
-                         && !(Dioraama != null && Dioraama.Kytketty);
+                         && !(Dioraama != null && Dioraama.Kytketty)
+                         // Elävä opas (Päätoimittaja 5.10.: EI TURHIA ✕-NAPPEJA): poistuminen valikon Poistu linssistä -rivillä.
+                         && !OpasValikko.Nakyy;
             var id = Auki?.Tiedot?.Id;
             bool kartta = id != null && karttaValikot.ContainsKey(id);
             foreach (var kv in karttaValikot)

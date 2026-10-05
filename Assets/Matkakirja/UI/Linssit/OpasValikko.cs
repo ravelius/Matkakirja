@@ -1,13 +1,18 @@
 // ELÄVÄN OPPAAN VALIKKO (Natiivi-UI 5.10.2026; omistaja 18.0x Päätoimittajan kautta): LinnaValikon pohja (OHJAUSNAPPI ☰ oikeaan
 // yläkulmaan, LINSSIN VALIKKO -lista .mk-linssivalikko--pohja alanäkymineen), ei uusia tyylejä.
 //
-//   Pää      Vaihda kohde › · ─ · Poistu linssistä
+//   Pää      Vaihda kohde › · Näytä teksti · ─ · Poistu linssistä
 //   Maanosat ‹ Vaihda kohde · Eurooppa › · Aasia › …
 //   Maat     ‹ <maanosa> · maat aakkosjärjestyksessä (vierittyy)
 //   Kaupungit ‹ <maa> · maan suurimmat kaupungit väkiluvun mukaan (enintään Kaupunkeja)
 //
 // Kaupungit: Natural Earthin asutuspaikat (sama aineisto kuin ISS-LCD:ssä) Kaupungit-koukusta (Linssiseppä/LS2 kytkee); valinta
 // kutsuu KohdeValittu(nimi, lat, lon), jonka elävä opas (OpasSovitin) kytkee. Poistu sulkee linssin (LinssiUi.SuljeLinssi).
+//
+// OPAS KEVYEKSI (omistaja 5.10.2026 Päätoimittajan kautta: "raskaan oloinen"): kaupunki koko ruudulla, chat ei auki eikä ✕:ää
+// (LinssiUi.PaivitaSulku), Pulun hahmo piilossa (UiNakymat.OpasPeittaaPulun). Kertojan lopetettua kappaleen tai kysyessä
+// alareunan keskellä kaksi vaihtoehtoa PULU-pohjan siruina (irrallinen sirurivi) ja pieni puhu/kirjoita-siru, joka avaa
+// nykyisen Pulu-chatin syöttöineen; Näytä teksti avaa koko keskustelun samaan chattiin.
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -82,8 +87,14 @@ namespace Matkakirja.Natiivi
 
         enum Nakyma { Paa, Maanosat, Maat, Kaupungit }
 
+        /// <summary>Oppaan linssi auki (✕ pois, LinssiUi.PaivitaSulku).</summary>
+        public static bool Nakyy => Viimeisin != null && Viimeisin.nakyy;
+
         public readonly VisualElement Juuri;
-        readonly VisualElement ryhma, valikko;
+        readonly VisualElement ryhma, valikko, sirurivi;
+        readonly Button puhuSiru;
+        bool nakyy, siruNakyy;
+        int siruPoletti = -1;
         readonly Button nappi;
         Nakyma nakyma;
         string maanosa, maa;
@@ -104,14 +115,88 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(valikko, Kirjasin.Luku);
             valikko.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
             kerros.JokaRuutu += TarkistaOhiNapautus;
+
+            // Irrallinen sirurivi alareunan keskelle (Googlen ja Cesiumin merkinnät jäävät sen alle).
+            sirurivi = Rakenne.El("mk-chat--lasi mk-chat__sirut mk-chat__sirut--irrallaan", Juuri, PickingMode.Ignore);
+            sirurivi.style.display = DisplayStyle.None;
+            sirurivi.style.opacity = 0f;
+            puhuSiru = Rakenne.Nappi(null, "mk-chat__siru mk-chat__siru--ikoni", NaytaTeksti, null, PuluChat.MikkiIkoni);
+            puhuSiru.tooltip = "Puhu tai kirjoita";
+            kerros.JokaRuutu += PaivitaSirut;
             Viimeisin = this;
         }
 
         /// <summary>Oppaan linssi auki / kiinni.</summary>
         public void Nayta(bool nakyy)
         {
+            if (nakyy == this.nakyy && Juuri.style.display == (nakyy ? DisplayStyle.Flex : DisplayStyle.None)) return;
+            this.nakyy = nakyy;
             Juuri.style.display = nakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (!nakyy) Sulje();
+            var ui = UiNakymat.Olemassa ? UiNakymat.Hae() : null;
+            ui?.Chat?.OpasTila(nakyy);
+            ui?.OpasPeittaaPulun(nakyy);
+            ui?.Linssit?.PaivitaSulku();
+            siruPoletti = -1;
+            siruNakyy = false;
+            sirurivi.style.display = DisplayStyle.None;
+            sirurivi.style.opacity = 0f;
+        }
+
+        /// <summary>Koko keskustelu ja syöttö nykyiseen Pulu-chatiin (valikon Näytä teksti ja puhu/kirjoita-siru).</summary>
+        void NaytaTeksti()
+        {
+            Sulje();
+            var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+            if (chat == null) return;
+            chat.AvaaOppaalle(() => sirurivi.worldBound.width > 0 ? sirurivi.worldBound : nappi.worldBound);
+            Debug.Log("MATKAKIRJA opas: teksti auki");
+        }
+
+        /// <summary>
+        /// Sirurivi joka ruudulla: kaksi vaihtoehtoa, kun kertoja on lopettanut (OpasSovitin.KertojaPuhuu) ja jatkoja on, sekä
+        /// puhu/kirjoita-siru; ei chatin eikä valikon ollessa auki. Häivytys --tk-kesto-sulku (200 ms).
+        /// </summary>
+        void PaivitaSirut()
+        {
+            if (!nakyy) return;
+            var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+            if (chat == null) return;
+            var jatkot = chat.OppaanJatkot;
+            bool nayta = !chat.Auki && !Auki && !OpasSovitin.KertojaPuhuu;
+            int poletti = nayta ? jatkot.Count == 0 ? 0 : string.Join("\n", jatkot).GetHashCode() | 1 : -1;
+            if (poletti == siruPoletti) return;
+            siruPoletti = poletti;
+            if (nayta)
+            {
+                sirurivi.Clear();
+                foreach (var j in jatkot)
+                {
+                    string t = j;
+                    var b = Rakenne.Nappi(t, "mk-chat__siru", () => Valitse(t), sirurivi);
+                    Kirjasimet.Aseta(b, Kirjasin.Kone);
+                }
+                sirurivi.Add(puhuSiru);
+            }
+            if (nayta == siruNakyy) return;
+            siruNakyy = nayta;
+            if (nayta)
+            {
+                sirurivi.style.display = DisplayStyle.Flex;
+                sirurivi.schedule.Execute(() => { if (siruNakyy) sirurivi.style.opacity = 1f; });
+            }
+            else
+            {
+                sirurivi.style.opacity = 0f;
+                sirurivi.schedule.Execute(() => { if (!siruNakyy) sirurivi.style.display = DisplayStyle.None; }).StartingIn(Tyylikirja.Kesto.Sulku);
+            }
+        }
+
+        /// <summary>Vaihtoehdon napautus: kysymys oppaalle saman chatin kautta (Sieppaa → OpasSovitin.Toive), chat pysyy kiinni.</summary>
+        void Valitse(string teksti)
+        {
+            Debug.Log("MATKAKIRJA opas: valinta \"" + teksti + "\"");
+            UiNakymat.Hae()?.Chat?.Kysy(teksti, true);
         }
 
         void Avaa(Nakyma n)
@@ -143,6 +228,7 @@ namespace Matkakirja.Natiivi
             {
                 case Nakyma.Paa:
                     Alanakyma("Vaihda kohde", () => Avaa(Nakyma.Maanosat));
+                    Komento("Näytä teksti", NaytaTeksti);
                     Viiva();
                     Komento("Poistu linssistä", () => UiNakymat.Hae()?.Linssit?.SuljeLinssi());
                     break;
@@ -265,6 +351,12 @@ namespace Matkakirja.Natiivi
             switch (k)
             {
                 case "sulje": Sulje(); return "opas: valikko kiinni";
+                case "teksti": NaytaTeksti(); return "opas: teksti auki";
+                case "sirut":
+                    var c = UiNakymat.Hae()?.Chat;
+                    var sb = sirurivi.worldBound;
+                    return $"opas: sirut {(siruNakyy ? "näkyy" : "piilossa")} [{string.Join(" | ", c?.OppaanJatkot ?? Array.Empty<string>())}], "
+                         + $"kertoja {(OpasSovitin.KertojaPuhuu ? "puhuu" : "hiljaa")}, rivi {sb.xMin:0},{sb.yMin:0} {sb.width:0}×{sb.height:0}";
                 case "maanosat": Avaa(Nakyma.Maanosat); return "opas: maanosat";
                 case "maat": maanosa = o.Length > 1 ? o[1] : maanosa; Avaa(Nakyma.Maat); return "opas: maat " + maanosa;
                 case "kaupungit":

@@ -872,7 +872,11 @@ namespace Matkakirja.Natiivi
         bool lehtiAuki, arkkiAuki, chatNostonPaalla, valikkoAuki, kuvaPeittaaPulun, valikkoPeittaaPulun;
 
         /// <summary>Pulun hahmo piilossa astronautin kuvaselaimen tai vaakavalikon ajan (Pulu.Peita: puhe ja kuplat jatkuvat).</summary>
-        void PaivitaPulunPeitto() => Pulu.Peita(kuvaPeittaaPulun || valikkoPeittaaPulun);
+        void PaivitaPulunPeitto() => Pulu.Peita(kuvaPeittaaPulun || valikkoPeittaaPulun || opasPeittaaPulun);
+
+        bool opasPeittaaPulun;
+        /// <summary>Elävä opas (Päätoimittaja 5.10.: kaupunki koko ruudulla): Pulun hahmo piiloon oppaan ajaksi (OpasValikko.Nayta).</summary>
+        internal void OpasPeittaaPulun(bool peittaa) { opasPeittaaPulun = peittaa; PaivitaPulunPeitto(); }
 
         /// <summary>
         /// PILLERIVALIKKO PULUN PÄÄLLÄ (web .paavalikko.tk-paneeli--paikallaan z-index 60 > .pollo-nappi 40; Päätoimittaja 2.10.2026
