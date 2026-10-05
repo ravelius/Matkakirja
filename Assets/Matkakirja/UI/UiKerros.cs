@@ -614,12 +614,4 @@ namespace Matkakirja.Natiivi
         }
     }
 
-    /// <summary>UiKerros.KameranJalkeen: Update järjestyksessä 20, eli kartan kameran (0) jälkeen ja ennen PreLateUpdatea.</summary>
-    [DefaultExecutionOrder(20)]
-    public sealed class UiKameranJalkeen : MonoBehaviour
-    {
-        UiKerros kerros;
-        void Awake() => kerros = GetComponent<UiKerros>();
-        void Update() { if (kerros != null) kerros.AjaKameranJalkeen(); }
-    }
 }

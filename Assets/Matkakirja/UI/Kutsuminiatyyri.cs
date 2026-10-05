@@ -93,6 +93,25 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Kutsu näkyvissä (testikomento).</summary>
         public bool Nakyy => nakyy;
+
+        /// <summary>Testikomennon syy, miksi kutsu on piilossa (ensimmäinen täyttymätön ehto Paivitassa).</summary>
+        public string Syy()
+        {
+            var ui = UiNakymat.Hae();
+            var o = PeliOhjain.Instanssi;
+            if (ui == null) return "ei UiNakymat";
+            if (o == null || !o.Kaytossa) return "PeliOhjain ei käytössä";
+            if (o.Tila != SilmukanTila.Kartta) return "tila " + o.Tila;
+            string id = o.PelaajanKaupunki;
+            if (id == null) return "ei pelaajan kaupunkia";
+            if (ui.Linssit?.Auki != null) return "linssi auki";
+            if (ui.Kaupunkikortti.Nakyvissa) return "kaupunkikortti näkyvissä";
+            if (Nappula.Lentopelissa != null) return "lentopeli";
+            if (!Kutsuttava(id)) return $"{id}: ei kohdekarttaa eikä opasta (Kohdekartat.Ladattu {Kohdekartat.Ladattu})";
+            if (!(ui.Nostot.Karttakerroin >= Kerroin || MaanNakymassa())) return "kamera liian kaukana";
+            if (UiSisalto.Kaupunki(id) == null) return id + ": ei kaupunkia sisällössä";
+            return lukittu.HasValue ? (peitossa ? "peitossa (lukittu)" : "näkyy tai tulossa (lukittu)") : "paikka valitsematta tai ei mahdu";
+        }
         public Rect Laatikko => nakyy ? nappi.worldBound : default;
 
         /// <summary>Uusinnat alusta: kaupunki vaihtui, kortti tuli uudelleen näkyviin tai verkko palasi.</summary>
