@@ -57,6 +57,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Aloituskaupunki (komento "opas kaupunki <nimi>"); ensimmäinen pyyntö on tämä toive.</summary>
         public static string Aloituskaupunki = "Kööpenhamina";
 
+        /// <summary>Kertojan kappale soi (Natiivi-UI: vastaussirut vasta kappaleen jälkeen).</summary>
+        public static bool KertojaPuhuu => Viimeisin != null && Viimeisin.puhuu;
         /// <summary>Oppaan linssi auki (Natiivi-UI: chatin syöte oppaalle).</summary>
         public static bool Auki => Viimeisin != null && Viimeisin.silmukka != null && Viimeisin.Virhe == null;
 
@@ -139,8 +141,7 @@ namespace Matkakirja.Natiivi
                 puhe = o.gameObject.AddComponent<AudioSource>();
                 puhe.playOnAwake = false; puhe.spatialBlend = 0f; puhe.loop = false;
             }
-            KytkeChat(true);
-            ChatOppaalle(true);
+            KytkeChat(true);   // chat ei aukea itsestään (opas kevyeksi, Päätoimittaja 5.10.): vain valikon "Näytä teksti" -rivistä
             silmukka.Pyyda += Pyyda;
             silmukka.Saapui += Saapui;
             silmukka.Hiljenna += Hiljenna;
