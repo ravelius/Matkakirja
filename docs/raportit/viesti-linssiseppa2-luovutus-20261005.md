@@ -116,3 +116,9 @@ Kuvat: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-maailma-10c31692/kuvat. 
   - Kuvapari Päätoimittajalle ennen merge-pyyntöä: 3 aluetta Euroopan ulkopuolelta nyt vs v2.
 - maailma-kuvat.sh: KAARI2 toinen kierros (A/B), CUPOLA_ODOTUS, muisti (footprint, PID ps:stä), S2-välimuisti lopussa.
   HUOM: ajo.log sisältää binäärimerkkejä → grep -a (vahdit jäivät jumiin ilman sitä).
+
+## 23.0x: lokit arkistoitu
+proto-3d/lokit/linssiseppa2-* (skriptit, kuvaparit, gibs-esiselvitys, maailma-ajot) on siirretty arkistoon
+/Volumes/T7 4TB/proto-3d-lokit-arkisto/ (sama nimi). maailma-kuvat.sh ajetaan sieltä; tulosteet (OUT) edelleen lokit/-kansioon.
+S2-maailman koeajo 2 (käännös 11bae6ef, aja-s2m2.sh → lokit/linssiseppa2-s2maailma-koe3) odottaa yhä simuvuoroa (siirtyi junan 144 takia).
+TYÖTAPA (Päätoimittaja 23.1x): vika toistetaan ennen korjausta, sitten sama ajo korjattuna (ennen/jälkeen-parit).
