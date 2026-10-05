@@ -41,6 +41,16 @@ namespace Matkakirja.Natiivi
                 if (e.Ik == null) return;
             }
             Kolliderit(e.TilaId);
+            // Istuva tai polvistuva asento (lantio alle 0,65 m lattiasta): Grounder pois pehmeästi, ettei se vedä
+            // polvistujan jalkoja lattiaan (kappalainen alttarilla).
+            var g = e.Ik.GetComponent<GrounderFBBIK>();
+            if (g != null)
+            {
+                var lantio = e.Ik.references.pelvis;
+                bool seisoo = !Physics.Raycast(lantio.position + Vector3.up * 0.3f, Vector3.down, out var lattia, 2f, 1 << IkKerros)
+                    || lantio.position.y - lattia.point.y > 0.65f;
+                g.weight = Mathf.MoveTowards(g.weight, seisoo ? 1f : 0f, Time.unscaledDeltaTime * 2f);
+            }
             e.Ik.solver.Update();
             MittaaJalat(e);
         }
@@ -56,7 +66,7 @@ namespace Matkakirja.Natiivi
             {
                 foreach (var tr in e.SolmuT)
                     if (tr != null && tr.name == nimi)
-                        return Physics.Raycast(tr.position + Vector3.up * 0.6f, Vector3.down, out var osuma, 2f, 1 << IkKerros)
+                        return Physics.Raycast(tr.position + Vector3.up * 0.25f, Vector3.down, out var osuma, 1.5f, 1 << IkKerros)
                             ? $"{(tr.position.y - osuma.point.y) * 100f:0}" : "–";
                 return "?";
             }
