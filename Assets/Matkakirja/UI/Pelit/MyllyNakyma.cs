@@ -709,8 +709,8 @@ namespace Matkakirja.Natiivi
         bool Kuvat => kLauta != null && kVaalea != null && kTumma != null;
         static readonly ushort[] Nelio = { 0, 1, 2, 2, 3, 0 };
 
-        /// <summary>Kuva suorakaiteeseen r (UITK: y alas); uv laudan osuus (0–1, y alas), sävy = läpinäkyvyys.</summary>
-        static void Kuva(MeshGenerationContext mgc, Texture2D t, Rect r, Rect uv, float a = 1f)
+        /// <summary>Kuva suorakaiteeseen r (UITK: y alas); uv laudan osuus (0–1, y alas), sävy = läpinäkyvyys. Myös Tavlin lauta.</summary>
+        internal static void Kuva(MeshGenerationContext mgc, Texture2D t, Rect r, Rect uv, float a = 1f)
         {
             if (t == null || a <= 0f) return;
             var md = mgc.Allocate(4, 6, t);
@@ -724,7 +724,7 @@ namespace Matkakirja.Natiivi
             md.SetAllIndices(Nelio);
         }
 
-        static void Kuva(MeshGenerationContext mgc, Texture2D t, Vector2 keski, float koko, float a = 1f) =>
+        internal static void Kuva(MeshGenerationContext mgc, Texture2D t, Vector2 keski, float koko, float a = 1f) =>
             Kuva(mgc, t, new Rect(keski.x - koko / 2f, keski.y - koko / 2f, koko, koko), new Rect(0f, 0f, 1f, 1f), a);
 
         void PiirraKuvat(MeshGenerationContext mgc)
