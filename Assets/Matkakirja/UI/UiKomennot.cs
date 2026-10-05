@@ -764,6 +764,9 @@ namespace Matkakirja.Natiivi
                 case "linnapalkki":
                     // Linnan nimiruudun LATAUSPALKKI (Latauspalkki.cs): ui linnapalkki <0–1> | pois — nimiruutu auki annetulla arvolla.
                     return DioraamaTaulu.TestiPalkki(loput);
+                case "puhujakuva":
+                    // PUHUJAKUVA (Puhujakuva.cs): ui puhujakuva <kuva> [x y] | pois — Resources/Puhujakuvat/<kuva> pisteeseen tai ankkuriin.
+                    return "=" + Puhujakuva.Testi(loput);
                 case "kuunnelma":
                 {
                     // Olavinlinnan kuunnelman tekstitys (KuunnelmaKaistale): ui kuunnelma [tila] | ohita | alusta.
