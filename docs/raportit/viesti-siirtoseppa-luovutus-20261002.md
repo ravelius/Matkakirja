@@ -197,3 +197,21 @@ Natiivisepälle, viestit Päätoimittajalle ≤ 8 riviä, osoitin vain omistajan
 - Linnan Unity-uudistus (HYVÄKSYTTY, docs/raportit/linna-unity-suunnitelma-20261005.md): juna 143, Cinemachine + Timeline datasta,
   Volume/tilt-shift, leivottu valo (Linnanrakentaja suoraan atlakseen, A/B peileillä), Stylized Water, Steam Audio. zstd: Natiiviseppä
   tekee (muoto { polku, sha256, tavuja, zst: {…} }, varastoon purettuna), minä katselmoin.
+
+### 5.10. klo 05.2x — JUNA 142 KUITATTU, JUNAN 143 TYÖT
+- Juna 142 KUITATTU ja merge-pyynnöt Natiivisepällä: siirtoseppa/mylly-142 @ b2f9b0a1 (lisä-äänet mukana) ja
+  siirtoseppa/linna-palaute-142 @ f531743e (sauma: Aanisoitin purkaa linssin lyhyet silmukat PCM:ksi MP3:n gapless-otsakkeen
+  mukaan + satunnainen vaihe). Linnanrakentajan avainsana-PR (peili 8f4eb611) sai OK:n. 360°-vedon todentaa Laitetestaaja.
+- Juna 143, linna: haara siirtoseppa/linna-143 (worktree wt/proto-siirtoseppa-141): da00c9c6 sauman ristihäivytys 50 ms,
+  e1fdf532 Timeline (DioraamaTimeline + Kertoja/Jakso/AvainsanaKlippi, kytkin "poikki timeline", oletus POIS; A/B-testi
+  ajo-linna-timeline.sh odottaa käännöstä ja simua). Cinemachine + Splines + Steam Audio odottavat omistajan latauslupaa
+  (aamun kortti). Linnanrakentajan kevennysehdotukset A (heijastus kevyellä kuorella) ja C (tilat pois yleisnäkymän levossa)
+  odottavat Päätoimittajan hyväksyntää; GPU-mittaukset iPadilla 143-tehosteiden jälkeen. AO-A/B kuvattu (ero +0,2…+0,8),
+  päätös Päätoimittajalla. Linssiseppä tekee tilt-shiftin ja Volumen (vaihe 3) omaan haaraansa.
+- Tavli (siirtoseppa/tavli @ 9169187b, worktree wt/proto-siirtoseppa-tavli, Myllyn b2f9b0a1:n päällä): säännöt + botti
+  (helppo 35 % satunnainen 8 parhaasta, normaali 10 % satunnainen — HYVÄKSYTTY), UI Kafeneio-laudalla, 3D-nopat, äänet,
+  Ateenan kohtaaminen, Pelit-rivi, osuma-ala ± 1 saraketta. Todennettu simussa (oikea polku, osuma-ala oikeilla napautuksilla).
+  EI TF:ään ennen Sisältökirjurin tekstejä (paikkatekstit TODO); Bysantti ja Ottomaani -laudat Linnanrakentajalta myöhemmin.
+- Brotli (Natiiviseppä natiiviseppa/zstd acb4462a): katselmoitu ja hyväksytty.
+- Skriptit tyokalut/siirtoseppa-ajot/: ajo-linna-palaute/todennus/kappeli/ao/timeline.sh, ajo-mylly-aani.sh (kaveri + botti),
+  ajo-tavli.sh. Todisteet docs/raportit/kaappaukset/siirtoseppa-20261005/ (ei committoitu).
