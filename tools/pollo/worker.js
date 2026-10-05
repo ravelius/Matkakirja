@@ -2956,7 +2956,10 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     const suuntaAvain = p.istunto && kv ? `opas:suunnat:${p.istunto}` : null;
     const kaytetyt = suuntaAvain ? await kv.get(suuntaAvain).then((x) => (x ? JSON.parse(x) : [])).catch(() => [])
       : [SUUNNANVAIHDOT[(p.kaydyt.length + SUUNNANVAIHDOT.length - 1) % SUUNNANVAIHDOT.length]];
-    const { siru, kaytetyt: uudet } = seuraavaSuunta(kaytetyt, tulos.luokka ?? null);
+    // Juuri valittua suuntaa ei tarjota heti uudelleen ("Missä voisi syödä?" → ei taas "Missä voisi syödä?").
+    const valittu = SUUNNANVAIHDOT.find((x) => x === p.toive);
+    const { siru, kaytetyt: uudet } = seuraavaSuunta(valittu ? [...kaytetyt.filter((x) => x !== valittu), valittu] : kaytetyt,
+      tulos.luokka ?? null);
     const syventava = (tulos.vaihtoehdot ?? []).find((x) => !SUUNNANVAIHDOT.includes(x) && !/modernia|syödä|syödään/i.test(x)) ?? tulos.vaihtoehdot?.[0];
     tulos.vaihtoehdot = [syventava ?? 'Mitä täällä näkee?', siru];
     if (suuntaAvain) {
