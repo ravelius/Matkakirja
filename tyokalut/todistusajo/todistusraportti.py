@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Todistusajon apuri (Pelikoodari 5.10.2026), todistusajo.sh kutsuu:
-  etsi <ui-puu.json> <teksti> <leveys_pt> <korkeus_pt>  → "x y" pisteinä (näkyvän elementin keskipiste)
+  etsi <ui-puu.json> <teksti> <leveys_pt> <korkeus_pt> [fx fy]  → "x y" pisteinä (näkyvän elementin keskipiste tai
+      kohta fx,fy ∈ 0–1 elementin laatikossa: 0,0 vasen yläkulma; esim. Tavlin piste laudalla, joystickin reuna)
   raportti <kansio> <erä> <versio> <laite> <udid> <skenaario>
                                                          → merkityt kuvat, kuva-arkki.png, ääniarvot, TODISTUS.md
 """
@@ -13,7 +14,7 @@ OTSIKOT = {
 }
 
 
-def etsi(puu, haku, kw, kh):
+def etsi(puu, haku, kw, kh, fx=0.5, fy=0.5):
     d = json.load(open(puu))
     pw, ph = d["paneeli"]["w"] or 1, d["paneeli"]["h"] or 1
     kw, kh = float(kw), float(kh)
@@ -34,7 +35,7 @@ def etsi(puu, haku, kw, kh):
         return
     ehdokkaat.sort(key=lambda t: (t[0], t[1]))   # täsmäosuma ensin, ylin kerros ensin
     e = ehdokkaat[0][2]
-    cx, cy = e["x"] + e["w"] / 2, e["y"] + e["h"] / 2
+    cx, cy = e["x"] + e["w"] * float(fx), e["y"] + e["h"] * float(fy)
     if kierretty:
         print(f"{kw - cy * kw / ph:.1f} {cx * kh / pw:.1f}")
     else:
@@ -219,7 +220,7 @@ def raportti(L, era, versio, laite, udid, skenaario):
 
 if __name__ == "__main__":
     if sys.argv[1] == "etsi":
-        etsi(*sys.argv[2:6])
+        etsi(*sys.argv[2:8])
     elif sys.argv[1] == "laske":
         laske(*sys.argv[2:4])
     elif sys.argv[1] == "raportti":

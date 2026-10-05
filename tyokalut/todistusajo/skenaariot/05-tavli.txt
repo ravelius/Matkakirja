@@ -1,13 +1,21 @@
-# 05 Tavli: helppo peli, pakotettu heitto, Poistu oikealla tapilla (Siirtoseppä 5.10. Tavli Myllyn pohjalla)
+# 05 Tavli: helppo peli, pakotettu heitto 3–1, nappulan siirto OIKEILLA TAPEILLA laudalla (tap-kohta: tavli-mitat.json
+# 2048×1536, piste a5 = x 1167/2048, alarivi y 1200/1536), Poistu oikealla tapilla (Siirtoseppä 5.10. Tavli Myllyn pohjalla)
 ui tavli peli helppo
 odota 3
 kuva 05a-tavli-auki Tavli auki (helppo)
 ui tavli heitto 3 1
+oleta 6 tavli: heitto 3 1 -- pakotettu heitto 3–1
+odota 2
+kuva 05b-tavli-heitto Tavli: heitto 3–1
+tap-kohta 0.570 0.781 mk-peli__lauta
+odota 1
+ui tavli tila
+oleta 5 tavli: .*valittu a5 -- oikea tap pisteeseen a5 valitsi nappulan
+tap-kohta 0.680 0.781 mk-peli__lauta
 odota 2
 ui tavli tila
-oleta 5 tavli: -- tavlin tila lokissa
-kuva 05b-tavli-heitto Tavli: heitto 3–1
+oleta 5 tavli: .*valittu - -- oikea tap kohteeseen a2 siirsi nappulan (valinta tyhjeni)
+kuva 05c-tavli-siirto Tavli: nappula siirretty oikealla tapilla
 tap-teksti Poistu
 ei-nay 6 Luovuta -- Poistu sulki tavlin
-kuva 05c-tavli-suljettu Tavli suljettu Poistu-napista
-ei-testattu nappulan siirto oikealla tapilla (pisteiden koordinaatit lisätään, kun ui-puu nimeää pisteet)
+kuva 05d-tavli-suljettu Tavli suljettu Poistu-napista

@@ -161,6 +161,24 @@ while IFS= read -r rivi || [[ -n $rivi ]]; do
       if [[ -z $xy ]]; then napautus_kirjaus "$rivi" "EI LÖYDY ui-puusta"; tulos 2 PUUTE "elementtiä '$loput' ei ui-puussa"
         cp "$D/ui-puu.json" "$L/ui-puu-$(date +%H%M%S).json" 2>/dev/null   # skenaarion korjaukseen
       else VIIM=$(rivit); $SK $UDID tap ${=xy}; napautus_kirjaus "$rivi → tap $xy" "lähetetty"; kirjaa "✋ $rivi → $xy"; fi ;;
+    tap-kohta|veto-kohta)
+      # tap-kohta <fx> <fy> <haku>: oikea kosketus elementin laatikon kohtaan (0–1), esim. Tavlin piste laudalla.
+      # veto-kohta <fx1> <fy1> <fx2> <fy2> <pito_s> <haku>: alas kohdassa 1, liuku kohtaan 2, pito, ylös (joystick).
+      set -- ${=loput}
+      if [[ $sana == tap-kohta ]]; then f1=($1 $2); f2=(); pito=0; shift 2; else f1=($1 $2); f2=($3 $4); pito=$5; shift 5; fi
+      haku="$*"
+      kirjoita ui-komento.txt "ui puu"; sleep 1.5
+      p1=$(python3 $TYOKALUT/todistusraportti.py etsi "$D/ui-puu.json" "$haku" $KW $KH $f1)
+      [[ -n $f2 ]] && p2=$(python3 $TYOKALUT/todistusraportti.py etsi "$D/ui-puu.json" "$haku" $KW $KH $f2) || p2=""
+      if [[ -z $p1 ]]; then napautus_kirjaus "$rivi" "EI LÖYDY ui-puusta"; tulos 2 PUUTE "elementtiä '$haku' ei ui-puussa"
+        cp "$D/ui-puu.json" "$L/ui-puu-$(date +%H%M%S).json" 2>/dev/null
+      else
+        VIIM=$(rivit)
+        if [[ -z $f2 ]]; then $SK $UDID tap ${=p1}; kosketus="tap $p1"
+        else a=(${=p1}); b=(${=p2}); ms=$(( ${pito%.*} * 1000 + 50 ))
+          $SK $UDID polku "${a[1]},${a[2]}" "${b[1]},${b[2]},250" "${b[1]},${b[2]},$ms"; kosketus="polku $p1 → $p2, pito ${pito} s"; fi
+        napautus_kirjaus "$rivi → $kosketus" "lähetetty"; kirjaa "✋ $rivi → $kosketus"
+      fi ;;
     oleta|palaute)
       s=${loput%% *}; ehto=${loput#* }; selite=""
       [[ $ehto == *" -- "* ]] && { selite=${ehto#* -- }; ehto=${ehto%% -- *}; }

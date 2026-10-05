@@ -1,0 +1,16 @@
+# 08 Asetukset: ☰ (oikea tap) → pillerivalikko → Asetukset → ÄÄNENTASOT, KARTTA ja MUUT näkyvät → ‹ Takaisin →
+# ohinapautus sulkee valikon. Kytkimiä ei vaihdeta (tallennettu tila säilyy).
+tap-teksti mk-ikoninappi
+nakyy 6 Asetukset -- ☰ avasi pillerivalikon
+kuva 08a-valikko Pillerivalikko auki
+tap-teksti Asetukset
+nakyy 6 ASETUKSET -- Asetukset-näkymä auki
+nakyy 3 Pulun ääni -- äänentasot näkyvät
+nakyy 3 Pieni liike -- kartan kytkimet näkyvät
+nakyy 3 Offline-kartat -- muut asetukset näkyvät
+kuva 08b-asetukset Asetukset
+tap-teksti mk-linssivalitsin__takaisin
+ei-nay 6 ASETUKSET -- ‹ Takaisin palasi valikon pääsivulle
+tap 200 150
+ei-nay 6 Asetukset -- ohinapautus sulki valikon
+kuva 08c-suljettu Valikko suljettu

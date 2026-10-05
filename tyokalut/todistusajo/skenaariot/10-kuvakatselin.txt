@@ -1,0 +1,17 @@
+# 10 Kuvakatselin: nostokortti → kortin kuva (oikea tap) → suurennos auki → pyyhkäisy seuraavaan kuvaan →
+# napautus kuvan ohi sulkee suurennoksen, kortti jää auki.
+ui nosto kohde:pompeji@ITA
+oleta 60 ui nosto kohde:pompeji@ITA: auki -- nostokortti auki
+nakyy 20 Pompejin Forum -- kortin kuvateksti näkyy
+odota 2
+tap-teksti mk-nosto__kuvakehys
+nakyy 6 mk-nosto__suurennoskuva -- kuvan napautus avasi suurennoksen
+odota 2
+kuva 10a-suurennos Kuvasuurennos auki
+veto 320 420 80 420 0.25
+odota 2
+kuva 10b-seuraava Pyyhkäisy vasemmalle: seuraava kuva (laskuri vaihtui)
+tap 195 60
+ei-nay 6 mk-nosto__suurennoskuva -- napautus kuvan ohi sulki suurennoksen
+nakyy 3 Pompejin Forum -- kortti jäi auki
+kuva 10c-suljettu Suurennos suljettu, kortti auki

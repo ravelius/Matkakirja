@@ -1,0 +1,19 @@
+# 07 ISS Cupola: Astronautin kamera auki → Pulun taulu → "ISS-ohjaamo" oikealla tapilla → Cupola + ohjaamo (joystick,
+# LCD, kamera, kaasu) näkyvät → Cupolan humina mitataan → taulun Poistu palauttaa kartalle.
+linssi linssi satelliitti
+oleta 30 linssit: auki: satelliitti -- astronautin kamera aukesi
+nakyy 120 Minne katsotaan -- Pulun taulu avautui itsestään paljastuksen jälkeen
+kuva 07a-taulu Pulun taulu: Maapallo · Astronauttien kuvat · ISS-ohjaamo · Poistu
+tap-teksti ISS-ohjaamo
+oleta 60 cupola[23]|astro kyyti.*Ikkuna|taulu.*valitse:iss-sisalle -- taulun ISS-ohjaamo-rivi avasi Cupolan
+nakyy 30 mk-issohjaamo__joyosuma -- ohjaamon joystick näkyy
+nakyy 5 mk-issohjaamo__lcd -- LCD näkyy
+nakyy 5 mk-issohjaamo__kamera -- kameranappi näkyy
+odota 6
+kuva 07b-cupola Cupola: ohjaamo alareunassa (joystick vasemmalla, LCD, kamera, kaasu oikealla)
+aanitaso 3
+ui linssi taulu auki
+nakyy 10 Minne katsotaan -- taulu auki uudelleen
+tap-teksti Poistu
+oleta 20 linssit: auki: ei mitään -- Poistu sulki linssin
+kuva 07c-kartta Takaisin kartalla
