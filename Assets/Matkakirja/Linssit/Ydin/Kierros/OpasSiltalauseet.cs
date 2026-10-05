@@ -111,7 +111,7 @@ namespace Matkakirja.Linssit.Kierros
                 if (!(x is Dictionary<string, object> d)) continue;
                 string S(Dictionary<string, object> dd, string k) => dd != null && dd.TryGetValue(k, out var v) ? v as string : null;
                 double D(string k) => d.TryGetValue(k, out var v) && v != null ? Convert.ToDouble(v, System.Globalization.CultureInfo.InvariantCulture) : double.NaN;
-                var t = new OpasTaky { Id = S(d, "id"), Nimi = S(d, "nimi"), Koukku = S(d, "koukku"), Kaupunki = S(d, "kaupunki"), Iso2 = S(d, "maa"),
+                var t = new OpasTaky { Id = S(d, "id"), Nimi = S(d, "nimi"), Koukku = S(d, "koukku"), Kaupunki = S(d, "kaupunki"), Iso2 = S(d, "iso") ?? S(d, "maa"),
                     Alarivi = S(d, "alarivi"), Lat = D("lat"), Lon = D("lon") };
                 if (d.TryGetValue("kuva", out var ku) && ku is Dictionary<string, object> kd) { t.KuvaUrl = S(kd, "url"); t.KuvaTekija = S(kd, "tekija"); t.KuvaLisenssi = S(kd, "lisenssi"); }
                 if (string.IsNullOrEmpty(t.Nimi) || double.IsNaN(t.Lat) || double.IsNaN(t.Lon) || Math.Abs(t.Lat) > 90 || Math.Abs(t.Lon) > 180) continue;
