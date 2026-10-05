@@ -703,11 +703,13 @@ namespace Matkakirja.Natiivi
             {
                 taukoAlku = Time.unscaledTime;
                 lukuaikaAjo?.Pause();
+                if (autoNapitPiilossa) NaytaAutoNapit(true);
             }
             else
             {
                 autoAlku += Time.unscaledTime - taukoAlku;   // AUTOn laskuri jatkaa siitä, mihin jäi
                 lukuaikaAjo?.Resume();
+                autoKosketus = Time.unscaledTime;   // napit piiloutuvat taas tavallisella viiveellä
                 if (autoAjo != null) Ruudunpaivitys.Herata(AutoSiirtoS + 0.2f);
             }
             if (taukoIkoni != null) taukoIkoni.Polku = paalle ? Ikonit.Toista : Ikonit.Tauko;
@@ -755,7 +757,8 @@ namespace Matkakirja.Natiivi
             autoPiilotus = juuri.schedule.Execute(() =>
             {
                 if (!Auki || !AutoKaytossa) { autoPiilotus?.Pause(); return; }
-                if (!autoNapitPiilossa && Time.unscaledTime - autoKosketus >= AutoPiilotusS) NaytaAutoNapit(false);
+                // II-tauolla napit pysyvät näkyvissä: jatko (▶) on aina yhden napautuksen päässä.
+                if (!autoNapitPiilossa && !tauolla && Time.unscaledTime - autoKosketus >= AutoPiilotusS) NaytaAutoNapit(false);
             }).Every(250);
             Ruudunpaivitys.Herata(AutoPiilotusS + 0.5f);
         }
