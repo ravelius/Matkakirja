@@ -174,3 +174,14 @@ jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), a
 iss-taulu-vaaka.sh (TAP_OHI=1), auto-zoom.sh (TAP_SEUR=1), lippu-kaikki.sh, chat-linna.sh, kartoitus.sh (+ k:-etuliite
 kartan komennoille), xn-tap-alku.sh + xn-k.sh (oikeat napautukset simulaattorityökalulla). `ui napauta` ohittaa
 osumatestin → todisteisiin aina simun oikea napautus.
+
+## Tila 5.10. klo 21.0x: elävä opas kevyeksi ja nykyaikaan (juna 144)
+
+- Proto: natiivi-ui/opas-kevyt 6eacdf49 (master-pohja, wt/proto-natiivi-ui-opaskevyt) ja junakoe-haara
+  natiivi-ui/opas-kevyt-144 2a94735f (7b21e41a + opas-kevyt, wt/proto-natiivi-ui-opaskevyt144), lähetetty Natiivisepälle.
+- Sisältö: chat ei aukea itsestään, irrallinen sirurivi (2 vaihtoehtoa + puhu/kirjoita, sanelu), Näytä teksti valikkoon,
+  ✕, yläpalkki ja Pulu pois, kuvakortti + kuvakytkin (OpasKuva, Pöllön "kuvat"), sirut krediittien yläpuolelle
+  (CesiumKaupunki.KrediititKorkeusPt), Kirjasin Moderni (SF Pro) ja harmaa lasi (omistaja 20.5x).
+- Web: #4014 (SIRURIVI IRRALLAAN) mergetty, #4020 (fontit.Moderni) Julkaisijalla.
+- Kesken: Päätoimittajan iPhone (vaaka) ja iPad -kuvat Natiivisepän viimeisestä kokeesta (~21.45 jälkeen) skriptillä
+  lokit/natiivi-ui-1035/skriptit/opas-kuvat.sh <UDID> <nimi> <app> vaaka; peitto: ui opasvalikko peitto.
