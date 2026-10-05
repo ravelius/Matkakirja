@@ -63,7 +63,7 @@ namespace Matkakirja.Linssit.Testit
             double ennen = OpasKuvaus.Pysahdyksella(katu, OpasKuvaus.VaiheS).Suuntima, jalkeen = OpasKuvaus.Pysahdyksella(katu, loppu).Suuntima;
             double siirto = KierrosLento.Kiedo(jalkeen - ennen - OpasKuvaus.KiertoAsteS * OpasKuvaus.SiirtoS);
             Oleta.Tosi(Math.Abs(siirto - OpasKuvaus.SiirtoKulma) < 0.5, $"katu: toiselle puolelle ({siirto:F1}°)");
-            var rak = OpasKuvaus.Kehysta(K(60, 40), 5, 0, "rakennus");
+            var rak = OpasKuvaus.Kehysta(K(200, 60), 5, 0, "rakennus");
             double r0 = OpasKuvaus.Pysahdyksella(rak, OpasKuvaus.VaiheS).EtaisyysM, r1 = OpasKuvaus.Pysahdyksella(rak, loppu).EtaisyysM;
             Oleta.Tosi(r1 < r0 * 0.75, $"rakennus: lähemmäs ({r0:F0} → {r1:F0} m)");
             var pieni = OpasKuvaus.Kehysta(K(20, 10), 5, 0, "rakennus");   // jo vähimmäisetäisyydellä
