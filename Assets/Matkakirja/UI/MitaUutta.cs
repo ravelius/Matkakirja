@@ -81,11 +81,16 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(Rakenne.Teksti(otsikko, "mk-kortti__otsikko", kortti.Sisus), Tyylikirja.Kirjain.Otsikko);
             var vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-tietoja__vieritys");
+            // Pitkä loki (Mitä uutta): vain lista joustaa, kapiteeli, otsikko ja napit pysyvät kortin sisällä (iPhone 5.10.: napit
+            // valuivat kortin alareunan yli).
+            vieritys.style.minHeight = 0;
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Sisus.Add(vieritys);
             var l = Rakenne.El("mk-muutokset__lista", vieritys, PickingMode.Ignore);
             napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
+            napit.style.flexShrink = 0;
+            versio.style.flexShrink = 0;
             Kirjasimet.Aseta(napit, Kirjasin.Kone);
             h.RegisterCallback<PointerDownEvent>(e =>
             {
