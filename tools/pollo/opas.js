@@ -102,6 +102,7 @@ LON: <pituusaste desimaaleina>
 KOKO: <kohteen halkaisija tai pituus metreinä kameran kehystystä varten, kokonaisluku>
 KORKEUS: <kohteen korkeus metreinä, jos se on merkittävä (torni, kirkko); muuten jätä rivi pois>
 LUOKKA: <yksi sana: katu, kanava, aukio, rakennus, torni, kirkko, linnoitus, puisto, vesi, silta tai muu>
+KUVAUS: <lyhyt suomenkielinen kuvaus otsikon alle, enintään viisi sanaa, esimerkiksi Kööpenhaminan kaupungintalo>
 TEKSTI: <kappale>
 VAIHTOEHTO: <ensimmäinen vastausvaihtoehto>
 VAIHTOEHTO: <toinen vastausvaihtoehto>
@@ -174,7 +175,8 @@ export async function wikidataTiedot(haku, ids) {
       for (const [id, e] of Object.entries(d?.entities ?? {})) {
         tulos[id] = { fi: e?.sitelinks?.fiwiki?.title ?? null,
           nimi: e?.labels?.fi?.value ?? e?.labels?.en?.value ?? null,
-          kuvaus: e?.descriptions?.fi?.value ?? e?.descriptions?.en?.value ?? null };
+          kuvaus: e?.descriptions?.fi?.value ?? e?.descriptions?.en?.value ?? null,
+          kuvausFi: e?.descriptions?.fi?.value ?? null };
       }
     } catch { /* ilman tietoja */ }
   }));
@@ -242,7 +244,8 @@ export async function paikanKoordinaatit(haku, p, viite) {
       const wd = e.id ? (await wikidataTiedot(haku, [e.id]))[e.id] : null;
       const wiki = wd?.fi ? { otsikko: wd.fi, kieli: 'fi', url: wikiUrl('fi', wd.fi) }
         : e.otsikko ? { otsikko: e.otsikko, kieli: 'en', url: wikiUrl('en', e.otsikko) } : null;
-      return { lat: k.lat, lon: k.lon, id: e.id ?? `en:${e.otsikko}`, alarivi: siivoa(wd?.kuvaus ?? e.kuvaus, 80) || null, wiki, lahde: 'wikipedia' };
+      // Alarivi näkyy ruudulla: vain suomenkielinen Wikidata-kuvaus (Natiivi-UI 5.10.), muuten mallin KUVAUS.
+      return { lat: k.lat, lon: k.lon, id: e.id ?? `en:${e.otsikko}`, alarivi: siivoa(wd?.kuvausFi, 80) || null, wiki, lahde: 'wikipedia' };
     }
   }
   if (lahella(p)) return { lat: p.lat, lon: p.lon, id: `en:${p.wikipedia ?? p.nimi}`, alarivi: null, wiki: null, lahde: 'malli' };
@@ -321,7 +324,8 @@ export function jasennaOpas(teksti, varaNimi = null) {
     koko_m: Number.isFinite(koko) ? Math.min(3000, Math.max(20, koko)) : 150,
     ...(Number.isFinite(korkeus) && korkeus > 0 ? { korkeus_m: Math.min(1000, korkeus) } : {}),
     ...(luokka ? { luokka } : {}),
-    teksti: siivoa(tekstiOsa.replace(/^\s*(KORKEUS|LUOKKA)\s*:.*$/gim, ''), 900),
+    ...(kentta(teksti, 'KUVAUS') ? { kuvaus: siivoa(kentta(teksti, 'KUVAUS'), 80) } : {}),
+    teksti: siivoa(tekstiOsa.replace(/^\s*(KORKEUS|LUOKKA|KUVAUS)\s*:.*$/gim, ''), 900),
     vaihtoehdot,
   };
 }

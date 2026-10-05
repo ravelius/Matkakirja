@@ -18,6 +18,9 @@ test('jäsennys: pysähdys mallin kentin, koko rajattu, teksti päättyy ennen v
   assert.equal(p.korkeus_m, 12);
   assert.equal(p.luokka, 'kanava', 'kameran luokka (juna 145)');
   assert.equal(jasennaOpas('NIMI: X\nLUOKKA: avaruusasema\nTEKSTI: Y.').luokka, undefined, 'tuntematon luokka pois');
+  const kuv = jasennaOpas('NIMI: Raatihuone\nKUVAUS: Kööpenhaminan kaupungintalo\nTEKSTI: Y.');
+  assert.equal(kuv.kuvaus, 'Kööpenhaminan kaupungintalo');
+  assert.equal(kuv.teksti, 'Y.');
   assert.equal(p.teksti, 'Nyhavn on värikäs kanava. Se on vilkas.');
   assert.deepEqual(p.vaihtoehdot, ['Kerro lisää', 'Näytä jotain modernia']);
   assert.equal(jasennaOpas('NIMI: X'), null, 'ilman tekstiä ei pysähdystä');
@@ -100,6 +103,10 @@ test('koordinaatit nimellä: otsikko, kaukainen samanniminen hylätään ja haku
   assert.equal(await paikanKoordinaatit(fetch, { nimi: 'Tuntematon', lat: 40, lon: -82 }, KOOPENHAMINA), null);
   const d = await paikanKoordinaatit(fetch, { nimi: 'Torvehallerne', wikipedia: 'Torvehallerne', lat: 55.7, lon: 12.6 }, KOOPENHAMINA);
   assert.deepEqual([d.id, d.lat, d.lahde], ['Q19409991', 55.6836, 'wikipedia'], 'Wikidatan nimihaku + P625, kun artikkelia ei ole');
+  const en = await paikanKoordinaatit(fetch, { nimi: 'Nyhavn', wikipedia: 'Tivoli Gardens', lat: 55.6, lon: 12.5 }, KOOPENHAMINA);
+  assert.equal(en.alarivi, 'huvipuisto Kööpenhaminassa', 'fi-kuvaus');
+  const eiFi = await paikanKoordinaatit(fetch, { nimi: 'Torvehallerne', lat: 55.7, lon: 12.6 }, KOOPENHAMINA);
+  assert.equal(eiFi.alarivi, null, 'ei englanninkielistä alariviä ruudulle (worker käyttää mallin KUVAUSta)');
   assert.equal(kutsut.tiivistelma, undefined, 'tekstiä ei haeta');
   assert.deepEqual(await kaydytNimiksi(fetch, ['Q110289', 'Q1394197', 'Raatihuone']), ['Kööpenhaminan Tivoli', 'Nyhavn', 'Raatihuone']);
 });
