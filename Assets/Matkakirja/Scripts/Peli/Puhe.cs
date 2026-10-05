@@ -770,6 +770,7 @@ namespace Matkakirja.Natiivi
             r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
             r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             if (koodi != null) r.SetRequestHeader(Lukijaaani.KoodiOtsake, koodi);
+            PolloTestitunnus.Lisaa(r);   // kehittäjän simuajot: per-IP-raja ohi (juna 146), ei TF/App Store
             return r;
         }
 
