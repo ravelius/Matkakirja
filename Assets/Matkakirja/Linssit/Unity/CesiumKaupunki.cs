@@ -36,6 +36,14 @@ namespace Matkakirja.Natiivi
         public const float ValmisProsentti = 99f;
         /// <summary>Taivaan väri kaupunkinäkymässä (pallon avaruuden musta ei sovi horisonttiin).</summary>
         static readonly Color Taivas = new Color(0.78f, 0.84f, 0.89f);
+        /// <summary>
+        /// KAUPUNGIN OMA PIIRTOKERROS (Päätoimittaja 5.10. 21.0x, VIE-este: pysähdyksissä kermanvärisiä aukkoja ja karkeita kolmioita):
+        /// kaupungin tilesetit (ja Cesiumin laattaoliot, jotka perivät tilesetin kerroksen) tällä kerroksella, ja pääkamera piirtää
+        /// kaupunkinäkymän ajan VAIN sen. Pelin pallon kerrokset (kermahuntu, pohja, merkit) eivät voi näkyä laattojen raoista.
+        /// Kerrokset 8–14 ja UI-kamerat 24–40 ovat muiden käytössä.
+        /// </summary>
+        public const int Kerros = 15;
+        int vanhaMaski;
 
         /// <summary>Datalähde (komennot "lontoo data …" ja "opas data …"): Google oletus, Ion, Oma = testitila ilman ionia.</summary>
         public enum Lahde { Google, Ion, Oma }
@@ -138,8 +146,9 @@ namespace Matkakirja.Natiivi
             pohjaTila = Pohjapallo.Tila;
             pohjaOli = true;
             Pohjapallo.Tila = Pohjapallolaskenta.Tila.Pois;
-            vanhaTyhjennys = kamera.clearFlags; vanhaTausta = kamera.backgroundColor;
+            vanhaTyhjennys = kamera.clearFlags; vanhaTausta = kamera.backgroundColor; vanhaMaski = kamera.cullingMask;
             kamera.clearFlags = CameraClearFlags.SolidColor; kamera.backgroundColor = Taivas;
+            kamera.cullingMask = 1 << Kerros;
 
             vanhaOrigo = new double3(georef.longitude, georef.latitude, georef.height);
             SiirraOrigo(origoLat, origoLon, origoKorkeus);
@@ -202,7 +211,7 @@ namespace Matkakirja.Natiivi
         Cesium3DTileset LuoTileset(string nimi, long asset, float sse, long valimuisti)
         {
             // Pois päältä asetusten ajaksi: jokainen asetin kutsuisi muuten RecreateTileset():iä.
-            var go = new GameObject(nimi);
+            var go = new GameObject(nimi) { layer = Kerros };
             go.SetActive(false);
             go.transform.SetParent(juuri.transform, false);
             var t = go.AddComponent<Cesium3DTileset>();
@@ -214,7 +223,8 @@ namespace Matkakirja.Natiivi
             t.maximumSimultaneousTileLoads = Rinnakkain;
             t.preloadAncestors = true;
             t.preloadSiblings = false;
-            t.forbidHoles = false;
+            // Ei aukkoja: vanhempi laatta pysyy, kunnes kaikki lapset ovat latautuneet (Päätoimittaja 5.10. 21.0x, VIE-este).
+            t.forbidHoles = true;
             t.createPhysicsMeshes = false;
             t.showCreditsOnScreen = true;
             return t;
@@ -338,7 +348,7 @@ namespace Matkakirja.Natiivi
             if (palloTileset != null && palloOli) palloTileset.enabled = true;
             if (pohjaOli) Pohjapallo.Tila = pohjaTila;
             palloTileset = null; pohjaOli = false;
-            if (kamera != null) { kamera.clearFlags = vanhaTyhjennys; kamera.backgroundColor = vanhaTausta; }
+            if (kamera != null) { kamera.clearFlags = vanhaTyhjennys; kamera.backgroundColor = vanhaTausta; kamera.cullingMask = vanhaMaski; }
             georef = null; kamera = null; tunnus = null;
         }
     }
