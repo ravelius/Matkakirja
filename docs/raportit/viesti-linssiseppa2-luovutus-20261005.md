@@ -48,3 +48,7 @@ Kuvat: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-maailma-10c31692/kuvat. 
   naapuriruuduille sama datatake aina kun mahdollista. Offline-toisto v1-indeksillä ei näyttänyt tätä (eri lehtijako ja tarkkuus).
 - Viestit Päätoimittajalle ja Karttasepälle 06.4x. Kuvia EI ole lähetetty: Kanaria ja Meksiko eivät ole vielä kunnossa.
 - Seuraavaksi, kun Karttasepän indeksi päivittyy: sama kahdeksan kuvan ajo (vaihda vain APP ja OUT), sitten tarkistus ja lähetys.
+- 06.4x: **v2b-tuki valmis** (iss-ohjaamo d227d4c9): valinta.savy {vahvistus, siirto} → TCI · vahvistus + siirto ennen usvaa ja lutia.
+  Juuri on yhä "v2". Karttasepän v2b valmistuu noin klo 8 polkuun s2-indeksi/v2b/. Vaihda S2Maailma.Versio = "v2b" VASTA
+  Päätoimittajan kuittauksen jälkeen, käännä ja aja kahdeksan kuvaa. Saman datataken indeksi (v2c, 3–4 h) odottaa
+  Päätoimittajan etusijapäätöstä.
