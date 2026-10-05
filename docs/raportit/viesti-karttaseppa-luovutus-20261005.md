@@ -74,8 +74,12 @@ Vanhemmat vaiheet: `viesti-karttaseppa-luovutus-20261002.md` (päivitykset 2.–
   11SPR:n maalle jää radan reunan sauma (märkä muta vs. kuiva suola), eikä savy (v2e) auta. LS2 tarkistaa simukuvasta.
   Jos sauma näkyy: koko 11SPR:n ja 11SQR:n länsiosan kattavat datatakit, esim. S2A 2022-10-22, S2B 2025-11-30 ja S2A 2025-01-09 (11SPR nodata 0, 11SQR 55 %);
   sauma siirtyisi Gran Desierton dyyneille. Tarkista myös 11RPQ ja 11RQQ.
-- **Rengaskorjaus muille alueille** (`v2-rengas/<alue>`, vain muuttuneet laatat, KYNNYS 0): Eurooppa, P-Afrikka, Amerikka, Aasia. Ei vielä viety.
-  Jo viedyt kolme aluetta menevät v2e-korjaussarjaan (v2e/<alue>/laatat + korjaus.json); Euroopalle uusi polku (LS2: AstronauttiKerros.S2Juuri).
+- **Rengaskorjaus viety (PT hyväksyi 18.2x; omistajan Run `pyramidi-poltto/vie-rengaskorjaus-20261005.sh`):** s2-maailma/v2-korjaus/ + korjaus.json
+  (P-Afrikka, Amerikka, Aasia, myös v2e-läikkäkorjaus) ja s2-eurooppa/v2/ (Euroopan jako, 36 167 korjattua). LS2:lle Euroopan polku vasta viennin jälkeen.
+  Varmuuskopiot: v2e/<alue>/laatat-ennen-rengas.
+- **SEURAAVA ERÄ (PT 18.2x, ei pidätä vientiä):**
+  1) Madeiran itäosan paksu pilvi saarella: etsi selkeä otto ja ruudun uusinta Euroopan mosaiikkiin.
+  2) Lanzaroten pohjoispuolen pistejono ja kaksi täplää: pilvihaamujen jäänteet. Rengaskorjaukseen pienet "maa"-komponentit merimaskin sisällä vedeksi.
 
 - Bahaman suurten matalikkojen turkoosi puuttuu. PT toivoo batymetriaan perustuvaa ratkaisua myöhemmin.
 - Aluekohtainen tci_lut (aavikko) tehdään LS2:n esimerkkikuvien perusteella.
