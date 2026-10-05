@@ -41,7 +41,10 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   Todisteet: Tavli 3 lautaa, Mylly, Pelit-lista. Testikäännös yhdessä siirtoseppa/tavli ea02bae1:n kanssa.
 - natiivi-ui/ei-linssia dba06119 (x-siivouksen päällä) — omistaja 11.0x: "Ei linssiä" -rivi vain kun linssi päällä.
   Todisteet: normaali kartta (rivi poissa) + topografialinssi (rivi näkyy ja palauttaa kartan).
-- Käännös ~11.27, simu ~11.50 (Julkaisija).
+- Testikäännös a8a860c7 (11.22), simussa todennettu 11.2x: proto-3d/lokit/natiivi-ui-1035/kirjainvali/
+  (otsikko-ennen-jalkeen.jpg, kirjainvali-arkki.jpg, ei-linssia-arkki.jpg). Lähetetty Päätoimittajalle 11.3x kuitattavaksi;
+  kysymys: Linssit-näkymän esikatseluikkuna "Ei linssiä" normaalilla kartalla (suositus: jätetään). Kuittauksen jälkeen
+  merge-pyynnöt Natiivisepälle (kirjainvali-kerning Tavlin TF-ehtona, ei-linssia juna 144).
 
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
