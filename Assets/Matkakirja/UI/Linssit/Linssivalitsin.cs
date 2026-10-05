@@ -166,6 +166,9 @@ namespace Matkakirja.Natiivi
                 bool p = rid == (id ?? EiLinssia);
                 rivi.EnableInClassList("mk-valittu", p);
                 tila.text = p ? "PÄÄLLÄ" : ""; // PANEELI: tila kapiteelina (web #3811)
+                // "Ei linssiä" vain, kun jokin linssi on päällä (omistaja 5.10.2026 klo 11.0x: "jos ollaan päänäkymässä, eli
+                // normaalilla kartalla, niin jätä silloin se pois näkyvistä"); rivi palauttaa normaalin kartan.
+                if (rid == EiLinssia) rivi.style.display = id != null ? DisplayStyle.Flex : DisplayStyle.None;
             }
             // Pillerivalikossa linssi otetaan pois "Ei linssiä" -riviltä kuten webissä.
             poisNappi.style.display = id != null && !PilleriValikko ? DisplayStyle.Flex : DisplayStyle.None;
