@@ -2886,7 +2886,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       const nimi = seuraava ? seuraava.paikka.nimi : paikanNimi(paikka, vastaus.nimi);
       tuloksenPaikka = { nimi, wikipedia: vastaus.wikipedia, koko_m: vastaus.koko_m, ...paikka };
       tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi, alarivi: paikka.alarivi, lat: paikka.lat, lon: paikka.lon,
-        koko_m: seuraava?.paikka.koko_m ?? vastaus.koko_m, ...(vastaus.korkeus_m ? { korkeus_m: vastaus.korkeus_m } : {}), teksti: vastaus.teksti,
+        koko_m: seuraava?.paikka.koko_m ?? vastaus.koko_m, ...(vastaus.korkeus_m ? { korkeus_m: vastaus.korkeus_m } : {}),
+        ...(vastaus.luokka ? { luokka: vastaus.luokka } : {}), teksti: vastaus.teksti,
         wiki: paikka.wiki, kuva: null, vaihtoehdot: vastaus.vaihtoehdot, koordinaatit: paikka.lahde,
         ...(seuraava ? { kierros: { numero: seuraava.numero, maara: seuraava.maara } } : {}),
         kuvat: kuvatPaikalle(aineisto, [nimi, vastaus.nimi, seuraava?.paikka.wikipedia ?? vastaus.wikipedia, paikka.wiki?.otsikko].filter(Boolean)) };

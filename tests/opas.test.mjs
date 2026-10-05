@@ -9,13 +9,15 @@ import worker from '../tools/pollo/worker.js';
 const KOOPENHAMINA = { lat: 55.676, lon: 12.568 };
 
 test('jäsennys: pysähdys mallin kentin, koko rajattu, teksti päättyy ennen vaihtoehtoja; kysymys', () => {
-  const p = jasennaOpas('NIMI: Nyhavn\nWIKIPEDIA: Nyhavn\nLAT: 55,6798\nLON: 12.5911\nKOKO: 9000\nKORKEUS: 12\n'
+  const p = jasennaOpas('NIMI: Nyhavn\nWIKIPEDIA: Nyhavn\nLAT: 55,6798\nLON: 12.5911\nKOKO: 9000\nKORKEUS: 12\nLUOKKA: Kanava.\n'
     + 'TEKSTI: Nyhavn on värikäs kanava.\nSe on vilkas.\nVAIHTOEHTO: Kerro lisää\nVAIHTOEHTO: Näytä jotain modernia');
   assert.equal(p.tyyppi, 'pysahdys');
   assert.equal(p.wikipedia, 'Nyhavn');
   assert.equal(p.lat, 55.6798);
   assert.equal(p.koko_m, 3000);
   assert.equal(p.korkeus_m, 12);
+  assert.equal(p.luokka, 'kanava', 'kameran luokka (juna 145)');
+  assert.equal(jasennaOpas('NIMI: X\nLUOKKA: avaruusasema\nTEKSTI: Y.').luokka, undefined, 'tuntematon luokka pois');
   assert.equal(p.teksti, 'Nyhavn on värikäs kanava. Se on vilkas.');
   assert.deepEqual(p.vaihtoehdot, ['Kerro lisää', 'Näytä jotain modernia']);
   assert.equal(jasennaOpas('NIMI: X'), null, 'ilman tekstiä ei pysähdystä');

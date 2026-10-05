@@ -101,6 +101,7 @@ LAT: <leveysaste desimaaleina>
 LON: <pituusaste desimaaleina>
 KOKO: <kohteen halkaisija tai pituus metreinä kameran kehystystä varten, kokonaisluku>
 KORKEUS: <kohteen korkeus metreinä, jos se on merkittävä (torni, kirkko); muuten jätä rivi pois>
+LUOKKA: <yksi sana: katu, kanava, aukio, rakennus, torni, kirkko, linnoitus, puisto, vesi, silta tai muu>
 TEKSTI: <kappale>
 VAIHTOEHTO: <ensimmäinen vastausvaihtoehto>
 VAIHTOEHTO: <toinen vastausvaihtoehto>
@@ -286,6 +287,9 @@ export async function kaydytNimiksi(haku, kaydyt) {
   return kaydyt.map((k) => (onTunnus(k) ? wd[k.toUpperCase()]?.fi ?? wd[k.toUpperCase()]?.nimi ?? null : k)).filter(Boolean);
 }
 
+/** Kameran kulman luokka (Linssiseppä, juna 145): matala ja viisto katu/kanava/aukio, korkea ja jyrkkä linnoitus/puisto. */
+export const OPAS_LUOKAT = ['katu', 'kanava', 'aukio', 'rakennus', 'torni', 'kirkko', 'linnoitus', 'puisto', 'vesi', 'silta', 'muu'];
+
 function kentta(teksti, nimi) {
   const m = new RegExp(`^\\s*${nimi}\\s*:\\s*(.+)$`, 'im').exec(String(teksti ?? ''));
   return m ? m[1].trim() : null;
@@ -307,6 +311,7 @@ export function jasennaOpas(teksti, varaNimi = null) {
   const lat = luku('LAT'), lon = luku('LON');
   const koko = Number.parseInt(kentta(teksti, 'KOKO') ?? '', 10);
   const korkeus = Number.parseInt(kentta(teksti, 'KORKEUS') ?? '', 10);
+  const luokka = OPAS_LUOKAT.find((x) => x === String(kentta(teksti, 'LUOKKA') ?? '').toLowerCase().replace(/[^a-zäö]/g, '')) ?? null;
   return {
     tyyppi: 'pysahdys',
     nimi: siivoa(nimi, 120),
@@ -315,7 +320,8 @@ export function jasennaOpas(teksti, varaNimi = null) {
     lon: Number.isFinite(lon) && Math.abs(lon) <= 180 ? lon : null,
     koko_m: Number.isFinite(koko) ? Math.min(3000, Math.max(20, koko)) : 150,
     ...(Number.isFinite(korkeus) && korkeus > 0 ? { korkeus_m: Math.min(1000, korkeus) } : {}),
-    teksti: siivoa(tekstiOsa.replace(/^\s*KORKEUS\s*:.*$/gim, ''), 900),
+    ...(luokka ? { luokka } : {}),
+    teksti: siivoa(tekstiOsa.replace(/^\s*(KORKEUS|LUOKKA)\s*:.*$/gim, ''), 900),
     vaihtoehdot,
   };
 }
