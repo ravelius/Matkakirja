@@ -51,9 +51,13 @@ namespace Matkakirja.Natiivi
         // Vertailu nostojen ja matkakirjan luentaan. Valinta näkyy ja vaikuttaa vain laitteilla, joilla on Pöllön koodi
         // (omistaja), ja kehitysversioissa; arvioijat ja pelaajat pysyvät xAI:ssa. Worker vaatii kehittäjäkoodin ja pitää
         // päiväkaton (20 000 mrk), jonka täyttyessä luetaan xAI:lla. Pulu pysyy omalla äänellään.
-        public const string MoottoriAvain = "matkakirja-puhe-moottori", ElevenAaniAvain = "matkakirja-puhe-eleven-aani";
+        // KONELUKIJA xAI POIS (omistaja 5.10.2026 klo 13.2x, Päätoimittajan kortti): kaikki lukijat ElevenLabsilla, oletus William
+        // (worker KERTOJA_ELEVEN_AANI, eleven_v4, Sokrateen asetukset). Moottorivalintaa ei enää ole: Moottori on aina Eleven ja
+        // pyyntö kantaa moottorin ja äänen kaikilla laitteilla (worker hyväksyy listan äänet ilman koodia). Äänen avain uusittu
+        // (-2), jotta aiemmat kokeiluvalinnat (esim. Viisas kertoja) eivät ohita uutta oletusta.
+        public const string MoottoriAvain = "matkakirja-puhe-moottori", ElevenAaniAvain = "matkakirja-puhe-eleven-aani-2";
         public const string Eleven = "eleven";
-        public static readonly IReadOnlyList<(string Tunnus, string Nimi)> Moottorit = new[] { ("xai", "xAI"), (Eleven, "ElevenLabs v4 Turbo") };
+        public static readonly IReadOnlyList<(string Tunnus, string Nimi)> Moottorit = new[] { (Eleven, "ElevenLabs v4") };
 
         /// <summary>
         /// ElevenLabsin lukijaäänet (workerin LUKIJA_ELEVEN_AANET-näyttökopio, oletus ensin): omistaja 30.9.2026 klo 23.1x "aina v4
@@ -62,7 +66,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static readonly IReadOnlyList<(string Tunnus, string Nimi)> ElevenAanet = new[]
         {
-            ("Sz0tRTEpybtDJ9ru2kgD", "Viisas kertoja (isoisä)"),
+            ("oae6GCCzwoEbfc5FHdEu", "William, rauhallinen kertoja"), ("Sz0tRTEpybtDJ9ru2kgD", "Viisas kertoja (isoisä)"),
             ("MFZUKuGQUsGJPQjTS4wC", "Lämmin mieskertoja"), ("G17SuINrv2H9FC6nvetn", "Lempeä brittimies"), ("UgBBYS2sOqTuMpoF3BR0", "Rento keskustelija, mies"),
             ("6OzrBCQf8cjERkYgzSg8", "Nuori rento mies"), ("ZthjuvLPty3kTMaNKVKb", "Varma mieskertoja"), ("EkK5I93UQWFDigLMpZcX", "Käheä syvä mies"),
             ("uju3wxzG5OhpWcoi3SMy", "Ilmeikäs mieskertoja"), ("NNl6r8mD7vthiJatiJt1", "Eloisa brittikertoja"), ("NFG5qt843uXKj4pFvR7C", "Syvä rauhallinen mies"),
@@ -83,8 +87,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Tallennettu moottori ("xai" tai "eleven"); ei huomioi oikeutta.</summary>
         public static string Moottori
         {
-            get { try { return UnityEngine.PlayerPrefs.GetString(MoottoriAvain, "xai") == Eleven ? Eleven : "xai"; } catch { return "xai"; } }
-            set { try { UnityEngine.PlayerPrefs.SetString(MoottoriAvain, value == Eleven ? Eleven : "xai"); UnityEngine.PlayerPrefs.Save(); } catch { } }
+            get => Eleven;   // xAI poistettu (omistaja 5.10.2026)
+            set { }
         }
 
         /// <summary>Valittu ElevenLabs-ääni (tuntematon → oletus).</summary>
@@ -100,8 +104,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Lukijaaani.MoottoriLahde: (eleven, ääni) vain sallitulla laitteella, muuten null = xAI.</summary>
-        public static (string Moottori, string Aani)? MoottoriValinta() =>
-            MoottoriSallittu && Moottori == Eleven ? (Eleven, ElevenAani) : ((string, string)?)null;
+        public static (string Moottori, string Aani)? MoottoriValinta() => (Eleven, ElevenAani);
 
         /// <summary>Kehittäjän valitsema xAI-ääni, tai null = workerin oletus (web striimiaani: pöllön ääni).</summary>
         public static string Valittu
