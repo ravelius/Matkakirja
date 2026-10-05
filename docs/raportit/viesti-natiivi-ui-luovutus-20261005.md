@@ -185,3 +185,14 @@ osumatestin → todisteisiin aina simun oikea napautus.
 - Web: #4014 (SIRURIVI IRRALLAAN) mergetty, #4020 (fontit.Moderni) Julkaisijalla.
 - Kesken: Päätoimittajan iPhone (vaaka) ja iPad -kuvat Natiivisepän viimeisestä kokeesta (~21.45 jälkeen) skriptillä
   lokit/natiivi-ui-1035/skriptit/opas-kuvat.sh <UDID> <nimi> <app> vaaka; peitto: ui opasvalikko peitto.
+
+## Tila 5.10. klo 22.5x: juna 144 lähti tunnetulla Amsterdam-vialla, korjaukset junaan 145
+
+- TF 144 = Natiivisepän koe 4 (921a1a80 = 05be475a + b78ac2ae), omistajan VIE tunnetulla vialla: oppaan valikossa
+  ensimmäinen napautus uudelleen rakennettuun ScrollView-listaan (Alankomaat → Amsterdam) katoaa, toinen toimii.
+- Juna 145 -korjaus: natiivi-ui/opas-kevyt-144 74864d87 (vanhat rivit piiloon valikon lapsiksi + uudelleenohjaus
+  sijainnin mukaan + UiKerros.MitatoiKosketusvalimuisti). EI vielä todennettu: käännös omalla vuorolla (~23.2x) ja simu
+  FB234D08: ☰ (374,90) → Vaihda kohde (273,146) → Eurooppa (211,369) → Alankomaat (218,201) → Amsterdam (217,243),
+  loki "opas: kohde Amsterdam"; 5/5 kaupunki, 5/5 maa, ☰ heti valinnan jälkeen.
+- Juna 145 muut: natiivi-ui/opas-tapit b88785a5 (tapit + nimilappu + yllä oleva korjaus), natiivi-ui/puhujakuva-145
+  6f733f2e (Codexin 4 kuvaa; Siirtosepän kappeli-145 0ca128fd kytkee ja tekee videon).
