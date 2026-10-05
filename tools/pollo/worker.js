@@ -23,7 +23,7 @@ import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
   kaupunginAineisto, kuvatPaikalle, wikidataKuva, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
   seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, jarjestaReitti,
-  seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus,
+  seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma,
 } from './opas.js';
 import { OPAS_AINEISTO } from './opas-aineisto.js';
 import {
@@ -2978,6 +2978,11 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
   }
   console.log(`opas: ${tulos.tyyppi} ${tulos.id ?? ''} ${p.kaydyt.length} käyty, ääni ${aani ? 'kyllä' : 'ei'}, kuvia ${tulos.kuvat?.length ?? 0}`);
+  // Siltalauseiden ryhmät (natiivi soittaa esigeneroidun lauseen heti napautuksesta, junat 146–).
+  if (Array.isArray(tulos.vaihtoehdot)) {
+    tulos.vaihtoehtojen_ryhmat = tulos.vaihtoehdot.map((x, i) => (tulos.tyyppi === 'pysahdys' && i === 0 ? 'syventava' : siltaRyhma(x)));
+  }
+  tulos.toiveen_ryhma = p.toive ? siltaRyhma(p.toive) : (seuraava ? 'kierros' : null);
   return vastaa({ ...tulos, aani: aani?.aani ?? null, aani_pcm: aani?.aani_pcm ?? null, aani_taajuus: aani?.aani_taajuus ?? null,
     kesto_s: aani?.kesto_s ?? null }, kors);
 }
