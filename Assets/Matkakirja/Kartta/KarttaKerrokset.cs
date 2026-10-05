@@ -139,6 +139,12 @@ namespace Matkakirja
             VarmistaVarakartta();
         }
 
+        /// <summary>
+        /// Cesiumin omat ruutukrediitit näkyviin (Lontoo-pilotti, Linssiseppä 5.10.2026): ion-datan (Bing Maps Aerial) ehdot
+        /// vaativat Bingin logon ja tekijätiedot ruudulle. Muulloin ne piilotetaan (oma Tekijatiedot-vakio Tietoja-sivulla).
+        /// </summary>
+        public static bool RuutukrediititNakyviin;
+
         System.Collections.IEnumerator PiilotaRuutukrediitit()
         {
             var odota = new WaitForSeconds(1f);
@@ -148,9 +154,10 @@ namespace Matkakirja
                 // latautuessa ja rakentaa sen puun uudelleen krediittien muuttuessa.
                 var cs = CesiumCreditSystem.GetDefaultCreditSystem();
                 var juuri = cs != null ? cs.GetComponent<UnityEngine.UIElements.UIDocument>()?.rootVisualElement : null;
-                if (juuri != null && juuri.style.display != UnityEngine.UIElements.DisplayStyle.None)
-                    juuri.style.display = UnityEngine.UIElements.DisplayStyle.None;
-                yield return odota;
+                var haluttu = RuutukrediititNakyviin ? UnityEngine.UIElements.DisplayStyle.Flex : UnityEngine.UIElements.DisplayStyle.None;
+                if (juuri != null && juuri.style.display != haluttu)
+                    juuri.style.display = haluttu;
+                yield return RuutukrediititNakyviin ? null : odota;
             }
         }
 
