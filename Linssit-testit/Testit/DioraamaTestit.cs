@@ -1187,6 +1187,41 @@ namespace Matkakirja.Linssit.Testit
             }
         }
 
+        /// <summary>Omistajan linnapalaute 5.10.: Pulu ei puhu keskustelun väliin; tauot repliikkien väliin; Pulu vain napautuksesta
+        /// (hahmoon → reaktio, huoneeseen → seuraava taulun kohta); kohtien loputtua napautus kulkee kiertueella kuten ennen.</summary>
+        [Testi] static void PuluVainNapautuksesta()
+        {
+            string json = KeittioFixture.Replace("{\"tee\":\"repliikki\",\"hahmo\":\"kokki\"},",
+                "{\"tee\":\"repliikki\",\"hahmo\":\"kokki\"},{\"tee\":\"reaktio\",\"hahmo\":\"kokki\"},{\"tee\":\"kohta\",\"n\":1},{\"tee\":\"repliikki\",\"hahmo\":\"kokki\"},");
+            var rak = DioraamaData.Lue(json);
+            var tila = rak.Tila("keittio");
+            Oleta.Sama("pulu-lenna,taulu,kohta,repliikki,reaktio,kohta,repliikki,odota", string.Join(",", tila.Kasikirjoitus.ConvertAll(a => a.Tee)));
+            var k = PoikkileikkausLinssi.KeskusteluIlmanPulua(tila);
+            Oleta.Sama("pulu-lenna,taulu,odota,repliikki,odota,repliikki,odota", string.Join(",", k.ConvertAll(a => a.Tee)));
+            Lahella(PoikkileikkausLinssi.VuoroTauko, k[2].S, "tauko ennen ensimmäistä repliikkiä");
+            Lahella(PoikkileikkausLinssi.KohtausTauko, k[4].S, "kohtaustauko entisen Pulu-kohdan paikalla");
+
+            var l = new PoikkileikkausLinssi { Kuvasuhde = 1.6, PuluNapautuksesta = true };
+            l.Avaa(rak, 0, false);
+            l.Kohdista("keittio", 10);
+            string Puhujat(double a, double b) { var r = new List<string>(); string ed = null; for (double t = a; t < b; t += 0.05) { var n = l.NakymaHetkella(t, false); string nyt = n.Puhuja != null ? n.Puhuja + ":" + n.Repliikki : null; if (nyt != null && nyt != ed) r.Add(nyt); ed = nyt; } return string.Join(" | ", r); }
+            Oleta.Sama("kokki:Keitto kiehuu. | kokki:Keitto kiehuu.", Puhujat(10, 40));
+            // Napautus hahmoon ensimmäisen repliikin aikana → Pulun reaktio sen perään, keskustelu jatkuu.
+            double eka = -1;
+            for (double t = 10; t < 40 && eka < 0; t += 0.05) if (l.NakymaHetkella(t, false).Puhuja == "kokki") eka = t;
+            Oleta.Tosi(eka > 0, "ensimmäinen repliikki löytyy");
+            l.Napauta(eka + 0.3, "kokki");
+            Oleta.Sama("kokki:Keitto kiehuu. | pulu:Kokki hätkähtää. | kokki:Keitto kiehuu.", Puhujat(10, 60));
+            // Keskustelun jälkeen napautus huoneeseen → kohdat järjestyksessä, sitten kiertue (ei enää kohtia).
+            Oleta.Sama(2, l.KohtiaJaljella(60));
+            l.Napauta(60); Oleta.Sama("pulu", l.NakymaHetkella(60.2, false).Puhuja); Oleta.Sama("Kohta A", l.NakymaHetkella(60.2, false).Repliikki);
+            l.Napauta(70); Oleta.Sama("Kohta B pidempi teksti", l.NakymaHetkella(70.2, false).Repliikki);
+            Oleta.Sama(0, l.KohtiaJaljella(80));
+            Oleta.Tosi(l.NakymaHetkella(80, false).KasikirjoitusLopussa, "lopussa");
+            l.Napauta(80);
+            Oleta.Tosi(l.NakymaHetkella(85, false).KohdeTila != "keittio", "kohtien jälkeen napautus vie kiertueella eteenpäin");
+        }
+
         /// <summary>Cinemachine (5.10.2026): LepoHetkella kertoo lennon määränpään. Levossa (Jaljella 0) Ytimen kamera on täsmälleen
         /// perusasento, ja lennossa kamera saavuttaa perusasennon jäljellä olevan ajan päästä (ei napautuksia välissä).</summary>
         [Testi] static void LepoHetkellaVastaaNakymaa()

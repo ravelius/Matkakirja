@@ -64,6 +64,8 @@ namespace Matkakirja.Natiivi
         DioraamaHahmot hahmot3D;
         DioraamaSyote syote;
         readonly DioraamaKameraJousi jousi = new DioraamaKameraJousi();
+        /// <summary>"poikki pulu napautus 0|1": Pulu vain napautuksesta (oletus päällä elävässä linnassa) vs. vanha käsikirjoitus.</summary>
+        public static bool PuluNapautuksesta = true;
         /// <summary>Cinemachine-kamerat (suunnitelma kohta 1); luodaan näyttämön kanssa, tuhoutuu sen mukana.</summary>
         DioraamaCinemachine cm;
         // TIMELINE (linna-unity-suunnitelma-20261005.md kohta 2b): kertojan kierroksen aikana PlayableDirector on Ytimen kello.
@@ -242,6 +244,8 @@ namespace Matkakirja.Natiivi
             if (paluuPyydetty) { paluuPyydetty = false; Yleisnakymaan(t); }
             if (pyydettyTila != null) { string pt = pyydettyTila; pyydettyTila = null; if (rakennus?.Tila(pt) != null) Kohdista(pt, t); }
             // Aloitus, uudelleenrakennus (napautus, uusinta, asento) ja pysäytys (huone, kierroksen loppu) Ytimen aikataulusta.
+            // Omistajan linnapalaute 5.10. klo 12.4x: Pulu ei puhu keskustelujen väliin, vaan vain napautuksesta (elävä linna).
+            linssi.PuluNapautuksesta = PuluNapautuksesta && rakennus.Saapuminen != null;
             timeline.Paivita(linssi, rakennus, t, pysty, pysaytettyT.HasValue || SaapumisOdotus);
             var nakyma = linssi.NakymaHetkella(t, pysty);
             timeline.Tarkista(nakyma.KertojaJakso, t);
@@ -1016,6 +1020,15 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: pakota-virhe " + (DioraamaLevyvalimuisti.PakotaVirheJalkeen >= 0 ? $"{DioraamaLevyvalimuisti.PakotaVirheJalkeen} tiedoston jälkeen" : "pois"));
                 return;
             }
+            if (mita == "pulu" && arvo == "napautus")
+            {
+                if (osat.Length > 3) PuluNapautuksesta = osat[3] != "0";
+                if (linssi != null) linssi.PuluNapautuksesta = PuluNapautuksesta && linssi.Rakennus?.Saapuminen != null;
+                o.Kirjaa($"poikki: pulu napautus {(PuluNapautuksesta ? "päällä" : "pois")} (linssi {(linssi?.PuluNapautuksesta == true ? "päällä" : "pois")})");
+                return;
+            }
+            // "poikki pulu hahmo <id>": testinapautus hahmoon (Pulun reaktio) samaan tapaan kuin "poikki napauta".
+            if (mita == "pulu" && arvo == "hahmo" && osat.Length > 3) { linssi.Napauta(pysaytettyT ?? YdinAika, osat[3]); o.Kirjaa("poikki: pulu hahmo " + osat[3]); return; }
             if (mita == "cinemachine" || mita == "kohina" || mita == "cm")
             {
                 if (mita == "cinemachine") DioraamaCinemachine.Paalla = arvo != "0";
