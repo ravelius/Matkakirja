@@ -619,3 +619,31 @@ export async function lisaKuvat(haku, id, maara, olemassa = []) {
     return [];
   }
 }
+
+/*
+ * LISÄKUVIEN VÄLIMUISTI (Päätoimittaja 6.10.: lisäkuvat eivät saa pidentää "teksti heti" -vastausta): Q-tunnuksen koko lista
+ * (OPAS_KUVIA_ENINTAAN) KV:hen 7 vrk:ksi; pelin omat suodatetaan pois vasta yhdistettäessä. Tyhjäkin tulos talteen (1 vrk).
+ */
+export async function lisaKuvatValimuistilla(haku, kv, id) {
+  if (!/^Q\d+$/.test(id ?? '')) return [];
+  const avain = `opas:kuvat:v1:${id}`;
+  const talletettu = kv ? await kv.get(avain).catch(() => null) : null;
+  if (talletettu) { try { return JSON.parse(talletettu); } catch { /* uusi haku */ } }
+  const kuvat = await lisaKuvat(haku, id, OPAS_KUVIA_ENINTAAN);
+  if (kv) await kv.put(avain, JSON.stringify(kuvat), { expirationTtl: kuvat.length ? 7 * 86400 : 86400 }).catch(() => {});
+  return kuvat;
+}
+
+/** Pelin omat ensin, sitten lisät ilman kaksoiskappaleita (tiedostonimi), yhteensä enintään OPAS_KUVIA_ENINTAAN. */
+export function yhdistaKuvat(omat, lisat) {
+  const nahty = new Set(omat.map((k) => tiedostonimi(k.lahde)).filter(Boolean));
+  const tulos = [...omat];
+  for (const k of lisat ?? []) {
+    const n = tiedostonimi(k.lahde);
+    if (tulos.length >= OPAS_KUVIA_ENINTAAN) break;
+    if (n && nahty.has(n)) continue;
+    if (n) nahty.add(n);
+    tulos.push(k);
+  }
+  return tulos;
+}

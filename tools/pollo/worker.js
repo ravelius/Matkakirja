@@ -21,7 +21,7 @@
 import { kirjaaKaynti, lueKaynnit } from './kaynnit.js';
 import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
-  kaupunginAineisto, kuvatPaikalle, wikidataKuva, lisaKuvat, OPAS_KUVIA_ENINTAAN, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
+  kaupunginAineisto, kuvatPaikalle, wikidataKuva, lisaKuvatValimuistilla, yhdistaKuvat, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
   seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, jarjestaReitti,
   seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma,
 } from './opas.js';
@@ -2650,6 +2650,10 @@ async function hoidaSahke(pyynto, env, kors, runko) {
  * jotta natiivi voi esihakea seuraavan pysähdyksen kappaleen aikana. Testiotsake → aani null (ei ElevenLabs-kulutusta).
  */
 const OPAS_MALLI_OLETUS = 'claude-sonnet-5-5';
+/** Lisäkuvien aikaraja koordinaateista laskien: haku kulkee korostuksen ja äänen rinnalla eikä saa pidentää vastausta. */
+const OPAS_KUVA_AIKARAJA_MS = 900;
+/** Kuvia odotetaan muun työn (ääni, korostus) valmistuttua enintään näin kauan. */
+const OPAS_KUVA_ARMO_MS = 150;
 
 async function sha256Heksa(puskuri) {
   const h = await crypto.subtle.digest('SHA-256', puskuri);
@@ -2930,6 +2934,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   let tulos = null;
   let tuloksenPaikka = null;
   let korostusLupaus = null;
+  let kuvaLupaus = null;
+  let kuvaAlku = 0;
   try {
     for (let yritys = 0; yritys < 2 && !tulos; yritys += 1) {
       const vastaus = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti, seuraava?.paikka.nimi ?? null);
@@ -2946,6 +2952,9 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
         ...(seuraava ? { kierros: { numero: seuraava.numero, maara: seuraava.maara } } : {}),
         kuvat: kuvatPaikalle(aineisto, [nimi, vastaus.nimi, seuraava?.paikka.wikipedia ?? vastaus.wikipedia, paikka.wiki?.otsikko].filter(Boolean)) };
       // Reittipisteiden haku (kadut ja kanavat ~1–2 s) rinnakkain äänen ja kuvan kanssa, ei vastauksen kriittisellä polulla.
+      // Lisäkuvat alkavat heti koordinaattien jälkeen (välimuisti Q-tunnuksella), rinnakkain korostuksen kanssa.
+      kuvaAlku = Date.now();
+      kuvaLupaus = lisaKuvatValimuistilla(fetch, kv, paikka.id).catch(() => []);
       korostusLupaus = paikanKorostus(fetch, { lat: paikka.lat, lon: paikka.lon, koko_m: tulos.koko_m, luokka: vastaus.luokka,
         reitti: vastaus.reitti ?? [] }, sijainti);
     }
@@ -2986,14 +2995,25 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   }
   if (!tulos) return vastaa({ virhe: 'palvelin', viesti: 'Opas ei saanut seuraavaa paikkaa kiinni. Yritä uudelleen.' }, { status: 502, ...kors });
   // Ääni ja kuvan varahaku (Wikidatan P18) rinnakkain; pelin oma kuva voittaa.
-  const [aani, p18, korostus] = await Promise.all([
+  const [aani, korostus] = await Promise.all([
     oppaanAani(pyynto, env, ctx, tulos.teksti, kehittaja),
-    // Lisäkuvat (P18 + Commons-luokka) pelin omien perään, yhteensä enintään OPAS_KUVIA_ENINTAAN (omistaja 23.5x).
-    tulos.tyyppi === 'pysahdys' ? lisaKuvat(fetch, tulos.id, OPAS_KUVIA_ENINTAAN - tulos.kuvat.length, tulos.kuvat) : [],
     tulos.tyyppi === 'pysahdys' ? korostusLupaus : null,
   ]);
+  // Lisäkuvat (P18 + Commons-luokka) pelin omien perään (omistaja 23.5x). Muun työn jälkeen odotetaan enintään
+  // OPAS_KUVA_ARMO_MS (ja kaikkiaan OPAS_KUVA_AIKARAJA_MS haun alusta): mitä ei ehdi, jää pois tästä vastauksesta ja
+  // valmistuu taustalla välimuistiin seuraavaa kertaa varten — teksti ei hidastu (Päätoimittaja 6.10., mitattu PR:ään).
+  const p18 = tulos.tyyppi === 'pysahdys' && kuvaLupaus
+    ? await Promise.race([kuvaLupaus, new Promise((r) => setTimeout(() => r(null),
+      Math.max(0, Math.min(OPAS_KUVA_ARMO_MS, OPAS_KUVA_AIKARAJA_MS - (Date.now() - kuvaAlku)))))])
+    : [];
   if (korostus) tulos.korostus = korostus;
-  if (tulos.tyyppi === 'pysahdys') tulos.kuvat = [...tulos.kuvat, ...p18];
+  if (tulos.tyyppi === 'pysahdys') {
+    if (p18 === null) {
+      console.log('opas: lisäkuvat eivät ehtineet aikarajassa → taustalle välimuistiin');
+      if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kuvaLupaus);
+    }
+    tulos.kuvat = yhdistaKuvat(tulos.kuvat, p18 ?? []);
+  }
   if (isoisaAvain && kv && !isoisaKaytetty && tulos.tyyppi === 'pysahdys' && /isoisä/i.test(tulos.teksti)) {
     const kirjoitus = kv.put(isoisaAvain, '1', { expirationTtl: 60 * 60 * 48 }).catch(() => {});
     if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;

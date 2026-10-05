@@ -280,7 +280,7 @@ test('worker: kuvat pelin aineistosta tai Wikidatan P18 vapaalla lisenssillä, i
     }
   };
   const a = await aja('NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nTEKSTI: Tivoli. Isoisäsi kävi täällä.\nVAIHTOEHTO: A\nVAIHTOEHTO: B');
-  assert.deepEqual(a.data.kuvat.map((x) => x.url), ['https://media/tivoli.jpg'], 'pelin oma kuva, avain pois');
+  assert.deepEqual(a.data.kuvat.map((x) => x.url), ['https://media/tivoli.jpg', 'https://upload/nyhavn-800.jpg'], 'pelin oma kuva ensin, avain pois; P18 perään (lisäkuvat)');
   assert.equal(a.data.kuvat[0].avain, undefined);
   assert.match(a.viesti, /Isoisän päiväkirjamerkintä/);
   const b = await aja('NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nTEKSTI: Tivoli taas.\nVAIHTOEHTO: A\nVAIHTOEHTO: B');
