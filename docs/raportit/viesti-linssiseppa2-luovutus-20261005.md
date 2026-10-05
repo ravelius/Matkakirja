@@ -82,3 +82,12 @@ Kuvat: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-maailma-10c31692/kuvat. 
   vaihda AstronauttiKerros.S2Juuri.
 - SEURAAVA ERÄ (Päätoimittaja hyväksyi): GIBS 250 m -pilvimaski ISS-kuvaan (VIIRS paikkaa MODIS-raot, pinta S2, attribuutio
   "NASA EOSDIS GIBS"), kuvapari pilvinen/pilvetön + Cupola samaan aikaan; tavoite juna 145.
+
+## Päivitys 5.10. klo 17.0x — GIBS-pilvet
+- OMISTAJAN PÄÄTÖS 15.5x: "aina selkein 7 päivästä" (ISS-kuva; Cupola ennallaan).
+- Proto-haara linssiseppa2/gibs-pilvet (worktree wt/proto-linssiseppa2-gibs, iss-ohjaamon 962ff4ee:n päällä): c2927bd8 + 5b1a018a.
+  GibsPilvet.cs (maski, selkein päivä, pysyvä valkoinen pois, varjo, terävä reuna), KuvanTyosto.PiirraPilvet (kuvauspaikat),
+  IssKameraKuva.HaeGibs, A/B `astro kyyti kuvaa gibs 0|1`, offline-esikatselu GIBS_PPM (Linssit-testit). Testit 656/656.
+- Kuvaparit Päätoimittajalle 17.0x: lokit/linssiseppa2-kuvaparit-20261005/gibs-{helsinki,amazonia}-7032ae79.png. EI mergeä ennen
+  ohjaamon junaa 144; sitten gibs-pilvet rebase/merge iss-ohjaamon junaversion päälle → juna 145.
+- Esiselvitys: lokit/linssiseppa2-gibs-esiselvitys-20261005/YHTEENVETO.md. Ajoskripti scratchpad/aja-gibs2.sh (KAARI2="kuvaa gibs 0").
