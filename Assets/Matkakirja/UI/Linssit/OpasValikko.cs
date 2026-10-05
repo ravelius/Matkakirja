@@ -134,6 +134,8 @@ namespace Matkakirja.Natiivi
             valikko.style.display = DisplayStyle.None;
             Kirjasimet.Aseta(valikko, Kirjasin.Moderni);
             valikko.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
+            valikko.RegisterCallback<PointerDownEvent>(e => Uudelleenohjaa(e, true, e), TrickleDown.TrickleDown);
+            valikko.RegisterCallback<PointerUpEvent>(e => Uudelleenohjaa(e, false, e), TrickleDown.TrickleDown);
             // Juna 144 FAIL (Laitetestaaja 5.10., Amsterdam-rivi ei lauennut joka kerta): UITK:n ScrollView aloitti oman
             // kosketusvierityksensä jo sormen pienestä värinästä ja kaappasi osoittimen, jolloin rivin napautus peruuntui.
             // Oma liitos (kuten nostokortti ja lehti) pysäyttää ScrollViewin kosketusliikkeet; vieritys alkaa vasta 8 pt:n
@@ -417,8 +419,20 @@ namespace Matkakirja.Natiivi
 
         void Rakenna()
         {
+            // Vanhat rivit eivät irtoa heti (juna 144 FAIL, koe 4): UITK voi lähettää seuraavan kosketuksen vielä vanhalle
+            // riville (kosketusvälimuisti). Piilossa valikon sisällä ne pysyvät valikon lapsina, joten Uudelleenohjaa näkee
+            // kosketuksen ja ohjaa sen kosketuskohdan nykyiselle riville. Edellinen sukupolvi poistetaan seuraavassa rakennuksessa.
+            if (vanhat == null)
+            {
+                vanhat = new VisualElement { pickingMode = PickingMode.Ignore };
+                vanhat.style.position = Position.Absolute; vanhat.style.display = DisplayStyle.None;
+            }
+            vanhat.Clear();
+            foreach (var c in valikko.Children().Where(c => c != vanhat).ToList()) vanhat.Add(c);
             valikko.Clear();
+            valikko.Add(vanhat);
             rivit = null;
+            nykyiset.Clear();
             var kaikki = Kaupungit?.Invoke();
             switch (nakyma)
             {
@@ -480,12 +494,39 @@ namespace Matkakirja.Natiivi
             if (p != null)
                 for (int id = 0; id < PointerId.maxPointers; id++)
                     if (p.GetCapturingElement(id) is VisualElement c) c.ReleasePointer(id);
-            valikko.schedule.Execute(() => teko());
+            valikko.schedule.Execute(() =>
+            {
+                teko();
+                // Koe 4 (22.48): kaappauksen vapautus ei riittänyt. UITK:n kosketusvälimuisti ("element under pointer") osoitti
+                // ScrollViewn mukana poistettuun riviin, ja seuraava napautus meni sille. Mitätöinti uudelleenrakennuksen jälkeen.
+                UiKerros.Hae()?.MitatoiKosketusvalimuisti();
+            });
+        }
+
+        VisualElement vanhat;
+        /// <summary>Nykyisen näkymän rivit ja niiden teot (Uudelleenohjaa).</summary>
+        readonly List<(VisualElement Rivi, Action Teko)> nykyiset = new List<(VisualElement, Action)>();
+        int painettuVanhalle = -1;
+
+        /// <summary>
+        /// Kosketus, joka osuu piilotetulle vanhalle riville (UITK:n vanhentunut kohde), ohjataan kosketuskohdan nykyiselle
+        /// riville: painallus muistetaan ja irrotus samalla rivillä laukaisee sen teon (kuten klikki).
+        /// </summary>
+        void Uudelleenohjaa(IPointerEvent e, bool alas, EventBase eb)
+        {
+            if (vanhat == null || !(eb.target is VisualElement t) || !vanhat.Contains(t)) return;
+            eb.StopPropagation();
+            int osuma = nykyiset.FindIndex(r => r.Rivi.panel != null && r.Rivi.worldBound.Contains(e.position));
+            if (alas) { painettuVanhalle = osuma; Debug.Log($"MATKAKIRJA opas: kosketus vanhalle riville → nykyinen rivi {osuma}"); return; }
+            if (osuma >= 0 && osuma == painettuVanhalle) Rivilta(nykyiset[osuma].Teko);
+            painettuVanhalle = -1;
         }
 
         Button Komento(string teksti, Action teko, VisualElement isa = null)
         {
-            var b = Rakenne.Nappi(teksti, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => Rivilta(() => { Sulje(); teko(); }), isa ?? valikko);
+            Action t = () => { Sulje(); teko(); };
+            var b = Rakenne.Nappi(teksti, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => Rivilta(t), isa ?? valikko);
+            nykyiset.Add((b, t));
             Kirjasimet.Aseta(b, Kirjasin.Moderni);
             b.tooltip = teksti;
             return b;
@@ -494,6 +535,7 @@ namespace Matkakirja.Natiivi
         void Alanakyma(string teksti, Action avaa, VisualElement isa = null, bool toiminto = false)
         {
             var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta " + (toiminto ? "mk-linssivalikko__komento" : "mk-linssivalikko__kytkin"), () => Rivilta(avaa), isa ?? valikko);
+            nykyiset.Add((b, avaa));
             if (toiminto) { b.style.flexDirection = FlexDirection.Row; b.style.alignItems = Align.Center; b.style.justifyContent = Justify.SpaceBetween; }
             Kirjasimet.Aseta(Rakenne.Teksti(teksti, "mk-linssivalikko__nimi", b), Kirjasin.Moderni);
             Kirjasimet.Aseta(Rakenne.Teksti("›", "mk-linssivalikko__tila", b), Kirjasin.ModerniLihava);
@@ -502,7 +544,9 @@ namespace Matkakirja.Natiivi
 
         void Takaisin(string otsikko, Nakyma minne)
         {
-            var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__kytkin", () => Rivilta(() => Avaa(minne)), valikko);
+            Action t = () => Avaa(minne);
+            var b = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__kytkin", () => Rivilta(t), valikko);
+            nykyiset.Add((b, t));
             Kirjasimet.Aseta(Rakenne.Teksti("‹ " + otsikko, "mk-linssivalikko__nimi", b), Kirjasin.ModerniLihava);
             b.tooltip = "Takaisin";
             Viiva();
