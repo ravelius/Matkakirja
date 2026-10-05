@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "fec08857c345e91b",
-  "kansio": "dioraama/olavinlinna/blender/fec08857c345e91b/",
+  "hash": "3d59b30a48c612f2",
+  "kansio": "dioraama/olavinlinna/blender/3d59b30a48c612f2/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500.glb",
@@ -215,33 +215,33 @@
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-2k-4x4.astcm",
-      "sha256": "2a5773ca406d5a2a55c3ff5a2ea9b70857212611eae7083a85b656fc4eb35785",
+      "sha256": "c6fef6de421d8d3f046102d1bfed497f152e975fc3be9b2139895533475ffd9c",
       "tavuja": 5592448
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-2k.jpg",
-      "sha256": "a5273e03fd374faf3067f9d94759d727faf4b7561a48eaf673c61405fa7723a8",
-      "tavuja": 1405046
+      "sha256": "a2e7618dcc712ecaefa88f4bc72b7b1ce670ec50617454e05501fa4421b91a26",
+      "tavuja": 1439892
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k-4x4.astcm",
-      "sha256": "904d3ad30d2cc5ff31195e87d9976fddb845d36023072905e1c40d1bf6f8dc29",
+      "sha256": "ae7489352cfdae2b1361b455e2970272b0c982a64cc3c2dfa92fe4d140f0a5d8",
       "tavuja": 22369664
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-4k.jpg",
-      "sha256": "fc5622b49e69c0a8fef293d2289feb45f12560a2172182100c91ecd57c8b3cb0",
-      "tavuja": 5019541
+      "sha256": "1b121ed6942291872722b7c359fa799a4582eb7debd347118484c79b2d5d5e9c",
+      "tavuja": 5187911
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-8k-4x4.astcm",
-      "sha256": "a126e4633f6548ba9923c71a433977a04419a5f4c6b936da022190a3b216e374",
+      "sha256": "07c9c1f76877ddb676d1012f43fb6553a7480dcd557b9e0ec4660ace72f8d48b",
       "tavuja": 39816848
     },
     {
       "polku": "ulkokuori/ulkokuori-hamara-8k.jpg",
-      "sha256": "ff36522f4c820dae5926092077fa1c260236c6b96234aed0c257b05c90400721",
-      "tavuja": 15726826
+      "sha256": "414ebbc4e08535dc8265a52d8eb2f2c8966dd5df6488bd251da96e9e5833f10e",
+      "tavuja": 17229783
     },
     {
       "polku": "ulkokuori/ulkokuori_huippu.glb",
