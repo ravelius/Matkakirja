@@ -2878,7 +2878,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
         maxTokens: 700, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
       })).teksti);
       return (await Promise.all(suunnitelma.map(async (x) => {
-        const paikka = await paikanKoordinaatit(fetch, x, sijainti);
+        const paikka = await paikanKoordinaatit(fetch, x, sijainti, { env, kaupunki: p.kaupunki });
         return paikka ? { nimi: paikanNimi(paikka, x.nimi), wikipedia: x.wikipedia, koko_m: x.koko_m, ...paikka } : null;
       }))).filter(Boolean).filter((x, i, kaikki) => kaikki.findIndex((y) => y.id === x.id) === i);
     } catch (virhe) {
@@ -2915,7 +2915,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       const vastaus = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti, seuraava?.paikka.nimi ?? null);
       if (vastaus?.tyyppi !== 'pysahdys') { tulos = vastaus; continue; }
       // Kierroksen paikka on jo tarkistettu suunnitteluvaiheessa; muuten koordinaatit nimellä.
-      const paikka = seuraava ? seuraava.paikka : await paikanKoordinaatit(fetch, vastaus, sijainti);
+      const paikka = seuraava ? seuraava.paikka : await paikanKoordinaatit(fetch, vastaus, sijainti, { env, kaupunki: p.kaupunki });
       if (!paikka) { console.log(`opas: paikkaa ei löytynyt (${vastaus.wikipedia ?? vastaus.nimi})`); continue; }
       const nimi = seuraava ? seuraava.paikka.nimi : paikanNimi(paikka, vastaus.nimi);
       tuloksenPaikka = { nimi, wikipedia: vastaus.wikipedia, koko_m: vastaus.koko_m, ...paikka };
@@ -2927,7 +2927,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
         kuvat: kuvatPaikalle(aineisto, [nimi, vastaus.nimi, seuraava?.paikka.wikipedia ?? vastaus.wikipedia, paikka.wiki?.otsikko].filter(Boolean)) };
       // Reittipisteiden haku (kadut ja kanavat ~1–2 s) rinnakkain äänen ja kuvan kanssa, ei vastauksen kriittisellä polulla.
       korostusLupaus = paikanKorostus(fetch, { lat: paikka.lat, lon: paikka.lon, koko_m: tulos.koko_m, luokka: vastaus.luokka,
-        reitti: vastaus.reitti ?? [] }, sijainti);
+        reitti: vastaus.reitti ?? [], nimi: seuraava?.paikka.wikipedia ?? vastaus.wikipedia ?? nimi, nimet: [vastaus.nimi, nimi], id: paikka.id },
+        sijainti, { env, kaupunki: p.kaupunki });
     }
   } catch (virhe) {
     console.log(`opas: mallikutsu epäonnistui (${virhe?.status ?? 'verkko'})`);

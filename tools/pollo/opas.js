@@ -17,6 +17,8 @@
  * Worker (worker.js hoidaOpas) hoitaa rajat ja mallikutsun; ääni kulkee puhereitillä persoonalla 'opas'.
  */
 
+import { nominatimHaku, geometriaPisteiksi } from './nominatim.js';
+
 export const OPAS_KAYDYT = 40;
 export const OPAS_TOIVE_KATTO = 300;
 /** Paikan pitää olla näin lähellä kaupunkia (tai nykyistä paikkaa); kauempaa löytynyt on väärä samanniminen artikkeli. */
@@ -231,7 +233,7 @@ async function wikipediaKysely(haku, kysely) {
  * (kaupunki tai nykyinen paikka); kauempana on väärä samanniminen kohde. Jos mitään ei löydy, mallin oma koordinaatti
  * kelpaa saman ehdon sisällä. Palauttaa { lat, lon, id, alarivi, wiki, lahde } tai null (paikka hylätään).
  */
-export async function paikanKoordinaatit(haku, p, viite) {
+export async function paikanKoordinaatit(haku, p, viite, osm = null) {
   const lahella = (k) => Number.isFinite(k?.lat) && Number.isFinite(k?.lon) && (!viite || etaisyys(viite, k) <= OPAS_KAUPUNGIN_SADE_M);
   const kokeillut = new Set();
   const vaiheet = [
@@ -253,6 +255,11 @@ export async function paikanKoordinaatit(haku, p, viite) {
       // Alarivi näkyy ruudulla: vain suomenkielinen Wikidata-kuvaus (Natiivi-UI 5.10.), muuten mallin KUVAUS.
       return { lat: k.lat, lon: k.lon, id: e.id ?? `en:${e.otsikko}`, alarivi: siivoa(wd?.kuvausFi, 80) || null, wiki, lahde: 'wikipedia' };
     }
+  }
+  // Nominatim (OSM, juna 146): koordinaatti nimellä, kun Wikipedia/Wikidata ei anna sitä (ennen mallin arviota).
+  if (osm?.env && p.nimi) {
+    const n = await nominatimHaku(haku, osm.env, [p.wikipedia ?? p.nimi, osm.kaupunki].filter(Boolean).join(', '));
+    if (n && lahella(n)) return { lat: n.lat, lon: n.lon, id: `osm:${n.osm || p.nimi}`, alarivi: null, wiki: null, lahde: 'osm' };
   }
   if (lahella(p)) return { lat: p.lat, lon: p.lon, id: `en:${p.wikipedia ?? p.nimi}`, alarivi: null, wiki: null, lahde: 'malli' };
   return null;
@@ -502,9 +509,35 @@ const ALUELUOKAT = new Set(['aukio', 'puisto', 'linnoitus']);
 const REITTILUOKAT = new Set(['katu', 'kanava', 'vesi']);
 const pyorista = (x) => Math.round(x * 1e6) / 1e6;
 
-export async function paikanKorostus(haku, { lat, lon, koko_m: koko = 150, luokka = null, reitti = [] }, viite) {
+/** Wikidatan P402 (OpenStreetMap-relaation tunnus) → 'R<id>' tai null. */
+async function osmRelaatio(haku, id) {
+  if (!/^Q\d+$/.test(id ?? '')) return null;
+  try {
+    const d = await haeJson(haku, `https://www.wikidata.org/w/api.php?action=wbgetclaims&format=json&property=P402&entity=${id}`);
+    const r = d?.claims?.P402?.[0]?.mainsnak?.datavalue?.value;
+    return /^\d+$/.test(r ?? '') ? `R${r}` : null;
+  } catch {
+    return null;
+  }
+}
+
+export async function paikanKorostus(haku, { lat, lon, koko_m: koko = 150, luokka = null, reitti = [], nimi = null, nimet = [], id = null }, viite, osm = null) {
   // Rengas maahan ulkoreunan ulkopuolelle, ei katolle (Siirtoseppä 5.10.): puolikas koko × 1,15 + 10 m.
   const sade_m = Math.max(25, Math.round((koko / 2) * 1.15 + 10));
+  // Kadun/kanavan todellinen muoto OSM:stä (Nominatim polygon_geojson, juna 146): ketjutettu ja harvennettu ≤ 30 pistettä.
+  // Hyväksytään, jos muodon keskikohta on lähellä paikkaa (väärä samanniminen katu toisessa kaupunginosassa hylätään).
+  // Enintään kaksi hakua: Wikipedia-otsikko ja mallin nimi (OSM:n nimi on usein paikallinen: Christianshavns Kanal).
+  // Ensin Wikidatan P402-relaatio tunnuksella (tarkka, ei nimen kieliongelmaa), sitten enintään kaksi nimeä.
+  const relaatio = REITTILUOKAT.has(luokka) && osm?.env ? await osmRelaatio(haku, id) : null;
+  const hakunimet = [...new Set([nimi, ...nimet].filter(Boolean))].slice(0, relaatio ? 1 : 2);
+  const haut = [...(relaatio ? [{ osmTunnus: relaatio }] : []), ...hakunimet.map((n0) => ({ kysely: [n0, osm?.kaupunki].filter(Boolean).join(', ') }))];
+  for (const h of REITTILUOKAT.has(luokka) && osm?.env ? haut : []) {
+    const n = await nominatimHaku(haku, osm.env, h.kysely ?? '', { geometria: true, osmTunnus: h.osmTunnus ?? null });
+    const muoto = n?.geometria ? geometriaPisteiksi(n.geometria) : null;
+    if (muoto && etaisyys({ lat, lon }, { lat: muoto[Math.floor(muoto.length / 2)][0], lon: muoto[Math.floor(muoto.length / 2)][1] }) <= Math.max(800, koko)) {
+      return { tyyppi: 'reitti', pisteet: muoto };
+    }
+  }
   if (REITTILUOKAT.has(luokka) && reitti.length >= 2) {
     const pisteet = (await Promise.all(reitti.map((nimi) => paikanKoordinaatit(haku, { nimi, wikipedia: nimi }, viite))))
       // Sivupisteet pois: reittipiste saa olla enintään 0,8 × koko (väh. 500 m) paikan keskipisteestä (koeajo:
