@@ -70,6 +70,9 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   → b274b20c (MATKAKIRJA_KIRJASTOT=…/_lahteet/unity-paketit-siirtoseppa/kirjastot pakollinen Cinemachinen takia).
   Stillit latauspalkki/latauspalkki-arkki.jpg lähetetty Päätoimittajalle 13.4x (odottaa omistajaa). Löydös Siirtosepälle:
   LatausOsuus 99 % jo 13 s, avaus 27,6 s. Kytkentärivin lisää Siirtoseppä omaan haaraansa.
+  Päätoimittaja 13.5x: ulkoasu hyvä, stillit omistajalla; 99 %-pysähdys Siirtosepälle. Tyylikirja: web-PR #3998
+  (Julkaisija mergeää vihreänä), natiivin kopio latauspalkki 62bafb4a (lähde f3ec57932a52). Merge-pyyntö Natiivisepälle
+  vasta, kun omistaja hyväksyy JA Siirtosepän ajoituskorjaus on mukana.
 
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
