@@ -25,6 +25,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Nykyisen vuoron ilme (vuorot[].ilme) tai null; kasvokuva = henkilö + ilme (Natiivi-UI:n pohja,
         /// ankkuri DioraamaHahmot3D.PuhujanPaa).</summary>
         public static string PuhuvaIlme { get; private set; }
+        /// <summary>Nykyisen vuoron ele (vuorot[].ele) tai null.</summary>
+        public static string PuhuvaEle { get; private set; }
+        /// <summary>Puhuja EnnakkoS:n päästä (kamera siirtyy puhujaan hieman ennen vuoron vaihtoa), tai null.</summary>
+        public static string TulevaPuhuja { get; private set; }
+        const double EnnakkoS = 0.5;
 
         KuunnelmaToisto toisto;
         string tilaId;
@@ -77,7 +82,7 @@ namespace Matkakirja.Natiivi
             toisto = null;
             tilaId = null;
             SoiNyt = false;
-            PuhuvaHahmo = null; PuhuvaIlme = null; naytettyVuoro = null;
+            PuhuvaHahmo = null; PuhuvaIlme = null; PuhuvaEle = null; TulevaPuhuja = null; naytettyVuoro = null;
             naytetty = -2;
             Nimi = null; Teksti = null;
         }
@@ -93,8 +98,13 @@ namespace Matkakirja.Natiivi
             {
                 var v = toisto.Vuoro(Time.unscaledTimeAsDouble);
                 if (v != naytettyVuoro) { naytettyVuoro = v; NaytaVuoro(r, v); }
+                TulevaPuhuja = toisto.Vuoro(Time.unscaledTimeAsDouble + EnnakkoS)?.Puhuja ?? v?.Puhuja;
             }
-            else PuhuvaHahmo = r != null && !r.Pulu && r.Puhuja != "kertoja" ? r.Puhuja : null;
+            else
+            {
+                TulevaPuhuja = null;
+                PuhuvaHahmo = r != null && !r.Pulu && r.Puhuja != "kertoja" ? r.Puhuja : null;
+            }
         }
 
         void Nayta()
@@ -118,6 +128,7 @@ namespace Matkakirja.Natiivi
         {
             PuhuvaHahmo = v?.Puhuja;
             PuhuvaIlme = v?.Ilme;
+            PuhuvaEle = v?.Ele;
             if (v == null) return;
             Nimi = (PuhujanNimi?.Invoke(v.Puhuja) ?? v.Puhuja ?? "").ToUpperInvariant();
             bool aaneen = !string.IsNullOrEmpty(r.Aani) && DioraamaAanet.Puhutaan(r.Aani);

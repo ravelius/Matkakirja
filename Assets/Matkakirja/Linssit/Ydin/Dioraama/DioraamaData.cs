@@ -445,6 +445,9 @@ namespace Matkakirja.Linssit.Dioraama
     {
         /// <summary>Ilme (vuorot[].ilme, valinnainen): kasvokuvan muunnelma puhujan yläpuolella (omistaja 5.10. klo 14.3x).</summary>
         public string Puhuja, Teksti, Ilme;
+        /// <summary>Ele (vuorot[].ele, valinnainen): puhujan eleleike tämän vuoron ajaksi (henkilön malli3d.leikkeet-avain, esim.
+        /// "osoitus", "olankohautus"); puuttuva leike → puhe (omistaja 5.10. klo 14.4x).</summary>
+        public string Ele;
         public double AlkuS, LoppuS;
     }
 
@@ -1049,7 +1052,7 @@ namespace Matkakirja.Linssit.Dioraama
                 foreach (var vo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(k, "vuorot")))
                 {
                     var v = MiniJson.ObjektiTaiNull(vo);
-                    if (v != null) kr.Vuorot.Add(new KuunnelmaVuoro { Puhuja = MiniJson.Teksti(v, "puhuja"), Teksti = MiniJson.Teksti(v, "teksti"), Ilme = MiniJson.Teksti(v, "ilme"),
+                    if (v != null) kr.Vuorot.Add(new KuunnelmaVuoro { Puhuja = MiniJson.Teksti(v, "puhuja"), Teksti = MiniJson.Teksti(v, "teksti"), Ilme = MiniJson.Teksti(v, "ilme"), Ele = MiniJson.Teksti(v, "ele"),
                         AlkuS = MiniJson.Luku(v, "alku_s") ?? 0, LoppuS = MiniJson.Luku(v, "loppu_s") ?? 0 });
                 }
                 t.Kuunnelma.Add(kr);

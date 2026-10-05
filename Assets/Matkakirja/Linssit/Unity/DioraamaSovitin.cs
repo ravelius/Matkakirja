@@ -341,7 +341,7 @@ namespace Matkakirja.Natiivi
                 jousi.Etene(dt, veto);
                 bool vl = y.VahennettyLiike;
                 System.Func<Asento, Asento> muokkaa = a => syote.Sovita(jousi.Sovella(a, vl));
-                cm.Paivita(nayttamo.Kamera, nakyma.Kamera, linssi.LepoHetkella(t, pysty), muokkaa, vl, dt);
+                cm.Paivita(nayttamo.Kamera, nakyma.Kamera, PuhujaanPain(linssi.LepoHetkella(t, pysty), nakyma.KohdeTila), muokkaa, vl, dt);
                 kameraAsento = muokkaa(nakyma.Kamera); // sumu ja syväterävyys: etäisyys ja aukko Ytimen asennosta
                 jousi.Nollaa(); // kytkettäessä pois jousi alkaa suoraan tavoitteesta
             }
@@ -368,7 +368,7 @@ namespace Matkakirja.Natiivi
                 {
                     var hn = nakyma.Hahmot[hi];
                     if (hn.TilaId == nakyma.KohdeTila && hn.HahmoId == puhuva && hn.Naky)
-                        nakyma.Hahmot[hi] = new HahmoNakyma(hn.TilaId, hn.HahmoId, hn.Naky, "puhe", hn.Ruutu);
+                        nakyma.Hahmot[hi] = new HahmoNakyma(hn.TilaId, hn.HahmoId, hn.Naky, KuunnelmaKaistale.PuhuvaEle ?? "puhe", hn.Ruutu);
                 }
             nayttamo.Hahmot3D?.Paivita(rakennus, nakyma, t);
             // Olavinlinna: kuoren leikkausikkuna kohdistetun tilan kohdalle (kasvaa kaarilennon jälkipuoliskolla).
@@ -599,6 +599,26 @@ namespace Matkakirja.Natiivi
             yield return lataus;
             if (kerta == avauskerta) valmis();
         }
+
+        /// <summary>
+        /// KAMERA PUHUJAAN (omistaja 5.10. klo 14.4x, Päätoimittaja: rauhallisesti, ~1 s pehmeä blendi, kuulija jää kehyksen reunaan,
+        /// ei leikkauksia, hidas kierto jatkuu): huoneen lepoasennon kohde siirtyy PuhujaSiirtyma-osuuden puhujan rintakehää kohti
+        /// ja etäisyys lyhenee hieman. Oma lepokamera per puhuja (avain "tila:x|puhuja"), blendi ~1 s; puhuja tulee
+        /// KuunnelmaKaistale.TulevaPuhujasta 0,5 s ennen vuoron vaihtoa. Muut lepoasennot ennallaan.
+        /// </summary>
+        (string, Asento, double, bool) PuhujaanPain((string Avain, Asento Perus, double Jaljella, bool Saapumassa) lepo, string tila)
+        {
+            string puhuja = KuunnelmaKaistale.TulevaPuhuja;
+            if (puhuja == null || lepo.Jaljella > 0 || tila == null || lepo.Avain != "tila:" + tila || rakennus?.Tila(tila) is not Tila t) return lepo;
+            Hahmo h = null;
+            foreach (var x in t.Hahmot) if (x.Id == puhuja) { h = x; break; }
+            if (h == null || h.Reitti != null) return lepo;
+            var p = lepo.Perus;
+            var rinta = new Matkakirja.Linssit.Dioraama.V3(h.Paikka.X, h.Paikka.Y + 1.3, h.Paikka.Z);
+            var kohde = p.Kohde + (rinta - p.Kohde) * PuhujaSiirtyma;
+            return (lepo.Avain + "|" + puhuja, new Asento(kohde, p.Atsimuutti, p.Korkeus, p.Etaisyys * 0.88, p.Fov, p.Aukko, p.Kierto), 0.2, false);
+        }
+        const double PuhujaSiirtyma = 0.55;
 
         /// <summary>Latauksen vaiheet 0…1 (kuori, tilat, hahmot, ympäristö tasapainoin), LatausOsuuden toinen puolisko.</summary>
         float VaiheOsuus()
