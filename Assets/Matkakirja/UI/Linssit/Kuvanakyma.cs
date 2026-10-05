@@ -91,8 +91,8 @@ namespace Matkakirja.Natiivi
         readonly Button autoNappi;
         /// <summary>
         /// II TAUKO (omistaja 5.10.2026 klo 16.1x: "auton vieressä voisi olla II pause nappi, jolla luennan saisi pysäytettyä"):
-        /// OHJAUSNAPPI AUTOn ja ‹ ›:n ryhmässä; pysäyttää selitteen luennan (Puhe.Tauko, näytteen tarkka jatko) ja AUTOn siirron
-        /// (laskuri seisoo), toinen painallus jatkaa. Uusi kohde ja sulku päättävät tauon.
+        /// OHJAUSNAPPI AUTOn ja ‹ ›:n ryhmässä; pysäyttää striimilukijan luennan (sama tila kuin otsikkorivin kaiuttimessa) ja AUTOn
+        /// etenemisen (lukuaika ja 3 s:n siirto seisovat), toinen painallus jatkaa. Uusi kohde ja sulku päättävät tauon.
         /// </summary>
         readonly Button taukoNappi;
         readonly SvgIkoni taukoIkoni;
@@ -324,7 +324,8 @@ namespace Matkakirja.Natiivi
                 RakennaNauha();
                 if (pulukortti.Auki) pulukortti.Avaa(k);
                 // Pallosta valittu kohde: pallo pysyy sormen jättämässä asennossa, vain merkki siirtyy (omistaja 4.10.2026).
-                if (tauolla) AsetaTauko(false);
+                // Uusi kohde kesken II-tauon: tauolla ollut luenta päättyy (ei jatku vanhaan tekstiin), tauko pois hiljaa.
+                if (tauolla) { lukija.Pysayta(); NollaaTauko(); }
                 if (palloValitsi) { palloValitsi = false; sijaintipallo.MerkitseKohde(k.Lat, k.Lon); }
                 else
                 {
@@ -351,7 +352,7 @@ namespace Matkakirja.Natiivi
             sijaintipallo.Piilota();
             autoOdottaa = false;
             // Sulku päättää tauon jatkamatta luentaa (luenta lopetetaan alempana).
-            if (tauolla) { tauolla = false; if (taukoIkoni != null) taukoIkoni.Polku = Ikonit.Tauko; taukoNappi.tooltip = "Tauko"; taukoNappi.EnableInClassList("mk-valittu", false); }
+            if (tauolla) NollaaTauko();
             LopetaSiirto();
             NaytaAutoNapit(true);   // seuraava avaus alkaa napit näkyvissä
             autoPiilotus?.Pause();
@@ -688,27 +689,40 @@ namespace Matkakirja.Natiivi
             }).Every(0);
         }
 
-        /// <summary>II-tauko päälle tai pois (luenta ja AUTOn siirto); pois → jatkuu samasta kohdasta.</summary>
+        /// <summary>
+        /// II-tauko päälle tai pois: striimilukijan luenta tauolle samalla kaiuttimen tilalla (KortinLukija.Paina = Puhe.Tauko/
+        /// Jatka, VU-vilkku), AUTOn lukuaika-ajastin ja 3 s:n siirtolaskuri seisovat; pois → kaikki jatkuvat samasta kohdasta.
+        /// </summary>
         void AsetaTauko(bool paalle)
         {
             if (paalle == tauolla) return;
             tauolla = paalle;
-            var puhe = Puhe.Instanssi;
+            bool luki = lukija.Lukee;
+            if (luki && (Puhe.Instanssi?.Tauolla ?? false) != paalle) lukija.Paina();
             if (paalle)
             {
                 taukoAlku = Time.unscaledTime;
-                if (LuentaSoi) puhe?.Tauko();
+                lukuaikaAjo?.Pause();
             }
             else
             {
                 autoAlku += Time.unscaledTime - taukoAlku;   // AUTOn laskuri jatkaa siitä, mihin jäi
-                if (puhe != null && puhe.Tauolla && LuentaSoi) puhe.Jatka();
+                lukuaikaAjo?.Resume();
                 if (autoAjo != null) Ruudunpaivitys.Herata(AutoSiirtoS + 0.2f);
             }
             if (taukoIkoni != null) taukoIkoni.Polku = paalle ? Ikonit.Toista : Ikonit.Tauko;
             taukoNappi.tooltip = paalle ? "Jatka" : "Tauko";
             taukoNappi.EnableInClassList("mk-valittu", paalle);
-            Debug.Log("MATKAKIRJA kuvaselite: II " + (paalle ? "tauko" : "jatkuu") + (LuentaSoi ? " (luenta)" : "") + (autoAjo != null ? " (AUTO-siirto)" : ""));
+            Debug.Log("MATKAKIRJA kuvaselite: II " + (paalle ? "tauko" : "jatkuu") + (luki ? " (lukija)" : "") + (autoAjo != null ? " (AUTO-siirto)" : ""));
+        }
+
+        /// <summary>Tauko pois ilman jatkoa (sulku tai uusi kohde).</summary>
+        void NollaaTauko()
+        {
+            tauolla = false;
+            if (taukoIkoni != null) taukoIkoni.Polku = Ikonit.Tauko;
+            taukoNappi.tooltip = "Tauko";
+            taukoNappi.EnableInClassList("mk-valittu", false);
         }
 
         void LopetaSiirto()
