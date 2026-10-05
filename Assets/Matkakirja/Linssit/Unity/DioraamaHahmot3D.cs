@@ -535,8 +535,11 @@ namespace Matkakirja.Natiivi
                 e.Sekoitin.Toista(Leike(m3, "idle"), haivytys);
             var anim = e.Malli.Glb.Animaatio(e.Sekoitin.Nykyinen);
             float kesto = anim?.Kesto ?? 0f;
-            e.Sekoitin.Nopeus = tavoite == "kavely" && m3?.KavelySykliM > 0 && kesto > 0
-                ? (float)((e.Hahmo.Reitti?.Nopeus > 0 ? e.Hahmo.Reitti.Nopeus : 1.0) * kesto / m3.KavelySykliM) : 1f;
+            // Askelsykli on mitattu skaalaamattomasta mallista (hahmo_skin.py), mutta hahmo piirretään Skin.Skaala-koossa:
+            // ilman skaalaa askel oli ~5 % siirtymää lyhyempi ja jalat liukuivat (Linnanrakentaja 5.10.).
+            double sykliM = m3?.KavelySykliM > 0 ? m3.KavelySykliM * (m3.Skaala > 0 ? m3.Skaala : 1.0) : 0;
+            e.Sekoitin.Nopeus = tavoite == "kavely" && sykliM > 0 && kesto > 0
+                ? (float)((e.Hahmo.Reitti?.Nopeus > 0 ? e.Hahmo.Reitti.Nopeus : 1.0) * kesto / sykliM) : 1f;
             float dt = double.IsNaN(e.EdellinenT) ? (float)(VaiheYksikko(e.HahmoId) * kesto) : (float)Math.Clamp(t - e.EdellinenT, 0, 0.1);
             e.EdellinenT = t;
             e.Sekoitin.Paivita(dt);
