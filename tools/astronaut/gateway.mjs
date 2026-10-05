@@ -6,9 +6,12 @@
  */
 export const GATEWAY = 'https://eol.jsc.nasa.gov';
 
-/** Gatewayn tunnus (ISS026-E-26514, ISS002-708-11, STS059-213-19) osiin; muuten null. */
+/**
+ * Gatewayn tunnus (ISS026-E-26514, ISS002-708-11, STS059-213-19) osiin; muuten null. Gatewayn ruutunumerossa ei ole
+ * etunollaa: STS062-85-021 on kuvakirjaston (images-api) tunnus, ei Gatewayn (sen tiedosto on STS062-85-21).
+ */
 export function gatewayTunnus(id) {
-  const m = String(id ?? '').match(/^([A-Z]+\d+[A-Z]?)-([A-Z0-9]+)-(\d+[A-Z]?)$/);
+  const m = String(id ?? '').match(/^([A-Z]+\d+[A-Z]?)-([A-Z0-9]+)-([1-9]\d*[A-Z]?)$/);
   return m ? { mission: m[1], roll: m[2], frame: m[3] } : null;
 }
 
