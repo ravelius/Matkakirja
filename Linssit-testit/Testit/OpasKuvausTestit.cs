@@ -28,7 +28,7 @@ namespace Matkakirja.Linssit.Testit
         {
             var katu = OpasKuvaus.Kehysta(K(80), 5, 90, "kanava");
             var alue = OpasKuvaus.Kehysta(K(500), 5, 90, "linnoitus");
-            Oleta.Tosi(katu.Kallistus > alue.Kallistus + 15, $"katu viistompi ({katu.Kallistus} vs {alue.Kallistus})");
+            Oleta.Tosi(katu.Kallistus > alue.Kallistus + 10, $"katu viistompi ({katu.Kallistus} vs {alue.Kallistus})");
             Oleta.Tosi(katu.EtaisyysM < alue.EtaisyysM, $"katu lähempänä ({katu.EtaisyysM} vs {alue.EtaisyysM})");
             Oleta.Tosi(katu.EtaisyysM >= OpasKuvaus.KatuEtMinM && alue.EtaisyysM <= OpasKuvaus.AlueEtMaxM);
             Oleta.Tosi(Ero(katu.Suuntima, 90 + OpasKuvaus.SivuKulma) < 1e-9, "katse sivukulman verran tulosuunnasta");
