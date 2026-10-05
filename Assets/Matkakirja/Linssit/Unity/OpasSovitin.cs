@@ -57,6 +57,12 @@ namespace Matkakirja.Natiivi
         /// <summary>Aloituskaupunki (komento "opas kaupunki <nimi>"); ensimmäinen pyyntö on tämä toive.</summary>
         public static string Aloituskaupunki = "Kööpenhamina";
 
+        /// <summary>
+        /// Koukku elokuvamaiselle kameralle (Siirtoseppä, juna 145, OpasCinemachine.cs): kutsutaan joka kehys KyydinKameraEnnen-vaiheessa
+        /// (−50) heti sen jälkeen, kun PalloKierto.Kuvaa on asettanut silmukan asennon (paikka, asento, lähi- ja kaukotaso).
+        /// Kuuntelija voi ohjata kameraa (Brain ManualUpdate) ennen Cesiumin laattavalintaa.
+        /// </summary>
+        public static event Action<Camera, OpasSilmukka> KameraKuvattu;
         /// <summary>Kertojan kappale soi (Natiivi-UI: vastaussirut vasta kappaleen jälkeen).</summary>
         public static bool KertojaPuhuu => Viimeisin != null && Viimeisin.puhuu;
         /// <summary>Oppaan linssi auki (Natiivi-UI: chatin syöte oppaalle).</summary>
@@ -198,6 +204,7 @@ namespace Matkakirja.Natiivi
             silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => kaupunki.Valmis);
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             y.Kuvaa(silmukka.Asento);
+            KameraKuvattu?.Invoke(kierto != null ? kierto.GetComponent<Camera>() : null, silmukka);
             if (silmukka.Seuraava != null)
             {
                 var k = silmukka.Seuraava;
