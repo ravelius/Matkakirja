@@ -1,6 +1,6 @@
-# Siirtosepän luovutus 5.10.2026 — TILA KLO 11.1x (Opus 5.5, high)
+# Siirtosepän luovutus 5.10.2026 — TILA KLO 11.0x (Opus 5.5, high)
 
-## Nyt (päivitetty 11.1x)
+## Nyt (päivitetty 11.05)
 - **Tavli KUITATTU** (Päätoimittaja ~10.55): proto `siirtoseppa/tavli` @ **ea02bae1** (tekstit HYVÄKSYTTY + laudat v2), merge-pyyntö Natiivisepällä.
   EHTO: TF vain yhdessä Natiivi-UI:n otsikkokorjauksen kanssa ("TAVL I", kapiteelin kirjainväli; tilattu Natiivi-UI:lta). Muuten juna 144.
   Todisteet oikeilla sim-tapeilla: kaappaukset/siirtoseppa-20261005/tavli-laudat-simtap-1052.png (käännös ddbadb73). Simulaattorin tap-lupa on nyt voimassa (omistaja 10.51).
