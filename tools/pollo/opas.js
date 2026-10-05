@@ -528,3 +528,30 @@ export function jarjestaAkselille(pisteet) {
   const proj = (x) => ((x[1] - a[1]) * kx * ax[0] + (x[0] - a[0]) * ax[1]);
   return [...pisteet].sort((x, y) => proj(x) - proj(y));
 }
+
+/*
+ * SILTALAUSEIDEN RYHMÄT (Päätoimittaja 5.10.2026, omistaja 21.5x; ämpärissä aanet/opas/siltalauseet-v1/siltalauseet.json):
+ * natiivi soittaa esigeneroidun siltalauseen heti napautuksesta sirun ryhmän mukaan, kunnes uusi kerronta alkaa.
+ * Ryhmät: kuittaus, ruoka, moderni, vihrea, vesi, vanha, lento, kierros, syventava, kaupunki, aloitus, odotus.
+ */
+const RYHMA_SIRULLE = new Map([['Missä voisi syödä?', 'ruoka'], ['Jotain vihreää', 'vihrea'], ['Veden äärelle', 'vesi'],
+  ['Kaupungin vanhin paikka', 'vanha'], ['Jotain modernia', 'moderni'], ['Esittele kaupunki', 'aloitus'],
+  ['Lisää tätä kaupunkia', 'kierros']]);
+const RYHMA_SANOISTA = [
+  ['ruoka', /syö|ruoka|ravintol|kahvil|lounas|herkku|tori(lla|lle)?\b|nälkä/i],
+  ['moderni', /modern|uusi|uutta|nykyai|arkkiteh/i],
+  ['vihrea', /vihre|puisto|puutarh|luonto/i],
+  ['vesi', /vesi|veden|ranta|satam|kanav|meri|joki|järvi/i],
+  ['vanha', /vanh|histor|keskiai|muinai|linna/i],
+];
+
+/** Siltalauseen ryhmä sirulle tai toiveelle (tuntematon → kuittaus, kysymysmuoto → syventava). */
+export function siltaRyhma(teksti) {
+  const t = String(teksti ?? '').trim();
+  if (!t) return 'kierros';
+  if (RYHMA_SIRULLE.has(t)) return RYHMA_SIRULLE.get(t);
+  if (onKierrosToive(t)) return /lisää/i.test(t) ? 'kierros' : 'aloitus';
+  const osuma = RYHMA_SANOISTA.find(([, re]) => re.test(t));
+  if (osuma) return osuma[0];
+  return t.endsWith('?') ? 'syventava' : 'kuittaus';
+}

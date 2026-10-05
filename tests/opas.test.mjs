@@ -396,3 +396,11 @@ test('reittipisteet järjestetään päästä päähän', async () => {
   assert.deepEqual(jarjestaAkselille([[55.680278, 12.585833], [55.679722, 12.590556], [55.680531, 12.589119]]),
     [[55.680278, 12.585833], [55.680531, 12.589119], [55.679722, 12.590556]], 'Nyhavn: Kongens Nytorv → … → satama');
 });
+
+test('siltalauseiden ryhmät: sirut, toiveet ja kierros', async () => {
+  const { siltaRyhma } = await import('../tools/pollo/opas.js');
+  const odotetut = { 'Missä voisi syödä?': 'ruoka', 'Jotain vihreää': 'vihrea', 'Veden äärelle': 'vesi', 'Kaupungin vanhin paikka': 'vanha',
+    'Jotain modernia': 'moderni', 'Esittele kaupunki': 'aloitus', 'Lisää tätä kaupunkia': 'kierros', 'Kuka on kultainen hahmo?': 'syventava',
+    'Näytä satama': 'vesi', 'haluan nähdä jotain outoa': 'kuittaus', 'Missä täällä voi syödä?': 'ruoka', '': 'kierros' };
+  for (const [t, r] of Object.entries(odotetut)) assert.equal(siltaRyhma(t), r, t);
+});
