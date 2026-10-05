@@ -79,3 +79,40 @@ test('korostus ja koordinaatit OSM:stä: kanavan muoto, varakoordinaatti ennen m
   const p = await paikanKoordinaatit(haku, { nimi: 'Pieni tori', lat: 55.7, lon: 12.6 }, { lat: 55.676, lon: 12.568 }, { env, kaupunki: 'Kööpenhamina' });
   assert.deepEqual([p.lat, p.lahde, p.id], [55.676, 'osm', 'osm:node3']);
 });
+
+test('worker: OSM-data vain krediitit:["osm"]-asiakkaille (ODbL; vanhat natiivit TF 143–145 ilman)', async () => {
+  const { default: worker } = await import('../tools/pollo/worker.js');
+  const kutsut = { nominatim: 0 };
+  const vanha = globalThis.fetch;
+  globalThis.fetch = async (u, init) => {
+    const s = decodeURIComponent(String(u));
+    if (s.includes('nominatim')) {
+      kutsut.nominatim += 1;
+      return new Response(JSON.stringify([{ lat: '55.6797', lon: '12.5906', osm_type: 'relation', osm_id: 9,
+        geojson: { type: 'LineString', coordinates: [[12.5858, 55.6803], [12.5880, 55.6800], [12.5920, 55.6795], [12.5938, 55.6794]] } }]));
+    }
+    if (s.includes('api.anthropic.com')) {
+      return new Response(JSON.stringify({ content: [{ type: 'text', text: 'NIMI: Nyhavn\nWIKIPEDIA: Nyhavn\nLUOKKA: kanava\nKOKO: 400\nTEKSTI: Nyhavn.\nVAIHTOEHTO: A?\nVAIHTOEHTO: B' }], stop_reason: 'end_turn' }));
+    }
+    if (s.includes('titles=Nyhavn')) return new Response(JSON.stringify({ query: { pages: { 1: { title: 'Nyhavn', pageprops: { wikibase_item: 'Q943946' }, coordinates: [{ lat: 55.6797, lon: 12.5906 }] } } } }));
+    if (s.includes('titles=Kööpenhamina')) return new Response(JSON.stringify({ query: { pages: { 7: { coordinates: [{ lat: 55.676, lon: 12.568 }] } } } }));
+    return new Response(JSON.stringify({ query: { pages: {} }, search: [], claims: {}, entities: {} }));
+  };
+  const kv = new Map();
+  const env = { ANTHROPIC_API_KEY: 'a', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KEHITTAJAKOODI: 'k', OPAS_AINEISTO_TESTI: {},
+    POLLO_KV: { get: async (k) => kv.get(k) ?? null, put: async (k, v) => { kv.set(k, v); } } };
+  const pyynto = (runko) => worker.fetch(new Request('https://pollo.example/opas/seuraava', { method: 'POST',
+    headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'x-pollo-kehittaja': 'k', 'x-matkakirja-testi': '1' },
+    body: JSON.stringify({ kaupunki: 'Kööpenhamina', ...runko }) }), env, {}).then((v) => v.json());
+  try {
+    const vanhaAsiakas = await pyynto({});
+    assert.equal(kutsut.nominatim, 0, 'ei Nominatimia ilman OSM-krediittiä');
+    assert.notDeepEqual(vanhaAsiakas.korostus?.pisteet?.[0], [55.6803, 12.5858], 'vanha asiakas ei saa OSM-muotoa');
+    const uusi = await pyynto({ krediitit: ['osm'] });
+    assert.ok(kutsut.nominatim >= 1);
+    assert.equal(uusi.korostus.tyyppi, 'reitti');
+    assert.deepEqual(uusi.korostus.pisteet[0], [55.6803, 12.5858], 'OSM-muoto krediitin kanssa (päätepiste OSM:stä)');
+  } finally {
+    globalThis.fetch = vanha;
+  }
+});

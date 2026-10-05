@@ -141,6 +141,8 @@ export function siivoaOpasPyynto(runko) {
     kaydyt: lista.map((k) => siivoa(k, 200)).filter(Boolean).slice(-OPAS_KAYDYT),
     edellinenTeksti: siivoa(runko?.edellinen_teksti, 900) || null,
     istunto: siivoa(runko?.istunto, 64) || null,
+    // Krediitit, jotka natiivi näyttää (junasta 146: ['osm'] → OSM-pohjainen data sallittu, ODbL-maininta näkyy).
+    krediitit: Array.isArray(runko?.krediitit) ? runko.krediitit.map((x) => siivoa(x, 20).toLowerCase()).filter(Boolean).slice(0, 10) : [],
     isoisa: siivoa(runko?.isoisa, 900) || null,
   };
 }

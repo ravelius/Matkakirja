@@ -2862,6 +2862,9 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     isoisaAvain ? kv.get(isoisaAvain).then(Boolean).catch(() => false) : false,
     kierrosAvain ? kv.get(kierrosAvain).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null]);
   const aineisto = kaupunginAineisto(env.OPAS_AINEISTO_TESTI ?? OPAS_AINEISTO, p.kaupunki);
+  // OSM (Nominatim) vain asiakkaille, jotka näyttävät OSM-maininnan (Päätoimittaja: ODbL; vanhat natiivit TF 143–145
+  // eivät lähetä krediittejä → Wikidata-reitti kuten ennen).
+  const osm = p.krediitit.includes('osm') ? { env, kaupunki: p.kaupunki } : null;
   const nahdyt = [...p.kaydyt, ...kaydytNimet];
 
   // KIERROS (omistajan idea 19.3x): "Esittele kaupunki" / "Lisää tätä kaupunkia" suunnittelee ~8 pysähdystä yhdellä
@@ -2878,7 +2881,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
         maxTokens: 700, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
       })).teksti);
       return (await Promise.all(suunnitelma.map(async (x) => {
-        const paikka = await paikanKoordinaatit(fetch, x, sijainti, { env, kaupunki: p.kaupunki });
+        const paikka = await paikanKoordinaatit(fetch, x, sijainti, osm);
         return paikka ? { nimi: paikanNimi(paikka, x.nimi), wikipedia: x.wikipedia, koko_m: x.koko_m, ...paikka } : null;
       }))).filter(Boolean).filter((x, i, kaikki) => kaikki.findIndex((y) => y.id === x.id) === i);
     } catch (virhe) {
@@ -2915,7 +2918,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       const vastaus = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti, seuraava?.paikka.nimi ?? null);
       if (vastaus?.tyyppi !== 'pysahdys') { tulos = vastaus; continue; }
       // Kierroksen paikka on jo tarkistettu suunnitteluvaiheessa; muuten koordinaatit nimellä.
-      const paikka = seuraava ? seuraava.paikka : await paikanKoordinaatit(fetch, vastaus, sijainti, { env, kaupunki: p.kaupunki });
+      const paikka = seuraava ? seuraava.paikka : await paikanKoordinaatit(fetch, vastaus, sijainti, osm);
       if (!paikka) { console.log(`opas: paikkaa ei löytynyt (${vastaus.wikipedia ?? vastaus.nimi})`); continue; }
       const nimi = seuraava ? seuraava.paikka.nimi : paikanNimi(paikka, vastaus.nimi);
       tuloksenPaikka = { nimi, wikipedia: vastaus.wikipedia, koko_m: vastaus.koko_m, ...paikka };
@@ -2928,7 +2931,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       // Reittipisteiden haku (kadut ja kanavat ~1–2 s) rinnakkain äänen ja kuvan kanssa, ei vastauksen kriittisellä polulla.
       korostusLupaus = paikanKorostus(fetch, { lat: paikka.lat, lon: paikka.lon, koko_m: tulos.koko_m, luokka: vastaus.luokka,
         reitti: vastaus.reitti ?? [], nimi: seuraava?.paikka.wikipedia ?? vastaus.wikipedia ?? nimi, nimet: [vastaus.nimi, nimi], id: paikka.id },
-        sijainti, { env, kaupunki: p.kaupunki });
+        sijainti, osm);
     }
   } catch (virhe) {
     console.log(`opas: mallikutsu epäonnistui (${virhe?.status ?? 'verkko'})`);
