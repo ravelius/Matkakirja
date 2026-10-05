@@ -621,6 +621,8 @@ namespace Matkakirja.Natiivi
                 // Maailman indeksissä lut on ruuduittain: avomeren täyttö ensimmäisen näkymän ruudun alueen lutilla.
                 var meriLut = ty.Data.Lut ?? ruudut.Select(x => x.Lut).FirstOrDefault(l => l != null);
                 if (meriLut != null) for (int c = 0; c < 3; c++) meri[c] = meriLut[meri[c]];
+                // Maailman indeksi: avomeri (täyttö ja S2:n vesi) mosaiikin avomeren väriin (simu f7310e55: Kanarian sauma 31,95° N).
+                if (ty.Data.Lut == null && meriLut != null) { meri = (byte[])MosaiikinMeri.Clone(); ty.Data.MeriUlos = MosaiikinMeri; }
                 // Usvatasoitus ruuduittain (simu d753d794: Amazonian eri päivien ruudut sameina lohkoina), taustasäikeessä (purku).
                 if (UsvaTasoitus)
                 {
@@ -863,6 +865,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Teksti välimuistista (tiedosto) tai verkosta (tallennetaan onnistuessa); null = ei saatu (404 ei välimuistiin).</summary>
+        /// <summary>s2-eurooppa/v1-mosaiikin avomeren väri (vakio 92 %:ssa Kanarian mosaiikkilaatoista, simu f7310e55).</summary>
+        static readonly byte[] MosaiikinMeri = { 48, 65, 85 };
+
         static IEnumerator HaeTeksti(string url, string tiedosto, Action<string> valmis)
         {
             if (File.Exists(tiedosto)) { valmis(File.ReadAllText(tiedosto)); yield break; }

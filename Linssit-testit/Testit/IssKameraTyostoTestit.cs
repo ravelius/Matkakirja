@@ -132,6 +132,14 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama((byte)14, Arvo(350_000), "A:n meri merenväriin");
             Oleta.Sama((byte)14, Arvo(750_000), "B:n meri merenväriin");
             Oleta.Sama((byte)24, Arvo(300_000 + 175.5 * pm), "poikkeama (+40) jää neljänneksellä");
+            // Maailman indeksi (ruudun oma lut): meri mosaiikin avomeren väriin (simu f7310e55: Kanarian sauma 31,95° N), poikkeama säilyy.
+            var lut = Enumerable.Range(0, 256).Select(i => (byte)Math.Min(255, i + 30)).ToArray();
+            foreach (var (ru, _) in d.Ruudut) ru.Lut = lut;
+            Oleta.Sama((byte)44, Arvo(350_000), "ilman MeriUlosta lut(Meri) = 14 + 30");
+            d.MeriUlos = new byte[] { 48, 65, 85 };
+            Oleta.Sama((byte)48, Arvo(350_000), "A:n meri mosaiikin meriväriin");
+            Oleta.Sama((byte)48, Arvo(750_000), "B:n meri mosaiikin meriväriin");
+            Oleta.Sama((byte)58, Arvo(300_000 + 175.5 * pm), "poikkeama säilyy lutin kautta");
         }
 
         [Testi]

@@ -41,6 +41,12 @@ namespace Matkakirja.Linssit.IssKamera
         /// </summary>
         public double VesiTasoitus;
         public byte[] Meri = { 14, 22, 30 };
+        /// <summary>
+        /// Lopullinen merenväri ruudun lutin jälkeen (null = lut(Meri)). Simu f7310e55 (Kanaria): s2-eurooppa/v1-mosaiikin avomeri
+        /// on vakio (48,65,85), COG:n meri lutin läpi (57,72,84) → suora sauma mosaiikin eteläreunassa (31,95° N). Vesipikselin
+        /// poikkeama säilyy lutin kautta: ulos = MeriUlos + lut(Meri + poikkeama) − lut(Meri).
+        /// </summary>
+        public byte[] MeriUlos;
 
         /// <summary>Onko UTM-pisteessä (e, n) ruudun SCL:n mukaan pilvi tai pilven varjo (ei haettu → ei).</summary>
         public bool Pilvinen(string tunnus, int vyohyke, double e, double n, double metria)
@@ -183,19 +189,25 @@ namespace Matkakirja.Linssit.IssKamera
                     if (ru.Vahvistus != null) { cr *= ru.Vahvistus[0]; cg *= ru.Vahvistus[1]; cb *= ru.Vahvistus[2]; }
                     if (ru.Siirto != null) { cr += ru.Siirto[0]; cg += ru.Siirto[1]; cb += ru.Siirto[2]; }
                     cr = Math.Max(0, cr - ru.UsvaR); cg = Math.Max(0, cg - ru.UsvaG); cb = Math.Max(0, cb - ru.UsvaB);
-                    if (luokka == 6 && d.VesiTasoitus > 0)
+                    bool vesi = luokka == 6 && d.VesiTasoitus > 0;
+                    if (vesi)
                     {
+                        // Ruudun oma vesitaso (TasaaVesi) merenväriin, vain poikkeama siitä jää; ilman vesitasoa poikkeama merenväristä.
                         double w = d.VesiTasoitus;
-                        if (ru.VesiTaso != null)
-                        {
-                            // Ruudun oma vesitaso merenväriin, vain poikkeama siitä jää (TasaaVesi).
-                            double vr = Math.Max(0, ru.VesiTaso[0] - ru.UsvaR), vg = Math.Max(0, ru.VesiTaso[1] - ru.UsvaG), vb = Math.Max(0, ru.VesiTaso[2] - ru.UsvaB);
-                            cr = Math.Max(0, d.Meri[0] + (cr - vr) * (1 - w)); cg = Math.Max(0, d.Meri[1] + (cg - vg) * (1 - w)); cb = Math.Max(0, d.Meri[2] + (cb - vb) * (1 - w));
-                        }
-                        else { cr += (d.Meri[0] - cr) * w; cg += (d.Meri[1] - cg) * w; cb += (d.Meri[2] - cb) * w; }
+                        double vr = d.Meri[0], vg = d.Meri[1], vb = d.Meri[2];
+                        if (ru.VesiTaso != null) { vr = Math.Max(0, ru.VesiTaso[0] - ru.UsvaR); vg = Math.Max(0, ru.VesiTaso[1] - ru.UsvaG); vb = Math.Max(0, ru.VesiTaso[2] - ru.UsvaB); }
+                        cr = Math.Max(0, d.Meri[0] + (cr - vr) * (1 - w)); cg = Math.Max(0, d.Meri[1] + (cg - vg) * (1 - w)); cb = Math.Max(0, d.Meri[2] + (cb - vb) * (1 - w));
                     }
                     // Maailman indeksi: ruudun alueen oma lut ennen saumasekoitusta (Laatta ei silloin sovella KuvaData.Lutia).
-                    if (ru.Lut != null) { cr = Lutilla(ru.Lut, cr); cg = Lutilla(ru.Lut, cg); cb = Lutilla(ru.Lut, cb); }
+                    if (ru.Lut != null)
+                    {
+                        cr = Lutilla(ru.Lut, cr); cg = Lutilla(ru.Lut, cg); cb = Lutilla(ru.Lut, cb);
+                        if (vesi && d.MeriUlos != null)
+                        {
+                            cr += d.MeriUlos[0] - Lutilla(ru.Lut, d.Meri[0]); cg += d.MeriUlos[1] - Lutilla(ru.Lut, d.Meri[1]); cb += d.MeriUlos[2] - Lutilla(ru.Lut, d.Meri[2]);
+                            cr = Math.Max(0, cr); cg = Math.Max(0, cg); cb = Math.Max(0, cb);
+                        }
+                    }
                     // Saumapehmennys: ristihäivytys koko S2-limityksen (SaumaM) yli, paino kasvaa ruudun UTM-reunasta sisään.
                     // Simu d26351c2 (Coloradon suisto): 4 km:n rampilla ja "ensimmäinen voittaa" -säännöllä 2022- ja 2023-kuvien
                     // limityskaista näkyi vuoroveden tasankojen poikki vaaleana suorareunaisena kaistana.
