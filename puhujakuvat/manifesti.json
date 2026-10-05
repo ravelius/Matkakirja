@@ -1,0 +1,67 @@
+{
+  "title": "Kappelin puhujakuvien neljän kuvan koe",
+  "sourceMailboxCommit": "defed13282a09b00cb6491dc971c28cd4410bbc7",
+  "generationMode": "built-in image_gen",
+  "files": [
+    {
+      "file": "puhujakuvat/kappalainen-1500-neutraali.png",
+      "original": "originals/kappalainen-1500-neutraali-v2.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "png",
+      "space": "srgb",
+      "channels": 3,
+      "hasAlpha": false,
+      "iccBytes": 480,
+      "bytes": 1861961,
+      "sha256": "b80ae9040174a0dfbce174e70936fde96dc6e0451f67f9b5756d3ff1f31c1912"
+    },
+    {
+      "file": "puhujakuvat/kappalainen-1500-vakava.png",
+      "original": "originals/kappalainen-1500-vakava-v1.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "png",
+      "space": "srgb",
+      "channels": 3,
+      "hasAlpha": false,
+      "iccBytes": 480,
+      "bytes": 1841719,
+      "sha256": "7ea6dac0c1c1eb67b8a88c16e925b6943a52c63813d61833f578239c0423db36"
+    },
+    {
+      "file": "puhujakuvat/vouti-1500-neutraali.png",
+      "original": "originals/vouti-1500-neutraali-v1.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "png",
+      "space": "srgb",
+      "channels": 3,
+      "hasAlpha": false,
+      "iccBytes": 480,
+      "bytes": 2124830,
+      "sha256": "8b84d60c93d97f6a11365e159879a7e910f648ed5936e1b44742d79c453038d3"
+    },
+    {
+      "file": "puhujakuvat/vouti-1500-huolestunut.png",
+      "original": "originals/vouti-1500-huolestunut-v1.png",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "format": "png",
+      "space": "srgb",
+      "channels": 3,
+      "hasAlpha": false,
+      "iccBytes": 480,
+      "bytes": 2015478,
+      "sha256": "c883fd606adbd1171cc8f1b17598624918119c7bf4bb4aea51b42aff85bc1453"
+    }
+  ]
+}
