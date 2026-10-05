@@ -134,6 +134,11 @@ namespace Matkakirja.Natiivi
             valikko.style.display = DisplayStyle.None;
             Kirjasimet.Aseta(valikko, Kirjasin.Moderni);
             valikko.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
+            // Juna 144 FAIL (Laitetestaaja 5.10., Amsterdam-rivi ei lauennut joka kerta): UITK:n ScrollView aloitti oman
+            // kosketusvierityksensä jo sormen pienestä värinästä ja kaappasi osoittimen, jolloin rivin napautus peruuntui.
+            // Oma liitos (kuten nostokortti ja lehti) pysäyttää ScrollViewin kosketusliikkeet; vieritys alkaa vasta 8 pt:n
+            // pystyvedosta, ja sitä pienempi liike on napautus.
+            Kosketusvieritys.Liita(valikko, () => rivit);
             kerros.JokaRuutu += TarkistaOhiNapautus;
 
             // Irrallinen sirurivi alareunan keskelle (Googlen ja Cesiumin merkinnät jäävät sen alle).
