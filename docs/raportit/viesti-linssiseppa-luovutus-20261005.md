@@ -78,3 +78,7 @@ Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), i
 - Kiilto 11–13: kopiot $S/ketju-kiilto-aamu.sh ja $S/paat-app (S = 7cea3452-scratchpad); portti $S/sim-nyt-ki.
 - 11.0x KIILTO VALMIS: ajo h (3674ed53) → vain vedessä, tuulikaistat, ei kermaläiskää; kuvat lokit/linssiseppa-kiilto-cupola-h-20261005/
   omistajalle. Kysytty Päätoimittajalta kuittausta merge-pyynnölle glint-2 (5b6b9d46, puhdas master 62d5d1bb:n päälle) → Natiiviseppä, juna 143.
+- 11.2x glint-2 merge-pyyntö Natiivisepälle (Päätoimittajan kuittaus; juna 143 iPad-mittauksen jälkeen Tavlin kanssa tai 144).
+- 12.xx LONTOO-PILOTTI (LS2:n puolesta, ei pelikoodia): tutkimus docs/raportit/lontoo-pilotti-tekninen-tutkimus-20261005.md ja
+  7 pysähdystä docs/raportit/lontoo-pysahdykset-20261005.md toimitettu. Omistaja 11.45: kaikki data ionista (1, 2, 96188).
+  Työkalu proto-3d/tyokalut/linssiseppa-ajot/lontoo-koe. SEURAAVAKSI: lepo kunnes ISS-ohjaamo on junassa.
