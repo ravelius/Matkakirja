@@ -63,3 +63,11 @@ Kuvat: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-maailma-10c31692/kuvat. 
 - Jonossa: käännös 231c3c21 Siirtosepän jälkeen (~11.45), simu F2D9B022 ~12.20 (Julkaisija). Karttasepän v2b julkaisu ~11–12.
   Jos v2b on ämpärissä simuvuoroon mennessä: toinen ajo MAAILMA=<v2b maailma.json> VERSIO=v2 (maailma-kuvat.sh kopioi nyt
   versioidulle nimelle), jolloin v2b:n voi todentaa ilman versiovakion vaihtoa.
+
+## Päivitys 5.10. klo 12.4x — ohjaamo junaan 144 (VIE-ikkuna klo 20)
+- Proto linssiseppa2/iss-ohjaamo: c598aecf v2b-vakio · 43c7e0f2+8b780990 meri mosaiikin vakioon (48,64,85; Karttasepän
+  euromosaiikki-v2.mjs MERI) → Kanarian sauma 31,95° N poissa · a693e5e1 vesitaso myös kulmasta haetulle ruudulle (28SCB-kiila).
+- Päätoimittaja HYVÄKSYI 8b780990: Sahara, Amazonia, 20MRC (parit lokit/linssiseppa2-kuvaparit-20261005/).
+- Avoinna: Kanarian pari a693e5e1:n ajosta (käännös junan 143 jälkeen, simu ~13.15; skripti scratchpad/aja-a693.sh,
+  LUPA-tiedosto simu-lupa), Meksikon pari kun Karttasepän v2c valmis (13–15; vaihda Versio "v2c" vasta kuittauksella).
+  Sitten Natiivi-UI:lle iss-ohjaamon kärjen merge-pyyntö junaan 144.
