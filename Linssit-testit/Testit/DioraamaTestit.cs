@@ -1222,6 +1222,34 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(l.NakymaHetkella(85, false).KohdeTila != "keittio", "kohtien jälkeen napautus vie kiertueella eteenpäin");
         }
 
+        /// <summary>Kohtaukset v2 (5.10.): kuunnelman keskustelurivin vuorot ja taulun kohdan kohde luetaan; napautus kohteeseen
+        /// soittaa juuri sen kohdan ja muu napautus ensimmäisen kuulemattoman.</summary>
+        [Testi] static void KohtauksetV2Data()
+        {
+            string json = KeittioFixture
+                .Replace("{\"teksti\":\"Kohta A\",\"lahde\":\"l1\"}", "{\"teksti\":\"Kohta A\",\"lahde\":\"l1\",\"kohde\":{\"paikka\":[1,2,3],\"sade\":0.8}}")
+                .Replace("\"kasikirjoitus\":[", "\"kuunnelma\":[{\"id\":\"k\",\"puhuja\":\"keskustelu\",\"aani\":null,\"teksti\":\"koko\",\"vuorot\":[{\"puhuja\":\"kokki\",\"alku_s\":0,\"loppu_s\":2.5,\"teksti\":\"Yksi\"},{\"puhuja\":\"apulainen\",\"alku_s\":3,\"loppu_s\":5,\"teksti\":\"Kaksi\"}]}],\n              \"kasikirjoitus\":[");
+            var rak = DioraamaData.Lue(json);
+            var tila = rak.Tila("keittio");
+            Oleta.Sama(1, tila.Kuunnelma.Count);
+            var r = tila.Kuunnelma[0];
+            Oleta.Sama(2, r.Vuorot.Count);
+            Oleta.Sama("kokki", r.VuoroHetkella(1.0).Puhuja);
+            Oleta.Sama("kokki", r.VuoroHetkella(2.8).Puhuja); // vuorojen välissä edellinen
+            Oleta.Sama("apulainen", r.VuoroHetkella(3.1).Puhuja);
+            Oleta.Tosi(tila.Taulu.Kohdat[0].KohdePaikka.HasValue && tila.Taulu.Kohdat[1].KohdePaikka == null, "kohde vain ensimmäisellä");
+            Lahella(0.8, tila.Taulu.Kohdat[0].KohdeSade, "kohteen säde");
+            var l = new PoikkileikkausLinssi { Kuvasuhde = 1.6, PuluNapautuksesta = true };
+            l.Avaa(rak, 0, false);
+            l.Kohdista("keittio", 10);
+            l.Napauta(20, null, 1); // kohteeseen 1 (B)
+            Oleta.Sama("Kohta B pidempi teksti", l.NakymaHetkella(20.2, false).Repliikki);
+            Oleta.Sama(1, l.KohtiaJaljella(30));
+            l.Napauta(30); // muu → ensimmäinen kuulematon (A)
+            Oleta.Sama("Kohta A", l.NakymaHetkella(30.2, false).Repliikki);
+            Oleta.Sama(0, l.KohtiaJaljella(40));
+        }
+
         /// <summary>Cinemachine (5.10.2026): LepoHetkella kertoo lennon määränpään. Levossa (Jaljella 0) Ytimen kamera on täsmälleen
         /// perusasento, ja lennossa kamera saavuttaa perusasennon jäljellä olevan ajan päästä (ei napautuksia välissä).</summary>
         [Testi] static void LepoHetkellaVastaaNakymaa()

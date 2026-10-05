@@ -271,6 +271,18 @@ namespace Matkakirja.Natiivi
             };
 
             kuunnelma = new KuunnelmaKaistale();
+            // Kohtaukset v2: vuoron puhuja (hahmon id) henkilön nimeksi kuten käsikirjoituksen repliikeissä.
+            KuunnelmaKaistale.PuhujanNimi = id =>
+            {
+                var r = DioraamaSovitin.Linssi?.Rakennus;
+                var tilaId = DioraamaSovitin.ViimeisinNakyma?.KohdeTila;
+                var tila = r != null && tilaId != null ? r.Tila(tilaId) : null;
+                if (tila != null)
+                    foreach (var h in tila.Hahmot)
+                        if (h.Id == id && h.HenkiloId != null && r.Henkilot != null && r.Henkilot.TryGetValue(h.HenkiloId, out var hk) && !string.IsNullOrEmpty(hk.Nimi))
+                            return hk.Nimi;
+                return id;
+            };
             Viimeisin = this;
 
             // NIMIRUUTU (Päätoimittaja 4.10.): saapumisen latausodotuksen ajan ISS-avausruudun pohja (mk-astroavaus, ei uutta tyyliä):

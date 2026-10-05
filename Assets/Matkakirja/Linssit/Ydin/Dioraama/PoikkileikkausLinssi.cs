@@ -466,7 +466,8 @@ namespace Matkakirja.Linssit.Dioraama
         /// Yleisnäkymässä (linnan avaustaulu lopussa) napautus vie kiertueen ensimmäiseen tilaan. Muuten kuten ennen.</summary>
         public void Napauta(double t) => Napauta(t, null);
 
-        public void Napauta(double t, string hahmo)
+        /// <summary>Napautus; Pulu napautuksesta -tilassa hahmo = napautettu hahmo, kohta = napautetun kohteen taulun kohta (−1 = ei).</summary>
+        public void Napauta(double t, string hahmo, int kohta = -1)
         {
             // Saapumiskaaren aikana napautus kiihdyttää kaaren loppuun (käsikirjoitus: "ohitettavissa napautuksella").
             if (SaapuminenKaynnissa(t) && ohitusT < 0)
@@ -482,9 +483,9 @@ namespace Matkakirja.Linssit.Dioraama
             var nyt = Auki && Rakennus != null && tapahtumat.Count > 0 ? NakymaHetkella(t, false) : default(Nakyma);
             // Pulu napautuksesta: hahmoon → Pulun reaktio, huoneeseen → seuraava faktakohta. Kun kohdat on kuultu ja
             // keskustelu on lopussa, napautus huoneeseen vie kiertueella eteenpäin kuten ennen.
-            if (PuluNapautuksesta && nyt.KohdeTila != null && (hahmo != null || !nyt.KasikirjoitusLopussa || KohtiaJaljella(t) > 0))
+            if (PuluNapautuksesta && nyt.KohdeTila != null && (hahmo != null || kohta >= 0 || !nyt.KasikirjoitusLopussa || KohtiaJaljella(t) > 0))
             {
-                puluPyynnot.Add((t, hahmo));
+                puluPyynnot.Add((t, hahmo, kohta));
                 return;
             }
             if (nyt.KasikirjoitusLopussa)
@@ -721,7 +722,7 @@ namespace Matkakirja.Linssit.Dioraama
         // askelta kohden. Kaikki johdetaan ajasta ja tallennetuista napautuksista kuten muukin linssi.
         public bool PuluNapautuksesta { get; set; }
         public const double VuoroTauko = 0.7, KohtausTauko = 1.6;
-        readonly List<(double T, string Hahmo)> puluPyynnot = new List<(double T, string Hahmo)>();
+        readonly List<(double T, string Hahmo, int Kohta)> puluPyynnot = new List<(double T, string Hahmo, int Kohta)>();
 
         /// <summary>Huoneen keskustelu ilman Pulua: Pulun kohdat ja reaktiot pois, tauot repliikkien väliin.</summary>
         public static List<Askel> KeskusteluIlmanPulua(Tila tila)
@@ -750,20 +751,24 @@ namespace Matkakirja.Linssit.Dioraama
         (List<Askel>, List<double>, int) Keskustelu(Tila tila, double alku, double loppu)
         {
             var pohja = KeskusteluIlmanPulua(tila);
-            var pyynnot = new List<(double T, string Hahmo)>();
-            foreach (var p in puluPyynnot) if (p.T >= alku && p.T < loppu) pyynnot.Add((p.T - alku, p.Hahmo));
+            var pyynnot = new List<(double T, string Hahmo, int Kohta)>();
+            foreach (var p in puluPyynnot) if (p.T >= alku && p.T < loppu) pyynnot.Add((p.T - alku, p.Hahmo, p.Kohta));
             pyynnot.Sort((x, y) => x.T.CompareTo(y.T));
             var askeleet = new List<Askel>(pohja.Count + 4);
             var kestot = new List<double>(pohja.Count + 4);
-            int kohtia = tila.Taulu?.Kohdat?.Count ?? 0, kaytetty = 0, pi = 0;
+            int kohtia = tila.Taulu?.Kohdat?.Count ?? 0, pi = 0;
+            var kuultu = new HashSet<int>();
             double kursori = 0;
             bool tauluAuki = false;
             void Lisaa(Askel a) { askeleet.Add(a); double k = Ohjaaja.AskeleenKesto(a, tila, Rakennus); kestot.Add(k); kursori += k; }
-            Askel PuluVuoro(string hahmo)
+            Askel PuluVuoro(string hahmo, int kohta)
             {
                 if (hahmo != null)
                     foreach (var h in tila.Hahmot) if (h.Id == hahmo && h.Reaktio != null) return new Askel { Tee = "reaktio", HahmoId = hahmo };
-                return kaytetty < kohtia ? new Askel { Tee = "kohta", N = kaytetty++ } : null;
+                // Kohde (taulu.kohdat[].kohde) → juuri se kohta, myös uudelleen; muu napautus → ensimmäinen kuulematon.
+                if (kohta >= 0 && kohta < kohtia) { kuultu.Add(kohta); return new Askel { Tee = "kohta", N = kohta }; }
+                for (int k = 0; k < kohtia; k++) if (kuultu.Add(k)) return new Askel { Tee = "kohta", N = k };
+                return null;
             }
             foreach (var a in pohja)
             {
@@ -773,7 +778,7 @@ namespace Matkakirja.Linssit.Dioraama
                 bool vuoro = false;
                 while (pi < pyynnot.Count && pyynnot[pi].T < kursori)
                 {
-                    if (!vuoro && PuluVuoro(pyynnot[pi].Hahmo) is Askel pa)
+                    if (!vuoro && PuluVuoro(pyynnot[pi].Hahmo, pyynnot[pi].Kohta) is Askel pa)
                     {
                         Lisaa(new Askel { Tee = "odota", S = VuoroTauko });
                         Lisaa(pa);
@@ -785,11 +790,11 @@ namespace Matkakirja.Linssit.Dioraama
             for (; pi < pyynnot.Count; pi++)
             {
                 if (pyynnot[pi].T < kursori) continue; // edellinen Pulun vuoro vielä kesken
-                if (!(PuluVuoro(pyynnot[pi].Hahmo) is Askel pa)) continue;
+                if (!(PuluVuoro(pyynnot[pi].Hahmo, pyynnot[pi].Kohta) is Askel pa)) continue;
                 if (pyynnot[pi].T > kursori) Lisaa(new Askel { Tee = "odota", S = pyynnot[pi].T - kursori });
                 Lisaa(pa);
             }
-            return (askeleet, kestot, kaytetty);
+            return (askeleet, kestot, kuultu.Count);
         }
 
         /// <summary>Kuinka monta taulun kohtaa on vielä kuulematta tämänhetkisessä huoneessa (Pulu napautuksesta).</summary>

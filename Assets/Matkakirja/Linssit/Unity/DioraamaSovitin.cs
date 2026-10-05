@@ -82,9 +82,9 @@ namespace Matkakirja.Natiivi
             return latausOsuus;
         }
 
-        static (string Tila, string Hahmo)? puluJono;
+        static (string Tila, string Hahmo, int Kohta)? puluJono;
         /// <summary>Pulun napautusvuoro keskustelun jälkeen (viimeisin napautus voittaa).</summary>
-        public static void PuluJonoon(string tila, string hahmo) => puluJono = (tila, hahmo);
+        public static void PuluJonoon(string tila, string hahmo, int kohta = -1) => puluJono = (tila, hahmo, kohta);
         /// <summary>"poikki pulu napautus 0|1": Pulu vain napautuksesta (oletus päällä elävässä linnassa) vs. vanha käsikirjoitus.</summary>
         public static bool PuluNapautuksesta = true;
         /// <summary>Cinemachine-kamerat (suunnitelma kohta 1); luodaan näyttämön kanssa, tuhoutuu sen mukana.</summary>
@@ -276,9 +276,9 @@ namespace Matkakirja.Natiivi
             // Keskustelun aikana napautettu Pulun vuoro (DioraamaSyote): soi, kun kuunnelma on päättynyt, jos ollaan yhä samassa huoneessa.
             if (puluJono.HasValue && !KuunnelmaKaistale.SoiNyt)
             {
-                var (jTila, jHahmo) = puluJono.Value;
+                var (jTila, jHahmo, jKohta) = puluJono.Value;
                 puluJono = null;
-                if (jTila == ViimeisinNakyma?.KohdeTila) { linssi.Napauta(t, jHahmo); o.Kirjaa($"poikki: pulu jonosta ({jHahmo ?? "kohta"})"); }
+                if (jTila == ViimeisinNakyma?.KohdeTila) { linssi.Napauta(t, jHahmo, jKohta); o.Kirjaa($"poikki: pulu jonosta ({jHahmo ?? (jKohta >= 0 ? "kohde " + jKohta : "kohta")})"); }
             }
             timeline.Paivita(linssi, rakennus, t, pysty, pysaytettyT.HasValue || SaapumisOdotus);
             var nakyma = linssi.NakymaHetkella(t, pysty);
@@ -333,6 +333,15 @@ namespace Matkakirja.Natiivi
             hahmot3D.Paivita(rakennus, nakyma, nayttamo.Kamera, t);
             // era 2b kohta 4 (ali-agentti P4b): 3D-pienoisfiguurit -- SAMAAN kohtaan kuin vanha 2D-hahmot3D
             // yllä, mutta Nayttamon omistama (ks. DioraamaNayttamo.cs:n Hahmot3D-kommentti).
+            // Kohtaukset v2: keskustelun puhuva hahmo (KuunnelmaKaistale: puhujittaiset aikaleimat) puhe-silmukalle; muut ennallaan.
+            string puhuva = KuunnelmaKaistale.PuhuvaHahmo;
+            if (puhuva != null && nakyma.KohdeTila != null && nakyma.Hahmot != null)
+                for (int hi = 0; hi < nakyma.Hahmot.Count; hi++)
+                {
+                    var hn = nakyma.Hahmot[hi];
+                    if (hn.TilaId == nakyma.KohdeTila && hn.HahmoId == puhuva && hn.Naky)
+                        nakyma.Hahmot[hi] = new HahmoNakyma(hn.TilaId, hn.HahmoId, hn.Naky, "puhe", hn.Ruutu);
+                }
             nayttamo.Hahmot3D?.Paivita(rakennus, nakyma, t);
             // Olavinlinna: kuoren leikkausikkuna kohdistetun tilan kohdalle (kasvaa kaarilennon jälkipuoliskolla).
             nayttamo.Ulkokuori?.PaivitaLeikkaus(rakennus, linssi.LeikkausHetkella(t), nayttamo.Kamera);

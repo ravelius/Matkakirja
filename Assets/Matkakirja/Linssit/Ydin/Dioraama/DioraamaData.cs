@@ -245,6 +245,10 @@ namespace Matkakirja.Linssit.Dioraama
         public string Teksti, Lahde;
         /// <summary>Äänen id Rakennus.Aanet-pankissa, tai null (era 2 kohta 2: taulu.kohdat[].aani).</summary>
         public string Aani;
+        /// <summary>Kohteen paikka rakennuksen koordinaateissa (taulu.kohdat[].kohde.paikka) ja säde m, tai null: Pulu
+        /// napautuksesta -tilassa napautus kohteeseen soittaa juuri tämän kohdan (omistajan linnapalaute 5.10.).</summary>
+        public V3? KohdePaikka;
+        public double KohdeSade;
     }
 
     public sealed class Taulu
@@ -435,9 +439,26 @@ namespace Matkakirja.Linssit.Dioraama
 
     /// <summary>Huoneen kuunnelman rivi (Päätoimittaja 30.9.2026, `tila.kuunnelma[]`): puhuja = tilan hahmon id tai "pulu",
     /// nimi tekstitykseen, huom (esim. "oven takaa"), aani = tuleva ääni-id (null, kunnes omistaja valitsee äänet).</summary>
+    /// <summary>Monipuhujaoton vuoro (kohtaukset v2, omistaja 5.10.: keskustelu yhtenä ottona): puhuja = hahmon id, ajat
+    /// sekunteina äänitiedoston alusta (Pelikoodarin aikaleimat).</summary>
+    public sealed class KuunnelmaVuoro
+    {
+        public string Puhuja, Teksti;
+        public double AlkuS, LoppuS;
+    }
+
     public sealed class KuunnelmaRivi
     {
         public string Id, Puhuja, Nimi, Huom, Teksti, Aani;
+        /// <summary>Keskustelurivin vuorot (tyhjä = yksi puhuja koko rivin).</summary>
+        public List<KuunnelmaVuoro> Vuorot = new List<KuunnelmaVuoro>();
+        /// <summary>Vuoro rivin paikallisella hetkellä s (vuorojen välissä edellinen), tai null.</summary>
+        public KuunnelmaVuoro VuoroHetkella(double s)
+        {
+            KuunnelmaVuoro r = null;
+            foreach (var v in Vuorot) if (v.AlkuS <= s) r = v;
+            return r;
+        }
         public bool Pulu => Puhuja == "pulu";
         /// <summary>Kesto ilman ääntä: 14 merkkiä sekunnissa + 0,6 s tauko (Päätoimittaja 30.9.).</summary>
         public double TekstinKesto => (Teksti?.Length ?? 0) / 14.0 + 0.6;
@@ -971,8 +992,12 @@ namespace Matkakirja.Linssit.Dioraama
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "kohdat")))
             {
                 var k = MiniJson.ObjektiTaiNull(rivi);
-                if (k != null) t.Kohdat.Add(new Kohta { Teksti = MiniJson.Teksti(k, "teksti"), Lahde = MiniJson.Teksti(k, "lahde"),
-                    Aani = MiniJson.Teksti(k, "aani") });
+                if (k == null) continue;
+                var kohde = MiniJson.ObjektiTaiNull(MiniJson.Kentta(k, "kohde"));
+                t.Kohdat.Add(new Kohta { Teksti = MiniJson.Teksti(k, "teksti"), Lahde = MiniJson.Teksti(k, "lahde"),
+                    Aani = MiniJson.Teksti(k, "aani"),
+                    KohdePaikka = kohde != null && MiniJson.Kentta(kohde, "paikka") != null ? LueV3(MiniJson.Kentta(kohde, "paikka")) : (V3?)null,
+                    KohdeSade = kohde != null ? MiniJson.Luku(kohde, "sade") ?? 0.6 : 0 });
             }
             return t;
         }
@@ -1015,11 +1040,18 @@ namespace Matkakirja.Linssit.Dioraama
             {
                 var k = MiniJson.ObjektiTaiNull(ko);
                 if (k == null || string.IsNullOrEmpty(MiniJson.Teksti(k, "teksti"))) continue;
-                t.Kuunnelma.Add(new KuunnelmaRivi
+                var kr = new KuunnelmaRivi
                 {
                     Id = MiniJson.Teksti(k, "id"), Puhuja = MiniJson.Teksti(k, "puhuja"), Nimi = MiniJson.Teksti(k, "nimi"),
                     Huom = MiniJson.Teksti(k, "huom"), Teksti = MiniJson.Teksti(k, "teksti"), Aani = MiniJson.Teksti(k, "aani"),
-                });
+                };
+                foreach (var vo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(k, "vuorot")))
+                {
+                    var v = MiniJson.ObjektiTaiNull(vo);
+                    if (v != null) kr.Vuorot.Add(new KuunnelmaVuoro { Puhuja = MiniJson.Teksti(v, "puhuja"), Teksti = MiniJson.Teksti(v, "teksti"),
+                        AlkuS = MiniJson.Luku(v, "alku_s") ?? 0, LoppuS = MiniJson.Luku(v, "loppu_s") ?? 0 });
+                }
+                t.Kuunnelma.Add(kr);
             }
             foreach (var rivi in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "hahmot")))
             {

@@ -189,12 +189,13 @@ namespace Matkakirja.Natiivi
             if (linssi != null && linssi.PuluNapautuksesta && nykyinen != null && rakennus.Tila(nykyinen) is Tila oma)
             {
                 string hahmo = LahinHahmo(oma, ruutu, kamera);
+                int kohta = hahmo == null ? LahinKohde(oma, ruutu, kamera) : -1;
                 var sade0 = kamera.ScreenPointToRay(new Vector3(ruutu.x, ruutu.y, 0));
-                if (hahmo != null || UnityAabb(oma.RajaMin, oma.RajaMax).IntersectRay(sade0))
+                if (hahmo != null || kohta >= 0 || UnityAabb(oma.RajaMin, oma.RajaMax).IntersectRay(sade0))
                 {
                     // Keskustelun (kuunnelman) aikana Pulu odottaa vuoroaan: puhuu, kun keskustelu päättyy (ei keskeytä).
-                    if (KuunnelmaKaistale.SoiNyt) DioraamaSovitin.PuluJonoon(nykyinen, hahmo);
-                    else linssi.Napauta(t, hahmo);
+                    if (KuunnelmaKaistale.SoiNyt) DioraamaSovitin.PuluJonoon(nykyinen, hahmo, kohta);
+                    else linssi.Napauta(t, hahmo, kohta);
                     return;
                 }
             }
@@ -244,6 +245,28 @@ namespace Matkakirja.Natiivi
                 float sadePx = Mathf.Max(minPx, Vector2.Distance(r, reuna));
                 float d = Vector2.Distance(new Vector2(r.x, r.y), ruutu);
                 if (d <= sadePx && d < lahin) { lahin = d; paras = h.Id; }
+            }
+            return paras;
+        }
+
+        /// <summary>Taulun kohta, jonka kohteen (taulu.kohdat[].kohde, kohtaukset v2) lähelle napautus osuu, tai −1.</summary>
+        static int LahinKohde(Tila tila, Vector2 ruutu, Camera kamera)
+        {
+            var kohdat = tila.Taulu?.Kohdat;
+            if (kohdat == null) return -1;
+            int paras = -1;
+            float lahin = float.PositiveInfinity;
+            float minPx = 36f * (Screen.dpi > 0 ? Screen.dpi / 163f : 2f);
+            for (int i = 0; i < kohdat.Count; i++)
+            {
+                if (!(kohdat[i].KohdePaikka is V3 kp)) continue;
+                var p = DioraamaNayttamo.UnityPiste(kp);
+                var r = kamera.WorldToScreenPoint(p);
+                if (r.z <= 0f) continue;
+                var reuna = kamera.WorldToScreenPoint(p + kamera.transform.right * (float)Math.Max(0.3, kohdat[i].KohdeSade));
+                float sadePx = Mathf.Max(minPx, Vector2.Distance(r, reuna));
+                float d = Vector2.Distance(new Vector2(r.x, r.y), ruutu);
+                if (d <= sadePx && d < lahin) { lahin = d; paras = i; }
             }
             return paras;
         }

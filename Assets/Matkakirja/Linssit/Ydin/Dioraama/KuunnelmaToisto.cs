@@ -30,6 +30,8 @@ namespace Matkakirja.Linssit.Dioraama
         public int Maara => rivit.Count;
         public bool Kaynnissa => i >= 0 && i < rivit.Count;
         public KuunnelmaRivi Rivi => Kaynnissa ? rivit[i] : null;
+        /// <summary>Nykyisen rivin vuoro hetkellä t (kohtaukset v2), tai null.</summary>
+        public KuunnelmaVuoro Vuoro(double t) => Kaynnissa ? rivit[i].VuoroHetkella(t - alku) : null;
 
         public double Kesto(KuunnelmaRivi r)
         {
