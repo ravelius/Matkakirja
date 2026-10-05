@@ -74,6 +74,10 @@ namespace Matkakirja.Linssit.IssKamera
             Laatat.Clear(); Pakatut.Clear(); purettu.Clear(); System.Threading.Interlocked.Exchange(ref purettuTavut, 0);
         }
 
+        /// <summary>Onko puretussa laatassa nodataa (radan reunan syövytys tarkistaa kehän vain näiden lähellä).</summary>
+        public readonly System.Collections.Concurrent.ConcurrentDictionary<(string, int, int, int), bool> NodataLaatat =
+            new System.Collections.Concurrent.ConcurrentDictionary<(string, int, int, int), bool>();
+
         /// <summary>Purettu laatta tai null (ei haettu).</summary>
         public byte[] Hae((string tunnus, int taso, int tx, int ty) avain)
         {
@@ -170,6 +174,7 @@ namespace Matkakirja.Linssit.IssKamera
                     int ix = (int)fx, iy = (int)fy; double ax = fx - ix, ay = fy - iy;
                     if (!Pikselit(d, ru.Tunnus, t, taso, ix, iy, out var p00, out var p10, out var p01, out var p11)) continue;   // ei haettu
                     if (Musta(p00) || Musta(p10) || Musta(p01) || Musta(p11)) continue;   // nodata (myös reunapikseli)
+                    if (ru.Nodata > 0 && RadanReunalla(d, ru.Tunnus, t, taso, ix, iy)) continue;   // yleiskuvatason tumma reunapikseli
                     byte luokka = d.SclLuokka(ru.Tunnus, e, n, pm);
                     if (luokka == 3 || luokka == 8 || luokka == 9 || luokka == 10) continue;   // S2:n oma pilvi tai sen varjo → seuraava / varakuva
                     double cr = (p00.r * (1 - ax) + p10.r * ax) * (1 - ay) + (p01.r * (1 - ax) + p11.r * ax) * ay;
@@ -313,6 +318,43 @@ namespace Matkakirja.Linssit.IssKamera
         /// </summary>
         static bool Musta((byte r, byte g, byte b) p) => p.r <= NodataRaja && p.g <= NodataRaja && p.b <= NodataRaja;
         public const byte NodataRaja = 6;
+        /// <summary>
+        /// Radan reunan syövytys (simu 10c31692 Sahara 32RNN: ohut tumma pisteviiva radan reunassa). COG on häviötön, ja taso 0
+        /// on reunalta terävä, mutta yleiskuvatasot keskiarvoistavat reunapikselin nodatan kanssa: 40 m:n tasolla 1 pikseli
+        /// (mediaani 68 % taustan kirkkaudesta), 80 m:n tasolla 1–2 (40 % ja 93 %). Ne ovat yli NodataRajan, joten niitä ei
+        /// tunnisteta mustiksi. Jos 2 pikselin kehällä 2 × 2 -näytteen ympärillä (tason omassa resoluutiossa) on nodataa,
+        /// pikseli ohitetaan, ja seuraava ruutu tai varakuva täyttää. Vain ruuduille, joilla on nodataa (indeksin nodata > 0).
+        /// </summary>
+        static bool RadanReunalla(KuvaData d, string tunnus, CogTaso t, int taso, int ix, int iy)
+        {
+            int x0 = Math.Max(0, ix - 2), y0 = Math.Max(0, iy - 2), x1 = Math.Min(t.Leveys - 1, ix + 3), y1 = Math.Min(t.Korkeus - 1, iy + 3);
+            bool lahella = false;
+            for (int ty = y0 / t.LaattaK; ty <= y1 / t.LaattaK && !lahella; ty++)
+                for (int tx = x0 / t.LaattaL; tx <= x1 / t.LaattaL && !lahella; tx++)
+                    lahella = LaatassaNodataa(d, tunnus, taso, tx, ty);
+            if (!lahella) return false;
+            for (int j = -2; j <= 3; j++)
+                for (int i = -2; i <= 3; i++)
+                {
+                    if (i > -2 && i < 3 && j > -2 && j < 3) continue;   // vain kehä (etäisyys 2 näytteen 2 × 2 -lohkosta)
+                    int x = ix + i, y = iy + j;
+                    if (x < 0 || y < 0 || x >= t.Leveys || y >= t.Korkeus) continue;
+                    if (Lue(d, tunnus, t, taso, x, y, out var p) && Musta(p)) return true;
+                }
+            return false;
+        }
+
+        static bool LaatassaNodataa(KuvaData d, string tunnus, int taso, int tx, int ty)
+        {
+            var avain = (tunnus, taso, tx, ty);
+            if (d.NodataLaatat.TryGetValue(avain, out bool on)) return on;
+            var l = d.Hae(avain);
+            if (l == null) return false;   // ei haettu: ei lippua välimuistiin
+            for (int i = 0; i + 2 < l.Length && !on; i += 3) on = l[i] <= NodataRaja && l[i + 1] <= NodataRaja && l[i + 2] <= NodataRaja;
+            d.NodataLaatat[avain] = on;
+            return on;
+        }
+
         static byte Seka(byte a, byte b, byte c, byte d, double ax, double ay)
             => (byte)Math.Round((a * (1 - ax) + b * ax) * (1 - ay) + (c * (1 - ax) + d * ax) * ay);
 

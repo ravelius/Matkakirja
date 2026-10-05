@@ -60,6 +60,42 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi]
+        static void RadanReunanTummaPikseliSyovytetaan()
+        {
+            // Simu 10c31692 (Sahara 32RNN): yleiskuvatason reunapikseli on keskiarvoistunut nodatan kanssa (40 m: 68 %, 80 m:
+            // 40 % ja 93 % taustasta) ja piirtyi ohuena tummana viivana. Nodatan 2 px:n kehällä ruudun pikseli ohitetaan, ja
+            // limittyvä ruutu täyttää. Ruutu, jolla indeksin mukaan ei ole nodataa, ei syöpy.
+            const double pm = 600; const int L = 183;
+            var d = new KuvaData();
+            S2Ruutu Ruutu(string tunnus, double nodata, Func<int, byte> arvo)
+            {
+                var o = new CogOtsake { Ita0 = 300_000, Pohjoinen0 = 6_700_000, PikseliM = pm };
+                o.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 3 });
+                var (s, w) = Utm.Taakse(300_000, 6_700_000 - L * pm, 35); var (nn, e) = Utm.Taakse(300_000 + L * pm, 6_700_000, 35);
+                var ru = new S2Ruutu { Tunnus = tunnus, Nodata = nodata, W = w - 1, S = s - 1, E = e + 1, N = nn + 1 };
+                var l = new byte[L * L * 3];
+                for (int y = 0; y < L; y++) for (int x = 0; x < L; x++) { byte v = arvo(x); int i = (y * L + x) * 3; l[i] = v; l[i + 1] = v; l[i + 2] = v; }
+                d.Laatat[(tunnus, 0, 0, 0)] = l;
+                d.Ruudut.Add((ru, o));
+                return ru;
+            }
+            // A: nodata x < 90, reunapikselit 90 (40) ja 91 (186), sitten tausta 200. B (sama neliö, eri päivä) 120.
+            var a = Ruutu("35VLG", 3.3, x => x < 90 ? (byte)0 : x == 90 ? (byte)80 : x == 91 ? (byte)186 : (byte)200);
+            Ruutu("35VLG#1", 0, x => 120);
+            byte Arvo(double x)
+            {
+                var (la, lo) = Utm.Taakse(300_000 + (x + 0.5) * pm, 6_700_000 - 90.5 * pm, 35);
+                Oleta.Tosi(Uudelleenprojisointi.Nayte(d, la, lo, pm, out var r, out _, out _), $"dataa {x}");
+                return r;
+            }
+            Oleta.Sama((byte)120, Arvo(91), "reunapikseli (A:n tumma) ohitetaan → B");
+            Oleta.Sama((byte)120, Arvo(91.9), "toinen reunapikseli (186) myös ohitetaan");
+            Oleta.Sama((byte)160, Arvo(92.5), "reunapikselien jälkeen A ja B ristiin (200 ja 120)");
+            a.Nodata = 0;   // indeksin mukaan aukoton → ei syövytystä (vanha käytös)
+            Oleta.Sama((byte)153, Arvo(91), "aukoton ruutu ei syövy: A:n 186 ja B:n 120 ristiin");
+        }
+
+        [Testi]
         static void UsvatasoitusLimityksesta()
         {
             // Simu 26f1141e (Coloradon suisto): tummin prosentti luki 11RQQ:n meren usvattomaksi → naapurit −40 ja 11RQQ:n maa
