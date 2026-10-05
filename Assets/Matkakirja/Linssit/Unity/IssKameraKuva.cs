@@ -865,8 +865,8 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Teksti välimuistista (tiedosto) tai verkosta (tallennetaan onnistuessa); null = ei saatu (404 ei välimuistiin).</summary>
-        /// <summary>s2-eurooppa/v1-mosaiikin avomeren väri (vakio 92 %:ssa Kanarian mosaiikkilaatoista, simu f7310e55).</summary>
-        static readonly byte[] MosaiikinMeri = { 48, 65, 85 };
+        /// <summary>s2-eurooppa/v1-mosaiikin avomeren kiinteä väri (Karttaseppä: euromosaiikki-v2.mjs MERI, Ligurianmeren mediaani).</summary>
+        static readonly byte[] MosaiikinMeri = { 48, 64, 85 };
 
         static IEnumerator HaeTeksti(string url, string tiedosto, Action<string> valmis)
         {

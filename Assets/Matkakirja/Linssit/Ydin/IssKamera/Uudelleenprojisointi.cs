@@ -43,7 +43,7 @@ namespace Matkakirja.Linssit.IssKamera
         public byte[] Meri = { 14, 22, 30 };
         /// <summary>
         /// Lopullinen merenväri ruudun lutin jälkeen (null = lut(Meri)). Simu f7310e55 (Kanaria): s2-eurooppa/v1-mosaiikin avomeri
-        /// on vakio (48,65,85), COG:n meri lutin läpi (57,72,84) → suora sauma mosaiikin eteläreunassa (31,95° N). Vesipikselin
+        /// on kiinteä (48,64,85), COG:n meri lutin läpi (57,72,84) → suora sauma mosaiikin eteläreunassa (31,95° N). Vesipikselin
         /// poikkeama säilyy lutin kautta: ulos = MeriUlos + lut(Meri + poikkeama) − lut(Meri).
         /// </summary>
         public byte[] MeriUlos;
