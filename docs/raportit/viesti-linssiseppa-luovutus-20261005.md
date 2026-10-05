@@ -22,7 +22,10 @@ Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), i
 - 06.06 ajo -c (käännös 5cc14f8a = 03223685): sävy-A/B OK, valojen porraskuvio poissa, MUTTA sumeaan seinään heikko
   ruudukko (suora 4×-pienennys) → korjattu **e6fa10ea** (pienennys 4×4-lohkon keskiarvona, pass 3). Käännös + simu
   pyydetty Julkaisijalta 06.1x; ketju: `ketju-linna-kuva.sh` (vaihda tulos -d:ksi) tai ajo-linna-kuva.sh uudelle .appille.
-- SEURAAVAKSI: tarkista -d suurennoksina (ei porraskuviota eikä ruudukkoa, terävä kaista) → kuvapari Päätoimittajalle (sävy yleis+kappeli,
+- 06.4x ajo **-d** (käännös 46d3aca2 = e6fa10ea): kuvapari LÄHETETTY Päätoimittajalle 06.5x (kuvat/omistajalle, merkitty).
+  Porraskuvio poissa; sumeassa seinässä suurennoksessa yhä heikko ~2 px:n ruudukko (ei pienennyksestä, juurisyy auki:
+  epäily R11G11B10/half-tarkkuus tai Yhdista-passin lerp; tutki vasta jos Päätoimittaja valitsee tilt-shiftin).
+- SEURAAVAKSI: Päätoimittajan A/B-valinta (tiltshift 0/1, savy neutral/aces) → oletukset valinnan mukaan → merge-pyyntö (sävy yleis+kappeli,
   tilt yleis/laituri/kappeli/keittiö, video tilt-yleis-kappeli.mov) → merge-pyyntö Natiivisepälle Päätoimittajan
   kuittauksella; Siirtoseppä rebasettaa Cinemachine-vaiheen päälle.
 
