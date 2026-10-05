@@ -28,16 +28,14 @@ Avoin (**EPÄVARMA**): Environment Agencyn ilmakuvien lisenssi (OGL?) mahdollise
 - **Julkaisuvaiheen riski:** kun pelaajia on paljon, raja ylittyy. Varapolku on valmiina: samat Cesium-komponentit, mutta
   maasto (GLO-30) ja LOD1-rakennukset (OSM) omasta ämpäristä. Vaihto on URL-muutos, ei uudelleenrakennus.
 
-## 3. Access tokenin käsittely
+## 3. Access tokenin käsittely (LS2:n täsmennys 5.10.)
 
 - **Yksi token, vain luku** (`assets:read`) ja **rajattu assetteihin 1 ja 96188**. Ei geokoodausta, ei listausoikeutta.
-- **Ei repoon:** Cesium for Unityn CesiumIonServer-asset tallentaa oletustokenin projektitiedostoon. Sitä ei käytetä
-  (kenttä jää tyhjäksi), vaan token asetetaan ajossa C#:sta (`Cesium3DTileset.ionAccessToken`). Arvo luetaan käännöksessä
-  ympäristömuuttujasta `CESIUM_ION_TOKEN` (avaintiedosto ~/.matkakirja-avaimet-koodaus.zsh + GitHub Actions secret)
-  generoituun tiedostoon, joka on .gitignoressa. Ei lokiin eikä konsoliin.
-- Sovellukseen upotettu token on aina luettavissa. Siksi rajaus assetteihin ja vain lukuoikeus ovat varsinainen suoja, ja token
-  kierrätetään ionin hallinnasta, jos sitä käytetään väärin.
-  Myöhemmin voi siirtyä hakemaan tokenin ämpäristä ajossa, jolloin kierrätys ei vaadi uutta käännöstä.
+- **Ei repoon, ei käännökseen:** CesiumIonServer-assetin tokenkentät ovat nyt tyhjiä, ja ne pidetään tyhjinä. Natiivi käännetään Macilla
+  (proto-kaanna.sh), ei CI:ssä. Siksi sovellus hakee tokenin ajossa ämpäristä (pieni json) ja asettaa sen C#:sta
+  (`Cesium3DTileset.ionAccessToken`). Kierrätys on uusi json ilman käännöstä. Ei lokiin eikä konsoliin.
+- Ajossa haettu token on aina luettavissa. Siksi rajaus assetteihin ja vain lukuoikeus ovat varsinainen suoja; väärinkäytössä token
+  kierrätetään ionin hallinnasta.
 
 ## 4. Lontoon lentorata (6–8 kohdetta, noin 3–4 min)
 
@@ -51,6 +49,10 @@ Ehdotus. Kaanon ja tekstit ovat Fablen; kytkös vuoden 1873 matkaan: Fogg lähte
 6. Reform Club, Pall Mall (vedonlyönti)
 7. Westminster: parlamenttitalo, Big Ben ja Westminster Abbey
 8. Loppu: Buckingham Palace tai London Eye nousevalla kameralla
+
+**Natiivi (LS2):** Lontoon tilesetit samaan CesiumGeoreferenceen kuin pallo. Lennon ajaksi origo siirretään Lontooseen
+(float-tarkkuus), ja kamera päivitetään ennen Cesiumia (kuten KyydinKameraEnnen). Seuraavan kohteen laatat ladataan etukäteen
+hitaalla lähestymisellä tai pysähdyksellä, ja reikiä vastaan käytetään asetuksia forbidHoles ja preloadAncestors.
 
 Tunnusrakennukset 2, 3 ja 7 tulevat tarkempina omina malleina, jos ne tehdään (Mallinseppä/Linnanrakentaja). Muuten
 OSM Buildingsin massat.
@@ -86,5 +88,6 @@ kohteen nimi ruudulle. Esitysmoottorin aikajana ja kamerakoreografia (linssikata
    - nimi `matkakirja-lontoo-pilotti`
    - scope vain `assets:read`
    - "Resources": valitse vain assetit **1 (Cesium World Terrain)** ja **96188 (Cesium OSM Buildings)**
-3. Lisää token avaintiedostoon `~/.matkakirja-avaimet-koodaus.zsh` riville `export CESIUM_ION_TOKEN=...`
-   ja GitHub Actions -salaisuudeksi `CESIUM_ION_TOKEN`. Tokenia ei lähetetä chattiin.
+3. Lisää token avaintiedostoon `~/.matkakirja-avaimet-koodaus.zsh` riville `export CESIUM_ION_TOKEN=...`; Karttaseppä tai
+   Julkaisija tekee siitä ämpäriin tokenin jsonin, jonka natiivi hakee. Tokenia ei lähetetä chattiin.
+4. Lupa iPad-mittaukseen (00008103) jokaista testikertaa varten.
