@@ -133,6 +133,7 @@ namespace Matkakirja.Natiivi
             y.Pelikerrokset(false);
             y.MusiikkiPitoon(true);
             y.Peite(true);
+            o.StartCoroutine(PeitePois());   // simu 18.39: peite jäi päälle ja tummensi koko näkymän
             if (puhe == null)
             {
                 puhe = o.gameObject.AddComponent<AudioSource>();
@@ -392,6 +393,12 @@ namespace Matkakirja.Natiivi
         public string Tila() => silmukka == null ? "opas: kiinni"
             : $"opas: {kaupunki.Kaytossa} {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "-")}, seuraava {(silmukka.Seuraava?.Nimi ?? "-")}, nähty {System.Linq.Enumerable.Count(silmukka.Nahdyt)}, laatat {kaupunki.Latausaste:F0} %"
               + (Testi ? ", TESTI" : "") + (Virhe != null ? ", VIRHE " + Virhe : "");
+
+        System.Collections.IEnumerator PeitePois()
+        {
+            yield return new WaitForSecondsRealtime(0.3f);
+            y?.Peite(false);
+        }
 
         public void Sulje()
         {

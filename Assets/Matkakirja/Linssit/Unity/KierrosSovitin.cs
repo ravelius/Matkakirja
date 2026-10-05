@@ -59,6 +59,7 @@ namespace Matkakirja.Natiivi
             y.Pelikerrokset(false);
             y.MusiikkiPitoon(true);
             y.Peite(true);
+            o.StartCoroutine(PeitePois());   // simu 18.39: peite jäi päälle ja tummensi koko näkymän
             lento.Saapui += i => o.Kirjaa($"{Tiedot.Id}: saapui {i + 1}/{lento.Reitti.Count} {lento.Reitti[i].Id} ({Time.realtimeSinceStartup - avattu:F1} s avauksesta)");
             if (o.GetComponent<KyydinKameraEnnen>() == null) o.gameObject.AddComponent<KyydinKameraEnnen>();
             KyydinKameraEnnen.Ajo = PaivitaKamera;
@@ -95,6 +96,12 @@ namespace Matkakirja.Natiivi
         public string Tila() => lento == null ? $"{kierros.Tiedot.Id}: kiinni"
             : $"{kierros.Tiedot.Id}: {kaupunki.Kaytossa} {lento.Vaihe} {lento.Indeksi + 1}/{lento.Reitti.Count} {lento.Nykyinen.Id}, vaihe {lento.VaiheAika:F1}/{lento.VaiheKesto:F1} s, laatat {kaupunki.Latausaste:F0} %"
               + (Virhe != null ? ", VIRHE " + Virhe : "");
+
+        System.Collections.IEnumerator PeitePois()
+        {
+            yield return new WaitForSecondsRealtime(0.3f);
+            y?.Peite(false);
+        }
 
         public void Sulje()
         {

@@ -75,10 +75,11 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Workerin kysymys: sovitin soittaa sen ja näyttää vaihtoehdot chatissa; vastaus tulee Toive-kutsuna.</summary>
         public event Action<OpasKohde> Kysyy;
         /// <summary>Kysymykseen ei vastattu: oma valinta tämän jälkeen (s puheen lopusta).</summary>
-        public const double KysymysOdotusS = 25;
+        public const double KysymysOdotusS = 15;
         /// <summary>Kysymys odottaa vastausta (esihakua ei tehdä).</summary>
         public bool OdottaaVastausta { get; private set; }
         double kysymysAika = -1;
+        string kysymysOletus;
 
         readonly HashSet<string> nahdyt = new HashSet<string>(StringComparer.Ordinal);
         int pyynto, odotettu;
@@ -171,6 +172,7 @@ namespace Matkakirja.Linssit.Kierros
             {
                 // Kysymys ei liikuta kameraa: opas kysyy, ja pelaajan valinta (chat) tulee Toive-kutsuna.
                 OdottaaVastausta = true; kysymysAika = 0;
+                kysymysOletus = k.Vaihtoehdot != null && k.Vaihtoehdot.Length > 0 ? k.Vaihtoehdot[0] : null;
                 Kysyy?.Invoke(k);
                 return;
             }
@@ -191,7 +193,8 @@ namespace Matkakirja.Linssit.Kierros
             VaiheAika += Math.Max(0, dt);
             if (odotettu != 0) { if (odotusAlku < 0) odotusAlku = 0; odotusAlku += dt; if (odotusAlku > VastausMaxS) { odotettu = 0; virhe = true; } }
             if (virhe) { virhe = false; UusiPyynto(); }
-            if (OdottaaVastausta && aaniLoppui) { kysymysAika += dt; if (kysymysAika > KysymysOdotusS) { OdottaaVastausta = false; UusiPyynto(); } }
+            // Vastaamaton kysymys (simu 18.39: worker kysyi saman 9 kertaa): opas valitsee itse ensimmäisen vaihtoehdon.
+            if (OdottaaVastausta && aaniLoppui) { kysymysAika += dt; if (kysymysAika > KysymysOdotusS) { OdottaaVastausta = false; toive = kysymysOletus ?? "Valitse sinä paikka"; UusiPyynto(); } }
 
             switch (Vaihe)
             {

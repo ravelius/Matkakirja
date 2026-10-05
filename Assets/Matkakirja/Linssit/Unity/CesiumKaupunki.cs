@@ -149,6 +149,8 @@ namespace Matkakirja.Natiivi
             if (haettava) kierto.StartCoroutine(HaeTunnus(data));
             else LuoData(data);
             KarttaKerrokset.RuutukrediititNakyviin = true;
+            // Pallon karttatekstit ja -viivat pois samasta kuvasta (simu 18.39: "ISO-BRITANNIA" näkyi Googlen kuvan päällä).
+            PallonViivat(false);
             return true;
         }
 
@@ -223,6 +225,15 @@ namespace Matkakirja.Natiivi
             if (auki && Kaytossa == Lahde.Google) LuoData(Lahde.Ion);
         }
 
+        /// <summary>Alue- ja merinimet, rajat, rannikko, reitit ja napakannet (pelin oletus: näkyvissä); pelikerrokset hoitaa sovitin.</summary>
+        static readonly string[] Viivat = { "aluenimet", "rajat", "rannikko", "reitit", "napakannet" };
+        static void PallonViivat(bool nakyy)
+        {
+            var k = KarttaKerrokset.Instanssi;
+            if (k == null) return;
+            foreach (var v in Viivat) k.Nakyvyys(v, nakyy);
+        }
+
         /// <summary>Georeferenssin origo uuteen paikkaan (kamera lasketaan ECEF:stä joka kehys, joten kuva ei hyppää).</summary>
         public void SiirraOrigo(double lat, double lon, double korkeus)
         {
@@ -268,6 +279,7 @@ namespace Matkakirja.Natiivi
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             juuri = null; maasto = null; rakennukset = null; esikamera = null; hallinta = null;
             KarttaKerrokset.RuutukrediititNakyviin = false;
+            PallonViivat(true);
             if (georef != null && georef.isActiveAndEnabled) { georef.Initialize(); georef.SetOriginLongitudeLatitudeHeight(vanhaOrigo.x, vanhaOrigo.y, vanhaOrigo.z); }
             if (palloTileset != null && palloOli) palloTileset.enabled = true;
             if (pohjaOli) Pohjapallo.Tila = pohjaTila;
