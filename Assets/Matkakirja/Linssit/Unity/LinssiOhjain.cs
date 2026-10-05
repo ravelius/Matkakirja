@@ -2004,7 +2004,7 @@ namespace Matkakirja.Natiivi
                 else if (osat[0] == "lontoo")
                 {
                     if (osat.Length > 1 && osat[1] == "ohita") lontoo?.Ohita();
-                    else if (osat.Length > 2 && osat[1] == "data" && Enum.TryParse<KierrosSovitin.Lahde>(osat[2], true, out var ld)) KierrosSovitin.Data = ld;
+                    else if (osat.Length > 2 && osat[1] == "data" && Enum.TryParse<CesiumKaupunki.Lahde>(osat[2], true, out var ld)) CesiumKaupunki.Data = ld;
                     Kirjaa(lontoo?.Tila() ?? "lontoo: ei sovitinta");
                 }
                 else if (osat[0] == "poikki")
