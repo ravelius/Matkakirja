@@ -31,7 +31,8 @@ namespace Matkakirja.Natiivi
         /// <summary>Animaation ja sijainnin jälkeen: kohdistetun huoneen hahmoille FBBIK + Grounder.</summary>
         void Ik(Esiintyma e)
         {
-            if (!IkPaalla || e.TilaId == null || e.TilaId != PuhujanTila) return;
+            if (e.TilaId == null || e.TilaId != PuhujanTila) return;
+            if (!IkPaalla) { MittaaJalat(e); return; }
             if (e.Ik == null)
             {
                 if (e.IkYritetty) return;
@@ -41,6 +42,25 @@ namespace Matkakirja.Natiivi
             }
             Kolliderit(e.TilaId);
             e.Ik.solver.Update();
+            MittaaJalat(e);
+        }
+
+        /// <summary>A/B-mittari: 2 s välein kummankin nilkan korkeus lattiasta (säde IkKerrokseen) lokiin, IK päällä tai pois.
+        /// Nilkka on ~8–10 cm pohjan yläpuolella; vertailu IK pois/päällä on se, mikä kertoo (porras: läpi tai ilmassa).</summary>
+        void MittaaJalat(Esiintyma e)
+        {
+            if (Time.unscaledTime < e.JalkaMittausT) return;
+            e.JalkaMittausT = Time.unscaledTime + 2f;
+            Kolliderit(e.TilaId);
+            string Korkeus(string nimi)
+            {
+                foreach (var tr in e.SolmuT)
+                    if (tr != null && tr.name == nimi)
+                        return Physics.Raycast(tr.position + Vector3.up * 0.6f, Vector3.down, out var osuma, 2f, 1 << IkKerros)
+                            ? $"{(tr.position.y - osuma.point.y) * 100f:0}" : "–";
+                return "?";
+            }
+            Debug.Log($"MATKAKIRJA linssit: ik jalat {e.HahmoId} ik={(IkPaalla ? 1 : 0)} vasen {Korkeus("foot_l")} cm oikea {Korkeus("foot_r")} cm");
         }
 
         FullBodyBipedIK LuoIk(Esiintyma e)

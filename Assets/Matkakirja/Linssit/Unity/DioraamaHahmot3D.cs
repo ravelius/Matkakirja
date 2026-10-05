@@ -88,7 +88,7 @@ namespace Matkakirja.Natiivi
             public int PaaIndeksi = -2;
             public Quaternion PaaKierto = Quaternion.identity;
             public RootMotion.FinalIK.FullBodyBipedIK Ik; // Final IK (DioraamaHahmot3D.IK.cs): luodaan ensimmäisellä kohdistuksella
-            public bool IkYritetty;
+            public bool IkYritetty; public float JalkaMittausT;
             public string EleNimi; public double EleAlku; // kertaeleen (ele_<ele>) vuoro ja alkuhetki
         }
 
@@ -538,7 +538,7 @@ namespace Matkakirja.Natiivi
             if (puheTaiEle && tavoite != "puhe" && e.Malli.Glb.Animaatio(leike) == null)
             {
                 var ea = e.Malli.Glb.Animaatio("ele_" + tavoite);
-                if (e.EleNimi != tavoite) { e.EleNimi = tavoite; e.EleAlku = t; }
+                if (e.EleNimi != tavoite) { e.EleNimi = tavoite; e.EleAlku = t; Debug.Log($"MATKAKIRJA linssit: ele {e.HahmoId} {(ea != null ? $"ele_{tavoite} ({ea.Kesto:0.0} s)" : tavoite + " puuttuu → puhe")}"); }
                 leike = ea != null && t - e.EleAlku < ea.Kesto - PuheHaivytysS ? "ele_" + tavoite : Leike(m3, "puhe");
             }
             else if (!puheTaiEle || tavoite == "puhe") e.EleNimi = null;
