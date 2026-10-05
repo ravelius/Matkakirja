@@ -193,6 +193,7 @@ namespace Matkakirja.Natiivi
                 var sade0 = kamera.ScreenPointToRay(new Vector3(ruutu.x, ruutu.y, 0));
                 if (hahmo != null || kohta >= 0 || UnityAabb(oma.RajaMin, oma.RajaMax).IntersectRay(sade0))
                 {
+                    DioraamaTaulu.KorttiTila = nykyinen;   // huonekortti vain pelaajan napautuksesta (omistaja 5.10. 23.0x)
                     // Keskustelun (kuunnelman) aikana Pulu odottaa vuoroaan: puhuu, kun keskustelu päättyy (ei keskeytä).
                     Haara($"pulu {(KuunnelmaKaistale.SoiNyt ? "jonoon" : "nyt")} ({nykyinen}/{hahmo ?? "-"}/{kohta})");
                     if (KuunnelmaKaistale.SoiNyt) DioraamaSovitin.PuluJonoon(nykyinen, hahmo, kohta);
@@ -227,6 +228,7 @@ namespace Matkakirja.Natiivi
                 if (rajat.IntersectRay(sade, out float etaisyys) && etaisyys < lahin) { lahin = etaisyys; osuma = tila.Id; }
             }
             Haara(osuma != null ? "kohdista " + osuma + " (nykyinen " + (nykyinen ?? "-") + ")" : "tyhjä");
+            if (osuma == null && nykyinen == null) DioraamaTaulu.LaputNakyvissa = !DioraamaTaulu.LaputNakyvissa;   // nimilaput napautuksesta
             if (osuma != null) sovitin.Kohdista(osuma, t); // napautus tyhjään: ei tehdä mitään
         }
 
