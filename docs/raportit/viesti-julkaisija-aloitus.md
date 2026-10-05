@@ -1,17 +1,17 @@
-# Julkaisijan aloitusviesti (2.10.2026 klo 22.1x, tilinvaihto)
+# Julkaisijan aloitusviesti (5.10.2026 klo 06.0x, tilinvaihto)
 
 Olet Julkaisija, checkout /Users/Shared/Claude/Matkakirja-julkaisija. Lue luovutus suoraan origin-haarasta:
-`git fetch origin && git show origin/julkaisija-luovutus-20260928:docs/raportit/viesti-julkaisija-luovutus-20261002.md`.
-Lue myös CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/roolitus.md "Julkaisusäännöt". TF-suunnitelma:
-/Users/Shared/Claude/julkaisija-tyokalut/tf-jono-20261002.txt.
+`git fetch origin && git show origin/julkaisija-luovutus-20260928:docs/raportit/viesti-julkaisija-luovutus-20261005.md`.
+Lue myös CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/roolitus.md "Julkaisusäännöt". Juokseva loki:
+/Users/Shared/Claude/julkaisija-tyokalut/tf-jono-20261002.txt (tail -40), pitolista julkaisija-tyokalut/pidossa.txt.
 
 Fable = "Päätoimittaja (Opus, max)". Viestit Fablelle vain valmis erä, jumi tai kysymys (≤ 8 riviä);
 kuittaa aloitus yhdellä rivillä (malli + id).
 
 Ensimmäisenä:
-1. **Web-juna**: `ps -Ao command | grep -E "^zsh .*julkaisija-tyokalut/(ajojono|jonoon)"` — #3865 ajossa 22.10 (jonot kuolivat tilinvaihdossa),
-   jonossa #3870 ja #3877; #3850 on MERGEABLE ja menee junaan #3877:n jälkeen. Poista jäänyt `wt/julkaisija-prNNNN` ja aja `zsh julkaisija-tyokalut/jonoon.sh NNNN` avoimille.
-2. **TF**: 8/12 ladattu (viimeisin 129 = e204abbe). Illalle enintään 2, lataukset 11–12 aamuun ennen 12.30 nollausta.
-3. **Ämpäri**: vain `julkaisija-tyokalut/vie-paketti.sh <kansio>` (pysyvä lupa). Osoittimet omistajan OK:lla.
-4. **Vuorot**: käännöslukko /tmp/matkakirja-kaannospalvelu.lukko/kuka, `xcrun simctl list devices booted`.
-   1 simulaattori kerrallaan, muisti ≥ 50 %, uninstall + shutdown; linna ja ISS ensin; juna/TF ennen testikäännöksiä.
+1. **Vuorot**: `cat /tmp/matkakirja-kaannospalvelu.lukko/kuka` ja `xcrun simctl list devices booted`. Kysy rooleilta
+   tilanne, jos simu on käynnissä. Jono luovutuksessa (Natiivi-UI → Linssiseppä 1 → Siirtoseppä). Yksi simu kerrallaan.
+2. **TF**: 10/12 ladattu, viimeisin 142 = 62d5d1bb (05.21). Seuraava on juna 143 vasta Päätoimittajan VIE:llä.
+3. **Linnan osoitin**: c116f02f tuotannossa; 8f4eb611 odottaa omistajan aamukorttia — älä vaihda ilman lupaa.
+4. **Ämpäri**: vain `julkaisija-tyokalut/vie-paketti.sh <kansio>` (pysyvä lupa, lue LAHTEET.md ensin).
+5. **Web-juna**: tyhjä; `zsh julkaisija-tyokalut/jonoon.sh NNNN` (docs-PR:t ilman CI:tä suoraan `gh pr merge --squash`).
