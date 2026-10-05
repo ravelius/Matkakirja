@@ -1139,7 +1139,9 @@ const MODULES = [
   // ei pallolauta-tuonteja (kayttaa ui.pallolautaa vain ajossa, jos se on).
   'js/kehittaja-pikatie.js',
   'js/lehtikuori.js',
+  'js/linssit/ajattelija-sokrates-aikajana.js',
   'js/linssit/ajattelija-sokrates.js',
+  'js/linssit/ajattelija-marcus-aikajana.js',
   'js/linssit/ajattelija-marcus.js',
   'js/linssit/ajattelija-projektori.js',
   'js/linssit/ajattelija.js',
@@ -1204,6 +1206,7 @@ const STYLES = [
   'css/pohjat/kuvanakyma.css',
   'css/pohjat/pulu.css',
   'css/pohjat/erikoisnostot.css',
+  'css/pohjat/galleria.css',
   'css/pohjat/esikatselu.css',
   'css/pohjat/pinnat/dialogit.css',
   'css/pohjat/pinnat/pillerivalikko.css',

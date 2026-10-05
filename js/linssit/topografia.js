@@ -409,6 +409,13 @@ export const LINSSI = {
    */
   laudat: ['maailmankartta'],
 
+  /*
+   * HAMPURILAINEN PILLERIN TILALLA (omistaja 2.10.2026 klo 21.3x): oikean yläkulman nimipilleri pois, tilalle
+   * hampurilainen, jonka valikossa ylimpänä Korkeustasot (värilaput) ja sen alla Sulje linssi (js/ui.js
+   * piirraLinssinHampurilainen). Linssien hampurilaisen ensimmäinen käyttäjä.
+   */
+  valikko: { selite: 'Korkeustasot' },
+
   lahde: {
     // Oletuksena reliefipyramidi (js/reliefipyramidi.js, ETOPO 2022 15″);
     // ?reliefipyramidi=0 palauttaa vanhan ETOPO1-kuvan.

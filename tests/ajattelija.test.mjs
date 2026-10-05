@@ -48,12 +48,11 @@ test('projektori on valoa pinnalla: lisäys diffuusiin valoon, ei emissioon', ()
 
 test('vaihe 3: prologi, intron leikkaukset, nimi ja kysymys, kaiku ja ääniraita kellona (Blender v7–v10)', () => {
   const pr = SOKRATES.prologi;
-  assert.deepEqual([pr.kytkin, pr.taysi, pr.loppu], [30, 58, 120]);
-  assert.equal(pr.valot.length, 2);   // v9-palaute: vain reunavalot
-  assert.deepEqual(SOKRATES.intro.otokset.map(([r]) => r), [1, 15, 57, 119, 236, 259]);
-  assert.deepEqual(SOKRATES.ajat.nimi, [282, 372]);
-  assert.deepEqual(SOKRATES.ajat.kysymys, [373, 461]);
-  assert.deepEqual(SOKRATES.ajat.kaiku, [965, 1440]);
+  assert.deepEqual([pr.kytkin, pr.taysi, pr.loppu], [30, 58, 75]);   // v14: 2,5 s
+  assert.equal(pr.valot.length, 3);   // v9-palaute: vain reunavalot (v14: kolmas päälaelle)
+  // Ruudut ja leikkaukset: v12 (tests/ajattelija-kierrokset.test.mjs); Marcus pitää v7–v11:n ajat.
+  assert.ok(SOKRATES.intro.otokset.length >= 2);
+  assert.ok(SOKRATES.ajat.nimi[0] < SOKRATES.ajat.kysymys[0] && SOKRATES.ajat.kysymys[0] < SOKRATES.ajat.lahesty[0]);
   assert.equal(SOKRATES.vuodet, 'n. 470–399 eaa.');
   // Linnanrakentaja 2.10.: kaikuvoima 20 (otsa), täyte 0,10 × aurinko, seepia 1/0,78/0,52.
   assert.equal(SOKRATES.kaiku.voima, 20);
@@ -87,7 +86,7 @@ test('omistajan v9-palaute: prologi ilman kehää, Zarathustra koko kohtaus vaim
   assert.ok(SOKRATES.prologi.valot.every((v) => v.keila <= 30), 'vain kapeat reunavalot');
   assert.deepEqual(Object.keys(SOKRATES.aani), ['puhe', 'musiikki']);
   const tyokalu = lue('../tools/ajattelija-aaniraita.mjs');
-  assert.match(tyokalu, /const VAIMENNUS = \{ alku: 17\.5, taso: 0\.22, ramppi: 2 \};/);
+  assert.match(tyokalu, /alku: Number\(arvo\('--vaimennus', 17\.5\)\),\s*taso: A\.includes\('--vaimennus-db'\) \? [^:]+ : 0\.22,\s*ramppi: 2,/);
   assert.match(tyokalu, /silmukka: \[66\.0, 80\.0\],/);
   assert.doesNotMatch(tyokalu, /gymnopedie/i, 'Satie pois');
   const pr = lue('../js/linssit/ajattelija-projektori.js');
@@ -127,7 +126,7 @@ test('Marcus Aurelius pelkkänä datana: Itselleen 10.16, kaksirivinen nimi, sad
   assert.equal(MARCUS.kaiku.kuva, 'ajattelijat/marcus/v1/kaiku-sade.png');
   assert.match(MARCUS.kaiku.nimeaminen, /Nico Kokkonen, CC BY 3.0/);
   assert.equal(MARCUS.taustavirta.rivit.length, 20);
-  assert.equal(MARCUS.prologi, SOKRATES.prologi, 'vakioaloitus on yhteinen');
+  assert.deepEqual({ ...MARCUS.prologi, loppu: 75 }, SOKRATES.prologi, 'vakioaloitus on yhteinen (Marcus v13: 120 ruutua)');
   const tyokalu = lue('../tools/ajattelija-aaniraita.mjs');
   assert.match(tyokalu, /marcus: \{[\s\S]*?eroica-marcia-funebre-musopen\.ogg[\s\S]*?osat: \[\[75\.48, 75\.48 \+ 48\.333\]\]/);
   const js = lue('../js/linssit/ajattelija.js');
@@ -157,4 +156,47 @@ test('atlas: toistorivi piirretään koko atlaksen leveydelle (kaikki laatat), t
   assert.ok(paikat[0].toistoja > 1);
   assert.equal(rajat[0], 4096);
   assert.equal(rajat[1], paikat[1].lev);
+});
+
+test('atlas: liian pitkä toistorivi pienennetään mahtumaan yhteen laattaan', () => {
+  const ctx = {
+    font: '', measureText(t) { return { width: t.length * Number(/(\d+)px/.exec(this.font)[1]) * 0.5 }; },
+    fillRect() {}, save() {}, restore() {}, beginPath() {}, clip() {}, fillText() {}, rect() {},
+  };
+  const doc = { createElement: () => ({ getContext: () => ctx }) };
+  const { paikat } = piirraAtlas([{ teksti: 'α'.repeat(240), fontti: 'serif', korkeus: 96, toisto: true }], doc);
+  assert.equal(paikat[0].toistoja, 1);
+  assert.ok(240 * paikat[0].em * 0.5 + 3 * paikat[0].em <= 4096 + 1);
+});
+
+test('Sokrateen taustavirta: 20 riviä Sisältökirjurilta, kreikan OFL-fontit ämpäristä', () => {
+  const rivit = SOKRATES.taustavirta.rivit;
+  assert.equal(rivit.length, 20);
+  assert.equal(rivit.filter(([k]) => k === 'fi').length, 2);
+  for (const [, f] of rivit) assert.ok(SOKRATES.fontit[f], f);
+  for (const n of ['gentium-plus', 'gfs-didot', 'gfs-solomos']) assert.match(SOKRATES.fontit[n].tiedosto, /^ajattelijat\/fontit\/v1\//);
+  assert.match(lue('../js/linssit/ajattelija.js'), /await lataaAjattelijaFontit\(a, tv\.rivit\.map/);
+});
+
+test('Marcus: elämä-lappu ja Pulun viisi kysymystä (Sisältökirjuri 2.10.)', async () => {
+  const { MARCUS } = await import('../js/linssit/ajattelija-marcus.js');
+  assert.equal(MARCUS.elama.otsikko, 'Marcus Aureliuksen elämä');
+  assert.equal(MARCUS.elama.kappaleet.length, 7);
+  assert.equal(MARCUS.pulunKysymykset.length, 5);
+  assert.match(lue('../js/linssit/ajattelija.js'), /const kytkinAani = new Audio\(`\$\{R2\}\$\{AJATTELIJA_KYTKIN\}`\);/);
+});
+
+test('ääniraita v12: yhtenäinen puhe (--puhe, --puhe-alku) vaimentaa musiikin puheen ajaksi; musiikki on parametri', () => {
+  const tyokalu = readFileSync(new URL('../tools/ajattelija-aaniraita.mjs', import.meta.url), 'utf8');
+  assert.match(tyokalu, /const MUSIIKKI = A\.includes\('--musiikki'\) \? resolve\(LAHTEET, arvo\('--musiikki'\)\) : join\(LAHTEET, R\.musiikki\);/);
+  assert.match(tyokalu, /const LUENNAT = PUHE \? \[\[PUHE, PUHE_ALKU\]\]/);
+  assert.match(tyokalu, /const OSAT = \(V12 && \[\[0, kestoS\(MUSIIKKI\)\]\]\)/);   // koko levytys, ei silmukkaa
+  assert.match(tyokalu, /const SILMUKKA = V12 \? null : R\.silmukka;/);
+  assert.match(tyokalu, /\$\{V12 \? `apad=whole_dur=\$\{KESTO\},` : ''\}/);
+});
+
+test('ääniraita: efektit (--efektit json [tiedosto, aika, dB]) miksataan puheraitaan eli kohtauksen kelloon (omistaja 3.10.2026)', () => {
+  const tyokalu = readFileSync(new URL('../tools/ajattelija-aaniraita.mjs', import.meta.url), 'utf8');
+  assert.match(tyokalu, /const PUHEOSAT = \[\.\.\.LUENNAT\.map\(\(\[f, t\]\) => \[resolve\(LAHTEET, f\), t, 0\]\), \.\.\.EFEKTIT\];/);
+  assert.match(tyokalu, /\$\{db \? `volume=\$\{db\}dB,` : ''\}adelay=/);
 });

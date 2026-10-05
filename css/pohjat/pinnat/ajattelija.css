@@ -62,3 +62,12 @@
   font-size: var(--tk-koko-kapiteeli);
   font-style: italic;
 }
+
+/* ✕ piilossa, kunnes pelaaja napauttaa ruutua (omistaja 3.10.2026 klo 00.1x; js/linssit/ajattelija.js). Sama häivytys
+   kuin astronautin kameran AUTO-hiljaisuudessa: pois --tk-kesto-sulku, takaisin pohjan oma --tk-kesto-avaus. */
+.ajattelija .tk-kuvanakyma__sulku { transition: opacity var(--tk-kesto-avaus) ease-out; }
+.ajattelija.ajattelija-sulku-piilossa .tk-kuvanakyma__sulku {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--tk-kesto-sulku) ease-in;
+}

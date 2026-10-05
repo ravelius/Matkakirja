@@ -2,6 +2,81 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (142)",
+   "paiva": "2026-10-05",
+   "teksti": "Jatka matkaa -napin jälkeen Pulu ei enää lue, ja lukijan äänen voi vaihtaa kesken lukemisen. ISS-kameraan tuli 15 eurooppalaista kohdetta, ja suuret kuvat avautuvat luotettavasti. Olavinlinnan kamera liikkuu pehmeästi, kertoja kuuluu selvästi ja Myllyssä on äänet."
+  },
+  {
+   "versio": "1.1 (141)",
+   "paiva": "2026-10-04",
+   "teksti": "Olavinlinna aukeaa iPhonella vaakana. Huoneiden nimilaput ja kortit ovat nyt keskiaikaisia käsikirjoituksia: laput tulevat näkyviin kohteiden kohdalle sitä mukaa kuin lähestyt, ja kortti avautuu selitettävän kohteen viereen. Huoneet-valikko mahtuu vaakaruudulle."
+  },
+  {
+   "versio": "1.1 (140)",
+   "paiva": "2026-10-04",
+   "teksti": "Pelit-välilehti linssinapin alla: pelatut minipelit avautuvat sieltä. Ajattelijoiden päät näkyvät vain heidän omassa maassaan, ja astronauttien kuvissa AUTO ei aloita luentaa alusta. Olavinlinna lataa päivityksissä vain muuttuneet tiedostot."
+  },
+  {
+   "versio": "1.1 (139)",
+   "paiva": "2026-10-04",
+   "teksti": "Olavinlinna: huoneen ensimmäinen repliikki ei enää ala kahdesti, Huoneet-valikon napautus ei enää avaa alla olevaa huonetta, ja nimiruudun otsikko pysyy paikallaan. Cupola: Maa näkyy terävänä heti mustan ruudun jälkeen myös ensimmäisellä avauksella."
+  },
+  {
+   "versio": "1.1 (138)",
+   "paiva": "2026-10-04",
+   "teksti": "Olavinlinna latautuu valmiiksi ennen esittelyä: nimiruudussa kerrotaan, että linna latautuu. Kun olet Suomessa tai linnan merkki on näkyvissä, linna ladataan valmiiksi taustalla, ja se aukeaa muutamassa sekunnissa."
+  },
+  {
+   "versio": "1.1 (137)",
+   "paiva": "2026-10-04",
+   "teksti": "Jatka matkaa -napin jälkeen peli on hiljaa, kunnes kosket ruutuun. ISS-linssissä on Pulun valikko ja Kysy Pululta -kysymykset, ja Cupola avautuu suoraan mustan ISS-ruudun kautta, ja kohteen valinta säilyttää katseen suunnan. Olavinlinna nousee sumusta vasta latauduttuaan."
+  },
+  {
+   "versio": "1.1 (136)",
+   "paiva": "2026-10-04",
+   "teksti": "Jatka matkaa ei enää käynnistä Pulun luentaa, vaan matka jatkuu kuin Ohita olisi painettu. Linssin avaaminen katkaisee nyt kaiken äänen, eikä luenta jatku linssin sulkeuduttua."
+  },
+  {
+   "versio": "1.1 (135)",
+   "paiva": "2026-10-04",
+   "teksti": "Ajattelijoissa intron leikkaukset osuvat nyt musiikin iskuihin, taustarivit ovat luettavia, savu on pehmeä ja kaikukuvat selkeitä hahmoja. ISS-kameran minipallo pysyy paikallaan, kuvaa voi zoomata 8× ja Cupolan nopea käännös ei enää välähdä. Tekijätiedoissa on Ajattelijat-osio."
+  },
+  {
+   "versio": "1.1 (134)",
+   "paiva": "2026-10-04",
+   "teksti": "Astronautin kameran minipallo pyörii sormella ja selaa kohteita tuntuvin napsahduksin. Ohjausnapit yhtenäisiksi neliöiksi koko pelissä. Kermakartan turhat haut pois."
+  },
+  {
+   "versio": "1.1 (133)",
+   "paiva": "2026-10-03",
+   "teksti": "Ajattelijat: Sokrates ja Marcus Aurelius uudella mystisellä alulla (kehittäjätila). Myllyyn kolme aikakauden lautaa ja uudet äänet; iPadille Pulu ja vaakavalikko. Natriumoranssit yövalot, linssien hampurilaisvalikko ja linnan puheiden latauskorjaus."
+  },
+  {
+   "versio": "1.1 (132)",
+   "paiva": "2026-10-03",
+   "teksti": "Ajattelijoiden alkukuvat ovat varjopuolelta, alussa kuuluu uusi kytkinääni, ja ✕ tulee esiin napautuksesta. Sokrateella ja Marcuksella on kolme kierrosta, ja kaikukuvat ovat oikein päin. Pulu on vaakatilassa alempana eikä peitä ISS:n lukemaa."
+  },
+  {
+   "versio": "1.1 (131)",
+   "paiva": "2026-10-03",
+   "teksti": "Vaakatilassa yläpalkkia ei enää ole, vaan ☰ avaa valikon, ja pystyssä palkki on matalampi. Julisteet ja Aarteet aukeavat omaan näkymäänsä, ja Topografian valikossa ovat korkeustasot. Astronautin kamerassa maapallo on suurempi, ja Pulu kulkee robottikädessä."
+  },
+  {
+   "versio": "1.1 (129)",
+   "paiva": "2026-10-02",
+   "teksti": "Yläpalkki on ommeltu, ja päivä ja rahat ovat samalla rivillä. Nostojen selaus mahtuu yhdelle riville, pelivalikko on siistimpi ja kaupunkien nimet pysyvät paikallaan."
+  },
+  {
+   "versio": "1.1 (128)",
+   "paiva": "2026-10-02",
+   "teksti": "Olavinlinnalla on uusi valikko ja pienoiskartta, ja napit ovat yhtenäisiä neliöitä. Kartalla on Linssit-nappi ja uusi pelivalikko, ja julisteet aukeavat omaan galleriaansa."
+  },
+  {
+   "versio": "1.1 (126)",
+   "paiva": "2026-10-02",
+   "teksti": "Ajattelijoiden kipsipäät kartalla, ja Pulu väistää niitä. Rahat ovat nyt punnissa (£), ja Olavinlinnan puhe ei enää katkaise luentoa."
+  },
+  {
    "versio": "1.1 (124)",
    "paiva": "2026-10-02",
    "teksti": "Nostojen selausrivi ja AUTO ovat samalla rivillä, eikä puuttuva kuva jätä nostoon harmaata laatikkoa."

@@ -40,9 +40,9 @@ typeset -a LISTA
 lisaa() { [ -f "$LAHDE/$2" ] || { echo "PUUTTUU: $LAHDE/$2" >&2; exit 1; }; LISTA+=("$1|$2"); }
 for t in huippu normaali kevyt; do lisaa "ulkokuori/ulkokuori_$t.glb" "ulkokuori/ulkokuori_$t.glb"; done
 for f in ulkokuori-4k-4x4.astcm ulkokuori-2k-4x4.astcm ulkokuori-hamara-4k-4x4.astcm ulkokuori-hamara-2k-4x4.astcm \
-         ulkokuori-hamara-4k.jpg ulkokuori-hamara-2k.jpg; do lisaa "ulkokuori/$f" "ulkokuori/$f"; done
+         ulkokuori-hamara-4k.jpg ulkokuori-hamara-2k.jpg ulkokuori-4k.jpg ulkokuori-2k.jpg; do lisaa "ulkokuori/$f" "ulkokuori/$f"; done
 # 8k-atlakset (laatusuunnitelma 30.9.: Real-ESRGAN ×4 → 8k täyden laadun laitteille), mukaan jos lähteessä on.
-for f in ulkokuori-8k-4x4.astcm ulkokuori-hamara-8k-4x4.astcm ulkokuori-hamara-8k.jpg; do
+for f in ulkokuori-8k-4x4.astcm ulkokuori-hamara-8k-4x4.astcm ulkokuori-hamara-8k.jpg ulkokuori-8k.jpg; do
   if [ -f "$LAHDE/ulkokuori/$f" ]; then lisaa "ulkokuori/$f" "ulkokuori/$f"; fi
 done
 # Hybridi-PBR (laatusuunnitelma 30.9., menetelmä B): materiaalimaski + kirjaston 4 materiaalia (diff + nor_gl), maskin
@@ -88,6 +88,8 @@ if [ -f "$LAHDE/ymparisto/ymparisto_huippu.glb" ]; then
     if [ -f "$LAHDE/ymparisto/$f-4x4.astcm" ]; then lisaa "ymparisto/$f-4x4.astcm" "ymparisto/$f-4x4.astcm"; fi
   done
 fi
+# Skinnatut hahmot (omistaja 2.10. 18.0x, Quaternius CC0; tools/dioraama/blender/hahmo_skin.py): hahmot/<henkilo>.glb, jos lähteessä.
+for f in "$LAHDE"/hahmot/*.glb(N); do lisaa "hahmot/${f:t}" "hahmot/${f:t}"; done
 for g in "$LAHDE"/tilat/*.glb; do
   id=${g:t:r}; lisaa "tilat/$id.glb" "tilat/$id.glb"
   for v in "" "-hamara"; do
@@ -100,7 +102,7 @@ done
 TMP=$(mktemp -d); trap 'rm -rf "$TMP"' EXIT
 YHT=0
 for r in "${LISTA[@]}"; do
-  p=${r%%|*}; l=${r#*|}; [[ $l == @* ]] && f=${l#@} || f="$LAHDE/$l"; s=$(shasum -a 256 "$f" | cut -d' ' -f1); b=$(stat -f %z "$f")
+  p=${r%%|*}; l=${r#*|}; [[ $l == @* ]] && f=${l#@} || f="$LAHDE/$l"; s=$(shasum -a 256 "$f" | cut -d' ' -f1); b=$(stat -L -f %z "$f")  # -L: symlinkatun tiedoston koko, ei linkin (4.10.: 55 tiedostoa oli kirjattu ~90 tavuksi)
   YHT=$((YHT + b)); echo "$p $s $b" >> "$TMP/rivit"; echo "$p $f" >> "$TMP/lahteet"
 done
 sort -o "$TMP/rivit" "$TMP/rivit"

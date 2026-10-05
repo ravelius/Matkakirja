@@ -247,10 +247,11 @@ export const LAHTEET = [
     johdanto: 'Kuvakortit, kaupunkigalleriat, kulttuurinostot ja maastotekstien kuvat.',
     rivit: [
       {
-        nimi: 'Ajattelijat-linssin kaikukuvat — Marcuksen pylvään sadeihme (Marcus Aurelius, kierros 1)',
+        nimi: 'Ajattelijat-linssin kaikukuvat — Marcuksen pylvään sadeihme (Marcus Aurelius, sadeihmeen kaiku)',
         tekija: 'Nico Kokkonen, Wikimedia Commons (Column_of_Marcus_Aurelius_-_detail2.jpg)',
         lisenssi: 'CC BY 3.0',
-        huom: 'Rajattu ja tasokäyrällä valoksi muokattu (Linnanrakentaja 2.10.2026, LAHTEET.md).',
+        huom: 'Rajattu ja tasokäyrällä valoksi muokattu (Linnanrakentaja 2.10.2026, LAHTEET.md); v14:ssä '
+          + 'kaiku ajattelijat/marcus/v4/kaiut-paikka/kaiku-sade.png.',
       },
       {
         nimi: 'Ajattelijat-linssin kaikukuvat — Carstens 1788 (Sokrates pelastaa Alkibiadeen), '
@@ -262,6 +263,12 @@ export const LAHTEET = [
         nimi: 'Ajattelijoiden kipsibystit — Sokrates (KAS635) ja Marcus Aurelius (KAS979), 3D-skannaukset',
         tekija: 'SMK – Statens Museum for Kunst; skannaus Scan the World / SMK',
         lisenssi: 'Public Domain Mark 1.0',
+      },
+      {
+        nimi: 'Ajattelijat-linssin kreikkalaiset kirjasimet: Gentium Plus, GFS Didot ja GFS Solomos (Sokrateen taustavirta); '
+          + 'punnan merkin varakirjasin "Matkakirja Punta" on Gentium Plussan osajoukko (vain £)',
+        tekija: 'SIL International (Gentium Plus); Greek Font Society (GFS Didot, GFS Solomos)',
+        lisenssi: 'SIL Open Font License 1.1',
       },
       {
         nimi: 'Kipsin pintakuvio grey_plaster_02 (ajattelijoiden bystit)',
@@ -349,6 +356,18 @@ export const LAHTEET = [
         lisenssi: 'CC BY 4.0',
       },
       {
+        nimi: 'Ajattelijat-linssi: oma musiikki Sokrateelle ja Marcus Aureliukselle (sävelletty pelille, v14)',
+        tekija: 'Matkakirja (Linssiseppä); soitinnäytteet Versilian Studios VS Chamber Orchestra 2 Community Edition; '
+          + 'salin kaiku Liverpool Philharmonic Hall -impulssivaste (johnnyguitar01, Freesound 423866)',
+        lisenssi: 'Oma teos; näytteet ja impulssivaste CC0',
+        huom: 'Partituuri ja lähteet: proto-3d/_lahteet/sokrates/musiikki-oma/LAHTEET.md ja marcus-aurelius/musiikki-oma/LAHTEET.md.',
+      },
+      {
+        nimi: 'Ajattelijat-linssi: prologin kytkimen napsahdus (Impact Sounds, kaksi iskua kerroksina, oma kaiku)',
+        tekija: 'Kenney (kenney.nl)',
+        lisenssi: 'CC0',
+      },
+      {
         nimi: 'Ajattelijat-linssi: Beethoven, Sinfonia nro 3 "Eroica", II Marcia funebre — Marcus Aurelius',
         tekija: 'Czech National Symphony Orchestra / Musopen 2012, Wikimedia Commons',
         lisenssi: 'CC0',
@@ -415,20 +434,6 @@ export const LAHTEET = [
         nimi: '"Pocket camera start and shut down" — kartan zoomausääni',
         tekija: 'stephan, pdsounds.org Wikimedia Commonsin kautta',
         lisenssi: 'Public domain',
-      },
-      {
-        nimi: 'Cupolan radioliikenne: NASA, avaruuskävely EVA 38 (6.1.2017), '
-          + 'avaruus–maa-radiosilmukka',
-        tekija: 'NASA / Johnson Space Center',
-        lisenssi: 'Public domain (NASA)',
-        huom: 'https://archive.org/details/01-06-17_EVA_38.wav',
-      },
-      {
-        nimi: 'Cupolan humina: NASA:n aseman sisätila (Life On Station B-Roll) '
-          + 'ja pelin oma synteettinen humina',
-        tekija: 'NASA / Johnson Space Center; Matkakirja',
-        lisenssi: 'Public domain (NASA); oma',
-        huom: 'https://archive.org/details/LifeOnStationB-Roll',
       },
       {
         nimi: 'Musiikkinäytteet kulttuurinostoissa',

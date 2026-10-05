@@ -39,7 +39,7 @@ const TAULU = {
 // kangaspakkoja arkuilta itäseinän pinoihin. Repliikit ja Pulun reaktiot: Päätoimittaja 29.9.
 const HAHMOT = [
   {
-    id: 'hoitaja', henkilo: 'kirjuri-1500', paikka: pol(312, 3.95), suunta: 312, peilattu: false,
+    id: 'hoitaja', henkilo: 'kirjuri-1500', paikka: pol(312, 3.95, 0.1), suunta: 312, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
       { id: 'hoitaja-1', aani: 'fatabuuri-hoitaja-1', teksti: 'Kolme viittaa, kaksi verkaröijyä, tusina tinakannuja. Kaikki kirjaan, muuten vouti kysyy.' },
@@ -48,9 +48,10 @@ const HAHMOT = [
     reaktio: { id: 'pulu-hoitaja-r1', aani: 'fatabuuri-pulu-hoitaja-r1', teksti: 'Kaikki kirjassa, tinakannuja myöten. Murujakin varmaan laskettiin.' },
   },
   {
-    id: 'renki', henkilo: 'renki-1500', paikka: pol(262, 2.4), suunta: 80, peilattu: false,
+    id: 'renki', henkilo: 'renki-1500', paikka: pol(262, 2.4, 0.1), suunta: 80, peilattu: false,
     silmukka: 'kanto', heraa: 2,
-    reitti: { pisteet: [pol(262, 2.4), pol(200, 0.8), pol(75, 3.3), pol(200, 0.8), pol(262, 2.4)], nopeus: 0.7, tauko: 2 },
+    // 2.10.: y +0,10 = leivotun lattian pinta (skinnattujen hahmojen jalat ja jalkavarjo; mitattu tila-glb:stä säteellä)
+    reitti: { pisteet: [pol(262, 2.4, 0.1), pol(200, 0.8, 0.1), pol(75, 3.3, 0.1), pol(200, 0.8, 0.1), pol(262, 2.4, 0.1)], nopeus: 0.7, tauko: 2 },
     repliikit: [
       { id: 'renki-1', aani: 'fatabuuri-renki-1', teksti: 'Kangaspakka painaa enemmän kuin näyttää. Kutojat eivät säästäneet lankaa.' },
       { id: 'renki-2', aani: 'fatabuuri-renki-2', teksti: 'Vaatteet kuivina ja koit poissa – siinä on aitan koko salaisuus.' },
@@ -188,6 +189,7 @@ const soihduLiekki = (a, y) => lok(pol(a, 5.455, 0), a + 180, 0, y + 0.47, 0.262
 
 export const TILA = {
   id: 'fatabuuri',
+  lappujarjestys: 4,
   nimi: 'Fatabuuri',
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.

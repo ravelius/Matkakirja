@@ -103,7 +103,7 @@ for (const h of [
 // --- Hahmot: kappalainen pääalttarin ääressä (messu), vouti seurakuntalaisena penkin luona.
 const KAPPELI_HAHMOT = [
   {
-    id: 'kappalainen', henkilo: 'kappalainen-1500', paikka: [3.35, LATTIA, -20.8], suunta: 90, peilattu: false,
+    id: 'kappalainen', henkilo: 'kappalainen-1500', paikka: [3.35, LATTIA + 0.22, -20.8], suunta: 90 /* 2.10.: korokkeen pinta (tila-glb) */, peilattu: false,
     silmukka: 'tyo', heraa: 1, reitti: null,
     repliikit: [
       { id: 'kappalainen-1', aani: 'kappeli-kappalainen-1', teksti: 'Dominus vobiscum. Herra olkoon teidän kanssanne – ja ääni alas, jos sallitte.' },
@@ -124,6 +124,7 @@ const KAPPELI_HAHMOT = [
 
 export const TILA = {
   id: 'kappeli',
+  lappujarjestys: 2,
   nimi: 'Kappeli',
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.

@@ -44,9 +44,11 @@ export const AANET = {
     kuiva: '/aanet/mikseri/v1/kokki-1.kuiva.mp3', kaiku: '/aanet/mikseri/v1/kokki-1.kaiku.mp3', kaikuPitka: '/aanet/mikseri/v1/kokki-1.kaiku-pitka.mp3' },
   'kokki-2': { silmukka: false, voimakkuus: 1, kesto_s: 4.88, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1,
     kuiva: '/aanet/mikseri/v1/kokki-2.kuiva.mp3', kaiku: '/aanet/mikseri/v1/kokki-2.kaiku.mp3', kaikuPitka: '/aanet/mikseri/v1/kokki-2.kaiku-pitka.mp3' },
-  'apulainen-1': { silmukka: false, voimakkuus: 1, kesto_s: 4.08, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1,
+  // Apulaisen ääni vaihdettu 1.10.2026 (omistajan valinta 30.9. klo 23.3x: fi-merkattu Esko → C "Adam - Engaging,
+  // Friendly and Bright", eleven_v4, −17,2 LUFS); versio 2 = uusi tiedosto ohi natiivin välimuistin.
+  'apulainen-1': { silmukka: false, voimakkuus: 1, kesto_s: 4.16, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 2,
     kuiva: '/aanet/mikseri/v2/apulainen-1.kuiva.mp3', kaiku: '/aanet/mikseri/v2/apulainen-1.kaiku.mp3', kaikuPitka: '/aanet/mikseri/v2/apulainen-1.kaiku-pitka.mp3' },
-  'apulainen-2': { silmukka: false, voimakkuus: 1, kesto_s: 5.2, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1,
+  'apulainen-2': { silmukka: false, voimakkuus: 1, kesto_s: 5.12, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 2,
     kuiva: '/aanet/mikseri/v2/apulainen-2.kuiva.mp3', kaiku: '/aanet/mikseri/v2/apulainen-2.kaiku.mp3', kaikuPitka: '/aanet/mikseri/v2/apulainen-2.kaiku-pitka.mp3' },
   'vesipoika-1': { silmukka: false, voimakkuus: 1, kesto_s: 4, lisenssi: 'CC0 (oma tuotanto, ElevenLabs Text-to-Speech)', versio: 1,
     kuiva: '/aanet/mikseri/v1/vesipoika-1.kuiva.mp3', kaiku: '/aanet/mikseri/v1/vesipoika-1.kaiku.mp3', kaikuPitka: '/aanet/mikseri/v1/vesipoika-1.kaiku-pitka.mp3' },

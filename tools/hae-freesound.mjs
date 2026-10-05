@@ -387,9 +387,21 @@ function normalisoi(lahde, kohde, tyokansio, { tavoiteLufs, haivytys, leikkaa })
     '-c:a', 'pcm_s16le', wav,
   ]);
   const leikattu = aanenKesto(wav);
+  /*
+   * LYHYT ISKU (alle 0,5 s): sisäänhäivytys vain 5 ms ja taso mitataan VASTA häivytysten jälkeen. Muuten neljänneksen
+   * kestoinen sisäänhäivytys söi iskun alun, ja huipun mukaan laskettu vahvistus jäi ~14 dB vajaaksi (myllyn
+   * nappulan napsahdus 3.10.2026: huippu −14,9 dBFS toisen äänen −4,8:aa vastaan).
+   */
+  const sisaan = leikattu < 0.5 ? 0.005 : null;
+  const haivytetty = join(tyokansio, 'haivytetty.wav');
+  ajaKomento('ffmpeg', [
+    '-y', '-v', 'error', '-i', wav,
+    '-af', viimeistelySuodatin({ kesto: leikattu, korjausDb: 0, haivytys, sisaan }),
+    '-c:a', 'pcm_s16le', haivytetty,
+  ]);
 
   const mittausLoki = ajaKomento('ffmpeg', [
-    '-hide_banner', '-v', 'info', '-i', wav,
+    '-hide_banner', '-v', 'info', '-i', haivytetty,
     '-af', `loudnorm=I=${tavoiteLufs}:TP=-1:LRA=11:print_format=json`,
     '-f', 'null', '-',
   ]).loki;
@@ -408,7 +420,7 @@ function normalisoi(lahde, kohde, tyokansio, { tavoiteLufs, haivytys, leikkaa })
      * käytännössä sama kuin muilla iskuilla.
      */
     const huippuLoki = ajaKomento('ffmpeg', [
-      '-hide_banner', '-v', 'info', '-i', wav, '-af', 'volumedetect', '-f', 'null', '-',
+      '-hide_banner', '-v', 'info', '-i', haivytetty, '-af', 'volumedetect', '-f', 'null', '-',
     ]).loki;
     const osuma = huippuLoki.match(/max_volume:\s*(-?[\d.]+) dB/);
     if (!osuma) {
@@ -420,10 +432,8 @@ function normalisoi(lahde, kohde, tyokansio, { tavoiteLufs, haivytys, leikkaa })
   }
 
   ajaKomento('ffmpeg', [
-    '-y', '-v', 'error', '-i', wav,
-    '-af', viimeistelySuodatin({
-      kesto: leikattu, korjausDb: korjaus, haivytys,
-    }),
+    '-y', '-v', 'error', '-i', haivytetty,
+    '-af', `volume=${korjaus.toFixed(2)}dB`,
     '-ac', '1', '-ar', '44100', '-c:a', 'libmp3lame', '-b:a', '128k', kohde,
   ]);
   return {
@@ -524,6 +534,12 @@ async function ajaLista({
 
   const rivit = [];
   let virheita = 0;
+  /*
+   * SAMA ÄÄNI VAIN KERRAN (Pelikoodari 5.10.2026, Tavlin kuiva ajo: noppa-2 ja noppa-3 valitsivat saman Freesound-äänen):
+   * listan muunnelmat ovat eri tiedostoja, joten jo valittu ehdokas (sivu tai nimi+lähde) ohitetaan seuraavilla tunnuksilla.
+   */
+  const kaytetyt = new Set();
+  const ehdokkaanTunniste = (x) => x.ehdokas.sivu || `${x.ehdokas.lahde}:${x.ehdokas.nimi}`;
   try {
     for (const tehoste of tehosteet) {
       const lahteet = tehosteenLahteet(tehoste, { sallitut: SALLITUT, lista });
@@ -536,8 +552,9 @@ async function ajaLista({
       const osumat = await haeEhdokkaat(tehoste, {
         lahteet, avain: AVAIN, loki: (rivi) => console.error(rivi),
       });
-      const kelpaavat = jarjestaEhdokkaat(osumat, tehoste);
+      const kelpaavat = jarjestaEhdokkaat(osumat, tehoste).filter((x) => !kaytetyt.has(ehdokkaanTunniste(x)));
       const valinta = kelpaavat[0];
+      if (valinta) kaytetyt.add(ehdokkaanTunniste(valinta));
       if (!valinta) {
         console.error(`   VIRHE: ei yhtään kelvollista osumaa (${osumat.length} haettua).`);
         virheita += 1;

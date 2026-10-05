@@ -1256,7 +1256,7 @@ button.satelliitti-pulunappi:focus-visible {
   flex: 1 1 auto;
   min-width: 0;
   padding: 7px 10px;
-  border-radius: 999px;
+  border-radius: var(--tk-kentta-kulma);
   border: 1px solid rgba(93, 255, 168, 0.3);
   background: rgba(10, 24, 18, 0.85);
   color: #eafff3;
@@ -1989,7 +1989,7 @@ body.satelliitti-kyyti.livia-astronautti-paalla .livia-lentonayttamo { z-index: 
   min-width: 44px;
   height: 44px;
   padding: 0 14px;
-  border-radius: 22px;
+  border-radius: var(--tk-kulma-nappi);
   border: 1px solid rgba(93, 255, 168, 0.28);
   background: rgba(6, 13, 10, 0.72);
   color: rgba(233, 250, 240, 0.9);
@@ -2006,14 +2006,17 @@ body.satelliitti-kyyti .astro-nakymat-nappi { z-index: 49; }
 
 /*
  * AUTO (omistaja 2.10.2026; NOSTOKORTTI-pohjan osa AUTO, js/pohjat/auto.js): kytkin ‹ ›:n ryhmässä alhaalla keskellä
- * ("AUTO ‹ ›", Päätoimittaja 2.10.2026: vasemmassa alakulmassa se peitti pikkukuvanauhan), siirtolappu rivin
- * yläpuolelle koko leveydelle. AUTOn aikana otsikkona on pelkkä kohteen nimi (seutu pois).
+ * ("AUTO ‹ ›", Päätoimittaja 2.10.2026: vasemmassa alakulmassa se peitti pikkukuvanauhan). AUTOn aikana otsikkona on
+ * pelkkä kohteen nimi (seutu pois), eikä siirtolappua näytetä (omistaja 21.3x).
  */
-.satelliitti-autolappu {
-  position: absolute;
-  left: var(--tk-vali-m);
-  right: var(--tk-vali-m);
-  bottom: calc(var(--tk-vali-m) * 2 + var(--tk-nappi-osuma) + env(safe-area-inset-bottom, 0px));
-  z-index: 7;
-}
 .satelliitti-auto-paalla .satelliitti-seutu { display: none; }
+/* AUTO HILJAA (omistaja 21.3x): ✕, Pulu, ‹ › ja AUTO häipyvät; napautus palauttaa (js/linssit/satelliitti.js). */
+.satelliitti-katselu :is(.satelliitti-kulma, .satelliitti-kohteet, .satelliitti-pulukulma) {
+  transition: opacity var(--tk-kesto-avaus) ease-out;
+}
+.satelliitti-katselu.satelliitti-auto-hiljaa :is(.satelliitti-kulma, .satelliitti-kohteet, .satelliitti-pulukulma),
+body.satelliitti-auto-hiljaa .pollo-nappi {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--tk-kesto-sulku) ease-in;
+}

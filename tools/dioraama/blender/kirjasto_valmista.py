@@ -76,6 +76,11 @@ for tunnus, a in m.items():
                      **({'huom': a['huom']} if a.get('huom') else {}), 'tiedostot': tiedostot}
     print('VALMIS', tunnus, len(tiedostot))
 os.makedirs(f'{REPO}/js/dioraama/kirjasto', exist_ok=True)
+# 4.10.: muut lajit (hahmo, taivas, esiasetus; tools/dioraama/kirjasto_lisaa.py) säilyvät manifestissa
+_m = f'{REPO}/js/dioraama/kirjasto/lahteet.json'
+if os.path.exists(_m):
+    for k_, v_ in json.load(open(_m)).items():
+        if not k_.startswith(('materiaali/', 'tarra/')): tulos.setdefault(k_, v_)
 with open(f'{REPO}/js/dioraama/kirjasto/lahteet.json', 'w') as f:
     json.dump(dict(sorted(tulos.items())), f, ensure_ascii=False, indent=1)
     f.write('\n')

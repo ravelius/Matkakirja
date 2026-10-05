@@ -34,8 +34,12 @@ test('blender.json: kuoren kaikki laatutasot ja tekstuurit sekä jokaisen kohdis
   }
 });
 
-test('blender.json: ei lähdemallia eikä käyttämättömiä tiedostoja (senaatti-alkup, ulkokuori-4k.jpg)', () => {
-  for (const p of on) assert.ok(!p.includes('senaatti-alkup') && p !== 'ulkokuori/ulkokuori-4k.jpg' && p !== 'ulkokuori/ulkokuori-2k.jpg', p);
+test('blender.json: ei lähdemallia (senaatti-alkup); kuoren päivä-JPEG:t vain kokonaisena varapolkuna', () => {
+  for (const p of on) assert.ok(!p.includes('senaatti-alkup'), p);
+  // 4.10. (#3944): ulkokuori-{2k,4k,8k}.jpg = päivätilan JPEG-vara ilman ASTC:tä (rakennus.json ulkokuori.tekstuurit.jpg);
+  // ennen niitä ei käytetty mihinkään. Joko kaikki kolme tai ei yhtään (rakenna.mjs kirjoittaa avaimen vain kokonaisena).
+  const jpg = ['2k', '4k', '8k'].filter((k) => on.has(`ulkokuori/ulkokuori-${k}.jpg`)).length;
+  assert.ok(jpg === 0 || jpg === 3, `päivä-JPEG:itä ${jpg}/3`);
 });
 
 // Palikkapaketin vartija (Päätoimittaja 30.9.): kun blender.json on olemassa, paketti ilman ulkokuorta hylätään.
@@ -206,4 +210,14 @@ test('ympäristön ASTC-mipketjut (ensilataus v2): *_astc vain jos .astcm viety,
   assert.match(y.horisontti_kuva_astc, /horisontti-1k-4x4\.astcm$/); assert.match(y.hamara.horisontti_kuva_astc, /horisontti-hamara-1k-4x4\.astcm$/);
   assert.match(y.taivas_astc, /taivas-2k-4x4\.astcm$/); assert.match(y.taivas_hamara_astc, /taivas-hamara-2k-4x4\.astcm$/);
   assert.match(y.aluskasvit.atlas_astc, /aluskasvit-4x4\.astcm$/); assert.match(y.aluskasvit.atlas_hamara_astc, /aluskasvit-hamara-4x4\.astcm$/);
+});
+
+test('kohdistamaton tila (tunnelma) ilman JSON-liekkejä: liekit leivotun glb:n liekki:-tyhjistä, jotka leikataan telineineen (erä 1b)', () => {
+  const json = kopio(RAKENNUS);
+  assert.ok(RAKENNUS.tilat.find((t) => t.id === 'tunnelma')?.liekit?.length > 0, 'lähteessä tunnelman liekit');
+  lisaaBlender(json, B);
+  const tunnelma = json.tilat.find((t) => t.id === 'tunnelma');
+  assert.ok(tunnelma?.glb, 'tunnelma-glb puuttuu');
+  assert.equal(tunnelma.liekit, undefined);
+  for (const t of json.tilat.filter((x) => x.kohdistettava !== false && RAKENNUS.tilat.find((r) => r.id === x.id)?.liekit?.length)) assert.ok(t.liekit.length > 0, t.id);
 });

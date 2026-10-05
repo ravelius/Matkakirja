@@ -5806,6 +5806,1116 @@ export const ASTRONAUTIN_KYSYMYKSET = {
         "havaintoId": "iss059e019410"
       }
     ]
+  },
+  "ateena-yolla": {
+    "kysymykset": [
+      "Kuinka vanha kaupunki Ateena on?",
+      "Mihin aikaan Ateenan yökuva otettiin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka vanha kaupunki Ateena on?",
+        "vastaus": "Ateena on yksi maailman vanhimmista jatkuvasti asutuista kaupungeista — sen historia ulottuu yli 3 400 vuoden taakse. Kaupunkiseudulla asuu nykyään noin 3,15 miljoonaa ihmistä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss074e0416472",
+            "title": "Athens, Greece – NASA"
+          }
+        ],
+        "havaintoId": "iss074e0416472"
+      },
+      {
+        "kysymys": "Mihin aikaan Ateenan yökuva otettiin?",
+        "vastaus": "Kuva otettiin maaliskuussa 2026 noin kello 22 paikallista aikaa, jolloin kaupungin valot erottuvat selvästi pimeää taustaa vasten. Kansainvälinen avaruusasema kiersi tuolloin noin 425 kilometrin korkeudessa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss074e0416472",
+            "title": "Athens, Greece – NASA"
+          }
+        ],
+        "havaintoId": "iss074e0416472"
+      }
+    ]
+  },
+  "budapest-yolla": {
+    "kysymykset": [
+      "Mikä järvi näkyy Budapestin kuvassa?",
+      "Miksi Budapestin valot erottuvat niin kirkkaina?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä järvi näkyy Budapestin kuvassa?",
+        "vastaus": "Kuvan keskellä kimmeltää Balaton, Keski-Euroopan suurin järvi. Sitä ympäröivät tulivuoriperäiset kukkulat, viinitarhat ja vanhat kirkot.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss074e0149554",
+            "title": "The city lights of Budapest – NASA"
+          }
+        ],
+        "havaintoId": "iss074e0149554"
+      },
+      {
+        "kysymys": "Miksi Budapestin valot erottuvat niin kirkkaina?",
+        "vastaus": "Budapest on paljon suurempi ja tiheämmin asuttu kuin sitä ympäröivät pienet unkarilaiskylät, joten sen valot muodostavat kirkkaan laikun muuten vaimeasti valaistulle seudulle. Kuva otettiin tammikuussa 2026 noin kello 21 paikallista aikaa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss074e0149554",
+            "title": "The city lights of Budapest – NASA"
+          }
+        ],
+        "havaintoId": "iss074e0149554"
+      }
+    ]
+  },
+  "barcelona-yolla": {
+    "kysymykset": [
+      "Mikä kaupunginosa erottuu Barcelonan kuvassa?",
+      "Mitä merta Barcelona reunustaa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä kaupunginosa erottuu Barcelonan kuvassa?",
+        "vastaus": "Kuvassa erottuu selvästi Barcelonan tunnettu Eixample-kaupunginosa, jonka kadut on suunniteltu säännölliseksi, lähes kahdeksankulmaisten korttelien ruudukoksi. Kaupunki on Espanjan toiseksi suurin, ja sen kaupunkiseudulla asuu 5,74 miljoonaa ihmistä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e0078528",
+            "title": "Barcelona, Spain – NASA"
+          }
+        ],
+        "havaintoId": "iss073e0078528"
+      },
+      {
+        "kysymys": "Mitä merta Barcelona reunustaa?",
+        "vastaus": "Barcelona sijaitsee Välimeren rannalla, ja sen satama näkyy kuvassa kaupungin eteläreunassa. Kuva otettiin toukokuussa 2025 Kansainväliseltä avaruusasemalta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e0078528",
+            "title": "Barcelona, Spain – NASA"
+          }
+        ],
+        "havaintoId": "iss073e0078528"
+      }
+    ]
+  },
+  "bukarest-yolla": {
+    "kysymykset": [
+      "Miksi Bukarestin valot ovat eri värisiä eri puolilla?",
+      "Kuinka paljon väkeä Bukarestin kaupunkiseudulla asuu?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Miksi Bukarestin valot ovat eri värisiä eri puolilla?",
+        "vastaus": "Bukarestin keskustassa on vielä käytössä vanhoja, keltaiseen taittuvia natriumlamppuja, kun taas esikaupunkialueilla on siirrytty uudempaan, valkoisempaan LED-valaistukseen. Väriero näkyy selvästi yökuvassa avaruudesta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e1047246",
+            "title": "Bucharest, Romania – NASA"
+          }
+        ],
+        "havaintoId": "iss073e1047246"
+      },
+      {
+        "kysymys": "Kuinka paljon väkeä Bukarestin kaupunkiseudulla asuu?",
+        "vastaus": "Romanian pääkaupungin kaupunkiseudulla asuu noin 1,78 miljoonaa ihmistä. Kuva otettiin marraskuussa 2025 noin kello 23 paikallista aikaa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e1047246",
+            "title": "Bucharest, Romania – NASA"
+          }
+        ],
+        "havaintoId": "iss073e1047246"
+      }
+    ]
+  },
+  "lissabon-suisto": {
+    "kysymykset": [
+      "Mikä joki virtaa Lissabonin läpi?",
+      "Miksi Lissabonin kuva on otettu päivällä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä joki virtaa Lissabonin läpi?",
+        "vastaus": "Lissabonin läpi virtaa Tejo-joki, joka laskee kaupungin kohdalla leveänä suistona Atlantin valtamereen. Joen muoto erottuu kuvassa selvästi ilman kaupungin valojakin, koska kuva on otettu päivällä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e0078399",
+            "title": "Lisbon, Portugal – NASA"
+          }
+        ],
+        "havaintoId": "iss073e0078399"
+      },
+      {
+        "kysymys": "Miksi Lissabonin kuva on otettu päivällä?",
+        "vastaus": "Toisin kuin monet tämän linssin yökuvat, Lissabonin kuva näyttää Tejo-joen suiston muodot ja maaston parhaiten päivänvalossa. Kuva otettiin toukokuussa 2025 Iberian niemimaan rannikon yllä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e0078399",
+            "title": "Lisbon, Portugal – NASA"
+          }
+        ],
+        "havaintoId": "iss073e0078399"
+      }
+    ]
+  },
+  "thessaloniki-yolla": {
+    "kysymykset": [
+      "Kuinka vanha kaupunki Thessaloniki on?",
+      "Mitä yhteistä Thessalonikin ja Bukarestin kuvilla on?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka vanha kaupunki Thessaloniki on?",
+        "vastaus": "Thessaloniki on yli 2 300 vuotta vanha satamakaupunki Thermaicos-lahden rannalla. Sen kaupunkiseudulla asuu nykyään noin 815 000 ihmistä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e1047210",
+            "title": "Thessaloniki, Greece – NASA"
+          }
+        ],
+        "havaintoId": "iss073e1047210"
+      },
+      {
+        "kysymys": "Mitä yhteistä Thessalonikin ja Bukarestin kuvilla on?",
+        "vastaus": "Molemmissa kaupungeissa keskustan vanhat keltaiset natriumlamput vaihtuvat esikaupungeissa valkoisempaan LED-valoon — ero näkyy selvästi avaruudesta. Thessalonikin kuva otettiin marraskuussa 2025 samana iltana kuin Bukarestin kuva.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e1047210",
+            "title": "Thessaloniki, Greece – NASA"
+          }
+        ],
+        "havaintoId": "iss073e1047210"
+      }
+    ]
+  },
+  "dublin-revontulet": {
+    "kysymykset": [
+      "Mikä toinen kaupunki näkyy Dublinin kuvassa?",
+      "Mikä vihreä hehku näkyy Dublinin kuvan horisontissa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä toinen kaupunki näkyy Dublinin kuvassa?",
+        "vastaus": "Kuvassa näkyy myös Lontoo suurempana valoläiskänä kauempana oikealla. Dublin erottuu silti omana selvänä kirkkaana alueenaan Irlannin itärannikolla.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss034e050137",
+            "title": "Earth Observations taken by Expedition 34 crewmember – NASA"
+          }
+        ],
+        "havaintoId": "iss034e050137"
+      },
+      {
+        "kysymys": "Mikä vihreä hehku näkyy Dublinin kuvan horisontissa?",
+        "vastaus": "Horisontissa näkyvä vihreä hehku on revontulia, jotka syntyvät auringosta tulevien hiukkasten törmätessä ilmakehän kaasuihin. Kuva otettiin helmikuussa 2013 Kansainväliseltä avaruusasemalta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss034e050137",
+            "title": "Earth Observations taken by Expedition 34 crewmember – NASA"
+          }
+        ],
+        "havaintoId": "iss034e050137"
+      }
+    ]
+  },
+  "sofia-vitosha": {
+    "kysymykset": [
+      "Mikä vuori kohoaa Sofian vieressä?",
+      "Miksi Sofian kuva otettiin päivällä eikä yöllä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä vuori kohoaa Sofian vieressä?",
+        "vastaus": "Sofian eteläpuolella kohoaa Vitosha, lumihuippuinen vuori aivan Bulgarian pääkaupungin kyljessä. Se on suosittu retkeily- ja hiihtokohde, joka erottuu kuvassa selvästi valkoisena laikkuna kaupungin vieressä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss039e002766",
+            "title": "Earth Observations taken by the Expedition 39 Crew – NASA"
+          }
+        ],
+        "havaintoId": "iss039e002766"
+      },
+      {
+        "kysymys": "Miksi Sofian kuva otettiin päivällä eikä yöllä?",
+        "vastaus": "Päiväkuva näyttää parhaiten kaupungin sijainnin laaja-alaisessa vuoristolaaksossa ja vieressä kohoavan Vitosha-vuoren muodon, jotka eivät erottuisi yhtä selvästi pelkistä yövaloista. Kuva julkaistiin alun perin astronautin omassa Twitter-viestissä vuonna 2014.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss039e002766",
+            "title": "Earth Observations taken by the Expedition 39 Crew – NASA"
+          }
+        ],
+        "havaintoId": "iss039e002766"
+      }
+    ]
+  },
+  "kiova-tekojarvi": {
+    "kysymykset": [
+      "Minkä joen tekojärven rannalla Kiova sijaitsee?",
+      "Minä vuonna tämä kuva Kiovasta otettiin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minkä joen tekojärven rannalla Kiova sijaitsee?",
+        "vastaus": "Kiova sijaitsee Dnepr-joen tekojärven rannalla Ukrainassa. Kaupungissa asuu lähes kolme miljoonaa ihmistä, ja sillä on pitkä historia osana länsimaista sivilisaatiota.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss008e20656",
+            "title": "Crew Earth Observations taken during Expedition 8 – NASA"
+          }
+        ],
+        "havaintoId": "iss008e20656"
+      },
+      {
+        "kysymys": "Minä vuonna tämä kuva Kiovasta otettiin?",
+        "vastaus": "Kuva otettiin huhtikuussa 2004 Kansainväliseltä avaruusasemalta. Kiova on Ukrainan pääkaupunki ja yksi Itä-Euroopan vanhimmista kaupungeista.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss008e20656",
+            "title": "Crew Earth Observations taken during Expedition 8 – NASA"
+          }
+        ],
+        "havaintoId": "iss008e20656"
+      }
+    ]
+  },
+  "belgrad": {
+    "kysymykset": [
+      "Minkä kahden joen yhtymäkohdassa Belgrad sijaitsee?",
+      "Mikä on Belgradin vanhan ytimen nimi?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minkä kahden joen yhtymäkohdassa Belgrad sijaitsee?",
+        "vastaus": "Belgrad, Serbian pääkaupunki, sijaitsee Tonava- ja Sava-jokien yhtymäkohdassa. Kaupunkialueella asuu noin 1,65 miljoonaa ihmistä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss034e061717",
+            "title": "Earth Observations taken by Expedition 34 crewmember – NASA"
+          }
+        ],
+        "havaintoId": "iss034e061717"
+      },
+      {
+        "kysymys": "Mikä on Belgradin vanhan ytimen nimi?",
+        "vastaus": "Belgradin vanha ydin, Kalemegdan, sijaitsee jokien oikealla rannalla. Sava-joen toisella puolella on toisen maailmansodan jälkeen rakennettu Uusi Belgrad.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss034e061717",
+            "title": "Earth Observations taken by Expedition 34 crewmember – NASA"
+          }
+        ],
+        "havaintoId": "iss034e061717"
+      }
+    ]
+  },
+  "chevril-jarvi": {
+    "kysymykset": [
+      "Missä maassa Lac du Chevril -tekojärvi sijaitsee?",
+      "Minkä väristä Lac du Chevrilin vesi on kuvassa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Missä maassa Lac du Chevril -tekojärvi sijaitsee?",
+        "vastaus": "Lac du Chevril sijaitsee Auvergne-Rhône-Alpesin alueella Kaakkois-Ranskassa. Kuva otettiin kesäkuussa 2023, kun avaruusasema kiersi noin 420 kilometrin korkeudessa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss069e025220",
+            "title": "French Mountain Ranges Observed During Expedition 69 – NASA"
+          }
+        ],
+        "havaintoId": "iss069e025220"
+      },
+      {
+        "kysymys": "Minkä väristä Lac du Chevrilin vesi on kuvassa?",
+        "vastaus": "Järven vesi näkyy kuvassa kirkkaan turkoosina, mikä erottuu selvästi lumijuovaisten Alppien vuorenhuippujen keskeltä. Tekojärvi on osa Ranskan Alppien jokivesistöä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss069e025220",
+            "title": "French Mountain Ranges Observed During Expedition 69 – NASA"
+          }
+        ],
+        "havaintoId": "iss069e025220"
+      }
+    ]
+  },
+  "palermo": {
+    "kysymykset": [
+      "Kuinka vanha kaupunki Palermo on?",
+      "Miten Palermon katuvalot muuttuvat esikaupungeissa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Kuinka vanha kaupunki Palermo on?",
+        "vastaus": "Palermo on yli 2 700 vuotta vanha kaupunki Sisilian rannikolla Tyrrhenanmerellä. Kuva otettiin marraskuussa 2025 noin kello 22.12 paikallista aikaa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e1047080",
+            "title": "Palermo, Italy—on the Sicilian coast of the Tyrrhenian Sea – NASA"
+          }
+        ],
+        "havaintoId": "iss073e1047080"
+      },
+      {
+        "kysymys": "Miten Palermon katuvalot muuttuvat esikaupungeissa?",
+        "vastaus": "Keskustan vanhat, kellertävät natriumlamput vaihtuvat esikaupunkialueilla viileämmän sävyisiin, valkoisiin LED-valoihin. Tämä värimuutos näkyy selvästi yökuvassa avaruudesta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e1047080",
+            "title": "Palermo, Italy—on the Sicilian coast of the Tyrrhenian Sea – NASA"
+          }
+        ],
+        "havaintoId": "iss073e1047080"
+      }
+    ]
+  },
+  "bari": {
+    "kysymykset": [
+      "Mistä Bari on tunnettu kaupunki?",
+      "Minä vuonna tämä yökuva Barista otettiin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mistä Bari on tunnettu kaupunki?",
+        "vastaus": "Yli 2 700 vuotta vanha Bari tunnetaan oliivilehdoistaan, viinitarhoistaan ja rannikon jyrkänteisiin kaiverretuista luolistaan. Kaupunki sijaitsee Italian Adrianmeren rannikolla.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e1047143",
+            "title": "The city lights of Bari, Italy, and its surrounding suburbs – NASA"
+          }
+        ],
+        "havaintoId": "iss073e1047143"
+      },
+      {
+        "kysymys": "Minä vuonna tämä yökuva Barista otettiin?",
+        "vastaus": "Kuva otettiin marraskuussa 2025 Kansainväliseltä avaruusasemalta. Barin ja sen esikaupunkien valot pilkottavat selvästi Adrianmeren rannikolla.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e1047143",
+            "title": "The city lights of Bari, Italy, and its surrounding suburbs – NASA"
+          }
+        ],
+        "havaintoId": "iss073e1047143"
+      }
+    ]
+  },
+  "minsk": {
+    "kysymykset": [
+      "Minkä muodon Minskin kehätie piirtää kaupungin valoihin?",
+      "Minä vuonna tämä yökuva Minskistä otettiin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minkä muodon Minskin kehätie piirtää kaupungin valoihin?",
+        "vastaus": "Minskin kehätie piirtää kaupungin valoihin selvän soikean muodon. Minsk on Valko-Venäjän pääkaupunki, ja kuva on otettu lähellä maan rajaa Ukrainaan.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss066e117709",
+            "title": "iss066e117709 – NASA"
+          }
+        ],
+        "havaintoId": "iss066e117709"
+      },
+      {
+        "kysymys": "Minä vuonna tämä yökuva Minskistä otettiin?",
+        "vastaus": "Kuva otettiin tammikuussa 2022 Kansainväliseltä avaruusasemalta. Kaupungin valot erottuvat kirkkaasti ympäröivästä pimeästä maaseudusta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss066e117709",
+            "title": "iss066e117709 – NASA"
+          }
+        ],
+        "havaintoId": "iss066e117709"
+      }
+    ]
+  },
+  "porto": {
+    "kysymykset": [
+      "Mikä joki erottaa Porton ja Vila Nova de Gaian toisistaan?",
+      "Mihin mereen Douro-joki laskee Porton kohdalla?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä joki erottaa Porton ja Vila Nova de Gaian toisistaan?",
+        "vastaus": "Douro-joki erottaa Porton ja Vila Nova de Gaian toisistaan Portugalin luoteisrannikolla. Kuva on otettu yöllä elokuussa 2012.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss032e015055",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss032e015055"
+      },
+      {
+        "kysymys": "Mihin mereen Douro-joki laskee Porton kohdalla?",
+        "vastaus": "Douro-joki laskee Atlantin valtamereen Porton kaupungin kohdalla. Joen molemmin puolin erottuvat kaksoiskaupungit, Porto ja Vila Nova de Gaia.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss032e015055",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss032e015055"
+      }
+    ]
+  },
+  "valencia": {
+    "kysymykset": [
+      "Mikä laguuni näkyy Valencian kuvassa etelämpänä?",
+      "Mistä Valencia on tunnistettavissa satelliittikuvasta?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä laguuni näkyy Valencian kuvassa etelämpänä?",
+        "vastaus": "Albufera-laguuni siintää kuvassa Valencian eteläpuolella. Kuva otettiin lokakuussa 2020 juuri ennen kuin avaruusasema ylitti Espanjan rannikkoviivan.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss064e000399",
+            "title": "iss064e000399 – NASA"
+          }
+        ],
+        "havaintoId": "iss064e000399"
+      },
+      {
+        "kysymys": "Mistä Valencia on tunnistettavissa satelliittikuvasta?",
+        "vastaus": "Valencia tunnistetaan kuvasta sen sataman selvistä aallonmurtajista. Kaupunki on Espanjan kolmanneksi suurin ja sijaitsee Välimeren rannalla.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss064e000399",
+            "title": "iss064e000399 – NASA"
+          }
+        ],
+        "havaintoId": "iss064e000399"
+      }
+    ]
+  },
+  "kreeta": {
+    "kysymykset": [
+      "Mikä kuningas hallitsi kreikkalaisen tarun mukaan Kreetalla?",
+      "Kuinka pitkä Kreeta-saari on?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä kuningas hallitsi kreikkalaisen tarun mukaan Kreetalla?",
+        "vastaus": "Kreikkalaisen mytologian mukaan Kreetalla hallitsi kuningas Minos, jonka labyrintissa asusti puoliksi ihminen, puoliksi sonni ollut Minotauros. Kreeta on Kreikan suurin ja väkirikkain saari.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss028e018562",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss028e018562"
+      },
+      {
+        "kysymys": "Kuinka pitkä Kreeta-saari on?",
+        "vastaus": "Kreeta on noin 260 kilometriä pitkä ja enimmillään 60 kilometriä leveä. Saaren pääkaupunki Iraklion sijaitsee pohjoisrannikolla.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss028e018562",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss028e018562"
+      }
+    ]
+  },
+  "brindisi": {
+    "kysymykset": [
+      "Mihin suuntaan 1800-luvun laivat lähtivät Brindisistä?",
+      "Mitkä kaupungit näkyvät Italian ”saappaan” kärjessä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mihin suuntaan 1800-luvun laivat lähtivät Brindisistä?",
+        "vastaus": "Brindisistä lähtivät 1800-luvulla höyrylaivat kohti Suezin kanavaa ja Intiaa. Se oli tuolloin tärkeä satama maailmanympärimatkaajille.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss028e008604",
+            "title": "Earth Observations – NASA"
+          }
+        ],
+        "havaintoId": "iss028e008604"
+      },
+      {
+        "kysymys": "Mitkä kaupungit näkyvät Italian ”saappaan” kärjessä?",
+        "vastaus": "Italian ”saappaan” kantapää ja kärki erottuvat suurten kaupunkien, kuten Napolin, Barin ja Brindisin, valoista. Kuva on otettu yöllä kesäkuussa 2011.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss028e008604",
+            "title": "Earth Observations – NASA"
+          }
+        ],
+        "havaintoId": "iss028e008604"
+      }
+    ]
+  },
+  "antwerpenin-satama": {
+    "kysymykset": [
+      "Minkä joen varrella Antwerpenin satama sijaitsee?",
+      "Minä vuonna tämä kuva Antwerpenin satamasta otettiin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minkä joen varrella Antwerpenin satama sijaitsee?",
+        "vastaus": "Antwerpenin satama sijaitsee Schelde-joen varrella Belgiassa. Se on Euroopan toiseksi suurin satama.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss065e096050",
+            "title": "Earth observation taken by Expedition 65 crew – NASA"
+          }
+        ],
+        "havaintoId": "iss065e096050"
+      },
+      {
+        "kysymys": "Minä vuonna tämä kuva Antwerpenin satamasta otettiin?",
+        "vastaus": "Kuva otettiin kesäkuussa 2021, kun avaruusasema kiersi noin 420 kilometrin korkeudessa Pohjois-Euroopan yllä. Sataman altaat ja laiturialueet erottuvat kuvassa selvästi.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss065e096050",
+            "title": "Earth observation taken by Expedition 65 crew – NASA"
+          }
+        ],
+        "havaintoId": "iss065e096050"
+      }
+    ]
+  },
+  "bratislava-wienin-vieressa": {
+    "kysymykset": [
+      "Minkä kahden pääkaupungin valot näkyvät tässä yökuvassa?",
+      "Mitä näkyy Wienin ja Bratislavan ympärillä kuvassa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minkä kahden pääkaupungin valot näkyvät tässä yökuvassa?",
+        "vastaus": "Kuvassa näkyvät sekä Itävallan pääkaupungin Wienin että Slovakian pääkaupungin Bratislavan valot. Tonava-joki erottaa kaupungit toisistaan.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss074e0149548",
+            "title": "Vienna, Austria, and Bratislava, Slovakia, light up the Central European nightscape – NASA"
+          }
+        ],
+        "havaintoId": "iss074e0149548"
+      },
+      {
+        "kysymys": "Mitä näkyy Wienin ja Bratislavan ympärillä kuvassa?",
+        "vastaus": "Wienin ja Bratislavan ympärillä siintävät viinitarha- ja markkinakylät. Kuva otettiin tammikuussa 2026 avaruusasemalta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss074e0149548",
+            "title": "Vienna, Austria, and Bratislava, Slovakia, light up the Central European nightscape – NASA"
+          }
+        ],
+        "havaintoId": "iss074e0149548"
+      }
+    ]
+  },
+  "kykladit": {
+    "kysymykset": [
+      "Mikä saariryhmä näkyy kuvan keskellä alhaalla?",
+      "Mikä suuri saari näkyy kuvassa Kykladien vieressä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä saariryhmä näkyy kuvan keskellä alhaalla?",
+        "vastaus": "Kuvan keskellä alhaalla näkyvät Kykladit, Egeanmeren saariryhmä. Kuva otettiin heinäkuussa 2014 Kansainväliseltä avaruusasemalta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss040e033303",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss040e033303"
+      },
+      {
+        "kysymys": "Mikä suuri saari näkyy kuvassa Kykladien vieressä?",
+        "vastaus": "Kreeta, Kreikan suurin saari, näkyy kuvassa eteläisimpänä saarena vasemmalla. Kuvassa näkyy myös Joonianmeri ja suuri osa Kreikan mannerta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss040e033303",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss040e033303"
+      }
+    ]
+  },
+  "messinansalmi": {
+    "kysymykset": [
+      "Minkä kaksi aluetta Messinansalmi erottaa toisistaan?",
+      "Minkä maanosan yllä avaruusasema oli kuvan ottohetkellä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minkä kaksi aluetta Messinansalmi erottaa toisistaan?",
+        "vastaus": "Messinansalmi erottaa Sisilian saaren Italian mantereesta. Kuva on otettu yöllä heinäkuussa 2013.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss036e025908",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss036e025908"
+      },
+      {
+        "kysymys": "Minkä maanosan yllä avaruusasema oli kuvan ottohetkellä?",
+        "vastaus": "Avaruusasema oli ylittämässä Afrikan yllä kuvan ottohetkellä, korkealta viistokulmasta kohti Sisiliaa ja Italiaa. Taivaalla näkyy myös muutama tähti.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss036e025908",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss036e025908"
+      }
+    ]
+  },
+  "sardinia-korsika": {
+    "kysymykset": [
+      "Mikä saari näkyy Sardinian vieressä pohjoisessa?",
+      "Minkä meren yllä avaruusasema kiersi kuvan ottohetkellä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä saari näkyy Sardinian vieressä pohjoisessa?",
+        "vastaus": "Sardinian pohjoispuolella näkyy Ranskan Korsika. Molemmat ovat Välimeren suuria saaria, ja kuva on otettu kesäkuussa 2022 avaruusasemalta Napolin edustan yllä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss067e123679",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss067e123679"
+      },
+      {
+        "kysymys": "Minkä meren yllä avaruusasema kiersi kuvan ottohetkellä?",
+        "vastaus": "Avaruusasema kiersi noin 420 kilometrin korkeudessa Tyrrhenanmeren yllä. Sardinia on Välimeren toiseksi suurin saari heti Sisilian jälkeen.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss067e123679",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss067e123679"
+      }
+    ]
+  },
+  "peloponnesos": {
+    "kysymykset": [
+      "Mikä kannas erottaa Peloponnesoksen muusta Kreikasta?",
+      "Minkä antiikin kaupunkivaltion koti Peloponnesos oli?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä kannas erottaa Peloponnesoksen muusta Kreikasta?",
+        "vastaus": "Kapea Korinthin kannas erottaa Peloponnesoksen niemimaan muusta Kreikasta. Kannaksen poikki kaivettiin laivakanava vuonna 1893.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss039e003505",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss039e003505"
+      },
+      {
+        "kysymys": "Minkä antiikin kaupunkivaltion koti Peloponnesos oli?",
+        "vastaus": "Peloponnesos oli antiikin Spartan koti. Alue on tunnettu vuoristoisesta maastostaan ja lumihuippuisista vuoristaan, jotka erottuvat myös tässä maaliskuussa 2014 otetussa kuvassa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss039e003505",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss039e003505"
+      }
+    ]
+  },
+  "feneos-palo": {
+    "kysymykset": [
+      "Minkä kylän lähellä metsäpalo roihuaa tässä kuvassa?",
+      "Kuinka korkealla avaruusasema kiersi kuvan ottohetkellä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minkä kylän lähellä metsäpalo roihuaa tässä kuvassa?",
+        "vastaus": "Metsäpalo roihuaa Feneoksen kylän lähellä Kreikassa, Korinthinlahden eteläpuolella. Kuva otettiin heinäkuussa 2025.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e0421317",
+            "title": "iss073e0421317 – NASA"
+          }
+        ],
+        "havaintoId": "iss073e0421317"
+      },
+      {
+        "kysymys": "Kuinka korkealla avaruusasema kiersi kuvan ottohetkellä?",
+        "vastaus": "Avaruusasema kiersi noin 420 kilometrin korkeudessa Etelä-Euroopan yllä. Metsäpalon savupilvi erottuu kuvassa selvästi vihreän maaston keskeltä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss073e0421317",
+            "title": "iss073e0421317 – NASA"
+          }
+        ],
+        "havaintoId": "iss073e0421317"
+      }
+    ]
+  },
+  "mallorca": {
+    "kysymykset": [
+      "Missä kohtaa Mallorcaa sijaitsee pääkaupunki Palma?",
+      "Mikä pieni saari sijaitsee Mallorcan eteläpuolella?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Missä kohtaa Mallorcaa sijaitsee pääkaupunki Palma?",
+        "vastaus": "Mallorcan pääkaupunki Palma sijaitsee saaren lounaisrannikolla, Palman lahden pohjukassa. Mallorca on Baleaarien saariryhmän suurin saari, noin 3 600 neliökilometrin kokoinen.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss030e030290",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss030e030290"
+      },
+      {
+        "kysymys": "Mikä pieni saari sijaitsee Mallorcan eteläpuolella?",
+        "vastaus": "Cabreran saari sijaitsee Mallorcan eteläpuolella, ja sen ympärillä on kansallispuisto. Mallorcan keskiosa on tasaista viljelymaata, kun taas vuoristo kohoaa luoteisrannikolla.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss030e030290",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss030e030290"
+      }
+    ]
+  },
+  "mont-saint-michel-lahti": {
+    "kysymykset": [
+      "Mikä joki on Bretagnen ja Normandian raja tässä kuvassa?",
+      "Mitkä kaksi pistettä näkyvät hiekkasärkillä?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä joki on Bretagnen ja Normandian raja tässä kuvassa?",
+        "vastaus": "Couesnon-joki on Bretagnen ja Normandian raja. Maakuntien rannikkoalueet Luoteis-Ranskassa kohtaavat tässä Englannin kanaalin rannalla, kuvassa helmikuulta 2023.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss068e053846",
+            "title": "iss068e053846 – NASA"
+          }
+        ],
+        "havaintoId": "iss068e053846"
+      },
+      {
+        "kysymys": "Mitkä kaksi pistettä näkyvät hiekkasärkillä?",
+        "vastaus": "Hiekkasärkillä erottuu kaksi tummaa pistettä: eteläisempi on Mont-Saint-Michelin luostarisaari ja pohjoisempi pienempi Tombelaine. Avaruusasema kiersi tuolloin noin 425 kilometrin korkeudessa.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss068e053846",
+            "title": "iss068e053846 – NASA"
+          }
+        ],
+        "havaintoId": "iss068e053846"
+      }
+    ]
+  },
+  "le-havre": {
+    "kysymykset": [
+      "Minkä kahden vesistön yhtymäkohdassa Le Havre sijaitsee?",
+      "Minkä arkkitehdin mukaan Le Havre rakennettiin uudelleen?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minkä kahden vesistön yhtymäkohdassa Le Havre sijaitsee?",
+        "vastaus": "Le Havre sijaitsee Seine-joen ja Englannin kanaalin yhtymäkohdassa Pohjois-Ranskassa. Se on Ranskan suurin konttisatama.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss037e021618",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss037e021618"
+      },
+      {
+        "kysymys": "Minkä arkkitehdin mukaan Le Havre rakennettiin uudelleen?",
+        "vastaus": "Le Havre rakennettiin suurelta osin uudelleen toisen maailmansodan jälkeen arkkitehti Auguste Perret'n suunnitelman mukaan betonista. Tämä teki kaupungista Unescon maailmanperintökohteen.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss037e021618",
+            "title": "Earth Observation – NASA"
+          }
+        ],
+        "havaintoId": "iss037e021618"
+      }
+    ]
+  },
+  "malta-sisilia": {
+    "kysymykset": [
+      "Missä kohdassa Sisiliaa kuvassa näkyvä Etna sijaitsee?",
+      "Mitkä pienet saaret näkyvät kuvassa Sisilian eteläpuolella?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Missä kohdassa Sisiliaa kuvassa näkyvä Etna sijaitsee?",
+        "vastaus": "Lumihuippuinen Etna kohoaa Sisilian koilliskärjessä. Se on yksi maailman tarkimmin valvotuista tulivuorista.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/STS100-713-064",
+            "title": "STS100-713-064 – NASA"
+          }
+        ],
+        "havaintoId": "STS100-713-064"
+      },
+      {
+        "kysymys": "Mitkä pienet saaret näkyvät kuvassa Sisilian eteläpuolella?",
+        "vastaus": "Maltan pienet saaret näkyvät kaukana taustalla Sisilian eteläpuolella. Kuva otettiin huhtikuussa 2001 sukkulalennolta.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/STS100-713-064",
+            "title": "STS100-713-064 – NASA"
+          }
+        ],
+        "havaintoId": "STS100-713-064"
+      }
+    ]
+  },
+  "ambrakia-ioonianmeri": {
+    "kysymykset": [
+      "Mikä lahti näkyy kuvan vasemmassa yläkulmassa?",
+      "Mikä vuori kohoaa lumihuippuisena Kefalonialla?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä lahti näkyy kuvan vasemmassa yläkulmassa?",
+        "vastaus": "Ambrakian lahti näkyy kuvan vasemmassa yläkulmassa Kreikan länsirannikolla. Avaruusasema kiersi kuvan ottohetkellä Joonianmeren yllä.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss070e035893",
+            "title": "iss070e035893 – NASA"
+          }
+        ],
+        "havaintoId": "iss070e035893"
+      },
+      {
+        "kysymys": "Mikä vuori kohoaa lumihuippuisena Kefalonialla?",
+        "vastaus": "Lumihuippuinen Ainos-vuori kohoaa Kefalonialla, suuremmalla kahdesta kuvassa näkyvästä saaresta. Lähempänä mannerta näkyy kapeampi Lefkas, joka on yhdistetty mantereeseen kannaksella.",
+        "lahteet": [
+          {
+            "url": "https://images.nasa.gov/details/iss070e035893",
+            "title": "iss070e035893 – NASA"
+          }
+        ],
+        "havaintoId": "iss070e035893"
+      }
+    ]
+  },
+  "odessa": {
+    "kysymykset": [
+      "Minkä meren rannalla Odessa sijaitsee?",
+      "Mitä kuvassa näkyy Odessan kaupungin lisäksi?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minkä meren rannalla Odessa sijaitsee?",
+        "vastaus": "Odessa sijaitsee Mustanmeren rannalla Ukrainassa. Kuva on otettu päivällä huhtikuussa 2020.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS062&roll=E&frame=142201",
+            "title": "ISS062-E-142201 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS062-E-142201"
+      },
+      {
+        "kysymys": "Mitä kuvassa näkyy Odessan kaupungin lisäksi?",
+        "vastaus": "Kuvassa erottuvat kaupungin satama-alue, rannan kaarre sekä sisämaan järvet ja viljelymaa. Odessa on tärkeä ukrainalainen satamakaupunki.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS062&roll=E&frame=142201",
+            "title": "ISS062-E-142201 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS062-E-142201"
+      }
+    ]
+  },
+  "praha": {
+    "kysymykset": [
+      "Minkä joen mutkan ympärille Praha on rakentunut?",
+      "Miltä Prahan tiivis keskusta näyttää kuvassa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minkä joen mutkan ympärille Praha on rakentunut?",
+        "vastaus": "Praha on rakentunut Vltava-joen jyrkän mutkan ympärille. Kuva on otettu päivällä elokuussa 2017.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS052&roll=E&frame=78028",
+            "title": "ISS052-E-78028 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS052-E-78028"
+      },
+      {
+        "kysymys": "Miltä Prahan tiivis keskusta näyttää kuvassa?",
+        "vastaus": "Prahan tiivis keskusta erottuu vaaleana laikkuna joen molemmin puolin. Ympäröivä maaseutu näkyy kuvassa peltoina ja metsälaikkuina.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS052&roll=E&frame=78028",
+            "title": "ISS052-E-78028 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS052-E-78028"
+      }
+    ]
+  },
+  "marseille": {
+    "kysymykset": [
+      "Mikä kansallispuisto näkyy Marseillen itäpuolella?",
+      "Missä kohtaa kuvaa Marseillen satama-alue näkyy?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä kansallispuisto näkyy Marseillen itäpuolella?",
+        "vastaus": "Marseillen itäpuolella kohoavat kalkkikivivuoret jatkuvat kaakkoon Calanques-kansallispuiston jyrkkinä rantajyrkänteinä. Marseille on Ranskan suurin Välimeren satamakaupunki.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS050&roll=E&frame=51867",
+            "title": "ISS050-E-51867 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS050-E-51867"
+      },
+      {
+        "kysymys": "Missä kohtaa kuvaa Marseillen satama-alue näkyy?",
+        "vastaus": "Marseillen satama-alue näkyy kuvan vasemmassa alakulmassa. Kuva otettiin päivällä helmikuussa 2017.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS050&roll=E&frame=51867",
+            "title": "ISS050-E-51867 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS050-E-51867"
+      }
+    ]
+  },
+  "sarajevo": {
+    "kysymykset": [
+      "Minkä vuoriston keskelle Sarajevo on rakentunut?",
+      "Minä vuonna tämä kuva Sarajevosta otettiin?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minkä vuoriston keskelle Sarajevo on rakentunut?",
+        "vastaus": "Sarajevo on rakentunut kapeaan vuoristolaaksoon Dinaaristen Alppien keskelle. Kaupunkia ympäröivät joka puolelta metsäiset vuorenrinteet.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS036&roll=E&frame=3068",
+            "title": "ISS036-E-3068 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS036-E-3068"
+      },
+      {
+        "kysymys": "Minä vuonna tämä kuva Sarajevosta otettiin?",
+        "vastaus": "Kuva otettiin toukokuussa 2013. Sarajevo on Bosnia ja Hertsegovinan pääkaupunki.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS036&roll=E&frame=3068",
+            "title": "ISS036-E-3068 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS036-E-3068"
+      }
+    ]
+  },
+  "bryssel": {
+    "kysymykset": [
+      "Minkä joen varrella Bryssel erottuu yökuvassa?",
+      "Mikä alue erottuu kirkkaana kuvan oikeassa yläkulmassa?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Minkä joen varrella Bryssel erottuu yökuvassa?",
+        "vastaus": "Bryssel erottuu kirkkaana valotäplänä Senne-joen varrella. Kuva on otettu yöllä syyskuussa 2021.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS065&roll=E&frame=393478",
+            "title": "ISS065-E-393478 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS065-E-393478"
+      },
+      {
+        "kysymys": "Mikä alue erottuu kirkkaana kuvan oikeassa yläkulmassa?",
+        "vastaus": "Kuvan oikeassa yläkulmassa erottuu kirkkaasti valaistu Zaventemin lentoasema kiitoteineen. Bryssel on Belgian pääkaupunki ja EU:n kotikaupunki.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS065&roll=E&frame=393478",
+            "title": "ISS065-E-393478 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS065-E-393478"
+      }
+    ]
+  },
+  "dubrovnik": {
+    "kysymykset": [
+      "Mikä saari näkyy Dubrovnikin edustalla?",
+      "Millainen Kroatian rannikko on Dubrovnikin seudulla?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä saari näkyy Dubrovnikin edustalla?",
+        "vastaus": "Lokrumin saari näkyy Dubrovnikin edustalla. Kuva on otettu päivällä syyskuussa 2017.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS052&roll=E&frame=84306",
+            "title": "ISS052-E-84306 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS052-E-84306"
+      },
+      {
+        "kysymys": "Millainen Kroatian rannikko on Dubrovnikin seudulla?",
+        "vastaus": "Kroatian Dalmatian-rannikko on pirstaleinen ja saarien reunustama Dubrovnikin seudulla. Tämä näkyy kuvassa kaupungin ympärillä olevina pienempinä saarina.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS052&roll=E&frame=84306",
+            "title": "ISS052-E-84306 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS052-E-84306"
+      }
+    ]
+  },
+  "varsova": {
+    "kysymykset": [
+      "Mikä joki halkoo Varsovan kahtia?",
+      "Mikä muu kohde näkyy Varsovan kuvassa kaupungin lisäksi?"
+    ],
+    "vastaukset": [
+      {
+        "kysymys": "Mikä joki halkoo Varsovan kahtia?",
+        "vastaus": "Veiksel-joki (Wisła) halkoo Varsovan kahtia. Kuva on otettu päivällä elokuussa 2018.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS056&roll=E&frame=153400",
+            "title": "ISS056-E-153400 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS056-E-153400"
+      },
+      {
+        "kysymys": "Mikä muu kohde näkyy Varsovan kuvassa kaupungin lisäksi?",
+        "vastaus": "Kuvassa erottuu myös Varsovan lentokenttä. Varsova on Puolan pääkaupunki.",
+        "lahteet": [
+          {
+            "url": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS056&roll=E&frame=153400",
+            "title": "ISS056-E-153400 – NASA Gateway to Astronaut Photography"
+          }
+        ],
+        "havaintoId": "ISS056-E-153400"
+      }
+    ]
   }
 };
 

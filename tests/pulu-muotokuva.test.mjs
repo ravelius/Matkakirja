@@ -46,5 +46,6 @@ test('vain canonical Livian avauksen indeksi 4 pyytää muotokuvan', () => {
   const livia = lue('../js/livia.js');
   const kutsu = livia.match(/polloAvauskupla\(teksti, \{[\s\S]*?\n  \}\);/);
   assert.ok(kutsu, 'avauskuplan kutsua ei löydy');
-  assert.match(kutsu[0], /muotokuva: rivi\.indeksi === 4/);
+  assert.match(kutsu[0], /\bmuotokuva,/);
+  assert.match(livia, /const muotokuva = rivi\.indeksi === 4;/);
 });

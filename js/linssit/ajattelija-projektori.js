@@ -18,16 +18,39 @@ export const NAUHA_EM = 220 / 534;
 const ATLAS_LEVEYS = 4096;
 const ATLAS_VALI = 16;   // tyhjä väli rivien välissä: mip-tasot eivät vuoda viereiseen riviin
 
-/** Piirtää rivit atlakseen. rivit: [{ teksti, fontti, korkeus px, sumea?: boolean }]. Palauttaa kankaan ja rivien paikat. */
+/**
+ * Piirtää rivit atlakseen. rivit: [{ teksti, fontti, korkeus px, sumea?: boolean, sumeus?: em-osuus, kortti?: [rivit] }].
+ * KORTTI (v14, omistaja 3.10.2026: päälainaus luettavissa kokonaan): monirivinen teksti yhtenä laattana, rivit keskitettyinä;
+ * korkeus on silloin YHDEN tekstirivin korkeus, ja laatan korkeus kasvaa rivimäärän mukaan (pystyreunus 17 %, ettei
+ * varjostimen v-reunan häivytys osu kirjaimiin). sumeus: taustavirran epäterävyys em-osuutena (v14).
+ * Palauttaa kankaan ja rivien paikat.
+ */
 export function piirraAtlas(rivit, doc = document) {
   const kangas = doc.createElement('canvas');
   const mitta = kangas.getContext('2d');
   const paikat = [];
   let y = 0;
-  for (const r of rivit) {
-    const em = Math.round(r.korkeus * NAUHA_EM * (r.emOsuus ?? 1));
+  for (const r0 of rivit) {
+    let r = r0;
+    let em = Math.round(r.korkeus * NAUHA_EM * (r.emOsuus ?? 1));
     mitta.font = `${r.paino ?? 'bold'} ${em}px ${r.fontti}`;
-    const tekstiLev = Math.ceil(mitta.measureText(r.teksti).width);
+    if (r.kortti) {
+      const leveimmat = Math.ceil(Math.max(...r.kortti.map((t) => mitta.measureText(t).width)));
+      const rivivali = Math.round(em * 1.3);
+      const korkeus = Math.round((rivivali * r.kortti.length + em * 0.4) / 0.66);
+      const reuna = Math.round(em * 0.85);
+      const lev = Math.min(ATLAS_LEVEYS, leveimmat + 2 * reuna);
+      paikat.push({ ...r, korkeus, em, lev, y, uMax: lev / ATLAS_LEVEYS, reuna, rivivali });
+      y += (korkeus + ATLAS_VALI) * (r.sumea ? 2 : 1);
+      continue;
+    }
+    let tekstiLev = Math.ceil(mitta.measureText(r.teksti).width);
+    // Pitkä toistorivi (esim. Apologia 38a kokonaan) pienennetään mahtumaan yhteen laattaan väleineen.
+    if (r.toisto && tekstiLev + 3 * em > ATLAS_LEVEYS) {
+      em = Math.floor(em * ATLAS_LEVEYS / (tekstiLev + 3 * em));
+      mitta.font = `${r.paino ?? 'bold'} ${em}px ${r.fontti}`;
+      tekstiLev = Math.ceil(mitta.measureText(r.teksti).width);
+    }
     if (r.toisto) {
       // TOISTORIVI TÄYTTÄÄ ATLAKSEN LEVEYDEN kokonaisilla laatoilla (laatta = teksti + väli): näytteenotin
       // kääriä (RepeatWrapping) jatkuvalla u:lla, joten saumassa ei ole fract()-hyppyä eikä mip-viivaa.
@@ -55,12 +78,19 @@ export function piirraAtlas(rivit, doc = document) {
       // Toistorivi täyttää koko atlaksen leveyden (kaikki laatat), muuten vain oma leveys (Linssiseppä 2:n löydös 2.10.).
       c.beginPath(); c.rect(0, yla, p.toistoja ? ATLAS_LEVEYS : p.lev, p.korkeus); c.clip();
       c.filter = `blur(${sumeus}px)`;
-      for (let n = 0; n < (p.toistoja ?? 1); n += 1) c.fillText(p.teksti, p.reuna + n * p.lev, yla + p.korkeus / 2);
+      if (p.kortti) {
+        c.textAlign = 'center';
+        const y0 = yla + p.korkeus / 2 - p.rivivali * (p.kortti.length - 1) / 2;
+        p.kortti.forEach((t, k) => c.fillText(t, p.lev / 2, y0 + k * p.rivivali));
+      } else {
+        for (let n = 0; n < (p.toistoja ?? 1); n += 1) c.fillText(p.teksti, p.reuna + n * p.lev, yla + p.korkeus / 2);
+      }
       c.restore();
     };
     // Projektorin pehmeys: GaussianBlur 2 px 220 px:n kirjaimissa; sumea pari nauhan korkeus / 40.
-    piirra(p.y, Math.max(0.5, p.em * 2 / 220));
-    if (p.sumea) piirra(p.y + p.korkeus + ATLAS_VALI, p.korkeus / 40);
+    // v14: taustavirran rivit epäteräviksi jo atlakseen (sumeus em-osuutena), ei ajonaikaista kustannusta.
+    piirra(p.y, Math.max(0.5, p.em * (p.sumeus ?? 2 / 220)));
+    if (p.sumea) piirra(p.y + p.korkeus + ATLAS_VALI, (p.kortti ? p.em * 192 / 220 : p.korkeus) / 40);
   }
   return { kangas, paikat };
 }
@@ -80,6 +110,15 @@ export function lisaaProjektorit(THREE, materiaali, atlasTekstuuri) {
     pF: { value: Array.from({ length: N }, () => new THREE.Vector4()) },
     pVari: { value: new THREE.Color(1, 1, 1) },
     pKaiku: { value: null },
+    pKaiku2: { value: null },   // toinen kaikukuva: kaksi kaikua voi olla päällekkäin (v13 ristihäivytys)
+    // v13c: tekstivirran väistökehät kaikujen ympärillä (xyz maailmassa, w = säde m; 0 = pois).
+    pVaisto: { value: Array.from({ length: 4 }, () => new THREE.Vector4()) },   // v14: myös päälainauskortit
+    // v13c: savukiekuran varjomaski (atlas: 4 ruutua RGBA-kanavissa, 8 × 8 laattaa); tila = (päällä, ala m, laatan u, v).
+    pSavu: { value: null },
+    pSavuTila: { value: new THREE.Vector4() },
+    pSavuKanava: { value: new THREE.Vector4(1, 0, 0, 0) },
+    // Maskin tasokorjaus (Päätoimittaja 3.10.2026: ydin lähes täysi varjo, reuna terävä, leveys ennallaan): m' = (m − c0) / (1 − c0).
+    pSavuC0: { value: 0 },
     pKaikuVari: { value: new THREE.Color(1, 1, 1) },
   };
   materiaali.onBeforeCompile = (shader) => {
@@ -100,9 +139,31 @@ uniform vec4 pB[P_ENINTAAN]; // cos kulma, sin kulma, pystysiirto vM, voima
 uniform vec4 pC[P_ENINTAAN]; // atlas v0, v1 (terävä), v0, v1 (sumea; = terävä, jos ei sumeaa)
 uniform vec4 pD[P_ENINTAAN]; // uMax, ca, syvyys, toisto (0 = CLIP, 1 = REPEAT)
 uniform vec4 pE[P_ENINTAAN]; // projektorin paikka (maailma), keilan cos ulkoreuna
-uniform vec4 pF[P_ENINTAAN]; // keilan cos sisäreuna, keskitys (0,5 päälause, 0 rivi), kaiku (1 = kaikukuva)
+uniform vec4 pF[P_ENINTAAN]; // keilan cos sisäreuna, keskitys (0,5 päälause, 0 rivi), kaiku (1 = pKaiku, 2 = pKaiku2),
+                             // rintama (v14: rivi juoksee sisään sivulta; 0 = koko rivi, ±10 + kynnys m, etumerkki = suunta)
 uniform vec3 pVari;
 uniform sampler2D pKaiku;     // kaikukuva (v8): harmaasävy, valoa vain sisällössä
+uniform sampler2D pKaiku2;    // toinen kaikukuva (pF.z = 2)
+uniform vec4 pVaisto[4];
+uniform sampler2D pSavu;
+uniform vec4 pSavuTila;
+uniform vec4 pSavuKanava;
+uniform float pSavuC0;
+/* Väistö: taustavirta jättää kaiun ympärille tyhjän kehän, reuna pehmenee 15 % säteestä (Linnanrakentaja v13c). */
+float pVaistoKerroin(vec3 p) {
+  float k = 1.0;
+  for (int j = 0; j < 4; j++) {
+    if (pVaisto[j].w > 0.0) k *= smoothstep(0.85 * pVaisto[j].w, pVaisto[j].w, distance(p, pVaisto[j].xyz));
+  }
+  return k;
+}
+/* Savu: maskin uv = (X/Z · etäisyys) / ala + 0,5 projektorin omassa kuvatasossa; 1 = täysi valo, ulkopuolella täysi. */
+float pSavuNayte(float x, float y) {
+  vec2 uv = vec2(x, y) / pSavuTila.y + 0.5;
+  if (uv.x <= 0.0 || uv.x >= 1.0 || uv.y <= 0.0 || uv.y >= 1.0) return 1.0;
+  float m = dot(texture2D(pSavu, pSavuTila.zw + uv * 0.125), pSavuKanava);
+  return clamp((m - pSavuC0) / (1.0 - pSavuC0), 0.0, 1.0);
+}
 uniform vec3 pKaikuVari;      // seepia
 float pNayte(int i, float jx, float jy, float sk, float sumeus) {
   vec4 a = pA[i]; vec4 b = pB[i]; vec4 c = pC[i]; vec4 d = pD[i];
@@ -110,21 +171,41 @@ float pNayte(int i, float jx, float jy, float sk, float sumeus) {
   float u = (x * b.x - y * b.y) / a.y + pF[i].y + a.w;
   float v = (x * b.y + y * b.x - b.z) / a.z + 0.5;
   if (v <= 0.0 || v >= 1.0) return 0.0;
+  // Rintama (v14): rivi näkyy vain siltä puolelta, jolta se on jo juossut sisään (pehmeä 1 cm:n reuna).
+  float rintama = 1.0;
+  if (pF[i].w != 0.0) {
+    float sd = sign(pF[i].w);
+    float kynnys = pF[i].w - sd * 10.0;
+    float xm = x * b.x - y * b.y;
+    rintama = smoothstep(-0.005, 0.005, sd * (xm - kynnys));
+    if (rintama <= 0.0) return 0.0;
+  }
   // Rivin reunat häivytetään: kirjaimet ovat keskellä (v 0,3–0,7), ja loivassa kulmassa korkeat mip-tasot
   // toisivat muuten viereisen atlasrivin palasia katkoviivaksi.
-  float reuna = smoothstep(0.0, 0.15, v) * smoothstep(1.0, 0.85, v);
+  float reuna = smoothstep(0.0, 0.15, v) * smoothstep(1.0, 0.85, v) * rintama;
   if (d.w < 0.5 && (u <= 0.0 || u >= 1.0)) return 0.0;
-  // Kaikukuva: valoa vain sisällössä (sokrates_kaiku.py). Matalat sävyt kynnystetään pois (webin AgX nostaa niitä
-  // Blenderiä enemmän, jolloin kuva-ala erottui suorakaiteena), ja reunat häivytetään.
-  if (pF[i].z > 0.5) {
-    float reunaK = smoothstep(0.0, 0.08, u) * smoothstep(1.0, 0.92, u) * smoothstep(0.0, 0.08, v) * smoothstep(1.0, 0.92, v);
-    return smoothstep(0.08, 0.9, texture2D(pKaiku, vec2(u, 1.0 - v)).r) * reunaK;
-  }
   float au = u * d.x;   // toistorivi: jatkuva u, atlas kääritään (RepeatWrapping)
   float terava = texture2D(pAtlas, vec2(au, mix(c.x, c.y, 1.0 - v)), -0.75).r;
   if (sumeus <= 0.0) return terava * reuna;
   float sumea = texture2D(pAtlas, vec2(au, mix(c.z, c.w, 1.0 - v))).r;
   return mix(terava, sumea, sumeus) * reuna;
+}
+/*
+ * Kaikukuva (v8; v13c värikuvat alfalla): valoa vain sisällössä. Matalat sävyt kynnystetään pois kirkkaudesta (webin AgX
+ * nostaa niitä Blenderiä enemmän, jolloin kuva-ala erottui suorakaiteena), sävy säilyy (väri / kirkkaus), alfa rajaa
+ * hahmon ja reunat häivytetään. Harmaasävykuvalla tulos on sama kuin ennen (kirkkaus = punainen kanava).
+ */
+vec3 pKaikuNayte(int i, float jx, float jy) {
+  vec4 a = pA[i]; vec4 b = pB[i];
+  float x = jx * a.x, y = jy * a.x;
+  float u = (x * b.x - y * b.y) / a.y + pF[i].y + a.w;
+  float v = (x * b.y + y * b.x - b.z) / a.z + 0.5;
+  if (u <= 0.0 || u >= 1.0 || v <= 0.0 || v >= 1.0) return vec3(0.0);
+  // Pistemäinen projektori (Linnanrakentaja v13b): kuva terävä pinnalla; reunasta häivytetään vain 1 % (ei saumaa).
+  float reunaK = smoothstep(0.0, 0.01, u) * smoothstep(1.0, 0.99, u) * smoothstep(0.0, 0.01, v) * smoothstep(1.0, 0.99, v);
+  vec4 c = pF[i].z > 1.5 ? texture2D(pKaiku2, vec2(u, 1.0 - v)) : texture2D(pKaiku, vec2(u, 1.0 - v));
+  float l = max(max(c.r, c.g), c.b);
+  return c.rgb / max(l, 1e-3) * smoothstep(0.08, 0.9, l) * c.a * reunaK;
 }
 vec3 projektoriValo(vec3 nW) {
   vec3 summa = vec3(0.0);
@@ -141,10 +222,13 @@ vec3 projektoriValo(vec3 nW) {
     float jx = l.x / z, jy = l.y / z;
     float sumeus = pD[i].z > 0.0 ? min(abs(r - pA[i].x) / pD[i].z, 1.0) : 0.0;
     float ca = pD[i].y;
-    vec3 t = ca > 0.0
-      ? vec3(pNayte(i, jx, jy, 1.0 + ca, sumeus), pNayte(i, jx, jy, 1.0, sumeus), pNayte(i, jx, jy, 1.0 - ca, sumeus))
-      : vec3(pNayte(i, jx, jy, 1.0, sumeus));
-    summa += t * (pF[i].z > 0.5 ? pKaikuVari : pVari) * (pB[i].w * keila * nl / (r * r));
+    vec3 t = pF[i].z > 0.5 ? pKaikuNayte(i, jx, jy) * pKaikuVari
+      : (ca > 0.0
+        ? vec3(pNayte(i, jx, jy, 1.0 + ca, sumeus), pNayte(i, jx, jy, 1.0, sumeus), pNayte(i, jx, jy, 1.0 - ca, sumeus))
+        : vec3(pNayte(i, jx, jy, 1.0, sumeus))) * pVari;
+    if (pD[i].w > 0.5) t *= pVaistoKerroin(vMaailma);              // vain taustavirran toistorivit
+    if (pSavuTila.x > 0.5) t *= pSavuNayte(jx * pA[i].x, jy * pA[i].x);   // kaikki projektorit
+    summa += t * (pB[i].w * keila * nl / (r * r));
   }
   return summa;
 }`)
@@ -178,7 +262,7 @@ export function asetaProjektori(THREE, u, i, {
   // Blender: spot_size = 2,4·atan(ala / 2 / etäisyys) koko kulmana, spot_blend reunan pehmeys.
   const puoli = 1.2 * Math.atan(ala / 2 / etaisyys);
   u.pE.value[i].set(paikka.x, paikka.y, paikka.z, Math.cos(puoli));
-  u.pF.value[i].set(Math.cos(puoli * (1 - blend)), toisto ? 0 : 0.5, kaiku ? 1 : 0, 0);
+  u.pF.value[i].set(Math.cos(puoli * (1 - blend)), toisto ? 0 : 0.5, kaiku ? Number(kaiku) : 0, 0);
   return { nauhaLev };
 }
 

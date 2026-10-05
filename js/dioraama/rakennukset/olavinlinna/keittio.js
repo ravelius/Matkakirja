@@ -42,9 +42,12 @@ const KEITTIO_HAHMOT = [
     reaktio: { id: 'pulu-apulainen-r1', teksti: 'Säkki painaa, leipä palkitsee. Minä lupaan hoitaa murut.', aani: 'pulu-apulainen-r1' },
   },
   {
-    id: 'vesipoika', henkilo: 'vesipoika-1500', paikka: [19.5, 0, 9.5], suunta: 304, peilattu: false,
+    id: 'vesipoika', henkilo: 'vesipoika-1500', paikka: [18.6, 0, 7.8], suunta: 304, peilattu: false,
     silmukka: 'kavely', heraa: 2,
-    reitti: { pisteet: [[19.5, 0, 9.5], [13.8, 0, 5.6], [19.5, 0, 9.5]], nopeus: 1.0, tauko: 1.5 },
+    // 2.10. (skinnatut hahmot): kiertää pöydän ja luudan; pysähtyy ≥ 1 m:n päähän kokista ja tulisijan
+    // liekistä, ≥ 0,35 m pöydän, säkkien ja tulisijan reunoista (erä 1b, reittitesti);
+    // pää siirretty pöydän ja säkkien välistä (0,7 m:n rako) pöydän kaakkoiskulmalle (ennen suoraan pöydän läpi; tests/dioraama-reitit.test.mjs)
+    reitti: { pisteet: [[18.6, 0, 7.8], [17.6, 0, 6.0], [14.4, 0, 5.95], [17.6, 0, 6.0], [18.6, 0, 7.8]], nopeus: 1.0, tauko: 1.5 },
     repliikit: [
       { id: 'vesipoika-1', teksti: 'Järvestä tänne ja takaisin, jalat tuntevat jo polun ulkoa.', aani: 'vesipoika-1' },
       { id: 'vesipoika-2', teksti: 'Yksi sanko kokille, toinen padalle — kolmannen taidan juoda itse.', aani: 'vesipoika-2' },
@@ -55,6 +58,8 @@ const KEITTIO_HAHMOT = [
 
 export const TILA = {
   id: 'keittio',
+  // Nimilappujen tärkeysjärjestys (Siirtoseppä 4.10., omistajan lapputyyli C; vaakana ≤ 3 näkyvissä): 1 = ensin. Web ohittaa.
+  lappujarjestys: 1,
   nimi: 'Keittiö',
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.
@@ -279,6 +284,11 @@ export const TILA = {
     { tee: 'reaktio', hahmo: 'kokki' },
     { tee: 'kohta', n: 1 },
     { tee: 'repliikki', hahmo: 'vesipoika' },
+    // 4.10. (Päätoimittaja, Siirtosepän havainto): apulaisen repliikit (ääni C v2) olivat vain hahmossa, eivät käsikirjoituksessa → natiivissa apulainen ei puhunut.
+    // Natiivi soittaa vain käsikirjoituksen askeleet (Siirtoseppä 4.10.), joten -2 tarvitsee oman askeleen (n: 1); Pulun reaktio vastaa jauhosäkkiin.
+    { tee: 'repliikki', hahmo: 'apulainen' },
+    { tee: 'repliikki', hahmo: 'apulainen', n: 1 },
+    { tee: 'reaktio', hahmo: 'apulainen' },
     { tee: 'kohta', n: 2 },
   ],
 };

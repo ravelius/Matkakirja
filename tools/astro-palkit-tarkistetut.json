@@ -1,7 +1,35 @@
 {
  "_selite": "Astronautin kameran kuvien palkkitarkistus (tools/astro-palkki.mjs). palkki=true: NASAn alkuperäisessä oli valkoinen tunnuspalkki, rajattu kopio omassa ämpärissä (rajattu = versiokansio linssit/astronautin-kamera/<kansio>/; 20260921 = vanha juurikansio). Uusi havainto lisätään aineistoon vasta, kun sen id on tässä.",
- "tarkistettu": "2026-10-01",
+ "tarkistettu": "2026-10-04",
  "havainnot": {
+  "ISS036-E-3068": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "ISS050-E-51867": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "ISS052-E-78028": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "ISS052-E-84306": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "ISS056-E-153400": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "ISS062-E-142201": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "ISS065-E-393478": {
+   "palkki": false,
+   "rajattu": null
+  },
   "STS062-85-021": {
    "palkki": false,
    "rajattu": null
@@ -15,6 +43,10 @@
    "rajattu": null
   },
   "STS099-753-032": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "STS100-713-064": {
    "palkki": false,
    "rajattu": null
   },
@@ -49,6 +81,10 @@
   "iss007e14361": {
    "palkki": true,
    "rajattu": "20261001"
+  },
+  "iss008e20656": {
+   "palkki": false,
+   "rajattu": null
   },
   "iss009e09985": {
    "palkki": false,
@@ -250,6 +286,14 @@
    "palkki": true,
    "rajattu": "20261001"
   },
+  "iss028e008604": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss028e018562": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss029e037915": {
    "palkki": false,
    "rajattu": null
@@ -267,6 +311,10 @@
    "rajattu": null
   },
   "iss030e015896": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss030e030290": {
    "palkki": false,
    "rajattu": null
   },
@@ -294,6 +342,10 @@
    "palkki": false,
    "rajattu": null
   },
+  "iss032e015055": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss032e017547": {
    "palkki": false,
    "rajattu": null
@@ -318,7 +370,15 @@
    "palkki": false,
    "rajattu": null
   },
+  "iss034e050137": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss034e052297": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss034e061717": {
    "palkki": false,
    "rajattu": null
   },
@@ -327,6 +387,10 @@
    "rajattu": null
   },
   "iss036e010628": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss036e025908": {
    "palkki": false,
    "rajattu": null
   },
@@ -350,6 +414,10 @@
    "palkki": false,
    "rajattu": null
   },
+  "iss037e021618": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss038e005515": {
    "palkki": false,
    "rajattu": null
@@ -366,6 +434,14 @@
    "palkki": false,
    "rajattu": null
   },
+  "iss039e002766": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss039e003505": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss039e017228": {
    "palkki": false,
    "rajattu": null
@@ -379,6 +455,10 @@
    "rajattu": null
   },
   "iss040e016570": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss040e033303": {
    "palkki": false,
    "rajattu": null
   },
@@ -462,7 +542,15 @@
    "palkki": false,
    "rajattu": null
   },
+  "iss063e002730": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss063e081907": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss064e000399": {
    "palkki": false,
    "rajattu": null
   },
@@ -510,6 +598,10 @@
    "palkki": false,
    "rajattu": null
   },
+  "iss065e096050": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss066e091560": {
    "palkki": false,
    "rajattu": null
@@ -518,11 +610,19 @@
    "palkki": false,
    "rajattu": null
   },
+  "iss066e117709": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss067e010622": {
    "palkki": false,
    "rajattu": null
   },
   "iss067e035819": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss067e123679": {
    "palkki": false,
    "rajattu": null
   },
@@ -542,6 +642,10 @@
    "palkki": false,
    "rajattu": null
   },
+  "iss068e053846": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss069e000859": {
    "palkki": false,
    "rajattu": null
@@ -558,6 +662,10 @@
    "palkki": false,
    "rajattu": null
   },
+  "iss069e025220": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss070e005997": {
    "palkki": false,
    "rajattu": null
@@ -567,6 +675,10 @@
    "rajattu": null
   },
   "iss070e034694": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss070e035893": {
    "palkki": false,
    "rajattu": null
   },
@@ -694,6 +806,14 @@
    "palkki": false,
    "rajattu": null
   },
+  "iss073e0078399": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0078528": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss073e0078538": {
    "palkki": false,
    "rajattu": null
@@ -723,6 +843,10 @@
    "rajattu": null
   },
   "iss073e0420617": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e0421317": {
    "palkki": false,
    "rajattu": null
   },
@@ -786,6 +910,22 @@
    "palkki": false,
    "rajattu": null
   },
+  "iss073e1047080": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e1047143": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e1047210": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss073e1047246": {
+   "palkki": false,
+   "rajattu": null
+  },
   "iss073e1197819": {
    "palkki": false,
    "rajattu": null
@@ -795,6 +935,14 @@
    "rajattu": null
   },
   "iss074e0044445": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0149548": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0149554": {
    "palkki": false,
    "rajattu": null
   },
@@ -823,6 +971,10 @@
    "rajattu": null
   },
   "iss074e0405029": {
+   "palkki": false,
+   "rajattu": null
+  },
+  "iss074e0416472": {
    "palkki": false,
    "rajattu": null
   },

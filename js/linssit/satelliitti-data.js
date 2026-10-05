@@ -10,7 +10,7 @@
  * NASAn kuvat ovat public domainia; kuvat EIVÄT ole repossa vaan
  * ladataan NASAn omasta ämpäristä.
  *
- * Haettu: 2026-09-27. Kohteita 189, kuvia 229.
+ * Haettu: 2026-10-04. Kohteita 226, kuvia 267.
  */
 
 export const SATELLIITTI_LAHDE = {
@@ -19,7 +19,7 @@ export const SATELLIITTI_LAHDE = {
   "lisenssi": "Public domain",
   "osoite": "https://images.nasa.gov/",
   "katalogi": "https://images-api.nasa.gov/search?media_type=image",
-  "haettu": "2026-09-27"
+  "haettu": "2026-10-04"
 };
 
 export const SATELLIITTI_KOHTEET = [
@@ -1260,6 +1260,21 @@ export const SATELLIITTI_KOHTEET = [
     "lon": 4,
     "oletus": "iss071e488058",
     "havainnot": [
+      {
+        "id": "iss063e002730",
+        "aika": "2020-04-23",
+        "teksti": "Huhtikuussa 2020 otettu kuva samasta suistosta neljä vuotta aiemmin. Saarten ja kanavien muodot ovat pysyneet samoina ihmisen rakentamien patojen ansiosta, mutta veden sameus ja pilvisyys vaihtelevat vuodenajan ja sään mukaan kuvasta toiseen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 63",
+        "kuvaaja": "Christopher Cassidy",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss063e002730/iss063e002730~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss063e002730/iss063e002730~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss063e002730"
+      },
       {
         "id": "iss071e488058",
         "aika": "2024-08-11",
@@ -5536,6 +5551,968 @@ export const SATELLIITTI_KOHTEET = [
         "sivu": "https://images.nasa.gov/details/iss067e035819"
       }
     ]
+  },
+  {
+    "tunnus": "ateena-yolla",
+    "nimi": "Ateena",
+    "seutu": "Kreikka",
+    "selite": "Yksi maailman vanhimmista jatkuvasti asutuista kaupungeista kuvattuna yöllä.",
+    "lat": 37.9838,
+    "lon": 23.7275,
+    "oletus": "iss074e0416472",
+    "havainnot": [
+      {
+        "id": "iss074e0416472",
+        "aika": "2026-03-25",
+        "teksti": "Maaliskuussa 2026 otettu kuva näyttää Ateenan, yhden maailman vanhimmista jatkuvasti asutuista kaupungeista — sen historia ulottuu yli 3 400 vuoden taakse. Kaupunkiseudulla asuu nykyään noin 3,15 miljoonaa ihmistä. Kuva otettiin noin kello 22.11 paikallista aikaa Kansainväliseltä avaruusasemalta, joka kiersi tuolloin noin 425 kilometrin korkeudessa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0416472/iss074e0416472~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0416472/iss074e0416472~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0416472"
+      }
+    ]
+  },
+  {
+    "tunnus": "budapest-yolla",
+    "nimi": "Budapest",
+    "seutu": "Unkari",
+    "selite": "Unkarin pääkaupungin valot hallitsevat yömaisemaa Balaton-järven lähellä.",
+    "lat": 47.4979,
+    "lon": 19.0402,
+    "oletus": "iss074e0149554",
+    "havainnot": [
+      {
+        "id": "iss074e0149554",
+        "aika": "2026-01-18",
+        "teksti": "Tammikuussa 2026 otettu kuva näyttää Budapestin valojen hallitsevan Unkarin yömaisemaa, jota koristavat pienet kylät. Kuvan keskellä kimmeltää Balaton, Keski-Euroopan suurin järvi, jota ympäröivät tulivuoriperäiset kukkulat, viinitarhat ja vanhat kirkot. Kansainvälinen avaruusasema kiersi noin 422 kilometrin korkeudessa, kun kuva otettiin noin kello 21.10 paikallista aikaa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0149554/iss074e0149554~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0149554/iss074e0149554~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0149554"
+      }
+    ]
+  },
+  {
+    "tunnus": "barcelona-yolla",
+    "nimi": "Barcelona",
+    "seutu": "Espanja",
+    "selite": "Espanjan toiseksi suurimman kaupungin tunnistettava ruutukaava Välimeren rannalla.",
+    "lat": 41.3851,
+    "lon": 2.1734,
+    "oletus": "iss073e0078528",
+    "havainnot": [
+      {
+        "id": "iss073e0078528",
+        "aika": "2025-05-17",
+        "teksti": "Toukokuussa 2025 otetussa kuvassa näkyy Barcelona, Espanjan toiseksi suurin kaupunki, jonka kaupunkiseudulla asuu 5,74 miljoonaa ihmistä. Kaupungin tunnetun Eixample-kaupunginosan säännöllinen ruutukaava erottuu selvästi valaistuna Välimeren rannalla. Kuva otettiin Kansainväliseltä avaruusasemalta sen kiertäessä noin 420 kilometrin korkeudessa Välimeren yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0078528/iss073e0078528~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0078528/iss073e0078528~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0078528"
+      }
+    ]
+  },
+  {
+    "tunnus": "bukarest-yolla",
+    "nimi": "Bukarest",
+    "seutu": "Romania",
+    "selite": "Romanian pääkaupunki yöllä, vanhat ja uudet katuvalot erottuvat väreiltään.",
+    "lat": 44.4268,
+    "lon": 26.1025,
+    "oletus": "iss073e1047246",
+    "havainnot": [
+      {
+        "id": "iss073e1047246",
+        "aika": "2025-11-02",
+        "teksti": "Marraskuussa 2025 otetussa kuvassa Romanian pääkaupunki Bukarest, jonka kaupunkiseudulla asuu noin 1,78 miljoonaa ihmistä, näkyy yöllä. Kaupungin keskustan vanhat, keltaiset natriumlamput vaihtuvat esikaupunkialueilla uudempaan, valkoisempaan LED-valaistukseen. Kuva otettiin Kansainväliseltä avaruusasemalta sen kiertäessä noin 420 kilometrin korkeudessa Itä-Euroopan yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e1047246/iss073e1047246~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e1047246/iss073e1047246~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e1047246"
+      }
+    ]
+  },
+  {
+    "tunnus": "lissabon-suisto",
+    "nimi": "Lissabon",
+    "seutu": "Portugali",
+    "selite": "Portugalin pääkaupunki ja sen Tejo-joen suisto päivänvalossa.",
+    "lat": 38.7223,
+    "lon": -9.1393,
+    "oletus": "iss073e0078399",
+    "havainnot": [
+      {
+        "id": "iss073e0078399",
+        "aika": "2025-05-22",
+        "teksti": "Toukokuussa 2025 otetussa päiväkuvassa näkyy Lissabon, Portugalin pääkaupunki ja suurin kaupunki, esikaupunkeineen Tejo-joen rannalla. Joki laskee tässä kohtaa leveänä suistona Atlantin valtamereen. Kuva otettiin Kansainväliseltä avaruusasemalta sen kiertäessä Iberian niemimaan rannikon yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1078
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0078399/iss073e0078399~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0078399/iss073e0078399~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0078399"
+      }
+    ]
+  },
+  {
+    "tunnus": "thessaloniki-yolla",
+    "nimi": "Thessaloniki",
+    "seutu": "Kreikka",
+    "selite": "Yli 2 300 vuotta vanha satamakaupunki Thermaicos-lahden rannalla.",
+    "lat": 40.6401,
+    "lon": 22.9444,
+    "oletus": "iss073e1047210",
+    "havainnot": [
+      {
+        "id": "iss073e1047210",
+        "aika": "2025-11-02",
+        "teksti": "Marraskuussa 2025 otetussa kuvassa näkyy Thessaloniki, yli 2 300 vuotta vanha satamakaupunki Thermaicos-lahden rannalla. Kaupunkiseudulla asuu noin 815 000 ihmistä. Kuten Bukarestissa, myös täällä keskustan vanhat keltaiset natriumlamput vaihtuvat esikaupungeissa valkoisempaan LED-valoon.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e1047210/iss073e1047210~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e1047210/iss073e1047210~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e1047210"
+      }
+    ]
+  },
+  {
+    "tunnus": "dublin-revontulet",
+    "nimi": "Dublin",
+    "seutu": "Irlanti",
+    "selite": "Irlannin pääkaupunki yöllä revontulten alla, Lontoo näkyy kauempana.",
+    "lat": 53.3498,
+    "lon": -6.2603,
+    "oletus": "iss034e050137",
+    "havainnot": [
+      {
+        "id": "iss034e050137",
+        "aika": "2013-02-14",
+        "teksti": "Helmikuussa 2013 otetussa kuvassa näkyvät Brittein saaret yöllä. Dublin, Irlannin pääkaupunki, erottuu vasemmalla keskellä omana kirkkaana laikkunaan, kun taas Lontoo näkyy kauempana oikealla alakulmassa suurempana valoläiskänä. Horisontin vihreä hehku on revontulia.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 34",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss034e050137/iss034e050137~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss034e050137/iss034e050137~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss034e050137"
+      }
+    ]
+  },
+  {
+    "tunnus": "sofia-vitosha",
+    "nimi": "Sofia",
+    "seutu": "Bulgaria",
+    "selite": "Bulgarian pääkaupunki laaksossa, vieressä lumihuippuinen Vitosha-vuori.",
+    "lat": 42.6977,
+    "lon": 23.3219,
+    "oletus": "iss039e002766",
+    "havainnot": [
+      {
+        "id": "iss039e002766",
+        "aika": "2014-03-19",
+        "teksti": "Vuonna 2014 otetussa päiväkuvassa Sofia, Bulgarian pääkaupunki, näkyy laajassa vuoristolaaksossa. Kaupungin eteläpuolella kohoaa Vitosha, lumihuippuinen vuori, joka on suosittu retkeily- ja hiihtokohde aivan pääkaupungin kyljessä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 39",
+        "kuvaaja": "Koichi Wakata",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss039e002766/iss039e002766~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss039e002766/iss039e002766~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss039e002766"
+      }
+    ]
+  },
+  {
+    "tunnus": "kiova-tekojarvi",
+    "nimi": "Kiova",
+    "seutu": "Ukraina",
+    "selite": "Ukrainan pääkaupunki Dneprin tekojärven rannalla.",
+    "lat": 50.4501,
+    "lon": 30.5234,
+    "oletus": "iss008e20656",
+    "havainnot": [
+      {
+        "id": "iss008e20656",
+        "aika": "2004-04-04",
+        "teksti": "Huhtikuussa 2004 otetussa kuvassa näkyy Kiova, lähes kolmen miljoonan asukkaan Ukrainan pääkaupunki, Dnepr-joen tekojärven rannalla. Seudulla on pitkä historia osana länsimaisen sivilisaation kehitystä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 8",
+        "kuvaaja": null,
+        "mitat": [
+          1271,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss008e20656/iss008e20656~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss008e20656/iss008e20656~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss008e20656"
+      }
+    ]
+  },
+  {
+    "tunnus": "belgrad",
+    "nimi": "Belgrad",
+    "seutu": "Serbia",
+    "selite": "Serbian pääkaupunki Tonavan ja Savan jokien yhtymäkohdassa.",
+    "lat": 44.7866,
+    "lon": 20.4489,
+    "oletus": "iss034e061717",
+    "havainnot": [
+      {
+        "id": "iss034e061717",
+        "aika": "2013-03-05",
+        "teksti": "Maaliskuussa 2013 otetussa kuvassa näkyy Belgrad, Serbian pääkaupunki, Tonava- ja Sava-jokien yhtymäkohdassa. Kaupunkialueella asuu noin 1,65 miljoonaa ihmistä, ja seudulla on asuttu yli 6 000 vuoden ajan. Kuvan keskellä erottuva Kalemegdan on Belgradin vanha ydin jokien oikealla rannalla; Sava-joen toisella puolella on toisen maailmansodan jälkeen rakennettu Uusi Belgrad.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 34",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss034e061717/iss034e061717~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss034e061717/iss034e061717~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss034e061717"
+      }
+    ]
+  },
+  {
+    "tunnus": "chevril-jarvi",
+    "nimi": "Lac du Chevril",
+    "seutu": "Ranskan Alpit",
+    "selite": "Turkoosinsininen tekojärvi lumihuippuisten Alppien keskellä Kaakkois-Ranskassa.",
+    "lat": 45.567,
+    "lon": 6.9,
+    "oletus": "iss069e025220",
+    "havainnot": [
+      {
+        "id": "iss069e025220",
+        "aika": "2023-06-26",
+        "teksti": "Kesäkuussa 2023 otetussa kuvassa näkyy Lac du Chevril, tekojärvi Auvergne-Rhône-Alpesin alueella Kaakkois-Ranskassa, kun avaruusasema kiersi noin 420 kilometrin korkeudessa. Järven kirkkaan turkoosi väri erottuu selvästi lumijuovaisten vuorenhuippujen keskeltä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 69",
+        "kuvaaja": "Sultan Alneyadi",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss069e025220/iss069e025220~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss069e025220/iss069e025220~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss069e025220"
+      }
+    ]
+  },
+  {
+    "tunnus": "palermo",
+    "nimi": "Palermo",
+    "seutu": "Sisilia, Italia",
+    "selite": "Yli 2 700 vuotta vanha kaupunki Sisilian rannikolla Tyrrhenanmerellä.",
+    "lat": 38.1157,
+    "lon": 13.3613,
+    "oletus": "iss073e1047080",
+    "havainnot": [
+      {
+        "id": "iss073e1047080",
+        "aika": "2025-11-02",
+        "teksti": "Marraskuussa 2025 noin kello 22.12 paikallista aikaa otetussa kuvassa Palermon valot erottuvat Sisilian rannikolla. Kaupungin keskustan vanhat, kellertävät natriumlamput vaihtuvat esikaupunkialueilla viileämmän sävyisiin, valkoisiin LED-valoihin.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e1047080/iss073e1047080~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e1047080/iss073e1047080~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e1047080"
+      }
+    ]
+  },
+  {
+    "tunnus": "bari",
+    "nimi": "Bari",
+    "seutu": "Italia",
+    "selite": "Adrianmeren rannalla sijaitseva, yli 2 700 vuotta vanha satamakaupunki.",
+    "lat": 41.1171,
+    "lon": 16.8719,
+    "oletus": "iss073e1047143",
+    "havainnot": [
+      {
+        "id": "iss073e1047143",
+        "aika": "2025-11-02",
+        "teksti": "Marraskuussa 2025 otetussa kuvassa Barin ja sen esikaupunkien valot pilkottavat Italian Adrianmeren rannikolla. Yli 2 700 vuotta vanha Bari tunnetaan oliivilehdoistaan, viinitarhoistaan ja rannikon jyrkänteisiin kaiverretuista luolistaan.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e1047143/iss073e1047143~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e1047143/iss073e1047143~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e1047143"
+      }
+    ]
+  },
+  {
+    "tunnus": "minsk",
+    "nimi": "Minsk",
+    "seutu": "Valko-Venäjä",
+    "selite": "Valko-Venäjän pääkaupunki, jonka kehätie piirtää selvän soikion kaupungin valoihin.",
+    "lat": 53.9006,
+    "lon": 27.559,
+    "oletus": "iss066e117709",
+    "havainnot": [
+      {
+        "id": "iss066e117709",
+        "aika": "2022-01-06",
+        "teksti": "Tammikuussa 2022 otetussa yökuvassa näkyy Minsk, Valko-Venäjän pääkaupunki, lähellä maan rajaa Ukrainaan. Kaupungin kehätie piirtää valoihin selvän soikean muodon.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 66",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss066e117709/iss066e117709~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss066e117709/iss066e117709~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss066e117709"
+      }
+    ]
+  },
+  {
+    "tunnus": "porto",
+    "nimi": "Porto",
+    "seutu": "Portugali",
+    "selite": "Douro-joen suulla sijaitsevat kaksoiskaupungit Porto ja Vila Nova de Gaia.",
+    "lat": 41.1579,
+    "lon": -8.6291,
+    "oletus": "iss032e015055",
+    "havainnot": [
+      {
+        "id": "iss032e015055",
+        "aika": "2012-08-05",
+        "teksti": "Elokuussa 2012 otetussa yökuvassa näkyvät Porto (vasemmalla) ja Vila Nova de Gaia (oikealla) Douro-joen molemmin puolin Portugalin luoteisrannikolla. Joki erottaa kaupungit selvästi toisistaan ennen sen laskua Atlantille.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 32",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss032e015055/iss032e015055~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss032e015055/iss032e015055~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss032e015055"
+      }
+    ]
+  },
+  {
+    "tunnus": "valencia",
+    "nimi": "Valencia",
+    "seutu": "Espanja",
+    "selite": "Espanjan kolmanneksi suurin kaupunki Välimeren rannalla, tunnistettavissa satamansa aallonmurtajista.",
+    "lat": 39.4699,
+    "lon": -0.3763,
+    "oletus": "iss064e000399",
+    "havainnot": [
+      {
+        "id": "iss064e000399",
+        "aika": "2020-10-25",
+        "teksti": "Lokakuussa 2020 otetussa kuvassa Valencia erottuu Espanjan Välimeren rannikolla juuri ennen kuin avaruusasema ylitti rannikkoviivan. Kaupungin sataman aallonmurtajat ja etelämpänä siintävä Albufera-laguuni näkyvät kuvassa selvästi.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 64",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss064e000399/iss064e000399~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss064e000399/iss064e000399~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss064e000399"
+      }
+    ]
+  },
+  {
+    "tunnus": "kreeta",
+    "nimi": "Kreeta",
+    "seutu": "Kreikka",
+    "selite": "Kreikan suurin saari, pitkänomainen ja vuoristoinen, Egeanmeren eteläreunalla.",
+    "lat": 35.2401,
+    "lon": 24.8093,
+    "oletus": "iss028e018562",
+    "havainnot": [
+      {
+        "id": "iss028e018562",
+        "aika": "2011-07-22",
+        "teksti": "Heinäkuussa 2011 otetussa kuvassa näkyy Kreeta, Kreikan suurin ja väkirikkain saari. Saari on noin 260 kilometriä pitkä ja enimmillään 60 kilometriä leveä, ja sen pääkaupunki Iraklion sijaitsee pohjoisrannikolla kuvan keskellä. Kreikkalaisen mytologian mukaan saarella hallitsi kuningas Minos, jonka labyrintissa asusti puoliksi ihminen, puoliksi sonni ollut Minotauros.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 28",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss028e018562/iss028e018562~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss028e018562/iss028e018562~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss028e018562"
+      }
+    ]
+  },
+  {
+    "tunnus": "brindisi",
+    "nimi": "Brindisi",
+    "seutu": "Italia",
+    "selite": "Adrianmeren satamakaupunki Italian \"koron\" kärjessä, josta 1800-luvun matkustajalaivat lähtivät kohti Suezia.",
+    "lat": 40.632,
+    "lon": 17.9369,
+    "oletus": "iss028e008604",
+    "havainnot": [
+      {
+        "id": "iss028e008604",
+        "aika": "2011-06-11",
+        "teksti": "Kesäkuussa 2011 otetussa yökuvassa Italian \"saappaan\" kantapää ja kärki piirtyvät esiin suurten kaupunkien, kuten Napolin, Barin ja Brindisin, valoista. Brindisi oli 1800-luvulla tärkeä satama, josta höyrylaivat lähtivät kohti Suezin kanavaa ja Intiaa — samaa reittiä, jota pitkin moni aikansa matkailija kiersi maailman ympäri.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 28",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss028e008604/iss028e008604~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss028e008604/iss028e008604~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss028e008604"
+      }
+    ]
+  },
+  {
+    "tunnus": "antwerpenin-satama",
+    "nimi": "Antwerpenin satama",
+    "seutu": "Belgia",
+    "selite": "Euroopan toiseksi suurin satama Schelde-joen varrella.",
+    "lat": 51.299,
+    "lon": 4.297,
+    "oletus": "iss065e096050",
+    "havainnot": [
+      {
+        "id": "iss065e096050",
+        "aika": "2021-06-10",
+        "teksti": "Kesäkuussa 2021 otetussa kuvassa näkyy Antwerpenin satama Schelde-joen varrella Belgiassa. Kuva otettiin avaruusasemalta sen kiertäessä noin 420 kilometrin korkeudessa Pohjois-Euroopan yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 65",
+        "kuvaaja": "Shane Kimbrough",
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss065e096050/iss065e096050~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss065e096050/iss065e096050~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss065e096050"
+      }
+    ]
+  },
+  {
+    "tunnus": "bratislava-wienin-vieressa",
+    "nimi": "Bratislava",
+    "seutu": "Slovakia",
+    "selite": "Slovakian pääkaupunki Tonavan rannalla, lähellä toista pääkaupunkia Wieniä.",
+    "lat": 48.1486,
+    "lon": 17.1077,
+    "oletus": "iss074e0149548",
+    "havainnot": [
+      {
+        "id": "iss074e0149548",
+        "aika": "2026-01-18",
+        "teksti": "Tammikuussa 2026 otetussa yökuvassa Itävallan pääkaupunki Wien ja Slovakian pääkaupunki Bratislava valaisevat molemmat Keski-Euroopan yömaisemaa, Tonava-joen erottamina. Kaupunkien ympärillä siintävät viinitarha- ja markkinakylät.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 74",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss074e0149548/iss074e0149548~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss074e0149548/iss074e0149548~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss074e0149548"
+      }
+    ]
+  },
+  {
+    "tunnus": "kykladit",
+    "nimi": "Kykladit",
+    "seutu": "Kreikka",
+    "selite": "Egeanmeren saariryhmä, jonka läpi monet Välimeren laivareitit kulkivat.",
+    "lat": 37,
+    "lon": 25.3,
+    "oletus": "iss040e033303",
+    "havainnot": [
+      {
+        "id": "iss040e033303",
+        "aika": "2014-07-03",
+        "teksti": "Heinäkuussa 2014 otetussa kuvassa näkyvät Joonianmeri (ylhäällä), Kreeta (eteläisin saari vasemmalla), Kykladit (keskellä alhaalla) sekä suuri osa Kreikan mannerta (oikealla).",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 40",
+        "kuvaaja": "Alex Gerst",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss040e033303/iss040e033303~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss040e033303/iss040e033303~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss040e033303"
+      }
+    ]
+  },
+  {
+    "tunnus": "messinansalmi",
+    "nimi": "Messinansalmi",
+    "seutu": "Italia",
+    "selite": "Kapea salmi, joka erottaa Sisilian Italian mantereesta.",
+    "lat": 38.2466,
+    "lon": 15.6186,
+    "oletus": "iss036e025908",
+    "havainnot": [
+      {
+        "id": "iss036e025908",
+        "aika": "2013-07-29",
+        "teksti": "Heinäkuussa 2013 otetussa yökuvassa Sisilia (keskellä) ja Etelä-Italia (vasemmalta keskelle) erottuvat valoistaan. Messinansalmi, joka erottaa Sisilian Italian mantereesta, sijaitsee lähellä kuvan keskustaa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 36",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss036e025908/iss036e025908~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss036e025908/iss036e025908~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss036e025908"
+      }
+    ]
+  },
+  {
+    "tunnus": "sardinia-korsika",
+    "nimi": "Sardinia",
+    "seutu": "Italia",
+    "selite": "Välimeren toiseksi suurin saari; Korsika näkyy vieressä pohjoisessa.",
+    "lat": 40.09,
+    "lon": 9.14,
+    "oletus": "iss067e123679",
+    "havainnot": [
+      {
+        "id": "iss067e123679",
+        "aika": "2022-06-12",
+        "teksti": "Kesäkuussa 2022 otetussa kuvassa näkyy Italian Sardinia-saari ja sen pohjoispuolella Ranskan Korsika (oikealla ylhäällä). Avaruusasema kiersi tuolloin noin 420 kilometrin korkeudessa Tyrrhenanmeren yllä, Napolin edustalla.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 67",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss067e123679/iss067e123679~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss067e123679/iss067e123679~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss067e123679"
+      }
+    ]
+  },
+  {
+    "tunnus": "peloponnesos",
+    "nimi": "Peloponnesos",
+    "seutu": "Kreikka",
+    "selite": "Kreikan suuri niemimaa, jonka Korinthin kannas erottaa mantereesta.",
+    "lat": 37.5,
+    "lon": 22.3,
+    "oletus": "iss039e003505",
+    "havainnot": [
+      {
+        "id": "iss039e003505",
+        "aika": "2014-03-21",
+        "teksti": "Maaliskuussa 2014 otetussa kuvassa näkyy Peloponnesos, antiikin Spartan koti, kapean Korinthin kannaksen erottamana muusta Kreikasta. Kannaksen poikki kaivettiin laivakanava vuonna 1893 yhdistämään sen länsi- ja itäpuoliset lahdet. Kuvassa erottuvat myös lumihuippuiset vuoret, vihreät viljelylaaksot ja tuulen meren pintaan piirtämät juovat.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 39",
+        "kuvaaja": "Rick Mastracchio",
+        "mitat": [
+          1920,
+          1277
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss039e003505/iss039e003505~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss039e003505/iss039e003505~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss039e003505"
+      }
+    ]
+  },
+  {
+    "tunnus": "feneos-palo",
+    "nimi": "Feneoksen metsäpalo",
+    "seutu": "Kreikka",
+    "selite": "Metsäpalon savupilvi leviää Korinthinlahden eteläpuolella.",
+    "lat": 37.97,
+    "lon": 22.4,
+    "oletus": "iss073e0421317",
+    "havainnot": [
+      {
+        "id": "iss073e0421317",
+        "aika": "2025-07-22",
+        "teksti": "Heinäkuussa 2025 otetussa kuvassa metsäpalo roihuaa Feneoksen kylän lähellä, Korinthinlahden eteläpuolella Kreikassa. Kuva otettiin avaruusasemalta sen kiertäessä noin 420 kilometrin korkeudessa Etelä-Euroopan yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 73",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss073e0421317/iss073e0421317~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss073e0421317/iss073e0421317~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss073e0421317"
+      }
+    ]
+  },
+  {
+    "tunnus": "mallorca",
+    "nimi": "Mallorca",
+    "seutu": "Baleaarit, Espanja",
+    "selite": "Baleaarien suurin saari, suosittu matkailukohde Espanjan edustalla.",
+    "lat": 39.57,
+    "lon": 2.65,
+    "oletus": "iss030e030290",
+    "havainnot": [
+      {
+        "id": "iss030e030290",
+        "aika": "2011-12-31",
+        "teksti": "Joulukuussa 2011 otetussa kuvassa näkyy Mallorca, Baleaarien saariryhmän suurin saari, noin 3 600 neliökilometrin kokoinen. Saaren pääkaupunki Palma sijaitsee lounaisrannikolla Palman lahden pohjukassa. Mallorcan eteläpuolella sijaitsee pieni Cabreran saari, jonka ympärillä on kansallispuisto. Saaren keskiosa on tasaista viljelymaata, kun taas vuoristo kohoaa luoteisrannikolla ja saaren itäosassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 30",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1275
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss030e030290/iss030e030290~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss030e030290/iss030e030290~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss030e030290"
+      }
+    ]
+  },
+  {
+    "tunnus": "mont-saint-michel-lahti",
+    "nimi": "Mont-Saint-Michelin lahti",
+    "seutu": "Ranska",
+    "selite": "Kahden historiallisen maakunnan raja Englannin kanaalin rannalla.",
+    "lat": 48.64,
+    "lon": -1.51,
+    "oletus": "iss068e053846",
+    "havainnot": [
+      {
+        "id": "iss068e053846",
+        "aika": "2023-02-12",
+        "teksti": "Helmikuussa 2023 otetussa kuvassa Bretagnen ja Normandian rannikkoalueet Luoteis-Ranskassa kohtaavat Englannin kanaalin rannalla; Couesnon-joki on maakuntien raja. Hiekkasärkillä erottuu kaksi tummaa pistettä: eteläisempi on Mont-Saint-Michelin luostarisaari ja pohjoisempi Tombelaine. Avaruusasema kiersi tuolloin noin 425 kilometrin korkeudessa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 68",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss068e053846/iss068e053846~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss068e053846/iss068e053846~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss068e053846"
+      }
+    ]
+  },
+  {
+    "tunnus": "le-havre",
+    "nimi": "Le Havre",
+    "seutu": "Ranska",
+    "selite": "Ranskan suurin konttisatama Seine-joen suulla.",
+    "lat": 49.49,
+    "lon": 0.11,
+    "oletus": "iss037e021618",
+    "havainnot": [
+      {
+        "id": "iss037e021618",
+        "aika": "2013-10-26",
+        "teksti": "Lokakuussa 2013 otetussa kuvassa näkyy Le Havren satama Seine-joen ja Englannin kanaalin yhtymäkohdassa Pohjois-Ranskassa. Le Havre on Ranskan suurin konttisatama, ja sen laitureilla näkyy suuria rahtilaivoja. Kaupunki rakennettiin suurelta osin uudelleen toisen maailmansodan jälkeen arkkitehti Auguste Perret’n suunnitelman mukaan betonista, mikä teki siitä Unescon maailmanperintökohteen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 37",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss037e021618/iss037e021618~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss037e021618/iss037e021618~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss037e021618"
+      }
+    ]
+  },
+  {
+    "tunnus": "malta-sisilia",
+    "nimi": "Malta",
+    "seutu": "Malta",
+    "selite": "Pieni saarivaltio Sisilian eteläpuolella, näkyy kuvassa kaukana Sisilian takana.",
+    "lat": 35.94,
+    "lon": 14.38,
+    "oletus": "STS100-713-064",
+    "havainnot": [
+      {
+        "id": "STS100-713-064",
+        "aika": "2001-04-24",
+        "teksti": "Huhtikuussa 2001 otetussa kuvassa näkyy kolmionmuotoinen Sisilia, jonka koilliskärjessä kohoaa lumihuippuinen Etna. Kaukana taustalla, Sisilian eteläpuolella, erottuvat Maltan pienet saaret.",
+        "kuvaustapa": "Avaruussukkulasta",
+        "retkikunta": null,
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1920
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/STS100-713-064/STS100-713-064~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/STS100-713-064/STS100-713-064~small.jpg",
+        "sivu": "https://images.nasa.gov/details/STS100-713-064"
+      }
+    ]
+  },
+  {
+    "tunnus": "ambrakia-ioonianmeri",
+    "nimi": "Ambrakian lahti",
+    "seutu": "Kreikka",
+    "selite": "Saaria Kreikan länsirannikolla Joonianmeren tuntumassa.",
+    "lat": 38.85,
+    "lon": 20.75,
+    "oletus": "iss070e035893",
+    "havainnot": [
+      {
+        "id": "iss070e035893",
+        "aika": "2023-12-04",
+        "teksti": "Joulukuussa 2023 otetussa kuvassa näkyy saaria Kreikan länsirannikolla; Ambrakian lahti näkyy kuvan vasemmassa yläkulmassa. Lähempänä erottuu kapea Lefkas, joka on yhdistetty mantereeseen kannaksella, ja kauempana suurempi, lumihuippuisen Ainos-vuoren kohottava Kefalonia. Avaruusasema kiersi tuolloin noin 420 kilometrin korkeudessa Joonianmeren yllä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 70",
+        "kuvaaja": null,
+        "mitat": [
+          1920,
+          1280
+        ],
+        "kuva": "https://images-assets.nasa.gov/image/iss070e035893/iss070e035893~large.jpg",
+        "pikku": "https://images-assets.nasa.gov/image/iss070e035893/iss070e035893~small.jpg",
+        "sivu": "https://images.nasa.gov/details/iss070e035893"
+      }
+    ]
+  },
+  {
+    "tunnus": "odessa",
+    "nimi": "Odessa",
+    "seutu": "Ukraina",
+    "selite": "Mustanmeren satamakaupunki lahden kaartuvalla rannalla.",
+    "lat": 46.477,
+    "lon": 30.733,
+    "oletus": "ISS062-E-142201",
+    "havainnot": [
+      {
+        "id": "ISS062-E-142201",
+        "aika": "2020-04-11T14:28:02Z",
+        "teksti": "Huhtikuussa 2020 otetussa päiväkuvassa näkyy Odessa, Mustanmeren rannalla sijaitseva ukrainalainen satamakaupunki. Kuvassa erottuvat kaupungin satama-alue, rannan kaarre sekä sisämaan järvet ja viljelymaa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 62",
+        "kuvaaja": null,
+        "mitat": [
+          5568,
+          3712
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS062/ISS062-E-142201.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS062/ISS062-E-142201.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS062&roll=E&frame=142201"
+      }
+    ]
+  },
+  {
+    "tunnus": "praha",
+    "nimi": "Praha",
+    "seutu": "Tšekki",
+    "selite": "Tšekin pääkaupunki Vltava-joen mutkassa.",
+    "lat": 50.087,
+    "lon": 14.421,
+    "oletus": "ISS052-E-78028",
+    "havainnot": [
+      {
+        "id": "ISS052-E-78028",
+        "aika": "2017-08-29T10:06:14Z",
+        "teksti": "Elokuussa 2017 otetussa päiväkuvassa näkyy Praha, Tšekin pääkaupunki, Vltava-joen jyrkän mutkan ympärillä. Kaupungin tiivis keskusta erottuu vaaleana laikkuna joen molemmin puolin, ja ympäröivä maaseutu näkyy peltoina ja metsälaikkuina.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 52",
+        "kuvaaja": null,
+        "mitat": [
+          4928,
+          3280
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS052/ISS052-E-78028.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS052/ISS052-E-78028.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS052&roll=E&frame=78028"
+      }
+    ]
+  },
+  {
+    "tunnus": "marseille",
+    "nimi": "Marseille",
+    "seutu": "Ranska",
+    "selite": "Ranskan suurin Välimeren satamakaupunki; vieressä Calanques-kansallispuiston jyrkät kalkkikivirannikot.",
+    "lat": 43.297,
+    "lon": 5.381,
+    "oletus": "ISS050-E-51867",
+    "havainnot": [
+      {
+        "id": "ISS050-E-51867",
+        "aika": "2017-02-19T10:28:41Z",
+        "teksti": "Helmikuussa 2017 otetussa päiväkuvassa näkyy Marseille, Ranskan suurin Välimeren satamakaupunki. Kaupungin itäpuolella kohoavat kalkkikivivuoret, jotka jatkuvat kaakkoon Calanques-kansallispuiston jyrkkinä rantajyrkänteinä. Satama-alue näkyy kuvan vasemmassa alakulmassa.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 50",
+        "kuvaaja": null,
+        "mitat": [
+          4928,
+          3280
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS050/ISS050-E-51867.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS050/ISS050-E-51867.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS050&roll=E&frame=51867"
+      }
+    ]
+  },
+  {
+    "tunnus": "sarajevo",
+    "nimi": "Sarajevo",
+    "seutu": "Bosnia ja Hertsegovina",
+    "selite": "Bosnia ja Hertsegovinan pääkaupunki kapeassa laaksossa Dinaaristen Alppien keskellä.",
+    "lat": 43.867,
+    "lon": 18.417,
+    "oletus": "ISS036-E-3068",
+    "havainnot": [
+      {
+        "id": "ISS036-E-3068",
+        "aika": "2013-05-21T07:41:27Z",
+        "teksti": "Toukokuussa 2013 otetussa päiväkuvassa näkyy Sarajevo, kapeaan vuoristolaaksoon rakentunut Bosnia ja Hertsegovinan pääkaupunki. Kaupunkia ympäröivät joka puolelta Dinaaristen Alppien metsäiset vuorenrinteet ja laaksot.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 36",
+        "kuvaaja": null,
+        "mitat": [
+          4256,
+          2832
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS036/ISS036-E-3068.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS036/ISS036-E-3068.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS036&roll=E&frame=3068"
+      }
+    ]
+  },
+  {
+    "tunnus": "bryssel",
+    "nimi": "Bryssel",
+    "seutu": "Belgia",
+    "selite": "Belgian pääkaupunki ja EU:n kotikaupunki yöllä avaruudesta kuvattuna.",
+    "lat": 50.847,
+    "lon": 4.353,
+    "oletus": "ISS065-E-393478",
+    "havainnot": [
+      {
+        "id": "ISS065-E-393478",
+        "aika": "2021-09-17T22:55:28Z",
+        "teksti": "Syyskuussa 2021 otetussa yökuvassa näkyy Bryssel, Belgian pääkaupunki, kirkkaana valotäplänä Senne-joen varrella. Kuvan oikeassa yläkulmassa erottuu kirkkaasti valaistu Zaventemin lentoasema kiitoteineen ja asematasoineen.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 65",
+        "kuvaaja": null,
+        "mitat": [
+          5568,
+          3712
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS065/ISS065-E-393478.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS065/ISS065-E-393478.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS065&roll=E&frame=393478"
+      }
+    ]
+  },
+  {
+    "tunnus": "dubrovnik",
+    "nimi": "Dubrovnik",
+    "seutu": "Kroatia",
+    "selite": "Kroatian Dalmatian-rannikon kaupunki ja edustan saaret.",
+    "lat": 42.64,
+    "lon": 18.108,
+    "oletus": "ISS052-E-84306",
+    "havainnot": [
+      {
+        "id": "ISS052-E-84306",
+        "aika": "2017-09-02T09:53:14Z",
+        "teksti": "Syyskuussa 2017 otetussa päiväkuvassa näkyy Dubrovnikin seutu Kroatian Dalmatian-rannikolla. Kaupungin edustalla erottuu Lokrumin saari, ja rannikon tuntumassa näkyy muitakin pieniä saaria pirstaleisen Adrianmeren rannikon tapaan.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 52",
+        "kuvaaja": null,
+        "mitat": [
+          4928,
+          3280
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS052/ISS052-E-84306.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS052/ISS052-E-84306.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS052&roll=E&frame=84306"
+      }
+    ]
+  },
+  {
+    "tunnus": "varsova",
+    "nimi": "Varsova",
+    "seutu": "Puola",
+    "selite": "Puolan pääkaupunki Veiksel-joen (Wisła) molemmin puolin.",
+    "lat": 52.23,
+    "lon": 21.011,
+    "oletus": "ISS056-E-153400",
+    "havainnot": [
+      {
+        "id": "ISS056-E-153400",
+        "aika": "2018-08-23T10:06:24Z",
+        "teksti": "Elokuussa 2018 otetussa päiväkuvassa näkyy Varsova, Puolan pääkaupunki, Veiksel-joen molemmin puolin. Joki halkoo kaupungin kahtia, ja kuvassa erottuu myös kaupungin lentokenttä.",
+        "kuvaustapa": "Kansainväliseltä avaruusasemalta",
+        "retkikunta": "Retkikunta 56",
+        "kuvaaja": null,
+        "mitat": [
+          5568,
+          3712
+        ],
+        "kuva": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/large/ISS056/ISS056-E-153400.JPG",
+        "pikku": "https://eol.jsc.nasa.gov/DatabaseImages/ESC/small/ISS056/ISS056-E-153400.JPG",
+        "sivu": "https://eol.jsc.nasa.gov/SearchPhotos/photo.pl?mission=ISS056&roll=E&frame=153400"
+      }
+    ]
   }
 ];
 
@@ -5546,14 +6523,11 @@ export const SATELLIITTI_KOHTEET = [
  */
 export const SATELLIITTI_KIERROS = [
   "kilauea",
-  "malaspina",
-  "kanadan-palot",
-  "lake-sharpe",
-  "mount-hood",
-  "crater-lake",
-  "pyramidjarvi",
   "sanfrancisco",
   "monojarvi",
+  "pyramidjarvi",
+  "crater-lake",
+  "mount-hood",
   "suolajarvi-utah",
   "bingham",
   "lake-powell",
@@ -5567,25 +6541,184 @@ export const SATELLIITTI_KIERROS = [
   "colorado-suisto",
   "white-sands",
   "texasin-kastelurenkaat",
-  "chicago",
-  "jamesinlahti-harjanteet",
-  "niagara",
-  "new-york",
-  "montreal",
-  "manicouagan",
-  "prinssiedwardinsaari",
-  "fundynlahti",
-  "bermuda",
-  "turks-caicos",
-  "bahama",
-  "everglades",
-  "mississippi-suisto",
   "new-orleans-mutka",
-  "mexico",
-  "popocatepetl",
-  "cosiguina",
-  "galapagos",
+  "mississippi-suisto",
+  "everglades",
+  "bahama",
+  "turks-caicos",
+  "bermuda",
+  "new-york",
+  "niagara",
+  "montreal",
+  "fundynlahti",
+  "prinssiedwardinsaari",
+  "revontulet-pohjoinen",
+  "manicouagan",
+  "jamesinlahti-harjanteet",
+  "chicago",
+  "lake-sharpe",
+  "kanadan-palot",
+  "malaspina",
+  "siveluts",
+  "kljutsevskaja",
+  "karymsky",
+  "onekotan",
+  "sarytsev",
+  "wake-island",
+  "ulawun",
+  "manam",
+  "iso-valliriutta",
+  "jakarta",
+  "singapore",
+  "bassac-vietnam",
+  "hongkong",
+  "kolmen-rotkon-pato",
+  "shanghai",
+  "taifuuni",
+  "tokio",
+  "fuji",
+  "sakurajima",
+  "soul",
+  "korea",
+  "peking",
+  "baikal",
+  "selengan-suisto",
+  "himalaja",
+  "everest",
+  "ganges",
+  "irrawaddyn-suisto",
+  "bangkok",
+  "goidhoo",
+  "sokotra",
+  "mumbai",
+  "delhi",
+  "sarezjarvi",
+  "taklamakan",
+  "toktogul",
+  "araljarvi",
+  "volgansuisto",
+  "kaukasusvuoret",
+  "ararat",
+  "krimin-lagunit",
+  "moskova",
+  "aurora-scandinavia",
+  "gronlannin-vuonot",
+  "labradorin-jaameri",
+  "merijaa",
+  "pico",
+  "kanariansaarten-pyorteet",
+  "sahara-dust-western",
+  "richat",
+  "niger-suisto",
+  "casablanca-yolla",
+  "gibraltar",
+  "lissabon-suisto",
+  "porto",
+  "iberia-yolla",
+  "valencia",
+  "ebron-suisto",
+  "mallorca",
+  "barcelona-yolla",
+  "pariisi",
+  "le-havre",
+  "mont-saint-michel-lahti",
+  "dublin-revontulet",
+  "lontoo",
+  "englanninkanaali-yolla",
+  "bryssel",
+  "antwerpenin-satama",
+  "zeeland",
+  "tanska",
+  "praha",
+  "varsova",
+  "minsk",
+  "tshernobyl",
+  "kiova-tekojarvi",
+  "odessa",
+  "valakian-tasanko",
+  "bukarest-yolla",
+  "sofia-vitosha",
+  "thessaloniki-yolla",
+  "dardanellit",
+  "istanbul",
+  "santorini",
+  "kreeta",
+  "kykladit",
+  "ateena-yolla",
+  "peloponnesos",
+  "feneos-palo",
+  "ambrakia-ioonianmeri",
+  "brindisi",
+  "bari",
+  "dubrovnik",
+  "sarajevo",
+  "belgrad",
+  "budapest-yolla",
+  "bratislava-wienin-vieressa",
+  "wien",
+  "venetsia",
+  "aletsch",
+  "geneven-jarvi",
+  "chevril-jarvi",
+  "marseille",
+  "sardinia-korsika",
+  "rooma",
+  "italia-yolla",
+  "vesuvius",
+  "messinansalmi",
+  "etna",
+  "malta-sisilia",
+  "palermo",
+  "tunis",
+  "issaouane",
+  "tsadjarvi",
+  "fitrijarvi",
+  "ennedi",
+  "ounianga",
+  "aorounga",
+  "emi-koussi",
+  "khufrah",
+  "nasser",
+  "tiran",
+  "faiyum",
+  "gizan-pyramidit",
+  "kairo-yolla",
+  "niilin-suisto",
+  "suez",
+  "kuollutmeri",
+  "kasteluympyrat",
+  "baghdad-yolla",
+  "zagrosvuoret",
+  "damavand",
+  "dasht-e-lut",
+  "dubai",
+  "empty-quarter",
+  "riyadh-yolla",
+  "al-wadj",
+  "simienit",
+  "riftin-jarvet",
+  "kenya-rift",
+  "kilimanjaro",
+  "quirimbas",
+  "mayotte",
+  "betsiboka",
+  "reunion",
+  "bazaruto",
+  "makgadikgadin-altaat",
+  "victorianputous",
+  "okavango",
+  "etosha",
+  "namib",
+  "kapkaupunki",
+  "rio",
+  "saopaulo",
+  "amazonin-suu",
+  "manaus",
   "nevado-del-ruiz",
+  "cosiguina",
+  "popocatepetl",
+  "mexico",
+  "galapagos",
   "ucayali",
   "titicaca",
   "poopojarvi",
@@ -5602,136 +6735,17 @@ export const SATELLIITTI_KIERROS = [
   "falklandinsaaret",
   "jaavuori",
   "etela-georgia",
-  "rio",
-  "saopaulo",
-  "manaus",
-  "amazonin-suu",
-  "namib",
-  "kapkaupunki",
-  "bazaruto",
-  "makgadikgadin-altaat",
-  "victorianputous",
-  "okavango",
-  "etosha",
-  "niger-suisto",
-  "richat",
-  "sahara-dust-western",
-  "kanariansaarten-pyorteet",
-  "pico",
-  "merijaa",
-  "revontulet-pohjoinen",
-  "labradorin-jaameri",
-  "gronlannin-vuonot",
-  "casablanca-yolla",
-  "gibraltar",
-  "iberia-yolla",
-  "ebron-suisto",
-  "pariisi",
-  "lontoo",
-  "englanninkanaali-yolla",
-  "zeeland",
-  "tanska",
-  "aurora-scandinavia",
-  "moskova",
-  "krimin-lagunit",
-  "istanbul",
-  "santorini",
-  "dardanellit",
-  "valakian-tasanko",
-  "tshernobyl",
-  "wien",
-  "venetsia",
-  "aletsch",
-  "geneven-jarvi",
-  "rooma",
-  "italia-yolla",
-  "vesuvius",
-  "etna",
-  "tunis",
-  "issaouane",
-  "tsadjarvi",
-  "fitrijarvi",
-  "ennedi",
-  "ounianga",
-  "aorounga",
-  "emi-koussi",
-  "khufrah",
-  "nasser",
-  "faiyum",
-  "gizan-pyramidit",
-  "kairo-yolla",
-  "niilin-suisto",
-  "suez",
-  "kuollutmeri",
-  "kasteluympyrat",
-  "tiran",
-  "al-wadj",
-  "riyadh-yolla",
-  "empty-quarter",
-  "dubai",
-  "dasht-e-lut",
-  "damavand",
-  "zagrosvuoret",
-  "baghdad-yolla",
-  "ararat",
-  "kaukasusvuoret",
-  "volgansuisto",
-  "araljarvi",
-  "toktogul",
-  "taklamakan",
-  "sarezjarvi",
-  "delhi",
-  "himalaja",
-  "everest",
-  "ganges",
-  "bangkok",
-  "irrawaddyn-suisto",
-  "mumbai",
-  "goidhoo",
-  "sokotra",
-  "simienit",
-  "riftin-jarvet",
-  "kenya-rift",
-  "kilimanjaro",
-  "quirimbas",
-  "mayotte",
-  "betsiboka",
-  "reunion",
   "heard",
-  "eyrejarvi",
-  "simpson-desert",
-  "kata-tjuta",
-  "carnegie",
   "sharkbay",
   "ningaloo-riutta",
-  "jakarta",
-  "singapore",
-  "bassac-vietnam",
-  "hongkong",
-  "kolmen-rotkon-pato",
-  "peking",
-  "selengan-suisto",
-  "baikal",
-  "siveluts",
-  "kljutsevskaja",
-  "karymsky",
-  "onekotan",
-  "sarytsev",
-  "tokio",
-  "fuji",
-  "sakurajima",
-  "korea",
-  "soul",
-  "shanghai",
-  "taifuuni",
-  "manam",
-  "ulawun",
-  "iso-valliriutta",
+  "carnegie",
+  "kata-tjuta",
+  "simpson-desert",
+  "eyrejarvi",
   "sydney",
   "etelaalpit-jarvet",
   "revontulet-etela",
   "seurasaaret",
   "mataiva",
-  "tarawa",
-  "wake-island"
+  "tarawa"
 ];

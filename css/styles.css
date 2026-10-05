@@ -1,6 +1,27 @@
 /* Matkakirja ja unohdettu aarre — sovelluskehys (tumma pähkinäpuu) ja aarrekartta (pergamentti). */
 
 /*
+ * £-MERKKI SELKEÄLLÄ SERIFILLÄ (omistaja ja Päätoimittaja 2.10.2026: American Typewriterin £ näytti koukulta ja
+ * "−£20" luettiin "−&20"; tyylikirja fontit.punta, Natiivi-UI #3860). Vain U+00A3 tästä kasvosta, jokaisen
+ * fonttipinon alussa (tyylikirja.json fontit.web). Iowan on Applen järjestelmäfontti eikä upotettavissa, joten
+ * ketju jatkuu muiden alustojen serifeihin (Windows Georgia/Palatino/Cambria, Android Noto Serif, Linux DejaVu).
+ */
+@font-face {
+  font-family: "Matkakirja Punta";
+  /* local() vaatii kasvon koko nimen tai PostScript-nimen (mitattu Chromiumilla 2.10.2026: pelkkä "Iowan Old Style"
+     tai "Charter" ei löydy, "Iowan Old Style Roman" ja "Charter Roman" löytyvät). */
+  src: local("Iowan Old Style Roman"), local("IowanOldStyle-Roman"), local("Iowan Old Style"),
+    local("Charter Roman"), local("Charter-Roman"), local("Georgia"), local("Palatino Linotype"),
+    local("Palatino-Roman"), local("Cambria"), local("Noto Serif"), local("NotoSerif-Regular"),
+    local("DejaVu Serif"), local("Times New Roman"),
+    /* Viimeinen vara (Android ilman Noto Serifiä, Linux): 2,7 kt:n osajoukko Gentium Plussasta, vain U+00A3,
+       sisäiset nimet "Matkakirja Punta" (OFL:n varattu nimi). Upotettu data-URI:na (toimii myös yhden tiedoston
+       versiossa); lähdetiedosto ja lisenssi assets/fontit/matkakirja-punta.woff2 + OFL-matkakirja-punta.txt. */
+    url("data:font/woff2;base64,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") format("woff2");
+  unicode-range: U+00A3;
+}
+
+/*
  * hidden-attribuutin pitää voittaa aina. Selaimen oletus on display: none,
  * mutta mikä tahansa myöhempi display-sääntö (flex, grid, block) kumoaa sen,
  * jolloin piilotettu elementti jää näkyviin. Tämä sääntö tekee attribuutista
@@ -69,7 +90,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde cd29af281aa2 */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde c3d473fe00d4 */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -98,12 +119,12 @@ body.paivittyy .app { visibility: hidden; }
   --liike-sisaan: cubic-bezier(0.22, 0.9, 0.24, 1);
   --liike-pehmea: cubic-bezier(0.45, 0, 0.2, 1);
   --liike-ulos: cubic-bezier(0.4, 0, 1, 1);
-  --font-type: "American Typewriter", "Courier Prime", "Courier New", Courier, monospace;
-  --font-luku: "Iowan Old Style", Charter, "Palatino Linotype", Palatino,
+  --font-type: "Matkakirja Punta", "American Typewriter", "Courier Prime", "Courier New", Courier, monospace;
+  --font-luku: "Matkakirja Punta", "Iowan Old Style", Charter, "Palatino Linotype", Palatino,
     Georgia, "Times New Roman", serif;
-  --font-kauno: "Snell Roundhand", "Savoye LET", "Bradley Hand",
+  --font-kauno: "Matkakirja Punta", "Snell Roundhand", "Savoye LET", "Bradley Hand",
     "Segoe Script", "Comic Sans MS", cursive;
-  --font-atlas: "Liberation Serif", "Times New Roman", Times, serif;
+  --font-atlas: "Matkakirja Punta", "Liberation Serif", "Times New Roman", Times, serif;
   --tk-paperi-pinta: #f5f0e2;
   --tk-paperi-pergamentti: #ecd8ae;
   --tk-paperi-muste: #211d18;
@@ -131,6 +152,13 @@ body.paivittyy .app { visibility: hidden; }
   --tk-lasi-avaruus-korostus: #5dffa8;
   --tk-lasi-avaruus-reunus: rgba(93, 255, 168, 0.28);
   --tk-lasi-avaruus-toiminto: #5dffa8;
+  --tk-harmaa-pinta: rgba(130, 130, 130, 0.42);
+  --tk-harmaa-pinta-peitto: #828282;
+  --tk-harmaa-muste: #e0e0e0;
+  --tk-harmaa-muste-pehmea: #bdbdbd;
+  --tk-harmaa-korostus: #ffffff;
+  --tk-harmaa-reunus: #aaaaaa;
+  --tk-harmaa-toiminto: rgba(170, 170, 170, 0.55);
   --tk-himmennys-tumma: rgba(14, 9, 4, 0.72);
   --tk-himmennys-kevyt: rgba(14, 9, 4, 0.35);
   --tk-himmennys-kuva: rgba(14, 9, 4, 0.92);
@@ -167,6 +195,11 @@ body.paivittyy .app { visibility: hidden; }
   --tk-nappi-korkeus: 38px;
   --tk-nappi-osuma: 44px;
   --tk-nappi-laukaisin: 64px;
+  --tk-nappi-ohjaus: 40px;
+  --tk-nappi-ohjaus-kuvake: 22px;
+  --tk-nappi-ohjaus-iso: 56px;
+  --tk-galleria-sarake: 92px;
+  --tk-galleria-vali: 10px;
   --tk-leveys-kapea: 600px;
   --tk-leveys-levea: 940px;
   --tk-leveys-kortti: 420px;
@@ -217,6 +250,15 @@ body.paivittyy .app { visibility: hidden; }
   --tk-korostus: var(--tk-lasi-avaruus-korostus);
   --tk-reunus: var(--tk-lasi-avaruus-reunus);
   --tk-toiminto: var(--tk-lasi-avaruus-toiminto);
+}
+.tk-teema-harmaa {
+  --tk-pinta: var(--tk-harmaa-pinta);
+  --tk-pinta-peitto: var(--tk-harmaa-pinta-peitto);
+  --tk-muste: var(--tk-harmaa-muste);
+  --tk-muste-pehmea: var(--tk-harmaa-muste-pehmea);
+  --tk-korostus: var(--tk-harmaa-korostus);
+  --tk-reunus: var(--tk-harmaa-reunus);
+  --tk-toiminto: var(--tk-harmaa-toiminto);
 }
 /* TYYLIKIRJA LOPPU */
 
@@ -427,8 +469,8 @@ button, .brand, .turn-pill, .fact-card h2 {
   /* Kapealla ruudulla sisältö ei saa venyttää asettelua leveämmäksi. */
   overflow: hidden;
   min-width: 0;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
-    env(safe-area-inset-left);
+  /* Yläreunan turva-alue on yläpalkin omaa täytettä (alla): PWA:ssa palkki jatkuu tilapalkin alle (omistaja 15.1x). */
+  padding: 0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 }
 
 .topbar {
@@ -436,7 +478,7 @@ button, .brand, .turn-pill, .fact-card h2 {
   align-items: center;
   gap: 0.75rem;
   min-width: 0;
-  padding: 0.45rem 0.8rem;
+  padding: calc(0.45rem + env(safe-area-inset-top, 0px)) 0.8rem 0.45rem;
   background: linear-gradient(180deg, #3a2a1c, #251b12);
   border-bottom: 1px solid var(--line);
   /*
@@ -509,20 +551,26 @@ button, .brand, .turn-pill, .fact-card h2 {
  * napautettavalta.
  */
 .turn-pill {
+  --pilleri-vali: 0.45rem;   /* päivän ja rahan väli ("1 pv £400") */
   flex: 0 1 auto;
   display: flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: var(--pilleri-vali);
   font-size: 0.9rem;
   padding: 0.25rem 0.7rem;
-  border-radius: 999px;
+  /*
+   * AIEMPI ULKOASU (tumma täyttö, ohut reuna) PYÖRISTETTYNÄ SUORAKULMIONA (omistaja 2.10.2026 klo 17.3x: "palauta
+   * pillerin aiempi ulkoasu, muuta vain tekstisisältö"; EI OVAALEJA 15.05). Teksti "1 pv · £400" ilman kuvaketta,
+   * joten pilleri on tekstin levyinen.
+   */
+  border-radius: var(--tk-kulma-nappi);
   background: var(--panel);
   border: 1px solid var(--line);
+  color: inherit;
   min-width: 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  color: inherit;
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
 }
@@ -532,7 +580,7 @@ button, .brand, .turn-pill, .fact-card h2 {
 }
 .turn-pill .laukku-ikoni {
   display: inline-flex;
-  color: var(--muted);
+  color: inherit;   /* täysin peittävä samalla musteella kuin teksti (Natiivi-UI) */
 }
 .turn-pill .laukku-ikoni svg {
   width: 15px;
@@ -621,10 +669,16 @@ button, .brand, .turn-pill, .fact-card h2 {
   font-variant-numeric: tabular-nums;
 }
 
-.turn-pill .clock::before {
-  content: '·';
-  margin-right: 0.45rem;
+/*
+ * PWA (koti-valikosta avattu, yläpalkki tilapalkin alla): pillerin oikea yläkulma vähintään yhtä kauas näytön
+ * kaaresta kuin logo vasemmasta kaaresta (omistaja 2.10.2026 klo 17.0x). Pilleri on logoa korkeampi, joten sen kulma
+ * on lähempänä kaarta: lisäväli oikealle.
+ */
+@media (display-mode: standalone) {
+  .turn-pill { margin-right: var(--tk-vali-s); }
 }
+
+/* "1 pv £400" (omistaja 2.10.2026 klo 18.1x): päivä ja raha ilman väli-pistettä; väli on pillerin flex-väli. */
 
 /* Ajan eteneminen välähtää kevyesti kullalla, jotta pelaaja huomaa
  * vilkaista päivämäärää. Yksi rauhallinen hengähdys, ei vilkutusta. */
@@ -3303,7 +3357,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   right: 0.4rem;
   bottom: 0.35rem;
   padding: 0.1rem 0.45rem;
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-pieni);
   background: rgba(30, 22, 12, 0.6);
   color: rgba(255, 250, 240, 0.98);
   font-family: var(--font-type);
@@ -3906,7 +3960,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   margin: 0 0 0 auto;
   padding: 0.18rem 0.55rem;
   border: 1px solid rgba(90, 74, 51, 0.45);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-pieni);
   font-family: var(--font-type);
   font-size: 0.7rem;
   color: rgba(64, 51, 34, 0.95);
@@ -4129,7 +4183,7 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
   font-size: 0.85rem;
   padding: 0.5rem 1.05rem;
   border: 1px solid rgba(70, 51, 31, 0.4);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   background: rgba(255, 250, 238, 0.6);
   box-shadow: none;
 }
@@ -5640,6 +5694,10 @@ body.linssi-vesistot .maastonimi-jarvi .maastonimi-teksti {
 .linssi-selite[data-corner='tr'] { top: 0.5rem; right: 0.5rem; }
 .linssi-selite[data-corner='bl'] { bottom: 0.9rem; left: 0.5rem; }
 .linssi-selite[data-corner='br'] { bottom: 0.9rem; right: 0.5rem; }
+/* Hampurilaisen linssillä (js/ui.js piirraLinssinHampurilainen) oikea ylänurkka alkaa napin alta, ja kortti on piilossa,
+   kunnes valikon kytkin avaa sen. */
+.linssi-selite.valikossa[data-corner='tr'] { top: calc(var(--tk-vali-s) * 2 + var(--tk-nappi-ohjaus)); }
+.linssi-selite.valikossa[hidden] { display: none; }
 
 .linssi-selite h2 {
   margin: 0 0 0.35rem;
@@ -8284,7 +8342,7 @@ body:not(.flight-active) .flight-overlay:not(.flight-leaving) { display: none; }
   min-height: 0;
   padding: 0.42rem 0.95rem;
   border: 1px solid rgba(232, 214, 172, 0.5);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   background: rgba(36, 26, 18, 0.35);
   font-family: var(--font-type);
   font-size: 0.86rem;
@@ -9403,7 +9461,7 @@ body.flight-active .fact-card {
 
 .quiz-badge {
   border: 1px solid rgba(70, 51, 31, 0.55);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-pieni);
   color: var(--map-ink);
   font-family: var(--font-type);
   font-weight: 700;
@@ -10891,7 +10949,7 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    * päivämäärä mahtuvat samalle riville — aiemmin ne katkesivat
    * kolmella pisteellä (omistajan havainto iPhonella).
    */
-  .topbar { padding: 0.3rem 0.45rem; gap: 0.35rem; }
+  .topbar { padding: calc(0.3rem + env(safe-area-inset-top, 0px)) 0.45rem 0.3rem; gap: 0.35rem; }
   /*
    * Nimilogo puhelimessa pienempänä. Koko sidotaan ruudun leveyteen
    * (vw) eikä pelkkiin pikseleihin: kapeimmalla puhelimella ylärivillä
@@ -10901,7 +10959,7 @@ body[data-mode] .fact-card[data-corner='br'] { bottom: 0.9rem; right: 0.4rem; }
    * 5,7vw on entisen tekstilogon mitta: 390 pikselin ruudulla se on
    * 22 px, eli tarkalleen se korkeus, joka logolla oli ennen.
    */
-  .turn-pill { font-size: 0.78rem; padding: 0.2rem 0.5rem; gap: 0.3rem; }
+  .turn-pill { --pilleri-vali: 0.3rem; font-size: 0.78rem; padding: 0.2rem 0.5rem; }
   .topbar-actions { gap: 0.15rem; }
   /*
    * Kosketuskohteet isommiksi puhelimessa.
@@ -13926,7 +13984,7 @@ button.lukija-nappi.lataa .icon-glyph::after { opacity: 0.55; }
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(70, 51, 31, 0.22);
-  border-radius: 1.05rem;
+  border-radius: var(--tk-kulma-nappi);
   background: rgba(255, 252, 244, 0.6);
   box-shadow: none;
   color: inherit;
@@ -15329,155 +15387,7 @@ button.lukija-nappi.lukee,
   color: rgba(60, 44, 26, 0.8);
 }
 
-/*
- * JULISTEGALLERIA: laukun rivistä avautuva popup (omistajan tilaus
- * 22.8.2026: "julisteet vähän isommalla maanosien mukaan jaoteltuna").
- *
- * Kerrokset: huntu 65, galleria 66, ja gallerian päälle avautuva täysi
- * koko on tavallinen .postikortti.kulttuuri-suurennos (69/70). Näin
- * suurennos jää aina gallerian PÄÄLLE ilman erillistä pinologiikkaa.
- * Kortti asuu avoimen <dialog>-elementin sisällä (js/ui.js
- * suurennosIsanta), koska modaali elää selaimen top layerissa.
- */
-.julistegalleria-huntu {
-  position: fixed;
-  inset: 0;
-  z-index: 65;
-  background: rgba(26, 18, 8, 0.28);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-}
-
-.julistegalleria {
-  position: fixed;
-  inset: 0;
-  z-index: 66;
-  margin: auto;
-  width: min(94vw, 760px);
-  height: fit-content;
-  max-height: 88dvh;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  padding: 0.6rem 0.9rem 1rem;
-  background: #f8f3e6;
-  border: 1px solid rgba(60, 44, 26, 0.35);
-  border-radius: 3px;
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45);
-}
-
-.julistegalleria-ylapalkki {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-  margin: 0 0 0.4rem;
-  padding: 0.25rem 0 0.35rem;
-  background: #f8f3e6;
-  border-bottom: 1px solid rgba(60, 44, 26, 0.22);
-}
-
-.julistegalleria-otsikko {
-  margin: 0;
-  font-family: var(--font-type);
-  font-size: 1rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(60, 44, 26, 0.92);
-}
-
-.julistegalleria-luku {
-  font-family: var(--font-type);
-  font-size: 0.8rem;
-  color: rgba(60, 44, 26, 0.65);
-}
-
-.dialog .julistegalleria-rasti {
-  margin: 0 0 0 auto;
-  padding: 0 0.3rem;
-  border: 0;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
-  font-size: 1.35rem;
-  line-height: 1;
-  color: rgba(60, 44, 26, 0.7);
-  cursor: pointer;
-}
-
-.julistegalleria-ryhma { margin: 0.6rem 0 0; }
-
-.julistegalleria-ryhma-otsikko {
-  margin: 0 0 0.35rem;
-  font-family: var(--font-type);
-  font-size: 0.74rem;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: rgba(60, 44, 26, 0.7);
-}
-
-/*
- * Ruudukko täyttyy itsestään: kapealla puhelimella kaksi tai kolme
- * saraketta, leveällä useampi — ryhmät pinoutuvat allekkain eikä
- * mitään tarvitse mediakyselyillä siirtää.
- */
-.julistegalleria-ruudukko {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
-  gap: 0.6rem;
-}
-
-.dialog .julistegalleria-vedos {
-  display: block;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
-  background: none;
-  box-shadow: none;
-  text-align: center;
-  cursor: zoom-in;
-}
-
-.dialog .julistegalleria-vedos img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  border: 1px solid rgba(60, 44, 26, 0.6);
-  box-shadow: 1px 2px 0 rgba(60, 44, 26, 0.2);
-}
-
-.julistegalleria-nimi {
-  display: block;
-  margin-top: 0.25rem;
-  font-family: var(--font-type);
-  font-size: 0.6rem;
-  line-height: 1.25;
-  letter-spacing: 0.02em;
-  color: rgba(60, 44, 26, 0.8);
-}
-
-/* Voittamaton paikka ja vielä ämpäriin viemätön kuva: sama tyhjä
- * kehys, jotta ryhmästä ei katoa ruutua kummassakaan tapauksessa. */
-.dialog .julistegalleria-vedos.lukossa,
-.dialog .julistegalleria-vedos.kuvaton {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 2 / 3;
-  border: 1px dashed rgba(60, 44, 26, 0.4);
-  background: rgba(60, 44, 26, 0.05);
-  font-family: var(--font-type);
-  font-size: 1rem;
-  color: rgba(60, 44, 26, 0.45);
-}
-
-.dialog .julistegalleria-vedos.lukossa { cursor: default; }
+/* JULISTEGALLERIA siirtyi GALLERIA-pohjalle (css/pohjat/galleria.css, js/pohjat/pohjat.js luoPohjaGalleria). */
 
 /*
  * Päivän sää lehden mastossa: hillitty rivi kuvakkeineen heti
@@ -16125,7 +16035,7 @@ button.lukija-nappi.lukee,
   margin: 0;
   padding: 0.18rem 0.65rem;
   border: 1px solid rgba(70, 51, 31, 0.5);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   background: rgba(255, 250, 238, 0.7);
   box-shadow: none;
   font-family: var(--font-type);
@@ -16650,7 +16560,7 @@ body.vertailu-tila .pawns { display: none; }
   max-width: min(96vw, 900px);
   padding: 0.35rem 0.5rem;
   border: 1px solid rgba(70, 51, 31, 0.45);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-kortti);
   background: rgba(247, 237, 216, 0.94);
   box-shadow: 0 6px 14px -8px rgba(40, 28, 16, 0.6);
 }
@@ -16668,7 +16578,7 @@ body.vertailu-tila .pawns { display: none; }
   gap: 0.3rem;
   padding: 0.2rem 0.55rem;
   border: 1px solid rgba(70, 51, 31, 0.4);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   background: rgba(255, 250, 238, 0.9);
   font-family: var(--font-type);
   font-size: 0.8rem;
@@ -16694,7 +16604,7 @@ body.vertailu-tila .pawns { display: none; }
 
 .vertailu-vertaa {
   padding: 0.25rem 0.8rem;
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   font-family: var(--font-type);
 }
 
@@ -17562,7 +17472,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   vertical-align: 0.15em;
   margin-left: 0.5em;
   padding: 0.1em 0.55em;
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-pieni);
   font-size: 0.42em;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -17791,7 +17701,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .tk-tuore-merkki {
   font-size: 0.72em;
   padding: 0.1em 0.5em;
-  border-radius: 0.8em;
+  border-radius: var(--tk-kulma-pieni);
   background: rgba(255, 255, 255, 0.65);
   color: inherit;
   white-space: nowrap;
@@ -17801,7 +17711,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
   font-size: 0.72em;
   padding: 0.15em 0.6em;
   border: 1px solid rgba(70, 51, 31, 0.35);
-  border-radius: 0.8em;
+  border-radius: var(--tk-kulma-pieni);
   background: rgba(255, 255, 255, 0.5);
   color: inherit;
   cursor: pointer;
@@ -17887,7 +17797,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .tuore-chip {
   font-size: 0.85em;
   padding: 0.2em 0.7em;
-  border-radius: 1em;
+  border-radius: var(--tk-kulma-pieni);
   white-space: nowrap;
 }
 .tuore-chip.valmis { background: #e2efdc; color: #2c5e2a; }
@@ -17915,7 +17825,7 @@ dialog.lippu-ikkuna:focus-visible { outline: none; }
 .tk-vipu-nappi {
   padding: 0.2rem 0.6rem;
   border: 1px solid rgba(70, 51, 31, 0.3);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   background: transparent;
   color: inherit;
   font: inherit;
@@ -19092,7 +19002,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   color: rgba(70, 51, 31, 0.85);
   background: rgba(255, 250, 238, 0.6);
   border: 1px solid rgba(70, 51, 31, 0.35);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   box-shadow: none;
 }
 
@@ -19117,7 +19027,7 @@ button.opas-nauha:hover { filter: brightness(1.06); }
   border: 1px solid rgba(70, 51, 31, 0.35);
   /* Yleinen nappisääntö toisi käsinpiirretyn kulmapyöristyksen; tämä
    * rivi on kartan reunassa ja pysyy siistinä pillerinä. */
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   box-shadow: none;
 }
 
@@ -22573,6 +22483,12 @@ body.lento-kesken .pollo-nappi.pollo-ilmestyy {
 
 .pollo-vihje-puhe { min-width: 0; }
 
+/* Äänen kanssa kuplaan jää vain muotokuva kuvakehyksenä; repliikki kuuluu (Päätoimittaja 2.10.2026). */
+.pollo-vihje-muotokuva.pollo-vihje-vain-kuva {
+  grid-template-columns: clamp(4.5rem, 24vw, 5.6rem);
+  width: auto;
+}
+
 @media (max-width: 340px) {
   .pollo-vihje-muotokuva {
     grid-template-columns: 4.35rem minmax(0, 1fr);
@@ -23178,7 +23094,7 @@ button.pollo-naytakuplat {
   padding: 0.12rem 0.55rem;
   min-height: 0;
   border: 1px solid var(--pollo-viiva);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   background: var(--pollo-paperi-2);
   color: var(--pollo-korostus);
   font-family: inherit;
@@ -23201,7 +23117,7 @@ button.pollo-ehdota {
   padding: 0.12rem 0.55rem;
   min-height: 0;
   border: 1px solid var(--pollo-viiva);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   background: var(--pollo-paperi-2);
   color: var(--pollo-korostus);
   font-family: inherit;
@@ -23421,7 +23337,7 @@ a.pollo-kasitelinkki:active { color: var(--pollo-muste); }
   gap: 0.35rem;
   padding: 0.18rem 0.55rem 0.18rem 0.35rem;
   border: 1px solid rgba(122, 85, 20, 0.42);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   background: rgba(250, 243, 226, 0.92);
   color: var(--map-ink);
   box-shadow: 0 2px 8px rgba(46, 30, 14, 0.22);
@@ -23461,7 +23377,7 @@ a.pollo-kasitelinkki:active { color: var(--pollo-muste); }
   min-height: 40px;
   padding: 0 0.7rem;
   border: 1px solid var(--line);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   background: rgba(239, 220, 180, 0.9);
   color: var(--map-ink);
   font-size: 0.86rem;
@@ -24877,7 +24793,7 @@ textarea.reaktio-teksti {
   padding: 0.25rem 0.7rem;
   min-height: 0;
   border: 1px solid rgba(70, 51, 31, 0.35);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   background: rgba(255, 252, 244, 0.7);
   color: rgba(50, 36, 22, 0.92);
   font-family: inherit;
@@ -24979,7 +24895,7 @@ button.pollo-pilleri {
   padding: 0.3rem 0.7rem;
   min-height: 0;
   border: 1px solid rgba(70, 51, 31, 0.35);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   background: rgba(255, 252, 244, 0.7);
   color: rgba(50, 36, 22, 0.92);
   font-family: inherit;
@@ -25008,7 +24924,7 @@ button.pollo-poimintanappi {
   padding: 0.25rem 0.6rem;
   min-height: 0;
   border: 1px solid var(--pollo-viiva);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   background: var(--pollo-paperi-2);
   color: var(--pollo-muste);
   font-family: inherit;
@@ -26917,8 +26833,8 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
    * yläreunasta (top: 0 perussäännössä, myös kiinni). Nappi jää sen alle —
    * sulku hoidetaan levyn omalla ✕-napilla, kartan napautuksella tai
    * Escapella, joten napin ei tarvitse olla tavoitettavissa sillä
-   * välin (sama poikkeus kuin ylapalkki-vaaka.js:n ja tämän napin
-   * välillä, css/styles.css `body.ylapalkki-auki .karttaselite`).
+   * välin (sama kaava kuin vaakatilan päävalikolla, joka avautuu
+   * kartan hampurilaisen päälle, js/ylapalkki-vaaka.js).
    */
   transform: none;
   opacity: 1;
@@ -27647,7 +27563,7 @@ body.valot-skandaalit .karttavalo-skandaalit { display: block; }
   pointer-events: auto;
   min-height: 0;
   padding: 0.35rem 0.8rem;
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-nappi);
   border: 1px solid rgba(217, 161, 59, 0.55);
   background: rgba(36, 26, 18, 0.82);
   color: #f3e4bf;
@@ -29084,7 +29000,7 @@ body.maatiedot-tila .pallolauta-nappula { display: none; }
 .kt-merkki {
   padding: 0.05rem 0.36rem;
   border: 1px solid rgba(70, 51, 31, 0.35);
-  border-radius: 999px;
+  border-radius: var(--tk-kulma-pieni);
   font-size: 0.68rem;
   letter-spacing: 0.03em;
   white-space: nowrap;
@@ -29324,29 +29240,43 @@ body.aikajana-palkki-auki .ylapalkki-nappi { display: none; }
    */
   .app { grid-template-rows: minmax(0, 1fr); }
 
+  /*
+   * EI YLÄPALKKIA (omistaja 2.10.2026 klo 23.07, Raamatun loki "VAAKATILASSA EI YLÄPALKKIA"): palkki on poissa eikä
+   * sitä voi avata. Solmu jää DOM:iin vain päävalikon (#paavalikko, PANEELI-pohjan position: fixed) isännäksi:
+   * palkki on nollakorkuinen ja näkymätön, ja vain paneeli näkyy. Ei transformia eikä suodinta: ne tekisivät
+   * palkista kiinteän paneelin asemointilaatikon. Pinossa Pulun ja kartan nappien päällä (valikko piirtyy niiden päälle).
+   */
   .topbar {
     position: absolute;
-    top: env(safe-area-inset-top);
-    left: env(safe-area-inset-left);
-    right: env(safe-area-inset-right);
-    /*
-     * Suljettuna palkki liukuu ylös oman korkeutensa verran ja on
-     * poissa myös näppäimistöltä ja ruudunlukijalta. Näkyvyyden
-     * siirtymä viivästetään liu'un loppuun, jotta liuku ehtii näkyä
-     * ennen katoamista — sama tapa kuin karttaselitteen levyllä.
-     */
-    transform: translateY(-100%);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    min-height: 0;
+    padding: 0;
+    border: 0;
+    overflow: visible;
     visibility: hidden;
-    /* Kartan omien nappien (z-index 6) ja kuplien yläpuolelle. */
-    z-index: 30;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
-    transition: transform 0.18s ease, visibility 0s linear 0.18s;
+    pointer-events: none;
+    box-shadow: none;
+    z-index: 70;
   }
-
-  body.ylapalkki-auki .topbar {
-    transform: translateY(0);
+  .topbar .paavalikko {
     visibility: visible;
-    transition: transform 0.18s ease, visibility 0s;
+    pointer-events: auto;
+  }
+  /* Paneelin oikea reuna täsmälleen napin oikeaan reunaan (js/pilleri-paneeli.js asemoi; ei pohjan vähimmäisväliä). */
+  .paavalikko.tk-paneeli--paikallaan { right: var(--tk-paneeli-oikea, 0px); }
+  /*
+   * VALIKKO PULUN PÄÄLLÄ (omistaja 2.10.2026 klo 23.07 kohta 3). Pulun hahmo piirtyy bodyn omalle pinnalle
+   * (.livia-kasvot-pinta.livia-lentonayttamo, fixed z 39), joka on .app:n pinokontekstin yläpuolella; valikko ei voi
+   * nousta sen yli. Hahmo ja kupla väistyvät siis auki olevan valikon ajaksi samalla keinolla kuin lennossa
+   * (visibility: livia-eleet ei piirrä piilossa). js/ylapalkki-vaaka.js kirjoittaa luokan paneelin tilasta.
+   */
+  body.paavalikko-auki .livia-kasvot-pinta,
+  body.paavalikko-auki .pollo-vihje {
+    visibility: hidden;
+    pointer-events: none;
   }
 
   /*
@@ -29389,23 +29319,6 @@ body.aikajana-palkki-auki .ylapalkki-nappi { display: none; }
   }
 
   .karttaselite { right: 2.95rem; }
-
-  /*
-   * AUKI OLEVA PALKKI KORVAA KARTAN NURKAN. Napit istuvat täsmälleen
-   * palkin alla, ja mitattuna niiden alareuna pilkotti palkin alta
-   * muutaman pikselin verran — huolimattoman näköinen sauma. Ne
-   * väistyvät auki-tilassa kokonaan: palkki suljetaan omistajan
-   * säännön mukaan napauttamalla sen ulkopuolelta, joten kummankaan
-   * napin ei tarvitse olla tavoitettavissa sillä välin.
-   */
-  body.ylapalkki-auki .ylapalkki-nappi,
-  body.ylapalkki-auki .karttaselite {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .ylapalkki-nappi,
-  .karttaselite { transition: opacity 0.18s ease; }
 }
 
 /*
@@ -30319,3 +30232,14 @@ body.lehtikuori { background: #2a241c; }
 }
 .lehti-osio-erotin { color: #b3aa9c; }
 .lehti-osio-linkki:hover, .lehti-osio-juttu:hover { text-decoration: underline; }
+
+/*
+ * KARTAN LINSSIT-NAPPI (omistaja 2.10.2026 klo 13.56; js/karttaselite.js): sama laatta kuin selitenapilla
+ * (.karttaselite-nappi), selitenapin vasemmalla puolella samalla rivillä.
+ */
+.karttaselite > .linssit-karttanappi {
+  position: absolute;
+  top: 0;
+  right: calc(100% + 8px);
+}
+.karttaselite > .linssit-karttanappi[hidden] { display: none; }

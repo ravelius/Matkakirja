@@ -21,6 +21,7 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
 
 /* ---------------------------------------------------------------- */
 /* Pieni DOM-malli (sama kaava kuin tests/matkalaukun-linssit.test.mjs) */
@@ -255,4 +256,11 @@ test('esikatselukortti näyttää kuvan/ikonin, nimen, selitteen ja toimintonapi
   assert.match(teksti(kortti), /Aktivoi/);
   const kuva = kortti.childNodes.find((n) => n.luokat?.has('kokoelma-esikatselu-kuva'));
   assert.ok(kuva, 'kuva puuttuu esikatselukortista');
+});
+
+test('kehittäjätilassa valikon Aarteet-rivi näyttää kaikki aarteet (omistaja 2.10.2026 klo 21.42), muuten löydetyt', () => {
+  const ui = readFileSync(new URL('../js/ui.js', import.meta.url), 'utf8');
+  const runko = ui.slice(ui.indexOf('  renderValikkoTaso() {'), ui.indexOf("nimea('pilleri-julisteet-btn'"));
+  assert.match(runko, /const aarteita = this\.kehittajaTila \? kaikki\.length : loydetyt\.length;/);
+  assert.match(runko, /nimea\('pilleri-aarteet-btn', `Aarteet \(\$\{aarteita \+ tavaroita\}\)`\);/);
 });

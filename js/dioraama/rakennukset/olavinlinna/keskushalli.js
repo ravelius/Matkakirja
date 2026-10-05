@@ -26,8 +26,9 @@ const HAHMOT = [
     id: 'apulainen', henkilo: 'apulainen-1500', paikka: [-8.4, 0, -15.25], suunta: 270, peilattu: false,
     silmukka: 'kanto', heraa: 1,
     reitti: {
-      pisteet: [[-8.4, 0, -15.25], [-9.1, 0, -14.4], [-9.1, 0, -10.5], [-13.1, 0, -10.5], [-14.75, 0, -11.1],
-        [-13.1, 0, -10.5], [-9.1, 0, -10.5], [-9.1, 0, -14.4], [-8.4, 0, -15.25]],
+      // 2.10.: pöydän ohitus z -9,9 (ennen -10,5 kulki 0,5 m:n päästä istuvista vartijoista, skin-video)
+      pisteet: [[-8.4, 0, -15.25], [-9.1, 0, -14.4], [-9.1, 0, -9.9], [-13.1, 0, -9.9], [-14.75, 0, -11.1],
+        [-13.1, 0, -9.9], [-9.1, 0, -9.9], [-9.1, 0, -14.4], [-8.4, 0, -15.25]],
       nopeus: 0.9, tauko: 2,
     },
     repliikit: [
@@ -255,6 +256,7 @@ const KRUUNU_LIEKIT = [0, 1, 2, 3, 4].map((i) => {
 
 export const TILA = {
   id: 'keskushalli',
+  lappujarjestys: 5,
   nimi: 'Keskushalli',
   // Infotaulu (omistajan hyväksymä rakenne 30.9.): nimi + rivi siitä, mikä huone oli (Päätoimittaja, faktat
   // Sisältökirjuri 30.9. 5684d5d81); muoto kuten taulu.kohdat.

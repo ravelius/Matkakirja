@@ -76,6 +76,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { laskeKierros } from '../js/linssit/astronautin-kierros.js';
 import { kierrosLohko } from './laske-astronautin-kierros.mjs';
+import { gatewayOsoitteet, gatewayTunnus, jasennaKuvasivu } from './astronaut/gateway.mjs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -737,6 +738,12 @@ export const KOHTEET = [
         teksti: 'Rein, Maas ja Schelde laskevat mereen samassa suistossa. Saarten väliset '
           + 'lahdet on suljettu padoilla vuoden 1953 tulvakatastrofin jälkeen; osa suluista '
           + 'aukeaa yhä vuoroveden mukana, jotta suolainen vesi pitää luonnon ennallaan.',
+      },
+      {
+        id: 'iss063e002730',
+        teksti: 'Huhtikuussa 2020 otettu kuva samasta suistosta neljä vuotta aiemmin. Saarten ja '
+          + 'kanavien muodot ovat pysyneet samoina ihmisen rakentamien patojen ansiosta, mutta '
+          + 'veden sameus ja pilvisyys vaihtelevat vuodenajan ja sään mukaan kuvasta toiseen.',
       },
     ],
   },
@@ -2995,6 +3002,586 @@ export const KOHTEET = [
       },
     ],
   },
+  // Eurooppa-erä 1 (Sisältökirjuri, omistaja "lisätään niitä vain" 4.10.2026):
+  // eurooppalaisia kaupunkeja, joilta puuttui vielä satelliittikuva.
+  {
+    tunnus: 'ateena-yolla', nimi: 'Ateena', seutu: 'Kreikka', lat: 37.9838, lon: 23.7275,
+    selite: 'Yksi maailman vanhimmista jatkuvasti asutuista kaupungeista kuvattuna yöllä.',
+    oletus: 'iss074e0416472',
+    kuvat: [
+      {
+        id: 'iss074e0416472',
+        teksti: 'Maaliskuussa 2026 otettu kuva näyttää Ateenan, yhden maailman '
+          + 'vanhimmista jatkuvasti asutuista kaupungeista — sen historia ulottuu '
+          + 'yli 3 400 vuoden taakse. Kaupunkiseudulla asuu nykyään noin 3,15 '
+          + 'miljoonaa ihmistä. Kuva otettiin noin kello 22.11 paikallista aikaa '
+          + 'Kansainväliseltä avaruusasemalta, joka kiersi tuolloin noin 425 '
+          + 'kilometrin korkeudessa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'budapest-yolla', nimi: 'Budapest', seutu: 'Unkari', lat: 47.4979, lon: 19.0402,
+    selite: 'Unkarin pääkaupungin valot hallitsevat yömaisemaa Balaton-järven lähellä.',
+    oletus: 'iss074e0149554',
+    kuvat: [
+      {
+        id: 'iss074e0149554',
+        teksti: 'Tammikuussa 2026 otettu kuva näyttää Budapestin valojen hallitsevan '
+          + 'Unkarin yömaisemaa, jota koristavat pienet kylät. Kuvan keskellä '
+          + 'kimmeltää Balaton, Keski-Euroopan suurin järvi, jota ympäröivät '
+          + 'tulivuoriperäiset kukkulat, viinitarhat ja vanhat kirkot. '
+          + 'Kansainvälinen avaruusasema kiersi noin 422 kilometrin '
+          + 'korkeudessa, kun kuva otettiin noin kello 21.10 paikallista aikaa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'barcelona-yolla', nimi: 'Barcelona', seutu: 'Espanja', lat: 41.3851, lon: 2.1734,
+    selite: 'Espanjan toiseksi suurimman kaupungin tunnistettava ruutukaava Välimeren rannalla.',
+    oletus: 'iss073e0078528',
+    kuvat: [
+      {
+        id: 'iss073e0078528',
+        teksti: 'Toukokuussa 2025 otetussa kuvassa näkyy Barcelona, Espanjan '
+          + 'toiseksi suurin kaupunki, jonka kaupunkiseudulla asuu 5,74 '
+          + 'miljoonaa ihmistä. Kaupungin tunnetun Eixample-kaupunginosan '
+          + 'säännöllinen ruutukaava erottuu selvästi valaistuna Välimeren '
+          + 'rannalla. Kuva otettiin Kansainväliseltä avaruusasemalta sen '
+          + 'kiertäessä noin 420 kilometrin korkeudessa Välimeren yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'bukarest-yolla', nimi: 'Bukarest', seutu: 'Romania', lat: 44.4268, lon: 26.1025,
+    selite: 'Romanian pääkaupunki yöllä, vanhat ja uudet katuvalot erottuvat väreiltään.',
+    oletus: 'iss073e1047246',
+    kuvat: [
+      {
+        id: 'iss073e1047246',
+        teksti: 'Marraskuussa 2025 otetussa kuvassa Romanian pääkaupunki '
+          + 'Bukarest, jonka kaupunkiseudulla asuu noin 1,78 miljoonaa '
+          + 'ihmistä, näkyy yöllä. Kaupungin keskustan vanhat, keltaiset '
+          + 'natriumlamput vaihtuvat esikaupunkialueilla uudempaan, '
+          + 'valkoisempaan LED-valaistukseen. Kuva otettiin Kansainväliseltä '
+          + 'avaruusasemalta sen kiertäessä noin 420 kilometrin korkeudessa '
+          + 'Itä-Euroopan yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'lissabon-suisto', nimi: 'Lissabon', seutu: 'Portugali', lat: 38.7223, lon: -9.1393,
+    selite: 'Portugalin pääkaupunki ja sen Tejo-joen suisto päivänvalossa.',
+    oletus: 'iss073e0078399',
+    kuvat: [
+      {
+        id: 'iss073e0078399',
+        teksti: 'Toukokuussa 2025 otetussa päiväkuvassa näkyy Lissabon, '
+          + 'Portugalin pääkaupunki ja suurin kaupunki, esikaupunkeineen '
+          + 'Tejo-joen rannalla. Joki laskee tässä kohtaa leveänä suistona '
+          + 'Atlantin valtamereen. Kuva otettiin Kansainväliseltä '
+          + 'avaruusasemalta sen kiertäessä Iberian niemimaan rannikon yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'thessaloniki-yolla', nimi: 'Thessaloniki', seutu: 'Kreikka', lat: 40.6401, lon: 22.9444,
+    selite: 'Yli 2 300 vuotta vanha satamakaupunki Thermaicos-lahden rannalla.',
+    oletus: 'iss073e1047210',
+    kuvat: [
+      {
+        id: 'iss073e1047210',
+        teksti: 'Marraskuussa 2025 otetussa kuvassa näkyy Thessaloniki, yli '
+          + '2 300 vuotta vanha satamakaupunki Thermaicos-lahden rannalla. '
+          + 'Kaupunkiseudulla asuu noin 815 000 ihmistä. Kuten Bukarestissa, '
+          + 'myös täällä keskustan vanhat keltaiset natriumlamput vaihtuvat '
+          + 'esikaupungeissa valkoisempaan LED-valoon.',
+      },
+    ],
+  },
+  // Eurooppa-erä 2 (Sisältökirjuri, jatkoa erään 1): Madrid jätettiin pois,
+  // koska ainoa löytämäni kuva (iss030e010008) on sama kuin olemassa olevan
+  // iberia-yolla-kohteen kuva lähes samasta lat/lon-pisteestä — ei lisätty
+  // duplikaattia.
+  {
+    tunnus: 'dublin-revontulet', nimi: 'Dublin', seutu: 'Irlanti', lat: 53.3498, lon: -6.2603,
+    selite: 'Irlannin pääkaupunki yöllä revontulten alla, Lontoo näkyy kauempana.',
+    oletus: 'iss034e050137',
+    kuvat: [
+      {
+        id: 'iss034e050137',
+        teksti: 'Helmikuussa 2013 otetussa kuvassa näkyvät Brittein saaret '
+          + 'yöllä. Dublin, Irlannin pääkaupunki, erottuu vasemmalla '
+          + 'keskellä omana kirkkaana laikkunaan, kun taas Lontoo '
+          + 'näkyy kauempana oikealla alakulmassa suurempana valoläiskänä. '
+          + 'Horisontin vihreä hehku on revontulia.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sofia-vitosha', nimi: 'Sofia', seutu: 'Bulgaria', lat: 42.6977, lon: 23.3219,
+    selite: 'Bulgarian pääkaupunki laaksossa, vieressä lumihuippuinen Vitosha-vuori.',
+    oletus: 'iss039e002766',
+    kuvat: [
+      {
+        id: 'iss039e002766',
+        teksti: 'Vuonna 2014 otetussa päiväkuvassa Sofia, Bulgarian '
+          + 'pääkaupunki, näkyy laajassa vuoristolaaksossa. Kaupungin '
+          + 'eteläpuolella kohoaa Vitosha, lumihuippuinen vuori, joka on '
+          + 'suosittu retkeily- ja hiihtokohde aivan pääkaupungin kyljessä.',
+      },
+    ],
+  },
+  // Eurooppa-erä 3 (Sisältökirjuri, omistaja "lisätään niitä vain" jatkuu;
+  // Päätoimittajan ohje 4.10.2026: vähintään 15 kohdetta kerralla). Haettu
+  // tools/hae-satelliittihavainnot.mjs-haulla images-api.nasa.gov:sta,
+  // jokainen kuva tarkistettu silmämääräisesti (pilvettömyys, terävyys,
+  // tunnistettavuus) ennen lisäystä. Norjan vuonot, Itämeren saaristo ja
+  // Islanti jäivät tällä kierroksella tyhjäksi — NASAn kuvastossa ei ole
+  // käyttökelpoista, images-api.nasa.gov:iin indeksoitua ISS-kuvaa
+  // kummastakaan (tarkistettu sekä images-api että eol.jsc.nasa.gov).
+  {
+    tunnus: 'kiova-tekojarvi', nimi: 'Kiova', seutu: 'Ukraina', lat: 50.4501, lon: 30.5234,
+    selite: 'Ukrainan pääkaupunki Dneprin tekojärven rannalla.',
+    oletus: 'iss008e20656',
+    kuvat: [
+      {
+        id: 'iss008e20656',
+        teksti: 'Huhtikuussa 2004 otetussa kuvassa näkyy Kiova, lähes '
+          + 'kolmen miljoonan asukkaan Ukrainan pääkaupunki, Dnepr-joen '
+          + 'tekojärven rannalla. Seudulla on pitkä historia osana '
+          + 'länsimaisen sivilisaation kehitystä.',
+      },
+    ],
+  },
+  // Napoli jätettiin pois: ainoa löytämäni päiväkuva (iss061e006435) on sama
+  // kuva, joka on jo olemassa olevan vesuvius-kohteen toisena kuvana — ei
+  // lisätty duplikaattia. Kaupunki näkyy jo siinä kuvassa.
+  {
+    tunnus: 'belgrad', nimi: 'Belgrad', seutu: 'Serbia', lat: 44.7866, lon: 20.4489,
+    selite: 'Serbian pääkaupunki Tonavan ja Savan jokien yhtymäkohdassa.',
+    oletus: 'iss034e061717',
+    kuvat: [
+      {
+        id: 'iss034e061717',
+        teksti: 'Maaliskuussa 2013 otetussa kuvassa näkyy Belgrad, '
+          + 'Serbian pääkaupunki, Tonava- ja Sava-jokien yhtymäkohdassa. '
+          + 'Kaupunkialueella asuu noin 1,65 miljoonaa ihmistä, ja '
+          + 'seudulla on asuttu yli 6 000 vuoden ajan. Kuvan keskellä '
+          + 'erottuva Kalemegdan on Belgradin vanha ydin jokien oikealla '
+          + 'rannalla; Sava-joen toisella puolella on toisen '
+          + 'maailmansodan jälkeen rakennettu Uusi Belgrad.',
+      },
+    ],
+  },
+  {
+    tunnus: 'chevril-jarvi', nimi: 'Lac du Chevril', seutu: 'Ranskan Alpit', lat: 45.567, lon: 6.900,
+    selite: 'Turkoosinsininen tekojärvi lumihuippuisten Alppien keskellä Kaakkois-Ranskassa.',
+    oletus: 'iss069e025220',
+    kuvat: [
+      {
+        id: 'iss069e025220',
+        teksti: 'Kesäkuussa 2023 otetussa kuvassa näkyy Lac du Chevril, '
+          + 'tekojärvi Auvergne-Rhône-Alpesin alueella Kaakkois-Ranskassa, '
+          + 'kun avaruusasema kiersi noin 420 kilometrin korkeudessa. '
+          + 'Järven kirkkaan turkoosi väri erottuu selvästi '
+          + 'lumijuovaisten vuorenhuippujen keskeltä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'palermo', nimi: 'Palermo', seutu: 'Sisilia, Italia', lat: 38.1157, lon: 13.3613,
+    selite: 'Yli 2 700 vuotta vanha kaupunki Sisilian rannikolla Tyrrhenanmerellä.',
+    oletus: 'iss073e1047080',
+    kuvat: [
+      {
+        id: 'iss073e1047080',
+        teksti: 'Marraskuussa 2025 noin kello 22.12 paikallista aikaa '
+          + 'otetussa kuvassa Palermon valot erottuvat Sisilian '
+          + 'rannikolla. Kaupungin keskustan vanhat, kellertävät '
+          + 'natriumlamput vaihtuvat esikaupunkialueilla viileämmän '
+          + 'sävyisiin, valkoisiin LED-valoihin.',
+      },
+    ],
+  },
+  {
+    tunnus: 'bari', nimi: 'Bari', seutu: 'Italia', lat: 41.1171, lon: 16.8719,
+    selite: 'Adrianmeren rannalla sijaitseva, yli 2 700 vuotta vanha satamakaupunki.',
+    oletus: 'iss073e1047143',
+    kuvat: [
+      {
+        id: 'iss073e1047143',
+        teksti: 'Marraskuussa 2025 otetussa kuvassa Barin ja sen '
+          + 'esikaupunkien valot pilkottavat Italian Adrianmeren '
+          + 'rannikolla. Yli 2 700 vuotta vanha Bari tunnetaan '
+          + 'oliivilehdoistaan, viinitarhoistaan ja rannikon jyrkänteisiin '
+          + 'kaiverretuista luolistaan.',
+      },
+    ],
+  },
+  {
+    tunnus: 'minsk', nimi: 'Minsk', seutu: 'Valko-Venäjä', lat: 53.9006, lon: 27.5590,
+    selite: 'Valko-Venäjän pääkaupunki, jonka kehätie piirtää selvän soikion kaupungin valoihin.',
+    oletus: 'iss066e117709',
+    kuvat: [
+      {
+        id: 'iss066e117709',
+        teksti: 'Tammikuussa 2022 otetussa yökuvassa näkyy Minsk, '
+          + 'Valko-Venäjän pääkaupunki, lähellä maan rajaa Ukrainaan. '
+          + 'Kaupungin kehätie piirtää valoihin selvän soikean muodon.',
+      },
+    ],
+  },
+  {
+    tunnus: 'porto', nimi: 'Porto', seutu: 'Portugali', lat: 41.1579, lon: -8.6291,
+    selite: 'Douro-joen suulla sijaitsevat kaksoiskaupungit Porto ja Vila Nova de Gaia.',
+    oletus: 'iss032e015055',
+    kuvat: [
+      {
+        id: 'iss032e015055',
+        teksti: 'Elokuussa 2012 otetussa yökuvassa näkyvät Porto '
+          + '(vasemmalla) ja Vila Nova de Gaia (oikealla) Douro-joen '
+          + 'molemmin puolin Portugalin luoteisrannikolla. Joki erottaa '
+          + 'kaupungit selvästi toisistaan ennen sen laskua Atlantille.',
+      },
+    ],
+  },
+  {
+    tunnus: 'valencia', nimi: 'Valencia', seutu: 'Espanja', lat: 39.4699, lon: -0.3763,
+    selite: 'Espanjan kolmanneksi suurin kaupunki Välimeren rannalla, tunnistettavissa satamansa aallonmurtajista.',
+    oletus: 'iss064e000399',
+    kuvat: [
+      {
+        id: 'iss064e000399',
+        teksti: 'Lokakuussa 2020 otetussa kuvassa Valencia erottuu '
+          + 'Espanjan Välimeren rannikolla juuri ennen kuin avaruusasema '
+          + 'ylitti rannikkoviivan. Kaupungin sataman aallonmurtajat ja '
+          + 'etelämpänä siintävä Albufera-laguuni näkyvät kuvassa '
+          + 'selvästi.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kreeta', nimi: 'Kreeta', seutu: 'Kreikka', lat: 35.2401, lon: 24.8093,
+    selite: 'Kreikan suurin saari, pitkänomainen ja vuoristoinen, Egeanmeren eteläreunalla.',
+    oletus: 'iss028e018562',
+    kuvat: [
+      {
+        id: 'iss028e018562',
+        teksti: 'Heinäkuussa 2011 otetussa kuvassa näkyy Kreeta, '
+          + 'Kreikan suurin ja väkirikkain saari. Saari on noin 260 '
+          + 'kilometriä pitkä ja enimmillään 60 kilometriä leveä, ja sen '
+          + 'pääkaupunki Iraklion sijaitsee pohjoisrannikolla kuvan '
+          + 'keskellä. Kreikkalaisen mytologian mukaan saarella hallitsi '
+          + 'kuningas Minos, jonka labyrintissa asusti puoliksi ihminen, '
+          + 'puoliksi sonni ollut Minotauros.',
+      },
+    ],
+  },
+  {
+    tunnus: 'brindisi', nimi: 'Brindisi', seutu: 'Italia', lat: 40.6320, lon: 17.9369,
+    selite: 'Adrianmeren satamakaupunki Italian "koron" kärjessä, josta 1800-luvun matkustajalaivat lähtivät kohti Suezia.',
+    oletus: 'iss028e008604',
+    kuvat: [
+      {
+        id: 'iss028e008604',
+        teksti: 'Kesäkuussa 2011 otetussa yökuvassa Italian "saappaan" '
+          + 'kantapää ja kärki piirtyvät esiin suurten kaupunkien, kuten '
+          + 'Napolin, Barin ja Brindisin, valoista. Brindisi oli '
+          + '1800-luvulla tärkeä satama, josta höyrylaivat lähtivät kohti '
+          + 'Suezin kanavaa ja Intiaa — samaa reittiä, jota pitkin moni '
+          + 'aikansa matkailija kiersi maailman ympäri.',
+      },
+    ],
+  },
+  {
+    tunnus: 'antwerpenin-satama', nimi: 'Antwerpenin satama', seutu: 'Belgia', lat: 51.2990, lon: 4.2970,
+    selite: 'Euroopan toiseksi suurin satama Schelde-joen varrella.',
+    oletus: 'iss065e096050',
+    kuvat: [
+      {
+        id: 'iss065e096050',
+        teksti: 'Kesäkuussa 2021 otetussa kuvassa näkyy Antwerpenin '
+          + 'satama Schelde-joen varrella Belgiassa. Kuva otettiin '
+          + 'avaruusasemalta sen kiertäessä noin 420 kilometrin '
+          + 'korkeudessa Pohjois-Euroopan yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'bratislava-wienin-vieressa', nimi: 'Bratislava', seutu: 'Slovakia', lat: 48.1486, lon: 17.1077,
+    selite: 'Slovakian pääkaupunki Tonavan rannalla, lähellä toista pääkaupunkia Wieniä.',
+    oletus: 'iss074e0149548',
+    kuvat: [
+      {
+        id: 'iss074e0149548',
+        teksti: 'Tammikuussa 2026 otetussa yökuvassa Itävallan '
+          + 'pääkaupunki Wien ja Slovakian pääkaupunki Bratislava '
+          + 'valaisevat molemmat Keski-Euroopan yömaisemaa, Tonava-joen '
+          + 'erottamina. Kaupunkien ympärillä siintävät viinitarha- ja '
+          + 'markkinakylät.',
+      },
+    ],
+  },
+  {
+    tunnus: 'kykladit', nimi: 'Kykladit', seutu: 'Kreikka', lat: 37.00, lon: 25.30,
+    selite: 'Egeanmeren saariryhmä, jonka läpi monet Välimeren laivareitit kulkivat.',
+    oletus: 'iss040e033303',
+    kuvat: [
+      {
+        id: 'iss040e033303',
+        teksti: 'Heinäkuussa 2014 otetussa kuvassa näkyvät Joonianmeri '
+          + '(ylhäällä), Kreeta (eteläisin saari vasemmalla), Kykladit '
+          + '(keskellä alhaalla) sekä suuri osa Kreikan mannerta '
+          + '(oikealla).',
+      },
+    ],
+  },
+  {
+    tunnus: 'messinansalmi', nimi: 'Messinansalmi', seutu: 'Italia', lat: 38.2466, lon: 15.6186,
+    selite: 'Kapea salmi, joka erottaa Sisilian Italian mantereesta.',
+    oletus: 'iss036e025908',
+    kuvat: [
+      {
+        id: 'iss036e025908',
+        teksti: 'Heinäkuussa 2013 otetussa yökuvassa Sisilia (keskellä) '
+          + 'ja Etelä-Italia (vasemmalta keskelle) erottuvat valoistaan. '
+          + 'Messinansalmi, joka erottaa Sisilian Italian mantereesta, '
+          + 'sijaitsee lähellä kuvan keskustaa.',
+      },
+    ],
+  },
+  // Eurooppa-erä 4 (Sisältökirjuri, Päätoimittajan ohje 4.10.2026: vähintään
+  // 15 kohdetta). Osa kuvista haettu Pelikoodarin uudella Gateway-haulla
+  // (ISS062-E-142201-tyyppiset tunnukset, #3960) — eol.jsc.nasa.gov, ei
+  // images-api.nasa.gov. Jokainen kuva tarkistettu silmämääräisesti ja
+  // astro-palkki.mjs:llä; kaksi alkuperäistä ehdokasta (Split, Eoliansaaret)
+  // jätettiin pois, koska niissä oli vanha tunnuspalkki eikä rajaukseen
+  // ollut tällä kierroksella aikaa — korvattu Dubrovnikilla ja Varsovalla.
+  {
+    tunnus: 'sardinia-korsika', nimi: 'Sardinia', seutu: 'Italia', lat: 40.09, lon: 9.14,
+    selite: 'Välimeren toiseksi suurin saari; Korsika näkyy vieressä pohjoisessa.',
+    oletus: 'iss067e123679',
+    kuvat: [
+      {
+        id: 'iss067e123679',
+        teksti: 'Kesäkuussa 2022 otetussa kuvassa näkyy Italian Sardinia-saari '
+          + 'ja sen pohjoispuolella Ranskan Korsika (oikealla ylhäällä). '
+          + 'Avaruusasema kiersi tuolloin noin 420 kilometrin korkeudessa '
+          + 'Tyrrhenanmeren yllä, Napolin edustalla.',
+      },
+    ],
+  },
+  {
+    tunnus: 'peloponnesos', nimi: 'Peloponnesos', seutu: 'Kreikka', lat: 37.5, lon: 22.3,
+    selite: 'Kreikan suuri niemimaa, jonka Korinthin kannas erottaa mantereesta.',
+    oletus: 'iss039e003505',
+    kuvat: [
+      {
+        id: 'iss039e003505',
+        teksti: 'Maaliskuussa 2014 otetussa kuvassa näkyy Peloponnesos, '
+          + 'antiikin Spartan koti, kapean Korinthin kannaksen erottamana '
+          + 'muusta Kreikasta. Kannaksen poikki kaivettiin laivakanava '
+          + 'vuonna 1893 yhdistämään sen länsi- ja itäpuoliset lahdet. '
+          + 'Kuvassa erottuvat myös lumihuippuiset vuoret, vihreät '
+          + 'viljelylaaksot ja tuulen meren pintaan piirtämät juovat.',
+      },
+    ],
+  },
+  {
+    tunnus: 'feneos-palo', nimi: 'Feneoksen metsäpalo', seutu: 'Kreikka', lat: 37.97, lon: 22.40,
+    selite: 'Metsäpalon savupilvi leviää Korinthinlahden eteläpuolella.',
+    oletus: 'iss073e0421317',
+    kuvat: [
+      {
+        id: 'iss073e0421317',
+        teksti: 'Heinäkuussa 2025 otetussa kuvassa metsäpalo roihuaa '
+          + 'Feneoksen kylän lähellä, Korinthinlahden eteläpuolella '
+          + 'Kreikassa. Kuva otettiin avaruusasemalta sen kiertäessä noin '
+          + '420 kilometrin korkeudessa Etelä-Euroopan yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'mallorca', nimi: 'Mallorca', seutu: 'Baleaarit, Espanja', lat: 39.57, lon: 2.65,
+    selite: 'Baleaarien suurin saari, suosittu matkailukohde Espanjan edustalla.',
+    oletus: 'iss030e030290',
+    kuvat: [
+      {
+        id: 'iss030e030290',
+        teksti: 'Joulukuussa 2011 otetussa kuvassa näkyy Mallorca, '
+          + 'Baleaarien saariryhmän suurin saari, noin 3 600 neliökilometrin '
+          + 'kokoinen. Saaren pääkaupunki Palma sijaitsee lounaisrannikolla '
+          + 'Palman lahden pohjukassa. Mallorcan eteläpuolella sijaitsee '
+          + 'pieni Cabreran saari, jonka ympärillä on kansallispuisto. '
+          + 'Saaren keskiosa on tasaista viljelymaata, kun taas vuoristo '
+          + 'kohoaa luoteisrannikolla ja saaren itäosassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'mont-saint-michel-lahti', nimi: 'Mont-Saint-Michelin lahti', seutu: 'Ranska', lat: 48.64, lon: -1.51,
+    selite: 'Kahden historiallisen maakunnan raja Englannin kanaalin rannalla.',
+    oletus: 'iss068e053846',
+    kuvat: [
+      {
+        id: 'iss068e053846',
+        teksti: 'Helmikuussa 2023 otetussa kuvassa Bretagnen ja Normandian '
+          + 'rannikkoalueet Luoteis-Ranskassa kohtaavat Englannin kanaalin '
+          + 'rannalla; Couesnon-joki on maakuntien raja. Hiekkasärkillä '
+          + 'erottuu kaksi tummaa pistettä: eteläisempi on Mont-Saint-'
+          + 'Michelin luostarisaari ja pohjoisempi Tombelaine. Avaruusasema '
+          + 'kiersi tuolloin noin 425 kilometrin korkeudessa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'le-havre', nimi: 'Le Havre', seutu: 'Ranska', lat: 49.49, lon: 0.11,
+    selite: 'Ranskan suurin konttisatama Seine-joen suulla.',
+    oletus: 'iss037e021618',
+    kuvat: [
+      {
+        id: 'iss037e021618',
+        teksti: 'Lokakuussa 2013 otetussa kuvassa näkyy Le Havren satama '
+          + 'Seine-joen ja Englannin kanaalin yhtymäkohdassa Pohjois-'
+          + 'Ranskassa. Le Havre on Ranskan suurin konttisatama, ja sen '
+          + 'laitureilla näkyy suuria rahtilaivoja. Kaupunki rakennettiin '
+          + 'suurelta osin uudelleen toisen maailmansodan jälkeen '
+          + 'arkkitehti Auguste Perret’n suunnitelman mukaan betonista, '
+          + 'mikä teki siitä Unescon maailmanperintökohteen.',
+      },
+    ],
+  },
+  {
+    tunnus: 'malta-sisilia', nimi: 'Malta', seutu: 'Malta', lat: 35.94, lon: 14.38,
+    selite: 'Pieni saarivaltio Sisilian eteläpuolella, näkyy kuvassa kaukana Sisilian takana.',
+    oletus: 'STS100-713-064',
+    kuvat: [
+      {
+        id: 'STS100-713-064',
+        teksti: 'Huhtikuussa 2001 otetussa kuvassa näkyy kolmionmuotoinen '
+          + 'Sisilia, jonka koilliskärjessä kohoaa lumihuippuinen Etna. '
+          + 'Kaukana taustalla, Sisilian eteläpuolella, erottuvat Maltan '
+          + 'pienet saaret.',
+      },
+    ],
+  },
+  {
+    tunnus: 'ambrakia-ioonianmeri', nimi: 'Ambrakian lahti', seutu: 'Kreikka', lat: 38.85, lon: 20.75,
+    selite: 'Saaria Kreikan länsirannikolla Joonianmeren tuntumassa.',
+    oletus: 'iss070e035893',
+    kuvat: [
+      {
+        id: 'iss070e035893',
+        teksti: 'Joulukuussa 2023 otetussa kuvassa näkyy saaria Kreikan '
+          + 'länsirannikolla; Ambrakian lahti näkyy kuvan vasemmassa '
+          + 'yläkulmassa. Lähempänä erottuu kapea Lefkas, joka on yhdistetty '
+          + 'mantereeseen kannaksella, ja kauempana suurempi, lumihuippuisen '
+          + 'Ainos-vuoren kohottava Kefalonia. Avaruusasema kiersi tuolloin '
+          + 'noin 420 kilometrin korkeudessa Joonianmeren yllä.',
+      },
+    ],
+  },
+  {
+    tunnus: 'odessa', nimi: 'Odessa', seutu: 'Ukraina', lat: 46.477, lon: 30.733,
+    selite: 'Mustanmeren satamakaupunki lahden kaartuvalla rannalla.',
+    oletus: 'ISS062-E-142201',
+    kuvat: [
+      {
+        id: 'ISS062-E-142201',
+        teksti: 'Huhtikuussa 2020 otetussa päiväkuvassa näkyy Odessa, '
+          + 'Mustanmeren rannalla sijaitseva ukrainalainen satamakaupunki. '
+          + 'Kuvassa erottuvat kaupungin satama-alue, rannan kaarre sekä '
+          + 'sisämaan järvet ja viljelymaa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'praha', nimi: 'Praha', seutu: 'Tšekki', lat: 50.087, lon: 14.421,
+    selite: 'Tšekin pääkaupunki Vltava-joen mutkassa.',
+    oletus: 'ISS052-E-78028',
+    kuvat: [
+      {
+        id: 'ISS052-E-78028',
+        teksti: 'Elokuussa 2017 otetussa päiväkuvassa näkyy Praha, Tšekin '
+          + 'pääkaupunki, Vltava-joen jyrkän mutkan ympärillä. Kaupungin '
+          + 'tiivis keskusta erottuu vaaleana laikkuna joen molemmin '
+          + 'puolin, ja ympäröivä maaseutu näkyy peltoina ja '
+          + 'metsälaikkuina.',
+      },
+    ],
+  },
+  {
+    tunnus: 'marseille', nimi: 'Marseille', seutu: 'Ranska', lat: 43.297, lon: 5.381,
+    selite: 'Ranskan suurin Välimeren satamakaupunki; vieressä Calanques-kansallispuiston jyrkät kalkkikivirannikot.',
+    oletus: 'ISS050-E-51867',
+    kuvat: [
+      {
+        id: 'ISS050-E-51867',
+        teksti: 'Helmikuussa 2017 otetussa päiväkuvassa näkyy Marseille, '
+          + 'Ranskan suurin Välimeren satamakaupunki. Kaupungin itäpuolella '
+          + 'kohoavat kalkkikivivuoret, jotka jatkuvat kaakkoon Calanques-'
+          + 'kansallispuiston jyrkkinä rantajyrkänteinä. Satama-alue näkyy '
+          + 'kuvan vasemmassa alakulmassa.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sarajevo', nimi: 'Sarajevo', seutu: 'Bosnia ja Hertsegovina', lat: 43.867, lon: 18.417,
+    selite: 'Bosnia ja Hertsegovinan pääkaupunki kapeassa laaksossa Dinaaristen Alppien keskellä.',
+    oletus: 'ISS036-E-3068',
+    kuvat: [
+      {
+        id: 'ISS036-E-3068',
+        teksti: 'Toukokuussa 2013 otetussa päiväkuvassa näkyy Sarajevo, '
+          + 'kapeaan vuoristolaaksoon rakentunut Bosnia ja Hertsegovinan '
+          + 'pääkaupunki. Kaupunkia ympäröivät joka puolelta Dinaaristen '
+          + 'Alppien metsäiset vuorenrinteet ja laaksot.',
+      },
+    ],
+  },
+  {
+    tunnus: 'bryssel', nimi: 'Bryssel', seutu: 'Belgia', lat: 50.847, lon: 4.353,
+    selite: 'Belgian pääkaupunki ja EU:n kotikaupunki yöllä avaruudesta kuvattuna.',
+    oletus: 'ISS065-E-393478',
+    kuvat: [
+      {
+        id: 'ISS065-E-393478',
+        teksti: 'Syyskuussa 2021 otetussa yökuvassa näkyy Bryssel, Belgian '
+          + 'pääkaupunki, kirkkaana valotäplänä Senne-joen varrella. Kuvan '
+          + 'oikeassa yläkulmassa erottuu kirkkaasti valaistu Zaventemin '
+          + 'lentoasema kiitoteineen ja asematasoineen.',
+      },
+    ],
+  },
+  {
+    tunnus: 'dubrovnik', nimi: 'Dubrovnik', seutu: 'Kroatia', lat: 42.64, lon: 18.108,
+    selite: 'Kroatian Dalmatian-rannikon kaupunki ja edustan saaret.',
+    oletus: 'ISS052-E-84306',
+    kuvat: [
+      {
+        id: 'ISS052-E-84306',
+        teksti: 'Syyskuussa 2017 otetussa päiväkuvassa näkyy Dubrovnikin '
+          + 'seutu Kroatian Dalmatian-rannikolla. Kaupungin edustalla '
+          + 'erottuu Lokrumin saari, ja rannikon tuntumassa näkyy muitakin '
+          + 'pieniä saaria pirstaleisen Adrianmeren rannikon tapaan.',
+      },
+    ],
+  },
+  {
+    tunnus: 'varsova', nimi: 'Varsova', seutu: 'Puola', lat: 52.23, lon: 21.011,
+    selite: 'Puolan pääkaupunki Veiksel-joen (Wisła) molemmin puolin.',
+    oletus: 'ISS056-E-153400',
+    kuvat: [
+      {
+        id: 'ISS056-E-153400',
+        teksti: 'Elokuussa 2018 otetussa päiväkuvassa näkyy Varsova, Puolan '
+          + 'pääkaupunki, Veiksel-joen molemmin puolin. Joki halkoo '
+          + 'kaupungin kahtia, ja kuvassa erottuu myös kaupungin '
+          + 'lentokenttä.',
+      },
+    ],
+  },
 ];
 
 /**
@@ -3015,9 +3602,9 @@ export function kuvaustapa(id) {
   return 'NASAn miehitetyltä lennolta';
 }
 
-/** Retkikunta kuvatunnuksesta: iss074e0459342 → "Retkikunta 74". */
+/** Retkikunta kuvatunnuksesta: iss074e0459342 tai Gatewayn ISS026-E-26514 → "Retkikunta 74" / "Retkikunta 26". */
 export function retkikunta(id) {
-  const m = String(id).match(/^iss(\d{2,3})e/i);
+  const m = String(id).match(/^iss(\d{2,3})-?e/i);
   return m ? `Retkikunta ${Number(m[1])}` : null;
 }
 
@@ -3064,8 +3651,45 @@ async function erissa(lista, tyo, koko = 8) {
   return ulos;
 }
 
-/** Yhden kuvan tiedot NASAn rajapinnasta, tai null jos se ei kelpaa. */
+/**
+ * GATEWAY-KUVA (Pelikoodari 4.10.2026, tools/astronaut/ehdokkaat.mjs): tunnus muotoa ISS026-E-26514 haetaan NASAn
+ * Gatewaysta (eol.jsc.nasa.gov), koska suurin osa sen kuvista ei ole images-api:ssa. Aika ja ison kuvan mitat kuvasivulta,
+ * osoitteet tools/astronaut/gateway.mjs:stä; palkkitarkistus ja KUVAPOIKKEUKSET koskevat näitäkin.
+ */
+export async function haeGatewayKuva({ id, teksti }) {
+  const os = gatewayOsoitteet(id);
+  const vastaus = await fetch(os.sivu);
+  if (!vastaus.ok) return null;
+  const { aika, mitat } = jasennaKuvasivu(await vastaus.text());
+  if (!aika || !await kuvaVastaa(os.kuva) || !await kuvaVastaa(os.pikku)) return null;
+  return {
+    id,
+    aika,
+    teksti,
+    kuvaustapa: kuvaustapa(id),
+    retkikunta: retkikunta(id),
+    kuvaaja: null,
+    mitat,
+    kuva: KUVAPOIKKEUKSET.has(id) ? `${OMA_AMPARI}${KUVAPOIKKEUKSET.get(id)}${id}~large.jpg` : os.kuva,
+    pikku: KUVAPOIKKEUKSET.has(id) ? `${OMA_AMPARI}${KUVAPOIKKEUKSET.get(id)}${id}~small.jpg` : os.pikku,
+    sivu: os.sivu,
+  };
+}
+
+/**
+ * Yhden kuvan tiedot: NASAn kuvakirjasto (images-api) ENSIN, Gateway vasta jos kirjasto ei tunne tunnusta (Pelikoodari
+ * 5.10.2026, Sisältökirjurin löydös 4.10.: viisi vanhaa kirjaston kuvaa STS062-85-021-muodossa tulkittiin Gateway-
+ * tunnuksiksi ja epäonnistui, koska Gatewayn tiedosto on ilman etunollaa STS062-85-21). Järjestys takaa, ettei olemassa
+ * olevan kohteen osoite koskaan vaihdu images-assetsista Gatewayhin; hinta on yksi kirjastohaku per Gateway-kuva.
+ */
 export async function haeKuva({ id, teksti }) {
+  const kirjastosta = await haeKirjastoKuva({ id, teksti });
+  if (kirjastosta) return kirjastosta;
+  return gatewayTunnus(id) ? haeGatewayKuva({ id, teksti }) : null;
+}
+
+/** Kuva NASAn kuvakirjastosta (images-api), tai null jos sitä ei ole tai se ei kelpaa. */
+async function haeKirjastoKuva({ id, teksti }) {
   const haku = await haeJson(`${RAJAPINTA}/search?nasa_id=${encodeURIComponent(id)}`);
   const tietue = haku.collection?.items?.[0];
   if (!tietue) return null;

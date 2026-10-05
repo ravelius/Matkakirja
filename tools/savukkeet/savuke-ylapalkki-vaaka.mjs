@@ -1,33 +1,44 @@
 /*
- * Savuke: YLÄPALKKI PIILOSSA VAAKAPUHELIMELLA JA IPADILLA, VÄKÄSNAPPI
- * KARTALLA.
+ * Savuke: VAAKATILASSA EI YLÄPALKKIA — KARTAN HAMPURILAINEN AVAA
+ * PÄÄVALIKON SUORAAN NAPIN PÄÄLLE.
  *
- * OMISTAJAN TILAUS 13.9.2026, sanatarkasti: *"Kännykän vaakanäkymässä
- * yläpalkin voisi piilottaa niin että vain kolme päällekköistä väkästä
- * näkyy kartalla oik. yläreunassa ja sitä painamalla Yläpalkki tulee
- * näkyviin väliaikaisesti muun sisällön päälle mutta katoaa heti kun
- * pelaaja klikkaa jotain kohtaa palkin ulkopuolelta. Jotta väkäset
- * mahtuvat ruudulle, pitää kartta selite nappia siirtää hieman
- * vasemmalle. Uusi nappi saisi olla saman korkuinen kuin kartta
- * selite."*
+ * OMISTAJAN PÄÄTÖS 2.10.2026 klo 23.07 ja 23.08, sanatarkasti: *"tajusin
+ * että vaakatilassa ei tarvita koko yläpalkkia. nappi voisi avata suoraan
+ * valikon napin päälle, koska valikossa näkyy nyt kaikki tarvittavat
+ * tiedot. eli poista palkki kokonaan ja avaa valikko suoraan napin päälle"*
+ * ja *"väkäshampurilaisen voi vaihtaa samalla normaaliksi
+ * hampurilaiseksi"*.
+ *
+ * KUMOAA omistajan 13.9.2026 tilauksen (väkäsnappi toi yläpalkin
+ * väliaikaisesti näkyviin muun sisällön päälle). Nyt vaaka-asennossa
+ * (matala ruutu TAI vaaka-iPad kosketuksella) yläpalkkia ei ole eikä sitä
+ * voi avata; kartan oikean yläkulman nappi on tavallinen hampurilainen
+ * (yksi polku, kolme suoraa viivaa) ja sen napautus avaa #paavalikko-
+ * paneelin napin päälle: paneelin oikea yläkulma on napin oikea yläkulma
+ * (±2 px). Valikko sulkeutuu napautuksesta sen ulkopuolelta (kartalle) ja
+ * Escistä; napautus valikon sisältä ei sulje sitä.
  *
  * MITÄ TÄMÄ MITTAA, jota yksikkötesti ei näe: oikean selaimen
  * asettelun. Napin ja karttaselitteen TODELLISET kehysmitat, se ettei
  * ne mene päällekkäin eivätkä ulos ruudulta, palkin todellinen
- * näkyvyys ja se, että napautus kartalla sulkee sen.
+ * piilossaolo (aluksi ja napin painalluksen jälkeen), valikon todellinen
+ * sijainti napin päällä sekä avaus ja sulku.
  *
  * LAAJENNUS IPADIIN 18.9.2026 (Raamattu, KARTTAUUDISTUKSEN PAATOKSET
  * 43 kohta 9; omistaja sanatarkasti: *"Ylapalkin voisi piilottaa myos
- * ipadilla niin kuin iphonella on."*). Neljä ruutua: vaakapuhelin
- * 844 × 390, pystypuhelin 390 × 844, iPad 1024 × 1366 ja 1366 × 1024
- * kosketuksella sekä työpöytä 1400 × 900 hiirellä. Kaksi viimeistä
- * ovat vastinpari: iPadilla säännön on osuttava KOSKETUSEHDOSTA (ei
- * matalasta ruudusta) ja työpöydällä ei kummastakaan.
+ * ipadilla niin kuin iphonella on."*). Ruudut: vaakapuhelin
+ * 844 × 390, pystypuhelin 390 × 844, iPad 1194 × 834 ja 1366 × 1024
+ * kosketuksella (sekä pysty 834 × 1194) sekä työpöytä 1400 × 900 hiirellä.
+ * iPadilla säännön on osuttava KOSKETUSEHDOSTA (ei matalasta ruudusta) ja
+ * työpöydällä ei kummastakaan.
  *
- * VASTAKOE kuuluu ajoon: säännöt riisutaan ja mitataan uudelleen. Jos
- * mittari näyttää vihreää ilman niitä, se ei mittaa mitään.
+ * VASTAKOE: `--vastakoe` palvelee css/styles.css:stä kopion, josta
+ * vaaka-asennon media-kysely on riisuttu (`@media not all`), ja mittaa
+ * uudelleen. Vaakalohkojen väitteiden pitää silloin kaatua (FAIL-rivejä);
+ * jos kaikki on vihreää ilman sääntöä, mittari ei mittaa mitään. Vastakoe
+ * palauttaa 0 jos ainakin yksi väite kaatui, muuten 1.
  *
- *   node tools/savukkeet/savuke-ylapalkki-vaaka.mjs [kuvakansio]
+ *   node tools/savukkeet/savuke-ylapalkki-vaaka.mjs [kuvakansio] [--vastakoe]
  */
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -36,7 +47,8 @@ import { avaaChromium } from '../selain.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 /** Kuvakansio (valinnainen): kaappaukset iPadin kummastakin suunnasta. */
-const KUVAKANSIO = process.argv[2] ?? null;
+const VASTAKOE = process.argv.includes('--vastakoe');
+const KUVAKANSIO = process.argv.slice(2).find((a) => !a.startsWith('--')) ?? null;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 const TYYPIT = {
   '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css',
@@ -49,6 +61,14 @@ const palvelin = http.createServer((req, res) => {
   const polku = join(JUURI, pyyntö === '/' ? 'index.html' : pyyntö);
   if (!existsSync(polku) || polku.endsWith('/')) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
+  if (VASTAKOE && polku === join(JUURI, 'css/styles.css')) {
+    // Riisutaan vaaka-asennon sääntö: kysely, joka ei koskaan osu.
+    const ehto = /@media \(orientation: landscape\) and \(max-height: 520px\),\s*\(orientation: landscape\) and \(pointer: coarse\) and \(max-width: 1366px\) \{/;
+    const lahde = readFileSync(polku, 'utf8');
+    if (!ehto.test(lahde)) { console.log('FAIL  vastakoe: vaakasäännön media-kyselyä ei löytynyt css/styles.css:stä'); process.exit(2); }
+    res.end(lahde.replace(ehto, '@media not all {'));
+    return;
+  }
   res.end(readFileSync(polku));
 });
 await new Promise((ok) => palvelin.listen(0, ok));
@@ -69,7 +89,7 @@ const PYSTY = { width: 390, height: 844 };
  * IPADIN YLAPALKKI POISSA MYOS PYSTYASENNOSSA": *"tarkoitus oli poistaa
  * ylapalkki vain vaaka tilassa iphonella ja ipadilla"*). Mitataan
  * omistajan pyytämät 834 × 1194 (pysty: palkki näkyy, hampurilainen)
- * ja 1194 × 834 (vaaka: palkki piilossa, väkäsnappi) sekä rajan uloin
+ * ja 1194 × 834 (vaaka: ei palkkia, hampurilainen avaa valikon) sekä rajan uloin
  * iPad Pro 12,9" 1366 × 1024 vaakana. `hasTouch` on se, mikä tekee
  * ruudusta `pointer: coarse` -laitteen — ilman sitä sama ruutu on
  * hiiriruutu eikä osu sääntöön.
@@ -120,6 +140,7 @@ const MITAT = `() => {
   // voi jäädä nollaksi. Pelaaja näkee ja osuu nappiin.
   const selite = document.querySelector('.karttaselite-nappi');
   const palkki = document.querySelector('.topbar');
+  const paneeli = document.getElementById('paavalikko');
   const tyyli = palkki ? getComputedStyle(palkki) : null;
   const mitat = {
     nappi: kehys(nappi),
@@ -127,33 +148,120 @@ const MITAT = `() => {
     selite: kehys(selite),
     palkki: kehys(palkki),
     palkkiNakyvyys: tyyli?.visibility ?? null,
-    palkkiAuki: document.body.classList.contains('ylapalkki-auki'),
+    palkkiKorkeus: palkki ? palkki.getBoundingClientRect().height : null,
+    // Päävalikko-paneeli (#paavalikko): auki, kehys ja body-luokka.
+    valikkoAuki: Boolean(paneeli && !paneeli.hidden && paneeli.getBoundingClientRect().height > 0),
+    valikko: paneeli && !paneeli.hidden ? kehys(paneeli) : null,
+    valikkoLuokka: document.body.classList.contains('paavalikko-auki'),
+    nappiAria: nappi?.getAttribute('aria-expanded') ?? null,
     leveys: window.innerWidth,
     korkeus: window.innerHeight,
     seliteOliPiilossa: oliPiilossa,
     // Kumpi ehto sääntölohkosta osui: matala ruutu vai kosketus-iPad.
     matalaRuutu: matchMedia('(orientation: landscape) and (max-height: 520px)').matches,
     kosketusIpad: matchMedia('(orientation: landscape) and (pointer: coarse) and (max-width: 1366px)').matches,
-    // Valikon kuvake: yläpalkin #menu-btn on hampurilainen (h-viivat),
-    // kelluva nappi väkäset (L-murtoviivat).
+    // Valikon kuvake: yläpalkin #menu-btn on hampurilainen (h-viivat);
+    // kartan nappi on nyt myös TAVALLINEN hampurilainen: yksi polku, kolme
+    // M-alkuista suoraa viivaa, ei väkäsiä (L-murtoviivoja) eikä kaaria.
     menuHampurilainen: /h15/.test(document.querySelector('#menu-btn svg path')?.getAttribute('d') ?? ''),
-    nappiVakaset: /L12/.test(nappi?.querySelector('svg path')?.getAttribute('d') ?? ''),
+    nappiPolut: [...(nappi?.querySelectorAll('svg path') ?? [])].map((p) => p.getAttribute('d') ?? ''),
+    nappiHampurilainen: (() => {
+      const polut = [...(nappi?.querySelectorAll('svg path') ?? [])].map((p) => p.getAttribute('d') ?? '');
+      return polut.length === 1 && polut[0].split('M').length - 1 === 3
+        && /^M/.test(polut[0]) && /h/.test(polut[0]) && !/[LlCcSsQqTtAaZz]/.test(polut[0]);
+    })(),
   };
   if (kotelo) kotelo.hidden = oliPiilossa;
   return mitat;
 }`;
 
-/* ── 1. VAAKA: nappi näkyy, palkki piilossa ────────────────────── */
+/** Napauttaa kartan hampurilaista; näkymätön nappi ei jumita ajoa (vastakoe), väite kaatuu itse. */
+const napauta = (sivu) => sivu.click('.ylapalkki-nappi', { timeout: 2000 }).catch(() => {});
+
+/** Palkki on piilossa, kun se on näkymätön tai nollakorkuinen. */
+const palkkiPiilossa = (m) => m.palkkiNakyvyys === 'hidden' || !(m.palkkiKorkeus > 0);
+
+/**
+ * Napin avaama päävalikko vaaka-asennossa: avautuu napin päälle, palkki
+ * pysyy piilossa, ulkopuolinen napautus ja Esc sulkevat, sisäpuolinen ei.
+ */
+async function tarkistaValikko(nimi, sivu, ruutu, kuvaNimi) {
+  await napauta(sivu);
+  await sivu.waitForTimeout(500);
+  const auki = await sivu.evaluate(`(${MITAT})()`);
+  vaadi(`${nimi}: nappi avaa päävalikon`,
+    auki.valikkoAuki && auki.valikkoLuokka && auki.nappiAria === 'true',
+    JSON.stringify({ auki: auki.valikkoAuki, luokka: auki.valikkoLuokka, aria: auki.nappiAria }));
+  vaadi(`${nimi}: yläpalkki pysyy piilossa napin painalluksen jälkeen`,
+    palkkiPiilossa(auki),
+    JSON.stringify({ nakyvyys: auki.palkkiNakyvyys, korkeus: auki.palkkiKorkeus }));
+  // Valikon oikea yläkulma napin oikean yläkulman kohdalla (±2 px).
+  const dx = auki.valikko && auki.nappi
+    ? (auki.valikko.x + auki.valikko.width) - (auki.nappi.x + auki.nappi.width) : null;
+  const dy = auki.valikko && auki.nappi ? auki.valikko.y - auki.nappi.y : null;
+  vaadi(`${nimi}: valikon oikea yläkulma on napin oikean yläkulman kohdalla (±2 px)`,
+    dx !== null && Math.abs(dx) <= 2 && Math.abs(dy) <= 2,
+    JSON.stringify({ dx, dy, valikko: auki.valikko, nappi: auki.nappi }));
+  if (KUVAKANSIO) {
+    await sivu.screenshot({ path: join(KUVAKANSIO, `ylapalkki-${kuvaNimi}-valikko-auki.png`) });
+  }
+
+  /* ── napautus valikon SISÄLTÄ (ei painiketta) ei sulje ── */
+  const sisapiste = await sivu.evaluate(() => {
+    const v = document.getElementById('paavalikko');
+    const r = v.getBoundingClientRect();
+    for (let y = r.top + 6; y < r.bottom - 4; y += 6) {
+      for (let x = r.left + 6; x < r.right - 4; x += 6) {
+        const el = document.elementFromPoint(x, y);
+        if (el && v.contains(el) && !el.closest('button, a, input, select, label, summary, [role="button"], [tabindex]')) {
+          return { x: Math.round(x), y: Math.round(y) };
+        }
+      }
+    }
+    return { x: Math.round(r.left + 3), y: Math.round(r.top + 3) };
+  });
+  await sivu.mouse.click(sisapiste.x, sisapiste.y);
+  await sivu.waitForTimeout(400);
+  const sisalla = await sivu.evaluate(`(${MITAT})()`);
+  vaadi(`${nimi}: napautus valikon sisältä EI sulje sitä`, sisalla.valikkoAuki,
+    JSON.stringify({ piste: sisapiste, auki: sisalla.valikkoAuki }));
+
+  /* ── napautus kartalle (valikon ulkopuolelle) sulkee ── */
+  const ulko = { x: Math.round(ruutu.width / 2), y: Math.round(ruutu.height - 40) };
+  const osuuko = sisalla.valikko && ulko.x >= sisalla.valikko.x && ulko.x <= sisalla.valikko.x + sisalla.valikko.width
+    && ulko.y >= sisalla.valikko.y && ulko.y <= sisalla.valikko.y + sisalla.valikko.height;
+  await sivu.mouse.click(ulko.x, ulko.y);
+  await sivu.waitForTimeout(400);
+  const kiinni = await sivu.evaluate(`(${MITAT})()`);
+  vaadi(`${nimi}: napautus valikon ulkopuolelta (kartalle) sulkee sen`,
+    !osuuko && !kiinni.valikkoAuki && !kiinni.valikkoLuokka && kiinni.nappiAria === 'false',
+    JSON.stringify({ auki: kiinni.valikkoAuki, luokka: kiinni.valikkoLuokka, aria: kiinni.nappiAria, osuuko }));
+  vaadi(`${nimi}: yläpalkki piilossa myös valikon sulkemisen jälkeen`, palkkiPiilossa(kiinni),
+    JSON.stringify({ nakyvyys: kiinni.palkkiNakyvyys, korkeus: kiinni.palkkiKorkeus }));
+
+  /* ── Esc sulkee ── */
+  await napauta(sivu);
+  await sivu.waitForTimeout(400);
+  const uudelleen = await sivu.evaluate(`(${MITAT})()`);
+  await sivu.keyboard.press('Escape');
+  await sivu.waitForTimeout(400);
+  const escin = await sivu.evaluate(`(${MITAT})()`);
+  vaadi(`${nimi}: Esc sulkee valikon`, uudelleen.valikkoAuki && !escin.valikkoAuki,
+    JSON.stringify({ ennen: uudelleen.valikkoAuki, jalkeen: escin.valikkoAuki }));
+}
+
+/* ── 1. VAAKA: nappi näkyy (tavallinen hampurilainen), palkki piilossa ── */
 {
   const { ctx, sivu, virheet } = await avaaPeli(VAAKA);
   vaadi('vaaka: sivu latautui ilman poikkeuksia', virheet.length === 0,
     virheet.join(' | ').slice(0, 300));
 
   const alku = await sivu.evaluate(`(${MITAT})()`);
-  vaadi('vaaka: väkäsnappi näkyy kartalla ja sen kuvake on väkäset', alku.nappiNakyy && alku.nappiVakaset,
-    JSON.stringify({ nappi: alku.nappi, vakaset: alku.nappiVakaset }));
-  vaadi('vaaka: yläpalkki on piilossa aluksi',
-    alku.palkkiNakyvyys === 'hidden', `visibility=${alku.palkkiNakyvyys}`);
+  vaadi('vaaka: nappi näkyy kartalla', alku.nappiNakyy, JSON.stringify(alku.nappi));
+  vaadi('vaaka: napin kuvake on tavallinen hampurilainen (yksi polku, kolme suoraa M-viivaa, ei väkäsiä)',
+    alku.nappiHampurilainen, JSON.stringify(alku.nappiPolut));
+  vaadi('vaaka: yläpalkki on piilossa aluksi', palkkiPiilossa(alku),
+    JSON.stringify({ nakyvyys: alku.palkkiNakyvyys, korkeus: alku.palkkiKorkeus }));
 
   // Sama korkeus kuin karttaselitteellä — omistajan nimenomainen ehto.
   const ero = alku.nappi && alku.selite
@@ -171,44 +279,15 @@ const MITAT = `() => {
       && alku.selite && alku.selite.x >= -0.5,
     JSON.stringify({ leveys: alku.leveys, nappi: alku.nappi, selite: alku.selite }));
 
-  /* ── napista palkki näkyviin ── */
-  await sivu.click('.ylapalkki-nappi');
-  await sivu.waitForTimeout(400);
-  const auki = await sivu.evaluate(`(${MITAT})()`);
-  vaadi('vaaka: nappi avaa palkin', auki.palkkiNakyvyys === 'visible' && auki.palkkiAuki,
-    JSON.stringify({ nakyvyys: auki.palkkiNakyvyys, auki: auki.palkkiAuki }));
-  vaadi('vaaka: avattu palkki on ruudun yläreunassa sisällön päällä',
-    auki.palkki && auki.palkki.y >= -0.5 && auki.palkki.y < 8 && auki.palkki.height > 20,
-    JSON.stringify(auki.palkki));
-
-  /* ── napautus palkin ulkopuolelta sulkee ── */
-  await sivu.mouse.click(Math.round(VAAKA.width / 2), Math.round(VAAKA.height - 40));
-  await sivu.waitForTimeout(400);
-  const kiinni = await sivu.evaluate(`(${MITAT})()`);
-  vaadi('vaaka: napautus palkin ulkopuolelta sulkee sen',
-    kiinni.palkkiNakyvyys === 'hidden' && !kiinni.palkkiAuki,
-    JSON.stringify({ nakyvyys: kiinni.palkkiNakyvyys, auki: kiinni.palkkiAuki }));
-
-  /* ── napautus palkin SISÄLTÄ ei sulje ── */
-  await sivu.click('.ylapalkki-nappi');
-  await sivu.waitForTimeout(400);
-  const palkki = await sivu.evaluate(`(${MITAT})()`);
-  await sivu.mouse.click(
-    Math.round(palkki.palkki.x + palkki.palkki.width / 2),
-    Math.round(palkki.palkki.y + palkki.palkki.height / 2),
-  );
-  await sivu.waitForTimeout(400);
-  const yha = await sivu.evaluate(`(${MITAT})()`);
-  vaadi('vaaka: napautus palkin sisältä EI sulje sitä', yha.palkkiAuki,
-    JSON.stringify({ auki: yha.palkkiAuki }));
-
   /*
    * Nappi ei saa kadota silloinkaan kun karttaselite on piilossa:
    * vaakanäkymässä se on ainoa tie valikkoon, rahoihin ja päivään.
    */
-  vaadi('vaaka: väkäsnappi näkyy myös aloitusnäkymässä, jossa selite on piilossa',
+  vaadi('vaaka: hampurilainen näkyy myös aloitusnäkymässä, jossa selite on piilossa',
     alku.nappiNakyy && alku.seliteOliPiilossa,
     JSON.stringify({ nappi: alku.nappiNakyy, selitePiilossa: alku.seliteOliPiilossa }));
+
+  await tarkistaValikko('vaaka', sivu, VAAKA, 'vaaka');
 
   vaadi('vaaka: ei poikkeuksia ajon aikana', virheet.length === 0,
     virheet.join(' | ').slice(0, 300));
@@ -222,7 +301,7 @@ const MITAT = `() => {
   vaadi('pysty: yläpalkki näkyy normaalisti',
     p.palkkiNakyvyys === 'visible' && p.palkki && p.palkki.height > 20,
     JSON.stringify({ nakyvyys: p.palkkiNakyvyys, palkki: p.palkki }));
-  vaadi('pysty: väkäsnappi on piilossa', !p.nappiNakyy, JSON.stringify(p.nappi));
+  vaadi('pysty: kartan hampurilaisnappi on piilossa', !p.nappiNakyy, JSON.stringify(p.nappi));
   vaadi('pysty: yläpalkin valikon kuvake on hampurilainen', p.menuHampurilainen);
   vaadi('pysty: karttaselite on ennallaan oikeassa reunassa',
     p.selite && p.selite.x + p.selite.width > p.leveys - 40,
@@ -243,10 +322,11 @@ for (const [nimi, ruutu] of [['iPad vaaka', IPAD_VAAKA], ['iPad Pro vaaka', IPAD
   vaadi(`${nimi}: sääntö osuu kosketusehdosta eikä matalasta ruudusta`,
     alku.kosketusIpad && !alku.matalaRuutu,
     JSON.stringify({ kosketus: alku.kosketusIpad, matala: alku.matalaRuutu, korkeus: alku.korkeus }));
-  vaadi(`${nimi}: yläpalkki on piilossa`, alku.palkkiNakyvyys === 'hidden',
-    `visibility=${alku.palkkiNakyvyys}`);
-  vaadi(`${nimi}: väkäsnappi näkyy kartalla ja sen kuvake on väkäset`, alku.nappiNakyy && alku.nappiVakaset,
-    JSON.stringify({ nappi: alku.nappi, vakaset: alku.nappiVakaset }));
+  vaadi(`${nimi}: yläpalkki on piilossa aluksi`, palkkiPiilossa(alku),
+    JSON.stringify({ nakyvyys: alku.palkkiNakyvyys, korkeus: alku.palkkiKorkeus }));
+  vaadi(`${nimi}: nappi näkyy kartalla ja sen kuvake on tavallinen hampurilainen`,
+    alku.nappiNakyy && alku.nappiHampurilainen,
+    JSON.stringify({ nappi: alku.nappi, polut: alku.nappiPolut }));
   // Nappi ei saa peittää kartan oikean yläkulman muita nappeja:
   // karttaselite on ainoa naapuri ja se väistyy vasemmalle.
   const rako = alku.nappi && alku.selite
@@ -258,30 +338,7 @@ for (const [nimi, ruutu] of [['iPad vaaka', IPAD_VAAKA], ['iPad Pro vaaka', IPAD
       && alku.selite && alku.selite.x >= -0.5,
     JSON.stringify({ leveys: alku.leveys, nappi: alku.nappi, selite: alku.selite }));
 
-  await sivu.click('.ylapalkki-nappi');
-  await sivu.waitForTimeout(400);
-  const auki = await sivu.evaluate(`(${MITAT})()`);
-  vaadi(`${nimi}: nappi avaa palkin sisällön päälle`,
-    auki.palkkiNakyvyys === 'visible' && auki.palkkiAuki
-      && auki.palkki && auki.palkki.y >= -0.5 && auki.palkki.y < 8,
-    JSON.stringify({ nakyvyys: auki.palkkiNakyvyys, palkki: auki.palkki }));
-  if (KUVAKANSIO) {
-    await sivu.screenshot({
-      path: join(KUVAKANSIO, `ylapalkki-${nimi.replace(/\s+/g, '-').toLowerCase()}-auki.png`),
-    });
-  }
-
-  await sivu.mouse.click(Math.round(ruutu.width / 2), Math.round(ruutu.height - 60));
-  await sivu.waitForTimeout(400);
-  const kiinni = await sivu.evaluate(`(${MITAT})()`);
-  vaadi(`${nimi}: napautus palkin ulkopuolelta sulkee sen`,
-    kiinni.palkkiNakyvyys === 'hidden' && !kiinni.palkkiAuki,
-    JSON.stringify({ nakyvyys: kiinni.palkkiNakyvyys, auki: kiinni.palkkiAuki }));
-  if (KUVAKANSIO) {
-    await sivu.screenshot({
-      path: join(KUVAKANSIO, `ylapalkki-${nimi.replace(/\s+/g, '-').toLowerCase()}-kiinni.png`),
-    });
-  }
+  await tarkistaValikko(nimi, sivu, ruutu, nimi.replace(/\s+/g, '-').toLowerCase());
   vaadi(`${nimi}: ei poikkeuksia`, virheet.length === 0, virheet.join(' | ').slice(0, 300));
   await ctx.close();
 }
@@ -300,7 +357,7 @@ for (const [nimi, ruutu] of [['iPad vaaka', IPAD_VAAKA], ['iPad Pro vaaka', IPAD
   vaadi('iPad pysty: yläpalkki näkyy',
     p.palkkiNakyvyys === 'visible' && p.palkki && p.palkki.height > 20,
     JSON.stringify({ nakyvyys: p.palkkiNakyvyys, palkki: p.palkki }));
-  vaadi('iPad pysty: väkäsnappi on piilossa', !p.nappiNakyy, JSON.stringify(p.nappi));
+  vaadi('iPad pysty: kartan hampurilaisnappi on piilossa', !p.nappiNakyy, JSON.stringify(p.nappi));
   vaadi('iPad pysty: yläpalkin valikon kuvake on hampurilainen', p.menuHampurilainen);
   vaadi('iPad pysty: karttaselite on ennallaan oikeassa reunassa',
     p.selite && p.selite.x + p.selite.width > p.leveys - 40,
@@ -320,7 +377,7 @@ for (const [nimi, ruutu] of [['iPad vaaka', IPAD_VAAKA], ['iPad Pro vaaka', IPAD
   vaadi('työpöytä 1400 × 900: yläpalkki näkyy',
     t.palkkiNakyvyys === 'visible' && t.palkki && t.palkki.height > 20,
     JSON.stringify({ nakyvyys: t.palkkiNakyvyys, palkki: t.palkki }));
-  vaadi('työpöytä 1400 × 900: väkäsnappi on piilossa', !t.nappiNakyy, JSON.stringify(t.nappi));
+  vaadi('työpöytä 1400 × 900: kartan hampurilaisnappi on piilossa', !t.nappiNakyy, JSON.stringify(t.nappi));
   vaadi('työpöytä 1400 × 900: karttaselite on ennallaan oikeassa reunassa',
     t.selite && t.selite.x + t.selite.width > t.leveys - 40,
     JSON.stringify({ leveys: t.leveys, selite: t.selite }));
@@ -373,10 +430,10 @@ for (const [nimi, ruutu] of [['iPad vaaka', IPAD_VAAKA], ['iPad Pro vaaka', IPAD
     });
     await sivu.waitForTimeout(400);
     const kortti = await sivu.evaluate(`(${MITAT})()`);
-    vaadi(`${nimi}, lehti auki: yläpalkki ${piilossa ? 'piilossa' : 'näkyy'} ja väkäsnappi ${piilossa ? 'näkyy' : 'piilossa'}`,
+    vaadi(`${nimi}, lehti auki: yläpalkki ${piilossa ? 'piilossa' : 'näkyy'} ja kartan hampurilainen ${piilossa ? 'näkyy' : 'piilossa'}`,
       kortti.palkkiNakyvyys === odotettu && kortti.nappiNakyy === piilossa
-        && (piilossa ? kortti.nappiVakaset : kortti.menuHampurilainen),
-      JSON.stringify({ nakyvyys: kortti.palkkiNakyvyys, nappi: kortti.nappiNakyy, vakaset: kortti.nappiVakaset, hampurilainen: kortti.menuHampurilainen }));
+        && (piilossa ? kortti.nappiHampurilainen : kortti.menuHampurilainen),
+      JSON.stringify({ nakyvyys: kortti.palkkiNakyvyys, nappi: kortti.nappiNakyy, napinKuvake: kortti.nappiHampurilainen, hampurilainen: kortti.menuHampurilainen }));
     await sivu.evaluate(() => document.getElementById('arrival-dialog')?.close());
     // b) linssi päällä (keksinnöt: linssin oma yläpalkki ja valikko)
     const linssi = await sivu.evaluate(async () => {
@@ -403,9 +460,9 @@ for (const [nimi, ruutu] of [['iPad vaaka', IPAD_VAAKA], ['iPad Pro vaaka', IPAD
       linssi.paalla && linssi.valikkoNakyy && linssi.hampurilainen && !linssi.vakaset,
       JSON.stringify(linssi));
     // Linssin oma palkki korvaa pelin yläpalkin (css/aikajana.css), joten
-    // ruudulla on palkki hampurilaisineen: väkäsnappia ei ole kummassakaan
+    // ruudulla on palkki hampurilaisineen: hampurilaisnappia ei ole kummassakaan
     // asennossa (css/styles.css body.aikajana-palkki-auki .ylapalkki-nappi).
-    vaadi(`${nimi}, linssi auki: pelin yläpalkki väistyy linssin palkin tieltä eikä väkäsnappia ole`,
+    vaadi(`${nimi}, linssi auki: pelin yläpalkki väistyy linssin palkin tieltä eikä kartan hampurilaista ole`,
       linssiMitat.palkkiNakyvyys === 'hidden' && !linssiMitat.nappiNakyy,
       JSON.stringify({ nakyvyys: linssiMitat.palkkiNakyvyys, nappi: linssiMitat.nappiNakyy }));
     if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, `ylapalkki-linssi-${nimi.replace(/\s+/g, '-').toLowerCase()}.png`) });
@@ -416,5 +473,10 @@ for (const [nimi, ruutu] of [['iPad vaaka', IPAD_VAAKA], ['iPad Pro vaaka', IPAD
 
 await selain.close();
 palvelin.close();
+if (VASTAKOE) {
+  const kaatui = kaikki - lapi;
+  console.log(`\n${lapi}/${kaikki} läpi — VASTAKOE (vaakasääntö riisuttu): ${kaatui} väitettä kaatui${kaatui > 0 ? ' (odotettu)' : ' — MITTARI EI MITTAA MITÄÄN'}`);
+  process.exit(kaatui > 0 ? 0 : 1);
+}
 console.log(`\n${lapi}/${kaikki} läpi`);
 process.exit(lapi === kaikki ? 0 : 1);

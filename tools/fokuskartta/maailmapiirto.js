@@ -1675,6 +1675,17 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * monotoninen kuutiokäyrä (piirto.js SYVYYS), eikä tämä erä muuta
    * siitä tavuakaan.
    */
+  /*
+   * === JÄRVEN RANTA KEVENEE KAUKOTASOILLA (omistaja 29.9.2026 klo 22.3x:
+   * *"järvet esim. Suomessa ovat turhan paksulla viivalla kaukaa
+   * katsoessa"*). Kynä (1,0·P) ja kostea reuna (2,2·P) ovat
+   * paperivakioita, joten kaukotasolla pieni järvi oli pelkkää tummaa
+   * reunaa eikä lukenut vetenä. Ramppi tason tiheydestä (px / laudan
+   * yksikkö): t = 0 z5:llä ja kauempana, t = 1 z8:lla ja lähempänä.
+   * Kaukana kynä on puolet ohuempi ja vaalea (peitto 0,35) eikä kosteaa
+   * reunaa ole; lähitasoilla (≥ z8) vedot ovat täsmälleen entiset.
+   */
+  const jarviT = JARVIEN_RAMPPI(px);
   ctx.save();
   ctx.lineJoin = 'round';
   ctx.lineCap = 'round';
@@ -1689,11 +1700,13 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
     // (piirto.js MATALA_SIIRTO, puolikas peitolla 0,5); oletuksena 0.
     ctx.fillStyle = `rgb(${Math.round(206 + MATALA_SIIRTO[0] * 0.5)},${Math.round(201 + MATALA_SIIRTO[1] * 0.5)},${Math.round(181 + MATALA_SIIRTO[2] * 0.5)})`;
     ctx.fill('evenodd');
-    ctx.strokeStyle = 'rgba(74,52,33,0.18)';
-    ctx.lineWidth = 2.2 * P;
-    ctx.stroke();
-    ctx.strokeStyle = 'rgba(58,40,25,0.8)';
-    ctx.lineWidth = 1.0 * P;
+    if (jarviT > 0) {
+      ctx.strokeStyle = `rgba(74,52,33,${(0.18 * jarviT).toFixed(3)})`;
+      ctx.lineWidth = 2.2 * P;
+      ctx.stroke();
+    }
+    ctx.strokeStyle = `rgba(58,40,25,${(0.35 + 0.45 * jarviT).toFixed(3)})`;
+    ctx.lineWidth = (0.5 + 0.5 * jarviT) * P;
     ctx.stroke();
   }
   ctx.restore();
@@ -3350,14 +3363,72 @@ export const JOKITYYLI = Object.freeze({
   paa: 2.6, sivu: 1.9, vahin: 0.9, muste: 'rgba(120,130,138,0.72)',
 });
 
+/*
+ * GEOGLOWS-JOEN VIIVA: OHUT, HIERARKKINEN JA RAUHALLINEN (omistaja 29.9.2026
+ * vientikuvista: *"ne näyttävät liian hektisesti piirretyiltä sekä liian
+ * paksuilta"*).
+ *
+ *  - LEVEYS VALUMASTA, EI KARTTAVAKIOSTA R. Paketin 123 nimetyn joen
+ *    2,6 / 1,9 R (omistajan valinta 31.8.) oli z8:lla yli 5 px, ja sama
+ *    kynä sadoille GEOGLOWS-uomille teki kartasta tukkoisen. Nyt leveys on
+ *    ruudun pikseleinä valuma-alueen logaritmista (Tonava ~1,2 px, 5 000
+ *    km²:n sivujoki 0,55 px) ja kasvaa hillitysti (12 % tasoa kohti) siitä
+ *    tasosta, jolla joki ensi kerran näkyy — sama joki on siis joka tasolla
+ *    lähes saman levyinen eikä hyppää.
+ *  - YLEISTYS RUUDUN PIKSELEISSÄ. Douglas–Peucker 1,3 px:n toleranssilla
+ *    ennen Catmull–Rom-kaarta: kaukaa katsottuna mutkia jää vähemmän,
+ *    lähellä enemmän, mutta sahalaitaa (alle pikselin siksak GEOGLOWSin
+ *    tiheästä pisteketjusta) ei synny millään tasolla.
+ */
+/** Järvien rantavetojen ramppi: 0 kaukotasoilla (px ≤ 1,8 eli z5), 1 lähitasoilla (px ≥ 14,4 eli z8). */
+export const JARVIEN_RAMPPI = (px) => (px > 0 ? Math.min(1, Math.max(0, Math.log2(px / 1.8) / 3)) : 1);
+
+export const GEOGLOWS_JOKI = Object.freeze({
+  vahin: 0.55, suurin: 1.7, kasvu: 0.12, yleistysPx: 1.3, perusPx: 1.8,
+});
+
+/** GEOGLOWS-joen viivan leveys ruudun pikseleinä (valuma km², tason px/yks). */
+export function geoglowsJoenLeveys(valuma, px, minPx = 0) {
+  const G = GEOGLOWS_JOKI;
+  const perus = Math.min(1.3, Math.max(G.vahin, 0.55 + 0.3 * Math.log10(Math.max(1, valuma) / 5000)));
+  const askeleet = Math.max(0, Math.log2(px / Math.max(minPx, G.perusPx)));
+  return Math.min(G.suurin, perus * (1 + G.kasvu * askeleet));
+}
+
+/** Douglas–Peucker kuvan pikseleissä ([x, y]-taulukko). */
+export function yleistaPikseleina(p, tol) {
+  if (p.length < 3) return p;
+  const pidetyt = new Uint8Array(p.length);
+  pidetyt[0] = 1; pidetyt[p.length - 1] = 1;
+  const pino = [[0, p.length - 1]];
+  const tol2 = tol * tol;
+  while (pino.length) {
+    const [a, b] = pino.pop();
+    const [ax, ay] = p[a]; const [bx, by] = p[b];
+    const dx = bx - ax; const dy = by - ay; const l2 = dx * dx + dy * dy;
+    let paras = -1; let mx = tol2;
+    for (let i = a + 1; i < b; i += 1) {
+      const [x, y] = p[i];
+      let t = l2 ? ((x - ax) * dx + (y - ay) * dy) / l2 : 0;
+      t = Math.max(0, Math.min(1, t));
+      const ex = ax + t * dx - x; const ey = ay + t * dy - y;
+      const d2 = ex * ex + ey * ey;
+      if (d2 > mx) { mx = d2; paras = i; }
+    }
+    if (paras > 0) { pidetyt[paras] = 1; pino.push([a, paras], [paras, b]); }
+  }
+  return p.filter((_, i) => pidetyt[i]);
+}
+
 export function piirraJoetKankaalle(ctx, sisalto, mitta) {
   const {
     lautaKuvaX, lautaKuvaY, R, GW,
   } = mitta;
   if (!sisalto?.joet?.length) return 0;
-  const kaari = (viivat) => {
+  const kaari = (viivat, yleistys = 0) => {
     ctx.beginPath();
-    const jakso = (p) => {
+    const jakso = (p0) => {
+      const p = yleistys > 0 ? yleistaPikseleina(p0, yleistys) : p0;
       if (p.length < 2) return;
       ctx.moveTo(p[0][0], p[0][1]);
       if (p.length === 2) { ctx.lineTo(p[1][0], p[1][1]); return; }
@@ -3403,6 +3474,14 @@ export function piirraJoetKankaalle(ctx, sisalto, mitta) {
   for (const joki of sisalto.joet) {
     // GEOGLOWS-joki vasta tasolla, jonka px/laudan yksikkö ≥ minPx (joet-lisa.mjs).
     if (joki.minPx !== undefined && mitta.px !== undefined && mitta.px < joki.minPx) continue;
+    if (joki.valuma !== undefined && mitta.px) {
+      // GEOGLOWS: ohut, valumasta, yleistetty (ks. GEOGLOWS_JOKI).
+      ctx.lineWidth = geoglowsJoenLeveys(joki.valuma, mitta.px, joki.minPx ?? 0);
+      kaari([joki.pisteet], GEOGLOWS_JOKI.yleistysPx);
+      ctx.stroke();
+      piirretty += 1;
+      continue;
+    }
     // Pääjoki on leveämpi; kaikki uomat piirretään joka tasolla.
     ctx.lineWidth = Math.max(
       JOKITYYLI.vahin,
@@ -4458,8 +4537,10 @@ export function piirraViivataso(canvas, asetukset) {
   }
   if (P_.joet !== false && sisalto) {
     // JOET ENNEN REITTEJÄ: rata kulkee uoman yli, kuten pohjassakin.
+    // `px` mukaan (29.9.2026): ilman sitä GEOGLOWS-joen tasokynnys (minPx)
+    // ei toiminut viivatasolla, ja jokainen uoma piirtyi joka tasolla.
     piirraJoetKankaalle(ctx, sisalto, {
-      lautaKuvaX, lautaKuvaY, R, GW,
+      lautaKuvaX, lautaKuvaY, R, GW, px,
     });
   }
   if (P_.reitit !== false && sisalto) {

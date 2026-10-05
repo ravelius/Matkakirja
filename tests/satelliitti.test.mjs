@@ -533,7 +533,7 @@ test('selite lukee kuvan päällä ruudun vasemmassa yläkulmassa, i-nappi on po
   assert.ok(!tyyli.includes('.satelliitti-popup'), 'info-popupin tyyli on yhä jäljellä');
   assert.match(lahde, /html\('div', 'satelliitti-selite'\)/);
   // Minipulun kulma on viides pinta (16.9.2026, Raamattu kohta 9).
-  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, kohdenapit, pulukulma, autoSiirto\.el\)/);
+  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, kohdenapit, pulukulma\)/);
   // Kiinnitys on RUUTUUN (kortti alkaa ruudun yläreunasta, LISÄYS 3),
   // ei kuvaelementtiin — 12 px vasemmalta, 10 px + turva-alue ylhäältä.
   /*
@@ -808,9 +808,12 @@ test('jokaisella kuvalla on aika, kuvateksti, osoitteet ja lähdesivu', () => {
       const nasaKuva = /^https:\/\/images-assets\.nasa\.gov\/image\/.*~large\.jpg$/;
       const nasaPikku = /^https:\/\/images-assets\.nasa\.gov\/image\/.*~(small|thumb)\.jpg$/;
       const omaAmpari = /^https:\/\/media\.matkakirja\.app\/linssit\/astronautin-kamera\/.*~(large|small)\.jpg$/;
-      assert.ok(nasaKuva.test(h.kuva) || omaAmpari.test(h.kuva), `${h.id}: outo kuva-osoite`);
-      assert.ok(nasaPikku.test(h.pikku) || omaAmpari.test(h.pikku), `${h.id}: outo pikku-osoite`);
-      assert.match(h.sivu, /^https:\/\/images\.nasa\.gov\/details\//);
+      // Gatewayn kuvat (Pelikoodari 4.10.2026, tools/astronaut/gateway.mjs): eol.jsc.nasa.gov ja kuvasivu photo.pl.
+      const gwKuva = /^https:\/\/eol\.jsc\.nasa\.gov\/DatabaseImages\/(ESC\/large|ISD\/highres)\/[A-Z0-9]+\/[A-Z0-9-]+\.JPG$/;
+      const gwPikku = /^https:\/\/eol\.jsc\.nasa\.gov\/DatabaseImages\/(ESC\/small|ISD\/lowres)\/[A-Z0-9]+\/[A-Z0-9-]+\.JPG$/;
+      assert.ok(nasaKuva.test(h.kuva) || omaAmpari.test(h.kuva) || gwKuva.test(h.kuva), `${h.id}: outo kuva-osoite`);
+      assert.ok(nasaPikku.test(h.pikku) || omaAmpari.test(h.pikku) || gwPikku.test(h.pikku), `${h.id}: outo pikku-osoite`);
+      assert.match(h.sivu, /^https:\/\/(images\.nasa\.gov\/details\/|eol\.jsc\.nasa\.gov\/SearchPhotos\/photo\.pl\?)/);
       assert.ok(h.kuvaustapa, `${h.id}: kuvaustapa puuttuu`);
       // KUVATEKSTI ON TÄRKEIN: se on ainoa teksti, jonka pelaaja näkee.
       assert.ok(typeof h.teksti === 'string' && h.teksti.length >= 80,
@@ -838,6 +841,7 @@ test('kohteet ja kuvatekstit ovat työkalun käsin katsotussa luettelossa', () =
   assert.equal(tyokalu.siistiAika('2013-10-23T18:42:00Z'), '2013-10-23T18:42:00Z');
   assert.equal(tyokalu.kuvaustapa('iss074e0459342'), 'Kansainväliseltä avaruusasemalta');
   assert.equal(tyokalu.retkikunta('iss005e19024'), 'Retkikunta 5');
+  assert.equal(tyokalu.retkikunta('ISS026-E-26514'), 'Retkikunta 26');
   // Työkalu tarkistaa jokaisen osoitteen eikä arvaa niitä.
   assert.match(tyokalunLahde, /kuvaVastaa\(kuva\)/);
 });
@@ -1389,4 +1393,14 @@ test('kohdepisteet asetetaan uudestaan, kunnes ne näkyvät DOMissa', () => {
   assert.match(lahde, /avaruus\?\.pakotaKehys\?\.\(\)/);
   // Kello siivotaan purkaessa, eikä se jää kuluttamaan taustalla.
   assert.match(lahde, /pura: \(\) => \{[\s\S]*?lopetaPisteUusinta\(\)/);
+});
+
+test('AUTO hiljaa (omistaja 21.3x): napit häipyvät, napautus palauttaa ilman pysäytystä, ei siirtolappua', () => {
+  const lahde = readFileSync(new URL('../js/linssit/satelliitti.js', import.meta.url), 'utf8');
+  const tyyli = readFileSync(new URL('../css/satelliitti.css', import.meta.url), 'utf8');
+  assert.doesNotMatch(lahde, /luoAutoSiirto/, 'Seuraava/Pysäytä-lappu ei kuulu AUTOon');
+  assert.match(lahde, /const AUTO_HILJAA_MS = 4000;/);
+  assert.match(lahde, /if \(hiljaa\(\)\) \{\n\s*asetaHiljaa\(false\);\n\s*ajastaHiljaa\(\);\n\s*nielaiseKlikki = true;/);
+  assert.match(lahde, /siirtoAjastin = setTimeout\([\s\S]{0,120}POHJA_AUTO_SIIRTO_MS\);/);
+  assert.match(tyyli, /\.satelliitti-auto-hiljaa :is\(\.satelliitti-kulma, \.satelliitti-kohteet, \.satelliitti-pulukulma\),\nbody\.satelliitti-auto-hiljaa \.pollo-nappi \{\n\s*opacity: 0;\n\s*pointer-events: none;\n\s*transition: opacity var\(--tk-kesto-sulku\)/);
 });
