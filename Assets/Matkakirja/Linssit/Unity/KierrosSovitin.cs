@@ -35,7 +35,10 @@ namespace Matkakirja.Natiivi
         public bool Auki => lento != null;
         public KierrosLento Lento => lento;
         /// <summary>Avauksen virhe (puuttuva tunnus); UI näyttää sen tilarivillä ja sulkee linssin.</summary>
-        public string Virhe { get; private set; }
+        /// <summary>Avauksen virhe tai näkymän myöhempi virhe (tunnuksen haku Pöllöstä epäonnistui); UI näyttää sen ja sulkee linssin.</summary>
+        public string Virhe { get => virhe ?? (nakymaAuki ? kaupunki.Virhe : null); private set => virhe = value; }
+        string virhe;
+        bool nakymaAuki;
         public float Latausaste => kaupunki.Latausaste;
 
         public void Avaa(ILinssiYmparisto ymparisto)
@@ -50,6 +53,7 @@ namespace Matkakirja.Natiivi
                 Vaihtui?.Invoke(this);
                 return;
             }
+            nakymaAuki = true;
             avattu = Time.realtimeSinceStartup;
             if (kierto != null) SyoteLukko.Esta(this);   // pelaajan veto ei katkaise kuvausta
             y.Pelikerrokset(false);
@@ -96,7 +100,8 @@ namespace Matkakirja.Natiivi
         {
             KyydinKameraEnnen.Ajo = null;
             y?.KuvausLoppui();
-            bool avattiin = Virhe == null;
+            bool avattiin = nakymaAuki;
+            nakymaAuki = false;
             kaupunki.Sulje();
             SyoteLukko.Vapauta(this);
             if (avattiin)

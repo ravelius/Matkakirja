@@ -105,7 +105,10 @@ namespace Matkakirja.Natiivi
         public LinssiTiedot Tiedot => OpasTiedot;
         bool ILinssi.Auki => silmukka != null;
         public OpasSilmukka Silmukka => silmukka;
-        public string Virhe { get; private set; }
+        /// <summary>Avauksen virhe tai näkymän myöhempi virhe (tunnuksen haku Pöllöstä epäonnistui); UI näyttää sen ja sulkee linssin.</summary>
+        public string Virhe { get => virhe ?? (nakymaAuki ? kaupunki.Virhe : null); private set => virhe = value; }
+        string virhe;
+        bool nakymaAuki;
         public float Latausaste => kaupunki.Latausaste;
         /// <summary>Kertojan teksti ruudulle: vain kun puhe ei soi (PUHE ÄÄNENÄ -sääntö).</summary>
         public string TekstiRuudulle => silmukka != null && !puhuu && tekstina != null && !ChatKaytossa ? tekstina.Teksti : null;
@@ -123,6 +126,7 @@ namespace Matkakirja.Natiivi
                 Vaihtui?.Invoke(this);
                 return;
             }
+            nakymaAuki = true;
             istunto = Guid.NewGuid().ToString("N");
             testiIndeksi = 0;
             if (kierto != null) SyoteLukko.Esta(this);
@@ -396,7 +400,8 @@ namespace Matkakirja.Natiivi
             KytkeChat(false);
             ChatOppaalle(false);
             y?.KuvausLoppui();
-            bool avattiin = Virhe == null;
+            bool avattiin = nakymaAuki;
+            nakymaAuki = false;
             kaupunki.Sulje();
             SyoteLukko.Vapauta(this);
             if (avattiin)
