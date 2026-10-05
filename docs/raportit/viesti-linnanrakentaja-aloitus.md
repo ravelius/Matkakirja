@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 5.10.2026 klo 06.1x)
+# Linnanrakentajan aloitusviesti (päivitetty 5.10.2026 klo 06.4x, tilinvaihto)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -16,7 +16,8 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Kärki 5.10. klo 06.1x
 
 - Junan 143 linna: `_valmiit/olavinlinna-blender-v30`, blender 3d59b30a48c612f2 ämpärissä, KOE-blender.json haarassa
-  `linnanrakentaja-kuori-ao-2` (7250d427d, mainin päällä). Peili 27022c945fa48cc3 lähetetty Päätoimittajalle ja Siirtosepälle (kuvaa A:ta vastaan).
+  `linnanrakentaja-kuori-ao-2` (7250d427d, mainin päällä). Peili 27022c945fa48cc3 on kuvattu A:ta vastaan (Siirtoseppä, 0 virhettä), ja kuvat odottavat omistajan
+  osoitinpäätöstä. Hyväksynnän jälkeen PR junaan 143 ja mainin jälkeen uusi omistajan Run-rivi (ks. luovutuksen TILA LOPUSSA).
   **Osoitinta ei vaihdeta** (omistajan Run-rivi: `docs/raportit/osoitin-8f4eb611-omistajalle.md`).
 - Kevennys (`docs/raportit/linna-kevennys-ehdotus-20261005.md`): A ja C Siirtosepälle iPad-mittauksen jälkeen. Välitaso
   `_valmiit/linna-laatu/kevennys/ulkokuori_valitaso.glb` vain, jos mittaus vaatii.

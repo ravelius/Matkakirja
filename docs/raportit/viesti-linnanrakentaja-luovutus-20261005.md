@@ -1,4 +1,11 @@
-# Linnanrakentajan luovutus 5.10.2026 noin klo 06.1x (Opus high; tilinvaihto noin 07.15)
+# Linnanrakentajan luovutus 5.10.2026 klo 06.4x, LOPULLINEN (Opus high; tilinvaihto, viikko 99 %)
+
+## TILA LOPUSSA: peili 27022c945fa48cc3 (AO-B, 8k-valo, tasoitus ja avainsanat #3974) on Siirtosepän kuvaama A:ta c116f02f vastaan
+## TF 142:n appilla (88 tiedostoa, 0 virhettä; kuvat Matkakirja-siirtoseppa/docs/raportit/kaappaukset/siirtoseppa-20261005/linna-osoitin-*.png).
+## Kuvat ovat Päätoimittajalla omistajan osoitinpäätöstä varten. EI uusia töitä ennen Päätoimittajan käskyä.
+## Seuraavaksi, kun omistaja hyväksyy: PR haarasta linnanrakentaja-kuori-ao-2 Julkaisijan junaan 143. Kun se on mainissa:
+## lue mainin push-ajon peilihash (gh run view --log | grep 'osoitinta EI vaihdettu') ja kirjoita omistajalle uusi Run-rivi
+## (osoitin-8f4eb611-omistajalle.md:n mallilla, uusi tiedosto osoitin-<hash>-omistajalle.md). Välitaso vain, jos iPad-mittaus vaatii.
 
 Päätoimittaja: `local_5df52e10-10e4-4b72-9554-0049db300dfe`. Siirtoseppä: `local_86d0c984-aeeb-430d-bc85-3112f27b9437`.
 Natiiviseppä: `local_674b9ec4-e2f3-48e9-a810-a129f20a4f03`. Julkaisija: `local_5cb16c00-98db-4cd9-8d7c-1b0bc8ced914`.
