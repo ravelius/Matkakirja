@@ -83,6 +83,7 @@ namespace Matkakirja.Linssit.Testit
             for (int i = 0; i < 300; i++) s.Paivita(0.1, _ => 5);
             Oleta.Tosi(KierrosLento.EtaisyysM(s.Asento.Lat, s.Asento.Lon, 52.352, 4.915) < 3000, $"kamera Amsterdamissa ({s.Asento.Lat:F2}, {s.Asento.Lon:F2})");
             Oleta.Tosi(s.OdottaaVastausta, "kysymys odottaa valintaa");
+            Oleta.Tosi(s.Asento.EtaisyysM > 4000 && s.Asento.Kallistus < 40, $"5 km:n yläkuva ({s.Asento.EtaisyysM:F0} m, {s.Asento.Kallistus:F0}°)");
         }
 
         [Testi] static void KierrosJatkaaItse()

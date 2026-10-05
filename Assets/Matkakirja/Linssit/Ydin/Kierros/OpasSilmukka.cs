@@ -268,15 +268,16 @@ namespace Matkakirja.Linssit.Kierros
         {
             VaihdaPaikka();
             if (Vaihe == OpasVaihe.Valmis || KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, lat, lon) < SiirtymaMinM) return;
-            var yleis = new OpasKohde { Lat = lat, Lon = lon, KokoM = SiirtymaKokoM, Luokka = "alue" };
-            kohdeKehys = OpasKuvaus.Kehysta(yleis, 45, Suunta(Asento.Lat, Asento.Lon, lat, lon));
+            // Sama 5 km:n yläkuva kuin avauksessa (Päätoimittaja 6.10. 00.4x: Amsterdam laskeutui matalaan viistoon kuvaan).
+            kohdeKehys = new Pysahdys { Lat = lat, Lon = lon, MaaM = 0, NostoM = 0, Suuntima = KierrosLento.Kiedo(Suunta(Asento.Lat, Asento.Lon, lat, lon)),
+                Kallistus = AvausKallistus, EtaisyysM = AvausEtaisyysM };
             Ohjaus.Nollaa();
             lahto = Asento;
             LentoKestoS = LennonKesto(KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, lat, lon));
             Vaihe = OpasVaihe.Lentaa; VaiheAika = 0;
             puheAloitettu = true; siirtyma = true;
         }
-        public const double SiirtymaMinM = 5000, SiirtymaKokoM = 2500;
+        public const double SiirtymaMinM = 5000;
         bool siirtyma;
 
         /// <summary>Paikan vaihto valikosta (Natiivi-UI OpasValikko): kuten toive ilman tekstiä, nähdyt tyhjennetään.</summary>
