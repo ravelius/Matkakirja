@@ -19,13 +19,17 @@ namespace Matkakirja.Linssit.Kierros
         public enum Luokka { Katu, Rakennus, Alue }
 
         // Kehys: kallistus kohteen pystysuorasta (0 = suoraan alas, 90 = vaaka), etäisyys koosta, katseen nosto korkeudesta.
-        public const double KatuKallistus = 74, RakennusKallistus = 66, AlueKallistus = 50;
-        public const double KatuEtMinM = 180, KatuEtMaxM = 650, RakennusEtMinM = 240, RakennusEtMaxM = 900, AlueEtMinM = 450, AlueEtMaxM = 1800;
+        public const double KatuKallistus = 62, RakennusKallistus = 58, AlueKallistus = 48;   // katu 74 → 70 (simu 20.3x: matala kulma, laatat 53–59 % saapuessa)
+        // TIUKKA KEHYS (omistaja 5.10. 20.5x: "kohde näytti olevan vähän kaukana kuvassa"): kohde täyttää ~40 % ruudun leveydestä
+        // (pystykuvakulma 50°, suunniteltu kuvasuhteelle 1,8 → puhelimella ~33 %, iPadilla ~54 %), korkea kohde enintään 60 %
+        // ruudun korkeudesta; pienelle kohteelle vähimmäisetäisyys. Katse hieman kohteen alapuolelle → kohde keskikohdan yllä.
+        public const double KuvaPystyAst = 50, KuvaSuhde = 1.8, LeveysOsuus = 0.4, KorkeusOsuus = 0.6, KatseAlasOsuus = 0.06;
+        public const double KatuEtMinM = 150, KatuEtMaxM = 650, RakennusEtMinM = 150, RakennusEtMaxM = 900, AlueEtMinM = 300, AlueEtMaxM = 1800;
         public const double SivuKulma = 25;
         // Pysähdys
         public const double KiertoAsteS = 0.35, KiertoAlkuS = 4, DollyOsuus = 0.07, DollyAikaS = 25;
         // Lento
-        public const double NousuLoppu = 0.3, LaskuAlku = 0.7, KaariOsuus = 0.28, KaariMinM = 120, KaariMaxM = 1600, LiukuKallistus = 6;
+        public const double NousuLoppu = 0.3, LaskuAlku = 0.7, KaariOsuus = 0.35, KaariMinM = 250, KaariMaxM = 1600, LiukuKallistus = 6;   // liuku korkeammalle (laatat ehtivät)
         public const double LahiRajaM = 20000;
 
         /// <summary>Luokka workerin kentästä ("katu" | "kanava" | "aukio" | "rakennus" | "torni" | "linnoitus" | "puisto" |
@@ -49,17 +53,21 @@ namespace Matkakirja.Linssit.Kierros
         {
             var l = Luokittele(k, luokka);
             double koko = Math.Max(10, k.KokoM), korkeus = k.KorkeusM > 0 ? k.KorkeusM : 0;
+            double tanPysty = Math.Tan(KuvaPystyAst * Math.PI / 360), tanVaaka = tanPysty * KuvaSuhde;
+            // Etäisyys, jolla kohde täyttää LeveysOsuuden leveydestä ja enintään KorkeusOsuuden korkeudesta.
+            double tiukka = Math.Max(koko / (2 * LeveysOsuus * tanVaaka), korkeus / (2 * KorkeusOsuus * tanPysty));
             double et, kall, nosto;
             switch (l)
             {
                 case Luokka.Katu:
-                    et = Rajaa(koko * 2.5 + 120, KatuEtMinM, KatuEtMaxM); kall = KatuKallistus; nosto = Rajaa(korkeus * 0.4, 4, 25); break;
+                    et = Rajaa(tiukka, KatuEtMinM, KatuEtMaxM); kall = KatuKallistus; nosto = Rajaa(korkeus * 0.4, 4, 25); break;
                 case Luokka.Alue:
-                    et = Rajaa(koko * 1.6 + 250, AlueEtMinM, AlueEtMaxM); kall = AlueKallistus; nosto = Rajaa(korkeus * 0.3, 5, 40); break;
+                    et = Rajaa(tiukka, AlueEtMinM, AlueEtMaxM); kall = AlueKallistus; nosto = Rajaa(korkeus * 0.3, 5, 40); break;
                 default:
-                    et = Rajaa(Math.Max(koko * 2.8, korkeus * 5) + 120, RakennusEtMinM, RakennusEtMaxM);
+                    et = Rajaa(tiukka, RakennusEtMinM, RakennusEtMaxM);
                     kall = RakennusKallistus; nosto = Rajaa((korkeus > 0 ? korkeus : koko * 0.3) * 0.45, 5, 70); break;
             }
+            nosto -= KatseAlasOsuus * et;   // kohde hieman keskikohdan yläpuolelle (sirut eivät peitä)
             return new Pysahdys
             {
                 Id = k.Id ?? k.Nimi, Nimi = k.Nimi, Alarivi = k.Alarivi, Teksti = k.Teksti, Lat = k.Lat, Lon = k.Lon, MaaM = maaM, NostoM = nosto,
