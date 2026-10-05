@@ -10,6 +10,7 @@
 // TF:ssä ja App Storessa. Peli-komento `aani mykistys 1|0|tila` (PlayerPrefs testi.mykistys, säilyy asennuksen yli
 // kunnes sovellus poistetaan): 0 = kuuluva ääni simulaattorissa, kun sitä erikseen tarvitaan.
 using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
@@ -37,7 +38,7 @@ namespace Matkakirja.Natiivi
         public static bool Paalla
         {
             get => paalla;
-            set { paalla = value; PlayerPrefs.SetInt(Avain, value ? 1 : 0); PlayerPrefs.Save(); }
+            set { paalla = value; PlayerPrefs.SetInt(Avain, value ? 1 : 0); PlayerPrefs.Save(); Natiivi(value); }
         }
 
         // Äänisäikeen kirjoittama rengas: viimeisimmät Pituus näytettä kanavittain ennen nollausta.
@@ -48,6 +49,7 @@ namespace Matkakirja.Natiivi
         public static void Kiinnita()
         {
             paalla = PlayerPrefs.GetInt(Avain, Simulaattori ? 1 : 0) == 1;
+            Natiivi(paalla);
             if (instanssi != null) return;
             var kuuntelijat = FindObjectsByType<AudioListener>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
             if (kuuntelijat.Length == 0) return;
@@ -70,6 +72,33 @@ namespace Matkakirja.Natiivi
         }
 
         void OnDestroy() { if (instanssi == this) instanssi = null; }
+
+#if UNITY_IOS && !UNITY_EDITOR
+        [DllImport("__Internal")] static extern void MatkakirjaAani_TestiMykistys(int paalla);
+        [DllImport("__Internal")] static extern bool MatkakirjaAani_TestiMykka();
+#endif
+        /// <summary>
+        /// Natiivit moottorit (Pelikoodari 5.10.2026, KIIRE 13.15: simulaattoriajon striimi kuului omistajan kaiuttimista):
+        /// sama lippu MatkakirjaSilmukat-, MatkakirjaRadio- ja MatkakirjaPuhekanava-moottoreille (MatkakirjaAani.mm), joiden
+        /// ääni ei kulje Unityn kuuntelijan kautta. Asetetaan ennen kuin mikään moottori käynnistyy (Kiinnita).
+        /// </summary>
+        static void Natiivi(bool paalle)
+        {
+#if UNITY_IOS && !UNITY_EDITOR
+            MatkakirjaAani_TestiMykistys(paalle ? 1 : 0);
+#endif
+        }
+
+        /// <summary>Lokiin ja todistusajoon: Unityn ja natiivin mykistyksen tila ("aani mykistys tila").</summary>
+        public static string Tila()
+        {
+#if UNITY_IOS && !UNITY_EDITOR
+            bool n = MatkakirjaAani_TestiMykka();
+#else
+            bool n = paalla;
+#endif
+            return $"testimykistys unity {(paalla && instanssi != null ? "päällä" : "POIS")}, natiivi {(n ? "päällä" : "POIS")}";
+        }
 
         void OnAudioFilterRead(float[] data, int kanavia)
         {

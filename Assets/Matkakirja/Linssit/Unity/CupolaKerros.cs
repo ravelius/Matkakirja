@@ -22,7 +22,7 @@ namespace Matkakirja.Natiivi
 {
     public class CupolaKerros : MonoBehaviour
     {
-        const string Juuri = "https://media.matkakirja.app/karttanostot/20260926/";
+        static string Juuri => Matkakirja.Peli.Asetus.Teksti("osoitteet.karttanostot-cupola1", "https://media.matkakirja.app/karttanostot/20260926/");
         const float HaivytysS = 0.3f;
         static readonly int IdKehys = Shader.PropertyToID("_Kehys"), IdHeijastus = Shader.PropertyToID("_Heijastus"),
             IdPeitto = Shader.PropertyToID("_Peitto"), IdRuutu = Shader.PropertyToID("_Ruutu"), IdKuva = Shader.PropertyToID("_Kuva"),

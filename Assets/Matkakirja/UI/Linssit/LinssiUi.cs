@@ -61,6 +61,8 @@ namespace Matkakirja.Natiivi
         public readonly LentopeliNakyma Lento;
         /// <summary>Poikkileikkaus-linssin opetustaulu ja Pulu (Linnanrakentaja, DioraamaSovitin.Vaihtui).</summary>
         public readonly DioraamaTaulu Dioraama;
+        /// <summary>Kaupunkikierroksen näkymä (Linssiseppä 5.10.2026): avausruutu, pysähdyksen nimi ja kertojan teksti.</summary>
+        public readonly KierrosTaulu Kierros;
         /// <summary>Ajattelijat-linssin valinta, kuvanäkymä, lappu ja Pulu (AjattelijatSovitin.Muuttui).</summary>
         public readonly AjattelijaNakyma Ajattelija;
         /// <summary>Kehittäjän mikseripaneeli (linnan ja Cupolan kaiut, MikseriPaneeli.Lahde = Pelikoodari).</summary>
@@ -98,6 +100,7 @@ namespace Matkakirja.Natiivi
             Vuosi = new MaapallonVuosiNakyma(kerros);
             Lento = new LentopeliNakyma(kerros);
             Dioraama = new DioraamaTaulu(kerros);
+            Kierros = new KierrosTaulu(kerros);
             Ajattelija = new AjattelijaNakyma(kerros);
             Mikseri = new MikseriPaneeli(kerros);
 
@@ -220,7 +223,7 @@ namespace Matkakirja.Natiivi
                 Valitsin.PaivitaNappi(r);
                 // Epäonnistunut pelielementtien asetus (poikkeus kesken ketjun) toistetaan, kunnes se menee läpi.
                 var (p, v, ra, pa) = pelielementit;
-                if (pelielementitAsetettu != (p | kyytiPelkkaKartta, v, ra, pa)) PaivitaPelielementit();
+                if (pelielementitAsetettu != (p | kyytiPelkkaKartta | KaupunkiAuki, v, ra, pa)) PaivitaPelielementit();
                 return;
             }
             if (kuunneltu != null) kuunneltu.Vaihtui -= Vaihtui;
@@ -282,6 +285,8 @@ namespace Matkakirja.Natiivi
         (bool portti, bool vertailu, bool radio, bool paalla) pelielementit;
         /// <summary>ISS-kyyti Cupolassa tai avaruuskävelyllä: pelkkä kartta (IssKyytiNakyma.TilaMuuttui).</summary>
         bool kyytiPelkkaKartta;
+        /// <summary>Cesium-kaupunkinäkymä auki (opas tai kaupunkikierros): pelin kortit ja nimet pois kuten portilla (Natiivi-UI 5.10.).</summary>
+        static bool KaupunkiAuki => OpasSovitin.Auki || (KierrosSovitin.Viimeisin != null && KierrosSovitin.Viimeisin.Auki);
 
         /// <summary>
         /// Viimeksi onnistuneesti asetetut pelielementit (Kytke tarkistaa 0,5 s välein). TÄHTITAIVAS 1.0.57 (omistaja 29.9.2026
@@ -295,6 +300,9 @@ namespace Matkakirja.Natiivi
         {
             var (portti, vertailu, radio, paalla) = pelielementit;
             portti |= kyytiPelkkaKartta;
+            // Cesium-kaupunkinäkymä (opas, kaupunkikierros; Linssiseppä 5.10.): Googlen ehdot — ei pelin karttaa samaan kuvaan,
+            // joten kartuscha ("ISO-BRITANNIA"), nostot ja maakuntanimet pois kuten portilla (simu 18.47).
+            portti |= KaupunkiAuki;
             bool ok = true;
             void Aseta(string nimi, Action a)
             {
@@ -364,8 +372,11 @@ namespace Matkakirja.Natiivi
             Asettele();
             // Aikajanalinsseillä oma palkki korvaa Matkakirjan yläpalkin (web body.aikajana-palkki-auki .topbar).
             bool aikajana = id == AikajanaNakyma.KeksinnotId || global::Matkakirja.Linssit.Aikajana.IhmisenMatkaLinssi.OnIhmisenMatka(id); // myös Ihmisen matka II
-            ui.Tilarivi.NaytaPalkki(!astro && !aikajana && !vuosi);
-            Valitsin.NaytaNappi(!astro && !aikajana && !vuosi);
+            // Elävä opas (Päätoimittaja 5.10.: kaupunki koko ruudulla): yläpalkki pois kuten astronautin kamerassa; ylhäällä vain
+            // pysähdyksen nimi ja kuvausrivi (KierrosTaulu) sekä kuvakytkin ja ☰ (OpasValikko).
+            bool opas = id == OpasSovitin.OpasTiedot.Id;
+            ui.Tilarivi.NaytaPalkki(!astro && !aikajana && !vuosi && !opas);
+            Valitsin.NaytaNappi(!astro && !aikajana && !vuosi && !opas);
             Pulu.Hae().Astronautti = astro;
             Astronautti.Vaihtui(astro);
             using (MerkkiAikajana.Auto())
@@ -423,7 +434,9 @@ namespace Matkakirja.Natiivi
             // Linnassa ✕ korvautuu valikon "Sulje linna" -rivillä (omistaja 2.10. 14.44, LinnaValikko). Ajattelijan kohtauksessa
             // kuvanäkymän oma ✕ (valinnassa yhä linssien yhteinen sulku).
             bool nakyy = Auki != null && !kuvaPeittaa && !arkkiPeittaa && !valikkoKorvaa && !avausPeittaa && !valitsinAuki && !ajattelijaPeittaa
-                         && !(Dioraama != null && Dioraama.Kytketty);
+                         && !(Dioraama != null && Dioraama.Kytketty)
+                         // Elävä opas (Päätoimittaja 5.10.: EI TURHIA ✕-NAPPEJA): poistuminen valikon Poistu linssistä -rivillä.
+                         && !OpasValikko.Nakyy;
             var id = Auki?.Tiedot?.Id;
             bool kartta = id != null && karttaValikot.ContainsKey(id);
             foreach (var kv in karttaValikot)

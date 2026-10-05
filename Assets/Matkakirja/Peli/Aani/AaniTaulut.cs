@@ -16,65 +16,72 @@ using System.Linq;
 
 namespace Matkakirja.Peli
 {
-    /// <summary>Webin sekoituksen luvut (lineaarinen gain, sama asteikko kuin AudioSource.volume; ajat ms).</summary>
+    /// <summary>Webin sekoituksen luvut (lineaarinen gain, sama asteikko kuin AudioSource.volume; ajat ms). Datana 5.10.2026:
+    /// kokoelmat/asetukset.json "aanet.&lt;nimi&gt;" ohittaa, koodin arvo on oletus (Asetus.cs).</summary>
     public static class AaniVakiot
     {
         // --- musiikki (musiikkivalitsin.js) ---
-        public const double MusiikinPerustaso = 0.034;
-        public const double MusiikinKayra = 2.5;
-        public const double MusiikinKatto = 8;
-        public const int LiukuMin = 0, LiukuMax = 100, LiukuOletus = 35;
+        public static double MusiikinPerustaso => Asetus.Luku("aanet.MusiikinPerustaso", 0.034);
+        public static double MusiikinKayra => Asetus.Luku("aanet.MusiikinKayra", 2.5);
+        public static double MusiikinKatto => Asetus.Luku("aanet.MusiikinKatto", 8);
+        public static int LiukuMin => Asetus.Kokonais("aanet.LiukuMin", 0);
+        public static int LiukuMax => Asetus.Kokonais("aanet.LiukuMax", 100);
+        public static int LiukuOletus => Asetus.Kokonais("aanet.LiukuOletus", 35);
 
         // --- pohjaraita (ambience-stream.js POHJA_*) ---
-        public const int PohjaNousuMs = 4000;
-        public const int PohjaVaihtoMs = 1500;
+        public static int PohjaNousuMs => Asetus.Kokonais("aanet.PohjaNousuMs", 4000);
+        public static int PohjaVaihtoMs => Asetus.Kokonais("aanet.PohjaVaihtoMs", 1500);
 
         // --- visamusiikki (MUSIIKKI_VOIMA = perustaso × 1,3) ---
-        public const double VisanKerroin = 1.3;
+        public static double VisanKerroin => Asetus.Luku("aanet.VisanKerroin", 1.3);
         /// <summary>QUIZ_MUSIC: ulkoinen varamusiikki, jos oletusvalintaa ei ole (Freesound 713120).</summary>
         public const string VisanVara = "https://cdn.freesound.org/previews/713/713120_14632469-lq.mp3";
 
         // --- aarreaihe (ui.js AARRE_MUSIIKIN_VOIMA = perustaso × 3,8) ---
-        public const double AarteenKerroin = 3.8;
+        public static double AarteenKerroin => Asetus.Luku("aanet.AarteenKerroin", 3.8);
         public const string AarteenSyy = "aarremusiikki";
 
         // --- äänimaisema (ambience-stream.js) ---
-        public const double MaisemanVoima = 0.14;
-        public const double EtusivunVoima = 0.28;
-        public const double LennonVoima = 2.6;
-        public const double JalkamatkanVoima = 0.75;
-        public const int HaivytysMs = 1800;
-        public const int LennonNousuMs = 600;
-        public const int JalkamatkanNousuMs = 900;
-        public const double LoppuvaraS = 45;
-        public const int SilmukkaRistiMs = 2600;
+        public static double MaisemanVoima => Asetus.Luku("aanet.MaisemanVoima", 0.14);
+        public static double EtusivunVoima => Asetus.Luku("aanet.EtusivunVoima", 0.28);
+        public static double LennonVoima => Asetus.Luku("aanet.LennonVoima", 2.6);
+        public static double JalkamatkanVoima => Asetus.Luku("aanet.JalkamatkanVoima", 0.75);
+        public static int HaivytysMs => Asetus.Kokonais("aanet.HaivytysMs", 1800);
+        public static int LennonNousuMs => Asetus.Kokonais("aanet.LennonNousuMs", 600);
+        public static int JalkamatkanNousuMs => Asetus.Kokonais("aanet.JalkamatkanNousuMs", 900);
+        public static double LoppuvaraS => Asetus.Luku("aanet.LoppuvaraS", 45);
+        public static int SilmukkaRistiMs => Asetus.Kokonais("aanet.SilmukkaRistiMs", 2600);
         /// <summary>Lataus, joka ei ole soittokunnossa tässä ajassa, tulkitaan virheeksi (§2.7).</summary>
-        public const int LatausvahtiMs = 6000;
+        public static int LatausvahtiMs => Asetus.Kokonais("aanet.LatausvahtiMs", 6000);
         /// <summary>Maiseman kompressori ennen tasoa (§2.2): threshold dB, knee dB, ratio, attack s, release s.</summary>
-        public const double KompressoriKynnys = -24, KompressoriPolvi = 18, KompressoriSuhde = 4, KompressoriAttack = 0.01, KompressoriRelease = 0.35;
+        public static double KompressoriKynnys => Asetus.Luku("aanet.KompressoriKynnys", -24);
+        public static double KompressoriPolvi => Asetus.Luku("aanet.KompressoriPolvi", 18);
+        public static double KompressoriSuhde => Asetus.Luku("aanet.KompressoriSuhde", 4);
+        public static double KompressoriAttack => Asetus.Luku("aanet.KompressoriAttack", 0.01);
+        public static double KompressoriRelease => Asetus.Luku("aanet.KompressoriRelease", 0.35);
 
         // --- väistö ---
-        public const double VaistoNayte = 0.15;
-        public const double VaistoPuhe = 0.25;
-        public const double VaistoVisa = 0.15;
-        public const int VaistoLiukuMs = 650;
-        public const double VaistoHiljennys = 0.45;
-        public const int HiljennysLiukuMs = 400;
+        public static double VaistoNayte => Asetus.Luku("aanet.VaistoNayte", 0.15);
+        public static double VaistoPuhe => Asetus.Luku("aanet.VaistoPuhe", 0.25);
+        public static double VaistoVisa => Asetus.Luku("aanet.VaistoVisa", 0.15);
+        public static int VaistoLiukuMs => Asetus.Kokonais("aanet.VaistoLiukuMs", 650);
+        public static double VaistoHiljennys => Asetus.Luku("aanet.VaistoHiljennys", 0.45);
+        public static int HiljennysLiukuMs => Asetus.Kokonais("aanet.HiljennysLiukuMs", 400);
         public const string LinssinHiljennys = "linssi";
 
         // --- avaus ---
-        public const double AvauksenMusiikki = 0.6;
-        public const double AvauksenMaisema = 1.45;
-        public const int AvauksenLiukuMs = 1300;
+        public static double AvauksenMusiikki => Asetus.Luku("aanet.AvauksenMusiikki", 0.6);
+        public static double AvauksenMaisema => Asetus.Luku("aanet.AvauksenMaisema", 1.45);
+        public static int AvauksenLiukuMs => Asetus.Kokonais("aanet.AvauksenLiukuMs", 1300);
 
         // --- siirtymä- ja linssiraidat ---
-        public const int SiirtymaNousuMs = 300;
-        public const int SiirtymaLaskuMs = 500;
+        public static int SiirtymaNousuMs => Asetus.Kokonais("aanet.SiirtymaNousuMs", 300);
+        public static int SiirtymaLaskuMs => Asetus.Kokonais("aanet.SiirtymaLaskuMs", 500);
         /// <summary>AIKAJANA_TAUKO_HIMMENNYS: kellon pysäytys puolittaa linssiraidan.</summary>
-        public const double AikajanaTaukoHimmennys = 0.5;
+        public static double AikajanaTaukoHimmennys => Asetus.Luku("aanet.AikajanaTaukoHimmennys", 0.5);
 
         /// <summary>Säätimen (musiikki, tausta) muutos soivaan raitaan.</summary>
-        public const int SaadinMs = 200;
+        public static int SaadinMs => Asetus.Kokonais("aanet.SaadinMs", 200);
     }
 
     /// <summary>Siirtymä- tai linssiraita (siirtymamusiikki.js RAIDAT).</summary>
@@ -249,10 +256,10 @@ namespace Matkakirja.Peli
             Maanosa("etela-amerikka", "ARG", "BOL", "BRA", "CHL", "COL", "ECU", "FLK", "GUF", "PER", "PRY", "URY", "VEN");
             // Maanosaraidat: vaihe 2 (valimeri, lansi-eurooppa) ja vaihe 3 (loput 8) = kaikki maanosat (web MAANOSARAIDAT).
             foreach (var m in Maanosat) t.Maanosaraidat.Add(m);
-            SiirtymaRaita R(string laji, string ryhma, double voima, int nousu = AaniVakiot.SiirtymaNousuMs, int lasku = AaniVakiot.SiirtymaLaskuMs)
+            SiirtymaRaita R(string laji, string ryhma, double voima, int nousu = -1, int lasku = -1)
             {
                 var tunnus = (ryhma == "linssi" ? "linssi-" : "siirtyma-") + laji + "-lyria.mp3";
-                return new SiirtymaRaita { Laji = laji, Ryhma = ryhma, Ampari = AaniOsoite.Juuri + "aanet/" + tunnus, Oma = "assets/audio/" + tunnus, Voima = voima, NousuMs = nousu, LaskuMs = lasku };
+                return new SiirtymaRaita { Laji = laji, Ryhma = ryhma, Ampari = AaniOsoite.Juuri + "aanet/" + tunnus, Oma = "assets/audio/" + tunnus, Voima = voima, NousuMs = nousu >= 0 ? nousu : AaniVakiot.SiirtymaNousuMs, LaskuMs = lasku >= 0 ? lasku : AaniVakiot.SiirtymaLaskuMs };
             }
             t.Siirtymat.Add(R("jalan", "siirtyma", 0.11));
             t.Siirtymat.Add(R("laiva", "siirtyma", 0.11));

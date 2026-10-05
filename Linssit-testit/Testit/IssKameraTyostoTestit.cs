@@ -11,6 +11,255 @@ namespace Matkakirja.Linssit.Testit
     static class IssKameraTyostoTestit
     {
         [Testi]
+        static void MaanAukkoTaydentyyLaatanDatasta()
+        {
+            // Simu e9f59947: radan välinen kiila (maata) täytetään laatan omasta datasta, ei BMNG:tä eikä merenväriä.
+            var ty = new KuvanTyosto { Maalla = (la, lo) => true };
+            var rgba = new byte[256 * 256 * 4];
+            for (int y = 0; y < 256; y++)
+                for (int x = 0; x < 256; x++)
+                    if (x < 100 || x > 140) { int o = (y * 256 + x) * 4; rgba[o] = 40; rgba[o + 1] = 90; rgba[o + 2] = 50; rgba[o + 3] = 255; }
+            ty.TaytaMeri(11, 1075, 900, rgba, new byte[] { 10, 20, 60 });
+            int k = (128 * 256 + 120) * 4;
+            Oleta.Sama((byte)255, rgba[k + 3], "aukko täyttyi");
+            Oleta.Sama((byte)90, rgba[k + 1], "naapurien väri (metsä), ei merenväri");
+        }
+
+        [Testi]
+        static void LimitysRistihaivytetaanVarakuvaVainAukkoon()
+        {
+            // Simu d26351c2 (Coloradon suisto): limityksessä "ensimmäinen voittaa" näkyi eri päivän suorareunaisena kaistana.
+            // Nyt limitys (SaumaM) ristihäivytetään lineaarisesti; saman ruudun varakuva ei sekoitu, kun ruudulla on dataa.
+            const double pm = 600; const int L = 183;   // 109,8 km / 600 m
+            var d = new KuvaData();
+            (S2Ruutu, CogOtsake) Ruutu(string tunnus, int valinta, double ita0, byte arvo)
+            {
+                var o = new CogOtsake { Ita0 = ita0, Pohjoinen0 = 6_700_000, PikseliM = pm };
+                o.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 3 });
+                var (s, w) = Utm.Taakse(ita0, 6_700_000 - L * pm, 35); var (nn, e) = Utm.Taakse(ita0 + L * pm, 6_700_000, 35);
+                var ru = new S2Ruutu { Tunnus = tunnus, Valinta = valinta, W = w - 1, S = s - 1, E = e + 1, N = nn + 1 };
+                var l = new byte[L * L * 3]; for (int i = 0; i < l.Length; i++) l[i] = arvo;
+                d.Laatat[(tunnus, 0, 0, 0)] = l;
+                return (ru, o);
+            }
+            d.Ruudut.Add(Ruutu("35VLG", 0, 300_000, 100));
+            d.Ruudut.Add(Ruutu("35VMG", 0, 400_000, 200));
+            d.Ruudut.Add(Ruutu("35VLG#1", 1, 300_000, 30));   // varakuva A:n neliöön
+            byte Arvo(double ita)
+            {
+                var (la, lo) = Utm.Taakse(ita, 6_650_000, 35);
+                Oleta.Tosi(Uudelleenprojisointi.Nayte(d, la, lo, pm, out var r, out _, out _), $"dataa {ita}");
+                return r;
+            }
+            Oleta.Sama((byte)100, Arvo(350_000), "A:n keskellä vain A (ei varakuvaa)");
+            Oleta.Sama((byte)200, Arvo(450_000), "B:n keskellä vain B");
+            int puoli = Arvo(404_900);
+            Oleta.Tosi(Math.Abs(puoli - 150) <= 3, $"limityksen keskellä puoliksi: {puoli}");
+            int neljannes = Arvo(402_450);
+            Oleta.Tosi(Math.Abs(neljannes - 125) <= 4, $"neljänneksellä lineaarisesti (A:n paino 0,75): {neljannes}");
+        }
+
+        [Testi]
+        static void RadanReunanTummaPikseliSyovytetaan()
+        {
+            // Simu 10c31692 (Sahara 32RNN): yleiskuvatason reunapikseli on keskiarvoistunut nodatan kanssa (40 m: 68 %, 80 m:
+            // 40 % ja 93 % taustasta) ja piirtyi ohuena tummana viivana. Nodatan 2 px:n kehällä ruudun pikseli ohitetaan, ja
+            // limittyvä ruutu täyttää. Ruutu, jolla indeksin mukaan ei ole nodataa, ei syöpy.
+            const double pm = 600; const int L = 183;
+            var d = new KuvaData();
+            S2Ruutu Ruutu(string tunnus, double nodata, Func<int, byte> arvo)
+            {
+                var o = new CogOtsake { Ita0 = 300_000, Pohjoinen0 = 6_700_000, PikseliM = pm };
+                o.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 3 });
+                var (s, w) = Utm.Taakse(300_000, 6_700_000 - L * pm, 35); var (nn, e) = Utm.Taakse(300_000 + L * pm, 6_700_000, 35);
+                var ru = new S2Ruutu { Tunnus = tunnus, Nodata = nodata, W = w - 1, S = s - 1, E = e + 1, N = nn + 1 };
+                var l = new byte[L * L * 3];
+                for (int y = 0; y < L; y++) for (int x = 0; x < L; x++) { byte v = arvo(x); int i = (y * L + x) * 3; l[i] = v; l[i + 1] = v; l[i + 2] = v; }
+                d.Laatat[(tunnus, 0, 0, 0)] = l;
+                d.Ruudut.Add((ru, o));
+                return ru;
+            }
+            // A: nodata x < 90, reunapikselit 90 (40) ja 91 (186), sitten tausta 200. B (sama neliö, eri päivä) 120.
+            var a = Ruutu("35VLG", 3.3, x => x < 90 ? (byte)0 : x == 90 ? (byte)80 : x == 91 ? (byte)186 : (byte)200);
+            Ruutu("35VLG#1", 0, x => 120);
+            byte Arvo(double x)
+            {
+                var (la, lo) = Utm.Taakse(300_000 + (x + 0.5) * pm, 6_700_000 - 90.5 * pm, 35);
+                Oleta.Tosi(Uudelleenprojisointi.Nayte(d, la, lo, pm, out var r, out _, out _), $"dataa {x}");
+                return r;
+            }
+            Oleta.Sama((byte)120, Arvo(91), "reunapikseli (A:n tumma) ohitetaan → B");
+            Oleta.Sama((byte)120, Arvo(91.9), "toinen reunapikseli (186) myös ohitetaan");
+            Oleta.Sama((byte)160, Arvo(92.5), "reunapikselien jälkeen A ja B ristiin (200 ja 120)");
+            a.Nodata = 0;   // indeksin mukaan aukoton → ei syövytystä (vanha käytös)
+            Oleta.Sama((byte)153, Arvo(91), "aukoton ruutu ei syövy: A:n 186 ja B:n 120 ristiin");
+        }
+
+        [Testi]
+        static void VesitasoRuuduittainMerenvariin()
+        {
+            // Simu 10c31692 (Kanaria): auringon heijastuksen päivän meri (28SBA, mediaani ~93) ja 13.8.2023 meri (~50) jäivät
+            // 0,75:n tasoituksella suoriksi saumoiksi. Ruudun oma vesitaso → merenväri; vain poikkeama siitä jää neljänneksellä.
+            const double pm = 600; const int L = 183;
+            var d = new KuvaData { VesiTasoitus = 0.75, Meri = new byte[] { 14, 22, 30 } };
+            void Ruutu(string tunnus, double ita0, Func<int, byte> arvo)
+            {
+                var o = new CogOtsake { Ita0 = ita0, Pohjoinen0 = 6_700_000, PikseliM = pm };
+                o.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 3 });
+                var so = new CogOtsake { Ita0 = ita0, Pohjoinen0 = 6_700_000, PikseliM = pm };
+                so.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 1 });
+                var (s, w) = Utm.Taakse(ita0, 6_700_000 - L * pm, 35); var (nn, e) = Utm.Taakse(ita0 + L * pm, 6_700_000, 35);
+                var ru = new S2Ruutu { Tunnus = tunnus, W = w + 0.01, S = s + 0.01, E = e - 0.01, N = nn - 0.01 };
+                var l = new byte[L * L * 3];
+                for (int y = 0; y < L; y++) for (int x = 0; x < L; x++) { byte v = arvo(x); int i = (y * L + x) * 3; l[i] = v; l[i + 1] = v; l[i + 2] = v; }
+                d.Laatat[(tunnus, 0, 0, 0)] = l;
+                d.Laatat[(tunnus + "|scl", 0, 0, 0)] = Enumerable.Repeat((byte)6, L * L).ToArray();
+                d.Scl[tunnus] = so;
+                d.Ruudut.Add((ru, o));
+            }
+            Ruutu("35VLG", 300_000, x => x > 170 ? (byte)133 : (byte)93);   // heijastuksen päivä; itäreunassa kirkkaampi kaista
+            Ruutu("35VPG", 700_000, x => 50);                               // ei limitystä
+            byte Arvo(double ita)
+            {
+                var (la, lo) = Utm.Taakse(ita, 6_650_000, 35);
+                Oleta.Tosi(Uudelleenprojisointi.Nayte(d, la, lo, pm, out var r, out _, out _), $"dataa {ita}");
+                return r;
+            }
+            int ennenA = Arvo(350_000), ennenB = Arvo(750_000);
+            Oleta.Tosi(ennenA - ennenB > 9, $"ennen: tasoero jää neljänneksellä ({ennenA} vs {ennenB})");
+            var t = Uudelleenprojisointi.TasaaVesi(d);
+            Oleta.Sama(2, t.Count);
+            Oleta.Sama((byte)14, Arvo(350_000), "A:n meri merenväriin");
+            Oleta.Sama((byte)14, Arvo(750_000), "B:n meri merenväriin");
+            Oleta.Sama((byte)24, Arvo(300_000 + 175.5 * pm), "poikkeama (+40) jää neljänneksellä");
+            // Avomerellä (maa-osuus 0) poikkeama pois, rannikolla (≥ 0,15) jää (simu 55448455 Kanaria: avomeren aallokko vs. mosaiikki).
+            d.MaaLahella = (la, lo) => 0;
+            Oleta.Sama((byte)14, Arvo(300_000 + 175.5 * pm), "avomerellä merenväri");
+            d.MaaLahella = (la, lo) => 0.5;
+            Oleta.Sama((byte)24, Arvo(300_000 + 175.5 * pm), "rannikolla poikkeama jää");
+            d.MaaLahella = null;
+            // Maailman indeksi (ruudun oma lut): meri mosaiikin avomeren väriin (simu f7310e55: Kanarian sauma 31,95° N), poikkeama säilyy.
+            var lut = Enumerable.Range(0, 256).Select(i => (byte)Math.Min(255, i + 30)).ToArray();
+            foreach (var (ru, _) in d.Ruudut) ru.Lut = lut;
+            Oleta.Sama((byte)44, Arvo(350_000), "ilman MeriUlosta lut(Meri) = 14 + 30");
+            d.MeriUlos = new byte[] { 48, 65, 85 };
+            Oleta.Sama((byte)48, Arvo(350_000), "A:n meri mosaiikin meriväriin");
+            Oleta.Sama((byte)48, Arvo(750_000), "B:n meri mosaiikin meriväriin");
+            Oleta.Sama((byte)58, Arvo(300_000 + 175.5 * pm), "poikkeama säilyy lutin kautta");
+        }
+
+        [Testi]
+        static void VesitasoLiukuvalleHeijastukselle()
+        {
+            // Simu 025565c2 (Kanaria 28SBA): sunglint kirkastuu ruudun sisällä itään 66 → 132; mediaanilla jäännös (25 %) jätti
+            // portaan ruuturajalle. Tasosovitus vie liu'un merenväriin; paikallinen poikkeama (matala vesi) jää.
+            const double pm = 600; const int L = 183;
+            var d = new KuvaData { VesiTasoitus = 0.75, Meri = new byte[] { 14, 22, 30 } };
+            var o = new CogOtsake { Ita0 = 300_000, Pohjoinen0 = 6_700_000, PikseliM = pm };
+            o.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 3 });
+            var so = new CogOtsake { Ita0 = 300_000, Pohjoinen0 = 6_700_000, PikseliM = pm };
+            so.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 1 });
+            var (s0, w) = Utm.Taakse(300_000, 6_700_000 - L * pm, 35); var (nn, e) = Utm.Taakse(300_000 + L * pm, 6_700_000, 35);
+            var ru = new S2Ruutu { Tunnus = "35VLG", W = w + 0.01, S = s0 + 0.01, E = e - 0.01, N = nn - 0.01 };
+            var l = new byte[L * L * 3];
+            for (int y = 0; y < L; y++)
+                for (int x = 0; x < L; x++)
+                {
+                    bool matala = x >= 20 && x < 30 && y >= 90 && y < 100;   // pieni matalan veden läikkä
+                    byte v = (byte)Math.Round(66 + 66.0 * x / (L - 1) + (matala ? 40 : 0));
+                    int i = (y * L + x) * 3; l[i] = v; l[i + 1] = v; l[i + 2] = v;
+                }
+            d.Laatat[("35VLG", 0, 0, 0)] = l;
+            d.Laatat[("35VLG|scl", 0, 0, 0)] = Enumerable.Repeat((byte)6, L * L).ToArray();
+            d.Scl["35VLG"] = so; d.Ruudut.Add((ru, o));
+            Uudelleenprojisointi.TasaaVesi(d);
+            byte Arvo(double x, double y)
+            {
+                var (la, lo) = Utm.Taakse(300_000 + (x + 0.5) * pm, 6_700_000 - (y + 0.5) * pm, 35);
+                Oleta.Tosi(Uudelleenprojisointi.Nayte(d, la, lo, pm, out var r, out _, out _), $"dataa {x},{y}");
+                return r;
+            }
+            foreach (double x in new[] { 40.0, 90, 140, 170 })
+                Oleta.Tosi(Math.Abs(Arvo(x, 40) - 14) <= 1, $"liuku merenväriin x {x}: {Arvo(x, 40)}");
+            Oleta.Tosi(Math.Abs(Arvo(25, 95) - 24) <= 1, $"matala vesi jää (+40 · 0,25): {Arvo(25, 95)}");
+        }
+
+        [Testi]
+        static void VesitasoMyosKulmastaHaetulle()
+        {
+            // Simu d9221669 (Kanaria 28SCB): ruudusta haettu vain kulma → 48 × 48 -otannassa alle 150 vesinäytettä, ruutu jäi
+            // vesitasotta (kirkas kiila). Nyt tiheämpi otanta.
+            const double pm = 600; const int L = 185, LL = 37;   // 5 × 5 laattaa
+            var d = new KuvaData { VesiTasoitus = 0.75, Meri = new byte[] { 14, 22, 30 } };
+            var o = new CogOtsake { Ita0 = 300_000, Pohjoinen0 = 6_700_000, PikseliM = pm };
+            o.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = LL, LaattaK = LL, Kanavat = 3 });
+            var so = new CogOtsake { Ita0 = 300_000, Pohjoinen0 = 6_700_000, PikseliM = pm };
+            so.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = LL, LaattaK = LL, Kanavat = 1 });
+            var (s0, w) = Utm.Taakse(300_000, 6_700_000 - L * pm, 35); var (nn, e) = Utm.Taakse(300_000 + L * pm, 6_700_000, 35);
+            var ru = new S2Ruutu { Tunnus = "35VLG", W = w + 0.01, S = s0 + 0.01, E = e - 0.01, N = nn - 0.01 };
+            d.Laatat[("35VLG", 0, 4, 4)] = Enumerable.Repeat((byte)99, LL * LL * 3).ToArray();   // vain kaakkoiskulma haettu
+            d.Laatat[("35VLG|scl", 0, 4, 4)] = Enumerable.Repeat((byte)6, LL * LL).ToArray();
+            d.Scl["35VLG"] = so;
+            d.Ruudut.Add((ru, o));
+            var t = Uudelleenprojisointi.TasaaVesi(d);
+            Oleta.Sama(1, t.Count, "kulmasta haettu ruutu saa vesitason");
+            Oleta.Sama(99.0, ru.VesiTaso[0]);
+        }
+
+        [Testi]
+        static void UsvatasoitusLimityksesta()
+        {
+            // Simu 26f1141e (Coloradon suisto): tummin prosentti luki 11RQQ:n meren usvattomaksi → naapurit −40 ja 11RQQ:n maa
+            // vaaleana kaistana. Nyt usva = saman maan erotus limityksessä; ruudun oma tumma sisältö ei vaikuta.
+            const double pm = 600; const int L = 183;
+            var d = new KuvaData();
+            (S2Ruutu, CogOtsake) Ruutu(string tunnus, double ita0, Func<int, byte> arvo)
+            {
+                var o = new CogOtsake { Ita0 = ita0, Pohjoinen0 = 6_700_000, PikseliM = pm };
+                o.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 3 });
+                var (s, w) = Utm.Taakse(ita0, 6_700_000 - L * pm, 35); var (nn, e) = Utm.Taakse(ita0 + L * pm, 6_700_000, 35);
+                var ru = new S2Ruutu { Tunnus = tunnus, W = w - 0.01, S = s - 0.01, E = e + 0.01, N = nn + 0.01 };
+                var l = new byte[L * L * 3];
+                for (int y = 0; y < L; y++) for (int x = 0; x < L; x++) { byte v = arvo(x); int i = (y * L + x) * 3; l[i] = v; l[i + 1] = v; l[i + 2] = v; }
+                d.Laatat[(tunnus, 0, 0, 0)] = l;
+                return (ru, o);
+            }
+            // A: länsiosa tummaa (vettä muistuttavaa, 20), itäreuna maata 100; B samaa maata 25 usvaisempana (125).
+            var a = Ruutu("35VLG", 300_000, x => x < 60 ? (byte)20 : (byte)100);
+            var b = Ruutu("35VMG", 400_000, x => 125);
+            var c = Ruutu("35VPG", 700_000, x => 60);   // ei limitystä → ennallaan
+            d.Ruudut.Add(a); d.Ruudut.Add(b); d.Ruudut.Add(c);
+            var t = Uudelleenprojisointi.TasaaUsva(d);
+            Oleta.Sama(2, t.Count, "vain limittyvät ruudut");
+            Oleta.Tosi(Math.Abs(a.Item1.UsvaR) < 0.5, $"A ei tummu omasta tummasta sisällöstään: {a.Item1.UsvaR}");
+            Oleta.Tosi(Math.Abs(b.Item1.UsvaG - 25) < 0.5, $"B −25: {b.Item1.UsvaG}");
+            Oleta.Sama(0.0, c.Item1.UsvaR);
+            // Yläraja: erittäin samea ruutu tummuu enintään MaxUsva.
+            d.Laatat[("35VMG", 0, 0, 0)] = Enumerable.Repeat((byte)190, L * L * 3).ToArray();
+            Uudelleenprojisointi.TasaaUsva(d);
+            Oleta.Sama(Uudelleenprojisointi.MaxUsva, b.Item1.UsvaB);
+        }
+
+        [Testi]
+        static void DatatonMaallaLapinakyvaMerellaMerenvari()
+        {
+            // Simu d753d794: rataleveyden reunan dataton kiila maalla täyttyi merenvärillä (sininen kiila Saharassa).
+            var meri = new byte[] { 10, 20, 60 };
+            var ty = new KuvanTyosto { Maalla = (la, lo) => lo < 9.0 };   // laatan länsipuoli maata
+            // z11-laatta, jonka keskellä pituuspiiri 9,0° kulkee (x = (9 + 180) / 360 · 2048 = 1075,2).
+            var rgba = new byte[256 * 256 * 4];
+            ty.TaytaMeri(11, 1075, 900, rgba, meri);
+            int lansi = (128 * 256 + 5) * 4, ita = (128 * 256 + 250) * 4;
+            Oleta.Sama((byte)0, rgba[lansi + 3], "maalla läpinäkyvä");
+            Oleta.Sama((byte)254, rgba[ita + 3], "merellä merenväri");
+            Oleta.Sama((byte)60, rgba[ita + 2]);
+            var vanha = new KuvanTyosto();
+            var r2 = new byte[256 * 256 * 4];
+            vanha.TaytaMeri(11, 1075, 900, r2, meri);
+            Oleta.Tosi(Enumerable.Range(0, 256 * 256).All(k => r2[k * 4 + 3] == 254), "ilman maatietoa kaikki merta (entinen)");
+        }
+
+        [Testi]
         static void LaattajoukkoJaJuurijako()
         {
             var k = IssKameraSuunnitelmaTestit.Kamera(60.17, 24.94, 420, 60.17, 24.94, 400, 1024);

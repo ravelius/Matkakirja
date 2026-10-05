@@ -17,7 +17,15 @@ using UnityEngine.UIElements;
 namespace Matkakirja.Natiivi
 {
     /// <summary>Atlas = web --font-atlas (Liberation Serif kursiivi, UI/Resources/Fontit, OFL): kartan nimiöt ja kaupunkiliuska.</summary>
-    public enum Kirjasin { Kone, KoneLihava, Luku, LukuLihava, LukuKursiivi, Kauno, KoneBold, Atlas, Goottilainen, Antiikva, AntiikvaKursiivi }
+    public enum Kirjasin { Kone, KoneLihava, Luku, LukuLihava, LukuKursiivi, Kauno, KoneBold, Atlas, Goottilainen, Antiikva, AntiikvaKursiivi,
+        /// <summary>ISS-ohjaamon vihreä LCD (VT323, OFL; omistaja 4.10.2026, Sisältökirjurin ehdotus).</summary>
+        Lcd,
+        /// <summary>Kaasun numerorumpu (DSEG7 Classic Bold, OFL): vain numerot, ×-merkki erikseen.</summary>
+        Segmentti,
+        /// <summary>ISS-ohjaamon mittaristo (Linnanrakentajan paneeli v1: DIN Condensed kuten kaiverrukset; järjestelmäfontti).</summary>
+        Mittari,
+        /// <summary>Elävän oppaan moderni teksti (SF Pro; omistaja 5.10.2026 klo 20.5x): vain nykyajan näkymiin.</summary>
+        Moderni, ModerniLihava }
 
     public static class Kirjasimet
     {
@@ -35,6 +43,11 @@ namespace Matkakirja.Natiivi
             Kirjasin.LukuLihava => new[] { ("Iowan Old Style", "Bold"), ("Charter", "Bold"), ("Palatino", "Bold"), ("Georgia", "Bold") },
             Kirjasin.LukuKursiivi => new[] { ("Iowan Old Style", "Italic"), ("Charter", "Italic"), ("Palatino", "Italic"), ("Georgia", "Italic") },
             Kirjasin.Kauno => new[] { ("Snell Roundhand", "Regular"), ("Savoye LET", "Plain"), ("Bradley Hand", "Bold") },
+            Kirjasin.Mittari => new[] { ("DIN Condensed", "Bold"), ("DIN Alternate", "Bold"), ("Avenir Next Condensed", "Demi Bold"), ("Helvetica Neue", "Condensed Bold") },
+            // MODERNI (omistaja 5.10.2026 klo 20.5x): iOS:n järjestelmäkirjasin SF Pro vain nykyajan näkymiin (elävä opas);
+            // web -apple-system, system-ui, sans-serif. Jos SF ei ole nimellä saatavilla, Helvetica Neue.
+            Kirjasin.Moderni => new[] { ("SF Pro Text", "Regular"), ("SF Pro", "Regular"), (".SF UI Text", "Regular"), ("Helvetica Neue", "Regular"), ("Helvetica", "Regular") },
+            Kirjasin.ModerniLihava => new[] { ("SF Pro Display", "Semibold"), ("SF Pro", "Semibold"), (".SF UI Display", "Semibold"), ("Helvetica Neue", "Medium"), ("Helvetica Neue", "Bold"), ("Helvetica", "Bold") },
             _ => new (string, string)[0],
         };
 
@@ -90,15 +103,25 @@ namespace Matkakirja.Natiivi
                 if (tulos != null) tulos.name = lf.name;
                 else Debug.LogWarning("MATKAKIRJA ui: linnan fontti puuttuu (Resources/" + linnanFontti + ")");
             }
-            else if (k == Kirjasin.Atlas)
-            {
-                var fontti = Resources.Load<Font>("Fontit/LiberationSerif-Italic");
-                tulos = fontti != null ? FontAsset.CreateFontAsset(fontti) : null;
-                if (tulos != null) tulos.name = "Liberation Serif Italic";
-                else Debug.LogWarning("MATKAKIRJA ui: Liberation Serif puuttuu (Resources/Fontit)");
-            }
             else
             {
+                // Sovelluksen mukana tulevat OFL-fontit (Resources/Fontit; lisenssit samassa kansiossa).
+                var oma = k switch
+                {
+                    Kirjasin.Atlas => ("Fontit/LiberationSerif-Italic", "Liberation Serif Italic"),
+                    Kirjasin.Lcd => ("Fontit/VT323-Regular", "VT323"),
+                    Kirjasin.Segmentti => ("Fontit/DSEG7Classic-Bold", "DSEG7 Classic Bold"),
+                    _ => (null, null),
+                };
+                if (oma.Item1 != null)
+                {
+                    var fontti = Resources.Load<Font>(oma.Item1);
+                    tulos = fontti != null ? FontAsset.CreateFontAsset(fontti) : null;
+                    if (tulos != null) tulos.name = oma.Item2;
+                    else Debug.LogWarning("MATKAKIRJA ui: " + oma.Item2 + " puuttuu (Resources/Fontit)");
+                    if (tulos != null && !kerronta) { tulos.getFontFeatures = false; tulos.name += " harva"; }
+                    return tulos;
+                }
                 foreach (var (perhe, tyyli) in Ehdokkaat(k))
                 {
                     try { tulos = FontAsset.CreateFontAsset(perhe, tyyli, 90); }

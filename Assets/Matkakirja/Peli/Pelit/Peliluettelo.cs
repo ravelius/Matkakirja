@@ -21,7 +21,13 @@ namespace Matkakirja.Peli.Pelit
     /// Alkupera (Aarteet: missä aito esikuva on nyt ja miltä ajalta) Sisältökirjurilta.</summary>
     public sealed class PeliLauta
     {
-        public string Id, Nimi, Esine, Historia, Alkupera;
+        public string Id;
+        // Tekstit datana (Natiiviseppä 5.10.2026): asetukset.json "pelit.laudat.<Id>.<Kenttä>" ohittaa, koodin teksti on oletus.
+        string nimi, esine, historia, alkupera;
+        public string Nimi { get => Asetus.Teksti($"pelit.laudat.{Id}.Nimi", nimi); set => nimi = value; }
+        public string Esine { get => Asetus.Teksti($"pelit.laudat.{Id}.Esine", esine); set => esine = value; }
+        public string Historia { get => Asetus.Teksti($"pelit.laudat.{Id}.Historia", historia); set => historia = value; }
+        public string Alkupera { get => Asetus.Teksti($"pelit.laudat.{Id}.Alkupera", alkupera); set => alkupera = value; }
         public Vastustaja? Avautuu;
         public string Ehto => Avautuu == null ? "Käytössä heti." : $"Avautuu, kun voitat {(Avautuu == Vastustaja.BottiVaikea ? "vaikean" : "normaalin")} botin.";
     }
@@ -30,7 +36,10 @@ namespace Matkakirja.Peli.Pelit
     {
         /// <summary>Tallennuksen tunnus (Pelaaja.Pelit) ja nimi pelaajalle; Nappi = tehtävänapin teksti kohtaamisessa;
         /// Koti = kotikaupungin tunnus (yksi peli, yksi koti).</summary>
-        public string Id, Nimi, Nappi, KatalogiId, Koti;
+        public string Id, KatalogiId, Koti;
+        string nimi, nappi;
+        public string Nimi { get => Asetus.Teksti($"pelit.{Id}.Nimi", nimi); set => nimi = value; }
+        public string Nappi { get => Asetus.Teksti($"pelit.{Id}.Nappi", nappi); set => nappi = value; }
         public PeliMaa[] Maat;
         public PeliLauta[] Laudat = new PeliLauta[0];
 
