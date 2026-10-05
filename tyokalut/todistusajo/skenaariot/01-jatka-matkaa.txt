@@ -1,0 +1,10 @@
+# 01 Jatka matkaa: uusi peli Marseillessa → sovellus kiinni/auki → aloitusnäkymän Jatka matkaa (oikea tap) → kartta
+odota 3
+kuva 01a-kartta Kartta uuden pelin jälkeen (Marseille)
+kaynnista-uudelleen odota-tila Aloitus 40
+nakyy 30 Jatka matkaa -- aloitusnäkymässä Jatka matkaa (tallennus säilyi)
+kuva 01b-aloitus Aloitusnäkymä, tallennettu matka
+tap-teksti Jatka matkaa
+nakyy 40 Marseille, -- matka jatkui kartalle (otsikkorivi)
+odota 3
+kuva 01c-jatkettu Matka jatkui Jatka matkaa -napista

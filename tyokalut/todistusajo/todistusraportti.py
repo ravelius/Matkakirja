@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Todistusajon apuri (Pelikoodari 5.10.2026), todistusajo.sh kutsuu:
-  etsi <ui-puu.json> <teksti> <leveys_pt> <korkeus_pt>  → "x y" pisteinä (näkyvän elementin keskipiste)
+  etsi <ui-puu.json> <teksti> <leveys_pt> <korkeus_pt> [fx fy]  → "x y" pisteinä (näkyvän elementin keskipiste tai
+      kohta fx,fy ∈ 0–1 elementin laatikossa: 0,0 vasen yläkulma; esim. Tavlin piste laudalla, joystickin reuna)
   raportti <kansio> <erä> <versio> <laite> <udid> <skenaario>
                                                          → merkityt kuvat, kuva-arkki.png, ääniarvot, TODISTUS.md
 """
@@ -13,17 +14,20 @@ OTSIKOT = {
 }
 
 
-def etsi(puu, haku, kw, kh):
+def etsi(puu, haku, kw, kh, fx=0.5, fy=0.5):
     d = json.load(open(puu))
     pw, ph = d["paneeli"]["w"] or 1, d["paneeli"]["h"] or 1
-    sx, sy = float(kw) / pw, float(kh) / ph
+    kw, kh = float(kw), float(kh)
+    # Vaakanäkymä (linna) pystysimussa: paneeli on vaaka, ruutu pysty → kierretty 90°: x = W − y_v, y = x_v (Laitetestaaja 5.10.)
+    kierretty = (pw > ph) != (kw > kh)
     h = haku.strip().lower()
     ehdokkaat = []
     for e in d["elementit"]:
         teksti, nimi = (e.get("teksti") or "").strip().lower(), (e.get("nimi") or "").lower()
         if e.get("opasiteetti", 1) < 0.3 or e["w"] <= 0 or e["h"] <= 0:
             continue
-        if teksti == h or nimi == h:
+        luokat = (e.get("luokat") or "").lower().split()
+        if teksti == h or nimi == h or h in luokat:   # luokka: kuvakenapit ilman tekstiä (esim. mk-linssitNappi)
             ehdokkaat.append((0, -e["kerros"], e))
         elif h and (h in teksti):
             ehdokkaat.append((1, -e["kerros"], e))
@@ -31,7 +35,17 @@ def etsi(puu, haku, kw, kh):
         return
     ehdokkaat.sort(key=lambda t: (t[0], t[1]))   # täsmäosuma ensin, ylin kerros ensin
     e = ehdokkaat[0][2]
-    print(f"{(e['x'] + e['w'] / 2) * sx:.1f} {(e['y'] + e['h'] / 2) * sy:.1f}")
+    cx, cy = e["x"] + e["w"] * float(fx), e["y"] + e["h"] * float(fy)
+    if kierretty:
+        print(f"{kw - cy * kw / ph:.1f} {cx * kh / pw:.1f}")
+    else:
+        print(f"{cx * kw / pw:.1f} {cy * kh / ph:.1f}")
+
+
+def laske(puu, luokka):
+    d = json.load(open(puu))
+    n = sum(1 for e in d["elementit"] if luokka in (e.get("luokat") or "").split() and e.get("opasiteetti", 1) >= 0.3)
+    print(n)
 
 
 def fontti(koko):
@@ -59,9 +73,12 @@ def merkitse(raaka, ulos, teksti):
             rivi = koe
     rivit.append(rivi)
     rk = int(f.size * 1.25)
-    dr.rectangle([0, 0, w, rk * len(rivit) + rk // 2], fill=(0, 0, 0, 165))
+    # Merkintä ALAREUNAAN (5.10.: yläreunan palkki peitti iPadilla kuvaselitteen, eli juuri todistettavan kohdan).
+    korkeus = rk * len(rivit) + rk // 2
+    y0 = h - korkeus
+    dr.rectangle([0, y0, w, h], fill=(0, 0, 0, 165))
     for i, r in enumerate(rivit):
-        dr.text((int(w * 0.03), rk // 4 + i * rk), r, font=f, fill=(255, 255, 255, 255))
+        dr.text((int(w * 0.03), y0 + rk // 4 + i * rk), r, font=f, fill=(255, 255, 255, 255))
     Image.alpha_composite(im.convert("RGBA"), kerros).convert("RGB").save(ulos, optimize=True)
     return w, h
 
@@ -126,7 +143,8 @@ def raportti(L, era, versio, laite, udid, skenaario):
         w, h = Image.open(raaka).size
         suunta = "pysty" if h >= w else "vaaka"
         merkitse(raaka, ulos, f"{selite} · {laite} {suunta} · {versio}")
-        os.remove(raaka)
+        os.makedirs(f"{L}/kuvat/raaka", exist_ok=True)
+        os.replace(raaka, f"{L}/kuvat/raaka/{tunnus}.png")   # merkitsemätön talteen (merkintä ei saa hävittää sisältöä)
         valmiit.append(ulos)
         tulokset["4"].append(("OK", f"[{tunnus}.png](kuvat/{tunnus}.png): {selite} ({w}×{h} px, {suunta})"))
     if valmiit:
@@ -202,6 +220,8 @@ def raportti(L, era, versio, laite, udid, skenaario):
 
 if __name__ == "__main__":
     if sys.argv[1] == "etsi":
-        etsi(*sys.argv[2:6])
+        etsi(*sys.argv[2:8])
+    elif sys.argv[1] == "laske":
+        laske(*sys.argv[2:4])
     elif sys.argv[1] == "raportti":
         raportti(*sys.argv[2:8])
