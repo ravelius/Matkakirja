@@ -1,0 +1,1159 @@
+2026-10-05 11:30:12.454 Matkakirja3D[81190:337518162] Built from '6000.3/staging' branch, Version '6000.3.24f1 (4e7b9b5b6244)', Build type 'Development', Scripting Backend 'il2cpp'
+2026-10-05 11:30:12.457 Matkakirja3D[81190:337518162] MemoryManager: Using 'Dynamic Heap' Allocator.
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=262144"
+    "memorysetup-remapper-allocator-initial-capacity=32768"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=4194304"
+    "memorysetup-bucket-allocator-block-count=1"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=4194304"
+    "memorysetup-profiler-bucket-allocator-block-count=1"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=4194304"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+-> applicationDidFinishLaunching()
+-> sceneWillEnterForeground()
+Found 3 interfaces on host : 0) 192.168.1.146 1) 192.168.1.129 2) 169.254.40.44
+Player connection [4375420416]  Target information:
+
+Player connection [4375420416]  * "[IP] 192.168.1.146 [Port] 55000 [Flags] 2 [Guid] 1175886468 [EditorId] 0 [Version] 1048832 [Id] iPhonePlayer(8,SamiMacStudio2.localdomain):56000 [Debug] 0 [PackageName] iPhonePlayer [ProjectName] <no name>" 
+
+Player connection [4375420416]  * "[IP] 192.168.1.129 [Port] 55000 [Flags] 2 [Guid] 1175886468 [EditorId] 0 [Version] 1048832 [Id] iPhonePlayer(8,SamiMacStudio2.localdomain):56000 [Debug] 0 [PackageName] iPhonePlayer [ProjectName] <no name>" 
+
+Player connection [4375420416]  * "[IP] 169.254.40.44 [Port] 55000 [Flags] 2 [Guid] 1175886468 [EditorId] 0 [Version] 1048832 [Id] iPhonePlayer(8,SamiMacStudio2.localdomain):56000 [Debug] 0 [PackageName] iPhonePlayer [ProjectName] <no name>" 
+
+Player connection [4375420416] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Subsystems] Discovering subsystems at path /Users/koodaus/Library/Developer/CoreSimulator/Devices/1572C658-6455-4E55-8C05-3F88CB3C32F6/data/Containers/Bundle/Application/3D759C3B-B872-490C-B5E1-B6CC854DA19E/Matkakirja3D.app/Data/UnitySubsystems
+GfxDevice: creating device client; kGfxThreadingModeThreaded
+Initializing Metal device caps: Apple iOS simulator GPU
+Apple GPU Family: 2
+MSL Version: 3.0
+Has Float MSAA: 0
+Has Float Filtering: 0
+ReadWrite Texture Tier: 0
+Initialize engine version: 6000.3.24f1 (4e7b9b5b6244)
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 UNorm format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+UnloadTime: 1.034292 ms
+CrashReporter: No pending report exists at /Users/koodaus/Library/Developer/CoreSimulator/Devices/1572C658-6455-4E55-8C05-3F88CB3C32F6/data/Containers/Data/Application/F5DB8DD9-6A3C-455A-ACD7-434FD0FE0C10/Library/Caches/CrashReports/crash-pending.plcrash
+Unknown pseudo class "first-child" in StyleSheet Linssit
+Unknown pseudo class "last-child" in StyleSheet Matkakirja
+Unknown pseudo class "first-child" in StyleSheet lautapeli
+Unknown pseudo class "last-child" in StyleSheet lautapeli
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA valmius: auto 12 s (PlayerPrefs)
+MATKAKIRJA valmius: seuranta aloitusverho alkaa, 12 s
+MATKAKIRJA laattapalvelin: http://127.0.0.1:53679/r/ (löydös 176: 4 porttia: pohja http://127.0.0.1:53679/r/, maasto http://127.0.0.1:53680/r/, kerma http://127.0.0.1:53681/r/, muu http://127.0.0.1:53682/r/)
+MATKAKIRJA laattapalvelin: julisteet/pallo/laatat/2026-09-30-pohja-20260930/ delta paketista, perus 2026-09-27-pohja-20260927
+MATKAKIRJA laattapalvelin: paketti 5978 laattaa, käytössä 24,6 Mt (pohja 1366 maasto 2731 bmng-bathy 1365 vektorit 513 napakalotit 2 pohja-perus 0), avaus 5 ms
+MATKAKIRJA laattapalvelin: paketin sarjat ohitettu (kartta käyttää eri sarjaa, paketti on vanha): maarajat (julisteet/pallo/vektorit/maarajat-2026-09-30/)
+MATKAKIRJA kehysmittari: tavoite 60 Hz (liikkeessä), tiedosto /Users/koodaus/Library/Developer/CoreSimulator/Devices/1572C658-6455-4E55-8C05-3F88CB3C32F6/data/Containers/Data/Application/F5DB8DD9-6A3C-455A-ACD7-434FD0FE0C10/Documents/kehysajat.jsonl
+MATKAKIRJA paketti: käytössä v550 varastosta (kohde v550, valmiit 550)
+MATKAKIRJA sisältö: osoitin välimuistista (sisalto/1/v550/), tuore haetaan taustalla
+MATKAKIRJA sisältö: käynnistyksen esilataus 0/45 kokoelmaa (sisalto/1/v550/)
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ääni: testimykistys päällä (simulaattori; aani mykistys 0 = kuuluva ääni)
+2026-10-05 11:30:13.524 Matkakirja3D[81190:337518162] MATKAKIRJA puhe: istunto vaihdetaan (AVAudioSessionCategoryAmbient / AVAudioSessionModeDefault / 1 → Playback / SpokenAudio / MixWithOthers)
+MATKAKIRJA ääni-istunto (käynnistys): luokka AVAudioSessionCategoryPlayback, tila AVAudioSessionModeSpokenAudio, valinnat 1, voimakkuus 0.60, muut soivat 0, reitti Speaker, näytetaajuus 24000, kanavia 2
+MATKAKIRJA ui kuva: muistiraja 200 Mt (iPhone)
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ui: Kone = American Typewriter Regular
+Unable to find a font file with the specified Family Name [Iowan Old Style] and Style [Roman].
+Unable to find a font file with the specified Family Name [Iowan Old Style] and Style [Regular].
+MATKAKIRJA ui: Luku = Charter Roman
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ui: KoneLihava = American Typewriter Semibold
+MATKAKIRJA ylapalkki saaririvi: matala True, saari (x:138.00, y:11.00, width:126.00, height:37.00), saaren korkeus 37, rivi 37, yksikkö 1
+Unable to find a font file with the specified Family Name [Iowan Old Style] and Style [Bold].
+MATKAKIRJA ui: LukuLihava = Charter Bold
+Unable to find a font file with the specified Family Name [Iowan Old Style] and Style [Italic].
+MATKAKIRJA ui: LukuKursiivi = Charter Italic
+2026-10-05 11:30:14.114 Matkakirja3D[81190:337518162] MATKAKIRJA avaimet: haku pollo-kehittajakoodi epäonnistui (-34018)
+MATKAKIRJA ui: KoneBold = American Typewriter Bold
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ui linssit: pelielementit -: portti False, vertailu False, radio False, linssi False, ok
+MATKAKIRJA mukana: 41 tiedostoa buildissa
+MATKAKIRJA lampo {"t":1,"aika":"11:30:14","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":0.0,"tavoite":-1,"piirtovali":1}
+MATKAKIRJA ruutu: näyttö 60 Hz, lepo 30 fps, renderScale 0,8
+CADisplayLink created
+MATKAKIRJA elävät elementit: päällä; meri - (0 kohtaa): ei lajeja; myllyt ei näkyvissä, 220 kolmiota, nopeus 0,00, seuraava tauko 269 s; karuselli ei näkyvissä, 1629 kolmiota, nopeus 0,00, seuraava tauko 59 s; ilmapallo ei näkyvissä, 536 kolmiota, nopeus 0,00, seuraava tauko 146 s; gondolit ei näkyvissä, 878 kolmiota, nopeus 0,00, seuraava tauko 344 s; maailmanpyora ei näkyvissä, 1088 kolmiota, nopeus 0,00, seuraava tauko 97 s; hoyrylaiva ei näkyvissä, 199 kolmiota, nopeus 0,00, seuraava tauko 502 s; liike 0,00, kerros Taysi
+MATKAKIRJA linssit: linssiaani: synteesi valmis 24000 Hz, kilahdus 4 × 0,46 s, naksu 8 × 0,082 s, 3 ms taustasäikeessä, rekisteröity tehosteväylälle
+MATKAKIRJA peli-komento: 0.00 odota-tila Aloitus 40 → ok [Lataa]
+Shadowmap RenderTexture requested without a depth buffer. Changing to a 16 bit depth buffer. To resolve this warning, please specify the desired number of depth bits when creating the render texture.
+Player Setting 'Adjust iOS FPS based on thermal state' is ON
+thermalStateDidChange: Nominal
+Thermal state is Nominal/Fair. Setting target frame rate to 60.
+-> applicationWillEnterForeground()
+-> sceneDidBecomeActive()
+-> applicationDidBecomeActive()
+MATKAKIRJA valot: 3099 valoa
+MATKAKIRJA valot: maa -, 0 valoa, 0 aihetta
+MATKAKIRJA alueet: kaupunkitaso Z10 13829 laattaa
+MATKAKIRJA meren koristeet: merikohdat 29 maata, 129 kohtaa
+MATKAKIRJA saapuminen: 135 maan rajat saapumisrajaukseen
+MATKAKIRJA matkamuisto: kuvien juuri https://media.matkakirja.app/dioraama/olavinlinna/2296811421200485/
+MATKAKIRJA apuraha: ladattu, 5 kappaletta, 4 kuvaa
+MATKAKIRJA valmius [aloitusverho 1,6 s] aste 0,0 % | cesium - | objektit 0/0 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 6 maks 6 (istunto 6) käsittelyssä 0 maks 5 (istunto 5) [pohja 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, maasto 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/5 p 20 pyyntöä 6 yhteyttä] | luokat sat/bmng-bathy k0 v16/0 p16 vektorit k0 v3/0 p1 napakalotit k0 v1/0 p1 | kamera korkeus 9881 km | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA lennon pinta: varakartta Z2 valmis (2026-09-24/bmng-bathy)
+MATKAKIRJA nimet: alfa lineaariseen sekoitukseen maakunta 0,58→0,76 maakunta-pieni 0,58→0,76 meri 0,62→0,77 nykyalue:ruoste-vahva 0,95→0,98 nykyalue-pieni:ruoste-vahva 0,95→0,98 valtameri 0,62→0,72
+MATKAKIRJA nimet: 187 nimeä (aluenimet 187, merinimet 0), ylin taso 9, fontti LiberationSerif-Regular SDF / LiberationSerif-Italic SDF
+MATKAKIRJA alueet: kermasarja 27 maalla
+MATKAKIRJA alueet: 139 aluetta, maasto https://media.matkakirja.app/julisteet/maasto/2026-09-24-maailma/{z}/{x}/{y}.terrain?v=2026-09-24-maailma
+MATKAKIRJA napakalotti pohjoinen: 2048×2048, 12 mipiä
+MATKAKIRJA ääriviiva: maapolygonit.geojson, 135 maata, 2626 viivaa, 497082 pistettä, jäsennys 104 ms
+MATKAKIRJA sisältö: tuore osoitin tallennettu taustalla (sisalto/1/v551/, käyttöön seuraavassa käynnistyksessä)
+MATKAKIRJA reitit: 485 reittiä, 266 kaupunkia
+MATKAKIRJA peli: sisältö sisalto/1/v550/, 266 kaupunkia, 414 reittiä, 71 lentoa
+MATKAKIRJA ääriviiva: maamaa.geojson, 120 maata, 245 viivaa, 50907 pistettä, jäsennys 61 ms
+MATKAKIRJA vektorit: luettelo 2026-09-25-gshhs-korkeus, lodit 0,1/0,03/0,008/0,004/0; rannikko: l0 (1 tiedostoa, 30846 pistettä) l1 (1 tiedostoa, 119436 pistettä) l2 (380 tiedostoa, 450986 pistettä) l3 (380 tiedostoa, 868542 pistettä) l4 (380 tiedostoa, 2766068 pistettä) rajat: l0 (1 tiedostoa, 8111 pistettä, korkeus) l1 (1 tiedostoa, 18246 pistettä, korkeus) l2 (128 tiedostoa, 33496 pistettä, korkeus) l3 (128 tiedostoa, 44730 pistettä, korkeus) l4 (130 tiedostoa, 72815 pistettä, korkeus)
+MATKAKIRJA valmius [aloitusverho 2,0 s] aste 0,0 % | cesium - | objektit 0/0 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 7 maks 7 (istunto 7) käsittelyssä 0 maks 1 (istunto 5) [pohja 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, maasto 1/1 y 0/1 p 1 pyyntöä 1 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 20 pyyntöä 6 yhteyttä] | luokat maasto k0 v1/0 p1 | kamera korkeus 9881 km, maapiste 3,59°/s, korkeus 0 %/s, katse 4,2°/s | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA ääni: äänitaulut valmiit (maisemakoreja 270, maita 265)
+MATKAKIRJA peli: laattoja 266 (kokoelmat/laatat.json)
+MATKAKIRJA verkko-odotus {"t":2.47,"vaihe":"kaynnistys","mita":"sisalto","ms":1252,"haut":1}
+MATKAKIRJA peli: jatketaan tallennuksesta, £400 · päivä 1 · aamu · Marseille
+MATKAKIRJA peli: aloitusnäkymä, tallennus on
+MATKAKIRJA pallo: aloitusportin sumennus 6 pt (renderScale 0,166, Gauss päällä, pistekerroin 3)
+MATKAKIRJA nostot: kylkivaihdot vedossa 0
+MATKAKIRJA peli-komento: 2.48 odota-tila → ok Aloitus [Aloitus]
+MATKAKIRJA peli: matkareitit []
+MATKAKIRJA peli: uusi peli, £400 · päivä 1 · aamu · Marseille
+MATKAKIRJA VARTIJA 171: korjaus päällä
+MATKAKIRJA valmius: seuranta saapuminen alkaa, 20 s
+MATKAKIRJA VARTIJA 171: saapuminen FRA alkaa (korjaus päällä), aste 0,0 %, kohdemaa -, palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija
+MATKAKIRJA saapuminen: FRA Korkeuteen → (46,739, 5,381) korkeus 0,2233 R, näkyvä leveys 183 yks; web kotelossa (46,353, 5,381) 0,2047 R, laatikko {x 5650,21, y 1322,41, w 525,58, h 446,48}
+MATKAKIRJA ajoitus kartalle 5.3
+MATKAKIRJA peli-komento: 2.48 uusi-peli 5 marseille → ok [Kartta]
+MATKAKIRJA peli-komento: 2.48 odota-tila Kartta 40 → ok [Kartta]
+MATKAKIRJA pallo: aloitusportin sumennus pois
+MATKAKIRJA linssit: elävä: kuljettu reitti 1 kaupunkia
+MATKAKIRJA valmius [aloitusverho 2,4 s, saapuminen 0,3 s] aste 0,0 % | cesium - | objektit 0/0 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 7 maks 7 (istunto 7) käsittelyssä 0 maks 0 (istunto 5) [pohja 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, maasto 1/1 y 0/0 p 1 pyyntöä 1 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/0 p 20 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 9441 km, maapiste 4,37°/s, korkeus -12,1 %/s, katse 5,1°/s | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA linssit: elävä: valmis 254 ms (maakunnat 186, kolmiot 66): saapuminen FRA, 18 maakuntaa, 0 rajaa, 0 jokea, 0 nostoa (0 heräävässä), 7490 kolmiota; soi 0,00 s:sta, nopeus 1,00
+MATKAKIRJA lento v3: päällä
+MATKAKIRJA lento v3: kone luotu (7 piirtoa)
+MATKAKIRJA nappula: kone 26 osaa, koko 28,98 m, rajat (28.98, 5.71, 19.84)
+MATKAKIRJA nostot: 2865 pääkartan nostoa 124 maassa, 135 maan rajat, 36 merinimeä
+MATKAKIRJA erikoisnostot: maa -, näkyvät: -
+MATKAKIRJA kaupungit: 266 merkkiä, tärkeys paketista
+MATKAKIRJA peli: sähkelinja auki
+MATKAKIRJA erikoisnostot: maa FRA, näkyvät: -
+[2026-10-05 11:30:16.227] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 154, Culled Visited 0, Rendered 2, Culled 61, Max Depth Visited 5, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 1, Frame 2
+MATKAKIRJA valot: maa FRA, 100 valoa, 9 aihetta
+MATKAKIRJA valmius [aloitusverho 2,9 s, saapuminen 0,7 s] aste 0,5 % | cesium käyty 154 (karsittuja käyty 0) piirto 2 karsittu 61 syvyys 5 jono työ 0 pää 0 ladattuja 1 | objektit 0/0 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 8 maks 8 (istunto 8) käsittelyssä 0 maks 3 (istunto 5) [pohja 1/1 y 0/1 p 1 pyyntöä 1 yhteyttä, maasto 1/1 y 0/1 p 2 pyyntöä 1 yhteyttä, kerma 0/0 y 0/0 p 0 pyyntöä 0 yhteyttä, muu 6/6 y 0/3 p 27 pyyntöä 6 yhteyttä] | luokat pohja k0 v1/0 p1 vektorit k0 v6/0 p7 maasto k0 v1/0 p2 napakalotit k0 v1/0 p2 | kamera korkeus 3744 km, maapiste 16,16°/s, korkeus -124,8 %/s, katse 16,3°/s | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA napakalotti etela: 4096×4096, 13 mipiä
+Two or more raster overlays use the same material key on the same Cesium3DTileset. This will cause unexpected behavior, as only one of them will be passed to the tileset's material.
+MATKAKIRJA väritaso: FRA (z3–8)
+MATKAKIRJA linssit: elävä: hiljaa 0,8 s:n jälkeen: soi
+MATKAKIRJA saapuminen: FRA Korkeuteen → (46,739, 5,381) korkeus 0,2233 R, näkyvä leveys 183 yks; web kotelossa (46,353, 5,381) 0,2047 R, laatikko {x 5650,21, y 1322,41, w 525,58, h 446,48}
+MATKAKIRJA ui sisältö: kaupunkilehti marseille liitetty (1)
+MATKAKIRJA linssit: elävä: 0,03 s: maakunnat syttyvät
+MATKAKIRJA ääriviiva: FRA, 4 maa–maa-rajaviivaa, 671 janaa, leveys 2,2 pt, peitto 0,5 (natiivi 0,657)
+MATKAKIRJA ääriviiva: FRA, 17 rantarengasta, 3429 janaa, leveys 1,2 pt, peitto 0,22 (natiivi 0,332)
+MATKAKIRJA elävä: FRA esivalmisteltu 79 ms
+[2026-10-05 11:30:16.742] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 115, Culled Visited 0, Rendered 2, Culled 76, Max Depth Visited 7, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 3, Frame 15
+MATKAKIRJA valmius [aloitusverho 3,3 s, saapuminen 1,2 s] aste 2,6 % | cesium käyty 115 (karsittuja käyty 0) piirto 2 karsittu 76 syvyys 7 jono työ 0 pää 0 ladattuja 3 | objektit 2/2 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 10 maks 10 (istunto 10) käsittelyssä 1 maks 3 (istunto 5) [pohja 1/1 y 0/1 p 4 pyyntöä 1 yhteyttä, maasto 1/1 y 0/1 p 3 pyyntöä 1 yhteyttä, kerma 2/2 y 1/2 p 5 pyyntöä 2 yhteyttä, muu 6/6 y 0/2 p 42 pyyntöä 6 yhteyttä] | luokat pohja k0 v3/0 p4 kerma k0 v5/0 vektorit k0 v15/0 p7 maasto k0 v1/0 p3 | kamera korkeus 1769 km, maapiste 12,99°/s, korkeus -108,5 %/s, katse 13,1°/s | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA peli: sähketehtäviä sofia, tukholma
+MATKAKIRJA peli: kuvakysymyksiä 262, lippumaita 135
+MATKAKIRJA ajoitus kytkeKysely 4.9
+MATKAKIRJA peli: kysymyksiä 1287 kaupungeissa, 104 yleistä, 42 kaarta
+MATKAKIRJA kuvatekijät: 439 Commons-kuvaa
+MATKAKIRJA peli: saapumispuheita 45, luentoja 45
+[2026-10-05 11:30:17.253] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 114, Culled Visited 0, Rendered 2, Culled 77, Max Depth Visited 7, Loading-Worker 81, Loading-Main 0 Total Tiles Resident 3, Frame 31
+MATKAKIRJA valmius [aloitusverho 3,9 s, saapuminen 1,7 s] aste 3,6 % | cesium käyty 114 (karsittuja käyty 0) piirto 2 karsittu 77 syvyys 7 jono työ 81 pää 0 ladattuja 3 | objektit 2/2 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 5 (kohde 0, kiire 5, tausta 0, saapuminen 0) jono 0 kiire 1 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 6 maks 13 (istunto 13) [pohja 6/6 y 0/6 p 33 pyyntöä 6 yhteyttä, maasto 6/6 y 0/4 p 23 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 16 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat pohja k0 v29/0 p33 kerma k6 v5/3 maasto k0 v20/0 p23 | kamera korkeus 1639 km, maapiste 1,22°/s, korkeus -13,9 %/s, katse 1,2°/s | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA peli: muste 3099 nostoa
+MATKAKIRJA ui: Kauno = Snell Roundhand Regular
+MATKAKIRJA maakunnat (maakuntarajat): 138 maata, 2546 aluetta, 42487 kaarta (46 ilman maata, 2333 alueen sisäistä ja 32492 ulkorajaa pois), jäsennys 420 ms, maittain 246 ms
+MATKAKIRJA maakunnat FRA: 13 aluetta, tunnuskartta 1461×998 (teksel 1,2 km, -5,6…10,1°), rypäitä 1 (+4 pois), 413 rajajanaa, 10 ms
+MATKAKIRJA maamaski FRA: 4096×2798, 397 maarengasta, 1 järveä, 19 ms
+[2026-10-05 11:30:17.761] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 104, Culled Visited 0, Rendered 2, Culled 63, Max Depth Visited 7, Loading-Worker 110, Loading-Main 1 Total Tiles Resident 60, Frame 57
+MATKAKIRJA valmius [aloitusverho 4,4 s, saapuminen 2,2 s] aste 18,7 % | cesium käyty 104 (karsittuja käyty 0) piirto 2 karsittu 63 syvyys 7 jono työ 110 pää 1 ladattuja 60 | objektit 2/28 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 6 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 6 maks 17 (istunto 17) [pohja 6/6 y 0/6 p 113 pyyntöä 6 yhteyttä, maasto 6/6 y 0/5 p 69 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 31 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat pohja k0 v80/0 p90 kerma k6 v15/11 maasto k0 v46/0 p61 | kamera korkeus 1447 km, maapiste 2,16°/s, korkeus -24,1 %/s, katse 2,2°/s | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA linssit: elävä: 1,22 s: luovutus pysyville kerroksille
+MATKAKIRJA ui kuva ei latautunut: https://media.matkakirja.app/assets/liput/france.png
+MATKAKIRJA nostot: kylkivaihdot vedossa 0
+MATKAKIRJA linssit: elävä: valmis 1,6 s, kehyksiä 74, mediaani 16,7 ms, p95 49,4 ms, max 83,3 ms
+MATKAKIRJA nostot: näkyvissä FRA, osuus 4,36, maan nostoja 94
+[2026-10-05 11:30:18.275] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 104, Culled Visited 0, Rendered 2, Culled 63, Max Depth Visited 7, Loading-Worker 98, Loading-Main 0 Total Tiles Resident 96, Frame 86
+MATKAKIRJA valmius [aloitusverho 4,9 s, saapuminen 2,8 s] aste 26,3 % | cesium käyty 104 (karsittuja käyty 0) piirto 2 karsittu 63 syvyys 7 jono työ 98 pää 0 ladattuja 96 | objektit 2/40 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 1 (kohde 0, kiire 1, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 4 maks 16 (istunto 17) [pohja 6/6 y 0/6 p 169 pyyntöä 6 yhteyttä, maasto 6/6 y 0/6 p 100 pyyntöä 6 yhteyttä, kerma 6/6 y 4/6 p 71 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat pohja k0 v56/0 p143 kerma k1 v45/12 maasto k0 v31/0 p92 | kamera korkeus 1413 km, maapiste 0,38°/s, korkeus -4,5 %/s, katse 0,4°/s | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA kehysajat {"t":5.45,"tavoiteMs":16.67,"liike":{"n":88,"p50":17.24,"p95":121.81,"p99":283.31,"max":283.31,"yli15x":24},"lepo":{"n":16,"p50":17.23,"p95":49.77,"p99":49.77,"max":49.77,"yli15x":0},"peitto":null,"kehyksia":109,"piirretty":109,"tilat":{"taysi":109,"lepo":0,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.45,"gpuKehyksia":105,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":85}
+[2026-10-05 11:30:18.791] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 104, Culled Visited 0, Rendered 2, Culled 63, Max Depth Visited 7, Loading-Worker 64, Loading-Main 0 Total Tiles Resident 141, Frame 114
+MATKAKIRJA valmius [aloitusverho 5,4 s, saapuminen 3,3 s] aste 46,2 % | cesium käyty 104 (karsittuja käyty 0) piirto 2 karsittu 63 syvyys 7 jono työ 64 pää 0 ladattuja 141 | objektit 2/74 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 6 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 6 maks 16 (istunto 17) [pohja 6/6 y 0/6 p 265 pyyntöä 6 yhteyttä, maasto 6/6 y 0/6 p 141 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 100 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat pohja k0 v96/0 p236 kerma k6 v24/10 maasto k0 v41/0 p133 | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+[2026-10-05 11:30:19.318] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 104, Culled Visited 0, Rendered 2, Culled 63, Max Depth Visited 7, Loading-Worker 31, Loading-Main 2 Total Tiles Resident 141, Frame 142
+MATKAKIRJA valmius [aloitusverho 5,9 s, saapuminen 3,8 s] aste 64,3 % | cesium käyty 104 (karsittuja käyty 0) piirto 2 karsittu 63 syvyys 7 jono työ 31 pää 2 ladattuja 141 | objektit 2/107 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 6 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 6 maks 6 (istunto 17) [pohja 6/6 y 0/0 p 265 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 141 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 166 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat kerma k6 v66/18 | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA satloki t=5s: [bmng-bathy/2 n=16 200:paketti×16 t 4336/9021/14435]
+MATKAKIRJA ui liiku: piiloon (kerronta)
+[2026-10-05 11:30:19.825] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 104, Culled Visited 0, Rendered 62, Culled 63, Max Depth Visited 7, Loading-Worker 23, Loading-Main 0 Total Tiles Resident 167, Frame 171
+MATKAKIRJA valmius [aloitusverho 6,4 s, saapuminen 4,3 s] aste 92,1 % | cesium käyty 104 (karsittuja käyty 0) piirto 62 karsittu 63 syvyys 7 jono työ 23 pää 0 ladattuja 167 | objektit 62/143 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 6 (kohde 0, kiire 6, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila vartija | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 6 maks 15 (istunto 17) [pohja 6/6 y 0/6 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/3 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 6/6 p 243 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat pohja k0 v52/0 p246 kerma k6 v77/16 maasto k0 v26/0 p143 | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 1 | kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA valmius: verho aloitusverho lähti valmis:ei-porttia 6610 ms aste 100,0 % kevennys paalle (aloitusverho, rinnakkain 24)
+MATKAKIRJA verkko-odotus {"t":6.98,"vaihe":"kaynnistys","mita":"aloitusverho","ms":6610}
+MATKAKIRJA aloitusverho: pois 6,6 s (pallo 100 %)
+MATKAKIRJA VARTIJA 171: saapuminen FRA + saapuminen FRA valmis 4511 ms, aste 100,0 %, kohdemaa -, palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois
+[2026-10-05 11:30:20.341] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 104, Culled Visited 0, Rendered 62, Culled 63, Max Depth Visited 7, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 167, Frame 200
+MATKAKIRJA valmius [aloitusverho 6,9 s, saapuminen 4,8 s] aste 100,0 % | cesium käyty 104 (karsittuja käyty 0) piirto 62 karsittu 63 syvyys 7 jono työ 0 pää 0 ladattuja 167 | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 6 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/6 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat kerma k0 v77/26 | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 1 | kevennys pois
+MATKAKIRJA linssit: fonttilämmitys: 173 merkkiä verhon jälkeen (odotus 7004 ms), 317 ms 10 kehyksessä, pisin työ 3,9 ms (lisäys 3,9, kallein merkki 0,4; ensimmäinen jäsennys 0,0; jäsennys 0,2, kallein pala 0,1)
+MATKAKIRJA valmius [aloitusverho 7,5 s, saapuminen 5,4 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [aloitusverho 8,0 s, saapuminen 5,9 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [aloitusverho 8,6 s, saapuminen 6,5 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [aloitusverho 9,1 s, saapuminen 7,0 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: joutilas (1.)
+MATKAKIRJA puhe: esiladattu 3abb2a0edeb90f79af8559222b8fad87cb165e801eaf8276cc2f41ed8112ae2a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-marseille.mp3 (välimuistissa)
+MATKAKIRJA peli: joutilas marseille, ennakoidaan alpit, barcelona, pariisi, luxemburg, bryssel, madrid, venetsia
+MATKAKIRJA puhe: esiladattu f6e6b93955e60d238904ce40c3c6dded4acef1ee6c2ec5f5efd5c50b6485039a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-alpit.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: alpit (CHE, Kohdekaupungit) pohja 124 (z8–10, Z10 vanhemmasta 65), maasto 0, reliefi 0; näkymä lat 45,5–48,3, lon 6,4–8,3, 325 km
+MATKAKIRJA puhe: esiladattu f72f18ded777a21274562a09c951b3ab15bca5f1fdeec7a1fb4ace75941b31fa.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-barcelona.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: barcelona (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,1–45,3, lon -1,1–4,9, 1185 km
+MATKAKIRJA puhe: esiladattu d40c668c9fcbad391db2c72fa41ea0c5d3d615ef5a722277efdca2bc8fe20102.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-pariisi.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: luxemburg (LUX, Kohdekaupungit) pohja 177 (z8–10, Z10 vanhemmasta 42), maasto 0, reliefi 0; näkymä lat 48,5–51,3, lon 5,2–7,1, 325 km
+MATKAKIRJA saapumislaatat: bryssel (BEL, Kohdekaupungit) pohja 183 (z8–10, Z10 vanhemmasta 30), maasto 0, reliefi 0; näkymä lat 49,2–52,0, lon 3,4–5,3, 325 km
+MATKAKIRJA puhe: esiladattu 251628e92d1dab2f25281b758e08e1a559b51f1ab0aad0f9c9aed0709d496471.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-madrid.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: madrid (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,2–45,2, lon -6,6–-0,8, 1160 km
+MATKAKIRJA puhe: esiladattu 08546de81192ef8e6b8de4fee17f89f6ffa34706043e983c442676096b3f1788.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-venetsia.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: venetsia (ITA, Kohdekaupungit) pohja 232 (z6–8), maasto 0, reliefi 0; näkymä lat 35,8–49,0, lon 8,3–16,3, 1526 km
+MATKAKIRJA linssit: linssien aineisto: joutilaana kartalla 9,1 s käynnistyksestä
+MATKAKIRJA ui: saapumisen esilataus alpit (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus barcelona (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus pariisi (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus luxemburg (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus bryssel (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus madrid (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus venetsia (Kohdekaupungit)
+MATKAKIRJA linssit: keksinnöt: 26 pysäkkiä
+MATKAKIRJA saapumislaatat: alpit valmis 169/169 (kerma 45), epäonnistui 0, 0,3 s
+MATKAKIRJA ui sisältö: kaupunkilehti alpit liitetty (1)
+MATKAKIRJA ui sisältö: kaupunkilehti barcelona liitetty (1)
+MATKAKIRJA ui sisältö: kaupunkilehti pariisi liitetty (1)
+MATKAKIRJA ui sisältö: kaupunkilehti luxemburg liitetty (1)
+MATKAKIRJA ui sisältö: kaupunkilehti bryssel liitetty (1)
+MATKAKIRJA ui sisältö: kaupunkilehti madrid liitetty (1)
+MATKAKIRJA ui sisältö: kaupunkilehti venetsia liitetty (1)
+MATKAKIRJA linssit: keksinnöt: 26 pysäkkiluentaa
+MATKAKIRJA saapumislaatat: luxemburg valmis 177/177 (kerma 0), epäonnistui 0, 0,4 s
+MATKAKIRJA valmius [aloitusverho 9,6 s, saapuminen 7,5 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 14 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA saapumislaatat: bryssel valmis 183/183 (kerma 0), epäonnistui 0, 0,5 s
+MATKAKIRJA linssit: maat: 135 maata, 128 nimeä
+MATKAKIRJA sisältö: sisalto/1/v550/moduulit/js/packs/fokuskohteet-esp.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA sisältö: sisalto/1/v550/moduulit/js/packs/fokuskohteet-che.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA sisältö: sisalto/1/v550/moduulit/js/packs/fokuskohteet-lux.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA valmius [aloitusverho 10,1 s, saapuminen 8,0 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 50 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA kehysajat {"t":10.48,"tavoiteMs":16.67,"liike":null,"lepo":{"n":200,"p50":17.26,"p95":33.93,"p99":55.45,"max":199.44,"yli15x":2},"peitto":null,"kehyksia":200,"piirretty":200,"tilat":{"taysi":115,"lepo":85,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.39,"gpuKehyksia":200,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA sisältö: sisalto/1/v550/moduulit/js/packs/fokuskohteet-bel.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA linssit: ihmisen matka: 21 jaksoa, 21 aikaleimaa, ääni https://media.matkakirja.app/aikajana/ihmisen-matka/puhe/ihmisen-matka-kertomus.mp3 (I ja II)
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA sisältö: sisalto/1/v550/moduulit/js/packs/maastokohteet-lux.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA saapumislaatat: barcelona valmis 310/310 (kerma 155), epäonnistui 0, 1,1 s
+MATKAKIRJA linssit: ihmisen matka: 17 vanaa laskettu
+MATKAKIRJA sisältö: sisalto/1/v550/moduulit/js/packs/maastokohteet-bel.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA sisältö: sisalto/1/v550/moduulit/js/packs/nakyvat-kaupungit-ita.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu ITA
+MATKAKIRJA sisältö: sisalto/1/v550/moduulit/js/packs/nakyvat-kaupungit-esp.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA sisältö: sisalto/1/v550/moduulit/js/packs/nakyvat-kaupungit-che.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu CHE
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA linssit: vesistöt: 38 järveä, 169 uomaa, 20 nimeä, muunnos 3,1 ms
+MATKAKIRJA sisältö: sisalto/1/v550/moduulit/js/packs/nakyvat-kaupungit-lux.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu LUX
+MATKAKIRJA sisältö: sisalto/1/v550/moduulit/js/packs/nakyvat-kaupungit-bel.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu BEL
+MATKAKIRJA valmius [aloitusverho 10,6 s, saapuminen 8,5 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 60 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA linssit: radio: 182 asemaa (epaselva 178, sallittu 4), 5 viritysääntä
+MATKAKIRJA linssit: astronautin kamera: 226 kohdetta
+MATKAKIRJA valmius [aloitusverho 11,1 s, saapuminen 9,0 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 42 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA linssit: isoisä 1873: 185 rajaa, 133 nimeä (GPL-3.0)
+MATKAKIRJA linssit: linssien aineisto valmis 11,1 s käynnistyksestä
+MATKAKIRJA peli-komento: 11.88 odota-tila → ok Kartta [Kartta]
+MATKAKIRJA peli-komento: 11.88 aani tila → VIRHE käyttö: aani tila kohtaaminen|lehti|matkalaukku paalle|pois [Kartta]
+MATKAKIRJA valmius [aloitusverho 11,7 s, saapuminen 9,6 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 26 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA saapumislaatat: madrid valmis 310/310 (kerma 155), epäonnistui 0, 2,6 s
+MATKAKIRJA valmius: seuranta aloitusverho loppu 12,0 s, verho lähti 6,6 s, suurin aste 100,0 % (6,9 s), ylitykset 80 %: 6,4 s 90 %: 6,4 s 95 %: 6,9 s 97 %: 6,9 s 99 %: 6,9 s 100 %: 6,9 s
+MATKAKIRJA valmius [saapuminen 10,1 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 4 (kohde 0, kiire 0, tausta 4, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 10 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 10,6 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 2 (kohde 0, kiire 0, tausta 2, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA saapumislaatat: venetsia valmis 464/464 (kerma 232), epäonnistui 0, 3,7 s
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi 144 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot 14 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti 150 ((46,74, 5,38, 26642648 m, 0°))
+MATKAKIRJA valmius [saapuminen 11,1 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 11,7 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi valmis 144/144, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot valmis 14/14, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti valmis 150/150, epäonnistui 0 (1,0 s)
+MATKAKIRJA valmius [saapuminen 12,2 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 12,7 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA kehysajat {"t":15.51,"tavoiteMs":16.67,"liike":null,"lepo":{"n":151,"p50":33.34,"p95":33.92,"p99":33.93,"max":35.08,"yli15x":0},"peitto":null,"kehyksia":151,"piirretty":151,"tilat":{"taysi":0,"lepo":151,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.46,"gpuKehyksia":151,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA valmius [saapuminen 13,2 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 13,7 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 14,2 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 14,7 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 15,3 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 15,8 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA linssit: kehittäjätila True, valittavissa topografia, isoisa-1873, vesistot, keksinnot, ihmisen-matka, ihmisen-matka-2, satelliitti, maapallon-vuosi, radio, vertailu, ajattelijat, maatiedot, yokartta, tahdet, poikkileikkaus
+MATKAKIRJA valmius [saapuminen 16,3 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 16,8 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 17,3 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 17,8 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA linssit: poikki: orbit pois
+MATKAKIRJA kehysajat {"t":20.55,"tavoiteMs":16.67,"liike":null,"lepo":{"n":151,"p50":33.34,"p95":33.92,"p99":33.94,"max":33.96,"yli15x":0},"peitto":null,"kehyksia":151,"piirretty":151,"tilat":{"taysi":0,"lepo":151,"paikallaan":0,"kerros":0,"peitto":0},"gpuMs":0.45,"gpuKehyksia":151,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA valmius [saapuminen 18,3 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA valmius [saapuminen 18,9 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA levy: 475 Mt / 2048 Mt (kuvat 255, aani 5, aanet 0, sisalto 132, virta 0, laatat 81), ei siivottavaa
+MATKAKIRJA paketti: v551 (1.58) 795 tiedostoa, puuttuu 6 (1,7 Mt siirto)
+MATKAKIRJA valmius [saapuminen 19,4 s] aste 100,0 % | cesium - | objektit 62/166 | kerrokset 0:pohja(z0–10) 2:kerma(z0–8) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 0 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/0 p 42 pyyntöä 6 yhteyttä] | luokat | kamera korkeus 1413 km, maapiste 0,00°/s, korkeus 0 %/s, katse 0,0°/s | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA esilataaja: tiedosto manifest.json 200 alku 0 +322768 t (Kaynnistys, paketti:sisalto/1/v551)
+MATKAKIRJA esilataaja: tiedosto astronaut-kysymykset.json 200 alku 0 +234175 t (Kaynnistys, paketti:sisalto/1/v551)
+MATKAKIRJA esilataaja: tiedosto satelliitti.json 200 alku 0 +880 t (Kaynnistys, paketti:sisalto/1/v551)
+MATKAKIRJA esilataaja: tiedosto satelliitti-data.json 200 alku 0 +245013 t (Kaynnistys, paketti:sisalto/1/v551)
+MATKAKIRJA aani: linssi poikkileikkaus avautuu, katkaistaan: UiKerros[https://media.matkakirja.app/aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-marseille-3.mp3 0,00]
+MATKAKIRJA linssit: taustaääni pois
+MATKAKIRJA linssit: peite päälle
+MATKAKIRJA linssit: poikki: linna vaakaan (Portrait → pyydetty LandscapeLeft)
+MATKAKIRJA linssit: poikki: lataa…
+MATKAKIRJA linssit: auki: poikkileikkaus
+MATKAKIRJA ui linssit: pelielementit poikkileikkaus: portti False, vertailu False, radio False, linssi True, ok
+MATKAKIRJA esilataaja: tiedosto lehti.json 200 alku 0 +229420 t (Kaynnistys, paketti:sisalto/1/v551)
+MATKAKIRJA ruutu: pallon kamera pois (peitto)
+MATKAKIRJA esilataaja: tiedosto media.json 200 alku 0 +15330704 t (Kaynnistys, paketti:sisalto/1/v551)
+MATKAKIRJA esilataaja: ryhmä paketti:sisalto/1/v551 valmis (6 valmista, 0 virhettä)
+[2026-10-05 11:30:35.361] [info] [Cesium3DTilesetImpl.cpp:563] Pallo: Visited 0, Culled Visited 0, Rendered 0, Culled 0, Max Depth Visited 0, Loading-Worker 0, Loading-Main 0 Total Tiles Resident 167, Frame 0
+MATKAKIRJA linssit: poikki: linnan asento toteutui LandscapeLeft
+MATKAKIRJA valmius [saapuminen 19,8 s] aste 100,0 % | cesium käyty 0 (karsittuja käyty 0) piirto 0 karsittu 0 syvyys 0 jono työ 0 pää 0 ladattuja 167 | objektit 62/166 | kerrokset 0:pohja(z0–10) | palvelin käynnissä 0 (kohde 0, kiire 0, tausta 0, saapuminen 0) jono 0 kiire 0 esi 0 kohdejono 0 taustajono 0 saapumisjono 0 tauolla 0 nälkä163b 0 saapumistila pois | portit 4 yhteydet 24 maks 24 (istunto 24) käsittelyssä 0 maks 3 (istunto 17) [pohja 6/6 y 0/0 p 317 pyyntöä 6 yhteyttä, maasto 6/6 y 0/0 p 167 pyyntöä 6 yhteyttä, kerma 6/6 y 0/0 p 314 pyyntöä 6 yhteyttä, muu 6/6 y 0/3 p 45 pyyntöä 6 yhteyttä] | luokat vektorit k0 v3/0 p7 | kamera - | portti 0 musta 0,00 aloitusverho 0 | kevennys pois
+MATKAKIRJA linssit: peite pois
+MATKAKIRJA verkko-odotus {"t":22.38,"vaihe":"linssi","mita":"poikkileikkaus:peite","ms":316}
+MATKAKIRJA paketti: v551 lataus 6 valmista, 0 virhettä, 0 väärää tiivistettä
+MATKAKIRJA paketti: v551 valmis, käyttöön seuraavassa käynnistyksessä
+MATKAKIRJA paketti: sisältö vaihtui v550 → v551 kesken istunnon, 6 tiedostoa muuttui: manifest.json, media.json, moduulit/js/linssit/astronaut-kysymykset.json, moduulit/js/linssit/satelliitti-data.json, moduulit/js/linssit/satelliitti.json, web/lehti.json
+MATKAKIRJA ui: sisältö v551 käyttöön kesken istunnon (6 muuttunutta): maakunta- ja nostodata hylätty
+MATKAKIRJA paketti: siivous, säilytetään v550,v551, poistettiin 1 versiokansiota ja 0 varastotiedostoa
+MATKAKIRJA verkko-odotus {"t":22.42,"vaihe":"linssi","mita":"moduulit/js/packs/maakunnat-luonnehdinnat.json","ms":36,"haut":0}
+MATKAKIRJA linssit: poikki: Olavinlinna ladattu, 9 tilaa, juuri https://media.matkakirja.app/dioraama/olavinlinna/2296811421200485/
+MATKAKIRJA linssit: poikki: massa ilman glb-tiedostoa
+MATKAKIRJA aani: linssi poikkileikkaus 0,4 s avauksesta, soivat: ei mitään
+MATKAKIRJA verkko-odotus {"t":22.48,"vaihe":"linssi","mita":"moduulit/js/packs/maakunnat-pulu.json","ms":54,"haut":0}
+MATKAKIRJA valmius: seuranta saapuminen loppu 20,0 s, verho -, suurin aste 100,0 % (4,8 s), ylitykset 80 %: 4,3 s 90 %: 4,3 s 95 %: 4,8 s 97 %: 4,8 s 99 %: 4,8 s 100 %: 4,8 s
+MATKAKIRJA linssit: poikki: pinta kallio tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: pinta katto tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: pinta kivi tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: pinta lankku tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: pinta leikkaus tekstuuri valmis (2048x512)
+MATKAKIRJA linssit: poikki: pinta puu tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: pinta rappaus tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: pinta tiili tekstuuri valmis (2048x512)
+MATKAKIRJA linssit: poikki: pinta vesi tekstuuri valmis (1024x1024)
+MATKAKIRJA linssit: poikki: liekkiatlas liekit/kynttila.png valmis (256x256)
+MATKAKIRJA linssit: poikki: liekkiatlas liekit/soihtu.png valmis (1024x256)
+MATKAKIRJA linssit: poikki: liekkiatlas liekit/tulisija.png valmis (1024x512)
+MATKAKIRJA linssit: poikki: laituri valmis (8092 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: laituri liekit glb:n 2 liekki:-solmusta, JSON-liekit 2 pois
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/soutaja-1500.glb valmis (75 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/renki-1500.glb valmis (75 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: fatabuuri valmis (31699 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: fatabuuri liekit glb:n 4 liekki:-solmusta, JSON-liekit 4 pois
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/kirjuri-1500.glb valmis (74 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: kierreportaat valmis (66023 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: kierreportaat liekit glb:n 4 liekki:-solmusta, JSON-liekit 4 pois
+MATKAKIRJA linssit: poikki: muurinharja valmis (90655 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: muurinharja liekit glb:n 2 liekki:-solmusta, JSON-liekit 2 pois
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/vartija-1500.glb valmis (79 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/talonpoika-1500.glb valmis (75 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: kappeli valmis (108463 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: kappeli liekit glb:n 15 liekki:-solmusta, JSON-liekit 15 pois
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/kappalainen-1500.glb valmis (74 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/vouti-1500.glb valmis (79 solmua, skin 65 luuta, leikkeet idle,kavely,tyo)
+MATKAKIRJA linssit: poikki: keskushalli valmis (146375 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: keskushalli liekit glb:n 17 liekki:-solmusta, JSON-liekit 17 pois
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/apulainen-1500.glb valmis (74 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: keittio valmis (171869 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: keittio liekit glb:n 4 liekki:-solmusta, JSON-liekit 4 pois
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/kokki-1500.glb valmis (75 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: hahmo3d blender/hahmot/vesipoika-1500.glb valmis (75 solmua, skin 65 luuta, leikkeet idle,kavely,puhe,tyo)
+MATKAKIRJA linssit: poikki: tunnelma valmis (183367 kolmiota yhteensä)
+MATKAKIRJA linssit: poikki: gpu Ulkokuori:Kevyt mesh 307454 kärkeä (ruutu 669)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:taivas 2048×1024 RGB_ETC2_SRGB (ruutu 671)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:syvyys 2048×2048 R8_UNorm (ruutu 671)
+MATKAKIRJA linssit: poikki: ympäristö: maasto ASTC ei käytössä (laite ei tue ASTC_4x4 (Apple iOS simulator GPU)), glb:n kuva
+MATKAKIRJA linssit: poikki: valoatlas laituri ASTC ei käytössä (laite ei tue ASTC_6x6 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas fatabuuri ASTC ei käytössä (laite ei tue ASTC_6x6 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas kierreportaat ASTC ei käytössä (laite ei tue ASTC_6x6 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas muurinharja ASTC ei käytössä (laite ei tue ASTC_6x6 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas kappeli ASTC ei käytössä (laite ei tue ASTC_6x6 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas keskushalli ASTC ei käytössä (laite ei tue ASTC_6x6 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas keittio ASTC ei käytössä (laite ei tue ASTC_6x6 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: valoatlas tunnelma ASTC ei käytössä (laite ei tue ASTC_6x6 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: raskas kuori Kevyt ASTC 48 ms (ruutu 672)
+MATKAKIRJA linssit: poikki: kuori Kevyt ASTC ei käytössä (laite ei tue ASTC_4x4 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: ympäristö: taivas 2048×1024
+MATKAKIRJA linssit: poikki: ympäristö: syvyyskartta 2048² (4000 m, enintään 30 m)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:maasto 2048×2048 RGB_ETC2_SRGB (ruutu 673)
+MATKAKIRJA linssit: poikki: valoatlas laituri valmis (4096x4096)
+MATKAKIRJA linssit: poikki: laituri savu 2 emitteriä, liekkipisteitä 2
+MATKAKIRJA linssit: poikki: valoatlas fatabuuri valmis (4096x4096)
+MATKAKIRJA linssit: poikki: fatabuuri savu 6 emitteriä, liekkipisteitä 6
+MATKAKIRJA linssit: poikki: valoatlas kierreportaat valmis (4096x4096)
+MATKAKIRJA linssit: poikki: kierreportaat savu 10 emitteriä, liekkipisteitä 10
+MATKAKIRJA linssit: poikki: valoatlas muurinharja valmis (4096x4096)
+MATKAKIRJA linssit: poikki: muurinharja savu 12 emitteriä, liekkipisteitä 12
+MATKAKIRJA linssit: poikki: valoatlas kappeli valmis (4096x4096)
+MATKAKIRJA linssit: poikki: kappeli savu 27 emitteriä, liekkipisteitä 27
+MATKAKIRJA linssit: poikki: valoatlas keskushalli valmis (4096x4096)
+MATKAKIRJA linssit: poikki: keskushalli savu 44 emitteriä, liekkipisteitä 44
+MATKAKIRJA linssit: poikki: valoatlas keittio valmis (4096x4096)
+MATKAKIRJA linssit: poikki: keittio savu 48 emitteriä, liekkipisteitä 48
+MATKAKIRJA linssit: poikki: valoatlas tunnelma valmis (4096x4096)
+MATKAKIRJA linssit: poikki: tunnelma savu 80 emitteriä, liekkipisteitä 76
+MATKAKIRJA ui liiku: esiin (kerronta ohi)
+MATKAKIRJA linssit: poikki: esine fatabuuri/arkun-kansi valmis
+MATKAKIRJA linssit: poikki: gpu Ulkokuori:Kevyt 2048×2048 RGB_ETC2_SRGB (ruutu 674)
+MATKAKIRJA linssit: poikki: kuori kevyt valmis (188117 kolmiota, 2048² ETC2_RGB, 2,2 s: lataus 0,2, purku 0,3, mesh 0,0, kuva (ASTC/JPEG) 1,8 s)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:maasto mesh 62087 kärkeä (ruutu 674)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:horisontti 1024×1024 RGB_ETC2_SRGB (ruutu 674)
+MATKAKIRJA linssit: poikki: raskas puukortit LoadImage 59 ms (ruutu 674)
+MATKAKIRJA linssit: poikki: esine fatabuuri/sinetti valmis
+MATKAKIRJA linssit: poikki: gpu Ymparisto:maasto mesh 22095 kärkeä (ruutu 675)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:horisontti mesh 5591 kärkeä (ruutu 675)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:aluskasvit 1280×512 87 (ruutu 675)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:maasto mesh 42743 kärkeä (ruutu 676)
+MATKAKIRJA linssit: poikki: ympäristö: horisontti 1 lohkoa, 7999 kolmiota, 1024² ETC2_RGB, 2,4 s
+MATKAKIRJA linssit: poikki: gpu Ymparisto:puukortit 2048×4096 RGBA_ETC2_SRGB (ruutu 676)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:aluskasvit mesh 64000 kärkeä (ruutu 676)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:maasto mesh 68729 kärkeä (ruutu 677)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:aluskasvit mesh 64000 kärkeä (ruutu 677)
+MATKAKIRJA linssit: poikki: ympäristö: maasto 4 lohkoa, 375982 kolmiota, 2048² ETC2_RGB, 2,5 s
+MATKAKIRJA linssit: poikki: gpu Ymparisto:aluskasvit mesh 32000 kärkeä (ruutu 678)
+MATKAKIRJA linssit: poikki: ympäristö: aluskasvit 20000 (80000 kolmiota, 3 osaa, 1280×512 ARGB32), 1,9 s
+MATKAKIRJA linssit: poikki: raskas Ymparisto:splat-maski0 LoadImage 60 ms (ruutu 680)
+MATKAKIRJA linssit: poikki: raskas puukortit-normaali LoadImage 65 ms (ruutu 680)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-maski0 2048×2048 88 (ruutu 681)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:puukortit-normaali 2048×4096 RGBA_ETC2_UNorm (ruutu 682)
+MATKAKIRJA linssit: poikki: gpu Ulkokuori:Huippu mesh 1612316 kärkeä (ruutu 683)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:puut mesh 200000 kärkeä (ruutu 683)
+MATKAKIRJA linssit: poikki: ympäristö: puut 25000 (100000 kolmiota, 2048×4096 ETC2_RGBA8, normaali 2048×4096), 2,3 s
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-maski1 2048×2048 88 (ruutu 685)
+MATKAKIRJA linssit: poikki: kuori Huippu ASTC ei käytössä (laite ei tue ASTC_6x6 (Apple iOS simulator GPU)), JPEG varalla
+MATKAKIRJA linssit: poikki: raskas kuori Huippu LoadImage 400 ms (ruutu 689)
+MATKAKIRJA linssit: nimiruutu: rivi 1 "Linna latautuu…" 4,0 s
+MATKAKIRJA kehysajat {"t":26.19,"tavoiteMs":16.67,"liike":null,"lepo":{"n":46,"p50":33.33,"p95":33.93,"p99":83.38,"max":83.38,"yli15x":1},"peitto":{"n":33,"p50":33.35,"p95":666.67,"p99":1483.32,"max":1483.32,"yli15x":13},"kehyksia":79,"piirretty":79,"tilat":{"taysi":1,"lepo":45,"paikallaan":0,"kerros":0,"peitto":33},"gpuMs":1.19,"gpuKehyksia":79,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA linssit: poikki: raskas kuori Huippu Compress 71 ms (ruutu 690)
+MATKAKIRJA linssit: poikki: gpu Ulkokuori:Huippu 8192×8192 RGB_ETC2_SRGB (ruutu 691)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-kallio 1024×1024 RGB_ETC2_SRGB (ruutu 691)
+MATKAKIRJA linssit: poikki: kuori huippu valmis (1398447 kolmiota, 8192² ETC2_RGB, 2,2 s: lataus 0,2, purku 0,3, mesh 0,2, kuva (ASTC/JPEG) 1,6 s)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-nor-kallio 1024×1024 RGB_ETC2_UNorm (ruutu 697)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-varpukangas 1024×1024 RGB_ETC2_SRGB (ruutu 704)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-nor-varpukangas 1024×1024 RGB_ETC2_UNorm (ruutu 710)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-niitty 1024×1024 RGB_ETC2_SRGB (ruutu 717)
+MATKAKIRJA linssit: poikki: detalji valmis (4 sarjaa, normaali päällä, 1,1 s)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-nor-niitty 1024×1024 RGB_ETC2_UNorm (ruutu 723)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-neulaset 1024×1024 RGB_ETC2_SRGB (ruutu 730)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-nor-neulaset 1024×1024 RGB_ETC2_UNorm (ruutu 736)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-rantakivikko 1024×1024 RGB_ETC2_SRGB (ruutu 743)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-nor-rantakivikko 1024×1024 RGB_ETC2_UNorm (ruutu 749)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-hiekka 1024×1024 RGB_ETC2_SRGB (ruutu 756)
+MATKAKIRJA linssit: poikki: gpu Ymparisto:splat-nor-hiekka 1024×1024 RGB_ETC2_UNorm (ruutu 762)
+MATKAKIRJA linssit: poikki: ympäristö: maanpinta 6 kerrosta + normaalit, 3,9 s
+MATKAKIRJA linssit: poikki: ympäristö: osat valmiit 6,4 s (rinnakkain)
+MATKAKIRJA linssit: poikki: ympäristö valmis (Huippu, 6,4 s)
+MATKAKIRJA linssit: poikki: saapuminen alkaa (kaikki valmiina täydellä tarkkuudella: kuori, tilat 9/9, hahmot 10/10, ympäristö; odotettiin 6,4 s, välimuistista 88, verkosta 0)
+MATKAKIRJA linssit: poikki: välimuistin siivous: 342 Mt → 342 Mt (0 poistettu, paketti 2296811421200485)
+MATKAKIRJA linssit: nimiruutu: häivytys 6,7 s avauksesta
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA linssit: poikki: lapputyyli c: kortti 900×450, nimilappu ok, mitat ok
+MATKAKIRJA linssit: poikki: nimilaput 1/7: keittio
+MATKAKIRJA ui nostot: kuvat esiladataan FRA (99 + 74)
+MATKAKIRJA kehysajat {"t":31.21,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":212,"p50":16.67,"p95":23.7,"p99":166.68,"max":399.99,"yli15x":9},"kehyksia":212,"piirretty":212,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":212},"gpuMs":1.17,"gpuKehyksia":212,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA lampo {"t":31,"aika":"11:30:44","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":30.1,"tavoite":60,"piirtovali":1}
+MATKAKIRJA elävät hetket: äänet valmiit (4 × 3, 24000 Hz, tehosteväylällä)
+MATKAKIRJA elävät hetket: reitit1873 1373 (laivalinjoja 5, ratoja 1368), 84 ms
+MATKAKIRJA linssit: poikki: nimilaput 2/7: keittio,laituri
+MATKAKIRJA linssit: poikki: nimilaput 3/7: keittio,laituri,kierreportaat
+MATKAKIRJA linssit: poikki: nimilaput 3/7: keittio,laituri,fatabuuri
+MATKAKIRJA linssit: poikki: nimilaput 4/7: keittio,kappeli,laituri,fatabuuri
+MATKAKIRJA linssit: poikki: nimilaput 3/6: keittio,kappeli,fatabuuri
+MATKAKIRJA kehysajat {"t":36.23,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":17.26,"p99":17.27,"max":17.34,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":1.17,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA kehysajat {"t":41.24,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.68,"p95":17.24,"p99":17.26,"max":17.27,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":1.21,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA kehysajat {"t":46.26,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.66,"p95":17.28,"p99":17.35,"max":18.88,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":1.24,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA kehysajat {"t":51.28,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":17.26,"p99":17.26,"max":18.77,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":1.25,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA kehysajat {"t":56.28,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":300,"p50":16.67,"p95":17.25,"p99":17.26,"max":17.28,"yli15x":0},"kehyksia":300,"piirretty":300,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":300},"gpuMs":1.21,"gpuKehyksia":300,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA lampo {"t":61,"aika":"11:31:14","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":60.0,"tavoite":60,"piirtovali":1}
+MATKAKIRJA kehysajat {"t":61.29,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":17.26,"p99":17.27,"max":17.29,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":1.16,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA ui-komento: puu: 73 elementtiä → ui-puu.json
+MATKAKIRJA ui-komento: ui puu → ok
+MATKAKIRJA kehysajat {"t":66.31,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":17.26,"p99":17.31,"max":17.53,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":1.08,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA ui kosketusvälimuisti: mitätöinti käytössä (UnityEngine.UIElements.BaseVisualElementPanel)
+MATKAKIRJA kehysajat {"t":71.33,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":298,"p50":16.67,"p95":17.25,"p99":33.33,"max":33.35,"yli15x":0},"kehyksia":298,"piirretty":298,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":298},"gpuMs":1.07,"gpuKehyksia":298,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA kehysajat {"t":76.34,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":300,"p50":16.67,"p95":17.26,"p99":17.27,"max":33.46,"yli15x":0},"kehyksia":300,"piirretty":300,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":300},"gpuMs":1.18,"gpuKehyksia":300,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA linssit: poikki: kuunnelma laituri alkaa (edellinen -)
+MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu): laituri-k1
+MATKAKIRJA ui liiku: piiloon (kerronta)
+MATKAKIRJA kehysajat {"t":81.36,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":300,"p50":16.67,"p95":17.25,"p99":17.26,"max":32.88,"yli15x":0},"kehyksia":300,"piirretty":300,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":300},"gpuMs":1.15,"gpuKehyksia":300,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA kehysajat {"t":86.38,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":16.7,"p99":16.71,"max":16.73,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":0.99,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu): laituri-k2
+MATKAKIRJA lampo {"t":91,"aika":"11:31:44","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":59.8,"tavoite":60,"piirtovali":1}
+MATKAKIRJA kehysajat {"t":91.4,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":16.68,"p99":16.7,"max":17.2,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":1.01,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA kehysajat {"t":96.41,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":16.68,"p99":16.69,"max":16.72,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":1.15,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu): laituri-k3
+MATKAKIRJA linssit: poikki: kuunnelma laituri loppui (ei perillä)
+MATKAKIRJA linssit: poikki: kuunnelma fatabuuri alkaa (edellinen -)
+MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu): fatabuuri-k1
+MATKAKIRJA kehysajat {"t":101.43,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":16.68,"p99":16.69,"max":17.16,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":0.97,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA linssit: poikki: kuunnelma fatabuuri loppui (ei perillä)
+MATKAKIRJA linssit: poikki: kuunnelma kierreportaat alkaa (edellinen -)
+MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu): kierreportaat-k1
+MATKAKIRJA kehysajat {"t":106.44,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":16.7,"p99":16.72,"max":17.28,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":0.76,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA linssit: poikki: kuunnelma kierreportaat loppui (ei perillä)
+MATKAKIRJA kehysajat {"t":111.46,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":300,"p50":16.67,"p95":16.69,"p99":17.26,"max":32.76,"yli15x":0},"kehyksia":300,"piirretty":300,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":300},"gpuMs":0.82,"gpuKehyksia":300,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA linssit: poikki: kuunnelma muurinharja alkaa (edellinen -)
+MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu): muurinharja-k1
+MATKAKIRJA linssit: poikki: kuunnelma muurinharja loppui (ei perillä)
+MATKAKIRJA linssit: poikki: kuunnelma kappeli alkaa (edellinen -)
+MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu): kappeli-k1
+MATKAKIRJA kehysajat {"t":116.48,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":299,"p50":16.67,"p95":16.93,"p99":17.26,"max":33.46,"yli15x":0},"kehyksia":299,"piirretty":299,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":299},"gpuMs":0.88,"gpuKehyksia":299,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA linssit: poikki: kuunnelma kappeli loppui (ei perillä)
+MATKAKIRJA linssit: poikki: kuunnelma keskushalli alkaa (edellinen -)
+MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu): keskushalli-k1
+MATKAKIRJA lampo {"t":121,"aika":"11:32:14","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":59.9,"tavoite":60,"piirtovali":1}
+MATKAKIRJA kehysajat {"t":121.49,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":16.68,"p99":17.17,"max":17.23,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":0.81,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA linssit: poikki: kuunnelma keskushalli loppui (ei perillä)
+MATKAKIRJA linssit: poikki: kuunnelma keittio alkaa (edellinen -)
+MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu): keittio-k1
+MATKAKIRJA kehysajat {"t":126.51,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":17.26,"p99":17.28,"max":17.33,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":0.81,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA peli-komento: 131.16 aani mittaa 6 → ok [Kartta]
+MATKAKIRJA kehysajat {"t":131.53,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":17.18,"p99":17.26,"max":17.27,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":0.86,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu): keittio-k2
+MATKAKIRJA kehysajat {"t":136.54,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":17.1,"p99":17.26,"max":17.26,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":0.89,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA peli-komento: 137.16 aani → rms 0.05702, huippu 0.4506, kuuntelijoita 1, kuuntelija 1.00, näytetaajuus 24000 (24000 Stereo, dsp 1024), soivia 1 [DioraamaKertaaanet:@0,71], istunto: luokka AVAudioSessionCategoryPlayback, tila AVAudioSessionModeSpokenAudio, valinnat 1, voimakkuus 0.60, muut soivat 0, reitti Speaker, näytetaajuus 24000, kanavia 2 [Kartta]
+MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu): keittio-k3
+MATKAKIRJA kehysajat {"t":141.55,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":300,"p50":16.67,"p95":17.19,"p99":17.26,"max":17.26,"yli15x":0},"kehyksia":300,"piirretty":300,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":300},"gpuMs":0.83,"gpuKehyksia":300,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA kehysajat {"t":146.56,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":17.26,"p99":17.28,"max":17.3,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":0.83,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA linssit: poikki: puhevuoro linnalle (muut puheet katkaistu): keittio-k4
+MATKAKIRJA lampo {"t":151,"aika":"11:32:44","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":60.0,"tavoite":60,"piirtovali":1}
+MATKAKIRJA kehysajat {"t":151.58,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":301,"p50":16.67,"p95":17.25,"p99":17.26,"max":17.26,"yli15x":0},"kehyksia":301,"piirretty":301,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":301},"gpuMs":0.87,"gpuKehyksia":301,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":82}
+MATKAKIRJA linssit: taustaääni pois
+MATKAKIRJA linssit: poikki: linna suljettu, asento palautettu (Portrait)
+MATKAKIRJA linssit: auki: ei mitään
+MATKAKIRJA ui linssit: pelielementit -: portti False, vertailu False, radio False, linssi False, ok
+MATKAKIRJA linssit: poikki: kuunnelma keittio loppui (ei näkymää)
+MATKAKIRJA nostot: kylkivaihdot vedossa 0
+MATKAKIRJA ruutu: pallon kamera päälle
+MATKAKIRJA ui liiku: esiin (kerronta ohi)
+MATKAKIRJA kehysajat {"t":156.58,"tavoiteMs":16.67,"liike":null,"lepo":{"n":118,"p50":17.61,"p95":33.91,"p99":40.37,"max":183.52,"yli15x":1},"peitto":{"n":120,"p50":16.67,"p95":17.26,"p99":17.26,"max":50.01,"yli15x":1},"kehyksia":238,"piirretty":238,"tilat":{"taysi":69,"lepo":49,"paikallaan":0,"kerros":0,"peitto":120},"gpuMs":0.71,"gpuKehyksia":238,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":77}
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ui-komento: ui mylly peli helppo → =mylly: peli BottiHelppo
+MATKAKIRJA pallo: aloitusportin sumennus 4 pt (renderScale 0,248, Gauss päällä, pistekerroin 3)
+MATKAKIRJA pallo: pysäytyskuva kaapattu 299×651
+MATKAKIRJA pallo: kokoruudun pysäytyskuva päällä, kamera pois
+MATKAKIRJA ruutu: pallon kamera pois (peitto)
+MATKAKIRJA esilataaja: joutilas (2.)
+MATKAKIRJA linssit: esilataus: joutilaana ihmisen matkan kaari 20
+MATKAKIRJA puhe: esiladattu 3abb2a0edeb90f79af8559222b8fad87cb165e801eaf8276cc2f41ed8112ae2a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-marseille.mp3 (välimuistissa)
+MATKAKIRJA peli: joutilas marseille, ennakoidaan alpit, barcelona, pariisi, luxemburg, bryssel, madrid, venetsia
+MATKAKIRJA puhe: esiladattu f6e6b93955e60d238904ce40c3c6dded4acef1ee6c2ec5f5efd5c50b6485039a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-alpit.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: alpit (CHE, Kohdekaupungit) pohja 124 (z8–10, Z10 vanhemmasta 65), maasto 0, reliefi 0; näkymä lat 45,5–48,3, lon 6,4–8,3, 325 km
+MATKAKIRJA puhe: esiladattu f72f18ded777a21274562a09c951b3ab15bca5f1fdeec7a1fb4ace75941b31fa.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-barcelona.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: barcelona (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,1–45,3, lon -1,1–4,9, 1185 km
+MATKAKIRJA puhe: esiladattu d40c668c9fcbad391db2c72fa41ea0c5d3d615ef5a722277efdca2bc8fe20102.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-pariisi.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: luxemburg (LUX, Kohdekaupungit) pohja 177 (z8–10, Z10 vanhemmasta 42), maasto 0, reliefi 0; näkymä lat 48,5–51,3, lon 5,2–7,1, 325 km
+MATKAKIRJA saapumislaatat: bryssel (BEL, Kohdekaupungit) pohja 183 (z8–10, Z10 vanhemmasta 30), maasto 0, reliefi 0; näkymä lat 49,2–52,0, lon 3,4–5,3, 325 km
+MATKAKIRJA puhe: esiladattu 251628e92d1dab2f25281b758e08e1a559b51f1ab0aad0f9c9aed0709d496471.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-madrid.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: madrid (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,2–45,2, lon -6,6–-0,8, 1160 km
+MATKAKIRJA puhe: esiladattu 08546de81192ef8e6b8de4fee17f89f6ffa34706043e983c442676096b3f1788.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-venetsia.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: venetsia (ITA, Kohdekaupungit) pohja 232 (z6–8), maasto 0, reliefi 0; näkymä lat 35,8–49,0, lon 8,3–16,3, 1526 km
+MATKAKIRJA ui: saapumisen esilataus alpit (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus barcelona (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus pariisi (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus luxemburg (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus bryssel (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus madrid (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus venetsia (Kohdekaupungit)
+MATKAKIRJA saapumislaatat: alpit valmis 169/169 (kerma 45), epäonnistui 0, 0,1 s
+MATKAKIRJA saapumislaatat: luxemburg valmis 177/177 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: bryssel valmis 183/183 (kerma 0), epäonnistui 0, 0,3 s
+MATKAKIRJA saapumislaatat: barcelona valmis 310/310 (kerma 155), epäonnistui 0, 0,5 s
+MATKAKIRJA sisältö: sisalto/1/v551/moduulit/js/packs/fokuskohteet-lux.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA sisältö: sisalto/1/v551/moduulit/js/packs/fokuskohteet-esp.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA sisältö: sisalto/1/v551/moduulit/js/packs/fokuskohteet-che.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA sisältö: sisalto/1/v551/moduulit/js/packs/fokuskohteet-bel.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA sisältö: sisalto/1/v551/moduulit/js/packs/maastokohteet-lux.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA sisältö: sisalto/1/v551/moduulit/js/packs/nakyvat-kaupungit-ita.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu ITA
+MATKAKIRJA sisältö: sisalto/1/v551/moduulit/js/packs/maastokohteet-bel.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA sisältö: sisalto/1/v551/moduulit/js/packs/nakyvat-kaupungit-esp.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA sisältö: sisalto/1/v551/moduulit/js/packs/nakyvat-kaupungit-che.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu CHE
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA sisältö: sisalto/1/v551/moduulit/js/packs/nakyvat-kaupungit-lux.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu LUX
+MATKAKIRJA ui-komento: puu: 99 elementtiä → ui-puu.json
+MATKAKIRJA ui-komento: ui puu → ok
+MATKAKIRJA sisältö: sisalto/1/v551/moduulit/js/packs/nakyvat-kaupungit-bel.json ei ole tässä paketissa (valinnainen)
+MATKAKIRJA ui nostot: esiladattu BEL
+MATKAKIRJA saapumislaatat: madrid valmis 310/310 (kerma 155), epäonnistui 0, 1,2 s
+MATKAKIRJA kehysajat {"t":161.61,"tavoiteMs":16.67,"liike":null,"lepo":{"n":45,"p50":32.75,"p95":33.93,"p99":250,"max":250,"yli15x":2},"peitto":{"n":113,"p50":33.33,"p95":33.85,"p99":33.92,"max":33.93,"yli15x":0},"kehyksia":158,"piirretty":69,"tilat":{"taysi":18,"lepo":27,"paikallaan":0,"kerros":0,"peitto":113},"gpuMs":0.78,"gpuKehyksia":71,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA saapumislaatat: venetsia valmis 464/464 (kerma 232), epäonnistui 0, 1,7 s
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi 144 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot 14 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot valmis 14/14, epäonnistui 0 (0,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti 150 ((46,74, 5,38, 26642648 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi valmis 144/144, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti valmis 150/150, epäonnistui 0 (1,0 s)
+MATKAKIRJA kehysajat {"t":166.61,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":150,"p50":33.34,"p95":33.94,"p99":33.99,"max":62.93,"yli15x":1},"kehyksia":150,"piirretty":3,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":150},"gpuMs":null,"gpuKehyksia":0,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA mylly: ääni mylly-asetus
+MATKAKIRJA mylly: ääni mylly-asetus
+MATKAKIRJA esilataaja: joutilas (3.)
+MATKAKIRJA linssit: esilataus: joutilaana ihmisen matkan kaari 20
+MATKAKIRJA puhe: esiladattu 3abb2a0edeb90f79af8559222b8fad87cb165e801eaf8276cc2f41ed8112ae2a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-marseille.mp3 (välimuistissa)
+MATKAKIRJA peli: joutilas marseille, ennakoidaan alpit, barcelona, pariisi, luxemburg, bryssel, madrid, venetsia
+MATKAKIRJA puhe: esiladattu f6e6b93955e60d238904ce40c3c6dded4acef1ee6c2ec5f5efd5c50b6485039a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-alpit.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: alpit (CHE, Kohdekaupungit) pohja 124 (z8–10, Z10 vanhemmasta 65), maasto 0, reliefi 0; näkymä lat 45,5–48,3, lon 6,4–8,3, 325 km
+MATKAKIRJA puhe: esiladattu f72f18ded777a21274562a09c951b3ab15bca5f1fdeec7a1fb4ace75941b31fa.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-barcelona.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: barcelona (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,1–45,3, lon -1,1–4,9, 1185 km
+MATKAKIRJA puhe: esiladattu d40c668c9fcbad391db2c72fa41ea0c5d3d615ef5a722277efdca2bc8fe20102.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-pariisi.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: luxemburg (LUX, Kohdekaupungit) pohja 177 (z8–10, Z10 vanhemmasta 42), maasto 0, reliefi 0; näkymä lat 48,5–51,3, lon 5,2–7,1, 325 km
+MATKAKIRJA saapumislaatat: bryssel (BEL, Kohdekaupungit) pohja 183 (z8–10, Z10 vanhemmasta 30), maasto 0, reliefi 0; näkymä lat 49,2–52,0, lon 3,4–5,3, 325 km
+MATKAKIRJA puhe: esiladattu 251628e92d1dab2f25281b758e08e1a559b51f1ab0aad0f9c9aed0709d496471.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-madrid.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: madrid (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,2–45,2, lon -6,6–-0,8, 1160 km
+MATKAKIRJA puhe: esiladattu 08546de81192ef8e6b8de4fee17f89f6ffa34706043e983c442676096b3f1788.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-venetsia.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: venetsia (ITA, Kohdekaupungit) pohja 232 (z6–8), maasto 0, reliefi 0; näkymä lat 35,8–49,0, lon 8,3–16,3, 1526 km
+MATKAKIRJA ui: saapumisen esilataus alpit (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus barcelona (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus pariisi (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus luxemburg (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus bryssel (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus madrid (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus venetsia (Kohdekaupungit)
+MATKAKIRJA kehysajat {"t":171.64,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":167,"p50":33.32,"p95":33.92,"p99":36.32,"max":49.98,"yli15x":0},"kehyksia":167,"piirretty":55,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":167},"gpuMs":0.77,"gpuKehyksia":54,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA saapumislaatat: alpit valmis 169/169 (kerma 45), epäonnistui 0, 0,1 s
+MATKAKIRJA saapumislaatat: luxemburg valmis 177/177 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: bryssel valmis 183/183 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: barcelona valmis 310/310 (kerma 155), epäonnistui 0, 0,5 s
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu CHE
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu LUX
+MATKAKIRJA ui nostot: esiladattu BEL
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu ITA
+MATKAKIRJA saapumislaatat: madrid valmis 310/310 (kerma 155), epäonnistui 0, 1,5 s
+MATKAKIRJA saapumislaatat: venetsia valmis 464/464 (kerma 232), epäonnistui 0, 2,2 s
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi 144 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot 14 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti 150 ((46,74, 5,38, 26642648 m, 0°))
+MATKAKIRJA ui-komento: puu: 99 elementtiä → ui-puu.json
+MATKAKIRJA ui-komento: ui puu → ok
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi valmis 144/144, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot valmis 14/14, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti valmis 150/150, epäonnistui 0 (1,0 s)
+MATKAKIRJA kehysajat {"t":176.68,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":151,"p50":33.33,"p95":33.93,"p99":33.94,"max":33.94,"yli15x":0},"kehyksia":151,"piirretty":2,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":151},"gpuMs":null,"gpuKehyksia":0,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA ui nostot: kuvat esiladataan FRA (99 + 74)
+MATKAKIRJA mylly: Mylly: luovutit, vastassa botti (helppo) 2 siirrossa.
+MATKAKIRJA lampo {"t":181,"aika":"11:33:14","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":34.5,"tavoite":30,"piirtovali":1}
+MATKAKIRJA kehysajat {"t":181.68,"tavoiteMs":16.67,"liike":null,"lepo":null,"peitto":{"n":174,"p50":33.32,"p95":33.92,"p99":33.93,"max":49.42,"yli15x":0},"kehyksia":174,"piirretty":53,"tilat":{"taysi":0,"lepo":0,"paikallaan":0,"kerros":0,"peitto":174},"gpuMs":0.69,"gpuKehyksia":47,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA esilataaja: joutilas (4.)
+MATKAKIRJA linssit: esilataus: joutilaana ihmisen matkan kaari 20
+MATKAKIRJA puhe: esiladattu 3abb2a0edeb90f79af8559222b8fad87cb165e801eaf8276cc2f41ed8112ae2a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-marseille.mp3 (välimuistissa)
+MATKAKIRJA peli: joutilas marseille, ennakoidaan alpit, barcelona, pariisi, luxemburg, bryssel, madrid, venetsia
+MATKAKIRJA puhe: esiladattu f6e6b93955e60d238904ce40c3c6dded4acef1ee6c2ec5f5efd5c50b6485039a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-alpit.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: alpit (CHE, Kohdekaupungit) pohja 124 (z8–10, Z10 vanhemmasta 65), maasto 0, reliefi 0; näkymä lat 45,5–48,3, lon 6,4–8,3, 325 km
+MATKAKIRJA puhe: esiladattu f72f18ded777a21274562a09c951b3ab15bca5f1fdeec7a1fb4ace75941b31fa.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-barcelona.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: barcelona (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,1–45,3, lon -1,1–4,9, 1185 km
+MATKAKIRJA puhe: esiladattu d40c668c9fcbad391db2c72fa41ea0c5d3d615ef5a722277efdca2bc8fe20102.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-pariisi.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: luxemburg (LUX, Kohdekaupungit) pohja 177 (z8–10, Z10 vanhemmasta 42), maasto 0, reliefi 0; näkymä lat 48,5–51,3, lon 5,2–7,1, 325 km
+MATKAKIRJA saapumislaatat: bryssel (BEL, Kohdekaupungit) pohja 183 (z8–10, Z10 vanhemmasta 30), maasto 0, reliefi 0; näkymä lat 49,2–52,0, lon 3,4–5,3, 325 km
+MATKAKIRJA puhe: esiladattu 251628e92d1dab2f25281b758e08e1a559b51f1ab0aad0f9c9aed0709d496471.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-madrid.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: madrid (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,2–45,2, lon -6,6–-0,8, 1160 km
+MATKAKIRJA puhe: esiladattu 08546de81192ef8e6b8de4fee17f89f6ffa34706043e983c442676096b3f1788.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-venetsia.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: venetsia (ITA, Kohdekaupungit) pohja 232 (z6–8), maasto 0, reliefi 0; näkymä lat 35,8–49,0, lon 8,3–16,3, 1526 km
+MATKAKIRJA ui: saapumisen esilataus alpit (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus barcelona (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus pariisi (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus luxemburg (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus bryssel (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus madrid (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus venetsia (Kohdekaupungit)
+MATKAKIRJA saapumislaatat: alpit valmis 169/169 (kerma 45), epäonnistui 0, 0,1 s
+MATKAKIRJA saapumislaatat: luxemburg valmis 177/177 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: bryssel valmis 183/183 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: barcelona valmis 310/310 (kerma 155), epäonnistui 0, 0,6 s
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu CHE
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu LUX
+MATKAKIRJA ui nostot: esiladattu BEL
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu ITA
+MATKAKIRJA saapumislaatat: madrid valmis 310/310 (kerma 155), epäonnistui 0, 1,5 s
+MATKAKIRJA nostot: kylkivaihdot vedossa 0
+MATKAKIRJA ruutu: pallon kamera päälle
+MATKAKIRJA pallo: kokoruudun pysäytyskuva pois
+MATKAKIRJA saapumislaatat: venetsia valmis 464/464 (kerma 232), epäonnistui 0, 1,8 s
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 54 unused Assets / (0.7 MB). Loaded Objects now: 12586.
+Memory consumption went from 271.9 MB to 271.2 MB.
+Total: 32.417584 ms (FindLiveObjects: 0.647958 ms CreateObjectMapping: 0.117792 ms MarkObjects: 31.039083 ms  DeleteObjects: 0.612584 ms)
+
+MATKAKIRJA pallo: aloitusportin sumennus pois
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi 144 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot 14 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti 150 ((46,74, 5,38, 26642648 m, 0°))
+MATKAKIRJA kehysajat {"t":186.69,"tavoiteMs":16.67,"liike":null,"lepo":{"n":45,"p50":16.67,"p95":17.26,"p99":49.43,"max":49.43,"yli15x":0},"peitto":{"n":143,"p50":33.21,"p95":33.93,"p99":34.02,"max":49.43,"yli15x":0},"kehyksia":188,"piirretty":78,"tilat":{"taysi":45,"lepo":0,"paikallaan":0,"kerros":0,"peitto":143},"gpuMs":0.57,"gpuKehyksia":76,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA ui nostot: kuvat esiladataan FRA (99 + 74)
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi valmis 144/144, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot valmis 14/14, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti valmis 150/150, epäonnistui 0 (1,0 s)
+MATKAKIRJA esilataaja: joutilas (5.)
+MATKAKIRJA linssit: esilataus: joutilaana ihmisen matkan kaari 20
+MATKAKIRJA puhe: esiladattu 3abb2a0edeb90f79af8559222b8fad87cb165e801eaf8276cc2f41ed8112ae2a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-marseille.mp3 (välimuistissa)
+MATKAKIRJA peli: joutilas marseille, ennakoidaan alpit, barcelona, pariisi, luxemburg, bryssel, madrid, venetsia
+MATKAKIRJA puhe: esiladattu f6e6b93955e60d238904ce40c3c6dded4acef1ee6c2ec5f5efd5c50b6485039a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-alpit.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: alpit (CHE, Kohdekaupungit) pohja 124 (z8–10, Z10 vanhemmasta 65), maasto 0, reliefi 0; näkymä lat 45,5–48,3, lon 6,4–8,3, 325 km
+MATKAKIRJA puhe: esiladattu f72f18ded777a21274562a09c951b3ab15bca5f1fdeec7a1fb4ace75941b31fa.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-barcelona.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: barcelona (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,1–45,3, lon -1,1–4,9, 1185 km
+MATKAKIRJA puhe: esiladattu d40c668c9fcbad391db2c72fa41ea0c5d3d615ef5a722277efdca2bc8fe20102.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-pariisi.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: luxemburg (LUX, Kohdekaupungit) pohja 177 (z8–10, Z10 vanhemmasta 42), maasto 0, reliefi 0; näkymä lat 48,5–51,3, lon 5,2–7,1, 325 km
+MATKAKIRJA saapumislaatat: bryssel (BEL, Kohdekaupungit) pohja 183 (z8–10, Z10 vanhemmasta 30), maasto 0, reliefi 0; näkymä lat 49,2–52,0, lon 3,4–5,3, 325 km
+MATKAKIRJA puhe: esiladattu 251628e92d1dab2f25281b758e08e1a559b51f1ab0aad0f9c9aed0709d496471.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-madrid.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: madrid (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,2–45,2, lon -6,6–-0,8, 1160 km
+MATKAKIRJA puhe: esiladattu 08546de81192ef8e6b8de4fee17f89f6ffa34706043e983c442676096b3f1788.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-venetsia.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: venetsia (ITA, Kohdekaupungit) pohja 232 (z6–8), maasto 0, reliefi 0; näkymä lat 35,8–49,0, lon 8,3–16,3, 1526 km
+MATKAKIRJA ui: saapumisen esilataus alpit (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus barcelona (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus pariisi (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus luxemburg (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus bryssel (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus madrid (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus venetsia (Kohdekaupungit)
+MATKAKIRJA saapumislaatat: alpit valmis 169/169 (kerma 45), epäonnistui 0, 0,1 s
+MATKAKIRJA saapumislaatat: luxemburg valmis 177/177 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: bryssel valmis 183/183 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu CHE
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu LUX
+MATKAKIRJA ui nostot: esiladattu BEL
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu ITA
+MATKAKIRJA saapumislaatat: barcelona valmis 310/310 (kerma 155), epäonnistui 0, 0,6 s
+MATKAKIRJA saapumislaatat: madrid valmis 310/310 (kerma 155), epäonnistui 0, 1,4 s
+MATKAKIRJA saapumislaatat: venetsia valmis 464/464 (kerma 232), epäonnistui 0, 2,0 s
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi 144 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot 14 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti 150 ((46,74, 5,38, 26642648 m, 0°))
+MATKAKIRJA kehysajat {"t":191.7,"tavoiteMs":16.67,"liike":null,"lepo":{"n":167,"p50":33.33,"p95":33.92,"p99":33.93,"max":33.94,"yli15x":0},"peitto":null,"kehyksia":167,"piirretty":125,"tilat":{"taysi":34,"lepo":91,"paikallaan":42,"kerros":0,"peitto":0},"gpuMs":0.47,"gpuKehyksia":124,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi valmis 144/144, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot valmis 14/14, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti valmis 150/150, epäonnistui 0 (1,0 s)
+MATKAKIRJA ui-komento: puu: 76 elementtiä → ui-puu.json
+MATKAKIRJA ui-komento: ui puu → ok
+MATKAKIRJA esilataaja: joutilas (6.)
+MATKAKIRJA linssit: esilataus: joutilaana ihmisen matkan kaari 20
+MATKAKIRJA puhe: esiladattu 3abb2a0edeb90f79af8559222b8fad87cb165e801eaf8276cc2f41ed8112ae2a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-marseille.mp3 (välimuistissa)
+MATKAKIRJA peli: joutilas marseille, ennakoidaan alpit, barcelona, pariisi, luxemburg, bryssel, madrid, venetsia
+MATKAKIRJA puhe: esiladattu f6e6b93955e60d238904ce40c3c6dded4acef1ee6c2ec5f5efd5c50b6485039a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-alpit.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: alpit (CHE, Kohdekaupungit) pohja 124 (z8–10, Z10 vanhemmasta 65), maasto 0, reliefi 0; näkymä lat 45,5–48,3, lon 6,4–8,3, 325 km
+MATKAKIRJA puhe: esiladattu f72f18ded777a21274562a09c951b3ab15bca5f1fdeec7a1fb4ace75941b31fa.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-barcelona.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: barcelona (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,1–45,3, lon -1,1–4,9, 1185 km
+MATKAKIRJA puhe: esiladattu d40c668c9fcbad391db2c72fa41ea0c5d3d615ef5a722277efdca2bc8fe20102.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-pariisi.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: luxemburg (LUX, Kohdekaupungit) pohja 177 (z8–10, Z10 vanhemmasta 42), maasto 0, reliefi 0; näkymä lat 48,5–51,3, lon 5,2–7,1, 325 km
+MATKAKIRJA saapumislaatat: bryssel (BEL, Kohdekaupungit) pohja 183 (z8–10, Z10 vanhemmasta 30), maasto 0, reliefi 0; näkymä lat 49,2–52,0, lon 3,4–5,3, 325 km
+MATKAKIRJA puhe: esiladattu 251628e92d1dab2f25281b758e08e1a559b51f1ab0aad0f9c9aed0709d496471.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-madrid.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: madrid (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,2–45,2, lon -6,6–-0,8, 1160 km
+MATKAKIRJA puhe: esiladattu 08546de81192ef8e6b8de4fee17f89f6ffa34706043e983c442676096b3f1788.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-venetsia.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: venetsia (ITA, Kohdekaupungit) pohja 232 (z6–8), maasto 0, reliefi 0; näkymä lat 35,8–49,0, lon 8,3–16,3, 1526 km
+MATKAKIRJA ui: saapumisen esilataus alpit (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus barcelona (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus pariisi (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus luxemburg (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus bryssel (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus madrid (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus venetsia (Kohdekaupungit)
+MATKAKIRJA saapumislaatat: alpit valmis 169/169 (kerma 45), epäonnistui 0, 0,1 s
+MATKAKIRJA saapumislaatat: luxemburg valmis 177/177 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: bryssel valmis 183/183 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu CHE
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu LUX
+MATKAKIRJA ui nostot: esiladattu BEL
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu ITA
+MATKAKIRJA kehysajat {"t":196.71,"tavoiteMs":16.67,"liike":null,"lepo":{"n":213,"p50":17.15,"p95":33.81,"p99":33.93,"max":33.94,"yli15x":0},"peitto":null,"kehyksia":213,"piirretty":127,"tilat":{"taysi":125,"lepo":0,"paikallaan":88,"kerros":0,"peitto":0},"gpuMs":0.44,"gpuKehyksia":128,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA saapumislaatat: barcelona valmis 310/310 (kerma 155), epäonnistui 0, 1,0 s
+MATKAKIRJA saapumislaatat: madrid valmis 310/310 (kerma 155), epäonnistui 0, 2,4 s
+MATKAKIRJA ui nostot: kuvat esiladataan FRA (99 + 74)
+MATKAKIRJA saapumislaatat: venetsia valmis 464/464 (kerma 232), epäonnistui 0, 3,6 s
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi 144 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot 14 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti 150 ((46,74, 5,38, 26642648 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi valmis 144/144, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot valmis 14/14, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti valmis 150/150, epäonnistui 0 (1,0 s)
+MATKAKIRJA kehysajat {"t":201.74,"tavoiteMs":16.67,"liike":null,"lepo":{"n":151,"p50":33.34,"p95":33.93,"p99":33.94,"max":33.96,"yli15x":0},"peitto":null,"kehyksia":151,"piirretty":2,"tilat":{"taysi":0,"lepo":0,"paikallaan":151,"kerros":0,"peitto":0},"gpuMs":null,"gpuKehyksia":0,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA ui nostot: kuvat esiladataan FRA (99 + 74)
+MATKAKIRJA linssit: elävä hetki: Sade FRA:Bourgogne-Franche-Comté (46,74, 5,38), näkymä 305 km, korkeus 1420 km, rata 37 km, ääni hetki-sade
+WARNING: RGBA Compressed ASTC6X6 sRGB format is not supported, decompressing texture
+MATKAKIRJA ui-komento: ui mylly peli helppo → =mylly: peli BottiHelppo
+MATKAKIRJA pallo: aloitusportin sumennus 4 pt (renderScale 0,248, Gauss päällä, pistekerroin 3)
+MATKAKIRJA pallo: pysäytyskuva kaapattu 299×651
+MATKAKIRJA pallo: kokoruudun pysäytyskuva päällä, kamera pois
+MATKAKIRJA ruutu: pallon kamera pois (peitto)
+MATKAKIRJA kehysajat {"t":206.78,"tavoiteMs":16.67,"liike":null,"lepo":{"n":129,"p50":33.28,"p95":33.93,"p99":33.98,"max":39.45,"yli15x":0},"peitto":{"n":51,"p50":16.71,"p95":33.36,"p99":33.85,"max":33.85,"yli15x":0},"kehyksia":180,"piirretty":81,"tilat":{"taysi":20,"lepo":0,"paikallaan":89,"kerros":20,"peitto":51},"gpuMs":0.82,"gpuKehyksia":78,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA esilataaja: joutilas (7.)
+MATKAKIRJA linssit: esilataus: joutilaana ihmisen matkan kaari 20
+MATKAKIRJA puhe: esiladattu 3abb2a0edeb90f79af8559222b8fad87cb165e801eaf8276cc2f41ed8112ae2a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-marseille.mp3 (välimuistissa)
+MATKAKIRJA peli: joutilas marseille, ennakoidaan alpit, barcelona, pariisi, luxemburg, bryssel, madrid, venetsia
+MATKAKIRJA puhe: esiladattu f6e6b93955e60d238904ce40c3c6dded4acef1ee6c2ec5f5efd5c50b6485039a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-alpit.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: alpit (CHE, Kohdekaupungit) pohja 124 (z8–10, Z10 vanhemmasta 65), maasto 0, reliefi 0; näkymä lat 45,5–48,3, lon 6,4–8,3, 325 km
+MATKAKIRJA puhe: esiladattu f72f18ded777a21274562a09c951b3ab15bca5f1fdeec7a1fb4ace75941b31fa.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-barcelona.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: barcelona (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,1–45,3, lon -1,1–4,9, 1185 km
+MATKAKIRJA puhe: esiladattu d40c668c9fcbad391db2c72fa41ea0c5d3d615ef5a722277efdca2bc8fe20102.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-pariisi.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: luxemburg (LUX, Kohdekaupungit) pohja 177 (z8–10, Z10 vanhemmasta 42), maasto 0, reliefi 0; näkymä lat 48,5–51,3, lon 5,2–7,1, 325 km
+MATKAKIRJA saapumislaatat: bryssel (BEL, Kohdekaupungit) pohja 183 (z8–10, Z10 vanhemmasta 30), maasto 0, reliefi 0; näkymä lat 49,2–52,0, lon 3,4–5,3, 325 km
+MATKAKIRJA puhe: esiladattu 251628e92d1dab2f25281b758e08e1a559b51f1ab0aad0f9c9aed0709d496471.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-madrid.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: madrid (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,2–45,2, lon -6,6–-0,8, 1160 km
+MATKAKIRJA puhe: esiladattu 08546de81192ef8e6b8de4fee17f89f6ffa34706043e983c442676096b3f1788.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-venetsia.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: venetsia (ITA, Kohdekaupungit) pohja 232 (z6–8), maasto 0, reliefi 0; näkymä lat 35,8–49,0, lon 8,3–16,3, 1526 km
+MATKAKIRJA ui: saapumisen esilataus alpit (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus barcelona (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus pariisi (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus luxemburg (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus bryssel (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus madrid (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus venetsia (Kohdekaupungit)
+MATKAKIRJA saapumislaatat: alpit valmis 169/169 (kerma 45), epäonnistui 0, 0,1 s
+MATKAKIRJA saapumislaatat: luxemburg valmis 177/177 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: bryssel valmis 183/183 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA nostot: kylkivaihdot vedossa 0
+MATKAKIRJA ruutu: pallon kamera päälle
+MATKAKIRJA pallo: kokoruudun pysäytyskuva pois
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu CHE
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu LUX
+MATKAKIRJA ui nostot: esiladattu BEL
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu ITA
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 13 unused Assets / (304.7 KB). Loaded Objects now: 12589.
+Memory consumption went from 273.1 MB to 272.8 MB.
+Total: 31.708125 ms (FindLiveObjects: 0.315750 ms CreateObjectMapping: 0.066916 ms MarkObjects: 31.221625 ms  DeleteObjects: 0.103625 ms)
+
+MATKAKIRJA pallo: aloitusportin sumennus pois
+MATKAKIRJA saapumislaatat: barcelona valmis 310/310 (kerma 155), epäonnistui 0, 0,9 s
+MATKAKIRJA lampo {"t":211,"aika":"11:33:44","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":35.9,"tavoite":30,"piirtovali":1}
+MATKAKIRJA saapumislaatat: madrid valmis 310/310 (kerma 155), epäonnistui 0, 3,3 s
+MATKAKIRJA kehysajat {"t":211.81,"tavoiteMs":16.67,"liike":null,"lepo":{"n":105,"p50":32.78,"p95":33.92,"p99":33.93,"max":49.71,"yli15x":0},"peitto":{"n":67,"p50":33.33,"p95":33.93,"p99":49.99,"max":49.99,"yli15x":0},"kehyksia":172,"piirretty":107,"tilat":{"taysi":44,"lepo":61,"paikallaan":0,"kerros":0,"peitto":67},"gpuMs":0.5,"gpuKehyksia":102,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA ui nostot: kuvat esiladataan FRA (99 + 74)
+MATKAKIRJA saapumislaatat: venetsia valmis 464/464 (kerma 232), epäonnistui 0, 3,8 s
+MATKAKIRJA ui-komento: puu: 75 elementtiä → ui-puu.json
+MATKAKIRJA ui-komento: ui puu → ok
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi 144 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot 14 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti 150 ((46,74, 5,38, 26642648 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi valmis 144/144, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot valmis 14/14, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti valmis 150/150, epäonnistui 0 (1,0 s)
+MATKAKIRJA esilataaja: joutilas (8.)
+MATKAKIRJA linssit: esilataus: joutilaana ihmisen matkan kaari 20
+MATKAKIRJA puhe: esiladattu 3abb2a0edeb90f79af8559222b8fad87cb165e801eaf8276cc2f41ed8112ae2a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-marseille.mp3 (välimuistissa)
+MATKAKIRJA peli: joutilas marseille, ennakoidaan alpit, barcelona, pariisi, luxemburg, bryssel, madrid, venetsia
+MATKAKIRJA puhe: esiladattu f6e6b93955e60d238904ce40c3c6dded4acef1ee6c2ec5f5efd5c50b6485039a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-alpit.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: alpit (CHE, Kohdekaupungit) pohja 124 (z8–10, Z10 vanhemmasta 65), maasto 0, reliefi 0; näkymä lat 45,5–48,3, lon 6,4–8,3, 325 km
+MATKAKIRJA puhe: esiladattu f72f18ded777a21274562a09c951b3ab15bca5f1fdeec7a1fb4ace75941b31fa.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-barcelona.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: barcelona (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,1–45,3, lon -1,1–4,9, 1185 km
+MATKAKIRJA puhe: esiladattu d40c668c9fcbad391db2c72fa41ea0c5d3d615ef5a722277efdca2bc8fe20102.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-pariisi.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: luxemburg (LUX, Kohdekaupungit) pohja 177 (z8–10, Z10 vanhemmasta 42), maasto 0, reliefi 0; näkymä lat 48,5–51,3, lon 5,2–7,1, 325 km
+MATKAKIRJA saapumislaatat: bryssel (BEL, Kohdekaupungit) pohja 183 (z8–10, Z10 vanhemmasta 30), maasto 0, reliefi 0; näkymä lat 49,2–52,0, lon 3,4–5,3, 325 km
+MATKAKIRJA puhe: esiladattu 251628e92d1dab2f25281b758e08e1a559b51f1ab0aad0f9c9aed0709d496471.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-madrid.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: madrid (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,2–45,2, lon -6,6–-0,8, 1160 km
+MATKAKIRJA puhe: esiladattu 08546de81192ef8e6b8de4fee17f89f6ffa34706043e983c442676096b3f1788.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-venetsia.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: venetsia (ITA, Kohdekaupungit) pohja 232 (z6–8), maasto 0, reliefi 0; näkymä lat 35,8–49,0, lon 8,3–16,3, 1526 km
+MATKAKIRJA ui: saapumisen esilataus alpit (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus barcelona (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus pariisi (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus luxemburg (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus bryssel (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus madrid (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus venetsia (Kohdekaupungit)
+MATKAKIRJA saapumislaatat: alpit valmis 169/169 (kerma 45), epäonnistui 0, 0,1 s
+MATKAKIRJA saapumislaatat: luxemburg valmis 177/177 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: bryssel valmis 183/183 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: barcelona valmis 310/310 (kerma 155), epäonnistui 0, 0,3 s
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu CHE
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu LUX
+MATKAKIRJA ui nostot: esiladattu BEL
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu ITA
+MATKAKIRJA saapumislaatat: madrid valmis 310/310 (kerma 155), epäonnistui 0, 1,1 s
+MATKAKIRJA verkko-odotus {"t":215.55,"vaihe":"nosto","mita":"kohde:pompeji@ITA","ms":0,"haut":0}
+WARNING: RGBA Compressed ASTC4X4 sRGB format is not supported, decompressing texture
+MATKAKIRJA peli: muste löytö kohde:pompeji@ITA (ei maakuntaa 0/0)
+MATKAKIRJA ui-komento: ui nosto kohde:pompeji@ITA: auki · Kohde · HISTORIA · Pompeji · selain 0/87 · historia (0/21)
+MATKAKIRJA ui-komento: ui nosto kohde:pompeji@ITA → ok
+MATKAKIRJA pallo: aloitusportin sumennus 2,3 pt (renderScale 0,441, Gauss päällä, pistekerroin 3)
+MATKAKIRJA ui nostot: avaus kohde:pompeji@ITA: data 6 ms (0 kehystä), näkyvä 16 ms, valmis 16 ms (1 kehystä), kuvia 1
+MATKAKIRJA puhe: esiladattu esihaettu pala ok
+MATKAKIRJA saapumislaatat: venetsia valmis 464/464 (kerma 232), epäonnistui 0, 1,6 s
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi 144 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot 14 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti 150 ((46,74, 5,38, 26642648 m, 0°))
+MATKAKIRJA kehysajat {"t":216.84,"tavoiteMs":16.67,"liike":null,"lepo":{"n":176,"p50":33.28,"p95":33.91,"p99":33.93,"max":33.95,"yli15x":0},"peitto":null,"kehyksia":176,"piirretty":97,"tilat":{"taysi":49,"lepo":46,"paikallaan":81,"kerros":0,"peitto":0},"gpuMs":0.47,"gpuKehyksia":95,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi valmis 144/144, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot valmis 14/14, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti valmis 150/150, epäonnistui 0 (1,0 s)
+MATKAKIRJA esilataaja: joutilas (9.)
+MATKAKIRJA linssit: esilataus: joutilaana ihmisen matkan kaari 20
+MATKAKIRJA puhe: esiladattu 3abb2a0edeb90f79af8559222b8fad87cb165e801eaf8276cc2f41ed8112ae2a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-marseille.mp3 (välimuistissa)
+MATKAKIRJA peli: joutilas marseille, ennakoidaan alpit, barcelona, pariisi, luxemburg, bryssel, madrid, venetsia
+MATKAKIRJA puhe: esiladattu f6e6b93955e60d238904ce40c3c6dded4acef1ee6c2ec5f5efd5c50b6485039a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-alpit.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: alpit (CHE, Kohdekaupungit) pohja 124 (z8–10, Z10 vanhemmasta 65), maasto 0, reliefi 0; näkymä lat 45,5–48,3, lon 6,4–8,3, 325 km
+MATKAKIRJA puhe: esiladattu f72f18ded777a21274562a09c951b3ab15bca5f1fdeec7a1fb4ace75941b31fa.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-barcelona.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: barcelona (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,1–45,3, lon -1,1–4,9, 1185 km
+MATKAKIRJA puhe: esiladattu d40c668c9fcbad391db2c72fa41ea0c5d3d615ef5a722277efdca2bc8fe20102.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-pariisi.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: luxemburg (LUX, Kohdekaupungit) pohja 177 (z8–10, Z10 vanhemmasta 42), maasto 0, reliefi 0; näkymä lat 48,5–51,3, lon 5,2–7,1, 325 km
+MATKAKIRJA saapumislaatat: bryssel (BEL, Kohdekaupungit) pohja 183 (z8–10, Z10 vanhemmasta 30), maasto 0, reliefi 0; näkymä lat 49,2–52,0, lon 3,4–5,3, 325 km
+MATKAKIRJA puhe: esiladattu 251628e92d1dab2f25281b758e08e1a559b51f1ab0aad0f9c9aed0709d496471.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-madrid.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: madrid (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,2–45,2, lon -6,6–-0,8, 1160 km
+MATKAKIRJA puhe: esiladattu 08546de81192ef8e6b8de4fee17f89f6ffa34706043e983c442676096b3f1788.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-venetsia.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: venetsia (ITA, Kohdekaupungit) pohja 232 (z6–8), maasto 0, reliefi 0; näkymä lat 35,8–49,0, lon 8,3–16,3, 1526 km
+MATKAKIRJA ui: saapumisen esilataus alpit (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus barcelona (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus pariisi (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus luxemburg (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus bryssel (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus madrid (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus venetsia (Kohdekaupungit)
+MATKAKIRJA saapumislaatat: alpit valmis 169/169 (kerma 45), epäonnistui 0, 0,1 s
+MATKAKIRJA saapumislaatat: luxemburg valmis 177/177 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: bryssel valmis 183/183 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: barcelona valmis 310/310 (kerma 155), epäonnistui 0, 0,4 s
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu CHE
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu LUX
+MATKAKIRJA ui nostot: esiladattu BEL
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu ITA
+MATKAKIRJA saapumislaatat: madrid valmis 310/310 (kerma 155), epäonnistui 0, 0,8 s
+MATKAKIRJA saapumislaatat: venetsia valmis 464/464 (kerma 232), epäonnistui 0, 1,2 s
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi 144 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot 14 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti 150 ((46,74, 5,38, 26642648 m, 0°))
+MATKAKIRJA ui-komento: puu: 103 elementtiä → ui-puu.json
+MATKAKIRJA ui-komento: ui puu → ok
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi valmis 144/144, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot valmis 14/14, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti valmis 150/150, epäonnistui 0 (1,0 s)
+MATKAKIRJA kehysajat {"t":221.85,"tavoiteMs":16.67,"liike":null,"lepo":{"n":150,"p50":33.34,"p95":33.93,"p99":33.95,"max":33.97,"yli15x":0},"peitto":null,"kehyksia":150,"piirretty":78,"tilat":{"taysi":0,"lepo":77,"paikallaan":73,"kerros":0,"peitto":0},"gpuMs":0.48,"gpuKehyksia":80,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA ui nostot: kuvat esiladataan FRA (99 + 74)
+MATKAKIRJA kehysajat {"t":226.88,"tavoiteMs":16.67,"liike":null,"lepo":{"n":151,"p50":33.33,"p95":33.93,"p99":33.98,"max":34,"yli15x":0},"peitto":null,"kehyksia":151,"piirretty":3,"tilat":{"taysi":0,"lepo":0,"paikallaan":151,"kerros":0,"peitto":0},"gpuMs":null,"gpuKehyksia":0,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA verkko-odotus {"t":229.81,"vaihe":"nosto","mita":"pois","ms":0,"haut":0,"tulos":"ei sisältöä"}
+MATKAKIRJA ui nostot: ei sisältöä valolle pois
+MATKAKIRJA ui-komento: ui nosto pois: ei sisältöä valolle pois
+MATKAKIRJA ui-komento: ui nosto pois → ok
+MATKAKIRJA ui nostot: kuvat esiladataan FRA (99 + 74)
+MATKAKIRJA ui-komento: ui kaupunki ateena → ok
+MATKAKIRJA kehysajat {"t":231.89,"tavoiteMs":16.67,"liike":null,"lepo":{"n":152,"p50":33.34,"p95":33.92,"p99":33.93,"max":33.93,"yli15x":0},"peitto":null,"kehyksia":152,"piirretty":5,"tilat":{"taysi":3,"lepo":0,"paikallaan":149,"kerros":0,"peitto":0},"gpuMs":null,"gpuKehyksia":0,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":60,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA ui sisältö: kaupunkilehti ateena liitetty (1)
+MATKAKIRJA ui-komento: kaupunki ateena: Skandaalit (2): Maratonhuijaus, Elginin marmorit; Historia (1): Diogeneen astia; Historian hetket (1): Louis 1896
+MATKAKIRJA ui kuva: iso 3971 kt purettu 1024×1536
+MATKAKIRJA ui nostot: kuvat esiladataan FRA (99 + 74)
+MATKAKIRJA esilataaja: joutilas (10.)
+MATKAKIRJA linssit: esilataus: joutilaana ihmisen matkan kaari 20
+MATKAKIRJA puhe: esiladattu 3abb2a0edeb90f79af8559222b8fad87cb165e801eaf8276cc2f41ed8112ae2a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-marseille.mp3 (välimuistissa)
+MATKAKIRJA peli: joutilas marseille, ennakoidaan alpit, barcelona, pariisi, luxemburg, bryssel, madrid, venetsia
+MATKAKIRJA puhe: esiladattu f6e6b93955e60d238904ce40c3c6dded4acef1ee6c2ec5f5efd5c50b6485039a.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-alpit.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: alpit (CHE, Kohdekaupungit) pohja 124 (z8–10, Z10 vanhemmasta 65), maasto 0, reliefi 0; näkymä lat 45,5–48,3, lon 6,4–8,3, 325 km
+MATKAKIRJA puhe: esiladattu f72f18ded777a21274562a09c951b3ab15bca5f1fdeec7a1fb4ace75941b31fa.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-barcelona.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: barcelona (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,1–45,3, lon -1,1–4,9, 1185 km
+MATKAKIRJA puhe: esiladattu d40c668c9fcbad391db2c72fa41ea0c5d3d615ef5a722277efdca2bc8fe20102.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-pariisi.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: luxemburg (LUX, Kohdekaupungit) pohja 177 (z8–10, Z10 vanhemmasta 42), maasto 0, reliefi 0; näkymä lat 48,5–51,3, lon 5,2–7,1, 325 km
+MATKAKIRJA saapumislaatat: bryssel (BEL, Kohdekaupungit) pohja 183 (z8–10, Z10 vanhemmasta 30), maasto 0, reliefi 0; näkymä lat 49,2–52,0, lon 3,4–5,3, 325 km
+MATKAKIRJA puhe: esiladattu 251628e92d1dab2f25281b758e08e1a559b51f1ab0aad0f9c9aed0709d496471.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-madrid.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: madrid (ESP, Kohdekaupungit) pohja 155 (z6–8), maasto 0, reliefi 0; näkymä lat 35,2–45,2, lon -6,6–-0,8, 1160 km
+MATKAKIRJA puhe: esiladattu 08546de81192ef8e6b8de4fee17f89f6ffa34706043e983c442676096b3f1788.mp3 (välimuistissa)
+MATKAKIRJA puhe: esiladattu puhe-fokus-matkakirja-venetsia.mp3 (välimuistissa)
+MATKAKIRJA saapumislaatat: venetsia (ITA, Kohdekaupungit) pohja 232 (z6–8), maasto 0, reliefi 0; näkymä lat 35,8–49,0, lon 8,3–16,3, 1526 km
+MATKAKIRJA ui: saapumisen esilataus alpit (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus barcelona (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus pariisi (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus luxemburg (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus bryssel (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus madrid (Kohdekaupungit)
+MATKAKIRJA ui: saapumisen esilataus venetsia (Kohdekaupungit)
+MATKAKIRJA saapumislaatat: alpit valmis 169/169 (kerma 45), epäonnistui 0, 0,1 s
+MATKAKIRJA saapumislaatat: luxemburg valmis 177/177 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: bryssel valmis 183/183 (kerma 0), epäonnistui 0, 0,2 s
+MATKAKIRJA saapumislaatat: barcelona valmis 310/310 (kerma 155), epäonnistui 0, 0,4 s
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu CHE
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu FRA
+MATKAKIRJA ui nostot: esiladattu LUX
+MATKAKIRJA ui nostot: esiladattu BEL
+MATKAKIRJA ui nostot: esiladattu ESP
+MATKAKIRJA ui nostot: esiladattu ITA
+MATKAKIRJA saapumislaatat: madrid valmis 310/310 (kerma 155), epäonnistui 0, 0,8 s
+MATKAKIRJA saapumislaatat: venetsia valmis 464/464 (kerma 232), epäonnistui 0, 1,1 s
+MATKAKIRJA kehysajat {"t":236.91,"tavoiteMs":16.67,"liike":null,"lepo":{"n":174,"p50":33.32,"p95":33.91,"p99":33.94,"max":33.95,"yli15x":0},"peitto":null,"kehyksia":174,"piirretty":65,"tilat":{"taysi":47,"lepo":16,"paikallaan":111,"kerros":0,"peitto":0},"gpuMs":0.49,"gpuKehyksia":65,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi 144 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot 14 ((46,74, 5,38, 1424447 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti 150 ((46,74, 5,38, 26642648 m, 0°))
+MATKAKIRJA linssit: esilataus: laatat joutilas reliefi valmis 144/144, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas yövalot valmis 14/14, epäonnistui 0 (1,0 s)
+MATKAKIRJA linssit: esilataus: laatat joutilas astronautti valmis 150/150, epäonnistui 0 (1,0 s)
+MATKAKIRJA lampo {"t":241,"aika":"11:34:14","thermal":0,"virransaasto":false,"akku":-1,"lataus":"Unknown","fps":31.7,"tavoite":30,"piirtovali":60}
+MATKAKIRJA kehysajat {"t":241.94,"tavoiteMs":16.67,"liike":null,"lepo":{"n":151,"p50":33.34,"p95":33.91,"p99":33.93,"max":33.95,"yli15x":0},"peitto":null,"kehyksia":151,"piirretty":3,"tilat":{"taysi":0,"lepo":0,"paikallaan":151,"kerros":0,"peitto":0},"gpuMs":null,"gpuKehyksia":0,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA peli: koetila raha 5000
+MATKAKIRJA peli-komento: 242.04 koetila raha 5000 → ok [Kartta]
+MATKAKIRJA peli: Sinne ei ole lentoa
+MATKAKIRJA peli-komento: 244.08 matka ateena lento → VIRHE Sinne ei ole lentoa [Kartta]
+MATKAKIRJA kehysajat {"t":246.98,"tavoiteMs":16.67,"liike":null,"lepo":{"n":151,"p50":33.33,"p95":33.94,"p99":34.02,"max":34.04,"yli15x":0},"peitto":null,"kehyksia":151,"piirretty":86,"tilat":{"taysi":0,"lepo":85,"paikallaan":66,"kerros":0,"peitto":0},"gpuMs":0.48,"gpuKehyksia":84,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA kehysajat {"t":252.01,"tavoiteMs":16.67,"liike":null,"lepo":{"n":151,"p50":33.34,"p95":33.92,"p99":33.95,"max":33.97,"yli15x":0},"peitto":null,"kehyksia":151,"piirretty":28,"tilat":{"taysi":0,"lepo":25,"paikallaan":126,"kerros":0,"peitto":0},"gpuMs":0.49,"gpuKehyksia":24,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA ui nostot: kuvat esiladataan FRA (99 + 74)
+MATKAKIRJA kehysajat {"t":257.04,"tavoiteMs":16.67,"liike":null,"lepo":{"n":151,"p50":33.33,"p95":33.93,"p99":33.94,"max":34,"yli15x":0},"peitto":null,"kehyksia":151,"piirretty":2,"tilat":{"taysi":0,"lepo":0,"paikallaan":151,"kerros":0,"peitto":0},"gpuMs":null,"gpuKehyksia":0,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA verkko-odotus {"t":259.41,"vaihe":"nosto","mita":"kiinni","ms":0,"haut":0,"tulos":"ei sisältöä"}
+MATKAKIRJA ui nostot: ei sisältöä valolle kiinni
+MATKAKIRJA ui-komento: ui nosto kiinni: ei sisältöä valolle kiinni
+MATKAKIRJA ui-komento: ui nosto kiinni → ok
+MATKAKIRJA ui-komento: kaupunki ateena: Skandaalit (2): Maratonhuijaus, Elginin marmorit; Historia (1): Diogeneen astia; Historian hetket (1): Louis 1896
+MATKAKIRJA ui-komento: ui kaupunki ateena → ok
+MATKAKIRJA kehysajat {"t":262.05,"tavoiteMs":16.67,"liike":null,"lepo":{"n":150,"p50":33.35,"p95":33.9,"p99":33.92,"max":33.94,"yli15x":0},"peitto":null,"kehyksia":150,"piirretty":3,"tilat":{"taysi":0,"lepo":0,"paikallaan":150,"kerros":0,"peitto":0},"gpuMs":null,"gpuKehyksia":0,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+MATKAKIRJA kehysajat {"t":267.08,"tavoiteMs":16.67,"liike":null,"lepo":{"n":151,"p50":33.33,"p95":33.92,"p99":33.96,"max":33.98,"yli15x":0},"peitto":null,"kehyksia":151,"piirretty":2,"tilat":{"taysi":0,"lepo":0,"paikallaan":151,"kerros":0,"peitto":0},"gpuMs":null,"gpuKehyksia":0,"valinta":{"varjo":0,"sse":0,"nyt":"paa"},"liikeKatto":60,"fps":30,"thermal":0,"lampo":"Normaali","virransaasto":false,"akku":-1,"verkkoOdotusMs":1252,"saapuminenVerkkoMs":0,"osumaPros":76}
+app.matkakirja.proto3d: 81190
