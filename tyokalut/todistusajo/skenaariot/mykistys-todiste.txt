@@ -11,7 +11,7 @@ oleta 5 unity päällä, natiivi päällä -- mykistys kattaa radion moottorin
 kuva m1-radio Radio soi, ulostulo mykistetty
 linssi linssi pois
 odota 3
-linssi linssi astronautti
+linssi linssi satelliitti
 odota 20
 linssi astro kyyti
 odota 8
