@@ -105,3 +105,8 @@ Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), i
   Ajot: proto-3d/tyokalut/linssiseppa-ajot/ajo-opas-v2.sh (TUNNUS_POLLOSTA=1, TOIVE, UIKUVAT).
 - AUKI: himmeä "ISO-BRITANNIA" Googlen kuvassa (kysytty Natiivisepältä kerrosta); muisti simussa 5,3 Gt (Laitetestaaja iPad junan
   jälkeen); ääni todentamatta simussa (testiotsake). Lontoon kierros (linssi lontoo) on mukana kehittäjätilassa.
+- 19.4x OPAS VIE-EHDOT: muistikorjaukset lontoo 25ec1870 (esikamera pois, AudioClipit vapaaksi, UnloadUnusedAssets, "opas muisti");
+  Unityn muisti vakaa, simu-RSS 3,5–4,0 Gt (lokit/linssiseppa-opas-muisti-20261005); äänellinen tallenne
+  lokit/linssiseppa-opas-aani-20261005/tallenne-aanella.mp4 (A/V käsin 2,32 s ±50 ms: välähdys/piippaus alle työkalun kynnysten).
+  OPITTU: ajoskriptissä EI "puhe pois" (Puhe.Paalla kirjoittaa Kertoja-kytkimen → opas tekstiksi). Odottaa Laitetestaajan iPad 10 min -muistia.
+  Natiivi-UI: natiivi-ui/opas-kevyt 59347011 (sirut, valikko, kuvat) ⊃ lontoo 25ec1870; yhteisapp 5503d766.
