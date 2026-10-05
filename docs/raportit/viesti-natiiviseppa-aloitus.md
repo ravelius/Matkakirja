@@ -1,4 +1,4 @@
-# Natiivisepän aloitusviesti (5.10.2026 klo 06.0x, BUILD 142, tilinvaihto; luovutus -20261005)
+# Natiivisepän aloitusviesti (5.10.2026 klo 07.0x, BUILD 142, tilinvaihto 99 %; luovutus -20261005)
 
 Olet Natiiviseppä (Opus, high), Macin käyttäjä koodaus. Checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja, proto-repo
 /Users/Shared/Claude/proto-3d. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutus (ensin TILA HETI):
@@ -10,9 +10,9 @@ mcp__ccd_session_mgmt__send_message session id:llä.
 
 ## KÄRKI
 1. BUILD 142 = 62d5d1bb masterissa (TF 142 = 9/12 Julkaisijalla). Laskuri nollautuu 5.10. 12.30.
-2. Juna 143 koe d8e70ae4 (62d5d1bb + Brotli ca4251f5, kuitattu) worktreessä wt/proto-natiiviseppa-j141. Lisää vain Päätoimittajan
-   suoraan kuittaamat erät (ohjaamo + plist 5e9d2c7f, chat-läpäisy, Siirtosepän korjaukset), testaa, itsetarkista napautuksin ja
-   ääniraidalla, pyydä VIE ja Julkaisijan NYT.
+2. Juna 143 koe 3a6c994e (62d5d1bb + Brotli ca4251f5 + chat-linna b38360f4) worktreessä wt/proto-natiiviseppa-j141.
+   Yhdistä ensin kuitattu natiivi-ui/x-napit 9a688396. Lisää vain Päätoimittajan suoraan kuittaamat erät (ohjaamo + plist
+   5e9d2c7f, Siirtosepän korjaukset), testaa, itsetarkista napautuksin ja ääniraidalla, pyydä VIE ja Julkaisijan NYT.
 3. iPadin Brotli-purkuaika Siirtosepän junan 143 laitevuorolla.
 
 ## SÄÄNNÖT

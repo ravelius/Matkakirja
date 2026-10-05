@@ -1,4 +1,4 @@
-# Natiivisepän luovutus 5.10.2026 klo 06.0x — viikkoraja 97 % (tilinvaihto ~07.15)
+# Natiivisepän luovutus 5.10.2026 — LOPULLINEN, tilinvaihto 99 % (päivitetty 07.0x)
 
 Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen: -20261002.md (käytännöt voimassa, ellei tässä toisin).
 
@@ -6,12 +6,13 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high, Macin käyttäjä koodaus). Edellinen
 
 - **proto master 62d5d1bb = BUILD 142** (juna/b13 8ef6b519, junakäännös b42c04de; Päätoimittajan VIE). TF 142 = lataus 9/12
   Julkaisijalla (sisältövienti ensin). Laskuri nollautuu 5.10. klo 12.30.
-- **Juna 143 koe** (ei avattu): `natiiviseppa/juna-143-koe` **d8e70ae4** = 62d5d1bb + natiiviseppa/zstd **ca4251f5** (Brotli-purku,
-  Päätoimittaja KUITTASI 05.5x). Worktree /Users/Shared/Claude/wt/proto-natiiviseppa-j141 (haara vaihdettu juna-143-koeksi).
-  Testit 0/444/388/624. Odottaa muita kuitattuja eriä: ISS-ohjaamo (Natiivi-UI iss-ohjaamo-paneeli + LS2 iss-ohjaamo +
+- **Juna 143 koe** (ei avattu, ei käännetty): `natiiviseppa/juna-143-koe` **3a6c994e** = 62d5d1bb + natiiviseppa/zstd **ca4251f5**
+  (Brotli-purku, KUITATTU 05.5x) + natiivi-ui/chat-linna **b38360f4** (Pulun chat sulkeutuu linssin avautuessa, KUITATTU).
+  **KUITATTU MUTTA EI VIELÄ YHDISTETTY**: natiivi-ui/x-napit **9a688396** (sis. 63a4552e, ✕-poistot; Päätoimittaja 06.5x,
+  merge 3a6c994e:n päälle tarkistettu puhtaaksi) → `git merge --no-ff 9a688396` kokeeseen, testit, sitten itsetarkistus. Worktree /Users/Shared/Claude/wt/proto-natiiviseppa-j141 (haara vaihdettu juna-143-koeksi).
+  Testit (3a6c994e) 0/444/388/624. Odottaa muita kuitattuja eriä: ISS-ohjaamo (Natiivi-UI iss-ohjaamo-paneeli + LS2 iss-ohjaamo +
   oma natiiviseppa/kauppa-kuvat-plist 5e9d2c7f; viimeisin yhdistetty versio natiivi-ui/iss-ohjaamo-141-linna 443f9f1a
-  ja juna-141-linna c214dedf — Natiivi-UI rebasettaa nykyiseen masteriin), Pulun chatin läpäisykorjaus (Natiivi-UI),
-  Siirtosepän ristihäivytys da00c9c6 (EI junaan 142, voi tulla 143:een kuitattuna), Siirtosepän NullReference-korjaus
+  ja juna-141-linna c214dedf — Natiivi-UI rebasettaa nykyiseen masteriin),   Siirtosepän ristihäivytys da00c9c6 (EI junaan 142, voi tulla 143:een kuitattuna), Siirtosepän NullReference-korjaus
   (DioraamaYmparisto.Kuva → Texture2D.Compress linnan sulkeutuessa latausvirheen jälkeen).
 - iPadin Brotli-purkuaika mitataan Siirtosepän junan 143 fps-laitevuorolla (Päätoimittaja), ei erillistä käännöstä.
 - Avoimet natiiviseppa-worktreet: wt/proto-natiiviseppa-j141 (juna 143), wt/proto-natiiviseppa-zstd (Brotli, mergetty kokeeseen),
