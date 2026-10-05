@@ -50,6 +50,8 @@ namespace Matkakirja.Natiivi
         public static event Action<OpasSovitin> Vaihtui;
         /// <summary>Testitila ilman workeria (komento "opas testi 1|0").</summary>
         public static bool Testi;
+        /// <summary>Kamera pysäytetty paikalleen (komento "opas pysayta 1|0"; kuvaparit samasta kulmasta), silmukka odottaa.</summary>
+        public static bool Pysaytetty;
         /// <summary>Testiotsake (komento "opas testiotsake 1"): worker palauttaa kerronnan ilman ääntä (ei ElevenLabs-kulutusta simussa).</summary>
         public static bool Testiotsake;
         /// <summary>Aloituskaupunki (komento "opas kaupunki <nimi>"); ensimmäinen pyyntö on tämä toive.</summary>
@@ -178,6 +180,7 @@ namespace Matkakirja.Natiivi
             if (silmukka == null || Virhe != null || paivitetty == Time.frameCount) return;
             paivitetty = Time.frameCount;
             if (puhuu && Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying)) { puhuu = false; y.Repliikki(false); silmukka.AaniLoppui(); }
+            if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
             silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus);
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
