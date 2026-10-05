@@ -122,3 +122,10 @@ proto-3d/lokit/linssiseppa2-* (skriptit, kuvaparit, gibs-esiselvitys, maailma-aj
 /Volumes/T7 4TB/proto-3d-lokit-arkisto/ (sama nimi). maailma-kuvat.sh ajetaan sieltä; tulosteet (OUT) edelleen lokit/-kansioon.
 S2-maailman koeajo 2 (käännös 11bae6ef, aja-s2m2.sh → lokit/linssiseppa2-s2maailma-koe3) odottaa yhä simuvuoroa (siirtyi junan 144 takia).
 TYÖTAPA (Päätoimittaja 23.1x): vika toistetaan ennen korjausta, sitten sama ajo korjattuna (ennen/jälkeen-parit).
+
+## 6.10. klo 00.0x — ohjaamon pallon kosketus (omistajan palaute, juna 146)
+- Haara linssiseppa2/ohjaamo-kosketus **2c2ad7ac** (cad8ede1 + PalloKierto.EleetMuualla, CupolaVeto asettaa/nollaa,
+  A/B `astro kyyti pallolukko 0|1`). Merge-pyyntö Natiivisepälle junan 146 ensimmäiseen käännökseen (Julkaisija: ei omaa
+  käännöstä). Todennus junan appilla: scratchpad/kosketus-ajo.sh (APP=, OUT=, LUPA=) → `valmis`-tiedosto → oikeat eleet
+  simulaattorityökalulla videolle pallolukko 0 ja 1 → `touch $OUT/loppu`. Kuittaus Päätoimittajalle ennen 9.30.
+- S2-maailman koeajo (11bae6ef, aja-s2m2.sh) tulee sen jälkeen. GIBS f810ec54 junaan 145/146 Päätoimittajan kuittauksella.
