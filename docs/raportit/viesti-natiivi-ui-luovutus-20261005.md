@@ -48,7 +48,10 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   KUITATTU molemmat 11.3x → merge-pyyntö Natiivisepälle junan 143 lisäerään (kirjainvali-kerning tavlin kanssa, ei-linssia
   samassa). Omistaja 11.35: esikatseluikkuna piiloon normaalilla kartalla → ei-linssia 7837ac54 (käännös db99e1f5,
   todennettu 11.4x, eilinssia/ei-linssia-v2-arkki.jpg); lähetetty Päätoimittajalle kuitattavaksi, Natiiviseppä pidättää
-  ei-linssian siihen asti (muuten juna 144).
+  ei-linssian siihen asti (muuten juna 144). KUITATTU 11.4x → merge-pyyntö 7837ac54 Natiivisepälle (143 lisäerä).
+- SEURAAVA: lepo. ISS-ohjaamon paneeli (iss-ohjaamo-lcd 0fdda21f) junaan 144 LS2:n kuvien kanssa — Päätoimittaja
+  pyytää, kun kuvaparit on hyväksytty. Worktreet: wt/proto-natiivi-ui-{xsiivous,eilinssia,kerning} poistetaan, kun
+  haarat ovat masterissa (git worktree remove, omat).
 
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
