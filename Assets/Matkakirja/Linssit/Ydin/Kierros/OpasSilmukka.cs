@@ -127,7 +127,9 @@ namespace Matkakirja.Linssit.Kierros
 
         readonly HashSet<string> nahdyt = new HashSet<string>(StringComparer.Ordinal);
         int pyynto, odotettu;
-        double odotusAlku, kierto;
+        double odotusAlku;
+        /// <summary>Aika saapumisesta nykyiseen kehykseen (s); OpasKuvaus.Pysahdyksella laskee kierron ja dollyn.</summary>
+        double kierto;
         bool aaniLoppui;
         Kuvakulma lahto;
         Pysahdys kohdeKehys;
@@ -249,7 +251,7 @@ namespace Matkakirja.Linssit.Kierros
             {
                 case OpasVaihe.Alku:
                 case OpasVaihe.Odottaa:
-                    if (NykyinenKehys != null) { kierto += KiertoAsteS * dt; Asento = KehysAsento(NykyinenKehys, kierto); }
+                    if (NykyinenKehys != null) { kierto += dt; Asento = OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto); }
                     else
                     {
                         // Avaus: kamera lähtee heti laskeutumaan kaupungin ylle, kun worker suunnittelee (ei pysähtynyttä kuvaa).
@@ -261,15 +263,15 @@ namespace Matkakirja.Linssit.Kierros
                     if (Seuraava != null && aaniLoppuiTaiAlku() && !OdottaaVastausta) AloitaLento(maaKorkeus);
                     break;
                 case OpasVaihe.Puhuu:
-                    kierto += KiertoAsteS * dt;
-                    Asento = KehysAsento(NykyinenKehys, kierto);
+                    kierto += dt;   // aika saapumisesta: ei nollaudu Puhuu ↔ Odottaa eikä "kerro lisää" -kappaleessa (Siirtoseppä, juna 145)
+                    Asento = OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto);
                     if (aaniLoppui && VaiheAika >= TaukoS && Seuraava != null) AloitaLento(maaKorkeus);
                     else if (aaniLoppui && Seuraava == null && odotettu == 0) { Vaihe = OpasVaihe.Odottaa; VaiheAika = 0; }
                     break;
                 case OpasVaihe.Lentaa:
                 {
                     double t = Math.Min(1, VaiheAika / LentoKestoS);
-                    Asento = Lennossa(lahto, KehysAsento(kohdeKehys, 0), t);
+                    Asento = OpasKuvaus.Lennossa(lahto, KehysAsento(kohdeKehys, 0), t);
                     // Puhe alkaa PuheEnnenS ennen saapumista, kuitenkin aikaisintaan PuheAikaisinS nousun jälkeen (simu 19.54: tauko ~5 s → ≤ 3 s).
                     if (!puheAloitettu && VaiheAika >= Math.Max(PuheAikaisinS, LentoKestoS - PuheEnnenS)) { puheAloitettu = true; aaniLoppui = false; AlkaaPuhua?.Invoke(Nykyinen); }
                     // Saapuminen odottaa laattoja enintään SaapumisOdotusS (simu 18.39: saapuessa laatat 28–45 %).
@@ -308,7 +310,7 @@ namespace Matkakirja.Linssit.Kierros
             if (double.IsNaN(maa)) maa = 45;
             double tulo = Suunta(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
             if (KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, k.Lat, k.Lon) < 150) tulo = Asento.Suuntima;
-            kohdeKehys = Kehysta(k, maa, tulo);
+            kohdeKehys = OpasKuvaus.Kehysta(k, maa, tulo);   // luokka k.Luokasta, muuten koosta ja korkeudesta
             Nykyinen = k;
             lahto = Asento;
             LentoKestoS = LennonKesto(KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon));
