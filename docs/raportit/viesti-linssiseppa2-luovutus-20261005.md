@@ -129,3 +129,19 @@ TYÖTAPA (Päätoimittaja 23.1x): vika toistetaan ennen korjausta, sitten sama a
   käännöstä). Todennus junan appilla: scratchpad/kosketus-ajo.sh (APP=, OUT=, LUPA=) → `valmis`-tiedosto → oikeat eleet
   simulaattorityökalulla videolle pallolukko 0 ja 1 → `touch $OUT/loppu`. Kuittaus Päätoimittajalle ennen 9.30.
 - S2-maailman koeajo (11bae6ef, aja-s2m2.sh) tulee sen jälkeen. GIBS f810ec54 junaan 145/146 Päätoimittajan kuittauksella.
+
+## 6.10. klo 01.2x — tila (viestit muille sessioille tauolla, 10 viestin raja; jatkuu omistajan seuraavasta viestistä)
+- Pallolukko 2c2ad7ac: toisto oikeilla eleillä EI tehty – simulaattoripaneelin lupa (F2D9B022, "Let Claude use it") odottaa
+  omistajaa. Ajoskripti scratchpad/kosketus-ajo.sh (APP lokit/natiiviseppa-app-146toisto2-7ac47be9). Kuittaus Päätoimittajalle ennen 9.30.
+- Juliste (juna 147), proto-haara linssiseppa2/iss-kamera-juliste: 172915f6 siluetti → 7ee03d6a Päätoimittajan palaute
+  (sommittelu kaari 22 %, GIBS lähialue tarkempi saman selkeimmän päivän mukaan, paikan oma aika paikat.json TIMEZONE)
+  → d977f81d (kuvaa suunta -testikomento, siluetti kaaren kohdalle; EI käännetty). Stillit 2504ef45:
+  lokit/linssiseppa2-juliste-2504ef45/kuvat/20261005-220332.jpg (Helsinki: sommittelu ok, mutta Suomenlahti kiiltää
+  valkoisena – kamera luoteesta kohti aurinkoa; seuraavaksi kuvaa suunta 170) ja 220534.jpg (Manaus ok, klo 10.30 paikallista).
+  Siluetti katosi mustaa avaruutta vasten → d977f81d. Ei vielä Päätoimittajalle.
+- S2-maailma v2 koeajo 11bae6ef tehty 01.11–01.18: lokit/linssiseppa2-s2maailma-koe3/kuvapari-cupola.png (v2 vs nyt, 0/25 s).
+  v2 selvästi tarkempi ja luonnollisempi; näkyviä laattojen sävysaumoja (Amazonia vino raja, Australia suorakaiteet) →
+  korjaussarja. ISS-kuvat v2:lla 0 Mt haettua (mosaiikki) vs 21–30 Mt nyt. phys_footprint Cupola 1015–1488 Mt (v2) vs 1292–1515 (nyt).
+- Natiivi-UI kysyi (vastaamatta): nopein onnistuva kuva = astro kyyti; kello +X (päivä); siirra 60.17 24.94; kuvaa 4:5 1080.
+  UI on piilossa vain renderöintivaiheessa (kamera.targetTexture = rt, Edistyminen 0,85→1); KEHITETÄÄN-palkki näkyy haku- ja
+  työstövaiheissa (0→0,85). Ehdotus: näyttökamera renderöinnin ajaksi, tai kehittyvä kuva (RT) UI:hin.
