@@ -513,6 +513,20 @@
    "vaalea": "kafeneio/nappula-vaalea.png",
    "tumma": "kafeneio/nappula-tumma.png",
    "varjo": "kafeneio/nappula-varjo.png"
+  },
+  "bysantti": {
+   "nimi": "Bysantin tabula n. 480",
+   "lauta": "bysantti/lauta.png",
+   "vaalea": "bysantti/nappula-vaalea.png",
+   "tumma": "bysantti/nappula-tumma.png",
+   "varjo": "bysantti/nappula-varjo.png"
+  },
+  "ottomaani": {
+   "nimi": "Ottomaanien tavla, Istanbul 1600-luku",
+   "lauta": "ottomaani/lauta.png",
+   "vaalea": "ottomaani/nappula-vaalea.png",
+   "tumma": "ottomaani/nappula-tumma.png",
+   "varjo": "ottomaani/nappula-varjo.png"
   }
  }
 }

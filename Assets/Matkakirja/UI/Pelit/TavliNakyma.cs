@@ -883,7 +883,7 @@ namespace Matkakirja.Natiivi
             if (Mitat != null) Nopat.Lataa(Mitat.NoppaOikea, Mitat.NoppaVasen, Mitat.NoppaSivu, Mitat.Koko);
             if (ladattu == LautaId && kLauta != null) return;
             ladattu = LautaId;
-            // TODO Linnanrakentaja: Bysantin tabulan ja Ottomaanien tavlan kerrokset; siihen asti Kafeneion kuvat.
+            // Laudat v2 (Linnanrakentaja 5.10., _valmiit/tavli-laudat/v2): kafeneio, tabula (bysantti/) ja tavla (ottomaani/); puuttuva → Kafeneio.
             kLauta = Kuva("lauta-" + LautaId) ?? Kuva("lauta-kafeneio");
             kVaalea = Kuva("nappula-vaalea-" + LautaId) ?? Kuva("nappula-vaalea-kafeneio");
             kTumma = Kuva("nappula-tumma-" + LautaId) ?? Kuva("nappula-tumma-kafeneio");
