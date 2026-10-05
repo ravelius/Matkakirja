@@ -966,12 +966,15 @@ namespace Matkakirja.Natiivi
             // Puhuja kortin kapiteelina otsikon yläpuolella ja repliikki samaan korttiin vain, jos sitä ei puhuta ääneen
             // (omistaja 2.10. 17.4x, loki d6b00328f; 14.09: ääneen puhuttu ei tekstinä). Kuunnelman rivi ensin, sitten
             // hahmon repliikki. Pulun vanhat käsikirjoitusrivit eivät kuulu infotauluun (Pulu kertoo lisää kuplassa).
+            // Päätoimittaja 5.10. 15.0x: huonekortti on huoneen kortti; puhujan nimi vain tekstinä näytetyn repliikin
+            // yhteydessä (ääni tai Kertoja pois). Ääneen puhuttaessa puhujan näyttää puhujakuva, ei kortin kapiteeli.
             string nimi = null, repliikki = null;
-            if (kuunnelma.Nimi != null) { nimi = kuunnelma.Nimi; repliikki = kuunnelma.Teksti; }
-            else if (!string.IsNullOrEmpty(nakyma.Repliikki) && nakyma.Puhuja != null && nakyma.Puhuja != "pulu")
+            if (kuunnelma.Nimi != null) { if (kuunnelma.Teksti != null) { nimi = kuunnelma.Nimi; repliikki = kuunnelma.Teksti; } }
+            else if (!string.IsNullOrEmpty(nakyma.Repliikki) && nakyma.Puhuja != null && nakyma.Puhuja != "pulu"
+                     && !DioraamaAanet.Puhutaan(nakyma.AskeleenAani))
             {
                 nimi = PuhujanNimi(DioraamaSovitin.Linssi.Rakennus, nakyma).ToUpperInvariant();
-                if (!DioraamaAanet.Puhutaan(nakyma.AskeleenAani)) repliikki = nakyma.Repliikki;
+                repliikki = nakyma.Repliikki;
             }
             puhuja.text = nimi ?? "";
             puhuja.style.display = string.IsNullOrEmpty(nimi) ? DisplayStyle.None : DisplayStyle.Flex;
