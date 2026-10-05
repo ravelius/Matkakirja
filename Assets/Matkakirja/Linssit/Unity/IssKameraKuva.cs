@@ -716,6 +716,9 @@ namespace Matkakirja.Natiivi
                 yield return new WaitForSecondsRealtime(LisaOdotus);
                 string albumi = Path.Combine(Application.persistentDataPath, "iss-albumi"); Directory.CreateDirectory(albumi);
                 byte[] jpg = null;
+                // Paikka kuten LCD:ssä (lähin kaupunki, vuori tai meri + maa) kuvan keskipisteestä, nimet sellaisinaan; julisteeseen.
+                var keskus = naytteet.OrderBy(n => Math.Abs(n.Sx - 24) + Math.Abs(n.Sy - 18)).First();
+                var (kp, km2) = IssSijainti.Nimet(IssSijainti.Nykyinen, keskus.Lat, keskus.Lon);
                 for (int k = 0; k <= Sarja; k++)
                 {
                     if (k > 0) yield return new WaitForSecondsRealtime(10f);
@@ -727,7 +730,16 @@ namespace Matkakirja.Natiivi
                     kuva.LoadRawTextureData(lukija.GetData<byte>()); kuva.Apply(false);
                     if (Avaruus.KuvanNousu > 0.01f) Heijastukset(kuva, kamera, W, H, Avaruus.KuvanNousu);
                     Valota(kuva);
-                    var j = kuva.EncodeToJPG(93); Destroy(kuva);
+                    Kontrasti(kuva, KuvanKontrasti);
+                    byte[] j = null;
+                    if (k == 0 && IssJuliste.Kaytossa)
+                    {
+                        var jt = new IssJuliste.Tiedot { Paikka = kp, Maa = km2, Lat = keskus.Lat, Lon = keskus.Lon, Paikallinen = PaikallinenAika(utc),
+                            Kamera = KameraRivi(kk, naytteet, korkeus), Lahde = kuvanLahde };
+                        yield return IssJuliste.Tee(kuva, jt, b => j = b);
+                        Loki(j != null ? "juliste: valmis" : "juliste: ei paneelia → pelkkä kuva");
+                    }
+                    j ??= kuva.EncodeToJPG(93); Destroy(kuva);
                     if (k == 0) jpg = j; else { File.WriteAllBytes(Path.Combine(albumi, $"{id}-{k}.jpg"), j); Loki($"sarjakuva {k} (+{10 * k} s)"); }
                 }
                 ViimeisinKuva = Path.Combine(albumi, id + ".jpg");
@@ -736,9 +748,6 @@ namespace Matkakirja.Natiivi
                 File.WriteAllText(Path.ChangeExtension(ViimeisinKuva, ".json"), Tiedot(id, utc, kk, naytteet, muoto, az, korkeus, ruudut, ehdokkaat, saatu, kuvanLahde, pilviTieto));
                 Edistyminen = 1;
                 Loki($"VALMIS {ViimeisinKuva} ({jpg.Length / 1e6:0.0} Mt, {W}×{H}), yhteensä {kello.ElapsedMilliseconds / 1000.0:0.0} s, haettu {saatu / 1e6:0.0} Mt, pallo {(pallo != null ? pallo.ComputeLoadProgress() : 0):0.0} %");
-                // Paikka kuten LCD:ssä (lähin kaupunki, vuori tai meri + maa) kuvan keskipisteestä, nimet sellaisinaan.
-                var keskus = naytteet.OrderBy(n => Math.Abs(n.Sx - 24) + Math.Abs(n.Sy - 18)).First();
-                var (kp, km2) = IssSijainti.Nimet(IssSijainti.Nykyinen, keskus.Lat, keskus.Lon);
                 KuvaValmis(ViimeisinKuva, kp, km2, utc, keskus.Lat, keskus.Lon, kuvanLahde);
             }
             finally
@@ -883,7 +892,15 @@ namespace Matkakirja.Natiivi
                 var kuva = new Texture2D(W, H, TextureFormat.RGBA32, false);
                 kuva.LoadRawTextureData(lukija.GetData<byte>()); kuva.Apply(false);
                 Valota(kuva);
-                var jpg = kuva.EncodeToJPG(93); Destroy(kuva);
+                Kontrasti(kuva, KuvanKontrasti);
+                byte[] jpg = null;
+                if (IssJuliste.Kaytossa)
+                {
+                    var jt = new IssJuliste.Tiedot { Paikka = p.Nimi, Maa = p.Maa, Lat = p.Lat, Lon = p.Lon, Paikallinen = PaikallinenAika(utc), Lahde = paikanLahde };
+                    yield return IssJuliste.Tee(kuva, jt, b => jpg = b);
+                    Loki(jpg != null ? "juliste: valmis" : "juliste: ei paneelia → pelkkä kuva");
+                }
+                jpg ??= kuva.EncodeToJPG(93); Destroy(kuva);
                 string albumi = Path.Combine(Application.persistentDataPath, "iss-albumi"); Directory.CreateDirectory(albumi);
                 ViimeisinKuva = Path.Combine(albumi, id + ".jpg");
                 File.WriteAllBytes(ViimeisinKuva, jpg);
@@ -934,6 +951,29 @@ namespace Matkakirja.Natiivi
         /// nosteta harmaaksi), kirkkaita kuvia ei tummenneta. Testikomento `astro kyyti kuvaa valotus <tavoite> [max]`.
         /// </summary>
         public static float ValotusTavoite = 0.36f, ValotusMax = 1.8f;
+
+        /// <summary>
+        /// KUVAN PARANNUS (Päätoimittaja 6.10., omistaja: "kuvaa oli paranneltu"; juliste E v2:n jälkikäsittely juliste-jalki.py 1.10.):
+        /// S-käyrä luminanssiin voimalla 0,35 (smoothstep-sekoitus): mustat syvemmiksi, keskisävyt ennallaan, valot eivät pala puhki.
+        /// Värisävy säilyy (sama muutos kaikkiin kanaviin = YCbCr:n Cb ja Cr ennallaan). A/B `astro kyyti kuvaa kontrasti <0–1>`.
+        /// </summary>
+        public static float KuvanKontrasti = 0.35f;
+
+        static void Kontrasti(Texture2D kuva, float voima)
+        {
+            if (voima <= 0f) return;
+            var lut = new int[256];
+            for (int i = 0; i < 256; i++) { float t = i / 255f, sk = t * t * (3 - 2 * t); lut[i] = Mathf.Clamp(Mathf.RoundToInt(255f * (t * (1 - voima) + sk * voima)), 0, 255) - i; }
+            var px = kuva.GetPixelData<Color32>(0);
+            for (int i = 0; i < px.Length; i++)
+            {
+                var c = px[i];
+                int y = (299 * c.r + 587 * c.g + 114 * c.b + 500) / 1000, d = lut[Mathf.Clamp(y, 0, 255)];
+                if (d == 0) continue;
+                px[i] = new Color32((byte)Mathf.Clamp(c.r + d, 0, 255), (byte)Mathf.Clamp(c.g + d, 0, 255), (byte)Mathf.Clamp(c.b + d, 0, 255), c.a);
+            }
+            kuva.Apply(false);
+        }
 
         static void Valota(Texture2D kuva)
         {
@@ -1145,6 +1185,21 @@ namespace Matkakirja.Natiivi
             double kulma = Math.Acos(Math.Max(-1, Math.Min(1, Math.Sin(f1) * Math.Sin(f2) + Math.Cos(f1) * Math.Cos(f2) * Math.Cos(dl))));
             double az = Math.Atan2(Math.Sin(dl) * Math.Cos(f2), Math.Cos(f1) * Math.Sin(f2) - Math.Sin(f1) * Math.Cos(f2) * Math.Cos(dl));
             return ((az * 180 / Math.PI + 360) % 360, 90 - kulma * 180 / Math.PI);
+        }
+
+        /// <summary>Julisteen päiväys: pelin aika laitteen aikavyöhykkeellä (albumin kuvateksti käyttää samaa).</summary>
+        static DateTime PaikallinenAika(DateTime utc) => DateTime.SpecifyKind(utc, DateTimeKind.Utc).ToLocalTime();
+
+        /// <summary>Julisteen kamerarivi "55 mm · f/5.6 · 1/1000 s · ISO 100" (sama malli kuin Tiedot).</summary>
+        static string KameraRivi(KuvaKamera kk, List<Nayte> naytteet, double korkeus)
+        {
+            var keski = naytteet.OrderBy(n => Math.Abs(n.Sx - 24) + Math.Abs(n.Sy - 18)).First();
+            double pysty = kk.Leveys >= kk.Korkeus ? 24 : 24.0 * kk.Korkeus / kk.Leveys;
+            double mm = pysty / 2 / Math.Tan(kk.PystykenttaAst * Math.PI / 360);
+            var kp = Kuvasuunnitelma.Ecef(keski.Lat, keski.Lon);
+            double etaisyys = Math.Sqrt(Math.Pow(kk.Paikka.x - kp.x, 2) + Math.Pow(kk.Paikka.y - kp.y, 2) + Math.Pow(kk.Paikka.z - kp.z, 2)) / 1000;
+            var (aukko, aika, iso) = Valotus.Laske(mm, etaisyys, korkeus, Matkakirja.Linssit.Kyytipino.Valotus - 0.5f);
+            return $"{mm:0} mm · {Valotus.AukkoTeksti(aukko)} · {Valotus.AikaTeksti(aika)} · ISO {iso}";
         }
 
         /// <summary>Julisteen tekstikentät kuvaushetken arvoista (Päätoimittaja 1.10.: paikka, koordinaatit, aika, korkeus, …, lähde).</summary>
