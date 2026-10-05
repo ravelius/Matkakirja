@@ -205,6 +205,8 @@ namespace Matkakirja.Natiivi
                 puhuu = false; y.Repliikki(false); silmukka.AaniLoppui();
             }
             kaupunki.PidaMaski();
+            // OSM-tekijätieto aina oppaan ajan: worker käyttää Nominatimia koordinaatteihin ja reittiviivoihin (ODbL, juna 146).
+            KrediititTiivis.OsmNakyvissa = true;
             KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
@@ -335,6 +337,8 @@ namespace Matkakirja.Natiivi
             bool eka = true;
             foreach (var id in silmukka.Nahdyt) { if (!eka) sb.Append(','); sb.Append('"').Append(Escape(id)).Append('"'); eka = false; }
             sb.Append("],\"kieli\":\"fi\"");
+            // Näytettävät tekijätiedot (Pelikoodari #4028, ODbL): worker palauttaa OSM-pohjaista dataa vain, kun "osm" on mukana.
+            sb.Append(",\"krediitit\":[\"osm\"]");
             // "Kerro lisää" ei toista edellistä kappaletta (Pelikoodari #4011).
             var ed = silmukka.Nykyinen?.Teksti;
             if (!string.IsNullOrEmpty(ed)) sb.Append(",\"edellinen_teksti\":\"").Append(Escape(ed)).Append('"');
@@ -604,6 +608,7 @@ namespace Matkakirja.Natiivi
             OpasKorostusKuva.Piilota(true);
             KyydinKameraEnnen.Ajo = null;
             KytkeNimilappu(false);
+            KrediititTiivis.OsmNakyvissa = false;
             KrediititTiivis.Paivita(false);
             Hiljenna();
             KytkeChat(false);
