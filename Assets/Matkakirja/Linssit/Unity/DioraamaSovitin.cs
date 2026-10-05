@@ -69,7 +69,8 @@ namespace Matkakirja.Natiivi
         // (PlayerPrefs), jottei palkki täyty, kun myöhemmät osat (tilat, hahmot, ympäristö) vasta jonoutuvat. Ei koskaan taaksepäin.
         static DioraamaSovitin aktiivinen;
         static float latausOsuus;
-        const string LatausAvain = "linna-latauksen-tavut";
+        const string LatausAvain = "linna-latauksen-tavut", KestoAvain = "linna-latauksen-kesto";
+        static float latausAika, latausTavut, latausVaiheet, latausLokiAika;
         public static float LatausOsuus()
         {
             var a = aktiivinen;
@@ -77,12 +78,22 @@ namespace Matkakirja.Natiivi
             long muistettu = 0;
             try { long.TryParse(PlayerPrefs.GetString(LatausAvain, "0"), out muistettu); } catch (Exception) { }
             float e = DioraamaLevyvalimuisti.Edistys(muistettu);
-            if (float.IsNaN(e)) return float.NaN;
+            if (float.IsNaN(e)) e = 0f;
             // Natiivi-UI 5.10. (b274b20c): tavut 99 % jo 13 s:ssa, mutta saapuminen vasta 26 s:ssa (kuoren jälkeen tilat, hahmot ja
-            // ympäristö puretaan ja viedään GPU:lle välimuistista). Osuus = 0,5 × tavut + 0,5 × valmiit vaiheet (kuori, tilat,
-            // hahmot, ympäristö), jolloin palkki etenee koko odotuksen.
+            // ympäristö puretaan ja viedään GPU:lle välimuistista). Tavoite = 0,5 × tavut + 0,5 × valmiit vaiheet (kuori, tilat,
+            // hahmot, ympäristö), ja vähintään 0,9 × kulunut / edellisen täyden latauksen kesto (PlayerPrefs). Näytetty arvo ei
+            // pysähdy (Päätoimittaja: ei yli 1–2 s:n seisahdusta): se ryömii 1,5 %/s tavoitteen yli enintään 6 %:iin asti.
             float vaiheet = a.VaiheOsuus();
-            latausOsuus = Mathf.Max(latausOsuus, Mathf.Min(0.5f * e + 0.5f * vaiheet, 0.99f));
+            float kulunut = a.kuoriOdotusAlku >= 0f ? Time.realtimeSinceStartup - a.kuoriOdotusAlku : 0f;
+            float muistettuKesto = 0f;
+            try { muistettuKesto = PlayerPrefs.GetFloat(KestoAvain, 0f); } catch (Exception) { }
+            float tavoite = 0.5f * e + 0.5f * vaiheet;
+            if (muistettuKesto > 1f) tavoite = Mathf.Max(tavoite, 0.9f * Mathf.Clamp01(kulunut / muistettuKesto));
+            float dt = Mathf.Clamp(Time.unscaledTime - latausAika, 0f, 0.25f);
+            latausAika = Time.unscaledTime;
+            float ryomi = Mathf.Min(latausOsuus + 0.015f * dt, tavoite + 0.06f);
+            latausOsuus = Mathf.Min(0.99f, Mathf.Max(latausOsuus, Mathf.Max(tavoite, ryomi)));
+            latausTavut = e; latausVaiheet = vaiheet;
             return latausOsuus;
         }
 
@@ -237,6 +248,13 @@ namespace Matkakirja.Natiivi
                 bool tilatValmiit = tilojaKasitelty >= TilojaGlb();
                 bool hahmotValmiit = hahmojaKasitelty >= hahmoGlbJonossaTaiValmiit.Count;
                 bool ymparistoValmis = rakennus.Ymparisto == null || nayttamo.Ymparisto == null || nayttamo.Ymparisto.Valmis;
+                // Latauspalkin aikasarja todisteeksi (Päätoimittaja 5.10.): kerran sekunnissa nimiruudun aikana.
+                if (Time.realtimeSinceStartup - latausLokiAika >= 1f)
+                {
+                    latausLokiAika = Time.realtimeSinceStartup;
+                    float palkki = LatausOsuus();
+                    o.Kirjaa($"poikki: latauspalkki {(float.IsNaN(palkki) ? -1 : palkki * 100):F0} % {odotettu:F1} s (tavut {latausTavut * 100:F0} %, vaiheet {latausVaiheet * 100:F0} %)");
+                }
                 int valmistuneita = DioraamaLevyvalimuisti.Valmistuneita;
                 if (valmistuneita != viimeValmistuneita) { viimeValmistuneita = valmistuneita; viimeEdistys = Time.realtimeSinceStartup; }
                 // Lataushäiriö tai offline: olemassa oleva virheviesti (DioraamaTaulu → tilarivi) ja linssi kiinni, ei loputonta odotusta.
@@ -256,7 +274,8 @@ namespace Matkakirja.Natiivi
                     nayttamo.Odota(false);
                     nayttamo.Haivyta(HaivytysS);
                     linssi.Avaa(rakennus, YdinAika, SaapuminenNahty); // kaari (ja kertoja) alusta tästä hetkestä
-                    try { PlayerPrefs.SetString(LatausAvain, DioraamaLevyvalimuisti.PyydettyTavuja.ToString()); } catch (Exception) { }
+                    try { PlayerPrefs.SetString(LatausAvain, DioraamaLevyvalimuisti.PyydettyTavuja.ToString()); PlayerPrefs.SetFloat(KestoAvain, odotettu); } catch (Exception) { }
+                    o.Kirjaa($"poikki: latauspalkki 100 % {odotettu:F1} s (avaus)");
                     latausOsuus = 1f;
                     t = pysaytettyT ?? YdinAika;
                     o.Kirjaa($"poikki: saapuminen alkaa (kaikki valmiina täydellä tarkkuudella: kuori, tilat {tilojaKasitelty}/{TilojaGlb()}, " +
