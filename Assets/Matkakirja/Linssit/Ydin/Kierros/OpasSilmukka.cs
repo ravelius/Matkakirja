@@ -185,7 +185,7 @@ namespace Matkakirja.Linssit.Kierros
             OdottaaVastausta = false; kysymysAika = -1;
             if (Vaihe == OpasVaihe.Puhuu) Hiljenna?.Invoke();
             aaniLoppui = true;
-            UusiPyynto();
+            PelaajanPyynto();
         }
 
         /// <summary>Paikan vaihto valikosta (Natiivi-UI OpasValikko): kuten toive ilman tekstiä, nähdyt tyhjennetään.</summary>
@@ -198,6 +198,14 @@ namespace Matkakirja.Linssit.Kierros
             OdottaaVastausta = false; kysymysAika = -1;
             if (Vaihe == OpasVaihe.Puhuu) Hiljenna?.Invoke();
             aaniLoppui = true;
+            PelaajanPyynto();
+        }
+
+        /// <summary>Pelaajan toiminta: luovutus puretaan (uusi yritys), mutta kesken oleva virhetauko odotetaan loppuun.</summary>
+        void PelaajanPyynto()
+        {
+            Luovutti = false; Virheita = 0;
+            if (VirheTauko > 0) { odotettu = 0; virhe = true; return; }
             UusiPyynto();
         }
 
@@ -210,12 +218,42 @@ namespace Matkakirja.Linssit.Kierros
             toive = null;
         }
 
-        /// <summary>Workerin vastaus pyyntöön n (vanhat hylätään). null = virhe: pyydetään uudelleen seuraavalla päivityksellä.</summary>
-        public void Vastaus(int n, OpasKohde k)
+        /// <summary>
+        /// VIRHETAUKO (Natiivi-UI 5.10. iPad: 429 → 9 800 pyyntöä 6 minuutissa): virheen jälkeen uusi pyyntö vasta tauon päästä,
+        /// tauko kaksinkertaistuu (2, 4, 8 … enintään 60 s); VirheitaMax peräkkäisen virheen jälkeen opas luovuttaa (Luovutti).
+        /// Onnistunut vastaus nollaa laskurin.
+        /// </summary>
+        public const double VirheTaukoAlkuS = 2, VirheTaukoMaxS = 60;
+        public const int VirheitaMax = 5;
+        /// <summary>Peräkkäiset virheet, viimeisen virheen HTTP-koodi (0 = aikakatkaisu tai verkko) ja jäljellä oleva tauko (s).</summary>
+        public int Virheita { get; private set; }
+        public int ViimeKoodi { get; private set; }
+        public double VirheTauko { get; private set; }
+        /// <summary>Worker ei vastaa (VirheitaMax peräkkäistä virhettä): sovitin sulkee linssin viestillä.</summary>
+        public bool Luovutti { get; private set; }
+        /// <summary>Opas lepää (virhe ja tauko kesken).</summary>
+        public bool Lepaa => VirheTauko > 0;
+        public static double Tauko(int virheita) => Math.Min(VirheTaukoMaxS, VirheTaukoAlkuS * Math.Pow(2, Math.Max(0, virheita - 1)));
+
+        /// <summary>Virhe (HTTP-koodi; 0 = verkko tai aikakatkaisu). odotaS = palvelimen Retry-After (s, 0 = ei annettu): tauko on
+        /// suurempi niistä; jos Retry-After ylittää VirheTaukoMaxS (esim. 429 päiväraja klo 03 asti), opas luovuttaa heti.
+        /// Luovutuksen jälkeen ei pyydetä mitään ennen pelaajan toimintaa (Toive, Vastaus kysymykseen tai uusi avaus).</summary>
+        void Virhe(int koodi, double odotaS)
+        {
+            Virheita++; ViimeKoodi = koodi;
+            if (Virheita >= VirheitaMax || odotaS > VirheTaukoMaxS) { Luovutti = true; VirheTauko = 0; virhe = false; return; }
+            VirheTauko = Math.Min(VirheTaukoMaxS, Math.Max(Tauko(Virheita), odotaS));
+            virhe = true;
+        }
+
+        /// <summary>Workerin vastaus pyyntöön n (vanhat hylätään). null = virhe (koodi = HTTP-tila, 0 = verkko/aikakatkaisu):
+        /// pyydetään uudelleen virhetauon jälkeen.</summary>
+        public void Vastaus(int n, OpasKohde k, int koodi = 0, double odotaS = 0)
         {
             if (n != odotettu) return;
             odotettu = 0;
-            if (k == null) { virhe = true; return; }
+            if (k == null) { Virhe(koodi, odotaS); return; }
+            Virheita = 0; VirheTauko = 0; ViimeKoodi = 0;
             if (k.Kysymys)
             {
                 // Kysymys ei liikuta kameraa: opas kysyy, ja pelaajan valinta (chat) tulee Toive-kutsuna.
@@ -242,8 +280,10 @@ namespace Matkakirja.Linssit.Kierros
         {
             if (Vaihe == OpasVaihe.Valmis) return;
             VaiheAika += Math.Max(0, dt);
-            if (odotettu != 0) { if (odotusAlku < 0) odotusAlku = 0; odotusAlku += dt; if (odotusAlku > VastausMaxS) { odotettu = 0; virhe = true; } }
-            if (virhe) { virhe = false; UusiPyynto(); }
+            if (Luovutti) return;
+            if (odotettu != 0) { if (odotusAlku < 0) odotusAlku = 0; odotusAlku += dt; if (odotusAlku > VastausMaxS) { odotettu = 0; Virhe(0, 0); } }
+            if (VirheTauko > 0) VirheTauko = Math.Max(0, VirheTauko - Math.Max(0, dt));
+            if (virhe && VirheTauko <= 0) { virhe = false; UusiPyynto(); }
             // Vastaamaton kysymys (simu 18.39: worker kysyi saman 9 kertaa): opas valitsee itse ensimmäisen vaihtoehdon.
             if (OdottaaVastausta && aaniLoppui) { kysymysAika += dt; if (kysymysAika > KysymysOdotusS) OdottaaVastausta = false; }   // oletus on jo haettu
 

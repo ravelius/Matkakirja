@@ -229,6 +229,29 @@ namespace Matkakirja.Natiivi
             o.StartCoroutine(Hae(n, toive));
         }
 
+        /// <summary>Virheen jälkeen: 429 → "Opas lepää hetken" (kerran virhesarjaa kohden); luovutus → linssi kiinni viestillä
+        /// (KierrosTaulu näyttää Virheen tilarivillä ja sulkee).</summary>
+        void VirheIlmoitus(string viesti)
+        {
+            var l = silmukka;
+            if (l == null) return;
+            if (l.Luovutti)
+            {
+                Virhe = l.ViimeKoodi == 429 ? (viesti ?? "Opas lepää tänään. Palaa huomenna.") : "Opas ei vastaa juuri nyt. Yritä hetken päästä uudelleen.";
+                o.Kirjaa($"opas: luovutti, {l.Virheita} virhettä (viimeisin {l.ViimeKoodi}), linssi kiinni");
+                return;
+            }
+            o.Kirjaa($"opas: virhe {l.Virheita}/{OpasSilmukka.VirheitaMax} ({l.ViimeKoodi}), seuraava yritys {l.VirheTauko:F0} s:n päästä");
+        }
+
+        /// <summary>Workerin virhevastauksen "viesti"-kenttä (Pöllö #4018, 429), tai null.</summary>
+        static string WorkerinViesti(string json)
+        {
+            if (string.IsNullOrEmpty(json)) return null;
+            try { return (MiniJson.Jasenna(json) as Dictionary<string, object>)?.TryGetValue("viesti", out var v) == true ? v as string : null; }
+            catch { return null; }
+        }
+
         IEnumerator TestiVastaus(int n)
         {
             yield return new WaitForSecondsRealtime(0.8f);
@@ -278,7 +301,10 @@ namespace Matkakirja.Natiivi
                 k = OpasKohde.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>);
             o.Kirjaa($"opas: vastaus {n} {(k == null ? "VIRHE " + r.responseCode + " " + r.error : k.Kysymys ? "kysymys (" + (k.Vaihtoehdot?.Length ?? 0) + " vaihtoehtoa)" : k.Nimi)} ({Time.realtimeSinceStartup - t0:F1} s), ääni {(k?.Aani != null ? "url" : "ei")}");
             if (k != null) Valmistele(k);
-            silmukka.Vastaus(n, k);
+            double odota = 0;
+            if (k == null && double.TryParse(r.GetResponseHeader("Retry-After"), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var ra)) odota = ra;
+            silmukka.Vastaus(n, k, k == null ? (int)r.responseCode : 0, odota);
+            if (k == null) VirheIlmoitus(r.responseCode == 429 ? WorkerinViesti(r.downloadHandler?.text) : null);
         }
 
         static string Escape(string s) => s.Replace("\\", "\\\\").Replace("\"", "\\\"").Replace("\n", " ");

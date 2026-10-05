@@ -23,6 +23,46 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(OpasKohde.Lue((Dictionary<string, object>)MiniJson.Jasenna("{\"lat\":1,\"lon\":2}")) == null, "nimi puuttuu");
         }
 
+        [Testi] static void VirheTaukoKasvaaJaOpasLuovuttaa()
+        {
+            // Natiivi-UI 5.10. iPad: 429 → 9 800 pyyntöä 6 min. Nyt: tauko 2–4–8–16 s, viides virhe luovuttaa, ei pyyntöjä sen jälkeen.
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var pyynnot = new List<int>();
+            s.Pyyda += (n, t) => pyynnot.Add(n);
+            s.Aloita("Kööpenhamina");
+            double aika = 0;
+            for (int i = 0; i < 600 * 10; i++)   // 10 min, 10 fps
+            {
+                if (pyynnot.Count > 0 && !s.Luovutti && i % 5 == 0) s.Vastaus(pyynnot[pyynnot.Count - 1], null, 503);
+                s.Paivita(0.1, _ => 40); aika += 0.1;
+            }
+            Oleta.Sama(OpasSilmukka.VirheitaMax, pyynnot.Count, "yritykset ennen luovutusta");
+            Oleta.Tosi(s.Luovutti);
+            Oleta.Sama(2.0, OpasSilmukka.Tauko(1)); Oleta.Sama(16.0, OpasSilmukka.Tauko(4)); Oleta.Sama(60.0, OpasSilmukka.Tauko(10));
+            // Pelaajan toive purkaa luovutuksen: yksi uusi pyyntö.
+            s.Toive("Nyhavn");
+            Oleta.Sama(OpasSilmukka.VirheitaMax + 1, pyynnot.Count);
+            Oleta.Tosi(!s.Luovutti);
+        }
+
+        [Testi] static void RetryAfterPitkaLuovuttaaHetiJaLyhytPidentaaTaukoa()
+        {
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var pyynnot = new List<int>();
+            s.Pyyda += (n, t) => pyynnot.Add(n);
+            s.Aloita("x");
+            s.Vastaus(pyynnot[0], null, 429, 30);
+            Oleta.Sama(30.0, s.VirheTauko, "Retry-After 30 s > tauko 2 s");
+            for (int i = 0; i < 290; i++) s.Paivita(0.1, _ => 40);
+            Oleta.Sama(1, pyynnot.Count, "ei uusintaa ennen Retry-Afteria");
+            for (int i = 0; i < 20; i++) s.Paivita(0.1, _ => 40);
+            Oleta.Sama(2, pyynnot.Count);
+            s.Vastaus(pyynnot[1], null, 429, 6 * 3600);   // päiväraja
+            Oleta.Tosi(s.Luovutti, "Retry-After yli 60 s → luovutus heti");
+            for (int i = 0; i < 1000; i++) s.Paivita(0.1, _ => 40);
+            Oleta.Sama(2, pyynnot.Count);
+        }
+
         [Testi] static void KehysKoonMukaan()
         {
             var pieni = OpasSilmukka.Kehysta(K("a", 55, 12, 10), 40, 90);
