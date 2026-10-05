@@ -161,6 +161,8 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
 - 18.0x KIIRE (omistaja, juna 144): natiivi-ui/pulu-sieppaus a65000ff: + PuluChat.AvaaOppaalle/SuljeOppaalta, OpasValikko
   (LinnaValikon pohja: Vaihda kohde › maanosa › maa › 12 suurinta kaupunkia; Poistu linssistä; KohdeValittu-koukku), paikat.json
   LS2:lta (87863aae, maanosa 6. sarake). Linssiseppä kytkee heijastuksella (linssiseppa/lontoo) ja kokoaa yhteiskäännöksen.
+  Masterin päälle (Linssisepän pyyntö, Cinemachine-esitarkistus): natiivi-ui/opas-master 1ee62e19 (sama sisältö ilman
+  pulu-chat-yksiä; puhdas lontoon ja juna-144-kokeen kanssa).
 
 ## ISS-ohjaamo junaan 144 (Päätoimittaja kuittasi, Natiiviseppä 18.3x)
 - natiivi-ui/iss-ohjaamo-144 2bb26db8 = ec0038f4 + LS2 a2941f8f + iss-ohjaamo-lcd (sis. paneeli 125809dc); konfliktit ratkaistu,
