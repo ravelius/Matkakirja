@@ -1,3 +1,8 @@
+# >>> TILANNE 5.10.2026 KLO 07.0x — VIIKKO 99 %, TILINVAIHTO: lue docs/raportit/viesti-fable-siirtoprompti-20261005.md KOKONAAN <<<
+
+TF 142 testaajilla 05.21 (62d5d1bb). Kaikki roolit pushasivat luovutuksen ja aloitusviestin ja lopettivat (kärjet siirtopromptin taulukossa).
+Aamun kortti omistajalle: docs/raportit/aamukortti-omistajalle-20261005.md (11 kohtaa; kuvat SendUserFile:llä). Juna 143:n tila siirtopromptin kohdassa 2.
+
 # >>> TILANNE 5.10.2026 KLO 04.4x (Päätoimittaja, konteksti 40 %) — LUE ENSIN, sitten 01.4x <<<
 
 **JUNA 142 VIE 04.37** → BUILD 142 = master 62d5d1bb (juna/b13 8ef6b519 BUILD 141:n päällä, käännös b42c04de): Jatka 2f56284a, radio e9fe4b9e, linssivalikko a4ce9696, asentoloki 648c6015, Pelikoodarin lukija-aanet 1fbbad7b (purkuraja 9291781b + lukijaäänet + kuvakortin LRU), Mylly-äänet b2f9b0a1, ISS-taulun ✕ + AUTO eb9fd93b, lipputanko 536783f0, linna-palaute-142 f531743e (saumakorjaus 671dbe23: FMOD ei lue MP3:n gapless-otsaketta). Kaikki tarkistettu itse kuvista ja ääniraidasta (positiivinen verrokki samassa istunnossa). Muutosloki versio C (3 lausetta/280 merkkiä). TF 142 Julkaisijalla → ilmoita omistajalle kun testaajilla. Linnaosoitin c116f02f (avainsanat 8f4eb611 odottaa omistajaa).
