@@ -214,6 +214,9 @@ namespace Matkakirja.Natiivi
             if (kyyti != KyydinTila.Kauko)
                 peitto = PilvetKyydissa == "pois" ? 0 : Astronauttimatikka.PilvienPeittoHuippu;
             pilvienPeitto = Mathf.MoveTowards(pilvienPeitto, (float)peitto, Time.unscaledDeltaTime / 0.8f);
+            // ISS-kuvan renderöinnissä ei pilvikuorta (Päätoimittaja 5.10. klo 16.0x, simu 8aae2864 Kanaria: päivän pilvikuva
+            // ~20 km/px venyi kuvassa suttuiseksi): pilvet tulevat kuvan terävästä Pilvikentästä, Cupola ennallaan.
+            if (KuvanPinta.HasValue) pilvienPeitto = 0;
             // Päivän oikeat pilvet eivät ajelehdi maapallon ympäri (satunnaisen kuvan kierto vain kaukonäkymässä).
             pilvet?.Aseta(pilvienPeitto, paivanPilvet ? 0 : kiertoAsteina);
             pilvet?.Tarkkuus(kyyti != KyydinTila.Kauko && !TarkatPilvetPois ? 1f : 0f, TarkkojenPilvienKm);
