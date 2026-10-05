@@ -114,6 +114,9 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
 - kortti-tiivis a7757d06 (linna-143 e7ad0d38 päällä, mukana siirtoseppa/puhujakuva-koe 1ae53205:ssä): Siirtoseppä todensi
   105c9ed8:lla; havainto: puhujakuva osuu tiivistetyn otsikkorivin päälle → korjattava (puhujakuva ei otsikkorivin alueelle).
 - Puhujakuva ei junaan 144 (Codexin kuvat + omistajan kappelikoe).
+- 15.5x KUITATTU junaan 144: kutsu-paikallaan d7f859cf ja paivitys-versio 129a2513 → merge-pyynnöt Natiivisepälle lähetetty.
+- TUNNETTU (ei korjata nyt, Päätoimittaja): Ateenan kutsukortti voi jäädä piiloon, kun sen lukittu paikka on peitossa
+  (Kutsuminiatyyri: paikka lukitaan kerran kaupunkia kohden; `ui kutsu` → "syy: peitossa (lukittu)"). Vanhaa toimintaa.
 
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
