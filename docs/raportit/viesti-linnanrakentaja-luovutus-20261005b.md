@@ -1,0 +1,31 @@
+# Linnanrakentajan luovutus 5.10.2026 klo 12.2x (Opus high)
+
+## TILA LOPUSSA
+- **Mixamo-laajennus 11 hahmolle** on käynnissä. Omistajan linja 12.30: iPad-mittaus ei estä. Aloita heti, kun omistajan leikkeet 4–14
+  (docs/raportit/mixamo-leikelista-20261005.md) ovat kansiossa `/Users/Shared/Claude/proto-3d/_lahteet/mixamo/` (nyt vain Praying,
+  Sitting Idle ja Sitting Talking). Lyhennä pitkät leikkeet silmukoiksi. Lopuksi kuvapari ja video pelistä Päätoimittajalle ennen junaa 144.
+- **Rantametsä PR #3987** (blender v31 cb0cd92d, peili 22968114) on junaan 144 Julkaisijalla. **Osoitinta EI vaihdeta** ennen
+  Päätoimittajan omistajakorttia.
+- Viestit nimellä: "Päätoimittaja (Opus, max)", "Siirtoseppä (Opus, high)", "Julkaisija (Opus, high)" (ListAgents). Socketit vaihtuvat.
+
+## Mixamo (hahmot)
+- Työkalu `tools/dioraama/blender/hahmo_mixamo.py` on haarassa `linnanrakentaja-mixamo` (worktree /Users/Shared/Claude/wt/linnanrakentaja-mixamo,
+  pohjana latvus-haara). Commitit: 3a973f65e työkalu, 49fbfd872 KOE blender.json (1f203575 = v32), 6f6777927 silmukka ja --korvaa.
+  Käyttö: `Blender -b -P hahmo_mixamo.py -- <hahmo.glb> <ulos.glb> "<fbx>=<nimi>[:<s>]" ... --korvaa idle=a,puhe=b,tyo=c`.
+  Lähdehahmot: `_valmiit/olavinlinna-blender-v26/hahmot/*.glb`. Natiivi soittaa nimiä idle, kavely, puhe ja tyo (kanto = kavely).
+  Kävely pysyy UAL:n leikkeenä (natiivin askelpituus mitattu siitä).
+- Koe hyväksytty (Päätoimittaja, Siirtosepän pelivideo linna-mixamo-kappeli-aanella.mp4). Paketti v32 = v31 + `_valmiit/linna-hahmot/mixamo-koe/`
+  (kappalainen, muut symlinkkejä v26:een). Peili 321b971721f2ef7c.
+- Laajennuksen kulku: uusi kansio `_valmiit/linna-hahmot/mixamo-v1/` (11 glb:tä) → v33 (cp -cR v31, hahmot-symlinkki) → vie-blender.sh
+  `--lahde …-v33` (source ~/.zshrc) → KOE-commit haaraan linnanrakentaja-mixamo → `gh workflow run vie-dioraama.yml --ref
+  linnanrakentaja-mixamo -f rakennus=olavinlinna -f kuiva=false -f osoitin=false` → peilihash lokista → Siirtosepältä pelikuvat →
+  Päätoimittajalle → PR (työkalu + blender.json) junaan 144, kun #3987 on mainissa.
+- Esikatselu: scratchpadin esikatselu.py (EEVEE, --still, --penkki, --ruudut) ei ole repossa, joten kirjoita uusi tarvittaessa.
+
+## Muut tämän päivän tulokset
+- Osoitin 27022c94 (v30) on tuotannossa (#3984 mergetty, Julkaisija vaihtoi 08.21).
+- Tavli: laudat v2 (kafeneio, bysantti, ottomaani) `_valmiit/tavli-laudat/v2/`, skripti PR #3976 (a8dd1f455), natiivikytkentä Siirtosepällä.
+- Suositus: hahmopakettia ei osteta, Gaiaa ei tarvita (docs/raportit/suositus-hahmot-gaia-20261005.md). Omistaja hyväksyi.
+
+## Odottavat (ennallaan)
+Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam Audio -lupa), JPEG-poisto, kevennys A/C Siirtosepällä.
