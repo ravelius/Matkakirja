@@ -764,9 +764,7 @@ namespace Matkakirja.Natiivi
                     Mathf.Clamp(o.x - r.x, 0f, r.width), Mathf.Clamp(o.y - r.y, 0f, r.height), 0f);
                 if (avautuu) { avautuu = false; himmennys.schedule.Execute(() => { if (Auki) himmennys.AddToClassList("mk-auki"); }); }
             });
-            var sulje = Rakenne.Nappi("×", "mk-selite__sulje mk-maakuntaKortti__sulje", Sulje, kortti);
-            sulje.tooltip = "Sulje";
-            sulje.style.display = DisplayStyle.None; // NOSTOKORTTI-pohja: ei ✕:ää (ohinapautus, veto alas, Esc)
+            // NOSTOKORTTI-pohja: ei ✕:ää (ohinapautus, veto alas, Esc); piilotettu nappi poistettu (✕-inventaario 5.10.2026).
             kahva = new Vetokahva(kortti, l => { laajennettu = l; Paikka(); }, Sulje, () => laajennettu);
             Nappaimisto.Rekisteroi("maakuntakortti", 60, () => Auki, null, null, Sulje);
             sisalto = new ScrollView(ScrollViewMode.Vertical);
@@ -774,7 +772,6 @@ namespace Matkakirja.Natiivi
             sisalto.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             sisalto.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Add(sisalto);
-            sulje.BringToFront();
             // NOSTOKORTTI-pohja (web #3791): kapiteeli "MAAKUNTA" otsikon yläpuolella.
             Kirjasimet.Aseta(Rakenne.Teksti("MAAKUNTA", "mk-maakuntaKortti__kapiteeli", sisalto), Kirjasin.Kone);
             otsikko = Rakenne.Teksti("", "mk-maakuntaKortti__otsikko", sisalto);

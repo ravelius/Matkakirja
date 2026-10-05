@@ -10,4 +10,8 @@
       <method name="ClearCachedElementUnderPointer" />
     </type>
   </assembly>
+  <!-- Linnan kertojan esittely Timelinellä (DioraamaTimeline, linna-unity-suunnitelma 2b, Siirtoseppä 5.10.2026): TimelineAsset,
+       raidat ja klipit luodaan ajon aikana (ScriptableObject.CreateInstance, TrackAsset.CreateClip tarkistaa klippityypin
+       attribuuteista heijastuksella), eikä projektissa ole Timeline-assetteja, jotka pitäisivät tyypit mukana. -->
+  <assembly fullname="Unity.Timeline" preserve="all" />
 </linker>

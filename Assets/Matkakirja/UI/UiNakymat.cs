@@ -113,7 +113,12 @@ namespace Matkakirja.Natiivi
             // selite faktarivinä ja "+N tp" rahan paikalla.
             // Kuva dioraaman paketista: osoitin (uusin.json) ratkaistaan ensin (MatkamuistoKuvat).
             UiKerros.Hae().StartCoroutine(MatkamuistoKuvat.Ratkaise());
-            PeliOhjain.AvaaLautapeli = (peli, maa, k) => UiKerros.PaaSaikeessa(() => MyllyNakyma.Kohtaaminen(peli, maa, k?.Nimi));
+            // Tavli (5.10.2026): pelin tunnuksen mukaan oma näkymä, muuten Mylly.
+            PeliOhjain.AvaaLautapeli = (peli, maa, k) => UiKerros.PaaSaikeessa(() =>
+            {
+                if (peli != null && peli.Id == global::Matkakirja.Peli.Pelit.Peliluettelo.Tavli.Id) TavliNakyma.Kohtaaminen(peli, maa, k?.Nimi);
+                else MyllyNakyma.Kohtaaminen(peli, maa, k?.Nimi);
+            });
             PeliOhjain.NaytaMatkamuisto = m => UiKerros.PaaSaikeessa(() => UiKerros.Hae().StartCoroutine(MatkamuistoKuvat.Ratkaise(() =>
                 Hae().Paljastus.Nayta(new KysymysNaytto
                 {
@@ -352,7 +357,7 @@ namespace Matkakirja.Natiivi
             bool arkkiPeittaa = (Nahtavyydet.Auki && Peittoosuus(Nahtavyydet.Arkki) >= ArkkiPeittoRaja)
                 || (Linssit?.Valitsin != null && Linssit.Valitsin.Auki && Peittoosuus(Linssit.Valitsin.Paneeli) >= ArkkiPeittoRaja);
             // Lautapeli (omistaja 2.10. klo 08.2x, Natiivi-UI): kartta sumeana pysäytyskuvana pelin ajan (Kokoruutu, kaappaus kerran).
-            var taso = PakotaKuvaTaso ?? (Nostokortti.KuvaKokoruudulla || arkkiPeittaa || MyllyNakyma.AukiNyt ? KuvaSumennus.Kokoruutu : s ? KuvaSumennus.Kortti : KuvaSumennus.Ei);
+            var taso = PakotaKuvaTaso ?? (Nostokortti.KuvaKokoruudulla || arkkiPeittaa || MyllyNakyma.AukiNyt || TavliNakyma.AukiNyt ? KuvaSumennus.Kokoruutu : s ? KuvaSumennus.Kortti : KuvaSumennus.Ei);
             if (taso != KuvaSumennus.Ei) s = true;
             if (taso != KuvaTaso) { KuvaTaso = taso; KuvaTasoMuuttui?.Invoke(taso); }
             if (s == KuvaSumea) return;
@@ -959,6 +964,7 @@ namespace Matkakirja.Natiivi
             Pikkuseloste.Sulje();
             Vahvistus.Sulje();
             MyllyNakyma.SuljeJosAuki();
+            TavliNakyma.SuljeJosAuki();
             Matkavalinta.Piilota();
             Matkavalinta.PiilotaHeitto();
             Kaupunkikortti.Piilota();

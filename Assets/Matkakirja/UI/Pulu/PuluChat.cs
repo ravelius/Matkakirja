@@ -271,6 +271,10 @@ namespace Matkakirja.Natiivi
             paneeli.schedule.Execute(() =>
             {
                 if (Linssissa && Auki && linssiAuki && UiNakymat.Olemassa && UiNakymat.Hae().Linssit?.Auki == null) Sulje();
+                // Linssi (esim. linna) avautui kartan chatin ollessa auki: chat sulkeutuu, ettei se jää linnan päälle eikä sen
+                // napautus valu linnanäkymään (Natiivisepän löydös juna 142e: chat Berliinistä linnan päällä avasi Muurinharjan).
+                var nyt = UiNakymat.Olemassa ? UiNakymat.Hae().Linssit?.Auki : null;
+                if (Auki && !Linssissa && nyt != null && !ReferenceEquals(nyt, linssiAvatessa)) { Debug.Log("MATKAKIRJA ui chat: linssi avautui, chat kiinni"); Sulje(); }
             }).Every(400);
             Asettele();
         }
@@ -381,6 +385,7 @@ namespace Matkakirja.Natiivi
             // Muu avausreitti kuin linssin pulu (kartta, kortit): kartan teema (1.10. simulaattorikuva: vihreä teema jäi kartalle).
             if (Linssissa && !avataanLinssiin) PoistuLinssista();
             Auki = true;
+            linssiAvatessa = UiNakymat.Olemassa ? UiNakymat.Hae().Linssit?.Auki : null;
             sulkija.style.display = DisplayStyle.Flex;
             // Web pollo.js animoiAvaus(paneeli, nappi): kasvaa avaajan (Pulun tai napin) kohdalta, 220/200 ms.
             Ponnahdus.Avaa(paneeli);
@@ -400,6 +405,8 @@ namespace Matkakirja.Natiivi
         // --- linssin valmiit kysymykset (web naytaLinssinValmiit, vastaaLinssinValmiilla) ------------
 
         readonly Dictionary<string, HashSet<string>> linssiKysytyt = new Dictionary<string, HashSet<string>>();
+        /// <summary>Linssi, joka oli auki chatin avautuessa (uuden linssin avautuminen sulkee kartan chatin).</summary>
+        object linssiAvatessa;
 
         /// <summary>Jäljellä olevat valmiit kysymykset napeiksi; tosi, jos linssi tarjoaa kysymyksiä.</summary>
         bool NaytaLinssinValmiit()

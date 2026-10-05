@@ -400,6 +400,48 @@ namespace Matkakirja.Linssit.Dioraama
             return (false, default, -1, null, 0);
         }
 
+        /// <summary>
+        /// TIMELINE (suunnitelma linna-unity-suunnitelma-20261005.md kohta 2b, Siirtoseppä 5.10.2026): kertojan kierroksen
+        /// aikataulu Unity-puolen TimelineAssetille. VAIN LUKU: sama silmukka ja samat säännöt kuin Kierros-metodissa (lento =
+        /// KertojaLento edellisestä asennosta, pysähdys = JaksonKesto, kukin tallennettu napautus päättää yhden jakson ja seuraava
+        /// lento alkaa napautuksen asennosta), mutta koko kierros kerralla eikä yhden hetken näkymä. Kierroksen laskentaa ei
+        /// muuteta; Linssit-testien KertojanAikatauluVastaaKierrosta varmistaa, että tämä ja Kierros pysyvät samoina.
+        /// Palauttaa true, kun kierros on käynnissä hetkellä t (pysty kuten NakymaHetkella). Absoluuttiset ajat: alut[j] =
+        /// jakson lennon alku, lennot[j] = lennon kesto (teksti ja puhe alkavat alut[j] + KertojaTekstiOsuus × lennot[j]),
+        /// loput[j] = jakson loppu (napautus lyhentää), loppu = paluulennon loppu. ohituksia = kierroksen napautukset.
+        /// </summary>
+        public bool KertojanAikataulu(double t, bool pysty, List<double> alut, List<double> lennot, List<double> loput,
+            out double alku, out double loppu, out int ohituksia)
+        {
+            alut.Clear(); lennot.Clear(); loput.Clear();
+            alku = loppu = 0; ohituksia = 0;
+            var jaksot = Rakennus?.Kertoja;
+            if (!Auki || jaksot == null || jaksot.Count == 0) return false;
+            if (kertojaVainUusintana && kertojaAlku < 0) return false;
+            double s = KertojaAlku;
+            if (t < s || double.IsInfinity(s)) return false;
+            foreach (var e in tapahtumat) if (e.Hetki > s && e.Hetki <= t) return false;
+            var edellinen = AsentoFor(kertojaAlku >= 0 ? kertojaLahto : null, pysty);
+            double kursori = s;
+            int ohitus = 0;
+            while (ohitus < kertojaOhitukset.Count && kertojaOhitukset[ohitus] < s) ohitus++;
+            int ohitusAlku = ohitus;
+            for (int j = 0; j < jaksot.Count; j++)
+            {
+                var kohde = JaksonAsento(jaksot[j], pysty);
+                double lento = KertojaLento(edellinen, kohde), jLoppu = kursori + lento + JaksonKesto(jaksot[j]);
+                if (ohitus < kertojaOhitukset.Count && kertojaOhitukset[ohitus] < jLoppu) jLoppu = Math.Max(kursori, kertojaOhitukset[ohitus++]);
+                alut.Add(kursori); lennot.Add(lento); loput.Add(jLoppu);
+                double uLoppu = lento > 0 ? (jLoppu - kursori) / lento : 1;
+                edellinen = uLoppu < 1 ? Kameraliike.SiirtymaAsento(edellinen, kohde, uLoppu) : kohde;
+                kursori = jLoppu;
+            }
+            alku = s;
+            loppu = kursori + KertojaLento(edellinen, AsentoFor(null, pysty));
+            ohituksia = ohitus - ohitusAlku;
+            return t < loppu;
+        }
+
         public void Sulje()
         {
             Auki = false;

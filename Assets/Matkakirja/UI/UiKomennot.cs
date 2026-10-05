@@ -522,6 +522,7 @@ namespace Matkakirja.Natiivi
                 case "valikko" when System.Enum.TryParse(loput, true, out Paavalikko.Osa osa): ui.Valikko.AvaaOsa(osa); return null;
                 case "vahvistus": ui.Valikko.KysyUusiPeli(); return null;
                 case "mylly": return "=" + MyllyNakyma.Hae().Komento(loput); // lautapelin pohja (Mylly, Siirtoseppä 1.10.)
+                case "tavli": return "=" + TavliNakyma.Hae().Komento(loput); // Tavli Myllyn pohjalla (Siirtoseppä 5.10.)
                 case "linna": return "=" + (UiNakymat.Hae()?.Linssit?.Dioraama?.Linna?.Komento(loput) ?? "linna: ei auki"); // linnan valikko (2.10.)
                 case "loppukortti": ui.Huipennus.NaytaLoppu("Rahat loppuivat kaupungissa Marseille, matkan 12. päivänä. Laukussa 0 löytöä ja 0 unohdettua aarretta.", null, () => { }, () => { }); return null; // KORTTI-pohja: loppukortti (savuke 1102) // KORTTI-pohja: uuden pelin vahvistus (ei vahvista)
                 case "valikko": ui.Valikko.Sulje(); ui.Linssit.Valitsin.Avaa(); return null;

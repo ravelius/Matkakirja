@@ -1123,6 +1123,70 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(0, puheella.NakymaHetkella(11.5, pysty: false).KertojaJakso);
         }
 
+        // TIMELINE (linna-unity-suunnitelma 2b, Siirtoseppä 5.10.): Unity-puolen TimelineAsset rakennetaan KertojanAikataulusta,
+        // joten sen on vastattava Kierros-metodia joka hetkellä: jakso, tekstin (ja puheen) alku lennon 60 %:ssa, napautuksen
+        // ohitus (myös kesken lennon) ja paluulento. Näytteet 0,01 s:n välein, rajojen ±1e-6 s:n ympäristö ohitetaan.
+        [Testi] static void KertojanAikatauluVastaaKierrosta()
+        {
+            string json = KeittioFixture
+                .Replace("\"yleiskamera\": {", "\"kertoja\": {\"jaksot\": [" +
+                    "{\"id\": \"j1\", \"teksti\": \"Yksi.\", \"kesto_s\": 3, \"aani\": \"pitka\", \"kamera\": {\"kohde\": [0, 0, 0], \"atsimuutti\": 90, \"korkeus\": 20, \"etaisyys\": 10}}," +
+                    "{\"id\": \"j2\", \"teksti\": \"Kaksi.\", \"kesto_s\": 4, \"tila\": \"keittio\", \"kamera\": {\"kohde\": [0, 0, 0], \"atsimuutti\": 0, \"korkeus\": 30, \"etaisyys\": 8}}," +
+                    "{\"id\": \"j3\", \"teksti\": \"Kolme.\", \"kesto_s\": 2.5, \"kamera\": {\"kohde\": [5, 0, 5], \"atsimuutti\": 250, \"korkeus\": 35, \"etaisyys\": 30}}]},\n  \"yleiskamera\": {")
+                .Replace("\"testiaani\": {", "\"pitka\": {\"tiedosto\": \"p.mp3\", \"kesto_s\": 5},\n \"testiaani\": {");
+            var rak = DioraamaData.Lue(json);
+            Oleta.Sama(3, rak.Kertoja.Count);
+            foreach (bool pysty in new[] { false, true })
+            {
+                var l = new PoikkileikkausLinssi { Kuvasuhde = pysty ? 0.6 : 1.6 };
+                l.Avaa(rak, 0, false);
+                var alut = new List<double>(); var lennot = new List<double>(); var loput = new List<double>();
+                Oleta.Tosi(l.KertojanAikataulu(0.01, pysty, alut, lennot, loput, out double a0, out double loppu0, out int oh0), "kierros käynnissä alussa");
+                Oleta.Sama(3, alut.Count); Oleta.Sama(0, oh0); Lahella(0, a0, "kierroksen alku");
+                Lahella(5.5, loput[0] - alut[0] - lennot[0], "jakso 1 venyy puheen mittaiseksi (5 + 0,5 s)");
+                // Napautukset: jakson 1 tekstin aikana ja jakson 2 lennon alussa (ennen tekstiä, jakso 2 jää äänettä).
+                double nap1 = alut[0] + lennot[0] + 1.0;
+                double nap2 = loput[0] + 0.3 * lennot[1]; // lasketaan uudelleen napautuksen 1 jälkeen
+                var napautukset = new List<double> { nap1 };
+                for (int vaihe = 0; vaihe < 3; vaihe++)
+                {
+                    if (vaihe == 1) l.Napauta(nap1);
+                    if (vaihe == 2)
+                    {
+                        l.KertojanAikataulu(nap1 + 0.01, pysty, alut, lennot, loput, out _, out _, out _);
+                        nap2 = loput[0] + 0.3 * lennot[1];
+                        l.Napauta(nap2);
+                    }
+                    double tAikataulu = vaihe == 0 ? 0.01 : vaihe == 1 ? nap1 + 0.01 : nap2 + 0.01;
+                    Oleta.Tosi(l.KertojanAikataulu(tAikataulu, pysty, alut, lennot, loput, out double alku, out double loppu, out int ohituksia), "käynnissä vaiheessa " + vaihe);
+                    Oleta.Sama(vaihe, ohituksia);
+                    if (vaihe >= 1) Lahella(nap1, loput[0], "napautus päättää jakson 1");
+                    if (vaihe == 2) Lahella(nap2, loput[1], "napautus päättää jakson 2 kesken lennon");
+                    double tAlku = vaihe == 0 ? 0 : vaihe == 1 ? nap1 : nap2;
+                    for (double t = tAlku; t < loppu + 1.0; t += 0.01)
+                    {
+                        bool raja = Math.Abs(t - loppu) < 1e-6;
+                        for (int j = 0; j < alut.Count; j++)
+                            raja |= Math.Abs(t - alut[j]) < 1e-6 || Math.Abs(t - loput[j]) < 1e-6 || Math.Abs(t - (alut[j] + PoikkileikkausLinssi.KertojaTekstiOsuus * lennot[j])) < 1e-6;
+                        if (raja) continue;
+                        int odotettu = -1; bool teksti = false;
+                        for (int j = 0; j < alut.Count; j++)
+                            if (t >= alut[j] && t < loput[j]) { odotettu = j; teksti = t >= alut[j] + PoikkileikkausLinssi.KertojaTekstiOsuus * lennot[j]; break; }
+                        var n = l.NakymaHetkella(t, pysty);
+                        Oleta.Sama(odotettu, n.KertojaJakso);
+                        Oleta.Tosi((n.KertojaTeksti != null) == teksti, $"teksti t={t:F2} (vaihe {vaihe}, pysty {pysty})");
+                        bool kaynnissa = l.KertojanAikataulu(t, pysty, new List<double>(), new List<double>(), new List<double>(), out _, out _, out _);
+                        Oleta.Tosi(kaynnissa == (t < loppu), $"käynnissä t={t:F2}");
+                        if (!pysty) Oleta.Tosi(kaynnissa == l.KertojaKaynnissa(t), $"KertojaKaynnissa t={t:F2}");
+                    }
+                }
+                // Huoneen kohdistus katkaisee kierroksen kuten Kierros-metodissa.
+                l.KertojanAikataulu(nap2 + 0.01, pysty, alut, lennot, loput, out _, out double loppuK, out _);
+                l.Kohdista("kellari", loppuK - 0.5);
+                Oleta.Tosi(!l.KertojanAikataulu(loppuK - 0.4, pysty, alut, lennot, loput, out _, out _, out _), "kohdistus katkaisee");
+            }
+        }
+
         [Testi] static void PoikkileikkausAvausJaKohdistaminen()
         {
             var rak = DioraamaData.Lue(KeittioFixture);

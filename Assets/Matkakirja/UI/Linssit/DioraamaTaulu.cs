@@ -365,6 +365,9 @@ namespace Matkakirja.Natiivi
             // napautusta dioraamalle (valikon huonevalinnan irrotus kohdisti edellisen huoneen uudelleen). Valikko on omassa
             // kerroksessaan, joten auki oleva valikko estää koko eleen (myös sulkevan napautuksen valikon ulkopuolelle).
             if (Linna != null && Linna.Auki) return true;
+            // Pulun chat on auki: sen sulkija peittää koko ruudun (napautus sulkee chatin), joten mikään ele ei valu linnaan
+            // (Natiivisepän löydös juna 142e: chatin kysymysnapin napautus avasi Muurinharjan; chat on eri UI-kerroksessa).
+            if (UiNakymat.Olemassa && UiNakymat.Hae().Chat?.Auki == true) return true;
             if (juuri.panel != null)
             {
                 for (var el = juuri.panel.Pick(RuntimePanelUtils.ScreenToPanel(juuri.panel, new Vector2(ruutu.x, Screen.height - ruutu.y)));
@@ -386,7 +389,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement avainsana;
         readonly Label avainsanaVuosi, avainsanaSanat;
         Avainsana avainsanaNyt;
-        const float AvainsanaS = 4f;
+        internal const float AvainsanaS = 4f; // myös DioraamaTimelinen avainsanaraidan klippien kesto
         readonly Label nimiruudunNimi, latausRivi;
         bool nimiruutuAuki, virheIlmoitettu;
         float nimiruutuAlku;
@@ -460,7 +463,8 @@ namespace Matkakirja.Natiivi
                 avainsanaVuosi.text = nyt.Vuosi ?? "";
                 avainsanaVuosi.style.display = string.IsNullOrEmpty(nyt.Vuosi) ? DisplayStyle.None : DisplayStyle.Flex;
                 avainsanaSanat.text = nyt.Sanat ?? "";
-                Debug.Log($"MATKAKIRJA linssit: avainsana {nyt.Vuosi} {nyt.Sanat} ({nyt.Ts:F1} s)");
+                // Kierrosaika lokiin (linna-unity-suunnitelma 2b: timeline-A/B, avainsanat ±100 ms).
+                Debug.Log($"MATKAKIRJA linssit: avainsana {nyt.Vuosi} {nyt.Sanat} ({nyt.Ts:F1} s, kierros +{DioraamaTimeline.S(DioraamaSovitin.ViimeisinT - DioraamaTimeline.KierrosAlku)} s, {(DioraamaTimeline.OhjaaKertojaa ? "timeline" : "ydin")})");
             }
             avainsana.style.opacity = nyt != null ? 1f : 0f;
             avainsanaNyt = nyt;

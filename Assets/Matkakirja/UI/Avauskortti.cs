@@ -121,12 +121,9 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(oppaanTeksti, Kirjasin.Luku);
             oppaanRivi.style.display = DisplayStyle.None;
 
-            var sulku = Rakenne.Nappi("×", "mk-avauskortti__sulku", () => Sulje(), kortti);
-            sulku.tooltip = "Sulje";
-            sulku.style.display = DisplayStyle.None; // NOSTOKORTTI-pohja: ei ✕:ää (ohinapautus, veto alas, Esc)
+            // NOSTOKORTTI-pohja: ei ✕:ää (ohinapautus, veto alas, Esc); piilotettu nappi poistettu (✕-inventaario 5.10.2026).
             kahva = new Vetokahva(kortti, l => { laajennettu = l; Mitoita(); }, () => Sulje(), () => laajennettu);
             Nappaimisto.Rekisteroi("avauskortti", 60, () => Auki, null, null, () => Sulje());
-            Kirjasimet.Aseta(sulku, Kirjasin.Luku);
 
             alue.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());
             kerros.JokaRuutu += Animoi;

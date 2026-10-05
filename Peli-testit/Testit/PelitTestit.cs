@@ -16,12 +16,14 @@ namespace Matkakirja.Peli.Testit
                 new Kaupunki { Id = "lontoo", Nimi = "Lontoo", Maa = "GBR", Manner = "europe" },
                 new Kaupunki { Id = "bermuda", Nimi = "Bermuda", Maa = "GBR", Manner = "northamerica" },
                 new Kaupunki { Id = "pariisi", Nimi = "Pariisi", Maa = "FRA", Manner = "europe" },
+                new Kaupunki { Id = "ateena", Nimi = "Ateena", Maa = "GRC", Manner = "europe" },
             },
             new List<Reitti>
             {
                 new Reitti { Id = "berliini|lontoo", A = "berliini", B = "lontoo", Laji = ReitinLaji.Maa, Askeleet = 1 },
                 new Reitti { Id = "lontoo|pariisi", A = "lontoo", B = "pariisi", Laji = ReitinLaji.Maa, Askeleet = 1 },
                 new Reitti { Id = "lontoo|bermuda", A = "lontoo", B = "bermuda", Laji = ReitinLaji.Meri, Askeleet = 2 },
+                new Reitti { Id = "pariisi|ateena", A = "pariisi", B = "ateena", Laji = ReitinLaji.Maa, Askeleet = 3 },
             });
 
         static (Matka, Kysely) Uusi(string alku)
@@ -40,6 +42,18 @@ namespace Matkakirja.Peli.Testit
             Oleta.Sama("-", Kuvaus(v, "lontoo"), "Iso-Britannian lisäys peruttu");
             Oleta.Sama("-", Kuvaus(v, "bermuda"));
             Oleta.Sama("-", Kuvaus(v, "pariisi"));
+            // Tavli (5.10.2026): vain Ateenassa.
+            Oleta.Sama("Kreikka / Τάβλι", Kuvaus(v, "ateena"));
+        }
+
+        [Testi] static void TavlinKohtaaminenAteenassa()
+        {
+            var (m, ky) = Uusi("ateena");
+            Peliluettelo.Kytke(ky, (p, maa, k) => { });
+            Oleta.Sama("Pelaa tavlia", Natiivi.KysymysApu.TehtavaNappi(ky, "ateena")?.Teksti, "Tavlin tehtävänappi");
+            Pelikehys.Kirjaa(m, new PeliTulos { PeliId = "tavli", Nimi = "Tavli", Vastustaja = Vastustaja.BottiHelppo, Voittaja = 0, Siirtoja = 25 }, PelinTalous.Minipeli);
+            Oleta.Sama((string)null, Natiivi.KysymysApu.TehtavaNappi(ky, "ateena")?.Teksti, "pelattu: ei enää kohtaamista");
+            Oleta.Sama("kafeneio", string.Join(",", m.Tila.Pelaaja.Pelit.Single().Laudat), "ensimmäinen voitto: kafeneion lauta esineeksi");
         }
 
         static string Kuvaus(Reittiverkko v, string id) =>
