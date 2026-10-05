@@ -405,7 +405,12 @@ namespace Matkakirja.Natiivi
             Alku(historia.Count == 0);
             Asettele(); // lehti auki → pienempi pulu (web pieniPulu)
             // Linssin valmiit kysymykset tervehdyksen tilalla (web naytaValmiit → naytaLinssinValmiit).
-            if (!NaytaLinssinValmiit() && ehdotukset) HaeEhdotukset();
+            // AINA TASAN 2 KYSYMYSTÄ (omistaja 5.10.2026 klo 16.4x; simu 17.1x: uudelleen avattaessa edellisen vastauksen 2 jatkoa
+            // ja 2 uutta ehdotusta pinoutuivat 4:ksi): linssin kysymykset korvaavat vanhat; muuten edellisen vastauksen jatkot jäävät,
+            // ja uusia ehdotuksia haetaan vain, jos siruja ei ole.
+            bool vanhatSirut = virta.Q(className: "mk-chat__sirut") != null;
+            if (LinssiKysymykset.Nykyinen() != null) PoistaSirut();
+            if (!NaytaLinssinValmiit() && ehdotukset && !vanhatSirut) HaeEhdotukset();
         }
 
         // --- linssin valmiit kysymykset (web naytaLinssinValmiit, vastaaLinssinValmiilla) ------------
