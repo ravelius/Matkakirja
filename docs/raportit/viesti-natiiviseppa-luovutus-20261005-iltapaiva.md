@@ -4,6 +4,17 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovu
 
 ## TILA HETI
 
+- **JUNA 144 LOPULLINEN KOE e636bc55** (haara natiiviseppa/juna-144-ohjaamo-koe, worktree wt/proto-natiiviseppa-j144; simukäännös
+  061121c9, .app lokit/natiiviseppa-app-144vie-061121c9) = ec0038f4 + ISS-ohjaamo (natiivi-ui/iss-ohjaamo-144 2bb26db8 + LS2 v2e
+  eea832b1) + plist 5e9d2c7f + linna/kaupunki-kuva 79a3582c (sumu/Volume pois) + elävä opas (natiivi-ui/opas-kevyt-144 650f9325,
+  lontoo → 9cf44e55 → 110c7dee → 7db42dcc; EI 2c490b78) — kaikki Päätoimittajan kuittaamia. Testit 0/444/415/675.
+  VIE ja TF ODOTTAVAT OMISTAJAN LUPAA (19.5x "Odota junaa hetki"). VIE-ehdot: Natiivi-UI:n 4 kuvaa (dc9b6022), Laitetestaajan
+  napautuspolku, iPad-muistiajo 10 min (laitekäännös minulla, Linssisepän komentojono viestissä 19.5x), Linssisepän koesimu.
+  Avaus: juna/b13 91220fb6 → e636bc55 (git update-ref), juna.log-rivi, vahti kääntää, BUILD 144 -master, kopioi-juna-app.sh.
+  Pelikoodarin #4018 julki vasta kun TF-build ⊇ e636bc55 → ilmoita hänelle.
+  Juna 145 -jono: pulu-testiotsake 23b682e1, astrokuva-tauko bc66e66d, pulu-chat-yksi d1d1f0ee, linna-145 12eeab86, LS2 S2-maailma
+  (kuittasin ehdoin), lontoo 2c490b78 (PCM) — kuittaukset Päätoimittajalta.
+
 - **JUNA 144 SIIRRETTY (omistaja ~17.4x, Julkaisijan välittämänä): EI avata klo 20.** Lähtee vasta kun elävä opas on todennettu simussa
   (Linssiseppä, Pelikoodari, Natiivi-UI; tavoite ~22–23); opas ec0038f4:n päälle vain Päätoimittajan kuittauksella; ISS-ohjaamo vain jos
   Meksikon + Kanarian parit hyväksytty. Juna 145 -jono: pulu-testiotsake 23b682e1, astrokuva-tauko bc66e66d, pulu-chat-yksi d1d1f0ee,
