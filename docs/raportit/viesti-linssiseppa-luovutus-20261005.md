@@ -1,4 +1,4 @@
-# Linssisepän luovutus 5.10.2026 klo 06.0x (viikkokiintiö 97 %, tilinvaihto ~07.15)
+# Linssisepän luovutus 5.10.2026 klo 07.0x (viikkokiintiö 99 %, tilinvaihto: LOPETETTU)
 
 Luovuttaa: Linssiseppä (Opus, high). Edellinen: `viesti-linssiseppa-luovutus-20261001-c.md` (TILA-osiot 2.–5.10.).
 Proto-worktree: /Users/Shared/Claude/wt/proto-linssiseppa-astro-auto (nyt haarassa linssiseppa/linna-kuva).
@@ -25,7 +25,16 @@ Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), i
 - 06.4x ajo **-d** (käännös 46d3aca2 = e6fa10ea): kuvapari LÄHETETTY Päätoimittajalle 06.5x (kuvat/omistajalle, merkitty).
   Porraskuvio poissa; sumeassa seinässä suurennoksessa yhä heikko ~2 px:n ruudukko (ei pienennyksestä, juurisyy auki:
   epäily R11G11B10/half-tarkkuus tai Yhdista-passin lerp; tutki vasta jos Päätoimittaja valitsee tilt-shiftin).
-- SEURAAVAKSI: Päätoimittajan A/B-valinta (tiltshift 0/1, savy neutral/aces) → oletukset valinnan mukaan → merge-pyyntö (sävy yleis+kappeli,
+- **Kärki 9f37a9e9: 2 px:n ruudukon JUURISYY löytyi ja on korjattu, simulla TODENTAMATTA.** Gaussin askel oli 1,5
+  tekseliä (kiinteä 4× pienennys), ja ytimen parinäytteet olettavat 1 tekselin askeleen, joten sivukeila oli 0,53 taajuudella
+  0,389/tekseli, eli jakso noin 13 näytön px = mitattu kuvio. Nyt pienennyskerroin f = clamp(ceil(voima/3), 2, 8), jolloin
+  askel on enintään 1 ja sivukeila 0,012. Offline-varmistus: ytimen taajuusvaste numpylla. unity-tarkistus 0.
+- **Päätoimittajan suositus (omistajan aamukortti, makuasia):** Neutral + tilt-shift VAIN huoneissa DoF:n tilalla
+  (yleisnäkymän tilt sumentaa tornit). Toteutus: `poikki tiltshift 1` + `poikki tiltshift aseta 0.5 0.14 0.22 0 6`
+  (voimaYleisPt 0) tai oletukseksi VoimaYleisPt = 0. Kortin kuvapari: yleis Neutral ilman tiltiä (ajo -d 1-yleis-neutral) +
+  kappeli tiltillä, KUVATTAVA UUDELLEEN 9f37a9e9:llä (ajo -d:n kappeli sisältää ruudukon).
+- SEURAAVAKSI: käännös linna-kuva 9f37a9e9 → ajo-linna-kuva.sh (suurennos: ei ruudukkoa) → kortin kuvapari Päätoimittajalle
+  → omistajan valinta → oletukset → merge-pyyntö Natiivisepälle. (sävy yleis+kappeli,
   tilt yleis/laituri/kappeli/keittiö, video tilt-yleis-kappeli.mov) → merge-pyyntö Natiivisepälle Päätoimittajan
   kuittauksella; Siirtoseppä rebasettaa Cinemachine-vaiheen päälle.
 

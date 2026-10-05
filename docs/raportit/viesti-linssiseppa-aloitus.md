@@ -1,9 +1,9 @@
-# Linssisepän aloitusviesti (päivitetty 5.10.2026 klo 06.0x, viikkokiintiö 97 %, tilinvaihto ~07.15)
+# Linssisepän aloitusviesti (päivitetty 5.10.2026 klo 07.0x, tilinvaihto 99 %)
 
 Olet Linssiseppä (Opus, high) ja omistajan päätöksellä (22.2x) myös Mallinseppä.
 - Checkout: /Users/Shared/Claude/Matkakirja-linssiseppa (haara linssiseppa-tyo-20260923).
 - Proto-git: /Users/Shared/Claude/proto-3d/Matkakirja-proto; oma worktree /Users/Shared/Claude/wt/proto-linssiseppa-astro-auto
-  (nyt haarassa linssiseppa/linna-kuva 03223685). Uusin juna BUILD 141 (5a0b9add); juna 142 TF:ssä.
+  (nyt haarassa linssiseppa/linna-kuva 9f37a9e9). Uusin juna BUILD 141 (5a0b9add); juna 142 TF:ssä.
 - master kuuluu Natiivisepälle, integraatiohaara on juna/b13 ja 1.0.40:n sivuhaara natiiviseppa/juna-1040.
 
 Lue:
@@ -13,8 +13,9 @@ Lue:
   PELIT, TALOUS JA LUENTA; VAIN EUROOPPA (omistaja 27.9. klo 13.5x #3416: erikoismallit, meren lajien sijoitus ja linssien uudet
   kohteet vain Eurooppaan, kunnes omistaja toteaa Euroopan valmiiksi)
 - proto-3d/TYOTAPA.md ja RAJAPINTA.md, proto-3d/lokit/elava-kerros-rajapinta.md
-- **docs/raportit/viesti-linssiseppa-luovutus-20261005.md** (UUSIN: AUKI NYT = linnan kuva vaihe 3 simuvuorolla ~06.30,
-  kiilto simuvarauksella 5.10. 11–13, lupakortin rivit lähetetty; valmiit ja opitut).
+- **docs/raportit/viesti-linssiseppa-luovutus-20261005.md** (UUSIN: AUKI = linnan kuva vaihe 3 kärki 9f37a9e9: ruudukon
+  juurisyy korjattu mutta simulla todentamatta, Päätoimittajan suositus Neutral + tilt vain huoneissa omistajan kortille;
+  kiilto simuvarauksella 5.10. 11–13; lupakortin rivit lähetetty; valmiit ja opitut).
 - docs/raportit/viesti-linssiseppa-luovutus-20261001-c.md (TILA-osiot 2.–5.10.; 1.10. 21.1x: LENTOPELI vaihe 1 linssiseppa/lentopeli 173d7e19, huomisen jono: latausodotus → Sokrates-heijastus → yövalot); 17.3x: viesti-linssiseppa-luovutus-20261001-b.md (S2-erä, vuodenaika-3, cupola-iso-ikkuna); aamu: viesti-linssiseppa-luovutus-20261001.md: kuvanäkymä junassa 86/88, S2-sävytys haarassa
   linssiseppa/iss-fotorealismi 23e40639 (merge S2-erän mukana Linssiseppä 2:n muistimittauksen jälkeen).
   Aiemmat: -20260929-c.md, -20260929-b.md (taulu), -20260929.md (Cupola 3).
@@ -24,9 +25,10 @@ Lue:
 - Mallinsepän tehtävä: `git show origin/mallinseppa-tyo-20260926:docs/raportit/viesti-mallinseppa-aloitus.md`,
   rajapinta proto-3d/lokit/mallinseppa-rajapinta.md, speksit docs/raportit/erikoismallit/*.md ja erikoismalli-speksi-pohja.md
 
-**Järjestys:** luovutus -20261005 kohdat 1 → 2. Käynnissä: ketju-linna-kuva.sh odottaa porttia $S/sim-nyt-linna (vanhan
-session scratchpad; uusi sessio: aja ajo-linna-kuva.sh uudelleen APP=<käännös 5cc14f8a tai uusi käännös linna-kuva>, OUT,
-S, ja touch $S/sim-nyt-linna Julkaisijan NYT:llä). Ajattelijat-linssi on Linssiseppä 2:n. Seuraava erä Päätoimittajalta.
+**Järjestys:** luovutus -20261005 kohdat 1 → 2. Ei ajoja käynnissä. Linna: pyydä Julkaisijalta käännös linna-kuva
+(9f37a9e9) + simu, aja `S=<oma scratchpad> zsh proto-3d/tyokalut/linssiseppa-ajot/ketju-linna-kuva.sh` (muokkaa O-kansio ja S;
+portti $S/sim-nyt-linna touchataan simu-NYT:llä). Kiilto 11–13: ketju-kiilto-aamu.sh (APP = käännös 3674ed53 tai uusi
+glint-2+päät; S oma). Ajattelijat-linssi on Linssiseppä 2:n.
 **Napit:** uusi paneelin avausnappi → paneelin Avaajiin ja todennus OIKEALLA sim-tapilla (control attach + tap); paneelin
 detach irrottaa myös muiden roolien laitteet → kerro Laitetestaajalle.
 
