@@ -69,3 +69,10 @@ Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), i
 - Kiiltokulma: katse oletus ennen laskua (lokin "suunt" = maajälki vain oletuksella). LIVE-aika siirtää alusta ~460 km/min.
 - macOS grep: `\|` vain -E:llä. Älä vahdi `pgrep -f <oma skripti>`:llä. Odota SORMI-ikkunaa Monitor-tapahtumalla.
 - Simun ajoskripti odottaa porttia enintään 2 h; vuoron venyessä käynnistä ajo uudelleen samalla .appilla.
+
+## TILA 5.10. 08.1x (uusi tili)
+- Omistajan päätös 08.01: Neutral, EI tilt-shiftiä missään → sama kuin BUILD 142 (profiili Neutral + Gaussian-DoF).
+  Simu 08.0x käännöksellä b1b87e02 (= 9f37a9e9, tilt pois): DoF-alueissa ei ruudukkoa (3× + FFT). Stillit Päätoimittajalle
+  (lokit/linssiseppa-linna-kuva-20261005-e/omistajalle). Suositus: linna-kuva EI mergetä (ei muuta kuvaa), haara viitteeksi.
+- Uudet session id:t: Päätoimittaja local_8d8ebf72, Julkaisija local_24e63224, Natiiviseppä local_fcc10552.
+- Kiilto 11–13: kopiot $S/ketju-kiilto-aamu.sh ja $S/paat-app (S = 7cea3452-scratchpad); portti $S/sim-nyt-ki.
