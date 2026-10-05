@@ -16,6 +16,8 @@ namespace Matkakirja.Linssit.Kierros
         public string Id, Nimi, Alarivi, Teksti, Aani;
         /// <summary>PCM-virta (Pöllö, juna 145): raaka s16le mono AaniTaajuus Hz, chunked; ensimmäiset tavut ~0,3 s. null = vain mp3.</summary>
         public string AaniPcm;
+        /// <summary>Kohteen luokka workerilta (valinnainen, esim. katu, kanava, aukio, torni, kirkko, linnoitus, puisto); OpasKuvaus.Kehysta käyttää.</summary>
+        public string Luokka;
         public int AaniTaajuus = 24000;
         /// <summary>Äänen tunniste (PCM ensisijainen, muuten mp3); null = ei ääntä.</summary>
         public string AaniAvain => !string.IsNullOrEmpty(AaniPcm) ? AaniPcm : Aani;
@@ -35,7 +37,7 @@ namespace Matkakirja.Linssit.Kierros
             {
                 var vaihtoehdot = new List<string>();
                 if (j.TryGetValue("vaihtoehdot", out var vo) && vo is IList<object> lista) foreach (var x in lista) if (x is string t && t.Length > 0) vaihtoehdot.Add(t);
-                return string.IsNullOrEmpty(S("teksti")) ? null : new OpasKohde { Kysymys = true, Teksti = S("teksti"), Aani = S("aani"), AaniPcm = S("aani_pcm"),
+                return string.IsNullOrEmpty(S("teksti")) ? null : new OpasKohde { Kysymys = true, Teksti = S("teksti"), Aani = S("aani"), AaniPcm = S("aani_pcm"), Luokka = S("luokka"),
                     AaniTaajuus = (int)D("aani_taajuus", 24000), KestoS = D("kesto_s", 0), Vaihtoehdot = vaihtoehdot.ToArray() };
             }
             var k = new OpasKohde
