@@ -176,7 +176,7 @@ export function puluElevenMalli(env) {
  * AINOA JÄLJELLÄ OLEVA xAI-KÄYTTÖ LUKIJOILLA on VARAPOLKU: (a) ELEVEN_API_KEY puuttuu workerista, (b) globaali päiväkatto
  * (ELEVEN_LUKIJA_PAIVARAJA) ylittyy tai (c) ElevenLabs epäonnistuu (virhe/aikaraja) — silloin luenta menee xAI:lle, jotta
  * se ei jää mykäksi. Lisäksi kehittäjäkoodilla runko.moottori === 'xai' pakottaa xAI:n vertailutestiin. Säilöt (reunavälimuisti
- * + R2, lohko) pitävät vakiotekstien hinnan kertaluontoisena, joten päiväkatto on 200 000 mrk (rajat.js).
+ * + R2, lohko) pitävät vakiotekstien hinnan kertaluontoisena, joten päiväkatto on 50 000 mrk (rajat.js).
  * ÄÄNILISTA (omistaja 30.9.2026 klo 23.1x: "aina v4 ääni eikä suomalaisia, mieluiten eniten käytettyjä ääniä"): ElevenLabsin
  * jaetun kirjaston eniten käytetyt äänet (usage_character_count_1y, 30.9.), 12 miestä ja 11 naista eri sävyin, ei yhtään
  * suomeksi merkattua (verified_languages fi); v4 lukee kaikilla suomea. William on listan ensimmäinen ja oletus (eleven_v4);

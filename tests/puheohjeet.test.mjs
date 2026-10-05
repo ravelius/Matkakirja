@@ -113,7 +113,7 @@ test('Lukijat ElevenLabsilla, oletus William: moottorivalinta, äänilista ja p�
   assert.equal(KERTOJA_ELEVEN_AANI, 'oae6GCCzwoEbfc5FHdEu');
   assert.equal(KERTOJA_ELEVEN_MALLI, 'eleven_v4');
   assert.equal(LUKIJA_ELEVEN_MALLI, 'eleven_v4_turbo');
-  assert.equal(ELEVEN_LUKIJA_PAIVARAJA_OLETUS, 200000);
+  assert.equal(ELEVEN_LUKIJA_PAIVARAJA_OLETUS, 50000);
   assert.ok(Object.keys(LUKIJA_ELEVEN_AANET).length >= 15 && Object.keys(LUKIJA_ELEVEN_AANET).length <= 26);
   assert.equal(LUKIJA_ELEVEN_OLETUS, KERTOJA_ELEVEN_AANI, 'oletus on William');
   assert.equal(Object.keys(LUKIJA_ELEVEN_AANET)[0], LUKIJA_ELEVEN_OLETUS, 'William listan ensimmäisenä');
