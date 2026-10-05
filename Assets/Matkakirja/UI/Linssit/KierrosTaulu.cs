@@ -49,6 +49,14 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(alarivi, Kirjasin.Antiikva);
             alarivi.style.fontSize = 19; alarivi.style.unityTextAlign = TextAnchor.UpperLeft;
             alarivi.style.whiteSpace = WhiteSpace.Normal;   // pitkä Wikipedia-kuvaus rivittyy (ei valu reunan yli)
+            // Luettavuus vaalean usvan päällä (Päätoimittaja 5.10. 20.5x): sama varjo ja ääriviiva kuin keskitetyssä kertomuksessa
+            // (Linssit.uss .mk-aikajana-kertomus.mk-keskella: 0 2px 14px + 0,8 px tumma ääriviiva), värit Tyylikirjasta.
+            foreach (var t in new[] { nimi, alarivi })
+            {
+                t.style.textShadow = new TextShadow { offset = new Vector2(0, 2), blurRadius = 14, color = Tyylikirja.Himmennys.Kuva };
+                t.style.unityTextOutlineWidth = 0.8f;
+                t.style.unityTextOutlineColor = (Color)Tyylikirja.Himmennys.Tumma;
+            }
 
             kertojaKehys = Rakenne.El("mk-aikajana-kertomus", yla, PickingMode.Ignore);
             kertojaKehys.style.bottom = 44;
