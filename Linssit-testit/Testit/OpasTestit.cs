@@ -63,6 +63,27 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(2, pyynnot.Count);
         }
 
+        [Testi] static void EsilatausOnLaskeutumiskehys()
+        {
+            // Lennon aikana esilatauskamera = täsmälleen lennon loppuasento (laatat oikeasta kulmasta saapuessa).
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var pyynnot = new List<int>();
+            s.Pyyda += (n, t) => pyynnot.Add(n);
+            s.Aloita("x");
+            var k = K("nyhavn", 55.6798, 12.5912, 300); k.Luokka = "kanava";
+            s.Vastaus(pyynnot[0], k);
+            var ennen = s.Esilataus(_ => 5);
+            Oleta.Tosi(ennen.HasValue, "esihaettu kohde esiladataan jo ennen lentoa");
+            s.Paivita(0.1, _ => 5);
+            Oleta.Sama(OpasVaihe.Lentaa, s.Vaihe);
+            var esi = s.Esilataus(_ => 5).Value;
+            for (int i = 0; i < 400 && s.Vaihe == OpasVaihe.Lentaa; i++) s.Paivita(0.1, _ => 5);
+            var loppu = s.Asento;
+            Oleta.Tosi(Math.Abs(esi.Lat - loppu.Lat) < 1e-9 && Math.Abs(esi.EtaisyysM - loppu.EtaisyysM) < 1e-6 && Math.Abs(esi.Kallistus - loppu.Kallistus) < 1e-9,
+                $"esilataus {esi.EtaisyysM:F0} m / {esi.Kallistus:F0}°, saapuminen {loppu.EtaisyysM:F0} m / {loppu.Kallistus:F0}°");
+            Oleta.Tosi(Math.Abs(ennen.Value.EtaisyysM - esi.EtaisyysM) < 1e-6, "ennen lentoa sama kehys");
+        }
+
         [Testi] static void KehysKoonMukaan()
         {
             var pieni = OpasSilmukka.Kehysta(K("a", 55, 12, 10), 40, 90);

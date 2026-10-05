@@ -330,6 +330,28 @@ namespace Matkakirja.Linssit.Kierros
             }
         }
 
+        /// <summary>Kohteen pysähdyskehys nykyisestä asennosta (sama kuin lennon kohde): OpasKuvaus.Kehysta, tulosuunta lennon suunta
+        /// (alle 150 m: nykyinen suuntima), maaston korkeus näytteestä tai arvio 45 m.</summary>
+        Pysahdys KehysKohteelle(OpasKohde k, Func<OpasKohde, double> maaKorkeus)
+        {
+            double maa = maaKorkeus?.Invoke(k) ?? double.NaN;
+            if (double.IsNaN(maa)) maa = 45;
+            double tulo = Suunta(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
+            if (KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, k.Lat, k.Lon) < 150) tulo = Asento.Suuntima;
+            return OpasKuvaus.Kehysta(k, maa, tulo);   // luokka k.Luokasta, muuten koosta ja korkeudesta
+        }
+
+        /// <summary>
+        /// ESILATAUSKAMERA (Siirtoseppä 5.10. 21.0x: saapuessa laatat 55–62 %, esilataus käytti vanhaa kehystä ja lennon aikana ei mitään):
+        /// lennon aikana täsmälleen laskeutumiskehys, muuten esihaetun kohteen kehys samalla laskennalla kuin lento; null = ei esilattavaa.
+        /// </summary>
+        public Kuvakulma? Esilataus(Func<OpasKohde, double> maaKorkeus)
+        {
+            if (Vaihe == OpasVaihe.Lentaa && kohdeKehys != null) return OpasKuvaus.Pysahdyksella(kohdeKehys, 0);
+            if (Seuraava != null && !Seuraava.Kysymys) return OpasKuvaus.Pysahdyksella(KehysKohteelle(Seuraava, maaKorkeus), 0);
+            return null;
+        }
+
         bool aaniLoppuiTaiAlku() => Vaihe == OpasVaihe.Alku || aaniLoppui;
         Kuvakulma? alkuAsento;
 
@@ -346,11 +368,7 @@ namespace Matkakirja.Linssit.Kierros
                 if (!OdottaaVastausta) UusiPyynto();
                 return;
             }
-            double maa = maaKorkeus?.Invoke(k) ?? double.NaN;
-            if (double.IsNaN(maa)) maa = 45;
-            double tulo = Suunta(Asento.Lat, Asento.Lon, k.Lat, k.Lon);
-            if (KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, k.Lat, k.Lon) < 150) tulo = Asento.Suuntima;
-            kohdeKehys = OpasKuvaus.Kehysta(k, maa, tulo);   // luokka k.Luokasta, muuten koosta ja korkeudesta
+            kohdeKehys = KehysKohteelle(k, maaKorkeus);
             Nykyinen = k;
             lahto = Asento;
             LentoKestoS = LennonKesto(KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon));
