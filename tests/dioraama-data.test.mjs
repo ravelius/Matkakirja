@@ -484,6 +484,8 @@ test('Olavinlinna: kuunnelmat v3 (kertoja + keskustelu), vuorojen puhujat ratkea
       assert.ok(hahmot.has(v.puhuja), `${t.id}: vuoron puhuja ${v.puhuja} on linnan hahmo`);
       assert.ok(v.alku_s >= edellinen && v.loppu_s > v.alku_s, `${t.id}: vuorot aikajärjestyksessä`);
       assert.ok(v.loppu_s <= AANET[keskustelu.aani].kesto_s + 0.05, `${t.id}: vuoro äänen sisällä`);
+      if (v.ilme !== undefined) assert.ok(['neutraali', 'vakava', 'hymy', 'huolestunut'].includes(v.ilme), `${t.id}: ilme ${v.ilme}`);
+      if (v.ele !== undefined) assert.ok(['kumarrus', 'puhe1', 'puhe2', 'puhe3', 'kysymys', 'nyokkays', 'pudistus'].includes(v.ele), `${t.id}: ele ${v.ele}`);
       edellinen = v.loppu_s;
     }
     for (const r of k) {
