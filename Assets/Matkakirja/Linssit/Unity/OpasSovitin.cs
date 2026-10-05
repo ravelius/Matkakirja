@@ -206,6 +206,7 @@ namespace Matkakirja.Natiivi
             KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
+            LueTapit();
             silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => kaupunki.Valmis);
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             y.Kuvaa(silmukka.Asento);
@@ -224,6 +225,37 @@ namespace Matkakirja.Natiivi
         {
             if (Testi) { o.StartCoroutine(TestiVastaus(n)); return; }
             o.StartCoroutine(Hae(n, toive));
+        }
+
+        /// <summary>
+        /// Tappiohjaus (juna 145): Natiivi-UI:n OpasTapit (UI-kokoonpano, luetaan heijastuksella kuten OpasValikko, jotta
+        /// linssit kääntyy ilman UI-haaraa) silmukalle; komento "opas tapit kierto korkeus etäisyys s" ohittaa kestoksi (simutesti).
+        /// Akselit: Oikea.x = kierto, Vasen.y = korkeus, Vasen.x = etäisyys (Siirtosepän OpasOhjaus.Paivita-järjestys).
+        /// </summary>
+        void LueTapit()
+        {
+            if (Time.unscaledTime < tapitTestiLoppuu) { silmukka.Tapit = tapitTesti; silmukka.PelaajaOhjaa = true; return; }
+            if (!tapitHaettu)
+            {
+                tapitHaettu = true;
+                var t = typeof(PuluChat).Assembly.GetType("Matkakirja.Natiivi.OpasTapit");
+                const System.Reflection.BindingFlags F = System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static;
+                tapVasen = t?.GetProperty("Vasen", F); tapOikea = t?.GetProperty("Oikea", F); tapKosketaan = t?.GetProperty("Kosketaan", F);
+            }
+            if (tapVasen == null || tapOikea == null || tapKosketaan == null) { silmukka.Tapit = default; silmukka.PelaajaOhjaa = false; return; }
+            var v = (Vector2)tapVasen.GetValue(null); var o2 = (Vector2)tapOikea.GetValue(null);
+            silmukka.Tapit = (o2.x, v.y, v.x);
+            silmukka.PelaajaOhjaa = (bool)tapKosketaan.GetValue(null);
+        }
+        bool tapitHaettu;
+        System.Reflection.PropertyInfo tapVasen, tapOikea, tapKosketaan;
+        static (double, double, double) tapitTesti;
+        static float tapitTestiLoppuu = -1f;
+        /// <summary>Komento "opas tapit k h e s" (LinssiOhjain): akselit −1…1 kestoksi s sekuntia.</summary>
+        public static void TestiTapit(double kierto, double korkeus, double etaisyys, float s)
+        {
+            tapitTesti = (Mathf.Clamp((float)kierto, -1, 1), Mathf.Clamp((float)korkeus, -1, 1), Mathf.Clamp((float)etaisyys, -1, 1));
+            tapitTestiLoppuu = Time.unscaledTime + Mathf.Max(0, s);
         }
 
         /// <summary>Virheen jälkeen: 429 → "Opas lepää hetken" (kerran virhesarjaa kohden); luovutus → linssi kiinni viestillä

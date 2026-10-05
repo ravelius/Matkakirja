@@ -84,6 +84,32 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(Math.Abs(ennen.Value.EtaisyysM - esi.EtaisyysM) < 1e-6, "ennen lentoa sama kehys");
         }
 
+        [Testi] static void TappiPitaaPysahdyksenJaPaastaaTauonJalkeen()
+        {
+            // Juna 145: kosketus jäädyttää automaattikierron eikä lähde seuraavaan; irrotuksen jälkeen OhjausTaukoS, sitten lento.
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var pyynnot = new List<int>();
+            s.Pyyda += (n, t) => pyynnot.Add(n);
+            s.Aloita("x");
+            s.Vastaus(pyynnot[^1], K("a", 55.6760, 12.5700, 80));
+            for (int i = 0; i < 400 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(OpasVaihe.Puhuu, s.Vaihe);
+            s.Vastaus(pyynnot[^1], K("b", 55.6800, 12.5900, 80));   // esihaku valmis
+            s.PelaajaOhjaa = true; s.Tapit = (1, 0, 0);
+            s.AaniLoppui();
+            var ennen = s.Asento.Suuntima;
+            for (int i = 0; i < 100; i++) s.Paivita(0.1, _ => 5);   // 10 s kosketusta
+            Oleta.Sama(OpasVaihe.Puhuu, s.Vaihe, "kosketuksen aikana ei lähdetä");
+            Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(s.Asento.Suuntima - ennen)) > 5, "tappi kiertää kameraa");
+            s.PelaajaOhjaa = false; s.Tapit = default;
+            for (int i = 0; i < 35; i++) s.Paivita(0.1, _ => 5);   // 3,5 s irrotuksesta
+            Oleta.Sama(OpasVaihe.Puhuu, s.Vaihe, "tauko kesken");
+            var irti = s.Asento;
+            for (int i = 0; i < 10; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(OpasVaihe.Lentaa, s.Vaihe, "tauon jälkeen lento");
+            Oleta.Tosi(KierrosLento.EtaisyysM(irti.Lat, irti.Lon, s.Asento.Lat, s.Asento.Lon) < 50, "lento alkaa pelaajan kulmasta");
+        }
+
         [Testi] static void KehysKoonMukaan()
         {
             var pieni = OpasSilmukka.Kehysta(K("a", 55, 12, 10), 40, 90);
