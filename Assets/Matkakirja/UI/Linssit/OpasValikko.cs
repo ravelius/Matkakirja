@@ -110,6 +110,7 @@ namespace Matkakirja.Natiivi
         OpasKuva testiKuva;
         bool nakyy, siruNakyy;
         OpasKohde odotettuKysymys;
+        float krediittiAla = 40f;
         int siruPoletti = -1;
         readonly Button nappi;
         Nakyma nakyma;
@@ -141,6 +142,8 @@ namespace Matkakirja.Natiivi
             puhuSiru = Rakenne.Nappi(null, "mk-chat__siru mk-chat__siru--ikoni", () => { NaytaTeksti(); UiNakymat.Hae()?.Chat?.AloitaSanelu(); }, null, PuluChat.MikkiIkoni);
             puhuSiru.tooltip = "Puhu tai kirjoita";
             kerros.JokaRuutu += PaivitaSirut;
+            // Googlen ja Cesiumin krediitit (logot muuttamattomina, Googlen ehdot): sirurivi niiden yläpuolelle, tarkistus 2 × s.
+            sirurivi.schedule.Execute(SovitaKrediitteihin).Every(500);
 
             kuvaKortti = Rakenne.El("mk-nosto", Juuri, PickingMode.Position);
             kuvaKortti.style.position = Position.Absolute;
@@ -244,6 +247,27 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>
+        /// Sirurivin alareuna krediittien yläpuolelle: CesiumKaupunki.KrediititKorkeusPt on Cesiumin oman paneelin yksiköissä
+        /// ruudun alareunasta, joten se muunnetaan osuudeksi ruudusta ja siitä tämän paneelin turva-alueen yksiköihin.
+        /// </summary>
+        void SovitaKrediitteihin()
+        {
+            if (!nakyy || Juuri.panel == null) return;
+            float ala = 40f;
+            var cs = CesiumForUnity.CesiumCreditSystem.GetDefaultCreditSystem();
+            var cj = cs != null ? cs.GetComponent<UIDocument>()?.rootVisualElement : null;
+            float ch = cj != null ? cj.worldBound.height : 0f, k = CesiumKaupunki.KrediititKorkeusPt;
+            float juuriH = Juuri.panel.visualTree.layout.height;
+            if (ch > 0f && k > 0f && juuriH > 0f)
+            {
+                float alaVara = juuriH - Juuri.worldBound.yMax; // turva-alueen alareuna ruudun alareunasta
+                ala = Mathf.Max(ala, Mathf.Round(k / ch * juuriH - alaVara + KuvaRako));
+            }
+            krediittiAla = ala;
+            if (sirurivi.style.bottom.value.value != ala) { sirurivi.style.bottom = ala; Debug.Log($"MATKAKIRJA opas: sirut krediittien yläpuolelle {ala:0} pt (krediitit {k:0}/{ch:0})"); }
+        }
+
         // --- oppaan kuvat --------------------------------------------------------------------------------
 
         void VaihdaKuvat()
@@ -292,7 +316,7 @@ namespace Matkakirja.Natiivi
             }
             if (!kuvaNakyy) return;
             float h = Juuri.resolvedStyle.height;
-            float ala = 40f;
+            float ala = krediittiAla;
             if (siruNakyy && !float.IsNaN(h) && sirurivi.layout.height > 0) ala = Mathf.Max(ala, h - sirurivi.layout.yMin + KuvaRako);
             if (kuvaKortti.style.bottom.value.value != ala) kuvaKortti.style.bottom = ala;
         }
