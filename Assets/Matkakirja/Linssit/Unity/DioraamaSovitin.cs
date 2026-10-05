@@ -64,6 +64,8 @@ namespace Matkakirja.Natiivi
         DioraamaHahmot hahmot3D;
         DioraamaSyote syote;
         readonly DioraamaKameraJousi jousi = new DioraamaKameraJousi();
+        /// <summary>Cinemachine-kamerat (suunnitelma kohta 1); luodaan näyttämön kanssa, tuhoutuu sen mukana.</summary>
+        DioraamaCinemachine cm;
         // TIMELINE (linna-unity-suunnitelma-20261005.md kohta 2b): kertojan kierroksen aikana PlayableDirector on Ytimen kello.
         // kelloSiirto pitää Ytimen ajan jatkuvana kierroksen jälkeen (YdinAika = seinäkello + siirto; 0 ilman timelinea).
         readonly DioraamaTimeline timeline = new DioraamaTimeline();
@@ -154,6 +156,8 @@ namespace Matkakirja.Natiivi
             o.StartCoroutine(PeiteHetkeksi(0.3f));
 
             if (nayttamo == null) nayttamo = DioraamaNayttamo.Luo(pallonKamera);
+            if (cm == null) cm = new DioraamaCinemachine(nayttamo.Kamera, nayttamo.transform);
+            cm.Nollaa();
             AktiivinenKamera = nayttamo.Kamera;
             if (rakennus3D == null) rakennus3D = new DioraamaRakennus(nayttamo.transform);
             if (hahmot3D == null) hahmot3D = new DioraamaHahmot(nayttamo.transform);
@@ -263,7 +267,22 @@ namespace Matkakirja.Natiivi
             // aikana (nimiruutu, kamera järvellä) ja pakotetulla kameralla jousi asettuu suoraan, jottei saapuminen ala jousesta.
             float dt = Time.unscaledDeltaTime;
             Asento kameraAsento;
+            // Cinemachine (5.10.2026, DioraamaCinemachine): lepokamerat + brainin blendit korvaavat jousen askeleen; jousesta jää
+            // jatkuvan orbitin vaihe. "poikki cinemachine 0" palauttaa vanhan jousipolun A/B-vertailuun.
+            bool cmKaytossa = cm != null && DioraamaCinemachine.Paalla && pakotettuKamera == null;
+            cm?.Kaytossa(cmKaytossa);
             if (pakotettuKamera is Asento pk) { jousi.Nollaa(); kameraAsento = pk; }
+            else if (cmKaytossa)
+            {
+                if (SaapumisOdotus) cm.Nollaa();
+                bool veto = linssi.VetoKaynnissa;
+                jousi.Etene(dt, veto);
+                bool vl = y.VahennettyLiike;
+                System.Func<Asento, Asento> muokkaa = a => syote.Sovita(jousi.Sovella(a, vl));
+                cm.Paivita(nayttamo.Kamera, nakyma.Kamera, linssi.LepoHetkella(t, pysty), muokkaa, vl, dt);
+                kameraAsento = muokkaa(nakyma.Kamera); // sumu ja syväterävyys: etäisyys ja aukko Ytimen asennosta
+                jousi.Nollaa(); // kytkettäessä pois jousi alkaa suoraan tavoitteesta
+            }
             else
             {
                 if (SaapumisOdotus) jousi.Nollaa();
@@ -272,7 +291,7 @@ namespace Matkakirja.Natiivi
             }
             // t mukaan (era 2): DioraamaNayttamo.Paivita antaa sen liekkinäkymälle (DioraamaLiekit.Paivita, ruutu
             // ajasta) -- nayttamo-kentän kommentti kutsui juuri tätä ("Sovitin voi jatkossa antaa Ydin-ajan tähän").
-            nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t);
+            nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t, asetaKamera: !cmKaytossa);
             hahmot3D.Paivita(rakennus, nakyma, nayttamo.Kamera, t);
             // era 2b kohta 4 (ali-agentti P4b): 3D-pienoisfiguurit -- SAMAAN kohtaan kuin vanha 2D-hahmot3D
             // yllä, mutta Nayttamon omistama (ks. DioraamaNayttamo.cs:n Hahmot3D-kommentti).
@@ -292,6 +311,7 @@ namespace Matkakirja.Natiivi
             rakennus3D?.Tyhjenna(); rakennus3D = null;
             hahmot3D?.Tyhjenna(); hahmot3D = null;
             nayttamo?.Tuhoa(); nayttamo = null;
+            cm = null; // kamerat olivat näyttämön lapsia
             AktiivinenKamera = null;
             syote = null;
             aanet?.Sulje(); // kahvat kiinni ja puhuja pois; aanet ITSE säilyy (klippivälimuisti), ks. kentän kommentti.
@@ -994,6 +1014,15 @@ namespace Matkakirja.Natiivi
             {
                 DioraamaLevyvalimuisti.PakotaVirheJalkeen = int.TryParse(arvo, out int pv) ? pv : -1;
                 o.Kirjaa("poikki: pakota-virhe " + (DioraamaLevyvalimuisti.PakotaVirheJalkeen >= 0 ? $"{DioraamaLevyvalimuisti.PakotaVirheJalkeen} tiedoston jälkeen" : "pois"));
+                return;
+            }
+            if (mita == "cinemachine" || mita == "kohina" || mita == "cm")
+            {
+                if (mita == "cinemachine") DioraamaCinemachine.Paalla = arvo != "0";
+                if (mita == "kohina") DioraamaCinemachine.Kohina = arvo != "0";
+                var odotettu = viimeNakyma.HasValue && syote != null ? syote.Sovita(jousi.Sovella(viimeNakyma.Value.Kamera, false)) : default;
+                o.Kirjaa("poikki: " + (cm != null && nayttamo != null ? cm.Tila(nayttamo.Kamera, odotettu)
+                    : $"cinemachine {(DioraamaCinemachine.Paalla ? "päällä" : "pois")}, kohina {(DioraamaCinemachine.Kohina ? "päällä" : "pois")} (linssi kiinni)"));
                 return;
             }
             if (mita == "orbit")

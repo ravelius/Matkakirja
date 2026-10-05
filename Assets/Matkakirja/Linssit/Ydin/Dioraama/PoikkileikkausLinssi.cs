@@ -366,15 +366,15 @@ namespace Matkakirja.Linssit.Dioraama
             Math.Max(KertojaLentoMin, Math.Min(KertojaLentoMax, Kameraliike.SiirtymanKesto(a, b)));
 
         /// <summary>Kierroksen tila hetkellä t: käynnissä, kamera, jakso (−1 = paluulento yleisnäkymään) ja näkyvä teksti.</summary>
-        (bool Kaynnissa, Asento Kamera, int Jakso, string Teksti, double U) Kierros(double t, bool pysty)
+        (bool Kaynnissa, Asento Kamera, int Jakso, string Teksti, double U, double Lento) Kierros(double t, bool pysty)
         {
             var jaksot = Rakennus?.Kertoja;
-            if (jaksot == null || jaksot.Count == 0) return (false, default, -1, null, 0);
-            if (kertojaVainUusintana && kertojaAlku < 0) return (false, default, -1, null, 0);
+            if (jaksot == null || jaksot.Count == 0) return (false, default, -1, null, 0, 0);
+            if (kertojaVainUusintana && kertojaAlku < 0) return (false, default, -1, null, 0, 0);
             double s = KertojaAlku;
-            if (t < s || double.IsInfinity(s)) return (false, default, -1, null, 0);
+            if (t < s || double.IsInfinity(s)) return (false, default, -1, null, 0, 0);
             // Huoneen kohdistus kierroksen alun jälkeen katkaisee kierroksen.
-            foreach (var e in tapahtumat) if (e.Hetki > s && e.Hetki <= t) return (false, default, -1, null, 0);
+            foreach (var e in tapahtumat) if (e.Hetki > s && e.Hetki <= t) return (false, default, -1, null, 0, 0);
             var edellinen = AsentoFor(kertojaAlku >= 0 ? kertojaLahto : null, pysty);
             double kursori = s;
             int ohitus = 0; // kukin napautus päättää täsmälleen yhden jakson
@@ -388,7 +388,7 @@ namespace Matkakirja.Linssit.Dioraama
                 {
                     double u = lento > 0 ? (t - kursori) / lento : 1;
                     var kamera = u < 1 ? Kameraliike.SiirtymaAsento(edellinen, kohde, u) : kohde;
-                    return (true, kamera, j, u >= KertojaTekstiOsuus ? jaksot[j].Teksti : null, u);
+                    return (true, kamera, j, u >= KertojaTekstiOsuus ? jaksot[j].Teksti : null, u, lento);
                 }
                 double uLoppu = lento > 0 ? (loppu - kursori) / lento : 1;
                 edellinen = uLoppu < 1 ? Kameraliike.SiirtymaAsento(edellinen, kohde, uLoppu) : kohde;
@@ -396,8 +396,8 @@ namespace Matkakirja.Linssit.Dioraama
             }
             var yleis = AsentoFor(null, pysty);
             double paluu = KertojaLento(edellinen, yleis);
-            if (t < kursori + paluu) return (true, Kameraliike.SiirtymaAsento(edellinen, yleis, (t - kursori) / paluu), -1, null, (t - kursori) / paluu);
-            return (false, default, -1, null, 0);
+            if (t < kursori + paluu) return (true, Kameraliike.SiirtymaAsento(edellinen, yleis, (t - kursori) / paluu), -1, null, (t - kursori) / paluu, paluu);
+            return (false, default, -1, null, 0, 0);
         }
 
         /// <summary>
@@ -554,6 +554,29 @@ namespace Matkakirja.Linssit.Dioraama
                 if (tila != null) return tila.PuluLaskeutuminen;
             }
             return Rakennus.PuluLaskeutuminen;
+        }
+
+        /// <summary>
+        /// CINEMACHINE (suunnitelma linna-unity-suunnitelma-20261005.md kohta 1, Siirtoseppä 5.10.2026): VAIN LUKU. Mihin kamera on
+        /// menossa hetkellä t: Avain = lepoasennon tunnus ("yleis", "tila:&lt;id&gt;" tai "jakso:&lt;n&gt;"), Perus = sen asento ilman
+        /// pelaajan poikkeamaa, Jaljella = lennon jäljellä oleva aika (0 = perillä) ja Saapumassa = saapumiskaari kesken (sen polku
+        /// tulee yhä NakymaHetkella-metodista). Samat haarat kuin NakymaHetkella ja Kierros: Unity-puoli vaihtaa avaimen vaihtuessa
+        /// lepokameraa ja blendaa sinne lennon jäljellä olevassa ajassa, joten leikkausikkuna ja teksti pysyvät Ytimen ajoituksessa.
+        /// </summary>
+        public (string Avain, Asento Perus, double Jaljella, bool Saapumassa) LepoHetkella(double t, bool pysty)
+        {
+            var k = Kierros(t, pysty);
+            if (k.Kaynnissa)
+            {
+                double jaljella = Math.Max(0, (1 - k.U) * k.Lento);
+                if (k.Jakso < 0) return ("yleis", AsentoFor(null, pysty), jaljella, false);
+                return ("jakso:" + k.Jakso, JaksonAsento(Rakennus.Kertoja[k.Jakso], pysty), jaljella, false);
+            }
+            int i = ViimeisinIndeksi(t);
+            var e = tapahtumat[i];
+            double loppu = e.Hetki + e.Kesto;
+            bool lennossa = e.Kesto > 0 && t < loppu && (i > 0 || Rakennus.Saapuminen != null);
+            return (e.Kohde == null ? "yleis" : "tila:" + e.Kohde, AsentoFor(e.Kohde, pysty), lennossa ? loppu - t : 0, lennossa && i == 0);
         }
 
         /// <summary>

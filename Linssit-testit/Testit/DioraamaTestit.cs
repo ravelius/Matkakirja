@@ -1187,6 +1187,38 @@ namespace Matkakirja.Linssit.Testit
             }
         }
 
+        /// <summary>Cinemachine (5.10.2026): LepoHetkella kertoo lennon määränpään. Levossa (Jaljella 0) Ytimen kamera on täsmälleen
+        /// perusasento, ja lennossa kamera saavuttaa perusasennon jäljellä olevan ajan päästä (ei napautuksia välissä).</summary>
+        [Testi] static void LepoHetkellaVastaaNakymaa()
+        {
+            string json = KeittioFixture
+                .Replace("\"yleiskamera\": {", "\"kertoja\": {\"jaksot\": [" +
+                    "{\"id\": \"j1\", \"teksti\": \"Yksi.\", \"kesto_s\": 3, \"kamera\": {\"kohde\": [0, 0, 0], \"atsimuutti\": 90, \"korkeus\": 20, \"etaisyys\": 10}}," +
+                    "{\"id\": \"j2\", \"teksti\": \"Kaksi.\", \"kesto_s\": 4, \"tila\": \"keittio\", \"kamera\": {\"kohde\": [0, 0, 0], \"atsimuutti\": 0, \"korkeus\": 30, \"etaisyys\": 8}}]},\n  \"yleiskamera\": {");
+            var rak = DioraamaData.Lue(json);
+            foreach (bool pysty in new[] { false, true })
+            {
+                var l = new PoikkileikkausLinssi { Kuvasuhde = pysty ? 0.6 : 1.6 };
+                l.Avaa(rak, 0, false);
+                l.Kohdista("keittio", 30);
+                var avaimet = new List<string>();
+                for (double t = 0; t < 40; t += 0.01)
+                {
+                    var lepo = l.LepoHetkella(t, pysty);
+                    if (avaimet.Count == 0 || avaimet[avaimet.Count - 1] != lepo.Avain) avaimet.Add(lepo.Avain);
+                    Oleta.Tosi(lepo.Jaljella >= 0 && !lepo.Saapumassa, "jäljellä ≥ 0, ei saapumista t=" + t);
+                    var a = lepo.Jaljella > 0 ? l.NakymaHetkella(t + lepo.Jaljella, pysty).Kamera : l.NakymaHetkella(t, pysty).Kamera;
+                    if (lepo.Jaljella > 0 && l.LepoHetkella(t + lepo.Jaljella, pysty).Avain != lepo.Avain) continue; // kierros päättyy juuri perillä
+                    string mita = $"{(pysty ? "pysty" : "vaaka")} t={t:F2} {lepo.Avain}";
+                    Lahella(lepo.Perus.Etaisyys, a.Etaisyys, mita + " etäisyys", 1e-6);
+                    Lahella(lepo.Perus.Korkeus, a.Korkeus, mita + " korkeus", 1e-6);
+                    Lahella(0, ((a.Atsimuutti - lepo.Perus.Atsimuutti) % 360 + 540) % 360 - 180, mita + " atsimuutti", 1e-6);
+                    Lahella(0, (a.Kohde - lepo.Perus.Kohde).Pituus, mita + " kohde", 1e-6);
+                }
+                Oleta.Sama("jakso:0,jakso:1,yleis,tila:keittio", string.Join(",", avaimet));
+            }
+        }
+
         [Testi] static void PoikkileikkausAvausJaKohdistaminen()
         {
             var rak = DioraamaData.Lue(KeittioFixture);
