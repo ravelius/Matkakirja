@@ -74,6 +74,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Viimeksi luotu (testikomento ja KierrosTaulun näyttö).</summary>
         public static OpasValikko Viimeisin { get; private set; }
 
+        /// <summary>Ainoa valikko (luodaan ensimmäisellä kutsulla linssin kerrokseen kuten LinnaValikko); oppaan kytkentä:
+        /// <c>OpasValikko.Hae().Nayta(true|false)</c>.</summary>
+        public static OpasValikko Hae() => Viimeisin ?? new OpasValikko(UiKerros.Hae(), LinssiUi.RadioKerros);
+
         const int Kaupunkeja = 12;
 
         enum Nakyma { Paa, Maanosat, Maat, Kaupungit }

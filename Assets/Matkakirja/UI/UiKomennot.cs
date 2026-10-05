@@ -762,8 +762,8 @@ namespace Matkakirja.Natiivi
                     return "tasaus: " + (Lehtinakyma.TasausTagi.Length > 0 ? Lehtinakyma.TasausTagi.Replace("<", "‹") : "pois");
                 }
                 case "opasvalikko":
-                    // Elävän oppaan valikko (OpasValikko): ui opasvalikko valikko|maanosat|maat <maanosa>|kaupungit <maanosa>|<maa>|sulje
-                    return OpasValikko.Viimeisin == null ? "opas: valikkoa ei ole" : "=" + OpasValikko.Viimeisin.Komento(loput);
+                    // Elävän oppaan valikko (OpasValikko): ui opasvalikko valikko|maanosat|maat <maanosa>|kaupungit <maanosa>|<maa>|sulje.
+                    return "=" + OpasValikko.Hae().Komento(loput);
                 case "kuunnelma":
                 {
                     // Olavinlinnan kuunnelman tekstitys (KuunnelmaKaistale): ui kuunnelma [tila] | ohita | alusta.
