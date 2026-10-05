@@ -406,8 +406,8 @@ export const RAAMATTU = {
         'NATIIVI PELI ETUSIJALLE (omistaja 23.9.2026, sitova; tarkennus klo 16.2x: KOKO PELI '
           + 'KAIKKINE LINSSEINEEN TEHDÄÄN VALMIIKSI NATIIVIIN PYSÄHTYMÄTTÄ, web-kehitys jätetään '
           + 'kesken toistaiseksi, nopeutukset ja lisäsessiot vapaasti käyttöön): peli siirretään natiiviksi '
-          + 'iOS-sovellukseksi (Unity 6.3 + Cesium, omat pergamenttilaatat, ei Googlen laattoja '
-          + 'eikä Cesium ionia) mahdollisimman pian, koska se antaa tökkimättömän '
+          + 'iOS-sovellukseksi (Unity 6.3 + Cesium, omat pergamenttilaatat; Googlen laatat ja Cesium ion '
+          + 'vain elävän oppaan kaupunkinäkymässä, ks. Karttalinssit) mahdollisimman pian, koska se antaa tökkimättömän '
           + 'ruudunpäivityksen, korkeuserot, kameran kallistuksen ja kamera-ajot. Web-peli on '
           + 'ylläpidossa: vain bugikorjaukset ja sisältö, joka siirtyy natiiviin yhteisen '
           + 'sisältöpaketin (sisalto/1/) kautta. Laattapoltot jatkuvat, koska natiivi käyttää '
@@ -1043,7 +1043,8 @@ export const RAAMATTU = {
           + 'docs/raamattu-loki/paatokset-2026-08-24--09-03.md #LIVIAN PUHEKIELI - '
           + 'TYYLIMAARITTELY, #LIVIAN KEHYSMALLI CHATISSA, #LIVIAN LISAYS JA KEVYT '
           + 'MAUSTE, #LIVIAN MIETINTAMUODOT.',
-        'PULUN VASTAUSKAAVA (omistaja 26.9.2026 klo 23.4x, sitova): Pulun (Livian) chat-vastaus on kolmiosainen — se alkaa Pulun omalla tyylillä, jatkuu luontevasti asiantuntevaan sävyyn ja palaa lopuksi pulumaiseen yhteenvetoon. Omistaja pitää tästä erittäin paljon: malli ja kehote kiinnitetään, ja kaavaa muutetaan vain omistajan luvalla. Ennalta määritellyille kysymyksille vastaukset saa esigeneroida sisältöpakettiin (teksti + Livian mp3) kaavan mukaisina (2 muunnelmaa, automaattinen tyyli- ja faktatarkistus, omistajan otanta, versiointi lähdetekstin mukaan); vapaat kysymykset ja jatkokysymykset vastataan live-mallilla; suunnitelma Pelikoodarin raportissa (ks. loki 27.9. klo 00.1x).',
+        'PULU-CHAT YHTENÄINEN (omistaja 5.10.2026 klo 16.4x, sitova): Pululla ei ole koskaan valmiiksi kirjoitettuja vastauksia, vain valmiita kysymyksiä; valmiit vastaukset ovat korkeintaan workerin taustatietoa. Jokaisen vastauksen perään tulee aina tasan kaksi uutta jatkokysymystä syöttörivin yläpuolelle, eivätkä vanhat kysymykset jää pinoon vastauksen alle. Chat toimii täsmälleen samoin kaikkialla pelissä ulkoasua ja nappeja myöten; vain värit saavat vaihdella linssin mukaan. Uusi paikka aloittaa puhtaan keskustelun. Pulun kaiutin on aina joko Auto- tai ei luentaa -tilassa, ja jälkimmäisen merkki on kaiutin ja yksi vino viiva. Pulun äänen päiväkatto on 15 000 merkkiä vuorokaudessa, ja ylityksessä vastaus tulee tekstinä ilman ääntä; kehittäjäkoodilla kattoa ei ole.',
+        'PULUN VASTAUSKAAVA (omistaja 26.9.2026 klo 23.4x, sitova): Pulun (Livian) chat-vastaus on kolmiosainen — se alkaa Pulun omalla tyylillä, jatkuu luontevasti asiantuntevaan sävyyn ja palaa lopuksi pulumaiseen yhteenvetoon. Omistaja pitää tästä erittäin paljon: malli ja kehote kiinnitetään, ja kaavaa muutetaan vain omistajan luvalla. Kaikki vastaukset syntyvät live-mallilla (ks. PULU-CHAT YHTENÄINEN).',
         'LIVIA ISOISÄN MERKINNÄN KOMMENTAATTORINA — PARIPERIAATE (28.8.2026): '
           + 'reaktio suunnitellaan aina parina isoisän kertomuksen kanssa. Hurja tai '
           + 'synkkä merkintä (Sofian hirttokertomus) → Livia ei naljaile isoisälle '
@@ -1481,6 +1482,7 @@ export const RAAMATTU = {
       otsikko: 'Karttalinssit',
       tila: 'luonnos',
       kohdat: [
+        'ELÄVÄ OPAS KOKO MAAPALLOLLE (omistaja 5.10.2026 klo 17.4x, sitova; korvaa Lontoo-pilotin ja valmiin esittelyn): kertoja kysyy, mitä pelaaja haluaa nähdä, pelaaja vastaa, ja Sonnet tulkitsee vastauksen Pulun workerissa ja jatkaa. Vastaus annetaan aluksi Pulu-chatin kenttään, jossa iPhonen sanelu toimii mikrofonina; oma mikrofoninappi tehdään myöhemmin omistajan UI-päätöksellä. Kertojan tekstit syntyvät reaaliajassa, eikä mitään kirjoiteta etukäteen. Valmista paikkaluetteloa ei tehdä: worker hakee kohteen koordinaatit ja tiivistelmän Wikipediasta, jotta kamera osuu oikeaan paikkaan ja faktat pitävät. Kamera lentää ajonaikaisesti minkä tahansa kahden paikan välillä ja kehystää kohteen itse, ja seuraava kohde esiladataan lennon aikana. William lukee jokaisen pysähdyksen yhtenä ottona, ja lennot osuvat kappaleiden väliin. Ensimmäinen testikaupunki on Kööpenhamina. Kaupunkinäkymä käyttää Googlen fotorealistisia laattoja Cesium ionin kautta (asset 2275207) kehitys- ja testikäytössä; julkaisu vasta maksullisen lisenssin ja Cesiumin kirjallisen vahvistuksen jälkeen. Samassa näkymässä ei ole muuta karttaa, Googlen logo ja krediitit näkyvät, eikä laattoja tallenneta offline-käyttöön.',
         'AJATTELIJALINSSI JA KULTTUURIPERINNÖN ARKKI (omistaja 1.–3.10.2026; yksityiskohdat lokissa, grep AJATTELIJ): '
           + 'yksi ajattelija kerrallaan kipsibystinä valokeilassa. ALKU (v14, omistaja hyväksyi 3.10.2026): pimeästä kytkin '
           + 'napsahtaa (aito äänite ja salikaiku) ja ääriviivavalo syttyy (prologi 2,5 s); oma sävellys (Zarathustra lipun takana) '
@@ -3051,7 +3053,8 @@ export const RAAMATTU = {
           + 'v4-äänet puhuvat hyvää suomea). Äänet nimetään tyypin mukaan (esim. mies-50-jamakka-karhea), ja henkilöt viittaavat '
           + 'pankkiin; uutta ääntä ei suunnitella, jos pankista löytyy sopiva, eikä sama ääni puhu kahta henkilöä samassa paikassa. '
           + 'Kaiku ja tila lisätään pelissä (Steam Audio), ei ääneen. Kertoja (William), Pulu ja isoisä ovat pankin ulkopuolella. '
-          + 'Vanhat kirjastoäänet poistetaan linnasta kokonaan.',
+          + 'Vanhat kirjastoäänet poistetaan linnasta kokonaan. Lähde: tools/aanipankki/ (rekisteri.json v1 lukittu, kartta-olavinlinna.json, LAHTEET.md).',
+        'ÄÄNET PCM:NÄ, PAKKAUS KERRAN (omistaja 5.10.2026 klo 13.4x, sitova): kaikki generoitavat äänet tilataan muodossa pcm_44100, tasoitus ja limitteri tehdään PCM:nä, ja mp3 pakataan vain kerran lopullisesta masterista. Koosteet tehdään WAV-mastereista, eikä jo pakattua ääntä pakata uudelleen.',
         'LUKIJAÄÄNI WILLIAM, EI KONELUKIJAA (omistaja 5.10.2026 klo 13.2x, sitova): kuvaselitteet, nostokortit ja lehdet luetaan '
           + 'Williamin äänellä (ElevenLabs-striimi), Pulun chatin vastaukset Pulun omalla äänellä; xAI:n Aino-ääntä ei käytetä. ISS:n '
           + 'kuvaselitteitä ei lueta automaattisesti, vaan vain kaiutinnapista (pelaaja päättää, milloin kuulee lisää).',
