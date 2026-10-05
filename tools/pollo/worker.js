@@ -139,8 +139,8 @@ const XAI_AIKARAJA_MS = 8000;
  * Pulun oma ääni Flicker (sama kuin esigeneroiduissa repliikeissä,
  * tools/generoi-pulu.mjs), vakaus 0,5. Mallin tagit (PUHETAGIKEHOTE:
  * [pause] [long-pause] [sigh] [laugh] <fast>…</fast>) muunnetaan
- * ElevenLabsin tageiksi maltillisesti (elevenTagit). Kertoja ja lukijat
- * pysyvät xAI:lla. PULU_PUHE_MOOTTORI = 'xai' palauttaa vanhan;
+ * ElevenLabsin tageiksi maltillisesti (elevenTagit). Lukijat (kertoja, merkinnät)
+ * luetaan Williamilla, ks. alla. PULU_PUHE_MOOTTORI = 'xai' palauttaa vanhan;
  * PULU_PUHE_MALLI = 'eleven_v4' valitsee raskaamman mallin. Avain on
  * workerin salaisuus ELEVEN_API_KEY (pollo-julkaisu.yml, tilannepalkit).
  * Hinta 28.9.: v4 Turbo 0,011 $ / 1 000 mrk kampanjana 12.10. asti, sitten
@@ -167,19 +167,26 @@ export function puluElevenMalli(env) {
 }
 
 /*
- * LUKIJAT ELEVENLABS V4 TURBOLLA (omistaja 30.9.2026, Päätoimittajan erä: vertailu xAI:hin, "vain v4 Turbo"):
- * nostojen ja matkakirjan lukija voi pyytää moottoria 'eleven' (runko.moottori). Sama reitti ja malli kuin Pululla
- * (kutsuElevenPuhetta, eleven_v4_turbo, malli-id tarkistettu /v1/models 30.9.: suomi, TTS, 10 000 mrk/pyyntö).
+ * LUKIJAT ELEVENLABSILLA, WILLIAMILLA (omistaja 5.10.2026 klo 13.2x, Päätoimittajan kortti: konelukija xAI "Aino" POIS
+ * lukijoilta): kuvaselitteet, nostokortit ja lehdet (persoonat 'kertoja', 'merkinnat') luetaan ElevenLabsin William-äänellä
+ * (KERTOJA_ELEVEN_AANI, ajattelijoiden kertoja, omistaja 3.10.2026), eleven_v4, "Sokrateen asetuksilla": vakaus mallin
+ * oletus (stability-kenttää ei lähetetä), style 0, ei lisättyjä tunnetageja. ElevenLabs on OLETUS kaikille muille persoonille
+ * kuin 'pollo', kun workerissa on ELEVEN_API_KEY: ei vaadi kehittäjäkoodia eikä runko.moottori-kenttää. Pulun chatin
+ * vastaukset luetaan edelleen Pulun omalla äänellä (PULU_ELEVEN_AANI).
+ * AINOA JÄLJELLÄ OLEVA xAI-KÄYTTÖ LUKIJOILLA on VARAPOLKU: (a) ELEVEN_API_KEY puuttuu workerista, (b) globaali päiväkatto
+ * (ELEVEN_LUKIJA_PAIVARAJA) ylittyy tai (c) ElevenLabs epäonnistuu (virhe/aikaraja) — silloin luenta menee xAI:lle, jotta
+ * se ei jää mykäksi. Lisäksi kehittäjäkoodilla runko.moottori === 'xai' pakottaa xAI:n vertailutestiin. Säilöt (reunavälimuisti
+ * + R2, lohko) pitävät vakiotekstien hinnan kertaluontoisena, joten päiväkatto on 50 000 mrk (rajat.js).
  * ÄÄNILISTA (omistaja 30.9.2026 klo 23.1x: "aina v4 ääni eikä suomalaisia, mieluiten eniten käytettyjä ääniä"): ElevenLabsin
  * jaetun kirjaston eniten käytetyt äänet (usage_character_count_1y, 30.9.), 12 miestä ja 11 naista eri sävyin, ei yhtään
- * suomeksi merkattua (verified_languages fi); v4 lukee kaikilla suomea. Poikkeus (omistaja 23.5x): isoisän ääni Viisas kertoja
- * on listan ensimmäinen ja oletus, ajettuna v3:lla (LUKIJA_ELEVEN_MALLIT). Jaetun kirjaston äänet toimivat tunnisteella ilman
- * tilille lisäämistä (testattu 30.9.), joten tilin äänipaikkoja ei kulu. Nimet ovat pelaajalle näkyviä kuvauksia.
- * KUSTANNUSRAJA: vain kehittäjäkoodilla (x-pollo-kehittaja, kehittajaOhitus; Päätoimittaja 30.9.2026: raja palvelimella,
- * ei sovelluksessa), ja lisäksi globaali päiväkatto merkkeinä (ELEVEN_LUKIJA_PAIVARAJA, oletus 20 000). Ilman koodia tai
- * katon ylittyessä pyyntö luetaan xAI:lla.
+ * suomeksi merkattua (verified_languages fi); v4 lukee kaikilla suomea. William on listan ensimmäinen ja oletus (eleven_v4);
+ * Viisas kertoja (isoisä) jää listalle v3-poikkeuksineen (LUKIJA_ELEVEN_MALLIT). Jaetun kirjaston äänet toimivat tunnisteella
+ * ilman tilille lisäämistä (testattu 30.9.), joten tilin äänipaikkoja ei kulu. Nimet ovat pelaajalle näkyviä kuvauksia.
  */
+export const KERTOJA_ELEVEN_AANI = 'oae6GCCzwoEbfc5FHdEu'; // William – Soothing and Calm
+export const KERTOJA_ELEVEN_MALLI = 'eleven_v4';
 export const LUKIJA_ELEVEN_AANET = Object.freeze({
+  [KERTOJA_ELEVEN_AANI]: 'William, rauhallinen kertoja',
   Sz0tRTEpybtDJ9ru2kgD: 'Viisas kertoja (isoisä)',
   MFZUKuGQUsGJPQjTS4wC: 'Lämmin mieskertoja',
   G17SuINrv2H9FC6nvetn: 'Lempeä brittimies',
@@ -205,22 +212,27 @@ export const LUKIJA_ELEVEN_AANET = Object.freeze({
   DLsHlh26Ugcm6ELvS0qi: 'Rauhoittava etelän nainen',
   wJqPPQ618aTW29mptyoc: 'Pehmeä brittinainen',
 });
-export const LUKIJA_ELEVEN_OLETUS = 'Sz0tRTEpybtDJ9ru2kgD';
+export const LUKIJA_ELEVEN_OLETUS = KERTOJA_ELEVEN_AANI;
 export const LUKIJA_ELEVEN_MALLI = 'eleven_v4_turbo';
 /**
- * Äänikohtainen malli (omistaja 30.9.2026 klo 23.5x: "kertoja on aina sama, eli isoisän ääni … se pitää vain ajaa sillä
- * vanhemmalla mallilla ei v4"): isoisän ääni Viisas kertoja v3:lla kuten saapumispuheissa, muut LUKIJA_ELEVEN_MALLI:lla.
- * v3 toimii stream-reitillä ja nopeussäädöllä (tarkistettu 30.9.).
+ * Äänikohtainen malli: William eleven_v4 (omistaja 3.10.2026), isoisän ääni Viisas kertoja v3:lla kuten saapumispuheissa
+ * (omistaja 30.9.2026 klo 23.5x), muut LUKIJA_ELEVEN_MALLI:lla. v3 toimii stream-reitillä ja nopeussäädöllä (tarkistettu 30.9.).
  */
-export const LUKIJA_ELEVEN_MALLIT = Object.freeze({ Sz0tRTEpybtDJ9ru2kgD: 'eleven_v3' });
+export const LUKIJA_ELEVEN_MALLIT = Object.freeze({
+  [KERTOJA_ELEVEN_AANI]: KERTOJA_ELEVEN_MALLI,
+  Sz0tRTEpybtDJ9ru2kgD: 'eleven_v3',
+});
 
 /**
- * Pyytääkö lukija (ei Pulu) ElevenLabsia, onko avain workerissa ja onko pyynnössä kehittäjäkoodi (kehittaja =
- * kehittajaOhitus). Päiväkatto tarkistetaan erikseen.
+ * Luetaanko lukija (ei Pulu) ElevenLabsilla: OLETUS, kun avain on workerissa (omistaja 5.10.2026 klo 13.2x). Ei vaadi
+ * kehittäjäkoodia eikä runko.moottori-kenttää. Ainoa poikkeus: kehittäjäkoodilla (kehittaja = kehittajaOhitus) ja
+ * runko.moottori === 'xai' palauttaa false (xAI-vertailutesti). Ilman avainta false (xAI-varapolku, luenta ei jää mykäksi).
+ * Päiväkatto tarkistetaan erikseen.
  */
 export function lukijaElevenPyydetty(env, persoonaNimi, runko, kehittaja = false) {
-  if (!kehittaja || persoonaNimi === 'pollo' || !env?.ELEVEN_API_KEY) return false;
-  return String(runko?.moottori ?? '').trim().toLowerCase() === 'eleven';
+  if (persoonaNimi === 'pollo' || !env?.ELEVEN_API_KEY) return false;
+  if (kehittaja && String(runko?.moottori ?? '').trim().toLowerCase() === 'xai') return false;
+  return true;
 }
 
 /**
@@ -239,7 +251,9 @@ export function elevenTagit(teksti) {
     .replace(/\s*<\/fast>/g, '');
 }
 
-async function kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani = PULU_ELEVEN_AANI }) {
+// vakaus: numero lähetetään stability-kenttänä (Pulu ja muut äänet 0,5); null jättää kentän pois (mallin oletus, William),
+// tyyli: style-kenttä jos annettu (William 0).
+async function kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani = PULU_ELEVEN_AANI, vakaus = 0.5, tyyli }) {
   const ohjain = new AbortController();
   const ajastin = setTimeout(() => ohjain.abort(), ELEVEN_AIKARAJA_MS);
   let ylavirta;
@@ -251,7 +265,8 @@ async function kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani = PULU_ELEV
         text: teksti,
         model_id: malli,
         voice_settings: {
-          stability: 0.5,
+          ...(vakaus !== null ? { stability: vakaus } : {}),
+          ...(tyyli !== undefined ? { style: tyyli } : {}),
           ...(nopeus !== 1 ? { speed: Math.min(1.2, Math.max(0.7, nopeus)) } : {}),
         },
       }),
@@ -1334,7 +1349,7 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   const persoonaNimi = PUHE_PERSOONAT[runko?.persoona] ? runko.persoona : 'kertoja';
   const persoona = PUHE_PERSOONAT[persoonaNimi];
   const puluEleven = puluElevenKaytossa(env, persoonaNimi);
-  // Lukijan ElevenLabs vain päiväkaton sisällä (globaali laskuri); muuten xAI kuten ennen.
+  // Lukijan ElevenLabs päiväkaton sisällä (globaali laskuri); katon ylittyessä xAI-varapolku (ainoa jäljellä oleva xAI-käyttö lukijoilla).
   let lukijaEleven = lukijaElevenPyydetty(env, persoonaNimi, runko, kehittajaOhitus(pyynto, env));
   if (lukijaEleven) {
     const kaytetty = await lueLaskuri(env.POLLO_KV ?? null, lukijaElevenPaivaAvain(new Date()));
@@ -1476,7 +1491,9 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
     let ylavirta;
     if (eleven) {
       try {
-        ylavirta = await kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani });
+        // William ("Sokrateen asetukset"): vakaus mallin oletus, style 0; muut äänet kuten ennen.
+        const williamAsetukset = lukijaEleven && aani === KERTOJA_ELEVEN_AANI ? { vakaus: null, tyyli: 0 } : {};
+        ylavirta = await kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani, ...williamAsetukset });
         if (lukijaEleven) await kasvataLaskuri(kv, lukijaElevenPaivaAvain(nyt), 60 * 60 * 30, teksti.length);
       } catch (virhe) {
         // VARAPOLKU: xAI (tai OpenAI) ilman säilöntää, xAI-muodon tageilla.
