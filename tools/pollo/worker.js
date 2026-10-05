@@ -2697,6 +2697,23 @@ async function hoidaOppaanAani(pyynto, env) {
   return new Response(olio.body, { headers: { 'content-type': 'audio/mpeg', 'cache-control': 'public, max-age=604800' } });
 }
 
+/*
+ * GET /opas/tunnus (Linssiseppä 5.10.2026, juna 144): natiivi hakee Cesium ion -tunnuksen kerran istunnossa, jotta
+ * tunnus ei ole käännöksessä eikä repossa. VAIN RAJATTU TUNNUS (assets:read listatuille asseteille, ei profile/list/
+ * write): salaisuus CESIUM_ION_TOKEN tulee GitHubin salaisuudesta pollo-julkaisu.yml:n kautta (omistaja asettaa rajatun tunnuksen), EI kehityksen
+ * avaintiedoston tunnuksella. Vain natiiville
+ * (x-matkakirja-natiivi + UA), ei lokiin, ei välimuistiin.
+ */
+function hoidaOppaanTunnus(pyynto, env) {
+  const natiivit = env.POLLO_NATIIVIT ? lueLista(env.POLLO_NATIIVIT) : NATIIVIT_OLETUS;
+  const otsakkeet = { 'content-type': 'application/json; charset=utf-8', 'cache-control': 'no-store' };
+  if (pyynto.headers.get('origin') || !sallittuNatiivi(pyynto.headers, natiivit)) {
+    return new Response(JSON.stringify({ virhe: 'kielletty' }), { status: 403, headers: otsakkeet });
+  }
+  if (!env.CESIUM_ION_TOKEN) return new Response(JSON.stringify({ virhe: 'asetus' }), { status: 503, headers: otsakkeet });
+  return new Response(JSON.stringify({ tunnus: env.CESIUM_ION_TOKEN }), { headers: otsakkeet });
+}
+
 async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   if (!env.ANTHROPIC_API_KEY) return vastaa({ virhe: 'asetus', viesti: 'Opas ei ole vielä käytössä.' }, { status: 503, ...kors });
   const p = siivoaOpasPyynto(runko);
@@ -2755,6 +2772,7 @@ export default {
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname.startsWith('/opas/aani/')) {
       return hoidaOppaanAani(pyynto, env);
     }
+    if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/tunnus') return hoidaOppaanTunnus(pyynto, env);
     if (pyynto.method !== 'POST') {
       return vastaa({ virhe: 'menetelma', viesti: 'Vain POST.' }, { status: 405, ...kors });
     }
