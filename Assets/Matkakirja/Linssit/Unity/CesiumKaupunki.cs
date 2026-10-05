@@ -83,6 +83,12 @@ namespace Matkakirja.Natiivi
             var u = georef.TransformEarthCenteredEarthFixedPositionToUnity(ecef);
             return new Vector3((float)u.x, (float)u.y, (float)u.z);
         }
+        /// <summary>Joka kehys näkymän ajan (sovitin): pääkamera piirtää vain kaupungin kerroksen, vaikka elävä kerros olisi
+        /// palauttanut avauskehyksessä oman tallennetun maskinsa.</summary>
+        public void PidaMaski()
+        {
+            if (auki && kamera != null && kamera.cullingMask != 1 << Kerros) kamera.cullingMask = 1 << Kerros;
+        }
         public Cesium3DTileset Rakennukset => rakennukset;
 
         /// <summary>Käytössä oleva lähde (Google voi vaihtua Ioniin latausvirheen jälkeen).</summary>
@@ -154,7 +160,10 @@ namespace Matkakirja.Natiivi
             pohjaTila = Pohjapallo.Tila;
             pohjaOli = true;
             Pohjapallo.Tila = Pohjapallolaskenta.Tila.Pois;
-            vanhaTyhjennys = kamera.clearFlags; vanhaTausta = kamera.backgroundColor; vanhaMaski = kamera.cullingMask;
+            // Elävä kerros pois näkymän ajaksi ja pääkameran OMA maski talteen (kerros on voinut vaihtaa sen kaappauksen ajaksi).
+            Matkakirja.ElavaKerros.Estetty = true;
+            vanhaTyhjennys = kamera.clearFlags; vanhaTausta = kamera.backgroundColor;
+            vanhaMaski = Matkakirja.ElavaKerros.TallennettuMaski ?? kamera.cullingMask;
             kamera.clearFlags = CameraClearFlags.SolidColor; kamera.backgroundColor = Taivas;
             kamera.cullingMask = 1 << Kerros;
 
@@ -357,6 +366,7 @@ namespace Matkakirja.Natiivi
             if (pohjaOli) Pohjapallo.Tila = pohjaTila;
             palloTileset = null; pohjaOli = false;
             if (kamera != null) { kamera.clearFlags = vanhaTyhjennys; kamera.backgroundColor = vanhaTausta; kamera.cullingMask = vanhaMaski; }
+            Matkakirja.ElavaKerros.Estetty = false;
             georef = null; kamera = null; tunnus = null;
         }
     }
