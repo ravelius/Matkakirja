@@ -53,6 +53,16 @@ namespace Matkakirja.Natiivi
 
         public CesiumKaupunki(PalloKierto kierto, Action<string> kirjaa) { this.kierto = kierto; this.kirjaa = kirjaa; }
 
+        /// <summary>
+        /// KUVANLAADUN KOUKUT (Siirtoseppä 5.10., kaupunkikuvan parannukset junaan 144): Avattu kutsutaan, kun näkymä ja tilesetit
+        /// on luotu (myös Google → Ion -vaihdon jälkeen), Suljettu ennen palautusta. Laatukoodi asuu omassa tiedostossaan ja
+        /// rajautuu kaupunkinäkymään näiden kautta.
+        /// </summary>
+        public static event Action<CesiumKaupunki> Avattu, Suljettu;
+        /// <summary>Pallon kamera (näkymän ajan) ja tilesetit: Google tai maasto (Pinta) ja OSM-rakennukset (null Googlella).</summary>
+        public Camera Kamera => kamera;
+        public Cesium3DTileset Rakennukset => rakennukset;
+
         /// <summary>Käytössä oleva lähde (Google voi vaihtua Ioniin latausvirheen jälkeen).</summary>
         public Lahde Kaytossa { get; private set; }
         public string Virhe { get; private set; }
@@ -136,6 +146,7 @@ namespace Matkakirja.Natiivi
             hallinta = CesiumCameraManager.GetOrCreate(maasto.gameObject);
             if (hallinta != null && !hallinta.additionalCameras.Contains(esikamera)) hallinta.additionalCameras.Add(esikamera);
             kirjaa("kaupunki: data " + data);
+            if (auki) Avattu?.Invoke(this);
         }
 
         Cesium3DTileset LuoTileset(string nimi, long asset, float sse, long valimuisti)
@@ -205,6 +216,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             if (!auki) return;
+            Suljettu?.Invoke(this);
             auki = false;
             Cesium3DTileset.OnCesium3DTilesetLoadFailure -= LatausVirhe;
             if (hallinta != null && esikamera != null) hallinta.additionalCameras.Remove(esikamera);
