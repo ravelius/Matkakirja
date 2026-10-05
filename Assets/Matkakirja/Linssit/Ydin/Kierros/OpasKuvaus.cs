@@ -19,7 +19,7 @@ namespace Matkakirja.Linssit.Kierros
         public enum Luokka { Katu, Rakennus, Alue }
 
         // Kehys: kallistus kohteen pystysuorasta (0 = suoraan alas, 90 = vaaka), etäisyys koosta, katseen nosto korkeudesta.
-        public const double KatuKallistus = 70, RakennusKallistus = 66, AlueKallistus = 50;   // katu 74 → 70 (simu 20.3x: matala kulma, laatat 53–59 % saapuessa)
+        public const double KatuKallistus = 62, RakennusKallistus = 58, AlueKallistus = 48;   // katu 74 → 70 (simu 20.3x: matala kulma, laatat 53–59 % saapuessa)
         // TIUKKA KEHYS (omistaja 5.10. 20.5x: "kohde näytti olevan vähän kaukana kuvassa"): kohde täyttää ~40 % ruudun leveydestä
         // (pystykuvakulma 50°, suunniteltu kuvasuhteelle 1,8 → puhelimella ~33 %, iPadilla ~54 %), korkea kohde enintään 60 %
         // ruudun korkeudesta; pienelle kohteelle vähimmäisetäisyys. Katse hieman kohteen alapuolelle → kohde keskikohdan yllä.
