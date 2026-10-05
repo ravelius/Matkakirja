@@ -81,11 +81,11 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Lennon kesto: kaupungissa per km, kauas logaritmisesti; rajat.</summary>
         public const double LentoMinS = 7, LentoMaxS = 22, LyhytKm = 1.5, LyhytLentoS = 5;
         /// <summary>Kertoja aloittaa kappaleen näin monta sekuntia ennen saapumista (nimi kuuluu, kun kamera laskeutuu).</summary>
-        public const double PuheEnnenS = 3;
+        public const double PuheEnnenS = 5, PuheAikaisinS = 2;
         /// <summary>Avauksen liuku kaupungin ylle odottaessa ensimmäistä kohdetta (s; etäisyys × kerroin, kallistus +).</summary>
         public const double AlkuLiukuS = 14, AlkuLiukuKerroin = 0.5, AlkuLiukuKallistus = 8;
         /// <summary>Puheen jälkeen tauko ennen lentoa (s) ja kierto pysähdyksessä (°/s).</summary>
-        public const double TaukoS = 0.8, KiertoAsteS = 0.6;
+        public const double TaukoS = 0.4, KiertoAsteS = 0.6;
         /// <summary>Esihaun ja toiveen vastauksen enimmäisodotus (s), jonka jälkeen silmukka pyytää uudelleen.</summary>
         public const double VastausMaxS = 25;
         /// <summary>Saapumisen enimmäisodotus laattoja varten (s) lennon päätyttyä.</summary>
@@ -211,6 +211,9 @@ namespace Matkakirja.Linssit.Kierros
                 OdottaaVastausta = true; kysymysAika = 0;
                 kysymysOletus = k.Vaihtoehdot != null && k.Vaihtoehdot.Length > 0 ? k.Vaihtoehdot[0] : null;
                 Kysyy?.Invoke(k);
+                // Ensimmäinen vaihtoehto haetaan heti (simu 19.54: 31 s hiljaisuutta kysymyksen jälkeen); pelaajan valinta korvaa sen.
+                toive = kysymysOletus ?? "Valitse sinä paikka";
+                UusiPyynto();
                 return;
             }
             Seuraava = k;
@@ -231,7 +234,7 @@ namespace Matkakirja.Linssit.Kierros
             if (odotettu != 0) { if (odotusAlku < 0) odotusAlku = 0; odotusAlku += dt; if (odotusAlku > VastausMaxS) { odotettu = 0; virhe = true; } }
             if (virhe) { virhe = false; UusiPyynto(); }
             // Vastaamaton kysymys (simu 18.39: worker kysyi saman 9 kertaa): opas valitsee itse ensimmäisen vaihtoehdon.
-            if (OdottaaVastausta && aaniLoppui) { kysymysAika += dt; if (kysymysAika > KysymysOdotusS) { OdottaaVastausta = false; toive = kysymysOletus ?? "Valitse sinä paikka"; UusiPyynto(); } }
+            if (OdottaaVastausta && aaniLoppui) { kysymysAika += dt; if (kysymysAika > KysymysOdotusS) OdottaaVastausta = false; }   // oletus on jo haettu
 
             switch (Vaihe)
             {
@@ -246,7 +249,7 @@ namespace Matkakirja.Linssit.Kierros
                         var loppu = new Kuvakulma(a.Lat, a.Lon, a.EtaisyysM * AlkuLiukuKerroin, a.Kallistus + AlkuLiukuKallistus, a.Suuntima + 20, a.KatseKorkeusM);
                         Asento = KierrosLento.Valissa(a, loppu, KierrosLento.Smootherstep(Math.Min(1, VaiheAika / AlkuLiukuS)), 0);
                     }
-                    if (Seuraava != null && aaniLoppuiTaiAlku()) AloitaLento(maaKorkeus);
+                    if (Seuraava != null && aaniLoppuiTaiAlku() && !OdottaaVastausta) AloitaLento(maaKorkeus);
                     break;
                 case OpasVaihe.Puhuu:
                     kierto += KiertoAsteS * dt;
@@ -258,7 +261,8 @@ namespace Matkakirja.Linssit.Kierros
                 {
                     double t = Math.Min(1, VaiheAika / LentoKestoS);
                     Asento = Lennossa(lahto, KehysAsento(kohdeKehys, 0), t);
-                    if (!puheAloitettu && VaiheAika >= LentoKestoS - PuheEnnenS) { puheAloitettu = true; aaniLoppui = false; AlkaaPuhua?.Invoke(Nykyinen); }
+                    // Puhe alkaa PuheEnnenS ennen saapumista, kuitenkin aikaisintaan PuheAikaisinS nousun jälkeen (simu 19.54: tauko ~5 s → ≤ 3 s).
+                    if (!puheAloitettu && VaiheAika >= Math.Max(PuheAikaisinS, LentoKestoS - PuheEnnenS)) { puheAloitettu = true; aaniLoppui = false; AlkaaPuhua?.Invoke(Nykyinen); }
                     // Saapuminen odottaa laattoja enintään SaapumisOdotusS (simu 18.39: saapuessa laatat 28–45 %).
                     if (t >= 1 && laatatValmiit != null && !laatatValmiit() && VaiheAika < LentoKestoS + SaapumisOdotusS) break;
                     if (t >= 1)
