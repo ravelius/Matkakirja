@@ -599,6 +599,10 @@ namespace Matkakirja.Natiivi
                         var kohdePaa = m.PaaIndeksi >= 0 ? m.SolmuT[m.PaaIndeksi].position : m.Juuri.transform.position + Vector3.up * 1.55f;
                         var eteen = -e.Juuri.transform.forward; // skinnatun mallin kasvot (ks. PaivitaSijainti)
                         var suunta = kohdePaa - paa.position;
+                        // Pystykatse enintään PaaPystyAst (Päätoimittaja 5.10.: polvistuva kappalainen kallisti pään taakse
+                        // kuin katsoisi kattoon, kun seisova puhuja oli yläpuolella).
+                        float vaakaPituus = new Vector2(suunta.x, suunta.z).magnitude, maxY = vaakaPituus * Mathf.Tan(PaaPystyAst * Mathf.Deg2Rad);
+                        suunta.y = Mathf.Clamp(suunta.y, -maxY, maxY);
                         if (suunta.sqrMagnitude > 0.01f)
                         {
                             var kierto = Quaternion.FromToRotation(eteen, suunta.normalized);
@@ -611,7 +615,7 @@ namespace Matkakirja.Natiivi
             e.PaaKierto = Quaternion.Slerp(e.PaaKierto, tavoite, 1f - Mathf.Exp(-4f * Time.unscaledDeltaTime));
             paa.rotation = e.PaaKierto * paa.rotation;
         }
-        const float PaaMaxAsteet = 40f, PaaPaino = 0.7f;
+        const float PaaMaxAsteet = 40f, PaaPaino = 0.7f, PaaPystyAst = 12f;
 
         /// <summary>Kasvosuunta keskustelussa: kuulija → puhuja, puhuja → edellinen puhuja; rajattu ja pehmennetty.</summary>
         Vector3 Katse(Esiintyma e, Vector3 paikka, Vector3 oma)
