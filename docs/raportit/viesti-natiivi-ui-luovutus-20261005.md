@@ -6,6 +6,12 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## KEHITYSTAHTI (omistaja 5.10. 12.30, Raamattu kohta 2 #3992)
+VIE-ikkunat klo 12 ja 20 (valmis + kuitattu lähtee, keskeneräinen odottaa). iPad-mittaus ei ole VIE-ehto. Toiminnallinen
+rutiinierä kuitataan ENSIN Laitetestaajalla; Päätoimittajalle vain omistajalle näkyvä/maku/sisältö (esim. latauspalkki).
+Todisteet todistusajolla (proto tyokalut/todistusajo/, TODISTUS.md merge-pyyntöön) VASTA kun Pelikoodari ilmoittaa
+testimykistyksen käännöksessä ja OHJE.md valmiina.
+
 ## Juna 142 — Päätoimittaja kuittasi, merge-pyynnöt Natiivisepällä
 - natiivi-ui/jatka-pulun-kuva 2f56284a — Jatka kuin Ohita; Puhe.Lue jatkohiljaisuuden portin taakse; Jatka-napautuksen
   irrotus ei päätä hiljaisuutta; Ohita näkyy aina automaattisen luennan aikana kartalla; maakuntakortin lisäkysymykset.
