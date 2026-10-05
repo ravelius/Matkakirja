@@ -990,6 +990,12 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: avainsana " + (o2 != null ? $"lisätty jaksoon {osat[2]}: {o2.Vuosi} {o2.Sanat} @ {o2.Ts:F1} s" : "käyttö: poikki avainsana <jakso> <t_s> <vuosi|-> <sanat>"));
                 return;
             }
+            if (mita == "pakota-virhe")
+            {
+                DioraamaLevyvalimuisti.PakotaVirheJalkeen = int.TryParse(arvo, out int pv) ? pv : -1;
+                o.Kirjaa("poikki: pakota-virhe " + (DioraamaLevyvalimuisti.PakotaVirheJalkeen >= 0 ? $"{DioraamaLevyvalimuisti.PakotaVirheJalkeen} tiedoston jälkeen" : "pois"));
+                return;
+            }
             if (mita == "orbit")
             {
                 DioraamaKameraJousi.OrbitPaalla = arvo != "0";

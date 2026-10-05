@@ -227,9 +227,15 @@ namespace Matkakirja.Natiivi
 
         // --- HAUT ------------------------------------------------------------------------------------------------------
         /// <summary>Tavut välimuistista tai verkosta (onnistunut lataus tarkistetaan ja tallennetaan taustasäikeessä). null = epäonnistui.</summary>
+        /// <summary>Testikomento "poikki pakota-virhe N" (Päätoimittaja 5.10.: teardown-kilvan todennus): N valmistuneen tiedoston
+        /// jälkeen kaikki haut epäonnistuvat (kuten verkkokatko kesken latauksen). −1 = pois.</summary>
+        public static int PakotaVirheJalkeen = -1;
+        static bool Pakotettu() => PakotaVirheJalkeen >= 0 && Valmistuneita >= PakotaVirheJalkeen;
+
         public static IEnumerator Hae(string url, int aikakatkaisu, Action<byte[]> valmis)
         {
             yield return OdotaKesken(url);
+            if (Pakotettu()) { Epaonnistui++; valmis(null); yield break; }
             var (paikka, sha) = Paikka(url);
             if (paikka != null && File.Exists(paikka))
             {
@@ -279,6 +285,7 @@ namespace Matkakirja.Natiivi
         public static IEnumerator HaeNatiivi(string url, int aikakatkaisu, Action<Unity.Collections.NativeArray<byte>> valmis)
         {
             yield return OdotaKesken(url);
+            if (Pakotettu()) { Epaonnistui++; valmis(default); yield break; }
             var (paikka, _) = Paikka(url);
             if (paikka != null && File.Exists(paikka))
             {
@@ -323,6 +330,7 @@ namespace Matkakirja.Natiivi
         public static IEnumerator Esilataa(string url, int aikakatkaisu, Action<bool> valmis)
         {
             yield return OdotaKesken(url);
+            if (Pakotettu()) { Epaonnistui++; valmis(false); yield break; }
             var (paikka, sha) = Paikka(url);
             if (paikka == null) { valmis(false); yield break; }
             if (File.Exists(paikka)) { Osumia++; valmis(true); yield break; }
