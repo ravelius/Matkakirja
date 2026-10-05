@@ -110,6 +110,7 @@
 //   ui pilleri [paa|linssit|aarteet|tasot] [n] pillerivalikko auki, näkymä ja n:s rivi kerran (esikatselu), kahdesti = toiminto
 //   ui maakunnat [kortti] [ISO:tunnus]        karttaselite Maakunnat-välilehdellä, valinta, kortti
 //   ui maakunnat sulje                        auki oleva maakuntakortti tai lappu kiinni (sulkuanimaatio)
+//   ui maakunnat vaisto                       kortin väistö chatille (PINNATTU PALKKI, juna 147): tila
 //   ui maakunnat kysymys [n]                  auki olevan kortin n:s kysymys auki/kiinni; kortin reunat ja vieritys 300 ms päästä
 //   ui pulu tekstit piiloon|nakyviin|auto | ui pulu napauta   löydös 21: repliikkien tekstit / piilotettu kuplaksi
 //   ui pulu sano [teksti] | aani [lähde n] | ele id | tilanne laji | tunne t | pois | paalle
@@ -1211,6 +1212,9 @@ namespace Matkakirja.Natiivi
                 case "maakunnat" when loput.StartsWith("kartta"):
                     // Minikartta suureksi / takaisin (omistajan kortti 30.9.2026 klo 22.5x): "ui maakunnat kartta [pois]".
                     return "=" + ui.Karttaselite.Maakunnat.TestiKartta(!loput.Contains("pois"));
+                case "maakunnat" when loput == "vaisto":
+                    // Väistö chatille (juna 147): kortin ja PINNATTU PALKIN tila.
+                    return "=" + ui.Karttaselite.Maakunnat.VaistoKuvaus;
                 case "maakunnat" when loput.StartsWith("kysymys"):
                 {
                     // Kortin kysymys auki/kiinni (omistaja 29.9.: koko ei saa muuttua): kortin reunat ja vieritys lokiin.

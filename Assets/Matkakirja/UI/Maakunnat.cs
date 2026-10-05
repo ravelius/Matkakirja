@@ -661,6 +661,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Testikomento "ui maakunnat kysymys n": kortin n:s kysymys auki/kiinni, mitat lokiin.</summary>
         public string TestiKysymys(int n) => kortti.TestiKysymys(n);
+        public string VaistoKuvaus => kortti.VaistoKuvaus;
 
         /// <summary>Testikomento "ui maakunnat kartta [pois]": minikartta suureksi tai takaisin.</summary>
         public string TestiKartta(bool suureksi) => kortti.TestiKartta(suureksi);
@@ -739,9 +740,49 @@ namespace Matkakirja.Natiivi
         const float KarttaOsuus = 0.30f, KarttaKatto = 220f, KarttaMs = 220f;
         const string RiviValiAlku = "<line-height=1.58em>";
 
+        // VÄISTÖ CHATILLE (Päätoimittaja 6.10. klo 00.5x, juna 147): chatin avautuessa kortti pienenee PINNATTU PALKKI
+        // -palkiksi oikeaan yläreunaan ja palaa, kun chat suljetaan; palkin napautus palauttaa kortin heti (ja sulkee chatin).
+        bool vaistetty, chatOliAuki;
+        Pinnaus.Kohde vaistoKohde;
+
+        void TarkistaVaisto()
+        {
+            var chat = UiNakymat.Olemassa ? UiNakymat.Hae()?.Chat : null;
+            bool auki = chat != null && chat.Auki;
+            if (auki && !chatOliAuki && Auki && !vaistetty) Vaista();
+            else if (!auki && vaistetty) { Pinnaus.LopetaVaisto(vaistoKohde); PalautaVaistosta(false); }
+            chatOliAuki = auki;
+        }
+
+        void Vaista()
+        {
+            vaistoKohde = new Pinnaus.Kohde { Omistaja = "maakunta:" + avain, Otsikko = otsikko.text,
+                Palauta = () => PalautaVaistosta(true), Irti = () => { vaistetty = false; Sulje(); } };
+            if (!Pinnaus.Vaista(vaistoKohde)) return;
+            vaistetty = true;
+            suurennos.Sulje();
+            SuljeKartta(true);
+            Rakenne.Nayta(himmennys, false, LinssiUi.VahennettyLiike() ? 0 : 240);
+            SyoteLukko.Vapauta(this);
+        }
+
+        void PalautaVaistosta(bool suljeChat)
+        {
+            if (!vaistetty) return;
+            vaistetty = false;
+            if (suljeChat) UiNakymat.Hae()?.Chat?.Sulje();
+            if (!Auki) return;
+            Rakenne.Nayta(himmennys, true);
+            SyoteLukko.Esta(this);
+        }
+
+        /// <summary>Testi (`ui maakuntakortti vaisto`): väistön tila.</summary>
+        public string VaistoKuvaus => $"maakuntakortti {(Auki ? "auki" : "kiinni")}, väistetty {vaistetty}, palkki {(Pinnaus.Vaisto ? "väistö" : "-")}";
+
         public MaakuntaKortti(UiKerros kerros)
         {
             this.kerros = kerros;
+            kerros.JokaRuutu += TarkistaVaisto;
             himmennys = Rakenne.El("mk-himmennys mk-maakuntaKortti__kerros", kerros.Juuri(UiKerros.Valikot));
             himmennys.style.display = DisplayStyle.None;
             himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
@@ -868,6 +909,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             if (!Auki) return;
+            if (vaistetty) { vaistetty = false; Pinnaus.LopetaVaisto(vaistoKohde); }
             Auki = JokinAuki = false;
             laajennettu = false;
             suurennos.Sulje();
