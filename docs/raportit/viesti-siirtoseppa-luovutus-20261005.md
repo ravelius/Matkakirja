@@ -1,6 +1,22 @@
-# Siirtosepän luovutus 5.10.2026 — TILA KLO 19.5x (Opus 5.5, high)
+# Siirtosepän luovutus 5.10.2026 — TILA KLO 23.1x (Opus 5.5, high)
 
-## Nyt (19.5x)
+## Nyt (23.1x)
+
+- **Juna 144 lähti** (e95826b4: kaupunkikuva 79a3582c, oppaan kamera OpasKuvaus 7d2a70ec + Linssisepän forbidHoles).
+- **Juna 145 (kokoaa Natiiviseppä/Linssiseppä):** kappeli = siirtoseppa/linna-146 767fb0e3 (ele-kytkentä + polvillaan puhuminen)
+  + siirtoseppa/kappeli-145 0ca128fd (puhujakuva natiivi-ui/puhujakuva-145 6f733f2e + kytkentä); koe 792745f0 todennettu
+  (lokit/siirtoseppa-kap145pk). Oppaan tapit (OpasOhjaus 2de41125), kaukokulmat 7ce44e1c ja korostus OpasKorostusKuva 46f452cb
+  ovat lontoossa (daeb60d2) — korostusta ei vielä nähty simussa.
+- **Osoitin:** db8630b07d17411d todennettu BUILD 143:lla ja koe 3:lla (lokit/siirtoseppa-kap143/-kap144); Päätoimittaja antaa
+  omistajalle Run-rivin.
+- **Juna 146:** siirtoseppa/kortti-napautus 85c0a6bb (huoneen nimi 3 s, kortti ja nimilaput vain napautuksesta) — odottaa
+  käännös- ja simuvuoroa (Julkaisija): ENNEN 792745f0 / JÄLKEEN samalla polulla oikeilla tapeilla (ajo-kortti-tapit.sh, TAP NYT →
+  simupaneelista tap → touch $L/<N>/tap-huone|tap-tyhja). Lisäksi linna-146 58636d47 (pään pystykatse ≤ 12°).
+- **TYÖTAPA (Päätoimittaja 23.1x):** vika toistetaan oikeilla napautuksilla ennen korjausta; ilman toistoa ei SHA:ta.
+- Final IK 60ba4251, Steam Audio cdfe7acd, vesi 1a4e4804: tila Päätoimittajalle 22.4x (146–147).
+
+## Aiempi tila 19.5x
+
 
 - **Kaupunkikuva junaan 144 — HYVÄKSYTTY (Päätoimittaja 19.5x):** `siirtoseppa/kaupunki-kuva` @ **79a3582c**, worktree
   `wt/proto-siirtoseppa-kk`, Linssisepän `linssiseppa/lontoo`:n päällä, vain `Linssit/Unity/KaupunkiKuva.cs` (tilaa
