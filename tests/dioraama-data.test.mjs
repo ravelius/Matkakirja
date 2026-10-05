@@ -161,15 +161,26 @@ test('hahmojen id:t ovat yksilöllisiä oman tilan sisällä', () => {
   }
 });
 
-test('taulussa on tasan 3 kohtaa, kukin enintään 110 merkkiä', () => {
+// Kohtaukset v3 (5.10.): Pulun entiset kuunnelmarivit ovat taulun lopussa omina kohtinaan (puhuja 'pulu', oma ääni,
+// valinnainen napautuskohde); faktakohtia on edelleen tasan 3.
+test('taulussa on tasan 3 faktakohtaa, kukin enintään 110 merkkiä; Pulun kohdat lopussa', () => {
   const taulut = [
     ['RAKENNUS.taulu', RAKENNUS.taulu],
     ...RAKENNUS.tilat.filter((t) => t.taulu).map((t) => [`${t.id}.taulu`, t.taulu]),
   ];
   assert.ok(taulut.length >= 2, 'odotettiin sekä linnan että vähintään yhden tilan taulua');
   for (const [nimi, taulu] of taulut) {
-    assert.equal(taulu.kohdat.length, 3, `${nimi}: tasan 3 kohtaa`);
-    for (const [i, kohta] of taulu.kohdat.entries()) {
+    const pulu = taulu.kohdat.filter((k) => k.puhuja === 'pulu');
+    assert.ok(pulu.length <= 2, `${nimi}: enintään 2 Pulun kohtaa`);
+    for (const k of pulu) {
+      assert.ok(k.teksti.length > 10 && k.teksti.length <= 160, `${nimi}: Pulun kohta ${k.aani}`);
+      assert.ok(Object.hasOwn(AANET, k.aani), `${nimi}: Pulun kohdan ääni ${k.aani} pankissa`);
+    }
+    assert.deepEqual(taulu.kohdat.slice(-pulu.length || taulu.kohdat.length).filter((k) => k.puhuja === 'pulu'), pulu, `${nimi}: Pulun kohdat lopussa`);
+    const faktat = taulu.kohdat.filter((k) => k.puhuja !== 'pulu');
+    assert.equal(faktat.length, 3, `${nimi}: tasan 3 faktakohtaa`);
+    for (const k of taulu.kohdat) if (k.kohde) assert.ok(k.kohde.paikka.length === 3 && k.kohde.sade >= 0.4, `${nimi}: kohde ${JSON.stringify(k.kohde)}`);
+    for (const [i, kohta] of faktat.entries()) {
       assert.ok(kohta.teksti.length <= 110, `${nimi}.kohdat[${i}]: ${kohta.teksti.length} merkkiä (max 110)`);
       assert.ok(kohta.teksti.length > 0, `${nimi}.kohdat[${i}]: teksti ei saa olla tyhjä`);
       assert.equal(typeof kohta.lahde, 'string', `${nimi}.kohdat[${i}]: lahde puuttuu`);
@@ -452,21 +463,36 @@ test('Olavinlinna: jokaisessa kohdistettavassa huoneessa infotaulu (nimi + 1–2
   for (const e of vihjeet) assert.ok(e.rivi && e.rivi.length <= 80, `sinetin vaihe ${e.vaihe}: infotaulun rivi`);
 });
 
-test('Olavinlinna: kuunnelmat (kohtaus = rivijono), puhujat ratkeavat, Pulu viimeisenä, äänet pankissa', async () => {
+// Kohtaukset v3 (Siirtosepän datasäännöt 5.10.): kuunnelma = kertoja + yksi keskustelu (vuorot sekunteina), käsikirjoitus
+// vain pulu-lenna + taulu, repliikit tyhjät, ei Pulu-rivejä kuunnelmassa (Pulu siirtyi taulun kohdiksi).
+test('Olavinlinna: kuunnelmat v3 (kertoja + keskustelu), vuorojen puhujat ratkeavat, äänet pankissa', async () => {
   const { RAKENNUS } = await import('../js/dioraama/rakennukset/olavinlinna.js');
   const idt = new Set();
   for (const t of RAKENNUS.tilat.filter((x) => x.kohdistettava)) {
     const k = t.kuunnelma;
-    assert.ok(Array.isArray(k) && k.length >= 3 && k.length <= 6, `${t.id}: kuunnelma`);
-    const hahmot = new Set((t.hahmot ?? []).map((h) => h.id));
+    assert.ok(Array.isArray(k) && k.length === 2, `${t.id}: kuunnelma = kertoja + keskustelu`);
+    const [kertoja, keskustelu] = k;
+    assert.equal(kertoja.puhuja, 'kertoja', `${t.id}: ensin kertoja`);
+    assert.equal(keskustelu.puhuja, 'keskustelu', `${t.id}: sitten keskustelu`);
+    assert.equal(keskustelu.nimi, '', `${t.id}: keskustelun nimi tyhjä (vanha natiivi piilottaa puhujarivin)`);
+    assert.ok(keskustelu.teksti.length > 20, `${t.id}: keskustelun teksti ei tyhjä`);
+    // puhuja voi olla toisen tilan hahmo (keittiössä vouti puhuu oven takaa)
+    const hahmot = new Set(RAKENNUS.tilat.flatMap((x) => (x.hahmot ?? []).map((h) => h.id)));
+    let edellinen = -1;
+    assert.ok(keskustelu.vuorot.length >= 2, `${t.id}: vuoroja`);
+    for (const v of keskustelu.vuorot) {
+      assert.ok(hahmot.has(v.puhuja), `${t.id}: vuoron puhuja ${v.puhuja} on linnan hahmo`);
+      assert.ok(v.alku_s >= edellinen && v.loppu_s > v.alku_s, `${t.id}: vuorot aikajärjestyksessä`);
+      assert.ok(v.loppu_s <= AANET[keskustelu.aani].kesto_s + 0.05, `${t.id}: vuoro äänen sisällä`);
+      edellinen = v.loppu_s;
+    }
     for (const r of k) {
-      assert.ok(r.puhuja === 'pulu' || hahmot.has(r.puhuja) || r.huom, `${t.id}/${r.id}: puhuja ${r.puhuja}`);
-      assert.ok(r.teksti.length > 10 && r.teksti.length <= 160, `${t.id}/${r.id}: teksti`);
       assert.ok(AANET[r.aani], `${t.id}/${r.id}: ääni pankissa`);
       assert.ok(!idt.has(r.id), `kaksois-id ${r.id}`);
       idt.add(r.id);
     }
-    assert.equal(k.at(-1).puhuja, 'pulu', `${t.id}: Pulu lopuksi`);
+    assert.deepEqual(t.kasikirjoitus, [{ tee: 'pulu-lenna' }, { tee: 'taulu' }], `${t.id}: käsikirjoitus v3`);
+    for (const h of t.hahmot ?? []) assert.deepEqual(h.repliikit, [], `${t.id}/${h.id}: repliikit tyhjät`);
   }
 });
 
