@@ -12,7 +12,12 @@ namespace Matkakirja.Linssit.IssKamera
     {
         public const int JuuriZ = 6, MaksimiZ = 14;
         public readonly KuvaData Data = new KuvaData();
-        public Pilvikentta Pilvet;
+        public IKuvanPilvet Pilvet;
+        /// <summary>
+        /// GIBS-pilvet: valkoinen S2-pinta (jäätikkö, suola, lumi kuvassa) ei saa pilveä päälleen, koska GIBS:n maski ei erota
+        /// lunta pilvestä (esiselvitys 5.10.: Alpit). Pinnan valkoisuus samalla kaavalla kuin GibsPilvet.MaskiAlfa.
+        /// </summary>
+        public bool PintaRajaaPilvet;
         /// <summary>Kameran paikka ECEF (m); pilvipeitto kasvaa etäisyyden mukaan (null = kerroin 1).</summary>
         public (double x, double y, double z)? Kamera;
         /// <summary>
@@ -479,6 +484,7 @@ namespace Matkakirja.Linssit.IssKamera
                     if (lahi) { var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, px + 0.5, py + 0.5); var (pa, pk) = Pilvet.Lahi(la, lo, PeittoK(la, lo)); al = (float)pa; ki = (float)pk; }
                     else { al = H(a); ki = H(kk); }
                     al *= haivytys;
+                    if (PintaRajaaPilvet && al > 0) { double pv = GibsPilvet.MaskiAlfa(rgba[o], rgba[o + 1], rgba[o + 2]); al *= (float)(1 - pv); va *= (float)(1 - pv); }
                     float si = MaanSini > 0 ? Math.Min(1f, H(sv)) : 0f;
                     if (si > 0)
                     {

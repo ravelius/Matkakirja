@@ -605,7 +605,23 @@ namespace Matkakirja.Natiivi
                 foreach (var ru in ruudut)
                     if (scl.TryGetValue(ru.Tunnus, out var so)) ty.LisaaMaamaski(ru, so, (x, y) => sclPuretut.TryGetValue((ru.Tunnus, x, y), out var l) ? l : null);
                 var (az, korkeus) = AurinkoPisteessa(utc, naytteet.Average(n => n.Lat), naytteet.Average(n => n.Lon));
-                ty.Pilvet = new Pilvikentta { MaaOsuus = ty.MaaOsuus, AurinkoAz = az, AurinkoKorkeus = korkeus }.Kalibroi();
+                var kentta = new Pilvikentta { MaaOsuus = ty.MaaOsuus, AurinkoAz = az, AurinkoKorkeus = korkeus }.Kalibroi();
+                ty.Pilvet = kentta;
+                // Päivän todelliset pilvet GIBS:stä, selkein 7 päivästä (omistaja 5.10. klo 15.5x); ei dataa → Pilvikenttä.
+                string kuvanLahde = "Contains modified Copernicus Sentinel data", pilviTieto = "pilvikenttä";
+                if (GibsPilvetPaalla)
+                {
+                    Tila = "pilvet";
+                    GibsPilvet gp = null;
+                    yield return HaeGibs(w, s, e, nn, x => gp = x);
+                    if (gp != null)
+                    {
+                        gp.AurinkoAz = az; gp.AurinkoKorkeus = korkeus; gp.Yksityiskohta = kentta;
+                        ty.Pilvet = gp; ty.PintaRajaaPilvet = true;
+                        kuvanLahde += " · clouds " + GibsPilvet.Merkinta;
+                        pilviTieto = $"GIBS {gp.Paiva:yyyy-MM-dd} z{gp.Taso}, peitto {gp.Peitto * 100:0} %";
+                    }
+                }
                 // Datattomat kiilat maalla läpinäkyviksi (BMNG alla), merellä merenväri (simu d753d794: sininen kiila Saharassa).
                 // Maa: S2-ruutujen SCL-maamaski (rataväli ruudun neliön sisällä on SCL:ssä nodata = maa; avomerellä ei ruutuja)
                 // tai pelin maarajat (simu 0cc5ad75: maarajoissa vain pelin 135 maata, Algeria puuttuu → kiila jäi).
@@ -700,13 +716,13 @@ namespace Matkakirja.Natiivi
                 ViimeisinKuva = Path.Combine(albumi, id + ".jpg");
                 File.WriteAllBytes(ViimeisinKuva, jpg);
                 loppuTila = "valmis";
-                File.WriteAllText(Path.ChangeExtension(ViimeisinKuva, ".json"), Tiedot(id, utc, kk, naytteet, muoto, az, korkeus, ruudut, ehdokkaat, saatu));
+                File.WriteAllText(Path.ChangeExtension(ViimeisinKuva, ".json"), Tiedot(id, utc, kk, naytteet, muoto, az, korkeus, ruudut, ehdokkaat, saatu, kuvanLahde, pilviTieto));
                 Edistyminen = 1;
                 Loki($"VALMIS {ViimeisinKuva} ({jpg.Length / 1e6:0.0} Mt, {W}×{H}), yhteensä {kello.ElapsedMilliseconds / 1000.0:0.0} s, haettu {saatu / 1e6:0.0} Mt, pallo {(pallo != null ? pallo.ComputeLoadProgress() : 0):0.0} %");
                 // Paikka kuten LCD:ssä (lähin kaupunki, vuori tai meri + maa) kuvan keskipisteestä, nimet sellaisinaan.
                 var keskus = naytteet.OrderBy(n => Math.Abs(n.Sx - 24) + Math.Abs(n.Sy - 18)).First();
                 var (kp, km2) = IssSijainti.Nimet(IssSijainti.Nykyinen, keskus.Lat, keskus.Lon);
-                KuvaValmis(ViimeisinKuva, kp, km2, utc, keskus.Lat, keskus.Lon, "Contains modified Copernicus Sentinel data");
+                KuvaValmis(ViimeisinKuva, kp, km2, utc, keskus.Lat, keskus.Lon, kuvanLahde);
             }
             finally
             {
@@ -903,6 +919,86 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Range-haut enintään Rinnakkain kerrallaan, purku säikeissä; tila: [0] saatu, [1] virheet.</summary>
+        /// <summary>GIBS-pilvet ISS-kuvaan (Päätoimittaja 5.10.); A/B `astro kyyti kuvaa gibs 0|1`, pois → Pilvikenttä.</summary>
+        public static bool GibsPilvetPaalla = true;
+
+        /// <summary>
+        /// GIBS-ruudut alueelle viimeisiltä 7 päivältä (eilinen UTC ensin; tämän päivän kuvat valmistuvat 3–6 h ylilennosta),
+        /// kerros kerrallaan kaikille päiville rinnakkain: seuraava kerros (SNPP → NOAA-20 → Terra → Aqua) vain päiville, joilla
+        /// edellisistä jäi aukkoja. Tyhjä ruutu on 1665 tavun musta JPEG.
+        /// </summary>
+        IEnumerator HaeGibs(double w, double s, double e, double n, Action<GibsPilvet> valmis)
+        {
+            int z = GibsPilvet.TasoAlueelle(w, s, e, n);
+            var (fx0, fy0) = GibsPilvet.Pikseli(n, w, z); var (fx1, fy1) = GibsPilvet.Pikseli(s, e, z);
+            int x0 = (int)Math.Floor(fx0), y0 = (int)Math.Floor(fy0), W = (int)Math.Ceiling(fx1) - x0, H = (int)Math.Ceiling(fy1) - y0;
+            if (W <= 0 || H <= 0) { valmis(null); yield break; }
+            int R = GibsPilvet.Ruutu, tx0 = x0 / R, ty0 = y0 / R, tx1 = (x0 + W - 1) / R, ty1 = (y0 + H - 1) / R;
+            var kello = System.Diagnostics.Stopwatch.StartNew();
+            var tanaan = DateTime.UtcNow.Date;
+            var paivat = new List<(DateTime paiva, byte[][] kerrokset)>();
+            for (int d = 1; d <= 7; d++) paivat.Add((tanaan.AddDays(-d), new byte[GibsPilvet.Kerrokset.Length][]));
+            long tavut = 0; int pyyntoja = 0;
+            for (int k = 0; k < GibsPilvet.Kerrokset.Length; k++)
+            {
+                var pyynnot = new List<(UnityWebRequest q, int d, int tx, int ty)>();
+                for (int d = 0; d < paivat.Count; d++)
+                {
+                    if (k > 0 && !GibsAukkoja(paivat[d].kerrokset, W, H)) continue;
+                    for (int ty = ty0; ty <= ty1; ty++)
+                        for (int tx = tx0; tx <= tx1; tx++)
+                        {
+                            var q = UnityWebRequest.Get(GibsPilvet.Osoite(GibsPilvet.Kerrokset[k], paivat[d].paiva, z, tx, ty));
+                            q.timeout = 20; q.SendWebRequest(); pyynnot.Add((q, d, tx, ty));
+                        }
+                }
+                if (pyynnot.Count == 0) break;
+                while (pyynnot.Any(p => !p.q.isDone)) yield return null;
+                foreach (var (q, d, tx, ty) in pyynnot)
+                {
+                    using (q)
+                    {
+                        if (q.result != UnityWebRequest.Result.Success) continue;
+                        var data = q.downloadHandler.data; pyyntoja++; tavut += data.Length;
+                        if (data.Length <= 1700) continue;   // tyhjä ruutu
+                        var tex = new Texture2D(2, 2, TextureFormat.RGB24, false);
+                        if (!tex.LoadImage(data)) { Destroy(tex); continue; }
+                        var px = tex.GetPixels32(); int tw = tex.width, th = tex.height; Destroy(tex);
+                        var rgb = paivat[d].kerrokset[k] ??= new byte[W * H * 3];
+                        for (int j = 0; j < th; j++)
+                        {
+                            int gy = ty * R + j * R / th - y0; if (gy < 0 || gy >= H) continue;
+                            for (int i = 0; i < tw; i++)
+                            {
+                                int gx = tx * R + i * R / tw - x0; if (gx < 0 || gx >= W) continue;
+                                var c = px[(th - 1 - j) * tw + i]; int o = (gy * W + gx) * 3;   // Unityn rivit alhaalta ylös
+                                rgb[o] = c.r; rgb[o + 1] = c.g; rgb[o + 2] = c.b;
+                            }
+                        }
+                    }
+                }
+            }
+            var t = Task.Run(() => GibsPilvet.Kokoa(x0, y0, W, H, paivat, z));
+            while (!t.IsCompleted) yield return null;
+            var g = t.IsFaulted ? null : t.Result;
+            Loki($"gibs: z{z} {W}×{H} px, {pyyntoja} ruutua {tavut / 1e3:0} kt, {kello.ElapsedMilliseconds / 1000.0:0.0} s → "
+                + (g == null ? (t.IsFaulted ? "virhe " + t.Exception?.GetBaseException().Message : "ei dataa") : $"{g.Paiva:yyyy-MM-dd}, peitto {g.Peitto * 100:0} %"));
+            valmis(g);
+        }
+
+        /// <summary>Jääkö haetuista kerroksista aukkoja (yli 0,5 % pikseleistä ilman dataa)?</summary>
+        static bool GibsAukkoja(byte[][] k, int W, int H)
+        {
+            int n = W * H, aukot = 0;
+            for (int i = 0; i < n; i++)
+            {
+                bool data = false;
+                foreach (var c in k) if (c != null && Math.Max(c[i * 3], Math.Max(c[i * 3 + 1], c[i * 3 + 2])) > 1) { data = true; break; }
+                if (!data && ++aukot > n / 200) return true;
+            }
+            return false;
+        }
+
         IEnumerator Lataa(List<(string url, long alku, long pit, Action<byte[]> valmis)> haku, long[] tila)
         {
             long tavut = haku.Sum(x => x.pit), tama = 0;
@@ -1019,7 +1115,7 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Julisteen tekstikentät kuvaushetken arvoista (Päätoimittaja 1.10.: paikka, koordinaatit, aika, korkeus, …, lähde).</summary>
         static string Tiedot(string id, DateTime utc, KuvaKamera kk, List<Nayte> naytteet, string muoto, double az, double korkeus,
-            List<S2Ruutu> ruudut, List<S2IndeksiRuutu> ehdokkaat, long tavut)
+            List<S2Ruutu> ruudut, List<S2IndeksiRuutu> ehdokkaat, long tavut, string lahde = "Contains modified Copernicus Sentinel data", string pilvet = null)
         {
             // Kameran paikka (kuvauskulma voi poiketa todellisesta radasta, laitekoe 2: JSONissa oli todellinen paikka).
             var (iLat, iLon) = Kuvasuunnitelma.Geodeettinen(kk.Paikka); var pinta = Kuvasuunnitelma.Ecef(iLat, iLon);
@@ -1038,9 +1134,10 @@ namespace Matkakirja.Natiivi
             return string.Format(ic, "{{\"id\":\"{0}\",\"aika_utc\":\"{1:yyyy-MM-ddTHH:mm:ssZ}\",\"muoto\":\"{2}\",\"leveys\":{14},\"korkeus\":{15}," +
                 "\"iss\":{{\"lat\":{3:0.000},\"lon\":{4:0.000}}},\"korkeus_km\":{5:0.0},\"nopeus_kmh\":{6:0},\"etaisyys_km\":{16:0}," +
                 "\"kohde\":{{\"lat\":{7:0.000},\"lon\":{8:0.000},\"x\":{17:0},\"y\":{18:0}}},\"polttovali\":{9:0},\"aukko\":\"{19}\",\"aika\":\"{20}\",\"iso\":{21}," +
-                "\"aurinko_deg\":{11:0.0},\"aurinko_az\":{10:0},\"lahde\":\"Contains modified Copernicus Sentinel data\",\"s2\":[{12}],\"mt\":{13:0.0}}}",
+                "\"aurinko_deg\":{11:0.0},\"aurinko_az\":{10:0},\"lahde\":\"{22}\",\"pilvet\":\"{23}\",\"s2\":[{12}],\"mt\":{13:0.0}}}",
                 id, utc, muoto, iss.Lat, iss.Lon, km, IssNyt.NopeusKmh(km), keski.Lat, keski.Lon, mm, az, korkeus, string.Join(",", kuvat), tavut / 1e6,
-                kk.Leveys, kk.Korkeus, etaisyys, kk.Leveys / 2.0, kk.Korkeus / 2.0, Valotus.AukkoTeksti(aukko), Valotus.AikaTeksti(aika), iso);
+                kk.Leveys, kk.Korkeus, etaisyys, kk.Leveys / 2.0, kk.Korkeus / 2.0, Valotus.AukkoTeksti(aukko), Valotus.AikaTeksti(aika), iso,
+                lahde, pilvet ?? "");
         }
     }
 }
