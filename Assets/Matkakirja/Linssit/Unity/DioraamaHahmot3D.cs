@@ -526,6 +526,12 @@ namespace Matkakirja.Natiivi
             bool reitilla = e.Hahmo.Reitti != null && silmukka == "kavely";
             double kavely = reitilla ? ReittiPaikkaJaSuunta(e, t).kavely : 1;
             string tavoite = reitilla && kavely < 0.5 ? "idle" : silmukka;
+            // Istuva tai polvistuva hahmo puhuu asennossaan (Päätoimittaja 5.10. 22.0x: kappalainen polvistuu jakkaralle, mutta
+            // puhuessaan seisoi jakkaran PÄÄLLÄ): perussilmukalle "<s>_puhe"-leike (esim. istuu_puhe) puheen ja eleen tilalle.
+            string perus = e.Hahmo.Silmukka;
+            if (!string.IsNullOrEmpty(perus) && perus != "idle" && perus != "kavely" && tavoite != perus && !reitilla
+                && e.Malli.Glb.Animaatio(Leike(m3, perus + "_puhe")) != null)
+                tavoite = perus + "_puhe";
             string leike = Leike(m3, tavoite);
             bool ensimmainen = e.Sekoitin.Nykyinen == null;
             // Idle ↔ puhe: pidempi häivytys (omistaja 5.10.: siirtymät "outoja"), muut ennallaan.
