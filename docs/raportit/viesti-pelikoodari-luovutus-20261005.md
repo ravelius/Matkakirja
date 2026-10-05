@@ -21,8 +21,8 @@
   huippu −6 dBFS, isku ≤ 1 ms; ämpärissä aanet/tehosteet/tavli/ ja mylly-v3/.
 
 ## Avoimet / huomiot
-- Gateway-hakujärjestys: TEHTY 06.3x, PR #3983 Julkaisijan junassa (images-api ensin, Gateway varalla; gatewayTunnus
-  ilman etunollaa). Mergen jälkeen `tools/uusi-worktree.sh --poista pelikoodari-gateway-jarjestys`.
+- Gateway-hakujärjestys: VALMIS, PR #3983 mainissa (images-api ensin, Gateway varalla; gatewayTunnus ilman etunollaa).
+- Lopetus 99 %:ssa (Päätoimittaja): ei avoimia eriä eikä worktreitä; Pelikoodari levossa seuraavaan erään.
 - Freesoundin alkuperäiset häviöttömät vaativat OAuthin → lähteenä esikuuntelu-mp3; jos Siirtoseppä raportoi
   pehmeän iskun, vaihda Kenneyn Casino Audion dice-throw-*.ogg:hen.
 

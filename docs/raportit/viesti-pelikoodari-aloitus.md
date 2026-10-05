@@ -6,7 +6,7 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 2. **Viimeisin luovutus:**
    [`viesti-pelikoodari-luovutus-20261005.md`](viesti-pelikoodari-luovutus-20261005.md) (5.10. klo 06.0x, tilinvaihto):
    kaikki erät valmiit (juna 142 BUILD 142: lukijaäänet, isojen kuvien purku, kohdekaupungin kuvakortti; Tavli- ja
-   Mylly-äänet Siirtosepälle). Gateway-hakujärjestys PR #3983 junassa (poista worktree pelikoodari-gateway-jarjestys mergen jälkeen). Edellinen:
+   Mylly-äänet Siirtosepälle). Gateway-hakujärjestys #3983 mainissa; ei avoimia eriä eikä worktreitä. Edellinen:
    `viesti-pelikoodari-luovutus-20261002.md`.
    - Roolit NIMELLÄ; Julkaisijalle vastaus viestin `from`-osoitteeseen. Kun viestiraja täyttyy, `docs/raportit/posti-pelikoodari-<pvm>.md` + push.
    - Worktreet enintään 3 (levy): poista `tools/uusi-worktree.sh --poista` heti kun haara on pushattu eikä sitä tarvita.
