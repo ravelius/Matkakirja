@@ -158,6 +158,9 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
 - natiivi-ui/pulu-sieppaus bb27e664 (pulu-chat-yksi d1d1f0ee päällä): PuluChat.Sieppaa (Func<string,bool>) ja Vastaa(teksti,
   jatkot). Linssiseppä kytkee OpasSovittimesta (linssiseppa/lontoo). Ei uusia UI-elementtejä. Todennus yhteiskäännöksessä hänen
   haaransa kanssa; merge-pyyntö sen jälkeen.
+- 18.0x KIIRE (omistaja, juna 144): natiivi-ui/pulu-sieppaus a65000ff: + PuluChat.AvaaOppaalle/SuljeOppaalta, OpasValikko
+  (LinnaValikon pohja: Vaihda kohde › maanosa › maa › 12 suurinta kaupunkia; Poistu linssistä; KohdeValittu-koukku), paikat.json
+  LS2:lta (87863aae, maanosa 6. sarake). Linssiseppä kytkee heijastuksella (linssiseppa/lontoo) ja kokoaa yhteiskäännöksen.
 
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
