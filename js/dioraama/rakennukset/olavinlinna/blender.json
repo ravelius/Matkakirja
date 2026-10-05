@@ -1,7 +1,7 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "3d59b30a48c612f2",
-  "kansio": "dioraama/olavinlinna/blender/3d59b30a48c612f2/",
+  "hash": "cb0cd92d688975cc",
+  "kansio": "dioraama/olavinlinna/blender/cb0cd92d688975cc/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500.glb",
@@ -830,33 +830,33 @@
     },
     {
       "polku": "ymparisto/ymparisto-hamara-2k-4x4.astcm",
-      "sha256": "9e318dcb87f8bc0accb8497c6e8fb6408f0a7c2f09461bcb61095717f2fb2868",
+      "sha256": "914560ebd91157a72e0ecb290be822b6f727abbda8f7a37497d929f77089944f",
       "tavuja": 5592448
     },
     {
       "polku": "ymparisto/ymparisto-hamara-4k-4x4.astcm",
-      "sha256": "800e07e0880321e9b7f8d8efe3ade03d0dfa7f098c7f572a5fc89faea49cff29",
+      "sha256": "5f3530c5180b7cbc4a9eb1e75d5cae96bdd123ca11e0f635714c20657341dc80",
       "tavuja": 22369664
     },
     {
       "polku": "ymparisto/ymparisto-hamara-8k-4x4.astcm",
-      "sha256": "37724d2c2c359c7371a672c1aec4fa4870102481bd5be6adae76a680db6b11fa",
+      "sha256": "0bb8669bb4d70d3b2ce4f4632c12c19d66368bd5eaa94163b018163e50f0fa02",
       "tavuja": 89478528
     },
     {
       "polku": "ymparisto/ymparisto_huippu.glb",
-      "sha256": "a621e4a8169de4912dab9e68d0b30d2d3c5448d77824b57f8835f341312e9678",
-      "tavuja": 10133232
+      "sha256": "6cd3dcf26742648b1d64686f94517c430afb2a8ca4e60e32ebbb5ac34929aff9",
+      "tavuja": 10129636
     },
     {
       "polku": "ymparisto/ymparisto_kevyt.glb",
-      "sha256": "2faf46c38330b21ce719b3120f3d089d5c07ac5a94a568d093ac17ad04bdf2d1",
-      "tavuja": 1825604
+      "sha256": "87159a6e0d1f6371fd88d66f4833fcb3a91fa662cfbfe52213b7a179814f6511",
+      "tavuja": 1826404
     },
     {
       "polku": "ymparisto/ymparisto_normaali.glb",
-      "sha256": "10a3b62fa0baa3eb32e38381d06124cd827c34ffc0b1e6d17441ee4c7654f54f",
-      "tavuja": 3822288
+      "sha256": "4cf3bc6c20c14388030f519f3d1154aaccf68221c72d7c8fc653ca9f5cf98c8e",
+      "tavuja": 3818796
     }
   ]
 }
