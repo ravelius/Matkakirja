@@ -21,9 +21,8 @@
   huippu −6 dBFS, isku ≤ 1 ms; ämpärissä aanet/tehosteet/tavli/ ja mylly-v3/.
 
 ## Avoimet / huomiot
-- Gateway-hakujärjestys (Sisältökirjurin 9f208494b varahaku): oma PR kun #3957 on mainissa — `haeKuva` images-api
-  ENSIN, Gateway vasta jos images-api ei tunne; `gatewayTunnus` ei hyväksy etunollallista ruutua (STS062-85-021 =
-  images-api, Gateway-tiedosto STS062-85-21). Testi viidelle STS-tunnukselle. (Tarkista onko #3957 mainissa.)
+- Gateway-hakujärjestys: TEHTY 06.3x, PR #3983 Julkaisijan junassa (images-api ensin, Gateway varalla; gatewayTunnus
+  ilman etunollaa). Mergen jälkeen `tools/uusi-worktree.sh --poista pelikoodari-gateway-jarjestys`.
 - Freesoundin alkuperäiset häviöttömät vaativat OAuthin → lähteenä esikuuntelu-mp3; jos Siirtoseppä raportoi
   pehmeän iskun, vaihda Kenneyn Casino Audion dice-throw-*.ogg:hen.
 
