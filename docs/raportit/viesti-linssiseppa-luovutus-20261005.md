@@ -76,3 +76,5 @@ Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), i
   (lokit/linssiseppa-linna-kuva-20261005-e/omistajalle). Suositus: linna-kuva EI mergetä (ei muuta kuvaa), haara viitteeksi.
 - Uudet session id:t: Päätoimittaja local_8d8ebf72, Julkaisija local_24e63224, Natiiviseppä local_fcc10552.
 - Kiilto 11–13: kopiot $S/ketju-kiilto-aamu.sh ja $S/paat-app (S = 7cea3452-scratchpad); portti $S/sim-nyt-ki.
+- 11.0x KIILTO VALMIS: ajo h (3674ed53) → vain vedessä, tuulikaistat, ei kermaläiskää; kuvat lokit/linssiseppa-kiilto-cupola-h-20261005/
+  omistajalle. Kysytty Päätoimittajalta kuittausta merge-pyynnölle glint-2 (5b6b9d46, puhdas master 62d5d1bb:n päälle) → Natiiviseppä, juna 143.
