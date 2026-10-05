@@ -175,6 +175,8 @@ namespace Matkakirja.Linssit.IssKamera
                     double cr = (p00.r * (1 - ax) + p10.r * ax) * (1 - ay) + (p01.r * (1 - ax) + p11.r * ax) * ay;
                     double cg = (p00.g * (1 - ax) + p10.g * ax) * (1 - ay) + (p01.g * (1 - ax) + p11.g * ax) * ay;
                     double cb = (p00.b * (1 - ax) + p10.b * ax) * (1 - ay) + (p01.b * (1 - ax) + p11.b * ax) * ay;
+                    if (ru.Vahvistus != null) { cr *= ru.Vahvistus[0]; cg *= ru.Vahvistus[1]; cb *= ru.Vahvistus[2]; }
+                    if (ru.Siirto != null) { cr += ru.Siirto[0]; cg += ru.Siirto[1]; cb += ru.Siirto[2]; }
                     cr = Math.Max(0, cr - ru.UsvaR); cg = Math.Max(0, cg - ru.UsvaG); cb = Math.Max(0, cb - ru.UsvaB);
                     if (luokka == 6 && d.VesiTasoitus > 0)
                     {
@@ -288,6 +290,8 @@ namespace Matkakirja.Linssit.IssKamera
                 byte luokka = d.SclLuokka(ru.Tunnus, e, n, pm);
                 if (luokka == 3 || luokka == 6 || luokka == 8 || luokka == 9 || luokka == 10) return false;
                 p = ((p00.r + p10.r + p01.r + p11.r) / 4.0, (p00.g + p10.g + p01.g + p11.g) / 4.0, (p00.b + p10.b + p01.b + p11.b) / 4.0);
+                if (ru.Vahvistus != null) p = (p.r * ru.Vahvistus[0], p.g * ru.Vahvistus[1], p.b * ru.Vahvistus[2]);
+                if (ru.Siirto != null) p = (p.r + ru.Siirto[0], p.g + ru.Siirto[1], p.b + ru.Siirto[2]);
                 return true;
             }
             return false;

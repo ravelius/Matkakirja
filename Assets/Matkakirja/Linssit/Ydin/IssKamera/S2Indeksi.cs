@@ -3,6 +3,7 @@
 // 1–3 kpl; TCI-arvo 0 = nodata → varakuva), yhteinen tci_lut (TCI-tavu → mosaiikin sävytys) ja ruudun vesisiirto.
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Matkakirja.Peli;
 
 namespace Matkakirja.Linssit.IssKamera
@@ -13,6 +14,8 @@ namespace Matkakirja.Linssit.IssKamera
         public double Pilvi, Lumi, Nodata;
         /// <summary>v2 (Karttaseppä 5.10.): täytekuva toiselta suhteelliselta radalta valinnan 0 nodata-alueelle ("toinen_rata": true).</summary>
         public bool ToinenRata;
+        /// <summary>v2b: täytekuvan sävy päävalinnan päällekkäisalueelta ("savy": {vahvistus: [r,g,b], siirto: [r,g,b]}); null = ei.</summary>
+        public double[] Vahvistus, Siirto;
     }
 
     public sealed class S2IndeksiRuutu
@@ -31,7 +34,7 @@ namespace Matkakirja.Linssit.IssKamera
         /// <summary>Valinta k (0 = paras) kuvasuunnitelman ruuduksi.</summary>
         public S2Ruutu Ruutu(int k = 0) => k < Valinnat.Count
             ? new S2Ruutu { Tunnus = k == 0 ? Tunnus : Tunnus + "#" + k, Url = Valinnat[k].Tci, Scl = Valinnat[k].Scl, Valinta = k,
-                W = W, S = S, E = E, N = N, Nodata = Valinnat[k].Nodata, Lut = Lut } : null;
+                W = W, S = S, E = E, N = N, Nodata = Valinnat[k].Nodata, Lut = Lut, Vahvistus = Valinnat[k].Vahvistus, Siirto = Valinnat[k].Siirto } : null;
     }
 
     public sealed class S2Indeksi
@@ -60,7 +63,11 @@ namespace Matkakirja.Linssit.IssKamera
                 foreach (var v in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(o, "valinnat")))
                 {
                     var vo = MiniJson.ObjektiTaiNull(v); if (vo == null || MiniJson.Teksti(vo, "tci") == null) continue;
-                    ru.Valinnat.Add(new S2Valinta { Id = MiniJson.Teksti(vo, "id"), Tci = MiniJson.Teksti(vo, "tci"), Scl = MiniJson.Teksti(vo, "scl"),
+                    double[] Kolme(object v) { var t = MiniJson.TaulukkoTaiTyhja(v); return t.Count == 3 ? t.Select(Convert.ToDouble).ToArray() : null; }
+                    var savy = MiniJson.ObjektiTaiNull(MiniJson.Kentta(vo, "savy"));
+                    ru.Valinnat.Add(new S2Valinta {
+                        Vahvistus = savy == null ? null : Kolme(MiniJson.Kentta(savy, "vahvistus")),
+                        Siirto = savy == null ? null : Kolme(MiniJson.Kentta(savy, "siirto")), Id = MiniJson.Teksti(vo, "id"), Tci = MiniJson.Teksti(vo, "tci"), Scl = MiniJson.Teksti(vo, "scl"),
                         Pvm = MiniJson.Teksti(vo, "pvm"), Pilvi = MiniJson.Luku(vo, "pilvi") ?? 0, Lumi = MiniJson.Luku(vo, "lumi") ?? 0, Nodata = MiniJson.Luku(vo, "nodata") ?? 0,
                         ToinenRata = MiniJson.Totuus(vo, "toinen_rata") });
                 }
