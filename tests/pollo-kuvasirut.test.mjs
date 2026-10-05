@@ -60,7 +60,7 @@ test('kuvan avain riippuu kuvan tiedoista, ei kentien järjestyksestä', async (
   const a = await kuvaSirujenAvain(siivoaKuva(KUVA));
   const b = await kuvaSirujenAvain(siivoaKuva({ retkikunta: '64', ...KUVA }));
   const c = await kuvaSirujenAvain(siivoaKuva({ ...KUVA, selite: 'toinen' }));
-  assert.match(a, /^pulu:kuvasirut:v1:[0-9a-f]{32}$/);
+  assert.match(a, /^pulu:kuvasirut:v2:[0-9a-f]{32}$/);
   assert.equal(a, b);
   assert.notEqual(a, c, 'eri selite → eri avain (asiakas ei voi myrkyttää toisen kuvan siruja)');
 });
@@ -96,4 +96,10 @@ test('vastaus kuvan kontekstissa: kuvan tiedot kulkevat kehotteeseen', async () 
   assert.equal(v.status, 200);
   assert.match(kehoteTekstina(v.pyynnot[0]), /Niilin suisto yöllä/);
   assert.match(kuvaKontekstiksi(siivoaKuva(KUVA)), /astronautt/i);
+});
+
+test('kuvasirujen kehote: kokonaiset lauseet verbin kanssa, enintään kuusi sanaa (Päätoimittaja 6.10.)', async () => {
+  const { KUVASIRUKEHOTE } = await import('../tools/pollo/kuvasirut.js');
+  assert.match(KUVASIRUKEHOTE, /kokonainen, luonteva suomenkielinen kysymyslause verbin kanssa, enintään kuusi sanaa/);
+  assert.match(KUVASIRUKEHOTE, /täsmälleen kolme riviä/);
 });

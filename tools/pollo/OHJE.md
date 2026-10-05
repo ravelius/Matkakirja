@@ -168,7 +168,7 @@ koodimuutos main-haarassa julkaisee workerin uudelleen itsestään.
 - **Astronauttien kuvan sirut** (omistaja 6.10.2026, `kuvasirut.js`): `vastaus`- ja
   `ehdotukset`-pyynnössä valinnainen `kuva: { tunnus, nimi, maa, lat, lon, selite, teksti, aika }`
   (tunnus pakollinen). Ehdotukset (3) tehdään vain kuvan tiedoista ja tallennetaan KV:hen
-  avaimella `pulu:kuvasirut:v1:<tiiviste kaikista kentistä>` 30 vrk:ksi: yksi generointi kuvaa kohden
+  avaimella `pulu:kuvasirut:v2:<tiiviste kaikista kentistä>` 30 vrk:ksi: yksi generointi kuvaa kohden
   ensimmäisellä katselulla, välimuistiosuma ei kuluta rajoja. Vastauksessa kuvan tiedot kulkevat
   kontekstina. Ei etukäteiseriä ilman omistajan lupaa.
 - **API-avain**: syötetään wranglerille putkessa, jolloin se ei näy
