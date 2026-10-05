@@ -2717,14 +2717,44 @@ function hoidaOppaanTunnus(pyynto, env) {
   return new Response(JSON.stringify({ tunnus: env.CESIUM_ION_TOKEN }), { headers: otsakkeet });
 }
 
+/*
+ * OPPAAN TIHEYSRAJA (Päätoimittaja 5.10.2026 ilta: natiivin silmukka teki ~9 800 pyyntöä 6 minuutissa). Päiväraja on
+ * KV-laskuri, jonka luku voi olla jopa minuutin vanha ja johon samaan avaimeen voi kirjoittaa vain kerran sekunnissa,
+ * joten nopea silmukka ehtisi tuoreena päivänä ohi ennen kuin raja näkyy. Siksi ENNEN mitään kutsua eteenpäin:
+ * muistinvarainen liukuva ikkuna IP:ttäin (myös kehittäjäkoodilla, joka ohittaa vain päivärajan), ja päivärajan luku on
+ * suurempi KV:n ja tämän isolaatin oman laskun arvoista. Ylitys → heti 429 Retry-After, ei Sonnetia, ei ElevenLabsia.
+ */
+const OPAS_MINUUTTIRAJA = 20;
+const OPAS_IKKUNA_MS = 60 * 1000;
+const opasTiheys = new Map();
+
+/** true, jos IP on tehnyt jo OPAS_MINUUTTIRAJA pyyntöä viimeisen minuutin aikana (tämä pyyntö kirjataan). */
+export function oppaanTiheysYlittyy(ip, nyt = Date.now(), raja = OPAS_MINUUTTIRAJA) {
+  const avain = String(ip ?? 'tuntematon');
+  const ajat = (opasTiheys.get(avain) ?? []).filter((t) => nyt - t < OPAS_IKKUNA_MS);
+  const yli = ajat.length >= raja;
+  if (!yli) ajat.push(nyt);
+  opasTiheys.set(avain, ajat);
+  if (opasTiheys.size > 5000) opasTiheys.delete(opasTiheys.keys().next().value);
+  return yli;
+}
+
 async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   if (!env.ANTHROPIC_API_KEY) return vastaa({ virhe: 'asetus', viesti: 'Opas ei ole vielä käytössä.' }, { status: 503, ...kors });
+  const ip = pyynto.headers.get('cf-connecting-ip');
+  if (oppaanTiheysYlittyy(ip, Date.now(), lueLuku(env.OPAS_MINUUTTIRAJA, OPAS_MINUUTTIRAJA))) {
+    console.log('opas: tiheysraja → 429 ilman kutsuja');
+    const v = vastaa({ virhe: 'liian-tiheaan', viesti: 'Opas hengähtää hetken. Yritä uudelleen puolen minuutin päästä.' }, { status: 429, ...kors });
+    v.headers.set('retry-after', '30');
+    return v;
+  }
   const p = siivoaOpasPyynto(runko);
   const kehittaja = kehittajaOhitus(pyynto, env);
   const kv = env.POLLO_KV ?? null;
   if (!kehittaja) {
-    const avain = opasPaivaAvain(pyynto.headers.get('cf-connecting-ip'));
-    if (await lueLaskuri(kv, avain) >= lueLuku(env.OPAS_PAIVARAJA, OPAS_PAIVARAJA_OLETUS)) {
+    const avain = opasPaivaAvain(ip);
+    const kaytetty = Math.max(await lueLaskuri(kv, avain), muisti.get(avain) ?? 0);
+    if (kaytetty >= lueLuku(env.OPAS_PAIVARAJA, OPAS_PAIVARAJA_OLETUS)) {
       return vastaa({ virhe: 'paivaraja', viesti: 'Opas lepää tänään. Jatketaan huomenna.' }, { status: 429, ...kors });
     }
     const kirjoitus = kasvataLaskuri(kv, avain, 60 * 60 * 30);
