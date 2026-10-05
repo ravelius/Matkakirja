@@ -84,3 +84,39 @@
     border-color: var(--tk-pinta);
     background-color: var(--tk-korostus);
 }
+
+/* ELÄVÄ OPAS NYKYAJASSA (omistaja 5.10.2026 klo 20.5x): sama LASI-lista ja oppaan kuvakortti harmaan lasin tokeneilla
+ * (tk-teema-harmaa, OHJAUSNAPPI-pohjan oletus valokuvan ja 3D:n päällä); kirjasin Moderni koodista (OpasValikko). */
+/* Luettavuus kaupunkikuvan päällä (Päätoimittaja 5.10. klo 21.1x): teeman peittävä pinta, ei läpikuultavaa lasia. */
+.mk-linssivalikko.mk-linssivalikko--pohja.tk-teema-harmaa {
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta-peitto);
+}
+
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__kohta,
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__kohta .mk-nappi__teksti,
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__nimi {
+    color: var(--tk-muste);
+}
+
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__komento {
+    border-color: var(--tk-reunus);
+}
+
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__tila,
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__lahde {
+    color: var(--tk-muste-pehmea);
+}
+
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__viiva {
+    background-color: var(--tk-reunus);
+}
+
+.mk-nosto.tk-teema-harmaa {
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta);
+}
+
+.mk-nosto.tk-teema-harmaa .mk-nosto__havainne {
+    color: var(--tk-muste);
+}

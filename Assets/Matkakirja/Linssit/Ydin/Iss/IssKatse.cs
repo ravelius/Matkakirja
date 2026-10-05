@@ -21,8 +21,42 @@ using System;
 
 namespace Matkakirja.Linssit.Iss
 {
+    /// <summary>Ohjaamon joystickin suunta (omistaja 4.10.2026: plus-muotoinen, yksi suunta kerrallaan).</summary>
+    public enum JoystickSuunta { Ei, Ylos, Alas, Vasen, Oikea }
+
     public sealed class IssKatse
     {
+        /*
+         * JOYSTICK (omistaja 4.10.2026 klo 11.3x, "ISS-OHJAAMO UUSIKSI"; lasin veto 3.10. poistuu): katsetta ohjataan vain
+         * paneelin joystickilla. Pystyakseli kääntää katseen kulmaa (ylös = kohti horisonttia, alas = kohti alapistettä), vaaka
+         * ilmansuuntaa. Liike jatkuu pidettäessä ja kiihtyy pitkässä painalluksessa (JoyVauhti → × JoyMaxKerroin JoyKiihtymisS:ssä),
+         * pysähtyy heti irrotettaessa ilman inertiaa (kuten minipallo). Nopeus ei riipu kaasusta (ajan kerroin).
+         */
+        public const double JoyVauhti = 15, JoyMaxKerroin = 2.5, JoyKiihtymisS = 1.5;
+        /// <summary>Joystickin nykyinen suunta (Ei = irti).</summary>
+        public JoystickSuunta Joystick { get; private set; }
+        double joyAlku = double.NaN;
+
+        /// <summary>Joystickin nopeus (°/s) pidon kestosta: perusvauhti, pehmeä kiihtyminen enintään JoyMaxKerroin-kertaiseksi.</summary>
+        public static double JoyNopeus(double kestoS)
+        {
+            double u = Math.Max(0, Math.Min(1, kestoS / JoyKiihtymisS));
+            return JoyVauhti * (1 + (JoyMaxKerroin - 1) * u * u * (3 - 2 * u));
+        }
+
+        /// <summary>
+        /// Joystickin suunta muuttui (painallus, suunnan vaihto, irrotus = Ei): uusi pito alkaa perusvauhdista; vanha liike, inertia
+        /// ja paluu oletukseen loppuvat heti.
+        /// </summary>
+        public void Ohjaa(JoystickSuunta suunta, double t)
+        {
+            if (suunta == Joystick) return;
+            Joystick = suunta;
+            joyAlku = t;
+            VAlas = VSuunta = 0;
+            Palautuu = false;
+            edellinenAskel = t;
+        }
         /// <summary>Katseen rajat (° vaakatason alapuolelle). Alaraja nousee horisontin alle (IssKuvakulma.Ikkuna: katse maahan).</summary>
         public const double AlasMin = 20, AlasMax = 90;
         /// <summary>Inertian aikavakio (s), kuten pallovalitsimessa.</summary>
@@ -76,7 +110,9 @@ namespace Matkakirja.Linssit.Iss
         double viimeNapautus = -1, viimeNapX, viimeNapY;
 
         /// <summary>Liike käynnissä (sormi, inertia tai paluu): Unity herättää täyden ruudunpäivityksen.</summary>
-        public bool Liikkuu => Kiinni || VAlas != 0 || VSuunta != 0 || Palautuu;
+        public bool Liikkuu => Kiinni || VAlas != 0 || VSuunta != 0 || Palautuu || JoystickLiikkuu;
+        /// <summary>Joystick pidossa ja katse liikkuu (ei kuvaputken lukossa): suhinaääni soi tämän ajan.</summary>
+        public bool JoystickLiikkuu => Joystick != JoystickSuunta.Ei && !lukittu;
         /// <summary>Katse on muutettu oletuksesta.</summary>
         public bool Muutettu => !double.IsNaN(Alas) || Suunta != 0;
         /// <summary>Ele on vetona (kynnys ylitetty).</summary>
@@ -95,6 +131,7 @@ namespace Matkakirja.Linssit.Iss
         /// <summary>Kaikki oletukseen heti (kyydin alku ja loppu, `astro kyyti katse oletus` vähennetyllä liikkeellä).</summary>
         public void Nollaa()
         {
+            Joystick = JoystickSuunta.Ei;
             Alas = double.NaN; Suunta = 0; VAlas = VSuunta = 0;
             Kiinni = Palautuu = painettu = vetaa = false;
             Rajalla = null;
@@ -237,6 +274,15 @@ namespace Matkakirja.Linssit.Iss
             double dt = double.IsNaN(edellinenAskel) ? 0 : t - edellinenAskel;
             edellinenAskel = t;
             if (lukittu) { VAlas = VSuunta = 0; return false; }
+            if (Joystick != JoystickSuunta.Ei)
+            {
+                if (dt <= 0) return true;
+                dt = Math.Min(dt, 0.1);
+                double v = (Vahennetty ? 0.5 : 1) * JoyNopeus(t - joyAlku) * dt;
+                Siirra(Joystick == JoystickSuunta.Alas ? v : Joystick == JoystickSuunta.Ylos ? -v : 0,
+                       Joystick == JoystickSuunta.Oikea ? v : Joystick == JoystickSuunta.Vasen ? -v : 0);
+                return true;
+            }
             if (Palautuu)
             {
                 double u = PalautusS > 0 ? (t - palautusAlku) / PalautusS : 1;

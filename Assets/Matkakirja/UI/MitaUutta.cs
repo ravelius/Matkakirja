@@ -64,20 +64,33 @@ namespace Matkakirja.Natiivi
             Nappi(pnapit, "Jatka", SuljePaivitys);
         }
 
+        readonly List<Label> versiot = new List<Label>();
+        void PaivitaVersio() { string v = AsennettuVersio(); foreach (var l in versiot) l.text = v; }
+
         (VisualElement Himmennys, VisualElement Lista) Dialogi(VisualElement isa, string otsikko, out VisualElement napit)
         {
             var h = Rakenne.El("mk-himmennys mk-himmennys--tumma", isa);
             h.style.display = DisplayStyle.None;
             var kortti = new Kortti("mk-tietoja mk-muutokset", pohja: true); // KORTTI-pohja (web #3799)
             h.Add(kortti);
+            // Asennettu versio TestFlightin muodossa "1.1 (144)" KORTIN kapiteelina otsikon yllä (omistaja 5.10.2026 klo 14.2x:
+            // "siinä saisi näkyä build numero suluissa, koska muuten vaikea erottaa mistä versiosta kyse"); build CFBundleVersionista.
+            var versio = Rakenne.Teksti("", "mk-kortti__kapiteeli mk-muutokset__asennettu", kortti.Sisus);
+            Kirjasimet.Aseta(versio, Tyylikirja.Kirjain.Kapiteeli);
+            versiot.Add(versio);   // teksti näyttöhetkellä (PaivitaVersio): BuildNumero kytketään vasta kohtauksen latauduttua
             Kirjasimet.Aseta(Rakenne.Teksti(otsikko, "mk-kortti__otsikko", kortti.Sisus), Tyylikirja.Kirjain.Otsikko);
             var vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-tietoja__vieritys");
+            // Pitkä loki (Mitä uutta): vain lista joustaa, kapiteeli, otsikko ja napit pysyvät kortin sisällä (iPhone 5.10.: napit
+            // valuivat kortin alareunan yli).
+            vieritys.style.minHeight = 0;
             vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
             vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
             kortti.Sisus.Add(vieritys);
             var l = Rakenne.El("mk-muutokset__lista", vieritys, PickingMode.Ignore);
             napit = Rakenne.El("mk-kortti__napit", kortti.Sisus, PickingMode.Ignore);
+            napit.style.flexShrink = 0;
+            versio.style.flexShrink = 0;
             Kirjasimet.Aseta(napit, Kirjasin.Kone);
             h.RegisterCallback<PointerDownEvent>(e =>
             {
@@ -93,11 +106,18 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(n, Kirjasin.KoneLihava);
         }
 
-        /// <summary>Pelaajalle näkyvä versio ilman build-aikaleimaa: "1.0.34 (202609272058)" → "1.0.34".</summary>
+        /// <summary>
+        /// Rivin tunniste TestFlightin muodossa: "1.1 (143)" (omistaja 5.10.2026 klo 14.2x: merkinnät erotettava toisistaan; ennen
+        /// kaikissa luki "v1.1"). Vanha build-aikaleima "1.0.34 (202609272058)" jää pois → "v1.0.34"; ilman buildia "v1.1".
+        /// </summary>
         static string Nakyva(string versio)
         {
-            int i = versio?.IndexOf(" (", StringComparison.Ordinal) ?? -1;
-            return i > 0 ? versio.Substring(0, i) : versio;
+            if (string.IsNullOrEmpty(versio)) return versio;
+            int i = versio.IndexOf(" (", StringComparison.Ordinal);
+            if (i <= 0) return "v" + versio;
+            string sulut = versio.Substring(i + 2).TrimEnd(')');
+            bool aikaleima = sulut.Length >= 8 && long.TryParse(sulut, out _);
+            return aikaleima ? "v" + versio.Substring(0, i) : versio;
         }
 
         static void Tayta(VisualElement lista, IEnumerable<Rivi> rivit, int enintaan = int.MaxValue)
@@ -109,7 +129,7 @@ namespace Matkakirja.Natiivi
                 if (i++ >= enintaan) break;
                 var rivi = Rakenne.El("mk-muutos", lista, PickingMode.Ignore);
                 // Versio kapiteelina, rivin jatko alkaa tekstin kohdalta (web #3799).
-                var v = Rakenne.Teksti(r.Otsake ?? "v" + Nakyva(r.Versio), "mk-muutos__versio", rivi);
+                var v = Rakenne.Teksti(r.Otsake ?? Nakyva(r.Versio), "mk-muutos__versio", rivi);
                 Kirjasimet.Aseta(v, Tyylikirja.Kirjain.Kapiteeli);
                 var t = Rakenne.Teksti(string.IsNullOrEmpty(r.Paiva) ? r.Teksti : r.Teksti + " (" + r.Paiva + ")", "mk-muutos__teksti", rivi);
                 Kirjasimet.Aseta(t, Kirjasin.Luku);
@@ -120,6 +140,7 @@ namespace Matkakirja.Natiivi
         {
             if (Auki) return;
             Auki = true;
+            PaivitaVersio();
             Lataa(() => Tayta(lista, loki));
             Rakenne.Nayta(himmennys, true, 320);
             SyoteLukko.Esta(this);
@@ -151,6 +172,13 @@ namespace Matkakirja.Natiivi
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui build-numero: " + e.Message); return null; }
         }
 
+        /// <summary>Asennettu versio pelaajalle TestFlightin muodossa: "Versio 1.1 (144)"; ilman build-numeroa pelkkä versio.</summary>
+        public static string AsennettuVersio()
+        {
+            string b = Build();
+            return "Versio " + Application.version + (b != null ? " (" + b + ")" : "");
+        }
+
         /// <summary>Versio + build (Fable 24.9.: myös pelkkä build-numeron vaihto 1.0.0 (2) → (3) on päivitys).</summary>
         static string VersioJaBuild()
         {
@@ -178,6 +206,7 @@ namespace Matkakirja.Natiivi
             Lataa(() =>
             {
                 Tayta(paivitysLista, Uudet(loki, edellinen == nyt ? null : edellinen), 2); // pakotettu testi: kärki
+                PaivitaVersio();
                 paivitys.BringToFront();
                 Rakenne.Nayta(paivitys, true, 320);
                 SyoteLukko.Esta(paivitys);

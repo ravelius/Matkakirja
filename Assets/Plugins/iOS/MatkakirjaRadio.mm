@@ -197,6 +197,12 @@ static std::atomic<bool> moottoriKaynnissa(false);
 static std::atomic<long> moottoriKaynnistyksia(0);
 #ifdef MATKAKIRJA_RADIO_TESTI
 static std::atomic<bool> testiMykka(false);
+static bool Mykka(void) { return testiMykka.load(); }
+#else
+// Testimykistys (MatkakirjaAani.mm, Pelikoodari 5.10.2026): simulaattoriajoissa radiostriimi ei saa kuulua Macin
+// kaiuttimista (KIIRE 13.15). Mikserin ulostulo 0 ja AVPlayer-varapolku mykkä; VU-tappi näkee signaalin.
+extern "C" bool MatkakirjaAani_TestiMykka(void);
+static bool Mykka(void) { return MatkakirjaAani_TestiMykka(); }
 #endif
 
 static const OSStatus kEiDataa = 'mkEd';   // syötekutsu: tämän erän paketit on annettu
@@ -267,6 +273,7 @@ struct MKPaketti
 @property (nonatomic, strong) MKVirta* esikuuntelija;   // esikuuntelu (ks. otsikko), muuten nil
 @property (nonatomic) uint64_t seuraavaTunnus;
 @property (nonatomic, strong) AVPlayer* soitin;
+@property (nonatomic, strong) id mykistysTarkkailija;
 @property (nonatomic, strong) id loppuTarkkailija;
 @property (nonatomic, strong) id virheTarkkailija;
 @property (nonatomic) int loppuTila;   // 0 = ei, 3 = ei vastaa, 4 = katkesi
@@ -948,9 +955,12 @@ static BOOL EnginePolulle(NSURL* url, NSString* osoite)
             object:self.moottori queue:nil usingBlock:^(NSNotification* n) {
                 dispatch_async(RadioJono(), ^{ [heikko moottoriMuuttui]; });
             }];
-#ifdef MATKAKIRJA_RADIO_TESTI
-        if (testiMykka.load()) self.moottori.mainMixerNode.outputVolume = 0;
-#endif
+        if (Mykka()) self.moottori.mainMixerNode.outputVolume = 0;
+        self.mykistysTarkkailija = [[NSNotificationCenter defaultCenter] addObserverForName:@"MatkakirjaTestiMykistysMuuttui"
+            object:nil queue:nil usingBlock:^(NSNotification* n) {
+                dispatch_async(RadioJono(), ^{ heikko.moottori.mainMixerNode.outputVolume = Mykka() ? 0.0f : 1.0f; });
+                dispatch_async(dispatch_get_main_queue(), ^{ heikko.soitin.muted = Mykka(); });
+            }];
     }
     if (self.liitettyMuoto == nil || ![self.liitettyMuoto isEqual:muoto])
     {
@@ -1135,9 +1145,7 @@ static BOOL EnginePolulle(NSURL* url, NSString* osoite)
     // heti, AVPlayer asettaa rate 0:ksi eikä jatka itse (iPad 23.9.2026: kaikki asemat
     // aikakatkaisuun). Oletus YES odottaa puskurin (preferredForwardBufferDuration 2 s).
     self.soitin.volume = self.voimakkuus;
-#ifdef MATKAKIRJA_RADIO_TESTI
-    if (testiMykka.load()) self.soitin.muted = YES;
-#endif
+    if (Mykka()) self.soitin.muted = YES;
     self.loppuTila = 0;
     __weak MatkakirjaRadio* heikko = self;
     NSNotificationCenter* nc = [NSNotificationCenter defaultCenter];

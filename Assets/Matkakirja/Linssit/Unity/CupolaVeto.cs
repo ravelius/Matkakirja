@@ -20,8 +20,11 @@ namespace Matkakirja.Natiivi
 {
     public sealed class CupolaVeto
     {
-        /// <summary>A/B `astro kyyti veto paalla|pois` (oletus päällä).</summary>
-        public static bool Kaytossa = true;
+        /// <summary>
+        /// A/B `astro kyyti veto paalla|pois`. OLETUS POIS (omistaja 4.10.2026 "ISS-OHJAAMO UUSIKSI": katsetta ohjataan vain ja
+        /// ainoastaan joystickilla). Pallon yhden sormen veto on Cupolassa silti estetty (kyyti kirjoittaa kameran).
+        /// </summary>
+        public static bool Kaytossa = false;
 
         bool alhaalla, ohita;
         PalloKierto kierto;
@@ -34,7 +37,7 @@ namespace Matkakirja.Natiivi
             kierto = pallo != null ? pallo : kierto;
             var katse = l?.CupolanKatse;
             bool cupola = l != null && l.Kyyti == KyydinTila.Ikkuna;
-            if (kierto != null) kierto.YhdenSormenVetoMuualla = cupola && Kaytossa;
+            if (kierto != null) kierto.YhdenSormenVetoMuualla = cupola;   // pallo ei siirrä kameraa Cupolassa (veto tai joystick)
             if (katse == null) return;
             katse.Lukittu = IssKameraKuva.Kaynnissa;
             bool sallittu = Kaytossa && cupola && !l.KyytiSiirtyy && l.AvoinKuva == null && !l.Kavely.Kaynnissa

@@ -132,7 +132,7 @@ namespace Matkakirja.Natiivi
             valintaKortti = new Kortti("mk-peli__kortti", pohja: true);
             var vk = Rakenne.Teksti("", "mk-kortti__kapiteeli mk-peli__valinta-kapiteeli", valintaKortti.Sisus);
             Kirjasimet.Aseta(vk, Tyylikirja.Kirjain.Kapiteeli);
-            Kirjasimet.Aseta(Rakenne.Teksti("Pelataanko tavlia?", "mk-kortti__otsikko", valintaKortti.Sisus), Tyylikirja.Kirjain.Otsikko);
+            Kirjasimet.Aseta(Rakenne.Teksti(Asetus.T("tavli.valinta.otsikko", "Pelataanko tavlia?"), "mk-kortti__otsikko", valintaKortti.Sisus), Tyylikirja.Kirjain.Otsikko);
             var ala = Rakenne.Teksti("", "mk-kortti__alaotsikko mk-peli__valinta-ala", valintaKortti.Sisus);
             Kirjasimet.Aseta(ala, Tyylikirja.Kirjain.Apuri);
             Rakenne.Teksti("Kaksi noppaa, 15 nappulaa kummallakin. Kuljeta nappulasi kotialueellesi ja poista ne laudalta: ensin kaikki poistanut voittaa. Yksinäinen nappula voidaan lyödä palkille.",
@@ -239,7 +239,7 @@ namespace Matkakirja.Natiivi
         const string AaniSiirto = "tavli-siirto", AaniLyonti = "tavli-lyonti", AaniPoisto = "tavli-poisto", AaniVoitto = "tavli-voitto", AaniHavio = "tavli-havio";
         static readonly string[] AaniNopat = { "tavli-noppa-1", "tavli-noppa-2", "tavli-noppa-3" };
         static readonly string[] KaikkiAanet = { "tavli-noppa-1", "tavli-noppa-2", "tavli-noppa-3", AaniSiirto, AaniLyonti, AaniPoisto, AaniVoitto, AaniHavio };
-        const float Vahvistus = 2.7f;
+        static float Vahvistus => Asetus.Luku("aanet.TavliVahvistus", 2.7f);
 
         static void RekisteroiAani(string nimi)
         {

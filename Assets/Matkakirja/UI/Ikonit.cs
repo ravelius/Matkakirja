@@ -74,6 +74,8 @@ namespace Matkakirja.Natiivi
 
         // js/karttatyokalu-maakunnat.js PLUS_IKONI ja PULU_IKONI (maakunnan luonnehdinta ja kortti).
         public const string Plus = "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8v8M8 12h8\"/>";
+        /// <summary>Jaa (iOS-tyylinen laatikko ja nuoli ylös): oman ISS-kuvan jakonappi.</summary>
+        public const string Jaa = "<path d=\"M12 3.6v11\"/><path d=\"M8.2 7.3 12 3.6l3.8 3.7\"/><path d=\"M8.8 10.2H6.6a1 1 0 0 0-1 1v8.2a1 1 0 0 0 1 1h10.8a1 1 0 0 0 1-1v-8.2a1 1 0 0 0-1-1h-2.2\"/>";
         public const string Puhekupla = "<path d=\"M4 5h16v10H9l-4 4v-4H4z\"/><circle cx=\"9.5\" cy=\"10\" r=\"0.9\"/><circle cx=\"14.5\" cy=\"10\" r=\"0.9\"/>";
 
         /// <summary>VIIVA_IKONIT avaimittain (sama avain kuin webissä, js/ui-apurit.js).</summary>

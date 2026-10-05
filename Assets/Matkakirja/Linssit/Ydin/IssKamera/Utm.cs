@@ -1,4 +1,4 @@
-// ISS-KAMERA: WGS84 ↔ UTM (pohjoinen pallonpuolisko), Sentinel-2-ruudut ovat UTM-vyöhykkeissä (MGRS-tunnuksen kaksi
+// ISS-KAMERA: WGS84 ↔ UTM, Sentinel-2-ruudut ovat UTM-vyöhykkeissä (MGRS-tunnuksen kaksi
 // ensimmäistä numeroa). Krügerin sarja 6. kertalukuun (Karney 2011): virhe alle millimetrin vyöhykkeen sisällä, joten
 // kuvan uudelleenprojisointi (GPU) voi luottaa laattojen kulmapisteisiin.
 using System;
@@ -8,6 +8,11 @@ namespace Matkakirja.Linssit.IssKamera
     public static class Utm
     {
         const double A = 6378137.0, F = 1 / 298.257223563, K0 = 0.9996, ItaNolla = 500000;
+        /// <summary>
+        /// Eteläisen pallonpuoliskon väärä pohjoiskoordinaatti (EPSG 327xx): S2-ruudut leveysvyöhykkeillä C–M (koko maailman indeksi
+        /// 4.10.2026; ilman tätä eteläiset ruudut jäivät tyhjiksi, simu: Uluru 0 Mt). Etelä merkitään negatiivisena vyöhykkeenä.
+        /// </summary>
+        public const double EtelaNolla = 10_000_000;
         static readonly double N = F / (2 - F), AA;
         static readonly double[] Al = new double[7], Be = new double[7];
 
@@ -30,7 +35,7 @@ namespace Matkakirja.Linssit.IssKamera
         }
 
         /// <summary>Vyöhykkeen keskimeridiaani (astetta).</summary>
-        public static double Keskimeridiaani(int vyohyke) => vyohyke * 6 - 183;
+        public static double Keskimeridiaani(int vyohyke) => Math.Abs(vyohyke) * 6 - 183;
 
         /// <summary>Leveys/pituus (astetta) → UTM itä, pohjoinen (m) annetussa vyöhykkeessä (myös naapurivyöhykkeen ulkopuolelle).</summary>
         public static (double ita, double pohjoinen) Eteen(double lat, double lon, int vyohyke)
@@ -41,12 +46,13 @@ namespace Matkakirja.Linssit.IssKamera
             double xi = Math.Atan2(t, Math.Cos(la)), eta = Atanh(Math.Sin(la) / Math.Sqrt(1 + t * t));
             double x = xi, y = eta;
             for (int j = 1; j <= 6; j++) { x += Al[j] * Math.Sin(2 * j * xi) * Math.Cosh(2 * j * eta); y += Al[j] * Math.Cos(2 * j * xi) * Math.Sinh(2 * j * eta); }
-            return (ItaNolla + K0 * AA * y, K0 * AA * x);
+            return (ItaNolla + K0 * AA * y, K0 * AA * x + (vyohyke < 0 ? EtelaNolla : 0));
         }
 
         /// <summary>UTM itä, pohjoinen (m) → leveys, pituus (astetta).</summary>
         public static (double lat, double lon) Taakse(double ita, double pohjoinen, int vyohyke)
         {
+            if (vyohyke < 0) pohjoinen -= EtelaNolla;
             double xi = pohjoinen / (K0 * AA), eta = (ita - ItaNolla) / (K0 * AA), x = xi, y = eta;
             for (int j = 1; j <= 6; j++) { x -= Be[j] * Math.Sin(2 * j * xi) * Math.Cosh(2 * j * eta); y -= Be[j] * Math.Cos(2 * j * xi) * Math.Sinh(2 * j * eta); }
                         double la = Math.Atan2(Math.Sinh(y), Math.Cos(x));
@@ -61,8 +67,13 @@ namespace Matkakirja.Linssit.IssKamera
             return (Math.Atan(tau) * 180 / Math.PI, Keskimeridiaani(vyohyke) + la * 180 / Math.PI);
         }
 
-        /// <summary>MGRS-ruudun (esim. "35VLG") UTM-vyöhyke.</summary>
-        public static int Vyohyke(string mgrs) => int.Parse(mgrs.Substring(0, 2));
+        /// <summary>MGRS-ruudun (esim. "35VLG") UTM-vyöhyke; eteläinen (leveysvyöhyke C–M, esim. "52JER") negatiivisena.</summary>
+        public static int Vyohyke(string mgrs)
+        {
+            int v = int.Parse(mgrs.Substring(0, 2));
+            char b = mgrs.Length > 2 ? char.ToUpperInvariant(mgrs[2]) : 'N';
+            return b >= 'C' && b <= 'M' ? -v : v;
+        }
 
         static double Atanh(double x) => 0.5 * Math.Log((1 + x) / (1 - x));
     }

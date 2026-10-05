@@ -35,7 +35,8 @@
 .mk-chat--lasi .mk-chat__nappula,
 .mk-chat--lasi .mk-chat__laheta {
     color: var(--tk-lasi-korostus);
-    -unity-background-image-tint-color: var(--tk-lasi-korostus);
+    -unity-background-image-tint-color: var(--tk-korostus);
+    color: var(--tk-korostus);
 }
 
 .mk-chat--lasi .mk-chat__nappula,
@@ -47,4 +48,42 @@
 
 .mk-chat--lasi .mk-chat__syote {
     border-color: var(--tk-lasi-reunus);
+}
+
+/* IRRALLINEN SIRURIVI (opas kevyeksi, omistaja 5.10.2026 Päätoimittajan kautta): samat sirut ilman chat-paneelia alareunan
+ * keskellä; paneelin taustan sijaan jokaisella sirulla teeman lasipinta, jotta ne erottuvat kaupunkikuvan päällä. */
+.mk-chat__sirut.mk-chat__sirut--irrallaan {
+    position: absolute;
+    left: var(--tk-vali-m);
+    right: var(--tk-vali-m);
+    bottom: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+/* Teema rivin tk-teema-*-luokasta (elävä opas: harmaa lasi, omistaja 5.10.2026 klo 20.5x); vain --tk-*-tokenit. */
+.mk-chat__sirut--irrallaan .mk-chat__siru {
+    margin: 0 4px 6px 4px;
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta-peitto); /* peittävä: luettava punaisten kattojen päällä (Päätoimittaja 21.1x) */
+    color: var(--tk-korostus);
+}
+
+.mk-chat__sirut--irrallaan .mk-chat__siru:active {
+    background-color: var(--tk-toiminto);
+}
+
+.mk-chat__sirut--irrallaan .mk-chat__siru--ikoni {
+    width: 34px;
+    min-width: 34px;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    -unity-background-image-tint-color: var(--tk-korostus);
+    color: var(--tk-korostus);
 }

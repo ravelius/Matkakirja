@@ -64,6 +64,46 @@ namespace Matkakirja.Natiivi
         DioraamaHahmot hahmot3D;
         DioraamaSyote syote;
         readonly DioraamaKameraJousi jousi = new DioraamaKameraJousi();
+        // LATAUSPALKKI (omistaja 5.10. klo 12.5x; Natiivi-UI:n pohja DioraamaTaulu.LatausEdistyminen): nimiruudun odotuksen aikana
+        // linnan tiedostojen tavut (DioraamaLevyvalimuisti.Edistys). Nimittäjä on vähintään edellisen täyden latauksen tavumäärä
+        // (PlayerPrefs), jottei palkki täyty, kun myöhemmät osat (tilat, hahmot, ympäristö) vasta jonoutuvat. Ei koskaan taaksepäin.
+        static DioraamaSovitin aktiivinen;
+        static float latausOsuus;
+        const string LatausAvain = "linna-latauksen-tavut", KestoAvain = "linna-latauksen-kesto";
+        static float latausAika, latausTavut, latausVaiheet, latausLokiAika;
+        public static float LatausOsuus()
+        {
+            var a = aktiivinen;
+            if (a == null || a.kuoriOdotusAlku < 0f && !a.latausKaynnissa) return float.NaN;
+            long muistettu = 0;
+            try { long.TryParse(PlayerPrefs.GetString(LatausAvain, "0"), out muistettu); } catch (Exception) { }
+            float e = DioraamaLevyvalimuisti.Edistys(muistettu);
+            if (float.IsNaN(e)) e = 0f;
+            // Natiivi-UI 5.10. (b274b20c): tavut 99 % jo 13 s:ssa, mutta saapuminen vasta 26 s:ssa (kuoren jälkeen tilat, hahmot ja
+            // ympäristö puretaan ja viedään GPU:lle välimuistista). Tavoite = 0,5 × tavut + 0,5 × valmiit vaiheet (kuori, tilat,
+            // hahmot, ympäristö), ja vähintään 0,9 × kulunut / edellisen täyden latauksen kesto (PlayerPrefs). Näytetty arvo ei
+            // pysähdy (Päätoimittaja: ei yli 1–2 s:n seisahdusta): se ryömii 1,5 %/s tavoitteen yli enintään 6 %:iin asti.
+            float vaiheet = a.VaiheOsuus();
+            float kulunut = a.kuoriOdotusAlku >= 0f ? Time.realtimeSinceStartup - a.kuoriOdotusAlku : 0f;
+            float muistettuKesto = 0f;
+            try { muistettuKesto = PlayerPrefs.GetFloat(KestoAvain, 0f); } catch (Exception) { }
+            float tavoite = 0.5f * e + 0.5f * vaiheet;
+            if (muistettuKesto > 1f) tavoite = Mathf.Max(tavoite, 0.9f * Mathf.Clamp01(kulunut / muistettuKesto));
+            float dt = Mathf.Clamp(Time.unscaledTime - latausAika, 0f, 0.25f);
+            latausAika = Time.unscaledTime;
+            float ryomi = Mathf.Min(latausOsuus + 0.015f * dt, tavoite + 0.06f);
+            latausOsuus = Mathf.Min(0.99f, Mathf.Max(latausOsuus, Mathf.Max(tavoite, ryomi)));
+            latausTavut = e; latausVaiheet = vaiheet;
+            return latausOsuus;
+        }
+
+        static (string Tila, string Hahmo, int Kohta)? puluJono;
+        /// <summary>Pulun napautusvuoro keskustelun jälkeen (viimeisin napautus voittaa).</summary>
+        public static void PuluJonoon(string tila, string hahmo, int kohta = -1) => puluJono = (tila, hahmo, kohta);
+        /// <summary>"poikki pulu napautus 0|1": Pulu vain napautuksesta (oletus päällä elävässä linnassa) vs. vanha käsikirjoitus.</summary>
+        public static bool PuluNapautuksesta = true;
+        /// <summary>Cinemachine-kamerat (suunnitelma kohta 1); luodaan näyttämön kanssa, tuhoutuu sen mukana.</summary>
+        DioraamaCinemachine cm;
         // TIMELINE (linna-unity-suunnitelma-20261005.md kohta 2b): kertojan kierroksen aikana PlayableDirector on Ytimen kello.
         // kelloSiirto pitää Ytimen ajan jatkuvana kierroksen jälkeen (YdinAika = seinäkello + siirto; 0 ilman timelinea).
         readonly DioraamaTimeline timeline = new DioraamaTimeline();
@@ -135,6 +175,10 @@ namespace Matkakirja.Natiivi
 
         public void Avaa(ILinssiYmparisto ymparisto)
         {
+            aktiivinen = this;
+            latausOsuus = 0f;
+            DioraamaLevyvalimuisti.NollaaEdistys();
+            DioraamaTaulu.LatausEdistyminen = LatausOsuus; // Natiivi-UI:n latauspalkki (omistaja hyväksyi 5.10. klo 14.0x, juna 144)
             y = ymparisto;
             avoinna = true;
             kelloSiirto = 0;
@@ -154,6 +198,8 @@ namespace Matkakirja.Natiivi
             o.StartCoroutine(PeiteHetkeksi(0.3f));
 
             if (nayttamo == null) nayttamo = DioraamaNayttamo.Luo(pallonKamera);
+            if (cm == null) cm = new DioraamaCinemachine(nayttamo.Kamera, nayttamo.transform);
+            cm.Nollaa();
             AktiivinenKamera = nayttamo.Kamera;
             if (rakennus3D == null) rakennus3D = new DioraamaRakennus(nayttamo.transform);
             if (hahmot3D == null) hahmot3D = new DioraamaHahmot(nayttamo.transform);
@@ -203,6 +249,13 @@ namespace Matkakirja.Natiivi
                 bool tilatValmiit = tilojaKasitelty >= TilojaGlb();
                 bool hahmotValmiit = hahmojaKasitelty >= hahmoGlbJonossaTaiValmiit.Count;
                 bool ymparistoValmis = rakennus.Ymparisto == null || nayttamo.Ymparisto == null || nayttamo.Ymparisto.Valmis;
+                // Latauspalkin aikasarja todisteeksi (Päätoimittaja 5.10.): kerran sekunnissa nimiruudun aikana.
+                if (Time.realtimeSinceStartup - latausLokiAika >= 1f)
+                {
+                    latausLokiAika = Time.realtimeSinceStartup;
+                    float palkki = LatausOsuus();
+                    o.Kirjaa($"poikki: latauspalkki {(float.IsNaN(palkki) ? -1 : palkki * 100):F0} % {odotettu:F1} s (tavut {latausTavut * 100:F0} %, vaiheet {latausVaiheet * 100:F0} %)");
+                }
                 int valmistuneita = DioraamaLevyvalimuisti.Valmistuneita;
                 if (valmistuneita != viimeValmistuneita) { viimeValmistuneita = valmistuneita; viimeEdistys = Time.realtimeSinceStartup; }
                 // Lataushäiriö tai offline: olemassa oleva virheviesti (DioraamaTaulu → tilarivi) ja linssi kiinni, ei loputonta odotusta.
@@ -222,6 +275,9 @@ namespace Matkakirja.Natiivi
                     nayttamo.Odota(false);
                     nayttamo.Haivyta(HaivytysS);
                     linssi.Avaa(rakennus, YdinAika, SaapuminenNahty); // kaari (ja kertoja) alusta tästä hetkestä
+                    try { PlayerPrefs.SetString(LatausAvain, DioraamaLevyvalimuisti.PyydettyTavuja.ToString()); PlayerPrefs.SetFloat(KestoAvain, odotettu); } catch (Exception) { }
+                    o.Kirjaa($"poikki: latauspalkki 100 % {odotettu:F1} s (avaus)");
+                    latausOsuus = 1f;
                     t = pysaytettyT ?? YdinAika;
                     o.Kirjaa($"poikki: saapuminen alkaa (kaikki valmiina täydellä tarkkuudella: kuori, tilat {tilojaKasitelty}/{TilojaGlb()}, " +
                              $"hahmot {hahmojaKasitelty}/{hahmoGlbJonossaTaiValmiit.Count}, ympäristö; odotettiin {odotettu:F1} s, " +
@@ -238,6 +294,16 @@ namespace Matkakirja.Natiivi
             if (paluuPyydetty) { paluuPyydetty = false; Yleisnakymaan(t); }
             if (pyydettyTila != null) { string pt = pyydettyTila; pyydettyTila = null; if (rakennus?.Tila(pt) != null) Kohdista(pt, t); }
             // Aloitus, uudelleenrakennus (napautus, uusinta, asento) ja pysäytys (huone, kierroksen loppu) Ytimen aikataulusta.
+            // Omistajan linnapalaute 5.10. klo 12.4x: Pulu ei puhu keskustelujen väliin, vaan vain napautuksesta (elävä linna).
+            linssi.PuluNapautuksesta = PuluNapautuksesta && rakennus.Saapuminen != null;
+            KuunnelmaKaistale.IlmanPulua = linssi.PuluNapautuksesta;
+            // Keskustelun aikana napautettu Pulun vuoro (DioraamaSyote): soi, kun kuunnelma on päättynyt, jos ollaan yhä samassa huoneessa.
+            if (puluJono.HasValue && !KuunnelmaKaistale.SoiNyt)
+            {
+                var (jTila, jHahmo, jKohta) = puluJono.Value;
+                puluJono = null;
+                if (jTila == ViimeisinNakyma?.KohdeTila) { linssi.Napauta(t, jHahmo, jKohta); o.Kirjaa($"poikki: pulu jonosta ({jHahmo ?? (jKohta >= 0 ? "kohde " + jKohta : "kohta")})"); }
+            }
             timeline.Paivita(linssi, rakennus, t, pysty, pysaytettyT.HasValue || SaapumisOdotus);
             var nakyma = linssi.NakymaHetkella(t, pysty);
             timeline.Tarkista(nakyma.KertojaJakso, t);
@@ -263,7 +329,22 @@ namespace Matkakirja.Natiivi
             // aikana (nimiruutu, kamera järvellä) ja pakotetulla kameralla jousi asettuu suoraan, jottei saapuminen ala jousesta.
             float dt = Time.unscaledDeltaTime;
             Asento kameraAsento;
+            // Cinemachine (5.10.2026, DioraamaCinemachine): lepokamerat + brainin blendit korvaavat jousen askeleen; jousesta jää
+            // jatkuvan orbitin vaihe. "poikki cinemachine 0" palauttaa vanhan jousipolun A/B-vertailuun.
+            bool cmKaytossa = cm != null && DioraamaCinemachine.Paalla && pakotettuKamera == null;
+            cm?.Kaytossa(cmKaytossa);
             if (pakotettuKamera is Asento pk) { jousi.Nollaa(); kameraAsento = pk; }
+            else if (cmKaytossa)
+            {
+                if (SaapumisOdotus) cm.Nollaa();
+                bool veto = linssi.VetoKaynnissa;
+                jousi.Etene(dt, veto);
+                bool vl = y.VahennettyLiike;
+                System.Func<Asento, Asento> muokkaa = a => syote.Sovita(jousi.Sovella(a, vl));
+                cm.Paivita(nayttamo.Kamera, nakyma.Kamera, PuhujaanPain(linssi.LepoHetkella(t, pysty), nakyma.KohdeTila), muokkaa, vl, dt);
+                kameraAsento = muokkaa(nakyma.Kamera); // sumu ja syväterävyys: etäisyys ja aukko Ytimen asennosta
+                jousi.Nollaa(); // kytkettäessä pois jousi alkaa suoraan tavoitteesta
+            }
             else
             {
                 if (SaapumisOdotus) jousi.Nollaa();
@@ -272,10 +353,23 @@ namespace Matkakirja.Natiivi
             }
             // t mukaan (era 2): DioraamaNayttamo.Paivita antaa sen liekkinäkymälle (DioraamaLiekit.Paivita, ruutu
             // ajasta) -- nayttamo-kentän kommentti kutsui juuri tätä ("Sovitin voi jatkossa antaa Ydin-ajan tähän").
-            nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t);
+            nayttamo.Paivita(kameraAsento, y.VahennettyLiike, t, asetaKamera: !cmKaytossa);
             hahmot3D.Paivita(rakennus, nakyma, nayttamo.Kamera, t);
             // era 2b kohta 4 (ali-agentti P4b): 3D-pienoisfiguurit -- SAMAAN kohtaan kuin vanha 2D-hahmot3D
             // yllä, mutta Nayttamon omistama (ks. DioraamaNayttamo.cs:n Hahmot3D-kommentti).
+            // Kohtaukset v2: keskustelun puhuva hahmo (KuunnelmaKaistale: puhujittaiset aikaleimat) puhe-silmukalle; muut ennallaan.
+            string puhuva = KuunnelmaKaistale.PuhuvaHahmo;
+            if (puhuva != null && puhuva != DioraamaHahmot3D.Puhuja && DioraamaHahmot3D.Puhuja != null) DioraamaHahmot3D.EdellinenPuhuja = DioraamaHahmot3D.Puhuja;
+            if (puhuva != null) DioraamaHahmot3D.Puhuja = puhuva;
+            else if (!KuunnelmaKaistale.SoiNyt) DioraamaHahmot3D.Puhuja = DioraamaHahmot3D.EdellinenPuhuja = null; // keskustelu ohi
+            DioraamaHahmot3D.PuhujanTila = nakyma.KohdeTila;
+            if (puhuva != null && nakyma.KohdeTila != null && nakyma.Hahmot != null)
+                for (int hi = 0; hi < nakyma.Hahmot.Count; hi++)
+                {
+                    var hn = nakyma.Hahmot[hi];
+                    if (hn.TilaId == nakyma.KohdeTila && hn.HahmoId == puhuva && hn.Naky)
+                        nakyma.Hahmot[hi] = new HahmoNakyma(hn.TilaId, hn.HahmoId, hn.Naky, KuunnelmaKaistale.PuhuvaEle ?? "puhe", hn.Ruutu);
+                }
             nayttamo.Hahmot3D?.Paivita(rakennus, nakyma, t);
             // Olavinlinna: kuoren leikkausikkuna kohdistetun tilan kohdalle (kasvaa kaarilennon jälkipuoliskolla).
             nayttamo.Ulkokuori?.PaivitaLeikkaus(rakennus, linssi.LeikkausHetkella(t), nayttamo.Kamera);
@@ -285,6 +379,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
+            if (aktiivinen == this) aktiivinen = null;
             linssi.Sulje();
             timeline.Tuhoa(); // ennen aanet.Sulje: vanhan graafin klipit eivät enää koske kertojaan
             kelloSiirto = 0;
@@ -292,6 +387,7 @@ namespace Matkakirja.Natiivi
             rakennus3D?.Tyhjenna(); rakennus3D = null;
             hahmot3D?.Tyhjenna(); hahmot3D = null;
             nayttamo?.Tuhoa(); nayttamo = null;
+            cm = null; // kamerat olivat näyttämön lapsia
             AktiivinenKamera = null;
             syote = null;
             aanet?.Sulje(); // kahvat kiinni ja puhuja pois; aanet ITSE säilyy (klippivälimuisti), ks. kentän kommentti.
@@ -502,6 +598,61 @@ namespace Matkakirja.Natiivi
             int kerta = avauskerta;
             yield return lataus;
             if (kerta == avauskerta) valmis();
+        }
+
+        /// <summary>
+        /// KAMERA PUHUJAAN (omistaja 5.10. klo 14.4x, Päätoimittaja: rauhallisesti, ~1 s pehmeä blendi, kuulija jää kehyksen reunaan,
+        /// ei leikkauksia, hidas kierto jatkuu): huoneen lepoasennon kohde siirtyy PuhujaSiirtyma-osuuden puhujan rintakehää kohti
+        /// ja etäisyys lyhenee hieman. Oma lepokamera per puhuja (avain "tila:x|puhuja"), blendi ~1 s; puhuja tulee
+        /// KuunnelmaKaistale.TulevaPuhujasta 0,5 s ennen vuoron vaihtoa. Muut lepoasennot ennallaan.
+        /// </summary>
+        (string, Asento, double, bool) PuhujaanPain((string Avain, Asento Perus, double Jaljella, bool Saapumassa) lepo, string tila)
+        {
+            string puhuja = KuunnelmaKaistale.TulevaPuhuja;
+            if (puhuja == null || lepo.Jaljella > 0 || tila == null || lepo.Avain != "tila:" + tila || rakennus?.Tila(tila) is not Tila t) return lepo;
+            Hahmo h = null;
+            foreach (var x in t.Hahmot) if (x.Id == puhuja) { h = x; break; }
+            if (h == null || h.Reitti != null) return lepo;
+            // KESKUSTELUKUVA (Päätoimittaja 5.10. 15.3x: eleet näkyviin puhelimella): kuulijaksi lähin paikallaan oleva hahmo;
+            // kohde puhujan ja kuulijan väliin puhujaa painottaen ja etäisyys niin, että hahmo täyttää ~40 % ruudun korkeudesta
+            // ja molemmat mahtuvat leveyssuunnassa. Rajat: enintään 0,88 × huoneen lepoetäisyys, vähintään 0,3 ×.
+            Hahmo kuulija = null; double lahin = double.MaxValue;
+            foreach (var x in t.Hahmot)
+            {
+                if (x == h || x.Reitti != null) continue;
+                double dx = x.Paikka.X - h.Paikka.X, dz = x.Paikka.Z - h.Paikka.Z, d2 = dx * dx + dz * dz;
+                if (d2 < lahin) { lahin = d2; kuulija = x; }
+            }
+            var p = lepo.Perus;
+            var puhujanKeski = new Matkakirja.Linssit.Dioraama.V3(h.Paikka.X, h.Paikka.Y + HahmonKeski, h.Paikka.Z);
+            var keski = puhujanKeski;
+            double vali = 0;
+            if (kuulija != null && lahin < KuulijaMaxM * KuulijaMaxM)
+            {
+                var kuulijanKeski = new Matkakirja.Linssit.Dioraama.V3(kuulija.Paikka.X, kuulija.Paikka.Y + HahmonKeski, kuulija.Paikka.Z);
+                keski = puhujanKeski + (kuulijanKeski - puhujanKeski) * (1 - PuhujanPaino);
+                vali = Math.Sqrt(lahin);
+            }
+            var kohde = p.Kohde + (keski - p.Kohde) * PuhujaSiirtyma;
+            double tanPuoli = Math.Tan((p.Fov > 1 ? p.Fov : 40.0) * Math.PI / 360.0);
+            double korkeudesta = HahmonKorkeus / (2 * HahmonOsuusKorkeudesta * tanPuoli);
+            double leveydesta = (vali + 1.6) / (2 * tanPuoli * RuudunSuhde * 0.8);
+            double etaisyys = Math.Clamp(Math.Max(korkeudesta, leveydesta), p.Etaisyys * 0.3, p.Etaisyys * 0.88);
+            return (lepo.Avain + "|" + puhuja, new Asento(kohde, p.Atsimuutti, p.Korkeus, etaisyys, p.Fov, p.Aukko, p.Kierto), 0.2, false);
+        }
+        const double PuhujaSiirtyma = 0.9, PuhujanPaino = 0.65, HahmonKeski = 0.9, HahmonKorkeus = 1.75,
+            HahmonOsuusKorkeudesta = 0.4, RuudunSuhde = 2.0, KuulijaMaxM = 4.0;
+
+        /// <summary>Latauksen vaiheet 0…1 (kuori, tilat, hahmot, ympäristö tasapainoin), LatausOsuuden toinen puolisko.</summary>
+        float VaiheOsuus()
+        {
+            if (nayttamo == null || rakennus == null) return 0f;
+            float kuori = nayttamo.Ulkokuori == null || nayttamo.Ulkokuori.KaikkiValmis ? 1f : 0f;
+            int tilat = TilojaGlb(), hahmot = hahmoGlbJonossaTaiValmiit.Count;
+            float t = tilat > 0 ? Mathf.Clamp01((float)tilojaKasitelty / tilat) : 1f;
+            float h = hahmot > 0 ? Mathf.Clamp01((float)hahmojaKasitelty / hahmot) : (tilojaKasitelty >= tilat ? 1f : 0f);
+            float y = rakennus.Ymparisto == null || nayttamo.Ymparisto == null || nayttamo.Ymparisto.Valmis ? 1f : 0f;
+            return (kuori + t + h + y) / 4f;
         }
 
         int TilojaGlb()
@@ -1001,6 +1152,24 @@ namespace Matkakirja.Natiivi
             {
                 DioraamaLevyvalimuisti.PakotaVirheJalkeen = int.TryParse(arvo, out int pv) ? pv : -1;
                 o.Kirjaa("poikki: pakota-virhe " + (DioraamaLevyvalimuisti.PakotaVirheJalkeen >= 0 ? $"{DioraamaLevyvalimuisti.PakotaVirheJalkeen} tiedoston jälkeen" : "pois"));
+                return;
+            }
+            if (mita == "pulu" && arvo == "napautus")
+            {
+                if (osat.Length > 3) PuluNapautuksesta = osat[3] != "0";
+                if (linssi != null) linssi.PuluNapautuksesta = PuluNapautuksesta && linssi.Rakennus?.Saapuminen != null;
+                o.Kirjaa($"poikki: pulu napautus {(PuluNapautuksesta ? "päällä" : "pois")} (linssi {(linssi?.PuluNapautuksesta == true ? "päällä" : "pois")})");
+                return;
+            }
+            // "poikki pulu hahmo <id>": testinapautus hahmoon (Pulun reaktio) samaan tapaan kuin "poikki napauta".
+            if (mita == "pulu" && arvo == "hahmo" && osat.Length > 3) { linssi.Napauta(pysaytettyT ?? YdinAika, osat[3]); o.Kirjaa("poikki: pulu hahmo " + osat[3]); return; }
+            if (mita == "cinemachine" || mita == "kohina" || mita == "cm")
+            {
+                if (mita == "cinemachine") DioraamaCinemachine.Paalla = arvo != "0";
+                if (mita == "kohina") DioraamaCinemachine.Kohina = arvo != "0";
+                var odotettu = viimeNakyma.HasValue && syote != null ? syote.Sovita(jousi.Sovella(viimeNakyma.Value.Kamera, false)) : default;
+                o.Kirjaa("poikki: " + (cm != null && nayttamo != null ? cm.Tila(nayttamo.Kamera, odotettu)
+                    : $"cinemachine {(DioraamaCinemachine.Paalla ? "päällä" : "pois")}, kohina {(DioraamaCinemachine.Kohina ? "päällä" : "pois")} (linssi kiinni)"));
                 return;
             }
             if (mita == "orbit")
