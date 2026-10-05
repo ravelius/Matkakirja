@@ -2712,11 +2712,12 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   }
   const sijainti = p.sijainti ?? (p.kaupunki ? await kaupunginSijainti(fetch, p.kaupunki) : null);
   if (!sijainti) return vastaa({ virhe: 'kysely', viesti: 'Kaupunki tai sijainti puuttuu.' }, { status: 400, ...kors });
-  const ehdokkaat = await haeEhdokkaat(fetch, sijainti, p.kaupunki ? [...p.kaydyt, p.kaupunki] : p.kaydyt);
+  const { ehdokkaat, kaydytNimet } = await haeEhdokkaat(fetch, sijainti,
+    p.kaupunki ? [...p.kaydyt, p.kaupunki] : p.kaydyt, p.kaydyt.at(-1) ?? null);
   if (!ehdokkaat.length) return vastaa({ virhe: 'ei-kohteita', viesti: 'Läheltä ei löytynyt kerrottavaa.' }, { status: 404, ...kors });
   const kutsu = {
     jarjestelma: OPAS_KEHOTE,
-    viestit: [{ role: 'user', content: oppaanViesti(p, ehdokkaat) }],
+    viestit: [{ role: 'user', content: oppaanViesti(p, ehdokkaat, [...new Set([...kaydytNimet, ...p.kaydyt.filter((k) => !/^Q\d+$/i.test(k))])]) }],
     maxTokens: 700,
     malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
   };
