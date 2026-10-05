@@ -11,6 +11,8 @@ namespace Matkakirja.Linssit.IssKamera
     {
         public string Id, Tci, Scl, Pvm;
         public double Pilvi, Lumi, Nodata;
+        /// <summary>v2 (Karttaseppä 5.10.): täytekuva toiselta suhteelliselta radalta valinnan 0 nodata-alueelle ("toinen_rata": true).</summary>
+        public bool ToinenRata;
     }
 
     public sealed class S2IndeksiRuutu
@@ -23,6 +25,8 @@ namespace Matkakirja.Linssit.IssKamera
         /// <summary>Alue, jonka indeksistä ruutu tuli (maailma.json; null = yksi indeksi).</summary>
         public string Alue;
         public readonly List<S2Valinta> Valinnat = new List<S2Valinta>();
+        /// <summary>Toisen radan täytekuvan valinta (v2) tai -1.</summary>
+        public int ToisenRadanValinta => Valinnat.FindIndex(v => v.ToinenRata);
 
         /// <summary>Valinta k (0 = paras) kuvasuunnitelman ruuduksi.</summary>
         public S2Ruutu Ruutu(int k = 0) => k < Valinnat.Count
@@ -57,7 +61,8 @@ namespace Matkakirja.Linssit.IssKamera
                 {
                     var vo = MiniJson.ObjektiTaiNull(v); if (vo == null || MiniJson.Teksti(vo, "tci") == null) continue;
                     ru.Valinnat.Add(new S2Valinta { Id = MiniJson.Teksti(vo, "id"), Tci = MiniJson.Teksti(vo, "tci"), Scl = MiniJson.Teksti(vo, "scl"),
-                        Pvm = MiniJson.Teksti(vo, "pvm"), Pilvi = MiniJson.Luku(vo, "pilvi") ?? 0, Lumi = MiniJson.Luku(vo, "lumi") ?? 0, Nodata = MiniJson.Luku(vo, "nodata") ?? 0 });
+                        Pvm = MiniJson.Teksti(vo, "pvm"), Pilvi = MiniJson.Luku(vo, "pilvi") ?? 0, Lumi = MiniJson.Luku(vo, "lumi") ?? 0, Nodata = MiniJson.Luku(vo, "nodata") ?? 0,
+                        ToinenRata = MiniJson.Totuus(vo, "toinen_rata") });
                 }
                 if (ru.Valinnat.Count > 0) r.Ruudut[kv.Key] = ru;
             }
@@ -102,7 +107,7 @@ namespace Matkakirja.Linssit.IssKamera
     public sealed class S2Maailma
     {
         /// <summary>Indeksin versio (polku ja laitteen välimuistin tiedostonimet): vaihto vain tästä, vanha välimuisti ei jää käyttöön.</summary>
-        public const string Versio = "v1";
+        public const string Versio = "v2";
         public const string Osoite = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-indeksi/" + Versio + "/maailma.json";
         public string Juuri, Merkinta;
         public readonly List<string> Etusija = new List<string>();

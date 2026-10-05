@@ -556,17 +556,22 @@ namespace Matkakirja.Natiivi
                 // 4b) S2:n omat pilvet (SCL 3/8/9/10): varakuva (valinta 1) vain pilvisille lehdille (Päätoimittaja 1.10.)
                 // Kierros 1: pilviset ja datattomat lehdet valinnalla 1; kierros 2: yhä datattomat valinnalla 2 (simu 58e081a1: tropiikissa
                 // valinta 1 jakoi saman radan välin, ja Amazonian kiila näkyi BMNG:nä).
-                for (int valinta = 1; valinta <= 2; valinta++)
+                // Kierros 2 (v2-indeksi, Karttaseppä 5.10.): datattomille ensin toisen radan täytekuva, jos ruudulla on sellainen
+                // (valinnat 1–2 ovat samalta radalta ja jakavat aukon), kierros 3: valinta 2 niille, joilla täytekuva oli.
+                for (int kierros = 1; kierros <= 3; kierros++)
                 {
                 var datattomat = ty.DatattomatLehdet();   // radan välinen kiila: varakuva toiselta päivältä tai radalta
-                var pilviset = valinta == 1 ? ty.PilvisetLehdet() : new HashSet<(int z, int x, int y)>();
+                var pilviset = kierros == 1 ? ty.PilvisetLehdet() : new HashSet<(int z, int x, int y)>();
                 pilviset.UnionWith(datattomat);
                 if (pilviset.Count > 0)
                 {
                     var varat = new List<(S2Ruutu vara, UnityWebRequest tq, UnityWebRequest sq)>();
                     foreach (var (ru, _) in ty.Data.Ruudut.Where(r => r.ruutu.Valinta == 0).ToList())
                     {
-                        var vara = indeksi.Ruudut.TryGetValue(ru.Mgrs, out var ir) ? ir.Ruutu(valinta) : null;
+                        if (!indeksi.Ruudut.TryGetValue(ru.Mgrs, out var ir)) continue;
+                        int tr = ir.ToisenRadanValinta;
+                        int valinta = kierros == 1 ? 1 : kierros == 2 ? (tr > 0 ? tr : 2) : (tr > 0 ? 2 : -1);
+                        var vara = valinta > 0 ? ir.Ruutu(valinta) : null;
                         if (vara == null) continue;
                         varat.Add((vara, Alue(vara.Url, 0, 16384), string.IsNullOrEmpty(vara.Scl) ? null : Alue(vara.Scl, 0, 16384)));
                     }
@@ -588,7 +593,7 @@ namespace Matkakirja.Natiivi
                         catch (Exception x) { Loki($"varakuva {vara.Tunnus}: {x.Message}"); }
                         finally { tq.Dispose(); sq?.Dispose(); }
                     }
-                    Loki($"pilvimaski {valinta}: {pilviset.Count} pilvistä tai datatonta ({datattomat.Count}) lehteä, {varoja} varakuvaa, {haku.Sum(x => x.pit) / 1e6:0.0} Mt");
+                    Loki($"pilvimaski {kierros}: {pilviset.Count} pilvistä tai datatonta ({datattomat.Count}) lehteä, {varoja} varakuvaa, {haku.Sum(x => x.pit) / 1e6:0.0} Mt");
                     if (haku.Count > 0) yield return Lataa(haku, tila);
                 }
                 }

@@ -68,13 +68,17 @@ namespace Matkakirja.Linssit.Testit
             var json = "{\"versio\":\"v1\",\"tci_lut\":[" + lut + "],\"ruutuja\":2,\"ruudut\":{" +
                 "\"26SLH\":{\"bbox\":[-29.3039,37.8375,-28.0253,38.8444],\"epsg\":32626,\"vesisiirto\":[-0.00429,-0.00255,0.00017]," +
                 "\"valinnat\":[{\"id\":\"S2B_26SLH_20240626_0_L2A\",\"tci\":\"https://x/TCI.tif\",\"pvm\":\"2024-06-26\",\"kk\":6,\"pilvi\":0.66,\"varjo\":0,\"lumi\":0,\"nodata\":0,\"scl\":\"https://x/SCL.tif\",\"pisteet\":0.66}," +
-                "{\"id\":\"b\",\"tci\":\"https://y/TCI.tif\",\"pvm\":\"2023-07-01\",\"kk\":7,\"pilvi\":1.2,\"varjo\":0,\"lumi\":0,\"nodata\":3,\"scl\":\"https://y/SCL.tif\",\"pisteet\":2}]}," +
+                "{\"id\":\"b\",\"tci\":\"https://y/TCI.tif\",\"pvm\":\"2023-07-01\",\"kk\":7,\"pilvi\":1.2,\"varjo\":0,\"lumi\":0,\"nodata\":3,\"scl\":\"https://y/SCL.tif\",\"pisteet\":2}," +
+                "{\"id\":\"t\",\"tci\":\"https://t/TCI.tif\",\"pvm\":\"2025-08-04\",\"nodata\":50,\"rata\":53,\"toinen_rata\":true,\"scl\":\"https://t/SCL.tif\"}]}," +
                 "\"35VLG\":{\"bbox\":[23.37,59.43,25.39,60.41],\"epsg\":32635,\"valinnat\":[{\"id\":\"c\",\"tci\":\"https://z/TCI.tif\",\"pvm\":\"2025-08-04\",\"kk\":8,\"pilvi\":0.4,\"scl\":\"https://z/SCL.tif\"}]}}}";
             var x = S2Indeksi.Jasenna(json);
             Oleta.Sama("v1", x.Versio); Oleta.Sama(2, x.Ruudut.Count); Oleta.Sama((byte)10, x.Lut[0]); Oleta.Sama((byte)255, x.Lut[250]);
             var r = x.Ruudut["26SLH"];
-            Oleta.Sama(2, r.Valinnat.Count); Oleta.Sama("https://x/SCL.tif", r.Valinnat[0].Scl); Oleta.Sama(-29.3039, r.W); Oleta.Sama(3, r.Vesisiirto.Length);
-            Oleta.Sama("https://y/TCI.tif", r.Ruutu(1).Url); Oleta.Tosi(r.Ruutu(2) == null);
+            Oleta.Sama(3, r.Valinnat.Count); Oleta.Sama("https://x/SCL.tif", r.Valinnat[0].Scl); Oleta.Sama(-29.3039, r.W); Oleta.Sama(3, r.Vesisiirto.Length);
+            Oleta.Sama("https://y/TCI.tif", r.Ruutu(1).Url); Oleta.Tosi(r.Ruutu(3) == null);
+            // v2: toisen radan täytekuva (Karttaseppä 5.10.)
+            Oleta.Sama(2, r.ToisenRadanValinta); Oleta.Tosi(r.Valinnat[2].ToinenRata && !r.Valinnat[1].ToinenRata);
+            Oleta.Sama(-1, x.Ruudut["35VLG"].ToisenRadanValinta);
             Oleta.Sama(35, x.Ruudut["35VLG"].Ruutu().Vyohyke);
             Oleta.Sama(1, x.Alueella(24, 60, 25, 60.3).Count());
         }
