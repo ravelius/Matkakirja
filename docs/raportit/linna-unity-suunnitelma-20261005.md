@@ -39,6 +39,19 @@ tehdään ostetulla Stylized Water 3:lla. Työ menee junaan 143. Junan 142 linna
 - Data säilyy nykyisellään: jakso = kamera + kertojan ääni + kesto + avainsanat. Linnanrakentaja ei tarvitse uusia
   kenttiä, paitsi valinnaisen blendin keston.
 
+### 2b. Timelinen kytkentä nykyiseen esittelyyn (Siirtoseppä 5.10. 03.4x, ennen Cinemachinen lupaa)
+
+- **Kello:** PlayableDirector (DirectorUpdateMode.UnscaledGameTime) on esittelyn ainoa kello. `PoikkileikkausLinssi.NakymaHetkella(t)`
+  saa t:n directorista niin kauan kuin esittely soi. Napautus ohittaa jakson asettamalla `director.time` seuraavan klipin alkuun.
+- **Kertoja:** AudioTrack ei soita puhetta itse. Oma KertojaKlippi kutsuu `DioraamaAanet.SoitaErillinen`-reittiä, jolloin
+  "yksi puhe kerrallaan", väistö, puheLoppuu ja avainsanojen `PuheenKohta` pysyvät yhdessä paikassa.
+- **Avainsanat:** oma raita, jonka klipit lasketaan `kertoja.jaksot[].avainsanat[].t_s`:stä ja jakson alusta. Näkymä on
+  junan 142 `DioraamaTaulu.PaivitaAvainsana`.
+- **Kamera:** ennen Cinemachinea raita kertoo jakson indeksin, ja Ydin ja jousi laskevat asennon kuten nyt. Cinemachinen tultua
+  raita vaihtuu CinemachineTrackiin (Shot per jakso) ilman, että muut raidat muuttuvat.
+- **Hyväksyntä:** sama esittely ennen ja jälkeen ääniraidan kanssa. Kertojan alut ±50 ms, avainsanat ±100 ms, ja napautus
+  ohittaa jakson samoin.
+
 ## 3. Kuvan viimeistely: URP:n Volume
 
 - **Värisävy:**
