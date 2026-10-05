@@ -64,6 +64,24 @@ namespace Matkakirja.Natiivi
         DioraamaHahmot hahmot3D;
         DioraamaSyote syote;
         readonly DioraamaKameraJousi jousi = new DioraamaKameraJousi();
+        // LATAUSPALKKI (omistaja 5.10. klo 12.5x; Natiivi-UI:n pohja DioraamaTaulu.LatausEdistyminen): nimiruudun odotuksen aikana
+        // linnan tiedostojen tavut (DioraamaLevyvalimuisti.Edistys). Nimittäjä on vähintään edellisen täyden latauksen tavumäärä
+        // (PlayerPrefs), jottei palkki täyty, kun myöhemmät osat (tilat, hahmot, ympäristö) vasta jonoutuvat. Ei koskaan taaksepäin.
+        static DioraamaSovitin aktiivinen;
+        static float latausOsuus;
+        const string LatausAvain = "linna-latauksen-tavut";
+        public static float LatausOsuus()
+        {
+            var a = aktiivinen;
+            if (a == null || a.kuoriOdotusAlku < 0f && !a.latausKaynnissa) return float.NaN;
+            long muistettu = 0;
+            try { long.TryParse(PlayerPrefs.GetString(LatausAvain, "0"), out muistettu); } catch (Exception) { }
+            float e = DioraamaLevyvalimuisti.Edistys(muistettu);
+            if (float.IsNaN(e)) return float.NaN;
+            latausOsuus = Mathf.Max(latausOsuus, Mathf.Min(e, 0.99f));
+            return latausOsuus;
+        }
+
         static (string Tila, string Hahmo)? puluJono;
         /// <summary>Pulun napautusvuoro keskustelun jälkeen (viimeisin napautus voittaa).</summary>
         public static void PuluJonoon(string tila, string hahmo) => puluJono = (tila, hahmo);
@@ -142,6 +160,9 @@ namespace Matkakirja.Natiivi
 
         public void Avaa(ILinssiYmparisto ymparisto)
         {
+            aktiivinen = this;
+            latausOsuus = 0f;
+            DioraamaLevyvalimuisti.NollaaEdistys();
             y = ymparisto;
             avoinna = true;
             kelloSiirto = 0;
@@ -231,6 +252,8 @@ namespace Matkakirja.Natiivi
                     nayttamo.Odota(false);
                     nayttamo.Haivyta(HaivytysS);
                     linssi.Avaa(rakennus, YdinAika, SaapuminenNahty); // kaari (ja kertoja) alusta tästä hetkestä
+                    try { PlayerPrefs.SetString(LatausAvain, DioraamaLevyvalimuisti.PyydettyTavuja.ToString()); } catch (Exception) { }
+                    latausOsuus = 1f;
                     t = pysaytettyT ?? YdinAika;
                     o.Kirjaa($"poikki: saapuminen alkaa (kaikki valmiina täydellä tarkkuudella: kuori, tilat {tilojaKasitelty}/{TilojaGlb()}, " +
                              $"hahmot {hahmojaKasitelty}/{hahmoGlbJonossaTaiValmiit.Count}, ympäristö; odotettiin {odotettu:F1} s, " +
@@ -319,6 +342,7 @@ namespace Matkakirja.Natiivi
 
         public void Sulje()
         {
+            if (aktiivinen == this) aktiivinen = null;
             linssi.Sulje();
             timeline.Tuhoa(); // ennen aanet.Sulje: vanhan graafin klipit eivät enää koske kertojaan
             kelloSiirto = 0;
