@@ -90,7 +90,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde e9c5e1040fd9 */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 1678319c1f14 */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -125,6 +125,7 @@ body.paivittyy .app { visibility: hidden; }
   --font-kauno: "Matkakirja Punta", "Snell Roundhand", "Savoye LET", "Bradley Hand",
     "Segoe Script", "Comic Sans MS", cursive;
   --font-atlas: "Matkakirja Punta", "Liberation Serif", "Times New Roman", Times, serif;
+  --font-moderni: -apple-system, system-ui, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --tk-paperi-pinta: #f5f0e2;
   --tk-paperi-pergamentti: #ecd8ae;
   --tk-paperi-muste: #211d18;
