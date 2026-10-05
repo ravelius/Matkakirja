@@ -14,10 +14,18 @@ namespace Matkakirja.Linssit.IssKamera
         public const string Versio = "v2";
         public const string Juuri = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/" + Versio + "/";
         public const string Polku = "linssit/astronautin-kamera/s2-maailma/" + Versio + "/";
+        /// <summary>Korjaussarja (Karttaseppä: v2-korjaus/ + korjaus.json, sama bittikartta; 1 = laatta korjaussarjasta).</summary>
+        public const string KorjausJuuri = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/" + Versio + "-korjaus/";
+        public const string KorjausPolku = "linssit/astronautin-kamera/s2-maailma/" + Versio + "-korjaus/";
         public readonly int ZMin, ZMax;
         readonly byte[][] bitit;
+        /// <summary>Korjaussarjan saatavuus (null = ei korjauksia); asetetaan ennen kuin olio julkaistaan muille säikeille.</summary>
+        public S2MaailmaLaatat Korjaus;
 
         S2MaailmaLaatat(int zmin, int zmax, byte[][] b) { ZMin = zmin; ZMax = zmax; bitit = b; }
+
+        /// <summary>Onko laatalle korjaus (korjaussarjasta haetaan sama z/x/y).</summary>
+        public bool Korjattu(int z, int x, int y) => Korjaus != null && Korjaus.Onko(z, x, y);
 
         /// <summary>laatat.json → saatavuus; null, jos muoto on väärä (kutsujan käytös ennallaan).</summary>
         public static S2MaailmaLaatat Jasenna(string json)

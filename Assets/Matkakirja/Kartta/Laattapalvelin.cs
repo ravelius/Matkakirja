@@ -363,12 +363,13 @@ namespace Matkakirja
         /// mosaiikista (S2Polku/v1, rajattu jako: taso z − 6), muualla saatavuuden mukaan maailman sarjasta tai läpinäkyvänä heti
         /// (BMNG alla). Kerros lisätään vasta, kun saatavuus on asetettu (ei Cesiumin välimuistiin jääviä tyhjiä).
         /// </summary>
-        public static void S2Maailma(string polku, Func<int, int, int, bool> saatavuus)
+        public static void S2Maailma(string polku, Func<int, int, int, bool> saatavuus, string korjausPolku = null, Func<int, int, int, bool> korjattu = null)
         {
+            s2MaailmaKorjausPolku = korjausPolku; s2MaailmaKorjattu = korjattu;
             s2MaailmaPolku = polku; s2MaailmaSaatavuus = saatavuus;
         }
-        static volatile string s2MaailmaPolku;
-        static volatile Func<int, int, int, bool> s2MaailmaSaatavuus;
+        static volatile string s2MaailmaPolku, s2MaailmaKorjausPolku;
+        static volatile Func<int, int, int, bool> s2MaailmaSaatavuus, s2MaailmaKorjattu;
 
         static string S2MaailmaOhjaus(string polku, out bool tyhja)
         {
@@ -385,6 +386,9 @@ namespace Matkakirja
                 if (bx >= 27 && bx < 40 && by >= 13 && by < 26) return $"{S2Polku}/v1/{t}/{x - (27 << t)}/{y - (13 << t)}.jpg";
             }
             tyhja = !onko(z, x, y);
+            // Korjaussarja (Karttaseppä: MGRS-saumojen tasaus): sama z/x/y korjauskansiosta.
+            var korjattu = s2MaailmaKorjattu; string kp = s2MaailmaKorjausPolku;
+            if (!tyhja && korjattu != null && kp != null && korjattu(z, x, y)) return kp + polku.Substring(juuri.Length);
             return polku;
         }
 

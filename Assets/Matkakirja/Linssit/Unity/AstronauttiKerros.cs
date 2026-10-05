@@ -452,10 +452,22 @@ namespace Matkakirja.Natiivi
             while (!t.IsCompleted) yield return null;
             var m = t.IsFaulted ? null : t.Result;
             if (m == null) { Debug.Log("MATKAKIRJA linssit: s2-maailma: laatat.json ei kelpaa → vain Eurooppa"); yield break; }
-            Laattapalvelin.S2Maailma(S2MaailmaLaatat.Polku, m.Onko);
+            // Korjaussarja (valinnainen; 404 = ei korjauksia).
+            using (var kq = UnityWebRequest.Get(S2MaailmaLaatat.KorjausJuuri + "korjaus.json"))
+            {
+                yield return kq.SendWebRequest();
+                if (kq.result == UnityWebRequest.Result.Success)
+                {
+                    var kt = kq.downloadHandler.data;
+                    var kj = System.Threading.Tasks.Task.Run(() => S2MaailmaLaatat.Jasenna(System.Text.Encoding.UTF8.GetString(kt)));
+                    while (!kj.IsCompleted) yield return null;
+                    m.Korjaus = kj.IsFaulted ? null : kj.Result;
+                }
+            }
+            Laattapalvelin.S2Maailma(S2MaailmaLaatat.Polku, m.Onko, S2MaailmaLaatat.KorjausPolku, m.Korjattu);
             S2MaailmaLadattu = m;
             if (S2MaailmaKaytossa) KuvanTyosto.Maailma = m;
-            Debug.Log($"MATKAKIRJA linssit: s2-maailma: {S2MaailmaLaatat.Versio} z{m.ZMin}–{m.ZMax}, {tavut.Length / 1024} kt, {kello.ElapsedMilliseconds} ms");
+            Debug.Log($"MATKAKIRJA linssit: s2-maailma: {S2MaailmaLaatat.Versio} z{m.ZMin}–{m.ZMax}, {tavut.Length / 1024} kt, korjaus {(m.Korjaus != null ? "on" : "ei")}, {kello.ElapsedMilliseconds} ms");
         }
 
         void PaivitaS2(bool kyydissa)
