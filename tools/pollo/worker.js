@@ -21,7 +21,7 @@
 import { kirjaaKaynti, lueKaynnit } from './kaynnit.js';
 import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
-  kaupunginAineisto, kuvatPaikalle, wikidataKuva, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
+  kaupunginAineisto, kuvatPaikalle, wikidataKuva, lisaKuvat, OPAS_KUVIA_ENINTAAN, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
   seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, jarjestaReitti,
   seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma,
 } from './opas.js';
@@ -2988,11 +2988,12 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   // Ääni ja kuvan varahaku (Wikidatan P18) rinnakkain; pelin oma kuva voittaa.
   const [aani, p18, korostus] = await Promise.all([
     oppaanAani(pyynto, env, ctx, tulos.teksti, kehittaja),
-    tulos.tyyppi === 'pysahdys' && !tulos.kuvat.length ? wikidataKuva(fetch, tulos.id) : [],
+    // Lisäkuvat (P18 + Commons-luokka) pelin omien perään, yhteensä enintään OPAS_KUVIA_ENINTAAN (omistaja 23.5x).
+    tulos.tyyppi === 'pysahdys' ? lisaKuvat(fetch, tulos.id, OPAS_KUVIA_ENINTAAN - tulos.kuvat.length, tulos.kuvat) : [],
     tulos.tyyppi === 'pysahdys' ? korostusLupaus : null,
   ]);
   if (korostus) tulos.korostus = korostus;
-  if (tulos.tyyppi === 'pysahdys' && !tulos.kuvat.length) tulos.kuvat = p18;
+  if (tulos.tyyppi === 'pysahdys') tulos.kuvat = [...tulos.kuvat, ...p18];
   if (isoisaAvain && kv && !isoisaKaytetty && tulos.tyyppi === 'pysahdys' && /isoisä/i.test(tulos.teksti)) {
     const kirjoitus = kv.put(isoisaAvain, '1', { expirationTtl: 60 * 60 * 48 }).catch(() => {});
     if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kirjoitus); else await kirjoitus;
