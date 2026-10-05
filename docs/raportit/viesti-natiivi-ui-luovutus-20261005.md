@@ -207,3 +207,17 @@ osumatestin → todisteisiin aina simun oikea napautus.
 - Amsterdam: BUILD 144 ja juna 145 (74864d87) molemmat 0/1 ensimmäisellä tapilla → 145:n muutoslokissa "tunnettu". Todennus
   junan 146 ensimmäisestä käännöksestä (5/5 kaupunki, maa, ☰) + Päätoimittajan pin-stillit (ikkuna + palkki, ui pinnaus palkki).
 - Odottaa: Päätoimittajan kuittaus c7fb7875 Natiivisepälle; juna 146 kootaan TF 145:n päälle.
+
+## Tila 6.10. klo 00.3x: junan 146 Natiivi-UI = natiivi-ui/opas-kuvat c29f57af (kuitattu, käännös klo 10)
+
+c29f57af = opas-taky 7cd1b88d (pin-palkki, nimikyltit, ISO2-äänet, Amsterdam-korjaus 3, pause, täkyluettelo + LS1 5f4e8d56)
++ oppaan useat kuvat (+N-kuvalaskuri, Kuvasuurennos sarjana; Pelikoodari: "kuvat" enintään 8).
+
+HETI klo 10:n käännöksen jälkeen (Julkaisijan SIMU NYT, FB234D08), stillit Päätoimittajalle ennen VIE 12:
+1. Amsterdam 5/5 oikeilla tapeilla: ☰ (374,90) → Vaihda kohde (273,146) → täkynäkymä! (Vaihda kohde vie nyt täkyihin;
+   maanosat ovat "TAI VALITSE PAIKKA" -osiossa vieritettävinä → ota koordinaatit kuvasta) → Eurooppa → Alankomaat →
+   Amsterdam; loki "opas: valikon rivi" + "opas: kohde Amsterdam". Myös maataso ja ☰ heti valinnan jälkeen.
+2. Täkyluettelo avautuessa (linssi opas → valikko aukeaa täkyihin), pause II/▶ (ui opasvalikko tauko), Tai valitse paikka.
+3. Pin: nosto auki → pin-kuvake → kartan veto → palkki (myös `ui ui pinnaus palkki` kuvaksi).
+4. Kuvat: `ui ui opasvalikko kuvasarja` → +2 kortti; napautus → selaus 2. kuvaan (pyyhkäisy) lähderiveineen.
+Huom: testikomennot vaativat "ui "-etuliitteen tekstissä (xn-k.sh U ui "ui opasvalikko …").
