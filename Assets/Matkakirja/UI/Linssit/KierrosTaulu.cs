@@ -39,6 +39,7 @@ namespace Matkakirja.Natiivi
             otsikko.style.left = 28; otsikko.style.top = 24;
             otsikko.style.alignItems = Align.FlexStart;
             otsikko.style.opacity = 0f;
+            otsikko.style.transitionDuration = new StyleList<TimeValue>(new System.Collections.Generic.List<TimeValue> { new TimeValue(0.2f, TimeUnit.Second) });
             nimi = Rakenne.Teksti("", "mk-aikajana-havainne__otsikko", otsikko);
             Kirjasimet.Aseta(nimi, Kirjasin.Goottilainen);
             nimi.style.fontSize = 44; nimi.style.unityTextAlign = TextAnchor.LowerLeft;
@@ -86,6 +87,9 @@ namespace Matkakirja.Natiivi
         }
 
         OpasKohde naytettyKohde;
+        float nimiAlku;
+        /// <summary>Oppaan kohteen nimen näkyvyys saapumisesta (s); häivytys 0,2 s (siirtymä alle 250 ms).</summary>
+        const float NimiNakyyS = 5f;
 
         void PaivitaOpas(OpasSovitin s)
         {
@@ -105,10 +109,12 @@ namespace Matkakirja.Natiivi
             if (puhuu && l.Nykyinen != null && naytettyKohde != l.Nykyinen)
             {
                 naytettyKohde = l.Nykyinen;
+                nimiAlku = Time.unscaledTime;
                 nimi.text = l.Nykyinen.Nimi;
                 alarivi.text = l.Nykyinen.Alarivi ?? "";
             }
-            otsikko.style.opacity = puhuu && l.Nykyinen != null ? 1f : 0f;
+            // Opas kevyeksi (Päätoimittaja 5.10.): nimi ja alarivi häipyvät 5 s saapumisen jälkeen, palaavat seuraavalla pysähdyksellä.
+            otsikko.style.opacity = puhuu && l.Nykyinen != null && Time.unscaledTime - nimiAlku < NimiNakyyS ? 1f : 0f;
             string teksti = s.TekstiRuudulle;
             if (teksti != null && kertojaTeksti.text != teksti) kertojaTeksti.text = teksti;
             kertojaLaatikko.EnableInClassList("mk-nakyy", teksti != null && l.VaiheAika > 0.8);
