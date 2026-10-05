@@ -359,6 +359,10 @@ namespace Matkakirja.Natiivi
             // yllä, mutta Nayttamon omistama (ks. DioraamaNayttamo.cs:n Hahmot3D-kommentti).
             // Kohtaukset v2: keskustelun puhuva hahmo (KuunnelmaKaistale: puhujittaiset aikaleimat) puhe-silmukalle; muut ennallaan.
             string puhuva = KuunnelmaKaistale.PuhuvaHahmo;
+            if (puhuva != null && puhuva != DioraamaHahmot3D.Puhuja && DioraamaHahmot3D.Puhuja != null) DioraamaHahmot3D.EdellinenPuhuja = DioraamaHahmot3D.Puhuja;
+            if (puhuva != null) DioraamaHahmot3D.Puhuja = puhuva;
+            else if (!KuunnelmaKaistale.SoiNyt) DioraamaHahmot3D.Puhuja = DioraamaHahmot3D.EdellinenPuhuja = null; // keskustelu ohi
+            DioraamaHahmot3D.PuhujanTila = nakyma.KohdeTila;
             if (puhuva != null && nakyma.KohdeTila != null && nakyma.Hahmot != null)
                 for (int hi = 0; hi < nakyma.Hahmot.Count; hi++)
                 {

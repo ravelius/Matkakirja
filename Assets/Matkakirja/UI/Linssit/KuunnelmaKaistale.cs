@@ -22,6 +22,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Nyt puhuva hahmo (vuoron tai rivin puhuja, ei Pulu eikä kertoja), tai null. DioraamaSovitin vaihtaa sen
         /// hahmolle puhe-silmukan (puhujittaiset aikaleimat ohjaavat puhuvaa hahmoa).</summary>
         public static string PuhuvaHahmo { get; private set; }
+        /// <summary>Nykyisen vuoron ilme (vuorot[].ilme) tai null; kasvokuva = henkilö + ilme (Natiivi-UI:n pohja,
+        /// ankkuri DioraamaHahmot3D.PuhujanPaa).</summary>
+        public static string PuhuvaIlme { get; private set; }
 
         KuunnelmaToisto toisto;
         string tilaId;
@@ -74,7 +77,7 @@ namespace Matkakirja.Natiivi
             toisto = null;
             tilaId = null;
             SoiNyt = false;
-            PuhuvaHahmo = null; naytettyVuoro = null;
+            PuhuvaHahmo = null; PuhuvaIlme = null; naytettyVuoro = null;
             naytetty = -2;
             Nimi = null; Teksti = null;
         }
@@ -114,6 +117,7 @@ namespace Matkakirja.Natiivi
         void NaytaVuoro(KuunnelmaRivi r, KuunnelmaVuoro v)
         {
             PuhuvaHahmo = v?.Puhuja;
+            PuhuvaIlme = v?.Ilme;
             if (v == null) return;
             Nimi = (PuhujanNimi?.Invoke(v.Puhuja) ?? v.Puhuja ?? "").ToUpperInvariant();
             bool aaneen = !string.IsNullOrEmpty(r.Aani) && DioraamaAanet.Puhutaan(r.Aani);

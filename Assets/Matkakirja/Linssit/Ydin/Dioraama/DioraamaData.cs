@@ -443,7 +443,8 @@ namespace Matkakirja.Linssit.Dioraama
     /// sekunteina äänitiedoston alusta (Pelikoodarin aikaleimat).</summary>
     public sealed class KuunnelmaVuoro
     {
-        public string Puhuja, Teksti;
+        /// <summary>Ilme (vuorot[].ilme, valinnainen): kasvokuvan muunnelma puhujan yläpuolella (omistaja 5.10. klo 14.3x).</summary>
+        public string Puhuja, Teksti, Ilme;
         public double AlkuS, LoppuS;
     }
 
@@ -1048,7 +1049,7 @@ namespace Matkakirja.Linssit.Dioraama
                 foreach (var vo in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(k, "vuorot")))
                 {
                     var v = MiniJson.ObjektiTaiNull(vo);
-                    if (v != null) kr.Vuorot.Add(new KuunnelmaVuoro { Puhuja = MiniJson.Teksti(v, "puhuja"), Teksti = MiniJson.Teksti(v, "teksti"),
+                    if (v != null) kr.Vuorot.Add(new KuunnelmaVuoro { Puhuja = MiniJson.Teksti(v, "puhuja"), Teksti = MiniJson.Teksti(v, "teksti"), Ilme = MiniJson.Teksti(v, "ilme"),
                         AlkuS = MiniJson.Luku(v, "alku_s") ?? 0, LoppuS = MiniJson.Luku(v, "loppu_s") ?? 0 });
                 }
                 t.Kuunnelma.Add(kr);
