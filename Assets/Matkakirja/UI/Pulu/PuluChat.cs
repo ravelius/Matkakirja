@@ -198,6 +198,7 @@ namespace Matkakirja.Natiivi
         {
             this.kerros = kerros;
             this.pulu = pulu;
+            Kuvanakyma.KuvaVaihtui += () => UiKerros.PaaSaikeessa(KuvaVaihtui);
             // Pulun omalla kerroksella: se nousee lehden päälle lehden ajaksi (UiNakymat.PulunKerros).
             var juuri = kerros.Juuri(Pulu.Kerros);
             sulkija = Rakenne.El("mk-sulkija", juuri);
@@ -856,6 +857,7 @@ namespace Matkakirja.Natiivi
             }
             var runko = new StringBuilder("{\"tehtava\":\"vastaus\",\"kysymys\":").Append(PeliApu.Json(kysymys))
                 .Append(",\"konteksti\":").Append(PeliApu.Json(konteksti))
+                .Append(KuvaKentta())
                 .Append(",\"kehys\":").Append(PeliApu.Json(Kehys(kysymys, jatko)))
                 // Äänitagit (omistaja 27.9. klo 23.1x): tämä versio siivoaa ne näytöltä (Nakyva), joten worker saa liittää
                 // kehotteeseen tagisäännön; vanhat versiot eivät lähetä kenttää eivätkä saa tageja (web PR #3513).
@@ -1461,7 +1463,7 @@ namespace Matkakirja.Natiivi
         IEnumerator Ehdotukset(int poletti)
         {
             var odotus = Viesti("mk-chat__odottaa mk-chat__ehdotus-odotus", Mietinta(false));
-            using var r = Pyynto("{\"tehtava\":\"ehdotukset\",\"konteksti\":" + PeliApu.Json(Konteksti()) + "}");
+            using var r = Pyynto("{\"tehtava\":\"ehdotukset\",\"konteksti\":" + PeliApu.Json(Konteksti()) + KuvaKentta() + "}");
             yield return r.SendWebRequest();
             odotus.RemoveFromHierarchy();
             if (poletti != ehdotusPoletti || r.result != UnityWebRequest.Result.Success) yield break; // ei kriittinen
@@ -1470,6 +1472,32 @@ namespace Matkakirja.Natiivi
             var tekstit = new List<string>();
             foreach (var x in lista) if (x is string s && s.Length > 0) tekstit.Add(s);
             Sirut(tekstit, "mk-chat__ehdotukset", false);
+        }
+
+        /// <summary>
+        /// Astronautin kuva ruudulla (juna 147, Pelikoodarin worker PR #4038): ",\"kuva\":{…}" ehdotus- ja vastauspyyntöön, jotta
+        /// sirut ja vastaus ovat kuvan kontekstissa; tyhjä, kun kuvaa ei ole auki (vanha muoto, worker toimii kuten ennen).
+        /// </summary>
+        static string KuvaKentta()
+        {
+            var linssit = UiNakymat.Olemassa ? UiNakymat.Hae()?.Linssit : null;
+            if (linssit?.Auki?.Tiedot?.Id != LinssiUi.AstronauttiId) return "";
+            var j = linssit.Astronautti?.Kuva?.KuvaJson;
+            return string.IsNullOrEmpty(j) ? "" : ",\"kuva\":" + j;
+        }
+
+        string edellinenKuva;
+
+        /// <summary>Kuva vaihtui: edellisen kuvan sirut pois ja uudet kuvan mukaan, jos chat on auki (Kuvanakyma.KuvaVaihtui).</summary>
+        void KuvaVaihtui()
+        {
+            string uusi = KuvaKentta();
+            if (uusi == edellinenKuva) return;
+            edellinenKuva = uusi;
+            ehdotusPoletti++;
+            foreach (var e in sirualue.Query(className: "mk-chat__ehdotukset").ToList()) e.RemoveFromHierarchy();
+            foreach (var e in virta.Query(className: "mk-chat__ehdotus-odotus").ToList()) e.RemoveFromHierarchy();
+            if (Auki && !kysyy) HaeEhdotukset();
         }
 
         // --- konteksti (webin kokoaKonteksti, yksi merkkijono) ------------------------------
