@@ -22,8 +22,9 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   Natiiviseppä mergesi juna-143-koeen (a7cd8d44).
 - natiivi-ui/x-siivous 121b0840 (07.5x, BUILD 142:n päällä) — siivous 16/20/21: IssKyytiNakyma sulkuVanha (näkyi vain
   avaruuskävelyllä, joka on pois valikosta), Linssivalitsin ylaSulje ja kuollut Muut-paneeli. unity-tarkistus 0 virhettä,
-  pohjavahti ok, merge juna-143-koeen puhdas. Käännös- ja simuvuoro pyydetty Julkaisijalta 08.0x; todisteet: valikon
-  pääsivu + Linssit-alinäkymä + ohinapautus oikealla napautuksella, ISS-kytkinpöytä ilman vanhaa ✕:ää ja POISTU.
+  pohjavahti ok, merge juna-143-koeen puhdas. Käännös 354fa015 (08.14), simussa todennettu 10.2x oikeilla napautuksilla
+  (proto-3d/lokit/natiivi-ui-1035/xsiivous/xs-arkki.jpg); lähetetty Päätoimittajalle kuitattavaksi 10.3x → kuittauksen
+  jälkeen merge-pyyntö Natiivisepälle. Löydös: kytkinpöydän POISTU vaati simussa ~0,25 s painalluksen (kuormassa).
 - natiivi-ui/iss-ohjaamo-lcd 0fdda21f — ohjaamo + LS2:n LCD-paikat; odottaa LS2:n maailmakuvia (Amazonia) ja S2-indeksiä.
 - Myöhemmin (Päätoimittaja): ISS-kuvan vihreä nimilappu hukkuu kirkkaalle hiekalle (az-3667-a4).
 
