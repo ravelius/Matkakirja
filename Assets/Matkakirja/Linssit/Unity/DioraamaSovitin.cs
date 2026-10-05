@@ -178,6 +178,7 @@ namespace Matkakirja.Natiivi
             aktiivinen = this;
             latausOsuus = 0f;
             DioraamaLevyvalimuisti.NollaaEdistys();
+            DioraamaTaulu.LatausEdistyminen = LatausOsuus; // Natiivi-UI:n latauspalkki (omistaja hyväksyi 5.10. klo 14.0x, juna 144)
             y = ymparisto;
             avoinna = true;
             kelloSiirto = 0;
