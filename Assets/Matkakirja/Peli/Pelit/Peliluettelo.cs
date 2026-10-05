@@ -67,7 +67,8 @@ namespace Matkakirja.Peli.Pelit
         // TAVLI (Siirtoseppä 5.10.2026; omistajan korttivalinta 4.–5.10., suunnitelma docs/raportit/tavli-suunnitelma-20261005.md,
         // Päätoimittaja hyväksyi 5.10. 01.1x): pelikatalogin GRC-1, yksi koti Ateena (kafeneio). Laudat: Kafeneio heti, Bysantin
         // tabula normaalin ja Ottomaanien tavla vaikean botin voitosta.
-        // TODO Sisältökirjuri: Historia- ja Alkupera-tekstit ovat Siirtosepän paikkatekstejä (lopulliset samaan muotoon kuin Myllyn).
+        // Tekstit: docs/raportit/tavli-historiatekstit-20261005.md (haara siirtoseppa-luovutus; Sonnet-tutkija + Siirtoseppä 5.10.),
+        // osiot 1 (historia) ja 4 (alkuperä); ottomaanisen laudan ajoitus V&A:n rajapinnasta (861-1907: 1600–1700, Istanbul).
         public static readonly PeliKuvaus Tavli = new PeliKuvaus
         {
             Id = "tavli", Nimi = "Tavli", Nappi = "Pelaa tavlia", KatalogiId = "GRC-1", Koti = "ateena",
@@ -75,14 +76,14 @@ namespace Matkakirja.Peli.Pelit
             Laudat = new[]
             {
                 new PeliLauta { Id = "kafeneio", Nimi = "Kafeneio 1873", Esine = "Kafeneion tavlilauta (voitit kahvilan vakiopelaajalta)",
-                    Historia = "Kreikkalaisissa kahviloissa, kafeneioissa, tavlia pelattiin 1800-luvulla aamusta iltaan. Nopat kolisivat puulaatikossa, ja katsojat laskivat ääneen, montako heittoa osuisi.",
-                    Alkupera = "Lauta perustuu tyypilliseen 1800-luvun kreikkalaiseen taittolautaan: pähkinäkehys, upotettu meanderi-koriste ja kahden puulajin kolmiot. Se ei kopioi yhtä tiettyä esinettä." },
+                    Historia = "Ateenassa kahvilat, kafeneiot, ovat kuuluneet kaupunkielämään 1830-luvulta asti, ja niissä pelataan korttia ja tavlia. Tavli on kolmen pelin sarja (Portes, Plakoto ja Fevga), ja tämä peli noudattaa Portesin sääntöjä.",
+                    Alkupera = "Lauta noudattaa tavlilaudan tavallista rakennetta: kaksi puoliskoa ja yhteensä 24 pistettä, kummallakin puolella 12. Se ei kopioi yhtä tiettyä esinettä, vaan tyypillistä kahvilan pelilautaa." },
                 new PeliLauta { Id = "tabula", Nimi = "Bysantin tabula n. 480", Esine = "Bysantin tabula-lauta", Avautuu = Vastustaja.BottiNormaali,
-                    Historia = "Bysantin keisari Zenonin tabula-pelistä noin vuodelta 480 säilynyt kuvaus on vanhimpia tarkkoja kuvauksia backgammonin sukuisesta pelistä: siinä on 24 pistettä ja 15 nappulaa kummallakin.",
-                    Alkupera = "Esikuvana on keisari Zenonin pelin kuvaus noin vuodelta 480. Lauta on piirretty kuvauksen mukaan, ei säilyneen esineen." },
+                    Historia = "Bysantin keisari Zenon pelasi tabulaa 400-luvun lopulla, ja runoilija Agathias kuvasi 500-luvulla hänen epäonnisen heittonsa: nopat näyttivät 2, 6 ja 5. Tabulassa oli 24 pistettä, 15 nappulaa kummallakin ja kolme noppaa, joten se on tavlin esi-isä mutta ei sama peli.",
+                    Alkupera = "Lauta on piirretty Agathiaan runon (Anthologia Graeca IX.482) ja sen pohjalta tehtyjen rekonstruktioiden mukaan: 24 pistettä, 12 kummallakin puolella. Zenonin ajalta ei ole säilynyt lautaa eikä nappulasarjaa, joten ulkoasu on piirretty kuvauksen mukaan. Peli käyttää tavlin (Portes) sääntöjä, ei tabulan: tabulassa heitettiin kolmea noppaa." },
                 new PeliLauta { Id = "tavla", Nimi = "Ottomaanien tavla", Esine = "Ottomaanien upotekoristeinen tavla-lauta", Avautuu = Vastustaja.BottiVaikea,
-                    Historia = "Osmanien valtakunnassa tavla-laudat olivat arvoesineitä: niihin upotettiin helmiäistä, norsunluuta ja jaloja puulajeja.",
-                    Alkupera = "Esikuvana on upotekoristeinen ottomaaninen taittolauta museokokoelmasta (tarkka esine vahvistetaan)." },
+                    Historia = "Ottomaanien Istanbulissa tehtiin 1600- ja 1700-luvuilla ylellisiä pelilautoja, joihin upotettiin kilpikonnankilpeä, helmiäistä, luuta ja norsunluuta. Turkissa peliä pelataan yhä, ja siellä sen nimi on tavla.",
+                    Alkupera = "Esikuvana on Lontoon Victoria and Albert Museumin kaksipuolinen taittolauta (museotunnus 861-1907), joka on tehty luultavasti Istanbulissa 1600- tai 1700-luvulla. Puuhun on viilutettu kilpikonnankilpeä, helmiäistä, luuta, norsunluuta ja useita puulajeja, ja tavlipuolella on helmiäisestä tehtyjä kypressikuvioita. Toisella puolella on shakkilauta." },
             },
         };
 

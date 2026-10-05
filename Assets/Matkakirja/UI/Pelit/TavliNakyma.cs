@@ -574,7 +574,7 @@ namespace Matkakirja.Natiivi
             UiKerros.Hae().StartCoroutine(Viive(0.9f, () => { if (Auki) NaytaKortti(tulosKortti); }));
         }
 
-        // TODO Sisältökirjuri: sääntöteksti (suunnitelma: Säännöt-kortissa osumataulukko 1–12 ja selitys, miksi 7 on yleisin summa).
+        // Sääntöteksti: osumataulukko 1–12 tarkistettu kaikilla 36 heitolla (docs/raportit/tavli-historiatekstit-20261005.md osio 7).
         void NaytaSaannot()
         {
             UiNakymat.Hae().Vahvistus.Kysy("Tavlin säännöt",
