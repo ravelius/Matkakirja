@@ -90,3 +90,7 @@ Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), i
   JUMI: ion-tunnus puuttuu (CesiumJS-arviointitunnuksen poiminta estetty) → omistajan tunnus avaintiedostoon CESIUM_ION_TOKEN.
   Käännös ~20.30 jälkeen (Julkaisija), ketju $S/ketju-lontoo.sh (OMA=1 testitila omalla maastolla), ajo-lontoo.sh portti
   $S/sim-nyt-lontoo, iPad-simu 903C2B91; tulos lokit/linssiseppa-lontoo-vaihe1-20261005-a.
+- 17.4x OMISTAJA: Lontoo Google Photorealistic 3D Tiles -laatoilla (ion 2275207, kehitys/testi; julkaisu vasta maksullisen lisenssin
+  ja Cesiumin vahvistuksen jälkeen). Toteutettu 4317849a (lontoo data google|ion|oma, oletus google). Omistaja lisää assetin
+  tunnukseen; ketju valitsee googlen automaattisesti, kun asset vastaa 200 (muuten ion). Rakennustasojen arkki lähetetty
+  (lokit/linssiseppa-lontoo-tutkimus-20261005/lontoo-rakennustasot-kooste.png).
