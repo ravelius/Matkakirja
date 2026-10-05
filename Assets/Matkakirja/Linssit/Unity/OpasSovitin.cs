@@ -337,6 +337,8 @@ namespace Matkakirja.Natiivi
             bool eka = true;
             foreach (var id in silmukka.Nahdyt) { if (!eka) sb.Append(','); sb.Append('"').Append(Escape(id)).Append('"'); eka = false; }
             sb.Append("],\"kieli\":\"fi\"");
+            // Näytettävät tekijätiedot (Pelikoodari #4028, ODbL): worker palauttaa OSM-pohjaista dataa vain, kun "osm" on mukana.
+            sb.Append(",\"krediitit\":[\"osm\"]");
             // "Kerro lisää" ei toista edellistä kappaletta (Pelikoodari #4011).
             var ed = silmukka.Nykyinen?.Teksti;
             if (!string.IsNullOrEmpty(ed)) sb.Append(",\"edellinen_teksti\":\"").Append(Escape(ed)).Append('"');
