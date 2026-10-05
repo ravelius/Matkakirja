@@ -21,7 +21,9 @@
 import { kirjaaKaynti, lueKaynnit } from './kaynnit.js';
 import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
+  kaupunginAineisto,
 } from './opas.js';
+import { OPAS_AINEISTO } from './opas-aineisto.js';
 import {
   HISTORIAN_KATTO,
   KONTEKSTIN_KATTO,
@@ -2733,7 +2735,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     p.sijainti ?? kaupunginSijainti(fetch, p.kaupunki), kaydytNimiksi(fetch, p.kaydyt)]);
   const kutsu = {
     jarjestelma: OPAS_KEHOTE,
-    viestit: [{ role: 'user', content: oppaanViesti({ ...p, sijainti }, kaydytNimet) }],
+    viestit: [{ role: 'user', content: oppaanViesti({ ...p, sijainti }, kaydytNimet, kaupunginAineisto(env.OPAS_AINEISTO_TESTI ?? OPAS_AINEISTO, p.kaupunki)) }],
     maxTokens: 700,
     malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
   };

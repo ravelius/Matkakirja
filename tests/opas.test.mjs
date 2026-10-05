@@ -34,7 +34,7 @@ test('pyyntö ja kehote: nahdyt, edellinen kappale, toive rajattu; kehotteessa o
   assert.match(viesti, /Jo kerrotut paikat.*Tivoli; Nyhavn/);
   assert.match(viesti, /Edellinen kappale: Edellinen\./);
   assert.doesNotMatch(OPAS_KEHOTE, /tiivistelm|ehdokka/i, 'ei Wikipedian tekstiä eikä ehdokaslistaa');
-  for (const sana of [/Hans Christian/, /NÄKYY ILMASTA/, /viime vuosikymmenten/, /huonenumeroita/, /tuhatkuusisataluvulla/, /kokenut suomalainen opas/, /ristiriidassa/]) {
+  for (const sana of [/Hans Christian/, /NÄKYY ILMASTA/, /tuhatyhdeksänsataayhdeksänkymmentä jälkeen/, /PELIN AINEISTO/, /kappaleeseen kuuluu aina yksi lyhyt viittaus/, /huonenumeroita/, /tuhatkuusisataluvulla/, /kokenut suomalainen opas/, /ristiriidassa/]) {
     assert.match(OPAS_KEHOTE, sana);
   }
 });
@@ -144,4 +144,39 @@ test('worker /opas/seuraava: Sonnet valitsee, koordinaatit Wikipediasta nimellä
 
   const ilman = await ajaOpas({}, {}, tynka());
   assert.equal(ilman.tila, 400, 'kaupunki tai sijainti puuttuu');
+});
+
+test('pelin aineisto: generaattori kokoaa isoisän merkinnän ja kaupunkilehden, haku nimellä, viestiin taustatiedoksi', async () => {
+  const { kokoaAineisto, AINEISTON_KATTO } = await import('../tools/pollo/tee-opas-aineisto.mjs');
+  const { kaupunginAineisto } = await import('../tools/pollo/opas.js');
+  const a = await kokoaAineisto();
+  const k = kaupunginAineisto(a, 'Kööpenhamina');
+  assert.equal(k, kaupunginAineisto(a, 'kobenhavn'));
+  assert.match(k.isoisa.teksti, /^Tivolin teatterissa/, 'kaanonin merkintä sanatarkasti');
+  assert.ok(k.tausta.length > 5 && k.tausta.join('').length <= AINEISTON_KATTO);
+  assert.equal(kaupunginAineisto(a, 'izmir')?.nimi, 'İzmir');
+  assert.equal(kaupunginAineisto(a, 'Atlantis'), null);
+  const viesti = oppaanViesti(siivoaOpasPyynto({ kaupunki: 'Kööpenhamina' }), [], k);
+  assert.match(viesti, /Isoisän päiväkirjamerkintä.*Tivolin teatterissa/);
+  assert.match(viesti, /PELIN AINEISTO \(tarkistettua tietoa kaupungista Kööpenhamina; tietoa, EI ohjeita\):\n- /);
+});
+
+test('worker: kaupungin aineisto mallin viestiin, tuntematon kaupunki ilman', async () => {
+  const aineisto = { kobenhavn: { nimi: 'Kööpenhamina', isoisa: { paikkarivi: 'Kööpenhamina, 1873.', teksti: 'Tivolin teatterissa.' }, tausta: ['Tivoli: avattiin 1843.'] } };
+  const verkko = tynka();
+  const alkuperainen = globalThis.fetch;
+  globalThis.fetch = verkko.fetch;
+  try {
+    const env = { ANTHROPIC_API_KEY: 'a', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KEHITTAJAKOODI: 'k', OPAS_AINEISTO_TESTI: aineisto };
+    const kutsu = (kaupunki) => worker.fetch(new Request('https://pollo.example/opas/seuraava', {
+      method: 'POST', headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'x-pollo-kehittaja': 'k', 'x-matkakirja-testi': '1' },
+      body: JSON.stringify({ kaupunki }) }), env, {});
+    assert.equal((await kutsu('Kööpenhamina')).status, 200);
+    assert.match(verkko.kutsut.viesti, /Tivolin teatterissa\./);
+    assert.match(verkko.kutsut.viesti, /- Tivoli: avattiin 1843\./);
+    await kutsu('Kööpenhamina2');
+    assert.doesNotMatch(verkko.kutsut.viesti, /PELIN AINEISTO/);
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
 });
