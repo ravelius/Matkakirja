@@ -110,3 +110,7 @@ Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), i
   lokit/linssiseppa-opas-aani-20261005/tallenne-aanella.mp4 (A/V käsin 2,32 s ±50 ms: välähdys/piippaus alle työkalun kynnysten).
   OPITTU: ajoskriptissä EI "puhe pois" (Puhe.Paalla kirjoittaa Kertoja-kytkimen → opas tekstiksi). Odottaa Laitetestaajan iPad 10 min -muistia.
   Natiivi-UI: natiivi-ui/opas-kevyt 59347011 (sirut, valikko, kuvat) ⊃ lontoo 25ec1870; yhteisapp 5503d766.
+- 20.1x HILJAISUUS: simu 19.54 (770d1dd8) tauot 11,6 → ~5 s; 110c7dee (puhe lennossa 5 s ennen saapumista, väh. 2 s nousun jälkeen,
+  tauko 0,4 s, kysymyksen ensimmäinen vaihtoehto esihaetaan heti) + 7db42dcc (äänen odotus 10 s, Pöllö #4018) junakokeeseen.
+  Krediitit: kapealla ruudulla logot + "Data sources" (9cf44e55, KrediititTiivis.cs; Googlen Map Tiles -policy).
+  JUNA 145: PCM-suoratoisto 2c490b78 (PcmVirta.cs, aani_pcm) — todentamatta; odottaa Pöllön #4018/PCM-julkaisua (BUILD 144 ≥ e636bc55).
