@@ -63,6 +63,16 @@ Vanhemmat vaiheet: `viesti-karttaseppa-luovutus-20261002.md` (päivitykset 2.–
 
 ## AVOIMET
 
+- **Tropiikki v2e, tunnetut jäännökset (PT hyväksyi vientiin 5.10. 17.0x, ei korjata nyt):**
+  - Amazonin itäosan vaalea ratakaista (z8, noin 58–57° W, 1–2° N): tasauksen viite ESA WorldCover 2021 on itse usvaisempi itään päin.
+  - Sumbawan suora maasauma (z8).
+  - Palataan, jos löytyy parempi viite (esim. tuoreempi pilvetön S2-vuosikomposiitti).
+  - Menetelmä: `iss-maailma-s2/tasaus.mjs` (k7-asetukset: SIGMA_M 1500, ALA 0,6, YLA 1,6, USVA 1,6, SINI 99, varakorjaus) ja K-kenttä `tasaus-kentta.mjs` (σ 250 km).
+    Lisäksi järvet MERI-väriin, `rengas.mjs` (KYNNYS 0, pilvet merellä vedeksi) ja aukkotäyttö kahdella näkymällä (`maailmamosaiikki-v2e.mjs`, POISSULJE-env).
+  - Alkuperäiset laatat: `v2/tropiikki/laatat-v2e-alkuperainen`.
+- **Rengaskorjaus muille alueille** (`v2-rengas/<alue>`, vain muuttuneet laatat, KYNNYS 0): Eurooppa, P-Afrikka, Amerikka, Aasia. Ei vielä viety.
+  Jo viedyt kolme aluetta menevät v2e-korjaussarjaan (v2e/<alue>/laatat + korjaus.json); Euroopalle uusi polku (LS2: AstronauttiKerros.S2Juuri).
+
 - Bahaman suurten matalikkojen turkoosi puuttuu. PT toivoo batymetriaan perustuvaa ratkaisua myöhemmin.
 - Aluekohtainen tci_lut (aavikko) tehdään LS2:n esimerkkikuvien perusteella.
 - Saaret-haara ja Euroopan pyramidi z11: ennallaan, ks. 2.10. luovutus.
