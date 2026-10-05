@@ -4,6 +4,14 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovu
 
 ## TILA HETI
 
+- **Juna 144 -koe a1cfce55** (natiiviseppa/juna-144-koe, worktree /Users/Shared/Claude/wt/proto-natiiviseppa-j144) = master a5a18288
+  + latauspalkki 62bafb4a + kytkentä da6b8a27 (Siirtosepän pieni haara; palkki vain kytkennän kanssa) + testimykistys-natiivi
+  8ff03da0 + lukija-william f5e5372c + asetukset 89ba8062 (todistus lokit/natiiviseppa-asetus-todistus/). Testit 0/444/415/625.
+  Ehdolliset (vain Päätoimittajan kuittauksella): siirtoseppa/linna-143 (EI Steam Audiota 144:ään; tarkistukseen
+  MATKAKIRJA_KIRJASTOT=/Users/Shared/Claude/proto-3d/_lahteet/unity-paketit-siirtoseppa/kirjastot), LS2 ISS-ohjaamo.
+  VIE-ikkuna klo 20: ennen sitä käännös + rutiinikuittaus Laitetestaajalta (napautuspolku, poikkeukset, ääni) + VIE Päätoimittajalta.
+  Uusi Asetus-kutsu → lisää avain Matkakirjan tools/vienti/asetusavaimet.json (Pelikoodarin #3994).
+
 - **BUILD 143 = proto master cc57dde7** (juna/b13 91220fb6, vahdin junakäännös 81ac41ea klo 12.22–12.33; .app
   lokit/juna-1.1.143-81ac41ea). Sisältö: BUILD 142 + Brotli ca4251f5 + chat-linna b38360f4 + x-napit 9a688396 +
   siirtoseppa/linna-143 024a098d + x-siivous 121b0840 + Tavli ea02bae1 + kirjainväli-kerning 46b62059 + ei-linssiä
