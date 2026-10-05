@@ -2950,15 +2950,15 @@ test('worker: puhevastaus kertoo moottorin ja lähteen otsakkeissa (xai, varapol
   }
 });
 
-test('julkaisun puhemoottoritarkistus: vaatii xai:n, uusii kunnes salaisuus on levinnyt', async () => {
+test('julkaisun puhemoottoritarkistus: vaatii elevenin (oletus 5.10.2026), uusii kunnes salaisuus on levinnyt', async () => {
   const { tarkistaPuhemoottori } = await import('../tools/pollo/tarkista-puhemoottori.mjs');
   const vastaus = (moottori) => new Response(new Uint8Array([1]), { status: 200, headers: { 'x-puhe-moottori': moottori } });
-  const jono = ['openai', 'xai'];
-  const ok = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', 'xai', { viiveMs: 0, haku: async () => vastaus(jono.shift()) });
+  const jono = ['xai', 'eleven'];
+  const ok = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', undefined, { viiveMs: 0, haku: async () => vastaus(jono.shift()) });
   assert.equal(ok.ok, true);
-  const ei = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', 'xai', { yrityksia: 2, viiveMs: 0, haku: async () => vastaus('openai') });
+  const ei = await tarkistaPuhemoottori('https://w', 'https://matkakirja.app', 'eleven', { yrityksia: 2, viiveMs: 0, haku: async () => vastaus('xai') });
   assert.equal(ei.ok, false);
-  assert.equal(ei.moottori, 'openai');
+  assert.equal(ei.moottori, 'xai', 'xAI-varapolku ei kelpaa julkaisun tarkistukseen');
 });
 
 test('worker: lukijan xAI-ääni on pelaajan valinta ilman kehittäjäkoodia (omistaja 27.9.2026)', async () => {
