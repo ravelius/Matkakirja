@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (142)",
+   "paiva": "2026-10-05",
+   "teksti": "Jatka matkaa -napin jälkeen Pulu ei enää lue, ja lukijan äänen voi vaihtaa kesken lukemisen. ISS-kameraan tuli 15 eurooppalaista kohdetta, ja suuret kuvat avautuvat luotettavasti. Olavinlinnan kamera liikkuu pehmeästi, kertoja kuuluu selvästi ja Myllyssä on äänet."
+  },
+  {
    "versio": "1.1 (141)",
    "paiva": "2026-10-04",
    "teksti": "Olavinlinna aukeaa iPhonella vaakana. Huoneiden nimilaput ja kortit ovat nyt keskiaikaisia käsikirjoituksia: laput tulevat näkyviin kohteiden kohdalle sitä mukaa kuin lähestyt, ja kortti avautuu selitettävän kohteen viereen. Huoneet-valikko mahtuu vaakaruudulle."
