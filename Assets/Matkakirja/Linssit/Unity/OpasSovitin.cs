@@ -320,8 +320,6 @@ namespace Matkakirja.Natiivi
             if (silmukka == null) yield break;
             takyt = r.result == UnityWebRequest.Result.Success ? OpasTaky.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : new List<OpasTaky>();
             o.Kirjaa($"opas: täkyt {takyt.Count} ({(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
-            // Varapolku (Päätoimittaja 6.10., junan 146 VIE-ehto; Natiivi-UI): ilman täkyjä opas alkaa kuten ennen täkyavausta,
-            // ellei pelaaja ole jo valinnut paikkaa valikosta.
             if (takyt.Count == 0 && !silmukka.Aloitettu) silmukka.Aloita(Aloituskaupunki);
         }
 
