@@ -259,6 +259,26 @@ namespace Matkakirja.Linssit.Kierros
             PelaajanPyynto();
         }
 
+        /// <summary>
+        /// Paikan vaihto koordinaatein (Natiivi-UI 6.10. 00.2x: Amsterdam valittu, kertoja kysyi siitä, mutta kamera jäi
+        /// Kööpenhaminaan): kuten VaihdaPaikka, ja kamera lentää heti kaupungin yleiskuvaan (siirtymälento, ei puhetta), jossa
+        /// se kiertää, kunnes workerin pysähdys tai pelaajan valinta vie eteenpäin.
+        /// </summary>
+        public void VaihdaPaikka(double lat, double lon)
+        {
+            VaihdaPaikka();
+            if (Vaihe == OpasVaihe.Valmis || KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, lat, lon) < SiirtymaMinM) return;
+            var yleis = new OpasKohde { Lat = lat, Lon = lon, KokoM = SiirtymaKokoM, Luokka = "alue" };
+            kohdeKehys = OpasKuvaus.Kehysta(yleis, 45, Suunta(Asento.Lat, Asento.Lon, lat, lon));
+            Ohjaus.Nollaa();
+            lahto = Asento;
+            LentoKestoS = LennonKesto(KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, lat, lon));
+            Vaihe = OpasVaihe.Lentaa; VaiheAika = 0;
+            puheAloitettu = true; siirtyma = true;
+        }
+        public const double SiirtymaMinM = 5000, SiirtymaKokoM = 2500;
+        bool siirtyma;
+
         /// <summary>Paikan vaihto valikosta (Natiivi-UI OpasValikko): kuten toive ilman tekstiä, nähdyt tyhjennetään.</summary>
         public void VaihdaPaikka()
         {
@@ -386,6 +406,14 @@ namespace Matkakirja.Linssit.Kierros
                     if (!puheAloitettu && VaiheAika >= Math.Max(PuheAikaisinS, LentoKestoS - PuheEnnenS)) { puheAloitettu = true; aaniLoppui = false; AlkaaPuhua?.Invoke(Nykyinen); }
                     // Saapuminen odottaa laattoja enintään SaapumisOdotusS (simu 18.39: saapuessa laatat 28–45 %).
                     if (t >= 1 && laatatValmiit != null && !laatatValmiit() && VaiheAika < LentoKestoS + SaapumisOdotusS) break;
+                    if (t >= 1 && siirtyma)
+                    {
+                        // Siirtymälento perillä: kaupungin yleiskuva kiertää; ei saapumista, puhetta eikä esihakua.
+                        siirtyma = false;
+                        NykyinenKehys = kohdeKehys; kierto = 0;
+                        Vaihe = OpasVaihe.Odottaa; VaiheAika = 0;
+                        break;
+                    }
                     if (t >= 1)
                     {
                         NykyinenKehys = kohdeKehys; kierto = 0;
