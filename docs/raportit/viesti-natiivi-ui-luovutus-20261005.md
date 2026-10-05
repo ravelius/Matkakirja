@@ -6,6 +6,16 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
+## TILA 6.10. klo 00.3x (uusin)
+
+- Juna 146: SHA natiivi-ui/iss-joystick 9256b8bd Natiivisepälle (joystickin keski piirretyn sauvan kohdalle, maanimet
+  paikat.json "maanimet", täkyjen varapolku). Todennettu käännöksellä 472a6a0e (+ LS1 444cd016 Amsterdam-lento), kuvat
+  lokit/natiivi-ui-1035/amsterdam/146koe-*. Amsterdam-valikko 5/5 (3244207f). Odottaa: pin-, +N- ja korttistillit
+  appilla lokit/natiiviseppa-app-146toisto2-7ac47be9 seuraavalla SIMU NYT -vuorolla, ennen VIE 12.
+- Juna 147: natiivi-ui/pulu-kuvakonteksti 20261915 (Pulun "kuva"-kenttä, Pelikoodari #4038; todisteet kun Pöllö julki).
+  Tekemättä: LAAJA/TELE-KYTKIN kameranapin viereen (hyväksytty), LCD "KEHITETÄÄN…" + latauspalkki + "KUVA VALMIS"
+  (LS2 linssiseppa2/iss-kamera-juliste 2b0c7d00: IssKameraKuva.Valmis(OmaKuva) Lahde/Laaja), maakuntakortti väistää chatin.
+
 ## KEHITYSTAHTI (omistaja 5.10. 12.30, Raamattu kohta 2 #3992)
 VIE-ikkunat klo 12 ja 20 (valmis + kuitattu lähtee, keskeneräinen odottaa). iPad-mittaus ei ole VIE-ehto. Toiminnallinen
 rutiinierä kuitataan ENSIN Laitetestaajalla; Päätoimittajalle vain omistajalle näkyvä/maku/sisältö (esim. latauspalkki).
