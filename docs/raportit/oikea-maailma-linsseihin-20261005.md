@@ -28,7 +28,7 @@ Ei Cesium ionia: proto ja pallo toimivat jo ilman sitä.
   *"You will not use the Google Maps Content with or near a non-Google map in Your Application"*. Matkakirjan ydin on oma
   pergamenttikartta ja oma S2-maailma samassa sovelluksessa. Lisäksi ehdoissa on välimuistikielto, Googlen logo ja attribuutiot
   näkyviin sekä kielto luoda Googlen datasta uutta sisältöä tai 3D-malleja.
-- **ion Community** on ilmainen kaupalliseen käyttöön vain, jos liikevaihto ja rahoitus ovat kumpikin alle 50 k$. Apuraha voi ylittää rajan
+- **ion Community** (korjattu 5.10. 11.0x): "Personal and non-commercial use". Kaupallinen käyttö on sallittu vain kokeiluna ("Exploratory commercial … development"), ja maksullinen tili vaaditaan joka tapauksessa, jos liikevaihto tai rahoitus ylittää 50 k$. Pilotti on kokeilua, mutta julkaisu vaatii maksullisen tilin tai oman isännöinnin. Apuraha voi ylittää rajan
   (tarkistettava). Muuten Commercial maksaa 149 $/kk ([hinnasto](https://cesium.com/platform/cesium-ion/pricing/)).
   Communityn rajat: 1 000 Google-juurilaattaa/kk, 15 Gt striimausta/kk.
 - **Johtopäätös:** omistajan 23.9. päätös "Googlen 3D-laattoja ei käytetä" pätee yhä myös ionin kautta. Syy on

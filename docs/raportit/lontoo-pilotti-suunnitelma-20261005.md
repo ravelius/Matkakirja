@@ -20,6 +20,10 @@ Avoin (**EPÄVARMA**): Environment Agencyn ilmakuvien lisenssi (OGL?) mahdollise
 
 ## 2. Community-rajat ja ylitys
 
+- **Käyttöehto (korjattu 11.0x, Linssiseppä):** Community = "Personal and non-commercial use" + "Exploratory commercial … development". Pilotti kuuluu tähän, mutta julkaisu ei: julkaisussa rakennukset tulevat omasta ämpäristä (OSM → LOD1), ja varapolusta tulee todennäköisesti pääpolku. Omistajan linja (10.45): Community toistaiseksi, arvioidaan uudelleen ennen avointa julkaisua.
+- **World Terrain jätetään pois (Linssiseppä):** oma GLO-30-maasto riittää tasaiseen Lontooseen. ionista käytetään vain OSM Buildingsia (96188).
+- **Lontoon kuva:** s2-eurooppa/v1 päättyy z10:een (~95 m/px Lontoossa). Tarvitaan oma Lontoo-S2 z11–13 natiivista 10 m:stä (ks. kohta 6).
+
 - 15 Gt striimausta/kk (sisältääkö World Terrainin ja OSM Buildingsin: **EPÄVARMA**, mitataan ion-tilin käyttösivulta pilotissa).
 - **Ylitys:** "Once over quota, your account will continue to work without interruption". Cesium ottaa yhteyttä sähköpostilla
   ennen jäädytystä ([quotas](https://cesium.com/docs/tutorials/optimizing-quotas)). Pilotille riittää.
