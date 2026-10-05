@@ -186,7 +186,7 @@ namespace Matkakirja.Natiivi
         public static ISilmukka LinssiSilmukka(string tunnus)
         {
             var s = Instanssi;
-            var l = new PooliAani { Url = tunnus };
+            var l = new PooliAani { Url = tunnus, Saumaton = true };
             var kahva = new SilmukkaKahva(s, l);
             if (s == null || string.IsNullOrEmpty(tunnus)) return kahva;
             s.pooliElossa.Add(l);
@@ -207,6 +207,8 @@ namespace Matkakirja.Natiivi
             public UnityWebRequest Pyynto;
             public int Viitteet;
             public bool Striimi, Valmis, Virhe, Tuhottu;
+            /// <summary>Välimuistiavain, jos eri kuin Url (saumaton silmukka: Url + "#saumaton").</summary>
+            public string Avain;
         }
 
         sealed class Lahde
@@ -243,6 +245,8 @@ namespace Matkakirja.Natiivi
             /// <summary>Sanelun kova tauko on pysäyttänyt silmukan (Natiiviseppä 29.9., katselmointi a/c).</summary>
             public bool Tauotettu;
             public int Vuoro;
+            /// <summary>Linssin silmukka (LinssiSilmukka): puretaan saumattomaksi (PuraSaumaton).</summary>
+            public bool Saumaton;
         }
 
         /// <summary>ISilmukka-kahva: turvallinen kutsua vapautuksen jälkeenkin (L.Vapautettu ohittaa hiljaa).</summary>
@@ -541,7 +545,8 @@ namespace Matkakirja.Natiivi
         {
             if (k.Tuhottu) return;
             k.Tuhottu = true;
-            if (klipit.TryGetValue(k.Url, out var x) && x == k) klipit.Remove(k.Url);
+            string avain = k.Avain ?? k.Url;
+            if (klipit.TryGetValue(avain, out var x) && x == k) klipit.Remove(avain);
             if (k.Clip != null) Destroy(k.Clip);
             k.Clip = null;
             k.Pyynto?.Dispose();
@@ -780,6 +785,90 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Klippi levyltä: yli 3 Mt striimattuna (pyyntö elää klipin ajan), muuten pakattuna muistiin.</summary>
+        /// <summary>
+        /// SAUMATON SILMUKKA (Siirtoseppä 5.10.2026; Päätoimittajan mittaus linnan esittelystä: täyskatko 9,065 s välein, ~25 ms
+        /// digitaalista hiljaisuutta): FMOD ei lue MP3:n LAME/Info-otsakkeen gapless-tietoa, vaan soittaa enkooderin viiveen ja lopun
+        /// täytteen osana silmukkaa. Linnan 9,000 s:n tuuli ja laineet soivat siksi 9,065 s:n jaksolla, ja kun kahden silmukan saumat
+        /// osuvat yhteen, kuuluu nikotus. Linssin silmukat puretaan PCM:ksi (pienet, ei striimiä), alun hiljaisuus (< −80 dB) leikataan ja
+        /// pituus asetetaan otsakkeen mukaiseksi (kehykset × 1152 − viive − täyte); ilman otsaketta myös lopun hiljaisuus leikataan.
+        /// </summary>
+        IEnumerator PuraSaumaton(Klippi k, string levy)
+        {
+            var p = UnityWebRequestMultimedia.GetAudioClip("file://" + levy, Tyyppi(k.Url));
+            var dh = (DownloadHandlerAudioClip)p.downloadHandler;
+            dh.streamAudio = false;
+            dh.compressed = false; // GetData vaatii puretun klipin
+            yield return p.SendWebRequest();
+            AudioClip c = null;
+            try { if (p.result == UnityWebRequest.Result.Success) c = DownloadHandlerAudioClip.GetContent(p); }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ääni: " + e.Message); }
+            p.Dispose();
+            if (c == null || c.loadState == AudioDataLoadState.Failed || c.length <= 0 || k.Tuhottu)
+            {
+                if (c != null) Destroy(c);
+                if (!k.Tuhottu) { Debug.LogWarning($"MATKAKIRJA ääni ei purkautunut (saumaton): {levy}"); k.Virhe = true; }
+                yield break;
+            }
+            AudioClip tulos = c;
+            try
+            {
+                int kan = c.channels, n = c.samples, taajuus = c.frequency;
+                var data = new float[n * kan];
+                if (c.GetData(data, 0))
+                {
+                    const float Raja = 1e-4f; // −80 dB: viiveen digitaalinen hiljaisuus, ei äänitteen omaa häivytystä
+                    bool Hiljaa(int i) { for (int j = 0; j < kan; j++) if (Math.Abs(data[i * kan + j]) >= Raja) return false; return true; }
+                    int alku = 0, loppu = n, raja = taajuus / 5;
+                    while (alku < raja && alku < n - 1 && Hiljaa(alku)) alku++;
+                    int odotettu = GaplessPituus(levy);
+                    if (odotettu > 0 && alku + odotettu <= n) loppu = alku + odotettu;
+                    else while (loppu > alku + 1 && n - loppu < raja && Hiljaa(loppu - 1)) loppu--;
+                    if (alku > 0 || loppu < n)
+                    {
+                        var osa = new float[(loppu - alku) * kan];
+                        Array.Copy(data, alku * kan, osa, 0, osa.Length);
+                        tulos = AudioClip.Create(c.name, loppu - alku, kan, taajuus, false);
+                        tulos.SetData(osa, 0);
+                        Destroy(c);
+                        Debug.Log($"MATKAKIRJA ääni: saumaton silmukka {Path.GetFileName(k.Url)}: alusta {alku}, lopusta {n - loppu} näytettä → {(loppu - alku) / (double)taajuus:F3} s" +
+                                  (odotettu > 0 ? " (otsake)" : " (hiljaisuus)"));
+                    }
+                }
+            }
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ääni: saumaton silmukka ei onnistunut: " + e.Message); }
+            tulos.name = k.Url;
+            k.Clip = tulos;
+            k.Valmis = true;
+        }
+
+        /// <summary>MP3:n Xing/Info + LAME/Lavc-otsakkeesta alkuperäinen pituus näytteinä (kehykset × 1152 − viive − täyte); −1 = ei tietoa.</summary>
+        static int GaplessPituus(string levy)
+        {
+            try
+            {
+                var b = new byte[16384];
+                int luettu;
+                using (var f = File.OpenRead(levy)) luettu = f.Read(b, 0, b.Length);
+                int o = 0;
+                if (luettu > 10 && b[0] == 'I' && b[1] == 'D' && b[2] == '3') o = 10 + ((b[6] << 21) | (b[7] << 14) | (b[8] << 7) | b[9]);
+                int i = -1;
+                for (int x = o; x + 4 < Math.Min(luettu, o + 2048); x++)
+                    if ((b[x] == 'X' && b[x + 1] == 'i' && b[x + 2] == 'n' && b[x + 3] == 'g') || (b[x] == 'I' && b[x + 1] == 'n' && b[x + 2] == 'f' && b[x + 3] == 'o')) { i = x; break; }
+                if (i < 0 || i + 8 > luettu) return -1;
+                int liput = (b[i + 4] << 24) | (b[i + 5] << 16) | (b[i + 6] << 8) | b[i + 7], j = i + 8, kehyksia = -1;
+                if ((liput & 1) != 0) { kehyksia = (b[j] << 24) | (b[j + 1] << 16) | (b[j + 2] << 8) | b[j + 3]; j += 4; }
+                if ((liput & 2) != 0) j += 4;
+                if ((liput & 4) != 0) j += 100;
+                if ((liput & 8) != 0) j += 4;
+                if (kehyksia <= 0 || j + 24 > luettu) return -1;
+                if (!((b[j] == 'L' && b[j + 1] == 'A' && b[j + 2] == 'M' && b[j + 3] == 'E') || (b[j] == 'L' && b[j + 1] == 'a' && b[j + 2] == 'v'))) return -1;
+                int viive = (b[j + 21] << 4) | (b[j + 22] >> 4), tayte = ((b[j + 22] & 0x0F) << 8) | b[j + 23];
+                long pituus = (long)kehyksia * 1152 - viive - tayte;
+                return pituus > 0 && pituus < int.MaxValue ? (int)pituus : -1;
+            }
+            catch (Exception) { return -1; }
+        }
+
         IEnumerator Pura(Klippi k, string levy)
         {
             var p = UnityWebRequestMultimedia.GetAudioClip("file://" + levy, Tyyppi(k.Url));
@@ -888,6 +977,10 @@ namespace Matkakirja.Natiivi
             a.loop = true;
             a.volume = 0f;
             a.clip = l.K.Clip;
+            // Saumattomat linssin silmukat satunnaisesta kohdasta (simu 5.10. 02.40: tuulen ja laineiden lähteiden omat 5 ms:n
+            // reunahäivytykset osuivat yhteen 9,000 s välein, notko −12 dB / 10 ms). Eri vaihe → saumat eivät osu päällekkäin.
+            if (l.Saumaton && l.K.Clip != null && l.K.Clip.samples > 0 && l.K.Avain != null)
+                a.timeSamples = UnityEngine.Random.Range(0, l.K.Clip.samples);
             a.Play();
             l.A = a;
             l.Kaynnistetty = true;
@@ -919,9 +1012,12 @@ namespace Matkakirja.Natiivi
             try { koko = new FileInfo(levy).Length; } catch (Exception) { }
             bool striimi = Aanilataus.Striimataan(koko);
             Klippi k;
+            // PCM vie muistia (~0,35 Mt/s stereona): saumaton vain lyhyille silmukoille (< 600 kt ≈ 30 s), pidemmät kuten ennen.
+            bool saumaton = l.Saumaton && !striimi && koko > 0 && koko < 600_000;
+            string avain = saumaton ? url + "#saumaton" : url;
             while (true)
             {
-                if (!striimi && klipit.TryGetValue(url, out var jaettu) && !jaettu.Tuhottu)
+                if (!striimi && klipit.TryGetValue(avain, out var jaettu) && !jaettu.Tuhottu)
                 {
                     while (!jaettu.Valmis && !jaettu.Virhe && !jaettu.Tuhottu) yield return null;
                     if (jaettu.Tuhottu) continue;
@@ -929,12 +1025,12 @@ namespace Matkakirja.Natiivi
                     k = jaettu;
                     break;
                 }
-                k = new Klippi { Url = url, Striimi = striimi };
-                if (!striimi) klipit[url] = k;
-                yield return Pura(k, levy);
+                k = new Klippi { Url = url, Striimi = striimi, Avain = saumaton ? avain : null };
+                if (!striimi) klipit[avain] = k;
+                yield return saumaton ? PuraSaumaton(k, levy) : Pura(k, levy);
                 if (k.Virhe)
                 {
-                    if (klipit.TryGetValue(url, out var x) && x == k) klipit.Remove(url);
+                    if (klipit.TryGetValue(avain, out var x) && x == k) klipit.Remove(avain);
                     if (PooliVoimassa(l, vuoro)) PooliEpaonnistui(l, "purkuvirhe");
                     yield break;
                 }

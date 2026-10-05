@@ -34,6 +34,8 @@ namespace Matkakirja.Natiivi
             ["muurinharja"] = "Muurinharja", ["kappeli"] = "Kappeli", ["keskushalli"] = "Keskushalli", ["keittio"] = "Keittiö",
         };
 
+        static readonly (string Ryhma, string Nimi)[] RyhmaNimet =
+            { ("askeleet", "Askeleet"), ("kuoro", "Kuoro ja kellot"), ("tehosteet", "Tehosteet"), ("liekit", "Liekit"), ("taustat", "Taustat (kaikki)") };
         static readonly Dictionary<string, string> RaitaNimet = new Dictionary<string, string>
         {
             ["jarvi-laineet"] = "Järven laineet", ["linna-tuuli"] = "Tuuli", ["tulisija-ratina"] = "Tulisija",
@@ -113,7 +115,7 @@ namespace Matkakirja.Natiivi
             CupolaAani.RadioVaisto = Mathf.LerpUnclamped(1f, CupolaRadioVaisto, Arvo(d, "cupola|radio-vaisto", 100f) / 100f);
 
             DioraamaAanet.HuoneKerroin.Clear(); DioraamaAanet.TaustaKerroin.Clear();
-            DioraamaAanet.VaistoKerroin.Clear(); DioraamaAanet.KaikuKerroin.Clear();
+            DioraamaAanet.VaistoKerroin.Clear(); DioraamaAanet.KaikuKerroin.Clear(); DioraamaAanet.RyhmaKerroin.Clear();
             foreach (var pari in d)
             {
                 var osat = pari.Key.Split('|');
@@ -123,6 +125,7 @@ namespace Matkakirja.Natiivi
                 else if (id == "vaisto") DioraamaAanet.VaistoKerroin[huone] = pari.Value / 100f;
                 else if (id == "kaiku") DioraamaAanet.KaikuKerroin[huone] = pari.Value / 100f;
                 else if (id.StartsWith("tausta:", StringComparison.Ordinal)) DioraamaAanet.TaustaKerroin[id.Substring(7)] = pari.Value / 100f;
+                else if (id.StartsWith("ryhma:", StringComparison.Ordinal)) DioraamaAanet.RyhmaKerroin[id.Substring(6)] = pari.Value / 100f;
             }
             DioraamaAanet.KaikuPois = Arvo(d, "linna|*|kaiku-ab", 1f) < 0.5f;
             DioraamaAanet.KaikunPituus = Arvo(d, "linna|*|pitka", 0f) >= 0.5f ? "pitka" : "lyhyt";
@@ -136,6 +139,15 @@ namespace Matkakirja.Natiivi
             {
                 int i = rivi.LastIndexOf('=');
                 if (i > 0 && float.TryParse(rivi.Substring(i + 1), NumberStyles.Float, Inv, out var v)) tallennettu[rivi.Substring(0, i)] = v;
+            }
+            // Omistaja 5.10.: "Mikseriin ei jää nollia" — uudet linnan oletustasot (DioraamaAanet.RyhmaOletus, väistö): vanhat
+            // tallennetut linna-arvot (esim. taustat 0 %) pois kerran; Cupolan säädöt säilyvät.
+            if (PlayerPrefs.GetInt(Avain + "-linna-oletus2", 0) == 0)
+            {
+                foreach (var k in tallennettu.Keys.Where(k => k.StartsWith("linna|", StringComparison.Ordinal)).ToList()) tallennettu.Remove(k);
+                PlayerPrefs.SetString(Avain, string.Join(";", tallennettu.Select(p => p.Key + "=" + p.Value.ToString("0.###", Inv))));
+                PlayerPrefs.SetInt(Avain + "-linna-oletus2", 1);
+                PlayerPrefs.Save();
             }
             muokattu.Clear();
             foreach (var p in tallennettu) muokattu[p.Key] = p.Value;
@@ -232,7 +244,7 @@ namespace Matkakirja.Natiivi
             }
 
             string Avain(string id) => id == "kaiku-ab" || id == "pitka" ? "linna|*|" + id
-                : id.StartsWith("tausta:", StringComparison.Ordinal) ? "linna|*|" + id : $"linna|{huone}|{id}";
+                : id.StartsWith("tausta:", StringComparison.Ordinal) || id.StartsWith("ryhma:", StringComparison.Ordinal) ? "linna|*|" + id : $"linna|{huone}|{id}";
 
             List<MikseriSaadin> Rakenna()
             {
@@ -247,7 +259,9 @@ namespace Matkakirja.Natiivi
                     l.Add(S("pitka", "Pitkä kaiku (holvi)", 0, 1, A("pitka", 0f), "", 0));
                 }
                 l.Add(S("vaisto", "Väistö puheessa", 0, 100, A("vaisto", 100f)));
-                l.Add(S("huone", "Taustat yhteensä", 0, 200, A("huone", 100f)));
+                // Ääniryhmät (omistajan TF 141 -palaute 5.10.): säädin jokaiselle linnan äänelle; koko linnalle yhteiset.
+                foreach (var (ryhma, nimi) in RyhmaNimet) l.Add(S("ryhma:" + ryhma, nimi, 0, 200, A("ryhma:" + ryhma, 100f)));
+                l.Add(S("huone", "Taustat (tämä huone)", 0, 200, A("huone", 100f)));
                 foreach (var t in taustat) l.Add(S("tausta:" + t, RaidanNimi(t), 0, 200, A("tausta:" + t, 100f)));
                 return l;
             }

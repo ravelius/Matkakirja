@@ -330,6 +330,10 @@ namespace Matkakirja.Natiivi
         public void PaivitaLeikkaus(Rakennus rakennus, (string tila, double osuus) leikkaus, Camera kamera)
         {
             var t = leikkaus.tila != null && leikkaus.osuus > 0 ? rakennus?.Tilat?.Find(x => x.Id == leikkaus.tila) : null;
+            // LAITURI MUSTANA (omistajan TF 141 -kuva 5.10.): muurien ulkopuolinen tila (ulkona, ei omaa leikkaus-kenttää) ei leikkaa
+            // kuorta. Ilman tätä tilan rajat + vaakakuvan levennys (iPhone vaakana TF 141:stä alkaen) veivät laiturin takaa muurit,
+            // ja aukosta näkyi hämärän lähes musta taivas (simu 5.10.: päivätunnelmassa aukossa pilvet). Muurinharjalla on oma leikkaus.
+            if (t != null && t.Ulkona && t.LeikkausMin == null) t = null;
             if (t == null || go == null) { Shader.SetGlobalVector(IdLeikkausMin, Vector4.zero); LeikkausOsuus = 0; LeikkausTila = null; return; }
             var a = DioraamaNayttamo.UnityPiste(t.LeikkausMin ?? t.RajaMin);
             var b = DioraamaNayttamo.UnityPiste(t.LeikkausMax ?? t.RajaMax);

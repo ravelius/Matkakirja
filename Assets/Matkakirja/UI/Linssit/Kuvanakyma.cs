@@ -74,7 +74,6 @@ namespace Matkakirja.Natiivi
         bool autoNapitPiilossa;
         float autoKosketus;
         IVisualElementScheduledItem autoPiilotus;
-        readonly System.Collections.Generic.Dictionary<int, Vector3> autoSormet = new System.Collections.Generic.Dictionary<int, Vector3>();
         readonly Button autoNappi;
         readonly Label autoNimi, autoAika;
         IVisualElementScheduledItem autoAjo;
@@ -180,7 +179,9 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(pysayta, Kirjasin.KoneBold);
             autoPalkki = Rakenne.El("mk-astrokuva__autopalkki", autoLappu, PickingMode.Ignore);
             // AUTOn aikana (web sama): piilotettujen nappien aikana ensimmäinen napautus vain palauttaa ne (ei toimintoa alla);
-            // näkyvillä napeilla ‹ › ja AUTO toimivat itse, veto ja nipistys pysäyttävät AUTOn (web pysaytaAuto).
+            // näkyvillä napeilla ‹ › ja AUTO toimivat itse. AUTO SAMMUU VAIN AUTO-NAPISTA (omistaja 4.10.2026 klo 23.0x: "Iss auto
+            // tila ei saa mennä pois päältä kuin vasta jos pelaaja klikkaa sen itse pois"): ‹ ›, veto, nipistys ja zoomaus eivät
+            // enää pysäytä sitä (ennen web pysaytaAuto).
             juuri.RegisterCallback<PointerDownEvent>(e =>
             {
                 if (!AutoKaytossa || sijaintipallo.Sisaltaa(e.target as VisualElement)) return;   // pallo: AUTO tauolla, ei pysähdy
@@ -191,24 +192,8 @@ namespace Matkakirja.Natiivi
                     e.StopImmediatePropagation();
                     return;
                 }
-                var k = e.target as VisualElement;
-                if (k != null && kohdeNapit.Contains(k) && !autoKulma.Contains(k)) AsetaAuto(false);   // ‹ ›
                 AjastaAutoPiilotus();
             }, TrickleDown.TrickleDown);
-            // Veto (> 12 pt alkupisteestä) tai toinen sormi (nipistys) pysäyttää AUTOn kuten ennen.
-            juuri.RegisterCallback<PointerDownEvent>(e =>
-            {
-                if (sijaintipallo.Sisaltaa(e.target as VisualElement)) return;
-                autoSormet[e.pointerId] = e.position;
-                if (AutoKaytossa && autoSormet.Count > 1) AsetaAuto(false);
-            }, TrickleDown.TrickleDown);
-            juuri.RegisterCallback<PointerMoveEvent>(e =>
-            {
-                if (!AutoKaytossa || !autoSormet.TryGetValue(e.pointerId, out var alku)) return;
-                if (((Vector2)e.position - (Vector2)alku).sqrMagnitude > 144f) AsetaAuto(false);
-            }, TrickleDown.TrickleDown);
-            juuri.RegisterCallback<PointerUpEvent>(e => autoSormet.Remove(e.pointerId), TrickleDown.TrickleDown);
-            juuri.RegisterCallback<PointerCancelEvent>(e => autoSormet.Remove(e.pointerId), TrickleDown.TrickleDown);
 
             sijaintipallo = new Sijaintipallo(turva);
             sijaintipallo.Ehdokkaat = () => Linssi()?.Kohteet;
@@ -331,7 +316,6 @@ namespace Matkakirja.Natiivi
             LopetaSiirto();
             NaytaAutoNapit(true);   // seuraava avaus alkaa napit näkyvissä
             autoPiilotus?.Pause();
-            autoSormet.Clear();
             luentaVuoro++;
             LopetaLuenta();
             kelaus?.Pause();
@@ -399,7 +383,10 @@ namespace Matkakirja.Natiivi
             LueSelite(h);
             if (lisatiedotAuki) LadoLisatiedot();
             for (int n = 0; n < nauha.childCount; n++) nauha[n].EnableInClassList("mk-valittu", n == i);
-            NollaaZoomi();
+            // AUTOssa seuraava kuva samalla zoomilla (omistaja 23.0x: "Jos kuvan suurentaa kokonäytön kokoiseksi, seuraava kuva tulee
+            // aueta auto tilassa samalla zoom tasolla"): zoomi säilyy, kuva keskitetään (Sovita rajaa uuden kuvan mukaan).
+            if (AutoKaytossa && zoomi > 1.001f) { siirto = Vector2.zero; Aseta(); Debug.Log($"MATKAKIRJA kuvaselite: AUTO, zoomi {zoomi:0.##} säilyy"); }
+            else NollaaZoomi();
             tekstuuri = null;
             kuva.style.backgroundImage = StyleKeyword.None;
             string osoite = h?.Kuva;
@@ -743,6 +730,15 @@ namespace Matkakirja.Natiivi
                 case "mittaa": MittaaKoko(1.2f); break;
                 case "auto": AsetaAuto(true); break;          // AUTO päälle (web PR #3817)
                 case "auto-pois": AsetaAuto(false); break;
+                case "luettu":
+                {
+                    // Testi: selitteen luenta päättyy nyt (AUTO-vaihdot tallenteeseen odottamatta koko luentaa).
+                    int v = luentaVuoro;
+                    var p = Puhe.Instanssi;
+                    if (luennanUrl != null && p != null && p.SoivaUrl == luennanUrl) p.Pysayta(0.1f);
+                    LuentaLoppui(v);
+                    return $"luenta päättyi, AUTO {(AutoKaytossa ? "päällä" : "pois")}, zoomi {zoomi:0.##}, kuva {indeksi}";
+                }
                 default:
                     // ui linssi kuvaselite zoomi:<x>: kuva x-kertaiseksi keskeltä (rajattu ylärajaan Suurin = 8×), tila lokiin.
                     if (komento.StartsWith("zoomi:") && float.TryParse(komento.Substring(6), System.Globalization.NumberStyles.Float,

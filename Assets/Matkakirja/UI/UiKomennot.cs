@@ -411,7 +411,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Testinapautus paneelin pisteeseen: ylin kerros, jonka poiminta osuu (ei juuri), saa Down + Up.</summary>
-        static string Napauta(Vector2 piste)
+        static string Napauta(Vector2 piste, bool klikki = false)
         {
             foreach (var (kerros, juuri) in UiKerros.Hae().Juuret.OrderByDescending(x => x.Kerros))
             {
@@ -424,6 +424,7 @@ namespace Matkakirja.Natiivi
                 var ylos = new Event { type = EventType.MouseUp, mousePosition = piste, button = 0, clickCount = 1 };
                 using (var e = PointerDownEvent.GetPooled(alas)) { e.target = osuma; osuma.SendEvent(e); }
                 using (var e = PointerUpEvent.GetPooled(ylos)) { e.target = osuma; osuma.SendEvent(e); }
+                if (klikki && osuma.panel != null) using (var c = ClickEvent.GetPooled(ylos)) { c.target = osuma; osuma.SendEvent(c); }
                 var nappi = osuma as Button ?? osuma.GetFirstAncestorOfType<Button>();
                 if (nappi == null)
                     // Laajennuksen selvitys: lähimmät kosketusnapit (keskipiste alle 40 yksikön päässä).
@@ -703,11 +704,14 @@ namespace Matkakirja.Natiivi
                     return null;
                 }
                 case "napauta":
+                case "napautaklik":
                 {
+                    // napautaklik (juna 142): kuten napauta, mutta irrotuksen perään ClickEvent poimitulle kohteelle kuten
+                    // sormella (UI Toolkit synnyttää Clickin; kortin ohinapautus sulkee Clickistä).
                     var nk = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
                     if (nk.Length < 2 || !float.TryParse(nk[0], NumberStyles.Float, CultureInfo.InvariantCulture, out var nx)
                         || !float.TryParse(nk[1], NumberStyles.Float, CultureInfo.InvariantCulture, out var ny)) return "käyttö: ui napauta x y";
-                    Kirjaa(Napauta(new Vector2(nx, ny)));
+                    Kirjaa(Napauta(new Vector2(nx, ny), osat[1].ToLowerInvariant() == "napautaklik"));
                     return null;
                 }
                 case "peitteet":
@@ -815,7 +819,9 @@ namespace Matkakirja.Natiivi
                     Kirjaa($"pelaaja: kehittäjätila {(Asetukset.Kehittaja ? "päällä" : "pois")} (pakotettu pelaaja {Asetukset.PakotaPelaaja})");
                     return null;
                 case "kierto":
+                    // vaaka2 = toinen vaakasuunta (Dynamic Island oikealla), kuvapareihin molemmat suunnat.
                     Screen.orientation = loput == "vaaka" ? ScreenOrientation.LandscapeLeft
+                        : loput == "vaaka2" ? ScreenOrientation.LandscapeRight
                         : loput == "pysty" ? ScreenOrientation.Portrait : ScreenOrientation.AutoRotation;
                     return null;
                 case "haku":
@@ -965,6 +971,25 @@ namespace Matkakirja.Natiivi
                     string pk = loput.Trim().Length > 0 ? loput.Trim().ToLowerInvariant() : "ateena";
                     UiKerros.Hae().StartCoroutine(NostoSisalto.Pooli(pk, l => Kirjaa("ui pooli " + pk + ": " + l.Count + (l.Count > 0 ? " · " + string.Join(", ", l) : ""))));
                     return null;
+                }
+                case "lukijavalinta":
+                {
+                    // "ui lukijavalinta Ääni|Moottori [avaa|+|-|n]" (juna 142): lukijan valikon valintarivi kuten napautus.
+                    var lv = loput.Split(new[] { ' ' }, 2, System.StringSplitOptions.RemoveEmptyEntries);
+                    return "=" + KortinLukija.TestaaValinta(lv.Length > 0 ? lv[0] : "Ääni", lv.Length > 1 ? lv[1] : "");
+                }
+                case "lukijaaani":
+                {
+                    // "ui lukijaaani eleven|xai [n]" (juna 142): moottori ja n:s ääni kuten lukijan valikosta (soiva pala alkaa
+                    // uudella äänellä, KortinLukija.AaniVaihtui); ilman n:ää tila.
+                    var la = loput.Split(new[] { ' ' }, System.StringSplitOptions.RemoveEmptyEntries);
+                    if (la.Length > 0) Striimiaani.Moottori = la[0];
+                    if (la.Length > 1 && int.TryParse(la[1], out int ln) && ln >= 0 && ln < Striimiaani.ElevenAanet.Count)
+                        Striimiaani.ElevenAani = Striimiaani.ElevenAanet[ln].Tunnus;
+                    if (la.Length > 0) KortinLukija.AaniVaihtui();
+                    var mv = Striimiaani.MoottoriValinta();
+                    return $"=lukijaaani: sallittu {Striimiaani.MoottoriSallittu}, moottori {Striimiaani.Moottori}, valinta {(mv == null ? "xai" : mv.Value.Moottori + ":" + mv.Value.Aani)}, "
+                        + $"ääni {Striimiaani.ElevenAanet.FirstOrDefault(x => x.Tunnus == Striimiaani.ElevenAani).Nimi}, koodi {(Asetukset.PolloKoodi != null ? "on" : "ei")}";
                 }
                 case "nostonappi":
                 {
@@ -1185,6 +1210,8 @@ namespace Matkakirja.Natiivi
                     var o = loput.Split(' ');
                     string nk = o.Length > 0 && o[0].Length > 0 ? o[0] : "paa";
                     int n = o.Length > 1 && int.TryParse(o[1], out int nn) ? nn : -1;
+                    // ui pilleri kesken [0|1]: KESKENERÄISET-osio kiinni/auki (oletus auki) ja Linssit-näkymä uudelleen.
+                    if (nk == "kesken") return "=" + ui.Linssit.Valitsin.TestaaKesken(n != 0);
                     return "=" + ui.Linssit.Valitsin.TestaaNakyma(nk, n);
                 }
                 case "maakunnat":
@@ -1286,11 +1313,28 @@ namespace Matkakirja.Natiivi
                 {
                     var o = loput.Split(' ');
                     if (o.Length >= 2 && o[0] == "raja" && long.TryParse(o[1], out var mt)) Kuvat.AsetaRaja(mt);
+                    // "ui kuvat hae <url>" (juna 142, isot Gateway-kuvat): koko ja muisti latauksen jälkeen.
+                    if (o.Length >= 2 && o[0] == "hae")
+                    {
+                        string url = o[1];
+                        Kuvat.Hae(url, t => Kirjaa($"kuvat hae: {(t != null ? $"{t.width}×{t.height}, " : "ei kuvaa, ")}{Kuvat.Tila()}"));
+                        return "=kuvat hae aloitettu";
+                    }
+                    // "ui kuvat nayta <url> | sulje": kuva koko ruudulle (Kuvasuurennos, sama Kuvat.Hae-polku) still-todisteeseen.
+                    if (o.Length >= 1 && o[0] == "sulje") { testiSuurennos?.Sulje(); return "=suljettu"; }
+                    if (o.Length >= 2 && o[0] == "nayta")
+                    {
+                        testiSuurennos ??= new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
+                        testiSuurennos.Avaa(new List<LehtiKuva> { new LehtiKuva { Lahde = o[1], Otsikko = "testi" } }, 0);
+                        return "=kuvat nayta";
+                    }
                     return Kuvat.Tila();
                 }
                 default: return "tuntematon ui-komento";
             }
         }
+
+        static Kuvasuurennos testiSuurennos;
 
         // --- ui livia ------------------------------------------------------------------
 

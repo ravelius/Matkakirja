@@ -1729,14 +1729,22 @@
     -unity-text-align: middle-left;
 }
 
-/* ✕: 44 pt:n osuma-ala ja 28 pt:n harmaa ympyrä (web .astro-sulku::before). */
-.mk-astroTaulu__sulku {
-    /* OHJAUSNAPPI (Pohjat/ohjausnappi.uss); otsikkorivi ei kasva napin mukana. */
-    margin: -6px 0 -6px var(--tk-vali-s);
-}
-
 .mk-astroTaulu__rivit {
     flex-direction: column;
+}
+
+/* Matalassa ruudussa (iPhone vaaka) vain rivit vierittyvät: otsikko, rivit ja Kysy Pululta eivät kutistu päällekkäin
+   (omistaja TF 140, 4.10.2026 klo 22.4x). */
+.mk-astroTaulu__vieritys {
+    flex-shrink: 1;
+    min-height: 0;
+}
+
+.mk-astroTaulu__ylarivi,
+.mk-astroTaulu__rivit,
+.mk-astroTaulu__rivi,
+.mk-astroTaulu__linkki {
+    flex-shrink: 0;
 }
 
 .mk-astroTaulu__rivi {
@@ -3163,6 +3171,8 @@
 .mk-linssivalitsin--valikko .mk-selite__ylarivi {
     padding: 0 2px 2px 5.6px;
     margin-bottom: 2px;
+    /* Ei kutistu korkeusrajassa (omistaja TF 140, iPhone vaaka: "‹ Takaisin" ja välilehdet koskivat paneelin yläreunaan). */
+    flex-shrink: 0;
 }
 
 .mk-linssivalitsin--valikko .mk-selite__sulje {

@@ -381,6 +381,18 @@ namespace Matkakirja.Natiivi
                 tulos = l.result == UnityWebRequest.Result.Success ? Nimea(DownloadHandlerTexture.GetContent(l), avain) : null;
                 kiintea = tulos != null && muunna == null && mukana.StartsWith(Application.streamingAssetsPath, StringComparison.Ordinal);
             }
+#if UNITY_IOS && !UNITY_EDITOR
+            // ISO KUVA SIVURAJALLA (Päätoimittaja 5.10.2026, #3966: Gatewayn alkuperäiset 4256–5568 px, 1–5 Mt purkautuivat
+            // GetTexturella ~83 Mt:n RGBA:ksi, kun iPhonen LRU-raja on 200 Mt ja kuvanäkymä esihakee naapurit): levyllä oleva
+            // ≥ IsoKuvaTavut-tiedosto puretaan ImageIO:lla pitkä sivu ≤ PurkuSivu taustasäikeessä (MatkakirjaKuvat_Pura).
+            if (tulos == null && !OnWebpOsoite(reitit[0]) && File.Exists(levy) && new FileInfo(levy).Length >= IsoKuvaTavut)
+            {
+                var w = LataaWebp(avain, new[] { reitit[0] }, levy, null, t => tulos = t, PurkuSivu);
+                while (w.MoveNext()) yield return w.Current;
+                // 3) Vara: täysikokoinen GetTexture alla; muistipiikki näkyviin lokiin.
+                if (tulos == null) Debug.LogWarning($"MATKAKIRJA ui kuva: iso levykuva ei purkautunut sivurajalla, täysikokoinen GetTexture ({new FileInfo(levy).Length / 1024} kt)");
+            }
+#endif
             if (tulos == null && !OnWebpOsoite(reitit[0]) && File.Exists(levy))
             {
                 using var l = UnityWebRequestTexture.GetTexture("file://" + levy, true);
@@ -388,6 +400,34 @@ namespace Matkakirja.Natiivi
                 tulos = l.result == UnityWebRequest.Result.Success ? Nimea(DownloadHandlerTexture.GetContent(l), avain) : null;
                 if (tulos == null) try { File.Delete(levy); } catch (IOException) { }
             }
+#if UNITY_IOS && !UNITY_EDITOR
+            for (int i = 0; tulos == null && !OnWebpOsoite(reitit[0]) && i < reitit.Length; i++)
+            {
+                string reitti = reitit[i];
+                byte[] tavut = null;
+                yield return Esilataaja.Hae(() => { var q = Otsakkeet(UnityWebRequest.Get(reitti), reitti); q.timeout = 20; return q; }, Taso.Nakyva, "kuva",
+                    p => { if (p.result == UnityWebRequest.Result.Success) tavut = p.downloadHandler.data; });
+                if (tavut == null || tavut.Length < 16) continue;
+                var kirjoitus = System.Threading.Tasks.Task.Run(() =>
+                {
+                    try { Directory.CreateDirectory(Path.GetDirectoryName(levy)); KirjoitaAtomisesti(levy, tavut); return true; }
+                    catch (IOException e) { Debug.LogWarning("MATKAKIRJA ui kuva: " + e.Message); return false; }
+                });
+                if (tavut.Length >= IsoKuvaTavut)
+                {
+                    var pura = PuraTavut(tavut, avain, PurkuSivu, t => tulos = t);
+                    while (pura.MoveNext()) yield return pura.Current;
+                    if (tulos != null) { Debug.Log($"MATKAKIRJA ui kuva: iso {tavut.Length / 1024} kt purettu {tulos.width}×{tulos.height}"); continue; }
+                    Debug.LogWarning($"MATKAKIRJA ui kuva: iso verkkokuva ei purkautunut sivurajalla, täysikokoinen GetTexture ({tavut.Length / 1024} kt)");
+                }
+                while (!kirjoitus.IsCompleted) yield return null;
+                if (!kirjoitus.Result || !File.Exists(levy)) continue;
+                using var l = UnityWebRequestTexture.GetTexture("file://" + levy, true);
+                yield return l.SendWebRequest();
+                tulos = l.result == UnityWebRequest.Result.Success ? Nimea(DownloadHandlerTexture.GetContent(l), avain) : null;
+            }
+#else
+            // Muut alustat (editori): GetTexture suoraan verkosta kuten ennen (iOS:n silmukka yllä on jo yrittänyt reitit).
             for (int i = 0; tulos == null && !OnWebpOsoite(reitit[0]) && i < reitit.Length; i++)
             {
                 string reitti = reitit[i];
@@ -415,6 +455,7 @@ namespace Matkakirja.Natiivi
                     catch (IOException e) { Debug.LogWarning("MATKAKIRJA ui kuva: " + e.Message); }
                 });
             }
+#endif
             if (tulos != null && muunna != null)
             {
                 Texture2D pieni = null;
@@ -454,7 +495,7 @@ namespace Matkakirja.Natiivi
         /// esikerrottu alfa, rivi 0 alhaalla) ja alfa takaisin suoraksi, koska UI Toolkit piirtää suoralla
         /// alfalla (esikerrottu tummentaisi piirrosten häivytetyt reunat). Editorissa ei purkua (null).
         /// </summary>
-        static IEnumerator LataaWebp(string avain, string[] reitit, string levy, string mukana, Action<Texture2D> valmis)
+        static IEnumerator LataaWebp(string avain, string[] reitit, string levy, string mukana, Action<Texture2D> valmis, int sivu = 0)
         {
             byte[] tavut = null;
             string lahde = File.Exists(levy) ? levy : mukana;
@@ -473,9 +514,38 @@ namespace Matkakirja.Natiivi
             }
             if (tavut == null || tavut.Length < 16) { valmis(null); yield break; }
 #if UNITY_IOS && !UNITY_EDITOR
+            Texture2D purettu = null;
+            var pura = PuraTavut(tavut, avain, sivu, t => purettu = t);
+            while (pura.MoveNext()) yield return pura.Current;
+            if (purettu == null) { valmis(null); yield break; }
+            if (verkosta)
+                System.Threading.Tasks.Task.Run(() =>
+                {
+                    try { Directory.CreateDirectory(Path.GetDirectoryName(levy)); KirjoitaAtomisesti(levy, tavut); }
+                    catch (IOException e) { Debug.LogWarning("MATKAKIRJA ui kuva: " + e.Message); }
+                });
+            valmis(purettu);
+#else
+            valmis(null);
+#endif
+        }
+
+        /// <summary>Iso kuva puretaan sivurajalla (≥ 1 Mt; 4256 px:n kuva ~83 Mt → ~28 Mt mippeineen).</summary>
+        const long IsoKuvaTavut = 1_000_000;
+        /// <summary>Pitkän sivun yläraja purussa (iPad Pro 12,9":n pitkä sivu; pienempää ei suurenneta).</summary>
+        const int PurkuSivu = 2732;
+
+#if UNITY_IOS && !UNITY_EDITOR
+        /// <summary>
+        /// Kuvatiedoston purku ImageIO:lla taustasäikeessä (RGBA8 + mipit, esikerrottu alfa, rivi 0 alhaalla), pitkä sivu
+        /// ≤ <paramref name="sivu"/>, ja alfa takaisin suoraksi, koska UI Toolkit piirtää suoralla alfalla (esikerrottu
+        /// tummentaisi piirrosten häivytetyt reunat). Webp ja isot jpg/png.
+        /// </summary>
+        static IEnumerator PuraTavut(byte[] tavut, string avain, int sivu, Action<Texture2D> valmis)
+        {
             var tyo = System.Threading.Tasks.Task.Run(() =>
             {
-                IntPtr d = MatkakirjaKuvat_Pura(tavut, tavut.Length, 0, out int w, out int h, out int koko);
+                IntPtr d = MatkakirjaKuvat_Pura(tavut, tavut.Length, sivu, out int w, out int h, out int koko);
                 byte[] rgba = null;
                 if (d != IntPtr.Zero)
                 {
@@ -499,20 +569,10 @@ namespace Matkakirja.Natiivi
             if (data == null) { valmis(null); yield break; }
             var t = new Texture2D(leveys, korkeus, TextureFormat.RGBA32, true);
             try { t.LoadRawTextureData(data); t.Apply(false, true); }
-            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui kuva webp: " + e.Message); UnityEngine.Object.Destroy(t); valmis(null); yield break; }
-            if (verkosta)
-                System.Threading.Tasks.Task.Run(() =>
-                {
-                    try { Directory.CreateDirectory(Path.GetDirectoryName(levy)); KirjoitaAtomisesti(levy, tavut); }
-                    catch (IOException e) { Debug.LogWarning("MATKAKIRJA ui kuva: " + e.Message); }
-                });
+            catch (Exception e) { Debug.LogWarning("MATKAKIRJA ui kuva purku: " + e.Message); UnityEngine.Object.Destroy(t); valmis(null); yield break; }
             valmis(Nimea(t, avain));
-#else
-            valmis(null);
-#endif
         }
 
-#if UNITY_IOS && !UNITY_EDITOR
         [System.Runtime.InteropServices.DllImport("__Internal")]
         static extern IntPtr MatkakirjaKuvat_Pura(byte[] tavut, int pituus, int sivu, out int leveys, out int korkeus, out int koko);
         [System.Runtime.InteropServices.DllImport("__Internal")]

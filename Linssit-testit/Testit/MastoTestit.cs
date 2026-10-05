@@ -262,7 +262,10 @@ namespace Matkakirja.Linssit.Testit
             l.Avaa(y);
             Oleta.Sama(0, m.Lista.Count, "ei 3D-mastoja");
             Oleta.Sama((double?)y.KokoPallonKorkeus, y.Katto, "koko maapallo");
-            Oleta.Sama(20.0, y.Ajo.Value.Kallistus, "loiva kallistus");
+            Oleta.Sama(0.0, y.Ajo.Value.Kallistus, "pallo suoraan ylhäältä (omistaja TF 140, 4.10.)");
+            // Omistaja TF 140: kaikki kanavat asteikolla yhtenä nauhana, ei vain kameran lähialueen asemia.
+            Oleta.Tosi(l.Asteikko.Count > 1, "asteikolla asemia");
+            Oleta.Tosi(l.NakymanAsteikko().SequenceEqual(l.Asteikko), "kaikki kanavat asteikolla");
             void Aja(double s) { for (double t = 0; t < s; t += 1 / 60.0) { y.Kello += 1 / 60.0; l.Paivita(); } }
             Aja(2);
             Oleta.Tosi(Math.Abs(m.H - 1) < 1e-6, "hämärä jää");

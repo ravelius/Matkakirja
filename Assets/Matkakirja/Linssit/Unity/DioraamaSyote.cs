@@ -15,6 +15,7 @@
 // yhden ruudun mitan, eli täysi kierto/kallistus ei vaadi koko ruudun mittaista vetoa (järkevä peukalotuntuma).
 // RajaaKierto (Kameraliike, kohta 1/5) kiristää tätä tarvittaessa vielä tilan/yleisnäkymän omiin rajoihin —
 // ks. Sovita alla, joka kutsuu PoikkileikkausLinssi.RajaaPelaajanAsento-metodia PelaajanAsennon jälkeen.
+using System;
 using Matkakirja.Linssit.Dioraama;
 using UnityEngine;
 using Kosketus = UnityEngine.InputSystem.EnhancedTouch.Touch;
@@ -28,7 +29,14 @@ namespace Matkakirja.Natiivi
     public sealed class DioraamaSyote
     {
         const float NapautusKynnysPx = 12f;
-        const float AstettaPerPikseli = 0.15f;
+        // KÄSIPYÖRITYS (omistaja 5.10., TF 141: "Miksi linnaa ei voi pyörittää koko kierrosta? Linnan käsin pyöritys on liian
+        // nopea. Saisi liikkua pehmeämmin"): screenPosition on PIKSELEITÄ (iPhone 3×), joten 0,15°/px saturoi ±20°:n rajan jo
+        // ~45 pt:n vedolla. Nyt kulma ruudun osuutena (koko leveys = 120°, koko korkeus = 40°), yleisnäkymässä vapaa 360°
+        // (rakennus.json ei rajaa yleiskameraa), huoneessa tilan kierto-rajat; irrotuksen jälkeen inertia hiipuu ~0,5 s:ssa.
+        const float AstettaLeveydella = 120f, AstettaKorkeudella = 40f, InertiaTau = 0.5f;
+        double inertiaDa, edellinenDa;
+        Kierto viimeKierto;
+        bool viimeHuoneessa;
         const float ZoomYliRajan = 1.5f; // PelaajanAsento puristaa 1,3:een asti; tämän yli pinnistys = yleisnäkymään
 
         readonly DioraamaSovitin sovitin;
@@ -42,6 +50,8 @@ namespace Matkakirja.Natiivi
         bool kaksiKaynnissa;
         float kaksiAlkuVali;
         double kokonaisDa, kokonaisDk, kokonaisZoom = 1;
+        // Eleen alun poikkeama (omistajan TF 141 -palaute 5.10.: uusi veto nollasi edellisen, kamera napsahti takaisin).
+        double vetoAlkuDa, vetoAlkuDk, zoomAlku = 1;
 
         public DioraamaSyote(DioraamaSovitin sovitin, DioraamaNayttamo nayttamo)
         {
@@ -56,13 +66,26 @@ namespace Matkakirja.Natiivi
         /// ei muuteta tätä varten (ks. Kohdista/Paivita-metodit siellä, joita tämä erä ei koske).</summary>
         public Asento Sovita(Asento perus)
         {
-            var pelaajan = Kameraliike.PelaajanAsento(perus, kokonaisDa, kokonaisDk, kokonaisZoom);
+            viimeKierto = perus.Kierto;
+            viimeHuoneessa = DioraamaSovitin.ViimeisinNakyma?.KohdeTila != null;
+            // Ytimen PelaajanAsento rajaa da:n ±20°:een (kultaiset vektorit): atsimuutti lisätään tässä, rajaus RajaaDa + RajaaKierto.
+            var p0 = Kameraliike.PelaajanAsento(perus, 0, kokonaisDk, kokonaisZoom);
+            var pelaajan = new Asento(p0.Kohde, p0.Atsimuutti + kokonaisDa, p0.Korkeus, p0.Etaisyys, p0.Fov, p0.Aukko, p0.Kierto);
             return DioraamaSovitin.Linssi != null ? DioraamaSovitin.Linssi.RajaaPelaajanAsento(perus, pelaajan) : pelaajan;
         }
 
         float aloitusAika;
 
-        public void NollaaPoikkeama() { kokonaisDa = 0; kokonaisDk = 0; kokonaisZoom = 1; kaksiKaynnissa = false; }
+        public void NollaaPoikkeama() { kokonaisDa = 0; kokonaisDk = 0; kokonaisZoom = 1; vetoAlkuDa = vetoAlkuDk = 0; zoomAlku = 1; kaksiKaynnissa = false; inertiaDa = 0; }
+
+        /// <summary>Atsimuuttipoikkeama rajattuna: huoneessa tilan kierto-rajat (oletus ±55°), yleisnäkymässä vapaa (ei rajaa).</summary>
+        double RajaaDa(double da)
+        {
+            if (!viimeHuoneessa && (viimeKierto == null || (viimeKierto.AtsimuuttiMin == null && viimeKierto.AtsimuuttiMax == null)))
+                return Math.IEEERemainder(da, 360.0);
+            var k = viimeKierto ?? Kierto.OletusTila;
+            return Math.Clamp(da, k.AtsimuuttiMin ?? -180, k.AtsimuuttiMax ?? 180);
+        }
 
         public void Paivita(Rakennus rakennus, double t)
         {
@@ -74,6 +97,14 @@ namespace Matkakirja.Natiivi
 
             if (n == 0)
             {
+                // Inertia: irrotuksen nopeus hiipuu eksponentiaalisesti (vain atsimuutti; kallistus ja zoom pysähtyvät heti).
+                if (Math.Abs(inertiaDa) > 0.3)
+                {
+                    float dt = Mathf.Min(Time.unscaledDeltaTime, 0.1f);
+                    kokonaisDa = RajaaDa(kokonaisDa + inertiaDa * dt);
+                    inertiaDa *= Math.Exp(-dt / InertiaTau);
+                }
+                else inertiaDa = 0;
                 // Savuke 1139 (4.10.): valikon huonevalinta saman kosketuksen aikana → irrotus ei ole dioraaman napautus.
                 if (DioraamaSovitin.ValikkoPyysi >= aloitusAika - 0.05f) tamaEleEstetty = true;
                 if (edellisetSormet == 1 && !tamaEleEstetty && liikeSitenAlusta < NapautusKynnysPx) Napauta(rakennus, aloitusKohta, t);
@@ -94,6 +125,7 @@ namespace Matkakirja.Natiivi
                 aloitusKohta = edellinenYhdenSormenKohta = sormet[0].screenPosition;
                 aloitusAika = Time.unscaledTime;
                 liikeSitenAlusta = 0f;
+                vetoAlkuDa = edellinenDa = kokonaisDa; vetoAlkuDk = kokonaisDk; inertiaDa = 0;
                 tamaEleEstetty = DioraamaSovitin.PeittaaRuutu != null && DioraamaSovitin.PeittaaRuutu(aloitusKohta);
             }
 
@@ -106,7 +138,8 @@ namespace Matkakirja.Natiivi
             if (n == 1)
             {
                 // Paluu kahdesta sormesta yhteen: jatketaan nykyisestä kohdasta (ei hyppyä nipistystä edeltävään pisteeseen).
-                if (kaksiKaynnissa) edellinenYhdenSormenKohta = sormet[0].screenPosition;
+                // Uusi alku myös vedolle, jottei kahden sormen jälkeen yhden sormen veto napsahda eleen alun kohtaan.
+                if (kaksiKaynnissa) { edellinenYhdenSormenKohta = aloitusKohta = sormet[0].screenPosition; vetoAlkuDa = edellinenDa = kokonaisDa; vetoAlkuDk = kokonaisDk; liikeSitenAlusta = NapautusKynnysPx; }
                 kaksiKaynnissa = false;
                 Vector2 p = sormet[0].screenPosition;
                 liikeSitenAlusta += Vector2.Distance(p, edellinenYhdenSormenKohta);
@@ -114,20 +147,25 @@ namespace Matkakirja.Natiivi
                 if (liikeSitenAlusta >= NapautusKynnysPx)
                 {
                     Vector2 d = p - aloitusKohta;
-                    kokonaisDa = Mathf.Clamp(-d.x * AstettaPerPikseli, -20f, 20f);
-                    kokonaisDk = Mathf.Clamp(d.y * AstettaPerPikseli, -10f, 10f);
+                    kokonaisDa = RajaaDa(vetoAlkuDa - d.x / Mathf.Max(1, Screen.width) * AstettaLeveydella);
+                    kokonaisDk = Mathf.Clamp((float)vetoAlkuDk + d.y / Mathf.Max(1, Screen.height) * AstettaKorkeudella, -10f, 10f);
+                    // Irrotusnopeus (°/s) pehmennettynä muutaman kehyksen yli; atsimuutin kääre ei hyppää (pieni ero).
+                    float dtv = Mathf.Max(Time.unscaledDeltaTime, 1e-3f);
+                    double muutos = Math.IEEERemainder(kokonaisDa - edellinenDa, 360.0);
+                    inertiaDa = 0.7 * inertiaDa + 0.3 * Math.Clamp(muutos / dtv, -240, 240);
+                    edellinenDa = kokonaisDa;
                 }
             }
             else // n >= 2: nipistys (zoom) + kahden sormen kierto siirtää da:ta samalla tavalla kuin veto
             {
                 Vector2 a = sormet[0].screenPosition, b = sormet[1].screenPosition;
                 float vali = Vector2.Distance(a, b);
-                if (!kaksiKaynnissa) { kaksiAlkuVali = Mathf.Max(1f, vali); kaksiKaynnissa = true; }
+                if (!kaksiKaynnissa) { kaksiAlkuVali = Mathf.Max(1f, vali); kaksiKaynnissa = true; zoomAlku = kokonaisZoom; }
                 else
                 {
                     double raakaZoom = kaksiAlkuVali / Mathf.Max(1f, vali);
                     if (raakaZoom > ZoomYliRajan) { sovitin.Yleisnakymaan(t); edellisetSormet = n; return; }
-                    kokonaisZoom = raakaZoom;
+                    kokonaisZoom = zoomAlku * raakaZoom;
                 }
             }
             edellisetSormet = n;

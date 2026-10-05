@@ -3,9 +3,10 @@
 // Kartan Linssit-nappi avaa saman kapean näkymän; ylärivin otsikon tilalla välilehdet LINSSIT | PELIT karttaselitteen pohjalla
 // (Kartta.uss .mk-selite__valilehdet / __valilehti, valittu mk-valittu). Kun toinen kategoria on tyhjä, ylärivillä on pelkkä
 // otsikko kuten ennen (ei tyhjää näkymää). Pelit-rivit Aarteiden rivipohjalla (mk-linssirivi, osiot mk-linssivalitsin__aarreosio).
-//   Kehittäjä (Asetukset.Kehittaja): kaikki minipelit ilman ansaitsemista — Mylly jokaisella laudalla (valintakortissa vastustaja)
+//   Kehittäjä (Asetukset.Kehittaja): kaikki minipelit ilman ansaitsemista — Mylly yhtenä rivinä, kaikki laudat valintakortissa
 //                                     ja Lentopeli (vaihe 1, lähtö pelaajan kaupungista tai Ateenasta).
-//   Pelaaja: vain pelatut ja avatut pelit — Mylly kohtaamisen (Berliini) jälkeen, laudat jotka ovat käytössä. Pelit eivät enää
+//   Pelaaja: vain pelatut ja avatut pelit — Mylly kohtaamisen (Berliini) jälkeen yhtenä rivinä (omistaja 4.10.), käytössä olevat laudat
+//            valintakortissa. Pelit eivät enää
 //            ole Aarteissa (omistaja 18.3x: "Ota pelit pois aarteista"), vaan vain täällä.
 using System.Collections.Generic;
 using System.Linq;
@@ -67,11 +68,10 @@ namespace Matkakirja.Natiivi
             {
                 var m = Peliluettelo.Mylly;
                 Osio(m.Nimi, laudat.Count, m.Laudat.Length, pelit);
-                foreach (var l in laudat)
-                {
-                    string id = m.Id + ":" + l.Id;
-                    AarreRivi("peli:" + id, l.Nimi, null, l.Historia, () => { Sulje(); MyllyNakyma.AvaaPeli(id); }, pelit, Ikonit.Viiva["noppa"]);
-                }
+                // Omistaja 4.10. 22.5x: "Mylly saisi näkyä yhtenä pelinä valikossa. Ei kolmena eri lautana" → yksi rivi; lauta
+                // valitaan valintakortin lautavalinnasta (kehittäjällä kaikki laudat auki siellä).
+                AarreRivi("peli:" + m.Id, m.Nimi, null, string.Join(" · ", laudat.Select(l => l.Nimi)),
+                    () => { Sulje(); MyllyNakyma.AvaaPeli(m.Id); }, pelit, Ikonit.Viiva["noppa"]);
             }
             if (Asetukset.Kehittaja)
             {
