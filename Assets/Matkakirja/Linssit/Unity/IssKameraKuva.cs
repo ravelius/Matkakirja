@@ -294,6 +294,11 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomento `astro kyyti kuvaa kohde lat lon`: seuraavan kuvan kohde (muuten Cupolan katseen keskipiste).</summary>
         public static (double Lat, double Lon)? KuvanKohde;
         /// <summary>
+        /// Testikomento `astro kyyti kuvaa suunta <°>|pois`: laajan kuvan kameran suunta kohteesta (atsimuutti), muuten aluksen suunta.
+        /// Helsinki 6.10. (2504ef45): kamera luoteesta kohti aamupäivän aurinkoa → Suomenlahti kiilsi valkoisena kuin jää.
+        /// </summary>
+        public static double? KuvanSuunta;
+        /// <summary>
         /// Reunojen lisäkarkeus (Päätoimittaja 4.10.: "karkeammat COG-tasot reunoilla ja kaukana"; simu b3a14902: tasainen 4× karkeus teki
         /// Saharan koko kuvasta suttuisen z10:n): solun karkeus = budjettikerroin × (1 + ReunaKarkeus · r²), r = 0 keskellä … 1 kulmassa.
         /// </summary>
@@ -330,7 +335,7 @@ namespace Matkakirja.Natiivi
                     else kohdePiste = (keski.Lat, keski.Lon);
                     AstronauttiLinssi.VertailuKentta = Math.Min(kamera.fieldOfView, KuvanMaxKentta);
                     // Laaja: kaari ~22 % yläreunasta, logo avaruudessa sen yllä, kohde hieman keskikohdan alla (Päätoimittaja 6.10.).
-                    AstronauttiLinssi.Vertailu = Laaja ? linssi.LaajaKuvakulma(kohdePiste.Value.Lat, kohdePiste.Value.Lon, AstronauttiLinssi.VertailuKentta, LaajaKaari, LaajaKohde)
+                    AstronauttiLinssi.Vertailu = Laaja ? linssi.LaajaKuvakulma(kohdePiste.Value.Lat, kohdePiste.Value.Lon, AstronauttiLinssi.VertailuKentta, LaajaKaari, LaajaKohde, KuvanSuunta)
                                                        : linssi.JyrkkaKuvakulma(kohdePiste.Value.Lat, kohdePiste.Value.Lon, MaxKallistus);
                     kenttaRajattu = true;
                     Loki($"kamera: kohde ({keski.Lat:0.000}, {keski.Lon:0.000}), kallistus {keski.Kallistus:0.0}° → {AstronauttiLinssi.Vertailu.Value.Kallistus:0.0}°, "
