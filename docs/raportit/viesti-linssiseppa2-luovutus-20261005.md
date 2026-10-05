@@ -102,3 +102,17 @@ Kuvat: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-maailma-10c31692/kuvat. 
   saatavuus-bittikartta; korjaus.json tulossa) — kuvapari 3 aluetta Euroopan ulkopuolelta nyt vs v2 ennen merge-pyyntöä,
   (c) euromosaiikin korjaussarjan polku.
 - Worktreet wt/proto-linssiseppa2-ohjaamo ja -gibs poistetaan mergen jälkeen (git worktree remove, proto-gitissä).
+
+## Päivitys 5.10. klo 19.5x
+- JUNA 144: iss-ohjaamon kärki **eea832b1** (a2941f8f + v2e) Natiivisepällä; Meksiko v2e todennettu (meksiko-v2d-v2e.png).
+- JUNA 145 (proto-haarat, worktree wt/proto-linssiseppa2-gibs, nyt haarassa linssiseppa2/s2-maailma):
+  - (a) linssiseppa2/gibs-pilvet **30e870d9** (GIBS + ohjaamo) — Päätoimittaja hyväksyi.
+  - (b+c) linssiseppa2/s2-maailma **032129c8** (= gibs + s2-maailma v2 + korjaussarja (korjaus.json "korjatut", vakio
+    S2MaailmaLaatat.KorjausKansio) + Euroopan mosaiikki v2 (vakio Laattapalvelin.S2EuroopanVersio)). Natiiviseppä kuittasi
+    lisäysversion ehdoin: vanhat buildit ennallaan, mittaus (phys_footprint Cupola/ISS-kuva Euroopan ulkopuolella nyt vs v2,
+    S2-välimuisti levyllä 10 min kyydin jälkeen ≤ 384/192, verkon Mt), purku taustalla (< 16 ms), hakuvirhe = nykyinen.
+  - Koeajo 1 (b4f9eba3): ISS-kuvat OK (Australian suolajärvi valkoinen), Saharassa MGRS-saumat (Karttasepän tasaus →
+    v2-korjaus2), Cupola v2 sumea → koeajo 2 käännöksellä 11bae6ef (CUPOLA_ODOTUS=25, muisti fp) simuvuorolla ~20.35.
+  - Kuvapari Päätoimittajalle ennen merge-pyyntöä: 3 aluetta Euroopan ulkopuolelta nyt vs v2.
+- maailma-kuvat.sh: KAARI2 toinen kierros (A/B), CUPOLA_ODOTUS, muisti (footprint, PID ps:stä), S2-välimuisti lopussa.
+  HUOM: ajo.log sisältää binäärimerkkejä → grep -a (vahdit jäivät jumiin ilman sitä).
