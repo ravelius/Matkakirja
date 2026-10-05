@@ -308,13 +308,20 @@ namespace Matkakirja.Linssit.IssKamera
                 ru.VesiTaso = null;
                 if (o == null) continue;
                 var vr = new List<double>(); var vg = new List<double>(); var vb = new List<double>();
-                for (int i = 0; i < ruudukko; i++)
-                    for (int j = 0; j < ruudukko; j++)
-                    {
-                        double la = ru.S + (ru.N - ru.S) * (i + 0.5) / ruudukko, lo = ru.W + (ru.E - ru.W) * (j + 0.5) / ruudukko;
-                        if (!RuudunArvo(d, k, la, lo, out var p, vesi: true)) continue;
-                        vr.Add(p.r); vg.Add(p.g); vb.Add(p.b);
-                    }
+                // Tiheämpi otanta, jos ruudusta on haettu vain kulma (simu d9221669 Kanaria: 28SCB:n sunglint-meri jäi
+                // vesitasotta, koska 48 × 48 -ruudukkoon osui alle 150 haettua vesinäytettä → kirkas suorareunainen kiila).
+                foreach (int n in new[] { ruudukko, ruudukko * 4 })
+                {
+                    vr.Clear(); vg.Clear(); vb.Clear();
+                    for (int i = 0; i < n; i++)
+                        for (int j = 0; j < n; j++)
+                        {
+                            double la = ru.S + (ru.N - ru.S) * (i + 0.5) / n, lo = ru.W + (ru.E - ru.W) * (j + 0.5) / n;
+                            if (!RuudunArvo(d, k, la, lo, out var p, vesi: true)) continue;
+                            vr.Add(p.r); vg.Add(p.g); vb.Add(p.b);
+                        }
+                    if (vr.Count >= vahintaan) break;
+                }
                 if (vr.Count < vahintaan) continue;
                 ru.VesiTaso = new[] { Mediaani(vr), Mediaani(vg), Mediaani(vb) };
                 tulos.Add((ru.Tunnus, ru.VesiTaso[0], ru.VesiTaso[1], ru.VesiTaso[2]));

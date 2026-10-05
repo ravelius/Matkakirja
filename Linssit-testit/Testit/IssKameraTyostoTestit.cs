@@ -143,6 +143,28 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi]
+        static void VesitasoMyosKulmastaHaetulle()
+        {
+            // Simu d9221669 (Kanaria 28SCB): ruudusta haettu vain kulma → 48 × 48 -otannassa alle 150 vesinäytettä, ruutu jäi
+            // vesitasotta (kirkas kiila). Nyt tiheämpi otanta.
+            const double pm = 600; const int L = 185, LL = 37;   // 5 × 5 laattaa
+            var d = new KuvaData { VesiTasoitus = 0.75, Meri = new byte[] { 14, 22, 30 } };
+            var o = new CogOtsake { Ita0 = 300_000, Pohjoinen0 = 6_700_000, PikseliM = pm };
+            o.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = LL, LaattaK = LL, Kanavat = 3 });
+            var so = new CogOtsake { Ita0 = 300_000, Pohjoinen0 = 6_700_000, PikseliM = pm };
+            so.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = LL, LaattaK = LL, Kanavat = 1 });
+            var (s0, w) = Utm.Taakse(300_000, 6_700_000 - L * pm, 35); var (nn, e) = Utm.Taakse(300_000 + L * pm, 6_700_000, 35);
+            var ru = new S2Ruutu { Tunnus = "35VLG", W = w + 0.01, S = s0 + 0.01, E = e - 0.01, N = nn - 0.01 };
+            d.Laatat[("35VLG", 0, 4, 4)] = Enumerable.Repeat((byte)99, LL * LL * 3).ToArray();   // vain kaakkoiskulma haettu
+            d.Laatat[("35VLG|scl", 0, 4, 4)] = Enumerable.Repeat((byte)6, LL * LL).ToArray();
+            d.Scl["35VLG"] = so;
+            d.Ruudut.Add((ru, o));
+            var t = Uudelleenprojisointi.TasaaVesi(d);
+            Oleta.Sama(1, t.Count, "kulmasta haettu ruutu saa vesitason");
+            Oleta.Sama(99.0, ru.VesiTaso[0]);
+        }
+
+        [Testi]
         static void UsvatasoitusLimityksesta()
         {
             // Simu 26f1141e (Coloradon suisto): tummin prosentti luki 11RQQ:n meren usvattomaksi → naapurit −40 ja 11RQQ:n maa
