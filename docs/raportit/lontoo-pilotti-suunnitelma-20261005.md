@@ -95,3 +95,26 @@ kohteen nimi ruudulle. Esitysmoottorin aikajana ja kamerakoreografia (linssikata
 3. Lisää token avaintiedostoon `~/.matkakirja-avaimet-koodaus.zsh` riville `export CESIUM_ION_TOKEN=...`; Karttaseppä tai
    Julkaisija tekee siitä ämpäriin tokenin jsonin, jonka natiivi hakee. Tokenia ei lähetetä chattiin.
 4. Lupa iPad-mittaukseen (00008103) jokaista testikertaa varten.
+
+## 8. Julkaisun oma rakennusputki (OSM → 3D Tiles, ODbL) — työarvio (Päätoimittajan tilaus 5.10. 11.1x)
+
+Pilotti käyttää ionin OSM Buildingsia (kokeilukäyttö). Julkaisuun rakennukset tehdään itse ja isännöidään omassa ämpärissä.
+Natiivissa vaihto on vain tilesetin URL.
+
+| Vaihe | Sisältö | Arvio |
+|---|---|---|
+| 1. Pohjat ja korkeudet | Geofabrikin OSM-ote (ODbL), rakennuspolygonit. Korkeus järjestyksessä: `height` → `building:levels` × 3 m + katto → tyyppikohtainen oletus. Lontoossa lisäksi Environment Agencyn LIDAR (OGL v3, nDSM = DSM − DTM, mediaani pohjan sisällä), jolloin korkeudet ovat oikeat myös ilman tageja. | 2 erää |
+| 2. 3D Tiles -kirjoitin | Oma Node-skripti: earcut-kolmiointi, puristus LOD1-massoiksi, glb (meshopt-pakkaus), 3D Tiles 1.1 quadtree, geometricError tasoittain. Kaukotasoille korttelikohtaiset yhdistetyt massat. Sävy pelin tyyliin varjostimessa, ei tekstuureja. | 2–3 erää |
+| 3. Tarkistus ja vienti | 3d-tiles-validator (Apache 2.0), kuvapari ionin OSM Buildingsiin, vienti omistajan Run-rivillä (aws s3 sync, paljon tiedostoja) uuteen polkuun `rakennukset/lontoo/v1/` | 1 erä |
+| 4. ODbL | LAHTEET.md, "© OpenStreetMap contributors" ruudulle. Rakennuslaatat ovat johdettu tietokanta, joten ne tarjotaan ODbL:llä (pelin muu sisältö ei kuulu tähän). | 0,5 erää |
+| Natiivi | ion-tilesetin vaihto omaan URL:iin, attribuutio | LS2, 0,5 erää |
+
+**Yhteensä noin 6 erää Karttasepälle (noin viikko) ja seuraavat kaupungit noin 0,5 erää kukin** (sama putki; LIDARin
+saatavuus vaihtelee maittain: NL 3D BAG ja Helsinki LOD2 suoraan, Suomessa MML:n laserkeilaus).
+
+**Koko (EPÄVARMA, mitataan vaiheessa 2):** Lontoon reitin ydin (noin 270 km², arviolta 0,5–1 milj. rakennusta)
+noin 0,5 Gt ja koko Suur-Lontoo 1–2 Gt ämpärissä. Laitteelle striimataan vain näkymän laatat (arviolta 30–80 Mt per
+lento). Koko Euroopan rakennukset (yli 250 milj.) eivät ole järkevä kohde, joten edetään kaupunki kerrallaan.
+
+**Asennukset:** ei tarvita, jos kirjoitin tehdään Nodella. PBF-lukija ja earcut tulevat npm-paketteina työkansioon
+(lisenssit tarkistetaan). PostGIS/pg2b3dm olisi vaihtoehto, mutta se vaatisi asennuksen.
