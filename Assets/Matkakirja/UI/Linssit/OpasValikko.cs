@@ -29,6 +29,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Asutuspaikka: nimi, maa (näkyvä nimi), maanosa (näkyvä nimi), sijainti ja väkiluku.</summary>
         public readonly struct Kaupunki
         {
+            /// <summary>Iso = ISO 3166-1 alpha-2 (maa-aineistosta), puuttuessa paikat.json:n ADM0_A3.</summary>
             public readonly string Nimi, Maa, Maanosa, Iso;
             public readonly double Lat, Lon;
             public readonly long Vakiluku;
@@ -64,9 +65,12 @@ namespace Matkakirja.Natiivi
                     {
                         if (!(r is List<object> c) || c.Count < 5) continue;
                         string iso = c[3] as string;
-                        string maa = LinssiOhjain.MaatAineisto?.Hae(iso)?.Nimi ?? iso;
+                        var maaTieto = LinssiOhjain.MaatAineisto?.Hae(iso);
+                        string maa = maaTieto?.Nimi ?? iso;
+                        // Oppaan äänet (Pelikoodarin nimet/maat-v1) käyttävät ISO 3166-1 alpha-2 -koodia (DK, IL, PS).
+                        string iso2 = string.IsNullOrEmpty(maaTieto?.Iso2) ? iso : maaTieto.Iso2;
                         string mo = c.Count > 5 && c[5] is string m ? (Maanosat.TryGetValue(m, out var fi) ? fi : m) : "Kaikki maat";
-                        tulos.Add(new Kaupunki(c[0] as string, maa, mo, Convert.ToDouble(c[1]), Convert.ToDouble(c[2]), Convert.ToInt64(c[4]), iso));
+                        tulos.Add(new Kaupunki(c[0] as string, maa, mo, Convert.ToDouble(c[1]), Convert.ToDouble(c[2]), Convert.ToInt64(c[4]), iso2));
                     }
             }
             catch (Exception e) { Debug.LogWarning("MATKAKIRJA opas: paikat.json: " + e.Message); return null; }
