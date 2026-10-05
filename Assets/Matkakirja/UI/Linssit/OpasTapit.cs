@@ -1,7 +1,8 @@
 // OPPAAN TAPIT (omistaja 5.10.2026 klo 21.3x, juna 145; Päätoimittajan tilaus): kaksi pientä tappiohjainta alakulmiin vain
-// pysähdyksellä. VASEN: pysty = korkeus (ylös = ylemmäs), vaaka = etäisyys (oikealle = kauemmas). OIKEA: vaaka = kierto
-// (oikealle = myötäpäivään). Kamera katsoo aina kohteeseen (Siirtoseppä, Ydin/Kierros/OpasOhjaus.cs; Linssiseppä kytkee:
-// ohjaus.Paivita(dt, Oikea.x, Vasen.y, Vasen.x) ja OpasSilmukka.PelaajaOhjaa = Kosketaan).
+// pysähdyksellä. Suunnat omistajalta (21.3x): VASEN pysty = etäisyys (ylös = lähemmäs, alas = kauemmas). OIKEA vaaka = kierto
+// kohteen ympäri (oikealle = myötäpäivään), pysty = kameran korkeus (ylös = ylemmäs). Kamera katsoo aina kohteeseen
+// (Siirtoseppä, Ydin/Kierros/OpasOhjaus.cs; Linssiseppä kytkee: ohjaus.Paivita(dt, Oikea.x, Oikea.y, -Vasen.y) ja
+// OpasSilmukka.PelaajaOhjaa = Kosketaan).
 // Pohja: OHJAUSNAPPI-pohjan TAPPI (Pohjat/ohjausnappi.uss, harmaan lasin tokenit): Ø 64 pt lasi, nuppi Ø 26 pt, levossa
 // himmeä ja kosketuksessa täysin näkyvä, häivytys 200 ms. Nopeusohjaus: nupin poikkeama keskeltä −1…1, irrotus palauttaa
 // nupin keskelle (150 ms) ja arvon nollaan. Kumpikin tappi kaappaa oman osoittimensa (kaksi peukaloa yhtä aikaa).
@@ -12,9 +13,9 @@ namespace Matkakirja.Natiivi
 {
     public sealed class OpasTapit
     {
-        /// <summary>Vasen tappi: x = etäisyys (+ kauemmas), y = korkeus (+ ylemmäs); −1…1, irrotus → 0.</summary>
+        /// <summary>Vasen tappi: y = lähemmäs (+) / kauemmas (−); x ei käytössä. −1…1, irrotus → 0.</summary>
         public static Vector2 Vasen { get; private set; }
-        /// <summary>Oikea tappi: x = kierto (+ myötäpäivään); −1…1, irrotus → 0.</summary>
+        /// <summary>Oikea tappi: x = kierto (+ myötäpäivään), y = korkeus (+ ylemmäs); −1…1, irrotus → 0.</summary>
         public static Vector2 Oikea { get; private set; }
         /// <summary>Pelaaja koskee jompaakumpaa tappia (silmukka pysäyttää automaattisen kierron ja seuraavaan siirtymisen).</summary>
         public static bool Kosketaan => vasen.Kosketaan || oikea.Kosketaan;
@@ -27,10 +28,10 @@ namespace Matkakirja.Natiivi
 
         public OpasTapit(VisualElement isa)
         {
-            vasen = new Tappi(isa, "mk-tappi mk-tappi--vasen", PystyIkoni, v => Vasen = v);
-            oikea = new Tappi(isa, "mk-tappi mk-tappi--oikea", Ikonit.PaivitaVersio, v => Oikea = new Vector2(v.x, 0f));
-            vasen.Juuri.tooltip = "Korkeus ja etäisyys";
-            oikea.Juuri.tooltip = "Kierrä kohdetta";
+            vasen = new Tappi(isa, "mk-tappi mk-tappi--vasen", PystyIkoni, v => Vasen = new Vector2(0f, v.y));
+            oikea = new Tappi(isa, "mk-tappi mk-tappi--oikea", Ikonit.PaivitaVersio, v => Oikea = v);
+            vasen.Juuri.tooltip = "Lähemmäs ja kauemmas";
+            oikea.Juuri.tooltip = "Kierrä kohdetta ja nosta tai laske kameraa";
         }
 
         /// <summary>Näkyvyys ja alareuna (krediittien yläpuolella) joka ruudulla OpasValikolta; piiloon mennessä arvot nollaan.</summary>
@@ -54,8 +55,8 @@ namespace Matkakirja.Natiivi
         public string Kuvaus()
         {
             Rect a = VasenLaatikko, b = OikeaLaatikko;
-            return $"tapit {(nakyy ? "näkyy" : "piilossa")}, vasen {Vasen.x:0.00},{Vasen.y:0.00} @ {a.xMin:0},{a.yMin:0} {a.width:0}×{a.height:0}, "
-                 + $"oikea {Oikea.x:0.00} @ {b.xMin:0},{b.yMin:0} {b.width:0}×{b.height:0}, kosketaan {Kosketaan}";
+            return $"tapit {(nakyy ? "näkyy" : "piilossa")}, vasen {Vasen.y:0.00} @ {a.xMin:0},{a.yMin:0} {a.width:0}×{a.height:0}, "
+                 + $"oikea {Oikea.x:0.00},{Oikea.y:0.00} @ {b.xMin:0},{b.yMin:0} {b.width:0}×{b.height:0}, kosketaan {Kosketaan}";
         }
 
         sealed class Tappi
