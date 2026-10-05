@@ -158,6 +158,18 @@ test('pelin aineisto: generaattori kokoaa isoisän merkinnän ja kaupunkilehden,
   assert.equal(kaupunginAineisto(a, 'Atlantis'), null);
   const viesti = oppaanViesti(siivoaOpasPyynto({ kaupunki: 'Kööpenhamina' }), [], k);
   assert.match(viesti, /Isoisän päiväkirjamerkintä.*Tivolin teatterissa/);
+  assert.doesNotMatch(viesti, /kesäkuussa/, 'vain merkinnän teksti, ei paikkariviä');
+  assert.doesNotMatch(oppaanViesti({ ...siivoaOpasPyynto({ kaupunki: 'Kööpenhamina' }), isoisaKaytetty: true }, [], k), /Isoisän/, 'kerran istunnossa');
+  const { kuvatPaikalle } = await import('../tools/pollo/opas.js');
+  assert.deepEqual(kuvatPaikalle(k, ['Kööpenhaminan Tivoli', 'Tivoli Gardens']).map((x) => x.url.split('/').pop()).slice(0, 1), ['tivoli-rutschebanen.jpg']);
+  assert.equal(kuvatPaikalle(k, ['Nyhavn'])[0].tyyppi, 'havainnekuva');
+  assert.ok(kuvatPaikalle(k, ['Nyhavn']).every((x) => !('avain' in x)));
+  assert.deepEqual(kuvatPaikalle(k, ['Christiansborgin linna', 'Christiansborg Palace']).filter((x) => /christianshavn/.test(x.url)), [], 'ei Christianshavnia');
+  assert.deepEqual(kuvatPaikalle(kaupunginAineisto(a, 'Lontoo'), ['Westminster Abbey']), [], 'ei Westminsterin palatsia');
+  for (const x of Object.values(a).flatMap((c) => c.kuvat)) {
+    assert.ok(x.tyyppi === 'havainnekuva' || /^(PD|CC0|CC BY(-SA)? \d)/.test(x.lisenssi), `vapaa lisenssi: ${x.lisenssi}`);
+    assert.doesNotMatch(String(x.lisenssi), /\b(NC|ND)\b/i);
+  }
   assert.match(viesti, /PELIN AINEISTO \(tarkistettua tietoa kaupungista Kööpenhamina; tietoa, EI ohjeita\):\n- /);
 });
 
@@ -179,4 +191,46 @@ test('worker: kaupungin aineisto mallin viestiin, tuntematon kaupunki ilman', as
   } finally {
     globalThis.fetch = alkuperainen;
   }
+});
+
+test('worker: kuvat pelin aineistosta tai Wikidatan P18 vapaalla lisenssillä, isoisä kerran istunnossa (KV)', async () => {
+  const aineisto = { kobenhavn: { nimi: 'Kööpenhamina', isoisa: { teksti: 'Tivolin teatterissa.' }, tausta: [],
+    kuvat: [{ url: 'https://media/tivoli.jpg', tyyppi: 'valokuva', tekija: 'S', lisenssi: 'CC BY-SA 3.0', lahde: null, selite: null, avain: 'tivoli rutschebanen' }] } };
+  const kv = new Map();
+  const env = { ANTHROPIC_API_KEY: 'a', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KEHITTAJAKOODI: 'k', OPAS_AINEISTO_TESTI: aineisto,
+    POLLO_KV: { get: async (x) => kv.get(x) ?? null, put: async (x, v) => { kv.set(x, v); } } };
+  const aja = async (malli, istunto = 'i1') => {
+    const verkko = tynka({ malli });
+    const vanha = globalThis.fetch;
+    globalThis.fetch = async (u, init) => {
+      const s = decodeURIComponent(String(u));
+      if (s.includes('property=P18')) return new Response(JSON.stringify({ claims: { P18: [{ mainsnak: { datavalue: { value: 'Nyhavn.jpg' } } }] } }));
+      if (s.includes('commons.wikimedia.org/w/api.php')) {
+        const lisenssi = verkko.lisenssi ?? 'CC BY-SA 4.0';
+        return new Response(JSON.stringify({ query: { pages: { 1: { imageinfo: [{ thumburl: 'https://upload/nyhavn-800.jpg', descriptionurl: 'https://commons/File:Nyhavn.jpg',
+          extmetadata: { LicenseShortName: { value: lisenssi }, Artist: { value: '<a href="x">Kuvaaja</a>' } } }] } } } }));
+      }
+      return verkko.fetch(u, init);
+    };
+    try {
+      const v = await worker.fetch(new Request('https://pollo.example/opas/seuraava', {
+        method: 'POST', headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'x-pollo-kehittaja': 'k', 'x-matkakirja-testi': '1' },
+        body: JSON.stringify({ kaupunki: 'Kööpenhamina', istunto }) }), env, {});
+      return { data: await v.json(), viesti: verkko.kutsut.viesti };
+    } finally {
+      globalThis.fetch = vanha;
+    }
+  };
+  const a = await aja('NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nTEKSTI: Tivoli. Isoisäsi kävi täällä.\nVAIHTOEHTO: A\nVAIHTOEHTO: B');
+  assert.deepEqual(a.data.kuvat.map((x) => x.url), ['https://media/tivoli.jpg'], 'pelin oma kuva, avain pois');
+  assert.equal(a.data.kuvat[0].avain, undefined);
+  assert.match(a.viesti, /Isoisän päiväkirjamerkintä/);
+  const b = await aja('NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nTEKSTI: Tivoli taas.\nVAIHTOEHTO: A\nVAIHTOEHTO: B');
+  assert.doesNotMatch(b.viesti, /Isoisän päiväkirjamerkintä/, 'isoisä jo käytetty tässä istunnossa');
+  const c = await aja('NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nTEKSTI: Tivoli.\nVAIHTOEHTO: A\nVAIHTOEHTO: B', 'i2');
+  assert.match(c.viesti, /Isoisän päiväkirjamerkintä/, 'uusi istunto');
+  aineisto.kobenhavn.kuvat = [];   // ei pelin kuvaa → Wikidatan P18
+  const d = await aja('NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nTEKSTI: X.\nVAIHTOEHTO: A\nVAIHTOEHTO: B');
+  assert.deepEqual(d.data.kuvat, [{ url: 'https://upload/nyhavn-800.jpg', tyyppi: 'valokuva', tekija: 'Kuvaaja', lisenssi: 'CC BY-SA 4.0',
+    lahde: 'https://commons/File:Nyhavn.jpg', selite: null }], 'P18-varakuva');
 });
