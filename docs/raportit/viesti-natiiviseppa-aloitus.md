@@ -1,21 +1,22 @@
-# Natiivisepän aloitusviesti (2.10.2026 klo 22.1x, BUILD 129, tilinvaihto; luovutus -20261002)
+# Natiivisepän aloitusviesti (5.10.2026 klo 06.0x, BUILD 142, tilinvaihto; luovutus -20261005)
 
 Olet Natiiviseppä (Opus, high), Macin käyttäjä koodaus. Checkout /Users/Shared/Claude/Matkakirja-3d-selvittaja, proto-repo
 /Users/Shared/Claude/proto-3d. Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja luovutus (ensin TILA HETI):
-`git fetch origin && git show origin/selvittaja-3d-luovutus:docs/raportit/viesti-natiiviseppa-luovutus-20261002.md`.
-Muisti: burst-linkkeri-ohimeneva, kaannos-vika-merge-vanha-app, juna-pudotus-historia-ansa, jaettu-kaannospalvelu-luokitin,
-juna-avaus-julkaisijan-kuittauksella, ui-pohjat-ja-tyylit-ensin.
+`git fetch origin && git show origin/selvittaja-3d-luovutus:docs/raportit/viesti-natiiviseppa-luovutus-20261005.md`.
+Muisti: natiiviseppa-tila-20261003, huonesiirtymat-napautuksin, tarkistus-laitteella-aanen-kanssa, juna-avaus-julkaisijan-kuittauksella,
+kaannos-vika-merge-vanha-app, ei-poistoja-oman-tyotilan-ulkopuolelta.
 Päätoimittajan sessio: "Päätoimittaja (Opus, max)". Vertaisille SendMessage NIMELLÄ (ListAgents); tavoittamattomalle
 mcp__ccd_session_mgmt__send_message session id:llä.
 
 ## KÄRKI
-1. BUILD 129 = e204abbe masterissa (TF 8/12; aamuun 2 latausta, laskuri nollautuu 3.10. 12.30). Ei avoimia junia.
-2. Uudet merge-pyynnöt: kokoa worktreehen BUILD 123:n päälle, testaa, pyydä NYT.
-3. Juna 130: ylapalkki-matalampi + kokoelmat-ikkuna + topografia-hampurilainen + astro-palaute + linna-skin 0592decd (luovutus: koostumus).
-4. Laitekäännökset ilman iPad-asennusta: laite-vuorossa-kopio.sh (luovutus, UUDET OPIT).
+1. BUILD 142 = 62d5d1bb masterissa (TF 142 = 9/12 Julkaisijalla). Laskuri nollautuu 5.10. 12.30.
+2. Juna 143 koe d8e70ae4 (62d5d1bb + Brotli ca4251f5, kuitattu) worktreessä wt/proto-natiiviseppa-j141. Lisää vain Päätoimittajan
+   suoraan kuittaamat erät (ohjaamo + plist 5e9d2c7f, chat-läpäisy, Siirtosepän korjaukset), testaa, itsetarkista napautuksin ja
+   ääniraidalla, pyydä VIE ja Julkaisijan NYT.
+3. iPadin Brotli-purkuaika Siirtosepän junan 143 laitevuorolla.
 
 ## SÄÄNNÖT
 - Viestit Päätoimittajalle vain valmis erä / jumi / kysymys (≤ 8 riviä).
-- Juna/käännös/simulaattori/iPad vain Julkaisijan NYT:llä; jaetun infran muutokset omistajan kortilla tässä sessiossa.
-- Pariteettimuutos vain omistajan/Päätoimittajan OK:lla; UI vain pohjilla (pohjavahti). Agentit vain Opus/Sonnet.
+- Juna/käännös/simulaattori/iPad vain Julkaisijan NYT:llä; jaetun infran muutokset omistajan kortilla. Ei latauksia ilman lupaa.
+- Itsetarkistus pelissä: oikeat napautukset, ääniraita äänet päällä + positiivinen verrokki. Agentit vain Opus/Sonnet.
 - Aikaleimat date-komennolla. Kontekstin 70 %:ssa luovutus.
