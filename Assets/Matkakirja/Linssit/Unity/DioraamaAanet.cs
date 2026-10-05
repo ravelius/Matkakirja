@@ -326,23 +326,9 @@ namespace Matkakirja.Natiivi
             // puhe katkeaa ja uusi alkaa; kierroksen katketessa (huoneen kohdistus, paluu) puhe loppuu.
             // Puhe alkaa tekstin kanssa (teksti nousee lennon 60 %:ssa), ei lennon alussa.
             int jaksoNyt = nakyma.KertojaTeksti != null ? nakyma.KertojaJakso : -1;
-            if (jaksoNyt != viimeJakso)
-            {
-                aanettomat.Clear();
-                if (viimeJakso >= 0) LopetaErillinen();
-                viimeJakso = jaksoNyt;
-                odottavaJakso = -1;
-                if (viimeJakso >= 0 && viimeJakso < rak.Kertoja.Count && kertojaPaalla)
-                {
-                    // Puhdas asennus (tuotantoajo 3.10. 01.45: piha-jakso jäi äänettömäksi): klippi ei ehtinyt latautua ennen
-                    // jaksoa, ja yksi yritys jätti jakson pysyvästi hiljaiseksi. Nyt jakso odottaa latausta ja alkaa, kun klippi
-                    // valmistuu, jos sama jakso on yhä ruudulla eikä viivettä ole yli KertojaOdotusS.
-                    string id = rak.Kertoja[viimeJakso].Aani;
-                    bool valmis = KlippiValmis(id);
-                    SoitaErillinen(id, false);
-                    if (!valmis && !string.IsNullOrEmpty(id)) { odottavaJakso = viimeJakso; odottavaAlku = Time.unscaledTime; Debug.Log($"MATKAKIRJA linssit: poikki: kertojan jakso {id} odottaa latausta"); }
-                }
-            }
+            // TIMELINE (linna-unity-suunnitelma 2b): kun DioraamaTimeline soi, jaksot alkavat ja loppuvat KertojaKlipeistä
+            // (TimelineJakso/TimelineJaksoLoppuu, sama KertojanJaksoVaihtuu-reitti); latausodotus jatkuu tässä kuten ennen.
+            if (!DioraamaTimeline.OhjaaKertojaa && jaksoNyt != viimeJakso) KertojanJaksoVaihtuu(jaksoNyt, rak, kertojaPaalla, t, "ydin");
             else if (odottavaJakso >= 0 && odottavaJakso == viimeJakso && odottavaJakso < rak.Kertoja.Count)
             {
                 string id = rak.Kertoja[odottavaJakso].Aani;
@@ -481,6 +467,49 @@ namespace Matkakirja.Natiivi
         }
 
         int viimeJakso = -1;
+
+        /// <summary>Kertojan jakso vaihtuu (−1 = ei jaksoa): edellinen puhe katkeaa ja uusi alkaa (tai jää odottamaan latausta).
+        /// Kutsujat: Paivita (Ytimen jaksovertailu, timeline pois) ja DioraamaTimelinen KertojaKlippi (TimelineJakso).
+        /// t ja lahde vain lokiin (A/B-vertailu: kertojan alut kierroksen ajassa).</summary>
+        void KertojanJaksoVaihtuu(int jaksoNyt, Rakennus rak, bool kertojaPaalla, double t, string lahde)
+        {
+            aanettomat.Clear();
+            if (viimeJakso >= 0)
+            {
+                LopetaErillinen();
+                Debug.Log($"MATKAKIRJA linssit: poikki: kertojan jakso {viimeJakso} päättyy t={DioraamaTimeline.S(t)} (kierros +{DioraamaTimeline.S(t - DioraamaTimeline.KierrosAlku)} s, {lahde})");
+            }
+            viimeJakso = jaksoNyt;
+            odottavaJakso = -1;
+            if (viimeJakso >= 0) Debug.Log($"MATKAKIRJA linssit: poikki: kertojan jakso {viimeJakso} alkaa t={DioraamaTimeline.S(t)} (kierros +{DioraamaTimeline.S(t - DioraamaTimeline.KierrosAlku)} s, {lahde})");
+            if (viimeJakso >= 0 && viimeJakso < rak.Kertoja.Count && kertojaPaalla)
+            {
+                // Puhdas asennus (tuotantoajo 3.10. 01.45: piha-jakso jäi äänettömäksi): klippi ei ehtinyt latautua ennen
+                // jaksoa, ja yksi yritys jätti jakson pysyvästi hiljaiseksi. Nyt jakso odottaa latausta ja alkaa, kun klippi
+                // valmistuu, jos sama jakso on yhä ruudulla eikä viivettä ole yli KertojaOdotusS.
+                string id = rak.Kertoja[viimeJakso].Aani;
+                bool valmis = KlippiValmis(id);
+                SoitaErillinen(id, false);
+                if (!valmis && !string.IsNullOrEmpty(id)) { odottavaJakso = viimeJakso; odottavaAlku = Time.unscaledTime; Debug.Log($"MATKAKIRJA linssit: poikki: kertojan jakso {id} odottaa latausta"); }
+            }
+        }
+
+        /// <summary>DioraamaTimeline: KertojaKlippi alkoi (tai uudelleenrakennus täsmäyttää tilan). Sama jakso kuin nyt → ei mitään
+        /// (puhe ei ala alusta asennon vaihtuessa). Kertoja-kytkin luetaan kuten Paivitassa.</summary>
+        public static void TimelineJakso(int jakso, double t, string lahde)
+        {
+            var a = aktiivinen;
+            if (a == null || a.rakennus == null || jakso == a.viimeJakso) return;
+            a.KertojanJaksoVaihtuu(jakso, a.rakennus, a.Paalla && Asetukset.Paalla(Kytkin.Kertoja), t, lahde);
+        }
+
+        /// <summary>DioraamaTimeline: KertojaKlippi loppui (jakson loppu tai napautus): puhe katkeaa kuten Ytimen jakson vaihtuessa.</summary>
+        public static void TimelineJaksoLoppuu(int jakso, double t)
+        {
+            var a = aktiivinen;
+            if (a != null && a.viimeJakso == jakso) TimelineJakso(-1, t, "timeline");
+        }
+
         /// <summary>Kertojan jakso, jonka klippi latautuu vielä (−1 = ei odottavaa) ja odotuksen alku; yli KertojaOdotusS myöhässä jakso jää soimatta.</summary>
         int odottavaJakso = -1;
         float odottavaAlku;
