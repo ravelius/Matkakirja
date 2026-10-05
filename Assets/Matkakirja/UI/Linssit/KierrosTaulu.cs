@@ -109,7 +109,8 @@ namespace Matkakirja.Natiivi
             nimi.style.fontSize = paalla ? 30 : 44;
             alarivi.style.fontSize = paalla ? 16 : 19;
             nimi.style.color = paalla ? (StyleColor)(Color)Tyylikirja.Harmaa.Korostus : StyleKeyword.Null;
-            alarivi.style.color = paalla ? (StyleColor)(Color)Tyylikirja.Harmaa.Muste : StyleKeyword.Null;
+            // Kuvausrivi samalla valkoisella kuin otsikko, kevyempi paino (Päätoimittaja 21.1x: harmaa hukkui usvaan).
+            alarivi.style.color = paalla ? (StyleColor)(Color)Tyylikirja.Harmaa.Korostus : StyleKeyword.Null;
             // Avausruutu (ELÄVÄ OPAS / KERRO, MITÄ HALUAT NÄHDÄ) samalla modernilla kirjasimella.
             Kirjasimet.Aseta(ruudunNimi, paalla ? Kirjasin.ModerniLihava : Kirjasin.KoneLihava);
             Kirjasimet.Aseta(ruudunAlarivi, paalla ? Kirjasin.Moderni : Kirjasin.Kone);
