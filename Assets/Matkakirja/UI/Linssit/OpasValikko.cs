@@ -48,8 +48,8 @@ namespace Matkakirja.Natiivi
         };
 
         /// <summary>
-        /// paikat.json: {"paikat":[[nimi, lat, lon, ADM0_A3, POP_MAX, CONTINENT?], …]}. Maan nimi pelin maa-aineistosta (ISO3), muuten
-        /// koodi; maanosa 6. sarakkeesta suomeksi, ilman sitä "Kaikki maat" (yksi ryhmä).
+        /// paikat.json: {"maanimet":{ISO3: nimi}, "paikat":[[nimi, lat, lon, ADM0_A3, POP_MAX, CONTINENT?], …]}. Maan nimi pelin
+        /// maa-aineistosta (ISO3), sen puuttuessa "maanimet"-taulusta, muuten koodi; maanosa 6. sarakkeesta suomeksi, ilman sitä "Kaikki maat" (yksi ryhmä).
         /// </summary>
         static IReadOnlyList<Kaupunki> Lue()
         {
@@ -60,6 +60,8 @@ namespace Matkakirja.Natiivi
             try
             {
                 var j = MiniJson.ObjektiTaiNull(MiniJson.Jasenna(t.text));
+                // Pienet maat ja alueet, joilla maa-aineistossa ei ole suomenkielistä nimeä (Päätoimittaja 6.10.: ALD, AND, FRO…).
+                var varanimet = MiniJson.ObjektiTaiNull(MiniJson.Kentta(j, "maanimet"));
                 if (MiniJson.Kentta(j, "paikat") is List<object> rivit)
                     foreach (var r in rivit)
                     {
@@ -67,6 +69,7 @@ namespace Matkakirja.Natiivi
                         string iso = c[3] as string;
                         var maaTieto = LinssiOhjain.MaatAineisto?.Hae(iso);
                         string maa = maaTieto?.Nimi ?? iso;
+                        if (maa == iso && varanimet != null && MiniJson.Teksti(varanimet, iso) is string fiNimi) maa = fiNimi;
                         // Oppaan äänet (Pelikoodarin nimet/maat-v1) käyttävät ISO 3166-1 alpha-2 -koodia (DK, IL, PS).
                         string iso2 = string.IsNullOrEmpty(maaTieto?.Iso2) ? iso : maaTieto.Iso2;
                         string mo = c.Count > 5 && c[5] is string m ? (Maanosat.TryGetValue(m, out var fi) ? fi : m) : "Kaikki maat";
@@ -210,7 +213,23 @@ namespace Matkakirja.Natiivi
             var ui = UiNakymat.Olemassa ? UiNakymat.Hae() : null;
             ui?.Chat?.OpasTila(nakyy);
             // Linssi avautuu täkyluetteloon (valikko auki täkynäkymässä); sulkeutuu valinnasta.
-            if (nakyy && OpasSovitin.TakyAvaus) Juuri.schedule.Execute(() => { if (this.nakyy) Avaa(Nakyma.Takyt); }).StartingIn(300);
+            // Varapolku (Päätoimittaja 6.10. 00.2x, junan 146 VIE-ehto): valikko avautuu vain, kun täkyjä on; jos ne eivät tule
+            // (GET /opas/kohteet puuttuu tai epäonnistuu) 4 s:ssa, opas avautuu kuten ennen ilman valikkoa.
+            if (nakyy && OpasSovitin.TakyAvaus)
+            {
+                float raja = Time.realtimeSinceStartup + 4f;
+                IVisualElementScheduledItem odotus = null;
+                odotus = Juuri.schedule.Execute(() =>
+                {
+                    if (!this.nakyy || Auki) { odotus.Pause(); return; }
+                    if (OnTakyja) { odotus.Pause(); Avaa(Nakyma.Takyt); return; }
+                    if (OpasSovitin.Takyt != null || Time.realtimeSinceStartup > raja)
+                    {
+                        odotus.Pause();
+                        Debug.Log("MATKAKIRJA opas: ei täkyjä (" + (OpasSovitin.Takyt == null ? "ei vastausta" : "tyhjä") + "), valikko kiinni");
+                    }
+                }).StartingIn(300).Every(250);
+            }
             ui?.OpasPeittaaPulun(nakyy);
             ui?.Linssit?.PaivitaSulku();
             siruPoletti = -1;
@@ -650,18 +669,19 @@ namespace Matkakirja.Natiivi
         /// TÄKYLUETTELO: Linssivalitsimen väliotsikko ja LINSSIRIVI-pohjan rivit (kuva, nimi, koukkurivi) workerin täkyistä
         /// (OpasSovitin.Takyt; null = latautuu, päivitetään 0,5 s välein), alla "Tai valitse paikka" ja maanosat.
         /// </summary>
+        static bool OnTakyja => OpasSovitin.Takyt != null && OpasSovitin.Takyt.Count > 0;
+
         void RakennaTakyt(IReadOnlyList<Kaupunki> kaikki)
         {
             Vieritys();
-            Kirjasimet.Aseta(Rakenne.Teksti("MIHIN LENNETÄÄN?", "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
-            var takyt = OpasSovitin.Takyt;
-            if (takyt == null)
+            // Ilman täkyjä (ei vastausta tai tyhjä) ei tyhjää otsikkoa eikä latausriviä: pelkät maanosat kuten ennen täkyjä.
+            // Lista ei myöskään rakennu uudelleen täkyjen saapuessa, jotta rivit eivät siirry sormen alta.
+            if (OnTakyja)
             {
-                Kirjasimet.Aseta(Rakenne.Teksti("Kohteet latautuvat…", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni);
-                valikko.schedule.Execute(() => { if (Auki && nakyma == Nakyma.Takyt && OpasSovitin.Takyt != null) Rakenna(); }).Every(500).Until(() => !Auki || nakyma != Nakyma.Takyt || OpasSovitin.Takyt != null);
+                Kirjasimet.Aseta(Rakenne.Teksti("MIHIN LENNETÄÄN?", "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
+                foreach (var t in OpasSovitin.Takyt) TakyRivi(t);
+                Kirjasimet.Aseta(Rakenne.Teksti("TAI VALITSE PAIKKA", "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
             }
-            else foreach (var t in takyt) TakyRivi(t);
-            Kirjasimet.Aseta(Rakenne.Teksti("TAI VALITSE PAIKKA", "mk-linssivalitsin__valiotsikko", rivit), Kirjasin.ModerniLihava);
             if (kaikki == null || kaikki.Count == 0) { Kirjasimet.Aseta(Rakenne.Teksti("Kaupungit latautuvat…", "mk-linssivalikko__lahde", rivit), Kirjasin.Moderni); return; }
             foreach (var m in kaikki.Select(k => k.Maanosa).Where(m => !string.IsNullOrEmpty(m)).Distinct().OrderBy(m => m))
             {
