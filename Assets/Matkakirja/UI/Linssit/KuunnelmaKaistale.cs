@@ -17,13 +17,35 @@ namespace Matkakirja.Natiivi
         /// <summary>Soittaa rivin äänen aani-id:llä rivin alkaessa. Siirtoseppä kytkee.</summary>
         public static Action<string> Soita;
 
+        /// <summary>Hahmon id → näytettävä nimi (kohtaukset v2: vuorojen puhujat ovat hahmo-id:itä). DioraamaTaulu kytkee.</summary>
+        public static Func<string, string> PuhujanNimi;
+        /// <summary>Nyt puhuva hahmo (vuoron tai rivin puhuja, ei Pulu eikä kertoja), tai null. DioraamaSovitin vaihtaa sen
+        /// hahmolle puhe-silmukan (puhujittaiset aikaleimat ohjaavat puhuvaa hahmoa).</summary>
+        public static string PuhuvaHahmo { get; private set; }
+        /// <summary>Nykyisen vuoron ilme (vuorot[].ilme) tai null; kasvokuva = henkilö + ilme (Natiivi-UI:n pohja,
+        /// ankkuri DioraamaHahmot3D.PuhujanPaa).</summary>
+        public static string PuhuvaIlme { get; private set; }
+        /// <summary>Nykyisen vuoron ele (vuorot[].ele) tai null.</summary>
+        public static string PuhuvaEle { get; private set; }
+        /// <summary>Puhuja EnnakkoS:n päästä (kamera siirtyy puhujaan hieman ennen vuoron vaihtoa), tai null.</summary>
+        public static string TulevaPuhuja { get; private set; }
+        const double EnnakkoS = 0.5;
+
         KuunnelmaToisto toisto;
         string tilaId;
         int naytetty = -2;
+        KuunnelmaVuoro naytettyVuoro;
 
         /// <summary>Tilan id, jonka kuunnelma on kesken tai käyty (sama tila ei ala uudelleen ilman Kuuntele-nappia).</summary>
         public string TilaId => tilaId;
         public bool Kaynnissa => toisto != null && toisto.Kaynnissa;
+        /// <summary>Pulu napautuksesta (DioraamaSovitin asettaa): kuunnelman Pulu-rivit pois.</summary>
+        public static bool IlmanPulua;
+        /// <summary>Soiko jokin kuunnelma juuri nyt (Pulun napautusvuoro odottaa keskustelun loppuun).</summary>
+        public static bool SoiNyt;
+        /// <summary>Hahmojen keskustelurivi soi (vuorojen välitauot mukaan lukien; ei kertojan eikä Pulun riviä):
+        /// huonekortti tiivistyy tämän ajaksi, jotta puhujien vartalot ja eleet näkyvät (Päätoimittaja 5.10.).</summary>
+        public static bool Keskustelu { get; private set; }
         public string Tila => toisto == null ? "ei kuunnelmaa"
             : $"tila {tilaId}, rivi {toisto.Indeksi + 1}/{toisto.Maara}" + (toisto.Rivi != null ? $" ({toisto.Rivi.Nimi}: {toisto.Rivi.Teksti})" : " (loppu)");
 
@@ -45,8 +67,13 @@ namespace Matkakirja.Natiivi
             if (tila == null || tila.Kuunnelma == null || tila.Kuunnelma.Count == 0) { Lopeta(); return; }
             if (!alusta && tilaId == tila.Id) return;
             tilaId = tila.Id;
-            toisto = new KuunnelmaToisto(tila.Kuunnelma,
-                r => AanenKesto != null && !string.IsNullOrEmpty(r.Aani) ? AanenKesto(r.Aani) : null);
+            // Omistajan linnapalaute 5.10. klo 12.4x: Pulu ei puhu keskustelun väliin (kuunnelman Pulu-rivit pois, Pulu vain
+            // napautuksesta) ja rivien väliin luonteva tauko.
+            bool ilmanPulua = IlmanPulua;
+            var rivit = ilmanPulua ? tila.Kuunnelma.FindAll(r => !r.Pulu) : tila.Kuunnelma;
+            toisto = new KuunnelmaToisto(rivit,
+                r => AanenKesto != null && !string.IsNullOrEmpty(r.Aani) ? AanenKesto(r.Aani) : null,
+                ilmanPulua ? PoikkileikkausLinssi.VuoroTauko : KuunnelmaToisto.Tauko);
             toisto.Aloita(Time.unscaledTimeAsDouble);
             naytetty = -2;
             Nayta();
@@ -57,6 +84,8 @@ namespace Matkakirja.Natiivi
         {
             toisto = null;
             tilaId = null;
+            SoiNyt = false; Keskustelu = false;
+            PuhuvaHahmo = null; PuhuvaIlme = null; PuhuvaEle = null; TulevaPuhuja = null; naytettyVuoro = null;
             naytetty = -2;
             Nimi = null; Teksti = null;
         }
@@ -65,6 +94,21 @@ namespace Matkakirja.Natiivi
         public void Paivita()
         {
             if (toisto != null && toisto.Paivita(Time.unscaledTimeAsDouble)) Nayta();
+            SoiNyt = Kaynnissa;
+            // Kohtaukset v2: keskustelurivin vuoro vaihtuu kesken rivin (yksi äänitiedosto, puhujittaiset aikaleimat).
+            var r = toisto?.Rivi;
+            Keskustelu = SoiNyt && r != null && !r.Pulu && (r.Vuorot.Count > 0 || (r.Puhuja != null && r.Puhuja != "kertoja"));
+            if (r != null && r.Vuorot.Count > 0)
+            {
+                var v = toisto.Vuoro(Time.unscaledTimeAsDouble);
+                if (v != naytettyVuoro) { naytettyVuoro = v; NaytaVuoro(r, v); }
+                TulevaPuhuja = toisto.Vuoro(Time.unscaledTimeAsDouble + EnnakkoS)?.Puhuja ?? v?.Puhuja;
+            }
+            else
+            {
+                TulevaPuhuja = null;
+                PuhuvaHahmo = r != null && !r.Pulu && r.Puhuja != "kertoja" ? r.Puhuja : null;
+            }
         }
 
         void Nayta()
@@ -79,6 +123,20 @@ namespace Matkakirja.Natiivi
             bool aaneen = !string.IsNullOrEmpty(r.Aani) && DioraamaAanet.Puhutaan(r.Aani);
             Teksti = aaneen || string.IsNullOrEmpty(r.Teksti) ? null : r.Teksti;
             if (!string.IsNullOrEmpty(r.Aani)) Soita?.Invoke(r.Aani);
+            naytettyVuoro = null;
+            if (r.Vuorot.Count > 0) NaytaVuoro(r, toisto.Vuoro(Time.unscaledTimeAsDouble));
+        }
+
+        /// <summary>Vuoron puhuja nimeksi ja teksti, jos sitä ei puhuta ääneen (sama sääntö kuin riveillä).</summary>
+        void NaytaVuoro(KuunnelmaRivi r, KuunnelmaVuoro v)
+        {
+            PuhuvaHahmo = v?.Puhuja;
+            PuhuvaIlme = v?.Ilme;
+            PuhuvaEle = v?.Ele;
+            if (v == null) return;
+            Nimi = (PuhujanNimi?.Invoke(v.Puhuja) ?? v.Puhuja ?? "").ToUpperInvariant();
+            bool aaneen = !string.IsNullOrEmpty(r.Aani) && DioraamaAanet.Puhutaan(r.Aani);
+            Teksti = aaneen || string.IsNullOrEmpty(v.Teksti) ? null : v.Teksti;
         }
     }
 }

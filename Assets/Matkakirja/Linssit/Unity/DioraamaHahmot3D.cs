@@ -83,7 +83,19 @@ namespace Matkakirja.Natiivi
             // SKIN: oma sekoitin (leike, häivytys, aikakerroin) ja edellinen aika dt:tä varten.
             public DioraamaSekoitin Sekoitin;
             public double EdellinenT = double.NaN;
+            // Katse puhujaan (omistaja 5.10. klo 14.3x): pehmennetty kääntö oman suunnan ympärillä.
+            public float KatseKulma;
+            public int PaaIndeksi = -2;
+            public Quaternion PaaKierto = Quaternion.identity;
         }
+
+        /// <summary>Keskustelun puhuja (KuunnelmaKaistale.PuhuvaHahmo; DioraamaSovitin asettaa joka kehys) ja tila. Saman huoneen
+        /// paikallaan olevat kuulijat kääntyvät kohti puhujaa (enintään ±MaxKatseAsteet omasta suunnastaan, KatseNopeus °/s),
+        /// ja puhuja kääntyy kohti edellistä puhujaa. Ei keskustelua → takaisin omaan suuntaan.</summary>
+        public static string Puhuja, PuhujanTila, EdellinenPuhuja;
+        const float MaxKatseAsteet = 70f, KatseNopeus = 90f;
+        /// <summary>Puhujan pään yläpuolinen maailmanpiste (kasvokuvan ankkuri, Natiivi-UI:n pohja), tai null.</summary>
+        public static Vector3? PuhujanPaa { get; private set; }
 
         readonly Transform juuri;
         readonly Dictionary<string, HenkiloMalli> malliCache = new Dictionary<string, HenkiloMalli>(StringComparer.Ordinal);
@@ -438,6 +450,7 @@ namespace Matkakirja.Natiivi
         public void Paivita(Rakennus rakennus, Nakyma nakyma, double t)
         {
             nakymaHaku.Clear();
+            PuhujanPaa = null;
             if (nakyma.Hahmot != null) foreach (var hn in nakyma.Hahmot) nakymaHaku[(hn.TilaId, hn.HahmoId)] = hn;
 
             foreach (var e in esiintymat)
@@ -514,11 +527,19 @@ namespace Matkakirja.Natiivi
             string tavoite = reitilla && kavely < 0.5 ? "idle" : silmukka;
             string leike = Leike(m3, tavoite);
             bool ensimmainen = e.Sekoitin.Nykyinen == null;
-            if (!e.Sekoitin.Toista(leike, ensimmainen ? 0f : HaivytysS)) e.Sekoitin.Toista(Leike(m3, "idle"), ensimmainen ? 0f : HaivytysS);
+            // Idle ↔ puhe: pidempi häivytys (omistaja 5.10.: siirtymät "outoja"), muut ennallaan.
+            bool puheTaiEle = tavoite != "idle" && tavoite != "kavely" && tavoite != "tyo" && tavoite != "kanto";
+            float haivytys = ensimmainen ? 0f : puheTaiEle || e.Sekoitin.Nykyinen == Leike(m3, "puhe") ? PuheHaivytysS : HaivytysS;
+            // Ele (vuorot[].ele) → puhe → idle: puuttuva eleleike ei pysäytä puhetta.
+            if (!e.Sekoitin.Toista(leike, haivytys) && !(puheTaiEle && e.Sekoitin.Toista(Leike(m3, "puhe"), haivytys)))
+                e.Sekoitin.Toista(Leike(m3, "idle"), haivytys);
             var anim = e.Malli.Glb.Animaatio(e.Sekoitin.Nykyinen);
             float kesto = anim?.Kesto ?? 0f;
-            e.Sekoitin.Nopeus = tavoite == "kavely" && m3?.KavelySykliM > 0 && kesto > 0
-                ? (float)((e.Hahmo.Reitti?.Nopeus > 0 ? e.Hahmo.Reitti.Nopeus : 1.0) * kesto / m3.KavelySykliM) : 1f;
+            // Askelsykli on mitattu skaalaamattomasta mallista (hahmo_skin.py), mutta hahmo piirretään Skin.Skaala-koossa:
+            // ilman skaalaa askel oli ~5 % siirtymää lyhyempi ja jalat liukuivat (Linnanrakentaja 5.10.).
+            double sykliM = m3?.KavelySykliM > 0 ? m3.KavelySykliM * (m3.Skaala > 0 ? m3.Skaala : 1.0) : 0;
+            e.Sekoitin.Nopeus = tavoite == "kavely" && sykliM > 0 && kesto > 0
+                ? (float)((e.Hahmo.Reitti?.Nopeus > 0 ? e.Hahmo.Reitti.Nopeus : 1.0) * kesto / sykliM) : 1f;
             float dt = double.IsNaN(e.EdellinenT) ? (float)(VaiheYksikko(e.HahmoId) * kesto) : (float)Math.Clamp(t - e.EdellinenT, 0, 0.1);
             e.EdellinenT = t;
             e.Sekoitin.Paivita(dt);
@@ -532,12 +553,71 @@ namespace Matkakirja.Natiivi
                 tr.localScale = new Vector3(s.S[i * 3], s.S[i * 3 + 1], s.S[i * 3 + 2]);
             }
             PaivitaSijainti(e, t);
+            PaaKatse(e);
+        }
+
+        /// <summary>
+        /// PÄÄN KATSE (omistaja 5.10. klo 14.4x: "käsieleet ja muu vartalonkäyttö realistiseksi"; Animation Rigging vaatisi Animatorin,
+        /// hahmot animoi oma DioraamaSekoitin): animaation jälkeen pää kääntyy kohti keskustelukumppanin päätä (kuulija → puhuja,
+        /// puhuja → edellinen puhuja), enintään PaaMaxAsteet, painolla PaaPaino, pehmeästi. Vartalon kääntö on Katse-metodissa.
+        /// </summary>
+        void PaaKatse(Esiintyma e)
+        {
+            if (e.PaaIndeksi == -2)
+            {
+                e.PaaIndeksi = -1;
+                for (int i = 0; i < e.SolmuT.Length; i++)
+                {
+                    string n = e.SolmuT[i].name.ToLowerInvariant();
+                    if (n.EndsWith("head") || n == "head" || n.EndsWith(":head") || n.EndsWith("_head")) { e.PaaIndeksi = i; break; }
+                }
+            }
+            if (e.PaaIndeksi < 0) return;
+            string kohde = e.TilaId != PuhujanTila || Puhuja == null ? null : e.HahmoId == Puhuja ? EdellinenPuhuja : Puhuja;
+            Quaternion tavoite = Quaternion.identity;
+            var paa = e.SolmuT[e.PaaIndeksi];
+            if (kohde != null && e.Hahmo.Reitti == null)
+                foreach (var m in esiintymat)
+                    if (m != e && m.TilaId == e.TilaId && m.HahmoId == kohde && m.Juuri != null && m.Nakyvissa)
+                    {
+                        var kohdePaa = m.PaaIndeksi >= 0 ? m.SolmuT[m.PaaIndeksi].position : m.Juuri.transform.position + Vector3.up * 1.55f;
+                        var eteen = -e.Juuri.transform.forward; // skinnatun mallin kasvot (ks. PaivitaSijainti)
+                        var suunta = kohdePaa - paa.position;
+                        if (suunta.sqrMagnitude > 0.01f)
+                        {
+                            var kierto = Quaternion.FromToRotation(eteen, suunta.normalized);
+                            kierto.ToAngleAxis(out float kulma, out Vector3 akseli);
+                            if (kulma > 180f) kulma -= 360f;
+                            tavoite = Quaternion.AngleAxis(Mathf.Clamp(kulma, -PaaMaxAsteet, PaaMaxAsteet) * PaaPaino, akseli);
+                        }
+                        break;
+                    }
+            e.PaaKierto = Quaternion.Slerp(e.PaaKierto, tavoite, 1f - Mathf.Exp(-4f * Time.unscaledDeltaTime));
+            paa.rotation = e.PaaKierto * paa.rotation;
+        }
+        const float PaaMaxAsteet = 40f, PaaPaino = 0.7f;
+
+        /// <summary>Kasvosuunta keskustelussa: kuulija → puhuja, puhuja → edellinen puhuja; rajattu ja pehmennetty.</summary>
+        Vector3 Katse(Esiintyma e, Vector3 paikka, Vector3 oma)
+        {
+            string kohde = e.TilaId != PuhujanTila || Puhuja == null ? null : e.HahmoId == Puhuja ? EdellinenPuhuja : Puhuja;
+            float tavoite = 0f;
+            if (kohde != null)
+                foreach (var m in esiintymat)
+                    if (m != e && m.TilaId == e.TilaId && m.HahmoId == kohde && m.Juuri != null && m.Nakyvissa)
+                    {
+                        var suunta = m.Juuri.transform.position - paikka; suunta.y = 0f;
+                        if (suunta.sqrMagnitude > 0.04f) tavoite = Mathf.Clamp(Vector3.SignedAngle(oma, suunta, Vector3.up), -MaxKatseAsteet, MaxKatseAsteet);
+                        break;
+                    }
+            e.KatseKulma = Mathf.MoveTowards(e.KatseKulma, tavoite, KatseNopeus * Time.unscaledDeltaTime);
+            return Quaternion.AngleAxis(e.KatseKulma, Vector3.up) * oma;
         }
 
         static string Leike(SkinMalli m3, string silmukka)
             => m3?.Leikkeet != null && m3.Leikkeet.TryGetValue(silmukka, out var l) && !string.IsNullOrEmpty(l) ? l : silmukka;
 
-        const float HaivytysS = 0.25f;
+        const float HaivytysS = 0.25f, PuheHaivytysS = 0.45f;
 
         /// <summary>Juuri-GameObjectin paikka (hahmon oma tai reitti + juuren pystynousu) ja kasvot (Suunta tai
         /// kulkusuunta) -- eriytetty Paivita():sta, jotta se voi ajaa myös liikedatattoman puuttumistilanteen.</summary>
@@ -554,7 +634,9 @@ namespace Matkakirja.Natiivi
             Vector3 paikka = DioraamaNayttamo.UnityPiste(paikkaKanoninen);
             paikka.y += (float)juuriNousuM;
             e.Juuri.transform.position = paikka;
+            if (e.Hahmo.Reitti == null && e.Sekoitin != null) kasvot = Katse(e, paikka, kasvot);
             if (kasvot.sqrMagnitude > 1e-8f) e.Juuri.transform.rotation = Quaternion.LookRotation(kasvot, Vector3.up);
+            if (Puhuja != null && e.HahmoId == Puhuja && e.TilaId == PuhujanTila) PuhujanPaa = paikka + Vector3.up * 2.1f;
         }
 
         /// <summary>Nivelen (rx,ry,rz) [asteina, JS:n THREE 'XYZ'] -> Unity-paikallinen kvaternio peilattuna.
