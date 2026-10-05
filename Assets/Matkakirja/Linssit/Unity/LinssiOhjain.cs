@@ -1924,6 +1924,7 @@ namespace Matkakirja.Natiivi
                         else if (a == "s2maailma" && osat.Length > 3)   // S2-maailma v2 (juna 145): 0 = vain Eurooppa kuten ennen
                         {
                             AstronauttiKerros.S2MaailmaKaytossa = osat[3] != "0";
+                            Matkakirja.Linssit.IssKamera.KuvanTyosto.Maailma = AstronauttiKerros.S2MaailmaKaytossa ? AstronauttiKerros.S2MaailmaLadattu : null;
                             Kirjaa($"astro kyyti s2maailma {(AstronauttiKerros.S2MaailmaKaytossa ? "päällä" : "pois")}, laatat {(Matkakirja.Linssit.IssKamera.KuvanTyosto.Maailma != null ? "ladattu" : "ei")}");
                         }
                         else if (a == "s2" && osat.Length > 3)   // Euroopan S2-mosaiikki kyydissä (AstronauttiKerros.PaivitaS2)

@@ -436,7 +436,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool S2MaailmaKaytossa = true;
         static bool s2MaailmaHaettu;
-        bool S2MaailmaValmis => S2MaailmaKaytossa && KuvanTyosto.Maailma != null;
+        /// <summary>Ladattu saatavuus (KuvanTyosto.Maailma = tämä, kun käytössä; A/B pois → null myös ISS-kuvalle).</summary>
+        public static S2MaailmaLaatat S2MaailmaLadattu;
+        bool S2MaailmaValmis => S2MaailmaKaytossa && S2MaailmaLadattu != null;
         static string S2MaailmaMalli => "https://media.matkakirja.app/" + S2MaailmaLaatat.Polku + "{z}/{x}/{reverseY}.jpg";
 
         static System.Collections.IEnumerator LataaS2Maailma()
@@ -451,7 +453,8 @@ namespace Matkakirja.Natiivi
             var m = t.IsFaulted ? null : t.Result;
             if (m == null) { Debug.Log("MATKAKIRJA linssit: s2-maailma: laatat.json ei kelpaa → vain Eurooppa"); yield break; }
             Laattapalvelin.S2Maailma(S2MaailmaLaatat.Polku, m.Onko);
-            KuvanTyosto.Maailma = m;
+            S2MaailmaLadattu = m;
+            if (S2MaailmaKaytossa) KuvanTyosto.Maailma = m;
             Debug.Log($"MATKAKIRJA linssit: s2-maailma: {S2MaailmaLaatat.Versio} z{m.ZMin}–{m.ZMax}, {tavut.Length / 1024} kt, {kello.ElapsedMilliseconds} ms");
         }
 
