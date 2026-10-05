@@ -78,7 +78,11 @@ namespace Matkakirja.Natiivi
             try { long.TryParse(PlayerPrefs.GetString(LatausAvain, "0"), out muistettu); } catch (Exception) { }
             float e = DioraamaLevyvalimuisti.Edistys(muistettu);
             if (float.IsNaN(e)) return float.NaN;
-            latausOsuus = Mathf.Max(latausOsuus, Mathf.Min(e, 0.99f));
+            // Natiivi-UI 5.10. (b274b20c): tavut 99 % jo 13 s:ssa, mutta saapuminen vasta 26 s:ssa (kuoren jälkeen tilat, hahmot ja
+            // ympäristö puretaan ja viedään GPU:lle välimuistista). Osuus = 0,5 × tavut + 0,5 × valmiit vaiheet (kuori, tilat,
+            // hahmot, ympäristö), jolloin palkki etenee koko odotuksen.
+            float vaiheet = a.VaiheOsuus();
+            latausOsuus = Mathf.Max(latausOsuus, Mathf.Min(0.5f * e + 0.5f * vaiheet, 0.99f));
             return latausOsuus;
         }
 
@@ -570,6 +574,18 @@ namespace Matkakirja.Natiivi
             int kerta = avauskerta;
             yield return lataus;
             if (kerta == avauskerta) valmis();
+        }
+
+        /// <summary>Latauksen vaiheet 0…1 (kuori, tilat, hahmot, ympäristö tasapainoin), LatausOsuuden toinen puolisko.</summary>
+        float VaiheOsuus()
+        {
+            if (nayttamo == null || rakennus == null) return 0f;
+            float kuori = nayttamo.Ulkokuori == null || nayttamo.Ulkokuori.KaikkiValmis ? 1f : 0f;
+            int tilat = TilojaGlb(), hahmot = hahmoGlbJonossaTaiValmiit.Count;
+            float t = tilat > 0 ? Mathf.Clamp01((float)tilojaKasitelty / tilat) : 1f;
+            float h = hahmot > 0 ? Mathf.Clamp01((float)hahmojaKasitelty / hahmot) : (tilojaKasitelty >= tilat ? 1f : 0f);
+            float y = rakennus.Ymparisto == null || nayttamo.Ymparisto == null || nayttamo.Ymparisto.Valmis ? 1f : 0f;
+            return (kuori + t + h + y) / 4f;
         }
 
         int TilojaGlb()
