@@ -94,6 +94,14 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   Kytkentä Siirtosepälle (Ankkuri, Kamera, Viimeisin.Aseta(henkilö, ilme)); odottaa hänen SHA:taan → yhteiskäännös →
   still + video Päätoimittajalle. Myöhemmin: web tyylikirja.json PUHUJAKUVA-pohjan rivi (PR kuten #3998).
 
+## Kohdekortti heiluu (omistajan bugi 5.10. 14.4x) — avoinna
+- natiivi-ui/kutsu-paikallaan 4ae969b7 (master): syy Kutsuminiatyyri asettui UiKerros.JokaRuutu-vaiheessa (Update,
+  järjestys määrittämätön PalloKierto.Updaten kanssa) → kortti jäi ruudun kamerasta. Korjaus: UiKerros.KameranJalkeen
+  (UiKameranJalkeen, DefaultExecutionOrder 20: kameran jälkeen, ennen PreLateUpdaten UITK-päivitystä) + pikselikohdistus
+  fyysisiin pikseleihin. Huom: kamera liikkuu myös korutiineissa (lennot) → niissä voi yhä jäädä ruutu. Todiste: oikea veto
+  simuun, video ennen (app-736578a7 = master+versio) / jälkeen, ero kortti–kaupunki ≤ 0,5 pt ruuduittain.
+- Yhteiskäännös pyydetty: kutsu-paikallaan + siirtoseppa/puhujakuva-koe 1bffb7e1 (peili kappeli fd01cc97511edcbb).
+
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
 iss-taulu-vaaka.sh (TAP_OHI=1), auto-zoom.sh (TAP_SEUR=1), lippu-kaikki.sh, chat-linna.sh, kartoitus.sh (+ k:-etuliite
