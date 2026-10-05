@@ -7,6 +7,8 @@
 #   4 stillit tiloista, tila + laite + SHA merkittynä kuvaan, ja kuva-arkki
 #   5 äänikaappaus (kaappaa → <nimi>.wav + -natiivi.wav): ffprobe, kesto, mean/max dB; `aani mittaa` rms/huippu
 #   6 aiemmat palautteet (palaute-rivit) OK/PUUTE lokista
+#   5b Macin ulostuloon ei ääntä: pelin oma mykistysraportti (Unity + natiivit moottorit) heti alussa ja linssien jälkeen,
+#      muuten ajo keskeytetään (sovellus kiinni, simu alas)
 #   7 kuormahuomio (käännös/poltto käynnissä → toimintatesti, ei fps/laatu/A-V)
 #   8 ei-testattu-lista (skenaarion ei-testattu-rivit + automaattiset)
 # Tulos: proto-3d/lokit/todistus-<erä>-<aika>/TODISTUS.md (+ kuvat/, kuva-arkki.png, aani/, konsoli).
@@ -37,12 +39,12 @@ setopt extendedglob 2>/dev/null
 TYOKALUT=${0:A:h}
 BID=app.matkakirja.proto3d
 PROTO=/Users/Shared/Claude/proto-3d/Matkakirja-proto
-ERA= UDID= APP= SHA= SKEN= HAARA= LAITE=iphone JATA= NYT= PELI="odota-tila Aloitus 40;uusi-peli 5 marseille;odota-tila Kartta 40"
+ERA= UDID= APP= SHA= SKEN= HAARA= LAITE=iphone JATA= NYT= SALLI_VANHA= PELI="odota-tila Aloitus 40;uusi-peli 5 marseille;odota-tila Kartta 40"
 while (( $# )); do
   case $1 in
     --era) ERA=$2; shift 2 ;; --udid) UDID=$2; shift 2 ;; --app) APP=$2; shift 2 ;; --sha) SHA=$2; shift 2 ;;
     --skenaario) SKEN=$2; shift 2 ;; --haara) HAARA=$2; shift 2 ;; --laite) LAITE=$2; shift 2 ;;
-    --jata-paalle) JATA=1; shift ;; --nyt) NYT=1; shift ;; --peli) PELI=$2; shift 2 ;;
+    --jata-paalle) JATA=1; shift ;; --nyt) NYT=1; shift ;; --salli-vanha-mykistys) SALLI_VANHA=1; shift ;; --peli) PELI=$2; shift 2 ;;
     *) echo "tuntematon valitsin $1"; exit 2 ;;
   esac
 done
@@ -107,8 +109,25 @@ kirjoita() {   # kirjoita <tiedosto> <rivi>: odottaa, että peli on lukenut edel
 }
 if [[ $PELI == *uusi-peli* ]]; then odota_rivi 'kerronta ohi' 400 0 || kirjaa "peli ei käynnistynyt (ei 'kerronta ohi')"
 else odota_rivi 'testimykistys|peli-komento' 120 0; sleep 15; fi   # ilman uutta peliä (aloitusnäkymä): skenaario odottaa itse
-grep -a -q 'testimykistys päällä' $LOKI && tulos 5 OK "testimykistys päällä (ei Macin kaiuttimiin)" \
-  || tulos 5 HUOM "testimykistys-riviä ei lokissa"
+# MACIN ULOSTULOON EI ÄÄNTÄ (Päätoimittaja 5.10. 13.15, omistajan kaiuttimista kuului simulaattorin striimi): Unityn JA
+# natiivien moottoreiden mykistys varmistetaan pelin omalla raportilla ennen yhtäkään askelta ja jokaisen linssin jälkeen.
+# Jos kumpikaan puuttuu, ajo keskeytetään heti (sovellus kiinni, simu alas). --salli-vanha-mykistys: käännös ennen
+# natiivia mykistystä (8ff03da0), vain skenaarioille ilman linssejä, radiota ja Pulun puhekanavaa.
+mykistys() {
+  local r=$(rivit); kirjoita peli-komento.txt "aani mykistys"
+  odota_rivi 'mykistys (päällä|pois)' 15 $r || { echo "ei vastausta"; return 1; }
+  local m=$(tail -n +$(( r + 1 )) $LOKI | grep -a -m1 -E 'mykistys (päällä|pois)' | sed 's/.*=mykistys/mykistys/' | cut -c1-140)
+  echo "$m"
+  [[ $m == *"unity päällä"*"natiivi päällä"* ]] && return 0
+  [[ -n $SALLI_VANHA && $m == *"mykistys päällä"* ]] && return 0
+  return 1
+}
+keskeyta_aani() {
+  xcrun simctl terminate $UDID $BID 2>/dev/null; xcrun simctl shutdown $UDID 2>/dev/null
+  tulos 5 PUUTE "AJO KESKEYTETTY: mykistys ei varmistettu ($1) — ääni olisi voinut mennä Macin kaiuttimiin"
+  python3 $TYOKALUT/todistusraportti.py raportti $L "$ERA" "${VERSIO:-$SHA}" "$LAITE" "$UDID" "$SKEN"; exit 6
+}
+if m=$(mykistys); then tulos 5 OK "Macin ulostulo mykistetty: $m"; else keskeyta_aani "$m"; fi
 sleep 3
 kirjoita linssi-komento.txt "kehittaja 1"; sleep 1
 
@@ -124,7 +143,8 @@ while IFS= read -r rivi || [[ -n $rivi ]]; do
   rivi=${rivi%%[[:space:]]#}; [[ -z $rivi || $rivi == \#* ]] && continue
   sana=${rivi%% *}; loput=${rivi#* }; [[ $loput == $rivi ]] && loput=""
   case $sana in
-    peli|linssi) VIIM=$(rivit); kirjoita $sana-komento.txt "$loput"; kirjaa "→ $sana $loput" ;;
+    peli|linssi) VIIM=$(rivit); kirjoita $sana-komento.txt "$loput"; kirjaa "→ $sana $loput"
+      if [[ $sana == linssi && $loput == linssi* ]]; then sleep 2; m=$(mykistys) || keskeyta_aani "linssin jälkeen: $m"; VIIM=$(rivit); fi ;;
     ui) VIIM=$(rivit); kirjoita ui-komento.txt "ui $loput"; kirjaa "→ ui $loput" ;;
     komento) VIIM=$(rivit); kirjoita komento.txt "$loput" ;;
     odota) sleep $loput ;;
