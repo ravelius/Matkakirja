@@ -761,6 +761,9 @@ namespace Matkakirja.Natiivi
                         : t == "flush-ilman" ? "<align=flush>" : "<align=\"justified\">";
                     return "tasaus: " + (Lehtinakyma.TasausTagi.Length > 0 ? Lehtinakyma.TasausTagi.Replace("<", "‹") : "pois");
                 }
+                case "puhujakuva":
+                    // PUHUJAKUVA (Puhujakuva.cs): ui puhujakuva <kuva> [x y] | pois — Resources/Puhujakuvat/<kuva> pisteeseen tai ankkuriin.
+                    return "=" + Puhujakuva.Testi(loput);
                 case "kuunnelma":
                 {
                     // Olavinlinnan kuunnelman tekstitys (KuunnelmaKaistale): ui kuunnelma [tila] | ohita | alusta.

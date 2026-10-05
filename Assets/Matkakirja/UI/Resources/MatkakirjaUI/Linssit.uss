@@ -358,6 +358,15 @@
     color: rgba(232, 237, 245, 0.72);
 }
 
+/* PUHUJAKUVA (Puhujakuva.cs, omistaja 5.10.2026 klo 14.3x): kehyksetön muotokuva puhujan pään yläpuolella; pehmeä
+ * ellipsimaski on kuvan alfassa (ei kehystä, ei reunusta, ei kulmia), häivytys --tk-kesto-sulku. */
+.mk-puhujakuva {
+    position: absolute;
+    -unity-background-scale-mode: scale-and-crop;
+    transition-property: opacity;
+    transition-duration: 200ms;
+}
+
 /* --- astronautin kamera: avaruussumu -------------------------------------- */
 
 .mk-astrosumu {

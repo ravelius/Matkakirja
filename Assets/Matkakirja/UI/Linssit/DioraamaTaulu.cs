@@ -271,6 +271,8 @@ namespace Matkakirja.Natiivi
             };
 
             kuunnelma = new KuunnelmaKaistale();
+            // PUHUJAKUVA (omistaja 5.10.2026 klo 14.3x): puhujan muotokuva pään yläpuolella; Siirtoseppä kytkee ankkurin ja puhujan.
+            puhujakuva = new Puhujakuva(juuri);
             Viimeisin = this;
 
             // NIMIRUUTU (Päätoimittaja 4.10.): saapumisen latausodotuksen ajan ISS-avausruudun pohja (mk-astroavaus, ei uutta tyyliä):
@@ -383,6 +385,7 @@ namespace Matkakirja.Natiivi
         }
 
         readonly VisualElement nimiruutu;
+        readonly Puhujakuva puhujakuva;
         // AVAINSANAT (Päätoimittaja 5.10., omistajan TF 141 -palaute "muutamia vuosilukuja sekä muita lyhyitä sanoja luennan tueksi"):
         // vasen alakulma ilman laatikkoa, vuosiluku goottilaisella ja 1–3 sanaa antiikvalla (havainteen kultaiset varjostetut tyylit),
         // häivytys sisään kun kertoja sanoo asian (kertojan klipin soittokohta ≥ t_s) ja pois AvainsanaS:n jälkeen.
