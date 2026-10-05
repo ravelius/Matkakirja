@@ -65,7 +65,7 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void TakytLuetaan()
         {
             var t = OpasTaky.Lue((Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna(
-                "{\"paiva\":\"2026-10-06\",\"kohteet\":[{\"id\":\"Q1\",\"nimi\":\"Canal Grande\",\"koukku\":\"Kaupunki vedellä.\",\"kaupunki\":\"Venetsia\",\"maa\":\"IT\",\"lat\":45.43,\"lon\":12.33,\"kuva\":{\"url\":\"u\"}},"
+                "{\"paiva\":\"2026-10-06\",\"kohteet\":[{\"id\":\"Q1\",\"nimi\":\"Canal Grande\",\"koukku\":\"Kaupunki vedellä.\",\"kaupunki\":\"Venetsia\",\"iso\":\"IT\",\"lat\":45.43,\"lon\":12.33,\"kuva\":{\"url\":\"u\"}},"
                 + "{\"nimi\":\"rikki\",\"lat\":95,\"lon\":0}]}"));
             Oleta.Sama(1, t.Count); Oleta.Tosi(t[0].Iso2 == "IT" && t[0].Kaupunki == "Venetsia" && t[0].KuvaUrl == "u");
         }
