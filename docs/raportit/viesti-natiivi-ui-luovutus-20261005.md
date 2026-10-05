@@ -147,6 +147,13 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   viivalla, tila säilyy). Löydös kartan Pulussa (uudelleen avaus → 4 sirua) korjattu 89e861e5; todennus seuraavassa käännöksessä,
   sitten merge-pyyntö (juna 145). Arkki puluchat/puluchat-arkki.jpg. Pelikoodari kuvaa elävän vastauksen videon (app-b88675a3).
 
+## Tila 17.3x
+- pulu-chat-yksi d1d1f0ee: + keskustelu paikoittain (c55f4c12) + sirut kiinni (d1d1f0ee); todennettu a8ab3018:lla
+  (puluchat2/puluchat2-arkki.jpg) → MERGE-PYYNTÖ Natiivisepälle junaan 145 lähetetty. Avoin: astrokohteiden 472 vastausta
+  taustatiedoksi (AstronauttiAineisto, Pelikoodari + Linssiseppä).
+- Junaan 145 lähetetty myös astrokuva-tauko-144 bc66e66d.
+- Lukematon: puhujakuvan ja tiivistetyn huonekortin otsikon päällekkäisyys (Siirtoseppä 15.4x) korjataan puhujakuvan kanssa.
+
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
 iss-taulu-vaaka.sh (TAP_OHI=1), auto-zoom.sh (TAP_SEUR=1), lippu-kaikki.sh, chat-linna.sh, kartoitus.sh (+ k:-etuliite
