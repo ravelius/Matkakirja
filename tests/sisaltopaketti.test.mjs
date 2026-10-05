@@ -1109,7 +1109,7 @@ test('2.0 (major2.mjs): ei raakaa, vain natiivin moduulit, tiivisteet täsmääv
   }
   for (const [polku, teksti] of t2) {
     assert.doesNotMatch(teksti, /matkakirja-vienti\/1\//, polku);
-    if (polku.startsWith('kokoelmat/')) assert.ok(JSON.parse(teksti).alkiot.every((a) => !('data' in a)), polku);
+    if (polku.startsWith('kokoelmat/') && polku !== m.asetukset?.tiedosto) assert.ok(JSON.parse(teksti).alkiot.every((a) => !('data' in a)), polku);
   }
   const [laatta] = JSON.parse(t2.get('kokoelmat/laatat.json')).alkiot;
   assert.ok(laatta.tyypit.star.nimi && !('name' in laatta.tyypit.star));

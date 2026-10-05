@@ -40,6 +40,7 @@ import { fileURLToPath } from 'node:url';
 import { SKEEMAVERSIO, SKEEMAVERSIO_TARKKA, JUURI } from './vie-sisalto.mjs';
 import { tarkistaSopimus } from './skeemasopimus.mjs';
 import { validoiNimella } from './validoi.mjs';
+import { validoiAsetukset } from './asetukset.mjs';
 
 export const MIN_SOVELLUS = { ios: 1, web: null };
 export const MAJOR = SKEEMAVERSIO.split('/').pop();
@@ -50,6 +51,13 @@ const sha = (s) => createHash('sha256').update(s).digest('hex');
 export function paketinTiiviste(tiedostot) {
   const rivit = [...tiedostot.keys()].sort().map((p) => `${p}\t${sha(tiedostot.get(p))}\n`);
   return sha(rivit.join(''));
+}
+
+/** Asetustiedoston validointi (tools/vienti/asetukset.mjs): virheet palautetaan, varoitukset tulostetaan. */
+function validoiAsetuksetPaketista(lue, polku) {
+  const { virheet, varoitukset } = validoiAsetukset(lue(polku));
+  for (const v of varoitukset) console.warn(`${polku}: ${v}`);
+  return virheet.map((v) => `${polku}: ${v}`);
 }
 
 /**
@@ -72,6 +80,8 @@ export function tarkistaPaketti(tiedostot) {
       ));
     }
   }
+  // Skeema 1.59: asetukset on tavallinen objekti (ei kokoelmaskeemaa); oma validointi, rikkinäinen ei pääse osoittimeen.
+  if (manifest.asetukset) virheet.push(...validoiAsetuksetPaketista(lue, manifest.asetukset.tiedosto));
   if (manifest.offline) {
     virheet.push(...validoiNimella(lue(manifest.offline.tiedosto), 'offline.schema.json', { polku: manifest.offline.tiedosto }));
   }
@@ -151,6 +161,9 @@ export function tarkistaMajor2(tiedostot) {
   const virheet = [];
   const manifest = JSON.parse(tiedostot.get('manifest.json'));
   if (manifest.$skeema !== 'matkakirja-vienti/2/manifest') virheet.push(`manifest: $skeema ${manifest.$skeema}`);
+  if (manifest.asetukset && tiedostot.has(manifest.asetukset.tiedosto)) {
+    virheet.push(...validoiAsetuksetPaketista((p) => JSON.parse(tiedostot.get(p)), manifest.asetukset.tiedosto));
+  }
   for (const arvo of Object.values(manifest)) {
     for (const e of Array.isArray(arvo) ? arvo : [arvo]) {
       if (!e || typeof e !== 'object' || typeof e.tiedosto !== 'string') continue;
@@ -160,7 +173,7 @@ export function tarkistaMajor2(tiedostot) {
   }
   for (const [polku, teksti] of tiedostot) {
     if (teksti.includes('matkakirja-vienti/1/')) virheet.push(`${polku}: 1.x-tunniste`);
-    if (polku.startsWith('kokoelmat/') && JSON.parse(teksti).alkiot.some((a) => 'data' in a)) virheet.push(`${polku}: data-kenttä`);
+    if (polku.startsWith('kokoelmat/') && polku !== manifest.asetukset?.tiedosto && JSON.parse(teksti).alkiot.some((a) => 'data' in a)) virheet.push(`${polku}: data-kenttä`);
   }
   return virheet.slice(0, 20);
 }
