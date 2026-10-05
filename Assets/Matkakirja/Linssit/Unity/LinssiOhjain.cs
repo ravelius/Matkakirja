@@ -25,7 +25,7 @@
 // linssien äänille "aani tila | keksinto | vuosi | humina [pois]" (soitto ja lähteen aika hetken päästä, humina
 // Pelikoodarin maisemakanavalla ilman linssiä); elävälle kartalle "elava kreikka [alku s] [nopeus] | kuva <s> | jatka |
 // saapuminen <kaupunki> | saato | ui | pois | tila" (ElavaKartta); ISS:n radalle "iss tila | lataa" (IssTleLataaja).
-// Lontoo-pilotille (Linssiseppä 5.10.2026) "linssi lontoo" ja "lontoo ohita | tila" (LontooSovitin; kehitystunnus
+// Lontoo-pilotille (Linssiseppä 5.10.2026) "linssi lontoo" ja "lontoo ohita | omadata 0|1 | tila" (LontooSovitin; kehitystunnus
 // Documents/cesium-ion-tunnus.txt).
 // Tulos lokiin ja Documents/linssi-loki.txt:hen.
 using System;
@@ -2004,6 +2004,7 @@ namespace Matkakirja.Natiivi
                 else if (osat[0] == "lontoo")
                 {
                     if (osat.Length > 1 && osat[1] == "ohita") lontoo?.Ohita();
+                    else if (osat.Length > 2 && osat[1] == "omadata") LontooSovitin.OmaData = osat[2] == "1";
                     Kirjaa(lontoo?.Tila() ?? "lontoo: ei sovitinta");
                 }
                 else if (osat[0] == "poikki")

@@ -42,6 +42,11 @@ namespace Matkakirja.Natiivi
         public static event Action<LontooSovitin> Vaihtui;
         /// <summary>Kehitystunnuksen polku laitteella (ei repoon).</summary>
         public static string TunnusPolku => Path.Combine(Application.persistentDataPath, "cesium-ion-tunnus.txt");
+        /// <summary>
+        /// TESTITILA ilman ion-tunnusta (komento "lontoo omadata 1"): maasto pallon omasta ämpäristä, ei ilmakuvaa eikä
+        /// rakennuksia. Vain lennon, kameran, origon, UI:n ja sulun todentamiseen; ei pelaajalle.
+        /// </summary>
+        public static bool OmaData;
 
         readonly LinssiOhjain o;
         readonly PalloKierto kierto;
@@ -67,7 +72,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Avauksen virhe (puuttuva tunnus); UI näyttää sen tilarivillä ja sulkee linssin.</summary>
         public string Virhe { get; private set; }
         /// <summary>Laattojen latausaste 0–100 (pienempi kahdesta tilesetistä), UI:n odotusriville ja lokiin.</summary>
-        public float Latausaste => maasto == null || rakennukset == null ? 0f : Mathf.Min(maasto.ComputeLoadProgress(), rakennukset.ComputeLoadProgress());
+        public float Latausaste => maasto == null ? 0f : rakennukset == null ? maasto.ComputeLoadProgress() : Mathf.Min(maasto.ComputeLoadProgress(), rakennukset.ComputeLoadProgress());
 
         public void Avaa(ILinssiYmparisto ymparisto)
         {
@@ -75,7 +80,8 @@ namespace Matkakirja.Natiivi
             Virhe = null;
             Viimeisin = this;
             string tunnus = LueTunnus();
-            if (string.IsNullOrEmpty(tunnus))
+            bool oma = OmaData;
+            if (string.IsNullOrEmpty(tunnus) && !oma)
             {
                 Virhe = "Lontoo: Cesium ion -tunnus puuttuu";
                 Debug.LogWarning("MATKAKIRJA lontoo: ion-tunnus puuttuu (" + TunnusPolku + ")");
@@ -108,13 +114,22 @@ namespace Matkakirja.Natiivi
 
             juuri = new GameObject("Lontoo");
             juuri.transform.SetParent(georef.transform, false);
-            maasto = LuoTileset("Lontoo maasto", 1, tunnus, MaastoSse, MaastoValimuisti);
-            var bing = maasto.gameObject.AddComponent<CesiumIonRasterOverlay>();
-            bing.ionAssetID = 2;
-            bing.ionAccessToken = tunnus;
-            rakennukset = LuoTileset("Lontoo rakennukset", 96188, tunnus, RakennusSse, RakennusValimuisti);
+            if (oma)
+            {
+                maasto = LuoTileset("Lontoo maasto (oma testi)", 0, null, MaastoSse, MaastoValimuisti);
+                maasto.tilesetSource = CesiumDataSource.FromUrl;
+                maasto.url = KarttaKerrokset.Instanssi != null && KarttaKerrokset.Instanssi.pallo != null ? KarttaKerrokset.Instanssi.pallo.url : null;
+            }
+            else
+            {
+                maasto = LuoTileset("Lontoo maasto", 1, tunnus, MaastoSse, MaastoValimuisti);
+                var bing = maasto.gameObject.AddComponent<CesiumIonRasterOverlay>();
+                bing.ionAssetID = 2;
+                bing.ionAccessToken = tunnus;
+                rakennukset = LuoTileset("Lontoo rakennukset", 96188, tunnus, RakennusSse, RakennusValimuisti);
+                rakennukset.gameObject.SetActive(true);
+            }
             maasto.gameObject.SetActive(true);
-            rakennukset.gameObject.SetActive(true);
 
             esikamera = new GameObject("Lontoo esilataus").AddComponent<Camera>();
             esikamera.transform.SetParent(juuri.transform, false);
@@ -130,7 +145,7 @@ namespace Matkakirja.Natiivi
             KyydinKameraEnnen.Ajo = PaivitaKamera;
             PaivitaKamera();
             Vaihtui?.Invoke(this);
-            o.Kirjaa($"lontoo: auki, arvio {lento.ArvioituKesto():F0} s, {lento.Reitti.Count} pysähdystä");
+            o.Kirjaa((oma ? "lontoo: OMA TESTIDATA (ei ionia), " : "lontoo: ") + $"auki, arvio {lento.ArvioituKesto():F0} s, {lento.Reitti.Count} pysähdystä");
         }
 
         Cesium3DTileset LuoTileset(string nimi, long asset, string tunnus, float sse, long valimuisti)
@@ -236,7 +251,7 @@ namespace Matkakirja.Natiivi
                 y?.Pelikerrokset(true);
                 y?.MusiikkiPitoon(false);
             }
-            lento = null; georef = null; kamera = null; paivitetty = -1;
+            lento = null; georef = null; kamera = null; paivitetty = -1; Virhe = null;
             Vaihtui?.Invoke(null);
         }
     }
