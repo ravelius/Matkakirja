@@ -389,7 +389,7 @@ namespace Matkakirja.Natiivi
         readonly VisualElement avainsana;
         readonly Label avainsanaVuosi, avainsanaSanat;
         Avainsana avainsanaNyt;
-        const float AvainsanaS = 4f;
+        internal const float AvainsanaS = 4f; // myös DioraamaTimelinen avainsanaraidan klippien kesto
         readonly Label nimiruudunNimi, latausRivi;
         bool nimiruutuAuki, virheIlmoitettu;
         float nimiruutuAlku;
@@ -463,7 +463,8 @@ namespace Matkakirja.Natiivi
                 avainsanaVuosi.text = nyt.Vuosi ?? "";
                 avainsanaVuosi.style.display = string.IsNullOrEmpty(nyt.Vuosi) ? DisplayStyle.None : DisplayStyle.Flex;
                 avainsanaSanat.text = nyt.Sanat ?? "";
-                Debug.Log($"MATKAKIRJA linssit: avainsana {nyt.Vuosi} {nyt.Sanat} ({nyt.Ts:F1} s)");
+                // Kierrosaika lokiin (linna-unity-suunnitelma 2b: timeline-A/B, avainsanat ±100 ms).
+                Debug.Log($"MATKAKIRJA linssit: avainsana {nyt.Vuosi} {nyt.Sanat} ({nyt.Ts:F1} s, kierros +{DioraamaTimeline.S(DioraamaSovitin.ViimeisinT - DioraamaTimeline.KierrosAlku)} s, {(DioraamaTimeline.OhjaaKertojaa ? "timeline" : "ydin")})");
             }
             avainsana.style.opacity = nyt != null ? 1f : 0f;
             avainsanaNyt = nyt;

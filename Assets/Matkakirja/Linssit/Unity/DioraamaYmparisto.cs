@@ -443,8 +443,10 @@ namespace Matkakirja.Natiivi
             DioraamaRuutu.Kirjaa(kirjaa, "taivas LoadImage", r0);
             luodut.Add(k);
             yield return null;
+            if (k == null || oma != kerta) yield break; // teardown-kilpa
             r0 = DioraamaRuutu.Alku(); k.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "taivas Compress", r0);
             yield return null;
+            if (k == null || oma != kerta) yield break;
             k.Apply(false, true); DioraamaRuutu.Gpu(kirjaa, k);
             yield return null; // GPU-lataus omassa ruudussaan ennen kuin kuva vaihtuu liukuvärin tilalle
             if (oma != kerta || taivasMat == null) yield break;
@@ -523,8 +525,10 @@ namespace Matkakirja.Natiivi
                     luodut.Add(kuva); kohteet?.Add(kuva);
                     DioraamaRuutu.Kirjaa(kirjaa, nimi + " LoadImage", r0);
                     yield return null;
+                    if (kuva == null || oma != kerta) yield break; // teardown-kilpa
                     r0 = DioraamaRuutu.Alku(); kuva.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, nimi + " Compress", r0);
                     yield return null;
+                    if (kuva == null || oma != kerta) yield break;
                     kuva.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, kuva);
                     yield return null;
                 }
@@ -678,12 +682,16 @@ namespace Matkakirja.Natiivi
             yield return null;
             if (pakkaa || lineaarinen && !nimi.Contains("maski"))
             {
+                // Teardown-kilpa (Päätoimittaja 5.10., Natiivisepän Brotli-ajo): sulkeutuva linna tuhoaa luodut tekstuurit, ja
+                // korutiini jatkaa seuraavassa ruudussa → Compress/Apply tuhotulle tekstuurille = NullReferenceException.
+                if (t == null) { tulos(null, kirkkaus); yield break; }
                 r0 = DioraamaRuutu.Alku(); t.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, nimi + " Compress", r0);
                 yield return null;
             }
+            if (t == null) { tulos(null, kirkkaus); yield break; }
             t.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, t);
             yield return null;
-            tulos(t, kirkkaus);
+            tulos(t != null ? t : null, kirkkaus);
         }
 
         // --- PUUT -----------------------------------------------------------------------------------------------------
@@ -824,8 +832,10 @@ namespace Matkakirja.Natiivi
                 luodut.Add(atlas);
                 DioraamaRuutu.Kirjaa(kirjaa, "puukortit LoadImage", r0);
                 yield return null;
+                if (atlas == null || oma != kerta) yield break; // teardown-kilpa
                 r0 = DioraamaRuutu.Alku(); atlas.Compress(true); DioraamaRuutu.Kirjaa(kirjaa, "puukortit Compress", r0);
                 yield return null;
+                if (atlas == null || oma != kerta) yield break;
                 atlas.Apply(true, true); DioraamaRuutu.Gpu(kirjaa, atlas);
                 yield return null;
                 if (oma != kerta) yield break;

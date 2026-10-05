@@ -1,7 +1,8 @@
 // DIORAAMA-SOVITIN: Poikkileikkaus-linssin Unity-kytkentä (Linnanrakentaja, erä 1, 29.9.2026; MaapallonVuosiSovitin-
 // malli). Ydin (Matkakirja.Linssit.Dioraama.PoikkileikkausLinssi, A3) ei tunne Unitya: tämä sovitin lataa
 // rakennus.json + glb + atlas-tekstuurit, pitää DioraamaNayttamo/DioraamaRakennus/DioraamaHahmot/DioraamaSyote-
-// oliot ja syöttää ajan (t = ymparisto.Aika) Ytimelle joka kehys. Katso dioraama-rajapinnat-20260929.md kohta 6.
+// oliot ja syöttää ajan (t = ymparisto.Aika; kertojan kierroksen aikana DioraamaTimelinen director, kun "poikki timeline 1")
+// Ytimelle joka kehys. Katso dioraama-rajapinnat-20260929.md kohta 6.
 //
 // ÄMPÄRI (Päätoimittaja 29.9.: CI rakentaa paketin deterministisesti ja vie sen polkuun dioraama/<rakennus>/<hash>/,
 // uusin.json viimeisenä): sovitin lukee ensin AmpariJuuri + "uusin.json" ({ polku: "<hash>/" }) ja lataa paketin sen
@@ -10,7 +11,8 @@
 //
 // TESTIKOMENNOT (linssi-komento.txt): "poikki peili <url|pois> | yleis | tila <id> | aika <s|pois> |
 // taso <tila> <0-2> | napauta | lataa | mittaus | tila | dof <0|1> | hehku <0|1> | aanet [0|1] | drift <0|1> |
-// hahmot <2d|3d>" (LinssiOhjain.Komento reitittää "poikki"-alkuiset tänne). drift = Leijunta (era 2b, kohta 5,
+// hahmot <2d|3d> | timeline [0|1]" (LinssiOhjain.Komento reitittää "poikki"-alkuiset tänne). timeline = kertojan esittely
+// Unityn Timelinellä (DioraamaTimeline, linna-unity-suunnitelma 2b), oletus pois. drift = Leijunta (era 2b, kohta 5,
 // agentti P5): hidas ajelehtiminen levossa, oletus pois. hahmot = 3D-pienoisfiguuri vs. 2D-kortti (era 2b
 // kohta 4, agentti P4b), oletus 3d.
 using System;
@@ -62,6 +64,11 @@ namespace Matkakirja.Natiivi
         DioraamaHahmot hahmot3D;
         DioraamaSyote syote;
         readonly DioraamaKameraJousi jousi = new DioraamaKameraJousi();
+        // TIMELINE (linna-unity-suunnitelma-20261005.md kohta 2b): kertojan kierroksen aikana PlayableDirector on Ytimen kello.
+        // kelloSiirto pitää Ytimen ajan jatkuvana kierroksen jälkeen (YdinAika = seinäkello + siirto; 0 ilman timelinea).
+        readonly DioraamaTimeline timeline = new DioraamaTimeline();
+        double kelloSiirto;
+        double YdinAika => y.Aika + kelloSiirto;
         // ERA 2 (dioraama-aanirajapinta-ehdotus.md): PYSYVÄ kenttä (ei nollata Sulje:ssa, ks. DioraamaAanet.cs:n
         // alkukommentti) -- klippivälimuisti säilyy sulkemisen ja uudelleenavaamisen yli. HUOM (UUDELLEENAVAUS-
         // korjaus 29.9.2026, katselmointi): ladatutPinnat/ladatutLiekkiAtlakset EIVÄT enää säily samoin --
@@ -130,6 +137,7 @@ namespace Matkakirja.Natiivi
         {
             y = ymparisto;
             avoinna = true;
+            kelloSiirto = 0;
             pallonKamera = kierto != null ? kierto.GetComponent<Camera>() : null;
             // Pallo piiloon talon omalla näkymäpeitolla (kuten koko ruudun lehti): PalloKierto.Peitetty → Ruudunpaivitys
             // sammuttaa pallon kameran, eikä kehysmittari laske peitettyjä kehyksiä lepoon.
@@ -179,7 +187,7 @@ namespace Matkakirja.Natiivi
             RakennusLatautuu = avoinna && rakennus == null && latausKaynnissa;
             // rakennus == null: "poikki lataa" kesken (1.0.54-ajossa DioraamaAanet.Paivita kaatui NullReferenceen).
             if (!avoinna || y == null || !linssi.Auki || rakennus == null) return;
-            double t = pysaytettyT ?? y.Aika;
+            double t = pysaytettyT ?? YdinAika;
             // Laajat kuvat sovitetaan todelliseen kuvasuhteeseen: näyttämön kameran oma (kuvan) suhde, ei ympäristön arvo
             // (1.1 (79) vaaka: kierron jälkeen sovitus käytti vielä pystyn suhdetta ja linna jäi pieneksi).
             float kameranSuhde = nayttamo.Kamera != null ? nayttamo.Kamera.aspect : 0f;
@@ -213,8 +221,8 @@ namespace Matkakirja.Natiivi
                     kuoriOdotusAlku = -1f;
                     nayttamo.Odota(false);
                     nayttamo.Haivyta(HaivytysS);
-                    linssi.Avaa(rakennus, y.Aika, SaapuminenNahty); // kaari (ja kertoja) alusta tästä hetkestä
-                    t = pysaytettyT ?? y.Aika;
+                    linssi.Avaa(rakennus, YdinAika, SaapuminenNahty); // kaari (ja kertoja) alusta tästä hetkestä
+                    t = pysaytettyT ?? YdinAika;
                     o.Kirjaa($"poikki: saapuminen alkaa (kaikki valmiina täydellä tarkkuudella: kuori, tilat {tilojaKasitelty}/{TilojaGlb()}, " +
                              $"hahmot {hahmojaKasitelty}/{hahmoGlbJonossaTaiValmiit.Count}, ympäristö; odotettiin {odotettu:F1} s, " +
                              $"välimuistista {DioraamaLevyvalimuisti.Osumia - osumiaAlussa}, verkosta {DioraamaLevyvalimuisti.Latauksia - latauksiaAlussa})");
@@ -224,9 +232,15 @@ namespace Matkakirja.Natiivi
             }
             SaapumisOdotus = kuoriOdotusAlku >= 0f;
             bool pysty = linssi.Kuvasuhde < 1.0; // kameran oma suhde (ks. yllä)
+            // TIMELINE (2b): soiva director on esittelyn ainoa kello (t = kierroksen alku + director.time); seinäkellon siirtymä
+            // seuraa, jotta Ytimen aika jatkuu kierroksen jälkeen ilman hyppyä. Jäädytetty aika ja nimiruutu ohittavat directorin.
+            if (!pysaytettyT.HasValue && !SaapumisOdotus && timeline.Soi) { t = timeline.Kello(t); kelloSiirto = t - y.Aika; }
             if (paluuPyydetty) { paluuPyydetty = false; Yleisnakymaan(t); }
             if (pyydettyTila != null) { string pt = pyydettyTila; pyydettyTila = null; if (rakennus?.Tila(pt) != null) Kohdista(pt, t); }
+            // Aloitus, uudelleenrakennus (napautus, uusinta, asento) ja pysäytys (huone, kierroksen loppu) Ytimen aikataulusta.
+            timeline.Paivita(linssi, rakennus, t, pysty, pysaytettyT.HasValue || SaapumisOdotus);
             var nakyma = linssi.NakymaHetkella(t, pysty);
+            timeline.Tarkista(nakyma.KertojaJakso, t);
             // Elävä linna: saapumiskaaren eteneminen → soihtujen syttyminen; kaari nähty → seuraavalla kerralla lyhyt.
             if (rakennus.Saapuminen != null)
             {
@@ -272,6 +286,8 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             linssi.Sulje();
+            timeline.Tuhoa(); // ennen aanet.Sulje: vanhan graafin klipit eivät enää koske kertojaan
+            kelloSiirto = 0;
             kuoriOdotusAlku = -1f; SaapumisOdotus = false; RakennusLatautuu = false; LatausVirhe = null; // näyttämö (ja sen odotuspiilotus) tuhoutuu alla
             rakennus3D?.Tyhjenna(); rakennus3D = null;
             hahmot3D?.Tyhjenna(); hahmot3D = null;
@@ -444,11 +460,11 @@ namespace Matkakirja.Natiivi
             o.Kirjaa($"poikki: {rakennus.Nimi} ladattu, {rakennus.Tilat.Count} tilaa, juuri {paketinJuuri}");
             if (avoinna)
             {
-                linssi.Avaa(rakennus, y.Aika, SaapuminenNahty);
+                linssi.Avaa(rakennus, YdinAika, SaapuminenNahty);
                 aanet?.RakennusValmis(rakennus); // rakennus oli null Avaa-kutsun hetkellä: äänet saavat sen vasta nyt.
                 TaydennaPinnatJaLiekit();
                 LataaUlkokuori();
-                AloitaKuoriOdotus(y.Aika);
+                AloitaKuoriOdotus(YdinAika);
                 TaydennaLataamattomat();
             }
         }
@@ -816,6 +832,14 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: vaakasuunta " + Screen.orientation); return;
             }
             if (mita == "laput") { o.Kirjaa("poikki: nimilaput: " + DioraamaTaulu.LappuMittaus); return; }
+            // "poikki timeline [0|1]": kertojan esittely Timelinellä (DioraamaTimeline, linna-unity-suunnitelma 2b; oletus pois).
+            // Kytkentä kesken kierroksen: seuraava Paivita aloittaa tai pysäyttää directorin nykyhetkestä (puhe ei ala alusta).
+            if (mita == "timeline")
+            {
+                if (arvo == "1" || arvo == "0") DioraamaTimeline.Paalla = arvo == "1";
+                o.Kirjaa("poikki: timeline " + timeline.Raportti());
+                return;
+            }
             if (mita == "peili")
             {
                 peiliHttps = false;
@@ -864,7 +888,7 @@ namespace Matkakirja.Natiivi
             if (mita == "saapuminen")
             {
                 if (arvo == "alusta") SaapuminenNahty = false;
-                o.Kirjaa($"poikki: saapuminen {(SaapuminenNahty ? "nähty (lyhyt)" : "täysi")}, osuus {(Linssi != null ? Linssi.SaapuminenOsuus(y?.Aika ?? 0).ToString("F2", CultureInfo.InvariantCulture) : "-")}");
+                o.Kirjaa($"poikki: saapuminen {(SaapuminenNahty ? "nähty (lyhyt)" : "täysi")}, osuus {(Linssi != null ? Linssi.SaapuminenOsuus(y != null ? YdinAika : 0).ToString("F2", CultureInfo.InvariantCulture) : "-")}");
                 return;
             }
             // "poikki tunnelma [paiva|hamara|auto]": päivä / iltahämärä (kehittäjä, muistetaan; auto = rakennuksen oletus).
@@ -973,6 +997,12 @@ namespace Matkakirja.Natiivi
                 o.Kirjaa("poikki: avainsana " + (o2 != null ? $"lisätty jaksoon {osat[2]}: {o2.Vuosi} {o2.Sanat} @ {o2.Ts:F1} s" : "käyttö: poikki avainsana <jakso> <t_s> <vuosi|-> <sanat>"));
                 return;
             }
+            if (mita == "pakota-virhe")
+            {
+                DioraamaLevyvalimuisti.PakotaVirheJalkeen = int.TryParse(arvo, out int pv) ? pv : -1;
+                o.Kirjaa("poikki: pakota-virhe " + (DioraamaLevyvalimuisti.PakotaVirheJalkeen >= 0 ? $"{DioraamaLevyvalimuisti.PakotaVirheJalkeen} tiedoston jälkeen" : "pois"));
+                return;
+            }
             if (mita == "orbit")
             {
                 DioraamaKameraJousi.OrbitPaalla = arvo != "0";
@@ -1075,7 +1105,7 @@ namespace Matkakirja.Natiivi
             // rakennus.json (ja siis Ydin-linssin Avaa) voi olla vielä lataamatta: PoikkileikkausLinssi.Kohdista
             // lukee Rakennus-kentän suoraan eikä tarkista nulliä (AsentoFor → Rakennus.YleisVaaka).
             if (rakennus == null) { o.Kirjaa("poikki: rakennus.json ei ole vielä ladattu"); return; }
-            double t = pysaytettyT ?? y.Aika;
+            double t = pysaytettyT ?? YdinAika;
             if (mita == "yleis") Kohdista(null, t);
             else if (mita == "tila" && arvo != null)
             {

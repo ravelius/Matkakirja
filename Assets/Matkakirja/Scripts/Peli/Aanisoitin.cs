@@ -823,11 +823,21 @@ namespace Matkakirja.Natiivi
                     int odotettu = GaplessPituus(levy);
                     if (odotettu > 0 && alku + odotettu <= n) loppu = alku + odotettu;
                     else while (loppu > alku + 1 && n - loppu < raja && Hiljaa(loppu - 1)) loppu--;
-                    if (alku > 0 || loppu < n)
+                    // Sauman ristihäivytys (simu 5.10. 03.14: lähteiden omat 5 ms:n reunahäivytykset jättivät 9 dB:n notkon): viimeiset
+                    // F näytettä sekoitetaan alkuun tasatehoisesti, ja silmukka lyhenee F:llä → loppu jatkuu suoraan alkuun ilman notkoa.
+                    int f = Math.Min(taajuus / 20, (loppu - alku) / 8); // 50 ms
+                    if (alku > 0 || loppu < n || f > 0)
                     {
-                        var osa = new float[(loppu - alku) * kan];
+                        int pit = loppu - alku - f;
+                        var osa = new float[pit * kan];
                         Array.Copy(data, alku * kan, osa, 0, osa.Length);
-                        tulos = AudioClip.Create(c.name, loppu - alku, kan, taajuus, false);
+                        for (int i = 0; i < f; i++)
+                        {
+                            float x = (float)i / f, gi = Mathf.Sin(x * Mathf.PI * 0.5f), gl = Mathf.Cos(x * Mathf.PI * 0.5f);
+                            for (int j = 0; j < kan; j++) osa[i * kan + j] = data[(alku + i) * kan + j] * gi + data[(alku + pit + i) * kan + j] * gl;
+                        }
+                        loppu = alku + pit;
+                        tulos = AudioClip.Create(c.name, pit, kan, taajuus, false);
                         tulos.SetData(osa, 0);
                         Destroy(c);
                         Debug.Log($"MATKAKIRJA ääni: saumaton silmukka {Path.GetFileName(k.Url)}: alusta {alku}, lopusta {n - loppu} näytettä → {(loppu - alku) / (double)taajuus:F3} s" +
