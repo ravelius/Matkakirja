@@ -536,7 +536,7 @@ namespace Matkakirja.Natiivi
             if (puheTaiEle && tavoite != "puhe" && e.Malli.Glb.Animaatio(leike) == null)
             {
                 var ea = e.Malli.Glb.Animaatio("ele_" + tavoite);
-                if (e.EleNimi != tavoite) { e.EleNimi = tavoite; e.EleAlku = t; }
+                if (e.EleNimi != tavoite) { e.EleNimi = tavoite; e.EleAlku = t; Debug.Log($"MATKAKIRJA linssit: ele {e.HahmoId} {(ea != null ? $"ele_{tavoite} ({ea.Kesto:0.0} s)" : tavoite + " puuttuu → puhe")}"); }
                 leike = ea != null && t - e.EleAlku < ea.Kesto - PuheHaivytysS ? "ele_" + tavoite : Leike(m3, "puhe");
             }
             else if (!puheTaiEle || tavoite == "puhe") e.EleNimi = null;
