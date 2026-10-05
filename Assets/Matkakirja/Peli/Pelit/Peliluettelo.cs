@@ -1,6 +1,6 @@
 // PELILUETTELO JA KOHTAAMINEN (Siirtoseppä 1.10.2026; Päätoimittajan linjaus: pelit pelataan matkan varrella ja kerätään
 // matkakirjaan; omistaja 1.10. klo 21.0x "YKSI PELI, YKSI KOTI": kukin peli tarjotaan kohtaamisena vain kotikaupungissaan,
-// Mylly Berliinissä). Ensimmäinen kerta: kotikaupungissa kaupunkikortin NYKYINEN tehtävänappi tarjoaa
+// Mylly Berliinissä, Tavli Ateenassa 5.10.). Ensimmäinen kerta: kotikaupungissa kaupunkikortin NYKYINEN tehtävänappi tarjoaa
 // pelin kohtaamisena (KORTTI "Saksa · kohtaaminen — Pelataanko myllyä?"), kun kaupungin muut tehtävät (tarinakaari, pulma,
 // aarrelaatta, tutkiminen) on tehty: pelistä kieltäytyminen ei siis estä aarteita. Uusinta: Aarteet-näkymän otsikko "Pelit".
 // Ei uusia nappeja. Koti pelikatalogista (docs/pelikatalogi.md, kortti "4. Mylly": DEU-2 Mühle); vain Eurooppa.
@@ -64,7 +64,29 @@ namespace Matkakirja.Peli.Pelit
             },
         };
 
-        public static readonly PeliKuvaus[] Kaikki = { Mylly };
+        // TAVLI (Siirtoseppä 5.10.2026; omistajan korttivalinta 4.–5.10., suunnitelma docs/raportit/tavli-suunnitelma-20261005.md,
+        // Päätoimittaja hyväksyi 5.10. 01.1x): pelikatalogin GRC-1, yksi koti Ateena (kafeneio). Laudat: Kafeneio heti, Bysantin
+        // tabula normaalin ja Ottomaanien tavla vaikean botin voitosta.
+        // TODO Sisältökirjuri: Historia- ja Alkupera-tekstit ovat Siirtosepän paikkatekstejä (lopulliset samaan muotoon kuin Myllyn).
+        public static readonly PeliKuvaus Tavli = new PeliKuvaus
+        {
+            Id = "tavli", Nimi = "Tavli", Nappi = "Pelaa tavlia", KatalogiId = "GRC-1", Koti = "ateena",
+            Maat = new[] { new PeliMaa { Maa = "GRC", MaanNimi = "Kreikka", PaikallinenNimi = "Τάβλι" } },
+            Laudat = new[]
+            {
+                new PeliLauta { Id = "kafeneio", Nimi = "Kafeneio 1873", Esine = "Kafeneion tavlilauta (voitit kahvilan vakiopelaajalta)",
+                    Historia = "Kreikkalaisissa kahviloissa, kafeneioissa, tavlia pelattiin 1800-luvulla aamusta iltaan. Nopat kolisivat puulaatikossa, ja katsojat laskivat ääneen, montako heittoa osuisi.",
+                    Alkupera = "Lauta perustuu tyypilliseen 1800-luvun kreikkalaiseen taittolautaan: pähkinäkehys, upotettu meanderi-koriste ja kahden puulajin kolmiot. Se ei kopioi yhtä tiettyä esinettä." },
+                new PeliLauta { Id = "tabula", Nimi = "Bysantin tabula n. 480", Esine = "Bysantin tabula-lauta", Avautuu = Vastustaja.BottiNormaali,
+                    Historia = "Bysantin keisari Zenonin tabula-pelistä noin vuodelta 480 säilynyt kuvaus on vanhimpia tarkkoja kuvauksia backgammonin sukuisesta pelistä: siinä on 24 pistettä ja 15 nappulaa kummallakin.",
+                    Alkupera = "Esikuvana on keisari Zenonin pelin kuvaus noin vuodelta 480. Lauta on piirretty kuvauksen mukaan, ei säilyneen esineen." },
+                new PeliLauta { Id = "tavla", Nimi = "Ottomaanien tavla", Esine = "Ottomaanien upotekoristeinen tavla-lauta", Avautuu = Vastustaja.BottiVaikea,
+                    Historia = "Osmanien valtakunnassa tavla-laudat olivat arvoesineitä: niihin upotettiin helmiäistä, norsunluuta ja jaloja puulajeja.",
+                    Alkupera = "Esikuvana on upotekoristeinen ottomaaninen taittolauta museokokoelmasta (tarkka esine vahvistetaan)." },
+            },
+        };
+
+        public static readonly PeliKuvaus[] Kaikki = { Mylly, Tavli };
 
         public static PeliKuvaus Hae(string id)
         {
