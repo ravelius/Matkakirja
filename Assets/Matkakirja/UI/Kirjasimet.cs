@@ -23,7 +23,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Kaasun numerorumpu (DSEG7 Classic Bold, OFL): vain numerot, ×-merkki erikseen.</summary>
         Segmentti,
         /// <summary>ISS-ohjaamon mittaristo (Linnanrakentajan paneeli v1: DIN Condensed kuten kaiverrukset; järjestelmäfontti).</summary>
-        Mittari }
+        Mittari,
+        /// <summary>Elävän oppaan moderni teksti (SF Pro; omistaja 5.10.2026 klo 20.5x): vain nykyajan näkymiin.</summary>
+        Moderni, ModerniLihava }
 
     public static class Kirjasimet
     {
@@ -42,6 +44,10 @@ namespace Matkakirja.Natiivi
             Kirjasin.LukuKursiivi => new[] { ("Iowan Old Style", "Italic"), ("Charter", "Italic"), ("Palatino", "Italic"), ("Georgia", "Italic") },
             Kirjasin.Kauno => new[] { ("Snell Roundhand", "Regular"), ("Savoye LET", "Plain"), ("Bradley Hand", "Bold") },
             Kirjasin.Mittari => new[] { ("DIN Condensed", "Bold"), ("DIN Alternate", "Bold"), ("Avenir Next Condensed", "Demi Bold"), ("Helvetica Neue", "Condensed Bold") },
+            // MODERNI (omistaja 5.10.2026 klo 20.5x): iOS:n järjestelmäkirjasin SF Pro vain nykyajan näkymiin (elävä opas);
+            // web -apple-system, system-ui, sans-serif. Jos SF ei ole nimellä saatavilla, Helvetica Neue.
+            Kirjasin.Moderni => new[] { ("SF Pro Text", "Regular"), ("SF Pro", "Regular"), (".SF UI Text", "Regular"), ("Helvetica Neue", "Regular"), ("Helvetica", "Regular") },
+            Kirjasin.ModerniLihava => new[] { ("SF Pro Display", "Semibold"), ("SF Pro", "Semibold"), (".SF UI Display", "Semibold"), ("Helvetica Neue", "Medium"), ("Helvetica Neue", "Bold"), ("Helvetica", "Bold") },
             _ => new (string, string)[0],
         };
 
