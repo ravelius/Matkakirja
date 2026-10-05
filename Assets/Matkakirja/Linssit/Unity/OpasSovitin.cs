@@ -210,12 +210,9 @@ namespace Matkakirja.Natiivi
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             y.Kuvaa(silmukka.Asento);
             KameraKuvattu?.Invoke(kierto != null ? kierto.GetComponent<Camera>() : null, silmukka);
-            if (silmukka.Seuraava != null)
-            {
-                var k = silmukka.Seuraava;
-                kaupunki.AsetaEsikamera(OpasSilmukka.KehysAsento(OpasSilmukka.Kehysta(k, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45,
-                    OpasSilmukka.Suunta(silmukka.Asento.Lat, silmukka.Asento.Lon, k.Lat, k.Lon)), 0));
-            }
+            // Esilataus: lennon aikana laskeutumiskehys, muuten esihaetun kohteen kehys (OpasKuvaus, sama kuin lento).
+            var esi = silmukka.Esilataus(MaaKorkeus);
+            if (esi.HasValue) kaupunki.AsetaEsikamera(esi.Value);
             else kaupunki.EsikameraPois();   // ei esilattavaa: piilokamera ei pidä vanhoja laattoja elossa
         }
 
