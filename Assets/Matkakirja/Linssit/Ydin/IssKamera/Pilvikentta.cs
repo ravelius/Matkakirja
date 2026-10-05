@@ -80,7 +80,7 @@ namespace Matkakirja.Linssit.IssKamera
         /// Lähikuvan pilvi (400 mm, laatan pikseli ≤ 40 m; laitekoe 2: pilvet pehmeinä möykkyinä): alfa ja kirkkaus pikselikohtaisesti
         /// kahdella lisäoktaavilla (200 m ja 80 m) — kumpupilven reunan kukkakaalirakenne ja kirkkaat huiput; varjo hilasta.
         /// </summary>
-        public (double alfa, double kirkkaus) Lahi(double lat, double lon, double peittoK = 1)
+        public (double alfa, double kirkkaus) Lahi(double lat, double lon, double peittoK = 1, double pikseliM = 0)
         {
             var (x, y) = Metrit(lat, lon);
             double d0 = Tiheys(x, y, lat, lon, true, peittoK);

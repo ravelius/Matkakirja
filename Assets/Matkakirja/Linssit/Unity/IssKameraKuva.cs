@@ -803,11 +803,27 @@ namespace Matkakirja.Natiivi
                 double mpx = p.MPx > 0 ? p.MPx : p.KokoM / Math.Max(1, kw);
                 var pl = new PaikanLaatat(rgb, kw, kh, p.W, p.S, p.E, p.N, mpx);
                 var lista = pl.Laatat.ToList(); int kirjoitettu = 0;
+                // Päivän pilvet GIBS:stä myös kuvauspaikkaan (selkein 7 päivästä); ei dataa → pilvetön kuten ennen.
+                GibsPilvet gp = null; string paikanLahde = p.Lahde;
+                if (GibsPilvetPaalla)
+                {
+                    Tila = "pilvet";
+                    yield return HaeGibs(p.W, p.S, p.E, p.N, x => gp = x);
+                    if (gp != null)
+                    {
+                        var (paz, pkor) = AurinkoPisteessa(utc, p.Lat, p.Lon);
+                        gp.AurinkoAz = paz; gp.AurinkoKorkeus = pkor;
+                        gp.Yksityiskohta = new Pilvikentta { AurinkoAz = paz, AurinkoKorkeus = pkor };
+                        paikanLahde = (string.IsNullOrEmpty(p.Lahde) ? "" : p.Lahde + " · ") + "clouds " + GibsPilvet.Merkinta;
+                    }
+                    Tila = "työstö";
+                }
                 // SystemInfo vain pääsäikeessä (simu 38fa740d: "GetProcessorCount can only be called from the main thread").
                 var rinnakkain = new ParallelOptions { MaxDegreeOfParallelism = Math.Max(1, SystemInfo.processorCount - 1) };
                 var tyot = Task.Run(() => System.Threading.Tasks.Parallel.ForEach(lista, rinnakkain, l =>
                 {
                     var rgba = pl.Piirra(l.z, l.x, l.y);
+                    if (gp != null) KuvanTyosto.PiirraPilvet(gp, l.z, l.x, l.y, rgba, true);
                     var kaanto = new byte[rgba.Length];   // EncodeArrayToPNG: rivi 0 alin
                     for (int y = 0; y < 256; y++) Buffer.BlockCopy(rgba, y * 1024, kaanto, (255 - y) * 1024, 1024);
                     var png = ImageConversion.EncodeArrayToPNG(kaanto, UnityEngine.Experimental.Rendering.GraphicsFormat.R8G8B8A8_SRGB, 256, 256);
@@ -860,10 +876,10 @@ namespace Matkakirja.Natiivi
                     "\"paikka\":\"{6}\",\"maa\":\"{7}\",\"kohde\":{{\"lat\":{8:0.000},\"lon\":{9:0.000}}},\"korkeus_km\":{10:0.0},\"nopeus_kmh\":{11:0}," +
                     "\"etaisyys_km\":{12:0},\"kenttakulma\":{13:0.00},\"lahde\":\"{14}\"}}",
                     id, utc, muoto, W, H, p.Tunniste, p.Nimi, p.Maa, p.Lat, p.Lon, km, IssNyt.NopeusKmh(km), asento.EtaisyysM / 1000, pysty,
-                    (p.Lahde ?? "").Replace("\"", "'")));
+                    (paikanLahde ?? "").Replace("\"", "'")));
                 loppuTila = "valmis"; Edistyminen = 1;
                 Loki($"VALMIS {ViimeisinKuva} ({p.Nimi}, {jpg.Length / 1e6:0.0} Mt, {W}×{H}), yhteensä {kello.ElapsedMilliseconds / 1000.0:0.0} s");
-                KuvaValmis(ViimeisinKuva, p.Nimi, p.Maa, utc, p.Lat, p.Lon, p.Lahde);
+                KuvaValmis(ViimeisinKuva, p.Nimi, p.Maa, utc, p.Lat, p.Lon, paikanLahde);
             }
             finally
             {

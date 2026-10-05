@@ -18,7 +18,8 @@ namespace Matkakirja.Linssit.IssKamera
     public interface IKuvanPilvet
     {
         (double alfa, double kirkkaus, double varjo) Nayte(double lat, double lon, double peittoK = 1);
-        (double alfa, double kirkkaus) Lahi(double lat, double lon, double peittoK = 1);
+        /// <summary>Pikselikohtainen reuna; pikseliM = kuvan laatan pikselin koko (kohina ei saa olla sitä hienompaa), 0 = ei rajaa.</summary>
+        (double alfa, double kirkkaus) Lahi(double lat, double lon, double peittoK = 1, double pikseliM = 0);
     }
 
     public sealed class GibsPilvet : IKuvanPilvet
@@ -124,7 +125,8 @@ namespace Matkakirja.Linssit.IssKamera
                 if (lkm >= 3) v = Math.Max(0, v - 0.9 * mn);
                 alfa[i] = (byte)Math.Round(255 * v); s2 += v;
             }
-            return new GibsPilvet(x0, y0, w, h, Sumenna(alfa, w, h), kirk[paras], taso) { Paiva = paivat[paras].paiva, Peitto = s2 / n };
+            // Kirkkaus kolmesti sumennettuna (esikatselu Helsinki: VIIRS-kuvan juovat näkyivät pilvikannessa vaakaraitoina).
+            return new GibsPilvet(x0, y0, w, h, Sumenna(Sumenna(alfa, w, h), w, h), Sumenna(Sumenna(Sumenna(kirk[paras], w, h), w, h), w, h), taso) { Paiva = paivat[paras].paiva, Peitto = s2 / n };
         }
 
         /// <summary>Kelvot pikselit: max(R,G,B) > 1, ja nodatasta vähintään 3 px (JPEG-särö ratavälin reunalla).</summary>
@@ -193,14 +195,29 @@ namespace Matkakirja.Linssit.IssKamera
             return (alfa, kirkkaus, varjo * VarjonVoima);
         }
 
-        public (double alfa, double kirkkaus) Lahi(double lat, double lon, double peittoK = 1)
+        public (double alfa, double kirkkaus) Lahi(double lat, double lon, double peittoK = 1, double pikseliM = 0)
         {
             var (gx, gy) = Pikseli(lat, lon, Taso);
             double a = Arvo(Alfa, gx, gy), k = Math.Max(0.70, Arvo(Kirkkaus, gx, gy));
-            if (Yksityiskohta == null || a <= 0.01 || a >= 0.99) return (a, k);
-            // 300 m:n maski on lähikuvassa sumea: reuna terävöitetään kohinalla (kukkakaalireuna kuten Pilvikentta.Lahi).
-            double d = a + 0.22 * Yksityiskohta.KohinaPisteessa(lat, lon, 200, 31) + 0.10 * Yksityiskohta.KohinaPisteessa(lat, lon, 80, 32);
-            return (Askel(0.30, 0.70, d), k);
+            if (Yksityiskohta == null || a <= 0.01) return (a, k);
+            // GIBS-maski (~150–300 m/px) on kuvassa sumea möykky (simu 8eea083c Amazonia): reuna terävöitetään fraktaalikohinalla,
+            // jonka asteikko seuraa maskin pikseliä (kumpupilven kukkakaalireuna), ja aurinkoa kohti oleva puoli on kirkkaampi.
+            double m = PikseliM(lat, Taso); var y = Yksityiskohta;
+            // Kohinan asteikko ≥ 2,5 kuvan pikseliä (esikatselu Helsinki z11: 23 m:n kohina 38 m:n pikseleissä laskostui vaakaraidoiksi).
+            double p = pikseliM * 2.5, s1 = Math.Max(m, p), s2 = Math.Max(m * 0.4, p), s3 = Math.Max(m * 0.15, p);
+            double n1 = y.KohinaPisteessa(lat, lon, s1, 41), n2 = s2 < s1 ? y.KohinaPisteessa(lat, lon, s2, 42) : 0, n3 = s3 < s2 ? y.KohinaPisteessa(lat, lon, s3, 43) : 0;
+            // Kohina vain reuna-alueella (4a(1 − a)): ydin pysyy umpinaisena (esikatselu: reikiä pilven sisällä).
+            double reuna = Math.Min(1, 4 * a * (1 - a) * 1.6) * (1 - Askel(0.75, 0.97, a));
+            double d = a + reuna * (0.30 * n1 + 0.15 * n2 + 0.06 * n3);
+            double alfa = Askel(0.32, 0.62, d) * (0.6 + 0.4 * Askel(0.15, 0.6, a));   // ohut reuna-alue jää osittaiseksi
+            double az = AurinkoAz * Math.PI / 180;
+            double kohti = Arvo(Alfa, gx + Math.Sin(az) * 1.5, gy - Math.Cos(az) * 1.5);
+            // Tiheys kasvaa aurinkoa kohti → varjopuoli.
+            // (esikatselu Helsinki z10: 60 m:n kirkkauskohina rakeisti pilvikannen → vain maskin 3 × asteikko)
+            // Derivaatta vain reunalla; ei kirkkauskohinaa (esikatselu Helsinki: umpipilveen tuli vaakaraitoja), pinnanmuoto
+            // tulee GIBS:n omasta kirkkaudesta.
+            double valo = reuna * Math.Max(-0.10, Math.Min(0.05, -0.5 * (kohti - a)));
+            return (alfa, Math.Max(0.66, Math.Min(1.0, k + valo)));
         }
 
         static double Askel(double a, double b, double x) { double t = Math.Max(0, Math.Min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); }
