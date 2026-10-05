@@ -186,7 +186,13 @@ namespace Matkakirja.Linssit.IssKamera
                     if (luokka == 6 && d.VesiTasoitus > 0)
                     {
                         double w = d.VesiTasoitus;
-                        cr += (d.Meri[0] - cr) * w; cg += (d.Meri[1] - cg) * w; cb += (d.Meri[2] - cb) * w;
+                        if (ru.VesiTaso != null)
+                        {
+                            // Ruudun oma vesitaso merenväriin, vain poikkeama siitä jää (TasaaVesi).
+                            double vr = Math.Max(0, ru.VesiTaso[0] - ru.UsvaR), vg = Math.Max(0, ru.VesiTaso[1] - ru.UsvaG), vb = Math.Max(0, ru.VesiTaso[2] - ru.UsvaB);
+                            cr = Math.Max(0, d.Meri[0] + (cr - vr) * (1 - w)); cg = Math.Max(0, d.Meri[1] + (cg - vg) * (1 - w)); cb = Math.Max(0, d.Meri[2] + (cb - vb) * (1 - w));
+                        }
+                        else { cr += (d.Meri[0] - cr) * w; cg += (d.Meri[1] - cg) * w; cb += (d.Meri[2] - cb) * w; }
                     }
                     // Maailman indeksi: ruudun alueen oma lut ennen saumasekoitusta (Laatta ei silloin sovella KuvaData.Lutia).
                     if (ru.Lut != null) { cr = Lutilla(ru.Lut, cr); cg = Lutilla(ru.Lut, cg); cb = Lutilla(ru.Lut, cb); }
@@ -274,10 +280,43 @@ namespace Matkakirja.Linssit.IssKamera
             return tulos;
         }
 
+        /// <summary>
+        /// VESITASO ruuduittain (simu 10c31692 Kanaria 28SCA: avomerellä suorat saumat). Kaikki meri on SCL:ssä vettä (6), mutta
+        /// auringon heijastuksen päivinä (28SBA 2025-06-13, 28SCB 2023-06-27) meren mediaani on 40–50 yksikköä kirkkaampi kuin
+        /// 13.8.2023 ruuduissa, ja 0,75:n tasoitus merenväriin jätti erosta neljänneksen suoriksi saumoiksi. Ruudun oman meren
+        /// mediaani (ruudukko bbox:n yli, tarkin haettu taso) tasoitetaan merenväriin, ja vain poikkeama siitä (rannikon matala
+        /// vesi, heijastuksen loiva liuku) jää VesiTasoitus-painolla. Ruutu, jolla on alle `vahintaan` vesinäytettä, jää ennalleen.
+        /// </summary>
+        public static List<(string tunnus, double r, double g, double b)> TasaaVesi(KuvaData d, int ruudukko = 48, int vahintaan = 150)
+        {
+            var tulos = new List<(string, double, double, double)>();
+            for (int k = 0; k < d.Ruudut.Count; k++)
+            {
+                var (ru, o) = d.Ruudut[k];
+                ru.VesiTaso = null;
+                if (o == null) continue;
+                var vr = new List<double>(); var vg = new List<double>(); var vb = new List<double>();
+                for (int i = 0; i < ruudukko; i++)
+                    for (int j = 0; j < ruudukko; j++)
+                    {
+                        double la = ru.S + (ru.N - ru.S) * (i + 0.5) / ruudukko, lo = ru.W + (ru.E - ru.W) * (j + 0.5) / ruudukko;
+                        if (!RuudunArvo(d, k, la, lo, out var p, vesi: true)) continue;
+                        vr.Add(p.r); vg.Add(p.g); vb.Add(p.b);
+                    }
+                if (vr.Count < vahintaan) continue;
+                ru.VesiTaso = new[] { Mediaani(vr), Mediaani(vg), Mediaani(vb) };
+                tulos.Add((ru.Tunnus, ru.VesiTaso[0], ru.VesiTaso[1], ru.VesiTaso[2]));
+            }
+            return tulos;
+        }
+
         static double Mediaani(List<double> x) { x.Sort(); return x.Count % 2 == 1 ? x[x.Count / 2] : (x[x.Count / 2 - 1] + x[x.Count / 2]) / 2; }
 
-        /// <summary>Ruudun k oma arvo pisteessä tarkimmalta haetulta tasolta (ei lutia, ei usvaa); nodata, pilvi, varjo ja vesi → false.</summary>
-        static bool RuudunArvo(KuvaData d, int k, double lat, double lon, out (double r, double g, double b) p)
+        /// <summary>
+        /// Ruudun k oma arvo pisteessä tarkimmalta haetulta tasolta (ei lutia, ei usvaa); nodata, pilvi, varjo ja vesi → false.
+        /// vesi: vain vesi (SCL 6) kelpaa.
+        /// </summary>
+        static bool RuudunArvo(KuvaData d, int k, double lat, double lon, out (double r, double g, double b) p, bool vesi = false)
         {
             p = default;
             var (ru, o) = d.Ruudut[k];
@@ -293,7 +332,7 @@ namespace Matkakirja.Linssit.IssKamera
                 if (!Pikselit(d, ru.Tunnus, t, taso, ix, iy, out var p00, out var p10, out var p01, out var p11)) continue;   // ei haettu tällä tasolla
                 if (Musta(p00) || Musta(p10) || Musta(p01) || Musta(p11)) return false;
                 byte luokka = d.SclLuokka(ru.Tunnus, e, n, pm);
-                if (luokka == 3 || luokka == 6 || luokka == 8 || luokka == 9 || luokka == 10) return false;
+                if (vesi ? luokka != 6 : luokka == 3 || luokka == 6 || luokka == 8 || luokka == 9 || luokka == 10) return false;
                 p = ((p00.r + p10.r + p01.r + p11.r) / 4.0, (p00.g + p10.g + p01.g + p11.g) / 4.0, (p00.b + p10.b + p01.b + p11.b) / 4.0);
                 if (ru.Vahvistus != null) p = (p.r * ru.Vahvistus[0], p.g * ru.Vahvistus[1], p.b * ru.Vahvistus[2]);
                 if (ru.Siirto != null) p = (p.r + ru.Siirto[0], p.g + ru.Siirto[1], p.b + ru.Siirto[2]);

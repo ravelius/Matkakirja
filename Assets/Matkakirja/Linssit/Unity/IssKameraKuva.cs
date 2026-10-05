@@ -630,6 +630,13 @@ namespace Matkakirja.Natiivi
                     else Loki($"usvatasoitus {ut.Result.Count} ruutua: " + string.Join(", ", ut.Result.Where(u => u.r + u.g + u.b > 0.5)
                         .Select(u => $"{u.tunnus} −({u.r:0},{u.g:0},{u.b:0})")));
                 }
+                // Vesitaso ruuduittain (simu 10c31692 Kanaria: auringon heijastuksen päivien meri suorina saumoina avomerellä).
+                {
+                    var vt = Task.Run(() => Uudelleenprojisointi.TasaaVesi(ty.Data));
+                    while (!vt.IsCompleted) yield return null;
+                    if (vt.IsFaulted) Loki("vesitaso: " + vt.Exception?.GetBaseException().Message);
+                    else Loki($"vesitaso {vt.Result.Count} ruutua: " + string.Join(", ", vt.Result.Select(v => $"{v.tunnus} ({v.r:0},{v.g:0},{v.b:0})")));
+                }
                 // Tasot tarkimmasta juureen (KuvanTyosto.PiirraKaikki): lehti datasta, isä lapsistaan.
                 var tyot = Task.Run(() => ty.PiirraKaikki((l, rgba) =>
                 {

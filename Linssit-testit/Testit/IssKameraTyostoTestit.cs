@@ -96,6 +96,45 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi]
+        static void VesitasoRuuduittainMerenvariin()
+        {
+            // Simu 10c31692 (Kanaria): auringon heijastuksen päivän meri (28SBA, mediaani ~93) ja 13.8.2023 meri (~50) jäivät
+            // 0,75:n tasoituksella suoriksi saumoiksi. Ruudun oma vesitaso → merenväri; vain poikkeama siitä jää neljänneksellä.
+            const double pm = 600; const int L = 183;
+            var d = new KuvaData { VesiTasoitus = 0.75, Meri = new byte[] { 14, 22, 30 } };
+            void Ruutu(string tunnus, double ita0, Func<int, byte> arvo)
+            {
+                var o = new CogOtsake { Ita0 = ita0, Pohjoinen0 = 6_700_000, PikseliM = pm };
+                o.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 3 });
+                var so = new CogOtsake { Ita0 = ita0, Pohjoinen0 = 6_700_000, PikseliM = pm };
+                so.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 1 });
+                var (s, w) = Utm.Taakse(ita0, 6_700_000 - L * pm, 35); var (nn, e) = Utm.Taakse(ita0 + L * pm, 6_700_000, 35);
+                var ru = new S2Ruutu { Tunnus = tunnus, W = w + 0.01, S = s + 0.01, E = e - 0.01, N = nn - 0.01 };
+                var l = new byte[L * L * 3];
+                for (int y = 0; y < L; y++) for (int x = 0; x < L; x++) { byte v = arvo(x); int i = (y * L + x) * 3; l[i] = v; l[i + 1] = v; l[i + 2] = v; }
+                d.Laatat[(tunnus, 0, 0, 0)] = l;
+                d.Laatat[(tunnus + "|scl", 0, 0, 0)] = Enumerable.Repeat((byte)6, L * L).ToArray();
+                d.Scl[tunnus] = so;
+                d.Ruudut.Add((ru, o));
+            }
+            Ruutu("35VLG", 300_000, x => x > 170 ? (byte)133 : (byte)93);   // heijastuksen päivä; itäreunassa kirkkaampi kaista
+            Ruutu("35VPG", 700_000, x => 50);                               // ei limitystä
+            byte Arvo(double ita)
+            {
+                var (la, lo) = Utm.Taakse(ita, 6_650_000, 35);
+                Oleta.Tosi(Uudelleenprojisointi.Nayte(d, la, lo, pm, out var r, out _, out _), $"dataa {ita}");
+                return r;
+            }
+            int ennenA = Arvo(350_000), ennenB = Arvo(750_000);
+            Oleta.Tosi(ennenA - ennenB > 9, $"ennen: tasoero jää neljänneksellä ({ennenA} vs {ennenB})");
+            var t = Uudelleenprojisointi.TasaaVesi(d);
+            Oleta.Sama(2, t.Count);
+            Oleta.Sama((byte)14, Arvo(350_000), "A:n meri merenväriin");
+            Oleta.Sama((byte)14, Arvo(750_000), "B:n meri merenväriin");
+            Oleta.Sama((byte)24, Arvo(300_000 + 175.5 * pm), "poikkeama (+40) jää neljänneksellä");
+        }
+
+        [Testi]
         static void UsvatasoitusLimityksesta()
         {
             // Simu 26f1141e (Coloradon suisto): tummin prosentti luki 11RQQ:n meren usvattomaksi → naapurit −40 ja 11RQQ:n maa

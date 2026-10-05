@@ -27,6 +27,8 @@ namespace Matkakirja.Linssit.IssKamera
         public byte[] Lut;
         /// <summary>Usvatasoitus (Uudelleenprojisointi.TasaaUsva): TCI-arvosta vähennettävä usva kanavittain ennen lutia.</summary>
         public double UsvaR, UsvaG, UsvaB;
+        /// <summary>Ruudun oman meren (SCL 6) mediaani sävyn jälkeen, ennen usvaa (Uudelleenprojisointi.TasaaVesi); null = ei mitattu.</summary>
+        public double[] VesiTaso;
         /// <summary>Indeksin sävy (v2b, Karttaseppä 5.10.): TCI · Vahvistus + Siirto kanavittain ennen usvaa ja lutia; null = ennallaan.</summary>
         public double[] Vahvistus, Siirto;
         /// <summary>Valinnan nodata-osuus (%, indeksistä): > 0,5 → ruutu ei voi yksin kattaa lehteä (rataleveyden reuna).</summary>
