@@ -179,6 +179,9 @@ namespace Matkakirja.Natiivi
             latausOsuus = 0f;
             DioraamaLevyvalimuisti.NollaaEdistys();
             DioraamaTaulu.LatausEdistyminen = LatausOsuus; // Natiivi-UI:n latauspalkki (omistaja hyväksyi 5.10. klo 14.0x, juna 144)
+            // Puhujakuva (Natiivi-UI:n pohja, omistaja 5.10. klo 14.3x): ankkuri puhujan pään yläpuolella ja näyttämön kamera.
+            Puhujakuva.Ankkuri = () => DioraamaHahmot3D.PuhujanPaa;
+            Puhujakuva.Kamera = () => AktiivinenKamera;
             y = ymparisto;
             avoinna = true;
             kelloSiirto = 0;
@@ -363,6 +366,11 @@ namespace Matkakirja.Natiivi
             if (puhuva != null) DioraamaHahmot3D.Puhuja = puhuva;
             else if (!KuunnelmaKaistale.SoiNyt) DioraamaHahmot3D.Puhuja = DioraamaHahmot3D.EdellinenPuhuja = null; // keskustelu ohi
             DioraamaHahmot3D.PuhujanTila = nakyma.KohdeTila;
+            // Puhujakuva: henkilö + ilme vuoron mukaan, kertojan ja hiljaisuuden aikana pois (saman arvon toisto ei tee mitään).
+            string henkilo = null;
+            if (puhuva != null && nakyma.KohdeTila != null && rakennus.Tila(nakyma.KohdeTila) is Tila pt)
+                foreach (var h in pt.Hahmot) if (h.Id == puhuva) { henkilo = h.HenkiloId; break; }
+            Puhujakuva.Viimeisin?.Aseta(henkilo, henkilo != null ? KuunnelmaKaistale.PuhuvaIlme : null);
             if (puhuva != null && nakyma.KohdeTila != null && nakyma.Hahmot != null)
                 for (int hi = 0; hi < nakyma.Hahmot.Count; hi++)
                 {
