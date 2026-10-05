@@ -196,3 +196,14 @@ osumatestin → todisteisiin aina simun oikea napautus.
   loki "opas: kohde Amsterdam"; 5/5 kaupunki, 5/5 maa, ☰ heti valinnan jälkeen.
 - Juna 145 muut: natiivi-ui/opas-tapit b88785a5 (tapit + nimilappu + yllä oleva korjaus), natiivi-ui/puhujakuva-145
   6f733f2e (Codexin 4 kuvaa; Siirtosepän kappeli-145 0ca128fd kytkee ja tekee videon).
+
+## Tila 6.10. klo 00.0x: juna 146 -ehdokas natiivi-ui/pin-palkki c7fb7875
+
+- Sisältää: nimikyltit 3 s (Nimikyltti.cs; kartuscha, maakyltti, mastonimi, aikajanan ylärivi, pallon nimi, oppaan nimilappu),
+  oppaan valikon maa/kaupunkiäänet ISO2:lla (OpasSovitin.MaaValittu / VaihdaKaupunki(…, iso), heijastuksella), Amsterdam-
+  korjausyritys 3 (OpasValikko.Napautus: valikko ratkaisee rivin sijainnista TrickleDownissa ennen ScrollViewia; ScrollView
+  Clamped + inertia 0), PIN-KUVAKE JA PINNATTU PALKKI (Pinnaus.cs; Nostokortti/PuluChat pin, Pelikoodarin Puhe.Pinnaa e7f981a4),
+  tyylikirja PINNATTU PALKKI (web PR #4035). Lisäksi 146:een pollo-testitunnus 2a32671a.
+- Amsterdam: BUILD 144 ja juna 145 (74864d87) molemmat 0/1 ensimmäisellä tapilla → 145:n muutoslokissa "tunnettu". Todennus
+  junan 146 ensimmäisestä käännöksestä (5/5 kaupunki, maa, ☰) + Päätoimittajan pin-stillit (ikkuna + palkki, ui pinnaus palkki).
+- Odottaa: Päätoimittajan kuittaus c7fb7875 Natiivisepälle; juna 146 kootaan TF 145:n päälle.
