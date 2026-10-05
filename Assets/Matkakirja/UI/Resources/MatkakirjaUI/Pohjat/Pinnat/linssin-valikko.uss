@@ -120,3 +120,46 @@
 .mk-nosto.tk-teema-harmaa .mk-nosto__havainne {
     color: var(--tk-muste);
 }
+
+/* OPPAAN KOHTEEN NIMILAPPU (omistaja 5.10.2026 klo 21.3x, juna 145): linnan NIMILAPPU-pohjan rakenne (lappu, pystyviiva, nasta)
+ * harmaan lasin tokeneilla, kirjasin ModerniLihava koodista (OpasNimilappu). Paikka koodista joka ruudulla. */
+.mk-opas-nimilappu {
+    position: absolute;
+    padding: 3px 8px 3px 8px;
+    border-width: 1px;
+    border-color: var(--tk-reunus);
+    border-radius: var(--tk-kulma-pieni);
+    background-color: var(--tk-pinta-peitto);
+    color: var(--tk-korostus);
+    font-size: var(--tk-koko-apuri);
+    -unity-text-align: middle-center;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-opas-nimilappu__viiva {
+    position: absolute;
+    width: 1.5px;
+    background-color: var(--tk-korostus);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-opas-nimilappu__nasta {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-width: 1px;
+    border-color: var(--tk-pinta-peitto);
+    border-radius: 4px;
+    background-color: var(--tk-korostus);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-opas-nimilappu--nakyy {
+    opacity: 1;
+}
