@@ -613,12 +613,35 @@ namespace Matkakirja.Natiivi
             Hahmo h = null;
             foreach (var x in t.Hahmot) if (x.Id == puhuja) { h = x; break; }
             if (h == null || h.Reitti != null) return lepo;
+            // KESKUSTELUKUVA (Päätoimittaja 5.10. 15.3x: eleet näkyviin puhelimella): kuulijaksi lähin paikallaan oleva hahmo;
+            // kohde puhujan ja kuulijan väliin puhujaa painottaen ja etäisyys niin, että hahmo täyttää ~40 % ruudun korkeudesta
+            // ja molemmat mahtuvat leveyssuunnassa. Rajat: enintään 0,88 × huoneen lepoetäisyys, vähintään 0,3 ×.
+            Hahmo kuulija = null; double lahin = double.MaxValue;
+            foreach (var x in t.Hahmot)
+            {
+                if (x == h || x.Reitti != null) continue;
+                double dx = x.Paikka.X - h.Paikka.X, dz = x.Paikka.Z - h.Paikka.Z, d2 = dx * dx + dz * dz;
+                if (d2 < lahin) { lahin = d2; kuulija = x; }
+            }
             var p = lepo.Perus;
-            var rinta = new Matkakirja.Linssit.Dioraama.V3(h.Paikka.X, h.Paikka.Y + 1.3, h.Paikka.Z);
-            var kohde = p.Kohde + (rinta - p.Kohde) * PuhujaSiirtyma;
-            return (lepo.Avain + "|" + puhuja, new Asento(kohde, p.Atsimuutti, p.Korkeus, p.Etaisyys * 0.88, p.Fov, p.Aukko, p.Kierto), 0.2, false);
+            var puhujanKeski = new Matkakirja.Linssit.Dioraama.V3(h.Paikka.X, h.Paikka.Y + HahmonKeski, h.Paikka.Z);
+            var keski = puhujanKeski;
+            double vali = 0;
+            if (kuulija != null && lahin < KuulijaMaxM * KuulijaMaxM)
+            {
+                var kuulijanKeski = new Matkakirja.Linssit.Dioraama.V3(kuulija.Paikka.X, kuulija.Paikka.Y + HahmonKeski, kuulija.Paikka.Z);
+                keski = puhujanKeski + (kuulijanKeski - puhujanKeski) * (1 - PuhujanPaino);
+                vali = Math.Sqrt(lahin);
+            }
+            var kohde = p.Kohde + (keski - p.Kohde) * PuhujaSiirtyma;
+            double tanPuoli = Math.Tan((p.Fov > 1 ? p.Fov : 40.0) * Math.PI / 360.0);
+            double korkeudesta = HahmonKorkeus / (2 * HahmonOsuusKorkeudesta * tanPuoli);
+            double leveydesta = (vali + 1.6) / (2 * tanPuoli * RuudunSuhde * 0.8);
+            double etaisyys = Math.Clamp(Math.Max(korkeudesta, leveydesta), p.Etaisyys * 0.3, p.Etaisyys * 0.88);
+            return (lepo.Avain + "|" + puhuja, new Asento(kohde, p.Atsimuutti, p.Korkeus, etaisyys, p.Fov, p.Aukko, p.Kierto), 0.2, false);
         }
-        const double PuhujaSiirtyma = 0.55;
+        const double PuhujaSiirtyma = 0.9, PuhujanPaino = 0.65, HahmonKeski = 0.9, HahmonKorkeus = 1.75,
+            HahmonOsuusKorkeudesta = 0.4, RuudunSuhde = 2.0, KuulijaMaxM = 4.0;
 
         /// <summary>Latauksen vaiheet 0…1 (kuori, tilat, hahmot, ympäristö tasapainoin), LatausOsuuden toinen puolisko.</summary>
         float VaiheOsuus()
