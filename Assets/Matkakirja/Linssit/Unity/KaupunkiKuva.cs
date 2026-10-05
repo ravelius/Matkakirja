@@ -28,7 +28,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Sumun alku ja loppu kameran korkeuden kerrannaisina (vähintään AlkuMinM / LoppuMinM metriä).</summary>
         // A/B 5.10. 18.59: alku 6 × korkeus / 1,2 km haalisti koko Raatihuoneen kuvan → sumu vasta kauempana (horisontti).
         public static float AlkuKerroin = 15f, LoppuKerroin = 80f, AlkuMinM = 3000f, LoppuMinM = 15000f;
-        public static bool Sumu = true, Savytys = true, Volyymi = true;
+        // JUNAN OLETUS (Päätoimittajan sääntö 5.10. 19.1x): vain MSAA + aniso, kunnes kuvapari näyttää sumun ja Volumen
+        // selvästi paremmiksi; viritys asetustiedostolla ("sumu 1 volume 1").
+        public static bool Sumu = false, Savytys = true, Volyymi = false;
         public static float Kontrasti = 12f, Saturaatio = 10f, Hehku = 0.2f;
 
         static KaupunkiKuvaAjo ajo;
@@ -80,7 +82,7 @@ namespace Matkakirja.Natiivi
             if (!tallennettu) return;
             tallennettu = false;
             GoogleSse = 16f; MaastoSse = 10f; RakennusSse = 16f; Msaa = 4; // asetustiedosto luetaan uudelleen seuraavassa avauksessa
-            AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = true; Savytys = true; Volyymi = true;
+            AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = false; Savytys = true; Volyymi = false;
             Kontrasti = 12f; Saturaatio = 10f; Hehku = 0.2f;
             if (ajo != null) { ajo.Lopeta(); Object.Destroy(ajo.gameObject); ajo = null; }
             QualitySettings.anisotropicFiltering = vanhaAniso;
