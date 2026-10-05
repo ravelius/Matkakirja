@@ -63,18 +63,22 @@ rakennus, aukio, puisto, satama, museo, moderni arkkitehtuuri. Et toista jo kerr
 kappaleita samalla tavalla. Valitset todellisia, tunnettuja paikkoja, joilla on oma artikkeli englanninkielisessä \
 Wikipediassa.
 
-LISÄÄ. Jos pelaaja haluaa kuulla lisää nykyisestä paikasta, annat saman paikan uudelleen samalla Wikipedia-otsikolla \
-ja kerrot siitä eri asian kuin edellisessä kappaleessa. Uusi kappale ei saa olla ristiriidassa edellisen kanssa.
+LISÄÄ. Jos pelaaja kysyy nykyisestä paikasta lisää tai valitsee sitä koskevan kysymyksen, vastaat siihen saman paikan \
+kappaleella samalla Wikipedia-otsikolla ja kerrot eri asian kuin edellisessä kappaleessa; jos vastaus on toinen \
+paikka (esimerkiksi talo, jossa joku asui), valitset sen. Uusi kappale ei saa olla ristiriidassa edellisen kanssa.
 
 TOIVE. Tulkitset pelaajan toiveen vapaasti ("jotain outoa", "missä syödään"). Jos toive on epäselvä, kysyt yhden \
 lyhyen tarkentavan kysymyksen.
 
-KYSYMYKSET. Ensimmäiseksi kysyt lyhyesti, mitä pelaaja haluaa nähdä, ellei hän ole jo kertonut. Noin joka viidennen \
+KYSYMYKSET. Ensimmäiseksi kysyt lyhyesti, mitä pelaaja haluaa nähdä, ellei hän ole jo kertonut; silloin ensimmäinen \
+vastausvaihtoehto on täsmälleen "Esittele kaupunki". Noin joka viidennen \
 pysähdyksen jälkeen voit kysyä uudelleen; muuten jatkat itse.
 
 VAIHTOEHDOT. Jokaisen vastauksen perään kirjoitat tasan kaksi lyhyttä vastausvaihtoehtoa pelaajan suulla, enintään \
-kuusi sanaa kumpikin, jotta hänen ei tarvitse kirjoittaa: esimerkiksi "Kerro tästä lisää" tai "Näytä jotain modernia". \
-Ne vievät eri suuntiin.
+kuusi sanaa kumpikin, jotta hänen ei tarvitse kirjoittaa. Pysähdyksen jälkeen ensimmäinen on paikkakohtainen \
+syventävä kysymys juuri tästä paikasta, johon osaat vastata varmasti (esimerkiksi Nyhavnissa "Missä Andersen asui?"), \
+ja toinen vaihtaa suuntaa (esimerkiksi "Näytä jotain modernia" tai "Missä voisi syödä?"). Yleistä "Kerro tästä \
+lisää" et käytä. Vaihtoehdot pysyvät aina tässä kaupungissa: et koskaan ehdota kaupungin vaihtamista.
 
 ISOISÄ. Jos alla on isoisän päiväkirjamerkintä tästä kaupungista vuodelta tuhatkahdeksansataaseitsemänkymmentäkolme, \
 ja pysähdys on se paikka, josta merkintä kertoo, kappaleeseen kuuluu aina yksi lyhyt viittaus siihen omin sanoin, \
@@ -89,7 +93,7 @@ sellaisenaan etkä kopioi lauseita.
 Ei poliittisia kannanottoja. Vaikeat historian aiheet käsittelet asiallisesti.
 
 VASTAUKSEN MUOTO — tasan toinen näistä, ei mitään muuta:
-NIMI: <paikan nimi perusmuodossa, suomeksi tai alkuperäisenä>
+NIMI: <paikan vakiintunut nimi perusmuodossa (nominatiivi), suomeksi tai alkuperäisenä, esimerkiksi Kööpenhaminan ooppera>
 WIKIPEDIA: <paikan englanninkielisen Wikipedia-artikkelin tarkka otsikko>
 LAT: <leveysaste desimaaleina>
 LON: <pituusaste desimaaleina>
@@ -289,11 +293,12 @@ function kentta(teksti, nimi) {
  * Jäsentää mallin vastauksen: kysymys, pysähdys mallin koordinaatein (worker hakee oikeat paikanKoordinaatit-
  * funktiolla) tai null.
  */
-export function jasennaOpas(teksti) {
+export function jasennaOpas(teksti, varaNimi = null) {
   const vaihtoehdot = [...String(teksti ?? '').matchAll(/^\s*VAIHTOEHTO\s*:\s*(.+)$/gim)].map((m) => siivoa(m[1], 80)).filter(Boolean).slice(0, 2);
   const kysymys = kentta(teksti, 'KYSYMYS');
   if (kysymys) return { tyyppi: 'kysymys', teksti: siivoa(kysymys, 200), vaihtoehdot };
-  const nimi = kentta(teksti, 'NIMI');
+  // Kierroksen pysähdyksellä nimi on jo tiedossa (varaNimi): pelkkä TEKSTI riittää.
+  const nimi = kentta(teksti, 'NIMI') ?? varaNimi;
   const tekstiOsa = /^\s*TEKSTI\s*:\s*([\s\S]+?)(?=^\s*VAIHTOEHTO\s*:|(?![\s\S]))/im.exec(String(teksti ?? ''))?.[1];
   if (!nimi || !tekstiOsa) return null;
   const luku = (k) => Number(String(kentta(teksti, k) ?? '').replace(',', '.'));
@@ -378,4 +383,74 @@ export async function wikidataKuva(haku, id) {
   } catch {
     return [];
   }
+}
+
+/*
+ * KIERROS "ESITTELE KAUPUNKI" (omistajan idea 5.10.2026 klo 19.3x, Päätoimittaja): Sonnet suunnittelee yhdellä
+ * kutsulla noin kahdeksan pysähdyksen kierroksen (maantieteellisesti järkevä, paikkatyypit vaihtelevat), worker
+ * tarkistaa koordinaatit ja muistaa suunnitelman KV:ssä istunnon tunnuksella. Kertojan tekstit tulevat pysähdys
+ * kerrallaan kuten ennen; kun pelaaja ei valitse mitään (toive null, myös natiivin esihaku), kierros jatkuu
+ * seuraavaan paikkaan, jota ei vielä ole nahdyt-listassa. Lopuksi kertoja kysyy, jatketaanko ("Lisää tätä kaupunkia").
+ */
+export const ESITTELE_KAUPUNKI = 'Esittele kaupunki';
+export const LISAA_KAUPUNKIA = 'Lisää tätä kaupunkia';
+export const KIERROKSEN_PITUUS = 8;
+const toiveAvain = (t) => String(t ?? '').toLowerCase().replace(/[^a-zäöå]+/g, '');
+export const onKierrosToive = (toive) => [ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA].some((x) => toiveAvain(x) === toiveAvain(toive));
+
+export const OPAS_KIERROS_KEHOTE = `Suunnittelet Matkakirja-pelin kertojalle kaupunkikierroksen, jonka kamera lentää ylhäältä. \
+Valitset tasan ${KIERROKSEN_PITUUS} todellista, tunnettua paikkaa, joilla on oma artikkeli englanninkielisessä Wikipediassa ja jotka \
+näkyvät ilmasta (rakennus, aukio, puisto, satama, kanava tai silta; ei sisäkohteita). Järjestys on maantieteellisesti \
+järkevä: peräkkäiset paikat ovat lähellä toisiaan, eikä reitti kulje edestakaisin. Paikkatyypit vaihtelevat, ja \
+mukana on AINA vähintään yksi vanha kohde, yksi moderni rakennus (valmistunut vuoden 1990 jälkeen), yksi vesikohde, \
+yksi puisto ja yksi ruokapaikka (esimerkiksi kauppahalli tai ruokatori). Kaupungin tunnetuimmat nähtävyydet kuuluvat mukaan. \
+Et valitse jo kerrottuja paikkoja. Vastaat vain riveillä, yksi paikka riviä kohden, ei mitään muuta:
+PAIKKA: <vakiintunut nimi perusmuodossa suomeksi tai alkuperäisenä> | <englanninkielisen Wikipedia-artikkelin tarkka otsikko> | <leveysaste> | <pituusaste> | <koko metreinä>`;
+
+export function kierroksenViesti({ kaupunki, sijainti }, kaydytNimet = []) {
+  return [
+    `Kaupunki: ${kaupunki ?? '(ei nimeä, katso koordinaatit)'}`,
+    sijainti ? `Kameran nykyinen paikka: ${sijainti.lat.toFixed(5)}, ${sijainti.lon.toFixed(5)} (aloita tästä läheltä)` : '',
+    kaydytNimet.length ? `Jo kerrotut paikat (älä valitse): ${kaydytNimet.join('; ')}` : '',
+  ].filter(Boolean).join('\n');
+}
+
+/** Kierroksen suunnitelma mallin vastauksesta: [{ nimi, wikipedia, lat, lon, koko_m }] (enintään 10). */
+export function jasennaKierros(teksti) {
+  return [...String(teksti ?? '').matchAll(/^\s*PAIKKA\s*:\s*(.+)$/gim)].map((m) => {
+    const [nimi, wikipedia, lat, lon, koko] = m[1].split('|').map((x) => x.trim());
+    const luku = (x) => Number(String(x ?? '').replace(',', '.'));
+    return { nimi: siivoa(nimi, 120), wikipedia: siivoa(wikipedia, 200) || null, lat: luku(lat), lon: luku(lon),
+      koko_m: Number.isFinite(luku(koko)) && luku(koko) > 0 ? Math.min(3000, Math.max(20, Math.round(luku(koko)))) : 150 };
+  }).filter((x) => x.nimi && Number.isFinite(x.lat) && Number.isFinite(x.lon)).slice(0, 10);
+}
+
+/** Seuraava kierroksen paikka, jota ei ole nahdyt-listassa (tunnus tai nimi): { paikka, numero, maara } tai null. */
+export function seuraavaKierrokselta(kierros, kaydyt) {
+  const nahty = new Set(kaydyt.map((k) => String(k).toLowerCase()));
+  const i = (kierros?.paikat ?? []).findIndex((x) => ![x.id, x.nimi].some((k) => k && nahty.has(String(k).toLowerCase())));
+  return i < 0 ? null : { paikka: kierros.paikat[i], numero: i + 1, maara: kierros.paikat.length };
+}
+
+/** Ruudun otsikko: suomenkielisen Wikipedian otsikko ilman tarkennetta, muuten mallin perusmuoto (pysyy samana). */
+export function paikanNimi(paikka, mallinNimi) {
+  const fi = paikka?.wiki?.kieli === 'fi' ? String(paikka.wiki.otsikko ?? '').replace(/\s*\([^)]*\)\s*$/, '').trim() : '';
+  return fi || mallinNimi;
+}
+
+/**
+ * Reitti maantieteellisesti järkeväksi: alku lähimmästä paikasta (kamera), sitten aina lähin jäljellä oleva
+ * (lähin naapuri). Mallin järjestys kulki joskus edestakaisin (koeajo 8: merenneito → Amalienborg → Kastellet).
+ */
+export function jarjestaReitti(paikat, alku = null) {
+  const jaljella = [...paikat];
+  const reitti = [];
+  let nyt = alku ?? jaljella[0];
+  while (jaljella.length) {
+    let i = 0;
+    for (let j = 1; j < jaljella.length; j += 1) if (etaisyys(nyt, jaljella[j]) < etaisyys(nyt, jaljella[i])) i = j;
+    nyt = jaljella.splice(i, 1)[0];
+    reitti.push(nyt);
+  }
+  return reitti;
 }

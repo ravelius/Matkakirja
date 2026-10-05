@@ -234,3 +234,70 @@ test('worker: kuvat pelin aineistosta tai Wikidatan P18 vapaalla lisenssillä, i
   assert.deepEqual(d.data.kuvat, [{ url: 'https://upload/nyhavn-800.jpg', tyyppi: 'valokuva', tekija: 'Kuvaaja', lisenssi: 'CC BY-SA 4.0',
     lahde: 'https://commons/File:Nyhavn.jpg', selite: null }], 'P18-varakuva');
 });
+
+test('kierros: suunnitelman jäsennys, reitti lähin naapuri, seuraava nahdyt-listan mukaan, nimi fi-Wikipediasta', async () => {
+  const { jasennaKierros, jarjestaReitti, seuraavaKierrokselta, paikanNimi, onKierrosToive } = await import('../tools/pollo/opas.js');
+  const s = jasennaKierros('PAIKKA: Tivoli | Tivoli Gardens | 55.6737 | 12.5681 | 300\nPAIKKA: Kastellet | Kastellet, Copenhagen | 55.6911 | 12.5939\nroskaa\nPAIKKA: Nyhavn | Nyhavn | 55,6797 | 12.5906 | 9000');
+  assert.deepEqual(s.map((x) => [x.nimi, x.koko_m]), [['Tivoli', 300], ['Kastellet', 150], ['Nyhavn', 3000]]);
+  assert.deepEqual(jarjestaReitti(s, { lat: 55.674, lon: 12.568 }).map((x) => x.nimi), ['Tivoli', 'Nyhavn', 'Kastellet']);
+  const kierros = { paikat: [{ id: 'Q1', nimi: 'A' }, { id: 'Q2', nimi: 'B' }, { id: 'Q3', nimi: 'C' }] };
+  assert.deepEqual(seuraavaKierrokselta(kierros, ['Q1']), { paikka: { id: 'Q2', nimi: 'B' }, numero: 2, maara: 3 });
+  assert.equal(seuraavaKierrokselta(kierros, ['Q1', 'b']).numero, 3, 'nimikin käy');
+  assert.equal(seuraavaKierrokselta(kierros, ['Q1', 'Q2', 'Q3']), null);
+  assert.equal(paikanNimi({ wiki: { kieli: 'fi', otsikko: 'Pyöreä torni (Kööpenhamina)' } }, 'Rundetaarn'), 'Pyöreä torni');
+  assert.equal(paikanNimi({ wiki: { kieli: 'en', otsikko: 'Torvehallerne' } }, 'Torvehallerne'), 'Torvehallerne');
+  assert.ok(onKierrosToive('esittele kaupunki!') && onKierrosToive('Lisää tätä kaupunkia') && !onKierrosToive('Näytä jotain'));
+});
+
+test('worker: "Esittele kaupunki" suunnittelee kierroksen, toive null jatkaa, lopussa "Lisää tätä kaupunkia"', async () => {
+  const kv = new Map();
+  const env = { ANTHROPIC_API_KEY: 'a', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KEHITTAJAKOODI: 'k', OPAS_AINEISTO_TESTI: {},
+    POLLO_KV: { get: async (x) => kv.get(x) ?? null, put: async (x, v) => { kv.set(x, v); }, delete: async (x) => { kv.delete(x); } } };
+  const vastaukset = [];
+  const verkko = tynka();
+  const vanha = globalThis.fetch;
+  globalThis.fetch = async (u, init) => {
+    if (String(u).includes('api.anthropic.com')) {
+      const runko = JSON.parse(init.body);
+      vastaukset.push(runko.messages.at(-1).content);
+      const teksti = runko.system?.[0]?.text?.startsWith?.('Suunnittelet') || JSON.stringify(runko.system).includes('Suunnittelet')
+        ? 'PAIKKA: Tivoli | Tivoli Gardens | 55.6737 | 12.5681 | 300\nPAIKKA: Tivoli kopio | Tivoli Gardens | 55.6737 | 12.5681\nPAIKKA: Torvehallerne | Torvehallerne | 55.6838 | 12.5695\nPAIKKA: Tuntematon | Tuntematon | 55.68 | 12.59'
+        : /KIERROS PÄÄTTYI/.test(runko.messages.at(-1).content) ? 'KYSYMYS: Jatketaanko?\nVAIHTOEHTO: Jotain\nVAIHTOEHTO: Lisää tätä kaupunkia'
+          : /KIERROS:/.test(runko.messages.at(-1).content) ? 'TEKSTI: Kierroksen kappale.\nVAIHTOEHTO: Kysymys paikasta?\nVAIHTOEHTO: Missä voisi syödä?'
+            : 'KYSYMYS: Mitä haluat nähdä?\nVAIHTOEHTO: Jotain vanhaa\nVAIHTOEHTO: Modernia';
+      return new Response(JSON.stringify({ content: [{ type: 'text', text: teksti }], stop_reason: 'end_turn' }), { headers: { 'content-type': 'application/json' } });
+    }
+    if (String(u).includes('wbsearchentities') && String(u).includes('Torvehallerne')) return new Response(JSON.stringify({ search: [{ id: 'Q19409991' }] }));
+    if (String(u).includes('wbgetclaims') && String(u).includes('Q19409991') && String(u).includes('P625')) {
+      return new Response(JSON.stringify({ claims: { P625: [{ mainsnak: { datavalue: { value: { latitude: 55.6838, longitude: 12.5695 } } } }] } }));
+    }
+    return verkko.fetch(u, init);
+  };
+  const kysy = async (runko) => {
+    const v = await worker.fetch(new Request('https://pollo.example/opas/seuraava', { method: 'POST',
+      headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'x-pollo-kehittaja': 'k', 'x-matkakirja-testi': '1' },
+      body: JSON.stringify({ kaupunki: 'Kööpenhamina', istunto: 's1', ...runko }) }), env, {});
+    return v.json();
+  };
+  try {
+    const alku = await kysy({});
+    assert.deepEqual(alku.vaihtoehdot, ['Esittele kaupunki', 'Jotain vanhaa'], 'aloituskysymyksen ensimmäinen vaihtoehto');
+    const a = await kysy({ toive: 'Esittele kaupunki' });
+    assert.equal(a.tyyppi, 'pysahdys');
+    assert.deepEqual(a.kierros, { numero: 1, maara: 3 }, 'kopio pois, tuntematon mallin koordinaatein mukana');
+    assert.equal(a.id, 'Q110289');
+    assert.equal(a.nimi, 'Kööpenhaminan Tivoli', 'nimi fi-Wikipediasta');
+    const b = await kysy({ nahdyt: ['Q110289'] });
+    assert.deepEqual([b.id, b.kierros.numero], ['Q19409991', 2]);
+    const c = await kysy({ nahdyt: ['Q110289', 'Q19409991'] });
+    assert.equal(c.kierros.numero, 3);
+    const loppu = await kysy({ nahdyt: ['Q110289', 'Q19409991', c.id] });
+    assert.equal(loppu.tyyppi, 'kysymys');
+    assert.deepEqual(loppu.vaihtoehdot, ['Lisää tätä kaupunkia', 'Jotain']);
+    assert.equal(kv.has('opas:kierros:s1'), false, 'kierros päättyi');
+    const vapaa = await kysy({ nahdyt: ['Q110289'], toive: 'Missä voisi syödä?' });
+    assert.equal(vapaa.kierros, undefined);
+  } finally {
+    globalThis.fetch = vanha;
+  }
+});
