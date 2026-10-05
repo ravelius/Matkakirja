@@ -8,21 +8,24 @@ set -euo pipefail
 U=${1:?anna ulos-kansio}; mkdir -p $U
 B=/Applications/Blender.app/Contents/MacOS/Blender; H=${0:A:h}
 V=/Users/Shared/Claude/proto-3d/_valmiit/olavinlinna-blender-v26/hahmot; M=/Users/Shared/Claude/proto-3d/_lahteet/mixamo
-YHT=("$M/Breathing Idle.fbx=hengitys:12" "$M/Talking.fbx=puhe_m:12")
-tee() {  # nimi [lisäleikkeet...] -- korvaukset
-  local n=$1; shift; local l=() k=""
+# Seisonta ja puhe hahmoittain (omistaja 5.10. klo 14.3x "liikkeet outoja": kaikilla sama Breathing Idle ja Talking näytti kloonilta).
+# Saman huoneen hahmoilla eri leikkeet; pitkät leikkeet 12 s:n silmukoiksi.
+BI="$M/Breathing Idle.fbx"; BO="$M/Bored.fbx"; UI="$M/Unarmed Idle.fbx"; OM="$M/Old Man Idle.fbx"
+TA="$M/Talking.fbx"; GC="$M/Talking General Conversation.fbx"; OH="$M/Talking One Hand Question.fbx"; AR="$M/Standing Arguing.fbx"
+tee() {  # nimi idle-fbx puhe-fbx [lisäleikkeet...] -- korvaukset
+  local n=$1 i=$2 p=$3; shift 3; local l=() k=""
   while [ $# -gt 0 ] && [ "$1" != -- ]; do l+=("$1"); shift; done; shift; k=$1
-  nice -n 15 $B -b --factory-startup -P $H/hahmo_mixamo.py -- $V/$n.glb $U/$n.glb $YHT $l --korvaa $k 2>&1 | grep -E "^MIXAMO valmis|Error|Traceback" | sed "s#^#$n: #" | cut -c1-160
+  nice -n 15 $B -b --factory-startup -P $H/hahmo_mixamo.py -- $V/$n.glb $U/$n.glb "$i=hengitys:12" "$p=puhe_m:12" $l --korvaa $k 2>&1 | grep -E "^MIXAMO valmis|Error|Traceback" | sed "s#^#$n: #" | cut -c1-160
 }
-tee kappalainen-1500 "$M/Praying.fbx=rukous" "$M/Sitting Idle.fbx=istuu:12" "$M/Sitting Talking.fbx=istuu_puhe:12" -- idle=hengitys,puhe=puhe_m,tyo=rukous
-tee kirjuri-1500 -- idle=hengitys,puhe=puhe_m  # työ UAL: kirjuri seisoo pulpetin ääressä (istuva Writing leijui 5.10.)
-tee vouti-1500 "$M/Pointing Forward.fbx=osoitus:12" -- idle=hengitys,puhe=puhe_m,tyo=osoitus
-tee vartija-1500 "$M/Looking Around.fbx=katselu_m:12" -- idle=hengitys,puhe=puhe_m,tyo=katselu_m
-tee portinvartija-1500 "$M/Looking Around.fbx=katselu_m:12" -- idle=hengitys,puhe=puhe_m,tyo=katselu_m
-tee talonpoika-1500 "$M/Picking Up.fbx=nosto:12" -- idle=hengitys,puhe=puhe_m,tyo=nosto
-tee vesipoika-1500 "$M/Picking Up.fbx=nosto:12" -- idle=hengitys,puhe=puhe_m,tyo=nosto
-tee soutaja-1500 "$M/Paddling.fbx=melonta:12" -- idle=hengitys,puhe=puhe_m,tyo=melonta
-tee kokki-1500 -- idle=hengitys,puhe=puhe_m
-tee renki-1500 -- idle=hengitys,puhe=puhe_m
-tee apulainen-1500 -- idle=hengitys,puhe=puhe_m
+tee kappalainen-1500 "$OM" "$GC" "$M/Praying.fbx=rukous:12" "$M/Sitting Idle.fbx=istuu:12" "$M/Sitting Talking.fbx=istuu_puhe:12" -- idle=hengitys,puhe=puhe_m,tyo=rukous
+tee kirjuri-1500 "$BI" "$OH" -- idle=hengitys,puhe=puhe_m  # työ UAL: kirjuri seisoo pulpetin ääressä (istuva Writing leijui 5.10.)
+tee vouti-1500 "$BO" "$AR" "$M/Pointing Forward.fbx=osoitus:12" -- idle=hengitys,puhe=puhe_m,tyo=osoitus
+tee vartija-1500 "$BO" "$TA" "$M/Looking Around.fbx=katselu_m:12" -- idle=hengitys,puhe=puhe_m,tyo=katselu_m
+tee portinvartija-1500 "$BI" "$GC" "$M/Looking Around.fbx=katselu_m:12" -- idle=hengitys,puhe=puhe_m,tyo=katselu_m
+tee talonpoika-1500 "$UI" "$TA" "$M/Picking Up.fbx=nosto:12" -- idle=hengitys,puhe=puhe_m,tyo=nosto
+tee vesipoika-1500 "$UI" "$OH" "$M/Picking Up.fbx=nosto:12" -- idle=hengitys,puhe=puhe_m,tyo=nosto
+tee soutaja-1500 "$BI" "$GC" "$M/Paddling.fbx=melonta:12" -- idle=hengitys,puhe=puhe_m,tyo=melonta
+tee kokki-1500 "$BO" "$AR" -- idle=hengitys,puhe=puhe_m
+tee renki-1500 "$UI" "$OH" -- idle=hengitys,puhe=puhe_m
+tee apulainen-1500 "$BI" "$GC" -- idle=hengitys,puhe=puhe_m
 echo "HAHMOT_VALMIS $(ls $U/*.glb | wc -l | tr -d ' ') glb, $(du -sh $U | cut -f1)"
