@@ -70,6 +70,10 @@ Vanhemmat vaiheet: `viesti-karttaseppa-luovutus-20261002.md` (päivitykset 2.–
   - Menetelmä: `iss-maailma-s2/tasaus.mjs` (k7-asetukset: SIGMA_M 1500, ALA 0,6, YLA 1,6, USVA 1,6, SINI 99, varakorjaus) ja K-kenttä `tasaus-kentta.mjs` (σ 250 km).
     Lisäksi järvet MERI-väriin, `rengas.mjs` (KYNNYS 0, pilvet merellä vedeksi) ja aukkotäyttö kahdella näkymällä (`maailmamosaiikki-v2e.mjs`, POISSULJE-env).
   - Alkuperäiset laatat: `v2/tropiikki/laatat-v2e-alkuperainen`.
+- **S2-indeksi v2c (17.48) ja v2d (17.58) viety** (Julkaisija). v2d = v2c + Colorado-suisto: 11SPR ja 11RPQ valinta 0 = S2B 2025-07-30.
+  11SPR:n maalle jää radan reunan sauma (märkä muta vs. kuiva suola), eikä savy (v2e) auta. LS2 tarkistaa simukuvasta.
+  Jos sauma näkyy: koko 11SPR:n ja 11SQR:n länsiosan kattavat datatakit, esim. S2A 2022-10-22, S2B 2025-11-30 ja S2A 2025-01-09 (11SPR nodata 0, 11SQR 55 %);
+  sauma siirtyisi Gran Desierton dyyneille. Tarkista myös 11RPQ ja 11RQQ.
 - **Rengaskorjaus muille alueille** (`v2-rengas/<alue>`, vain muuttuneet laatat, KYNNYS 0): Eurooppa, P-Afrikka, Amerikka, Aasia. Ei vielä viety.
   Jo viedyt kolme aluetta menevät v2e-korjaussarjaan (v2e/<alue>/laatat + korjaus.json); Euroopalle uusi polku (LS2: AstronauttiKerros.S2Juuri).
 
