@@ -34,11 +34,8 @@ namespace Matkakirja.Natiivi
         readonly VisualElement paneeli, lista, lisaosa;
         readonly Label otsikko;
         readonly VisualElement ylarivi;
-        readonly Button ylaSulje;
         readonly List<(VisualElement Rivi, Func<bool> Nakyy)> lisarivit = new List<(VisualElement, Func<bool>)>();
         readonly List<(Button Nappi, Func<bool> Paalla)> kytkimet = new List<(Button, Func<bool>)>();
-        /// <summary>"Muut"-paneeli (omistaja 24.9.2026 klo 13.3x): samannäköinen valikko nykyisen päälle.</summary>
-        readonly VisualElement muut, muutLista;
         readonly Button poisNappi;
         readonly List<(string Id, Button Rivi, Label Tila)> rivit = new List<(string, Button, Label)>();
         string aukiId;
@@ -84,8 +81,6 @@ namespace Matkakirja.Natiivi
             alaTakaisin.tooltip = "Takaisin valikkoon";
             alaTakaisin.style.display = DisplayStyle.None;
             otsikko = Rakenne.Teksti("LINSSIT", "mk-selite__otsikko", ylarivi);
-            ylaSulje = Rakenne.Nappi("×", "mk-selite__sulje", Sulje, ylarivi);
-            ylaSulje.tooltip = "Sulje linssivalikko";
 
             var vieritys = new ScrollView(ScrollViewMode.Vertical);
             vieritys.AddToClassList("mk-linssivalitsin__vieritys");
@@ -99,19 +94,6 @@ namespace Matkakirja.Natiivi
             lisaosa.style.display = DisplayStyle.None;
             this.vieritys = vieritys;
             LuoPilleriOsat(turva, kerros);
-
-            // Muut-paneeli: sama pergamentti ja kehys, ‹ takaisin ja ✕, rivit (Valikkona).
-            muut = Rakenne.El("mk-linssivalitsin mk-linssivalitsin--valikko mk-linssivalitsin--muut", turva);
-            muut.style.display = DisplayStyle.None;
-            // PANEELI-pohja (omistaja 1.10.2026, web #3804): paperipinta ja pergamenttirengas tokeneista (Linssit.uss "PANEELI").
-            muut.AddToClassList("mk-paneeli--pohja");
-            Kirjasimet.Aseta(muut, Kirjasin.Kone);
-            var muutYla = Rakenne.El("mk-selite__ylarivi", muut, PickingMode.Ignore);
-            var takaisin = Rakenne.Nappi("‹ Takaisin", "mk-selite__sulje mk-linssivalitsin__takaisin", SuljeMuut, muutYla);
-            takaisin.tooltip = "Takaisin valikkoon";
-            var muutSulje = Rakenne.Nappi("×", "mk-selite__sulje", Sulje, muutYla);
-            muutSulje.tooltip = "Sulje valikko";
-            muutLista = Rakenne.El("mk-linssivalitsin__muutlista", muut, PickingMode.Ignore);
 
             poisNappi = Rakenne.Nappi("Ota linssi pois", "mk-nappi--haamu mk-linssivalitsin__pois", () => { Sulje(); Suljettava?.Invoke(); }, paneeli);
             poisNappi.style.display = DisplayStyle.None;
@@ -218,7 +200,6 @@ namespace Matkakirja.Natiivi
             if (!Auki) return;
             Auki = false;
             Rakenne.Nayta(paneeli, false, 220);
-            SuljeMuut();
             SuljeEsikatselu();
             nappi.RemoveFromClassList("mk-valittu");
             AukiMuuttui?.Invoke(false);
@@ -327,35 +308,6 @@ namespace Matkakirja.Natiivi
             foreach (var (b, paalla) in kytkimet) b.EnableInClassList("mk-valittu", paalla != null && paalla());
             // Kytkin voi tuoda tai viedä rivejä (Maailma → Näytä huntu, Laitetestaaja 1.1 (82)): näkyvyys heti, ei vasta avauksessa.
             foreach (var (rivi, nakyy) in lisarivit) rivi.style.display = nakyy == null || nakyy() ? DisplayStyle.Flex : DisplayStyle.None;
-        }
-
-        /// <summary>Muut-nappi: avaa Muut-paneelin nykyisen päälle.</summary>
-        public Button LisaMuutNappi(VisualElement rivi, string nimi, string ikoni) => ValikkoNappi(rivi, nimi, ikoni, AvaaMuut);
-
-        /// <summary>Muut-paneelin rivi (sulkee valikot ja ajaa toiminnon).</summary>
-        public Button LisaMuuRivi(string nimi, string ikoni, Action toiminto, Func<bool> nakyy = null)
-        {
-            var b = ValikkoNappi(muutLista, nimi, ikoni, () => { Sulje(); toiminto?.Invoke(); }, "mk-valikkonappi mk-valikkonappi--rivi");
-            if (nakyy != null) lisarivit.Add((b, nakyy));
-            return b;
-        }
-
-        public bool MuutAuki { get; private set; }
-
-        void AvaaMuut()
-        {
-            if (MuutAuki) return;
-            MuutAuki = true;
-            muut.style.top = paneeli.style.top;
-            foreach (var (rivi, nakyy) in lisarivit) rivi.style.display = nakyy == null || nakyy() ? DisplayStyle.Flex : DisplayStyle.None;
-            Rakenne.Nayta(muut, true, 180);
-        }
-
-        void SuljeMuut()
-        {
-            if (!MuutAuki) return;
-            MuutAuki = false;
-            Rakenne.Nayta(muut, false, 180);
         }
 
         IReadOnlyList<LinssiTiedot> testiLinssit;
@@ -531,7 +483,7 @@ namespace Matkakirja.Natiivi
             if (osoitin == null || !osoitin.press.wasPressedThisFrame || paneeli.panel == null) return;
             var ruutu = osoitin.position.ReadValue();
             var p = RuntimePanelUtils.ScreenToPanel(paneeli.panel, new Vector2(ruutu.x, Screen.height - ruutu.y));
-            if (!paneeli.worldBound.Contains(p) && !nappi.worldBound.Contains(p) && !(MuutAuki && muut.worldBound.Contains(p))
+            if (!paneeli.worldBound.Contains(p) && !nappi.worldBound.Contains(p)
                 && !EsikatseluSisaltaa(p) && (Avaaja == null || !Avaaja.worldBound.Contains(p))
                 && !Avaajat.Exists(a => a != null && a.panel != null && a.worldBound.Contains(p))) { UiKerros.OhiSulki(); Sulje(); }  // maakuntalappu ei aukea samasta napautuksesta (omistaja 30.9.2026)
         }
