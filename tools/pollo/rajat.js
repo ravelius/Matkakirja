@@ -61,16 +61,19 @@ export const PULU_ELEVEN_PAIVARAJA_OLETUS = 15000;
  * pysähdyspyyntöjen päiväraja IP:tä kohden (Sonnet-kutsu + Wikipedia). Kehittäjäkoodilla ei rajoja.
  */
 export const OPAS_ELEVEN_PAIVARAJA_OLETUS = 20000;
-export const OPAS_PAIVARAJA_OLETUS = 80;
+// 80 → 400 (Päätoimittaja 5.10. ilta: rajaa ei ole tarkoitettu omistajan eikä roolien testailtaan; kodin/Macin IP on
+// yhteinen). Kulusuoja on nyt tiheysraja 20/min IP:ttäin (worker) + ElevenLabsin päiväkatto; junan 145 jälkeen
+// päiväraja laitekohtaiseksi IP:n sijaan.
+export const OPAS_PAIVARAJA_OLETUS = 400;
 
 export function opasElevenPaivaAvain(nyt = new Date()) {
   return `eleven:opas:p:${nyt.toISOString().slice(0, 10)}`;
 }
 
 export function opasPaivaAvain(ip, nyt = new Date()) {
-  // p2 (5.10.2026 ilta): avain vaihdettiin, kun natiivin uusintasilmukka täytti Macin/kodin IP:n päivärajan; julkaisu
+  // p2/p3 (5.10.2026 ilta): avain vaihdettiin, kun natiivin uusintasilmukka täytti Macin/kodin IP:n päivärajan; julkaisu
   // nollasi laskurit (ei KV-käsityötä). Tiheysraja (worker oppaanTiheysYlittyy) estää toiston.
-  return `opas:p2:${nyt.toISOString().slice(0, 10)}:${tiiviste(String(ip ?? 'tuntematon'))}`;
+  return `opas:p3:${nyt.toISOString().slice(0, 10)}:${tiiviste(String(ip ?? 'tuntematon'))}`;
 }
 
 /*
