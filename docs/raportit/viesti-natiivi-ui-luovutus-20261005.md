@@ -45,6 +45,8 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   (otsikko-ennen-jalkeen.jpg, kirjainvali-arkki.jpg, ei-linssia-arkki.jpg). Lähetetty Päätoimittajalle 11.3x kuitattavaksi;
   kysymys: Linssit-näkymän esikatseluikkuna "Ei linssiä" normaalilla kartalla (suositus: jätetään). Kuittauksen jälkeen
   merge-pyynnöt Natiivisepälle (kirjainvali-kerning Tavlin TF-ehtona, ei-linssia juna 144).
+  KUITATTU molemmat 11.3x → merge-pyyntö Natiivisepälle junan 143 lisäerään (kirjainvali-kerning tavlin kanssa, ei-linssia
+  samassa). Esikatseluikkuna "Ei linssiä": Päätoimittaja kysyy omistajalta — EI muutoksia ennen vastausta.
 
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
