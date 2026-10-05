@@ -147,7 +147,7 @@ namespace Matkakirja.Natiivi
             y = ymparisto;
             Virhe = null;
             Viimeisin = this;
-            var alku = KoopenhaminaTesti.Alku;
+            var alku = OpasSilmukka.Avauskuva(KoopenhaminaTesti.Alku.Lat, KoopenhaminaTesti.Alku.Lon);
             silmukka = new OpasSilmukka(alku);
             if (!kaupunki.Avaa(alku.Lat, alku.Lon, 45))
             {
@@ -819,11 +819,17 @@ namespace Matkakirja.Natiivi
             : $"opas: {kaupunki.Kaytossa} {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "-")}, seuraava {(silmukka.Seuraava?.Nimi ?? "-")}, nähty {System.Linq.Enumerable.Count(silmukka.Nahdyt)}, laatat {kaupunki.Latausaste:F0} %"
               + (Testi ? ", TESTI" : "") + (Virhe != null ? ", VIRHE " + Virhe : "");
 
+        /// <summary>Peite pois vasta, kun kaupunkia näkyy (laatat ≥ PeiteRaja %, enintään PeiteMaxS): ei tasaista värilaattaa avauksessa
+        /// (omistaja TF 144, toisto 6.10. 00.04). Vähintään 0,3 s (simu 18.39: peite jäi päälle ilman ajastinta).</summary>
         System.Collections.IEnumerator PeitePois()
         {
+            float t0 = Time.realtimeSinceStartup;
             yield return new WaitForSecondsRealtime(0.3f);
+            while (silmukka != null && kaupunki.Latausaste < PeiteRaja && Time.realtimeSinceStartup - t0 < PeiteMaxS) yield return null;
             y?.Peite(false);
+            o.Kirjaa($"opas: peite pois {Time.realtimeSinceStartup - t0:F1} s, laatat {kaupunki.Latausaste:F0} %");
         }
+        const float PeiteRaja = 35f, PeiteMaxS = 4f;
 
         public void Sulje()
         {

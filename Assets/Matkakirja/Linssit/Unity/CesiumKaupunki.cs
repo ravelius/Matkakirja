@@ -31,7 +31,7 @@ namespace Matkakirja.Natiivi
         public const long MaastoValimuisti = 128L << 20, RakennusValimuisti = 192L << 20, GoogleValimuisti = 256L << 20;
         public const float GoogleSseMin = 16f;
         public const long GoogleAsset = 2275207;
-        public const uint Rinnakkain = 8;
+        public const uint Rinnakkain = 12;   // 8 → 12 (omistaja TF 144: nopeampi lento, saapuessa laatat 68 %)
         /// <summary>Laattojen valmiusraja (%): ComputeLoadProgress on arvio, joten 100 ei aina täyty.</summary>
         public const float ValmisProsentti = 99f;
         /// <summary>Taivaan väri kaupunkinäkymässä (pallon avaruuden musta ei sovi horisonttiin).</summary>
