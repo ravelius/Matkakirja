@@ -28,6 +28,7 @@ import {
   PUHE_KUUKAUSIRAJA_OLETUS,
   PUHE_PAIVARAJA_OLETUS,
   ELEVEN_LUKIJA_PAIVARAJA_OLETUS,
+  PULU_ELEVEN_PAIVARAJA_OLETUS,
   KUVA_PAIVARAJA_OLETUS,
   KUVA_PROMPTIN_KATTO,
   PUHE_TEKSTIN_KATTO,
@@ -38,12 +39,15 @@ import {
   katkaiseKokonaiseen,
   kuukausiAvain,
   lukijaElevenPaivaAvain,
+  puluElevenPaivaAvain,
   lueLista,
   lueLuku,
   luoJatkoSuodatin,
   paivaAvain,
   poimiEhdotukset,
   poimiJatkot,
+  siivoaTaustatieto,
+  taustatietoKontekstiksi,
   poimiSahkeTuomio,
   puheKuukausiAvain,
   puhePaivaAvain,
@@ -1064,6 +1068,43 @@ Kirjoita täsmälleen kaksi riviä, yksi kysymys riville, ilman numerointia, \
 ilman ranskalaisia viivoja ja ilman johdantoa. Jokainen kysymys enintään 70 \
 merkkiä ja päättyy kysymysmerkkiin.`;
 
+/*
+ * TASAN KAKSI JATKOKYSYMYSTÄ (omistaja 5.10.2026 klo 16.4x: "pulun pitäisi antaa aina kaksi uutta kysymysvaihtoehtoa
+ * viimeisimmän vastauksen perään"). JATKOKEHOTE pyytää kaksi JATKOT-riviä; jos malli antaa vähemmän (unohtaa lohkon tai
+ * kirjoittaa ei-kysymyksen), puuttuvat täydennetään yhdellä pienellä kutsulla ennen loppua. Täydennys on harvinainen
+ * (vain vajaa lohko), lyhyt (150 tokenia) ja aikarajattu; jos sekin epäonnistuu, asiakas saa sen mitä on.
+ */
+export const JATKOJA = 2;
+const JATKOJEN_TAYDENNYS = `Keksi täsmälleen kaksi lyhyttä jatkokysymystä, jotka pelaaja voisi haluta \
+kysyä seuraavaksi juuri annetun vastauksen perusteella. Kysymysten pitää liittyä vastauksen sisältöön ja olla \
+tosimaailman kysymyksiä — EI pelin tehtäviin, pisteisiin tai juoneen liittyviä.
+
+Kirjoita täsmälleen kaksi riviä, yksi kysymys riville, ilman numerointia, ilman ranskalaisia viivoja ja ilman \
+johdantoa. Jokainen kysymys enintään 70 merkkiä ja päättyy kysymysmerkkiin.`;
+const JATKOJEN_AIKARAJA_MS = 6000;
+
+/** Palauttaa tasan JATKOJA jatkokysymystä (täydentää vajaan listan yhdellä kutsulla; virheessä mitä on). */
+async function varmistaJatkot(env, { jatkot, kysymys, vastaus }) {
+  const omat = [];
+  for (const j of jatkot ?? []) if (j && !omat.includes(j) && omat.length < JATKOJA) omat.push(j);
+  if (omat.length >= JATKOJA || !vastaus) return omat;
+  try {
+    const teksti = await Promise.race([
+      kysyMallilta(env, {
+        jarjestelma: `${JARJESTELMAKEHOTE}\n\n${JATKOJEN_TAYDENNYS}`,
+        viestit: [{ role: 'user', content: `Pelaajan kysymys: ${kysymys}\n\nVastauksesi:\n${String(vastaus).slice(0, 1500)}` }],
+        maxTokens: 150,
+      }),
+      new Promise((_, hylkaa) => { setTimeout(() => hylkaa(new Error('aikaraja')), JATKOJEN_AIKARAJA_MS); }),
+    ]);
+    for (const j of poimiEhdotukset(teksti, 3)) if (!omat.includes(j) && omat.length < JATKOJA) omat.push(j);
+    console.log(`pollo: jatkot täydennetty ${omat.length}/${JATKOJA}`);
+  } catch {
+    console.log('pollo: jatkojen täydennys epäonnistui');
+  }
+  return omat;
+}
+
 /* ------------------------------------------------------------------ */
 
 /**
@@ -1085,6 +1126,13 @@ merkkiä ja päättyy kysymysmerkkiin.`;
  * kehittäjätilassa pöllön paneeliin, ja se jää vain laitteelle.
  */
 const KEHITTAJA_OTSAKE = 'x-pollo-kehittaja';
+/*
+ * TESTIOTSAKE (omistaja 5.10.2026 klo 17.0x: kehittäjätilassa ei Pulun päiväkattoa → automaattiset testit, joilla on sama
+ * kehittäjäkoodi, eivät saa kuluttaa ElevenLabs-kiintiötä). Savukkeet (tools/savukkeet/pollo-kehittajakoodi.mjs) ja
+ * simulaattorin natiivi lähettävät `x-matkakirja-testi: 1`; Pulun puhe vastaa silloin 204 ilman ääntä eikä kutsu ElevenLabsia.
+ * Lukijat (kertoja) toimivat testeissäkin, koska ne säilötään (vakiotekstit maksavat kerran).
+ */
+export const TESTI_OTSAKE = 'x-matkakirja-testi';
 
 function kehittajaOhitus(pyynto, env) {
   if (!env.POLLO_KEHITTAJAKOODI) return false;
@@ -1097,7 +1145,7 @@ function korsOtsakkeet(origin, sallitut) {
     'access-control-allow-methods': 'POST, OPTIONS',
     // Kehittäjäotsake on sallittava erikseen, tai selain ei päästä
     // esilentoa (OPTIONS) läpi eikä pyyntö lähde lainkaan.
-    'access-control-allow-headers': `content-type, ${KEHITTAJA_OTSAKE}`,
+    'access-control-allow-headers': `content-type, ${KEHITTAJA_OTSAKE}, ${TESTI_OTSAKE}`,
     'access-control-max-age': '86400',
     vary: 'Origin',
   };
@@ -1349,6 +1397,20 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   const persoonaNimi = PUHE_PERSOONAT[runko?.persoona] ? runko.persoona : 'kertoja';
   const persoona = PUHE_PERSOONAT[persoonaNimi];
   const puluEleven = puluElevenKaytossa(env, persoonaNimi);
+  // Testiajot (TESTI_OTSAKE): Pulun ääntä ei tuoteta, ElevenLabs-kiintiö säästyy.
+  if (persoonaNimi === 'pollo' && pyynto.headers.get(TESTI_OTSAKE) === '1') {
+    return new Response(null, { status: 204, headers: puheOtsakkeet(kors, 'testi', 'testi') });
+  }
+  // Pulun äänen päiväkatto (15 000 mrk/vrk, Päätoimittaja 5.10.2026): ylityksessä ei ääntä eikä xAI:ta, vastaus jää tekstiksi.
+  // Kehittäjäkoodilla ei kattoa (omistaja 5.10.2026 klo 17.0x: "kehittäjätilassa ei saa olla päiväkattoa pululla").
+  if (puluEleven && !kehittajaOhitus(pyynto, env)) {
+    const kaytetty = await lueLaskuri(env.POLLO_KV ?? null, puluElevenPaivaAvain(new Date()));
+    const katto = lueLuku(env.PULU_ELEVEN_PAIVARAJA, PULU_ELEVEN_PAIVARAJA_OLETUS);
+    if (kaytetty + siivoaTeksti(runko?.teksti, PUHE_TEKSTIN_KATTO).length > katto) {
+      console.log(`puhe: pulun eleven-päiväkatto ${katto} mrk täynnä → ei ääntä`);
+      return vastaa({ virhe: 'aanikatto', viesti: 'Pulun ääni lepää tänään — vastaus on tekstinä.' }, { status: 429, ...kors });
+    }
+  }
   // Lukijan ElevenLabs päiväkaton sisällä (globaali laskuri); katon ylittyessä xAI-varapolku (ainoa jäljellä oleva xAI-käyttö lukijoilla).
   let lukijaEleven = lukijaElevenPyydetty(env, persoonaNimi, runko, kehittajaOhitus(pyynto, env));
   if (lukijaEleven) {
@@ -1495,6 +1557,7 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
         const williamAsetukset = lukijaEleven && aani === KERTOJA_ELEVEN_AANI ? { vakaus: null, tyyli: 0 } : {};
         ylavirta = await kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani, ...williamAsetukset });
         if (lukijaEleven) await kasvataLaskuri(kv, lukijaElevenPaivaAvain(nyt), 60 * 60 * 30, teksti.length);
+        if (puluEleven) await kasvataLaskuri(kv, puluElevenPaivaAvain(nyt), 60 * 60 * 30, teksti.length);
       } catch (virhe) {
         // VARAPOLKU: xAI (tai OpenAI) ilman säilöntää, xAI-muodon tageilla.
         console.log(`puhe: eleven epäonnistui (${virhe?.status ?? 'verkko'}) → ${xai ? 'xai' : 'openai'}`);
@@ -1924,7 +1987,7 @@ async function jatkaKeskenJaanyt(env, { jarjestelma, viestit }, raaka) {
 }
 
 async function striimaaVastaus(env, kors, {
-  jarjestelma, viestit, maxTokens, lisaohje = null, ajat = null,
+  jarjestelma, kysymys = '', viestit, maxTokens, lisaohje = null, ajat = null,
 }) {
   const ylavirta = await kutsuRajapintaa(env, {
     jarjestelma, viestit, maxTokens, striimi: true, lisaohje,
@@ -2006,7 +2069,8 @@ async function striimaaVastaus(env, kors, {
       // eikä sitä ole koskaan lähetetty pelaajalle palana.
       const paikka = poimiPaikka(raaka);
       if (vastaus) {
-        await laheta('loppu', { vastaus, jatkot, syy: null, ...(paikka ? { paikka } : {}) });
+        const kaksi = await varmistaJatkot(env, { jatkot, kysymys, vastaus });
+        await laheta('loppu', { vastaus, jatkot: kaksi, syy: null, ...(paikka ? { paikka } : {}) });
       } else {
         /*
          * Tyhjä vastaus striimin jälkeen: syy voi olla virran virhe,
@@ -2021,6 +2085,7 @@ async function striimaaVastaus(env, kors, {
           { jarjestelma, viestit, maxTokens, lisaohje },
           { virhe: virtaVirhe, stop },
         );
+        if (paikattu.syy === null) paikattu.jatkot = await varmistaJatkot(env, { jatkot: paikattu.jatkot, kysymys, vastaus: paikattu.vastaus });
         await laheta('loppu', paikattu);
       }
     } catch {
@@ -2719,10 +2784,12 @@ export default {
       }
 
       const viestit = [];
-      if (konteksti) {
+      // Pelin valmiit vastaukset taustatiedoksi, ei koskaan näytettäväksi (omistaja 5.10.2026 klo 16.4x; rajat.js).
+      const tausta = taustatietoKontekstiksi(siivoaTaustatieto(runko?.taustatieto));
+      if (konteksti || tausta) {
         viestit.push({
           role: 'user',
-          content: `Pelaajan tilanne juuri nyt:\n\n${konteksti}`,
+          content: [konteksti ? `Pelaajan tilanne juuri nyt:\n\n${konteksti}` : '', tausta].filter(Boolean).join('\n\n'),
         });
         viestit.push({
           role: 'assistant',
@@ -2757,6 +2824,7 @@ export default {
       if (runko?.striimi) {
         return await striimaaVastaus(env, kors, {
           jarjestelma: kehote,
+          kysymys,
           viestit,
           maxTokens: MAX_TOKENS,
           lisaohje,
@@ -2775,12 +2843,15 @@ export default {
       // Sama tyhjän käsittely kuin striimissä: yksi uusinta, sitten
       // rehellinen teksti ja syyluokka asiakkaalle.
       if (!vastaus) {
-        return vastaa(await paikkaaTyhja(env, kutsu, { stop: kerralla.stop }), kors);
+        const paikattu = await paikkaaTyhja(env, kutsu, { stop: kerralla.stop });
+        if (paikattu.syy === null) paikattu.jatkot = await varmistaJatkot(env, { jatkot: paikattu.jatkot, kysymys, vastaus: paikattu.vastaus });
+        return vastaa(paikattu, kors);
       }
       // Valinnainen paikkakenttä mukaan vain, jos malli sen kirjoitti
       // (ks. PAIKKAKEHOTE). Puuttuva kenttä = vastaus kuten ennenkin.
       const paikka = poimiPaikka(kerralla.teksti);
-      return vastaa({ vastaus, jatkot, syy: null, ...(paikka ? { paikka } : {}) }, kors);
+      const kaksi = await varmistaJatkot(env, { jatkot, kysymys, vastaus });
+      return vastaa({ vastaus, jatkot: kaksi, syy: null, ...(paikka ? { paikka } : {}) }, kors);
     } catch (virhe) {
       // Vain tilakoodi lokiin — ei avainta, ei pelaajan tekstiä.
       console.log(`pollo: kutsu epäonnistui (${virhe?.status ?? 'verkko'})`);

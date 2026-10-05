@@ -2233,8 +2233,16 @@ async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {},
   const lokit = [];
   const kertavastaukset = Array.isArray(kerta) ? [...kerta] : [kerta ?? malliVastaus('')];
   let kertaNro = 0;
+  const taydennykset = [];
   globalThis.fetch = async (osoite, asetukset) => {
     const pyydetty = JSON.parse(asetukset.body);
+    // Jatkokysymysten täydennys (tasan 2, 5.10.2026) on oma pieni kutsunsa: erikseen, ei kuluta kertavastauksia.
+    if (JSON.stringify(pyydetty.system ?? '').includes('Keksi täsmälleen kaksi lyhyttä jatkokysymystä')) {
+      taydennykset.push(pyydetty);
+      return new Response(JSON.stringify(malliVastaus('Mikä täydennys yksi?\nMikä täydennys kaksi?')), {
+        status: 200, headers: { 'content-type': 'application/json' },
+      });
+    }
     kutsut.push(pyydetty);
     if (pyydetty.stream) {
       return new Response(sseVirta(virta ?? []), {
@@ -2258,6 +2266,7 @@ async function ajaChat({ virta = null, kerta = null, kertaVirhe = 0, runko = {},
       tapahtumat: sse ? lueSse(teksti) : [],
       data: sse ? null : JSON.parse(teksti),
       kutsut,
+      taydennykset,
       lokit,
       otsakkeet: vastaus.headers,
     };
@@ -2326,7 +2335,8 @@ test('striimin virhetapahtuma johtaa yhteen uusintaan kertavastauksena', async (
 
   assert.deepEqual(loppu(ajo), {
     vastaus: 'Sparta oli Lakonian kaupunkivaltio.',
-    jatkot: ['Kuka oli Lykurgos?'],
+    // Tasan kaksi jatkoa (5.10.2026): mallin yksi + täydennys.
+    jatkot: ['Kuka oli Lykurgos?', 'Mikä täydennys yksi?'],
     syy: null,
   });
 });
@@ -2385,7 +2395,7 @@ test('kertavastauspolku käsittelee tyhjän samalla tavalla', async () => {
   });
   assert.equal(onnistui.kutsut.length, 2, 'tyhjää kertavastausta ei yritetty uudelleen');
   assert.deepEqual(onnistui.data, {
-    vastaus: 'Sparta oli Lakonian kaupunkivaltio.', jatkot: [], syy: null,
+    vastaus: 'Sparta oli Lakonian kaupunkivaltio.', jatkot: ['Mikä täydennys yksi?', 'Mikä täydennys kaksi?'], syy: null,
   });
 
   // Kaksi tyhjää peräkkäin: rehellinen teksti, ei osaamattomuutta.
@@ -2999,7 +3009,7 @@ test('järjestelmäkehote välimuistiin; luettava vastaus saa alkuohjeen välimu
   const alkuperainen = globalThis.fetch;
   globalThis.fetch = async (_osoite, asetukset) => {
     rungot.push(JSON.parse(asetukset.body));
-    return new Response(JSON.stringify({ content: [{ type: 'text', text: 'Tuota niin. Pariisi on kaupunki.' }] }),
+    return new Response(JSON.stringify({ content: [{ type: 'text', text: 'Tuota niin. Pariisi on kaupunki.\nJATKOT:\nMissä Pariisi on?\nKuka asui Pariisissa?' }] }),
       { status: 200, headers: { 'content-type': 'application/json' } });
   };
   try {
@@ -3020,4 +3030,53 @@ test('järjestelmäkehote välimuistiin; luettava vastaus saa alkuohjeen välimu
   // Välimuistissa oleva etuliite tavu tavulta sama; alkuohje omana lohkonaan sen jälkeen.
   assert.deepEqual(luettava[0], kirjoitettu[0]);
   assert.deepEqual(luettava[1], { type: 'text', text: LUETTAVAN_ALKU });
+});
+
+test('Pulun taustatieto: valmis vastaus kontekstiin, ei näytettäväksi (omistaja 5.10.2026 klo 16.4x)', async () => {
+  const ajo = await ajaChat({
+    runko: {
+      kysymys: 'Mikä on Etna?',
+      taustatieto: [{ teksti: 'Etna on Euroopan aktiivisin tulivuori.', lahde: { url: 'https://fi.wikipedia.org/wiki/Etna', title: 'Wikipedia' } },
+        { teksti: 'Toinen', lahde: { url: 'javascript:alert(1)' } }],
+    },
+    kerta: malliVastaus('Etna on Sisilian tulivuori.\nJATKOT:\nKuinka korkea Etna on?\nMilloin Etna purkautui viimeksi?'),
+  });
+  assert.equal(ajo.tila, 200);
+  const konteksti = ajo.kutsut[0].messages[0].content;
+  assert.match(konteksti, /PULUN TAUSTATIETO/);
+  assert.match(konteksti, /Etna on Euroopan aktiivisin tulivuori\./);
+  assert.match(konteksti, /Lähde: Wikipedia, https:\/\/fi\.wikipedia\.org\/wiki\/Etna/);
+  assert.doesNotMatch(konteksti, /javascript:/, 'vain https-lähde kelpaa');
+  assert.equal(ajo.data.vastaus, 'Etna on Sisilian tulivuori.');
+  assert.deepEqual(ajo.data.jatkot, ['Kuinka korkea Etna on?', 'Milloin Etna purkautui viimeksi?']);
+  assert.equal(ajo.taydennykset.length, 0, 'kaksi jatkoa: ei täydennystä');
+});
+
+test('jatkokysymyksiä tasan kaksi: vajaa lohko täydennetään, ylimääräiset karsitaan (5.10.2026)', async () => {
+  const vajaa = await ajaChat({
+    runko: { kysymys: 'Mikä oli Sparta?' },
+    kerta: malliVastaus('Sparta oli Lakonian kaupunkivaltio.\nJATKOT:\nKuka oli Lykurgos?'),
+  });
+  assert.deepEqual(vajaa.data.jatkot, ['Kuka oli Lykurgos?', 'Mikä täydennys yksi?']);
+  assert.equal(vajaa.taydennykset.length, 1);
+  const ilman = await ajaChat({ runko: { kysymys: 'Mikä oli Sparta?' }, kerta: malliVastaus('Sparta oli Lakonian kaupunkivaltio.') });
+  assert.deepEqual(ilman.data.jatkot, ['Mikä täydennys yksi?', 'Mikä täydennys kaksi?']);
+  const liikaa = await ajaChat({
+    runko: { kysymys: 'Mikä oli Sparta?' },
+    kerta: malliVastaus('Sparta oli valtio.\nJATKOT:\nKuka oli Lykurgos?\nMikä oli helootti?\nMissä Sparta oli?'),
+  });
+  assert.deepEqual(liikaa.data.jatkot, ['Kuka oli Lykurgos?', 'Mikä oli helootti?']);
+  assert.equal(liikaa.taydennykset.length, 0);
+  // Striimissä sama takuu loppu-tapahtumassa.
+  const virta = await ajaChat({
+    runko: { kysymys: 'Mikä oli Sparta?', striimi: true },
+    virta: [
+      { laji: 'message_start', data: { type: 'message_start' } },
+      ...['Sparta oli valtio.\n', 'JATKOT:\n', 'Kuka oli Lykurgos?\n'].map((teksti) => ({
+        laji: 'content_block_delta', data: { type: 'content_block_delta', delta: { type: 'text_delta', text: teksti } },
+      })),
+      { laji: 'message_stop', data: { type: 'message_stop' } },
+    ],
+  });
+  assert.deepEqual(loppu(virta).jatkot, ['Kuka oli Lykurgos?', 'Mikä täydennys yksi?']);
 });
