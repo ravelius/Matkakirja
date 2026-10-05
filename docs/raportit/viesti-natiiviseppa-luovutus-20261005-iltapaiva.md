@@ -4,7 +4,11 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovu
 
 ## TILA HETI
 
-- **JUNA 144: VIE klo 20 (Päätoimittaja) kokeella ec0038f4** (simukäännös 5f257c20, .app lokit/natiiviseppa-app-144koe-5f257c20).
+- **JUNA 144 SIIRRETTY (omistaja ~17.4x, Julkaisijan välittämänä): EI avata klo 20.** Lähtee vasta kun elävä opas on todennettu simussa
+  (Linssiseppä, Pelikoodari, Natiivi-UI; tavoite ~22–23); opas ec0038f4:n päälle vain Päätoimittajan kuittauksella; ISS-ohjaamo vain jos
+  Meksikon + Kanarian parit hyväksytty. Juna 145 -jono: pulu-testiotsake 23b682e1, astrokuva-tauko bc66e66d, pulu-chat-yksi d1d1f0ee,
+  linna-145 12eeab86 (kuittaukset vahvistettava Päätoimittajalta).
+- (aiempi) VIE kokeella ec0038f4 (simukäännös 5f257c20, .app lokit/natiiviseppa-app-144koe-5f257c20).
   Ehto (a): Pelikoodarin 5 min todistusajo kuvaselitteen kaiuttimesta tästä kokeesta ennen VIE:tä (pyydetty, simuvuoro Julkaisijalta).
   Ehto (b): ISS-ohjaamo vain jos Meksikon pari hyväksytty + koe käännetty ja tarkistettu klo 19.00 mennessä, muuten ilman.
   Klo 20: Julkaisijan NYT → git update-ref refs/heads/juna/b13 <ec0038f4> <91220fb6> (proto-repo) + rivi juna.logiin; vahti kääntää;
