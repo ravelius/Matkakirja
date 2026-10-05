@@ -1921,6 +1921,11 @@ namespace Matkakirja.Natiivi
                             AstronauttiKerros.S2KevytPakotettu = osat[3] == "auto" ? null : osat[3] != "0";
                             Kirjaa($"astro s2kevyt {(AstronauttiKerros.S2KevytPakotettu.HasValue ? (AstronauttiKerros.S2KevytPakotettu.Value ? "kevyt" : "täysi") : "auto")} → {(AstronauttiKerros.S2Kevyt ? "kevyt" : "täysi")}");
                         }
+                        else if (a == "s2maailma" && osat.Length > 3)   // S2-maailma v2 (juna 145): 0 = vain Eurooppa kuten ennen
+                        {
+                            AstronauttiKerros.S2MaailmaKaytossa = osat[3] != "0";
+                            Kirjaa($"astro kyyti s2maailma {(AstronauttiKerros.S2MaailmaKaytossa ? "päällä" : "pois")}, laatat {(Matkakirja.Linssit.IssKamera.KuvanTyosto.Maailma != null ? "ladattu" : "ei")}");
+                        }
                         else if (a == "s2" && osat.Length > 3)   // Euroopan S2-mosaiikki kyydissä (AstronauttiKerros.PaivitaS2)
                         {
                             if (osat[3] == "url" && osat.Length > 4) AstronauttiKerros.S2Osoite = osat[4] == "pois" ? null : osat[4];

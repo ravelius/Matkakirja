@@ -1,0 +1,52 @@
+// S2-maailma v2 (juna 145): laatat.json-bittikartan luku ja ISS-kuvan mosaiikkilehdet Euroopan ulkopuolella.
+using System;
+using Matkakirja.Linssit.IssKamera;
+
+namespace Matkakirja.Linssit.Testit
+{
+    static class S2MaailmaLaatatTestit
+    {
+        static string Json(int zmin, int zmax, Func<int, int, int, bool> onko)
+        {
+            var sb = new System.Text.StringBuilder("{\"tasot\":{\"min\":" + zmin + ",\"max\":" + zmax + "},\"saatavuus\":{");
+            for (int z = zmin; z <= zmax; z++)
+            {
+                long n = 1L << z; var b = new byte[n * n / 8];
+                for (long y = 0; y < n; y++) for (long x = 0; x < n; x++) if (onko(z, (int)x, (int)y)) { long i = y * n + x; b[i >> 3] |= (byte)(1 << (int)(i & 7)); }
+                sb.Append(z > zmin ? "," : "").Append('"').Append(z).Append("\":\"").Append(Convert.ToBase64String(b)).Append('"');
+            }
+            return sb.Append("}}").ToString();
+        }
+
+        [Testi]
+        static void BittikarttaLuetaanRiviSarakeJarjestyksessa()
+        {
+            var m = S2MaailmaLaatat.Jasenna(Json(6, 8, (z, x, y) => x == 21 << (z - 6) && y == 32 << (z - 6)));
+            Oleta.Tosi(m != null, "jäsennys");
+            Oleta.Tosi(m.Onko(6, 21, 32), "z6 21/32 olemassa");
+            Oleta.Tosi(!m.Onko(6, 32, 21), "rivi ja sarake eivät vaihdu");
+            Oleta.Tosi(m.Onko(8, 84, 128), "z8");
+            Oleta.Tosi(!m.Onko(5, 10, 16) && !m.Onko(9, 168, 256), "tasojen ulkopuolella ei");
+            Oleta.Tosi(S2MaailmaLaatat.Jasenna("{\"x\":1}") == null, "väärä muoto → null (käytös ennallaan)");
+        }
+
+        [Testi]
+        static void MosaiikkilehdetMaailmassaJaEuroopassa()
+        {
+            var ennen = KuvanTyosto.Maailma;
+            try
+            {
+                KuvanTyosto.Maailma = null;
+                Oleta.Tosi(!KuvanTyosto.MosaiikinLaatta(8, 85, 130), "ilman laatat.jsonia Amazonia ei mosaiikista");
+                Oleta.Tosi(KuvanTyosto.MosaiikinLaatta(8, 145, 74), "Helsinki Euroopan mosaiikista");
+                KuvanTyosto.Maailma = S2MaailmaLaatat.Jasenna(Json(6, 10, (z, x, y) => (x >> (z - 6)) == 21 && (y >> (z - 6)) == 32));
+                Oleta.Tosi(KuvanTyosto.MosaiikinLaatta(8, 85, 130), "Amazonia (z6 21/32) maailman mosaiikista");
+                Oleta.Tosi(KuvanTyosto.MosaiikinLaatta(11, 85 * 8, 130 * 8), "z11 z10-isästä");
+                Oleta.Tosi(!KuvanTyosto.MosaiikinLaatta(8, 99, 105), "avomeri ei");
+                Oleta.Sama("https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/v2/8/85/130.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 85, 130));
+                Oleta.Sama("E/2/37/22.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 145, 74), "Eurooppa rajatulla jaolla");
+            }
+            finally { KuvanTyosto.Maailma = ennen; }
+        }
+    }
+}

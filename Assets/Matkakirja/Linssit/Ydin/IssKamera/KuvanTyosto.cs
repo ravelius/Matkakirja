@@ -433,9 +433,26 @@ namespace Matkakirja.Linssit.IssKamera
         public static bool MosaiikinLaatta(int z, int x, int y)
         {
             if (z > MosaiikkiMaxZ || z < JuuriZ) return false;
+            if (Euroopassa(z, x, y)) return true;
+            // Maailman mosaiikki (S2-maailma v2, juna 145): z11-lehti z10-isästä kuten Euroopassa.
+            var m = Maailma;
+            return m != null && (z > 10 ? m.Onko(10, x >> 1, y >> 1) : m.Onko(z, x, y));
+        }
+
+        /// <summary>Euroopan mosaiikin 13 × 13 z6-lohkossa (s2-eurooppa/v1).</summary>
+        public static bool Euroopassa(int z, int x, int y)
+        {
+            if (z < JuuriZ) return false;
             int k = 1 << (z - JuuriZ), bx = x / k, by = y / k;
             return bx >= MosaiikkiX0 && bx < MosaiikkiX0 + MosaiikkiKoko && by >= MosaiikkiY0 && by < MosaiikkiY0 + MosaiikkiKoko;
         }
+
+        /// <summary>S2-maailma v2:n saatavuus (laatat.json; null = vain Eurooppa kuten ennen, myös hakuvirheessä).</summary>
+        public static volatile S2MaailmaLaatat Maailma;
+
+        /// <summary>Lähdelaatan (z ≤ 10) täysi osoite: Euroopassa v1:n rajattu jako, muualla maailman v2.</summary>
+        public static string MosaiikinOsoite(string euroopanJuuri, int z, int x, int y)
+            => Euroopassa(z, x, y) ? euroopanJuuri + MosaiikinPolku(z, x, y) : $"{S2MaailmaLaatat.Juuri}{z}/{x}/{y}.jpg";
 
         /// <summary>Mosaiikin suhteellinen polku "{t}/{x'}/{y'}.jpg".</summary>
         public static string MosaiikinPolku(int z, int x, int y)
