@@ -1,0 +1,27 @@
+# Natiivisepän luovutus 5.10.2026 iltapäivä (13.0x)
+
+Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005.md (käytännöt voimassa).
+
+## TILA HETI
+
+- **BUILD 143 = proto master cc57dde7** (juna/b13 91220fb6, vahdin junakäännös 81ac41ea klo 12.22–12.33; .app
+  lokit/juna-1.1.143-81ac41ea). Sisältö: BUILD 142 + Brotli ca4251f5 + chat-linna b38360f4 + x-napit 9a688396 +
+  siirtoseppa/linna-143 024a098d + x-siivous 121b0840 + Tavli ea02bae1 + kirjainväli-kerning 46b62059 + ei-linssiä
+  7837ac54 + glint-2 5b6b9d46. TF 1.1 (143) on Julkaisijalla (muutosloki #3990).
+- Master sen jälkeen: 38519dad (pelikoodari/todistusajo d257025c) → **a5a18288** (todistusajo OHJE.md bf2f924f). Vain työkaluja.
+- **Datasiirto (Päätoimittaja kuittasi ehdotuksen 5f7cc5418):** haara natiiviseppa/asetukset **89ba8062**
+  (worktree /Users/Shared/Claude/wt/proto-natiiviseppa-asetukset, pohja a5a18288). Testit 0/444/415/625.
+  - Peli/Asetus.cs: kokoelmat/asetukset.json (valinnainen), oletukset koodissa, skeema 1. Koekansio
+    Documents/sisalto-koe/kokoelmat/asetukset.json. Komento peli-komento `asetus` | `asetus <avain>` | `asetus lataa`.
+  - Ryhmät: aanet (AaniVakiot ~35 + TavliVahvistus/MyllyVahvistus/MyllyLisaKerroin), pelit (Peliluettelo nimet/historia/
+    alkuperä/nappi), tekstit (tavli/mylly.valinta.otsikko), kamera (Yokuori), osoitteet (Cupolan karttanostot-juuret).
+  - Käännös jonossa Julkaisijalla (~13.40), simu FBBD41D7 hiljaisessa ikkunassa (~13.50).
+  - **Todistus (Päätoimittajan ehdot):** 1) BUILD 143 vs 89ba8062 ilman asetuksia: ääniraita samalla tasolla; 2) koekansiolla
+    teksti + äänitaso vaihtuu, ilman sitä oletukset → kuva + ääni Päätoimittajalle. Skripti proto-3d/lokit/natiiviseppa-skriptit/ajo-asetus.sh
+    (APP=… KOE=0|1 ajo-asetus.sh <nimi>; äänet päälle oikealla tapilla (201,567) ja touch <K>/aanet-ok).
+  - Junaan vasta kuitattuna, VIE-ikkunat klo 12 ja 20 (omistaja). Natiivi-UI tekstit vasta kun infra masterissa;
+    vienti + skeemavalidointi tilataan Sisältökirjurilta/Julkaisijalta.
+- iPad-mittaus EI ole VIE-ehto (omistaja 12.30). Brotli-laitemittaus puhtaalla asennuksella jäi tekemättä
+  (devicectl: kill launch-pid, ei timeout-käärettä; xctrace ~15 min/ajo). Tulokset: lokit/natiiviseppa-ipad143/.
+- Juna 144 -ehdokkaat: Siirtosepän laineet-uusinta 0fb2fc7b (Cinemachine e9a7915b päällä; Steam Audio -koko kuitataan minulla),
+  ISS-ohjaamo (LS2 kuvaparit), linna-kuva 9f37a9e9 (omistajan sävy), datasiirto vaihe 1.
