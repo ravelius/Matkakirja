@@ -69,8 +69,8 @@ test('aikaraja: hidas Commons ei hidasta vastausta; haku valmistuu taustalla vä
       body: JSON.stringify({ kaupunki: 'Kööpenhamina', toive: 'Nyhavn' }) }), env, { waitUntil: (p) => odotukset.push(p) });
     const t0 = Date.now();
     const eka = await (await pyynto()).json();
-    assert.ok(Date.now() - t0 < 1400, `vastaus ei odottanut hidasta Commonsia (${Date.now() - t0} ms)`);
-    assert.equal(eka.kuvat.length, 0, 'ei ehtinyt → ei kuvia tässä vastauksessa');
+    assert.ok(Date.now() - t0 < 3500, `vastaus odotti vain P18:n kuten ennen (${Date.now() - t0} ms)`);
+    assert.equal(eka.kuvat.length, 1, 'ei ehtinyt → P18 kuten ennen (ei jää ilman kuvaa)');
     await Promise.all(odotukset);
     const toka = await (await pyynto()).json();
     assert.equal(toka.kuvat.length, 7, 'välimuistista');

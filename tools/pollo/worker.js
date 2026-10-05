@@ -2936,6 +2936,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   let korostusLupaus = null;
   let kuvaLupaus = null;
   let kuvaAlku = 0;
+  let p18Lupaus = null;
   try {
     for (let yritys = 0; yritys < 2 && !tulos; yritys += 1) {
       const vastaus = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti, seuraava?.paikka.nimi ?? null);
@@ -2957,6 +2958,9 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       kuvaLupaus = lisaKuvatValimuistilla(fetch, kv, paikka.id).catch(() => []);
       korostusLupaus = paikanKorostus(fetch, { lat: paikka.lat, lon: paikka.lon, koko_m: tulos.koko_m, luokka: vastaus.luokka,
         reitti: vastaus.reitti ?? [] }, sijainti);
+      // Kylmä kohde ilman pelin omaa kuvaa: vanha P18-polku (1 kuva) kriittisellä polulla kuten ennen (Päätoimittaja 6.10.:
+      // kohde, jolla oli kuva, ei saa jäädä ilman). Alkaa heti koordinaattien jälkeen.
+      p18Lupaus = !tulos.kuvat.length ? wikidataKuva(fetch, paikka.id).catch(() => []) : null;
     }
   } catch (virhe) {
     console.log(`opas: mallikutsu epäonnistui (${virhe?.status ?? 'verkko'})`);
@@ -2969,6 +2973,10 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     if (paikat.length >= 3) {
       kierros = { kaupunki: p.kaupunki ?? '', paikat: paikat.slice(0, KIERROKSEN_PITUUS) };
       await kv.put(kierrosAvain, JSON.stringify(kierros), { expirationTtl: 60 * 60 * 6 }).catch(() => {});
+      // Lämmitä lisäkuvien välimuisti kierroksen kaikille pysähdyksille taustalla (Päätoimittaja 6.10.): seuraavat
+      // pysähdykset saavat heti kaikki kuvat.
+      const lammitys = Promise.all(kierros.paikat.map((x) => lisaKuvatValimuistilla(fetch, kv, x.id).catch(() => [])));
+      if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(lammitys);
       if (eka) tulos.kierros = { numero: 1, maara: kierros.paikat.length };
     }
   }
@@ -3008,11 +3016,14 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     : [];
   if (korostus) tulos.korostus = korostus;
   if (tulos.tyyppi === 'pysahdys') {
+    let lisat = p18;
     if (p18 === null) {
-      console.log('opas: lisäkuvat eivät ehtineet aikarajassa → taustalle välimuistiin');
+      console.log('opas: lisäkuvat eivät ehtineet → taustalle välimuistiin');
       if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kuvaLupaus);
+      // Ei pelin omaa kuvaa: P18 odotetaan kuten ennen, jotta pysähdys ei jää ilman kuvaa.
+      lisat = p18Lupaus ? await p18Lupaus : [];
     }
-    tulos.kuvat = yhdistaKuvat(tulos.kuvat, p18 ?? []);
+    tulos.kuvat = yhdistaKuvat(tulos.kuvat, lisat ?? []);
   }
   if (isoisaAvain && kv && !isoisaKaytetty && tulos.tyyppi === 'pysahdys' && /isoisä/i.test(tulos.teksti)) {
     const kirjoitus = kv.put(isoisaAvain, '1', { expirationTtl: 60 * 60 * 48 }).catch(() => {});
