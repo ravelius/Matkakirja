@@ -170,7 +170,7 @@ namespace Matkakirja.Natiivi
             sisallys.style.display = DisplayStyle.None;
             var so = Rakenne.El("mk-lehti__sisallysyla", sisallys, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("SISÄLLYS", "mk-lehti__sisallysotsikko", so), Kirjasin.Kone);
-            Rakenne.Nappi("×", "mk-lehti__sisallyssulje", SuljeSisallys, so).tooltip = "Sulje";
+            // Ei ✕:ää (omistaja 5.10.2026 klo 00.1x: "pyritään aina välttämään turhia x nappeja"; Päätoimittajan ✕-inventaario): napautus levyn ulkopuolelle ja ☰ sulkevat.
             var sv = new ScrollView(ScrollViewMode.Vertical);
             sv.AddToClassList("mk-lehti__sisallysvieritys");
             sisallys.Add(sv);
@@ -196,6 +196,8 @@ namespace Matkakirja.Natiivi
                 for (var x = v; x != null; x = x.parent)
                     if (x == sisallys || x == sisallysNappi || x == alaSisallys) return;
                 SuljeSisallys();
+                // Sulkeva napautus ei saa jatkua arkille (simun oikea napautus 5.10.: sama napautus käänsi myös sivun).
+                e.StopImmediatePropagation();
             }, TrickleDown.TrickleDown);
 
             // Turva-alue (Dynamic Island, kotipalkki): arkki on koko ruudun levy, joten otsikkorivi ja alapalkki

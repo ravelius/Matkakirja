@@ -54,8 +54,9 @@ namespace Matkakirja.Natiivi
             var oikea = Rakenne.El("mk-tiedeliite__reuna mk-tiedeliite__reuna--oikea", ylarivi, PickingMode.Ignore);
             // Kaksinappinen lukija (omistaja 28.9.2026, web #3537): [valikko][kaiutin] sulkijan vasemmalla.
             lukija = new KortinLukija(oikea, "Kuuntele tiedeliite", "mk-tiedeliite__lukija", saatimet: true, rajaus: () => kortti.worldBound);
-            var sulje = Rakenne.Nappi("✕", "mk-tiedeliite__sulje", Sulje, oikea);
-            sulje.tooltip = "Sulje";
+            // Ei ✕:ää (omistaja 5.10.2026 klo 00.1x: "pyritään aina välttämään turhia x nappeja"; Päätoimittajan ✕-inventaario): peitteen napautus kortin
+            // ulkopuolelle sulkee (lisätty samalla), samoin linssin sulku.
+            peite.RegisterCallback<PointerDownEvent>(e => { if (e.target == peite) Sulje(); });
 
             sisallys = Rakenne.El("mk-tiedeliite__sisallys", kortti);
             sisallys.style.display = DisplayStyle.None;

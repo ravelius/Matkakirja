@@ -38,7 +38,7 @@ namespace Matkakirja.Natiivi
             // Web .tiivis-lehtiarkki .lehti-nimio: versaalinimiö keskellä (× ei siirrä keskikohtaa).
             otsikko = Rakenne.Teksti("NÄHTÄVYYDET", "mk-nahtavyydet__otsikko", yla);
             Kirjasimet.Aseta(otsikko, Kirjasin.KoneBold);
-            Rakenne.Nappi("×", "mk-galleria__rasti mk-nahtavyydet__sulje", Sulje, yla);
+            // Ei ✕:ää (omistaja 5.10.2026 klo 00.1x: "pyritään aina välttämään turhia x nappeja"; Päätoimittajan ✕-inventaario): taustapeitteen napautus sulkee.
             var v = new ScrollView(ScrollViewMode.Vertical);
             v.AddToClassList("mk-nahtavyydet__vieritys");
             v.verticalScrollerVisibility = ScrollerVisibility.Hidden;
