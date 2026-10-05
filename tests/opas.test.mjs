@@ -101,11 +101,23 @@ test('koordinaatit nimellä: otsikko, kaukainen samanniminen hylätään ja haku
   assert.deepEqual(await kaydytNimiksi(fetch, ['Q110289', 'Q1394197', 'Raatihuone']), ['Kööpenhaminan Tivoli', 'Nyhavn', 'Raatihuone']);
 });
 
-async function ajaOpas(otsakkeet, runko, verkko) {
+/** Muistinvarainen KV ja R2 testeihin. */
+function muisti() {
+  const kv = new Map();
+  const r2 = new Map();
+  return {
+    kv, r2,
+    POLLO_KV: { get: async (x) => kv.get(x) ?? null, put: async (x, v) => { kv.set(x, v); }, delete: async (x) => { kv.delete(x); } },
+    PUHE_R2: { get: async (x) => (r2.has(x) ? { body: r2.get(x) } : null), put: async (x, v) => { r2.set(x, v); } },
+  };
+}
+
+async function ajaOpas(otsakkeet, runko, verkko, varasto = muisti()) {
   const alkuperainen = globalThis.fetch;
   globalThis.fetch = verkko.fetch;
   try {
-    const env = { ANTHROPIC_API_KEY: 'a', ELEVEN_API_KEY: 'e', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KEHITTAJAKOODI: 'k' };
+    const env = { ANTHROPIC_API_KEY: 'a', ELEVEN_API_KEY: 'e', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KEHITTAJAKOODI: 'k',
+      POLLO_KV: varasto.POLLO_KV, PUHE_R2: varasto.PUHE_R2 };
     const v = await worker.fetch(new Request('https://pollo.example/opas/seuraava', {
       method: 'POST', headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', ...otsakkeet },
       body: JSON.stringify(runko),
@@ -118,7 +130,8 @@ async function ajaOpas(otsakkeet, runko, verkko) {
 
 test('worker /opas/seuraava: Sonnet valitsee, koordinaatit Wikipediasta nimellä, Williamin ääni; testiotsakkeella ei ääntä', async () => {
   const verkko = tynka();
-  const { tila, data } = await ajaOpas({ 'x-pollo-kehittaja': 'k' }, { kaupunki: 'Kööpenhamina', nahdyt: ['Q1394197'] }, verkko);
+  const varasto = muisti();
+  const { tila, data } = await ajaOpas({ 'x-pollo-kehittaja': 'k' }, { kaupunki: 'Kööpenhamina', nahdyt: ['Q1394197'] }, verkko, varasto);
   assert.equal(tila, 200);
   assert.equal(data.tyyppi, 'pysahdys');
   assert.equal(data.id, 'Q110289');
@@ -129,9 +142,27 @@ test('worker /opas/seuraava: Sonnet valitsee, koordinaatit Wikipediasta nimellä
   assert.match(verkko.kutsut.viesti, /Jo kerrotut paikat.*Nyhavn/, 'nahdyt nimiksi mallille');
   assert.equal(verkko.kutsut.tiivistelma, undefined);
   assert.match(data.aani, /^https:\/\/pollo\.example\/opas\/aani\/[0-9a-f]{32}\.mp3$/);
-  assert.equal(data.kesto_s, 1);
-  assert.equal(verkko.kutsut.eleven.model_id, 'eleven_v4_turbo');
-  assert.equal(verkko.kutsut.eleven.voice_settings.stability, undefined, 'William: oletusvakaus');
+  assert.equal(data.kesto_s, Math.round(('Tivoli on huvipuisto.'.length / 14.5) * 10) / 10, 'kesto-arvio tekstistä');
+  assert.equal(verkko.kutsut.eleven, undefined, 'POST ei odota ääntä (Päätoimittaja 5.10.: alle 6 s)');
+  // GET tuottaa äänen kokonaisena, tallentaa R2:een; toinen GET tulee R2:sta ilman uutta tuotantoa.
+  const env = { ELEVEN_API_KEY: 'e', POLLO_KV: varasto.POLLO_KV, PUHE_R2: varasto.PUHE_R2 };
+  const vanha = globalThis.fetch;
+  globalThis.fetch = verkko.fetch;
+  try {
+    const g = await worker.fetch(new Request(data.aani), env, {});
+    assert.equal(g.status, 200);
+    assert.equal(g.headers.get('content-type'), 'audio/mpeg');
+    assert.equal((await g.arrayBuffer()).byteLength, 16000, 'kokonaisena');
+    assert.equal(verkko.kutsut.eleven.model_id, 'eleven_v4_turbo');
+    assert.equal(verkko.kutsut.eleven.text, 'Tivoli on huvipuisto.');
+    assert.equal(verkko.kutsut.eleven.voice_settings.stability, undefined, 'William: oletusvakaus');
+    verkko.kutsut.eleven = undefined;
+    assert.equal((await worker.fetch(new Request(data.aani), env, {})).status, 200);
+    assert.equal(verkko.kutsut.eleven, undefined, 'toinen GET R2:sta');
+    assert.equal((await worker.fetch(new Request(data.aani.replace(/[0-9a-f]{32}/, '0'.repeat(32))), env, {})).status, 404);
+  } finally {
+    globalThis.fetch = vanha;
+  }
 
   const testi = tynka();
   const t = await ajaOpas({ 'x-pollo-kehittaja': 'k', 'x-matkakirja-testi': '1' }, { kaupunki: 'Kööpenhamina' }, testi);
@@ -262,6 +293,7 @@ test('worker: "Esittele kaupunki" suunnittelee kierroksen, toive null jatkaa, lo
       vastaukset.push(runko.messages.at(-1).content);
       const teksti = runko.system?.[0]?.text?.startsWith?.('Suunnittelet') || JSON.stringify(runko.system).includes('Suunnittelet')
         ? 'PAIKKA: Tivoli | Tivoli Gardens | 55.6737 | 12.5681 | 300\nPAIKKA: Tivoli kopio | Tivoli Gardens | 55.6737 | 12.5681\nPAIKKA: Torvehallerne | Torvehallerne | 55.6838 | 12.5695\nPAIKKA: Tuntematon | Tuntematon | 55.68 | 12.59'
+        : /KIERROS ALKAA/.test(runko.messages.at(-1).content) ? 'NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nTEKSTI: Aloitus.\nVAIHTOEHTO: A?\nVAIHTOEHTO: B'
         : /KIERROS PÄÄTTYI/.test(runko.messages.at(-1).content) ? 'KYSYMYS: Jatketaanko?\nVAIHTOEHTO: Jotain\nVAIHTOEHTO: Lisää tätä kaupunkia'
           : /KIERROS:/.test(runko.messages.at(-1).content) ? 'TEKSTI: Kierroksen kappale.\nVAIHTOEHTO: Kysymys paikasta?\nVAIHTOEHTO: Missä voisi syödä?'
             : 'KYSYMYS: Mitä haluat nähdä?\nVAIHTOEHTO: Jotain vanhaa\nVAIHTOEHTO: Modernia';
