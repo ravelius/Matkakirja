@@ -303,7 +303,7 @@ namespace Matkakirja.Natiivi
                 case "aani" when A(1) == "mykistys":
                     // Testimykistys (TestiMykistys.cs): 1 = lopullinen ulostulo nollaan (oletus simulaattorissa), 0 = kuuluu.
                     if (A(2) == "1" || A(2) == "0") TestiMykistys.Paalla = A(2) == "1";
-                    return $"=mykistys {(TestiMykistys.Paalla ? "päällä" : "pois")} (simulaattori {TestiMykistys.Simulaattori})";
+                    return $"=mykistys {(TestiMykistys.Paalla ? "päällä" : "pois")} (simulaattori {TestiMykistys.Simulaattori}; {TestiMykistys.Tila()})";
                 case "aani" when A(1) == "istunto":
                     // aani istunto playback|puhe|ambient: istunnon vaihto mittausta varten (AaniIstunto.Vaihda).
                     return AaniIstunto.Vaihda(A(2));
