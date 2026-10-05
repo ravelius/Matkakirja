@@ -109,6 +109,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Testikomento: kuva nykyiselle pysähdykselle ilman workerin kuvia.</summary>
         OpasKuva testiKuva;
         bool nakyy, siruNakyy;
+        OpasKohde odotettuKysymys;
         int siruPoletti = -1;
         readonly Button nappi;
         Nakyma nakyma;
@@ -204,6 +205,15 @@ namespace Matkakirja.Natiivi
             if (!nakyy) return;
             var chat = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
             if (chat == null) return;
+            // Kysymyksen vaihtoehdot vanhenevat, kun silmukka lakkaa odottamasta (pelaaja ei valinnut, opas jatkoi itse).
+            var kys = OpasSovitin.Viimeisin?.Kysymys;
+            if (kys != null) odotettuKysymys = kys;
+            else if (odotettuKysymys != null)
+            {
+                var vanhat = odotettuKysymys.Vaihtoehdot ?? Array.Empty<string>();
+                odotettuKysymys = null;
+                if (chat.OppaanJatkot.Count > 0 && vanhat.Contains(chat.OppaanJatkot[0])) chat.TyhjennaOppaanJatkot();
+            }
             var jatkot = chat.OppaanJatkot;
             bool nayta = !chat.Auki && !Auki && !OpasSovitin.KertojaPuhuu;
             int poletti = nayta ? jatkot.Count == 0 ? 0 : string.Join("\n", jatkot).GetHashCode() | 1 : -1;
@@ -487,9 +497,9 @@ namespace Matkakirja.Natiivi
                     testiKuva = new OpasKuva
                     {
                         Url = o.Length > 1 && o[1].StartsWith("http") ? o[1]
-                            : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Kopenhagen_%28DK%29%2C_Nyhavn_--_2017_--_1711.jpg/960px-Kopenhagen_%28DK%29%2C_Nyhavn_--_2017_--_1711.jpg",
-                        Havainnekuva = o.Length > 1 && o[1] == "havainne", Tekija = "Dietmar Rabich", Lisenssi = "CC BY-SA 4.0",
-                        Lahde = "https://commons.wikimedia.org/wiki/File:Kopenhagen_(DK),_Nyhavn_--_2017_--_1711.jpg",
+                            : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Nyhavn%2C_Copenhagen%2C_20220618_1728_7354.jpg/960px-Nyhavn%2C_Copenhagen%2C_20220618_1728_7354.jpg",
+                        Havainnekuva = o.Length > 1 && o[1] == "havainne", Tekija = o.Length > 1 && o[1] == "havainne" ? null : "Jakub Hałun", Lisenssi = "CC BY-SA 4.0",
+                        Lahde = "https://commons.wikimedia.org/wiki/File:Nyhavn,_Copenhagen,_20220618_1728_7354.jpg", Selite = "Nyhavnin kanava",
                     };
                     naytettyKuva = null;
                     return "opas: testikuva" + (testiKuva.Havainnekuva ? " (havainnekuva)" : "");

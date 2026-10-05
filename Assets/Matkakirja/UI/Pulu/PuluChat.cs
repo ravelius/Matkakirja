@@ -695,6 +695,9 @@ namespace Matkakirja.Natiivi
         readonly List<string> oppaanJatkot = new List<string>();
         public event Action OppaanJatkotMuuttui;
 
+        /// <summary>Oppaan kysymys vanheni ilman pelaajan valintaa (silmukka valitsi itse): irralliset sirut pois.</summary>
+        public void TyhjennaOppaanJatkot() { if (oppaanJatkot.Count > 0) AsetaOppaanJatkot(null); }
+
         void AsetaOppaanJatkot(IList<string> jatkot)
         {
             oppaanJatkot.Clear();
