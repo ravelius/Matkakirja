@@ -141,6 +141,12 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   16.4x kuvattu 5294a748:lla (astrokuva/astrokuva-arkki.jpg + i-astrokuva.mp4), lähetetty Päätoimittajalle. Löydös → bc66e66d:
   AUTOn napit eivät piiloudu II-tauolla. Todennetaan seuraavassa käännöksessä ennen merge-pyyntöä (juna 145).
 
+## Tila 17.1x
+- astrokuva-tauko-144 bc66e66d: tauon napit todennettu (b88675a3) → MERGE-PYYNTÖ Natiivisepälle junaan 145 lähetetty.
+- pulu-chat-yksi: todennettu b88675a3:lla ISS-taulu ja maakuntakortti (2 kysymystä, elävä vastaus, 2 korvaavaa jatkoa, kaiutin
+  viivalla, tila säilyy). Löydös kartan Pulussa (uudelleen avaus → 4 sirua) korjattu 89e861e5; todennus seuraavassa käännöksessä,
+  sitten merge-pyyntö (juna 145). Arkki puluchat/puluchat-arkki.jpg. Pelikoodari kuvaa elävän vastauksen videon (app-b88675a3).
+
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
 iss-taulu-vaaka.sh (TAP_OHI=1), auto-zoom.sh (TAP_SEUR=1), lippu-kaikki.sh, chat-linna.sh, kartoitus.sh (+ k:-etuliite
