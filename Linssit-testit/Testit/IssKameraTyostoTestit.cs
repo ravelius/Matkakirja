@@ -60,32 +60,37 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi]
-        static void UsvatasoitusTummimpaanRuutuun()
+        static void UsvatasoitusLimityksesta()
         {
-            // Simu d753d794 (Amazonia): sameampi ruutu = tummat kohteet vaaleampia → erotus vähennetään ennen lutia.
+            // Simu 26f1141e (Coloradon suisto): tummin prosentti luki 11RQQ:n meren usvattomaksi → naapurit −40 ja 11RQQ:n maa
+            // vaaleana kaistana. Nyt usva = saman maan erotus limityksessä; ruudun oma tumma sisältö ei vaikuta.
+            const double pm = 600; const int L = 183;
             var d = new KuvaData();
-            byte[] Laatta(byte tumma, byte vaalea)
+            (S2Ruutu, CogOtsake) Ruutu(string tunnus, double ita0, Func<int, byte> arvo)
             {
-                var l = new byte[512 * 512 * 3];
-                for (int k = 0; k < 512 * 512; k++) { byte v = k % 10 == 0 ? tumma : vaalea; l[k * 3] = v; l[k * 3 + 1] = v; l[k * 3 + 2] = (byte)(v + 5); }
-                return l;
+                var o = new CogOtsake { Ita0 = ita0, Pohjoinen0 = 6_700_000, PikseliM = pm };
+                o.Tasot.Add(new CogTaso { Leveys = L, Korkeus = L, LaattaL = L, LaattaK = L, Kanavat = 3 });
+                var (s, w) = Utm.Taakse(ita0, 6_700_000 - L * pm, 35); var (nn, e) = Utm.Taakse(ita0 + L * pm, 6_700_000, 35);
+                var ru = new S2Ruutu { Tunnus = tunnus, W = w - 0.01, S = s - 0.01, E = e + 0.01, N = nn + 0.01 };
+                var l = new byte[L * L * 3];
+                for (int y = 0; y < L; y++) for (int x = 0; x < L; x++) { byte v = arvo(x); int i = (y * L + x) * 3; l[i] = v; l[i + 1] = v; l[i + 2] = v; }
+                d.Laatat[(tunnus, 0, 0, 0)] = l;
+                return (ru, o);
             }
-            var a = new S2Ruutu { Tunnus = "20MQB" }; var b = new S2Ruutu { Tunnus = "21MTS" }; var c = new S2Ruutu { Tunnus = "21MUS" };
-            d.Ruudut.Add((a, null)); d.Ruudut.Add((b, null)); d.Ruudut.Add((c, null));
-            d.Laatat[("20MQB", 3, 0, 0)] = Laatta(12, 90);
-            d.Laatat[("21MTS", 3, 0, 0)] = Laatta(37, 110);
+            // A: länsiosa tummaa (vettä muistuttavaa, 20), itäreuna maata 100; B samaa maata 25 usvaisempana (125).
+            var a = Ruutu("35VLG", 300_000, x => x < 60 ? (byte)20 : (byte)100);
+            var b = Ruutu("35VMG", 400_000, x => 125);
+            var c = Ruutu("35VPG", 700_000, x => 60);   // ei limitystä → ennallaan
+            d.Ruudut.Add(a); d.Ruudut.Add(b); d.Ruudut.Add(c);
             var t = Uudelleenprojisointi.TasaaUsva(d);
-            Oleta.Sama(2, t.Count, "kolmas ruutu ilman dataa ohitetaan");
-            Oleta.Sama(0.0, a.UsvaR); Oleta.Sama(25.0, b.UsvaR); Oleta.Sama(25.0, b.UsvaB); Oleta.Sama(0.0, c.UsvaR);
+            Oleta.Sama(2, t.Count, "vain limittyvät ruudut");
+            Oleta.Tosi(Math.Abs(a.Item1.UsvaR) < 0.5, $"A ei tummu omasta tummasta sisällöstään: {a.Item1.UsvaR}");
+            Oleta.Tosi(Math.Abs(b.Item1.UsvaG - 25) < 0.5, $"B −25: {b.Item1.UsvaG}");
+            Oleta.Sama(0.0, c.Item1.UsvaR);
             // Yläraja: erittäin samea ruutu tummuu enintään MaxUsva.
-            d.Laatat[("21MTS", 3, 0, 0)] = Laatta(80, 150);
+            d.Laatat[("35VMG", 0, 0, 0)] = Enumerable.Repeat((byte)190, L * L * 3).ToArray();
             Uudelleenprojisointi.TasaaUsva(d);
-            Oleta.Sama(Uudelleenprojisointi.MaxUsva, b.UsvaG);
-            // Aavikko- tai lumiruutu ilman tummia kohteita (1 % > TummaRaja) jää tasoittamatta.
-            d.Laatat[("21MTS", 3, 0, 0)] = Laatta(200, 230);
-            b.UsvaR = b.UsvaG = b.UsvaB = 0;
-            Oleta.Sama(0, Uudelleenprojisointi.TasaaUsva(d).Count, "vain yksi tumma ruutu → ei vertailua");
-            Oleta.Sama(0.0, b.UsvaG);
+            Oleta.Sama(Uudelleenprojisointi.MaxUsva, b.Item1.UsvaB);
         }
 
         [Testi]

@@ -200,56 +200,100 @@ namespace Matkakirja.Linssit.IssKamera
         }
 
         /// <summary>
-        /// USVATASOITUS (simu d753d794, Amazonia: eri päivien S2-ruudut 2023–2025 erottuivat sameina, sinivihreinä lohkoina): ruudun
-        /// tummien kohteiden taso (1 % -persentiili kanavittain haetuista laatoista, nodata pois) verrataan saman kuvan
-        /// tummimpaan ruutuun, ja erotus (additiivinen usva) vähennetään ruudun pikseleistä ennen lutia (enintään MaxUsva). Ruutu,
-        /// jonka tummat ovat yli TummaRajan (aavikko, lumi), jätetään tasoittamatta.
-        /// Ruutuja oltava ≥ 2 riittävällä otoksella; muuten ennallaan. Palauttaa (tunnus, vähennys) kirjausta varten.
+        /// USVATASOITUS limityksistä (simu d753d794 Amazonia: eri päivien ruudut sameina lohkoina; simu 26f1141e Coloradon suisto:
+        /// tummimman prosentin vertailu luki 11RQQ:n meren "usvattomaksi" ja tummensi naapurit −40:llä → 11RQQ:n maa vaaleana
+        /// kaistana). Ruutuparit verrataan SAMAAN maahan: parin bbox-leikkauksen ruudukossa kummankin oma arvo (tarkin haettu taso,
+        /// nodata, pilvi, varjo ja vesi pois), mediaanierotus kanavittain. Erotuksista ruutukohtaiset siirrot painotetulla
+        /// pienimmällä neliösummalla, pienin siirto 0 (vähiten usvaa) ja enintään MaxUsva. Ruutu ilman vertailuparia jää ennalleen.
+        /// Palauttaa (tunnus, vähennys) kirjausta varten.
         /// </summary>
-        public static List<(string tunnus, double r, double g, double b)> TasaaUsva(KuvaData d, int laattojaRuudusta = 24, int askel = 7)
+        public static List<(string tunnus, double r, double g, double b)> TasaaUsva(KuvaData d, int ruudukko = 48, int vahintaan = 150)
         {
-            var tummat = new Dictionary<string, (double r, double g, double b)>();
-            var avaimet = new List<(string tunnus, int taso, int tx, int ty)>(d.Laatat.Keys);
-            avaimet.AddRange(d.Pakatut.Keys);
-            foreach (var (ru, _) in d.Ruudut)
-            {
-                var r = new List<byte>(); var g = new List<byte>(); var b = new List<byte>();
-                int n = 0;
-                foreach (var a in avaimet)
+            int n = d.Ruudut.Count;
+            var parit = new List<(int a, int b, double w, double r, double g, double bl)>();
+            for (int a = 0; a < n; a++)
+                for (int b = a + 1; b < n; b++)
                 {
-                    if (a.tunnus != ru.Tunnus || n >= laattojaRuudusta) continue;
-                    var l = d.Hae(a);
-                    if (l == null) continue;
-                    n++;
-                    for (int i = 0; i + 2 < l.Length; i += 3 * askel)
-                    {
-                        if (l[i] <= NodataRaja && l[i + 1] <= NodataRaja && l[i + 2] <= NodataRaja) continue;
-                        r.Add(l[i]); g.Add(l[i + 1]); b.Add(l[i + 2]);
-                    }
+                    var (ra, oa) = d.Ruudut[a]; var (rb, ob) = d.Ruudut[b];
+                    if (oa == null || ob == null) continue;
+                    double w = Math.Max(ra.W, rb.W), e = Math.Min(ra.E, rb.E), s = Math.Max(ra.S, rb.S), no = Math.Min(ra.N, rb.N);
+                    if (w >= e || s >= no) continue;
+                    var dr = new List<double>(); var dg = new List<double>(); var db = new List<double>();
+                    for (int i = 0; i < ruudukko; i++)
+                        for (int j = 0; j < ruudukko; j++)
+                        {
+                            double la = s + (no - s) * (i + 0.5) / ruudukko, lo = w + (e - w) * (j + 0.5) / ruudukko;
+                            if (!RuudunArvo(d, a, la, lo, out var pa) || !RuudunArvo(d, b, la, lo, out var pb)) continue;
+                            dr.Add(pa.r - pb.r); dg.Add(pa.g - pb.g); db.Add(pa.b - pb.b);
+                        }
+                    if (dr.Count < vahintaan) continue;
+                    parit.Add((a, b, dr.Count, Mediaani(dr), Mediaani(dg), Mediaani(db)));
                 }
-                if (r.Count < 500) continue;
-                r.Sort(); g.Sort(); b.Sort();
-                int p = r.Count / 100;
-                // Vain ruudut, joissa on tummia kohteita (vesi, metsä, varjot): aavikko- tai lumiruudun 1 % on kirkas, eikä se ole usvaa.
-                if (Math.Max(r[p], Math.Max(g[p], b[p])) <= TummaRaja) tummat[ru.Tunnus] = (r[p], g[p], b[p]);
-            }
             var tulos = new List<(string, double, double, double)>();
-            if (tummat.Count < 2) return tulos;
-            double mr = double.MaxValue, mg = double.MaxValue, mb = double.MaxValue;
-            foreach (var t in tummat.Values) { mr = Math.Min(mr, t.r); mg = Math.Min(mg, t.g); mb = Math.Min(mb, t.b); }
-            foreach (var (ru, _) in d.Ruudut)
+            if (parit.Count == 0) return tulos;
+            var mukana = new bool[n];
+            foreach (var p in parit) { mukana[p.a] = true; mukana[p.b] = true; }
+            var siirto = new double[3][];
+            for (int c = 0; c < 3; c++)
             {
-                if (!tummat.TryGetValue(ru.Tunnus, out var t)) continue;
-                ru.UsvaR = Math.Min(MaxUsva, t.r - mr); ru.UsvaG = Math.Min(MaxUsva, t.g - mg); ru.UsvaB = Math.Min(MaxUsva, t.b - mb);
+                // Gauss–Seidel: siirto[a] − siirto[b] ≈ erotus(a − b), parin paino = yhteisten näytteiden määrä.
+                var o = new double[n];
+                for (int kierros = 0; kierros < 400; kierros++)
+                    for (int k = 0; k < n; k++)
+                    {
+                        if (!mukana[k]) continue;
+                        double sw = 0, sx = 0;
+                        foreach (var p in parit)
+                        {
+                            double ero = c == 0 ? p.r : c == 1 ? p.g : p.bl;
+                            if (p.a == k) { sw += p.w; sx += p.w * (o[p.b] + ero); }
+                            else if (p.b == k) { sw += p.w; sx += p.w * (o[p.a] - ero); }
+                        }
+                        if (sw > 0) o[k] = sx / sw;
+                    }
+                // Yhtenäinen osa kerrallaan ei ole tarpeen: pienin mukana oleva siirto 0 (erilliset osat saavat saman nollakohdan).
+                double min = double.MaxValue;
+                for (int k = 0; k < n; k++) if (mukana[k]) min = Math.Min(min, o[k]);
+                for (int k = 0; k < n; k++) o[k] = mukana[k] ? Math.Min(MaxUsva, o[k] - min) : 0;
+                siirto[c] = o;
+            }
+            for (int k = 0; k < n; k++)
+            {
+                if (!mukana[k]) continue;
+                var ru = d.Ruudut[k].ruutu;
+                ru.UsvaR = siirto[0][k]; ru.UsvaG = siirto[1][k]; ru.UsvaB = siirto[2][k];
                 tulos.Add((ru.Tunnus, ru.UsvaR, ru.UsvaG, ru.UsvaB));
             }
             return tulos;
         }
 
-        /// <summary>Usvatasoituksen yläraja TCI-tavuina (varjeltu väärä tulkinta, esim. lumi- tai aavikkoruutu ilman tummia kohteita).</summary>
+        static double Mediaani(List<double> x) { x.Sort(); return x.Count % 2 == 1 ? x[x.Count / 2] : (x[x.Count / 2 - 1] + x[x.Count / 2]) / 2; }
+
+        /// <summary>Ruudun k oma arvo pisteessä tarkimmalta haetulta tasolta (ei lutia, ei usvaa); nodata, pilvi, varjo ja vesi → false.</summary>
+        static bool RuudunArvo(KuvaData d, int k, double lat, double lon, out (double r, double g, double b) p)
+        {
+            p = default;
+            var (ru, o) = d.Ruudut[k];
+            if (lon < ru.W || lon > ru.E || lat < ru.S || lat > ru.N) return false;
+            var (e, n) = Utm.Eteen(lat, lon, ru.Vyohyke);
+            for (int taso = 0; taso < o.Tasot.Count; taso++)
+            {
+                double pm = o.TasonPikseliM(taso);
+                double fx = (e - o.Ita0) / pm - 0.5, fy = (o.Pohjoinen0 - n) / pm - 0.5;
+                var t = o.Tasot[taso];
+                if (fx < 0 || fy < 0 || fx >= t.Leveys - 1 || fy >= t.Korkeus - 1) return false;
+                int ix = (int)fx, iy = (int)fy;
+                if (!Pikselit(d, ru.Tunnus, t, taso, ix, iy, out var p00, out var p10, out var p01, out var p11)) continue;   // ei haettu tällä tasolla
+                if (Musta(p00) || Musta(p10) || Musta(p01) || Musta(p11)) return false;
+                byte luokka = d.SclLuokka(ru.Tunnus, e, n, pm);
+                if (luokka == 3 || luokka == 6 || luokka == 8 || luokka == 9 || luokka == 10) return false;
+                p = ((p00.r + p10.r + p01.r + p11.r) / 4.0, (p00.g + p10.g + p01.g + p11.g) / 4.0, (p00.b + p10.b + p01.b + p11.b) / 4.0);
+                return true;
+            }
+            return false;
+        }
+
         public const double MaxUsva = 40;
-        /// <summary>Ruudun tummien kohteiden taso (TCI), jonka ylittävä ruutu jätetään tasoittamatta (ei tummia kohteita).</summary>
-        public const int TummaRaja = 90;
 
         /// <summary>Lut murtoarvolle (lineaarinen väli kahden tavun välillä).</summary>
         static double Lutilla(byte[] lut, double v)
