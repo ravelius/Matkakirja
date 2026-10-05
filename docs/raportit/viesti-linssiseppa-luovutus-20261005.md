@@ -8,8 +8,8 @@ Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), i
 ## AUKI NYT
 
 ### 1. Linnan kuvan viimeistely (Siirtosepän linna-unity-suunnitelma vaihe 3, juna 143) — SIMUVUORO ~06.30
-- Haara **linssiseppa/linna-kuva 03223685** (BUILD 141 5a0b9add päällä), käännös **5cc14f8a** valmis
-  ($S/linnakuva-app). Tiedostot: Linssit/Unity/DioraamaViimeistely.cs (tilt-shift ScriptableRenderPass ajonaikaisesti vain
+- Haara **linssiseppa/linna-kuva e6fa10ea** (BUILD 141 5a0b9add päällä); edellinen käännös 5cc14f8a (= 03223685,
+  $S/linnakuva-app). Tiedostot: Linssit/Unity/DioraamaViimeistely.cs (tilt-shift ScriptableRenderPass ajonaikaisesti vain
   dioraaman kameralle, renderer-asset ennallaan; sumennus 1/4-resoluutiolla + yhdistys pystymaskilla; sävy Neutral/ACES
   profiilin Tonemapping), Linssit/Resources/Varjostimet/TiltShift.shader, Linssit/Resources/DioraamaSavyAces.asset (ACES-
   variantti säilyy URP:n karsinnassa). Kosketuskohdat sovittu Siirtosepän kanssa: DioraamaNayttamo kutsuu Kiinnita Volumen
@@ -19,7 +19,10 @@ Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), i
   (touch Julkaisijan SIMU NYT:llä; ajo-linna-kuva.sh odottaa "poikki: saapuminen alkaa"). Tulos
   lokit/linssiseppa-linna-kuva-20261005-c. Aiemmat: -a (latausruutua, hylätty), -b (sävy-A/B OK: ACES tummempi ja
   kontrastisempi; tilt-shift toimii, mutta täyden resoluution versiossa porraskuvio valoissa → korjattu 03223685).
-- SEURAAVAKSI: tarkista -c suurennoksina (ei porraskuviota, terävä kaista) → kuvapari Päätoimittajalle (sävy yleis+kappeli,
+- 06.06 ajo -c (käännös 5cc14f8a = 03223685): sävy-A/B OK, valojen porraskuvio poissa, MUTTA sumeaan seinään heikko
+  ruudukko (suora 4×-pienennys) → korjattu **e6fa10ea** (pienennys 4×4-lohkon keskiarvona, pass 3). Käännös + simu
+  pyydetty Julkaisijalta 06.1x; ketju: `ketju-linna-kuva.sh` (vaihda tulos -d:ksi) tai ajo-linna-kuva.sh uudelle .appille.
+- SEURAAVAKSI: tarkista -d suurennoksina (ei porraskuviota eikä ruudukkoa, terävä kaista) → kuvapari Päätoimittajalle (sävy yleis+kappeli,
   tilt yleis/laituri/kappeli/keittiö, video tilt-yleis-kappeli.mov) → merge-pyyntö Natiivisepälle Päätoimittajan
   kuittauksella; Siirtoseppä rebasettaa Cinemachine-vaiheen päälle.
 
