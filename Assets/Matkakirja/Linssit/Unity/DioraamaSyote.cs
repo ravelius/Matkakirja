@@ -249,12 +249,14 @@ namespace Matkakirja.Natiivi
             return paras;
         }
 
-        /// <summary>Taulun kohta, jonka kohteen (taulu.kohdat[].kohde, kohtaukset v2) lähelle napautus osuu, tai −1.</summary>
+        /// <summary>Taulun kohta, jonka kohteen (taulu.kohdat[].kohde, kohtaukset v2) lähelle napautus osuu, tai −1. Päällekkäisistä
+        /// valitaan pienin säde (Linnanrakentaja 5.10.: vihkimäristien 5,4 m:n kaari kattaa koko kappelin ja hagioskoopin 0,45 m).</summary>
         static int LahinKohde(Tila tila, Vector2 ruutu, Camera kamera)
         {
             var kohdat = tila.Taulu?.Kohdat;
             if (kohdat == null) return -1;
             int paras = -1;
+            double pieninSade = double.PositiveInfinity;
             float lahin = float.PositiveInfinity;
             float minPx = 36f * (Screen.dpi > 0 ? Screen.dpi / 163f : 2f);
             for (int i = 0; i < kohdat.Count; i++)
@@ -266,7 +268,8 @@ namespace Matkakirja.Natiivi
                 var reuna = kamera.WorldToScreenPoint(p + kamera.transform.right * (float)Math.Max(0.3, kohdat[i].KohdeSade));
                 float sadePx = Mathf.Max(minPx, Vector2.Distance(r, reuna));
                 float d = Vector2.Distance(new Vector2(r.x, r.y), ruutu);
-                if (d <= sadePx && d < lahin) { lahin = d; paras = i; }
+                double sade = kohdat[i].KohdeSade;
+                if (d <= sadePx && (sade < pieninSade || (sade == pieninSade && d < lahin))) { pieninSade = sade; lahin = d; paras = i; }
             }
             return paras;
         }
