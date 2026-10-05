@@ -1,0 +1,7 @@
+CPU-MITTAUS 2026-10-05 13.00.49: 900 kehystä 15 s:ssa, tilat Taysi 900, kehitys False, laite iPad13,8
+ka ms/kehys	p95	max	kutsuja/kehys	luokka	merkki
+16,671	16,740	16,857	1	Internal	Main Thread
+16,670	16,738	16,856	1	PlayerLoop	PlayerLoop
+12,229	12,700	13,528	1	VSync	WaitForTargetFPS
+4,444	4,747	12,464	1	Render	CPU Main Thread Frame Time
+0,000	0,000	0,013	1	Render	Gfx.WaitForPresentOnGfxThread
