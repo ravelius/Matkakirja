@@ -359,7 +359,9 @@ namespace Matkakirja.Linssit.Kierros
                         if (!puheAloitettu) aaniLoppui = false;
                         if (Nykyinen.Id != null) nahdyt.Add(Nykyinen.Id);
                         Saapui?.Invoke(Nykyinen);
-                        if (!OdottaaVastausta) UusiPyynto();   // esihaku puheen ajaksi
+                        // Esihaku puheen ajaksi — ei, jos seuraava on jo tiedossa tai pyynnössä (lennon aikana annettu toive;
+                        // simu 23.05: saapumisen esihaku korvasi toiveen "näytä Strøget").
+                        if (!OdottaaVastausta && Seuraava == null && odotettu == 0) UusiPyynto();
                     }
                     break;
                 }
