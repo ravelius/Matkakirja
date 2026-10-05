@@ -90,15 +90,26 @@ namespace Matkakirja.Natiivi
         /// Kaupungin vaihto valikosta (Natiivi-UI OpasValikko.KohdeValittu): puhe katkeaa ja seuraava pyyntö menee valittuun
         /// paikkaan (kaupunki ja sijainti). true = otettu oppaalle.
         /// </summary>
-        public static bool VaihdaKaupunki(string nimi, double lat, double lon)
+        public static bool VaihdaKaupunki(string nimi, double lat, double lon) => VaihdaKaupunki(nimi, lat, lon, null);
+
+        /// <summary>Kuten yllä, maan ISO-koodilla (samannimiset kaupungit, esim. Jerusalem IL/PS); nimi sanotaan Williamin äänellä.</summary>
+        public static bool VaihdaKaupunki(string nimi, double lat, double lon, string iso)
         {
             if (!Auki || string.IsNullOrWhiteSpace(nimi)) return false;
             Aloituskaupunki = nimi.Trim();
             Viimeisin.pakotettuSijainti = (lat, lon);
             Viimeisin.o.Kirjaa($"opas: kaupunki vaihtuu → {Aloituskaupunki} ({lat:F3}, {lon:F3})");
             Viimeisin.silmukka.VaihdaPaikka();
-            Viimeisin.Silta(OpasSiltalauseet.Kaupunki, true);
+            var v = Viimeisin;
+            if (!v.SanoNimi(nimiaanet?.Kaupungille(iso, nimi))) v.Silta(OpasSiltalauseet.Kaupunki, true);
             return true;
+        }
+
+        /// <summary>Maan valinta Vaihda kohde -valikossa (Natiivi-UI, juna 146): maan nimi Williamin äänellä heti. true = sanottiin.</summary>
+        public static bool MaaValittu(string iso)
+        {
+            if (!Auki || string.IsNullOrEmpty(iso)) return false;
+            return Viimeisin.SanoNimi(nimiaanet?.Maalle(iso));
         }
         (double lat, double lon)? pakotettuSijainti;
 
@@ -170,6 +181,7 @@ namespace Matkakirja.Natiivi
                 silta.playOnAwake = false; silta.spatialBlend = 0f; silta.loop = false;
             }
             if (siltalauseet == null && !Testi) o.StartCoroutine(LataaSiltalauseet());
+            if (nimiaanet == null && !nimiaLadataan && !Testi) o.StartCoroutine(LataaNimiaanet());
             silmukka.AlkaaPuhua += AlkaaPuhua;
             if (o.GetComponent<KyydinKameraEnnen>() == null) o.gameObject.AddComponent<KyydinKameraEnnen>();
             KyydinKameraEnnen.Ajo = PaivitaKamera;
@@ -243,6 +255,58 @@ namespace Matkakirja.Natiivi
         {
             if (Testi) { o.StartCoroutine(TestiVastaus(n)); return; }
             o.StartCoroutine(Hae(n, toive));
+        }
+
+        // ---- MAIDEN JA KAUPUNKIEN NIMET (juna 146; Ydin OpasNimiaanet) ----
+        public const string NimetOsoite = "https://media.matkakirja.app/aanet/opas/nimet-v1/nimet.json",
+            MaatOsoite = "https://media.matkakirja.app/aanet/opas/maat-v1/maat.json";
+        static OpasNimiaanet nimiaanet;
+        static bool nimiaLadataan;
+        static readonly Dictionary<string, AudioClip> nimiKlipit = new Dictionary<string, AudioClip>(StringComparer.Ordinal);
+        Coroutine nimiSoitto;
+
+        /// <summary>Nimi tai nimi + jatko heti (leikkeet haetaan tarvittaessa, ~0,3 s). false = ei aineistoa → siltalause käy.</summary>
+        bool SanoNimi(NimiLeike[] leikkeet)
+        {
+            pelaajanToimi = Time.unscaledTime;
+            if (leikkeet == null || leikkeet.Length == 0 || silta == null || !Asetukset.Paalla(Kytkin.Kertoja)) return false;
+            if (nimiSoitto != null) o.StopCoroutine(nimiSoitto);
+            nimiSoitto = o.StartCoroutine(SoitaNimi(leikkeet));
+            return true;
+        }
+
+        IEnumerator SoitaNimi(NimiLeike[] leikkeet)
+        {
+            if (silta.isPlaying) silta.Stop();
+            foreach (var l in leikkeet)
+            {
+                if (!nimiKlipit.TryGetValue(l.Url, out var c) || c == null)
+                {
+                    using var p = UnityWebRequestMultimedia.GetAudioClip(l.Url, AudioType.MPEG);
+                    p.timeout = 8;
+                    yield return p.SendWebRequest();
+                    if (p.result != UnityWebRequest.Result.Success) { o.Kirjaa($"opas: nimi {l.Id} ei latautunut ({p.responseCode})"); continue; }
+                    c = DownloadHandlerAudioClip.GetContent(p);
+                    if (nimiKlipit.Count > 64) nimiKlipit.Clear();   // pieni välimuisti: kukin leike ~20–60 kt
+                    nimiKlipit[l.Url] = c;
+                }
+                if (silmukka == null || puhuu) yield break;   // kerronta ehti alkaa: nimi jää pois
+                silta.clip = c; silta.volume = 1f; silta.Play();
+                o.Kirjaa($"opas: nimi {l.Id} \"{l.Teksti}\"");
+                while (silta.isPlaying) yield return null;
+            }
+            nimiSoitto = null;
+        }
+
+        IEnumerator LataaNimiaanet()
+        {
+            nimiaLadataan = true;
+            Dictionary<string, object> n = null, m = null;
+            using (var r = UnityWebRequest.Get(NimetOsoite)) { r.timeout = 15; yield return r.SendWebRequest(); if (r.result == UnityWebRequest.Result.Success) n = MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>; }
+            using (var r = UnityWebRequest.Get(MaatOsoite)) { r.timeout = 15; yield return r.SendWebRequest(); if (r.result == UnityWebRequest.Result.Success) m = MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>; }
+            nimiaanet = OpasNimiaanet.Lue(n, m);
+            nimiaLadataan = false;
+            o.Kirjaa(nimiaanet != null ? "opas: nimiäänet ladattu" : "opas: nimiäänet ei latautunut");
         }
 
         // ---- SILTALAUSEET (juna 146; Ydin OpasSiltalauseet) ----
@@ -702,6 +766,8 @@ namespace Matkakirja.Natiivi
             KytkeNimilappu(false);
             if (silta != null && silta.isPlaying) silta.Stop();
             pelaajanToimi = -1f;
+            if (nimiaanet == null) nimiaLadataan = false;   // lataus katkesi sulkuun: uusi yritys seuraavassa avauksessa
+            nimiSoitto = null;
             KrediititTiivis.OsmNakyvissa = false;
             KrediititTiivis.Paivita(false);
             Hiljenna();
