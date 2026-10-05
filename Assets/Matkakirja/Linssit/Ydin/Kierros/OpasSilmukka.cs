@@ -347,7 +347,8 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         public Kuvakulma? Esilataus(Func<OpasKohde, double> maaKorkeus)
         {
-            if (Vaihe == OpasVaihe.Lentaa && kohdeKehys != null) return OpasKuvaus.Pysahdyksella(kohdeKehys, 0);
+            // Saavuttu (odotetaan laattoja): pääkamera on jo kehyksessä → esikamera pois, latausaste mittaa vain pääkameraa.
+            if (Vaihe == OpasVaihe.Lentaa && kohdeKehys != null) return VaiheAika >= LentoKestoS ? (Kuvakulma?)null : OpasKuvaus.Pysahdyksella(kohdeKehys, 0);
             if (Seuraava != null && !Seuraava.Kysymys) return OpasKuvaus.Pysahdyksella(KehysKohteelle(Seuraava, maaKorkeus), 0);
             return null;
         }
