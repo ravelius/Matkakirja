@@ -24,7 +24,10 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   avaruuskävelyllä, joka on pois valikosta), Linssivalitsin ylaSulje ja kuollut Muut-paneeli. unity-tarkistus 0 virhettä,
   pohjavahti ok, merge juna-143-koeen puhdas. Käännös 354fa015 (08.14), simussa todennettu 10.2x oikeilla napautuksilla
   (proto-3d/lokit/natiivi-ui-1035/xsiivous/xs-arkki.jpg); lähetetty Päätoimittajalle kuitattavaksi 10.3x → kuittauksen
-  jälkeen merge-pyyntö Natiivisepälle. Löydös: kytkinpöydän POISTU vaati simussa ~0,25 s painalluksen (kuormassa).
+  jälkeen merge-pyyntö Natiivisepälle. KUITATTU 10.4x, merge-pyyntö Natiivisepälle lähetetty 10.4x.
+- POISTU-löydös selvitetty 10.5x kevyellä koneella: vain 0 s:n simutap (painallus ja irrotus samassa kehyksessä) pienentää
+  pöydän (IssKytkinpoyta.Napautus PointerDown); 0,1 s toimii. Suositus Päätoimittajalle: ei korjausta junaan 144
+  (xsiivous/xp-poistu-arkki.jpg). Todisteissa käytä kytkinpöydän painikkeille duration ≥ 0,1 s.
 - natiivi-ui/iss-ohjaamo-lcd 0fdda21f — ohjaamo + LS2:n LCD-paikat; odottaa LS2:n maailmakuvia (Amazonia) ja S2-indeksiä.
 - Myöhemmin (Päätoimittaja): ISS-kuvan vihreä nimilappu hukkuu kirkkaalle hiekalle (az-3667-a4).
 
