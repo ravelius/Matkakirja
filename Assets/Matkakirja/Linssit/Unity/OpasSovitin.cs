@@ -197,6 +197,7 @@ namespace Matkakirja.Natiivi
                 kaupunki.AsetaEsikamera(OpasSilmukka.KehysAsento(OpasSilmukka.Kehysta(k, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45,
                     OpasSilmukka.Suunta(silmukka.Asento.Lat, silmukka.Asento.Lon, k.Lat, k.Lon)), 0));
             }
+            else kaupunki.EsikameraPois();   // ei esilattavaa: piilokamera ei pidä vanhoja laattoja elossa
         }
 
         double MaaKorkeus(OpasKohde k) => maaKorkeudet.TryGetValue(Avain(k), out var h) ? h : double.NaN;
@@ -284,6 +285,8 @@ namespace Matkakirja.Natiivi
         {
             using var p = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG);
             ((DownloadHandlerAudioClip)p.downloadHandler).streamAudio = false;
+            p.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            p.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
             p.timeout = AikarajaS;
             yield return p.SendWebRequest();
             if (p.result != UnityWebRequest.Result.Success) { o.Kirjaa("opas: ääni ei latautunut: " + p.error); klipit[url] = null; yield break; }
@@ -294,8 +297,11 @@ namespace Matkakirja.Natiivi
         void Saapui(OpasKohde k)
         {
             kaupunki.SiirraOrigo(k.Lat, k.Lon, MaaKorkeus(k) is double m && !double.IsNaN(m) ? m : 45);
+            VapautaVanhatAanet(k);
             Soita(k);
             KysymysChattiin(k);   // kappale ja sen vaihtoehdot Pulu-chatiin (Natiivi-UI 18.0x)
+            saapumisia++;
+            o.StartCoroutine(Siivoa());
             o.Kirjaa($"opas: saapui {k.Nimi} ({k.Lat:F4}, {k.Lon:F4}), ääni {(puhuu ? "soi" : "ei")}, laatat {kaupunki.Latausaste:F0} %");
         }
 
@@ -330,6 +336,30 @@ namespace Matkakirja.Natiivi
             if (silmukka == null || (silmukka.Nykyinen != k && !(silmukka.OdottaaVastausta && viimeKysymys == k))) yield break;
             o.Kirjaa($"opas: ääni {(klipit.ContainsKey(k.Aani) ? "latautui" : "ei latautunut")} {Time.realtimeSinceStartup - t0:F1} s:ssa");
             Soita(k);
+        }
+
+        int saapumisia;
+
+        /// <summary>Muut kuin nykyinen ja esihaettu kappale pois muistista (AudioClip vapautetaan).</summary>
+        void VapautaVanhatAanet(OpasKohde nyt)
+        {
+            var pidetaan = new HashSet<string>();
+            if (nyt?.Aani != null) pidetaan.Add(nyt.Aani);
+            if (silmukka?.Seuraava?.Aani != null) pidetaan.Add(silmukka.Seuraava.Aani);
+            if (viimeKysymys?.Aani != null && silmukka != null && silmukka.OdottaaVastausta) pidetaan.Add(viimeKysymys.Aani);
+            var pois = new List<string>();
+            foreach (var kv in klipit) if (!pidetaan.Contains(kv.Key)) pois.Add(kv.Key);
+            foreach (var u in pois) { if (klipit[u] != null && (puhe == null || puhe.clip != klipit[u])) UnityEngine.Object.Destroy(klipit[u]); klipit.Remove(u); }
+        }
+
+        /// <summary>Pysähdyksen alussa (kamera kiertää hitaasti): käyttämättömät resurssit pois ja muistierittely lokiin.</summary>
+        IEnumerator Siivoa()
+        {
+            yield return new WaitForSecondsRealtime(1.5f);
+            if (silmukka == null) yield break;
+            var op = Resources.UnloadUnusedAssets();
+            while (!op.isDone) yield return null;
+            o.Kirjaa($"opas: {saapumisia}. pysähdys, " + kaupunki.Muisti());
         }
 
         IEnumerator TekstiLoppuu(double s, OpasKohde k)
@@ -405,6 +435,8 @@ namespace Matkakirja.Natiivi
             if (puhe != null && puhe.isPlaying) puhe.Stop();
             if (puhuu) { puhuu = false; y.Repliikki(false); }
         }
+
+        public string Muisti() => "opas: " + kaupunki.Muisti();
 
         public string Tila() => silmukka == null ? "opas: kiinni"
             : $"opas: {kaupunki.Kaytossa} {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "-")}, seuraava {(silmukka.Seuraava?.Nimi ?? "-")}, nähty {System.Linq.Enumerable.Count(silmukka.Nahdyt)}, laatat {kaupunki.Latausaste:F0} %"
