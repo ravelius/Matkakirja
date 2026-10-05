@@ -155,6 +155,9 @@ namespace Matkakirja.Linssit.Astronautti
             // Leijunta heiluttaa Pulua myös sivuttain, joten sama vara kuin yläpaikassa (+ eleen sivuvara).
             float vierOikea = (float)Math.Round(W - pulu.Vasen + RakoPt + LeijunnanVaraPt + PulunEleenSivuvaraPt);
             float vierAla = Math.Max(AlaMin, (float)Math.Round(H - pulu.Ala));
+            // Matala ruutu (iPhone vaaka, omistaja TF 140 22.4x): Pulun alareunasta ylöspäin taulu ei mahdu ylaMin:n alle, joten
+            // vieres-paikka laskeutuu (alareuna alemmas, enintään AlaMin:iin). Pulun vieressä se ei osu Pulun päälle.
+            if (H - vierAla - h < ylaMin) vierAla = Math.Max(AlaMin, (float)Math.Round(H - ylaMin - h));
             if (W - vierOikea - w >= YlaMin)
                 ehdokkaat.Add(new TaulunPaikka("vieres", vierAla, vierOikea, new Laatikko(W - vierOikea - w, H - vierAla - h, W - vierOikea, H - vierAla)));
             bool Osuu(Laatikko a)
@@ -172,6 +175,10 @@ namespace Matkakirja.Linssit.Astronautti
             // Pulun eleen vara (90 pt yläpuolella) saa jäädä taulun alle; itse Pulu ei.
             var pulunKeho = new Laatikko(pulu.Vasen, pulu.Yla + PulunEleenVaraPt, pulu.Oikea, pulu.Ala);
             if (ylhAla >= AlaMin && !ylhaalla.Alue.Leikkaa(pulunKeho) && !Osuu(ylhaalla.Alue)) return ylhaalla;
+            // Matala ruutu (iPhone vaaka, omistaja TF 140): kokonaan näkyvä taulu Pulun vieressä on parempi kuin rivit piiloon
+            // puristava yläpaikka, vaikka se peittäisi ISS-merkin taulun auki olon ajan.
+            // Vain kun yläpaikkakaan ei mahdu (muuten ISS-merkin peittävä tilanne pysyy yläpaikassa kuten ennen).
+            if (ylla.Alue.Yla < ylaMin) foreach (var e in ehdokkaat) if (e.Nimi == "vieres" && e.Alue.Yla >= ylaMin) return e;
             return ylla;
         }
 
