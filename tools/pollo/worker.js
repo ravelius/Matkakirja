@@ -1126,6 +1126,13 @@ async function varmistaJatkot(env, { jatkot, kysymys, vastaus }) {
  * kehittäjätilassa pöllön paneeliin, ja se jää vain laitteelle.
  */
 const KEHITTAJA_OTSAKE = 'x-pollo-kehittaja';
+/*
+ * TESTIOTSAKE (omistaja 5.10.2026 klo 17.0x: kehittäjätilassa ei Pulun päiväkattoa → automaattiset testit, joilla on sama
+ * kehittäjäkoodi, eivät saa kuluttaa ElevenLabs-kiintiötä). Savukkeet (tools/savukkeet/pollo-kehittajakoodi.mjs) ja
+ * simulaattorin natiivi lähettävät `x-matkakirja-testi: 1`; Pulun puhe vastaa silloin 204 ilman ääntä eikä kutsu ElevenLabsia.
+ * Lukijat (kertoja) toimivat testeissäkin, koska ne säilötään (vakiotekstit maksavat kerran).
+ */
+export const TESTI_OTSAKE = 'x-matkakirja-testi';
 
 function kehittajaOhitus(pyynto, env) {
   if (!env.POLLO_KEHITTAJAKOODI) return false;
@@ -1138,7 +1145,7 @@ function korsOtsakkeet(origin, sallitut) {
     'access-control-allow-methods': 'POST, OPTIONS',
     // Kehittäjäotsake on sallittava erikseen, tai selain ei päästä
     // esilentoa (OPTIONS) läpi eikä pyyntö lähde lainkaan.
-    'access-control-allow-headers': `content-type, ${KEHITTAJA_OTSAKE}`,
+    'access-control-allow-headers': `content-type, ${KEHITTAJA_OTSAKE}, ${TESTI_OTSAKE}`,
     'access-control-max-age': '86400',
     vary: 'Origin',
   };
@@ -1390,7 +1397,12 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   const persoonaNimi = PUHE_PERSOONAT[runko?.persoona] ? runko.persoona : 'kertoja';
   const persoona = PUHE_PERSOONAT[persoonaNimi];
   const puluEleven = puluElevenKaytossa(env, persoonaNimi);
+  // Testiajot (TESTI_OTSAKE): Pulun ääntä ei tuoteta, ElevenLabs-kiintiö säästyy.
+  if (persoonaNimi === 'pollo' && pyynto.headers.get(TESTI_OTSAKE) === '1') {
+    return new Response(null, { status: 204, headers: puheOtsakkeet(kors, 'testi', 'testi') });
+  }
   // Pulun äänen päiväkatto (15 000 mrk/vrk, Päätoimittaja 5.10.2026): ylityksessä ei ääntä eikä xAI:ta, vastaus jää tekstiksi.
+  // Kehittäjäkoodilla ei kattoa (omistaja 5.10.2026 klo 17.0x: "kehittäjätilassa ei saa olla päiväkattoa pululla").
   if (puluEleven && !kehittajaOhitus(pyynto, env)) {
     const kaytetty = await lueLaskuri(env.POLLO_KV ?? null, puluElevenPaivaAvain(new Date()));
     const katto = lueLuku(env.PULU_ELEVEN_PAIVARAJA, PULU_ELEVEN_PAIVARAJA_OLETUS);

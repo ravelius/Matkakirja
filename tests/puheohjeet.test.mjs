@@ -211,3 +211,32 @@ test('Pulun äänen päiväkatto 15 000 mrk: ylityksessä 429 eikä xAI:ta (Pä�
     globalThis.fetch = alkuperainen;
   }
 });
+
+test('testiotsake: Pulun puhe 204 ilman ElevenLabsia, kehittäjäkoodilla ei Pulun kattoa (omistaja 5.10.2026 klo 17.0x)', async () => {
+  const worker = await import('../tools/pollo/worker.js');
+  const { puluElevenPaivaAvain } = await import('../tools/pollo/rajat.js');
+  const kutsut = [];
+  const alkuperainen = globalThis.fetch;
+  globalThis.fetch = async (osoite) => {
+    kutsut.push(String(osoite));
+    return new Response(new Uint8Array([0xff, 0xf3, 0x44, 0xc4]), { status: 200, headers: { 'content-type': 'audio/mpeg' } });
+  };
+  const muisti = new Map([[puluElevenPaivaAvain(new Date()), '999999']]);
+  const kv = { get: async (a) => muisti.get(a) ?? null, put: async (a, v) => { muisti.set(a, String(v)); } };
+  const env = { ELEVEN_API_KEY: 'e', XAI_API_KEY: 'x', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KV: kv, POLLO_KEHITTAJAKOODI: 'koodi-123' };
+  const pyynto = (otsakkeet) => worker.default.fetch(new Request('https://pollo.example/', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'cf-connecting-ip': '203.0.113.10', ...otsakkeet },
+    body: JSON.stringify({ tehtava: 'puhe', persoona: 'pollo', teksti: 'Pulu puhuu testissä.' }),
+  }), env, {});
+  try {
+    const testi = await pyynto({ 'x-pollo-kehittaja': 'koodi-123', 'x-matkakirja-testi': '1' });
+    assert.equal(testi.status, 204);
+    assert.equal(kutsut.length, 0, 'testi ei kutsu ElevenLabsia');
+    const kehittaja = await pyynto({ 'x-pollo-kehittaja': 'koodi-123' });
+    assert.equal(kehittaja.status, 200, 'kehittäjäkoodilla ei Pulun päiväkattoa');
+    assert.equal(kehittaja.headers.get('x-puhe-moottori'), 'eleven');
+  } finally {
+    globalThis.fetch = alkuperainen;
+  }
+});
