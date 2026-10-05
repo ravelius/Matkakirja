@@ -162,6 +162,11 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   (LinnaValikon pohja: Vaihda kohde › maanosa › maa › 12 suurinta kaupunkia; Poistu linssistä; KohdeValittu-koukku), paikat.json
   LS2:lta (87863aae, maanosa 6. sarake). Linssiseppä kytkee heijastuksella (linssiseppa/lontoo) ja kokoaa yhteiskäännöksen.
 
+## ISS-ohjaamo junaan 144 (Päätoimittaja kuittasi, Natiiviseppä 18.3x)
+- natiivi-ui/iss-ohjaamo-144 2bb26db8 = ec0038f4 + LS2 a2941f8f + iss-ohjaamo-lcd (sis. paneeli 125809dc); konfliktit ratkaistu,
+  tyylikirja uudelleen web-lähteestä (lcd-tokenit) → web-PR #4010 (Julkaisija mergeää). tarkista.sh ok, Linssit 658/658,
+  Kartta 444/444. SHA Natiivisepälle lähetetty.
+
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
 iss-taulu-vaaka.sh (TAP_OHI=1), auto-zoom.sh (TAP_SEUR=1), lippu-kaikki.sh, chat-linna.sh, kartoitus.sh (+ k:-etuliite
