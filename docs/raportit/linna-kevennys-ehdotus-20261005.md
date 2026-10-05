@@ -41,7 +41,7 @@ resoluutiosta tai Volumen näytemäärästä, eikä linnasta.
 | # | Ehdotus | Säästö per ruutu (yleis, iPad) | Kuka / mitä muuttuu | Kuvamuutos |
 |---|---|---|---|---|
 | A | Heijastuskierros kevyellä kuorella: `QualitySettings.lodBias` pieneksi `SubmitRenderRequest`in ajaksi ja sen jälkeen takaisin. Tilat pois heijastuskameran `cullingMask`ista (laituria lukuun ottamatta). | ≈ −1,2 M kuoren kolmiota ja −0,15 M tilojen kolmiota heijastuksesta | Siirtoseppä, natiivi. glb ei muutu. | Hyvin pieni: heijastus on puolella resoluutiolla ja vesinormaalien vääristämä. |
-| B | Kolmas LOD-taso täyden laadun laitteille: huippu, kun kamera on alle noin 100 m:ssä; normaali (478 k), kun kamera on kauempana, esimerkiksi yleisnäkymän oletuksessa 150 m:ssä. | −0,92 M (1,40 → 0,48 M) yleisnäkymässä | Siirtoseppä, natiivi (LODGroup 3 tasoa). normaali.glb on jo paketissa. Ladattavaa tulee +33,6 Mt, ja mesh vie muistia arviolta +15 Mt. | Pieni: kattojen reunat pehmenevät hieman täydellä resoluutiolla, ks. lod-huippu-vs-normaali-150m.jpg (3 × suurennos). |
+| B | Kolmas LOD-taso täyden laadun laitteille: huippu, kun kamera on alle noin 100 m:ssä; normaali (478 k), kun kamera on kauempana, esimerkiksi yleisnäkymän oletuksessa 150 m:ssä. | −0,92 M (1,40 → 0,48 M) yleisnäkymässä | Siirtoseppä, natiivi (LODGroup 3 tasoa). normaali.glb on jo paketissa. Ladattavaa tulee +33,6 Mt, ja mesh vie muistia arviolta +15 Mt. | **Hylätty 5.10.** B-stillit/ (100–150 m, iPadin pikselit): normaalissa räystäiden repeämiä, muurinharjan saumaviivoja ja kattojiirin halkeama. |
 | C | Yleisnäkymässä tilat pois näkyvistä, kun kuori peittää ne lähes kokonaan: keskushalli, fatabuuri ja keittiö sekä niiden 9 hahmoa. | −87 k kolmiota ja noin −100 piirtoa, varjokierroksen kanssa noin −200 | Siirtoseppä, natiivi (tilat aktiivisiksi vasta saapuessa) | Ei näkyvää muutosta. 164 yleiskameran otoksessa keskushallista näkyi enintään 4 px, fatabuurista 3 450 px ja keittiöstä 4 000 px kuoren raoista. |
 | D | Hahmojen osat yhdeksi meshiksi ja yhdeksi materiaaliksi (atlas), ja varjo pois yleisnäkymässä, jossa hahmo on noin 30 px korkea. | noin −170 piirtoa ja varjokierroksesta noin −190 | Hahmojen tekijä (glb-muutos) + Siirtoseppä | Ei näkyvää muutosta |
 | E | Kuori 6 × 4 lohkoon, jolloin näkökartion karsinta toimii. | Lähin zoom 1,40 → 0,97 M (−30 %), keittiö 1,40 → 1,05 M (−25 %), yleis 0 | Linnanrakentaja (glb) + Siirtoseppä (Kokoa ei yhdistä lohkoja) | Ei näkyvää muutosta. +23 piirtoa samalla materiaalilla (SRP Batcher). |
@@ -49,8 +49,9 @@ resoluutiosta tai Volumen näytemäärästä, eikä linnasta.
 
 **Suositus: A ja C ensin**, jos laitemittaus 2.1 näyttää, että heijastus maksaa. Ne ovat pelkkiä natiivimuutoksia,
 eivät muuta kuvaa eivätkä pakettia, ja ne vievät yleisnäkymästä noin 1,4 M kolmiota ja noin 200 piirtoa.
-B on seuraava, jos kuori-mittaus 2.2 näyttää, että geometria maksaa. B tarvitsee omistajan tai Päätoimittajan
-hyväksynnän kuvamuutokselle. D, E ja F ovat pienempiä ja vaativat glb-muutoksen, joten ne jäävät junan 143 jälkeen.
+B hylättiin stillien perusteella 5.10. Jos kuori-mittaus 2.2 näyttää geometrian maksavan vielä A:n ja C:n jälkeen,
+tilalle tehdään uusi välitaso (~0,8 M), jonka harvennus säilyttää reunat ja UV-saumat (glb-työ junan 143 jälkeen).
+Päätoimittaja hyväksyi A:n ja C:n 5.10. Siirtosepän toteutettaviksi, kun laitemittaukset ovat osoittaneet tarpeen. D, E ja F ovat pienempiä ja vaativat glb-muutoksen, joten ne jäävät junan 143 jälkeen.
 
 ## 4. Menetelmä
 
