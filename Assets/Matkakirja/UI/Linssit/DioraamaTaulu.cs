@@ -393,8 +393,6 @@ namespace Matkakirja.Natiivi
         }
 
         readonly VisualElement nimiruutu;
-        bool korttiTiivis;
-        float tiivisVaihto = -1f;
         // AVAINSANAT (Päätoimittaja 5.10., omistajan TF 141 -palaute "muutamia vuosilukuja sekä muita lyhyitä sanoja luennan tueksi"):
         // vasen alakulma ilman laatikkoa, vuosiluku goottilaisella ja 1–3 sanaa antiikvalla (havainteen kultaiset varjostetut tyylit),
         // häivytys sisään kun kertoja sanoo asian (kertojan klipin soittokohta ≥ t_s) ja pois AvainsanaS:n jälkeen.
@@ -406,6 +404,10 @@ namespace Matkakirja.Natiivi
         readonly Latauspalkki latauspalkki;
         bool nimiruutuAuki, virheIlmoitettu;
         float nimiruutuAlku;
+        /// <summary>Kortin tiivistys keskustelun ajaksi (KuunnelmaKaistale.Keskustelu) ja vaihdon hetki häivytykseen.</summary>
+        bool korttiTiivis;
+        float tiivisVaihto = -1f;
+
         /// <summary>Palkki näkyy vasta, kun odotus on kestänyt tämän verran (nopea lataus ei välähdä palkkia).</summary>
         const float PalkkiS = 1f;
 
