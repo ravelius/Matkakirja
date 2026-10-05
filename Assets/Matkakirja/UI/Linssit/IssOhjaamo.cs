@@ -53,7 +53,22 @@ namespace Matkakirja.Natiivi
         /// Keskiruudun (34 pt) sisältä alkava kosketus on nyt neutraali, ja suunta lasketaan liikkeestä tartuntakohdasta
         /// (kynnys LiikePt); varresta alkava kosketus ohjaa heti kuten ennen.
         /// </summary>
-        public const float KeskiPt = 20f, LiikePt = 14f;
+        public const float KeskiPt = 24f, LiikePt = 14f;
+        /// <summary>
+        /// Sauvan NÄKYVÄ keskipiste osuutena sauvan laatikosta. Kuvapaneelissa (ohjaamo.json "sauva" 128 × 78 pt) piirretty sauva
+        /// on laatikon vasemmalla puoliskolla (nuolet ◂ ▸ ja ▼ ympärillä): TF 145:llä 6.10. klo 00.08 sauvan keskeltä tarttuminen
+        /// antoi "Vasen", koska logiikka käytti laatikon keskipistettä (~18 pt oikealla). ohjaamo.json:n "sauvaKeski" ohittaa.
+        /// </summary>
+        public static Vector2 SauvaKeskiOsuus = new Vector2(0.36f, 0.5f);
+
+        /// <summary>Joystickin keskipiste paikallisissa koordinaateissa: kuvapaneelissa sauvan näkyvä keski, piirretyssä laatikon keski.</summary>
+        Vector2 Keski()
+        {
+            var r = joystick.contentRect;
+            if (ankkurit == null || !joystick.ClassListContains("mk-issohjaamo--kuvat")) return r.center;
+            var o = ankkurit.SauvaKeski ?? SauvaKeskiOsuus;
+            return new Vector2(r.x + r.width * o.x, r.y + r.height * o.y);
+        }
         Vector2? tartunta;
 
         public bool Mini { get; private set; }
@@ -343,10 +358,11 @@ namespace Matkakirja.Natiivi
 
         // --- KUVA-ASETTELU (Linnanrakentajan konsepti v1, omistaja 4.10.2026 klo 17.2x; juna 139) -----------------------------
         // Resources/IssOhjaamo/ohjaamo.json: {"koko":{w,h}, "sauva"|"lcd"|"kamera"|"rumpu"|"kaasu"|"lcdIso":{x,y,w,h} pt pohjan
-        // vasemmasta yläkulmasta, "kaasu":{…, "pykalat":[y1, y10, y100, y1000]} pt kaasun laatikon yläreunasta}. Paneeli skaalautuu
+        // vasemmasta yläkulmasta, "kaasu":{…, "pykalat":[y1, y10, y100, y1000]} pt kaasun laatikon yläreunasta,
+        // valinnainen "sauvaKeski":{x,y} piirretyn sauvan keskipiste osuutena sauvan laatikosta (oletus 0.36, 0.5)}. Paneeli skaalautuu
         // leveyden mukaan (korkeus koon suhteessa) ja osat sijoitetaan ankkureihin; ilman tiedostoa piirretty asettelu kuten ennen.
 
-        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, RumpuKolo, Kaasu, LcdIso, LcdIsoKuva; public float[] Pykalat; public float MiniSlice; }
+        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, RumpuKolo, Kaasu, LcdIso, LcdIsoKuva; public float[] Pykalat; public float MiniSlice; public Vector2? SauvaKeski; }
         Ankkurit ankkurit;
 
         static Rect LueRect(Dictionary<string, object> o, string avain)
@@ -373,6 +389,9 @@ namespace Matkakirja.Natiivi
                 };
                 var ms = Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "mini")), "slice"));
                 a.MiniSlice = ms != null && MiniJson.Kentta(ms, "vasen") is object v ? Convert.ToSingle(v) : 0f;
+                var sk = Rakenne.Olio(MiniJson.Kentta(o, "sauvaKeski"));
+                if (sk != null && MiniJson.Kentta(sk, "x") is object sx && MiniJson.Kentta(sk, "y") is object sy)
+                    a.SauvaKeski = new Vector2(Convert.ToSingle(sx, System.Globalization.CultureInfo.InvariantCulture), Convert.ToSingle(sy, System.Globalization.CultureInfo.InvariantCulture));
                 var p = Rakenne.Lista(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "kaasu")), "pykalat"));
                 if (p != null && p.Count == Kertoimet.Length) { a.Pykalat = new float[p.Count]; for (int i = 0; i < p.Count; i++) a.Pykalat[i] = Convert.ToSingle(p[i]); }
                 return a.Koko.width > 0 && a.Koko.height > 0 ? a : null;
@@ -474,7 +493,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Kosketuksen alku: keskiruudusta neutraali (suunta liikkeestä), varresta heti suunta.</summary>
         void Tartu(Vector2 p)
         {
-            var k = joystick.contentRect.center;
+            var k = Keski();
             if (Mathf.Max(Mathf.Abs(p.x - k.x), Mathf.Abs(p.y - k.y)) < KeskiPt)
             {
                 tartunta = p;
@@ -488,7 +507,7 @@ namespace Matkakirja.Natiivi
 
         void Ohjaa(Vector2 p)
         {
-            var k = tartunta ?? joystick.contentRect.center;
+            var k = tartunta ?? Keski();
             float dx = p.x - k.x, dy = p.y - k.y;
             if (Mathf.Max(Mathf.Abs(dx), Mathf.Abs(dy)) < (tartunta.HasValue ? LiikePt : KuollutPt)) { AsetaSuunta(JoystickSuunta.Ei); return; }
             // Plus-muoto: vain hallitseva akseli (yksi suunta kerrallaan).
