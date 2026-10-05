@@ -278,7 +278,7 @@ namespace Matkakirja.Linssit.Kierros
             puheAloitettu = true; siirtyma = true;
         }
         public const double SiirtymaMinM = 5000;
-        bool siirtyma;
+        bool siirtyma, yleiskuvassa;
 
         /// <summary>Paikan vaihto valikosta (Natiivi-UI OpasValikko): kuten toive ilman tekstiä, nähdyt tyhjennetään.</summary>
         public void VaihdaPaikka()
@@ -410,7 +410,7 @@ namespace Matkakirja.Linssit.Kierros
                     if (t >= 1 && siirtyma)
                     {
                         // Siirtymälento perillä: kaupungin yleiskuva kiertää; ei saapumista, puhetta eikä esihakua.
-                        siirtyma = false;
+                        siirtyma = false; yleiskuvassa = true;
                         NykyinenKehys = kohdeKehys; kierto = 0;
                         Vaihe = OpasVaihe.Odottaa; VaiheAika = 0;
                         break;
@@ -475,7 +475,10 @@ namespace Matkakirja.Linssit.Kierros
         {
             Ohjaus.Paivita(dt, Tapit.kierto, Tapit.korkeus, Tapit.etaisyys);
             if (!Ohjaus.Aktiivinen) kierto += dt;   // aika saapumisesta: ei nollaudu Puhuu ↔ Odottaa eikä "kerro lisää" -kappaleessa
-            Asento = Ohjaus.Sovella(OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto), NykyinenKehys.MaaM);
+            var perus = OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto);
+            // Kaupungin 5 km:n yläkuva ohittaa ohjauksen rajat (etäisyys enintään OpasOhjaus.EtMaxM 2,2 km), kunnes pelaaja koskee
+            // tappeihin (testi KaupunginVaihtoLentaaHeti); pysähdyksillä rajat (myös kattoraja) aina.
+            Asento = yleiskuvassa && !Ohjaus.Aktiivinen && !Ohjaus.Siirretty ? perus : Ohjaus.Sovella(perus, NykyinenKehys.MaaM);
         }
 
         bool aaniLoppuiTaiAlku() => Vaihe == OpasVaihe.Alku || aaniLoppui;
@@ -497,6 +500,7 @@ namespace Matkakirja.Linssit.Kierros
             kohdeKehys = KehysKohteelle(k, maaKorkeus);
             Nykyinen = k;
             Ohjaus.Nollaa();   // lento alkaa pelaajan kulmasta (Asento sisältää jo ohjauksen), ei hyppyä
+            yleiskuvassa = false;
             lahto = Asento;
             LentoKestoS = LennonKesto(KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon));
             LentoAlkaa?.Invoke(k, KierrosLento.EtaisyysM(lahto.Lat, lahto.Lon, k.Lat, k.Lon), toiveesta);
