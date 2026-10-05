@@ -19,18 +19,18 @@
 // lennon ajaksi Lontoon keskelle (reitti mahtuu 6 km:n säteelle → float-tarkkuus ~1 mm) ja palautetaan sulkiessa.
 // ESILATAUS: piilokamera (pois päältä, cullingMask 0) seuraavan pysähdyksen asennossa CesiumCameraManagerin
 // additionalCameras-listassa: Cesium valitsee laatat myös sen näkymään (native CameraManager ottaa myös pois päältä olevat).
-// ODOTUS: pysähdykseen saavutaan, kun kummankin tilesetin ComputeLoadProgress() ≥ 99 (tai aikaraja, LontooLento).
+// ODOTUS: pysähdykseen saavutaan, kun kummankin tilesetin ComputeLoadProgress() ≥ 99 (tai aikaraja, KierrosLento).
 using System;
 using System.IO;
 using CesiumForUnity;
 using Matkakirja.Linssit;
-using Matkakirja.Linssit.Lontoo;
+using Matkakirja.Linssit.Kierros;
 using Unity.Mathematics;
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
-    public sealed class LontooSovitin : ILinssi
+    public sealed class KierrosSovitin : ILinssi
     {
         /// <summary>Laattojen tarkkuus ja muistikatot (Lontoo-tutkimus 5.10.: SSE 32 → ~30 Mt siirtoa per kylmä lento).</summary>
         public const float MaastoSse = 16f, RakennusSse = 24f, GoogleSse = 16f;
@@ -42,9 +42,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Taivaan väri lennon ajaksi (pallon avaruuden musta ei sovi horisonttiin).</summary>
         static readonly Color Taivas = new Color(0.78f, 0.84f, 0.89f);
 
-        public static LontooSovitin Viimeisin { get; private set; }
+        public static KierrosSovitin Viimeisin { get; private set; }
         /// <summary>UI kuuntelee: lento alkoi (sovitin) tai loppui (null).</summary>
-        public static event Action<LontooSovitin> Vaihtui;
+        public static event Action<KierrosSovitin> Vaihtui;
         /// <summary>Kehitystunnuksen polku laitteella (ei repoon).</summary>
         public static string TunnusPolku => Path.Combine(Application.persistentDataPath, "cesium-ion-tunnus.txt");
         /// <summary>
@@ -58,7 +58,7 @@ namespace Matkakirja.Natiivi
         readonly LinssiOhjain o;
         readonly PalloKierto kierto;
         ILinssiYmparisto y;
-        LontooLento lento;
+        KierrosLento lento;
         GameObject juuri;
         Cesium3DTileset maasto, rakennukset;
         Camera esikamera, kamera;
@@ -72,10 +72,12 @@ namespace Matkakirja.Natiivi
         int paivitetty = -1;
         float avattu;
 
-        public LontooSovitin(LinssiOhjain o, PalloKierto kierto) { this.o = o; this.kierto = kierto; }
-        public LinssiTiedot Tiedot => LontooReitti.Tiedot;
+        readonly Kierros kierros;
+        public KierrosSovitin(LinssiOhjain o, PalloKierto kierto, Kierros kierros) { this.o = o; this.kierto = kierto; this.kierros = kierros; }
+        public Kierros Kierros => kierros;
+        public LinssiTiedot Tiedot => kierros.Tiedot;
         public bool Auki => lento != null;
-        public LontooLento Lento => lento;
+        public KierrosLento Lento => lento;
         /// <summary>Avauksen virhe (puuttuva tunnus); UI näyttää sen tilarivillä ja sulkee linssin.</summary>
         public string Virhe { get; private set; }
         /// <summary>Laattojen latausaste 0–100 (pienempi kahdesta tilesetistä), UI:n odotusriville ja lokiin.</summary>
@@ -91,16 +93,16 @@ namespace Matkakirja.Natiivi
             bool oma = data == Lahde.Oma;
             if (string.IsNullOrEmpty(tunnus) && !oma)
             {
-                Virhe = "Lontoo: Cesium ion -tunnus puuttuu";
+                Virhe = kierros.Tiedot.Nimi + ": Cesium ion -tunnus puuttuu";
                 Debug.LogWarning("MATKAKIRJA lontoo: ion-tunnus puuttuu (" + TunnusPolku + ")");
-                lento = new LontooLento(LontooReitti.Pysahdykset);   // Auki = true, jotta UI ehtii sulkea linssin siististi
+                lento = new KierrosLento(kierros.Pysahdykset);   // Auki = true, jotta UI ehtii sulkea linssin siististi
                 Vaihtui?.Invoke(this);
                 return;
             }
             avattu = Time.realtimeSinceStartup;
             georef = kierto != null ? kierto.georeferenssi : null;
             kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
-            if (georef == null || kamera == null) { Virhe = "Lontoo: pallon kamera puuttuu"; lento = new LontooLento(LontooReitti.Pysahdykset); Vaihtui?.Invoke(this); return; }
+            if (georef == null || kamera == null) { Virhe = kierros.Tiedot.Nimi + ": pallon kamera puuttuu"; lento = new KierrosLento(kierros.Pysahdykset); Vaihtui?.Invoke(this); return; }
 
             if (kierto != null) SyoteLukko.Esta(this);   // pelaajan veto ei katkaise kuvausta
             y.Pelikerrokset(false);
@@ -118,9 +120,9 @@ namespace Matkakirja.Natiivi
             kamera.clearFlags = CameraClearFlags.SolidColor; kamera.backgroundColor = Taivas;
 
             vanhaOrigo = new double3(georef.longitude, georef.latitude, georef.height);
-            georef.SetOriginLongitudeLatitudeHeight(LontooReitti.OrigoLon, LontooReitti.OrigoLat, LontooReitti.OrigoKorkeusM);
+            georef.SetOriginLongitudeLatitudeHeight(kierros.OrigoLon, kierros.OrigoLat, kierros.OrigoKorkeusM);
 
-            juuri = new GameObject("Lontoo");
+            juuri = new GameObject("Kierros " + kierros.Tiedot.Id);
             juuri.transform.SetParent(georef.transform, false);
             if (oma)
             {
@@ -152,7 +154,7 @@ namespace Matkakirja.Natiivi
             if (hallinta != null && !hallinta.additionalCameras.Contains(esikamera)) hallinta.additionalCameras.Add(esikamera);
 
             KarttaKerrokset.RuutukrediititNakyviin = true;
-            lento = new LontooLento(LontooReitti.Pysahdykset);
+            lento = new KierrosLento(kierros.Pysahdykset);
             lento.Saapui += i => o.Kirjaa($"lontoo: saapui {i + 1}/{lento.Reitti.Count} {lento.Reitti[i].Id} ({Time.realtimeSinceStartup - avattu:F1} s avauksesta)");
             if (o.GetComponent<KyydinKameraEnnen>() == null) o.gameObject.AddComponent<KyydinKameraEnnen>();
             KyydinKameraEnnen.Ajo = PaivitaKamera;

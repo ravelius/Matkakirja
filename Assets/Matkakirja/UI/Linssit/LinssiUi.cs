@@ -61,8 +61,8 @@ namespace Matkakirja.Natiivi
         public readonly LentopeliNakyma Lento;
         /// <summary>Poikkileikkaus-linssin opetustaulu ja Pulu (Linnanrakentaja, DioraamaSovitin.Vaihtui).</summary>
         public readonly DioraamaTaulu Dioraama;
-        /// <summary>Lontoo-pilotin näkymä (Linssiseppä 5.10.2026): avausruutu, pysähdyksen nimi ja kertojan teksti.</summary>
-        public readonly LontooTaulu Lontoo;
+        /// <summary>Kaupunkikierroksen näkymä (Linssiseppä 5.10.2026): avausruutu, pysähdyksen nimi ja kertojan teksti.</summary>
+        public readonly KierrosTaulu Kierros;
         /// <summary>Ajattelijat-linssin valinta, kuvanäkymä, lappu ja Pulu (AjattelijatSovitin.Muuttui).</summary>
         public readonly AjattelijaNakyma Ajattelija;
         /// <summary>Kehittäjän mikseripaneeli (linnan ja Cupolan kaiut, MikseriPaneeli.Lahde = Pelikoodari).</summary>
@@ -100,7 +100,7 @@ namespace Matkakirja.Natiivi
             Vuosi = new MaapallonVuosiNakyma(kerros);
             Lento = new LentopeliNakyma(kerros);
             Dioraama = new DioraamaTaulu(kerros);
-            Lontoo = new LontooTaulu(kerros);
+            Kierros = new KierrosTaulu(kerros);
             Ajattelija = new AjattelijaNakyma(kerros);
             Mikseri = new MikseriPaneeli(kerros);
 

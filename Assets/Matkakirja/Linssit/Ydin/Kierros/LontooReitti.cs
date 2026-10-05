@@ -2,7 +2,7 @@
 // tekstit docs/raportit/lontoo-kertojatekstit-20261005.md:stä (Päätoimittaja, sanatarkasti). Kehystys mitattiin CesiumJS 1.146
 // -esikatselussa (proto-3d/tyokalut/linssiseppa-ajot/lontoo-koe, World Terrain + Bing + OSM Buildings): kohde, maaston
 // korkeus ellipsoidista (World Terrain), katsesuunta, kallistus pystysuorasta (90° − esikatselun pitch) ja etäisyys.
-namespace Matkakirja.Linssit.Lontoo
+namespace Matkakirja.Linssit.Kierros
 {
     public static class LontooReitti
     {
@@ -25,11 +25,7 @@ namespace Matkakirja.Linssit.Lontoo
         };
 
         static Pysahdys P(string id, string nimi, string alarivi, double lat, double lon, double maa, double nosto,
-            double suuntima, double pitch, double etaisyys, string teksti) => new Pysahdys
-        {
-            Id = id, Nimi = nimi, Alarivi = alarivi, Lat = lat, Lon = lon, MaaM = maa, NostoM = nosto,
-            Suuntima = suuntima, Kallistus = 90 + pitch, EtaisyysM = etaisyys, Teksti = teksti,
-        };
+            double suuntima, double pitch, double etaisyys, string teksti) => Pysahdys.P(id, nimi, alarivi, lat, lon, maa, nosto, suuntima, pitch, etaisyys, teksti);
 
         public static readonly Pysahdys[] Pysahdykset =
         {
@@ -49,7 +45,10 @@ namespace Matkakirja.Linssit.Lontoo
               "The Mallin päässä on Buckinghamin palatsi, hallitsijan virka-asunto, ja sen edessä kuningatar Viktorian muistomerkki. Vuonna 1873 Viktoria hallitsi itse, mutta asui mieluummin Windsorissa, Osbornessa ja Balmoralissa. Palatsin ympärillä levittäytyvät St James's Park ja Green Park, Lontoon vihreät olohuoneet. Täältä matka jatkuu."),
         };
 
-        /// <summary>Georeferenssin origo lennon ajaksi: reitin keskikohta (float-tarkkuus ~1 mm koko reitillä).</summary>
-        public const double OrigoLat = 51.5040, OrigoLon = -0.0730, OrigoKorkeusM = 50;
+        public static readonly Kierros Kierros = new Kierros
+        {
+            Tiedot = Tiedot, Otsikko = "LONTOO", Alaotsikko = "GREENWICH – BUCKINGHAM",
+            OrigoLat = 51.5040, OrigoLon = -0.0730, OrigoKorkeusM = 50, Pysahdykset = Pysahdykset,
+        };
     }
 }

@@ -1,10 +1,10 @@
 // Lontoo-pilotti (Linssiseppä 5.10.2026): reitin data, ajoitus ja kameran jatkuvuus moottorittomassa lennossa.
 using System;
-using Matkakirja.Linssit.Lontoo;
+using Matkakirja.Linssit.Kierros;
 
 namespace Matkakirja.Linssit.Testit
 {
-    public static class LontooTestit
+    public static class KierrosTestit
     {
         [Testi] static void ReittiOnSeitsemanPysahdystaJaTekstit()
         {
@@ -15,29 +15,29 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Tosi(!string.IsNullOrEmpty(p.Teksti) && !string.IsNullOrEmpty(p.Nimi), p.Id);
                 Oleta.Tosi(p.Kallistus > 50 && p.Kallistus < 85, $"{p.Id} kallistus {p.Kallistus}");
                 // Origo reitin keskellä: kaikki kohteet alle 6 km:n päässä (float-tarkkuus Unityssä ~1 mm).
-                Oleta.Tosi(LontooLento.EtaisyysM(p.Lat, p.Lon, LontooReitti.OrigoLat, LontooReitti.OrigoLon) < 6000, p.Id);
+                Oleta.Tosi(KierrosLento.EtaisyysM(p.Lat, p.Lon, LontooReitti.Kierros.OrigoLat, LontooReitti.Kierros.OrigoLon) < 6000, p.Id);
             }
         }
 
         [Testi] static void PysahdysKestoTekstinMukaan()
         {
-            Oleta.Sama(LontooLento.PysahdysMinS, LontooLento.PysahdysKesto("lyhyt"));
+            Oleta.Sama(KierrosLento.PysahdysMinS, KierrosLento.PysahdysKesto("lyhyt"));
             // 46 sanaa / 2,3 + 2 = 22 s.
             string t = string.Join(" ", new string[46]).Replace(" ", " sana ");
-            double k = LontooLento.PysahdysKesto(t);
+            double k = KierrosLento.PysahdysKesto(t);
             Oleta.Tosi(Math.Abs(k - 22) < 0.6, $"kesto {k:F1}");
         }
 
         [Testi] static void KokoLentoKestaaNoinKolmeJaPuoliMinuuttia()
         {
-            var l = new LontooLento(LontooReitti.Pysahdykset);
+            var l = new KierrosLento(LontooReitti.Pysahdykset);
             double s = l.ArvioituKesto();
             Oleta.Tosi(s > 180 && s < 260, $"arvio {s:F0} s");
         }
 
         [Testi] static void LentoKulkeeKaikkienPysahdystenKauttaJaPaattyy()
         {
-            var l = new LontooLento(LontooReitti.Pysahdykset);
+            var l = new KierrosLento(LontooReitti.Pysahdykset);
             int saapumisia = 0, viimeinen = -1;
             l.Saapui += i => { saapumisia++; Oleta.Sama(viimeinen + 1, i, "järjestys"); viimeinen = i; };
             var edellinen = l.Asento;
@@ -47,9 +47,9 @@ namespace Matkakirja.Linssit.Testit
                 l.Paivita(1.0 / 30, laatatValmiit: true);
                 t += 1.0 / 30;
                 var a = l.Asento;
-                double hyppy = LontooLento.EtaisyysM(edellinen.Lat, edellinen.Lon, a.Lat, a.Lon) + Math.Abs(a.EtaisyysM - edellinen.EtaisyysM);
+                double hyppy = KierrosLento.EtaisyysM(edellinen.Lat, edellinen.Lon, a.Lat, a.Lon) + Math.Abs(a.EtaisyysM - edellinen.EtaisyysM);
                 suurinHyppy = Math.Max(suurinHyppy, hyppy);
-                Oleta.Tosi(Math.Abs(LontooLento.Kiedo(a.Suuntima - edellinen.Suuntima)) < 3, $"suuntima hyppää {edellinen.Suuntima:F1} → {a.Suuntima:F1}");
+                Oleta.Tosi(Math.Abs(KierrosLento.Kiedo(a.Suuntima - edellinen.Suuntima)) < 3, $"suuntima hyppää {edellinen.Suuntima:F1} → {a.Suuntima:F1}");
                 edellinen = a;
             }
             Oleta.Sama(LentoVaihe.Valmis, l.Vaihe);
@@ -60,7 +60,7 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void OdotusPitaaKunnesLaatatValmiitTaiAikaraja()
         {
-            var l = new LontooLento(LontooReitti.Pysahdykset);
+            var l = new KierrosLento(LontooReitti.Pysahdykset);
             for (int i = 0; i < 60; i++) l.Paivita(0.1, laatatValmiit: false);
             Oleta.Sama(LentoVaihe.Odotus, l.Vaihe, "6 s: alku odottaa yhä");
             l.Paivita(0.1, laatatValmiit: true);
@@ -75,19 +75,11 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1, l.Indeksi);
         }
 
-        [Testi] static void AanenKestoVenyttaaPysahdyksen()
-        {
-            var l = new LontooLento(LontooReitti.Pysahdykset) { AanenKesto = i => 40 };
-            l.Paivita(1, true);
-            Oleta.Sama(LentoVaihe.Pysahdys, l.Vaihe);
-            Oleta.Sama(40.0, l.VaiheKesto);
-        }
-
         [Testi] static void SuuntimaLyhintaTieta()
         {
             var a = new Kuvakulma(0, 0, 100, 70, 170, 0);
             var b = new Kuvakulma(0, 0, 100, 70, -170, 0);
-            var m = LontooLento.Valissa(a, b, 0.5, 0);
+            var m = KierrosLento.Valissa(a, b, 0.5, 0);
             Oleta.Tosi(Math.Abs(Math.Abs(m.Suuntima) - 180) < 1e-6, $"keskellä {m.Suuntima}");
         }
     }

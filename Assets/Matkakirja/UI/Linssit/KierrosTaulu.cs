@@ -5,25 +5,25 @@
 //    (alareunassa ovat kertojan laatikko ja Cesiumin krediitit).
 //  - Kertojan teksti: linnan kertojan laatikko mk-aikajana-kertomus (ääniä ei vielä ole, joten teksti näkyy PUHE ÄÄNENÄ -säännön mukaan).
 //  - Napautus missä tahansa: pysähdyksestä seuraavaan (kuten linnan kertojan jakso).
-using Matkakirja.Linssit.Lontoo;
+using Matkakirja.Linssit.Kierros;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Matkakirja.Natiivi
 {
-    public sealed class LontooTaulu
+    public sealed class KierrosTaulu
     {
         /// <summary>Loppuruudun kesto ennen linssin sulkua (s): mk-astroavaus--haipyy on 1,1 s.</summary>
         const float LoppuS = 1.3f;
 
         readonly VisualElement ruutu, nimiOtsikko, otsikko, kosketus, kertojaKehys, kertojaLaatikko;
         readonly Label ruudunNimi, ruudunAlarivi, nimi, alarivi, kertojaTeksti;
-        LontooSovitin sovitin;
+        KierrosSovitin sovitin;
         bool ruutuAuki, virheKasitelty;
         int naytettyPysahdys = -1;
         float loppuAlku = -1f;
 
-        public LontooTaulu(UiKerros kerros)
+        public KierrosTaulu(UiKerros kerros)
         {
             var yla = kerros.Juuri(LinssiUi.Ylakerros);
             // Napautusalue koko ruudulle (sulkunappi on ylemmässä kerroksessa).
@@ -57,16 +57,16 @@ namespace Matkakirja.Natiivi
             ruutu.style.display = DisplayStyle.None;
             nimiOtsikko = Rakenne.El("mk-astroavaus__otsikko", ruutu, PickingMode.Ignore);
             Kirjasimet.Aseta(nimiOtsikko, Kirjasin.Kone);
-            ruudunNimi = Rakenne.Teksti("LONTOO", "mk-astroavaus__nimi", nimiOtsikko);
+            ruudunNimi = Rakenne.Teksti("", "mk-astroavaus__nimi", nimiOtsikko);
             Kirjasimet.Aseta(ruudunNimi, Kirjasin.KoneLihava);
             Rakenne.El("mk-astroavaus__viiva", nimiOtsikko, PickingMode.Ignore);
-            ruudunAlarivi = Rakenne.Teksti("GREENWICH – BUCKINGHAM", "mk-astroavaus__lahde", nimiOtsikko);
+            ruudunAlarivi = Rakenne.Teksti("", "mk-astroavaus__lahde", nimiOtsikko);
 
-            LontooSovitin.Vaihtui += Kytke;
+            KierrosSovitin.Vaihtui += Kytke;
             kerros.JokaRuutu += Paivita;
         }
 
-        void Kytke(LontooSovitin s)
+        void Kytke(KierrosSovitin s)
         {
             sovitin = s;
             virheKasitelty = false;
@@ -77,7 +77,7 @@ namespace Matkakirja.Natiivi
             kertojaKehys.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;
             kertojaLaatikko.EnableInClassList("mk-nakyy", false);
             otsikko.style.opacity = 0f;
-            if (auki) NaytaRuutu(true, heti: true);
+            if (auki) { ruudunNimi.text = s.Kierros.Otsikko; ruudunAlarivi.text = s.Kierros.Alaotsikko; NaytaRuutu(true, heti: true); }
             else { ruutuAuki = false; ruutu.style.display = DisplayStyle.None; }
         }
 

@@ -126,7 +126,7 @@ namespace Matkakirja.Natiivi
         MaapallonVuosiSovitin vuosi;
         AjattelijatSovitin ajattelijat;
         DioraamaSovitin poikki;
-        LontooSovitin lontoo;
+        KierrosSovitin lontoo;
         Linssirekisteri rekisteri;
 
         /// <summary>PlayerPrefs-avain astronautin reliefin kylläisyydelle (Natiivi-UI:n kehittäjävalikko).</summary>
@@ -242,7 +242,7 @@ namespace Matkakirja.Natiivi
             // Ajattelijat (Linssiseppä 2, 2.10.2026; web #3839/#3840): vain kehittäjätilassa (ei avauskynnystä).
             rekisteri.Lisaa(ajattelijat = new AjattelijatSovitin(this));
             // Lontoo-pilotti (Linssiseppä 5.10.2026, omistaja 16.3x): vain natiivi, kehittäjätilassa (Cesium ion -lento).
-            rekisteri.Lisaa(lontoo = new LontooSovitin(this, k));
+            rekisteri.Lisaa(lontoo = new KierrosSovitin(this, k, Matkakirja.Linssit.Kierros.LontooReitti.Kierros));
             StartCoroutine(LataaLinssitJoutilaana());
             StartCoroutine(LammitaFontti());
             rekisteri.Vaihtui += l => Kirjaa("auki: " + (l?.Tiedot.Id ?? "ei mitään"));
@@ -2004,7 +2004,7 @@ namespace Matkakirja.Natiivi
                 else if (osat[0] == "lontoo")
                 {
                     if (osat.Length > 1 && osat[1] == "ohita") lontoo?.Ohita();
-                    else if (osat.Length > 2 && osat[1] == "data" && Enum.TryParse<LontooSovitin.Lahde>(osat[2], true, out var ld)) LontooSovitin.Data = ld;
+                    else if (osat.Length > 2 && osat[1] == "data" && Enum.TryParse<KierrosSovitin.Lahde>(osat[2], true, out var ld)) KierrosSovitin.Data = ld;
                     Kirjaa(lontoo?.Tila() ?? "lontoo: ei sovitinta");
                 }
                 else if (osat[0] == "poikki")
