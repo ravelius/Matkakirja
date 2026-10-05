@@ -27,6 +27,9 @@ namespace Matkakirja.Natiivi
         public static string KorttiTila;
         /// <summary>Yleisnäkymän nimilaput näkyvissä (napautus tyhjään vaihtaa; omistaja 5.10. 23.0x: vain pelaajan napautuksesta).</summary>
         public static bool LaputNakyvissa;
+        /// <summary>Huoneen nimi saapuessa: näkyy NimiS, häivytys NimiHaivytysS (omistaja 5.10. 23.1x).</summary>
+        public const float NimiS = 3f, NimiHaivytysS = 0.6f;
+        string saapumisTila; float saapumisHetki, nimiAlfa = 1f;
         readonly Label otsikko, teksti, lainaus, lahde, laskuri, seuraava, puhuja;
         readonly LiviaKuva pulu;
         readonly List<Label> laput = new List<Label>();
@@ -891,7 +894,15 @@ namespace Matkakirja.Natiivi
             var info = tila.Infotaulu;
             // OMISTAJA 5.10. 23.0x ("kappeli teksti on turha ja häiritsevä … info kylttejä vain jos pelaaja klikkaa jotain"):
             // huonekortti vain, kun pelaaja on napauttanut tässä huoneessa (KorttiTila, DioraamaSyote); kuunnelma ja Pulu jatkuvat.
-            bool korttiNakyy = perilla && KorttiTila == tila.Id;
+            // Tarkennus 23.1x ("kappeli nimi saisi vain olla hetken ja sitten hävitä"): saapuessa nimi (tiivis otsikkorivi) NimiS
+            // ja häivytys NimiHaivytysS, sitten pois; täysi kortti vain napautuksesta.
+            if (!perilla) saapumisTila = null;
+            else if (saapumisTila != tila.Id) { saapumisTila = tila.Id; saapumisHetki = Time.unscaledTime; }
+            float nimiIka = Time.unscaledTime - saapumisHetki;
+            bool pyydetty = KorttiTila == tila.Id;
+            nimiAlfa = pyydetty ? 1f : 1f - Mathf.Clamp01((nimiIka - NimiS) / NimiHaivytysS);
+            bool korttiNakyy = perilla && (pyydetty || nimiAlfa > 0f);
+            if (perilla && !pyydetty && nimiIka < NimiS + NimiHaivytysS) Matkakirja.Ruudunpaivitys.Herata(0.25f);   // häivytys etenee myös kevyessä tilassa
             lauta.style.display = korttiNakyy ? DisplayStyle.Flex : DisplayStyle.None;
             lauta.style.opacity = perilla ? 1f : 0f;
             lauta.style.translate = new Translate(0, perilla ? 0 : 8);
@@ -934,7 +945,7 @@ namespace Matkakirja.Natiivi
             // vartalot ja eleet näkyviin): KuunnelmaKaistale.Keskustelu (Siirtoseppä; tosi myös vuorojen välitauoilla) → kortista
             // jää otsikkorivi näyttämön yläreunaan keskelle, teksti, lainaus ja osoitinviiva piiloon; täysi kortti palaa keskustelun
             // jälkeen. Vaihto häivyttäen 200 ms (--tk-kesto-sulku).
-            bool tiivis = KuunnelmaKaistale.Keskustelu;
+            bool tiivis = KuunnelmaKaistale.Keskustelu || KorttiTila != tila.Id;   // pyytämättä vain nimi (otsikkorivi)
             if (tiivis != korttiTiivis) { korttiTiivis = tiivis; tiivisVaihto = Time.unscaledTime; }
             if (tiivis)
             {
@@ -945,8 +956,8 @@ namespace Matkakirja.Natiivi
                 y = 12f + (Screen.height - Screen.safeArea.yMax) * skT;
                 kohdeRuutu = null;
             }
-            lauta.style.opacity = Mathf.Clamp01((Time.unscaledTime - tiivisVaihto) / 0.2f);
-            if (lauta.style.opacity.value < 1f) Matkakirja.Ruudunpaivitys.Herata(0.25f);
+            lauta.style.opacity = Mathf.Clamp01((Time.unscaledTime - tiivisVaihto) / 0.2f) * nimiAlfa;
+            if (lauta.style.opacity.value < 1f && nimiAlfa > 0f) Matkakirja.Ruudunpaivitys.Herata(0.25f);
             lauta.style.left = x; lauta.style.top = y;
             if (korttiViiva != null)
             {
