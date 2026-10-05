@@ -25,6 +25,7 @@
 #   veto <x1> <y1> <x2> <y2> [kesto_s]  pyyhkäisy;  polku x,y[,dt_ms] …  vapaa veto
 #   odota <s>
 #   oleta <s> <regex> [-- selite]       odottaa lokiriviä edellisen askeleen jälkeen → polkutaulukkoon OK/PUUTE
+#   ei-oleta <s> <regex> [-- selite]   lokiin EI saa tulla riviä s sekunnissa (esim. selite ei soi itsestään)
 #   palaute <s> <regex> -- <palaute>    sama, mutta kohtaan 6 (aiempi palaute tarkistettu)
 #   nakyy <s> <teksti> [-- selite]      tila UI-puusta: näkyvä elementti, jonka teksti/nimi sisältää tekstin (ilman lokiriviä)
 #   ei-nay <s> <teksti> [-- selite]     sama käänteisenä (esim. ohinapautus sulki paneelin)
@@ -168,6 +169,14 @@ while IFS= read -r rivi || [[ -n $rivi ]]; do
         [[ $sana == oleta ]] && { napautus_kirjaus "  oletus: ${selite:-$ehto}" "PUUTE: ei riviä ${s} s:ssa"; tulos 2 PUUTE "${selite:-$ehto}: ei lokiriviä"; } \
           || tulos 6 PUUTE "$selite — ei riviä /$ehto/"
       fi ;;
+    ei-oleta)
+      # Negatiivinen oletus: lokiin EI saa tulla riviä s sekunnissa (esim. selite ei soi itsestään).
+      s=${loput%% *}; ehto=${loput#* }; selite=""
+      [[ $ehto == *" -- "* ]] && { selite=${ehto#* -- }; ehto=${ehto%% -- *}; }
+      if odota_rivi "$ehto" $s $VIIM; then
+        osuma=$(tail -n +$(( VIIM + 1 )) $LOKI | grep -a -m1 -E -- "$ehto" | sed 's/.*MATKAKIRJA //' | cut -c1-160)
+        napautus_kirjaus "  ei-oletus: ${selite:-$ehto}" "PUUTE: $osuma"; tulos 2 PUUTE "${selite:-$ehto}: rivi tuli ($osuma)"
+      else napautus_kirjaus "  ei-oletus: ${selite:-$ehto}" "OK: ei riviä ${s} s:ssa"; fi ;;
     nakyy|ei-nay)
       s=${loput%% *}; ehto=${loput#* }; selite=""
       [[ $ehto == *" -- "* ]] && { selite=${ehto#* -- }; ehto=${ehto%% -- *}; }

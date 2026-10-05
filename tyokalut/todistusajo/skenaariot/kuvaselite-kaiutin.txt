@@ -1,0 +1,20 @@
+# Kuvaselitteen kaiutin (pelikoodari/lukija-william): selite EI soi itsestään; striimilukijan kaiutin (oikea tap) soittaa
+# Williamin (worker #3996). Stillit lepo + soi (Päätoimittajan ehto ennen junaa 144). Ei Macin kaiuttimiin (mykistys tarkistetaan).
+linssi linssi astronautti
+odota 20
+ui linssi kuva
+oleta 40 kuvaselite -- kuvanäkymä auki
+odota 4
+ei-oleta 12 kuvaselite luetaan|ui lukija: aloita -- selite ei soi itsestään
+ui linssi kuvaselite tila
+oleta 5 lukija näkyy -- striimilukija näkyy otsikkorivillä
+kuva k1-lepo Kuvaselite, lukija levossa (ei luentaa)
+tap-teksti mk-lukija--kortti
+oleta 20 ui lukija: aloita -- kaiutin aloitti luennan
+aani 10 selite
+kuva k2-soi Kuvaselite, lukija soi (VU)
+ui linssi kuvaselite tila
+oleta 5 luenta (soi|latautuu) -- luenta käynnissä
+tap-teksti mk-lukija--kortti
+odota 2
+linssi linssi pois
