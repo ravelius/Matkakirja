@@ -155,7 +155,12 @@ namespace Matkakirja.Natiivi
             var kv = valikko?.GetField("KohdeValittu", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
             if (kv != null && kv.FieldType == typeof(Action<string, double, double>))
                 kv.SetValue(null, paalle ? (Action<string, double, double>)((n, la, lo) => VaihdaKaupunki(n, la, lo)) : null);
-            valikko?.GetMethod("Nayta", new[] { typeof(bool) })?.Invoke(null, new object[] { paalle });
+            var nayta = valikko?.GetMethod("Nayta", new[] { typeof(bool) });
+            if (nayta != null)
+            {
+                object olio = nayta.IsStatic ? null : valikko.GetMethod("Hae", Type.EmptyTypes)?.Invoke(null, null);
+                if (nayta.IsStatic || olio != null) nayta.Invoke(olio, new object[] { paalle });
+            }
             var kentta = typeof(PuluChat).GetField("Sieppaa", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
             if (kentta == null || kentta.FieldType != typeof(Func<string, bool>)) return;
             if (paalle) { vanhaSieppaus = kentta.GetValue(null) as Delegate; kentta.SetValue(null, (Func<string, bool>)Toive); }
