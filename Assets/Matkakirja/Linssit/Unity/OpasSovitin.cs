@@ -185,7 +185,9 @@ namespace Matkakirja.Natiivi
             silmukka.AlkaaPuhua += AlkaaPuhua;
             if (o.GetComponent<KyydinKameraEnnen>() == null) o.gameObject.AddComponent<KyydinKameraEnnen>();
             KyydinKameraEnnen.Ajo = PaivitaKamera;
-            silmukka.Aloita(Aloituskaupunki);
+            // TÄKYAVAUS (omistaja TF 144): kun UI näyttää täkyluettelon (TakyAvaus), opas ei pyydä mitään ennen pelaajan valintaa.
+            if (TakyAvaus && !Testi) { takyt = null; o.StartCoroutine(LataaTakyt()); }
+            else silmukka.Aloita(Aloituskaupunki);
             PaivitaKamera();
             Vaihtui?.Invoke(this);
             o.Kirjaa($"opas: auki, data {kaupunki.Kaytossa}, {(Testi ? "TESTI (ei workeria)" : "worker " + PuluChat.Palvelin + Polku)}{(PolloTestitunnus.Asetettu ? ", testitunnus asetettu" : "")}");
@@ -222,7 +224,7 @@ namespace Matkakirja.Natiivi
         {
             if (silmukka == null || Virhe != null || paivitetty == Time.frameCount) return;
             paivitetty = Time.frameCount;
-            bool loppui = pcmNyt != null ? pcmNyt.Loppui : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying);
+            bool loppui = !tauolla && (pcmNyt != null ? pcmNyt.Loppui : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying));
             if (puhuu && loppui)
             {
                 if (pcmNyt != null) { if (pcmNyt.Katkoja > 0) o.Kirjaa($"opas: PCM-virrassa {pcmNyt.Katkoja} katkoa"); pcmNyt = null; if (puhe != null) puhe.Stop(); }
@@ -235,7 +237,7 @@ namespace Matkakirja.Natiivi
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
             LueTapit();
-            if (pelaajanToimi > 0 && !puhuu && Time.unscaledTime - pelaajanToimi > OdotusLauseS) { pelaajanToimi = -1f; Silta(OpasSiltalauseet.Odotus, false); }
+            if (!tauolla && pelaajanToimi > 0 && !puhuu && Time.unscaledTime - pelaajanToimi > OdotusLauseS) { pelaajanToimi = -1f; Silta(OpasSiltalauseet.Odotus, false); }
             silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => kaupunki.Valmis);
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
@@ -255,6 +257,69 @@ namespace Matkakirja.Natiivi
         {
             if (Testi) { o.StartCoroutine(TestiVastaus(n)); return; }
             o.StartCoroutine(Hae(n, toive));
+        }
+
+        // ---- TAUKO JA TÄKYLUETTELO (omistaja TF 144, juna 146; UI Natiivi-UI heijastuksella) ----
+        /// <summary>UI asettaa true, kun se näyttää täkyluettelon avauksessa; muuten opas alkaa kuten ennen (vanha UI).</summary>
+        public static bool TakyAvaus;
+        /// <summary>Täkyt (null = latautuu, tyhjä = ei saatu); UI lukee avauksessa.</summary>
+        public static IReadOnlyList<OpasTaky> Takyt => Viimeisin?.takyt;
+        public static bool Tauolla => Viimeisin != null && Viimeisin.tauolla;
+        List<OpasTaky> takyt;
+        bool tauolla;
+        float taukoAlku;
+
+        /// <summary>Pause (UI:n II/▶): kerronta, siltalause, lento ja kierto seis; jatka palauttaa ne kohdasta. true = otettu oppaalle.</summary>
+        public static bool Tauko(bool paalle)
+        {
+            if (!Auki) return false;
+            var v = Viimeisin;
+            if (v.tauolla == paalle) return true;
+            v.tauolla = paalle; v.silmukka.Tauolla = paalle;
+            if (paalle)
+            {
+                v.taukoAlku = Time.unscaledTime;
+                v.puhe?.Pause(); v.silta?.Pause();
+                if (v.nimiSoitto != null) { v.o.StopCoroutine(v.nimiSoitto); v.nimiSoitto = null; }
+            }
+            else
+            {
+                float kesto = Time.unscaledTime - v.taukoAlku;
+                if (v.puheLoppuu < float.MaxValue) v.puheLoppuu += kesto;   // klipin loppu siirtyy tauon verran
+                if (v.pelaajanToimi > 0) v.pelaajanToimi += kesto;
+                v.puhe?.UnPause(); v.silta?.UnPause();
+            }
+            v.o.Kirjaa($"opas: {(paalle ? "tauko" : "jatkuu")}");
+            return true;
+        }
+
+        /// <summary>Pelaajan täkyvalinta: opas alkaa (tai siirtyy) kohteen kaupunkiin ja pyytää kohteen. true = otettu oppaalle.</summary>
+        public static bool Valitse(OpasTaky t)
+        {
+            if (!Auki || t == null || string.IsNullOrEmpty(t.Nimi)) return false;
+            var v = Viimeisin;
+            if (!string.IsNullOrEmpty(t.Kaupunki)) Aloituskaupunki = t.Kaupunki;
+            v.pakotettuSijainti = (t.Lat, t.Lon);
+            v.o.Kirjaa($"opas: täky valittu {t.Nimi} ({t.Kaupunki}, {t.Iso2})");
+            if (v.tauolla) Tauko(false);
+            v.silmukka.Toive(t.Nimi);
+            v.Silta(OpasSiltalauseet.Kuittaus, true);
+            return true;
+        }
+        /// <summary>Kuten Valitse(OpasTaky) luettelon indeksillä (heijastuksen helpottamiseksi).</summary>
+        public static bool Valitse(int indeksi) => Takyt != null && indeksi >= 0 && indeksi < Takyt.Count && Valitse(Takyt[indeksi]);
+
+        IEnumerator LataaTakyt()
+        {
+            using var r = UnityWebRequest.Get(PuluChat.Palvelin + "/opas/kohteet");
+            r.timeout = 20;
+            r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+            r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
+            PolloTestitunnus.Lisaa(r);
+            yield return r.SendWebRequest();
+            if (silmukka == null) yield break;
+            takyt = r.result == UnityWebRequest.Result.Success ? OpasTaky.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : new List<OpasTaky>();
+            o.Kirjaa($"opas: täkyt {takyt.Count} ({(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
         }
 
         // ---- MAIDEN JA KAUPUNKIEN NIMET (juna 146; Ydin OpasNimiaanet) ----
@@ -674,7 +739,8 @@ namespace Matkakirja.Natiivi
 
         IEnumerator TekstiLoppuu(double s, OpasKohde k)
         {
-            yield return new WaitForSecondsRealtime((float)s);
+            double t = 0;
+            while (t < s) { if (!tauolla) t += Time.unscaledDeltaTime; yield return null; }   // tauko pysäyttää myös tekstikappaleen
             if (silmukka != null && tekstina == k && !puhuu) { tekstina = null; silmukka.AaniLoppui(); }
         }
 
@@ -783,7 +849,7 @@ namespace Matkakirja.Natiivi
                 y?.Pelikerrokset(true);
                 y?.MusiikkiPitoon(false);
             }
-            silmukka = null; paivitetty = -1; Virhe = null; puhuu = false;
+            silmukka = null; paivitetty = -1; Virhe = null; puhuu = false; tauolla = false; takyt = null;
             foreach (var k in klipit.Values) if (k != null) UnityEngine.Object.Destroy(k);
             klipit.Clear();
             pcmVirrat.Clear(); pcmNyt = null;

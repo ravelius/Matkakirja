@@ -89,3 +89,35 @@ namespace Matkakirja.Linssit.Kierros
         }
     }
 }
+
+namespace Matkakirja.Linssit.Kierros
+{
+    /// <summary>
+    /// TÄKY (omistaja TF 144, juna 146): linssi alkaa noin 8 kiinnostavimman kohteen luettelolla (Pöllö GET /opas/kohteet, päivittäin
+    /// vaihtuva, koko maailma, painotus Googlen 3D-kaupunkeihin): nimi, yksi koukkurivi, kaupunki, maa (alpha-2), sijainti, kuva.
+    /// </summary>
+    public sealed class OpasTaky
+    {
+        public string Id, Nimi, Koukku, Kaupunki, Iso2, Alarivi, KuvaUrl, KuvaTekija, KuvaLisenssi;
+        public double Lat, Lon;
+
+        /// <summary>{"paiva", "kohteet": [{id, nimi, koukku, kaupunki, maa, lat, lon, alarivi, kuva: {url, tekija, lisenssi} | null}]}</summary>
+        public static List<OpasTaky> Lue(Dictionary<string, object> j)
+        {
+            var r = new List<OpasTaky>();
+            if (j == null || !j.TryGetValue("kohteet", out var ko) || !(ko is IList<object> l)) return r;
+            foreach (var x in l)
+            {
+                if (!(x is Dictionary<string, object> d)) continue;
+                string S(Dictionary<string, object> dd, string k) => dd != null && dd.TryGetValue(k, out var v) ? v as string : null;
+                double D(string k) => d.TryGetValue(k, out var v) && v != null ? Convert.ToDouble(v, System.Globalization.CultureInfo.InvariantCulture) : double.NaN;
+                var t = new OpasTaky { Id = S(d, "id"), Nimi = S(d, "nimi"), Koukku = S(d, "koukku"), Kaupunki = S(d, "kaupunki"), Iso2 = S(d, "maa"),
+                    Alarivi = S(d, "alarivi"), Lat = D("lat"), Lon = D("lon") };
+                if (d.TryGetValue("kuva", out var ku) && ku is Dictionary<string, object> kd) { t.KuvaUrl = S(kd, "url"); t.KuvaTekija = S(kd, "tekija"); t.KuvaLisenssi = S(kd, "lisenssi"); }
+                if (string.IsNullOrEmpty(t.Nimi) || double.IsNaN(t.Lat) || double.IsNaN(t.Lon) || Math.Abs(t.Lat) > 90 || Math.Abs(t.Lon) > 180) continue;
+                r.Add(t);
+            }
+            return r;
+        }
+    }
+}

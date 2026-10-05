@@ -47,6 +47,29 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("B", s.Nykyinen?.Id, "valinta vie eteenpäin");
         }
 
+        [Testi] static void TaukoPysayttaaLennonJaKierron()
+        {
+            var (s, p) = Uusi();
+            s.Vastaus(p[^1].n, K("A", 55.6900, 12.6000));
+            for (int i = 0; i < 20; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama(OpasVaihe.Lentaa, s.Vaihe);
+            s.Tauolla = true;
+            var ennen = s.Asento; double aika = s.VaiheAika;
+            for (int i = 0; i < 300; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Asento.Lat == ennen.Lat && s.Asento.Suuntima == ennen.Suuntima && s.VaiheAika == aika, "tauolla ei liiku");
+            s.Tauolla = false;
+            for (int i = 0; i < 400 && s.Vaihe == OpasVaihe.Lentaa; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Sama("A", s.Nykyinen?.Id); Oleta.Tosi(s.Vaihe != OpasVaihe.Lentaa, "jatkuu tauon jälkeen");
+        }
+
+        [Testi] static void TakytLuetaan()
+        {
+            var t = OpasTaky.Lue((Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna(
+                "{\"paiva\":\"2026-10-06\",\"kohteet\":[{\"id\":\"Q1\",\"nimi\":\"Canal Grande\",\"koukku\":\"Kaupunki vedellä.\",\"kaupunki\":\"Venetsia\",\"maa\":\"IT\",\"lat\":45.43,\"lon\":12.33,\"kuva\":{\"url\":\"u\"}},"
+                + "{\"nimi\":\"rikki\",\"lat\":95,\"lon\":0}]}"));
+            Oleta.Sama(1, t.Count); Oleta.Tosi(t[0].Iso2 == "IT" && t[0].Kaupunki == "Venetsia" && t[0].KuvaUrl == "u");
+        }
+
         [Testi] static void KierrosJatkaaItse()
         {
             var (s, p) = Uusi();

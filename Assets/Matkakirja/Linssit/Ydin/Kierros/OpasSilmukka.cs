@@ -227,8 +227,14 @@ namespace Matkakirja.Linssit.Kierros
         }
 
         /// <summary>Käynnistys: ensimmäinen pyyntö (alkutoive, esim. "Kööpenhamina").</summary>
+        /// <summary>Pelaajan tauko: Paivita ei etene (ei lentoa, kiertoa eikä seuraavaa); sovitin pysäyttää äänet.</summary>
+        public bool Tauolla;
+        /// <summary>Ensimmäinen pyyntö on lähetetty (Aloita, toive tai paikan vaihto); täkyavauksessa vasta pelaajan valinnasta.</summary>
+        public bool Aloitettu { get; private set; }
+
         public void Aloita(string alkutoive)
         {
+            Aloitettu = true;
             toive = alkutoive;
             UusiPyynto();
         }
@@ -261,6 +267,7 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Pelaajan toiminta: luovutus puretaan (uusi yritys), mutta kesken oleva virhetauko odotetaan loppuun.</summary>
         void PelaajanPyynto()
         {
+            Aloitettu = true;
             Luovutti = false; Virheita = 0;
             if (VirheTauko > 0) { odotettu = 0; virhe = true; return; }
             UusiPyynto();
@@ -333,7 +340,7 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         public void Paivita(double dt, Func<OpasKohde, double> maaKorkeus, Func<bool> laatatValmiit = null)
         {
-            if (Vaihe == OpasVaihe.Valmis) return;
+            if (Vaihe == OpasVaihe.Valmis || Tauolla) return;   // tauko: kerronta, lento ja kierto seis (omistaja TF 144)
             VaiheAika += Math.Max(0, dt);
             if (Luovutti) return;
             ohjausLepoS = PelaajaOhjaa ? 0 : (ohjausLepoS == double.MaxValue ? ohjausLepoS : ohjausLepoS + Math.Max(0, dt));
