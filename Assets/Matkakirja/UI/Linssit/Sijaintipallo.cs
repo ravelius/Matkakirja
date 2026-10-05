@@ -523,8 +523,13 @@ namespace Matkakirja.Natiivi
             }
         }
 
+        /// <summary>NIMIKYLTTI (omistaja 5.10.2026, juna 146): pallon nimi ~3 s kohteen vaihtuessa, sitten se häipyy.</summary>
+        IVisualElementScheduledItem nimiPiiloon;
+
         void NaytaNimi(bool nakyy, bool heti)
         {
+            nimiPiiloon?.Pause();
+            if (nakyy) nimiPiiloon = nimiLaatikko.schedule.Execute(() => NaytaNimi(false, false)).StartingIn(Nimikyltti.NakyyMs);
             if (nakyy == nimiNakyy && !heti) return;
             nimiNakyy = nakyy;
             if (nakyy) { nimiLaatikko.style.display = DisplayStyle.Flex; nimiLaatikko.BringToFront(); }

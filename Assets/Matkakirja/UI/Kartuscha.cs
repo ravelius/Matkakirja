@@ -47,6 +47,17 @@ namespace Matkakirja.Natiivi
         /// <summary>Pelaajan todellinen maa testimaan asetushetkellä: kun se vaihtuu, testi raukeaa.</summary>
         string testinTodellinen;
         bool auki, sallittu = true, sijatAuki;
+        readonly Nimikyltti kyltti;
+        string kylttiKaupunki;
+
+        /// <summary>Pelaajan nykyinen kaupunki (saapuminen tuo nimikyltin esiin), muuten null.</summary>
+        static string NykyinenKaupunki()
+        {
+            var o = PeliOhjain.Instanssi;
+            if (o == null || o.Matka == null) return null;
+            var s = o.Matka.Tila.Pelaaja.Sijainti;
+            return s.Kaupungissa ? s.Kaupunki?.ToString() : null;
+        }
 
         public Kartuscha(UiKerros kerros)
         {
@@ -56,6 +67,8 @@ namespace Matkakirja.Natiivi
             kortti = Rakenne.El("mk-kartuscha", turva, PickingMode.Ignore);
             kortti.style.display = DisplayStyle.None;
             Kirjasimet.Aseta(kortti, Kirjasin.Kone);
+            // NIMIKYLTTI (omistaja 5.10.2026, juna 146): maan nimi näkyy saapuessa ~3 s ja häivytetään; avattuna pysyy.
+            kyltti = new Nimikyltti(kortti);
 
             // Ylhäältä alas (web): masto (nimi + lippu, viiva, alarivi) ja sen alla sisus (rivit, aiheet).
             masto = Rakenne.Nappi(null, "mk-kartuscha__masto", Vaihda, kortti);
@@ -213,7 +226,13 @@ namespace Matkakirja.Natiivi
             // testin KREIKKA jäi kartalle Lontooseen ja lennolle (Laitetestaaja 24.9., 161fa35).
             if (testiIso != null && uusi != testinTodellinen) { testiIso = null; if (auki) Sulje(); }
             if (testiIso != null) uusi = testiIso;
-            if (uusi == iso) return;
+            string kaupunki = NykyinenKaupunki();
+            if (uusi == iso)
+            {
+                // Saapuminen saman maan toiseen kaupunkiin: kyltti esiin uudelleen ~3 s.
+                if (iso != null && kaupunki != kylttiKaupunki) { kylttiKaupunki = kaupunki; kyltti.Nayta(); }
+                return;
+            }
             // Maa vaihtui: auki jäänyt kortti ei siirry uuteen maahan auki.
             if (auki && testiIso == null) Sulje();
             iso = uusi;
@@ -229,6 +248,8 @@ namespace Matkakirja.Natiivi
             Mediarivi.AsetaRadionMaa(radio, iso, mt?.Nimi ?? iso);
             Asettele();
             kortti.style.display = DisplayStyle.Flex;
+            kylttiKaupunki = kaupunki;
+            kyltti.Nayta();
         }
 
         /// <summary>
@@ -644,6 +665,7 @@ namespace Matkakirja.Natiivi
         {
             if (auki || iso == null) return;
             auki = true;
+            kyltti.Pida(true);
             float h0 = kortti.layout.height;
             Liike?.Pause(); Vapauta();
             kortti.AddToClassList("mk-auki");
@@ -688,6 +710,7 @@ namespace Matkakirja.Natiivi
         {
             if (!auki) return;
             auki = false;
+            kyltti.Pida(false);
             if (aalto != null) aalto.Nakyy = false; // löydös 144: ei aaltoa kiinni
             NollaaNimenSovitus(); // löydös 143b
             sijatAuki = false;

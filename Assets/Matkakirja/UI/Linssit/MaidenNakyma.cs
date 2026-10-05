@@ -36,6 +36,7 @@ namespace Matkakirja.Natiivi
     {
         readonly UiNakymat ui;
         readonly VisualElement palkki, kyltti, kylttiLippu, arkki, arkinYlarivi, kortit, kayrat;
+        readonly Nimikyltti kylttiHaivytys;
         readonly Label kylttiNimi, kylttiLehti;
         VertailuLinssi vertailu;
         MaatiedotLinssi maatiedot;
@@ -85,6 +86,8 @@ namespace Matkakirja.Natiivi
             kylttiLehti = Rakenne.Teksti("Lue lehti ›", "mk-maakyltti__lehti", kyltti);
             // Linssipariteetti rivi 41 (web .maa-pilleri): yksi rivi, lippu + NIMI; koko pilleri avaa lehden.
             kylttiLehti.style.display = DisplayStyle.None;
+            // NIMIKYLTTI (omistaja 5.10.2026, juna 146): maan valinta tuo kyltin ~3 s:ksi, sitten se häipyy.
+            kylttiHaivytys = new Nimikyltti(kyltti);
 
             // Vertailuarkki pelidialogien tasolla (koko ruutu, ottaa kosketukset).
             arkki = Rakenne.El("mk-vertailuarkki", kerros.Juuri(LinssiUi.Ylakerros));
@@ -346,12 +349,13 @@ namespace Matkakirja.Natiivi
         void NaytaKyltti(Maa m)
         {
             kylttiMaa = m;
-            if (m == null) { kyltti.style.display = DisplayStyle.None; return; }
+            if (m == null) { kyltti.style.display = DisplayStyle.None; kylttiHaivytys.Nollaa(); return; }
             kylttiNimi.text = (m.Nimi ?? m.Id).ToUpperInvariant();
             // Web .maa-pilleri: ei "Lue lehti" -riviä; koko pilleri avaa lehden (AvaaLehti).
             AsetaLippu(kylttiLippu, m, 16f);
             Asettele();
             kyltti.style.display = DisplayStyle.Flex;
+            kylttiHaivytys.Nayta();
         }
 
         static void AsetaLippu(VisualElement e, Maa m, float korkeus)
