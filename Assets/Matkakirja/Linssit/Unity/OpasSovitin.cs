@@ -78,7 +78,11 @@ namespace Matkakirja.Natiivi
         {
             if (!Auki || string.IsNullOrWhiteSpace(teksti)) return false;
             Viimeisin.o.Kirjaa("opas: toive \"" + teksti.Trim() + "\"");
-            Viimeisin.silmukka.Toive(teksti);
+            var v = Viimeisin;
+            var kys = v.silmukka.OdottaaVastausta && v.viimeKysymys != null ? v.viimeKysymys : v.silmukka.Nykyinen;
+            string ryhma = OpasSiltalauseet.RyhmaToiveelle(teksti, kys?.Vaihtoehdot, kys?.VaihtoehtojenRyhmat);
+            v.silmukka.Toive(teksti);
+            v.Silta(ryhma, true);
             return true;
         }
 
@@ -93,6 +97,7 @@ namespace Matkakirja.Natiivi
             Viimeisin.pakotettuSijainti = (lat, lon);
             Viimeisin.o.Kirjaa($"opas: kaupunki vaihtuu → {Aloituskaupunki} ({lat:F3}, {lon:F3})");
             Viimeisin.silmukka.VaihdaPaikka();
+            Viimeisin.Silta(OpasSiltalauseet.Kaupunki, true);
             return true;
         }
         (double lat, double lon)? pakotettuSijainti;
@@ -158,6 +163,13 @@ namespace Matkakirja.Natiivi
             silmukka.Saapui += Saapui;
             silmukka.Hiljenna += Hiljenna;
             silmukka.Kysyy += Kysyy;
+            silmukka.LentoAlkaa += LentoAlkoi;
+            if (silta == null)
+            {
+                silta = o.gameObject.AddComponent<AudioSource>();
+                silta.playOnAwake = false; silta.spatialBlend = 0f; silta.loop = false;
+            }
+            if (siltalauseet == null && !Testi) o.StartCoroutine(LataaSiltalauseet());
             silmukka.AlkaaPuhua += AlkaaPuhua;
             if (o.GetComponent<KyydinKameraEnnen>() == null) o.gameObject.AddComponent<KyydinKameraEnnen>();
             KyydinKameraEnnen.Ajo = PaivitaKamera;
@@ -211,6 +223,7 @@ namespace Matkakirja.Natiivi
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
             LueTapit();
+            if (pelaajanToimi > 0 && !puhuu && Time.unscaledTime - pelaajanToimi > OdotusLauseS) { pelaajanToimi = -1f; Silta(OpasSiltalauseet.Odotus, false); }
             silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => kaupunki.Valmis);
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
@@ -230,6 +243,78 @@ namespace Matkakirja.Natiivi
         {
             if (Testi) { o.StartCoroutine(TestiVastaus(n)); return; }
             o.StartCoroutine(Hae(n, toive));
+        }
+
+        // ---- SILTALAUSEET (juna 146; Ydin OpasSiltalauseet) ----
+        public const string SiltalauseetOsoite = "https://media.matkakirja.app/aanet/opas/siltalauseet-v1/siltalauseet.json";
+        const float OdotusLauseS = 6f, SiltaOdotusS = 5f;
+        AudioSource silta;
+        OpasSiltalauseet siltalauseet;
+        readonly Dictionary<string, AudioClip> siltaKlipit = new Dictionary<string, AudioClip>(StringComparer.Ordinal);
+        float pelaajanToimi = -1f;
+        OpasKohde siltaOdottaa;
+
+        /// <summary>Lause ryhmästä heti (ei toistoa istunnossa); pelaajan valinnasta käynnistää myös 6 s:n odotus-lauseen ajastimen.
+        /// Ei soi, jos Kertoja on pois tai kerronta jo soi.</summary>
+        void Silta(string ryhma, bool pelaajalta)
+        {
+            if (pelaajalta) pelaajanToimi = Time.unscaledTime;
+            if (siltalauseet == null || silta == null || !Asetukset.Paalla(Kytkin.Kertoja) || puhuu || silta.isPlaying) return;
+            var l = siltalauseet.Valitse(ryhma, ryhma == OpasSiltalauseet.Odotus ? null : OpasSiltalauseet.Kuittaus, x => siltaKlipit.ContainsKey(x.Url));
+            if (l == null) return;
+            silta.clip = siltaKlipit[l.Url]; silta.volume = 1f; silta.Play();
+            o.Kirjaa($"opas: siltalause {l.Id} ({ryhma}) \"{l.Teksti}\"");
+        }
+
+        /// <summary>Kierroksen siirtymä: automaattinen lento soittaa "kierros" (yli 20 km "lento"); toiveen lento soitti jo valinnasta.</summary>
+        void LentoAlkoi(OpasKohde k, double matkaM, bool toiveesta)
+        {
+            if (!toiveesta) Silta(matkaM > 20000 ? OpasSiltalauseet.Lento : OpasSiltalauseet.Kierros, false);
+        }
+
+        IEnumerator SoitaSillanJalkeen(OpasKohde k)
+        {
+            float t0 = Time.realtimeSinceStartup;
+            while (silta != null && silta.isPlaying && Time.realtimeSinceStartup - t0 < SiltaOdotusS) yield return null;
+            yield return new WaitForSecondsRealtime(0.25f);   // pieni hengähdys lauseen ja kerronnan väliin
+            if (silmukka == null) yield break;
+            Soita(k);
+        }
+
+        /// <summary>Siltalauseiden JSON ja kaikki mp3:t kerran avauksessa (94 × ~2 s, ~4 Mt; 4 rinnakkain).</summary>
+        IEnumerator LataaSiltalauseet()
+        {
+            using (var r = UnityWebRequest.Get(SiltalauseetOsoite))
+            {
+                r.timeout = 15;
+                yield return r.SendWebRequest();
+                if (r.result != UnityWebRequest.Result.Success) { o.Kirjaa($"opas: siltalauseet ei latautunut ({r.responseCode})"); yield break; }
+                siltalauseet = OpasSiltalauseet.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>);
+            }
+            if (siltalauseet == null) { o.Kirjaa("opas: siltalauseet: virheellinen JSON"); yield break; }
+            var jono = new Queue<Siltalause>(siltalauseet.Kaikki());
+            int kesken = 0, ok = 0;
+            float t0 = Time.realtimeSinceStartup;
+            IEnumerator Yksi(Siltalause l)
+            {
+                kesken++;
+                using (var p = UnityWebRequestMultimedia.GetAudioClip(l.Url, AudioType.MPEG))
+                {
+                    ((DownloadHandlerAudioClip)p.downloadHandler).compressed = true;
+                    p.timeout = 20;
+                    yield return p.SendWebRequest();
+                    if (p.result == UnityWebRequest.Result.Success) { var c = DownloadHandlerAudioClip.GetContent(p); if (c != null) { siltaKlipit[l.Url] = c; ok++; } }
+                }
+                kesken--;
+            }
+            while (jono.Count > 0 || kesken > 0)
+            {
+                while (jono.Count > 0 && kesken < 4) o.StartCoroutine(Yksi(jono.Dequeue()));
+                yield return null;
+            }
+            o.Kirjaa($"opas: siltalauseet {ok}/{siltalauseet.Maara} ladattu {Time.realtimeSinceStartup - t0:F1} s:ssa");
+            // Avauksen lause, jos kerronta ei vielä soi (worker suunnittelee ensimmäistä pysähdystä).
+            if (silmukka != null && !puhuu) Silta(OpasSiltalauseet.Aloitus, false);
         }
 
         /// <summary>
@@ -448,6 +533,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Kappale tai kysymys ääneen; ilman ääntä (testi, Kertoja pois, lataus kesken) teksti ruudulle kestoksi.</summary>
         void Soita(OpasKohde k)
         {
+            // Siltalause soi vielä: kerronta alkaa pehmeästi sen perään (enintään SiltaOdotusS).
+            if (silta != null && silta.isPlaying && siltaOdottaa != k) { siltaOdottaa = k; o.StartCoroutine(SoitaSillanJalkeen(k)); return; }
+            siltaOdottaa = null;
             Hiljenna();
             tekstina = null;
             bool kertoja = Asetukset.Paalla(Kytkin.Kertoja);
@@ -459,6 +547,7 @@ namespace Matkakirja.Natiivi
             {
                 puhe.clip = klippi; puhe.volume = 1f; puhe.Play();
                 puhuu = true; y.Repliikki(true);
+                pelaajanToimi = -1f;   // kerronta alkoi: odotus-lausetta ei tarvita
                 pcmNyt = pcmVirrat.TryGetValue(avain, out var v) ? v : null;
                 puheLoppuu = pcmNyt != null ? float.MaxValue : Time.unscaledTime + klippi.length;
                 return;
@@ -608,6 +697,8 @@ namespace Matkakirja.Natiivi
             OpasKorostusKuva.Piilota(true);
             KyydinKameraEnnen.Ajo = null;
             KytkeNimilappu(false);
+            if (silta != null && silta.isPlaying) silta.Stop();
+            pelaajanToimi = -1f;
             KrediititTiivis.OsmNakyvissa = false;
             KrediititTiivis.Paivita(false);
             Hiljenna();
