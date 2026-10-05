@@ -223,7 +223,7 @@ namespace Matkakirja.Natiivi
                 Valitsin.PaivitaNappi(r);
                 // Epäonnistunut pelielementtien asetus (poikkeus kesken ketjun) toistetaan, kunnes se menee läpi.
                 var (p, v, ra, pa) = pelielementit;
-                if (pelielementitAsetettu != (p | kyytiPelkkaKartta, v, ra, pa)) PaivitaPelielementit();
+                if (pelielementitAsetettu != (p | kyytiPelkkaKartta | KaupunkiAuki, v, ra, pa)) PaivitaPelielementit();
                 return;
             }
             if (kuunneltu != null) kuunneltu.Vaihtui -= Vaihtui;
@@ -285,6 +285,8 @@ namespace Matkakirja.Natiivi
         (bool portti, bool vertailu, bool radio, bool paalla) pelielementit;
         /// <summary>ISS-kyyti Cupolassa tai avaruuskävelyllä: pelkkä kartta (IssKyytiNakyma.TilaMuuttui).</summary>
         bool kyytiPelkkaKartta;
+        /// <summary>Cesium-kaupunkinäkymä auki (opas tai kaupunkikierros): pelin kortit ja nimet pois kuten portilla (Natiivi-UI 5.10.).</summary>
+        static bool KaupunkiAuki => OpasSovitin.Auki || (KierrosSovitin.Viimeisin != null && KierrosSovitin.Viimeisin.Auki);
 
         /// <summary>
         /// Viimeksi onnistuneesti asetetut pelielementit (Kytke tarkistaa 0,5 s välein). TÄHTITAIVAS 1.0.57 (omistaja 29.9.2026
@@ -300,7 +302,7 @@ namespace Matkakirja.Natiivi
             portti |= kyytiPelkkaKartta;
             // Cesium-kaupunkinäkymä (opas, kaupunkikierros; Linssiseppä 5.10.): Googlen ehdot — ei pelin karttaa samaan kuvaan,
             // joten kartuscha ("ISO-BRITANNIA"), nostot ja maakuntanimet pois kuten portilla (simu 18.47).
-            portti |= OpasSovitin.Auki || (KierrosSovitin.Viimeisin != null && KierrosSovitin.Viimeisin.Auki);
+            portti |= KaupunkiAuki;
             bool ok = true;
             void Aseta(string nimi, Action a)
             {
