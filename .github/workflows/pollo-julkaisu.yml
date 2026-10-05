@@ -348,6 +348,20 @@ jobs:
       # CESIUM ION -TUNNUS (Päätoimittaja 5.10.2026, elävä opas juna 144): GET /opas/tunnus antaa sen natiiville kerran
       # istunnossa, jotta tunnus ei ole käännöksessä eikä repossa. VAIN RAJATTU TUNNUS (assets:read, assetit 1, 2,
       # 96188 ja 2275207); omistaja asettaa GitHubin salaisuuden. Vapaaehtoinen: ilman sitä reitti vastaa 503.
+      # TESTITUNNUS (Päätoimittaja 5.10.2026, juna 146): roolien simut ja todistusajot ohittavat per-IP-päivärajat
+      # (opas, Pulu-chat, puhe, sähke) ja oppaan minuuttiraja nousee; kustannuskatot pysyvät. Vapaaehtoinen.
+      - name: Aseta testitunnus workerin salaisuudeksi (jos on)
+        env:
+          POLLO_TESTITUNNUS: ${{ secrets.POLLO_TESTITUNNUS }}
+        run: |
+          set -euo pipefail
+          set +x
+          if [ -z "${POLLO_TESTITUNNUS:-}" ]; then
+            echo "POLLO_TESTITUNNUS ei ole asetettu — ohitetaan."
+            exit 0
+          fi
+          printf '%s' "$POLLO_TESTITUNNUS" | "$WRANGLER" secret put POLLO_TESTITUNNUS --config "$POLLO_ASETUS"
+
       - name: Aseta Cesium ion -tunnus workerin salaisuudeksi (jos on)
         env:
           CESIUM_ION_TOKEN: ${{ secrets.CESIUM_ION_TOKEN }}
