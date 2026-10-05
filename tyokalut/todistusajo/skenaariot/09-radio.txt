@@ -1,0 +1,12 @@
+# 09 Radio: linssi auki, kaistan napautus (oikea tap) → asema näytössä, sulku. Testimykistys päällä (stream soi hetken).
+linssi linssi radio
+oleta 30 linssi.*radio -- radiolinssi aukesi
+odota 8
+kuva 09a-radio Radiolinssi auki
+tap-teksti MONACO
+nakyy 10 MONACO -- asema näytössä
+odota 3
+kuva 09b-radio-asema Radio: asema valittu
+aanitaso 3
+linssi linssi pois
+odota 3

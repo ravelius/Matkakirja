@@ -16,14 +16,17 @@ OTSIKOT = {
 def etsi(puu, haku, kw, kh):
     d = json.load(open(puu))
     pw, ph = d["paneeli"]["w"] or 1, d["paneeli"]["h"] or 1
-    sx, sy = float(kw) / pw, float(kh) / ph
+    kw, kh = float(kw), float(kh)
+    # Vaakanäkymä (linna) pystysimussa: paneeli on vaaka, ruutu pysty → kierretty 90°: x = W − y_v, y = x_v (Laitetestaaja 5.10.)
+    kierretty = (pw > ph) != (kw > kh)
     h = haku.strip().lower()
     ehdokkaat = []
     for e in d["elementit"]:
         teksti, nimi = (e.get("teksti") or "").strip().lower(), (e.get("nimi") or "").lower()
         if e.get("opasiteetti", 1) < 0.3 or e["w"] <= 0 or e["h"] <= 0:
             continue
-        if teksti == h or nimi == h:
+        luokat = (e.get("luokat") or "").lower().split()
+        if teksti == h or nimi == h or h in luokat:   # luokka: kuvakenapit ilman tekstiä (esim. mk-linssitNappi)
             ehdokkaat.append((0, -e["kerros"], e))
         elif h and (h in teksti):
             ehdokkaat.append((1, -e["kerros"], e))
@@ -31,7 +34,11 @@ def etsi(puu, haku, kw, kh):
         return
     ehdokkaat.sort(key=lambda t: (t[0], t[1]))   # täsmäosuma ensin, ylin kerros ensin
     e = ehdokkaat[0][2]
-    print(f"{(e['x'] + e['w'] / 2) * sx:.1f} {(e['y'] + e['h'] / 2) * sy:.1f}")
+    cx, cy = e["x"] + e["w"] / 2, e["y"] + e["h"] / 2
+    if kierretty:
+        print(f"{kw - cy * kw / ph:.1f} {cx * kh / pw:.1f}")
+    else:
+        print(f"{cx * kw / pw:.1f} {cy * kh / ph:.1f}")
 
 
 def fontti(koko):

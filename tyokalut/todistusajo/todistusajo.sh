@@ -19,7 +19,7 @@
 # Skenaario (yksi rivi = yksi askel, # kommentti):
 #   peli|linssi|ui|komento <komento>    kirjoitetaan Documents/<kanava>-komento.txt (komento → komento.txt)
 #   tap <x> <y> [kesto_s]               oikea kosketus pisteinä (kesto > 0,5 = pitkä painallus)
-#   tap-teksti <teksti tai nimi>        `ui puu` → ensimmäinen näkyvä elementti, jonka teksti/nimi täsmää → keskipiste
+#   tap-teksti <teksti|nimi|luokka>     `ui puu` → ensimmäinen näkyvä elementti, jonka teksti/nimi täsmää → keskipiste
 #   veto <x1> <y1> <x2> <y2> [kesto_s]  pyyhkäisy;  polku x,y[,dt_ms] …  vapaa veto
 #   odota <s>
 #   oleta <s> <regex> [-- selite]       odottaa lokiriviä edellisen askeleen jälkeen → polkutaulukkoon OK/PUUTE
@@ -30,6 +30,8 @@
 #   aani <s> <nimi>                     äänikaappaus s sekuntia (linssi-kanava `kaappaa`), odottaa valmistumisen
 #   aanitaso <s>                        `aani mittaa <s>` (Unityn mikseri) → rms/huippu raporttiin
 #   ei-testattu <selite>                kohtaan 8
+#   kaynnista-uudelleen [peli-komennot;…]  sovellus kiinni ja auki (tallennus säilyy), esim. Jatka matkaa -testiin
+#   alku <peli-komento;peli-komento…>   (ensimmäinen rivi) käynnistyksen peli-komennot --peli-oletuksen tilalle
 set -u
 setopt extendedglob 2>/dev/null
 TYOKALUT=${0:A:h}
@@ -46,6 +48,8 @@ while (( $# )); do
 done
 [[ -n $ERA && -n $UDID && -n $APP && -n $SHA && -f $SKEN ]] || { sed -n 13,17p $0; exit 2; }
 [[ -d $APP ]] || { echo "ei .appia: $APP"; exit 2; }
+# Skenaarion oma aloitus: "alku <peli-komennot ;-eroteltuina>" korvaa --peli-oletuksen (esim. aloitusnäkymä ilman uutta peliä).
+alku=$(grep -m1 -E '^alku ' $SKEN | cut -d' ' -f2-); [[ -n $alku ]] && PELI=$alku
 
 L=/Users/Shared/Claude/proto-3d/lokit/todistus-$ERA-$(date +%Y%m%d-%H%M)
 mkdir -p $L/kuvat $L/aani
@@ -101,7 +105,8 @@ kirjoita() {   # kirjoita <tiedosto> <rivi>: odottaa, että peli on lukenut edel
   local i; for i in {1..40}; do [[ -e "$D/$1" ]] || break; sleep 0.25; done
   print -r -- "$2" > "$D/.$1.tmp" && mv "$D/.$1.tmp" "$D/$1"
 }
-odota_rivi 'kerronta ohi' 400 0 || { kirjaa "peli ei käynnistynyt (ei 'kerronta ohi')"; }
+if [[ $PELI == *uusi-peli* ]]; then odota_rivi 'kerronta ohi' 400 0 || kirjaa "peli ei käynnistynyt (ei 'kerronta ohi')"
+else odota_rivi 'testimykistys|peli-komento' 120 0; sleep 15; fi   # ilman uutta peliä (aloitusnäkymä): skenaario odottaa itse
 grep -a -q 'testimykistys päällä' $LOKI && tulos 5 OK "testimykistys päällä (ei Macin kaiuttimiin)" \
   || tulos 5 HUOM "testimykistys-riviä ei lokissa"
 sleep 3
@@ -131,6 +136,7 @@ while IFS= read -r rivi || [[ -n $rivi ]]; do
       kirjoita ui-komento.txt "ui puu"; sleep 1.5
       xy=$(python3 $TYOKALUT/todistusraportti.py etsi "$D/ui-puu.json" "$loput" $KW $KH)
       if [[ -z $xy ]]; then napautus_kirjaus "$rivi" "EI LÖYDY ui-puusta"; tulos 2 PUUTE "elementtiä '$loput' ei ui-puussa"
+        cp "$D/ui-puu.json" "$L/ui-puu-$(date +%H%M%S).json" 2>/dev/null   # skenaarion korjaukseen
       else VIIM=$(rivit); $SK $UDID tap ${=xy}; napautus_kirjaus "$rivi → tap $xy" "lähetetty"; kirjaa "✋ $rivi → $xy"; fi ;;
     oleta|palaute)
       s=${loput%% *}; ehto=${loput#* }; selite=""
@@ -174,17 +180,26 @@ while IFS= read -r rivi || [[ -n $rivi ]]; do
       else tulos 5 PUUTE "aani mittaa: ei tulosriviä"; fi
       kirjoita komento.txt "hiljaa" ;;
     ei-testattu) tulos 8 EI "$loput" ;;
+    alku) ;;   # käsitelty ennen käynnistystä
+    kaynnista-uudelleen)
+      # Sovellus kiinni ja uudelleen auki samalla datalla (tallennus säilyy): uusi konsoliloki konsoli-stdout-<n>.log.
+      xcrun simctl terminate $UDID $BID 2>/dev/null; sleep 2
+      [[ -n $loput ]] && print -l -- ${(s:;:)loput} > "$D/peli-komento.txt"
+      kaynnistyksia=$(( ${kaynnistyksia:-1} + 1 )); LOKI=$L/konsoli-stdout-$kaynnistyksia.log; : > $LOKI; VIIM=0
+      xcrun simctl launch --terminate-running-process --stdout=$LOKI --stderr=$L/konsoli-stderr-$kaynnistyksia.log $UDID $BID >/dev/null \
+        && kirjaa "uudelleenkäynnistys $kaynnistyksia" || tulos 2 PUUTE "uudelleenkäynnistys epäonnistui"
+      odota_rivi 'testimykistys|peli-komento' 120 0; sleep 10 ;;
     *) kirjaa "tuntematon skenaariorivi: $rivi" ;;
   esac
 done < $SKEN
 
 # --- 3 poikkeukset ---
 sleep 2
-pk=$(cat $LOKI $VLOKI 2>/dev/null | grep -a -c -i 'exception')
+pk=$(cat $L/konsoli-*.log 2>/dev/null | grep -a -c -i 'exception')
 (( pk == 0 )) && tulos 3 OK "Exception-rivejä 0" || tulos 3 PUUTE "Exception-rivejä $pk (ks. poikkeukset.txt)"
-cat $LOKI $VLOKI | grep -a -i -B1 -A4 'exception' | head -200 > $L/poikkeukset.txt
+cat $L/konsoli-*.log | grep -a -i -B1 -A4 'exception' | head -200 > $L/poikkeukset.txt
 TUNNETUT='varuste-poikkileikkaus\.jpg|ASTC.*JPEG|JPEG.*ASTC'
-vr=$(cat $LOKI | grep -a -E 'VIRHE|[Ee]rror' | grep -a -v -E "$TUNNETUT" | sed 's/.*MATKAKIRJA //' | sort | uniq -c | sort -rn | head -15)
+vr=$(cat $L/konsoli-stdout*.log | grep -a -E 'VIRHE|[Ee]rror' | grep -a -v -E "$TUNNETUT" | sed 's/.*MATKAKIRJA //' | sort | uniq -c | sort -rn | head -15)
 [[ -z $vr ]] && tulos 3 OK "ei VIRHE-/error-rivejä (tunnetut suodatettu)" || { tulos 3 HUOM "VIRHE-/error-rivejä (tarkista uudet):"; print -r -- "$vr" > $L/virherivit.txt; }
 
 # --- loppu ---
