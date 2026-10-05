@@ -50,6 +50,13 @@ export const PUHE_KUUKAUSIRAJA_OLETUS = 6000000;
 export const ELEVEN_LUKIJA_PAIVARAJA_OLETUS = 50000;
 
 /*
+ * PULUN ÄÄNEN PÄIVÄKATTO (Päätoimittaja 5.10.2026 omistajan Pulu-erässä): Pulun vastaukset luetaan ElevenLabsilla Auto-
+ * kaiuttimella, ja vastaukset ovat uniikkeja (säilö ei auta), joten oma globaali katto merkkeinä vuorokaudessa, erillään
+ * lukijoiden katosta. Ylityksessä EI xAI-varapolkua: puhe palauttaa 429 'aanikatto', ja vastaus jää tekstiksi.
+ */
+export const PULU_ELEVEN_PAIVARAJA_OLETUS = 15000;
+
+/*
  * KUVAGENEROINNIN RAJAT (kehittäjän eräajot, tehtava: 'kuva').
  * Promptin katto on väljä, koska julistepromptit ovat pitkiä
  * tyylikuvauksia; päiväraja on turvaraja karanneelle silmukalle,
@@ -178,6 +185,11 @@ export function kuukausiAvain(nyt = new Date()) {
  * kysymyslaskureihin (eri yksikkö: merkkejä, ei pyyntöjä). */
 export function lukijaElevenPaivaAvain(nyt = new Date()) {
   return `eleven:lukija:p:${nyt.toISOString().slice(0, 10)}`;
+}
+
+/** Pulun äänen laskuriavain (merkkejä vuorokaudessa, globaali). */
+export function puluElevenPaivaAvain(nyt = new Date()) {
+  return `eleven:pulu:p:${nyt.toISOString().slice(0, 10)}`;
 }
 
 export function puhePaivaAvain(ip, nyt = new Date()) {

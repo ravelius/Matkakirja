@@ -28,6 +28,7 @@ import {
   PUHE_KUUKAUSIRAJA_OLETUS,
   PUHE_PAIVARAJA_OLETUS,
   ELEVEN_LUKIJA_PAIVARAJA_OLETUS,
+  PULU_ELEVEN_PAIVARAJA_OLETUS,
   KUVA_PAIVARAJA_OLETUS,
   KUVA_PROMPTIN_KATTO,
   PUHE_TEKSTIN_KATTO,
@@ -38,6 +39,7 @@ import {
   katkaiseKokonaiseen,
   kuukausiAvain,
   lukijaElevenPaivaAvain,
+  puluElevenPaivaAvain,
   lueLista,
   lueLuku,
   luoJatkoSuodatin,
@@ -1388,6 +1390,15 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
   const persoonaNimi = PUHE_PERSOONAT[runko?.persoona] ? runko.persoona : 'kertoja';
   const persoona = PUHE_PERSOONAT[persoonaNimi];
   const puluEleven = puluElevenKaytossa(env, persoonaNimi);
+  // Pulun äänen päiväkatto (15 000 mrk/vrk, Päätoimittaja 5.10.2026): ylityksessä ei ääntä eikä xAI:ta, vastaus jää tekstiksi.
+  if (puluEleven && !kehittajaOhitus(pyynto, env)) {
+    const kaytetty = await lueLaskuri(env.POLLO_KV ?? null, puluElevenPaivaAvain(new Date()));
+    const katto = lueLuku(env.PULU_ELEVEN_PAIVARAJA, PULU_ELEVEN_PAIVARAJA_OLETUS);
+    if (kaytetty + siivoaTeksti(runko?.teksti, PUHE_TEKSTIN_KATTO).length > katto) {
+      console.log(`puhe: pulun eleven-päiväkatto ${katto} mrk täynnä → ei ääntä`);
+      return vastaa({ virhe: 'aanikatto', viesti: 'Pulun ääni lepää tänään — vastaus on tekstinä.' }, { status: 429, ...kors });
+    }
+  }
   // Lukijan ElevenLabs päiväkaton sisällä (globaali laskuri); katon ylittyessä xAI-varapolku (ainoa jäljellä oleva xAI-käyttö lukijoilla).
   let lukijaEleven = lukijaElevenPyydetty(env, persoonaNimi, runko, kehittajaOhitus(pyynto, env));
   if (lukijaEleven) {
@@ -1534,6 +1545,7 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
         const williamAsetukset = lukijaEleven && aani === KERTOJA_ELEVEN_AANI ? { vakaus: null, tyyli: 0 } : {};
         ylavirta = await kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani, ...williamAsetukset });
         if (lukijaEleven) await kasvataLaskuri(kv, lukijaElevenPaivaAvain(nyt), 60 * 60 * 30, teksti.length);
+        if (puluEleven) await kasvataLaskuri(kv, puluElevenPaivaAvain(nyt), 60 * 60 * 30, teksti.length);
       } catch (virhe) {
         // VARAPOLKU: xAI (tai OpenAI) ilman säilöntää, xAI-muodon tageilla.
         console.log(`puhe: eleven epäonnistui (${virhe?.status ?? 'verkko'}) → ${xai ? 'xai' : 'openai'}`);
