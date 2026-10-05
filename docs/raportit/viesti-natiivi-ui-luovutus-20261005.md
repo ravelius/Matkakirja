@@ -118,6 +118,13 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
 - TUNNETTU (ei korjata nyt, Päätoimittaja): Ateenan kutsukortti voi jäädä piiloon, kun sen lukittu paikka on peitossa
   (Kutsuminiatyyri: paikka lukitaan kerran kaupunkia kohden; `ui kutsu` → "syy: peitossa (lukittu)"). Vanhaa toimintaa.
 
+## Astronautin kuvanäkymä (omistaja 5.10. 16.1x, JUNA 145) — avoinna
+- natiivi-ui/astrokuva-tauko 047844b1 (master): Kuvanakyma II-tauko (OHJAUSNAPPI lasi-avaruus, AUTOn viereen; Puhe.Tauko/
+  Jatka luennan aikana, AUTOn laskuri seisoo, kuvan vaihto/sulku päättää), AstronauttiLinssi.TaustaJaatyy (kamera liukuu vain
+  avauksessa; LS1+LS2 kuittasivat; testi päivitetty, Linssit-testit 625/625), .mk-astrokuva tausta 0,9, Sijaintipallo.Sykahda
+  (1,4×: 0,4 s ylös, 1,5 s pito, 0,6 s alas). Pelikoodarille tiedoksi Tauko/Jatka. Seuraava: käännös + still/video iPhone+iPad
+  (mykistys! AUTO-luenta = Puhe.Lue-striimi) → Päätoimittaja.
+
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
 iss-taulu-vaaka.sh (TAP_OHI=1), auto-zoom.sh (TAP_SEUR=1), lippu-kaikki.sh, chat-linna.sh, kartoitus.sh (+ k:-etuliite
