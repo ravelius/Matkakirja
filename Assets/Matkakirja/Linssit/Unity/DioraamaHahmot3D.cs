@@ -35,7 +35,7 @@ namespace Matkakirja.Natiivi
     // vahingossa Matkakirja.NimiLadonta.cs:n omaa V3:a.
     using V3 = Matkakirja.Linssit.Dioraama.V3;
 
-    public sealed class DioraamaHahmot3D
+    public sealed partial class DioraamaHahmot3D
     {
         /// <summary>"poikki hahmot 2d|3d" (DioraamaSovitin.Komento): oletus 3d (tosi). Vaikuttaa SEURAAVIIN
         /// LisaaTila-kutsuihin ("poikki lataa" lataa tilat uudelleen) — sama sopimus kuin DioraamaLiekit.
@@ -87,6 +87,8 @@ namespace Matkakirja.Natiivi
             public float KatseKulma;
             public int PaaIndeksi = -2;
             public Quaternion PaaKierto = Quaternion.identity;
+            public RootMotion.FinalIK.FullBodyBipedIK Ik; // Final IK (DioraamaHahmot3D.IK.cs): luodaan ensimmäisellä kohdistuksella
+            public bool IkYritetty;
         }
 
         /// <summary>Keskustelun puhuja (KuunnelmaKaistale.PuhuvaHahmo; DioraamaSovitin asettaa joka kehys) ja tila. Saman huoneen
@@ -543,6 +545,7 @@ namespace Matkakirja.Natiivi
             float dt = double.IsNaN(e.EdellinenT) ? (float)(VaiheYksikko(e.HahmoId) * kesto) : (float)Math.Clamp(t - e.EdellinenT, 0, 0.1);
             e.EdellinenT = t;
             e.Sekoitin.Paivita(dt);
+            IkPalauta(e);
             var s = e.Sekoitin;
             for (int i = 0; i < e.SolmuT.Length; i++)
             {
@@ -553,6 +556,7 @@ namespace Matkakirja.Natiivi
                 tr.localScale = new Vector3(s.S[i * 3], s.S[i * 3 + 1], s.S[i * 3 + 2]);
             }
             PaivitaSijainti(e, t);
+            Ik(e);
             PaaKatse(e);
         }
 
