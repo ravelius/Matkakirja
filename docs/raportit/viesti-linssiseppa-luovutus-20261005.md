@@ -82,3 +82,6 @@ Omat simulaattorit: iPhone D0D2CD1E-70C7-4140-A972-E615212E8911 (kaikki ajot), i
 - 12.xx LONTOO-PILOTTI (LS2:n puolesta, ei pelikoodia): tutkimus docs/raportit/lontoo-pilotti-tekninen-tutkimus-20261005.md ja
   7 pysähdystä docs/raportit/lontoo-pysahdykset-20261005.md toimitettu. Omistaja 11.45: kaikki data ionista (1, 2, 96188).
   Työkalu proto-3d/tyokalut/linssiseppa-ajot/lontoo-koe. SEURAAVAKSI: lepo kunnes ISS-ohjaamo on junassa.
+- KEHITYSTAHTI (omistaja 5.10. 12.30, Raamattu kohta 2, #3992): VIE-ikkunat 12 ja 20 (vain valmis+kuitattu); iPad-mittaus ei VIE-ehto;
+  rutiinierän kuittaus ensin Laitetestaajalta, Päätoimittajalle vain maku/sisältö; todisteet todistusajolla (proto tyokalut/todistusajo/,
+  TODISTUS.md merge-pyyntöön) vasta kun Pelikoodari ilmoittaa natiivin testimykistyksen ja OHJE.md:n valmiiksi.
