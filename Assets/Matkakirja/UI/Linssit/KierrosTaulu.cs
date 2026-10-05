@@ -100,7 +100,7 @@ namespace Matkakirja.Natiivi
         OpasKohde naytettyKohde;
         float nimiAlku;
         /// <summary>Oppaan kohteen nimen näkyvyys saapumisesta (s); häivytys 0,2 s (siirtymä alle 250 ms).</summary>
-        const float NimiNakyyS = 5f;
+        const float NimiNakyyS = 3f;   // omistaja 5.10. 23.0x (koko peli): nimikyltti saavuttaessa ~3 s ja pois
 
         void PaivitaOpas(OpasSovitin s)
         {
@@ -125,7 +125,7 @@ namespace Matkakirja.Natiivi
                 nimi.text = l.Nykyinen.Nimi;
                 alarivi.text = l.Nykyinen.Alarivi ?? "";
             }
-            // Opas kevyeksi (Päätoimittaja 5.10.): nimi ja alarivi häipyvät 5 s saapumisen jälkeen, palaavat seuraavalla pysähdyksellä.
+            // Opas kevyeksi (Päätoimittaja 5.10.): nimi ja alarivi häipyvät 3 s saapumisen jälkeen (omistaja 23.0x), palaavat seuraavalla pysähdyksellä.
             otsikko.style.opacity = puhuu && l.Nykyinen != null && Time.unscaledTime - nimiAlku < NimiNakyyS ? 1f : 0f;
             string teksti = s.TekstiRuudulle;
             if (teksti != null && kertojaTeksti.text != teksti) kertojaTeksti.text = teksti;
