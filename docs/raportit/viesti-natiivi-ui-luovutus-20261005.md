@@ -85,6 +85,8 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   (Application.version + MitaUutta.Build() = rakennus.txt ← PlayerSettings.iOS.buildNumber, Rakennus.cs) molempiin
   dialogeihin; teksti näyttöhetkellä (PaivitaVersio). Simussa build = 0. Testi `ui mitauutta paivittyi`.
   Seuraava: käännös + stillit iPhone/iPad → Päätoimittaja → merge-pyyntö Natiivisepälle junaan 144.
+  14.33 stillit versio/i-paivittyi.png, p-paivittyi.png; 878c7acd korjaa Mitä uutta -kortin napit (i-mitauutta-korjattu.png).
+  Lähetetty Päätoimittajalle 15.07 (odottaa).
 
 ## PUHUJAKUVA (omistaja 5.10. 14.3x, kortti "Ensin kappelin koe") — avoinna
 - natiivi-ui/puhujakuva 48535d12 (master a5a18288): UI/Linssit/Puhujakuva.cs (+.meta) kehyksetön kuva, ellipsimaski alfaan
@@ -93,6 +95,7 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   rintakuvat _valmiit/linna-hahmot/rintakuvat-paikkamerkki, rajattu). Testi `ui puhujakuva <kuva> [x y]|pois`.
   Kytkentä Siirtosepälle (Ankkuri, Kamera, Viimeisin.Aseta(henkilö, ilme)); odottaa hänen SHA:taan → yhteiskäännös →
   still + video Päätoimittajalle. Myöhemmin: web tyylikirja.json PUHUJAKUVA-pohjan rivi (PR kuten #3998).
+  15.0x KUVATTU fa912f5e:llä: puhujakuva/puhujakuva-arkki.jpg + puhujakuva-kappeli.mp4 → Päätoimittajalle (odottaa).
 
 ## Kohdekortti heiluu (omistajan bugi 5.10. 14.4x) — avoinna
 - natiivi-ui/kutsu-paikallaan 4ae969b7 (master): syy Kutsuminiatyyri asettui UiKerros.JokaRuutu-vaiheessa (Update,
@@ -100,7 +103,9 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   (UiKameranJalkeen, DefaultExecutionOrder 20: kameran jälkeen, ennen PreLateUpdaten UITK-päivitystä) + pikselikohdistus
   fyysisiin pikseleihin. Huom: kamera liikkuu myös korutiineissa (lennot) → niissä voi yhä jäädä ruutu. Todiste: oikea veto
   simuun, video ennen (app-736578a7 = master+versio) / jälkeen, ero kortti–kaupunki ≤ 0,5 pt ruuduittain.
-- Yhteiskäännös pyydetty: kutsu-paikallaan + siirtoseppa/puhujakuva-koe 1bffb7e1 (peili kappeli fd01cc97511edcbb).
+- 15.0x: yhteiskäännös fa912f5e (kutsu + puhujakuva-koe a8f6465e + paivitys-versio 878c7acd). Kohdekortti EI näy Ateenassa
+  masterissakaan (ui kutsu: piilossa) → todiste puuttuu. Haara nyt d7f859cf: UiKameranJalkeen omaan tiedostoon + ui kutsu
+  kertoo piilon syyn (Syy()). Seuraava vuoro: syy → veto ennen/jälkeen, kutsu-ero.py (skriptit) mittaa kortti–nappula-eron.
 
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
