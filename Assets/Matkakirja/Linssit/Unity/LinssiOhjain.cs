@@ -1991,6 +1991,7 @@ namespace Matkakirja.Natiivi
                                 Kirjaa($"astro kyyti kuvaa valotus: tavoite {Matkakirja.Natiivi.IssKameraKuva.ValotusTavoite}, max {Matkakirja.Natiivi.IssKameraKuva.ValotusMax}");
                             }
                             else if (osat.Length > 4 && osat[3] == "reuna") { Matkakirja.Natiivi.IssKameraKuva.ReunaKarkeus = Luku(osat[4]); Kirjaa("astro kyyti kuvaa reuna: " + osat[4]); }
+                            else if (osat.Length > 4 && osat[3] == "laaja") { Matkakirja.Natiivi.IssKameraKuva.Laaja = osat[4] != "0"; Kirjaa($"astro kyyti kuvaa laaja {(Matkakirja.Natiivi.IssKameraKuva.Laaja ? "päällä" : "pois (tele)")}, kenttä ≤ {Matkakirja.Natiivi.IssKameraKuva.KuvanMaxKentta:0}°"); }
                             else if (osat.Length > 4 && osat[3] == "kentta") { Matkakirja.Natiivi.IssKameraKuva.MaxKentta = Luku(osat[4]); Kirjaa("astro kyyti kuvaa kentta: " + osat[4] + "°"); }
                             else if (osat.Length > 3 && osat[3] == "albumi")
                             {

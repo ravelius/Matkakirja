@@ -108,6 +108,11 @@ namespace Matkakirja.Natiivi
             }
         }
         public static event Action<OmaKuva> Valmis;
+        /// <summary>
+        /// Kuvaus alkoi (omistaja 6.10.: "pitäisi tulla jokin tieto että kuvaa otetaan ja näkyä lataus tai kehitys palkki"):
+        /// Natiivi-UI näyttää kehityspalkin, jonka arvo on Edistyminen (0–1) ja vaihe Tila, kunnes Valmis tai Kaynnissa = false.
+        /// </summary>
+        public static event Action Aloitettu;
 
         /// <summary>
         /// Pelaajan kaikki kuvat uusin ensin (IssAlbumi: säilyy uudelleenkäynnistyksen yli; Natiivi-UI:n pikkukuvapino ja nuolet,
@@ -256,6 +261,16 @@ namespace Matkakirja.Natiivi
         /// Testikomennot `astro kyyti kuvaa budjetti <Mt>` ja `astro kyyti kuvaa kentta <°>`.
         /// </summary>
         public static double BudjettiMt = 30, MaxKentta = 14;
+        /// <summary>
+        /// OBJEKTIIVI (omistaja 6.10.: "kuva otetaan myös liian tele linssillä tai ainakin jostain pitäisi pystyä valitsemaan myös se
+        /// laajempi versio"): oletus LAAJA (pystykenttä enintään LaajaKentta ≈ 55 mm kinoa 4:5-pystykuvassa), TELE = MaxKentta
+        /// (14°, ≈ 122 mm). Valitsimen tekee Natiivi-UI ohjaamon pohjilla; testikomento `astro kyyti kuvaa laaja 0|1`. Budjetti
+        /// (30 Mt) karkeuttaa laajan kuvan tarvittaessa; kaukoalue tulee S2-mosaiikista, joten haku pysyy kohtuullisena.
+        /// </summary>
+        public static bool Laaja = true;
+        public static double LaajaKentta = 30;
+        /// <summary>Kuvan pystykentän yläraja valitulla objektiivilla.</summary>
+        public static double KuvanMaxKentta => Laaja ? LaajaKentta : MaxKentta;
         /// <summary>COG-kuvan zeniittikulman yläraja (Päätoimittaja 4.10.: ≤ 55°, kamera virtuaalisesti radalla lähempänä kohdetta).</summary>
         public static double MaxKallistus = 55;
         /// <summary>
@@ -267,6 +282,7 @@ namespace Matkakirja.Natiivi
         IEnumerator Ajo(Camera kamera, CesiumGeoreference g, int W, int H, string muoto, AstronauttiLinssi linssi = null)
         {
             kaynnissa = true; Edistyminen = 0; string loppuTila = "keskeytyi";
+            try { Aloitettu?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
             var kello = System.Diagnostics.Stopwatch.StartNew();
             string id = DateTime.UtcNow.ToString("yyyyMMdd-HHmmss");
             string juuri = Path.Combine(Application.persistentDataPath, "iss-kamera"), laatat = Path.Combine(juuri, "laatat-" + id);
@@ -290,7 +306,7 @@ namespace Matkakirja.Natiivi
                 {
                     var keski = linssi.KyydinAsento;
                     AstronauttiLinssi.Vertailu = linssi.JyrkkaKuvakulma(keski.Lat, keski.Lon, MaxKallistus);
-                    AstronauttiLinssi.VertailuKentta = Math.Min(kamera.fieldOfView, MaxKentta);
+                    AstronauttiLinssi.VertailuKentta = Math.Min(kamera.fieldOfView, KuvanMaxKentta);
                     kenttaRajattu = true;
                     Loki($"kamera: kohde ({keski.Lat:0.000}, {keski.Lon:0.000}), kallistus {keski.Kallistus:0.0}° → {AstronauttiLinssi.Vertailu.Value.Kallistus:0.0}°, "
                         + $"etäisyys {AstronauttiLinssi.Vertailu.Value.EtaisyysM / 1000:0} km, kenttä {AstronauttiLinssi.VertailuKentta:0.0}°");
@@ -750,6 +766,7 @@ namespace Matkakirja.Natiivi
         IEnumerator AjoPaikka(Camera kamera, AstronauttiLinssi linssi, Kuvauspaikka p, int W, int H, string muoto)
         {
             kaynnissa = true; Edistyminen = 0; string loppuTila = "keskeytyi";
+            try { Aloitettu?.Invoke(); } catch (Exception e) { Debug.LogException(e); }
             var kello = System.Diagnostics.Stopwatch.StartNew();
             string id = DateTime.UtcNow.ToString("yyyyMMdd-HHmmss");
             string juuri = Path.Combine(Application.persistentDataPath, "iss-kamera"), laatat = Path.Combine(juuri, "laatat-" + id);
