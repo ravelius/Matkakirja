@@ -119,7 +119,8 @@
       "font-type": "\"American Typewriter\", \"Courier Prime\", \"Courier New\", Courier, monospace",
       "font-luku": "\"Iowan Old Style\", Charter, \"Palatino Linotype\", Palatino,\n    Georgia, \"Times New Roman\", serif",
       "font-kauno": "\"Snell Roundhand\", \"Savoye LET\", \"Bradley Hand\",\n    \"Segoe Script\", \"Comic Sans MS\", cursive",
-      "font-atlas": "\"Liberation Serif\", \"Times New Roman\", Times, serif"
+      "font-atlas": "\"Liberation Serif\", \"Times New Roman\", Times, serif",
+    "font-moderni": "-apple-system, system-ui, \"SF Pro Text\", \"Helvetica Neue\", Helvetica, Arial, sans-serif"
     },
     "natiivi": {
       "Kone": [["American Typewriter", "Regular"], ["Courier New", "Regular"], ["Courier", "Regular"]],
@@ -128,7 +129,7 @@
       "Luku": [["Iowan Old Style", "Roman"], ["Iowan Old Style", "Regular"], ["Charter", "Roman"], ["Palatino", "Regular"], ["Georgia", "Regular"]],
       "LukuLihava": [["Iowan Old Style", "Bold"], ["Charter", "Bold"], ["Palatino", "Bold"], ["Georgia", "Bold"]],
       "LukuKursiivi": [["Iowan Old Style", "Italic"], ["Charter", "Italic"], ["Palatino", "Italic"], ["Georgia", "Italic"]],
-      "Kauno": [["Snell Roundhand", "Regular"], ["Savoye LET", "Plain"], ["Bradley Hand", "Bold"]]
+      "Kauno": [["Snell Roundhand", "Regular"], ["Savoye LET", "Plain"], ["Bradley Hand", "Bold"]], "Moderni": [["SF Pro Text", "Regular"], ["SF Pro", "Regular"], [".SF UI Text", "Regular"], ["Helvetica Neue", "Regular"], ["Helvetica", "Regular"]], "ModerniLihava": [["SF Pro Display", "Semibold"], ["SF Pro", "Semibold"], [".SF UI Display", "Semibold"], ["Helvetica Neue", "Medium"], ["Helvetica Neue", "Bold"], ["Helvetica", "Bold"]], "_moderni": "MODERNI ja MODERNILIHAVA (omistaja 5.10.2026 klo 20.5x): iOS:n järjestelmäkirjasin SF Pro VAIN nykyajan näkymiin (elävä opas), ei muualle peliin."
     }
   },
   "mitat": {
