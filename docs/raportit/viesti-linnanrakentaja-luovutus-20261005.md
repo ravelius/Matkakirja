@@ -13,8 +13,9 @@ Edellinen luovutus: `viesti-linnanrakentaja-luovutus-20261002.md`. Olavinlinnan 
   Päätoimittajalle ja Siirtosepälle. Siirtoseppä kuvaa sen A:ta (c116f02f) vastaan, ja Päätoimittaja vie parin omistajalle osoitinpäätöksen yhteydessä.
 - **Osoitinta ei vaihdeta.** Omistajan Run-rivi avainsanapaketille 8f4eb611 on tiedostossa `docs/raportit/osoitin-8f4eb611-omistajalle.md`
   (#3974 junassa 142).
-- PR junaan 143 haarasta `linnanrakentaja-kuori-ao-2` (työkalut + KOE 7250d427d). Kun blender.json on mainissa, mainin push-hash muuttuu: tee uusi omistajan Run-rivi (osoitin-8f4eb611-omistajalle.md vanhenee). Alkuperäinen ohje: kun mainiin
-  menevä blender.json on sovittu. Haarassa ovat työkalut 82169c00e (AO), 3ba0dc018 (tasoitus) ja 6d824aea9 (välitaso).
+- PR junaan 143 haarasta `linnanrakentaja-kuori-ao-2` (työkalut + KOE 7250d427d). Kun blender.json on mainissa, mainin push-hash muuttuu: tee uusi omistajan Run-rivi (osoitin-8f4eb611-omistajalle.md vanhenee).
+  Haarassa ovat työkalut b1607dcef (AO), 4a84fc053 (tasoitus) ja 091623538 (välitaso). Avaa PR vasta, kun
+  Päätoimittaja käskee (osoitinpäätös omistajalla).
 - Kuoriputki: `VALO=8192 AO_KERROIN=0.6 tools/dioraama/blender/kuori_putki.sh <kansio> <rakennus.json> --alkaen hamara`
   (noin 35 min). Hämärän 8k on 6×6 ja tehdään erikseen: `python3 /Users/Shared/Claude/proto-3d/tyokalut/astc6.py <hamara-8k.jpg>
   <ulos-8k-4x4.astcm> 6x6` (Xcoden TextureConverter, Highest). 4k ja 2k tulevat putken astc-vaiheesta (4×4).
