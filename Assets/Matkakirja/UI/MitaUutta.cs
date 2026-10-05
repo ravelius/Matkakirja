@@ -106,11 +106,18 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(n, Kirjasin.KoneLihava);
         }
 
-        /// <summary>Pelaajalle näkyvä versio ilman build-aikaleimaa: "1.0.34 (202609272058)" → "1.0.34".</summary>
+        /// <summary>
+        /// Rivin tunniste TestFlightin muodossa: "1.1 (143)" (omistaja 5.10.2026 klo 14.2x: merkinnät erotettava toisistaan; ennen
+        /// kaikissa luki "v1.1"). Vanha build-aikaleima "1.0.34 (202609272058)" jää pois → "v1.0.34"; ilman buildia "v1.1".
+        /// </summary>
         static string Nakyva(string versio)
         {
-            int i = versio?.IndexOf(" (", StringComparison.Ordinal) ?? -1;
-            return i > 0 ? versio.Substring(0, i) : versio;
+            if (string.IsNullOrEmpty(versio)) return versio;
+            int i = versio.IndexOf(" (", StringComparison.Ordinal);
+            if (i <= 0) return "v" + versio;
+            string sulut = versio.Substring(i + 2).TrimEnd(')');
+            bool aikaleima = sulut.Length >= 8 && long.TryParse(sulut, out _);
+            return aikaleima ? "v" + versio.Substring(0, i) : versio;
         }
 
         static void Tayta(VisualElement lista, IEnumerable<Rivi> rivit, int enintaan = int.MaxValue)
@@ -122,7 +129,7 @@ namespace Matkakirja.Natiivi
                 if (i++ >= enintaan) break;
                 var rivi = Rakenne.El("mk-muutos", lista, PickingMode.Ignore);
                 // Versio kapiteelina, rivin jatko alkaa tekstin kohdalta (web #3799).
-                var v = Rakenne.Teksti(r.Otsake ?? "v" + Nakyva(r.Versio), "mk-muutos__versio", rivi);
+                var v = Rakenne.Teksti(r.Otsake ?? Nakyva(r.Versio), "mk-muutos__versio", rivi);
                 Kirjasimet.Aseta(v, Tyylikirja.Kirjain.Kapiteeli);
                 var t = Rakenne.Teksti(string.IsNullOrEmpty(r.Paiva) ? r.Teksti : r.Teksti + " (" + r.Paiva + ")", "mk-muutos__teksti", rivi);
                 Kirjasimet.Aseta(t, Kirjasin.Luku);
