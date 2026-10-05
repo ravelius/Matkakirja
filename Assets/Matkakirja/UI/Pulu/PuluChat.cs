@@ -1291,6 +1291,8 @@ namespace Matkakirja.Natiivi
             // App Store -käännöksessä ei otsaketta.
             string koodi = Asetukset.PolloKoodi;
             if (!string.IsNullOrEmpty(koodi)) r.SetRequestHeader(Lukijaaani.KoodiOtsake, koodi);
+            // Roolien simuajot (juna 146, Päätoimittaja): Pöllön testitunnus vain ajonaikaisesta POLLO_TESTITUNNUS-muuttujasta.
+            PolloTestitunnus.Lisaa(r);
             return r;
         }
 
