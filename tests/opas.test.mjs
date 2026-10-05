@@ -404,3 +404,27 @@ test('siltalauseiden ryhmät: sirut, toiveet ja kierros', async () => {
     'Näytä satama': 'vesi', 'haluan nähdä jotain outoa': 'kuittaus', 'Missä täällä voi syödä?': 'ruoka', '': 'kierros' };
   for (const [t, r] of Object.entries(odotetut)) assert.equal(siltaRyhma(t), r, t);
 });
+
+test('suunnanvaihtosiru: juuri valittua toivetta ei tarjota heti uudelleen', async () => {
+  const { default: worker } = await import('../tools/pollo/worker.js');
+  const vanha = globalThis.fetch;
+  globalThis.fetch = async (u, init) => {
+    const s = decodeURIComponent(String(u));
+    if (s.includes('api.anthropic.com')) return new Response(JSON.stringify({ content: [{ type: 'text', text: 'NIMI: Tivoli\nWIKIPEDIA: Tivoli Gardens\nTEKSTI: Ruokaa.\nVAIHTOEHTO: Mitä syödään?\nVAIHTOEHTO: X' }], stop_reason: 'end_turn' }));
+    if (s.includes('titles=Tivoli Gardens')) return new Response(JSON.stringify({ query: { pages: { 1: { title: 'Tivoli Gardens', pageprops: { wikibase_item: 'Q110289' }, coordinates: [{ lat: 55.6737, lon: 12.5681 }] } } } }));
+    if (s.includes('titles=Kööpenhamina')) return new Response(JSON.stringify({ query: { pages: { 7: { coordinates: [{ lat: 55.676, lon: 12.568 }] } } } }));
+    return new Response(JSON.stringify({ query: { pages: {} }, search: [], claims: {}, entities: {} }));
+  };
+  try {
+    const env = { ANTHROPIC_API_KEY: 'a', POLLO_ORIGINIT: 'https://matkakirja.app', POLLO_KEHITTAJAKOODI: 'k', OPAS_AINEISTO_TESTI: {} };
+    for (const kaydyt of [[], ['Q1'], ['Q1', 'Q2'], ['Q1', 'Q2', 'Q3'], ['Q1', 'Q2', 'Q3', 'Q4']]) {
+      const v = await worker.fetch(new Request('https://pollo.example/opas/seuraava', { method: 'POST',
+        headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'x-pollo-kehittaja': 'k', 'x-matkakirja-testi': '1' },
+        body: JSON.stringify({ kaupunki: 'Kööpenhamina', toive: 'Missä voisi syödä?', nahdyt: kaydyt }) }), env, {});
+      const d = await v.json();
+      assert.notEqual(d.vaihtoehdot[1], 'Missä voisi syödä?', `nähtyjä ${kaydyt.length}`);
+    }
+  } finally {
+    globalThis.fetch = vanha;
+  }
+});
