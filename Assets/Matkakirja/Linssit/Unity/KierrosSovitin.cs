@@ -80,6 +80,7 @@ namespace Matkakirja.Natiivi
         {
             if (lento == null || Virhe != null || paivitetty == Time.frameCount) return;
             paivitetty = Time.frameCount;
+            KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
             var ennen = lento.Vaihe;
             lento.Paivita(Time.unscaledDeltaTime, kaupunki.Valmis);
             if (lento.Vaihe != ennen) o.Kirjaa($"{Tiedot.Id}: {ennen} → {lento.Vaihe} ({lento.Indeksi + 1}), laatat {kaupunki.Latausaste:F0} %");
@@ -106,6 +107,7 @@ namespace Matkakirja.Natiivi
         public void Sulje()
         {
             KyydinKameraEnnen.Ajo = null;
+            KrediititTiivis.Paivita(false);
             y?.KuvausLoppui();
             bool avattiin = nakymaAuki;
             nakymaAuki = false;
