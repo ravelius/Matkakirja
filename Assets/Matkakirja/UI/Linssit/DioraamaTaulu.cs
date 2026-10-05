@@ -23,6 +23,10 @@ namespace Matkakirja.Natiivi
         static readonly Color Teksti = new Color(0.2039f, 0.1569f, 0.1137f);
 
         readonly VisualElement juuri, lauta, nakyma, lappuKerros;
+        /// <summary>Huone, jonka kortin pelaaja on pyytänyt napautuksella (DioraamaSyote); null = ei korttia (omistaja 5.10. 23.0x).</summary>
+        public static string KorttiTila;
+        /// <summary>Yleisnäkymän nimilaput näkyvissä (napautus tyhjään vaihtaa; omistaja 5.10. 23.0x: vain pelaajan napautuksesta).</summary>
+        public static bool LaputNakyvissa;
         readonly Label otsikko, teksti, lainaus, lahde, laskuri, seuraava, puhuja;
         readonly LiviaKuva pulu;
         readonly List<Label> laput = new List<Label>();
@@ -885,7 +889,10 @@ namespace Matkakirja.Natiivi
             var leikkaus = linssi.LeikkausHetkella(t);
             bool perilla = leikkaus.tila == tila.Id && leikkaus.osuus >= 0.99;
             var info = tila.Infotaulu;
-            lauta.style.display = perilla ? DisplayStyle.Flex : DisplayStyle.None;
+            // OMISTAJA 5.10. 23.0x ("kappeli teksti on turha ja häiritsevä … info kylttejä vain jos pelaaja klikkaa jotain"):
+            // huonekortti vain, kun pelaaja on napauttanut tässä huoneessa (KorttiTila, DioraamaSyote); kuunnelma ja Pulu jatkuvat.
+            bool korttiNakyy = perilla && KorttiTila == tila.Id;
+            lauta.style.display = korttiNakyy ? DisplayStyle.Flex : DisplayStyle.None;
             lauta.style.opacity = perilla ? 1f : 0f;
             lauta.style.translate = new Translate(0, perilla ? 0 : 8);
             if (!perilla) { pulu.style.display = DisplayStyle.None; puluAlue.style.display = DisplayStyle.None; LopetaKuunnelma("ei perillä"); return; }
@@ -1018,6 +1025,7 @@ namespace Matkakirja.Natiivi
                 kuunteleNappi.style.left = x + tauluLeveys - nl;
                 kuunteleNappi.style.top = y - 8f - 34f;
             }
+            puluNakyy &= korttiNakyy;   // Pulun hahmo istuu kortilla: piiloon kortin mukana
             pulu.style.display = puluNakyy ? DisplayStyle.Flex : DisplayStyle.None;
             puluAlue.style.display = puluNakyy ? DisplayStyle.Flex : DisplayStyle.None;
             if (!puluNakyy) return;
@@ -1133,6 +1141,7 @@ namespace Matkakirja.Natiivi
         {
             // Uusi linna (kertojan esittely): laput yleisnäkymässä (omistaja 4.10.); vanhat dioraamat datan nimilaput-kentän mukaan.
             bool uusiLinna = rakennus.Kertoja != null && rakennus.Kertoja.Count > 0;
+            if (uusiLinna && !LaputNakyvissa) { PiilotaLaput(); return; }   // omistaja 5.10. 23.0x: nimilaput vain napautuksesta
             var ehdokkaat = new List<(Tila Tila, Vector2 Nasta)>();
             float pw = juuri.layout.width, ph = juuri.layout.height;
             if (float.IsNaN(pw) || pw <= 0) { pw = Screen.width; ph = Screen.height; }
