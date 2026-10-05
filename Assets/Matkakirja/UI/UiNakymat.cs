@@ -484,6 +484,8 @@ namespace Matkakirja.Natiivi
             });
             // Linssit (valitsin, peite, selite, astronautti, vertailu, aikajanat): kartuschan ja selitteen jälkeen.
             Linssit = new LinssiUi(kerros, this);
+            // PIN-KUVAKE JA PINNATTU PALKKI (omistaja 5.10.2026): yksi pinnattu ikkuna kerrallaan, palkki oikeaan yläreunaan.
+            new Pinnaus(kerros);
             // Astronautin kuvaselaimessa pulu on minipulu (Kuvanakyma): iso Pulu kuulsi sen takaa kuvanäkymän himmennyksen
             // läpi (Linssiseppä 29.9., laitekuva 6 kuva-minipulu-taulu; web: iso Pulu ei näy). Vain näkyvyys: puhe ja
             // luenta jatkuvat (Pulu.Nayta(false) pysäyttäisi puhekanavan).
