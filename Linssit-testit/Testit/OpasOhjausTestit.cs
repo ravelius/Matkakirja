@@ -45,6 +45,16 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(o.Sovella(Perus, 5).EtaisyysM < ennen - 5, "rajalta palaa heti");
         }
 
+        [Testi] static void YlakuvaEiHyppaaRajaan()
+        {
+            // Kaupungin vaihdon yläkuva 5 km: perusasento sellaisenaan, ja kauemmas enintään 1,5 × perus.
+            var yla = new Kuvakulma(52.37, 4.89, 5000, 40, 0, 0);
+            var o = new OpasOhjaus();
+            Oleta.Tosi(Math.Abs(o.Sovella(yla, 0).EtaisyysM - 5000) < 1e-6, "perus 5 km ei hyppää 2 200 m:iin");
+            for (int i = 0; i < 600; i++) { o.Paivita(1 / 60.0, 0, 0, 1); o.Sovella(yla, 0); }
+            Oleta.Tosi(Math.Abs(o.Sovella(yla, 0).EtaisyysM - 5000 * OpasOhjaus.YlaKerroin) < 1e-6, "kauemmas enintään 1,5 × perus");
+        }
+
         [Testi] static void KattorajaJyrkentaaKulmaa()
         {
             // Matala ja lähellä: kamera ei saa mennä alle maa + KattoYlaM.
