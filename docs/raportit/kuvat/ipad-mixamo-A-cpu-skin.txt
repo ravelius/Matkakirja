@@ -1,0 +1,2 @@
+CPU-MITTAUS 2026-10-05 12.38.21: 900 kehystä 15 s:ssa, tilat Taysi 900, kehitys False, laite iPad13,8
+ka ms/kehys	p95	max	kutsuja/kehys	luokka	merkki
