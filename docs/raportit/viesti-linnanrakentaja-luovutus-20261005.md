@@ -7,13 +7,13 @@ Edellinen luovutus: `viesti-linnanrakentaja-luovutus-20261002.md`. Olavinlinnan 
 
 ## Junan 143 linna: Päätoimittaja valitsi AO-B:n 5.10. → yksi yhdistetty peili
 - Paketti `_valmiit/olavinlinna-blender-v30` (MUUTOKSET.md): v29-ao (kontakti-AO kuoreen, keittiöön ja kappeliin) + 8k-valokartta
-  + bilineaarinen täyttötasoitus. Blender **3d59b30a48c612f2** on ämpärissä. KOE-blender.json 00d88a2b8 on haarassa
-  `linnanrakentaja-kuori-ao` (worktree `/Users/Shared/Claude/wt/linnanrakentaja-kuori-ao`).
-- Peili **a23c432638f77338** (ajo 37257924683, osoitin ennallaan c116f02f). Hash on lähetetty
+  + bilineaarinen täyttötasoitus. Blender **3d59b30a48c612f2** on ämpärissä. KOE-blender.json 7250d427d on haarassa `linnanrakentaja-kuori-ao-2` (mainin päällä; vanha
+  `linnanrakentaja-kuori-ao` 00d88a2b8 vanhentunut), worktree `/Users/Shared/Claude/wt/linnanrakentaja-kuori-ao`.
+- Peili **27022c945fa48cc3** (ajo 37258273395, haara linnanrakentaja-kuori-ao-2 mainin 64f6f9dc päällä, avainsanat #3974 mukana; vanha a23c4326 ilman avainsanoja hylätty, osoitin ennallaan c116f02f). Hash on lähetetty
   Päätoimittajalle ja Siirtosepälle. Siirtoseppä kuvaa sen A:ta (c116f02f) vastaan, ja Päätoimittaja vie parin omistajalle osoitinpäätöksen yhteydessä.
 - **Osoitinta ei vaihdeta.** Omistajan Run-rivi avainsanapaketille 8f4eb611 on tiedostossa `docs/raportit/osoitin-8f4eb611-omistajalle.md`
   (#3974 junassa 142).
-- Haaran `linnanrakentaja-kuori-ao` PR junaan 143: pudota KOE-commitit b51d321a1 (fec08857) ja 00d88a2b8 vasta sitten, kun mainiin
+- PR junaan 143 haarasta `linnanrakentaja-kuori-ao-2` (työkalut + KOE 7250d427d). Kun blender.json on mainissa, mainin push-hash muuttuu: tee uusi omistajan Run-rivi (osoitin-8f4eb611-omistajalle.md vanhenee). Alkuperäinen ohje: kun mainiin
   menevä blender.json on sovittu. Haarassa ovat työkalut 82169c00e (AO), 3ba0dc018 (tasoitus) ja 6d824aea9 (välitaso).
 - Kuoriputki: `VALO=8192 AO_KERROIN=0.6 tools/dioraama/blender/kuori_putki.sh <kansio> <rakennus.json> --alkaen hamara`
   (noin 35 min). Hämärän 8k on 6×6 ja tehdään erikseen: `python3 /Users/Shared/Claude/proto-3d/tyokalut/astc6.py <hamara-8k.jpg>
