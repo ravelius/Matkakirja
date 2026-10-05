@@ -125,6 +125,17 @@ testimykistyksen käännöksessä ja OHJE.md valmiina.
   (1,4×: 0,4 s ylös, 1,5 s pito, 0,6 s alas). Pelikoodarille tiedoksi Tauko/Jatka. Seuraava: käännös + still/video iPhone+iPad
   (mykistys! AUTO-luenta = Puhe.Lue-striimi) → Päätoimittaja.
 
+## Pulun chat yhdeksi pohjaksi (omistaja 5.10. 16.4x–16.5x, JUNA 145) — avoinna
+- Inventaario docs/raportit/pulu-chat-inventaario-20261005.md (kaikki 8 paikkaa PuluChatissa; valmiit vastaukset ISS-taulu,
+  Ihmisen matka, maakuntakortti, Ihmisen nostokortti).
+- natiivi-ui/pulu-chat-yksi e035e5dc (juna-144-koe ec0038f4): VastaaValmiilla/VastaaLinssinValmiilla → Kysy + `taustatieto`
+  (Pelikoodarin worker-rajapinta, `jatkot` takuulla 2), sirut avatessa Take(2), kaiutin kaksitilainen (Ikonit kaiutin-pois,
+  `matkakirja-pollo-aani`), lukijan rivi piiloon chatissa. Odottaa: Pelikoodarin workerin julkaisu → käännös → kuvat kolmesta
+  paikasta rinnakkain (kartta, astrokuva/ISS-taulu, maakuntakortti) Päätoimittajalle. Astrokohteiden 472 vastausta
+  taustatiedoksi myöhemmin (AstronauttiAineisto, Linssiseppä).
+- Astrokuva: natiivi-ui/astrokuva-tauko-144 0062cd81 (junan 144 päällä; II lukijan kaiuttimen kanssa, Päätoimittaja hyväksyi)
+  odottaa NYT käännös (~16.35) + simu iPhone/iPad → still + video. Vanha natiivi-ui/astrokuva-tauko 047844b1 vanhentunut.
+
 ## Testiskriptit (lokit/natiivi-ui-1035/skriptit)
 jatka-aani.sh (ääniraita = Unityn tallenne.wav; JATKA_TAP=1 oikea napautus), aanitaso.py (puhe > −32 dB),
 iss-taulu-vaaka.sh (TAP_OHI=1), auto-zoom.sh (TAP_SEUR=1), lippu-kaikki.sh, chat-linna.sh, kartoitus.sh (+ k:-etuliite
