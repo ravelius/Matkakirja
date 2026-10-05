@@ -53,3 +53,14 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   vs. Tripo, lähellä ja kaukana, puhe-ele) + mitat. Maksullisesta tilauksesta päättää omistaja.
 - Työkalut scratchpadissa (ei repossa): mix/rintakuva.py (--kulma --tasainen), mix/pelikulma.py (--atlas valot/<tila>-hamara.jpg),
   mix/saumat.py, mix/lantio.py, gen_v3.py. Kopioi tarvittaessa repoon.
+
+## Päivitys 5.10. klo 16.4x
+- #4001 (kohtaukset v3 + ilme) MERGETTY (8db7844a). Ele-kenttä tuli myöhemmin, ja se on #4004:ssä.
+- #4003 junaan 144: v35, hahmoittain idle ja puhe (blender 89ca548e). Osoitin vaihdetaan TF 144:n jälkeen MAININ push-hashiin
+  (ei koepeiliin 56e98a88). Mixamo-FBX:t ovat 30 fps, joten v35 ei ole hidastunut (mitattu).
+- #4004 junaan 145 (huomenna klo 12) yhdessä Siirtosepän linna-144 6f7ac8f5:n kanssa: eleet (Human Basic Motions, blender d1865adb v36)
+  + ele-kenttä. Merge #4003:n jälkeen. Osoitin vasta Siirtosepän äänellisen videon jälkeen (koepeili 1f75d8ed).
+- hahmo_mixamo.py tukee nyt Kevin Iglesiasin rigiä: B-*-kartta, asennon kohdistus, B-root-lepo, kuvanopeuden uudelleennäytteistys
+  (FBX-tuoja vaihtaa scene-fps:n). Human Basic Motions -FBX:t: _lahteet/kevin-iglesias-hbm/fbx (409 kpl, ei repossa).
+- Levy: siirretty T7:lle 6,62 Gt (/Volumes/T7 4TB/Matkakirja-arkisto/linnanrakentaja/_valmiit/). Paketit v30–v36 ehjiä.
+- Odottaa: Tripo-koe VOUDILLA Codexin kasvokuvien jälkeen (omistaja kirjautuu sisäiseen selaimeen). Codex-tilaus Päätoimittajalla (4 kuvaa).
