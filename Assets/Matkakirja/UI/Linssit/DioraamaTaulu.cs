@@ -404,6 +404,10 @@ namespace Matkakirja.Natiivi
         readonly Latauspalkki latauspalkki;
         bool nimiruutuAuki, virheIlmoitettu;
         float nimiruutuAlku;
+        /// <summary>Kortin tiivistys keskustelun ajaksi (KuunnelmaKaistale.Keskustelu) ja vaihdon hetki häivytykseen.</summary>
+        bool korttiTiivis;
+        float tiivisVaihto = -1f;
+
         /// <summary>Palkki näkyy vasta, kun odotus on kestänyt tämän verran (nopea lataus ei välähdä palkkia).</summary>
         const float PalkkiS = 1f;
 
@@ -916,6 +920,23 @@ namespace Matkakirja.Natiivi
                     y = Mathf.Clamp(a.y - tauluKorkeus * 0.5f, ylaT, alaT - tauluKorkeus);
                 }
             }
+            // TIIVIS KORTTI KESKUSTELUN AJAN (omistaja 5.10.2026 Päätoimittajan kautta: kortti ei saa peittää näyttämöä, puhujien
+            // vartalot ja eleet näkyviin): KuunnelmaKaistale.Keskustelu (Siirtoseppä; tosi myös vuorojen välitauoilla) → kortista
+            // jää otsikkorivi näyttämön yläreunaan keskelle, teksti, lainaus ja osoitinviiva piiloon; täysi kortti palaa keskustelun
+            // jälkeen. Vaihto häivyttäen 200 ms (--tk-kesto-sulku).
+            bool tiivis = KuunnelmaKaistale.Keskustelu;
+            if (tiivis != korttiTiivis) { korttiTiivis = tiivis; tiivisVaihto = Time.unscaledTime; }
+            if (tiivis)
+            {
+                float skT = Screen.width > 0 ? pw / Screen.width : 1f;
+                lauta.style.width = StyleKeyword.Auto;
+                float tl = float.IsNaN(lauta.layout.width) || lauta.layout.width <= 0 ? 160f : lauta.layout.width;
+                x = (pw - tl) * 0.5f;
+                y = 12f + (Screen.height - Screen.safeArea.yMax) * skT;
+                kohdeRuutu = null;
+            }
+            lauta.style.opacity = Mathf.Clamp01((Time.unscaledTime - tiivisVaihto) / 0.2f);
+            if (lauta.style.opacity.value < 1f) Matkakirja.Ruudunpaivitys.Herata(0.25f);
             lauta.style.left = x; lauta.style.top = y;
             if (korttiViiva != null)
             {
@@ -950,7 +971,8 @@ namespace Matkakirja.Natiivi
                 if (!float.IsNaN(teksti.layout.y)) initiaaliEl.style.top = teksti.layout.y + 1f;
                 initiaaliEl.style.left = teksti.layout.x - 34f >= 0f ? teksti.layout.x - 34f : 0f;
             }
-            teksti.style.display = rivit.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            teksti.style.display = rivit.Count > 0 && !tiivis ? DisplayStyle.Flex : DisplayStyle.None;
+            if (tiivis && initiaaliEl != null) initiaaliEl.style.display = DisplayStyle.None;
             // Lähderivi pois paikkakortista (omistaja 2.10. 14.44): lähteet valikon Lähteet-näkymässä.
             lahde.text = "";
             lahde.style.display = DisplayStyle.None;
@@ -977,12 +999,12 @@ namespace Matkakirja.Natiivi
                 repliikki = nakyma.Repliikki;
             }
             puhuja.text = nimi ?? "";
-            puhuja.style.display = string.IsNullOrEmpty(nimi) ? DisplayStyle.None : DisplayStyle.Flex;
+            puhuja.style.display = string.IsNullOrEmpty(nimi) || tiivis ? DisplayStyle.None : DisplayStyle.Flex;
             // Etsinnän vihje riviksi (korostettuna kursiivilla) repliikin sijaan.
             string vihje = DioraamaEtsinta.AktiivinenRivi;
             string puhe = !string.IsNullOrEmpty(vihje) ? vihje : repliikki != null ? "”" + repliikki + "”" : null;
             lainaus.text = puhe ?? "";
-            lainaus.style.display = puhe != null ? DisplayStyle.Flex : DisplayStyle.None;
+            lainaus.style.display = puhe != null && !tiivis ? DisplayStyle.Flex : DisplayStyle.None;
             seuraava.style.display = DisplayStyle.None;
 
             bool kuuntele = kuunneltava && !kuunnelma.Kaynnissa;
