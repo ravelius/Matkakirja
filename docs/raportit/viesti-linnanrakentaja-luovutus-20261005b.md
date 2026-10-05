@@ -76,3 +76,7 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   yhteinen äänellinen video per juna, (2) vian toistoon, jos testi ei riitä, ja (3) junan lopulliseen savutestiin (Laitetestaaja ~10 min).
   Datan ja pienten korjausten muutoksiin automaattiset testit. Ei välikokeita, pienet virheet seuraavaan junaan. Koko pelissä:
   nimikyltit näkyvät saavuttaessa ~3 s, ja infokortit ja nimilaput tulevat vain napautuksesta.
+- OMISTAJA 23.1x "ota kaikki käyttöön heti" (#4030): (1) osoitinvaihdot ajaa Julkaisija Päätoimittajan kuittauksen jälkeen, kun kukaan ei
+  aja sisältöä simulla tai iPadilla, eikä omistajan Run-riviä enää tarvita. (2) Muutosloki kulkee junan mukana (Natiiviseppä kirjoittaa,
+  Päätoimittaja tarkistaa, Julkaisija vie). (3) NATIIVI ON MALLI: ei web-kuvia, -mittoja eikä -kuvapareja, web on jäädytetty vikakorjauksiin.
+  (4) Päätoimittaja tarkistaa vain omistajalle uudet asiat. Pienet korjaukset menevät roolin oman tarkistuksen ja savutestin varassa.
