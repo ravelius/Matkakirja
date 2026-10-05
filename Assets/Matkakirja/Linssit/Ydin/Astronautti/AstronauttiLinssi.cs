@@ -655,11 +655,13 @@ namespace Matkakirja.Linssit.Astronautti
         /// ("kuin otettu hetkeä myöhemmin, kun ISS on lähempänä"); suunta kohteesta alukseen säilyy, joten kuva on samalta puolelta.
         /// Loiva Cupolan katse (~74°) toi pitkän ilmakehäpolun ja violetin usvan.
         /// </summary>
-        public Kuvakulma JyrkkaKuvakulma(double lat, double lon, double maxKallistus)
+        /// <param name="tarkka">true = zeniittikulma täsmälleen <paramref name="maxKallistus"/> (laaja juliste: maapallon kaari kuvan
+        /// yläosaan, omistaja 6.10.), false = enintään.</param>
+        public Kuvakulma JyrkkaKuvakulma(double lat, double lon, double maxKallistus, bool tarkka = false)
         {
             var h = AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000);
             var nyt = Iss.IssKuvakulma.KohteenKulma(h, lat, lon);
-            if (nyt.Kallistus <= maxKallistus) return nyt;
+            if (!tarkka && nyt.Kallistus <= maxKallistus) return nyt;
             const double R = 6_371_000, D = Math.PI / 180;
             double z = maxKallistus * D, eta = Math.Asin(R / (R + Math.Max(1000, h.KorkeusM)) * Math.Sin(z));
             double kaari = (z - eta) / D;

@@ -1,13 +1,21 @@
-// ISS-KAMERAN JULISTE E v3 (omistaja 6.10.2026 klo 00.2x TF 144: "julisteesta puuttuu kokonaan tekstit yms. mitä oli suunniteltu";
-// Päätoimittaja: rakennetaan lokin mitoista, koska tee-kehys3.mjs ja mallikuvat katosivat). Linjaukset (paatokset-2026-09.md):
-//   1.10. 21.42  E v3 ilman kultarengasta
-//   1.10. 21.52  ISS-sinetti pienenä (120 px) alamarginaalissa oikealla
-//   1.10. 22.03  marginaalin teksti keskellä, paikannimi 44 px ja koordinaatit 29 px (2064 px leveällä kuvalla)
-//   + päiväys ja "Contains modified Copernicus Sentinel data" (Päätoimittaja 6.10.)
-// Mitat ovat suhteessa kuvan leveyteen (44/2064 jne.), joten juliste skaalautuu laitteen kuvaleveyden (≥ 1080) mukaan.
-// Värit: Tyylikirja.Kehys (paperi ja muste), fontit: Antiikva (IM Fell English, pelin julisteet) ja Luku.
+// ISS-KAMERAN JULISTE (omistaja 6.10.2026 klo 00.2x TF 144: "julisteesta puuttuu kokonaan tekstit yms. mitä oli suunniteltu";
+// tarkennukset 00.3x–00.5x Päätoimittajan kautta, sanatarkasti: "juliste on kuitenkin 4:5 pysty ja itse näkyvä kuva on lähempänä
+// neliötä koska kuvalle on tehty kevyt kehys ja alaosaa on varattu tyhjää tilaa lisätekstejä varten. julisteen yläreunassa on
+// matkakirjan logo, yleensä maapallon kaaren yläpuolella" ja "juliste on 4:5 koska se on tarkoitettu julkaistavaksi esim instagramissa").
+//   ┌──────────────── 4:5, leveys W (≤ 2160) ────────────────┐
+//   │ kehys 3 %                                                │
+//   │  ┌──────────── kuva ~0,94 W × 1,0 W ────────────┐        │   logo (Matkakirja, pelin oma) kuvan yläosassa keskellä
+//   │  │              MATKAKIRJA                       │        │   kaaren yläpuolella (Laaja: kaari ~ neljännes ylhäältä)
+//   │  │  ~~~~~~~~~~ maapallon kaari ~~~~~~~~~~~~~~~~  │        │
+//   │  └───────────────────────────────────────────────┘        │
+//   │            HELSINKI, SUOMI            (nimi 44/1080 W)    │   alamarginaali 22 %: teksti keskellä (E v3 22.03)
+//   │          60,17° N · 24,94° E          (29/1080 W)  (sin.) │   Pulucam-sinetti (omistajan musteensininen, 9.9.)
+//   │   6.10.2026 klo 12.30 · 55 mm · f/5.6 · 1/1000 s · ISO 100 │   oikealla alhaalla (E v3 21.52: "sinetti pienenä
+//   │      Contains modified Copernicus Sentinel data           │   alamarginaalissa oikealla")
+//   └──────────────────────────────────────────────────────────┘
+// Kuvaan tulee juliste-jalki.py:n S-käyrä (IssKameraKuva.Kontrasti) ennen tätä. Värit Tyylikirja.Kehys, fontit Antiikva ja Luku.
 // Renderöinti: UI Toolkit -paneeli omaan RenderTextureen (pohja Resources/MatkakirjaUI/Paneeli, teema käynnissä olevasta UI:sta),
-// kaksi kehystä piirtoa, luku CPU:lle. Epäonnistuessa kutsuja tallentaa pelkän kuvan kuten ennen.
+// kaksi piirtoa, luku CPU:lle. Epäonnistuessa kutsuja tallentaa pelkän kuvan kuten ennen.
 using System;
 using System.Collections;
 using UnityEngine;
@@ -31,10 +39,22 @@ namespace Matkakirja.Natiivi
         /// <summary>A/B `astro kyyti kuvaa juliste 0|1` (0 = pelkkä kuva kuten ennen).</summary>
         public static bool Kaytossa = true;
 
-        // Suhteet kuvan leveyteen (loki 1.10.: 2064 px:n kuva).
-        const float Pohja = 2064f, NimiPx = 44f, KoordPx = 29f, SinettiPx = 120f, PieniPx = 20f;
-        /// <summary>Paspartuun leveys sivuilla ja ylhäällä sekä alamarginaali (tekstit ja sinetti), osuutena kuvan leveydestä.</summary>
-        const float Reuna = 0.045f, Ala = 0.16f;
+        /// <summary>Julisteen enimmäisleveys (Instagram 2160 × 2700; Päätoimittaja 6.10.: "vähintään 1080 × 1350, mieluiten 2160 × 2700").</summary>
+        public const int MaxLeveys = 2160;
+        // Suhteet julisteen leveyteen W (E v3: nimi 44 ja koordinaatit 29 px 1080 px:n julisteessa; sinetti 120 px).
+        const float Pohja = 1080f, NimiPx = 44f, KoordPx = 29f, SinettiPx = 120f, PieniPx = 21f;
+        /// <summary>Kevyt kehys (sivut ja ylä), alamarginaali tekstille ja logon leveys, osuutena julisteen leveydestä.</summary>
+        const float Kehys = 0.03f, Ala = 0.22f, LogoLeveys = 0.44f;
+
+        /// <summary>Kuvan leveys julisteen leveydelle W.</summary>
+        public static int KuvanLeveys(int julisteW) => Mathf.RoundToInt(julisteW * (1f - 2f * Kehys));
+        static int JulisteenLeveys(int kuvaW) => Mathf.RoundToInt(kuvaW / (1f - 2f * Kehys));
+        /// <summary>Kuvan koko (lähes neliö) julisteeseen, jonka kuva-alan leveys on kuvaW.</summary>
+        public static (int w, int h) KuvanKoko(int kuvaW)
+        {
+            int W = JulisteenLeveys(kuvaW), H = Mathf.RoundToInt(W * 1.25f);
+            return (kuvaW, H - Mathf.RoundToInt(W * Kehys) - Mathf.RoundToInt(W * Ala));
+        }
 
         public static string Koordinaatit(double lat, double lon)
         {
@@ -48,9 +68,9 @@ namespace Matkakirja.Natiivi
         public static IEnumerator Tee(Texture2D kuva, Tiedot t, Action<byte[]> valmis)
         {
             int w = kuva.width, h = kuva.height;
-            float s = w / Pohja;
-            int reuna = Mathf.RoundToInt(w * Reuna), ala = Mathf.RoundToInt(w * Ala);
-            int W = w + 2 * reuna, H = h + reuna + ala;
+            int W = JulisteenLeveys(w), H = Mathf.RoundToInt(W * 1.25f);
+            float s = W / Pohja;
+            int reuna = Mathf.RoundToInt(W * Kehys), ala = H - reuna - h;
             var pohja = Resources.Load<PanelSettings>(UiKerros.PaneeliPolku);
             ThemeStyleSheet teema = null;
             foreach (var d in UnityEngine.Object.FindObjectsByType<UIDocument>(FindObjectsSortMode.None))
@@ -120,6 +140,20 @@ namespace Matkakirja.Natiivi
             kuvaEl.style.borderTopColor = kuvaEl.style.borderBottomColor = kuvaEl.style.borderLeftColor = kuvaEl.style.borderRightColor = muste;
             juuri.Add(kuvaEl);
 
+            // Matkakirjan logo kuvan yläosassa keskellä (maapallon kaaren yläpuolella laajassa kuvassa).
+            var logo = Resources.Load<Texture2D>("MatkakirjaUI/logo");
+            if (logo != null)
+            {
+                float lw = (w + 2 * reuna) * LogoLeveys, lh = lw * logo.height / logo.width;
+                var logoEl = new VisualElement();
+                logoEl.style.position = Position.Absolute;
+                logoEl.style.width = lw; logoEl.style.height = lh;
+                logoEl.style.left = reuna + (w - lw) * 0.5f;
+                logoEl.style.top = reuna + (w + 2 * reuna) * 0.035f;
+                logoEl.style.backgroundImage = new StyleBackground(logo);
+                juuri.Add(logoEl);
+            }
+
             // Alamarginaalin teksti keskellä (22.03): paikannimi, koordinaatit, päiväys + kamera, lähde.
             var teksti = new VisualElement();
             teksti.style.position = Position.Absolute;
@@ -136,33 +170,20 @@ namespace Matkakirja.Natiivi
             teksti.Add(Rivi(string.IsNullOrEmpty(t.Kamera) ? paiva : $"{paiva} · {t.Kamera}", Kirjasin.Luku, PieniPx * s, musteHento, 0));
             teksti.Add(Rivi(string.IsNullOrEmpty(t.Lahde) ? "Contains modified Copernicus Sentinel data" : t.Lahde, Kirjasin.LukuKursiivi, 0.85f * PieniPx * s, musteHento, 0));
 
-            // ISS-sinetti 120 px alamarginaalissa oikealla (21.52): musteleima, rengas ja ISS-teksti.
-            float d = SinettiPx * s;
-            var sinetti = new VisualElement();
-            sinetti.style.position = Position.Absolute;
-            sinetti.style.width = d; sinetti.style.height = d;
-            sinetti.style.left = reuna + w - d;
-            sinetti.style.top = reuna + h + (ala - d) * 0.5f;
-            float r = d * 0.5f, rengas = Mathf.Max(1f, d * 0.045f);
-            sinetti.style.borderTopLeftRadius = sinetti.style.borderTopRightRadius = sinetti.style.borderBottomLeftRadius = sinetti.style.borderBottomRightRadius = r;
-            sinetti.style.borderTopWidth = sinetti.style.borderBottomWidth = sinetti.style.borderLeftWidth = sinetti.style.borderRightWidth = rengas;
-            Color leima = Tyylikirja.Kehys.Mark;
-            sinetti.style.borderTopColor = sinetti.style.borderBottomColor = sinetti.style.borderLeftColor = sinetti.style.borderRightColor = leima;
-            sinetti.style.alignItems = Align.Center;
-            sinetti.style.justifyContent = Justify.Center;
-            sinetti.style.rotate = new Rotate(new Angle(-8f));
-            var sisa = new VisualElement();
-            sisa.style.width = d * 0.78f; sisa.style.height = d * 0.78f;
-            sisa.style.borderTopLeftRadius = sisa.style.borderTopRightRadius = sisa.style.borderBottomLeftRadius = sisa.style.borderBottomRightRadius = d * 0.39f;
-            float ohut = Mathf.Max(1f, d * 0.015f);
-            sisa.style.borderTopWidth = sisa.style.borderBottomWidth = sisa.style.borderLeftWidth = sisa.style.borderRightWidth = ohut;
-            sisa.style.borderTopColor = sisa.style.borderBottomColor = sisa.style.borderLeftColor = sisa.style.borderRightColor = leima;
-            sisa.style.alignItems = Align.Center;
-            sisa.style.justifyContent = Justify.Center;
-            sisa.Add(Rivi("ISS", Kirjasin.Antiikva, d * 0.30f, leima, d * 0.02f));
-            sisa.Add(Rivi("KIERTORATA", Kirjasin.Luku, d * 0.085f, leima, d * 0.01f));
-            sinetti.Add(sisa);
-            juuri.Add(sinetti);
+            // Sinetti pienenä alamarginaalissa oikealla (E v3 21.52): omistajan musteensininen Pulucam-sinetti (9.9.2026).
+            var leima = Resources.Load<Texture2D>("IssKamera/pulucam-leima");
+            if (leima != null)
+            {
+                float d = SinettiPx * s;
+                var sinetti = new VisualElement();
+                sinetti.style.position = Position.Absolute;
+                sinetti.style.width = d; sinetti.style.height = d;
+                sinetti.style.left = reuna + w - d;
+                sinetti.style.top = reuna + h + (ala - d) * 0.5f;
+                sinetti.style.backgroundImage = new StyleBackground(leima);
+                sinetti.style.rotate = new Rotate(new Angle(-6f));
+                juuri.Add(sinetti);
+            }
         }
 
         static Label Rivi(string teksti, Kirjasin k, float koko, Color vari, float vali)

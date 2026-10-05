@@ -99,9 +99,13 @@ namespace Matkakirja.Natiivi
         public readonly struct OmaKuva
         {
             public readonly string Polku, Pikkukuva, Paikka, Maa, Kuvateksti; public readonly DateTime Utc; public readonly double Lat, Lon;
-            public OmaKuva(string polku, string paikka, string maa, DateTime utc, double lat, double lon, string pikkukuva = null)
+            /// <summary>Lähderivi (Copernicus, GIBS) ja objektiivi (Natiivi-UI 6.10.: Pulun sirut ja LCD:n "KUVA VALMIS").</summary>
+            public readonly string Lahde; public readonly bool Laaja;
+            public OmaKuva(string polku, string paikka, string maa, DateTime utc, double lat, double lon, string pikkukuva = null,
+                string lahde = null, bool laaja = false)
             {
                 Polku = polku; Pikkukuva = pikkukuva ?? polku; Paikka = paikka ?? ""; Maa = maa ?? ""; Utc = utc; Lat = lat; Lon = lon;
+                Lahde = lahde ?? ""; Laaja = laaja;
                 var d = TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(utc, DateTimeKind.Utc), TimeZoneInfo.Local);
                 // Päätoimittaja 4.10.: "Oma kuva · Helsinki · 4.10.2026 klo 15.20" (paikka kuten LCD:ssä, kuvaushetki pelaajan vyöhykkeellä).
                 Kuvateksti = "Oma kuva" + (Paikka.Length > 0 ? " · " + Paikka : "") + $" · {d.Day}.{d.Month}.{d.Year} klo {d.Hour}.{d.Minute:00}";
@@ -126,7 +130,7 @@ namespace Matkakirja.Natiivi
         {
             if (!Rajaton) { PlayerPrefs.SetInt(OtettuAvain, Otettu + 1); PlayerPrefs.Save(); }
             var a = IssAlbumi.Lisaa(new OmaKuva(polku, paikka, maa, utc, lat, lon), lahde);
-            var k = new OmaKuva(polku, paikka, maa, utc, lat, lon, a.Pikkukuva);
+            var k = new OmaKuva(polku, paikka, maa, utc, lat, lon, a.Pikkukuva, lahde, Laaja);
             Loki($"oma kuva: {k.Kuvateksti}, kuvia jäljellä {(Rajaton ? "rajaton (kehittäjä)" : KuviaJaljella.ToString())}");
             TallennaKuviin(polku);
             try { Valmis?.Invoke(k); } catch (Exception e) { Debug.LogException(e); }
@@ -238,9 +242,17 @@ namespace Matkakirja.Natiivi
             var kamera = FindAnyObjectByType<PalloKierto>()?.GetComponent<Camera>();
             var g = FindAnyObjectByType<CesiumGeoreference>();
             if (kerros == null || kamera == null || g == null) { Loki("ei kyytiä tai kameraa"); return false; }
+            // Juliste (omistaja 6.10.): kuva renderöidään julisteen kuva-alan muotoon (lähes neliö), juliste enintään MaxLeveys.
+            if (IssJuliste.Kaytossa)
+            {
+                leveys = Math.Min(leveys, IssJuliste.KuvanLeveys(IssJuliste.MaxLeveys));
+                var (kw, kh) = IssJuliste.KuvanKoko(leveys);
+                muoto = $"{kw}:{kh}";
+            }
             var m = muoto.Split(':');
             int mw = m.Length == 2 && int.TryParse(m[0], out var a) ? a : 4, mh = m.Length == 2 && int.TryParse(m[1], out var b) ? b : 5;
-            var paikka = kerros.Linssi?.Kuvauspaikka();
+            // Laaja ohittaa kuvauspaikat (ne ovat valmiita telerajauksia); juliste rajaa kuvan julisteen kuva-alaan (lähes neliö).
+            var paikka = Laaja ? null : kerros.Linssi?.Kuvauspaikka();
             // Ilmaisen kuvan laskuri molemmille poluille (Päätoimittaja 4.10.: muuten COG antaa rajattomasti ilmaisia kuvia).
             if (KuviaJaljella <= 0) { Tila = "osta"; Loki($"kuvaa: ei kuvia jäljellä (otettu {Otettu}), osto {IssKuvaKauppa.Hinta ?? IssKuvaKauppa.HintaOletus}"); return false; }
             if (paikka != null)
@@ -274,6 +286,12 @@ namespace Matkakirja.Natiivi
         /// <summary>COG-kuvan zeniittikulman yläraja (Päätoimittaja 4.10.: ≤ 55°, kamera virtuaalisesti radalla lähempänä kohdetta).</summary>
         public static double MaxKallistus = 55;
         /// <summary>
+        /// LAAJAN KUVAN KALLISTUS (omistaja 6.10.: "laajakuva helsingistä, missä näkyy itämerta", julisteen yläreunassa logo maapallon
+        /// kaaren yläpuolella): zeniittikulma täsmälleen tämä, jolloin 30°:n kentän yläreuna on ~77° ja horisontti (~70° 420 km:ssä)
+        /// noin neljänneksen alempana. Testi `astro kyyti kuvaa kallistus <°>`.
+        /// </summary>
+        public static double LaajaKallistus = 62;
+        /// <summary>
         /// Reunojen lisäkarkeus (Päätoimittaja 4.10.: "karkeammat COG-tasot reunoilla ja kaukana"; simu b3a14902: tasainen 4× karkeus teki
         /// Saharan koko kuvasta suttuisen z10:n): solun karkeus = budjettikerroin × (1 + ReunaKarkeus · r²), r = 0 keskellä … 1 kulmassa.
         /// </summary>
@@ -305,7 +323,8 @@ namespace Matkakirja.Natiivi
                 if (linssi != null && linssi.Kyydissa)
                 {
                     var keski = linssi.KyydinAsento;
-                    AstronauttiLinssi.Vertailu = linssi.JyrkkaKuvakulma(keski.Lat, keski.Lon, MaxKallistus);
+                    AstronauttiLinssi.Vertailu = Laaja ? linssi.JyrkkaKuvakulma(keski.Lat, keski.Lon, LaajaKallistus, tarkka: true)
+                                                       : linssi.JyrkkaKuvakulma(keski.Lat, keski.Lon, MaxKallistus);
                     AstronauttiLinssi.VertailuKentta = Math.Min(kamera.fieldOfView, KuvanMaxKentta);
                     kenttaRajattu = true;
                     Loki($"kamera: kohde ({keski.Lat:0.000}, {keski.Lon:0.000}), kallistus {keski.Kallistus:0.0}° → {AstronauttiLinssi.Vertailu.Value.Kallistus:0.0}°, "
