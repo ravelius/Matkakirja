@@ -1694,6 +1694,7 @@ namespace Matkakirja.Natiivi
                             Matkakirja.Linssit.Iss.IssKuvakulma.LasiZoom = Math.Max(0.5, Math.Min(3.0, lasi));
                         else if (a == "polyt" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Polyt = osat[3] != "0"; // A/B pölyhiukkaset auringonsäteessä
                         else if (a == "kytkin") Kirjaa("astro " + Matkakirja.Natiivi.IssKyytiNakyma.KytkinTesti(osat.Skip(3).ToArray()));
+                        else if (a == "ohjaamo") Kirjaa("astro " + Matkakirja.Natiivi.IssKyytiNakyma.OhjaamoTesti(osat.Skip(3).ToArray()));
                         else if (a == "poyta" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.Kytkinpoyta = osat[3] != "0"; // A/B kytkinpöytä (30.9.)
                         else if (a == "sivulevyt" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.SivulevytAB(osat[3] != "0"); // A/B (30.9.)
                         else if (a == "vaakarajaus" && osat.Length > 3) Matkakirja.Natiivi.IssKyytiNakyma.VaakaAB(osat[3] != "0"); // A/B vaakapöytä (30.9.)

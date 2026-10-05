@@ -1,0 +1,17 @@
+# ISS-ohjaamon ohjauspaneeli v2 (Linnanrakentaja 4.10.2026)
+
+Omistaja valitsi konseptin v1 klo 17.2x ("parempi kuin codexin", loki #3948). Tämä kansio sisältää tuotantokuvat
+Natiivi-UI:n jaolla. Natiivi-UI kopioi kuvat proto-gitiin (Assets/Matkakirja/UI/Resources/IssOhjaamo/, .metat hänellä).
+
+- Tekijä ja lisenssi: oma tuotanto (Blender 5 Cycles, menettelyllinen malli ja materiaalit), CC0. Ei kolmansien osapuolten kuvia.
+  Käsiohjain on tyylitelty yleistiedon pohjalta, ei kopio NASA:n kuvasta. Fontti DIN Condensed/Alternate (macOS) vain
+  stensiilimerkintöjen rasterointiin (kuvassa ei fonttitiedostoa).
+- Mitat: @3x, pohja.png 1122 × 366 px = 374 × 122 pt. Kaikki osat samasta ortokamerasta (52°), rajattuina tilojen yhteiseen
+  laatikkoon; laatikot pt:nä pohjan vasemmasta yläkulmasta ohjaamo.json:ssa. Alfa ≥ 240 → 255; varjon häntä < 20 → 0.
+- Osat: pohja (merkinnät, asteikko 1×–1000×, kaasun ura, tyhjä tumma LCD, rummun kuilu), sauva-{ei,ylos,alas,vasen,oikea}
+  (jalusta, palje, sauva, suuntavalot; kallistus 16°), kaasu-{1,10,100,1000} (vipu; ura pohjassa; pykalat = kahvan keskikohta
+  laatikon yläreunasta), kamera / kamera-painettu (kaulus, suojakaiteet, nappi 4 mm alempana), rumpu-kolo (kehys, aukko
+  läpinäkyvä; rumpu = näkyvä aukko numeroille), lcd-iso (laajennus; lcdIso = lasin sisäalue), mini-kehys (9-slice 12 pt,
+  keskellä tumma LCD-tausta).
+- Toisto: lahde/tekstuurit.py → lahde/tuotanto.py (blender -b --python tuotanto.py -- ulos.png osa:asento; osa mitat → mitat.json)
+  → lahde/jalki.py <kansio>. tarkistus-kooste.png = pohja + osat + simuloitu teksti/numero (ei peliin).
