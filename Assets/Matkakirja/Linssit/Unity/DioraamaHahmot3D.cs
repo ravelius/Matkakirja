@@ -89,6 +89,7 @@ namespace Matkakirja.Natiivi
             public Quaternion PaaKierto = Quaternion.identity;
             public RootMotion.FinalIK.FullBodyBipedIK Ik; // Final IK (DioraamaHahmot3D.IK.cs): luodaan ensimmäisellä kohdistuksella
             public bool IkYritetty;
+            public string EleNimi; public double EleAlku; // kertaeleen (ele_<ele>) vuoro ja alkuhetki
         }
 
         /// <summary>Keskustelun puhuja (KuunnelmaKaistale.PuhuvaHahmo; DioraamaSovitin asettaa joka kehys) ja tila. Saman huoneen
@@ -532,6 +533,15 @@ namespace Matkakirja.Natiivi
             // Idle ↔ puhe: pidempi häivytys (omistaja 5.10.: siirtymät "outoja"), muut ennallaan.
             bool puheTaiEle = tavoite != "idle" && tavoite != "kavely" && tavoite != "tyo" && tavoite != "kanto";
             float haivytys = ensimmainen ? 0f : puheTaiEle || e.Sekoitin.Nykyinen == Leike(m3, "puhe") ? PuheHaivytysS : HaivytysS;
+            // Ele kertaliikkeenä (Linnanrakentaja 5.10.: vuorot[].ele → glb-leike "ele_<ele>", 1,2–3 s): vuoron alussa
+            // puheen päälle häivytyksellä ja ennen leikkeen loppua takaisin puheeseen; ilman eleleikettä puhe (kuten ennen).
+            if (puheTaiEle && tavoite != "puhe" && e.Malli.Glb.Animaatio(leike) == null)
+            {
+                var ea = e.Malli.Glb.Animaatio("ele_" + tavoite);
+                if (e.EleNimi != tavoite) { e.EleNimi = tavoite; e.EleAlku = t; }
+                leike = ea != null && t - e.EleAlku < ea.Kesto - PuheHaivytysS ? "ele_" + tavoite : Leike(m3, "puhe");
+            }
+            else if (!puheTaiEle || tavoite == "puhe") e.EleNimi = null;
             // Ele (vuorot[].ele) → puhe → idle: puuttuva eleleike ei pysäytä puhetta.
             if (!e.Sekoitin.Toista(leike, haivytys) && !(puheTaiEle && e.Sekoitin.Toista(Leike(m3, "puhe"), haivytys)))
                 e.Sekoitin.Toista(Leike(m3, "idle"), haivytys);
