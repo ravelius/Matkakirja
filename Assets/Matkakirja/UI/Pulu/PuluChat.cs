@@ -271,6 +271,10 @@ namespace Matkakirja.Natiivi
             paneeli.schedule.Execute(() =>
             {
                 if (Linssissa && Auki && linssiAuki && UiNakymat.Olemassa && UiNakymat.Hae().Linssit?.Auki == null) Sulje();
+                // Linssi (esim. linna) avautui kartan chatin ollessa auki: chat sulkeutuu, ettei se jää linnan päälle eikä sen
+                // napautus valu linnanäkymään (Natiivisepän löydös juna 142e: chat Berliinistä linnan päällä avasi Muurinharjan).
+                var nyt = UiNakymat.Olemassa ? UiNakymat.Hae().Linssit?.Auki : null;
+                if (Auki && !Linssissa && nyt != null && !ReferenceEquals(nyt, linssiAvatessa)) { Debug.Log("MATKAKIRJA ui chat: linssi avautui, chat kiinni"); Sulje(); }
             }).Every(400);
             Asettele();
         }
@@ -381,6 +385,7 @@ namespace Matkakirja.Natiivi
             // Muu avausreitti kuin linssin pulu (kartta, kortit): kartan teema (1.10. simulaattorikuva: vihreä teema jäi kartalle).
             if (Linssissa && !avataanLinssiin) PoistuLinssista();
             Auki = true;
+            linssiAvatessa = UiNakymat.Olemassa ? UiNakymat.Hae().Linssit?.Auki : null;
             sulkija.style.display = DisplayStyle.Flex;
             // Web pollo.js animoiAvaus(paneeli, nappi): kasvaa avaajan (Pulun tai napin) kohdalta, 220/200 ms.
             Ponnahdus.Avaa(paneeli);
@@ -400,6 +405,8 @@ namespace Matkakirja.Natiivi
         // --- linssin valmiit kysymykset (web naytaLinssinValmiit, vastaaLinssinValmiilla) ------------
 
         readonly Dictionary<string, HashSet<string>> linssiKysytyt = new Dictionary<string, HashSet<string>>();
+        /// <summary>Linssi, joka oli auki chatin avautuessa (uuden linssin avautuminen sulkee kartan chatin).</summary>
+        object linssiAvatessa;
 
         /// <summary>Jäljellä olevat valmiit kysymykset napeiksi; tosi, jos linssi tarjoaa kysymyksiä.</summary>
         bool NaytaLinssinValmiit()
@@ -435,23 +442,48 @@ namespace Matkakirja.Natiivi
         {
             if (!Auki) Avaa(false);
             PoistaSirut();
-            if (kysymykset != null && kysymykset.Count > 0)
-            {
-                var ryhma = Rakenne.El("mk-chat__sirut mk-chat__kohdevalmiit", virta, PickingMode.Ignore);
-                foreach (var (q, a) in kysymykset)
-                {
-                    string kysymys = q, vastaus = a;
-                    Kirjasimet.Aseta(Rakenne.Nappi(kysymys, "mk-chat__siru", () => VastaaValmiilla(kysymys, vastaus, aihe), ryhma), Kirjasin.Kone);
-                }
-                Vierita(ryhma);
-            }
+            valmiitAihe = aihe;
+            valmiit = kysymykset;
+            NaytaJaljellaOlevat();
             Asettele();
+        }
+
+        // KYSYMÄTTÄ JÄÄNEET VALMIIT KYSYMYKSET (omistaja TF 140, 4.10.2026 klo 22.2x, Maakunnat/Sachsen: "Ei tule lisäkysymyksiä";
+        // web pollo.js naytaLinssinValmiit): valmis vastaus ei avaa dynaamisia jatkokysymyksiä, joten kortin kysymättä jääneet
+        // kysymykset jäävät tarjolle vastauksen alle, kunnes jokainen on kysytty (sitten ei tyhjää lohkoa). Kysytyt muistetaan
+        // aiheittain chatin sulkemisen yli (web linssiKysytyt); uusi peli nollaa.
+        IReadOnlyList<(string Q, string A)> valmiit;
+        Aihe valmiitAihe;
+        readonly Dictionary<string, HashSet<string>> valmiitKysytyt = new Dictionary<string, HashSet<string>>();
+
+        static string ValmiidenAvain(Aihe aihe) => aihe == null ? "" : aihe.Otsake + "|" + aihe.Nimi;
+
+        /// <summary>Kysymättä jääneet napeiksi; palauttaa niiden määrän (0 = ei lohkoa).</summary>
+        int NaytaJaljellaOlevat()
+        {
+            foreach (var e in virta.Query(className: "mk-chat__kohdevalmiit").ToList()) e.RemoveFromHierarchy();
+            if (valmiit == null || valmiit.Count == 0) return 0;
+            valmiitKysytyt.TryGetValue(ValmiidenAvain(valmiitAihe), out var kysytyt);
+            var jaljella = valmiit.Where(x => kysytyt == null || !kysytyt.Contains(x.Q.Trim())).ToList();
+            if (jaljella.Count == 0) return 0;
+            var aihe = valmiitAihe;
+            var ryhma = Rakenne.El("mk-chat__sirut mk-chat__kohdevalmiit", virta, PickingMode.Ignore);
+            foreach (var (q, a) in jaljella)
+            {
+                string kysymys = q, vastaus = a;
+                Kirjasimet.Aseta(Rakenne.Nappi(kysymys, "mk-chat__siru", () => VastaaValmiilla(kysymys, vastaus, aihe), ryhma), Kirjasin.Kone);
+            }
+            Vierita(ryhma);
+            return jaljella.Count;
         }
 
         public void VastaaValmiilla(string kysymys, string vastaus, Aihe aihe)
         {
             kysymys = (kysymys ?? "").Trim();
             if (kysymys.Length == 0 || kysyy) return;
+            var avain = ValmiidenAvain(aihe);
+            if (!valmiitKysytyt.TryGetValue(avain, out var kysytyt)) valmiitKysytyt[avain] = kysytyt = new HashSet<string>();
+            kysytyt.Add(kysymys);
             if (string.IsNullOrWhiteSpace(vastaus)) { Kysy(kysymys, aihe: aihe); keskustelunAihe = aihe; return; }
             if (!Auki) Avaa(false);
             keskustelunAihe = aihe;
@@ -467,7 +499,9 @@ namespace Matkakirja.Natiivi
             if (AaniPaalla) Puhe.Hae()?.Lue(vastaus, "pollo");
             historia.Add(("kayttaja", kysymys));
             historia.Add(("pollo", vastaus));
-            Debug.Log("MATKAKIRJA ui chat: valmis vastaus (" + (aihe?.Nimi ?? "-") + "): " + kysymys);
+            // Kysymättä jääneet saman kortin kysymykset vastauksen alle (web naytaLinssinValmiit).
+            int jaljella = valmiit != null && ValmiidenAvain(valmiitAihe) == avain ? NaytaJaljellaOlevat() : 0;
+            Debug.Log("MATKAKIRJA ui chat: valmis vastaus (" + (aihe?.Nimi ?? "-") + "): " + kysymys + ", jäljellä " + jaljella);
             Vierita(kupla);
         }
 
@@ -542,6 +576,9 @@ namespace Matkakirja.Natiivi
             kuvaPoletti++;
             historia.Clear();
             linssiKysytyt.Clear();
+            valmiitKysytyt.Clear();
+            valmiit = null;
+            valmiitAihe = null;
             virta.Clear();
             kentta.SetValueWithoutNotify("");
             tervehditty = false;

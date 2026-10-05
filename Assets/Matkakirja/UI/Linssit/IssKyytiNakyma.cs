@@ -116,7 +116,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool Kytkinpoyta = true;
         readonly IssKytkinpoyta poyta;
-        readonly VisualElement ylariviEl, sulkuVanha;
+        readonly VisualElement ylariviEl;
 
         VisualElement Poyta => Kytkinpoyta ? poyta.Juuri : ohjaimet;
 
@@ -378,10 +378,6 @@ namespace Matkakirja.Natiivi
             PaivitaPaneeli();
             OmaSijaintiHaku.Valmis += () => { if (omaNappi != null) omaNappi.Q<Label>(className: "mk-nappi__teksti").text = OmaSijaintiHaku.Rivi(); };
 
-            // KUVANÄKYMÄn ✕ OHJAUSNAPPI-neliönä harmaalla teemalla (omistaja 16.9. harmaa, EI OVAALEJA; Päätoimittaja 3.10.).
-            var sulku = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Pois kyydistä", Poistu, turva, "harmaa");
-            sulku.AddToClassList("mk-kuvanakyma__sulku");
-            sulkuVanha = sulku;
             poyta = new IssKytkinpoyta(turva,
                 k => Linssi()?.AsetaNopeus(k),
                 v => { AstronauttiKerros.PilvienMaara = v; PaivitaSaatimet(); },
@@ -422,7 +418,8 @@ namespace Matkakirja.Natiivi
             ohjaimet.style.left = (poytaLeveys - w) * 0.5f;
         }
 
-        /// <summary>Kytkinpöytä tai välilehtipaneeli (A/B) ja niiden mukana lukemakilpi ja sulkunappi; kävelyllä ei pöytää.</summary>
+        /// <summary>Kytkinpöytä tai välilehtipaneeli (A/B) ja niiden mukana lukemakilpi; kävelyllä ei pöytää. Kyydistä poistutaan
+        /// kytkinpöydän POISTU-kytkimellä tai Pulun taulun Poistu-rivillä (vanha ✕ "Pois kyydistä" poistettu 5.10.2026, ✕-inventaario 16).</summary>
         void PaivitaPoydat(KyydinTila tila)
         {
             bool ulkona = tila == KyydinTila.Ulkona;
@@ -430,7 +427,6 @@ namespace Matkakirja.Natiivi
             poyta.Juuri.style.display = uusi ? DisplayStyle.Flex : DisplayStyle.None;
             ohjaimet.style.display = !Kytkinpoyta && !ulkona ? DisplayStyle.Flex : DisplayStyle.None;
             ylariviEl.style.display = uusi ? DisplayStyle.None : DisplayStyle.Flex;
-            sulkuVanha.style.display = uusi ? DisplayStyle.None : DisplayStyle.Flex;
         }
 
         /// <summary>A/B: Pulu vaakana Cupolan alakulmaan nousevan puomin kanssa (oletus päällä).</summary>

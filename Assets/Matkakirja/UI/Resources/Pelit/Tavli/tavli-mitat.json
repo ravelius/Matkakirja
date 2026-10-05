@@ -1,0 +1,532 @@
+{
+ "huom": "Linnanrakentaja 5.10.2026. Pikselit laudan kuvassa (2048 × 1536, origo vasen yläkulma, y alas). Kolmiot a0–a23 vastapäivään: a0 = oikea alakulma, a11 = vasen alakulma, a12 = vasen yläkulma, a23 = oikea yläkulma. Siirtoseppä kytkee pelin pistenumeroinnin (vaalean koti a0–a5 alkuasetelmassa).",
+ "koko_px": [
+  2048,
+  1536
+ ],
+ "nappula_halkaisija_px": 113.0,
+ "nappula_kangas_px": 160,
+ "kolmiot": [
+  {
+   "id": "a0",
+   "kanta": [
+    [
+     1720.3,
+     1474.6
+    ],
+    [
+     1843.2,
+     1474.6
+    ]
+   ],
+   "karki": [
+    1781.8,
+    880.6
+   ],
+   "ala": true
+  },
+  {
+   "id": "a1",
+   "kanta": [
+    [
+     1597.4,
+     1474.6
+    ],
+    [
+     1720.3,
+     1474.6
+    ]
+   ],
+   "karki": [
+    1658.9,
+    880.6
+   ],
+   "ala": true
+  },
+  {
+   "id": "a2",
+   "kanta": [
+    [
+     1474.6,
+     1474.6
+    ],
+    [
+     1597.4,
+     1474.6
+    ]
+   ],
+   "karki": [
+    1536.0,
+    880.6
+   ],
+   "ala": true
+  },
+  {
+   "id": "a3",
+   "kanta": [
+    [
+     1351.7,
+     1474.6
+    ],
+    [
+     1474.6,
+     1474.6
+    ]
+   ],
+   "karki": [
+    1413.1,
+    880.6
+   ],
+   "ala": true
+  },
+  {
+   "id": "a4",
+   "kanta": [
+    [
+     1228.8,
+     1474.6
+    ],
+    [
+     1351.7,
+     1474.6
+    ]
+   ],
+   "karki": [
+    1290.2,
+    880.6
+   ],
+   "ala": true
+  },
+  {
+   "id": "a5",
+   "kanta": [
+    [
+     1105.9,
+     1474.6
+    ],
+    [
+     1228.8,
+     1474.6
+    ]
+   ],
+   "karki": [
+    1167.4,
+    880.6
+   ],
+   "ala": true
+  },
+  {
+   "id": "a6",
+   "kanta": [
+    [
+     819.2,
+     1474.6
+    ],
+    [
+     942.1,
+     1474.6
+    ]
+   ],
+   "karki": [
+    880.6,
+    880.6
+   ],
+   "ala": true
+  },
+  {
+   "id": "a7",
+   "kanta": [
+    [
+     696.3,
+     1474.6
+    ],
+    [
+     819.2,
+     1474.6
+    ]
+   ],
+   "karki": [
+    757.8,
+    880.6
+   ],
+   "ala": true
+  },
+  {
+   "id": "a8",
+   "kanta": [
+    [
+     573.4,
+     1474.6
+    ],
+    [
+     696.3,
+     1474.6
+    ]
+   ],
+   "karki": [
+    634.9,
+    880.6
+   ],
+   "ala": true
+  },
+  {
+   "id": "a9",
+   "kanta": [
+    [
+     450.6,
+     1474.6
+    ],
+    [
+     573.4,
+     1474.6
+    ]
+   ],
+   "karki": [
+    512.0,
+    880.6
+   ],
+   "ala": true
+  },
+  {
+   "id": "a10",
+   "kanta": [
+    [
+     327.7,
+     1474.6
+    ],
+    [
+     450.6,
+     1474.6
+    ]
+   ],
+   "karki": [
+    389.1,
+    880.6
+   ],
+   "ala": true
+  },
+  {
+   "id": "a11",
+   "kanta": [
+    [
+     204.8,
+     1474.6
+    ],
+    [
+     327.7,
+     1474.6
+    ]
+   ],
+   "karki": [
+    266.2,
+    880.6
+   ],
+   "ala": true
+  },
+  {
+   "id": "a12",
+   "kanta": [
+    [
+     204.8,
+     61.4
+    ],
+    [
+     327.7,
+     61.4
+    ]
+   ],
+   "karki": [
+    266.2,
+    655.4
+   ],
+   "ala": false
+  },
+  {
+   "id": "a13",
+   "kanta": [
+    [
+     327.7,
+     61.4
+    ],
+    [
+     450.6,
+     61.4
+    ]
+   ],
+   "karki": [
+    389.1,
+    655.4
+   ],
+   "ala": false
+  },
+  {
+   "id": "a14",
+   "kanta": [
+    [
+     450.6,
+     61.4
+    ],
+    [
+     573.4,
+     61.4
+    ]
+   ],
+   "karki": [
+    512.0,
+    655.4
+   ],
+   "ala": false
+  },
+  {
+   "id": "a15",
+   "kanta": [
+    [
+     573.4,
+     61.4
+    ],
+    [
+     696.3,
+     61.4
+    ]
+   ],
+   "karki": [
+    634.9,
+    655.4
+   ],
+   "ala": false
+  },
+  {
+   "id": "a16",
+   "kanta": [
+    [
+     696.3,
+     61.4
+    ],
+    [
+     819.2,
+     61.4
+    ]
+   ],
+   "karki": [
+    757.8,
+    655.4
+   ],
+   "ala": false
+  },
+  {
+   "id": "a17",
+   "kanta": [
+    [
+     819.2,
+     61.4
+    ],
+    [
+     942.1,
+     61.4
+    ]
+   ],
+   "karki": [
+    880.6,
+    655.4
+   ],
+   "ala": false
+  },
+  {
+   "id": "a18",
+   "kanta": [
+    [
+     1105.9,
+     61.4
+    ],
+    [
+     1228.8,
+     61.4
+    ]
+   ],
+   "karki": [
+    1167.4,
+    655.4
+   ],
+   "ala": false
+  },
+  {
+   "id": "a19",
+   "kanta": [
+    [
+     1228.8,
+     61.4
+    ],
+    [
+     1351.7,
+     61.4
+    ]
+   ],
+   "karki": [
+    1290.2,
+    655.4
+   ],
+   "ala": false
+  },
+  {
+   "id": "a20",
+   "kanta": [
+    [
+     1351.7,
+     61.4
+    ],
+    [
+     1474.6,
+     61.4
+    ]
+   ],
+   "karki": [
+    1413.1,
+    655.4
+   ],
+   "ala": false
+  },
+  {
+   "id": "a21",
+   "kanta": [
+    [
+     1474.6,
+     61.4
+    ],
+    [
+     1597.4,
+     61.4
+    ]
+   ],
+   "karki": [
+    1536.0,
+    655.4
+   ],
+   "ala": false
+  },
+  {
+   "id": "a22",
+   "kanta": [
+    [
+     1597.4,
+     61.4
+    ],
+    [
+     1720.3,
+     61.4
+    ]
+   ],
+   "karki": [
+    1658.9,
+    655.4
+   ],
+   "ala": false
+  },
+  {
+   "id": "a23",
+   "kanta": [
+    [
+     1720.3,
+     61.4
+    ],
+    [
+     1843.2,
+     61.4
+    ]
+   ],
+   "karki": [
+    1781.8,
+    655.4
+   ],
+   "ala": false
+  }
+ ],
+ "palkki": {
+  "vasen_yla": [
+   942.1,
+   61.4
+  ],
+  "oikea_ala": [
+   1105.9,
+   1474.6
+  ]
+ },
+ "kentat": {
+  "vasen": {
+   "vasen_yla": [
+    204.8,
+    61.4
+   ],
+   "oikea_ala": [
+    942.1,
+    1474.6
+   ]
+  },
+  "oikea": {
+   "vasen_yla": [
+    1105.9,
+    61.4
+   ],
+   "oikea_ala": [
+    1843.2,
+    1474.6
+   ]
+  }
+ },
+ "poistoalueet": {
+  "yla": {
+   "vasen_yla": [
+    1863.7,
+    61.4
+   ],
+   "oikea_ala": [
+    1986.6,
+    759.8
+   ]
+  },
+  "ala": {
+   "vasen_yla": [
+    1863.7,
+    776.2
+   ],
+   "oikea_ala": [
+    1986.6,
+    1474.6
+   ]
+  }
+ },
+ "nopat": {
+  "huom": "nopat pysähtyvät heittäjän puoliskon keskelle vierekkäin (vaalea oikea, tumma vasen)",
+  "oikea_keskus": [
+   1474.6,
+   768.0
+  ],
+  "vasen_keskus": [
+   573.4,
+   768.0
+  ],
+  "noppa_sivu_px": 225.3
+ },
+ "laudat": {
+  "kafeneio": {
+   "nimi": "Kafeneio 1873",
+   "lauta": "kafeneio/lauta.png",
+   "vaalea": "kafeneio/nappula-vaalea.png",
+   "tumma": "kafeneio/nappula-tumma.png",
+   "varjo": "kafeneio/nappula-varjo.png"
+  },
+  "bysantti": {
+   "nimi": "Bysantin tabula n. 480",
+   "lauta": "bysantti/lauta.png",
+   "vaalea": "bysantti/nappula-vaalea.png",
+   "tumma": "bysantti/nappula-tumma.png",
+   "varjo": "bysantti/nappula-varjo.png"
+  },
+  "ottomaani": {
+   "nimi": "Ottomaanien tavla, Istanbul 1600-luku",
+   "lauta": "ottomaani/lauta.png",
+   "vaalea": "ottomaani/nappula-vaalea.png",
+   "tumma": "ottomaani/nappula-tumma.png",
+   "varjo": "ottomaani/nappula-varjo.png"
+  }
+ }
+}

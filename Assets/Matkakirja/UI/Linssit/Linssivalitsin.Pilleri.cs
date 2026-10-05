@@ -89,7 +89,7 @@ namespace Matkakirja.Natiivi
             esiNappi = Rakenne.Nappi("", "mk-linssivalitsin__esinappi", () => esiToiminto?.Invoke(), esiSisus);
             Kirjasimet.Aseta(esiNappi, Kirjasin.KoneLihava);
             esikatselu.style.display = DisplayStyle.None;
-            turva.RegisterCallback<GeometryChangedEvent>(_ => AsetteleEsikatselu());
+            turva.RegisterCallback<GeometryChangedEvent>(_ => Asettele());   // myös vaakavalikon korkeus turva-alueesta
             suurennos = new Kuvasuurennos(kerros.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
         }
 
@@ -182,8 +182,9 @@ namespace Matkakirja.Natiivi
             pelit.style.display = D(n == Nakyma.Pelit);
             alaTakaisin.style.display = D(!paa);
             // Valikko v2 (omistaja 2.10.2026 klo 20.2x: "ota x ja kaikki vaakaviivat paitsi alin vaakaviiva pois"): pääsivulla ei
-            // yläriviä (× ja sen alla viiva); valikko sulkeutuu ohinapautuksella. Alinäkymissä ‹ Takaisin ja otsikko jäävät.
-            if (V2) { ylarivi.style.display = D(!paa); ylaSulje.style.display = DisplayStyle.None; }
+            // yläriviä (viiva); valikko sulkeutuu ohinapautuksella (✕ poistettu kokonaan 5.10.2026, ✕-inventaario 20). Alinäkymissä
+            // ‹ Takaisin ja otsikko jäävät.
+            if (V2) ylarivi.style.display = D(!paa);
             otsikko.text = n switch { Nakyma.Linssit => "LINSSIT", Nakyma.Aarteet => "AARTEET", Nakyma.Matka => V2 ? "TIETÄJÄTASO" : "MATKA", Nakyma.Asetukset => "ASETUKSET", Nakyma.Pelit => "PELIT", _ => "" };
             NaytaValilehdet(n);
             if (n == Nakyma.Aarteet) RakennaAarteet();
@@ -269,7 +270,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Linssit-näkymässä ikkunassa on avauksesta asti aktiivisen linssin esikatselu (tai "Ei linssiä"), Aarteissa ensimmäinen
+        /// Linssit-näkymässä ikkunassa on avauksesta asti aktiivisen linssin esikatselu (ilman linssiä kiinni), Aarteissa ensimmäinen
         /// kerätty rivi (Aarnin luettelo → Tavarat → Julisteet); ilman kerättyjä ikkuna on kiinni. Muissa näkymissä ja valikon
         /// ollessa kiinni ikkuna on piilossa.
         /// </summary>
@@ -277,10 +278,10 @@ namespace Matkakirja.Natiivi
         {
             if (esikatselu == null || esiId != null) return;
             (string Id, string Kuva, string Nimi, string Selite, string Ikoni)? sisalto = null;
-            if (Auki && Valikkona && NykyinenNakyma == Nakyma.Linssit)
-                sisalto = aukiId != null && linssiTiedot.TryGetValue(aukiId, out var t)
-                    ? ("aktiivinen:" + aukiId, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t), LinssinIkoni(t))
-                    : ("aktiivinen:", null, "Ei linssiä", "Kartta sellaisena kuin isoisä sen piirsi.", EiLinssiaIkoni);
+            // Normaalilla kartalla (ei linssiä) ikkuna on piilossa (omistaja 5.10.2026 klo 11.35: "Piilotetaan normaalilla
+            // kartalla"); se avautuu linssin napautuksesta (Esikatsele) tai näyttää päällä olevan linssin. Paneeli ei liiku.
+            if (Auki && Valikkona && NykyinenNakyma == Nakyma.Linssit && aukiId != null && linssiTiedot.TryGetValue(aukiId, out var t))
+                sisalto = ("aktiivinen:" + aukiId, EsikatselunKuva(t), t.Nimi, EsikatselunTeksti(t), LinssinIkoni(t));
             // Valikko v2 (omistaja 2.10.2026 klo 21.4x: "ei kahta erillistä ikkunaa"): Aarteet on yksi ikkuna ilman esikatselua.
             else if (Auki && Valikkona && NykyinenNakyma == Nakyma.Aarteet && !V2)
             {
@@ -409,6 +410,18 @@ namespace Matkakirja.Natiivi
         // --- testikomento -------------------------------------------------------------------------
 
         /// <summary>Testi (ui pilleri linssit|pelit|aarteet|matka|tasot|asetukset|paa [n]): näkymä auki ja n:s rivi napautettuna kerran (esikatselu).</summary>
+        /// <summary>Testi: KESKENERÄISET-osio auki/kiinni Linssit-näkymässä ja vieritys osioon (ui pilleri kesken [0|1]).</summary>
+        public string TestaaKesken(bool auki)
+        {
+            TestaaNakyma("linssit", -1);
+            KeskenAuki = auki;
+            Rakenna();
+            var r = lista.Q(className: "mk-linssivalitsin__keskenrivi");
+            if (r != null) vieritys.schedule.Execute(() => vieritys.ScrollTo(lista.Q(className: "mk-linssivalitsin__keskeneraiset") ?? r)).ExecuteLater(50);
+            int n = lista.Q(className: "mk-linssivalitsin__keskeneraiset")?.childCount ?? 0;
+            return $"keskeneräiset {(auki ? "auki" : "kiinni")}, {n} linssiä";
+        }
+
         public string TestaaNakyma(string nimi, int rivi)
         {
             if (!Auki) Avaa();

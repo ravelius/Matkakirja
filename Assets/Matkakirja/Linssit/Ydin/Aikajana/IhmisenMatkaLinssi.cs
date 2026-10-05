@@ -45,6 +45,8 @@ namespace Matkakirja.Linssit.Aikajana
             Nimi = "Ihmisen matka II",
             Lyhyt = "Sama matka valon kertomana: valokeila kulkee tarinan mukana, muu maailma odottaa hämärässä.",
             Jarjestys = 27,
+            // Omistaja 4.10.2026 klo 23.0x: "Siirrä ihmis 2 linssi keskeneräisiin".
+            Kesken = true,
         };
 
         /// <summary>Onko tunnus Ihmisen matka (I tai II): UI:n tilat, portti ja muisti kohtelevat molempia samoin.</summary>

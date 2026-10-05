@@ -90,8 +90,7 @@ namespace Matkakirja.Natiivi
             var valilehdet = Rakenne.El("mk-selite__valilehdet", ylarivi, PickingMode.Ignore);
             valilehtiNostot = Rakenne.Nappi("NOSTOT", "mk-selite__valilehti", () => VaihdaValilehti(false), valilehdet);
             valilehtiMaakunnat = Rakenne.Nappi("MAAKUNNAT", "mk-selite__valilehti", () => VaihdaValilehti(true), valilehdet);
-            var sulje = Rakenne.Nappi(null, "mk-selite__sulje", Sulje, ylarivi, Ikonit.Viiva["rasti"]); // E4: web ✕
-            sulje.tooltip = "Sulje karttaselitteet";
+            // Ei ✕:ää (✕-inventaario 5.10.2026; ylärivi on maakuntakarttatilassa piilossa, ohinapautus sulkee vanhan paneelin).
 
             paneeliNostot = Rakenne.El("mk-selite__paneeli", paneeli, PickingMode.Ignore);
             var vieritys = new ScrollView(ScrollViewMode.Vertical);
@@ -116,8 +115,8 @@ namespace Matkakirja.Natiivi
                 // Omistaja 29.9.2026 klo 07.3x (iPhone-kaappaus maakuntalappu-paikka.jpg): "Tuo maakunta lappu saisi olla
                 // ylempänä ja peittää sen avanneen painikkeet. Lisää pieni x sen oik yläkulmaan sulkemista varten." Lappu
                 // napin kohdalle (Asettele) ja pieni ✕ kulmaan, osuma-ala 44 pt (mitat sovittu Siirtosepän kanssa webiin).
-                var x = Rakenne.Nappi(null, "mk-selite__sulje mk-selite__lappusulje", Sulje, paneeli, Ikonit.Viiva["rasti"]);
-                x.tooltip = "Sulje maakuntakartta";
+                // ✕ POISTETTU (omistaja 5.10.2026 klo 00.1x, ✕-inventaario): tyhjä napautus (meri, maakunnaton kohta, sama maakunta)
+                // sulkee lapun (TyhjaNapautus).
             }
             NaytaValilehti();
             lista = Rakenne.El("mk-selite__lista", vieritys);

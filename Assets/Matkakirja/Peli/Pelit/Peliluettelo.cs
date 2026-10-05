@@ -1,6 +1,6 @@
 // PELILUETTELO JA KOHTAAMINEN (Siirtoseppä 1.10.2026; Päätoimittajan linjaus: pelit pelataan matkan varrella ja kerätään
 // matkakirjaan; omistaja 1.10. klo 21.0x "YKSI PELI, YKSI KOTI": kukin peli tarjotaan kohtaamisena vain kotikaupungissaan,
-// Mylly Berliinissä). Ensimmäinen kerta: kotikaupungissa kaupunkikortin NYKYINEN tehtävänappi tarjoaa
+// Mylly Berliinissä, Tavli Ateenassa 5.10.). Ensimmäinen kerta: kotikaupungissa kaupunkikortin NYKYINEN tehtävänappi tarjoaa
 // pelin kohtaamisena (KORTTI "Saksa · kohtaaminen — Pelataanko myllyä?"), kun kaupungin muut tehtävät (tarinakaari, pulma,
 // aarrelaatta, tutkiminen) on tehty: pelistä kieltäytyminen ei siis estä aarteita. Uusinta: Aarteet-näkymän otsikko "Pelit".
 // Ei uusia nappeja. Koti pelikatalogista (docs/pelikatalogi.md, kortti "4. Mylly": DEU-2 Mühle); vain Eurooppa.
@@ -64,7 +64,30 @@ namespace Matkakirja.Peli.Pelit
             },
         };
 
-        public static readonly PeliKuvaus[] Kaikki = { Mylly };
+        // TAVLI (Siirtoseppä 5.10.2026; omistajan korttivalinta 4.–5.10., suunnitelma docs/raportit/tavli-suunnitelma-20261005.md,
+        // Päätoimittaja hyväksyi 5.10. 01.1x): pelikatalogin GRC-1, yksi koti Ateena (kafeneio). Laudat: Kafeneio heti, Bysantin
+        // tabula normaalin ja Ottomaanien tavla vaikean botin voitosta.
+        // Tekstit: docs/raportit/tavli-historiatekstit-20261005.md (haara siirtoseppa-luovutus; Sonnet-tutkija + Siirtoseppä 5.10.),
+        // osiot 1 (historia) ja 4 (alkuperä); ottomaanisen laudan ajoitus V&A:n rajapinnasta (861-1907: 1600–1700, Istanbul).
+        public static readonly PeliKuvaus Tavli = new PeliKuvaus
+        {
+            Id = "tavli", Nimi = "Tavli", Nappi = "Pelaa tavlia", KatalogiId = "GRC-1", Koti = "ateena",
+            Maat = new[] { new PeliMaa { Maa = "GRC", MaanNimi = "Kreikka", PaikallinenNimi = "Τάβλι" } },
+            Laudat = new[]
+            {
+                new PeliLauta { Id = "kafeneio", Nimi = "Kafeneio 1873", Esine = "Kafeneion tavlilauta (voitit kahvilan vakiopelaajalta)",
+                    Historia = "Ateenassa kahvilat, kafeneiot, ovat kuuluneet kaupunkielämään 1830-luvulta asti, ja niissä pelataan korttia ja tavlia. Tavli on kolmen pelin sarja (Portes, Plakoto ja Fevga), ja tämä peli noudattaa Portesin sääntöjä.",
+                    Alkupera = "Lauta noudattaa tavlilaudan tavallista rakennetta: kaksi puoliskoa ja yhteensä 24 pistettä, kummallakin puolella 12. Se ei kopioi yhtä tiettyä esinettä, vaan tyypillistä kahvilan pelilautaa." },
+                new PeliLauta { Id = "tabula", Nimi = "Bysantin tabula n. 480", Esine = "Bysantin tabula-lauta", Avautuu = Vastustaja.BottiNormaali,
+                    Historia = "Bysantin keisari Zenon pelasi tabulaa 400-luvun lopulla, ja runoilija Agathias kuvasi 500-luvulla hänen epäonnisen heittonsa: nopat näyttivät 2, 6 ja 5. Tabulassa oli tavlin tapaan 24 pistettä ja 15 nappulaa kummallakin, mutta noppia heitettiin kolme: se on tavlin esi-isä, ei sama peli.",
+                    Alkupera = "Lauta on piirretty Agathiaan runon (Anthologia Graeca IX.482) ja sen pohjalta tehtyjen rekonstruktioiden mukaan: 24 pistettä, 12 kummallakin puolella. Zenonin ajalta ei ole säilynyt lautaa eikä nappulasarjaa, joten ulkoasu on piirretty kuvauksen mukaan. Peli käyttää tavlin (Portes) sääntöjä, ei tabulan: tabulassa heitettiin kolmea noppaa." },
+                new PeliLauta { Id = "tavla", Nimi = "Ottomaanien tavla", Esine = "Ottomaanien upotekoristeinen tavla-lauta", Avautuu = Vastustaja.BottiVaikea,
+                    Historia = "Ottomaanien Istanbulissa tehtiin 1600- ja 1700-luvuilla ylellisiä pelilautoja, joihin upotettiin kilpikonnankilpeä, helmiäistä, luuta ja norsunluuta. Turkissa peliä pelataan yhä, ja siellä sen nimi on tavla.",
+                    Alkupera = "Esikuvana on Lontoon Victoria and Albert Museumin kaksipuolinen taittolauta (museotunnus 861-1907), joka on tehty luultavasti Istanbulissa 1600- tai 1700-luvulla. Puuhun on viilutettu kilpikonnankilpeä, helmiäistä, luuta, norsunluuta ja useita puulajeja, ja tavlipuolella on helmiäisestä tehtyjä kypressikuvioita. Toisella puolella on shakkilauta." },
+            },
+        };
+
+        public static readonly PeliKuvaus[] Kaikki = { Mylly, Tavli };
 
         public static PeliKuvaus Hae(string id)
         {

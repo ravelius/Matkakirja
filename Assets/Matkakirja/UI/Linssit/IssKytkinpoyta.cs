@@ -83,7 +83,8 @@ namespace Matkakirja.Natiivi
             Kohde = new IssKytkimet.Painike("KOHDE", "LENNÄ", () => kohde?.Invoke());
             // ISS-kamera (omistaja 1.10.2026, A): KUVAA korvaa OMA PAIKKA -vivun (oma paikka on KOHDE-listan rivinä); paneeli v3.
             Kuvaa = new IssKytkimet.Painike("KUVAA", "●", () => kuvaa?.Invoke());
-            Sulku = new IssKytkimet.Painike("POISTU", "×", () => sulku?.Invoke(), leveys: 52f);   // ✕ puuttuu fontista (□)
+            // Ilman ×-merkkiä, pelkkä POISTU (omistaja 5.10.2026 klo 00.1x, ✕-inventaario: turhat x:t pois).
+            Sulku = new IssKytkimet.Painike("POISTU", "", () => sulku?.Invoke(), leveys: 52f);
             foreach (var m in new VisualElement[] { Nopeus, Pilvet, Vuodenaika, Vuorokausi, Kohde, Kuvaa, Sulku }) saatimet.Add(m);
             moduulit = new IssKytkimet.Kytkin[] { Live, Lukema, Nopeus, Pilvet, Vuodenaika, Vuorokausi, Kohde, Kuvaa, Sulku };
             foreach (var m in moduulit) m.Muuttui += () => { if (asettelu != null) PaivitaKerrokset(); };
@@ -311,6 +312,7 @@ namespace Matkakirja.Natiivi
         /// </summary>
         void PoistuMerkki(string a)
         {
+            if (string.IsNullOrEmpty(Sulku.Legenda.text)) return;   // merkki poistettu (5.10.2026)
             if (Sulku.style.display.value == DisplayStyle.None || !(IssPaneeliKuvat.Kehys(a, "poistu-ylos") is Rect k)) return;
             if (!(IssPaneeliKuvat.Osa(a, "poistu") is Rect o)) return;
             var l = Sulku.Legenda;

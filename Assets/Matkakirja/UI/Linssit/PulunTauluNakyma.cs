@@ -88,11 +88,15 @@ namespace Matkakirja.Natiivi
             paneeli.RegisterCallback<GeometryChangedEvent>(_ => OrigoAvaajaan());
             var ylarivi = Rakenne.El("mk-astroTaulu__ylarivi", paneeli, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(PulunTaulu.Otsikko, "mk-astroTaulu__otsikko", ylarivi), Kirjasin.LukuLihava);
-            // ✕ OHJAUSNAPPI-neliönä harmaalla teemalla kuten KUVANÄKYMÄn ✕ (omistaja 2.10.2026 klo 14.2x EI OVAALEJA, Päätoimittaja
-            // 3.10.); taulun oma teema jätti neliön näkymättömäksi saman värisenä kuin taulu.
-            var sulku = Ohjausnappi.Nappi(Ikonit.Viiva["rasti"], "Sulje taulu", () => Sulje("sulku"), ylarivi, "harmaa");
-            sulku.AddToClassList("mk-astroTaulu__sulku");
-            rivit = Rakenne.El("mk-astroTaulu__rivit", paneeli, PickingMode.Ignore);
+            // Ei omaa ✕:ää (omistaja 5.10.2026 klo 00.1x: "Ota valikon x pois koska sen voi sulkea klikkaamalla muualta"): taulu
+            // sulkeutuu ohinapautuksella (UlkoNapautus), Pulusta ja valinnasta; linssin ✕ jää.
+            // Rivit vierityksessä: matalassa ruudussa (iPhone vaaka) rivit vierittyvät eivätkä kutistu päällekkäin (omistaja TF 140, 22.4x).
+            vieritys = new ScrollView(ScrollViewMode.Vertical);
+            vieritys.AddToClassList("mk-astroTaulu__vieritys");
+            vieritys.verticalScrollerVisibility = ScrollerVisibility.Hidden;
+            vieritys.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
+            paneeli.Add(vieritys);
+            rivit = Rakenne.El("mk-astroTaulu__rivit", vieritys.contentContainer, PickingMode.Ignore);
             // Sulkeutuva taulu (200 ms) ei enää toimi: linkki ja rivit vain auki ollessa.
             var linkki = Rakenne.Nappi(null, "mk-astroTaulu__linkki", () => { if (Auki) KysyPululta(); }, paneeli);
             var linkkiTeksti = Rakenne.Teksti("<u>" + PulunTaulu.KysyTeksti + "</u>", "mk-astroTaulu__linkkiTeksti", linkki);
@@ -246,6 +250,9 @@ namespace Matkakirja.Natiivi
         }
 
         AstroMoodi? rakennettu;
+        ScrollView vieritys;
+        /// <summary>Rakennus- ja paikanvaihtokerrat lokiin (todennus: auki oleva taulu ei rakennu eikä hypi uudelleen).</summary>
+        int rakennuksia, paikanVaihtoja;
 
         void Rakenna()
         {
@@ -253,6 +260,7 @@ namespace Matkakirja.Natiivi
             var l = Linssi();
             var nyt = Nykyinen(l);
             rakennettu = nyt;
+            Debug.Log($"MATKAKIRJA pulun taulu: rakennettu ({nyt}), {++rakennuksia}. kerta");
             bool kyytiOn = l != null && l.Auki;
             // Käynnissä oleva lisärivi (esim. avaruuskävely) on valittu; silloin moodirivi ei ole.
             var lisaAktiivinen = kyytiOn ? lisarivit.Find(x => Kysy(x.Aktiivinen)) : null;
@@ -334,7 +342,9 @@ namespace Matkakirja.Natiivi
                 if (!vainYlos) { paikka = null; ala = 0; paneeli.style.right = PulunTaulu.OikeaReuna; paneeli.style.bottom = 128f; }
                 return;
             }
-            float w = paneeli.layout.width, h = paneeli.layout.height;
+            // Korkeus sisällöstä, ei paneelin rajatusta laatikosta: rajattu korkeus syötti seuraavaa sijoitusta, ja vaakana taulu
+            // hyppi 400 ms välein paikasta toiseen ("valikko menee rikki ja yrittää rakentua kokoajan uudestaan", omistaja TF 140).
+            float w = paneeli.layout.width, h = LuontainenKorkeus();
             if (float.IsNaN(w) || w <= 0) w = Mathf.Min(PulunTaulu.Leveys, W - PulunTaulu.ReunaVara);
             if (float.IsNaN(h) || h <= 0) h = 290f;
             var vaista = new List<Laatikko>();
@@ -352,11 +362,42 @@ namespace Matkakirja.Natiivi
             // harmaan ✕:n alapuolella (12 + 34 + 8 pt; Natiivisepän savuke 1121: taulun oma ✕ jäi linssin ✕:n alle).
             float ylaMin = kerros.Reunat(LinssiUi.Kerros).y + Mathf.Max(Linssi()?.Kyydissa == true ? 52f : PulunTaulu.YlaMin, SulkuVara);
             var valittu = PulunTaulu.Sijoita(pulu.Value, W, H, w, h, vaista, vainYlos ? paikka : null, ala, ylaMin);
+            if (vainYlos && valittu.Nimi != paikka)
+                Debug.Log($"MATKAKIRJA pulun taulu: paikka {paikka} → {valittu.Nimi} (h {h:0}), {++paikanVaihtoja}. vaihto");
             paikka = valittu.Nimi;
             ala = valittu.Ala;
             paneeli.style.bottom = valittu.Ala;
             paneeli.style.right = valittu.Oikea ?? PulunTaulu.OikeaReuna;
-            paneeli.style.maxHeight = Mathf.Max(120f, H - valittu.Ala - 12f - kerros.Reunat(LinssiUi.Kerros).y);
+            // Yläreuna ei koskaan ylaMinin yläpuolelle (linssin ✕:n alle): ennen raja salli 12 pt:n ja vaakana taulun oma ✕ osui
+            // linssin ✕:n viereen. Yli jäävät rivit vierittyvät.
+            paneeli.style.maxHeight = Mathf.Max(44f, H - valittu.Ala - ylaMin);
+        }
+
+        float RivienKorkeus()
+        {
+            float h = 0;
+            foreach (var r in rivit.Children())
+            {
+                if (float.IsNaN(r.layout.height)) return float.NaN;
+                h += r.layout.height + r.resolvedStyle.marginTop + r.resolvedStyle.marginBottom;
+            }
+            return h;
+        }
+
+        /// <summary>Taulun luontainen korkeus (otsikko, kaikki rivit ja linkki) rajauksesta riippumatta.</summary>
+        float LuontainenKorkeus()
+        {
+            var s = paneeli.resolvedStyle;
+            float h = s.paddingTop + s.paddingBottom + s.borderTopWidth + s.borderBottomWidth;
+            foreach (var c in paneeli.Children())
+            {
+                if (c.resolvedStyle.display == DisplayStyle.None) continue;
+                // Vierityksen sisältö mitataan riveistä (rivit-laatikko kutistuu näkymän mukaan; rivit eivät).
+                float ch = c == vieritys ? RivienKorkeus() : c.layout.height;
+                if (float.IsNaN(ch)) return float.NaN;
+                h += ch + c.resolvedStyle.marginTop + c.resolvedStyle.marginBottom;
+            }
+            return h;
         }
 
         /// <summary>Pulun paikka (web pulunLaatikko): kuvan ollessa auki minipulu, muuten Pulu eleen varoineen, ilman Pulua Näkymät-nappi.</summary>

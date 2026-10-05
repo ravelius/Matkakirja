@@ -196,12 +196,15 @@ namespace Matkakirja.Linssit.Radio
         /// YKSINKERTAINEN KARTTA (omistaja 29.9.2026 klo 20.1x: "voisitko katsoa sitä karttaa radiossa, miten sen saisi
         /// järkevämmäksi?"; Päätoimittajan suositus): 3D-ristikkomastot, suuret punaiset renkaat ja yövalot pois (UI piirtää
         /// asteikon asemat pieninä merkkeinä nimineen, viritetty korostettuna yhdellä hillityllä sykkivällä renkaalla),
-        /// hämärä ja reliefi jäävät, kamera loivasti kallistettuna (<see cref="KartanKallistus"/>) ja viritetty asema
+        /// hämärä ja reliefi jäävät, kamera suoraan ylhäältä (<see cref="KartanKallistus"/>) ja viritetty asema
         /// radion yläpuolella (<see cref="KohteenPohjoissiirto"/>). A/B `radio kartta mastot|yksinkertainen`.
         /// </summary>
         public static bool Yksinkertainen = true;
-        /// <summary>Kameran kallistus radiossa: yksinkertaisessa kartassa loiva 20°, mastokartassa 40°.</summary>
-        public static double KartanKallistus => Yksinkertainen ? 20 : Mastot.RadionKallistus;
+        /// <summary>
+        /// Kameran kallistus radiossa: yksinkertaisessa kartassa 0° eli pallo suoraan ylhäältä (omistaja TF 140, 4.10.2026 klo
+        /// 22.5x: "Näytä maapallo suoraan ylhäältä älä kulmasta"; ennen 20°, jolloin horisontti näkyi), mastokartassa 40°.
+        /// </summary>
+        public static double KartanKallistus => Yksinkertainen ? 0 : Mastot.RadionKallistus;
         /// <summary>
         /// Viritetty asema näkyy radion yläpuolella: kameran keskipiste siirretään etelään tämän osuuden verran näkyvästä
         /// korkeudesta (asema ~20 % keskeltä ylöspäin, radio vie alalaidan ~22 %).
@@ -539,23 +542,12 @@ namespace Matkakirja.Linssit.Radio
         public IReadOnlyList<string> Asteikko => asteikko;
 
         /// <summary>
-        /// Näkymän asemat lännestä itään (omistaja 28.9.2026: "Asteikolla näytetään näkymän asemat länsi → itä"): Asteikko
-        /// rajattuna kameran lähialueeseen (Mastot.LahialueenNakyvyys &gt; 0,3, sama joukko kuin pallolla näkyvät mastot);
-        /// soiva asema on aina mukana. Ilman kameraa koko asteikko.
+        /// Asteikon asemat kuorelle: KAIKKI kanavat yhtenä jatkuvana nauhana maantieteellisessä järjestyksessä (omistaja TF 140,
+        /// 4.10.2026 klo 22.5x: "Pitäisi olla kaikki kanavat selattavissa"; ennen 28.9. linjauksen mukaan vain kameran
+        /// lähialueen asemat, jolloin viistossa näkymässä asteikolla oli esim. vain Tripoli, Valletta ja Karthago).
+        /// Pallo seuraa viritettyä asemaa kuten ennen.
         /// </summary>
-        public IReadOnlyList<string> NakymanAsteikko()
-        {
-            if (y?.Kamera is not Nakyma n || !(n.Korkeus > 0)) return asteikko;
-            double km = n.Korkeus / 1000;
-            var o = new List<string>();
-            foreach (var id in asteikko)
-            {
-                var k = aineisto.Kaupunki(id);
-                if (k == null) continue;
-                if (id == soiva || Mastot.LahialueenNakyvyys(Mastot.EtaisyysKm(n.Lat, n.Lon, k.Lat, k.Lon), km) > 0.3) o.Add(id);
-            }
-            return o;
-        }
+        public IReadOnlyList<string> NakymanAsteikko() => asteikko;
         public IReadOnlyList<Asema> Asemat => aineisto.Asemat.Values.ToList();
         /// <summary>Maan asema (kartuscha).</summary>
         public Asema MaanAsema(string iso3) => aineisto.MaanAsema(iso3);

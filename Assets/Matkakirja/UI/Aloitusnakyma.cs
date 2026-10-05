@@ -408,20 +408,21 @@ namespace Matkakirja.Natiivi
         /// Web @media (max-width: 700px) .juliste-nimi/-yla/-ala: puhelimella pienempi pääotsikko ja tiiviimpi
         /// harvennus (kirjainvälin muunnoksen jälkeen työpöydän arvot rivittivät MATKAKIRJA-sanan, b12o).
         /// </summary>
-        static void Kapea(VisualElement juliste) =>
+        internal static void Kapea(VisualElement juliste) =>
             juliste.RegisterCallback<GeometryChangedEvent>(_ =>
             {
                 float w = juliste.panel?.visualTree.layout.width ?? 0f;
                 if (w > 0f) juliste.EnableInClassList("mk-juliste--kapea", w <= 700f);
             });
 
-        static void JulisteRivi(VisualElement isa, string teksti, string luokka)
+        internal static Label JulisteRivi(VisualElement isa, string teksti, string luokka)
         {
             var l = Rakenne.Teksti(teksti, "mk-juliste__rivi " + luokka, isa);
             Kirjasimet.Aseta(l, Kirjasin.LukuLihava);
+            return l;
         }
 
-        static void Viiva(VisualElement isa)
+        internal static void Viiva(VisualElement isa)
         {
             var v = Rakenne.El("mk-juliste__viiva", isa, PickingMode.Ignore);
             Rakenne.El("mk-juliste__vaakaviiva", v, PickingMode.Ignore);
