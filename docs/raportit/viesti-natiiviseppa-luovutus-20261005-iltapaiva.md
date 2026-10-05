@@ -4,6 +4,12 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovu
 
 ## TILA HETI
 
+- **20.36: JUNA 144 -koe 92b2bad6** (natiiviseppa/juna-144-ohjaamo-koe) = e636bc55 + lontoo b3aee96b (OpasKuvaus-kamera) + 429-korjaus
+  6895f050 + opas-kevyt-144 a6af31b8. Odotetaan hionnat (krediittien koko, otsikon varjo; Natiivi-UI/Linssiseppä lähettävät SHA:t,
+  Päätoimittaja kuittasi etukäteen) ENINTÄÄN 21.15, sitten simu + iPad-laite kerralla (MATKAKIRJA_KIRJASTOT-ohitus; laitteen Unity
+  hakee Cinemachinen rekisteristä). iPad-ajo: lokit/natiiviseppa-skriptit/ipad-opas-muisti.sh (esikäynnistys ennen --consolea).
+  Pöllön IP-raja täynnä → Pelikoodarin suoja-PR nollaa; kuvat/ääni sen jälkeen. VIE vasta omistajan luvalla.
+
 - **JUNA 144 LOPULLINEN KOE e636bc55** (haara natiiviseppa/juna-144-ohjaamo-koe, worktree wt/proto-natiiviseppa-j144; simukäännös
   061121c9, .app lokit/natiiviseppa-app-144vie-061121c9) = ec0038f4 + ISS-ohjaamo (natiivi-ui/iss-ohjaamo-144 2bb26db8 + LS2 v2e
   eea832b1) + plist 5e9d2c7f + linna/kaupunki-kuva 79a3582c (sumu/Volume pois) + elävä opas (natiivi-ui/opas-kevyt-144 650f9325,
