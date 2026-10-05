@@ -196,6 +196,8 @@ namespace Matkakirja.Natiivi
                 for (var x = v; x != null; x = x.parent)
                     if (x == sisallys || x == sisallysNappi || x == alaSisallys) return;
                 SuljeSisallys();
+                // Sulkeva napautus ei saa jatkua arkille (simun oikea napautus 5.10.: sama napautus käänsi myös sivun).
+                e.StopImmediatePropagation();
             }, TrickleDown.TrickleDown);
 
             // Turva-alue (Dynamic Island, kotipalkki): arkki on koko ruudun levy, joten otsikkorivi ja alapalkki
