@@ -41,10 +41,10 @@ Omistaja avaa uuden session kansioon /Users/Shared/Claude/Matkakirja-fable (Opus
 |---|---|---|---|---|
 | Postivahti | Matkakirja-posti | postivahti | Sonnet, medium | **4e5ad2a5d** · kierto 10 min, viikkorajan hälytykset (kysy raja; 96 %:n hälytys jäi 5.10. tulematta), levy (kova raja 30 Gi) |
 | Julkaisija | Matkakirja-julkaisija | julkaisija-luovutus-20260928 | Opus, high | **35c5d0dff** · TF 142 testaajilla, laskuri 10/12, simujono, osoitinvaihdot omistajan OK:lla (gh workflow run) |
-| Natiiviseppä | Matkakirja-3d-selvittaja | selvittaja-3d-luovutus | Opus, high | **NATIIVISEPPA_SHA** · juna 143: Brotli ca4251f5, chat-linna b38360f4, x-napit 63a4552e + 9a688396 kuitattu |
+| Natiiviseppä | Matkakirja-3d-selvittaja | selvittaja-3d-luovutus | Opus, high | **9c3e90113** · BUILD 142 = 62d5d1bb; juna 143 -koe 3a6c994e (Brotli + chat-linna); x-napit 63a4552e + 9a688396 kuitattu, yhdistämättä |
 | Natiivi-UI | Matkakirja-natiivi-ui | natiivi-ui-luovutus-20261005 | Opus, high | **21223cdb8** · x-napit + chat-linna merge-pyynnöt Natiivisepälle; nimilapun kontrasti kirkkaalla kuvalla myöhemmin |
 | Pelikoodari | Matkakirja-pelikoodari | pelikoodari-tyo-20260923 | Opus, high | **13761bea9** · ei avoimia eriä (Tavlin ja Myllyn äänet valmiit) |
-| Linssiseppä | Matkakirja-linssiseppa | linssiseppa-tyo-20260923 | Opus, high | **1e4edc173** · linna-kuva e6fa10ea (Neutral + tilt vain huoneissa -suositus omistajalle), 2 px:n ruudukko auki; kiilto 11–13 |
+| Linssiseppä | Matkakirja-linssiseppa | linssiseppa-tyo-20260923 | Opus, high | **794005d22** · proto linssiseppa/linna-kuva 9f37a9e9 (ruudukon juurisyy korjattu, simulla todentamatta; Neutral + tilt vain huoneissa -suositus omistajalle); kiilto 11–13 |
 | Linssiseppä 2 | Matkakirja-linssiseppa-2 | linssiseppa2-tyo-20260928 | Opus, high | **a67b3a9f8** · proto linssiseppa2/iss-ohjaamo d227d4c9; v2-kuvat 10c31692; odottaa v2b/v2c |
 | Linnanrakentaja | Matkakirja-linnanrakentaja | linnanrakentaja-tyo-20260929 | Opus, high | **e7ee8d7e9** · peili 27022c945fa48cc3 (avainsanat + AO-B + 8k + tasoitus, haara linnanrakentaja-kuori-ao-2); uusi osoitin-Run-rivi kun blender.json mainissa; välitaso 0,80 M valmiina |
 | Siirtoseppä | Matkakirja-siirtoseppa | siirtoseppa-luovutus | Opus, high | **01f9803e0** · proto linna-143 024a098d (Timeline oletus päälle, teardown, ristihäivytys), tavli 9169187b; Cinemachine/Steam Audio odottavat latauslupaa |
