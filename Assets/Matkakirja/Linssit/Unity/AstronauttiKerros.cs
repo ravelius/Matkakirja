@@ -404,7 +404,7 @@ namespace Matkakirja.Natiivi
         /// Paikallinen), välimuistin S2-alikatto 200 Mt. Kevyt laite (Kyytipino.KevytLaite): enintään z9. Kyydin päättyessä reliefi
         /// palaa. A/B `astro kyyti s2 0|1`, testiosoite `astro kyyti s2 url <{docs}/… | pois>`.
         /// </summary>
-        public const string S2Juuri = "https://media.matkakirja.app/" + Laattapalvelin.S2Polku + "/v1/";
+        public const string S2Juuri = "https://media.matkakirja.app/" + Laattapalvelin.S2Polku + "/" + Laattapalvelin.S2EuroopanVersio + "/";
         public const string S2Kerros = "astronautti-s2";
         /// <summary>
         /// Kevyt laite S2:lle (Natiivisepän ehto 1.10.): Kyytipino.KevytLaite (≤ iPhone 15 Pro) tai muisti ≤ 6144 Mt → z9, karkeampi

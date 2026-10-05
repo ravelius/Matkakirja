@@ -85,6 +85,11 @@ namespace Matkakirja
         public int valimuistiMt = 600;
         /// <summary>Astronautin kameran S2-mosaiikin ämpäripolku ja alikatto (AstronauttiKerros.S2Juuri, karsitaan ensin).</summary>
         public const string S2Polku = "linssit/astronautin-kamera/s2-eurooppa";
+        /// <summary>
+        /// Euroopan mosaiikin versio (AstronauttiKerros.S2Juuri ja S2-maailman Euroopan lohko). v2 = Karttasepän rengaskorjaus
+        /// 5.10. 19.42 (saarten sädekehät pois, MERI ennallaan, sama rajattu jako). Vanhat buildit lukevat v1:tä (muuttumaton).
+        /// </summary>
+        public const string S2EuroopanVersio = "v2";
         public const int S2ValimuistiMt = 200;
 
         TcpListener[] kuuntelijat;
@@ -383,7 +388,7 @@ namespace Matkakirja
             if (z >= 6 && z <= 10)
             {
                 int t = z - 6, bx = x >> t, by = y >> t;
-                if (bx >= 27 && bx < 40 && by >= 13 && by < 26) return $"{S2Polku}/v1/{t}/{x - (27 << t)}/{y - (13 << t)}.jpg";
+                if (bx >= 27 && bx < 40 && by >= 13 && by < 26) return $"{S2Polku}/{S2EuroopanVersio}/{t}/{x - (27 << t)}/{y - (13 << t)}.jpg";
             }
             tyhja = !onko(z, x, y);
             // Korjaussarja (Karttaseppä: MGRS-saumojen tasaus): sama z/x/y korjauskansiosta.
