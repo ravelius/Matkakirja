@@ -1,4 +1,4 @@
-# >>> TILANNE 5.10.2026 KLO 17.5x (Päätoimittajan oma nollaus, konteksti 90 %) — LUE ENSIN, sitten 14.1x <<<
+# >>> TILANNE 5.10.2026 KLO 17.2x (Päätoimittajan oma nollaus, konteksti 90 %) — LUE ENSIN, sitten 14.1x <<<
 
 **KIRJAAMATTA LOKIIN:** Matkakirja-fable/scratchpad/kirjattavat-20261005.md (n. 30 omistajan linjaa 13.1x–17.4x sanatarkasti) → TEE HETI loki-PR worktreestä (tools/uusi-worktree.sh fable loki-…; node tools/raamattu-kirjaa.mjs) + Raamattu: PULU-CHAT YHTENÄINEN (16.4x), PCM-äänilinja, ÄÄNIPANKKI-lähde tools/aanipankki/ (#4000), LONTOO Googlen laatoilla (17.4x). Julkaisija mergeää.
 **JUNA 144 (VIE klo 20, Natiiviseppä):** koe ec0038f4 kuitattu (latauspalkki+kytkentä, testimykistys, lukija-william, asetukset, linna-143/144 + kortti-tiivis, kutsu-paikallaan, paivitys-versio). ISS-ohjaamo mukaan vain jos Meksikon pari (v2c ~18.3x) hyväksytty klo 19 mennessä, muuten juna 145. Muutosloki A/B Julkaisijalla. TF 144:n jälkeen: linnan osoitin 56e98a88 (#4003, v3-äänet + liikevaihtelu) + Laitetestaaja tarkistaa + "1.1 (144)" Peli päivittyi -ruudussa → ILMOITA OMISTAJALLE TF 144.
