@@ -3294,10 +3294,6 @@
 }
 
 /* Muut-paneelin rivit: koko leveys, vasemmalle tasattu. */
-.mk-linssivalitsin__muutlista {
-    flex-direction: column;
-}
-
 .mk-valikkonappi--rivi {
     flex-grow: 0;
     flex-basis: auto;

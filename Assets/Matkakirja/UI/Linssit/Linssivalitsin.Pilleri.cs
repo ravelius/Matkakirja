@@ -182,8 +182,9 @@ namespace Matkakirja.Natiivi
             pelit.style.display = D(n == Nakyma.Pelit);
             alaTakaisin.style.display = D(!paa);
             // Valikko v2 (omistaja 2.10.2026 klo 20.2x: "ota x ja kaikki vaakaviivat paitsi alin vaakaviiva pois"): pääsivulla ei
-            // yläriviä (× ja sen alla viiva); valikko sulkeutuu ohinapautuksella. Alinäkymissä ‹ Takaisin ja otsikko jäävät.
-            if (V2) { ylarivi.style.display = D(!paa); ylaSulje.style.display = DisplayStyle.None; }
+            // yläriviä (viiva); valikko sulkeutuu ohinapautuksella (✕ poistettu kokonaan 5.10.2026, ✕-inventaario 20). Alinäkymissä
+            // ‹ Takaisin ja otsikko jäävät.
+            if (V2) ylarivi.style.display = D(!paa);
             otsikko.text = n switch { Nakyma.Linssit => "LINSSIT", Nakyma.Aarteet => "AARTEET", Nakyma.Matka => V2 ? "TIETÄJÄTASO" : "MATKA", Nakyma.Asetukset => "ASETUKSET", Nakyma.Pelit => "PELIT", _ => "" };
             NaytaValilehdet(n);
             if (n == Nakyma.Aarteet) RakennaAarteet();
