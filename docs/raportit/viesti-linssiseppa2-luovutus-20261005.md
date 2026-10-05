@@ -91,3 +91,14 @@ Kuvat: /Users/Shared/Claude/proto-3d/lokit/linssiseppa2-maailma-10c31692/kuvat. 
 - Kuvaparit Päätoimittajalle 16.5x: lokit/linssiseppa2-kuvaparit-20261005/gibs-{helsinki,amazonia}-7032ae79.png. EI mergeä ennen
   ohjaamon junaa 144; sitten gibs-pilvet rebase/merge iss-ohjaamon junaversion päälle → juna 145.
 - Esiselvitys: lokit/linssiseppa2-gibs-esiselvitys-20261005/YHTEENVETO.md. Ajoskripti scratchpad/aja-gibs2.sh (KAARI2="kuvaa gibs 0").
+
+## Päivitys 5.10. klo 18.2x — OHJAAMO JUNAAN 144 (omistaja: lähtee joka tapauksessa)
+- Merge-pyyntö Natiivisepälle 18.0x: linssiseppa2/iss-ohjaamo **a2941f8f** (lopullinen): v2d, avomeri tasainen (f6d3a436),
+  paikat.json maanosa (87863aae, Natiivi-UI:n elävä opas). Testit Linssit 651, Kartta 442, Peli 388, unity 0. Simu e3c7217b OK.
+- Avoinna indeksinä (ei koodia): Meksikon 11SPR radan reuna (pyydetty Karttasepältä v2e = koko suiston kattava päivä; vaihda
+  vain S2Maailma.Versio). Euromosaiikin saarisädekehät → Karttasepän korjaussarja (polku tulossa).
+- JUNA 145 järjestys (Päätoimittaja): (a) GIBS-pilvet (valmis, haara linssiseppa2/gibs-pilvet 5b1a018a; rebase ohjaamon päälle),
+  (b) s2-maailma/v2 natiiviin: Cupola + ISS-kuvan kaukoalue koko maailmaan (laatat.json: yksi puu {z}/{x}/{y}.jpg z6–z10,
+  saatavuus-bittikartta; korjaus.json tulossa) — kuvapari 3 aluetta Euroopan ulkopuolelta nyt vs v2 ennen merge-pyyntöä,
+  (c) euromosaiikin korjaussarjan polku.
+- Worktreet wt/proto-linssiseppa2-ohjaamo ja -gibs poistetaan mergen jälkeen (git worktree remove, proto-gitissä).
