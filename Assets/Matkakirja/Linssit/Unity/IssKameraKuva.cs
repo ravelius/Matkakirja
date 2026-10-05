@@ -634,6 +634,7 @@ namespace Matkakirja.Natiivi
                 byte[] meri = { 14, 22, 30 };
                 // Vesi tasoitetaan merenväriin (Ateena 8648c410: eri päivien meri suorina ruuturajoina), rannikon matala vesi 25 % jää.
                 ty.Data.VesiTasoitus = 0.75; ty.Data.Meri = (byte[])meri.Clone();
+                ty.Data.MaaLahella = ty.MaaOsuus;   // avomeri tasaisena, poikkeama vain rannikolla (simu 55448455 Kanaria)
                 // Maailman indeksissä lut on ruuduittain: avomeren täyttö ensimmäisen näkymän ruudun alueen lutilla.
                 var meriLut = ty.Data.Lut ?? ruudut.Select(x => x.Lut).FirstOrDefault(l => l != null);
                 if (meriLut != null) for (int c = 0; c < 3; c++) meri[c] = meriLut[meri[c]];

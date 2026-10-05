@@ -132,6 +132,12 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama((byte)14, Arvo(350_000), "A:n meri merenväriin");
             Oleta.Sama((byte)14, Arvo(750_000), "B:n meri merenväriin");
             Oleta.Sama((byte)24, Arvo(300_000 + 175.5 * pm), "poikkeama (+40) jää neljänneksellä");
+            // Avomerellä (maa-osuus 0) poikkeama pois, rannikolla (≥ 0,15) jää (simu 55448455 Kanaria: avomeren aallokko vs. mosaiikki).
+            d.MaaLahella = (la, lo) => 0;
+            Oleta.Sama((byte)14, Arvo(300_000 + 175.5 * pm), "avomerellä merenväri");
+            d.MaaLahella = (la, lo) => 0.5;
+            Oleta.Sama((byte)24, Arvo(300_000 + 175.5 * pm), "rannikolla poikkeama jää");
+            d.MaaLahella = null;
             // Maailman indeksi (ruudun oma lut): meri mosaiikin avomeren väriin (simu f7310e55: Kanarian sauma 31,95° N), poikkeama säilyy.
             var lut = Enumerable.Range(0, 256).Select(i => (byte)Math.Min(255, i + 30)).ToArray();
             foreach (var (ru, _) in d.Ruudut) ru.Lut = lut;
