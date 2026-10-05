@@ -18,6 +18,13 @@ Aiempi vertailu: `oikea-maailma-linsseihin-20261005.md`.
   - Bingin logo ja tekijätiedot näkyviin (Cesiumin credit-järjestelmä).
   - Bing on poistumassa: ion lupaa pääsyn "at least through September 2026", ja Cesiumin Enterprise-sopimus kattaa enintään 30.6.2028. Jos Bing poistuu, kuva vaihdetaan ionin seuraajaan (Azure Maps, nyt Technology Preview), ja vaihto on assetin vaihto.
   - Community-taso: Global Imagery 1 000 istuntoa/kk, mikä riittää pilottiin. Maksullinen otetaan, kun rajat tulevat vastaan tai ennen julkaisua.
+- **Rakentamisen esiehto (LS2 5.10.):** Bingin tila 10/2026 on tarkistamatta. ionin viimeisin julkinen tieto on "at least through
+  September 2026" ja henkilökunnan foorumiviesti 4/2025, jonka mukaan Bing-assetit poistetaan todennäköisesti ennen vuotta 2028
+  ja korvaajalle annetaan testiaika. Ensimmäinen toimi tilin luonnin jälkeen: tarkistetaan ion-tililtä (Asset Depot), onko
+  asset 2 yhä tarjolla ja onko korvaaja (Azure Maps) GA. Jos Bing on poistunut, kuvaksi tulee korvaaja; jos sitä ei ole, ionin
+  Sentinel-2 (10 m, sumea matalalla). Google 2D ei kuulu linjaan.
+- **Tekijätiedot:** Cesium for Unity näyttää ne CesiumCreditSystemin kautta, ja sille tarvitaan oma UITK-paikka natiivin pohjiin.
+  Jos sopivaa pohjaa ei ole, asia menee Päätoimittajan kautta omistajalle (sääntö: UI vain olemassa olevilla pohjilla).
 - **Token:** rajataan assetteihin 1, 2 ja 96188 (`assets:read`). Haku ajossa ämpäristä LS2:n mukaan (pieni json on ainoa ämpäriin vietävä asia).
 - **Pallon oma S2-maailma pysyy ennallaan.** Rakentaminen vasta ISS-ohjaamon jälkeen, ja ion-tilin ja tokenin luo silloin omistaja.
 
