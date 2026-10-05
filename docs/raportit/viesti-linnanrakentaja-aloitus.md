@@ -1,4 +1,4 @@
-# Linnanrakentajan aloitusviesti (päivitetty 2.10.2026 klo 22.1x)
+# Linnanrakentajan aloitusviesti (päivitetty 5.10.2026 klo 06.1x)
 
 Olet **Linnanrakentaja (Opus, high)**. Tehtäväsi on elävä linna eli Poikkileikkaus-linssi: id `poikkileikkaus`,
 moottori "dioraama". Päätoimittaja johtaa (viestit NIMELLÄ, ListAgents).
@@ -8,18 +8,20 @@ Checkout: `/Users/Shared/Claude/Matkakirja-linnanrakentaja`, haara `linnanrakent
 ## Lue ensin (vain nämä)
 
 1. CLAUDE.md ja Raamatun Ydinajatus kohta 2 (`grep -n "TYÖTAPA JA SESSIOT" js/tyohuone-raamattu.js`, toinen osuma, noin 45 riviä).
-2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261002.md`** (UUSIN: skinnatut hahmot, vartija v1, ajattelijat, ASTC-alfa).
-   Edellinen `docs/raportit/viesti-linnanrakentaja-luovutus-20261001-b.md`: kuori v20–v24 (rantaviiva, delighting, reiät,
-   venyneet), kuoriputken irrotettu ajo, vientilähteet, juurisyyt. Edellinen `…-20261001.md`.
-3. Muistitiedosto `linnanrakentaja-tila-20261001.md` (Fablen muistikansio) on sama tila tiivistettynä.
+2. **`docs/raportit/viesti-linnanrakentaja-luovutus-20261005.md`** (UUSIN: junan 143 linna = peili v30 / blender 3d59b30a,
+   AO-B + 8k-valo, kevennysehdotus A/C hyväksytty Siirtosepälle, välitaso valmiina, Brotli/Tavli/akustiikka odottavat).
+   Vanhemmat: `…-20261002.md` (hahmot, kaiut, ajattelijat) ja `olavinlinna-avoimet-20261004.md`.
+3. Muistitiedosto `linnanrakentaja-tila-20261004.md` (Fablen muistikansio) on sama tila tiivistettynä.
 
-## Kärki 2.10. klo 22.1x
+## Kärki 5.10. klo 06.1x
 
-- Linnan väki skinnattuina (omistaja 18.0x/20.1x): kaikki 11 henkilöä `_valmiit/linna-hahmot/v1` (tools/dioraama/blender/hahmot_era1.sh),
-  peili **275a276538ace40a** haarassa `linnanrakentaja-linna-skin` (worktree /Users/Shared/Claude/wt/linnanrakentaja-linna-skin, ei PR:ää).
-  Odottaa Siirtosepän iPhone-kuvia (jalkavarjo) → Päätoimittaja → omistaja. Sen jälkeen osoitin + webin AnimationMixer (sinun).
-- Omistajalle vain pelikuvia (ei Blender-kokoelmia). Ajattelijat odottavat omistajaa (Marcuksen intro, seuraava ajattelija).
-- Pitkät ajot perl fork+setsid; heredocit lainattuina; vie-blender.sh vaatii `source ~/.zshrc` (R2-avaimet).
+- Junan 143 linna: `_valmiit/olavinlinna-blender-v30`, blender 3d59b30a48c612f2 ämpärissä, KOE-blender.json haarassa
+  `linnanrakentaja-kuori-ao` (00d88a2b8). Peiliajo 37257924683: lähetä hash Päätoimittajalle ja Siirtosepälle.
+  **Osoitinta ei vaihdeta** (omistajan Run-rivi: `docs/raportit/osoitin-8f4eb611-omistajalle.md`).
+- Kevennys (`docs/raportit/linna-kevennys-ehdotus-20261005.md`): A ja C Siirtosepälle iPad-mittauksen jälkeen. Välitaso
+  `_valmiit/linna-laatu/kevennys/ulkokuori_valitaso.glb` vain, jos mittaus vaatii.
+- Odottaa: Brotli (Natiiviseppä + Siirtoseppä), Tavli #3976 (Sisältökirjuri), akustiikka #3979 (Steam Audio -lupa), JPEG-poisto.
+- Pitkät ajot perl fork+setsid; vie-blender.sh vaatii `source ~/.zshrc` (R2-avaimet); levy 97 %, joten käytä `cp -cR`.
 
 ## Säännöt, jotka opittiin
 
