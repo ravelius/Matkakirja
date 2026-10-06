@@ -7,6 +7,17 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
+## TILA 7.10. 01.5x — OMISTAJA 01.3x: "LINNA LOPPUUN MAHDOLLISIMMAN HYVÄKSI (ELEET YMS.)", SIIRTOSEPPÄ VETÄÄ
+
+- Lista (Päätoimittaja hyväksyi järjestyksen): docs/raportit/siirtoseppa-linna-valmiiksi-20261007.md. 1 eleet (minä), 2 kohdistus
+  rakennus.jsoniin + 3 eleleikkeet kaikille ja kuulijan reaktiot (Linnanrakentaja: blender v40, peili ~04.30–05.00), sitten 4–10.
+- **Eleet: wt/proto-siirtoseppa-face, haara siirtoseppa/eleet-1 0b0e0e74** (FACEITin 55ad6594 päällä): Ydin Eleajoitus (+5 testiä),
+  DioraamaHahmot3D: ajoitetut ele_puhe*/ele_kysymys painotuksiin, kuulijan nyökkäys (ele_nyokkays tai pää), puhujan katse kuulijoihin,
+  pään harhailu; poikki eleet 0|1. Käännös Julkaisijan jonossa (levyraja 36 Gi). Koeajo: tyokalut/siirtoseppa-ajot/ajo-eleet.sh
+  (kappeli/keittiö eleet 0/1 samalla apilla) → äänellinen video Päätoimittajalle; simuvuoro ~02.20 äänimaiseman jälkeen.
+- **Linnapeili a0e537492bff2189 TODENNETTU** (TF 154 + 55ad6594, 0 Exceptionia; lokit/siirtoseppa-peili156) → Päätoimittaja: ehto
+  täyttyy, Julkaisija vaihtaa osoittimen. Äänimaisema f90af465 app: lokit/siirtoseppa-aani-app (ajo-aanimaisema.sh).
+
 ## TILA 7.10. 00.3x (uusi tili, Opus 5.5 high)
 
 - **Linna-149 183866ed + FACEIT 55ad6594 TODENNETTU** (D5900D45 00.16–00.29, A/V ±1 ms, 0 Exceptionia) → ehdotettu junaan 156,
