@@ -150,3 +150,11 @@ TYÖTAPA (Päätoimittaja 23.1x): vika toistetaan ennen korjausta, sitten sama a
   "keskeytyi" (muu virhe) | "osta" (kuvat loppu, heti Laukaise-kutsussa). LCD-ehdotus 2 s: EI MAATA KUVASSA / EI KUVA-AINEISTOA /
   KUVAUS KESKEYTYI. Nopea onnistuva kuva simussa: astro kyyti; astro kyyti kello +<h> (paikallinen päivä); astro kyyti siirra 60.17 24.94;
   astro kyyti kuvaa 4:5 1080.
+- Pelikoodari (todistusajon skenaario 12, pallolukko) – vastaus valmiina, lähettämättä:
+  1) Yhden sormen veto pallon päällä riittää (PalloKierto: veto liikuttaa karttakameraa ja PelaajanEle lopettaa seurannan);
+     nipistys zoomaa samoin, mutta ei ole välttämätön. iPhone 402×874 pt: (150, 300) → (260, 460), 0,8 s + pito 1 s
+     (vältä vasen säätönappi ~(30, 315), Pulu oikealla alhaalla ja kytkinpöytä y > 700).
+  2) Tunniste: `astro kyyti tila` → rivi "astro kyyti: <Tila> … kamera (lat, lon) N km kall K° suunt S°". Kysy ennen vetoa ja
+     pidon aikana (komento kesken pidon): vika = kameran lat/lon/km/kall muuttuu selvästi (yli ISS:n oman liikkeen,
+     ~0,07°/s 1×:llä); korjaus = ennallaan. Korjauksen läsnäolo: `astro kyyti pallolukko` → "pallo (lukittu|auki)" (vain 146:ssa).
+  3) Veto + pito riittää; kahden sormen ele vain lisävarmistukseksi.
