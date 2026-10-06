@@ -24,6 +24,11 @@ namespace Matkakirja.Linssit
         public static string Tekijat { get; private set; }
         /// <summary>Korkeuskorjauksen raja (m): pienempi ero jätetään (maapohjan reuna on vinoutettu 0,3 m alas).</summary>
         public const double KorjausRajaM = 0.5;
+        /// <summary>Korjaus vain, kun kulmien hajonta on enintään tämä (m): kuopassa (Sfinksin aitaus) kulmat ovat reunoilla eri
+        /// korkeuksilla, eikä yksi siirto sovi; silloin vain loki (Linnanrakentaja säätää DEM-arvoilla). Simu 7.10. 01.07.</summary>
+        public const double HajontaRajaM = 2.0;
+        /// <summary>Tyhjä näyte (Googlen laatat eivät vielä ladattu): uusi yritys näin monta kertaa 3 s välein.</summary>
+        public const int NayteYrityksia = 5;
 
         readonly Action<string> kirjaa;
         GameObject juuri;
@@ -154,7 +159,9 @@ namespace Matkakirja.Linssit
         {
             var g = google;
             foreach (var (k, t, _) in new List<(OmatMallit.Kohde, Cesium3DTileset, CesiumCartographicPolygon)>(mallit))
+            for (int yritys = 1; yritys <= NayteYrityksia; yritys++)
             {
+                if (yritys > 1) { await System.Threading.Tasks.Task.Delay(3000); if (g != google || t == null) return; }
                 var pisteet = new List<double3>();
                 foreach (var (la, lo) in k.Leikkaus)
                 {
@@ -169,16 +176,19 @@ namespace Matkakirja.Linssit
                 var hs = new List<double>();
                 for (int i = 0; i < r.longitudeLatitudeHeightPositions.Length; i++)
                     if (r.sampleSuccess[i]) hs.Add(r.longitudeLatitudeHeightPositions[i].z);
-                if (hs.Count == 0) { kirjaa?.Invoke($"omat mallit: {k.Id} korkeusnäyte tyhjä"); continue; }
-                hs.Sort();
-                double mediaani = hs[hs.Count / 2], ero = mediaani - k.KorkeusM;
-                bool korjaa = Math.Abs(ero) > KorjausRajaM;
-                kirjaa?.Invoke($"omat mallit: {k.Id} Googlen pinta kulmissa {string.Join(" / ", hs.ConvertAll(h => h.ToString("F1")))} m, malli {k.KorkeusM:F1} m, ero {ero:+0.0;-0.0} m{(korjaa ? " → korjataan" : "")}");
-                if (!korjaa) continue;
+                if (hs.Count < pisteet.Count) { kirjaa?.Invoke($"omat mallit: {k.Id} korkeusnäyte {hs.Count}/{pisteet.Count} (yritys {yritys})"); continue; }
+                var jarj = new List<double>(hs); jarj.Sort();
+                double mediaani = jarj[jarj.Count / 2], ero = mediaani - k.KorkeusM, hajonta = jarj[^1] - jarj[0];
+                bool korjaa = Math.Abs(ero) > KorjausRajaM && hajonta <= HajontaRajaM;
+                // Kulmat leikkauspolygonin järjestyksessä (pyramideilla NE, SE, SW, NW): ero mallin pohjaan kulmittain.
+                kirjaa?.Invoke($"omat mallit: {k.Id} Googlen pinta kulmissa {string.Join(" / ", hs.ConvertAll(h => $"{h:F1} ({h - k.KorkeusM:+0.0;-0.0})"))} m, " +
+                    $"malli {k.KorkeusM:F1} m, mediaaniero {ero:+0.0;-0.0} m, hajonta {hajonta:F1} m{(korjaa ? " → korjataan" : hajonta > HajontaRajaM ? " → ei korjata (hajonta)" : "")}");
+                if (!korjaa) break;
                 // Siirto georeferenssin ylös-akselilla (kaupungin origo on lähellä: kallistusvirhe alle 0,2 m 15 km:n päässä).
                 t.transform.localPosition += Vector3.up * (float)ero;
                 var ank = mallit.Find(m => m.kohde == k).polygoni;
                 if (ank != null) { var a = ank.GetComponent<CesiumGlobeAnchor>(); a.longitudeLatitudeHeight = new double3(k.Lon, k.Lat, mediaani); }
+                break;
             }
         }
 
