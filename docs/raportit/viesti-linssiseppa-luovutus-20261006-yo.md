@@ -50,6 +50,7 @@ Haara `linssiseppa/yovalot-154`, kärki befabb3d (savy-154:n päällä). Koe `li
   - NASA Black Marble 2016 Euroopan asteen laattoina ämpärissä `linssit/kaupunki/yovalot-2026-10-06/` (`tyokalut/kaupunki_yovalot.py`).
   - OSM-kadut ovat Pelikoodarin `kartta/tiet-v1/<id>.json`. Luettelo tulee Pöllöstä `GET /opas/aineistot` ("tiet", Pelikoodarin #4081). Pariisi, Lontoo ja Rooma tehdään uudelleen r 6000:lla, jotta Eiffel mahtuu mukaan; jos ne viedään kansioon `tiet-v2`, vaihda `KaupunkiTiet.Juuri`.
   - Id: `KaupunkiTiet.Tunnus` (sama kaava kuin Siirtosepän äänimaisemassa).
+  - **TEE ENSIN** (Pelikoodari 23.5x): tiet-v1 (4 km) oli jo viety, joten Pariisi, Lontoo ja Rooma (6 km) ovat kansiossa `kartta/tiet-v2/<id>.json`. `/opas/aineistot` palauttaa lisäksi kentän `"tiet_polut": {"pariisi": "kartta/tiet-v2/pariisi.json", …}`. Natiivin pitää käyttää sitä, jos id on siinä, muuten `kartta/tiet-v1/<id>.json`. Muutos tulee `KaupunkiYovalot.LataaTiet`- ja `KaupunkiTiet.LueIndeksi`-koodiin (uusi polkukartta) ja testiin.
 - **v4 kuvattu ja v5 tehty**:
   - Katunauhat ja lamput vain kaduilla, ikkunat julkisivuissa (25 %), kohteen kultainen valonheitto.
   - v5: himmeämmät nauhat, ei ikkunoita kohteessa, kapeampi heitto, tiukempi tasaisuus.
