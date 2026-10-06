@@ -21,6 +21,7 @@ import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { kokoaAineisto } from './tee-opas-aineisto.mjs';
+import { PALLON_KAUPUNKIPISTEET } from '../../js/packs/maailmankartta-pallopisteet.js';
 
 const TAMA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAMA, '..', '..');
@@ -186,7 +187,10 @@ export async function kokoaKuvalista({ sisalto = null, ulos = null, loki = conso
   const tulos = { skeema: 1, versio: new Date().toISOString().slice(0, 10), kohteet: {}, kaupungit: {}, aliakset: {} };
   for (const [id, a] of Object.entries(aineisto)) {
     const p = kaupungit.get(id);
-    tulos.kaupungit[id] = { nimi: a.nimi ?? p?.nimi ?? id, Q: p?.Q ?? null, lat: p?.lat ?? null, lon: p?.lon ?? null, kohteet: [], kuvat: [] };
+    // Ilman Wikidata-koordinaattia (Venetsia, Alpit, Islanti ym., Päätoimittaja 7.10.): pelin oma pallopiste.
+    const pp = PALLON_KAUPUNKIPISTEET[id] ?? null;
+    tulos.kaupungit[id] = { nimi: a.nimi ?? p?.nimi ?? id, Q: p?.Q ?? null, lat: p?.lat ?? pp?.lat ?? null, lon: p?.lon ?? pp?.lon ?? null,
+      kohteet: [], kuvat: [] };
   }
   for (const x of pelinKuvat) {
     const kuva = kuvaksi(x);
