@@ -94,7 +94,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 // Tasaisuus (v3, simu 22.2x: puiden latvoihin syttyi ikkunoita, nurmelle katuvaloja): seinä ja katu ovat tasaisia
                 // (peräkkäiset erot samansuuntaisia), lehvästö ja reunat eivät. Valot vain tasaisille pinnoille.
                 float sx = dot(normalize(pr - p + 1e-6), normalize(p - pl + 1e-6)), sy = dot(normalize(pu - p + 1e-6), normalize(p - pd + 1e-6));
-                float tasainen = saturate((min(sx, sy) - 0.94) / 0.05);
+                float tasainen = saturate((min(sx, sy) - 0.97) / 0.025);   // v5: tiukempi (puiden kipinät)
                 tasainen = lerp(tasainen, 1.0, saturate((jalanjalki - 2.0) / 4.0));   // kaukana (pikseli > 2–6 m) mattoa ei karsita
 
                 float3 lisa = _ValoVari.rgb * bm * bm * _ValoParam.y;  // valosaaste
@@ -110,7 +110,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     {
                         // Mipit kaukana (katujen tiheys); gradientit naapuripikseleistä (ei ddx:ää haarassa).
                         float tie = SAMPLE_TEXTURE2D_GRAD(_Tiet, sampler_Tiet, tuv, dx.xz / _TieAlue.z, dy.xz / _TieAlue.z).r;
-                        float3 nauha = _ValoVari.rgb * tie * 0.30;
+                        float3 nauha = _ValoVari.rgb * tie * 0.16;   // v5: nauha himmeämmäksi (simu 22.5x: "neonputket")
                         // Lamput: solun piste palaa vain, jos se osuu kadulle (pikseli kadulla ja lähellä pistettä).
                         float solu = _ValoParam.w, nakyvyys = saturate(2.0 - jalanjalki * 2.5 / solu);
                         float3 lamput = 0.0;
@@ -134,8 +134,15 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     }
                 }
 
+                // Kohteen paino (valonheitto alla); kohteessa ei ikkunoita (v5: Eiffelin ristikkoon syttyi ikkunoita).
+                float wKohde = 0.0;
+                if (_KohdeP.w > 0.5)
+                {
+                    float2 dk = p.xz - _KohdeP.xz;
+                    wKohde = exp(-dot(dk, dk) / (_KohdeParam.x * _KohdeParam.x)) * saturate((p.y - _KohdeP.y + 4.0) / 4.0);
+                }
                 // Ikkunat pystypinnoille: julkisivun vaakasuunta × korkeus, 3,2 × 3,0 m.
-                float pysty = saturate((0.35 - abs(n.y)) / 0.2);
+                float pysty = saturate((0.35 - abs(n.y)) / 0.2) * (1.0 - saturate(wKohde * 3.0));
                 if (pysty > 0.0)
                 {
                     float2 t = normalize(float2(-n.z, n.x) + 1e-5);
@@ -151,12 +158,10 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 }
                 float3 tulos = c.rgb + lisa * _ValoParam.x;
                 // Kohteen valaistus (v4): lämmin valonheitto kohteen ympärille maasta ylöspäin (Eiffel kultaisena).
-                if (_KohdeP.w > 0.5)
+                if (wKohde > 0.0)
                 {
-                    float2 dk = p.xz - _KohdeP.xz;
-                    float w = exp(-dot(dk, dk) / (_KohdeParam.x * _KohdeParam.x)) * saturate((p.y - _KohdeP.y + 4.0) / 4.0);
                     float3 kulta = float3(1.0, 0.74, 0.36);
-                    tulos = tulos * (1.0 + _KohdeParam.y * w * _ValoParam.x * kulta) + kulta * 0.03 * w * _ValoParam.x;
+                    tulos = tulos * (1.0 + _KohdeParam.y * wKohde * _ValoParam.x * kulta) + kulta * 0.03 * wKohde * _ValoParam.x;
                 }
                 return half4((half3)tulos, c.a);
             }

@@ -25,7 +25,7 @@ namespace Matkakirja.Natiivi
         /// "yoikkunat" = ikkunoiden voima, "yoikkunaosuus" = palavien ikkunoiden osuus enintään). v2 simun 21.5x kuvista.</summary>
         public static bool Kaytossa = true;
         // v4 (Päätoimittaja 22.3x): valosaaste kevyeksi, katuvalot OSM-katujen mukaan (ei satunnaisia pisteitä), ikkunat harvoiksi.
-        public static float Hehku = 0.04f, Pisteet = 1.2f, SoluM = 18f, Ikkunat = 0.8f, IkkunaOsuus = 0.25f;
+        public static float Hehku = 0.04f, Pisteet = 1.4f, SoluM = 18f, Ikkunat = 0.8f, IkkunaOsuus = 0.25f;
         /// <summary>Kohteen valaistus (v4): oppaan nykyinen kohde (lat, lon, maan korkeus ellipsoidista m, säde m) saa yöllä lämpimän
         /// valonheiton (Eiffel kultaisena). OpasSovitin asettaa joka kehys; null = ei kohdetta.</summary>
         public static (double lat, double lon, double maaM, double sadeM)? Kohde;
@@ -88,7 +88,7 @@ namespace Matkakirja.Natiivi
                 var u = georef.TransformEarthCenteredEarthFixedPositionToUnity(CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(ko.lon, ko.lat, ko.maaM)));
                 var pk = georef.transform.worldToLocalMatrix.MultiplyPoint3x4(new Vector3((float)u.x, (float)u.y, (float)u.z));
                 materiaali.SetVector(IdKohde, new Vector4(pk.x, pk.y, pk.z, 1f));
-                materiaali.SetVector(IdKohdeParam, new Vector4((float)Math.Max(35, ko.sadeM), KohdeVoima, 0f, 0f));
+                materiaali.SetVector(IdKohdeParam, new Vector4((float)Math.Min(90, Math.Max(25, ko.sadeM * 0.4)), KohdeVoima, 0f, 0f));   // v5: kapeampi (lähikuva kokonaan kultainen)
             }
             else materiaali.SetVector(IdKohde, Vector4.zero);
         }
