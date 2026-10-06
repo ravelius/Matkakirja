@@ -183,6 +183,16 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Mikseritilan raidat (Pelikoodarin AaniMikseri 30.9.2026; valinnaisia): kuiva, kaiku (lyhyt vaste) ja
         /// kaikuPitka, näytetarkasti samanpituiset. Ilman mikseritilaa soi Tiedosto (poltettu versio).</summary>
         public string Kuiva, Kaiku, KaikuPitka;
+        /// <summary>Huulisynkan kohdistus (FACEIT 6.10.2026): `kohdistus: { merkit, alut_s, loput_s }` tai ElevenLabsin
+        /// alignment sellaisenaan (characters, character_start_times_seconds, character_end_times_seconds); null = ei kohdistusta.</summary>
+        public Kohdistus Kohdistus;
+    }
+
+    /// <summary>Puheen merkkikohdistus: merkki i soi välillä Alut[i] … Loput[i] (s, klipin alusta).</summary>
+    public sealed class Kohdistus
+    {
+        public string Merkit = "";
+        public double[] Alut = Array.Empty<double>(), Loput = Array.Empty<double>();
     }
 
     /// <summary>Liekkipankin (js/dioraama/pankit/liekit.js) rivi + rakennuskoneen atlas-polku (era 2 kohta 2
@@ -867,7 +877,8 @@ namespace Matkakirja.Linssit.Dioraama
                     r.Aanet[pari.Key] = new Aani { Id = pari.Key, Tiedosto = MiniJson.Teksti(o, "tiedosto"),
                         Silmukka = MiniJson.Totuus(o, "silmukka"), Voimakkuus = MiniJson.Luku(o, "voimakkuus") ?? 1,
                         KestoS = MiniJson.Luku(o, "kesto_s") ?? 0, Kuiva = MiniJson.Teksti(o, "kuiva"),
-                        Kaiku = MiniJson.Teksti(o, "kaiku"), KaikuPitka = MiniJson.Teksti(o, "kaikuPitka") };
+                        Kaiku = MiniJson.Teksti(o, "kaiku"), KaikuPitka = MiniJson.Teksti(o, "kaikuPitka"),
+                        Kohdistus = LueKohdistus(MiniJson.ObjektiTaiNull(MiniJson.Kentta(o, "kohdistus"))) };
             }
             foreach (var pari in MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "liikkeet")) ?? new Dictionary<string, object>())
             {
@@ -985,6 +996,34 @@ namespace Matkakirja.Linssit.Dioraama
                 Id = "elava-" + r.Henkilo, HenkiloId = r.Henkilo, Paikka = r.Pisteet[0], Lyhty = r.Lyhty, Silmukka = "idle",
                 Reitti = new Reitti { Pisteet = new List<V3>(r.Pisteet), Nopeus = r.Nopeus, Tauko = 0 },
             });
+        }
+
+        /// <summary>Kohdistus omasta (merkit/alut_s/loput_s) tai ElevenLabsin muodosta; merkit taulukkona tai merkkijonona.</summary>
+        public static Kohdistus LueKohdistus(Dictionary<string, object> o)
+        {
+            if (o == null) return null;
+            object m = MiniJson.Kentta(o, "merkit") ?? MiniJson.Kentta(o, "characters");
+            object a = MiniJson.Kentta(o, "alut_s") ?? MiniJson.Kentta(o, "character_start_times_seconds");
+            object l = MiniJson.Kentta(o, "loput_s") ?? MiniJson.Kentta(o, "character_end_times_seconds");
+            string merkit = m as string;
+            if (merkit == null)
+            {
+                var sb = new System.Text.StringBuilder();
+                foreach (var x in MiniJson.TaulukkoTaiTyhja(m)) { var t = x as string; sb.Append(string.IsNullOrEmpty(t) ? ' ' : t[0]); }
+                merkit = sb.ToString();
+            }
+            double[] Luvut(object arvo)
+            {
+                var lista = MiniJson.TaulukkoTaiTyhja(arvo);
+                var t = new double[lista.Count];
+                for (int i = 0; i < t.Length; i++) t[i] = lista[i] is double d ? d : 0;
+                return t;
+            }
+            var k = new Kohdistus { Merkit = merkit, Alut = Luvut(a), Loput = Luvut(l) };
+            int n = Math.Min(k.Merkit.Length, Math.Min(k.Alut.Length, k.Loput.Length));
+            if (n == 0) return null;
+            if (n < k.Merkit.Length) k.Merkit = k.Merkit.Substring(0, n);
+            return k;
         }
 
         static V3 LueV3(object arvo)

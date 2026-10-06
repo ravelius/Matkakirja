@@ -6,7 +6,7 @@
 //
 // Tuettu: glTF 2.0 binääri, yksi solmu jolla on mesh (ei hierarkiaa), kolmiot (mode 4), POSITION/NORMAL float
 // VEC3, TEXCOORD_0 float VEC2 (rakennuskoneen oma tasoprojektio — EI käännetä, ks. kohta 3), COLOR_0
-// UNSIGNED_BYTE normalized VEC4, indeksit ubyte/ushort/uint, skin + animaatiot (alla). Muu (sparse, morph, ulkoiset puskurit) →
+// UNSIGNED_BYTE normalized VEC4, indeksit ubyte/ushort/uint, skin + animaatiot (alla), morph-kohteet (POSITION, 6.10.). Muu (sparse, ulkoiset puskurit) →
 // GlbVirhe, ei arvausta.
 //
 // unityyn = true: (x, y, z) → (x, y, −z) paikoille ja normaaleille, kolmion kiertosuunta käännetään
@@ -64,6 +64,9 @@ namespace Matkakirja.Linssit.Dioraama
         public int[] Nivelet;
         /// <summary>SKIN: WEIGHTS_0 (4 per kärki, 0–1) tai null.</summary>
         public float[] Painot;
+        /// <summary>MORPH (FACEIT, Siirtoseppä 6.10.2026): primitiivin targets[] POSITION-deltoina (3 per kärki, unityyn-muunnos
+        /// kuten paikoilla) nimineen (mesh.extras.targetNames; ilman nimiä "muoto&lt;i&gt;"). Tyhjä, jos muotoja ei ole.</summary>
+        public List<(string Nimi, float[] Deltat)> Muodot = new List<(string, float[])>();
     }
 
     /// <summary>SKIN: nivelsolmut (indeksit GlbMalli.Solmut-listaan) ja käänteiset sidontamatriisit (16 per nivel,
@@ -222,7 +225,6 @@ namespace Matkakirja.Linssit.Dioraama
                 {
                     var p = MiniJson.Objekti(po);
                     if ((int)(MiniJson.Luku(p, "mode") ?? 4) != 4) throw new DioraamaGlbVirhe("vain kolmiot (mode 4)");
-                    if (MiniJson.Kentta(p, "targets") != null) throw new DioraamaGlbVirhe("morph ei tuettu");
                     var a = MiniJson.Objekti(MiniJson.Kentta(p, "attributes"));
                     var pos = FloatVec(a, "POSITION", 3) ?? throw new DioraamaGlbVirhe("POSITION puuttuu");
                     var nor = FloatVec(a, "NORMAL", 3);
@@ -279,7 +281,21 @@ namespace Matkakirja.Linssit.Dioraama
                     var nivelet = Nivelet(a, k);
                     var painot = nivelet != null ? Painot(a, k) : null;
                     if (nivelet != null && painot == null) throw new DioraamaGlbVirhe("JOINTS_0 ilman WEIGHTS_0:aa");
-                    osat.Add(new GlbOsa { Pinta = pinta, Vari = materiaaliVari, Paikat = paikat, Normaalit = normaalit, Uv = tex, Uv1 = tex1, Kuva = kuva, Varit = vari, Kolmiot = kolmiot, Nivelet = nivelet, Painot = painot });
+                    var osa = new GlbOsa { Pinta = pinta, Vari = materiaaliVari, Paikat = paikat, Normaalit = normaalit, Uv = tex, Uv1 = tex1, Kuva = kuva, Varit = vari, Kolmiot = kolmiot, Nivelet = nivelet, Painot = painot };
+                    // MORPH: vain POSITION-deltat (normaalit lasketaan muodoille Unityssa; FACEIT-vienti antaa vain POSITIONin).
+                    var nimet = MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(MiniJson.ObjektiTaiNull(MiniJson.Kentta(mesh, "extras")), "targetNames"));
+                    int ti = 0;
+                    foreach (var to in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(p, "targets")))
+                    {
+                        var d = FloatVec(MiniJson.Objekti(to), "POSITION", 3);
+                        string nimi = ti < nimet.Count && nimet[ti] is string sn ? sn : "muoto" + ti;
+                        ti++;
+                        if (d == null) continue;
+                        if (d.Length != paikat.Length) throw new DioraamaGlbVirhe("morph-kohteen kärkimäärä ei täsmää");
+                        if (unityyn) for (int q = 2; q < d.Length; q += 3) d[q] = -d[q];
+                        osa.Muodot.Add((nimi, d));
+                    }
+                    osat.Add(osa);
                 }
                 return osat;
             }

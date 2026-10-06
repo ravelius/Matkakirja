@@ -70,6 +70,9 @@ namespace Matkakirja.Natiivi
         /// ei ole yleistä paikkamerkkigeometriaa; lyhyt latausviive näkyy hahmon puuttumisena, ei harmaana).</summary>
         sealed class Esiintyma
         {
+            /// <summary>FACEIT: blend shape -kasvot (renderer, Visemit.Nimet-indeksit, silmien räpäytys); null = ei muotoja.</summary>
+            public List<(SkinnedMeshRenderer R, int[] Suu, int Vasen, int Oikea)> Kasvot;
+            public float SuuTaso;
             public string TilaId, HahmoId;
             public Hahmo Hahmo;
             public Henkilo Henkilo;
@@ -231,7 +234,15 @@ namespace Matkakirja.Natiivi
                     smr.receiveShadows = true;
                     // Rajat juuriluun kehyksessä: hahmon koko laatikko + liikevara (ei updateWhenOffscreeniä, kallis).
                     smr.localBounds = new Bounds(new Vector3(0f, 0.9f, 0f), new Vector3(2.4f, 2.4f, 2.4f));
+                    if (sm.Mesh.blendShapeCount > 0)
+                    {
+                        var suu = new int[Visemit.Nimet.Length];
+                        for (int v = 0; v < suu.Length; v++) suu[v] = sm.Mesh.GetBlendShapeIndex(Visemit.Nimet[v]);
+                        (e.Kasvot ??= new List<(SkinnedMeshRenderer, int[], int, int)>()).Add(
+                            (smr, suu, sm.Mesh.GetBlendShapeIndex("eyeBlinkLeft"), sm.Mesh.GetBlendShapeIndex("eyeBlinkRight")));
+                    }
                 }
+                if (e.Kasvot != null) Debug.Log($"MATKAKIRJA linssit: kasvot {e.HahmoId}: {e.Kasvot.Count} muotomeshiä");
                 float sk = (float)(e.Henkilo.Malli3d?.Skin?.Skaala ?? 1);
                 go.transform.localScale = new Vector3(sk, sk, sk);
                 e.Sekoitin = new DioraamaSekoitin(malli.Glb);
@@ -390,8 +401,68 @@ namespace Matkakirja.Natiivi
             for (int oi = 0; oi < s.Osat.Count; oi++) mesh.SetTriangles(kolmiotOsittain[oi], oi);
             mesh.boneWeights = painot;
             mesh.bindposes = bindposet;
+            LisaaMuodot(mesh, s.Osat, kaikki);
             mesh.RecalculateBounds();
             return new SolmuMalli { Mesh = mesh, Materiaalit = materiaalit };
+        }
+
+        /// <summary>
+        /// MORPH (FACEIT, Päätoimittaja 6.10.2026, juna 150): primitiivien muodot (GlbOsa.Muodot, ARKit-nimet) meshin blend shape
+        /// -kehyksiksi nimittäin; primitiivi, jolla muotoa ei ole, saa nollan. Paino 0–100 (SkinnedMeshRenderer.SetBlendShapeWeight).
+        /// Normaalit eivät muutu (FACEIT-vienti antaa vain POSITION-deltat; pieni suun liike ei tarvitse niitä).
+        /// </summary>
+        static void LisaaMuodot(Mesh mesh, List<GlbOsa> osat, int kaikki)
+        {
+            var nimet = new List<string>();
+            foreach (var osa in osat) foreach (var (n, _) in osa.Muodot) if (!nimet.Contains(n)) nimet.Add(n);
+            if (nimet.Count == 0) return;
+            foreach (var nimi in nimet)
+            {
+                var d = new Vector3[kaikki];
+                int kv = 0;
+                foreach (var osa in osat)
+                {
+                    int n = (osa.Paikat?.Length ?? 0) / 3;
+                    foreach (var (mn, deltat) in osa.Muodot)
+                        if (mn == nimi) for (int i = 0; i < n; i++) d[kv + i] = new Vector3(deltat[i * 3], deltat[i * 3 + 1], deltat[i * 3 + 2]);
+                    kv += n;
+                }
+                mesh.AddBlendShapeFrame(nimi, 100f, d, null, null);
+            }
+        }
+
+        static readonly float[] suuPainot = new float[Visemit.Nimet.Length];
+
+        /// <summary>
+        /// FACEIT-KASVOT (Päätoimittaja 6.10.2026, juna 150): räpäytys aina (hahmon vakaa siemen), suu vain puhujalla:
+        /// soivan puheen kohdistuksesta (Visemit.Laske, sama kello kuin avainsanoilla) tai ilman kohdistusta puheen
+        /// voimakkuudesta jawOpeniin (pehmennetty). Painot 0–100.
+        /// </summary>
+        static void PaivitaKasvot(Esiintyma e, double t)
+        {
+            if (e.Kasvot == null) return;
+            int siemen = 17;
+            foreach (char c in e.HahmoId ?? "") siemen = siemen * 31 + c;
+            float rap = Visemit.Rapaytys(siemen, t);
+            Array.Clear(suuPainot, 0, suuPainot.Length);
+            if (Puhuja != null && Puhuja == e.HahmoId)
+            {
+                var sk = DioraamaAanet.SoivaKohdistus;
+                if (sk.HasValue) Visemit.Laske(sk.Value.Kohdistus, sk.Value.Kohta, suuPainot);
+                else
+                {
+                    e.SuuTaso = Mathf.Lerp(e.SuuTaso, DioraamaAanet.PuheenTaso(), 0.35f);
+                    suuPainot[0] = e.SuuTaso * 0.6f;
+                }
+            }
+            else e.SuuTaso = 0f;
+            foreach (var (r, suu, vasen, oikea) in e.Kasvot)
+            {
+                if (r == null) continue;
+                for (int v = 0; v < suu.Length; v++) if (suu[v] >= 0) r.SetBlendShapeWeight(suu[v], suuPainot[v] * 100f);
+                if (vasen >= 0) r.SetBlendShapeWeight(vasen, rap * 100f);
+                if (oikea >= 0) r.SetBlendShapeWeight(oikea, rap * 100f);
+            }
         }
 
         /// <summary>Kärjen 4 nivelpainoa normalisoituna (glTF-painojen summa voi poiketa 1:stä pyöristyksen takia).</summary>
@@ -563,6 +634,7 @@ namespace Matkakirja.Natiivi
             float dt = double.IsNaN(e.EdellinenT) ? (float)(VaiheYksikko(e.HahmoId) * kesto) : (float)Math.Clamp(t - e.EdellinenT, 0, 0.1);
             e.EdellinenT = t;
             e.Sekoitin.Paivita(dt);
+            PaivitaKasvot(e, t);
             var s = e.Sekoitin;
             for (int i = 0; i < e.SolmuT.Length; i++)
             {

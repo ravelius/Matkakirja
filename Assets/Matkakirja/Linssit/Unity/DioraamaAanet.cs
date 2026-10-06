@@ -542,6 +542,35 @@ namespace Matkakirja.Natiivi
             && (aktiivinen.puheKuiva.isPlaying || aktiivinen.puheTauolla)
                 ? aktiivinen.puheKuiva.time : (float?)null;
 
+        /// <summary>
+        /// HUULISYNKKA (FACEIT 6.10.2026): puheväylällä soiva linnan puhe ja sen kohta (s klipin alusta, myös tauolla) sekä
+        /// pankin kohdistus; null, jos mikään linnan puhe ei soi tai puheella ei ole kohdistusta.
+        /// </summary>
+        string soivaId;
+        public static (Kohdistus Kohdistus, double Kohta)? SoivaKohdistus
+        {
+            get
+            {
+                var a = aktiivinen;
+                if (a == null || a.puheKuiva == null || a.soivaId == null || a.rakennus == null) return null;
+                if (!a.puheKuiva.isPlaying && !a.puheTauolla) return null;
+                if (!a.rakennus.Aanet.TryGetValue(a.soivaId, out var aani) || aani.Kohdistus == null) return null;
+                return (aani.Kohdistus, a.puheKuiva.time);
+            }
+        }
+
+        /// <summary>Puheen hetkellinen voimakkuus 0–1 (huulisynkan vara ilman kohdistusta): puheväylän RMS.</summary>
+        public static float PuheenTaso()
+        {
+            var a = aktiivinen;
+            if (a == null || a.puheKuiva == null || !a.puheKuiva.isPlaying) return 0f;
+            a.puheKuiva.GetOutputData(a.tasoNayte, 0);
+            double sum = 0;
+            for (int i = 0; i < a.tasoNayte.Length; i++) sum += a.tasoNayte[i] * a.tasoNayte[i];
+            return Mathf.Clamp01((float)Math.Sqrt(sum / a.tasoNayte.Length) * 6f);
+        }
+        readonly float[] tasoNayte = new float[256];
+
         // ESITTELYN TAUKO (omistaja 6.10.2026, linnan esittelyerä; DioraamaSovitin.Tauko): linnan puhe pysähtyy kohtaansa ja jatkuu
         // siitä; väistön aikaraja (puheLoppuu) siirtyy tauon verran. Tauko säilyy "soivana" (PuheSoi, PuheenKohta), ettei kertojan
         // teksti eikä avainsana välähdä tauon ajaksi.
@@ -593,6 +622,7 @@ namespace Matkakirja.Natiivi
                 return false;
             }
             puheKuiva.Stop(); puheKaiku.Stop();
+            soivaId = aaniId;
             katkaiseeMuita = true;
             try
             {
