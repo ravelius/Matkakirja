@@ -335,9 +335,13 @@ export function lisaaBlender(rakennusJson, blender) {
     h.malli3d = { ...h.malli3d, skin: { glb: B(`hahmot/${id}.glb`), ...SKIN[id] } };
   }
   rakennusJson.tunnelma = 'hamara';
+  // Kuoren alle piirrettävän 4 km:n vesitason korkeus (natiivi DioraamaUlkokuori.LisaaVesi): Olavinlinnan järvi −7,
+  // muille rakennus voi antaa oman (Kielletty kaupunki −3, Jinshui-joen uoman alapuolella, 7.10.2026).
+  const vesi = rakennusJson.ulkokuoriVesi ?? -7;
+  delete rakennusJson.ulkokuoriVesi;
   rakennusJson.ulkokuori = {
     ...Object.fromEntries(Object.keys(tasot).map((t) => [t, B(`ulkokuori/ulkokuori_${t}.glb`)])),
-    vesi: -7,
+    vesi,
     tekstuurit: {
       ...Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-${k}-4x4.astcm`)])),
       hamara: Object.fromEntries(Object.entries(tasot).map(([t, k]) => [t, B(`ulkokuori/ulkokuori-hamara-${k}-4x4.astcm`)])),
