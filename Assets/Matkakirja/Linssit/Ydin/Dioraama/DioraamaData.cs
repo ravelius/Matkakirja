@@ -402,6 +402,9 @@ namespace Matkakirja.Linssit.Dioraama
         public V3? Kohde;
         public double? Fov;
         public double Kesto = 18, Lyhyt = 6;
+        /// <summary>Kaaren loppu: null = yleisnäkymä (oletus), "kertoja" = suoraan kertojan 1. jakson lepoon (Linnanrakentaja
+        /// 6.10.2026: kaari → yleis → järveltä -hyppy pois; 1. jakson kamera suunnitellaan kaaren jatkoksi).</summary>
+        public string Loppu;
     }
 
     /// <summary>ELÄVÄ LINNA, tilan elävä kohde (kohta 2): napautuspiste yleisnäkymässä, sykkivä vihje ja kävelyreitti.</summary>
@@ -674,6 +677,7 @@ namespace Matkakirja.Linssit.Dioraama
                     Korkeus = MiniJson.Luku(alku, "korkeus") ?? 8, Fov = MiniJson.Luku(alku, "fov"),
                     Kohde = MiniJson.Kentta(alku, "kohde") != null ? LueV3(MiniJson.Kentta(alku, "kohde")) : (V3?)null,
                     Kesto = MiniJson.Luku(saap, "kesto") ?? 18, Lyhyt = MiniJson.Luku(saap, "lyhyt") ?? 6,
+                    Loppu = MiniJson.Teksti(saap, "loppu"),
                 };
             }
             var ymp = MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "ymparisto"));
