@@ -81,3 +81,15 @@ Esikatselu: https://media.matkakirja.app/julisteet/herokoe/20261006/era03-yksi-k
 Tanger: CapSpartelin todellinen majakka; Geertchaosin tuoreAPI-varmennettu2018kuva ja DiegoDelson2015hyväksytyn projektipaketin eri kulman kuva. Marrakech: aitoBabAgnaou-portti, Prilfish2019API-kuva ja JakubHałun2025aiemman hyväksytyn projektirekordin kuva. Aiempi ja tuorevarmennus eroteltu rehellisesti; ei uusia Wikimedia-pyyntöjä tauolla. Addis: kaksi API-varmennettuaEntoto-kaupunkilaakson valokuvaa eri tekijöiltä omasta aiemmasta mediakopiosta.
 
 Katso nämä kolme ennen kolmannen erän pelikytkentää. Kokoerän muut paikat etenevät samassa listajärjestyksessä.101kuvaa nyt R2-varmennettu:65alkuperäistä,29lisäkaupunkia,7linssiä. Ei main-mergeä/versionnostoa/julkaisua; vastaanottokuittaus/katselmus/pelikytkentä odottavat edelleen todentamista.
+
+## ERÄ 1 / erä 04: Yellowknife, Iqaluit ja Santa Fe katselmukseen
+
+Listan paikat 76–78 on toimitettu ja tavuntarkalla julkisella R2-luennalla varmennettu, yksi 1536×1024 sRGB PNG kustakin. Manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-04-yksi-kuva-pilotti-20261006.json` sisältää URL:t, avaimet, SHA:t, tarkat promptit ja valokuvaviitteiden oikeus- ja paikkatiedot.
+
+Esikatselu: https://media.matkakirja.app/julisteet/herokoe/20261006/era04-yksi-kuva-pilotti-esikatselu.jpg
+
+Katso nämä kolme ennen neljännen erän pelikytkentää. Paikalliset vanhojen hyväksyttyjen valokuvarekordien varmennukset ja omat nimetyt mediakopiot erotetaan manifestissa tuoreesta API-varmennuksesta. Ei Wikimedia-pyyntöjä tauon aikana, eikä arvattua geometriaa.
+
+110 kuvaa tunnetusta 318 kuvan tilauksesta on nyt R2-varmennettu: 74 alkuperäistä paikkaa, 29 lisäkaupunkia ja 7 linssikuvaa. Kolmannen ja neljännen erän loput valmistuvat listajärjestyksessä. Salta-v1 ja Anchorage-v1 hylättiin, säilytettiin ja korvattiin kokonaan uusilla tarkistetuilla kuvilla.
+
+Sansibarissa aiempi satamavalokuva näyttää House of Wondersin ennen vuoden 2020 sortumista; se ei käy nykygeometrian pohjaksi. Tarvitaan kaksi nykytilan kuvaa samasta säilyneestä kohteesta tai toinen todellinen aihe. Khartumin aiemmin ilmoitettu nykytilan este säilyy. Vastaanottokuittaus, päätoimittajan katselmus ja pelikytkentä odottavat edelleen todentamista; Codex ei mergeä mainiin tai julkaise.
