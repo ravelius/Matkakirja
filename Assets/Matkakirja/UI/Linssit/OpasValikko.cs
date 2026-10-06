@@ -159,6 +159,9 @@ namespace Matkakirja.Natiivi
             Juuri.style.display = DisplayStyle.None;
             ryhma = Ohjausnappi.Ryhma(Juuri);
             // PAUSE (omistaja 5.10.2026 klo 23.5x): OHJAUSNAPPI-ryhmässä, sama tauko-pohja kuin astrokuvan II (II ↔ ▶).
+            // LOPETA KIERROS (omistaja 6.10. 16.4x): ■ OHJAUSNAPPI tauon vasemmalla, näkyy vain kierroksen aikana (PaivitaTauko).
+            lopetaNappi = Ohjausnappi.Nappi(Ikonit.Lopeta, "Lopeta kierros", LopetaKierros, ryhma);
+            lopetaNappi.style.display = DisplayStyle.None;
             taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, "Tauko", () => OpasSovitin.Tauko(!OpasSovitin.Tauolla), ryhma);
             kuvaNappi = Ohjausnappi.Nappi(KuvatPaalla ? Ikonit.PilleriJulisteet : KuvaPoisIkoni, KuvatPaalla ? "Kuvat päällä" : "Kuvat pois",
                 VaihdaKuvat, ryhma);
@@ -1201,10 +1204,22 @@ namespace Matkakirja.Natiivi
             nykyiset.Add((b, teko));
         }
 
+        Button lopetaNappi;
+        bool? testiLopeta;
+
+        void LopetaKierros()
+        {
+            Debug.Log("MATKAKIRJA opas: lopeta kierros");
+            testiLopeta = null;
+            if (!Sano("LopetaKierros", Type.EmptyTypes)) Debug.LogWarning("MATKAKIRJA opas: LopetaKierros puuttuu (LS1)");
+        }
+
         /// <summary>Pause-nappi II ↔ ▶ oppaan tauon mukaan (Linssisepän OpasSovitin.Tauolla).</summary>
         void PaivitaTauko()
         {
             if (!nakyy) return;
+            var ld = (testiLopeta ?? OpasSovitin.KierrosKaynnissa) ? DisplayStyle.Flex : DisplayStyle.None;
+            if (lopetaNappi.style.display != ld) lopetaNappi.style.display = ld;
             bool tauolla = OpasSovitin.Tauolla;
             if (tauolla == taukoNakyy) return;
             taukoNakyy = tauolla;
@@ -1337,6 +1352,9 @@ namespace Matkakirja.Natiivi
                 case "kuva":
                     var kb = kuvaKortti.worldBound;
                     return $"opas: kuva {(kuvaNakyy ? "näkyy" : "piilossa")} {naytettyKuva?.Url ?? "-"}, kortti {kb.xMin:0},{kb.yMin:0} {kb.width:0}×{kb.height:0}, kytkin {(KuvatPaalla ? "päällä" : "pois")}";
+                case "lopeta":
+                    testiLopeta = o.Length > 1 ? o[1] != "pois" : true;
+                    return "opas: lopeta kierros " + (testiLopeta == true ? "näkyy (testi)" : "pois");
                 case "jatka":
                     testiJatka = o.Length > 1 ? o[1] != "pois" : true;
                     return "opas: jatka kierrosta " + (testiJatka == true ? "näkyy (testi)" : "pois");

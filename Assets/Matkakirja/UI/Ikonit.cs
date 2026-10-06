@@ -70,6 +70,8 @@ namespace Matkakirja.Natiivi
         public const string NuoliYlos = "<path d=\"M12 19V5M6 11l6-6 6 6\"/>";
         public const string Kyna = "<path d=\"M4 20h4L19 9l-4-4L4 16z\"/><path d=\"M13.5 6.5l4 4\"/>";
         public const string Edellinen = "<path d=\"M16.5 4.8 5 12l11.5 7.2z\" fill=\"currentColor\"/>";
+        /// <summary>Lopeta (■, omistaja 6.10. 16.4x: "ihan pelkkä stop-merkki"; oppaan Lopeta kierros).</summary>
+        public const string Lopeta = "<rect x=\"6.5\" y=\"6.5\" width=\"11\" height=\"11\" rx=\"1.5\" fill=\"currentColor\"/>";
         public const string Toista = "<path d=\"M7.5 4.8 19 12 7.5 19.2z\" fill=\"currentColor\"/>";
 
         // js/karttatyokalu-maakunnat.js PLUS_IKONI ja PULU_IKONI (maakunnan luonnehdinta ja kortti).
