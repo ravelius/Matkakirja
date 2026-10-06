@@ -3196,7 +3196,7 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
     if (!kohteet?.length) return vastaa({ virhe: 'palvelin', viesti: 'Kohteita ei saatu juuri nyt.' }, { status: 502, ...kors });
     return vastaa({ kaupunki, kohteet }, kors);
   } catch (virhe) {
-    console.log(`opas: liiku epäonnistui (${virhe?.status ?? 'verkko'})`);
+    console.log(`opas: liiku epäonnistui (${virhe?.status ?? virhe?.message ?? 'verkko'})`);
     return vastaa({ virhe: 'palvelin', viesti: 'Kohteita ei saatu juuri nyt.' }, { status: 502, ...kors });
   }
 }

@@ -150,10 +150,26 @@ export function siivoaOpasPyynto(runko) {
   };
 }
 
+/**
+ * Wikimedian JSON-haku. Yksi uusinta 429-, 5xx- ja verkkovirheessä (6.10. 17.45: Pariisin Liiku-lista 502 kylmänä, ja
+ * erähaun yhden palan hetkellinen virhe tyhjensi koko listan). Odotus Retry-Afterin mukaan, enintään 1,5 s.
+ */
+export const HAKU_UUSINTA_MS = { oletus: 500, enintaan: 1500 };
 async function haeJson(haku, url) {
-  const v = await haku(url, { headers: { 'user-agent': UA, accept: 'application/json' } });
-  if (!v.ok) throw new Error(`wiki ${v.status}`);
-  return v.json();
+  for (let yritys = 0; ; yritys += 1) {
+    let v = null;
+    try {
+      v = await haku(url, { headers: { 'user-agent': UA, accept: 'application/json' } });
+    } catch (virhe) {
+      if (yritys > 0) throw virhe;
+    }
+    if (v?.ok) return v.json();
+    const uusittava = !v || v.status === 429 || v.status >= 500;
+    if (!uusittava || yritys > 0) throw new Error(`wiki ${v?.status ?? 'verkko'}`);
+    const pyydetty = Number(v?.headers?.get?.('retry-after')) * 1000;
+    const odota = Math.min(HAKU_UUSINTA_MS.enintaan, Number.isFinite(pyydetty) && pyydetty > 0 ? pyydetty : HAKU_UUSINTA_MS.oletus);
+    await new Promise((r) => setTimeout(r, odota));
+  }
 }
 
 /** Kaupungin koordinaatit pelkällä koordinaattihaulla (fi, sitten en; ei artikkelin tekstiä). */
