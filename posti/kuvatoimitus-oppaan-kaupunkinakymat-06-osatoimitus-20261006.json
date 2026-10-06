@@ -1,0 +1,2162 @@
+{
+  "source": "posti/fable-codex-oppaan-kuvat-linssivalikko-20261006.md",
+  "sourceCommit": "269382b2f65f2498fd29618e7f4e2ed4bab16ca1",
+  "batch": 6,
+  "orderGroup": "1",
+  "pilot": false,
+  "instructionsVersion": 2,
+  "imagesPerPlace": 1,
+  "createdAt": "2026-10-06T23:06:09.410744+00:00",
+  "cityIds": [
+    "kalgoorlie",
+    "birdsville",
+    "mountisa",
+    "cooberpedy",
+    "managua",
+    "saoluis",
+    "sanjuan",
+    "noumea",
+    "puertomontt",
+    "yellowstone",
+    "grandcanyon",
+    "uluru",
+    "iguazu",
+    "titicaca",
+    "mountrushmore",
+    "hawaii",
+    "bali",
+    "milfordsound",
+    "galapagos",
+    "kongo"
+  ],
+  "cityCount": 20,
+  "imageCount": 20,
+  "requestedCityIds": [
+    "kalgoorlie",
+    "birdsville",
+    "mountisa",
+    "cooberpedy",
+    "managua",
+    "saoluis",
+    "sanjuan",
+    "noumea",
+    "puertomontt",
+    "yellowstone",
+    "grandcanyon",
+    "uluru",
+    "iguazu",
+    "titicaca",
+    "mountrushmore",
+    "hawaii",
+    "bali",
+    "milfordsound",
+    "ouropreto",
+    "galapagos",
+    "kongo",
+    "machupicchu",
+    "madagaskar",
+    "sahara"
+  ],
+  "requestedCityCount": 24,
+  "blockedPlaces": [],
+  "pendingPlaces": [
+    {
+      "cityId": "ouropreto",
+      "orderIndex": 144,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/ouropreto/este.json",
+      "imageDelivered": false
+    },
+    {
+      "cityId": "machupicchu",
+      "orderIndex": 147,
+      "state": "production-or-review-pending",
+      "evidence": null,
+      "imageDelivered": false
+    },
+    {
+      "cityId": "madagaskar",
+      "orderIndex": 148,
+      "state": "production-or-review-pending",
+      "evidence": null,
+      "imageDelivered": false
+    },
+    {
+      "cityId": "sahara",
+      "orderIndex": 149,
+      "state": "production-or-review-pending",
+      "evidence": null,
+      "imageDelivered": false
+    }
+  ],
+  "batchComplete": false,
+  "productionDimensions": {
+    "width": 1536,
+    "height": 1024,
+    "aspectRatio": "3:2",
+    "format": "PNG",
+    "colorSpace": "sRGB",
+    "alpha": "opaque"
+  },
+  "sampleSeriesVerification": [
+    {
+      "city": "petra",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3303791,
+      "sha256": "102f5c115c82b3d031cc11abbb02719f1b57cc82dc56fb1a607714e0d516dd15"
+    },
+    {
+      "city": "petra",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3353858,
+      "sha256": "694ac4c78c74ea3d4989eca0ae1becca3d5e4772bc27bf3189c71b31cd050be6"
+    },
+    {
+      "city": "petra",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3400112,
+      "sha256": "d9f25f596e3103de9c60fbb6cfb60b10d2291b8a48c4f853495ffd84c8efd4ba"
+    },
+    {
+      "city": "adelaide",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3403905,
+      "sha256": "a95a5118e3be1c8a20830e56a29d4e3bbd3bcdc306dbd45fec6c6b7510cccc60"
+    },
+    {
+      "city": "adelaide",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3212483,
+      "sha256": "b350e1619355b41a265d006f1d3aa5bb935f2181319683c0b49c91a47130d2ce"
+    },
+    {
+      "city": "adelaide",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3200990,
+      "sha256": "5785b042bda03b0ffdfbb88f268b3f6637378cee52a4f06f2d0e2dbd16d9fc8f"
+    },
+    {
+      "city": "tampere",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 2901348,
+      "sha256": "2ab40418138cc6abd27a6fd76db13ff7622e1c4673b3c68eac25d3e51828a2a4"
+    },
+    {
+      "city": "tampere",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3358624,
+      "sha256": "92386c3c9a1ea07d507c701c3996a830d4534b01f6459f660338dd865f23b98d"
+    },
+    {
+      "city": "tampere",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3365770,
+      "sha256": "2d36abe2539bed4a2f9d7e11dae30884d285178127cc6333c809b438a5cc7dd5"
+    }
+  ],
+  "cameraRule": "Yksi paikan mielenkiintoisin tunnuskuva, fotorealistinen nykymaailma; hetki ja kuvakulma valitaan paikalle.",
+  "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+  "originalsPreserved": true,
+  "generationMethod": "built-in image_gen; one image per place; any rejected candidate is retained and replaced with a complete new generation",
+  "review": {
+    "primaryVisualReview": "passed",
+    "editorFirstThree": "pending",
+    "gameIntegrationVerified": false,
+    "published": false,
+    "firstThreeRequested": [
+      "kalgoorlie",
+      "birdsville",
+      "mountisa"
+    ],
+    "firstThreeAllDelivered": true
+  },
+  "assets": [
+    {
+      "cityId": "kalgoorlie",
+      "q": null,
+      "lat": -30.749,
+      "lon": 121.466,
+      "orderGroup": "1",
+      "file": "hero-kalgoorlie.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/hero-kalgoorlie.png",
+      "r2Key": "julisteet/herokoe/hero-kalgoorlie.png",
+      "sha256": "f024ad4c7c72b9d88348bf17a8bf9d60df7ffa70ba1e04840c626cbbdc53b12a",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural city hero, one complete new image, exactly1536x1024,3:2 opaque PNG.\nAuthentic Fimiston Open Pit / Super Pit at Kalgoorlie-Boulder, Western Australia. Three supplied genuine photos by Kgbo, Alexey V.Kurochkin and Chuq show the SAME enormous stepped gold mine from different rim angles; retain its real elongated bowl, red-brown upper earth, grey exposed deep rock, dense horizontal benches and broad switchback haul roads. This is an active contemporary mine in flat arid Goldfields, not a natural Grand Canyon or abandoned flooded quarry.\nCamera: realistic LOW elevated terrain viewpoint from the pit rim, gently about15degrees downward, natural40mm perspective; steep terraced walls fill most of the image, narrow level desert horizon and enough sky. The descending near-rim haul road curves along the left foreground toward the grey central excavation; the deep opposite wall has the actual tight parallel benches seen in the photos. Correct enormous scale, a few distant tiny unbranded haul trucks for scale, no identifiable workers. Do not invent a city inside the pit, alpine mountains, forest, river or gold-coloured ore.\nInteresting light: late golden afternoon, warm sidelight across reddish near rock, cool slate grey shaded depths, pale blue sky with delicate clouds and a little distant mine dust. Geological texture remains photographic, not a miniature/HDR graphic.\nCurrentness: Fimiston is still working and expanding in2026; frame the core pit and rock/haul-road forms, not an exact engineering survey, old visitor platform, historic tunnels or decommissioned facilities. No visible readable words, numbers, signs, logos, watermark, frame or overlay. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Super Pit Gold Mine, Kalgoorlie, WA, 2023, 07.jpg",
+          "tekija": "Kgbo",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Super_Pit_Gold_Mine%2C_Kalgoorlie%2C_WA%2C_2023%2C_07.jpg"
+        },
+        {
+          "nimi": "File:Fimiston Open Pit (Super Pit) gold mine Western Australia 2019 Aug.jpg",
+          "tekija": "Alexey V. Kurochkin",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Fimiston_Open_Pit_(Super_Pit)_gold_mine_Western_Australia_2019_Aug.jpg"
+        },
+        {
+          "nimi": "File:Kalgoorlie Super Pit, October 2023 02.jpg",
+          "tekija": "Chuq",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Kalgoorlie_Super_Pit%2C_October_2023_02.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/originals/hero-kalgoorlie-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Kalgoorlien Super Pit -kultakaivoksen porrastetut seinämät iltapäivän valossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kolme saman Fimistonin avolouhoksen eri kuvaajaa ja kulmaa katsottu. Punaiset yläkerrokset, harmaat syvän louhoksen terassit, laaja kaartuva ajotie ja tasainen Goldfields-horisontti vastaavat aihetta. Toimiva nykyinen kaivos, näkyvät ajoneuvot pieniä. Muuttuva kaivostoiminta/laajennus tiedossa; ei vanhaa näköalapaikan rakennelmaa. Iso ja480px katsottu, ei luettavaa tekstiä tai tunnistettavia ihmisiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 3,
+          "differentPhotographers": 3,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "f024ad4c7c72b9d88348bf17a8bf9d60df7ffa70ba1e04840c626cbbdc53b12a"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Super Pit Gold Mine, Kalgoorlie, WA, 2023, 07.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/viitteet/prior-13e0a5e6a7-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/viitteet/prior-13e0a5e6a7.receipt.json",
+            "referenceRole": "primary_landmark_or_terrain_anchor"
+          },
+          {
+            "reference": "File:Fimiston Open Pit (Super Pit) gold mine Western Australia 2019 Aug.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/viitteet/prior-88a8f58c8c-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/viitteet/prior-88a8f58c8c.receipt.json",
+            "referenceRole": "independent_same_subject_or_regional_context_pending_visual_review"
+          },
+          {
+            "reference": "File:Kalgoorlie Super Pit, October 2023 02.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/viitteet/prior-d44ad71563-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/viitteet/prior-d44ad71563.receipt.json",
+            "referenceRole": "independent_same_subject_or_regional_context_pending_visual_review"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-kalgoorlie.png",
+      "bytes": 3417137,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 126
+    },
+    {
+      "cityId": "birdsville",
+      "q": null,
+      "lat": -25.899,
+      "lon": 139.352,
+      "orderGroup": "1",
+      "file": "hero-birdsville.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/birdsville/hero-birdsville.png",
+      "r2Key": "julisteet/herokoe/hero-birdsville.png",
+      "sha256": "9f996bb4b9ec3d6c76749c82f07dd310b6e6f732e4130558ad75757844d9f6f6",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural hero. Generate one COMPLETE NEW contemporary view of the authentic Birdsville Hotel, Birdsville, Queensland Australia. Exactly1536x1024,3:2 opaquePNG.\nTwo supplied independent photographs by NomadicPics and Stuart Edwards establish the SAME historic pub: very low single-storey whitewashed rough sandstone walls, dark corner quoins/window surrounds, shallow grey corrugated roof behind its low white parapet, long straight verandah wrapping around the street corner on slender white posts, white scalloped verandah fascia, simple rectangular doors and windows. Retain these actual proportions and materials. The white roof parapet and small curved upper plaque remain architectural shapes but contain NO readable words or digits.\nCamera: LOW elevated viewpoint about7metres, just above the verandah roof, obliquely facing the front corner, gently15degrees down. Entire compact pub, its corner and both connected veranda sides large and within frame. A restrained foreground section of the actual broad quiet outback road and reddish dirt shoulder; surrounding Birdsville low sparse buildings and flat Channel Country horizon. Not a fancy two-storey colonial palace or isolated desert ruin, no huge dunes behind the hotel.\nLight: early blue hour with residual peach horizon, clear deep blue sky, real warm interior/verandah lamps softly illuminating the rough white walls and verandah posts. Details legible, calm welcoming photographic atmosphere, not black night, neon or theatrical floodlights.\nCurrent exterior and setting;2026hotel room renovation does not invent a new historic facade. No copied photographed people, identifiable humans, cars filling the foreground, lettering, signage, logos, watermark, border or typography. No fantasy towers. Natural camera rendering, image fully opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Birdsville Pub (34616985520).jpg",
+          "tekija": "NomadicPics from cairns, australia",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Birdsville_Pub_(34616985520).jpg"
+        },
+        {
+          "nimi": "File:Birdsville Hotel.jpg",
+          "tekija": "Stuart Edwards",
+          "lisenssi": "PD",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Birdsville_Hotel.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/birdsville/originals/hero-birdsville-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Birdsville Hotelin valkoinen kivijulkisivu ja pitkä veranta sinisen hetken valossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kaksi katsottua eri kuvaajan valokuvaa samasta BirdsvilleHotelista. Valkoinen karkea kivimuuraus, tummat kivikulmat ja ikkunakehykset, pitkä valkopylväinen veranta, matala peltikatto ja parapeti sekä tasainen harva ympäristö vastaavat aihetta. Matala kattokamera, sininen hetki ja pienet lämpimät valot. Ei luettavaa tekstiä tai ihmisiä. Iso ja480px katsottu.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "9f996bb4b9ec3d6c76749c82f07dd310b6e6f732e4130558ad75757844d9f6f6"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Birdsville Pub (34616985520).jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/birdsville/viitteet/prior-094d261a69-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/birdsville/viitteet/prior-094d261a69.receipt.json",
+            "referenceRole": "primary_landmark_or_terrain_anchor"
+          },
+          {
+            "reference": "File:Birdsville Hotel.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/birdsville/viitteet/prior-585eaae2f2-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/birdsville/viitteet/prior-585eaae2f2.receipt.json",
+            "referenceRole": "independent_same_subject_or_regional_context_pending_visual_review"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-birdsville.png",
+      "bytes": 2433361,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 127
+    },
+    {
+      "cityId": "mountisa",
+      "q": null,
+      "lat": -20.725,
+      "lon": 139.495,
+      "orderGroup": "1",
+      "file": "hero-mountisa.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountisa/hero-mountisa.png",
+      "r2Key": "julisteet/herokoe/hero-mountisa.png",
+      "sha256": "baba4c570adcf2c045382310ee8da33d65cd27232a905c16a46437df285e05ca",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural regional hero, exactly1536x1024,3:2,fully opaque. Generate a completely new authentic view of LAKE MOONDARRA, the real reservoir on the Leichhardt River16km north of Mount Isa, Queensland Australia.\nReference1 by Ravenspear82 is the EXACT terrain/shoreline anchor: broad blue water basin framed by very low arid hills, curved pale mineral shoreline, dry reddish rocky slopes with sparse native eucalyptus, low undulating horizon. Preserve that actual basin outline and relative hills. Reference2 by Kgbo is ONLY independent support for the native gum-tree foliage, pale sandy soil and dry Leichhardt landscape in the same Mount Isa region. Do NOT import its city riverbed, straight channel, bridge, urban structures or camera geometry into the lake.\nCamera: realistic low hill/lookout on the lake's rocky rim, a few metres above the near slope, gently15degrees downward toward the water,35mm full-frame perspective. Lake broad and dominant at centre; rocky red/ochre foreground with irregular low grey-green gums, actual low hills and bays behind. No high aerial drone, huge mountain peaks, turquoise tropical lagoon, palms or coastal ocean. Contemporary reservoir with water present, small natural exposed shoreline consistent with variable water level; no invented water-control structures or islands.\nLight: clear bright late-morning daylight, saturated but photographic blue water, naturally warm stone, crisp eucalyptus shadows, pale soft white clouds. Quiet wide-open outback atmosphere and lifelike fine rock detail.\nNo identifiable people, signs, readable letters/digits, branding, text, logos, watermark or frame. No mining skyline transferred into the lake. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Lake Moondarra Panorama.jpg",
+          "tekija": "Ravenspear82",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Lake_Moondarra_Panorama.jpg"
+        },
+        {
+          "nimi": "File:Leichhardt River from Sir James Foots Bridge at Mount Isa, 2023, 02.jpg",
+          "tekija": "Kgbo",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Leichhardt_River_from_Sir_James_Foots_Bridge_at_Mount_Isa%2C_2023%2C_02.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountisa/originals/hero-mountisa-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Lake Moondarra, Mount Isan vesivarasto ja virkistysjärvi Leichhardt-joen laaksossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Todellinen LakeMoondarra-maastoankkuri on natiivi1280pxRavenspear82valokuva. Kgbontoinen valokuva on riippumaton saman MountIsa/Leichhardtalueen ympäristötuki; sen kuivaa jokiuomaa/siltaa ei siirretty järvelle. Matala kalliorimkamera, oikea leveä matalien kukkuloiden vesiallas, paljas kaartuva rantaviiva, eukalyptukset ja kallioinen kuivamaa. Nykyinen järvi ja2026vesi varmennettu. Iso ja480px katsottu; ei tekstiä, ihmisiä, metropolirakennuksia tai kaivossiluetin väärää palautusta.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "baba4c570adcf2c045382310ee8da33d65cd27232a905c16a46437df285e05ca"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Lake Moondarra Panorama.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountisa/viitteet/prior-10851fb014-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountisa/viitteet/prior-10851fb014.receipt.json",
+            "referenceRole": "primary_exact_Lake_Moondarra_terrain_anchor"
+          },
+          {
+            "reference": "File:Leichhardt River from Sir James Foots Bridge at Mount Isa, 2023, 02.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountisa/viitteet/prior-cebf82f177-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountisa/viitteet/prior-cebf82f177.receipt.json",
+            "referenceRole": "same_Mount_Isa_Leichhardt_region_environment_only_no_river_geometry_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-mountisa.png",
+      "bytes": 3143483,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 128
+    },
+    {
+      "cityId": "cooberpedy",
+      "q": null,
+      "lat": -29.014,
+      "lon": 134.755,
+      "orderGroup": "1",
+      "file": "hero-cooberpedy.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/cooberpedy/hero-cooberpedy.png",
+      "r2Key": "julisteet/herokoe/hero-cooberpedy.png",
+      "sha256": "6b7572755563df1608c97e13defcd7d311df0683e777d2f9dc5b928728adfcac",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural regional hero, exactly1536x1024 landscape3:2,opaquePNG. Create an entirely NEW current landscape of KANKU-BREAKAWAYS north of Coober Pedy, South Australia.\nPrimary reference1, Sunil Savur's Salt & Pepper photograph, fixes the exact distinctive low paired formations: broad chalk-white flat irregular hill on the LEFT, compact higher ochre/golden-brown cap and pale lower band on the RIGHT, reddish smaller mound partly in front, vast low arid plain behind. Preserve the real shapes, relative spacing and scale of this pair, let them dominate the central frame. Ignore the reference's camera date stamp completely.\nThe two other independent photographs by Sliverinverted and Jburger234 support only the SAME conservation park's ferruginous rubble ground, sparse low arid shrubs, pale eroded layers, long flat desert horizon and natural light behaviour. Do NOT move their separate long mesas or conical mounds next to the Salt & Pepper pair, do not assemble a fictional rock garden from all photos.\nCamera: real nearby natural lookout/ridge at about the formations' upper level, modest elevated terrain view gently15degrees down, natural50mmfull-frame perspective. Tight enough for the two white/ochre formations to remain clear in a small thumbnail, a little red gravel and scrub foreground, extensive unbroken flat plain behind. No giant cliffs, river, salt lake, mines, buildings or distant alpine ranges.\nLight: first warm sunrise side-light, peach and pale-blue sky with fine clouds, gentle long cool shadows on the desert floor, white chalk still white and ochre strata naturally warm. Fine eroded photographic texture, no glowing neon rocks or exaggerated HDR.\nPresent protected arid landform. No text, date stamps, letters/digits, logos, watermark, border, vehicles or identifiable people. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Salt & Pepper Breakaways Coober Pedy.jpg",
+          "tekija": "Sunil Savur",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Salt_%26_Pepper_Breakaways_Coober_Pedy.jpg"
+        },
+        {
+          "nimi": "File:Sunset at Breakaways.jpg",
+          "tekija": "Sliverinverted",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Sunset_at_Breakaways.jpg"
+        },
+        {
+          "nimi": "File:The Breakaways.jpg",
+          "tekija": "Jburger234",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:The_Breakaways.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/cooberpedy/originals/hero-cooberpedy-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Kanku-Breakawaysin valkoinen ja okranvärinen Salt & Pepper -muodostumapari Coober Pedyn pohjoispuolella.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kolme eri kuvaajan1280pxvalokuvaa katsottu. SunilSavurin tarkka Salt&Pepper-maastoankkuri säilyttää valkoisen vasemman kumpareen, korkeamman okrakannen oikealla ja punaista etukumpua; Sliverinverted/Jburger234tuet samalta alueelta ilman erillisten mesojen siirtoa. Aito matala erodoitunut pair puiston tasangolla, luonnonlookoutkamera, aamuvalo. Ei kuva1päiväleimaa, tekstiä tai tunnistettavia ihmisiä; natiivi ja480px katsottu.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 3,
+          "differentPhotographers": 3,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "6b7572755563df1608c97e13defcd7d311df0683e777d2f9dc5b928728adfcac"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Salt & Pepper Breakaways Coober Pedy.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/cooberpedy/viitteet/prior-f0e2d9efd1-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/cooberpedy/viitteet/prior-f0e2d9efd1.receipt.json",
+            "referenceRole": "exact_Salt_and_Pepper_terrain_anchor"
+          },
+          {
+            "reference": "File:Sunset at Breakaways.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/cooberpedy/viitteet/prior-6c0bfc9cae-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/cooberpedy/viitteet/prior-6c0bfc9cae.receipt.json",
+            "referenceRole": "same_Kanku_Breakaways_regional_environment_no_other_formation_transfer"
+          },
+          {
+            "reference": "File:The Breakaways.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/cooberpedy/viitteet/prior-5cf62d3eff-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/cooberpedy/viitteet/prior-5cf62d3eff.receipt.json",
+            "referenceRole": "same_Kanku_Breakaways_regional_environment_no_other_formation_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-cooberpedy.png",
+      "bytes": 2818270,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 129
+    },
+    {
+      "cityId": "managua",
+      "q": null,
+      "lat": 12.136,
+      "lon": -86.251,
+      "orderGroup": "1",
+      "file": "hero-managua.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/managua/hero-managua.png",
+      "r2Key": "julisteet/herokoe/hero-managua.png",
+      "sha256": "edefa9daf4bbc4a4a59c199b5e14e991d340dc3a29eb6ecccb298b04b42309f6",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one contemporary city hero, opaque landscape PNG exactly 1536 x 1024 pixels, 3:2.\nPrimary request: Generate a complete new photorealistic view of the real OLD Cathedral of Santiago in Managua, Nicaragua, beside Plaza de la Revolución, in gently warm late-afternoon daylight. Show its present surviving damaged exterior, not an intact historical reconstruction or the modern new cathedral.\nReferences: three original Commons photographs by eric molina, Thomas Splettstoesser and Chrisletram, API-license verified and original-SHA matched in the cached source manifest. The different oblique and frontal views document the same old cathedral. Keep their real geometry, weathered surfaces and damaged open upper windows. Do not copy their people, political banners, signs or photographic composition.\nSubject: the authentic broad grey-brown stone and concrete neoclassical facade, deep stains and weathered/chipped surfaces, two front towers with their real high rounded lantern caps and small crosses, pilasters, tall arched and louvred openings, central triangular sculpted pediment and its small statue, long side nave with the surviving upper arches. Retain blank or damaged circular tower openings rather than inventing restored clock faces. Upper window voids and visible missing/unfinished roof areas remain as in the references; do not install new glazing or a complete pristine nave roof. The closed old cathedral remains a weathered monument, not an active brightly refurbished temple.\nCamera: LOW ELEVATED viewpoint around 18 metres at nearby rooftop height from the plaza in front, slightly oblique and gently down about 15 degrees. Full facade and both tower tops large and dominant with margins; include the authentic long side wall to the right as in the reference views. Show actual red/pink plaza paving, entrance steps, low balustrade, short garden borders and small palms immediately below. Keep surrounding modern Managua low and subdued at the edges; no invented lake directly behind the cathedral, volcanic cone or imported landmark. Natural full-frame perspective, upright walls, not high top-down or ground-level looking up.\nLight: soft late-afternoon warm sun gives the weathered grey surfaces subtle ochre highlights, cool legible shadows, a blue sky with some soft tropical clouds and true green palms. Fine photographic texture and realistic contrast. No fresh white paint, golden domes or fantasy theatrical beams.\nConstraints: present-day Nicaragua, retain the real damaged condition. No readable text, lettering, numbers, typography, signs, logos, slogans, watermark, border or frame. No identifiable people or foreground crowd. No added destruction, smoke, rubble, extra towers, painterly or miniature effect, or excessive HDR. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Antigua Catedral de Managua.jpg",
+          "tekija": "eric molina",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Antigua_Catedral_de_Managua.jpg"
+        },
+        {
+          "nimi": "File:Old cathedral managua.jpg",
+          "tekija": "Thomas Splettstoesser",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Old_cathedral_managua.jpg"
+        },
+        {
+          "nimi": "File:L'ancienne cathédrale de Managua.JPG",
+          "tekija": "Chrisletram",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:L%27ancienne_cath%C3%A9drale_de_Managua.JPG"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/managua/originals/hero-managua-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Managuan vanha Santiago-katedraali Plaza de la Revoluciónin laidalla nykyisessä vaurioituneessa asussaan.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Aiemman valokuvapaketin varmennettu tekstihakureitti, APItekijät/lisenssit, alkuperäis-SHA ja nyt katsottujen kuvien täsmällinen kohde; ei uutta kategoriahakua.",
+        "visualReview": "Managuan vanha Santiago-katedraali tunnistettu pelin kaupungista ja kolmesta eri alkuperäisestä Commons-valokuvasta. Vaurioituneet avoimet yläikkunat, tummentuneet pinnat, kaksi pyöreäkattoista tornia ja portaat säilyvät; uutta ehjää kirkkokattoa tai puhtaanvalkoista restaurointia ei lisätty. Aiempi APIvarmennettu tekstihakureitti ja valokuvien alkuperäis-SHA täsmäävät. Tunnistettava isona ja480px.",
+        "referenceGate": {
+          "certainty": "verified_text_search_reused_original_manifest",
+          "category": null,
+          "count": 3,
+          "differentPhotographers": 3
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "edefa9daf4bbc4a4a59c199b5e14e991d340dc3a29eb6ecccb298b04b42309f6"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval"
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-managua.png",
+      "bytes": 2649606,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 130
+    },
+    {
+      "cityId": "saoluis",
+      "q": null,
+      "lat": null,
+      "lon": null,
+      "orderGroup": "1",
+      "file": "hero-saoluis.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/saoluis/hero-saoluis.png",
+      "r2Key": "julisteet/herokoe/hero-saoluis.png",
+      "sha256": "6f0c93c2f00a5caa5a3e39e16012eb197442a67a677c9579382d4c0e5998ecd2",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset: one contemporary city hero, opaque landscape PNG exactly 1536 x 1024 pixels, 3:2.\nPrimary request: Generate a completely new photorealistic photograph of the authentic Palácio dos Leões in São Luís, Maranhão, BRAZIL, at luminous early blue hour. This is the real government palace and museum, not a generic European manor or a different São Luís.\nReferences: four original Commons photographs by Claudinez Lacerda, Lyssuel Calvet, Bruno David Goulart Sampaio and J. Freitas/ABr, API-license verified and original-SHA matched in the cached source manifest. Images 1 and 3 show the real long front facade, entrance, lions and window proportions; image 2 anchors its actual raised stone terrace and surroundings; image 4 documents the existing nighttime facade lighting. Use architecture and geography as factual evidence without copying any photo, photographer watermark or photographed people.\nSubject: the real long TWO-STOREY WHITE neoclassical palace, its flat balustraded roof edge with small urn-like stone ornaments, regular pilasters, alternating triangular and gently curved window pediments, arched upper fanlights, small lower rectangular windows and the correct modest projecting central balcony over the entrance. Exactly the authentic TWO bronze lion statues beside the central entrance on their low white plinths, with the real decorative lamp standards and small existing roof flagpoles. Preserve actual facade proportions and entrance placement; no central grand dome, invented tall towers, columned Greek temple, extra statues or duplicated building.\nCamera: LOW ELEVATED rooftop-height viewpoint around 12 metres from the paved forecourt, gently down about 15 degrees and slightly oblique so the long front face and an end of the building read clearly. Palace large and dominant, complete with comfortable margins. The actual raised stone terrace, pale balustrade and small palms are below and at the edges as in the references; restrained real nearby São Luís historic rooftops and a limited distant water strip only where supported by image 1. No inland lake, mountain, fantasy bridge or imported skyline. Natural full-frame perspective with upright verticals; no high top-down or street-level upward view.\nLight: clear blue early-evening sky retaining photographic facade detail, existing restrained warm-white floodlights illuminating white plaster, warm small windows and soft light on the bronze lions, as evidenced by image 4. Natural photographic contrast and subtle stone and plaster texture, no neon or theatrical beams.\nConstraints: present-day Brazilian palace exterior. No readable words, inscriptions, dates, numerals, typography, signs, logos, watermark, borders or frames. No identifiable people or large vehicles/crowd blocking the palace. No fantasy ornament, pristine fictional redesign, painting, miniature effect or excessive HDR. Entire image opaque.\nCritical CAMERA GEOMETRY for this complete new generation: the camera is definitely 12 metres above the forecourt, around the upper-storey window height. It must look DOWN gently, not up. Place the horizon around the upper third of the picture so the terrace paving and top surfaces of the entrance balcony/parapet are naturally visible from above. This is a low rooftop photograph, NOT a pedestrian street-level photograph. Move back enough and turn toward the facade so BOTH ends of the entire long palace fit inside the frame with side margins; no cropped right wing or cut roof edge. Keep the complete two-storey building as the dominant subject. The facade should run mostly across the frame with only a moderate oblique recession, instead of an extreme close diagonal. Do not make the palace taller, add a third storey or alter its actual architecture just to fill the frame.",
+      "viitteet": [
+        {
+          "nimi": "File:Palácio dos Leões - São Luis - Maranhão - Brasil.JPG",
+          "tekija": "Claudinez Lacerda",
+          "lisenssi": "CC BY 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_dos_Le%C3%B5es_-_S%C3%A3o_Luis_-_Maranh%C3%A3o_-_Brasil.JPG"
+        },
+        {
+          "nimi": "File:Palácio dos Leões (3293155783).jpg",
+          "tekija": "Lyssuel Calvet from São Luis, Brasil",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_dos_Le%C3%B5es_(3293155783).jpg"
+        },
+        {
+          "nimi": "File:Fachada do Palácio Dos Leões.jpg",
+          "tekija": "Bruno David Goulart Sampaio",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Fachada_do_Pal%C3%A1cio_Dos_Le%C3%B5es.jpg"
+        },
+        {
+          "nimi": "File:Palácio dos Leões (noite).jpg",
+          "tekija": "J. Freitas/ABr",
+          "lisenssi": "CC BY 3.0 br",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/br/deed.en",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Pal%C3%A1cio_dos_Le%C3%B5es_(noite).jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/saoluis/originals/hero-saoluis-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "São Luísin Palácio dos Leões ja sen sisäänkäynnin leijonat varhaisessa iltavalossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Aiemman valokuvapaketin varmennettu tekstihakureitti, APItekijät/lisenssit, alkuperäis-SHA ja nyt katsottujen kuvien täsmällinen kohde; ei uutta kategoriahakua.",
+        "visualReview": "Palácio dos Leões São Luísissa: kaksikerroksinen valkea julkisivu, vuorottelevat ikkunafrontonit, matala keskimmäinen parveke, leijonat ja kivinen rantaterassi vastaavat neljää eri alkuperäistä valokuvaa. Toisen generoinnin kamera on kattokorkeudella ja koko julkisivu näkyy, ensimmäinen rajautuva katutasoehdokas säilytetty. Todellinen aiempi varmennettu tekstihakureitti, APIlisenssit sekä alkuperäis-SHA kirjattu. Tunnistettava isona ja480px.",
+        "referenceGate": {
+          "certainty": "verified_text_search_reused_original_manifest",
+          "category": null,
+          "count": 4,
+          "differentPhotographers": 4
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "6f0c93c2f00a5caa5a3e39e16012eb197442a67a677c9579382d4c0e5998ecd2"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval"
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-saoluis.png",
+      "bytes": 2515855,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 131
+    },
+    {
+      "cityId": "sanjuan",
+      "q": null,
+      "lat": 18.465,
+      "lon": -66.117,
+      "orderGroup": "1",
+      "file": "hero-sanjuan.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sanjuan/hero-sanjuan.png",
+      "r2Key": "julisteet/herokoe/hero-sanjuan.png",
+      "sha256": "2471e640160bf9a6ed2670d26549b029a52f53cf3b407bc30284be4e78532bdf",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural hero, entirely new image, exactly1536x1024,3:2 opaquePNG. Real CASTILLO SAN FELIPE DEL MORRO in OLD SAN JUAN, PUERTO RICO, at the bay entrance.\nTwo independent photographs, Coolcaesar's complete aerial peninsula overview and Breezy Baldwin's close landward El Morro facade, anchor the same real fort and its geometry. Third photo by P.Hughes is only material and coastline support from the SAME historic city's fortification system; do not import its different wall segment, pink house or wooden dock into El Morro.\nLow elevated camera just above the landward rampart height, gently15degrees downward, natural45mmfull-frame perspective. Face the broad low landward wall and entrance as in reference2, slightly oblique enough to see a small real side bastion. Dominant weathered grey-brown sandstone and lime masonry, thick angular walls with rectangular cannon openings, actual small cylindrical garita turrets with rounded caps at exposed corners. The real compact pink-grey rectangular lighthouse tower with white trim and black lantern stands on the RIGHT of the facade, higher than the wall. Preserve exact fort proportions; this is a six-level coastal fortress, not a European castle with invented tall towers or rebuilt medieval crenellations.\nOnly a narrow foreground of the esplanade approach and the fort's own ramparts; beyond its correct northwestern headland is the deep blue Atlantic/San Juan Bay visible at the sides. Do not fill frame with the broad ParcelA lawn where2025–2026turf works occurred. No rearranged colonial city, waterfront skyscrapers or copied dock. Keep whole lighthouse lantern and fort ends inside frame, building large and unmistakable.\nLight: clear tropical daylight shortly after passing rain, softly broken cumulus sky, photographic warm stone and vivid sea, slight dampness in masonry, natural shadows and true scale.\nCurrent preserved fort, no battle smoke or historic soldiers. No readable words, numbers, logos, text, watermark, borders, flags close enough to read, or identifiable people. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Aerial View Of Old San Juan.jpg",
+          "tekija": "Coolcaesar",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Aerial_View_Of_Old_San_Juan.jpg"
+        },
+        {
+          "nimi": "File:Castillo San Felipe del Morro, Puerto Rico.jpg",
+          "tekija": "Breezy Baldwin",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Castillo_San_Felipe_del_Morro%2C_Puerto_Rico.jpg"
+        },
+        {
+          "nimi": "File:Old San Juan - City Walls 02.jpg",
+          "tekija": "P. Hughes",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Old_San_Juan_-_City_Walls_02.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sanjuan/originals/hero-sanjuan-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "El Morron linnoitus ja majakka San Juanin lahden suulla Puerto Ricossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kaksi samanElMorron riippumatonta viitettä (ilmakuva ja etuseinä) ja kolmas saman kaupungin muurimateriaalituki. Etuseinän oikea matala massoittelu, keskustan sisäänkäynti/ramppi, kulmagaritat ja oikean puolen majakka tunnistettavat. Kolmannen tukikuvan pinkkiä taloa/dokkia/eri muurisegmenttiä ei siirretty. NPS:n2026linnoitus/majakka ja ParcelA-työ huomioitu rajauksen rajallisuudessa. Matala rampartkamera, natiivi+480 katsottu, ei tekstiä tai ihmisiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 3,
+          "differentPhotographers": 3,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "2471e640160bf9a6ed2670d26549b029a52f53cf3b407bc30284be4e78532bdf"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Aerial View Of Old San Juan.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sanjuan/viitteet/prior-1f20c178d3-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sanjuan/viitteet/prior-1f20c178d3.receipt.json",
+            "referenceRole": "same_El_Morro_aerial_geometry_and_location"
+          },
+          {
+            "reference": "File:Castillo San Felipe del Morro, Puerto Rico.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sanjuan/viitteet/prior-b0623b639f-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sanjuan/viitteet/prior-b0623b639f.receipt.json",
+            "referenceRole": "same_El_Morro_facade_lighthouse_geometry"
+          },
+          {
+            "reference": "File:Old San Juan - City Walls 02.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sanjuan/viitteet/prior-e3f7a5f2f3-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sanjuan/viitteet/prior-e3f7a5f2f3.receipt.json",
+            "referenceRole": "same_city_wall_material_support_only_no_other_wall_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-sanjuan.png",
+      "bytes": 2842961,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 132
+    },
+    {
+      "cityId": "noumea",
+      "q": null,
+      "lat": -22.267,
+      "lon": 166.45,
+      "orderGroup": "1",
+      "file": "hero-noumea.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/noumea/hero-noumea.png",
+      "r2Key": "julisteet/herokoe/hero-noumea.png",
+      "sha256": "5628da1a1c9a36f302cdcc209db5ed1db5044be04449dc7c517123a2f263dd9c",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural Nouméa regional hero, one COMPLETE NEW image,1536x1024,3:2 opaquePNG.\nTrue ÎLE AUX CANARDS (Duck Islet) off ANSE VATA BAY, NOUMÉA, NEW CALEDONIA. Reference1 by ToucanWings fixes the actual small low islet: compact oval/crescent pale sand beach, central dense coastal scrub and some palms/Araucaria, broad shallow fringing reef and darker lagoon beyond, the real Anse Vata/Ouen Toro promontory at a restrained distance on the left horizon. Preserve the exact island form and reef distribution, correcting the photo's fisheye horizon to natural optics.\nReference2 by Gérard anchors the SAME Anse Vata shore and its modest green Ouen Toro hill/profile, shore trees and real bay scale; omit its sporting-event crowd and canoes. Reference3 by Brewbooks is independent Nouméa coastal-lagoon environmental support only: no moving its distant islands, separate coastline, peninsula, marinas or barrier reef into the near-islet scene.\nCamera: LOW elevated offshore viewpoint around18m above lagoon water, just over tree/roof level, gently15degrees downward,50mm full-frame perspective. Islet large and dominant, complete sandy crescent and central green vegetation visible with clear margins; foreground clear shallows and real patchy reef, distant Nouméa promontory small. No high top-down drone or exaggerated long palm-lined resort island.\nLight: sparkling clean tropical late morning, calm mildly rippled turquoise/teal shallow water and deep blue outside reef, natural white sand and muted green vegetation, soft small cumulus clouds. Photographic colour and texture, not oversaturated travel-poster painting.\nContemporary actual natural islet/coast. Any tiny existing faré roof remains partly concealed within vegetation as in the primary photo; no invented luxury huts, rebuilt town, rows of bungalows, cruise ship or commercial tourism activity. Do not copy umbrellas or crowds. No identifiable people, readable text, digits, logos, watermark or frame. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Ile aux canards, Nouméa, Nouvelle-Calédonie.JPG",
+          "tekija": "ToucanWings",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Ile_aux_canards%2C_Noum%C3%A9a%2C_Nouvelle-Cal%C3%A9donie.JPG"
+        },
+        {
+          "nimi": "File:Va'a outrigger canoeing at Anse Vata Beach for the 2011 Pacific Games.jpg",
+          "tekija": "gérard",
+          "lisenssi": "CC BY-SA 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Va'a_outrigger_canoeing_at_Anse_Vata_Beach_for_the_2011_Pacific_Games.jpg"
+        },
+        {
+          "nimi": "File:Costa de Numea.jpg",
+          "tekija": "Brewbooks",
+          "lisenssi": "CC BY-SA 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Costa_de_Numea.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/noumea/originals/hero-noumea-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Île aux Canards ja sen matala koralliriutta Nouméan Anse Vata -lahden edustalla.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kolme eri kuvaajan1280pxvalokuvaa katsottu. Tarkka ÎleauxCanards-maastoankkuri pitää pienen saaren matalan kasvillisuuden, hiekkareunan ja riutan muodot; Gérard antaa samanAnseVatan lahden jaOuenToron rannikon riippumattoman näkymän. Brewbooksmuut luodot/rannat eivät siirry kuvaan. Korjattu luonnollinen horisontti, ei valokuvan fisheyea. Virallinen2026luoto varmistettu, palveluaukioloa ei väitetä, ei toimivaa turistijoukkoa. Matala offshore-maastokamera, natiivi+480katsottu.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 3,
+          "differentPhotographers": 3,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "5628da1a1c9a36f302cdcc209db5ed1db5044be04449dc7c517123a2f263dd9c"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Ile aux canards, Nouméa, Nouvelle-Calédonie.JPG",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/noumea/viitteet/prior-f35dfc511e-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/noumea/viitteet/prior-f35dfc511e.receipt.json",
+            "referenceRole": "exact_Duck_Islet_Anse_Vata_terrain_anchor"
+          },
+          {
+            "reference": "File:Va'a outrigger canoeing at Anse Vata Beach for the 2011 Pacific Games.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/noumea/viitteet/prior-8e143d95c2-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/noumea/viitteet/prior-8e143d95c2.receipt.json",
+            "referenceRole": "independent_same_Anse_Vata_bay_hillshore_profile"
+          },
+          {
+            "reference": "File:Costa de Numea.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/noumea/viitteet/prior-b83b021702-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/noumea/viitteet/prior-b83b021702.receipt.json",
+            "referenceRole": "Noumea_coastal_region_environment_only_no_other_terrain_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-noumea.png",
+      "bytes": 2905646,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 133
+    },
+    {
+      "cityId": "puertomontt",
+      "q": null,
+      "lat": -41.472,
+      "lon": -72.94,
+      "orderGroup": "1",
+      "file": "hero-puertomontt.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/puertomontt/hero-puertomontt.png",
+      "r2Key": "julisteet/herokoe/hero-puertomontt.png",
+      "sha256": "c2065cb493acd16204f51427e167adda02b33387340a67bf8c3ae143b0ce346d",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural hero, one completely NEW opaque1536x1024landscape3:2image of authentic PUERTO MONTT, southern CHILE, overlooking the RELONCAVÍ SOUND.\nUse both independent real photographs as factual geometry: HaSt's hillside panorama fixes the city's sloping neighbourhoods, red and teal low roofs, scattered modern mid-rise blocks, the true curving coastal placement and low Tenglo landform; Manxuc's waterfront view fixes the actual modern Costanera building forms and bay scale. Preserve their true relationships; do not replace town with a generic European harbour. Keep the blue-and-white horizontally banded coastal towers in their proper waterfront area and believable proportions.\nCamera: LOW elevated nearby hillside rooftop, only20mabove its immediate neighbourhood, gently15degrees down toward the coast,50mmfull-frame natural perspective. Low red/corrugated and restrained teal roofs form a small foreground, real rising residential hills at the sides and harbour-front blocks in middle distance; wide blue-grey sea and low landform beyond. Urban shoreline remains dominant and identifiable even as thumbnail. No high top-down aerial, invented monumental building, cathedral transplantation or mountain wall.\nLight: blue hour shortly after a southern Chilean rain shower, soft cloud breaks and faint warm western light, a few current building windows and streetlights just on, slate-blue bay and naturally wet roofs. Photographic restrained warm/cool contrast, readable architecture without neon/HDR.\nCurrent urban/coastal forms; avoid detailed depiction of the old pre-renovation promenade, passenger terminal, piers or statues. Do not reproduce the old sculpture of two seated lovers. No fabricated active volcano or huge snow peak behind the city. No identifiable people, readable signs, letters/digits, brands, logos, watermark, text or frame. Image fully opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Chile - Puerto Montt - Panorama.jpg",
+          "tekija": "HaSt",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Chile_-_Puerto_Montt_-_Panorama.jpg"
+        },
+        {
+          "nimi": "File:Costanera de Puerto Montt.jpg",
+          "tekija": "Manxuc",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Costanera_de_Puerto_Montt.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/puertomontt/originals/hero-puertomontt-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Puerto Montin rantakorttelit ja Reloncavín selkä sinisen hetken valossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kaksi saman PuertoMontin kaupunkirannan eri kuvaajan1280pxnäkymää katsottu. HaStpanoraaman red/teal-matalat kattomassat, rantarakennusten sijoittelu ja Reloncavinsound säilyvät; Manxucankkuroi oikeiden rannikkotornien vaakaraidat ja mittakaavan. Modernit korttelit ja loiva todellinen rannikkokaupunki sinisellähetkellä, ei Osorno-purkauksen tai alkuperäisen patsaan palautusta.2025Costanera/terminaalimuutokset huomioitu rajausmittakaavassa; epäonnistunut404viite ei mukana. Iso+480katsottu.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "c2065cb493acd16204f51427e167adda02b33387340a67bf8c3ae143b0ce346d"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Chile - Puerto Montt - Panorama.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/puertomontt/viitteet/prior-90b9780a76-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/puertomontt/viitteet/prior-90b9780a76.receipt.json",
+            "referenceRole": "primary_landmark_or_terrain_anchor"
+          },
+          {
+            "reference": "File:Costanera de Puerto Montt.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/puertomontt/viitteet/prior-1e170b036b-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/puertomontt/viitteet/prior-1e170b036b.receipt.json",
+            "referenceRole": "independent_same_subject_or_regional_context_pending_visual_review"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-puertomontt.png",
+      "bytes": 2657735,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 134
+    },
+    {
+      "cityId": "yellowstone",
+      "q": null,
+      "lat": 44.6,
+      "lon": -110.5,
+      "orderGroup": "1",
+      "file": "hero-yellowstone.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/yellowstone/hero-yellowstone.png",
+      "r2Key": "julisteet/herokoe/hero-yellowstone.png",
+      "sha256": "f823ac428c61b72904bb07501c7d6434d35daa77d184aab75a1f753a9b8a3042",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural hero. Entirely NEW real Grand Prismatic Spring in Midway Geyser Basin, YELLOWSTONE WYOMING USA. Exactly1536x1024,3:2 opaquePNG.\nTwo independent real photos by Dietmar Rabich and Brocken Inaglory establish the SAME living spring: deep cobalt-blue central pool, thin turquoise/green transition, orange/rust microbial mats radiating as irregular branching runoff tongues over pale grey mineral crust, small natural steam wisps, actual low wooded hills and lodgepole pines. The clear elevated photograph is the geometry anchor; the ground-level one fixes mat texture, steam and colour. Preserve the actual pool outline and irregular outflow, no perfect concentric graphic rings.\nCamera: the real modest elevated Grand Prismatic Overlook south of the spring, about32m above basin, gently15degrees down, natural50mmperspective. Pool dominant and unmistakable in middle foreground, whole pool/mat margins inside frame, small framing pines at near corners, real forested basin behind. Retain the existing thin wood boardwalk at the correct outer thermal-basin edge shown in the elevated photo; never across the hot pool. No high top-down drone, huge mountain range or transplanted geyser.\nLight: crisp late-afternoon summer sun, warm side-light on mineral crust, true blue water and naturally warm microbial colours, delicate steam transparent enough to reveal outline, pale clouds above the forest. Fine photographic detail and normal contrast, no neon/HDR poster.\nCurrent preserved hydrothermal landscape, not the damaged2024BiscuitBasin site. No fabricated eruption, swimming, identifiable people, text, signs, digits, logos, watermark, border or frame. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Yellowstone National Park (WY, USA), Grand Prismatic Spring -- 2022 -- 2514.jpg",
+          "tekija": "Dietmar Rabich",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Yellowstone_National_Park_(WY%2C_USA)%2C_Grand_Prismatic_Spring_--_2022_--_2514.jpg"
+        },
+        {
+          "nimi": "File:Grand Prismatic Spring and Midway Geyser Basin from above.jpg",
+          "tekija": "Brocken Inaglory",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Grand_Prismatic_Spring_and_Midway_Geyser_Basin_from_above.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/yellowstone/originals/hero-yellowstone-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Grand Prismatic Springin sininen allas ja värikkäät mikrobimatot Yellowstonessa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kaksi samanGrandPrismaticSpringin eri kuvaajan1280pxvalokuvaa katsottu. Oikea sininen allas, värivyöhykkeet/irregularbranchingmikrobimatot, mineraalikenttä, pieni luonnollinen höyry, matala metsäinen taustarinne ja suojaboardwalk säilyvät. TodellisenOverlookin loiva32m maastokamera, ei highdrone. NPS25.9.2026paikkatieto; ei2024BiscuitBasinvirhettä. Iso+480katsottu, ei ihmisiä/tekstiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "f823ac428c61b72904bb07501c7d6434d35daa77d184aab75a1f753a9b8a3042"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Yellowstone National Park (WY, USA), Grand Prismatic Spring -- 2022 -- 2514.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/yellowstone/viitteet/prior-c3b0f92d0e-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/yellowstone/viitteet/prior-c3b0f92d0e.receipt.json",
+            "referenceRole": "primary_landmark_or_terrain_anchor"
+          },
+          {
+            "reference": "File:Grand Prismatic Spring and Midway Geyser Basin from above.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/yellowstone/viitteet/prior-0840bda205-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/yellowstone/viitteet/prior-0840bda205.receipt.json",
+            "referenceRole": "independent_same_subject_or_regional_context_pending_visual_review"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-yellowstone.png",
+      "bytes": 3130883,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 135
+    },
+    {
+      "cityId": "grandcanyon",
+      "q": null,
+      "lat": 36.097,
+      "lon": -112.095,
+      "orderGroup": "1",
+      "file": "hero-grandcanyon.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/grandcanyon/hero-grandcanyon.png",
+      "r2Key": "julisteet/herokoe/hero-grandcanyon.png",
+      "sha256": "01628048ac616137c71f5b569418fd3902b2fa0d101c47ac5a6e7533630662f6",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural regional hero, one completely NEW1536x1024opaque3:2PNG. Authentic MATHER POINT on the SOUTH RIM of GRAND CANYON, Arizona USA.\nReference1 by Colin Faulkingham is the exact terrain anchor: the actual jutting layered pale limestone overlook promontory with three rugged buttress-like masses, flat broken top ledges and slender metal safety rail along the upper-left viewing platform, deep multicoloured canyon beyond and level distant rim. Preserve this real promontory's shapes and placement on the LEFT. No copied visitors.\nDietmar Rabich's aerial canyon strata and Wolfgang Staudt's different Colorado River viewpoint are only independent geology/material and depth/haze support from the same Grand Canyon region. Do not transfer their other mesas, river bends or camera layouts into Mather Point. The river is NOT visible prominently in the primary scene, so do not invent a river loop below this overlook.\nCamera: actual nearby South Rim trail-height natural viewpoint, gently15degrees downward,50mm perspective, low elevated over the near cliff shoulder, not high aerial. MatherPoint's tall rocky projection fills the left third to half, a little true piñon/juniper foreground, huge layered chasm opens to right with actual low level distant rim. Preserve existing safety rail, no rebuilt stone balustrade or fantasy arch.\nLight: first warm dawn light touches pale limestone ledges, cool blue-violet canyon shadows and delicate pale pink sky with fine cloud streaks. Real sedimentary texture and believable geological scale, photographic colour.\nCurrent natural South Rim. No lodge, cabins or reconstruction of the North Rim buildings destroyed2025; no uniform green forest falsely covering burn areas. No identifiable people, readable text/digits, signs, logos, watermark, frame or overlay. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Mather Point Grand Canyon South Rim.jpg",
+          "tekija": "Colin Faulkingham",
+          "lisenssi": "PD",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Mather_Point_Grand_Canyon_South_Rim.jpg"
+        },
+        {
+          "nimi": "File:Grand Canyon (Arizona, USA), Luftaufnahme -- 2012 -- 5962.jpg",
+          "tekija": "Dietmar Rabich",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Grand_Canyon_(Arizona%2C_USA)%2C_Luftaufnahme_--_2012_--_5962.jpg"
+        },
+        {
+          "nimi": "File:Colorado River, Grand Canyon.jpg",
+          "tekija": "Wolfgang Staudt",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Colorado_River%2C_Grand_Canyon.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/grandcanyon/originals/hero-grandcanyon-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Mather Pointin kalkkikivinen näköalakieleke Grand Canyonin eteläreunalla aamun valossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "TarkkaMatherPoint-kalkkikivikielekkeen maastoankkuri/kolme kerroksellista buttressmassaa ja ylävasemman suojakaide säilyvät. DietmarRabich/WolfgangStaudt eriGrandCanyonkulmien tuet eivät siirrä muita mesoja/jokimutkia pääkuvaan, ei keksittyä näkyvääjokilenkkiä. SouthRim nykyinen2026NPSpaikka; ei2025NorthRim-palaneenlodgen palautusta.3kuvaajaa/maxside1280–1920 katsottu. Loiva rimkamera,aamuvalo, natiivi+480QA, ei ihmisiä/tekstiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 3,
+          "differentPhotographers": 3,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "01628048ac616137c71f5b569418fd3902b2fa0d101c47ac5a6e7533630662f6"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Mather Point Grand Canyon South Rim.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/grandcanyon/viitteet/prior-353bac8f69-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/grandcanyon/viitteet/prior-353bac8f69.receipt.json",
+            "referenceRole": "exact_Mather_Point_terrain_and_safety_rail_anchor"
+          },
+          {
+            "reference": "File:Grand Canyon (Arizona, USA), Luftaufnahme -- 2012 -- 5962.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/grandcanyon/viitteet/prior-0c8735bfe2-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/grandcanyon/viitteet/prior-0c8735bfe2.receipt.json",
+            "referenceRole": "independent_Grand_Canyon_geology_environment_no_other_terrain_transfer"
+          },
+          {
+            "reference": "File:Colorado River, Grand Canyon.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/grandcanyon/viitteet/prior-ec7bccf073-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/grandcanyon/viitteet/prior-ec7bccf073.receipt.json",
+            "referenceRole": "independent_Grand_Canyon_geology_environment_no_other_terrain_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-grandcanyon.png",
+      "bytes": 2826705,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 136
+    },
+    {
+      "cityId": "uluru",
+      "q": null,
+      "lat": -25.345,
+      "lon": 131.036,
+      "orderGroup": "1",
+      "file": "hero-uluru.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/uluru/hero-uluru.png",
+      "r2Key": "julisteet/herokoe/hero-uluru.png",
+      "sha256": "062045e5043e75d202b88759aac0f3cff0e495a40ceb734bc6abfcd51d09be38",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural hero. Entirely NEW current ULURU in Northern Territory, Australia,1536x1024opaque landscape3:2PNG.\nMatheus Hobold Sovernigo's whole-rock sunset photograph is the EXACT silhouette/terrain anchor: single very broad low red sandstone monolith, rounded lower shoulder on LEFT, long gently uneven upper ridge, steeper broad vertically grooved face toward RIGHT, nearly flat Central Australian plain and spinifex/native scrub. Preserve the actual long low proportions, shoulder profile and main erosion channels. Alexandra's independent close Uluru photograph supports only the same sandstone grain, grooves and vegetation; do not import its different close face/caves into the silhouette view.\nCamera: authentic designated western sunset-viewing/dune terrain height, a few metres over near spinifex, gently15degrees down toward the plain, natural70mm perspective. Whole monolith large and dominant with both ends and top fully inside frame, subdued red sandy/spinifex foreground, no high drone or viewpoint from rock top. Correct true geographic isolation, no KataTjuta domes or mountain skyline inserted.\nLight: last clear low sunset sunlight illuminating the actual orange-red rock, muted golden spinifex and small grey-green shrubs, cool violet shadows beneath, gentle pink and baby-blue sky. Photographic sandstone detail, no fluorescent fantasy glow.\nCurrent protected natural landscape. No climb chain, climbers, cave closeups, fabricated tourism platform or contemporary art lights. No identifiable people, vehicles, readable words/digits, signs, brands, logos, watermark, frame or text. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Ayers Rock - Uluru.JPG",
+          "tekija": "Alexandra",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Ayers_Rock_-_Uluru.JPG"
+        },
+        {
+          "nimi": "File:Golden Uluru Sunset.jpg",
+          "tekija": "Matheus Hobold Sovernigo",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Golden_Uluru_Sunset.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/uluru/originals/hero-uluru-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Ulurun leveä hiekkakivimonoliitti auringonlaskun valossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kaksi samanUlurun eri kuvaajan1280pxvalokuvaa katsottu. MatheusHoboldSovernigo ankkuroi pitkämatala westernsunset-siluetin ja eroosiourat, Alexandra vain saman hiekkakiven tekstuuri/kasvillisuustuki; eri lähikasvoja/luolia ei siirretty. Todellinen julkinen etämaastokamera, eiRocktop/climbchain/climbers. ParksAustralia2026kohde ja2019kiipeilymsulkuvarmennettu. Suuren monoliitin mittasuhteet säilyvät, sunset, natiivi+480QA, ei tekstiä/ihmisiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "062045e5043e75d202b88759aac0f3cff0e495a40ceb734bc6abfcd51d09be38"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Ayers Rock - Uluru.JPG",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/uluru/viitteet/prior-f176daadd9-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/uluru/viitteet/prior-f176daadd9.receipt.json",
+            "referenceRole": "same_Uluru_sandstone_environment_texture_only_no_other_face_transfer"
+          },
+          {
+            "reference": "File:Golden Uluru Sunset.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/uluru/viitteet/prior-f5d5345e16-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/uluru/viitteet/prior-f5d5345e16.receipt.json",
+            "referenceRole": "exact_whole_Uluru_western_sunset_silhouette_terrain_anchor"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-uluru.png",
+      "bytes": 2754529,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 137
+    },
+    {
+      "cityId": "iguazu",
+      "q": null,
+      "lat": -25.695,
+      "lon": -54.437,
+      "orderGroup": "1",
+      "file": "hero-iguazu.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/iguazu/hero-iguazu.png",
+      "r2Key": "julisteet/herokoe/hero-iguazu.png",
+      "sha256": "94d57934f7e4c3e5d41edb86a983d56307157cdd32a8e957fe9a85dc4103f974",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural regional hero. Completely NEW actual IGUAZÚ/IGUAÇU FALLS at the Brazil–Argentina border.1536x1024landscape3:2opaquePNG.\nW.Bulach's Brazilian-side viewpoint is the exact terrain/cascade anchor: a long forest-topped dark basalt upper cliff, wide powerful falls toward the LEFT, many separated curtains and vegetated step-like intermediate rocks toward RIGHT, huge pale spray cloud rising from the true gorge. Preserve its actual tier arrangement and waterfall spacing; use the whole view instead of assembling unrelated waterfalls.\nTomfriedel and DeniWilliams independently confirm the same Iguazú system's real lower cascades, basalt ledges, moss, Atlantic rainforest, variable white/tan water and spray. Their different close viewpoints provide environmental/material support ONLY, no moving their islands or riverbend into the primary view. These are natural photographs: do not imitate anaglyph/cyan-red double image or scanned-photo grain.\nCamera: actual Brazilian cliffside lookout/trail-height, modest elevated natural viewpoint, gently15degrees down,35mmperspective. Falls large and dominant across frame, a little real lush near-leaf framing and actual thin lookout safety rail at far lower-left as in the primary photo, not a fabricated bridge across gorge. Upright rainforest horizon, realistic deep water drop and scale. No high helicopter view.\nLight: bright soft afternoon after clouds part, luminous photographic white/tan water, natural green forest and slate basalt, delicate spray clearly separate from clouds, small patches blue sky. No neon tropical colouring, graphic rainbow or impossible volcano/mountain background.\nContemporary protected falls; Brazilian main walkway inspected/reopenedSeptember2026, preserve existing protection where visible, no historic ruins. No copied people, identifiable visitors, readable signs/digits, text, logos, watermark or border. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:00 1828 Views of Iguazu Falls from the Brazilian side.jpg",
+          "tekija": "W. Bulach",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:00_1828_Views_of_Iguazu_Falls_from_the_Brazilian_side.jpg"
+        },
+        {
+          "nimi": "File:Iguazu National Park Falls.jpg",
+          "tekija": "Tomfriedel",
+          "lisenssi": "CC BY 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Iguazu_National_Park_Falls.jpg"
+        },
+        {
+          "nimi": "File:Parque Nacional do Iguaçú - Iguaçu National Park (14116493062).jpg",
+          "tekija": "Deni Williams",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Parque_Nacional_do_Igua%C3%A7%C3%BA_-_Igua%C3%A7u_National_Park_(14116493062).jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/iguazu/originals/hero-iguazu-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Iguazún putousrintama Brasilian puolen näköalareitiltä.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kolme luonnollista eri kuvaajan valokuvaa katsottu: W.Bulachin tarkka Brasilian-sidefallsankkuri, Tomfriedel/DeniWilliams samanIguazusysteemin ympäristö/materialituet. Oikea metsäinen yläbasalttireuna, leveä vasenputousseinä, oikeat väliterassien verhot ja syväsumu/putouskanjoni. Ei muiden näkymien riverbend/islandsiirtoa, anaglyfiehdokas hylätty ennen generointia. Suojakaide säilyy; Brasilianpassarela tarkastettu/avattu15.9.2026lähde. Loiva lookoutkamera, natiivi+480QA, ei ihmisiä/tekstiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 3,
+          "differentPhotographers": 3,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "94d57934f7e4c3e5d41edb86a983d56307157cdd32a8e957fe9a85dc4103f974"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:00 1828 Views of Iguazu Falls from the Brazilian side.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/iguazu/viitteet/prior-ebbe8647ba-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/iguazu/viitteet/prior-ebbe8647ba.receipt.json",
+            "referenceRole": "exact_Brazilian_side_Iguazu_cascade_terrain_and_visible_lookout_anchor"
+          },
+          {
+            "reference": "File:Iguazu National Park Falls.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/iguazu/viitteet/prior-84a55cd2b0-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/iguazu/viitteet/prior-84a55cd2b0.receipt.json",
+            "referenceRole": "independent_same_Iguazu_system_environment_no_other_segment_transfer"
+          },
+          {
+            "reference": "File:Parque Nacional do Iguaçú - Iguaçu National Park (14116493062).jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/iguazu/viitteet/prior-b73b3d20c2-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/iguazu/viitteet/prior-b73b3d20c2.receipt.json",
+            "referenceRole": "independent_same_Iguazu_system_environment_no_other_segment_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-iguazu.png",
+      "bytes": 3197164,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 138
+    },
+    {
+      "cityId": "titicaca",
+      "q": null,
+      "lat": -15.825,
+      "lon": -69.325,
+      "orderGroup": "1",
+      "file": "hero-titicaca.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/titicaca/hero-titicaca.png",
+      "r2Key": "julisteet/herokoe/hero-titicaca.png",
+      "sha256": "0191cccd0d95f5cb427f969515f86019c31e72d3aa3bc5f747bfaf03d58d72bc",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural regional hero. Completely NEW current LAKE TITICACA landscape from ISLA DEL SOL, Bolivia.1536x1024landscape3:2opaquePNG.\nSaraWayra's photograph is the EXACT terrain anchor: rocky lookout foreground above the blue lake, the actual rounded pale-brown peninsula on the RIGHT enclosing a small dark-blue bay, stepped agricultural plots on its slope, sparse real trees, lower island ridges beyond and distant restrained Andean horizon. Preserve the true peninsula outline, cove, slopes and field placement. No generic tropical island.\nH.dav.are's independent LakeTiticaca photograph supports only the SAME lake's water ripples, high-altitude sunlight/reflections and cool dry atmosphere. It is at Uros: do NOT import its reed boat, floating villages, reeds or other hill/ridge geometry into Isla del Sol.\nCamera: authentic low relative-to-local-ridge rocky lookout, gently15degrees down,50mmperspective. Broad blue freshwater lake fills left/centre; exact cape and small cove occupy right with enough space; a narrow real grey fractured-rock foreground. No high aerial, giant snow-covered mountain pasted beside the lake, coastal ocean surf or palms.\nLight: soft low morning sun describing the dry terrace slopes and grey stone, cool deep blue water with subtle bright ripples, clear high-altitude sky and gentle distant cumulus. Natural muted ochres and greens, quiet realistic photography.\nCurrent natural shoreline, no exaggerated drought/flood disaster, historical reconstructedInca palace or invented luxury resort. No identifiable people, readable words/digits, signs, brands, text, watermark, border or logo. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Isla del sol - lago titicaca 01.jpg",
+          "tekija": "SaraWayra",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Isla_del_sol_-_lago_titicaca_01.jpg"
+        },
+        {
+          "nimi": "File:Sunlight reflection on Lake Titicaca.jpg",
+          "tekija": "H.dav.are",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Sunlight_reflection_on_Lake_Titicaca.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/titicaca/originals/hero-titicaca-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Titicacan sininen selkä ja Isla del Solin kiviset rantaniemet Boliviassa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "SaraWayran täsmällinen IslaDelSol-maastoankkuri: oikealla kuiva pyöröniemi/lahti/viljelyterassit, harmaa kivinen lookoutfore jaTitcacan sininen avoin selkä. H.dav.areonriippumaton saman järven vesi/valo-tuki Urosista: ei reedboat/floatingvillage/reeds tai senrinteitä siirretty.2kuvaajaa1280px/sourcecacheketju katsottu. Bolivianvirallinen paikka ja2026järviekoregion tarkistettu, ei mittausvedenkorkeusväitettä tai historiarakennusta. Iso+480QA, ei tunnistettavia ihmisiä/tekstiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "0191cccd0d95f5cb427f969515f86019c31e72d3aa3bc5f747bfaf03d58d72bc"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Isla del sol - lago titicaca 01.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/titicaca/viitteet/prior-6df1e29772-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/titicaca/viitteet/prior-6df1e29772.receipt.json",
+            "referenceRole": "exact_Isla_del_Sol_cape_cove_terrain_anchor"
+          },
+          {
+            "reference": "File:Sunlight reflection on Lake Titicaca.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/titicaca/viitteet/prior-6b12c19852-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/titicaca/viitteet/prior-6b12c19852.receipt.json",
+            "referenceRole": "independent_same_Lake_Titicaca_water_environment_only_no_Uros_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-titicaca.png",
+      "bytes": 3274886,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 139
+    },
+    {
+      "cityId": "mountrushmore",
+      "q": null,
+      "lat": 43.879,
+      "lon": -103.459,
+      "orderGroup": "1",
+      "file": "hero-mountrushmore.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountrushmore/hero-mountrushmore.png",
+      "r2Key": "julisteet/herokoe/hero-mountrushmore.png",
+      "sha256": "010e7333f512a6c71858cb948cf97d6b16cfa18dd62640f7c96823f1c6e7d7b1",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural real monument hero. Completely NEW current MOUNT RUSHMORE NATIONAL MEMORIAL, South Dakota USA,1536x1024landscape3:2opaquePNG.\nThree independent real photos by ThomasWolf, Jntman5621 and Hardy008 fix the SAME existing four carved granite heads and native BlackHills rock. Preserve EXACTLY FOUR heads and their actual order and relief: Washington far LEFT, Jefferson just behind/right of him, Roosevelt recessed at CENTRE, Lincoln at RIGHT with his real beard. Preserve actual individual stone faces, proportions, unfinished lower granite bust surfaces, cracks and surrounding uncarved irregular granite. Do not add a fifth face, full bodies, a copied modern portrait or a different memorial.\nCamera: LOW modest hillside viewpoint comparable to the lower sculptural-bust level, gently around15degrees down over the talus toward lower pine slopes, natural80mm compressed perspective. Heads and whole surrounding sculpted face large/dominant, all tops/chins and granite margins inside frame, real rough quarry talus and ponderosa pine below. No high aerial/top-of-head viewpoint. Omit the foreground flags and columns of the terrace photo; those are not a compositional requirement, keep focus on actual sculpture and hill.\nLight: early blue hour, residual pale blue sky and the monument's real white/warm floodlighting as verified by the night photograph, warm granite relief against cool rock shadows, pine trees still visible. Not pitch-black night, neon, fireworks or unreal theatrical beams.\nCurrent sculpture and geographic setting; no imaginary new carvings, animation or polished white marble. The FOUR existing carved stone faces are the landmark and must remain; do not add live identifiable humans. No readable words/digits, text, logos, signs, watermark or frame. Image entirely opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Mount Rushmore detail view (100MP).jpg",
+          "tekija": "Thomas Wolf, www.foto-tw.de",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Mount_Rushmore_detail_view_(100MP).jpg"
+        },
+        {
+          "nimi": "File:Mount Rushmore from Grand View Terrace.jpg",
+          "tekija": "Jntman5621",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Mount_Rushmore_from_Grand_View_Terrace.jpg"
+        },
+        {
+          "nimi": "File:Mount Rushmore Lighting Ceremony.jpg",
+          "tekija": "Hardy008",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Mount_Rushmore_Lighting_Ceremony.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountrushmore/originals/hero-mountrushmore-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Mount Rushmoren neljä graniittiin veistettyä päätä illan valaistuksessa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kolme samanRushmoreveistoksen eri kuvaajan1280pxphotoa katsottu. Täsmälleen4todellista kivipäätä oikeassa vasemmaltaWashington/Jefferson/recessedRoosevelt/Lincoln-järjestyksessä, unfinishedbustgraniitti/talus/männyt. Ei viidettä kasvoa, livepeopleä tai eri monumenttia. Oikea photoHardy008floodlighting, sininenhetki, matala vertailukelpoinen lowerbust/maastokamera. NPS2026paikka/graniitin säilyminen varmennettu. Natiivi+480QA, ei luettavaa tekstiä/logoja.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 3,
+          "differentPhotographers": 3,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "010e7333f512a6c71858cb948cf97d6b16cfa18dd62640f7c96823f1c6e7d7b1"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Mount Rushmore detail view (100MP).jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountrushmore/viitteet/prior-2c09daf113-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountrushmore/viitteet/prior-2c09daf113.receipt.json",
+            "referenceRole": "primary_landmark_or_terrain_anchor"
+          },
+          {
+            "reference": "File:Mount Rushmore from Grand View Terrace.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountrushmore/viitteet/prior-7ca5b29622-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountrushmore/viitteet/prior-7ca5b29622.receipt.json",
+            "referenceRole": "independent_same_subject_or_regional_context_pending_visual_review"
+          },
+          {
+            "reference": "File:Mount Rushmore Lighting Ceremony.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountrushmore/viitteet/prior-eccb88f75a-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountrushmore/viitteet/prior-eccb88f75a.receipt.json",
+            "referenceRole": "independent_same_subject_or_regional_context_pending_visual_review"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-mountrushmore.png",
+      "bytes": 2982263,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 140
+    },
+    {
+      "cityId": "hawaii",
+      "q": null,
+      "lat": 20,
+      "lon": -156.301,
+      "orderGroup": "1",
+      "file": "hero-hawaii.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/hawaii/hero-hawaii.png",
+      "r2Key": "julisteet/herokoe/hero-hawaii.png",
+      "sha256": "931c3b54d5e1e14d7a5917bf6d22cf10636e5b078bf3371a8efad0c6b35e9543",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural regional hero for HAWAII, completely NEW1536x1024opaque3:2PNG. True DIAMOND HEAD (Lē‘ahi) on O‘AHU, Honolulu's coastal volcanic tuff crater.\nForest&KimStarr's exact Oahu aerial photograph is the terrain anchor: broad low oval crater, prominent higher seaward crest toward LEFT, steep dry brown-grey grooved outer slopes, lower far rim enclosing a shallow saucer, true coastal curve and Pacific beyond. Preserve the actual crater profile, rim heights, slope drainage grooves and island coast. This is extinct DiamondHead, not actively erupting Kilauea.\nMattWright's independent Kalalau coast photo is ONLY wider Hawaiian-archipelago Pacific-water/light environmental support from KAUAI. Do NOT transplant its steep NaPali cliffs, wet jungle, pandanus, walking trail or different shoreline into OAHU. Use DiamondHead's own sparse dry vegetation from the primary photo.\nCamera: LOW modest seaward-side viewpoint comparable to half the main rim height, gently15degrees down toward near coastline, natural60mmperspective. Actual ridged crater mass large/dominant, a little coastal sea foreground and restrained distant Honolulu urban edge only where the primary geometry places it. Interior visible only as permitted behind the lower rim; no high top-down drone or impossible see-through ridge. Avoid detailed old interior military buildings, hotels, piers or tourist facilities.\nLight: clear late-afternoon coastal side-light, naturally warm muted tuff slopes, deep-blue Pacific with light real breaking-wave lines, soft small clouds, photographic contrast. No fluorescent greens or artificial red lava, smoke/eruption, fantasy offshore islands.\nCurrent natural landform; September2026storm-recovery notices do not justify inventing restored resorts, perfectly landscaped forests or damage. No identifiable people, crowds, boards, readable text/digits, signs, brands, logos, watermark or border. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Starr 070515-7093 aerial photograph of Oahu, Diamond Head.jpg",
+          "tekija": "Forest & Kim Starr",
+          "lisenssi": "CC BY 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Starr_070515-7093_aerial_photograph_of_Oahu%2C_Diamond_Head.jpg"
+        },
+        {
+          "nimi": "File:Kalalau Trail 2004-08-22.JPG",
+          "tekija": "Matt Wright",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Kalalau_Trail_2004-08-22.JPG"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/hawaii/originals/hero-hawaii-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Diamond Headin tulivuoriperäinen kraatterikehä Oahulla Havaijissa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Forest&KimStarrin täsmällinen OahuDiamondHead-maastoankkuri säilyttää saucercraterin/seawardleftcrestin/tuff-grooves/truecoast. MattWrightonriippumaton widerHawaiianarchipelagoPacific-water/lightympäristötuki eriKauailta: eiNaPalikliffejä/viidakkoa/pandannusta/trailshoregeom siirretty. Waikikisurfercandidate hylätty ihmis-painotuksen vuoksi. DLNR2026currentnaturalcrater ja9/28stormrecoveryhuomioitu; ei oldresort/military detailedreconstruction tai2018Kilaueanlavascene. Loiva matala seawardperspektiivi, natiivi+480QA.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "931c3b54d5e1e14d7a5917bf6d22cf10636e5b078bf3371a8efad0c6b35e9543"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Starr 070515-7093 aerial photograph of Oahu, Diamond Head.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/hawaii/viitteet/prior-5e3b21c915-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/hawaii/viitteet/prior-5e3b21c915.receipt.json",
+            "referenceRole": "exact_Oahu_Diamond_Head_crater_and_coast_terrain_anchor"
+          },
+          {
+            "reference": "File:Kalalau Trail 2004-08-22.JPG",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/hawaii/viitteet/prior-9477dd1d18-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/hawaii/viitteet/prior-9477dd1d18.receipt.json",
+            "referenceRole": "independent_wider_Hawaiian_archipelago_Pacific_water_light_only_Kauai_not_geometry_or_vegetation_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-hawaii.png",
+      "bytes": 2751623,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 141
+    },
+    {
+      "cityId": "bali",
+      "q": null,
+      "lat": -8.5,
+      "lon": 115.1,
+      "orderGroup": "1",
+      "file": "hero-bali.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bali/hero-bali.png",
+      "r2Key": "julisteet/herokoe/hero-bali.png",
+      "sha256": "5ea0d5a7fbe0fefc2fa0ac4f69222938d294d7c2f5a1bd485465cf1455e77174",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural regional hero, entirely NEW real TEGALLALANG rice terraces near Ubud, BALI Indonesia.1536x1024opaque3:2PNG.\nChristophe95's photo is the EXACT local terrain anchor: the foreground's few narrow curved bright-green paddy tiers stepping across a slope, dense real coconut-palm cluster above them and irregular earthen embankments, forest at the back. Preserve those local field contours, spacing and palm relationships. Anggabuana's Jatiluwih photograph is independent SAME BALI subak/agricultural-environment support for rice, irrigation water, earth and humidity only; do NOT transfer its much broader flat terrace layout, valley or distant ridges into Tegallalang.\nLow modest elevated field-edge viewpoint about8m over nearest paddy, gently15degrees down, natural40mmperspective. Green stepped paddies large/central, palms providing true scale, a restrained real forest backdrop and little sky. No giant Chinese rice amphitheatre, invented mountain range, coastline, spectacular temple or new resort. No swing/tourism props, copied flags or huts as invented architectural landmarks.\nLight: fresh diffuse morning after rain, tender natural greens, dew on rice blades, small quiet wet irrigation patches, soft cloud breaks and gentle warm highlights. Photographic detail, not a miniature, HDR painting or perfect decorative concentric tiers. Fields at a believable growing stage, true agricultural landscape.\nCurrent farming landscape, no identifiable people, readable words/digits, signs, brands, logos, watermarks, borders or text. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Rice terraces in Tegallalang 3.jpg",
+          "tekija": "Christophe95",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Rice_terraces_in_Tegallalang_3.jpg"
+        },
+        {
+          "nimi": "File:Jatiluwih Rice Terrace - Subak Jatiluwih Tabanan Bali 01.jpg",
+          "tekija": "Anggabuana",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Jatiluwih_Rice_Terrace_-_Subak_Jatiluwih_Tabanan_Bali_01.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bali/originals/hero-bali-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Tegallalangin kaarevat riisiterassit Balin Ubudin seudulla.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Christophe95n tarkkaTegallalang-maastoankkuri: kapeat kaarevat paddytiers/palmuryhmä/earthenembankments; ei Jatiluwihin Anggabuana-tukikuvanleveää valley/ridgelayoutsiirtoa. Riisi/vesi/materiaali samanBalin subak-alueen riippumaton tuki.2kuvaajaa maxside1280–1707 katsottu. Virallinennykypaikka ja kasvuvaiheen muuttuvuusvarmistettu. Loivamodestfieldedgekamera/morninglight, ei giantChineseamphitheatre/temple/inventedresort. Natiivi+480QA,ei tekstiä/ihmisiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "5ea0d5a7fbe0fefc2fa0ac4f69222938d294d7c2f5a1bd485465cf1455e77174"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Rice terraces in Tegallalang 3.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bali/viitteet/prior-eded81f0e6-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bali/viitteet/prior-eded81f0e6.receipt.json",
+            "referenceRole": "exact_Tegallalang_field_contour_and_palm_terrain_anchor"
+          },
+          {
+            "reference": "File:Jatiluwih Rice Terrace - Subak Jatiluwih Tabanan Bali 01.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bali/viitteet/prior-a73d1b6d37-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bali/viitteet/prior-a73d1b6d37.receipt.json",
+            "referenceRole": "independent_same_Bali_subak_agricultural_environment_only_no_Jatiluwih_terrain_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-bali.png",
+      "bytes": 3651551,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 142
+    },
+    {
+      "cityId": "milfordsound",
+      "q": null,
+      "lat": -44.617,
+      "lon": 167.867,
+      "orderGroup": "1",
+      "file": "hero-milfordsound.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/milfordsound/hero-milfordsound.png",
+      "r2Key": "julisteet/herokoe/hero-milfordsound.png",
+      "sha256": "61eb502abe511efb391d7ad95b11bbeba75a064ca987c5ff30e108f7bc84bed2",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural hero, completely NEW MILFORD SOUND / PIOPIOTAHI in Fiordland NewZealand.1536x1024opaque landscape3:2PNG.\nTwo independent real photos by BernardSpragg and Wikikiwiman anchor the SAME MitrePeak and actual fjord: sharp asymmetrical pyramidal summit rising directly from water, steep dark green lower slopes, true lower ridge/notch behind, rounded mass on RIGHT, shadowed native forest promontory near lower-right. Preserve actual peak contour and shoreline relationships; choose the mostly snow-free summer state of reference1, do not mix the snow-covered season of reference2.\nCamera: actual modest foreshore/hillside terrain height about12mover water, gently15degrees down across the near fjord, natural60mmperspective. MitrePeak large and dominant left-centre with summit fully inside frame, correct forested banks and calm deep water foreground. No high aerial, invented waterfalls, mountain transplant or Himalaya-like snow range.\nLight: after a passing rain shower late in the afternoon, gentle warm light catches upper exposed rock, cool forest shadows, a little true low mist and soft broken clouds, restrained reflections and natural water ripples. Photographic colour and geological scale, no painting/HDR fantasy.\nCurrent natural fjord; do not add or restore tourist terminals, hotels, marinas, park cablecars or branded boats. No identifiable people, readable text/digits, signs, logos, watermark, frame or overlay. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Mitre Peak of Milford Sound, New Zealand; February 2015.jpg",
+          "tekija": "Bernard Spragg",
+          "lisenssi": "CC0",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Mitre_Peak_of_Milford_Sound%2C_New_Zealand%3B_February_2015.jpg"
+        },
+        {
+          "nimi": "File:MilfordSound.jpg",
+          "tekija": "Wikikiwiman",
+          "lisenssi": "Public domain",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:MilfordSound.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/milfordsound/originals/hero-milfordsound-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Mitre Peakin jyrkkä vuorenrinne nousee Milford Soundin vedestä Uudessa-Seelannissa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kaksi samanMilfordSound/MitrePeakn eri kuvaajan1280pxvalokuvaa katsottu. Oikea epäsymmetrinen terävä pyramidi, mereen laskeutuva metsäinen rinne, taaempi lovi/oikea matalampi vuorimassa ja oikean alakulman forestpromontory. Valittu primaryn lumeton kausi, ei wintersnow-mix; ei inventedfalls/Himalayas/cablecar/terminals. DOCnykyinenMitrePeak1692m/foreshoreviewvarmennettu. Loivamaastokamera, luonnollinenlateafternoonrain-mist, natiivi+480QA, ei tekstiä/ihmisiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "61eb502abe511efb391d7ad95b11bbeba75a064ca987c5ff30e108f7bc84bed2"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Mitre Peak of Milford Sound, New Zealand; February 2015.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/milfordsound/viitteet/prior-5b9367bb00-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/milfordsound/viitteet/prior-5b9367bb00.receipt.json",
+            "referenceRole": "primary_landmark_or_terrain_anchor"
+          },
+          {
+            "reference": "File:MilfordSound.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/milfordsound/viitteet/prior-5226137c92-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/milfordsound/viitteet/prior-5226137c92.receipt.json",
+            "referenceRole": "independent_same_subject_or_regional_context_pending_visual_review"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-milfordsound.png",
+      "bytes": 2415875,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 143
+    },
+    {
+      "cityId": "galapagos",
+      "q": null,
+      "lat": -0.741,
+      "lon": -90.301,
+      "orderGroup": "1",
+      "file": "hero-galapagos.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/galapagos/hero-galapagos.png",
+      "r2Key": "julisteet/herokoe/hero-galapagos.png",
+      "sha256": "26917cf92a2579d0a08d6b2bc3e51d2cc3902593c7cc4d7d2a52d9516cc83f7a",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural regional hero. Completely NEW Bartolomé Island / PinnacleRock in GALÁPAGOS Ecuador.1536x1024opaque3:2PNG.\nDerekKeats' photograph is the EXACT terrain anchor: sharp narrow PinnacleRock at LEFT waterline, the real sandy twin-bay isthmus joining a low volcanic cone to RIGHT, small dark-green coastal thickets in the middle, actual Santiago island volcanic silhouettes across channel behind. Preserve exact pinnacle shape, bay curves and isthmus/cone placement; no generic tropical island.\nPeterWilton's independent adjacent SantiagoIsland photo is only environmental support from the SAME centralGalápagos marine/volcanic area: authentic dry lava/cinder grain, muted brown/black mineral colours and Pacific light. Do NOT transplant its separate coastline, slopes or lava terrain layout into Bartolomé.\nCamera: real modest Bartolomé summit-trail lookout, gently15degrees down,50mmperspective; whole pinnacle/two-bay landform large/dominant with correct geographical margins and foreground volcanic scree. Not a helicopter top-down view. No invented bridges, hotels, palms, full green rainforest, marine animals assembled from other sites or active eruption.\nLight: clear low evening side-light after clouds break, warm subdued volcanic rock and sand against cool teal water, gentle natural reflections and pale peach clouds. Modern clean photographic rendering, do not imitate scanned-film specks/grain of the reference.\nCurrent protected natural landform, existing viewpoint infrastructure only where genuinely in view. No copied yacht/people, identifiable humans, readable text/digits, signs, brands, logos, watermark or border. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Bartholomew - Beautiful Galapagos (35570836620).jpg",
+          "tekija": "Derek Keats from Johannesburg, South Africa",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Bartholomew_-_Beautiful_Galapagos_(35570836620).jpg"
+        },
+        {
+          "nimi": "File:Santiago Island (4229132942).jpg",
+          "tekija": "Peter Wilton",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Santiago_Island_(4229132942).jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/galapagos/originals/hero-galapagos-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Bartolomén Pinnacle Rock ja kahden lahden hiekkakannas Galápagossaarilla.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "DerekKeatsin exactBartolomePinnacle/twinbayisthmus/cone/geographicSantiagoanchor säilyy. PeterWiltonadjacentSantiago-tuessa samancentralGalapagos volcanic-marinearea mineralsea/light; eiomaa coastline/lava-layoutsiirtoa.2kuvaajaa1280px/sourceacceptedrecord/cachechain katsottu. CurrentDPNG/2026area varmennettu, nofutureinfra tai scan-specks. Todellinen summit-trailmaastokamera loiva, kokoPinnacle+baymargins, natiivi+480QA,ei tunnistettavia ihmisiä/tekstiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "26917cf92a2579d0a08d6b2bc3e51d2cc3902593c7cc4d7d2a52d9516cc83f7a"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Bartholomew - Beautiful Galapagos (35570836620).jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/galapagos/viitteet/prior-f7a8bd1378-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/galapagos/viitteet/prior-f7a8bd1378.receipt.json",
+            "referenceRole": "exact_Bartolome_Pinnacle_twin_bay_isthmus_cone_terrain_anchor"
+          },
+          {
+            "reference": "File:Santiago Island (4229132942).jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/galapagos/viitteet/prior-0349af97ff-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/galapagos/viitteet/prior-0349af97ff.receipt.json",
+            "referenceRole": "independent_adjacent_Santiago_central_Galapagos_volcanic_marine_environment_only_no_other_terrain_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-galapagos.png",
+      "bytes": 2908176,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 145
+    },
+    {
+      "cityId": "kongo",
+      "q": null,
+      "lat": -4.8,
+      "lon": 13.001,
+      "orderGroup": "1",
+      "file": "hero-kongo.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kongo/hero-kongo.png",
+      "r2Key": "julisteet/herokoe/hero-kongo.png",
+      "sha256": "66aac18fc91ee3933a33674c7c64581e588783d8189368aaeb11bc74b64bf362",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural regional hero, entirely NEW CONGO RIVER at POOL MALEBO near Kinshasa/Brazzaville, centralAfrica.1536x1024opaque3:2PNG.\nDicklyon's exact aerial photograph anchors the true broad lacustrine river expansion, upstream channel branching around Mbamu, elongated pale sandbars and low muted-green marsh islands, low alluvial banks and regional undulating plateau. Preserve these true natural relationships; frame a realistic nearer section of this system, not the whole35kmriver as a map.\nSerein's independent KinshasaCongo river landscape is regional water/light/bank-environment support ONLY. Do NOT transfer its downstream rapids, large boulders, quarry trucks, labourers, urban bank or different riverbed into PoolMalebo. The primary pool has slow broad water, no rapids.\nCamera: modest natural southern-bank low hill viewpoint about60mabove water, gently15degrees down,70mmperspective. Wide grey-brown/olive river dominant, true low vegetated island/channel/sandbar arrangement in middle distance, restrained alluvial near bank and hazy low horizon. No high satellite/top-down drone, tall mountains, dense fictional Amazonjungle or sea surf.\nLight: warm early morning with a little genuine river haze, muted vegetation, natural sediment-coloured ripples and pale blue/peach sky. Photographic texture and enormous river scale, not fluorescent tropical lagoon.\nCurrent natural Congo reach; no old colonial buildings, invented dam, new waterfrontmasterplan, bridge, hotel or restored town. No identifiable people, copied foreground workers, readable text/digits, signs, brands, logos, watermark or frame. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Congo River with upstream half of Pool Malebo and Mbamu.jpg",
+          "tekija": "Dicklyon",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Congo_River_with_upstream_half_of_Pool_Malebo_and_Mbamu.jpg"
+        },
+        {
+          "nimi": "File:Fleuve Congo Kinshasa 4.JPG",
+          "tekija": "Serein",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Fleuve_Congo_Kinshasa_4.JPG"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kongo/originals/hero-kongo-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Kongojoen leveä Pool Malebo ja matalat saaret Kinshasan seudulla.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Dicklyonin tarkkaPoolMalebo/Mbamualluvialchannel/sandbar-maastoankkuri jaSereinin independentKinshasa-Congo-region riverenvironmenttuki katsottu,2kuvaajaa1280px. Ei downstreamrapids/boulders/quarryworkers/trucks tai eri riverbanks siirretty hitaaseenPoolMaleboon. EdwinAldenmarina/portrait ref hylätty ennen gen. WorldBank2026riverarea/projektit ja oikeaalluvialpoolvarmennettu, nofuturedam/bridge/intake/riverfrontreconstruction. Loiva southern-bank lowhillcamera, sedimentwater/isles/lowhorizon säilyvät, natiivi+480QA,ei ihmisiä/tekstiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "66aac18fc91ee3933a33674c7c64581e588783d8189368aaeb11bc74b64bf362"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Congo River with upstream half of Pool Malebo and Mbamu.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kongo/viitteet/prior-7ef85c998e-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kongo/viitteet/prior-7ef85c998e.receipt.json",
+            "referenceRole": "exact_Pool_Malebo_Mbamu_alluvial_channel_sandbar_terrain_anchor"
+          },
+          {
+            "reference": "File:Fleuve Congo Kinshasa 4.JPG",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kongo/viitteet/prior-2b1f24bee9-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kongo/viitteet/prior-2b1f24bee9.receipt.json",
+            "referenceRole": "independent_same_Kinshasa_Congo_region_environment_only_no_downstream_rapids_boulders_or_humans_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-kongo.png",
+      "bytes": 2558732,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 146
+    }
+  ],
+  "preview": {
+    "file": "kuvatoimitus-oppaan-kaupunkinakymat-06-osatoimitus-20261006-esikatselu-b1a71b025eeb.jpg",
+    "r2Key": "julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-06-osatoimitus-20261006-esikatselu-b1a71b025eeb.jpg",
+    "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-06-osatoimitus-20261006-esikatselu-b1a71b025eeb.jpg",
+    "sha256": "4beabe62c84151e1225cc7dd70f79153488096b135fedae9a3eb9846d2eadb2e",
+    "bytes": 1091421,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  }
+}

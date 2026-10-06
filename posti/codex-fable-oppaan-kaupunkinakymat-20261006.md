@@ -135,3 +135,37 @@ Dokumentoidut alkuperäisen listan viitepuutteet: Kamerunissa toinen kuva näytt
 140 kohteen mediatoimitus on nyt julkisesti tavuntarkasti varmennettu (104 alkuperäistä paikkaa, 29 lisäkaupunkia, 7 linssiä). 139 erillistä kuvatiivistettä: Angola käyttää aiemmin hyväksyttyä Luanda-kuvaa eikä siitä tehty uutta generointia.
 
 Tuotanto etenee jäljellä oleviin alkuperäisiin paikkoihin viiden tekijän vuorokierrossa. Wikimedia-viitehaut ovat edelleen tauolla 22:25:42 UTC asti, ja sen jälkeen tehdään yksi pieni, tunnetun tiedoston metatietokoe. Ei identiteetin tai reitin vaihtoa. Päätoimittajan vastaanottokuittaus, katselmus ja pelikytkentä eivät vielä ole todennettuja; Codex ei mergeä mainiin tai julkaise peliä.
+
+## Päivitetyt osatoimitukset ja kuudennen erän katselmus
+
+2026-10-06T23:07:35.593176+00:00
+
+R2-toimitus: 174 kohdetta / 318 tunnettua kohdetta (135 alkuperäistä paikkaa, 32 lisäkaupunkia, 7 linssiä). 173 erillistä kuvatiivistettä; Angola on aikaisemman Luanda-kuvan kirjattu alias. Kaikki tässä mukana olevat kuvat on katsottu, teknisesti tarkistettu ja luettu tavuntarkasti takaisin julkisesta R2-mediasta.
+
+Kuudennen alkuperäisen erän kolme ensimmäistä ovat nyt erikseen katsottavissa: Kalgoorlie, Birdsville ja Mount Isa. Mount Isan kuvassa on todellinen Lake Moondarra, jotta nykyisten kaivosrakennusten purkamista ei esitetä vanhalla kaupunkisiluetilla. Pilotin manifesti: posti/kuvatoimitus-oppaan-kaupunkinakymat-06-yksi-kuva-pilotti-20261006.json
+
+https://media.matkakirja.app/julisteet/herokoe/20261006/era06-yksi-kuva-pilotti-esikatselu.jpg
+
+| Erä | Toimitettu / pyydetty | Manifesti |
+|---|---:|---|
+| 1 / 04 | 24 / 25 | posti/kuvatoimitus-oppaan-kaupunkinakymat-04-osatoimitus-20261006.json |
+| 1 / 05 | 17 / 25 | posti/kuvatoimitus-oppaan-kaupunkinakymat-05-osatoimitus-20261006.json |
+| 1 / 06 | 20 / 24 | posti/kuvatoimitus-oppaan-kaupunkinakymat-06-osatoimitus-20261006.json |
+| 1B / 02 | 6 / 25 | posti/kuvatoimitus-oppaan-kaupunkinakymat-1b-02-osatoimitus-20261006.json |
+| 1B / 03 | 1 / 25 | posti/kuvatoimitus-oppaan-kaupunkinakymat-1b-03-osatoimitus-20261006.json |
+
+Esikatselut:
+
+- https://media.matkakirja.app/julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-04-osatoimitus-20261006-esikatselu-814f15d583f5.jpg
+- https://media.matkakirja.app/julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-05-osatoimitus-20261006-esikatselu-5fa9b16ed8de.jpg
+- https://media.matkakirja.app/julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-06-osatoimitus-20261006-esikatselu-b1a71b025eeb.jpg
+- https://media.matkakirja.app/julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-1b-02-osatoimitus-20261006-esikatselu-41a14a141ab2.jpg
+- https://media.matkakirja.app/julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-1b-03-osatoimitus-20261006-esikatselu-a7eb71e21b4e.jpg
+
+Neljännestä alkuperäisestä erästä puuttuu Kap Palmas. Viidennestä puuttuvat Kamerun, Suakin, Darfur, Tšad-järvi, Ras Hafun, Orjarannikko, San Ambrosio ja Nome. Nomesta säilytettiin kaksi hylättyä ehdokasta, joiden ikkunamäärä ei vastannut todellista rakennusta; niitä ei toimiteta hyväksyttyinä. Kuudennen erän Ouro Preto odottaa syyskuussa 2026 alkaneen remontin todellista nykytilaa; Machu Picchu, Madagaskar ja Sahara ovat edelleen tuotannossa tämän toimitushetken tiedoilla. Puuttuvat paikat säilyvät manifestien alkuperäisessä järjestyksessä ja pendingPlaces-listassa.
+
+ERÄ1B / 02 sisältää nyt myös Bamakon ja Lusakan. ERÄ1B / 03 sisältää toistaiseksi Bandar Seri Begawanin; Biškek ja Malé ovat ensimmäisen kolmikon puuttuvat kuvat. Näin ollen tämän osapaketin ensimmäisen kolmikon porttia ei väitetä täytetyksi. Sama viidennen alkuperäisen erän aiemmin pyydetty katselmuspäätös pysyy avoimena.
+
+Wikimedia-hakujen yhteinen tauko on päättynyt: pieni valittujen tiedostojen metatietopyyntö ja alkuperäiset lataukset onnistuivat. Jatkossa vain root ja nimetty lähdebrokeri tekevät tahdistetut valittujen 2–3 tiedoston kyselyt; ensimmäinen 429 keskeyttää kaikki uudet pyynnöt. Bamakon alkuperäiset sekä Lusakan ja Bandar Seri Begawanin tuoreesti varmennetut viitteet on saatu. Aikaisempi 8×404-välimuistihavainto ei enää ole Bamakon tuotantoeste.
+
+Pyydän päätoimittajan katselmusta ja vastaanottokuittausta yllä oleville erille. R2, Git-postitoimitus, päätoimittajan hyväksyntä ja todellinen pelikytkentä ovat erillisiä vaiheita. Vastaanottoa, hyväksyntää tai pelikytkentää ei ole vielä todennettu. Codex ei mergeä mainiin, nosta versiota tai julkaise peliä.

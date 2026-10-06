@@ -1,0 +1,462 @@
+{
+  "source": "posti/fable-codex-oppaan-kuvat-linssivalikko-20261006.md",
+  "sourceCommit": "269382b2f65f2498fd29618e7f4e2ed4bab16ca1",
+  "batch": 6,
+  "orderGroup": "1",
+  "pilot": true,
+  "instructionsVersion": 2,
+  "imagesPerPlace": 1,
+  "createdAt": "2026-10-06T22:48:03.676271+00:00",
+  "cityIds": [
+    "kalgoorlie",
+    "birdsville",
+    "mountisa"
+  ],
+  "cityCount": 3,
+  "imageCount": 3,
+  "requestedCityIds": [
+    "kalgoorlie",
+    "birdsville",
+    "mountisa"
+  ],
+  "requestedCityCount": 3,
+  "blockedPlaces": [],
+  "pendingPlaces": [],
+  "batchComplete": false,
+  "productionDimensions": {
+    "width": 1536,
+    "height": 1024,
+    "aspectRatio": "3:2",
+    "format": "PNG",
+    "colorSpace": "sRGB",
+    "alpha": "opaque"
+  },
+  "sampleSeriesVerification": [
+    {
+      "city": "petra",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3303791,
+      "sha256": "102f5c115c82b3d031cc11abbb02719f1b57cc82dc56fb1a607714e0d516dd15"
+    },
+    {
+      "city": "petra",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3353858,
+      "sha256": "694ac4c78c74ea3d4989eca0ae1becca3d5e4772bc27bf3189c71b31cd050be6"
+    },
+    {
+      "city": "petra",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3400112,
+      "sha256": "d9f25f596e3103de9c60fbb6cfb60b10d2291b8a48c4f853495ffd84c8efd4ba"
+    },
+    {
+      "city": "adelaide",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3403905,
+      "sha256": "a95a5118e3be1c8a20830e56a29d4e3bbd3bcdc306dbd45fec6c6b7510cccc60"
+    },
+    {
+      "city": "adelaide",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3212483,
+      "sha256": "b350e1619355b41a265d006f1d3aa5bb935f2181319683c0b49c91a47130d2ce"
+    },
+    {
+      "city": "adelaide",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3200990,
+      "sha256": "5785b042bda03b0ffdfbb88f268b3f6637378cee52a4f06f2d0e2dbd16d9fc8f"
+    },
+    {
+      "city": "tampere",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 2901348,
+      "sha256": "2ab40418138cc6abd27a6fd76db13ff7622e1c4673b3c68eac25d3e51828a2a4"
+    },
+    {
+      "city": "tampere",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3358624,
+      "sha256": "92386c3c9a1ea07d507c701c3996a830d4534b01f6459f660338dd865f23b98d"
+    },
+    {
+      "city": "tampere",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3365770,
+      "sha256": "2d36abe2539bed4a2f9d7e11dae30884d285178127cc6333c809b438a5cc7dd5"
+    }
+  ],
+  "cameraRule": "Yksi paikan mielenkiintoisin tunnuskuva, fotorealistinen nykymaailma; hetki ja kuvakulma valitaan paikalle.",
+  "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+  "originalsPreserved": true,
+  "generationMethod": "built-in image_gen; one image per place; any rejected candidate is retained and replaced with a complete new generation",
+  "review": {
+    "primaryVisualReview": "passed",
+    "editorFirstThree": "pending",
+    "gameIntegrationVerified": false,
+    "published": false,
+    "firstThreeRequested": [
+      "kalgoorlie",
+      "birdsville",
+      "mountisa"
+    ],
+    "firstThreeAllDelivered": true
+  },
+  "assets": [
+    {
+      "cityId": "kalgoorlie",
+      "q": null,
+      "lat": -30.749,
+      "lon": 121.466,
+      "orderGroup": "1",
+      "file": "hero-kalgoorlie.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/hero-kalgoorlie.png",
+      "r2Key": "julisteet/herokoe/hero-kalgoorlie.png",
+      "sha256": "f024ad4c7c72b9d88348bf17a8bf9d60df7ffa70ba1e04840c626cbbdc53b12a",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural city hero, one complete new image, exactly1536x1024,3:2 opaque PNG.\nAuthentic Fimiston Open Pit / Super Pit at Kalgoorlie-Boulder, Western Australia. Three supplied genuine photos by Kgbo, Alexey V.Kurochkin and Chuq show the SAME enormous stepped gold mine from different rim angles; retain its real elongated bowl, red-brown upper earth, grey exposed deep rock, dense horizontal benches and broad switchback haul roads. This is an active contemporary mine in flat arid Goldfields, not a natural Grand Canyon or abandoned flooded quarry.\nCamera: realistic LOW elevated terrain viewpoint from the pit rim, gently about15degrees downward, natural40mm perspective; steep terraced walls fill most of the image, narrow level desert horizon and enough sky. The descending near-rim haul road curves along the left foreground toward the grey central excavation; the deep opposite wall has the actual tight parallel benches seen in the photos. Correct enormous scale, a few distant tiny unbranded haul trucks for scale, no identifiable workers. Do not invent a city inside the pit, alpine mountains, forest, river or gold-coloured ore.\nInteresting light: late golden afternoon, warm sidelight across reddish near rock, cool slate grey shaded depths, pale blue sky with delicate clouds and a little distant mine dust. Geological texture remains photographic, not a miniature/HDR graphic.\nCurrentness: Fimiston is still working and expanding in2026; frame the core pit and rock/haul-road forms, not an exact engineering survey, old visitor platform, historic tunnels or decommissioned facilities. No visible readable words, numbers, signs, logos, watermark, frame or overlay. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Super Pit Gold Mine, Kalgoorlie, WA, 2023, 07.jpg",
+          "tekija": "Kgbo",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Super_Pit_Gold_Mine%2C_Kalgoorlie%2C_WA%2C_2023%2C_07.jpg"
+        },
+        {
+          "nimi": "File:Fimiston Open Pit (Super Pit) gold mine Western Australia 2019 Aug.jpg",
+          "tekija": "Alexey V. Kurochkin",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Fimiston_Open_Pit_(Super_Pit)_gold_mine_Western_Australia_2019_Aug.jpg"
+        },
+        {
+          "nimi": "File:Kalgoorlie Super Pit, October 2023 02.jpg",
+          "tekija": "Chuq",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Kalgoorlie_Super_Pit%2C_October_2023_02.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/originals/hero-kalgoorlie-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Kalgoorlien Super Pit -kultakaivoksen porrastetut seinämät iltapäivän valossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kolme saman Fimistonin avolouhoksen eri kuvaajaa ja kulmaa katsottu. Punaiset yläkerrokset, harmaat syvän louhoksen terassit, laaja kaartuva ajotie ja tasainen Goldfields-horisontti vastaavat aihetta. Toimiva nykyinen kaivos, näkyvät ajoneuvot pieniä. Muuttuva kaivostoiminta/laajennus tiedossa; ei vanhaa näköalapaikan rakennelmaa. Iso ja480px katsottu, ei luettavaa tekstiä tai tunnistettavia ihmisiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 3,
+          "differentPhotographers": 3,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "f024ad4c7c72b9d88348bf17a8bf9d60df7ffa70ba1e04840c626cbbdc53b12a"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Super Pit Gold Mine, Kalgoorlie, WA, 2023, 07.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/viitteet/prior-13e0a5e6a7-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/viitteet/prior-13e0a5e6a7.receipt.json",
+            "referenceRole": "primary_landmark_or_terrain_anchor"
+          },
+          {
+            "reference": "File:Fimiston Open Pit (Super Pit) gold mine Western Australia 2019 Aug.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/viitteet/prior-88a8f58c8c-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/viitteet/prior-88a8f58c8c.receipt.json",
+            "referenceRole": "independent_same_subject_or_regional_context_pending_visual_review"
+          },
+          {
+            "reference": "File:Kalgoorlie Super Pit, October 2023 02.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/viitteet/prior-d44ad71563-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/kalgoorlie/viitteet/prior-d44ad71563.receipt.json",
+            "referenceRole": "independent_same_subject_or_regional_context_pending_visual_review"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-kalgoorlie.png",
+      "bytes": 3417137,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 126
+    },
+    {
+      "cityId": "birdsville",
+      "q": null,
+      "lat": -25.899,
+      "lon": 139.352,
+      "orderGroup": "1",
+      "file": "hero-birdsville.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/birdsville/hero-birdsville.png",
+      "r2Key": "julisteet/herokoe/hero-birdsville.png",
+      "sha256": "9f996bb4b9ec3d6c76749c82f07dd310b6e6f732e4130558ad75757844d9f6f6",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural hero. Generate one COMPLETE NEW contemporary view of the authentic Birdsville Hotel, Birdsville, Queensland Australia. Exactly1536x1024,3:2 opaquePNG.\nTwo supplied independent photographs by NomadicPics and Stuart Edwards establish the SAME historic pub: very low single-storey whitewashed rough sandstone walls, dark corner quoins/window surrounds, shallow grey corrugated roof behind its low white parapet, long straight verandah wrapping around the street corner on slender white posts, white scalloped verandah fascia, simple rectangular doors and windows. Retain these actual proportions and materials. The white roof parapet and small curved upper plaque remain architectural shapes but contain NO readable words or digits.\nCamera: LOW elevated viewpoint about7metres, just above the verandah roof, obliquely facing the front corner, gently15degrees down. Entire compact pub, its corner and both connected veranda sides large and within frame. A restrained foreground section of the actual broad quiet outback road and reddish dirt shoulder; surrounding Birdsville low sparse buildings and flat Channel Country horizon. Not a fancy two-storey colonial palace or isolated desert ruin, no huge dunes behind the hotel.\nLight: early blue hour with residual peach horizon, clear deep blue sky, real warm interior/verandah lamps softly illuminating the rough white walls and verandah posts. Details legible, calm welcoming photographic atmosphere, not black night, neon or theatrical floodlights.\nCurrent exterior and setting;2026hotel room renovation does not invent a new historic facade. No copied photographed people, identifiable humans, cars filling the foreground, lettering, signage, logos, watermark, border or typography. No fantasy towers. Natural camera rendering, image fully opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Birdsville Pub (34616985520).jpg",
+          "tekija": "NomadicPics from cairns, australia",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Birdsville_Pub_(34616985520).jpg"
+        },
+        {
+          "nimi": "File:Birdsville Hotel.jpg",
+          "tekija": "Stuart Edwards",
+          "lisenssi": "PD",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Birdsville_Hotel.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/birdsville/originals/hero-birdsville-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Birdsville Hotelin valkoinen kivijulkisivu ja pitkä veranta sinisen hetken valossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kaksi katsottua eri kuvaajan valokuvaa samasta BirdsvilleHotelista. Valkoinen karkea kivimuuraus, tummat kivikulmat ja ikkunakehykset, pitkä valkopylväinen veranta, matala peltikatto ja parapeti sekä tasainen harva ympäristö vastaavat aihetta. Matala kattokamera, sininen hetki ja pienet lämpimät valot. Ei luettavaa tekstiä tai ihmisiä. Iso ja480px katsottu.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "9f996bb4b9ec3d6c76749c82f07dd310b6e6f732e4130558ad75757844d9f6f6"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Birdsville Pub (34616985520).jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/birdsville/viitteet/prior-094d261a69-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/birdsville/viitteet/prior-094d261a69.receipt.json",
+            "referenceRole": "primary_landmark_or_terrain_anchor"
+          },
+          {
+            "reference": "File:Birdsville Hotel.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/birdsville/viitteet/prior-585eaae2f2-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/birdsville/viitteet/prior-585eaae2f2.receipt.json",
+            "referenceRole": "independent_same_subject_or_regional_context_pending_visual_review"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-birdsville.png",
+      "bytes": 2433361,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 127
+    },
+    {
+      "cityId": "mountisa",
+      "q": null,
+      "lat": -20.725,
+      "lon": 139.495,
+      "orderGroup": "1",
+      "file": "hero-mountisa.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountisa/hero-mountisa.png",
+      "r2Key": "julisteet/herokoe/hero-mountisa.png",
+      "sha256": "baba4c570adcf2c045382310ee8da33d65cd27232a905c16a46437df285e05ca",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural regional hero, exactly1536x1024,3:2,fully opaque. Generate a completely new authentic view of LAKE MOONDARRA, the real reservoir on the Leichhardt River16km north of Mount Isa, Queensland Australia.\nReference1 by Ravenspear82 is the EXACT terrain/shoreline anchor: broad blue water basin framed by very low arid hills, curved pale mineral shoreline, dry reddish rocky slopes with sparse native eucalyptus, low undulating horizon. Preserve that actual basin outline and relative hills. Reference2 by Kgbo is ONLY independent support for the native gum-tree foliage, pale sandy soil and dry Leichhardt landscape in the same Mount Isa region. Do NOT import its city riverbed, straight channel, bridge, urban structures or camera geometry into the lake.\nCamera: realistic low hill/lookout on the lake's rocky rim, a few metres above the near slope, gently15degrees downward toward the water,35mm full-frame perspective. Lake broad and dominant at centre; rocky red/ochre foreground with irregular low grey-green gums, actual low hills and bays behind. No high aerial drone, huge mountain peaks, turquoise tropical lagoon, palms or coastal ocean. Contemporary reservoir with water present, small natural exposed shoreline consistent with variable water level; no invented water-control structures or islands.\nLight: clear bright late-morning daylight, saturated but photographic blue water, naturally warm stone, crisp eucalyptus shadows, pale soft white clouds. Quiet wide-open outback atmosphere and lifelike fine rock detail.\nNo identifiable people, signs, readable letters/digits, branding, text, logos, watermark or frame. No mining skyline transferred into the lake. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Lake Moondarra Panorama.jpg",
+          "tekija": "Ravenspear82",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Lake_Moondarra_Panorama.jpg"
+        },
+        {
+          "nimi": "File:Leichhardt River from Sir James Foots Bridge at Mount Isa, 2023, 02.jpg",
+          "tekija": "Kgbo",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Leichhardt_River_from_Sir_James_Foots_Bridge_at_Mount_Isa%2C_2023%2C_02.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountisa/originals/hero-mountisa-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Lake Moondarra, Mount Isan vesivarasto ja virkistysjärvi Leichhardt-joen laaksossa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Todellinen LakeMoondarra-maastoankkuri on natiivi1280pxRavenspear82valokuva. Kgbontoinen valokuva on riippumaton saman MountIsa/Leichhardtalueen ympäristötuki; sen kuivaa jokiuomaa/siltaa ei siirretty järvelle. Matala kalliorimkamera, oikea leveä matalien kukkuloiden vesiallas, paljas kaartuva rantaviiva, eukalyptukset ja kallioinen kuivamaa. Nykyinen järvi ja2026vesi varmennettu. Iso ja480px katsottu; ei tekstiä, ihmisiä, metropolirakennuksia tai kaivossiluetin väärää palautusta.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "baba4c570adcf2c045382310ee8da33d65cd27232a905c16a46437df285e05ca"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Lake Moondarra Panorama.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountisa/viitteet/prior-10851fb014-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountisa/viitteet/prior-10851fb014.receipt.json",
+            "referenceRole": "primary_exact_Lake_Moondarra_terrain_anchor"
+          },
+          {
+            "reference": "File:Leichhardt River from Sir James Foots Bridge at Mount Isa, 2023, 02.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountisa/viitteet/prior-cebf82f177-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/mountisa/viitteet/prior-cebf82f177.receipt.json",
+            "referenceRole": "same_Mount_Isa_Leichhardt_region_environment_only_no_river_geometry_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-mountisa.png",
+      "bytes": 3143483,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 128
+    }
+  ],
+  "preview": {
+    "file": "era06-yksi-kuva-pilotti-esikatselu.jpg",
+    "r2Key": "julisteet/herokoe/20261006/era06-yksi-kuva-pilotti-esikatselu.jpg",
+    "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/era06-yksi-kuva-pilotti-esikatselu.jpg",
+    "sha256": "584af6eae864c321ab393f97c0e0b90fa027b0efc76cdd71aa2a0ddeecd80835",
+    "bytes": 164575,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  }
+}

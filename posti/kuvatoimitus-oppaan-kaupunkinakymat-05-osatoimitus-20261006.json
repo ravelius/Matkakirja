@@ -6,17 +6,28 @@
   "pilot": false,
   "instructionsVersion": 2,
   "imagesPerPlace": 1,
-  "createdAt": "2026-10-06T22:17:53.904641+00:00",
+  "createdAt": "2026-10-06T23:06:09.351849+00:00",
   "cityIds": [
     "ahaggar",
     "mosambik",
     "cayenne",
     "bahrelghazal",
     "sepik",
-    "broome"
+    "broome",
+    "santarem",
+    "murzuk",
+    "nullarbor",
+    "geraldton",
+    "joaopessoa",
+    "bananal",
+    "alkufra",
+    "macapa",
+    "campogrande",
+    "exmouth",
+    "portovelho"
   ],
-  "cityCount": 6,
-  "imageCount": 6,
+  "cityCount": 17,
+  "imageCount": 17,
   "requestedCityIds": [
     "kamerun",
     "suakin",
@@ -90,94 +101,17 @@
       "imageDelivered": false
     },
     {
-      "cityId": "santarem",
-      "orderIndex": 113,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "murzuk",
-      "orderIndex": 114,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "nullarbor",
-      "orderIndex": 115,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "geraldton",
-      "orderIndex": 116,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "joaopessoa",
-      "orderIndex": 117,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "bananal",
-      "orderIndex": 118,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "alkufra",
-      "orderIndex": 119,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "macapa",
-      "orderIndex": 120,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "campogrande",
-      "orderIndex": 121,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "exmouth",
-      "orderIndex": 122,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
       "cityId": "sanambrosio",
       "orderIndex": 123,
-      "state": "production-or-review-pending",
-      "evidence": null,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/sanambrosio/este.json",
       "imageDelivered": false
     },
     {
       "cityId": "nome",
       "orderIndex": 124,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "portovelho",
-      "orderIndex": 125,
-      "state": "production-or-review-pending",
-      "evidence": null,
+      "state": "source-or-current-condition-gate",
+      "evidence": "kaupungit/nome/este.json",
       "imageDelivered": false
     }
   ],
@@ -1199,14 +1133,1520 @@
       "editorReview": "pending",
       "instructionsVersion": 2,
       "orderIndex": 112
+    },
+    {
+      "cityId": "santarem",
+      "file": "hero-santarem.png",
+      "filename": "hero-santarem.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/santarem/final/hero-santarem.png",
+      "r2Key": "julisteet/herokoe/hero-santarem.png",
+      "sha256": "f3e710a6ed094fc7a20fd8ec28c4b45c0b12be83aac183c9bf066c06e8cb8c31",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2811710,
+      "generationPrompt": "Use case: photorealistic-natural. Create one entirely new present-day editorial travel photograph of Santarém, Pará, Brazil, not the Portuguese city. Landscape 3:2, 1536 x 1024 pixels, opaque. Reference 1 is the geometric anchor: Santarém's real riverside terrace buildings with terracotta pavilion roofs, a pale cream flat-roofed urban house at lower right, greenery, the broad blue-green Tapajós in foreground and the muddy light-brown Amazon water beyond separated by a natural subtle curving mixing boundary. Reference 2 is independent support for the current low riverside city, real stone embankment and modest wooden riverboats; do not transplant its yellow building into the first viewpoint. Choose a fresh low rooftop camera around the waterfront buildings' half height, looking gently downward about15 degrees over the terracotta rooftop details and shimmering river, with the opposite low green bank visible far away. The water meeting and real small waterfront structures are the unmistakable subject; spacious but not a high-altitude satellite image. Preserve accurate geographic relations seen in reference1, do not merge nearby Alter do Chão beaches into this scene. Warm early morning sunlight from the side catching roof edges and leaf textures, honest blue-green and silt-brown water, humid bright distance, tactile real weathered materials, physically plausible river craft without copied markings. Natural photographic realism, not a model, illustration, painting, miniature or CGI render. A new composition, not a duplicate photograph. No words, readable signs, logos, flags, watermarks, borders or recognizable people.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/santarem/prompt-toolargs.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/santarem/references/owned-reference-2.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/santarem/references/owned-reference-5.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "Santarém 01.jpg",
+          "tekija": "Redbaobab",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Santar%C3%A9m_01.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/santarem/references/owned-reference-2.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/santarem-01.jpg",
+          "byteSha256": "4aa5aca278c0c02a195edb30a41a7222e867d1070157cad0dacccbdea84e32aa",
+          "pixelSha256": "de727a379ea54bbfbee1caba4423bc1cb6bf7dfb3bb8a11f1b2f61a530d1a8de",
+          "ownedCacheDimensions": [
+            1280,
+            894
+          ],
+          "mirrorRegistryDimensions": [
+            1280,
+            894
+          ],
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.santarem.0.nostot.1",
+          "sourceRecord": {
+            "otsikko": "Vesien kohtaaminen",
+            "teksti": "Santarémin edustalla Amazon-joen sameanruskea, kiintoainesta täynnä oleva vesi kohtaa Tapajós-joen tumman sinertävän, kirkkaan veden, ja tulos on outo näky: kaksi väriä virtaa vierekkäin useiden kilometrien matkan sekoittumatta juuri lainkaan. Syynä ovat jokien erilainen lämpötila, tiheys ja virtausnopeus: Amazonin lämpimämpi ja kevyempi vesi liukuu Tapajósin viileämmän ja tiheämmän veden päällä. Paikallisesti ilmiötä kutsutaan nimellä Encontro das Águas, Vesien kohtaaminen, ja se on yksi koko Santarémin seudun tunnetuimmista matkailunähtävyyksistä.",
+            "tiedosto": "Santarém 01.jpg",
+            "lyhyt": "Amazonin ja Tapajósin erivärinen vesi virtaa vierekkäin sekoittumatta.",
+            "selite": "Kuvassa nähdään korkealta terassilta Santarémin rannan yli avautuva näkymä, jossa vaaleampi Tapajós-joen vesi ja kauempana vaalean ruskea Amazon-joen vesi erottuvat selvänä rajana toisistaan.",
+            "lahde": "Redbaobab, Wikimedia Commons (CC BY 4.0)",
+            "wiki": "Meeting of Waters (Amazon River)"
+          },
+          "visualReview": "Seen full image: contemporary actual Santarem Para riverfront photographic raster, no drawing/map; image2 anchors terrace pavilions and confluence, image5 independently supports same urban waterfront and riverboat character. Photographer credits independently named. No exact original dimensions claimed.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        },
+        {
+          "nimi": "TiagoSilveira Orla Santarem Para (39148974680).jpg",
+          "tekija": "MTur Destinos",
+          "lisenssi": "Public domain",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:TiagoSilveira_Orla_Santarem_Para_%2839148974680%29.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/santarem/references/owned-reference-5.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/tiagosilveira-orla-santarem-para-39148974680.jpg",
+          "byteSha256": "00eced453dae678969ecb05c5672b478adb7fb9d78a80fe1c3da766506621585",
+          "pixelSha256": "89b7dd8771d6c52f7a129e7f9ee20fd809877b6cb1d60ce24a053b653c6301aa",
+          "ownedCacheDimensions": [
+            1280,
+            549
+          ],
+          "mirrorRegistryDimensions": null,
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.santarem.0.nostot.4",
+          "sourceRecord": {
+            "otsikko": "Kumikuume nostaa Santarémin",
+            "teksti": "1870-luvulla Amazonin alueella alkoi kumikuume, kun eurooppalaiset ja pohjoisamerikkalaiset tehtaat tarvitsivat yhä enemmän luonnonkumia polkupyörien ja myöhemmin autojen renkaisiin. Kumipuuta, hevea brasiliensistä, kasvoi luonnonvaraisena juuri Santarémin ja Tapajós-joen seudulla, ja kaupungista tuli nopeasti vilkas satama, josta raakakumia lastattiin höyrylaivoihin Eurooppaan ja Yhdysvaltoihin. Kumikuume teki monista paikallisista kauppiaista äkkirikkaita, ja jokirannan kauppahuoneet ja tulliasemat kasvoivat vuosikymmenen aikana huomattavasti. Todellinen huippukausi koettiin vasta 1880–1910, mutta nousu oli käynnissä jo isoisän matkan aikoihin.",
+            "tiedosto": "TiagoSilveira Orla Santarem Para (39148974680).jpg",
+            "lyhyt": "Kumikuume alkoi 1870-luvulla ja teki Santarémista vilkkaan satamakaupungin.",
+            "selite": "Kuvassa on Santarémin jokirannan kauppasatama: keltainen kolonialtyylinen rakennus, rantakatu ja useita pieniä puisia veneitä ankkuroituna tyyneen veteen.",
+            "lahde": "MTur Destinos, Wikimedia Commons (Public domain)",
+            "wiki": "Amazon rubber boom"
+          },
+          "visualReview": "Seen full image: contemporary actual Santarem Para riverfront photographic raster, no drawing/map; image2 anchors terrace pavilions and confluence, image5 independently supports same urban waterfront and riverboat character. Photographer credits independently named. No exact original dimensions claimed.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/santarem/originals/hero-santarem-native.png",
+      "nativeToolOutputPath": "/Users/samireivinen/.codex/generated_images/01a11231-74d8-7f20-92a7-b6c601fa68e5/exec-f191ab3f-ce42-4cec-b515-b7bdbb64a49b.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "caption": "Santarémin jokirannassa Tapajósin sinivihreä vesi kohtaa Amazonin sameanruskean veden.",
+      "QA": {
+        "format": "PNG",
+        "colorSpace": "sRGB embedded ICC",
+        "opaque": true,
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "technicalTransform": "Only RGB/sRGB PNG export and exact-size Lanczos if needed; no artistic edits.",
+        "referenceGate": "Accepted actual file-specific project records + module SHA snapshots + named, viewed owned photographic rasters >=1000 px + reduction-only code provenance. No Wikimedia requests.",
+        "originalDimensions": null,
+        "freshApiVerification": false,
+        "reductionChainEvidence": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/reduction-chain-evidence.json",
+        "nativeViewed": true,
+        "cardPreviewViewed": true,
+        "parentQA": "Pending independent main-session review",
+        "delivery": "Local asset only; parent handles R2, Git mail and in-game integration.",
+        "geometryApprovedByProducer": true,
+        "cameraApprovedByProducer": true,
+        "observations": "Original reference anchors actual terrace pavilions, pale low house and river boundary; new warm morning composition retains opposite low green bank, no inserted Alter do Chao beach or transposed yellow building. Roof upper surfaces and the downward camera visible."
+      },
+      "orderGroup": "1",
+      "listIndex": 113,
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-santarem.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 113
+    },
+    {
+      "cityId": "murzuk",
+      "file": "hero-murzuk.png",
+      "filename": "hero-murzuk.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/murzuk/final/hero-murzuk.png",
+      "r2Key": "julisteet/herokoe/hero-murzuk.png",
+      "sha256": "19d31eb27f0787a1dad177d0949b54aca8adfb180ae756f3205bc445d84359d1",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2704257,
+      "generationPrompt": "Use case: photorealistic-natural. Make one entirely new striking current-era travel photograph of the real Murzuq sand sea in Libya, 3:2 landscape1536x1024 opaque. Three photographic references are geographic evidence: the ISS photographs establish the actual broad pale-orange sandy dune ribbons flowing between irregular low dark-brown rocky desert edges of the Murzuq region. The ground photograph by Bernhard Holub is independent same-region surface/material evidence only: low orange sand at the Tmissah-side margin, scattered fine dark gravel, immense open desert. Do not copy its vehicle or person. Geometric primary anchor is the third reference: the broad sand corridor with irregular broken dark rock margins and wind-shaped fine dune streaks; create a new lower oblique terrain-camera composition at the rocky edge overlooking that same kind of visibly anchored sand tongue. Camera looking gently downward, like from a low natural escarpment above the dune margin, about15degrees down; a few metres of rocky foreground, low orderly sand crests receding to the distant real flat horizon. No generic giant pyramidal dunes, fantasy mountains, valley cliffs, palms or added oasis/city. Dark rocky ground belongs around the pale sand tongue, no transplantation of Ubari lakes or Ghat formations. Very late afternoon sidelight warms the orange ripples, subtle cool shadows, clear dry natural atmosphere. Real granular sand and small scattered dark stones, photographic lens rendering and physically plausible scale. Natural photorealism, not CGI, miniature or painting. No labels, words, logos, flags, watermarks, border, vehicles or recognizable people. Do not reconstruct any old Murzuq building from historical views.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/murzuk/prompt-toolargs.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/murzuk/references/owned-reference-7.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/murzuk/references/owned-reference-10.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/murzuk/references/owned-reference-19.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "ISS-42 Murzuq Desert in Libya.jpg",
+          "tekija": "NASA/Terry Virts",
+          "lisenssi": "Public domain",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:ISS-42_Murzuq_Desert_in_Libya.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/murzuk/references/owned-reference-7.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/iss-42-murzuq-desert-in-libya.jpg",
+          "byteSha256": "92281fb0bd40484cfaafb92c208d051b559855928c3cbd035a61c2602d040781",
+          "pixelSha256": "c57523190ccb46e7168893fd804b8fcc62efaada6559b6b511ed625e7c36d107",
+          "ownedCacheDimensions": [
+            1280,
+            1923
+          ],
+          "mirrorRegistryDimensions": null,
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.murzuk.0.matkailijalle.kuva",
+          "sourceRecord": {
+            "tiedosto": "ISS-42 Murzuq Desert in Libya.jpg",
+            "lyhyt": "Murzuqin hiekkameri avaruusasemalta: dyynikuvio peittää aavikon reunasta reunaan.",
+            "selite": "Astronautti Terry Virts kuvasi Murzuqin hiekkameren avaruusasemalta helmikuussa 2015 näyttääkseen, kuinka valtava se on. Oikeassa reunassa hiekka vaihtuu tummempaan kivikkoon, jonka laidalla erottuu keitaiden ja kastelupeltojen täpliä.",
+            "lahde": "NASA/Terry Virts, Wikimedia Commons (Public domain)"
+          },
+          "visualReview": "All three viewed photographic rasters of actual Murzuq region, not paintings or maps. NASA/Terry Virts2015 and ISS64/2021 show exact dune-field/rock-margin patterns; independent Bernhard Holub2002 photo south of Tmissah supports low orange sand, gravel and terrain scale only, car and person excluded. One precise NASA terrain anchor with independent same-region environment support. Natural terrain; no inference about present condition of old castle.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        },
+        {
+          "nimi": "Erg Murzuk south of Tmissah.jpg",
+          "tekija": "Bernhard Holub",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Erg_Murzuk_south_of_Tmissah.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/murzuk/references/owned-reference-10.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/erg-murzuk-south-of-tmissah.jpg",
+          "byteSha256": "0e454a51fd586ba5dbbab2a89bf87fd7afaa3056a575cc2acb1a3b9a145f79aa",
+          "pixelSha256": "21807ab258a759cf0d3c9e66f718837eb8da412bb8d103b27056c6babf1d997a",
+          "ownedCacheDimensions": [
+            1062,
+            678
+          ],
+          "mirrorRegistryDimensions": null,
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.murzuk.0.matkailijalle.artikkeli.jaksot.0.kuva.2",
+          "sourceRecord": {
+            "tiedosto": "Erg Murzuk south of Tmissah.jpg",
+            "lyhyt": "Maastoauton renkaisiin pumpataan ilmaa, kun Murzuqin hiekkameri on ylitetty.",
+            "selite": "Maaliskuussa 2002 kuljettaja pumppaa käsipumpulla ilmaa maastoauton renkaisiin Tmissahin eteläpuolella: Murzuqin hiekkameren pehmeä hiekka on takana, ja edessä on taas kovempaa pistettä.",
+            "lahde": "Bernhard Holub, Wikimedia Commons (CC BY-SA 4.0)"
+          },
+          "visualReview": "All three viewed photographic rasters of actual Murzuq region, not paintings or maps. NASA/Terry Virts2015 and ISS64/2021 show exact dune-field/rock-margin patterns; independent Bernhard Holub2002 photo south of Tmissah supports low orange sand, gravel and terrain scale only, car and person excluded. One precise NASA terrain anchor with independent same-region environment support. Natural terrain; no inference about present condition of old castle.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        },
+        {
+          "nimi": "ISS-64 Sahara Desert, Murzuq District in central Libya.jpg",
+          "tekija": "NASA",
+          "lisenssi": "PD",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:ISS-64_Sahara_Desert%2C_Murzuq_District_in_central_Libya.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/murzuk/references/owned-reference-19.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/iss-64-sahara-desert-murzuq-district-in-central-libya.jpg",
+          "byteSha256": "cd624c45a3b3c6bd323607c1de09bf40f671d3bec9a4d444ade6f3a91a9f752b",
+          "pixelSha256": "5102cf8738feda6f16029ca92458a04c7695c9157d26bdb52401c1c75ae4fcf5",
+          "ownedCacheDimensions": [
+            1280,
+            719
+          ],
+          "mirrorRegistryDimensions": [
+            1280,
+            719
+          ],
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/africa-valokuvat.js-8ef010fa6eba",
+          "sourceModuleSha256": "8ef010fa6ebabf0bd327d191ef9361f7fd9b2f69e746f3bff9ee5d94bfbe343a",
+          "recordPath": "AFRICA_VALOKUVAT.murzuk.lisat.1",
+          "sourceRecord": {
+            "tiedosto": "ISS-64 Sahara Desert, Murzuq District in central Libya.jpg",
+            "vuosi": "2021",
+            "lahde": "NASA, Commons (PD)",
+            "lyhyt": "Murzuqin hiekkameri avaruusasemalta, vaalea hiekka työntyy kivikkoaavikkoon.",
+            "selite": "Murzuqin piirikunnan hiekkameri avaruusasemalta valokuvattuna. Vaalea hiekkavirta työntyy kivikkoaavikon halki — tällaisen hiekan laidalle kaupunki on rakennettu."
+          },
+          "visualReview": "All three viewed photographic rasters of actual Murzuq region, not paintings or maps. NASA/Terry Virts2015 and ISS64/2021 show exact dune-field/rock-margin patterns; independent Bernhard Holub2002 photo south of Tmissah supports low orange sand, gravel and terrain scale only, car and person excluded. One precise NASA terrain anchor with independent same-region environment support. Natural terrain; no inference about present condition of old castle.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/murzuk/originals/hero-murzuk-native.png",
+      "nativeToolOutputPath": "/Users/samireivinen/.codex/generated_images/01a11231-74d8-7f20-92a7-b6c601fa68e5/exec-bb647f57-ac6d-4895-b208-3c39426f48d9.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": "Murzuqin hiekkameren vaaleat dyynit kohtaavat Libyan aavikon tumman kivikkoreunan.",
+      "QA": {
+        "subject": "Murzuq sand sea and its rocky margin, Libya",
+        "referenceObservations": "All three viewed photographic rasters of actual Murzuq region, not paintings or maps. NASA/Terry Virts2015 and ISS64/2021 show exact dune-field/rock-margin patterns; independent Bernhard Holub2002 photo south of Tmissah supports low orange sand, gravel and terrain scale only, car and person excluded. One precise NASA terrain anchor with independent same-region environment support. Natural terrain; no inference about present condition of old castle.",
+        "knownLimitations": [
+          "No fresh Commons API or original dimensions; natural landscape image only, not a claim of current city/fort geometry."
+        ],
+        "format": "PNG",
+        "colorSpace": "sRGB embedded ICC",
+        "opaque": true,
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "technicalTransform": "Only RGB/sRGB PNG export and exact-size Lanczos if needed; no artistic edits.",
+        "referenceGate": "Accepted actual file-specific project records + module SHA snapshots + named, viewed owned photographic rasters >=1000 px + reduction-only code provenance. No Wikimedia requests.",
+        "originalDimensions": null,
+        "freshApiVerification": false,
+        "reductionChainEvidence": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/reduction-chain-evidence.json",
+        "nativeViewed": true,
+        "cardPreviewViewed": true,
+        "parentQA": "Pending independent main-session review",
+        "delivery": "Local asset only; parent handles R2, Git mail and in-game integration.",
+        "geometryApprovedByProducer": true,
+        "cameraApprovedByProducer": true,
+        "observations": "Sand corridor and low broken dark rocky margins follow exact ISS terrain anchor; independent same-region ground photo supports sand/gravel materials. Present natural landscape depiction, no city or old fortress reconstruction. No transplanted Ubari lake/Ghat mountains."
+      },
+      "orderGroup": "1",
+      "listIndex": 114,
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-murzuk.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 114
+    },
+    {
+      "cityId": "nullarbor",
+      "file": "hero-nullarbor.png",
+      "filename": "hero-nullarbor.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/nullarbor/final/hero-nullarbor.png",
+      "r2Key": "julisteet/herokoe/hero-nullarbor.png",
+      "sha256": "61b784125b75a91c496c94c53c2104589e3f0d1f654c3f2e22fc950a25a14df5",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3067220,
+      "generationPrompt": "Use case: photorealistic-natural. One entirely new current-era travel photograph of Bunda Cliffs at the Nullarbor edge of the Great Australian Bight, Australia. Landscape3:2,1536x1024opaque. The second photograph is the exact primary terrain anchor: a level treeless limestone plateau ending in a long sheer irregular cliff wall receding along the coastline, pale white lower limestone bands and dark ochre-grey caprock, turquoise Southern Ocean beneath. The first photograph independently anchors the genuine same-region sparse low coastal scrub and chalky plateau surface; do not import a different bay shape. Compose a fresh low terrain-camera view from just above the plateau edge, looking gently15degrees downward along the real cliff alignment; cliff sequence occupies left and center, ocean right, a narrow strip of natural pale rocky foreground with sparse low scrub. Keep cliff shapes, sediment layers, scale and flat upper horizon faithful to the primary photo. Crisp neutral mid-afternoon sun and slightly hazy far coast, lively white wave foam with realistic marine blue hues, natural exposure with visible cliff texture. Real photography, not aerial satellite, not CGI, no fantasy arches or freestanding stacks, no mountains, no lush forest, no buildings. No words/logos/watermarks/borders/people.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/nullarbor/prompt-toolargs.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/nullarbor/references/owned-reference-1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/nullarbor/references/owned-reference-18.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "Great Australian Bight, Eyre Highway scenic lookout no. 3 - 1.jpg",
+          "tekija": "Chuq",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Great_Australian_Bight%2C_Eyre_Highway_scenic_lookout_no._3_-_1.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/nullarbor/references/owned-reference-1.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/great-australian-bight-eyre-highway-scenic-lookout-no.-3---1.jpg",
+          "byteSha256": "094e0ce71c65ee79a52718a555dd76de893857177fae66816797c8f006a86cd1",
+          "pixelSha256": "63617b562057a96410a4aae8a037bdddf6d65454c6ca52e6642ac8a256ae449a",
+          "ownedCacheDimensions": [
+            1280,
+            960
+          ],
+          "mirrorRegistryDimensions": null,
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.nullarbor.0.nostot.1",
+          "sourceRecord": {
+            "otsikko": "Baxterin kuolema autiolla rannikolla",
+            "teksti": "29. huhtikuuta 1841 leiri hiljeni ikuisiksi ajoiksi kahden miehen osalta. Kaksi retkikunnan aboriginaalioppaista, Joey ja Yarri, olivat jo viikkoja vaatineet paluuta, mutta Eyre kieltäytyi. Kun Baxter jäi hetkeksi yksin vartioimaan leiriä, miehet ampuivat hänet, veivät suurimman osan ruoasta ja vedestä sekä kaksi haulikkoa ja katosivat aavikolle. Koska maa oli liian kovaa haudan kaivamiseen, Eyre ja jäljelle jäänyt opas Wylie kääriivät Baxterin ruumiin peitteeseen ja jättivät sen rannikon kalkkikivijyrkänteiden juurelle. Kaksikko jatkoi matkaa nälkiintyneenä, elossa lähinnä kuoren keräämien kastepisaroiden ja Wylien metsästämien lintujen varassa.",
+            "tiedosto": "Great Australian Bight, Eyre Highway scenic lookout no. 3 - 1.jpg",
+            "lyhyt": "Great Australian Bightin autio, pensaikkoinen rantajyrkänne Nullarborin reunalla.",
+            "selite": "Valokuva näyttää karun, matalan pensaikon peittämän kalkkikivijyrkänteen, joka putoaa suoraan turkoosiin mereen – samankaltaista autiota rannikkoa Eyren retkikunta seurasi viikkokausia.",
+            "lahde": "Chuq, Wikimedia Commons (CC BY-SA 4.0)",
+            "wiki": "John Baxter (explorer)"
+          },
+          "visualReview": "Seen both actual coastal photographs. Bahnfrend2017 is exact Bunda Cliffs geometry anchor: planar plateau, repeated irregular cliff sections, pale basal limestone and brown upper layer, turquoise waves. Chuq independently shows same Great Australian Bight/Nullarbor coastal plateau surface and sparse scrub, not the exact cliff outline. No mixture with Eucla ruins or remote caves.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        },
+        {
+          "nimi": "Bunda Cliffs, 2017 (01).jpg",
+          "tekija": "Bahnfrend",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Bunda_Cliffs%2C_2017_%2801%29.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/nullarbor/references/owned-reference-18.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/bunda-cliffs-2017-01.jpg",
+          "byteSha256": "35628828985d4b38daad5b0e9485f190750e32ce0cf36ccb78c4f87b15c86235",
+          "pixelSha256": "f43268a8b4122c793952fa35e0b9972f9dc9ce65fb856dd51215c56863afbd94",
+          "ownedCacheDimensions": [
+            1280,
+            844
+          ],
+          "mirrorRegistryDimensions": [
+            1280,
+            844
+          ],
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/oceania-valokuvat.js-f0e011b92098",
+          "sourceModuleSha256": "f0e011b920985038937fce498f963c00bc2c920f19fe3a199d1823e20e062711",
+          "recordPath": "OCEANIA_VALOKUVAT.nullarbor.lisat.1",
+          "sourceRecord": {
+            "tiedosto": "Bunda Cliffs, 2017 (01).jpg",
+            "vuosi": "2017",
+            "lahde": "Bahnfrend, Commons (CC BY-SA 4.0)",
+            "lyhyt": "Bundan jyrkänteet Suuren Australianlahden rannalla, Nullarborin kalkkikivireuna.",
+            "selite": "Bundan jyrkänteet Suuren Australianlahden rannalla. Nullarborin kalkkikivitasanko päättyy tähän kuin veitsellä leikaten, ja jyrkänne jatkuu rantaviivaa pitkin kymmeniä kilometrejä yhtenä muurina."
+          },
+          "visualReview": "Seen both actual coastal photographs. Bahnfrend2017 is exact Bunda Cliffs geometry anchor: planar plateau, repeated irregular cliff sections, pale basal limestone and brown upper layer, turquoise waves. Chuq independently shows same Great Australian Bight/Nullarbor coastal plateau surface and sparse scrub, not the exact cliff outline. No mixture with Eucla ruins or remote caves.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/nullarbor/originals/hero-nullarbor-native.png",
+      "nativeToolOutputPath": "/Users/samireivinen/.codex/generated_images/01a11231-74d8-7f20-92a7-b6c601fa68e5/exec-797dd791-37ec-42db-9ac7-b6ccb4ef3dd7.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": "Nullarborin kalkkikivitasanko päättyy Bundan jyrkänteisiin Suuren Australianlahden rannalla.",
+      "QA": {
+        "subject": "Bunda Cliffs, Nullarbor / Great Australian Bight",
+        "referenceObservations": "Seen both actual coastal photographs. Bahnfrend2017 is exact Bunda Cliffs geometry anchor: planar plateau, repeated irregular cliff sections, pale basal limestone and brown upper layer, turquoise waves. Chuq independently shows same Great Australian Bight/Nullarbor coastal plateau surface and sparse scrub, not the exact cliff outline. No mixture with Eucla ruins or remote caves.",
+        "knownLimitations": [],
+        "format": "PNG",
+        "colorSpace": "sRGB embedded ICC",
+        "opaque": true,
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "technicalTransform": "Only RGB/sRGB PNG export and exact-size Lanczos if needed; no artistic edits.",
+        "referenceGate": "Accepted actual file-specific project records + module SHA snapshots + named, viewed owned photographic rasters >=1000 px + reduction-only code provenance. No Wikimedia requests.",
+        "originalDimensions": null,
+        "freshApiVerification": false,
+        "reductionChainEvidence": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/reduction-chain-evidence.json",
+        "nativeViewed": true,
+        "cardPreviewViewed": true,
+        "parentQA": "Pending independent main-session review",
+        "delivery": "Local asset only; parent handles R2, Git mail and in-game integration.",
+        "geometryApprovedByProducer": true,
+        "cameraApprovedByProducer": true,
+        "observations": "Correct treeless planar plateau and pale/brown limestone bands, continuous irregular Bunda cliff alignment; gently downward cliff-edge camera. Second source supplies same-region surface scrub, no merged distant landmarks."
+      },
+      "orderGroup": "1",
+      "listIndex": 115,
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-nullarbor.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 115
+    },
+    {
+      "cityId": "geraldton",
+      "file": "hero-geraldton.png",
+      "filename": "hero-geraldton.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/geraldton/final/hero-geraldton.png",
+      "r2Key": "julisteet/herokoe/hero-geraldton.png",
+      "sha256": "28af31827cedcc38eb6e405cb0aa0c8266dfd61ad252277a60b715e9456c6c54",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2791322,
+      "generationPrompt": "Use case: photorealistic-natural. One entirely new current-era travel photograph of Geraldton Foreshore in Western Australia, landscape3:2,1536x1024opaque. First reference is exact view/geometry anchor: protected shallow turquoise bathing bay in foreground, short rock breakwater from left, pale sandy beach across, tall Norfolk Island pines and low foreshore buildings on left, a long low white-roofed shed and the real grain-terminal architecture on right: two tall grey box-like silo towers joined by raised conveyors with cylindrical bins between. Second photo independently supports the precise same silo complex as seen from port side, not placement of its tugboats or railroad into this beach. New interesting camera a little higher than existing view, at low rooftop height about8-10metres, looking15degrees downward across the bay; see gentle ripples, rock tops, beach and roofs, low distant urban horizon. Preserve true spatial relation beach next to industrial silos; don't invent a generic skyline or relocate the marina buildings/lighthouse/memorial. Luminous soft early evening before sunset, cool teal water with small warm highlights, subtle amber light on pine trunks and roof edges; enough daylight to show architecture accurately. Professional real travel photography, not a diorama/CGI, true material detail, no exaggerated tower heights. No readable words, logos, watermarks, frames, recognizable people.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/geraldton/prompt-toolargs.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/geraldton/references/owned-reference-20.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/geraldton/references/owned-reference-22.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "Geraldton Foreshore October 2023 02.jpg",
+          "tekija": "DaHuzyBru",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Geraldton_Foreshore_October_2023_02.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/geraldton/references/owned-reference-20.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/geraldton-foreshore-october-2023-02.jpg",
+          "byteSha256": "b96d5aaec33c18b42f2fbfe3f3c10a6e7fa1a4683669a285eb5bc6b4873abc99",
+          "pixelSha256": "bb61fe2df341c3dc60fc06dd0384380bbc5bee802b6f7eed3303f9b43a3ad29b",
+          "ownedCacheDimensions": [
+            1280,
+            960
+          ],
+          "mirrorRegistryDimensions": [
+            1280,
+            960
+          ],
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/oceania-valokuvat.js-f0e011b92098",
+          "sourceModuleSha256": "f0e011b920985038937fce498f963c00bc2c920f19fe3a199d1823e20e062711",
+          "recordPath": "OCEANIA_VALOKUVAT.geraldton.lisat.1",
+          "sourceRecord": {
+            "tiedosto": "Geraldton Foreshore October 2023 02.jpg",
+            "vuosi": "2023",
+            "lahde": "DaHuzyBru, Commons (CC BY-SA 4.0)",
+            "lyhyt": "Geraldtonin rantabulevardin uimalahti viljasiilon vieressä.",
+            "selite": "Geraldtonin rantabulevardin uimalahti. Oikealla kohoaa sataman viljasiilo ja lastauslaite — kaupunki on Keski-Länsi-Australian viljavyöhykkeen vientisatama, ja siilot seisovat aivan uimarannan vieressä."
+          },
+          "visualReview": "Seen DaHuzyBru2023 foreshore photograph anchors exact bay, pale beach, left-side Norfolk Island pines and low buildings, right-side long white shed and two tall grain-silo blocks with conveyor bridge. JarrahTree2019 independent reverse port-side photograph confirms silo architecture and industrial context; its tugboats/railroad are not moved into the bathing bay. Dinkum marina photo viewed but not selected, separate marina viewpoint.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        },
+        {
+          "nimi": "Geraldton harbour at sunset.jpg",
+          "tekija": "JarrahTree",
+          "lisenssi": "CC BY 2.5 AU",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5/au/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Geraldton_harbour_at_sunset.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/geraldton/references/owned-reference-22.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/geraldton-harbour-at-sunset.jpg",
+          "byteSha256": "6fb24e1c0fcb82cda47de364713b9b8ebaa6e632aa7a88d11ca97be7a045f90c",
+          "pixelSha256": "dd2e6b90d97ebaf1f03eb5ef38ef36eb4a40bbe6fe69c5e1563b539df7a3613e",
+          "ownedCacheDimensions": [
+            1280,
+            607
+          ],
+          "mirrorRegistryDimensions": [
+            1280,
+            607
+          ],
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/oceania-valokuvat.js-f0e011b92098",
+          "sourceModuleSha256": "f0e011b920985038937fce498f963c00bc2c920f19fe3a199d1823e20e062711",
+          "recordPath": "OCEANIA_VALOKUVAT.geraldton.uusi",
+          "sourceRecord": {
+            "tiedosto": "Geraldton harbour at sunset.jpg",
+            "vuosi": "2019",
+            "lahde": "JarrahTree, Commons (CC BY 2.5 AU)",
+            "lyhyt": "Geraldtonin satama iltavalossa, lasti tulee sisämaasta radalla kuin sata vuotta sitten.",
+            "selite": "Geraldtonin satama iltavalossa: hinaajia laiturissa, viljasiilot takana ja irtolastialus kauempana laiturilla. Etualalla kulkee rata, jota pitkin lasti tulee sisämaasta samaan tapaan kuin sata vuotta sitten."
+          },
+          "visualReview": "Seen DaHuzyBru2023 foreshore photograph anchors exact bay, pale beach, left-side Norfolk Island pines and low buildings, right-side long white shed and two tall grain-silo blocks with conveyor bridge. JarrahTree2019 independent reverse port-side photograph confirms silo architecture and industrial context; its tugboats/railroad are not moved into the bathing bay. Dinkum marina photo viewed but not selected, separate marina viewpoint.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/geraldton/originals/hero-geraldton-native.png",
+      "nativeToolOutputPath": "/Users/samireivinen/.codex/generated_images/01a11231-74d8-7f20-92a7-b6c601fa68e5/exec-b76a3edf-7008-4019-8429-b9ac7c3027ac.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": "Geraldtonin turkoosi uimalahti ja rantapuisto ovat aivan viljasataman siilojen vieressä.",
+      "QA": {
+        "subject": "Geraldton Foreshore bathing bay beside grain port",
+        "referenceObservations": "Seen DaHuzyBru2023 foreshore photograph anchors exact bay, pale beach, left-side Norfolk Island pines and low buildings, right-side long white shed and two tall grain-silo blocks with conveyor bridge. JarrahTree2019 independent reverse port-side photograph confirms silo architecture and industrial context; its tugboats/railroad are not moved into the bathing bay. Dinkum marina photo viewed but not selected, separate marina viewpoint.",
+        "knownLimitations": [],
+        "format": "PNG",
+        "colorSpace": "sRGB embedded ICC",
+        "opaque": true,
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "technicalTransform": "Only RGB/sRGB PNG export and exact-size Lanczos if needed; no artistic edits.",
+        "referenceGate": "Accepted actual file-specific project records + module SHA snapshots + named, viewed owned photographic rasters >=1000 px + reduction-only code provenance. No Wikimedia requests.",
+        "originalDimensions": null,
+        "freshApiVerification": false,
+        "reductionChainEvidence": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/reduction-chain-evidence.json",
+        "nativeViewed": true,
+        "cardPreviewViewed": true,
+        "parentQA": "Pending independent main-session review",
+        "delivery": "Local asset only; parent handles R2, Git mail and in-game integration.",
+        "geometryApprovedByProducer": true,
+        "cameraApprovedByProducer": true,
+        "observations": "Real foreshore bay from slightly raised breakwater camera, left pines and low buildings, right white shed and two box-shaped silo blocks with conveyors, no tugboats/rail transplanted to beach."
+      },
+      "orderGroup": "1",
+      "listIndex": 116,
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-geraldton.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 116
+    },
+    {
+      "cityId": "joaopessoa",
+      "file": "hero-joaopessoa.png",
+      "filename": "hero-joaopessoa.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/joaopessoa/final/hero-joaopessoa.png",
+      "r2Key": "julisteet/herokoe/hero-joaopessoa.png",
+      "sha256": "e310a0b5b6240b4c104091d6010181de00ee5955728223bdce006fd823f76747",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3199742,
+      "generationPrompt": "Use case: photorealistic-natural. Create one completely new present-day editorial travel photograph of João Pessoa's authentic historic Varadouro riverside, Paraíba, Brazil, 3:2 landscape1536x1024opaque. Image2 is the exact scene anchor: downhill narrow street between pastel-coloured colonial townhouses and red tile roofs leads toward the Paraíba River, real winding mangrove islands behind. At right is the real small ochre-yellow and white Igreja de São Frei Pedro Gonçalves, with ONE slender stepped square clock/bell tower and white pointed cap, and its attached long yellow church body; preserve its actual form. Image1 independently confirms the same yellow single-spire riverside church lower in the city beside that same riverbend and true green surroundings. Image1's large pale twin-spired church is a different location and MUST NOT be transplanted into this view. Recompose from a new low rooftop camera near upper part of the downhill street, about12metres above pavement, looking gently15degrees downward across visible old tile roofs and the street toward the river; yellow church right fully within frame, pastel façades center-left, mangroves behind. Faithful actual topography and architecture from reference2, no invented marina, cathedral, modern skyline or beach. Early morning after tropical rain, warm slant light on ochre walls and red roof edges, slightly damp pavement, fresh green mangroves, soft blue-grey river reflections. Contemporary maintained buildings with subtle age and realistic weathering, small ordinary parked vehicles without marks, no crowds. Natural photographic realism, not painting, HDR filter, miniature or CGI. No readable signs, words, logos, flags, watermarks, frames or recognizable people.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/joaopessoa/prompt-toolargs.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/joaopessoa/references/owned-reference-3.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/joaopessoa/references/owned-reference-21.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "Centro Histórico de João Pessoa - PB.JPG",
+          "tekija": "Jailsoncoutinho",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Centro_Hist%C3%B3rico_de_Jo%C3%A3o_Pessoa_-_PB.JPG",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/joaopessoa/references/owned-reference-3.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/centro-historico-de-joao-pessoa---pb.jpg",
+          "byteSha256": "20eaac884e91b8e1963d36fe19720c5a5df6b61a3df355ea9ab0380a67633928",
+          "pixelSha256": "f8dd9b255f7114c8676b4741ccc91ac929fe5a1c1065a4c26c84a869626b1bd8",
+          "ownedCacheDimensions": [
+            1280,
+            853
+          ],
+          "mirrorRegistryDimensions": null,
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.joaopessoa.0.nostot.1",
+          "sourceRecord": {
+            "otsikko": "Filipeiasta Parahybaksi",
+            "teksti": "Kaupungin nimi vaihtui historian saatossa moneen kertaan. Vuonna 1588 se sai nimekseen Filipeia de Nossa Senhora das Neves kunnianosoituksena Espanjan kuninkaalle Filip II:lle, joka hallitsi tuolloin unionissa myös Portugalia. Vuodesta 1599 alkaen kaupunkia kutsuttiin Parahyba do Norteksi joen mukaan, ja tämä nimi pysyi käytössä yli kolmen vuosisadan ajan – koko isoisän vuoden 1873 matkan yli ja pitkälle 1900-luvulle. Vasta syyskuussa 1930 kaupunki nimettiin uudelleen João Pessoaksi murhatun kuvernöörin muistoksi, kun hänen kuolemansa oli sytyttänyt saman vuoden vallankumouksen. Isoisän päiväkirjassa kaupunki esiintyy siis vielä nimellä Parahyba.",
+            "tiedosto": "Centro Histórico de João Pessoa - PB.JPG",
+            "lyhyt": "João Pessoan historiallinen keskusta kohoaa Paraíban joen mutkan yllä.",
+            "selite": "Valokuva näyttää João Pessoan historiallisen keskustan kirkontorneineen ja punakattoisine taloineen Paraíban joen mutkan yllä.",
+            "lahde": "Jailsoncoutinho, Wikimedia Commons (CC BY-SA 4.0)",
+            "wiki": "João Pessoa, Paraíba"
+          },
+          "visualReview": "Seen Jailsoncoutinho high historic-centre photo and Rogerio1214022017 closer Varadouro panorama. Both show same Paraiba mangrove riverbend and yellow single-spire riverside church in historic lower town; Jailson wider image also includes a different twin-spired church, not transplanted to Varadouro. Rogerio precise anchor includes yellow spire at right, pastel townhouses, roofed warehouse and downhill street. Lighthouse second candidate was a plaque close-up, not geometry; SaoFrancisco candidate shows a different church and is excluded.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        },
+        {
+          "nimi": "Vista do Centro Histórico de João Pessoa PB BR.jpg",
+          "tekija": "Rogerio121402",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Vista_do_Centro_Hist%C3%B3rico_de_Jo%C3%A3o_Pessoa_PB_BR.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/joaopessoa/references/owned-reference-21.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/vista-do-centro-historico-de-joao-pessoa-pb-br.jpg",
+          "byteSha256": "d2f1aac81de3b2f98d0364e16d52fbafecd0dd4992358e2cfd54bef839cacaee",
+          "pixelSha256": "5b001bba42b60e81f8adef51c8f5f1e55d2534ab7405e33c3491e228fd0ad277",
+          "ownedCacheDimensions": [
+            1280,
+            853
+          ],
+          "mirrorRegistryDimensions": [
+            1280,
+            853
+          ],
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/southamerica-valokuvat.js-1cc36febb572",
+          "sourceModuleSha256": "1cc36febb572e131ebc706c48c3e5c390ee1dcfb1612e06ff1d0086f3e643a58",
+          "recordPath": "SOUTHAMERICA_VALOKUVAT.joaopessoa.lisat.0",
+          "sourceRecord": {
+            "tiedosto": "Vista do Centro Histórico de João Pessoa PB BR.jpg",
+            "vuosi": "2017",
+            "lahde": "Rogerio121402, Commons (CC BY-SA 4.0)",
+            "lyhyt": "João Pessoan vanhakaupunki Paraíbajoen rannalla illansuussa 2017.",
+            "selite": "João Pessoan vanhaakaupunkia illansuussa, takana Paraíbajoki ja sen mangrovesaaret. Kaupunki perustettiin 1585 juuri tähän, joen ja meren väliin, ja se on yksi Brasilian vanhimmista."
+          },
+          "visualReview": "Seen Jailsoncoutinho high historic-centre photo and Rogerio1214022017 closer Varadouro panorama. Both show same Paraiba mangrove riverbend and yellow single-spire riverside church in historic lower town; Jailson wider image also includes a different twin-spired church, not transplanted to Varadouro. Rogerio precise anchor includes yellow spire at right, pastel townhouses, roofed warehouse and downhill street. Lighthouse second candidate was a plaque close-up, not geometry; SaoFrancisco candidate shows a different church and is excluded.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/joaopessoa/originals/hero-joaopessoa-native.png",
+      "nativeToolOutputPath": "/Users/samireivinen/.codex/generated_images/01a11231-74d8-7f20-92a7-b6c601fa68e5/exec-cf4cfb56-701f-4ff8-ae38-878f3331d856.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": "João Pessoan värikkäät vanhankaupungin talot laskeutuvat kohti Paraíbajokea ja mangrovesaaria.",
+      "QA": {
+        "subject": "João Pessoa historic Varadouro riverside and Igreja de São Frei Pedro Gonçalves",
+        "referenceObservations": "Seen Jailsoncoutinho high historic-centre photo and Rogerio1214022017 closer Varadouro panorama. Both show same Paraiba mangrove riverbend and yellow single-spire riverside church in historic lower town; Jailson wider image also includes a different twin-spired church, not transplanted to Varadouro. Rogerio precise anchor includes yellow spire at right, pastel townhouses, roofed warehouse and downhill street. Lighthouse second candidate was a plaque close-up, not geometry; SaoFrancisco candidate shows a different church and is excluded.",
+        "knownLimitations": [
+          "Historical-century narrative in source object does not make the linked photographic raster historic; viewed images show contemporary motor vehicles and maintained urban buildings."
+        ],
+        "format": "PNG",
+        "colorSpace": "sRGB embedded ICC",
+        "opaque": true,
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "technicalTransform": "Only RGB/sRGB PNG export and exact-size Lanczos if needed; no artistic edits.",
+        "referenceGate": "Accepted actual file-specific project records + module SHA snapshots + named, viewed owned photographic rasters >=1000 px + reduction-only code provenance. No Wikimedia requests.",
+        "originalDimensions": null,
+        "freshApiVerification": false,
+        "reductionChainEvidence": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/reduction-chain-evidence.json",
+        "nativeViewed": true,
+        "cardPreviewViewed": true,
+        "parentQA": "Pending independent main-session review",
+        "delivery": "Local asset only; parent handles R2, Git mail and in-game integration.",
+        "geometryApprovedByProducer": true,
+        "cameraApprovedByProducer": true,
+        "observations": "Same Varadouro lower-town riverbend/mangrove relation; yellow single stepped spire matches independent wider/closer photographs. Downhill street with visible tile roofs, low elevated downward camera. No different twin-spire cathedral/SaoFrancisco inserted."
+      },
+      "orderGroup": "1",
+      "listIndex": 117,
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-joaopessoa.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 117
+    },
+    {
+      "cityId": "bananal",
+      "file": "hero-bananal.png",
+      "filename": "hero-bananal.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bananal/final/hero-bananal.png",
+      "r2Key": "julisteet/herokoe/hero-bananal.png",
+      "sha256": "064adf85f0a45a23f66623b7016cc12a542f6b2e7046644e1291a1d283d9927b",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2342606,
+      "generationPrompt": "Use case: photorealistic-natural. One entirely new present-day documentary travel landscape of the real Javaés River at Ilha do Bananal, Tocantins, Brazil. Landscape3:2,1536x1024opaque. First reference is exact terrain anchor at Aldeia Txuiri: wide low-gradient brown-blue river with a long gently tapering exposed pale sand bank along the right, flat dense low tropical floodplain forest immediately behind, river winding away to the left. Second reference by another photographer is from this same Javaés river and supports the real flood-forest vegetation and reflective water; do not physically combine its different bank outline into first scene. Create a fresh interesting low terrain-camera viewpoint around5metres above the river from near the low riverbank, looking gently15degrees down across softly rippling water and the sandbank taper, a little pale sand foreground, flat green forest horizon. Preserve actual lowland scale, shoreline direction and subdued water colour; no mountains, cliffs, ocean, waterfall, mangrove-island maze, invented village, giant palms or fantasy animals. Clear pleasant afternoon after thin tropical clouds with neutral bright light, subtle warm edge on sand and truthful green textures, detailed wet sand at shoreline and fine natural river ripples. Real modern photography with physically natural scale and restrained colours, not HDR, painting, miniature or CGI. No text, signs, logos, watermarks, borders, people, vehicles or boats inserted.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bananal/prompt-toolargs.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bananal/references/owned-reference-3.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bananal/references/owned-reference-21.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "Rio Javaés.jpg",
+          "tekija": "Arthur to",
+          "lisenssi": "Public domain",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Rio_Java%C3%A9s.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bananal/references/owned-reference-3.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/rio-javaes.jpg",
+          "byteSha256": "c4b8d09e0627c633ee14657161e73628f667326921f3619b58b471fbfef1cc7f",
+          "pixelSha256": "83af4ceb9be20550611cbe8dfc67c63d55f7ac74722e64c2bc49bb405262595c",
+          "ownedCacheDimensions": [
+            1280,
+            960
+          ],
+          "mirrorRegistryDimensions": [
+            1280,
+            960
+          ],
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.bananal.0.nostot.3",
+          "sourceRecord": {
+            "otsikko": "Tulvasavannin rytmi",
+            "teksti": "Ilha do Bananal elää joen tahdissa. Kuivana kautena, kesä-elokuussa, vedenpinta laskee niin paljon, että joen voi ylittää ajoneuvolla kahlaamalla, ja hiekkarannat paljastuvat laajoina särkkinä. Sadekautena samat alueet peittyvät tulvaveden alle, ja savannin, babassupalmumetsien ja tulvametsien mosaiikki muuttuu järvien ja soiden verkostoksi. Tämä vuosittainen tulvapulssi on koko saaren ekosysteemin ja sen asukkaiden elämän perusta: se täyttää kalavedet, kastelee viljelysmaat ja tarjoaa kilpikonnille ja linnuille pesimäpaikkoja, kun vesi vetäytyy.",
+            "tiedosto": "Rio Javaés.jpg",
+            "lyhyt": "Hiekkaranta Javaés-joen varrella Ilha do Bananalin sisällä, Aldeia Txuirin kohdalla.",
+            "selite": "Valokuva on otettu Javaés-joen rannalta saaren sisältä, Aldeia Txuirin kylän kohdalta – rauhallinen vesi ja hiekkaranta paljastuvat kuivana kautena.",
+            "lahde": "Arthur to, Wikimedia Commons (Public domain)",
+            "wiki": "Araguaia River"
+          },
+          "visualReview": "Viewed actual Javaes river photographs by Arthur to(PD) and Iza Guedes(CC BY-SA3). Arthur precise anchor at Aldeia Txuiri has a long gently tapering pale sandy right bank backed by low dense flood forest and muddy-blue rippling water; Iza independent same-Javaes environment supports real vegetation/water textures, not a second transplanted bank. Amanda Araguaia-other-branch photograph viewed but excluded to avoid mixing river branches.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        },
+        {
+          "nimi": "Rio Javaés 03.jpg",
+          "tekija": "Iza Guedes",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Rio_Java%C3%A9s_03.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bananal/references/owned-reference-21.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/rio-javaes-03.jpg",
+          "byteSha256": "1e854e84c1e41cdfc03d3b1da0cdda33dc0223b19a2a9e60927297d75aa80014",
+          "pixelSha256": "f531e96e532f0a69919c253f18b508077af6808ede122640c95c7297324d47fb",
+          "ownedCacheDimensions": [
+            1280,
+            853
+          ],
+          "mirrorRegistryDimensions": [
+            1280,
+            853
+          ],
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/southamerica-valokuvat.js-1cc36febb572",
+          "sourceModuleSha256": "1cc36febb572e131ebc706c48c3e5c390ee1dcfb1612e06ff1d0086f3e643a58",
+          "recordPath": "SOUTHAMERICA_VALOKUVAT.bananal.uusi",
+          "sourceRecord": {
+            "tiedosto": "Rio Javaés 03.jpg",
+            "lahde": "Iza Guedes, Commons (CC BY-SA 3.0)",
+            "lyhyt": "Auringonlasku Javaés-joen yllä, Bananalin saaren ainoa yhteys ja kalavesi.",
+            "selite": "Auringonlasku Javaés-joen yllä. Sama vesireitti erottaa Bananalin saaren mantereesta. Saaren kylien välillä liikutaan pääosin venein, ja joki on samalla tie ja kalavesi."
+          },
+          "visualReview": "Viewed actual Javaes river photographs by Arthur to(PD) and Iza Guedes(CC BY-SA3). Arthur precise anchor at Aldeia Txuiri has a long gently tapering pale sandy right bank backed by low dense flood forest and muddy-blue rippling water; Iza independent same-Javaes environment supports real vegetation/water textures, not a second transplanted bank. Amanda Araguaia-other-branch photograph viewed but excluded to avoid mixing river branches.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bananal/originals/hero-bananal-native.png",
+      "nativeToolOutputPath": "/Users/samireivinen/.codex/generated_images/01a11231-74d8-7f20-92a7-b6c601fa68e5/exec-0bb6c866-193c-41cc-8936-36c3b0348078.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": "Javaésjoen hiekkasärkät ja tulvametsä reunustavat Bananalin jokisaarta.",
+      "QA": {
+        "subject": "Javaés River at Ilha do Bananal",
+        "referenceObservations": "Viewed actual Javaes river photographs by Arthur to(PD) and Iza Guedes(CC BY-SA3). Arthur precise anchor at Aldeia Txuiri has a long gently tapering pale sandy right bank backed by low dense flood forest and muddy-blue rippling water; Iza independent same-Javaes environment supports real vegetation/water textures, not a second transplanted bank. Amanda Araguaia-other-branch photograph viewed but excluded to avoid mixing river branches.",
+        "knownLimitations": [],
+        "format": "PNG",
+        "colorSpace": "sRGB embedded ICC",
+        "opaque": true,
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "technicalTransform": "Only RGB/sRGB PNG export and exact-size Lanczos if needed; no artistic edits.",
+        "referenceGate": "Accepted actual file-specific project records + module SHA snapshots + named, viewed owned photographic rasters >=1000 px + reduction-only code provenance. No Wikimedia requests.",
+        "originalDimensions": null,
+        "freshApiVerification": false,
+        "reductionChainEvidence": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/reduction-chain-evidence.json",
+        "nativeViewed": true,
+        "cardPreviewViewed": true,
+        "parentQA": "Pending independent main-session review",
+        "delivery": "Local asset only; parent handles R2, Git mail and in-game integration.",
+        "geometryApprovedByProducer": true,
+        "cameraApprovedByProducer": true,
+        "observations": "Low natural-terrain riverbank camera looks down onto water and real gently tapering right-hand sandbar, flat floodplain forest. Same Javaes river photos; no Araguaia-branch/other village structures merged."
+      },
+      "orderGroup": "1",
+      "listIndex": 118,
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-bananal.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 118
+    },
+    {
+      "cityId": "alkufra",
+      "file": "hero-alkufra.png",
+      "filename": "hero-alkufra.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/alkufra/final/hero-alkufra.png",
+      "r2Key": "julisteet/herokoe/hero-alkufra.png",
+      "sha256": "d001817941f1b8f5f55ec0cbb331a1be8d8c1ea5c1deed0e0a002ec694e7f1cb",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3137980,
+      "generationPrompt": "Use case: photorealistic-natural. Create one entirely new modern travel photograph of real Al-Jawf/Al-Kufra, southeastern Libya, focused on its authentic centre-pivot irrigation circles in the pale sandy desert. 3:2 landscape1536x1024opaque. Two real photographs from independent ISS and CNES/Spot systems provide exact geographic evidence. Image2 is primary ground-plan anchor: at the southeast/east side of the Al-Jawf oasis the real close-spaced round fields on otherwise pale desert form paired circles and staggered rows separated by thin straight access tracks. Image1 independently confirms multiple complete green, tan and partly harvested round fields on same flat yellow desert with faint track network. Make a new LOW OBLIQUE aerial terrain-camera photograph, around150metres above ground, looking gently15degrees downward across the edge of a few immense real circular crop fields; foreground contains a wide segment of a lush green circular field with fine concentric crop texture, farther back two or three round fields become foreshortened ellipses amidst the pale tan sand, thin access tracks on actual alignments. Keep geometry of centre-pivot circles true to photographic anchors, vary green/fallow tones plausibly; no invented rivers or lakes. Distant desert horizon is almost flat with only low wind-worked sand, no giant dunes or mountains. Do not reconstruct old Al-Kufra houses, fortresses, mosques or colonial structures from archival images. No invented city skyline or airport; concentrate on agricultural oasis landscape. Clear morning sidelight reveals radial crop texture, pale sand and slight natural atmospheric haze; realistic aerial photography, not map, labeled satellite image, CGI model or science-fiction geometry. No text, words, labels, logos, watermarks, frames, recognisable people or vehicles.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/alkufra/prompt-toolargs.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/alkufra/references/owned-reference-2.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/alkufra/references/owned-reference-3.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "ISS-50 Al-Jawf Oasis in Eastern Libya.jpg",
+          "tekija": "NASA (PD)",
+          "lisenssi": "PD",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:ISS-50_Al-Jawf_Oasis_in_Eastern_Libya.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/alkufra/references/owned-reference-2.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/iss-50-al-jawf-oasis-in-eastern-libya.jpg",
+          "byteSha256": "983bfd6ebcf35ae8c9f2d5f90c404a1cde582d87601415a13d198c099599aaa6",
+          "pixelSha256": "bcd3303fdc1f90fac61ef6eb99a012be8ac03aab5edc10b16985f6e956217c40",
+          "ownedCacheDimensions": [
+            1280,
+            852
+          ],
+          "mirrorRegistryDimensions": [
+            1280,
+            852
+          ],
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.alkufra.0.ennenNyt.1",
+          "sourceRecord": {
+            "tiedosto": "ISS-50 Al-Jawf Oasis in Eastern Libya.jpg",
+            "lyhyt": "Kufran keitaat nykyään avaruudesta: vihreät kastelupellot ympyröinä hiekkamerellä.",
+            "selite": "Kufran keitaat nykyään avaruudesta: vihreät kastelupellot piirtyvät täysinä ympyröinä keskelle hiekkamerta.",
+            "lahde": "NASA (PD)"
+          },
+          "visualReview": "Viewed exact contemporary-era photographic orbital captures: NASA ISS50 Al-Jawf oasis and independent CNES/SpotImage Kufra SPOT1301. Distinct full source rasters and different photographing systems support actual center-pivot circles on pale sandy desert east/southeast of oasis and straight access tracks. No old1930 aeroview used; another ISS2016 copy is720px and annotated, rejected. Current-era agricultural landscape only, no reconstructed old town/fort and no claim of exact2026 crop operation.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        },
+        {
+          "nimi": "Kufra SPOT 1301.jpg",
+          "tekija": "CNES – Spot Image",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Kufra_SPOT_1301.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/alkufra/references/owned-reference-3.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/kufra-spot-1301.jpg",
+          "byteSha256": "d1420e3297225a35047401e53fdd51d611ab6d301b7fc812851fea3a2da4060d",
+          "pixelSha256": "b448393df8c12dc3088fd04b2817b6f2aabec3e9affebd0ae5408f258f60bd92",
+          "ownedCacheDimensions": [
+            1280,
+            1280
+          ],
+          "mirrorRegistryDimensions": null,
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.alkufra.0.nostot.0",
+          "sourceRecord": {
+            "otsikko": "Al Jawf – oaasiryhmän sydän",
+            "teksti": "Kufran oaasiryhmä on soikea, noin 50 kilometriä pitkä ja 20 kilometriä leveä allas, jota reunustavat sata metriä korkeat hiekkakukkulat. Altaan pohjalla on viisi erillistä asutuskeskittymää: suurin niistä, Al Jawf, on runsaat viisi kilometriä pitkä ja kahdesta kolmeen kilometriä leveä, ja sen keskellä kimmeltää suolajärvi. Muualla altaassa vuorottelevat punertava hiekka, palmulehdot ja pienet suolapainanteet. Isoisän aikana tänne ei johtanut yhtään merkittyä tietä — vain karavaanien jättämät jäljet hiekassa kertoivat, että joku oli kulkenut samaa reittiä ennenkin.",
+            "tiedosto": "Kufra SPOT 1301.jpg",
+            "lyhyt": "Al Jawf ja sen ympärillä kaartuvat kastelukehät ilmakuvassa.",
+            "selite": "Satelliittikuva näyttää Kufran oaasiryhmän pääkylän Al Jawfin harmaine kortteleineen ja suolajärvineen sekä sen ympärillä hiekkaan piirtyvät kuusikulmaiset ja pyöreät kastelupellot.",
+            "lahde": "CNES – Spot Image, Wikimedia Commons (CC BY-SA 3.0)",
+            "wiki": "Kufra"
+          },
+          "visualReview": "Viewed exact contemporary-era photographic orbital captures: NASA ISS50 Al-Jawf oasis and independent CNES/SpotImage Kufra SPOT1301. Distinct full source rasters and different photographing systems support actual center-pivot circles on pale sandy desert east/southeast of oasis and straight access tracks. No old1930 aeroview used; another ISS2016 copy is720px and annotated, rejected. Current-era agricultural landscape only, no reconstructed old town/fort and no claim of exact2026 crop operation.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/alkufra/originals/hero-alkufra-native.png",
+      "nativeToolOutputPath": "/Users/samireivinen/.codex/generated_images/01a11231-74d8-7f20-92a7-b6c601fa68e5/exec-12e8f0f0-6994-4828-8e99-bc3b492fdded.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": "Al-Jawfin kiertokastelupellot piirtävät vihreitä ympyröitä Al-Kufran aavikkoon.",
+      "QA": {
+        "subject": "Al-Jawf modern centre-pivot irrigation fields in Kufra",
+        "referenceObservations": "Viewed exact contemporary-era photographic orbital captures: NASA ISS50 Al-Jawf oasis and independent CNES/SpotImage Kufra SPOT1301. Distinct full source rasters and different photographing systems support actual center-pivot circles on pale sandy desert east/southeast of oasis and straight access tracks. No old1930 aeroview used; another ISS2016 copy is720px and annotated, rejected. Current-era agricultural landscape only, no reconstructed old town/fort and no claim of exact2026 crop operation.",
+        "knownLimitations": [
+          "Orbital photos anchor ground plan; low oblique view is AI visualization of that actual agricultural setting. Exact crop activity is illustrative rather than live2026 operational reporting."
+        ],
+        "format": "PNG",
+        "colorSpace": "sRGB embedded ICC",
+        "opaque": true,
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "technicalTransform": "Only RGB/sRGB PNG export and exact-size Lanczos if needed; no artistic edits.",
+        "referenceGate": "Accepted actual file-specific project records + module SHA snapshots + named, viewed owned photographic rasters >=1000 px + reduction-only code provenance. No Wikimedia requests.",
+        "originalDimensions": null,
+        "freshApiVerification": false,
+        "reductionChainEvidence": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/reduction-chain-evidence.json",
+        "nativeViewed": true,
+        "cardPreviewViewed": true,
+        "parentQA": "Pending independent main-session review",
+        "delivery": "Local asset only; parent handles R2, Git mail and in-game integration.",
+        "geometryApprovedByProducer": true,
+        "cameraApprovedByProducer": true,
+        "observations": "Al-Jawf southeast/east centre-pivot agricultural geometry in new low oblique terrain view; crop circles, tracks, pale flat desert and radial pivot machinery plausible, no historical town reconstruction. Orbital anchors are from independent NASA ISS and CNES/Spot photographic systems; precise present crop-operation status is not claimed.",
+        "currentStateEvidence": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/alkufra/current-state/current-state.json",
+        "currentStateReview": "March14 2025 Copernicus Sentinel2A true-colour image independently viewed, green circle fields present and mixed with fallow fields in same AlJawf ground-plan setting; pending parentQA."
+      },
+      "orderGroup": "1",
+      "listIndex": 119,
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-alkufra.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 119
+    },
+    {
+      "cityId": "macapa",
+      "file": "hero-macapa.png",
+      "filename": "hero-macapa.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/macapa/v2/final/hero-macapa.png",
+      "r2Key": "julisteet/herokoe/hero-macapa.png",
+      "sha256": "b5d4ae0a9ec6eb89bf45eaf2011cb87b130bcb8bb8f51447ed2475c9b8db3b70",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2703895,
+      "generationPrompt": "Use case: photorealistic-natural. Generate one entirely new present-day editorial travel photograph of the authentic Marco Zero do Equador monument in Macapá, Amapá, Brazil. Landscape3:2,1536x1024opaque. Two photographs from different photographers anchor exact architecture. Tall very narrow rectangular panelled pale-grey concrete tower, approximately30metres high, ONE large circular aperture close to top and ONE narrow rectangular dark slot above it, subtle vertical green/yellow stripe down the face, thin white maintenance ladder on right side. Real elevated concrete landing around base and its exact white-railed zigzag access ramps over open ground, not an invented giant spiral ramp. Image2 anchors all base/ramp relations, image1 close view anchors hole/slot/panel/lateral-ladder detail. Large leafy low tropical trees behind, existing low structures partly under shade, paved plaza/road in front. NEW low rooftop/midlandmark camera approximately15metres high, lens gently15degrees DOWNWARD toward landing and plaza: upper surfaces of landing and ramps visibly shown, not ground-level looking up. Tower remains fully visible from base to tiny top antennae with generous top margin, dominant but actual narrow proportions. Interesting three-quarter viewpoint preserving real base arrangement; no other equator monument from another country or fantasy sphere. CLOSE BOUNDED BACKGROUND: only the immediate low leafy park trees and shaded low structures established in both photos, trees entirely fill background behind tower base. NO visible river, lake, ocean, shoreline, far water horizon, unknown skyline or added landmark. Recompose the whole photograph from scratch and constrain the distant background to sky above and these exact immediate trees below. The broad unverified river in a prior AI attempt is forbidden and is not provided as a reference. Beautiful warm late-afternoon sidelight catches tower panels and ramp rails, soft natural shadows, rich green foliage, honest concrete surface, realistic natural camera/lens rendering. No readable plaques or words, no logos, flags, watermarks, borders or recognisable people. No CGI miniature, painting or excessive HDR.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/macapa/v2/prompt-toolargs.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/macapa/references/owned-reference-4.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/macapa/references/owned-reference-20.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "Linha do Equador Macapá AP,Brasil - panoramio.jpg",
+          "tekija": "Jose Donizetti Dias",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Linha_do_Equador_Macap%C3%A1_AP%2CBrasil_-_panoramio.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/macapa/references/owned-reference-4.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/linha-do-equador-macapa-ap-brasil---panoramio.jpg",
+          "byteSha256": "837412f3ab7d2fc1b7cc721b243e6eed610ae9ba18459d954e8349676d096568",
+          "pixelSha256": "4146a0c92e6f5c0e4c47222365f1b6b98a87ed1b480b0fd4fb8a26462d37f6aa",
+          "ownedCacheDimensions": [
+            1280,
+            960
+          ],
+          "mirrorRegistryDimensions": null,
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.macapa.0.nostot.2",
+          "sourceRecord": {
+            "otsikko": "Nollapiiri keskellä kaupunkia",
+            "teksti": "Macapá on ottanut sijaintinsa ylpeydenaiheekseen: vuonna 1987 avattu Marco Zero -muistomerkki on 30-metrinen betoniobeliski, joka merkitsee tarkasti pisteen 0°0′0″, jossa voi seisoa yhtä aikaa pohjoisella ja eteläisellä pallonpuoliskolla. Tornin läpi on porattu pyöreä aukko, jonka läpi aurinko paistaa suoraan alas kevät- ja syyspäiväntasauksina maaliskuussa ja syyskuussa, kilometrin pituisen Avenida Equatorialin suuntaisesti. Kaupunkia kutsutaankin lempinimellä \"Keskimaailman pääkaupunki\".",
+            "tiedosto": "Linha do Equador Macapá AP,Brasil - panoramio.jpg",
+            "lyhyt": "Marco Zero -muistomerkki merkitsee tarkan kohdan, jossa päiväntasaaja halkoo Macapán.",
+            "selite": "Kuva näyttää alhaalta kuvattuna korkean, kapean betoniobeliskin sinistä taivasta vasten: tornin yläosassa on pyöreä aukko ja sivussa kapea tikapuu, keltavihreä pystyraita jakaa tornin kahtia.",
+            "lahde": "Jose Donizetti Dias, Wikimedia Commons (CC BY-SA 3.0)",
+            "wiki": "Macapá"
+          },
+          "visualReview": "Both viewed actual current-era monument photographs by Jose Donizetti Dias(CC BY-SA3) and Marcia do Carmo/MTur(PD2018). Exact narrow panelled rectangular concrete tower with round upper hole, top slot, green/yellow stripe and white side ladder, single raised landing and zigzag white-railed ramps; broad trees behind and road/plaza before. Distinct artists, angles and rasters, not cropped same source.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        },
+        {
+          "nimi": "Marco Zero do Equador, Macapá AP.jpg",
+          "tekija": "Márcia do Carmo / MTur Destinos",
+          "lisenssi": "PD",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Marco_Zero_do_Equador%2C_Macap%C3%A1_AP.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/macapa/references/owned-reference-20.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/marco-zero-do-equador-macapa-ap.jpg",
+          "byteSha256": "a1007a8f66467cadf8df52e4bdcf852144ba7bd693c7e8af2b09d71585896fff",
+          "pixelSha256": "72d0a1179f9d942f0400d5364e4e117f9e2fe72c863c34db6a7dd5ae35cda342",
+          "ownedCacheDimensions": [
+            1280,
+            853
+          ],
+          "mirrorRegistryDimensions": [
+            1280,
+            853
+          ],
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/southamerica-valokuvat.js-1cc36febb572",
+          "sourceModuleSha256": "1cc36febb572e131ebc706c48c3e5c390ee1dcfb1612e06ff1d0086f3e643a58",
+          "recordPath": "SOUTHAMERICA_VALOKUVAT.macapa.lisat.1",
+          "sourceRecord": {
+            "tiedosto": "Marco Zero do Equador, Macapá AP.jpg",
+            "vuosi": "2018",
+            "lahde": "Márcia do Carmo / MTur Destinos, Commons (PD)",
+            "lyhyt": "Päiväntasaajan merkki Macapán eteläreunalla vuonna 2018.",
+            "selite": "Päiväntasaajan merkki Macapán eteläreunalla. Viiva kulkee kaupungin läpi, joten Macapá on yhtä aikaa pohjoisella ja eteläisellä pallonpuoliskolla; monumentti valmistui 1987."
+          },
+          "visualReview": "Both viewed actual current-era monument photographs by Jose Donizetti Dias(CC BY-SA3) and Marcia do Carmo/MTur(PD2018). Exact narrow panelled rectangular concrete tower with round upper hole, top slot, green/yellow stripe and white side ladder, single raised landing and zigzag white-railed ramps; broad trees behind and road/plaza before. Distinct artists, angles and rasters, not cropped same source.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/macapa/v2/originals/hero-macapa-native.png",
+      "nativeToolOutputPath": "/Users/samireivinen/.codex/generated_images/01a11231-74d8-7f20-92a7-b6c601fa68e5/exec-4d83825b-ca7a-4a58-b1e4-6a33a457904d.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": "Macapán Marco Zero -muistomerkki merkitsee päiväntasaajan kohdan kaupungissa.",
+      "QA": {
+        "subject": "Marco Zero do Equador, Macapá Brazil",
+        "referenceObservations": "Both viewed actual current-era monument photographs by Jose Donizetti Dias(CC BY-SA3) and Marcia do Carmo/MTur(PD2018). Exact narrow panelled rectangular concrete tower with round upper hole, top slot, green/yellow stripe and white side ladder, single raised landing and zigzag white-railed ramps; broad trees behind and road/plaza before. Distinct artists, angles and rasters, not cropped same source.",
+        "knownLimitations": [],
+        "format": "PNG",
+        "colorSpace": "sRGB embedded ICC",
+        "opaque": true,
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "technicalTransform": "Only RGB/sRGB PNG export and exact-size Lanczos if needed; no artistic edits.",
+        "referenceGate": "Accepted actual file-specific project records + module SHA snapshots + named, viewed owned photographic rasters >=1000 px + reduction-only code provenance. No Wikimedia requests.",
+        "originalDimensions": null,
+        "freshApiVerification": false,
+        "reductionChainEvidence": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/reduction-chain-evidence.json",
+        "nativeViewed": true,
+        "cardPreviewViewed": true,
+        "parentQA": "Pending independent main-session review",
+        "delivery": "Local asset only; parent handles R2, Git mail and in-game integration.",
+        "geometryApprovedByProducer": true,
+        "cameraApprovedByProducer": true,
+        "observations": "V2 whole new generation: narrow panelled tower, upper circle/slot/ladder, landing and zigzag ramp retained from both original sources. Immediate leafy park only; no invented river or distant skyline. Tower top antennae fully inside frame, upper ramp/plaza surfaces visibly down-viewed. V1 remains retained separately."
+      },
+      "orderGroup": "1",
+      "listIndex": 120,
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-macapa.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 120
+    },
+    {
+      "cityId": "campogrande",
+      "file": "hero-campogrande.png",
+      "filename": "hero-campogrande.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/campogrande/final/hero-campogrande.png",
+      "r2Key": "julisteet/herokoe/hero-campogrande.png",
+      "sha256": "2d3da8a34f96cdc8df6204e662f3bc8a2f85a41179adfe19e9e1764b26de530d",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2735716,
+      "generationPrompt": "Use case: photorealistic-natural. Create one wholly new present-day travel photograph of the authentic Avenida Afonso Pena in Campo Grande, Mato Grosso do Sul, Brazil, 3:2 landscape1536x1024opaque. Image2 is the precise architectural/geographic anchor: the true long straight avenue with broad planted green median, regularly spaced trees, parallel traffic lanes, flat low-rise red tile roofs and pale cream/white concrete apartment towers on both sides, matching the observed building ordering and right/left distributions. Image1 from a different photographer independently shows Campo Grande's actual flat park-city setting and modest tower/low-rise character, but its park lake and different blocks must NOT be inserted into this avenue. Compose a fresh low rooftop photograph looking down the avenue axis from approximately35metres high, about15degrees downward, with visible roof upper surfaces of nearby low buildings, the broad treed median as dominant leading line and the real nearest white midrise towers at sides; not a high-altitude aerial panorama. Preserve the actual geographic layout and tower proportions in image2, no invented skyscrapers, river, coast, hills, relocated park or cathedral. Luminous blue hour just after sunset, cool natural dusk in sky, subtle warm street lights newly switched on along the real avenue, ordinary small cars with restrained lights and no marks. Real present-day camera photography, careful natural exposure, honest concrete/roof/foliage textures, clear urban depth, not a miniature, drawing, CGI or oversaturated HDR. No readable text, signs, labels, logos, watermarks, border or recognizable people.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/campogrande/prompt-toolargs.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/campogrande/references/owned-reference-12.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/campogrande/references/owned-reference-21.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "Parque das Nações Indígenas - visão aérea.jpg",
+          "tekija": "Giovanni Gabas Coelho",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Parque_das_Na%C3%A7%C3%B5es_Ind%C3%ADgenas_-_vis%C3%A3o_a%C3%A9rea.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/campogrande/references/owned-reference-12.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/parque-das-nacoes-indigenas---visao-aerea.jpg",
+          "byteSha256": "1e267052bb29d5086c863bac034b517f2fc63a20d0c76a813f75044bd6d5d9cd",
+          "pixelSha256": "14fe370753d13f5a5ac8fe372ff2a01a6e5442df3392c669093fa03ebcd60a55",
+          "ownedCacheDimensions": [
+            1280,
+            960
+          ],
+          "mirrorRegistryDimensions": null,
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.campogrande.0.matkailijalle.artikkeli.jaksot.4.kuva",
+          "sourceRecord": {
+            "tiedosto": "Parque das Nações Indígenas - visão aérea.jpg",
+            "lyhyt": "Parque das Nações Indígenasin järvi ja valaistut kävelytiet yöllä ylhäältä.",
+            "selite": "Marraskuussa 2013 korkealta kuvatussa yönäkymässä puiston järvi heijastaa lamppujen valoa, ja sen ympärillä kiertävät valaistut kävelytiet. Taustalla levittäytyvät kaupungin valot ja muutama tornitalo.",
+            "lahde": "Giovanni Gabas Coelho, Wikimedia Commons (CC BY-SA 3.0)"
+          },
+          "visualReview": "Both viewed modern photographs of actual Campo Grande from different photographers. FlavioAndre/MTur precise Avenida Afonso Pena anchor: straight wide tree-lined median with paired traffic lanes, flat low-rise city, pale concrete residential towers in actual distributions. GiovanniGabasCoelho2013 separate same-city park/aerial view supports flat terrain, mature avenues and low-rise/tower urban context only; park/lake not transplanted into avenue scene. Bioparque2024 and station2018 candidates viewed but no second independent same-building angle, not selected.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        },
+        {
+          "nimi": "VA Avenida Afonso Pena.jpg",
+          "tekija": "Flávio André / MTur Destinos",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:VA_Avenida_Afonso_Pena.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/campogrande/references/owned-reference-21.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/va-avenida-afonso-pena.jpg",
+          "byteSha256": "8b04be5949940bfdaec38ce164577700ebc0e341a786064a3b9b6d1e8ad2b76a",
+          "pixelSha256": "d4748026711b79011a4156a177b0cc9af205580a22218fee0ba401de764ae718",
+          "ownedCacheDimensions": [
+            1280,
+            719
+          ],
+          "mirrorRegistryDimensions": [
+            1280,
+            719
+          ],
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/southamerica-valokuvat.js-1cc36febb572",
+          "sourceModuleSha256": "1cc36febb572e131ebc706c48c3e5c390ee1dcfb1612e06ff1d0086f3e643a58",
+          "recordPath": "SOUTHAMERICA_VALOKUVAT.campogrande.uusi",
+          "sourceRecord": {
+            "tiedosto": "VA Avenida Afonso Pena.jpg",
+            "lahde": "Flávio André / MTur Destinos, Commons (CC BY 2.0)",
+            "lyhyt": "Avenida Afonso Pena ilmasta: leveä puistokaista ja tornitalot tasaisella tasangolla.",
+            "selite": "Avenida Afonso Pena halkoo kaupungin ilmasta katsottuna. Puurivin jakama keskikaista on poikkeuksellisen leveä, ja kaupunki on kasvanut sen molemmin puolin tornitaloiksi tasaisella tasangolla, jossa mikään maastonmuoto ei rajoita levittäytymistä."
+          },
+          "visualReview": "Both viewed modern photographs of actual Campo Grande from different photographers. FlavioAndre/MTur precise Avenida Afonso Pena anchor: straight wide tree-lined median with paired traffic lanes, flat low-rise city, pale concrete residential towers in actual distributions. GiovanniGabasCoelho2013 separate same-city park/aerial view supports flat terrain, mature avenues and low-rise/tower urban context only; park/lake not transplanted into avenue scene. Bioparque2024 and station2018 candidates viewed but no second independent same-building angle, not selected.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/campogrande/originals/hero-campogrande-native.png",
+      "nativeToolOutputPath": "/Users/samireivinen/.codex/generated_images/01a11231-74d8-7f20-92a7-b6c601fa68e5/exec-753947db-f04d-4d51-895b-46938cb96417.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": "Avenida Afonso Penan leveä puistomainen keskikaista halkoo Campo Granden tasaista kaupunkia.",
+      "QA": {
+        "subject": "Avenida Afonso Pena / authentic Campo Grande cityscape",
+        "referenceObservations": "Both viewed modern photographs of actual Campo Grande from different photographers. FlavioAndre/MTur precise Avenida Afonso Pena anchor: straight wide tree-lined median with paired traffic lanes, flat low-rise city, pale concrete residential towers in actual distributions. GiovanniGabasCoelho2013 separate same-city park/aerial view supports flat terrain, mature avenues and low-rise/tower urban context only; park/lake not transplanted into avenue scene. Bioparque2024 and station2018 candidates viewed but no second independent same-building angle, not selected.",
+        "knownLimitations": [
+          "Independent secondary photo shows another nearby city sector and supports urban/topographic environment, not a claim to newly triangulate every boulevard building. Primary photograph is architectural ground-plan anchor."
+        ],
+        "format": "PNG",
+        "colorSpace": "sRGB embedded ICC",
+        "opaque": true,
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "technicalTransform": "Only RGB/sRGB PNG export and exact-size Lanczos if needed; no artistic edits.",
+        "referenceGate": "Accepted actual file-specific project records + module SHA snapshots + named, viewed owned photographic rasters >=1000 px + reduction-only code provenance. No Wikimedia requests.",
+        "originalDimensions": null,
+        "freshApiVerification": false,
+        "reductionChainEvidence": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/reduction-chain-evidence.json",
+        "nativeViewed": true,
+        "cardPreviewViewed": true,
+        "parentQA": "Pending independent main-session review",
+        "delivery": "Local asset only; parent handles R2, Git mail and in-game integration.",
+        "geometryApprovedByProducer": true,
+        "cameraApprovedByProducer": true,
+        "observations": "Actual boulevard axis/tree median and observed ordering of apartment blocks retained, roof upper surfaces visible. Independent secondary same-city night photo used only environment lighting/flat urban terrain support; park lake not transplanted. Primary source controls specific building geometry."
+      },
+      "orderGroup": "1",
+      "listIndex": 121,
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-campogrande.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 121
+    },
+    {
+      "cityId": "exmouth",
+      "file": "hero-exmouth.png",
+      "filename": "hero-exmouth.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/exmouth/final/hero-exmouth.png",
+      "r2Key": "julisteet/herokoe/hero-exmouth.png",
+      "sha256": "d485d6f458085ce394e1ed17b32a62f4b8f4b38d456a57a8221bb32d9db4cda3",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2733040,
+      "generationPrompt": "Use case: photorealistic-natural. Produce one entirely new current-era travel photograph of actual Turquoise Bay Bundera in Cape Range National Park at Ningaloo Reef near Exmouth, Western Australia, 3:2 landscape1536x1024opaque. Reference3 is the exact terrain anchor: genuine sweeping low WHITE sandy bay shore on right curving away toward the left-center, glass-clear turquoise shallow lagoon to left with small real dark submerged reef patches close to shore, low dry brown CapeRange hills and sparse scrub beyond the back of beach. Reference1 independently establishes this same CapeRange/Ningaloo fringing-reef coastal setting; reference2 supports the truthful distant white line of waves breaking on outer reef, calm lagoon in front. Do not combine different bays, move a lighthouse/canyon to the beach, or invent giant offshore coral islands. Choose a new LOW terrain-camera position just above a small beach dune around4metres high, gently15degrees down along the existing curve of sand into clear shallows; underwater sand ripples and modest dark reef patches visible, white shoreline textured with a little natural seaweed, honest broad coastal space. Pleasant clear mid-morning sun, bright turquoise water with natural depth gradient and restrained highlights, deep but realistic blue sky with a few light clouds, dry ochre terrain at far edge. Photorealistic real travel camera and natural scale, no tropical palm-resort cliché, no high mountains, no swimming-pool sea, no CGI/painting/miniature. No words, signs, logos, watermarks, borders, recognisable people, boats or added animals.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/exmouth/prompt-toolargs.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/exmouth/references/owned-reference-0.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/exmouth/references/owned-reference-3.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/exmouth/references/owned-reference-11.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "Cape Range National Park and Ningaloo Reef from the air.jpg",
+          "tekija": "Andrew Turner",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Cape_Range_National_Park_and_Ningaloo_Reef_from_the_air.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/exmouth/references/owned-reference-0.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/cape-range-national-park-and-ningaloo-reef-from-the-air.jpg",
+          "byteSha256": "f7719d6e12ece6d26e179cab93f21415a431bf39a07678019a2117a5929a6059",
+          "pixelSha256": "8a18b1ecd451aedb06f8b1ea177d2c33c4f8ac037b2985d403395c59eed2a4c8",
+          "ownedCacheDimensions": [
+            1280,
+            1707
+          ],
+          "mirrorRegistryDimensions": null,
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.exmouth.0.nostot.0",
+          "sourceRecord": {
+            "otsikko": "Maailman suurin rantariutta",
+            "teksti": "Ningaloo on maailman suurin rantariutta: se seuraa Länsi-Australian rannikkoa yli 260 kilometrin matkan Exmouthista etelään. Toisin kuin useimmat suuret koralliriutat, jotka kasvavat kaukana avomerellä, Ningaloo kiertyy lähes kiinni mantereeseen — paikoin riutan harjalle pääsee jo alle 500 metrin päästä rannasta kahlaamalla. Läheisyys tekee riutasta poikkeuksellisen helposti tavoitettavan: veneen sijaan riittää usein pelkkä uimapuku ja snorkkeli. Alue suojeltiin Ningaloo Marine Parkiksi vuonna 1987, kun rannikon ainutlaatuinen luonto haluttiin turvata pysyvästi tulevillekin sukupolville.",
+            "tiedosto": "Cape Range National Park and Ningaloo Reef from the air.jpg",
+            "lyhyt": "Lentokoneen ikkunasta kuvattu näkymä Ningaloon riutasta ja Cape Rangen rannikosta.",
+            "selite": "Ilmakuva näyttää turkoosin koralliriutan kaartuvan aivan kiinni ruskeaan, kuivaan rannikkoon — riutta ja hiekkaranta erottuvat toisistaan vain kapealla aaltoviivalla.",
+            "lahde": "Andrew Turner, Wikimedia Commons (CC BY-SA 4.0)",
+            "wiki": "Ningaloo Reef"
+          },
+          "visualReview": "All three viewed authentic photographs of same CapeRange/Ningaloo region from AndrewTurner, W.Bulach and RobertYoung. RobertYoung2008 TurquoiseBay precise bay-shoreline anchor: gently curving white beach at right, very shallow turquoise lagoon with small dark patches, low dry brown scrub hills far right. Andrew aerial confirms actual narrow fringing-reef coastal macrogeometry; Bulach independent nearshore reef wave-line support. No lighthouse or CharlesKnifeCanyon imported.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        },
+        {
+          "nimi": ".00 0975 Ningaloo Reef (Australia) - Surf on the coral reef.jpg",
+          "tekija": "W. Bulach",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:.00_0975_Ningaloo_Reef_%28Australia%29_-_Surf_on_the_coral_reef.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/exmouth/references/owned-reference-3.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/.00-0975-ningaloo-reef-australia---surf-on-the-coral-reef.jpg",
+          "byteSha256": "f14dee2e0019c0f2e3dc8b35155d73188bd53ed8ab85a6eae83bdbc1f6b88c0e",
+          "pixelSha256": "016f8d4ae7be4272f11c15a9208bbefc438f0d6e4ee3996379a02147a287a571",
+          "ownedCacheDimensions": [
+            1280,
+            345
+          ],
+          "mirrorRegistryDimensions": null,
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.exmouth.0.nostot.3",
+          "sourceRecord": {
+            "otsikko": "Aallot murtuvat riutan reunalla",
+            "teksti": "Ningaloon rannalta näkee harvinaisen näyn: valkoisena kuohuva aaltoviiva, joka merkitsee riutan ulkoreunaa, kulkee usein vain parin sadan metrin päässä hiekasta. Aallot murtuvat koralliharjanteeseen ja menettävät voimansa ennen kuin ehtivät rantaan asti — niinpä riutan ja mantereen väliin jää tyyni, matala laguuni, jossa vesi voi olla lähes tyventä silloinkin, kun ulompana avomeri kuohuu voimakkaasti. Tämä luonnollinen suoja on yksi syy siihen, miksi laguunista on tullut turvallinen kasvupaikka lukemattomille kalanpoikasille ja muille riutan pienille asukkaille.",
+            "tiedosto": ".00 0975 Ningaloo Reef (Australia) - Surf on the coral reef.jpg",
+            "lyhyt": "Aallot murtuvat valkoisena viivana Ningaloon riutan ulkoreunalla.",
+            "selite": "Panoraamakuva näyttää aaltojen murtuvan riutan ulkoreunalla vaahtoavana viivana, jonka takana avomeri jatkuu, ja edessä levittäytyy tyyni, turkoosi laguuni.",
+            "lahde": "W. Bulach, Wikimedia Commons (CC BY-SA 4.0)",
+            "wiki": "Ningaloo Reef"
+          },
+          "visualReview": "All three viewed authentic photographs of same CapeRange/Ningaloo region from AndrewTurner, W.Bulach and RobertYoung. RobertYoung2008 TurquoiseBay precise bay-shoreline anchor: gently curving white beach at right, very shallow turquoise lagoon with small dark patches, low dry brown scrub hills far right. Andrew aerial confirms actual narrow fringing-reef coastal macrogeometry; Bulach independent nearshore reef wave-line support. No lighthouse or CharlesKnifeCanyon imported.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        },
+        {
+          "nimi": "Turquoise Bay Bundera.jpg",
+          "tekija": "Robert Young",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Turquoise_Bay_Bundera.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/exmouth/references/owned-reference-11.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/turquoise-bay-bundera.jpg",
+          "byteSha256": "73c745b2fb5948530a6ca4e665ce404de825acd5c6e9c17552d00856c16f5af1",
+          "pixelSha256": "b1e1e5dababa53fc5464eb9ee6d816b2ac0de6789a4cd1717c207e1e439bc34f",
+          "ownedCacheDimensions": [
+            1280,
+            857
+          ],
+          "mirrorRegistryDimensions": null,
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.exmouth.0.matkailijalle.artikkeli.jaksot.3.kuva",
+          "sourceRecord": {
+            "tiedosto": "Turquoise Bay Bundera.jpg",
+            "lyhyt": "Turquoise Bayn valkoinen hiekkaranta ja kirkas laguuni Cape Rangen kansallispuistossa.",
+            "selite": "Maaliskuussa 2008 kuvatun lahden matalassa, turkoosissa vedessä erottuu tummia riuttalaikkuja aivan rannan tuntumassa. Kaukana taustalla kohoavat Cape Rangen matalat kukkulat.",
+            "lahde": "Robert Young, Wikimedia Commons (CC BY 2.0)"
+          },
+          "visualReview": "All three viewed authentic photographs of same CapeRange/Ningaloo region from AndrewTurner, W.Bulach and RobertYoung. RobertYoung2008 TurquoiseBay precise bay-shoreline anchor: gently curving white beach at right, very shallow turquoise lagoon with small dark patches, low dry brown scrub hills far right. Andrew aerial confirms actual narrow fringing-reef coastal macrogeometry; Bulach independent nearshore reef wave-line support. No lighthouse or CharlesKnifeCanyon imported.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/exmouth/originals/hero-exmouth-native.png",
+      "nativeToolOutputPath": "/Users/samireivinen/.codex/generated_images/01a11231-74d8-7f20-92a7-b6c601fa68e5/exec-e73a6f91-7b3d-4887-aca4-bc1280beccb9.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": "Turquoise Bayn valkoinen ranta ja Ningaloon matala laguuni kohtaavat Cape Rangen kuivan rannikon.",
+      "QA": {
+        "subject": "Turquoise Bay / Ningaloo Reef, Cape Range near Exmouth",
+        "referenceObservations": "All three viewed authentic photographs of same CapeRange/Ningaloo region from AndrewTurner, W.Bulach and RobertYoung. RobertYoung2008 TurquoiseBay precise bay-shoreline anchor: gently curving white beach at right, very shallow turquoise lagoon with small dark patches, low dry brown scrub hills far right. Andrew aerial confirms actual narrow fringing-reef coastal macrogeometry; Bulach independent nearshore reef wave-line support. No lighthouse or CharlesKnifeCanyon imported.",
+        "knownLimitations": [],
+        "format": "PNG",
+        "colorSpace": "sRGB embedded ICC",
+        "opaque": true,
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "technicalTransform": "Only RGB/sRGB PNG export and exact-size Lanczos if needed; no artistic edits.",
+        "referenceGate": "Accepted actual file-specific project records + module SHA snapshots + named, viewed owned photographic rasters >=1000 px + reduction-only code provenance. No Wikimedia requests.",
+        "originalDimensions": null,
+        "freshApiVerification": false,
+        "reductionChainEvidence": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/reduction-chain-evidence.json",
+        "nativeViewed": true,
+        "cardPreviewViewed": true,
+        "parentQA": "Pending independent main-session review",
+        "delivery": "Local asset only; parent handles R2, Git mail and in-game integration.",
+        "geometryApprovedByProducer": true,
+        "cameraApprovedByProducer": true,
+        "observations": "Faithful Turquoise Bay white shore curve, shallow patchy lagoon, low dry CapeRange back coast and independent real Ningaloo outer wave line. Low dune-height downward camera; no lighthouse/canyon/resort/tropical palm transposed."
+      },
+      "orderGroup": "1",
+      "listIndex": 122,
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-exmouth.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 122
+    },
+    {
+      "cityId": "portovelho",
+      "file": "hero-portovelho.png",
+      "filename": "hero-portovelho.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/portovelho/final/hero-portovelho.png",
+      "r2Key": "julisteet/herokoe/hero-portovelho.png",
+      "sha256": "a8f1111169695468b8d3ba980d0dacf3531276600aa68616a2566e8a54e9b982",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3017802,
+      "generationPrompt": "Use case: photorealistic-natural. Make one entirely new present-day editorial travel photograph of the authentic road bridge over the Madeira River at Porto Velho, Rondônia, Brazil, landscape3:2,1536x1024opaque. Reference1 is precise structural/geographic anchor: genuine plain concrete multi-span road bridge with thin deck, simple vertical concrete piers and old dark squared support foundations in muddy-brown Madeira water, city riverfront beyond with low green banks, actual industrial silos/river loading facilities and modest pale midrise apartment blocks behind. Reference2 independently shows this exact Madeira setting and same bridge profile from water level with actual low city horizon; keep their relationships. New low rooftop-height oblique camera around20metres above river, gently15degrees downward, looking toward the same city bank, with real bridge deck strongly diagonal across lower foreground and brown rippling river between it and anchored city bank. Show known spans and supports, do not invent cable-stayed towers, arches, giant suspension cables or a new bridge type. Slightly closer and lower than reference1, preserve actual observed industrial-bank position and skyline density; no transplanted fuel-tank cluster or passengerboat dock from other shoreline locations. Beautiful soft late-afternoon tropical light through broken cumulus, subtle warm reflections on muddy water, lush-but-real green bank and naturally weathered concrete, ordinary small road cars without branding. No fantasy blue ocean, mountains, new iconic towers, fictional buildings or river islands. Photorealistic natural real camera image, not model/CGI/miniature/illustration. No readable words, signs, logos, watermarks, borders or recognizable people.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/portovelho/prompt-toolargs.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/portovelho/references/owned-reference-1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/portovelho/references/owned-reference-2.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "Porto Velho, Rondônia, Brasil.jpg",
+          "tekija": "Silva Júnior / MTur",
+          "lisenssi": "CC0",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Porto_Velho%2C_Rond%C3%B4nia%2C_Brasil.jpg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/portovelho/references/owned-reference-1.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/porto-velho-rondonia-brasil.jpg",
+          "byteSha256": "bf6ab212d269bc29f9ddc8cc9a4d3b00cac194e5ccf8d9957bbacf3530b632a7",
+          "pixelSha256": "392fe7988823f090a474e8d9fd604f11b35770ab2e79fbd42c3e8aba72227014",
+          "ownedCacheDimensions": [
+            1280,
+            896
+          ],
+          "mirrorRegistryDimensions": [
+            1280,
+            896
+          ],
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.portovelho.0.ennenNyt.1",
+          "sourceRecord": {
+            "tiedosto": "Porto Velho, Rondônia, Brasil.jpg",
+            "vuosi": "2018",
+            "lyhyt": "Porto Velho nykyään: silta, viljasiilot ja proomu entisen ratatyömaan paikalla.",
+            "selite": "Porto Velho nykyään: etualalla joen ylittävä silta, rannassa viljasiiloja ja proomu, takana korkeaa keskustaa. Sadassa vuodessa metsän reunaan raivatusta ratatyömaasta on tullut osavaltion pääkaupunki, jossa asuu yli puoli miljoonaa ihmistä.",
+            "lahde": "Silva Júnior / MTur, Commons (CC0)"
+          },
+          "visualReview": "Seen SilvaJunior/MTur2018 bridge+city oblique photograph and independent HenryVagrant ground-level Madeira river panorama with same road bridge right and city silhouette. Primary anchors concrete multi-span deck/piers, muddy river, industrial bank, true midrise skyline. WilsonDias2007 tankport and clsbezerra passengerboat dock viewed but separate bank sections, not transplanted or counted as exact bridge views.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        },
+        {
+          "nimi": "Rio Madeira Porto Velo Brazil (109758143).jpeg",
+          "tekija": "Henry Vagrant",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Rio_Madeira_Porto_Velo_Brazil_%28109758143%29.jpeg",
+          "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/portovelho/references/owned-reference-2.jpg",
+          "ownedCacheURL": "https://media.matkakirja.app/kuvat/rio-madeira-porto-velo-brazil-109758143.jpeg",
+          "byteSha256": "a34656aec76b8755479395ce91b9f4a66915cf3e42539d0ba889a388ef5a88b1",
+          "pixelSha256": "a7c6c4478d564141f3b570d02b62b19b2abb19874be9b0f4505844c280474df2",
+          "ownedCacheDimensions": [
+            1280,
+            720
+          ],
+          "mirrorRegistryDimensions": null,
+          "originalDimensions": null,
+          "freshApiVerification": false,
+          "verificationMethod": "Accepted file-specific actual project record and source snapshot SHA, viewed owned cached raster; no Wikimedia request. Original size not freshly queried.",
+          "sourceSnapshot": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/source-snapshots/kulttuuri-kategoriat.js-c05f689d3017",
+          "sourceModuleSha256": "c05f689d3017cbfd86051a21d1ea399a1c25969cb7f0ed85e1e48172b5a3c0e6",
+          "recordPath": "KULTTUURI_KATEGORIAT.portovelho.0.nostot.0",
+          "sourceRecord": {
+            "otsikko": "Jättiläisjoki, joka kantaa kaupungin",
+            "teksti": "Rio Madeira on Amazonin suurin sivujoki ja yksin pidempi kuin Tonava: se syntyy Andien rinteiltä Bolivian ja Perun vuorista ja laskee lähes 3 300 kilometrin matkan jälkeen Amazoniin. Sen ruskea vesi kuljettaa niin paljon hienoa hietaa ja savea Andeilta, että joki värjää koko alajuoksunsa mutaiseksi. Sadekaudella, marraskuusta huhtikuuhun, vedenpinta voi nousta yli kymmenen metriä ja tulvia lähiöitä, kun taas kuivana kautena hiekkarannat paljastuvat keskellä kaupunkia. Porto Velholle joki on ollut vuosisadan ajan tärkein kulkuväylä, sillä kunnollista maantietä pääkaupunkiin ei ollut vielä 1960-luvullakaan.",
+            "tiedosto": "Rio Madeira Porto Velo Brazil (109758143).jpeg",
+            "lyhyt": "Rio Madeira on Amazonin suurin sivujoki ja pidempi kuin Tonava.",
+            "selite": "Valkoiset kasautumispilvet kohoavat korkealle Rio Madeiran yllä, ja horisontissa siintää Porto Velhon matala kaupunkisiluetti.",
+            "lahde": "Henry Vagrant, Wikimedia Commons (CC BY-SA 3.0)",
+            "wiki": "Madeira (joki)"
+          },
+          "visualReview": "Seen SilvaJunior/MTur2018 bridge+city oblique photograph and independent HenryVagrant ground-level Madeira river panorama with same road bridge right and city silhouette. Primary anchors concrete multi-span deck/piers, muddy river, industrial bank, true midrise skyline. WilsonDias2007 tankport and clsbezerra passengerboat dock viewed but separate bank sections, not transplanted or counted as exact bridge views.",
+          "licenseUrlProvenance": "Standard URL derived from declared accepted-project-record license; not a new Commons API result."
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/portovelho/originals/hero-portovelho-native.png",
+      "nativeToolOutputPath": "/Users/samireivinen/.codex/generated_images/01a11231-74d8-7f20-92a7-b6c601fa68e5/exec-743c1906-ed71-47e8-a13e-eea55d105dd0.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": "Madeirajoen maantiesilta yhdistää Porto Velhon vastarantaan; ruskea joki kulkee kaupungin sataman ohi.",
+      "QA": {
+        "subject": "Madeira River road bridge and actual Porto Velho riverfront",
+        "referenceObservations": "Seen SilvaJunior/MTur2018 bridge+city oblique photograph and independent HenryVagrant ground-level Madeira river panorama with same road bridge right and city silhouette. Primary anchors concrete multi-span deck/piers, muddy river, industrial bank, true midrise skyline. WilsonDias2007 tankport and clsbezerra passengerboat dock viewed but separate bank sections, not transplanted or counted as exact bridge views.",
+        "knownLimitations": [],
+        "format": "PNG",
+        "colorSpace": "sRGB embedded ICC",
+        "opaque": true,
+        "nativeDimensions": [
+          1536,
+          1024
+        ],
+        "dimensions": [
+          1536,
+          1024
+        ],
+        "technicalTransform": "Only RGB/sRGB PNG export and exact-size Lanczos if needed; no artistic edits.",
+        "referenceGate": "Accepted actual file-specific project records + module SHA snapshots + named, viewed owned photographic rasters >=1000 px + reduction-only code provenance. No Wikimedia requests.",
+        "originalDimensions": null,
+        "freshApiVerification": false,
+        "reductionChainEvidence": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/paketit/opas03-113-125/reduction-chain-evidence.json",
+        "nativeViewed": true,
+        "cardPreviewViewed": true,
+        "parentQA": "Pending independent main-session review",
+        "delivery": "Local asset only; parent handles R2, Git mail and in-game integration.",
+        "geometryApprovedByProducer": true,
+        "cameraApprovedByProducer": true,
+        "observations": "True simple multi-span concrete road bridge profile, paired dark foundations, muddy Madeira water, industrial silo bank and observed midrise city ordering retained. Low oblique elevated camera toward same city bank; no cable-stayed fantasy structure or transposed tank farm/passengerboat dock."
+      },
+      "orderGroup": "1",
+      "listIndex": 125,
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-portovelho.png",
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 125
     }
   ],
   "preview": {
-    "file": "era05-osatoimitus-20261006-esikatselu.jpg",
-    "r2Key": "julisteet/herokoe/20261006/era05-osatoimitus-20261006-esikatselu.jpg",
-    "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/era05-osatoimitus-20261006-esikatselu.jpg",
-    "sha256": "ab95b61902a09305c8650ad2710f447596025df613aa1323b70a2989a34f51bf",
-    "bytes": 302374,
+    "file": "kuvatoimitus-oppaan-kaupunkinakymat-05-osatoimitus-20261006-esikatselu-5fa9b16ed8de.jpg",
+    "r2Key": "julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-05-osatoimitus-20261006-esikatselu-5fa9b16ed8de.jpg",
+    "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-05-osatoimitus-20261006-esikatselu-5fa9b16ed8de.jpg",
+    "sha256": "e458f9fdf65671ab166330cd1177a795326be135572ab39eb426031efbfc562d",
+    "bytes": 889082,
     "http": 200,
     "mime": "image/jpeg",
     "cors": "https://matkakirja.app",
