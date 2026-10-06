@@ -1,7 +1,7 @@
 /*
  * ELÄVÄN OPPAAN KUVAHAKU (omistaja 6.10.2026: "matkaoppaassa ei näytettäisi mitään muita kuin valmiiksi speksattuja
- * kuvia"; Päätoimittajan urakka, Sisältökirjuri johtaa Sonnet-agenteilla). Per kaupunki lukittu 12 kohteen lista
- * (Wikidata Q, suomenkielinen nimi, P625-koordinaatit) ja kullekin 2–3 kuvaa. Tulos: data/oppaan-kuvat/kaupungit/<id>.json,
+ * kuvia"; Päätoimittajan urakka, Sisältökirjuri johtaa Sonnet-agenteilla). Per kaupunki lukittu 6–20 kohteen lista
+ * (Wikidata Q, suomenkielinen nimi, P625-koordinaatit, merkittävyysperuste) ja kullekin 1–5 kuvaa. Tulos: data/oppaan-kuvat/kaupungit/<id>.json,
  * jonka `kokoa` yhdistää avaimella Q tiedostoon data/oppaan-kuvat/oppaan-kuvat.json (muoto: data/oppaan-kuvat/MUOTO.md).
  *
  *   node tools/oppaan-kuvat.mjs seed <kaupunki-id>       pelin omat ainekset: kartan kohteet, pelin kuvat tiedostonimin
@@ -60,7 +60,7 @@ export async function entiteetit(idt) {
   for (let i = 0; i < idt.length; i += 40) {
     const osa = idt.slice(i, i + 40);
     // eslint-disable-next-line no-await-in-loop
-    const d = await json(`${WD}?action=wbgetentities&ids=${osa.join('|')}&props=labels|descriptions|claims&languages=fi|en&format=json`);
+    const d = await json(`${WD}?action=wbgetentities&ids=${osa.join('|')}&props=labels|descriptions|claims|sitelinks&languages=fi|en&format=json`);
     for (const [id, e] of Object.entries(d.entities ?? {})) {
       const c = e.claims ?? {};
       const p = c.P625?.[0]?.mainsnak?.datavalue?.value;
@@ -74,6 +74,8 @@ export async function entiteetit(idt) {
         lon: p ? p.longitude : null,
         p18: (c.P18 ?? []).map((x) => x.mainsnak?.datavalue?.value).filter(Boolean),
         p373: c.P373?.[0]?.mainsnak?.datavalue?.value ?? null,
+        kielia: Object.keys(e.sitelinks ?? {}).filter((k) => /wiki$/.test(k) && !/^(commons|wikidata|species|meta|mediawiki)/.test(k)).length,
+        unesco: (c.P757 ?? []).length > 0,
       };
     }
   }
@@ -84,7 +86,7 @@ async function wdHaku(sana, kieli = 'fi') {
   const d = await json(`${WD}?action=wbsearchentities&search=${encodeURIComponent(sana)}&language=${kieli}&uselang=${kieli}&format=json&limit=7`);
   const idt = (d.search ?? []).map((x) => x.id);
   const e = idt.length ? await entiteetit(idt) : {};
-  return idt.map((id) => ({ id, fi: e[id].fi, en: e[id].en, kuvaus: e[id].kuvaus, lat: e[id].lat, lon: e[id].lon, kuvia: e[id].p18.length }));
+  return idt.map((id) => ({ id, fi: e[id].fi, en: e[id].en, kuvaus: e[id].kuvaus, lat: e[id].lat, lon: e[id].lon, kuvia: e[id].p18.length, kielia: e[id].kielia, unesco: e[id].unesco }));
 }
 
 // --- Commons ------------------------------------------------------------------------------------------------------
@@ -248,7 +250,9 @@ export async function tarkistaKaupunki(id) {
   const eiKuvaa = d.eiKuvaa ?? [];
   if (d.kaupunki !== id) virheet.push(`${id}: kaupunki-kenttä ${d.kaupunki}`);
   if (!/^Q\d+$/.test(d.kaupunkiQ ?? '')) virheet.push(`${id}: kaupunkiQ puuttuu tai on virheellinen`);
-  if (kohteet.length + eiKuvaa.length !== 12) virheet.push(`${id}: kohteita ${kohteet.length} + eiKuvaa ${eiKuvaa.length} != 12`);
+  const yht = kohteet.length + eiKuvaa.length;
+  if (yht < 6 || yht > 20) virheet.push(`${id}: kohteita ${kohteet.length} + eiKuvaa ${eiKuvaa.length} = ${yht}, pitää olla 6–20`);
+  if (kohteet.length < 6) virheet.push(`${id}: kuvallisia kohteita ${kohteet.length} < 6 (etsi korvaavia kohteita)`);
   const qt = [...kohteet, ...eiKuvaa].map((k) => k.q);
   if (new Set(qt).size !== qt.length) virheet.push(`${id}: kaksoiskappale-Q`);
   const ent = await entiteetit([...new Set([...qt, d.kaupunkiQ].filter((x) => /^Q\d+$/.test(x ?? '')))]);
@@ -259,6 +263,9 @@ export async function tarkistaKaupunki(id) {
     if (e.lat == null) virheet.push(`${id}/${k.q}: Wikidatassa ei P625-koordinaattia`);
     else if (Math.abs(e.lat - k.lat) > 0.002 || Math.abs(e.lon - k.lon) > 0.002) virheet.push(`${id}/${k.q}: koordinaatit eivät täsmää P625:een (${e.lat},${e.lon})`);
     if (!k.nimi) virheet.push(`${id}/${k.q}: suomenkielinen nimi puuttuu`);
+    if (!/^(pelin nosto|UNESCO|sitelinks)/.test(k.peruste ?? '')) virheet.push(`${id}/${k.q}: peruste puuttuu (pelin nosto | UNESCO | sitelinks ...)`);
+    else if (/^UNESCO/.test(k.peruste) && !e.unesco) virheet.push(`${id}/${k.q}: peruste UNESCO mutta Wikidatassa ei P757-tunnusta`);
+    else if (/^sitelinks/.test(k.peruste) && e.kielia < 15) virheet.push(`${id}/${k.q}: peruste sitelinks mutta kieliversioita vain ${e.kielia} (< 15)`);
   }
   for (const k of eiKuvaa) if (!k.syy) virheet.push(`${id}/${k.q}: eiKuvaa ilman syytä`);
   for (const k of [...kohteet, ...eiKuvaa]) {
@@ -275,7 +282,7 @@ export async function tarkistaKaupunki(id) {
   });
   for (const k of kohteet) {
     const kuvat = k.kuvat ?? [];
-    if (kuvat.length < 2 || kuvat.length > 3) virheet.push(`${id}/${k.q}: kuvia ${kuvat.length}, pitää olla 2–3`);
+    if (kuvat.length < 1 || kuvat.length > 5) virheet.push(`${id}/${k.q}: kuvia ${kuvat.length}, pitää olla 1–5`);
     kuvat.forEach((x, i) => {
       if (x.jarjestys !== i + 1) virheet.push(`${id}/${k.q}: järjestys ${x.jarjestys} paikalla ${i + 1}`);
       if (x.tarkistettu !== true) virheet.push(`${id}/${k.q}/${x.tiedosto}: tarkistettu ei ole true`);
@@ -317,7 +324,7 @@ function kokoa() {
     const jarj = d.jarjestys ?? [...(d.kohteet ?? []), ...(d.eiKuvaa ?? [])].map((k) => k.q);
     kaupungit[d.kaupunki] = { nimi: p?.nimi ?? d.kaupunki, Q: d.kaupunkiQ, lat: p?.lat ?? null, lon: p?.lon ?? null, kohteet: jarj, kuvat: (d.kaupunginKuvat ?? []).map(kuva) };
     for (const k of d.kohteet ?? []) {
-      kohteet[k.q] = { nimi: k.nimi, kaupunki: d.kaupunki, kaupunkiQ: d.kaupunkiQ, lat: k.lat, lon: k.lon,
+      kohteet[k.q] = { nimi: k.nimi, peruste: k.peruste, kaupunki: d.kaupunki, kaupunkiQ: d.kaupunkiQ, lat: k.lat, lon: k.lon,
         ...(k.aliakset?.length ? { aliakset: k.aliakset } : {}), ...(k.koko_m ? { koko_m: k.koko_m } : {}), kuvat: k.kuvat.map(kuva) };
       kuvia += k.kuvat.length;
     }

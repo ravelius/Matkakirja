@@ -6,7 +6,7 @@ Per kaupunki yksi tiedosto `data/oppaan-kuvat/kaupungit/<kaupunki-id>.json`:
 {
   "kaupunki": "pariisi", "kaupunkiQ": "Q90",
   "kohteet": [
-    { "q": "Q243", "nimi": "Eiffel-torni", "lat": 48.858296, "lon": 2.294479,
+    { "q": "Q243", "nimi": "Eiffel-torni", "peruste": "pelin nosto", "lat": 48.858296, "lon": 2.294479,
       "kuvat": [
         { "jarjestys": 1, "tiedosto": "Tour Eiffel Wikimedia Commons.jpg",
           "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tour_Eiffel_Wikimedia_Commons.jpg?width=1280",
@@ -21,7 +21,7 @@ Per kaupunki yksi tiedosto `data/oppaan-kuvat/kaupungit/<kaupunki-id>.json`:
 }
 ```
 
-- Lukittu kohdelista on tasan 12: `kohteet` (2–3 kuvaa, järjestys 1 = paras, vaakakuva ensin) + `eiKuvaa` = 12.
+- Lukittu kohdelista 6–20 kohdetta kaupungin koon mukaan (omistaja 6.10.): `kohteet` (1–5 kuvaa, järjestys 1 = paras, vaakakuva ensin; suuret maamerkit 4–5, tavalliset 2–3, pienet 1) + `eiKuvaa`, merkittävyysjärjestyksessä. Jokaisella kohteella `peruste`: "pelin nosto" | "UNESCO" (P757) | "sitelinks" (≥ 15 kieliversiota). Kaupunkikierros käyttää 8–10 ensimmäistä, Liiku kaikkia.
 - `nimi` suomeksi, `lat`/`lon` Wikidatan P625:stä (validointi sallii 0,002°).
 - Kuvaehdot: PD / CC0 / CC BY / CC BY-SA, leveys ≥ 1 200 px, ei karttaa, logoa, lippua, vaakunaa, pohjapiirrosta eikä vesileimaa.
 - `tarkistettu: true` vasta silmätarkistuksen jälkeen (kuvataulu `node tools/oppaan-kuvat.mjs taulu`).
