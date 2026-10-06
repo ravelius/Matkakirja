@@ -51,6 +51,13 @@ namespace Matkakirja.Natiivi
         static Texture2D kehys;
         /// <summary>Aukko osuuksina kehyksen leveydestä/korkeudesta, origo vasen yläkulma.</summary>
         static Rect aukko;
+        /// <summary>
+        /// Ikkunan suurennus (omistaja 6.10.: "Itse ehkä zoomaisin tuota ikkunaa hieman suuremmaksi"; Päätoimittaja 10–15 %): kehys ja
+        /// aukko skaalataan vaakasuunnassa keskeltä ja pystysuunnassa aukon yläreunasta; kehyksen sivut rajautuvat, ohjaamo jää alle.
+        /// </summary>
+        public static float KehysZoom = 1.12f;
+        /// <summary>Aukko suurennoksen jälkeen (osuuksina julisteesta).</summary>
+        static Rect Aukko => new Rect(0.5f + (aukko.x - 0.5f) * KehysZoom, aukko.y, aukko.width * KehysZoom, aukko.height * KehysZoom);
         static bool kehysHaettu;
         public static bool KehysValmis => KupolaKehys && kehys != null && aukko.width > 0.2f && aukko.height > 0.2f;
 
@@ -122,11 +129,11 @@ namespace Matkakirja.Natiivi
         const float Rivi1 = 0.0115f, Rivi2 = 0.0100f, Rivi3 = 0.0078f, Sinetti = 0.074f;
 
         /// <summary>Kuvan leveys julisteen leveydelle W (kehyksellä aukon leveys).</summary>
-        public static int KuvanLeveys(int julisteW) => Mathf.RoundToInt(julisteW * (KehysValmis ? aukko.width : 1f - 2f * Reuna));
-        static int JulisteenLeveys(int kuvaW) => Mathf.RoundToInt(kuvaW / (KehysValmis ? aukko.width : 1f - 2f * Reuna));
+        public static int KuvanLeveys(int julisteW) => Mathf.RoundToInt(julisteW * Mathf.Min(1f, KehysValmis ? Aukko.width : 1f - 2f * Reuna));
+        static int JulisteenLeveys(int kuvaW) => Mathf.RoundToInt(kuvaW / Mathf.Min(1f, KehysValmis ? Aukko.width : 1f - 2f * Reuna));
         /// <summary>Kuvan koko julisteeseen, jonka kuva-alan leveys on kuvaW (E v3: 0,934 W × 1,084 W; kehyksellä aukon muoto).</summary>
         public static (int w, int h) KuvanKoko(int kuvaW) => KehysValmis
-            ? (kuvaW, Mathf.RoundToInt(JulisteenLeveys(kuvaW) * 1.25f * aukko.height))
+            ? (kuvaW, Mathf.RoundToInt(JulisteenLeveys(kuvaW) * 1.25f * Aukko.height))
             : (kuvaW, Mathf.RoundToInt(JulisteenLeveys(kuvaW) * KuvaKorkeus));
 
         /// <summary>Koordinaatit asteina ja minuutteina kuten E v3: "60°10′N 24°56′E".</summary>
@@ -146,8 +153,8 @@ namespace Matkakirja.Natiivi
         public static IEnumerator Tee(Texture2D kuva, Tiedot t, Action<byte[]> valmis)
         {
             int w = kuva.width, h = kuva.height;
-            bool muotoKehys = KehysValmis && Mathf.Abs((float)w / h - aukko.width / (aukko.height * 1.25f)) < 0.02f;
-            int W = muotoKehys ? Mathf.RoundToInt(w / aukko.width) : Mathf.RoundToInt(w / (1f - 2f * Reuna)), H = Mathf.RoundToInt(W * 1.25f);
+            bool muotoKehys = KehysValmis && Mathf.Abs((float)w / h - Aukko.width / (Aukko.height * 1.25f)) < 0.02f;
+            int W = muotoKehys ? Mathf.RoundToInt(w / Mathf.Min(1f, Aukko.width)) : Mathf.RoundToInt(w / (1f - 2f * Reuna)), H = Mathf.RoundToInt(W * 1.25f);
             int reuna = Mathf.RoundToInt(W * Reuna);
             var pohja = Resources.Load<PanelSettings>(UiKerros.PaneeliPolku);
             ThemeStyleSheet teema = null;
@@ -285,14 +292,25 @@ namespace Matkakirja.Natiivi
         static void RakennaKehyksella(VisualElement juuri, Texture2D kuva, Tiedot t, int W, int H)
         {
             Color kulta = Tyylikirja.Kehys.Kulta, valkea = Tyylikirja.Kehys.Kerma, harmaa = Tyylikirja.Kehys.Muted;
-            float ax = aukko.x * W, ay = aukko.y * H, aw = aukko.width * W, ah = aukko.height * H;
+            var A = Aukko;
+            float ax = A.x * W, ay = A.y * H, aw = A.width * W, ah = A.height * H;
             // Kuva hieman aukkoa suurempana (pehmeän reunan alle ei jää mustaa).
             var kuvaEl = Absoluuttinen(ax - W * 0.004f, ay - W * 0.004f, aw + W * 0.008f, ah + W * 0.008f);
             kuvaEl.style.backgroundImage = new StyleBackground(kuva);
             juuri.Add(kuvaEl);
-            var kehysEl = Absoluuttinen(0, 0, W, H);
+            // Kehys samalla suurennoksella (keskeltä vaakaan, aukon yläreunasta pystyyn); reunat rajautuvat julisteen ulkopuolelle.
+            var kehysEl = Absoluuttinen(W * 0.5f * (1 - KehysZoom), aukko.y * H * (1 - KehysZoom), W * KehysZoom, H * KehysZoom);
             kehysEl.style.backgroundImage = new StyleBackground(kehys);
             juuri.Add(kehysEl);
+            // Logo avaruuteen ikkunan yläosaan (omistaja 6.10.: "matkakirjan logo pitää olla tuolla ylhäällä juuri niin kun se onkin").
+            var logo = Resources.Load<Texture2D>("MatkakirjaUI/logo");
+            if (logo != null)
+            {
+                float lw = W * LogoLeveys, lh = lw * logo.height / logo.width;
+                var logoEl = Absoluuttinen(ax + (aw - lw) * 0.5f, ay + ah * 0.07f, lw, lh);
+                logoEl.style.backgroundImage = new StyleBackground(logo);
+                juuri.Add(logoEl);
+            }
             // Ohjaamo: aukon alareunasta julisteen alareunaan.
             float y0 = ay + ah + W * 0.015f, alaH = H - y0 - W * 0.02f;
             float d = W * Sinetti * 1.35f;
@@ -301,17 +319,6 @@ namespace Matkakirja.Natiivi
             teksti.style.alignItems = Align.FlexStart;
             teksti.style.justifyContent = Justify.Center;
             juuri.Add(teksti);
-            // Logo ohjaamoon tekstilohkon yläpuolelle (Päätoimittaja 6.10.: omistajan "mustaa ohjaamoa …, mihin voidaan sitten laittaa
-            // tekstiä ja logo"; avaruudessa logo kilpaili kaaren kanssa).
-            var logo = Resources.Load<Texture2D>("MatkakirjaUI/logo");
-            if (logo != null)
-            {
-                float lw = W * 0.22f, lh = lw * logo.height / logo.width;
-                var logoEl = new VisualElement();
-                logoEl.style.width = lw; logoEl.style.height = lh; logoEl.style.marginBottom = W * 0.012f;
-                logoEl.style.backgroundImage = new StyleBackground(logo);
-                teksti.Add(logoEl);
-            }
             var n1 = Rivi((t.Nimi ?? "").ToUpperInvariant(), Kirjasin.KoneBold, W * NimiKoko * 1.35f, valkea, 0.10f * W * NimiKoko * 1.35f, TextAnchor.MiddleLeft);
             n1.style.marginBottom = W * 0.004f; teksti.Add(n1);
             var n2 = Rivi(Koordinaatit(t.Lat, t.Lon), Kirjasin.Kone, W * KoordKoko * 1.3f, kulta, 0.12f * W * KoordKoko * 1.3f, TextAnchor.MiddleLeft);
