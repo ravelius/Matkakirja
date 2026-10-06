@@ -117,16 +117,20 @@ namespace Matkakirja
             Valmius.KevennysAlku("aloitusverho");
             string syy = "katto";
             var ehto = new ValmiusEhto();
-            float logoAlku = Time.realtimeSinceStartup;
-            while (Time.realtimeSinceStartup - alku < Katto || Time.realtimeSinceStartup - logoAlku < LogoSisaan + LogoVahintaan)
+            // Logon ajat vasta ensimmäisestä näkyvästä ruudusta (kylmäkäynnistysvideo 6.10.: kohtausta ladattiin ~7 s ilman
+            // ruutua, joten ajastus Awakesta söi sisäänhäivytyksen ja logo näkyi vain ~0,6 s).
+            float logoAlku = -1f;
+            int alkuRuutu = Time.frameCount;
+            while (Time.realtimeSinceStartup - alku < Katto || logoAlku < 0f || Time.realtimeSinceStartup - logoAlku < LogoSisaan + LogoVahintaan)
             {
                 // Logo sisään pehmeästi (smoothstep) ensimmäisestä ruudusta; verho pysyy vähintään sisäänhäivytys + LogoVahintaan.
-                if (logoKuva != null)
+                if (logoAlku < 0f && Time.frameCount >= alkuRuutu + 2) logoAlku = Time.realtimeSinceStartup;
+                if (logoKuva != null && logoAlku >= 0f)
                 {
                     float x = Mathf.Clamp01((Time.realtimeSinceStartup - logoAlku) / LogoSisaan);
                     logoKuva.color = new Color(1f, 1f, 1f, x * x * (3f - 2f * x));
                 }
-                bool logoValmis = Time.realtimeSinceStartup - logoAlku >= LogoSisaan + LogoVahintaan;
+                bool logoValmis = logoAlku >= 0f && Time.realtimeSinceStartup - logoAlku >= LogoSisaan + LogoVahintaan;
                 if (pallo == null) pallo = FindAnyObjectByType<Cesium3DTileset>();
                 // Yhteinen ehto (BUILD 16): ≥ 90 % ja tasaantunut 300 ms, ≥ 10 kehystä (ValmiusEhto). Ehto luetaan joka
                 // kehys (tasaantumisen ikkuna), mutta verho lähtee vasta, kun portti on auki tai PorttiOdotus kulunut.

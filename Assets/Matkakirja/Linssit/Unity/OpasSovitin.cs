@@ -154,7 +154,11 @@ namespace Matkakirja.Natiivi
             silmukka = new OpasSilmukka(alku);
             // AVAUS ILMAN KARTTAA (omistaja 6.10. 14.2x, juna 149): täkyavauksessa Cesium avataan vasta pelaajan valinnasta
             // (AvaaKaupunki), joten aloitusvalikko aukeaa heti eikä yhtään laattaa ladata ennen valintaa.
+            // Natiivi-UI nostaa TakyAvaus-lipun valikon Nayta-kutsussa (KytkeChat): kytke ensin, päätä sitten (simu 6.10. 17.00:
+            // lippu nousi vasta tämän jälkeen, ja kartta latautui turhaan mustan aloitusvalikon taakse).
+            KytkeChat(true);
             kaupunkiOdottaa = TakyAvaus && !Testi;
+            if (kaupunkiOdottaa) silmukka.PakotaSiirto = true;   // mikä tahansa ensimmäinen liike avaa kartan siirtoruudun kautta
             if (!kaupunkiOdottaa && !kaupunki.Avaa(alku.Lat, alku.Lon, 45))
             {
                 Virhe = OpasTiedot.Nimi + ": " + kaupunki.Virhe;
@@ -175,14 +179,14 @@ namespace Matkakirja.Natiivi
                 puhe = o.gameObject.AddComponent<AudioSource>();
                 puhe.playOnAwake = false; puhe.spatialBlend = 0f; puhe.loop = false;
             }
-            KytkeChat(true);   // chat ei aukea itsestään (opas kevyeksi, Päätoimittaja 5.10.): vain valikon "Näytä teksti" -rivistä
+            // KytkeChat(true) ajettiin jo ennen karttapäätöstä; chat ei aukea itsestään (opas kevyeksi, Päätoimittaja 5.10.), vain valikon "Näytä teksti" -rivistä
             silmukka.Pyyda += Pyyda;
             silmukka.Saapui += Saapui;
             silmukka.Hiljenna += Hiljenna;
             silmukka.Kysyy += Kysyy;
             silmukka.LentoAlkaa += LentoAlkoi;
             // Siirto ilman lentoa (omistaja 6.10. 12.0x): origo heti kohteeseen, latausaste kohdekameran laatoista.
-            silmukka.SiirtoAlkaa += (la, lo) => { kaupunki.SiirraOrigo(la, lo, MaaPisteessa(la, lo) is double m && !double.IsNaN(m) ? m : 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
+            silmukka.SiirtoAlkaa += (la, lo) => { if (kaupunkiOdottaa && !AvaaKaupunki(la, lo, silmukka.SiirtoNimi)) return; kaupunki.SiirraOrigo(la, lo, MaaPisteessa(la, lo) is double m && !double.IsNaN(m) ? m : 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
             silmukka.LatausEdistys = () => kaupunki.Latausaste / 100.0;
             // Maaston korkeus kohdekehykseen (simu 6.10. 12.42: Praha aukesi 45 m:n arviolla mäen sisältä): näyte pisteeseen.
             silmukka.MaaPisteessa = MaaPisteessa;
@@ -260,7 +264,9 @@ namespace Matkakirja.Natiivi
         {
             if (silmukka == null || Virhe != null || paivitetty == Time.frameCount) return;
             paivitetty = Time.frameCount;
-            if (kaupunkiOdottaa) return;   // aloitusvalikko: ei kameraa eikä laattoja (puhetta ei vielä ole)
+            // Aloitusvalikko: ei kameraa eikä laattoja; silmukka etenee silti (toive tai kysymys ennen valintaa → ensimmäinen
+            // lento on pakotettu siirto, joka avaa kartan SiirtoAlkaa-kutsussa suoraan kohteeseen).
+            if (kaupunkiOdottaa) { silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => false); return; }
             // PCM: loppu = kaikki ladattu ja soitettu; varmistus: klippi pysähtyi (ei saa jäädä odottamaan ikuisesti, toisto 16.4x).
             bool pcmPysahtyi = pcmNyt != null && puhe != null && !puhe.isPlaying && Time.unscaledTime - puheAlkoi > 1f;
             bool loppui = !tauolla && (pcmNyt != null ? pcmNyt.Loppui || pcmPysahtyi : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying));
@@ -456,12 +462,12 @@ namespace Matkakirja.Natiivi
             switch (v.Toiminto)
             {
                 case OpasToiminto.Siirry:
-                    if (!double.IsNaN(v.ToimintoLat)) { SoitaKuittaus(v); silmukka.Liiku(v.ToimintoNimi ?? kysymys, v.ToimintoLat, v.ToimintoLon); }
+                    if (!double.IsNaN(v.ToimintoLat)) LiikuVastauksesta(v, vastaus, v.ToimintoNimi ?? kysymys, v.ToimintoLat, v.ToimintoLon);
                     break;
                 case OpasToiminto.Kohde:
                 {
                     var t = kohteet?.Find(x => x.Id == v.ToimintoId);
-                    if (t != null) { SoitaKuittaus(v); silmukka.Liiku(t.Nimi, t.Lat, t.Lon); }
+                    if (t != null) LiikuVastauksesta(v, vastaus, t.Nimi, t.Lat, t.Lon);
                     else if (!string.IsNullOrWhiteSpace(v.Teksti)) { Valmistele(vastaus); silmukka.Esita(vastaus); }
                     break;
                 }
@@ -470,7 +476,7 @@ namespace Matkakirja.Natiivi
                     break;
                 case OpasToiminto.Kierros: SoitaKuittaus(v); Kaupunkikierros(); break;
                 case OpasToiminto.Tauko: Tauko(true); break;
-                case OpasToiminto.Jatka: Tauko(false); break;
+                case OpasToiminto.Jatka: if (silmukka.KierrosKeskeytetty) JatkaKierrosta(); else Tauko(false); break;
                 default:
                     if (!string.IsNullOrWhiteSpace(v.Teksti)) { Valmistele(vastaus); silmukka.Esita(vastaus); }
                     break;
@@ -478,6 +484,18 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Toiminnon kuittaus ("Lennetään Nyhavniin.") siltalauseen kanavalla; pysähdyksen kerronta jatkaa sen perään.</summary>
+        /// <summary>Vastauksen siirto: alle LahiVastausM nykyisestä kohteesta = sama paikka → vastaus kerrotaan tässä (ei uutta lentoa
+        /// eikä toista kerrontaa); kauempana lento, ja keskeytetty kierros säilyy jatkettavana.</summary>
+        void LiikuVastauksesta(OpasKysyVastaus v, OpasKohde vastaus, string nimi, double lat, double lon)
+        {
+            var k = silmukka.NykyinenKehys;
+            double et = k != null ? KierrosLento.EtaisyysM(k.Lat, k.Lon, lat, lon) : KierrosLento.EtaisyysM(silmukka.Asento.Lat, silmukka.Asento.Lon, lat, lon);
+            if (et < LahiVastausM && !string.IsNullOrWhiteSpace(v.Teksti)) { Valmistele(vastaus); silmukka.Esita(vastaus); return; }
+            SoitaKuittaus(v);
+            silmukka.LiikuVastauksesta(nimi, lat, lon);
+        }
+        const double LahiVastausM = 300;
+
         void SoitaKuittaus(OpasKysyVastaus v)
         {
             if (string.IsNullOrEmpty(v.Aani) || silta == null || !Asetukset.Paalla(Kytkin.Kertoja)) return;

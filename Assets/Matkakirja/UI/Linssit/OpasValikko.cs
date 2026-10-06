@@ -159,11 +159,14 @@ namespace Matkakirja.Natiivi
             Juuri.style.display = DisplayStyle.None;
             ryhma = Ohjausnappi.Ryhma(Juuri);
             // PAUSE (omistaja 5.10.2026 klo 23.5x): OHJAUSNAPPI-ryhmässä, sama tauko-pohja kuin astrokuvan II (II ↔ ▶).
+            // LOPETA KIERROS (omistaja 6.10. 16.4x): ■ OHJAUSNAPPI tauon vasemmalla, näkyy vain kierroksen aikana (PaivitaTauko).
+            lopetaNappi = Ohjausnappi.Nappi(Ikonit.Lopeta, "Lopeta kierros", LopetaKierros, ryhma);
+            lopetaNappi.style.display = DisplayStyle.None;
             taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, "Tauko", () => OpasSovitin.Tauko(!OpasSovitin.Tauolla), ryhma);
             kuvaNappi = Ohjausnappi.Nappi(KuvatPaalla ? Ikonit.PilleriJulisteet : KuvaPoisIkoni, KuvatPaalla ? "Kuvat päällä" : "Kuvat pois",
                 VaihdaKuvat, ryhma);
             // Omistaja 6.10. 12.1x: "piilota pause ja kuva nappi hampurilaisen sisään": ruudulla vain ☰; tauko ja kuvat valikon riveinä.
-            taukoNappi.style.display = DisplayStyle.None;
+            // Omistaja 6.10. 16.3x: tauko taas aina näkyvissä ☰:n vasemmalla (kumoaa 12.1x:n tauon osalta); kuvat jäävät ☰:n sisään.
             kuvaNappi.style.display = DisplayStyle.None;
             nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
 
@@ -194,7 +197,25 @@ namespace Matkakirja.Natiivi
             napit.style.display = DisplayStyle.None;
             napit.style.opacity = 0f;
             OpasNappi("Kysy", Ikonit.Puhekupla, () => Avaa(Nakyma.Kysy), "Valmiit kysymykset oppaalle");
+            // JATKA KIERROSTA (omistaja 6.10. 16.3x, Päätoimittaja): kysymys keskeyttää kaupunkikierroksen; vastauksen jälkeen
+            // nappirivin lasipohjalla oleva nappi keskitettynä rivin yläpuolelle (LS1: KierrosJatkettavissa, JatkaKierrosta()).
+            jatkaRivi = Rakenne.El("tk-teema-harmaa mk-opas-napit", Juuri, PickingMode.Ignore);
+            jatkaRivi.style.display = DisplayStyle.None;
+            var jatka = Rakenne.Nappi(null, "mk-liiku__nappi mk-opas-nappi", JatkaKierrosta, jatkaRivi);
+            jatka.tooltip = "Jatka keskeytynyttä kaupunkikierrosta";
+            Rakenne.Ikoni(Ikonit.Toista, "mk-ikoni mk-opas-nappi__ikoni", jatka);
+            Kirjasimet.Aseta(Rakenne.Teksti("Jatka kierrosta", "mk-nappi__teksti mk-opas-nappi__teksti", jatka), Kirjasin.ModerniLihava);
             OpasNappi("Liiku", Ikonit.Viiva["kompassi"], () => Avaa(Nakyma.Liiku), "Lähikohteet ja kaupunkikierros");
+            // Omistaja 16.3x "paremmin linjaan": tekstinapit samanlevyisiksi (leveimmän mukaan), sisältö keskellä.
+            napit.RegisterCallback<GeometryChangedEvent>(_ =>
+            {
+                var tekstilliset = napit.Children().Where(c => !c.ClassListContains("mk-opas-nappi--ikoni")).ToList();
+                if (tekstilliset.Count < 2) return;
+                float lev = 0f;
+                foreach (var c in tekstilliset) lev = Mathf.Max(lev, c.layout.width);
+                if (lev <= 0 || float.IsNaN(lev)) return;
+                foreach (var c in tekstilliset) if (Mathf.Abs(c.resolvedStyle.width - lev) > 0.5f) c.style.width = lev;
+            });
             mikkiNappi = OpasNappi(null, PuluChat.MikkiIkoni, Puhu, "Puhu oppaalle");
             OpasNappi(null, PuluChat.NappaimistoIkoni, Kirjoita, "Kirjoita oppaalle");
             kerros.JokaRuutu += PaivitaSirut;
@@ -517,7 +538,9 @@ namespace Matkakirja.Natiivi
             else foreach (var k in kohteet) LiikuRivi(k);
             // Alimpana aina Kaupunkikierros (omistaja 6.10.).
             Action kierros = () => { Sulje(); Debug.Log("MATKAKIRJA opas: kaupunkikierros"); OpasSovitin.Kaupunkikierros(); };
-            var kb = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => Rivilta(kierros), rivit);
+            // Kaupunkikierros kiinnitettynä paneelin alareunaan, aina näkyvissä (omistaja 16.3x); lista vierii sen yläpuolella.
+            var kb = Rakenne.Nappi(null, "mk-linssivalikko__kohta mk-linssivalikko__komento", () => Rivilta(kierros), valikko);
+            kb.style.flexShrink = 0;
             Kirjasimet.Aseta(Rakenne.Teksti("Kaupunkikierros", "mk-linssivalikko__nimi", kb), Kirjasin.ModerniLihava);
             kb.tooltip = "Kaupunkikierros";
             nykyiset.Add((kb, kierros));
@@ -546,9 +569,33 @@ namespace Matkakirja.Natiivi
             nykyiset.Add((b, teko));
         }
 
+        VisualElement jatkaRivi;
+        bool? testiJatka;
+
+        /// <summary>LS1: kierros keskeytetty kysymykseen ja vastaus kuultu.</summary>
+        static bool KierrosKeskeytetty => OpasSovitin.KierrosJatkettavissa;
+
+        void JatkaKierrosta()
+        {
+            Debug.Log("MATKAKIRJA opas: jatka kierrosta");
+            testiJatka = null;
+            OpasSovitin.JatkaKierrosta();
+        }
+
+        void PaivitaJatka()
+        {
+            var c0 = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
+            bool nayta = nappiNakyy && !Auki && !(c0?.Auki ?? false) && (testiJatka ?? KierrosKeskeytetty);
+            var d = nayta ? DisplayStyle.Flex : DisplayStyle.None;
+            if (jatkaRivi.style.display != d) jatkaRivi.style.display = d;
+            if (nayta) jatkaRivi.style.bottom = krediittiAla + NappiriviKorkeus + KuvaRako;
+        }
+
         void PaivitaSirut()
         {
             if (!nakyy) return;
+            PaivitaJatka();
+            Valahdysvahti.Paivita(Juuri);
             // Neljä nappia näkyvät aina oppaassa, paitsi chatin tai valikon ollessa auki (vanha sirurivi ei enää näy).
             var c0 = UiNakymat.Olemassa ? UiNakymat.Hae().Chat : null;
             bool napitNakyy = c0 != null && !c0.Auki && !Auki;
@@ -756,6 +803,21 @@ namespace Matkakirja.Natiivi
             // Kortti oikean tapin yläpuolelle, kun tapit näkyvät.
             float ala = tapit.Nakyy ? TapitAla + OpasTapit.Halkaisija + KuvaRako : nappiNakyy ? krediittiAla + NappiriviKorkeus + KuvaRako : krediittiAla;
             if (siruNakyy && !float.IsNaN(h) && sirurivi.layout.height > 0) ala = Mathf.Max(ala, h - sirurivi.layout.yMin + KuvaRako);
+            // Omistaja 6.10. 16.3x: pikkukuva nappirivin viereen samaan alareunaan, kun leveys riittää (iPad); muuten oikealle ylle.
+            bool vieressa = false;
+            if (nappiNakyy && napit.childCount > 0 && napit[napit.childCount - 1].worldBound.width > 0)
+            {
+                float oikea = Juuri.WorldToLocal(napit[napit.childCount - 1].worldBound).xMax;
+                float w = Juuri.layout.width;
+                if (!float.IsNaN(oikea) && oikea + KuvaRako + KuvaLeveys + OpasTapit.Reuna + OpasTapit.Halkaisija <= w)
+                {
+                    vieressa = true;
+                    if (kuvaKortti.style.left.value.value != oikea + KuvaRako || kuvaKortti.style.left.keyword != StyleKeyword.Undefined) kuvaKortti.style.left = oikea + KuvaRako;
+                    kuvaKortti.style.right = StyleKeyword.Auto;
+                    ala = krediittiAla;
+                }
+            }
+            if (!vieressa && kuvaKortti.style.right.value.value != 0) { kuvaKortti.style.left = StyleKeyword.Auto; kuvaKortti.style.right = 0; }
             if (kuvaKortti.style.bottom.value.value != ala) kuvaKortti.style.bottom = ala;
         }
 
@@ -856,7 +918,6 @@ namespace Matkakirja.Natiivi
                     // Päätoimittaja 5.10. klo 20.4x: pään kolme riviä samalla TOIMINTO-rivipohjalla (kultareunus), Vaihda kohde ›-merkillä.
                     Alanakyma("Vaihda kohde", () => Avaa(Nakyma.Takyt), toiminto: true);
                     // Tauko ja kuvat valikon riveinä, tila tekstissä (omistaja 6.10. 12.1x).
-                    Komento(OpasSovitin.Tauolla ? "Jatka" : "Tauko", () => OpasSovitin.Tauko(!OpasSovitin.Tauolla));
                     Komento(KuvatPaalla ? "Kuvat: päällä" : "Kuvat: pois", VaihdaKuvat);
                     Komento("Näytä teksti", NaytaTeksti);
                     Komento("Tietoja ja lähteet", () => { KrediititTiivis.NaytaKaikki(); Debug.Log("MATKAKIRJA opas: tietoja ja lähteet"); });
@@ -1137,10 +1198,23 @@ namespace Matkakirja.Natiivi
             nykyiset.Add((b, teko));
         }
 
+        Button lopetaNappi;
+        bool? testiLopeta;
+
+        void LopetaKierros()
+        {
+            Debug.Log("MATKAKIRJA opas: lopeta kierros");
+            testiLopeta = null;
+            OpasSovitin.LopetaKierros();
+        }
+
         /// <summary>Pause-nappi II ↔ ▶ oppaan tauon mukaan (Linssisepän OpasSovitin.Tauolla).</summary>
         void PaivitaTauko()
         {
             if (!nakyy) return;
+            // ■ myös keskeytetylle kierrokselle (LS1: KierrosKaynnissa || KierrosJatkettavissa).
+            var ld = (testiLopeta ?? (OpasSovitin.KierrosKaynnissa || KierrosKeskeytetty)) ? DisplayStyle.Flex : DisplayStyle.None;
+            if (lopetaNappi.style.display != ld) lopetaNappi.style.display = ld;
             bool tauolla = OpasSovitin.Tauolla;
             if (tauolla == taukoNakyy) return;
             taukoNakyy = tauolla;
@@ -1190,6 +1264,7 @@ namespace Matkakirja.Natiivi
             rivit = new ScrollView(ScrollViewMode.Vertical)
             { verticalScrollerVisibility = ScrollerVisibility.Hidden, horizontalScrollerVisibility = ScrollerVisibility.Hidden };
             rivit.style.flexShrink = 1;
+            rivit.style.minHeight = 0; // omistaja 16.3x: pitkä lista meni ruudun yli (ScrollView ei kutistunut sisältöään pienemmäksi)
             // UITK:n oma kosketusvieritys pois (Kosketusvieritys hoitaa vedon): ei elastista ylitystä eikä inertiaa, jonka
             // pysäytys söi ensimmäisen napautuksen uuteen listaan.
             rivit.touchScrollBehavior = ScrollView.TouchScrollBehavior.Clamped;
@@ -1272,6 +1347,12 @@ namespace Matkakirja.Natiivi
                 case "kuva":
                     var kb = kuvaKortti.worldBound;
                     return $"opas: kuva {(kuvaNakyy ? "näkyy" : "piilossa")} {naytettyKuva?.Url ?? "-"}, kortti {kb.xMin:0},{kb.yMin:0} {kb.width:0}×{kb.height:0}, kytkin {(KuvatPaalla ? "päällä" : "pois")}";
+                case "lopeta":
+                    testiLopeta = o.Length > 1 ? o[1] != "pois" : true;
+                    return "opas: lopeta kierros " + (testiLopeta == true ? "näkyy (testi)" : "pois");
+                case "jatka":
+                    testiJatka = o.Length > 1 ? o[1] != "pois" : true;
+                    return "opas: jatka kierrosta " + (testiJatka == true ? "näkyy (testi)" : "pois");
                 case "napit":
                 {
                     var r = napit.worldBound;

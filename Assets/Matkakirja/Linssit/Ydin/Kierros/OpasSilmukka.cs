@@ -481,6 +481,15 @@ namespace Matkakirja.Linssit.Kierros
             Hiljenna?.Invoke();
         }
 
+        /// <summary>Kysymyksen vastauksen siirto (toiminto siirry/kohde): liike kuten Liiku, mutta keskeytetty kierros ja vapaa tila
+        /// säilyvät (simu 6.10. 17.1x: "mitä täällä järjestettiin" → siirry samaan kohteeseen päätti kierroksen eikä JATKA tullut).</summary>
+        public void LiikuVastauksesta(string nimi, double lat, double lon)
+        {
+            bool kesk = KierrosKeskeytetty, vapaa = VapaaTila; var jk = jatkoKohde; var kt = keskeytysTieto;
+            Liiku(nimi, lat, lon);
+            KierrosKeskeytetty = kesk; VapaaTila = vapaa; jatkoKohde = jk; keskeytysTieto = kt;
+        }
+
         /// <summary>Pelaajan oma suunta (toive, Liiku, paikan vaihto, uusi kierros): vanha kierros ja vapaa tila päättyvät.</summary>
         void PelaajaValitsi() { KierrosKeskeytetty = false; jatkoKohde = null; VapaaTila = false; }
 
