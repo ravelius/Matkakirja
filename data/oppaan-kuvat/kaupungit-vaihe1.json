@@ -1,0 +1,1864 @@
+[
+ {
+  "id": "lontoo",
+  "nimi": "Lontoo",
+  "lat": 51.507,
+  "lon": -0.128,
+  "maa": null
+ },
+ {
+  "id": "kairo",
+  "nimi": "Kairo",
+  "lat": 30.044,
+  "lon": 31.236,
+  "maa": null
+ },
+ {
+  "id": "praha",
+  "nimi": "Praha",
+  "lat": 50.087,
+  "lon": 14.421,
+  "maa": null
+ },
+ {
+  "id": "wien",
+  "nimi": "Wien",
+  "lat": 48.208,
+  "lon": 16.372,
+  "maa": null
+ },
+ {
+  "id": "madrid",
+  "nimi": "Madrid",
+  "lat": 40.417,
+  "lon": -3.703,
+  "maa": null
+ },
+ {
+  "id": "berliini",
+  "nimi": "Berliini",
+  "lat": 52.517,
+  "lon": 13.383,
+  "maa": null
+ },
+ {
+  "id": "venetsia",
+  "nimi": "Venetsia",
+  "lat": 45.44,
+  "lon": 12.332,
+  "maa": null
+ },
+ {
+  "id": "tukholma",
+  "nimi": "Tukholma",
+  "lat": 59.329,
+  "lon": 18.069,
+  "maa": null
+ },
+ {
+  "id": "pariisi",
+  "nimi": "Pariisi",
+  "lat": 48.857,
+  "lon": 2.352,
+  "maa": null
+ },
+ {
+  "id": "ateena",
+  "nimi": "Ateena",
+  "lat": 37.984,
+  "lon": 23.728,
+  "maa": null
+ },
+ {
+  "id": "amsterdam",
+  "nimi": "Amsterdam",
+  "lat": 52.367,
+  "lon": 4.883,
+  "maa": null
+ },
+ {
+  "id": "istanbul",
+  "nimi": "Istanbul",
+  "lat": 41.01,
+  "lon": 28.96,
+  "maa": null
+ },
+ {
+  "id": "dublin",
+  "nimi": "Dublin",
+  "lat": 53.35,
+  "lon": -6.26,
+  "maa": null
+ },
+ {
+  "id": "edinburgh",
+  "nimi": "Edinburgh",
+  "lat": 55.953,
+  "lon": -3.189,
+  "maa": null
+ },
+ {
+  "id": "marseille",
+  "nimi": "Marseille",
+  "lat": 43.297,
+  "lon": 5.381,
+  "maa": null
+ },
+ {
+  "id": "lissabon",
+  "nimi": "Lissabon",
+  "lat": 38.708,
+  "lon": -9.139,
+  "maa": null
+ },
+ {
+  "id": "barcelona",
+  "nimi": "Barcelona",
+  "lat": 41.388,
+  "lon": 2.17,
+  "maa": null
+ },
+ {
+  "id": "granada",
+  "nimi": "Granada",
+  "lat": 37.175,
+  "lon": -3.6,
+  "maa": null
+ },
+ {
+  "id": "budapest",
+  "nimi": "Budapest",
+  "lat": 47.492,
+  "lon": 19.051,
+  "maa": null
+ },
+ {
+  "id": "rooma",
+  "nimi": "Rooma",
+  "lat": 41.893,
+  "lon": 12.483,
+  "maa": null
+ },
+ {
+  "id": "krakova",
+  "nimi": "Krakova",
+  "lat": 50.061,
+  "lon": 19.937,
+  "maa": null
+ },
+ {
+  "id": "varsova",
+  "nimi": "Varsova",
+  "lat": 52.23,
+  "lon": 21.011,
+  "maa": null
+ },
+ {
+  "id": "helsinki",
+  "nimi": "Helsinki",
+  "lat": 60.171,
+  "lon": 24.938,
+  "maa": null
+ },
+ {
+  "id": "tampere",
+  "nimi": "Tampere",
+  "lat": 61.498,
+  "lon": 23.76,
+  "maa": null
+ },
+ {
+  "id": "tallinna",
+  "nimi": "Tallinna",
+  "lat": 59.439,
+  "lon": 24.754,
+  "maa": null
+ },
+ {
+  "id": "kiova",
+  "nimi": "Kiova",
+  "lat": 50.45,
+  "lon": 30.524,
+  "maa": null
+ },
+ {
+  "id": "pietari",
+  "nimi": "Pietari",
+  "lat": 59.95,
+  "lon": 30.317,
+  "maa": null
+ },
+ {
+  "id": "moskova",
+  "nimi": "Moskova",
+  "lat": 55.751,
+  "lon": 37.617,
+  "maa": null
+ },
+ {
+  "id": "sofia",
+  "nimi": "Sofia",
+  "lat": 42.698,
+  "lon": 23.322,
+  "maa": null
+ },
+ {
+  "id": "bukarest",
+  "nimi": "Bukarest",
+  "lat": 44.413,
+  "lon": 26.098,
+  "maa": null
+ },
+ {
+  "id": "sarajevo",
+  "nimi": "Sarajevo",
+  "lat": 43.867,
+  "lon": 18.417,
+  "maa": null
+ },
+ {
+  "id": "odessa",
+  "nimi": "Odessa",
+  "lat": 46.477,
+  "lon": 30.733,
+  "maa": null
+ },
+ {
+  "id": "dubai",
+  "nimi": "Dubai",
+  "lat": 25.25,
+  "lon": 55.283,
+  "maa": null
+ },
+ {
+  "id": "petra",
+  "nimi": "Petra",
+  "lat": 30.329,
+  "lon": 35.442,
+  "maa": null
+ },
+ {
+  "id": "medina",
+  "nimi": "Medina",
+  "lat": 24.47,
+  "lon": 39.61,
+  "maa": null
+ },
+ {
+  "id": "mekka",
+  "nimi": "Mekka",
+  "lat": 21.422,
+  "lon": 39.826,
+  "maa": null
+ },
+ {
+  "id": "kapadokia",
+  "nimi": "Kappadokia",
+  "lat": 38.355,
+  "lon": 35.039,
+  "maa": null
+ },
+ {
+  "id": "persepolis",
+  "nimi": "Persepolis",
+  "lat": 29.935,
+  "lon": 52.89,
+  "maa": null
+ },
+ {
+  "id": "jerusalem",
+  "nimi": "Jerusalem",
+  "lat": 31.783,
+  "lon": 35.217,
+  "maa": null
+ },
+ {
+  "id": "siinai",
+  "nimi": "Siinai",
+  "lat": 28.558,
+  "lon": 33.959,
+  "maa": null
+ },
+ {
+  "id": "rubalkhali",
+  "nimi": "Rub al-Khali",
+  "lat": 20.495,
+  "lon": 50.999,
+  "maa": null
+ },
+ {
+  "id": "tromssa",
+  "nimi": "Tromssa",
+  "lat": 69.683,
+  "lon": 18.943,
+  "maa": null
+ },
+ {
+  "id": "islanti",
+  "nimi": "Islanti",
+  "lat": 64.15,
+  "lon": -21.82,
+  "maa": null
+ },
+ {
+  "id": "lappi",
+  "nimi": "Rovaniemi",
+  "lat": 66.503,
+  "lon": 25.728,
+  "maa": null
+ },
+ {
+  "id": "kreeta",
+  "nimi": "Kreeta",
+  "lat": 35.294,
+  "lon": 25.304,
+  "maa": null
+ },
+ {
+  "id": "sisilia",
+  "nimi": "Sisilia",
+  "lat": 38.123,
+  "lon": 13.376,
+  "maa": null
+ },
+ {
+  "id": "alpit",
+  "nimi": "Alpit",
+  "lat": 47.666,
+  "lon": 7.334,
+  "maa": null
+ },
+ {
+  "id": "dubrovnik",
+  "nimi": "Dubrovnik",
+  "lat": 42.64,
+  "lon": 18.108,
+  "maa": null
+ },
+ {
+  "id": "riika",
+  "nimi": "Riika",
+  "lat": 56.947,
+  "lon": 24.105,
+  "maa": null
+ },
+ {
+  "id": "vilna",
+  "nimi": "Vilna",
+  "lat": 54.689,
+  "lon": 25.28,
+  "maa": null
+ },
+ {
+  "id": "oslo",
+  "nimi": "Oslo",
+  "lat": 59.913,
+  "lon": 10.739,
+  "maa": null
+ },
+ {
+  "id": "firenze",
+  "nimi": "Firenze",
+  "lat": 43.771,
+  "lon": 11.254,
+  "maa": null
+ },
+ {
+  "id": "kobenhavn",
+  "nimi": "Kööpenhamina",
+  "lat": 55.676,
+  "lon": 12.569,
+  "maa": null
+ },
+ {
+  "id": "doha",
+  "nimi": "Doha",
+  "lat": 25.286,
+  "lon": 51.529,
+  "maa": null
+ },
+ {
+  "id": "luxemburg",
+  "nimi": "Luxemburg",
+  "lat": 49.611,
+  "lon": 6.13,
+  "maa": null
+ },
+ {
+  "id": "nikosia",
+  "nimi": "Nikosia",
+  "lat": 35.172,
+  "lon": 33.365,
+  "maa": null
+ },
+ {
+  "id": "kuwait",
+  "nimi": "Kuwait",
+  "lat": 29.375,
+  "lon": 47.98,
+  "maa": null
+ },
+ {
+  "id": "masqat",
+  "nimi": "Masqat",
+  "lat": 23.614,
+  "lon": 58.592,
+  "maa": null
+ },
+ {
+  "id": "bagdad",
+  "nimi": "Bagdad",
+  "lat": 33.315,
+  "lon": 44.366,
+  "maa": null
+ },
+ {
+  "id": "izmir",
+  "nimi": "Izmir",
+  "lat": 38.413,
+  "lon": 27.138,
+  "maa": null
+ },
+ {
+  "id": "ankara",
+  "nimi": "Ankara",
+  "lat": 39.936,
+  "lon": 32.839,
+  "maa": null
+ },
+ {
+  "id": "halab",
+  "nimi": "Aleppo",
+  "lat": 36.2,
+  "lon": 37.16,
+  "maa": null
+ },
+ {
+  "id": "damaskos",
+  "nimi": "Damaskos",
+  "lat": 33.513,
+  "lon": 36.292,
+  "maa": null
+ },
+ {
+  "id": "luxor",
+  "nimi": "Luxor",
+  "lat": 25.697,
+  "lon": 32.644,
+  "maa": null
+ },
+ {
+  "id": "riad",
+  "nimi": "Riad",
+  "lat": 24.65,
+  "lon": 46.71,
+  "maa": null
+ },
+ {
+  "id": "tabriz",
+  "nimi": "Tabriz",
+  "lat": 38.074,
+  "lon": 46.296,
+  "maa": null
+ },
+ {
+  "id": "teheran",
+  "nimi": "Teheran",
+  "lat": 35.689,
+  "lon": 51.39,
+  "maa": null
+ },
+ {
+  "id": "isfahan",
+  "nimi": "Isfahan",
+  "lat": 32.653,
+  "lon": 51.675,
+  "maa": null
+ },
+ {
+  "id": "sana",
+  "nimi": "Sana",
+  "lat": 15.35,
+  "lon": 44.2,
+  "maa": null
+ },
+ {
+  "id": "aden",
+  "nimi": "Aden",
+  "lat": 12.8,
+  "lon": 45.033,
+  "maa": null
+ },
+ {
+  "id": "salalah",
+  "nimi": "Salalah",
+  "lat": 17.02,
+  "lon": 54.09,
+  "maa": null
+ },
+ {
+  "id": "mosul",
+  "nimi": "Mosul",
+  "lat": 36.342,
+  "lon": 43.129,
+  "maa": null
+ },
+ {
+  "id": "peking",
+  "nimi": "Peking",
+  "lat": 39.904,
+  "lon": 116.408,
+  "maa": null
+ },
+ {
+  "id": "delhi",
+  "nimi": "Delhi",
+  "lat": 28.61,
+  "lon": 77.23,
+  "maa": null
+ },
+ {
+  "id": "tokio",
+  "nimi": "Tokio",
+  "lat": 35.689,
+  "lon": 139.692,
+  "maa": null
+ },
+ {
+  "id": "soul",
+  "nimi": "Soul",
+  "lat": 37.56,
+  "lon": 126.99,
+  "maa": null
+ },
+ {
+  "id": "shanghai",
+  "nimi": "Shanghai",
+  "lat": 31.224,
+  "lon": 121.476,
+  "maa": null
+ },
+ {
+  "id": "tripoli",
+  "nimi": "Tripoli",
+  "lat": 32.888,
+  "lon": 13.188,
+  "maa": null
+ },
+ {
+  "id": "jekaterinburg",
+  "nimi": "Jekaterinburg",
+  "lat": 56.836,
+  "lon": 60.613,
+  "maa": null
+ },
+ {
+  "id": "novosibirsk",
+  "nimi": "Novosibirsk",
+  "lat": 55.033,
+  "lon": 82.917,
+  "maa": null
+ },
+ {
+  "id": "irkutsk",
+  "nimi": "Irkutsk",
+  "lat": 52.289,
+  "lon": 104.28,
+  "maa": null
+ },
+ {
+  "id": "jakutsk",
+  "nimi": "Jakutsk",
+  "lat": 62.027,
+  "lon": 129.732,
+  "maa": null
+ },
+ {
+  "id": "magadan",
+  "nimi": "Magadan",
+  "lat": 59.567,
+  "lon": 150.8,
+  "maa": null
+ },
+ {
+  "id": "kamtsatka",
+  "nimi": "Kamtšatka",
+  "lat": 52.999,
+  "lon": 158.72,
+  "maa": null
+ },
+ {
+  "id": "sahalin",
+  "nimi": "Sahalin",
+  "lat": 50,
+  "lon": 142.7,
+  "maa": null
+ },
+ {
+  "id": "vladivostok",
+  "nimi": "Vladivostok",
+  "lat": 43.115,
+  "lon": 131.884,
+  "maa": null
+ },
+ {
+  "id": "bangkok",
+  "nimi": "Bangkok",
+  "lat": 13.75,
+  "lon": 100.517,
+  "maa": null
+ },
+ {
+  "id": "kioto",
+  "nimi": "Kioto",
+  "lat": 35.012,
+  "lon": 135.768,
+  "maa": null
+ },
+ {
+  "id": "singapore",
+  "nimi": "Singapore",
+  "lat": 1.3,
+  "lon": 103.8,
+  "maa": null
+ },
+ {
+  "id": "samarkand",
+  "nimi": "Samarkand",
+  "lat": 39.655,
+  "lon": 66.976,
+  "maa": null
+ },
+ {
+  "id": "xian",
+  "nimi": "Xi’an",
+  "lat": 34.261,
+  "lon": 108.942,
+  "maa": null
+ },
+ {
+  "id": "varanasi",
+  "nimi": "Varanasi",
+  "lat": 25.317,
+  "lon": 83,
+  "maa": null
+ },
+ {
+  "id": "hanoi",
+  "nimi": "Hanoi",
+  "lat": 21.024,
+  "lon": 105.841,
+  "maa": null
+ },
+ {
+  "id": "ulanbator",
+  "nimi": "Ulan Bator",
+  "lat": 47.917,
+  "lon": 106.917,
+  "maa": null
+ },
+ {
+  "id": "kathmandu",
+  "nimi": "Kathmandu",
+  "lat": 27.7,
+  "lon": 85.333,
+  "maa": null
+ },
+ {
+  "id": "astana",
+  "nimi": "Astana",
+  "lat": 51.133,
+  "lon": 71.433,
+  "maa": null
+ },
+ {
+  "id": "kanton",
+  "nimi": "Kanton",
+  "lat": 23.109,
+  "lon": 113.265,
+  "maa": null
+ },
+ {
+  "id": "yangon",
+  "nimi": "Yangon",
+  "lat": 16.805,
+  "lon": 96.156,
+  "maa": null
+ },
+ {
+  "id": "mandalay",
+  "nimi": "Mandalay",
+  "lat": 21.983,
+  "lon": 96.084,
+  "maa": null
+ },
+ {
+  "id": "taipei",
+  "nimi": "Taipei",
+  "lat": 25.033,
+  "lon": 121.633,
+  "maa": null
+ },
+ {
+  "id": "hongkong",
+  "nimi": "Hongkong",
+  "lat": 22.278,
+  "lon": 114.159,
+  "maa": null
+ },
+ {
+  "id": "jakarta",
+  "nimi": "Jakarta",
+  "lat": -6.21,
+  "lon": 106.845,
+  "maa": null
+ },
+ {
+  "id": "manila",
+  "nimi": "Manila",
+  "lat": 14.583,
+  "lon": 120.967,
+  "maa": null
+ },
+ {
+  "id": "borneo",
+  "nimi": "Borneo",
+  "lat": 1.551,
+  "lon": 110.3,
+  "maa": null
+ },
+ {
+  "id": "sumatra",
+  "nimi": "Sumatra",
+  "lat": 4.2,
+  "lon": 97.601,
+  "maa": null
+ },
+ {
+  "id": "kashgar",
+  "nimi": "Kašgar",
+  "lat": 39.45,
+  "lon": 75.983,
+  "maa": null
+ },
+ {
+  "id": "lhasa",
+  "nimi": "Lhasa",
+  "lat": 29.654,
+  "lon": 91.117,
+  "maa": null
+ },
+ {
+  "id": "kolkata",
+  "nimi": "Kolkata",
+  "lat": 22.567,
+  "lon": 88.37,
+  "maa": null
+ },
+ {
+  "id": "kabul",
+  "nimi": "Kabul",
+  "lat": 34.533,
+  "lon": 69.166,
+  "maa": null
+ },
+ {
+  "id": "chennai",
+  "nimi": "Chennai",
+  "lat": 13.084,
+  "lon": 80.27,
+  "maa": null
+ },
+ {
+  "id": "mumbai",
+  "nimi": "Mumbai",
+  "lat": 18.975,
+  "lon": 72.826,
+  "maa": null
+ },
+ {
+  "id": "colombo",
+  "nimi": "Colombo",
+  "lat": 6.934,
+  "lon": 79.843,
+  "maa": null
+ },
+ {
+  "id": "karachi",
+  "nimi": "Karachi",
+  "lat": 24.86,
+  "lon": 67.01,
+  "maa": null
+ },
+ {
+  "id": "sanfrancisco",
+  "nimi": "San Francisco",
+  "lat": 37.779,
+  "lon": -122.419,
+  "maa": null
+ },
+ {
+  "id": "newyork",
+  "nimi": "New York",
+  "lat": 40.67,
+  "lon": -73.94,
+  "maa": null
+ },
+ {
+  "id": "auckland",
+  "nimi": "Auckland",
+  "lat": -36.849,
+  "lon": 174.765,
+  "maa": null
+ },
+ {
+  "id": "buenosaires",
+  "nimi": "Buenos Aires",
+  "lat": -34.608,
+  "lon": -58.373,
+  "maa": null
+ },
+ {
+  "id": "rio",
+  "nimi": "Rio de Janeiro",
+  "lat": -22.911,
+  "lon": -43.206,
+  "maa": null
+ },
+ {
+  "id": "sydney",
+  "nimi": "Sydney",
+  "lat": -33.868,
+  "lon": 151.21,
+  "maa": null
+ },
+ {
+  "id": "wellington",
+  "nimi": "Wellington",
+  "lat": -41.289,
+  "lon": 174.777,
+  "maa": null
+ },
+ {
+  "id": "sevilla",
+  "nimi": "Sevilla",
+  "lat": 37.389,
+  "lon": -5.995,
+  "maa": null
+ },
+ {
+  "id": "bryssel",
+  "nimi": "Bryssel",
+  "lat": 50.847,
+  "lon": 4.353,
+  "maa": null
+ },
+ {
+  "id": "ljubljana",
+  "nimi": "Ljubljana",
+  "lat": 46.051,
+  "lon": 14.506,
+  "maa": null
+ },
+ {
+  "id": "kosice",
+  "nimi": "Košice",
+  "lat": 48.717,
+  "lon": 21.25,
+  "maa": null
+ },
+ {
+  "id": "valletta",
+  "nimi": "Valletta",
+  "lat": 35.898,
+  "lon": 14.512,
+  "maa": null
+ },
+ {
+  "id": "bergen",
+  "nimi": "Bergen",
+  "lat": 60.392,
+  "lon": 5.323,
+  "maa": null
+ },
+ {
+  "id": "montreal",
+  "nimi": "Montreal",
+  "lat": 45.546,
+  "lon": -73.639,
+  "maa": null
+ },
+ {
+  "id": "melbourne",
+  "nimi": "Melbourne",
+  "lat": -37.814,
+  "lon": 144.963,
+  "maa": null
+ },
+ {
+  "id": "vancouver",
+  "nimi": "Vancouver",
+  "lat": 49.264,
+  "lon": -123.139,
+  "maa": null
+ },
+ {
+  "id": "brisbane",
+  "nimi": "Brisbane",
+  "lat": -27.468,
+  "lon": 153.028,
+  "maa": null
+ },
+ {
+  "id": "chicago",
+  "nimi": "Chicago",
+  "lat": 41.882,
+  "lon": -87.628,
+  "maa": null
+ },
+ {
+  "id": "perth",
+  "nimi": "Perth",
+  "lat": -31.956,
+  "lon": 115.86,
+  "maa": null
+ },
+ {
+  "id": "saopaulo",
+  "nimi": "São Paulo",
+  "lat": -23.55,
+  "lon": -46.634,
+  "maa": null
+ },
+ {
+  "id": "toronto",
+  "nimi": "Toronto",
+  "lat": 43.67,
+  "lon": -79.387,
+  "maa": null
+ },
+ {
+  "id": "lima",
+  "nimi": "Lima",
+  "lat": -12.06,
+  "lon": -77.037,
+  "maa": null
+ },
+ {
+  "id": "quito",
+  "nimi": "Quito",
+  "lat": -0.22,
+  "lon": -78.513,
+  "maa": null
+ },
+ {
+  "id": "losangeles",
+  "nimi": "Los Angeles",
+  "lat": 34.05,
+  "lon": -118.25,
+  "maa": null
+ },
+ {
+  "id": "montevideo",
+  "nimi": "Montevideo",
+  "lat": -34.906,
+  "lon": -56.191,
+  "maa": null
+ },
+ {
+  "id": "havanna",
+  "nimi": "Havanna",
+  "lat": 23.133,
+  "lon": -82.367,
+  "maa": null
+ },
+ {
+  "id": "mexico",
+  "nimi": "Mexico City",
+  "lat": 19.411,
+  "lon": -99.131,
+  "maa": null
+ },
+ {
+  "id": "neworleans",
+  "nimi": "New Orleans",
+  "lat": 29.95,
+  "lon": -90.067,
+  "maa": null
+ },
+ {
+  "id": "bogota",
+  "nimi": "Bogotá",
+  "lat": 4.61,
+  "lon": -74.082,
+  "maa": null
+ },
+ {
+  "id": "adelaide",
+  "nimi": "Adelaide",
+  "lat": -34.928,
+  "lon": 138.6,
+  "maa": null
+ },
+ {
+  "id": "hobart",
+  "nimi": "Hobart",
+  "lat": -42.883,
+  "lon": 147.317,
+  "maa": null
+ },
+ {
+  "id": "darwin",
+  "nimi": "Darwin",
+  "lat": -12.438,
+  "lon": 130.841,
+  "maa": null
+ },
+ {
+  "id": "portmoresby",
+  "nimi": "Port Moresby",
+  "lat": -9.479,
+  "lon": 147.149,
+  "maa": null
+ },
+ {
+  "id": "valparaiso",
+  "nimi": "Valparaíso",
+  "lat": -33.046,
+  "lon": -71.62,
+  "maa": null
+ },
+ {
+  "id": "christchurch",
+  "nimi": "Christchurch",
+  "lat": -43.531,
+  "lon": 172.636,
+  "maa": null
+ },
+ {
+  "id": "manaus",
+  "nimi": "Manaus",
+  "lat": -3.119,
+  "lon": -60.022,
+  "maa": null
+ },
+ {
+  "id": "caracas",
+  "nimi": "Caracas",
+  "lat": 10.496,
+  "lon": -66.898,
+  "maa": null
+ },
+ {
+  "id": "salvador",
+  "nimi": "Salvador",
+  "lat": -12.983,
+  "lon": -38.493,
+  "maa": null
+ },
+ {
+  "id": "portoalegre",
+  "nimi": "Porto Alegre",
+  "lat": -30.033,
+  "lon": -51.23,
+  "maa": null
+ },
+ {
+  "id": "asuncion",
+  "nimi": "Asunción",
+  "lat": -25.28,
+  "lon": -57.634,
+  "maa": null
+ },
+ {
+  "id": "dunedin",
+  "nimi": "Dunedin",
+  "lat": -45.874,
+  "lon": 170.504,
+  "maa": null
+ },
+ {
+  "id": "suva",
+  "nimi": "Suva",
+  "lat": -18.133,
+  "lon": 178.433,
+  "maa": null
+ },
+ {
+  "id": "cairns",
+  "nimi": "Cairns",
+  "lat": -16.926,
+  "lon": 145.775,
+  "maa": null
+ },
+ {
+  "id": "dili",
+  "nimi": "Dili",
+  "lat": -8.554,
+  "lon": 125.578,
+  "maa": null
+ },
+ {
+  "id": "alicesprings",
+  "nimi": "Alice Springs",
+  "lat": -23.7,
+  "lon": 133.867,
+  "maa": null
+ },
+ {
+  "id": "panama",
+  "nimi": "Panama",
+  "lat": 8.988,
+  "lon": -79.519,
+  "maa": null
+ },
+ {
+  "id": "honiara",
+  "nimi": "Honiara",
+  "lat": -9.433,
+  "lon": 159.95,
+  "maa": null
+ },
+ {
+  "id": "portvila",
+  "nimi": "Port Vila",
+  "lat": -17.733,
+  "lon": 168.317,
+  "maa": null
+ },
+ {
+  "id": "denver",
+  "nimi": "Denver",
+  "lat": 39.739,
+  "lon": -104.985,
+  "maa": null
+ },
+ {
+  "id": "houston",
+  "nimi": "Houston",
+  "lat": 29.763,
+  "lon": -95.383,
+  "maa": null
+ },
+ {
+  "id": "kapkaupunki",
+  "nimi": "Kapkaupunki",
+  "lat": -33.925,
+  "lon": 18.425,
+  "maa": null
+ },
+ {
+  "id": "nairobi",
+  "nimi": "Nairobi",
+  "lat": -1.283,
+  "lon": 36.817,
+  "maa": null
+ },
+ {
+  "id": "miami",
+  "nimi": "Miami",
+  "lat": 25.788,
+  "lon": -80.224,
+  "maa": null
+ },
+ {
+  "id": "halifax",
+  "nimi": "Halifax",
+  "lat": 44.646,
+  "lon": -63.574,
+  "maa": null
+ },
+ {
+  "id": "tanger",
+  "nimi": "Tanger",
+  "lat": 35.77,
+  "lon": -5.803,
+  "maa": null
+ },
+ {
+  "id": "marrakech",
+  "nimi": "Marrakech",
+  "lat": 31.635,
+  "lon": -8,
+  "maa": null
+ },
+ {
+  "id": "addisabeba",
+  "nimi": "Addis Abeba",
+  "lat": 9.036,
+  "lon": 38.752,
+  "maa": null
+ },
+ {
+  "id": "guatemala",
+  "nimi": "Guatemala",
+  "lat": 14.623,
+  "lon": -90.531,
+  "maa": null
+ },
+ {
+  "id": "lagos",
+  "nimi": "Lagos",
+  "lat": 6.441,
+  "lon": 3.418,
+  "maa": null
+ },
+ {
+  "id": "sansibar",
+  "nimi": "Sansibar",
+  "lat": -6.162,
+  "lon": 39.191,
+  "maa": null
+ },
+ {
+  "id": "fes",
+  "nimi": "Fès",
+  "lat": 34.043,
+  "lon": -5.003,
+  "maa": null
+ },
+ {
+  "id": "dakar",
+  "nimi": "Dakar",
+  "lat": 14.683,
+  "lon": -17.433,
+  "maa": null
+ },
+ {
+  "id": "salta",
+  "nimi": "Salta",
+  "lat": -24.788,
+  "lon": -65.411,
+  "maa": null
+ },
+ {
+  "id": "antofagasta",
+  "nimi": "Antofagasta",
+  "lat": -23.646,
+  "lon": -70.398,
+  "maa": null
+ },
+ {
+  "id": "nuuk",
+  "nimi": "Nuuk",
+  "lat": 64.167,
+  "lon": -51.733,
+  "maa": null
+ },
+ {
+  "id": "anchorage",
+  "nimi": "Anchorage",
+  "lat": 61.217,
+  "lon": -149.894,
+  "maa": null
+ },
+ {
+  "id": "puntaarenas",
+  "nimi": "Punta Arenas",
+  "lat": -53.163,
+  "lon": -70.908,
+  "maa": null
+ },
+ {
+  "id": "santacruz",
+  "nimi": "Santa Cruz",
+  "lat": -17.789,
+  "lon": -63.197,
+  "maa": null
+ },
+ {
+  "id": "monterrey",
+  "nimi": "Monterrey",
+  "lat": 25.684,
+  "lon": -100.318,
+  "maa": null
+ },
+ {
+  "id": "merida",
+  "nimi": "Mérida",
+  "lat": 20.97,
+  "lon": -89.62,
+  "maa": null
+ },
+ {
+  "id": "winnipeg",
+  "nimi": "Winnipeg",
+  "lat": 49.896,
+  "lon": -97.139,
+  "maa": null
+ },
+ {
+  "id": "stjohns",
+  "nimi": "St. John’s",
+  "lat": 47.577,
+  "lon": -52.701,
+  "maa": null
+ },
+ {
+  "id": "kumasi",
+  "nimi": "Kumasi",
+  "lat": 6.683,
+  "lon": -1.617,
+  "maa": null
+ },
+ {
+  "id": "kano",
+  "nimi": "Kano",
+  "lat": 12,
+  "lon": 8.517,
+  "maa": null
+ },
+ {
+  "id": "timbuktu",
+  "nimi": "Timbuktu",
+  "lat": 16.773,
+  "lon": -2.999,
+  "maa": null
+ },
+ {
+  "id": "lalibela",
+  "nimi": "Lalibela",
+  "lat": 12.036,
+  "lon": 39.046,
+  "maa": null
+ },
+ {
+  "id": "townsville",
+  "nimi": "Townsville",
+  "lat": -19.262,
+  "lon": 146.816,
+  "maa": null
+ },
+ {
+  "id": "iquitos",
+  "nimi": "Iquitos",
+  "lat": -3.733,
+  "lon": -73.25,
+  "maa": null
+ },
+ {
+  "id": "whitehorse",
+  "nimi": "Whitehorse",
+  "lat": 60.717,
+  "lon": -135.056,
+  "maa": null
+ },
+ {
+  "id": "yellowknife",
+  "nimi": "Yellowknife",
+  "lat": 62.442,
+  "lon": -114.397,
+  "maa": null
+ },
+ {
+  "id": "iqaluit",
+  "nimi": "Iqaluit",
+  "lat": 63.749,
+  "lon": -68.52,
+  "maa": null
+ },
+ {
+  "id": "santafe",
+  "nimi": "Santa Fe",
+  "lat": 35.667,
+  "lon": -105.967,
+  "maa": null
+ },
+ {
+  "id": "kilimandzaro",
+  "nimi": "Kilimandžaro",
+  "lat": -3.067,
+  "lon": 37.359,
+  "maa": null
+ },
+ {
+  "id": "viktorianputoukset",
+  "nimi": "Viktorian putoukset",
+  "lat": -17.925,
+  "lon": 25.858,
+  "maa": null
+ },
+ {
+  "id": "sitka",
+  "nimi": "Sitka",
+  "lat": 57.052,
+  "lon": -135.339,
+  "maa": null
+ },
+ {
+  "id": "bermuda",
+  "nimi": "Bermuda",
+  "lat": 32.32,
+  "lon": -64.74,
+  "maa": null
+ },
+ {
+  "id": "falkland",
+  "nimi": "Falkland",
+  "lat": -51.879,
+  "lon": -59.083,
+  "maa": null
+ },
+ {
+  "id": "caphorn",
+  "nimi": "Kap Horn",
+  "lat": -55.98,
+  "lon": -67.289,
+  "maa": null
+ },
+ {
+  "id": "namib",
+  "nimi": "Namib",
+  "lat": -23.6,
+  "lon": 15.626,
+  "maa": null
+ },
+ {
+  "id": "robinsoncrusoe",
+  "nimi": "Robinson Crusoe",
+  "lat": -33.641,
+  "lon": -78.841,
+  "maa": null
+ },
+ {
+  "id": "norfolk",
+  "nimi": "Norfolk",
+  "lat": -29.033,
+  "lon": 167.95,
+  "maa": null
+ },
+ {
+  "id": "angola",
+  "nimi": "Angola",
+  "lat": -12.001,
+  "lon": 16.001,
+  "maa": null
+ },
+ {
+  "id": "karthago",
+  "nimi": "Karthago",
+  "lat": 36.887,
+  "lon": 10.315,
+  "maa": null
+ },
+ {
+  "id": "tanganjika",
+  "nimi": "Tanganjika",
+  "lat": -7.361,
+  "lon": 29.126,
+  "maa": null
+ },
+ {
+  "id": "churchill",
+  "nimi": "Churchill",
+  "lat": 58.767,
+  "lon": -94.167,
+  "maa": null
+ },
+ {
+  "id": "sierraleone",
+  "nimi": "Sierra Leone",
+  "lat": 8.64,
+  "lon": -12.874,
+  "maa": null
+ },
+ {
+  "id": "appalakit",
+  "nimi": "Appalakit",
+  "lat": 37.501,
+  "lon": -80.5,
+  "maa": null
+ },
+ {
+  "id": "sthelena",
+  "nimi": "St. Helena",
+  "lat": -13.76,
+  "lon": -4.624,
+  "maa": null
+ },
+ {
+  "id": "kimberley",
+  "nimi": "Kimberley",
+  "lat": -28.738,
+  "lon": 24.764,
+  "maa": null
+ },
+ {
+  "id": "labrador",
+  "nimi": "Labrador",
+  "lat": 53.3,
+  "lon": -60.4,
+  "maa": null
+ },
+ {
+  "id": "kappalmas",
+  "nimi": "Kap Palmas",
+  "lat": 4.376,
+  "lon": -7.717,
+  "maa": null
+ },
+ {
+  "id": "boavista",
+  "nimi": "Boa Vista",
+  "lat": 2.82,
+  "lon": -60.672,
+  "maa": null
+ },
+ {
+  "id": "viktoria",
+  "nimi": "Viktoria Nyanza",
+  "lat": 0,
+  "lon": 31.751,
+  "maa": null
+ },
+ {
+  "id": "gao",
+  "nimi": "Gao",
+  "lat": 16.267,
+  "lon": -0.05,
+  "maa": null
+ },
+ {
+  "id": "kamerun",
+  "nimi": "Kamerun",
+  "lat": 4.05,
+  "lon": 9.7,
+  "maa": null
+ },
+ {
+  "id": "suakin",
+  "nimi": "Suakin",
+  "lat": 19.102,
+  "lon": 37.33,
+  "maa": null
+ },
+ {
+  "id": "ahaggar",
+  "nimi": "Ahaggar",
+  "lat": 21.44,
+  "lon": 3.401,
+  "maa": null
+ },
+ {
+  "id": "mosambik",
+  "nimi": "Mosambik",
+  "lat": -15.037,
+  "lon": 40.733,
+  "maa": null
+ },
+ {
+  "id": "darfur",
+  "nimi": "Darfur",
+  "lat": 14.559,
+  "lon": 23.126,
+  "maa": null
+ },
+ {
+  "id": "tshadjarvi",
+  "nimi": "Tšad-järvi",
+  "lat": 13.6,
+  "lon": 15.251,
+  "maa": null
+ },
+ {
+  "id": "rashafun",
+  "nimi": "Ras Hafun",
+  "lat": 10.419,
+  "lon": 51.275,
+  "maa": null
+ },
+ {
+  "id": "cayenne",
+  "nimi": "Cayenne",
+  "lat": 4.939,
+  "lon": -52.332,
+  "maa": null
+ },
+ {
+  "id": "orjarannikko",
+  "nimi": "Orjarannikko",
+  "lat": 8.321,
+  "lon": 3.851,
+  "maa": null
+ },
+ {
+  "id": "bahrelghazal",
+  "nimi": "Bahr el Ghazal",
+  "lat": 7.999,
+  "lon": 27.026,
+  "maa": null
+ },
+ {
+  "id": "sepik",
+  "nimi": "Sepik",
+  "lat": -4.5,
+  "lon": 143.201,
+  "maa": null
+ },
+ {
+  "id": "broome",
+  "nimi": "Broome",
+  "lat": -17.962,
+  "lon": 122.236,
+  "maa": null
+ },
+ {
+  "id": "santarem",
+  "nimi": "Santarém",
+  "lat": -2.443,
+  "lon": -54.708,
+  "maa": null
+ },
+ {
+  "id": "murzuk",
+  "nimi": "Murzuk",
+  "lat": 25.916,
+  "lon": 13.918,
+  "maa": null
+ },
+ {
+  "id": "nullarbor",
+  "nimi": "Nullarbor",
+  "lat": -31.4,
+  "lon": 130.001,
+  "maa": null
+ },
+ {
+  "id": "geraldton",
+  "nimi": "Geraldton",
+  "lat": -28.779,
+  "lon": 114.614,
+  "maa": null
+ },
+ {
+  "id": "joaopessoa",
+  "nimi": "João Pessoa",
+  "lat": -7.12,
+  "lon": -34.88,
+  "maa": null
+ },
+ {
+  "id": "bananal",
+  "nimi": "Ilha do Bananal",
+  "lat": -10.801,
+  "lon": -50.161,
+  "maa": null
+ },
+ {
+  "id": "alkufra",
+  "nimi": "Al Kufra",
+  "lat": 24.183,
+  "lon": 23.283,
+  "maa": null
+ },
+ {
+  "id": "macapa",
+  "nimi": "Macapá",
+  "lat": 0.034,
+  "lon": -51.066,
+  "maa": null
+ },
+ {
+  "id": "campogrande",
+  "nimi": "Campo Grande",
+  "lat": -20.469,
+  "lon": -54.622,
+  "maa": null
+ },
+ {
+  "id": "exmouth",
+  "nimi": "Exmouth",
+  "lat": -21.933,
+  "lon": 114.128,
+  "maa": null
+ },
+ {
+  "id": "sanambrosio",
+  "nimi": "San Ambrosio",
+  "lat": -26.32,
+  "lon": -80,
+  "maa": null
+ },
+ {
+  "id": "nome",
+  "nimi": "Nome",
+  "lat": 64.504,
+  "lon": -165.399,
+  "maa": null
+ },
+ {
+  "id": "portovelho",
+  "nimi": "Porto Velho",
+  "lat": -8.762,
+  "lon": -63.904,
+  "maa": null
+ },
+ {
+  "id": "kalgoorlie",
+  "nimi": "Kalgoorlie",
+  "lat": -30.749,
+  "lon": 121.466,
+  "maa": null
+ },
+ {
+  "id": "birdsville",
+  "nimi": "Birdsville",
+  "lat": -25.899,
+  "lon": 139.352,
+  "maa": null
+ },
+ {
+  "id": "mountisa",
+  "nimi": "Mount Isa",
+  "lat": -20.725,
+  "lon": 139.495,
+  "maa": null
+ },
+ {
+  "id": "cooberpedy",
+  "nimi": "Coober Pedy",
+  "lat": -29.014,
+  "lon": 134.755,
+  "maa": null
+ },
+ {
+  "id": "managua",
+  "nimi": "Managua",
+  "lat": 12.136,
+  "lon": -86.251,
+  "maa": null
+ },
+ {
+  "id": "saoluis",
+  "nimi": "São Luís",
+  "lat": -2.53,
+  "lon": -44.303,
+  "maa": null
+ },
+ {
+  "id": "sanjuan",
+  "nimi": "San Juan",
+  "lat": 18.465,
+  "lon": -66.117,
+  "maa": null
+ },
+ {
+  "id": "noumea",
+  "nimi": "Nouméa",
+  "lat": -22.267,
+  "lon": 166.45,
+  "maa": null
+ },
+ {
+  "id": "puertomontt",
+  "nimi": "Puerto Montt",
+  "lat": -41.472,
+  "lon": -72.94,
+  "maa": null
+ },
+ {
+  "id": "yellowstone",
+  "nimi": "Yellowstone",
+  "lat": 44.6,
+  "lon": -110.5,
+  "maa": null
+ },
+ {
+  "id": "grandcanyon",
+  "nimi": "Grand Canyon",
+  "lat": 36.097,
+  "lon": -112.095,
+  "maa": null
+ },
+ {
+  "id": "uluru",
+  "nimi": "Uluru",
+  "lat": -25.345,
+  "lon": 131.036,
+  "maa": null
+ },
+ {
+  "id": "iguazu",
+  "nimi": "Iguazú",
+  "lat": -25.695,
+  "lon": -54.437,
+  "maa": null
+ },
+ {
+  "id": "titicaca",
+  "nimi": "Titicaca",
+  "lat": -15.825,
+  "lon": -69.325,
+  "maa": null
+ },
+ {
+  "id": "mountrushmore",
+  "nimi": "Mount Rushmore",
+  "lat": 43.879,
+  "lon": -103.459,
+  "maa": null
+ },
+ {
+  "id": "hawaii",
+  "nimi": "Havaiji",
+  "lat": 20,
+  "lon": -156.301,
+  "maa": null
+ },
+ {
+  "id": "bali",
+  "nimi": "Bali",
+  "lat": -8.5,
+  "lon": 115.1,
+  "maa": null
+ },
+ {
+  "id": "milfordsound",
+  "nimi": "Milford Sound",
+  "lat": -44.617,
+  "lon": 167.867,
+  "maa": null
+ },
+ {
+  "id": "ouropreto",
+  "nimi": "Ouro Preto",
+  "lat": -20.385,
+  "lon": -43.504,
+  "maa": null
+ },
+ {
+  "id": "galapagos",
+  "nimi": "Galápagos",
+  "lat": -0.741,
+  "lon": -90.301,
+  "maa": null
+ },
+ {
+  "id": "kongo",
+  "nimi": "Kongo",
+  "lat": -4.8,
+  "lon": 13.001,
+  "maa": null
+ },
+ {
+  "id": "machupicchu",
+  "nimi": "Machu Picchu",
+  "lat": -13.163,
+  "lon": -72.546,
+  "maa": null
+ },
+ {
+  "id": "madagaskar",
+  "nimi": "Madagaskar",
+  "lat": -19.426,
+  "lon": 48.902,
+  "maa": null
+ },
+ {
+  "id": "sahara",
+  "nimi": "Sahara",
+  "lat": 26.561,
+  "lon": 8.501,
+  "maa": null
+ }
+]
