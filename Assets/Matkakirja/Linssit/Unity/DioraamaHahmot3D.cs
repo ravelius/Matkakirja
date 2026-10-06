@@ -527,6 +527,9 @@ namespace Matkakirja.Natiivi
             bool reitilla = e.Hahmo.Reitti != null && (silmukka == "kavely" || silmukka == "kanto");
             double kavely = reitilla ? ReittiPaikkaJaSuunta(e, t).kavely : 1;
             string tavoite = reitilla && kavely < 0.5 ? "idle" : silmukka;
+            // Kanto-reitin tauko (Linnanrakentaja 6.10.): kannettava esine näkyy vain kantoleikkeissä, joten tauolla "kanto_idle",
+            // jos se on; puhuessa perus+"_puhe" alla (kanto_puhe) kuten istuu_puhe.
+            if (tavoite == "idle" && silmukka == "kanto" && e.Malli.Glb.Animaatio(Leike(m3, "kanto_idle")) != null) tavoite = "kanto_idle";
             // Istuva tai polvistuva hahmo puhuu asennossaan (Päätoimittaja 5.10. 22.0x: kappalainen polvistuu jakkaralle, mutta
             // puhuessaan seisoi jakkaran PÄÄLLÄ): perussilmukalle "<s>_puhe"-leike (esim. istuu_puhe) puheen ja eleen tilalle.
             string perus = e.Hahmo.Silmukka;
@@ -536,7 +539,7 @@ namespace Matkakirja.Natiivi
             string leike = Leike(m3, tavoite);
             bool ensimmainen = e.Sekoitin.Nykyinen == null;
             // Idle ↔ puhe: pidempi häivytys (omistaja 5.10.: siirtymät "outoja"), muut ennallaan.
-            bool puheTaiEle = tavoite != "idle" && tavoite != "kavely" && tavoite != "tyo" && tavoite != "kanto";
+            bool puheTaiEle = tavoite != "idle" && tavoite != "kavely" && tavoite != "tyo" && tavoite != "kanto" && tavoite != "kanto_idle";
             float haivytys = ensimmainen ? 0f : puheTaiEle || e.Sekoitin.Nykyinen == Leike(m3, "puhe") ? PuheHaivytysS : HaivytysS;
             // Ele kertaliikkeenä (Linnanrakentaja 5.10.: vuorot[].ele → glb-leike "ele_<ele>", 1,2–3 s): vuoron alussa
             // puheen päälle häivytyksellä ja ennen leikkeen loppua takaisin puheeseen; ilman eleleikettä puhe (kuten ennen).
