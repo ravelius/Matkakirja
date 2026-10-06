@@ -17,7 +17,7 @@
  * Tulos: <ulos>/opas/kuvat-v1/kuvat.json + LAHTEET.md (vie-paketti.sh, Julkaisija).
  */
 import { createHash } from 'node:crypto';
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { kokoaAineisto } from './tee-opas-aineisto.mjs';
@@ -263,6 +263,19 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
       + `- ${KUVALISTA_POLKU}: ${kohteita} kohdetta ja ${Object.keys(tulos.kaupungit).length} kaupunkia, ${kuvia} kuvaa. Pelin kuvat ovat peilissä (media.matkakirja.app/kuvat/…).\n`
       + `- ${dirname(KUVALISTA_POLKU)}/kuvat/: Sisältökirjurin kohdelistojen kuvat (Wikimedia Commons, 1 280 px), tekijä, lisenssi ja `
       + `lähde kuvakohtaisesti listassa. Lukitut kaupungit: ${Object.entries(tulos.kaupungit).filter(([, k]) => (k.kohteet?.length ?? 0) >= 6).map(([id]) => id).join(', ') || '–'}.\n`);
+  }
+  if (ulos) {
+    // vie-paketti.sh vaatii SHA256SUMS:n (suhteelliset polut, kaikki paitsi LAHTEET.md).
+    const rivit = [];
+    const kay = (kansio) => {
+      for (const n of readdirSync(join(ulos, kansio), { withFileTypes: true })) {
+        const suht = kansio ? `${kansio}/${n.name}` : n.name;
+        if (n.isDirectory()) kay(suht);
+        else if (!['LAHTEET.md', 'SHA256SUMS', '.DS_Store'].includes(n.name)) rivit.push(`${createHash('sha256').update(readFileSync(join(ulos, suht))).digest('hex')}  ${suht}`);
+      }
+    };
+    kay('');
+    writeFileSync(join(ulos, 'SHA256SUMS'), `${rivit.sort((a, b) => a.split('  ')[1].localeCompare(b.split('  ')[1])).join('\n')}\n`);
   }
   console.log(`kirjoitettu ${polku} (${(JSON.stringify(tulos).length / 1e6).toFixed(2)} Mt)`);
 }
