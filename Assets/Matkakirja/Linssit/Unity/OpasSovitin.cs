@@ -1087,7 +1087,8 @@ namespace Matkakirja.Natiivi
         {
             string a = PisteAvain(lat, lon);
             var pinta = kaupunki.Pinta;
-            if (pinta == null || pisteKorkeudet.ContainsKey(a) || !pisteNaytteet.Add(a)) yield break;
+            // Vapaa lento (LS1 6.10.): enintään 2 näytettä kesken, muut pyydetään seuraavalla kierroksella.
+            if (pinta == null || pisteKorkeudet.ContainsKey(a) || (silmukka != null && silmukka.VapaaTila && pisteNaytteet.Count >= 2) || !pisteNaytteet.Add(a)) yield break;
             float t0 = Time.realtimeSinceStartup;
             var tehtava = pinta.SampleHeightMostDetailed(new double3(lon, lat, 0));
             while (!tehtava.IsCompleted) yield return null;
@@ -1099,7 +1100,8 @@ namespace Matkakirja.Natiivi
             double vara = viimeMaa.h is double vh && KierrosLento.EtaisyysM(viimeMaa.lat, viimeMaa.lon, lat, lon) < 15000 ? vh : OpasSilmukka.MaaArvioM;
             pisteKorkeudet[a] = ok ? tulos.longitudeLatitudeHeightPositions[0].z : vara;
             if (ok) viimeMaa = (lat, lon, pisteKorkeudet[a]);
-            o.Kirjaa($"opas: maa ({lat:F4}, {lon:F4}) {(ok ? "" : "näyte epäonnistui, lähin tunnettu ")}{pisteKorkeudet[a]:F0} m, {Time.realtimeSinceStartup - t0:F1} s");
+            if (silmukka == null || !silmukka.VapaaTila)   // vapaa lento näytteistää useita kertoja sekunnissa: ei lokiin
+                o.Kirjaa($"opas: maa ({lat:F4}, {lon:F4}) {(ok ? "" : "näyte epäonnistui, lähin tunnettu ")}{pisteKorkeudet[a]:F0} m, {Time.realtimeSinceStartup - t0:F1} s");
         }
 
         IEnumerator LataaAani(string url)

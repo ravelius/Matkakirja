@@ -757,6 +757,7 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Vapaa lento kierroksen ■ jälkeen (VapaaTila): kamera tapeilla ilman kiertokeskipistettä.</summary>
         public readonly OpasVapaaLento Vapaa = new OpasVapaaLento();
         bool vapaaKaynnissa;
+        double vapaaNayteS;
 
         /// <summary>Vapaassa tilassa asento vapaasta lennosta (aloitus nykyisestä asennosta); muuten false.</summary>
         bool VapaaAsento(double dt)
@@ -764,6 +765,14 @@ namespace Matkakirja.Linssit.Kierros
             if (!VapaaTila) { vapaaKaynnissa = false; return false; }
             if (!vapaaKaynnissa) { Vapaa.Aloita(Asento, MaaPisteessa); vapaaKaynnissa = true; }
             Asento = Vapaa.Paivita(dt, VapaaTapit.vx, VapaaTapit.vy, VapaaTapit.ox, VapaaTapit.oy, MaaPisteessa);
+            // 3D-pinnan näytteet (rakennukset mukana) kamerasta ja liikkeen suunnasta 4 kertaa sekunnissa (sovitin välimuistittaa ~11 m:n ruutuun).
+            vapaaNayteS -= dt;
+            if (vapaaNayteS <= 0)
+            {
+                vapaaNayteS = 0.25;
+                MaaTarvitaan?.Invoke(Vapaa.Lat, Vapaa.Lon);
+                var (el, eo) = Vapaa.Ennakko; MaaTarvitaan?.Invoke(el, eo);
+            }
             return true;
         }
         public bool PelaajaOhjaa;

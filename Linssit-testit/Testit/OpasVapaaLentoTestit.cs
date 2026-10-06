@@ -57,6 +57,24 @@ namespace Matkakirja.Linssit.Testit
         }
 
         [Testi]
+        static void RakennusNostaaEnnakolta()
+        {
+            // 150 m korkea rakennus 400–600 m kameran pohjoispuolella (pinta 200 + 150): matala lento pohjoiseen nousee yli ajoissa.
+            var l = Alussa(0);
+            Aja(l, 10, 0, 0, 0, -1);   // alas minimikorkeuteen (240 m)
+            double lat0 = l.Lat;
+            Func<double, double, double> pinta = (la, lo) => { double m = (la - lat0) * 111320; return m > 400 && m < 600 ? 350 : 200; };
+            double minVali = double.MaxValue;
+            for (double t = 0; t < 30; t += 1 / 60.0)
+            {
+                l.Paivita(1 / 60.0, 0, 1, 0, 0, pinta);
+                double m = (l.Lat - lat0) * 111320;
+                if (m > 400 && m < 600) minVali = Math.Min(minVali, l.KorkeusAbsM - 350);
+            }
+            Oleta.Tosi(minVali >= OpasVapaaLento.MinKorkeusM * 0.5, $"rakennuksen kohdalla vähintään 20 m katon yllä: {minVali:0} m");
+        }
+
+        [Testi]
         static void MaastoEiLapi()
         {
             var l = Alussa(0);
