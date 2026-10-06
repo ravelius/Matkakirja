@@ -17,7 +17,16 @@ Avoimet työt:
    Vauhtirajaus opas-vapaa-lataus 5683ffaf jäi pois junasta. Ei uutta työtä tähän.
 4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
 
-## TILA 6.10. 23.3x (uusin)
+## TILA 7.10. 00.3x (uusin)
+- Helsinki-olkapääpari: ajo147 korjattu kiinteäksi kelloksi (kohdehetki kerran per paikka) → pysyvä proto-3d/tyokalut/linssiseppa-ajot/ajo-iss-kamera.sh.
+  155b-appi oli poistunut → ketju scratchpad(b02a8297)/ketju-hp.sh (perl setsid) kääntää gibs-pehmean ja ottaa parin o0/o1
+  (KELLO_helsinki 2026-06-21T17:00, suunta 170, 2017 px). Luvat: touch kaannos-lupa-hp (KÄÄNNÖS NYT ~00.28) ja simu-lupa-hp (SIMU NYT ~01.30).
+  Loki lokit/linssiseppa2-kaannos-hp.log (LUKKO VAPAA / AJO VALMIS), kuvat lokit/linssiseppa2-helsinki-olkapaa-<SHA>.
+- 3D-KATTAVUUS (Päätoimittaja 00.2x, LS1:ltä): työkalu scratchpad(b02a8297)/kattavuus3d/mittaa.py (Cesium ion → Google 3D Tiles,
+  lehtilaatan Draco-verkko). Mittari = kolmioiden mediaanireuna 25 m säteellä: tarkka ≤ 2 m, karkea > 4 m. Pilotti 10 lähetetty.
+  Ajo 95 kohdetta (kaikki.json → kaikki/). Seuraavaksi taulukko + kohdistuslista + 1 simustill per luokka.
+
+## TILA 6.10. 23.3x
 - KUITATTU junaan 155: gibs-pehmea 640eb7b4 (merisumun pinnanmuoto 5adaf326 + valotuksen olkapää 8f2db691 + A/B 640eb7b4), worktree wt/proto-linssiseppa2-pilvet.
   - Saman näkymän pari kiinteällä kellolla tarvitaan vasta omistajan Helsinki-julisteeseen (ajo147 laskee kellon kuvakohtaisesti: korjaa ensin).
 - POIS: opas-vapaa-lataus 5683ffaf (vauhtirajaus ei poista sumeutta). Sumeus kirjataan suoratoiston normaaliksi viiveeksi: +5 s:ssa tarkentuu. Haara jää, worktree poistettu.
