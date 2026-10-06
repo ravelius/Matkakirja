@@ -251,7 +251,7 @@ namespace Matkakirja.Natiivi
             // Varapolku (Päätoimittaja 6.10. 00.2x, junan 146 VIE-ehto): valikko avautuu vain, kun täkyjä on; jos ne eivät tule
             // (GET /opas/kohteet puuttuu tai epäonnistuu) 4 s:ssa, opas avautuu kuten ennen ilman valikkoa.
             // Linssisepän avausvalikko (juna 149): opas auki ilman paikkaa ja ilman karttaa → aloitus heti (suosikit täyttyvät perässä).
-            if (nakyy && Avausvalikko) { aloitus = true; Avaa(Nakyma.Takyt); }
+            if (nakyy && OpasSovitin.Avausvalikko) AvaaAloitus();
             else if (nakyy && OpasSovitin.TakyAvaus)
             {
                 float raja = Time.realtimeSinceStartup + 4f;
@@ -259,7 +259,7 @@ namespace Matkakirja.Natiivi
                 odotus = Juuri.schedule.Execute(() =>
                 {
                     if (!this.nakyy || Auki) { odotus.Pause(); return; }
-                    if (OnTakyja) { odotus.Pause(); aloitus = true; Avaa(Nakyma.Takyt); return; }
+                    if (OnTakyja || OpasSovitin.Avausvalikko) { odotus.Pause(); AvaaAloitus(); return; }
                     if (OpasSovitin.Takyt != null || Time.realtimeSinceStartup > raja)
                     {
                         odotus.Pause();
@@ -1007,14 +1007,20 @@ namespace Matkakirja.Natiivi
         /// </summary>
         static bool OnTakyja => OpasSovitin.Takyt != null && OpasSovitin.Takyt.Count > 0;
 
-        /// <summary>OpasSovitin.Avausvalikko (Linssiseppä, juna 149) heijastuksella: opas auki, paikkaa ei valittu, karttaa ei ladata.</summary>
-        static bool Avausvalikko
+
+        /// <summary>Aloitus koko ruutuna; Linssisepän varapolku (ei täkyjä → vanha alku kartalle) sulkee sen ilman valintaa.</summary>
+        void AvaaAloitus()
         {
-            get
+            aloitus = true;
+            Avaa(Nakyma.Takyt);
+            bool avausvalikolla = OpasSovitin.Avausvalikko;
+            IVisualElementScheduledItem vahti = null;
+            vahti = Juuri.schedule.Execute(() =>
             {
-                try { return typeof(OpasSovitin).GetProperty("Avausvalikko", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) is bool b && b; }
-                catch { return false; }
-            }
+                if (!nakyy || !aloitus || !Auki) { vahti.Pause(); return; }
+                avausvalikolla |= OpasSovitin.Avausvalikko;
+                if (avausvalikolla && !OpasSovitin.Avausvalikko) { vahti.Pause(); Debug.Log("MATKAKIRJA opas: avausvalikko päättyi ilman valintaa, aloitus kiinni"); Sulje(); }
+            }).Every(250);
         }
 
         /// <summary>Aloituksen teema ja koko ruutu päälle/pois (harmaa lasi ↔ tumma, ponnahdusvalikko ↔ koko ruutu).</summary>
