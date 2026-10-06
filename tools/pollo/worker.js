@@ -37,6 +37,7 @@ import {
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import { OPAS_AINEISTOT } from './aineistot.js';
+import { oppaanEsittely, valmisKohde } from './opas-esittely.js';
 import { vuosiluvutSanoiksi } from './puhesanat.js';
 import { kuvalista, kohteenKuvat, kaupunginKohteet, listanKuvin, kuvaKaupunkitilassa, LUKITTU_VAHINTAAN } from './opas-kuvat.js';
 import {
@@ -3431,6 +3432,23 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   let kuvaLupaus = null;
   let kuvaAlku = 0;
   let p18Lupaus = null;
+  // ESIGENEROITU ESITTELY (omistaja 7.10.): kierroksen pysähdys tai listan kohde nimellä → valmis teksti ilman mallikutsua.
+  const valmisPaikka = seuraava?.paikka ?? (listatila && p.toive ? lukitut.find((x) => samaNimi(x.nimi, p.toive)) ?? null : null);
+  const valmis = valmisPaikka && listatila ? valmisKohde(await oppaanEsittely(env, p.kaupunki), valmisPaikka.id) : null;
+  if (valmis) {
+    const paikka = { ...valmisPaikka, lahde: valmisPaikka.lahde ?? 'kohdelista' };
+    const nimi = valmisPaikka.nimi;
+    tuloksenPaikka = { nimi, koko_m: valmis.koko_m, ...paikka };
+    tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi, alarivi: valmis.kuvaus ?? null, lat: paikka.lat, lon: paikka.lon,
+      koko_m: valmis.koko_m ?? paikka.koko_m ?? 150, ...(valmis.korkeus_m ? { korkeus_m: valmis.korkeus_m } : {}),
+      ...(valmis.luokka ? { luokka: valmis.luokka } : {}), teksti: (p.lyhyt && valmis.lyhyt) || valmis.teksti, valmis: true,
+      wiki: paikka.wiki ?? null, kuva: null, vaihtoehdot: valmis.syventava ? [valmis.syventava] : [], koordinaatit: paikka.lahde,
+      ...(seuraava ? { kierros: { numero: seuraava.numero, maara: seuraava.maara } } : {}),
+      kuvat: kohteenKuvat(kuvaLista, paikka.id) };
+    kuvaAlku = Date.now();
+    korostusLupaus = paikanKorostus(fetch, { lat: paikka.lat, lon: paikka.lon, koko_m: tulos.koko_m, luokka: valmis.luokka,
+      reitti: [], nimi, nimet: [nimi], id: paikka.id }, sijainti, osm);
+  }
   try {
     for (let yritys = 0; yritys < 2 && !tulos; yritys += 1) {
       const vastaus = jasennaOpas((await kysyMallitiedot(env, kutsu)).teksti, seuraava?.paikka.nimi ?? null);
