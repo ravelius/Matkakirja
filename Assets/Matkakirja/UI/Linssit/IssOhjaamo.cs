@@ -515,6 +515,8 @@ namespace Matkakirja.Natiivi
             AseteleObjektiivi(s);
             Aseta(kaasu, a.Kaasu, s);
             Aseta(rumpu, a.Rumpu, s);
+            // Ohjaamo v3 (omistaja 6.10.: rumpu pois): ilman rumpu-ankkuria numerorumpua ei näytetä.
+            rumpu.style.display = a.Rumpu.width > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             if (a.RumpuKolo.width > 0 && rumpuKoloKuva != null) Aseta(rumpuKoloKuva, a.RumpuKolo, s);
             // Laajennus: lcd-iso-kuvan laatikko, sisältö lasin sisäalueelle (lcdIso) täytteenä.
             var iso = a.LcdIsoKuva.width > 0 ? a.LcdIsoKuva : a.LcdIso;
