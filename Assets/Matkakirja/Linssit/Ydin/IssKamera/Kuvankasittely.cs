@@ -117,6 +117,23 @@ namespace Matkakirja.Linssit.IssKamera
         /// kirkkain kohta alle 100 %): suurin kanava yli polven puristetaan tanh-käyrällä ja kaikki kanavat samassa suhteessa, jolloin
         /// sävy säilyy (sininen kaari ei valkene). Ajetaan viimeisenä S-käyrän jälkeen.
         /// </summary>
+        /// <summary>
+        /// Valotus kertoimella k pehmeällä olkapäällä (juliste 59dc1f55, Päätoimittaja 6.10. ilta: Suomenlahden pilvikansi tasainen
+        /// valkoinen läntti): suora kerto leikkasi kertoimella 1,35 kaikki ≥ 189 arvot 255:een ennen kehitystä, joten pilven
+        /// pinnanmuoto katosi. Kirkkain kanava m·k yli polven puristuu tanh-käyrällä kohti 255:tä (sävy säilyy, järjestys säilyy).
+        /// </summary>
+        public static void Valota(byte[] rgba, float k, float polvi = 160f)
+        {
+            float vara = 255f - polvi;
+            for (int o = 0; o < rgba.Length; o += 4)
+            {
+                float m = Math.Max(rgba[o], Math.Max(rgba[o + 1], rgba[o + 2]));
+                if (m <= 0) continue;
+                float mk = m * k, f = mk <= polvi ? k : (polvi + vara * (float)Math.Tanh((mk - polvi) / vara)) / m;
+                rgba[o] = Tavu(rgba[o] * f); rgba[o + 1] = Tavu(rgba[o + 1] * f); rgba[o + 2] = Tavu(rgba[o + 2] * f);
+            }
+        }
+
         public static void ValojenKatto(byte[] rgba, float polvi = 200f, float katto = 250f)
         {
             float vara = katto - polvi;

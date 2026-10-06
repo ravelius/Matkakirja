@@ -1152,17 +1152,19 @@ namespace Matkakirja.Natiivi
         {
             var px = kuva.GetPixelData<Color32>(0);
             double summa = 0; int n = 0;
-            for (int i = 0; i < px.Length; i += 37) { var c = px[i]; summa += 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b; n++; }
+            int tayt = 0;   // jo renderöinnissä leikkautuneet (kirkkain kanava 255): olkapää ei palauta niitä
+            for (int i = 0; i < px.Length; i += 37)
+            {
+                var c = px[i]; summa += 0.2126 * c.r + 0.7152 * c.g + 0.0722 * c.b; n++;
+                if (Math.Max(c.r, Math.Max(c.g, c.b)) >= 254) tayt++;
+            }
             double keski = n > 0 ? summa / n / 255.0 : 1;
             float k = (float)Math.Max(1.0, Math.Min(ValotusMax, ValotusTavoite / Math.Max(0.01, keski)));
-            Loki($"valotus: keskikirkkaus {keski:0.000}, kerroin {k:0.00}");
+            Loki($"valotus: keskikirkkaus {keski:0.000}, kerroin {k:0.00}, renderissä leikattu {100.0 * tayt / Math.Max(1, n):0.0} %");
             if (k <= 1.01f) return;
-            for (int i = 0; i < px.Length; i++)
-            {
-                var c = px[i];
-                px[i] = new Color32((byte)Math.Min(255, c.r * k + 0.5f), (byte)Math.Min(255, c.g * k + 0.5f), (byte)Math.Min(255, c.b * k + 0.5f), c.a);
-            }
-            kuva.Apply(false);
+            var data = kuva.GetPixelData<byte>(0); var t = data.ToArray();
+            Kuvankasittely.Valota(t, k);   // pehmeä olkapää: pilvikannen sävyt eivät leikkaudu 255:een
+            data.CopyFrom(t); kuva.Apply(false);
         }
 
         /// <summary>Range-haut enintään Rinnakkain kerrallaan, purku säikeissä; tila: [0] saatu, [1] virheet.</summary>
