@@ -30,10 +30,11 @@ namespace Matkakirja.Linssit.Kierros
 
     public static class KaupunkiValo
     {
+        // Päätoimittaja 6.10. 19.0x (stillit): aamu ja päivä erottumattomat → aamu selvästi kultaisemmaksi.
         public static readonly Savy Aamu = new Savy
         {
-            TaivasYla = new[] { 0.42, 0.58, 0.82 }, Horisontti = new[] { 0.98, 0.84, 0.70 }, Suodin = new[] { 1.0, 0.96, 0.90 },
-            Lampotila = 12, Savytys = 3, Valotus = 0.05, Kontrasti = 6, Saturaatio = 6,
+            TaivasYla = new[] { 0.45, 0.58, 0.80 }, Horisontti = new[] { 1.0, 0.80, 0.58 }, Suodin = new[] { 1.0, 0.90, 0.74 },
+            Lampotila = 30, Savytys = 6, Valotus = 0.08, Kontrasti = 10, Saturaatio = 12,
         };
         public static readonly Savy Paiva = new Savy
         {
@@ -45,10 +46,12 @@ namespace Matkakirja.Linssit.Kierros
             TaivasYla = new[] { 0.26, 0.30, 0.55 }, Horisontti = new[] { 1.0, 0.64, 0.40 }, Suodin = new[] { 1.0, 0.88, 0.76 },
             Lampotila = 25, Savytys = 5, Valotus = -0.15, Kontrasti = 10, Saturaatio = 10,
         };
+        // YÖ = HIMMEÄ ILTA (Päätoimittaja 6.10. 19.0x: sininen yö näytti "siniseltä päivältä" ilman kaupungin valoja): oikea yö
+        // vasta Black Marble- tai ikkunavalojen kanssa; siihen asti illan sävy himmeämpänä ja vähemmän värikkäänä.
         public static readonly Savy Yo = new Savy
         {
-            TaivasYla = new[] { 0.02, 0.03, 0.08 }, Horisontti = new[] { 0.08, 0.12, 0.24 }, Suodin = new[] { 0.60, 0.70, 1.0 },
-            Lampotila = -30, Savytys = 0, Valotus = -1.3, Kontrasti = 12, Saturaatio = -25,
+            TaivasYla = new[] { 0.14, 0.12, 0.22 }, Horisontti = new[] { 0.62, 0.38, 0.26 }, Suodin = new[] { 1.0, 0.84, 0.70 },
+            Lampotila = 22, Savytys = 5, Valotus = -0.7, Kontrasti = 10, Saturaatio = 0,
         };
 
         /// <summary>Avainkuvat (paikallinen aurinkotunti → sävy); väleissä lineaarinen liuku. Yö 21–5, aamu 6.30, päivä 9–16.30, ilta 19.</summary>

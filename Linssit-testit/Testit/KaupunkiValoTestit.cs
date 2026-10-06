@@ -31,7 +31,7 @@ namespace Matkakirja.Linssit.Testit
         [Testi] static void SavyKorkeudesta()
         {
             Oleta.Tosi(KaupunkiValo.Korkeudelle(-20, true).Valotus == KaupunkiValo.Yo.Valotus, "yö");
-            Oleta.Tosi(KaupunkiValo.Korkeudelle(2, true).Lampotila == KaupunkiValo.Aamu.Lampotila, "aamuhämärä");
+            Oleta.Tosi(KaupunkiValo.Korkeudelle(2, true).Lampotila == KaupunkiValo.Aamu.Lampotila && KaupunkiValo.Aamu.Lampotila >= 25, "aamuhämärä kultainen");
             Oleta.Tosi(KaupunkiValo.Korkeudelle(2, false).Lampotila == KaupunkiValo.Ilta.Lampotila, "iltahämärä");
             Oleta.Tosi(KaupunkiValo.Korkeudelle(45, false).Valotus == 0, "päivä neutraali");
             var v = KaupunkiValo.Korkeudelle(13, false);
@@ -40,7 +40,7 @@ namespace Matkakirja.Linssit.Testit
 
         [Testi] static void KellonAvainkuvat()
         {
-            Oleta.Tosi(KaupunkiValo.Tunnille(12).Lampotila == 0 && KaupunkiValo.Tunnille(2).Valotus < -1, "päivä ja yö");
+            Oleta.Tosi(KaupunkiValo.Tunnille(12).Lampotila == 0 && KaupunkiValo.Tunnille(2).Valotus < -0.5 && KaupunkiValo.Tunnille(2).Lampotila > 0, "päivä ja yö (himmeä ilta)");
             Oleta.Tosi(Math.Abs(KaupunkiValo.Tunnille(24).Valotus - KaupunkiValo.Tunnille(0).Valotus) < 1e-9, "keskiyö jatkuva");
             var h = KaupunkiValo.Taivas(KaupunkiValo.Paiva, 0); var z = KaupunkiValo.Taivas(KaupunkiValo.Paiva, 1);
             Oleta.Tosi(h[2] == KaupunkiValo.Paiva.Horisontti[2] && z[2] == KaupunkiValo.Paiva.TaivasYla[2], "taivaan päät");
