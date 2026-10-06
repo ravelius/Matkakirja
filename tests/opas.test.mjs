@@ -43,7 +43,7 @@ test('pyyntö ja kehote: nahdyt, edellinen kappale, toive rajattu; kehotteessa o
   assert.match(viesti, /Jo kerrotut paikat.*Tivoli; Nyhavn/);
   assert.match(viesti, /Edellinen kappale: Edellinen\./);
   assert.doesNotMatch(OPAS_KEHOTE, /tiivistelm|ehdokka/i, 'ei Wikipedian tekstiä eikä ehdokaslistaa');
-  for (const sana of [/Hans Christian/, /NÄKYY ILMASTA/, /tuhatyhdeksänsataayhdeksänkymmentä jälkeen/, /PELIN AINEISTO/, /kappaleeseen kuuluu aina yksi lyhyt viittaus/, /huonenumeroita/, /tuhatkuusisataluvulla/, /TARKAT VUOSILUVUT JA MUUT TARKAT LUVUT/, /aueta yksinään/, /kokenut suomalainen opas/, /ristiriidassa/]) {
+  for (const sana of [/Hans Christian/, /NÄKYY ILMASTA/, /vuoden 1990 jälkeen/, /PELIN AINEISTO/, /kappaleeseen kuuluu aina yksi lyhyt viittaus/, /huonenumeroita/, /1600-luvulla/, /TARKAT VUOSILUVUT JA MUUT TARKAT LUVUT/, /aueta yksinään/, /kokenut suomalainen opas/, /ristiriidassa/]) {
     assert.match(OPAS_KEHOTE, sana);
   }
 });
