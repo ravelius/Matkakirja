@@ -181,6 +181,20 @@ if (gpu.varattu) {
   console.log('GPU vapaa.');
 }
 
+/*
+ * ÄÄNIRIVIT PÄIVÄLLÄ POIS (Päätoimittaja 5.10.2026): omistaja kuuli ISS-kuvaselitteen luennan Macin ulostulosta
+ * klo 12.5x ja 13.1x, kun savuke-astro-pulu ja savuke-astro-aani pyörivät, vaikka Chromiumissa oli --mute-audio.
+ * Klo 07–22 Helsingin aikaa ääntä soittavat rivit (nimessä aani, pulu, musiikin, lukija, luent tai puhe)
+ * ohitetaan. AANIRIVIT_PAKOTA=1 ajaa ne (erityinen syy, ajon tilaaja vastaa ulostulosta).
+ */
+const AANIRIVI = /(aani|pulu|musiikin|lukija|luent|puhe)/;
+const aaniPois = paivaAika() && process.env.AANIRIVIT_PAKOTA !== '1';
+const aaniRivi = (rivi) => aaniPois && AANIRIVI.test(rivi.tiedosto);
+if (aaniPois) {
+  const ohi = matriisi.filter(aaniRivi).length;
+  if (ohi) console.log(`PÄIVÄ (07–22): ${ohi} äänirivejä ohitetaan (ei ääntä Macin ulostuloon); AANIRIVIT_PAKOTA=1 ajaa ne.`);
+}
+
 console.log(`Savukesarja "${sarja}": ${matriisi.length} savuketta, rinnakkaisuus ${rinnakkain}, aikakatto ${Math.round(aikakattoMs / 1000)} s/savuke.`);
 console.log(`Tuloskansio: ${tuloskansio}\n`);
 
@@ -226,6 +240,11 @@ function ajaYksi(rivi, indeksi) {
       return;
     }
     Object.assign(ymparisto, paatos.env);
+    if (aaniRivi(rivi)) {
+      writeFileSync(lokiPolku, 'INFO  OHITETTU: päivä (07–22), äänirivi ei aja Macin ulostuloon (AANIRIVIT_PAKOTA=1 ajaa)\n');
+      valmis({ rivi, kesto: 0, koodi: 0, lokiPolku, katkaistu: false, ohitettu: 'päivä, äänirivi' });
+      return;
+    }
     if (ohitetaan(rivi)) {
       writeFileSync(lokiPolku, 'INFO  OHITETTU: ajurilla ei näyttöistuntoa, WebKit ei käynnisty; '
         + `sama vartio ajetaan rivillä ${rivi.nimiTunniste.replace(/-webkit$/, '-chromium')}\n`);

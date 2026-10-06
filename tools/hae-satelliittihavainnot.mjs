@@ -118,9 +118,15 @@ const UUDET_20261001 = [
   'iss021e026475', 'iss022e019513', 'iss023e027737', 'iss023e029806',
   'iss023e035670', 'iss025e005259', 'iss026e006255', 'iss027e034290',
 ];
+// 20261005/ = Sisältökirjurin erä 5 (omistaja 5.10.2026 klo 08.01): Berliini, Amsterdam, Madrid, Sevilla, Krakova, Milano, Bergen.
+const UUDET_20261005 = [
+  'ISS027-E-7390', 'ISS023-E-48029', 'ISS023-E-48969', 'ISS014-E-15604', 'ISS006-E-31123', 'iss026e028829',
+  'STS060-94-2', // Bergen: filmikehys ja tunnusteksti rajattu pois (Päätoimittaja 5.10.)
+];
 export const KUVAPOIKKEUKSET = new Map([
   ...VANHAT_POIKKEUKSET.map((id) => [id, '']),
   ...UUDET_20261001.map((id) => [id, '20261001/']),
+  ...UUDET_20261005.map((id) => [id, '20261005/']),
 ]);
 
 /**
@@ -3579,6 +3585,146 @@ export const KOHTEET = [
           + 'pääkaupunki, Veiksel-joen molemmin puolin. Joki halkoo '
           + 'kaupungin kahtia, ja kuvassa erottuu myös kaupungin '
           + 'lentokenttä.',
+      },
+    ],
+  },
+  // Eurooppa-erä 5 (Sisältökirjuri, 5.10.2026). Kolme puhdasta Gateway-kuvaa (Kööpenhamina,
+  // Luzern, Bergen), yksi images-api-kuva (Monaco) ja kuusi rajattua (Berliini, Amsterdam,
+  // Madrid, Sevilla, Krakova, Milano; omistajan ämpärilupa 5.10.2026 klo 08.01, KUVAPOIKKEUKSET).
+  // Jokainen kuva katsottu silmämääräisesti ja ajettu astro-palkki.mjs:llä.
+  {
+    tunnus: 'kobenhavn', nimi: 'Kööpenhamina', seutu: 'Tanska', lat: 55.676, lon: 12.568,
+    selite: 'Tanskan pääkaupunki Själlannin itärannalla Juutinrauman äärellä.',
+    oletus: 'ISS034-E-66957',
+    kuvat: [
+      {
+        id: 'ISS034-E-66957',
+        teksti: 'Maaliskuussa 2013 otetussa päiväkuvassa näkyy Kööpenhamina Själlannin '
+          + 'itärannalla. Kaupungin edessä leveä Juutinrauma (Øresund) erottaa Tanskan '
+          + 'Ruotsista, ja kuvassa erottuu Saltholmin matala saari sekä sen yli '
+          + 'kulkeva Juutinrauman silta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'luzern', nimi: 'Luzern', seutu: 'Sveitsi', lat: 47.05, lon: 8.307,
+    selite: 'Sveitsiläiskaupunki Vierwaldstättersee-järven rannalla Alppien reunalla.',
+    oletus: 'ISS040-E-16849',
+    kuvat: [
+      {
+        id: 'ISS040-E-16849',
+        teksti: 'Kesäkuussa 2014 otetussa päiväkuvassa näkyy Luzernin seutu Sveitsin '
+          + 'keskiosassa. Kaupunki sijaitsee Vierwaldstättersee-järven (Luzernin '
+          + 'järven) pohjoisrannalla, ja kuvan oikeassa reunassa Alppien huiput '
+          + 'nousevat pilvien alta.',
+      },
+    ],
+  },
+  {
+    tunnus: 'bergen', nimi: 'Bergenin vuonot', seutu: 'Norja', lat: 60.39, lon: 5.32,
+    selite: 'Norjan länsirannikon vuonot Bergenin ympärillä talvisessa valossa.',
+    oletus: 'STS060-94-2',
+    kuvat: [
+      {
+        id: 'STS060-94-2',
+        teksti: 'Helmikuussa 1994 avaruussukkulan kyydistä otetussa kuvassa näkyvät '
+          + 'Bergenin ympäristön vuonot Norjan länsirannikolla. Aurinko oli '
+          + 'horisontin lähellä, joten matalat valot ja varjot piirtävät vuonojen '
+          + 'jyrkät rinteet esiin.',
+      },
+    ],
+  },
+  {
+    tunnus: 'monaco', nimi: 'Monaco', seutu: 'Monaco', lat: 43.738, lon: 7.424,
+    selite: 'Maailman toiseksi pienin valtio Välimeren rannalla Ranskan ja Italian välissä.',
+    oletus: 'iss056e032555',
+    kuvat: [
+      {
+        id: 'iss056e032555',
+        teksti: 'Kesäkuussa 2018 otetussa kuvassa näkyy Monacon ruhtinaskunta Välimeren '
+          + 'rannikolla Ranskan ja Italian rajalla. Kuvassa erottuvat Monte Carlon '
+          + 'kaupunginosa, Louis II -stadion ja Fontvieillen satama.',
+      },
+    ],
+  },
+  {
+    tunnus: 'berliini', nimi: 'Berliini', seutu: 'Saksa', lat: 52.52, lon: 13.405,
+    selite: 'Saksan pääkaupunki Spree-joen varrella.',
+    oletus: 'ISS027-E-7390',
+    kuvat: [
+      {
+        id: 'ISS027-E-7390',
+        teksti: 'Maaliskuussa 2011 otetussa päiväkuvassa näkyy Berliinin keskusta '
+          + 'Spree-joen mutkittelevan uoman molemmin puolin. Kuvassa erottuu myös '
+          + 'vanhan Tempelhofin lentokentän laaja avoin alue sekä kaupungin '
+          + 'säteittäiset tiet.',
+      },
+    ],
+  },
+  {
+    tunnus: 'amsterdam', nimi: 'Amsterdam', seutu: 'Alankomaat', lat: 52.37, lon: 4.9,
+    selite: 'Alankomaiden pääkaupunki IJ-lahden ja Markermeerin rannalla.',
+    oletus: 'ISS023-E-48029',
+    kuvat: [
+      {
+        id: 'ISS023-E-48029',
+        teksti: 'Toukokuussa 2010 otetussa päiväkuvassa näkyy Amsterdamin kaupunki '
+          + 'Markermeer-järven rannalla. Kuvassa erottuvat Amstel-joki, satama-altaat '
+          + 'ja kaupungin ympärillä kulkevat kanavat ja maantiet.',
+      },
+    ],
+  },
+  {
+    tunnus: 'madrid', nimi: 'Madrid', seutu: 'Espanja', lat: 40.416, lon: -3.703,
+    selite: 'Espanjan pääkaupunki Iberian niemimaan keskellä.',
+    oletus: 'ISS023-E-48969',
+    kuvat: [
+      {
+        id: 'ISS023-E-48969',
+        teksti: 'Toukokuussa 2010 otetussa päiväkuvassa näkyy Madridin tiivis '
+          + 'kaupunkialue Espanjan keskiylängöllä. Kuvasta erottuvat kaupungin '
+          + 'punertavat asuinalueet, moottoritiet ja ympäröivät puistot ja metsät.',
+      },
+    ],
+  },
+  {
+    tunnus: 'sevilla', nimi: 'Sevilla', seutu: 'Espanja', lat: 37.389, lon: -5.984,
+    selite: 'Andalusian pääkaupunki Guadalquivir-joen varrella.',
+    oletus: 'ISS014-E-15604',
+    kuvat: [
+      {
+        id: 'ISS014-E-15604',
+        teksti: 'Helmikuussa 2007 otetussa päiväkuvassa näkyy Sevilla Guadalquivir-joen '
+          + 'mutkittelevan uoman varrella Andalusiassa. Kaupungin tiivis ydin ja '
+          + 'ympäröivät pellot erottuvat selvästi.',
+      },
+    ],
+  },
+  {
+    tunnus: 'krakova', nimi: 'Krakova', seutu: 'Puola', lat: 50.065, lon: 19.945,
+    selite: 'Puolan vanha kuninkaallinen kaupunki lumisessa maisemassa.',
+    oletus: 'ISS006-E-31123',
+    kuvat: [
+      {
+        id: 'ISS006-E-31123',
+        teksti: 'Helmikuussa 2003 otetussa päiväkuvassa näkyy Krakova Puolan '
+          + 'eteläosassa lumen peittämän maiseman keskellä. Kaupungin tumma '
+          + 'taajama erottuu valkoista peltoaukeaa vasten, ja ympärillä kiemurtelee '
+          + 'Veikselin laakso.',
+      },
+    ],
+  },
+  {
+    tunnus: 'milano', nimi: 'Milano', seutu: 'Italia', lat: 45.464, lon: 9.19,
+    selite: 'Pohjois-Italian suurkaupunki yöllä, kirkkaina valoina Lombardian tasangolla.',
+    oletus: 'iss026e028829',
+    kuvat: [
+      {
+        id: 'iss026e028829',
+        teksti: 'Helmikuussa 2011 otetussa yökuvassa Milanon suurkaupunkialue valaisee '
+          + 'Lombardian tasangon lappupeitteen tavoin. Kaupungin tiivis ydin erottuu '
+          + 'kuvan vasemmassa laidassa kirkkaana keskittymänä, jonka ympärillä '
+          + 'kaupungit ja kylät jatkuvat oranssina valoverkkona.',
       },
     ],
   },

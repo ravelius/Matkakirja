@@ -146,7 +146,7 @@ export async function generoi(syote, { ymp = process.env } = {}) {
     const v = await fetch(`${API}/v1/text-to-speech/${n.voice_id}?output_format=${MUOTO}`, {
       method: 'POST', redirect: 'error', signal: AbortSignal.timeout(180000),
       headers: { 'xi-api-key': ymp.ELEVEN_API_KEY, 'content-type': 'application/json', accept: 'audio/mpeg' },
-      body: JSON.stringify({ text: n.teksti, model_id: n.malli ?? MALLI,
+      body: JSON.stringify({ text: n.teksti, model_id: n.malli ?? MALLI, ...(String(n.malli ?? MALLI).includes('multilingual') ? {} : { language_code: 'fi' }),
         ...(n.stability != null ? { voice_settings: { stability: n.stability } } : {}) }),
     });
     if (!v.ok) { rivit.push({ ...n, virhe: `HTTP ${v.status}` }); console.log(`${n.hahmo} ${n.ab}: HTTP ${v.status}`); continue; }

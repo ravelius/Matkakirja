@@ -39,6 +39,7 @@ def main():
     p.add_argument('--testattavaa', default='')
     p.add_argument('--vanhenna', action='store_true')
     p.add_argument('--palaute-pois', action='store_true')
+    p.add_argument('--alusta', default='', help='IOS tai MAC_OS: rajaa buildin alustaan (sama build-numero voi olla molemmissa)')
     a = p.parse_args()
 
     kid = os.environ['ASC_KEY_ID']
@@ -117,7 +118,8 @@ def main():
     raja = time.time() + a.odota_min * 60
     build = None
     while True:
-        tila, d = kutsu('GET', f'/v1/builds?filter[app]={app_id}&filter[version]={a.build}&limit=5')
+        tila, d = kutsu('GET', f'/v1/builds?filter[app]={app_id}&filter[version]={a.build}&limit=5'
+                         + (f'&filter[preReleaseVersion.platform]={a.alusta}' if a.alusta else ''))
         if tila != 200:
             virhe('Buildia ei saatu', f'{tila}: {d}')
         if d.get('data'):

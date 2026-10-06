@@ -875,6 +875,7 @@ async function haeApista(puhe, avain, kohde, { malli = MALLI, raakaKansio = null
     body: JSON.stringify({
       inputs: [{ text: puhe + LOPPUTAUKO, voice_id: AANI }],
       model_id: malli,
+      ...(String(malli).includes('multilingual') ? {} : { language_code: 'fi' }),   // suomi pakotettuna (omistaja 6.10.)
       settings: { stability: STABILITY },
     }),
     signal: AbortSignal.timeout(180000),
@@ -939,6 +940,7 @@ async function haeAikaleimoilla(teksti, avain, kohde, { malli = AIKALEIMOJEN_MAL
     body: JSON.stringify({
       text: teksti + LOPPUTAUKO,
       model_id: malli,
+      ...(String(malli).includes('multilingual') ? {} : { language_code: 'fi' }),   // multilingual_v2 ei tue (dokumentaatio)
       voice_settings: { stability: STABILITY },
     }),
     signal: AbortSignal.timeout(600000),

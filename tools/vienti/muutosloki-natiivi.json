@@ -2,6 +2,61 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (154)",
+   "paiva": "2026-10-06",
+   "teksti": "Linssivalikossa on nyt kuvat, ja kaupunkinäkymän sävy seuraa paikallista vuorokaudenaikaa. Oppaan nappirivi piiloutuu väkäsen alle, kuvanappi on pienempi ja noston ylärivi on selkeämpi. Opas puhuu ilman katkoja, ja ISS-ikkunan meri on yhtenäisen sininen."
+  },
+  {
+   "versio": "1.1 (153)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävä opas vastaa nyt kysymyksiin ja löytää kohteet kaikissa kaupungeissa; uutena ”Mikä tämä on?” ja vuorokausinappi. Kaupunki näkyy saapuessa nopeasti ja tarkentuu, eikä karttalähteiden rivi enää välähdä. Peli alkaa mustalla ruudulla ilman ylisuurta logoa."
+  },
+  {
+   "versio": "1.1 (152)",
+   "paiva": "2026-10-06",
+   "teksti": "ISS-kameran juliste on uudistettu: uusi ikkunakehys, logo avaruudessa, pilvet sivuilla ja sinisemmät sävyt. iPadin ohjaamon ikkunassa näkyy enemmän kehystä, ja satelliittikuvien virheitä on korjattu. Opas lataa kaupunkikuvan uudelleen, jos Googlen palvelu ruuhkautuu."
+  },
+  {
+   "versio": "1.1 (151)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävä opas puhuu loppuun asti, näyttää kohteet lähempää ja keskeyttää kierroksen vastatakseen kysymykseesi; kierroksen voi jatkaa tai lopettaa. Peli alkaa mustalla ruudulla ja logolla. Maakunnat avautuvat nostokorttina, ja kuvien tekijät näkyvät korteissa."
+  },
+  {
+   "versio": "1.1 (150)",
+   "paiva": "2026-10-06",
+   "teksti": "Peli saa suurilla iPadeilla käyttöönsä enemmän muistia, mikä vähentää kaatumisia raskaissa näkymissä."
+  },
+  {
+   "versio": "1.1 (149)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävä opas käyttää suurilla iPadeilla selvästi vähemmän muistia. Nostojen Kysy avaa Pulun chatin matalana kohteen omiin kysymyksiin, pin nostaa chatin yläreunaan, ja Pulun luennan voi pysäyttää. Noston tekstiä voi napauttaa ilman, että kortti sulkeutuu."
+  },
+  {
+   "versio": "1.1 (148)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävän oppaan kanssa voi nyt jutella puhumalla tai kirjoittamalla, ja toiseen kaupunkiin siirrytään latausruudun kautta. Kysy tarjoaa valmiita kysymyksiä, ja Liiku näyttää kaupungin tärkeimmät kohteet ja kaupunkikierroksen. ISS-ohjaamossa on uusi paneeli ja portaaton nopeus."
+  },
+  {
+   "versio": "1.1 (146)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävä opas tarjoaa kohteita heti, sanoo nimet Williamin äänellä, lentää nopeammin ja pysähtyy tauolle. Kohteista on useita kuvia, kaupunki vaihtuu yhdellä napautuksella, eikä kartalle jää tummaa vyötä. Pin kiinnittää luennan, nimikyltit häviävät, ja ISS-sauva ei vedä vasemmalle."
+  },
+  {
+   "versio": "1.1 (145)",
+   "paiva": "2026-10-05",
+   "teksti": "Elävää opasta ohjataan nyt ruudun kulmien ohjaimilla: kierrä kohdetta, nouse tai tule lähemmäs. Kohde korostuu renkaalla tai reitillä. Olavinlinnan kappelissa puhujan kasvot näkyvät ja hahmot elehtivät, ja ISS-kuvissa on oikeat pilvet."
+  },
+  {
+   "versio": "1.1 (144)",
+   "paiva": "2026-10-05",
+   "teksti": "Uutta: elävä opas, joka esittelee kaupunkeja kaikkialla maailmassa reaaliajassa, ensimmäisenä Kööpenhaminan. Ohjaa sitä vastausnapeilla tai puheella. ISS-ohjaamo on uudistettu, lukijana on William ja Olavinlinna latautuu latauspalkin kanssa."
+  },
+  {
+   "versio": "1.1 (143)",
+   "paiva": "2026-10-05",
+   "teksti": "Uusi minipeli Tavli kolmella laudalla. Olavinlinna latautuu nopeammin, kertoja ja äänet soivat ilman katkoja, ja valaistus ja rantametsä ovat uudet. Linssivalikko on selkeämpi, ja auringon kiilto näkyy vain vedessä."
+  },
+  {
    "versio": "1.1 (142)",
    "paiva": "2026-10-05",
    "teksti": "Jatka matkaa -napin jälkeen Pulu ei enää lue, ja lukijan äänen voi vaihtaa kesken lukemisen. ISS-kameraan tuli 15 eurooppalaista kohdetta, ja suuret kuvat avautuvat luotettavasti. Olavinlinnan kamera liikkuu pehmeästi, kertoja kuuluu selvästi ja Myllyssä on äänet."

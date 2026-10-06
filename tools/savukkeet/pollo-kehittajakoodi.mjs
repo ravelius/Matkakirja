@@ -24,6 +24,8 @@
 import { POLLOPALVELIN } from '../../js/packs/pollo-asetukset.js';
 
 export const POLLO_KEHITTAJA_OTSAKE = 'x-pollo-kehittaja';
+/** Testiotsake (5.10.2026): Pulun puhe vastaa 204 ilman ääntä, joten savukkeet eivät kuluta ElevenLabs-kiintiötä. */
+export const POLLO_TESTI_OTSAKE = 'x-matkakirja-testi';
 export const POLLO_ORIGIN = POLLOPALVELIN ? new URL(POLLOPALVELIN).origin : '';
 
 /** Osuuko osoite pöllöpalvelimeen (tarkka origin, ei alidomainia eikä polkupeliä). */
@@ -52,7 +54,7 @@ export async function lisaaPolloKehittajakoodi(kohde, { env = process.env, varoi
   }
   if (!POLLO_ORIGIN) return false;
   await kohde.route((url) => onPolloOsoite(url), (reitti) => reitti.fallback({
-    headers: { ...reitti.request().headers(), [POLLO_KEHITTAJA_OTSAKE]: koodi },
+    headers: { ...reitti.request().headers(), [POLLO_KEHITTAJA_OTSAKE]: koodi, [POLLO_TESTI_OTSAKE]: '1' },
   }));
   return true;
 }

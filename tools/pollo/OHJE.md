@@ -165,6 +165,39 @@ koodimuutos main-haarassa julkaisee workerin uudelleen itsestään.
   tuomioon (`sahke`) samoin päivä- ja kuukausirajoin kuin selain
   (30/vrk per IP); kuva ja tila palauttavat 403 (`NATIIVIN_TEHTAVAT`,
   `natiivilleSallittu`).
+- **Elävän oppaan ohjaimet** (omistaja 6.10.2026, opas-juna 148; `opaskeskustelu.js`): `GET /opas/kysymykset?paikka&nimi&kaupunki`
+  → 5–6 valmista kysymystä (esihaku taustalla pysähdyksen yhteydessä, R2 30 vrk), `POST /opas/kysy` → oppaan vastaus,
+  Williamin ääni oppaan polulla ja katolla, toiminto (siirry {nimi, lat, lon, ulkona} | kohde {id} | kaupunki {nimi, lat,
+  lon} | kierros | tauko | jatka | null) ja 2 jatkokysymystä, `GET /opas/liiku?kaupunki` → 12 tärkeintä kohdetta
+  koordinaatteineen (R2 30 vrk). Kysy lasketaan oppaan IP-rajoihin.
+- **Maailman 50 suosikkia** (omistaja 6.10.2026, juna 149): `GET /opas/kohteet?n=50` ilman kaupunkia → `{kohteet: [50 ×
+  {id, nimi, koukku, kaupunki, iso, lat, lon, alarivi, kuva|null}]}`. Lista on vakaa (R2 30 vrk), ja maanosat ovat tasaisesti.
+  Koordinaatit, kuvaus ja P18-kuva haetaan erinä (`kohteetErana`, muutama alipyyntö), ja kuva tulee vain tekijä- ja
+  lisenssitiedoin. Täkyjen oletuspyyntö (8, päivittäin) lämmittää listan taustalla.
+- **"Mikä tämä on?"** (omistaja 6.10.2026; Päätoimittaja): `GET /opas/lahella?lat&lon&r` → `{r, laajennettu, kohteet: [enintään
+  8 × {id, nimi, alarivi, etaisyys_m, lat, lon, kuva|null}]}` etäisyysjärjestyksessä. Säde r on oletuksena 150 m (25–400). Jos
+  säteeltä ei löydy mitään, haetaan 400 m:stä (`laajennettu: true`). Lähde on Wikipedian geohaku (fi + en; artikkeli = tunnettu).
+  Wikidatan tyypeillä pois jäävät ihmiset, järjestöt, tapahtumat, asutukset, kadut ja puretut rakennukset (P576, Q19860854).
+  Nimi tulee fi-Wikipedian otsikosta tai nimiöstä (`suomiNimi`), kuva Commonsista vain tekijätiedoin. WDQS (SPARQL) jätettiin
+  pois: se oli 6.10. rajoitettu yhteen pyyntöön minuutissa. Ehdokkaat tallennetaan ruuduittain (0,002°, R2 30 vrk, 3–5
+  alipyyntöä kylmänä). Jerusalemin alueella alarivistä jätetään maan nimi pois. Valitusta kohteesta kysytään `POST
+  /opas/kysy` -polulla (`paikka: {id, nimi, lat, lon}`).
+- **Testit eivät tuota ääntä** (omistaja 6.10.2026, sitova): roolien testitunnus (`x-matkakirja-testitunnus`) ja
+  testiotsake (`x-matkakirja-testi: 1`) eivät koskaan kutsu puhemoottoria (ElevenLabs, xAI, OpenAI). Luenta palauttaa
+  valmiin äänen säilöistä tai 204, opas antaa ääni-urlin vain R2:ssa jo olevalle äänelle, eivätkä GET-polut tuota.
+  Ohitus vain äänilupalipulla `x-matkakirja-aanilupa` = salaisuus `POLLO_AANILUPA`, omistajan luvalla tarkalle määrälle.
+- **KV:n päiväkiintiö** (6.10.2026, ilmaistaso 1 000 kirjoitusta/vrk; `reuna.js`): kaikki KV-kutsut fail-open. Oppaan
+  äänen teksti on R2:ssa (`opas/teksti/<sha>.json`, KV varana). Istunnon tila (kierros, suunnat, isoisä) ja lisäkuvien
+  välimuisti ovat R2:ssa (`tila/…`, vanhenemisaika oliossa). Tuotantolukot ja Nominatimin vuoro ovat isolaatin muistissa
+  (Cache API ei toimi *.workers.dev-osoitteissa). Oppaan IP-laskuri kirjoitetaan harvana
+  (10 pyynnön välein), ja testitunnuksen ja kehittäjän pyynnöt eivät kirjoita IP-laskureita. Päivän operaatiot näkyvät
+  julkaisuajon yhteenvedossa (`kv-kaytto.mjs`).
+- **Astronauttien kuvan sirut** (omistaja 6.10.2026, `kuvasirut.js`): `vastaus`- ja
+  `ehdotukset`-pyynnössä valinnainen `kuva: { tunnus, nimi, maa, lat, lon, selite, teksti, aika }`
+  (tunnus pakollinen). Ehdotukset (3) tehdään vain kuvan tiedoista ja tallennetaan KV:hen
+  avaimella `pulu:kuvasirut:v2:<tiiviste kaikista kentistä>` 30 vrk:ksi: yksi generointi kuvaa kohden
+  ensimmäisellä katselulla, välimuistiosuma ei kuluta rajoja. Vastauksessa kuvan tiedot kulkevat
+  kontekstina. Ei etukäteiseriä ilman omistajan lupaa.
 - **API-avain**: syötetään wranglerille putkessa, jolloin se ei näy
   komentorivillä eikä lokissa. Cloudflare säilöö sen salaisuutena, eikä
   sitä voi lukea takaisin sen paremmin dashboardista kuin ajostakaan.
