@@ -427,6 +427,8 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Automaattiset pyynnöt seis (keskeytetty kierros tai vapaa tila); kysymykset ja pelaajan valinnat toimivat.</summary>
         bool Pysaytetty => KierrosKeskeytetty || VapaaTila;
         OpasKohde jatkoKohde;
+        /// <summary>Keskeytetyn kierroksen kesken jäänyt kohde (luetaan JATKA:ssa alusta); sovitin pitää sen äänen tallessa.</summary>
+        public OpasKohde JatkoKohde => jatkoKohde;
         (int, int) keskeytysTieto;
 
         /// <summary>Kamera jää nykyiseen asentoon (lento keskeytyy): uusi kehys tähän, kierto jatkuu tästä.</summary>
