@@ -96,6 +96,17 @@ namespace Matkakirja.Natiivi
             return null;
         }
         static bool ionVirhe;
+        static Texture2D googleLogo;
+        static bool googleHaettu;
+        /// <summary>Googlen virallinen Google Maps -logo, ääriviivallinen versio kartan päälle (null = ei pakettia).</summary>
+        static Texture2D GoogleLogo
+        {
+            get
+            {
+                if (!googleHaettu) { googleHaettu = true; googleLogo = Resources.Load<Texture2D>("Krediitit/GoogleMaps_Logo_WithDarkOutline_4x"); }
+                return googleLogo;
+            }
+        }
         /// <summary>Viimeksi tunnistettu Cesium ion -logo (Siirrytään-ruutu piirtää sen itse mustan ruudun päälle).</summary>
         public static Texture IonLogoKuva { get; private set; }
         /// <summary>Googlen logon yläreuna osuutena ruudun korkeudesta alhaalta (oppaan oma ion-logo sen yläpuolelle); 0 = ei tiedossa.</summary>
@@ -173,6 +184,9 @@ namespace Matkakirja.Natiivi
                 var kuva = lapsi.style.backgroundImage.value.texture;
                 if (!(lapsi is Label) && kuva != null && kuva.height > 0)
                 {
+                    // Googlen virallinen ääriviivallinen logo (omistajan lupa 6.10., Resources/Krediitit/LAHTEET.md) Cesiumin
+                    // matalaresoluutioisen (98×18) tilalle: muokkaamaton kuva, 16 dp.
+                    if (kuva != ion && GoogleLogo != null && kuva != GoogleLogo) { lapsi.style.backgroundImage = new StyleBackground(GoogleLogo); kuva = GoogleLogo; }
                     bool nayta = kuva != ion || cesium;
                     lapsi.style.display = nayta ? DisplayStyle.Flex : DisplayStyle.None;
                     if (!nayta) continue;
