@@ -23,7 +23,7 @@ import {
   OPAS_KEHOTE, siivoaOpasPyynto, kaupunginSijainti, paikanKoordinaatit, kaydytNimiksi, oppaanViesti, jasennaOpas,
   kaupunginAineisto, kuvatPaikalle, wikidataKuva, lisaKuvatValimuistilla, yhdistaKuvat, OPAS_KIERROS_KEHOTE, kierroksenViesti, jasennaKierros,
   seuraavaKierrokselta, paikanNimi, onKierrosToive, ESITTELE_KAUPUNKI, LISAA_KAUPUNKIA, KIERROKSEN_PITUUS, jarjestaReitti,
-  seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma, kuvallaTekijatiedot,
+  seuraavaSuunta, SUUNNANVAIHDOT, paikanKorostus, siltaRyhma, kuvallaTekijatiedot, kohteetErana,
 } from './opas.js';
 import { OPAS_AINEISTO } from './opas-aineisto.js';
 import {
@@ -31,7 +31,10 @@ import {
   siivoaKeskustelu, LIIKU_KEHOTE, jasennaLiiku, liikuAvain, KESKUSTELU_TTL_S, ULKONA_KM, etaisyysKm,
 } from './opaskeskustelu.js';
 import { reunaLue, reunaKirjoita, reunaPoista, pysyvaLue, pysyvaKirjoita, pysyvaPoista, kvLue, kvKirjoita } from './reuna.js';
-import { KOHTEET_KEHOTE, kohteidenViesti, jasennaKohteet, kohdeAvain, paivaUtc, eilenUtc } from './kohteet.js';
+import {
+  KOHTEET_KEHOTE, kohteidenViesti, jasennaKohteet, kohdeAvain, paivaUtc, eilenUtc, MAAILMAN_SUOSIKKEJA, maailmanSuosikitAvain,
+  MAAILMAN_SUOSIKIT_KEHOTE,
+} from './kohteet.js';
 import {
   siivoaKuva, kuvaKontekstiksi, kuvaSirujenAvain, lueKuvasirut, KUVASIRUKEHOTE, KUVASIRUJA, KUVASIRUJEN_TTL_S,
 } from './kuvasirut.js';
@@ -2693,6 +2696,7 @@ async function hoidaSahke(pyynto, env, kors, runko) {
  * jotta natiivi voi esihakea seuraavan pysähdyksen kappaleen aikana. Testiotsake → aani null (ei ElevenLabs-kulutusta).
  */
 const OPAS_MALLI_OLETUS = 'claude-sonnet-5-5';
+const KOHTEITA_OLETUS = 8;
 /** Lisäkuvien aikaraja koordinaateista laskien: haku kulkee korostuksen ja äänen rinnalla eikä saa pidentää vastausta. */
 const OPAS_KUVA_AIKARAJA_MS = 900;
 /** Kuvia odotetaan muun työn (ääni, korostus) valmistuttua enintään näin kauan. */
@@ -2946,7 +2950,33 @@ export function oppaanTiheysYlittyy(ip, nyt = Date.now(), raja = OPAS_MINUUTTIRA
  * kaupungin kärkikohteet. Natiivi- tai sallittu origin, tiheysraja kuten oppaassa. Välimuisti KV:ssä päivittäin; ensimmäinen
  * pyyntö generoi (lukko, rinnakkaiset odottavat valmista).
  */
-async function hoidaOppaanKohteet(pyynto, env, kors) {
+/**
+ * Maailman 50 suosikkia (kohteet.js MAAILMAN_SUOSIKIT_KEHOTE): R2 30 vrk; muuten Sonnet (60 ehdokasta) + erähaku. Rinnakkaiset
+ * pyynnöt jakavat käynnissä olevan haun. Heittää virheessä.
+ */
+let suosikitKaynnissa = null;
+async function maailmanSuosikit(env) {
+  const avain = maailmanSuosikitAvain();
+  const talletettu = await pysyvaLue(env.PUHE_R2, avain);
+  if (talletettu) { try { return JSON.parse(talletettu); } catch { /* uusi */ } }
+  if (suosikitKaynnissa) return suosikitKaynnissa;
+  suosikitKaynnissa = (async () => {
+    const v = await kysyMallitiedot(env, { jarjestelma: MAAILMAN_SUOSIKIT_KEHOTE, viestit: [{ role: 'user', content: 'Koko maailma.' }],
+      maxTokens: 4000, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS });
+    const ehdokkaat = jasennaKohteet(v.teksti, 70);
+    const kohteet = (await kohteetErana(fetch, ehdokkaat)).slice(0, MAAILMAN_SUOSIKKEJA).map((k) => ({
+      id: k.id, nimi: k.nimi, koukku: k.koukku, kaupunki: k.kaupunki, iso: k.iso, lat: k.lat, lon: k.lon, alarivi: k.alarivi, kuva: k.kuva,
+    }));
+    if (kohteet.length < 20) throw new Error(`suosikkeja vain ${kohteet.length}`);
+    const tulos = { kohteet };
+    await pysyvaKirjoita(env.PUHE_R2, avain, JSON.stringify(tulos), 30 * 86400);
+    console.log(`opas: maailman suosikit ${kohteet.length} (${kohteet.filter((k) => k.kuva).length} kuvalla)`);
+    return tulos;
+  })();
+  try { return await suosikitKaynnissa; } finally { suosikitKaynnissa = null; }
+}
+
+async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
   const url = new URL(pyynto.url);
   const natiivit = env.POLLO_NATIIVIT ? lueLista(env.POLLO_NATIIVIT) : NATIIVIT_OLETUS;
   if (!(kors.origin ? sallittuOrigin(kors.origin, kors.sallitut) : sallittuNatiivi(pyynto.headers, natiivit))) {
@@ -2959,6 +2989,17 @@ async function hoidaOppaanKohteet(pyynto, env, kors) {
   if (!env.ANTHROPIC_API_KEY) return vastaa({ virhe: 'asetus', viesti: 'Opas ei ole vielä käytössä.' }, { status: 503, ...kors });
   const kaupunki = siivoaTeksti(url.searchParams.get('kaupunki') ?? '', 80) || null;
   const lat = Number(url.searchParams.get('lat')), lon = Number(url.searchParams.get('lon'));
+  // Maailman 50 suosikkia (omistaja 6.10.): ?n=50 ilman kaupunkia. Ilman n:ää täkyt kuten ennen (8, päivittäin).
+  if (!kaupunki && Number(url.searchParams.get('n')) > KOHTEITA_OLETUS) {
+    try {
+      return vastaa(await maailmanSuosikit(env), kors);
+    } catch (virhe) {
+      console.log(`opas: maailman suosikit epäonnistui (${virhe?.status ?? virhe?.message ?? 'verkko'})`);
+      return vastaa({ virhe: 'palvelin', viesti: 'Kohteita ei saatu juuri nyt. Yritä hetken päästä.' }, { status: 502, ...kors });
+    }
+  }
+  // Täkyjen pyyntö lämmittää samalla 50 suosikkia taustalla.
+  if (!kaupunki && typeof ctx?.waitUntil === 'function') ctx.waitUntil(maailmanSuosikit(env).catch(() => null));
   const kv = env.POLLO_KV ?? null;
   const paiva = paivaUtc();
   const avain = kohdeAvain(kaupunki, paiva);
@@ -3397,7 +3438,7 @@ export default {
       return hoidaOppaanAani(pyynto, env, ctx);
     }
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/tunnus') return hoidaOppaanTunnus(pyynto, env);
-    if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/kohteet') return hoidaOppaanKohteet(pyynto, env, kors);
+    if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/kohteet') return hoidaOppaanKohteet(pyynto, env, kors, ctx);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/kysymykset') return hoidaOppaanKysymykset(pyynto, env, kors);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/liiku') return hoidaOppaanLiiku(pyynto, env, kors);
     if (pyynto.method !== 'POST') {
