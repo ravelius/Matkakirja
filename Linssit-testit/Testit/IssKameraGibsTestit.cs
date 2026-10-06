@@ -114,5 +114,17 @@ namespace Matkakirja.Linssit.Testit
             karkea.Aseta(150, 30, null);
             Oleta.Sama(150.0, karkea.Tarkka.AurinkoAz, "aurinko myös tarkalle");
         }
+
+        [Testi]
+        static void SelkeaAlueKohteenYmparilla()
+        {
+            // Omistaja 6.10.: pääkohde ei peity pilviin; R0 = 50 km täysin kirkas, R1 = 100 km täysi pilvi.
+            var a = ((double, double, double, double)?)(60.17, 24.94, 50.0, 100.0);
+            Oleta.Sama(0.0, KuvanTyosto.Selkeys(a, 60.17, 24.94), "kohteessa ei pilveä");
+            Oleta.Sama(1.0, KuvanTyosto.Selkeys(a, 61.5, 24.94), "kaukana täysi");
+            double puoli = KuvanTyosto.Selkeys(a, 60.17 + 75 / 111.2, 24.94);
+            Oleta.Tosi(puoli > 0.3 && puoli < 0.7, $"välissä pehmeä: {puoli}");
+            Oleta.Sama(1.0, KuvanTyosto.Selkeys(null, 60.17, 24.94), "ilman aluetta ennallaan");
+        }
     }
 }

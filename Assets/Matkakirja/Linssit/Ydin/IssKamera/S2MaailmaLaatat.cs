@@ -19,7 +19,7 @@ namespace Matkakirja.Linssit.IssKamera
         /// sarjan uudelleenvientiä). Kullakin kansiolla oma korjaus.json (sama bittikartta absoluuttisessa XYZ:ssä); ensimmäinen
         /// kansio, jonka bitti on 1, voittaa – myös Euroopan lohkossa (Madeira), muuten Eurooppa tai maailman v2.
         /// </summary>
-        public static readonly string[] KorjausKansiot = { "v2-korjaus3", "v2-korjaus2" };   // 3: Eyre; 2: WorldCover-tasaus, järvet, rengas
+        public static readonly string[] KorjausKansiot = { "v2-korjaus4", "v2-korjaus3", "v2-korjaus2" };   // 4: Amazonin itäkaista, Sumbawa; 3: Eyre; 2: WorldCover-tasaus, järvet, rengas
         /// <summary>
         /// Euroopan mosaiikin korjauskerrokset uusin ensin (Karttaseppä 6.10.: s2-eurooppa/v2-korjaus1, Madeiran pilvi): laatat Euroopan
         /// rajatussa jaossa ({t}/{x'}/{y'}.jpg), korjaus.json:n saatavuus absoluuttisessa XYZ:ssä. Maailman kerrokset voittavat nämä.
