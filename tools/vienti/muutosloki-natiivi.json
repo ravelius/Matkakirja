@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (152)",
+   "paiva": "2026-10-06",
+   "teksti": "ISS-kameran juliste on uudistettu: kehys, logo avaruudessa ja pilvet sivuilla, ja kuvat ovat sinisempiä. iPadin ohjaamon ikkunassa näkyy enemmän kehystä, ja satelliittikuvien saumat on korjattu. Opas yrittää kaupunkia uudelleen, jos Googlen palvelu ruuhkautuu."
+  },
+  {
    "versio": "1.1 (151)",
    "paiva": "2026-10-06",
    "teksti": "Elävä opas puhuu loppuun asti, näyttää kohteet lähempää ja keskeyttää kierroksen vastatakseen kysymykseesi; kierroksen voi jatkaa tai lopettaa. Peli alkaa mustalla ruudulla ja logolla. Maakunnat avautuvat nostokorttina, ja kuvien tekijät näkyvät korteissa."
