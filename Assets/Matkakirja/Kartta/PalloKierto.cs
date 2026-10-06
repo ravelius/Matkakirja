@@ -106,6 +106,14 @@ namespace Matkakirja
         /// </summary>
         [NonSerialized] public bool YhdenSormenVetoMuualla;
 
+        /// <summary>
+        /// Kaikki pallon eleet pois (ISS-ohjaamo, omistaja 6.10.2026: "iss ohjaamossa jos tarttuu käsillä maapalloon, niin ei
+        /// saisi tapahtua mitään. nyt kartta menee kosketuksen ajaksi sekaisin"): vedot, nipistys, kallistus, kierto, liuku,
+        /// tuplanapautuksen pohjoiskäännös ja Macin ohjauslevy eivät liikuta kameraa, eikä PelaajanEle laukea; kamera-ajo jatkuu.
+        /// Yksittäinen napautus välitetään kuten ennen (ohjaamon mininäyttö, ISS:n napautus). Asettaja (CupolaVeto) nollaa.
+        /// </summary>
+        [NonSerialized] public bool EleetMuualla;
+
         [Header("Kamera-ajo")]
         [Tooltip("Verkkopelin SAATON_RAMPPI.")]
         public double ajonRamppi = 0.3;
@@ -1118,7 +1126,7 @@ namespace Matkakirja
             {
                 kosketettu = true;
                 liuku = 0;
-                ajo = null; // sormi keskeyttää kamera-ajon
+                if (!EleetMuualla) ajo = null; // sormi keskeyttää kamera-ajon (ei ohjaamossa: kosketus ei tee mitään)
                 if (edellinenSormia == 0)
                 {
                     PainallusRuutu = Time.frameCount;
@@ -1133,11 +1141,12 @@ namespace Matkakirja
                 if (!eleIlmoitettu && kosketusMatka > napautusLiike)
                 {
                     eleIlmoitettu = true;
-                    PelaajanEle?.Invoke();
+                    if (!EleetMuualla) PelaajanEle?.Invoke();
                 }
 
                 // Sormien määrän vaihtuessa aloitetaan uusi veto ilman hyppyä.
-                if (n == edellinenSormia)
+                if (EleetMuualla) vetoNopeus = 0;   // ohjaamo: ei vetoa, nipistystä eikä kallistusta
+                else if (n == edellinenSormia)
                 {
                     float2 siirto = keski - edellinenKeski;
                     if (n >= 2)
@@ -1196,7 +1205,7 @@ namespace Matkakirja
                         // odota); toista ei välitetä napautuksena, ettei sama kohde avaudu ja sulkeudu.
                         float2 pt = edellinenKeski / Kerroin;
                         double nyt = Time.unscaledTimeAsDouble;
-                        if (KameraEleet.OnTupla(viimeNapautusAika, (viimeNapautus.x, viimeNapautus.y), nyt, (pt.x, pt.y)))
+                        if (!EleetMuualla && KameraEleet.OnTupla(viimeNapautusAika, (viimeNapautus.x, viimeNapautus.y), nyt, (pt.x, pt.y)))
                         {
                             viimeNapautusAika = -1;
                             PalautaPohjoinen();
@@ -1269,7 +1278,7 @@ namespace Matkakirja
         /// <summary>Panorointi pikseleinä (maa seuraa sormia kuten vedossa); dt = aika edellisestä tapahtumasta (s).</summary>
         public bool MacPanoroi(float2 pikselit, double dt = 0)
         {
-            if (syoteEstetty) return false;
+            if (syoteEstetty || EleetMuualla) return false;   // ISS-ohjaamo: ohjauslevy ei liikuta palloa
             MacKosketus();
             var ennen = new double2(pituus, leveys);
             Kierra(pikselit, 0);
@@ -1284,7 +1293,7 @@ namespace Matkakirja
         /// </summary>
         public bool MacZoomaa(double kerroin, float2 piste, double dt = 0, bool nipistys = false)
         {
-            if (syoteEstetty || !(kerroin > 0) || !(korkeus > 0)) return false;
+            if (syoteEstetty || EleetMuualla || !(kerroin > 0) || !(korkeus > 0)) return false;
             MacKosketus();
             if (nipistys) kerroin = math.pow(kerroin, MacNipistysHerkkyys);
             ZoomaaPisteeseen(kerroin, piste);

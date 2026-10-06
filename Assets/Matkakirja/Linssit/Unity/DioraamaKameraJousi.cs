@@ -39,12 +39,25 @@ namespace Matkakirja.Natiivi
         /// <summary>Orbitin offset Ytimen asentoon. veto = pelaajan sormi ruudulla.</summary>
         public Asento Orbit(Asento a, float dt, bool veto, bool vahennettyLiike)
         {
+            Etene(dt, veto);
+            return Sovella(a, vahennettyLiike);
+        }
+
+        /// <summary>Orbitin vaihe eteenpäin kerran ruudussa (Cinemachine: DioraamaCinemachine soveltaa samaa vaihetta kaikkiin
+        /// lepokameroihin Sovella-metodilla).</summary>
+        public void Etene(float dt, bool veto)
+        {
             double h = Math.Min(Math.Max(dt, 0f), 0.1f);
             double kohde = veto || !OrbitPaalla ? 0 : 1;
             paino = kohde < paino ? Math.Max(kohde, paino - h / PainoAlasS) : Math.Min(kohde, paino + h / PainoYlosS);
             double p = paino * paino * (3 - 2 * paino); // smoothstep: vapautuksen jälkeen rata kiihtyy pehmeästi
             vaihe += 2 * Math.PI / OrbitJaksoS * p * h;
             if (vaihe > 1000) vaihe -= 2 * Math.PI * 100; // tarkkuus pitkässä istunnossa; 0,7 × 200π = 70 × 2π, joten kumpikaan termi ei hyppää
+        }
+
+        /// <summary>Nykyisen vaiheen orbit-offset asentoon (ei muuta tilaa).</summary>
+        public Asento Sovella(Asento a, bool vahennettyLiike)
+        {
             double m = (OrbitPaalla ? 1.0 : 0.0) * (vahennettyLiike ? 0.5 : 1.0);
             return new Asento(a.Kohde, a.Atsimuutti + m * OrbitA * Math.Sin(vaihe), a.Korkeus + m * OrbitB * Math.Cos(vaihe),
                 a.Etaisyys * (1 + m * OrbitC * Math.Sin(0.7 * vaihe)), a.Fov, a.Aukko, a.Kierto);

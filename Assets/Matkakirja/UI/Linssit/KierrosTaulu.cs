@@ -95,6 +95,25 @@ namespace Matkakirja.Natiivi
             otsikko.style.opacity = 0f;
             if (auki) { ruudunNimi.text = OpasSovitin.Otsikko; ruudunAlarivi.text = OpasSovitin.Alaotsikko; NaytaRuutu(true, heti: true); }
             else { ruutuAuki = false; ruutu.style.display = DisplayStyle.None; }
+            Moderni(auki);
+        }
+
+        /// <summary>
+        /// ELÄVÄ OPAS NYKYAJASSA (omistaja 5.10.2026 klo 20.4x–20.5x): nimi ja kuvausrivi modernilla kirjasimella valkoisina harmaan
+        /// lasin teemasta (Tyylikirja.Harmaa), hillitty varjo säilyy; Lontoon kierros pitää goottilaisen ja antiikvan.
+        /// </summary>
+        void Moderni(bool paalla)
+        {
+            Kirjasimet.Aseta(nimi, paalla ? Kirjasin.ModerniLihava : Kirjasin.Goottilainen);
+            Kirjasimet.Aseta(alarivi, paalla ? Kirjasin.Moderni : Kirjasin.Antiikva);
+            nimi.style.fontSize = paalla ? 30 : 44;
+            alarivi.style.fontSize = paalla ? 16 : 19;
+            nimi.style.color = paalla ? (StyleColor)(Color)Tyylikirja.Harmaa.Korostus : StyleKeyword.Null;
+            // Kuvausrivi samalla valkoisella kuin otsikko, kevyempi paino (Päätoimittaja 21.1x: harmaa hukkui usvaan).
+            alarivi.style.color = paalla ? (StyleColor)(Color)Tyylikirja.Harmaa.Korostus : StyleKeyword.Null;
+            // Avausruutu (ELÄVÄ OPAS / KERRO, MITÄ HALUAT NÄHDÄ) samalla modernilla kirjasimella.
+            Kirjasimet.Aseta(ruudunNimi, paalla ? Kirjasin.ModerniLihava : Kirjasin.KoneLihava);
+            Kirjasimet.Aseta(ruudunAlarivi, paalla ? Kirjasin.Moderni : Kirjasin.Kone);
         }
 
         OpasKohde naytettyKohde;
@@ -145,6 +164,7 @@ namespace Matkakirja.Natiivi
             kertojaLaatikko.EnableInClassList("mk-nakyy", false);
             otsikko.style.opacity = 0f;
             if (auki) { ruudunNimi.text = s.Kierros.Otsikko; ruudunAlarivi.text = s.Kierros.Alaotsikko; NaytaRuutu(true, heti: true); }
+            if (auki) Moderni(false);
             else { ruutuAuki = false; ruutu.style.display = DisplayStyle.None; }
         }
 

@@ -1,0 +1,29 @@
+# ISS-ohjaamon ohjauspaneeli v3b (Linnanrakentaja 6.10.2026)
+
+Omistajan palaute 6.10. klo 08.3x (Päätoimittajan välittämä): rummun laatikko pois, kaasun vipu ja asteikko leveämmiksi niin,
+että 1000× ei ole reunassa, kameranapille enemmän tilaa, LCD selvästi isommaksi ja kaikki välit äärireunat mukaan lukien yhtä
+leveiksi. Lisäys klo 08.4x: joystick oikean käden puolelle ja nopeuskahva vasemmalle.
+
+- **Järjestys vasemmalta:** kaasu ja asteikko (1×–1000×), LCD, kameranappi, ohjaussauva. Välit 0,077 yksikköä = 9,6 pt kaikkialla, myös reunoihin.
+- **LCD:** lasi 0,92 × 0,54 (oli 0,70 × 0,46), kehys 1,01 × 0,63. Kahva 0,16 leveä (oli 0,11), ura 0,075. Asteikko alkaa 0,105 uran
+  keskeltä, ja pykälät ovat pidemmät.
+- **Tekijä ja lisenssi:** oma tuotanto (Blender 5 Cycles, menettelyllinen malli ja materiaalit), CC0. Ei kolmansien osapuolten kuvia.
+  Käsiohjain on tyylitelty yleistiedon pohjalta. Fontti DIN Condensed/Alternate (macOS) vain stensiilimerkintöjen rasterointiin
+  (kuvassa ei fonttitiedostoa).
+- **Mitat:** @3x, pohja.png 1122 × 366 px = 374 × 122 pt. Osat samasta ortokamerasta (52°), rajattuina tilojen yhteiseen laatikkoon.
+  Laatikot ovat pt:nä ohjaamo.json:ssa. Alfa ≥ 240 → 255, varjon häntä < 20 → 0.
+- **Osat:** pohja (merkinnät, asteikko, kaasun ura, tyhjä tumma LCD), sauva-{ei,ylos,alas,vasen,oikea}, kaasu-{1,10,100,1000},
+  kamera ja kamera-painettu, lcd-iso, mini-kehys. Rumpu ja rumpu-kolo on poistettu, ja ohjaamo.json:ssa ei ole rumpu/rumpuKolo-kenttiä.
+- **Uudet ankkurit (Natiivi-UI 6.10.):** sauvaKeski {x, y} on piirretyn sauvan keskipiste osuutena sauva-laatikosta. objektiivi
+  {x,y,w,h} on tyhjä pinta LAAJA/TELE-LCD-napeille kameranapin yläpuolella.
+- **Toisto:** lahde/tekstuurit.py → lahde/tuotanto.py (blender -b --python tuotanto.py -- ulos.png osa:asento; osa mitat → mitat.json)
+  → lahde/jalki.py <kansio>. tarkistus-kooste.png = pohja + osat + simuloitu LCD-teksti (ei peliin).
+
+## v3b (omistaja 6.10. klo 11.1x)
+- Numerot 1×–1000× poistettu, ja pykäläasteikko jää. Pykälät ovat vivun JUUREN paikassa uralla, eivät nupin (tuotanto.py DY = 0).
+- LCD on vielä isompi: lasi 1,162 × 0,58 (v3 0,92 × 0,54), lcd 135,8 × 51,6 pt.
+- Kulmaruuvit ovat 0,10 yksikön päässä reunoista (v3 0,07). Ison LCD:n kehys on ruuvien sisäpuolella. Kuvaan lisättiin 1,5 %:n marginaali
+  joka reunaan, joten koko on 374 × 129,33 pt (v3 374 × 122). KIIHDYTYS-otsikko on hieman oikealla, ettei kulmaruuvi osu siihen.
+- Välit ovat 28–29 px @3x uloimmista näkyvistä osista (tarkistus-kooste.png, mittakaista alimpana).
+- ohjaamo.json: kaasu.pykalat ja uusi kaasu.ura {yla, ala} ovat vivun juuren y-arvoja pt:nä kaasu-laatikon yläreunasta (Natiivi-UI 6.10.:
+  portaaton kahva liikkuu ura.yla–ura.ala logaritmisesti).

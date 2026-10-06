@@ -1,0 +1,28 @@
+# Testimykistyksen todiste (pelikoodari/testimykistys-natiivi 8ff03da0): radio- ja Cupola-ääni natiiveissa moottoreissa,
+# mykistys kattaa ne (pelin raportti "unity päällä, natiivi päällä"; todistusajo keskeyttää muuten). Ei Macin kaiuttimiin.
+linssi linssi radio
+odota 12
+linssi radio kaupunki marseille
+odota 12
+linssi radio tila
+oleta 10 radio: -- radion tila lokissa (striimi natiivissa moottorissa)
+peli aani mykistys
+oleta 5 unity päällä, natiivi päällä -- mykistys kattaa radion moottorin
+kuva m1-radio Radio soi, ulostulo mykistetty
+linssi linssi pois
+odota 3
+linssi linssi satelliitti
+odota 20
+linssi astro kyyti
+odota 8
+linssi astro kyyti
+odota 8
+linssi astro kyyti
+odota 8
+linssi soivat
+aani 12 cupola
+peli aani mykistys
+oleta 5 unity päällä, natiivi päällä -- mykistys päällä Cupolan aikana
+kuva m2-cupola Cupola, humina natiivissa moottorissa
+linssi linssi pois
+ei-testattu Macin kaiuttimien todellinen hiljaisuus mitataan vain pelin raportista (CoreAudio-ulostuloa ei kaapata)

@@ -37,7 +37,7 @@ using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
-    public enum NostoLaji { Kohde, Skandaali, Hetki, Elain, Takynosto, Syvennys }
+    public enum NostoLaji { Kohde, Skandaali, Hetki, Elain, Takynosto, Syvennys, Maakunta }
 
     public sealed class NostoKuva
     {
@@ -104,6 +104,13 @@ namespace Matkakirja.Natiivi
         /// kuva tekstin kyljessä. Ihmekuva on Kuvat[0] kadonneella ja säilyneellä (omistaja 27.9.2026, "Koe ihme" pois).
         /// </summary>
         public NostoKuva Nykykuva;
+        /// <summary>
+        /// Maakunta (omistaja 6.10. 13.0x: maakunta avautuu nostokorttiin): minikartta tekstin kyljessä, Pulun valmiit kysymykset
+        /// vastauksineen (Kysy ilman mallikutsua) ja chatin aihe.
+        /// </summary>
+        public Texture2D Kylkikartta;
+        public List<(string Q, string A)> ValmiitKysymykset = new List<(string, string)>();
+        public PuluChat.Aihe PuluAihe;
         /// <summary>Kohde: kohteen nimeävä täkynosto (web piirraKohteenNosto) — otsikko ja valo-id.</summary>
         public string LeikekirjaOtsikko, LeikekirjaValo;
     }

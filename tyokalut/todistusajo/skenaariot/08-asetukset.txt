@@ -1,0 +1,17 @@
+# 08 Asetukset: yläpalkin pilleri (mk-pilleri, oikea tap; puhelimella ei ☰-nappia) → pillerivalikko → Asetukset → ÄÄNENTASOT, KARTTA ja MUUT näkyvät → ‹ Takaisin →
+# ohinapautus (valikko x 72–392 → vasen reuna 30,650) sulkee valikon. Haku on osamerkkijono: "ASETUKSET" osuisi myös
+# pääsivun Asetukset-riviin, joten paluu todetaan säätimen nimestä. Kytkimiä ei vaihdeta (tallennettu tila säilyy).
+tap-teksti mk-pilleri
+nakyy 6 Asetukset -- pilleri avasi valikon
+kuva 08a-valikko Pillerivalikko auki
+tap-teksti Asetukset
+nakyy 6 ASETUKSET -- Asetukset-näkymä auki
+nakyy 3 Pulun ääni -- äänentasot näkyvät
+nakyy 3 Pieni liike -- kartan kytkimet näkyvät
+nakyy 3 Offline-kartat -- muut asetukset näkyvät
+kuva 08b-asetukset Asetukset
+tap-teksti ‹ Takaisin
+ei-nay 6 Pulun ääni -- ‹ Takaisin palasi valikon pääsivulle
+tap 30 650
+ei-nay 6 Asetukset -- ohinapautus sulki valikon
+kuva 08c-suljettu Valikko suljettu

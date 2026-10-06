@@ -43,6 +43,8 @@
 #include <algorithm>
 #include <atomic>
 #include <cstring>
+// Testimykistys (MatkakirjaAani.mm, Pelikoodari 5.10.2026).
+extern "C" void MatkakirjaAani_SovitaMykistys(AVAudioEngine* moottori);
 #include <mutex>
 #include <vector>
 
@@ -360,6 +362,7 @@ static MatkakirjaPuhekanava* MatkakirjaPuhekanava_olio = nil;
         return MatkakirjaPuhekanava_EiMoottoria;
     }
     self.moottori = moottori;
+    MatkakirjaAani_SovitaMykistys(moottori);   // testimykistys: vastausääni ei Macin kaiuttimiin (kaiunpoisto näkee sen silti)
     {
         std::lock_guard<std::mutex> l(MatkakirjaPuhekanava_soittoLukko);
         self.soitin = soitin;
@@ -465,6 +468,7 @@ static MatkakirjaPuhekanava* MatkakirjaPuhekanava_olio = nil;
         [m.inputNode removeTapOnBus:0];
         return NO;
     }
+    MatkakirjaAani_SovitaMykistys(m);
     std::lock_guard<std::mutex> l(MatkakirjaPuhekanava_soittoLukko);
     MatkakirjaPuhekanava_sukupolvi++;   // pysähdyksessä hukkuneet puskurit eivät enää vähennä jonoa
     MatkakirjaPuhekanava_jonossa = 0;

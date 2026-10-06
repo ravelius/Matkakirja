@@ -52,6 +52,17 @@ namespace Matkakirja.Natiivi
             set { kokoruutu = value; kerros.EnableInClassList("mk-suurennos--kokoruutu", value); selaus.VainPyyhkaisy = value; Mitoita(); }
         }
         bool kokoruutu;
+
+        /// <summary>
+        /// Lähderivi myös kokoruudussa (elävä opas, Päätoimittaja 6.10.: CC BY vaatii tekijän näkyviin; junan 146 still: rivi oli
+        /// piilossa löydöksen 150 kokoruutusäännön vuoksi). Rivi kuvan alla tummalla taustalla (.mk-suurennos--lahde-nakyy).
+        /// </summary>
+        public bool LahdeKokoruudussa
+        {
+            get => lahdeKokoruudussa;
+            set { lahdeKokoruudussa = value; kerros.EnableInClassList("mk-suurennos--lahde-nakyy", value); }
+        }
+        bool lahdeKokoruudussa;
         const float ZoomMax = 4f, AlasSulku = 90f, Liike = 8f;
         readonly KuvaSelaus selaus;
         readonly Dictionary<int, Vector2> osoittimet = new Dictionary<int, Vector2>();
@@ -96,8 +107,13 @@ namespace Matkakirja.Natiivi
             lahde.RegisterCallback<ClickEvent>(e => { if (lahdeUrl != null) { e.StopPropagation(); Application.OpenURL(lahdeUrl); } });
         }
 
+        /// <summary>Testi: kokoruudun tausta (luokat, laskettu väri, peitto) simukuvan tulkintaan.</summary>
+        public string Tausta() => $"suurennos {(Auki ? "auki" : "kiinni")}, kokoruutu {kokoruutu}, pysäytys {(pysaytys.resolvedStyle.display == DisplayStyle.Flex ? "on" : "ei")}, "
+            + $"tausta {kerros.resolvedStyle.backgroundColor}, peitto {kerros.resolvedStyle.opacity:0.00}, laatikko {kerros.worldBound}, paneeli {kerros.panel?.visualTree.worldBound}";
+
         public void Avaa(IReadOnlyList<LehtiKuva> kuvat, int alku = 0)
         {
+            if (kokoruutu && pysaytys.resolvedStyle.display != DisplayStyle.Flex) kerros.AddToClassList("mk-suurennos--ei-pysaytysta");
             sarja = new List<LehtiKuva>(kuvat ?? Array.Empty<LehtiKuva>());
             if (sarja.Count == 0) return;
             Nayta(alku);
@@ -187,6 +203,9 @@ namespace Matkakirja.Natiivi
 
         void AsetaPysaytys(Texture t)
         {
+            // Ilman pysäytyskuvaa (elävä opas, Cesium; Päätoimittaja 6.10. junan 146 stillit: 3D näkyi terävänä kuvan takana)
+            // kokoruudun tausta tummenee himmennys.kuva-tokenilla (.mk-suurennos--ei-pysaytysta).
+            kerros.EnableInClassList("mk-suurennos--ei-pysaytysta", t == null);
             if (t == null) { pysaytys.style.backgroundImage = StyleKeyword.None; pysaytys.style.display = DisplayStyle.None; return; }
             var tausta = t is RenderTexture rt ? Background.FromRenderTexture(rt) : t is Texture2D t2 ? Background.FromTexture2D(t2) : default;
             pysaytys.style.backgroundImage = new StyleBackground(tausta);
@@ -313,7 +332,7 @@ namespace Matkakirja.Natiivi
             lahdeUrl = string.IsNullOrEmpty(k.LahdeUrl) ? null : k.LahdeUrl;
             lahde.pickingMode = lahdeUrl != null ? PickingMode.Position : PickingMode.Ignore;
             lahde.EnableInClassList("mk-nosto__lahde--linkki", lahdeUrl != null);
-            lahde.style.display = lahde.text.Length > 0 && !kokoruutu ? DisplayStyle.Flex : DisplayStyle.None;
+            lahde.style.display = lahde.text.Length > 0 && (!kokoruutu || lahdeKokoruudussa) ? DisplayStyle.Flex : DisplayStyle.None;
             bool monta = sarja.Count > 1;
             // Löydös 34: ei nuolia kuvan päällä; selaus reunanapautuksella ja pyyhkäisyllä (KuvaSelaus).
             edellinen.style.display = seuraava.style.display = DisplayStyle.None;

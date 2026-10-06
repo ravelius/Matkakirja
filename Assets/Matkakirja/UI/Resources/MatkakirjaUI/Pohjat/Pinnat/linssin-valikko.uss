@@ -84,3 +84,215 @@
     border-color: var(--tk-pinta);
     background-color: var(--tk-korostus);
 }
+
+/* ELÄVÄ OPAS NYKYAJASSA (omistaja 5.10.2026 klo 20.5x): sama LASI-lista ja oppaan kuvakortti harmaan lasin tokeneilla
+ * (tk-teema-harmaa, OHJAUSNAPPI-pohjan oletus valokuvan ja 3D:n päällä); kirjasin Moderni koodista (OpasValikko). */
+/* Luettavuus kaupunkikuvan päällä (Päätoimittaja 5.10. klo 21.1x): teeman peittävä pinta, ei läpikuultavaa lasia. */
+.mk-linssivalikko.mk-linssivalikko--pohja.tk-teema-harmaa {
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta-peitto);
+}
+
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__kohta,
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__kohta .mk-nappi__teksti,
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__nimi {
+    color: var(--tk-muste);
+}
+
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__komento {
+    border-color: var(--tk-reunus);
+}
+
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__tila,
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__lahde {
+    color: var(--tk-muste-pehmea);
+}
+
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalikko__viiva {
+    background-color: var(--tk-reunus);
+}
+
+.mk-nosto.tk-teema-harmaa {
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta);
+}
+
+.mk-nosto.tk-teema-harmaa .mk-nosto__havainne {
+    color: var(--tk-muste);
+}
+
+/* OPPAAN KOHTEEN NIMILAPPU (omistaja 5.10.2026 klo 21.3x, juna 145): linnan NIMILAPPU-pohjan rakenne (lappu, pystyviiva, nasta)
+ * harmaan lasin tokeneilla, kirjasin ModerniLihava koodista (OpasNimilappu). Paikka koodista joka ruudulla. */
+.mk-opas-nimilappu {
+    position: absolute;
+    padding: 3px 8px 3px 8px;
+    border-width: 1px;
+    border-color: var(--tk-reunus);
+    border-radius: var(--tk-kulma-pieni);
+    background-color: var(--tk-pinta-peitto);
+    color: var(--tk-korostus);
+    font-size: var(--tk-koko-apuri);
+    -unity-text-align: middle-center;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-opas-nimilappu__viiva {
+    position: absolute;
+    width: 1.5px;
+    background-color: var(--tk-korostus);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-opas-nimilappu__nasta {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-width: 1px;
+    border-color: var(--tk-pinta-peitto);
+    border-radius: 4px;
+    background-color: var(--tk-korostus);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-opas-nimilappu--nakyy {
+    opacity: 1;
+}
+
+/* OPPAAN NELJÄ NAPPIA (omistaja 6.10.2026 klo 11.5x): Kysy, Liiku, mikrofoni ja näppäimistö keskellä alhaalla krediittien
+ * yläpuolella. Pohja LIIKU-nappi (.mk-liiku__nappi, pyöristetty neliö), teema rivin tk-teema-harmaasta; teksti ja kuvake
+ * keskitettyinä. VAIN --tk-*-tokenit. */
+.mk-opas-napit {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-liiku__nappi.mk-opas-nappi {
+    height: 44px;
+    min-width: 88px;
+    margin: 0 4px;
+    padding: 0 14px;
+    border-width: 1px;
+    border-radius: var(--tk-kulma-nappi);
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta); /* omistaja 6.10. 16.3x: läpinäkyvämpi lasi (harmaan lasiteeman pinta, ei peittävä) */
+    color: var(--tk-korostus);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mk-liiku__nappi.mk-opas-nappi:active,
+.mk-liiku__nappi.mk-opas-nappi.mk-valittu {
+    background-color: var(--tk-toiminto);
+}
+
+.mk-liiku__nappi.mk-opas-nappi--ikoni {
+    min-width: 44px;
+    width: 44px;
+    padding: 0;
+}
+
+.mk-liiku__nappi.mk-opas-nappi > .mk-ikoni.mk-opas-nappi__ikoni {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.mk-liiku__nappi.mk-opas-nappi .mk-nappi__teksti.mk-opas-nappi__teksti {
+    margin: 0 0 0 var(--tk-vali-s);
+    padding: 0;
+    font-size: var(--tk-koko-leipa);
+    letter-spacing: 0;
+    text-shadow: none;
+    color: var(--tk-korostus);
+    -unity-text-align: middle-center;
+}
+
+/* Oppaan näppäimistö: Pulun syöttörivi lasiteemassa nappirivin yläpuolella, kirjoitus menee suoraan oppaalle. */
+.mk-opas-kirjoitus {
+    position: absolute;
+    left: var(--tk-vali-m);
+    right: var(--tk-vali-m);
+    bottom: 92px;
+    padding: 6px;
+    border-width: 1px;
+    border-radius: var(--tk-kulma-nappi);
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta-peitto);
+}
+
+/* OPPAAN ALOITUS ILMAN KARTTAA (omistaja 6.10.2026 13.4x; OpasValikko.aloitus): sama linssivalikko koko ruutuna TUMMALLA
+ * teemalla (lasin muuttujat tumman teeman arvoiksi, tekstit vaaleina), kaksi saraketta: paikat ja suosikit (LINSSIRIVI).
+ * Puhelimella pystyssä (--pino) paikat ylhäällä ja suosikit alla. */
+.mk-linssivalikko.mk-linssivalikko--pohja.mk-opas-aloitus {
+    --tk-lasi-pinta: var(--tk-tumma-pinta);
+    --tk-lasi-muste: var(--tk-tumma-muste);
+    --tk-lasi-muste-pehmea: var(--tk-tumma-muste-pehmea);
+    --tk-lasi-reunus: var(--tk-tumma-reunus);
+    --tk-lasi-korostus: var(--tk-tumma-korostus);
+    position: absolute;
+    flex-direction: row;
+    max-width: none;
+    border-width: 0;
+    border-radius: 0;
+    background-color: var(--tk-tumma-pinta);
+}
+
+/* Sama tarkkuus kuin yllä (kolme luokkaa + pino), muuten rivi voittaa (simu 16.08: puhelin jäi kahdelle sarakkeelle). */
+.mk-linssivalikko.mk-linssivalikko--pohja.mk-opas-aloitus.mk-opas-aloitus--pino {
+    flex-direction: column;
+}
+
+.mk-opas-aloitus__sarake {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    margin: 0 var(--tk-vali-s);
+}
+
+.mk-opas-aloitus--pino .mk-opas-aloitus__sarake {
+    margin: 0 0 var(--tk-vali-m) 0;
+}
+
+.mk-opas-aloitus--pino .mk-opas-aloitus__sarake--paikat {
+    flex-grow: 0;
+    flex-basis: auto;
+}
+
+.mk-opas-aloitus__lista {
+    flex-shrink: 1;
+}
+
+.mk-opas-aloitus .mk-linssivalitsin__valiotsikko,
+.mk-opas-aloitus .mk-linssirivi__lyhyt {
+    color: var(--tk-tumma-muste-pehmea);
+}
+
+.mk-opas-aloitus .mk-linssirivi__nimi {
+    color: var(--tk-tumma-muste);
+}
+
+/* Oppaan listat harmaalla lasilla (omistaja 6.10. 16.3x): otsikot valkoisina, tarkennukset vaaleina mutta himmeämpinä. */
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssirivi__nimi {
+    color: var(--tk-harmaa-korostus);
+}
+
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssirivi__lyhyt,
+.tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalitsin__valiotsikko {
+    color: var(--tk-harmaa-muste-pehmea);
+}

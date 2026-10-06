@@ -85,6 +85,11 @@ namespace Matkakirja
         public int valimuistiMt = 600;
         /// <summary>Astronautin kameran S2-mosaiikin ämpäripolku ja alikatto (AstronauttiKerros.S2Juuri, karsitaan ensin).</summary>
         public const string S2Polku = "linssit/astronautin-kamera/s2-eurooppa";
+        /// <summary>
+        /// Euroopan mosaiikin versio (AstronauttiKerros.S2Juuri ja S2-maailman Euroopan lohko). v2 = Karttasepän rengaskorjaus
+        /// 5.10. 19.42 (saarten sädekehät pois, MERI ennallaan, sama rajattu jako). Vanhat buildit lukevat v1:tä (muuttumaton).
+        /// </summary>
+        public const string S2EuroopanVersio = "v2";
         public const int S2ValimuistiMt = 200;
 
         TcpListener[] kuuntelijat;
@@ -354,6 +359,49 @@ namespace Matkakirja
                 if (p.Value.Maailma == null) { tyhja = true; return polku; }
                 return p.Value.Maailma + loppu;
             }
+            return polku;
+        }
+
+        /// <summary>
+        /// S2-MAAILMA (Linssiseppä 2, juna 145; Natiivisepän ehdot 5.10.): astronautin kyydin S2-kerros koko maailman jaolla
+        /// polussa S2MaailmaPolku ({z}/{x}/{y}, y pohjoisesta). Euroopan z6-lohkon (27–39 × 13–25) laatta haetaan Euroopan
+        /// mosaiikista (S2Polku/v1, rajattu jako: taso z − 6), muualla saatavuuden mukaan maailman sarjasta tai läpinäkyvänä heti
+        /// (BMNG alla). Kerros lisätään vasta, kun saatavuus on asetettu (ei Cesiumin välimuistiin jääviä tyhjiä).
+        /// </summary>
+        /// <param name="korjausPolku">Korjauskerroksen polku laatalle (esim. "…/s2-maailma/v2-korjaus2/") tai null; voittaa myös
+        /// Euroopan lohkossa (Karttaseppä 6.10.: pienet korjauserät omiin kansioihinsa).</param>
+        public static void S2Maailma(string polku, Func<int, int, int, bool> saatavuus, Func<int, int, int, string> korjausPolku = null,
+            Func<int, int, int, string> euroopanKorjausPolku = null)
+        {
+            s2MaailmaKorjausPolku = korjausPolku; s2EuroopanKorjausPolku = euroopanKorjausPolku;
+            s2MaailmaPolku = polku; s2MaailmaSaatavuus = saatavuus;
+        }
+        static volatile string s2MaailmaPolku;
+        static volatile Func<int, int, int, bool> s2MaailmaSaatavuus;
+        static volatile Func<int, int, int, string> s2MaailmaKorjausPolku, s2EuroopanKorjausPolku;
+
+        static string S2MaailmaOhjaus(string polku, out bool tyhja)
+        {
+            tyhja = false;
+            string juuri = s2MaailmaPolku; var onko = s2MaailmaSaatavuus;
+            if (juuri == null || onko == null || !polku.StartsWith(juuri, StringComparison.Ordinal)) return polku;
+            var osat = polku.Substring(juuri.Length).Split('/');
+            int piste = osat.Length == 3 ? osat[2].IndexOf('.') : -1;
+            if (osat.Length != 3 || !int.TryParse(osat[0], out int z) || !int.TryParse(osat[1], out int x)
+                || !int.TryParse(piste < 0 ? osat[2] : osat[2].Substring(0, piste), out int y)) { tyhja = true; return polku; }
+            var korjaus = s2MaailmaKorjausPolku?.Invoke(z, x, y);
+            if (korjaus != null) return korjaus + polku.Substring(juuri.Length);
+            if (z >= 6 && z <= 10)
+            {
+                int t = z - 6, bx = x >> t, by = y >> t;
+                if (bx >= 27 && bx < 40 && by >= 13 && by < 26)
+                {
+                    // Euroopan korjauskerros (rajattu jako), muuten Euroopan mosaiikki.
+                    string ek = s2EuroopanKorjausPolku?.Invoke(z, x, y);
+                    return $"{ek ?? S2Polku + "/" + S2EuroopanVersio + "/"}{t}/{x - (27 << t)}/{y - (13 << t)}.jpg";
+                }
+            }
+            tyhja = !onko(z, x, y);
             return polku;
         }
 
@@ -679,7 +727,14 @@ namespace Matkakirja
                 // S2-mosaiikin alikatto (Linssiseppä 2, Natiivisepän ehto 1.10.2026): astronautin kameran S2-laatat karsitaan ensin
                 // 200 Mt:iin, jotta ne eivät syrjäytä pohjalaattoja yhteisestä 600 Mt:n välimuistista.
                 string s2 = Path.Combine(valimuisti, S2Polku.Replace('/', Path.DirectorySeparatorChar));
-                _ = Task.Run(() => { if (Directory.Exists(s2)) Karsi(s2, (long)S2ValimuistiMt * 1048576); Karsi(valimuisti, raja); });
+                // S2-maailma (juna 145): oma alikatto samalla rajalla; koko välimuistin katto rajaa molemmat.
+                string s2m = Path.Combine(valimuisti, "linssit", "astronautin-kamera", "s2-maailma");
+                _ = Task.Run(() =>
+                {
+                    if (Directory.Exists(s2)) Karsi(s2, (long)S2ValimuistiMt * 1048576);
+                    if (Directory.Exists(s2m)) Karsi(s2m, (long)S2ValimuistiMt * 1048576);
+                    Karsi(valimuisti, raja);
+                });
             }
             catch (Exception e)
             {
@@ -1153,6 +1208,8 @@ namespace Matkakirja
             }
             // DELTASARJA: pohjan laatat.json (delta) tunnetuksi ennen kuin laatan sisältöpolku (Avain, Tiedosto, Haku) päätellään.
             await DeltaValmis(polku);
+            polku = S2MaailmaOhjaus(polku, out bool s2Tyhja);
+            if (s2Tyhja && tyhjakuva != null) { lahde.Nimi = "s2-kattamaton"; return (200, tyhjakuva); }
             polku = VariOhjaus(polku, out bool varitasoa, out bool tyhja);
             if (tyhja && tyhjakuva != null) { lahde.Nimi = "tyhja"; return (200, tyhjakuva); }
             if (KattavuusOhjaus(polku, out bool kattavuusTyhja))

@@ -300,10 +300,15 @@ namespace Matkakirja.Natiivi
                     Destroy(go, 2.5f);
                     return null;
                 }
+                case "asetus":
+                    // Asetukset datana (Natiiviseppä 5.10.2026): "asetus" = raportti, "asetus <avain>" = arvo ja lähde,
+                    // "asetus lataa" = kokoelmat/asetukset.json uudelleen (koekansio tai paketti; Peli/Asetus.cs).
+                    if (A(1) == "lataa") { ohjain.StartCoroutine(ohjain.HaeAsetukset()); return "=asetukset ladataan"; }
+                    return "=" + (A(1) == null ? Matkakirja.Peli.Asetus.Raportti() : Matkakirja.Peli.Asetus.Kuvaa(A(1)));
                 case "aani" when A(1) == "mykistys":
                     // Testimykistys (TestiMykistys.cs): 1 = lopullinen ulostulo nollaan (oletus simulaattorissa), 0 = kuuluu.
                     if (A(2) == "1" || A(2) == "0") TestiMykistys.Paalla = A(2) == "1";
-                    return $"=mykistys {(TestiMykistys.Paalla ? "päällä" : "pois")} (simulaattori {TestiMykistys.Simulaattori})";
+                    return $"=mykistys {(TestiMykistys.Paalla ? "päällä" : "pois")} (simulaattori {TestiMykistys.Simulaattori}; {TestiMykistys.Tila()})";
                 case "aani" when A(1) == "istunto":
                     // aani istunto playback|puhe|ambient: istunnon vaihto mittausta varten (AaniIstunto.Vaihda).
                     return AaniIstunto.Vaihda(A(2));

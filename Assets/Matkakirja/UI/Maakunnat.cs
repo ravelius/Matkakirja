@@ -12,7 +12,7 @@
 //              maahan päivittää listan ilman uudelleenavausta (Matka.Saapui).
 //   Luonnehdinta  listan alla kiinteänä: nimi, lyhyt teksti ja ⊕ → kortti.
 //   Kortti     kuva nostokortin mitoilla (kuva + kuva2 selattavina, lähderivi), pitkä teksti ja minikartta sen
-//              oikealla, Pulun kysymykset (napautus → Pulun chat valmiilla vastauksella; MaakuntaKortti).
+//              oikealla, Pulun kysymykset (napautus → Pulun chat valmiilla vastauksella). 6.10.: kortti on nostokortti.
 //
 // Data sisältöpaketista (LinssiSisalto-reitti, sama välimuisti):
 //   moduulit/js/karttatyokalu-maakunnat.json  MAAKUNTIEN_NIMET, MAAKUNTIEN_MAAT
@@ -119,7 +119,10 @@ namespace Matkakirja.Natiivi
         readonly VisualElement juuri, lista, kuvaus, peukalo;
         readonly ScrollView vieritys;
         readonly Label tila, eiMaakuntia;
-        readonly MaakuntaKortti kortti;
+        /// <summary>Maakunnat avautuvat nostokorttiin (omistaja 6.10. 13.0x; ennen oma MaakuntaKortti).</summary>
+        static Nostokortti Kortti => UiNakymat.Olemassa ? UiNakymat.Hae().Nostokortti : null;
+        /// <summary>Tämän istunnon aikana avatut maakunnat (selaimen ✓).</summary>
+        readonly HashSet<string> luetut = new HashSet<string>();
         readonly Dictionary<string, Button> rivit = new Dictionary<string, Button>();
         readonly Dictionary<string, (Button Otsikko, VisualElement Rivit)> ryhmat = new Dictionary<string, (Button, VisualElement)>();
         List<Maa> maat;
@@ -129,7 +132,7 @@ namespace Matkakirja.Natiivi
         string sovellettuIso = "";
         Matka kuunneltu;
 
-        public bool KorttiAuki => kortti.Auki;
+        public bool KorttiAuki => Kortti?.MaakuntaAuki ?? false;
 
         public Maakunnat(UiKerros kerros, VisualElement isa)
         {
@@ -153,7 +156,8 @@ namespace Matkakirja.Natiivi
 
             kuvaus = Rakenne.El("mk-maakunnat__luonnehdinta", juuri);
             kuvaus.style.display = DisplayStyle.None;
-            kortti = new MaakuntaKortti(kerros);
+            Nostokortti.MaakuntaNosto = MaakunnanNosto;
+            Nostokortti.MaakuntaLista = MaanMaakunnat;
             ValittuAvain = LueTallennettu();
             try { Pois = PlayerPrefs.GetInt(PoisAvain, 0) == 1; } catch (Exception) { }
         }
@@ -181,12 +185,78 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public void ValitseKunValmis(string avain)
         {
-            if (rakennettu) { odottava = null; Valitse(avain); return; }
+            if (rakennettu) { odottava = null; Valitse(avain); AvaaKartalta(avain); return; }
             odottava = avain;
             Avautui();
         }
 
-        public void SuljeKortti() => kortti.Sulje();
+        public void SuljeKortti() { if (KorttiAuki) Kortti.Sulje(); }
+
+        /// <summary>
+        /// Kartan napautus avaa maakunnan suoraan pienenä nostokorttina (Päätoimittaja 6.10. 13.1x: "mieluiten maakunnan napautus
+        /// avaa suoraan pienen nostokortin"); lappu jää kortin alle ja palaa kortin sulkeuduttua.
+        /// </summary>
+        public void AvaaKartalta(string avain)
+        {
+            if (avain == null || OnPois(avain) || OnKaikki(avain) || HaeLuonnehdinta(avain) == null) return;
+            AvaaKortti(avain);
+        }
+
+        /// <summary>Maakunta nostokorttiin (lapun "Lue lisää" ja pikkukuva).</summary>
+        void AvaaKortti(string avain) => Kortti?.Avaa(Nostokortti.MaakuntaEtuliite + avain);
+
+        /// <summary>
+        /// Nostokortin sisältö valolle "maakunta:ISO:tunnus": otsikko, luonnehdinta, kuvat, minikartta ja Pulun valmiit kysymykset.
+        /// Selaimen ja AUTO:n siirtymä valitsee maakunnan myös kartalla (korostus ja lappu seuraavat).
+        /// </summary>
+        Nosto MaakunnanNosto(string valo)
+        {
+            string avain = valo.Substring(Nostokortti.MaakuntaEtuliite.Length);
+            if (!rakennettu || !Kelpaa(avain)) return null;
+            var data = HaeLuonnehdinta(avain);
+            if (data == null) return null;
+            if (avain != ValittuAvain) Valitse(avain);
+            luetut.Add(valo);
+            string nimi = Nimi(avain), maaNimi = MaanNimi(avain), pitka = data.Pitka ?? data.Lyhyt;
+            var n = new Nosto
+            {
+                Laji = NostoLaji.Maakunta, Id = valo, Iso = Jaa(avain).Iso, Luokka = "MAAKUNTA", Otsikko = nimi, Teksti = pitka,
+                Kylkikartta = MaakuntaMinikartta.Hae(avain),
+                ValmiitKysymykset = HaePulu(avain),
+                PuluAihe = new PuluChat.Aihe
+                {
+                    Otsake = "Maakuntakortti, josta pelaaja kysyy",
+                    Nimi = string.IsNullOrEmpty(maaNimi) ? nimi : $"{nimi} ({maaNimi})",
+                    Tyyppi = "maakunta",
+                    Teksti = pitka,
+                },
+            };
+            foreach (var k in data.Kuvat)
+            {
+                string osoite = MiniJson.Teksti(k, "osoite");
+                if (!string.IsNullOrEmpty(osoite)) n.Kuvat.Add(new NostoKuva { Lahde = osoite, LahdeRivi = KuvanLahde(k, osoite) });
+            }
+            return n;
+        }
+
+        /// <summary>Selaimen lista: maan kaikki maakunnat, joilla on luonnehdinta (‹ › ja AUTO pysyvät niiden sisällä).</summary>
+        Nostoselain.Lista MaanMaakunnat(string valo)
+        {
+            var iso = Jaa(valo.Substring(Nostokortti.MaakuntaEtuliite.Length)).Iso;
+            var m = maat?.FirstOrDefault(x => x.Iso == iso);
+            if (m == null) return null;
+            var l = new Nostoselain.Lista { Otsikko = m.Nimi + " · Maakunnat", Siru = "Maakunnat", Avaaja = "MAAKUNNAT", Luettu = luetut.Contains };
+            foreach (var (tunnus, nimi) in m.Alueet)
+                if (HaeLuonnehdinta(iso + ":" + tunnus) != null) l.Rivit.Add((Nostokortti.MaakuntaEtuliite + iso + ":" + tunnus, nimi));
+            return l;
+        }
+
+        /// <summary>Lähderivi täydennettynä Commonsin tekijällä ja lisenssillä, jos puuttuu (web taytaLahderivi, #3438).</summary>
+        static string KuvanLahde(Dictionary<string, object> k, string osoite)
+        {
+            string lahde = string.Join(" · ", new[] { MiniJson.Teksti(k, "lahde"), MiniJson.Teksti(k, "lisenssi") }.Where(x => !string.IsNullOrEmpty(x)));
+            return Kuvatekija.Taydenna(lahde, MiniJson.Teksti(k, "tiedosto") ?? osoite) ?? "";
+        }
 
         /// <summary>
         /// Löydös 170: sisältöpaketti vaihtui kesken istunnon → luonnehdinnat ja Pulun kysymykset uudelleen (pikkukuvat uusista
@@ -380,7 +450,7 @@ namespace Matkakirja.Natiivi
             // Automaattinen maakunta: latauksen aikana napautettu maakunta valitaan nyt, jos lappu on yhä auki.
             var odotettu = odottava;
             odottava = null;
-            if (odotettu != null && Karttatila) Valitse(odotettu);
+            if (odotettu != null && Karttatila) { Valitse(odotettu); AvaaKartalta(odotettu); }
         }
 
         /// <summary>
@@ -564,7 +634,7 @@ namespace Matkakirja.Natiivi
             ValittuAvain = null;
             odottava = null;
             Pois = false;
-            kortti.Sulje();
+            SuljeKortti();
             MerkitsePois();
             PaivitaLuonnehdinta();
             SiirraPeukalo();
@@ -642,7 +712,7 @@ namespace Matkakirja.Natiivi
                     kuva.style.backgroundImage = new StyleBackground(tx);
                     paikka.RemoveFromHierarchy();
                 });
-            if (data != null) kuva.RegisterCallback<ClickEvent>(e => kortti.Avaa(avain, nimi, MaanNimi(avain), data.Pitka ?? data.Lyhyt, data.Kuvat, HaePulu(avain), e.position));
+            if (data != null) kuva.RegisterCallback<ClickEvent>(_ => AvaaKortti(avain));
             var t = Rakenne.Teksti(data?.Lyhyt ?? "Luonnehdinta tulossa.", "mk-maakunnat__lteksti", rivi);
             Kirjasimet.Aseta(t, Kirjasin.Luku);
             if (data != null)
@@ -653,17 +723,32 @@ namespace Matkakirja.Natiivi
                 t.text = (data.Lyhyt ?? "") + " <color=#7a5514><u>Lue lisää</u></color>";
                 t.pickingMode = PickingMode.Position;
                 t.tooltip = "Lisää alueesta";
-                t.RegisterCallback<ClickEvent>(e => kortti.Avaa(avain, nimi, MaanNimi(avain), data.Pitka ?? data.Lyhyt, data.Kuvat, HaePulu(avain), e.position));
+                t.RegisterCallback<ClickEvent>(_ => AvaaKortti(avain));
             }
         }
 
         // --- testi ---------------------------------------------------------------------
 
         /// <summary>Testikomento "ui maakunnat kysymys n": kortin n:s kysymys auki/kiinni, mitat lokiin.</summary>
-        public string TestiKysymys(int n) => kortti.TestiKysymys(n);
+        public string TestiKysymys(int n)
+        {
+            if (!KorttiAuki) return "maakunta ei auki nostokortissa";
+            var k = HaePulu(ValittuAvain);
+            if (n >= k.Count) return $"kysymyksiä {k.Count}";
+            Kortti.Testaa(null, "kysy", null);
+            if (n >= 0) UiNakymat.Hae()?.Chat.VastaaValmiilla(k[n].Q, k[n].A, null);
+            return n < 0 ? $"Kysy → chat, {k.Count} kysymystä" : $"kysymys {n + 1}/{k.Count} → Pulun chat";
+        }
+        public string VaistoKuvaus => "maakunta nostokortissa " + (KorttiAuki ? "auki: " + Kortti.Kuvaus : "kiinni");
 
         /// <summary>Testikomento "ui maakunnat kartta [pois]": minikartta suureksi tai takaisin.</summary>
-        public string TestiKartta(bool suureksi) => kortti.TestiKartta(suureksi);
+        public string TestiKartta(bool suureksi)
+        {
+            if (!KorttiAuki) return "maakunta ei auki nostokortissa";
+            string tulos = null;
+            Kortti.Testaa(null, suureksi ? "kartta" : "kartta-pois", t => tulos = t);
+            return tulos ?? "minikartta " + (suureksi ? "suureksi" : "takaisin");
+        }
 
         /// <summary>Testikomento: valitse avain ("ISO:tunnus") ja avaa tarvittaessa kortti.</summary>
         public void Testaa(string avain, bool korttiAuki)
@@ -683,310 +768,34 @@ namespace Matkakirja.Natiivi
                 if (korttiAuki && ValittuAvain != null)
                 {
                     var data = HaeLuonnehdinta(ValittuAvain);
-                    if (data != null) kortti.Avaa(ValittuAvain, Nimi(ValittuAvain), MaanNimi(ValittuAvain), data.Pitka ?? data.Lyhyt, data.Kuvat, HaePulu(ValittuAvain));
+                    if (data != null) AvaaKortti(ValittuAvain);
                 }
             }
         }
     }
 
     /// <summary>
-    /// Alueen kortti (webin .maakunta-kortti): kelluva paperi kevyen himmennyksen päällä,
-    /// ✕ ja napautus kortin ohi sulkevat. Valikkokerroksessa (40), pallo lukittu.
-    ///
-    /// OMISTAJAN KORTTI 30.9.2026 KLO 22.5X (Länsi-Makedonia, Pelikoodari):
-    ///   1) Pulun kysymykset: kortissa Pulun kuvake ja kysymys (kaikki 2–3), vastausta ei näytetä kortissa. Napautus avaa
-    ///      Pulun chatin kortin päälle: kysymys pelaajan viestinä ja valmis vastaus heti ilman tekoälykutsua
-    ///      (PuluChat.VastaaValmiilla); jatkokysymykset kulkevat maakunnan aiheella.
-    ///   2) Kuva nostokortin mitoilla ("oudon matala eikä ole linjassa muiden nostojen kanssa"): koko leveys, kuvan oma
-    ///      muoto korkeuskattoon asti (Nostokortti.Kuvakehys: turva-alue − 150 pt, vähintään 28 %), toinen kuva (kuva2)
-    ///      selattavana (KuvaSelaus: pyyhkäisy ja reunanapautus; laskuri "1 / 2").
-    ///   3) Havainnekuva: maakunnan minikartta omasta aineistosta (MaakuntaMinikartta) tekstin oikealla (30 % palstasta,
-    ///      enintään 220 pt; Lehtipalstat-kylkikuva), napautus suurentaa sen animoidusti paikaltaan ruudun keskelle
-    ///      (220 ms), napautus tai Esc palauttaa.
+    /// Maakunnan minikartan suurennos (omistajan kortti 30.9.2026 klo 22.5x: "klikata suuremmaksi minipopup tyyliin jolloin se
+    /// animoidusti suurenisi ruudulle"): kartta kasvaa kyljestä ruudun keskelle (enintään 90 % ruudusta, oma muoto), tausta
+    /// himmenee; napautus tai Esc palauttaa. Entisestä maakuntakortista; maakunta avautuu nyt nostokorttiin (omistaja 6.10.).
     /// </summary>
-    public sealed class MaakuntaKortti
+    public sealed class MinikartanSuurennos
     {
-        readonly UiKerros kerros;
-        readonly VisualElement himmennys, kortti, kuvat, tekstiPaikka;
-        readonly ScrollView sisalto;
-        readonly Label otsikko;
-        readonly VisualElement puluLohko;
-        /// <summary>Kuvan kokoruutusuurennos (omistaja 28.9.2026): sama komponentti ja asetukset kuin Nostokortti.</summary>
-        readonly Kuvasuurennos suurennos;
-        // NOSTOKORTTI-pohja (omistaja 1.10.2026): paikka ja vetokahva kuten nostokortilla (Pohja.NostokortinPaikka).
-        readonly Vetokahva kahva;
-        bool laajennettu;
-        public bool Auki { get; private set; }
-        /// <summary>Jokin maakuntakortti auki (UiNakymat.ChatinKerros: chat nousee kortin päälle kuten nostokortissa).</summary>
-        public static bool JokinAuki { get; private set; }
-        /// <summary>
-        /// Omistaja 29.9.2026 klo 07.4x (kaappaukset maakuntakortti-kiinni/-kysymys-auki): "Ikkunan koko ei saa muuttua kun
-        /// noita klikkaa auki." Kortin korkeus lukitaan avauksen jälkeiseen asetteluun (koko ja paikka kiinteät).
-        /// </summary>
-        bool lukitaan, avautuu;
-        /// <summary>Avanneen napautuksen kohta paneelin koordinaateissa: kortin origo (web: ⊕-napin keskipiste avaushetkellä).</summary>
-        Vector2? lahto;
-        IVisualElementScheduledItem vieritys;
-        /// <summary>Kuvan korkeuskatto (Mitoita; sama kaava kuin Nostokortti: turva-alue − 150 pt, vähintään 28 %).</summary>
-        float kuvaKatto;
-        float avattu;
-        int kuvaIndeksi;
-        string avain;
-        PuluChat.Aihe aihe;
-        /// <summary>Suurennettu minikartta (tausta ja kuva) tai null.</summary>
-        VisualElement karttaTausta, karttaIso;
+        public const float KylkiOsuus = 0.30f, KylkiKatto = 220f;
+        const float KarttaMs = 220f;
+        readonly VisualElement juuri;
+        VisualElement karttaTausta, karttaIso, kylki;
         IVisualElementScheduledItem karttaAnimaatio;
-        const float KarttaOsuus = 0.30f, KarttaKatto = 220f, KarttaMs = 220f;
-        const string RiviValiAlku = "<line-height=1.58em>";
 
-        public MaakuntaKortti(UiKerros kerros)
-        {
-            this.kerros = kerros;
-            himmennys = Rakenne.El("mk-himmennys mk-maakuntaKortti__kerros", kerros.Juuri(UiKerros.Valikot));
-            himmennys.style.display = DisplayStyle.None;
-            himmennys.RegisterCallback<PointerDownEvent>(e => { if (e.target == himmennys) Sulje(); });
-            // Omistaja 28.9.2026: kortti saman kokoinen kuin nostokortti — mk-nosto-luokka + sama leveyskaava
-            // (Nostokortti.LaskeLeveys), ei omaa ulkoasua (mieluummin lisätty nostokortin luokka tähän kuin
-            // muutettu nostokortin tyylejä).
-            himmennys.RegisterCallback<GeometryChangedEvent>(_ => Mitoita());
-            kortti = Rakenne.El("mk-maakuntaKortti mk-nosto", himmennys);
-            kortti.RegisterCallback<GeometryChangedEvent>(_ =>
-            {
-                if (!lukitaan || kortti.layout.height <= 0 || float.IsNaN(kortti.layout.height)) return;
-                lukitaan = false;
-                // Korkeus tulee pohjasta (Paikka: kiinteä 45 % / laajennettuna 85 %), joten koko ei muutu sisällön mukana.
-                // Origo avanneesta kohdasta, kun kortin paikka on tiedossa; kasvu alkaa vasta tämän jälkeen (ei hyppyä
-                // origon vaihtuessa kesken). Ilman kohtaa (testikomento) keskeltä.
-                // Skaalaamaton laatikko (worldBound sisältäisi kesken olevan 0,92-mittakaavan).
-                var r = new Rect(himmennys.worldBound.position + kortti.layout.position, kortti.layout.size);
-                var o = lahto ?? r.center;
-                kortti.style.transformOrigin = new TransformOrigin(
-                    Mathf.Clamp(o.x - r.x, 0f, r.width), Mathf.Clamp(o.y - r.y, 0f, r.height), 0f);
-                if (avautuu) { avautuu = false; himmennys.schedule.Execute(() => { if (Auki) himmennys.AddToClassList("mk-auki"); }); }
-            });
-            // NOSTOKORTTI-pohja: ei ✕:ää (ohinapautus, veto alas, Esc); piilotettu nappi poistettu (✕-inventaario 5.10.2026).
-            kahva = new Vetokahva(kortti, l => { laajennettu = l; Paikka(); }, Sulje, () => laajennettu);
-            Nappaimisto.Rekisteroi("maakuntakortti", 60, () => Auki, null, null, Sulje);
-            sisalto = new ScrollView(ScrollViewMode.Vertical);
-            sisalto.AddToClassList("mk-maakuntaKortti__sisalto");
-            sisalto.verticalScrollerVisibility = ScrollerVisibility.Hidden;
-            sisalto.horizontalScrollerVisibility = ScrollerVisibility.Hidden;
-            kortti.Add(sisalto);
-            // NOSTOKORTTI-pohja (web #3791): kapiteeli "MAAKUNTA" otsikon yläpuolella.
-            Kirjasimet.Aseta(Rakenne.Teksti("MAAKUNTA", "mk-maakuntaKortti__kapiteeli", sisalto), Kirjasin.Kone);
-            otsikko = Rakenne.Teksti("", "mk-maakuntaKortti__otsikko", sisalto);
-            Kirjasimet.Aseta(otsikko, Kirjasin.LukuLihava);
-            kuvat = Rakenne.El("mk-maakuntaKortti__kuvat", sisalto, PickingMode.Ignore);
-            tekstiPaikka = Rakenne.El("mk-maakuntaKortti__tekstit", sisalto, PickingMode.Ignore);
-            puluLohko = Rakenne.El("mk-maakuntaKortti__pulu", sisalto, PickingMode.Ignore);
-            // Teksti (Lehtipalstat) ja kuva asettuvat vasta muutaman asettelun jälkeen: lukitaan korkeus uudelleen, kun
-            // sisältö kasvaa avauksen jälkeen (1.10. simulaattorikuva: kortti lukittui pelkän kuvan korkeuteen).
-            sisalto.contentContainer.RegisterCallback<GeometryChangedEvent>(e =>
-            {
-                if (Auki && Time.realtimeSinceStartup - avattu < 2f && e.newRect.height > e.oldRect.height + 0.5f) Lukitse();
-            });
-            // Kuvan napautus kokoruudulle (omistaja 28.9.2026): sama Kuvasuurennos-komponentti kuin Nostokortti.
-            suurennos = new Kuvasuurennos(kerros.Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
-        }
+        public MinikartanSuurennos(VisualElement juuri) { this.juuri = juuri; }
 
-        /// <summary>Sama leveyskaava kuin Nostokortti.Mitoita (Nostokortti.LaskeLeveys): kortit samankokoisia.</summary>
-        void Mitoita()
-        {
-            var pohja = himmennys.panel?.visualTree.layout ?? default;
-            var t = kerros.Reunat(UiKerros.Valikot);
-            float rl = pohja.width - t.x - t.z, rk = pohja.height - t.y - t.w;
-            if (float.IsNaN(rl) || float.IsNaN(rk) || rl <= 0 || rk <= 0)
-            {
-                kortti.style.width = StyleKeyword.Null;
-                kortti.style.maxWidth = StyleKeyword.Null;
-                return;
-            }
-            // Nostokortti.Mitoita: kuvan korkeuskatto turva-alue − 150 pt, vähintään 28 %.
-            kuvaKatto = Mathf.Round(Mathf.Max(rk - 150f, rk * 0.28f));
-            float leveys = Nostokortti.LaskeLeveys(rl, rk);
-            if (kortti.style.width.value.value != leveys) { kortti.style.width = leveys; kortti.style.maxWidth = leveys; Lukitse(); }
-            Paikka();
-        }
+        public bool Auki => karttaIso != null;
 
-        void Paikka()
-        {
-            if (!Auki) return;
-            bool kapea = Pohja.NostokortinPaikka(himmennys, kortti, laajennettu, kiintea: true);
-            kahva.Juuri.style.display = kapea ? DisplayStyle.Flex : DisplayStyle.None;
-        }
-
-        /// <summary>Korkeus vapaaksi ja uudelleen lukkoon seuraavassa asettelussa (uusi alue tai leveyden muutos).</summary>
-        void Lukitse()
-        {
-            lukitaan = true;
-            Paikka();
-        }
-
-        /// <param name="avainTunnus">"ISO:tunnus" (minikartta)</param>
-        /// <param name="maaNimi">maan nimi Pulun kontekstiin (voi puuttua)</param>
-        public void Avaa(string avainTunnus, string nimi, string maaNimi, string pitka, IReadOnlyList<Dictionary<string, object>> kuvalista,
-            IReadOnlyList<(string Q, string A)> kysymykset, Vector2? lahtopiste = null)
-        {
-            if (!Auki) lahto = lahtopiste;
-            avain = avainTunnus;
-            aihe = new PuluChat.Aihe
-            {
-                Otsake = "Maakuntakortti, josta pelaaja kysyy",
-                Nimi = string.IsNullOrEmpty(maaNimi) ? nimi : $"{nimi} ({maaNimi})",
-                Tyyppi = "maakunta",
-                Teksti = pitka,
-            };
-            SuljeKartta(true);
-            otsikko.text = nimi;
-            kuvaIndeksi = 0;
-            TaytaKuvat(kuvalista);
-            TaytaTeksti(pitka);
-            TaytaPulu(kysymykset);
-            vieritys?.Pause();
-            sisalto.scrollOffset = Vector2.zero;
-            avattu = Time.realtimeSinceStartup;
-            Lukitse();
-            if (Auki) return;
-            Auki = JokinAuki = true;
-            laajennettu = false;
-            Paikka();
-            Mitoita();
-            // Avaus: näkyviin ilman mk-auki-luokkaa; luokka (kasvu ja häivytys) vasta kun korkeus ja origo on lukittu (yllä).
-            // Uusi versio kumoaa kesken olevan sulun viivästetyn piilotuksen (Rakenne.Nayta).
-            bool pieni = LinssiUi.VahennettyLiike();
-            kortti.style.transitionDuration = pieni ? new StyleList<TimeValue>(new List<TimeValue> { new TimeValue(0f) }) : StyleKeyword.Null;
-            himmennys.style.transitionDuration = kortti.style.transitionDuration;
-            himmennys.userData = new object();
-            himmennys.RemoveFromClassList("mk-auki");
-            himmennys.style.display = DisplayStyle.Flex;
-            avautuu = true;
-            // Varmistus: jos asettelu ei kerro uutta kokoa (GeometryChanged), kortti ei saa jäädä näkymättömäksi.
-            himmennys.schedule.Execute(() => { if (Auki && avautuu) { avautuu = false; himmennys.AddToClassList("mk-auki"); } }).StartingIn(120);
-            SyoteLukko.Esta(this);
-        }
-
-        public void Sulje()
-        {
-            if (!Auki) return;
-            Auki = JokinAuki = false;
-            laajennettu = false;
-            suurennos.Sulje();
-            SuljeKartta(true);
-            avautuu = false;
-            // Sulku samaa reittiä avanneeseen kohtaan (origo pysyy), 200 ms + 40 ms kuten webissä; pieni liike: heti.
-            Rakenne.Nayta(himmennys, false, LinssiUi.VahennettyLiike() ? 0 : 240);
-            SyoteLukko.Vapauta(this);
-        }
-
-        // --- kuvat (nostokortin mitoilla, selattava) -----------------------------------------------------------------
-
-        void TaytaKuvat(IReadOnlyList<Dictionary<string, object>> lista)
-        {
-            kuvat.Clear();
-            kuvat.style.display = lista.Count > 0 ? DisplayStyle.Flex : DisplayStyle.None;
-            if (lista.Count == 0) return;
-            var sarja = lista.Select(MaakuntaLehtikuva).ToList();
-            var paikka = Rakenne.El("mk-maakuntaKortti__kuvapaikka", kuvat, PickingMode.Ignore);
-            var lahde = Rakenne.Teksti("", "mk-maakuntaKortti__lahde", kuvat);
-            Kirjasimet.Aseta(lahde, Kirjasin.Kone);
-            void Nayta(int i)
-            {
-                kuvaIndeksi = (i + lista.Count) % lista.Count;
-                paikka.Clear();
-                var k = lista[kuvaIndeksi];
-                int kohta = kuvaIndeksi;
-                var kehys = Kuvakehys(paikka, MiniJson.Teksti(k, "osoite"), () => suurennos.Avaa(sarja, kohta));
-                if (lista.Count > 1)
-                    Kirjasimet.Aseta(Rakenne.Teksti($"{kuvaIndeksi + 1} / {lista.Count}", "mk-nosto__laskuri", kehys), Kirjasin.Kone);
-                string rivi = KuvanLahde(k, MiniJson.Teksti(k, "osoite"));
-                lahde.text = rivi;
-                lahde.style.display = rivi.Length > 0 ? DisplayStyle.Flex : DisplayStyle.None;
-            }
-            // Pyyhkäisy ja reunanapautus selaavat, keskiosa suurentaa (Nostokortti.Kuvasarja, löydös 34).
-            new KuvaSelaus(paikka, () => lista.Count, s => Nayta(kuvaIndeksi + s), () => paikka.childCount > 0 ? paikka[0] : paikka);
-            Nayta(0);
-        }
-
-        /// <summary>
-        /// Nostokortti.Kuvakehys: koko leveys, korkeus kuvan omasta muodosta enintään kuvaKatto; ennen latausta 3:2.
-        /// </summary>
-        VisualElement Kuvakehys(VisualElement isa, string osoite, Action napautus)
-        {
-            var kehys = Rakenne.El("mk-nosto__kuvakehys", isa);
-            var kuva = Rakenne.El("mk-nosto__kuva", kehys, PickingMode.Ignore);
-            kehys.RegisterCallback<ClickEvent>(_ => napautus?.Invoke());
-            kehys.userData = 2f / 3f;
-            void Korkeus(float w)
-            {
-                if (float.IsNaN(w) || w <= 0) return;
-                float h = w * (kehys.userData is float s ? s : 2f / 3f);
-                if (kuvaKatto > 0f) h = Mathf.Min(h, kuvaKatto);
-                h = Mathf.Round(h);
-                if (kehys.style.height.value.value != h) kehys.style.height = h;
-            }
-            kehys.RegisterCallback<GeometryChangedEvent>(e => Korkeus(e.newRect.width));
-            if (!string.IsNullOrEmpty(osoite))
-                Kuvat.Hae(osoite, t =>
-                {
-                    if (t == null) return;
-                    kuva.style.backgroundImage = new StyleBackground(t);
-                    if (t.width <= 0 || t.height <= 0) return;
-                    kehys.userData = t.height / (float)t.width;
-                    kehys.AddToClassList("mk-nosto__kuvakehys--ladattu");
-                    Korkeus(kehys.layout.width);
-                });
-            return kehys;
-        }
-
-        /// <summary>Lähderivi täydennettynä Commonsin tekijällä ja lisenssillä, jos puuttuu (web taytaLahderivi, #3438).</summary>
-        static string KuvanLahde(Dictionary<string, object> k, string osoite)
-        {
-            string lahde = string.Join(" · ", new[] { MiniJson.Teksti(k, "lahde"), MiniJson.Teksti(k, "lisenssi") }.Where(s => !string.IsNullOrEmpty(s)));
-            return Kuvatekija.Taydenna(lahde, MiniJson.Teksti(k, "tiedosto") ?? osoite) ?? "";
-        }
-
-        /// <summary>Maakunnan kuva Kuvasuurennokselle (sama kuvatyyppi kuin nostokortin kuvasarjassa).</summary>
-        static LehtiKuva MaakuntaLehtikuva(Dictionary<string, object> k)
-        {
-            string osoite = MiniJson.Teksti(k, "osoite");
-            return new LehtiKuva { Lahde = osoite, LahdeRivi = KuvanLahde(k, osoite) };
-        }
-
-        // --- teksti ja minikartta ------------------------------------------------------------------------------------
-
-        void TaytaTeksti(string pitka)
-        {
-            tekstiPaikka.Clear();
-            var kappaleet = Kappalejako.Jaa(pitka ?? "").Select(k => k.Replace("<", "<noparse><</noparse>")).ToList();
-            var kartta = MaakuntaMinikartta.Hae(avain);
-            if (kartta == null)
-            {
-                foreach (var k in kappaleet) Kirjasimet.Aseta(Rakenne.Teksti(RiviValiAlku + k, "mk-maakuntaKortti__teksti", tekstiPaikka), Kirjasin.Luku);
-                return;
-            }
-            var kylki = Rakenne.El("mk-maakuntaKortti__kartta", null);
-            kylki.style.backgroundImage = new StyleBackground(kartta);
-            float suhde = kartta.height / (float)kartta.width;
-            kylki.RegisterCallback<GeometryChangedEvent>(e =>
-            {
-                float h = Mathf.Round(e.newRect.width * suhde);
-                if (e.newRect.width > 0 && Mathf.Abs(kylki.resolvedStyle.height - h) > 0.5f) kylki.style.height = h;
-            });
-            kylki.tooltip = "Suurenna kartta";
-            kylki.RegisterCallback<ClickEvent>(_ => SuurennaKartta(kylki, kartta));
-            Lehtipalstat.Luo(tekstiPaikka, kappaleet, RiviValiAlku, "mk-maakuntaKortti__teksti", Kirjasin.Luku, null, kylki,
-                palstoita: false, kylkiOsuus: KarttaOsuus, kylkiKatto: KarttaKatto);
-        }
-
-        /// <summary>
-        /// Minipopup (omistaja: "klikata suuremmaksi minipopup tyyliin jolloin se animoidusti suurenisi ruudulle"): kartta
-        /// kasvaa paikaltaan ruudun keskelle (enintään 90 % ruudusta, oma muoto), tausta himmenee; napautus tai Esc palauttaa.
-        /// </summary>
-        void SuurennaKartta(VisualElement kylki, Texture2D kartta)
+        public void Avaa(VisualElement mista, Texture2D kartta)
         {
             if (karttaIso != null) return;
-            var juuri = kerros.Juuri(UiKerros.Valikot);
-            var alku = juuri.WorldToLocal(kylki.worldBound);
+            kylki = mista;
+            var alku = juuri.WorldToLocal(mista.worldBound);
             var pohja = juuri.layout;
             float suhde = kartta.height / (float)kartta.width;
             float lev = Mathf.Min(pohja.width * 0.9f, pohja.height * 0.9f / suhde, 900f);
@@ -995,26 +804,24 @@ namespace Matkakirja.Natiivi
             karttaTausta.focusable = true;
             karttaIso = Rakenne.El("mk-maakuntaKortti__karttaiso", karttaTausta, PickingMode.Ignore);
             karttaIso.style.backgroundImage = new StyleBackground(kartta);
-            karttaTausta.RegisterCallback<PointerDownEvent>(e => { e.StopPropagation(); SuljeKartta(false); });
-            karttaTausta.RegisterCallback<KeyDownEvent>(e => { if (e.keyCode == KeyCode.Escape) { e.StopPropagation(); SuljeKartta(false); } });
+            karttaTausta.RegisterCallback<PointerDownEvent>(e => { e.StopPropagation(); Sulje(false); });
+            karttaTausta.RegisterCallback<KeyDownEvent>(e => { if (e.keyCode == KeyCode.Escape) { e.StopPropagation(); Sulje(false); } });
             Animoi(alku, loppu, 0f, 0.45f, null);
             karttaTausta.schedule.Execute(() => karttaTausta?.Focus());
-            Debug.Log($"MATKAKIRJA ui: maakuntakortti kartta suureksi {avain} ({kartta.width} × {kartta.height})");
+            Debug.Log($"MATKAKIRJA ui: maakunnan minikartta suureksi ({kartta.width} × {kartta.height})");
         }
 
-        void SuljeKartta(bool heti)
+        public void Sulje(bool heti)
         {
             if (karttaTausta == null) return;
             var tausta = karttaTausta;
-            var kylki = tekstiPaikka.Q(className: "mk-maakuntaKortti__kartta");
-            if (heti || kylki == null || karttaIso == null)
+            if (heti || kylki?.panel == null || karttaIso == null)
             {
                 karttaAnimaatio?.Pause();
                 tausta.RemoveFromHierarchy();
                 karttaTausta = karttaIso = null;
                 return;
             }
-            var juuri = kerros.Juuri(UiKerros.Valikot);
             var nyt = new Rect(karttaIso.layout.position, karttaIso.layout.size);
             Animoi(nyt, juuri.WorldToLocal(kylki.worldBound), 0.45f, 0f, () =>
             {
@@ -1047,54 +854,6 @@ namespace Matkakirja.Natiivi
                 Aseta(x);
                 if (x >= 1f) { karttaAnimaatio?.Pause(); valmis?.Invoke(); }
             }).Every(16);
-        }
-
-        /// <summary>Testikomento (ui maakunnat kartta): minikartta suureksi ja takaisin.</summary>
-        public string TestiKartta(bool suureksi)
-        {
-            if (!Auki) return "kortti ei auki";
-            var kylki = tekstiPaikka.Q(className: "mk-maakuntaKortti__kartta");
-            if (kylki == null) return "ei minikarttaa (maakuntien aineisto ei ladattu?)";
-            if (suureksi && kylki.resolvedStyle.backgroundImage.texture is Texture2D t) SuurennaKartta(kylki, t);
-            else SuljeKartta(false);
-            var r = kylki.worldBound;
-            return $"minikartta {r.width:0} × {r.height:0} pt @ {r.x:0},{r.y:0}, suuri {(karttaIso != null ? "kyllä" : "ei")}";
-        }
-
-        // --- Pulun kysymykset ----------------------------------------------------------------------------------------
-
-        IReadOnlyList<(string Q, string A)> kysymykset = new List<(string, string)>();
-        VisualElement toimintorivi;
-
-        /// <summary>
-        /// NOSTOKORTTI-pohjan toimintorivi (web #3791, Päätoimittaja 1.10.): vain Kysy (maakunnalla ei visaa eikä lehtijuttua);
-        /// Kysy avaa Pulun chatin, jossa kortin kysymykset ovat siruina valmiine vastauksineen (ei mallikutsua).
-        /// </summary>
-        void TaytaPulu(IReadOnlyList<(string Q, string A)> lista)
-        {
-            kysymykset = lista ?? new List<(string, string)>();
-            puluLohko.Clear();
-            puluLohko.style.display = DisplayStyle.None;
-            toimintorivi?.RemoveFromHierarchy();
-            toimintorivi = null;
-            kortti.EnableInClassList("mk-nosto--toiminnot", kysymykset.Count > 0);
-            if (kysymykset.Count == 0) return;
-            toimintorivi = Rakenne.El("mk-nosto__toiminnot", kortti, PickingMode.Ignore);
-            var b = Rakenne.Nappi("Kysy", "mk-nosto__toiminto", Kysy, toimintorivi);
-            Kirjasimet.Aseta(b, Kirjasin.KoneLihava);
-        }
-
-        void Kysy() => UiNakymat.Hae()?.Chat.AvaaValmiilla(aihe, kysymykset);
-
-        /// <summary>Testi: n:s kysymys kuten napautus (Pulun chat avautuu valmiilla vastauksella).</summary>
-        public string TestiKysymys(int n)
-        {
-            if (!Auki) return "kortti ei auki";
-            if (n < 0) { Kysy(); return $"Kysy → chat, {kysymykset.Count} kysymystä"; }
-            if (n >= kysymykset.Count) return $"kysymyksiä {kysymykset.Count}";
-            Kysy();
-            UiNakymat.Hae()?.Chat.VastaaValmiilla(kysymykset[n].Q, kysymykset[n].A, aihe);
-            return $"kysymys {n + 1}/{kysymykset.Count} → Pulun chat";
         }
     }
 }

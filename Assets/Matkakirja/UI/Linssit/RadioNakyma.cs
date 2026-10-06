@@ -1585,7 +1585,9 @@ namespace Matkakirja.Natiivi
             }
             var tila = linssi?.Tila;
             string nimi = Mastot && tila?.KaupunkiId != null ? tila.KaupunkiNimi : null;
-            mastonNimi.text = (nimi ?? "").ToUpperInvariant();
+            string uusiNimi = (nimi ?? "").ToUpperInvariant();
+            if (uusiNimi != mastonNimi.text) nimiAlku = Time.unscaledTime; // NIMIKYLTTI: uusi masto → ~3 s näkyvissä
+            mastonNimi.text = uusiNimi;
             if (string.IsNullOrEmpty(nimi)) mastonNimi.style.visibility = Visibility.Hidden;
             juuri.style.display = napit.Count > 0 || !string.IsNullOrEmpty(nimi) ? DisplayStyle.Flex : DisplayStyle.None;
             Paivita();
@@ -1651,6 +1653,8 @@ namespace Matkakirja.Natiivi
         // vasen reuna 15 pt maston juuren oikealla puolella, tekstin keskikohta 14 pt juuren alapuolella. Juuri on
         // kaupungin pintapiste (LinssiOhjain.Ruutupiste), koska maston ruutukorkeus vaihtelee zoomin ja kallistuksen mukaan.
         const float NimiX = 15f, NimiY = 14f;
+        /// <summary>NIMIKYLTTI (omistaja 5.10.2026, juna 146): maston nimi ~3 s valinnasta, sitten 200 ms:n häivytys.</summary>
+        float nimiAlku = -100f;
 
         /// <summary>Valitun maston nimi sen juuren viereen; piilossa, kun mastoa ei piirretä (RadioMastot.RuutuPaikka false).</summary>
         void PaivitaNimi()
@@ -1670,6 +1674,13 @@ namespace Matkakirja.Natiivi
             float h = mastonNimi.layout.height;
             mastonNimi.style.left = Mathf.Round(p.x + NimiX);
             mastonNimi.style.top = Mathf.Round(p.y + NimiY - (float.IsNaN(h) ? 10f : h / 2f));
+            float ika = Time.unscaledTime - nimiAlku, kesto = Nimikyltti.NakyyMs / 1000f, haipyy = Tyylikirja.Kesto.Sulku / 1000f;
+            if (ika >= kesto + haipyy)
+            {
+                if (mastonNimi.style.visibility.value != Visibility.Hidden) mastonNimi.style.visibility = Visibility.Hidden;
+                return;
+            }
+            mastonNimi.style.opacity = ika <= kesto ? 1f : 1f - (ika - kesto) / haipyy;
             if (mastonNimi.style.visibility.value != Visibility.Visible) mastonNimi.style.visibility = Visibility.Visible;
         }
     }

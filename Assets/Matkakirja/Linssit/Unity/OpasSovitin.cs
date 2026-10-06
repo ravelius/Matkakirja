@@ -174,6 +174,7 @@ namespace Matkakirja.Natiivi
             y.MusiikkiPitoon(true);
             y.Peite(true);
             if (!kaupunkiOdottaa) o.StartCoroutine(PeitePois());   // simu 18.39: peite jäi päälle ja tummensi koko näkymän
+            else y.Peite(false);   // aloitusvalikko piirtää oman tumman pintansa; peite himmensi sen ja esti napautukset (simu 6.10. 17.2x, juna 151)
             if (puhe == null)
             {
                 puhe = o.gameObject.AddComponent<AudioSource>();
@@ -344,6 +345,8 @@ namespace Matkakirja.Natiivi
             if (!Auki) return false;
             var v = Viimeisin;
             v.puhuttu = null;   // sama kohde saa alkaa uudelleen alusta
+            // Kesken jäänyt kohde luetaan alusta: ääni uudelleen, jos se ehdittiin vapauttaa (simu 17.4x: luettiin tekstinä).
+            if (v.silmukka.JatkoKohde is OpasKohde jk) v.Valmistele(jk);
             bool ok = v.silmukka.JatkaKierrosta();
             v.o.Kirjaa(ok ? $"opas: kierros jatkuu ({v.silmukka.KierrosTieto.numero}/{v.silmukka.KierrosTieto.maara})" : "opas: ei keskeytettyä kierrosta");
             return ok;
@@ -869,8 +872,9 @@ namespace Matkakirja.Natiivi
                 yield return null;
             }
             o.Kirjaa($"opas: siltalauseet {ok}/{siltalauseet.Maara} ladattu {Time.realtimeSinceStartup - t0:F1} s:ssa");
-            // Avauksen lause, jos kerronta ei vielä soi (worker suunnittelee ensimmäistä pysähdystä).
-            if (silmukka != null && !puhuu) Silta(OpasSiltalauseet.Aloitus, false);
+            // Avauksen lause, jos kerronta ei vielä soi (worker suunnittelee ensimmäistä pysähdystä). Ei aloitusvalikossa: kertoja
+            // puhuu vasta kaupungin tai suosikin valinnasta (omistaja TF 149, simu 17.2x: "Lähdetään kierrokselle" valikossa).
+            if (silmukka != null && !puhuu && !kaupunkiOdottaa && silmukka.Aloitettu) Silta(OpasSiltalauseet.Aloitus, false);
         }
 
         /// <summary>
@@ -1079,7 +1083,11 @@ namespace Matkakirja.Natiivi
             var tehtava = pinta.SampleHeightMostDetailed(new double3(k.Lon, k.Lat, 0));
             while (!tehtava.IsCompleted) yield return null;
             if (tehtava.IsFaulted || tehtava.Result == null || tehtava.Result.sampleSuccess == null || tehtava.Result.sampleSuccess.Length == 0) yield break;
-            if (tehtava.Result.sampleSuccess[0]) maaKorkeudet[Avain(k)] = pisteKorkeudet[PisteAvain(k.Lat, k.Lon)] = tehtava.Result.longitudeLatitudeHeightPositions[0].z;
+            if (tehtava.Result.sampleSuccess[0])
+            {
+                maaKorkeudet[Avain(k)] = pisteKorkeudet[PisteAvain(k.Lat, k.Lon)] = tehtava.Result.longitudeLatitudeHeightPositions[0].z;
+                viimeMaa = (k.Lat, k.Lon, maaKorkeudet[Avain(k)]);   // varaarvo myös kohteiden näytteistä (simu 17.4x: Pláka sai 45 m)
+            }
         }
 
         /// <summary>Kohdekehyksen maa pisteeseen (silmukka.MaaTarvitaan); epäonnistuessa arvio 45 m, jottei siirto jää odottamaan.</summary>
@@ -1206,6 +1214,7 @@ namespace Matkakirja.Natiivi
             var pidetaan = new HashSet<string>();
             if (AaniAvain(nyt) != null) pidetaan.Add(AaniAvain(nyt));
             if (AaniAvain(silmukka?.Seuraava) != null) pidetaan.Add(AaniAvain(silmukka.Seuraava));
+            if (AaniAvain(silmukka?.JatkoKohde) != null) pidetaan.Add(AaniAvain(silmukka.JatkoKohde));   // JATKA lukee sen alusta
             if (AaniAvain(viimeKysymys) != null && silmukka != null && silmukka.OdottaaVastausta) pidetaan.Add(AaniAvain(viimeKysymys));
             var pois = new List<string>();
             foreach (var kv in klipit) if (!pidetaan.Contains(kv.Key)) pois.Add(kv.Key);

@@ -1,12 +1,12 @@
 // TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi).
-// ÄLÄ MUOKKAA KÄSIN. lähde 56410abb7ee9. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
+// ÄLÄ MUOKKAA KÄSIN. lähde 0df885514511. Pohjat ja säännöt: docs/raportit/ui-pohjat-kartoitus-20261001.md.
 using UnityEngine;
 
 namespace Matkakirja.Natiivi
 {
     public static class Tyylikirja
     {
-        public const string Lahde = "56410abb7ee9";
+        public const string Lahde = "0df885514511";
 
         public static class Kehys
         {
@@ -44,6 +44,7 @@ namespace Matkakirja.Natiivi
         public static readonly Teema Lasi = new Teema("lasi", new Color32(46, 33, 20, 224), new Color32(243, 230, 208, 255), new Color32(201, 180, 143, 255), new Color32(217, 161, 59, 255), new Color32(217, 161, 59, 115), new Color32(217, 161, 59, 255));
         public static readonly Teema LasiAvaruus = new Teema("lasi-avaruus", new Color32(4, 12, 9, 230), new Color32(223, 246, 232, 255), new Color32(159, 201, 176, 255), new Color32(93, 255, 168, 255), new Color32(93, 255, 168, 71), new Color32(93, 255, 168, 255));
         public static readonly Teema Harmaa = new Teema("harmaa", new Color32(130, 130, 130, 107), new Color32(224, 224, 224, 255), new Color32(189, 189, 189, 255), new Color32(255, 255, 255, 255), new Color32(170, 170, 170, 255), new Color32(170, 170, 170, 140));
+        public static readonly Teema Lcd = new Teema("lcd", new Color32(12, 34, 20, 255), new Color32(132, 255, 160, 255), new Color32(132, 255, 160, 158), new Color32(132, 255, 160, 255), new Color32(124, 255, 158, 71), new Color32(132, 255, 160, 255));
 
         public static class Himmennys
         {
@@ -83,6 +84,10 @@ namespace Matkakirja.Natiivi
             public const float Arkki = 26f;
             public const float Nimio = 34f;
             public const float LeveaLisa = 2f;
+            public const float Lcd = 30f;
+            public const float LcdPieni = 15f;
+            public const float LcdMini = 20f;
+            public const float Rumpu = 12f;
         }
 
         public static class Kirjain
@@ -94,6 +99,10 @@ namespace Matkakirja.Natiivi
             public const Kirjasin Otsikko = Kirjasin.LukuLihava;
             public const Kirjasin Arkki = Kirjasin.LukuLihava;
             public const Kirjasin Nimio = Kirjasin.KoneBold;
+            public const Kirjasin Lcd = Kirjasin.Lcd;
+            public const Kirjasin LcdPieni = Kirjasin.Lcd;
+            public const Kirjasin LcdMini = Kirjasin.Lcd;
+            public const Kirjasin Rumpu = Kirjasin.Segmentti;
         }
 
         public static class Vali
@@ -176,8 +185,10 @@ namespace Matkakirja.Natiivi
             public static readonly (string Perhe, string Tyyli)[] LukuLihava = { ("Iowan Old Style", "Bold"), ("Charter", "Bold"), ("Palatino", "Bold"), ("Georgia", "Bold") };
             public static readonly (string Perhe, string Tyyli)[] LukuKursiivi = { ("Iowan Old Style", "Italic"), ("Charter", "Italic"), ("Palatino", "Italic"), ("Georgia", "Italic") };
             public static readonly (string Perhe, string Tyyli)[] Kauno = { ("Snell Roundhand", "Regular"), ("Savoye LET", "Plain"), ("Bradley Hand", "Bold") };
+            public static readonly (string Perhe, string Tyyli)[] Moderni = { ("SF Pro Text", "Regular"), ("SF Pro", "Regular"), (".SF UI Text", "Regular"), ("Helvetica Neue", "Regular"), ("Helvetica", "Regular") };
+            public static readonly (string Perhe, string Tyyli)[] ModerniLihava = { ("SF Pro Display", "Semibold"), ("SF Pro", "Semibold"), (".SF UI Display", "Semibold"), ("Helvetica Neue", "Medium"), ("Helvetica Neue", "Bold"), ("Helvetica", "Bold") };
         }
 
-        public static readonly string[] Pohjat = { "NOSTOKORTTI", "LUKUARKKI", "KORTTI", "PANEELI", "KUVANÄKYMÄ", "LINSSIN OHJAIN", "PULU", "EDISTYMINEN", "KENTTÄ", "LAUTAPELI", "GALLERIA", "OHJAUSNAPPI", "ERIKOISNOSTOT" };
+        public static readonly string[] Pohjat = { "NOSTOKORTTI", "LUKUARKKI", "KORTTI", "PANEELI", "KUVANÄKYMÄ", "LINSSIN OHJAIN", "PULU", "PINNATTU PALKKI", "EDISTYMINEN", "KENTTÄ", "LAUTAPELI", "GALLERIA", "OHJAUSNAPPI", "ERIKOISNOSTOT", "ISS-OHJAAMO" };
     }
 }

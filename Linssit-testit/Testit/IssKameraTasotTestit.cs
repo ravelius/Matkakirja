@@ -72,6 +72,8 @@ namespace Matkakirja.Linssit.Testit
                 }
                 Console.WriteLine($"  pilvimaski: {pilviset.Count} pilvistä lehteä, {varoja} varakuvaa");
             }
+            if (Environment.GetEnvironmentVariable("USVA") == "1")   // usvatasoitus kuten laitteella
+                Console.WriteLine("  usva: " + string.Join(", ", Uudelleenprojisointi.TasaaUsva(ty.Data).Select(u => $"{u.tunnus} −({u.r:0},{u.g:0},{u.b:0})")));
             var tilastot = new ConcurrentDictionary<int, long[]>();
             var tasolla = ty.Laatat.Where(l => l.z == TASO).ToList();
             int x0 = tasolla.Min(l => l.x), x1 = tasolla.Max(l => l.x), y0 = tasolla.Min(l => l.y), y1 = tasolla.Max(l => l.y);

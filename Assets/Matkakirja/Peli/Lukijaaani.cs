@@ -419,6 +419,9 @@ namespace Matkakirja.Peli
         /// </summary>
         public Func<(string Moottori, string Aani)?> MoottoriLahde;
 
+        /// <summary>Persoonan puhemoottori ja ääni (Valmisluennat: valmiin kappaleen avain ElevenLabsin äänellä).</summary>
+        public (string Moottori, string Aani)? MoottoriPersoonalle(string persoona) => Moottori(persoona);
+
         (string Moottori, string Aani)? Moottori(string persoona)
         {
             if (persoona == "pollo") return null;
