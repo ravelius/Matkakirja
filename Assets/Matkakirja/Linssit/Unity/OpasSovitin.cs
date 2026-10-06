@@ -623,17 +623,30 @@ namespace Matkakirja.Natiivi
         /// <summary>Kuten Valitse(OpasTaky) luettelon indeksillä (heijastuksen helpottamiseksi).</summary>
         public static bool Valitse(int indeksi) => Takyt != null && indeksi >= 0 && indeksi < Takyt.Count && Valitse(Takyt[indeksi]);
 
+        /// <summary>Aloituksen suosikit (omistaja 6.10. 14.2x: jopa 50; Pelikoodari #4054 GET /opas/kohteet?n=50). Kylmä 50 kestää
+        /// workerilla 30–60 s, joten aikarajan jälkeen haetaan tavalliset 8 täkyä (lämpimät) ennen kuin luovutetaan.</summary>
+        public const int SuosikkejaMax = 50;
+        public const int SuosikitAikarajaS = 20;
+
         IEnumerator LataaTakyt()
         {
-            using var r = UnityWebRequest.Get(PuluChat.Palvelin + "/opas/kohteet");
-            r.timeout = 20;
-            r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
-            r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
-            PolloTestitunnus.Lisaa(r);
-            yield return r.SendWebRequest();
-            if (silmukka == null) yield break;
-            takyt = r.result == UnityWebRequest.Result.Success ? OpasTaky.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : new List<OpasTaky>();
-            o.Kirjaa($"opas: täkyt {takyt.Count} ({(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
+            List<OpasTaky> lista = null; string tila = "";
+            foreach (var polku in new[] { "/opas/kohteet?n=" + SuosikkejaMax, "/opas/kohteet" })
+            {
+                using var r = UnityWebRequest.Get(PuluChat.Palvelin + polku);
+                r.timeout = SuosikitAikarajaS;
+                r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+                r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
+                PolloTestitunnus.Lisaa(r);
+                yield return r.SendWebRequest();
+                if (silmukka == null) yield break;
+                tila += (tila.Length > 0 ? ", " : "") + polku + " " + (r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString());
+                if (r.result != UnityWebRequest.Result.Success) continue;
+                lista = OpasTaky.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>);
+                if (lista.Count > 0) break;
+            }
+            takyt = lista ?? new List<OpasTaky>();
+            o.Kirjaa($"opas: täkyt {takyt.Count} ({tila})");
             if (takyt.Count == 0 && !silmukka.Aloitettu)
             {
                 // Ei täkyjä: vanha alku (Kööpenhamina) ja kartta auki heti.
