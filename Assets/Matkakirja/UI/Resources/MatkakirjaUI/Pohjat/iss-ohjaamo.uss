@@ -613,3 +613,42 @@
     color: var(--tk-lcd-reunus);
     opacity: 0.35;
 }
+
+/* NOPEUSLUKEMA (omistaja 6.10.2026): kaasua muutettaessa 3 s LCD:ssä kerroin vasemmalla, oikea nopeus oikealla ja sen alla
+ * osuus valon nopeudesta; vihreä, oranssi suurilla kertoimilla (--tk-lcd-varoitus), punainen täydellä teholla (--tk-lcd-vaara). */
+.mk-issohjaamo__nopeusrivi {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    padding: 0 4px;
+}
+
+.mk-issohjaamo__nopeussarake {
+    align-items: flex-end;
+}
+
+.mk-issohjaamo__kerroin,
+.mk-issohjaamo__nopeus,
+.mk-issohjaamo__valo {
+    margin: 0;
+    padding: 0;
+    color: var(--tk-lcd-muste);
+    white-space: nowrap;
+}
+
+.mk-issohjaamo__valo {
+    color: var(--tk-lcd-muste-pehmea);
+}
+
+.mk-issohjaamo__nopeusrivi--varoitus .mk-issohjaamo__kerroin,
+.mk-issohjaamo__nopeusrivi--varoitus .mk-issohjaamo__nopeus,
+.mk-issohjaamo__nopeusrivi--varoitus .mk-issohjaamo__valo {
+    color: var(--tk-lcd-varoitus);
+}
+
+.mk-issohjaamo__nopeusrivi--vaara .mk-issohjaamo__kerroin,
+.mk-issohjaamo__nopeusrivi--vaara .mk-issohjaamo__nopeus,
+.mk-issohjaamo__nopeusrivi--vaara .mk-issohjaamo__valo {
+    color: var(--tk-lcd-vaara);
+}

@@ -400,6 +400,7 @@ namespace Matkakirja.Natiivi
             poyta.EstaPienennys = () => lista.style.display == DisplayStyle.Flex;
             poyta.KokoMuuttui += PaivitaPulu;
             ohjaamo = new IssOhjaamo(turva, Linssi, Kuvaa);
+            ohjaamo.Kehys = kupu;   // täyden tehon tärinä myös Cupolan kehykseen (omistaja 6.10.)
             ohjaamo.KokoMuuttui += PaivitaPulu;
             // LCD:n laajennus (vaihe 3): samat vuodenaika- ja vuorokausivalinnat kuin kytkinpöydän nupeissa.
             ohjaamo.AsetaKausi = k => AsetaKausi(k);

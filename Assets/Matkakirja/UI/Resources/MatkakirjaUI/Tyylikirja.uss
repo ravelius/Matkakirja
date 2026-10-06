@@ -1,5 +1,5 @@
 /* TYYLIKIRJA — generoitu tiedostosta tyylikirja/tyylikirja.json (webin repo, node tools/tyylikirja.mjs --natiivi);
- * ÄLÄ MUOKKAA KÄSIN. lähde fb2589ee7379. Tuodaan ensimmäisenä (Matkakirja.tss). */
+ * ÄLÄ MUOKKAA KÄSIN. lähde 0df885514511. Tuodaan ensimmäisenä (Matkakirja.tss). */
 
 :root {
     --bg: #1d1610;
@@ -68,6 +68,8 @@
     --tk-lcd-korostus: #84ffa0;
     --tk-lcd-reunus: rgba(124, 255, 158, 0.28);
     --tk-lcd-toiminto: #84ffa0;
+    --tk-lcd-varoitus: #ffb347;
+    --tk-lcd-vaara: #ff5a4a;
     --tk-himmennys-tumma: rgba(14, 9, 4, 0.72);
     --tk-himmennys-kevyt: rgba(14, 9, 4, 0.35);
     --tk-himmennys-kuva: rgba(14, 9, 4, 0.92);
@@ -182,4 +184,6 @@
     --tk-korostus: var(--tk-lcd-korostus);
     --tk-reunus: var(--tk-lcd-reunus);
     --tk-toiminto: var(--tk-lcd-toiminto);
+    --tk-varoitus: var(--tk-lcd-varoitus);
+    --tk-vaara: var(--tk-lcd-vaara);
 }

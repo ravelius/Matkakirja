@@ -40,6 +40,15 @@ namespace Matkakirja.Natiivi
         // pienistä neliöistä koostuva"): rivi LCD-neliöitä, jotka syttyvät edistymisen mukaan, sammuneet himmeinä kuten LCD:n
         // sammuneet segmentit. Valmiin kuvan jälkeen "KUVA VALMIS" 2 s; sitten sijainti takaisin.
         public const int Segmentteja = 12;
+        readonly VisualElement nopeusRivi;
+        readonly Label kerroinT, nopeusT, valoT;
+        float nopeusAsti = -1f;
+        public const float NopeusS = 3f, NopeusPt = 13f, ValoOsuus = 0.62f, VaroitusKerroin = 300f, TaysiKerroin = 1000f;
+        /// <summary>Valon nopeus km/h (c = 299 792,458 km/s).</summary>
+        public const double ValoKmh = 299792.458 * 3600.0;
+        /// <summary>Suomalainen lukumuoto ilman kulttuuritietoja (IL2CPP:ssä fi-FI voi puuttua): pilkku, tuhaterotin välilyönti.</summary>
+        static readonly System.Globalization.NumberFormatInfo Fi = new System.Globalization.NumberFormatInfo
+            { NumberDecimalSeparator = ",", NumberGroupSeparator = " ", NumberGroupSizes = new[] { 3 } };
         /// <summary>Laajennuksen nappien väli ja reunaväli (pt), sama kaikkialla (omistaja 6.10.; USS-arvo 4px).</summary>
         public const float LaajennusVali = 4f, VaakaOsuus = 0.30f;
         readonly VisualElement segmentit;
@@ -130,6 +139,15 @@ namespace Matkakirja.Natiivi
             Matriisi(lcd);
             kohde = Rakenne.Teksti("", "mk-issohjaamo__kohde", lcd);
             maa = Rakenne.Teksti("", "mk-issohjaamo__maa", lcd);
+            // NOPEUSLUKEMA (omistaja 6.10. 09.0x): kaasua muutettaessa 3 s vasemmalla kerroin ja oikealla oikea nopeus, sen alla
+            // osuus valon nopeudesta (≥ 0,1 %); vihreä, oranssi ≥ 300× (--tk-lcd-varoitus), punainen 1000× (--tk-lcd-vaara).
+            nopeusRivi = Rakenne.El("mk-issohjaamo__nopeusrivi", lcd, PickingMode.Ignore);
+            kerroinT = Rakenne.Teksti("", "mk-issohjaamo__kerroin", nopeusRivi);
+            var sarake = Rakenne.El("mk-issohjaamo__nopeussarake", nopeusRivi, PickingMode.Ignore);
+            nopeusT = Rakenne.Teksti("", "mk-issohjaamo__nopeus", sarake);
+            valoT = Rakenne.Teksti("", "mk-issohjaamo__valo", sarake);
+            foreach (var t in new[] { kerroinT, nopeusT, valoT }) { t.pickingMode = PickingMode.Ignore; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
+            nopeusRivi.style.display = DisplayStyle.None;
             foreach (var t in new[] { kohde, maa }) { t.pickingMode = PickingMode.Ignore; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
             segmentit = Rakenne.El("mk-issohjaamo__segmentit", lcd, PickingMode.Ignore);
             for (int i = 0; i < Segmentteja; i++) segmentti[i] = Rakenne.El("mk-issohjaamo__segmentti", segmentit, PickingMode.Ignore);
@@ -665,6 +683,8 @@ namespace Matkakirja.Natiivi
         void NaytaKaasu(int kerroin)
         {
             if (kerroin == kaasuNyt) return;
+            NaytaNopeus(kerroin);
+            AsetaTarina(kerroin >= TaysiKerroin);
             int suuntaY = kerroin > kaasuNyt ? -1 : 1;   // kaasu ylös: rumpu pyörii ylöspäin (uusi luku alhaalta)
             kaasuNyt = kerroin;
             AsetaKahva();
@@ -755,6 +775,100 @@ namespace Matkakirja.Natiivi
             m.RegisterCallback<GeometryChangedEvent>(_ => m.MarkDirtyRepaint());
         }
 
+        /// <summary>Oikea nopeus tekstinä: alle miljoonan "275 700 km/h", sitten "9,37 milj. km/h" / "27,6 milj. km/h".</summary>
+        public static string NopeusTeksti(double kmh)
+        {
+            if (kmh < 1e6) return (Math.Round(kmh / 10.0) * 10.0).ToString("#,0", Fi) + " km/h";
+            double milj = kmh / 1e6;
+            return milj.ToString(milj < 10 ? "0.00" : "0.0", Fi) + " milj. km/h";
+        }
+
+        /// <summary>Osuus valon nopeudesta ("2,6 % valon nopeudesta") tai null alle 0,1 %:n.</summary>
+        public static string ValoTeksti(double kmh)
+        {
+            double p = kmh / ValoKmh * 100.0;
+            return p < 0.1 ? null : p.ToString("0.0", Fi) + " % valon nopeudesta";
+        }
+
+        /// <summary>Cupolan kehys (IssKyytiNakyma.kupu), joka tärisee paneelin kanssa täydellä teholla.</summary>
+        public VisualElement Kehys;
+        IVisualElementScheduledItem tarina;
+        /// <summary>TÄRINÄ (omistaja 6.10.: "ohjaamo voisi alkaa hieman täristä täydessä vauhdissa"): hienovarainen, sileä (kaksi
+        /// siniä, ei satunnaishyppyjä), enintään TarinaPt; ei lainkaan, jos pelaaja on valinnut pienen liikkeen.</summary>
+        public const float TarinaPt = 0.7f;
+
+        void AsetaTarina(bool paalla)
+        {
+            if (paalla && LinssiUi.VahennettyLiike()) paalla = false;
+            if (!paalla)
+            {
+                tarina?.Pause(); tarina = null;
+                Juuri.style.translate = StyleKeyword.Null;
+                if (Kehys != null) Kehys.style.translate = StyleKeyword.Null;
+                return;
+            }
+            if (tarina != null) return;
+            float alku = Time.unscaledTime;
+            tarina = Juuri.schedule.Execute(() =>
+            {
+                float t = Time.unscaledTime - alku;
+                float x = TarinaPt * (0.6f * Mathf.Sin(t * 47f) + 0.4f * Mathf.Sin(t * 83f + 1.3f));
+                float y = TarinaPt * (0.6f * Mathf.Sin(t * 53f + 0.7f) + 0.4f * Mathf.Sin(t * 71f));
+                Juuri.style.translate = new Translate(x, y);
+                if (Kehys != null) Kehys.style.translate = new Translate(x * 0.6f, y * 0.6f);
+            }).Every(16);
+        }
+
+        /// <summary>Kaasun muutos: nopeuslukema LCD:hen 3 s (värit kertoimen mukaan), sitten paikka takaisin.</summary>
+        public void NaytaNopeus(double kerroin)
+        {
+            var hetki = IssNyt.Kello();
+            double kmh = IssNyt.NopeusKmh(IssNyt.KorkeusKm(hetki)) * kerroin;
+            kerroinT.text = Math.Round(kerroin).ToString("0", Fi) + "×";
+            nopeusT.text = NopeusTeksti(kmh);
+            string valo = ValoTeksti(kmh);
+            valoT.text = valo ?? "";
+            valoT.style.display = valo != null ? DisplayStyle.Flex : DisplayStyle.None;
+            nopeusRivi.EnableInClassList("mk-issohjaamo__nopeusrivi--varoitus", kerroin >= VaroitusKerroin && kerroin < TaysiKerroin);
+            nopeusRivi.EnableInClassList("mk-issohjaamo__nopeusrivi--vaara", kerroin >= TaysiKerroin);
+            nopeusAsti = Time.unscaledTime + NopeusS;
+            Debug.Log($"MATKAKIRJA linssit: ohjaamon LCD {kerroinT.text} {nopeusT.text}{(valo != null ? " / " + valo : "")}");
+            PaivitaNopeusrivi();
+            SovitaNopeus();
+        }
+
+        void PaivitaNopeusrivi()
+        {
+            bool nayta = Time.unscaledTime < nopeusAsti && !(IssKameraKuva.Kaynnissa || TestiEdistyminen.HasValue);
+            bool nyt = nopeusRivi.style.display == DisplayStyle.Flex;
+            if (nayta == nyt) return;
+            nopeusRivi.style.display = nayta ? DisplayStyle.Flex : DisplayStyle.None;
+            kohde.style.display = nayta ? DisplayStyle.None : DisplayStyle.Flex;
+            if (nayta) maa.style.display = DisplayStyle.None;
+            else lcdKohde = lcdMaa = null;   // paikka takaisin seuraavassa päivityksessä
+        }
+
+        /// <summary>Kerroin ja nopeus samalle riville LCD:n leveyteen: kirjasin pienenee tarvittaessa (enintään NopeusPt × mittakaava).</summary>
+        void SovitaNopeus()
+        {
+            float leveys = lcd.contentRect.width;
+            if (!(leveys > 0)) { lcd.schedule.Execute(SovitaNopeus).ExecuteLater(16); return; }
+            float koko = NopeusPt * mittakaava;
+            float Lev(Label t, float k)
+            {
+                t.style.fontSize = k;
+                return t.MeasureTextSize(t.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+            }
+            for (int i = 0; i < 12; i++)
+            {
+                float tarve = Lev(kerroinT, koko) + Lev(nopeusT, koko) + 6f * mittakaava;
+                if (tarve <= leveys * 0.96f) break;
+                koko *= 0.92f;
+            }
+            kerroinT.style.fontSize = koko; nopeusT.style.fontSize = koko;
+            valoT.style.fontSize = koko * ValoOsuus;
+        }
+
         /// <summary>Testi: kehitys 0–1 (segmentit), "valmis" (KUVA VALMIS 2 s) tai "pois".</summary>
         public void TestaaKehitys(string arvo)
         {
@@ -808,6 +922,7 @@ namespace Matkakirja.Natiivi
             if (l == null || !l.Auki) return;
             var (k, m) = l.Sijainti();
             PaivitaObjektiivi();   // myös testikomento `astro kyyti kuvaa laaja 0|1`
+            PaivitaNopeusrivi();
             string kuvaus = KuvausTeksti();
             if (kuvaus != null)
             {
