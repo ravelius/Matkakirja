@@ -325,5 +325,18 @@ namespace Matkakirja.Linssit.Testit
             (lat, lon) = OpasSilmukka.PyynnonPaikka(kpn, (55.6761, 12.5683));
             Oleta.Tosi(Math.Abs(lat - 55.679) < 1e-9, "Kööpenhamina valittuna → kamera");
         }
+
+        [Testi] static void PcmAlkupuskuriMitatustaNopeudesta()
+        {
+            // Nopea virta (tavallinen, 1,5–3,5 ×): alku 1 s kuten ennen.
+            Oleta.Sama(1.0, OpasPcmPuskuri.Tarvitaan(15, OpasPcmPuskuri.Nopeus(1.0, 0.4)));
+            Oleta.Sama(1.0, OpasPcmPuskuri.Tarvitaan(30, 2.0));
+            // Simu 6.10. 20.38 Sydney: 15 s ääntä 18,5 s:ssa (0,81 ×) → noin 4,4 s; ei katkoa (B ≥ T(1 − r)).
+            double b = OpasPcmPuskuri.Tarvitaan(15, 15 / 18.5);
+            Oleta.Tosi(b >= 15 * (1 - 15 / 18.5) && b < 5, $"hidas virta {b:F2} s");
+            Oleta.Sama(OpasPcmPuskuri.MaxS, OpasPcmPuskuri.Tarvitaan(60, 0.5), "yläraja");
+            Oleta.Sama(1.0, OpasPcmPuskuri.Tarvitaan(0, 0.5), "kesto tuntematon");
+            Oleta.Tosi(OpasPcmPuskuri.Tarvitaan(3, 0.2) <= 3, "ei yli keston");
+        }
     }
 }
