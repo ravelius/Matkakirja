@@ -55,7 +55,8 @@ namespace Matkakirja.Natiivi
                         foreach (var o in rivit)
                             if (o is List<object> x && x.Count >= 5)
                                 r.Add(new IssSijainti.Paikka(x[0] as string, Convert.ToDouble(x[1], CultureInfo.InvariantCulture),
-                                    Convert.ToDouble(x[2], CultureInfo.InvariantCulture), x[3] as string, Convert.ToInt32(x[4], CultureInfo.InvariantCulture)));
+                                    Convert.ToDouble(x[2], CultureInfo.InvariantCulture), x[3] as string, Convert.ToInt32(x[4], CultureInfo.InvariantCulture),
+                                    x.Count > 6 ? x[6] as string : null));
                     return r;
                 });
                 while (!jasennys.IsCompleted) yield return null;

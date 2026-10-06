@@ -10,7 +10,8 @@ esim. "Poznań", "Brno"). Pelin suomenkielinen nimi (Varsova, Krakova) valitaan 
 Natural Earthin paikan saman maan ≤ 15 km:n päässä). Vakiintuneet suomenkieliset eksonyymit (EKSONYYMIT: Viipuri, Harkova,
 Belgrad, Haag, Geneve, Nizza …) ensin. Kyrillisten ja kreikkalaisten maiden nimet ovat NE:n NAME-kentästä valmiiksi latinalaisina
 (Vyborg, Kharkiv, Thessaloniki); muu kuin latinalainen kirjain (≥ U+0250) → NAMEASCII. Rivit: [nimi, lat, lon, maa (ISO3), väkiluku,
-maanosa (admin-0:n CONTINENT maakoodin mukaan, esim. "Europe"; Natiivi-UI 5.10.: elävän oppaan kohdevalitsin)]. Näkymättömät
+maanosa (admin-0:n CONTINENT maakoodin mukaan, esim. "Europe"; Natiivi-UI 5.10.: elävän oppaan kohdevalitsin), aikavyöhyke (NE
+TIMEZONE, IANA, esim. "Europe/Helsinki"; tyhjä ~1 200 paikassa; Päätoimittaja 6.10.: julisteen kellonaika paikan omana aikana)]. Näkymättömät
 ohjausmerkit (U+200E ym.) poistetaan; VT323 kattaa kaikki Euroopan latinalaiset kirjaimet (Ń Ł Ż Ś Č Ř Ő Ş Ğ İ).
 """
 import json, struct, sys, unicodedata
@@ -76,7 +77,8 @@ def main():
         if not latinalainen(nimi): nimi = puhdas(r["NAMEASCII"])   # esim. Ṭarābulus → Tarabulus (ei tofua LCD:llä)
         if not nimi: continue
         paikat.append([nimi, round(float(r["LATITUDE"]), 4), round(float(r["LONGITUDE"]), 4), maa, int(float(r["POP_MAX"] or 0)),
-                       maanosat.get(maa) or maanosat.get(r.get("SOV_A3", ""), "")])
+                       maanosat.get(maa) or maanosat.get(r.get("SOV_A3", ""), ""),
+                       puhdas(r.get("TIMEZONE", "") or "")])
     paikat.sort(key=lambda p: (p[3], -p[4]))
     ulos = {"lahde": "Natural Earth 5.1.2 10m populated places (public domain)", "paikat": paikat}
     polku = "Assets/Matkakirja/Linssit/Resources/IssPaikat/paikat.json"

@@ -165,7 +165,9 @@ namespace Matkakirja.Natiivi
             juuri.style.display = l != null ? DisplayStyle.Flex : DisplayStyle.None;
             if (l == null) { kytketty = null; return; }
             if (!ReferenceEquals(l, kytketty) || l.Versio != versio) Rakenna(l);
-            lappu.style.display = LappuPiilossa && !auki ? DisplayStyle.None : DisplayStyle.Flex;
+            // Astronautin linssissä säätönappi on Pulun valikon Äänet-rivissä (omistaja 6.10.).
+            bool astro = UiNakymat.Olemassa && UiNakymat.Hae()?.Linssit?.Auki?.Tiedot?.Id == LinssiUi.AstronauttiId;
+            lappu.style.display = (LappuPiilossa || astro) && !auki ? DisplayStyle.None : DisplayStyle.Flex;
             lappu.style.backgroundColor = auki ? new Color(Kulta.r, Kulta.g, Kulta.b, 0.9f) : Lasi;
             lappu.style.color = auki ? Lasi : Kulta;
             paneeli.style.display = auki ? DisplayStyle.Flex : DisplayStyle.None;

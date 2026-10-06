@@ -1360,8 +1360,36 @@ namespace Matkakirja.Natiivi
             ilmoitusTeksti.text = teksti;
             Rakenne.Nayta(ilmoitus, true);
             ilmoitusAjastin?.Pause();
-            ilmoitusAjastin = ilmoitus.schedule.Execute(() => Rakenne.Nayta(ilmoitus, false, 300))
+            // Pysyvä vihje palaa näkyviin hetkellisen viestin jälkeen.
+            ilmoitusAjastin = ilmoitus.schedule.Execute(() =>
+                {
+                    if (pysyva != null) ilmoitusTeksti.text = pysyva;
+                    else Rakenne.Nayta(ilmoitus, false, 300);
+                })
                 .StartingIn((long)(Mathf.Max(0.5f, kestoS) * 1000));
+        }
+
+        string pysyva;
+
+        /// <summary>
+        /// Pysyvä vihjerivi samalla ilmoitusrivillä (Päätoimittaja 6.10.2026: kartan valintavihje "Napauta korostettua kohdetta
+        /// kartalla…" ilman Pulun kuplaa): näkyy, kunnes PiilotaPysyva (pelaaja toimii). Hetkellinen Viesti voi käydä päällä.
+        /// </summary>
+        public void PysyvaViesti(string teksti)
+        {
+            if (string.IsNullOrEmpty(teksti)) return;
+            pysyva = teksti;
+            ilmoitusAjastin?.Pause();
+            ilmoitusTeksti.text = teksti;
+            Rakenne.Nayta(ilmoitus, true);
+        }
+
+        public void PiilotaPysyva()
+        {
+            if (pysyva == null) return;
+            bool nakyy = ilmoitusTeksti.text == pysyva;
+            pysyva = null;
+            if (nakyy) { ilmoitusAjastin?.Pause(); Rakenne.Nayta(ilmoitus, false, 300); }
         }
 
         /// <summary>Koko palkki näkyviin tai pois (esim. lehti auki).</summary>

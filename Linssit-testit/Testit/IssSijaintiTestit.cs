@@ -1,4 +1,5 @@
 // ISS-ohjaamon LCD:n sijainti (omistaja 4.10.2026: "ROOMA, ITALIA", lähin kaupunki, meri tai vuori; maa alle).
+using System;
 using System.Collections.Generic;
 using Matkakirja.Linssit.Iss;
 
@@ -102,5 +103,20 @@ namespace Matkakirja.Linssit.Testit
             a.Kaupungit.RemoveAt(1);
             Oleta.Sama(("PUOLA", ""), IssSijainti.Hae(a, 52.40, 16.60), "ei saman maan kaupunkia → maa");
         }
+
+        [Testi] static void PaikanOmaAika()
+        {
+            // Päätoimittaja 6.10.: julisteen kellonaika kuvauspaikan aikana (Manaus näkyi Suomen ajassa).
+            var a = new IssSijainti.Aineisto();
+            a.Paikat.Add(new IssSijainti.Paikka("Helsinki", 60.17, 24.94, "FIN", 1_000_000, "Europe/Helsinki"));
+            a.Paikat.Add(new IssSijainti.Paikka("Manaus", -3.1, -60.0, "BRA", 2_000_000, "America/Manaus"));
+            a.Paikat.Add(new IssSijainti.Paikka("Nimetön", -3.0, -59.0, "BRA", 10));
+            var utc = new DateTime(2026, 10, 6, 14, 30, 0, DateTimeKind.Utc);
+            Oleta.Sama(new DateTime(2026, 10, 6, 17, 30, 0), Ilman(IssSijainti.PaikallinenAika(a, 60.2, 25.0, utc)), "Helsinki kesäaika UTC+3");
+            Oleta.Sama(new DateTime(2026, 10, 6, 10, 30, 0), Ilman(IssSijainti.PaikallinenAika(a, -3.05, -59.1, utc)), "Manaus UTC−4 (lähin vyöhykkeellinen)");
+            Oleta.Sama(new DateTime(2026, 10, 6, 3, 30, 0), Ilman(IssSijainti.PaikallinenAika(a, -40, -170, utc)), "ei paikkaa ≤ 1 500 km → aurinkoaika (−170/15 ≈ −11 h)");
+        }
+
+        static DateTime Ilman(DateTime d) => new DateTime(d.Ticks, DateTimeKind.Unspecified);
     }
 }

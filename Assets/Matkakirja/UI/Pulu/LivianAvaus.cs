@@ -23,6 +23,8 @@
 // jälkeen (vähennetty liike 0). Repliikit kiertävät (lippu matkakirja-livia-uusi-matka = seuraava indeksi), kuplassa
 // Ohita; kupla pois lukuajan jälkeen, napautuksesta, Ohitasta tai valinnasta. Äänitteitä ei ole (kupla puhuu, ääni vaikenee).
 // Puhelimella kupla alkaa suljettuna kuten muutkin Pulun kuplat (Pulu.TekstitPiilossa).
+// KARTAN KOHTAUS ILMAN KUPLIA (omistaja 6.10.2026): esittely ja lyhyt tervehdys puhuvat ilman puhekuplia (Pulu.Sano
+// kuplaton); teksti jää muistiin kuten piilotetuilla teksteillä, sarja etenee ajastimilla.
 //
 // Kutsu: LivianAvaus.Nayta(() => ValitseePallolla) lähtövalinnan alkaessa; Peru() kesken kaiken.
 using System;
@@ -194,7 +196,7 @@ namespace Matkakirja.Natiivi
                 if (!Jatkuu() || chat || LinssiUi.Rekisteri?.Auki != null || !pulu.Nakyvissa) { Lopeta(true); return; }
                 // Web jaaKappaleiksi: ≥ 3 virkettä → kaksi kappaletta ("Taas matkaan? Hyvä." | loput).
                 string teksti = UudenMatkanRepliikki();
-                var kupla = pulu.Sano(string.Join("\n\n", Kappalejako.Jaa(teksti)), null, null, () => Lopeta(true));
+                var kupla = pulu.Sano(string.Join("\n\n", Kappalejako.Jaa(teksti)), null, null, () => Lopeta(true), kuplaton: true);
                 if (kupla != null) { pulu.Kuplat.Avauskupla(kupla); pulu.Kuplat.LisaaOhita(kupla); }
                 nakyi = true;
                 Aanet.PulunOhjelma("saapuu");
@@ -232,9 +234,11 @@ namespace Matkakirja.Natiivi
             }
             var (teksti, indeksi) = sarja[i];
             float puheMs = -1f;
+            // Jatkohiljaisuus vaientaa Livian (Sano ei puhu): sarja päättyy siististi.
+            if (PeliOhjain.Jatkohiljaisuus) { Lopeta(true); return; }
+            // Kartan kohtaus (omistaja 6.10.2026): esittely puhuu ilman kuplia; sarja etenee ajastimella (lukuaika / puheen loppu).
             var kupla = pulu.Sano(teksti, Pulu.AaniOsoite("avaus", indeksi, Aaniversiot[indeksi]), null,
-                () => Seuraava(i + 1, v), klippi => puheMs = klippi != null ? klippi.length * 1000f : 0f, naytaAina: true);
-            if (kupla == null) { Lopeta(true); return; }
+                () => Seuraava(i + 1, v), klippi => puheMs = klippi != null ? klippi.length * 1000f : 0f, kuplaton: true);
             pulu.Kuplat.Avauskupla(kupla);
             if (indeksi == MuotokuvanRepliikki) pulu.Kuplat.LisaaMuotokuva(kupla, MuotokuvaUrl);
             // Lippu vasta kun sarja oikeasti näkyi.

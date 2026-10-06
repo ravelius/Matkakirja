@@ -81,6 +81,7 @@ namespace Matkakirja.Natiivi
             if (lento == null || Virhe != null || paivitetty == Time.frameCount) return;
             paivitetty = Time.frameCount;
             kaupunki.PidaMaski();
+            kaupunki.PaivitaAvauslataus();   // ion-logo avauslatauksen ajan (Natiivi-UI KrediititTiivis)
             KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
             var ennen = lento.Vaihe;
             lento.Paivita(Time.unscaledDeltaTime, kaupunki.Valmis);

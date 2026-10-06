@@ -2133,6 +2133,11 @@
     background-color: rgba(10, 7, 4, 0.6);
 }
 
+/* Ilman pysäytyskuvaa (elävä opas, Päätoimittaja 6.10.): tumma himmennys tokenista, ettei 3D-näkymä näy terävänä kuvan takana. */
+.mk-nosto__suurennos.mk-suurennos--kokoruutu.mk-suurennos--ei-pysaytysta {
+    background-color: var(--tk-himmennys-kuva);
+}
+
 /* Löydös 132: pallon pysäytyskuva kokoruudun taustana, tummennettuna sävyllä (lapsi piirtyy kerroksen värin päälle). */
 .mk-suurennos__pysaytys {
     position: absolute;
@@ -2162,6 +2167,14 @@
 .mk-suurennos--kokoruutu .mk-nosto__lahde,
 .mk-suurennos--kokoruutu .mk-reaktiot--suurennos {
     display: none;
+}
+
+/* Elävä opas (Päätoimittaja 6.10., CC BY): lähderivi näkyy kokoruudussakin kuvan alla, vaalea teksti tummalla. */
+.mk-suurennos--kokoruutu.mk-suurennos--lahde-nakyy .mk-nosto__lahde {
+    display: flex;
+    margin: 6px 12px 0 12px;
+    color: var(--tk-tumma-muste-pehmea);
+    -unity-text-align: middle-center;
 }
 
 /* Elävä kartta, kohta 2: löytämättömän musteen jälki ja pääkohteen hehku merkin alla (MusteJaljet, NostotKartalla.AsetaMuste). */

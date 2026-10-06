@@ -77,6 +77,39 @@ namespace Matkakirja.Natiivi
         public static event Action<CesiumKaupunki> Avattu, Suljettu;
         /// <summary>Pallon kamera (näkymän ajan) ja tilesetit: Google tai maasto (Pinta) ja OSM-rakennukset (null Googlella).</summary>
         public Camera Kamera => kamera;
+
+        /// <summary>
+        /// Avauslataus (Natiivi-UI 6.10. 12.2x, KrediititTiivis.AvausLatautuu): Cesium ion -logo näkyy vain linssin avauslatauksen ajan.
+        /// Sovitin kutsuu joka kehys; tila nousee avauksessa ja laskee, kun ensimmäinen näkymä on valmis (laatat ≥ 95 % tai 8 s).
+        /// Heijastuksella, jotta tämä kääntyy ilman UI-haaraa.
+        /// </summary>
+        public void PaivitaAvauslataus()
+        {
+            float kulunut = Time.realtimeSinceStartup - avausAika;
+            // Vähintään 1,5 s: tyhjä näkymä raportoi 100 % ennen kuin laattoja on edes valittu.
+            bool latautuu = auki && avausAika >= 0 && kulunut < 8f && (kulunut < 1.5f || Latausaste < 95f);
+            if (!latautuu) avausAika = -1f;
+            AsetaAvausLatautuu(latautuu);
+        }
+        float avausAika = -1f;
+        static bool? avausEdellinen;
+        static System.Reflection.PropertyInfo avausOminaisuus;
+        static System.Reflection.FieldInfo avausKentta;
+        static bool avausHaettu;
+        static void AsetaAvausLatautuu(bool arvo)
+        {
+            if (avausEdellinen == arvo) return;
+            avausEdellinen = arvo;
+            if (!avausHaettu)
+            {
+                avausHaettu = true;
+                var t = typeof(CesiumKaupunki).Assembly.GetType("Matkakirja.Natiivi.KrediititTiivis");
+                const System.Reflection.BindingFlags F = System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static;
+                avausOminaisuus = t?.GetProperty("AvausLatautuu", F); avausKentta = t?.GetField("AvausLatautuu", F);
+            }
+            if (avausOminaisuus != null && avausOminaisuus.CanWrite) avausOminaisuus.SetValue(null, arvo);
+            else avausKentta?.SetValue(null, arvo);
+        }
         /// <summary>Maantieteellinen piste (korkeus ellipsoidista, m) Unityn maailmaan georeferenssin kautta; null, jos näkymä kiinni.</summary>
         public Vector3? MaailmaPiste(double lat, double lon, double korkeus)
         {
@@ -153,6 +186,7 @@ namespace Matkakirja.Natiivi
             kamera = kierto != null ? kierto.GetComponent<Camera>() : null;
             if (georef == null || kamera == null) { Virhe = "pallon kamera puuttuu"; return false; }
             auki = true;
+            avausAika = Time.realtimeSinceStartup;
 
             // Pallon tileset: ei SetActivea (pallo on samassa oliossa kuin georeferenssi → SetOrigin heitti "Initialize"-poikkeuksen, simu 18.0x).
             palloTileset = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.pallo : null;
@@ -377,6 +411,7 @@ namespace Matkakirja.Natiivi
             Suljettu?.Invoke(this);
             auki = false;
             Cesium3DTileset.OnCesium3DTilesetLoadFailure -= LatausVirhe;
+            avausAika = -1f; AsetaAvausLatautuu(false);
             if (hallinta != null && esikamera != null) hallinta.additionalCameras.Remove(esikamera);
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             juuri = null; maasto = null; rakennukset = null; esikamera = null; hallinta = null;
