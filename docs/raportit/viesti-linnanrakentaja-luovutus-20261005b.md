@@ -146,7 +146,7 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   linnavuorossaan: proto-3d/tyokalut/linnanrakentaja-ajot/ajo-esineet.sh (app-183866ed, peili bba43057, mykkä).
   Siirtoseppä ajaa esittelyn (ennen BUILD 150 ea457278 / jälkeen linna-149 + feea163c) ja Faceit-kappelin (94a0df22) äänellisinä.
 
-## Päivitys 7.10. klo 01.0x (tilinvaihdon jälkeen)
+## Päivitys 7.10. klo 00.5x (tilinvaihdon jälkeen)
 - GIZA (kaikki proto-3d/_valmiit/giza-v1/, ei repossa): pyramidit v1 VALMIIT → LS1 (3D Tiles, Cesium, leikkaus + maapohja).
   lahde/: atlas.py (kerrosatlakset, venv) → koot.py (r2048…r256) → pyramidit.py (Blender: kerrokset, segmentit, viistot
   askelmat, verhous/graniitti, lohkeama, maapohja, LOD0/1/2, Draco) → glb/ + sijainnit.json (lat/lon, EGM-korkeus, leikkauskulmat).
