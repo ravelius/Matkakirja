@@ -65,7 +65,8 @@ namespace Matkakirja.Natiivi
         // ytimen kerroin 0,55 (valkoinen viiva ohuemmaksi) ja syvänsininen hehku 1,5 (vain taivasta vasten, 5–45 km).
         // Omistajan viite 6.10. (Cupola-kuva): ei valkoista vyötä, ohut vaaleansininen–syaani reuna ja laaja pehmeä sininen mustaan
         // → kaarivoima 4, ydin 0,3 (maan utu reunalla ~1,8×, ei 5×), syvänsininen 3; valojen katto pitää sävyn (A/B 13.1x).
-        const float KaariVoima = 4f, KaariHr = 1f, KaariSini = 1f, KaariUtu = 0.8f, KaariYdin = 0.3f, KaariSyva = 3f;
+        // A/B 13388aa7 (Helsinki 14.1x): kolmesta paras voima 3, ydin 0,25, syvä 2,5 (ohuin valkoinen); valkoinen vyö jäi silti.
+        const float KaariVoima = 3f, KaariHr = 1f, KaariSini = 1f, KaariUtu = 0.8f, KaariYdin = 0.25f, KaariSyva = 2.5f;
 
         static bool KaariOletuksissa() => Avaruus.KuvanKaariVoima == 1f && Avaruus.KuvanHrKerroin == 1f && Avaruus.KuvanSiniKerroin == 1f
             && Avaruus.KuvanUtuKerroin == 1f && Avaruus.KuvanKaariYdin == 1f && Avaruus.KuvanKaariSyva == 0f;
