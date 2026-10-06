@@ -1,0 +1,1943 @@
+{
+ "skeema": 1,
+ "versio": "2026-10-06",
+ "kaupungit": {
+  "pariisi": {
+   "nimi": "Pariisi",
+   "Q": "Q90",
+   "lat": 48.857,
+   "lon": 2.352,
+   "kohteet": [
+    "Q243",
+    "Q19675",
+    "Q2981",
+    "Q64436",
+    "Q28785",
+    "Q23402",
+    "Q550",
+    "Q189503",
+    "Q178065",
+    "Q309458",
+    "Q188856",
+    "Q187840",
+    "Q193193",
+    "Q188977",
+    "Q390418",
+    "Q335277",
+    "Q311",
+    "Q898629",
+    "Q151030",
+    "Q457318"
+   ],
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Paris skyline from the observation deck of the Montparnasse tower, July 2015.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris_skyline_from_the_observation_deck_of_the_Montparnasse_tower%2C_July_2015.jpg?width=1280",
+     "tekija": "Joe deSousa",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paris_skyline_from_the_observation_deck_of_the_Montparnasse_tower%2C_July_2015.jpg",
+     "selite": "Pariisin siluetti avautuu Montparnassen tornista kohti Eiffel-tornia.",
+     "leveys": 6011,
+     "korkeus": 4003,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Paris Night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris_Night.jpg?width=1280",
+     "tekija": "Benh LIEU SONG",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paris_Night.jpg",
+     "selite": "Pariisin kattojen meri valaistuu iltaisin, ja Eiffel-torni erottuu horisontissa.",
+     "leveys": 11528,
+     "korkeus": 3639,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "praha": {
+   "nimi": "Praha",
+   "Q": "Q1085",
+   "lat": 50.087,
+   "lon": 14.421,
+   "kohteet": [
+    "Q193369",
+    "Q204871",
+    "Q421678",
+    "Q729370",
+    "Q5949",
+    "Q12256",
+    "Q847613",
+    "Q753289",
+    "Q1453427",
+    "Q443107",
+    "Q188112",
+    "Q1100429",
+    "Q616334",
+    "Q244816"
+   ],
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "View from Prague Castle - Hradčany, Prague, Czech Republic - May 17, 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_from_Prague_Castle_-_Hrad%C4%8Dany%2C_Prague%2C_Czech_Republic_-_May_17%2C_2019.jpg?width=1280",
+     "tekija": "Giorgio Galeotti",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_from_Prague_Castle_-_Hrad%C4%8Dany%2C_Prague%2C_Czech_Republic_-_May_17%2C_2019.jpg",
+     "selite": "Prahan punaiset katot ja tornit levittäytyvät Vltavan molemmin puolin.",
+     "leveys": 5879,
+     "korkeus": 3919,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "View of Prague and St. Vitus Cathedral from Vyšehrad. Czech Republic.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/View_of_Prague_and_St._Vitus_Cathedral_from_Vy%C5%A1ehrad._Czech_Republic.jpg?width=1280",
+     "tekija": "Ввласенко",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:View_of_Prague_and_St._Vitus_Cathedral_from_Vy%C5%A1ehrad._Czech_Republic.jpg",
+     "selite": "Vyšehradilta näkee Prahan linnan ja Pyhän Vituksen katedraalin siluetin.",
+     "leveys": 5669,
+     "korkeus": 3775,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "wien": {
+   "nimi": "Wien",
+   "Q": "Q1741",
+   "lat": 48.208,
+   "lon": 16.372,
+   "kohteet": [
+    "Q5943",
+    "Q131330",
+    "Q46242",
+    "Q211818",
+    "Q697578",
+    "Q209937",
+    "Q686468",
+    "Q702121",
+    "Q408847",
+    "Q95569",
+    "Q308720",
+    "Q254476",
+    "Q493126"
+   ],
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vienna, Austria - Flickr - Pierre Blaché.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vienna%2C_Austria_-_Flickr_-_Pierre_Blach%C3%A9.jpg?width=1280",
+     "tekija": "Pierre Blaché from Paris, France",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vienna%2C_Austria_-_Flickr_-_Pierre_Blach%C3%A9.jpg",
+     "selite": "Wienin moderni pilvenpiirtäjäsiluetti nousee veden ääreen auringonlaskun aikaan.",
+     "leveys": 5529,
+     "korkeus": 3110,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wien, Stephansdom, Blick vom Südturm -- 2018 -- 3271-3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wien%2C_Stephansdom%2C_Blick_vom_S%C3%BCdturm_--_2018_--_3271-3.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wien%2C_Stephansdom%2C_Blick_vom_S%C3%BCdturm_--_2018_--_3271-3.jpg",
+     "selite": "Wienin kattojen yllä näkyy Stephansdomin vaihtelevan värinen laattakatto.",
+     "leveys": 6907,
+     "korkeus": 2985,
+     "tarkistettu": true
+    }
+   ]
+  }
+ },
+ "kohteet": {
+  "Q243": {
+   "nimi": "Eiffel-torni",
+   "peruste": "pelin nosto",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.858296,
+   "lon": 2.294479,
+   "koko_m": 300,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Eiffel Tower from Champ-de-Mars, Paris 5 February 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel_Tower_from_Champ-de-Mars%2C_Paris_5_February_2019.jpg?width=1280",
+     "tekija": "Alexandre Prévot from Nancy, France",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_from_Champ-de-Mars%2C_Paris_5_February_2019.jpg",
+     "selite": "Eiffel-torni rakennettiin vuoden 1889 maailmannäyttelyn portiksi, ja siitä tuli Pariisin tunnetuin symboli.",
+     "leveys": 2888,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "La tour Eiffel en 2026 48.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_tour_Eiffel_en_2026_48.jpg?width=1280",
+     "tekija": "Gargarapalvin",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_tour_Eiffel_en_2026_48.jpg",
+     "selite": "Rautarakenteinen torni kohoaa Seinen yllä, ja sen näkee kauas pitkin joenrantoja.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Tour Eiffel Wikimedia Commons.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tour_Eiffel_Wikimedia_Commons.jpg?width=1280",
+     "tekija": "Benh LIEU SONG",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tour_Eiffel_Wikimedia_Commons.jpg",
+     "selite": "Eiffel-tornin neljä jalkaa seisovat Champ de Marsin nurmikon laidalla, ja sen alta aukeaa näkymä Trocadéron suuntaan.",
+     "leveys": 2900,
+     "korkeus": 5367,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Eiffel Tower from across the Seine at Pont de l'Alma.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel_Tower_from_across_the_Seine_at_Pont_de_l'Alma.jpg?width=1280",
+     "tekija": "Daniel Case",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_from_across_the_Seine_at_Pont_de_l'Alma.jpg",
+     "selite": "Torni näkyy Seinen toiselta rannalta lehtipuiden takaa, kun ilta alkaa hämärtyä.",
+     "leveys": 4289,
+     "korkeus": 6664,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 5,
+     "tiedosto": "Looking down from the Eiffel tower (Unsplash).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Looking_down_from_the_Eiffel_tower_(Unsplash).jpg?width=1280",
+     "tekija": "Fabrizio Verrecchia fabryv",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Looking_down_from_the_Eiffel_tower_(Unsplash).jpg",
+     "selite": "Tornin ylätasanteilta näkee suoraan alas Seinen sillalle ja Trocadéron puistoon.",
+     "leveys": 4463,
+     "korkeus": 3347,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q19675": {
+   "nimi": "Louvre",
+   "peruste": "pelin nosto",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.861111111111114,
+   "lon": 2.3358333333333334,
+   "koko_m": 500,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "North facade of the Denon Wing & Louvre Pyramid, 1 May 2018.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/North_facade_of_the_Denon_Wing_%26_Louvre_Pyramid%2C_1_May_2018.jpg?width=1280",
+     "tekija": "Pedro Szekely from Los Angeles, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:North_facade_of_the_Denon_Wing_%26_Louvre_Pyramid%2C_1_May_2018.jpg",
+     "selite": "Louvre oli ennen kuninkaiden palatsi, ja nykyään se on maailman vierailluimpia taidemuseoita.",
+     "leveys": 7597,
+     "korkeus": 5067,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Louvre Paris from top edit cropped.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Louvre_Paris_from_top_edit_cropped.jpg?width=1280",
+     "tekija": "Louvre_Paris_from_top.jpg: User:MatthiasKabel derivative work: Myrabella (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Louvre_Paris_from_top_edit_cropped.jpg",
+     "selite": "Louvren laaja palatsikompleksi ulottuu Seinen rannalta Tuileries'n puutarhan reunalle.",
+     "leveys": 1990,
+     "korkeus": 1327,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cour Napoléon at night - Louvre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cour_Napol%C3%A9on_at_night_-_Louvre.jpg?width=1280",
+     "tekija": "Benh LIEU SONG",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cour_Napol%C3%A9on_at_night_-_Louvre.jpg",
+     "selite": "Napoleonin sisäpihan keskellä seisoo lasinen pyramidi, joka toimii museon pääsisäänkäyntinä.",
+     "leveys": 3048,
+     "korkeus": 1209,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Statues on the balustrade above the Louvre Pyramid, Paris.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Statues_on_the_balustrade_above_the_Louvre_Pyramid%2C_Paris.jpg?width=1280",
+     "tekija": "Wilfredor",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Statues_on_the_balustrade_above_the_Louvre_Pyramid%2C_Paris.jpg",
+     "selite": "Louvren julkisivuja koristavat kuvanveistäjien tekemät patsaat, jotka muistavat Ranskan merkkihenkilöitä.",
+     "leveys": 8256,
+     "korkeus": 5504,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q2981": {
+   "nimi": "Notre-Dame",
+   "peruste": "pelin nosto",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.853,
+   "lon": 2.3498,
+   "koko_m": 130,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Notre-Dame de Paris and Île de la Cité at dusk 140516 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Notre-Dame_de_Paris_and_%C3%8Ele_de_la_Cit%C3%A9_at_dusk_140516_1.jpg?width=1280",
+     "tekija": "DXR",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Notre-Dame_de_Paris_and_%C3%8Ele_de_la_Cit%C3%A9_at_dusk_140516_1.jpg",
+     "selite": "Notre-Dame on goottilainen katedraali Seinen saarella, ja se rakennettiin keskiajalla.",
+     "leveys": 8188,
+     "korkeus": 4094,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Notre-Dame de Paris 2013-07-24.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Notre-Dame_de_Paris_2013-07-24.jpg?width=1280",
+     "tekija": "P e z i",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Notre-Dame_de_Paris_2013-07-24.jpg",
+     "selite": "Katedraalin länsijulkisivua hallitsevat kaksi tornia ja suuri ruusuikkuna.",
+     "leveys": 3348,
+     "korkeus": 4519,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "NotreDameDeParis.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/NotreDameDeParis.jpg?width=1280",
+     "tekija": "Sanchezn",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:NotreDameDeParis.jpg",
+     "selite": "Illalla valaistu julkisivu kohoaa Pariisin vanhan ydinkaupungin yllä.",
+     "leveys": 2865,
+     "korkeus": 3806,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q64436": {
+   "nimi": "Riemukaari",
+   "peruste": "pelin nosto",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.87378,
+   "lon": 2.29504,
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arc de Triomphe - Août 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arc_de_Triomphe_-_Ao%C3%BBt_2026.jpg?width=1280",
+     "tekija": "ZeusUpsistos",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_-_Ao%C3%BBt_2026.jpg",
+     "selite": "Riemukaari rakennettiin Napoleonin armeijan voittojen kunniaksi, ja sen alla on tuntemattoman sotilaan hauta.",
+     "leveys": 4802,
+     "korkeus": 3203,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Arc de Triomphe de l'Étoile at night vertical fix.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arc_de_Triomphe_de_l'%C3%89toile_at_night_vertical_fix.jpg?width=1280",
+     "tekija": "Wilfredor",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomphe_de_l'%C3%89toile_at_night_vertical_fix.jpg",
+     "selite": "Riemukaari seisoo suuren liikenneympyrän keskellä, josta lähtee tähtimäisesti kaduja kaikkiin suuntiin.",
+     "leveys": 6784,
+     "korkeus": 4863,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Arc Triomphe.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arc_Triomphe.jpg?width=1280",
+     "tekija": "Benh LIEU SONG",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arc_Triomphe.jpg",
+     "selite": "Kaaren pinnoilla on veistoksia ja kohokuvia, jotka kertovat Ranskan sotahistoriasta.",
+     "leveys": 3929,
+     "korkeus": 4260,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q28785": {
+   "nimi": "Sacré-Cœur",
+   "peruste": "pelin nosto",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.88665,
+   "lon": 2.34295,
+   "koko_m": 100,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Paris - Basilique du Sacré-Cœur de Montmartre - 2025-09-30 23-31-57 001.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris_-_Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre_-_2025-09-30_23-31-57_001.jpg?width=1280",
+     "tekija": "Giò Terra (Terragio67)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paris_-_Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre_-_2025-09-30_23-31-57_001.jpg",
+     "selite": "Sacré-Cœurin valkoinen basilika kohoaa Montmartren kukkulan huipulla ja näkyy kauas yli Pariisin.",
+     "leveys": 9228,
+     "korkeus": 7488,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Basilique du Sacré-Cœur de Montmartre - Paris - GT-01 - 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre_-_Paris_-_GT-01_-_2024.jpg?width=1280",
+     "tekija": "Terragio67",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre_-_Paris_-_GT-01_-_2024.jpg",
+     "selite": "Basilikan kupolit ja portaat tekevät siitä yhden Pariisin tunnistettavimmista maisemista.",
+     "leveys": 9998,
+     "korkeus": 9998,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q23402": {
+   "nimi": "Orsayn taidemuseo",
+   "peruste": "pelin nosto",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.859972,
+   "lon": 2.326527,
+   "koko_m": 200,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pont Royal and Musée d'Orsay, Paris 10 July 2020.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pont_Royal_and_Mus%C3%A9e_d'Orsay%2C_Paris_10_July_2020.jpg?width=1280",
+     "tekija": "Pierre Blaché from Paris, France",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pont_Royal_and_Mus%C3%A9e_d'Orsay%2C_Paris_10_July_2020.jpg",
+     "selite": "Orsayn museo toimii entisessä rautatieasemassa Seinen vasemmalla rannalla, ja siellä on paljon impressionistien töitä.",
+     "leveys": 5626,
+     "korkeus": 3175,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Musée d'Orsay, North-West view, Paris 7e 140402.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mus%C3%A9e_d'Orsay%2C_North-West_view%2C_Paris_7e_140402.jpg?width=1280",
+     "tekija": "DXR",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mus%C3%A9e_d'Orsay%2C_North-West_view%2C_Paris_7e_140402.jpg",
+     "selite": "Rakennus valmistui maailmannäyttelyn alla 1900 asemaksi ja sai museokäytön 1980-luvulla.",
+     "leveys": 8095,
+     "korkeus": 3705,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q550": {
+   "nimi": "Champs-Élysées",
+   "peruste": "sitelinks",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.86967,
+   "lon": 2.30786,
+   "koko_m": 300,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Avenue des Champs-Élysées and the Arc de Triomphe, Paris 27 December 2021.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Avenue_des_Champs-%C3%89lys%C3%A9es_and_the_Arc_de_Triomphe%2C_Paris_27_December_2021.jpg?width=1280",
+     "tekija": "Pierre Blaché from Paris, France",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Avenue_des_Champs-%C3%89lys%C3%A9es_and_the_Arc_de_Triomphe%2C_Paris_27_December_2021.jpg",
+     "selite": "Champs-Élysées on Pariisin loisteliain katu, joka johtaa suoraan Riemukaarelle.",
+     "leveys": 5740,
+     "korkeus": 3229,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Avenue des Champs-Elysées from top of Arc de triomphe Paris.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Avenue_des_Champs-Elys%C3%A9es_from_top_of_Arc_de_triomphe_Paris.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Avenue_des_Champs-Elys%C3%A9es_from_top_of_Arc_de_triomphe_Paris.jpg",
+     "selite": "Leveä puiden reunustama bulevardi jatkuu Riemukaarelta kohti Concorden aukiota.",
+     "leveys": 2073,
+     "korkeus": 3115,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q189503": {
+   "nimi": "Concorden aukio",
+   "peruste": "pelin nosto",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.8656331,
+   "lon": 2.3212357,
+   "koko_m": 300,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Paris - Place de la Concorde - 3119.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris_-_Place_de_la_Concorde_-_3119.jpg?width=1280",
+     "tekija": "Jorge Royan",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paris_-_Place_de_la_Concorde_-_3119.jpg",
+     "selite": "Concorden aukion keskellä on Egyptistä tuotu Luxorin obeliski.",
+     "leveys": 4352,
+     "korkeus": 2804,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Obélisque Louqsor Concorde a.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ob%C3%A9lisque_Louqsor_Concorde_a.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ob%C3%A9lisque_Louqsor_Concorde_a.jpg",
+     "selite": "Obeliski on Pariisin vanhin monumentti, ja se pystytettiin aukiolle 1800-luvulla.",
+     "leveys": 2360,
+     "korkeus": 4328,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q309458": {
+   "nimi": "Luxembourgin puisto",
+   "peruste": "pelin nosto",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.846944444444446,
+   "lon": 2.337222222222222,
+   "koko_m": 300,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palais du Luxembourg Paris (5).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palais_du_Luxembourg_Paris_(5).jpg?width=1280",
+     "tekija": "Ibex73",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palais_du_Luxembourg_Paris_(5).jpg",
+     "selite": "Luxembourgin puutarhan altaalla leikitään purjeveneillä, ja taustalla on Ranskan senaatin palatsi.",
+     "leveys": 4951,
+     "korkeus": 3300,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jardin du Luxembourg 2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jardin_du_Luxembourg_2010.jpg?width=1280",
+     "tekija": "Marcin Białek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jardin_du_Luxembourg_2010.jpg",
+     "selite": "Palatsi rakennettiin Maria de' Medicin asunnoksi, ja sen ympärille levittäytyy suosittu kaupunkipuisto.",
+     "leveys": 3584,
+     "korkeus": 1912,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q188856": {
+   "nimi": "Panthéon",
+   "peruste": "pelin nosto",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.846198,
+   "lon": 2.3461054,
+   "koko_m": 110,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Paris - Panthéon (27378584206).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris_-_Panth%C3%A9on_(27378584206).jpg?width=1280",
+     "tekija": "Fred Romero from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paris_-_Panth%C3%A9on_(27378584206).jpg",
+     "selite": "Panthéon on Latinalaiskorttelin kupolirakennus, johon on haudattu Ranskan suuria henkilöitä.",
+     "leveys": 5171,
+     "korkeus": 3443,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Paris, Panthéon -- 2014 -- 1678.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris%2C_Panth%C3%A9on_--_2014_--_1678.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paris%2C_Panth%C3%A9on_--_2014_--_1678.jpg",
+     "selite": "Julkisivun korinttilaiset pylväät ja kolmiopääty tuovat mieleen antiikin temppelin.",
+     "leveys": 3575,
+     "korkeus": 5362,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q187840": {
+   "nimi": "Palais Garnier",
+   "peruste": "pelin nosto",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.871944444444,
+   "lon": 2.3316666666667,
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "West facade of Palais Garnier, Paris 2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/West_facade_of_Palais_Garnier%2C_Paris_2017.jpg?width=1280",
+     "tekija": "Peter Menzel",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:West_facade_of_Palais_Garnier%2C_Paris_2017.jpg",
+     "selite": "Palais Garnier on ylellinen 1800-luvun oopperatalo, jonka suunnitteli Charles Garnier.",
+     "leveys": 5614,
+     "korkeus": 2712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palais Garnier, Paris.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palais_Garnier%2C_Paris.jpg?width=1280",
+     "tekija": "Thomas Oboe Lee",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palais_Garnier%2C_Paris.jpg",
+     "selite": "Julkisivua koristavat kullatut veistokset ja runsas kuvanveisto.",
+     "leveys": 3600,
+     "korkeus": 2700,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q193193": {
+   "nimi": "Sainte-Chapelle",
+   "peruste": "sitelinks",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.855369,
+   "lon": 2.345028,
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Paris Sainte Chapelle East View 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris_Sainte_Chapelle_East_View_02.JPG?width=1280",
+     "tekija": "Uoaei1",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paris_Sainte_Chapelle_East_View_02.JPG",
+     "selite": "Sainte-Chapelle on keskiajan goottilainen palatsikappeli Île de la Citén oikeuspalatsin sisäpihalla.",
+     "leveys": 3482,
+     "korkeus": 5223,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Paris, Sainte-Chapelle, Außenansicht (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris%2C_Sainte-Chapelle%2C_Au%C3%9Fenansicht_(1).jpg?width=1280",
+     "tekija": "Cmcmcm1",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paris%2C_Sainte-Chapelle%2C_Au%C3%9Fenansicht_(1).jpg",
+     "selite": "Kappelin ohut huippu nousee oikeuspalatsin rakennusten yli.",
+     "leveys": 1942,
+     "korkeus": 2505,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q188977": {
+   "nimi": "Les Invalides",
+   "peruste": "sitelinks",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.855,
+   "lon": 2.3125,
+   "koko_m": 300,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hôtel des Invalides, North View, Paris 7e 140402 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%B4tel_des_Invalides%2C_North_View%2C_Paris_7e_140402_1.jpg?width=1280",
+     "tekija": "DXR",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:H%C3%B4tel_des_Invalides%2C_North_View%2C_Paris_7e_140402_1.jpg",
+     "selite": "Les Invalides rakennettiin alun perin sotaveteraanien kodiksi, ja nykyään siellä on sotamuseo.",
+     "leveys": 6732,
+     "korkeus": 2535,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Hôtel des Invalides - 20150801 16h09 (10630).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%B4tel_des_Invalides_-_20150801_16h09_(10630).jpg?width=1280",
+     "tekija": "Another one of my pictures: This photograph was taken by Medium69 (William Croch",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:H%C3%B4tel_des_Invalides_-_20150801_16h09_(10630).jpg",
+     "selite": "Kullattu kupoli erottuu Pariisin kattojen yli kauas.",
+     "leveys": 3561,
+     "korkeus": 2374,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Invalides 2007 03 11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Invalides_2007_03_11.jpg?width=1280",
+     "tekija": "user:Benh",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Invalides_2007_03_11.jpg",
+     "selite": "Kupolikirkon alla lepää Napoleon Bonaparten hauta.",
+     "leveys": 4650,
+     "korkeus": 4746,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q390418": {
+   "nimi": "Pont Alexandre III",
+   "peruste": "sitelinks",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.86361,
+   "lon": 2.31361,
+   "koko_m": 160,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Eiffel Tower and Pont Alexandre III at night.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg?width=1280",
+     "tekija": "Getfunky Paris",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eiffel_Tower_and_Pont_Alexandre_III_at_night.jpg",
+     "selite": "Pont Alexandre III on Seinen koristeellisin silta, jonka valaistut lyhdyt loistavat iltaisin.",
+     "leveys": 4288,
+     "korkeus": 2748,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Pont-Alexandre-III-et-Invalides.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pont-Alexandre-III-et-Invalides.jpg?width=1280",
+     "tekija": "Dimitri Destugues",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pont-Alexandre-III-et-Invalides.jpg",
+     "selite": "Silta rakennettiin vuoden 1900 maailmannäyttelyä varten, ja se johtaa Invalidien suuntaan.",
+     "leveys": 6000,
+     "korkeus": 2553,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Le Grand Palais depuis le pont Alexandre III à Paris.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_Grand_Palais_depuis_le_pont_Alexandre_III_%C3%A0_Paris.jpg?width=1280",
+     "tekija": "Eric Pouhier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Le_Grand_Palais_depuis_le_pont_Alexandre_III_%C3%A0_Paris.jpg",
+     "selite": "Sillan pylväitä ja lyhtyjä koristavat kullatut veistokset.",
+     "leveys": 2048,
+     "korkeus": 1362,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q335277": {
+   "nimi": "Pont Neuf",
+   "peruste": "sitelinks",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.8575,
+   "lon": 2.341666666666667,
+   "koko_m": 240,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Paris, Pont Neuf -- 2014 -- 1430.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris%2C_Pont_Neuf_--_2014_--_1430.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paris%2C_Pont_Neuf_--_2014_--_1430.jpg",
+     "selite": "Pont Neuf on Pariisin vanhin Seinen ylittävä silta, vaikka nimi tarkoittaa uutta siltaa.",
+     "leveys": 5100,
+     "korkeus": 2791,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Paris, Pont Neuf -- 2014 -- 1425.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris%2C_Pont_Neuf_--_2014_--_1425.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paris%2C_Pont_Neuf_--_2014_--_1425.jpg",
+     "selite": "Silta kulkee Île de la Citén länsikärjen yli ja yhdistää molemmat joenrannat.",
+     "leveys": 3648,
+     "korkeus": 5472,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q311": {
+   "nimi": "Père-Lachaise",
+   "peruste": "sitelinks",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.861111111111114,
+   "lon": 2.3941666666666666,
+   "koko_m": 600,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cimetière du Père-Lachaise - Tombeaux disposés le long d'une allée.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cimeti%C3%A8re_du_P%C3%A8re-Lachaise_-_Tombeaux_dispos%C3%A9s_le_long_d'une_all%C3%A9e.JPG?width=1280",
+     "tekija": "MOSSOT",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cimeti%C3%A8re_du_P%C3%A8re-Lachaise_-_Tombeaux_dispos%C3%A9s_le_long_d'une_all%C3%A9e.JPG",
+     "selite": "Père-Lachaise on Pariisin tunnetuin hautausmaa, ja sinne on haudattu monia kuuluisia taiteilijoita.",
+     "leveys": 4896,
+     "korkeus": 3672,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Père-Lachaise - Allée 16.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/P%C3%A8re-Lachaise_-_All%C3%A9e_16.jpg?width=1280",
+     "tekija": "Tylwyth Eldar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:P%C3%A8re-Lachaise_-_All%C3%A9e_16.jpg",
+     "selite": "Hautausmaan puiden reunustamat kujat tekevät siitä rauhallisen puistomaisen paikan.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q898629": {
+   "nimi": "Place des Vosges",
+   "peruste": "pelin nosto",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.855555555556,
+   "lon": 2.3655555555556,
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Pavillon du Roi (4).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pavillon_du_Roi_(4).jpg?width=1280",
+     "tekija": "Roman Ostash",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pavillon_du_Roi_(4).jpg",
+     "selite": "Place des Vosges on Pariisin vanhin suunniteltu aukio, jota ympäröivät punatiilirakennukset.",
+     "leveys": 4608,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "126 Place des Vosges (30809693665).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/126_Place_des_Vosges_(30809693665).jpg?width=1280",
+     "tekija": "Carl Campbell from Santiago de Querétaro, México",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:126_Place_des_Vosges_(30809693665).jpg",
+     "selite": "Aukion keskellä on puisto suihkulähteineen, ja sitä ympäröivät holvikäytävät.",
+     "leveys": 4000,
+     "korkeus": 2667,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q151030": {
+   "nimi": "Moulin Rouge",
+   "peruste": "sitelinks",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.884167,
+   "lon": 2.332222,
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Paris, Moulin Rouge -- 2014 -- 1220.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris%2C_Moulin_Rouge_--_2014_--_1220.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paris%2C_Moulin_Rouge_--_2014_--_1220.jpg",
+     "selite": "Moulin Rouge on Pigallen kabareeteatteri, jonka punainen tuulimylly tunnetaan kaikkialla.",
+     "leveys": 3736,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Paris, Moulin Rouge -- 2014 -- 1223.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paris%2C_Moulin_Rouge_--_2014_--_1223.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Paris%2C_Moulin_Rouge_--_2014_--_1223.jpg",
+     "selite": "Kabaree avattiin 1800-luvun lopulla Montmartren juurella.",
+     "leveys": 3176,
+     "korkeus": 4624,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q457318": {
+   "nimi": "Grand Palais",
+   "peruste": "sitelinks",
+   "kaupunki": "pariisi",
+   "kaupunkiQ": "Q90",
+   "lat": 48.866111,
+   "lon": 2.3125,
+   "koko_m": 250,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grand Palais @ Paris (34729073762).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Palais_%40_Paris_(34729073762).jpg?width=1280",
+     "tekija": "Guilhem Vellut from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Palais_%40_Paris_(34729073762).jpg",
+     "selite": "Grand Palais on lasi- ja teräskattoinen näyttelypalatsi, joka rakennettiin vuoden 1900 maailmannäyttelyyn.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q193369": {
+   "nimi": "Prahan linna",
+   "peruste": "pelin nosto",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.09,
+   "lon": 14.4,
+   "koko_m": 600,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lascar Pražský hrad (Prague Castle) and St. Vitus Cathedral (4502233528).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lascar_Pra%C5%BEsk%C3%BD_hrad_(Prague_Castle)_and_St._Vitus_Cathedral_(4502233528).jpg?width=1280",
+     "tekija": "Jorge Láscar from Australia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lascar_Pra%C5%BEsk%C3%BD_hrad_(Prague_Castle)_and_St._Vitus_Cathedral_(4502233528).jpg",
+     "selite": "Prahan linna on laaja linnakompleksi Vltavan yläpuolella, ja siitä on tullut Tšekin valtion symboli.",
+     "leveys": 3216,
+     "korkeus": 2136,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Praha Hrad sníh 2010 22.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Praha_Hrad_sn%C3%ADh_2010_22.jpg?width=1280",
+     "tekija": "Karelj",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Praha_Hrad_sn%C3%ADh_2010_22.jpg",
+     "selite": "Linnan pääportin vartiosotilaiden yläpuolella taistelevat jättiläiset ovat tunnettu Prahan maamerkki.",
+     "leveys": 2400,
+     "korkeus": 1896,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Prague Castle and surroundings - BugWarp (76).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prague_Castle_and_surroundings_-_BugWarp_(76).jpg?width=1280",
+     "tekija": "BugWarp",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_Castle_and_surroundings_-_BugWarp_(76).jpg",
+     "selite": "Linnan sisäpihojen palatsirakennusten takaa kohoavat katedraalin tornit.",
+     "leveys": 5568,
+     "korkeus": 3712,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q204871": {
+   "nimi": "Kaarlensilta",
+   "peruste": "pelin nosto",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.086388888889,
+   "lon": 14.411944444444,
+   "koko_m": 250,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Vltava, Charles Bridge, Old Town Bridge Tower and Church of St. Francis of Assisi. Prague, Czech Republic.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Vltava%2C_Charles_Bridge%2C_Old_Town_Bridge_Tower_and_Church_of_St._Francis_of_Assisi._Prague%2C_Czech_Republic.jpg?width=1280",
+     "tekija": "Ввласенко",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Vltava%2C_Charles_Bridge%2C_Old_Town_Bridge_Tower_and_Church_of_St._Francis_of_Assisi._Prague%2C_Czech_Republic.jpg",
+     "selite": "Kaarlensilta on keskiaikainen kivisilta Vltavan yli, ja sen reunoilla on rivi pyhimyspatsaita.",
+     "leveys": 5075,
+     "korkeus": 3384,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "North view of Charles Bridge from Mánesův most, Prague 20160808 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/North_view_of_Charles_Bridge_from_M%C3%A1nes%C5%AFv_most%2C_Prague_20160808_1.jpg?width=1280",
+     "tekija": "DXR",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:North_view_of_Charles_Bridge_from_M%C3%A1nes%C5%AFv_most%2C_Prague_20160808_1.jpg",
+     "selite": "Silta yhdistää Vanhankaupungin ja Pikku-Kaupungin, ja sen päissä seisovat puolustustornit.",
+     "leveys": 7164,
+     "korkeus": 4030,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Charles Bridge Covid.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Charles_Bridge_Covid.jpg?width=1280",
+     "tekija": "Tadeáš Gregor",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Charles_Bridge_Covid.jpg",
+     "selite": "Sillan kiveys ja patsaat tekevät siitä yhden Prahan tunnetuimmista kävelypaikoista.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q421678": {
+   "nimi": "Vanhankaupungin aukio",
+   "peruste": "sitelinks",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.0875,
+   "lon": 14.421388888889,
+   "koko_m": 200,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Prague, Old Town Square, COVID.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prague%2C_Old_Town_Square%2C_COVID.jpg?width=1280",
+     "tekija": "Tadeáš Gregor",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague%2C_Old_Town_Square%2C_COVID.jpg",
+     "selite": "Vanhankaupungin aukio on Prahan historiallinen keskusaukio, jota reunustavat värikkäät talot ja goottilaiset tornit.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Prague Old Town Square, Czech Republic - Oct 2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prague_Old_Town_Square%2C_Czech_Republic_-_Oct_2010.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_Old_Town_Square%2C_Czech_Republic_-_Oct_2010.jpg",
+     "selite": "Aukiolla sijaitsevat raatihuone kelloineen sekä Týnin kirkon tornit.",
+     "leveys": 4000,
+     "korkeus": 3864,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Old Town Square (Prague) 20150902.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Town_Square_(Prague)_20150902.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Town_Square_(Prague)_20150902.jpg",
+     "selite": "Illalla aukion rakennukset ja kirkon tornit valaistaan.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q729370": {
+   "nimi": "Prahan astronominen kello",
+   "peruste": "pelin nosto",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.08699,
+   "lon": 14.4207,
+   "koko_m": 40,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Czech-2013-Prague-Astronomical clock face.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Czech-2013-Prague-Astronomical_clock_face.jpg?width=1280",
+     "tekija": "Godot13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Czech-2013-Prague-Astronomical_clock_face.jpg",
+     "selite": "Prahan astronominen kello on keskiaikainen kello, joka näyttää ajan lisäksi auringon ja kuun kulkua.",
+     "leveys": 5000,
+     "korkeus": 3763,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Praha Astronomical Clock 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Praha_Astronomical_Clock_01.jpg?width=1280",
+     "tekija": "Uoaei1",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Praha_Astronomical_Clock_01.jpg",
+     "selite": "Kello on kiinnitetty Vanhankaupungin raatihuoneen seinään, ja sen ympärillä on liikkuvia hahmoja.",
+     "leveys": 5263,
+     "korkeus": 8994,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Prague Town Hall Clock 2021 16.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prague_Town_Hall_Clock_2021_16.jpg?width=1280",
+     "tekija": "Scotch Mist",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_Town_Hall_Clock_2021_16.jpg",
+     "selite": "Kellon alempi kalenteritaulu kuvaa vuoden kulkua kuukausineen.",
+     "leveys": 4346,
+     "korkeus": 2893,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q5949": {
+   "nimi": "Pyhän Vituksen katedraali",
+   "peruste": "sitelinks",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.090833333333336,
+   "lon": 14.400555555555556,
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Prague Castle - panoramio (4).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prague_Castle_-_panoramio_(4).jpg?width=1280",
+     "tekija": "ktanaka",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_Castle_-_panoramio_(4).jpg",
+     "selite": "Pyhän Vituksen katedraali on Tšekin tärkein kirkko, ja se sijaitsee Prahan linnan alueella.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "St. Vitus Cathedral - exterior (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Vitus_Cathedral_-_exterior_(2).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Vitus_Cathedral_-_exterior_(2).jpg",
+     "selite": "Goottilaisen katedraalin kuoripää ja tornit hallitsevat linnan siluettia.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "St. Vitus Cathedral - exterior (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Vitus_Cathedral_-_exterior_(1).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Vitus_Cathedral_-_exterior_(1).jpg",
+     "selite": "Katedraali rakennettiin vuosisatojen kuluessa, ja se valmistui lopulta 1900-luvulla.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q12256": {
+   "nimi": "Petřínin näkötorni",
+   "peruste": "pelin nosto",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.083544444444,
+   "lon": 14.39505,
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Petřín tower 05 2018.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pet%C5%99%C3%ADn_tower_05_2018.jpg?width=1280",
+     "tekija": "Suisant7",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pet%C5%99%C3%ADn_tower_05_2018.jpg",
+     "selite": "Petřínin näkötorni on Eiffel-tornista innoituksensa saanut teräsrakenne Petřínin mäellä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q847613": {
+   "nimi": "Venceslauksen aukio",
+   "peruste": "sitelinks",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.082308,
+   "lon": 14.426141,
+   "koko_m": 750,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wenceslas square Prague.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wenceslas_square_Prague.jpg?width=1280",
+     "tekija": "Szombat78",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wenceslas_square_Prague.jpg",
+     "selite": "Venceslauksen aukio on pitkä bulevardimainen aukio Uudenkaupungin keskustassa.",
+     "leveys": 3468,
+     "korkeus": 4624,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wenceslas Square - Prague (51696640813).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wenceslas_Square_-_Prague_(51696640813).jpg?width=1280",
+     "tekija": "Bradley Weber",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wenceslas_Square_-_Prague_(51696640813).jpg",
+     "selite": "Aukion yläpäässä seisoo pyhän Venceslauksen ratsastajapatsas Kansallismuseon edessä.",
+     "leveys": 5616,
+     "korkeus": 3744,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q753289": {
+   "nimi": "Malá Strana",
+   "peruste": "sitelinks",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.088055555556,
+   "lon": 14.403888888889,
+   "koko_m": 600,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rooftops in Prague.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rooftops_in_Prague.jpg?width=1280",
+     "tekija": "Jose Huwaidi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rooftops_in_Prague.jpg",
+     "selite": "Malá Strana eli Pikku-Kaupunki on Prahan barokkinen kaupunginosa linnan juurella.",
+     "leveys": 3989,
+     "korkeus": 2322,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Prague Rooftops (35147212526).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prague_Rooftops_(35147212526).jpg?width=1280",
+     "tekija": "Nan Palmero from San Antonio, TX, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prague_Rooftops_(35147212526).jpg",
+     "selite": "Punaiset tiilikatot ja Pyhän Nikolauksen kirkon kupoli luovat alueelle tunnistettavan siluetin.",
+     "leveys": 4320,
+     "korkeus": 6480,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q1453427": {
+   "nimi": "Týnin Mariankirkko",
+   "peruste": "sitelinks",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.08771,
+   "lon": 14.4227,
+   "koko_m": 80,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Iglesia de Nuestra Señora ante Týn, Praga, República Checa, 2022-07-02, DD 259-261 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_de_Nuestra_Se%C3%B1ora_ante_T%C3%BDn%2C_Praga%2C_Rep%C3%BAblica_Checa%2C_2022-07-02%2C_DD_259-261_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_Nuestra_Se%C3%B1ora_ante_T%C3%BDn%2C_Praga%2C_Rep%C3%BAblica_Checa%2C_2022-07-02%2C_DD_259-261_HDR.jpg",
+     "selite": "Týnin kirkon kaksi suippoa tornia hallitsevat Vanhankaupungin aukion siluettia.",
+     "leveys": 5984,
+     "korkeus": 5021,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q443107": {
+   "nimi": "Vanhauusi synagoga",
+   "peruste": "pelin nosto",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.09,
+   "lon": 14.418611111111,
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Old New Synagogue 01(js).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_New_Synagogue_01(js).jpg?width=1280",
+     "tekija": "Jerzy Strzelecki",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_New_Synagogue_01(js).jpg",
+     "selite": "Vanhauusi synagoga on Euroopan vanhimpia yhä käytössä olevia synagogia, ja se sijaitsee Josefovin juutalaiskorttelissa.",
+     "leveys": 5524,
+     "korkeus": 3954,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q188112": {
+   "nimi": "Prahan kansallismuseo",
+   "peruste": "pelin nosto",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.0798433,
+   "lon": 14.4304172,
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Národní muzeum (National Museum).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/N%C3%A1rodn%C3%AD_muzeum_(National_Museum).jpg?width=1280",
+     "tekija": "Jorge Láscar",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:N%C3%A1rodn%C3%AD_muzeum_(National_Museum).jpg",
+     "selite": "Kansallismuseon uusrenessanssirakennus sulkee Venceslauksen aukion yläpään.",
+     "leveys": 2724,
+     "korkeus": 1809,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Prag, Nationalmuseum, Brunnen -- 2019 -- 6841.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prag%2C_Nationalmuseum%2C_Brunnen_--_2019_--_6841.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prag%2C_Nationalmuseum%2C_Brunnen_--_2019_--_6841.jpg",
+     "selite": "Rakennuksen edustalla on suihkulähde, ja julkisivu on runsaasti koristeltu.",
+     "leveys": 4453,
+     "korkeus": 6679,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q1100429": {
+   "nimi": "Klementinum",
+   "peruste": "pelin nosto",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.086666666667,
+   "lon": 14.416388888889,
+   "koko_m": 250,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Klementinum – průčelí z Mariánského náměstí.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Klementinum_%E2%80%93_pr%C5%AF%C4%8Del%C3%AD_z_Mari%C3%A1nsk%C3%A9ho_n%C3%A1m%C4%9Bst%C3%AD.jpg?width=1280",
+     "tekija": "Skot",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Klementinum_%E2%80%93_pr%C5%AF%C4%8Del%C3%AD_z_Mari%C3%A1nsk%C3%A9ho_n%C3%A1m%C4%9Bst%C3%AD.jpg",
+     "selite": "Klementinum on entinen jesuiittakollegio, jossa toimii nykyään kansalliskirjasto.",
+     "leveys": 6000,
+     "korkeus": 3999,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Klementinum – Révové nádvoří s kašnou.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Klementinum_%E2%80%93_R%C3%A9vov%C3%A9_n%C3%A1dvo%C5%99%C3%AD_s_ka%C5%A1nou.jpg?width=1280",
+     "tekija": "Skot",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Klementinum_%E2%80%93_R%C3%A9vov%C3%A9_n%C3%A1dvo%C5%99%C3%AD_s_ka%C5%A1nou.jpg",
+     "selite": "Rakennuskompleksin sisäpihat ovat rauhallisia keidasmaisia paikkoja Vanhankaupungin ytimessä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q616334": {
+   "nimi": "Vyšehrad",
+   "peruste": "sitelinks",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.064427188,
+   "lon": 14.417644214,
+   "koko_m": 400,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vysehrad as seen over the Vltava from Cisarska louka 732 cropped.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vysehrad_as_seen_over_the_Vltava_from_Cisarska_louka_732_cropped.jpg?width=1280",
+     "tekija": "Jirka.h23",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vysehrad_as_seen_over_the_Vltava_from_Cisarska_louka_732_cropped.jpg",
+     "selite": "Vyšehrad on keskiaikainen linnoitusmäki Vltavan rannalla.",
+     "leveys": 1356,
+     "korkeus": 949,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Basilica of St Peter and St Paul - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_of_St_Peter_and_St_Paul_-_panoramio_(1).jpg?width=1280",
+     "tekija": "coroner",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_of_St_Peter_and_St_Paul_-_panoramio_(1).jpg",
+     "selite": "Mäen päällä kohoaa Pietarin ja Paavalin basilikan kaksi tornia.",
+     "leveys": 2074,
+     "korkeus": 2785,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q244816": {
+   "nimi": "Tanssiva talo",
+   "peruste": "sitelinks",
+   "kaupunki": "praha",
+   "kaupunkiQ": "Q1085",
+   "lat": 50.075555555556,
+   "lon": 14.414166666667,
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa Danzante, Praga, República Checa, 2022-07-01, DD 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Danzante%2C_Praga%2C_Rep%C3%BAblica_Checa%2C_2022-07-01%2C_DD_01.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Danzante%2C_Praga%2C_Rep%C3%BAblica_Checa%2C_2022-07-01%2C_DD_01.jpg",
+     "selite": "Tanssiva talo on Frank Gehryn ja Vlado Milunićin suunnittelema toimistorakennus Vltavan rannalla.",
+     "leveys": 6819,
+     "korkeus": 4824,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Prag ginger u fred gehry.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prag_ginger_u_fred_gehry.jpg?width=1280",
+     "tekija": "Hans Peter Schaefer, http://www.reserv-a-rt.de",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prag_ginger_u_fred_gehry.jpg",
+     "selite": "Kaksi kaarevaa tornia muistuttavat tanssivaa paria, jota kutsutaan Fred ja Gingeriksi.",
+     "leveys": 1506,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q5943": {
+   "nimi": "Stephansdom",
+   "peruste": "pelin nosto",
+   "kaupunki": "wien",
+   "kaupunkiQ": "Q1741",
+   "lat": 48.208427,
+   "lon": 16.373256,
+   "koko_m": 110,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St. Stephens Cathedral (Stephansdom) (7815703256).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St._Stephens_Cathedral_(Stephansdom)_(7815703256).jpg?width=1280",
+     "tekija": "Miguel Mendez from Malahide, Ireland",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St._Stephens_Cathedral_(Stephansdom)_(7815703256).jpg",
+     "selite": "Stephansdom on goottilainen katedraali Wienin ydinkeskustassa, ja se on kaupungin tärkein kirkko.",
+     "leveys": 5994,
+     "korkeus": 3996,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wien - Stephansplatz - View East on Stephansdom - Südturm 136,4 m high.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wien_-_Stephansplatz_-_View_East_on_Stephansdom_-_S%C3%BCdturm_136%2C4_m_high.jpg?width=1280",
+     "tekija": "Txllxt TxllxT",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wien_-_Stephansplatz_-_View_East_on_Stephansdom_-_S%C3%BCdturm_136%2C4_m_high.jpg",
+     "selite": "Katedraalin korkea eteläinen torni ohjaa katseen yli Wienin kattojen.",
+     "leveys": 2016,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Austria-00035 - St. Stephen's Cathedral (Stephansdom) Roof (9076913294).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Austria-00035_-_St._Stephen's_Cathedral_(Stephansdom)_Roof_(9076913294).jpg?width=1280",
+     "tekija": "Dennis G. Jarvis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Austria-00035_-_St._Stephen's_Cathedral_(Stephansdom)_Roof_(9076913294).jpg",
+     "selite": "Kirkon katon värikäs laattakuviointi on tunnettu osa Wienin siluettia.",
+     "leveys": 4000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q131330": {
+   "nimi": "Schönbrunnin linna",
+   "peruste": "pelin nosto",
+   "kaupunki": "wien",
+   "kaupunkiQ": "Q1741",
+   "lat": 48.18479,
+   "lon": 16.31227,
+   "koko_m": 600,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Schönbrunn September 2023 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sch%C3%B6nbrunn_September_2023_1.jpg?width=1280",
+     "tekija": "Conny Duck",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sch%C3%B6nbrunn_September_2023_1.jpg",
+     "selite": "Schönbrunn oli Habsburgien keisarillinen kesäpalatsi, ja sen keltainen julkisivu on Wienin tunnetuimpia.",
+     "leveys": 6608,
+     "korkeus": 3304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Schloss Schoenbrunn Gloriette DSC02028.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Schloss_Schoenbrunn_Gloriette_DSC02028.JPG?width=1280",
+     "tekija": "David Monniaux Copyright © 2005. French translation by Berrucomons using text fr",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Schloss_Schoenbrunn_Gloriette_DSC02028.JPG",
+     "selite": "Palatsin puutarhan mäellä seisoo Gloriette-paviljonki, josta avautuu näkymä kaupungille.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q46242": {
+   "nimi": "Hofburg",
+   "peruste": "pelin nosto",
+   "kaupunki": "wien",
+   "kaupunkiQ": "Q1741",
+   "lat": 48.20638888888889,
+   "lon": 16.365277777777777,
+   "koko_m": 400,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wien-Hofburg-138-Michaelerplatz-2009-gje.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wien-Hofburg-138-Michaelerplatz-2009-gje.jpg?width=1280",
+     "tekija": "Gerd Eichmann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wien-Hofburg-138-Michaelerplatz-2009-gje.jpg",
+     "selite": "Hofburg oli Habsburgien hallitsijoiden palatsi, ja se on laaja rakennuskompleksi Wienin keskustassa.",
+     "leveys": 4776,
+     "korkeus": 2413,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dome Hofburg Vienna.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dome_Hofburg_Vienna.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dome_Hofburg_Vienna.jpg",
+     "selite": "Palatsin Michaelertrakt-siipi kruunataan vihreällä kupolilla.",
+     "leveys": 3006,
+     "korkeus": 2126,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Hofburg Michaelertor Vienna.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hofburg_Michaelertor_Vienna.jpg?width=1280",
+     "tekija": "Jebulon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hofburg_Michaelertor_Vienna.jpg",
+     "selite": "Michaelerin portti avaa kulkuyhteyden Hofburgin sisäpihalle.",
+     "leveys": 2095,
+     "korkeus": 3007,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q211818": {
+   "nimi": "Belvedere",
+   "peruste": "sitelinks",
+   "kaupunki": "wien",
+   "kaupunkiQ": "Q1741",
+   "lat": 48.1934,
+   "lon": 16.380519444444445,
+   "koko_m": 400,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio Belvedere, Viena, Austria, 2020-02-01, DD 93-95 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Belvedere%2C_Viena%2C_Austria%2C_2020-02-01%2C_DD_93-95_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Belvedere%2C_Viena%2C_Austria%2C_2020-02-01%2C_DD_93-95_HDR.jpg",
+     "selite": "Belvedere on kahdesta barokkipalatsista koostuva kokonaisuus, jonka rakennutti prinssi Eugen Savoijilainen.",
+     "leveys": 7785,
+     "korkeus": 3428,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio Belvedere, Viena, Austria, 2020-02-01, DD 87-89 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_Belvedere%2C_Viena%2C_Austria%2C_2020-02-01%2C_DD_87-89_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_Belvedere%2C_Viena%2C_Austria%2C_2020-02-01%2C_DD_87-89_HDR.jpg",
+     "selite": "Palatsien välissä levittäytyy muotopuutarha, ja nykyään rakennuksissa on taidemuseo.",
+     "leveys": 7285,
+     "korkeus": 2867,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q697578": {
+   "nimi": "Wienin Riesenrad",
+   "peruste": "pelin nosto",
+   "kaupunki": "wien",
+   "kaupunkiQ": "Q1741",
+   "lat": 48.21683055555555,
+   "lon": 16.395919444444445,
+   "koko_m": 70,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wiener Riesenrad DSC02378.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wiener_Riesenrad_DSC02378.JPG?width=1280",
+     "tekija": "David Monniaux",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wiener_Riesenrad_DSC02378.JPG",
+     "selite": "Riesenrad on Pratersin huvipuiston maailmankuulu maailmanpyörä, joka rakennettiin 1800-luvun lopulla.",
+     "leveys": 2336,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Riesenrad Wiener Prater 2020-07-12 d.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riesenrad_Wiener_Prater_2020-07-12_d.jpg?width=1280",
+     "tekija": "Manfred Werner (Tsui)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Riesenrad_Wiener_Prater_2020-07-12_d.jpg",
+     "selite": "Pyörän vaunut kulkevat hitaasti ja tarjoavat näkymän yli Wienin.",
+     "leveys": 5100,
+     "korkeus": 3400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q209937": {
+   "nimi": "Wienin valtionooppera",
+   "peruste": "pelin nosto",
+   "kaupunki": "wien",
+   "kaupunkiQ": "Q1741",
+   "lat": 48.203333333333,
+   "lon": 16.369166666667,
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2019 - Wiener Staatsoper im Morgengrauen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019_-_Wiener_Staatsoper_im_Morgengrauen.jpg?width=1280",
+     "tekija": "Moahim",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019_-_Wiener_Staatsoper_im_Morgengrauen.jpg",
+     "selite": "Valtionooppera on Wienin Ringstraßen vanhimpia suurrakennuksia ja yksi maailman tunnetuimmista oopperataloista.",
+     "leveys": 4938,
+     "korkeus": 2945,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q686468": {
+   "nimi": "Wienin raatihuone",
+   "peruste": "pelin nosto",
+   "kaupunki": "wien",
+   "kaupunkiQ": "Q1741",
+   "lat": 48.2108,
+   "lon": 16.3574,
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Rathaus Vienna June 2006 165.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rathaus_Vienna_June_2006_165.jpg?width=1280",
+     "tekija": "Gryffindor",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rathaus_Vienna_June_2006_165.jpg",
+     "selite": "Raatihuone on uusgoottilainen rakennus Ringstraßen varrella, ja sen keskitorni kohoaa korkealle.",
+     "leveys": 2365,
+     "korkeus": 1900,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q702121": {
+   "nimi": "Itävallan parlamenttitalo",
+   "peruste": "sitelinks",
+   "kaupunki": "wien",
+   "kaupunkiQ": "Q1741",
+   "lat": 48.20805,
+   "lon": 16.3587,
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wien - Pallas-Athene-Brunnen.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wien_-_Pallas-Athene-Brunnen.JPG?width=1280",
+     "tekija": "C.Stadler/Bwag",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wien_-_Pallas-Athene-Brunnen.JPG",
+     "selite": "Parlamenttitalon edessä seisoo Pallas Athene -suihkulähde, ja rakennus on tehty antiikin temppelin tyyliin.",
+     "leveys": 3600,
+     "korkeus": 5400,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q408847": {
+   "nimi": "Karlskirche",
+   "peruste": "sitelinks",
+   "kaupunki": "wien",
+   "kaupunkiQ": "Q1741",
+   "lat": 48.198280555555556,
+   "lon": 16.371880555555556,
+   "koko_m": 100,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Karlskirche Wien abends.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Karlskirche_Wien_abends.jpg?width=1280",
+     "tekija": "Thomas Wolf, www.foto-tw.de",
+     "lisenssi": "CC BY-SA 3.0 de",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Karlskirche_Wien_abends.jpg",
+     "selite": "Karlskirche on Wienin barokkikirkoista näyttävin, ja sen kupoli ja kaksi pylvästä erottuvat kauas.",
+     "leveys": 4216,
+     "korkeus": 3430,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2019 - Wiener Karlskirche mit Teich und \"Hill Arches\" Skulptur am Abend.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019_-_Wiener_Karlskirche_mit_Teich_und_%22Hill_Arches%22_Skulptur_am_Abend.jpg?width=1280",
+     "tekija": "Moahim",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019_-_Wiener_Karlskirche_mit_Teich_und_%22Hill_Arches%22_Skulptur_am_Abend.jpg",
+     "selite": "Kirkon edessä on matala allas, jossa julkisivu heijastuu illan hämärässä.",
+     "leveys": 4916,
+     "korkeus": 3236,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q95569": {
+   "nimi": "Wienin taidehistoriallinen museo",
+   "peruste": "sitelinks",
+   "kaupunki": "wien",
+   "kaupunkiQ": "Q1741",
+   "lat": 48.20388055555556,
+   "lon": 16.3616,
+   "koko_m": 150,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "AT 13763 Exterior of the Kunsthistorisches Museum, Vienna-2397.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AT_13763_Exterior_of_the_Kunsthistorisches_Museum%2C_Vienna-2397.jpg?width=1280",
+     "tekija": "Hubertl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AT_13763_Exterior_of_the_Kunsthistorisches_Museum%2C_Vienna-2397.jpg",
+     "selite": "Kunsthistorisches Museum on Habsburgien taidekokoelmien koti, ja sen kupolirakennus on Ringstraßen koristeita.",
+     "leveys": 5180,
+     "korkeus": 3453,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q308720": {
+   "nimi": "Burgtheater",
+   "peruste": "pelin nosto",
+   "kaupunki": "wien",
+   "kaupunkiQ": "Q1741",
+   "lat": 48.210277777778,
+   "lon": 16.361388888889,
+   "koko_m": 120,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Burgtheater, Viena, Austria, 2020-01-31, DD 36.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burgtheater%2C_Viena%2C_Austria%2C_2020-01-31%2C_DD_36.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burgtheater%2C_Viena%2C_Austria%2C_2020-01-31%2C_DD_36.jpg",
+     "selite": "Burgtheater on Itävallan kansallisteatteri, ja se kuuluu saksankielisen maailman arvostetuimpiin näyttämöihin.",
+     "leveys": 5260,
+     "korkeus": 3137,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q254476": {
+   "nimi": "Votivkirche",
+   "peruste": "sitelinks",
+   "kaupunki": "wien",
+   "kaupunkiQ": "Q1741",
+   "lat": 48.21545,
+   "lon": 16.3591,
+   "koko_m": 100,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20250503 Votive Church Vienna 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20250503_Votive_Church_Vienna_02.jpg?width=1280",
+     "tekija": "Flocci Nivis",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20250503_Votive_Church_Vienna_02.jpg",
+     "selite": "Votivkirche on uusgoottilainen kirkko, joka rakennettiin kiitokseksi keisarin pelastumisesta salamurhayrityksestä.",
+     "leveys": 6016,
+     "korkeus": 4016,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Wien Votivkirche Südseite 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wien_Votivkirche_S%C3%BCdseite_01.jpg?width=1280",
+     "tekija": "Uoaei1",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wien_Votivkirche_S%C3%BCdseite_01.jpg",
+     "selite": "Kirkon kaksi suippoa tornia kohoavat Ringstraßen läheisyydessä.",
+     "leveys": 3288,
+     "korkeus": 5159,
+     "tarkistettu": true
+    }
+   ]
+  },
+  "Q493126": {
+   "nimi": "Hundertwasserhaus",
+   "peruste": "sitelinks",
+   "kaupunki": "wien",
+   "kaupunkiQ": "Q1741",
+   "lat": 48.2075,
+   "lon": 16.3939,
+   "koko_m": 60,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Wien, Hundertwasserhaus -- 2018 -- 3180.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wien%2C_Hundertwasserhaus_--_2018_--_3180.jpg?width=1280",
+     "tekija": "Dietmar Rabich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Wien%2C_Hundertwasserhaus_--_2018_--_3180.jpg",
+     "selite": "Hundertwasserhaus on värikäs asuintalo, jonka julkisivua ja kattoa koristavat kasvit ja epäsäännölliset muodot.",
+     "leveys": 4480,
+     "korkeus": 6720,
+     "tarkistettu": true
+    }
+   ]
+  }
+ }
+}
