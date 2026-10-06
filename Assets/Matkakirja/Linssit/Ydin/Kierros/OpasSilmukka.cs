@@ -119,6 +119,9 @@ namespace Matkakirja.Linssit.Kierros
         public string Url, Tekija, Lisenssi, Lahde, Selite;
         public bool Havainnekuva;
 
+        /// <summary>Tekijättömiä tai lisenssittömiä valokuvia hylätty (lokiin sovittimessa).</summary>
+        public static int Hylatyt;
+
         public static OpasKuva[] Lue(IList<object> lista)
         {
             var tulos = new List<OpasKuva>();
@@ -129,8 +132,12 @@ namespace Matkakirja.Linssit.Kierros
                     string S(string k) => j.TryGetValue(k, out var v) ? v as string : null;
                     string url = S("url");
                     if (string.IsNullOrEmpty(url) || !url.StartsWith("http", StringComparison.Ordinal)) continue;
-                    tulos.Add(new OpasKuva { Url = url, Havainnekuva = S("tyyppi") == "havainnekuva", Tekija = S("tekija") ?? S("tekijä"),
-                        Lisenssi = S("lisenssi"), Lahde = S("lahde") ?? S("lähde"), Selite = S("selite") });
+                    var k = new OpasKuva { Url = url, Havainnekuva = S("tyyppi") == "havainnekuva", Tekija = S("tekija") ?? S("tekijä"),
+                        Lisenssi = S("lisenssi"), Lahde = S("lahde") ?? S("lähde"), Selite = S("selite") };
+                    // Valokuva ilman tekijää tai lisenssiä jätetään pois (CC BY vaatii tekijätiedon; Natiivi-UI 6.10.: Canal Granden
+                    // kuvien lähderivi tyhjä). Havainnekuvat ovat omia, niille riittää url.
+                    if (!k.Havainnekuva && (string.IsNullOrWhiteSpace(k.Tekija) || string.IsNullOrWhiteSpace(k.Lisenssi))) { Hylatyt++; continue; }
+                    tulos.Add(k);
                 }
             return tulos.ToArray();
         }
