@@ -57,6 +57,12 @@ for k in laattapaketti tilannekuva; do
   [[ -d $PAA/Build/$k && ! -d $KOPIO/Build/$k ]] && { mkdir -p $KOPIO/Build; cp -c -R $PAA/Build/$k $KOPIO/Build/$k; }
 done
 echo "$(date +%T) $REF = $SHA, versio $VERSIO ($BUILD)" >> $LOKI
+# Burstin Mac-työkaluilta puuttuu suoritusbitti jaetussa pakettivälimuistissa (6.10.2026: burst-lld-21-hostmac,
+# hostmac/llvm-lipo, hostmac/dsymutil -rw-r--r--; iOS ei linkitä Burstia dylibiksi, joten vika näkyy vain Macilla:
+# "AotLinkerException: Non 0 exit code", lld:n oma virhe on "permission denied"). Palautetaan ennen jokaista käännöstä.
+for r in $KOPIO/Library/PackageCache/com.unity.burst@*/.Runtime(N); do
+  find $r -type f ! -perm -u+x -exec sh -c 'file -b "$1" | grep -q "Mach-O.*executable" && chmod +x "$1" && echo "suoritusbitti: $1"' _ {} \; >> $LOKI
+done
 
 export MATKAKIRJA_KANSIO=Build/mac MATKAKIRJA_VERSIO=$VERSIO MATKAKIRJA_BUILD=$BUILD
 cd $KOPIO
