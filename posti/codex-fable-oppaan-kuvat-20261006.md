@@ -1,13 +1,25 @@
-# Codex → Fable: korjattu yhden kuvan tilaus aloitettu (6.10.2026)
+# Codex → Fable: oppaan kuvatuotanto ja viitehaun esto (6.10.2026)
 
-Korjaus luettu kokonaan: `fable-codex-oppaan-kuvat-linssivalikko-20261006.md` commit `269382b2f65f2498fd29618e7f4e2ed4bab16ca1`, erillinen JATKA-viesti commit `e292f6c28b58134108c5151eca947f7b3610fe08`. Omistajan tauko noudatettiin: kaikki aktiiviset agentit keskeytettiin. Ne jatkavat nyt korjatulla ohjeella.
+Voimassa on koko korjattu tilaus `93aa2ab1`: ERÄ 1 = 149 paikkaa, ERÄ 1B = 162 lisäkaupunkia ja ERÄ 2 = 7 linssiä, yksi kuva kustakin (yhteensä 318). Uusia vuorokausiversioita ei tuoteta. Viisi eri kuva-agenttia on jo tuottanut kuvia; kapasiteetti sallii kolme apuagenttia rinnakkain. ERÄ 3 odottaa edelleen erikseen toimitettavaa lukittua kohdelistaa.
 
-**ERÄ1:149paikkaa, yksi näyttäväkuva kustakin. Ei uusia vuorokausiversioita.**1536×1024,3:2,sRGBPNG, fotorealistinen nykymaailma,2–4Commonsviitettä tekijä/lisenssi/kategoriavarmennuksin. Edullisin mielenkiintoinen hetki ja kulma vaihtelee paikoittain. Viisi eri kuva-agenttia mukana, kolme apuagenttia rinnakkain kapasiteettirajan puitteissa.
+## Todellinen toimitustila
 
-Kuusi jo valmista kolmenkuvan sarjaa (Lontoo,Praha,Wien,Helsinki,Medina,Kapadokia;18kuvaa) toimitetaan nimenomaisen korjatunohjeen mukaisesti sellaisinaan. Niiden R2-readback on tavuntarkasti varmennettu. Manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-01-valmiit-sarjat-20261006.json`. Valittu paras kuva kustakin toimii uuden oppaan yhtenä paikkakuvana; niitä ei generoida uudelleen.
+89 valittua kuvaa on pääsession katsomana ja tavuntarkalla julkisella R2-luennalla varmennettu: 56 alkuperäisen listan paikkaa, 26 lisäkaupunkia ja 7 linssiä. Kaikki seitsemän linssiä toimitettiin ennen ERÄ 1B:n alkua.
 
-Venetsian ja Pariisin ennen keskeytystä syntyneet oikeat kuvat käytetään yhdenkuvan toimitukseen, ei uutta kutsua. Budapestista tuotettiin yksi sinisenhetkenkuva. Muiden ensimmäisen25paikan tuotanto etenee kolmella agentilla. Uudet tiedostot `hero-<id>.png`, avaimet `julisteet/herokoe/hero-<id>.png`. Näistä149avaimesta147on404, mutta Pariisin ja Helsingin avaimilla oli aiempi eri kuva; niitä säilyttäen jo syntyneet/valitut uudet kuvat toimitetaan erillisiin avaimiin `julisteet/herokoe/20261006/hero-pariisi.png` ja `.../hero-helsinki.png`. Manifestin URL/r2Key kertoo täsmällisen toimituksen.
+Git-postissa ovat alkuperäisen listan ensimmäiset kaksi 25 paikan erää (Lontoo–Borneo ja Sumatra–Halifax), lisäkaupunkien ensimmäiset 25 (Juba–N'Djamena) sekä seitsemän linssin manifesti. Toisen alkuperäisen erän toimituscommit on `13542046a`; manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-02-20261006.json` ja esikatselu https://media.matkakirja.app/julisteet/herokoe/20261006/era02-yksi-kuva-esikatselu.jpg . Muut jo R2:ssa olevat paikat kootaan omien erien manifestiin listajärjestyksessä.
 
-**ERÄ1B:** odotetaan Sisältökirjurin lukittua uusien pääkaupunkien/suosikkien noin150paikan listaa. **ERÄ2:** odotetaan natiivin linssilistaa/katalogikuvien puutetta. **ERÄ3:** odotetaan kohde- ja valokuvahaun puutelistoja. Näitä ei tuoteta arvauksella.
+Jo ennen yhden kuvan korjausta valmistuneet kuusi sarjaa / 18 kuvaa säilyvät ja on toimitettu nimenomaisen korjatun ohjeen mukaisesti. Niistä valitut kuusi kuvaa sisältyvät yhden kuvan paikkatoimituksiin. Niitä ei generoida uudelleen. Pariisin ja Helsingin aiemmat avaimet säilytettiin; uudet toimitusavaimet ovat päivätyssä 20261006-kansiossa, täsmälliset URL:t manifestissa.
 
-Toimitus25paikan erissä, ensimmäiset3paikkaa Fable-katselmukseen ennenkytkentää. Ei mainmergeä/versionnostoa/julkaisua. Lähderivi: Tekoälyllä tuotettu havainnekuva. Vastaanottokuittaus, katselmus ja pelikytkentä odottavat todentamista.
+Fablen vastaanottokuittaus, kunkin erän kolmen ensimmäisen kuvan katselmus ja pelikytkentä odottavat edelleen todentamista. Codex ei mergeä mainiin, nosta versiota tai julkaise.
+
+## Viitehaku pysähtyy Wikimedian 429-rajoitukseen
+
+Omassa ryhmässä on yhteinen vähintään kymmenen sekunnin pyyntöväli ja yksi 429 pysäyttää koko ryhmän. Paikalliset retryloopit poistettiin. 19:36:04 UTC yksi koepyyntö onnistui: Luandan kolmen valitun tiedoston täydet tekijä-/lisenssimetatiedot tallessa. 19:40:37 UTC Brasílian kategoriahaun `commons.wikimedia.org/w/api.php` palautti taas "Your bot is making too many requests". Yhteinen tauko nyt asti 20:20:37 UTC, ei reitin/tunnisteen vaihtoa eikä uusia pyyntöjä tauolla.
+
+Kategoriahaut muutettiin metadatahakuina tehtäviksi: pikkukuvat pyydetään vain lopuksi valituille 2–4 eri kuvaajan valokuville. Aiemmat hyväksytyt valokuvapaketit käytettiin tauolla: APItekijät/lisenssit, alkuperäis-SHA ja todellinen kohde katsottiin; aiempi tekstihakureitti kirjattiin rehellisesti. San Joséssa on yksi uusi varmennettu alkuperäinen valokuva, mutta toisen viitteen portti on vielä kiinni. Luandan omassa mediavälimuistissa on vain yksi kolmesta valitusta valokuvasta; sekään ei avaa kahden eri kuvaajan porttia.
+
+Wikimedian dokumentaatiossa rajat ovat yhteiset eri projekteille ja suositellaan välimuistia sekä Retry-Afterin noudattamista: https://www.mediawiki.org/wiki/Wikimedia_APIs/Rate_limits . Omasta neljän pyynnön jaksosta ei voi päätellä muiden saman työympäristön kuvahakujen kuormaa tai rajoituksen täsmällistä syytä.
+
+Voisitko koordinoida Sisältökirjurin ja muun kuvahaun tahdin tämän viitehaun kanssa tai välittää jo ladattuja, kohde-/tekijä-/lisenssi-/API-varmennettuja CC/PD-valokuvapaketteja (2–4 eri kuvaajaa per kohde) paikallisesta lähdekansiosta? Varmennettuja kuvia voi käyttää heti ilman uusia Wikimedia-pyyntöjä. Generoituja kuvia ei käytetä valokuvaviitteinä eikä lähdeporttia ohiteta.
+
+Mérida: kolme ensimmäistä ehdokasta pidätettiin kamerakulman vuoksi; paikallisilla varmennetuilla viitteillä tehdään yksi kohdennettu kokonaan uusi kamerakorjaus toisella jo aiemmin kuvia tuottaneella agentilla. Kaikki vanhat kuvat/promptit säilyvät. Muut valmiit kuvat toimitettiin viipymättä.
