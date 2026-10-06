@@ -54,7 +54,7 @@ namespace Matkakirja.Linssit.IssKamera
         public readonly int X0, Y0, W, H, Taso;
         /// <summary>Pilven alfa ja kirkkaus 0…255 (W × H).</summary>
         public readonly byte[] Alfa, Kirkkaus;
-        public double AurinkoAz = 180, AurinkoKorkeus = 45, VarjonVoima = 0.35;
+        public double AurinkoAz = 180, AurinkoKorkeus = 45, VarjonVoima = 0.5;
         /// <summary>Lähikuvan reunarakenne (400 mm): kohina Pilvikentästä; null = maskin pehmeä reuna.</summary>
         public Pilvikentta Yksityiskohta;
         /// <summary>Valittu päivä ja sen keskialfa (lokiin).</summary>
@@ -99,7 +99,8 @@ namespace Matkakirja.Linssit.IssKamera
         {
             int mn = Math.Min(r, Math.Min(g, b)), mx = Math.Max(r, Math.Max(g, b));
             double s = mn - 2.0 * Math.Max(0, r - b) - 0.3 * (mx - mn);
-            return Askel(110, 170, s);
+            // Leveämpi siirtymä (Päätoimittaja 6.10.: ohuet reunat läpikuultaviksi, ei kynnysmaskia).
+            return Askel(90, 195, s);
         }
 
         /// <summary>
@@ -127,7 +128,8 @@ namespace Matkakirja.Linssit.IssKamera
                         if (kk[k] == null || !kelvot[k][i]) continue;
                         byte r = kk[k][i * 3], g = kk[k][i * 3 + 1], bl = kk[k][i * 3 + 2];
                         a[i] = (float)MaskiAlfa(r, g, bl);
-                        b[i] = (byte)Math.Round(255 * Math.Max(0.70, Math.Min(1.0, 0.70 + 0.30 * ((0.3 * r + 0.55 * g + 0.15 * bl) - 150) / 90)));
+                        // Sävy GIBS:n omasta kirkkaudesta laajemmalla alueella (0,55…1): pilven sisälle tekstuuri (Päätoimittaja 6.10.).
+                        b[i] = (byte)Math.Round(255 * Math.Max(0.55, Math.Min(1.0, 0.55 + 0.45 * ((0.3 * r + 0.55 * g + 0.15 * bl) - 120) / 120)));
                         break;
                     }
                     if (a[i] >= 0)
@@ -161,7 +163,8 @@ namespace Matkakirja.Linssit.IssKamera
                 alfa[i] = (byte)Math.Round(255 * v); s2 += v;
             }
             // Kirkkaus kolmesti sumennettuna (esikatselu Helsinki: VIIRS-kuvan juovat näkyivät pilvikannessa vaakaraitoina).
-            return new GibsPilvet(x0, y0, w, h, Sumenna(Sumenna(alfa, w, h), w, h), Sumenna(Sumenna(Sumenna(kirk[paras], w, h), w, h), w, h), taso) { Paiva = paivat[paras].paiva, Peitto = s2 / n };
+            // Kirkkaus kahdesti sumennettuna (VIIRS-juovat pois, sisäinen tekstuuri jää; ennen kolmesti → tasavalkoinen).
+            return new GibsPilvet(x0, y0, w, h, Sumenna(Sumenna(alfa, w, h), w, h), Sumenna(Sumenna(kirk[paras], w, h), w, h), taso) { Paiva = paivat[paras].paiva, Peitto = s2 / n };
         }
 
         /// <summary>Kelvot pikselit: max(R,G,B) > 1, ja nodatasta vähintään 3 px (JPEG-särö ratavälin reunalla).</summary>
@@ -253,7 +256,7 @@ namespace Matkakirja.Linssit.IssKamera
         (double alfa, double kirkkaus) OmaLahi(double lat, double lon, double pikseliM)
         {
             var (gx, gy) = Pikseli(lat, lon, Taso);
-            double a = Arvo(Alfa, gx, gy), k = Math.Max(0.70, Arvo(Kirkkaus, gx, gy));
+            double a = Arvo(Alfa, gx, gy), k = Math.Max(0.55, Arvo(Kirkkaus, gx, gy));
             if (a <= 0.01) return (a, k);
             // Laaja kuva (kuvan pikseli > 100 m; juliste 65fe6316: litteät terävärajaiset läntit): ei fraktaaliterävöintiä, vaan
             // pehmeä alfa GIBS-tiheydestä ja sävy auringon suunnasta koko pilven alalla (aurinkoa kohti kirkkaampi, varjopuoli tummempi).
@@ -262,7 +265,7 @@ namespace Matkakirja.Linssit.IssKamera
                 double azL = AurinkoAz * Math.PI / 180;
                 double kohtiL = Arvo(Alfa, gx + Math.Sin(azL) * 1.5, gy - Math.Cos(azL) * 1.5);
                 double valoL = Math.Max(-0.14, Math.Min(0.06, -0.7 * (kohtiL - a)));
-                return (Askel(0.04, 0.9, a) * (0.75 + 0.25 * a), Math.Max(0.62, Math.Min(1.0, k * (0.93 + 0.07 * a) + valoL)));
+                return (Askel(0.04, 0.9, a) * (0.75 + 0.25 * a), Math.Max(0.5, Math.Min(1.0, k * (0.93 + 0.07 * a) + valoL)));
             }
             if (Yksityiskohta == null) return (a, k);
             // GIBS-maski (~150–300 m/px) on kuvassa sumea möykky (simu 8eea083c Amazonia): reuna terävöitetään fraktaalikohinalla,

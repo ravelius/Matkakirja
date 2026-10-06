@@ -37,6 +37,13 @@ namespace Matkakirja.Linssit.IssKamera
         /// syvän sinisen kontrasti suuri"; lähialueen litteät läiskät harvemmiksi): ≤ 600 km 0,5 … ≥ 1 600 km 1,85. Jatkuva
         /// funktio paikasta, joten tasojen ja laattojen rajoille ei tule saumaa.
         /// </summary>
+        double EtaisyysKm(double lat, double lon)
+        {
+            if (Kamera == null) return 0;
+            var p = Kuvasuunnitelma.Ecef(lat, lon); var c = Kamera.Value;
+            return Math.Sqrt((p.x - c.x) * (p.x - c.x) + (p.y - c.y) * (p.y - c.y) + (p.z - c.z) * (p.z - c.z)) / 1000;
+        }
+
         double PeittoK(double lat, double lon)
         {
             if (Kamera == null) return 1;
@@ -527,8 +534,14 @@ namespace Matkakirja.Linssit.IssKamera
                     {
                         var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, px + 0.5, py + 0.5); var (pa, pk) = Pilvet.Lahi(la, lo, PeittoK(la, lo), pm);
                         al = (float)pa; ki = (float)pk;
-                        // GIBS: varjo pikseleittäin (ruudukko 32 × 32 laatassa hävitti matalan auringon pitkät varjot, juliste 65fe6316).
-                        if (Pilvet is GibsPilvet) va = (float)Pilvet.Nayte(la, lo, PeittoK(la, lo)).varjo * haivytys;
+                        // GIBS: varjo pikseleittäin (ruudukko 32 × 32 laatassa hävitti matalan auringon pitkät varjot, juliste 65fe6316),
+                        // ja kauas (1 300–2 300 km) pilvet häipyvät utuun (Päätoimittaja: ei maitomaista levyä horisontissa).
+                        if (Pilvet is GibsPilvet)
+                        {
+                            va = (float)Pilvet.Nayte(la, lo, PeittoK(la, lo)).varjo * haivytys;
+                            double km = EtaisyysKm(la, lo);
+                            if (km > 1300) { double t = Math.Min(1, (km - 1300) / 1000); float hv = (float)(1 - 0.45 * t * t * (3 - 2 * t)); al *= hv; va *= hv; }
+                        }
                     }
                     else { al = H(a); ki = H(kk); }
                     al *= haivytys;
