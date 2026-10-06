@@ -83,5 +83,21 @@ namespace Matkakirja.Linssit.Testit
             var k = l.Kuvakulma(Tasainen);
             Oleta.Tosi(k.KatseKorkeusM == 200 && k.EtaisyysM > OpasVapaaLento.MinKorkeusM, $"katse maassa: {k}");
         }
+
+        [Testi]
+        static void RistikkotorniKehalta()
+        {
+            // Kapea 300 m korkea torni 30 m kameran itäpuolella (vain 8 m leveä): pistenäyte kamerassa ei osu, kehä 20/45 m osuu.
+            var l = Alussa(0);
+            Aja(l, 10, 0, 0, 0, -1);
+            double lat0 = l.Lat, lon0 = l.Lon, mLon = 111320 * Math.Cos(lat0 * Math.PI / 180);
+            Func<double, double, double> pinta = (la, lo) =>
+            {
+                double x = (lo - lon0) * mLon - 30, y = (la - lat0) * 111320;
+                return Math.Abs(x) < 25 && Math.Abs(y) < 25 ? 500 : 200;   // torni ±25 m (näyteruudun karkeus) kehän sisällä
+            };
+            for (double t = 0; t < 3; t += 1 / 60.0) l.Paivita(1 / 60.0, 0, 0, 0, 0, pinta);
+            Oleta.Tosi(l.KorkeusAbsM >= 500 + OpasVapaaLento.MinKorkeusM * 0.9, $"torni naapurustossa → kamera sen yllä: {l.KorkeusAbsM:0} m");
+        }
     }
 }

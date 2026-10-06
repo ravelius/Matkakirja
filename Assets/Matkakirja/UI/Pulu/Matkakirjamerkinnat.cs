@@ -320,8 +320,9 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>
-        /// Web renderFactin saapumishavainto: kokoelman havaintorivi (skeema 1.24, kuvineen), muuten
-        /// isoisän paikkatieto ensin, muuten ensimmäinen.
+        /// Saapumishavainto: vain kokoelman havaintorivi (skeema 1.24, kuvineen). VARATEKSTI POISTETTU (omistaja 6.10.2026:
+        /// "Nuo varatekstit kannattaa poistaa koko pelistä."): paikkatiedon ensimmäisestä virkkeestä ei enää koota merkintää,
+        /// vaan ilman kaupungin omaa merkintää palautetaan null ja saapuminen etenee ilman korttia (Saapumisesitys).
         /// </summary>
         public static Merkinta Havainto(string kaupunki)
         {
@@ -334,19 +335,7 @@ namespace Matkakirja.Natiivi
                     Valokuvat = s.Kuvat, AaniUrl = s.AaniUrl, Lukija = s.AaniUrl == null ? s.Lukija : null,
                     Kaiutin = s.AaniUrl != null,
                 };
-            var faktat = Paikkatiedot(kaupunki);
-            if (faktat == null) return null;
-            var f = faktat.Find(x => x.Aani == "isoisa") ?? faktat[0];
-            if (string.IsNullOrEmpty(f.Teksti)) return null;
-            var (eka, loput) = EkaLause(f.Teksti);
-            return new Merkinta
-            {
-                Avain = "saapui:" + kaupunki, Kaupunki = kaupunki, Laji = "havainto",
-                Otsikko = AanenOtsikko(f.Aani), Paikkarivi = Nimi(kaupunki),
-                Lihava = eka, Teksti = loput, Wiki = Tyhja(f.Wiki),
-                // Web havainto: ensimmäinen virke puhesynteesillä.
-                Lukija = Tyhja(eka),
-            };
+            return null;
         }
 
         /// <summary>

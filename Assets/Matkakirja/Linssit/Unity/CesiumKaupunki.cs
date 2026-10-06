@@ -277,6 +277,7 @@ namespace Matkakirja.Natiivi
             if (georef == null || kamera == null) { Virhe = "pallon kamera puuttuu"; return false; }
             auki = true;
             avausAika = Time.realtimeSinceStartup;
+            googleUusinnat = 0;
             // Tarkkuus muistin mukaan ennen tilesettien luontia (LuoTileset käyttää SseKerrointa).
             long vapaa = VapaaMuisti();
             float pakotettu = PakotettuKerroin();
@@ -392,11 +393,52 @@ namespace Matkakirja.Natiivi
             if (!auki || d.tileset == null || d.tileset != maasto) return;
             // Viesti voi sisältää osoitteen: ei kirjata sellaisenaan (tunnus kyselyparametrissa).
             kirjaa($"kaupunki: tilesetin lataus epäonnistui ({Kaytossa}, tyyppi {d.type}, HTTP {d.httpStatusCode})");
+            Virhe429TaiMuu(d.httpStatusCode);
+        }
+
+        /// <summary>Testikomento "opas testi429" (Päätoimittaja 6.10. 18.0x): käsitellään kuin Googlen root-pyyntö olisi saanut 429:n.</summary>
+        public void TestiVirhe429()
+        {
+            if (!auki) return;
+            kirjaa($"kaupunki: TESTI 429 ({Kaytossa})");
+            Virhe429TaiMuu(429);
+        }
+
+        /// <summary>
+        /// Ion-varalla (Google epäonnistui) uusi Google-yritys seuraavan kohteen lennon tai siirron alussa (Päätoimittaja: "yritä
+        /// Googlea uudelleen seuraavassa kohteessa"); laatat latautuvat lennon aikana.
+        /// </summary>
+        public void YritaGoogleUudelleen()
+        {
+            if (!auki || Data != Lahde.Google || Kaytossa != Lahde.Ion || vaihtoJonossa) return;
+            // Kesken kaupungin vain yksi yritys: uusi 429 palaa heti ion-varaan (uusintojen tauot näkyisivät tyhjänä kaupunkina).
+            googleUusinnat = GoogleUusintoja;
+            kirjaa("kaupunki: ion-varalla, Google uudelleen seuraavassa kohteessa");
+            LuoData(Lahde.Google);
+        }
+
+        void Virhe429TaiMuu(long http)
+        {
             // Ei tuhota tilesetiä sen omassa virhekutsussa (simu 18.20: sovellus pysähtyi heti "data Ion" -rivin jälkeen):
             // vaihto seuraavaan kehykseen.
+            // GOOGLE 429 (6.10. 17.43: "3D Tiles root requests per minute" Cesium ionin jaetussa Google-projektissa, ajoittainen
+            // maailmanlaajuinen ruuhka): uusi yritys GoogleUusintoja kertaa kasvavalla tauolla ennen ion-varaa (valkoiset OSM-talot).
+            if (Kaytossa == Lahde.Google && !vaihtoJonossa && http == 429 && googleUusinnat < GoogleUusintoja)
+            { vaihtoJonossa = true; kierto.StartCoroutine(UusiGoogle(GoogleUusintaS[googleUusinnat++])); return; }
             if (Kaytossa == Lahde.Google && !vaihtoJonossa) { vaihtoJonossa = true; kierto.StartCoroutine(VaihdaIoniin()); }
         }
         bool vaihtoJonossa;
+        public const int GoogleUusintoja = 3;
+        static readonly float[] GoogleUusintaS = { 3f, 5f, 8f };
+        int googleUusinnat;
+
+        System.Collections.IEnumerator UusiGoogle(float s)
+        {
+            kirjaa($"kaupunki: Google 429, uusi yritys {googleUusinnat}/{GoogleUusintoja} {s:F0} s:n päästä");
+            yield return new WaitForSecondsRealtime(s);
+            vaihtoJonossa = false;
+            if (auki && Kaytossa == Lahde.Google) LuoData(Lahde.Google);
+        }
 
         System.Collections.IEnumerator VaihdaIoniin()
         {

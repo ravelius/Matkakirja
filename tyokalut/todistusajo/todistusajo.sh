@@ -190,6 +190,36 @@ while IFS= read -r rivi || [[ -n $rivi ]]; do
         [[ $sana == oleta ]] && { napautus_kirjaus "  oletus: ${selite:-$ehto}" "PUUTE: ei riviä ${s} s:ssa"; tulos 2 PUUTE "${selite:-$ehto}: ei lokiriviä"; } \
           || tulos 6 PUUTE "$selite — ei riviä /$ehto/"
       fi ;;
+    talteen|vertaa)
+      # talteen <nimi> <s> <regex ryhmillä>: odottaa riviä (edellisen askeleen jälkeen) ja tallettaa sen ryhmät.
+      # vertaa <nimi> <s> <tol1,tol2,…> <regex> [-- selite]: uusi rivi samalla regexillä; jokainen luku saa muuttua enintään
+      # toleranssin verran talletetusta (desimaalipilkku sallittu). Esim. pallolukko: kamera ei liiku pallon vedosta.
+      # Toleranssi ">…" kääntää: vähintään yksi luku muuttuu yli (vian toisto, esim. lukko pois).
+      nimi=${loput%% *}; r1=${loput#* }; s=${r1%% *}; r2=${r1#* }; tol=""
+      if [[ $sana == vertaa ]]; then tol=${r2%% *}; r2=${r2#* }; fi
+      ehto=$r2; selite=""; [[ $ehto == *" -- "* ]] && { selite=${ehto#* -- }; ehto=${ehto%% -- *}; }
+      if odota_rivi "$ehto" $s $VIIM; then
+        osuma=$(tail -n +$(( VIIM + 1 )) $LOKI | grep -a -E -- "$ehto" | tail -1)
+        if [[ $sana == talteen ]]; then print -r -- "$osuma" > "$L/talteen-$nimi.txt"; napautus_kirjaus "  talteen $nimi" "OK: ${osuma#*MATKAKIRJA }"
+        else
+          tulos_v=$(python3 - "$ehto" "$tol" "$L/talteen-$nimi.txt" "$osuma" <<'VERTAA'
+import re, sys
+ehto, tol, tiedosto, uusi = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
+vanha = open(tiedosto).read() if __import__('os').path.exists(tiedosto) else ''
+a, b = re.search(ehto, vanha), re.search(ehto, uusi)
+if not a or not b: print('PUUTE ei vertailtavaa'); sys.exit()
+vahintaan = tol.startswith('>')   # ">1,1,100,3": vähintään yksi luku muuttuu yli toleranssin (vian toisto A/B)
+t = [float(x) for x in tol.lstrip('>').split(',')]
+erot = [abs(float(y.replace(',', '.')) - float(x.replace(',', '.'))) for x, y in zip(a.groups(), b.groups())]
+yli = [f'{i + 1}: {e:.3g} > {t[min(i, len(t) - 1)]:g}' for i, e in enumerate(erot) if e > t[min(i, len(t) - 1)]]
+ok = bool(yli) if vahintaan else not yli
+print(('OK ' if ok else 'PUUTE ') + ' / '.join(f'{x}→{y}' for x, y in zip(a.groups(), b.groups())) + (' (' + '; '.join(yli) + ')' if yli else ' (ei muutosta yli toleranssin)'))
+VERTAA
+)
+          if [[ $tulos_v == OK* ]]; then napautus_kirjaus "  vertaa: ${selite:-$nimi}" "$tulos_v"
+          else napautus_kirjaus "  vertaa: ${selite:-$nimi}" "$tulos_v"; tulos 2 PUUTE "${selite:-$nimi}: ${tulos_v#PUUTE }"; fi
+        fi
+      else napautus_kirjaus "  $sana $nimi" "PUUTE: ei riviä ${s} s:ssa"; tulos 2 PUUTE "${selite:-$sana $nimi}: ei lokiriviä"; fi ;;
     ei-oleta)
       # Negatiivinen oletus: lokiin EI saa tulla riviä s sekunnissa (esim. selite ei soi itsestään).
       s=${loput%% *}; ehto=${loput#* }; selite=""

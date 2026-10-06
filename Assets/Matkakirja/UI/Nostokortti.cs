@@ -6,7 +6,7 @@
 // Kuva edellä kahdessa vaiheessa (js/nostokuva.js): 1) pelkkä kuva, lyhyt kuvateksti ja
 // LISÄÄ; 2) koko kortti (kuvasarja ‹ › ja laskuri, teksti kappaleittain, lajin lohkot).
 // Kuvaton kortti aukeaa suoraan vaiheeseen 2. Kuvan napautus vaiheessa 2 avaa suurennoksen
-// (pitkä selite ja lähderivi). Sulkeminen: napautus kortin ohi tai kortin tekstiin/pohjaan (löydös 133: ei ✕-nappia).
+// (pitkä selite ja lähderivi). Sulkeminen: napautus kortin ohi, kahvan veto alas tai Esc (ei ✕-nappia; tekstin napautus ei sulje, omistaja 6.10.).
 //
 //   skandaali  nimiö LISÄLEHTI, "paikka · vuosi" kaksoisviivojen välissä, otsikko, ingressi,
 //              kuvat, teksti, minivisa (+50, Kaupat.Minitehtava(iso, "skandaali:<id>"))
@@ -605,11 +605,7 @@ namespace Matkakirja.Natiivi
             eleAlku = e.position;
             eleAika = Time.unscaledTime * 1000f;
             selainSulki = !kahvaVeto && selain.OhiPainallus(e.position);
-            // Painalluksen kohde päätetään alussa: nappi (LISÄÄ, lukijan kaiutin/valikko), kenttä, kuva tai linkki ei sulje korttia,
-            // vaikka napin toiminto muuttaa asettelua ja nostosta syntyvä ClickEvent osuu sen jälkeen korttiin (1.0.39-savuke,
-            // Laitetestaaja: lukijan napautus sulki kortin; LISÄÄ-napautus sulki kortin FB234D08:lla).
             var kohde = Poimi(e.position, e.target as VisualElement);
-            alkuValitsee = kahvaVeto || Valitseva(kohde);
             // 1.0.40 (mitattu FB234D08): UI Toolkit antaa kosketukselle kohteeksi välimuistissa olevan "osoittimen alla" -elementin,
             // kun kosketus osuu samaan pisteeseen kuin edellinen. Kaiuttimen napautus sai kohteeksi kortin (edellinen kosketus
             // ennen asettelun muutosta), vaikka pisteessä on nappi: kortti sulkeutui eikä luenta alkanut (omistaja iPadilla:
@@ -635,19 +631,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Nappi tai kuvakehys, jonka kohdalla painallus alkoi mutta jonka tapahtuma meni vanhentuneelle kohteelle.</summary>
         VisualElement ohitettu;
 
-        bool alkuValitsee;
-
-        bool Valitseva(VisualElement kohde)
-        {
-            for (var v = kohde; v != null && v != kortti; v = v.parent)
-            {
-                if (v is Button || v is TextField || v.ClassListContains("mk-nosto__kuvakehys") || v.ClassListContains("mk-nosto__lukija")) return true;
-                if (v is TextElement te && te.text != null && te.text.Contains("<link=")) return true;
-            }
-            return false;
-        }
-
-        /// <summary>Napautus kortin tekstiin tai pohjaan sulkee (web avaaFokuskohde); painikkeet, kuvat ja linkit valitsevat.</summary>
+        /// <summary>Napautus korttiin: vanhentuneelle kohteelle mennyt napin/kuvan painallus painetaan; teksti ja pohja eivät sulje.</summary>
         void NapautusKorttiin(ClickEvent e)
         {
             var ohi = ohitettu;
@@ -662,11 +646,8 @@ namespace Matkakirja.Natiivi
                 else using (var c = ClickEvent.GetPooled()) { c.target = ohi; ohi.SendEvent(c); }
                 return;
             }
-            if (alkuValitsee || Valitseva(kohde)) return;
-            bool pohja = kohde == kortti || kohde == sisus || kohde == sisus.contentContainer || kohde == sisus.contentViewport || kohde is TextElement;
-            if (!pohja) return;
-            Aanet.PulunTehoste("paper");
-            Sulje();
+            // Omistaja 6.10.2026 ("jos nostossa painaa nostotekstin päältä, koko nosto häviää näkyvistä. korjaa tämä asap"):
+            // tekstin tai pohjan napautus ei enää sulje (kumoaa löydöksen 133). Sulku: ohinapautus, kahvan veto alas ja Esc.
         }
 
         void AvaaKerros()

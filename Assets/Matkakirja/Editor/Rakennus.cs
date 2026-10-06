@@ -585,13 +585,11 @@ namespace Matkakirja.Editori
             Aloitusruutu();
         }
 
-        /// <summary>LaunchScreenin logo: sama tiedosto, jonka Aloitusverho näyttää pelin ensimmäisissä kehyksissä.</summary>
-        public const string AloitusLogo = "Assets/Matkakirja/Kartta/Resources/" + Matkakirja.Aloitusverho.LogoPolku + ".png";
-
         /// <summary>
-        /// ALOITUSRUUTU (omistajan löydös 75, build 13): Unityn "Made with Unity" -ruutu pois (sallittu Unity 6:ssa kaikilla
-        /// lisensseillä) ja iOS:n LaunchScreen pergamenttina logon kanssa (kuva ja tausta, logon leveys
-        /// Aloitusverho.LogonOsuus ruudusta). Aloitusverho jatkaa samaa kuvaa pelin puolella, kunnes pallo on ladattu.
+        /// ALOITUSRUUTU: Unityn "Made with Unity" -ruutu pois (sallittu Unity 6:ssa kaikilla lisensseillä) ja iOS:n
+        /// LaunchScreen MUSTANA ilman logoa iPhonella ja iPadilla (omistaja 6.10.2026: "todella rakeinen matkakirjan logo, joka
+        /// ei mahdu edes näytölle kokonaan" → "mustaksi ruuduksi alussa"; aiemmin löydös 75 pergamentti + logo). Unityn
+        /// ensimmäinen ruutu (Aloitusverho, Natiivi-UI) jatkaa samalla mustalla, joten siirtymässä ei välähdä.
         /// Asetetaan joka viennissä (simulaattori, laite, TestFlight ja App Store), jotta batchmode-vienti ei nojaa
         /// ProjectSettingsin tallennettuun arvoon.
         /// </summary>
@@ -599,24 +597,16 @@ namespace Matkakirja.Editori
         {
             PlayerSettings.SplashScreen.show = false;
             PlayerSettings.SplashScreen.showUnityLogo = false;
-            var tex = AssetDatabase.LoadAssetAtPath<Texture2D>(AloitusLogo);
-            if (tex == null) throw new Exception("Aloitusruudun logoa ei löydy: " + AloitusLogo);
             PlayerSettings.iOS.SetiPhoneLaunchScreenType(iOSLaunchScreenType.ImageAndBackgroundRelative);
             PlayerSettings.iOS.SetiPadLaunchScreenType(iOSLaunchScreenType.ImageAndBackgroundRelative);
-            PlayerSettings.iOS.SetLaunchScreenImage(tex, iOSLaunchScreenImageType.iPhonePortraitImage);
-            PlayerSettings.iOS.SetLaunchScreenImage(tex, iOSLaunchScreenImageType.iPhoneLandscapeImage);
-            PlayerSettings.iOS.SetLaunchScreenImage(tex, iOSLaunchScreenImageType.iPadImage);
+            PlayerSettings.iOS.SetLaunchScreenImage(null, iOSLaunchScreenImageType.iPhonePortraitImage);
+            PlayerSettings.iOS.SetLaunchScreenImage(null, iOSLaunchScreenImageType.iPhoneLandscapeImage);
+            PlayerSettings.iOS.SetLaunchScreenImage(null, iOSLaunchScreenImageType.iPadImage);
             var asetukset = new SerializedObject(Unsupported.GetSerializedAssetInterfaceSingleton("PlayerSettings"));
-            float osuus = Matkakirja.Aloitusverho.LogonOsuus * 100f;
             foreach (var nimi in new[] { "iOSLaunchScreenBackgroundColor", "iOSLaunchScreeniPadBackgroundColor" })
             {
                 var p = asetukset.FindProperty(nimi);
-                if (p != null) p.colorValue = Matkakirja.Aloitusverho.Pergamentti;
-            }
-            foreach (var nimi in new[] { "iOSLaunchScreenFillPct", "iOSLaunchScreeniPadFillPct" })
-            {
-                var p = asetukset.FindProperty(nimi);
-                if (p != null) p.floatValue = osuus;
+                if (p != null) p.colorValue = Color.black;
             }
             asetukset.ApplyModifiedPropertiesWithoutUndo();
         }
@@ -880,6 +870,65 @@ namespace Matkakirja.Editori
             projekti.AddFrameworkToProject(kehys, "Photos.framework", false);
             projekti.SetBuildProperty(kehys, "SWIFT_VERSION", "5.0");
             projekti.WriteToFile(projektiPolku);
+        }
+
+        /// <summary>Laitekäännösten oikeustiedosto Xcode-projektissa (Unity-iPhone-kohteen CODE_SIGN_ENTITLEMENTS).</summary>
+        const string OikeusTiedosto = "Unity-iPhone/Matkakirja.entitlements";
+
+        /// <summary>
+        /// MUISTIKATTO (omistajan iPad Pro iPad17,1 6.10.2026: opas kaatui jetsamiin, per-process-limit 5,36 Gt;
+        /// lokit/JetsamEvent-2026-10-06-143323.ips): com.apple.developer.kernel.increased-memory-limit nostaa iPadOS:n
+        /// prosessikohtaista muistirajaa laitteilla, joilla muistia on enemmän (Cesiumin oma katto on Linssisepän).
+        /// Vain laitekäännöksiin (simulaattoria ei allekirjoiteta). App ID:llä pitää olla sama capability (Increased Memory
+        /// Limit; Developer-portaali tai ASC-API bundleIdCapabilities INCREASED_MEMORY_LIMIT), muuten allekirjoitus hylkää profiilin.
+        /// </summary>
+        [UnityEditor.Callbacks.PostProcessBuild(196)]
+        static void MuistiOikeus(BuildTarget kohde, string polku)
+        {
+            if (kohde != BuildTarget.iOS || PlayerSettings.iOS.sdkVersion != iOSSdkVersion.DeviceSDK) return;
+            // Kehityskäännös (fi.matkakirja.peli.kehitys) allekirjoitetaan tiimin wildcard-profiililla "iOS Team Provisioning
+            // Profile: *", johon oikeutta ei voi lisätä (laitekäännös 6.10. 17.10: "doesn't include the Increased Memory Limit
+            // capability"). Oikeus vain TestFlight- ja App Store -käännöksiin (fi.matkakirja.peli, capability portaalissa).
+            if (PlayerSettings.GetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.iOS) == LaiteBundleId)
+            {
+                Debug.Log("MATKAKIRJA: oikeus increased-memory-limit ohitettu kehityskäännöksessä (" + LaiteBundleId + ")");
+                return;
+            }
+            string tPolku = Path.Combine(polku, OikeusTiedosto);
+            var oikeudet = new UnityEditor.iOS.Xcode.PlistDocument();
+            if (File.Exists(tPolku)) oikeudet.ReadFromFile(tPolku);
+            oikeudet.root.SetBoolean("com.apple.developer.kernel.increased-memory-limit", true);
+            Directory.CreateDirectory(Path.GetDirectoryName(tPolku));
+            oikeudet.WriteToFile(tPolku);
+            string projektiPolku = UnityEditor.iOS.Xcode.PBXProject.GetPBXProjectPath(polku);
+            var projekti = new UnityEditor.iOS.Xcode.PBXProject();
+            projekti.ReadFromFile(projektiPolku);
+            if (projekti.FindFileGuidByProjectPath(OikeusTiedosto) == null) projekti.AddFile(OikeusTiedosto, OikeusTiedosto);
+            projekti.SetBuildProperty(projekti.GetUnityMainTargetGuid(), "CODE_SIGN_ENTITLEMENTS", OikeusTiedosto);
+            projekti.WriteToFile(projektiPolku);
+            Debug.Log("MATKAKIRJA: oikeus increased-memory-limit → " + OikeusTiedosto);
+        }
+
+        /// <summary>
+        /// MUSTA LAUNCHSCREEN varmistettuna (6.10.2026: iPad-laitekäännöksen LaunchScreen-iPad/-iPhone.storyboardien
+        /// backgroundColor oli valkoinen 1,1,1, vaikka Aloitusruutu asettaa värin PlayerSettingsiin, ja kylmäkäynnistyksessä näkyi
+        /// harmaa ruutu ennen Aloitusverhoa). Unityn generoimien storyboardien taustaväri kirjoitetaan mustaksi viennin jälkeen.
+        /// </summary>
+        [UnityEditor.Callbacks.PostProcessBuild(197)]
+        static void MustaLaunchScreen(BuildTarget kohde, string polku)
+        {
+            if (kohde != BuildTarget.iOS) return;
+            foreach (var nimi in new[] { "LaunchScreen-iPhone.storyboard", "LaunchScreen-iPad.storyboard" })
+            {
+                string sb = Path.Combine(polku, nimi);
+                if (!File.Exists(sb)) continue;
+                string teksti = File.ReadAllText(sb);
+                string uusi = System.Text.RegularExpressions.Regex.Replace(teksti,
+                    "<color key=\"backgroundColor\"[^>]*/>",
+                    "<color key=\"backgroundColor\" red=\"0\" green=\"0\" blue=\"0\" alpha=\"1\" colorSpace=\"custom\" customColorSpace=\"sRGB\"/>");
+                if (uusi != teksti) File.WriteAllText(sb, uusi);
+                Debug.Log($"MATKAKIRJA: {nimi} tausta musta ({(uusi != teksti ? "korjattu" : "ennallaan")})");
+            }
         }
 
         [UnityEditor.Callbacks.PostProcessBuild(200)]

@@ -1944,6 +1944,12 @@ namespace Matkakirja.Natiivi
                             AstronauttiKerros.S2KevytPakotettu = osat[3] == "auto" ? null : osat[3] != "0";
                             Kirjaa($"astro s2kevyt {(AstronauttiKerros.S2KevytPakotettu.HasValue ? (AstronauttiKerros.S2KevytPakotettu.Value ? "kevyt" : "täysi") : "auto")} → {(AstronauttiKerros.S2Kevyt ? "kevyt" : "täysi")}");
                         }
+                        else if (a == "s2maailma" && osat.Length > 3)   // S2-maailma v2 (juna 145): 0 = vain Eurooppa kuten ennen
+                        {
+                            AstronauttiKerros.S2MaailmaKaytossa = osat[3] != "0";
+                            Matkakirja.Linssit.IssKamera.KuvanTyosto.Maailma = AstronauttiKerros.S2MaailmaKaytossa ? AstronauttiKerros.S2MaailmaLadattu : null;
+                            Kirjaa($"astro kyyti s2maailma {(AstronauttiKerros.S2MaailmaKaytossa ? "päällä" : "pois")}, laatat {(Matkakirja.Linssit.IssKamera.KuvanTyosto.Maailma != null ? "ladattu" : "ei")}");
+                        }
                         else if (a == "s2" && osat.Length > 3)   // Euroopan S2-mosaiikki kyydissä (AstronauttiKerros.PaivitaS2)
                         {
                             if (osat[3] == "url" && osat.Length > 4) AstronauttiKerros.S2Osoite = osat[4] == "pois" ? null : osat[4];
@@ -2127,6 +2133,7 @@ namespace Matkakirja.Natiivi
                     else if (osat.Length > 2 && osat[1] == "pysayta") OpasSovitin.Pysaytetty = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "pcm") OpasSovitin.PcmKaytossa = osat[2] == "1";
                     // Laitekokeet ilman kosketusta (juna 151): kierros, Liiku-kohde, lopetus, jatko ja kysymys kuten napeista.
+                    else if (osat.Length > 1 && osat[1] == "testi429") OpasSovitin.TestiGoogle429();
                     else if (osat.Length > 1 && osat[1] == "kierros") Kirjaa($"opas: kierros → {OpasSovitin.Kaupunkikierros()}");
                     else if (osat.Length > 1 && osat[1] == "lopeta") Kirjaa($"opas: lopeta → {OpasSovitin.LopetaKierros()}");
                     else if (osat.Length > 1 && osat[1] == "jatka") Kirjaa($"opas: jatka → {OpasSovitin.JatkaKierrosta()}");

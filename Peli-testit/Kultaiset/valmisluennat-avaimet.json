@@ -1,0 +1,54 @@
+{
+ "versio": 1,
+ "tapaukset": [
+  {
+   "teksti": "Pompeji. Vesuviuksen tuhka hautasi kaupungin vuonna 79.",
+   "malli": "eleven_v4",
+   "aani": "oae6GCCzwoEbfc5FHdEu",
+   "nopeus": 1.15,
+   "loppuTagi": "[pause]",
+   "avain": "859831ebb6d833c8e1116da02fe548e6"
+  },
+  {
+   "teksti": "Pompeji. Vesuviuksen tuhka hautasi kaupungin vuonna 79.",
+   "malli": "eleven_v4",
+   "aani": "oae6GCCzwoEbfc5FHdEu",
+   "nopeus": 1.15,
+   "loppuTagi": "",
+   "avain": "3df96c70274b87a791b3ccbe3123cdbf"
+  },
+  {
+   "teksti": "Pompeji. Vesuviuksen tuhka hautasi kaupungin vuonna 79.",
+   "malli": "eleven_v4_turbo",
+   "aani": "oae6GCCzwoEbfc5FHdEu",
+   "nopeus": 1.15,
+   "loppuTagi": "",
+   "avain": "b25f62777fd4607d1b30db59a0187230"
+  },
+  {
+   "teksti": "Äiti söi öljyä — “lainaus” ja 1 200 m.",
+   "malli": "eleven_v4",
+   "aani": "oae6GCCzwoEbfc5FHdEu",
+   "nopeus": 1,
+   "loppuTagi": "[long-pause]",
+   "avain": "82b6502d521597ab670b5d86adbba147"
+  },
+  {
+   "teksti": "Äiti söi öljyä — “lainaus” ja 1 200 m.",
+   "malli": "eleven_v4",
+   "aani": "oae6GCCzwoEbfc5FHdEu",
+   "nopeus": 1,
+   "loppuTagi": "[long-pause]",
+   "huom": "hajotettu ä (NFD) → sama avain kuin edellä",
+   "avain": "82b6502d521597ab670b5d86adbba147"
+  },
+  {
+   "teksti": "Rooma",
+   "malli": "eleven_v3",
+   "aani": "Sz0tRTEpybtDJ9ru2kgD",
+   "nopeus": 0.9,
+   "loppuTagi": "",
+   "avain": "2c057c6e20676cefdd98ea2391f39a65"
+  }
+ ]
+}

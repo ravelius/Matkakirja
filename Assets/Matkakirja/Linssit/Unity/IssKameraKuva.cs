@@ -220,6 +220,18 @@ namespace Matkakirja.Natiivi
 #endif
 
         /// <summary>
+        /// MUISTIOIKEUDEN TODISTE (Päätoimittaja 6.10.2026, juna 149.1: increased-memory-limit): käynnistyksessä lokiin
+        /// os_proc_available_memory() eli muisti jetsam-rajaan asti, ennen ja jälkeen oikeuden samalla laitteella vertailtavaksi.
+        /// </summary>
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+        static void KirjaaKaynnistysMuisti()
+        {
+            long vapaa = VapaaMuistiMt();
+            if (vapaa >= 0)
+                Debug.Log($"MATKAKIRJA muisti: käynnistys, vapaa jetsam-rajaan {vapaa} Mt, laite {SystemInfo.deviceModel}, RAM {SystemInfo.systemMemorySize} Mt");
+        }
+
+        /// <summary>
         /// Kuvan leveys vapaan muistin mukaan (Natiivisepän ehto 2.10.2026: iPad 00008103 4096 × 5120 → phys_footprint +1,9 Gt ja
         /// kaksi muistivaroitusta; valinta os_proc_available_memory():n mukaan kuvaushetkellä, ei RAMin): 4096 vain, kun vapaata on
         /// ≥ 3000 Mt, 3072 ≥ 1800, 2048 ≥ 1000, muuten 1536. Pyydetty leveys on yläraja.
@@ -504,7 +516,7 @@ namespace Matkakirja.Natiivi
                 long mtavut = 0;
                 for (int i0 = 0; i0 < lahteet.Count; i0 += 16)
                 {
-                    var era = lahteet.Skip(i0).Take(16).Select(l => (l, q: UnityWebRequest.Get(AstronauttiKerros.S2Juuri + KuvanTyosto.MosaiikinPolku(l.z, l.x, l.y)))).ToList();
+                    var era = lahteet.Skip(i0).Take(16).Select(l => (l, q: UnityWebRequest.Get(KuvanTyosto.MosaiikinOsoite(AstronauttiKerros.S2Juuri, l.z, l.x, l.y)))).ToList();
                     foreach (var (_, q) in era) q.SendWebRequest();
                     while (era.Any(x => !x.q.isDone)) yield return null;
                     var tex = new Texture2D(2, 2, TextureFormat.RGBA32, false);

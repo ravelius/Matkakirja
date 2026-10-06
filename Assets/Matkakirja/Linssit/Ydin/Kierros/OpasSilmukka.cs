@@ -760,7 +760,7 @@ namespace Matkakirja.Linssit.Kierros
         /// <summary>Vapaa lento kierroksen ■ jälkeen (VapaaTila): kamera tapeilla ilman kiertokeskipistettä.</summary>
         public readonly OpasVapaaLento Vapaa = new OpasVapaaLento();
         bool vapaaKaynnissa, vapaaKehyksessa;
-        double vapaaNayteS;
+        double vapaaNayteS; int vapaaKeha;
 
         /// <summary>Vapaassa tilassa asento vapaasta lennosta (aloitus nykyisestä asennosta); muuten false.</summary>
         bool VapaaAsento(double dt)
@@ -782,6 +782,8 @@ namespace Matkakirja.Linssit.Kierros
                 vapaaNayteS = 0.25;
                 MaaTarvitaan?.Invoke(Vapaa.Lat, Vapaa.Lon);
                 var (el, eo) = Vapaa.Ennakko; MaaTarvitaan?.Invoke(el, eo);
+                // Kehät vuorotellen (4 pistettä kierroksella → 16 pistettä sekunnissa).
+                for (int i = 0; i < 4; i++) { var (kl, ko) = Vapaa.KehaPiste(vapaaKeha); MaaTarvitaan?.Invoke(kl, ko); vapaaKeha = (vapaaKeha + 1) % OpasVapaaLento.KehaPisteita; }
             }
             return true;
         }
