@@ -41,6 +41,43 @@ namespace Matkakirja.Natiivi
         // viritys asetustiedostolla ("sumu 1 volume 1 vuorokausi 1 kupoli 1"). Ei tonemappausta (Neutral latisti kuvan).
         public static bool Sumu = false, Savytys = false, Volyymi = false, VuorokausiPaalla = false, Kupoli = false;
         public static float Kontrasti = 12f, Saturaatio = 10f, Hehku = 0f, Tunti = -1f;
+
+        // ---- VUOROKAUDENAJAN VALINTA (omistaja 6.10. 19.0x, Natiivi-UI:n nappi vasemmassa yläkulmassa; juna 152) ----
+        /// <summary>Pelaajan valinta: "auto" (kohteen oma aurinko), "aamu", "paiva", "ilta" ("yo" myöhemmin valojen kanssa).
+        /// Pysyy, kunnes vaihdetaan (myös seuraavissa avauksissa). Vaihto näkyy heti seuraavassa kehyksessä ilman uudelleenlatausta.</summary>
+        public static string Valinta
+        {
+            get => valinta;
+            set
+            {
+                var v = value == "aamu" || value == "paiva" || value == "ilta" ? value : "auto";
+                if (v == valinta) return;
+                valinta = v;
+                Debug.Log($"MATKAKIRJA kaupunki: vuorokausi valittu {v}");
+                Vaihtui?.Invoke(v);
+            }
+        }
+        static string valinta = "auto";
+        /// <summary>Valinta tai voimassa oleva tila vaihtui (UI päivittää napin kuvakkeen).</summary>
+        public static event System.Action<string> Vaihtui;
+        /// <summary>Voimassa oleva tila "aamu" | "paiva" | "ilta" | "yo" (automaattisessa kohteen oman ajan mukaan).</summary>
+        public static string Nyt { get; private set; } = "paiva";
+        /// <summary>Valinnan tunti (aamu 7, päivä 12, ilta 18.30); −1 = automaattinen.</summary>
+        internal static float ValinnanTunti => valinta == "aamu" ? 7f : valinta == "paiva" ? 12f : valinta == "ilta" ? 18.5f : -1f;
+        /// <summary>Pakotettu tunti: asetustiedosto ensin (kuvaparit), sitten pelaajan valinta; −1 = auringon mukaan.</summary>
+        internal static float TuntiNyt => Tunti >= 0 ? Tunti : ValinnanTunti;
+        /// <summary>Sävytys käytössä: asetus tai pelaajan oma valinta (nappi kytkee sävyn päälle, vaikka oletus odottaa kuittausta).</summary>
+        internal static bool SavyKaytossa => VuorokausiPaalla || valinta != "auto";
+        internal static void AsetaNyt(string tila) { if (tila != Nyt) { Nyt = tila; Vaihtui?.Invoke(tila); } }
+
+        /// <summary>Volume ja jälkikäsittely myöhemmin (pelaaja valitsi vuorokaudenajan kesken näkymän, Volume ei ollut päällä).</summary>
+        internal static void VarmistaVolyymi(Camera kamera)
+        {
+            if (volyymiGo != null || kamera == null) return;
+            var lisa = kamera.GetUniversalAdditionalCameraData();
+            if (lisa != null) lisa.renderPostProcessing = true;
+            LuoVolyymi();
+        }
         internal static ColorAdjustments varit;
         internal static WhiteBalance valko;
 
@@ -262,12 +299,16 @@ namespace Matkakirja.Natiivi
             if (Time.realtimeSinceStartup - luettu > 1f) { luettu = Time.realtimeSinceStartup; KaupunkiKuva.LueAsetukset(true); }
             // Vuorokaudenaika kohteen paikallisesta aurinkoajasta (tai asetuksen tunnista).
             double lon = georef0 != null ? georef0.longitude : 0, lat = georef0 != null ? georef0.latitude : 0;
-            double tunti = KaupunkiKuva.Tunti >= 0 ? KaupunkiKuva.Tunti : KaupunkiValo.PaikallinenTunti(System.DateTime.UtcNow, lon);
+            float pakko = KaupunkiKuva.TuntiNyt;
+            double tunti = pakko >= 0 ? pakko : KaupunkiValo.PaikallinenTunti(System.DateTime.UtcNow, lon);
             var (aurinko, aamupaiva, auringonSuunta) = KaupunkiValo.Aurinko(System.DateTime.UtcNow, lat, lon);
-            if (KaupunkiKuva.Tunti >= 0) auringonSuunta = KaupunkiValo.AtsimuuttiTunnista(tunti);
-            // Oletus: auringon todellinen korkeus kohteessa; asetuksen tunti (A/B-kuvat) avainkuvista.
-            var savy = !KaupunkiKuva.VuorokausiPaalla ? KaupunkiValo.Paiva
-                : KaupunkiKuva.Tunti >= 0 ? KaupunkiValo.Tunnille(tunti) : KaupunkiValo.Korkeudelle(aurinko, aamupaiva);
+            if (pakko >= 0) auringonSuunta = KaupunkiValo.AtsimuuttiTunnista(tunti);
+            if (KaupunkiKuva.SavyKaytossa) KaupunkiKuva.VarmistaVolyymi(kamera);
+            // Oletus: auringon todellinen korkeus kohteessa; pelaajan valinta tai asetuksen tunti avainkuvista.
+            var savy = !KaupunkiKuva.SavyKaytossa ? KaupunkiValo.Paiva
+                : pakko >= 0 ? KaupunkiValo.Tunnille(tunti) : KaupunkiValo.Korkeudelle(aurinko, aamupaiva);
+            KaupunkiKuva.AsetaNyt(pakko >= 0 ? (tunti < 9.5 ? "aamu" : tunti < 16 ? "paiva" : "ilta")
+                : aurinko <= -8 ? "yo" : aurinko < 15 ? (aamupaiva ? "aamu" : "ilta") : "paiva");
             Color V(double[] x) => new Color((float)x[0], (float)x[1], (float)x[2], 1f);
             Color horisontti = V(savy.Horisontti);
             kamera.backgroundColor = horisontti;
@@ -275,8 +316,8 @@ namespace Matkakirja.Natiivi
             {
                 KaupunkiKuva.varit.postExposure.value = (float)savy.Valotus;
                 KaupunkiKuva.varit.colorFilter.value = V(savy.Suodin);
-                KaupunkiKuva.varit.contrast.value = KaupunkiKuva.VuorokausiPaalla ? (float)savy.Kontrasti : KaupunkiKuva.Kontrasti;
-                KaupunkiKuva.varit.saturation.value = KaupunkiKuva.VuorokausiPaalla ? (float)savy.Saturaatio : KaupunkiKuva.Saturaatio;
+                KaupunkiKuva.varit.contrast.value = KaupunkiKuva.SavyKaytossa ? (float)savy.Kontrasti : KaupunkiKuva.Kontrasti;
+                KaupunkiKuva.varit.saturation.value = KaupunkiKuva.SavyKaytossa ? (float)savy.Saturaatio : KaupunkiKuva.Saturaatio;
             }
             if (KaupunkiKuva.valko != null) { KaupunkiKuva.valko.temperature.value = (float)savy.Lampotila; KaupunkiKuva.valko.tint.value = (float)savy.Savytys; }
             if (kupoli != null)
@@ -286,7 +327,7 @@ namespace Matkakirja.Natiivi
                 kupoli.transform.SetPositionAndRotation(kamera.transform.position, Quaternion.identity);
                 kupoli.transform.localScale = Vector3.one * r;
                 // Kajo auringon puolella, kun aurinko on matalalla (−6…10°; asetuksen tunnilla aamu 6.30 ja ilta 19); x = itä, z = pohjoinen.
-                float kajo = KaupunkiKuva.Tunti >= 0
+                float kajo = pakko >= 0
                     ? Mathf.Max(0f, 1f - Mathf.Abs((float)tunti - 6.5f) / 2f) + Mathf.Max(0f, 1f - Mathf.Abs((float)tunti - 19f) / 2f)
                     : Mathf.Max(0f, 1f - Mathf.Abs((float)aurinko - 2f) / 8f);
                 float az = (float)auringonSuunta * Mathf.Deg2Rad;   // sama alihajapiste kuin sävyllä (asetuksen tunnilla kellosta)
@@ -300,7 +341,7 @@ namespace Matkakirja.Natiivi
             if (Time.realtimeSinceStartup - edellinenLoki > 30f)
             {
                 edellinenLoki = Time.realtimeSinceStartup;
-                Debug.Log($"MATKAKIRJA kaupunki: vuorokausi {(KaupunkiKuva.VuorokausiPaalla ? "päällä" : "pois")} tunti {tunti:F1}{(KaupunkiKuva.Tunti >= 0 ? " (asetus)" : $", aurinko {aurinko:F0}°")}, valotus {savy.Valotus:F2} EV, lämpötila {savy.Lampotila:F0}, kupoli {(kupoli != null ? "päällä" : "pois")}");
+                Debug.Log($"MATKAKIRJA kaupunki: vuorokausi {(KaupunkiKuva.SavyKaytossa ? "päällä" : "pois")} ({KaupunkiKuva.Valinta}) tunti {tunti:F1}{(pakko >= 0 ? " (pakotettu)" : $", aurinko {aurinko:F0}°")}, valotus {savy.Valotus:F2} EV, lämpötila {savy.Lampotila:F0}, kupoli {(kupoli != null ? "päällä" : "pois")}");
             }
             RenderSettings.fogColor = horisontti;
             if (!KaupunkiKuva.Sumu) { RenderSettings.fog = false; return; }
