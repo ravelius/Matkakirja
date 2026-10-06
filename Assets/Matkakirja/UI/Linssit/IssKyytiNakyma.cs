@@ -125,6 +125,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool Ohjaamo = true;
         readonly IssOhjaamo ohjaamo;
+        /// <summary>Ohjaamopaneelin näkyvä laatikko ruudulla (worldBound) tai tyhjä, kun paneeli ei näy (Pulun taulun väistö, juna 148).</summary>
+        public Rect OhjaamoLaatikko => Ohjaamo && ohjaamo != null && ohjaamo.Juuri.panel != null
+            && ohjaamo.Juuri.resolvedStyle.display == DisplayStyle.Flex ? ohjaamo.Nakyva : default;
         /// <summary>Kytkinpöytä käytössä (ei ohjaamoa): pöydän omat mitat (YlaReuna, Suuri, Nakyva) ja kohdelista pöydän yllä.</summary>
         static bool KytkinKaytossa => Kytkinpoyta && !Ohjaamo;
 

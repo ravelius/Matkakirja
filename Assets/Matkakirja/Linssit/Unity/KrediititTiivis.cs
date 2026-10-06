@@ -58,6 +58,8 @@ namespace Matkakirja.Natiivi
         public const float KaikkiS = 6f;
         /// <summary>Datalähderivin kirjainkoko (pt; omistaja 6.10. 12.4x "pienemmällä fontilla": 9 → 7).</summary>
         public const float RiviPt = 7f;
+        /// <summary>Lähderivin näkyvä leveys osuutena ruudun leveydestä (omistaja 6.10. 13.2x).</summary>
+        public const float RiviOsuus = 0.40f;
 
         /// <summary>☰ Tietoja ja lähteet: koko lista rivitettynä ja Cesium ion -logo hetkeksi.</summary>
         /// <summary>Koko lista auki (oppaan sirut eivät nouse sen yläpuolelle).</summary>
@@ -94,8 +96,21 @@ namespace Matkakirja.Natiivi
             return null;
         }
         static bool ionVirhe;
+        static Texture2D googleLogo;
+        static bool googleHaettu;
+        /// <summary>Googlen virallinen Google Maps -logo, ääriviivallinen versio kartan päälle (null = ei pakettia).</summary>
+        static Texture2D GoogleLogo
+        {
+            get
+            {
+                if (!googleHaettu) { googleHaettu = true; googleLogo = Resources.Load<Texture2D>("Krediitit/GoogleMaps_Logo_WithDarkOutline_4x"); }
+                return googleLogo;
+            }
+        }
         /// <summary>Viimeksi tunnistettu Cesium ion -logo (Siirrytään-ruutu piirtää sen itse mustan ruudun päälle).</summary>
         public static Texture IonLogoKuva { get; private set; }
+        /// <summary>Googlen logon yläreuna osuutena ruudun korkeudesta alhaalta (oppaan oma ion-logo sen yläpuolelle); 0 = ei tiedossa.</summary>
+        public static float GoogleYlaOsuus { get; private set; }
 
         /// <summary>Testi: logot ja niiden tunnistus.</summary>
         public static string Kuvaus()
@@ -169,6 +184,9 @@ namespace Matkakirja.Natiivi
                 var kuva = lapsi.style.backgroundImage.value.texture;
                 if (!(lapsi is Label) && kuva != null && kuva.height > 0)
                 {
+                    // Googlen virallinen ääriviivallinen logo (omistajan lupa 6.10., Resources/Krediitit/LAHTEET.md) Cesiumin
+                    // matalaresoluutioisen (98×18) tilalle: muokkaamaton kuva, 16 dp.
+                    if (kuva != ion && GoogleLogo != null && kuva != GoogleLogo) { lapsi.style.backgroundImage = new StyleBackground(GoogleLogo); kuva = GoogleLogo; }
                     bool nayta = kuva != ion || cesium;
                     lapsi.style.display = nayta ? DisplayStyle.Flex : DisplayStyle.None;
                     if (!nayta) continue;
@@ -177,6 +195,8 @@ namespace Matkakirja.Natiivi
                     lapsi.style.flexShrink = 0;
                     lapsi.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit;
                     lapsi.style.marginBottom = 2 * pt;
+                    if (kuva != ion && lapsi.worldBound.height > 0 && juuri.worldBound.height > 0)
+                        GoogleYlaOsuus = 1f - lapsi.worldBound.yMin / juuri.worldBound.height;
                     if (kuva.filterMode != FilterMode.Bilinear) kuva.filterMode = FilterMode.Bilinear;
                     continue;
                 }
@@ -190,7 +210,8 @@ namespace Matkakirja.Natiivi
             // Yksi rivi 10 dp:n marginaalein, katkeaa "…":llä; napautus näyttää listan rivitettynä.
             bool kaikki = Time.unscaledTime < kaikkiAsti;
             float lev = juuri.worldBound.width - 2 * TyhjaSivuPt * pt;
-            tiivis.style.width = lev; lista.style.width = lev;
+            // Omistaja 6.10. 13.2x "niin kompakti kuin ikinä pystyt": näkyvä rivi ~40 % ruudun leveydestä (sanamuoto ennallaan).
+            tiivis.style.width = Mathf.Min(lev, juuri.worldBound.width * RiviOsuus); lista.style.width = lev;
             tiivis.style.display = kaikki ? DisplayStyle.None : DisplayStyle.Flex;
             lista.style.display = kaikki ? DisplayStyle.Flex : DisplayStyle.None;
             int avain = lista.childCount;
