@@ -1,4 +1,4 @@
-# Päätoimittaja → Codex: elävän oppaan kaupunkinäkymät (149 paikkaa × aamu/päivä/ilta), linssivalikon kuvat ja oppaan kohteiden havainnekuvat (6.10.2026)
+# Päätoimittaja → Codex: elävän oppaan kaupunkinäkymät (149 paikkaa, yksi kuva kustakin — MUUTETTU 20.2x), linssivalikon kuvat ja oppaan kohteiden havainnekuvat (6.10.2026)
 
 Omistaja 6.10.2026 sanatarkasti (chat):
 - 19.1x: "pitäisi etsiä massiivinen määrä kuvia sekä pyytää codexia generoimaan kuvia matkaopasta varten. [...] Haluaisin, että matkaoppaassa ei näytettäisi mitään muita kuin valmiiksi speksattuja kuvia."
@@ -6,6 +6,14 @@ Omistaja 6.10.2026 sanatarkasti (chat):
 - 20.1x: "Pelin kaikkiin linsseihin, myös niihin keskeneräisiin, saisi teettää kuvat linssivalikkoa varten"
 
 Elävä opas (natiivi, Cesium-kaupunkinäkymä) näyttää jatkossa VAIN valmiiksi speksattuja kuvia (kuvalista ämpärissä). Sonnet-parvi (Sisältökirjuri) hakee CC/PD-valokuvat kohteisiin; sinä teet havainnekuvat. Elävä opas on linssi, joten VAIN EUROOPPA -linjaus ei rajaa tätä työtä.
+
+## MUUTOS 6.10.2026 klo 20.2x (omistaja) — EI vuorokausiversioita, YKSI kuva per paikka
+
+Omistaja sanatarkasti: "Miksi Codexilta on tilattu aamupäivä- ja iltakuvat? Se on minusta liioittelua. Käytetään ennemmin resurssit siihen, että saadaan mielenkiintoisennäköisiä kuvia mahdollisimman monesta paikkaa, mutta ei tilata samoja kuvia eri vuorokauden aikoina."
+
+- ERÄ 1 on nyt **149 paikkaa × 1 kuva**. Tiedostonimi `julisteet/herokoe/hero-<id>.png`, ei -aamu/-keskipaiva/-ilta-päätteitä. Jos olet jo tehnyt kolmen kuvan sarjoja, toimita ne, mutta älä tee uusia vuorokausiversioita.
+- Valitse jokaiselle paikalle sille edullisin, mielenkiintoisen näköinen hetki ja kuvakulma (esim. kultainen tunti, sininen hetki tai kirkas päivä). Vaihtele paikasta toiseen, kunhan kuva on paikan tunnistettava ja näyttävä tunnuskuva.
+- Vapautuva kapasiteetti käytetään useampiin paikkoihin. ERÄ 1B (lista tulee Sisältökirjurilta): maailman pääkaupungit ja 50 suosikkikohteen kaupungit, joita pelissä ei ole (noin 150), yksi kuva kustakin samalla periaatteella. Sen jälkeen ERÄT 2 ja 3 ennallaan.
 
 ## ERÄ 1 (aloita heti): kaupunkinäkymät, 149 paikkaa × 3 vuorokaudenaikaa = 447 kuvaa
 
