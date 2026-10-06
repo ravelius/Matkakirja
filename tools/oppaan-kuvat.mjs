@@ -261,6 +261,18 @@ export async function tarkistaKaupunki(id) {
     if (!k.nimi) virheet.push(`${id}/${k.q}: suomenkielinen nimi puuttuu`);
   }
   for (const k of eiKuvaa) if (!k.syy) virheet.push(`${id}/${k.q}: eiKuvaa ilman syytä`);
+  for (const k of [...kohteet, ...eiKuvaa]) {
+    if (k.koko_m !== undefined && !(typeof k.koko_m === 'number' && k.koko_m >= 5 && k.koko_m <= 50000)) virheet.push(`${id}/${k.q}: koko_m ei ole 5–50 000`);
+    if (k.aliakset !== undefined && !(Array.isArray(k.aliakset) && k.aliakset.every((x) => /^Q\d+$/.test(x)))) virheet.push(`${id}/${k.q}: aliakset ei ole Q-lista`);
+  }
+  const kk = d.kaupunginKuvat ?? [];
+  if (kk.length < 1 || kk.length > 2) virheet.push(`${id}: kaupunginKuvat ${kk.length}, pitää olla 1–2`);
+  kk.forEach((x, i) => {
+    if (x.jarjestys !== i + 1) virheet.push(`${id}/kaupunki: järjestys ${x.jarjestys} paikalla ${i + 1}`);
+    if (x.tarkistettu !== true) virheet.push(`${id}/kaupunki/${x.tiedosto}: tarkistettu ei ole true`);
+    if (!YKSI_VIRKE.test(String(x.selite ?? '').trim())) virheet.push(`${id}/kaupunki/${x.tiedosto}: selite ei ole yksi virke`);
+    kaikkiTiedostot.push({ q: 'kaupunki', x });
+  });
   for (const k of kohteet) {
     const kuvat = k.kuvat ?? [];
     if (kuvat.length < 2 || kuvat.length > 3) virheet.push(`${id}/${k.q}: kuvia ${kuvat.length}, pitää olla 2–3`);
@@ -292,18 +304,27 @@ export async function tarkistaKaupunki(id) {
 
 function kokoa() {
   const kohteet = {};
+  const kaupungit = {};
+  const pohja = JSON.parse(readFileSync(join(DATA, 'kaupungit-vaihe1.json'), 'utf8'));
   let kuvia = 0;
   const eiKuvaa = [];
   for (const f of readdirSync(KAUPUNGIT).filter((x) => x.endsWith('.json')).sort()) {
     const d = JSON.parse(readFileSync(join(KAUPUNGIT, f), 'utf8'));
+    const kuva = (x) => ({ jarjestys: x.jarjestys, tiedosto: x.tiedosto, url: x.url, tekija: x.tekija, lisenssi: x.lisenssi, lisenssiUrl: x.lisenssiUrl,
+      lahdeUrl: x.lahdeUrl, selite: x.selite, leveys: x.leveys, korkeus: x.korkeus, tarkistettu: x.tarkistettu });
+    const p = pohja.find((x) => x.id === d.kaupunki);
+    // kohteet: tärkeysjärjestyksessä (kuvalliset ja kuvattomat samassa järjestyksessä kuin tiedostossa: järjestys-kenttä tai kohteet + eiKuvaa)
+    const jarj = d.jarjestys ?? [...(d.kohteet ?? []), ...(d.eiKuvaa ?? [])].map((k) => k.q);
+    kaupungit[d.kaupunki] = { nimi: p?.nimi ?? d.kaupunki, Q: d.kaupunkiQ, lat: p?.lat ?? null, lon: p?.lon ?? null, kohteet: jarj, kuvat: (d.kaupunginKuvat ?? []).map(kuva) };
     for (const k of d.kohteet ?? []) {
-      kohteet[k.q] = { nimi: k.nimi, kaupunki: d.kaupunki, kaupunkiQ: d.kaupunkiQ, lat: k.lat, lon: k.lon, kuvat: k.kuvat.map(({ tiedosto, ...r }) => r) };
+      kohteet[k.q] = { nimi: k.nimi, kaupunki: d.kaupunki, kaupunkiQ: d.kaupunkiQ, lat: k.lat, lon: k.lon,
+        ...(k.aliakset?.length ? { aliakset: k.aliakset } : {}), ...(k.koko_m ? { koko_m: k.koko_m } : {}), kuvat: k.kuvat.map(kuva) };
       kuvia += k.kuvat.length;
     }
     for (const k of d.eiKuvaa ?? []) eiKuvaa.push({ q: k.q, nimi: k.nimi, kaupunki: d.kaupunki, syy: k.syy });
   }
   const ulos = join(DATA, 'oppaan-kuvat.json');
-  writeFileSync(ulos, `${JSON.stringify({ skeema: 1, versio: new Date().toISOString().slice(0, 10), kohteet }, null, 1)}\n`);
+  writeFileSync(ulos, `${JSON.stringify({ skeema: 1, versio: new Date().toISOString().slice(0, 10), kaupungit, kohteet }, null, 1)}\n`);
   writeFileSync(join(DATA, 'ei-kuvaa.json'), `${JSON.stringify(eiKuvaa, null, 1)}\n`);
   console.log(`Kirjoitettu ${ulos}: ${Object.keys(kohteet).length} kohdetta, ${kuvia} kuvaa; ei kuvaa ${eiKuvaa.length}`);
 }
