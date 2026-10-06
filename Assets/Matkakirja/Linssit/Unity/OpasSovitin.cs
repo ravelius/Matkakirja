@@ -298,7 +298,12 @@ namespace Matkakirja.Natiivi
                 }
             silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => kaupunki.Valmis);
             // Kaksivaiheinen tarkkuus: pysähdyksellä (ei lento eikä siirto) ja laatat ≥ 99 % → tarkentuminen tavoitekertoimeen.
-            if (kaupunki.KarkeaKaytossa && !silmukka.Siirtymassa && silmukka.Vaihe != OpasVaihe.Lentaa && kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti)
+            // Vapaan tilan liike (LS2 6.10. 19.4x, Eiffel 40 m: venyneet laatat liikkeessä): tapit käytössä → karkea valinta kuten
+            // saapuessa; paikallaan ja laatat ≥ 99 % → tarkentuminen.
+            var vt = silmukka.VapaaTapit;
+            bool vapaaLiikkuu = silmukka.VapaaTila && (Math.Abs(vt.vx) + Math.Abs(vt.vy) + Math.Abs(vt.ox) + Math.Abs(vt.oy)) > 0.05;
+            if (vapaaLiikkuu) kaupunki.Karkeaksi();
+            else if (kaupunki.KarkeaKaytossa && !silmukka.Siirtymassa && silmukka.Vaihe != OpasVaihe.Lentaa && kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti)
                 kaupunki.Tarkenna();
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
