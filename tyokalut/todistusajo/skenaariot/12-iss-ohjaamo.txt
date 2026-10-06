@@ -1,7 +1,7 @@
 # 12 ISS-ohjaamo (omistaja 4.10. 11.3x: asentoa ohjataan VAIN joystickilla, plus-kuvio, yksi suunta kerrallaan):
 # Cupola → joystick PIIRRETYN sauvan keskeltä (sauvakuvan x 36 %, ei laatikon keskeltä; Päätoimittaja 6.10.: TF 145 antoi
 # Vasen, Natiivi-UI:n joystick-145.png) → ei suuntaa → veto oikealle ja pito (Oikea, irrotus → Ei) → pallon veto
-# ohjaamon yläpuolella EI ohjaa joystickia eikä katsetta (kuvat ennen/jälkeen samasta suunnasta).
+# + pito pallon päällä EI liikuta karttakameraa (astro kyyti tila ennen/jälkeen, LS2:n toistotapa 6.10.).
 linssi linssi satelliitti
 oleta 30 linssit: auki: satelliitti -- astronautin kamera aukesi
 odota 8
@@ -16,13 +16,17 @@ veto-kohta 0.36 0.5 0.9 0.5 2 mk-issohjaamo__sauvakuva
 oleta 6 ohjaamon joystick Oikea -- veto oikealle: suunta Oikea
 oleta 6 ohjaamon joystick Ei -- irrotus: suunta Ei
 kuva 12b-oikea Joystick oikealle ja irti
-linssi astro kyyti ohjaamo tila
-odota 1
+# Pallolukko (LS2 2c2ad7ac, juna 146): yhden sormen veto + pito pallon päällä ei saa liikuttaa karttakameraa (TF 145: veto
+# liikuttaa kameraa ja PelaajanEle lopettaa seurannan). Vältä säätönappia (~30,315), Pulua ja kytkinpöytää (y > 700).
+linssi astro kyyti tila
+talteen kamera 5 astro kyyti: .*kamera \(([-0-9,]+), ([-0-9,]+)\) ([0-9]+) km kall ([-0-9,]+)
 kuva 12c-ennen-vetoa Ennen pallon vetoa
-veto 200 250 80 330 0.4
-ei-oleta 3 ohjaamon joystick (Ylos|Alas|Vasen|Oikea) -- pallon veto ei ohjaa joystickia
-odota 2
+polku 60,550 230,650,800 230,650,1000
+ei-oleta 2 ohjaamon joystick (Ylos|Alas|Vasen|Oikea) -- pallon veto ei ohjaa joystickia
+linssi astro kyyti tila
+vertaa kamera 5 1,1,100,3 astro kyyti: .*kamera \(([-0-9,]+), ([-0-9,]+)\) ([0-9]+) km kall ([-0-9,]+) -- pallon veto + pito ei liikuta kameraa (lat/lon ≤ 1°, km ≤ 100, kall ≤ 3°)
 kuva 12d-vedon-jalkeen Pallon vedon jälkeen: sama näkymä (vain joystick ohjaa)
-linssi astro kyyti ohjaamo tila
+linssi astro kyyti pallolukko
+odota 1
 linssi linssi pois
 odota 3
