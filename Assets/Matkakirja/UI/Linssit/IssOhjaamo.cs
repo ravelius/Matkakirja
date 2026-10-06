@@ -41,7 +41,7 @@ namespace Matkakirja.Natiivi
         // sammuneet segmentit. Valmiin kuvan jälkeen "KUVA VALMIS" 2 s; sitten sijainti takaisin.
         public const int Segmentteja = 12;
         /// <summary>Laajennuksen nappien väli ja reunaväli (pt), sama kaikkialla (omistaja 6.10.; USS-arvo 4px).</summary>
-        public const float LaajennusVali = 4f;
+        public const float LaajennusVali = 4f, VaakaOsuus = 0.30f;
         readonly VisualElement segmentit;
         readonly VisualElement[] segmentti = new VisualElement[Segmentteja];
         /// <summary>Testi (`astro ohjaamo kehitys 0–1|valmis|pois`): edistyminen ilman kuvausta stilliä varten.</summary>
@@ -49,7 +49,7 @@ namespace Matkakirja.Natiivi
         float valmisAsti = -1f, syyAsti = -1f;
         string syy;
         bool oliKaynnissa;
-        public const float ValmisS = 2f, ObjektiiviPt = 12f;
+        public const float ValmisS = 2f, ObjektiiviPt = 11f;
         readonly Func<AstronauttiLinssi> linssi;
         readonly Action kuvaa;
         JoystickSuunta suunta = JoystickSuunta.Ei;
@@ -351,6 +351,13 @@ namespace Matkakirja.Natiivi
                 var a = ankkurit;
                 r = a.Objektiivi.width > 0 ? a.Objektiivi
                     : new Rect(a.Kamera.x, 15.5f, Mathf.Max(a.RumpuKolo.xMax, a.Kamera.xMax) - a.Kamera.x, 22f);
+                // v3:n objektiivipinta (52 pt) on kahdelle LCD-sanalle liian kapea (simu f3e10f82: "LAAJA" ei mahtunut): koko
+                // kameran laatikon levyinen, jos se on leveämpi.
+                if (a.Objektiivi.width > 0 && a.Kamera.width > 0)
+                {
+                    float x0 = Mathf.Min(r.x, a.Kamera.x), x1 = Mathf.Max(r.xMax, a.Kamera.xMax);
+                    r = new Rect(x0, r.y, x1 - x0, r.height);
+                }
             }
             else r = new Rect(kamera.layout.x, 2f, Mathf.Max(96f, kamera.layout.width), 22f);
             // Osuma-ala ylöspäin: 48 pt korkea, alareuna napin alareunassa (kameranapin osuma alkaa sen alta).
@@ -425,6 +432,11 @@ namespace Matkakirja.Natiivi
             if (!(turvanLeveys > 0)) return;
             turvaLeveys = turvanLeveys;
             float w = Mathf.Min(Enintaan, turvanLeveys - 24f);
+            // VAAKA (omistaja 6.10.: "vie nyt aivan liikaa tilaa näkymältä"): paneelin korkeus enintään VaakaOsuus ruudun
+            // korkeudesta (iPhone vaaka 560 pt leveänä 183 pt = 45 %).
+            float ruutuK = Juuri.panel?.visualTree.layout.height ?? 0f;
+            if (Screen.width > Screen.height && ruutuK > 0f && ankkurit != null)
+                w = Mathf.Min(w, ruutuK * VaakaOsuus * ankkurit.Koko.width / ankkurit.Koko.height);
             paneeli.style.width = w;
             Juuri.style.left = 0; Juuri.style.right = 0;
             // VAAKA (omistaja 6.10. 08.3x: "vaaka-asennossa koko ohjain saisi olla ihan kiinni alareunassa"): ei väliä turva-alueen

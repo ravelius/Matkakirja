@@ -611,5 +611,5 @@
  * color-ominaisuudesta (IssOhjaamo.Matriisi); hento, jotta teksti pysyy luettavana. */
 .mk-issohjaamo__matriisi {
     color: var(--tk-lcd-reunus);
-    opacity: 0.55;
+    opacity: 0.35;
 }
