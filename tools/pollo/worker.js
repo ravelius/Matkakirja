@@ -3045,22 +3045,44 @@ async function hoidaOppaanKysymykset(pyynto, env, kors) {
   return vastaa({ paikka, kysymykset }, kors);
 }
 
-/** Kaupungin tärkeimmät kohteet (R2 30 vrk; generoi, jos ei ole). null virheessä. */
+/**
+ * Kaupungin tärkeimmät kohteet (R2 30 vrk; generoi, jos ei ole). Juna 148:n todistusajo (Praha → 502): mallikutsu tai
+ * koordinaatit voivat pettää kerran, joten koko haku yritetään kahdesti; rinnakkaiset pyynnöt (esihaku + natiivi) jakavat
+ * saman käynnissä olevan haun. Heittää, jos kumpikaan yritys ei tuota kohteita.
+ */
+const liikuKaynnissa = new Map();
 async function oppaanLiikuLista(env, kaupunki, viite) {
   const avain = liikuAvain(kaupunki);
   const talletettu = await pysyvaLue(env.PUHE_R2, avain);
   if (talletettu) { try { return JSON.parse(talletettu); } catch { /* uusi */ } }
-  const v = await kysyMallitiedot(env, { jarjestelma: LIIKU_KEHOTE, viestit: [{ role: 'user', content: `Kaupunki: ${kaupunki}.` }],
-    maxTokens: 900, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS });
-  const ehdokkaat = jasennaLiiku(v.teksti);
-  const kohteet = (await Promise.all(ehdokkaat.map(async (k) => {
-    const paikka = await paikanKoordinaatit(fetch, k, viite).catch(() => null);
-    if (!paikka) return null;
-    return { id: paikka.id, nimi: paikanNimi(paikka, k.nimi), lat: paikka.lat, lon: paikka.lon,
-      alarivi: k.alarivi ?? paikka.alarivi ?? null, luokka: k.luokka };
-  }))).filter(Boolean).map((k, i) => ({ ...k, tarkeys: i + 1 }));
-  if (kohteet.length >= 8) await pysyvaKirjoita(env.PUHE_R2, avain, JSON.stringify(kohteet), KESKUSTELU_TTL_S);
-  return kohteet;
+  if (liikuKaynnissa.has(avain)) return liikuKaynnissa.get(avain);
+  const haku = (async () => {
+    let viimeVirhe = null;
+    for (let yritys = 0; yritys < 2; yritys += 1) {
+      try {
+        const v = await kysyMallitiedot(env, { jarjestelma: LIIKU_KEHOTE, viestit: [{ role: 'user', content: `Kaupunki: ${kaupunki}.` }],
+          maxTokens: 900, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS });
+        const ehdokkaat = jasennaLiiku(v.teksti);
+        const kohteet = (await Promise.all(ehdokkaat.map(async (k) => {
+          const paikka = await paikanKoordinaatit(fetch, k, viite).catch(() => null);
+          if (!paikka) return null;
+          return { id: paikka.id, nimi: paikanNimi(paikka, k.nimi), lat: paikka.lat, lon: paikka.lon,
+            alarivi: k.alarivi ?? paikka.alarivi ?? null, luokka: k.luokka };
+        }))).filter(Boolean).map((k, i) => ({ ...k, tarkeys: i + 1 }));
+        if (kohteet.length) {
+          if (kohteet.length >= 8) await pysyvaKirjoita(env.PUHE_R2, avain, JSON.stringify(kohteet), KESKUSTELU_TTL_S);
+          return kohteet;
+        }
+        viimeVirhe = new Error('ei kohteita');
+      } catch (virhe) {
+        viimeVirhe = virhe;
+      }
+      console.log(`opas: liiku ${kaupunki} yritys ${yritys + 1} epäonnistui (${viimeVirhe?.status ?? viimeVirhe?.message ?? 'verkko'})`);
+    }
+    throw viimeVirhe;
+  })();
+  liikuKaynnissa.set(avain, haku);
+  try { return await haku; } finally { liikuKaynnissa.delete(avain); }
 }
 
 /** GET /opas/liiku?kaupunki[&lat&lon] → { kaupunki, kohteet: [12 tärkeysjärjestyksessä] }. */
@@ -3190,6 +3212,10 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     p.sijainti ?? kaupunginSijainti(fetch, p.kaupunki), kaydytNimiksi(fetch, p.kaydyt),
     isoisaAvain ? pysyvaLue(env.PUHE_R2, isoisaAvain).then(Boolean) : false,
     kierrosAvain ? pysyvaLue(env.PUHE_R2, kierrosAvain).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null]);
+  // Liiku-listan esihaku taustalla (juna 148 todistusajo: kylmä /opas/liiku ~10 s → natiivin lista jäi tyhjäksi).
+  if (p.kaupunki && sijainti && typeof ctx?.waitUntil === 'function') {
+    ctx.waitUntil(oppaanLiikuLista(env, p.kaupunki, sijainti).catch(() => null));
+  }
   const aineisto = kaupunginAineisto(env.OPAS_AINEISTO_TESTI ?? OPAS_AINEISTO, p.kaupunki);
   // OSM (Nominatim) vain asiakkaille, jotka näyttävät OSM-maininnan (Päätoimittaja: ODbL; vanhat natiivit TF 143–145
   // eivät lähetä krediittejä → Wikidata-reitti kuten ennen).
