@@ -1,3 +1,30 @@
+# TILANNE 6.10. klo 23.4x (TILINVAIHTO, omistaja)
+
+Euroopan kaudet (kevät/syksy/talvi), PT:n kuvaparierä. **Mitään ei ole viety.** T7 = `/Volumes/T7 4TB/Matkakirja-karttaseppa`.
+
+- **AJOSSA (irrallinen, perl setsid, PGID 6564):** `iss-eurooppa-s2/kaudet/aja-syksy-sovitusA.sh` → syksyn rivit 13–19 (91 lohkoa)
+  kansioon `s2-eurooppa-syksy-sovitusA/`, sitten rengas → `iss-maailma-s2/kausi-rengas/syksy-sovitusA/`. Valmis noin klo 0.30.
+  Tila: `kaudet/aja-syksy-sovitusA.out` (VALMIS/VIRHE). Uusintakierrokset sisältyvät skriptiin.
+- **Seuraava askel:** kuvapari PT:lle samoilla riveillä kuin `iss-eurooppa-s2/kuvapari-kaudet-20261006-b.jpg`
+  (Alpit z7, Skandinavia z6, Pohjois-Lappi z7 (23, 69,3), Lappi z8 (20, 68,5); nyt/kevät/syksy). Syksyn kerrokset:
+  `kausi-rengas/syksy-sovitusA : s2-eurooppa-syksy-sovitusA/laatat : kausi-rengas/syksy : s2-eurooppa-syksy/laatat`.
+  Kevään kerrokset: `kausi-rengas/kevat-pohjoinen : s2-eurooppa-kevat-pohjoinen/laatat : kausi-rengas/kevat : s2-eurooppa-kevat/laatat`.
+  Kuvaparin teko-ohjelma löytyy transkriptista. Lyhyesti: z(L, zoom, lon, lat, nx, ny, T) liittää laatat ensimmäisestä kerroksesta, josta laatta löytyy.
+  `kaudet/nak.py` piirtää alueen lon/lat-ruudukolla.
+- **Tehty 6.10.:**
+  - `kausimosaiikki.mjs`: POHJ-sääntö. Yli 65° N:n ruuduissa keväällä ja syksyllä haetaan vähälumiset näkymät myös kauden jatkeelta, ja lumi painaa kolminkertaisesti.
+  - Kevät ja syksy, rivit 13–16 → `s2-eurooppa-<kausi>-pohjoinen` + `kausi-rengas/<kausi>-pohjoinen`. Kevään Lapin lumineliöt ja jäinen Torneträsk ovat poissa; PT hyväksyi kevään.
+  - MAASOVITUS (`MAASOVITUS=1 RUUDUT=…`): A sovittaa ruudun näkymät ruudun mediaaniin (poistaa ratarajat). B on ruutujen välinen ketjusovitus.
+    B ajelehti itään (Venäjä punaruskea, Laatokka purppura), joten se HYLÄTTIIN; ajetaan vain `SOVITUS_B=0`.
+    Hylätyt kansiot `s2-eurooppa-syksy-sovitus/` ja `kausi-rengas/syksy-sovitus`; poistetaan vain luvalla.
+  - Jälkikäteinen `kaudet/ruututasaus.mjs` (kerroin/affiini) HYLÄTTIIN: UTM-päällekkäisalueet katkaisevat ketjun, ja syntyi pystyraitoja.
+- **Talvi:** uusinta valmis 6.10. klo 22.27 (169/169, `s2-eurooppa-talvi/`). Talvea ei ole vielä katsottu eikä kuvaparitettu.
+- **Kanadan meri (korjaus5):** jäi viemättä (PT). LS2 sävyttää sovelluksessa BMNG:n meren S2:n MERI-väriin (haara linssiseppa2/s2-meri 0f6e4e89).
+  Paketti on arkistoitu T7:lle `iss-maailma-s2/korjaus5-ei-viety-20261006/` (pois `_valmiit`-kansiosta).
+- **Avoimet:** PT:n päätös syksyn kuvaparista, ja sitten omistajan päätös kausista. Kausien vienti on suunnittelematta (polut, LS2).
+
+---
+
 # TILANNE 6.10. klo 11.0x
 
 - **VIETY 5.–6.10.:** S2-maailma v2 kaikki alueet + laatat.json (tropiikki 5.10. 18.04); v2-korjaus (rengas) 5.10. 19.04;
