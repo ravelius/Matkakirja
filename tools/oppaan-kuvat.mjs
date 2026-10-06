@@ -227,7 +227,7 @@ function taulu(qt, ulos, raja) {
   };
   return Promise.all(qt.map(haeYksi)).then((tulokset) => {
     const kuvat = [];
-    tulokset.forEach((t) => t.kuvat.filter((k) => !k.hylatty).slice(0, 12).forEach((k) => kuvat.push({ q: t.kohde.q, nimi: t.kohde.fi ?? t.kohde.en, ...k })));
+    tulokset.forEach((t) => t.kuvat.filter((k) => !k.hylatty).slice(0, 12).forEach((k) => kuvat.push({ q: t.kohde.q, nimi: t.kohde.fi ?? t.kohde.en ?? t.kohde.q, ...k })));
     if (!kuvat.length) { console.log('Ei kelvollisia ehdokkaita.'); return; }
     mkdirSync(dirname(ulos), { recursive: true });
     const syote = join(dirname(ulos), `.${Date.now()}.json`);

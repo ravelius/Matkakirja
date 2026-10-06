@@ -1,0 +1,568 @@
+{
+ "kaupunki": "kiova",
+ "kaupunkiQ": "Q1899",
+ "kohteet": [
+  {
+   "q": "Q830054",
+   "nimi": "Pyhän Sofian katedraali",
+   "peruste": "UNESCO",
+   "koko_m": 150,
+   "lat": 50.45278,
+   "lon": 30.51444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "80-391-0151 Kyiv St.Sophia's Cathedral RB 18.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/80-391-0151_Kyiv_St.Sophia's_Cathedral_RB_18.jpg?width=1280",
+     "tekija": "Rbrechko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:80-391-0151_Kyiv_St.Sophia's_Cathedral_RB_18.jpg",
+     "selite": "Pyhän Sofian katedraali on 1000-luvulla perustettu kirkko, ja sen vihreät kupolit ovat Kiovan tunnetuimpia.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "80-391-0151 Kyiv St.Sophia's Cathedral RB 18 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/80-391-0151_Kyiv_St.Sophia's_Cathedral_RB_18_2.jpg?width=1280",
+     "tekija": "Rbrechko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:80-391-0151_Kyiv_St.Sophia's_Cathedral_RB_18_2.jpg",
+     "selite": "Katedraalin monikupolinen rakenne on bysanttilaistyylinen.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "80-391-9014 Kyiv Sofia 2 RB 24.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/80-391-9014_Kyiv_Sofia_2_RB_24.jpg?width=1280",
+     "tekija": "Rbrechko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:80-391-9014_Kyiv_Sofia_2_RB_24.jpg",
+     "selite": "Talvella valkoiset seinät ja kullatut kupolit erottuvat lumesta.",
+     "leveys": 4176,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Saint Sophia Cathedral Kiev.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Sophia_Cathedral_Kiev.jpg?width=1280",
+     "tekija": "Daniel Kraft",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Sophia_Cathedral_Kiev.jpg",
+     "selite": "Ylhäältä näkyvät kirkon kupolit kaupungin keskustan keskellä.",
+     "leveys": 3456,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q242711",
+   "nimi": "Kiovan luolaluostari",
+   "peruste": "UNESCO",
+   "koko_m": 500,
+   "lat": 50.43415,
+   "lon": 30.55832,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kyiv Pechersk Lavra - View from the Dnieper River.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyiv_Pechersk_Lavra_-_View_from_the_Dnieper_River.jpg?width=1280",
+     "tekija": "Ввласенко",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyiv_Pechersk_Lavra_-_View_from_the_Dnieper_River.jpg",
+     "selite": "Kiovan luolaluostari on ortodoksinen luostarikompleksi Dneprin jyrkällä rannalla.",
+     "leveys": 3262,
+     "korkeus": 2077,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dormition and Refectory Churches Lavra.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dormition_and_Refectory_Churches_Lavra.jpg?width=1280",
+     "tekija": "Daniel Kraft",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dormition_and_Refectory_Churches_Lavra.jpg",
+     "selite": "Kullatut kupolit ja valkoiset rakennukset muodostavat luostarin ytimen.",
+     "leveys": 6145,
+     "korkeus": 3237,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Києво-Печерська Лавра в ранковому тумані.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%B8%D1%94%D0%B2%D0%BE-%D0%9F%D0%B5%D1%87%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0_%D0%9B%D0%B0%D0%B2%D1%80%D0%B0_%D0%B2_%D1%80%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D0%BE%D0%BC%D1%83_%D1%82%D1%83%D0%BC%D0%B0%D0%BD%D1%96.jpg?width=1280",
+     "tekija": "KyivMax",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B8%D1%94%D0%B2%D0%BE-%D0%9F%D0%B5%D1%87%D0%B5%D1%80%D1%81%D1%8C%D0%BA%D0%B0_%D0%9B%D0%B0%D0%B2%D1%80%D0%B0_%D0%B2_%D1%80%D0%B0%D0%BD%D0%BA%D0%BE%D0%B2%D0%BE%D0%BC%D1%83_%D1%82%D1%83%D0%BC%D0%B0%D0%BD%D1%96.jpg",
+     "selite": "Luostarin kellotorni kohoaa aamusumun yläpuolelle.",
+     "leveys": 2603,
+     "korkeus": 1735,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q863759",
+   "nimi": "Itsenäisyydenaukio",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 50.45025,
+   "lon": 30.52389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Maidan Nezalezhnosti view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maidan_Nezalezhnosti_view.jpg?width=1280",
+     "tekija": "Juan Antonio Segal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Maidan_Nezalezhnosti_view.jpg",
+     "selite": "Itsenäisyydenaukio eli Maidan on Kiovan keskusaukio, jonka keskellä seisoo itsenäisyyspatsas.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1427503",
+   "nimi": "Kiovan kultainen portti",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 50.44833,
+   "lon": 30.51306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Golden Gate Kiev 2018 G1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Gate_Kiev_2018_G1.jpg?width=1280",
+     "tekija": "George Chernilevsky",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_Kiev_2018_G1.jpg",
+     "selite": "Kultainen portti oli 1000-luvun kaupunkimuurin pääportti, ja se on osin jälleenrakennettu.",
+     "leveys": 5120,
+     "korkeus": 3616,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Golden Gate (Kiev) 20190505-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Golden_Gate_(Kiev)_20190505-1.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Golden_Gate_(Kiev)_20190505-1.jpg",
+     "selite": "Portin puinen suojarakennelma ja punatiilinen kappeli on rakennettu muinaisen mallin mukaan.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1142386",
+   "nimi": "Pyhän Mikaelin kultakupolinen luostari",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 50.45556,
+   "lon": 30.52278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "80-391-9007 Kyiv St.Michael's Golden-Domed Monastery RB 18.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/80-391-9007_Kyiv_St.Michael's_Golden-Domed_Monastery_RB_18.jpg?width=1280",
+     "tekija": "Rbrechko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:80-391-9007_Kyiv_St.Michael's_Golden-Domed_Monastery_RB_18.jpg",
+     "selite": "Pyhän Mikaelin luostari erottuu sinisenä seinänään ja kullatuin kupolein Kiovan kukkuloilla.",
+     "leveys": 5400,
+     "korkeus": 3600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kiev - St. Michael's Cathedral 14.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiev_-_St._Michael's_Cathedral_14.jpg?width=1280",
+     "tekija": "Paweł 'pbm' Szubert (talk)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kiev_-_St._Michael's_Cathedral_14.jpg",
+     "selite": "Luostarikatedraali on rakennettu uudelleen 1990-luvulla.",
+     "leveys": 5403,
+     "korkeus": 3160,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "80-391-9007 Kyiv Golden Domed RB 24.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/80-391-9007_Kyiv_Golden_Domed_RB_24.jpg?width=1280",
+     "tekija": "Rbrechko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:80-391-9007_Kyiv_Golden_Domed_RB_24.jpg",
+     "selite": "Kellotorni ja katedraali kohoavat talvisen kaupungin yllä.",
+     "leveys": 4205,
+     "korkeus": 2793,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q167321",
+   "nimi": "Pyhän Andreaksen kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 70,
+   "lat": 50.45889,
+   "lon": 30.51806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saint Andrew's Church of Kiev photo by Yuriy Kolodin.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Andrew's_Church_of_Kiev_photo_by_Yuriy_Kolodin.jpg?width=1280",
+     "tekija": "Yuriy Kolodin at English Wikipedia",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Andrew's_Church_of_Kiev_photo_by_Yuriy_Kolodin.jpg",
+     "selite": "Pyhän Andreaksen kirkko on barokkityylinen kirkko jyrkän mäen päällä Kiovan vanhassa kaupungissa.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2017 - Київ - Місячний вечір на Замковій горі.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2017_-_%D0%9A%D0%B8%D1%97%D0%B2_-_%D0%9C%D1%96%D1%81%D1%8F%D1%87%D0%BD%D0%B8%D0%B9_%D0%B2%D0%B5%D1%87%D1%96%D1%80_%D0%BD%D0%B0_%D0%97%D0%B0%D0%BC%D0%BA%D0%BE%D0%B2%D1%96%D0%B9_%D0%B3%D0%BE%D1%80%D1%96.jpg?width=1280",
+     "tekija": "Moahim",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2017_-_%D0%9A%D0%B8%D1%97%D0%B2_-_%D0%9C%D1%96%D1%81%D1%8F%D1%87%D0%BD%D0%B8%D0%B9_%D0%B2%D0%B5%D1%87%D1%96%D1%80_%D0%BD%D0%B0_%D0%97%D0%B0%D0%BC%D0%BA%D0%BE%D0%B2%D1%96%D0%B9_%D0%B3%D0%BE%D1%80%D1%96.jpg",
+     "selite": "Yöllä kirkko valaistaan, ja kuu paistaa kaupungin yllä.",
+     "leveys": 2755,
+     "korkeus": 2350,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "St Andrew's Church Kyiv Grybyuk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Andrew's_Church_Kyiv_Grybyuk.jpg?width=1280",
+     "tekija": "Грибюк Руслан Володимирович",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Andrew's_Church_Kyiv_Grybyuk.jpg",
+     "selite": "Portaat johtavat valaistulle kirkolle mäen laella.",
+     "leveys": 5826,
+     "korkeus": 3884,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q142917",
+   "nimi": "Äiti Ukraina",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 50.4265,
+   "lon": 30.56311,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kyiv - Motherland monument and Patona bridge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyiv_-_Motherland_monument_and_Patona_bridge.jpg?width=1280",
+     "tekija": "Віктор Полянко",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyiv_-_Motherland_monument_and_Patona_bridge.jpg",
+     "selite": "Äiti Ukraina on suuri teräspatsas, joka kohoaa Dneprin rantakukkulalla.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mother Ukraine monument with the Ukrainian trident in Kyiv, Ukraine, 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mother_Ukraine_monument_with_the_Ukrainian_trident_in_Kyiv%2C_Ukraine%2C_2026.jpg?width=1280",
+     "tekija": "Світлана 743",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mother_Ukraine_monument_with_the_Ukrainian_trident_in_Kyiv%2C_Ukraine%2C_2026.jpg",
+     "selite": "Patsaan kilvessä on Ukrainan kolmikärki.",
+     "leveys": 2121,
+     "korkeus": 2878,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q732489",
+   "nimi": "Mariinski-palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 50.44833,
+   "lon": 30.5375,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mariinsky Palace (Kiev) 20190505-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mariinsky_Palace_(Kiev)_20190505-2.jpg?width=1280",
+     "tekija": "Suicasmo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mariinsky_Palace_(Kiev)_20190505-2.jpg",
+     "selite": "Mariinski-palatsi on 1700-luvun barokkilinna, joka toimii Ukrainan presidentin seremoniallisena asuntona.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mariinsky Palace, Kyiv, October 2018 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mariinsky_Palace%2C_Kyiv%2C_October_2018_01.jpg?width=1280",
+     "tekija": "VoidWanderer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mariinsky_Palace%2C_Kyiv%2C_October_2018_01.jpg",
+     "selite": "Turkoosi ja valkoinen julkisivu avautuu kivetylle esipihalle.",
+     "leveys": 2500,
+     "korkeus": 1406,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Kyiv Mariinsky palac SAM 1776 80-382-0098.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyiv_Mariinsky_palac_SAM_1776_80-382-0098.jpg?width=1280",
+     "tekija": "Сергій Криниця (Haidamac)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyiv_Mariinsky_palac_SAM_1776_80-382-0098.jpg",
+     "selite": "Palatsin koristeellinen keskirisaliitti on stukkikoristeinen.",
+     "leveys": 4592,
+     "korkeus": 3056,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1440653",
+   "nimi": "Khimairoiden talo",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 50.445,
+   "lon": 30.52861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "House with Chimaeras, Kyiv (2019-06-29) 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/House_with_Chimaeras%2C_Kyiv_(2019-06-29)_02.jpg?width=1280",
+     "tekija": "Oleh Kushch",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:House_with_Chimaeras%2C_Kyiv_(2019-06-29)_02.jpg",
+     "selite": "Khimairoiden talo on jugend-tyylinen rakennus, jonka julkisivua koristavat patsaat satueläimistä.",
+     "leveys": 4128,
+     "korkeus": 3096,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "House with Chimaeras, Kyiv (2019-06-29) 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/House_with_Chimaeras%2C_Kyiv_(2019-06-29)_01.jpg?width=1280",
+     "tekija": "Oleh Kushch",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:House_with_Chimaeras%2C_Kyiv_(2019-06-29)_01.jpg",
+     "selite": "Metsästyskohtaukset ja olennot kiipeävät talon katolle ja kulmiin.",
+     "leveys": 4128,
+     "korkeus": 3096,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1417441",
+   "nimi": "Pyhän Volodymyrin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 50.44494,
+   "lon": 30.50872,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "St Volodymyr's Cathedral, Kiev 22.10.2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/St_Volodymyr's_Cathedral%2C_Kiev_22.10.2010.jpg?width=1280",
+     "tekija": "Peter Collins",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:St_Volodymyr's_Cathedral%2C_Kiev_22.10.2010.jpg",
+     "selite": "Pyhän Volodymyrin katedraali on keltainen 1800-luvun kirkko, joka on omistettu Kiovan Rusin kastajalle.",
+     "leveys": 3616,
+     "korkeus": 2712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kiev St Volodymyr's Cathedral (25707808677).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiev_St_Volodymyr's_Cathedral_(25707808677).jpg?width=1280",
+     "tekija": "Jorge Franganillo",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kiev_St_Volodymyr's_Cathedral_(25707808677).jpg",
+     "selite": "Katedraalin kullatut ja siniset kupolit kohoavat puiden lomasta.",
+     "leveys": 4337,
+     "korkeus": 2891,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1076911",
+   "nimi": "Hreštšatyk",
+   "peruste": "sitelinks",
+   "koko_m": 1200,
+   "lat": 50.44722,
+   "lon": 30.52194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kyiv, Khreshchatyk str. 46.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyiv%2C_Khreshchatyk_str._46.jpg?width=1280",
+     "tekija": "Xsandriel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kyiv%2C_Khreshchatyk_str._46.jpg",
+     "selite": "Hreštšatyk on Kiovan pääkatu, jota reunustavat 1900-luvun rakennukset.",
+     "leveys": 4070,
+     "korkeus": 2712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "21 Khreshchatyk Street, Kiev.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/21_Khreshchatyk_Street%2C_Kiev.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:21_Khreshchatyk_Street%2C_Kiev.jpg",
+     "selite": "Kadun varrella on kaareva portti ja stalinistisen ajan kerrostaloja.",
+     "leveys": 2048,
+     "korkeus": 1365,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2429499",
+   "nimi": "Kontraktovan aukio",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 50.46389,
+   "lon": 30.51806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kontractova square, Kyiv, Ukraine.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kontractova_square%2C_Kyiv%2C_Ukraine.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kontractova_square%2C_Kyiv%2C_Ukraine.jpg",
+     "selite": "Kontraktovan aukio on Podilin kaupunginosan keskeinen aukio ja vanha kauppapaikka.",
+     "leveys": 5168,
+     "korkeus": 3155,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kontraktova Square, Podil, Kyiv.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kontraktova_Square%2C_Podil%2C_Kyiv.jpg?width=1280",
+     "tekija": "Yuriy Kolodin (talk)",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kontraktova_Square%2C_Podil%2C_Kyiv.jpg",
+     "selite": "Aukion laidalla kohoavat vanhat talot ja kellotorni.",
+     "leveys": 2448,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1575425",
+   "nimi": "Kiovan funikulaari",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 50.45864,
+   "lon": 30.52436,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Київський фунікулер 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%84%D1%83%D0%BD%D1%96%D0%BA%D1%83%D0%BB%D0%B5%D1%80_3.jpg?width=1280",
+     "tekija": "Lenka:)",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%84%D1%83%D0%BD%D1%96%D0%BA%D1%83%D0%BB%D0%B5%D1%80_3.jpg",
+     "selite": "Funikulaari vie Podilin alakaupungin ja yläkaupungin välisen jyrkän rinteen.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Київський фунікулер Нижня станція.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%84%D1%83%D0%BD%D1%96%D0%BA%D1%83%D0%BB%D0%B5%D1%80_%D0%9D%D0%B8%D0%B6%D0%BD%D1%8F_%D1%81%D1%82%D0%B0%D0%BD%D1%86%D1%96%D1%8F.jpg?width=1280",
+     "tekija": "Lenka:)",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D0%9A%D0%B8%D1%97%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D1%84%D1%83%D0%BD%D1%96%D0%BA%D1%83%D0%BB%D0%B5%D1%80_%D0%9D%D0%B8%D0%B6%D0%BD%D1%8F_%D1%81%D1%82%D0%B0%D0%BD%D1%86%D1%96%D1%8F.jpg",
+     "selite": "Alaaseman kaarimainen sisäänkäynti avautuu Podilin puolella.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial view kyiv.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_kyiv.jpg?width=1280",
+   "tekija": "Arne Müseler",
+   "lisenssi": "CC BY-SA 3.0 de",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_kyiv.jpg",
+   "selite": "Kiova levittäytyy Dneprin rannoille, ja joen yli kulkee silta.",
+   "leveys": 5144,
+   "korkeus": 2890,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "2018-07-13 Aerial view of Berezniaky and Dripro river, Kyiv, Ukraine.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018-07-13_Aerial_view_of_Berezniaky_and_Dripro_river%2C_Kyiv%2C_Ukraine.jpg?width=1280",
+   "tekija": "Maksym Kozlenko",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018-07-13_Aerial_view_of_Berezniaky_and_Dripro_river%2C_Kyiv%2C_Ukraine.jpg",
+   "selite": "Dnepr jakaa Kiovan kahtia, ja saaret ja sillat erottuvat ilmasta.",
+   "leveys": 4981,
+   "korkeus": 2568,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -1,0 +1,561 @@
+{
+ "kaupunki": "riika",
+ "kaupunkiQ": "Q1773",
+ "kohteet": [
+  {
+   "q": "Q337179",
+   "nimi": "Vapauden muistomerkki",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 56.95156,
+   "lon": 24.11322,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Freedom Monument, Riga (09.09.2022).01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Freedom_Monument%2C_Riga_(09.09.2022).01.jpg?width=1280",
+     "tekija": "Nenea hartia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Freedom_Monument%2C_Riga_(09.09.2022).01.jpg",
+     "selite": "Vapauden muistomerkki on Riian keskustan korkea obeliskimainen muistomerkki, jonka huipulla seisoo Vapaus-patsas.",
+     "leveys": 3648,
+     "korkeus": 5472,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "0873 LVA Riga freedom monument pedestal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0873_LVA_Riga_freedom_monument_pedestal.jpg?width=1280",
+     "tekija": "Virtual-Pano",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0873_LVA_Riga_freedom_monument_pedestal.jpg",
+     "selite": "Muistomerkin jalustaa koristavat kuvanveistäjä Kārlis Zāleen veistokset ja kirjoitus isänmaan ja vapauden puolesta.",
+     "leveys": 5025,
+     "korkeus": 5025,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "0873 LVA Riga freedom monument SE.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0873_LVA_Riga_freedom_monument_SE.jpg?width=1280",
+     "tekija": "Virtual-Pano",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0873_LVA_Riga_freedom_monument_SE.jpg",
+     "selite": "Muistomerkki valmistui 1935, ja sen huipulla seisoo kolmea tähteä kantava nainen.",
+     "leveys": 4267,
+     "korkeus": 8463,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q282196",
+   "nimi": "Kolme veljestä",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 56.95033,
+   "lon": 24.10428,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Dzīvojamo namu komplekss \"Trīs brāļi\".jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dz%C4%ABvojamo_namu_komplekss_%22Tr%C4%ABs_br%C4%81%C4%BCi%22.jpg?width=1280",
+     "tekija": "Davisbarbars",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dz%C4%ABvojamo_namu_komplekss_%22Tr%C4%ABs_br%C4%81%C4%BCi%22.jpg",
+     "selite": "Kolme veljestä on Riian vanhimpia asuintalorivistöjä, jonka kolme taloa edustavat kolmea eri vuosisataa.",
+     "leveys": 7712,
+     "korkeus": 4352,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mazā Pils iela 19.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maz%C4%81_Pils_iela_19.JPG?width=1280",
+     "tekija": "Texaner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Maz%C4%81_Pils_iela_19.JPG",
+     "selite": "Taloista keskimmäinen on rakennettu 1600-luvulla ja sen julkisivua koristavat porrastetut päädyt.",
+     "leveys": 2092,
+     "korkeus": 3207,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Latvia, Riga, Oldest Building In Riga 150502-67.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Latvia%2C_Riga%2C_Oldest_Building_In_Riga_150502-67.jpg?width=1280",
+     "tekija": "Richardmaackphotography",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Latvia%2C_Riga%2C_Oldest_Building_In_Riga_150502-67.jpg",
+     "selite": "Vanhin veljeksistä on kapea pienin ikkunoin varustettu talo.",
+     "leveys": 3600,
+     "korkeus": 5397,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1133059",
+   "nimi": "Riian tuomiokirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 56.94917,
+   "lon": 24.10444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2025 Riga Cathedral (02).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2025_Riga_Cathedral_(02).jpg?width=1280",
+     "tekija": "Chris06",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2025_Riga_Cathedral_(02).jpg",
+     "selite": "Riian tuomiokirkko on Baltian suurimpia keskiaikaisia kirkkoja, ja sen kupolitorni erottuu Vanhankaupungin siluetissa.",
+     "leveys": 3236,
+     "korkeus": 2456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20060704-CRW 1701. Rīgas Doms.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20060704-CRW_1701._R%C4%ABgas_Doms.jpg?width=1280",
+     "tekija": "Karlis Ustups",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20060704-CRW_1701._R%C4%ABgas_Doms.jpg",
+     "selite": "Tuomiokirkon, Pyhän Pietarin kirkon ja Pyhän Jaakobin kirkon tornit kohoavat Vanhankaupungin yllä.",
+     "leveys": 2048,
+     "korkeus": 3072,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q727809",
+   "nimi": "Pyhän Pietarin kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 56.9475,
+   "lon": 24.10944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Iglesia de San Pedro, Riga, Letonia, 2012-08-07, DD 32.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Iglesia_de_San_Pedro%2C_Riga%2C_Letonia%2C_2012-08-07%2C_DD_32.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Iglesia_de_San_Pedro%2C_Riga%2C_Letonia%2C_2012-08-07%2C_DD_32.JPG",
+     "selite": "Pyhän Pietarin kirkon korkea torni on yksi Riian tunnetuimmista maamerkeistä.",
+     "leveys": 2222,
+     "korkeus": 5036,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20090715-IMG 6694. Rīgas Svētā Pētera baznīca, panorāma.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20090715-IMG_6694._R%C4%ABgas_Sv%C4%93t%C4%81_P%C4%93tera_bazn%C4%ABca%2C_panor%C4%81ma.jpg?width=1280",
+     "tekija": "Karlis Ustups",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20090715-IMG_6694._R%C4%ABgas_Sv%C4%93t%C4%81_P%C4%93tera_bazn%C4%ABca%2C_panor%C4%81ma.jpg",
+     "selite": "Kirkon torni kohoaa Daugavan rannalta nähtynä Vanhankaupungin yllä.",
+     "leveys": 3467,
+     "korkeus": 2311,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20070428-IMG 0680. Rīgas Svētā Pētera baznīca.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20070428-IMG_0680._R%C4%ABgas_Sv%C4%93t%C4%81_P%C4%93tera_bazn%C4%ABca.jpg?width=1280",
+     "tekija": "Karlis Ustups",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20070428-IMG_0680._R%C4%ABgas_Sv%C4%93t%C4%81_P%C4%93tera_bazn%C4%ABca.jpg",
+     "selite": "Kirkon tornin juurella on Mustapäiden talon värikäs julkisivu.",
+     "leveys": 2336,
+     "korkeus": 3504,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q74736",
+   "nimi": "Mustapäiden talo",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": 56.94714,
+   "lon": 24.10692,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "House of Blackheads and St. Peter's Church Tower, Riga, Latvia - Diliff.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/House_of_Blackheads_and_St._Peter's_Church_Tower%2C_Riga%2C_Latvia_-_Diliff.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:House_of_Blackheads_and_St._Peter's_Church_Tower%2C_Riga%2C_Latvia_-_Diliff.jpg",
+     "selite": "Mustapäiden talo on koristeellinen uusrenessanssijulkisivuinen kauppiaskiltarakennus Raatihuoneen torilla.",
+     "leveys": 7000,
+     "korkeus": 4922,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2025 House of Blackheads (Riga) (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2025_House_of_Blackheads_(Riga)_(01).jpg?width=1280",
+     "tekija": "Chris06",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2025_House_of_Blackheads_(Riga)_(01).jpg",
+     "selite": "Talo on rakennettu uudelleen, ja sen päätyä koristavat kullatut koristeet ja kello.",
+     "leveys": 3030,
+     "korkeus": 2697,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "House of the Blackheads gable, sculptures, Riga, 2024-07-16.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/House_of_the_Blackheads_gable%2C_sculptures%2C_Riga%2C_2024-07-16.jpg?width=1280",
+     "tekija": "Photograph: Radomianin",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:House_of_the_Blackheads_gable%2C_sculptures%2C_Riga%2C_2024-07-16.jpg",
+     "selite": "Julkisivun veistokset esittävät antiikin sankareita ja jumalia.",
+     "leveys": 3888,
+     "korkeus": 3240,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q190670",
+   "nimi": "Riian keskustori",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 56.944,
+   "lon": 24.116,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mercado Central, Riga, Letonia, 2012-08-07, DD 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercado_Central%2C_Riga%2C_Letonia%2C_2012-08-07%2C_DD_01.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mercado_Central%2C_Riga%2C_Letonia%2C_2012-08-07%2C_DD_01.JPG",
+     "selite": "Riian keskustori toimii valtavissa entisissä ilmalaivahalleissa Vanhankaupungin laidalla.",
+     "leveys": 5064,
+     "korkeus": 2417,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Skylines of Riga by Nasta Faley.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Skylines_of_Riga_by_Nasta_Faley.jpg?width=1280",
+     "tekija": "Nasta Faley",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Skylines_of_Riga_by_Nasta_Faley.jpg",
+     "selite": "Ilmasta näkyvät markkinahallien kaarevat katot ja kaukana Daugavan sillat.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Maskavas Forštate, Latgale Suburb, Riga, Latvia - panoramio (86).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maskavas_For%C5%A1tate%2C_Latgale_Suburb%2C_Riga%2C_Latvia_-_panoramio_(86).jpg?width=1280",
+     "tekija": "bynyalcin",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Maskavas_For%C5%A1tate%2C_Latgale_Suburb%2C_Riga%2C_Latvia_-_panoramio_(86).jpg",
+     "selite": "Markkinahallit ovat tunnistettavia pitkistä, kaarevista katoistaan.",
+     "leveys": 1936,
+     "korkeus": 1936,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1026415",
+   "nimi": "Riian vanhakaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 800,
+   "lat": 56.9485,
+   "lon": 24.1082,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Riga (33844464828).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riga_(33844464828).jpg?width=1280",
+     "tekija": "Jorge Franganillo from Barcelona, Spain",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Riga_(33844464828).jpg",
+     "selite": "Riian vanhakaupunki on tiivis keskiaikainen kaupunkiydin Daugavan rannalla, ja se kuuluu Unescon maailmanperintöön.",
+     "leveys": 5995,
+     "korkeus": 3597,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dances on the roof - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dances_on_the_roof_-_panoramio.jpg?width=1280",
+     "tekija": "Laima Gūtmane (simka…",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dances_on_the_roof_-_panoramio.jpg",
+     "selite": "Katoilta näkyy Jauhetornin kartiokatto Vanhankaupungin talojen keskellä.",
+     "leveys": 2523,
+     "korkeus": 1687,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cobblestone Alleyway (262448999).jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cobblestone_Alleyway_(262448999).jpeg?width=1280",
+     "tekija": "Shawn Kent",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cobblestone_Alleyway_(262448999).jpeg",
+     "selite": "Kapeat mukulakivikadut johtavat Pyhän Pietarin kirkon torniin.",
+     "leveys": 1409,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q322183",
+   "nimi": "Riian linna",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 56.95095,
+   "lon": 24.10064,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Riga Pils Latvia (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Riga_Pils_Latvia_(cropped).jpg?width=1280",
+     "tekija": "Jorge Franganillo",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Riga_Pils_Latvia_(cropped).jpg",
+     "selite": "Riian linna on Latvian presidentin virka-asunto Daugavan rannalla.",
+     "leveys": 3352,
+     "korkeus": 2012,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20060704-CRW 1691. Rīgas pils.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20060704-CRW_1691._R%C4%ABgas_pils.jpg?width=1280",
+     "tekija": "Karlis Ustups",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20060704-CRW_1691._R%C4%ABgas_pils.jpg",
+     "selite": "Linnan keltainen torni ja punaiset katot erottuvat joen toiselta puolelta.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20121208-05. Rīgas pils.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20121208-05._R%C4%ABgas_pils.jpg?width=1280",
+     "tekija": "Karlis Ustups",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20121208-05._R%C4%ABgas_pils.jpg",
+     "selite": "Talvella linnan ja Vanhankaupungin ääriviivat peittyvät huuruun.",
+     "leveys": 5449,
+     "korkeus": 3633,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q186097",
+   "nimi": "Jauhetorni",
+   "peruste": "sitelinks",
+   "koko_m": 40,
+   "lat": 56.95125,
+   "lon": 24.10867,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Powder Tower in Riga (09.09.2022).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Powder_Tower_in_Riga_(09.09.2022).jpg?width=1280",
+     "tekija": "Nenea hartia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Powder_Tower_in_Riga_(09.09.2022).jpg",
+     "selite": "Jauhetorni on Riian entisen kaupunginmuurin jäljellä oleva tiilinen puolustustorni.",
+     "leveys": 5333,
+     "korkeus": 3454,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Torre del Polvorín, Riga, Letonia, 2012-08-07, DD 01.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_del_Polvor%C3%ADn%2C_Riga%2C_Letonia%2C_2012-08-07%2C_DD_01.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torre_del_Polvor%C3%ADn%2C_Riga%2C_Letonia%2C_2012-08-07%2C_DD_01.JPG",
+     "selite": "Tornin pyöreää tiilirunkoa ja vihreää kartiokattoa peittää osittain muratti.",
+     "leveys": 3189,
+     "korkeus": 4884,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Powder Tower Riga 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Powder_Tower_Riga_2022.jpg?width=1280",
+     "tekija": "Żyrafał",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Powder_Tower_Riga_2022.jpg",
+     "selite": "Torni toimii nykyään Latvian sotamuseona.",
+     "leveys": 3120,
+     "korkeus": 4160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1133733",
+   "nimi": "Latvian kansalliskirjasto",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 56.94134,
+   "lon": 24.09664,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "National Bibliothek Lettlands 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Bibliothek_Lettlands_1.jpg?width=1280",
+     "tekija": "Yeti-Hunter",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Bibliothek_Lettlands_1.jpg",
+     "selite": "Latvian kansalliskirjasto eli Valon linna on moderni kirjastorakennus Daugavan rannalla.",
+     "leveys": 3328,
+     "korkeus": 1872,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2023 Riga Daugava river.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2023_Riga_Daugava_river.jpg?width=1280",
+     "tekija": "Qasinka",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2023_Riga_Daugava_river.jpg",
+     "selite": "Kirjaston lasinen kolmiopäätyrakennus erottuu joen yli nähtynä.",
+     "leveys": 3443,
+     "korkeus": 2582,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "27. trolejbuss Mūkusalas ielā.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/27._trolejbuss_M%C5%ABkusalas_iel%C4%81.jpg?width=1280",
+     "tekija": "Driver24",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:27._trolejbuss_M%C5%ABkusalas_iel%C4%81.jpg",
+     "selite": "Rakennus nousee porrasmaisesti taivasta kohti.",
+     "leveys": 3576,
+     "korkeus": 2656,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q830319",
+   "nimi": "Riian radio- ja televisiotorni",
+   "peruste": "sitelinks",
+   "koko_m": 368,
+   "lat": 56.92389,
+   "lon": 24.13694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "16-08-31-View from Latvian Academy of Sciences building-RR2 4242.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/16-08-31-View_from_Latvian_Academy_of_Sciences_building-RR2_4242.jpg?width=1280",
+     "tekija": "Ralf Roletschek",
+     "lisenssi": "CC BY-SA 3.0 at",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/at/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:16-08-31-View_from_Latvian_Academy_of_Sciences_building-RR2_4242.jpg",
+     "selite": "Riian radio- ja televisiotorni kohoaa Daugavan saaressa kaupungin keskustan eteläpuolella.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial view, sun and clouds in Riga.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view%2C_sun_and_clouds_in_Riga.jpg?width=1280",
+     "tekija": "Aleksejs Bergmanis",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view%2C_sun_and_clouds_in_Riga.jpg",
+     "selite": "Ilmasta torni ja Daugavan sillat erottuvat aamun pilvissä.",
+     "leveys": 5364,
+     "korkeus": 3014,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Daugava River and Riga Radio and Television Tower.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Daugava_River_and_Riga_Radio_and_Television_Tower.jpg?width=1280",
+     "tekija": "Tim Adams",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Daugava_River_and_Riga_Radio_and_Television_Tower.jpg",
+     "selite": "Torni on yksi Euroopan korkeimmista rakennuksista.",
+     "leveys": 3127,
+     "korkeus": 4691,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "20041221-IMG 4483. Rīgas pils.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20041221-IMG_4483._R%C4%ABgas_pils.jpg?width=1280",
+   "tekija": "Karlis Ustups",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20041221-IMG_4483._R%C4%ABgas_pils.jpg",
+   "selite": "Riian Vanhakaupunki heijastuu Daugavan tyyneen veteen.",
+   "leveys": 2272,
+   "korkeus": 1704,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "20100110-IMG 9633. Rīgas pils.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20100110-IMG_9633._R%C4%ABgas_pils.jpg?width=1280",
+   "tekija": "Karlis Ustups",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20100110-IMG_9633._R%C4%ABgas_pils.jpg",
+   "selite": "Vanhankaupungin tornit erottuvat talvisessa Riiassa jäätyneen joen yli.",
+   "leveys": 3476,
+   "korkeus": 2317,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -1,0 +1,529 @@
+{
+ "kaupunki": "bryssel",
+ "kaupunkiQ": "Q239",
+ "kohteet": [
+  {
+   "q": "Q215429",
+   "nimi": "Grand-Place",
+   "peruste": "UNESCO",
+   "koko_m": 120,
+   "lat": 50.84671,
+   "lon": 4.35254,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grand-Place, Brussels - panorama, June 2018.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg?width=1280",
+     "tekija": "Celuici",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand-Place%2C_Brussels_-_panorama%2C_June_2018.jpg",
+     "selite": "Grand-Place on Brysselin keskusaukio, jota ympäröivät kaupungintalo ja koristeelliset killantalot.",
+     "leveys": 10946,
+     "korkeus": 6226,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Grand Place 1-7 during civil twilight, Brussels (DSCF1982).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Place_1-7_during_civil_twilight%2C_Brussels_(DSCF1982).jpg?width=1280",
+     "tekija": "Trougnouf (Benoit Brummer)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Place_1-7_during_civil_twilight%2C_Brussels_(DSCF1982).jpg",
+     "selite": "Iltavalaistuksessa kullattujen julkisivujen yksityiskohdat hehkuvat.",
+     "leveys": 4122,
+     "korkeus": 3068,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2018 flower carpet at Grand Place, Brussels (DSCF6849).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2018_flower_carpet_at_Grand_Place%2C_Brussels_(DSCF6849).jpg?width=1280",
+     "tekija": "Trougnouf (Benoit Brummer)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2018_flower_carpet_at_Grand_Place%2C_Brussels_(DSCF6849).jpg",
+     "selite": "Joka toinen elokuu aukio peitetään kukkamatolla.",
+     "leveys": 4853,
+     "korkeus": 3102,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Edificios en la Grand-Place, Bruselas, Bélgica, 2021-12-15, DD 184-186 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edificios_en_la_Grand-Place%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-15%2C_DD_184-186_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Edificios_en_la_Grand-Place%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-15%2C_DD_184-186_HDR.jpg",
+     "selite": "Barokkityyliset killantalot ovat aukion tunnetuin näky yöllä.",
+     "leveys": 7169,
+     "korkeus": 4795,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q180901",
+   "nimi": "Atomium",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 50.895,
+   "lon": 4.34139,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Atomium, Brussels - 54578545913.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Atomium%2C_Brussels_-_54578545913.jpg?width=1280",
+     "tekija": "Pierre Blaché",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Atomium%2C_Brussels_-_54578545913.jpg",
+     "selite": "Atomium on vuoden 1958 maailmannäyttelyyn rakennettu rautakidemallin muotoinen teräsrakennelma.",
+     "leveys": 3606,
+     "korkeus": 4507,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "The Atomium during civil twilight (DSCF1135).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Atomium_during_civil_twilight_(DSCF1135).jpg?width=1280",
+     "tekija": "Trougnouf (Benoit Brummer)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Atomium_during_civil_twilight_(DSCF1135).jpg",
+     "selite": "Yhdeksän kimaltelevaa palloa on yhdistetty putkilla, joissa kulkevat portaat ja hissit.",
+     "leveys": 2246,
+     "korkeus": 2831,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Atomium, Bruselas, Bélgica, 2021-12-15, DD 148-150 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Atomium%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-15%2C_DD_148-150_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Atomium%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-15%2C_DD_148-150_HDR.jpg",
+     "selite": "Pimeän tullen pallot valaistaan ledivaloilla.",
+     "leveys": 6822,
+     "korkeus": 5494,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q152072",
+   "nimi": "Manneken Pis",
+   "peruste": "pelin nosto",
+   "koko_m": 20,
+   "lat": 50.84498,
+   "lon": 4.34999,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bruxelles Manneken Pis.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bruxelles_Manneken_Pis.jpg?width=1280",
+     "tekija": "Myrabella",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bruxelles_Manneken_Pis.jpg",
+     "selite": "Manneken Pis on pieni pronssipatsas, josta on tullut Brysselin vitsikäs symboli.",
+     "leveys": 2791,
+     "korkeus": 4216,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Manneken Pis, Brussels (DSCF4465).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Manneken_Pis%2C_Brussels_(DSCF4465).jpg?width=1280",
+     "tekija": "Trougnouf",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Manneken_Pis%2C_Brussels_(DSCF4465).jpg",
+     "selite": "Patsaalla on satoja pukuja, joita vaihdetaan juhlapäivinä.",
+     "leveys": 4474,
+     "korkeus": 3281,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q635307",
+   "nimi": "Kuninkaanpalatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 50.84167,
+   "lon": 4.36222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Royal Palace of Brussels (facade).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Palace_of_Brussels_(facade).jpg?width=1280",
+     "tekija": "Daniel Huet",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Royal_Palace_of_Brussels_(facade).jpg",
+     "selite": "Brysselin kuninkaanpalatsi on Belgian kuninkaan virallinen työpaikka Brysselin puistoa vastapäätä.",
+     "leveys": 4128,
+     "korkeus": 3096,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q269654",
+   "nimi": "Pyhän Mikaelin ja Pyhän Gudulan katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 50.84778,
+   "lon": 4.36028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Luc Viatour Bruxelles Catedrale ST-Michel.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Luc_Viatour_Bruxelles_Catedrale_ST-Michel.JPG?width=1280",
+     "tekija": "Luc Viatour",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Luc_Viatour_Bruxelles_Catedrale_ST-Michel.JPG",
+     "selite": "Brysselin katedraali on goottilaistyylinen kirkko, jonka kaksoistornit nousevat kukkulan päälle.",
+     "leveys": 1840,
+     "korkeus": 2760,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20180907 Cathedral of St. Michael and St. Gudula Brussels 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20180907_Cathedral_of_St._Michael_and_St._Gudula_Brussels_02.jpg?width=1280",
+     "tekija": "Flocci Nivis",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20180907_Cathedral_of_St._Michael_and_St._Gudula_Brussels_02.jpg",
+     "selite": "Kirkon pääportti on koristeltu runsailla goottilaisilla veistoksilla.",
+     "leveys": 5055,
+     "korkeus": 3374,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1255327",
+   "nimi": "Brysselin kaupungintalo",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 50.84639,
+   "lon": 4.35167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Brussels, townhall oeg2043-00090 foto3 2015-06-07 08.38.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brussels%2C_townhall_oeg2043-00090_foto3_2015-06-07_08.38.jpg?width=1280",
+     "tekija": "Michielverbeek",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brussels%2C_townhall_oeg2043-00090_foto3_2015-06-07_08.38.jpg",
+     "selite": "Kaupungintalon goottilainen torni kohoaa Grand-Placen laidalla yli 90 metriin.",
+     "leveys": 2921,
+     "korkeus": 3899,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Statues above the Brussels town hall portal (DSCF1994).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Statues_above_the_Brussels_town_hall_portal_(DSCF1994).jpg?width=1280",
+     "tekija": "Trougnouf (Benoit Brummer)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Statues_above_the_Brussels_town_hall_portal_(DSCF1994).jpg",
+     "selite": "Julkisivua koristavat lukuisat pyhimysten ja jaloruhtinaiden patsaat.",
+     "leveys": 4046,
+     "korkeus": 3055,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q850537",
+   "nimi": "Oikeuspalatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 50.83667,
+   "lon": 4.35167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Brussels Palais de Justice (52190836980).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brussels_Palais_de_Justice_(52190836980).jpg?width=1280",
+     "tekija": "Jorge Franganillo",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brussels_Palais_de_Justice_(52190836980).jpg",
+     "selite": "Brysselin oikeuspalatsi on kooltaan yksi 1800-luvun suurimmista rakennuksista Euroopassa.",
+     "leveys": 4410,
+     "korkeus": 2941,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "April 2006 Bruxelles 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/April_2006_Bruxelles_4.jpg?width=1280",
+     "tekija": "Syced",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:April_2006_Bruxelles_4.jpg",
+     "selite": "Rakennuksen kullattu kupoli näkyy kauas Brysselin ylle.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1491935",
+   "nimi": "Saint-Hubertin kauppakäytävät",
+   "peruste": "pelin nosto",
+   "koko_m": 220,
+   "lat": 50.84778,
+   "lon": 4.355,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Galeries royales Saint-Hubert, Bruselas, Bélgica, 2021-12-15, DD 14-16 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Galeries_royales_Saint-Hubert%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-15%2C_DD_14-16_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Galeries_royales_Saint-Hubert%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-15%2C_DD_14-16_HDR.jpg",
+     "selite": "Saint-Hubertin kauppakäytävät ovat 1800-luvun lasikattoinen ostoskatu Brysselin keskustassa.",
+     "leveys": 8509,
+     "korkeus": 5673,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Galeries royales Saint-Hubert, Bruselas, Bélgica, 2021-12-14, DD 04-06 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Galeries_royales_Saint-Hubert%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-14%2C_DD_04-06_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Galeries_royales_Saint-Hubert%2C_Bruselas%2C_B%C3%A9lgica%2C_2021-12-14%2C_DD_04-06_HDR.jpg",
+     "selite": "Käytävän lasikatto ja kaarevat kauppajulkisivut ovat Euroopan ensimmäisiä.",
+     "leveys": 7190,
+     "korkeus": 4793,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1101790",
+   "nimi": "Cinquantenaire",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 50.84056,
+   "lon": 4.39278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Brussels Cinquantenaire R03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brussels_Cinquantenaire_R03.jpg?width=1280",
+     "tekija": "Marc Ryckaert",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brussels_Cinquantenaire_R03.jpg",
+     "selite": "Cinquantenairen riemukaari rakennettiin Belgian itsenäisyyden 50-vuotisjuhlaan.",
+     "leveys": 3720,
+     "korkeus": 2562,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Arcade du Cinquantenaire (DSCF7405).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arcade_du_Cinquantenaire_(DSCF7405).jpg?width=1280",
+     "tekija": "Trougnouf (Benoit Brummer)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arcade_du_Cinquantenaire_(DSCF7405).jpg",
+     "selite": "Puiston laaja kaarimainen rakennuskokonaisuus loistaa illalla valaistuna.",
+     "leveys": 4884,
+     "korkeus": 1736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1865794",
+   "nimi": "Mont des Arts",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 50.84421,
+   "lon": 4.35761,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Garden of Kunstberg viewed from Mont des Arts during nautical twilight (DSCF1028).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Garden_of_Kunstberg_viewed_from_Mont_des_Arts_during_nautical_twilight_(DSCF1028).jpg?width=1280",
+     "tekija": "Trougnouf (Benoit Brummer)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Garden_of_Kunstberg_viewed_from_Mont_des_Arts_during_nautical_twilight_(DSCF1028).jpg",
+     "selite": "Mont des Arts on puutarhoin ja museoin ympäröity portaikko, jolta näkee kaupungin keskustan.",
+     "leveys": 4848,
+     "korkeus": 3239,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q28485845",
+   "nimi": "Brysselin pörssi",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 50.84811,
+   "lon": 4.35031,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "'Brussels Stock Exchange Building (Bourse or Beurs)' by Tania Dey.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/'Brussels_Stock_Exchange_Building_(Bourse_or_Beurs)'_by_Tania_Dey.JPG?width=1280",
+     "tekija": "Tania Dey",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:'Brussels_Stock_Exchange_Building_(Bourse_or_Beurs)'_by_Tania_Dey.JPG",
+     "selite": "Pörssirakennus on uusrenessanssityylinen palatsi, joka seisoo Boulevard Anspachin varrella.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Front of Brussels Stock Exchange 2023 cropped.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_of_Brussels_Stock_Exchange_2023_cropped.jpg?width=1280",
+     "tekija": "Guy Delsaut",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Front_of_Brussels_Stock_Exchange_2023_cropped.jpg",
+     "selite": "Julkisivun pylväikkö ja koristeelliset veistokset ovat tunnistettava näky Brysselin keskustassa.",
+     "leveys": 2188,
+     "korkeus": 1589,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q821009",
+   "nimi": "Berlaymont",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 50.84361,
+   "lon": 4.38278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Berlaymont building (DSCF7542-DSCF7548).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlaymont_building_(DSCF7542-DSCF7548).jpg?width=1280",
+     "tekija": "Trougnouf (Benoit Brummer)",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlaymont_building_(DSCF7542-DSCF7548).jpg",
+     "selite": "Berlaymont on Euroopan komission päärakennus, jonka risti muotoinen pohjaratkaisu erottuu eurooppalaisessa kaupunginosassa.",
+     "leveys": 6522,
+     "korkeus": 4053,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Berlaymont building Brussels.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Berlaymont_building_Brussels.jpg?width=1280",
+     "tekija": "KenSwe72",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Berlaymont_building_Brussels.jpg",
+     "selite": "Lasinen julkisivu heijastaa Euroopan unionin lippuja.",
+     "leveys": 3840,
+     "korkeus": 2160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1067006",
+   "nimi": "Mini-Europe",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 50.89417,
+   "lon": 4.33861,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mini-Europe @ Brussels (8177227962).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mini-Europe_%40_Brussels_(8177227962).jpg?width=1280",
+     "tekija": "Guilhem Vellut from Annecy, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mini-Europe_%40_Brussels_(8177227962).jpg",
+     "selite": "Mini-Europe on Atomiumin vieressä sijaitseva pienoispuisto, jossa Euroopan tunnetuimmat rakennukset on rakennettu pieniksi.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mini Europe Birds Eye.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mini_Europe_Birds_Eye.jpg?width=1280",
+     "tekija": "Gellerj",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mini_Europe_Birds_Eye.jpg",
+     "selite": "Ylhäältä katsottuna puisto kattaa kymmeniä pienoismalleja.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Mini Europe Brandenburg Gate and Berlin Wall.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mini_Europe_Brandenburg_Gate_and_Berlin_Wall.jpg?width=1280",
+     "tekija": "Frood",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mini_Europe_Brandenburg_Gate_and_Berlin_Wall.jpg",
+     "selite": "Pienoismalleissa nähdään muun muassa Brandenburgin portti.",
+     "leveys": 4048,
+     "korkeus": 3036,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Brussels view from Mont des Arts, Brussels, Belgium (cropped).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Brussels_view_from_Mont_des_Arts%2C_Brussels%2C_Belgium_(cropped).jpg?width=1280",
+   "tekija": "Ank Kumar",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Brussels_view_from_Mont_des_Arts%2C_Brussels%2C_Belgium_(cropped).jpg",
+   "selite": "Brysselin keskusta ja kaupungintalon torni näkyvät Mont des Artsilta.",
+   "leveys": 3788,
+   "korkeus": 2274,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Marolles from Place Poelaert, Brussels (DSCF6759).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Marolles_from_Place_Poelaert%2C_Brussels_(DSCF6759).jpg?width=1280",
+   "tekija": "Trougnouf",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Marolles_from_Place_Poelaert%2C_Brussels_(DSCF6759).jpg",
+   "selite": "Poelaertin aukiolta avautuu laaja näkymä Brysselin kattojen yli.",
+   "leveys": 4915,
+   "korkeus": 3266,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
