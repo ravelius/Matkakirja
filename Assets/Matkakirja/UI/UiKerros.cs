@@ -373,20 +373,27 @@ namespace Matkakirja.Natiivi
         public event Action KameranJalkeen;
         internal void AjaKameranJalkeen() => KameranJalkeen?.Invoke();
 
-        /// <summary>Natiivi Mac: ikkunan pienin koko pisteinä (Natiiviseppä 6.10.: muutettava ikkuna, oletus 1440 × 900).</summary>
-        public const int MacMinLeveys = 1024, MacMinKorkeus = 700;
+        /// <summary>Natiivi Mac: ikkunan pienin koko pisteinä (Päätoimittaja 7.10.2026 Natiivi-UI:n Mac v1 -löydöksestä: 960 × 640).</summary>
+        public const int MacMinLeveys = 960, MacMinKorkeus = 640;
         float macIkkunaTarkistus;
 
-        /// <summary>Muutettava Mac-ikkuna ei pienene alle minimin: liian pieni koko palautetaan rajalle (0,5 s välein).</summary>
+        /// <summary>
+        /// Mac-ikkuna (0,5 s välein): minimikoko ja vihreän napin kokonäyttö AppKitissa (MacSyote.Ikkuna), ei Screen.SetResolutionia.
+        /// Mac v1 -löydös 7.10.: SetResolution(2048 × 1400) tallentui Unityn näyttöasetuksiin, kokonäyttö käytti sitä ja vaihtoi
+        /// näytön tilaksi 2560 × 1440, joka jäi päälle sulkemisen jälkeen. Kokonäyttö pidetään siksi aina näytön omassa
+        /// resoluutiossa ikkunatyyppisenä (FullScreenWindow), ei koskaan yksinoikeudellisena.
+        /// </summary>
         void PidaMacIkkuna()
         {
-            if (!Mac || Screen.fullScreenMode != FullScreenMode.Windowed || Time.unscaledTime < macIkkunaTarkistus) return;
+            if (!Mac || Time.unscaledTime < macIkkunaTarkistus) return;
             macIkkunaTarkistus = Time.unscaledTime + 0.5f;
-            float sk = MacSyote.Skaala;
-            int mw = Mathf.RoundToInt(MacMinLeveys * sk), mh = Mathf.RoundToInt(MacMinKorkeus * sk);
-            if (Screen.width >= mw && Screen.height >= mh) return;
-            Debug.Log($"MATKAKIRJA ui: Mac-ikkuna {Screen.width}×{Screen.height} → vähintään {mw}×{mh}");
-            Screen.SetResolution(Mathf.Max(Screen.width, mw), Mathf.Max(Screen.height, mh), FullScreenMode.Windowed);
+            MacSyote.Ikkuna(MacMinLeveys, MacMinKorkeus);
+            if (Screen.fullScreenMode == FullScreenMode.Windowed || Screen.fullScreenMode == FullScreenMode.MaximizedWindow) return;
+            int w = Display.main.systemWidth, h = Display.main.systemHeight;
+            if (Screen.fullScreenMode == FullScreenMode.FullScreenWindow && (w <= 0 || (Screen.width == w && Screen.height == h))) return;
+            Debug.Log($"MATKAKIRJA ui: Mac-kokonäyttö {Screen.fullScreenMode} {Screen.width}×{Screen.height} → FullScreenWindow {w}×{h}");
+            if (w > 0 && h > 0) Screen.SetResolution(w, h, FullScreenMode.FullScreenWindow);
+            else Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
         }
 
         void Update()

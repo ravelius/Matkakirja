@@ -21,6 +21,10 @@ namespace Matkakirja.Natiivi
         /// <summary>Rullan zoomin herkkyys: kerroin = exp(pikselit × tämä), noin 1,1 per rullan askel.</summary>
         const float RullanZoomi = 0.006f;
 
+        /// <summary>Natiivi Mac antaa rullan pikseleinä backingScaleFactorilla (Retina 2), joten herkkyys jaetaan sillä: sama
+        /// ~1,1 per askel kuin iPad-sovelluksessa Macilla (Natiivi-UI:n Mac v1 -löydös 7.10.: 24 napsua vei pallon merelle).</summary>
+        static float RullanZoomiNyt => UiKerros.Mac ? RullanZoomi / Skaala : RullanZoomi;
+
         static MacSyote instanssi;
         bool kaytossa, pakotettu;
         int yrityksia;
@@ -171,9 +175,9 @@ namespace Matkakirja.Natiivi
                     // Rulla eteenpäin (sisältö alas) tuo kartan lähemmäs.
                     // (a) Rullan porras pehmeäksi: zoomi kertyy tavoitteeseen ja ajetaan ~80 ms:n eksponenttipehmennyksellä
                     // (PehmeaRulla), ei yhtenä hyppynä.
-                    rullaJaljella += rulla.y * RullanZoomi;
+                    rullaJaljella += rulla.y * RullanZoomiNyt;
                     rullaPiste = ruutu;
-                    viimeKohde = kierto != null ? $"rulla: zoomi {math.exp(rulla.y * RullanZoomi):0.###} (pehmeä)" : "rulla: kartta estetty";
+                    viimeKohde = kierto != null ? $"rulla: zoomi {math.exp(rulla.y * RullanZoomiNyt):0.###} (pehmeä)" : "rulla: kartta estetty";
                 }
             }
             if (nipistys > 0f && nipistys != 1f)
@@ -214,7 +218,20 @@ namespace Matkakirja.Natiivi
 #if UNITY_STANDALONE_OSX && !UNITY_EDITOR
         [System.Runtime.InteropServices.DllImport("MatkakirjaMacSyote")]
         static extern float MatkakirjaMacSyote_Skaala();
+        [System.Runtime.InteropServices.DllImport("MatkakirjaMacSyote")]
+        static extern int MatkakirjaMacSyote_Ikkuna(float minLeveys, float minKorkeus);
 #endif
+
+        /// <summary>Natiivi Mac: ikkunan minimikoko pisteinä AppKitille ja vihreä nappi macOS:n kokonäytöksi; käsitellyt ikkunat.</summary>
+        public static int Ikkuna(float minLeveys, float minKorkeus)
+        {
+#if UNITY_STANDALONE_OSX && !UNITY_EDITOR
+            try { return MatkakirjaMacSyote_Ikkuna(minLeveys, minKorkeus); }
+            catch (System.Exception) { return 0; }
+#else
+            return 0;
+#endif
+        }
 
         /// <summary>Natiivi Mac: pikseliä pisteessä ikkunan näytöltä (Retina 2, muuten 1); muualla 1.</summary>
         public static float Skaala
