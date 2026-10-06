@@ -4,6 +4,21 @@ Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovu
 
 ## TILA HETI
 
+- **6.10. 14.0x: BUILD 148 = master 9977dc2c** (juna/b13 385894e2, käännös b9499e74 = 148c; opas-juna, sisältää junan 147;
+  muutosloki #4048). TF 148 ajossa (37453430258). Juna 147 ei lähtenyt erikseen.
+- **JUNA 149:** kuitattu toistaiseksi vain kirjaukset; Päätoimittaja kuittaa osat todisteista (Natiivi-UI maakunta-149 fc38a9f5,
+  Siirtoseppä Pulu-chat, LS1 siltalause, LS2 korjaus4-rivi, Linnanrakentajan liikkeet ja kaiku, LS1 PCM jo 148:ssa).
+  Pallolukko EI 149:ään (vikaa ei toistettu). Googlen logo fc38a9f5:ssä kuitattu tietoisesti (pakollinen nimeäminen).
+  Runko tehdään 385894e2:n päälle worktreessä wt/proto-natiiviseppa-j144.
+- **NATIIVI MAC:** haara natiiviseppa/mac 19a6108e (wt/proto-natiiviseppa-mac) = 385894e2 + Mac-pohja d2d9c1b9
+  (Rakennus.MacOS arm64 Mono, StreamingKansio, mac-kaanna.sh omaan kopioon Matkakirja-proto-mac, UNITY_TARKISTUS_MAC=1)
+  + MatkakirjaMacSyote.bundle a23b81a7 (NSEvent, sama C-rajapinta kuin iPad-on-Mac; tyokalut/mac-plugarit/kaanna.sh).
+  Natiivi-UI tekee TouchSimulationin, minimikoon ja PanelSettings-skaalauksen. Ensimmäinen Mac-käännös pyydetty Julkaisijalta
+  (≥ 38 Gi, assettien tuonti 30–60 min). IL2CPP-moduuli: omistajan Hub-toimi (ei latauksia ilman lupaa). Allekirjoitus/ASC Julkaisija.
+- Ennen: BUILD 146 = 783b6fe5 (50938e7f), BUILD 145 = eff8d65c (f16f7fa7), BUILD 144 = d8d89704 (72645b63).
+
+## AIEMPI (6.10. aamupäivä)
+
 - **6.10. 10.3x: BUILD 146 = master 783b6fe5** (juna/b13 4b8e8159, käännös 50938e7f, app lokit/juna-1.1.146-50938e7f; muutosloki #4040).
 - **JUNA 147 RUNKO 642e40e1** (haara natiiviseppa/juna-147, wt/proto-natiiviseppa-j144) = 4b8e8159 + pelikoodari 3610cf64 (valmisluennat)
   + natiivi-ui 38100de1 (koe-147: ISS-ohjaamo v3, LCD, LAAJA/TELE ym.) + pelikoodari fe9fba87 (ei havaintovaraa) + LS1 9df9f436
