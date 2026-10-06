@@ -1,0 +1,99 @@
+# Pallolukko tiloittain (LS2 6.10. 12.2x): Ikkuna (nipistys ja kierto ikkunan keskellä, taulu kiinni) ja Kohde (yhden
+# sormen veto ja nipistys) lukolla 0/1. Kahden sormen ele ja Kohteen veto annetaan iOS-simulaattorin ohjaustyökalulla
+# odota-ikkunassa. Mittari: km, kall, suunt, fov (lat/lon seuraavat ISS:ää). Appi: LS2:n koe eb6ac1aa (2c2ad7ac + 7cc8f2be).
+linssi linssi satelliitti
+oleta 30 linssit: auki: satelliitti -- astronautin kamera aukesi
+odota 8
+linssi astro kyyti
+oleta 30 astro kyyti: Ikkuna -- Cupolaan
+odota 4
+# --- lukko 0, tila Ikkuna ---
+linssi astro kyyti pallolukko 0
+odota 1
+ui linssi taulu kiinni
+odota 1
+linssi astro kyyti tila
+talteen Ik0nipistys 5 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+)
+# >>> ELE NIPISTYS ((201,330)+(201,430) → (201,290)+(201,470)) 20 s ikkunassa
+odota 20
+linssi astro kyyti tila
+vertaa Ik0nipistys 5 >60,3,5,3 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+) -- LUKKO 0 Ikkuna: nipistys muuttaa km/kall/suunt/fov (vika näkyy)
+kuva Ik0nipistys Ikkuna lukko 0: nipistys jälkeen
+ui linssi taulu kiinni
+odota 1
+linssi astro kyyti tila
+talteen Ik0kierto 5 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+)
+# >>> ELE KIERTO ((151,380)+(251,380) → (171,330)+(231,430)) 20 s ikkunassa
+odota 20
+linssi astro kyyti tila
+vertaa Ik0kierto 5 >60,3,5,3 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+) -- LUKKO 0 Ikkuna: kierto muuttaa km/kall/suunt/fov (vika näkyy)
+kuva Ik0kierto Ikkuna lukko 0: kierto jälkeen
+# --- lukko 1, tila Ikkuna ---
+linssi astro kyyti pallolukko 1
+odota 1
+ui linssi taulu kiinni
+odota 1
+linssi astro kyyti tila
+talteen Ik1nipistys 5 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+)
+# >>> ELE NIPISTYS ((201,330)+(201,430) → (201,290)+(201,470)) 20 s ikkunassa
+odota 20
+linssi astro kyyti tila
+vertaa Ik1nipistys 5 60,3,5,3 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+) -- LUKKO 1 Ikkuna: nipistys ei muuta kameraa
+kuva Ik1nipistys Ikkuna lukko 1: nipistys jälkeen
+ui linssi taulu kiinni
+odota 1
+linssi astro kyyti tila
+talteen Ik1kierto 5 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+)
+# >>> ELE KIERTO ((151,380)+(251,380) → (171,330)+(231,430)) 20 s ikkunassa
+odota 20
+linssi astro kyyti tila
+vertaa Ik1kierto 5 60,3,5,3 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+) -- LUKKO 1 Ikkuna: kierto ei muuta kameraa
+kuva Ik1kierto Ikkuna lukko 1: kierto jälkeen
+# --- Kohde: lento kohteen ylle ---
+linssi astro kyyti kohde venetsia
+oleta 30 astro kyyti.*Kohde|kohde -- Kohde-tila
+odota 8
+# --- lukko 0, tila Kohde ---
+linssi astro kyyti pallolukko 0
+odota 1
+ui linssi taulu kiinni
+odota 1
+linssi astro kyyti tila
+talteen Ko0veto 5 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+)
+# >>> ELE VETO (yksi sormi (100,350) → (300,450)) 20 s ikkunassa
+odota 20
+linssi astro kyyti tila
+vertaa Ko0veto 5 >60,3,5,3 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+) -- LUKKO 0 Kohde: veto muuttaa km/kall/suunt/fov (vika näkyy)
+kuva Ko0veto Kohde lukko 0: veto jälkeen
+ui linssi taulu kiinni
+odota 1
+linssi astro kyyti tila
+talteen Ko0nipistys 5 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+)
+# >>> ELE NIPISTYS ((201,330)+(201,430) → (201,290)+(201,470)) 20 s ikkunassa
+odota 20
+linssi astro kyyti tila
+vertaa Ko0nipistys 5 >60,3,5,3 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+) -- LUKKO 0 Kohde: nipistys muuttaa km/kall/suunt/fov (vika näkyy)
+kuva Ko0nipistys Kohde lukko 0: nipistys jälkeen
+# --- lukko 1, tila Kohde ---
+linssi astro kyyti pallolukko 1
+odota 1
+ui linssi taulu kiinni
+odota 1
+linssi astro kyyti tila
+talteen Ko1veto 5 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+)
+# >>> ELE VETO (yksi sormi (100,350) → (300,450)) 20 s ikkunassa
+odota 20
+linssi astro kyyti tila
+vertaa Ko1veto 5 60,3,5,3 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+) -- LUKKO 1 Kohde: veto ei muuta kameraa
+kuva Ko1veto Kohde lukko 1: veto jälkeen
+ui linssi taulu kiinni
+odota 1
+linssi astro kyyti tila
+talteen Ko1nipistys 5 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+)
+# >>> ELE NIPISTYS ((201,330)+(201,430) → (201,290)+(201,470)) 20 s ikkunassa
+odota 20
+linssi astro kyyti tila
+vertaa Ko1nipistys 5 60,3,5,3 astro kyyti: .*kamera \([-0-9,]+, [-0-9,]+\) ([0-9]+) km kall ([-0-9,]+)° suunt ([-0-9]+)° fov ([0-9]+) -- LUKKO 1 Kohde: nipistys ei muuta kameraa
+kuva Ko1nipistys Kohde lukko 1: nipistys jälkeen
+linssi linssi pois
+odota 3
