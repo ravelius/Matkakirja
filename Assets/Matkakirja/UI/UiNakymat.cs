@@ -396,6 +396,7 @@ namespace Matkakirja.Natiivi
             Chat = new PuluChat(kerros, Pulu);
             Traileri = new Saapumistraileri(kerros);
             KaupunkiMerkit.Kalusteet = KartanKalusteet; // löydös 164
+            NostotKartalla.Napit = KartanNapit;         // Stonehenge Liikun alla (Päätoimittaja 6.10.)
             // Löydös 170: sisältöpaketti vaihtui kesken istunnon (Siirtoseppä) → maakunta- ja nostodata uudesta versiosta.
             PakettiPaivitys.SisaltoVaihtui += (versio, muuttuneet) =>
             {
@@ -1101,6 +1102,27 @@ namespace Matkakirja.Natiivi
             if (Matkavalinta != null) Lisaa(Matkavalinta.LiikuLaatikko);
             if (Pulu != null) Lisaa(Pulu.Laatikko);
             return kalusteet;
+        }
+
+        readonly System.Collections.Generic.List<Ruutulaatikko> napit = new System.Collections.Generic.List<Ruutulaatikko>();
+
+        /// <summary>Alareunan toimintonapit (Liiku) ruutupikseleinä kuten KartanKalusteet: nostojen ja mallien nimiöiden esteet.</summary>
+        System.Collections.Generic.IReadOnlyList<Ruutulaatikko> KartanNapit()
+        {
+            napit.Clear();
+            var juuri = Kerros.Juuri(UiKerros.Valikot);
+            var paneeli = juuri.panel;
+            var r = Matkavalinta != null ? Matkavalinta.LiikuLaatikko : default;
+            if (paneeli == null || r.width <= 0 || r.height <= 0) return napit;
+            var a = UnityEngine.UIElements.RuntimePanelUtils.ScreenToPanel(paneeli, Vector2.zero);
+            var b = UnityEngine.UIElements.RuntimePanelUtils.ScreenToPanel(paneeli, new Vector2(Screen.width, Screen.height));
+            if (b.x - a.x <= 0 || b.y - a.y <= 0) return napit;
+            float sx = Screen.width / (b.x - a.x), sy = Screen.height / (b.y - a.y);
+            const float Vara = 4f;
+            float x0 = (r.xMin - Vara - a.x) * sx, x1 = (r.xMax + Vara - a.x) * sx;
+            float yla = (r.yMin - Vara - a.y) * sy, ala = (r.yMax + Vara - a.y) * sy;
+            napit.Add(new Ruutulaatikko(x0, Screen.height - ala, x1, Screen.height - yla));
+            return napit;
         }
 
         /// <summary>Testikomento 'ui matka': esimerkkivalinta ilman peliä.</summary>
