@@ -1,6 +1,20 @@
-# Siirtosepän luovutus 5.–6.10.2026 — TILA KLO 00.4x (Opus 5.5, high)
+# Siirtosepän luovutus 5.–6.10.2026 — TILA KLO 12.4x (Opus 5.5, high)
 
-## Nyt (6.10. 00.4x)
+## Nyt (6.10. 12.4x)
+
+- **Aloitusruutu ja kartan Pulu (omistajan vikaerä, Päätoimittaja 11.42):** haara `siirtoseppa/aloitus-pulu`,
+  worktree `wt/proto-siirtoseppa-alo` (säilytä junien ajan).
+  - b6d02f9a KUITATTU junaan 147: Pulu piilossa portissa/avauksessa (Aloitusnakyma.PeittaaPulun → UiNakymat);
+    napit linkin yläpuolelle vain matalalla ruudulla (SovitaKeskus); ei kuplia: LivianAvaus, LivianPaljastus,
+    Saapumisesitys (Pulu.Sano kuplaton).
+  - 09158841: aloituslennon ohjeet tilarivin ilmoitukseksi 3 s → juna 149 (148 jo käännetty), odottaa kuittausta.
+  - Todisteet ennen/jälkeen: `proto-3d/lokit/siirtoseppa-alo/parit/` (1–5). Skriptit `ajo-aloitus.sh`,
+    `ajo-toinen-aloitus.sh`, `kom.sh`; oikeat tapit `simkosketus` (iPad13-paneelin lupa puuttuu).
+  - Avoin kysymys Päätoimittajalle: kartan valintavihje (Pulu.NaytaVihje) on yhä Pulun kupla.
+- **Lokien poisto estetty lupajärjestelmässä** (~1,7 Gt): komento Päätoimittajalla omistajalle/yösiivoukselle.
+- **Poistettu:** worktreet 146, k145, kor, ok. Jäljellä fik (Final IK) ja steam (Steam Audio, ei mainissa).
+
+## Aiempi tila 00.4x
 
 - **Juna 146 (Linssiseppä kokoaa, juna146-silta b7e3e83e):** siirtoseppa/opas-kuvaus bfd0b8af = kaksivaiheinen orbit 388b8707
   (0,9°/s 13 s → 4 s siirtolento: katu/alue +150°, rakennus 30 % lähemmäs, väh. 150 m), lento korkealla ja jyrkkänä 649b30c2
