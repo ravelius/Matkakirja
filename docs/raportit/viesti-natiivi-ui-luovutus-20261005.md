@@ -18,6 +18,17 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   AVOIN: LCD "KEHITETÄÄN…"-palkki ja "KUVA VALMIS" eivät näkyneet (UI piilossa renderöinnin ajan, meri ilman maata):
   odottaa LS2:n vastausta (nopein onnistuva kuva ja missä vaiheessa palkki näkyy).
 
+## TILA 6.10. klo 11.4x (uusin)
+
+- Juna 146: VIE annettu 10.3x. Video osa 2 (pin + joystick) lokit/natiivi-ui-1035/juna146-video/, +N-stillit samassa.
+- Juna 147 LÄHETETTY Natiivisepälle: natiivi-ui/koe-147 37df02f8 (Päätoimittajan kuittaus 11.33) = ohjaamo v3b, LCD-tausta 6 %,
+  kulmat, nopeuslukema ja värit, portaaton kahva (LS2 c4f3aaed), heilunta Nopeustehoste.RuudunSiirtoPx:llä, pin-osuma ja
+  -palautus (valo-id), maakuntalappu piiloon palkin ajaksi, oppaan lähderivi kokoruudussa + himmennys, Data sources 11 pt,
+  LS1 kuvatekija 5b26d4c9, Pulun kuvasirut, maakuntakortin väistö, Liiku-nimiöväistö. Web-PR #4035 (tyylikirja).
+  Todentamatta: LCD-tausta 6 %, portaaton kahva, lapun piilotus, Data sources, iPad → junan yhteinen video.
+- Juna 148: vaakana "Minne katsotaan?" -valikko paneelin yläpuolelle (peittää nyt LAAJA/Poistu); Pulun ilmeet kertoimen
+  mukaan (Codex b2736fa9c).
+
 ## TILA 6.10. klo 09.2x (uusin)
 
 - Juna 147 LÄHETETTY Natiivisepälle: natiivi-ui/koe-147 38100de1 + web-PR #4035 (tyylikirja: PINNATTU PALKKI, --tk-lcd-varoitus
