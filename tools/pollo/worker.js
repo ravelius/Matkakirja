@@ -3511,6 +3511,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
   if (korostus) tulos.korostus = korostus;
   if (tulos.tyyppi === 'pysahdys') {
     let lisat = p18;
+    // Tyhjä lisäkuvatulos ilman omaa kuvaa (esim. vanha tyhjä välimuisti): P18 odotetaan, ettei pysähdys jää ilman kuvaa.
+    if (Array.isArray(p18) && !p18.length && !tulos.kuvat.length && p18Lupaus) lisat = await p18Lupaus;
     if (p18 === null) {
       console.log('opas: lisäkuvat eivät ehtineet → taustalle välimuistiin');
       if (typeof ctx?.waitUntil === 'function') ctx.waitUntil(kuvaLupaus);

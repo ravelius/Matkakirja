@@ -798,18 +798,22 @@ export async function kohteetLahella(haku, keskus, sadeM) {
 const tiedostonimi = (lahde) => decodeURIComponent(String(lahde ?? '').split('/').pop() ?? '').replace(/^File:/, '').replace(/_/g, ' ').toLowerCase();
 
 /** P18 + Commons-luokka (P373) → enintään `maara` kuvaa, `olemassa` (pelin omat) suodatetaan pois tiedostonimellä. */
-export async function lisaKuvat(haku, id, maara, olemassa = []) {
+export async function lisaKuvat(haku, id, maara, olemassa = [], { heitaVirhe = false } = {}) {
   if (maara <= 0 || !/^Q\d+$/.test(id ?? '')) return [];
+  // Haun virhe (esim. Wikidatan 429) erotetaan aidosti kuvattomasta kohteesta: virhettä ei saa tallentaa tyhjänä listana
+  // välimuistiin (6.10. 21.1x: Sensō-ji jäi vuorokaudeksi ilman kuvia).
+  let virhe = false;
+  const virheesta = (arvo) => () => { virhe = true; return arvo; };
   try {
     const [p18, p373] = await Promise.all(['P18', 'P373'].map((ominaisuus) => haeJson(haku,
       `https://www.wikidata.org/w/api.php?action=wbgetclaims&format=json&property=${ominaisuus}&entity=${id}`)
-      .then((d) => d?.claims?.[ominaisuus]?.[0]?.mainsnak?.datavalue?.value ?? null).catch(() => null)));
+      .then((d) => d?.claims?.[ominaisuus]?.[0]?.mainsnak?.datavalue?.value ?? null).catch(virheesta(null))));
     const [paa, luokka] = await Promise.all([
       p18 ? haeJson(haku, `https://commons.wikimedia.org/w/api.php?action=query&format=json${KUVAKENTAT}&titles=${encodeURIComponent(`File:${p18}`)}`)
-        .then((c) => Object.values(c?.query?.pages ?? {})).catch(() => []) : [],
+        .then((c) => Object.values(c?.query?.pages ?? {})).catch(virheesta([])) : [],
       p373 ? haeJson(haku, 'https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=categorymembers'
         + `&gcmtype=file&gcmlimit=40&gcmtitle=${encodeURIComponent(`Category:${p373}`)}${KUVAKENTAT}`)
-        .then((c) => Object.values(c?.query?.pages ?? {}).sort((a, b) => (a.index ?? 0) - (b.index ?? 0))).catch(() => []) : [],
+        .then((c) => Object.values(c?.query?.pages ?? {}).sort((a, b) => (a.index ?? 0) - (b.index ?? 0))).catch(virheesta([])) : [],
     ]);
     const nahty = new Set(olemassa.map((k) => tiedostonimi(k.lahde)));
     const ehdokkaat = [...paa.map((x) => commonsKuvaksi(x, false)), ...luokka.map((x) => commonsKuvaksi(x)).filter(Boolean).sort((a, b) => Number(b._vaaka) - Number(a._vaaka))];
@@ -821,8 +825,10 @@ export async function lisaKuvat(haku, id, maara, olemassa = []) {
       tulos.push(kuva);
       if (tulos.length >= maara) break;
     }
+    if (heitaVirhe && virhe && !tulos.length) throw new Error('lisäkuvat: haku epäonnistui');
     return tulos;
-  } catch {
+  } catch (e) {
+    if (heitaVirhe && virhe) throw e;
     return [];
   }
 }
@@ -838,7 +844,12 @@ export async function lisaKuvatValimuistilla(haku, kv, id, r2 = null) {
   // jokaisen kierroksen paikan (KV:n 1 000 kirjoituksen päiväkiintiö). Vanhat KV-merkinnät luetaan vielä.
   const talletettu = (await pysyvaLue(r2, avain)) ?? (kv ? await kv.get(avain).catch(() => null) : null);
   if (talletettu) { try { return JSON.parse(talletettu); } catch { /* uusi haku */ } }
-  const kuvat = await lisaKuvat(haku, id, OPAS_KUVIA_ENINTAAN);
+  let kuvat;
+  try {
+    kuvat = await lisaKuvat(haku, id, OPAS_KUVIA_ENINTAAN, [], { heitaVirhe: true });
+  } catch {
+    return [];   // virhe: ei välimuistiin, seuraava pysähdys yrittää uudelleen
+  }
   await pysyvaKirjoita(r2, avain, JSON.stringify(kuvat), kuvat.length ? 7 * 86400 : 86400);
   return kuvat;
 }

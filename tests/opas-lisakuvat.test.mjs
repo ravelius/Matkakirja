@@ -110,3 +110,25 @@ test('yhdistaKuvat: pelin omat valokuvat ilman tekijää pois, havainnekuvan lä
     assert.ok(tulos.every((k) => k.lisenssi && (k.tekija || k.lisenssi === 'HAVAINNEKUVA')));
   }
 });
+
+// TYHJÄ KUVAMUISTI (6.10. 21.1x, tuotanto: Sensō-ji Q615183 "[]" vuorokaudeksi R2:ssa, pysähdys ilman kuvaa): Wikidatan
+// virhe ei tallennu tyhjänä listana, ja vanha tyhjä merkintä ei estä P18-varakuvaa.
+test('lisäkuvat: haun virhe ei tallennu tyhjänä; tyhjä välimuisti → P18-varakuva', async () => {
+  const { lisaKuvatValimuistilla, HAKU_UUSINTA_MS } = await import('../tools/pollo/opas.js');
+  HAKU_UUSINTA_MS.oletus = 0;
+  const r2 = new Map();
+  const R2 = { get: async (k) => (r2.has(k) ? { text: async () => r2.get(k) } : null), put: async (k, v) => { r2.set(k, v); } };
+  const k = await lisaKuvatValimuistilla(async () => new Response('', { status: 429 }), null, 'Q943946', R2);
+  assert.deepEqual(k, []);
+  assert.equal(r2.size, 0, 'virhettä ei välimuistiin');
+  // Vanha tyhjä merkintä (ennen korjausta tallentunut) → worker odottaa P18:n.
+  await R2.put(`tila/${encodeURIComponent('opas:kuvat:v1:Q943946')}.json`, JSON.stringify({ a: '[]', v: Date.now() + 86400000 }));
+  const env = { ANTHROPIC_API_KEY: 'a', POLLO_ORIGINIT: 'https://matkakirja.app', OPAS_AINEISTO_TESTI: {}, PUHE_R2: R2 };
+  const vanha = globalThis.fetch; globalThis.fetch = verkko;
+  try {
+    const d = await (await worker.fetch(new Request('https://pollo.example/opas/seuraava', { method: 'POST',
+      headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'x-matkakirja-testi': '1' },
+      body: JSON.stringify({ kaupunki: 'Kööpenhamina', toive: 'Nyhavn' }) }), env, { waitUntil() {} })).json();
+    assert.equal(d.kuvat.length, 1, 'P18-varakuva tyhjän välimuistin ohi');
+  } finally { globalThis.fetch = vanha; }
+});
