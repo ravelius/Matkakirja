@@ -140,9 +140,31 @@ namespace Matkakirja.Natiivi
             edellinenTunti = h;
         }
 
+        // AINEISTOINDEKSI (Pelikoodari 6.10.: ämpäri ja CDN välimuistittavat 404:n): kartta haetaan vain, jos id on Pöllön
+        // /opas/aineistot-listalla {"aanikartta":[…]}. Indeksi kerran istunnossa; epäonnistunut haku yritetään uudelleen 60 s päästä.
+        static HashSet<string> karttaIndeksi;
+        static float indeksiYritys = -999f;
+
         IEnumerator LataaKartta(string id)
         {
             karttaLadataan = id;
+            if (karttaIndeksi == null)
+            {
+                if (Time.unscaledTime - indeksiYritys < 60f) { karttaLadataan = null; yield break; }
+                indeksiYritys = Time.unscaledTime;
+                using var ir = UnityWebRequest.Get(Matkakirja.Peli.Lukijaaani.Palvelin + "/opas/aineistot");
+                ir.timeout = 10;
+                ir.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+                yield return ir.SendWebRequest();
+                if (ir.result == UnityWebRequest.Result.Success && Matkakirja.Peli.MiniJson.Jasenna(ir.downloadHandler.text) is Dictionary<string, object> io)
+                {
+                    karttaIndeksi = new HashSet<string>();
+                    foreach (var x in Matkakirja.Peli.MiniJson.TaulukkoTaiTyhja(Matkakirja.Peli.MiniJson.Kentta(io, "aanikartta"))) if (x is string sx) karttaIndeksi.Add(sx);
+                    Debug.Log($"MATKAKIRJA äänimaisema: aineistoindeksi {karttaIndeksi.Count} äänikarttaa");
+                }
+                else { Debug.Log($"MATKAKIRJA äänimaisema: aineistoindeksi ei saatavilla ({ir.error})"); karttaLadataan = null; yield break; }
+            }
+            if (!karttaIndeksi.Contains(id)) { karttaId = id; karttaLadataan = null; Debug.Log($"MATKAKIRJA äänimaisema: ei äänikarttaa kaupungille {id}"); yield break; }
             using var r = UnityWebRequest.Get(Juuri + "aanikartta-v1/" + id + ".json");
             yield return r.SendWebRequest();
             karttaLadataan = null;
