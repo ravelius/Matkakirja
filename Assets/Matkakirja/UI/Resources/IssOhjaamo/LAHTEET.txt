@@ -27,3 +27,5 @@ leveiksi. Lisäys klo 08.4x: joystick oikean käden puolelle ja nopeuskahva vase
 - Välit ovat 28–29 px @3x uloimmista näkyvistä osista (tarkistus-kooste.png, mittakaista alimpana).
 - ohjaamo.json: kaasu.pykalat ja uusi kaasu.ura {yla, ala} ovat vivun juuren y-arvoja pt:nä kaasu-laatikon yläreunasta (Natiivi-UI 6.10.:
   portaaton kahva liikkuu ura.yla–ura.ala logaritmisesti).
+
+v3c (Linnanrakentaja 6.10.2026 18.4x): jalka-yla.png ja jalka-ala.png, teleskooppijalka paneelin alle (omistaja: "ohjainvivusto kelluu ilmassa"); lähteet _valmiit/iss-ohjaamo-v3c/LAHTEET.md.
