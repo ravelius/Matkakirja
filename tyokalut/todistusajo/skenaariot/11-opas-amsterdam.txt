@@ -10,8 +10,8 @@ oleta 30 opas: auki -- elävä opas aukesi
 oleta 30 opas: täkyt [1-9] -- täkyt workerilta
 nakyy 20 MIHIN LENNETÄÄN -- valikko aukesi itse täkynäkymään
 kuva 11a-takyt Elävä opas: täkynäkymä
-tap-teksti mk-opas-taky
-oleta 5 opas: täky -- täkyn napautus välittyi
+tap-teksti mk-linssirivi__nimi
+oleta 5 opas: täky [^0-9] -- täkyn napautus välittyi (1. täkyrivi; rivin säiliö ei piirry ui-puuhun)
 oleta 90 opas: saapui -- 1. kohde saapui
 oleta 30 opas: vastaus .*ääni ei|opas: saapui .*ääni ei -- kohde ilman ääni-urlia (ei generointia)
 odota 4
@@ -19,7 +19,11 @@ kuva 11b-kohde1 Elävä opas: 1. kohde
 tap-teksti mk-ohjausnappi#-1
 nakyy 6 Vaihda kohde -- oppaan ☰ avasi valikon
 tap-teksti Vaihda kohde
-nakyy 6 Eurooppa -- maanosat
+nakyy 6 TAI VALITSE PAIKKA -- Vaihda kohde avasi täkynäkymän (146: täkyt ylhäällä, maanosat alla)
+# Maanosat ovat 8 täkyn alla: vieritys sormella ylös (ScrollView Clamped, ei inertiaa; Natiivi-UI 6.10.).
+veto 200 700 200 200 0.8
+odota 1
+nakyy 6 Eurooppa -- maanosat näkyvät vierityksen jälkeen
 tap-teksti Eurooppa
 nakyy 6 Alankomaat -- Euroopan maat
 tap-teksti Alankomaat
