@@ -37,6 +37,7 @@ import {
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import { OPAS_AINEISTOT } from './aineistot.js';
+import { OPAS_SALLITUT, sallittuKaupunki, pisteSallittu } from './sallitut.js';
 import { vuosiluvutSanoiksi } from './puhesanat.js';
 import { kuvalista, kohteenKuvat, kaupunginKohteet, listanKuvin, kuvaKaupunkitilassa, LUKITTU_VAHINTAAN } from './opas-kuvat.js';
 import {
@@ -3028,6 +3029,12 @@ async function tarkistettuSijainti(kaupunki, sijainti) {
   return sijainti;
 }
 
+/** Sallitun 3D-alueen ulkopuolinen kaupunki (omistaja 7.10.): natiivi soittaa ei-sallittu-siltalauseen eikä lennä. */
+const EI_SALLITTU_VIESTI = 'Sitä kaupunkia ei ole vielä kuvattu tarpeeksi tarkasti. Valitse kohde listasta.';
+const eiSallittu = (kaupunki, kors) => vastaa({ virhe: 'ei-sallittu', viesti: EI_SALLITTU_VIESTI, kaupunki }, { status: 403, ...kors });
+/** Kohdelistasta pois sallitun alueen ulkopuoliset (kaupunki annettuna sen r_m-säteeltä, muuten mistä tahansa sallitusta). */
+const sallitutKohteet = (env, tulos, kaupunki = null) => ({ ...tulos, kohteet: (tulos?.kohteet ?? []).filter((k) => pisteSallittu(k, kaupunki, env)) });
+
 async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
   const url = new URL(pyynto.url);
   const natiivit = env.POLLO_NATIIVIT ? lueLista(env.POLLO_NATIIVIT) : NATIIVIT_OLETUS;
@@ -3040,11 +3047,12 @@ async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
   }
   if (!env.ANTHROPIC_API_KEY) return vastaa({ virhe: 'asetus', viesti: 'Opas ei ole vielä käytössä.' }, { status: 503, ...kors });
   const kaupunki = siivoaTeksti(url.searchParams.get('kaupunki') ?? '', 80) || null;
+  if (kaupunki && !sallittuKaupunki(kaupunki, env)) return eiSallittu(kaupunki, kors);
   const lat = Number(url.searchParams.get('lat')), lon = Number(url.searchParams.get('lon'));
   // Maailman 50 suosikkia (omistaja 6.10.): ?n=50 ilman kaupunkia. Ilman n:ää täkyt kuten ennen (8, päivittäin).
   if (!kaupunki && Number(url.searchParams.get('n')) > KOHTEITA_OLETUS) {
     try {
-      return vastaa(listanKuvin(neutraalitKohteet(await maailmanSuosikit(env)), await kuvalista(env)), kors);
+      return vastaa(sallitutKohteet(env, listanKuvin(neutraalitKohteet(await maailmanSuosikit(env)), await kuvalista(env))), kors);
     } catch (virhe) {
       console.log(`opas: maailman suosikit epäonnistui (${virhe?.status ?? virhe?.message ?? 'verkko'})`);
       return vastaa({ virhe: 'palvelin', viesti: 'Kohteita ei saatu juuri nyt. Yritä hetken päästä.' }, { status: 502, ...kors });
@@ -3057,11 +3065,11 @@ async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
   const avain = kohdeAvain(kaupunki, paiva);
   const valmis = async () => (kv ? kv.get(avain).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null);
   let tulos = await valmis();
-  if (tulos) return vastaa(listanKuvin(neutraalitKohteet(tulos), await kuvalista(env), kaupunki), kors);
+  if (tulos) return vastaa(sallitutKohteet(env, listanKuvin(neutraalitKohteet(tulos), await kuvalista(env), kaupunki), kaupunki), kors);
   const lukko = `${avain}:tuotanto`;
   if (await reunaLue(lukko)) {
     for (let i = 0; i < 30 && !tulos; i += 1) { await new Promise((r) => setTimeout(r, 500)); tulos = await valmis(); }
-    if (tulos) return vastaa(listanKuvin(neutraalitKohteet(tulos), await kuvalista(env), kaupunki), kors);
+    if (tulos) return vastaa(sallitutKohteet(env, listanKuvin(neutraalitKohteet(tulos), await kuvalista(env), kaupunki), kaupunki), kors);
   }
   await reunaKirjoita(lukko, '1', 60);
   try {
@@ -3083,7 +3091,7 @@ async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
     tulos = { paiva, ...(kaupunki ? { kaupunki } : {}), kohteet };
     if (kv) await kv.put(avain, JSON.stringify(tulos), { expirationTtl: 60 * 60 * 48 }).catch(() => {});
     console.log(`opas: kohteet ${kaupunki ?? 'maailma'} ${paiva}: ${kohteet.length}`);
-    return vastaa(listanKuvin(neutraalitKohteet(tulos), await kuvalista(env), kaupunki), kors);
+    return vastaa(sallitutKohteet(env, listanKuvin(neutraalitKohteet(tulos), await kuvalista(env), kaupunki), kaupunki), kors);
   } catch (virhe) {
     console.log(`opas: kohteet epäonnistui (${virhe?.status ?? 'verkko'})`);
     return vastaa({ virhe: 'palvelin', viesti: 'Kohteita ei saatu juuri nyt. Yritä hetken päästä.' }, { status: 502, ...kors });
@@ -3236,10 +3244,11 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
   const url = new URL(pyynto.url);
   const kaupunki = siivoaTeksti(url.searchParams.get('kaupunki') ?? '', 80) || null;
   if (!kaupunki) return vastaa({ virhe: 'kysely', viesti: 'Kaupunki puuttuu.' }, { status: 400, ...kors });
+  if (!sallittuKaupunki(kaupunki, env)) return eiSallittu(kaupunki, kors);
   const lat = Number(url.searchParams.get('lat')), lon = Number(url.searchParams.get('lon'));
   // Lukittu kaupunki (Päätoimittaja 6.10. 20.3x): Liiku näyttää koko kohdelistan merkittävyysjärjestyksessä kuvineen.
   const kuvaLista = await kuvalista(env);
-  const lukitut = kaupunginKohteet(kuvaLista, kaupunki);
+  const lukitut = kaupunginKohteet(kuvaLista, kaupunki).filter((k) => pisteSallittu(k, kaupunki, env));
   if (lukitut.length >= LUKITTU_VAHINTAAN) {
     // Kaupunkikierros-rivi (omistaja 6.10. 23.4x, natiivi lukee kentän junasta 156): 8 tärkeintä lyhimpänä reittinä
     // sijaintia lähimmästä alkaen; kohteet pysyvät tärkeysjärjestyksessä listaa varten.
@@ -3252,7 +3261,7 @@ async function hoidaOppaanLiiku(pyynto, env, kors) {
     const viite = await tarkistettuSijainti(kaupunki, Number.isFinite(lat) && Number.isFinite(lon) && !(lat === 0 && lon === 0) ? { lat, lon } : null);
     const kohteet = await oppaanLiikuLista(env, kaupunki, viite);
     if (!kohteet?.length) return vastaa({ virhe: 'palvelin', viesti: 'Kohteita ei saatu juuri nyt.' }, { status: 502, ...kors });
-    return vastaa({ kaupunki, kohteet }, kors);
+    return vastaa(sallitutKohteet(env, { kaupunki, kohteet }, kaupunki), kors);
   } catch (virhe) {
     console.log(`opas: liiku epäonnistui (${virhe?.status ?? virhe?.message ?? 'verkko'})`);
     return vastaa({ virhe: 'palvelin', viesti: 'Kohteita ei saatu juuri nyt.' }, { status: 502, ...kors });
@@ -3304,11 +3313,12 @@ async function hoidaOppaanKysy(pyynto, env, kors, runko, ctx) {
       const paikka = j.kohde ? (await haeKohde(viite)) ?? (viite ? await haeKohde(null) : null) : null;
       if (paikka) {
         const ulkona = kaupunkiPiste ? etaisyysKm(kaupunkiPiste, paikka) > ULKONA_KM : false;
-        toiminto = { tyyppi: 'siirry', nimi: paikanNimi(paikka, j.kohde), lat: paikka.lat, lon: paikka.lon, ulkona };
+        toiminto = pisteSallittu(paikka, null, env) ? { tyyppi: 'siirry', nimi: paikanNimi(paikka, j.kohde), lat: paikka.lat, lon: paikka.lon, ulkona }
+          : { tyyppi: 'ei-sallittu', nimi: paikanNimi(paikka, j.kohde) };
       }
     } else if (j.toiminto === 'kaupunki' && j.kohde) {
       const k = await kaupunginSijainti(fetch, j.kohde).catch(() => null);
-      if (k) toiminto = { tyyppi: 'kaupunki', nimi: j.kohde, lat: k.lat, lon: k.lon };
+      if (k) toiminto = sallittuKaupunki(j.kohde, env) ? { tyyppi: 'kaupunki', nimi: j.kohde, lat: k.lat, lon: k.lon } : { tyyppi: 'ei-sallittu', nimi: j.kohde };
     } else if (['kierros', 'tauko', 'jatka'].includes(j.toiminto)) toiminto = { tyyppi: j.toiminto };
     const aani = await oppaanAani(pyynto, env, ctx, j.teksti, kehittajaOhitus(pyynto, env)).catch(() => null);
     console.log(`opas: kysy → ${toiminto?.tyyppi ?? 'vastaus'}, ääni ${aani ? 'kyllä' : 'ei'}`);
@@ -3333,6 +3343,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     return v;
   }
   const p = siivoaOpasPyynto(runko);
+  if (p.kaupunki && !sallittuKaupunki(p.kaupunki, env)) return eiSallittu(p.kaupunki, kors);
   const kehittaja = kehittajaOhitus(pyynto, env);
   const kv = env.POLLO_KV ?? null;
   if (!kehittaja && !testitunnus) {
@@ -3366,7 +3377,7 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
     kuvalista(env)]);
   // KUVALISTA KAUPUNKI KERRALLAAN (omistaja 6.10. 20.0x, Päätoimittaja 20.3x; opas-kuvat.js): lukitun kaupungin pysähdykset,
   // kierros ja kuvat vain kohdelistasta ja kuvalistasta. Muut kaupungit kuten ennen, kunnes niiden lista yhdistetään.
-  const lukitut = kaupunginKohteet(kuvaLista, p.kaupunki);
+  const lukitut = kaupunginKohteet(kuvaLista, p.kaupunki).filter((k) => pisteSallittu(k, p.kaupunki, env));
   const listatila = lukitut.length >= LUKITTU_VAHINTAAN;
   // Liiku-listan esihaku taustalla (juna 148 todistusajo: kylmä /opas/liiku ~10 s → natiivin lista jäi tyhjäksi).
   if (p.kaupunki && sijainti && typeof ctx?.waitUntil === 'function') {
@@ -3439,6 +3450,8 @@ async function hoidaOpas(pyynto, env, kors, runko, ctx) {
       const listalta = !seuraava && listatila ? lukitut.find((x) => samaNimi(x.nimi, vastaus.nimi)) : null;
       const paikka = seuraava ? seuraava.paikka : listalta ? { ...listalta, lahde: 'kohdelista' } : await paikanKoordinaatit(fetch, vastaus, sijainti, osm);
       if (!paikka) { console.log(`opas: paikkaa ei löytynyt (${vastaus.wikipedia ?? vastaus.nimi})`); continue; }
+      // Mallin valitsema paikka sallitun 3D-alueen ulkopuolella → uusi yritys (omistaja 7.10.).
+      if (!pisteSallittu(paikka, p.kaupunki ?? null, env)) { console.log(`opas: ${vastaus.nimi} sallitun alueen ulkopuolella`); continue; }
       const nimi = seuraava ? seuraava.paikka.nimi : paikanNimi(paikka, vastaus.nimi);
       tuloksenPaikka = { nimi, wikipedia: vastaus.wikipedia, koko_m: vastaus.koko_m, ...paikka };
       tulos = { tyyppi: 'pysahdys', id: paikka.id, nimi, alarivi: paikka.alarivi ?? vastaus.kuvaus ?? null, lat: paikka.lat, lon: paikka.lon,
@@ -3570,7 +3583,7 @@ export default {
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/aineistot') {
       // Staattisten aineistojen indeksi (aineistot.js); lyhyt välimuisti, jotta uusi kaupunki näkyy pian viennin jälkeen.
       if (!oppaanAsiakas(pyynto, kors, env)) return new Response('Origin ei ole sallittu', { status: 403 });
-      const v = vastaa(OPAS_AINEISTOT, kors);
+      const v = vastaa({ ...OPAS_AINEISTOT, sallitut: OPAS_SALLITUT.sallitut, raja: [] }, kors);
       v.headers.set('cache-control', 'public, max-age=300');
       return v;
     }
