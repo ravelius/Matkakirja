@@ -281,6 +281,7 @@ namespace Matkakirja.Natiivi
             // OSM-tekijätieto aina oppaan ajan: worker käyttää Nominatimia koordinaatteihin ja reittiviivoihin (ODbL, juna 146).
             KrediititTiivis.OsmNakyvissa = true;
             KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
+            if (KiinteaKamera is Kuvakulma kk) { y.Kuvaa(kk); kaupunki.AsetaEsikamera(kk); return; }   // kuvaparit samasta kulmasta (testi)
             if (Pysaytetty) { y.Kuvaa(silmukka.Asento); return; }
             var ennen = silmukka.Vaihe;
             LueTapit();
@@ -432,6 +433,10 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Testikomento "opas testi429": Googlen root-pyyntö kuin 429 (uusintayritykset ja ion-vara lokiin).</summary>
+        /// <summary>VAIN TESTIKÄYTTÖÖN (Päätoimittaja 6.10. 19.0x: still-parit täsmälleen samasta kulmasta): komento
+        /// "opas kamera lat lon etäisyys_m kallistus suuntima katseKorkeus_m" lukitsee kameran; "opas kamera pois" vapauttaa.</summary>
+        public static Kuvakulma? KiinteaKamera;
+
         public static void TestiGoogle429() { if (Viimeisin != null && Viimeisin.nakymaAuki) Viimeisin.kaupunki.TestiVirhe429(); }
 
         /// <summary>Vapaa tila (■ jälkeen): ei kohdetta, Linssiseppä 2:n vapaa ohjaus (juna 152).</summary>
