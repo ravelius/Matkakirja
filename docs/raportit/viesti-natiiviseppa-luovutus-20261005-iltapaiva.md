@@ -2,18 +2,30 @@
 
 Luovuttaja: Natiiviseppä (Opus 5.5, high). Edellinen: viesti-natiiviseppa-luovutus-20261005.md (käytännöt voimassa).
 
+## ALOITUSVIESTI (tilinvaihto 6.10. ~23.3x)
+
+Olet Natiiviseppä (Opus, high). Lue tämä osio, MEMORY.md ja natiiviseppa-tila-20261003.md. Kytke Remote Control päälle.
+Kerro Julkaisijalle ja PÄÄTOIMITTAJALLE, että olet paikalla. Juna-SHA:t otetaan vain PÄÄTOIMITTAJAN suoralla kuittauksella,
+ja käännökset, simut ja iPad vain Julkaisijan NYT-viestillä.
+
 ## TILA HETI
 
-- **6.10. 23.0x: BUILD 154 = master 8878ab70** (juna/b13 286e8f34, käännös 787db464, muutosloki #4079). BUILD 153 = 72788914
-  (juna b9f09bcd, käännös 7920e6a0, #4073). Jättilogo korjattu d8cf0e82:lla: MustaLaunchScreen poistaa storyboardien imageViewin
-  ja nimeää ne LaunchScreen-Musta-* (iOS:n käynnistysruudun välimuisti näytti vanhaa logoa aspect-fillinä).
-- **JUNA 155:** koehaara natiiviseppa/juna-155-koe (wt/proto-natiiviseppa-j144) = 8878ab70, tyhjä. Jonossa Päätoimittajan
-  kuittauksella: merisumu 5adaf326, LS2 14d/14e, LS1 yövalot 960b1bd7, Codexin linssikuvat, NUI ylarivi-155.
-- **MAC v1:** 62f6b368 kaatui Burst AOT -linkkiin (burst-lld-21-hostmac, llvm-lipo, dsymutil ilman suoritusbittiä jaetussa
-  PackageCachessa). Korjaus f5d0e029 (natiiviseppa/mac, mac-kaanna.sh chmod ennen käännöstä), todennettu lld:llä. Uusi vuoro
-  Julkaisijalta ~23.40: `perl -e 'use POSIX; exit if fork; setsid; exec "zsh", @ARGV' <scratchpad>/mac-v1.sh` tai suoraan
-  `zsh /Users/Shared/Claude/wt/proto-natiiviseppa-mac/tyokalut/mac-kaanna.sh f5d0e029 1.1.0 154` irrallisena. Tulos
-  lokit/kaannospalvelu/*-mac-f5d0e029.log; sen jälkeen NUI tarkistaa ikkunan, skaalan ja hiiren.
+- **BUILD 154 = master 8878ab70** (juna/b13 286e8f34, käännös 787db464, muutosloki #4079); TF 154 Julkaisijalla.
+  BUILD 153 = 72788914 (b9f09bcd, 7920e6a0, #4073). Jättilogo korjattu d8cf0e82:lla (LaunchScreen-Musta-*, ei imageViewiä).
+- **JUNA 155:** runko natiiviseppa/juna-155-koe **eb951c97** (wt/proto-natiiviseppa-j144) = 8878ab70 + LS2 gibs-pehmea 640eb7b4
+  (merisumu + valotuksen olkapää; vauhtirajaus 5683ffaf EI). Testit 0/762/419/444. PAKOLLINEN: NUI:n noston ja pinnatun tilan
+  erä 241fb080 (NUI kääntää ja ottaa stillit). Otetaan runkoon vasta PÄÄTOIMITTAJAN SHA-kuittauksella stilleistä. 14d/14e
+  mittauksen jälkeen, jos ehtii. Käännösskriptin pohja: scratchpadin kaanna-153koe.sh → tyokalut/proto-kaanna.sh <SHA>,
+  simukopio lokit/natiiviseppa-app-<nimi>-<käännös>. Muutosloki-PR PÄÄTOIMITTAJAN tekstillä (≤ 3 lausetta, 280 mrk;
+  kysymysmerkki lainausmerkeissä).
+- **JUNA 156:** yövalot (LS1 960b1bd7 / v5 koe-154 d78bd96e). iPad-mittaus mitätön, koska iPadin Wi-Fi on pois (omistaja kytkee
+  huomenna töissä). d78bd96e on asennettuna iPadissa 00008103. Lisäksi äänimaiseman pilotti, kun kuitattu.
+- **MAC v1:** 62f6b368 kaatui Burst AOT -linkkiin (hostmac-työkaluilta puuttui suoritusbitti). Korjaus f5d0e029
+  (natiiviseppa/mac, wt/proto-natiiviseppa-mac). Vuoro Julkaisijalta NUI:n 241fb080-käännöksen jälkeen (~23.50):
+  `perl -e 'use POSIX; exit if fork; setsid; exec "zsh", @ARGV' /Users/Shared/Claude/wt/proto-natiiviseppa-mac/tyokalut/mac-kaanna.sh f5d0e029 1.1.0 154`
+  Tulos lokit/kaannospalvelu/*-mac-f5d0e029.log (KÄÄNNETTY-MAC / VIKA). .app Matkakirja-proto-mac/Build/mac/. Valmistuttua
+  "lukko vapaa" Julkaisijalle; NUI tarkistaa ikkunan, skaalan ja hiiren.
+- **Lokin appikopiot:** jäljellä 150-ea457278 (Siirtoseppä vahvistaa) ja 154lopullinen-787db464.
 
 ## AIEMPI (6.10. ilta)
 
