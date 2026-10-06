@@ -1,0 +1,274 @@
+{
+ "kaupunki": "novosibirsk",
+ "kaupunkiQ": "Q883",
+ "kohteet": [
+  {
+   "q": "Q2706278",
+   "nimi": "Novosibirskin ooppera- ja balettiteatteri",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 55.03048,
+   "lon": 82.92446,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Opera-and-Ballet-theatre-Novosibirsk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Opera-and-Ballet-theatre-Novosibirsk.jpg?width=1280",
+     "tekija": "Boris Sakic",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Opera-and-Ballet-theatre-Novosibirsk.jpg",
+     "selite": "Oopperatalon valtava kupoli ja pylväikköinen julkisivu tekevät siitä Novosibirskin tunnetuimman rakennuksen.",
+     "leveys": 3757,
+     "korkeus": 2113,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Novosibirsk, Opera and ballet theater - panoramio (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Novosibirsk%2C_Opera_and_ballet_theater_-_panoramio_(1).jpg?width=1280",
+     "tekija": "Pavel.Shulekin",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Novosibirsk%2C_Opera_and_ballet_theater_-_panoramio_(1).jpg",
+     "selite": "Iltavalaistuksessa teatterin pylväikkö hehkuu oranssina Leninin aukion laidalla.",
+     "leveys": 2000,
+     "korkeus": 1135,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Lenina sq. Theatre - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lenina_sq._Theatre_-_panoramio.jpg?width=1280",
+     "tekija": "valeriy.dmitriev",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lenina_sq._Theatre_-_panoramio.jpg",
+     "selite": "Teatterin kupoli kohoaa pylväiden takaa, ja talo hallitsee Leninin aukiota.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q603289",
+   "nimi": "Aleksanteri Nevskin katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 55.01953,
+   "lon": 82.92255,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Saint Alexander Nevsky Church in Novosibirsk (May 2025) - 0.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Saint_Alexander_Nevsky_Church_in_Novosibirsk_(May_2025)_-_0.jpg?width=1280",
+     "tekija": "Vyacheslav Bukharov",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Saint_Alexander_Nevsky_Church_in_Novosibirsk_(May_2025)_-_0.jpg",
+     "selite": "Punatiilinen katedraali kultaisine kupoleineen on yksi Novosibirskin vanhimmista säilyneistä rakennuksista.",
+     "leveys": 5683,
+     "korkeus": 3198,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alexander Nevsky Cathedral Novosibirsk 03.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexander_Nevsky_Cathedral_Novosibirsk_03.JPG?width=1280",
+     "tekija": "Brücke-Osteuropa",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alexander_Nevsky_Cathedral_Novosibirsk_03.JPG",
+     "selite": "Katedraalin tiiliseinät on koristeltu kaarilla, ja kultaiset kupolit erottuvat kirkkaana taivasta vasten.",
+     "leveys": 2134,
+     "korkeus": 1533,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q564114",
+   "nimi": "Novosibirsk-Glavnyin rautatieasema",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 55.03578,
+   "lon": 82.8962,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "4Y1A8610 Novosibirsk (28185147092).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/4Y1A8610_Novosibirsk_(28185147092).jpg?width=1280",
+     "tekija": "Ninara from Helsinki, Finland",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:4Y1A8610_Novosibirsk_(28185147092).jpg",
+     "selite": "Transsiperian radan suurimpia asemia hohtaa iltavalaistuksessa turkoosina ja valkoisena.",
+     "leveys": 3359,
+     "korkeus": 1488,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Transib Novosibirsk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Transib_Novosibirsk.jpg?width=1280",
+     "tekija": "User:Aladux",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Transib_Novosibirsk.jpg",
+     "selite": "Asemarakennuksen kaarijulkisivu avautuu raiteiden päälle, ja Moskovaan on täältä yli 2 800 kilometriä.",
+     "leveys": 1751,
+     "korkeus": 1108,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q83627",
+   "nimi": "Akademgorodok",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 54.8451,
+   "lon": 83.1003,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Akademgorodok Airphoto.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Akademgorodok_Airphoto.jpg?width=1280",
+     "tekija": "Elya",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Akademgorodok_Airphoto.jpg",
+     "selite": "Akademgorodok perustettiin 1957 tiedekaupungiksi keskelle metsää etelään Novosibirskin keskustasta.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Novosibirsk Technopark, 2 October 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Novosibirsk_Technopark%2C_2_October_2014.jpg?width=1280",
+     "tekija": "Minsvyaz.ru",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Novosibirsk_Technopark%2C_2_October_2014.jpg",
+     "selite": "Teknopuiston rakennuksen sakara on tunnistettava uusi maamerkki vanhan tiedekaupungin keskellä.",
+     "leveys": 1597,
+     "korkeus": 1000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16684555",
+   "nimi": "Laboratoriohiiren patsas",
+   "peruste": "sitelinks",
+   "koko_m": 30,
+   "lat": 54.84903,
+   "lon": 83.10606,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Memorial to the lab animals (14604111622).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Memorial_to_the_lab_animals_(14604111622).jpg?width=1280",
+     "tekija": "T",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Memorial_to_the_lab_animals_(14604111622).jpg",
+     "selite": "Akademgorodokin hiiripatsas kunnioittaa laboratorioeläimiä ja istuu kutomassa DNA-ketjua geenitutkimuksen kaupungissa.",
+     "leveys": 3648,
+     "korkeus": 5472,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4442786",
+   "nimi": "Satohuoneiston talo",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 55.02052,
+   "lon": 82.92462,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "100FlatBuildingNovosibirsk.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/100FlatBuildingNovosibirsk.jpg?width=1280",
+     "tekija": "CeeGee",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:100FlatBuildingNovosibirsk.jpg",
+     "selite": "Satohuoneiston talo on 1930-luvun jykevä asuinkortteli Krasnyi prospektin varrella Leninin aukion lähellä.",
+     "leveys": 4649,
+     "korkeus": 3079,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Krasny (Red) Prospekt 16 Novosibirsk Russian Federation.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Krasny_(Red)_Prospekt_16_Novosibirsk_Russian_Federation.jpg?width=1280",
+     "tekija": "Petrichenkov Mikhail Vladimirovich",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Krasny_(Red)_Prospekt_16_Novosibirsk_Russian_Federation.jpg",
+     "selite": "Illan hämärässä talon massiivinen kulma ja korkeat portaikot korostuvat vihreän pihan reunalla.",
+     "leveys": 3104,
+     "korkeus": 2031,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q16653742",
+   "nimi": "Novosibirskin taidemuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 55.0212,
+   "lon": 82.9288,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Novosibirsk KrasnyPr5 012 7309.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Novosibirsk_KrasnyPr5_012_7309.jpg?width=1280",
+     "tekija": "Ludvig14",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Novosibirsk_KrasnyPr5_012_7309.jpg",
+     "selite": "Taidemuseo toimii Krasnyi prospektin varrella harmaassa neuvostoajan monumentaalirakennuksessa.",
+     "leveys": 5591,
+     "korkeus": 3723,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Novosibirsk Metro Bridge (May 2025).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Novosibirsk_Metro_Bridge_(May_2025).jpg?width=1280",
+   "tekija": "Vyacheslav Bukharov",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Novosibirsk_Metro_Bridge_(May_2025).jpg",
+   "selite": "Novosibirsk kasvoi Obin rannoille siltatyömaasta, ja nykyään joen yli kulkee metrosilta puiston ja kaupungin siluetin vieressä.",
+   "leveys": 5889,
+   "korkeus": 2917,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Streets in Novosibirsk (May 2025) - 0 29.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Streets_in_Novosibirsk_(May_2025)_-_0_29.jpg?width=1280",
+   "tekija": "Vyacheslav Bukharov",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Streets_in_Novosibirsk_(May_2025)_-_0_29.jpg",
+   "selite": "Krasnyi prospekt on kaupungin pääkatu, jonka varrella ovat 1900-luvun alun ja stalinistisen ajan talot.",
+   "leveys": 8024,
+   "korkeus": 2860,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

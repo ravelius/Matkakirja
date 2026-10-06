@@ -1,0 +1,352 @@
+{
+ "kaupunki": "kamerun",
+ "kaupunkiQ": "Q1009",
+ "kohteet": [
+  {
+   "q": "Q190562",
+   "nimi": "Kamerunvuori",
+   "peruste": "pelin nosto",
+   "koko_m": 4000,
+   "lat": 4.21667,
+   "lon": 9.1725,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mount Cameroon on a sunny day 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Cameroon_on_a_sunny_day_05.jpg?width=1280",
+     "tekija": "Adesolive",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Cameroon_on_a_sunny_day_05.jpg",
+     "selite": "Kamerunvuori on Länsi-Afrikan korkein vuori ja yhä aktiivinen tulivuori.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Le Mont Cameroun depuis Limbé.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_Mont_Cameroun_depuis_Limb%C3%A9.JPG?width=1280",
+     "tekija": "PRA",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Le_Mont_Cameroun_depuis_Limb%C3%A9.JPG",
+     "selite": "Vuori kohoaa pilvien ja palmujen takaa Limbén rannalta nähtynä.",
+     "leveys": 1680,
+     "korkeus": 2240,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Lava Flow from Mt Cameroon 1999 eruption (21562945615).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lava_Flow_from_Mt_Cameroon_1999_eruption_(21562945615).jpg?width=1280",
+     "tekija": "Bernard DUPONT from FRANCE",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lava_Flow_from_Mt_Cameroon_1999_eruption_(21562945615).jpg",
+     "selite": "Vuoden 1999 purkauksen jähmettynyt laavakenttä on yhä paljas rinteen alaosassa.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Tropical rain forest Mount Cameroon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tropical_rain_forest_Mount_Cameroon.jpg?width=1280",
+     "tekija": "Atabong Armstrong",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tropical_rain_forest_Mount_Cameroon.jpg",
+     "selite": "Vuoren alarinteillä kasvaa tiheä sademetsä.",
+     "leveys": 3456,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q132830",
+   "nimi": "Douala",
+   "peruste": "sitelinks",
+   "koko_m": 1000,
+   "lat": 4.05,
+   "lon": 9.7,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Douala - Ars&Urbis International Workshop - Emiliano Gandolfi 36.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Douala_-_Ars%26Urbis_International_Workshop_-_Emiliano_Gandolfi_36.jpg?width=1280",
+     "tekija": "Emiliano Gandolfi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Douala_-_Ars%26Urbis_International_Workshop_-_Emiliano_Gandolfi_36.jpg",
+     "selite": "Doualan keskusta ilmasta: Kamerunin suurin kaupunki ja pääsatama.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cathédrale Douala 5130.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cath%C3%A9drale_Douala_5130.JPG?width=1280",
+     "tekija": "Ngando ngoubo lucien thierry",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cath%C3%A9drale_Douala_5130.JPG",
+     "selite": "Pyhän Pietarin ja Paavalin katedraalin kaksitorninen julkisivu Doualan keskustassa.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Cathédrale Douala 5122.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cath%C3%A9drale_Douala_5122.JPG?width=1280",
+     "tekija": "Ngando ngoubo lucien thierry",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cath%C3%A9drale_Douala_5122.JPG",
+     "selite": "Katedraalin pääovi ja tornit Doualan Bonanjon kaupunginosan tuntumassa.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1405842",
+   "nimi": "Wouri-joki",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": 4.0833,
+   "lon": 9.7,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "River Wouri Douala Cameroon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/River_Wouri_Douala_Cameroon.jpg?width=1280",
+     "tekija": "Blaizo 237",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:River_Wouri_Douala_Cameroon.jpg",
+     "selite": "Wouri-joen leveä suisto Doualan kohdalla, jonka rapukannasta Kamerun sai nimensä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fleuve Wouri à Douala 16.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fleuve_Wouri_%C3%A0_Douala_16.jpg?width=1280",
+     "tekija": "Kondah",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fleuve_Wouri_%C3%A0_Douala_16.jpg",
+     "selite": "Pirogit liikkuvat Wouri-joella Doualan edustalla.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q819314",
+   "nimi": "Limbe",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 4.01667,
+   "lon": 9.21667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "DOWN BEACH LIMBE CAMEROON.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/DOWN_BEACH_LIMBE_CAMEROON.jpg?width=1280",
+     "tekija": "Blaizo 237",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:DOWN_BEACH_LIMBE_CAMEROON.jpg",
+     "selite": "Limben Down Beachin palmut ja tulivuoren rinteet iltataivaan alla.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Seme beach limbe Cameroon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Seme_beach_limbe_Cameroon.jpg?width=1280",
+     "tekija": "Blaizo 237",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Seme_beach_limbe_Cameroon.jpg",
+     "selite": "Seme Beachin palmurivi ja tummahiekkainen ranta Limbén lähellä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Twilight at the seashore of the coastal city of Limbe (Victoria) in Cameroon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Twilight_at_the_seashore_of_the_coastal_city_of_Limbe_(Victoria)_in_Cameroon.jpg?width=1280",
+     "tekija": "Nk barrywhite",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Twilight_at_the_seashore_of_the_coastal_city_of_Limbe_(Victoria)_in_Cameroon.jpg",
+     "selite": "Limben rannikon kalliot ja Guineanlahden aallot hämärässä.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q312209",
+   "nimi": "Buea",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 4.16667,
+   "lon": 9.23333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mount Cameroon National Park 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Cameroon_National_Park_03.jpg?width=1280",
+     "tekija": "Adesolive",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Cameroon_National_Park_03.jpg",
+     "selite": "Buean katu kulkee Kamerunvuoren rinteen alla, jossa kaupunki kohoaa lähes 1 000 metrin korkeuteen.",
+     "leveys": 1843,
+     "korkeus": 2457,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Grassland region of the Buea Mountain ( Mount Cameroon).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grassland_region_of_the_Buea_Mountain_(_Mount_Cameroon).jpg?width=1280",
+     "tekija": "Adesolive",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grassland_region_of_the_Buea_Mountain_(_Mount_Cameroon).jpg",
+     "selite": "Laavakiviä ja ruohikkoa Buean vuoren rinteellä.",
+     "leveys": 4608,
+     "korkeus": 2184,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q997121",
+   "nimi": "Kribi",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 2.95,
+   "lon": 9.91667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kribi beach 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kribi_beach_01.jpg?width=1280",
+     "tekija": "Emeline Tchakounte",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kribi_beach_01.jpg",
+     "selite": "Kribin rantakalliot ja Guineanlahden aallot, taustalla rakennuksia.",
+     "leveys": 3264,
+     "korkeus": 2281,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kribi beach 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kribi_beach_02.jpg?width=1280",
+     "tekija": "Emeline Tchakounte",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kribi_beach_02.jpg",
+     "selite": "Mustat kivet nousevat Kribin hiekkarannalta Atlantin rannalla.",
+     "leveys": 3264,
+     "korkeus": 2210,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Lobé beach kribi Cameroon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lob%C3%A9_beach_kribi_Cameroon.jpg?width=1280",
+     "tekija": "Blaizo 237",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lob%C3%A9_beach_kribi_Cameroon.jpg",
+     "selite": "Lobén ranta ja puinen paviljonki palmujen alla Kribin lähellä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1784847",
+   "nimi": "Korupin kansallispuisto",
+   "peruste": "sitelinks",
+   "koko_m": 4000,
+   "lat": 5.09333,
+   "lon": 8.84111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mangroves on the Korup National Park Stretch 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mangroves_on_the_Korup_National_Park_Stretch_02.jpg?width=1280",
+     "tekija": "OkandaLizette",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mangroves_on_the_Korup_National_Park_Stretch_02.jpg",
+     "selite": "Mangrovemetsä reunustaa rannikkoa Korupin kansallispuiston alueella.",
+     "leveys": 5712,
+     "korkeus": 4284,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Korup National Park, Cameroon 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Korup_National_Park%2C_Cameroon_01.jpg?width=1280",
+     "tekija": "Adesolive",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Korup_National_Park%2C_Cameroon_01.jpg",
+     "selite": "Joki kulkee Korupin sademetsän halki, jossa elää muun muassa drilli-apina.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Panorama-Douala-20141203 154218-PANO.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama-Douala-20141203_154218-PANO.jpg?width=1280",
+   "tekija": "Guaka",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama-Douala-20141203_154218-PANO.jpg",
+   "selite": "Doualan kattojen panoraama, rannikkoseudun suurin kaupunki Wouri-joen suulla.",
+   "leveys": 5282,
+   "korkeus": 1449,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Down Beach Limbe vue aerienne - Ndongere - Sud-Ouest - Cameroun.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Down_Beach_Limbe_vue_aerienne_-_Ndongere_-_Sud-Ouest_-_Cameroun.jpg?width=1280",
+   "tekija": "Eric Joel MAMA NKE",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Down_Beach_Limbe_vue_aerienne_-_Ndongere_-_Sud-Ouest_-_Cameroun.jpg",
+   "selite": "Ilmakuva Limben kaupungista ja kalastajavenelaiturista Guineanlahden rannalla.",
+   "leveys": 2087,
+   "korkeus": 3712,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

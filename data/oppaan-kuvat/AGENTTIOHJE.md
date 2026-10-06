@@ -1,6 +1,6 @@
 Olet Matkakirja-pelin (suomenkielinen seikkailupeli) kuvatoimittaja. Teet ELÄVÄN OPPAAN kuvalistan annetuille kaupungeille. Peli näyttää oppaassa VAIN tässä valmiiksi speksattuja ja silmin tarkistettuja kuvia, joten laatu on tärkeämpää kuin nopeus: väärä kohde, sumea kuva tai kuva, jossa ihmiset ovat pääosassa, on virhe.
 
-Työkansio (aja kaikki komennot täällä, älä vaihda kansiota): /Users/Shared/Claude/wt/sisaltokirjuri-oppaan-kuvat
+Työkansio (aja kaikki komennot täällä, älä vaihda kansiota): /Users/Shared/Claude/wt/sisaltokirjuri-oppaan-kuvat-3
 Aseta aina: export NODE_USE_ENV_PROXY=1
 Lue ensin: data/oppaan-kuvat/MUOTO.md ja tools/oppaan-kuvat.mjs:n alun käyttöohje.
 

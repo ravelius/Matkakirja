@@ -1,0 +1,251 @@
+{
+ "kaupunki": "yellowknife",
+ "kaupunkiQ": "Q2061",
+ "kohteet": [
+  {
+   "q": "Q10270235",
+   "nimi": "Luoteisterritorioiden parlamenttitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 62.45944,
+   "lon": -114.38194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Legislative Assembly 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Legislative_Assembly_2.jpg?width=1280",
+     "tekija": "CambridgeBayWeather",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Legislative_Assembly_2.jpg",
+     "selite": "Lasi- ja teräsjulkisivu avautuu metsän keskelle Luoteisterritorioiden hallintorakennuksessa.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Legislative Assembly 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Legislative_Assembly_1.jpg?width=1280",
+     "tekija": "CambridgeBayWeather",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Legislative_Assembly_1.jpg",
+     "selite": "Päätulon aukio johtaa parlamenttitaloon, jonka istuntosali on kuvattu pyöreäksi.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q202552",
+   "nimi": "Prince of Walesin pohjoinen perintökeskus",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 62.4561,
+   "lon": -114.38,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Prince of Wales Museum Yellowknife Northwest Territories Canada 15A.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prince_of_Wales_Museum_Yellowknife_Northwest_Territories_Canada_15A.jpg?width=1280",
+     "tekija": "WinterCity296 WinterforceMedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prince_of_Wales_Museum_Yellowknife_Northwest_Territories_Canada_15A.jpg",
+     "selite": "Betoninen museorakennus seisoo Frame-järven rannalla ja esittelee pohjoisen historiaa.",
+     "leveys": 3888,
+     "korkeus": 1092,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Prince of Wales Museum Yellowknife Northwest Territories Canada 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Prince_of_Wales_Museum_Yellowknife_Northwest_Territories_Canada_02.jpg?width=1280",
+     "tekija": "WinterCity296 WinterforceMedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Prince_of_Wales_Museum_Yellowknife_Northwest_Territories_Canada_02.jpg",
+     "selite": "Portaat johtavat museon kaarevan lasiseinän sisäänkäynnille.",
+     "leveys": 2589,
+     "korkeus": 3877,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3733484",
+   "nimi": "Ragged Ass Road",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 62.46063,
+   "lon": -114.35256,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Looking north along Ragged Ass Road, Yellowknife, NT.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Looking_north_along_Ragged_Ass_Road%2C_Yellowknife%2C_NT.jpg?width=1280",
+     "tekija": "Daniel Case",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Looking_north_along_Ragged_Ass_Road%2C_Yellowknife%2C_NT.jpg",
+     "selite": "Kapea hiekkatie Vanhassakaupungissa kantaa nimeä, jonka kaupunki on pitänyt koko ajan.",
+     "leveys": 3416,
+     "korkeus": 4272,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ragged Ass Road.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ragged_Ass_Road.jpg?width=1280",
+     "tekija": "CambridgeBayWeather",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ragged_Ass_Road.jpg",
+     "selite": "Katukilvessä lukee kadun uskomaton nimi, joka juontaa kulta-ajan rahattomista kaivajista.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7978348",
+   "nimi": "Weaver & Devoren kauppa",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 62.46444,
+   "lon": -114.35056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bullock's Fish and Chips (front).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bullock's_Fish_and_Chips_(front).JPG?width=1280",
+     "tekija": "Jeffery J. Nichols (User:Arctic.gnome)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bullock's_Fish_and_Chips_(front).JPG",
+     "selite": "Vanha hirsikauppa Vanhassakaupungissa on kunnostettu ja toimii nykyään ravintolana.",
+     "leveys": 5144,
+     "korkeus": 3394,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bullock's Fish and Chips (side).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bullock's_Fish_and_Chips_(side).JPG?width=1280",
+     "tekija": "Jeffery J. Nichols (User:Arctic.gnome)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bullock's_Fish_and_Chips_(side).JPG",
+     "selite": "Hirsirunkoinen rakennus on Yellowknifen vanhimpia ja suojeltu perintökohde.",
+     "leveys": 5053,
+     "korkeus": 3356,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19876356",
+   "nimi": "Bank of Toronton hirsimökki",
+   "peruste": "pelin nosto",
+   "koko_m": 30,
+   "lat": 62.47,
+   "lon": -114.344,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Yellowknife's Bank of Toronto (angle).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yellowknife's_Bank_of_Toronto_(angle).JPG?width=1280",
+     "tekija": "Jeffery J. Nichols (User:Arctic.gnome)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yellowknife's_Bank_of_Toronto_(angle).JPG",
+     "selite": "Pieni hirsimökki oli Yellowknifen ensimmäinen pankkikonttori ja on nyt suojeltu perintökohde.",
+     "leveys": 5156,
+     "korkeus": 3412,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Yellowknife's Bank of Toronto (front).JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yellowknife's_Bank_of_Toronto_(front).JPG?width=1280",
+     "tekija": "Jeffery J. Nichols (User:Arctic.gnome)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yellowknife's_Bank_of_Toronto_(front).JPG",
+     "selite": "Punaiset ikkunanpielet erottuvat tummasta hirsirungosta pankkimökin julkisivussa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q19876343",
+   "nimi": "Back Bayn hautausmaa",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 62.46917,
+   "lon": -114.3625,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Back Bay Cemetery 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Back_Bay_Cemetery_1.jpg?width=1280",
+     "tekija": "Four'18\"",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Back_Bay_Cemetery_1.jpg",
+     "selite": "Valkoiset ristit seisovat syksyisessä koivikossa Back Bayn vanhalla hautausmaalla.",
+     "leveys": 4608,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Back Bay Cemetery 4.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Back_Bay_Cemetery_4.jpg?width=1280",
+     "tekija": "Four'18\"",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Back_Bay_Cemetery_4.jpg",
+     "selite": "Valkoiset aidat rajaavat yksittäisiä hautoja kaupungin varhaisimmilta vuosilta.",
+     "leveys": 4608,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Frosty Skyline - Yellowknife, Canada (5325119239).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Frosty_Skyline_-_Yellowknife%2C_Canada_(5325119239).jpg?width=1280",
+   "tekija": "TravelingOtter from Houston, Texas, USA",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Frosty_Skyline_-_Yellowknife%2C_Canada_(5325119239).jpg",
+   "selite": "Lumisen kallion takaa kohoavat Yellowknifen keskustan korkeimmat rakennukset.",
+   "leveys": 3888,
+   "korkeus": 2177,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Yellowknife, NT (3917572333).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Yellowknife%2C_NT_(3917572333).jpg?width=1280",
+   "tekija": "Shawn from Airdrie, Canada",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Yellowknife%2C_NT_(3917572333).jpg",
+   "selite": "Ilmakuvassa kaupunki ja lentokenttä sijaitsevat Kanadan kilven havumetsäisellä tasangolla.",
+   "leveys": 4290,
+   "korkeus": 2856,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

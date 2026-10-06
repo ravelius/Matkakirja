@@ -1,0 +1,287 @@
+{
+ "kaupunki": "murzuk",
+ "kaupunkiQ": "Q526822",
+ "kohteet": [
+  {
+   "q": "Q138647396",
+   "nimi": "Qala at Turk",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 25.91546,
+   "lon": 13.91051,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Castle and old mosque of Murzuq, Libya 3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Castle_and_old_mosque_of_Murzuq%2C_Libya_3.jpg?width=1280",
+     "tekija": "Syed Wali Peeran",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Castle_and_old_mosque_of_Murzuq%2C_Libya_3.jpg",
+     "selite": "Turkkilaisten linna kohoaa savikukkulan päällä Murzukin vanhan kaupungin yllä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Murzuq - Festung Qala at Turk über dem Ort.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Murzuq_-_Festung_Qala_at_Turk_%C3%BCber_dem_Ort.jpg?width=1280",
+     "tekija": "Franzfoto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Murzuq_-_Festung_Qala_at_Turk_%C3%BCber_dem_Ort.jpg",
+     "selite": "Linnan paksut savimuurit ja hammaslaidat hehkuvat aavikon iltavalossa.",
+     "leveys": 4000,
+     "korkeus": 2253,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "The Castle and old mosque of Murzuq, Libya 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Castle_and_old_mosque_of_Murzuq%2C_Libya_2.jpg?width=1280",
+     "tekija": "Syed Wali Peeran",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Castle_and_old_mosque_of_Murzuq%2C_Libya_2.jpg",
+     "selite": "Linnan vieressä seisoo vanha moskeija, jonka vihreäkärkinen minareetti erottuu savitalojen yllä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1424460",
+   "nimi": "Ubari",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 26.58333,
+   "lon": 12.76667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Oasis in Libya.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Oasis_in_Libya.jpg?width=1280",
+     "tekija": "Sfivat",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Oasis_in_Libya.jpg",
+     "selite": "Ubarin järvet säilyvät hiekkadyynien sylissä palmujen ympäröiminä keitaina.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Libya 5391 Ubari Lakes Luca Galuzzi 2007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Libya_5391_Ubari_Lakes_Luca_Galuzzi_2007.jpg?width=1280",
+     "tekija": "Luca Galuzzi (Lucag)",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Libya_5391_Ubari_Lakes_Luca_Galuzzi_2007.jpg",
+     "selite": "Palmut ja ruoko reunustavat kirkasta järveä, jonka takana nousee korkea dyyni.",
+     "leveys": 2000,
+     "korkeus": 1333,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Erg Awbari, 2003.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Erg_Awbari%2C_2003.jpg?width=1280",
+     "tekija": "Waielbi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Erg_Awbari%2C_2003.jpg",
+     "selite": "Ubarin keidas on vihreä läikkä Saharan hiekkamerellä.",
+     "leveys": 2667,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q117654",
+   "nimi": "Germa",
+   "peruste": "sitelinks",
+   "koko_m": 1200,
+   "lat": 26.53333,
+   "lon": 13.06667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Garma (Garama) - Ruinen der antiken Stadt Garama.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Garma_(Garama)_-_Ruinen_der_antiken_Stadt_Garama.jpg?width=1280",
+     "tekija": "Franzfoto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Garma_(Garama)_-_Ruinen_der_antiken_Stadt_Garama.jpg",
+     "selite": "German savimuurien rauniot ovat garamanttien muinaisen Garaman jäänteitä.",
+     "leveys": 4000,
+     "korkeus": 2346,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Garma (Garama) - Ruinen der antiken Stadt Garama 05.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Garma_(Garama)_-_Ruinen_der_antiken_Stadt_Garama_05.jpg?width=1280",
+     "tekija": "Franzfoto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Garma_(Garama)_-_Ruinen_der_antiken_Stadt_Garama_05.jpg",
+     "selite": "Rapautuneet savitalot kertovat kaupungista, joka oli antiikin aikana Saharan kauppareittien solmukohta.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Garma (Garama) - Ruinen der antiken Stadt Garma 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Garma_(Garama)_-_Ruinen_der_antiken_Stadt_Garma_02.jpg?width=1280",
+     "tekija": "Franzfoto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Garma_(Garama)_-_Ruinen_der_antiken_Stadt_Garma_02.jpg",
+     "selite": "Muurien jäänteet kohoavat hiekasta Fezzanin kuivalla tasangolla.",
+     "leveys": 3322,
+     "korkeus": 2991,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3326866",
+   "nimi": "Murzukin hiekkameri",
+   "peruste": "pelin nosto",
+   "koko_m": 40000,
+   "lat": 25,
+   "lon": 13,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "ISS-64 Sahara Desert, Murzuq District in central Libya.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ISS-64_Sahara_Desert%2C_Murzuq_District_in_central_Libya.jpg?width=1280",
+     "tekija": "NASA",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ISS-64_Sahara_Desert%2C_Murzuq_District_in_central_Libya.jpg",
+     "selite": "Avaruusasemalta Murzukin hiekkameren dyynit ja kalliorinteet näkyvät aavikon kaarevina viivoina.",
+     "leveys": 4928,
+     "korkeus": 2768,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "ISS-42 Murzuq Desert in Libya.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ISS-42_Murzuq_Desert_in_Libya.jpg?width=1280",
+     "tekija": "NASA/Terry Virts",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ISS-42_Murzuq_Desert_in_Libya.jpg",
+     "selite": "Murzukin hiekkameri ulottuu Fezzanin eteläosassa kauas horisonttiin.",
+     "leveys": 3280,
+     "korkeus": 4928,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3457262",
+   "nimi": "Ubarin hiekkameri",
+   "peruste": "sitelinks",
+   "koko_m": 20000,
+   "lat": 27.33333,
+   "lon": 12,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Libya 4608 Idehan Ubari Dunes Luca Galuzzi 2007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Libya_4608_Idehan_Ubari_Dunes_Luca_Galuzzi_2007.jpg?width=1280",
+     "tekija": "Luca Galuzzi (Lucag)",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Libya_4608_Idehan_Ubari_Dunes_Luca_Galuzzi_2007.jpg",
+     "selite": "Idehan Ubarin dyynit nousevat Fezzanin lounaisosassa pehmeinä, korkeina harjanteina.",
+     "leveys": 2000,
+     "korkeus": 1333,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q208389",
+   "nimi": "Sabha",
+   "peruste": "sitelinks",
+   "koko_m": 2500,
+   "lat": 27.03333,
+   "lon": 14.43333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Al-Fadl ibn Abbas Mosque, Sabha.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Al-Fadl_ibn_Abbas_Mosque%2C_Sabha.jpg?width=1280",
+     "tekija": "مريم محمد الروادي",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Al-Fadl_ibn_Abbas_Mosque%2C_Sabha.jpg",
+     "selite": "Sabha on Fezzanin suurin kaupunki, ja sen moskeijat ovat kaupungin keskeisiä maamerkkejä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q285287",
+   "nimi": "Qatrun",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 24.89,
+   "lon": 14.53,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "El Gatrun01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/El_Gatrun01.jpg?width=1280",
+     "tekija": "Unknown photographer",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:El_Gatrun01.jpg",
+     "selite": "Qatrun on Murzukin eteläpuolinen keidaskaupunki, josta karavaanit lähtivät kohti Tšadia.",
+     "leveys": 1226,
+     "korkeus": 767,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "AFR V2 D101 General view of Murzuk.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AFR_V2_D101_General_view_of_Murzuk.jpg?width=1280",
+   "tekija": "Élisée Reclus",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:AFR_V2_D101_General_view_of_Murzuk.jpg",
+   "selite": "Vanha kuvitus näyttää Murzukin savitalojen kaupungin ja linnan, ja karavaani lähestyy sitä hiekkatietä pitkin.",
+   "leveys": 3027,
+   "korkeus": 2091,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Murzuq - Moschee und Festung Qala at Turk.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Murzuq_-_Moschee_und_Festung_Qala_at_Turk.jpg?width=1280",
+   "tekija": "Franzfoto",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Murzuq_-_Moschee_und_Festung_Qala_at_Turk.jpg",
+   "selite": "Savikaaren läpi näkyvät vanhan kaupungin moskeija ja linnan muurit.",
+   "leveys": 3000,
+   "korkeus": 4000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

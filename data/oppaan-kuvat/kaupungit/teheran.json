@@ -1,0 +1,672 @@
+{
+ "kaupunki": "teheran",
+ "kaupunkiQ": "Q3616",
+ "kohteet": [
+  {
+   "q": "Q1140026",
+   "nimi": "Azadin torni",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 35.69972,
+   "lon": 51.33806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Azadi Tower, Tehran.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Azadi_Tower%2C_Tehran.jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Azadi_Tower%2C_Tehran.jpg",
+     "selite": "Azadin torni on Teheranin tunnetuin maamerkki, ja sen kaareva marmoriristikko avautuu kaupungin länsiportille.",
+     "leveys": 4828,
+     "korkeus": 3219,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Azadi(Shahyad)\" tower full view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Azadi(Shahyad)%22_tower_full_view.jpg?width=1280",
+     "tekija": "Mojde fr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Azadi(Shahyad)%22_tower_full_view.jpg",
+     "selite": "Torni valmistui 1971, ja se rakennettiin alun perin Persian valtakunnan 2500-vuotisjuhlan muistomerkiksi.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "\"Azadi(Shahyad)\" tower side view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Azadi(Shahyad)%22_tower_side_view.jpg?width=1280",
+     "tekija": "Mojde fr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Azadi(Shahyad)%22_tower_side_view.jpg",
+     "selite": "Tornin julkisivu on koottu tuhansista leikatuista valkoisista kivilaatoista.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "\"Azadi(Shahyad)\" tower under view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Azadi(Shahyad)%22_tower_under_view.jpg?width=1280",
+     "tekija": "Mojde fr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Azadi(Shahyad)%22_tower_under_view.jpg",
+     "selite": "Kaaren alapintaa peittää turkoosilaattojen koristama ristikko.",
+     "leveys": 5723,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q622796",
+   "nimi": "Milad-torni",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 35.74461,
+   "lon": 51.37533,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "برج میلاد و کوه دماوند از آزادراه تهران کرج - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%A8%D8%B1%D8%AC_%D9%85%DB%8C%D9%84%D8%A7%D8%AF_%D9%88_%DA%A9%D9%88%D9%87_%D8%AF%D9%85%D8%A7%D9%88%D9%86%D8%AF_%D8%A7%D8%B2_%D8%A2%D8%B2%D8%A7%D8%AF%D8%B1%D8%A7%D9%87_%D8%AA%D9%87%D8%B1%D8%A7%D9%86_%DA%A9%D8%B1%D8%AC_-_panoramio.jpg?width=1280",
+     "tekija": "‫سید محمود جوادی‬‎",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%A8%D8%B1%D8%AC_%D9%85%DB%8C%D9%84%D8%A7%D8%AF_%D9%88_%DA%A9%D9%88%D9%87_%D8%AF%D9%85%D8%A7%D9%88%D9%86%D8%AF_%D8%A7%D8%B2_%D8%A2%D8%B2%D8%A7%D8%AF%D8%B1%D8%A7%D9%87_%D8%AA%D9%87%D8%B1%D8%A7%D9%86_%DA%A9%D8%B1%D8%AC_-_panoramio.jpg",
+     "selite": "Milad-torni kohoaa Teheranin pohjoisosassa, ja kaukana taustalla erottuu Damavand-tulivuori.",
+     "leveys": 1778,
+     "korkeus": 1000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sharif University and Milad tower in a frame - Tehran, Iran.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sharif_University_and_Milad_tower_in_a_frame_-_Tehran%2C_Iran.jpg?width=1280",
+     "tekija": "Md4956",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sharif_University_and_Milad_tower_in_a_frame_-_Tehran%2C_Iran.jpg",
+     "selite": "Torni näkyy lähes kaikkialle kaupunkiin Elburzin vuorten edessä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q210610",
+   "nimi": "Golestanin palatsi",
+   "peruste": "UNESCO",
+   "koko_m": 200,
+   "lat": 35.67972,
+   "lon": 51.42028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Milad-poorali.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Milad-poorali.jpg?width=1280",
+     "tekija": "Miladpoorali",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Milad-poorali.jpg",
+     "selite": "Golestanin palatsin tuulitornit ovat qajar-ajan Teheranin symboleja.",
+     "leveys": 2400,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1047.GolestanMuseum (1405206037).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1047.GolestanMuseum_(1405206037).jpg?width=1280",
+     "tekija": "Ensie & Matthias from San Diego, California, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1047.GolestanMuseum_(1405206037).jpg",
+     "selite": "Peilisalin seiniä ja kattoa peittävät tuhannet pienet peililaatat.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "1049.GolestanMuseum (1406096964).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1049.GolestanMuseum_(1406096964).jpg?width=1280",
+     "tekija": "Ensie & Matthias from San Diego, California, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1049.GolestanMuseum_(1406096964).jpg",
+     "selite": "Palatsin salit hohtavat peiliä, lasimaalauksia ja punaisia mattoja.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1548608",
+   "nimi": "Teheranin suuri basaari",
+   "peruste": "pelin nosto",
+   "koko_m": 800,
+   "lat": 35.6769,
+   "lon": 51.42383,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Grand Bazaar, Tehran 12.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Bazaar%2C_Tehran_12.jpg?width=1280",
+     "tekija": "Antoine Taveneaux",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Bazaar%2C_Tehran_12.jpg",
+     "selite": "Teheranin suuri basaari on katettu kauppakatujen verkosto, jossa on värillisiä lasimaalaus-ikkunoita.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tehran Bazaar 2002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tehran_Bazaar_2002.jpg?width=1280",
+     "tekija": "GTVM92",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tehran_Bazaar_2002.jpg",
+     "selite": "Basaarin sisäänkäynnin rakennus sijaitsee Teheranin vanhan keskustan sydämessä.",
+     "leveys": 1210,
+     "korkeus": 908,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "1057.Bazaar (1405213049).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1057.Bazaar_(1405213049).jpg?width=1280",
+     "tekija": "Ensie & Matthias from San Diego, California, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1057.Bazaar_(1405213049).jpg",
+     "selite": "Basaarin tiilikupolit kohoavat kauppakäytävien yläpuolelle.",
+     "leveys": 1200,
+     "korkeus": 1800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1631008",
+   "nimi": "Iranin kansallismuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 35.68704,
+   "lon": 51.41461,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "National museum of Iran, Tehran (2024).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_museum_of_Iran%2C_Tehran_(2024).jpg?width=1280",
+     "tekija": "Parsa 2au",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_museum_of_Iran%2C_Tehran_(2024).jpg",
+     "selite": "Iranin kansallismuseon julkisivua hallitsee Sassanidien Ktesifonin palatsin kaarta muistuttava holvi.",
+     "leveys": 8000,
+     "korkeus": 6000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Národní muzeum Íránu.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/N%C3%A1rodn%C3%AD_muzeum_%C3%8Dr%C3%A1nu.jpg?width=1280",
+     "tekija": "Ondřej Žváček",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:N%C3%A1rodn%C3%AD_muzeum_%C3%8Dr%C3%A1nu.jpg",
+     "selite": "Museon tiilirakennus valmistui 1930-luvulla ja sen esineet ulottuvat esihistoriasta islamin aikaan.",
+     "leveys": 3350,
+     "korkeus": 2003,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "National Museum of Iran (21018141301).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/National_Museum_of_Iran_(21018141301).jpg?width=1280",
+     "tekija": "s1ingshot from Berlin, Germany",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:National_Museum_of_Iran_(21018141301).jpg",
+     "selite": "Tiiliseinää rytmittävät pitkät pilasterit ja kapeat ikkunat.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1969012",
+   "nimi": "Sa'dabadin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 35.81722,
+   "lon": 51.42361,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sadabad9.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sadabad9.jpg?width=1280",
+     "tekija": "Ahura21",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sadabad9.jpg",
+     "selite": "Sa'dabadin palatsialueen Vihreä palatsi on Teheranin pohjoisosan rinteillä olevan puiston keskipiste.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1کاخ موزه سعدآباد.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1%DA%A9%D8%A7%D8%AE_%D9%85%D9%88%D8%B2%D9%87_%D8%B3%D8%B9%D8%AF%D8%A2%D8%A8%D8%A7%D8%AF.jpg?width=1280",
+     "tekija": "Elajan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1%DA%A9%D8%A7%D8%AE_%D9%85%D9%88%D8%B2%D9%87_%D8%B3%D8%B9%D8%AF%D8%A2%D8%A8%D8%A7%D8%AF.jpg",
+     "selite": "Palatsialueen rakennukset ovat nykyään museoita.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20191106135533 IMG 1657.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20191106135533_IMG_1657.jpg?width=1280",
+     "tekija": "Nasser-sadeghi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20191106135533_IMG_1657.jpg",
+     "selite": "Palatsipuiston portit ja paviljongit on koristeltu tiilellä ja laatoilla.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5691633",
+   "nimi": "Tabiat-silta",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 35.75442,
+   "lon": 51.4205,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tabiat bridge itself.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tabiat_bridge_itself.jpg?width=1280",
+     "tekija": "IRANforeever",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tabiat_bridge_itself.jpg",
+     "selite": "Tabiat-silta on kolmitasoinen jalankulkusilta, joka yhdistää kaksi puistoa moottoritien yli.",
+     "leveys": 4096,
+     "korkeus": 1840,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tabiat-Bridge-by-DIBA-group.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tabiat-Bridge-by-DIBA-group.jpg?width=1280",
+     "tekija": "Diba Tensile Architecture",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tabiat-Bridge-by-DIBA-group.jpg",
+     "selite": "Silta kaartuu puiden yli ja Elburz-vuoret erottuvat taustalla.",
+     "leveys": 1772,
+     "korkeus": 1181,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Tabiat bridge scenery.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tabiat_bridge_scenery.jpg?width=1280",
+     "tekija": "IRANforeever",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tabiat_bridge_scenery.jpg",
+     "selite": "Sillan takana avautuu Teheranin kaupunkimaisema.",
+     "leveys": 4096,
+     "korkeus": 1840,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1984633",
+   "nimi": "Niavaranin palatsialue",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 35.81083,
+   "lon": 51.47167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2019-01-07 Iran, Tehran, Niavaran Mansion DSC 7644 DxO6 PS.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019-01-07_Iran%2C_Tehran%2C_Niavaran_Mansion_DSC_7644_DxO6_PS.jpg?width=1280",
+     "tekija": "Laurens R. Krol",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019-01-07_Iran%2C_Tehran%2C_Niavaran_Mansion_DSC_7644_DxO6_PS.jpg",
+     "selite": "Niavaranin palatsissa on korkea valoisa halli, jossa on parveke ja marmorilattia.",
+     "leveys": 2822,
+     "korkeus": 4249,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2019-01-07 Iran, Tehran, Niavaran Mansion DSC 7679 DxO6 PS AF.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019-01-07_Iran%2C_Tehran%2C_Niavaran_Mansion_DSC_7679_DxO6_PS_AF.jpg?width=1280",
+     "tekija": "Laurens R. Krol",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019-01-07_Iran%2C_Tehran%2C_Niavaran_Mansion_DSC_7679_DxO6_PS_AF.jpg",
+     "selite": "Palatsin sisätilat on kalustettu 1970-luvun kuninkaallisen perheen tyyliin.",
+     "leveys": 2537,
+     "korkeus": 4316,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q737835",
+   "nimi": "Teheranin yliopisto",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 35.70411,
+   "lon": 51.39513,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "CAM-A (220).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/CAM-A_(220).jpg?width=1280",
+     "tekija": "نوشین جعفریه",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:CAM-A_(220).jpg",
+     "selite": "Teheranin yliopisto on Iranin vanhin moderni yliopisto, ja sen kampus sijaitsee kaupungin keskustassa.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "University of Tehran 1704.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/University_of_Tehran_1704.jpg?width=1280",
+     "tekija": "GTVM92",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:University_of_Tehran_1704.jpg",
+     "selite": "Kampuksen rakennukset ovat modernia 1900-luvun arkkitehtuuria.",
+     "leveys": 1280,
+     "korkeus": 622,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1165599",
+   "nimi": "Dar ul-Funun",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 35.68375,
+   "lon": 51.42192,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "دارالفنون.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%AF%D8%A7%D8%B1%D8%A7%D9%84%D9%81%D9%86%D9%88%D9%86.jpg?width=1280",
+     "tekija": "Neda alipour",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%AF%D8%A7%D8%B1%D8%A7%D9%84%D9%81%D9%86%D9%88%D9%86.jpg",
+     "selite": "Dar ul-Funun perustettiin 1851 Iranin ensimmäiseksi nykyaikaiseksi korkeakouluksi.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Dar al fonon.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dar_al_fonon.jpg?width=1280",
+     "tekija": "Shahriard60",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Dar_al_fonon.jpg",
+     "selite": "Sisäänkäynnin kaareva portaali on koristeltu sinisin laatoin.",
+     "leveys": 1836,
+     "korkeus": 2940,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q970335",
+   "nimi": "Iranin mattomuseo",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 35.71414,
+   "lon": 51.39092,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2011 Carpet Museum of Iran Tehran 6224109834.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011_Carpet_Museum_of_Iran_Tehran_6224109834.jpg?width=1280",
+     "tekija": "reibai",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011_Carpet_Museum_of_Iran_Tehran_6224109834.jpg",
+     "selite": "Iranin mattomuseo sijaitsee Laleh-puiston reunalla Teheranin keskustassa.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2011 Carpet Museum of Iran Tehran 6223587791.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2011_Carpet_Museum_of_Iran_Tehran_6223587791.jpg?width=1280",
+     "tekija": "reibai",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2011_Carpet_Museum_of_Iran_Tehran_6223587791.jpg",
+     "selite": "Museon salissa on esillä satoja vuosia vanhoja mattoja.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1756399",
+   "nimi": "Teheranin nykytaiteen museo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 35.71139,
+   "lon": 51.39056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "موزه هنرهای معاصر.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D9%85%D9%88%D8%B2%D9%87_%D9%87%D9%86%D8%B1%D9%87%D8%A7%DB%8C_%D9%85%D8%B9%D8%A7%D8%B5%D8%B1.jpg?width=1280",
+     "tekija": "Setinas",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D9%85%D9%88%D8%B2%D9%87_%D9%87%D9%86%D8%B1%D9%87%D8%A7%DB%8C_%D9%85%D8%B9%D8%A7%D8%B5%D8%B1.jpg",
+     "selite": "Nykytaiteen museo on 1970-luvulla rakennettu betonirakennus, jota ympäröi veistospuisto.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tehran Museum of Contemporary Art-1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tehran_Museum_of_Contemporary_Art-1.jpg?width=1280",
+     "tekija": "Farid.R",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tehran_Museum_of_Contemporary_Art-1.jpg",
+     "selite": "Museon kokoelmissa on länsimaisen modernin taiteen mestariteoksia.",
+     "leveys": 3120,
+     "korkeus": 4160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q653535",
+   "nimi": "Azadin stadion",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 35.72442,
+   "lon": 51.27553,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Azadi Stadium ACL 2018.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Azadi_Stadium_ACL_2018.jpg?width=1280",
+     "tekija": "Mahdi Zare/Fars News Agency",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Azadi_Stadium_ACL_2018.jpg",
+     "selite": "Azadin stadion on Iranin kansallisstadion, jolle mahtuu ennätysyleisö.",
+     "leveys": 1280,
+     "korkeus": 675,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1641913",
+   "nimi": "Imamzadeh Saleh",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 35.80511,
+   "lon": 51.42986,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "امامزاده صالح.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D8%A7%D9%85%D8%A7%D9%85%D8%B2%D8%A7%D8%AF%D9%87_%D8%B5%D8%A7%D9%84%D8%AD.jpg?width=1280",
+     "tekija": "AliAKHA",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D8%A7%D9%85%D8%A7%D9%85%D8%B2%D8%A7%D8%AF%D9%87_%D8%B5%D8%A7%D9%84%D8%AD.jpg",
+     "selite": "Imamzadeh Salehin pyhäkkö Tadžrishin alueella on yksi Teheranin tärkeimmistä šiialaisista pyhiinvaelluskohteista.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "10-teheran (16085824248).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/10-teheran_(16085824248).jpg?width=1280",
+     "tekija": "anmede",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:10-teheran_(16085824248).jpg",
+     "selite": "Pyhäkön minareetteja ja kupolia peittävät turkoosit laatat.",
+     "leveys": 3448,
+     "korkeus": 4592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q50826657",
+   "nimi": "Bagh-e Mellin portti",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 35.68603,
+   "lon": 51.41686,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tehran National Garden Entrance.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tehran_National_Garden_Entrance.jpg?width=1280",
+     "tekija": "Sasan Geranmehr",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tehran_National_Garden_Entrance.jpg",
+     "selite": "Bagh-e Mellin eli Kansallispuiston portti on koristeltu laatoin ja johtaa vanhaan hallintokortteliin.",
+     "leveys": 5000,
+     "korkeus": 5000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5945207",
+   "nimi": "Sepahsalarin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 35.68878,
+   "lon": 51.43306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sepahsalar Mosque in Tehran.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sepahsalar_Mosque_in_Tehran.jpg?width=1280",
+     "tekija": "Photographer unknown -- scanned, cleaned, optimized and uploaded by MJJR",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sepahsalar_Mosque_in_Tehran.jpg",
+     "selite": "Sepahsalarin moskeija on qajar-ajan rakennus, jonka minareetit ovat Teheranin keskustan maamerkkejä.",
+     "leveys": 1770,
+     "korkeus": 1064,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Vista de Teherán desde la Torre Milad, Irán, 2016-09-17, DD 74.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_de_Teher%C3%A1n_desde_la_Torre_Milad%2C_Ir%C3%A1n%2C_2016-09-17%2C_DD_74.jpg?width=1280",
+   "tekija": "Diego Delso",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Teher%C3%A1n_desde_la_Torre_Milad%2C_Ir%C3%A1n%2C_2016-09-17%2C_DD_74.jpg",
+   "selite": "Teheran levittäytyy valtavana moottoriteiden halkomana kaupunkina Elburzin juurella.",
+   "leveys": 6904,
+   "korkeus": 4642,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "North of tehran.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/North_of_tehran.jpg?width=1280",
+   "tekija": "Amir Pashaei",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:North_of_tehran.jpg",
+   "selite": "Elburzin lumihuippuiset vuoret rajaavat Teheranin pohjoispuolen.",
+   "leveys": 14678,
+   "korkeus": 5804,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q1003130",
+   "nimi": "Imam Khomeinin aukio",
+   "peruste": "pelin nosto",
+   "lat": 35.68569,
+   "lon": 51.4215,
+   "syy": "ei sopivaa vapaata kuvaa (vesileima, historiallisia väkijoukkokuvia)"
+  }
+ ]
+}

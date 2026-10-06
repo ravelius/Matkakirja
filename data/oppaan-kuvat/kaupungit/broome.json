@@ -1,0 +1,277 @@
+{
+ "kaupunki": "broome",
+ "kaupunkiQ": "Q606294",
+ "kohteet": [
+  {
+   "q": "Q14205848",
+   "nimi": "Cable Beach",
+   "peruste": "pelin nosto",
+   "koko_m": 4000,
+   "lat": -17.9513,
+   "lon": 122.202,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Broome (2052477184).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Broome_(2052477184).jpg?width=1280",
+     "tekija": "Phil Whitehouse from London, United Kingdom",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Broome_(2052477184).jpg",
+     "selite": "Cable Beachin loputon valkoinen hiekkaranta aukeaa Intian valtamerelle.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Broome (2051691691).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Broome_(2051691691).jpg?width=1280",
+     "tekija": "Phil Whitehouse from London, United Kingdom",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Broome_(2051691691).jpg",
+     "selite": "Auringonlasku värjää taivaan punaiseksi Cable Beachin yllä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Broome Cable Beach - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Broome_Cable_Beach_-_panoramio.jpg?width=1280",
+     "tekija": "Korkut Tas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Broome_Cable_Beach_-_panoramio.jpg",
+     "selite": "Rannan nimi tulee vuoden 1889 lennätinkaapelista, joka tuli maihin tässä.",
+     "leveys": 5728,
+     "korkeus": 2052,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q21891020",
+   "nimi": "Gantheaume Point",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": -17.97327,
+   "lon": 122.17799,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Broome - Gantheaume Point 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Broome_-_Gantheaume_Point_03.jpg?width=1280",
+     "tekija": "Dan arndt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Broome_-_Gantheaume_Point_03.jpg",
+     "selite": "Punaiset hiekkakivikalliot kohoavat turkoosin meren rannalla Gantheaume Pointissa.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Broome sunset Gantheaume Point.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Broome_sunset_Gantheaume_Point.jpg?width=1280",
+     "tekija": "Jakson10123",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Broome_sunset_Gantheaume_Point.jpg",
+     "selite": "Auringonlasku näkyy Gantheaume Pointin kallioaukosta.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Broome - Gantheaume Point 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Broome_-_Gantheaume_Point_04.jpg?width=1280",
+     "tekija": "Dan arndt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Broome_-_Gantheaume_Point_04.jpg",
+     "selite": "Niemen kärjessä on rautainen majakkatorni, ja alhaisella vedellä kalliossa näkyvät dinosaurusten jäljet.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2161378",
+   "nimi": "Roebuck Bay",
+   "peruste": "pelin nosto",
+   "koko_m": 8000,
+   "lat": -18.11667,
+   "lon": 122.26667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sand beaches of northern Roebuck Bay, Broome, Western Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sand_beaches_of_northern_Roebuck_Bay%2C_Broome%2C_Western_Australia.jpg?width=1280",
+     "tekija": "Adam.J.W.C.",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sand_beaches_of_northern_Roebuck_Bay%2C_Broome%2C_Western_Australia.jpg",
+     "selite": "Roebuck Bayn punaisen kallion ja hiekan reunustama ranta Broomen kohdalla.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "ISS-65 Roebuck Bay, Western Australia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ISS-65_Roebuck_Bay%2C_Western_Australia.jpg?width=1280",
+     "tekija": "NASA",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ISS-65_Roebuck_Bay%2C_Western_Australia.jpg",
+     "selite": "Avaruudesta näkyvät Roebuck Bayn laajat vuorovesitasangot, joilla lukematon määrä lintuja ruokailee.",
+     "leveys": 5568,
+     "korkeus": 3712,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7638432",
+   "nimi": "Sun Pictures",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -17.95346,
+   "lon": 122.24307,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Broome - Sun Pictures 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Broome_-_Sun_Pictures_01.jpg?width=1280",
+     "tekija": "Dan arndt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Broome_-_Sun_Pictures_01.jpg",
+     "selite": "Sun Pictures on Chinatownin vanha ulkoilmaelokuvateatteri, jonka aaltopeltikatto on tunnettu maamerkki.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Broome - Sun Pictures 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Broome_-_Sun_Pictures_03.jpg?width=1280",
+     "tekija": "Dan arndt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Broome_-_Sun_Pictures_03.jpg",
+     "selite": "Teatterin julkisivu Carnarvon Streetillä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q55606009",
+   "nimi": "Broomen oikeustalo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -17.95695,
+   "lon": 122.24033,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Broome Courthouse, 2019 (01).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Broome_Courthouse%2C_2019_(01).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Broome_Courthouse%2C_2019_(01).jpg",
+     "selite": "Vanha oikeustalo seisoo puiston keskellä, ja sen ympärillä on nykyisin viikonloppumarkkinat.",
+     "leveys": 3698,
+     "korkeus": 2080,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Broome Courthouse, 2019 (02).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Broome_Courthouse%2C_2019_(02).jpg?width=1280",
+     "tekija": "Bahnfrend",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Broome_Courthouse%2C_2019_(02).jpg",
+     "selite": "Tiilipolku johtaa puiston läpi oikeustalon portaille.",
+     "leveys": 3643,
+     "korkeus": 2036,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1431002",
+   "nimi": "Broomen kansainvälinen lentoasema",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": -17.94472,
+   "lon": 122.23167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Broome International Airport terminal, September 2025 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Broome_International_Airport_terminal%2C_September_2025_01.jpg?width=1280",
+     "tekija": "DaHuzyBru",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Broome_International_Airport_terminal%2C_September_2025_01.jpg",
+     "selite": "Lentoasema on syrjäisen Kimberleyn tärkein portti ulkomaailmaan.",
+     "leveys": 5712,
+     "korkeus": 4284,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Airnorth aircraft at Broome International Airport, WA, 2022.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Airnorth_aircraft_at_Broome_International_Airport%2C_WA%2C_2022.jpg?width=1280",
+     "tekija": "Kgbo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Airnorth_aircraft_at_Broome_International_Airport%2C_WA%2C_2022.jpg",
+     "selite": "Airnorthin potkurikone odottaa matkustajia punaisen maan keskellä.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "WWII Broome Air Raid (50999132142).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/WWII_Broome_Air_Raid_(50999132142).jpg?width=1280",
+   "tekija": "U.S. Consulate General Perth",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:WWII_Broome_Air_Raid_(50999132142).jpg",
+   "selite": "Broomen ranta, jossa baobabpuu kasvaa punaisten kallioiden ja Roebuck Bayn matalan veden välissä.",
+   "leveys": 5914,
+   "korkeus": 3942,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Johnny Chi Lane, Chinatown, Broome, WA, Australia 03.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Johnny_Chi_Lane%2C_Chinatown%2C_Broome%2C_WA%2C_Australia_03.jpg?width=1280",
+   "tekija": "Ridiculopathy",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Johnny_Chi_Lane%2C_Chinatown%2C_Broome%2C_WA%2C_Australia_03.jpg",
+   "selite": "Chinatownin punainen portti Johnny Chi Lanella muistuttaa kaupungin kiinalaisista helmenpyytäjistä.",
+   "leveys": 4608,
+   "korkeus": 2592,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

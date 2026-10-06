@@ -1,0 +1,441 @@
+{
+ "kaupunki": "tabriz",
+ "kaupunkiQ": "Q80053",
+ "kohteet": [
+  {
+   "q": "Q4399",
+   "nimi": "Tabrizin basaari",
+   "peruste": "UNESCO",
+   "koko_m": 1000,
+   "lat": 38.08077,
+   "lon": 46.29229,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "GRAND BAZAR OF TABRIZ.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/GRAND_BAZAR_OF_TABRIZ.jpg?width=1280",
+     "tekija": "Rei nikoo",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:GRAND_BAZAR_OF_TABRIZ.jpg",
+     "selite": "Tabrizin basaari on maailman suurimpia katettuja basaareja, ja sen tiilikupolit peittävät kymmeniä kauppakatuja.",
+     "leveys": 1242,
+     "korkeus": 1531,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "1258.Bazaar.Tabriz (1470552741).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1258.Bazaar.Tabriz_(1470552741).jpg?width=1280",
+     "tekija": "Ensie & Matthias from San Diego, California, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1258.Bazaar.Tabriz_(1470552741).jpg",
+     "selite": "Basaarin pitkät tiiliholvit pitävät kauppakujat viileinä kesähelteellä.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "1244.Bazaar.Tabriz (1470550699).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1244.Bazaar.Tabriz_(1470550699).jpg?width=1280",
+     "tekija": "Ensie & Matthias from San Diego, California, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1244.Bazaar.Tabriz_(1470550699).jpg",
+     "selite": "Basaarin sisäänkäyntien puiset ovet johtavat khaneihin ja erikoistuneisiin kauppahalleihin.",
+     "leveys": 1800,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "1246.Bazaar.Tabriz (1470551499).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1246.Bazaar.Tabriz_(1470551499).jpg?width=1280",
+     "tekija": "Ensie & Matthias from San Diego, California, USA",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1246.Bazaar.Tabriz_(1470551499).jpg",
+     "selite": "Basaarin kujat jakautuvat toimialoittain, esimerkiksi mattokauppiaisiin ja kultasepille.",
+     "leveys": 1200,
+     "korkeus": 1800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1519733",
+   "nimi": "Sininen moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 38.07359,
+   "lon": 46.30108,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "11مسجد کبود.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/11%D9%85%D8%B3%D8%AC%D8%AF_%DA%A9%D8%A8%D9%88%D8%AF.jpg?width=1280",
+     "tekija": "Hussein Talal",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:11%D9%85%D8%B3%D8%AC%D8%AF_%DA%A9%D8%A8%D9%88%D8%AF.jpg",
+     "selite": "Tabrizin sininen moskeija rakennettiin 1400-luvulla, ja sitä on kutsuttu Turkoosiksi helmeksi.",
+     "leveys": 4128,
+     "korkeus": 3096,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "02مسجد کبود.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/02%D9%85%D8%B3%D8%AC%D8%AF_%DA%A9%D8%A8%D9%88%D8%AF.jpg?width=1280",
+     "tekija": "Parisamirzaee",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:02%D9%85%D8%B3%D8%AC%D8%AF_%DA%A9%D8%A8%D9%88%D8%AF.jpg",
+     "selite": "Moskeijan portaali on peitetty sinisillä ja turkoosinsävyisillä laatoilla.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4819526",
+   "nimi": "Tabrizin Jameh-moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 38.08099,
+   "lon": 46.29042,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Minarets masjed-e-jomeh tabriz.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Minarets_masjed-e-jomeh_tabriz.jpg?width=1280",
+     "tekija": "Fabienkhan",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Minarets_masjed-e-jomeh_tabriz.jpg",
+     "selite": "Tabrizin perjantaimoskeijan kaksi minareettia kohoavat basaarin pohjoispuolella.",
+     "leveys": 1704,
+     "korkeus": 2272,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Tabriz Friday Mosque.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tabriz_Friday_Mosque.jpg?width=1280",
+     "tekija": "Ivy Sugarfree",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tabriz_Friday_Mosque.jpg",
+     "selite": "Moskeijan holvikattoa koristaa tähtikuvioinen laattakoriste.",
+     "leveys": 2445,
+     "korkeus": 2445,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "مسجد جامع تبریز - عکاس مصطفی معراجی - ویکی دوستدار یادمان های 2025 ایران- معماری ایرانی 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D9%85%D8%B3%D8%AC%D8%AF_%D8%AC%D8%A7%D9%85%D8%B9_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2_-_%D8%B9%DA%A9%D8%A7%D8%B3_%D9%85%D8%B5%D8%B7%D9%81%DB%8C_%D9%85%D8%B9%D8%B1%D8%A7%D8%AC%DB%8C_-_%D9%88%DB%8C%DA%A9%DB%8C_%D8%AF%D9%88%D8%B3%D8%AA%D8%AF%D8%A7%D8%B1_%DB%8C%D8%A7%D8%AF%D9%85%D8%A7%D9%86_%D9%87%D8%A7%DB%8C_2025_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-_%D9%85%D8%B9%D9%85%D8%A7%D8%B1%DB%8C_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C_03.jpg?width=1280",
+     "tekija": "Mostafameraji",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D9%85%D8%B3%D8%AC%D8%AF_%D8%AC%D8%A7%D9%85%D8%B9_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2_-_%D8%B9%DA%A9%D8%A7%D8%B3_%D9%85%D8%B5%D8%B7%D9%81%DB%8C_%D9%85%D8%B9%D8%B1%D8%A7%D8%AC%DB%8C_-_%D9%88%DB%8C%DA%A9%DB%8C_%D8%AF%D9%88%D8%B3%D8%AA%D8%AF%D8%A7%D8%B1_%DB%8C%D8%A7%D8%AF%D9%85%D8%A7%D9%86_%D9%87%D8%A7%DB%8C_2025_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86-_%D9%85%D8%B9%D9%85%D8%A7%D8%B1%DB%8C_%D8%A7%DB%8C%D8%B1%D8%A7%D9%86%DB%8C_03.jpg",
+     "selite": "Moskeijan sisällä pitkät tiiliholvit lepäävät paksujen pylväiden varassa.",
+     "leveys": 4000,
+     "korkeus": 2667,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1968966",
+   "nimi": "Arg-linnoituksen torni",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 38.07236,
+   "lon": 46.28881,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20180906 140742 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20180906_140742_HDR.jpg?width=1280",
+     "tekija": "Mraalipour",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20180906_140742_HDR.jpg",
+     "selite": "Arg on Ali Shahin moskeijan jäljelle jäänyt jättimäinen tiilimuuri, joka kohoaa Tabrizin keskustassa.",
+     "leveys": 4160,
+     "korkeus": 2340,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6564652",
+   "nimi": "Saat-torni",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 38.07361,
+   "lon": 46.29556,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "85467میدان ساعت.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/85467%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D8%B3%D8%A7%D8%B9%D8%AA.jpg?width=1280",
+     "tekija": "Shadi vsg",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:85467%D9%85%DB%8C%D8%AF%D8%A7%D9%86_%D8%B3%D8%A7%D8%B9%D8%AA.jpg",
+     "selite": "Saat-torni on Tabrizin kaupungintalon kellotorni, ja sen edessä on aukio suihkulähteineen.",
+     "leveys": 2960,
+     "korkeus": 1960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2برج ساعت تبریز.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2%D8%A8%D8%B1%D8%AC_%D8%B3%D8%A7%D8%B9%D8%AA_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2.jpg?width=1280",
+     "tekija": "Aminlakestani",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2%D8%A8%D8%B1%D8%AC_%D8%B3%D8%A7%D8%B9%D8%AA_%D8%AA%D8%A8%D8%B1%DB%8C%D8%B2.jpg",
+     "selite": "Tornin tiilirakenteessa on suuri kellotaulu, ja sen päällä liehuu Iranin lippu.",
+     "leveys": 3168,
+     "korkeus": 4752,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q723951",
+   "nimi": "Azerbaidžanin museo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 38.07333,
+   "lon": 46.3,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Azerbaijan Museum, Tabriz, Iran, entrance.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Azerbaijan_Museum%2C_Tabriz%2C_Iran%2C_entrance.jpg?width=1280",
+     "tekija": "Navid Sadighi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Azerbaijan_Museum%2C_Tabriz%2C_Iran%2C_entrance.jpg",
+     "selite": "Azerbaidžanin museon tiilijulkisivu sijaitsee Tabrizin keskustassa, ja sen kokoelmissa on esineitä Iranin pohjoisosista.",
+     "leveys": 1289,
+     "korkeus": 886,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4810130",
+   "nimi": "Perustuslakitalo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 38.08171,
+   "lon": 46.28862,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "House-of-Constitutional-Revolution.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/House-of-Constitutional-Revolution.jpg?width=1280",
+     "tekija": "Shervinafshar",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:House-of-Constitutional-Revolution.jpg",
+     "selite": "Perustuslakitalo kertoo Iranin perustuslaillisesta vallankumouksesta 1900-luvun alussa.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4810167",
+   "nimi": "El Goli",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 38.02532,
+   "lon": 46.3656,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "040315-ilgoli-IMG 7540-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/040315-ilgoli-IMG_7540-2.jpg?width=1280",
+     "tekija": "Safa.daneshvar",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:040315-ilgoli-IMG_7540-2.jpg",
+     "selite": "El Golin puistossa paviljonki seisoo keskellä keinotekoista allasta.",
+     "leveys": 3900,
+     "korkeus": 2600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "040315-ilgoli-IMG 7558-2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/040315-ilgoli-IMG_7558-2.jpg?width=1280",
+     "tekija": "Safa.daneshvar",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:040315-ilgoli-IMG_7558-2.jpg",
+     "selite": "Paviljonki heijastuu puiston altaaseen puiden ympäröimänä.",
+     "leveys": 4200,
+     "korkeus": 2800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2569026",
+   "nimi": "Runoilijoiden mausoleumi",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 38.08367,
+   "lon": 46.30344,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Maqbaratoshoara 4.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maqbaratoshoara_4.JPG?width=1280",
+     "tekija": "Elmju",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Maqbaratoshoara_4.JPG",
+     "selite": "Runoilijoiden mausoleumi on rakennettu muistoksi Tabrizin runoilijoille ja oppineille.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "--Şairlər məqbərəsi, Təbriz 20220 (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/--%C5%9Eairl%C9%99r_m%C9%99qb%C9%99r%C9%99si%2C_T%C9%99briz_20220_(1).jpg?width=1280",
+     "tekija": "Rəcəb Yaxşı",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:--%C5%9Eairl%C9%99r_m%C9%99qb%C9%99r%C9%99si%2C_T%C9%99briz_20220_(1).jpg",
+     "selite": "Mausoleumin kulmikkaat betonirakenteet muodostavat taivasta vasten leikkautuvan siluetin.",
+     "leveys": 3024,
+     "korkeus": 2449,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4746621",
+   "nimi": "Amir Nezamin talo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 38.08308,
+   "lon": 46.306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Qajar musem.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Qajar_musem.jpg?width=1280",
+     "tekija": "Behrad.52.2020",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Qajar_musem.jpg",
+     "selite": "Amir Nezamin talon piha on qajar-ajan kaupunkikartano, jonka keskellä on pitkä vesiallas.",
+     "leveys": 1500,
+     "korkeus": 1000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "-Əmir Nizam evi, Təbriz 202209 (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-%C6%8Fmir_Nizam_evi%2C_T%C9%99briz_202209_(1).jpg?width=1280",
+     "tekija": "Rəcəb Yaxşı",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-%C6%8Fmir_Nizam_evi%2C_T%C9%99briz_202209_(1).jpg",
+     "selite": "Talon sisäpihaa reunustaa vesiallas ja koristeelliset julkisivut.",
+     "leveys": 3556,
+     "korkeus": 1860,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4810730",
+   "nimi": "Eynali-vuori",
+   "peruste": "pelin nosto",
+   "koko_m": 2000,
+   "lat": 38.10556,
+   "lon": 46.32222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mount Own ibn Ali.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Own_ibn_Ali.JPG?width=1280",
+     "tekija": "Elmju",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mount_Own_ibn_Ali.JPG",
+     "selite": "Eynali-vuori kohoaa Tabrizin pohjoispuolella.",
+     "leveys": 1280,
+     "korkeus": 720,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5964315",
+   "nimi": "Tabrizin metro",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 38.07389,
+   "lon": 46.29611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tabriz Metro on Bridge.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tabriz_Metro_on_Bridge.jpg?width=1280",
+     "tekija": "AmirAK",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tabriz_Metro_on_Bridge.jpg",
+     "selite": "Tabrizin metro kulkee kaupungin halki, ja osa linjasta on nostettu sillalle.",
+     "leveys": 2257,
+     "korkeus": 1532,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Panorama of Tabriz.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Panorama_of_Tabriz.jpg?width=1280",
+   "tekija": "Hoseinb007",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Panorama_of_Tabriz.jpg",
+   "selite": "Tabriz levittäytyy vuorten ympäröimälle tasangolle ja puistojen reunustamien kaupunginosien ympärille.",
+   "leveys": 2800,
+   "korkeus": 1200,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "2007 Tabriz 1470546283.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2007_Tabriz_1470546283.jpg?width=1280",
+   "tekija": "Ensie & Matthias from San Diego, California, USA",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2007_Tabriz_1470546283.jpg",
+   "selite": "Tabrizin kaupunki ja ruskeat vuoret taustalla.",
+   "leveys": 1800,
+   "korkeus": 1200,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

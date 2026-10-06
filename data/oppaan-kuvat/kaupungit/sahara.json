@@ -1,0 +1,529 @@
+{
+ "kaupunki": "sahara",
+ "kaupunkiQ": "Q6583",
+ "kohteet": [
+  {
+   "q": "Q190048",
+   "nimi": "Tassili n'Ajjer",
+   "peruste": "UNESCO",
+   "koko_m": 4000,
+   "lat": 25.66667,
+   "lon": 9,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tassili Desert Algeria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tassili_Desert_Algeria.jpg?width=1280",
+     "tekija": "magharebia",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tassili_Desert_Algeria.jpg",
+     "selite": "Tassili n'Ajjerin hiekkakivipylväät kohoavat Saharan hiekkaerämaasta kuin kivinen metsä.",
+     "leveys": 2244,
+     "korkeus": 1534,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\" La Vache Qui Pleure\" Parc National du Tassili . Algérie..jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22_La_Vache_Qui_Pleure%22_Parc_National_du_Tassili_._Alg%C3%A9rie..jpg?width=1280",
+     "tekija": "Akli salah",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22_La_Vache_Qui_Pleure%22_Parc_National_du_Tassili_._Alg%C3%A9rie..jpg",
+     "selite": "Itkevän lehmän kivimuodostuma seisoo oranssin hiekan keskellä.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20140501 170953 IHRIR OASES IN TASSILI.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20140501_170953_IHRIR_OASES_IN_TASSILI.jpg?width=1280",
+     "tekija": "فهد33",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20140501_170953_IHRIR_OASES_IN_TASSILI.jpg",
+     "selite": "Ihririn keidas kätkee palmuja ja vettä kuivan vuoriston syliin.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q308807",
+   "nimi": "Tadrart Acacus",
+   "peruste": "UNESCO",
+   "koko_m": 4000,
+   "lat": 24.83343,
+   "lon": 10.33332,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Akakus-Gebirge - Bizarre Felsformationen.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Akakus-Gebirge_-_Bizarre_Felsformationen.jpg?width=1280",
+     "tekija": "Franzfoto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Akakus-Gebirge_-_Bizarre_Felsformationen.jpg",
+     "selite": "Akakusin vuoriston oudot kallionmuodot kohoavat hiekkadyynien keskeltä.",
+     "leveys": 3996,
+     "korkeus": 2289,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Libya 5076 Tadrart Acacus Luca Galuzzi 2007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Libya_5076_Tadrart_Acacus_Luca_Galuzzi_2007.jpg?width=1280",
+     "tekija": "Luca Galuzzi (Lucag)",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Libya_5076_Tadrart_Acacus_Luca_Galuzzi_2007.jpg",
+     "selite": "Kapea kalliokuilu halkoo Acacuksen hiekkakivimassiivin.",
+     "leveys": 2000,
+     "korkeus": 1333,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Libya 4985 Tadrart Acacus Luca Galuzzi 2007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Libya_4985_Tadrart_Acacus_Luca_Galuzzi_2007.jpg?width=1280",
+     "tekija": "Luca Galuzzi (Lucag)",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Libya_4985_Tadrart_Acacus_Luca_Galuzzi_2007.jpg",
+     "selite": "Acacuksen punertavat dyynit kohtaavat tummat vuorenharjanteet.",
+     "leveys": 2000,
+     "korkeus": 1333,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q744591",
+   "nimi": "Richatin rakennelma",
+   "peruste": "sitelinks",
+   "koko_m": 40000,
+   "lat": 21.124,
+   "lon": -11.402,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Eyeing the Richat Structure (1212324 - lrg).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eyeing_the_Richat_Structure_(1212324_-_lrg).jpg?width=1280",
+     "tekija": "NASA Earth Observatory/Lauren Dauphin",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eyeing_the_Richat_Structure_(1212324_-_lrg).jpg",
+     "selite": "Richatin rakennelma erottuu avaruudesta Saharan silmänä, ja sen halkaisija on kymmeniä kilometrejä.",
+     "leveys": 1280,
+     "korkeus": 853,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Eye of Africap.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eye_of_Africap.jpg?width=1280",
+     "tekija": "DHQ",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eye_of_Africap.jpg",
+     "selite": "Rakennelman sisäkkäiset renkaat näkyvät myös ilmasta kiertävinä kalliorenkaina.",
+     "leveys": 5501,
+     "korkeus": 2336,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q146219",
+   "nimi": "Erg Chebbi",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 31.16667,
+   "lon": -3.98333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Merzouga Dunes 2011.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Merzouga_Dunes_2011.jpg?width=1280",
+     "tekija": "Bjørn Christian Tørrissen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Merzouga_Dunes_2011.jpg",
+     "selite": "Erg Chebbin oranssit dyynit kohoavat Marokon Saharassa Merzougan kylän tuntumassa.",
+     "leveys": 3338,
+     "korkeus": 2098,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Ein beeindruckender Teil der Sahara\". 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Ein_beeindruckender_Teil_der_Sahara%22._02.jpg?width=1280",
+     "tekija": "Holger Uwe Schmitt",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Ein_beeindruckender_Teil_der_Sahara%22._02.jpg",
+     "selite": "Dyynien jyrkät harjat ovat kymmeniä metrejä korkeita.",
+     "leveys": 5906,
+     "korkeus": 3667,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q26399",
+   "nimi": "Ahaggarin vuoristo",
+   "peruste": "sitelinks",
+   "koko_m": 15000,
+   "aliakset": [
+    "Q822326"
+   ],
+   "lat": 23.28861,
+   "lon": 5.53417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Tahat - Hoggar.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tahat_-_Hoggar.jpg?width=1280",
+     "tekija": "Yshak6.9",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Tahat_-_Hoggar.jpg",
+     "selite": "Tahat on Algerian korkein vuori, ja se kohoaa Ahaggarin kivierämaasta.",
+     "leveys": 4096,
+     "korkeus": 3072,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Assekrem Peaks at Sunset — Hoggar Mountains, Tamanrasset.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Assekrem_Peaks_at_Sunset_%E2%80%94_Hoggar_Mountains%2C_Tamanrasset.jpg?width=1280",
+     "tekija": "Rachid Hamatou",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Assekrem_Peaks_at_Sunset_%E2%80%94_Hoggar_Mountains%2C_Tamanrasset.jpg",
+     "selite": "Assekremin kallionhuiput hehkuvat iltaauringossa Ahaggarin vuoristossa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Hoggar dpuis assekrem.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hoggar_dpuis_assekrem.jpg?width=1280",
+     "tekija": "W. Robrecht",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hoggar_dpuis_assekrem.jpg",
+     "selite": "Assekremin näköalapaikalta avautuu laaja vuorimaisema Ahaggarille.",
+     "leveys": 1600,
+     "korkeus": 1196,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q272521",
+   "nimi": "Ténéré",
+   "peruste": "sitelinks",
+   "koko_m": 10000,
+   "lat": 22.71668,
+   "lon": 16.5,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "1997 278-13 Sahara Niger.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/1997_278-13_Sahara_Niger.jpg?width=1280",
+     "tekija": "Dan Lundberg",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:1997_278-13_Sahara_Niger.jpg",
+     "selite": "Ténéré on Saharan autiota hiekka- ja kivitasankoa, jossa on vain harvoja akaasioita.",
+     "leveys": 1666,
+     "korkeus": 1040,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Arbre du Ténéré.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arbre_du_T%C3%A9n%C3%A9r%C3%A9.jpg?width=1280",
+     "tekija": "Yahiaoui Bellahouel",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arbre_du_T%C3%A9n%C3%A9r%C3%A9.jpg",
+     "selite": "Akaasiat kohoavat erämaan hiekkatasangolla, jossa aikoinaan seisoi yksinäinen puu.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q192237",
+   "nimi": "Ghadames",
+   "peruste": "UNESCO",
+   "koko_m": 700,
+   "lat": 30.13333,
+   "lon": 9.5,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ghadames, 2006.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ghadames%2C_2006.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Teogomez assumed (based on copyright claims).",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ghadames%2C_2006.jpg",
+     "selite": "Ghadamesin vanhan kaupungin valkoiset savitalot ja minareetti kapeiden kujien varrella.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ghadames - Altstadt bei Nacht.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ghadames_-_Altstadt_bei_Nacht.jpg?width=1280",
+     "tekija": "Franzfoto",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ghadames_-_Altstadt_bei_Nacht.jpg",
+     "selite": "Ghadamesin vanha keidaskaupunki hehkuu yöllä lämpimissä valoissa.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2008735",
+   "nimi": "Siwan keidas",
+   "peruste": "sitelinks",
+   "koko_m": 3000,
+   "lat": 29.20528,
+   "lon": 25.51944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Shali (Historic Center of Siwa) 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Shali_(Historic_Center_of_Siwa)_02.JPG?width=1280",
+     "tekija": "Michael Hermann",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Shali_(Historic_Center_of_Siwa)_02.JPG",
+     "selite": "Siwan vanha Shalin linnoituskaupunki on rakennettu suolaisesta savesta kukkulan rinteelle.",
+     "leveys": 4592,
+     "korkeus": 3056,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Siwa Oasis, Qesm Siwah, Matrouh Governorate, Egypt - panoramio (7).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Siwa_Oasis%2C_Qesm_Siwah%2C_Matrouh_Governorate%2C_Egypt_-_panoramio_(7).jpg?width=1280",
+     "tekija": "mykola.rykov",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Siwa_Oasis%2C_Qesm_Siwah%2C_Matrouh_Governorate%2C_Egypt_-_panoramio_(7).jpg",
+     "selite": "Palmulehto ja suojärvi ympäröivät Siwan keidasta aavikon keskellä.",
+     "leveys": 2816,
+     "korkeus": 2112,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2556953",
+   "nimi": "Valkoinen aavikko",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 27.27734,
+   "lon": 28.20044,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Desert blanc.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Desert_blanc.jpg?width=1280",
+     "tekija": "Daniel Fafard",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Desert_blanc.jpg",
+     "selite": "Valkoisen aavikon kalkkikivimuodostumat kohoavat tuulen veistäminä kuin jättiläissienet.",
+     "leveys": 3888,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "White Desert, Rock formations in desert landscape, Egypt.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/White_Desert%2C_Rock_formations_in_desert_landscape%2C_Egypt.jpg?width=1280",
+     "tekija": "Vyacheslav Argenberg",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:White_Desert%2C_Rock_formations_in_desert_landscape%2C_Egypt.jpg",
+     "selite": "Eroosion muovaamat kalkkikivimuodot reunustavat Egyptin Valkoista aavikkoa.",
+     "leveys": 3072,
+     "korkeus": 2048,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1343339",
+   "nimi": "Ennedin ylänkö",
+   "peruste": "UNESCO",
+   "koko_m": 10000,
+   "lat": 17,
+   "lon": 23,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Camels in the Labyrinthe (Maze) sandstone area of the Ennedi, Chad (42405451704).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Camels_in_the_Labyrinthe_(Maze)_sandstone_area_of_the_Ennedi%2C_Chad_(42405451704).jpg?width=1280",
+     "tekija": "Valerian Guillot from Cambridge, United Kingdom",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Camels_in_the_Labyrinthe_(Maze)_sandstone_area_of_the_Ennedi%2C_Chad_(42405451704).jpg",
+     "selite": "Ennedin hiekkakivilabyrintin kapeat rotkot tarjoavat varjoa ja vettä aavikon karjalle.",
+     "leveys": 4570,
+     "korkeus": 3046,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q312357",
+   "nimi": "Chinguetti",
+   "peruste": "sitelinks",
+   "koko_m": 600,
+   "lat": 20.45742,
+   "lon": -12.36233,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "مسجد شنقيط التاريخي.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%D9%85%D8%B3%D8%AC%D8%AF_%D8%B4%D9%86%D9%82%D9%8A%D8%B7_%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%D9%8A.jpg?width=1280",
+     "tekija": "Mohamed Natti",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%D9%85%D8%B3%D8%AC%D8%AF_%D8%B4%D9%86%D9%82%D9%8A%D8%B7_%D8%A7%D9%84%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE%D9%8A.jpg",
+     "selite": "Chinguettin kivinen moskeija ja sen nelikulmainen minareetti hallitsevat Mauritanian vanhaa karavaanikaupunkia.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2480949",
+   "nimi": "Djinguereberin moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 16.77139,
+   "lon": -3.01,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Djingareiber cour.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Djingareiber_cour.jpg?width=1280",
+     "tekija": "KaTeznik",
+     "lisenssi": "CC BY-SA 2.0 fr",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Djingareiber_cour.jpg",
+     "selite": "Djinguereberin savirakenteinen minareetti ja tukipalkit kuuluvat Timbuktun vanhimpiin pyhiin rakennuksiin.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Djinguereber Mosque.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Djinguereber_Mosque.jpg?width=1280",
+     "tekija": "Dr. Ondřej Havelka (cestovatel)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Djinguereber_Mosque.jpg",
+     "selite": "Moskeijan portista avautuu näkymä minareettiin ja hiekkaiselle pihalle.",
+     "leveys": 1294,
+     "korkeus": 2000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q309104",
+   "nimi": "Tibestin vuoristo",
+   "peruste": "sitelinks",
+   "koko_m": 30000,
+   "lat": 20.78084,
+   "lon": 18.04983,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "A portion of the Tibesti Mountains in the nation of Chad.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_portion_of_the_Tibesti_Mountains_in_the_nation_of_Chad.jpg?width=1280",
+     "tekija": "NASA/Kjell Lindgren",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_portion_of_the_Tibesti_Mountains_in_the_nation_of_Chad.jpg",
+     "selite": "Tibestin tulivuoriperäinen vuoristo kohoaa avaruudesta nähtynä tummana Saharan keskellä.",
+     "leveys": 5568,
+     "korkeus": 3712,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q170383",
+   "nimi": "Aïrin vuoristo",
+   "peruste": "sitelinks",
+   "koko_m": 30000,
+   "lat": 18.28001,
+   "lon": 8,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Aïr mountains in Niger (MODIS 2019-12-14).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_A%C3%AFr_mountains_in_Niger_(MODIS_2019-12-14).jpg?width=1280",
+     "tekija": "MODIS Land Rapid Response Team, NASA GSFC",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_A%C3%AFr_mountains_in_Niger_(MODIS_2019-12-14).jpg",
+     "selite": "Aïrin vuoristo erottuu satelliittikuvassa tummana saarekkeena Nigerin hiekkaerämaassa.",
+     "leveys": 3483,
+     "korkeus": 2538,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Sahara satellite hires.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sahara_satellite_hires.jpg?width=1280",
+   "tekija": "NASA",
+   "lisenssi": "Public domain",
+   "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sahara_satellite_hires.jpg",
+   "selite": "Sahara peittää satelliittikuvassa lähes koko Pohjois-Afrikan.",
+   "leveys": 7432,
+   "korkeus": 4168,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Libya 5391 Ubari Lakes Luca Galuzzi 2007.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Libya_5391_Ubari_Lakes_Luca_Galuzzi_2007.jpg?width=1280",
+   "tekija": "Luca Galuzzi (Lucag)",
+   "lisenssi": "CC BY-SA 2.5",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Libya_5391_Ubari_Lakes_Luca_Galuzzi_2007.jpg",
+   "selite": "Ubarin järvien palmut ja dyynit ovat tyypillinen Saharan keidasmaisema.",
+   "leveys": 2000,
+   "korkeus": 1333,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

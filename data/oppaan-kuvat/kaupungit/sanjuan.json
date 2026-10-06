@@ -1,0 +1,300 @@
+{
+ "kaupunki": "sanjuan",
+ "kaupunkiQ": "Q40533",
+ "kohteet": [
+  {
+   "q": "Q550502",
+   "nimi": "El Morro",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 18.47111,
+   "lon": -66.12444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Castillo San Felipe del Morro aerial, May 2024 - 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castillo_San_Felipe_del_Morro_aerial%2C_May_2024_-_02.jpg?width=1280",
+     "tekija": "Druemdach",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castillo_San_Felipe_del_Morro_aerial%2C_May_2024_-_02.jpg",
+     "selite": "El Morro -linnake vartioi Old San Juanin niemen kärjessä sataman suuta.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Castillo San Felipe del Morro, Puerto Rico.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castillo_San_Felipe_del_Morro%2C_Puerto_Rico.jpg?width=1280",
+     "tekija": "Breezy Baldwin",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castillo_San_Felipe_del_Morro%2C_Puerto_Rico.jpg",
+     "selite": "Linnakkeen edustalla levittäytyy laaja nurmikenttä, jolta näkee muurit ja majakan.",
+     "leveys": 5000,
+     "korkeus": 3333,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3748608",
+   "nimi": "Castillo San Cristóbal",
+   "peruste": "UNESCO",
+   "koko_m": 700,
+   "lat": 18.46722,
+   "lon": -66.11111,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Castillo San Cristobal Panorama SJU 06 2019 8311.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castillo_San_Cristobal_Panorama_SJU_06_2019_8311.jpg?width=1280",
+     "tekija": "Mariordo (Mario Roberto Durán Ortiz)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castillo_San_Cristobal_Panorama_SJU_06_2019_8311.jpg",
+     "selite": "San Cristóbalin linnake suojasi San Juania maan puolelta ja on Amerikan suurimpia espanjalaisia linnoituksia.",
+     "leveys": 4413,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Castillo San Cristobal SJU 06 2019 7581.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castillo_San_Cristobal_SJU_06_2019_7581.jpg?width=1280",
+     "tekija": "Mariordo (Mario Roberto Durán Ortiz)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castillo_San_Cristobal_SJU_06_2019_7581.jpg",
+     "selite": "Linnakkeen paksut muurit kohoavat vanhankaupungin yläpuolelle.",
+     "leveys": 3639,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Castillo de San Cristóbal fort in San Juan, Puerto Rico.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castillo_de_San_Crist%C3%B3bal_fort_in_San_Juan%2C_Puerto_Rico.jpg?width=1280",
+     "tekija": "Jorge Láscar",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Castillo_de_San_Crist%C3%B3bal_fort_in_San_Juan%2C_Puerto_Rico.jpg",
+     "selite": "Linnoituksen kivinen pastioni ja tykkien asemat avautuvat merelle päin.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q52063661",
+   "nimi": "San Juanin kaupunginmuurit",
+   "peruste": "UNESCO",
+   "koko_m": 2500,
+   "lat": 18.46861,
+   "lon": -66.11713,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Old San Juan - City Walls.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_San_Juan_-_City_Walls.jpg?width=1280",
+     "tekija": "P. Hughes",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_San_Juan_-_City_Walls.jpg",
+     "selite": "Kaupunginmuuri kiertää Old San Juania ja laskeutuu suoraan lahden vedestä.",
+     "leveys": 4137,
+     "korkeus": 2764,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Old San Juan - City Walls 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_San_Juan_-_City_Walls_03.jpg?width=1280",
+     "tekija": "P. Hughes",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_San_Juan_-_City_Walls_03.jpg",
+     "selite": "Muurin juurella on kapea hiekkaranta ja kivikkoa.",
+     "leveys": 5931,
+     "korkeus": 3914,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Old San Juan - City Walls 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_San_Juan_-_City_Walls_1.jpg?width=1280",
+     "tekija": "P. Hughes",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_San_Juan_-_City_Walls_1.jpg",
+     "selite": "Muurin varrella on kulmavartiotorneja, joista valvottiin merta.",
+     "leveys": 3458,
+     "korkeus": 2444,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1638733",
+   "nimi": "La Fortaleza",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 18.46411,
+   "lon": -66.11923,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "La Fortaleza in San Juan, Puerto Rico.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Fortaleza_in_San_Juan%2C_Puerto_Rico.jpg?width=1280",
+     "tekija": "vxla",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_Fortaleza_in_San_Juan%2C_Puerto_Rico.jpg",
+     "selite": "La Fortaleza on Puerto Ricon kuvernöörin virka-asunto ja Amerikan vanhin yhä käytössä oleva hallintorakennus.",
+     "leveys": 2848,
+     "korkeus": 4288,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2013 Old San Juan 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2013_Old_San_Juan_02.JPG?width=1280",
+     "tekija": "Farragutful",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2013_Old_San_Juan_02.JPG",
+     "selite": "La Fortaleza kohoaa vanhankaupungin muurien ja lahden yläpuolella.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5052384",
+   "nimi": "San Juan Bautistan katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 18.46583,
+   "lon": -66.11778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "San Juan Bautista Cathedral.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Juan_Bautista_Cathedral.jpg?width=1280",
+     "tekija": "Thank You (23 Millions+) views",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Juan_Bautista_Cathedral.jpg",
+     "selite": "Valkoinen katedraali seisoo Old San Juanin kapeiden katujen varrella.",
+     "leveys": 3168,
+     "korkeus": 4435,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Interior de la Catedral de San Juan Bautista de Puerto Rico.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Interior_de_la_Catedral_de_San_Juan_Bautista_de_Puerto_Rico.jpg?width=1280",
+     "tekija": "Thank You (21 Millions+) views",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Interior_de_la_Catedral_de_San_Juan_Bautista_de_Puerto_Rico.jpg",
+     "selite": "Katedraalin sisätilan holvit ovat tunnettu esimerkki varhaisesta espanjalaisesta rakennustaiteesta Amerikassa.",
+     "leveys": 3168,
+     "korkeus": 4752,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5350970",
+   "nimi": "El Cañuelo",
+   "peruste": "UNESCO",
+   "koko_m": 200,
+   "lat": 18.46639,
+   "lon": -66.13639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fortín San Juan de la Cruz - El Canuelo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort%C3%ADn_San_Juan_de_la_Cruz_-_El_Canuelo.jpg?width=1280",
+     "tekija": "Jaro Nemčok",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort%C3%ADn_San_Juan_de_la_Cruz_-_El_Canuelo.jpg",
+     "selite": "El Cañuelon pieni linnake sijaitsee sataman toisella puolella ja puolusti kanavaa ristitulella El Morron kanssa.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2375961",
+   "nimi": "El Yunquen kansallismetsä",
+   "peruste": "sitelinks",
+   "koko_m": 15000,
+   "lat": 18.31667,
+   "lon": -65.78333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "150th Anniversary of U S Department of Agriculture-Historical imagery (20120106-OC-AMW-0416).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/150th_Anniversary_of_U_S_Department_of_Agriculture-Historical_imagery_(20120106-OC-AMW-0416).jpg?width=1280",
+     "tekija": "USDAgov",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:150th_Anniversary_of_U_S_Department_of_Agriculture-Historical_imagery_(20120106-OC-AMW-0416).jpg",
+     "selite": "El Yunquen sademetsä on Yhdysvaltain kansallismetsistä ainoa trooppinen sademetsä.",
+     "leveys": 2400,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "150th Anniversary of U S Department of Agriculture-Historical imagery (20120106-OC-AMW-0417).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/150th_Anniversary_of_U_S_Department_of_Agriculture-Historical_imagery_(20120106-OC-AMW-0417).jpg?width=1280",
+     "tekija": "USDAgov",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:150th_Anniversary_of_U_S_Department_of_Agriculture-Historical_imagery_(20120106-OC-AMW-0417).jpg",
+     "selite": "Polut kulkevat tiheän saniaisten ja sammalten peittämän metsän halki.",
+     "leveys": 2400,
+     "korkeus": 1600,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "El Yunque in Puerto Rico.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/El_Yunque_in_Puerto_Rico.jpg?width=1280",
+     "tekija": "Šarūnas Burdulis",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:El_Yunque_in_Puerto_Rico.jpg",
+     "selite": "Sumu verhoaa El Yunquen vuoren huippua.",
+     "leveys": 5200,
+     "korkeus": 3904,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Aerial View Of Old San Juan.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_View_Of_Old_San_Juan.jpg?width=1280",
+   "tekija": "Coolcaesar",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_View_Of_Old_San_Juan.jpg",
+   "selite": "Old San Juan sijaitsee kapealla saarella San Juanin lahden ja Atlantin välissä.",
+   "leveys": 4792,
+   "korkeus": 2868,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -1,0 +1,290 @@
+{
+ "kaupunki": "managua",
+ "kaupunkiQ": "Q3274",
+ "kohteet": [
+  {
+   "q": "Q272380",
+   "nimi": "Managuajärvi",
+   "peruste": "sitelinks",
+   "koko_m": 15000,
+   "lat": 12.33333,
+   "lon": -86.41667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "0HINDS5-R1-E034.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/0HINDS5-R1-E034.jpg?width=1280",
+     "tekija": "Harold E. Hinds, Jr.",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:0HINDS5-R1-E034.jpg",
+     "selite": "Managuajärven eli Xolotlánin rannat ovat pääkaupungin pohjoisreuna.",
+     "leveys": 1818,
+     "korkeus": 1228,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "LakeManagua Tipitapa1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LakeManagua_Tipitapa1.jpg?width=1280",
+     "tekija": "Ryan Ballantyne --ryos 21:39, 17 June 2006 (UTC)",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:LakeManagua_Tipitapa1.jpg",
+     "selite": "Managuajärvi on Nicaraguan toiseksi suurin järvi ja kaupungin ominaisin maisemapiirre.",
+     "leveys": 2037,
+     "korkeus": 1359,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q575891",
+   "nimi": "Momotombo",
+   "peruste": "sitelinks",
+   "koko_m": 10000,
+   "lat": 12.4247,
+   "lon": -86.5385,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Le volcan Momotombo (Nicaragua) (3281572693).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Le_volcan_Momotombo_(Nicaragua)_(3281572693).jpg?width=1280",
+     "tekija": "Jean-Pierre Dalbéra from Paris, France",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Le_volcan_Momotombo_(Nicaragua)_(3281572693).jpg",
+     "selite": "Momotombon säännöllinen tulivuorenkartio kohoaa Managuajärven rannalta.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Momotombo - N3A8148 (23475982896).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Momotombo_-_N3A8148_(23475982896).jpg?width=1280",
+     "tekija": "Jorge Mejía peralta from Managua, Nicaragua",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Momotombo_-_N3A8148_(23475982896).jpg",
+     "selite": "Momotombo purkautuu ajoittain, ja huipulta nousee tuhkapilvi.",
+     "leveys": 3960,
+     "korkeus": 2640,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Momotombo - N3A8408 (23206332350).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Momotombo_-_N3A8408_(23206332350).jpg?width=1280",
+     "tekija": "Jorge Mejía peralta from Managua, Nicaragua",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Momotombo_-_N3A8408_(23206332350).jpg",
+     "selite": "Yöllä Momotombon rinteelle valuu hehkuvaa laavaa.",
+     "leveys": 3960,
+     "korkeus": 2640,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q613424",
+   "nimi": "Masayan tulivuori",
+   "peruste": "sitelinks",
+   "koko_m": 6000,
+   "lat": 11.98216,
+   "lon": -86.16212,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cràter Santiago Masaya.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cr%C3%A0ter_Santiago_Masaya.JPG?width=1280",
+     "tekija": "Albert Olivé",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cr%C3%A0ter_Santiago_Masaya.JPG",
+     "selite": "Masayan Santiago-kraatteri höyryää keskellä mustaa laavakenttää.",
+     "leveys": 2560,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cráter Santiago del Volcán Masaya.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cr%C3%A1ter_Santiago_del_Volc%C3%A1n_Masaya.jpg?width=1280",
+     "tekija": "Chicho96",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cr%C3%A1ter_Santiago_del_Volc%C3%A1n_Masaya.jpg",
+     "selite": "Kraatterin reunaa kiertää kävelyreitti, josta näkee suoraan aktiiviseen kraatteriin.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Crater of Masaya Volcano , Nicaragua - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Crater_of_Masaya_Volcano_%2C_Nicaragua_-_panoramio.jpg?width=1280",
+     "tekija": "belemita@gmail.com",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Crater_of_Masaya_Volcano_%2C_Nicaragua_-_panoramio.jpg",
+     "selite": "Masayan aktiivisesta kraatterista nousee rikkipitoista savua.",
+     "leveys": 2032,
+     "korkeus": 1524,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1537774",
+   "nimi": "Mombachon tulivuori",
+   "peruste": "sitelinks",
+   "koko_m": 8000,
+   "lat": 11.82732,
+   "lon": -85.95994,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mombacho taken from the Pan-American Highway.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mombacho_taken_from_the_Pan-American_Highway.jpg?width=1280",
+     "tekija": "FurlongWiki",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mombacho_taken_from_the_Pan-American_Highway.jpg",
+     "selite": "Mombachon tulivuori kohoaa Granadan lähistöllä Nicaraguajärven rannalla.",
+     "leveys": 6024,
+     "korkeus": 3647,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mombacho Volcano - View from Nicaragua Lake.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mombacho_Volcano_-_View_from_Nicaragua_Lake.JPG?width=1280",
+     "tekija": "Silenzio76",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mombacho_Volcano_-_View_from_Nicaragua_Lake.JPG",
+     "selite": "Mombacho näkyy järven yli sumuverhon peittämänä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q950875",
+   "nimi": "Ometepe",
+   "peruste": "sitelinks",
+   "koko_m": 20000,
+   "lat": 11.49839,
+   "lon": -85.62554,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Concepción volcano - Ometepe island.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Concepci%C3%B3n_volcano_-_Ometepe_island.jpg?width=1280",
+     "tekija": "Hulivili",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Concepci%C3%B3n_volcano_-_Ometepe_island.jpg",
+     "selite": "Ometepen saarta hallitsee Concepciónin lähes täydellinen tulivuorikartio.",
+     "leveys": 3419,
+     "korkeus": 2266,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Concepción (volcano). Conceptcion. Ometepe Island, Nicaragua 03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Concepci%C3%B3n_(volcano)._Conceptcion._Ometepe_Island%2C_Nicaragua_03.jpg?width=1280",
+     "tekija": "Ridiculopathy",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Concepci%C3%B3n_(volcano)._Conceptcion._Ometepe_Island%2C_Nicaragua_03.jpg",
+     "selite": "Concepción kohoaa suoraan Nicaraguajärven vedestä.",
+     "leveys": 4608,
+     "korkeus": 2128,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Nicaragua Ometepe Concepción 15.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Nicaragua_Ometepe_Concepci%C3%B3n_15.jpg?width=1280",
+     "tekija": "Claude Humbert",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Nicaragua_Ometepe_Concepci%C3%B3n_15.jpg",
+     "selite": "Auringonlaskussa Concepciónin siluetti piirtyy tummaa pilvilakanaa vasten.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q173862",
+   "nimi": "Nicaraguajärvi",
+   "peruste": "sitelinks",
+   "koko_m": 30000,
+   "lat": 11.5742,
+   "lon": -85.3563,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Along the Shore of Lake Nicaragua - Ometepe Island - Nicaragua (31604160892).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Along_the_Shore_of_Lake_Nicaragua_-_Ometepe_Island_-_Nicaragua_(31604160892).jpg?width=1280",
+     "tekija": "Adam Jones from Kelowna, BC, Canada",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Along_the_Shore_of_Lake_Nicaragua_-_Ometepe_Island_-_Nicaragua_(31604160892).jpg",
+     "selite": "Nicaraguajärven aallokko kuohuu kivisellä rannalla Ometepen saarella.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Along Lake Nicaragua - Near Santo Domingo - Ometepe Island - Nicaragua (30987289423).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Along_Lake_Nicaragua_-_Near_Santo_Domingo_-_Ometepe_Island_-_Nicaragua_(30987289423).jpg?width=1280",
+     "tekija": "Adam Jones from Kelowna, BC, Canada",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Along_Lake_Nicaragua_-_Near_Santo_Domingo_-_Ometepe_Island_-_Nicaragua_(30987289423).jpg",
+     "selite": "Nicaraguajärvi on Keski-Amerikan suurin makean veden järvi.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Antigua catedral de Managua.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antigua_catedral_de_Managua.jpg?width=1280",
+   "tekija": "OswaldoFlores88",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antigua_catedral_de_Managua.jpg",
+   "selite": "Managuan vanha katedraali seisoo tyhjänä maanjäristysten runtelemana kaupungin keskusaukion laidalla.",
+   "leveys": 3264,
+   "korkeus": 1840,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Parque Acuático Managua.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parque_Acu%C3%A1tico_Managua.jpg?width=1280",
+   "tekija": "Martin Kulldorff",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Parque_Acu%C3%A1tico_Managua.jpg",
+   "selite": "Managuan rantabulevardi ulottuu Managuajärven rannalla.",
+   "leveys": 3294,
+   "korkeus": 2186,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

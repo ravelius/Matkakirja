@@ -1,0 +1,222 @@
+{
+ "kaupunki": "rashafun",
+ "kaupunkiQ": "Q3237966",
+ "kohteet": [
+  {
+   "q": "Q1145030",
+   "nimi": "Guardafuin niemi",
+   "peruste": "sitelinks",
+   "koko_m": 6000,
+   "lat": 11.81667,
+   "lon": 51.28333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Desert and ocean - 44533517561.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Desert_and_ocean_-_44533517561.jpg?width=1280",
+     "tekija": "Alexander Gerst",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Desert_and_ocean_-_44533517561.jpg",
+     "selite": "Guardafuin niemi työntyy Afrikan sarvessa Intian valtamerelle ja Adeninlahden suulle.",
+     "leveys": 5568,
+     "korkeus": 3712,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Guardafui Lighthouse.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Guardafui_Lighthouse.jpg?width=1280",
+     "tekija": "Timlash",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Guardafui_Lighthouse.jpg",
+     "selite": "Niemen majakka varoittaa laivoja vaarallisesta rannikosta, jonka ohi kulkevat Intian valtameren kauppareitit.",
+     "leveys": 2072,
+     "korkeus": 2481,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7098410",
+   "nimi": "Opone",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 10.4118,
+   "lon": 51.28658,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The ruins of the ancient city of Opone at Hafun, Northeastern Somalia.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_ruins_of_the_ancient_city_of_Opone_at_Hafun%2C_Northeastern_Somalia.png?width=1280",
+     "tekija": "Neville Chittick",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_ruins_of_the_ancient_city_of_Opone_at_Hafun%2C_Northeastern_Somalia.png",
+     "selite": "Antiikin Oponen kauppasataman muurien jäänteitä on kaivettu esiin Hafunin hiekasta.",
+     "leveys": 1736,
+     "korkeus": 883,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q331556",
+   "nimi": "Bosaso",
+   "peruste": "sitelinks",
+   "koko_m": 4000,
+   "lat": 11.28333,
+   "lon": 49.18333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial Panorama of Bosaso City and Its Coastal Port.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_Panorama_of_Bosaso_City_and_Its_Coastal_Port.jpg?width=1280",
+     "tekija": "Omar Abdulkadir",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_Panorama_of_Bosaso_City_and_Its_Coastal_Port.jpg",
+     "selite": "Bosaso on Puntlandin tärkein satamakaupunki Adeninlahden rannalla.",
+     "leveys": 5730,
+     "korkeus": 3515,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Aerial Panorama of Bosaso City and Its Coastal Port 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_Panorama_of_Bosaso_City_and_Its_Coastal_Port_1.jpg?width=1280",
+     "tekija": "Omar Abdulkadir",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_Panorama_of_Bosaso_City_and_Its_Coastal_Port_1.jpg",
+     "selite": "Kaupungin tiheä talokenttä ulottuu kaarevan merenlahden rantaan.",
+     "leveys": 5730,
+     "korkeus": 3515,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q448076",
+   "nimi": "Aluula",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 11.96478,
+   "lon": 50.7558,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Aerial view of Alula town.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_Alula_town.jpg?width=1280",
+     "tekija": "FaarisAdam",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Alula_town.jpg",
+     "selite": "Aluula on vanha kalastajakaupunki Afrikan sarven pohjoisrannalla, ja sen edustalla on pitkä hiekkasärkkä.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Alula Somalia.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alula_Somalia.png?width=1280",
+     "tekija": "Omar Abdulkadir",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Alula_Somalia.png",
+     "selite": "Valkoinen siirtomaa-ajan rakennus kaarikäytävineen kohoaa Aluulan rannalla.",
+     "leveys": 5338,
+     "korkeus": 2996,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2737490",
+   "nimi": "Bayla",
+   "peruste": "sitelinks",
+   "koko_m": 1200,
+   "lat": 9.49417,
+   "lon": 50.81222,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bandarbayla.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bandarbayla.jpg?width=1280",
+     "tekija": "FaarisAdam",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bandarbayla.jpg",
+     "selite": "Bayla on pieni satamakaupunki Puntlandin rannikolla, jossa talot kiipeävät hiekkarinteeseen meren äärellä.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1668870",
+   "nimi": "Qandala",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 11.46667,
+   "lon": 49.86667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Qandala 1.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Qandala_1.png?width=1280",
+     "tekija": "Omar Abdulkadir",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Qandala_1.png",
+     "selite": "Qandala on rannikkokaupunki, jonka takana kohoaa jyrkkä vuorimassiivi.",
+     "leveys": 4898,
+     "korkeus": 3265,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q307268",
+   "nimi": "Abd al Kuri",
+   "peruste": "UNESCO",
+   "koko_m": 15000,
+   "lat": 12.18333,
+   "lon": 52.23333,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Abd-al-Kuri ISS.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Abd-al-Kuri_ISS.jpg?width=1280",
+     "tekija": "NASA Johnson Space Center",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Abd-al-Kuri_ISS.jpg",
+     "selite": "Abd al Kuri on Sokotran saariryhmän läntisin saari Guardafuin salmessa.",
+     "leveys": 2400,
+     "korkeus": 1200,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Desert and ocean.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Desert_and_ocean.jpg?width=1280",
+   "tekija": "Alexander Gerst",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Desert_and_ocean.jpg",
+   "selite": "Hafunin kapea niemimaa työntyy aavikkorannikolta Intian valtamereen Afrikan itäisimpänä kärkenä.",
+   "leveys": 3712,
+   "korkeus": 5568,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
