@@ -271,6 +271,17 @@ namespace Matkakirja.Natiivi
             kentta.AddToClassList("mk-chat__kentta");
             kentta.textEdition.placeholder = "Kysy pululta…";
             kentta.RegisterCallback<KeyDownEvent>(e => { if (e.keyCode == KeyCode.Return || e.keyCode == KeyCode.KeypadEnter) { Kysy(kentta.value); e.StopPropagation(); } });
+            // iOS (LS1:n todistusajo 6.10., sama vika kuin oppaan rivissä): järjestelmän oma syöttörivi (✓/×) pois, ja näppäimistön
+            // Valmis lähettää kuten Return (siirtymä Valmiiksi, ettei kesken vastauksen jäänyt teksti lähde myöhemmin uudelleen).
+            kentta.textEdition.hideMobileInput = true;
+            var nappaimistoTila = TouchScreenKeyboard.Status.Visible;
+            kentta.schedule.Execute(() =>
+            {
+                var k = kentta.textEdition.touchScreenKeyboard;
+                var tila = k != null ? k.status : TouchScreenKeyboard.Status.Visible;
+                if (tila == TouchScreenKeyboard.Status.Done && nappaimistoTila != TouchScreenKeyboard.Status.Done) Kysy(kentta.value);
+                nappaimistoTila = tila;
+            }).Every(100);
             rivi.Add(kentta);
             var laheta = Rakenne.Nappi(null, "mk-chat__laheta", () => Kysy(kentta.value), rivi, Ikonit.Nuoli);
             laheta.tooltip = "Lähetä";
