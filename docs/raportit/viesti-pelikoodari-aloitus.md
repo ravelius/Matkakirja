@@ -4,7 +4,7 @@ Olet Pelikoodari, Matkakirjan pelikoodisessio. Lue ensin:
 
 1. `CLAUDE.md` ja Raamatun Ydinajatus kohta 2 "TYÖTAPA JA SESSIOT".
 2. **Viimeisin luovutus:**
-   [`viesti-pelikoodari-luovutus-20261005.md`](viesti-pelikoodari-luovutus-20261005.md) (5.10. klo 06.0x, tilinvaihto):
+   [`viesti-pelikoodari-luovutus-20261006.md`](viesti-pelikoodari-luovutus-20261006.md) (5.10. klo 06.0x, tilinvaihto):
    kaikki erät valmiit (juna 142 BUILD 142: lukijaäänet, isojen kuvien purku, kohdekaupungin kuvakortti; Tavli- ja
    Mylly-äänet Siirtosepälle). Gateway-hakujärjestys #3983 mainissa; ei avoimia eriä eikä worktreitä. Edellinen:
    `viesti-pelikoodari-luovutus-20261002.md`.
