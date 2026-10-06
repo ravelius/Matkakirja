@@ -116,6 +116,37 @@ namespace Matkakirja.Natiivi
             return false;
         }
         (double lat, double lon)? pakotettuSijainti;
+
+        // ---- KAUPUNKIÄÄNIMAISEMA (Siirtoseppä, PÄÄTOIMITTAJA 6.10. 21.4x; pilotti Pariisi, Venetsia, Kööpenhamina) ----
+        // Tila luettavaksi ilman riippuvuutta soittimen luokkaan: KaupunkiAanimaisemaSoitin lukee nämä joka kehys.
+        /// <summary>Kaupunkinäkymä näkyy (opas auki, kartta avattu valinnasta, ei virhettä).</summary>
+        public static bool KaupunkiNakyvissa => Auki && !Viimeisin.kaupunkiOdottaa && Viimeisin.nakymaAuki;
+        /// <summary>Kertoja (William) tai siltalause soi oppaan omista AudioSourceista (ei Aanisoittimen kautta): äänimaisema väistää.
+        /// (KertojaPuhuu on vain kappale; Natiivi-UI:n vastaussirut.)</summary>
+        public static bool OpasAaniSoi => Auki && (Viimeisin.puhuu || (Viimeisin.silta != null && Viimeisin.silta.isPlaying));
+        /// <summary>Kamera: korkeus maasta (m), todellinen nopeus (m/s, pehmennetty), nykyisen kohteen lat/lon; null, kun kaupunkia
+        /// ei näytetä tai siirtoruutu on päällä.</summary>
+        public static (double korkeusM, double nopeusMs, double lat, double lon)? KaupunkiKamera =>
+            KaupunkiNakyvissa && !Viimeisin.silmukka.Siirtymassa ? Viimeisin.kameraTila : null;
+        (double korkeusM, double nopeusMs, double lat, double lon)? kameraTila;
+        double3? edellinenEcef;
+
+        void PaivitaKameraTila()
+        {
+            var kam = kaupunki.Kamera; var g = kaupunki.Georef;
+            if (kam == null || g == null || silmukka.Siirtymassa) { kameraTila = null; edellinenEcef = null; return; }
+            var p = kam.transform.position;
+            var ecef = g.TransformUnityPositionToEarthCenteredEarthFixed(new double3(p.x, p.y, p.z));
+            var llh = CesiumForUnity.CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(ecef);
+            double dt = Math.Max(1e-3, Time.unscaledDeltaTime);
+            double v = edellinenEcef is double3 e ? math.length(ecef - e) / dt : 0;
+            if (v > 3000) v = 0;   // siirto tai origon vaihto: ei äkkinopeutta
+            double vanha = kameraTila?.nopeusMs ?? v;
+            double maa = viimeMaa.h is double vh && KierrosLento.EtaisyysM(viimeMaa.lat, viimeMaa.lon, llh.y, llh.x) < 15000 ? vh : OpasSilmukka.MaaArvioM;
+            var k = silmukka.Nykyinen;
+            kameraTila = (Math.Max(0, llh.z - maa), vanha + (v - vanha) * Math.Min(1, dt / 0.3), k?.Lat ?? llh.y, k?.Lon ?? llh.x);
+            edellinenEcef = ecef;
+        }
         /// <summary>Valitun kaupungin keskusta (kaupunki, täky tai avaus): pyyntöjen sijainti, kunnes kamera on kaupungissa (TF 152).
         /// Staattinen kuten Aloituskaupunki, jotta nimi ja paikka vaihtuvat aina yhdessä.</summary>
         public static (double lat, double lon) AloitusKeskusta = (KoopenhaminaTesti.Alku.Lat, KoopenhaminaTesti.Alku.Lon);
@@ -328,6 +359,7 @@ namespace Matkakirja.Natiivi
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
             y.Kuvaa(silmukka.Asento);
+            PaivitaKameraTila();
             Luotaa();
             KameraKuvattu?.Invoke(kierto != null ? kierto.GetComponent<Camera>() : null, silmukka);
             // Esilataus: lennon aikana laskeutumiskehys, muuten esihaetun kohteen kehys (OpasKuvaus, sama kuin lento).
