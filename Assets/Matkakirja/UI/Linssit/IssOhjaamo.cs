@@ -16,6 +16,7 @@
 // Peitto puhelimella noin 15 % (paneeli 128 pt / 874 pt); mininäyttö 36 pt.
 using System;
 using System.Collections.Generic;
+using Matkakirja.Linssit;
 using Matkakirja.Linssit.Astronautti;
 using Matkakirja.Linssit.Iss;
 using Matkakirja.Peli;
@@ -65,6 +66,9 @@ namespace Matkakirja.Natiivi
         readonly Action kuvaa;
         JoystickSuunta suunta = JoystickSuunta.Ei;
         int kaasuNyt = 1;
+        /// <summary>Portaaton kerroin 1…1000 (omistaja 6.10.: kahva portaattomasti, LS2:n AsetaKaasuPortaaton).</summary>
+        double kaasuArvo = 1;
+        double lokiKerroin;
         bool rumpuANakyy = true;
         string lcdKohde, lcdMaa;
         IVisualElementScheduledItem kierros;
@@ -289,7 +293,7 @@ namespace Matkakirja.Natiivi
             };
             var st = NahkaKuva(sauva) ?? NahkaKuva("sauva-ei");
             sauvaKuva.style.backgroundImage = st != null ? new StyleBackground(st) : StyleKeyword.Null;
-            var kt = NahkaKuva("kaasu-" + kaasuNyt);
+            var kt = NahkaKuva(ankkurit?.Ura != null ? "kaasu-1" : "kaasu-" + kaasuNyt);
             kaasuKuva.style.backgroundImage = kt != null ? new StyleBackground(kt) : StyleKeyword.Null;
             var kk = painettu ? NahkaKuva("kamera-painettu") ?? NahkaKuva("kamera") : NahkaKuva("kamera");
             if (kk != null) kamera.style.backgroundImage = new StyleBackground(kk);
@@ -670,12 +674,52 @@ namespace Matkakirja.Natiivi
         /// <summary>Vivun veto tai napautus: lähin pykälä (ylin = 1000×).</summary>
         void Vipu(float y)
         {
+            // PORTAATON (omistaja 6.10. 09.0x; v3b ura = vivun juuren liikealue): logaritminen 1× (ala) … 1000× (yla).
+            if (ankkurit?.Ura is Vector2 u2 && u2.y > u2.x)
+            {
+                float s = ankkurit.Koko.width > 0 ? paneeli.layout.width / ankkurit.Koko.width : 1f;
+                float osuus = Mathf.Clamp01((u2.y - y / s) / (u2.y - u2.x));
+                AsetaKaasuPortaaton(Math.Pow(10, 3 * osuus));
+                return;
+            }
             if (ankkurit?.Pykalat != null) { AsetaKaasu(Kertoimet[PykalaKuvasta(y)]); return; }
             var u = ura.layout;
             if (!(u.height > 0)) return;
             float t = Mathf.Clamp01(1f - (y - u.y) / u.height);
             int i = Mathf.Clamp(Mathf.RoundToInt(t * (Kertoimet.Length - 1)), 0, Kertoimet.Length - 1);
             AsetaKaasu(Kertoimet[i]);
+        }
+
+        /// <summary>Portaaton kaasu: linssille (LS2 AsetaKaasuPortaaton) ja kahva, LCD ja heilunta perään.</summary>
+        public void AsetaKaasuPortaaton(double kerroin)
+        {
+            kerroin = Math.Max(1, Math.Min(1000, kerroin));
+            if (Math.Abs(kerroin - kaasuArvo) < 1e-6) return;
+            linssi()?.AsetaKaasuPortaaton(kerroin);
+            NaytaKaasuArvo(kerroin);
+        }
+
+        void NaytaKaasuArvo(double kerroin)
+        {
+            kaasuArvo = kerroin;
+            NaytaNopeus(kerroin);
+            AsetaKahvaKuva();
+            int pykala = 1;
+            foreach (int k in Kertoimet) if (kerroin >= k - 1e-6) pykala = k;
+            if (pykala != kaasuNyt) { kaasuNyt = pykala; AsetaKahva(); }
+            AsetaTarina(Nopeustehoste.TarinaKertoimesta(kerroin) > 0f);
+        }
+
+        /// <summary>Kahvan kuva uran kohtaan: kaasu-1-kuva (vipu alimmassa pykälässä) siirretään juuren y:hyn (v3b ura).</summary>
+        void AsetaKahvaKuva()
+        {
+            if (kaasuKuva == null || !(ankkurit?.Ura is Vector2 u2) || ankkurit.Pykalat == null) return;
+            var kt = NahkaKuva("kaasu-1");
+            if (kt != null) kaasuKuva.style.backgroundImage = new StyleBackground(kt);
+            float s = ankkurit.Koko.width > 0 ? paneeli.layout.width / ankkurit.Koko.width : 1f;
+            float t = (float)(Math.Log10(kaasuArvo) / 3.0);
+            float juuri = Mathf.Lerp(u2.y, u2.x, t);                 // pt kaasu-laatikon yläreunasta
+            kaasuKuva.style.translate = new Translate(0, (juuri - ankkurit.Pykalat[0]) * s);
         }
 
         /// <summary>Kaasu pykälään (linssille vain muutoksessa; naksahdus soi linssissä).</summary>
@@ -779,10 +823,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Cupolan kehys (IssKyytiNakyma.kupu), joka tärisee paneelin kanssa täydellä teholla.</summary>
         public VisualElement Kehys;
         IVisualElementScheduledItem tarina;
-        /// <summary>TÄRINÄ (omistaja 6.10.: "ohjaamo voisi alkaa hieman täristä täydessä vauhdissa"): hienovarainen, sileä (kaksi
-        /// siniä, ei satunnaishyppyjä), enintään TarinaPt; ei lainkaan, jos pelaaja on valinnut pienen liikkeen.</summary>
-        public const float TarinaPt = 0.7f;
 
+        /// HEILUNTA (omistaja 6.10. 09.3x: alkaa oranssissa, kasvaa punaiseen) samassa tahdissa kameran kanssa: LS2:n
+        /// Nopeustehoste.RuudunSiirtoPx (px, x oikealle, y alas) pisteiksi; Cupolan kehys liikkuu samalla siirrolla.
         void AsetaTarina(bool paalla)
         {
             if (paalla && LinssiUi.VahennettyLiike()) paalla = false;
@@ -794,14 +837,13 @@ namespace Matkakirja.Natiivi
                 return;
             }
             if (tarina != null) return;
-            float alku = Time.unscaledTime;
             tarina = Juuri.schedule.Execute(() =>
             {
-                float t = Time.unscaledTime - alku;
-                float x = TarinaPt * (0.6f * Mathf.Sin(t * 47f) + 0.4f * Mathf.Sin(t * 83f + 1.3f));
-                float y = TarinaPt * (0.6f * Mathf.Sin(t * 53f + 0.7f) + 0.4f * Mathf.Sin(t * 71f));
-                Juuri.style.translate = new Translate(x, y);
-                if (Kehys != null) Kehys.style.translate = new Translate(x * 0.6f, y * 0.6f);
+                float ph = Juuri.panel?.visualTree.layout.height ?? 0f;
+                if (!(ph > 0f) || Screen.height <= 0) return;
+                Vector2 d = Nopeustehoste.RuudunSiirtoPx * (ph / Screen.height);
+                Juuri.style.translate = new Translate(d.x, d.y);
+                if (Kehys != null) Kehys.style.translate = new Translate(d.x, d.y);
             }).Every(16);
         }
 
@@ -820,7 +862,12 @@ namespace Matkakirja.Natiivi
             nopeusRivi.EnableInClassList("mk-issohjaamo__nopeusrivi--varoitus", kerroin >= VaroitusKerroin && kerroin < TaysiKerroin);
             nopeusRivi.EnableInClassList("mk-issohjaamo__nopeusrivi--vaara", kerroin >= TaysiKerroin);
             nopeusAsti = Time.unscaledTime + NopeusS;
-            Debug.Log($"MATKAKIRJA linssit: ohjaamon LCD {Math.Round(kerroin)}× {nopeusT.text}{(valo != null ? " / " + valo : "")}");
+            // Portaattomassa vedossa lokiin vain ~25 %:n välein (ei rivi per ruutu).
+            if (lokiKerroin <= 0 || kerroin / lokiKerroin > 1.25 || lokiKerroin / kerroin > 1.25 || kerroin >= TaysiKerroin && lokiKerroin < TaysiKerroin)
+            {
+                lokiKerroin = kerroin;
+                Debug.Log($"MATKAKIRJA linssit: ohjaamon LCD {Math.Round(kerroin)}× {nopeusT.text}{(valo != null ? " / " + valo : "")}");
+            }
             PaivitaNopeusrivi();
             SovitaNopeus();
         }
@@ -938,7 +985,8 @@ namespace Matkakirja.Natiivi
             }
             if (Laajennettu) PaivitaLaajennus();
             // Kaasu muuttui muualta (testikomento, linssin nollaus): vipu ja rumpu perään.
-            if (l.Kaasu != kaasuNyt) NaytaKaasu(l.Kaasu);
+            if (ankkurit?.Ura != null) { if (Math.Abs(l.KaasuArvo - kaasuArvo) > 1e-6) NaytaKaasuArvo(l.KaasuArvo); }
+            else if (l.Kaasu != kaasuNyt) NaytaKaasu(l.Kaasu);
             // Kamera kaikkialla (loki #3934 koko Eurooppa 13.52, #3936 koko maailma 14.0x; kilpi kertoo, jos kuvaa ei saada):
             // aktiivinen Cupolassa, kun kuva ei ole jo työn alla; A/B VainKuvauspaikat rajaa kuvauspaikkoihin.
             bool kuvattavissa = l.Kyyti == KyydinTila.Ikkuna && !IssKameraKuva.Kaynnissa
