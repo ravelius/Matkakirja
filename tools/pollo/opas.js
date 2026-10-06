@@ -510,6 +510,39 @@ export function jarjestaReitti(paikat, alku = null) {
   return reitti;
 }
 
+/** Avoimen reitin pituus metreinä: alusta (jos annettu) ensimmäiseen ja siitä paikka paikalta viimeiseen. */
+export function reitinPituus(reitti, alku = null) {
+  let m = alku && reitti.length ? etaisyys(alku, reitti[0]) : 0;
+  for (let i = 1; i < reitti.length; i += 1) m += etaisyys(reitti[i - 1], reitti[i]);
+  return m;
+}
+
+/**
+ * LYHIN REITTI (omistaja 6.10.2026 23.4x): kierros alkaa paikasta, joka on lähimpänä aloitusnäkymää tai sijaintia,
+ * kulkee lähin seuraava -järjestyksessä ja oikaistaan 2-optilla (avoin reitti, ensimmäinen kiinteä, loppu vapaa).
+ * Kahdeksalla paikalla tämä löytää käytännössä lyhimmän reitin; lähin naapuri yksin jättää usein ristikkäisiä osuuksia.
+ * ensimmainen: paikka, josta reitti alkaa aina (esim. kertojan jo valitsema ensimmäinen pysähdys).
+ */
+export function lyhinReitti(paikat, alku = null, { ensimmainen = null } = {}) {
+  if (paikat.length < 2) return [...paikat];
+  const eka = ensimmainen ?? (alku ? paikat.reduce((a, b) => (etaisyys(alku, b) < etaisyys(alku, a) ? b : a)) : paikat[0]);
+  const reitti = [eka, ...jarjestaReitti(paikat.filter((x) => x !== eka), eka)];
+  const d = (a, b) => (a && b ? etaisyys(a, b) : 0);
+  for (let parani = true, kierroksia = 0; parani && kierroksia < 50; kierroksia += 1) {
+    parani = false;
+    for (let i = 1; i < reitti.length - 1; i += 1) {
+      for (let k = i + 1; k < reitti.length; k += 1) {
+        const ero = d(reitti[i - 1], reitti[k]) + d(reitti[i], reitti[k + 1]) - d(reitti[i - 1], reitti[i]) - d(reitti[k], reitti[k + 1]);
+        if (ero < -1e-9) {
+          reitti.splice(i, k - i + 1, ...reitti.slice(i, k + 1).reverse());
+          parani = true;
+        }
+      }
+    }
+  }
+  return reitti;
+}
+
 /*
  * SUUNNANVAIHTOSIRU (Päätoimittaja 5.10.2026 ilta): toinen vaihtoehto valitaan koodissa listasta, ei mallilta (malli
  * tarjosi lähes aina "Näytä jotain modernia"). Ensin sellainen, jota istunnossa ei ole vielä tarjottu; sama ei koskaan
