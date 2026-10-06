@@ -26,7 +26,7 @@ roolien todisteet → Päätoimittaja VIE → JUNAN AVAUS NYT Natiivisepälle �
 
 ## Käännös- ja simujono (22.5x)
 
-- **Lukossa: Natiiviseppä Mac v1** 62f6b368 (natiiviseppa/mac + BUILD 154, 22.47 →, 30–60 min). Pyysin setsid-irrotuksen.
+- **Mac v1**: 62f6b368 VIKA 22.53 (Burst AOT -linkki: työkaluilta puuttui suoritusbitti); korjaus f5d0e029 (mac-kaanna.sh palauttaa bitin). Uusi vuoro ~15–30 min, irrallisena, NUI:n ja LS2:n jälkeen. Rinnalla enintään 1 mykkä simu, ei muita käännöksiä.
   Mac-käännöksen rinnalla enintään 1 mykkä simu, ei muita käännöksiä.
 - Jonossa Macin jälkeen: (1) **Natiivi-UI ylarivi-155 960faaa7** (korvaa 716744c9; KIIREELLINEN, omistajan TF 154 iPad-vaaka) + mykkä 8 min;
   (2) **LS2 juna 155 koe** "linssiseppa2/gibs-pehmea+linssiseppa2/opas-vapaa-lataus" (640eb7b4 + 5683ffaf) + 20 min hiljainen
