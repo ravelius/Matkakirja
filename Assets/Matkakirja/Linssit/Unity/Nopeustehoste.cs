@@ -2,8 +2,9 @@
 // kuvan reunoja"; Päätoimittaja: hienovarainen reunojen vääristymä ja säteittäinen liike-epäterävyys vain reunoilla, keskusta
 // terävä; kameran pieni tärinä yhdessä Natiivi-UI:n paneelitärinän kanssa samalla ajastuksella; tähtiviirut odottavat omistajaa).
 //   Voima     0 alle ~160×, 1 täydellä 1000×:llä (log-asteikko, liukuu 0,5 s:ssa); myös kelauksen huipulla
-//   Reunat    URP Lens Distortion (tynnyri, keskusta ennallaan) + Chromatic Aberration (vain reunoilla: säteittäinen värivuoto ja
-//             pehmeys; mobiilin URP:ssa ei ole säteittäistä sumennusta ilman omaa renderöintivaihetta)
+//   Reunat    URP Lens Distortion (tynnyri, keskusta ennallaan) + Chromatic Aberration (vain reunoilla) + säteittäinen
+//             liike-epäterävyys reunoilla (Varjostimet/Reunasumennus: koko ruudun neliö, joka näytteistää kameran läpinäkymättömän
+//             kuvan; kamerakohtainen värikuva vain kun Voima > 0, mobiilin URP-asetus ennallaan)
 //   Tärinä    kameran projektion siirto (ei muuta kameran asentoa eikä Cupolan kehyksen paikkaa kehykseen nähden): kaksi Perlin-
 //             taajuutta, amplitudi ~0,12 % ruudun korkeudesta. Tarina (−1…1) ja Voima ovat julkisia: Natiivi-UI siirtää paneelia
 //             samalla arvolla (sama ajastus).
@@ -30,6 +31,10 @@ namespace Matkakirja.Linssit
         static ChromaticAberration varivuoto;
         static Camera kohde;
         static bool kuuntelee;
+        static Transform nelio;
+        static Material sumennus;
+        static readonly int IdVoima = Shader.PropertyToID("_Voima");
+        static CameraOverrideOption variKuva0; static bool variKuvaAsetettu;
 
         /// <summary>Voima kertoimesta: log10(k) 2,2 → 0 … 3 → 1, pehmeä alku.</summary>
         public static float VoimaKertoimesta(double kerroin)
@@ -56,12 +61,43 @@ namespace Matkakirja.Linssit
             vaaristyma.intensity.Override(VaaristymaMax);
             varivuoto.intensity.Override(VarivuotoMax);
             kohde = kamera;
+            Sumennus(kamera);
             if (!kuuntelee)
             {
                 RenderPipelineManager.beginCameraRendering += EnnenPiirtoa;
                 RenderPipelineManager.endCameraRendering += PiirronJalkeen;
                 kuuntelee = true;
             }
+        }
+
+        /// <summary>Reunasumennuksen neliö ja kameran värikuva (vain kun Voima > 0).</summary>
+        static void Sumennus(Camera kamera)
+        {
+            bool paalla = Voima > 0f && kamera != null;
+            var data = kamera != null ? kamera.GetUniversalAdditionalCameraData() : null;
+            if (data != null && paalla != variKuvaAsetettu)
+            {
+                if (paalla) { variKuva0 = data.requiresColorOption; data.requiresColorOption = CameraOverrideOption.On; }
+                else data.requiresColorOption = variKuva0;
+                variKuvaAsetettu = paalla;
+            }
+            if (paalla && nelio == null)
+            {
+                var sh = Resources.Load<Shader>("Varjostimet/Reunasumennus");
+                if (sh == null) return;
+                sumennus = new Material(sh) { name = "Reunasumennus" };
+                var go = GameObject.CreatePrimitive(PrimitiveType.Quad);
+                go.name = "Reunasumennus";
+                Object.Destroy(go.GetComponent<Collider>());
+                var r = go.GetComponent<MeshRenderer>();
+                r.sharedMaterial = sumennus; r.shadowCastingMode = ShadowCastingMode.Off; r.receiveShadows = false;
+                nelio = go.transform;
+            }
+            if (nelio == null) return;
+            if (nelio.gameObject.activeSelf != paalla) nelio.gameObject.SetActive(paalla);
+            if (!paalla) return;
+            if (nelio.parent != kamera.transform) nelio.SetParent(kamera.transform, false);
+            sumennus.SetFloat(IdVoima, Voima);
         }
 
         static void Luo()
@@ -81,6 +117,15 @@ namespace Matkakirja.Linssit
         static void EnnenPiirtoa(ScriptableRenderContext _, Camera c)
         {
             if (c != kohde || Voima <= 0f) return;
+            if (nelio != null && nelio.gameObject.activeSelf)
+            {
+                // Neliö kameran eteen tämän kehyksen lähitason ja kenttäkulman mukaan (kuten CupolaKerros), hieman ruutua suurempi.
+                float dd = Mathf.Max(1f, c.nearClipPlane * 1.5f);
+                if (dd >= c.farClipPlane) dd = c.farClipPlane * 0.5f;
+                float hh = 2f * dd * Mathf.Tan(c.fieldOfView * 0.5f * Mathf.Deg2Rad);
+                nelio.localPosition = new Vector3(0, 0, dd); nelio.localRotation = Quaternion.identity;
+                nelio.localScale = new Vector3(hh * c.aspect * 1.05f, hh * 1.05f, 1f);
+            }
             c.ResetProjectionMatrix();
             var p = c.projectionMatrix;
             // Projektion keskipisteen siirto (NDC-yksiköissä 2 × osuus ruudusta).
