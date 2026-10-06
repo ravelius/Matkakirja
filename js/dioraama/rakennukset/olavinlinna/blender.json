@@ -1,8 +1,28 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "d1865adbc8c956dc",
-  "kansio": "dioraama/olavinlinna/blender/d1865adbc8c956dc/",
+  "hash": "382614adc2385881",
+  "kansio": "dioraama/olavinlinna/blender/382614adc2385881/",
   "tiedostot": [
+    {
+      "polku": "akustiikka/akustiikka.json",
+      "sha256": "506cbddba5a2751c499bd247dcb0010435c092f01bd8a19845faba9745c33977",
+      "tavuja": 780
+    },
+    {
+      "polku": "akustiikka/kappeli.glb",
+      "sha256": "59b928a98a41593516b5e20c6fc1d72f467779ceebcb1f23f6e14e2f5edc54b2",
+      "tavuja": 11276
+    },
+    {
+      "polku": "akustiikka/keittio.glb",
+      "sha256": "a375a65e60bea49d85e1581e560b6d5c30a5738fc1b359f91826b84e97cff73c",
+      "tavuja": 14600
+    },
+    {
+      "polku": "akustiikka/piha.glb",
+      "sha256": "902a00d44d3b6c653037eaa4cf3d0cca4dcb5b656fc24a92b0e2a7f700ee32a6",
+      "tavuja": 38164
+    },
     {
       "polku": "hahmot/apulainen-1500.glb",
       "sha256": "c331a6bec5d8e3f47209ff8d845a1702b719f5b1d1897d2b30af067dfff41980",
