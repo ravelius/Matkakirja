@@ -1,0 +1,457 @@
+{
+  "source": "posti/fable-codex-oppaan-kuvat-linssivalikko-20261006.md",
+  "sourceCommit": "93aa2ab1e1151ab29d744d508bf8260fd21e9cab",
+  "part": 2,
+  "imageCount": 7,
+  "width": 1600,
+  "height": 900,
+  "format": "JPEG",
+  "colorSpace": "sRGB",
+  "sampleDimensions": [
+    {
+      "code": "X2",
+      "url": "https://media.matkakirja.app/linssikatalogi/X2-havainne.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X2-havainne.jpg",
+      "width": 1600,
+      "height": 900,
+      "mode": "RGB",
+      "mime": "image/jpeg",
+      "sha256": "d6e9b472980bb19d917d3f09d1a61afa9dacc17bdb5fbe04f87a1fa0612a35ec"
+    },
+    {
+      "code": "X4",
+      "url": "https://media.matkakirja.app/linssikatalogi/X4-havainne.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X4-havainne.jpg",
+      "width": 1600,
+      "height": 900,
+      "mode": "RGB",
+      "mime": "image/jpeg",
+      "sha256": "88c22a358731fc97bf7e173aa83931017c225203985b97354480a184c2a24425"
+    },
+    {
+      "code": "X5",
+      "url": "https://media.matkakirja.app/linssikatalogi/X5-havainne.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X5-havainne.jpg",
+      "width": 1600,
+      "height": 900,
+      "mode": "RGB",
+      "mime": "image/jpeg",
+      "sha256": "fb2bf9e739d08ac56cf8c22928b31798bbdb81c9506ce01823939f06353c8aea"
+    },
+    {
+      "code": "E11",
+      "url": "https://media.matkakirja.app/linssikatalogi/E11-havainne.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/E11-havainne.jpg",
+      "width": 1600,
+      "height": 1199,
+      "mode": "RGB",
+      "mime": "image/jpeg",
+      "sha256": "744dd0db8fa1280c683de5b229521d9290d35581f89675816d6f2fb71d1ccadb"
+    },
+    {
+      "code": "C7",
+      "url": "https://media.matkakirja.app/linssikatalogi/C7-havainne.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/C7-havainne.jpg",
+      "width": 1600,
+      "height": 900,
+      "mode": "RGB",
+      "mime": "image/jpeg",
+      "sha256": "6f88259cf9bdab5372dad6d26b5b919b3e11ebc4e72b16b4c329b60907447001"
+    }
+  ],
+  "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+  "assets": [
+    {
+      "lensId": "opas",
+      "file": "natiivi-opas-havainne.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/opas/final/natiivi-opas-havainne.jpg",
+      "r2Key": "linssikatalogi/natiivi-opas-havainne.jpg",
+      "sha256": "bda3ddc2dc80bebba4ec14ca0ddf0d38088c578eaa6444c065407817f8d433bb",
+      "width": 1600,
+      "height": 900,
+      "bytes": 1098321,
+      "mime": "image/jpeg",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "generationPrompt": "Create exactly one entirely new premium landscape illustration for the “Living Guide” lens in a travel game, without any text. A richly photorealistic / three-dimensional cinematic scene, intended as a wide 16:9 catalogue card, native 1600 x 900 if possible. The image must read immediately at small card size.\n\nImage references: 1 is our verified modern Prague city hero, 2 and 3 are licensed real Commons architectural photographs. Use them to preserve the actual Charles Bridge, Vltava river, Malá Strana, Prague Castle and St Vitus Cathedral positions and proportions. Image 4 is ONLY the existing catalogue’s visual-style reference: weathered brass, warm amber light and deep navy shadows, refined photographic three-dimensional surfaces. Do not copy its globe, radio towers or map.\n\nThe scene is a recognisable present-day Prague viewed diagonally from the Old Town Bridge Tower at a modest rooftop height looking west along the real Charles Bridge. The bridge dominates and sweeps from the lower-middle foreground into the middle distance, with the Vltava on both sides, Malá Strana roofs beyond and Prague Castle / St Vitus high on the real hill behind. Keep true geography and straight architecture. The bridge is the single highlighted landmark: a graceful thin luminous amber ribbon embedded along its walkway and a warm focused pool of light guide the eye across the bridge, subtly inviting a guided walking tour. No multiple glowing pins, map interfaces, screens, labels, service-style markers or Google/Apple map appearance. The rest of the city remains naturally rendered, in deep blue shadow and honey-gold roof rims, no fictional buildings or canals.\n\nA rich luminous golden sunset, dramatic yet plausible light through gently hazy air, glowing highlights on bridge statues, tactile cream stone and warm old roofs, lustrous navy and amber reflections in the river. At the extreme lower corners a very subtle dark weathered-brass optical rim suggests the catalogue’s physical lens aesthetic, occupying less than 5 percent of the frame; the actual city fills the image. No cartoon, no flat vector, no simplistic toy miniature. Realistic anonymous tiny figures for scale only, no identifiable portraits. No text, numbers, logos, brand names, captions or watermarks. Compose all essential subjects safely inside the central wide 16:9 area. Produce one complete new image, not an edit of the supplied city asset.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/opas/prompts/hero.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/final/hero-praha.png",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/viitteet/commons-1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/viitteet/commons-2.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X5-havainne.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "File:Prague Charles Bridge Tower View West-02.jpg",
+          "tekija": "Radler59 (talk)",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Prague_Charles_Bridge_Tower_View_West-02.jpg"
+        },
+        {
+          "nimi": "File:Charles Bridge (Karlův most), Vltava River, Prague, 2015.jpg",
+          "tekija": "Peter K Burian",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Charles_Bridge_(Karl%C5%AFv_most),_Vltava_River,_Prague,_2015.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/opas/originals/hero-original.png",
+      "originalSha256": "ed8b26a5727ab3d94c1207dbea57debd95eb4d4d2b2253b465ed3f665840f108",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Elävä opas: Kaarlensilta johdattaa Prahan kaupunkikierrokselle.",
+      "QA": {
+        "fileVerified": true,
+        "visualReviewLarge": true,
+        "visualReview480px": true,
+        "sRGB": true,
+        "opaque": true,
+        "dimensionsVerified": true,
+        "subjectVerified": "Recognisable current Prague diagonal rooftop view with actual Charles Bridge, Vltava, Mala Strana and Prague Castle geometry. Charles Bridge is the single highlighted landmark; warm golden guiding light, catalogue brass rim. No map-service interface.",
+        "styleVerified": "Rich photographic/three-dimensional amber, brass and navy catalogue style; legible small card composition.",
+        "noTextLogosWatermarks": true,
+        "originalDimensions": [
+          1672,
+          941
+        ],
+        "technicalExport": "Only aspect-fit technical 1600x900 sRGB JPEG export, quality95 chroma subsampling0; full PNG retained."
+      },
+      "url": "https://media.matkakirja.app/linssikatalogi/natiivi-opas-havainne.jpg",
+      "http": 200,
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrationVerified": false,
+      "editorReview": "pending"
+    },
+    {
+      "lensId": "ihmisen-matka-2",
+      "file": "natiivi-ihmisen-matka-2-havainne.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/ihmisen-matka-2/final/natiivi-ihmisen-matka-2-havainne.jpg",
+      "r2Key": "linssikatalogi/natiivi-ihmisen-matka-2-havainne.jpg",
+      "sha256": "3e35a21664043f24d7edfe7b0e423d4d4a81c0b763f2c0ed0339119d4f767876",
+      "width": 1600,
+      "height": 900,
+      "bytes": 784238,
+      "mime": "image/jpeg",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "generationPrompt": "Create exactly one entirely new richly photorealistic three-dimensional cinematic catalogue image for “Humanity’s Journey II” without any text. Wide 16:9, native 1600 x 900 if possible, opaque sRGB. The existing C7 image (reference 1) is solely the SUBJECT, COMPOSITION and STYLE guide. Keep the original untouched and build a complete new candidate. Reference 2 supplies the catalogue’s weathered brass / amber / navy physical material style only.\n\nSUBJECT MUST REMAIN HUMANITY’S MIGRATION AROUND THE WORLD: a realistic embossed three-dimensional world terrain map with luminous migration pathways. The same Pacific-centred wide world composition as C7: Africa and Europe on the left, Eurasia across upper-middle, India/Southeast Asia/Indonesia/Australia in the middle/lower-middle, North and South America on the right, Pacific in the centre-right, Greenland/Arctic across the top. Accurate recognisable continental coastlines, actual Mediterranean, Red Sea, Arabian Peninsula, Indian subcontinent, Indonesia, Japan, New Zealand, Bering connection, Andes and Himalayas. No shuffled continents, fantasy landmasses, city panorama, transport collage, ship, train, aircraft or human faces. The migration routes are symbolic light trails on the real terrain, beginning in East Africa, branching through northeast Africa / Arabia into Eurasia, onward through South and East Asia, island Southeast Asia and Australia, north across Siberia and the Bering region into the Americas, then south along the Americas. Some delicate glowing arrows and spark-like nodes are sufficient, no labels, numbers or legend.\n\nVERSION II MUST LOOK DRAMATICALLY DIFFERENT FROM C7 AT ONE GLANCE: place most of the map in richly textured deep navy/blue-black shadow. A strong narrow but volumetric warm-white/amber spotlight descends diagonally from the upper-left and lands specifically on the East African origin, creating an intense luminous amber source node and radiant path glow that branches outward across the map. The focused cone of light must be visibly readable in the atmosphere, and the chosen origin area and first route segments glow much more strongly than the surrounding map. Far routes continue in fine warm amber lines, gradually fading into navy distance. This is a targeted beam and selective glow, not a uniform brighter copy. Add subtle floating golden dust within the beam, tactile weathered brass land relief, deep lapis ocean, realistic tiny mountain shadows, misty dark cloud margins and a thin curved antique brass instrument rim along the lower corners. Keep the map dominant and full-width with safe central 16:9 subject framing. No text, logos, watermarks, captions or UI. No cartoon, flat infographic or simplistic neon line drawing. One complete premium atmospheric photograph-like render, immediately readable as human migration over the world terrain at 480 px card size.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/ihmisen-matka-2/prompts/hero.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/C7-havainne.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X5-havainne.jpg"
+      ],
+      "viitteet": [],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/ihmisen-matka-2/originals/hero-original.png",
+      "originalSha256": "fb70c6c81dda3ea5d586751b4f07fa597a27aeb2611044b425a3939c2d7f0d47",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY 4.0",
+      "caption": "Ihmiskunnan vaellus maailman maastossa kohdennetun valokeilan ja hehkuvien reittien kautta.",
+      "QA": {
+        "fileVerified": true,
+        "visualReviewLarge": true,
+        "visualReview480px": true,
+        "sRGB": true,
+        "opaque": true,
+        "dimensionsVerified": true,
+        "subjectVerified": "Same C7 world-terrain and migration-path subject, Pacific-centred true continents, branching origin in East Africa. Version II differs visibly through diagonal volumetric spotlight and strong selective amber origin glow against deep navy shadows. No vehicles, city panorama, text or logos.",
+        "styleVerified": "Rich photographic/three-dimensional amber, brass and navy catalogue style; legible small card composition.",
+        "noTextLogosWatermarks": true,
+        "originalDimensions": [
+          1672,
+          941
+        ],
+        "technicalExport": "Only aspect-fit technical 1600x900 sRGB JPEG export, quality95 chroma subsampling0; full PNG retained."
+      },
+      "url": "https://media.matkakirja.app/linssikatalogi/natiivi-ihmisen-matka-2-havainne.jpg",
+      "http": 200,
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrationVerified": false,
+      "editorReview": "pending"
+    },
+    {
+      "lensId": "maapallon-vuosi",
+      "file": "natiivi-maapallon-vuosi-havainne.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/maapallon-vuosi/final/natiivi-maapallon-vuosi-havainne.jpg",
+      "r2Key": "linssikatalogi/natiivi-maapallon-vuosi-havainne.jpg",
+      "url": "https://media.matkakirja.app/linssikatalogi/natiivi-maapallon-vuosi-havainne.jpg",
+      "sha256": "a1b8b01b4841f9445c46f2d3968dd5c2e6a2309377969020da89ef124edb9fb8",
+      "width": 1600,
+      "height": 900,
+      "bytes": 715271,
+      "generationPrompt": "Use case: scientific-educational\nAsset type: one premium illustrated-photographic lens catalogue card, widescreen16:9, final1600x900sRGBJPEG, opaque.\nPrimary request: MAAPALLON VUOSI / the Earth's year, conveyed without any text: ONE real Earth seen from space, with seasonal climatic belts made legible through northern snow and green temperate regions further south, against a subtle star field. A complete newly composed image, not a copy or crop of an existing card.\nInput image roles: reference1(X4) gives the catalogue's convincing three-dimensional planetary image, warm brass/amber side light and dark navy space; reference2(X2) is a geography reference for the true continental outlines and terrestrial colours; reference3(X5) gives restrained warm metallic/glowing highlights and premium lens-card surface character. Do not reproduce the references' radio towers, routes, giant city points, porthole geometry, maps as a flat sheet, labels or decorative icons.\nComposition: ONE spherical Earth floating in deep navy space, centred slightly left, almost fully visible, about80percent of card height. A view centred on Europe and Africa, with western Asia on the right, Greenland near upper-left, realistic sphere curvature. Authentic coastlines are essential: Europe above Africa, Iberia distinct in southwest Europe, boot-shaped Italy in the Mediterranean, elongated Scandinavia in the north, Britain/Ireland west of mainland Europe, recognisable Mediterranean and Black Sea, correctly shaped Saharan northern Africa, tapered southern Africa and separate Madagascar at its southeast. Keep all continents correctly oriented and placed, no mirrored invented landmasses. No exaggerated relief, do not reshape coasts for aesthetics.\nSeason motif: snowy white Arctic/Greenland and higher-latitude northern Eurasian land and mountain tops, transitioning naturally into a fresh green lower-latitude temperate belt; real tan/brown Sahara must remain desert, oceans deep blue. The seasonal transition is visible organically on the living terrestrial surface, not drawn as flat stripes or borders. North snow and warm green vegetation at more southern latitudes read clearly even at small card scale. Include modest natural white cloud wisps that do not obscure the continental outlines.\nLighting/style: sophisticated photo-like three-dimensional view of the real planet, credible fine texture, blue atmosphere as a thin rim. Warm golden sunlight grazes the planet's right edge and catches green and ochre land, cold gentle reflected light on snow; background nearblack/navy with a few tiny natural stars. At extreme corners only a very subtle out-of-focus brass-toned curved optical rim or warm reflections evoke the other catalogue cards without covering Earth. Natural dimensional realism, rich restrained navy, amber, brass and earthy green colours, strong single-subject thumbnail readability. Do not introduce a huge nearby moon or another planet.\nConstraints: absolutely NO words, letters, numerals, dates, symbols, arrows, route graphics, borders, logos or watermarks. No split-panel diagram, no cartoon globe, no people, no impossible fictional continents, no glow covering the actual geography. Original scene, not an edit of the catalogue files.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/maapallon-vuosi/prompts/hero.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X4-havainne.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X2-havainne.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X5-havainne.jpg"
+      ],
+      "viitteet": [],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/maapallon-vuosi/originals/natiivi-maapallon-vuosi-havainne.png",
+      "nativeToolOutputPath": "/Users/samireivinen/.codex/generated_images/01a11231-74d8-7f20-92a7-b6c601fa68e5/exec-f7d710b9-f3a7-4bd9-b377-cf80537aa400.png",
+      "originalSha256": "0c93bc567c3ed6722f711df2fd6c3239e6fddb921290cf5c6b7b56b3764c9651",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "Matkakirjan alkuperäinen tekoälyhavainnekuva; vain sisäiset katalogin tyyliviitteet",
+      "caption": "Pohjoisen lumi ja etelämpänä vihertävät alueet kertovat Maapallon vuoden kierrosta.",
+      "QA": {
+        "format": "JPEG",
+        "dimensionsPass": true,
+        "sRGB": true,
+        "iccProfile": "sRGB built-in",
+        "mode": "RGB",
+        "opaque": true,
+        "fullImageVisuallyInspected": true,
+        "480pxCardVisuallyInspected": true,
+        "geographyChecked": "Earth seasonal-latitude motif: northern snow, temperate green, true Europe/Africa/Asia/Greenland outlines, navy star field and subtle warm brass frame",
+        "styleChecked": "Photo-like3Ddimensional realism, warm brass/amber/deepnavy matching catalogueX4/X5, clear thumbnail subject; no text/logo/watermark.",
+        "referenceSamplesInspected": [
+          "X2",
+          "X4",
+          "X5",
+          "E11",
+          "C7"
+        ],
+        "sampleSizes": "X2/X4/X5/C7 1600x900; E11exception1600x1199; output1600x900.",
+        "nativeSize": [
+          1672,
+          941
+        ],
+        "postProcessing": "Only technical Lanczos resize from nativePNG to1600x900RGBJPEG,quality95subsampling0,sRGBICC. OriginalPNG preserved, no creative retouch.",
+        "generationCalls": 1
+      },
+      "generationTool": "built-in image_gen",
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrationVerified": false,
+      "editorReview": "pending"
+    },
+    {
+      "lensId": "ajattelijat",
+      "file": "natiivi-ajattelijat-havainne.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/ajattelijat/natiivi-ajattelijat-havainne.jpg",
+      "r2Key": "linssikatalogi/natiivi-ajattelijat-havainne.jpg",
+      "sha256": "eeb8fcab89bdc3c0e076957d3b1907adeacb76a1030fc37a2bb3742bd1629d67",
+      "width": 1600,
+      "height": 900,
+      "generationPrompt": "Use case: historical-scene.\nAsset type: a native lens catalogue thumbnail for Ajattelijat (Thinkers), one completely new wide landscape image, final 1600 x 900 pixels, exactly 16:9, no transparency.\nInput images 1–3 are project-owned catalogue STYLE references only: borrow their rich photographic/three-dimensional material realism, warm brass/amber highlights, sepia stone and deep navy evening shadows. Do not reproduce globes, maps, radio towers, routes, porthole borders or reference subjects.\nScene: an ancient Greek covered stoa at early evening. A row of authentic warm ivory marble Doric columns recedes into depth along an open stone portico. Two anonymous adult thinkers wearing softly draped cream and ochre wool cloaks stand facing one another at the centre-right, shown from behind and three-quarter rear view; one makes a calm open-hand gesture while the other listens. Their posture clearly reads as a thoughtful conversation. Faces are turned away or in indistinct shadow: no recognisable real person, no portrait of any named philosopher.\nComposition: cinematic but physically plausible photographic view from waist-to-chest height inside the stoa, large column on left, repeated columns leading diagonally toward the dusk opening, two thinkers large enough to read clearly in a 480 px wide card, together about 30 percent of image height. Keep both complete bodies and the meaningful gesture safely inside the central 16:9 frame. Clean strong silhouette hierarchy, rich depth, no clutter.\nLighting: low warm sunset enters from the colonnade side and grazes the marble, small realistic bronze oil lamps cast focused amber light, deep soft navy dusk beyond. Rich believable physical surfaces and living light as in the catalogue, balanced contrast, realistic fabric folds and marble grain. A polished photorealistic three-dimensional historical illustration, not a painting, cartoon, fantasy palace or flat vector graphic.\nNo words, letters, labels, signs, logos, watermark, UI or borders. No contemporary clothing or objects. No metallic skin, statue people, extra limbs, famous likenesses or readable faces. The conversation and the stoa must be immediately recognisable when reduced to a small card.\n",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X4-havainne.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X5-havainne.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/C7-havainne.jpg"
+      ],
+      "viitteet": [],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/ajattelijat/originals/natiivi-ajattelijat-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY 4.0",
+      "caption": "Kaksi ajattelijaa keskustelee antiikin stoassa iltavalon ja öljylamppujen loisteessa.",
+      "QA": {
+        "fullImageViewed": true,
+        "card480pxViewed": true,
+        "acceptedForBatchReview": true,
+        "subject": "Two anonymous cloaked thinkers conversing from rear/side within ancient marble stoa; gesture and columns clear at 480 px.",
+        "style": "Photographic dimensional material realism, amber lamps and sunset, deep blue dusk, matches catalogue tonal system.",
+        "period": "Generic ancient Greek/Mediterranean scene; no contemporary foreground objects.",
+        "noRealRecognisableFaces": true,
+        "noTextLogosWatermarks": true,
+        "reviewedAt": "2026-10-06T17:42:41.584575+00:00",
+        "editorApproval": "pending"
+      },
+      "url": "https://media.matkakirja.app/linssikatalogi/natiivi-ajattelijat-havainne.jpg",
+      "bytes": 817443,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrationVerified": false,
+      "editorReview": "pending"
+    },
+    {
+      "lensId": "yokartta",
+      "file": "natiivi-yokartta-havainne.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/yokartta/final/natiivi-yokartta-havainne.jpg",
+      "r2Key": "linssikatalogi/natiivi-yokartta-havainne.jpg",
+      "url": "https://media.matkakirja.app/linssikatalogi/natiivi-yokartta-havainne.jpg",
+      "sha256": "50306e448b848ef76c25687a57d2d925f3cfaed9746a507ca3490b44a5a0f7d4",
+      "width": 1600,
+      "height": 900,
+      "bytes": 893231,
+      "generationPrompt": "Use case: photorealistic-natural\nAsset type: one premium three-dimensional photographic catalogue lens card, widescreen16:9, final1600x900sRGBJPEG, opaque.\nPrimary request: YÖKARTTA — the REAL EUROPE seen from space at night: authentic continental and island geography, the believable warm city-light network, a thin moonlit cloud veil and atmospheric Earth curvature. No text or explanatory graphic elements. Compose a completely NEW image.\nInput roles: reference1(X4) gives the catalogue's photo-like real-European planetary viewpoint and warm brass/deep-navy dimensional atmosphere; reference2(X5) gives amber/golden night-light-network mood and polished three-dimensional catalogue look; reference3(X2) is the geography reference for correct Europe and coastal shapes. Do not reuse the reference composition or copy artificial radio towers, signal arcs, route lines or giant glowing points.\nGeography: Europe is the dominant large subject on a dark curved Earth, seen from orbit looking slightly obliquely across western and central Europe, north at the upper image. Britain and Ireland are separate islands at left/northwest, off the true coast of France and Benelux; Iceland may be small at farupperleft, never joined to Britain. Iberian Peninsula is southwest at lowerleft, France and Germany central, boot-shaped Italy stretching southeast into the Mediterranean at lowercentre, Sicily off its toe, Corsica/Sardinia west of Italy, Greece/Balkans to the right, Black Sea far right. Long Scandinavia rises towards the upperright with correctly shaped Norway/Sweden/Finland and Baltic Sea. North Africa forms the Mediterranean's southern shore at the loweredge, separated from Europe by sea. Atlantic remains dark to the west. All coastlines/land proportions must remain realistic and geographically consistent with reference3, no fictional continents or mirrored map. No political border outlines.\nNight lights: realistically dense warm amber urban clusters over southeast Britain/London, Paris and northern France, Benelux and the Rhine/Ruhr corridor, central Europe, northern Italy/Po plain, Madrid and the Spanish east coast. More widely spaced lights around Mediterranean shores and Scandinavian coasts, comparatively dark inland forest and mountains. Tiny settlements and urban corridors form organic human networks, not a uniform computer grid, not straight golden lines painted across sea, not floating cities on water. No huge glows obscuring the geography.\nComposition/lighting: Earth's curved blue atmospheric limb along the upperthird against dark navy space and a subtle star field. Europe fills the card; its coastlines and the light network remain clear even at480pxwidth. Thin natural moonlit cloud strands with cool silver-blue edges drift over a few dark regions/Atlantic, but do not cover the critical Britain/Italy/Iberia outlines. A small distant moon in the top right is optional and secondary, never another Earth. Warm amber citylight against cool navy ocean, with subdued warm brass optical reflections at the extreme corners only as a quiet catalogue-family cue. No bright daylight sunrise washing over Europe: this is genuinely the night side.\nStyle: premium, credible photographic3Dspace visualization with natural relief and realistic clouds. Warm brass/amber/deep-blue palette consistent with references, restrained rich exposure. No flat cartoon map, painting, isometric land model, shiny toy globe, or fake-neon cyberpunk.\nConstraints: absolutely no words/letters/numerals, readable text, logos, watermark, border, arrows, radio towers, beam rings, infographic symbols, route overlays, people or spacecraft. One coherent view, no collage or split panels.",
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/yokartta/prompts/hero.json",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X4-havainne.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X5-havainne.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X2-havainne.jpg"
+      ],
+      "viitteet": [],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/yokartta/originals/natiivi-yokartta-havainne.png",
+      "nativeToolOutputPath": "/Users/samireivinen/.codex/generated_images/01a11231-74d8-7f20-92a7-b6c601fa68e5/exec-8061ed08-d107-48b8-ba65-a7e359aca5b6.png",
+      "originalSha256": "cd2c4299acdb96d2e5e8fb546edafd1982f3b105bed85a2722d1e63a8060020f",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "Matkakirjan alkuperäinen tekoälyhavainnekuva; vain sisäiset katalogin tyyliviitteet",
+      "caption": "Euroopan kaupunkien valot piirtävät verkoston yöpuolelle.",
+      "QA": {
+        "format": "JPEG",
+        "dimensionsPass": true,
+        "sRGB": true,
+        "iccProfile": "sRGB built-in",
+        "mode": "RGB",
+        "opaque": true,
+        "fullImageVisuallyInspected": true,
+        "480pxCardVisuallyInspected": true,
+        "geographyChecked": "Real Europe on Earth night side: distinct Britain/Ireland, Iberia, Italy, Scandinavia, Mediterranean and Africa; organic citylight network and moonlit cloud veil",
+        "styleChecked": "Photo-like3Ddimensional realism, warm brass/amber/deepnavy matching catalogueX4/X5, clear thumbnail subject; no text/logo/watermark.",
+        "referenceSamplesInspected": [
+          "X2",
+          "X4",
+          "X5",
+          "E11",
+          "C7"
+        ],
+        "sampleSizes": "X2/X4/X5/C7 1600x900; E11exception1600x1199; output1600x900.",
+        "nativeSize": [
+          1672,
+          941
+        ],
+        "postProcessing": "Only technical Lanczos resize from nativePNG to1600x900RGBJPEG,quality95subsampling0,sRGBICC. OriginalPNG preserved, no creative retouch.",
+        "generationCalls": 1
+      },
+      "generationTool": "built-in image_gen",
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrationVerified": false,
+      "editorReview": "pending"
+    },
+    {
+      "lensId": "tahdet",
+      "file": "natiivi-tahdet-havainne.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/tahdet/natiivi-tahdet-havainne.jpg",
+      "r2Key": "linssikatalogi/natiivi-tahdet-havainne.jpg",
+      "sha256": "a3ca56930da502bef48146644f2e9919441c5c9451282c552274b019d7ac143b",
+      "width": 1600,
+      "height": 900,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: native lens catalogue image for Tähtitaivas (Starry Sky), one completely new wide landscape photograph-like three-dimensional illustration, final 1600 x 900 pixels, 16:9, opaque.\nReference images 1 and 2: actual freely licensed ESO astrophotographs of the southern night sky over Chile. Use their REAL Milky Way dust-lane structure, star-field density, uneven luminosity and natural sky colours as scientific visual references. Image 2 provides the gently arching Milky Way. Do not copy the observatory buildings or large institutional telescopes. Reference images 3 and 4: project catalogue STYLE only, rich navy shadows with restrained amber/brass subject light, dimensional photographic realism; do not reproduce globes, maps, porthole frames or graphic routes.\nScene: an open dark rocky high-desert overlook under the true southern Milky Way, with a low uneven distant ridge and a vast clear night sky. The Milky Way rises as a natural softly luminous arch across the upper two thirds, white-cream star clouds with dark irregular interstellar dust lanes and countless small stars of realistic brightness, a subtle warmer glow close to the horizon. This is a believable long-exposure astrophotography view. Keep the actual structure of our galaxy from the ESO photographs, not a fantasy spiral galaxy or rainbow nebula.\nIn the lower-left foreground a SMALL anonymous adult observer stands next to a modest brass refractor telescope on a stable three-legged tripod, looking upward. Observer and scope form a clean dark silhouette, together taking only about 17 percent of image height; body and face turned away, no recognisable face. A very subtle warm amber edge catches the telescope tube, linking to the catalogue palette without bright light pollution.\nComposition: full 16:9, clear main read of stars and Milky Way, dark landscape lower quarter, observer and telescope safely within the frame with enough separation to read in a 480 px wide card. Camera close to ground, natural wide-angle panorama. Photographic depth and real textures, balanced stars against navy sky; no cartoon, painting, flat vector infographic or generic fantasy space.\nNo constellation connecting lines, no labels, no words, letters, numbers, logos, watermark, borders or UI. No oversized stars, artificial sparkle symbols, planets, visible large moon, aurora, floating objects, satellite or sci-fi telescope. Do not brighten the ground enough to wash out the Milky Way.\n",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/tahdet/viitteet/commons-1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/tahdet/viitteet/commons-2.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X4-havainne.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X5-havainne.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "File:Banishing Light Pollution (potw1936a).jpg",
+          "tekija": "ESO/P. Horálek",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Banishing_Light_Pollution_(potw1936a).jpg"
+        },
+        {
+          "nimi": "File:Panorama of the Southern Sky.jpg",
+          "tekija": "ESO/H.H. Heyer",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Panorama_of_the_Southern_Sky.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/tahdet/originals/natiivi-tahdet-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY 4.0",
+      "caption": "Linnunrata kaartuu tumman maiseman ja kaukoputkella taivasta katsovan ihmisen yllä.",
+      "QA": {
+        "fullImageViewed": true,
+        "card480pxViewed": true,
+        "acceptedForBatchReview": true,
+        "subject": "Dark rocky landscape, southern Milky Way arch and many natural stars; anonymous observer and a brass refractor tripod telescope in lower-left silhouette.",
+        "style": "Photographic astrophotography and dimensional brass detail; navy sky, restrained amber horizon and telescope edge.",
+        "astronomy": "Irregular luminous Milky Way band and dark dust lanes match real ESO southern sky references; no labelled constellations, diagram lines, giant planets or moon.",
+        "noRealRecognisableFaces": true,
+        "noTextLogosWatermarks": true,
+        "reviewedAt": "2026-10-06T17:45:58.786996+00:00",
+        "editorApproval": "pending"
+      },
+      "url": "https://media.matkakirja.app/linssikatalogi/natiivi-tahdet-havainne.jpg",
+      "bytes": 989802,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrationVerified": false,
+      "editorReview": "pending"
+    },
+    {
+      "lensId": "lontoo",
+      "file": "natiivi-lontoo-havainne.jpg",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/lontoo/natiivi-lontoo-havainne.jpg",
+      "r2Key": "linssikatalogi/natiivi-lontoo-havainne.jpg",
+      "sha256": "f12b6953ecd19ccfda6080022830fa0e5c777b56b3b6df3cea55492f679faf41",
+      "width": 1600,
+      "height": 900,
+      "generationPrompt": "Use case: historical-scene.\nAsset type: native lens catalogue thumbnail Lontoo, explicitly VICTORIAN LONDON IN THE YEAR 1873, one completely new wide photorealistic three-dimensional historical illustration, final 1600 x 900 pixels, 16:9, opaque.\nInput reference 1: Alfred Henry Vickers, 1860–1870 period view of the new Houses of Parliament from the Thames, public domain; use its authentic skyline, broad river and period vessel types, not its painted medium. Reference 2: an old carte-de-visite photograph dated 1870–1900, CC0, only as an architectural geometry reference for the already existing Palace of Westminster, Victoria Tower and clock tower. Its broad date range is not permission to add later objects. Reference 3: Claude Monet's Thames below Westminster, 1871, public domain; use only as a period reference for river steamers, fog and embankment character, not brushstrokes or the artist's style. Reference 4: the project's catalogue STYLE only, photographic dimensional detail, warm brass/amber practical light and deep navy atmosphere; do not reproduce its globe, maps, routes, towers or frame.\nScene and period: Thames at Westminster in 1873, viewed from the Lambeth east bank across the river towards the long east riverfront of the Houses of Parliament. The authentic large square pinnacled Victoria Tower stands at the left/south end of the palace, the slimmer clock tower known as Big Ben at the right/north end, with the actual long Gothic river facade between them; do not swap the towers or add towers. Westminster Bridge of 1862 may be only partly visible in the distant right background beside the clock tower, as in the period view. Low Victorian rooftops beyond, softened by river fog. A modest 1870s river paddle-steamer with a single smoke funnel and dark low hull is the main foreground boat, a second smaller steam tug farther away; physically plausible iron/wood hulls, paddle housings, thin smoke blending into the mist. No modern cruise boats.\nComposition: atmospheric low riverside view, broad Thames occupying the lower half, one period cast-iron GAS lantern on the near bank at the right edge glowing amber, its light reflected on wet stone and the navy river. Palace and especially the clock tower clearly recognisable through translucent fog at small-card scale, the steam vessel large enough to read at 480 px. A natural cinematic full 16:9 view, strong layered depth, no painted texture, no oil painting, no cartoon or miniature model.\nLighting: blue-grey dusk and thin Victorian coal-and-river mist, selective warm gas-lamp light and a few softly glowing windows, a muted amber clock-face glow, believable rippling reflections. Rich brass/sepia/navy catalogue palette without modern electric floodlighting, excessive HDR or fantasy glow.\nStrict year constraint: 1873 ONLY. NO Tower Bridge (built 1894), London Eye, Gherkin, Shard, modern skyscrapers, modern bridge designs, modern vehicles, power cables, electric streetlights, illuminated advertising or futuristic architecture. No words, letters, readable clock numerals, signs, logos, watermark, UI, borders or frame. Any people are tiny indistinct anonymous Victorian silhouettes, no recognisable face. The near gas lantern and fog are real physical atmosphere, not a graphic overlay.\n",
+      "referencePaths": [
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/lontoo/viitteet/commons-1.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/lontoo/viitteet/commons-2.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/lontoo/viitteet/commons-3.jpg",
+        "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/linssikatalogi/X5-havainne.jpg"
+      ],
+      "viitteet": [
+        {
+          "nimi": "File:Alfred Henry Vickers (1834-1919) - View of the New Houses of Parliament from the River, 1860–1870 - WOA 261 - Parliamentary Art Collection.jpg",
+          "tekija": "Alfred Henry Vickers",
+          "lisenssi": "Public domain",
+          "lisenssiUrl": "https://commons.wikimedia.org/wiki/Template:PD-old",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Alfred_Henry_Vickers_(1834-1919)_-_View_of_the_New_Houses_of_Parliament_from_the_River,_1860%E2%80%931870_-_WOA_261_-_Parliamentary_Art_Collection.jpg"
+        },
+        {
+          "nimi": "File:Houses of Parliament from the River, RP-F-F24587.jpg",
+          "tekija": "The London Stereoscopic and Photographic Company; Rijksmuseum",
+          "lisenssi": "CC0",
+          "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Houses_of_Parliament_from_the_River,_RP-F-F24587.jpg"
+        },
+        {
+          "nimi": "File:Monet The Thames at Westminster 1871 Westminster.jpg",
+          "tekija": "Claude Monet",
+          "lisenssi": "Public domain",
+          "lisenssiUrl": "https://commons.wikimedia.org/wiki/Template:PD-old",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Monet_The_Thames_at_Westminster_1871_Westminster.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/linssit/lontoo/originals/natiivi-lontoo-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY 4.0",
+      "caption": "Vuoden 1873 Thamesilla höyrylaivat kulkevat Westminsterin ja kaasulyhtyjen loisteessa.",
+      "QA": {
+        "fullImageViewed": true,
+        "card480pxViewed": true,
+        "acceptedForBatchReview": true,
+        "subject": "Thames paddle steamer and smaller steam tug, Palace of Westminster with Victoria Tower left and clock tower right, translucent fog and near cast-iron gas lamp.",
+        "style": "Photographic three-dimensional catalogue scene in amber/sepia/navy, bright practical gas light and visible river textures.",
+        "targetYear": 1873,
+        "periodReview": "Victorian single-funnel low-hull vessels, gas lamps, low skyline, authentic Westminster placement. No Tower Bridge, London Eye, Gherkin, Shard, modern skyscrapers or vehicles.",
+        "sourceDating": "Vickers period view 1860–1870 and Monet 1871; 1870–1900 carte-de-visite used only for already present Palace geometry.",
+        "noRealRecognisableFaces": true,
+        "noTextLogosWatermarks": true,
+        "reviewedAt": "2026-10-06T17:49:25.146915+00:00",
+        "editorApproval": "pending"
+      },
+      "url": "https://media.matkakirja.app/linssikatalogi/natiivi-lontoo-havainne.jpg",
+      "bytes": 806210,
+      "http": 200,
+      "mime": "image/jpeg",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrationVerified": false,
+      "editorReview": "pending"
+    }
+  ],
+  "qa": "All7primaryvisual+technical+publicHTTP/MIME/CORS/byteexactSHAreadback passed",
+  "editorReview": "pending",
+  "gameIntegrationVerified": false,
+  "published": false
+}
