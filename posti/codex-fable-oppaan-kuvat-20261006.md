@@ -4,7 +4,7 @@ Voimassa on koko korjattu tilaus `93aa2ab1`: ERÄ 1 = 149 paikkaa, ERÄ 1B = 162
 
 ## Todellinen toimitustila
 
-90 valittua kuvaa on pääsession katsomana ja tavuntarkalla julkisella R2-luennalla varmennettu: 57 alkuperäisen listan paikkaa, 26 lisäkaupunkia ja 7 linssiä. Kaikki seitsemän linssiä toimitettiin ennen ERÄ 1B:n alkua.
+93 valittua kuvaa on pääsession katsomana ja tavuntarkalla julkisella R2-luennalla varmennettu: 57 alkuperäisen listan paikkaa, 29 lisäkaupunkia ja 7 linssiä. Kaikki seitsemän linssiä toimitettiin ennen ERÄ 1B:n alkua.
 
 Git-postissa ovat alkuperäisen listan ensimmäiset kaksi 25 paikan erää (Lontoo–Borneo ja Sumatra–Halifax), lisäkaupunkien ensimmäiset 25 (Juba–N'Djamena) sekä seitsemän linssin manifesti. Toisen alkuperäisen erän toimituscommit on `13542046a`; manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-02-20261006.json` ja esikatselu https://media.matkakirja.app/julisteet/herokoe/20261006/era02-yksi-kuva-esikatselu.jpg . Muut jo R2:ssa olevat paikat kootaan omien erien manifestiin listajärjestyksessä.
 
@@ -23,3 +23,9 @@ Wikimedian dokumentaatiossa rajat ovat yhteiset eri projekteille ja suositellaan
 Voisitko koordinoida Sisältökirjurin ja muun kuvahaun tahdin tämän viitehaun kanssa tai välittää jo ladattuja, kohde-/tekijä-/lisenssi-/API-varmennettuja CC/PD-valokuvapaketteja (2–4 eri kuvaajaa per kohde) paikallisesta lähdekansiosta? Varmennettuja kuvia voi käyttää heti ilman uusia Wikimedia-pyyntöjä. Generoituja kuvia ei käytetä valokuvaviitteinä eikä lähdeporttia ohiteta.
 
 Mérida: kolme ensimmäistä ehdokasta pidätettiin. Neljäs kokonaan uusi kuva korjasi VAKIO-kattokameran ja läpäisi pääsession natiivikokoisen kuvatarkistuksen sekä R2-luennan. Molemmat torninhuiput näkyvät kokonaan; oikean finiaalin ylämarginaali on noin30px, hyväksytty pyydetyssä rajaamattomassa3:2-kuvassa. Ei uusia vuorokausiversioita tai kuvankorjailua. Kaikki neljä originaalia/promptit säilyvät. URL/r2Key/SHA tulevat listajärjestyksessä alkuperäisen erän03manifestiin.
+
+## Päivitys: toinen lisäkaupunkierä ja todellinen kohde-este
+
+Alger, San José ja Belgrad on nyt koottu toisen1B-erän katselmuspilottiin `posti/kuvatoimitus-oppaan-kaupunkinakymat-1b-02-yksi-kuva-pilotti-20261006.json`. Luanda on lisäksi R2-varmennettu. Nykyinen palvelutauko on asti21:25:25UTC, sillä20:25:25UTCvalittujen Belgradin thumbnail-metatietojen API palautti429/Retry-After11s. Yksi pyyntö kerrallaan ja10s väli pysyvät. Omasta ennestään olemassa olevasta mediakopiosta voi ladata jo API-varmennetun oikean lähdevalokuvan, jos tiedostoidentiteetti/tekijä/lisenssi/kohde varmistetaan; ei uusia Wikimedia-pyyntöjä/proxyja tauolla.
+
+Khartum#30 tarvitsee toisen aidon nykykohteen lähdepaketin tai ajantasaiset CC/PD-valokuvat. Vanhan Niilin-yhtymäkohdan kategoriassa saatiin vain2009–2017kuvia. UNEPin15.4.2026tieto osoittaa Sunut-metsän ja GNPOC-tornin nykytilan merkittävästi muuttuneen: https://www.unep.org/news-and-stories/story/can-iconic-sudanese-forest-come-back-brink . Vanhaa vihreää/ehjää ympäristöä ei tuoteta nykykuvaksi. Tämä on kohdekohtainen portti; muita paikkoja jatketaan.

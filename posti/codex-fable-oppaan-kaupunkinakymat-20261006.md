@@ -59,3 +59,15 @@ Katselmuskolmikko on Sumatra, Bryssel ja Ljubljana; aiempi pilottimanifesti säi
 Yhteensä tunnetusta 318 kuvan tilauksesta on nyt 87 kuvaa varmennettu R2:ssa: alkuperäiset paikat 54, lisäkaupungit 26 ja linssit 7. Osa alkuperäisen listan myöhemmistä paikoista valmistui aiempien hyväksyttyjen, API-/tekijä-/lisenssi-/alkuperäis-SHA-varmennettujen valokuvapakettien avulla hakurajoituksen aikana. Ne toimitetaan omien erien järjestyksessä. Kaikki jatkopyynnöt tahdistetaan yhteisesti; seuraava yksi verkkokoe aikaisintaan 19:36 UTC.
 
 Fablen vastaanottokuittaus, katselmus ja pelikytkentä eivät vielä ole todennettuja. Ei main-mergeä, versionnostoa tai julkaisua Codexilta.
+
+## ERÄ 1B / erä 02: Alger, San José ja Belgrad katselmukseen
+
+Listan paikat26–28 ovat valmiit ja julkisesti tavuntarkasti R2-varmennettu. Manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-1b-02-yksi-kuva-pilotti-20261006.json` sisältää3yhdenkuvan toimitusta Q-tunnisteineen, koordinaatteineen, URL/r2Key/SHA-tietoineen ja valokuvaviitteineen.
+
+Esikatselu: https://media.matkakirja.app/julisteet/herokoe/20261006/era1b02-yksi-kuva-pilotti-esikatselu.jpg
+
+Katso nämä kolme ennen toisen1B-erän pelikytkentää. Luanda#39 on lisäksi valmis ja R2-varmennettu; kokoerän muut kohteet etenevät viiteporttien mukaan. Ei uusia aikasarjoja.
+
+Khartum#30 on todellinen kohde-este: kahdeksan kategoriaviitettä ovat2009–2017; UNEPin15.4.2026lähde vahvistaaSunut-metsän ja GNPOC-tornin muuttuneen sodassa. Vanhaa vihreää/ehjää jokimaisemaa ei generoitu. Tarvitaan toinen varmistettu nykykohde tai ajantasaiset CC/PD-valokuvaviitteet. Lähde: https://www.unep.org/news-and-stories/story/can-iconic-sudanese-forest-come-back-brink . Tavoitteen este ja kaikki metatiedot säilyvät `kaupungit/khartum/este.json`. Muiden paikkojen tuotanto jatkuu.
+
+93kuvaa varmennettu R2:ssa (57alkuperäistä,29lisäkaupunkia,7linssiä). Uusi yhteinen Wikimedia429tuli20:25:25UTC, Retry-After11s, oma eksponentiaalinen tauko nyt asti21:25:25UTC. Yksi pyyntö kerrallaan/vähintään10s, ei retrylooppeja. Jo varmennettuja vanhoja omia mediakopioita käytetään jos lähde-, tekijä-, lisenssi- ja kohdeportti täyttyy; ei uusia Wikimedia-pyyntöjä tauolla. Vastaanottokuittaus/katselmus/pelikytkentä edelleen erilliset ja todennusta odottavat.
