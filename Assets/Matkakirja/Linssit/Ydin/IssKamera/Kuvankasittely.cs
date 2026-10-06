@@ -15,7 +15,7 @@ namespace Matkakirja.Linssit.IssKamera
         public static void Kehita(byte[] rgba, int w, int h)
         {
             PaikallinenKontrasti(rgba, w, h, Math.Max(2, w / 120), 0.45f);
-            Sinisyys(rgba, 0.45f);
+            Sinisyys(rgba, 0.35f);
             Hehku(rgba, w, h, 232, Math.Max(2, w / 160), 0.35f);
         }
 
@@ -98,8 +98,10 @@ namespace Matkakirja.Linssit.IssKamera
                 else hue = 60f * ((r - g) / (mx - mn) + 4f);
                 if (hue < 0) hue += 360f;
                 float e = Math.Abs(hue - 210f) / 40f;
-                if (e >= 1f) continue;
-                float paino = 0.5f + 0.5f * (float)Math.Cos(e * Math.PI);
+                if (e >= 1f || s < 0.12f) continue;
+                // Vain selvästi sininen (meri, syvä utu): harmaansininen maa-utu ei sinerry (Päätoimittaja 6.10.: maa luonnollisena).
+                float sk = Math.Min(1f, (s - 0.12f) / 0.18f);
+                float paino = (0.5f + 0.5f * (float)Math.Cos(e * Math.PI)) * sk * sk * (3 - 2 * sk);
                 float s2 = Math.Min(1f, s * (1f + voima * paino * (1f - s)));
                 // Sama sävy ja max-kanava, uusi kylläisyys: kanava = mx − (mx − c) · s2 / s.
                 float k = s2 / s;

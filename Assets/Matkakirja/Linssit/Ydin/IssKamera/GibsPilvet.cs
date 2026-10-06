@@ -106,8 +106,10 @@ namespace Matkakirja.Linssit.IssKamera
         /// Selkein päivä: paivat[d][k] = kerroksen k (Kerrokset-järjestys) RGB-mosaiikki (W × H × 3) tai null (ei haettu / ei
         /// dataa). Palauttaa pilvet tai null, jos millään päivällä ei ole dataa.
         /// </summary>
+        /// <param name="painoAlue">Selkeimmän päivän valinta vain tältä alueelta (pikseleinä tämän ruudukon sisällä, x0 y0 x1 y1):
+        /// laajan kuvan lähialue (Päätoimittaja 6.10.: Helsingin ja Suomenlahden pitää näkyä).</param>
         public static GibsPilvet Kokoa(int x0, int y0, int w, int h, IReadOnlyList<(DateTime paiva, byte[][] kerrokset)> paivat, int taso = Z,
-            DateTime? pakotettu = null)
+            DateTime? pakotettu = null, (int x0, int y0, int x1, int y1)? painoAlue = null)
         {
             int n = w * h, D = paivat.Count;
             var alfat = new float[D][]; var kirk = new byte[D][]; var osuus = new double[D]; var keski = new double[D];
@@ -116,7 +118,7 @@ namespace Matkakirja.Linssit.IssKamera
                 var kk = paivat[d].kerrokset;
                 var kelvot = new bool[kk.Length][];
                 for (int k = 0; k < kk.Length; k++) if (kk[k] != null) kelvot[k] = Kelvot(kk[k], w, h);
-                var a = new float[n]; var b = new byte[n]; int ok = 0; double summa = 0;
+                var a = new float[n]; var b = new byte[n]; int ok = 0, okP = 0; double summa = 0, summaP = 0;
                 for (int i = 0; i < n; i++)
                 {
                     a[i] = -1;
@@ -128,9 +130,14 @@ namespace Matkakirja.Linssit.IssKamera
                         b[i] = (byte)Math.Round(255 * Math.Max(0.70, Math.Min(1.0, 0.70 + 0.30 * ((0.3 * r + 0.55 * g + 0.15 * bl) - 150) / 90)));
                         break;
                     }
-                    if (a[i] >= 0) { ok++; summa += a[i]; }
+                    if (a[i] >= 0)
+                    {
+                        ok++; summa += a[i];
+                        if (painoAlue is (int, int, int, int) pa) { int px = i % w, py = i / w; if (px >= pa.x0 && px < pa.x1 && py >= pa.y0 && py < pa.y1) { okP++; summaP += a[i]; } }
+                    }
                 }
-                alfat[d] = a; kirk[d] = b; osuus[d] = (double)ok / n; keski[d] = ok > 0 ? summa / ok : 1;
+                alfat[d] = a; kirk[d] = b; osuus[d] = (double)ok / n;
+                keski[d] = okP > 0 ? summaP / okP : ok > 0 ? summa / ok : 1;
             }
             int paras = -1;
             for (int pass = 0; pass < 2 && paras < 0; pass++)
@@ -247,7 +254,17 @@ namespace Matkakirja.Linssit.IssKamera
         {
             var (gx, gy) = Pikseli(lat, lon, Taso);
             double a = Arvo(Alfa, gx, gy), k = Math.Max(0.70, Arvo(Kirkkaus, gx, gy));
-            if (Yksityiskohta == null || a <= 0.01) return (a, k);
+            if (a <= 0.01) return (a, k);
+            // Laaja kuva (kuvan pikseli > 100 m; juliste 65fe6316: litteät terävärajaiset läntit): ei fraktaaliterävöintiä, vaan
+            // pehmeä alfa GIBS-tiheydestä ja sävy auringon suunnasta koko pilven alalla (aurinkoa kohti kirkkaampi, varjopuoli tummempi).
+            if (pikseliM > 100)
+            {
+                double azL = AurinkoAz * Math.PI / 180;
+                double kohtiL = Arvo(Alfa, gx + Math.Sin(azL) * 1.5, gy - Math.Cos(azL) * 1.5);
+                double valoL = Math.Max(-0.14, Math.Min(0.06, -0.7 * (kohtiL - a)));
+                return (Askel(0.04, 0.9, a) * (0.75 + 0.25 * a), Math.Max(0.62, Math.Min(1.0, k * (0.93 + 0.07 * a) + valoL)));
+            }
+            if (Yksityiskohta == null) return (a, k);
             // GIBS-maski (~150–300 m/px) on kuvassa sumea möykky (simu 8eea083c Amazonia): reuna terävöitetään fraktaalikohinalla,
             // jonka asteikko seuraa maskin pikseliä (kumpupilven kukkakaalireuna), ja aurinkoa kohti oleva puoli on kirkkaampi.
             double m = PikseliM(lat, Taso); var y = Yksityiskohta;

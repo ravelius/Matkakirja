@@ -46,7 +46,7 @@ namespace Matkakirja.Natiivi
         /// <summary>Siiven tyvi (x, y kuvan korkeuden yksiköissä, y ylös), kulma (°) ja leveys; pituus. E v3:n mitoista (kuva 0,86:1).</summary>
         public static Vector4 SiluetinAsettelu = new Vector4(0.93f, -0.06f, 147f, 0.12f);
         public static float SiluetinPituus = 0.52f;
-        static bool siluettiAsetettu; static Vector4 siluettiAsettelu0; static float siluettiPituus0;
+        static bool siluettiAsetettu; static Vector4 siluettiAsettelu0; static float siluettiPituus0, siluettiReunavalo0;
 
         /// <summary>Kuvauksen alussa (ennen renderöintiä): siluetti päälle julisteen asettelulla.</summary>
         public static void SiluettiKuvaan()
@@ -55,6 +55,8 @@ namespace Matkakirja.Natiivi
             siluettiAsettelu0 = Matkakirja.Linssit.IssSiluetti.Asettelu; siluettiPituus0 = Matkakirja.Linssit.IssSiluetti.Pituus;
             Matkakirja.Linssit.IssSiluetti.Asettelu = SiluetinAsettelu;
             Matkakirja.Linssit.IssSiluetti.Pituus = SiluetinPituus;
+            siluettiReunavalo0 = Matkakirja.Linssit.IssSiluetti.Reunavalo;
+            Matkakirja.Linssit.IssSiluetti.Reunavalo = 0f;   // Päätoimittaja 6.10.: ei kermaviivaa kesken reunaa
             Matkakirja.Linssit.IssSiluetti.Paalla = true;
             siluettiAsetettu = true;
         }
@@ -65,6 +67,7 @@ namespace Matkakirja.Natiivi
             if (!siluettiAsetettu) return;
             Matkakirja.Linssit.IssSiluetti.Paalla = false;
             Matkakirja.Linssit.IssSiluetti.Asettelu = siluettiAsettelu0; Matkakirja.Linssit.IssSiluetti.Pituus = siluettiPituus0;
+            Matkakirja.Linssit.IssSiluetti.Reunavalo = siluettiReunavalo0;
             siluettiAsetettu = false;
         }
 

@@ -523,7 +523,13 @@ namespace Matkakirja.Linssit.IssKamera
                     float tx = gx - ix, ty = gy - iy;
                     float H(float[] f) { int q = iy * (G + 1) + ix; return (f[q] * (1 - tx) + f[q + 1] * tx) * (1 - ty) + (f[q + G + 1] * (1 - tx) + f[q + G + 2] * tx) * ty; }
                     float al, ki, va = H(v) * haivytys;
-                    if (lahi) { var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, px + 0.5, py + 0.5); var (pa, pk) = Pilvet.Lahi(la, lo, PeittoK(la, lo), pm); al = (float)pa; ki = (float)pk; }
+                    if (lahi)
+                    {
+                        var (la, lo) = Uudelleenprojisointi.Pikseli(z, x, y, px + 0.5, py + 0.5); var (pa, pk) = Pilvet.Lahi(la, lo, PeittoK(la, lo), pm);
+                        al = (float)pa; ki = (float)pk;
+                        // GIBS: varjo pikseleittäin (ruudukko 32 × 32 laatassa hävitti matalan auringon pitkät varjot, juliste 65fe6316).
+                        if (Pilvet is GibsPilvet) va = (float)Pilvet.Nayte(la, lo, PeittoK(la, lo)).varjo * haivytys;
+                    }
                     else { al = H(a); ki = H(kk); }
                     al *= haivytys;
                     if (PintaRajaaPilvet && al > 0) { double pv = GibsPilvet.MaskiAlfa(rgba[o], rgba[o + 1], rgba[o + 2]); al *= (float)(1 - pv); va *= (float)(1 - pv); }

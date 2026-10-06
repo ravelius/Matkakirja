@@ -60,9 +60,10 @@ namespace Matkakirja.Natiivi
         /// </summary>
         // Päätoimittaja 4.10. (maailmakamera): usva neutraaliksi sinivalkoiseksi; simu a10a2777 A/B: Rayleigh-kerros 1,5, sinisyys 1,3, utu 1,2
         // ja syvänsininen hehku 1,5 tekivät COG-kuvista violetteja (Sahara, Grand Canyon) → Rayleigh 1, sinisyys 1, utu 0,8, ei syvää hehkua.
-        // Omistaja 6.10.: "Voisiko tuon ilmakehän halon värjätä voimakkaammin siniseksi" → sinisyys 1,2 ja syvänsininen hehku 1 (kirkas
-        // sisäreuna säilyy ytimellä 1; Rayleigh ja utu ennallaan, ettei maa violettiudu kuten a10a2777:ssä).
-        const float KaariVoima = 6f, KaariHr = 1f, KaariSini = 1.2f, KaariUtu = 0.8f, KaariYdin = 1f, KaariSyva = 1f;
+        // Omistaja 6.10.: "Voisiko tuon ilmakehän halon värjätä voimakkaammin siniseksi"; Päätoimittaja 65fe6316: paksu ylivalottunut
+        // valkoinen vyö ja sinertävä maa → sinisyys ennallaan (1; se sinersi myös maan utua ja teki Viron punaruskeista magentaa),
+        // ytimen kerroin 0,55 (valkoinen viiva ohuemmaksi) ja syvänsininen hehku 1,5 (vain taivasta vasten, 5–45 km).
+        const float KaariVoima = 6f, KaariHr = 1f, KaariSini = 1f, KaariUtu = 0.8f, KaariYdin = 0.55f, KaariSyva = 1.5f;
 
         static bool KaariOletuksissa() => Avaruus.KuvanKaariVoima == 1f && Avaruus.KuvanHrKerroin == 1f && Avaruus.KuvanSiniKerroin == 1f
             && Avaruus.KuvanUtuKerroin == 1f && Avaruus.KuvanKaariYdin == 1f && Avaruus.KuvanKaariSyva == 0f;
@@ -685,13 +686,15 @@ namespace Matkakirja.Natiivi
                     double raja = mp[mp.Count / 2];
                     var lahi = naytteet.Where(x => x.MetriaPikseli <= raja).ToList();
                     double lw = lahi.Min(x => x.LonMin), ls = lahi.Min(x => x.LatMin), le = lahi.Max(x => x.LonMax), ln = lahi.Max(x => x.LatMax);
-                    GibsPilvet tarkka = null;
-                    int zKoko = GibsPilvet.TasoAlueelle(w, s, e, nn);
-                    if (zKoko < GibsPilvet.Z - 1 && GibsPilvet.TasoAlueelle(lw, ls, le, ln) > zKoko)
-                        yield return HaeGibs(lw, ls, le, ln, x => tarkka = x);
-                    yield return HaeGibs(w, s, e, nn, x => gp = x, tarkka?.Paiva);
-                    if (gp != null && tarkka != null && tarkka.Taso > gp.Taso) gp.Tarkka = tarkka;
-                    else if (gp == null && tarkka != null) gp = tarkka;
+                    // Päivä valitaan koko alueen karkealta tasolta lähialueen pilvisyyden mukaan; lähialue sitten vain sille päivälle
+                    // tarkemmalta tasolta (2048 px → z8–9; Päätoimittaja 6.10.: z5 + z7 oli litteitä laikkuja ja laattasaumoja).
+                    yield return HaeGibs(w, s, e, nn, x => gp = x, null, 1024, (lw, ls, le, ln));
+                    if (gp != null && GibsPilvet.TasoAlueelle(lw, ls, le, ln, 2048) > gp.Taso)
+                    {
+                        GibsPilvet tarkka = null;
+                        yield return HaeGibs(lw, ls, le, ln, x => tarkka = x, gp.Paiva, 2048);
+                        if (tarkka != null && tarkka.Taso > gp.Taso) gp.Tarkka = tarkka;
+                    }
                     if (gp != null)
                     {
                         gp.Aseta(az, korkeus, kentta);
@@ -1098,9 +1101,13 @@ namespace Matkakirja.Natiivi
         /// kerros kerrallaan kaikille päiville rinnakkain: seuraava kerros (SNPP → NOAA-20 → Terra → Aqua) vain päiville, joilla
         /// edellisistä jäi aukkoja. Tyhjä ruutu on 1665 tavun musta JPEG.
         /// </summary>
-        IEnumerator HaeGibs(double w, double s, double e, double n, Action<GibsPilvet> valmis, DateTime? paiva = null)
+        /// <param name="paiva">Pakotettu päivä (tarkka lähialue: vain se päivä haetaan, ei pysyvän valkoisen poistoa).</param>
+        /// <param name="maxPx">Alueen enimmäisleveys pikseleinä tason valintaan (tarkka lähialue 2048 → z8–9).</param>
+        /// <param name="paino">Selkeimmän päivän valinta tämän alueen (w, s, e, n) pilvisyydestä.</param>
+        IEnumerator HaeGibs(double w, double s, double e, double n, Action<GibsPilvet> valmis, DateTime? paiva = null, int maxPx = 1024,
+            (double w, double s, double e, double n)? paino = null)
         {
-            int z = GibsPilvet.TasoAlueelle(w, s, e, n);
+            int z = GibsPilvet.TasoAlueelle(w, s, e, n, maxPx);
             var (fx0, fy0) = GibsPilvet.Pikseli(n, w, z); var (fx1, fy1) = GibsPilvet.Pikseli(s, e, z);
             int x0 = (int)Math.Floor(fx0), y0 = (int)Math.Floor(fy0), W = (int)Math.Ceiling(fx1) - x0, H = (int)Math.Ceiling(fy1) - y0;
             if (W <= 0 || H <= 0) { valmis(null); yield break; }
@@ -1108,8 +1115,14 @@ namespace Matkakirja.Natiivi
             var kello = System.Diagnostics.Stopwatch.StartNew();
             // Pilvet kuvan hetkeltä (pelin kello; Helsinki vedoksen valossa 21.6. sai lokakuun pilvet), tulevaisuudessa tältä päivältä.
             var tanaan = IssNyt.Kello().Date; if (tanaan > DateTime.UtcNow.Date) tanaan = DateTime.UtcNow.Date;
+            // Selkein ±7 vrk kuvan päivästä (Päätoimittaja 6.10.: "kesäkuun selkein päivä ±7 vrk samalla valolla"); tulevaisuus pois.
             var paivat = new List<(DateTime paiva, byte[][] kerrokset)>();
-            for (int d = 1; d <= 7; d++) paivat.Add((tanaan.AddDays(-d), new byte[GibsPilvet.Kerrokset.Length][]));
+            if (paiva.HasValue) paivat.Add((paiva.Value.Date, new byte[GibsPilvet.Kerrokset.Length][]));
+            else for (int d = -7; d <= 7; d++)
+                {
+                    var pv = tanaan.AddDays(d);
+                    if (pv < DateTime.UtcNow.Date) paivat.Add((pv, new byte[GibsPilvet.Kerrokset.Length][]));
+                }
             long tavut = 0; int pyyntoja = 0;
             for (int k = 0; k < GibsPilvet.Kerrokset.Length; k++)
             {
@@ -1150,7 +1163,13 @@ namespace Matkakirja.Natiivi
                     }
                 }
             }
-            var t = Task.Run(() => GibsPilvet.Kokoa(x0, y0, W, H, paivat, z, paiva));
+            (int, int, int, int)? painoAlue = null;
+            if (paino is (double, double, double, double) pa)
+            {
+                var (px0, py0) = GibsPilvet.Pikseli(pa.n, pa.w, z); var (px1, py1) = GibsPilvet.Pikseli(pa.s, pa.e, z);
+                painoAlue = ((int)px0 - x0, (int)py0 - y0, (int)Math.Ceiling(px1) - x0, (int)Math.Ceiling(py1) - y0);
+            }
+            var t = Task.Run(() => GibsPilvet.Kokoa(x0, y0, W, H, paivat, z, paiva, painoAlue));
             while (!t.IsCompleted) yield return null;
             var g = t.IsFaulted ? null : t.Result;
             Loki($"gibs: z{z} {W}×{H} px, {pyyntoja} ruutua {tavut / 1e3:0} kt, {kello.ElapsedMilliseconds / 1000.0:0.0} s → "
