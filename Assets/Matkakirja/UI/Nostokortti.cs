@@ -153,7 +153,13 @@ namespace Matkakirja.Natiivi
             kerros = Rakenne.El("mk-himmennys mk-nosto__kerros", ui.Juuri(UiKerros.Valikot));
             kerros.style.display = DisplayStyle.None;
             // Kohde poimitaan itse (Poimi): vanhentunut kohde kortin kohdalla ei sulje korttia himmennyksestä.
-            kerros.RegisterCallback<PointerDownEvent>(e => { if (e.target == kerros && Poimi(e.position, kerros) == kerros) Sulje(); });
+            kerros.RegisterCallback<PointerDownEvent>(e =>
+            {
+                if (e.target != kerros || Poimi(e.position, kerros) != kerros) return;
+                // Pinnattu palkki himmennyksen alla: napautus palauttaa pinnatun heti (ei vain sulje tätä korttia).
+                if (Pinnaus.OsuuPalkkiin(e.position)) { e.StopPropagation(); Sulje(); Pinnaus.Palauta(); return; }
+                Sulje();
+            });
             kortti = Rakenne.El("mk-nosto", kerros);
             // Osuma-ala kortin yläpuolelle (savuke 110): poimittava kaista, jonka painallus tulee kortille (EleAlkoi).
             kahvaAlue = Rakenne.El("mk-vetokahva mk-nosto__vetoalue", kortti);

@@ -120,6 +120,13 @@ namespace Matkakirja.Natiivi
             Muuttui?.Invoke();
         }
 
+        /// <summary>
+        /// Piste (paneelin koordinaatit) osuu näkyvään palkkiin. Ylempi kerros (toinen kortti himmennyksineen) kysyy tätä, ettei
+        /// palkin napautus vain sulje sitä (junan 148b video 6.10.: ensimmäinen napautus sulki toisen kortin, vasta toinen palautti).
+        /// </summary>
+        public static bool OsuuPalkkiin(Vector2 p) =>
+            Viimeisin != null && Pienena && Viimeisin.palkki.resolvedStyle.display != DisplayStyle.None && Viimeisin.palkki.worldBound.Contains(p);
+
         /// <summary>Palkin napautus: pinnattu ikkuna takaisin.</summary>
         public static void Palauta()
         {
