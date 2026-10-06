@@ -1,20 +1,22 @@
-# 11 Elävä opas (ilman ääntä, testiotsake): avaus (Kööpenhamina) → tervetulo + 2 sirua → "Esittele kaupunki" (oikea tap) → 1. kohde saapuu →
-# ☰ → Vaihda kohde → Eurooppa → Alankomaat → Amsterdam → Amsterdamin vastaus. Oikea worker (Pöllö), mutta ILMAN ääntä
-# (omistaja 6.10.: "Ei, ilman ääntä"): testiotsake x-matkakirja-testi → worker ei anna ääni-urlia eikä kutsu ElevenLabsia.
-# Valmiit (jo tuotetut) silta-/maaleikkeet saavat soida. Kohteiden ääni = ei-testattu.
+# 11 Elävä opas (ilman ääntä, testiotsake; junan 146 kulku, Natiivi-UI 6.10.): avaus → valikko aukeaa itse täkynäkymään
+# ("MIHIN LENNETÄÄN?", täkyrivit mk-opas-taky) → 1. täky (oikea tap) → 1. kohde saapuu → ☰ (oikeanpuoleisin ohjausnappi)
+# → Vaihda kohde → Eurooppa → Alankomaat → Amsterdam (ENSIMMÄISELLÄ napautuksella: juna 144 FAIL, BUILD 145 toistuu,
+# korjaus 373e199b junassa 146) → Amsterdamin vastaus. Oikea worker, mutta ILMAN ääntä (omistaja 6.10.: "Ei, ilman ääntä"):
+# testiotsake → worker ei anna ääni-urlia eikä kutsu ElevenLabsia; valmiit silta-/nimileikkeet saavat soida.
 linssi opas testiotsake 1
 oleta 5 opas: -- testiotsake päällä
 linssi linssi opas
 oleta 30 opas: auki -- elävä opas aukesi
-oleta 60 opas: vastaus 1 .*ääni ei -- tervetulo workerilta ilman ääni-urlia (ei generointia)
-nakyy 40 Esittele kaupunki -- tervetulon sirut näkyvät (kertoja hiljaa)
-kuva 11a-tervetulo Elävä opas: tervetulo ja sirut
-tap-teksti Esittele kaupunki
-oleta 5 opas: valinta "Esittele kaupunki" -- sirun napautus välittyi
+oleta 30 opas: täkyt [1-9] -- täkyt workerilta
+nakyy 20 MIHIN LENNETÄÄN -- valikko aukesi itse täkynäkymään
+kuva 11a-takyt Elävä opas: täkynäkymä
+tap-teksti mk-opas-taky
+oleta 5 opas: täky -- täkyn napautus välittyi
 oleta 90 opas: saapui -- 1. kohde saapui
+oleta 30 opas: vastaus .*ääni ei|opas: saapui .*ääni ei -- kohde ilman ääni-urlia (ei generointia)
 odota 4
 kuva 11b-kohde1 Elävä opas: 1. kohde
-tap-teksti mk-ohjausnappi#2
+tap-teksti mk-ohjausnappi#-1
 nakyy 6 Vaihda kohde -- oppaan ☰ avasi valikon
 tap-teksti Vaihda kohde
 nakyy 6 Eurooppa -- maanosat
@@ -24,6 +26,7 @@ tap-teksti Alankomaat
 nakyy 6 Amsterdam -- Alankomaiden kaupungit
 kuva 11c-kaupungit Vaihda kohde: Alankomaiden kaupungit
 tap-teksti Amsterdam
+oleta 5 opas: kohde Amsterdam -- Amsterdam ENSIMMÄISELLÄ napautuksella (juna 144 FAIL)
 oleta 10 kaupunki vaihtuu → Amsterdam -- kaupunki vaihtui Amsterdamiin
 oleta 90 opas: vastaus .*ääni ei -- Amsterdamin vastaus workerilta ilman ääntä
 odota 6
@@ -31,3 +34,4 @@ kuva 11d-amsterdam Elävä opas: Amsterdam
 linssi linssi pois
 odota 3
 ei-testattu kohteiden ElevenLabs-ääni (omistaja 6.10.: ajo ilman ääntä, testiotsake)
+ei-testattu täkynäkymän Eurooppa-rivi vierityksen jälkeen (Amsterdam valitaan ☰ → Vaihda kohde -polulla, jossa juna 144:n vika oli)

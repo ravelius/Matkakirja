@@ -23,7 +23,7 @@ def etsi(puu, haku, kw, kh, fx=0.5, fy=0.5):
     h = haku.strip().lower()
     # "luokka#n": n:s täsmäosuma vasemmalta (samanluokkaiset kuvakenapit ilman tekstiä, esim. oppaan ☰ = mk-ohjausnappi#2)
     nro = 0
-    if "#" in h and h.rsplit("#", 1)[1].isdigit():
+    if "#" in h and h.rsplit("#", 1)[1].lstrip("-").isdigit():   # #-1 = oikeanpuoleisin
         h, nro = h.rsplit("#", 1)[0], int(h.rsplit("#", 1)[1])
     ehdokkaat = []
     for e in d["elementit"]:
@@ -41,9 +41,9 @@ def etsi(puu, haku, kw, kh, fx=0.5, fy=0.5):
     e = ehdokkaat[0][2]
     if nro:
         tasma = sorted((t[2] for t in ehdokkaat if t[0] == 0 and t[1] == ehdokkaat[0][1]), key=lambda x: (x["x"], x["y"]))
-        if len(tasma) < nro:
+        if len(tasma) < abs(nro):
             return
-        e = tasma[nro - 1]
+        e = tasma[nro - 1] if nro > 0 else tasma[nro]
     cx, cy = e["x"] + e["w"] * float(fx), e["y"] + e["h"] * float(fy)
     if kierretty:
         print(f"{kw - cy * kw / ph:.1f} {cx * kh / pw:.1f}")
