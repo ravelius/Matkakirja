@@ -1,0 +1,553 @@
+{
+ "kaupunki": "portoalegre",
+ "kaupunkiQ": "Q40269",
+ "kohteet": [
+  {
+   "q": "Q7232142",
+   "nimi": "Porto Alegren kauppahalli",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -30.02754,
+   "lon": -51.22809,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mercado público de porto alegre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercado_p%C3%BAblico_de_porto_alegre.jpg?width=1280",
+     "tekija": "Tetraktys (Ricardo André Frantz)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mercado_p%C3%BAblico_de_porto_alegre.jpg",
+     "selite": "Porto Alegren kauppahalli on keltainen uusklassinen halli, jonka kaarijulkisivu vie keskustan vilkkaaseen kortteliin.",
+     "leveys": 2000,
+     "korkeus": 865,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Burned Market .JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burned_Market_.JPG?width=1280",
+     "tekija": "Eugenio Hansen, OFS",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burned_Market_.JPG",
+     "selite": "Kauppahallin kaarevat ikkunat ja koristeelliset julkisivun yksityiskohdat ovat kestäneet useita tulipaloja.",
+     "leveys": 3216,
+     "korkeus": 4288,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Burned Market 02.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burned_Market_02.JPG?width=1280",
+     "tekija": "Eugenio Hansen, OFS",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burned_Market_02.JPG",
+     "selite": "Hallin keltainen pääsisäänkäynti pylväineen on kaupungin vanhimpia kauppapaikkoja.",
+     "leveys": 3216,
+     "korkeus": 4288,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9092064",
+   "nimi": "Usina do Gasômetro",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -30.03405,
+   "lon": -51.24112,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Usina do Gasômetro in 2025 (zoom).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Usina_do_Gas%C3%B4metro_in_2025_(zoom).jpg?width=1280",
+     "tekija": "Heylenny",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Usina_do_Gas%C3%B4metro_in_2025_(zoom).jpg",
+     "selite": "Usina do Gasômetro oli hiilivoimala, jonka korkea piippu ja tiilirakennus seisovat Guaíba-järven rannalla.",
+     "leveys": 3154,
+     "korkeus": 2365,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Antiga Usina de Gás, Porto Alegre, Rio Grande do Sul, Brasil.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antiga_Usina_de_G%C3%A1s%2C_Porto_Alegre%2C_Rio_Grande_do_Sul%2C_Brasil.jpg?width=1280",
+     "tekija": "Desoja",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antiga_Usina_de_G%C3%A1s%2C_Porto_Alegre%2C_Rio_Grande_do_Sul%2C_Brasil.jpg",
+     "selite": "Entinen voimala toimii nykyään kulttuurikeskuksena, ja sen piippu näkyy kauas vesistön yli.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Antiga Usina termelétrica do Gasômetro.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Antiga_Usina_termel%C3%A9trica_do_Gas%C3%B4metro.jpg?width=1280",
+     "tekija": "Silfeb",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Antiga_Usina_termel%C3%A9trica_do_Gas%C3%B4metro.jpg",
+     "selite": "Voimalan sininen vesi ja kaupungin siluetti muodostavat tunnetun auringonlaskun maiseman.",
+     "leveys": 2491,
+     "korkeus": 1868,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q614720",
+   "nimi": "Guaíba-järvi",
+   "peruste": "sitelinks",
+   "koko_m": 5000,
+   "lat": -30.15611,
+   "lon": -51.27639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arvores a Beira do Lago Guaíba na Ilha dos Jangadeiros, Porto Alegre, em maio 2016.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arvores_a_Beira_do_Lago_Gua%C3%ADba_na_Ilha_dos_Jangadeiros%2C_Porto_Alegre%2C_em_maio_2016.jpg?width=1280",
+     "tekija": "Mírian Almeida Ribeiro",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arvores_a_Beira_do_Lago_Gua%C3%ADba_na_Ilha_dos_Jangadeiros%2C_Porto_Alegre%2C_em_maio_2016.jpg",
+     "selite": "Guaíba on järveksi tai joeksi kutsuttu vesistö, joka ympäröi Porto Alegren länsirantaa.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Amanhecer - Lago Guaíba.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Amanhecer_-_Lago_Gua%C3%ADba.jpg?width=1280",
+     "tekija": "Goleiro1",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Amanhecer_-_Lago_Gua%C3%ADba.jpg",
+     "selite": "Guaíban rannalla näkee kaupungin auringonnousun ja laiturin siluetin.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1050224",
+   "nimi": "Beira-Rion stadion",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": -30.06561,
+   "lon": -51.23609,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Beira Rio - Porto Alegre, RS - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beira_Rio_-_Porto_Alegre%2C_RS_-_panoramio.jpg?width=1280",
+     "tekija": "Paulo JC Nogueira",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beira_Rio_-_Porto_Alegre%2C_RS_-_panoramio.jpg",
+     "selite": "Beira-Rio on Internacionalin kotistadion Guaíban rannalla, ja sen valkoinen kattorakenne muistuttaa kylkiluita.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Beira-Rio-Stadium-Porto-Alegre-Brazil.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beira-Rio-Stadium-Porto-Alegre-Brazil.jpg?width=1280",
+     "tekija": "Israel Heldt",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beira-Rio-Stadium-Porto-Alegre-Brazil.jpg",
+     "selite": "Stadionin sisällä katsomo ympäröi nurmikenttää valaistuna illalla.",
+     "leveys": 1200,
+     "korkeus": 800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4175872",
+   "nimi": "Iberê Camargon säätiö",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": -30.07791,
+   "lon": -51.24571,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2021 Fundação Iberê Camargo 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2021_Funda%C3%A7%C3%A3o_Iber%C3%AA_Camargo_01.jpg?width=1280",
+     "tekija": "Hedestad",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2021_Funda%C3%A7%C3%A3o_Iber%C3%AA_Camargo_01.jpg",
+     "selite": "Iberê Camargon säätiön betonimuseon rampit kiertyvät toistensa lomaan Guaíban rannalla.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10353329",
+   "nimi": "Praça da Matriz",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": -30.03266,
+   "lon": -51.23016,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Praça da Matriz, Porto Alegre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pra%C3%A7a_da_Matriz%2C_Porto_Alegre.jpg?width=1280",
+     "tekija": "Hikaru Barata",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Pra%C3%A7a_da_Matriz%2C_Porto_Alegre.jpg",
+     "selite": "Praça da Matrizin keskellä on Júlio de Castilhon muistomerkki, ja aukion ympärillä ovat osavaltion tärkeimmät rakennukset.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3776871",
+   "nimi": "Theatro São Pedro",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -30.03219,
+   "lon": -51.23037,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Theatro São Pedro - 30.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Theatro_S%C3%A3o_Pedro_-_30.jpg?width=1280",
+     "tekija": "Ajmcbarreto",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Theatro_S%C3%A3o_Pedro_-_30.jpg",
+     "selite": "Theatro São Pedro on Rio Grande do Sulin vanhin teatteri ja sen vaalea julkisivu seisoo Praça da Matrizin laidalla.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10292379",
+   "nimi": "Cais Mauá",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -30.0275,
+   "lon": -51.23194,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cais Mauá by Renato Soares (edited).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cais_Mau%C3%A1_by_Renato_Soares_(edited).jpg?width=1280",
+     "tekija": "Renato Soares via MTur Destinos",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cais_Mau%C3%A1_by_Renato_Soares_(edited).jpg",
+     "selite": "Cais Mauán vanhat satamavarastot ja nosturit kohoavat Guaíban rannalla Porto Alegren keskustan edessä.",
+     "leveys": 5902,
+     "korkeus": 3959,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cais 2007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cais_2007.jpg?width=1280",
+     "tekija": "marcusrg",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cais_2007.jpg",
+     "selite": "Cais Mauán punaovisten varastohallien jono ulottuu pitkin satama-aluetta.",
+     "leveys": 3072,
+     "korkeus": 2304,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2743869",
+   "nimi": "Parque Farroupilha",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": -30.03667,
+   "lon": -51.21583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Parque da Redenção (Porto Alegre, Brasil) 2030-10-12 0.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parque_da_Reden%C3%A7%C3%A3o_(Porto_Alegre%2C_Brasil)_2030-10-12_0.jpg?width=1280",
+     "tekija": "Eugenio Hansen, OFS",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Parque_da_Reden%C3%A7%C3%A3o_(Porto_Alegre%2C_Brasil)_2030-10-12_0.jpg",
+     "selite": "Parque Farroupilha eli Redenção on Porto Alegren keskustan suuri puisto, jonka vesiallasta koristaa kultainen paperivene.",
+     "leveys": 3619,
+     "korkeus": 2790,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Parque da Redenção (Porto Alegre, Brasil) 2030-10-12.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Parque_da_Reden%C3%A7%C3%A3o_(Porto_Alegre%2C_Brasil)_2030-10-12.jpg?width=1280",
+     "tekija": "Eugenio Hansen, OFS",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Parque_da_Reden%C3%A7%C3%A3o_(Porto_Alegre%2C_Brasil)_2030-10-12.jpg",
+     "selite": "Puiston vanhat puut ja lampi ovat suosittu sunnuntaikävelyn paikka.",
+     "leveys": 4008,
+     "korkeus": 3028,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q7335252",
+   "nimi": "Rio Grande do Sulin taidemuseo",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": -30.0291,
+   "lon": -51.2317,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Museoarte rio grande.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Museoarte_rio_grande.jpg?width=1280",
+     "tekija": "Espinozareynerio",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Museoarte_rio_grande.jpg",
+     "selite": "Rio Grande do Sulin taidemuseo MARGS toimii entisessä tullirakennuksessa, jota kruunaa kellotorni.",
+     "leveys": 4032,
+     "korkeus": 2268,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lado de fora do MARGS - Museu de Arte do Rio Grande do Sul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lado_de_fora_do_MARGS_-_Museu_de_Arte_do_Rio_Grande_do_Sul.jpg?width=1280",
+     "tekija": "Joao vitor 27",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lado_de_fora_do_MARGS_-_Museu_de_Arte_do_Rio_Grande_do_Sul.jpg",
+     "selite": "Museon vaalea julkisivu ja pylväikköinen sisäänkäynti avautuvat Praça da Alfândegalle.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10347008",
+   "nimi": "Vanha kaupungintalo",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -30.02796,
+   "lon": -51.22856,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fonte Talavera de la Reina em frente a prefeitura de Porto Alegre.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fonte_Talavera_de_la_Reina_em_frente_a_prefeitura_de_Porto_Alegre.jpg?width=1280",
+     "tekija": "Otávio Astor Vaz Costa",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fonte_Talavera_de_la_Reina_em_frente_a_prefeitura_de_Porto_Alegre.jpg",
+     "selite": "Vanhan kaupungintalon punatiilinen julkisivu ja sen edessä oleva laatoitettu Talavera de la Reina -suihkulähde.",
+     "leveys": 1265,
+     "korkeus": 948,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q10300156",
+   "nimi": "Dores-kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": -30.03246,
+   "lon": -51.23566,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Igreja Nossa Senhora das Dores - Porto Alegre - RS - Brasil.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Igreja_Nossa_Senhora_das_Dores_-_Porto_Alegre_-_RS_-_Brasil.jpg?width=1280",
+     "tekija": "Jorge Juno Goi Bengochea",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Igreja_Nossa_Senhora_das_Dores_-_Porto_Alegre_-_RS_-_Brasil.jpg",
+     "selite": "Dores-kirkon kaksi valkoista tornia kohoavat leveiden kiviportaiden päässä Porto Alegren keskustassa.",
+     "leveys": 2499,
+     "korkeus": 2400,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Igreja da Dores.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Igreja_da_Dores.JPG?width=1280",
+     "tekija": "E2m",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Igreja_da_Dores.JPG",
+     "selite": "Kirkon valkoinen julkisivu portaineen erottuu kirkkaana sinistä taivasta vasten.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q655753",
+   "nimi": "Arena do Grêmio",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": -29.97344,
+   "lon": -51.1944,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arena do Grêmio 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arena_do_Gr%C3%AAmio_2014.jpg?width=1280",
+     "tekija": "Contato: clickdearaujo@gmail.com",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arena_do_Gr%C3%AAmio_2014.jpg",
+     "selite": "Arena do Grêmio on Grêmion kotistadion, jonka sininen julkisivu ja valkoinen kattorakenne erottuvat Porto Alegren pohjoisosassa.",
+     "leveys": 4098,
+     "korkeus": 2200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Arena do Grêmio - Lado de fora.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arena_do_Gr%C3%AAmio_-_Lado_de_fora.jpg?width=1280",
+     "tekija": "Guivargas1",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arena_do_Gr%C3%AAmio_-_Lado_de_fora.jpg",
+     "selite": "Stadionin sininen julkisivu ja kattorakenne näkyvät kadun varrelta.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9093140",
+   "nimi": "Otávio Rochan viadukti",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": -30.03364,
+   "lon": -51.22794,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Viaduto Otávio Rocha 2021 11.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Viaduto_Ot%C3%A1vio_Rocha_2021_11.jpg?width=1280",
+     "tekija": "Hedestad",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Viaduto_Ot%C3%A1vio_Rocha_2021_11.jpg",
+     "selite": "Otávio Rochan viadukti kaartuu Avenida Borges de Medeirosin yli kaarisarjoineen Porto Alegren keskustassa.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Viaduto Otávio Rocha (Porto Alegre, Brasil).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Viaduto_Ot%C3%A1vio_Rocha_(Porto_Alegre%2C_Brasil).jpg?width=1280",
+     "tekija": "Eugenio Hansen, OFS",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Viaduto_Ot%C3%A1vio_Rocha_(Porto_Alegre%2C_Brasil).jpg",
+     "selite": "Viaduktin kaarirakenne ja ympäröivät rakennukset alhaalta katsottuna.",
+     "leveys": 3120,
+     "korkeus": 4160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q766447",
+   "nimi": "Rio Grande do Sulin liittovaltionyliopisto",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": -30.03361,
+   "lon": -51.21917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Campus do Vale UFRGS.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Campus_do_Vale_UFRGS.jpg?width=1280",
+     "tekija": "Junoyun",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Campus_do_Vale_UFRGS.jpg",
+     "selite": "UFRGS on Rio Grande do Sulin suurin yliopisto, ja sen Vale-kampuksella kasvaa vanhoja puita.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Vista de Porto Alegre a partir do Rio Guaíba 01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_de_Porto_Alegre_a_partir_do_Rio_Gua%C3%ADba_01.jpg?width=1280",
+   "tekija": "Paulo rsmenezes",
+   "lisenssi": "CC BY-SA 3.0 br",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0/br/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_de_Porto_Alegre_a_partir_do_Rio_Gua%C3%ADba_01.jpg",
+   "selite": "Porto Alegren keskustan siluetti kohoaa Guaíba-järven takaa.",
+   "leveys": 3648,
+   "korkeus": 2736,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Porto Alegre Skyline.JPG",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Porto_Alegre_Skyline.JPG?width=1280",
+   "tekija": "(WT-shared) Ricardo Rmx",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Porto_Alegre_Skyline.JPG",
+   "selite": "Kaupungin pilvenpiirtäjät ja kupolikatedraali erottuvat Guaíban rannalta nähtynä.",
+   "leveys": 2045,
+   "korkeus": 1040,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": [
+  {
+   "q": "Q2956553",
+   "nimi": "Nosso Senhor dos Passosin kappeli",
+   "peruste": "pelin nosto",
+   "lat": -30.03028,
+   "lon": -51.22249,
+   "syy": "vain sisätilakuvia"
+  },
+  {
+   "q": "Q10333525",
+   "nimi": "Joaquim Felizardon museo",
+   "peruste": "pelin nosto",
+   "lat": -30.04204,
+   "lon": -51.22493,
+   "syy": "ei kelvollista vapaata kuvaa"
+  }
+ ]
+}

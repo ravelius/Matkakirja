@@ -1,0 +1,427 @@
+{
+ "kaupunki": "masqat",
+ "kaupunkiQ": "Q3826",
+ "kohteet": [
+  {
+   "q": "Q1548443",
+   "nimi": "Sulttaani Qaboosin suurmoskeija",
+   "peruste": "sitelinks",
+   "koko_m": 400,
+   "lat": 23.58389,
+   "lon": 58.38917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sultan Qaboos Grand Mosque (19889998133).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sultan_Qaboos_Grand_Mosque_(19889998133).jpg?width=1280",
+     "tekija": "Riyadh Al Balushi",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sultan_Qaboos_Grand_Mosque_(19889998133).jpg",
+     "selite": "Suurmoskeijan minareetit ja kupoli hohtavat auringonlaskun aikaan puistomaisen pihan takana.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Sultan Qaboos Grand Mosque (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sultan_Qaboos_Grand_Mosque_(1).jpg?width=1280",
+     "tekija": "Mostafameraji",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sultan_Qaboos_Grand_Mosque_(1).jpg",
+     "selite": "Moskeijan puutarhan kukkaistutukset johtavat katsetta kohti moskeijan minareettia.",
+     "leveys": 5000,
+     "korkeus": 3333,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Muscat, moschea del sultano qaboos, interno, grande sala di preghiera 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muscat%2C_moschea_del_sultano_qaboos%2C_interno%2C_grande_sala_di_preghiera_01.jpg?width=1280",
+     "tekija": "Francesco Bini",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muscat%2C_moschea_del_sultano_qaboos%2C_interno%2C_grande_sala_di_preghiera_01.jpg",
+     "selite": "Suuri rukoussali on katettu valtavalla kristallikruunulla ja koristeellisella kupolilla.",
+     "leveys": 5787,
+     "korkeus": 4480,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Muscat, moschea del sultano qaboos, esterno 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muscat%2C_moschea_del_sultano_qaboos%2C_esterno_04.jpg?width=1280",
+     "tekija": "Francesco Bini",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muscat%2C_moschea_del_sultano_qaboos%2C_esterno_04.jpg",
+     "selite": "Moskeijan kaari kehystää minareetin kirkasta taivasta vasten.",
+     "leveys": 4181,
+     "korkeus": 6271,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2121461",
+   "nimi": "Al Alamin palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 23.616,
+   "lon": 58.5947,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio de Al Alam, Mascate, Omán, 2024-08-14, DD 36.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Al_Alam%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_36.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Al_Alam%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_36.jpg",
+     "selite": "Al Alamin palatsin sinikultainen julkisivu on sulttaanin seremoniapalatsi Vanhassa Masqatissa.",
+     "leveys": 6652,
+     "korkeus": 4435,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio de Al Alam, Mascate, Omán, 2024-08-14, DD 33.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Al_Alam%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_33.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Al_Alam%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_33.jpg",
+     "selite": "Palatsin portin edessä seisovat koristeelliset lyhdyt ja punertava aukio.",
+     "leveys": 7085,
+     "korkeus": 4723,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Palacio de Al Alam, Mascate, Omán, 2024-08-14, DD 29.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Al_Alam%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_29.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Al_Alam%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_29.jpg",
+     "selite": "Palatsiin johtaa pitkä puiden reunustama aukio vuorten ja linnakkeiden välissä.",
+     "leveys": 6619,
+     "korkeus": 2589,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12208363",
+   "nimi": "Al-Jalalin linnake",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 23.61687,
+   "lon": 58.59778,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fuerte de Al Jalali, Mascate, Omán, 2024-08-14, DD 52.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuerte_de_Al_Jalali%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_52.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fuerte_de_Al_Jalali%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_52.jpg",
+     "selite": "Al-Jalalin linnake seisoo kalliolla Masqatin sataman suulla.",
+     "leveys": 8232,
+     "korkeus": 5488,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fort al-Jalali in Muscat, Oman.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fort_al-Jalali_in_Muscat%2C_Oman.jpg?width=1280",
+     "tekija": "Christoph Strässler",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fort_al-Jalali_in_Muscat%2C_Oman.jpg",
+     "selite": "Linnakkeen tornit ja muuri kohoavat suoraan kallioiselta saarekkeelta.",
+     "leveys": 5564,
+     "korkeus": 3130,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Old Muscat (2).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Muscat_(2).jpg?width=1280",
+     "tekija": "Andries Oudshoorn",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Muscat_(2).jpg",
+     "selite": "Iltavalo värjää Al-Jalalin linnakkeen kullankeltaiseksi meren ääressä.",
+     "leveys": 4368,
+     "korkeus": 2912,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5470708",
+   "nimi": "Al-Miranin linnake",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 23.61722,
+   "lon": 58.59306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fuerte de Al Mirani, Mascate, Omán, 2024-08-14, DD 49.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuerte_de_Al_Mirani%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_49.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fuerte_de_Al_Mirani%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_49.jpg",
+     "selite": "Al-Miranin linnake vartioi Masqatin sataman länsipuolta kallioisella niemellä.",
+     "leveys": 8346,
+     "korkeus": 5564,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Fuerte de Al Mirani, Mascate, Omán, 2024-08-14, DD 45.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuerte_de_Al_Mirani%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_45.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fuerte_de_Al_Mirani%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_45.jpg",
+     "selite": "Linnakkeen tornit kohoavat kallioisen lahden yläpuolelle.",
+     "leveys": 8628,
+     "korkeus": 5752,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Fuerte de Al Mirani, Mascate, Omán, 2024-08-14, DD 42.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fuerte_de_Al_Mirani%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_42.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fuerte_de_Al_Mirani%2C_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_42.jpg",
+     "selite": "Linnakkeen pyöreä tornimuuri on rakennettu savesta ja kivestä.",
+     "leveys": 8122,
+     "korkeus": 5670,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1166791",
+   "nimi": "Matrah",
+   "peruste": "sitelinks",
+   "koko_m": 800,
+   "lat": 23.61667,
+   "lon": 58.56667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Muttrah-Muscat مطرح، مسقط 30.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muttrah-Muscat_%D9%85%D8%B7%D8%B1%D8%AD%D8%8C_%D9%85%D8%B3%D9%82%D8%B7_30.jpg?width=1280",
+     "tekija": "Mostafameraji",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muttrah-Muscat_%D9%85%D8%B7%D8%B1%D8%AD%D8%8C_%D9%85%D8%B3%D9%82%D8%B7_30.jpg",
+     "selite": "Matrahin rantakatu kulkee meren ja vuorten välissä, ja lokit liitelevät sen yllä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Muttrah Corniche 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muttrah_Corniche_2.jpg?width=1280",
+     "tekija": "Juozas Šalna",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muttrah_Corniche_2.jpg",
+     "selite": "Matrahin satamaa ympäröivät karut Hajar-vuoret ja valkoiset talot.",
+     "leveys": 4592,
+     "korkeus": 3081,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Corniche Streetscape Muttrah.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Corniche_Streetscape_Muttrah.jpg?width=1280",
+     "tekija": "Izeberg007",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Corniche_Streetscape_Muttrah.jpg",
+     "selite": "Matrahin Corniche-katua reunustavat valkoiset kaarikoristeiset rakennukset ja minareetti.",
+     "leveys": 5160,
+     "korkeus": 3870,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Sunset Matrah Corniche - Muscat.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sunset_Matrah_Corniche_-_Muscat.jpg?width=1280",
+     "tekija": "Andrew Moore",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sunset_Matrah_Corniche_-_Muscat.jpg",
+     "selite": "Auringonlasku värittää Matrahin lahden ja vuoristoiset rannat oransseiksi.",
+     "leveys": 18429,
+     "korkeus": 3252,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3329080",
+   "nimi": "Bait Al Zubair",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 23.61433,
+   "lon": 58.58958,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Muscat, Bait Al Zubair, ingresso.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muscat%2C_Bait_Al_Zubair%2C_ingresso.jpg?width=1280",
+     "tekija": "Francesco Bini",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muscat%2C_Bait_Al_Zubair%2C_ingresso.jpg",
+     "selite": "Bait Al Zubairin museon valkoinen sisäänkäynti johtaa Omanin perinteitä esittelevään talokokonaisuuteen.",
+     "leveys": 6080,
+     "korkeus": 4480,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bait al Zubair-Muscat.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bait_al_Zubair-Muscat.jpg?width=1280",
+     "tekija": "Step from Amherst, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bait_al_Zubair-Muscat.jpg",
+     "selite": "Museon sisäpiha ja valkoiset rakennukset sijaitsevat vuoren juurella.",
+     "leveys": 2592,
+     "korkeus": 1944,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q3330063",
+   "nimi": "Masqatin portti",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 23.6175,
+   "lon": 58.5869,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Muscat Gate Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muscat_Gate_Museum.jpg?width=1280",
+     "tekija": "Tristan from Luxembourg, Luxembourg",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muscat_Gate_Museum.jpg",
+     "selite": "Masqatin portti on Vanhan Masqatin muurin kaksikaarinen portti, jonka yläkerrassa on museo.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Puerta de Mascate, Omán, 2024-08-14, DD 56.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puerta_de_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_56.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Puerta_de_Mascate%2C_Om%C3%A1n%2C_2024-08-14%2C_DD_56.jpg",
+     "selite": "Portin tiilikaarien läpi kulkee katu Vanhaan Masqatiin.",
+     "leveys": 4962,
+     "korkeus": 4206,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Muscat-Gate-Museum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Muscat-Gate-Museum.jpg?width=1280",
+     "tekija": "Firoze Edassery",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Muscat-Gate-Museum.jpg",
+     "selite": "Illalla muurin valaistus korostaa portin kivipintaa.",
+     "leveys": 1522,
+     "korkeus": 1015,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1332652",
+   "nimi": "Masqatin kuninkaallinen ooppera",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 23.61406,
+   "lon": 58.46872,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Royal Opera House Muscat - Outside View I.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Opera_House_Muscat_-_Outside_View_I.jpg?width=1280",
+     "tekija": "Taha Al-Hayali",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Royal_Opera_House_Muscat_-_Outside_View_I.jpg",
+     "selite": "Kuninkaallisen oopperatalon valkoinen sisäänkäynti on koristeltu perinteisillä omanilaisilla kaarimuodoilla.",
+     "leveys": 3468,
+     "korkeus": 4624,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Royal Opera House Muscat, Muscat, Sultanate of Oman.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Royal_Opera_House_Muscat%2C_Muscat%2C_Sultanate_of_Oman.jpg?width=1280",
+     "tekija": "Chief National Guard Bureau",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Royal_Opera_House_Muscat%2C_Muscat%2C_Sultanate_of_Oman.jpg",
+     "selite": "Oopperatalon salin parvet ja puuverhoilu ovat osa Persianlahden alueen ensimmäistä varsinaista oopperataloa.",
+     "leveys": 3300,
+     "korkeus": 1856,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Old Muscat City View, Muscat, Oman.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Old_Muscat_City_View%2C_Muscat%2C_Oman.jpg?width=1280",
+   "tekija": "Domenico Convertini",
+   "lisenssi": "CC BY-SA 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Old_Muscat_City_View%2C_Muscat%2C_Oman.jpg",
+   "selite": "Vanhan Masqatin valkoiset talot ja kuivat vuoret muodostavat kaupungin tunnusomaisen maiseman.",
+   "leveys": 6000,
+   "korkeus": 4000,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Aerial view of the coastline of Muttrah.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_the_coastline_of_Muttrah.jpg?width=1280",
+   "tekija": "Izeberg007",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_the_coastline_of_Muttrah.jpg",
+   "selite": "Matrahin rantakatu kaartuu lahden ympäri vuorten ja merenlahden välissä.",
+   "leveys": 5184,
+   "korkeus": 3888,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

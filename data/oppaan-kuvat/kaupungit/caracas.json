@@ -1,0 +1,536 @@
+{
+ "kaupunki": "caracas",
+ "kaupunkiQ": "Q1533",
+ "kohteet": [
+  {
+   "q": "Q19966843",
+   "nimi": "Ávilan kansallispuisto",
+   "peruste": "pelin nosto",
+   "koko_m": 5000,
+   "lat": 10.53333,
+   "lon": -66.86667,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Scratching the Sky.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Scratching_the_Sky.jpg?width=1280",
+     "tekija": "JunCTionS",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Scratching_the_Sky.jpg",
+     "selite": "Ávilan vuorijono kohoaa Caracasin pohjoispuolella ja erottaa kaupungin Karibian merestä.",
+     "leveys": 1600,
+     "korkeus": 1200,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "\"Avila 4\".JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%22Avila_4%22.JPG?width=1280",
+     "tekija": "Víctor Vivas",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%22Avila_4%22.JPG",
+     "selite": "Ávilan huiput nousevat pilvimeren yläpuolelle, ja yhdellä niistä näkyy lähetinmasto.",
+     "leveys": 2896,
+     "korkeus": 1632,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6079441",
+   "nimi": "Plaza Bolívar",
+   "peruste": "pelin nosto",
+   "koko_m": 200,
+   "lat": 10.506,
+   "lon": -66.9146,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Estatua de Bolívar, Plaza Bolívar, Caracas, Venezuela.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estatua_de_Bol%C3%ADvar%2C_Plaza_Bol%C3%ADvar%2C_Caracas%2C_Venezuela.JPG?width=1280",
+     "tekija": "Alberto Castillo Aroca",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estatua_de_Bol%C3%ADvar%2C_Plaza_Bol%C3%ADvar%2C_Caracas%2C_Venezuela.JPG",
+     "selite": "Plaza Bolívarin keskellä ratsastava Simón Bolívar katsoo kaupungin vanhaa keskustaa.",
+     "leveys": 1632,
+     "korkeus": 1224,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Estatua ecuestre de Simón Bolívar en la plaza Bolívar de Caracas.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estatua_ecuestre_de_Sim%C3%B3n_Bol%C3%ADvar_en_la_plaza_Bol%C3%ADvar_de_Caracas.jpg?width=1280",
+     "tekija": "Muago",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estatua_ecuestre_de_Sim%C3%B3n_Bol%C3%ADvar_en_la_plaza_Bol%C3%ADvar_de_Caracas.jpg",
+     "selite": "Vapauttajan ratsastajapatsas seisoo korkealla jalustalla aukion puiden keskellä.",
+     "leveys": 3104,
+     "korkeus": 4192,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1736173",
+   "nimi": "Caracasin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 10.5062,
+   "lon": -66.914,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Caracas Cathedral 1.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Caracas_Cathedral_1.jpg?width=1280",
+     "tekija": "Guillermo Ramos Flamerich",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Caracas_Cathedral_1.jpg",
+     "selite": "Caracasin katedraalin valkoinen barokkijulkisivu ja kellotorni sijaitsevat Plaza Bolívarin vieressä.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Catedral de Caracas 2013 001.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral_de_Caracas_2013_001.JPG?width=1280",
+     "tekija": "Veronidae",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Catedral_de_Caracas_2013_001.JPG",
+     "selite": "Katedraalin koristeellinen pääportaali avautuu vanhan keskustan kadulle.",
+     "leveys": 3240,
+     "korkeus": 4320,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q994694",
+   "nimi": "Kansallinen panteoni",
+   "peruste": "pelin nosto",
+   "koko_m": 120,
+   "lat": 10.5129,
+   "lon": -66.9126,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Edificacion colonial.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Edificacion_colonial.JPG?width=1280",
+     "tekija": "J.A. Vergara",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Edificacion_colonial.JPG",
+     "selite": "Panteón Nacional on Venezuelan kansallissankarien hautakirkko, jonka torni kohoaa Ávilan vuoren edessä.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Cúpulas del Panteón Nacional.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%BApulas_del_Pante%C3%B3n_Nacional.jpg?width=1280",
+     "tekija": "Carlos Santos",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:C%C3%BApulas_del_Pante%C3%B3n_Nacional.jpg",
+     "selite": "Panteonin punavalkoiset kupolit erottuvat taivasta vasten.",
+     "leveys": 1999,
+     "korkeus": 1499,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1061531",
+   "nimi": "Caracasin yliopistokaupunki",
+   "peruste": "UNESCO",
+   "koko_m": 1000,
+   "lat": 10.49083,
+   "lon": -66.89056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Estadio Olímpico de la UCV al atardecer.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estadio_Ol%C3%ADmpico_de_la_UCV_al_atardecer.jpg?width=1280",
+     "tekija": "Alex Coiro",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estadio_Ol%C3%ADmpico_de_la_UCV_al_atardecer.jpg",
+     "selite": "Yliopistokaupungin olympiastadion on osa Carlos Raúl Villanuevan suunnittelemaa modernistista kampusta, jonka taustalla on Ávila.",
+     "leveys": 2048,
+     "korkeus": 1536,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "UCV 2015-080a Aula Magna.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/UCV_2015-080a_Aula_Magna.jpg?width=1280",
+     "tekija": "GermanX",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:UCV_2015-080a_Aula_Magna.jpg",
+     "selite": "Aula Magnan katossa kelluvat Alexander Calderin suunnittelemat värilliset akustiikkalevyt.",
+     "leveys": 6534,
+     "korkeus": 2321,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q173876",
+   "nimi": "Teresa Carreñon kulttuurikeskus",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 10.49878,
+   "lon": -66.89799,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Vista Teatro teresa carreño.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vista_Teatro_teresa_carre%C3%B1o.jpg?width=1280",
+     "tekija": "José Gregorio Ferrer",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vista_Teatro_teresa_carre%C3%B1o.jpg",
+     "selite": "Teresa Carreñon teatteri on betonibrutalistinen kulttuurikeskus Caracasin keskustassa.",
+     "leveys": 4272,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4388657",
+   "nimi": "Parque Centralin tornit",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 10.49831,
+   "lon": -66.90131,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Caracas central park.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Caracas_central_park.jpg?width=1280",
+     "tekija": "Cristóbal Alvarado Minic",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Caracas_central_park.jpg",
+     "selite": "Parque Centralin kaksi korkeaa tornia hallitsevat Caracasin keskustan siluettia.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Caracas Central Park 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Caracas_Central_Park_2.jpg?width=1280",
+     "tekija": "Wilfredor",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Caracas_Central_Park_2.jpg",
+     "selite": "Tornien lasipinnat kohoavat korkealle Caracasin keskustan yläpuolelle.",
+     "leveys": 2848,
+     "korkeus": 4288,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q607224",
+   "nimi": "Miraflores-palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 10.50809,
+   "lon": -66.91936,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Miraflores Palace.png",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miraflores_Palace.png?width=1280",
+     "tekija": "Prensa Presidencial - Government of Venezuela",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Miraflores_Palace.png",
+     "selite": "Miraflores-palatsi on Venezuelan presidentin virkapaikka, ja sen punavalkoinen julkisivu erottuu keskustan korttelien keskeltä.",
+     "leveys": 2275,
+     "korkeus": 1280,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Palacio de Miraflores - 1911.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Miraflores_-_1911.jpg?width=1280",
+     "tekija": "Servio Tulio Baralt",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Miraflores_-_1911.jpg",
+     "selite": "Vanha valokuva näyttää Miraflores-palatsin 1900-luvun alun asussa.",
+     "leveys": 3467,
+     "korkeus": 2858,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6396914",
+   "nimi": "Federaalinen lainsäädäntöpalatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 10.50554,
+   "lon": -66.91583,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "LegislativoCentro.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/LegislativoCentro.jpg?width=1280",
+     "tekija": "PAULINO MORAN",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:LegislativoCentro.jpg",
+     "selite": "Federaalinen lainsäädäntöpalatsi on Venezuelan kongressin kultakupolinen kotipaikka Caracasin vanhassa keskustassa.",
+     "leveys": 3872,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5754450",
+   "nimi": "Simón Bolívarin syntymäkoti",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 10.49528,
+   "lon": -66.91694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa Natal del Libertador Patio Caracas Centro.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Natal_del_Libertador_Patio_Caracas_Centro.JPG?width=1280",
+     "tekija": "Ricardo Juliao",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Natal_del_Libertador_Patio_Caracas_Centro.JPG",
+     "selite": "Vapauttajan syntymäkodin sisäpiha on valkoisten kaarien ympäröimä siirtomaa-ajan talon sydän.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Altar de la capilla.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Altar_de_la_capilla.jpg?width=1280",
+     "tekija": "José Alfaro",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Altar_de_la_capilla.jpg",
+     "selite": "Syntymäkodin pienessä kappelissa on kullattu barokkialttari.",
+     "leveys": 2567,
+     "korkeus": 3423,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q9082170",
+   "nimi": "Caracasin kaupunginteatteri",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 10.50207,
+   "lon": -66.9174,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "En diagonal.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/En_diagonal.jpg?width=1280",
+     "tekija": "José Alfaro",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:En_diagonal.jpg",
+     "selite": "Teatro Municipalin vaaleankeltainen uusklassinen julkisivu pylväineen on vuodelta 1881.",
+     "leveys": 4061,
+     "korkeus": 3047,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Lateral izquierdo.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lateral_izquierdo.jpg?width=1280",
+     "tekija": "José Alfaro",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lateral_izquierdo.jpg",
+     "selite": "Teatterin pylväikkö ja pyöristetty sivusiipi avautuvat keskustan aukiolle.",
+     "leveys": 4320,
+     "korkeus": 3240,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q5722053",
+   "nimi": "Santa Teresan basilika",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 10.50175,
+   "lon": -66.91558,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Basilica de Santa Teresa y Santa Ana.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_de_Santa_Teresa_y_Santa_Ana.jpg?width=1280",
+     "tekija": "Veronidae (changes by Rabanus Flavus)",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_de_Santa_Teresa_y_Santa_Ana.jpg",
+     "selite": "Santa Teresan basilikan valkoiset kupolit ja torni nousevat Caracasin keskustan aukion laidalla.",
+     "leveys": 3076,
+     "korkeus": 1612,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Basilica of Santa Teresa.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Basilica_of_Santa_Teresa.jpg?width=1280",
+     "tekija": "Carlos E. Perez S.L",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Basilica_of_Santa_Teresa.jpg",
+     "selite": "Basilikan pääkupoli ja sen huipulla seisova pyhimyspatsas vasten sinistä taivasta.",
+     "leveys": 3019,
+     "korkeus": 2012,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q212281",
+   "nimi": "Kansallinen taidegalleria",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 10.50056,
+   "lon": -66.9025,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Galeria de Arte Nacional (5).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Galeria_de_Arte_Nacional_(5).jpg?width=1280",
+     "tekija": "Mitchell Maniglia",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Galeria_de_Arte_Nacional_(5).jpg",
+     "selite": "Kansallinen taidegalleria sijaitsee Parque Los Caoboksen vieressä modernissa betonirakennuksessa.",
+     "leveys": 3664,
+     "korkeus": 2748,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Galería de Arte Nacional de Venezuela.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Galer%C3%ADa_de_Arte_Nacional_de_Venezuela.jpg?width=1280",
+     "tekija": "Wilfredor",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Galer%C3%ADa_de_Arte_Nacional_de_Venezuela.jpg",
+     "selite": "Gallerian pitkä näyttelysali esittelee Venezuelan taiteen kokoelmia.",
+     "leveys": 4275,
+     "korkeus": 2232,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q6095057",
+   "nimi": "Quinta de Anauco",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 10.51194,
+   "lon": -66.89972,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Patio interno frente a Sala de orfebrería, Quinta de Anauco.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Patio_interno_frente_a_Sala_de_orfebrer%C3%ADa%2C_Quinta_de_Anauco.jpg?width=1280",
+     "tekija": "Rube96pinto",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Patio_interno_frente_a_Sala_de_orfebrer%C3%ADa%2C_Quinta_de_Anauco.jpg",
+     "selite": "Quinta de Anauco on 1700-luvun maatilahuvila, jonka sisäpiha ja kuisti ovat Caracasin vanhaa siirtomaa-arkkitehtuuria.",
+     "leveys": 5948,
+     "korkeus": 2500,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Jardines de la Quinta Anauco.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jardines_de_la_Quinta_Anauco.jpg?width=1280",
+     "tekija": "Isabelion",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Jardines_de_la_Quinta_Anauco.jpg",
+     "selite": "Huvilan kuistin pylväät ja portaat avautuvat puutarhaan.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q12981819",
+   "nimi": "Keltainen talo",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 10.50656,
+   "lon": -66.91519,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa Amarilla de Caracas - 2015.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Amarilla_de_Caracas_-_2015.JPG?width=1280",
+     "tekija": "Guillermo Ramos Flamerich",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Amarilla_de_Caracas_-_2015.JPG",
+     "selite": "Keltaisessa talossa, Casa Amarillassa, toimii Venezuelan ulkoministeriö.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Caracas from the Avila National Park in 2016.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Caracas_from_the_Avila_National_Park_in_2016.jpg?width=1280",
+   "tekija": "Oscar Costero",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Caracas_from_the_Avila_National_Park_in_2016.jpg",
+   "selite": "Caracasin keskustan tornit nousevat laakson yli levittäytyvän kaupungin keskeltä.",
+   "leveys": 4608,
+   "korkeus": 3456,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Caracas view from UCV grounds towards the east 2012.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Caracas_view_from_UCV_grounds_towards_the_east_2012.jpg?width=1280",
+   "tekija": "JCFG1989",
+   "lisenssi": "CC BY-SA 3.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Caracas_view_from_UCV_grounds_towards_the_east_2012.jpg",
+   "selite": "Kaupunki jatkuu Ávilan vuorijonon juurella itään.",
+   "leveys": 3072,
+   "korkeus": 2048,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
