@@ -329,6 +329,7 @@ namespace Matkakirja.Natiivi
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
             y.Kuvaa(silmukka.Asento);
             // Yövalot v4: nykyinen kohde saa yöllä lämpimän valonheiton (KaupunkiYovalot; Päätoimittaja 22.3x "Eiffel kultaisena").
+            KaupunkiYovalot.KaupunkiId = KaupunkiTiet.Tunnus(Aloituskaupunki);
             var yk = silmukka.Nykyinen; var kh = silmukka.NykyinenKehys;
             KaupunkiYovalot.Kohde = yk != null && kh != null && !yk.Kysymys ? (yk.Lat, yk.Lon, kh.MaaM, yk.KokoM) : ((double, double, double, double)?)null;
             Luotaa();

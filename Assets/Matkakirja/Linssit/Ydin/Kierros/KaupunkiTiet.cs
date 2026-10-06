@@ -11,6 +11,43 @@ namespace Matkakirja.Linssit.Kierros
     {
         public struct Tie { public string Tyyppi; public List<(double lat, double lon)> Pisteet; }
 
+        /// <summary>Esilasketut kadut (Pelikoodari 6.10. 22.4x: Overpass ruuhkautuu, joten ei ajonaikaista hakua): ämpärin
+        /// kartta/tiet-v1/{id}.json = {"keskus":[lat,lon],"r":4000,"tiet":[…]} ja index.json (valmiit id:t; muita ei pyydetä,
+        /// koska CDN välimuistittaa 404:n).</summary>
+        public const string Juuri = "https://media.matkakirja.app/kartta/tiet-v1/";
+
+        /// <summary>Kaupungin tunnus nimestä (Kööpenhamina → koopenhamina), sama kaava kuin Siirtosepän äänimaisemassa
+        /// (KaupunkiAanimaisemaSoitin.Tunnus): pienet kirjaimet, ä/å/á/à → a, ö/ø/ó → o, é/è → e, välit ja viivat → -.</summary>
+        public static string Tunnus(string nimi)
+        {
+            if (string.IsNullOrEmpty(nimi)) return null;
+            var sb = new System.Text.StringBuilder();
+            foreach (char c0 in nimi.ToLowerInvariant())
+            {
+                char c = c0 == 'ä' || c0 == 'å' || c0 == 'á' || c0 == 'à' ? 'a' : c0 == 'ö' || c0 == 'ø' || c0 == 'ó' ? 'o' : c0 == 'é' || c0 == 'è' ? 'e' : c0;
+                if (char.IsLetterOrDigit(c)) sb.Append(c); else if (c == ' ' || c == '-') sb.Append('-');
+            }
+            return sb.ToString();
+        }
+
+        /// <summary>index.json: lista tai olio, jonka jossakin listassa ovat id:t.</summary>
+        public static HashSet<string> LueIndeksi(object j)
+        {
+            var l = new HashSet<string>();
+            void Lisaa(IList<object> x) { foreach (var o in x) if (o is string s) l.Add(s); }
+            if (j is IList<object> lista) Lisaa(lista);
+            else if (j is IDictionary<string, object> d) foreach (var v in d.Values) if (v is IList<object> vl) Lisaa(vl);
+            return l;
+        }
+
+        /// <summary>Tiedoston keskipiste ja säde (m); puuttuessa null.</summary>
+        public static (double lat, double lon, double r)? Alue(IDictionary<string, object> j)
+        {
+            if (j == null || !j.TryGetValue("keskus", out var k) || !(k is IList<object> kl) || kl.Count < 2) return null;
+            double r = j.TryGetValue("r", out var rv) ? Convert.ToDouble(rv) : 4000;
+            return (Convert.ToDouble(kl[0]), Convert.ToDouble(kl[1]), r);
+        }
+
         /// <summary>Kadun leveys (m) ja valon voimakkuus (0–1) OSM:n highway-tyypistä; null = ei katuvaloa (moottoritiet maalla, polut).</summary>
         public static (double leveysM, double voima)? Valo(string tyyppi)
         {

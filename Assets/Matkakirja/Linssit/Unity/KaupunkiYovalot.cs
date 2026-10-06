@@ -30,8 +30,11 @@ namespace Matkakirja.Natiivi
         /// valonheiton (Eiffel kultaisena). OpasSovitin asettaa joka kehys; null = ei kohdetta.</summary>
         public static (double lat, double lon, double maaM, double sadeM)? Kohde;
         public static float KohdeVoima = 2.8f;
-        /// <summary>Katumaskin kattama alue (m) ja tarkkuus (px): 6 km / 1536 ≈ 3,9 m/px, R8 + mipit ≈ 3,1 Mt.</summary>
-        public const float TieSivuM = 6000f; public const int TieN = 1536;
+        /// <summary>Katumaskin tarkkuus (px) ja alue (m): oletus 6 km (testitiedosto), ämpäritiedostossa 2 × r enintään 8 km;
+        /// 2048² R8 + mipit ≈ 5,6 Mt (8 km ≈ 3,9 m/px).</summary>
+        public const float TieSivuM = 6000f, TieSivuMax = 8000f; public const int TieN = 2048;
+        /// <summary>Kaupungin tunnus (KaupunkiTiet.Tunnus Aloituskaupungista); OpasSovitin asettaa.</summary>
+        public static string KaupunkiId;
         /// <summary>Natrium-oranssi (omistaja) ja valkoisten LED-pisteiden osuus.</summary>
         public static Color Vari = new Color(1.0f, 0.62f, 0.28f, 0.25f);
 
@@ -44,6 +47,9 @@ namespace Matkakirja.Natiivi
         static bool indeksiHaussa;
         static Texture2D tiet;
         static (double lat, double lon)? tieKeskus;
+        static float tieSivu = TieSivuM;
+        static string tieId;
+        static HashSet<string> tieIndeksi;
         static bool tietHaussa;
         static readonly int IdValot = Shader.PropertyToID("_Valot"), IdMatriisi = Shader.PropertyToID("_MaailmaPaikallinen"),
             IdAlue = Shader.PropertyToID("_ValoAlue"), IdParam = Shader.PropertyToID("_ValoParam"), IdVari = Shader.PropertyToID("_ValoVari"),
@@ -64,9 +70,9 @@ namespace Matkakirja.Natiivi
                 ladataan = tarve;
                 isanta.StartCoroutine(Lataa(tarve, lat, lon));
             }
-            // Kadut: kameran ympäriltä TieSivuM; uudelleen, kun kamera on yli neljänneksen sivusta keskeltä.
-            if (!tietHaussa && isanta != null && (tieKeskus == null || KierrosLento.EtaisyysM(tieKeskus.Value.lat, tieKeskus.Value.lon, lat, lon) > TieSivuM / 4))
-            { tietHaussa = true; isanta.StartCoroutine(LataaTiet(lat, lon)); }
+            // Kadut: kerran kaupunkia kohden (tunnus vaihtuu → uusi tiedosto).
+            if (!tietHaussa && isanta != null && tieId != (KaupunkiId ?? ""))
+            { tietHaussa = true; isanta.StartCoroutine(LataaTiet(KaupunkiId, lat, lon)); }
             if (ruudukko == null || kulma == null) return;
             if (feature == null && !Luo()) return;
             materiaali.SetTexture(IdValot, ruudukko);
@@ -76,7 +82,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector(IdVari, new Vector4(Vari.r, Vari.g, Vari.b, Vari.a));
             materiaali.SetVector(IdIkkunat, new Vector4(Ikkunat, Mathf.Clamp01(IkkunaOsuus), 0f, 0f));
             materiaali.SetTexture(IdTiet, tiet != null ? tiet : Texture2D.blackTexture);
-            materiaali.SetVector(IdTieAlue, tieKeskus is (double, double) tk ? new Vector4((float)tk.lat, (float)tk.lon, TieSivuM, 1f) : Vector4.zero);
+            materiaali.SetVector(IdTieAlue, tieKeskus is (double, double) tk ? new Vector4((float)tk.lat, (float)tk.lon, tieSivu, 1f) : Vector4.zero);
             if (Kohde is (double, double, double, double) ko)
             {
                 var u = georef.TransformEarthCenteredEarthFixedPositionToUnity(CesiumWgs84Ellipsoid.LongitudeLatitudeHeightToEarthCenteredEarthFixed(new double3(ko.lon, ko.lat, ko.maaM)));
@@ -121,34 +127,53 @@ namespace Matkakirja.Natiivi
             Debug.Log($"MATKAKIRJA kaupunki: yövalot {saatiin}/{pyydettiin} laattaa ({Matkakirja.Linssit.Kierros.KaupunkiYovalot.Nimi(k.lat + 1, k.lon + 1)} keskellä) {Time.realtimeSinceStartup - t0:F1} s:ssa");
         }
 
-        /// <summary>Kadut Pöllöstä (/opas/tiet, OSM; Pelikoodari) tai testitiedostosta Documents/kaupunki-tiet.json; rasterointi
-        /// taustasäikeessä (puhdas C#), sitten R8-tekstuuri mipeillä (kaukana keskiarvo = katujen tiheys).</summary>
-        static IEnumerator LataaTiet(double lat, double lon)
+        /// <summary>Kadut: esilaskettu ämpäritiedosto (KaupunkiTiet.Juuri, Pelikoodari) kaupungin tunnuksella, jos tunnus on
+        /// index.json:ssa (CDN välimuistittaa 404:n), tai testitiedosto Documents/kaupunki-tiet.json. Rasterointi taustasäikeessä
+        /// (puhdas C#) tiedoston keskipisteen ympärille, sitten R8-tekstuuri mipeillä (kaukana keskiarvo = katujen tiheys).</summary>
+        static IEnumerator LataaTiet(string id, double lat, double lon)
         {
             float t0 = Time.realtimeSinceStartup;
-            string json = null, lahde;
+            string json = null, lahde = "ei katuja";
             string testi = Path.Combine(Application.persistentDataPath, "kaupunki-tiet.json");
             if (File.Exists(testi)) { json = File.ReadAllText(testi); lahde = "testitiedosto"; }
-            else
+            else if (!string.IsNullOrEmpty(id))
             {
-                var ci = System.Globalization.CultureInfo.InvariantCulture;
-                using var r = UnityWebRequest.Get($"{PuluChat.Palvelin}/opas/tiet?lat={lat.ToString("F4", ci)}&lon={lon.ToString("F4", ci)}&r={(int)(TieSivuM / 2)}");
-                r.timeout = 25;
-                r.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
-                r.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
-                PolloTestitunnus.Lisaa(r);
-                yield return r.SendWebRequest();
-                lahde = r.result == UnityWebRequest.Result.Success ? "Pöllö" : "Pöllö " + r.responseCode;
-                if (r.result == UnityWebRequest.Result.Success) json = r.downloadHandler.text;
+                if (tieIndeksi == null)
+                {
+                    using var ri = UnityWebRequest.Get(KaupunkiTiet.Juuri + "index.json");
+                    ri.timeout = 15;
+                    yield return ri.SendWebRequest();
+                    tieIndeksi = ri.result == UnityWebRequest.Result.Success ? KaupunkiTiet.LueIndeksi(Matkakirja.Peli.MiniJson.Jasenna(ri.downloadHandler.text)) : new HashSet<string>();
+                }
+                if (tieIndeksi.Contains(id))
+                {
+                    string polku = Path.Combine(Application.persistentDataPath, "kuvat", "tiet-v1", id + ".json");
+                    if (File.Exists(polku)) { json = File.ReadAllText(polku); lahde = "välimuisti"; }
+                    else
+                    {
+                        using var r = UnityWebRequest.Get(KaupunkiTiet.Juuri + id + ".json");
+                        r.timeout = 25;
+                        yield return r.SendWebRequest();
+                        lahde = r.result == UnityWebRequest.Result.Success ? "ämpäri" : "ämpäri " + r.responseCode;
+                        if (r.result == UnityWebRequest.Result.Success)
+                        {
+                            json = r.downloadHandler.text;
+                            try { Directory.CreateDirectory(Path.GetDirectoryName(polku)); File.WriteAllText(polku, json); } catch (Exception) { }
+                        }
+                    }
+                }
+                else lahde = "ei luettelossa";
             }
-            byte[] maski = null; int maara = 0;
+            byte[] maski = null; int maara = 0; double kLat = lat, kLon = lon, sivu = TieSivuM;
             if (json != null)
             {
                 var tehtava = System.Threading.Tasks.Task.Run(() =>
                 {
-                    var l = KaupunkiTiet.Lue(Matkakirja.Peli.MiniJson.Jasenna(json) as Dictionary<string, object>);
+                    var j = Matkakirja.Peli.MiniJson.Jasenna(json) as Dictionary<string, object>;
+                    if (KaupunkiTiet.Alue(j) is (double, double, double) a) { kLat = a.Item1; kLon = a.Item2; sivu = Math.Min(TieSivuMax, 2 * a.Item3); }
+                    var l = KaupunkiTiet.Lue(j);
                     maara = l.Count;
-                    return KaupunkiTiet.Rasteroi(l, lat, lon, TieN, TieSivuM);
+                    return KaupunkiTiet.Rasteroi(l, kLat, kLon, TieN, sivu);
                 });
                 while (!tehtava.IsCompleted) yield return null;
                 if (!tehtava.IsFaulted) maski = tehtava.Result;
@@ -158,10 +183,11 @@ namespace Matkakirja.Natiivi
                 if (tiet == null) tiet = new Texture2D(TieN, TieN, TextureFormat.R8, true, true) { name = "KaupunkiTiet", wrapMode = TextureWrapMode.Clamp, filterMode = FilterMode.Trilinear };
                 tiet.SetPixelData(maski, 0);
                 tiet.Apply(true, false);
+                tieKeskus = (kLat, kLon); tieSivu = (float)sivu;
             }
-            tieKeskus = (lat, lon);   // epäonnistuessakin: ei uutta yritystä joka kehys (seuraava, kun kamera siirtyy)
+            tieId = id ?? "";   // epäonnistuessakin: ei uutta yritystä ennen kaupungin vaihtoa
             tietHaussa = false;
-            Debug.Log($"MATKAKIRJA kaupunki: yövalojen kadut {maara} kpl ({lahde}) {Time.realtimeSinceStartup - t0:F1} s:ssa");
+            Debug.Log($"MATKAKIRJA kaupunki: yövalojen kadut {maara} kpl ({id}, {lahde}) {Time.realtimeSinceStartup - t0:F1} s:ssa");
         }
 
         static IEnumerator HaeIndeksi()
@@ -223,7 +249,7 @@ namespace Matkakirja.Natiivi
         {
             if (suljettu)
             {
-                ladataan = null; tietHaussa = false; tieKeskus = null;
+                ladataan = null; tietHaussa = false; tieKeskus = null; tieId = null;
                 if (tiet != null) { Object.Destroy(tiet); tiet = null; }
             }
             if (feature != null)
