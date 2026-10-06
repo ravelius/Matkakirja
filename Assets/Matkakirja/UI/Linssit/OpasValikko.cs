@@ -514,9 +514,12 @@ namespace Matkakirja.Natiivi
             };
             var b = Rakenne.Nappi(null, "mk-linssirivi mk-opas-taky", () => Rivilta(teko), rivit);
             b.tooltip = t.Nimi;
-            var kehys = Rakenne.El("mk-linssirivi__ikoni mk-linssirivi__kuva", b, PickingMode.Ignore);
+            // Kuvapaikka vain kuvalliselle kohteelle (junan 148b video: Liiku-listassa ei ole kuvia → tyhjät pyöreät paikat).
             if (!string.IsNullOrEmpty(t.KuvaUrl))
+            {
+                var kehys = Rakenne.El("mk-linssirivi__ikoni mk-linssirivi__kuva", b, PickingMode.Ignore);
                 NostoSisalto.HaeKuva(t.KuvaUrl, tex => { if (tex != null && kehys.panel != null) kehys.style.backgroundImage = new StyleBackground(tex); });
+            }
             var tekstit = Rakenne.El("mk-linssirivi__tekstit", b, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti(t.Nimi ?? "", "mk-linssirivi__nimi", tekstit), Kirjasin.ModerniLihava);
             string ala = !string.IsNullOrEmpty(t.Alarivi) ? t.Alarivi : t.Koukku;
