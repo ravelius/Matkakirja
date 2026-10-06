@@ -113,7 +113,7 @@ namespace Matkakirja.Natiivi
             Debug.Log("MATKAKIRJA kaupunki: kuva palautettu");
         }
 
-        static void LueAsetukset()
+        internal static void LueAsetukset()
         {
             try
             {
@@ -189,7 +189,7 @@ namespace Matkakirja.Natiivi
         CesiumKaupunki kaupunki;
         bool vanhaSumu; FogMode vanhaMoodi; Color vanhaVari, vanhaTausta; float vanhaAlku, vanhaLoppu;
         GameObject kupoli; Material kupoliMat; Mesh kupoliMesh;
-        float edellinenLoki = -999f;
+        float edellinenLoki = -999f, luettu;
         static readonly int IdHorisontti = Shader.PropertyToID("_TaivasHorisontti"), IdLaki = Shader.PropertyToID("_TaivasLaki"),
             IdKajo = Shader.PropertyToID("_TaivasKajo"), IdAurinko = Shader.PropertyToID("_TaivasAurinko"), IdParam = Shader.PropertyToID("_TaivasParam");
 
@@ -251,6 +251,8 @@ namespace Matkakirja.Natiivi
             var kamera = kaupunki?.Kamera;
             if (kamera == null) return;
             var georef0 = kaupunki.Georef;
+            // Kuvaparit ilman uudelleenavausta: asetustiedosto luetaan sekunnin välein (tunti, vuorokausi, sumu, kontrasti …).
+            if (Time.realtimeSinceStartup - luettu > 1f) { luettu = Time.realtimeSinceStartup; KaupunkiKuva.LueAsetukset(); }
             // Vuorokaudenaika kohteen paikallisesta aurinkoajasta (tai asetuksen tunnista).
             double lon = georef0 != null ? georef0.longitude : 0, lat = georef0 != null ? georef0.latitude : 0;
             double tunti = KaupunkiKuva.Tunti >= 0 ? KaupunkiKuva.Tunti : KaupunkiValo.PaikallinenTunti(System.DateTime.UtcNow, lon);
