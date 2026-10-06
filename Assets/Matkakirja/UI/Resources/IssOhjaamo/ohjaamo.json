@@ -3,7 +3,7 @@
   "w": 374.0,
   "h": 129.33
  },
- "huom": "Linnanrakentaja 6.10.2026, ISS-ohjaamo v3c (= v3b + teleskooppijalka 6.10. 18.4x) (omistaja 11.1x: numerot pois, asteikko vivun juureen, LCD isompi, ruuvit sisemmäs, kuvaan marginaali; v3 08.3x: rumpu pois, kaasu leveämpi ja vasemmalle, LCD isompi, kaasu vasemmalla ja sauva oikealla, tasaiset välit 9,6 pt). Laatikot pt:nä pohja.png:n vasemmasta yläkulmasta; kuvat @3x samassa mittakaavassa. Osuma-alat koodissa.",
+ "huom": "Linnanrakentaja 6.10.2026, ISS-ohjaamo v3e (= v3b + jämäkkä jalkapylväs, omistaja 19.4x) (omistaja 11.1x: numerot pois, asteikko vivun juureen, LCD isompi, ruuvit sisemmäs, kuvaan marginaali; v3 08.3x: rumpu pois, kaasu leveämpi ja vasemmalle, LCD isompi, kaasu vasemmalla ja sauva oikealla, tasaiset välit 9,6 pt). Laatikot pt:nä pohja.png:n vasemmasta yläkulmasta; kuvat @3x samassa mittakaavassa. Osuma-alat koodissa.",
  "sauva": {
   "x": 278.0,
   "y": 26.67,
@@ -77,21 +77,20 @@
  "jalka": {
   "yla": {
    "kuva": "jalka-yla.png",
-   "w": 53.33,
-   "h": 319.67,
+   "w": 94.33,
+   "h": 406.67,
    "x": 187.0,
    "y": 119.25,
-   "huom": "yläreunan keskikohta = (x, y) pt pohja.png:n vasemmasta yläkulmasta = paneelin alareunan keskikohta; kiinnityslaippa + sisäputki"
+   "huom": "pylväs 75 pt (1/5 paneelista) + kiinnityslevy 95 pt; yläreunan keskikohta = (x, y) pt pohja.png:ssä = paneelin alareunan keskikohta; rajataan ruudun alareunaan"
   },
   "ala": {
    "kuva": "jalka-ala.png",
-   "w": 51.0,
-   "h": 48.33,
-   "huom": "alareunan keskikohta = ruudun alareuna, vaakasuunnassa paneelin keskikohta (sama x kuin yla); ulkoputki + jalkalevy"
+   "w": 1.0,
+   "h": 1.0,
+   "huom": "läpinäkyvä (v3d:ssä ei alaosaa)"
   },
-  "kerrokset": "yla alimpana, ala sen päällä, paneeli molempien päällä (paneeli peittää ylimenevän osan, joten pieni rako toimii)",
-  "nakyvyys": "vain pystyasennossa (iPad ja iPhone); vaakana ei jalkaa",
-  "maxRako": 350,
-  "mitattu": "iPad pysty (juna 152 koe 7e91ce76): rako 44 pt; iPhone (v27-ohjaamo.png): ~52 pt"
+  "kerrokset": "tanko paneelin alla (paneeli päällimmäisenä)",
+  "nakyvyys": "vain pystyasennossa (iPad ja iPhone)",
+  "maxRako": 400
  }
 }

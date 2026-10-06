@@ -29,3 +29,5 @@ leveiksi. Lisäys klo 08.4x: joystick oikean käden puolelle ja nopeuskahva vase
   portaaton kahva liikkuu ura.yla–ura.ala logaritmisesti).
 
 v3c (Linnanrakentaja 6.10.2026 18.4x): jalka-yla.png ja jalka-ala.png, teleskooppijalka paneelin alle (omistaja: "ohjainvivusto kelluu ilmassa"); lähteet _valmiit/iss-ohjaamo-v3c/LAHTEET.md.
+v3d (Linnanrakentaja 6.10.2026 19.3x): jalka-yla.png yksinkertainen tanko (omistaja 19.2x), jalka-ala.png läpinäkyvä; lähteet _valmiit/iss-ohjaamo-v3d/LAHTEET.md.
+v3e (Linnanrakentaja 6.10.2026 19.4x): jalka-yla.png jämäkkä pylväs 75 pt + kiinnityslevy 95 pt (omistaja 19.4x "saisi olla jämäkämpi", 19.5x "voi laittaa suoraan peliin"); lähteet _valmiit/iss-ohjaamo-v3e/LAHTEET.md.

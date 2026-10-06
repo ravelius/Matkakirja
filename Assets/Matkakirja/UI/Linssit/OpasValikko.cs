@@ -1510,6 +1510,7 @@ namespace Matkakirja.Natiivi
                 }
                 case "kysy": Avaa(Nakyma.Kysy); return "opas: kysy-lista";
                 case "krediitit": return "opas: " + KrediititTiivis.Kuvaus();
+                case "krediittivertailu": return "opas: " + KrediititTiivis.Vertaa();
                 case "lahteet": KrediititTiivis.NaytaKaikki(); return "opas: lähteet näkyviin";
                 case "siirtyma":
                 {

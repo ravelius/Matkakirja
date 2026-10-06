@@ -211,3 +211,63 @@
     font-size: var(--tk-koko-valiotsikko);
     color: var(--tk-paperi-muste-pehmea);
 }
+
+/* JUNA 153 (omistaja 6.10. 19.2x, Kronborg: "pakattu turhaan liian tiheään … kaikkien ylärivillä olevien elementtien korkeus
+ * samaksi"): sulka vasempaan reunaan ja ‹ NOSTOT ▾ › heti sen viereen; oikealle AUTO, pin, ≡ ja kaiutin tasaväleillä. Kaikki
+ * ylärivin elementit nappi.korkeus 38 pt, kuvakkeet nappi.ohjaus-kuvake 22 pt; AUTO päällä vaaleana kultana (kulta-kuulto). */
+.mk-nostoselain__sivu.mk-nostoselain__sivu--vasen {
+    flex-grow: 0;
+    flex-basis: auto;
+    margin-right: var(--tk-vali-xs);
+}
+
+.mk-nostoselain__sivu.mk-nostoselain__sivu--oikea {
+    margin-left: 0;
+}
+
+.mk-nostoselain__sivu--oikea > .mk-nostoselain__auto,
+.mk-nostoselain__sivu--oikea > .mk-lukija,
+.mk-nostoselain__sivu--oikea > .mk-nosto__lukijapaikka {
+    margin-left: var(--tk-vali-s);
+    margin-right: 0;
+}
+
+.mk-nostoselain .mk-nostoselain__auto,
+.mk-nostoselain .mk-nostoselain__avaaja {
+    height: var(--tk-nappi-korkeus);
+    min-height: var(--tk-nappi-korkeus);
+}
+
+.mk-nostoselain .mk-lukija.mk-nosto__pin {
+    width: var(--tk-nappi-korkeus);
+    height: var(--tk-nappi-korkeus);
+    min-height: var(--tk-nappi-korkeus);
+}
+
+.mk-nostoselain .mk-lukija.mk-nosto__pin > .mk-ikoni,
+.mk-nostoselain .mk-nosto__ylarivi-symboli {
+    width: var(--tk-nappi-ohjaus-kuvake);
+    height: var(--tk-nappi-ohjaus-kuvake);
+}
+
+/* Lukijan ≡ ja kaiutin (kortin päällä, paikkavaraus ylärivillä): sama 38 pt, väli kuten muilla, kuvakkeet 22 pt. */
+.mk-nosto__lukija .mk-lukija,
+.mk-nosto__lukija .mk-lukija__valikkonappi {
+    width: var(--tk-nappi-korkeus);
+    height: var(--tk-nappi-korkeus);
+    min-height: var(--tk-nappi-korkeus);
+}
+
+.mk-nosto__lukija .mk-lukija__valikkonappi {
+    margin-right: var(--tk-vali-s);
+}
+
+.mk-nosto__lukija .mk-lukija > .mk-ikoni,
+.mk-nosto__lukija .mk-lukija__valikkoikoni {
+    width: var(--tk-nappi-ohjaus-kuvake);
+    height: var(--tk-nappi-ohjaus-kuvake);
+}
+
+.mk-nostoselain__auto.mk-valittu {
+    background-color: var(--kulta-kuulto);
+}
