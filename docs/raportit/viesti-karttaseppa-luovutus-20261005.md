@@ -5,7 +5,10 @@
   järvisääntö, rengas + PIKKU). S2-indeksi v2b, v2c, v2d, v2e (Meksikon suisto rata X).
 - **Paikalliset:** v2-korjaus2b/ (viety sarja), v2t2/ (tasaus 2), v2-rengas3/; tasaus.mjs, tasaus-kentta.mjs, rengas.mjs.
   Vanha kesken jäänyt kansio v2-korjaus2/ jäi T7:lle, ja sen poisto odottaa lupaa (turvatarkistus esti rm:n).
-- **SEURAAVA ERÄ (odottaa PT:n lupaa):** Madeiran itäosan pilvi (Euroopan mosaiikki, selkeä otto) ja Eyren tummin vesi (MERI-sininen).
+- **Korjauskerrokset (6.10. 11.36, Julkaisija):** s2-maailma/v2-korjaus3/ (Eyre, 14) ja s2-eurooppa/v2-korjaus1/ (Madeira, 10).
+  LS2:n natiivi lukee ketjun v2-korjaus3 → v2-korjaus2 → v2 ja Euroopan kerroksen (9479a9ee), joten pienet korjaukset menevät
+  jatkossa uutena kerroksena (v2-korjaus4, v2-korjaus2 jne.) vie-paketti.sh:lla.
+  Työkalut: paikka-otto.mjs (selkeät otot, pikselikohtainen valinta) ja PIL-viimeistely, koska jpeg-js tummentaa noin 1 DN per kierros.
 - **Tunnetut jäännökset:** Amazonin itäkaista, Sumbawan maasauma, 11SQR:n ja 11RQQ:n mieto vino sävyraja (Meksiko v2e).
 
 ---
