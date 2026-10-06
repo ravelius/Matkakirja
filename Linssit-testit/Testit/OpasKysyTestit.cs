@@ -105,6 +105,8 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(puheita, puhe.Count, "kertoja ei ala ennen näkymää");
             edistys = 0.97;
             for (int i = 0; i < 5; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(!puhe.Contains("Colosseum"), "avaustauko: kertoja ei vielä (1,3 s)");
+            for (int i = 0; i < 15; i++) s.Paivita(0.1, _ => 5);
             Oleta.Tosi(!s.Siirtymassa && s.Vaihe == OpasVaihe.Puhuu && s.Nykyinen?.Id == "Colosseum", "näkymä auki, kertoja alkaa");
             Oleta.Tosi(puhe.Contains("Colosseum"));
         }
@@ -135,7 +137,7 @@ namespace Matkakirja.Linssit.Testit
             maa = 290;
             s.Paivita(0.1, _ => double.NaN);
             Oleta.Tosi(s.Siirtymassa, "korjatun kehyksen laatoille hetki");
-            for (int i = 0; i < 10; i++) s.Paivita(0.1, _ => double.NaN);
+            for (int i = 0; i < 25; i++) s.Paivita(0.1, _ => double.NaN);
             Oleta.Tosi(!s.Siirtymassa && s.Vaihe == OpasVaihe.Puhuu, "näkymä auki näytteen jälkeen");
             Oleta.Tosi(s.NykyinenKehys.MaaM == 290 && s.Asento.KatseKorkeusM > 200, $"kehys oikealla maalla (katse {s.Asento.KatseKorkeusM:F0} m)");
         }
@@ -203,6 +205,57 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(s.Vaihe == OpasVaihe.Puhuu, $"alle 1 s äänen lopusta: odotetaan ({s.Vaihe} {s.Nykyinen?.Id})");
             for (int i = 0; i < 4; i++) s.Paivita(0.1, _ => 5);
             Oleta.Tosi(s.Vaihe == OpasVaihe.Lentaa && s.Nykyinen?.Id == "B", "tauon jälkeen lento");
+        }
+        // Omistaja TF 149 (Päätoimittaja 16.3x): kysymys keskeyttää kierroksen, JATKA jatkaa keskeytyneestä, ■ lopettaa.
+        static (OpasSilmukka s, List<(int n, string t)> p, List<string> puhe, int hiljennyksia) KierroksellaT1Puhuu()
+        {
+            var (s, p, puhe) = Pysahdyksella();
+            var jono = new List<(string, double, double)> { ("T1", 55.6761, 12.5683), ("T2", 55.6753, 12.5703), ("T3", 55.6814, 12.5758) };
+            s.AloitaKierros(jono);
+            s.Vastaus(p[^1].n, K("T1", 55.6761, 12.5683));
+            for (int i = 0; i < 600 && !(s.Nykyinen?.Id == "T1" && s.Vaihe == OpasVaihe.Puhuu); i++) s.Paivita(0.1, _ => 5);
+            return (s, p, puhe, 0);
+        }
+
+        [Testi] static void KysymysKeskeyttaaJaJatkaJatkaa()
+        {
+            var (s, p, puhe, _) = KierroksellaT1Puhuu();
+            int hiljennyksia = 0; s.Hiljenna += () => hiljennyksia++;
+            Oleta.Sama("T2", p[^1].t, "T2 esihaussa");
+            Oleta.Tosi(s.KeskeytaKierros(), "keskeytys");
+            Oleta.Tosi(s.KierrosKeskeytetty && !s.KierrosKaynnissa && hiljennyksia == 1, "kertoja vaikeni");
+            int pyyntoja = p.Count;
+            var vastaus = K("kysy-1", s.NykyinenKehys.Lat, s.NykyinenKehys.Lon);
+            s.Esita(vastaus);
+            for (int i = 0; i < 50; i++) { s.Paivita(0.1, _ => 5); if (s.Vaihe == OpasVaihe.Puhuu && s.Nykyinen == vastaus) s.AaniLoppui(); }
+            Oleta.Sama(pyyntoja, p.Count, "keskeytettynä ei omia pyyntöjä vastauksen jälkeen");
+            Oleta.Tosi(s.KierrosKeskeytetty, "keskeytys säilyy kysymysten yli");
+            Oleta.Tosi(s.JatkaKierrosta() && s.KierrosKaynnissa && !s.KierrosKeskeytetty, "jatkuu");
+            for (int i = 0; i < 300 && !(s.Nykyinen?.Id == "T1" && s.Vaihe == OpasVaihe.Puhuu); i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Nykyinen?.Id == "T1" && puhe.FindAll(x => x == "T1").Count == 2, "kesken jäänyt T1 luetaan alusta");
+            Oleta.Sama("T2", p[^1].t, "T2 pyydetään uudelleen");
+        }
+
+        [Testi] static void LoppuunLuetunJalkeenJatketaanSeuraavaan()
+        {
+            var (s, p, puhe, _) = KierroksellaT1Puhuu();
+            s.AaniLoppui();
+            s.KeskeytaKierros();
+            s.JatkaKierrosta();
+            Oleta.Sama("T2", p[^1].t, "luettu loppuun → seuraava");
+        }
+
+        [Testi] static void LopetaKierrosVapaaTila()
+        {
+            var (s, p, puhe, _) = KierroksellaT1Puhuu();
+            s.LopetaKierros();
+            Oleta.Tosi(s.VapaaTila && !s.KierrosKaynnissa && !s.KierrosKeskeytetty, "vapaa tila");
+            int n = p.Count;
+            for (int i = 0; i < 100; i++) { s.AaniLoppui(); s.Paivita(0.1, _ => 5); }
+            Oleta.Sama(n, p.Count, "ei omia pyyntöjä vapaassa tilassa");
+            Oleta.Tosi(!s.JatkaKierrosta(), "lopetettua ei jatketa");
+            s.Liiku("Rundetaarn", 55.6814, 12.5757);
+            Oleta.Tosi(!s.VapaaTila, "pelaajan valinta päättää vapaan tilan");
         }
     }
 }

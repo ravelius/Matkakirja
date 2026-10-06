@@ -110,8 +110,9 @@ namespace Matkakirja.Natiivi
         /// <summary>Maan valinta Vaihda kohde -valikossa (Natiivi-UI, juna 146): maan nimi Williamin äänellä heti. true = sanottiin.</summary>
         public static bool MaaValittu(string iso)
         {
-            if (!Auki || string.IsNullOrEmpty(iso)) return false;
-            return Viimeisin.SanoNimi(nimiaanet?.Maalle(iso));
+            // Omistaja TF 149 (16.5x): ei puhetta maanosan eikä maan valinnasta (pelaaja voi vielä peruuttaa); kertoja vasta
+            // kaupungin tai suosikin valinnasta, kerran (VaihdaKaupunki: nimi + yksi jatko).
+            return false;
         }
         (double lat, double lon)? pakotettuSijainti;
 
@@ -318,6 +319,44 @@ namespace Matkakirja.Natiivi
         /// <summary>Liiku-lista: kaupungin 12 tärkeintä (GET /opas/liiku); null = latautuu.</summary>
         public static IReadOnlyList<OpasTaky> Kohteet => Viimeisin?.kohteet;
         public static bool KierrosKaynnissa => Viimeisin?.silmukka != null && Viimeisin.silmukka.KierrosKaynnissa;
+
+        /// <summary>JATKA KIERROSTA -nappi näkyviin (Natiivi-UI): kysymys keskeytti kierroksen, ja vastaus on kuultu.</summary>
+        public static bool KierrosJatkettavissa
+        {
+            get
+            {
+                var v = Viimeisin;
+                return Auki && v.silmukka.KierrosKeskeytetty && !v.puhuu && !v.kysyOdotus.Kaynnissa && v.silmukka.Vaihe != OpasVaihe.Lentaa
+                    && (v.silta == null || !v.silta.isPlaying);
+            }
+        }
+
+        /// <summary>JATKA KIERROSTA -napin napautus: kesken jäänyt kohde alusta, muuten seuraava. true = jatkui.</summary>
+        public static bool JatkaKierrosta()
+        {
+            if (!Auki) return false;
+            var v = Viimeisin;
+            v.puhuttu = null;   // sama kohde saa alkaa uudelleen alusta
+            bool ok = v.silmukka.JatkaKierrosta();
+            v.o.Kirjaa(ok ? $"opas: kierros jatkuu ({v.silmukka.KierrosTieto.numero}/{v.silmukka.KierrosTieto.maara})" : "opas: ei keskeytettyä kierrosta");
+            return ok;
+        }
+
+        /// <summary>■ LOPETA KIERROS (Natiivi-UI, tauon vasemmalla): kierros päättyy, kertoja vaikenee, vapaa tila. true = lopetettiin.</summary>
+        public static bool LopetaKierros()
+        {
+            if (!Auki) return false;
+            var v = Viimeisin;
+            if (v.tauolla) Tauko(false);
+            v.silmukka.LopetaKierros();
+            v.Hiljenna();
+            if (v.silta != null && v.silta.isPlaying) v.silta.Stop();
+            v.o.Kirjaa("opas: kierros lopetettu, vapaa tila");
+            return true;
+        }
+
+        /// <summary>Vapaa tila (■ jälkeen): ei kohdetta, Linssiseppä 2:n vapaa ohjaus (juna 152).</summary>
+        public static bool VapaaTila => Auki && Viimeisin.silmukka.VapaaTila;
         string[] kysymykset, jatkoKysymykset = Array.Empty<string>();
         List<OpasTaky> kohteet;
         string kohteetKaupunki;
@@ -365,6 +404,8 @@ namespace Matkakirja.Natiivi
             var v = Viimeisin;
             if (v.tauolla) Tauko(false);
             v.o.Kirjaa("opas: kysy \"" + teksti.Trim() + "\"");
+            // Kierroksella kysymys keskeyttää kierroksen heti (omistaja TF 149): kamera paikalleen, kertoja vaikenee, JATKA-nappi vastauksen jälkeen.
+            if (v.silmukka.KeskeytaKierros()) v.o.Kirjaa("opas: kierros keskeytetty kysymykseen");
             // Siltalause tilanteen mukaan (juna 150): kysymykseen syventävä lause ilman odotus-ajastinta (vastaus PCM:llä ~5–6 s);
             // käskyyn ("vie minut …") ei lausetta ennen vastausta, koska liikettä ei vielä tiedetä (vastauksen oma ääni kuittaa).
             if (kysymysListalta || OpasSiltalauseet.OnKysymys(teksti)) v.Silta(OpasSiltalauseet.Kysymys, false);
