@@ -9,6 +9,8 @@
 //  - ikkunat pystypinnoille: 3,2 × 3,0 m:n ruudukko, osa palaa (tiheys Black Marblesta), kaukana keskiarvo pehmeänä,
 //  - Black Marble -arvo loivennetaan (saturoitunut keskusta ≈ 0,7), joten kaupungin sisällä on vielä vaihtelua.
 // v3: valot vain tasaisille pinnoille (ei puiden latvoja eikä reunoja), valosaaste 0,07.
+// v4 (Päätoimittaja 22.3x: "pisteet näyttävät kohinalta"): katuvalot OSM-katujen maskista (_Tiet, KaupunkiTiet) nauhoina ja
+// lamppuina vain kaduilla; ei pisteitä katoille eikä Black Marblen mukaan; kohteen kultainen valonheitto (_KohdeP); utu 0,04.
 // Taivas (syvyys kaukotasossa) ohitetaan. KaupunkiYovalot.cs kytkee passin FullScreenPassRendererFeaturena vain yöllä.
 Shader "Matkakirja/Linssit/KaupunkiYovalot"
 {
@@ -32,6 +34,10 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
             float4 _ValoParam;              // x = osuus 0–1, y = valosaaste, z = katuvalot, w = solukoko (m)
             float4 _ValoVari;               // natrium (rgb), a = valkoisten LED-pisteiden osuus
             float4 _IkkunaParam;            // x = ikkunoiden voima, y = palavien osuus enintään
+            TEXTURE2D(_Tiet); SAMPLER(sampler_Tiet);
+            float4 _TieAlue;                // x = keskipisteen lat, y = lon, z = sivu (m), w = 1 jos kadut ladattu
+            float4 _KohdeP;                 // kohteen maapiste paikallisessa ENU:ssa (m), w = 1 jos kohde
+            float4 _KohdeParam;             // x = säde (m), y = voima
 
             float3 Hash32(float2 p)
             {
@@ -40,11 +46,16 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 return frac((p3.xxy + p3.yzz) * p3.zyx);
             }
 
+            static const float MAA_R = 6371000.0, ASTE = 57.2957795;
+
+            float2 Asteet(float3 paikka)
+            {
+                return float2(_ValoAlue.z + paikka.z / MAA_R * ASTE, _ValoAlue.w + paikka.x / (MAA_R * cos(_ValoAlue.z / ASTE)) * ASTE);
+            }
+
             float BlackMarble(float3 paikka)
             {
-                const float R = 6371000.0, ASTE = 57.2957795;
-                float lat = _ValoAlue.z + paikka.z / R * ASTE;
-                float lon = _ValoAlue.w + paikka.x / (R * cos(_ValoAlue.z / ASTE)) * ASTE;
+                float2 ll = Asteet(paikka); float lat = ll.x, lon = ll.y;
                 float2 uv = float2((lon - _ValoAlue.x) / 3.0, (lat - _ValoAlue.y) / 3.0);
                 if (any(uv < 0.0) || any(uv > 1.0)) return 0.0;
                 float v = SAMPLE_TEXTURE2D_LOD(_Valot, sampler_Valot, uv, 0).r;
@@ -70,7 +81,7 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 #endif
                 float3 p = mul(_MaailmaPaikallinen, float4(ComputeWorldSpacePosition(uv, syvyys, UNITY_MATRIX_I_VP), 1.0)).xyz;
                 float bm = BlackMarble(p);
-                if (bm <= 0.01) return c;
+                if (bm <= 0.01 && _KohdeP.w < 0.5) return c;
 
                 // Naapurit: lyhyempi ero kummaltakin akselilta (reunalla pitkä ero on toisen pinnan puolella).
                 float3 pr = Paikka(uv + float2(px.x, 0)), pl = Paikka(uv - float2(px.x, 0));
@@ -85,32 +96,42 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                 float sx = dot(normalize(pr - p + 1e-6), normalize(p - pl + 1e-6)), sy = dot(normalize(pu - p + 1e-6), normalize(p - pd + 1e-6));
                 float tasainen = saturate((min(sx, sy) - 0.94) / 0.05);
                 tasainen = lerp(tasainen, 1.0, saturate((jalanjalki - 2.0) / 4.0));   // kaukana (pikseli > 2–6 m) mattoa ei karsita
-                if (tasainen <= 0.0) return half4(c.rgb + (half3)(_ValoVari.rgb * bm * bm * _ValoParam.y * _ValoParam.x), c.a);
 
                 float3 lisa = _ValoVari.rgb * bm * bm * _ValoParam.y;  // valosaaste
 
-                // Katuvalot vaakapinnoille.
-                float vaaka = saturate((n.y - 0.82) / 0.1);
-                float solu = _ValoParam.w;
-                float nakyvyys = saturate(2.0 - jalanjalki * 2.5 / solu);
-                if (vaaka > 0.0 && nakyvyys > 0.0)
+                // Katuvalot OSM-katujen mukaan (v4): maski kaduista; vaakapinnoilla valonauha (katu valaistu) ja lamput nauhan keskellä.
+                float vaaka = saturate((n.y - 0.82) / 0.1) * tasainen;
+                if (vaaka > 0.0 && _TieAlue.w > 0.5)
                 {
-                    float2 q = p.xz / solu, ci = floor(q);
-                    float sade = max(1.1, jalanjalki * 0.75) / solu;
-                    float pisteet = 0.0; float3 pv = 0.0;
-                    for (int y = -1; y <= 1; y++)
-                    for (int x = -1; x <= 1; x++)
+                    float2 ll = Asteet(p);
+                    float2 m = float2((ll.y - _TieAlue.y) * MAA_R * cos(_TieAlue.x / ASTE) / ASTE, (ll.x - _TieAlue.x) * MAA_R / ASTE);
+                    float2 tuv = m / _TieAlue.z + 0.5;
+                    if (all(tuv > 0.0) && all(tuv < 1.0))
                     {
-                        float2 s = ci + float2(x, y);
-                        float3 h = Hash32(s);
-                        if (h.z > bm) continue;
-                        float2 d = q - (s + 0.15 + 0.7 * h.xy);
-                        float w = exp(-dot(d, d) / (sade * sade));
-                        float led = step(1.0 - _ValoVari.a, frac(h.z * 7.13));
-                        pisteet += w;
-                        pv += w * lerp(_ValoVari.rgb, float3(0.95, 0.97, 1.0), led);
+                        // Mipit kaukana (katujen tiheys); gradientit naapuripikseleistä (ei ddx:ää haarassa).
+                        float tie = SAMPLE_TEXTURE2D_GRAD(_Tiet, sampler_Tiet, tuv, dx.xz / _TieAlue.z, dy.xz / _TieAlue.z).r;
+                        float3 nauha = _ValoVari.rgb * tie * 0.30;
+                        // Lamput: solun piste palaa vain, jos se osuu kadulle (pikseli kadulla ja lähellä pistettä).
+                        float solu = _ValoParam.w, nakyvyys = saturate(2.0 - jalanjalki * 2.5 / solu);
+                        float3 lamput = 0.0;
+                        if (nakyvyys > 0.0 && tie > 0.35)
+                        {
+                            float2 q = p.xz / solu, ci = floor(q);
+                            float sade = max(1.0, jalanjalki * 0.75) / solu;
+                            for (int y = -1; y <= 1; y++)
+                            for (int x = -1; x <= 1; x++)
+                            {
+                                float2 sc = ci + float2(x, y);
+                                float3 h = Hash32(sc);
+                                float2 d = q - (sc + 0.2 + 0.6 * h.xy);
+                                float w = exp(-dot(d, d) / (sade * sade));
+                                float led = step(1.0 - _ValoVari.a, frac(h.z * 7.13));
+                                lamput += w * lerp(_ValoVari.rgb, float3(0.95, 0.97, 1.0), led);
+                            }
+                            lamput *= nakyvyys * saturate((tie - 0.35) / 0.3);
+                        }
+                        lisa += (nauha + lamput * _ValoParam.z) * vaaka;
                     }
-                    lisa += pv * vaaka * nakyvyys * tasainen * _ValoParam.z;
                 }
 
                 // Ikkunat pystypinnoille: julkisivun vaakasuunta × korkeus, 3,2 × 3,0 m.
@@ -128,7 +149,16 @@ Shader "Matkakirja/Linssit/KaupunkiYovalot"
                     float3 iv = lerp(float3(1.0, 0.72, 0.42), float3(1.0, 0.88, 0.70), h.y);
                     lisa += iv * pysty * tasainen * _IkkunaParam.x * (0.6 + 0.4 * h.z) * lerp(keski, palaa * ikkuna, terava);
                 }
-                return half4(c.rgb + (half3)(lisa * _ValoParam.x), c.a);
+                float3 tulos = c.rgb + lisa * _ValoParam.x;
+                // Kohteen valaistus (v4): lämmin valonheitto kohteen ympärille maasta ylöspäin (Eiffel kultaisena).
+                if (_KohdeP.w > 0.5)
+                {
+                    float2 dk = p.xz - _KohdeP.xz;
+                    float w = exp(-dot(dk, dk) / (_KohdeParam.x * _KohdeParam.x)) * saturate((p.y - _KohdeP.y + 4.0) / 4.0);
+                    float3 kulta = float3(1.0, 0.74, 0.36);
+                    tulos = tulos * (1.0 + _KohdeParam.y * w * _ValoParam.x * kulta) + kulta * 0.03 * w * _ValoParam.x;
+                }
+                return half4((half3)tulos, c.a);
             }
             ENDHLSL
         }
