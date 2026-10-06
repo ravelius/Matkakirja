@@ -50,6 +50,7 @@ namespace Matkakirja.Natiivi
         static float tieSivu = TieSivuM;
         static string tieId;
         static HashSet<string> tieIndeksi;
+        static Dictionary<string, string> tiePolut;
         static bool tietHaussa;
         static readonly int IdValot = Shader.PropertyToID("_Valot"), IdMatriisi = Shader.PropertyToID("_MaailmaPaikallinen"),
             IdAlue = Shader.PropertyToID("_ValoAlue"), IdParam = Shader.PropertyToID("_ValoParam"), IdVari = Shader.PropertyToID("_ValoVari"),
@@ -146,18 +147,20 @@ namespace Matkakirja.Natiivi
                     ri.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
                     PolloTestitunnus.Lisaa(ri);
                     yield return ri.SendWebRequest();
-                    tieIndeksi = ri.result == UnityWebRequest.Result.Success ? KaupunkiTiet.LueIndeksi(Matkakirja.Peli.MiniJson.Jasenna(ri.downloadHandler.text)) : new HashSet<string>();
+                    var ij = ri.result == UnityWebRequest.Result.Success ? Matkakirja.Peli.MiniJson.Jasenna(ri.downloadHandler.text) : null;
+                    tieIndeksi = KaupunkiTiet.LueIndeksi(ij); tiePolut = KaupunkiTiet.LuePolut(ij);
                 }
                 if (tieIndeksi.Contains(id))
                 {
-                    string polku = Path.Combine(Application.persistentDataPath, "kuvat", "tiet-v1", id + ".json");
+                    string suht = KaupunkiTiet.Polku(id, tiePolut);
+                    string polku = Path.Combine(Application.persistentDataPath, "kuvat", suht);
                     if (File.Exists(polku)) { json = File.ReadAllText(polku); lahde = "välimuisti"; }
                     else
                     {
-                        using var r = UnityWebRequest.Get(KaupunkiTiet.Juuri + id + ".json");
+                        using var r = UnityWebRequest.Get(KaupunkiTiet.Media + suht);
                         r.timeout = 25;
                         yield return r.SendWebRequest();
-                        lahde = r.result == UnityWebRequest.Result.Success ? "ämpäri" : "ämpäri " + r.responseCode;
+                        lahde = r.result == UnityWebRequest.Result.Success ? "ämpäri " + suht : "ämpäri " + r.responseCode;
                         if (r.result == UnityWebRequest.Result.Success)
                         {
                             json = r.downloadHandler.text;

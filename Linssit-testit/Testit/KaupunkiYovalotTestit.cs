@@ -67,6 +67,12 @@ namespace Matkakirja.Linssit.Testit
             var i = KaupunkiTiet.LueIndeksi(Matkakirja.Peli.MiniJson.Jasenna("{\"tiet\":[\"pariisi\",\"venetsia\"],\"aanikartta\":[\"rooma\"]}"));
             Oleta.Tosi(i.Contains("pariisi") && i.Contains("venetsia") && i.Count == 2, "vain tiet");
             Oleta.Sama(0, KaupunkiTiet.LueIndeksi(Matkakirja.Peli.MiniJson.Jasenna("[\"rooma\"]")).Count, "väärä muoto = tyhjä");
+            var pj = Matkakirja.Peli.MiniJson.Jasenna("{\"tiet\":[\"pariisi\",\"venetsia\"],\"tiet_polut\":{\"pariisi\":\"kartta/tiet-v2/pariisi.json\",\"paha\":\"../x.json\"}}");
+            var polut = KaupunkiTiet.LuePolut(pj);
+            Oleta.Sama("kartta/tiet-v2/pariisi.json", KaupunkiTiet.Polku("pariisi", polut), "tiet_polut voittaa");
+            Oleta.Sama("kartta/tiet-v1/venetsia.json", KaupunkiTiet.Polku("venetsia", polut), "muuten tiet-v1");
+            Oleta.Tosi(!polut.ContainsKey("paha"), "polku ei saa nousta ylös");
+            Oleta.Sama("kartta/tiet-v1/rooma.json", KaupunkiTiet.Polku("rooma", KaupunkiTiet.LuePolut(null)), "ilman luetteloa tiet-v1");
             var a = KaupunkiTiet.Alue((System.Collections.Generic.Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{\"keskus\":[48.85,2.35],\"r\":4000,\"tiet\":[]}"));
             Oleta.Tosi(a != null && Math.Abs(a.Value.lat - 48.85) < 1e-9 && a.Value.r == 4000);
         }

@@ -15,7 +15,23 @@ namespace Matkakirja.Linssit.Kierros
         /// kartta/tiet-v1/{id}.json = {"keskus":[lat,lon],"r":4000,"tiet":[…]}. Valmiit id:t Pöllöstä (GET /opas/aineistot →
         /// {"tiet":[…],"aanikartta":[…]}, lyhyt välimuisti; ämpärin objektit ovat muuttumattomia, joten luettelo ei voi olla siellä);
         /// muita ei pyydetä, koska CDN välimuistittaa 404:n.</summary>
-        public const string Juuri = "https://media.matkakirja.app/kartta/tiet-v1/";
+        public const string Media = "https://media.matkakirja.app/";
+        public const string Juuri = Media + "kartta/tiet-v1/";
+
+        /// <summary>Pöllön /opas/aineistot "tiet_polut" (Pelikoodari 6.10. 23.5x: Pariisi, Lontoo ja Rooma uudelleen r 6000:lla
+        /// kansioon tiet-v2, koska v1-objektit ovat muuttumattomia): id → ämpärin suhteellinen polku; puuttuessa tyhjä.</summary>
+        public static Dictionary<string, string> LuePolut(object j)
+        {
+            var p = new Dictionary<string, string>();
+            if (j is IDictionary<string, object> d && d.TryGetValue("tiet_polut", out var v) && v is IDictionary<string, object> vd)
+                foreach (var kv in vd) if (kv.Value is string s && s.EndsWith(".json") && !s.StartsWith("/") && !s.Contains("..")) p[kv.Key] = s;
+            return p;
+        }
+
+        /// <summary>Kaupungin katutiedoston ämpäripolku: tiet_polut[id], muuten kartta/tiet-v1/{id}.json. Sama polku on
+        /// laitteen välimuistin avain, joten v1-kopio ei peitä v2:ta.</summary>
+        public static string Polku(string id, IReadOnlyDictionary<string, string> polut) =>
+            polut != null && polut.TryGetValue(id, out var p) ? p : "kartta/tiet-v1/" + id + ".json";
 
         /// <summary>Kaupungin tunnus nimestä (Kööpenhamina → koopenhamina), sama kaava kuin Siirtosepän äänimaisemassa
         /// (KaupunkiAanimaisemaSoitin.Tunnus): pienet kirjaimet, ä/å/á/à → a, ö/ø/ó → o, é/è → e, välit ja viivat → -.</summary>
