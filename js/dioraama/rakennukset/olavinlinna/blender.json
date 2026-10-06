@@ -1,62 +1,62 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "e4c6abb04c926293",
-  "kansio": "dioraama/olavinlinna/blender/e4c6abb04c926293/",
+  "hash": "0265cd493b0728f4",
+  "kansio": "dioraama/olavinlinna/blender/0265cd493b0728f4/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500.glb",
-      "sha256": "876c209cf5582b93f3aa94ba70786c99a973832e73fb7b211ab64c47e95d0852",
-      "tavuja": 2280812
+      "sha256": "d42b4639899ce1a7e95665363c340c1654ace5c3b109c751872f194e4310c18e",
+      "tavuja": 2930956
     },
     {
       "polku": "hahmot/kappalainen-1500.glb",
-      "sha256": "dff87391b7d6a55ad7b87157c33aa4fb0497dcb97b500ebc564121f9b77ae014",
-      "tavuja": 1901920
+      "sha256": "522ff738840100dd65e71cff33093f49a87164fcb7525d75ca3390fa507d59cd",
+      "tavuja": 2471956
     },
     {
       "polku": "hahmot/kirjuri-1500.glb",
-      "sha256": "2b741f1ff690fe1ac2cfe03dc425b32b4e7af0377eba5891ba9cca712854c824",
-      "tavuja": 1598948
+      "sha256": "66a412970c8a0c094403d2f68cfa8c30847b9366d856af89013af29c7ffdf80e",
+      "tavuja": 2164052
     },
     {
       "polku": "hahmot/kokki-1500.glb",
-      "sha256": "23be3d04daae9107a412e7a8c4dd7441ec557bcf0c6cf0633d6eba5c27ff4f44",
-      "tavuja": 1831224
+      "sha256": "3123c925bfddc623e797727ec1f319d355fc26e330bdd94e8308e4f24b9e1dd0",
+      "tavuja": 2434612
     },
     {
       "polku": "hahmot/portinvartija-1500.glb",
-      "sha256": "1208a0e5a71c34b839d885eff1bf274325a833dfdfd5cb78a711b06ef003b346",
-      "tavuja": 1759260
+      "sha256": "39d4be00f0082b3e4142630ac3217289706615c40903f4f2058f678d33485a85",
+      "tavuja": 2362444
     },
     {
       "polku": "hahmot/renki-1500.glb",
-      "sha256": "1f222f006dd47e9767685894ffcf21f9b313f8d161f6073f823e9486b76a9d0a",
-      "tavuja": 1480916
+      "sha256": "88349f9c13d794e01c0e97341c99e3e34bcb82bfb54e19137e12735a48fe9339",
+      "tavuja": 2050824
     },
     {
       "polku": "hahmot/soutaja-1500.glb",
-      "sha256": "af9971cee2f0463835a99f8e25ec64e067a1c03ca719ff903948ba375b358dfd",
-      "tavuja": 1672336
+      "sha256": "7e3075ddce93418c9e0afacdb665d4773422e2ef919c80e4dd2d6d0db58dcff6",
+      "tavuja": 2280444
     },
     {
       "polku": "hahmot/talonpoika-1500.glb",
-      "sha256": "2cdfca24333baace1b7aad8f69dba3dc2b83973e31bc15c5c14ff8bd0aef35d0",
-      "tavuja": 1517972
+      "sha256": "d40e5f86dfe2aee4fd03fb2c02775495f4f60c857dd6b9ad4586fd6bf8ffe34e",
+      "tavuja": 2125280
     },
     {
       "polku": "hahmot/vartija-1500.glb",
-      "sha256": "a81bf30d80d2cb7630929177270d63e93bda7006fafa431723706d1b82ce972b",
-      "tavuja": 1920432
+      "sha256": "610bd12050d035485a4004e7fa6b954d30a3f69a3131f7cd32be60172abc256d",
+      "tavuja": 2537824
     },
     {
       "polku": "hahmot/vesipoika-1500.glb",
-      "sha256": "eddee81bebd62ad12ba6500229bdc166d32019b53a9e79807be37733049dc0e5",
-      "tavuja": 1323440
+      "sha256": "ab1ec6053c69fb7bea39c044e21421379bec0585326843ac83d415dcb54fc55a",
+      "tavuja": 1885296
     },
     {
       "polku": "hahmot/vouti-1500.glb",
-      "sha256": "471ba5441b454c6d33d81474f1e06b0a819b76cc76b38af1a92700f52922f29a",
-      "tavuja": 1987384
+      "sha256": "3c1d49c55d34a214af3c6e71a7b51c6bf1731ee04063f973f1e588fa1818c488",
+      "tavuja": 2602004
     },
     {
       "polku": "kirjasto/materiaali/graniittilohkomuuri/graniittilohkomuuri_diff-4x4.astcm",
