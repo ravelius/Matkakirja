@@ -42,6 +42,8 @@ namespace Matkakirja.Natiivi
         readonly Action<string> avaa;
         readonly Action autoVaihtui;
         Button autoNappi;
+        /// <summary>AUTO-kytkin (oikean ryhmän ensimmäinen; Nostokortti.SiirraYlarivi ei poista sitä).</summary>
+        public Button AutoNappi => autoNappi;
         readonly List<NostoKerros.Nosto> jarjestys = new List<NostoKerros.Nosto>();
         string nykyinen, maa, aihe;
         IVisualElementScheduledItem siirtoAjo;
@@ -162,7 +164,8 @@ namespace Matkakirja.Natiivi
             Rakenne.El("mk-nostoselain__autopiste", autoNappi, PickingMode.Ignore);
             Kirjasimet.Aseta(Rakenne.Teksti("AUTO", "mk-nostoselain__autoteksti", autoNappi), Kirjasin.Kone);
             autoNappi.tooltip = "Auto: lukee avautuvat nostot ja siirtyy seuraavaan";
-            rivi.Insert(rivi.IndexOf(seuraava) + 1, autoNappi); // NOSTOT-ryhmän viereen keskelle (omistaja 18.4x)
+            // Juna 153 (omistaja 6.10. 19.2x, Kronborg): AUTO oikean ryhmän alkuun (AUTO, pin, ≡, kaiutin tasaväleillä).
+            Oikea.Insert(0, autoNappi);
             PaivitaAuto();
         }
 
