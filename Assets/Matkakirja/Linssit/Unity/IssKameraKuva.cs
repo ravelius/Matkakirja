@@ -60,7 +60,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         // Päätoimittaja 4.10. (maailmakamera): usva neutraaliksi sinivalkoiseksi; simu a10a2777 A/B: Rayleigh-kerros 1,5, sinisyys 1,3, utu 1,2
         // ja syvänsininen hehku 1,5 tekivät COG-kuvista violetteja (Sahara, Grand Canyon) → Rayleigh 1, sinisyys 1, utu 0,8, ei syvää hehkua.
-        const float KaariVoima = 6f, KaariHr = 1f, KaariSini = 1f, KaariUtu = 0.8f, KaariYdin = 1f, KaariSyva = 0f;
+        // Omistaja 6.10.: "Voisiko tuon ilmakehän halon värjätä voimakkaammin siniseksi" → sinisyys 1,2 ja syvänsininen hehku 1 (kirkas
+        // sisäreuna säilyy ytimellä 1; Rayleigh ja utu ennallaan, ettei maa violettiudu kuten a10a2777:ssä).
+        const float KaariVoima = 6f, KaariHr = 1f, KaariSini = 1.2f, KaariUtu = 0.8f, KaariYdin = 1f, KaariSyva = 1f;
 
         static bool KaariOletuksissa() => Avaruus.KuvanKaariVoima == 1f && Avaruus.KuvanHrKerroin == 1f && Avaruus.KuvanSiniKerroin == 1f
             && Avaruus.KuvanUtuKerroin == 1f && Avaruus.KuvanKaariYdin == 1f && Avaruus.KuvanKaariSyva == 0f;
@@ -798,6 +800,7 @@ namespace Matkakirja.Natiivi
                     kuva.LoadRawTextureData(lukija.GetData<byte>()); kuva.Apply(false);
                     if (Avaruus.KuvanNousu > 0.01f) Heijastukset(kuva, kamera, W, H, Avaruus.KuvanNousu);
                     Valota(kuva);
+                    Kehita(kuva);
                     Kontrasti(kuva, KuvanKontrasti);
                     byte[] j = null;
                     if (k == 0 && IssJuliste.Kaytossa)
@@ -967,6 +970,7 @@ namespace Matkakirja.Natiivi
                 var kuva = new Texture2D(W, H, TextureFormat.RGBA32, false);
                 kuva.LoadRawTextureData(lukija.GetData<byte>()); kuva.Apply(false);
                 Valota(kuva);
+                Kehita(kuva);
                 Kontrasti(kuva, KuvanKontrasti);
                 byte[] jpg = null;
                 if (IssJuliste.Kaytossa)
@@ -1053,6 +1057,19 @@ namespace Matkakirja.Natiivi
                 px[i] = new Color32((byte)Mathf.Clamp(c.r + d, 0, 255), (byte)Mathf.Clamp(c.g + d, 0, 255), (byte)Mathf.Clamp(c.b + d, 0, 255), c.a);
             }
             kuva.Apply(false);
+        }
+
+        /// <summary>A/B `astro kyyti kuvaa kehitys 0|1`: Kuvankasittely.Kehita (omistaja 6.10.: sinisempi, enemmän wow-efektiä).</summary>
+        public static bool Kehitys = true;
+
+        static void Kehita(Texture2D kuva)
+        {
+            if (!Kehitys) return;
+            var kello = System.Diagnostics.Stopwatch.StartNew();
+            var data = kuva.GetPixelData<byte>(0); var t = data.ToArray();
+            Kuvankasittely.Kehita(t, kuva.width, kuva.height);
+            data.CopyFrom(t); kuva.Apply(false);
+            Loki($"kehitys: paikallinen kontrasti, sinisyys, hehku {kello.ElapsedMilliseconds} ms");
         }
 
         static void Valota(Texture2D kuva)
