@@ -1,3 +1,4 @@
+using System.Linq;
 // Omistajan tilaus 6.10. 11.57 / 12.0x (juna 148): Kysy, Liiku, kaupunkikierros, keskustelu ja siirto ilman lentoa kaupungin ulkopuolelle.
 using System;
 using System.Collections.Generic;
@@ -114,6 +115,60 @@ namespace Matkakirja.Linssit.Testit
             s.Esita(K("Kastellet", 55.6916, 12.5936));
             for (int i = 0; i < 6; i++) s.Paivita(0.1, _ => 5);
             Oleta.Tosi(!s.Siirtymassa && s.Vaihe == OpasVaihe.Lentaa, "alle 30 km: lento");
+        }
+        // Simu 6.10. 12.42 (juna 148): Prahan linna aukesi kermana — kehys 45 m:n arviolla, maa ~290 m, kamera mäen sisällä.
+        [Testi] static void SiirtoOdottaaMaanKorkeuttaJaKehystaaSenMukaan()
+        {
+            var (s, p, puhe) = Pysahdyksella();
+            double maa = double.NaN; int pyyntoja = 0;
+            s.MaaPisteessa = (la, lo) => maa;
+            s.MaaTarvitaan += (la, lo) => pyyntoja++;
+            double edistys = 1.0;
+            s.LatausEdistys = () => edistys;
+            s.Esita(K("Prahan linna", 50.0900, 14.4000));
+            for (int i = 0; i < 6; i++) s.Paivita(0.1, _ => double.NaN);
+            Oleta.Tosi(s.Siirtymassa, "siirto alkoi"); Oleta.Sama(1, pyyntoja, "maan näyte pyydetään kerran");
+            for (int i = 0; i < 40; i++) s.Paivita(0.1, _ => double.NaN);
+            Oleta.Tosi(s.Siirtymassa && s.KehysArviolla, "laatat valmiit, mutta maa arviolla: näkymä ei aukea");
+            Oleta.Tosi(s.SiirtoEdistys <= OpasSilmukka.SiirtoMaatonEdistys + 1e-9, "palkki ei täyty ennen näytettä");
+            Oleta.Sama(0, puhe.Count(x => x == "Prahan linna"), "kertoja odottaa");
+            maa = 290;
+            s.Paivita(0.1, _ => double.NaN);
+            Oleta.Tosi(s.Siirtymassa, "korjatun kehyksen laatoille hetki");
+            for (int i = 0; i < 10; i++) s.Paivita(0.1, _ => double.NaN);
+            Oleta.Tosi(!s.Siirtymassa && s.Vaihe == OpasVaihe.Puhuu, "näkymä auki näytteen jälkeen");
+            Oleta.Tosi(s.NykyinenKehys.MaaM == 290 && s.Asento.KatseKorkeusM > 200, $"kehys oikealla maalla (katse {s.Asento.KatseKorkeusM:F0} m)");
+        }
+
+        [Testi] static void SiirtoAukeaaArviollaJosNaytettaEiTule()
+        {
+            var (s, p, puhe) = Pysahdyksella();
+            s.MaaPisteessa = (la, lo) => double.NaN;
+            s.LatausEdistys = () => 1.0;
+            s.Esita(K("Prahan linna", 50.0900, 14.4000));
+            for (int i = 0; i < 300 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.1, _ => double.NaN);
+            Oleta.Tosi(s.Vaihe == OpasVaihe.Puhuu, "SiirtoMaxS:n jälkeen näkymä aukeaa arviolla (ei jumia)");
+        }
+
+        [Testi] static void LennonKehysLiukuuNaytteenMaalle()
+        {
+            var (s, p, puhe) = Pysahdyksella();
+            double maa = double.NaN;
+            s.MaaPisteessa = (la, lo) => maa;
+            s.Liiku("Kastellet", 55.6916, 12.5936);
+            for (int i = 0; i < 10; i++) s.Paivita(0.1, _ => double.NaN);
+            Oleta.Tosi(s.Vaihe == OpasVaihe.Lentaa && s.KehysArviolla, "lento arviolla");
+            maa = 120;
+            var edella = s.Asento; double suurin = 0;
+            for (int i = 0; i < 400 && s.Vaihe == OpasVaihe.Lentaa; i++)
+            {
+                s.Paivita(0.05, _ => double.NaN);
+                suurin = Math.Max(suurin, Math.Abs(s.Asento.KatseKorkeusM - edella.KatseKorkeusM));
+                edella = s.Asento;
+            }
+            Oleta.Tosi(!s.KehysArviolla, "kehys korjattu");
+            Oleta.Tosi(suurin < 10, $"ei hyppyä (suurin askel {suurin:F1} m)");
+            Oleta.Tosi(s.NykyinenKehys != null && s.NykyinenKehys.MaaM == 120, "perillä näytteen maa");
         }
     }
 }
