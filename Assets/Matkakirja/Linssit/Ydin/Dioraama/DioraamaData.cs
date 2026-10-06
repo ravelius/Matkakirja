@@ -485,6 +485,24 @@ namespace Matkakirja.Linssit.Dioraama
         /// <summary>Luennan tukisanat (Päätoimittaja 5.10., omistajan TF 141 -palaute): `avainsanat: [{ t_s, vuosi?, sanat }]`,
         /// t_s sekunteina kertojan klipin alusta (Linnanrakentaja mittaa kohdistuksesta).</summary>
         public List<Avainsana> Avainsanat = new List<Avainsana>();
+        /// <summary>Paikkojen nimet kertojan mainitessa ne (Linnanrakentaja 6.10.2026, tornit-jakso): `nimet: [{ teksti, paikka:
+        /// [x,y,z], alku_s, kesto_s }]`; alku_s kertojan klipin alusta kuten avainsanoilla, kesto oletuksena 3 s (nimikyltti).</summary>
+        public List<JaksonNimi> Nimet = new List<JaksonNimi>();
+        /// <summary>Kuva kertojan maininnalle (esim. linnan perustaja): `kuva: { tiedosto, alku_s, kesto_s, lahde, tekija }`.</summary>
+        public JaksonKuva Kuva;
+    }
+
+    public sealed class JaksonNimi
+    {
+        public string Teksti;
+        public V3 Paikka;
+        public double Alku, Kesto = 3;
+    }
+
+    public sealed class JaksonKuva
+    {
+        public string Tiedosto, Lahde, Tekija;
+        public double Alku, Kesto = 6;
     }
 
     public sealed class Avainsana
@@ -791,6 +809,20 @@ namespace Matkakirja.Linssit.Dioraama
                 foreach (var ao in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "avainsanat")))
                     if (MiniJson.ObjektiTaiNull(ao) is Dictionary<string, object> a && MiniJson.Luku(a, "t_s") is double ts)
                         r.Kertoja[r.Kertoja.Count - 1].Avainsanat.Add(new Avainsana { Ts = ts, Vuosi = MiniJson.Teksti(a, "vuosi"), Sanat = MiniJson.Teksti(a, "sanat") });
+                foreach (var no in MiniJson.TaulukkoTaiTyhja(MiniJson.Kentta(j, "nimet")))
+                    if (MiniJson.ObjektiTaiNull(no) is Dictionary<string, object> nm && MiniJson.Kentta(nm, "paikka") != null
+                        && !string.IsNullOrEmpty(MiniJson.Teksti(nm, "teksti")))
+                        r.Kertoja[r.Kertoja.Count - 1].Nimet.Add(new JaksonNimi
+                        {
+                            Teksti = MiniJson.Teksti(nm, "teksti"), Paikka = LueV3(MiniJson.Kentta(nm, "paikka")),
+                            Alku = MiniJson.Luku(nm, "alku_s") ?? 0, Kesto = MiniJson.Luku(nm, "kesto_s") ?? 3,
+                        });
+                if (MiniJson.ObjektiTaiNull(MiniJson.Kentta(j, "kuva")) is Dictionary<string, object> ku && !string.IsNullOrEmpty(MiniJson.Teksti(ku, "tiedosto")))
+                    r.Kertoja[r.Kertoja.Count - 1].Kuva = new JaksonKuva
+                    {
+                        Tiedosto = MiniJson.Teksti(ku, "tiedosto"), Lahde = MiniJson.Teksti(ku, "lahde"), Tekija = MiniJson.Teksti(ku, "tekija"),
+                        Alku = MiniJson.Luku(ku, "alku_s") ?? 0, Kesto = MiniJson.Luku(ku, "kesto_s") ?? 6,
+                    };
             }
             r.Taulu = LueTaulu(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "taulu")));
             r.Valaistus = LueValaistus(MiniJson.ObjektiTaiNull(MiniJson.Kentta(juuri, "valaistus")));

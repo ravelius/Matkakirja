@@ -1094,6 +1094,25 @@ namespace Matkakirja.Linssit.Testit
             Lahella(0, Math.IEEERemainder(lyLoppu.Atsimuutti - yleis.Atsimuutti, 360), "lyhyt kaari päättyy yleisnäkymään", 0.05);
         }
 
+        // Jakson nimet ja kuva (Linnanrakentaja 6.10.2026): nimet[{teksti, paikka, alku_s, kesto_s?}], kuva{tiedosto, alku_s, ...}.
+        [Testi] static void KertojanJaksonNimetJaKuva()
+        {
+            string json = KeittioFixture.Replace("\"yleiskamera\": {", "\"kertoja\": {\"jaksot\": [{\"id\": \"tornit\", \"teksti\": \"Tornit.\", " +
+                "\"kamera\": {\"kohde\": [0, 0, 0], \"atsimuutti\": 157, \"korkeus\": 8, \"etaisyys\": 260}, " +
+                "\"nimet\": [{\"teksti\": \"Kirkkotorni\", \"paikka\": [1, 30, 2], \"alku_s\": 8.48}, {\"teksti\": \"Kellotorni\", \"paikka\": [5, 28, 4], \"alku_s\": 9.68, \"kesto_s\": 2}], " +
+                "\"kuva\": {\"tiedosto\": \"perustaja.jpg\", \"alku_s\": 4, \"lahde\": \"Wikimedia\", \"tekija\": \"X\"}}]},\n  \"yleiskamera\": {");
+            var j = DioraamaData.Lue(json).Kertoja[0];
+            Oleta.Sama(2, j.Nimet.Count);
+            Oleta.Sama("Kirkkotorni", j.Nimet[0].Teksti);
+            Lahella(8.48, j.Nimet[0].Alku, "alku_s");
+            Lahella(3, j.Nimet[0].Kesto, "kesto oletus 3 s");
+            Lahella(2, j.Nimet[1].Kesto, "kesto_s");
+            LahellaV3(new V3(1, 30, 2), j.Nimet[0].Paikka, "paikka");
+            Oleta.Sama("perustaja.jpg", j.Kuva?.Tiedosto);
+            Lahella(4, j.Kuva.Alku, "kuvan alku");
+            Lahella(6, j.Kuva.Kesto, "kuvan kesto oletus 6 s");
+        }
+
         // Elävä linna (Siirtoseppä 29.9.): saapumiskaari, ohitus napautuksella, lyhyt toinen käynti, lyhyt tilalento, elava-kenttä.
         [Testi] static void ElavaLinnaSaapuminenJaElava()
         {
