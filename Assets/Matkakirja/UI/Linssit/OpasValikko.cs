@@ -192,7 +192,7 @@ namespace Matkakirja.Natiivi
             lopetaNappi.style.display = DisplayStyle.None;
             ohjainRivi = Ohjausnappi.Ryhma(Juuri);
             ohjainRivi.style.top = StyleKeyword.Auto;
-            taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, "Tauko", () => OpasSovitin.Tauko(!OpasSovitin.Tauolla), ohjainRivi);
+            taukoNappi = Ohjausnappi.Nappi(Ikonit.Tauko, "Tauko", () => { OpasSovitin.Tauko(!OpasSovitin.Tauolla); Debug.Log("MATKAKIRJA opas: tauko-nappi → " + OpasSovitin.Tauolla); }, ohjainRivi);
             seuraavaNappi = Ohjausnappi.Nappi(Ikonit.Seuraava, "Seuraava kohde", () => Debug.Log("MATKAKIRJA opas: seuraava-nappi → " + OpasSovitin.Seuraava()), ohjainRivi);
             kuvaNappi = Ohjausnappi.Nappi(KuvatPaalla ? Ikonit.PilleriJulisteet : KuvaPoisIkoni, KuvatPaalla ? "Kuvat päällä" : "Kuvat pois",
                 VaihdaKuvat, ryhma);
@@ -200,7 +200,7 @@ namespace Matkakirja.Natiivi
             // Omistaja 6.10. 16.3x: tauko taas aina näkyvissä ☰:n vasemmalla (kumoaa 12.1x:n tauon osalta); kuvat jäävät ☰:n sisään.
             // Juna 156: tauko siirtyi ohjainriville oikean tapin alle (Seuraavan viereen); ylänurkassa ■ ja ☰.
             kuvaNappi.style.display = DisplayStyle.None;
-            nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
+            nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { Debug.Log("MATKAKIRJA opas: ☰ " + (Auki ? "kiinni" : "auki")); if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
             // VUOROKAUDENAIKA (omistaja 6.10. 18.5x): OHJAUSNAPPI vasempaan yläkulmaan; kuvake = voimassa oleva tila, A = automaattinen.
             var aikaRyhma = Ohjausnappi.Ryhma(Juuri);
             aikaRyhma.AddToClassList("mk-ohjausryhma--vasen");
@@ -1653,6 +1653,7 @@ namespace Matkakirja.Natiivi
                     Rect r = ohjainRivi.worldBound, t = taukoNappi.worldBound, sn = seuraavaNappi.worldBound;
                     return $"opas: ohjainrivi {(ohjainRivi.resolvedStyle.display == DisplayStyle.Flex ? "näkyy" : "piilossa")} @ {r.xMin:0},{r.yMin:0} {r.width:0}×{r.height:0}, "
                          + $"tauko {t.center.x:0},{t.center.y:0}, seuraava {(seuraavaNappi.resolvedStyle.visibility == Visibility.Visible ? "näkyy" : "piilossa")} {sn.center.x:0},{sn.center.y:0}, "
+                         + $"valikkonappi {nappi.worldBound.center.x:0},{nappi.worldBound.center.y:0} {nappi.worldBound.width:0}×{nappi.worldBound.height:0}, "
                          + $"leveä {LeveaRuutu}, ruutu {Juuri.layout.width:0}×{Juuri.layout.height:0}; " + tapit.Kuvaus();
                 }
                 case "latauskuva":
