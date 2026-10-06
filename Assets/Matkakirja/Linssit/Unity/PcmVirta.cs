@@ -25,6 +25,8 @@ namespace Matkakirja.Natiivi
         public readonly int Taajuus;
         public volatile bool Valmis;
         public volatile bool Virhe;
+        /// <summary>Alkupuskurin tarve (s) mitatusta latausnopeudesta (OpasPcmPuskuri; sovitin päivittää latauksen alussa).</summary>
+        public volatile float AlkuTarve = 1f;
 
         public PcmVirta(int taajuus, float arvioS) : base(new byte[16384])
         {

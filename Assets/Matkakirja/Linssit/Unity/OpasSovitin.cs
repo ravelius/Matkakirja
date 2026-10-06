@@ -1178,10 +1178,10 @@ namespace Matkakirja.Natiivi
         /// <summary>PCM-virrat avaimittain (Pöllön aani_pcm) ja soiva virta (loppu tunnistetaan siitä, ei klipin pituudesta).</summary>
         readonly Dictionary<string, PcmVirta> pcmVirrat = new Dictionary<string, PcmVirta>(StringComparer.Ordinal);
         PcmVirta pcmNyt;
-        /// <summary>Toisto alkaa, kun virrassa on näin paljon puskuria (s) tai lataus on valmis.</summary>
-        const float PcmPuskuriS = 1.0f;   // Päätoimittaja 16.5x: alku ~1 s varalla (nopea alku), alivuodossa PcmVirta puskuroi ~2 s
+        // Toisto alkaa, kun virrassa on OpasPcmPuskuri.Tarvitaan (nopealla virralla 1 s; Päätoimittaja 16.5x) tai lataus on valmis;
+        // alivuodossa PcmVirta puskuroi ~2 s.
 
-        /// <summary>PCM-virran lataus: klippi valmiina (klipit[avain]), kun puskuria on PcmPuskuriS; lataus jatkuu taustalla loppuun.</summary>
+        /// <summary>PCM-virran lataus: klippi valmiina (klipit[avain]), kun puskuria on OpasPcmPuskuri.Tarvitaan; lataus jatkuu taustalla loppuun.</summary>
         IEnumerator LataaPcm(OpasKohde k)
         {
             string avain = k.AaniPcm;
@@ -1191,9 +1191,22 @@ namespace Matkakirja.Natiivi
             p.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
             PolloTestitunnus.Lisaa(p);
             p.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
-            float t0 = Time.realtimeSinceStartup;
+            float t0 = Time.realtimeSinceStartup, tEka = -1f;
             var op = p.SendWebRequest();
-            while (!op.isDone && virta.PuskuroituS < PcmPuskuriS) yield return null;
+            // Alkupuskuri mitatusta latausnopeudesta (juna 154): hidas virta (< 1 × reaaliaika) puskuroi niin, ettei kertoja katkea.
+            double nopeus = double.NaN, tarvitaan = OpasPcmPuskuri.PohjaS;
+            while (!op.isDone)
+            {
+                if (tEka < 0 && virta.KirjoitettuS > 0) tEka = Time.realtimeSinceStartup;
+                if (tEka >= 0)
+                {
+                    nopeus = OpasPcmPuskuri.Nopeus(virta.KirjoitettuS, Time.realtimeSinceStartup - tEka);
+                    tarvitaan = OpasPcmPuskuri.Tarvitaan(k.KestoS, nopeus);
+                    virta.AlkuTarve = (float)tarvitaan;
+                    if (virta.PuskuroituS >= tarvitaan) break;
+                }
+                yield return null;
+            }
             if (p.result == UnityWebRequest.Result.ConnectionError || p.result == UnityWebRequest.Result.ProtocolError || virta.KirjoitettuS <= 0f)
             {
                 while (!op.isDone) yield return null;
@@ -1204,9 +1217,9 @@ namespace Matkakirja.Natiivi
                 yield break;
             }
             klipit[avain] = virta.Klippi("opas-pcm", (float)k.KestoS);
-            o.Kirjaa($"opas: PCM-virta soittovalmis {Time.realtimeSinceStartup - t0:F1} s:ssa ({virta.PuskuroituS:F1} s puskurissa)");
+            o.Kirjaa($"opas: PCM-virta soittovalmis {Time.realtimeSinceStartup - t0:F1} s:ssa ({virta.PuskuroituS:F1} s puskurissa, nopeus {nopeus:F2} ×, tarve {tarvitaan:F1} s)");
             while (!op.isDone) yield return null;
-            o.Kirjaa($"opas: PCM-virta valmis {Time.realtimeSinceStartup - t0:F1} s, {virta.KirjoitettuS:F1} s ääntä");
+            o.Kirjaa($"opas: PCM-virta valmis {Time.realtimeSinceStartup - t0:F1} s, {virta.KirjoitettuS:F1} s ääntä ({virta.KirjoitettuS / Mathf.Max(0.1f, Time.realtimeSinceStartup - (tEka >= 0 ? tEka : t0)):F2} ×)");
         }
 
         IEnumerator Korkeus(OpasKohde k)
@@ -1315,13 +1328,28 @@ namespace Matkakirja.Natiivi
         }
         OpasKohde tekstina, aaniOdotus;
         float puheAlkoi;
-        const float AaniOdotusS = 10f;   // #4018: mp3 valmistuu GETissä ~8–9 s tekstin jälkeen (toiveen polku)
+        const float AaniOdotusS = 10f;
+        /// <summary>Alkupuskurin tarve, jonka ylittyessä odotus täytetään siltalauseella (Päätoimittaja: ~3 s).</summary>
+        const float PcmSiltaS = 3f;   // #4018: mp3 valmistuu GETissä ~8–9 s tekstin jälkeen (toiveen polku)
 
         IEnumerator OdotaAani(OpasKohde k)
         {
             float t0 = Time.realtimeSinceStartup;
             string avain = AaniAvain(k);
-            while (silmukka != null && !klipit.ContainsKey(avain) && Time.realtimeSinceStartup - t0 < AaniOdotusS) yield return null;
+            bool siltaSoitettu = false;
+            // Hidas PCM-virta (juna 154): odotus voi venyä alkupuskurin verran (enintään OpasPcmPuskuri.MaxS), ja yli PcmSiltaS:n
+            // odotus täytetään siltalauseella eikä hiljaisuudella (Päätoimittaja 6.10. 21.0x).
+            while (silmukka != null && !klipit.ContainsKey(avain)
+                && Time.realtimeSinceStartup - t0 < AaniOdotusS + (pcmVirrat.ContainsKey(avain) ? (float)OpasPcmPuskuri.MaxS : 0f))
+            {
+                if (!siltaSoitettu && pcmVirrat.TryGetValue(avain, out var pv) && pv.AlkuTarve > PcmSiltaS)
+                {
+                    siltaSoitettu = true;
+                    o.Kirjaa($"opas: hidas PCM-virta, alkupuskuri {pv.AlkuTarve:F1} s → siltalause");
+                    Silta(silmukka.Vaihe == OpasVaihe.Lentaa ? OpasSiltalauseet.Odotus : OpasSiltalauseet.OdotusPaikalla, false);
+                }
+                yield return null;
+            }
             if (silmukka == null || (silmukka.Nykyinen != k && !(silmukka.OdottaaVastausta && viimeKysymys == k))) yield break;
             o.Kirjaa($"opas: ääni {(klipit.ContainsKey(avain) ? "latautui" : "ei latautunut")} {Time.realtimeSinceStartup - t0:F1} s:ssa");
             Soita(k);
