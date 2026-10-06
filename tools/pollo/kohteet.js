@@ -68,6 +68,19 @@ export const eilenUtc = (nyt = new Date()) => new Date(nyt.getTime() - 86400000)
  */
 export const MAAILMAN_SUOSIKKEJA = 50;
 export const maailmanSuosikitAvain = () => 'opas:kohteet:maailma50:v2';
+
+/**
+ * KIISTANALAISET SIJAINNIT (Päätoimittaja 6.10.2026): Jerusalemin kohteet neutraalisti, ei maakoodia eikä maan nimeä,
+ * sijaintina vain "Jerusalem" (sama linja kuin kiistanalaisissa pääkaupungeissa). Sovelletaan vastaukseen, joten myös
+ * välimuistissa olevat listat neutraloituvat.
+ */
+const KIISTANALAINEN = /jerusalem/i;
+const MAAN_NIMI = /israel|palestiin/i;
+export function neutraaliKohde(k) {
+  if (!k || !(KIISTANALAINEN.test(k.kaupunki ?? '') || KIISTANALAINEN.test(k.nimi ?? ''))) return k;
+  return { ...k, kaupunki: 'Jerusalem', iso: null, alarivi: MAAN_NIMI.test(k.alarivi ?? '') ? null : k.alarivi ?? null };
+}
+export const neutraalitKohteet = (tulos) => (Array.isArray(tulos?.kohteet) ? { ...tulos, kohteet: tulos.kohteet.map(neutraaliKohde) } : tulos);
 export const MAAILMAN_SUOSIKIT_KEHOTE = `Valitset Matkakirja-pelin elävälle oppaalle maailman suosikkikohteet: 60 \
 tunnetuinta ja kiinnostavinta nähtävyyttä, joista pelaaja valitsee yhden ja kamera lentää sen ylle kertojan kertoessa. \
 Kohteet ovat yksittäisiä nähtävyyksiä, jotka näkyvät ilmasta (esimerkiksi Akropolis, Central Park, Sydneyn oopperatalo), \

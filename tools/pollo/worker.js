@@ -32,7 +32,7 @@ import {
 } from './opaskeskustelu.js';
 import { reunaLue, reunaKirjoita, reunaPoista, pysyvaLue, pysyvaKirjoita, pysyvaPoista, kvLue, kvKirjoita } from './reuna.js';
 import {
-  KOHTEET_KEHOTE, kohteidenViesti, jasennaKohteet, kohdeAvain, paivaUtc, eilenUtc, MAAILMAN_SUOSIKKEJA, maailmanSuosikitAvain,
+  KOHTEET_KEHOTE, kohteidenViesti, jasennaKohteet, kohdeAvain, paivaUtc, eilenUtc, MAAILMAN_SUOSIKKEJA, maailmanSuosikitAvain, neutraalitKohteet,
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import {
@@ -2996,7 +2996,7 @@ async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
   // Maailman 50 suosikkia (omistaja 6.10.): ?n=50 ilman kaupunkia. Ilman n:ää täkyt kuten ennen (8, päivittäin).
   if (!kaupunki && Number(url.searchParams.get('n')) > KOHTEITA_OLETUS) {
     try {
-      return vastaa(await maailmanSuosikit(env), kors);
+      return vastaa(neutraalitKohteet(await maailmanSuosikit(env)), kors);
     } catch (virhe) {
       console.log(`opas: maailman suosikit epäonnistui (${virhe?.status ?? virhe?.message ?? 'verkko'})`);
       return vastaa({ virhe: 'palvelin', viesti: 'Kohteita ei saatu juuri nyt. Yritä hetken päästä.' }, { status: 502, ...kors });
@@ -3009,11 +3009,11 @@ async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
   const avain = kohdeAvain(kaupunki, paiva);
   const valmis = async () => (kv ? kv.get(avain).then((x) => (x ? JSON.parse(x) : null)).catch(() => null) : null);
   let tulos = await valmis();
-  if (tulos) return vastaa(tulos, kors);
+  if (tulos) return vastaa(neutraalitKohteet(tulos), kors);
   const lukko = `${avain}:tuotanto`;
   if (await reunaLue(lukko)) {
     for (let i = 0; i < 30 && !tulos; i += 1) { await new Promise((r) => setTimeout(r, 500)); tulos = await valmis(); }
-    if (tulos) return vastaa(tulos, kors);
+    if (tulos) return vastaa(neutraalitKohteet(tulos), kors);
   }
   await reunaKirjoita(lukko, '1', 60);
   try {
@@ -3036,7 +3036,7 @@ async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
     tulos = { paiva, ...(kaupunki ? { kaupunki } : {}), kohteet };
     if (kv) await kv.put(avain, JSON.stringify(tulos), { expirationTtl: 60 * 60 * 48 }).catch(() => {});
     console.log(`opas: kohteet ${kaupunki ?? 'maailma'} ${paiva}: ${kohteet.length}`);
-    return vastaa(tulos, kors);
+    return vastaa(neutraalitKohteet(tulos), kors);
   } catch (virhe) {
     console.log(`opas: kohteet epäonnistui (${virhe?.status ?? 'verkko'})`);
     return vastaa({ virhe: 'palvelin', viesti: 'Kohteita ei saatu juuri nyt. Yritä hetken päästä.' }, { status: 502, ...kors });
