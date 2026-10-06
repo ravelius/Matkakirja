@@ -57,6 +57,9 @@ export function tarkistaEsittely(pohja, e) {
     else for (const l of k.lahteet) if (!/^(https:\/\/|kaanon:)/.test(l.url ?? '')) v(k.id, `lähteen url "${l.url}" (https:// tai kaanon:)`);
   }
   if (isoisia > 1) virheet.push(`${e.id}: isoisä ${isoisia} kohteessa (enintään 1)`);
+  // Päätoimittaja 7.10.: sama vinkin alku enintään kerran per kaupunki.
+  const vinkit = e.kohteet.filter((k) => /kun tulet paikalle/i.test(`${k.teksti} ${k.lyhyt ?? ''}`)).length;
+  if (vinkit > 1) virheet.push(`${e.id}: "Kun tulet paikalle" ${vinkit} kohteessa (enintään 1)`);
   return { virheet, huomiot };
 }
 
