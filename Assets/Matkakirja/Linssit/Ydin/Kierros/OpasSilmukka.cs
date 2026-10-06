@@ -200,6 +200,21 @@ namespace Matkakirja.Linssit.Kierros
 
         /// <summary>Lento seuraavaan alkoi (kohde, matka m, pelaajan toiveesta): siltalause kierroksen siirtymään (juna 146).</summary>
         public event Action<OpasKohde, double, bool> LentoAlkaa;
+
+        // ---- SALLITUT KAUPUNGIT (omistaja 7.10. 00.4x, juna 157): lennot ja workerin kohteet vain sallitun 3D:n alueelle ----
+        /// <summary>Sallitut kaupungit (Pöllön /opas/aineistot "sallitut"); tyhjä = ei rajausta.</summary>
+        public IReadOnlyList<OpasSallitut.Kaupunki> Sallitut = Array.Empty<OpasSallitut.Kaupunki>();
+        /// <summary>Kohde torjuttiin (sallitun alueen ulkopuolella): nimi. Sovitin kirjaa ja voi soittaa siltalauseen.</summary>
+        public event Action<string> Torjuttu;
+        public int Torjuntoja { get; private set; }
+        int torjuntoja;
+        bool Sallittu(double lat, double lon) => OpasSallitut.Sallittu(Sallitut, lat, lon);
+        bool Torju(string nimi, double lat, double lon)
+        {
+            if (Sallittu(lat, lon)) return false;
+            Torjuntoja++; Torjuttu?.Invoke(nimi ?? $"{lat:F3}, {lon:F3}");
+            return true;
+        }
         /// <summary>Saapui kohteeseen: sovitin aloittaa äänen ja näyttää nimen.</summary>
         public event Action<OpasKohde> Saapui;
         /// <summary>Kappale alkaa PuheEnnenS ennen saapumista (sovitin soittaa; Saapui ei enää aloita puhetta uudelleen).</summary>
@@ -341,6 +356,7 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         public void VaihdaPaikka(double lat, double lon, string nimi = null)
         {
+            if (Torju(nimi, lat, lon)) return;
             VaihdaPaikka();
             if (Vaihe == OpasVaihe.Valmis || (!PakotaSiirto && KierrosLento.EtaisyysM(Asento.Lat, Asento.Lon, lat, lon) < SiirtymaMinM)) return;
             // Sama 5 km:n yläkuva kuin avauksessa (Päätoimittaja 6.10. 00.4x: Amsterdam laskeutui matalaan viistoon kuvaan).
@@ -412,6 +428,7 @@ namespace Matkakirja.Linssit.Kierros
         void LiikuSisainen(string nimi, double lat, double lon)
         {
             if (string.IsNullOrWhiteSpace(nimi) || Vaihe == OpasVaihe.Valmis) return;
+            if (Torju(nimi, lat, lon)) return;
             PyynnonSijainti = (lat, lon);
             bool kierros = KierrosKaynnissa;
             Toive(nimi);
@@ -646,6 +663,9 @@ namespace Matkakirja.Linssit.Kierros
             if (k == null) { Virhe(koodi, odotaS); return; }
             Virheita = 0; VirheTauko = 0; ViimeKoodi = 0;
             if (k.Odota) return;
+            // Sallitun alueen ulkopuolinen pysähdys torjutaan (worker suodattaa myös); kaksi uutta yritystä peräkkäin, sitten odotetaan.
+            if (!k.Kysymys && Torju(k.Nimi, k.Lat, k.Lon)) { if (++torjuntoja <= 2) UusiPyynto(); return; }
+            torjuntoja = 0;
             if (KierrosKaynnissa) k.Kierros = true;
             if (k.Kysymys)
             {
