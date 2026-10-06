@@ -158,3 +158,9 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
 - Olavinlinnan yhdistetty peili a0e537492bff2189 (#4051 + #4052, haara linnanrakentaja-peili156, worktree wt/…-peili156)
   junaan 156: Siirtoseppä todentaa, Julkaisija vaihtaa osoittimen kuittausten jälkeen. Worktree poistetaan, kun PR:t on mergetty.
 - Esineajo (Siirtoseppä D5900D45): luuta ja säkki OK, kokin kauha ei näy (kokki selin).
+
+## Päivitys 7.10. klo 01.2x
+- GIZA TAUOLLA (Päätoimittaja): odotetaan LS1:n simukuvia ja omistajan palautetta. Viimeiset: Kheopsin tasanne + Gillin masto
+  (giza-data.md), Sfinksi v2b (lapa, vyötärö, takareisi, häntä, selän notko, pää 1,15×; aitaus aitaus.py, yksi materiaali
+  väreillä). Kuvat esikatselu/arkki-v2.jpg (pyramidit), arkki-v4-sfinksi.jpg. LS1 lähettää kulmakorkeuserot → korjaa DEM-arvoilla.
+- LINNA ETUSIJALLA: peili a0e53749 Siirtosepän todennuksessa (TF 154 -app) ennen osoitinvaihtoa.
