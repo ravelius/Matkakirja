@@ -295,7 +295,7 @@ namespace Matkakirja.Natiivi
         Latauspalkki siirtymaPalkki;
         IVisualElementScheduledItem siirtymaKierros;
 
-        VisualElement siirtymaIon;
+        VisualElement siirtymaIon, avausIon;
 
         // Koko ruutu (simu 6.10.: turva-alueen ulkopuolelle jäi kartta ja krediitit), kuten DioraamaTaulun nimiruutu.
         void RakennaSiirtyma(VisualElement kerrosJuuri)
@@ -311,6 +311,13 @@ namespace Matkakirja.Natiivi
             siirtymaIon = Rakenne.El(null, siirtyma, PickingMode.Ignore);
             siirtymaIon.style.position = Position.Absolute;
             siirtymaIon.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit;
+            // AVAUSLATAUS (Päätoimittaja 6.10. 12.4x: ion-logo jäi maanosavalikon paneelin alle, vain "C" näkyi): oppaassa ion-logo
+            // piirretään avauslatauksen ajan tämän kerroksen päälle Googlen logon yläpuolelle, Cesiumin oma piiloon.
+            avausIon = Rakenne.El(null, kerrosJuuri, PickingMode.Ignore);
+            avausIon.style.position = Position.Absolute;
+            avausIon.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit;
+            avausIon.style.display = DisplayStyle.None;
+            kerrosJuuri.schedule.Execute(PaivitaAvausIon).Every(100);
             OpasSovitin.SiirtymaAlkaa += n => UiKerros.PaaSaikeessa(() => SiirtymaAlkaa(n));
             OpasSovitin.SiirtymaValmis += () => UiKerros.PaaSaikeessa(SiirtymaValmis);
         }
@@ -334,16 +341,29 @@ namespace Matkakirja.Natiivi
             siirtymaKierros = siirtyma.schedule.Execute(() => siirtymaPalkki.Arvo = testiEdistyminen ?? OpasSovitin.SiirtymaEdistyminen).Every(100);
         }
 
-        void AsetaSiirtymaIon()
+        void AsetaSiirtymaIon() => AsetaIon(siirtymaIon, KrediititTiivis.TyhjaAlaPt);
+
+        void PaivitaAvausIon()
+        {
+            bool nayta = nakyy && KrediititTiivis.AvausLatautuu && KrediititTiivis.IonLogoKuva != null;
+            KrediititTiivis.IonOmaPiirto = nayta;
+            if (!nayta) { if (avausIon.style.display != DisplayStyle.None) avausIon.style.display = DisplayStyle.None; return; }
+            // Cesiumin paikka: lähderivin ja Googlen logon yläpuolella.
+            AsetaIon(avausIon, KrediititTiivis.TyhjaAlaPt + KrediititTiivis.RiviPt * 1.3f + 2f + KrediititTiivis.LogoPt + 2f);
+            avausIon.BringToFront();
+        }
+
+        /// <summary>Cesium ion -logo (Cesiumin oma kuva muuttamattomana) vasempaan alakulmaan krediittien koossa.</summary>
+        static void AsetaIon(VisualElement e, float ala)
         {
             var t = KrediititTiivis.IonLogoKuva;
-            siirtymaIon.style.display = t != null && t.height > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            e.style.display = t != null && t.height > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             if (t == null || t.height <= 0) return;
             float h = KrediititTiivis.LogoPt;
-            siirtymaIon.style.backgroundImage = new StyleBackground(t as Texture2D);
-            siirtymaIon.style.height = h; siirtymaIon.style.width = h * t.width / t.height;
-            siirtymaIon.style.left = KrediititTiivis.TyhjaSivuPt;   // Cesiumin krediittien tapaan ruudun alakulmasta
-            siirtymaIon.style.bottom = KrediititTiivis.TyhjaAlaPt;
+            e.style.backgroundImage = new StyleBackground(t as Texture2D);
+            e.style.height = h; e.style.width = h * t.width / t.height;
+            e.style.left = KrediititTiivis.TyhjaSivuPt;   // Cesiumin krediittien tapaan ruudun alakulmasta
+            e.style.bottom = ala;
         }
 
         /// <summary>Kohde ladattu: musta ruutu häipyy (Cupolan häivytys) ja näkymä aukeaa.</summary>
