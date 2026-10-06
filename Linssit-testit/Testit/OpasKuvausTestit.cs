@@ -63,9 +63,11 @@ namespace Matkakirja.Linssit.Testit
             double ennen = OpasKuvaus.Pysahdyksella(katu, OpasKuvaus.VaiheS).Suuntima, jalkeen = OpasKuvaus.Pysahdyksella(katu, loppu).Suuntima;
             double siirto = KierrosLento.Kiedo(jalkeen - ennen - OpasKuvaus.KiertoAsteS * OpasKuvaus.SiirtoS);
             Oleta.Tosi(Math.Abs(siirto - OpasKuvaus.SiirtoKulma) < 0.5, $"katu: toiselle puolelle ({siirto:F1}°)");
-            var rak = OpasKuvaus.Kehysta(K(60, 40), 5, 0, "rakennus");
+            var rak = OpasKuvaus.Kehysta(K(200, 60), 5, 0, "rakennus");
             double r0 = OpasKuvaus.Pysahdyksella(rak, OpasKuvaus.VaiheS).EtaisyysM, r1 = OpasKuvaus.Pysahdyksella(rak, loppu).EtaisyysM;
             Oleta.Tosi(r1 < r0 * 0.75, $"rakennus: lähemmäs ({r0:F0} → {r1:F0} m)");
+            var pieni = OpasKuvaus.Kehysta(K(20, 10), 5, 0, "rakennus");   // jo vähimmäisetäisyydellä
+            Oleta.Tosi(OpasKuvaus.Pysahdyksella(pieni, loppu).EtaisyysM >= OpasKuvaus.RakennusEtMinM - 1e-6, "lähennys ei alle vähimmäisetäisyyden");
             // Orbit jatkuu toisessa kehyksessä samalla nopeudella.
             double v2 = KierrosLento.Kiedo(OpasKuvaus.Pysahdyksella(katu, loppu + 6).Suuntima - OpasKuvaus.Pysahdyksella(katu, loppu + 1).Suuntima) / 5;
             Oleta.Tosi(Math.Abs(v2 - OpasKuvaus.KiertoAsteS) < 0.01, $"orbit jatkuu {v2:F2}°/s");
@@ -93,6 +95,12 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(keski.EtaisyysM > Math.Max(a.EtaisyysM, b.EtaisyysM) + 200, $"liu'ussa ylempänä ({keski.EtaisyysM:F0} m)");
             // Liuku: korkeus lähes tasainen välillä 0,35–0,65.
             Oleta.Tosi(Math.Abs(OpasKuvaus.Lennossa(a, b, 0.35).EtaisyysM - OpasKuvaus.Lennossa(a, b, 0.65).EtaisyysM) < 40, "tasanne");
+            // Liu'ussa korkealla ja jyrkkänä (TF 144: ei matalaa viistoa liukua).
+            Oleta.Tosi(Math.Abs(keski.Kallistus - OpasKuvaus.LentoKallistus) < 1e-6, $"liuku jyrkkä ({keski.Kallistus:F1}°)");
+            Oleta.Tosi(keski.EtaisyysM >= OpasKuvaus.KorkeusKerroin * Math.Max(a.EtaisyysM, b.EtaisyysM) - 1e-6, $"liuku korkealla ({keski.EtaisyysM:F0} m)");
+            // Lasku viimeisellä neljänneksellä: 80 %:ssa vielä selvästi kohdetta korkeammalla ja jyrkempi kuin kohde.
+            var lasku = OpasKuvaus.Lennossa(a, b, 0.8);
+            Oleta.Tosi(lasku.EtaisyysM > b.EtaisyysM * 1.2 && lasku.Kallistus < b.Kallistus, $"lasku alkaa myöhään ({lasku.EtaisyysM:F0} m, {lasku.Kallistus:F1}°)");
             // Katse lentosuuntaan keskellä.
             double lento = OpasSilmukka.Suunta(a.Lat, a.Lon, b.Lat, b.Lon);
             Oleta.Tosi(Ero(keski.Suuntima, lento) < 1, $"keskellä katse lentosuuntaan ({keski.Suuntima:F1} vs {lento:F1})");

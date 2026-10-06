@@ -1,0 +1,22 @@
+# Pulu elävänä (omistaja 5.10.2026 klo 16.4x; worker #4005 + natiivi-ui/pulu-chat-yksi): ei valmiita vastauksia, avatessa 2
+# kysymystä, jokaisen vastauksen jälkeen tasan 2 uutta jatkoa (korvaavat edelliset). Oikeat tapit. Video ruudusta (ei ääntä).
+ui nosto kohde:pompeji@ITA
+oleta 60 ui nosto kohde:pompeji@ITA: auki -- nostokortti auki
+nakyy 20 Pompejin Forum -- kortin kuvateksti näkyy
+odota 2
+video-alku pulu-elava
+tap-teksti Kysy
+nakyy 10 Olen Livia -- Kysy avasi Pulun chatin
+maara 6 mk-chat__siru 2 -- avatessa tasan 2 kysymystä
+kuva p1-avaus Pulun chat auki: 2 valmista kysymystä
+tap-teksti mk-chat__siru
+oleta 30 pulu: ensimmäinen tekstipala -- elävä vastaus alkoi (worker)
+maara 40 mk-chat__siru 2 -- vastauksen jälkeen tasan 2 jatkoa
+odota 2
+kuva p2-vastaus Elävä vastaus ja 2 jatkokysymystä
+tap-teksti mk-chat__siru
+oleta 30 pulu: ensimmäinen tekstipala -- jatkoon elävä vastaus
+maara 40 mk-chat__siru 2 -- uudet 2 jatkoa korvasivat edelliset
+odota 2
+kuva p3-jatko Jatkovastaus ja uudet 2 jatkoa
+video-loppu

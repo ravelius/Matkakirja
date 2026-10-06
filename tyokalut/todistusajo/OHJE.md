@@ -18,6 +18,11 @@ käännös) on vuorossa käynnissä, lisää `--nyt`; ilman sitä ajo pysähtyy.
     tap-teksti Kysy                    # … mutta testattava napautus aina oikealla kosketuksella (koordinaatit ui-puusta)
     tap 200 250                        # oikea kosketus pisteeseen; tap x y 0.8 = pitkä painallus
     veto 200 700 200 300 0.3           # pyyhkäisy; polku x,y,dt_ms … = vapaa veto
+    tap-kohta 0.57 0.78 mk-peli__lauta # oikea kosketus elementin laatikon kohtaan (0–1; esim. Tavlin piste a5)
+    veto-kohta 0.5 0.5 0.9 0.5 2 mk-issohjaamo__sauvakuva   # alas kohdassa 1, liuku kohtaan 2, pito 2 s, ylös (joystick)
+    maara 6 mk-chat__siru 2 -- 2 sirua # näkyviä elementtejä luokalla täsmälleen n
+    ei-oleta 3 joystick (Ylos|Oikea) -- ei suuntaa   # lokiin EI saa tulla riviä s sekunnissa
+    video-alku nimi / video-loppu      # video simun ruudusta (ei ääntä)
     nakyy 6 Olen Livia -- chat auki    # tila UI-puusta: näkyvä teksti/nimi sisältää haun (ei vaadi lokiriviä)
     ei-nay 6 Olen Livia -- ohinapautus sulki chatin
     oleta 10 ui nosto .*: auki -- kortti auki   # odottaa lokiriviä (regex) edellisen askeleen jälkeen
@@ -29,6 +34,35 @@ käännös) on vuorossa käynnissä, lisää `--nyt`; ilman sitä ajo pysähtyy.
 **Aiemmat palautteet** (kohta 6): yksi `palaute`-rivi per aiempi FAIL/PUUTE. Regex haetaan lokista samoin kuin `grep -E`:
 `palaute 10 lukija: ääni vaihtui .*heti -- TF 141: ääni vaihtui vasta seuraavasta palasta`. Jos palaute näkyy vain ruudulla,
 käytä `nakyy`/`ei-nay` + `kuva` ja nimeä palaute selitteessä. Valmiit skenaariot: `skenaariot/` (junan vakiosarja) ja `esimerkki-nosto.txt`.
+
+Haku (`tap-teksti`, `nakyy`, `tap-kohta` …) osuu näkyvään tekstiin, `name`-kenttään tai USS-luokkaan (tekstittömät
+kuvakenapit luokalla, esim. `mk-linssitNappi`, `mk-pilleri`; samanluokkaisista n:s vasemmalta `luokka#n`, oikeanpuoleisin `luokka#-1`). Täsmäosuma ja ylin kerros voittavat; jos sama teksti on
+kahdessa paikassa (esim. linssin esikatselun otsikko), napauta yksilöivää tekstiä (`Aktivoi`). Epäonnistunut haku tallentaa
+`ui-puu-<aika>.json`:n ajokansioon skenaarion korjausta varten. Linssin avausrivi (`linssit: auki: …`) haetaan
+`linssi`-komennon alusta, joten `oleta` heti linssin jälkeen löytää sen.
+
+## Vakiosarja (`sarja.sh`, skenaariot/[0-9]*.txt)
+
+| Nro | Skenaario | Generoi maksullista? |
+|---|---|---|
+| 01 | Jatka matkaa | ei |
+| 02 | Nostokortti → Kysy | ei (Pulu-chat: Sonnet) |
+| 03 | Linssit-nappi → Astronautin kamera (esikatselu, Aktivoi) → ohinapautus | ei |
+| 04 | Linna | ei |
+| 05 | Tavli: heitto 3–1, nappulan siirto a5→a2 oikeilla tapeilla, Poistu | ei |
+| 06 | Mylly | ei |
+| 07 | ISS Cupola: taulu → ISS-ohjaamo → ohjaamo + humina → Poistu | ei |
+| 08 | Asetukset: pilleri → Asetukset → ‹ Takaisin → ohinapautus | ei |
+| 09 | Radio | ei |
+| 10 | Kuvakatselin: kortin kuva → suurennos → pyyhkäisy → sulku | ei |
+| 11 | Elävä opas ilman ääntä (testiotsake): avaus → täkynäkymä → 1. täky → 1. kohde → ☰ (`mk-ohjausnappi#-1`) → Vaihda kohde → Amsterdam (1. napautus) | ei (worker ei tuota ääntä) |
+| 12 | ISS-ohjaamo: joystick keskeltä (ei suuntaa), veto oikealle + pito, pallon veto ei ohjaa | ei |
+
+Vakiosarjan ulkopuolella (`todistusajo.sh --skenaario skenaariot/<nimi>.txt`): `pulu-elava`, `kuvaselite-kaiutin`,
+`mykistys-todiste`. Skenaario 11 ajaa oppaan ilman ääntä (`opas testiotsake 1`, omistaja 6.10.): ElevenLabsia ei kutsuta,
+ja kohteiden ääni on `ei-testattu`.
+
+Yksittäinen vika toistetaan yhdellä komennolla (VIKA TOISTETAAN ENNEN KORJAUSTA): `sarja.sh … --vain 07,12`.
 
 ## Tulos: `proto-3d/lokit/todistus-<erä>-<aika>/TODISTUS.md`
 

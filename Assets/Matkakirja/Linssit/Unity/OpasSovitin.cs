@@ -96,10 +96,11 @@ namespace Matkakirja.Natiivi
         public static bool VaihdaKaupunki(string nimi, double lat, double lon, string iso)
         {
             if (!Auki || string.IsNullOrWhiteSpace(nimi)) return false;
+            (lat, lon) = Keskusta(lat, lon);   // Natural Earth -piste → kaupungin keskusta (Wikidata P625)
             Aloituskaupunki = nimi.Trim();
             Viimeisin.pakotettuSijainti = (lat, lon);
             Viimeisin.o.Kirjaa($"opas: kaupunki vaihtuu → {Aloituskaupunki} ({lat:F3}, {lon:F3})");
-            Viimeisin.silmukka.VaihdaPaikka();
+            Viimeisin.silmukka.VaihdaPaikka(lat, lon);   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
             var v = Viimeisin;
             if (!v.SanoNimi(nimiaanet?.Kaupungille(iso, nimi))) v.Silta(OpasSiltalauseet.Kaupunki, true);
             return true;
@@ -147,7 +148,7 @@ namespace Matkakirja.Natiivi
             y = ymparisto;
             Virhe = null;
             Viimeisin = this;
-            var alku = KoopenhaminaTesti.Alku;
+            var alku = OpasSilmukka.Avauskuva(KoopenhaminaTesti.Alku.Lat, KoopenhaminaTesti.Alku.Lon);
             silmukka = new OpasSilmukka(alku);
             if (!kaupunki.Avaa(alku.Lat, alku.Lon, 45))
             {
@@ -259,6 +260,28 @@ namespace Matkakirja.Natiivi
             o.StartCoroutine(Hae(n, toive));
         }
 
+        // ---- KAUPUNKIEN KESKUSTAT (Päätoimittaja 6.10. 00.4x: Amsterdam laskeutui Natural Earthin pisteeseen 2,5 km keskustasta) ----
+        /// <summary>
+        /// Valikon kaupunkipisteet ovat Natural Earthin asutuspaikkoja, jotka voivat olla kilometrien päässä keskustasta. Korjaustaulu
+        /// Resources/Opas/keskustat.json: "lat,lon" (4 desimaalia, paikat.json:n arvot) → Wikidata P625 (NE:n WIKIDATAID), vain kun
+        /// ero on 250 m – 30 km. Muuten piste sellaisenaan.
+        /// </summary>
+        public static (double lat, double lon) Keskusta(double lat, double lon)
+        {
+            if (keskustat == null)
+            {
+                keskustat = new Dictionary<string, (double, double)>(StringComparer.Ordinal);
+                var ta = Resources.Load<TextAsset>("Opas/keskustat");
+                if (ta != null && MiniJson.Jasenna(ta.text) is Dictionary<string, object> j && j.TryGetValue("keskustat", out var ko) && ko is Dictionary<string, object> kd)
+                    foreach (var kv in kd)
+                        if (kv.Value is IList<object> l && l.Count >= 2)
+                            keskustat[kv.Key] = (Convert.ToDouble(l[0], System.Globalization.CultureInfo.InvariantCulture), Convert.ToDouble(l[1], System.Globalization.CultureInfo.InvariantCulture));
+            }
+            string avain = lat.ToString("F4", System.Globalization.CultureInfo.InvariantCulture) + "," + lon.ToString("F4", System.Globalization.CultureInfo.InvariantCulture);
+            return keskustat.TryGetValue(avain, out var k) ? k : (lat, lon);
+        }
+        static Dictionary<string, (double, double)> keskustat;
+
         // ---- TAUKO JA TÄKYLUETTELO (omistaja TF 144, juna 146; UI Natiivi-UI heijastuksella) ----
         /// <summary>UI asettaa true, kun se näyttää täkyluettelon avauksessa; muuten opas alkaa kuten ennen (vanha UI).</summary>
         public static bool TakyAvaus;
@@ -320,6 +343,7 @@ namespace Matkakirja.Natiivi
             if (silmukka == null) yield break;
             takyt = r.result == UnityWebRequest.Result.Success ? OpasTaky.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : new List<OpasTaky>();
             o.Kirjaa($"opas: täkyt {takyt.Count} ({(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
+            if (takyt.Count == 0 && !silmukka.Aloitettu) silmukka.Aloita(Aloituskaupunki);
         }
 
         // ---- MAIDEN JA KAUPUNKIEN NIMET (juna 146; Ydin OpasNimiaanet) ----
@@ -819,11 +843,17 @@ namespace Matkakirja.Natiivi
             : $"opas: {kaupunki.Kaytossa} {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "-")}, seuraava {(silmukka.Seuraava?.Nimi ?? "-")}, nähty {System.Linq.Enumerable.Count(silmukka.Nahdyt)}, laatat {kaupunki.Latausaste:F0} %"
               + (Testi ? ", TESTI" : "") + (Virhe != null ? ", VIRHE " + Virhe : "");
 
+        /// <summary>Peite pois vasta, kun kaupunkia näkyy (laatat ≥ PeiteRaja %, enintään PeiteMaxS): ei tasaista värilaattaa avauksessa
+        /// (omistaja TF 144, toisto 6.10. 00.04). Vähintään 0,3 s (simu 18.39: peite jäi päälle ilman ajastinta).</summary>
         System.Collections.IEnumerator PeitePois()
         {
+            float t0 = Time.realtimeSinceStartup;
             yield return new WaitForSecondsRealtime(0.3f);
+            while (silmukka != null && kaupunki.Latausaste < PeiteRaja && Time.realtimeSinceStartup - t0 < PeiteMaxS) yield return null;
             y?.Peite(false);
+            o.Kirjaa($"opas: peite pois {Time.realtimeSinceStartup - t0:F1} s, laatat {kaupunki.Latausaste:F0} %");
         }
+        const float PeiteRaja = 35f, PeiteMaxS = 4f;
 
         public void Sulje()
         {
