@@ -181,3 +181,16 @@ TYÖTAPA (Päätoimittaja 23.1x): vika toistetaan ennen korjausta, sitten sama a
   Nopeustehoste: Voima 0 (< ~160×) … 1 (1000×), Lens Distortion 0,10 + Chromatic Aberration 0,45 (vain reunat), tärinä
   projektion siirtona ~0,12 % ruudusta; Natiivi-UI lukee Nopeustehoste.Tarina (−1…1) ja Voima paneelitärinään (sama ajastus).
   Testit 696/444/415, unity-tarkistus 0. Video 1× → 1000× Päätoimittajalle käännöksen ja simuvuoron jälkeen.
+
+## 6.10. klo 17.3x — tila (juna 151 VIE:n jälkeen käännökset; levyraja 40 Gi)
+- JULISTE (juna 152): proto-haara linssiseppa2/iss-kamera-juliste @ b7a32d4a (Cupola-kehys Codexilta ämpärissä
+  karttanostot/20261006-juliste/, aukko alfasta; logo avaruudessa; ikkuna 12 % suurempi; 2D-halo; pilvet sivuilla + sulkareuna,
+  utu 1,25; vientikoko 2160 × 2700). Koko koe: linssiseppa2/koe-147 @ 9b3b2c44 (juliste + s2 9479a9ee + nopeus 9948d1dc +
+  pallolukko 7cc8f2be). Viimeisin still: lokit/linssiseppa2-juliste-halo2d/kuvat/juliste-helsinki-e315f33e.jpg (Päätoimittaja OK
+  halo/kehys; omistaja: logo ylös, ikkuna suuremmaksi → b7a32d4a, still odottaa käännöstä). Ajo: scratchpad/aja-julistef.sh.
+- OPAS: oikean tapin vaakasuunta f55cf1ce → LS1:n silta-150 1ec7d900 (juna 151), Pelikoodari todensi ennen/jälkeen.
+  Vapaa tila linssiseppa2/opas-vapaa @ 254b113b (juna 152; LS1 hyväksyi; OpasVapaaLento, 3D-pinnan näytteet, skenaario 14);
+  video Pelikoodarilta käännöksen jälkeen.
+- S2: juna 147 kuitattu (9479a9ee); jatko linssiseppa2/s2-jatko (korjaus4 c67294a3 juna 149, indeksi v2f 1354ef53 147 VIE:n jälkeen).
+- Cupola: iPad lasizoom 1,15 linssiseppa2/cupola-ipad 3708977e (juna 148+); Codexin tarkempi kehys tilattu (Päätoimittaja postitti).
+- Pallolukko 7cc8f2be: vika ei toistunut (iPhone/iPad, kaikki tilat) → juna 149 sellaisenaan, omistajalta tarkennus.
