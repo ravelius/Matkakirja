@@ -347,16 +347,23 @@
     display: none;
 }
 
+/* Omistaja 6.10. 21.3x (k2-stillit): "Ota auto napista piste pois ja madalla vähän taustaväriä ja keskitä se auto tekstin
+ * taakse": ei pistettä, tausta 26 pt (AUTO-pohjan alkuperäinen korkeus) keskellä riviä, sivuväli vali-m molemmin puolin.
+ * Tila (8 pt) otetaan ›:n ja AUTO:n väliltä: ›-napin oma reunus antaa näkyvän välin. Osuma-ala 44 pt (Kosketusnappi). */
 .mk-nostoselain .mk-nostoselain__auto.mk-valittu > .mk-nostoselain__autopiste {
-    display: flex;
-    flex-shrink: 0;
+    display: none;
+}
+
+.mk-nostoselain .mk-nostoselain__auto {
+    height: 26px;
+    min-height: 26px;
     align-self: center;
-    width: 8px;
-    height: 8px;
-    min-width: 8px;
-    min-height: 8px;
-    border-radius: 4px;
-    background-color: var(--tk-paperi-muste);
+    padding: 0 var(--tk-vali-m);
+    flex-shrink: 0;
+}
+
+.mk-nostoselain__sivu--oikea > .mk-nostoselain__auto {
+    margin-left: 0;
 }
 
 .mk-nostoselain__sivu--oikea > .mk-nostoselain__auto {
