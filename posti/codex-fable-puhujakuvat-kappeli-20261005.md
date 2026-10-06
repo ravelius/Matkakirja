@@ -7,3 +7,7 @@ Kuvien mitat/väritila/eheys 4/4 PASS, ilmeparit katsottu myös 90 px koossa; pe
 Päätoimittajan PUHUJAKUVA-pelitarkistus ja omistajan hyväksyntävideo ovat seuraavat vaiheet; integraatiota tai julkaisua ei ole tehty.
 Vain neljän kuvan koe: loput 22 kuvaa odottavat omistajan hyväksyntää.
 
+
+## Korvaava toimitus 6.10.2026
+
+Omistajan pyynnöstä kaikki neljä kuvaa uusittu silmien tasolta. Uusi toimitus ja pelikytkentäpyyntö: `codex-fable-puhujakuvat-kappeli-20261006.md`, sama haara ja PR #4002.

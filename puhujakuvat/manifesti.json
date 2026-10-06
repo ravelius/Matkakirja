@@ -1,67 +1,67 @@
 {
-  "title": "Kappelin puhujakuvien neljän kuvan koe",
-  "sourceMailboxCommit": "defed13282a09b00cb6491dc971c28cd4410bbc7",
+  "title": "Kappelin puhujakuvat silmien tasolta",
+  "date": "2026-10-06",
   "generationMode": "built-in image_gen",
+  "ownerInstruction": "kappelin kuvissa kamera saisi olla henkilön silmien tasolla. tee uudet kuvat ja välitä peliin",
+  "sourceMailboxCommit": "defed13282a09b00cb6491dc971c28cd4410bbc7",
+  "previousDeliveryCommit": "8dd2e94374bc8c2dc9f84dce177bf021ba73d3fe",
+  "export": "Vain koon muutos, sRGB-profiili ja PNG-vienti. Kaikki neljä ovat kokonaan uusia generointeja.",
   "files": [
     {
       "file": "puhujakuvat/kappalainen-1500-neutraali.png",
-      "original": "originals/kappalainen-1500-neutraali-v2.png",
-      "dimensions": [
-        1024,
-        1024
+      "original": "originals/kappalainen-1500-neutraali.png",
+      "originalSize": [
+        1254,
+        1254
       ],
-      "format": "png",
-      "space": "srgb",
-      "channels": 3,
-      "hasAlpha": false,
-      "iccBytes": 480,
-      "bytes": 1861961,
-      "sha256": "b80ae9040174a0dfbce174e70936fde96dc6e0451f67f9b5756d3ff1f31c1912"
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "icc": "sRGB",
+      "bytes": 2068478,
+      "sha256": "c5d500947a93d52c4ac572209cce88fa3db18713ad4e8ed75b84495e74f2c7e6"
     },
     {
       "file": "puhujakuvat/kappalainen-1500-vakava.png",
-      "original": "originals/kappalainen-1500-vakava-v1.png",
-      "dimensions": [
-        1024,
-        1024
+      "original": "originals/kappalainen-1500-vakava.png",
+      "originalSize": [
+        1254,
+        1254
       ],
-      "format": "png",
-      "space": "srgb",
-      "channels": 3,
-      "hasAlpha": false,
-      "iccBytes": 480,
-      "bytes": 1841719,
-      "sha256": "7ea6dac0c1c1eb67b8a88c16e925b6943a52c63813d61833f578239c0423db36"
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "icc": "sRGB",
+      "bytes": 2020384,
+      "sha256": "b66321d8689f02bbe22b3501bec4a020e0d63e4a853841b46fd4e072a210dacd"
     },
     {
       "file": "puhujakuvat/vouti-1500-neutraali.png",
-      "original": "originals/vouti-1500-neutraali-v1.png",
-      "dimensions": [
-        1024,
-        1024
+      "original": "originals/vouti-1500-neutraali.png",
+      "originalSize": [
+        1254,
+        1254
       ],
-      "format": "png",
-      "space": "srgb",
-      "channels": 3,
-      "hasAlpha": false,
-      "iccBytes": 480,
-      "bytes": 2124830,
-      "sha256": "8b84d60c93d97f6a11365e159879a7e910f648ed5936e1b44742d79c453038d3"
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "icc": "sRGB",
+      "bytes": 2264662,
+      "sha256": "3ed14f521506325d471defdcdfa73a6e69e2b4dbacc80b5f678bdcaa7f407a16"
     },
     {
       "file": "puhujakuvat/vouti-1500-huolestunut.png",
-      "original": "originals/vouti-1500-huolestunut-v1.png",
-      "dimensions": [
-        1024,
-        1024
+      "original": "originals/vouti-1500-huolestunut.png",
+      "originalSize": [
+        1254,
+        1254
       ],
-      "format": "png",
-      "space": "srgb",
-      "channels": 3,
-      "hasAlpha": false,
-      "iccBytes": 480,
-      "bytes": 2015478,
-      "sha256": "c883fd606adbd1171cc8f1b17598624918119c7bf4bb4aea51b42aff85bc1453"
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGB",
+      "icc": "sRGB",
+      "bytes": 2211612,
+      "sha256": "a24b371fc68be00179648ff16a69ec4a7fd6181fa3f2a6b567ac00334a953ec0"
     }
   ]
 }

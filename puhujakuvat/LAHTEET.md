@@ -1,38 +1,13 @@
-# Olavinlinnan kappelin puhujakuvien koe
+# Kappelin puhujakuvat silmien tasolta — 6.10.2026
 
-Päätoimittajan tilaus 5.10.2026: neljä ilmekuvaa kappelin dialogiin. Tämä on kokeiluerä; loput 22 kuvaa odottavat omistajan hyväksyntää.
+Omistajan 6.10.2026 korjaus korvaa alkuperäisen tilauksen yläviistokameran. Kamera on henkilön silmien tasolla, katse ja pää vaakasuunnassa. Kaikki neljä ovat kokonaan uusia generointeja.
 
-## Tiedostot
+Kappalainen: neutraali/rauhallinen ja vakava/lämpimän nuhteleva. Vouti: neutraali/rauhallinen ja huolestunut/hajamielinen.
 
-- `kappalainen-1500-neutraali.png`: rauhallinen, lempeä kappalainen.
-- `kappalainen-1500-vakava.png`: vakava ja lämmin, nuhteleva kappalainen.
-- `vouti-1500-neutraali.png`: jämäkkä ja rauhallinen vouti.
-- `vouti-1500-huolestunut.png`: huolestunut ja hajamielinen vouti.
+Referenssit: pelin omat fiktiiviset 3D-hahmot alkuperäisen postin liitteistä (defed13282a09b00cb6491dc971c28cd4410bbc7) sekä 5.10. toimitetut maalauskuvat identiteetin, asun ja valon säilyttämiseen. Työkalu: Codexin sisäänrakennettu OpenAI image_gen. Oma tuotanto Matkakirjalle; ei ulkopuolisia henkilökuvia.
 
-Kaikki ovat 1024 × 1024 px:n sRGB PNG-kuvia. Tausta on läpinäkymätön, maalattu lämmin kappelin hämärä. Kuvissa ei ole kehystä tai valmista reunahäivytystä: pelin PUHUJAKUVA-pohja tekee häivytyksen.
+Ensin uudet neutraalit kuvat, sitten kokonaiset uudet ilmeversiot niitä referenssinä käyttäen. Jälkikäsittely: 1254×1254 alkuperäisistä vain 1024×1024 koonmuutos, sRGB-profiili ja häviötön RGB PNG-vienti. Ei käsin paikattuja kasvoja eikä valmista reunamaskia. Vanha erä ja kaikki uudet alkuperäiset on säilytetty tuotantohakemistoissa.
 
-## Lähde ja referenssit
+Ilmeet, silmien tasolla oleva kamera, hahmon identiteetti ja valo tarkistettu 384 px:n ja 90 px:n koossa. Manifesti sisältää mitat ja SHA-256-tunnisteet. Generointiohjeet ovat mukana.
 
-Alkuperäinen tilaus: `posti/fable-codex-puhujakuvat-kappeli-20261005.md`, haarassa `claude/postilaatikko`, commit `defed13282a09b00cb6491dc971c28cd4410bbc7`.
-
-Referenssit ovat samassa posticommitissa hakemistossa `posti/liitteet/puhujakuvat-kappeli/`:
-
-- `kappalainen-1500-edesta.png`, `kappalainen-1500-kolmeneljannes.png`, `kappalainen-1500-pelikulma.png`
-- `vouti-1500-edesta.png`, `vouti-1500-kolmeneljannes.png`, `vouti-1500-pelikulma.png`
-
-Pelikulmat ohjaavat pään suuntaa, kameraa ja kappelin kynttilänvaloa. Etu- ja kolmivartalokuvat ohjaavat kasvomuotoa, tukkaa, partaa, pukua ja värejä. Hahmot ovat pelin omia fiktiivisiä henkilöitä; valokuvia tai nimettyjä todellisia ihmisiä ei käytetty referensseinä.
-
-## Menetelmä ja työkalu
-
-Oma tekoälykuvitustuotanto Matkakirjaa varten. Työkalu: Codexin sisäänrakennettu OpenAI `image_gen`, ilman erillistä API- tai CLI-ajoa. Maalauksellinen guassi-/öljytyyli, ei valokuva eikä sarjakuvatyyli.
-
-Kummallekin hahmolle generoitiin ensin neutraali peruskuva. Ilmeversio generoitiin kokonaan uutena kuvana peruskuvan ja pelin referenssien avulla. Sama identiteetti, pään suunta, kuvakoko, puku, tausta ja valaistus pidettiin mukana kaikissa ilmeissä. Kappalaisen neutraalista ilmeestä valittiin toinen kokonainen generointi, jotta rauhallisuus erottuu vakavasta ilmeestä; ensimmäinen versio säilyy tuotantopaketissa.
-
-Jälkikäsittely: vain koon muuttaminen 1024 × 1024 px:iin, sRGB-profiilin liittäminen ja häviötön PNG-vienti. Kasvoja tai ilmeitä ei paikattu käsin. Generointiohjeet ovat tiedostossa `generointiohjeet.json`, mitat ja SHA-256-tunnisteet manifestissa.
-
-## Tarkistus ja hyväksyntä
-
-Kasvojen ilmeet, yhtenäisyys, pelikulma, asut ja kynttilänvalo on katsottu pareittain sekä suurempina kuvina että 90 px:n esikatseluina. Näytteessä kokeiltiin myös pehmeää pyöreää maskia; maskia ei ole lopullisissa tiedostoissa, eikä esikatselu ole todiste varsinaisesta pelikytkennästä.
-
-Kuvat toimitetaan päätoimittajan pelitarkistukseen. Omistajan taiteellinen hyväksyntä, natiivin integraatio, hyväksyntävideo ja julkaisu ovat erillisiä avoimia vaiheita.
-
+Omistaja pyytää kuvat peliin. Fable kytkee ne natiivin PUHUJAKUVA-pohjaan ja tarkistaa varsinaisen kappelin dialogin. Pelikytkentä, pelikuva/video ja julkaisu eivät ole kuvatoimituksen kuittaus. Muita 22 kuvaa ei ole aloitettu.
