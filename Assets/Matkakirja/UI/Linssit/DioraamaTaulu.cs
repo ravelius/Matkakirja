@@ -545,6 +545,7 @@ namespace Matkakirja.Natiivi
                 kertojaLaatikko.RemoveFromClassList("mk-nakyy");
                 PiilotaLaput();
                 PaivitaJaksonNimet(rakennus, kamera, null);
+                Linna?.NaytaTauko(false);
                 LopetaKuunnelma("ei näkymää");
                 return;
             }
@@ -554,6 +555,7 @@ namespace Matkakirja.Natiivi
 
             // UUSI LINNA: kertojan kierros — vain teksti ja kamera; Pulu, taulu ja laput pois.
             bool kierros = nakyma.KertojaJakso >= 0 || linssi.KertojaKaynnissa(tNyt);
+            Linna?.NaytaTauko(kierros);
             // Kehittäjän kuorinappi: ei esittelylinssien reitillä eikä kertojan tai infotaulun aikana (Päätoimittaja 30.9.).
             bool infoAuki = nakyma.KohdeTila != null && rakennus.Tila(nakyma.KohdeTila)?.Infotaulu != null;
             kuoriNappi.style.display = KuoriRuudulla && Asetukset.Kehittaja && !LinssiOhjain.EsittelylinssitAuki && !kierros && !infoAuki

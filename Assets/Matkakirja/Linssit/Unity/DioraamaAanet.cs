@@ -445,7 +445,7 @@ namespace Matkakirja.Natiivi
                 {
                     double hetki = AudioSettings.dspTime + 0.05;
                     if (!AloitaPuhe(kayttaja, aaniId)) return false;
-                    puheKuiva.clip = kuiva; puheKuiva.volume = PuheTaso; puheKuiva.PlayScheduled(hetki);
+                    puheTauolla = false; puheKuiva.clip = kuiva; puheKuiva.volume = PuheTaso; puheKuiva.PlayScheduled(hetki);
                     float kaikuTaso = KaikuPois ? 0f : Kerroin(KaikuKerroin, NykyinenHuone ?? "", 1f);
                     if (kaiku != null && kaikuTaso > 0.001f)
                     { puheKaiku.clip = kaiku; puheKaiku.volume = PuheTaso * kaikuTaso; puheKaiku.PlayScheduled(hetki); }
@@ -461,7 +461,7 @@ namespace Matkakirja.Natiivi
             // Ennen PlayOneShot kertaäänilähteeltä: repliikkiä ei voinut katkaista, ja seuraava puhe (vartija, kortti,
             // kertoja, Pulu) soi sen päälle. Nyt sama pysäytettävä puhelähde kuin kertojalla.
             if (!AloitaPuhe(kayttaja, aaniId)) return false;
-            puheKuiva.clip = k; puheKuiva.volume = PuheTaso; puheKuiva.Play();
+            puheTauolla = false; puheKuiva.clip = k; puheKuiva.volume = PuheTaso; puheKuiva.Play();
             puheLoppuu = Time.unscaledTime + k.length;
             return true;
         }
@@ -538,8 +538,33 @@ namespace Matkakirja.Natiivi
         string erillinenId;
         /// <summary>Avainsanojen ajoitus (DioraamaTaulu): kertojan klipin soittokohta sekunteina, jos juuri tämä puhe soi; muuten null.</summary>
         public static float? PuheenKohta(string aaniId) =>
-            aktiivinen != null && aaniId != null && aktiivinen.erillinenId == aaniId && aktiivinen.puheKuiva != null && aktiivinen.puheKuiva.isPlaying
+            aktiivinen != null && aaniId != null && aktiivinen.erillinenId == aaniId && aktiivinen.puheKuiva != null
+            && (aktiivinen.puheKuiva.isPlaying || aktiivinen.puheTauolla)
                 ? aktiivinen.puheKuiva.time : (float?)null;
+
+        // ESITTELYN TAUKO (omistaja 6.10.2026, linnan esittelyerä; DioraamaSovitin.Tauko): linnan puhe pysähtyy kohtaansa ja jatkuu
+        // siitä; väistön aikaraja (puheLoppuu) siirtyy tauon verran. Tauko säilyy "soivana" (PuheSoi, PuheenKohta), ettei kertojan
+        // teksti eikä avainsana välähdä tauon ajaksi.
+        bool puheTauolla;
+        float taukoAlku;
+
+        public static void TaukoPuhe(bool tauolla)
+        {
+            var a = aktiivinen;
+            if (a == null || a.puheKuiva == null || a.puheTauolla == tauolla) return;
+            if (tauolla)
+            {
+                if (!a.puheKuiva.isPlaying && !(a.puheKaiku != null && a.puheKaiku.isPlaying)) return;
+                a.puheKuiva.Pause(); a.puheKaiku?.Pause();
+                a.puheTauolla = true; a.taukoAlku = Time.unscaledTime;
+            }
+            else
+            {
+                a.puheTauolla = false;
+                if (a.puheLoppuu > 0f) a.puheLoppuu += Time.unscaledTime - a.taukoAlku;
+                a.puheKuiva.UnPause(); a.puheKaiku?.UnPause();
+            }
+        }
 
         bool SoitaErillinen(string aaniId, bool kayttaja)
         {
@@ -547,7 +572,7 @@ namespace Matkakirja.Natiivi
             var k = Klippi(aani.Tiedosto);
             if (k == null) { VarmistaLadattu(sovitin.AaniUrl(aani.Tiedosto)); return false; }
             if (!AloitaPuhe(kayttaja, aaniId)) return false;
-            puheKuiva.clip = k; puheKuiva.volume = PuheTaso; puheKuiva.Play();
+            puheTauolla = false; puheKuiva.clip = k; puheKuiva.volume = PuheTaso; puheKuiva.Play();
             puheLoppuu = Time.unscaledTime + k.length;
             erillinenId = aaniId;
             Debug.Log($"MATKAKIRJA linssit: poikki: erillinen puhe {aaniId} {k.length:F1} s");
@@ -607,14 +632,14 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Soiko linnan puhe (repliikki, kertoja, Pulun kertomus, kuunnelma).</summary>
         public bool PuheSoi => (puheKuiva != null && puheKuiva.isPlaying) || (puheKaiku != null && puheKaiku.isPlaying)
-                               || Time.unscaledTime < puheLoppuu;
+                               || Time.unscaledTime < puheLoppuu || puheTauolla;
 
         /// <summary>Muu puhe alkoi (kortin luenta, kertoja): linnan puhe katkeaa.</summary>
         public void KatkaisePuhe()
         {
             if (katkaiseeMuita || !PuheSoi) return;
             puheKuiva?.Stop(); puheKaiku?.Stop();
-            puheLoppuu = -1f;
+            puheLoppuu = -1f; puheTauolla = false;
             Debug.Log("MATKAKIRJA linssit: poikki: linnan puhe katkaistu (uusi luenta)");
         }
 
@@ -627,7 +652,8 @@ namespace Matkakirja.Natiivi
 
         void LopetaErillinen()
         {
-            if (puheKuiva != null && puheKuiva.isPlaying) { puheKuiva.Stop(); puheKaiku.Stop(); puheLoppuu = -1f; }
+            if (puheKuiva != null && (puheKuiva.isPlaying || puheTauolla)) { puheKuiva.Stop(); puheKaiku.Stop(); puheLoppuu = -1f; }
+            puheTauolla = false;
         }
 
         /// <summary>Pulun kertomus (DioraamaTaulu: Pulun napautus), Kertoja-kytkimen mukaan.</summary>
