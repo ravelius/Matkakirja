@@ -312,6 +312,11 @@
     --mk-ikoni-viiva: 2.1;
 }
 
+/* Pin (stillit 154: viiva 4 px @3x vs ≡ 5 px): 2,0 tasaa painon. */
+.mk-nostoselain .mk-lukija.mk-nosto__pin > .mk-ikoni {
+    --mk-ikoni-viiva: 2;
+}
+
 /* Kaiutin: muste 14,4/24 → 24 pt laatikossa ~14,4 pt, pinnin korkuinen. */
 .mk-nosto__lukija .mk-lukija--kortti > .mk-kaiutin,
 .mk-nosto__lukija .mk-lukija--kortti .mk-kaiutin__osa {
@@ -319,7 +324,7 @@
     height: 24px;
 }
 
-.mk-nostoselain .mk-nostoselain__avaaja > .mk-nappi__teksti,
+.mk-nostoselain .mk-nostoselain__avaaja > Label,
 .mk-nostoselain .mk-nostoselain__autoteksti {
     letter-spacing: 6.98px; /* puolet .mk-nosto__ylarivi-harvennuksesta (13,97) */
 }
@@ -340,6 +345,13 @@
 
 .mk-nostoselain .mk-nostoselain__auto.mk-valittu > .mk-nostoselain__autopiste {
     display: flex;
+    flex-shrink: 0;
+    align-self: center;
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    min-height: 8px;
+    border-radius: 4px;
     background-color: var(--tk-paperi-muste);
 }
 

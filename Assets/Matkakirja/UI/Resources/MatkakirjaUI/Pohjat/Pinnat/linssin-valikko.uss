@@ -211,6 +211,7 @@
     height: 20px;
     flex-shrink: 0;
     align-self: center;
+    margin-right: 0; /* .mk-nappi > .mk-ikoni 7 px siirsi mikin ja näppäimistön vasemmalle (stillit 154: ~3 pt) */
 }
 
 .mk-liiku__nappi.mk-opas-nappi .mk-nappi__teksti.mk-opas-nappi__teksti {
