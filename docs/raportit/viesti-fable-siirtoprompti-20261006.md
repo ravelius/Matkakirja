@@ -51,7 +51,7 @@ Omistaja avaa (tai käyttää tilin olemassa olevaa) session kansioon /Users/Sha
 | Linnanrakentaja | Matkakirja-linnanrakentaja | linnanrakentaja-tyo-20260929 | Opus, high | **63888b8b4** · Giza: maasto rajattu _valmiit/giza-v1/lahde/, datahaku kesken; linna odottaa Siirtosepän simuvuoroa |
 | Siirtoseppä | Matkakirja-siirtoseppa | siirtoseppa-luovutus | Opus, high | **cde4d8164** · linna-149 183866ed + FACEIT 55ad6594 käännetty, todentamatta; äänimaisema c2f93576 odottaa Pelikoodarin karttaa; COZY e9729420 tuotu |
 | Karttaseppä | Matkakirja-karttaseppa | karttaseppa-tyo-20260922 | Opus, high | **58c812ce2** · syksyajo A irrallisena 56/91, valmis ~0.40 (T7); talvi valmis 22.27; korjaus5 arkistoitu |
-| Sisältökirjuri | Matkakirja-sisaltokirjuri | sisalto-pelikatalogi-20260927 | Sonnet 5.5, high | **df117fcc1** (+ kuvatyö worktreessä wt/sisaltokirjuri-oppaan-kuvat, haara sisaltokirjuri-oppaan-kuvat, jatkokohta f0211575e 23.51: 155 kaupunkitiedostoa; tarkista, että se on pushattu) |
+| Sisältökirjuri | Matkakirja-sisaltokirjuri | sisalto-pelikatalogi-20260927 | Sonnet 5.5, high | **df117fcc1** · kuvahaku haara sisaltokirjuri-oppaan-kuvat-2 f0211575e, PR #4083 korvaa #4078; 154/266 paikkaa (1 932 kohdetta, 4 220 kuvaa); jatkokohta data/oppaan-kuvat/JATKO.md (105 aloittamatta, 19 katkesi) |
 | Laitetestaaja | Matkakirja-laitetestaaja | laitetestaaja-savukierros-b13 | Sonnet 5.5, high | **397ea8e52** · TULOS 153 ja 154 OK, simut sammutettu (tulokset list_eventsillä, ei viestejä) |
 
 Aloitusviesti kullekin: "Olet <Rooli> (<malli>). Lue CLAUDE.md, Raamatun Ydinajatus kohta 2 ja docs/raportit/viesti-<rooli>-aloitus.md
