@@ -634,7 +634,9 @@ const KUVAKENTAT = '&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize%7Cmime&iiurl
  * suomenkielinen kuvaus ja P18-kuva 50 kohteen erinä: Wikipedia (titles, enintään 50) → Wikidata (wbgetentities, 50) →
  * Commons (imageinfo, 50). Muutama alipyyntö yhteensä (Cloudflaren ilmaistason raja 50 alipyyntöä/pyyntö).
  * colimit=max: Wikipedia antaa muuten vain 10 koordinaattia pyyntöä kohti (6.10.: 60 ehdokkaasta jäi 20). Nimeksi Wikidatan
- * suomenkielinen nimiö, jos on (malli keksi nimiä kuten "Mosku Alhambra"), muuten mallin nimi.
+ * suomenkielisen Wikipedian otsikko ilman tarkenninta ("Pöytävuori (Etelä-Afrikka)" → "Pöytävuori"; tutumpi kuin nimiö:
+ * "Kultainen temppeli", "Notre-Damen katedraali"), sitten suomenkielinen nimiö (malli keksi nimiä kuten "Mosku Alhambra"),
+ * muuten mallin nimi.
  * Kuva vain vapaalla lisenssillä ja tekijätiedoin (kuvallaTekijatiedot). Palauttaa [{ ...kohde, id, lat, lon, alarivi, kuva }]
  * syöttöjärjestyksessä; kohteet ilman koordinaattia jäävät pois.
  */
@@ -661,10 +663,10 @@ export async function kohteetErana(haku, ehdokkaat) {
   const tiedot = new Map();
   for (const pala of palat(tunnukset)) {
     try {
-      const d = await haeJson(haku, `https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims%7Cdescriptions%7Clabels&languages=fi&ids=${pala.join('|')}`);
+      const d = await haeJson(haku, `https://www.wikidata.org/w/api.php?action=wbgetentities&format=json&props=claims%7Cdescriptions%7Clabels%7Csitelinks&languages=fi&sitefilter=fiwiki&ids=${pala.join('|')}`);
       for (const [q, e] of Object.entries(d?.entities ?? {})) {
         tiedot.set(q, { kuva: e?.claims?.P18?.[0]?.mainsnak?.datavalue?.value ?? null, kuvaus: e?.descriptions?.fi?.value ?? null,
-          nimi: e?.labels?.fi?.value ?? null });
+          nimi: (e?.sitelinks?.fiwiki?.title ?? '').replace(/\s*\([^)]*\)\s*$/, '') || e?.labels?.fi?.value || null });
       }
     } catch { /* ilman kuvia */ }
   }

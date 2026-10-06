@@ -13,7 +13,7 @@ const verkko = async (u) => {
   const s = decodeURIComponent(String(u));
   if (s.includes('api.anthropic.com')) {
     kutsut.malli += 1;
-    return new Response(JSON.stringify({ content: [{ type: 'text', text: nimet.map((n, i) => `KOHDE: ${n} | ${n} | Kaupunki | FR | Koukku numero ${i}.`).join('\n') }], stop_reason: 'end_turn' }));
+    return new Response(JSON.stringify({ content: [{ type: 'text', text: nimet.map((n, i) => `KOHDE: ${n} | ${n} | ${i === 2 ? 'Jerusalem | IL' : 'Kaupunki | FR'} | Koukku numero ${i}.`).join('\n') }], stop_reason: 'end_turn' }));
   }
   kutsut.muut += 1;
   if (s.includes('en.wikipedia.org') && s.includes('titles=')) {
@@ -30,7 +30,8 @@ const verkko = async (u) => {
   if (s.includes('wbgetentities')) {
     const ids = /ids=([^&]+)/.exec(s)[1].split('|');
     return new Response(JSON.stringify({ entities: Object.fromEntries(ids.map((q) => [q, { claims: { P18: [{ mainsnak: { datavalue: { value: `${q}.jpg` } } }] },
-      descriptions: { fi: { value: `kuvaus ${q}` } }, ...(q === 'Q101' ? { labels: { fi: { value: 'Oikea nimi' } } } : {}) }])) }));
+      descriptions: { fi: { value: q === 'Q102' ? 'moskeija Jerusalemissa, Israelissa' : `kuvaus ${q}` } }, ...(q === 'Q101' ? { labels: { fi: { value: 'Oikea nimi' } } } : {}),
+      ...(q === 'Q103' ? { labels: { fi: { value: 'Nimiö' } }, sitelinks: { fiwiki: { title: 'Wikipedian nimi (tarkennin)' } } } : {}) }])) }));
   }
   if (s.includes('commons.wikimedia.org')) {
     const t = /titles=([^&]+)/.exec(s)[1].split('|');
@@ -60,7 +61,12 @@ test('/opas/kohteet?n=50: 50 kohdetta erähaulla, kuvat vain tekijätiedoin, toi
     assert.match(d.kohteet[0].alarivi, /kuvaus Q100/);
     assert.equal(d.kohteet[1].nimi, 'Oikea nimi', 'Wikidatan suomenkielinen nimiö voittaa mallin nimen');
     assert.equal(d.kohteet[0].nimi, 'Kohde 0', 'ilman nimiötä mallin nimi');
-    const ennen = kutsut.malli; await hae();
+    assert.equal(d.kohteet[3].nimi, 'Wikipedian nimi', 'fi-Wikipedian otsikko ilman tarkenninta voittaa nimiön');
+    const jer = d.kohteet[2];
+    assert.deepEqual([jer.kaupunki, jer.iso, jer.alarivi], ['Jerusalem', null, null], 'kiistanalainen sijainti neutraalisti (Päätoimittaja 6.10.)');
+    assert.equal(d.kohteet[0].iso, 'FR');
+    const ennen = kutsut.malli; const toinen = await (await hae()).json();
+    assert.equal(toinen.kohteet[2].iso, null, 'myös välimuistista neutraalisti');
     assert.equal(kutsut.malli, ennen, 'välimuistista');
   } finally { globalThis.fetch = vanha; }
 });
