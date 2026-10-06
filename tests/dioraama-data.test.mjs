@@ -526,3 +526,16 @@ test('AANET: keittiön repliikkien mikseriotot ovat median juuren polkuja, muill
     assert.equal(a.kaikuPitka, `/aanet/mikseri/${v}/${id}.kaiku-pitka.mp3`);
   }
 });
+
+test('Olavinlinna: kertojan jaksojen nimet (tornit) ja kuva mahtuvat jaksoon; saapuminen.loppu on kertoja tai puuttuu', async () => {
+  const { RAKENNUS } = await import('../js/dioraama/rakennukset/olavinlinna.js');
+  assert.ok(RAKENNUS.saapuminen.loppu === undefined || RAKENNUS.saapuminen.loppu === 'kertoja');
+  for (const j of RAKENNUS.kertoja.jaksot) {
+    for (const n of j.nimet ?? []) {
+      assert.ok(typeof n.teksti === 'string' && n.teksti.length > 0 && n.teksti.length <= 20, `${j.id}: nimen teksti`);
+      assert.ok(Array.isArray(n.paikka) && n.paikka.length === 3, `${j.id}/${n.teksti}: paikka`);
+      assert.ok(n.alku_s >= 0 && n.alku_s + (n.kesto_s ?? 3) <= j.kesto_s, `${j.id}/${n.teksti}: näkyy jakson sisällä`);
+    }
+    if (j.kuva) assert.ok(j.kuva.tiedosto && j.kuva.alku_s + j.kuva.kesto_s <= j.kesto_s && j.kuva.lahde, `${j.id}: kuva`);
+  }
+});
