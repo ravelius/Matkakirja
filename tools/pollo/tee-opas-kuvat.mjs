@@ -26,7 +26,9 @@ const TAMA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAMA, '..', '..');
 const UA = 'Matkakirja-opas/1.0 (https://matkakirja.app; peli@matkakirja.app)';
 const PEILI = 'https://media.matkakirja.app/';
-export const KUVALISTA_POLKU = 'opas/kuvat-v1/kuvat.json';
+// Lista uuteen polkuun joka erällä (--versio v3 …; ämpäri ei ylikirjoita). Kuvat pysyvät kansiossa kuvat-v1/kuvat/.
+export const KUVALISTA_POLKU = `opas/kuvat-${process.argv.includes('--versio') ? process.argv[process.argv.indexOf('--versio') + 1] : 'v2'}/kuvat.json`;
+const KUVAKANSIO = 'opas/kuvat-v1/kuvat';
 const KOHDE_KM = 40;
 const KUVIA_KOHTEELLE = 5;   // Päätoimittaja 6.10. 20.1x: kohteella 1–5 kuvaa
 
@@ -215,7 +217,7 @@ export async function kokoaKuvalista({ sisalto = null, ulos = null, loki = conso
   // Sisältökirjurin kohdelistat: hänen kuvansa ensin, kaupungin lukittu kohdelista.
   if (sisalto && existsSync(sisalto)) {
     const s = JSON.parse(readFileSync(sisalto, 'utf8'));
-    const kansio = ulos ? join(ulos, dirname(KUVALISTA_POLKU), 'kuvat') : null;
+    const kansio = ulos ? join(ulos, KUVAKANSIO) : null;
     if (kansio) mkdirSync(kansio, { recursive: true });
     let ladattu = 0;
     for (const [q, k] of Object.entries(s.kohteet ?? {})) {
@@ -230,7 +232,7 @@ export async function kokoaKuvalista({ sisalto = null, ulos = null, loki = conso
           writeFileSync(polku, Buffer.from(await v.arrayBuffer())); ladattu += 1;
         }
         const { tiedosto, ...loput } = kuva;
-        omat.push({ ...loput, url: `${PEILI}${dirname(KUVALISTA_POLKU)}/kuvat/${nimi}`, tyyppi: 'valokuva' });
+        omat.push({ ...loput, url: `${PEILI}${KUVAKANSIO}/${nimi}`, tyyppi: 'valokuva' });
       }
       const vanha = tulos.kohteet[q];
       const kuvat = [...omat, ...(vanha?.kuvat ?? []).filter((x) => !omat.some((o) => o.lahdeUrl === x.lahdeUrl))]
@@ -261,7 +263,7 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
       + `Pelin nykyiset kuvat (Wikimedia Commons, vapaat lisenssit; tekijä, lisenssi ja lähde kuvakohtaisesti listassa) sekä `
       + `Matkakirjan omat havainnekuvat. Kohteen Wikidata-tunnus Commonsin "esittää"-tiedosta (P180, CC0).\n\n`
       + `- ${KUVALISTA_POLKU}: ${kohteita} kohdetta ja ${Object.keys(tulos.kaupungit).length} kaupunkia, ${kuvia} kuvaa. Pelin kuvat ovat peilissä (media.matkakirja.app/kuvat/…).\n`
-      + `- ${dirname(KUVALISTA_POLKU)}/kuvat/: Sisältökirjurin kohdelistojen kuvat (Wikimedia Commons, 1 280 px), tekijä, lisenssi ja `
+      + `- ${KUVAKANSIO}/: Sisältökirjurin kohdelistojen kuvat (Wikimedia Commons, 1 280 px), tekijä, lisenssi ja `
       + `lähde kuvakohtaisesti listassa. Lukitut kaupungit: ${Object.entries(tulos.kaupungit).filter(([, k]) => (k.kohteet?.length ?? 0) >= 6).map(([id]) => id).join(', ') || '–'}.\n`);
   }
   if (ulos) {
