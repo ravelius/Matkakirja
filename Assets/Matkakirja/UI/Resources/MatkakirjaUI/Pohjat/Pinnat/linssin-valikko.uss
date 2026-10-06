@@ -296,3 +296,19 @@
 .tk-teema-harmaa.mk-linssivalikko--pohja .mk-linssivalitsin__valiotsikko {
     color: var(--tk-harmaa-muste-pehmea);
 }
+
+/* Oppaan vapaa tila (juna 152): pieni tähtäin ruudun keskelle (katsepiste = keskikohdan maapiste, Mikä tämä on?). */
+.mk-opas-tahtain {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: var(--tk-vali-xl);
+    height: var(--tk-vali-xl);
+    translate: -50% -50%;
+    color: var(--tk-harmaa-korostus);
+}
+
+.mk-opas-tahtain > .mk-ikoni.mk-opas-tahtain__ikoni {
+    width: 100%;
+    height: 100%;
+}

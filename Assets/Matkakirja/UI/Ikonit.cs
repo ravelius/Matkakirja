@@ -72,6 +72,8 @@ namespace Matkakirja.Natiivi
         public const string Edellinen = "<path d=\"M16.5 4.8 5 12l11.5 7.2z\" fill=\"currentColor\"/>";
         /// <summary>Lopeta (■, omistaja 6.10. 16.4x: "ihan pelkkä stop-merkki"; oppaan Lopeta kierros).</summary>
         public const string Lopeta = "<rect x=\"6.5\" y=\"6.5\" width=\"11\" height=\"11\" rx=\"1.5\" fill=\"currentColor\"/>";
+        /// <summary>Tähtäin (oppaan vapaa tila ja Mikä tämä on?, juna 152): rengas ja neljä lyhyttä viivaa.</summary>
+        public const string Tahtain = "<circle cx=\"12\" cy=\"12\" r=\"5\"/><path d=\"M12 2.5v4M12 17.5v4M2.5 12h4M17.5 12h4\"/>";
         public const string Toista = "<path d=\"M7.5 4.8 19 12 7.5 19.2z\" fill=\"currentColor\"/>";
 
         // js/karttatyokalu-maakunnat.js PLUS_IKONI ja PULU_IKONI (maakunnan luonnehdinta ja kortti).
