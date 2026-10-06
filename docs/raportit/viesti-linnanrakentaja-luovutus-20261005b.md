@@ -1,12 +1,34 @@
 # Linnanrakentajan luovutus 5.10.2026 klo 12.2x (Opus high)
 
-## TILA LOPUSSA
-- **Mixamo-laajennus 11 hahmolle** on käynnissä. Omistajan linja 12.30: iPad-mittaus ei estä. Aloita heti, kun omistajan leikkeet 4–14
-  (docs/raportit/mixamo-leikelista-20261005.md) ovat kansiossa `/Users/Shared/Claude/proto-3d/_lahteet/mixamo/` (nyt vain Praying,
-  Sitting Idle ja Sitting Talking). Lyhennä pitkät leikkeet silmukoiksi. Lopuksi kuvapari ja video pelistä Päätoimittajalle ennen junaa 144.
-- **Rantametsä PR #3987** (blender v31 cb0cd92d, peili 22968114) on junaan 144 Julkaisijalla. **Osoitinta EI vaihdeta** ennen
-  Päätoimittajan omistajakorttia.
-- Viestit nimellä: "Päätoimittaja (Opus, max)", "Siirtoseppä (Opus, high)", "Julkaisija (Opus, high)" (ListAgents). Socketit vaihtuvat.
+## ALOITUSVIESTI (tilinvaihto 6.10. klo 23.4x)
+Olet Linnanrakentaja (Opus, high), checkout /Users/Shared/Claude/Matkakirja-linnanrakentaja, haara linnanrakentaja-tyo-20260929.
+Lue tämä tiedosto alusta TILA LOPUSSA -osioon, sitten viimeiset Päivitys-osiot. Viestit: SendMessage nimellä; jos raja täyttyy,
+mcp__ccd_session_mgmt__send_message session id:llä (Päätoimittaja local_8d8ebf72-…, Siirtoseppä local_6cef0cb2-…,
+Julkaisija local_24e63224-…, Natiivi-UI local_c6d63773-…). Simut vain Julkaisijan SIMULAATTORI NYT -kuittauksella.
+
+## TILA LOPUSSA (6.10. klo 23.4x)
+- **LINNA (etusija)**, kaikki odottavat Siirtosepän simuvuoroa (simut olivat tauolla levyn takia, Julkaisija 18.51):
+  - Esittely PR #4051 (data) + siirtoseppa/linna-149: Siirtoseppä ajaa ennen (BUILD 150 ea457278) / jälkeen (peili feea163c), äänellinen.
+  - Esineet PR #4052 (v38, peili bba43057) + natiivi a57c8450: Siirtoseppä ajaa MINUN skriptini
+    proto-3d/tyokalut/linnanrakentaja-ajot/ajo-esineet.sh D5900D45:llä. Tarkista videot ruuduittain → Päätoimittajalle.
+  - Faceit (haara linnanrakentaja-faceit = #4052 + pää/ilmeet v39, peili 94a0df22) + siirtoseppa/faceit 55ad6594:
+    Siirtoseppä ajaa kappelin äänellisenä. PR vasta #4052:n mergen jälkeen. Muiden äänten kohdistukset:
+    _valmiit/linna-kohtaukset-v3/raaka/*-vastaus.json (aanet.js kohdistus, kuten kappeli-keskustelu).
+  - Akustiikka #3979 (peili 2147deef): Siirtoseppä leipoo kaiun ja tekee ennen/jälkeen-videon.
+  - blender.json: #3979, #4052 ja Faceit koskevat samaa tiedostoa → jälkimmäiset viedään uudelleen mergen jälkeen.
+- **ISS-OHJAAMON JALKA v3e** (_valmiit/iss-ohjaamo-v3e/, jämäkkä pylväs 75 pt, omistajan 3. kierros): Natiivi-UI sijoittaa ja ottaa
+  pelistä stillit iPhone + iPad Päätoimittajalle. Jos omistaja hyväksyy → kopio _valmiit/hyvaksytyt-mallit/.
+- **GIZAN PILOTTI** (Päätoimittaja 23.5x, omistaja hyväksyi; linssi, Eurooppa-rajaus ei koske): 3 pyramidia + Sfinksi Blenderissä
+  avoimen datan päälle, LOD + GLB → LS1 sijoittaa Cesium-palloon. Arvio ~2 työpäivää. Rajaus: kuningatarten pyramidit, mastabat ja
+  temppelit vasta kuvaparin jälkeen. Tekstuuri Poly Haven (CC0). Sfinksin skannaus vain CC0/CC BY/CC BY-SA (ei NC/ND).
+  - Tehty: GLO-30 N29 E031 → _lahteet/giza/ (45 Mt), rajattu Gizaan _valmiit/giza-v1/lahde/glo30-giza.npy + .json
+    (108 × 126, 1″; purku ilman imagecodecsia: deflate + float-prediktori numpylla, venv-rembg). DSM sisältää pyramidien kohoumat
+    (Kheops 89 m, tasanko ~60 m) → alustat tasoitetaan.
+  - Kesken: avoimen datan haku (mitat, koordinaatit, Khefrenin kuoriverhous, Mykerinoksen lohkeama, Sfinksin CC-skannaukset,
+    Poly Haven -kalkkikivi) oli Sonnet-agentilla, tulos scratchpadin giza-data.md (session väliaikainen, voi kadota) → aja haku
+    uudelleen, jos tiedostoa ei ole. Blender-tiedostoja ei vielä ole; aloita _valmiit/giza-v1/lahde/.
+- **Faceit-lisäosa** asennettu Blenderiin (bl_ext.user_default.faceit); ajot ilman --factory-startup (faceit_paa.py, faceit_leivo.py).
+- Lokit, joissa käynnissä ei ole mitään: ei Blender-ajoja eikä simuja.
 
 ## Mixamo (hahmot)
 - Työkalu `tools/dioraama/blender/hahmo_mixamo.py` on haarassa `linnanrakentaja-mixamo` (worktree /Users/Shared/Claude/wt/linnanrakentaja-mixamo,
