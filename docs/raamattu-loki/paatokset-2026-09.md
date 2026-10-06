@@ -10998,3 +10998,35 @@ Omistaja 6.10.2026 klo 19.00 (chat): "posterboard on kaatunut 5 kertaa" → vast
 Omistaja 6.10.2026 klo 19.1x (chat) sanatarkasti: "Muuta sinun päätoimittajanimi sessionimessä Kapitaaleille, jotta minun on jatkossa helpompi löytää se. Kirjaa myös tämän raamattuun, jotta se näkyy samalla lailla myös jatkossa."
 
 Ratkaisu: session nimi on nyt "PÄÄTOIMITTAJA (Opus, max)" (set_session_title 19.1x). Raamatun Ydinajatus-kohta PÄÄTOIMITTAJA = FABLE päivitetty: päätoimittajan session nimi aina isoilla kirjaimilla "PÄÄTOIMITTAJA (<malli>, <effort>)" myös nollausten ja tilinvaihtojen jälkeen; muiden roolien nimet tavallisesti. Roolit, jotka lähettävät viestejä nimellä, käyttävät uutta nimeä (tai ListAgentsin riviä).
+
+## JUNA 152: KUITTAUKSET, MUUTOSLOKI JA BUILD 152 (6.10.2026 klo 19.28)
+
+Päätoimittaja 6.10.2026 klo 19.05 kuittasi junaan 152 S2-jatkon 1354ef53 (kuvapari 151 vs 152-koe: Amazon, Sumbawa, Meksiko ilman regressiota, saumoja tai aukkoja) ja julisteen b7a32d4a + 81cedf76 (logo avaruudessa, ikkuna +12 %, kehys, tekstit ja sinetti oikein). Laitetestaajan savu 7e91ce76:sta OK (0 Exception, 0 kaatumista, ei 429-virheitä). Muutosloki #4069 Päätoimittajan tekstillä (267 mrk; saumaväite poistettu todentamattomana): "ISS-kameran juliste on uudistettu: uusi ikkunakehys, logo avaruudessa, pilvet sivuilla ja sinisemmät sävyt. iPadin ohjaamon ikkunassa näkyy enemmän kehystä, ja satelliittikuvien virheitä on korjattu. Opas lataa kaupunkikuvan uudelleen, jos Googlen palvelu ruuhkautuu." BUILD 152 = proto master 3ac88234 (juna f9e4032c, käännös 7e91ce76, 1.1.152), TF-ajo 37494161958.
+
+Löydös junaan 153: julisteen Helsinki-kuvassa GIBS-merisumu (1.10.) näkyy Suomenlahden eteläosassa tasaisena valkoisena alueena rannikon muotoisena → LS2 pehmeä reuna ja tekstuuri, myös ISS-näkymään; kuvapari Päätoimittajalle ennen omistajaa.
+
+## OMISTAJA: COZY WEATHER 3 OSTETTU (6.10.2026 klo 19.28)
+
+Omistaja 6.10.2026 klo 19.0x (chat) sanatarkasti: "cozy weather ostettu" + "lataan sen vielä" → omistaja lataa Package Managerista (My Assets) kansioon ~/Library/Unity/Asset Store-5.x/; Päätoimittajan vahti odottaa tiedostoa (19.06) ja ohjaa: LS1 kaupunkinäkymän sää + pilvet (kuvanlaatujärjestyksessä 3, 1, 2, 5, 4), Siirtoseppä linnan sää, Pelikoodari MET Norway -worker, Natiivi-UI sama nappi kuin vuorokaudenaika. Asset Store EULA: vain yksityinen proto-git, LAHTEET.md.
+
+## OMISTAJA: NOSTOJEN KORJAUSTEN JUNAT (6.10.2026 klo 19.28)
+
+Omistaja 6.10.2026 klo 19.1x sanatarkasti: "Missa junassa nostojen pin-korjaus tulee sekä muut nostoihin liittyvät korjaukset?" → vastattu: osuma-alat ja pinnatun palkin napautus TF 148, noston teksti ei sulje + Kysy matala + chatin pin + tauko TF 149, maakuntanostot + tekijärivi TF 151; ei avoimia.
+
+## OMISTAJA: NOSTON YLÄRIVI VÄLJEMMÄKSI JA YHTÄ KORKEAKSI, AUTO VAALEAMMAKSI (juna 153) (6.10.2026 klo 19.28)
+
+Omistaja 6.10.2026 klo 19.19 (chat + kuva noston Kronborg ylärivistä) sanatarkasti: "Tuo noston ylärivi on pakattu turhaan liian tiheään. Vasemmalla reunustalla olisi tilaa siirtää nostoja sinne päin, jotta auton pinnin ja mini-hampurilaisen ei tarvitsisi olla noin likellä toisiaan. Muuta myös kaikkien noiden ylärivillä olevien elementtien korkeus samaksi. Minihampurilainen on nyt liian pieni ja auton taustaväritys on vähän turhan tumma. Mitä olet itse mieltä?" → Natiivi-UI junaan 153: sulka + ‹ NOSTOT › vasemmalle, oikealle AUTO/pin/≡/kaiutin tasavälein, kaikki 38 pt (osuma 44), kuvakkeet 22 pt, AUTO vaaleampi (kehys.kulta ~40 % paperin päällä); still iPhone + iPad minulle.
+
+Toteutus: Natiivi-UI natiivi-ui/ylarivi-153 c5c1a24e (sama Nostokortti myös maakunta- ja pinnatussa kortissa); uusi tyylikirja-arvo kehys.kulta-kuulto = kehys.kulta 40 % paperin päällä (web 62c4e711e), hyväksytty Päätoimittajan toimesta omistajan pyynnön perusteella (UI-POHJAT: arvo lisätty tyylikirjaan). Ennen/jälkeen-stillit iPhone + iPad Päätoimittajalle ennen omistajaa.
+
+## PÄÄTOIMITTAJA: KAUPUNKINÄKYMÄN SÄVYT JA IPADIN TARKKUUS (juna 153) (6.10.2026 klo 19.28)
+
+LS1:n 152-stillit (d2a91ceb, iPad-simu, Akropolis kiinteästä kulmasta): aamu ja päivä OK; ilta liian voimakas (koko kuva tasaisen oranssi, taivas yksi väri) → LS1 2b7c8482: lämmin valo ja viileämmät varjot (SplitToning), kylläisyys noin −30 %, taivas kullasta siniseen (syy yhteen väriin: taivaskupoli puuttui stillien istunnosta). Automaattinen-tila saa sävyt oletukseksi vasta uuden kolmikon kuittauksen jälkeen (Natiivi-UI odottaa).
+
+Tarkkuus: kertoimella 1,00 (omistajan iPad Pro muistioikeudella, TF 151:stä alkaen) kaupunki lataa noin 3× laattoja, ja 25 s kohdalla tausta oli karkea ja kohde osin sulanut, kun 1,71 oli valmis. Päätös (laitemittaus ei ehto): saapuessa näkymän pitää valmistua yhtä nopeasti kuin 1,71:llä, lisätarkkuus vain tarkentumisena. LS1 tarkkuus-153 50d546c6: lento, siirto ja saapuminen karkealla valintakameralla (kerroin/1,71), pysähdyksessä laattojen ollessa ≥ 99 % valinta siirtyy pääkameraan ja tarkentuu tavoitekertoimeen (alaraja 1,3). Ennen omistajaa kolmikko 1,71 | 1,3 | 1,0 täydellä latauksella ja latausajat; jos 1,0 ei näytä paremmalta kuin 1,3, alaraja 1,3 jää. LS2:n matalan lennon sumeat laatat (14d/14e) todennäköisesti sama juurisyy → toistetaan kaksivaiheisen kanssa.
+
+## PÄÄTOIMITTAJA: JUNAN 153 NATIIVI-UI-OSAT KUITATTU JA KANADAN SÄVYLAIKUT (6.10.2026 klo 19.28)
+
+Natiivi-UI:n stillit (yhteinen appi d2a91ceb, lokit/natiivi-ui-1035/juna152-stillit/) kuitattu junaan 153: ISS-ohjaimen teleskooppijalka (iPhonella selvä tuki, iPadilla lyhyt kiinnike), vuorokausinappi vasemmassa yläkulmassa (A = automaattinen, kuvake = voimassa oleva tila) ja lista Automaattinen/Aamu/Päivä/Ilta, Mikä tämä on? ja Liiku-lista (9 kohdetta, Kaupunkikierros kiinni). 9b7a0a78 korjaa pysähdyksen otsikon ja vuorokausinapin sekä iPhonen Mikä tämä on? -napin ja oikean tapin päällekkäisyydet. LS2:n luotainkorjaus opas-vapaa-2 26f93462 (Eiffel-ristikko) junan 153 erä.
+
+Löydös: ISS-näkymässä Kanadan yllä meren päällä horisontin lähellä vaaleampia suorakulmaisia sävylaikkuja (lokit/paatoimittaja-havainnot-20261006/kanada-meri-suorakulmiot-d2a91ceb.png) → Karttaseppä: sama sävysovitus kuin Lapin riveillä 13–19 (yli 57,5° N), kuvapari ennen vientiä.
