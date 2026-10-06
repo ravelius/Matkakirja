@@ -695,7 +695,7 @@ export async function kohteetErana(haku, ehdokkaat) {
     nahty.add(id);
     const t = o.qid ? tiedot.get(o.qid) : null;
     const kuva = t?.kuva ? kuvalle.get(t.kuva) ?? null : null;
-    return { ...k, id, nimi: siivoa(t?.nimi, 80) || k.nimi, lat: o.lat, lon: o.lon, alarivi: siivoa(t?.kuvaus, 80) || null,
+    return { ...k, id, nimi: siivoa(t?.nimi, 80) || k.nimi, lat: o.lat, lon: o.lon, alarivi: siivoa(t?.kuvaus, 200) || null,
       kuva: kuva && kuvallaTekijatiedot(kuva) ? kuva : null };
   }).filter(Boolean);
 }

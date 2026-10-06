@@ -81,7 +81,20 @@ export function neutraaliKohde(k) {
   if (!k || !(KIISTANALAINEN.test(k.kaupunki ?? '') || KIISTANALAINEN.test(k.nimi ?? ''))) return k;
   return { ...k, kaupunki: 'Jerusalem', iso: null, alarivi: MAAN_NIMI.test(k.alarivi ?? '') ? null : k.alarivi ?? null };
 }
-export const neutraalitKohteet = (tulos) => (Array.isArray(tulos?.kohteet) ? { ...tulos, kohteet: tulos.kohteet.map(neutraaliKohde) } : tulos);
+/**
+ * Alarivi enintään `katto` merkkiä sanarajalla ja "…" (6.10.: 80 merkin leikkaus katkaisi "…arabiemiraate").
+ * Täsmälleen katon mittainen rivi on vanhan leikkauksen jälki välimuistissa, joten sekin lyhennetään sanarajalle.
+ */
+export function lyhytAlarivi(t, katto = 80) {
+  if (!t) return t ?? null;
+  if (t.length < katto) return t;
+  const pala = t.slice(0, katto - 1);
+  const raja = pala.lastIndexOf(' ');
+  return `${(raja > katto / 2 ? pala.slice(0, raja) : pala).replace(/[\s,;:–-]+$/, '')}…`;
+}
+export const neutraalitKohteet = (tulos) => (Array.isArray(tulos?.kohteet)
+  ? { ...tulos, kohteet: tulos.kohteet.map((k) => { const n = neutraaliKohde(k); return n ? { ...n, alarivi: lyhytAlarivi(n.alarivi) } : n; }) }
+  : tulos);
 export const MAAILMAN_SUOSIKIT_KEHOTE = `Valitset Matkakirja-pelin elävälle oppaalle maailman suosikkikohteet: 60 \
 tunnetuinta ja kiinnostavinta nähtävyyttä, joista pelaaja valitsee yhden ja kamera lentää sen ylle kertojan kertoessa. \
 Kohteet ovat yksittäisiä nähtävyyksiä, jotka näkyvät ilmasta (esimerkiksi Akropolis, Central Park, Sydneyn oopperatalo), \

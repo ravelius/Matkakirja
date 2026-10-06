@@ -32,7 +32,7 @@ import {
 } from './opaskeskustelu.js';
 import { reunaLue, reunaKirjoita, reunaPoista, pysyvaLue, pysyvaKirjoita, pysyvaPoista, kvLue, kvKirjoita } from './reuna.js';
 import {
-  KOHTEET_KEHOTE, kohteidenViesti, jasennaKohteet, kohdeAvain, paivaUtc, eilenUtc, MAAILMAN_SUOSIKKEJA, maailmanSuosikitAvain, neutraalitKohteet,
+  KOHTEET_KEHOTE, kohteidenViesti, jasennaKohteet, kohdeAvain, paivaUtc, eilenUtc, MAAILMAN_SUOSIKKEJA, maailmanSuosikitAvain, neutraalitKohteet, lyhytAlarivi,
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
 import {
@@ -3109,7 +3109,7 @@ async function oppaanLiikuLista(env, kaupunki, viite) {
         // kaupungin säde oleva samanniminen paikka pois.
         const kohteet = (await kohteetErana(fetch, ehdokkaat))
           .filter((k) => !viite || etaisyysKm(viite, k) <= OPAS_KAUPUNGIN_SADE_KM)
-          .map((k, i) => ({ id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: k.alarivi ?? null, luokka: k.luokka, tarkeys: i + 1 }));
+          .map((k, i) => ({ id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: lyhytAlarivi(k.alarivi) ?? null, luokka: k.luokka, tarkeys: i + 1 }));
         if (kohteet.length) {
           if (kohteet.length >= 8) await pysyvaKirjoita(env.PUHE_R2, avain, JSON.stringify(kohteet), KESKUSTELU_TTL_S);
           return kohteet;

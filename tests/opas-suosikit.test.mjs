@@ -30,7 +30,7 @@ const verkko = async (u) => {
   if (s.includes('wbgetentities')) {
     const ids = /ids=([^&]+)/.exec(s)[1].split('|');
     return new Response(JSON.stringify({ entities: Object.fromEntries(ids.map((q) => [q, { claims: { P18: [{ mainsnak: { datavalue: { value: `${q}.jpg` } } }] },
-      descriptions: { fi: { value: q === 'Q102' ? 'moskeija Jerusalemissa, Israelissa' : `kuvaus ${q}` } }, ...(q === 'Q101' ? { labels: { fi: { value: 'Oikea nimi' } } } : {}),
+      descriptions: { fi: { value: q === 'Q102' ? 'moskeija Jerusalemissa, Israelissa' : q === 'Q104' ? 'pilvenpiirtäjä ja maailman korkein rakennus Dubaissa Yhdistyneissä arabiemiraateissa' : `kuvaus ${q}` } }, ...(q === 'Q101' ? { labels: { fi: { value: 'Oikea nimi' } } } : {}),
       ...(q === 'Q103' ? { labels: { fi: { value: 'Nimiö' } }, sitelinks: { fiwiki: { title: 'Wikipedian nimi (tarkennin)' } } } : {}) }])) }));
   }
   if (s.includes('commons.wikimedia.org')) {
@@ -62,6 +62,7 @@ test('/opas/kohteet?n=50: 50 kohdetta erähaulla, kuvat vain tekijätiedoin, toi
     assert.equal(d.kohteet[1].nimi, 'Oikea nimi', 'Wikidatan suomenkielinen nimiö voittaa mallin nimen');
     assert.equal(d.kohteet[0].nimi, 'Kohde 0', 'ilman nimiötä mallin nimi');
     assert.equal(d.kohteet[3].nimi, 'Wikipedian nimi', 'fi-Wikipedian otsikko ilman tarkenninta voittaa nimiön');
+    assert.equal(d.kohteet[4].alarivi, 'pilvenpiirtäjä ja maailman korkein rakennus Dubaissa Yhdistyneissä…', 'alarivi sanarajalla');
     const jer = d.kohteet[2];
     assert.deepEqual([jer.kaupunki, jer.iso, jer.alarivi], ['Jerusalem', null, null], 'kiistanalainen sijainti neutraalisti (Päätoimittaja 6.10.)');
     assert.equal(d.kohteet[0].iso, 'FR');
