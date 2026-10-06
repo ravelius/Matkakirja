@@ -9,6 +9,7 @@
  * Sonnet valitsee ja kirjoittaa koukkurivin; koordinaatit nimellä (P625/Wikipedia) ja kuva Wikidatan P18:sta vapailla
  * lisensseillä. Välimuisti KV:ssä päivittäin (UTC), eli yksi mallikutsu päivää ja luetteloa kohden.
  */
+import { kenttarivit } from './rivit.js';
 
 export const KOHTEITA = 8;
 export const KOUKUN_KATTO = 90;
@@ -48,8 +49,8 @@ export function kohteidenViesti({ kaupunki = null, eiNaita = [] } = {}) {
 /** Mallin vastaus → [{ nimi, wikipedia, kaupunki, iso, koukku }] (enintään maara, kaksoiskappaleet pois). */
 export function jasennaKohteet(teksti, maara = KOHTEITA) {
   const tulos = [];
-  for (const m of String(teksti ?? '').matchAll(/^\s*KOHDE\s*:\s*(.+)$/gim)) {
-    const [nimi, wikipedia, kaupunki, iso, ...koukku] = m[1].split('|').map((x) => x.trim());
+  for (const rivi of kenttarivit(teksti, 'KOHDE', 4)) {
+    const [nimi, wikipedia, kaupunki, iso, ...koukku] = rivi.split('|').map((x) => x.trim());
     const k = { nimi: siivoa(nimi, 120), wikipedia: siivoa(wikipedia, 200) || null, kaupunki: siivoa(kaupunki, 80) || null,
       iso: /^[A-Za-z]{2}$/.test(iso ?? '') ? iso.toUpperCase() : null, koukku: koukuksi(koukku.join('|')) || null };
     if (k.nimi && k.koukku && !tulos.some((x) => x.nimi.toLowerCase() === k.nimi.toLowerCase())) tulos.push(k);

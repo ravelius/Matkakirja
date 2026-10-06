@@ -19,6 +19,7 @@
 
 import { pysyvaLue, pysyvaKirjoita } from './reuna.js';
 import { nominatimHaku, geometriaPisteiksi } from './nominatim.js';
+import { kenttarivit } from './rivit.js';
 
 export const OPAS_KAYDYT = 40;
 export const OPAS_TOIVE_KATTO = 300;
@@ -451,8 +452,8 @@ export function kierroksenViesti({ kaupunki, sijainti }, kaydytNimet = []) {
 
 /** Kierroksen suunnitelma mallin vastauksesta: [{ nimi, wikipedia, lat, lon, koko_m }] (enintään 10). */
 export function jasennaKierros(teksti) {
-  return [...String(teksti ?? '').matchAll(/^\s*PAIKKA\s*:\s*(.+)$/gim)].map((m) => {
-    const [nimi, wikipedia, lat, lon, koko] = m[1].split('|').map((x) => x.trim());
+  return kenttarivit(teksti, 'PAIKKA', 4).map((rivi) => {
+    const [nimi, wikipedia, lat, lon, koko] = rivi.split('|').map((x) => x.trim());
     const luku = (x) => Number(String(x ?? '').replace(',', '.'));
     return { nimi: siivoa(nimi, 120), wikipedia: siivoa(wikipedia, 200) || null, lat: luku(lat), lon: luku(lon),
       koko_m: Number.isFinite(luku(koko)) && luku(koko) > 0 ? Math.min(3000, Math.max(20, Math.round(luku(koko)))) : 150 };
