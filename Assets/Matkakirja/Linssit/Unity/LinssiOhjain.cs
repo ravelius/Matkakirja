@@ -2010,6 +2010,12 @@ namespace Matkakirja.Natiivi
                     if (osat.Length > 2 && osat[1] == "testi") OpasSovitin.Testi = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "testiotsake") OpasSovitin.Testiotsake = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "pysayta") OpasSovitin.Pysaytetty = osat[2] == "1";
+                    else if (osat.Length > 2 && osat[1] == "kamera" && osat[2] == "pois") OpasSovitin.KiinteaKamera = null;
+                    else if (osat.Length > 7 && osat[1] == "kamera")
+                    {
+                        OpasSovitin.KiinteaKamera = new Kuvakulma(Luku(osat[2]), Luku(osat[3]), Luku(osat[4]), Luku(osat[5]), Luku(osat[6]), Luku(osat[7]));
+                        Kirjaa($"opas: kamera kiinteä {OpasSovitin.KiinteaKamera}");
+                    }
                     else if (osat.Length > 2 && osat[1] == "pcm") OpasSovitin.PcmKaytossa = osat[2] == "1";
                     // Laitekokeet ilman kosketusta (juna 151): kierros, Liiku-kohde, lopetus, jatko ja kysymys kuten napeista.
                     else if (osat.Length > 1 && osat[1] == "testi429") OpasSovitin.TestiGoogle429();
