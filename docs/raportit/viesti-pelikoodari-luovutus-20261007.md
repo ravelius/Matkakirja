@@ -1,19 +1,27 @@
-# Pelikoodarin luovutus 7.10.2026 klo 00.3x Suomen aikaa
+# Pelikoodarin luovutus 7.10.2026 (päivitetty klo 02.3x)
 
 Uusi Pelikoodari: lue tämä, sitten docs/raportit/viesti-pelikoodari-aloitus.md. Edellinen: viesti-pelikoodari-luovutus-20261006.md.
 
-## Tehty 7.10. yöllä
-- #4081 tiet-v2 mergetty (Julkaisija), tiet-v2 ämpärissä; Linssiseppä lukee tiet_polut natiivissa (yovalot-154).
-- #4082 pidempi kerronta: Päätoimittaja kuittasi, perspektiivikorjaus (ei "seisot paikalla"), SHA de260c98 Julkaisijalle.
-- #4085 (luonnos #4082:n päällä): vuosiluvut numeroina mallilta, tools/pollo/puhesanat.js muuntaa ne sanoiksi vain ElevenLabsille.
-- #4086 lyhin reitti: lyhinReitti (lähin seuraava + 2-opt), lukitun listan kierros + /opas/liiku kierros-kenttä
-  (Linssiseppä lukee junasta 156). Pariisi 18,8 → 11,1 km.
-- #4084 äänikartan laskin (tools/aanimaisema/tee-aanikartta.mjs): aallot nolla sisämaassa, kellot Wikidata ensin.
-  Vientipaketti _valmiit/aanimaisema-vienti-20261006 (pariisi.json, LAHTEET.md, SHA256SUMS, --kuiva ok) Julkaisijalle.
-- Mallimittaus Päätoimittajalle: tuotanto on jo Sonnet 5.5 (ei Haiku). Opus 5.5 low 0/6 kielivirhettä, 5,5 snt, 16 s;
-  vaatii effort- ja max_tokens-tuen kysyMalliin. Hintapäätös Päätoimittajalla. Tekstit _tyo/aanimaisema-v1/kerronta/malli-*.json.
+## Julki / mergetty 7.10. yöllä
+#4081 tiet-v2, #4082 pidempi kerronta, #4089 vuosiluvut numeroina → puheeseen sanoina (korvasi #4085), #4086 lyhin reitti
+(+ Liikun kierros-kenttä, LS1 junassa 156), #4084 äänikartan laskin, #4090 Pariisin äänikartta indeksiin.
+Ämpärissä: aanet/aanikartta-v1/pariisi.json, aanet/aanimaisema-v1/<kerros>-01.mp3 (14 silmukkaa; CC BY -tekijät krediitteihin,
+Siirtoseppä vie). Siirtoseppä ajaa todistustallenteen (mp3-sauma: tee ogg/wav, jos katko kuuluu).
 
 ## Auki
-- Odottaa Päätoimittajaa: mallivalinta, #4084/#4086 kuittaus. #4085 ready kun #4082 on mainissa.
-- Äänimaisema: Freesound-valinta ja PCM-ketju (ks. edellinen luovutus); id aineistot.js:ään vasta kun silmukat ämpärissä.
-- Worktree vain pelikoodari-pidempi-kerronta (poista #4082:n mergen jälkeen).
+- #4088 Opus-kytkin (ei päälle; omistaja: kertoja pysyy Sonnet 5.5). #4092 sallitut 3D-kaupungit (36, LS2): kenttä heti, esto
+  OPAS_SALLITUT_ESTO=1 vasta kun juna 157 TF:ssä.
+- ESIGENEROITU ESITTELY (omistaja 00.4x): haara pelikoodari-esittely (ei vielä PR): tools/opas/ (pohja, tarkistin, kooste, äänet,
+  kuuntelu, siltalauseet-v2), tools/pollo/opas-esittely.js + worker tarjoaa valmiin tekstin (valmis: true), aineistot esittely: [].
+  Pilotti Pariisi/Praha/Wien: tekstit _tyo/opas-esittely/korjattu/ (Päätoimittaja kuittasi), äänet R2:ssa + kuuntelukoosteet
+  _tyo/opas-esittely/aanet/kuuntelu/ → OMISTAJA KUUNTELEE AAMULLA. Sen jälkeen: vienti opas/esittely-v1/<id>.json (vie-paketti),
+  esittely-indeksi auki, PR. Muut 31 kaupunkia: omistajan pilvisessio esittely-tyo/OHJE-pilvi.md (haara pelikoodari-esittely-pilvi).
+  Isoisä vain julkaistusta merkinnästä (fokusvirta-*.js), "Kun tulet paikalle" ≤ 1/kaupunki.
+- Siltalauseet "ei-sallittu" (4 kpl, Päätoimittaja hyväksyi tekstit): tools/opas/tee-siltalauseet-v2.mjs valmis, EI ajeta ennen
+  omistajan lupaa; sitten LS1 lukee siltalauseet-v2-polun.
+- Äänikartat Venetsia + Kööpenhamina ajossa (_valmiit/aanimaisema-vienti-20261007b) → tarkistuskuva, LAHTEET, SHA, vienti, indeksi.
+- Yövalojen tiet 29 sallittuun kaupunkiin (säde min(r_m, 6 km), ≥ 3 km) — odottaa LS1:n kuittausta.
+- Kuvalista: tee-opas-kuvat.mjs ottaa puuttuvat kaupunkikoordinaatit pallopisteistä (esittely-haarassa) → kuvat-v3.
+
+## Opit
+Agent isolation "remote" ajoi paikallisesti Matkakirja-fable/.claude/worktrees (11 Gt) → pysäytetty, siivottu (muisti).
