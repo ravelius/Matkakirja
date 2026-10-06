@@ -21,7 +21,7 @@ ja käännökset, simut ja iPad vain Julkaisijan NYT-viestillä.
 - **JUNA 156:** yövalot (LS1 960b1bd7 / v5 koe-154 d78bd96e). iPad-mittaus mitätön, koska iPadin Wi-Fi on pois (omistaja kytkee
   huomenna töissä). d78bd96e on asennettuna iPadissa 00008103. Lisäksi äänimaiseman pilotti, kun kuitattu.
 - **MAC v1:** 62f6b368 kaatui Burst AOT -linkkiin (hostmac-työkaluilta puuttui suoritusbitti). Korjaus f5d0e029
-  (natiiviseppa/mac, wt/proto-natiiviseppa-mac). Vuoro Julkaisijalta NUI:n 241fb080-käännöksen jälkeen (~23.50):
+  (natiiviseppa/mac, wt/proto-natiiviseppa-mac). SIIRTYY TILINVAIHDON JÄLKEEN: jonon ensimmäinen, aloitetaan vasta uuden Julkaisijan KÄÄNNÖS NYT -viestistä:
   `perl -e 'use POSIX; exit if fork; setsid; exec "zsh", @ARGV' /Users/Shared/Claude/wt/proto-natiiviseppa-mac/tyokalut/mac-kaanna.sh f5d0e029 1.1.0 154`
   Tulos lokit/kaannospalvelu/*-mac-f5d0e029.log (KÄÄNNETTY-MAC / VIKA). .app Matkakirja-proto-mac/Build/mac/. Valmistuttua
   "lukko vapaa" Julkaisijalle; NUI tarkistaa ikkunan, skaalan ja hiiren.
