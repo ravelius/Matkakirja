@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (154)",
+   "paiva": "2026-10-06",
+   "teksti": "Linssivalikossa on nyt kuvat, ja kaupunkinäkymän sävy seuraa paikallista vuorokaudenaikaa. Oppaan nappirivi piiloutuu väkäsen alle, kuvanappi on pienempi ja noston ylärivi on selkeämpi. Opas puhuu ilman katkoja, ja ISS-ikkunan meri on yhtenäisen sininen."
+  },
+  {
    "versio": "1.1 (153)",
    "paiva": "2026-10-06",
    "teksti": "Elävä opas vastaa nyt kysymyksiin ja löytää kohteet kaikissa kaupungeissa; uutena ”Mikä tämä on?” ja vuorokausinappi. Kaupunki näkyy saapuessa nopeasti ja tarkentuu, eikä karttalähteiden rivi enää välähdä. Peli alkaa mustalla ruudulla ilman ylisuurta logoa."
