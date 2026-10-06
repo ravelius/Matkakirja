@@ -197,6 +197,8 @@ namespace Matkakirja.Natiivi
                         case "yohehku": KaupunkiYovalot.Hehku = v; break;
                         case "yopisteet": KaupunkiYovalot.Pisteet = v; break;
                         case "yosolu": KaupunkiYovalot.SoluM = v; break;
+                        case "yoikkunat": KaupunkiYovalot.Ikkunat = v; break;
+                        case "yoikkunaosuus": KaupunkiYovalot.IkkunaOsuus = v; break;
                     }
                 }
                 return true;

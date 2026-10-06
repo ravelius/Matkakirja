@@ -19,9 +19,10 @@ namespace Matkakirja.Natiivi
 {
     public static class KaupunkiYovalot
     {
-        /// <summary>Viritys (KaupunkiKuva-asetukset "yovalot 0|1", "yohehku", "yopisteet", "yosolu").</summary>
+        /// <summary>Viritys (KaupunkiKuva-asetukset "yovalot 0|1", "yohehku" = valosaaste, "yopisteet" = katuvalot, "yosolu" (m),
+        /// "yoikkunat" = ikkunoiden voima, "yoikkunaosuus" = palavien ikkunoiden osuus enintään). v2 simun 21.5x kuvista.</summary>
         public static bool Kaytossa = true;
-        public static float Hehku = 0.9f, Pisteet = 1.2f, SoluM = 28f;
+        public static float Hehku = 0.10f, Pisteet = 1.3f, SoluM = 22f, Ikkunat = 0.9f, IkkunaOsuus = 0.55f;
         /// <summary>Natrium-oranssi (omistaja) ja valkoisten LED-pisteiden osuus.</summary>
         public static Color Vari = new Color(1.0f, 0.62f, 0.28f, 0.25f);
 
@@ -33,7 +34,8 @@ namespace Matkakirja.Natiivi
         static HashSet<string> olemassa;
         static bool indeksiHaussa;
         static readonly int IdValot = Shader.PropertyToID("_Valot"), IdMatriisi = Shader.PropertyToID("_MaailmaPaikallinen"),
-            IdAlue = Shader.PropertyToID("_ValoAlue"), IdParam = Shader.PropertyToID("_ValoParam"), IdVari = Shader.PropertyToID("_ValoVari");
+            IdAlue = Shader.PropertyToID("_ValoAlue"), IdParam = Shader.PropertyToID("_ValoParam"), IdVari = Shader.PropertyToID("_ValoVari"),
+            IdIkkunat = Shader.PropertyToID("_IkkunaParam");
         const int Koko = Matkakirja.Linssit.Kierros.KaupunkiYovalot.PxAste * Matkakirja.Linssit.Kierros.KaupunkiYovalot.Ruudukko;   // 720
 
         /// <summary>Kerran kehyksessä kaupunkinäkymässä. osuus 0–1 (hämärä → yö); isanta ajaa latauskorutiinit.</summary>
@@ -56,6 +58,7 @@ namespace Matkakirja.Natiivi
             materiaali.SetVector(IdAlue, new Vector4(kulma.Value.lon, kulma.Value.lat, (float)georef.latitude, (float)georef.longitude));
             materiaali.SetVector(IdParam, new Vector4((float)osuus, Hehku, Pisteet, Mathf.Max(5f, SoluM)));
             materiaali.SetVector(IdVari, new Vector4(Vari.r, Vari.g, Vari.b, Vari.a));
+            materiaali.SetVector(IdIkkunat, new Vector4(Ikkunat, Mathf.Clamp01(IkkunaOsuus), 0f, 0f));
         }
 
         static IEnumerator Lataa((int lat, int lon) k, double lat, double lon)
