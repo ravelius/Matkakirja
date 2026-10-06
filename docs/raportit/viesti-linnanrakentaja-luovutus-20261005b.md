@@ -105,3 +105,12 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
 - FACEIT: omistaja todennäköisesti ostaa → 15 ARKit-muotoa kahteen pohjapäähän + visemiraidat datasta (ElevenLabs/Rhubarb).
 - ACTORCORE: lista Päätoimittajalle. EULA kieltää jakelun kolmansille, joten julkinen ämpäri vaatii Reallusionin kuittauksen.
   Suositus: ei tilausta nyt.
+
+## Päivitys 6.10. klo 15.0x
+- FACEIT (omistaja osti 2.3:n, Päätoimittaja hyväksyi vouti-kokeen): kaikki 11 hahmoa linna-hahmot/faceit-v1 (= mixamo-v4 + pää + ilmeet).
+  Skriptit tools/dioraama/blender/{hahmo_paa,faceit_paa,faceit_leivo}.py + hahmot_faceit.sh (haara linnanrakentaja-faceit,
+  esineiden #4052 päällä; PR vasta #4052:n mergen jälkeen, ei pinottuja). Faceit asennettu Blenderiin (bl_ext.user_default.faceit),
+  lisäosa _lahteet/faceit (ei repoon). Leivonnassa modifier_action FACEIT (REMOVE poisti vartalon skinnauksen!).
+  v39 blender 0265cd493b0728f4, peili 94a0df22044155fa. Kappelin keskustelun kohdistus aanet.js:ssä, rakenna.mjs välittää sen.
+  Muiden äänten kohdistukset: _valmiit/linna-kohtaukset-v3/raaka/*-vastaus.json. Natiivin morph-tuki Siirtosepällä, juna 150.
+- Esittelyvideot (148b ja linna-149 + peili feea163c): Siirtoseppä ajaa ~15.50, minä tarkistan ruuduittain → Päätoimittaja.
