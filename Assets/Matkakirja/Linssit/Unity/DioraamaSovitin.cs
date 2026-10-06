@@ -179,9 +179,6 @@ namespace Matkakirja.Natiivi
             latausOsuus = 0f;
             DioraamaLevyvalimuisti.NollaaEdistys();
             DioraamaTaulu.LatausEdistyminen = LatausOsuus; // Natiivi-UI:n latauspalkki (omistaja hyväksyi 5.10. klo 14.0x, juna 144)
-            // Puhujakuva (Natiivi-UI:n pohja, omistaja 5.10. klo 14.3x): ankkuri puhujan pään yläpuolella ja näyttämön kamera.
-            Puhujakuva.Ankkuri = () => DioraamaHahmot3D.PuhujanPaa;
-            Puhujakuva.Kamera = () => AktiivinenKamera;
             y = ymparisto;
             avoinna = true;
             kelloSiirto = 0;
@@ -366,11 +363,8 @@ namespace Matkakirja.Natiivi
             if (puhuva != null) DioraamaHahmot3D.Puhuja = puhuva;
             else if (!KuunnelmaKaistale.SoiNyt) DioraamaHahmot3D.Puhuja = DioraamaHahmot3D.EdellinenPuhuja = null; // keskustelu ohi
             DioraamaHahmot3D.PuhujanTila = nakyma.KohdeTila;
-            // Puhujakuva: henkilö + ilme vuoron mukaan, kertojan ja hiljaisuuden aikana pois (saman arvon toisto ei tee mitään).
-            string henkilo = null;
-            if (puhuva != null && nakyma.KohdeTila != null && rakennus.Tila(nakyma.KohdeTila) is Tila puhTila)
-                foreach (var h in puhTila.Hahmot) if (h.Id == puhuva) { henkilo = h.HenkiloId; break; }
-            Puhujakuva.Viimeisin?.Aseta(henkilo, henkilo != null ? KuunnelmaKaistale.PuhuvaIlme : null);
+            // Puhujakuva (Codexin kasvot) pois linnasta (omistaja 6.10.2026: "ota codexin kasvot pois linnasta, se ei toimi"); vuorojen
+            // ilme-kenttä jää dataan myöhempiä 3D-kasvoja varten.
             if (puhuva != null && nakyma.KohdeTila != null && nakyma.Hahmot != null)
                 for (int hi = 0; hi < nakyma.Hahmot.Count; hi++)
                 {
@@ -420,13 +414,16 @@ namespace Matkakirja.Natiivi
         }
 
         // LINNA AUKEAA VAAKANA (omistaja 4.10. 20.2x): iPhonella poikkileikkaus lukittuu vaaka-asentoon avattaessa (laitteen
-        // vaakasuunta, jos puhelin on jo vaakana) ja palaa suljettaessa pelaajan aiempaan asentoon; iPad ennallaan.
+        // vaakasuunta, jos puhelin on jo vaakana) ja palaa suljettaessa pelaajan aiempaan asentoon. iPad myös (omistaja 6.10.2026:
+        // "ipadissa näyttö voisi myös kääntyä valmiiksi vaakatilaan tässä linssissä"; Unity 6 käyttää iPadOS 16+:ssa
+        // requestGeometryUpdatea, UIRequiresFullScreen = true). Paluussa ensin entinen asento ja seuraavassa kehyksessä
+        // automaattikierto takaisin (Natiiviseppä 6.10.: Screen.orientation = asentoEnnen lukitsi laitteen siihen asentoon).
         static ScreenOrientation? asentoEnnen;
         static void LukitseVaaka(bool paalle)
         {
             if (paalle)
             {
-                if (asentoEnnen.HasValue || !Application.isMobilePlatform || UiKerros.Tabletti) return;
+                if (asentoEnnen.HasValue || !Application.isMobilePlatform) return;
                 asentoEnnen = Screen.orientation;
                 var pyydetty = Input.deviceOrientation == DeviceOrientation.LandscapeRight ? ScreenOrientation.LandscapeRight : ScreenOrientation.LandscapeLeft;
                 Screen.orientation = pyydetty;
@@ -438,9 +435,17 @@ namespace Matkakirja.Natiivi
             else if (asentoEnnen.HasValue)
             {
                 Screen.orientation = asentoEnnen.Value;
-                Debug.Log($"MATKAKIRJA linssit: poikki: linna suljettu, asento palautettu ({asentoEnnen})");
+                Debug.Log($"MATKAKIRJA linssit: poikki: linna suljettu, asento palautettu ({asentoEnnen}), automaattikierto seuraavassa kehyksessä");
                 asentoEnnen = null;
+                UiKerros.Hae().StartCoroutine(AutomaattikiertoTakaisin());
             }
+        }
+
+        static IEnumerator AutomaattikiertoTakaisin()
+        {
+            yield return null;
+            if (asentoEnnen.HasValue) yield break;   // linna avattiin uudelleen välissä
+            Screen.orientation = ScreenOrientation.AutoRotation;
         }
 
         static IEnumerator KirjaaToteutunutAsento(ScreenOrientation pyydetty)
