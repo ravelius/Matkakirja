@@ -332,6 +332,8 @@ namespace Matkakirja.Natiivi
             OpasSovitin.LatausKuvaVaihtui += LatausKuvaVaihtui;
             // Sallitut saapuvat oppaan avauksessa (aloitusvalikko jo auki): lista uudelleen, jotta rajaamaton ei jää näkyviin.
             OpasSovitin.SallitutVaihtui += () => { if (nakyy && Auki) Rakenna(); };
+            // Torjunta tekstinä (LS1 sallitut-157): "vie minut X" / Liiku / kaupunki listan ulkopuolelle, kun siltalause ei soinut.
+            OpasSovitin.TorjuntaTeksti += t => { if (nakyy) { Debug.Log("MATKAKIRJA opas: torjunta tekstinä"); UiNakymat.Hae()?.Chat?.Vastaa(t); } };
             Viimeisin = this;
         }
 
@@ -1694,6 +1696,7 @@ namespace Matkakirja.Natiivi
                     if (p.Length == 2) { maanosa = p[0]; maa = p[1]; }
                     Avaa(Nakyma.Kaupungit);
                     return $"opas: kaupungit {maanosa} / {maa}";
+                case "torjunta": UiNakymat.Hae()?.Chat?.Vastaa(OpasSovitin.EiSallittuTeksti); return "opas: torjunta → chat";
                 case "sallitut":
                 {
                     var kaikki = Kaupungit?.Invoke(); var vain = VainSallitut(kaikki);
