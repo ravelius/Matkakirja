@@ -36,6 +36,7 @@ import {
   LAHELLA_OLETUS_M, LAHELLA_LAAJA_M, LAHELLA_ENINTAAN, LAHELLA_HAKUSADE_M, lahellaRuutu,
   MAAILMAN_SUOSIKIT_KEHOTE,
 } from './kohteet.js';
+import { OPAS_AINEISTOT } from './aineistot.js';
 import { kuvalista, kohteenKuvat, kaupunginKohteet, listanKuvin, kuvaKaupunkitilassa, LUKITTU_VAHINTAAN } from './opas-kuvat.js';
 import {
   siivoaKuva, kuvaKontekstiksi, kuvaSirujenAvain, lueKuvasirut, KUVASIRUKEHOTE, KUVASIRUJA, KUVASIRUJEN_TTL_S,
@@ -3559,6 +3560,13 @@ export default {
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/kysymykset') return hoidaOppaanKysymykset(pyynto, env, kors);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/liiku') return hoidaOppaanLiiku(pyynto, env, kors);
     if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/lahella') return hoidaOppaanLahella(pyynto, env, kors);
+    if (pyynto.method === 'GET' && new URL(pyynto.url).pathname === '/opas/aineistot') {
+      // Staattisten aineistojen indeksi (aineistot.js); lyhyt välimuisti, jotta uusi kaupunki näkyy pian viennin jälkeen.
+      if (!oppaanAsiakas(pyynto, kors, env)) return new Response('Origin ei ole sallittu', { status: 403 });
+      const v = vastaa(OPAS_AINEISTOT, kors);
+      v.headers.set('cache-control', 'public, max-age=300');
+      return v;
+    }
     if (pyynto.method !== 'POST') {
       return vastaa({ virhe: 'menetelma', viesti: 'Vain POST.' }, { status: 405, ...kors });
     }
