@@ -1,5 +1,6 @@
 # 12 ISS-ohjaamo (omistaja 4.10. 11.3x: asentoa ohjataan VAIN joystickilla, plus-kuvio, yksi suunta kerrallaan):
-# Cupola → joystick keskeltä (kuollut alue: ei suuntaa) → veto oikealle ja pito (Oikea, irrotus → Ei) → pallon veto
+# Cupola → joystick PIIRRETYN sauvan keskeltä (sauvakuvan x 36 %, ei laatikon keskeltä; Päätoimittaja 6.10.: TF 145 antoi
+# Vasen, Natiivi-UI:n joystick-145.png) → ei suuntaa → veto oikealle ja pito (Oikea, irrotus → Ei) → pallon veto
 # ohjaamon yläpuolella EI ohjaa joystickia eikä katsetta (kuvat ennen/jälkeen samasta suunnasta).
 linssi linssi satelliitti
 oleta 30 linssit: auki: satelliitti -- astronautin kamera aukesi
@@ -8,10 +9,10 @@ linssi astro kyyti
 oleta 30 astro kyyti: Ikkuna -- Cupolaan (kyyti Ikkuna)
 nakyy 30 mk-issohjaamo__sauvakuva -- joystick näkyy (kuvanahka: sauvakuva; osuma-ala ei piirry ui-puuhun)
 odota 4
-veto-kohta 0.5 0.5 0.5 0.5 1 mk-issohjaamo__sauvakuva
-ei-oleta 3 ohjaamon joystick (Ylos|Alas|Vasen|Oikea) -- joystick keskeltä: ei suuntaa (kuollut alue)
+veto-kohta 0.36 0.5 0.36 0.5 1 mk-issohjaamo__sauvakuva
+ei-oleta 3 ohjaamon joystick (Ylos|Alas|Vasen|Oikea) -- PIIRRETYN sauvan keskeltä (36 % kuvan leveydestä): ei suuntaa (TF 145: Vasen)
 kuva 12a-keski Joystick painettu keskeltä: ei liikettä
-veto-kohta 0.5 0.5 0.9 0.5 2 mk-issohjaamo__sauvakuva
+veto-kohta 0.36 0.5 0.9 0.5 2 mk-issohjaamo__sauvakuva
 oleta 6 ohjaamon joystick Oikea -- veto oikealle: suunta Oikea
 oleta 6 ohjaamon joystick Ei -- irrotus: suunta Ei
 kuva 12b-oikea Joystick oikealle ja irti

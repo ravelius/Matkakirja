@@ -1,4 +1,4 @@
-# Elävä opas (EI vakiosarjassa; ajetaan ilman ääntä): avaus (Kööpenhamina) → tervetulo + 2 sirua → "Esittele kaupunki" (oikea tap) → 1. kohde saapuu →
+# 11 Elävä opas (ilman ääntä, testiotsake): avaus (Kööpenhamina) → tervetulo + 2 sirua → "Esittele kaupunki" (oikea tap) → 1. kohde saapuu →
 # ☰ → Vaihda kohde → Eurooppa → Alankomaat → Amsterdam → Amsterdamin vastaus. Oikea worker (Pöllö), mutta ILMAN ääntä
 # (omistaja 6.10.: "Ei, ilman ääntä"): testiotsake x-matkakirja-testi → worker ei anna ääni-urlia eikä kutsu ElevenLabsia.
 # Valmiit (jo tuotetut) silta-/maaleikkeet saavat soida. Kohteiden ääni = ei-testattu.
@@ -14,7 +14,7 @@ oleta 5 opas: valinta "Esittele kaupunki" -- sirun napautus välittyi
 oleta 90 opas: saapui -- 1. kohde saapui
 odota 4
 kuva 11b-kohde1 Elävä opas: 1. kohde
-tap-teksti mk-ohjausnappi
+tap-teksti mk-ohjausnappi#2
 nakyy 6 Vaihda kohde -- oppaan ☰ avasi valikon
 tap-teksti Vaihda kohde
 nakyy 6 Eurooppa -- maanosat
