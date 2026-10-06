@@ -9,7 +9,11 @@
   LS2:n natiivi lukee ketjun v2-korjaus3 → v2-korjaus2 → v2 ja Euroopan kerroksen (9479a9ee), joten pienet korjaukset menevät
   jatkossa uutena kerroksena (v2-korjaus4, v2-korjaus2 jne.) vie-paketti.sh:lla.
   Työkalut: paikka-otto.mjs (selkeät otot, pikselikohtainen valinta) ja PIL-viimeistely, koska jpeg-js tummentaa noin 1 DN per kierros.
-- **Tunnetut jäännökset:** Amazonin itäkaista, Sumbawan maasauma, 11SQR:n ja 11RQQ:n mieto vino sävyraja (Meksiko v2e).
+- **6.10. 12.08 viety (Julkaisija):** s2-maailma/v2-korjaus4/ (Amazonin itäkaista + Sumbawa: sauma.mjs ja kaista.mjs, 161 laattaa) ja
+  S2-indeksi v2f (11RQQ:n varakuvan savy). v2f:n osoitinvaihto (LS2) vasta junan 147 VIE:n jälkeen; v2-korjaus4 LS2:n ketjuun junassa 149.
+- **Jäännökset (PT: ei uusia kierroksia):** Amazonin ja Sumbawan ohuet saumaviivat (mosaiikin reunajuova). S2-erät ovat suljettu.
+- **Työkalut:** tasaus.mjs, tasaus-kentta.mjs, rengas.mjs, paikka-otto.mjs (selkeät otot), sauma.mjs (saumapehmennys),
+  kaista.mjs (monikulmiotasaus) ja viimeistele-png.py (PIL-pakkaus ilman 1 DN:n vinoumaa, aina viimeinen vaihe).
 
 ---
 
