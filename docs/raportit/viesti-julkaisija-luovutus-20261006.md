@@ -41,7 +41,7 @@ roolien todisteet → Päätoimittaja VIE → JUNAN AVAUS NYT Natiivisepälle �
 1. **Mac v1** (Natiiviseppä, natiiviseppa/mac + korjaus f5d0e029; edellinen 62f6b368 VIKA 22.53 Burst AOT -linkki /
    suoritusbitti). ~15–30 min, irrallisena (perl setsid). Rinnalla enintään 1 mykkä simu, ei muita käännöksiä.
    Natiiviseppä odottaa KÄÄNNÖS NYT -viestiä.
-2. **LS1 koe-156 03b569d3** (master 8878ab70 + yövalot v5 + juna 156 esilataus/Seuraava/latauskuva): käännös + ~20 min
+2. **LS1 linssiseppa/koe-156, käännä haaran kärki** (70f0bca62 = 03b569d3 + pehmeät lennot ja lentomittari; master 8878ab70 + yövalot v5 + juna 156 esilataus/Seuraava/latauskuva): käännös + ~20 min
    3A3E4671: (a) BUILD 154 -appi natiiviseppa-app-154lopullinen-787db464 Pariisi+Sydney (ennen), (b) koe-156 sama (jälkeen),
    (c) koe-156 yövalot v5 (iPad, sitten D0D2CD1E iPhone ~5 min). Päätoimittajan ennen/jälkeen-esilatausmittaus.
    **Lupa annettu käyttää 154-appia** (vain asennus simuun, ei muokkausta).
