@@ -54,9 +54,9 @@ namespace Matkakirja.Natiivi
         public static bool Pysaytetty;
         /// <summary>Testiotsake (komento "opas testiotsake 1"): worker palauttaa kerronnan ilman ääntä (ei ElevenLabs-kulutusta simussa).</summary>
         public static bool Testiotsake;
-        /// <summary>PCM-suoratoisto (Pöllön aani_pcm) käytössä. Oletus pois, kunnes virta on todennettu simulla äänen kanssa
-        /// (Päätoimittaja 5.10. 20.3x: juna 144 ilman riskiä); pois-tilassa käytetään mp3:a (aani) kuten ennen. Komento "opas pcm 0|1".</summary>
-        public static bool PcmKaytossa;
+        /// <summary>PCM-suoratoisto (Pöllön aani_pcm) käytössä. OLETUS PÄÄLLÄ (Päätoimittaja 6.10. 13.2x, juna 148): Pöllön kylmä mp3 alkaa
+        /// ~14 s:ssa, PCM-virta ~0,9 s:ssa (mitattu 6.10. 13.1x). Virran virheessä mp3-varapolku (LataaPcm). Komento "opas pcm 0|1".</summary>
+        public static bool PcmKaytossa = true;
         /// <summary>Kappaleen äänen avain: PCM-virta vain kytkimellä, muuten mp3.</summary>
         static string AaniAvain(OpasKohde k) => k == null ? null : PcmKaytossa ? k.AaniAvain : (string.IsNullOrEmpty(k.Aani) ? null : k.Aani);
         /// <summary>Aloituskaupunki (komento "opas kaupunki <nimi>"); ensimmäinen pyyntö on tämä toive.</summary>
@@ -100,6 +100,7 @@ namespace Matkakirja.Natiivi
             Aloituskaupunki = nimi.Trim();
             Viimeisin.pakotettuSijainti = (lat, lon);
             Viimeisin.o.Kirjaa($"opas: kaupunki vaihtuu → {Aloituskaupunki} ({lat:F3}, {lon:F3})");
+            if (!Viimeisin.AvaaKaupunki(lat, lon, Aloituskaupunki)) return false;
             Viimeisin.silmukka.VaihdaPaikka(lat, lon, nimi.Trim());   // kamera lentää heti kaupungin yleiskuvaan (Natiivi-UI 6.10. 00.2x)
             var v = Viimeisin;
             if (!v.SanoNimi(nimiaanet?.Kaupungille(iso, nimi))) v.Silta(OpasSiltalauseet.Kaupunki, true);
@@ -150,7 +151,10 @@ namespace Matkakirja.Natiivi
             Viimeisin = this;
             var alku = OpasSilmukka.Avauskuva(KoopenhaminaTesti.Alku.Lat, KoopenhaminaTesti.Alku.Lon);
             silmukka = new OpasSilmukka(alku);
-            if (!kaupunki.Avaa(alku.Lat, alku.Lon, 45))
+            // AVAUS ILMAN KARTTAA (omistaja 6.10. 14.2x, juna 149): täkyavauksessa Cesium avataan vasta pelaajan valinnasta
+            // (AvaaKaupunki), joten aloitusvalikko aukeaa heti eikä yhtään laattaa ladata ennen valintaa.
+            kaupunkiOdottaa = TakyAvaus && !Testi;
+            if (!kaupunkiOdottaa && !kaupunki.Avaa(alku.Lat, alku.Lon, 45))
             {
                 Virhe = OpasTiedot.Nimi + ": " + kaupunki.Virhe;
                 Vaihtui?.Invoke(this);
@@ -164,7 +168,7 @@ namespace Matkakirja.Natiivi
             y.Pelikerrokset(false);
             y.MusiikkiPitoon(true);
             y.Peite(true);
-            o.StartCoroutine(PeitePois());   // simu 18.39: peite jäi päälle ja tummensi koko näkymän
+            if (!kaupunkiOdottaa) o.StartCoroutine(PeitePois());   // simu 18.39: peite jäi päälle ja tummensi koko näkymän
             if (puhe == null)
             {
                 puhe = o.gameObject.AddComponent<AudioSource>();
@@ -177,8 +181,12 @@ namespace Matkakirja.Natiivi
             silmukka.Kysyy += Kysyy;
             silmukka.LentoAlkaa += LentoAlkoi;
             // Siirto ilman lentoa (omistaja 6.10. 12.0x): origo heti kohteeseen, latausaste kohdekameran laatoista.
-            silmukka.SiirtoAlkaa += (la, lo) => { kaupunki.SiirraOrigo(la, lo, 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
+            silmukka.SiirtoAlkaa += (la, lo) => { kaupunki.SiirraOrigo(la, lo, MaaPisteessa(la, lo) is double m && !double.IsNaN(m) ? m : 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
             silmukka.LatausEdistys = () => kaupunki.Latausaste / 100.0;
+            // Maaston korkeus kohdekehykseen (simu 6.10. 12.42: Praha aukesi 45 m:n arviolla mäen sisältä): näyte pisteeseen.
+            silmukka.MaaPisteessa = MaaPisteessa;
+            silmukka.MaaTarvitaan += (la, lo) => o.StartCoroutine(KorkeusPisteessa(la, lo));
+            silmukka.KehysKorjattu += (arvio, m) => o.Kirjaa($"opas: kehyksen maa {arvio:F0} → {m:F0} m (näyte)");
             if (silta == null)
             {
                 silta = o.gameObject.AddComponent<AudioSource>();
@@ -194,7 +202,7 @@ namespace Matkakirja.Natiivi
             else silmukka.Aloita(Aloituskaupunki);
             PaivitaKamera();
             Vaihtui?.Invoke(this);
-            o.Kirjaa($"opas: auki, data {kaupunki.Kaytossa}, {(Testi ? "TESTI (ei workeria)" : "worker " + PuluChat.Palvelin + Polku)}{(PolloTestitunnus.Asetettu ? ", testitunnus asetettu" : "")}");
+            o.Kirjaa($"opas: auki{(kaupunkiOdottaa ? " (aloitusvalikko, kartta valinnasta)" : "")}, data {kaupunki.Kaytossa}, {(Testi ? "TESTI (ei workeria)" : "worker " + PuluChat.Palvelin + Polku)}{(PolloTestitunnus.Asetettu ? ", testitunnus asetettu" : "")}");
         }
 
         // Natiivi-UI:n koukku (PuluChat.Sieppaa, haara natiivi-ui/pulu-sieppaus) heijastuksella, jotta tämä kääntyy myös ilman sitä.
@@ -219,6 +227,28 @@ namespace Matkakirja.Natiivi
             else kentta.SetValue(null, vanhaSieppaus);
         }
 
+        /// <summary>Aloitusvalikko: opas auki, paikkaa ei valittu, Cesium ei auki (UI piirtää läpinäkymättömän tumman taustan).</summary>
+        public static bool Avausvalikko => Auki && Viimeisin.kaupunkiOdottaa;
+        bool kaupunkiOdottaa;
+
+        /// <summary>Ensimmäinen valinta: Cesium auki suoraan kohteeseen, ja paikka avautuu siirtoruudun kautta. true = auki.</summary>
+        bool AvaaKaupunki(double lat, double lon, string nimi)
+        {
+            if (!kaupunkiOdottaa) return true;
+            kaupunkiOdottaa = false;
+            double maa = MaaPisteessa(lat, lon);
+            if (!kaupunki.Avaa(lat, lon, double.IsNaN(maa) ? 45 : maa))
+            {
+                Virhe = OpasTiedot.Nimi + ": " + kaupunki.Virhe;
+                Vaihtui?.Invoke(this);
+                return false;
+            }
+            o.StartCoroutine(PeitePois());
+            silmukka.PakotaSiirto = true;
+            o.Kirjaa($"opas: kartta auki valinnasta → {nimi} ({lat:F3}, {lon:F3})");
+            return true;
+        }
+
         public void Paivita()
         {
             if (silmukka == null || Virhe != null) return;
@@ -229,6 +259,7 @@ namespace Matkakirja.Natiivi
         {
             if (silmukka == null || Virhe != null || paivitetty == Time.frameCount) return;
             paivitetty = Time.frameCount;
+            if (kaupunkiOdottaa) return;   // aloitusvalikko: ei kameraa eikä laattoja (puhetta ei vielä ole)
             bool loppui = !tauolla && (pcmNyt != null ? pcmNyt.Loppui : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying));
             if (puhuu && loppui)
             {
@@ -258,7 +289,11 @@ namespace Matkakirja.Natiivi
             else kaupunki.EsikameraPois();   // ei esilattavaa: piilokamera ei pidä vanhoja laattoja elossa
         }
 
-        double MaaKorkeus(OpasKohde k) => maaKorkeudet.TryGetValue(Avain(k), out var h) ? h : double.NaN;
+        double MaaKorkeus(OpasKohde k) => maaKorkeudet.TryGetValue(Avain(k), out var h) ? h : MaaPisteessa(k.Lat, k.Lon);
+        double MaaPisteessa(double lat, double lon) => pisteKorkeudet.TryGetValue(PisteAvain(lat, lon), out var h) ? h : double.NaN;
+        static string PisteAvain(double lat, double lon) => lat.ToString("F4") + "," + lon.ToString("F4");
+        readonly Dictionary<string, double> pisteKorkeudet = new Dictionary<string, double>(StringComparer.Ordinal);
+        readonly HashSet<string> pisteNaytteet = new HashSet<string>(StringComparer.Ordinal);
         static string Avain(OpasKohde k) => k.Id ?? (k.Lat.ToString("F5") + "," + k.Lon.ToString("F5"));
 
         // ── Pyynnöt workerille (tai testilista) ──────────────────────────────
@@ -575,7 +610,13 @@ namespace Matkakirja.Natiivi
             v.pakotettuSijainti = (t.Lat, t.Lon);
             v.o.Kirjaa($"opas: täky valittu {t.Nimi} ({t.Kaupunki}, {t.Iso2})");
             if (v.tauolla) Tauko(false);
-            v.silmukka.Toive(t.Nimi);
+            if (v.kaupunkiOdottaa)
+            {
+                // Aloitusvalikosta: kartta auki kohteeseen ja siirtoruutu heti; workerin pysähdys pyydetään samalla (Liiku).
+                if (!v.AvaaKaupunki(t.Lat, t.Lon, t.Nimi)) return false;
+                v.silmukka.Liiku(t.Nimi, t.Lat, t.Lon);
+            }
+            else v.silmukka.Toive(t.Nimi);
             v.Silta(OpasSiltalauseet.Kuittaus, true);
             return true;
         }
@@ -593,7 +634,12 @@ namespace Matkakirja.Natiivi
             if (silmukka == null) yield break;
             takyt = r.result == UnityWebRequest.Result.Success ? OpasTaky.Lue(MiniJson.Jasenna(r.downloadHandler.text) as Dictionary<string, object>) : new List<OpasTaky>();
             o.Kirjaa($"opas: täkyt {takyt.Count} ({(r.result == UnityWebRequest.Result.Success ? "ok" : r.responseCode.ToString())})");
-            if (takyt.Count == 0 && !silmukka.Aloitettu) silmukka.Aloita(Aloituskaupunki);
+            if (takyt.Count == 0 && !silmukka.Aloitettu)
+            {
+                // Ei täkyjä: vanha alku (Kööpenhamina) ja kartta auki heti.
+                var a = KoopenhaminaTesti.Alku;
+                if (AvaaKaupunki(a.Lat, a.Lon, Aloituskaupunki)) silmukka.Aloita(Aloituskaupunki);
+            }
         }
 
         // ---- MAIDEN JA KAUPUNKIEN NIMET (juna 146; Ydin OpasNimiaanet) ----
@@ -915,7 +961,23 @@ namespace Matkakirja.Natiivi
             var tehtava = pinta.SampleHeightMostDetailed(new double3(k.Lon, k.Lat, 0));
             while (!tehtava.IsCompleted) yield return null;
             if (tehtava.IsFaulted || tehtava.Result == null || tehtava.Result.sampleSuccess == null || tehtava.Result.sampleSuccess.Length == 0) yield break;
-            if (tehtava.Result.sampleSuccess[0]) maaKorkeudet[Avain(k)] = tehtava.Result.longitudeLatitudeHeightPositions[0].z;
+            if (tehtava.Result.sampleSuccess[0]) maaKorkeudet[Avain(k)] = pisteKorkeudet[PisteAvain(k.Lat, k.Lon)] = tehtava.Result.longitudeLatitudeHeightPositions[0].z;
+        }
+
+        /// <summary>Kohdekehyksen maa pisteeseen (silmukka.MaaTarvitaan); epäonnistuessa arvio 45 m, jottei siirto jää odottamaan.</summary>
+        IEnumerator KorkeusPisteessa(double lat, double lon)
+        {
+            string a = PisteAvain(lat, lon);
+            var pinta = kaupunki.Pinta;
+            if (pinta == null || pisteKorkeudet.ContainsKey(a) || !pisteNaytteet.Add(a)) yield break;
+            float t0 = Time.realtimeSinceStartup;
+            var tehtava = pinta.SampleHeightMostDetailed(new double3(lon, lat, 0));
+            while (!tehtava.IsCompleted) yield return null;
+            pisteNaytteet.Remove(a);
+            var tulos = tehtava.IsFaulted ? null : tehtava.Result;
+            bool ok = tulos?.sampleSuccess != null && tulos.sampleSuccess.Length > 0 && tulos.sampleSuccess[0];
+            pisteKorkeudet[a] = ok ? tulos.longitudeLatitudeHeightPositions[0].z : OpasSilmukka.MaaArvioM;
+            o.Kirjaa($"opas: maa ({lat:F4}, {lon:F4}) {(ok ? "" : "näyte epäonnistui, arvio ")}{pisteKorkeudet[a]:F0} m, {Time.realtimeSinceStartup - t0:F1} s");
         }
 
         IEnumerator LataaAani(string url)

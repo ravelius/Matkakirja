@@ -30,6 +30,14 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public const long MaastoValimuisti = 128L << 20, RakennusValimuisti = 192L << 20, GoogleValimuisti = 256L << 20;
         public const float GoogleSseMin = 16f;
+        /// <summary>
+        /// SSE NÄYTÖN KORKEUDEN MUKAAN (omistajan iPad Pro kaatui 6.10. kahdesti oppaan kohteen latauksessa): Cesiumin näyttövirhe on
+        /// pikseleinä näkymän korkeudesta, joten iPad Pro 13" (2064 px vaaka) tarkentaa 1,7× syvemmälle ja lataa ~3× laattoja kuin
+        /// iPhone (1206 px), jolla muistikatto mitattiin. SSE kerrotaan lyhyen sivun suhteella viitekorkeuteen (ei koskaan alle 1):
+        /// sama kulmatarkkuus ja laattamäärä kuin iPhonella.
+        /// </summary>
+        public const float ViiteKorkeusPx = 1206f;
+        public static float SseKerroin => Mathf.Max(1f, Mathf.Min(Screen.width, Screen.height) / ViiteKorkeusPx);
         public const long GoogleAsset = 2275207;
         public const uint Rinnakkain = 12;   // 8 → 12 (omistaja TF 144: nopeampi lento, saapuessa laatat 68 %)
         /// <summary>Laattojen valmiusraja (%): ComputeLoadProgress on arvio, joten 100 ei aina täyty.</summary>
@@ -259,10 +267,11 @@ namespace Matkakirja.Natiivi
             kirjaa("kaupunki: data " + data);
             if (auki) Avattu?.Invoke(this);
             // Muistikatto kuvanlaadun koukun jälkeen: Googlen SSE ei alle GoogleSseMin:n (asetin luo tilesetin uudelleen vain jos muuttuu).
-            if (data == Lahde.Google && maasto != null && maasto.maximumScreenSpaceError < GoogleSseMin)
+            float sseMin = GoogleSseMin * SseKerroin;
+            if (data == Lahde.Google && maasto != null && maasto.maximumScreenSpaceError < sseMin - 0.01f)
             {
-                kirjaa($"kaupunki: Google-SSE {maasto.maximumScreenSpaceError:F0} → {GoogleSseMin:F0} (muistikatto)");
-                maasto.maximumScreenSpaceError = GoogleSseMin;
+                kirjaa($"kaupunki: Google-SSE {maasto.maximumScreenSpaceError:F0} → {sseMin:F1} (muistikatto, näyttö {Screen.width}×{Screen.height}, kerroin {SseKerroin:F2})");
+                maasto.maximumScreenSpaceError = sseMin;
             }
             if (maasto != null && maasto.maximumCachedBytes > (data == Lahde.Google ? GoogleValimuisti : MaastoValimuisti))
                 maasto.maximumCachedBytes = data == Lahde.Google ? GoogleValimuisti : MaastoValimuisti;
@@ -278,7 +287,7 @@ namespace Matkakirja.Natiivi
             t.tilesetSource = CesiumDataSource.FromCesiumIon;
             t.ionAssetID = asset;
             t.ionAccessToken = tunnus;
-            t.maximumScreenSpaceError = sse;
+            t.maximumScreenSpaceError = sse * SseKerroin;   // iso näyttö: sama laattamäärä kuin iPhonella
             t.maximumCachedBytes = valimuisti;
             t.maximumSimultaneousTileLoads = Rinnakkain;
             t.preloadAncestors = true;
