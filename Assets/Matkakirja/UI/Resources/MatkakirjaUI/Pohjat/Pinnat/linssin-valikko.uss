@@ -253,7 +253,8 @@
     background-color: var(--tk-tumma-pinta);
 }
 
-.mk-opas-aloitus.mk-opas-aloitus--pino {
+/* Sama tarkkuus kuin yllä (kolme luokkaa + pino), muuten rivi voittaa (simu 16.08: puhelin jäi kahdelle sarakkeelle). */
+.mk-linssivalikko.mk-linssivalikko--pohja.mk-opas-aloitus.mk-opas-aloitus--pino {
     flex-direction: column;
 }
 
