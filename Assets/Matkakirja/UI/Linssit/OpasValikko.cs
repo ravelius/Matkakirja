@@ -874,6 +874,8 @@ namespace Matkakirja.Natiivi
 
         void Avaa(Nakyma n)
         {
+            // Kysy, Liiku ja ☰ eivät kuulu aloitukseen (simu 17.11: Liiku-lista rakentui aloituksen paikkasarakkeeseen).
+            if (aloitus && (n == Nakyma.Paa || n == Nakyma.Kysy || n == Nakyma.Liiku)) aloitus = false;
             nakyma = n;
             AsetaAloitusTyyli();
             Rakenna();
