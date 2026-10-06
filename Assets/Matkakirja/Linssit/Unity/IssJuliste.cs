@@ -146,7 +146,8 @@ namespace Matkakirja.Natiivi
         public static IEnumerator Tee(Texture2D kuva, Tiedot t, Action<byte[]> valmis)
         {
             int w = kuva.width, h = kuva.height;
-            int W = JulisteenLeveys(w), H = Mathf.RoundToInt(W * 1.25f);
+            bool muotoKehys = KehysValmis && Mathf.Abs((float)w / h - aukko.width / (aukko.height * 1.25f)) < 0.02f;
+            int W = muotoKehys ? Mathf.RoundToInt(w / aukko.width) : Mathf.RoundToInt(w / (1f - 2f * Reuna)), H = Mathf.RoundToInt(W * 1.25f);
             int reuna = Mathf.RoundToInt(W * Reuna);
             var pohja = Resources.Load<PanelSettings>(UiKerros.PaneeliPolku);
             ThemeStyleSheet teema = null;
@@ -176,7 +177,8 @@ namespace Matkakirja.Natiivi
                 var juuri = doc.rootVisualElement;
                 juuri.style.width = W; juuri.style.height = H;
                 juuri.style.backgroundColor = Color.black;
-                if (KehysValmis && Mathf.Abs(w - W * aukko.width) < 4) RakennaKehyksella(juuri, kuva, t, W, H);
+                // Kehys vain, jos kuva on otettu aukon muotoon (e315f33e: kehys latautui kesken kuvauksen → E v3 -kuva venyi 2560 × 3200:aan).
+                if (muotoKehys) RakennaKehyksella(juuri, kuva, t, W, H);
                 else Rakenna(juuri, kuva, t, W, H, w, h, reuna);
             }
             catch (Exception e) { Debug.LogException(e); valmis(null); Siivoa(go, asetukset, rt); yield break; }
@@ -291,14 +293,6 @@ namespace Matkakirja.Natiivi
             var kehysEl = Absoluuttinen(0, 0, W, H);
             kehysEl.style.backgroundImage = new StyleBackground(kehys);
             juuri.Add(kehysEl);
-            var logo = Resources.Load<Texture2D>("MatkakirjaUI/logo");
-            if (logo != null)
-            {
-                float lw = W * LogoLeveys, lh = lw * logo.height / logo.width;
-                var logoEl = Absoluuttinen(ax + (aw - lw) * 0.5f, ay + ah * 0.07f, lw, lh);
-                logoEl.style.backgroundImage = new StyleBackground(logo);
-                juuri.Add(logoEl);
-            }
             // Ohjaamo: aukon alareunasta julisteen alareunaan.
             float y0 = ay + ah + W * 0.015f, alaH = H - y0 - W * 0.02f;
             float d = W * Sinetti * 1.35f;
@@ -307,6 +301,17 @@ namespace Matkakirja.Natiivi
             teksti.style.alignItems = Align.FlexStart;
             teksti.style.justifyContent = Justify.Center;
             juuri.Add(teksti);
+            // Logo ohjaamoon tekstilohkon yläpuolelle (Päätoimittaja 6.10.: omistajan "mustaa ohjaamoa …, mihin voidaan sitten laittaa
+            // tekstiä ja logo"; avaruudessa logo kilpaili kaaren kanssa).
+            var logo = Resources.Load<Texture2D>("MatkakirjaUI/logo");
+            if (logo != null)
+            {
+                float lw = W * 0.22f, lh = lw * logo.height / logo.width;
+                var logoEl = new VisualElement();
+                logoEl.style.width = lw; logoEl.style.height = lh; logoEl.style.marginBottom = W * 0.012f;
+                logoEl.style.backgroundImage = new StyleBackground(logo);
+                teksti.Add(logoEl);
+            }
             var n1 = Rivi((t.Nimi ?? "").ToUpperInvariant(), Kirjasin.KoneBold, W * NimiKoko * 1.35f, valkea, 0.10f * W * NimiKoko * 1.35f, TextAnchor.MiddleLeft);
             n1.style.marginBottom = W * 0.004f; teksti.Add(n1);
             var n2 = Rivi(Koordinaatit(t.Lat, t.Lon), Kirjasin.Kone, W * KoordKoko * 1.3f, kulta, 0.12f * W * KoordKoko * 1.3f, TextAnchor.MiddleLeft);

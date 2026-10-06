@@ -559,7 +559,8 @@ namespace Matkakirja.Linssit.IssKamera
                         {
                             va = (float)Pilvet.Nayte(la, lo, PeittoK(la, lo)).varjo * haivytys;
                             double km = EtaisyysKm(la, lo);
-                            if (km > 1300) { double t = Math.Min(1, (km - 1300) / 1000); float hv = (float)(1 - 0.45 * t * t * (3 - 2 * t)); al *= hv; va *= hv; }
+                            // e315f33e: horisontin puoleinen kolmannes tasavalkoinen levy → häivytys jo 900 km:stä (35 %:iin 1 700 km:ssä).
+                            if (km > 900) { double t = Math.Min(1, (km - 900) / 800); float hv = (float)(1 - 0.65 * t * t * (3 - 2 * t)); al *= hv; va *= hv; }
                         }
                     }
                     else { al = H(a); ki = H(kk); }

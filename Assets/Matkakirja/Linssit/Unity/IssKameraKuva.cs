@@ -68,7 +68,8 @@ namespace Matkakirja.Natiivi
         // A/B 13388aa7 (Helsinki 14.1x): kolmesta paras voima 3, ydin 0,25, syvä 2,5 (ohuin valkoinen); valkoinen vyö jäi silti.
         // 6.10. 14.3x: halo piirretään 2D-gradienttina (Halo); sironta jää alle himmeänä: ei syvänsinistä varjostimessa, ja maan
         // reunan utu kertoimella 2 · 0,25 · 1,5 = 0,75 (ei valkoista vyötä).
-        const float KaariVoima = 1f, KaariHr = 1f, KaariSini = 1f, KaariUtu = 0.8f, KaariYdin = 1f, KaariSyva = 0f;
+        // Utu 1,25: sinertävä ilmaperspektiivi voimistuu reunaa kohti (Päätoimittaja 6.10., omistajan viite).
+        const float KaariVoima = 1f, KaariHr = 1f, KaariSini = 1f, KaariUtu = 1.25f, KaariYdin = 1f, KaariSyva = 0f;
 
         static bool KaariOletuksissa() => Avaruus.KuvanKaariVoima == 1f && Avaruus.KuvanHrKerroin == 1f && Avaruus.KuvanSiniKerroin == 1f
             && Avaruus.KuvanUtuKerroin == 1f && Avaruus.KuvanKaariYdin == 1f && Avaruus.KuvanKaariSyva == 0f;

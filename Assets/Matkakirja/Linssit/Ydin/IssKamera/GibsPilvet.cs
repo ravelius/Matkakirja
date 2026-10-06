@@ -265,7 +265,9 @@ namespace Matkakirja.Linssit.IssKamera
                 double azL = AurinkoAz * Math.PI / 180;
                 double kohtiL = Arvo(Alfa, gx + Math.Sin(azL) * 1.5, gy - Math.Cos(azL) * 1.5);
                 double valoL = Math.Max(-0.14, Math.Min(0.06, -0.7 * (kohtiL - a)));
-                return (Askel(0.04, 0.9, a) * (0.75 + 0.25 * a), Math.Max(0.5, Math.Min(1.0, k * (0.93 + 0.07 * a) + valoL)));
+                // Sulkareuna (Päätoimittaja 6.10.: keskiosan pilvet teräväreunaisia): alfa viiden näytteen keskiarvona ±0,8 px.
+                double ka = (a + Arvo(Alfa, gx + 0.8, gy) + Arvo(Alfa, gx - 0.8, gy) + Arvo(Alfa, gx, gy + 0.8) + Arvo(Alfa, gx, gy - 0.8)) / 5;
+                return (Askel(0.0, 1.0, ka) * (0.7 + 0.3 * ka), Math.Max(0.5, Math.Min(1.0, k * (0.93 + 0.07 * a) + valoL)));
             }
             if (Yksityiskohta == null) return (a, k);
             // GIBS-maski (~150–300 m/px) on kuvassa sumea möykky (simu 8eea083c Amazonia): reuna terävöitetään fraktaalikohinalla,
