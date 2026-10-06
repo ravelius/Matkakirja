@@ -43,6 +43,65 @@ namespace Matkakirja.Natiivi
         public static float SseKerroin => kerroin > 0f ? kerroin : NayttoKerroin;
         static float kerroin = -1f;
 
+        // ---- KAKSIVAIHEINEN TARKKUUS (Päätoimittaja 6.10. 19.3x, juna 153: TF 151 ajaa omistajan iPad Prolla kertoimella ~1,0, ja
+        // simussa 1,00 latautui ~3× hitaammin kuin 1,71) ----
+        // Tilesetin SSE on tavoitetarkkuudella (kerroin ≥ AlarajaKerroin), mutta lennon, siirron ja saapumisen ajan laatat
+        // valitaan KARKEALLA kameralla, jonka pikselikorkeus on kerroin/NayttoKerroin pääkamerasta (näyttövirhe ∝ pikselikorkeus,
+        // ks. Kartta/LiikeLaatat.cs: sama valinta kuin SSE × NayttoKerroin ILMAN tilesetin uudelleenluontia). Kun laatat ≥ 99 % ja
+        // kamera on paikallaan (sovitin: Tarkenna), valinta siirtyy pääkameraan ja lisätarkkuus tulee tarkentumisena.
+        public const float AlarajaKerroin = 1.3f;
+        Camera karkea;
+        bool karkeaKaytossa;
+        float karkeaAlku = -1f, tarkkaAlku = -1f;
+        /// <summary>Karkean kameran pikselikerroin (1 = ei karkeaa vaihetta, iPhone).</summary>
+        float KarkeaSkaala => Mathf.Clamp(SseKerroin / NayttoKerroin, 0.2f, 1f);
+        public bool KarkeaKaytossa => karkeaKaytossa;
+
+        /// <summary>Lennon, siirron tai avauksen alussa: laatat karkealla kameralla (saapuminen yhtä nopea kuin 1,71:llä).</summary>
+        public void Karkeaksi()
+        {
+            if (!auki || hallinta == null || kamera == null || KarkeaSkaala >= 0.999f || karkeaKaytossa) return;
+            if (karkea == null)
+            {
+                karkea = new GameObject("Kaupunki karkea valinta").AddComponent<Camera>();
+                karkea.transform.SetParent(kamera.transform, false);
+                karkea.enabled = false; karkea.cullingMask = 0;
+            }
+            if (!hallinta.additionalCameras.Contains(karkea)) hallinta.additionalCameras.Add(karkea);
+            hallinta.useMainCamera = false;
+            karkeaKaytossa = true; karkeaAlku = Time.realtimeSinceStartup; tarkkaAlku = -1f;
+            PaivitaKarkea();
+            kirjaa($"kaupunki: tarkkuus karkea (valinta {NayttoKerroin:F2}, tavoite {SseKerroin:F2}, pikselit ×{KarkeaSkaala:F2})");
+        }
+
+        /// <summary>Laatat ≥ 99 % ja kamera paikallaan: valinta pääkameraan (tarkentuu tavoitekertoimeen).</summary>
+        public void Tarkenna()
+        {
+            if (!karkeaKaytossa || hallinta == null) return;
+            if (karkea != null) hallinta.additionalCameras.Remove(karkea);
+            hallinta.useMainCamera = true;
+            karkeaKaytossa = false; tarkkaAlku = Time.realtimeSinceStartup;
+            kirjaa($"kaupunki: tarkkuus tarkentuu → {SseKerroin:F2} ({(karkeaAlku > 0 ? Time.realtimeSinceStartup - karkeaAlku : 0):F1} s karkeana)");
+        }
+
+        void PaivitaKarkea()
+        {
+            if (!karkeaKaytossa || karkea == null || kamera == null) return;
+            karkea.fieldOfView = kamera.fieldOfView;
+            karkea.nearClipPlane = kamera.nearClipPlane; karkea.farClipPlane = kamera.farClipPlane;
+            var r0 = kamera.pixelRect; float sk = KarkeaSkaala;
+            karkea.pixelRect = new Rect(r0.x, r0.y, Mathf.Max(8f, r0.width * sk), Mathf.Max(8f, r0.height * sk));
+            karkea.aspect = kamera.aspect;
+        }
+
+        /// <summary>Tarkentumisen jälkeen 99 %:iin kulunut aika lokiin kerran (latausajan mittaus).</summary>
+        void SeuraaTarkentumista()
+        {
+            if (tarkkaAlku < 0 || Latausaste < ValmisProsentti) return;
+            kirjaa($"kaupunki: tarkentunut {SseKerroin:F2}:een, 99 % {Time.realtimeSinceStartup - tarkkaAlku:F1} s:ssa");
+            tarkkaAlku = -1f;
+        }
+
         /// <summary>
         /// TARKKUUS MUISTIN MUKAAN (Päätoimittaja 6.10. 16.2x, omistaja: "näkyykö grafiikka nyt huonompana"): kerroin valitaan
         /// kaupungin avautuessa os_proc_available_memory():n mukaan niin, että kaupungin arvioidun huipun jälkeen vapaata jää
@@ -213,6 +272,8 @@ namespace Matkakirja.Natiivi
         {
             if (auki && kamera != null && kamera.cullingMask != 1 << Kerros) kamera.cullingMask = 1 << Kerros;
             Muistivahti();
+            PaivitaKarkea();
+            SeuraaTarkentumista();
         }
         public Cesium3DTileset Rakennukset => rakennukset;
 
@@ -281,7 +342,9 @@ namespace Matkakirja.Natiivi
             // Tarkkuus muistin mukaan ennen tilesettien luontia (LuoTileset käyttää SseKerrointa).
             long vapaa = VapaaMuisti();
             float pakotettu = PakotettuKerroin();
-            kerroin = pakotettu > 0 ? pakotettu : KerroinMuistille(vapaa / 1e9, NayttoKerroin);
+            // Tavoite muistista, alaraja AlarajaKerroin (Päätoimittaja: jos 1,0 ei näytä paremmalta kuin 1,3, 1,3 jää); pakotus ohittaa.
+            kerroin = pakotettu > 0 ? pakotettu : Mathf.Min(NayttoKerroin, Mathf.Max(AlarajaKerroin, KerroinMuistille(vapaa / 1e9, NayttoKerroin)));
+            karkeaKaytossa = false; tarkkaAlku = -1f;
             hataKaytetty = false; muistiTarkistettu = 0f; muistiKirjattu = 0f; minVapaa = long.MaxValue;
             kirjaa($"kaupunki: muisti vapaa {(vapaa > 0 ? (vapaa / 1e9).ToString("F2") + " Gt" : "ei tiedossa")}, näyttö {Screen.width}×{Screen.height} (kerroin {NayttoKerroin:F2}) → SSE-kerroin {kerroin:F2}{(pakotettu > 0 ? " (pakotettu)" : "")}");
 
@@ -354,6 +417,7 @@ namespace Matkakirja.Natiivi
             hallinta = CesiumCameraManager.GetOrCreate(maasto.gameObject);
             if (hallinta != null && !hallinta.additionalCameras.Contains(esikamera)) hallinta.additionalCameras.Add(esikamera);
             kirjaa("kaupunki: data " + data);
+            if (auki) { karkeaKaytossa = false; Karkeaksi(); }   // uusi data (avaus tai Google/ion-vaihto): saapuminen karkeana
             if (auki) Avattu?.Invoke(this);
             // Muistikatto kuvanlaadun koukun jälkeen: Googlen SSE ei alle GoogleSseMin:n (asetin luo tilesetin uudelleen vain jos muuttuu).
             float sseMin = GoogleSseMin * SseKerroin;
@@ -531,7 +595,9 @@ namespace Matkakirja.Natiivi
                 esikamera.aspect = kamera.aspect;
                 esikamera.nearClipPlane = kamera.nearClipPlane;
                 esikamera.farClipPlane = kamera.farClipPlane;
-                esikamera.pixelRect = kamera.pixelRect;
+                // Esilataus samalla valinnalla kuin karkea vaihe (lennon kohde ei lataa tavoitetarkkuutta etukäteen).
+                var r0 = kamera.pixelRect; float sk = karkeaKaytossa ? KarkeaSkaala : 1f;
+                esikamera.pixelRect = new Rect(r0.x, r0.y, Mathf.Max(8f, r0.width * sk), Mathf.Max(8f, r0.height * sk));
             }
         }
 
@@ -562,6 +628,10 @@ namespace Matkakirja.Natiivi
             Cesium3DTileset.OnCesium3DTilesetLoadFailure -= LatausVirhe;
             avausAika = -1f; AsetaAvausLatautuu(false);
             if (hallinta != null && esikamera != null) hallinta.additionalCameras.Remove(esikamera);
+            if (hallinta != null && karkea != null) hallinta.additionalCameras.Remove(karkea);
+            if (hallinta != null) hallinta.useMainCamera = true;
+            if (karkea != null) UnityEngine.Object.Destroy(karkea.gameObject);
+            karkea = null; karkeaKaytossa = false; tarkkaAlku = -1f;
             if (juuri != null) UnityEngine.Object.Destroy(juuri);
             juuri = null; maasto = null; rakennukset = null; esikamera = null; hallinta = null;
             KarttaKerrokset.RuutukrediititNakyviin = false;
