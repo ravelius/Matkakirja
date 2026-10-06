@@ -792,9 +792,11 @@ namespace Matkakirja.Natiivi
         /// tekstin sävystä). kuitattu = kuplan napautus (seuraava repliikki). Pulu ei
         /// puhu kertojan päälle: silloin kupla näkyy äänettä. aaniLadattu saa äänitteen
         /// (null = ei ääntä), jotta kuplasarja voi odottaa puheen loppuun. Palauttaa kuplan.
+        /// kuplaton = kartan kohtaus (omistaja 6.10.2026: aloituksen esittely ja kaupunkikommentit, esim. Ateena): ääni ja ele
+        /// kuten ennen, teksti muistiin kuten piilotetuilla teksteillä, kuplaa ei näy (palauttaa null).
         /// </summary>
         public PuluKuplat.Kupla Sano(string teksti, string aaniUrl = null, string eleId = null, Action kuitattu = null, Action<AudioClip> aaniLadattu = null,
-            bool naytaAina = false)
+            bool naytaAina = false, bool kuplaton = false)
         {
             if (string.IsNullOrEmpty(teksti)) return null;
             // Jatkohiljaisuus (PeliOhjain): ei Livian repliikkiä (kuplaa eikä ääntä) ennen pelaajan ensimmäistä toimintoa.
@@ -810,7 +812,7 @@ namespace Matkakirja.Natiivi
             // viimeisimmän repliikin. Vain naytaAina-kuplat (pulun ensiesittely, joka opastaa valintaan) näkyvät aina;
             // kuittausjonot etenevät kuplan kestoajastimella ilman napautusta, joten piilotus ei pysäytä niitä.
             PuluKuplat.Kupla kupla = null;
-            if (TekstitPiilossa && !naytaAina) { piilotettu = teksti; piilotettuAika = Aika; }
+            if (kuplaton || (TekstitPiilossa && !naytaAina)) { piilotettu = teksti; piilotettuAika = Aika; }
             else { piilotettu = null; kupla = Kuplat.Lisaa(teksti, 0, kuitattu); }
             puheKupla = kupla;
             var id = eleId ?? RepliikinEle(teksti);
