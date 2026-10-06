@@ -18,7 +18,43 @@ namespace Matkakirja.Linssit.Kierros
     public sealed class OpasSiltalauseet
     {
         /// <summary>Ryhmät (Pelikoodari): kuittaus, ruoka, moderni, vihrea, vesi, vanha, lento, kierros, syventava, kaupunki, aloitus, odotus.</summary>
-        public const string Kuittaus = "kuittaus", Kaupunki = "kaupunki", Kierros = "kierros", Lento = "lento", Aloitus = "aloitus", Odotus = "odotus";
+        public const string Kuittaus = "kuittaus", Kaupunki = "kaupunki", Kierros = "kierros", Lento = "lento", Aloitus = "aloitus", Odotus = "odotus",
+            Syventava = "syventava";
+
+        // TILANTEEN MUKAAN (omistaja 6.10. 14.3x "välilauseet eivät täsmää pyyntöön", Päätoimittaja hyväksyi taulukon, juna 150):
+        // näennäisryhmät rajaavat aineiston ryhmiä lauseittain, eikä niillä ole vararyhmää (väärä lause on pahempi kuin hiljaisuus).
+        /// <summary>Kysymys (Kysy-lista, kysyvä mikki/näppäin): vain kysymykseen sopivat syventävät lauseet; kamera ei liiku.</summary>
+        public const string Kysymys = "@kysymys";
+        /// <summary>Valinta listasta (täky, Liiku): kuittaus ilman vapaan toiveen lauseita.</summary>
+        public const string Valinta = "@valinta";
+        /// <summary>Odotus ilman lentoa: odotus ilman "perillä"-lauseita.</summary>
+        public const string OdotusPaikalla = "@odotus-paikalla";
+        public static readonly string[] KysymysLauseet = { "Hyvä kysymys.", "Tästä on kiinnostava tarina.", "Kerron mielelläni lisää.", "Katsotaan tarkemmin." };
+        public static readonly string[] VapaanToiveenLauseet = { "Tiedän juuri oikean paikan.", "Hyvä, minulla on sinulle jotain.", "Hyvä toive, se onnistuu.", "Mainio ajatus." };
+        public static readonly string[] LennonOdotukset = { "Melkein perillä.", "Kohta ollaan siellä." };
+
+        static bool On(string[] lista, string teksti) => teksti != null && Array.IndexOf(lista, teksti.Trim()) >= 0;
+
+        /// <summary>Näennäisryhmä → aineiston ryhmä ja lauseehto; tavallinen ryhmä sellaisenaan (ehto null).</summary>
+        public static (string ryhma, Func<Siltalause, bool> ehto) Rajaus(string ryhma) => ryhma switch
+        {
+            Kysymys => (Syventava, l => On(KysymysLauseet, l.Teksti)),
+            Valinta => (Kuittaus, l => !On(VapaanToiveenLauseet, l.Teksti)),
+            OdotusPaikalla => (Odotus, l => !On(LennonOdotukset, l.Teksti)),
+            _ => (ryhma, null),
+        };
+
+        /// <summary>Mikin tai näppäimistön teksti on kysymys (kysymysmerkki tai kysyvä alku); muuten toive tai käsky.</summary>
+        public static bool OnKysymys(string teksti)
+        {
+            if (string.IsNullOrWhiteSpace(teksti)) return false;
+            string t = teksti.Trim().ToLowerInvariant();
+            if (t.EndsWith("?")) return true;
+            foreach (var a in new[] { "mikä", "mitä", "mitkä", "kuka", "ketkä", "keitä", "miksi", "milloin", "missä", "mistä", "mihin", "miten",
+                "kuinka", "montako", "paljonko", "onko", "oliko", "voiko", "saako", "kerro", "kertoisitko", "tiedätkö", "millainen", "minkä" })
+                if (t == a || t.StartsWith(a + " ") || t.StartsWith(a + ",")) return true;
+            return false;
+        }
 
         readonly Dictionary<string, List<Siltalause>> ryhmat = new Dictionary<string, List<Siltalause>>(StringComparer.Ordinal);
         readonly HashSet<string> kaytetyt = new HashSet<string>(StringComparer.Ordinal);
@@ -62,6 +98,9 @@ namespace Matkakirja.Linssit.Kierros
         /// </summary>
         public Siltalause Valitse(string ryhma, string vara = Kuittaus, Func<Siltalause, bool> saatavilla = null)
         {
+            var (aineisto, ehto) = Rajaus(ryhma);
+            if (ehto != null)   // näennäisryhmä: ei vararyhmää
+                return Ryhmasta(aineisto, l => ehto(l) && (saatavilla == null || saatavilla(l)));
             return Ryhmasta(ryhma, saatavilla) ?? (vara != null && vara != ryhma ? Ryhmasta(vara, saatavilla) : null);
         }
 

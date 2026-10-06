@@ -277,7 +277,7 @@ namespace Matkakirja.Natiivi
             bool siirtyy = silmukka.Siirtymassa;
             if (siirtyy != siirtymaEdellinen) { siirtymaEdellinen = siirtyy; if (siirtyy) SiirtymaAlkaa?.Invoke(silmukka.SiirtoNimi); else SiirtymaValmis?.Invoke(); }
             if (silmukka.Aloitettu) PaivitaKohteet();
-            if (!tauolla && pelaajanToimi > 0 && !puhuu && Time.unscaledTime - pelaajanToimi > OdotusLauseS) { pelaajanToimi = -1f; Silta(OpasSiltalauseet.Odotus, false); }
+            if (!tauolla && pelaajanToimi > 0 && !puhuu && Time.unscaledTime - pelaajanToimi > OdotusLauseS) { pelaajanToimi = -1f; Silta(silmukka.Vaihe == OpasVaihe.Lentaa ? OpasSiltalauseet.Odotus : OpasSiltalauseet.OdotusPaikalla, false); }
             silmukka.Paivita(Time.unscaledDeltaTime, MaaKorkeus, () => kaupunki.Valmis);
             if (silmukka.Vaihe != ennen) o.Kirjaa($"opas: {ennen} → {silmukka.Vaihe} {(silmukka.Nykyinen?.Nimi ?? "")}, laatat {kaupunki.Latausaste:F0} %");
             if (silmukka.Vaihe != ennen && silmukka.Vaihe == OpasVaihe.Lentaa) OpasKorostusKuva.Piilota();
@@ -323,6 +323,7 @@ namespace Matkakirja.Natiivi
             if (v.tauolla) Tauko(false);
             v.o.Kirjaa($"opas: liiku {t.Nimi}");
             v.silmukka.Liiku(t.Nimi, t.Lat, t.Lon);
+            v.Silta(OpasSiltalauseet.Valinta, true);   // siirrossa (> 30 km) hiljaa: kertoja odottaa näkymää
             return true;
         }
 
@@ -339,20 +340,25 @@ namespace Matkakirja.Natiivi
             foreach (var t in v.kohteet) jono.Add((t.Nimi, t.Lat, t.Lon));
             v.o.Kirjaa($"opas: kaupunkikierros {jono.Count} kohdetta");
             v.silmukka.AloitaKierros(jono);
+            v.Silta(OpasSiltalauseet.Aloitus, true);
             return true;
         }
 
         /// <summary>Kysy-listan kysymys: sama keskustelureitti kuin mikki ja näppäimistö.</summary>
-        public static bool Kysy(string kysymys) => Puhu(kysymys);
+        public static bool Kysy(string kysymys) => Puhu(kysymys, true);
 
         /// <summary>Mikki ja näppäimistö suoraan oppaalle: POST /opas/kysy → vastaus (Williamin ääni) ja toiminto.</summary>
-        public static bool Puhu(string teksti)
+        public static bool Puhu(string teksti) => Puhu(teksti, false);
+
+        static bool Puhu(string teksti, bool kysymysListalta)
         {
             if (!Auki || string.IsNullOrWhiteSpace(teksti)) return false;
             var v = Viimeisin;
             if (v.tauolla) Tauko(false);
             v.o.Kirjaa("opas: kysy \"" + teksti.Trim() + "\"");
-            v.Silta(OpasSiltalauseet.Kuittaus, true);
+            // Siltalause tilanteen mukaan (juna 150): kysymykseen syventävä lause ilman odotus-ajastinta (vastaus PCM:llä ~5–6 s);
+            // käskyyn ("vie minut …") ei lausetta ennen vastausta, koska liikettä ei vielä tiedetä (vastauksen oma ääni kuittaa).
+            if (kysymysListalta || OpasSiltalauseet.OnKysymys(teksti)) v.Silta(OpasSiltalauseet.Kysymys, false);
             v.o.StartCoroutine(v.KysyWorkerilta(teksti.Trim()));
             return true;
         }
@@ -617,7 +623,7 @@ namespace Matkakirja.Natiivi
                 v.silmukka.Liiku(t.Nimi, t.Lat, t.Lon);
             }
             else v.silmukka.Toive(t.Nimi);
-            v.Silta(OpasSiltalauseet.Kuittaus, true);
+            v.Silta(OpasSiltalauseet.Valinta, true);
             return true;
         }
         /// <summary>Kuten Valitse(OpasTaky) luettelon indeksillä (heijastuksen helpottamiseksi).</summary>
