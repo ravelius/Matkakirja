@@ -70,6 +70,22 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama(1, t.Count); Oleta.Tosi(t[0].Iso2 == "IT" && t[0].Kaupunki == "Venetsia" && t[0].KuvaUrl == "u");
         }
 
+        [Testi] static void KaupunginVaihtoLentaaHeti()
+        {
+            // Natiivi-UI 6.10. 00.2x (toistoappi 3244207f): Amsterdam valittu, kertoja kysyi Amsterdamista, mutta kamera jäi Kööpenhaminaan.
+            var (s, p) = Uusi();
+            s.Vastaus(p[^1].n, K("A", 55.6760, 12.5700));
+            for (int i = 0; i < 300 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.1, _ => 5);
+            Aja(s, 3);   // pysähdys A (esihaku kesken, ei aikakatkaisua)
+            s.VaihdaPaikka(52.352, 4.915);
+            s.Vastaus(p[^1].n, new OpasKohde { Id = "q", Nimi = "q", Kysymys = true, Vaihtoehdot = new[] { "Kanavat", "Museot" } });
+            Oleta.Tosi(s.OdottaaVastausta, $"heti vastauksen jälkeen ({p.Count} pyyntöä, viimeinen {p[^1].t})");
+            for (int i = 0; i < 300; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(KierrosLento.EtaisyysM(s.Asento.Lat, s.Asento.Lon, 52.352, 4.915) < 3000, $"kamera Amsterdamissa ({s.Asento.Lat:F2}, {s.Asento.Lon:F2})");
+            Oleta.Tosi(s.OdottaaVastausta, "kysymys odottaa valintaa");
+            Oleta.Tosi(s.Asento.EtaisyysM > 4000 && s.Asento.Kallistus < 40, $"5 km:n yläkuva ({s.Asento.EtaisyysM:F0} m, {s.Asento.Kallistus:F0}°)");
+        }
+
         [Testi] static void KierrosJatkaaItse()
         {
             var (s, p) = Uusi();

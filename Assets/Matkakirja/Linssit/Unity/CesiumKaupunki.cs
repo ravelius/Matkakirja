@@ -31,7 +31,7 @@ namespace Matkakirja.Natiivi
         public const long MaastoValimuisti = 128L << 20, RakennusValimuisti = 192L << 20, GoogleValimuisti = 256L << 20;
         public const float GoogleSseMin = 16f;
         public const long GoogleAsset = 2275207;
-        public const uint Rinnakkain = 8;
+        public const uint Rinnakkain = 12;   // 8 → 12 (omistaja TF 144: nopeampi lento, saapuessa laatat 68 %)
         /// <summary>Laattojen valmiusraja (%): ComputeLoadProgress on arvio, joten 100 ei aina täyty.</summary>
         public const float ValmisProsentti = 99f;
         /// <summary>Taivaan väri kaupunkinäkymässä (pallon avaruuden musta ei sovi horisonttiin).</summary>
@@ -310,6 +310,18 @@ namespace Matkakirja.Natiivi
             if (georef == null || !georef.isActiveAndEnabled) return;
             georef.Initialize();
             georef.SetOriginLongitudeLatitudeHeight(lon, lat, korkeus);
+            PaivitaKorkeusKerroin();
+        }
+
+        /// <summary>
+        /// Pallon tileset-varjostimen shaderglobaalit (maan keskipiste, akseli, LentoVaraUV-akselit) lasketaan georeferenssin
+        /// origosta vain KorkeusKerroin.Asetassa, eikä niitä päivitetä origon siirtyessä. Kaupunkinäkymän jälkeen pallon rinnevalon
+        /// tasaus käänsi normaalit kaupunkiorigon kehyksessä → tumma vyö ja kermareuna (Siirtoseppä 6.10. 00.3x; toisto simulla).
+        /// Sama kerroin, joten Muuttui ei laukea.
+        /// </summary>
+        void PaivitaKorkeusKerroin()
+        {
+            if (georef != null) Matkakirja.KorkeusKerroin.Aseta(Matkakirja.KorkeusKerroin.Arvo, georef);
         }
 
         /// <summary>Esilatauskamera kuvakulmaan: sama laskenta kuin PalloKierto (kohde, suuntima, kallistus pystystä, etäisyys).</summary>
@@ -370,7 +382,7 @@ namespace Matkakirja.Natiivi
             juuri = null; maasto = null; rakennukset = null; esikamera = null; hallinta = null;
             KarttaKerrokset.RuutukrediititNakyviin = false;
             PallonViivat(true);
-            if (georef != null && georef.isActiveAndEnabled) { georef.Initialize(); georef.SetOriginLongitudeLatitudeHeight(vanhaOrigo.x, vanhaOrigo.y, vanhaOrigo.z); }
+            if (georef != null && georef.isActiveAndEnabled) { georef.Initialize(); georef.SetOriginLongitudeLatitudeHeight(vanhaOrigo.x, vanhaOrigo.y, vanhaOrigo.z); PaivitaKorkeusKerroin(); }
             if (asentoTalteen && kierto != null)
             {
                 asentoTalteen = false;
