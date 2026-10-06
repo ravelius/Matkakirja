@@ -83,7 +83,9 @@
       "muste-pehmea": "rgba(132, 255, 160, 0.62)",
       "korostus": "#84ffa0",
       "reunus": "rgba(124, 255, 158, 0.28)",
-      "toiminto": "#84ffa0"
+      "toiminto": "#84ffa0",
+      "varoitus": "#ffb347",
+      "vaara": "#ff5a4a"
     }
   },
   "himmennys": {
