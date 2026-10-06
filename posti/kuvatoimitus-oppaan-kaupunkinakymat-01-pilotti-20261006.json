@@ -1,0 +1,688 @@
+{
+  "source": "posti/fable-codex-oppaan-kuvat-linssivalikko-20261006.md",
+  "sourceCommit": "4e70a3603c6aede271c06ba11761fa14191c753c",
+  "batch": 1,
+  "pilot": true,
+  "createdAt": "2026-10-06T17:25:34.248628+00:00",
+  "cityIds": [
+    "lontoo",
+    "praha",
+    "wien"
+  ],
+  "cityCount": 3,
+  "imageCount": 9,
+  "productionDimensions": {
+    "width": 1536,
+    "height": 1024,
+    "aspectRatio": "3:2",
+    "format": "PNG",
+    "colorSpace": "sRGB",
+    "alpha": "opaque"
+  },
+  "sampleSeriesVerification": [
+    {
+      "city": "petra",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3303791,
+      "sha256": "102f5c115c82b3d031cc11abbb02719f1b57cc82dc56fb1a607714e0d516dd15"
+    },
+    {
+      "city": "petra",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3353858,
+      "sha256": "694ac4c78c74ea3d4989eca0ae1becca3d5e4772bc27bf3189c71b31cd050be6"
+    },
+    {
+      "city": "petra",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3400112,
+      "sha256": "d9f25f596e3103de9c60fbb6cfb60b10d2291b8a48c4f853495ffd84c8efd4ba"
+    },
+    {
+      "city": "adelaide",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3403905,
+      "sha256": "a95a5118e3be1c8a20830e56a29d4e3bbd3bcdc306dbd45fec6c6b7510cccc60"
+    },
+    {
+      "city": "adelaide",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3212483,
+      "sha256": "b350e1619355b41a265d006f1d3aa5bb935f2181319683c0b49c91a47130d2ce"
+    },
+    {
+      "city": "adelaide",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3200990,
+      "sha256": "5785b042bda03b0ffdfbb88f268b3f6637378cee52a4f06f2d0e2dbd16d9fc8f"
+    },
+    {
+      "city": "tampere",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 2901348,
+      "sha256": "2ab40418138cc6abd27a6fd76db13ff7622e1c4673b3c68eac25d3e51828a2a4"
+    },
+    {
+      "city": "tampere",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3358624,
+      "sha256": "92386c3c9a1ea07d507c701c3996a830d4534b01f6459f660338dd865f23b98d"
+    },
+    {
+      "city": "tampere",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3365770,
+      "sha256": "2d36abe2539bed4a2f9d7e11dae30884d285178127cc6333c809b438a5cc7dd5"
+    }
+  ],
+  "cameraRule": "Sama kamerapaikka ja geometria kaikissa kolmessa; fotorealistinen nykymaailma.",
+  "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+  "originalsPreserved": true,
+  "generationMethod": "built-in image_gen; one call per asset",
+  "review": {
+    "primaryVisualReview": "passed",
+    "editorFirstThree": "pending",
+    "gameIntegrationVerified": false,
+    "published": false
+  },
+  "assets": [
+    {
+      "file": "hero-lontoo-aamu.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/lontoo/hero-lontoo-aamu.png",
+      "r2Key": "julisteet/herokoe/20261006/hero-lontoo-aamu.png",
+      "sha256": "bc51a0789bd955595a34823ee1fd9314e91deccaffaf943bf4f19f9555510b44",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: landscape city hero for the Matkakirja living travel guide, final 1536 by 1024 pixels, 3:2.\nPrimary request: Create a completely new, photorealistic contemporary photograph of Tower Bridge, London, at golden morning light. All input photos are architecture references, not edit targets and not compositions to copy.\nReference roles: Image1 (Bybbisch94) shows the whole stone-tower and high walkway geometry from the western side. Image2 (Matthias Bethke) shows the authentic blue-and-white steel suspension structure and riverside warehouses. Image3 (Colin, Shad Thames) shows the eastern side with the actual City skyline and riverbanks. Combine their evidence of the real structure and setting, while choosing the new camera position below.\nSubject: Tower Bridge's two real buff-grey Victorian Gothic stone towers, each with its actual four pointed corner turrets and central pointed roof, two high blue-and-white steel walkways between them, a closed level bascule road span and characteristic blue-white curved suspension structures. Keep the two towers and bridge as one recognizable landmark; faithfully reproduce their proportions and masonry.\nScene: today's London. Wide Thames water below, actual built-up north and south riverbanks. The City of London skyline appears in the distant background northwest of the bridge, across the north bank. Geographical layout follows Image 3 (Colin) closely as factual evidence: the single Gherkin / 30 St Mary Axe building appears once, in the gap between the two main bridge towers. Keep the City high-rise cluster in this area and behind the left side of the bridge. To the right of the far NORTH tower are the low north-bank stone anchorage and the dark rectangular Tower Hotel by the river, as shown in Image 3. Do not invent another skyline cluster on that right riverbank. There is exactly ONE Gherkin building in all of London: no repeated, mirrored, copied or duplicated landmark, tower, skyline feature or bridge. Keep the real skyline restrained and subordinate to the bridge. Do not introduce Westminster, Eiffel Tower, mountains, arbitrary extra bridges or an invented city.\nCamera lock for the three-image series: a LOW ELEVATED viewpoint about 35 metres above the river, rooftop height on the Shad Thames / southeast side of Tower Bridge looking northwest, 35mm full-frame focal length, camera tilted gently down about 15 degrees, level horizon, no tilted verticals. The SOUTH tower is the near left tower and the NORTH tower is the farther right tower; both towers' full silhouettes and masonry facades are visible. Bridge towers large in the foreground, blue spans join them accurately; river and real urban setting stretch behind. Frame the complete two main towers, both high walkways and central lower road span with comfortable margins. No extreme aerial top-down view. Landscape 3:2.\nLighting: early morning low-angle soft golden sunlight from the eastern side, sun itself outside the frame. Warm light on the masonry and blue steel, cool naturally shaded surfaces, gentle river reflections, realistic blue sky with a few thin pale clouds. Natural photographic contrast, no exaggerated HDR, no painterly or miniature rendering.\nConstraints: This is the first fixed-camera frame of a three-part morning/noon/evening series. Choose clear stable geometry suitable for precisely maintaining it in the next two images. Entire image fully opaque; output a clean photographic PNG. No text, no inscriptions, no typography, no logos, no watermarks, no borders. No identifiable people; any tiny remote passers-by remain anonymous and secondary. No large foreground people or vehicles. No decorative fantasy details.",
+      "viitteet": [
+        {
+          "nimi": "File:20191021.London.Tower Bridge.-015.jpg",
+          "tekija": "Bybbisch94, Christian Gebhardt",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:20191021.London.Tower_Bridge.-015.jpg"
+        },
+        {
+          "nimi": "File:2009-07-21 Tower Bridge, London.jpg",
+          "tekija": "Matthias Bethke",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:2009-07-21_Tower_Bridge,_London.jpg"
+        },
+        {
+          "nimi": "File:Tower Bridge from Shad Thames.jpg",
+          "tekija": "Colin",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Tower_Bridge_from_Shad_Thames.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/lontoo/originals/hero-lontoo-aamu-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA4.0",
+      "time": "aamu",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/lontoo/prompts/aamu-arguments.json",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/hero-lontoo-aamu.png",
+      "bytes": 2673397,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "cityId": "lontoo",
+      "orderIndex": 1
+    },
+    {
+      "file": "hero-lontoo-keskipaiva.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/lontoo/hero-lontoo-keskipaiva.png",
+      "r2Key": "julisteet/herokoe/20261006/hero-lontoo-keskipaiva.png",
+      "sha256": "34d2db1923c4acb73b383c9065e785f3599291cb9031ddb979fa506834d3d3bd",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: landscape city hero for the Matkakirja living travel guide, final exactly 1536 by 1024 pixels, 3:2.\nPrimary request: Generate a complete new contemporary photorealistic photograph of Tower Bridge, London, representing neutral bright midday. Render the whole image afresh using the following fixed camera and scene reference. No software colour-filter effect or split-panel image.\nInput roles: Image 1 is the accepted MORNING camera and composition reference: lock its framing, viewpoint, focal length, projection, horizon, landmark positions, every bridge tower, roof, span, suspension cable, anchorage, shore building and background skyline silhouette. Images 2, 3 and 4 are the Commons photographs by Bybbisch94, Matthias Bethke and Colin, providing factual architecture and Thames geography only.\nCamera invariant: keep EXACTLY Image 1's camera at low rooftop height above the river on the Shad Thames / southeast side looking northwest, gently downward about 15 degrees, 35mm full-frame, level horizon and upright verticals. Near south tower on the left, farther north tower on the right; complete main towers, high walkways and central closed bascule road span remain in exactly the same image positions and with the same proportions. Bridge dominates the foreground, Thames and real London riverbanks below and behind. Do not recrop, zoom, pan, rotate, relocate or reshape anything.\nScene invariant: the authentic two buff-grey Gothic stone towers, blue-and-white steel suspension trusses and high walkways, lower closed road span, north-bank anchorage on the right, and real subdued City skyline. Exactly one Gherkin / 30 St Mary Axe building remains between the two main towers at the place in Image 1. No duplicate or mirrored buildings, no invented second skyline, no extra bridges, no historical city or fantasy architecture. Keep the same shoreline, trees and small boats at the same locations. No recognizable people.\nLighting: bright neutral daylight around noon, clear blue sky with a few thin pale clouds. The sun is higher: neutral grey-buff masonry, vivid but true blue-and-white steel, short physically plausible shadows, clean bright Thames water and natural restrained reflections. No golden sunrise or sunset colour cast; existing electric lamps are off.\nStyle: professional full-frame drone photography, crisp realistic masonry and steel detail, natural photographic colour and dynamic range, no excessive HDR, no painterly or toy rendering, no stylization.\nConstraints: Only the time of day, illumination, sky colour, natural shadows, reflections and whether existing lights are lit change. The complete image stays opaque. Output one landscape PNG, exactly 1536 x 1024. No text, typography, inscriptions, logos, watermark, frame or border.",
+      "viitteet": [
+        {
+          "nimi": "File:20191021.London.Tower Bridge.-015.jpg",
+          "tekija": "Bybbisch94, Christian Gebhardt",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:20191021.London.Tower_Bridge.-015.jpg"
+        },
+        {
+          "nimi": "File:2009-07-21 Tower Bridge, London.jpg",
+          "tekija": "Matthias Bethke",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:2009-07-21_Tower_Bridge,_London.jpg"
+        },
+        {
+          "nimi": "File:Tower Bridge from Shad Thames.jpg",
+          "tekija": "Colin",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Tower_Bridge_from_Shad_Thames.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/lontoo/originals/hero-lontoo-keskipaiva-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA4.0",
+      "time": "keskipaiva",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/lontoo/prompts/keskipaiva-arguments.json",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/hero-lontoo-keskipaiva.png",
+      "bytes": 2638227,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "cityId": "lontoo",
+      "orderIndex": 1
+    },
+    {
+      "file": "hero-lontoo-ilta.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/lontoo/hero-lontoo-ilta.png",
+      "r2Key": "julisteet/herokoe/20261006/hero-lontoo-ilta.png",
+      "sha256": "96255ed73414d640d02e2d33237dcb99648f1b8065c13f4de4f96a0c184a18f3",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: landscape city hero for the Matkakirja living travel guide, final exactly 1536 by 1024 pixels, 3:2.\nPrimary request: Generate a complete new contemporary photorealistic photograph of Tower Bridge, London, representing warm early sunset with lights coming on. Render the whole image afresh using the following fixed camera and scene reference. No software colour-filter effect or split-panel image.\nInput roles: Image 1 is the accepted MORNING camera and composition reference: lock its framing, viewpoint, focal length, projection, horizon, landmark positions, every bridge tower, roof, span, suspension cable, anchorage, shore building and background skyline silhouette. Image 2 is the accepted noon photograph from the same camera, confirming exactly the same architectural projection. Images 3, 4 and 5 are the Commons photographs by Bybbisch94, Matthias Bethke and Colin, providing factual architecture and Thames geography only.\nCamera invariant: keep EXACTLY Image 1's camera at low rooftop height above the river on the Shad Thames / southeast side looking northwest, gently downward about 15 degrees, 35mm full-frame, level horizon and upright verticals. Near south tower on the left, farther north tower on the right; complete main towers, high walkways and central closed bascule road span remain in exactly the same image positions and with the same proportions. Bridge dominates the foreground, Thames and real London riverbanks below and behind. Do not recrop, zoom, pan, rotate, relocate or reshape anything.\nScene invariant: the authentic two buff-grey Gothic stone towers, blue-and-white steel suspension trusses and high walkways, lower closed road span, north-bank anchorage on the right, and real subdued City skyline. Exactly one Gherkin / 30 St Mary Axe building remains between the two main towers at the place in Image 1. No duplicate or mirrored buildings, no invented second skyline, no extra bridges, no historical city or fantasy architecture. Keep the same shoreline, trees and small boats at the same locations. No recognizable people.\nLighting: warm low sunset illumination at early evening, with a golden-peach sky and subtle pale clouds, the sun outside the frame. Warm light grazes the stone, shaded facades cool naturally, and existing bridge floodlights, riverfront lamps and a few existing building windows have just switched on. Gentle warm reflections on the Thames. Preserve visible photographic detail throughout; it is still sunset, not full night. No added decorative light strings, laser beams or extra fixtures.\nStyle: professional full-frame drone photography, crisp realistic masonry and steel detail, natural photographic colour and dynamic range, no excessive HDR, no painterly or toy rendering, no stylization.\nConstraints: Only the time of day, illumination, sky colour, natural shadows, reflections and whether existing lights are lit change. The complete image stays opaque. Output one landscape PNG, exactly 1536 x 1024. No text, typography, inscriptions, logos, watermark, frame or border.\nAbsolute projection lock: This is a physical relighting of the entire image 1 camera scene. Regenerate the full image, but reproduce the architecture outline and all its image coordinates exactly. In this 1536x1024 frame, the tip of the NEAR LEFT tower central spire stays at pixel (516,40), the top of its left visible corner turret stays at (412,133), its river pier base contour spans x=307 to x=718, and the FAR RIGHT tower central spire stays at (988,194). The near left tower must retain its full original width and x position: do not narrow it or shift its upper architecture to the left. Do not move any bridge element by even a few pixels; only physically coherent lighting, shadow and reflective changes are wanted. Use image 2 (the matching accepted noon frame) as a second identical camera-projection check. Images 3,4,5 are factual Commons architecture references only.",
+      "viitteet": [
+        {
+          "nimi": "File:20191021.London.Tower Bridge.-015.jpg",
+          "tekija": "Bybbisch94, Christian Gebhardt",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:20191021.London.Tower_Bridge.-015.jpg"
+        },
+        {
+          "nimi": "File:2009-07-21 Tower Bridge, London.jpg",
+          "tekija": "Matthias Bethke",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:2009-07-21_Tower_Bridge,_London.jpg"
+        },
+        {
+          "nimi": "File:Tower Bridge from Shad Thames.jpg",
+          "tekija": "Colin",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Tower_Bridge_from_Shad_Thames.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/lontoo/originals/hero-lontoo-ilta-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA4.0",
+      "time": "ilta",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/lontoo/prompts/ilta-arguments.json",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/hero-lontoo-ilta.png",
+      "bytes": 2722859,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "cityId": "lontoo",
+      "orderIndex": 1
+    },
+    {
+      "file": "hero-praha-aamu.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/hero-praha-aamu.png",
+      "r2Key": "julisteet/herokoe/20261006/hero-praha-aamu.png",
+      "sha256": "91537db2c89ffa8ddd3f6ea8a6eac9be6e56d417b7e7b9992127ff463f7b81c1",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: present-day Prague travel guide city hero, standalone landscape1536x1024 PNG, exactly3:2, fullcanvasedge-to-edge, opaque.\nReference images1and2: CC BY-SA4.0 architectural and geographical references by two photographers; extract actual geometry and locations from both, create a new photograph rather than duplicating a reference composition. Do not include the dark stone arch/window framing visible in reference1. Reference2 anchors the skyline and relative buildings; do not reproduce temporary construction works/signs.\nScene: present-day Charles Bridge, Prague, Czech Republic. The historical pale sandstonestone bridge and its dark Baroque statues dominate foreground, Vltava water bothsides, MaláStrana and its authentic red/orange tile roof cityscape on the far west bank. Western bridge tower pair at the far bridge end. Green dome of StNicholas Church behind to left and separate dark Gothic StVitus Cathedral with its actual differing tower silhouettes on the PragueCastle hill to centre-right. Actual Castlepalace buildings sit below the cathedral; never relocate OldTown Tyn Church here. Avoid inventing extra bridges, replicated towers, freefloating monuments or river tributaries.\nLocked camera: new open view from justnorth of the eastern bridge end at LOW rooftopheight28metres, west-northwest towards MaláStrana,35mmfullframeequivalent, gentle15degree downwardtilt, not a high aerialpanorama. Bridge begins at bottomcentre and narrows into centre-left at MaláStrana. River and believable masonrypiers beneath, statues along eachparapet. Redroof city and castlehill extend behind, skyline in upperthird. No towerarch, noframe, nofisheye. Entire bridgeaxis, far-end towers and castle skyline kept inside image.\nStyle: professional fullframe photograph, realistic surfaces/materials, naturalcolours, detailed sandstone, realisticglass/riverreflectance; no painting, illustration, cartoon, model, isometric city, artificial oversaturated HDR or fairycastle.\nPeople only tiny distantanonymousfigures with no readablefaces, no recognisableperson. No text, labels, signs, logos, watermark, UI or borders. No closeperson or vehicleswithreadablebrand.\nLighting: Morning: clear calm earlyday, golden low eastern sunlight shining gently onto bridge and westbank frontfacades, longsoftshadows, slight atmospheric morninghaze, lightbluesky; awakecitywithoutnightlights.\nChange only timeofday/light and natural reflections; camera and citygeometry are fixed across all3series images.\n",
+      "viitteet": [
+        {
+          "nimi": "File:Prague Charles Bridge Tower View West-02.jpg",
+          "tekija": "Radler59 (talk)",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Prague_Charles_Bridge_Tower_View_West-02.jpg"
+        },
+        {
+          "nimi": "File:Charles Bridge (Karlův most), Vltava River, Prague, 2015.jpg",
+          "tekija": "Peter K Burian",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Charles_Bridge_(Karl%C5%AFv_most),_Vltava_River,_Prague,_2015.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/originals/hero-praha-aamu-original.png",
+      "originalSha256": "47c414f3a5f525e1427b5382f4177cf668ae874f9737d3499a3bace63f8c9786",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "time": "aamu",
+      "cityId": "praha",
+      "caption": "Kaarlensilta ylittää Vltavan; taustalla Malá Stranan katot ja Prahan linna.",
+      "cameraReference": null,
+      "toolArgsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/toolargs/aamu.json",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/hero-praha-aamu.png",
+      "bytes": 3023059,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "orderIndex": 2
+    },
+    {
+      "file": "hero-praha-keskipaiva.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/hero-praha-keskipaiva.png",
+      "r2Key": "julisteet/herokoe/20261006/hero-praha-keskipaiva.png",
+      "sha256": "ba7202632f8ca618fb07d4d7b5eec09b577e59ea5307bea86037a598bc3bbfd9",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: present-day Prague travel guide city hero, standalone landscape1536x1024 PNG, exactly3:2, fullcanvasedge-to-edge, opaque.\nReference images1and2: CC BY-SA4.0 architectural and geographical references by two photographers; extract actual geometry and locations from both, create a new photograph rather than duplicating a reference composition. Do not include the dark stone arch/window framing visible in reference1. Reference2 anchors the skyline and relative buildings; do not reproduce temporary construction works/signs.\nScene: present-day Charles Bridge, Prague, Czech Republic. The historical pale sandstonestone bridge and its dark Baroque statues dominate foreground, Vltava water bothsides, MaláStrana and its authentic red/orange tile roof cityscape on the far west bank. Western bridge tower pair at the far bridge end. Green dome of StNicholas Church behind to left and separate dark Gothic StVitus Cathedral with its actual differing tower silhouettes on the PragueCastle hill to centre-right. Actual Castlepalace buildings sit below the cathedral; never relocate OldTown Tyn Church here. Avoid inventing extra bridges, replicated towers, freefloating monuments or river tributaries.\nLocked camera: new open view from justnorth of the eastern bridge end at LOW rooftopheight28metres, west-northwest towards MaláStrana,35mmfullframeequivalent, gentle15degree downwardtilt, not a high aerialpanorama. Bridge begins at bottomcentre and narrows into centre-left at MaláStrana. River and believable masonrypiers beneath, statues along eachparapet. Redroof city and castlehill extend behind, skyline in upperthird. No towerarch, noframe, nofisheye. Entire bridgeaxis, far-end towers and castle skyline kept inside image.\nStyle: professional fullframe photograph, realistic surfaces/materials, naturalcolours, detailed sandstone, realisticglass/riverreflectance; no painting, illustration, cartoon, model, isometric city, artificial oversaturated HDR or fairycastle.\nPeople only tiny distantanonymousfigures with no readablefaces, no recognisableperson. No text, labels, signs, logos, watermark, UI or borders. No closeperson or vehicleswithreadablebrand.\nLighting: Midday: bright neutral daylight and bluesky, natural balanced whitecolour, short realisticallyplaced shadows, crisp cleanatmosphere; no goldtint or dramatic dusk.\nChange only timeofday/light and natural reflections; camera and citygeometry are fixed across all3series images.\n\nReference image 3 is this series own approved morning view. It is the authoritative camera and composition reference for this new complete generated photograph: reproduce precisely its camera position, height, focal length, field of view, horizon, crop and landmark arrangement. Bridge edges and piers, the western tower pair, St Nicholas dome, the castle palaces, St Vitus Cathedral and all visible rooflines must stay in exactly the same image locations and proportions as image 3. Use images 1 and 2 to validate the real architectural shapes. Render the whole scene newly; the only change from image 3 is the requested time of day, illumination, sky colors and their natural reflections. Keep distant anonymous people at the same scale; no readable faces or text. Output exactly 1536 x 1024 pixels.\n",
+      "viitteet": [
+        {
+          "nimi": "File:Prague Charles Bridge Tower View West-02.jpg",
+          "tekija": "Radler59 (talk)",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Prague_Charles_Bridge_Tower_View_West-02.jpg"
+        },
+        {
+          "nimi": "File:Charles Bridge (Karlův most), Vltava River, Prague, 2015.jpg",
+          "tekija": "Peter K Burian",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Charles_Bridge_(Karl%C5%AFv_most),_Vltava_River,_Prague,_2015.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/originals/hero-praha-keskipaiva-original.png",
+      "originalSha256": "e6dba2eaddcd81af2f0a0458b3b95a3e1f63a6d73df8503e641ef09a048b7c24",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "time": "keskipaiva",
+      "cityId": "praha",
+      "caption": "Kaarlensilta ylittää Vltavan; taustalla Malá Stranan katot ja Prahan linna.",
+      "cameraReference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/hero-praha-aamu.png",
+      "toolArgsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/toolargs/keskipaiva.json",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/hero-praha-keskipaiva.png",
+      "bytes": 3112698,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "orderIndex": 2
+    },
+    {
+      "file": "hero-praha-ilta.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/hero-praha-ilta.png",
+      "r2Key": "julisteet/herokoe/20261006/hero-praha-ilta.png",
+      "sha256": "6f64649d0e634a2286c98086d0af5a8c60b652e504c73ebe3b0b959ecc69c071",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: present-day Prague travel guide city hero, standalone landscape1536x1024 PNG, exactly3:2, fullcanvasedge-to-edge, opaque.\nReference images1and2: CC BY-SA4.0 architectural and geographical references by two photographers; extract actual geometry and locations from both, create a new photograph rather than duplicating a reference composition. Do not include the dark stone arch/window framing visible in reference1. Reference2 anchors the skyline and relative buildings; do not reproduce temporary construction works/signs.\nScene: present-day Charles Bridge, Prague, Czech Republic. The historical pale sandstonestone bridge and its dark Baroque statues dominate foreground, Vltava water bothsides, MaláStrana and its authentic red/orange tile roof cityscape on the far west bank. Western bridge tower pair at the far bridge end. Green dome of StNicholas Church behind to left and separate dark Gothic StVitus Cathedral with its actual differing tower silhouettes on the PragueCastle hill to centre-right. Actual Castlepalace buildings sit below the cathedral; never relocate OldTown Tyn Church here. Avoid inventing extra bridges, replicated towers, freefloating monuments or river tributaries.\nLocked camera: new open view from justnorth of the eastern bridge end at LOW rooftopheight28metres, west-northwest towards MaláStrana,35mmfullframeequivalent, gentle15degree downwardtilt, not a high aerialpanorama. Bridge begins at bottomcentre and narrows into centre-left at MaláStrana. River and believable masonrypiers beneath, statues along eachparapet. Redroof city and castlehill extend behind, skyline in upperthird. No towerarch, noframe, nofisheye. Entire bridgeaxis, far-end towers and castle skyline kept inside image.\nStyle: professional fullframe photograph, realistic surfaces/materials, naturalcolours, detailed sandstone, realisticglass/riverreflectance; no painting, illustration, cartoon, model, isometric city, artificial oversaturated HDR or fairycastle.\nPeople only tiny distantanonymousfigures with no readablefaces, no recognisableperson. No text, labels, signs, logos, watermark, UI or borders. No closeperson or vehicleswithreadablebrand.\nLighting: Evening: warmgolden sunsetglow from westhorizon overcastlehill, bridge and roofsilhouettes with warmrimlight and softlylit masonry, bluepurple skytransitions; small amber streetlamps and windows just beginning tolight, still daylightdetailsvisible, not totaldarknight.\nChange only timeofday/light and natural reflections; camera and citygeometry are fixed across all3series images.\n\nReference image 3 is this series own approved morning view. It is the authoritative camera and composition reference for this new complete generated photograph: reproduce precisely its camera position, height, focal length, field of view, horizon, crop and landmark arrangement. Bridge edges and piers, the western tower pair, St Nicholas dome, the castle palaces, St Vitus Cathedral and all visible rooflines must stay in exactly the same image locations and proportions as image 3. Use images 1 and 2 to validate the real architectural shapes. Render the whole scene newly; the only change from image 3 is the requested time of day, illumination, sky colors and their natural reflections. Keep distant anonymous people at the same scale; no readable faces or text. Output exactly 1536 x 1024 pixels.\n",
+      "viitteet": [
+        {
+          "nimi": "File:Prague Charles Bridge Tower View West-02.jpg",
+          "tekija": "Radler59 (talk)",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Prague_Charles_Bridge_Tower_View_West-02.jpg"
+        },
+        {
+          "nimi": "File:Charles Bridge (Karlův most), Vltava River, Prague, 2015.jpg",
+          "tekija": "Peter K Burian",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Charles_Bridge_(Karl%C5%AFv_most),_Vltava_River,_Prague,_2015.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/originals/hero-praha-ilta-original.png",
+      "originalSha256": "fa58f50db3b5a06333800e0ca0303f6af7ccf2491c35e890bf9f5ea061f5123d",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "time": "ilta",
+      "cityId": "praha",
+      "caption": "Kaarlensilta ylittää Vltavan; taustalla Malá Stranan katot ja Prahan linna.",
+      "cameraReference": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/hero-praha-aamu.png",
+      "toolArgsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/praha/toolargs/ilta.json",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/hero-praha-ilta.png",
+      "bytes": 2974272,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "orderIndex": 2
+    },
+    {
+      "city": "wien",
+      "time": "aamu",
+      "file": "hero-wien-aamu.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/final/hero-wien-aamu.png",
+      "r2Key": "julisteet/herokoe/20261006/hero-wien-aamu.png",
+      "sha256": "906c6bce4ddaeeb4d4c62ed74d3ec7b87fcd1bb5412989fd7ded607991007111",
+      "bytes": 2613033,
+      "width": 1536,
+      "height": 1024,
+      "mime": "image/png",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "generationPrompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja living travel guide city hero, horizontal landscape 3:2, intended1536x1024pixels.\nPrimary request: Generate a completely NEW photorealistic photograph of the actual St Stephen's Cathedral, Stephansdom, in present-day Vienna in low golden morning light.\nInput photographs are architectural and geographic references, not edit targets. Image1 Herzi Pinki shows the north face and actual surrounding roof blocks from Hotel Lamée rooftop, plus the correct position of the towers. Image2 Mike Peel2025 shows the northern tiled roof and short unfinished north tower. Image3 Thomas Dahlstrøm Nielsen2026 shows the whole Gothic building from the opposite side to explain its three-dimensional structure; do NOT transplant that south side onto the north side.\nCamera: use a new rooftop-height camera in the northwestern block, a little west of the Hotel Lamée terrace, looking SOUTHEAST at the cathedral's NORTH side. This is a LOW ELEVATED rooftop viewpoint, not a high aircraft view and not street level. Camera only gently downward, around15degrees, level horizon, natural full-frame35mm architectural perspective. The cathedral is large and dominant in the foreground, while tightly packed real Vienna old-town roof blocks behind recede into the distance. Thin strips of nearest rooftops along the bottom are acceptable, but do not cover the patterned roof and upper Gothic facade. Frame the high southern spire complete, including its tip and comfortable sky margin. No steep top-down map-like view, no extreme wide-angle deformation.\nGeographic/architectural invariants: match actual Stephansdom's asymmetry. In this northwestern viewpoint its long tall tiled north roof is broad across the central image. It has the authentic green, dark and cream zigzag roof tile patterns and the small real roof heraldic motifs toward the EASTERN choir end, architectural features rather than invented logos. The low unfinished NORTH tower with its green Renaissance copper cap is on the near LEFT part of the cathedral; the needle-like much taller SOUTH Gothic tower rises BEHIND it and the nave toward central-left. The WESTERN Romanesque facade with two shorter pointed Heathen towers is at the RIGHT end of the long nave in this viewing direction. No mirrored tower placement, no symmetrical twin huge spires, no extra cathedral towers, no baroque domes. Retain actual stone Gothic tracery, buttresses and pointed windows from the reference photos. Ordinary dense old-town Viennese roofs, no river, sea, mountains, Schönbrunn or Staatsoper added to the scene.\nLight/time: clear early morning, low soft golden sun from the EAST, natural warm light touching the stone and patterned roof, cool shaded faces, pale blue lightly clouded sky. Quiet dry late-spring or summer city, not historical Vienna; today's roof machinery may appear discreetly. Avoid construction cranes dominating the scene.\nProfessional full-frame architectural photograph, realistic worn stone and individual colored roof tiles, natural colors, crisp believable details, no miniature or painterly style, no excessive HDR. This is the first fixed-camera image for a morning/noon/evening series: preserve this exact scale, framing, geometry and camera in the next images, changing only natural light and sky. Fully opaque PNG. No added text, logos, business signs, watermark or frame. Any people far below must be tiny and anonymous; no identifiable or large foreground people, no crowds, no large foreground vehicles.",
+      "generationArguments": {
+        "prompt": "Use case: photorealistic-natural.\nAsset type: Matkakirja living travel guide city hero, horizontal landscape 3:2, intended1536x1024pixels.\nPrimary request: Generate a completely NEW photorealistic photograph of the actual St Stephen's Cathedral, Stephansdom, in present-day Vienna in low golden morning light.\nInput photographs are architectural and geographic references, not edit targets. Image1 Herzi Pinki shows the north face and actual surrounding roof blocks from Hotel Lamée rooftop, plus the correct position of the towers. Image2 Mike Peel2025 shows the northern tiled roof and short unfinished north tower. Image3 Thomas Dahlstrøm Nielsen2026 shows the whole Gothic building from the opposite side to explain its three-dimensional structure; do NOT transplant that south side onto the north side.\nCamera: use a new rooftop-height camera in the northwestern block, a little west of the Hotel Lamée terrace, looking SOUTHEAST at the cathedral's NORTH side. This is a LOW ELEVATED rooftop viewpoint, not a high aircraft view and not street level. Camera only gently downward, around15degrees, level horizon, natural full-frame35mm architectural perspective. The cathedral is large and dominant in the foreground, while tightly packed real Vienna old-town roof blocks behind recede into the distance. Thin strips of nearest rooftops along the bottom are acceptable, but do not cover the patterned roof and upper Gothic facade. Frame the high southern spire complete, including its tip and comfortable sky margin. No steep top-down map-like view, no extreme wide-angle deformation.\nGeographic/architectural invariants: match actual Stephansdom's asymmetry. In this northwestern viewpoint its long tall tiled north roof is broad across the central image. It has the authentic green, dark and cream zigzag roof tile patterns and the small real roof heraldic motifs toward the EASTERN choir end, architectural features rather than invented logos. The low unfinished NORTH tower with its green Renaissance copper cap is on the near LEFT part of the cathedral; the needle-like much taller SOUTH Gothic tower rises BEHIND it and the nave toward central-left. The WESTERN Romanesque facade with two shorter pointed Heathen towers is at the RIGHT end of the long nave in this viewing direction. No mirrored tower placement, no symmetrical twin huge spires, no extra cathedral towers, no baroque domes. Retain actual stone Gothic tracery, buttresses and pointed windows from the reference photos. Ordinary dense old-town Viennese roofs, no river, sea, mountains, Schönbrunn or Staatsoper added to the scene.\nLight/time: clear early morning, low soft golden sun from the EAST, natural warm light touching the stone and patterned roof, cool shaded faces, pale blue lightly clouded sky. Quiet dry late-spring or summer city, not historical Vienna; today's roof machinery may appear discreetly. Avoid construction cranes dominating the scene.\nProfessional full-frame architectural photograph, realistic worn stone and individual colored roof tiles, natural colors, crisp believable details, no miniature or painterly style, no excessive HDR. This is the first fixed-camera image for a morning/noon/evening series: preserve this exact scale, framing, geometry and camera in the next images, changing only natural light and sky. Fully opaque PNG. No added text, logos, business signs, watermark or frame. Any people far below must be tiny and anonymous; no identifiable or large foreground people, no crowds, no large foreground vehicles.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/references/environment-1.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/references/candidate-1.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/references/candidate-2.jpg"
+        ],
+        "transparent_background": false
+      },
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/prompts/aamu-arguments.json",
+      "generationTool": "built-in image_gen",
+      "viitteet": [
+        {
+          "nimi": "File:St. Stephen's cathedral, Vienna, from Hotel Lamée.jpg",
+          "tekija": "Herzi Pinki",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:St._Stephen%27s_cathedral,_Vienna,_from_Hotel_Lam%C3%A9e.jpg"
+        },
+        {
+          "nimi": "File:At Vienna 2025 145.jpg",
+          "tekija": "Photograph by  Mike Peel  ( www.mikepeel.net ).",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:At_Vienna_2025_145.jpg"
+        },
+        {
+          "nimi": "File:Exterior of St. Stephen's Cathedral, Vienna, 2026.jpg",
+          "tekija": "Thomas Dahlstrøm Nielsen",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Exterior_of_St._Stephen%27s_Cathedral,_Vienna,_2026.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/originals/aamu.png",
+      "originalSha256": "a4a6be2fd18ecb70d082baef72a686f0bf2fff86f0c978d749afe63eae7fc303",
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "technicalExport": "RGB PNG with sRGB ICC profile; native1536x1024 pixels preserved exactly, no resampling or artistic image edits.",
+      "qa": {
+        "format": true,
+        "dimensions": true,
+        "opaque": true,
+        "sRGBProfile": "sRGB built-in",
+        "pixelsUnchangedByExport": true,
+        "viewedFinal": true,
+        "landmark": "Stephansdom, Wien",
+        "cameraConsistency": true,
+        "noAddedTextLogosWatermark": true,
+        "noIdentifiablePeople": true,
+        "modernDay": true,
+        "referenceGate": {
+          "count": 3,
+          "authors": 3,
+          "identification": "kategoria",
+          "category": "Category:Exterior of St. Stephen's Cathedral, Vienna"
+        }
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/hero-wien-aamu.png",
+      "http": 200,
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "cityId": "wien",
+      "orderIndex": 3
+    },
+    {
+      "city": "wien",
+      "time": "keskipaiva",
+      "file": "hero-wien-keskipaiva.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/final/hero-wien-keskipaiva.png",
+      "r2Key": "julisteet/herokoe/20261006/hero-wien-keskipaiva.png",
+      "sha256": "5f8667900d106a8a281291dcedbc165545ba6d936786004102492d8c5260476d",
+      "bytes": 2585776,
+      "width": 1536,
+      "height": 1024,
+      "mime": "image/png",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja city hero, horizontal3:2,1536x1024. Generate a NEW fully photorealistic photograph at a new time of day using exactly the same fixed-camera view as Image1.\nImage1 is my own accepted morning composition/camera geometry reference. Images2–4 are independent Commons architectural evidence, from Herzi Pinki, Mike Peel and Thomas Dahlstrøm Nielsen. Use the references for true geometry, not to compose a different view.\nLocation: present-day Stephansdom in Vienna, its NORTH side from a fixed LOW ROOFTOP-height northwestern viewpoint looking southeast. All framing and geometry MUST be identical to Image1: exact spire tip coordinates, short unfinished north tower with green cap near-left, huge tall south spire behind-left, full long green/cream/dark zigzag roof centered, heraldic roof tiles at the east choir end on left, short west Heathen towers on right, ornate brown/grey Gothic north wall below. Exact same roof/chimney/HVAC silhouettes in the bottom foreground and old-town roof blocks and domed neighboring building at right. Do not rearrange or change church towers, windows, tracery, buttresses, roof patterns, stone blocks, dimensions, trees, rooftops or neighboring buildings. Do not mirror the building, do not add extra spires, domes, rivers, mountains or competing landmarks. Camera, focal length, gentle downward viewing angle, zoom, horizon, crop and scale remain exactly unchanged. Same season and weather except natural cloud shapes; only natural time-of-day illumination and sky may change.\nTIME OF DAY: Neutral bright midday sun high in the sky, cool blue lightly clouded sky, much shorter shadows, neutral beige stone and natural saturated green/cream/dark roof tiles. No golden orange color cast, no glowing artificial city lights.\nProfessional architectural photograph, believable materials, individual colored roof tiles and warm worn stone, no stylization, no miniature, no illustration, no exaggeratedHDR. Output fully opaque PNG. No added text, logo, billboard, business signage, watermark or border; only the real cathedral's architectural heraldry remains. No identifiable people or large foreground subjects. This is a freshly generated new frame with invariant geometry, not a manually filtered copy of the reference.",
+      "generationArguments": {
+        "prompt": "Use case: photorealistic-natural. Asset type: Matkakirja city hero, horizontal3:2,1536x1024. Generate a NEW fully photorealistic photograph at a new time of day using exactly the same fixed-camera view as Image1.\nImage1 is my own accepted morning composition/camera geometry reference. Images2–4 are independent Commons architectural evidence, from Herzi Pinki, Mike Peel and Thomas Dahlstrøm Nielsen. Use the references for true geometry, not to compose a different view.\nLocation: present-day Stephansdom in Vienna, its NORTH side from a fixed LOW ROOFTOP-height northwestern viewpoint looking southeast. All framing and geometry MUST be identical to Image1: exact spire tip coordinates, short unfinished north tower with green cap near-left, huge tall south spire behind-left, full long green/cream/dark zigzag roof centered, heraldic roof tiles at the east choir end on left, short west Heathen towers on right, ornate brown/grey Gothic north wall below. Exact same roof/chimney/HVAC silhouettes in the bottom foreground and old-town roof blocks and domed neighboring building at right. Do not rearrange or change church towers, windows, tracery, buttresses, roof patterns, stone blocks, dimensions, trees, rooftops or neighboring buildings. Do not mirror the building, do not add extra spires, domes, rivers, mountains or competing landmarks. Camera, focal length, gentle downward viewing angle, zoom, horizon, crop and scale remain exactly unchanged. Same season and weather except natural cloud shapes; only natural time-of-day illumination and sky may change.\nTIME OF DAY: Neutral bright midday sun high in the sky, cool blue lightly clouded sky, much shorter shadows, neutral beige stone and natural saturated green/cream/dark roof tiles. No golden orange color cast, no glowing artificial city lights.\nProfessional architectural photograph, believable materials, individual colored roof tiles and warm worn stone, no stylization, no miniature, no illustration, no exaggeratedHDR. Output fully opaque PNG. No added text, logo, billboard, business signage, watermark or border; only the real cathedral's architectural heraldry remains. No identifiable people or large foreground subjects. This is a freshly generated new frame with invariant geometry, not a manually filtered copy of the reference.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/originals/aamu.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/references/environment-1.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/references/candidate-1.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/references/candidate-2.jpg"
+        ],
+        "transparent_background": false
+      },
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/prompts/keskipaiva-arguments.json",
+      "generationTool": "built-in image_gen",
+      "viitteet": [
+        {
+          "nimi": "File:St. Stephen's cathedral, Vienna, from Hotel Lamée.jpg",
+          "tekija": "Herzi Pinki",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:St._Stephen%27s_cathedral,_Vienna,_from_Hotel_Lam%C3%A9e.jpg"
+        },
+        {
+          "nimi": "File:At Vienna 2025 145.jpg",
+          "tekija": "Photograph by  Mike Peel  ( www.mikepeel.net ).",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:At_Vienna_2025_145.jpg"
+        },
+        {
+          "nimi": "File:Exterior of St. Stephen's Cathedral, Vienna, 2026.jpg",
+          "tekija": "Thomas Dahlstrøm Nielsen",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Exterior_of_St._Stephen%27s_Cathedral,_Vienna,_2026.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/originals/keskipaiva.png",
+      "originalSha256": "5e79f5923755f305f26d0b16855ef3ee4cb88f22a9afc8863d2772f1d47fa7bf",
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "technicalExport": "RGB PNG with sRGB ICC profile; native1536x1024 pixels preserved exactly, no resampling or artistic image edits.",
+      "qa": {
+        "format": true,
+        "dimensions": true,
+        "opaque": true,
+        "sRGBProfile": "sRGB built-in",
+        "pixelsUnchangedByExport": true,
+        "viewedFinal": true,
+        "landmark": "Stephansdom, Wien",
+        "cameraConsistency": true,
+        "noAddedTextLogosWatermark": true,
+        "noIdentifiablePeople": true,
+        "modernDay": true,
+        "referenceGate": {
+          "count": 3,
+          "authors": 3,
+          "identification": "kategoria",
+          "category": "Category:Exterior of St. Stephen's Cathedral, Vienna"
+        }
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/hero-wien-keskipaiva.png",
+      "http": 200,
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "cityId": "wien",
+      "orderIndex": 3
+    },
+    {
+      "city": "wien",
+      "time": "ilta",
+      "file": "hero-wien-ilta.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/final/hero-wien-ilta.png",
+      "r2Key": "julisteet/herokoe/20261006/hero-wien-ilta.png",
+      "sha256": "6888ec8477ee653829d115bf5df3eb5582e3dcd44ffd634a02f2c8a0ced2cb28",
+      "bytes": 2529241,
+      "width": 1536,
+      "height": 1024,
+      "mime": "image/png",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "generationPrompt": "Use case: photorealistic-natural. Asset type: Matkakirja city hero, horizontal3:2,1536x1024. Generate a NEW fully photorealistic photograph at a new time of day using exactly the same fixed-camera view as Image1.\nImage1 is my own accepted morning composition/camera geometry reference. Images2–4 are independent Commons architectural evidence, from Herzi Pinki, Mike Peel and Thomas Dahlstrøm Nielsen. Use the references for true geometry, not to compose a different view.\nLocation: present-day Stephansdom in Vienna, its NORTH side from a fixed LOW ROOFTOP-height northwestern viewpoint looking southeast. All framing and geometry MUST be identical to Image1: exact spire tip coordinates, short unfinished north tower with green cap near-left, huge tall south spire behind-left, full long green/cream/dark zigzag roof centered, heraldic roof tiles at the east choir end on left, short west Heathen towers on right, ornate brown/grey Gothic north wall below. Exact same roof/chimney/HVAC silhouettes in the bottom foreground and old-town roof blocks and domed neighboring building at right. Do not rearrange or change church towers, windows, tracery, buttresses, roof patterns, stone blocks, dimensions, trees, rooftops or neighboring buildings. Do not mirror the building, do not add extra spires, domes, rivers, mountains or competing landmarks. Camera, focal length, gentle downward viewing angle, zoom, horizon, crop and scale remain exactly unchanged. Same season and weather except natural cloud shapes; only natural time-of-day illumination and sky may change.\nTIME OF DAY: Warm low sunset light from the western side, the sky soft peach and blue at sunset, glowing stone edges and naturally cool shaded roof slopes. A few real city windows and street lights begin to glow, discreet warm light on the cathedral, not a pitch-black night scene.\nProfessional architectural photograph, believable materials, individual colored roof tiles and warm worn stone, no stylization, no miniature, no illustration, no exaggeratedHDR. Output fully opaque PNG. No added text, logo, billboard, business signage, watermark or border; only the real cathedral's architectural heraldry remains. No identifiable people or large foreground subjects. This is a freshly generated new frame with invariant geometry, not a manually filtered copy of the reference.",
+      "generationArguments": {
+        "prompt": "Use case: photorealistic-natural. Asset type: Matkakirja city hero, horizontal3:2,1536x1024. Generate a NEW fully photorealistic photograph at a new time of day using exactly the same fixed-camera view as Image1.\nImage1 is my own accepted morning composition/camera geometry reference. Images2–4 are independent Commons architectural evidence, from Herzi Pinki, Mike Peel and Thomas Dahlstrøm Nielsen. Use the references for true geometry, not to compose a different view.\nLocation: present-day Stephansdom in Vienna, its NORTH side from a fixed LOW ROOFTOP-height northwestern viewpoint looking southeast. All framing and geometry MUST be identical to Image1: exact spire tip coordinates, short unfinished north tower with green cap near-left, huge tall south spire behind-left, full long green/cream/dark zigzag roof centered, heraldic roof tiles at the east choir end on left, short west Heathen towers on right, ornate brown/grey Gothic north wall below. Exact same roof/chimney/HVAC silhouettes in the bottom foreground and old-town roof blocks and domed neighboring building at right. Do not rearrange or change church towers, windows, tracery, buttresses, roof patterns, stone blocks, dimensions, trees, rooftops or neighboring buildings. Do not mirror the building, do not add extra spires, domes, rivers, mountains or competing landmarks. Camera, focal length, gentle downward viewing angle, zoom, horizon, crop and scale remain exactly unchanged. Same season and weather except natural cloud shapes; only natural time-of-day illumination and sky may change.\nTIME OF DAY: Warm low sunset light from the western side, the sky soft peach and blue at sunset, glowing stone edges and naturally cool shaded roof slopes. A few real city windows and street lights begin to glow, discreet warm light on the cathedral, not a pitch-black night scene.\nProfessional architectural photograph, believable materials, individual colored roof tiles and warm worn stone, no stylization, no miniature, no illustration, no exaggeratedHDR. Output fully opaque PNG. No added text, logo, billboard, business signage, watermark or border; only the real cathedral's architectural heraldry remains. No identifiable people or large foreground subjects. This is a freshly generated new frame with invariant geometry, not a manually filtered copy of the reference.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/originals/aamu.png",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/references/environment-1.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/references/candidate-1.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/references/candidate-2.jpg"
+        ],
+        "transparent_background": false
+      },
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/prompts/ilta-arguments.json",
+      "generationTool": "built-in image_gen",
+      "viitteet": [
+        {
+          "nimi": "File:St. Stephen's cathedral, Vienna, from Hotel Lamée.jpg",
+          "tekija": "Herzi Pinki",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:St._Stephen%27s_cathedral,_Vienna,_from_Hotel_Lam%C3%A9e.jpg"
+        },
+        {
+          "nimi": "File:At Vienna 2025 145.jpg",
+          "tekija": "Photograph by  Mike Peel  ( www.mikepeel.net ).",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:At_Vienna_2025_145.jpg"
+        },
+        {
+          "nimi": "File:Exterior of St. Stephen's Cathedral, Vienna, 2026.jpg",
+          "tekija": "Thomas Dahlstrøm Nielsen",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Exterior_of_St._Stephen%27s_Cathedral,_Vienna,_2026.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/wien/originals/ilta.png",
+      "originalSha256": "faa23d35e496eceb028885f3c8603234d98072c3825e2b29f333365111763476",
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "technicalExport": "RGB PNG with sRGB ICC profile; native1536x1024 pixels preserved exactly, no resampling or artistic image edits.",
+      "qa": {
+        "format": true,
+        "dimensions": true,
+        "opaque": true,
+        "sRGBProfile": "sRGB built-in",
+        "pixelsUnchangedByExport": true,
+        "viewedFinal": true,
+        "landmark": "Stephansdom, Wien",
+        "cameraConsistency": true,
+        "noAddedTextLogosWatermark": true,
+        "noIdentifiablePeople": true,
+        "modernDay": true,
+        "referenceGate": {
+          "count": 3,
+          "authors": 3,
+          "identification": "kategoria",
+          "category": "Category:Exterior of St. Stephen's Cathedral, Vienna"
+        }
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/hero-wien-ilta.png",
+      "http": 200,
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "cityId": "wien",
+      "orderIndex": 3
+    }
+  ],
+  "preview": {
+    "file": "era01-pilotti-esikatselu.jpg",
+    "r2Key": "julisteet/herokoe/20261006/era01-pilotti-esikatselu.jpg",
+    "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/era01-pilotti-esikatselu.jpg",
+    "sha256": "93b72a5d16140f0cbf95b67d4a3cbc11708f9b75ef0597b485b0b5b964c2b2ef",
+    "bytes": 459468,
+    "http": 200,
+    "mime": "image/jpeg",
+    "cors": "https://matkakirja.app",
+    "byteExactReadback": true
+  }
+}
