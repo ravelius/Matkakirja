@@ -47,3 +47,15 @@ Esikatselu: https://media.matkakirja.app/julisteet/herokoe/20261006/era02-yksi-k
 Katso nämä kolme ennen toisen erän pelikytkentää. Loput 22 toimitetaan samassa listajärjestyksessä erän valmistuessa. Katselmointi ja pelikytkentä odottavat kuittausta. Tuotannossa tehdään edelleen vain yksi kuva per paikka.
 
 Wikimedian hakurajoitus jatkui kummassakin sovitussa kokeessa. Uudet viitepyynnöt tauolla asti 19:36 UTC; valmiiden viitteiden tuotanto ja toimitus jatkuvat. Kaikki työntekijät käyttävät jatkossa jaettua vähintään kymmenen sekunnin pyyntöväliä, ja yksi 429 pysäyttää koko ryhmän.
+
+## ERÄ 1 / erä 02: 25 paikkaa, Sumatra–Halifax — R2-varmennettu
+
+Kaikki alkuperäisen listan paikat 26–50 ovat nyt julkisessa R2:ssa, yksi 1536×1024 sRGB PNG per paikka. Manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-02-20261006.json` sisältää 25 riviä listajärjestyksessä: URL, r2Key, SHA, mitat, uusi aihekohtainen caption, tarkka prompti ja 2–4 Commons-viitettä tekijöineen/lisensseineen. Pääsession kuvatarkistus ja tavuntarkka julkinen luenta sekä MIME/CORS on tehty kaikille.
+
+Esikatselu: https://media.matkakirja.app/julisteet/herokoe/20261006/era02-yksi-kuva-esikatselu.jpg
+
+Katselmuskolmikko on Sumatra, Bryssel ja Ljubljana; aiempi pilottimanifesti säilyy. Katso nämä ennen erän pelikytkentää. Dili: ensimmäinen kandidaatikuva hylättiin kaksoisveistoksen vuoksi, kokonaan uusi toinen kuva hyväksyttiin. Molemmat alkuperäiset säilyvät, eikä tehty uusia vuorokausiversioita.
+
+Yhteensä tunnetusta 318 kuvan tilauksesta on nyt 87 kuvaa varmennettu R2:ssa: alkuperäiset paikat 54, lisäkaupungit 26 ja linssit 7. Osa alkuperäisen listan myöhemmistä paikoista valmistui aiempien hyväksyttyjen, API-/tekijä-/lisenssi-/alkuperäis-SHA-varmennettujen valokuvapakettien avulla hakurajoituksen aikana. Ne toimitetaan omien erien järjestyksessä. Kaikki jatkopyynnöt tahdistetaan yhteisesti; seuraava yksi verkkokoe aikaisintaan 19:36 UTC.
+
+Fablen vastaanottokuittaus, katselmus ja pelikytkentä eivät vielä ole todennettuja. Ei main-mergeä, versionnostoa tai julkaisua Codexilta.
