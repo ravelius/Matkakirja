@@ -11,7 +11,7 @@
  * Käyttö: source ~/.zshrc; node tools/opas/tee-esittelyaanet.mjs --tyo <kansio> [--kuiva] <esittely.json> [...]
  * Avaimet ympäristöstä: ELEVEN_API_KEY, CLOUDFLARE_API_TOKEN, CLOUDFLARE_ACCOUNT_ID (ei tulosteta).
  */
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, renameSync } from 'node:fs';
 import { join } from 'node:path';
 import { execFileSync, spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
@@ -60,9 +60,13 @@ if (import.meta.url === `file://${process.argv[1]}`) {
         if (kirjaus[sha]?.valmis) continue;
         if (kuiva) { console.log(`${e.id} ${k.id} ${laji} ${puhe.length} mrk ${sha}`); continue; }
         if (await r2On(`opas/${sha}.mp3`)) { kirjaus[sha] = { kaupunki: e.id, id: k.id, laji, valmis: true, olemassa: true }; continue; }
-        const raaka = await eleven(puhe);
+        // Yksi otto: jo tallennettu master käytetään uudelleen (keskeytynyt ajo ei generoi samaa tekstiä toiste).
         const master = join(tyo, 'master', `${sha}.wav`);
-        ff(['-f', 's16le', '-ar', '44100', '-ac', '1', '-i', '-', master], raaka);
+        if (!existsSync(master)) {
+          const raaka = await eleven(puhe);
+          ff(['-f', 's16le', '-ar', '44100', '-ac', '1', '-i', '-', master + '.osa.wav'], raaka);
+          renameSync(master + '.osa.wav', master);
+        }
         // Tasoitus PCM:nä: RMS → -17,2 dB (volumedetect mean_volume), alimiter huippuihin; sitten pakkaus kerran.
         const mitta = spawnSync('ffmpeg', ['-hide_banner', '-nostats', '-i', master, '-af', 'volumedetect', '-f', 'null', '-'], { encoding: 'utf8' }).stderr;
         const keski = Number((/mean_volume:\s*(-?[\d.]+) dB/.exec(mitta) ?? [])[1]);
@@ -71,7 +75,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
         ff(['-i', master, '-af', `volume=${vahvistus.toFixed(2)}dB,alimiter=limit=0.97:level=false:latency=1`, '-c:a', 'pcm_s16le', tasoitettu]);
         const mp3 = ff(['-i', tasoitettu, '-c:a', 'libmp3lame', '-b:a', '192k', '-f', 'mp3', '-']);
         const pcm = ff(['-i', tasoitettu, '-ar', '24000', '-ac', '1', '-f', 's16le', '-']);
-        await r2Kirjoita(`opas/${sha}.mp3`, mp3, 'audio/mpeg');
+        mkdirSync(join(tyo, 'kuuntelu', e.id), { recursive: true });
+      writeFileSync(join(tyo, 'kuuntelu', e.id, `${String(e.kohteet.indexOf(k) + 1).padStart(2, '0')}-${k.id}-${laji}.mp3`), mp3);
+      await r2Kirjoita(`opas/${sha}.mp3`, mp3, 'audio/mpeg');
         await r2Kirjoita(`opas/${sha}.pcm`, pcm, 'application/octet-stream');
         kirjaus[sha] = { kaupunki: e.id, id: k.id, laji, merkkeja: puhe.length, kesto_s: Math.round((pcm.length / 48000) * 10) / 10,
           vahvistus_db: Math.round(vahvistus * 10) / 10, valmis: true };
