@@ -24,9 +24,10 @@ Julkaisija local_24e63224-…, Natiivi-UI local_c6d63773-…). Simut vain Julkai
   - Tehty: GLO-30 N29 E031 → _lahteet/giza/ (45 Mt), rajattu Gizaan _valmiit/giza-v1/lahde/glo30-giza.npy + .json
     (108 × 126, 1″; purku ilman imagecodecsia: deflate + float-prediktori numpylla, venv-rembg). DSM sisältää pyramidien kohoumat
     (Kheops 89 m, tasanko ~60 m) → alustat tasoitetaan.
-  - Kesken: avoimen datan haku (mitat, koordinaatit, Khefrenin kuoriverhous, Mykerinoksen lohkeama, Sfinksin CC-skannaukset,
-    Poly Haven -kalkkikivi) oli Sonnet-agentilla, tulos scratchpadin giza-data.md (session väliaikainen, voi kadota) → aja haku
-    uudelleen, jos tiedostoa ei ole. Blender-tiedostoja ei vielä ole; aloita _valmiit/giza-v1/lahde/.
+  - Datahaku VALMIS: _valmiit/giza-v1/lahde/giza-data.md (mitat, koordinaatit, kerrokset, verhous, lähteet V/A). Tärkeimmät:
+    CC0-mallia ei ole, joten Sfinksi mallinnetaan itse (CC BY -mallit vain muotoreferenssiksi). Mykerinoksen lohkeaman mitat
+    Commons-kuvista. Wikidatan korkeuksia ei käytetä. Tekstuurit Poly Haven white_sandstone_blocks_02 / large_sandstone_blocks_01 /
+    sandy_gravel_02 (CC0). Tarkista kriittiset luvut alkuperäislähteestä. Blender-tiedostoja ei vielä ole; aloita _valmiit/giza-v1/lahde/.
 - **Faceit-lisäosa** asennettu Blenderiin (bl_ext.user_default.faceit); ajot ilman --factory-startup (faceit_paa.py, faceit_leivo.py).
 - Lokit, joissa käynnissä ei ole mitään: ei Blender-ajoja eikä simuja.
 
