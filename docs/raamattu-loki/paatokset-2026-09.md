@@ -10964,3 +10964,31 @@ Ratkaisu: Raamatun KEHITYSTAHTI päivitetty: juna lähtee heti, kun kuitattua si
 ## PÄÄTOIMITTAJA: IPAD-TALLENNE — QUICKTIME VARASI KAAPPAUKSEN, IPADIN UUDELLEENKÄYNNISTYS, WI-FI-ILMOITUS (6.10.2026 klo 17.33)
 
 6.10.2026 klo 17.1x–17.25: iPadin 00008103 laitteistotallenne antoi '!dev' (-11800). Omistaja käynnisti iPadin uudelleen ("Nyt käynnistetty uudestaan."), sulki 30 h auki olleen QuickTime Playerin ("quicktime nyt suljettu") ja napautti iPadin Wi-Fi-ilmoituksesta "Kumoa" ("painoin kumoa"); sen jälkeen tallenne toimi (kylmäkäynnistys 1 092 kuvaa / 30 s, opas 210 s). Muistisääntö: ennen iPad-kaappausta QuickTime kiinni (omistajalta, roolit eivät sulje sitä itse), konsolikäyttäjä koodaus, iPad auki. Kehityskäännös (.kehitys) allekirjoitetaan wildcard-profiililla, joten Increased Memory Limit on vain TF/App Store -käännöksissä (Natiiviseppä f3a48802).
+
+## OMISTAJA: ISS-KAMERAN RAJAUSMERKIT, JULISTEEN IKKUNA JA OHJAINVIVUSTON KIINNIKE (6.10.2026 klo 19.03)
+
+Omistaja 6.10.2026 klo 18.38 (chat) sanatarkasti: "Pystyykö pelaaja jotenkin näkemään kupolassa etukäteen, minkälainen rajaus kuvaan tulisi, nyt kun tuossa on tuo laaja ja telelinssikin käytössä? Ja pitäisikö julisteeseen kuitenkin ottaa tuo sama pyöreä ikkuna, kuin mikä on kupolassakin? Mitä olet mieltä? Ja tuo Ohjainvivusto kelluu nyt ilmassa. Siinä saisi näkyä jokin pieni nostin keskellä alareunassa, jotta se näyttäisi, että se ei vain leiju ilmassa." → kiinnike: Linnanrakentaja (kuva) + Natiivi-UI (sijoitus), juna 152/153; rajausmerkit ja julisteen ikkuna omistajan päätökseen (Päätoimittajan suositus: rajausmerkit LAAJA/TELE, juliste sivuikkunalla).
+
+Tila: kiinnike (pieni nostin keskellä alareunassa) tilattu Linnanrakentajalta (malli) ja Natiivi-UI:lta (sijoitus), juna 152 tai 153. Rajausmerkit ja julisteen ikkunan muoto odottavat omistajan päätöstä.
+
+## OMISTAJA: VUOROKAUDENAIKA ELÄVÄÄN OPPAASEEN, OMA NAPPI VASEMPAAN YLÄKULMAAN (6.10.2026 klo 19.03)
+
+Omistaja 6.10.2026 klo 18.54 (chat) sanatarkasti: "tuleeko matkaoppaaseen vuorokauden ajat vai minne?" → vastattu: elävän oppaan kaupunkinäkymään, kohteen paikallisen aurinkoajan mukaan (aamu kultainen, päivä, ilta lämmin, yö = himmeä ilta kunnes kaupungin valot). Sanatarkasti: "tuon voisi laittaa oman napit taakse myös valittavaksi, esim vasempaan yläkulmaan joku kuvake joka kuvastaa vuorokaudenaikoja" → Natiivi-UI: OHJAUSNAPPI vasempaan yläkulmaan (aurinko/kuu-kuvake), lista Automaattinen/Aamu/Päivä/Ilta (yö valojen kanssa), LS1 rajapinta. Juna 152/153.
+
+Tila: Natiivi-UI yhdisti LS1:n kaupunkikuvan (kuva-150) junan 152 haaraan (f8783c3f); nappi lukee valinnan ja voimassa olevan tilan. Automaattinen-tila näyttää toistaiseksi nykyisen oletuksen ilman sävyä, kunnes Päätoimittaja kuittaa sävyn oletukseksi LS1:n kiinteän kulman stillparista.
+
+## OMISTAJA: SÄÄTILA JA KUVANLAADUN PARANNUKSET — ENSIN KOHTEEN KOROSTUS JA TERÄVÖITYS (6.10.2026 klo 19.03)
+
+Omistaja 6.10.2026 klo 18.58 (chat) sanatarkasti: "saako myös vallitsevan säätilan?" → vastattu: kyllä (MET Norway -säädata workerin kautta, näyttö COZY Weather 3:lla, sama nappi kuin vuorokaudenaika); osto omistajalla. Sanatarkasti: "ja oliko vielä muita kuvanlaadun parannuksia lisättävissä?" → lista 1 terävöitys, 2 yövalot, 3 kohteen korostus, 4 pilvet ja sää (COZY), 5 hehku. Sanatarkasti: "tee kaikki mutta aloita kohdasta 3 ja 1. jos ostan säälisäosan niin voiko sitä käyttää muuallakin kuin cesiumissa esim. linnassa?" → LS1: 3 + 1 ensin, sitten 2, 5, 4 (COZY oston jälkeen), junat 153–154.
+
+Vastaus omistajan kysymykseen: COZY Weather 3 on Unity-paketti, joten sitä voi käyttää kaikissa natiivin näkymissä, myös linnassa (sää ja pilvet), ei vain Cesium-kaupunkinäkymässä.
+
+Omistaja 18.5x: "ostetaan se heti" (COZY) → Chrome-välilehti Asset Store 271742 auki, osto omistajalla.
+
+## OMISTAJA: POSTERBOARD-KAATUMISET (6.10.2026 klo 19.03)
+
+Omistaja 6.10.2026 klo 19.00 (chat): "posterboard on kaatunut 5 kertaa" → vastattu: PosterBoard on iOS:n lukitusnäytön/taustakuvan prosessi, ei peli; pyydetty vikakoodi, jos osui pelin kanssa samaan aikaan. Pelin kaatumiseksi tätä ei lueta ilman vikakoodia tai TF-kaatumisraporttia.
+
+## PÄÄTOIMITTAJA: T7-SIMULAATTORISIIRTO, TOINEN YRITYS EI TOIMINUT (6.10.2026 klo 19.03)
+
+6.10.2026 klo 18.48–18.53: omistaja ajoi sudo diskutil enableOwnership "/Volumes/T7 4TB" (Owners: Enabled). rsync päivitti T7-kopion (319 733 / 319 733 tiedostoa), mutta Devices-symlinkin jälkeen CoreSimulator näki taas 0 laitetta, ja skripti palautti alkuperäisen automaattisesti (24 laitetta). Syy ei siis ollut omistajuus; todennäköisesti CoreSimulatorService ei seuraa Devices-symlinkkiä ulkoiselle taltiolle. Kolmatta samaa yritystä ei tehdä ilman uutta tietoa; vaihtoehdot ovat xcrun simctl --set <polku> (roolien työkalut käyttävät oletussettiä) tai TCC-lupa (omistajan päätös). T7:llä on käyttämätön kopio. Levy 94 Gi klo 19.01 roolien omien simujen erase-tyhjennysten jälkeen.
