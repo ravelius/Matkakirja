@@ -39,7 +39,9 @@ namespace Matkakirja.Natiivi
         // KUVAUS LCD:SSÄ (omistaja 6.10.): kuvauksen ajan "KEHITETÄÄN…" ja LATAUSPALKKI LCD-väreissä (tk-teema-lcd),
         // valmiin kuvan jälkeen "KUVA VALMIS" 2 s; sitten sijainti takaisin.
         readonly Latauspalkki kehitys;
-        float valmisAsti = -1f;
+        float valmisAsti = -1f, syyAsti = -1f;
+        string syy;
+        bool oliKaynnissa;
         public const float ValmisS = 2f, ObjektiiviPt = 12f;
         readonly Func<AstronauttiLinssi> linssi;
         readonly Action kuvaa;
@@ -693,11 +695,25 @@ namespace Matkakirja.Natiivi
         string KuvausTeksti()
         {
             bool kaynnissa = IssKameraKuva.Kaynnissa;
+            // Kuva ei valmistunut (LS2 6.10.: Tila kertoo syyn, kun Kaynnissa → false): syy LCD:hen 2 s.
+            if (oliKaynnissa && !kaynnissa)
+            {
+                syy = IssKameraKuva.Tila switch
+                {
+                    "ei maata" => "EI MAATA KUVASSA",
+                    "ei kuvauspaikkaa" => "EI KUVA-AINEISTOA",
+                    "keskeytyi" => "KUVAUS KESKEYTYI",
+                    _ => null,
+                };
+                if (syy != null) { syyAsti = Time.unscaledTime + ValmisS; Debug.Log("MATKAKIRJA linssit: ohjaamon LCD " + syy); }
+            }
+            oliKaynnissa = kaynnissa;
             if (kaynnissa) kehitys.Arvo = IssKameraKuva.Edistyminen;
             kehitys.Juuri.style.display = kaynnissa ? DisplayStyle.Flex : DisplayStyle.None;
             kehitys.Nayta(kaynnissa);
             if (kaynnissa) return "KEHITETÄÄN…";
             if (Time.unscaledTime < valmisAsti) return "KUVA VALMIS";
+            if (syy != null && Time.unscaledTime < syyAsti) return syy;
             return null;
         }
 
