@@ -504,7 +504,7 @@ namespace Matkakirja.Natiivi
                 long mtavut = 0;
                 for (int i0 = 0; i0 < lahteet.Count; i0 += 16)
                 {
-                    var era = lahteet.Skip(i0).Take(16).Select(l => (l, q: UnityWebRequest.Get(AstronauttiKerros.S2Juuri + KuvanTyosto.MosaiikinPolku(l.z, l.x, l.y)))).ToList();
+                    var era = lahteet.Skip(i0).Take(16).Select(l => (l, q: UnityWebRequest.Get(KuvanTyosto.MosaiikinOsoite(AstronauttiKerros.S2Juuri, l.z, l.x, l.y)))).ToList();
                     foreach (var (_, q) in era) q.SendWebRequest();
                     while (era.Any(x => !x.q.isDone)) yield return null;
                     var tex = new Texture2D(2, 2, TextureFormat.RGBA32, false);

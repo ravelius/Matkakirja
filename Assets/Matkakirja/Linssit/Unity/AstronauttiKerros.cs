@@ -13,6 +13,7 @@ using CesiumForUnity;
 using Matkakirja.Linssit.Aikajana;
 using Matkakirja.Linssit.Astronautti;
 using Matkakirja.Linssit.Iss;
+using Matkakirja.Linssit.IssKamera;
 using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
@@ -97,6 +98,7 @@ namespace Matkakirja.Natiivi
             k.georeferenssi = g;
             k.kierto = kierto;
             k.kamera = kierto.GetComponent<Camera>();
+            if (!s2MaailmaHaettu && S2MaailmaKaytossa) { s2MaailmaHaettu = true; k.StartCoroutine(LataaS2Maailma()); }
             // Vuorokaudenaika (omistaja 1.10.): auringon kellon viite = katsekohta ja kyydin aurinko kartan valolle (OnEnable/OnDisable).
             var merkit = KarttaKerrokset.Instanssi != null ? KarttaKerrokset.Instanssi.merkit : null;
             k.fontti = merkit != null ? merkit.fontti : null;
@@ -402,7 +404,7 @@ namespace Matkakirja.Natiivi
         /// Paikallinen), välimuistin S2-alikatto 200 Mt. Kevyt laite (Kyytipino.KevytLaite): enintään z9. Kyydin päättyessä reliefi
         /// palaa. A/B `astro kyyti s2 0|1`, testiosoite `astro kyyti s2 url <{docs}/… | pois>`.
         /// </summary>
-        public const string S2Juuri = "https://media.matkakirja.app/" + Laattapalvelin.S2Polku + "/v1/";
+        public const string S2Juuri = "https://media.matkakirja.app/" + Laattapalvelin.S2Polku + "/" + Laattapalvelin.S2EuroopanVersio + "/";
         public const string S2Kerros = "astronautti-s2";
         /// <summary>
         /// Kevyt laite S2:lle (Natiivisepän ehto 1.10.): Kyytipino.KevytLaite (≤ iPhone 15 Pro) tai muisti ≤ 6144 Mt → z9, karkeampi
@@ -416,6 +418,7 @@ namespace Matkakirja.Natiivi
         const double S2W = -28.125, S2E = 45.0, S2N = 72.395704, S2S = 31.952162;
         const int S2Rx = 13, S2Ry = 13, S2MaxTaso = 4;
         bool s2Lisatty, reliefPoissa;
+        static bool s2MaailmaPaalla;
         string s2Url;
 
         /// <summary>
@@ -425,6 +428,69 @@ namespace Matkakirja.Natiivi
         public struct Pinta { public string Url; public double W, S, E, N; public int Rx, Ry, MaxTaso; }
         public static Pinta? KuvanPinta;
 
+        /// <summary>
+        /// S2-MAAILMA v2 (juna 145, Natiivisepän kuittaus 5.10.): Euroopan ulkopuolinen S2 Karttasepän maailman mosaiikista.
+        /// laatat.json haetaan kerran istunnossa ja puretaan taustasäikeessä; vasta sitten kerros vaihtuu koko maailman jakoon
+        /// (Laattapalvelin.S2Maailma ohjaa Euroopan lohkon v1:een, puuttuvat läpinäkyvinä). Hakuvirhe → ennallaan (Eurooppa v1).
+        /// A/B `astro kyyti s2maailma 0|1`.
+        /// </summary>
+        public static bool S2MaailmaKaytossa = true;
+        static bool s2MaailmaHaettu;
+        /// <summary>Ladattu saatavuus (KuvanTyosto.Maailma = tämä, kun käytössä; A/B pois → null myös ISS-kuvalle).</summary>
+        public static S2MaailmaLaatat S2MaailmaLadattu;
+        bool S2MaailmaValmis => S2MaailmaKaytossa && S2MaailmaLadattu != null;
+        static string S2MaailmaMalli => "https://media.matkakirja.app/" + S2MaailmaLaatat.Polku + "{z}/{x}/{reverseY}.jpg";
+
+        static System.Collections.IEnumerator LataaS2Maailma()
+        {
+            var kello = System.Diagnostics.Stopwatch.StartNew();
+            using var q = UnityWebRequest.Get(S2MaailmaLaatat.Juuri + "laatat.json");
+            yield return q.SendWebRequest();
+            if (q.result != UnityWebRequest.Result.Success) { Debug.Log("MATKAKIRJA linssit: s2-maailma: laatat.json " + q.error + " → vain Eurooppa"); yield break; }
+            var tavut = q.downloadHandler.data;
+            var t = System.Threading.Tasks.Task.Run(() => S2MaailmaLaatat.Jasenna(System.Text.Encoding.UTF8.GetString(tavut)));
+            while (!t.IsCompleted) yield return null;
+            var m = t.IsFaulted ? null : t.Result;
+            if (m == null) { Debug.Log("MATKAKIRJA linssit: s2-maailma: laatat.json ei kelpaa → vain Eurooppa"); yield break; }
+            // Korjauskerrokset uusin ensin (valinnaisia; 404 = kerros puuttuu).
+            var korjaukset = new System.Collections.Generic.List<(string, S2MaailmaLaatat)>();
+            foreach (var kansio in S2MaailmaLaatat.KorjausKansiot)
+                using (var kq = UnityWebRequest.Get(S2MaailmaLaatat.KorjausJuuriPohja + kansio + "/korjaus.json"))
+                {
+                    yield return kq.SendWebRequest();
+                    if (kq.result != UnityWebRequest.Result.Success) continue;
+                    var kt = kq.downloadHandler.data;
+                    var kj = System.Threading.Tasks.Task.Run(() => S2MaailmaLaatat.Jasenna(System.Text.Encoding.UTF8.GetString(kt)));
+                    while (!kj.IsCompleted) yield return null;
+                    if (!kj.IsFaulted && kj.Result != null) korjaukset.Add((kansio, kj.Result));
+                }
+            m.Korjaukset = korjaukset.ToArray();
+            var ekorjaukset = new System.Collections.Generic.List<(string, S2MaailmaLaatat)>();
+            foreach (var kansio in S2MaailmaLaatat.EuroopanKorjausKansiot)
+                using (var kq = UnityWebRequest.Get(S2MaailmaLaatat.EuroopanKorjausJuuriPohja + kansio + "/korjaus.json"))
+                {
+                    yield return kq.SendWebRequest();
+                    if (kq.result != UnityWebRequest.Result.Success) continue;
+                    var kt = kq.downloadHandler.data;
+                    var kj = System.Threading.Tasks.Task.Run(() => S2MaailmaLaatat.Jasenna(System.Text.Encoding.UTF8.GetString(kt)));
+                    while (!kj.IsCompleted) yield return null;
+                    if (!kj.IsFaulted && kj.Result != null) ekorjaukset.Add((kansio, kj.Result));
+                }
+            m.EuroopanKorjaukset = ekorjaukset.ToArray();
+            Laattapalvelin.S2Maailma(S2MaailmaLaatat.Polku, m.Onko, (z, x, y) =>
+            {
+                var k = m.KorjausKansio(z, x, y);
+                return k == null ? null : S2MaailmaLaatat.KorjausPolkuPohja + k + "/";
+            }, (z, x, y) =>
+            {
+                var k = m.EuroopanKorjausKansio(z, x, y);
+                return k == null ? null : S2MaailmaLaatat.EuroopanKorjausPolkuPohja + k + "/";
+            });
+            S2MaailmaLadattu = m;
+            if (S2MaailmaKaytossa) KuvanTyosto.Maailma = m;
+            Debug.Log($"MATKAKIRJA linssit: s2-maailma: {S2MaailmaLaatat.Versio} z{m.ZMin}–{m.ZMax}, {tavut.Length / 1024} kt, korjauskerrokset {string.Join(", ", System.Linq.Enumerable.Select(m.Korjaukset, k => k.Kansio))} / Eurooppa {string.Join(", ", System.Linq.Enumerable.Select(m.EuroopanKorjaukset, k => k.Kansio))}, {kello.ElapsedMilliseconds} ms");
+        }
+
         void PaivitaS2(bool kyydissa)
         {
             var kk = KarttaKerrokset.Instanssi;
@@ -433,7 +499,8 @@ namespace Matkakirja.Natiivi
             // S2 on kesäaineisto: vain lumettomina kausina (Iss.Vuodenaika.S2Nakyy), talvella BMNG (omistaja 1.10.); kuvan pinta aina.
             bool halutaan = kyydissa && ((S2Kaytossa && Vuodenaika.S2Nakyy(Vuodenaika.Kausi(kuukausiLisatty))) || kuvan.HasValue)
                 && kuukausiLisatty > 0;
-            string haluttu = kuvan?.Url ?? (S2Osoite ?? S2Juuri + "{z}/{x}/{reverseY}.jpg");
+            bool maailma = !kuvan.HasValue && S2Osoite == null && S2MaailmaValmis;
+            string haluttu = kuvan?.Url ?? (S2Osoite ?? (maailma ? S2MaailmaMalli : S2Juuri + "{z}/{x}/{reverseY}.jpg"));
             // Kuvan pinta tulee tai poistuu kesken S2:n: vaihdetaan vain S2-kerros (reliefi ja BMNG pysyvät paikoillaan).
             if (halutaan && s2Lisatty && haluttu != s2Url) { kk.PoistaRasteri(S2Kerros); s2Lisatty = false; }
             AsetaS2Savy();
@@ -446,14 +513,17 @@ namespace Matkakirja.Natiivi
                 // iPad +480 Mt GPU:n puolella → kevyille ≤ +250 Mt).
                 bool kevyt = !kuvan.HasValue && S2Kevyt;
                 int maxTaso = kuvan?.MaxTaso ?? (kevyt ? S2MaxTaso - 1 : S2MaxTaso);
+                // Maailma: Cesiumin oma Web Mercator -jako (taso = z, juuri 1 × 1), joten tasot ovat absoluuttiset (6 + suhteellinen).
+                if (maailma) maxTaso += 6;
                 s2Lisatty = kk.LisaaRasteri(S2Kerros, url, CesiumUrlTemplateRasterOverlayProjection.WebMercator, 0, maxTaso, 1f) != null
                     && kk.RasterinMuisti(S2Kerros, kevyt ? 4f : 2f, kevyt ? 1024 : 2048, (kevyt ? 8L : 16L) * 1024 * 1024)
                     && (kuvan.HasValue ? kk.RasterinJako(S2Kerros, kuvan.Value.W, kuvan.Value.S, kuvan.Value.E, kuvan.Value.N, kuvan.Value.Rx, kuvan.Value.Ry)
-                                       : kk.RasterinJako(S2Kerros, S2W, S2S, S2E, S2N, S2Rx, S2Ry));
+                        : maailma || kk.RasterinJako(S2Kerros, S2W, S2S, S2E, S2N, S2Rx, S2Ry));
+                s2MaailmaPaalla = s2Lisatty && maailma;
                 s2Url = haluttu;
                 AsetaS2Reuna(s2Lisatty);   // S2 ↔ kuvan pinta: Kyytipino.S2 pysyy päällä, joten AsetaS2Savy ei kutsu tätä
                 long valimuisti = s2Lisatty ? kk.PallonValimuisti((kevyt ? S2ValimuistiKevytMt : S2ValimuistiMt) * 1024L * 1024) : -1;
-                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: {(kuvan.HasValue ? "kuvan pinta" : "S2")} {(s2Lisatty ? "päällä" : "ei mahtunut")} (z{6}–z{6 + maxTaso}) {url}; " +
+                Debug.Log($"MATKAKIRJA linssit: kyydin pinta: {(kuvan.HasValue ? "kuvan pinta" : "S2")} {(s2Lisatty ? "päällä" : "ei mahtunut")} (z6–z{(maailma ? maxTaso : 6 + maxTaso)}{(maailma ? ", maailma" : "")}) {url}; " +
                     $"laite {(kevyt ? "kevyt" : "täysi")} (muisti {SystemInfo.systemMemorySize} Mt, {SystemInfo.deviceModel}), " +
                     $"pallon välimuisti {valimuisti / 1048576} Mt, S2 näyttövirhe {(kevyt ? 4 : 2)}, tekstuuri {(kevyt ? 1024 : 2048)}");
                 if (!s2Lisatty && !kuvan.HasValue) S2Kaytossa = false;   // ei yritetä joka sekunti uudelleen
@@ -461,7 +531,7 @@ namespace Matkakirja.Natiivi
             else
             {
                 kk.PoistaRasteri(S2Kerros);
-                s2Lisatty = false;
+                s2Lisatty = false; s2MaailmaPaalla = false;
                 kk.PallonValimuisti(null);
                 Debug.Log("MATKAKIRJA linssit: kyydin pinta: S2 pois");
             }
@@ -494,6 +564,12 @@ namespace Matkakirja.Natiivi
             r.Add(new CupolanSarja { Malli = KuukaudenPintaJuuri + kuukausi.ToString("00") + "/{z}/{x}/{reverseY}.jpg", ZMin = 0, ZMax = KuukaudenPintaMaxTaso });
             if (!S2Kaytossa || !Vuodenaika.S2Nakyy(Vuodenaika.Kausi(kuukausi))) return;
             int juuriZ = 6, maxTaso = S2Kevyt ? S2MaxTaso - 1 : S2MaxTaso;
+            if (S2Osoite == null && S2MaailmaValmis)
+            {
+                // Maailma: absoluuttiset tasot; Laattapalvelin ohjaa Euroopan lohkon v1:een ja ohittaa puuttuvat.
+                r.Add(new CupolanSarja { Malli = S2MaailmaMalli, ZMin = juuriZ, ZMax = juuriZ + maxTaso });
+                return;
+            }
             var j = Matkakirja.Linssit.Iss.CupolanLaatat.Juuri(S2W, S2N, juuriZ);
             r.Add(new CupolanSarja { Malli = S2Osoite ?? S2Juuri + "{z}/{x}/{reverseY}.jpg", ZMin = juuriZ, ZMax = juuriZ + maxTaso,
                 JuuriZ = juuriZ, JuuriX = j.x, JuuriY = j.y, Alue = (S2W, S2S, S2E, S2N) });
@@ -519,7 +595,7 @@ namespace Matkakirja.Natiivi
         /// S2-sävy on varjostimessa kiinteästi Euroopan suorakulmiossa, joten maailman kuvat jäävät sävyttämättä.
         /// </summary>
         static void AsetaS2Reuna(bool paalla) => Shader.SetGlobalVector(S2ReunaId,
-            paalla && !KuvanPinta.HasValue ? new Vector4((float)S2W, (float)S2S, (float)S2E, (float)S2N) : Vector4.zero);
+            paalla && !KuvanPinta.HasValue && !s2MaailmaPaalla ? new Vector4((float)S2W, (float)S2S, (float)S2E, (float)S2N) : Vector4.zero);
 
         /// <summary>Kutsutaan joka Kyyti-kutsulla (tietorivi sekunnin välein): kuukauden vaihtuessa kerros vaihtuu.</summary>
         void PaivitaKuukaudenPinta(bool kyydissa)
