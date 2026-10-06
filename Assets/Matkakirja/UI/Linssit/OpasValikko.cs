@@ -195,7 +195,7 @@ namespace Matkakirja.Natiivi
             napit.style.opacity = 0f;
             OpasNappi("Kysy", Ikonit.Puhekupla, () => Avaa(Nakyma.Kysy), "Valmiit kysymykset oppaalle");
             // JATKA KIERROSTA (omistaja 6.10. 16.3x, Päätoimittaja): kysymys keskeyttää kaupunkikierroksen; vastauksen jälkeen
-            // nappirivin lasipohjalla oleva nappi keskitettynä rivin yläpuolelle (LS1: KierrosKeskeytetty, JatkaKierrosta()).
+            // nappirivin lasipohjalla oleva nappi keskitettynä rivin yläpuolelle (LS1: KierrosJatkettavissa, JatkaKierrosta()).
             jatkaRivi = Rakenne.El("tk-teema-harmaa mk-opas-napit", Juuri, PickingMode.Ignore);
             jatkaRivi.style.display = DisplayStyle.None;
             var jatka = Rakenne.Nappi(null, "mk-liiku__nappi mk-opas-nappi", JatkaKierrosta, jatkaRivi);
@@ -569,12 +569,12 @@ namespace Matkakirja.Natiivi
         VisualElement jatkaRivi;
         bool? testiJatka;
 
-        /// <summary>LS1 (OpasSovitin.KierrosKeskeytetty, heijastuksella): kierros keskeytetty kysymykseen ja vastaus valmis.</summary>
+        /// <summary>LS1 (OpasSovitin.KierrosJatkettavissa, heijastuksella): kierros keskeytetty kysymykseen ja vastaus kuultu.</summary>
         static bool KierrosKeskeytetty
         {
             get
             {
-                try { return typeof(OpasSovitin).GetProperty("KierrosKeskeytetty", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) is bool b && b; }
+                try { return typeof(OpasSovitin).GetProperty("KierrosJatkettavissa", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) is bool b && b; }
                 catch { return false; }
             }
         }
