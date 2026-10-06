@@ -23,6 +23,9 @@ namespace Matkakirja.Natiivi
         string teksti, edellinen;
         float nimiAlku = -100f;
 
+        /// <summary>Alue (isän koordinaatit), jonka päälle lappu ei asetu (esim. vasemman yläkulman ohjausnappi).</summary>
+        public Rect Este;
+
         public OpasNimilappu(VisualElement isa)
         {
             this.isa = isa;
@@ -68,6 +71,8 @@ namespace Matkakirja.Natiivi
             float ylos = q.y - ViivaPituus - lh;
             float lx = Mathf.Clamp(q.x - lw * 0.5f, Reuna, Mathf.Max(Reuna, w - lw - Reuna));
             float ly = Mathf.Max(Reuna, ylos);
+            // Ei vasemman yläkulman napin alle (vuorokaudenaika, omistaja 6.10. 18.5x): lappu napin alapuolelle.
+            if (Este.width > 0 && lx < Este.xMax && ly < Este.yMax) ly = Este.yMax + Reuna;
             lappu.style.left = Mathf.Round(lx); lappu.style.top = Mathf.Round(ly);
             viiva.style.left = q.x - 0.75f; viiva.style.top = ly + lh;
             viiva.style.height = Mathf.Max(0f, q.y - (ly + lh) - 4f);

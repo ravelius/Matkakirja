@@ -96,7 +96,7 @@ namespace Matkakirja.Natiivi
         VisualElement napit;
         Button mikkiNappi;
         bool nappiNakyy;
-        enum Nakyma { Paa, Takyt, Maanosat, Maat, Kaupungit, Kysy, Liiku, Mika }
+        enum Nakyma { Paa, Takyt, Maanosat, Maat, Kaupungit, Kysy, Liiku, Mika, Aika }
 
         /// <summary>Oppaan linssi auki (✕ pois, LinssiUi.PaivitaSulku).</summary>
         public static bool Nakyy => Viimeisin != null && Viimeisin.nakyy;
@@ -169,6 +169,10 @@ namespace Matkakirja.Natiivi
             // Omistaja 6.10. 16.3x: tauko taas aina näkyvissä ☰:n vasemmalla (kumoaa 12.1x:n tauon osalta); kuvat jäävät ☰:n sisään.
             kuvaNappi.style.display = DisplayStyle.None;
             nappi = Ohjausnappi.Nappi(Ikonit.Valikko, "Valikko", () => { if (Auki) Sulje(); else Avaa(Nakyma.Paa); }, ryhma);
+            // VUOROKAUDENAIKA (omistaja 6.10. 18.5x): OHJAUSNAPPI vasempaan yläkulmaan; kuvake = voimassa oleva tila, A = automaattinen.
+            var aikaRyhma = Ohjausnappi.Ryhma(Juuri);
+            aikaRyhma.AddToClassList("mk-ohjausryhma--vasen");
+            aikaNappi = Ohjausnappi.Nappi(Ikonit.Viiva["paiva"], "Vuorokaudenaika", () => { if (Auki && nakyma == Nakyma.Aika) Sulje(); else Avaa(Nakyma.Aika); }, aikaRyhma);
 
             // Elävä opas nykyajassa (omistaja 5.10.2026 klo 20.5x): LASI-lista harmaan lasin tokeneilla ja modernilla kirjasimella.
             valikko = Rakenne.El("mk-linssivalikko mk-linssivalikko--pohja tk-teema-harmaa", kerros.Juuri(kerrosNro));
@@ -1022,6 +1026,9 @@ namespace Matkakirja.Natiivi
                 case Nakyma.Mika:
                     RakennaMika();
                     break;
+                case Nakyma.Aika:
+                    RakennaAika();
+                    break;
                 case Nakyma.Maanosat:
                     Takaisin("Vaihda kohde", Nakyma.Paa);
                     if (kaikki == null || kaikki.Count == 0) { Tyhja("Kaupungit latautuvat…"); break; }
@@ -1289,6 +1296,48 @@ namespace Matkakirja.Natiivi
 
         Button lopetaNappi;
         bool? testiLopeta;
+        Button aikaNappi;
+        string aikaKuvake;
+        static readonly (string Arvo, string Nimi)[] AikaValinnat = { ("auto", "Automaattinen"), ("aamu", "Aamu"), ("paiva", "Päivä"), ("ilta", "Ilta") };
+
+        /// <summary>LS1: OpasSovitin.VuorokausiValinta (auto | aamu | paiva | ilta) heijastuksella; oletus auto.</summary>
+        static string AikaValinta
+        {
+            get { try { return typeof(OpasSovitin).GetProperty("VuorokausiValinta", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) as string ?? "auto"; } catch { return "auto"; } }
+            set { try { typeof(OpasSovitin).GetProperty("VuorokausiValinta", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.SetValue(null, value); } catch (Exception e) { Debug.LogWarning("MATKAKIRJA opas: VuorokausiValinta: " + e.GetType().Name); } }
+        }
+
+        /// <summary>LS1: OpasSovitin.VuorokausiNyt (aamu | paiva | ilta | yo) heijastuksella; oletus paiva.</summary>
+        static string AikaNyt
+        {
+            get { try { return typeof(OpasSovitin).GetProperty("VuorokausiNyt", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) as string ?? "paiva"; } catch { return "paiva"; } }
+        }
+
+        void PaivitaAika()
+        {
+            string nyt = AikaNyt, val = AikaValinta;
+            string k = nyt + (val == "auto" ? ":A" : "");
+            if (k != aikaKuvake && Ikonit.Viiva.TryGetValue(nyt, out var svg))
+            {
+                aikaKuvake = k;
+                aikaNappi.Clear();
+                aikaNappi.Add(new SvgIkoni(svg));
+                if (val == "auto") Kirjasimet.Aseta(Rakenne.Teksti("A", "mk-ohjausnappi__merkki", aikaNappi), Kirjasin.ModerniLihava);
+                aikaNappi.tooltip = "Vuorokaudenaika: " + (AikaValinnat.FirstOrDefault(x => x.Arvo == val).Nimi ?? val);
+            }
+            if (aikaNappi.parent?.panel != null && Juuri.panel != null) nimilappu.Este = Juuri.WorldToLocal(aikaNappi.parent.worldBound);
+        }
+
+        void RakennaAika()
+        {
+            Kirjasimet.Aseta(Rakenne.Teksti("VUOROKAUDENAIKA", "mk-linssivalitsin__valiotsikko", valikko), Kirjasin.ModerniLihava);
+            string val = AikaValinta;
+            foreach (var (arvo, nimi) in AikaValinnat)
+            {
+                string a = arvo;
+                Komento(nimi + (a == val ? "  ✓" : ""), () => { AikaValinta = a; aikaKuvake = null; Debug.Log("MATKAKIRJA opas: vuorokaudenaika " + a); });
+            }
+        }
 
         void LopetaKierros()
         {
@@ -1302,6 +1351,7 @@ namespace Matkakirja.Natiivi
         {
             if (!nakyy) return;
             // ■ myös keskeytetylle kierrokselle (LS1: KierrosKaynnissa || KierrosJatkettavissa).
+            PaivitaAika();
             var ld = (testiLopeta ?? (OpasSovitin.KierrosKaynnissa || KierrosKeskeytetty)) ? DisplayStyle.Flex : DisplayStyle.None;
             if (lopetaNappi.style.display != ld) lopetaNappi.style.display = ld;
             bool tauolla = OpasSovitin.Tauolla;
@@ -1367,6 +1417,16 @@ namespace Matkakirja.Natiivi
             var isa = valikko.parent;
             if (isa == null) return;
             if (aloitus) { AsetteleAloitus(); return; }
+            if (nakyma == Nakyma.Aika && aikaNappi != null)
+            {
+                // Vuorokaudenajan lista vasemman yläkulman napin alle.
+                var an = aikaNappi.worldBound;
+                var ay = isa.WorldToLocal(new Vector2(an.xMin, an.yMax));
+                valikko.style.top = ay.y + 8; valikko.style.left = ay.x; valikko.style.right = StyleKeyword.Auto;
+                SovitaKorkeus();
+                return;
+            }
+            valikko.style.left = StyleKeyword.Auto;
             var n = nappi.worldBound;
             var yla = isa.WorldToLocal(new Vector2(n.xMax, n.yMax));
             float leveys = isa.resolvedStyle.width;
@@ -1442,6 +1502,8 @@ namespace Matkakirja.Natiivi
                 case "mika":
                     testiMika = o.Length > 1 ? o[1] != "pois" : true;
                     return "opas: mikä tämä on " + (testiMika == true ? "näkyy (testi)" : "pois");
+                case "aika":
+                    Avaa(Nakyma.Aika); return "opas: vuorokaudenaika " + AikaValinta + " / " + AikaNyt;
                 case "jatka":
                     testiJatka = o.Length > 1 ? o[1] != "pois" : true;
                     return "opas: jatka kierrosta " + (testiJatka == true ? "näkyy (testi)" : "pois");

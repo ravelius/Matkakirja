@@ -85,6 +85,11 @@ namespace Matkakirja.Natiivi
         /// <summary>VIIVA_IKONIT avaimittain (sama avain kuin webissä, js/ui-apurit.js).</summary>
         public static readonly Dictionary<string, string> Viiva = new Dictionary<string, string>
         {
+            // VUOROKAUDENAIKA (omistaja 6.10. 18.5x, oppaan vasen yläkulma): nouseva aurinko, aurinko, laskeva aurinko, kuu.
+            ["aamu"] = "<path d=\"M3 17.5h18\"/><path d=\"M7.5 17.5a4.5 4.5 0 0 1 9 0\"/><path d=\"M12 4.5v5M9.6 6.9 12 4.5l2.4 2.4\"/>",
+            ["paiva"] = "<circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 3v2.4M12 18.6V21M3 12h2.4M18.6 12H21M5.6 5.6l1.7 1.7M16.7 16.7l1.7 1.7M5.6 18.4l1.7-1.7M16.7 7.3l1.7-1.7\"/>",
+            ["ilta"] = "<path d=\"M3 17.5h18\"/><path d=\"M7.5 17.5a4.5 4.5 0 0 1 9 0\"/><path d=\"M12 9.5v-5M9.6 7.1 12 9.5l2.4-2.4\"/>",
+            ["yo"] = "<path d=\"M19 14.6A7.6 7.6 0 1 1 9.4 5a6 6 0 0 0 9.6 9.6z\"/>",
             // PIN (omistaja 5.10.2026 klo 23.3x, PIN-KUVAKE JA PINNATTU PALKKI): nuppineula, pinnattuna täytetty pää (mk-valittu).
             ["pin"] = "<path d=\"M9 3.6h6M10.2 3.6v6.2L7 13.4h10l-3.2-3.6V3.6M12 13.4v7\"/>",
             ["saapas"] = "<path d=\"M7 3.5h4.4v8.2c0 .9.6 1.7 1.5 2l4.8 1.6c1.4.5 2.3 1.3 2.3 2.4 0 .8-.6 1.4-1.4 1.4H8.6c-.9 0-1.6-.7-1.6-1.6z\"/><path d=\"M7 6h4.4M7 8.2h4.4M4 20.6h16.5\"/>",
