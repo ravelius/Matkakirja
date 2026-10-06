@@ -147,6 +147,10 @@ namespace Matkakirja.Natiivi
                 lista = new VisualElement { name = "MatkakirjaLahdeLista", pickingMode = PickingMode.Ignore };
                 lista.style.flexDirection = FlexDirection.Row;
                 lista.style.flexWrap = Wrap.Wrap;
+                // Koko lista luettavaksi kartan päällä: tumma himmennyspohja (tyylikirjan Himmennys.Tumma).
+                lista.style.backgroundColor = (Color)Tyylikirja.Himmennys.Tumma;
+                lista.style.paddingLeft = lista.style.paddingRight = lista.style.paddingTop = lista.style.paddingBottom = 4;
+                lista.style.borderTopLeftRadius = lista.style.borderTopRightRadius = lista.style.borderBottomLeftRadius = lista.style.borderBottomRightRadius = 4;
                 lista.style.alignItems = Align.Center;
                 lahteet.Add(lista);
                 lahteet.AddManipulator(new Clickable(() => kaikkiAsti = Time.unscaledTime < kaikkiAsti ? -1f : Time.unscaledTime + KaikkiS));
@@ -155,6 +159,12 @@ namespace Matkakirja.Natiivi
             if (lahteet.parent != on) { lahteet.RemoveFromHierarchy(); on.Add(lahteet); }
             var ion = IonLogo(cs);
             if (ion != null) IonLogoKuva = ion;
+            // Cesium rakensi krediittipuun uudelleen (uusia tekstejä OnScreenCreditsissä): vanhat siirretyt tekstit pois listalta, ettei
+            // lista moninkertaistu (junan 148b video 6.10.: ☰ Tietoja ja lähteet täytti ruudun samoilla riveillä).
+            if (on.Children().Any(c => c is Label && c != lahteet && !(c.ClassListContains("mk-krediitit--piilo"))))
+            {
+                for (int i = lista.childCount - 1; i >= 0; i--) if (lista[i] != osm) lista.RemoveAt(i);
+            }
             bool cesium = CesiumNakyviin || (AvausLatautuu && !IonOmaPiirto) || Time.unscaledTime < cesiumAsti;
             foreach (var lapsi in on.Children().ToList())
             {
@@ -177,7 +187,7 @@ namespace Matkakirja.Natiivi
                     continue;
                 }
                 if (!(lapsi is Label l)) continue;
-                if (l.text != null && l.text.Contains("Data Attribution")) { l.style.display = DisplayStyle.None; continue; }
+                if (l.text != null && l.text.Contains("Data Attribution")) { l.style.display = DisplayStyle.None; l.AddToClassList("mk-krediitit--piilo"); continue; }
                 l.RemoveFromHierarchy();
                 lista.Add(Riviin(l));
             }
