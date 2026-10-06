@@ -177,8 +177,12 @@ namespace Matkakirja.Natiivi
             silmukka.Kysyy += Kysyy;
             silmukka.LentoAlkaa += LentoAlkoi;
             // Siirto ilman lentoa (omistaja 6.10. 12.0x): origo heti kohteeseen, latausaste kohdekameran laatoista.
-            silmukka.SiirtoAlkaa += (la, lo) => { kaupunki.SiirraOrigo(la, lo, 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
+            silmukka.SiirtoAlkaa += (la, lo) => { kaupunki.SiirraOrigo(la, lo, MaaPisteessa(la, lo) is double m && !double.IsNaN(m) ? m : 45); o.Kirjaa($"opas: siirrytään {silmukka.SiirtoNimi} ({la:F3}, {lo:F3})"); };
             silmukka.LatausEdistys = () => kaupunki.Latausaste / 100.0;
+            // Maaston korkeus kohdekehykseen (simu 6.10. 12.42: Praha aukesi 45 m:n arviolla mäen sisältä): näyte pisteeseen.
+            silmukka.MaaPisteessa = MaaPisteessa;
+            silmukka.MaaTarvitaan += (la, lo) => o.StartCoroutine(KorkeusPisteessa(la, lo));
+            silmukka.KehysKorjattu += (arvio, m) => o.Kirjaa($"opas: kehyksen maa {arvio:F0} → {m:F0} m (näyte)");
             if (silta == null)
             {
                 silta = o.gameObject.AddComponent<AudioSource>();
@@ -258,7 +262,11 @@ namespace Matkakirja.Natiivi
             else kaupunki.EsikameraPois();   // ei esilattavaa: piilokamera ei pidä vanhoja laattoja elossa
         }
 
-        double MaaKorkeus(OpasKohde k) => maaKorkeudet.TryGetValue(Avain(k), out var h) ? h : double.NaN;
+        double MaaKorkeus(OpasKohde k) => maaKorkeudet.TryGetValue(Avain(k), out var h) ? h : MaaPisteessa(k.Lat, k.Lon);
+        double MaaPisteessa(double lat, double lon) => pisteKorkeudet.TryGetValue(PisteAvain(lat, lon), out var h) ? h : double.NaN;
+        static string PisteAvain(double lat, double lon) => lat.ToString("F4") + "," + lon.ToString("F4");
+        readonly Dictionary<string, double> pisteKorkeudet = new Dictionary<string, double>(StringComparer.Ordinal);
+        readonly HashSet<string> pisteNaytteet = new HashSet<string>(StringComparer.Ordinal);
         static string Avain(OpasKohde k) => k.Id ?? (k.Lat.ToString("F5") + "," + k.Lon.ToString("F5"));
 
         // ── Pyynnöt workerille (tai testilista) ──────────────────────────────
@@ -915,7 +923,23 @@ namespace Matkakirja.Natiivi
             var tehtava = pinta.SampleHeightMostDetailed(new double3(k.Lon, k.Lat, 0));
             while (!tehtava.IsCompleted) yield return null;
             if (tehtava.IsFaulted || tehtava.Result == null || tehtava.Result.sampleSuccess == null || tehtava.Result.sampleSuccess.Length == 0) yield break;
-            if (tehtava.Result.sampleSuccess[0]) maaKorkeudet[Avain(k)] = tehtava.Result.longitudeLatitudeHeightPositions[0].z;
+            if (tehtava.Result.sampleSuccess[0]) maaKorkeudet[Avain(k)] = pisteKorkeudet[PisteAvain(k.Lat, k.Lon)] = tehtava.Result.longitudeLatitudeHeightPositions[0].z;
+        }
+
+        /// <summary>Kohdekehyksen maa pisteeseen (silmukka.MaaTarvitaan); epäonnistuessa arvio 45 m, jottei siirto jää odottamaan.</summary>
+        IEnumerator KorkeusPisteessa(double lat, double lon)
+        {
+            string a = PisteAvain(lat, lon);
+            var pinta = kaupunki.Pinta;
+            if (pinta == null || pisteKorkeudet.ContainsKey(a) || !pisteNaytteet.Add(a)) yield break;
+            float t0 = Time.realtimeSinceStartup;
+            var tehtava = pinta.SampleHeightMostDetailed(new double3(lon, lat, 0));
+            while (!tehtava.IsCompleted) yield return null;
+            pisteNaytteet.Remove(a);
+            var tulos = tehtava.IsFaulted ? null : tehtava.Result;
+            bool ok = tulos?.sampleSuccess != null && tulos.sampleSuccess.Length > 0 && tulos.sampleSuccess[0];
+            pisteKorkeudet[a] = ok ? tulos.longitudeLatitudeHeightPositions[0].z : OpasSilmukka.MaaArvioM;
+            o.Kirjaa($"opas: maa ({lat:F4}, {lon:F4}) {(ok ? "" : "näyte epäonnistui, arvio ")}{pisteKorkeudet[a]:F0} m, {Time.realtimeSinceStartup - t0:F1} s");
         }
 
         IEnumerator LataaAani(string url)
