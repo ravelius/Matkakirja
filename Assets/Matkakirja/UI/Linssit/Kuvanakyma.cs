@@ -46,8 +46,12 @@
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Text;
+using System.Text.RegularExpressions;
 using Matkakirja.Linssit;
 using Matkakirja.Linssit.Astronautti;
+using Matkakirja.Linssit.Iss;
+using Matkakirja.Peli;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -352,6 +356,7 @@ namespace Matkakirja.Natiivi
             kohde = null;
             indeksi = -1;
             AukiMuuttui?.Invoke(false);
+            KuvaVaihtui?.Invoke();
         }
 
         void SuljeKuva() => Sulje(true);
@@ -373,6 +378,39 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public (string Nimi, string Seutu, string Teksti)? AvoinKuva =>
             Auki && kohde != null ? (kohde.Nimi, kohde.Seutu, teksti.text) : ((string, string, string)?)null;
+
+        /// <summary>
+        /// Ruudulla oleva kuva vaihtui (avaus, selaus, AUTO) tai kuva suljettiin (null): Pulun sirut ja konteksti vaihtuvat kuvan
+        /// mukaan (juna 147; Pelikoodarin worker PR #4038 kenttä "kuva").
+        /// </summary>
+        public static event Action KuvaVaihtui;
+
+        /// <summary>
+        /// Pulun pyynnön "kuva"-kenttä JSONina (Pelikoodari #4038): {tunnus, nimi, maa, lat, lon, selite, teksti, aika}; null, kun kuva
+        /// on kiinni. Tunnus on havainnon Id (sallitut merkit [A-Za-z0-9._:-], enintään 80), workerin välimuistin avain.
+        /// </summary>
+        public string KuvaJson
+        {
+            get
+            {
+                if (!Auki || kohde == null) return null;
+                var h = indeksi >= 0 && indeksi < kohde.Havainnot.Count ? kohde.Havainnot[indeksi] : null;
+                string tunnus = Regex.Replace(h?.Id ?? ((kohde.Tunnus ?? "kohde") + ":" + indeksi), "[^A-Za-z0-9._:-]", "-");
+                if (tunnus.Length > 80) tunnus = tunnus.Substring(0, 80);
+                string maa = null;
+                if (IssSijainti.Nykyinen != null) maa = IssSijainti.Nimet(IssSijainti.Nykyinen, kohde.Lat, kohde.Lon).Maa;
+                var ci = System.Globalization.CultureInfo.InvariantCulture;
+                var sb = new StringBuilder("{\"tunnus\":").Append(PeliApu.Json(tunnus));
+                void Kentta(string nimi, string arvo) { if (!string.IsNullOrWhiteSpace(arvo)) sb.Append(",\"").Append(nimi).Append("\":").Append(PeliApu.Json(arvo.Trim())); }
+                Kentta("nimi", kohde.Nimi);
+                Kentta("maa", string.IsNullOrWhiteSpace(maa) ? kohde.Seutu : maa);
+                sb.Append(",\"lat\":").Append(kohde.Lat.ToString("0.####", ci)).Append(",\"lon\":").Append(kohde.Lon.ToString("0.####", ci));
+                Kentta("selite", kohde.Selite);
+                Kentta("teksti", h?.Teksti);
+                Kentta("aika", h?.Aika);
+                return sb.Append('}').ToString();
+            }
+        }
 
         /// <summary>Testikomento ja Pulun taulun "Kysy Pululta": minipulun kysymyskortti auki nykyiselle kohteelle.</summary>
         public void AvaaPulukortti() { if (Auki) pulukortti.Avaa(kohde); }
@@ -398,6 +436,7 @@ namespace Matkakirja.Natiivi
             AsetaOtsikko();
             teksti.text = h?.Teksti ?? kohde.Selite ?? "";
             SeliteNakyi(h);
+            KuvaVaihtui?.Invoke();
             if (lisatiedotAuki) LadoLisatiedot();
             for (int n = 0; n < nauha.childCount; n++) nauha[n].EnableInClassList("mk-valittu", n == i);
             // AUTOssa seuraava kuva samalla zoomilla (omistaja 23.0x: "Jos kuvan suurentaa kokonäytön kokoiseksi, seuraava kuva tulee

@@ -270,7 +270,7 @@ namespace Matkakirja.Natiivi
                 Rivi(r.Otsikko, r.Selite, r.Aktiivinen && lisaAktiivinen == null, () => Valitse(tunnus));
                 // Lisärivit ISS-rivien jälkeen, ennen kuvia (kyydin kanssa kuten ISS-rivit).
                 if (tunnus == "iss-sisalle")
-                    foreach (var x in lisarivit) { var y = x; Rivi(y.Otsikko, y.Selite, ReferenceEquals(y, lisaAktiivinen), () => Valitse(y.Tunnus)); }
+                    foreach (var x in lisarivit) { var y = x; if (y.Nakyy != null && !Kysy(y.Nakyy)) continue; Rivi(y.Otsikko, y.Selite, ReferenceEquals(y, lisaAktiivinen), () => Valitse(y.Tunnus)); }
             }
         }
 
@@ -290,7 +290,7 @@ namespace Matkakirja.Natiivi
         sealed class LisaRivi
         {
             public string Tunnus, Otsikko, Selite;
-            public Func<bool> Aktiivinen;
+            public Func<bool> Aktiivinen, Nakyy;
             public Action Toiminto;
             public AstroMoodi? Lahto;
         }
@@ -302,11 +302,12 @@ namespace Matkakirja.Natiivi
         /// annettu, askelkone vie ensin siihen moodiin (esim. kuva kiinni ja ISS:n rinnalle) ja kutsuu toiminto() vasta perillä.
         /// Sama tunnus korvaa aiemman rivin. Rivi rekisteröidään omasta koodista, jotta haarat eivät riipu toisistaan.
         /// </summary>
-        public void LisaaRivi(string tunnus, string otsikko, string selite, Func<bool> aktiivinen, Action toiminto, AstroMoodi? lahto = null)
+        public void LisaaRivi(string tunnus, string otsikko, string selite, Func<bool> aktiivinen, Action toiminto, AstroMoodi? lahto = null,
+            Func<bool> nakyy = null)
         {
             if (string.IsNullOrEmpty(tunnus) || toiminto == null) return;
             lisarivit.RemoveAll(x => x.Tunnus == tunnus);
-            lisarivit.Add(new LisaRivi { Tunnus = tunnus, Otsikko = otsikko, Selite = selite, Aktiivinen = aktiivinen, Toiminto = toiminto, Lahto = lahto });
+            lisarivit.Add(new LisaRivi { Tunnus = tunnus, Otsikko = otsikko, Selite = selite, Aktiivinen = aktiivinen, Toiminto = toiminto, Lahto = lahto, Nakyy = nakyy });
             if (Auki) Rakenna();
         }
 

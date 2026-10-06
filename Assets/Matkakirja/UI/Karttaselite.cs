@@ -100,6 +100,7 @@ namespace Matkakirja.Natiivi
             paneeliNostot.Add(vieritys);
             paneeliMaakunnat = Rakenne.El("mk-selite__paneeli", paneeli, PickingMode.Ignore);
             Maakunnat = new Maakunnat(kerros, paneeliMaakunnat);
+            MaakuntaKortti.VaistoMuuttui += v => paneeli.style.visibility = v ? Visibility.Hidden : StyleKeyword.Null;
             maakunnatAuki = MaakuntaKartta || PlayerPrefs.GetString(ValilehtiAvain, "") == "maakunnat";
             if (MaakuntaKartta)
             {

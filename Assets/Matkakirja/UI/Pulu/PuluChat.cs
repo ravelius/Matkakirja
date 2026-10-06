@@ -157,9 +157,13 @@ namespace Matkakirja.Natiivi
             // rinnalla). Historia jää vieritettäväksi yläpuolelle; uudet napit ovat lopussa, ja virta vierii niihin.
             PoistaSirut();
             NaytaKohteenValmiit(valmiit);
+            // Astronautin kuva auki (juna 147, simu 6.10. 01.2x: linssin yleiset valmiit peittivät kuvan sirut): kuvan omat
+            // sirut workerilta (kuva-kenttä, #4038), jos kohteella ei ole omia valmiita kysymyksiä.
+            string kuva = KuvaKentta();
+            if ((valmiit == null || valmiit.Count == 0) && kuva.Length > 0) { edellinenKuva = kuva; HaeEhdotukset(); }
             // Ilman kohteen kysymyksiä linssin tilan valmiit kysymykset (astronautin kamera 4.10.2026: pallo, kuvat, ohjaamo),
             // muuten avaus silti uusimpaan viestiin.
-            if ((valmiit == null || valmiit.Count == 0) && !NaytaLinssinValmiit())
+            else if ((valmiit == null || valmiit.Count == 0) && !NaytaLinssinValmiit())
                 virta.schedule.Execute(() => virta.scrollOffset = new Vector2(0f, Mathf.Max(0f, virta.contentContainer.layout.height - virta.contentViewport.layout.height))).ExecuteLater(30);
             Asettele();
         }
@@ -198,6 +202,7 @@ namespace Matkakirja.Natiivi
         {
             this.kerros = kerros;
             this.pulu = pulu;
+            Kuvanakyma.KuvaVaihtui += () => UiKerros.PaaSaikeessa(KuvaVaihtui);
             // Pulun omalla kerroksella: se nousee lehden päälle lehden ajaksi (UiNakymat.PulunKerros).
             var juuri = kerros.Juuri(Pulu.Kerros);
             sulkija = Rakenne.El("mk-sulkija", juuri);
@@ -467,6 +472,13 @@ namespace Matkakirja.Natiivi
             // ja 2 uutta ehdotusta pinoutuivat 4:ksi): linssin kysymykset korvaavat vanhat; muuten edellisen vastauksen jatkot jäävät,
             // ja uusia ehdotuksia haetaan vain, jos siruja ei ole.
             bool vanhatSirut = sirualue.Q(className: "mk-chat__sirut") != null;
+            // Astronautin kuva auki (juna 147): kuvan omat sirut workerilta linssin yleisten valmiiden tilalle.
+            string kuva = KuvaKentta();
+            if (kuva.Length > 0)
+            {
+                if (kuva != edellinenKuva || !vanhatSirut) { edellinenKuva = kuva; PoistaSirut(); if (ehdotukset) HaeEhdotukset(); }
+                return;
+            }
             if (LinssiKysymykset.Nykyinen() != null) PoistaSirut();
             if (!NaytaLinssinValmiit() && ehdotukset && !vanhatSirut) HaeEhdotukset();
         }
@@ -856,6 +868,7 @@ namespace Matkakirja.Natiivi
             }
             var runko = new StringBuilder("{\"tehtava\":\"vastaus\",\"kysymys\":").Append(PeliApu.Json(kysymys))
                 .Append(",\"konteksti\":").Append(PeliApu.Json(konteksti))
+                .Append(KuvaKentta())
                 .Append(",\"kehys\":").Append(PeliApu.Json(Kehys(kysymys, jatko)))
                 // Äänitagit (omistaja 27.9. klo 23.1x): tämä versio siivoaa ne näytöltä (Nakyva), joten worker saa liittää
                 // kehotteeseen tagisäännön; vanhat versiot eivät lähetä kenttää eivätkä saa tageja (web PR #3513).
@@ -1461,7 +1474,7 @@ namespace Matkakirja.Natiivi
         IEnumerator Ehdotukset(int poletti)
         {
             var odotus = Viesti("mk-chat__odottaa mk-chat__ehdotus-odotus", Mietinta(false));
-            using var r = Pyynto("{\"tehtava\":\"ehdotukset\",\"konteksti\":" + PeliApu.Json(Konteksti()) + "}");
+            using var r = Pyynto("{\"tehtava\":\"ehdotukset\",\"konteksti\":" + PeliApu.Json(Konteksti()) + KuvaKentta() + "}");
             yield return r.SendWebRequest();
             odotus.RemoveFromHierarchy();
             if (poletti != ehdotusPoletti || r.result != UnityWebRequest.Result.Success) yield break; // ei kriittinen
@@ -1469,7 +1482,34 @@ namespace Matkakirja.Natiivi
             if (lista == null) yield break;
             var tekstit = new List<string>();
             foreach (var x in lista) if (x is string s && s.Length > 0) tekstit.Add(s);
+            if (KuvaKentta().Length > 0) Debug.Log($"MATKAKIRJA pulu: kuvan sirut {tekstit.Count}: {string.Join(" | ", tekstit)}");
             Sirut(tekstit, "mk-chat__ehdotukset", false);
+        }
+
+        /// <summary>
+        /// Astronautin kuva ruudulla (juna 147, Pelikoodarin worker PR #4038): ",\"kuva\":{…}" ehdotus- ja vastauspyyntöön, jotta
+        /// sirut ja vastaus ovat kuvan kontekstissa; tyhjä, kun kuvaa ei ole auki (vanha muoto, worker toimii kuten ennen).
+        /// </summary>
+        static string KuvaKentta()
+        {
+            var linssit = UiNakymat.Olemassa ? UiNakymat.Hae()?.Linssit : null;
+            if (linssit?.Auki?.Tiedot?.Id != LinssiUi.AstronauttiId) return "";
+            var j = linssit.Astronautti?.Kuva?.KuvaJson;
+            return string.IsNullOrEmpty(j) ? "" : ",\"kuva\":" + j;
+        }
+
+        string edellinenKuva;
+
+        /// <summary>Kuva vaihtui: edellisen kuvan sirut pois ja uudet kuvan mukaan, jos chat on auki (Kuvanakyma.KuvaVaihtui).</summary>
+        void KuvaVaihtui()
+        {
+            string uusi = KuvaKentta();
+            if (uusi == edellinenKuva) return;
+            edellinenKuva = uusi;
+            ehdotusPoletti++;
+            PoistaSirut();
+            foreach (var e in virta.Query(className: "mk-chat__ehdotus-odotus").ToList()) e.RemoveFromHierarchy();
+            if (Auki && !kysyy) HaeEhdotukset();
         }
 
         // --- konteksti (webin kokoaKonteksti, yksi merkkijono) ------------------------------

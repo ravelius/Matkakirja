@@ -32,6 +32,35 @@ namespace Matkakirja.Natiivi
         readonly VisualElement[] varret = new VisualElement[5];
         readonly Label kohde, maa, miniTeksti, rumpuA, rumpuB;
         readonly Button kamera;
+        // OBJEKTIIVI (Päätoimittaja 6.10., juna 147): LAAJA/TELE kahtena LCD-nappina kameranapin ja rummun yläpuolella
+        // (laajennuksen .mk-issohjaamo__lcdnappi, valittu käänteisenä); osuma-ala 48 pt korkea, päättyy kameranapin yläreunaan.
+        readonly VisualElement objektiivi;
+        readonly Button laajaNappi, teleNappi;
+        // KUVAUS LCD:SSÄ (omistaja 6.10.): kuvauksen ajan "KEHITETÄÄN…" ja alla SEGMENTTIPALKKI (omistaja 6.10. 08.1x: "Saisi olla
+        // pienistä neliöistä koostuva"): rivi LCD-neliöitä, jotka syttyvät edistymisen mukaan, sammuneet himmeinä kuten LCD:n
+        // sammuneet segmentit. Valmiin kuvan jälkeen "KUVA VALMIS" 2 s; sitten sijainti takaisin.
+        public const int Segmentteja = 12;
+        readonly VisualElement nopeusRivi;
+        readonly Label kerroinT, nopeusT, valoT;
+        float nopeusAsti = -1f;
+        public const float NopeusS = 3f, NopeusPt = 13f, ValoOsuus = 0.70f, VaroitusKerroin = 300f, TaysiKerroin = 1000f;
+        /// <summary>LCD:n ×: 70 % koko ja hieman alemmas (VT323:n × on piirretty korotettuna).</summary>
+        public const string KertaMerkki = "<size=70%><voffset=-0.06em>×</voffset></size>";
+        /// <summary>Valon nopeus km/h (c = 299 792,458 km/s).</summary>
+        public const double ValoKmh = 299792.458 * 3600.0;
+        /// <summary>Suomalainen lukumuoto ilman kulttuuritietoja (IL2CPP:ssä fi-FI voi puuttua): pilkku, tuhaterotin välilyönti.</summary>
+        static readonly System.Globalization.NumberFormatInfo Fi = new System.Globalization.NumberFormatInfo
+            { NumberDecimalSeparator = ",", NumberGroupSeparator = " ", NumberGroupSizes = new[] { 3 } };
+        /// <summary>Laajennuksen nappien väli ja reunaväli (pt), sama kaikkialla (omistaja 6.10.; USS-arvo 4px).</summary>
+        public const float LaajennusVali = 4f, VaakaOsuus = 0.30f;
+        readonly VisualElement segmentit;
+        readonly VisualElement[] segmentti = new VisualElement[Segmentteja];
+        /// <summary>Testi (`astro ohjaamo kehitys 0–1|valmis|pois`): edistyminen ilman kuvausta stilliä varten.</summary>
+        public static float? TestiEdistyminen;
+        float valmisAsti = -1f, syyAsti = -1f;
+        string syy;
+        bool oliKaynnissa;
+        public const float ValmisS = 2f, ObjektiiviPt = 11f;
         readonly Func<AstronauttiLinssi> linssi;
         readonly Action kuvaa;
         JoystickSuunta suunta = JoystickSuunta.Ei;
@@ -109,9 +138,24 @@ namespace Matkakirja.Natiivi
 
             // --- LCD: kohde isolla, maa alla ---------------------------------------------------------------------
             lcd = Rakenne.El("mk-issohjaamo__lcd", paneeli);
+            Matriisi(lcd);
             kohde = Rakenne.Teksti("", "mk-issohjaamo__kohde", lcd);
             maa = Rakenne.Teksti("", "mk-issohjaamo__maa", lcd);
+            // NOPEUSLUKEMA (omistaja 6.10. 09.0x): kaasua muutettaessa 3 s vasemmalla kerroin ja oikealla oikea nopeus, sen alla
+            // osuus valon nopeudesta (≥ 0,1 %); vihreä, oranssi ≥ 300× (--tk-lcd-varoitus), punainen 1000× (--tk-lcd-vaara).
+            nopeusRivi = Rakenne.El("mk-issohjaamo__nopeusrivi", lcd, PickingMode.Ignore);
+            kerroinT = Rakenne.Teksti("", "mk-issohjaamo__kerroin", nopeusRivi);
+            var sarake = Rakenne.El("mk-issohjaamo__nopeussarake", nopeusRivi, PickingMode.Ignore);
+            nopeusT = Rakenne.Teksti("", "mk-issohjaamo__nopeus", sarake);
+            valoT = Rakenne.Teksti("", "mk-issohjaamo__valo", sarake);
+            foreach (var t in new[] { kerroinT, nopeusT, valoT }) { t.pickingMode = PickingMode.Ignore; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
+            nopeusRivi.style.display = DisplayStyle.None;
             foreach (var t in new[] { kohde, maa }) { t.pickingMode = PickingMode.Ignore; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
+            segmentit = Rakenne.El("mk-issohjaamo__segmentit", lcd, PickingMode.Ignore);
+            for (int i = 0; i < Segmentteja; i++) segmentti[i] = Rakenne.El("mk-issohjaamo__segmentti", segmentit, PickingMode.Ignore);
+            segmentit.style.display = DisplayStyle.None;
+            IssKameraKuva.Aloitettu += () => UiKerros.PaaSaikeessa(() => { valmisAsti = -1f; Paivita(); });
+            IssKameraKuva.Valmis += _ => UiKerros.PaaSaikeessa(() => { valmisAsti = Time.unscaledTime + ValmisS; Paivita(); });
             lcd.RegisterCallback<GeometryChangedEvent>(_ => SovitaKohde());
             lcd.tooltip = "Näytön asetukset";
             lcd.AddManipulator(new Clickable(() => AsetaLaajennus(true)));
@@ -123,6 +167,12 @@ namespace Matkakirja.Natiivi
             kamera.RegisterCallback<PointerDownEvent>(_ => PaivitaNahkaTila(true), TrickleDown.TrickleDown);
             kamera.RegisterCallback<PointerUpEvent>(_ => PaivitaNahkaTila(false), TrickleDown.TrickleDown);
             kamera.RegisterCallback<PointerLeaveEvent>(_ => PaivitaNahkaTila(false));
+            objektiivi = Rakenne.El("mk-issohjaamo__objektiivi", paneeli, PickingMode.Ignore);
+            objektiivi.style.position = Position.Absolute;
+            objektiivi.style.flexDirection = FlexDirection.Row;
+            laajaNappi = ObjektiiviNappi("LAAJA", true);
+            teleNappi = ObjektiiviNappi("TELE", false);
+            PaivitaObjektiivi();
             kaasu = Rakenne.El("mk-issohjaamo__kaasu", paneeli);
             kaasu.tooltip = "Kaasu: ajan nopeus";
             ura = Rakenne.El("mk-issohjaamo__ura", kaasu, PickingMode.Ignore);
@@ -146,6 +196,7 @@ namespace Matkakirja.Natiivi
             // --- mininäyttö --------------------------------------------------------------------------------------
             mini = Rakenne.El("mk-issohjaamo__mini", Juuri);
             mini.tooltip = "Avaa ohjaamo";
+            Matriisi(mini);
             miniTeksti = Rakenne.Teksti("", "mk-issohjaamo__miniteksti", mini);
             miniTeksti.pickingMode = PickingMode.Ignore;
             Kirjasimet.Aseta(miniTeksti, Kirjasin.Lcd);
@@ -209,7 +260,9 @@ namespace Matkakirja.Natiivi
             // Rummun kolo numeroiden päälle omana elementtinään (piirtojärjestys pohja → numerot → kolo); piirretyssä tilassa kolo
             // on rummun oma kehys.
             rumpuKoloKuva ??= Rakenne.El("mk-issohjaamo__rumpukolo", paneeli, PickingMode.Ignore);
-            if (ankkurit != null) { Pukeudu(rumpuKoloKuva, "rumpu-kolo"); rumpuKoloKuva.style.display = DisplayStyle.Flex; rumpuKoloKuva.BringToFront(); laajennus.BringToFront(); }
+            // Ohjaamo v3 (6.10.): ei rumpua eikä rumpu-kolo-kuvaa; kolo vain, kun ankkuri on.
+            if (ankkurit != null && ankkurit.RumpuKolo.width > 0) { Pukeudu(rumpuKoloKuva, "rumpu-kolo"); rumpuKoloKuva.style.display = DisplayStyle.Flex; rumpuKoloKuva.BringToFront(); laajennus.BringToFront(); }
+            else if (ankkurit != null) { rumpuKoloKuva.style.display = DisplayStyle.None; laajennus.BringToFront(); }
             else { rumpuKoloKuva.style.display = DisplayStyle.None; Pukeudu(rumpu, "rumpu-kolo"); }
             rumpu.EnableInClassList("mk-issohjaamo__rumpu--mekaaninen", ankkurit != null);
             // Mittarifontti kuvapaneelissa (DIN Condensed kuten kaiverrukset), muuten LCD-fontti VT323.
@@ -270,7 +323,7 @@ namespace Matkakirja.Natiivi
             sijainti.tooltip = "Valitse kohde listalta";
             var rivit = Rakenne.El("mk-issohjaamo__rivit", laajennus, PickingMode.Ignore);
             var r1 = Rakenne.El("mk-issohjaamo__rivi", rivit, PickingMode.Ignore);
-            var r2 = Rakenne.El("mk-issohjaamo__rivi", rivit, PickingMode.Ignore);
+            var r2 = Rakenne.El("mk-issohjaamo__rivi mk-issohjaamo__rivi--toinen", rivit, PickingMode.Ignore);
             for (int i = 0; i < 4; i++)
             {
                 int k = i;
@@ -278,6 +331,66 @@ namespace Matkakirja.Natiivi
                 vuorokausiNapit[i] = Nappi(Vuorokausi.Nimet[i].ToUpperInvariant(), null, r2, () => { AsetaVuorokausi?.Invoke(k); PaivitaLaajennus(); });
             }
             Nappi("OK", "mk-issohjaamo__iso", laajennus, () => AsetaLaajennus(false)).tooltip = "Takaisin sijaintiin";
+        }
+
+        /// <summary>Objektiivin nappi: osuma-ala (läpinäkyvä, 48 pt korkea) ja sen sisällä LCD-nappi (pohja .mk-issohjaamo__lcdnappi).</summary>
+        Button ObjektiiviNappi(string teksti, bool laaja)
+        {
+            var osa = Rakenne.El(null, objektiivi);
+            osa.style.flexGrow = 1; osa.style.flexBasis = 0; osa.style.justifyContent = Justify.FlexEnd;
+            if (!laaja) osa.style.marginLeft = LaajennusVali;   // sama väli kuin laajennuksen napeilla (omistaja 6.10.)
+            osa.tooltip = laaja ? "Laaja objektiivi" : "Teleobjektiivi";
+            osa.RegisterCallback<PointerDownEvent>(e => e.StopPropagation());
+            osa.AddManipulator(new Clickable(() => ValitseObjektiivi(laaja)));
+            var b = Nappi(teksti, null, osa, null);
+            b.pickingMode = PickingMode.Ignore;
+            foreach (var c in b.Children()) c.pickingMode = PickingMode.Ignore;
+            return b;
+        }
+
+        void ValitseObjektiivi(bool laaja)
+        {
+            if (IssKameraKuva.Laaja == laaja) return;
+            IssKameraKuva.Laaja = laaja;
+            Debug.Log("MATKAKIRJA linssit: ohjaamon objektiivi " + (laaja ? "LAAJA" : "TELE"));
+            PaivitaObjektiivi();
+        }
+
+        void PaivitaObjektiivi()
+        {
+            laajaNappi.EnableInClassList("mk-valittu", IssKameraKuva.Laaja);
+            teleNappi.EnableInClassList("mk-valittu", !IssKameraKuva.Laaja);
+        }
+
+        /// <summary>Objektiivin paikka: LCD-napit kameranapin ja rummun yläpuolella (ohjaamo.json "objektiivi" ohittaa).</summary>
+        void AseteleObjektiivi(float s)
+        {
+            Rect r;
+            if (ankkurit != null)
+            {
+                var a = ankkurit;
+                r = a.Objektiivi.width > 0 ? a.Objektiivi
+                    : new Rect(a.Kamera.x, 15.5f, Mathf.Max(a.RumpuKolo.xMax, a.Kamera.xMax) - a.Kamera.x, 22f);
+                // v3:n objektiivipinta (52 pt) on kahdelle LCD-sanalle liian kapea (simu f3e10f82: "LAAJA" ei mahtunut): koko
+                // kameran laatikon levyinen, jos se on leveämpi.
+                if (a.Objektiivi.width > 0 && a.Kamera.width > 0)
+                {
+                    float x0 = Mathf.Min(r.x, a.Kamera.x), x1 = Mathf.Max(r.xMax, a.Kamera.xMax);
+                    r = new Rect(x0, r.y, x1 - x0, r.height);
+                }
+            }
+            else r = new Rect(kamera.layout.x, 2f, Mathf.Max(96f, kamera.layout.width), 22f);
+            // Osuma-ala ylöspäin: 48 pt korkea, alareuna napin alareunassa (kameranapin osuma alkaa sen alta).
+            float h = r.height * s, osuma = Mathf.Max(48f, h);
+            objektiivi.style.left = r.x * s; objektiivi.style.width = r.width * s;
+            objektiivi.style.top = r.yMax * s - osuma; objektiivi.style.height = osuma;
+            foreach (var b in new[] { laajaNappi, teleNappi })
+            {
+                // Pohjan lcdnappi on rivin solu (flex-basis 0): pystysarakkeessa korkeus tulee perusmitasta, ei heightistä.
+                b.style.height = h; b.style.flexBasis = h; b.style.flexGrow = 0; b.style.flexShrink = 0;
+                var t = b.Q<Label>(className: "mk-nappi__teksti");
+                if (t != null) t.style.fontSize = ObjektiiviPt * s;
+            }
         }
 
         Button Nappi(string teksti, string lisa, VisualElement isa, Action painettu)
@@ -339,8 +452,16 @@ namespace Matkakirja.Natiivi
             if (!(turvanLeveys > 0)) return;
             turvaLeveys = turvanLeveys;
             float w = Mathf.Min(Enintaan, turvanLeveys - 24f);
+            // VAAKA (omistaja 6.10.: "vie nyt aivan liikaa tilaa näkymältä"): paneelin korkeus enintään VaakaOsuus ruudun
+            // korkeudesta (iPhone vaaka 560 pt leveänä 183 pt = 45 %).
+            float ruutuK = Juuri.panel?.visualTree.layout.height ?? 0f;
+            if (Screen.width > Screen.height && ruutuK > 0f && ankkurit != null)
+                w = Mathf.Min(w, ruutuK * VaakaOsuus * ankkurit.Koko.width / ankkurit.Koko.height);
             paneeli.style.width = w;
             Juuri.style.left = 0; Juuri.style.right = 0;
+            // VAAKA (omistaja 6.10. 08.3x: "vaaka-asennossa koko ohjain saisi olla ihan kiinni alareunassa"): ei väliä turva-alueen
+            // alareunaan (pystyssä USS:n --tk-vali-s).
+            Juuri.style.bottom = Screen.width > Screen.height ? 0f : StyleKeyword.Null;
             if (ankkurit != null) AsetteleKuvat(w);
             else
             {
@@ -352,6 +473,7 @@ namespace Matkakirja.Natiivi
                 foreach (var t in new[] { rumpuA, rumpuB }) if (!string.IsNullOrEmpty(t.text)) t.text = t.text.TrimEnd('×');
                 laajennus.style.paddingLeft = laajennus.style.paddingTop = laajennus.style.paddingRight = laajennus.style.paddingBottom = StyleKeyword.Null;
                 mittakaava = 1f;
+                objektiivi.schedule.Execute(() => { if (ankkurit == null) AseteleObjektiivi(1f); });
                 SovitaKohde();
             }
         }
@@ -362,7 +484,7 @@ namespace Matkakirja.Natiivi
         // valinnainen "sauvaKeski":{x,y} piirretyn sauvan keskipiste osuutena sauvan laatikosta (oletus 0.36, 0.5)}. Paneeli skaalautuu
         // leveyden mukaan (korkeus koon suhteessa) ja osat sijoitetaan ankkureihin; ilman tiedostoa piirretty asettelu kuten ennen.
 
-        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, RumpuKolo, Kaasu, LcdIso, LcdIsoKuva; public float[] Pykalat; public float MiniSlice; public Vector2? SauvaKeski; }
+        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, RumpuKolo, Kaasu, LcdIso, LcdIsoKuva; public float[] Pykalat; public float MiniSlice; public Rect Objektiivi; public Vector2? SauvaKeski; }
         Ankkurit ankkurit;
 
         static Rect LueRect(Dictionary<string, object> o, string avain)
@@ -385,7 +507,7 @@ namespace Matkakirja.Natiivi
                     Koko = new Rect(0, 0, Convert.ToSingle(MiniJson.Kentta(k, "w")), Convert.ToSingle(MiniJson.Kentta(k, "h"))),
                     Sauva = LueRect(o, "sauva"), Lcd = LueRect(o, "lcd"), Kamera = LueRect(o, "kamera"),
                     Rumpu = LueRect(o, "rumpu"), Kaasu = LueRect(o, "kaasu"), LcdIso = LueRect(o, "lcdIso"),
-                    RumpuKolo = LueRect(o, "rumpuKolo"), LcdIsoKuva = LueRect(o, "lcdIsoKuva"),
+                    RumpuKolo = LueRect(o, "rumpuKolo"), LcdIsoKuva = LueRect(o, "lcdIsoKuva"), Objektiivi = LueRect(o, "objektiivi"),
                 };
                 var ms = Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "mini")), "slice"));
                 a.MiniSlice = ms != null && MiniJson.Kentta(ms, "vasen") is object v ? Convert.ToSingle(v) : 0f;
@@ -421,19 +543,27 @@ namespace Matkakirja.Natiivi
             Aseta(joystick, a.Sauva, s);
             // Osuma-ala sauvan laatikon ympärille: vähintään 132 pt korkea ja 18 pt yli reunojen (varsi ≥ 44 × 44 pt).
             float jw = a.Sauva.width * s, jh = a.Sauva.height * s, oh = Mathf.Max(132f, jh + 36f);
-            osuma.style.left = -18f; osuma.style.width = jw + 36f; osuma.style.top = (jh - oh) * 0.5f; osuma.style.height = oh;
+            // Ohjaamo v3 (6.10.: sauva oikealla heti kameran vieressä): osuma ei ulotu kameran laatikon päälle.
+            float vasenVara = Mathf.Clamp((a.Sauva.x - a.Kamera.xMax) * s, 0f, 18f);
+            if (a.Sauva.xMax <= a.Kamera.x) vasenVara = 18f;   // v2: sauva vasemmalla, kamera oikealla
+            osuma.style.left = -vasenVara; osuma.style.width = jw + vasenVara + 18f; osuma.style.top = (jh - oh) * 0.5f; osuma.style.height = oh;
             Aseta(lcd, a.Lcd, s);
             Aseta(kamera, a.Kamera, s);
+            AseteleObjektiivi(s);
             Aseta(kaasu, a.Kaasu, s);
             Aseta(rumpu, a.Rumpu, s);
+            // Ohjaamo v3 (omistaja 6.10.: rumpu pois): ilman rumpu-ankkuria numerorumpua ei näytetä.
+            rumpu.style.display = a.Rumpu.width > 0 ? DisplayStyle.Flex : DisplayStyle.None;
             if (a.RumpuKolo.width > 0 && rumpuKoloKuva != null) Aseta(rumpuKoloKuva, a.RumpuKolo, s);
             // Laajennus: lcd-iso-kuvan laatikko, sisältö lasin sisäalueelle (lcdIso) täytteenä.
             var iso = a.LcdIsoKuva.width > 0 ? a.LcdIsoKuva : a.LcdIso;
             if (iso.width > 0)
             {
                 Aseta(laajennus, iso, s);
-                laajennus.style.paddingLeft = (a.LcdIso.x - iso.x) * s; laajennus.style.paddingTop = (a.LcdIso.y - iso.y) * s;
-                laajennus.style.paddingRight = (iso.xMax - a.LcdIso.xMax) * s; laajennus.style.paddingBottom = (iso.yMax - a.LcdIso.yMax) * s;
+                // TASAISET VÄLIT (omistaja 6.10. 08.3x: "kaikki nappien välit mukaan lukien äärireunat yhtä leveitä"): lasin reunasta
+                // ensimmäiseen nappiin sama LaajennusVali kuin nappien välissä (USS .mk-issohjaamo__laajennus/__rivit/__lcdnappi).
+                laajennus.style.paddingLeft = (a.LcdIso.x - iso.x) * s + LaajennusVali; laajennus.style.paddingTop = (a.LcdIso.y - iso.y) * s + LaajennusVali;
+                laajennus.style.paddingRight = (iso.xMax - a.LcdIso.xMax) * s + LaajennusVali; laajennus.style.paddingBottom = (iso.yMax - a.LcdIso.yMax) * s + LaajennusVali;
             }
             // Tekstit pohjan mittakaavassa (Linnanrakentaja: LCD:n rivi 1 ~15 pt, rivi 2 ≥ 10–11 pt; rummun numerot täyttävät aukon).
             mittakaava = s;
@@ -555,6 +685,8 @@ namespace Matkakirja.Natiivi
         void NaytaKaasu(int kerroin)
         {
             if (kerroin == kaasuNyt) return;
+            NaytaNopeus(kerroin);
+            AsetaTarina(kerroin >= TaysiKerroin);
             int suuntaY = kerroin > kaasuNyt ? -1 : 1;   // kaasu ylös: rumpu pyörii ylöspäin (uusi luku alhaalta)
             kaasuNyt = kerroin;
             AsetaKahva();
@@ -613,6 +745,174 @@ namespace Matkakirja.Natiivi
         public void PainaKamera() => Laukaise();
 
         /// <summary>Kameranappi: tarkka ISS-kuva (omistaja 4.10. klo 15.2x: ostot pois, kuvia rajattomasti; LS2 IssKameraKuva).</summary>
+        /// <summary>
+        /// LCD-MATRIISI (omistaja 6.10. 08.3x: "aavistusvihreää LCD-matriisiä taustassa näkyvissä"): hento pisteruudukko näytön
+        /// taustalla tekstin alla. Väri USS:stä (.mk-issohjaamo__matriisi color = --tk-lcd-reunus, opacity), ei värivakioita.
+        /// </summary>
+        public const float MatriisiVali = 3f, MatriisiPiste = 1.2f;
+
+        static void Matriisi(VisualElement isa)
+        {
+            var m = Rakenne.El("mk-issohjaamo__matriisi", isa, PickingMode.Ignore);
+            m.style.position = Position.Absolute;
+            m.style.left = 0; m.style.top = 0; m.style.right = 0; m.style.bottom = 0;
+            m.SendToBack();
+            m.generateVisualContent += mgc =>
+            {
+                var r = m.contentRect;
+                if (r.width <= 0 || r.height <= 0) return;
+                var p = mgc.painter2D;
+                p.fillColor = m.resolvedStyle.color;
+                p.BeginPath();
+                float x0 = (r.width % MatriisiVali) * 0.5f, y0 = (r.height % MatriisiVali) * 0.5f;
+                for (float y = y0; y + MatriisiPiste <= r.height; y += MatriisiVali)
+                    for (float x = x0; x + MatriisiPiste <= r.width; x += MatriisiVali)
+                    {
+                        p.MoveTo(new Vector2(x, y)); p.LineTo(new Vector2(x + MatriisiPiste, y));
+                        p.LineTo(new Vector2(x + MatriisiPiste, y + MatriisiPiste)); p.LineTo(new Vector2(x, y + MatriisiPiste));
+                        p.ClosePath();
+                    }
+                p.Fill();
+            };
+            m.RegisterCallback<GeometryChangedEvent>(_ => m.MarkDirtyRepaint());
+        }
+
+        /// <summary>Oikea nopeus tekstinä: alle miljoonan "275 700 km/h", sitten "9,37 milj. km/h" / "27,6 milj. km/h".</summary>
+        public static string NopeusTeksti(double kmh)
+        {
+            if (kmh < 1e6) return (Math.Round(kmh / 10.0) * 10.0).ToString("#,0", Fi) + " km/h";
+            double milj = kmh / 1e6;
+            return milj.ToString(milj < 10 ? "0.00" : "0.0", Fi) + " milj. km/h";
+        }
+
+        /// <summary>Osuus valon nopeudesta ("2,6 % valon nopeudesta") tai null alle 0,1 %:n.</summary>
+        public static string ValoTeksti(double kmh)
+        {
+            double p = kmh / ValoKmh * 100.0;
+            return p < 0.1 ? null : p.ToString("0.0", Fi) + " % valon nopeudesta";
+        }
+
+        /// <summary>Cupolan kehys (IssKyytiNakyma.kupu), joka tärisee paneelin kanssa täydellä teholla.</summary>
+        public VisualElement Kehys;
+        IVisualElementScheduledItem tarina;
+        /// <summary>TÄRINÄ (omistaja 6.10.: "ohjaamo voisi alkaa hieman täristä täydessä vauhdissa"): hienovarainen, sileä (kaksi
+        /// siniä, ei satunnaishyppyjä), enintään TarinaPt; ei lainkaan, jos pelaaja on valinnut pienen liikkeen.</summary>
+        public const float TarinaPt = 0.7f;
+
+        void AsetaTarina(bool paalla)
+        {
+            if (paalla && LinssiUi.VahennettyLiike()) paalla = false;
+            if (!paalla)
+            {
+                tarina?.Pause(); tarina = null;
+                Juuri.style.translate = StyleKeyword.Null;
+                if (Kehys != null) Kehys.style.translate = StyleKeyword.Null;
+                return;
+            }
+            if (tarina != null) return;
+            float alku = Time.unscaledTime;
+            tarina = Juuri.schedule.Execute(() =>
+            {
+                float t = Time.unscaledTime - alku;
+                float x = TarinaPt * (0.6f * Mathf.Sin(t * 47f) + 0.4f * Mathf.Sin(t * 83f + 1.3f));
+                float y = TarinaPt * (0.6f * Mathf.Sin(t * 53f + 0.7f) + 0.4f * Mathf.Sin(t * 71f));
+                Juuri.style.translate = new Translate(x, y);
+                if (Kehys != null) Kehys.style.translate = new Translate(x * 0.6f, y * 0.6f);
+            }).Every(16);
+        }
+
+        /// <summary>Kaasun muutos: nopeuslukema LCD:hen 3 s (värit kertoimen mukaan), sitten paikka takaisin.</summary>
+        public void NaytaNopeus(double kerroin)
+        {
+            var hetki = IssNyt.Kello();
+            double kmh = IssNyt.NopeusKmh(IssNyt.KorkeusKm(hetki)) * kerroin;
+            // ×-merkki kuten asteikossa (Päätoimittaja 6.10.: VT323:n × näkyi isona korotettuna X:nä): pienempänä ja rivin
+            // keskilinjalla.
+            kerroinT.text = Math.Round(kerroin).ToString("0", Fi) + KertaMerkki;
+            nopeusT.text = NopeusTeksti(kmh);
+            string valo = ValoTeksti(kmh);
+            valoT.text = valo ?? "";
+            valoT.style.display = valo != null ? DisplayStyle.Flex : DisplayStyle.None;
+            nopeusRivi.EnableInClassList("mk-issohjaamo__nopeusrivi--varoitus", kerroin >= VaroitusKerroin && kerroin < TaysiKerroin);
+            nopeusRivi.EnableInClassList("mk-issohjaamo__nopeusrivi--vaara", kerroin >= TaysiKerroin);
+            nopeusAsti = Time.unscaledTime + NopeusS;
+            Debug.Log($"MATKAKIRJA linssit: ohjaamon LCD {Math.Round(kerroin)}× {nopeusT.text}{(valo != null ? " / " + valo : "")}");
+            PaivitaNopeusrivi();
+            SovitaNopeus();
+        }
+
+        void PaivitaNopeusrivi()
+        {
+            bool nayta = Time.unscaledTime < nopeusAsti && !(IssKameraKuva.Kaynnissa || TestiEdistyminen.HasValue);
+            bool nyt = nopeusRivi.style.display == DisplayStyle.Flex;
+            if (nayta == nyt) return;
+            nopeusRivi.style.display = nayta ? DisplayStyle.Flex : DisplayStyle.None;
+            kohde.style.display = nayta ? DisplayStyle.None : DisplayStyle.Flex;
+            if (nayta) maa.style.display = DisplayStyle.None;
+            else lcdKohde = lcdMaa = null;   // paikka takaisin seuraavassa päivityksessä
+        }
+
+        /// <summary>Kerroin ja nopeus samalle riville LCD:n leveyteen: kirjasin pienenee tarvittaessa (enintään NopeusPt × mittakaava).</summary>
+        void SovitaNopeus()
+        {
+            float leveys = lcd.contentRect.width;
+            if (!(leveys > 0)) { lcd.schedule.Execute(SovitaNopeus).ExecuteLater(16); return; }
+            float koko = NopeusPt * mittakaava;
+            float Lev(Label t, float k)
+            {
+                t.style.fontSize = k;
+                return t.MeasureTextSize(t.text, 0, VisualElement.MeasureMode.Undefined, 0, VisualElement.MeasureMode.Undefined).x;
+            }
+            for (int i = 0; i < 12; i++)
+            {
+                float oikea = Mathf.Max(Lev(nopeusT, koko), valoT.style.display == DisplayStyle.None ? 0f : Lev(valoT, koko * ValoOsuus));
+                float tarve = Lev(kerroinT, koko) + oikea + 6f * mittakaava;
+                if (tarve <= leveys * 0.96f) break;
+                koko *= 0.92f;
+            }
+            kerroinT.style.fontSize = koko; nopeusT.style.fontSize = koko;
+            valoT.style.fontSize = koko * ValoOsuus;
+        }
+
+        /// <summary>Testi: kehitys 0–1 (segmentit), "valmis" (KUVA VALMIS 2 s) tai "pois".</summary>
+        public void TestaaKehitys(string arvo)
+        {
+            if (arvo == "pois") TestiEdistyminen = null;
+            else if (arvo == "valmis") { TestiEdistyminen = null; oliKaynnissa = false; valmisAsti = Time.unscaledTime + ValmisS; }
+            else if (float.TryParse(arvo, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float f)) TestiEdistyminen = f;
+            Paivita();
+        }
+
+        /// <summary>LCD:n kuvausrivi: "KEHITETÄÄN…" palkin kanssa kuvauksen ajan, "KUVA VALMIS" 2 s; muuten null (sijainti).</summary>
+        string KuvausTeksti()
+        {
+            bool kaynnissa = IssKameraKuva.Kaynnissa || TestiEdistyminen.HasValue;
+            // Kuva ei valmistunut (LS2 6.10.: Tila kertoo syyn, kun Kaynnissa → false): syy LCD:hen 2 s.
+            if (oliKaynnissa && !kaynnissa)
+            {
+                syy = IssKameraKuva.Tila switch
+                {
+                    "ei maata" => "EI MAATA KUVASSA",
+                    "ei kuvauspaikkaa" => "EI KUVA-AINEISTOA",
+                    "keskeytyi" => "KUVAUS KESKEYTYI",
+                    _ => null,
+                };
+                if (syy != null) { syyAsti = Time.unscaledTime + ValmisS; Debug.Log("MATKAKIRJA linssit: ohjaamon LCD " + syy); }
+            }
+            oliKaynnissa = kaynnissa;
+            segmentit.style.display = kaynnissa ? DisplayStyle.Flex : DisplayStyle.None;
+            if (kaynnissa)
+            {
+                float e = Mathf.Clamp01(TestiEdistyminen ?? IssKameraKuva.Edistyminen);
+                int paalla = Mathf.CeilToInt(e * Segmentteja - 0.001f);
+                for (int i = 0; i < Segmentteja; i++) segmentti[i].EnableInClassList("mk-issohjaamo__segmentti--paalla", i < paalla);
+            }
+            if (kaynnissa) return "KEHITETÄÄN…";
+            if (Time.unscaledTime < valmisAsti) return "KUVA VALMIS";
+            if (syy != null && Time.unscaledTime < syyAsti) return syy;
+            return null;
+        }
+
         void Laukaise()
         {
             if (!kamera.enabledSelf) return;
@@ -626,6 +926,20 @@ namespace Matkakirja.Natiivi
             var l = linssi();
             if (l == null || !l.Auki) return;
             var (k, m) = l.Sijainti();
+            PaivitaObjektiivi();   // myös testikomento `astro kyyti kuvaa laaja 0|1`
+            PaivitaNopeusrivi();
+            string kuvaus = KuvausTeksti();
+            if (kuvaus != null)
+            {
+                if (kohde.text != kuvaus)
+                {
+                    kohde.text = kuvaus; miniTeksti.text = kuvaus;
+                    maa.style.display = DisplayStyle.None;
+                    lcdKohde = lcdMaa = null;   // kuvauksen jälkeen sijainti piirretään uudelleen
+                    SovitaKohde();
+                }
+                k = lcdKohde; m = lcdMaa;
+            }
             // Omistaja 4.10.2026 klo 21.5x: rivi 1 = tarkka sijainti (lähin saman maan kaupunki, meri, alue tai vuori), rivi 2 = maa;
             // korkeus ja nopeus näkyvät Cupolan mustassa ISS-ruudussa, eivät LCD:ssä. Kuvapaneelissa rivit keskitettyinä.
             if (k != lcdKohde || m != lcdMaa)
@@ -690,6 +1004,8 @@ namespace Matkakirja.Natiivi
             return $"ohjaamo {(Juuri.resolvedStyle.display == DisplayStyle.None ? "piilossa" : Mini ? "mini" : "iso")}, "
                 + $"{r.xMin:0},{r.yMin:0}–{r.xMax:0},{r.yMax:0}, joystick {suunta}, kaasu {kaasuNyt}×, kamera {(kamera.enabledSelf ? "aktiivinen" : "himmeä")}, "
                 + $"LCD \"{kohde.text}\" / \"{maa.text}\" ({kohde.resolvedStyle.fontSize:0} pt)"
+                + $", objektiivi {(IssKameraKuva.Laaja ? "LAAJA" : "TELE")} @ {objektiivi.worldBound.xMin:0},{objektiivi.worldBound.yMin:0} {objektiivi.worldBound.width:0}×{objektiivi.worldBound.height:0}"
+                + (segmentit.resolvedStyle.display == DisplayStyle.Flex ? $", kehitys {segmentit.Query(className: "mk-issohjaamo__segmentti--paalla").ToList().Count}/{Segmentteja}" : "")
                 + (Laajennettu ? $", laajennettu: kausi {KausiNyt?.Invoke()}, vuorokausi {VuorokausiNyt?.Invoke()}" : "");
         }
 

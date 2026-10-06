@@ -1,0 +1,39 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:transparent}</style></head><body>
+<svg id="s" xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs>
+ <linearGradient id="kulta" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1d58e"/><stop offset=".45" stop-color="#d6ab55"/><stop offset="1" stop-color="#9c7329"/></linearGradient>
+ <radialGradient id="taivas" cx=".5" cy=".35" r=".75"><stop offset="0" stop-color="#16294a"/><stop offset="1" stop-color="#091426"/></radialGradient>
+ <linearGradient id="maa" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fa3d8"/><stop offset=".25" stop-color="#3f78b8"/><stop offset="1" stop-color="#1d4479"/></linearGradient>
+ <clipPath id="sisa"><circle cx="512" cy="512" r="352"/></clipPath>
+ <path id="ylakaari" d="M 512 512 m -410 0 a 410 410 0 1 1 820 0"/>
+ <path id="alakaari" d="M 512 512 m -432 0 a 432 432 0 0 0 864 0"/>
+</defs>
+<circle cx="512" cy="512" r="506" fill="url(#kulta)"/>
+<circle cx="512" cy="512" r="490" fill="#0b1830"/>
+<circle cx="512" cy="512" r="478" fill="none" stroke="url(#kulta)" stroke-width="3" opacity=".7"/>
+<circle cx="512" cy="512" r="356" fill="none" stroke="url(#kulta)" stroke-width="8"/>
+<g clip-path="url(#sisa)">
+ <rect x="150" y="150" width="724" height="724" fill="url(#taivas)"/>
+ <line x1="512" y1="160" x2="512" y2="470" stroke="#9fb6d6" stroke-width="2" opacity=".35"/>
+ <circle cx="512" cy="1185" r="640" fill="url(#maa)"/>
+ <circle cx="512" cy="1185" r="640" fill="none" stroke="#bfe0ff" stroke-width="7" opacity=".85"/>
+ <circle cx="512" cy="1185" r="652" fill="none" stroke="#7fb3ea" stroke-width="14" opacity=".25"/>
+ <ellipse cx="512" cy="500" rx="300" ry="78" transform="rotate(-8 512 500)" fill="none" stroke="#d9e6f5" stroke-width="3" opacity=".75"/>
+ <g transform="translate(512 395) rotate(-6)" fill="url(#kulta)" stroke="#6b4e18" stroke-width="2">
+  <rect x="-150" y="-5" width="300" height="10" rx="2"/>
+  <rect x="-128" y="-78" width="26" height="156" rx="2"/><rect x="-98" y="-78" width="26" height="156" rx="2"/>
+  <rect x="72" y="-78" width="26" height="156" rx="2"/><rect x="102" y="-78" width="26" height="156" rx="2"/>
+  <rect x="-34" y="-4" width="68" height="22" rx="4"/><rect x="-12" y="14" width="24" height="44" rx="3"/>
+  <rect x="-60" y="22" width="120" height="14" rx="3"/>
+ </g>
+ <g stroke="#6b4e18" stroke-width="1.5" opacity=".6">
+  <line x1="-115" y1="-78" x2="-115" y2="78" transform="translate(512 395) rotate(-6)"/><line x1="-85" y1="-78" x2="-85" y2="78" transform="translate(512 395) rotate(-6)"/>
+  <line x1="85" y1="-78" x2="85" y2="78" transform="translate(512 395) rotate(-6)"/><line x1="115" y1="-78" x2="115" y2="78" transform="translate(512 395) rotate(-6)"/>
+ </g>
+</g>
+<circle cx="70" cy="512" r="9" fill="url(#kulta)"/><circle cx="954" cy="512" r="9" fill="url(#kulta)"/>
+<g font-family="Rockwell, 'American Typewriter', Georgia, serif" font-weight="bold" fill="url(#kulta)" letter-spacing="5">
+ <text font-size="50"><textPath href="#ylakaari" startOffset="50%" text-anchor="middle">INTERNATIONAL SPACE STATION</textPath></text>
+ <text font-size="38"><textPath href="#alakaari" startOffset="50%" text-anchor="middle" dominant-baseline="hanging">MAAILMAN YMPÄRI 92 MINUUTISSA</textPath></text>
+</g>
+</svg></body></html>

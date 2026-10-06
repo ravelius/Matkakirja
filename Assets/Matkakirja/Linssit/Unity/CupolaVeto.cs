@@ -26,6 +26,9 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static bool Kaytossa = false;
 
+        /// <summary>A/B `astro kyyti pallolukko 0|1` (omistaja 6.10.: ohjaamossa pallon kosketus ei tee mitään); 0 = entinen käytös.</summary>
+        public static bool PalloLukittuOhjaamossa = true;
+
         bool alhaalla, ohita;
         PalloKierto kierto;
 
@@ -38,6 +41,9 @@ namespace Matkakirja.Natiivi
             var katse = l?.CupolanKatse;
             bool cupola = l != null && l.Kyyti == KyydinTila.Ikkuna;
             if (kierto != null) kierto.YhdenSormenVetoMuualla = cupola;   // pallo ei siirrä kameraa Cupolassa (veto tai joystick)
+            // ISS-ohjaamo (omistaja 6.10.: "maapalloon tarttuminen ei saa tehdä mitään"): kaikki pallon eleet pois ohjaamon tiloissa.
+            if (kierto != null) kierto.EleetMuualla = PalloLukittuOhjaamossa && l != null && l.Kyydissa
+                && (l.Kyyti == KyydinTila.Seuranta || l.Kyyti == KyydinTila.Ikkuna || l.Kyyti == KyydinTila.Kohde);
             if (katse == null) return;
             katse.Lukittu = IssKameraKuva.Kaynnissa;
             bool sallittu = Kaytossa && cupola && !l.KyytiSiirtyy && l.AvoinKuva == null && !l.Kavely.Kaynnissa
@@ -115,13 +121,14 @@ namespace Matkakirja.Natiivi
             string lasi = IssKyytiNakyma.VedonLasi(out var l, out float w, out float h)
                 ? $"lasi ({l.x:0}, {l.y:0}) r {l.z:0} pt ruudulla {w:0} × {h:0}" : "lasi: ei asettelua";
             return $"veto {(Kaytossa ? "käytössä" : "pois")}, {lasi}, ele {(alhaalla ? (ohita ? "ohitettu" : "lasilla") : "ei")}, syy {Syy}, "
-                + $"pallon veto {(kierto != null && kierto.YhdenSormenVetoMuualla ? "ohjattu Cupolaan" : "pallolla")}";
+                + $"pallon veto {(kierto != null && kierto.YhdenSormenVetoMuualla ? "ohjattu Cupolaan" : "pallolla")}, "
+                + $"pallon eleet {(kierto != null && kierto.EleetMuualla ? "lukittu (ohjaamo)" : "auki")}";
         }
 
         /// <summary>Linssi suljetaan: pallon veto palautuu.</summary>
         public void Pois()
         {
-            if (kierto != null) kierto.YhdenSormenVetoMuualla = false;
+            if (kierto != null) { kierto.YhdenSormenVetoMuualla = false; kierto.EleetMuualla = false; }
             alhaalla = ohita = false;
         }
     }

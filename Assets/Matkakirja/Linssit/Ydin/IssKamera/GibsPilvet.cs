@@ -59,6 +59,27 @@ namespace Matkakirja.Linssit.IssKamera
         public Pilvikentta Yksityiskohta;
         /// <summary>Valittu päivä ja sen keskialfa (lokiin).</summary>
         public DateTime Paiva; public double Peitto;
+        /// <summary>
+        /// Lähialueen tarkempi taso samalta päivältä (juliste 6.10.: laajan kuvan alue ulottuu horisonttiin → z5–z6, ja lähialueen
+        /// pilvet olivat Helsingissä litteitä harmaita laattoja ja Manauksessa kuutiomaisia möykkyjä). Alueen sisällä näyte
+        /// tulee tästä, reunalla (8 % leveydestä) sekoitus.
+        /// </summary>
+        public GibsPilvet Tarkka;
+
+        /// <summary>Aseta aurinko ja reunarakenne myös tarkalle tasolle.</summary>
+        public void Aseta(double aurinkoAz, double aurinkoKorkeus, Pilvikentta yksityiskohta)
+        {
+            AurinkoAz = aurinkoAz; AurinkoKorkeus = aurinkoKorkeus; Yksityiskohta = yksityiskohta;
+            Tarkka?.Aseta(aurinkoAz, aurinkoKorkeus, yksityiskohta);
+        }
+
+        /// <summary>Paino 0…1: kuinka syvällä pisteen tason pikseli on alueen sisällä (reunavyöhyke 8 % koosta).</summary>
+        public double Sisalla(double lat, double lon)
+        {
+            var (gx, gy) = Pikseli(lat, lon, Taso);
+            double rx = Math.Min(gx - X0, X0 + W - gx) / Math.Max(1.0, 0.08 * W), ry = Math.Min(gy - Y0, Y0 + H - gy) / Math.Max(1.0, 0.08 * H);
+            return Askel(0, 1, Math.Min(rx, ry));
+        }
 
         public GibsPilvet(int x0, int y0, int w, int h, byte[] alfa, byte[] kirkkaus, int taso = Z)
         { X0 = x0; Y0 = y0; W = w; H = h; Alfa = alfa; Kirkkaus = kirkkaus; Taso = taso; }
@@ -85,7 +106,8 @@ namespace Matkakirja.Linssit.IssKamera
         /// Selkein päivä: paivat[d][k] = kerroksen k (Kerrokset-järjestys) RGB-mosaiikki (W × H × 3) tai null (ei haettu / ei
         /// dataa). Palauttaa pilvet tai null, jos millään päivällä ei ole dataa.
         /// </summary>
-        public static GibsPilvet Kokoa(int x0, int y0, int w, int h, IReadOnlyList<(DateTime paiva, byte[][] kerrokset)> paivat, int taso = Z)
+        public static GibsPilvet Kokoa(int x0, int y0, int w, int h, IReadOnlyList<(DateTime paiva, byte[][] kerrokset)> paivat, int taso = Z,
+            DateTime? pakotettu = null)
         {
             int n = w * h, D = paivat.Count;
             var alfat = new float[D][]; var kirk = new byte[D][]; var osuus = new double[D]; var keski = new double[D];
@@ -114,6 +136,12 @@ namespace Matkakirja.Linssit.IssKamera
             for (int pass = 0; pass < 2 && paras < 0; pass++)
                 for (int d = 0; d < D; d++)
                     if (osuus[d] > 0 && (pass == 1 || osuus[d] >= 0.8) && (paras < 0 || keski[d] < keski[paras])) paras = d;
+            // Tarkka lähialue: sama päivä kuin karkealla tasolla (pilvien muoto jatkuu saumattomasti).
+            if (pakotettu != null)
+            {
+                paras = -1;
+                for (int d = 0; d < D; d++) if (paivat[d].paiva == pakotettu.Value && osuus[d] > 0) paras = d;
+            }
             if (paras < 0) return null;
             // Pysyvä valkoinen (lumi, jää, suola): pienin alfa niistä päivistä, joilla pikselissä dataa (vähintään 3 päivää).
             var alfa = new byte[n]; double s2 = 0;
@@ -182,6 +210,16 @@ namespace Matkakirja.Linssit.IssKamera
 
         public (double alfa, double kirkkaus, double varjo) Nayte(double lat, double lon, double peittoK = 1)
         {
+            double p = Tarkka != null ? Tarkka.Sisalla(lat, lon) : 0;
+            if (p >= 1) return Tarkka.Nayte(lat, lon, peittoK);
+            var r = OmaNayte(lat, lon);
+            if (p <= 0) return r;
+            var t = Tarkka.Nayte(lat, lon, peittoK);
+            return (r.alfa + (t.alfa - r.alfa) * p, r.kirkkaus + (t.kirkkaus - r.kirkkaus) * p, r.varjo + (t.varjo - r.varjo) * p);
+        }
+
+        (double alfa, double kirkkaus, double varjo) OmaNayte(double lat, double lon)
+        {
             var (gx, gy) = Pikseli(lat, lon, Taso);
             double alfa = Arvo(Alfa, gx, gy), kirkkaus = Math.Max(0.70, Arvo(Kirkkaus, gx, gy));
             // Varjo: pilvi auringon suunnassa korkeudelta 1,2–1,8 km (z9-pikseleinä; y kasvaa etelään).
@@ -196,6 +234,16 @@ namespace Matkakirja.Linssit.IssKamera
         }
 
         public (double alfa, double kirkkaus) Lahi(double lat, double lon, double peittoK = 1, double pikseliM = 0)
+        {
+            double p = Tarkka != null ? Tarkka.Sisalla(lat, lon) : 0;
+            if (p >= 1) return Tarkka.Lahi(lat, lon, peittoK, pikseliM);
+            var r = OmaLahi(lat, lon, pikseliM);
+            if (p <= 0) return r;
+            var t = Tarkka.Lahi(lat, lon, peittoK, pikseliM);
+            return (r.alfa + (t.alfa - r.alfa) * p, r.kirkkaus + (t.kirkkaus - r.kirkkaus) * p);
+        }
+
+        (double alfa, double kirkkaus) OmaLahi(double lat, double lon, double pikseliM)
         {
             var (gx, gy) = Pikseli(lat, lon, Taso);
             double a = Arvo(Alfa, gx, gy), k = Math.Max(0.70, Arvo(Kirkkaus, gx, gy));
