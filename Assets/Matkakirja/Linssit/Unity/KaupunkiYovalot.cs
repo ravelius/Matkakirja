@@ -30,9 +30,9 @@ namespace Matkakirja.Natiivi
         /// valonheiton (Eiffel kultaisena). OpasSovitin asettaa joka kehys; null = ei kohdetta.</summary>
         public static (double lat, double lon, double maaM, double sadeM)? Kohde;
         public static float KohdeVoima = 2.8f;
-        /// <summary>Katumaskin tarkkuus (px) ja alue (m): oletus 6 km (testitiedosto), ämpäritiedostossa 2 × r enintään 8 km;
-        /// 2048² R8 + mipit ≈ 5,6 Mt (8 km ≈ 3,9 m/px).</summary>
-        public const float TieSivuM = 6000f, TieSivuMax = 8000f; public const int TieN = 2048;
+        /// <summary>Katumaskin tarkkuus (px) ja alue (m): oletus 6 km (testitiedosto), ämpäritiedostossa 2 × r enintään 12 km;
+        /// 2048² R8 + mipit ≈ 5,6 Mt (8 km ≈ 3,9 m/px; isot kaupungit r 6000 → 12 km ≈ 5,9 m/px).</summary>
+        public const float TieSivuM = 6000f, TieSivuMax = 12000f; public const int TieN = 2048;
         /// <summary>Kaupungin tunnus (KaupunkiTiet.Tunnus Aloituskaupungista); OpasSovitin asettaa.</summary>
         public static string KaupunkiId;
         /// <summary>Natrium-oranssi (omistaja) ja valkoisten LED-pisteiden osuus.</summary>
