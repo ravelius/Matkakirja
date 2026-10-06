@@ -14,20 +14,29 @@ namespace Matkakirja.Linssit.IssKamera
         public const string Versio = "v2";
         public const string Juuri = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/" + Versio + "/";
         public const string Polku = "linssit/astronautin-kamera/s2-maailma/" + Versio + "/";
-        /// <summary>Korjaussarja (Karttaseppä: v2-korjaus/ + korjaus.json, sama bittikartta; 1 = laatta korjaussarjasta).</summary>
-        /// Kansio on vakio: Karttasepän uusi tasaus tulee uuteen polkuun (v2-korjaus2/), jolloin vaihto on tämä yksi rivi.
-        public const string KorjausKansio = "v2-korjaus2";   // Karttaseppä 6.10. 11.01: WorldCover-tasaus, järvet, rengas, 4 aluetta
-        public const string KorjausJuuri = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/" + KorjausKansio + "/";
-        public const string KorjausPolku = "linssit/astronautin-kamera/s2-maailma/" + KorjausKansio + "/";
+        /// <summary>
+        /// KORJAUSKERROKSET uusin ensin (Karttaseppä 6.10.: pieni korjauserä uuteen kansioon vain muuttuneilla laatoilla, ei koko
+        /// sarjan uudelleenvientiä). Kullakin kansiolla oma korjaus.json (sama bittikartta absoluuttisessa XYZ:ssä); ensimmäinen
+        /// kansio, jonka bitti on 1, voittaa – myös Euroopan lohkossa (Madeira), muuten Eurooppa tai maailman v2.
+        /// </summary>
+        public static readonly string[] KorjausKansiot = { "v2-korjaus2" };   // 6.10. 11.01: WorldCover-tasaus, järvet, rengas, 4 aluetta
+        public const string KorjausJuuriPohja = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/";
+        public const string KorjausPolkuPohja = "linssit/astronautin-kamera/s2-maailma/";
         public readonly int ZMin, ZMax;
         readonly byte[][] bitit;
-        /// <summary>Korjaussarjan saatavuus (null = ei korjauksia); asetetaan ennen kuin olio julkaistaan muille säikeille.</summary>
-        public S2MaailmaLaatat Korjaus;
+        /// <summary>Korjauskerrokset KorjausKansiot-järjestyksessä (tyhjä = ei korjauksia); asetetaan ennen julkaisua muille säikeille.</summary>
+        public (string Kansio, S2MaailmaLaatat Bitit)[] Korjaukset = Array.Empty<(string, S2MaailmaLaatat)>();
 
         S2MaailmaLaatat(int zmin, int zmax, byte[][] b) { ZMin = zmin; ZMax = zmax; bitit = b; }
 
-        /// <summary>Onko laatalle korjaus (korjaussarjasta haetaan sama z/x/y).</summary>
-        public bool Korjattu(int z, int x, int y) => Korjaus != null && Korjaus.Onko(z, x, y);
+        /// <summary>Korjauskansio laatalle (ensimmäinen kerros, jonka bitti on 1) tai null; sieltä haetaan sama z/x/y.</summary>
+        public string KorjausKansio(int z, int x, int y)
+        {
+            foreach (var (k, b) in Korjaukset) if (b != null && b.Onko(z, x, y)) return k;
+            return null;
+        }
+
+        public bool Korjattu(int z, int x, int y) => KorjausKansio(z, x, y) != null;
 
         /// <summary>laatat.json → saatavuus; null, jos muoto on väärä (kutsujan käytös ennallaan).</summary>
         public static S2MaailmaLaatat Jasenna(string json)

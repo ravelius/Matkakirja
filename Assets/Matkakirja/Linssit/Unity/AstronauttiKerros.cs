@@ -452,22 +452,27 @@ namespace Matkakirja.Natiivi
             while (!t.IsCompleted) yield return null;
             var m = t.IsFaulted ? null : t.Result;
             if (m == null) { Debug.Log("MATKAKIRJA linssit: s2-maailma: laatat.json ei kelpaa → vain Eurooppa"); yield break; }
-            // Korjaussarja (valinnainen; 404 = ei korjauksia).
-            using (var kq = UnityWebRequest.Get(S2MaailmaLaatat.KorjausJuuri + "korjaus.json"))
-            {
-                yield return kq.SendWebRequest();
-                if (kq.result == UnityWebRequest.Result.Success)
+            // Korjauskerrokset uusin ensin (valinnaisia; 404 = kerros puuttuu).
+            var korjaukset = new System.Collections.Generic.List<(string, S2MaailmaLaatat)>();
+            foreach (var kansio in S2MaailmaLaatat.KorjausKansiot)
+                using (var kq = UnityWebRequest.Get(S2MaailmaLaatat.KorjausJuuriPohja + kansio + "/korjaus.json"))
                 {
+                    yield return kq.SendWebRequest();
+                    if (kq.result != UnityWebRequest.Result.Success) continue;
                     var kt = kq.downloadHandler.data;
                     var kj = System.Threading.Tasks.Task.Run(() => S2MaailmaLaatat.Jasenna(System.Text.Encoding.UTF8.GetString(kt)));
                     while (!kj.IsCompleted) yield return null;
-                    m.Korjaus = kj.IsFaulted ? null : kj.Result;
+                    if (!kj.IsFaulted && kj.Result != null) korjaukset.Add((kansio, kj.Result));
                 }
-            }
-            Laattapalvelin.S2Maailma(S2MaailmaLaatat.Polku, m.Onko, S2MaailmaLaatat.KorjausPolku, m.Korjattu);
+            m.Korjaukset = korjaukset.ToArray();
+            Laattapalvelin.S2Maailma(S2MaailmaLaatat.Polku, m.Onko, (z, x, y) =>
+            {
+                var k = m.KorjausKansio(z, x, y);
+                return k == null ? null : S2MaailmaLaatat.KorjausPolkuPohja + k + "/";
+            });
             S2MaailmaLadattu = m;
             if (S2MaailmaKaytossa) KuvanTyosto.Maailma = m;
-            Debug.Log($"MATKAKIRJA linssit: s2-maailma: {S2MaailmaLaatat.Versio} z{m.ZMin}–{m.ZMax}, {tavut.Length / 1024} kt, korjaus {(m.Korjaus != null ? "on" : "ei")}, {kello.ElapsedMilliseconds} ms");
+            Debug.Log($"MATKAKIRJA linssit: s2-maailma: {S2MaailmaLaatat.Versio} z{m.ZMin}–{m.ZMax}, {tavut.Length / 1024} kt, korjauskerrokset {string.Join(", ", System.Linq.Enumerable.Select(m.Korjaukset, k => k.Kansio))}, {kello.ElapsedMilliseconds} ms");
         }
 
         void PaivitaS2(bool kyydissa)

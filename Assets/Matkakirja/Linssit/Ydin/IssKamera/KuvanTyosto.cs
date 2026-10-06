@@ -452,8 +452,11 @@ namespace Matkakirja.Linssit.IssKamera
 
         /// <summary>Lähdelaatan (z ≤ 10) täysi osoite: Euroopassa v1:n rajattu jako, muualla maailman v2.</summary>
         public static string MosaiikinOsoite(string euroopanJuuri, int z, int x, int y)
-            => Euroopassa(z, x, y) ? euroopanJuuri + MosaiikinPolku(z, x, y)
-             : $"{(Maailma != null && Maailma.Korjattu(z, x, y) ? S2MaailmaLaatat.KorjausJuuri : S2MaailmaLaatat.Juuri)}{z}/{x}/{y}.jpg";
+        {
+            var k = Maailma?.KorjausKansio(z, x, y);
+            if (k != null) return $"{S2MaailmaLaatat.KorjausJuuriPohja}{k}/{z}/{x}/{y}.jpg";   // korjauskerros voittaa (myös Eurooppa)
+            return Euroopassa(z, x, y) ? euroopanJuuri + MosaiikinPolku(z, x, y) : $"{S2MaailmaLaatat.Juuri}{z}/{x}/{y}.jpg";
+        }
 
         /// <summary>Mosaiikin suhteellinen polku "{t}/{x'}/{y'}.jpg".</summary>
         public static string MosaiikinPolku(int z, int x, int y)
