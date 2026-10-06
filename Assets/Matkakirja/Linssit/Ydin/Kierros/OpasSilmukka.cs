@@ -204,15 +204,17 @@ namespace Matkakirja.Linssit.Kierros
         // ---- SALLITUT KAUPUNGIT (omistaja 7.10. 00.4x, juna 157): lennot ja workerin kohteet vain sallitun 3D:n alueelle ----
         /// <summary>Sallitut kaupungit (Pöllön /opas/aineistot "sallitut"); tyhjä = ei rajausta.</summary>
         public IReadOnlyList<OpasSallitut.Kaupunki> Sallitut = Array.Empty<OpasSallitut.Kaupunki>();
-        /// <summary>Kohde torjuttiin (sallitun alueen ulkopuolella): nimi. Sovitin kirjaa ja voi soittaa siltalauseen.</summary>
-        public event Action<string> Torjuttu;
+        /// <summary>Kohde torjuttiin (sallitun alueen ulkopuolella): nimi ja pelaajan pyynnöstä (vie minut, valinta, Liiku). Sovitin
+        /// kirjaa ja soittaa pelaajan pyynnöstä siltalauseen "valitse kohde listasta" (Päätoimittaja 7.10. 01.0x); kierroksen
+        /// esihaussa hiljaa.</summary>
+        public event Action<string, bool> Torjuttu;
         public int Torjuntoja { get; private set; }
         int torjuntoja;
         bool Sallittu(double lat, double lon) => OpasSallitut.Sallittu(Sallitut, lat, lon);
-        bool Torju(string nimi, double lat, double lon)
+        bool Torju(string nimi, double lat, double lon, bool pelaajalta = true)
         {
             if (Sallittu(lat, lon)) return false;
-            Torjuntoja++; Torjuttu?.Invoke(nimi ?? $"{lat:F3}, {lon:F3}");
+            Torjuntoja++; Torjuttu?.Invoke(nimi ?? $"{lat:F3}, {lon:F3}", pelaajalta);
             return true;
         }
         /// <summary>Saapui kohteeseen: sovitin aloittaa äänen ja näyttää nimen.</summary>
@@ -664,7 +666,13 @@ namespace Matkakirja.Linssit.Kierros
             Virheita = 0; VirheTauko = 0; ViimeKoodi = 0;
             if (k.Odota) return;
             // Sallitun alueen ulkopuolinen pysähdys torjutaan (worker suodattaa myös); kaksi uutta yritystä peräkkäin, sitten odotetaan.
-            if (!k.Kysymys && Torju(k.Nimi, k.Lat, k.Lon)) { if (++torjuntoja <= 2) UusiPyynto(); return; }
+            if (!k.Kysymys && Torju(k.Nimi, k.Lat, k.Lon, toiveesta))
+            {
+                // Pelaajan toive (vie minut X) ulkona: ei lentoa eikä uutta pyyntöä, siltalause ohjaa listaan.
+                if (toiveesta) { toiveesta = false; return; }
+                if (++torjuntoja <= 2) UusiPyynto();
+                return;
+            }
             torjuntoja = 0;
             if (KierrosKaynnissa) k.Kierros = true;
             if (k.Kysymys)
@@ -870,7 +878,7 @@ namespace Matkakirja.Linssit.Kierros
                 if (Vaihe == OpasVaihe.Puhuu && !aaniLoppui) { vapaaKaynnissa = false; return false; }
                 vapaaKehyksessa = false;
             }
-            if (!vapaaKaynnissa) { Vapaa.Aloita(Asento, MaaPisteessa); Vapaa.Alue = OpasSallitut.Sisalla(Sallitut, Asento.Lat, Asento.Lon); vapaaKaynnissa = true; }
+            if (!vapaaKaynnissa) { Vapaa.Aloita(Asento, MaaPisteessa); Vapaa.Alue = OpasSallitut.Alue(Sallitut, Asento.Lat, Asento.Lon); vapaaKaynnissa = true; }
             Asento = Vapaa.Paivita(dt, VapaaTapit.vx, VapaaTapit.vy, VapaaTapit.ox, VapaaTapit.oy, MaaPisteessa);
             // 3D-pinnan näytteet (rakennukset mukana) kamerasta ja liikkeen suunnasta 4 kertaa sekunnissa (sovitin välimuistittaa ~11 m:n ruutuun).
             vapaaNayteS -= dt;

@@ -54,6 +54,21 @@ namespace Matkakirja.Linssit.Kierros
             return paras;
         }
 
+        /// <summary>Vapaan tilan rajausalue: kaupunki, jonka säteellä piste on, tai lähin, jonka keskus on alle kerroin × r:n päässä
+        /// (LS2 7.10.: kamera alueen ulkopuolella vapaan tilan alkaessa → silti raja, liike vain alueelle päin); muuten null.</summary>
+        public static Kaupunki Alue(IReadOnlyList<Kaupunki> l, double lat, double lon, double kerroin = 2)
+        {
+            var s = Sisalla(l, lat, lon);
+            if (s != null || l == null) return s;
+            Kaupunki paras = null; double pd = double.MaxValue;
+            foreach (var k in l)
+            {
+                double d = KierrosLento.EtaisyysM(lat, lon, k.Lat, k.Lon);
+                if (d < kerroin * k.RM && d < pd) { pd = d; paras = k; }
+            }
+            return paras;
+        }
+
         /// <summary>Saako pisteeseen lentää: lista tyhjä (ei rajausta) tai piste jonkin sallitun kaupungin säteellä.</summary>
         public static bool Sallittu(IReadOnlyList<Kaupunki> l, double lat, double lon) => l == null || l.Count == 0 || Sisalla(l, lat, lon) != null;
 

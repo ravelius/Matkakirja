@@ -100,7 +100,7 @@ namespace Matkakirja.Natiivi
             if (sallitut != null && sallitut.Count > 0)
             {
                 var sk = OpasSallitut.Nimella(sallitut, nimi) ?? OpasSallitut.Sisalla(sallitut, lat, lon);
-                if (sk == null) { Viimeisin.o.Kirjaa($"opas: kaupunki {nimi} ei ole sallittujen listalla, ei vaihdeta"); return false; }
+                if (sk == null) { Viimeisin.o.Kirjaa($"opas: kaupunki {nimi} ei ole sallittujen listalla, ei vaihdeta"); Viimeisin.Silta(OpasSiltalauseet.EiSallittu, true); return false; }
                 lat = sk.Lat; lon = sk.Lon;
             }
             else (lat, lon) = Keskusta(lat, lon);   // Natural Earth -piste → kaupungin keskusta (Wikidata P625)
@@ -198,7 +198,11 @@ namespace Matkakirja.Natiivi
             silmukka.Hiljenna += Hiljenna;
             silmukka.Kysyy += Kysyy;
             silmukka.LentoAlkaa += LentoAlkoi;
-            silmukka.Torjuttu += n => o.Kirjaa($"opas: {n} on sallitun 3D-alueen ulkopuolella, ei lennetä");
+            silmukka.Torjuttu += (n, pelaajalta) =>
+            {
+                o.Kirjaa($"opas: {n} on sallitun 3D-alueen ulkopuolella, ei lennetä{(pelaajalta ? " (siltalause)" : "")}");
+                if (pelaajalta) Silta(OpasSiltalauseet.EiSallittu, true);
+            };
             if (sallitut != null) silmukka.Sallitut = sallitut;
             if (sallitut == null || Time.realtimeSinceStartup - sallitutHaettu > SallitutUusintaS) o.StartCoroutine(HaeSallitut());
             // Siirto ilman lentoa (omistaja 6.10. 12.0x): origo heti kohteeseen, latausaste kohdekameran laatoista.
@@ -505,7 +509,7 @@ namespace Matkakirja.Natiivi
         {
             if (!Auki || t == null || string.IsNullOrEmpty(t.Nimi)) return false;
             var v = Viimeisin;
-            if (!SallittuPiste(t.Lat, t.Lon)) { v.o.Kirjaa($"opas: liiku {t.Nimi} → sallitun 3D-alueen ulkopuolella, ei lennetä"); return false; }
+            if (!SallittuPiste(t.Lat, t.Lon)) { v.o.Kirjaa($"opas: liiku {t.Nimi} → sallitun 3D-alueen ulkopuolella, ei lennetä"); v.Silta(OpasSiltalauseet.EiSallittu, true); return false; }
             if (v.tauolla) Tauko(false);
             v.o.Kirjaa($"opas: liiku {t.Nimi}");
             v.silmukka.Liiku(t.Nimi, t.Lat, t.Lon);

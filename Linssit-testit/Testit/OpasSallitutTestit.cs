@@ -23,6 +23,9 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("Kööpenhamina", OpasSallitut.Nimella(l, "kööpenhamina")?.Nimi);
             Oleta.Tosi(OpasSallitut.Nimella(l, "Tukholma") == null);
             Oleta.Sama(0, OpasSallitut.Lue(Matkakirja.Peli.MiniJson.Jasenna("{\"tiet\":[]}")).Count, "kenttä puuttuu");
+            Oleta.Sama("Pariisi", OpasSallitut.Alue(l, 48.9376, 2.3522)?.Nimi, "9 km pohjoiseen: ulkona, mutta alle 2 × r");
+            Oleta.Tosi(OpasSallitut.Alue(l, 48.80, 2.13) == null, "Versailles 17 km: yli 2 × r");
+            Oleta.Tosi(OpasSallitut.Alue(l, 49.2, 2.35) == null, "38 km: ei aluetta");
         }
 
         [Testi] static void VapaaLiikePysahtyyPehmeastiReunalle()

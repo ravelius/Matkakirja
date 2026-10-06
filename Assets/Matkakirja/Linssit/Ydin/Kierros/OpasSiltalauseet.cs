@@ -22,6 +22,8 @@ namespace Matkakirja.Linssit.Kierros
             Syventava = "syventava";
         /// <summary>Kuittaukset-v1 (Pelikoodari 6.10., omistaja hyväksyi): kysymyksen kuittaus (52 neutraalia) ja odotusportaat.</summary>
         public const string KysymysRyhma = "kysymys", Odotus5 = "odotus5", Odotus12 = "odotus12", Virhe = "virhe";
+        /// <summary>Sallitun 3D-alueen ulkopuolinen toive (Päätoimittaja 7.10. 01.0x: "valitse kohde listasta"; Pelikoodari generoi).</summary>
+        public const string EiSallittu = "ei-sallittu";
 
         // TILANTEEN MUKAAN (omistaja 6.10. 14.3x "välilauseet eivät täsmää pyyntöön", Päätoimittaja hyväksyi taulukon, juna 150):
         // näennäisryhmät rajaavat aineiston ryhmiä lauseittain, eikä niillä ole vararyhmää (väärä lause on pahempi kuin hiljaisuus).
