@@ -165,7 +165,7 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
   väreillä). Kuvat esikatselu/arkki-v2.jpg (pyramidit), arkki-v4-sfinksi.jpg. LS1 lähettää kulmakorkeuserot → korjaa DEM-arvoilla.
 - LINNA ETUSIJALLA: peili a0e53749 Siirtosepän todennuksessa (TF 154 -app) ennen osoitinvaihtoa.
 
-## Päivitys 7.10. klo 01.3x
+## Päivitys 7.10. klo 01.2x
 - KAUPUNKISELVITYS (Päätoimittaja, omistajan linjaus 00.4x) VALMIS: docs/raportit/selvitys-kaupungit-blender-20261007.md
   (+ liitteet viro/ruotsi, kuva kuvat/tallinna-koe-raekoja-20261007.jpg). Suositus Tallinna ensin (Maa-amet LoD2 + 10 cm orto,
   ≈ CC BY 4.0, ei kirjautumista, 4–6 pv); Visby vaatii omistajan Geotorget-tilin (8–12 pv). Odottaa omistajan päätöstä.
