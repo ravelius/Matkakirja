@@ -784,7 +784,7 @@ namespace Matkakirja.Editori
         ///   MATKAKIRJA_BUNDLE_ID  (oletus app.matkakirja.proto3d; TestFlight-Mac = iOS:n sama ID, universal purchase)
         ///   MATKAKIRJA_VERSIO / MATKAKIRJA_BUILD  CFBundleShortVersionString / CFBundleVersion (oletus 0.1.0 / 1)
         ///   MATKAKIRJA_IL2CPP     1 = IL2CPP (vaatii Hubin Mac Build Support (IL2CPP) -moduulin), muuten Mono
-        ///   MATKAKIRJA_APPSTORE   1 = App Store -käännös (määrite MATKAKIRJA_APPSTORE + Mac App Store -validointi)
+        ///   MATKAKIRJA_APPSTORE   1 = App Store -käännös (määrite MATKAKIRJA_APPSTORE; kuittitarkistus aina pois)
         /// Vain Apple silicon (arm64): linnan ASTC-tekstuurit ja laattapaketti nojaavat ASTC-tukeen, jota Intel-Maceissa ei ole.
         /// Allekirjoitus, sandbox-oikeudet ja lähetys ovat erillinen vaihe (Julkaisija), kuten iOS:n arkistointi.
         /// </summary>
@@ -813,7 +813,9 @@ namespace Matkakirja.Editori
             PlayerSettings.SetIcons(kohde, new[] { kuvake }, IconKind.Any);
             AsetaMacArkkitehtuuri("ARM64");
             bool appStore = Ymp("MATKAKIRJA_APPSTORE", "0") == "1";
-            PlayerSettings.useMacAppStoreValidation = appStore;
+            // Kuittitarkistus pois myös App Store -käännöksessä: Unity lopettaa ilman kuittia (exit 173), eikä tarkistusta
+            // vaadita; App Store -käännös = vain määrite MATKAKIRJA_APPSTORE (kehittäjätila ja testikomennot pois).
+            PlayerSettings.useMacAppStoreValidation = false;
             string maaritteet = PlayerSettings.GetScriptingDefineSymbols(kohde);
             if (appStore) PlayerSettings.SetScriptingDefineSymbols(kohde, (maaritteet + ";MATKAKIRJA_APPSTORE").Trim(';'));
             string kansio = Ymp("MATKAKIRJA_KANSIO", "Build/mac");
