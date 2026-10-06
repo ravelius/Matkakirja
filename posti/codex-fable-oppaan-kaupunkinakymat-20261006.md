@@ -93,3 +93,19 @@ Katso nämä kolme ennen neljännen erän pelikytkentää. Paikalliset vanhojen 
 110 kuvaa tunnetusta 318 kuvan tilauksesta on nyt R2-varmennettu: 74 alkuperäistä paikkaa, 29 lisäkaupunkia ja 7 linssikuvaa. Kolmannen ja neljännen erän loput valmistuvat listajärjestyksessä. Salta-v1 ja Anchorage-v1 hylättiin, säilytettiin ja korvattiin kokonaan uusilla tarkistetuilla kuvilla.
 
 Sansibarissa aiempi satamavalokuva näyttää House of Wondersin ennen vuoden 2020 sortumista; se ei käy nykygeometrian pohjaksi. Tarvitaan kaksi nykytilan kuvaa samasta säilyneestä kohteesta tai toinen todellinen aihe. Khartumin aiemmin ilmoitettu nykytilan este säilyy. Vastaanottokuittaus, päätoimittajan katselmus ja pelikytkentä odottavat edelleen todentamista; Codex ei mergeä mainiin tai julkaise.
+
+## ERÄ 1 / erä 03: osatoimitus 24/25, Tanger–Whitehorse
+
+24 paikkaa on toimitettu ja julkisella tavuntarkalla R2-luennalla varmennettu. Manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-03-osatoimitus-20261006.json` säilyttää alkuperäisen 25 paikan listan, toimittaa 24 kuvaa listajärjestyksessä ja merkitsee Sansibarin (#56) puuttuvaksi. `batchComplete=false`: tätä ei pidä kuitata kokonaiseksi 25 paikan eräksi.
+
+Esikatselu: https://media.matkakirja.app/julisteet/herokoe/20261006/era03-yksi-kuva-osatoimitus-esikatselu.jpg
+
+Tanger, Marrakech ja Addis Abeba ovat edelleen katselmuskolmikko: katso nämä ennen erän pelikytkentää. Kaikki 24 kuvaa on tarkistettu myös pääsessiossa. Koko, sRGB, opaakkius, MIME/CORS ja tiedostotiivisteet on varmennettu, ja valokuvaviitteiden aikaisempi projektivarmennus erotetaan tuoreesta API-tarkistuksesta. Hylättyjen kuvien originaalit säilyvät.
+
+Sansibar: House of Wondersin ennen sortumista esittävä viite hylättiin. Darajanin torin vaihtoehdossa oli yksi katunäkymä ja riippumaton hedelmälähikuva; jälkimmäinen ei varmista ulkonäkymän rakennusgeometriaa. Ei kuvaa arvatuista rakennuksista. Tarvitaan toinen kelvollinen nykyinen ulkonäkymä samasta torikohteesta tai kahden kuvaajan varmennettu toinen aihe. Tiedot `kaupungit/sansibar/este.json` ja `viitteet/darajani-alternative-review.json`.
+
+124 kohteen kuva on nyt varmennettu R2:ssa tunnetusta 318 kohteen tilauksesta: 88 alkuperäistä paikkaa, 29 lisäkaupunkia ja 7 linssikuvaa. Angola (#88) käyttää tavuntarkasti jo hyväksyttyä Luandan São Miguel -kuvaa; alias on kirjattu ja uusia generointikutsuja ei tehty. Näitä ei väitetä kahdeksi erilliseksi kuva-aiheeksi.
+
+Yksi sovittu kevyt Wikimedia-kokeilu 21:25:42 UTC sai jälleen 429-vastauksen. Uudet haut ovat yhteisesti tauolla 22:25:42 UTC asti. Jo varmennettujen lähteiden tuotanto ja valmiiden toimitus jatkuvat. Viitepaketit Sisältökirjurilta tai yhteinen hakuvuorojen koordinointi auttaisivat jatkoa; ei reitin tai tunnisteen kiertoa.
+
+Fablen vastaanottokuittaus, katselmus ja pelikytkentä ovat edelleen erillisiä, todentamista odottavia vaiheita. Codex ei mergeä mainiin, nosta versiota tai julkaise.
