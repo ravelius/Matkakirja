@@ -6,7 +6,21 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 6.10. klo 13.4x (uusin)
+## TILA 6.10. klo 21.0x (uusin)
+
+- Juna 153 (Natiivisepälle, Päätoimittaja kuittasi): natiivi-ui/opas-valmis-153 68e50ae8 = ylarivi-153 b0db26db (ylärivi
+  c5c1a24e, krediitit omina kopioina fc535e4a + testi `ui opasvalikko krediittivertailu`, ISS-jalka v3e d68a6b7f) + elävä opas
+  pois keskeneräisistä. Todisteet lokit/natiivi-ui-1035/: krediitit-153/ (ennen 2 välähdystä, jälkeen 0, vertailu OK 50/50),
+  aloituslogo-153/ (päivityspolku 150 → 152 → 153-koe d8747f20 + ABAB: musta ruutu ei eroa), ylarivi-153/, ohjaamo-jalka/.
+- Juna 154: natiivi-ui/ylarivi-154 cd09c700 (wt/proto-natiivi-ui-taulu148) = nappirivi väkäsen alle + 56 pt kuvanappi
+  (98d13652), linssikatalogin kuvat valikkoon ee1764ce (10 kpl; puuttuvat 7 Codexille, linssilista-20261006.md), rauhallinen
+  ylärivi 28df183e + still-korjaukset b7da30b7/cd09c700. Odottaa: KÄÄNNÖS NYT (~21.10) + 8 min still-vuoro skriptit/vuoro-154b.sh
+  <app> <tunniste> → stillit Päätoimittajalle ennen omistajaa.
+- LS1:ltä pyydetty: KaupunkiKuva.VuorokausiPaalla oletus true (automaattinen paikallisen ajan sävy, juna 154).
+- Skriptit: nappirivi.sh (<tapx> <tapy> [vaaka]; iPhone 200 545, iPad 570 78), krediitit-valahdys2.sh, paivitys-polku.sh,
+  kylma-abab.sh, rapsahdys.py, vuoro-153b.sh.
+
+## TILA 6.10. klo 13.4x
 
 - Juna 148b (8a01ead5) yhteinen äänellinen video valmis: lokit/natiivi-ui-1035/juna148-yhteinen/juna148-yhteinen.mp4 + LUE.md
   (ääni +1,915 s Cupolan huminasta; napautukset simkosketuksella, MCP-tap ei toiminut: machPortNotConnected).
