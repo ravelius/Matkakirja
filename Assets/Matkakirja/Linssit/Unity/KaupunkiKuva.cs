@@ -10,7 +10,15 @@
 //  - URP Volume: oma globaali profiili (Neutral-tonemappaus kuten linnassa, hillitty bloom), ei SSAO:ta (URP:ssa renderer-
 //    ominaisuus, maksaa iPadilla), ei tilt-shiftiä. Kameran jälkikäsittely päälle näkymän ajaksi.
 // Googlen kuvasisältöä ei muuteta (vain suodatus, näytteistys ja sumu). A/B: Documents/kaupunki-kuva-pois.txt (tai Paalla = false) → alkuperäinen.
+//
+// VUOROKAUDENAIKA JA TAIVAS (omistaja 6.10. 14.4x, Päätoimittaja: a = utu + gradienttitaivas, b = vuorokaudenajan värimaailma,
+// junaan 150; Linssiseppä tekee, Siirtoseppä katselmoi): kohteen paikallinen aurinkoaika (Ydin Vuorokausi) → URP WhiteBalance +
+// ColorAdjustments (valotus, suodin, kontrasti, saturaatio; ei tonemappausta: Neutral latisti kuvan), horisontin utu (vain
+// kaukana: sumu alkaa 15 × kameran korkeus / 3 km) ja taivaskupoli liukuvärinä (DioraamaTaivas-varjostin, horisontti = udun
+// väri, aamulla ja illalla auringon puolella kajo). Bloom vain jos Hehku > 0 (iPad-muistimittaus ensin). Viritys:
+// "vuorokausi 0|1 tunti 7.5 kupoli 0|1" asetustiedostossa (tunti = paikallinen aurinkotunti, oletus nykyhetki).
 using CesiumForUnity;
+using Matkakirja.Linssit.Kierros;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -30,8 +38,11 @@ namespace Matkakirja.Natiivi
         public static float AlkuKerroin = 15f, LoppuKerroin = 80f, AlkuMinM = 3000f, LoppuMinM = 15000f;
         // JUNAN OLETUS (Päätoimittajan sääntö 5.10. 19.1x): vain MSAA + aniso, kunnes kuvapari näyttää sumun ja Volumen
         // selvästi paremmiksi; viritys asetustiedostolla ("sumu 1 volume 1").
-        public static bool Sumu = false, Savytys = true, Volyymi = false;
-        public static float Kontrasti = 12f, Saturaatio = 10f, Hehku = 0.2f;
+        // JUNA 150 (ehdotus, kuvapari ennen/jälkeen Päätoimittajalle): sumu ja Volume päälle vuorokaudenajan sävyllä, ei tonemappausta.
+        public static bool Sumu = true, Savytys = false, Volyymi = true, VuorokausiPaalla = true, Kupoli = true;
+        public static float Kontrasti = 12f, Saturaatio = 10f, Hehku = 0f, Tunti = -1f;
+        internal static ColorAdjustments varit;
+        internal static WhiteBalance valko;
 
         static KaupunkiKuvaAjo ajo;
         static GameObject volyymiGo;
@@ -82,8 +93,9 @@ namespace Matkakirja.Natiivi
             if (!tallennettu) return;
             tallennettu = false;
             GoogleSse = 16f; MaastoSse = 10f; RakennusSse = 16f; Msaa = 4; // asetustiedosto luetaan uudelleen seuraavassa avauksessa
-            AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = false; Savytys = true; Volyymi = false;
-            Kontrasti = 12f; Saturaatio = 10f; Hehku = 0.2f;
+            AlkuKerroin = 15f; LoppuKerroin = 80f; AlkuMinM = 3000f; LoppuMinM = 15000f; Sumu = true; Savytys = false; Volyymi = true;
+            Kontrasti = 12f; Saturaatio = 10f; Hehku = 0f; VuorokausiPaalla = true; Kupoli = true; Tunti = -1f;
+            varit = null; valko = null;
             if (ajo != null) { ajo.Lopeta(); Object.Destroy(ajo.gameObject); ajo = null; }
             QualitySettings.anisotropicFiltering = vanhaAniso;
             Texture.SetGlobalAnisotropicFilteringLimits(-1, -1);
@@ -127,6 +139,9 @@ namespace Matkakirja.Natiivi
                         case "kontrasti": Kontrasti = v; break;
                         case "saturaatio": Saturaatio = v; break;
                         case "hehku": Hehku = v; break;
+                        case "vuorokausi": VuorokausiPaalla = v != 0; break;
+                        case "tunti": Tunti = v; break;
+                        case "kupoli": Kupoli = v != 0; break;
                     }
                 }
             }
@@ -148,13 +163,21 @@ namespace Matkakirja.Natiivi
             profiili.name = "KaupunkiKuvaProfiili";
             var savy = profiili.Add<Tonemapping>(true);
             savy.mode.Override(Savytys ? TonemappingMode.Neutral : TonemappingMode.None); // Neutral kuten linnassa (Filmipino.asset)
-            var bloom = profiili.Add<Bloom>(true);
-            bloom.threshold.Override(1.1f);
-            bloom.intensity.Override(Hehku);
-            bloom.scatter.Override(0.6f);
-            var varit = profiili.Add<ColorAdjustments>(true);
+            if (Hehku > 0f)   // bloom maksaa iPadilla koko ruudun passeja: vain asetuksella
+            {
+                var bloom = profiili.Add<Bloom>(true);
+                bloom.threshold.Override(1.1f);
+                bloom.intensity.Override(Hehku);
+                bloom.scatter.Override(0.6f);
+            }
+            varit = profiili.Add<ColorAdjustments>(true);
             varit.contrast.Override(Kontrasti);
             varit.saturation.Override(Saturaatio);
+            varit.postExposure.Override(0f);
+            varit.colorFilter.Override(Color.white);
+            valko = profiili.Add<WhiteBalance>(true);
+            valko.temperature.Override(0f);
+            valko.tint.Override(0f);
             v.profile = profiili;
         }
     }
@@ -164,32 +187,116 @@ namespace Matkakirja.Natiivi
     public sealed class KaupunkiKuvaAjo : MonoBehaviour
     {
         CesiumKaupunki kaupunki;
-        bool vanhaSumu; FogMode vanhaMoodi; Color vanhaVari; float vanhaAlku, vanhaLoppu;
+        bool vanhaSumu; FogMode vanhaMoodi; Color vanhaVari, vanhaTausta; float vanhaAlku, vanhaLoppu;
+        GameObject kupoli; Material kupoliMat; Mesh kupoliMesh;
+        float edellinenLoki = -999f;
+        static readonly int IdHorisontti = Shader.PropertyToID("_TaivasHorisontti"), IdLaki = Shader.PropertyToID("_TaivasLaki"),
+            IdKajo = Shader.PropertyToID("_TaivasKajo"), IdAurinko = Shader.PropertyToID("_TaivasAurinko"), IdParam = Shader.PropertyToID("_TaivasParam");
 
         public void Aloita(CesiumKaupunki k)
         {
             kaupunki = k;
             vanhaSumu = RenderSettings.fog; vanhaMoodi = RenderSettings.fogMode; vanhaVari = RenderSettings.fogColor;
             vanhaAlku = RenderSettings.fogStartDistance; vanhaLoppu = RenderSettings.fogEndDistance;
+            vanhaTausta = k.Kamera != null ? k.Kamera.backgroundColor : Color.black;
+            if (KaupunkiKuva.Kupoli) LuoKupoli();
         }
 
         public void Lopeta()
         {
             RenderSettings.fog = vanhaSumu; RenderSettings.fogMode = vanhaMoodi; RenderSettings.fogColor = vanhaVari;
             RenderSettings.fogStartDistance = vanhaAlku; RenderSettings.fogEndDistance = vanhaLoppu;
+            if (kaupunki?.Kamera != null) kaupunki.Kamera.backgroundColor = vanhaTausta;
+            if (kupoli != null) Destroy(kupoli);
+            if (kupoliMat != null) Destroy(kupoliMat);
+            if (kupoliMesh != null) Destroy(kupoliMesh);
+        }
+
+        /// <summary>Taivaskupoli (DioraamaTaivas-varjostin, Background-jono ilman syvyyskirjoitusta): piirtyy ensin, laatat sen päälle.
+        /// Kaupungin kerroksella 15, koska pääkamera piirtää kaupunkinäkymässä vain sen.</summary>
+        void LuoKupoli()
+        {
+            var varjostin = Shader.Find("Matkakirja/Linssit/DioraamaTaivas");
+            if (varjostin == null) { Debug.Log("MATKAKIRJA kaupunki: taivasvarjostin puuttuu, kupoli pois"); return; }
+            kupoliMat = new Material(varjostin) { name = "KaupunkiKuva:taivas" };
+            const int S = 32, K = 16;
+            var p = new System.Collections.Generic.List<Vector3>(); var t = new System.Collections.Generic.List<int>();
+            for (int k = 0; k <= K; k++)
+            {
+                float fi = Mathf.PI * k / K - Mathf.PI * 0.5f;
+                for (int s = 0; s <= S; s++)
+                {
+                    float th = 2f * Mathf.PI * s / S;
+                    p.Add(new Vector3(Mathf.Cos(fi) * Mathf.Sin(th), Mathf.Sin(fi), Mathf.Cos(fi) * Mathf.Cos(th)));
+                }
+            }
+            for (int k = 0; k < K; k++)
+                for (int s = 0; s < S; s++)
+                {
+                    int a = k * (S + 1) + s, b = a + S + 1;
+                    t.Add(a); t.Add(b); t.Add(a + 1); t.Add(a + 1); t.Add(b); t.Add(b + 1);
+                }
+            kupoliMesh = new Mesh { name = "KaupunkiKuva:kupoli" };
+            kupoliMesh.SetVertices(p); kupoliMesh.SetTriangles(t, 0);
+            kupoliMesh.bounds = new Bounds(Vector3.zero, Vector3.one * 1e6f);   // ei koskaan karsita
+            kupoli = new GameObject("KaupunkiKuva taivas") { layer = CesiumKaupunki.Kerros };
+            kupoli.AddComponent<MeshFilter>().sharedMesh = kupoliMesh;
+            var mr = kupoli.AddComponent<MeshRenderer>();
+            mr.sharedMaterial = kupoliMat;
+            mr.shadowCastingMode = ShadowCastingMode.Off; mr.receiveShadows = false;
         }
 
         void LateUpdate()
         {
             var kamera = kaupunki?.Kamera;
             if (kamera == null) return;
+            var georef0 = kaupunki.Georef;
+            // Vuorokaudenaika kohteen paikallisesta aurinkoajasta (tai asetuksen tunnista).
+            double lon = georef0 != null ? georef0.longitude : 0, lat = georef0 != null ? georef0.latitude : 0;
+            double tunti = KaupunkiKuva.Tunti >= 0 ? KaupunkiKuva.Tunti : KaupunkiValo.PaikallinenTunti(System.DateTime.UtcNow, lon);
+            var (aurinko, aamupaiva) = KaupunkiValo.Aurinko(System.DateTime.UtcNow, lat, lon);
+            // Oletus: auringon todellinen korkeus kohteessa; asetuksen tunti (A/B-kuvat) avainkuvista.
+            var savy = !KaupunkiKuva.VuorokausiPaalla ? KaupunkiValo.Paiva
+                : KaupunkiKuva.Tunti >= 0 ? KaupunkiValo.Tunnille(tunti) : KaupunkiValo.Korkeudelle(aurinko, aamupaiva);
+            Color V(double[] x) => new Color((float)x[0], (float)x[1], (float)x[2], 1f);
+            Color horisontti = V(savy.Horisontti);
+            kamera.backgroundColor = horisontti;
+            if (KaupunkiKuva.varit != null)
+            {
+                KaupunkiKuva.varit.postExposure.value = (float)savy.Valotus;
+                KaupunkiKuva.varit.colorFilter.value = V(savy.Suodin);
+                KaupunkiKuva.varit.contrast.value = KaupunkiKuva.VuorokausiPaalla ? (float)savy.Kontrasti : KaupunkiKuva.Kontrasti;
+                KaupunkiKuva.varit.saturation.value = KaupunkiKuva.VuorokausiPaalla ? (float)savy.Saturaatio : KaupunkiKuva.Saturaatio;
+            }
+            if (KaupunkiKuva.valko != null) { KaupunkiKuva.valko.temperature.value = (float)savy.Lampotila; KaupunkiKuva.valko.tint.value = (float)savy.Savytys; }
+            if (kupoli != null)
+            {
+                // Kupoli kameran ympärille lähi- ja kaukotason väliin (piirtyy ensimmäisenä ilman syvyyttä, joten koko ei näy).
+                float r = Mathf.Clamp(kamera.nearClipPlane * 50f, kamera.nearClipPlane * 2f, kamera.farClipPlane * 0.5f);
+                kupoli.transform.SetPositionAndRotation(kamera.transform.position, Quaternion.identity);
+                kupoli.transform.localScale = Vector3.one * r;
+                // Kajo aamulla ja illalla auringon puolella (atsimuutti 90° klo 6 → 270° klo 18; x = itä, z = pohjoinen).
+                float kajo = Mathf.Max(0f, 1f - Mathf.Abs((float)tunti - 6.5f) / 2f) + Mathf.Max(0f, 1f - Mathf.Abs((float)tunti - 19f) / 2f);
+                float az = (90f + ((float)tunti - 6f) * 15f) * Mathf.Deg2Rad;
+                Shader.SetGlobalColor(IdHorisontti, horisontti);
+                Shader.SetGlobalColor(IdLaki, V(savy.TaivasYla));
+                var kajoVari = Color.Lerp(horisontti, Color.white, 0.25f); kajoVari.a = Mathf.Clamp01(kajo) * 0.7f;
+                Shader.SetGlobalColor(IdKajo, kajoVari);
+                Shader.SetGlobalVector(IdAurinko, new Vector4(Mathf.Sin(az), 0.1f, Mathf.Cos(az), 0f));
+                Shader.SetGlobalVector(IdParam, Vector4.zero);
+            }
+            if (Time.realtimeSinceStartup - edellinenLoki > 30f)
+            {
+                edellinenLoki = Time.realtimeSinceStartup;
+                Debug.Log($"MATKAKIRJA kaupunki: vuorokausi {(KaupunkiKuva.VuorokausiPaalla ? "päällä" : "pois")} tunti {tunti:F1}{(KaupunkiKuva.Tunti >= 0 ? " (asetus)" : $", aurinko {aurinko:F0}°")}, valotus {savy.Valotus:F2} EV, lämpötila {savy.Lampotila:F0}, kupoli {(kupoli != null ? "päällä" : "pois")}");
+            }
+            RenderSettings.fogColor = horisontti;
             if (!KaupunkiKuva.Sumu) { RenderSettings.fog = false; return; }
             var georef = kaupunki.Georef;
             float mitta = georef != null ? georef.transform.lossyScale.x : 1f;
             float korkeusM = georef != null ? Mathf.Max(30f, (kamera.transform.position.y - georef.transform.position.y) / Mathf.Max(1e-6f, mitta)) : 300f;
             RenderSettings.fog = true;
             RenderSettings.fogMode = FogMode.Linear;
-            RenderSettings.fogColor = kamera.backgroundColor;
             RenderSettings.fogStartDistance = Mathf.Max(KaupunkiKuva.AlkuMinM, korkeusM * KaupunkiKuva.AlkuKerroin) * mitta;
             RenderSettings.fogEndDistance = Mathf.Max(KaupunkiKuva.LoppuMinM, korkeusM * KaupunkiKuva.LoppuKerroin) * mitta;
         }
