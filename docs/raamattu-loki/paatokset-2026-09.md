@@ -11082,3 +11082,79 @@ Omistaja 6.10.2026 klo 20.0x kysyi sivusta mcp-for-blender.com ("Onko tästä hy
 Omistaja 6.10.2026 klo 20.1x (chat) sanatarkasti: "Kannattaisiko kaupungin kohteiden määrää kuitenkin säätää kaupungin koon ja mielenkiintoisten kohteiden mukaisesti? Minusta vaihteluväli voisi olla kaikkea kuuden ja kahdenkymmenen välillä. Mitä olet mieltä? Sama liukuva määrä voisi koskea myös yhden kohteen. Kuvien lukumäärää, mikä voisi olla 1–5 kappaletta."
 
 Päätoimittaja: samaa mieltä. Kohteet 6–20: mukaan pelin omat nostot, UNESCO-kohteet ja kohteet, joilla Wikidatassa vähintään noin 15 kieliversiota, merkittävyysjärjestyksessä (esim. Pariisi, Rooma, Lontoo, Istanbul 20; keskikokoinen pääkaupunki 10–12; pieni kaupunki 6–8). Kuvat 1–5: suuret maamerkit 4–5 (eri kulmat, sisätila, yksityiskohta, ilta), tavalliset 2–3, pienet 1; heikoilla kuvilla ei täytetä. Liiku näyttää koko listan, kaupunkikierros 8–10 tärkeintä. Raamatun ELÄVÄ OPAS -kohta päivitetty; Sisältökirjuri ja Pelikoodari ohjeistettu.
+
+## OMISTAJA: CODEXILTA YKSI KUVA PAIKKAA KOHDEN, EI VUOROKAUSIVERSIOITA; KUVALISTA KAUPUNKI KERRALLAAN; COZY LADATTU (6.10.2026 klo 23.35)
+
+Omistaja 6.10.2026 klo 20.25 (chat) sanatarkasti: "Miksi Codexilta on tilattu aamupäivä- ja iltakuvat? Se on minusta liioittelua. Käytetään ennemmin resurssit siihen, että saadaan mielenkiintoisennäköisiä kuvia mahdollisimman monesta paikkaa, mutta ei tilata samoja kuvia eri vuorokauden aikoina." → Codex-tilaus muutettu (269382b2f): ERÄ 1 = 149 paikkaa × 1 kuva (paikalle edullisin hetki), ERÄ 1B = vaiheen 2 kaupungit (~150) × 1 kuva Sisältökirjurin listalta.
+
+20.31 Päätoimittaja: Pelikoodarin kuvalista v1 (PR #4074 luonnos, 624 kohdetta Q:lla, 3 242 kuvaa) jättäisi oppaan lähes kuvattomaksi (Pariisi 9/9 → 2, Tokio 12/12 → 1, Sydney 12/12 → 3) → käyttöönotto kaupunki kerrallaan: lukitun listan kaupunki käyttää vain listaa, muut nykyisellään kunnes lista yhdistetään; ajonaikainen haku pois kokonaan vaiheen 1 (266 kaupunkia) valmistuttua. Ensimmäinen julkaisu Sisältökirjurin ensimmäisen erän jälkeen.
+
+20.39 COZY Stylized Weather 3 ladattu (omistaja: "Se paketti olikin vahingossa jäänyt lataamatta"): ~/Library/Unity/Asset Store-5.x/Distant Lands/Shaders/COZY Stylized Weather 3.unitypackage, 381 Mt, sha256 c5252f40c54c7ad4… → LS1 kaupunkinäkymä (kuvanlaatujärjestys 2, 5, 4), Siirtoseppä linna; EULA vain proto-git, LAHTEET.md; iPad-muistimittaus ennen junaa.
+
+## OMISTAJA: NOSTON YLÄRIVI RAUHALLISEKSI — YKSI MUSTE, AUTO ILMAN KEHYSTÄ JA PISTETTÄ (juna 154) (6.10.2026 klo 23.35)
+
+Omistaja 6.10.2026 klo 20.40 (chat) sanatarkasti: "Minun silmiin tuo ylärivi on vielä liian levoton. Näyttää visuaalisesti eri kokoisille asiat keskenään." → Natiivi-UI junaan 154: kaikki kuvakkeet ja nuolet samaa viivasarjaa 22 pt / 1,75, AUTO ilman laatikkoa (teksti kuten NOSTOT, päällä kulta + piste), sama keskilinja, ryhmävälit; still Päätoimittajalle ennen omistajaa.
+
+Omistaja 6.10.2026 klo 20.41 (chat) sanatarkasti: "Vika on myös siinä, että osa elementeistä on mustalla ja osa toisella värillä. Ehkä tuosta autosta voisi ottaa tuon kehyksen pois. Voisi riittää, että siinä on pelkkä taustaväri. Ja sitten täytyy vähän noita pienempiä elementtejä vahvistaa ja ehkä jotenkin vielä muutenkin parantaa, mitä ehdottaisit." → NUI junaan 154: yksi musteväri kaikille, AUTO ilman kehystä (päällä vaalea kulta-tausta), ohuet ‹ › ≡ ▾ vahvemmiksi (viiva ~2–2,25), sulka ja kaiutin optisesti pinnin kokoisiksi, NOSTOT-harvennus pienemmäksi, osuma 44 pt.
+
+21.36 TF 153 testaajilla (sisäinen 21.35, ulkoinen 21.36; master 72788914). Omistaja sanatarkasti (nähtyään ylärivin k2-stillit): "Ota auto napista piste pois ja madalla vähän tausta väriä ja Keskitä se auto tekstin taakse" → NUI: piste pois, tausta ~26–28 pt keskitettynä tekstin taakse, sama sivuväli; 154 jos ehtii. NUI be5ac731 (= cd09c700, k2) kuitattu junaan 154 c37ec4a9:n tilalle.
+
+## JUNAT 153–154: VIE, BUILDIT JA TF; KUVALISTAN PILOTTI; SÄVYT JA PCM (6.10.2026 klo 23.35)
+
+20.48 Laitetestaaja TULOS 153 (b9f09bcd, app 7920e6a0) OK; junan avaus Natiivisepälle, muutosloki #4073 mainissa; TF 153 SHA:n jälkeen.
+
+20.49 BUILD 153 = master 72788914 (TF 1.1 (153), juna b9f09bcd, käännös 7920e6a0): jättilogo, opas-153 + 9b7fe531, NUI 68e50ae8. Juna 154 alkaa NUI ee1764ce:stä (linssivalikon 10 katalogikuvaa).
+
+20.57 Pelikoodari #4075 (korvaa #4074): kuvalista kaupunki kerrallaan; pilotti Pariisi 19, Praha 14, Wien 13 kohdetta, 98 kuvaa; vertailu _valmiit/opas-kuvat-vienti-20261006/VERTAILU-pilotti.png (jälkeen parempi) → Päätoimittaja: pilotti julki (vie-paketti.sh + #4075 Julkaisijalla), seuraavat erät samalla kaavalla, pistokoe per erä.
+
+20.59 LS1 153-lopullinen: tarkkuus 1,71 → 23 s, 1,3 → 34 s, 1,0 → 55 s (alaraja 1,3 pysyy); sävykolmikko kuitattu Automaattisen oletukseksi junaan 154 (NUI kytkee); kaksivaiheinen OK (karkea 16–18 s, tarkentuminen pehmeä); PCM-katkot = TTS-virta reaaliaikaa hitaampi (0,75–0,81 ×) → 0a4b9ebb mukautuva alkupuskuri ≤ 10 s junaan 154, odotus siltalauseella; Pelikoodari selvittää hitaan virran.
+
+22.11 Juna 154: Laitetestaajan TULOS OK (286e8f34, app 787db464), linssivalikon still kuitattu, muutosloki #4079 mainissa → JUNAN AVAUS NYT. EU-kuvaerä (51 kaupunkia, 652 kohdetta, 1 460 kuvaa, lisenssit 0 ongelmaa) kuitattu julkaisuun Forum Romanumin järjestyskorjauksella. Yövalot v1 hylätty (LS1 itse), v2 tulossa.
+
+22.32 TF 154 testaajilla (sisäinen 22.31, ulkoinen 22.32; master 8878ab70). Seuraavaksi koe 155 (LS2 + LS1 yövalot v4), Mac v1 ~23.05; EU-kuvaerän vienti + #4080.
+
+## OMISTAJA: DYNAAMINEN KAUPUNKIÄÄNIMAISEMA — PILOTTI PARIISI, VENETSIA, KÖÖPENHAMINA (6.10.2026 klo 23.35)
+
+Omistaja 6.10.2026 klo 21.1x (chat) sanatarkasti: "onko kukaan rakentanut aiemmin kaupunkeihin oikeita tai oikealta kuulostavia äänimaisemia? ja miten sellainen kannattaisi matkaoppaaseen rakentaa? ne nyt pelissä olevat valmiiksi nauhoitetut ovat kohtalaisen hyviä mutta haluaisin niistä vähän dynaamisempia, eli kun siirrytään paikasta toiseen kaupungin sisällä niin äänimaisema saisi vähän muuttua ja lisäksi kun kamera menee kovempaa niin saisi kuulua pehmeää tuulen suhinaa tai vastaavaa. miten tämän toteuttamista kannattaisi lähestyä ja onko jossain jo valmista esimerkkiä tai pluginia jota voisi käyttää? paras idea olisi minusta kartoittaa minkälaisia äänilähteitä missäkin kaupungissa on ja soittaa niitä dynaamisesti päällekkäin eri voimakkuuksilla. mitä ajattelet tästä?" → Päätoimittaja: kerrokset + OSM-painot (esikuvat MSFS, Cities: Skylines; Unityn oma mikseri, ei FMOD/Wwise), proseduraalinen tuuli nopeuden mukaan, korkeus/vuorokausi/sää, ducking puheen alla; pilotti Pariisi, Venetsia, Kööpenhamina.
+
+Omistaja 21.57 (chat): "Aloita pilotti" → Siirtoseppä mikseri (uudelleenkäytettävä linnassa), Pelikoodari äänikartta (OSM-ruudukko JSON ämpäriin) + äänikirjasto ~15 luokkaa Freesound CC0/CC BY (PCM-masterit, LAHTEET.md), LS1 kytkentä kameraan; ElevenLabs SFX vain luvalla; tallenne Päätoimittajalle ennen omistajaa.
+
+## OMISTAJA: NOSTON YLÄRIVI JA PINNATTU TILA — KATEGORIARIVI, KUVAKKEIDEN LINJAUS, PALKKI HAKUNAPIN VIEREEN, LUENTA JATKUU, KUVA 3 S (juna 155) (6.10.2026 klo 23.35)
+
+Omistaja 6.10.2026 klo 22.46 (chat + iPad-kuva TF 154, Segovian akvedukti sivupaneelissa) sanatarkasti: "Noston yläpalkki vielä sekaisin" (kategoriateksti TEKNIIKKA vie tilan, › AUTO-tekstin päällä) → NUI kiireellinen junaan 155: kategoria vain kuvakkeena, leveysbudjetti (min 8 pt, ei päällekkäisyyttä), stillit kaikista korttileveyksistä.
+
+Omistaja 6.10.2026 klo 22.50 (chat, kuva iPad pysty: "Pystymuodossa oikein") ja sanatarkasti: "Ehkä kategorian voisi siirtää omalle rivilleen otsikon läheisyyteen sen yläpuolelle ja nämä napit vähän ylemmäs" → NUI junaan 155: kategoria (kuvake + nimi, himmeä muste) omalle rivilleen otsikon yläpuolelle, ylärivi ilman kategoriaa ~8 pt vetokahvan alle, sama asettelu kaikissa leveyksissä; korvaa 716744c9:n.
+
+Omistaja 6.10.2026 klo 22.5x sanatarkasti: "Katso samalla vielä visuaalisesti kolme oikeimman puoleista kuvaketta. Ne näyttävät vieläkin olevan vähän eri korkeuksilla" → mitattu (pin 33 px ja 4 px ylempänä, ≡ 21 px, kaiutin 29 px @2x) → NUI: keskikohdat samalle viivalle, näkyvä korkeus ~28–29 px.
+
+Omistaja 6.10.2026 klo 22.52 (chat + iPad-kuva) sanatarkasti: "Pinnattu nosto saisi olla suurennuslasin kanssa samalla rivillä sen vasemmalla puolella" → NUI junaan 155: pinnattu palkki hakunapin riville, 8 pt sen vasemmalle, sama korkeus, joustava leveys ja katkaisu, sama Pulun chat-palkille.
+
+Omistaja 6.10.2026 klo 22.54 (chat) sanatarkasti: "tuo tilapalkki saisi näyttää koko noston pituutta ei kappaleen. Nyt jos klikkaan noston uudestaan auki , luenta alkaa virheellisesti alusta. Korjaa" → NUI junaan 155: VIKA pinnatun noston avaus aloittaa luennan alusta (Raamattu: jatkuu samasta kohdasta), toisto ensin; palkki näyttää koko noston etenemisen.
+
+Omistaja 6.10.2026 klo 22.56 (chat + iPad-kuva, palkki "Toledo" tummana) sanatarkasti: "Nyt se muuttui jostain syystä tummaksi. Saisi olla aina vaalea. Lisäksi otsikko pitää aina mahtua kokonaan palkkiin." → NUI junaan 155: pinnattu palkki aina paperiteemassa; otsikko aina kokonaan (levenee, kirjasin min ~85 %, sitten 2 riviä; ei kolmea pistettä).
+
+Omistaja 6.10.2026 klo 23.00 (chat) sanatarkasti: "Ja itseasiassa nosto saisi pysyä pienennettynä vaikka klikkaisin toista nostoa kartalla. Luenta vain siirtyisi siihen. Voisi tosin kokeilla että uuden noston alkaessa joko automaatisesti tai pelaajan valitsemana kartalta tulisi noston ensimmäinen kuva näkyviin kolmen sekunnin ajaksi sen etenemis janan alapuolelle kunnes kuva häipyisi." → NUI 155/156: pinnattu tila pysyy kartan nostovalinnassa ja AUTOssa, luenta siirtyy uuteen; ensimmäinen kuva 3 s etenemisjanan alla ja häipyy; napautus avaa kortin jatkokohdasta. Ei pidätä junaa 155.
+
+Omistaja 6.10.2026 klo 23.01 (chat): "Pidä nämä kaikki 155 junassa" → NUI:n koko noston/pinnatun tilan erä pakollisena junaan 155 (Natiiviseppä ja NUI tiedossa); muut osat eivät pidätä.
+
+## EUROOPAN KUVAERÄ JULKI OPPAASSA (6.10.2026 klo 23.35)
+
+23.13 Pelikoodari: EU-kuvaerä julki (kuvat-v2, #4080), tuotannossa tarkistettu (Rooma 19/19, Lontoo 19/19, Kööpenhamina 14/14, Helsinki 15/15; Forum Romanum rauniot ensin). Yövalojen tiet + /opas/aineistot PR #4081. NUI junan 155 erä 241fb080 (vika toistettu TF 154:llä: jatkopala korvasi pinnauksen → Puhe.LueJatkona; luenta oma ketju; etenemispalkki koko luennalle; pinnattu tila pysyy + kuva 3 s; palkki hakunapin rivillä, aina vaalea (.mk-nappi:active syy), koko otsikko; kategoriarivi; kuvakkeiden 2 pt virhe korjattu; leveysbudjetti).
+
+## OMISTAJA: OPPAAN TAPIT, SEURAAVA-NAPPI, PIDEMPI KERRONTA, ESILATAUS, KUVA LATAUKSEN AJAKSI, PEHMEÄMMÄT LENNOT JA LÄHIN REITTI (juna 156) (6.10.2026 klo 23.35)
+
+Omistaja 6.10.2026 klo 23.28 (chat) sanatarkasti: "pääsen vasta huomenna töihin kytkemäään wifin. matkaoppaassa kumpikin joystick saisi tulla ainakin ipadilla sisemmäksi ja ylemmäksi jotta peukaloilla olisi helpompi osua. kertoja saisi puhua hieman pidempään jokaisesta kohteesta. pelissä saisi olla myös seuraava nappi, jolla nykyisen kohteen voisi ohittaa. pystyykö cesium lataamaan laattoja etukäteen jos tiedetään mihin ollaan menossa? nyt laatat eivät ehdi latautua kuin vasta kertomuksen puolivälin jälkeen. voisi myös näyttää automaattisesti yhden kuvan 80% kokoisena täyskuvaan verrattuna sen aikaa että rakennukset ehtivät latautua taustalla. play/pause nappi sekä seuraava kohde (>) nappi saisivat olla oik puoleisen joystickin alapuolella." → juna 156: NUI tapit sisemmäs/ylemmäs iPadilla, Seuraava-nappi + play/pause oikean tapin alle; LS1 esilataus kerronnan aikana, kuva 80 % latauksen ajaksi (alle 90 % laattoja, max ~8 s), Seuraava-logiikka; Pelikoodari kerronta ~40 % pidemmäksi (vertailu ennen julkaisua). Yövalot 156 (iPad Wi-Fi huomenna).
+
+LS2: merisumu/olkapää 640eb7b4 kuitattu junaan 155 (pilvikansi saa muotoa, lumi/jää ei harmaannu); vauhtirajaus 5683ffaf pois (+5 s tarkentuu → suoratoiston normaali viive).
+
+Omistaja 6.10.2026 klo 23.30 (chat) sanatarkasti: "oikean yläkulman nappiin on vaikea osua tai paremminkin se ottaa huonosti napautuksen vastaan." → NUI junaan 156: toisto oikealla napautuksella, osuma-ala/syötekerros/vetokynnys, 20 napautuksen mittaus ennen/jälkeen.
+
+Omistaja 6.10.2026 klo 23.32 (chat) sanatarkasti: "kaupunkiesitelyssä kamera käy liikkuu välillä turhan nopeasti ja tekee ehkä turhan ylhäällä käyviä liikkeitä. reitti pitäisi suunnitella siten että seuraavat kohteet olisivat aina lähimpiä kohteita, jotta ei tule ylimääräistä seilaamista. ja kamera-ajot kohteiden välillä pitää olla pehmeämpiä. hienoa jos voi esiladata. siihen tarvitsee varmasti sitä muistia enemmän käyttöön" → LS1 junaan 156: kaari suhteessa matkaan (lähellä ~0,3 × matka, min ~150 m), lähilento 5–7 s ease-in-out, loiva lasku (kumoaa 'korkea kaari ripeästi', RAAMATTU PÄIVITETTÄVÄ ELÄVÄ OPAS -kohtaan), esilataus saa käyttää enemmän muistia mitattuna; Pelikoodari kierros lyhimmäksi reitiksi (lähin + 2-opt).
+
+## OMISTAJA: GIZAN PYRAMIDIT OMINA MALLEINA JA LINSSIT EUROOPAN ULKOPUOLELLE (6.10.2026 klo 23.35)
+
+Omistaja samaan aikaan sanatarkasti: "pyramiidit ja kohteet siinä ympärillä näkyvät huonosti 3d:nä, voiko tuollaisiin kohteisiin tehdä itse paremmat 3d rakenteet samalle cesium pallolle? vai pitäisikö google ottaa tällaisissa kohteissa kokonaan pois ja rakentaa avoimen datan päälle ne omat kohteen blenderillä jos google kieltää niiden käytön?" → Päätoimittajan vastaus: omat mallit Cesium-palloon georeferoituna (CesiumGlobeAnchor) + Googlen laattojen piilotus kohteen kohdalta leikkausalueella, jos Googlen ehdot sallivat; kohdekohtainen paikkaus, ei Googlea pois kokonaan; pilotti Giza (VAIN EUROOPPA -poikkeus omistajalta).
+
+Omistaja 6.10.2026 klo 23.34 (chat) sanatarkasti: "joo linssejä voi tehdä euroopan ulkopuolelta myös." → Giza-pilotti (Linnanrakentaja: kolme pyramidia + Sfinksi Blenderissä avoimesta datasta, LOD, glTF; LS1: Googlen ehdot clippingistä ensin, sitten sijoitus CesiumGlobeAnchor + piilotusalue). RAAMATTU: VAIN EUROOPPA -tarkennus — linssien sisältö, myös 3D-mallit linsseissä (kuten elävän oppaan kohteet), saa olla Euroopan ulkopuolelta (omistaja 23.5x).
+
+Raamattu päivitetty: VAIN EUROOPPA -kohdan linssipoikkeus kattaa myös linssien 3D-mallit ja kohdekohtaisen työn; ELÄVÄ OPAS -kohdan lennot pehmeiksi ja kierros lyhimmäksi reitiksi.
