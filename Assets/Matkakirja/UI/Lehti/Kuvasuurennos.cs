@@ -63,6 +63,9 @@ namespace Matkakirja.Natiivi
             set { lahdeKokoruudussa = value; kerros.EnableInClassList("mk-suurennos--lahde-nakyy", value); }
         }
         bool lahdeKokoruudussa;
+
+        /// <summary>Kokoruudun kuvan osuus ruudusta (1 = reunasta reunaan; oppaan latauskuva 0,8, juna 156).</summary>
+        public float Osuus { get; set; } = 1f;
         const float ZoomMax = 4f, AlasSulku = 90f, Liike = 8f;
         readonly KuvaSelaus selaus;
         readonly Dictionary<int, Vector2> osoittimet = new Dictionary<int, Vector2>();
@@ -170,7 +173,7 @@ namespace Matkakirja.Natiivi
             if (kokoruutu && ladattu != null && ladattu.height > 0)
             {
                 // Löydös 150: contain koko ruutuun ilman reunoja ja venymärajaa.
-                float kl = kerros.layout.width, kk = kerros.layout.height;
+                float kl = kerros.layout.width * Osuus, kk = kerros.layout.height * Osuus;
                 if (float.IsNaN(kl) || float.IsNaN(kk) || kl <= 0f || kk <= 0f) return;
                 float s = (float)ladattu.width / ladattu.height;
                 float lw = kl, lh = lw / s;
