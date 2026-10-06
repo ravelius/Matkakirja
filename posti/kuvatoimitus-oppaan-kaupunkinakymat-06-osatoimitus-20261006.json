@@ -6,7 +6,7 @@
   "pilot": false,
   "instructionsVersion": 2,
   "imagesPerPlace": 1,
-  "createdAt": "2026-10-06T23:06:09.410744+00:00",
+  "createdAt": "2026-10-06T23:20:04.766267+00:00",
   "cityIds": [
     "kalgoorlie",
     "birdsville",
@@ -27,10 +27,13 @@
     "bali",
     "milfordsound",
     "galapagos",
-    "kongo"
+    "kongo",
+    "machupicchu",
+    "madagaskar",
+    "sahara"
   ],
-  "cityCount": 20,
-  "imageCount": 20,
+  "cityCount": 23,
+  "imageCount": 23,
   "requestedCityIds": [
     "kalgoorlie",
     "birdsville",
@@ -65,27 +68,6 @@
       "orderIndex": 144,
       "state": "source-or-current-condition-gate",
       "evidence": "kaupungit/ouropreto/este.json",
-      "imageDelivered": false
-    },
-    {
-      "cityId": "machupicchu",
-      "orderIndex": 147,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "madagaskar",
-      "orderIndex": 148,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "sahara",
-      "orderIndex": 149,
-      "state": "production-or-review-pending",
-      "evidence": null,
       "imageDelivered": false
     }
   ],
@@ -2146,14 +2128,303 @@
       "editorReview": "pending",
       "instructionsVersion": 2,
       "orderIndex": 146
+    },
+    {
+      "cityId": "machupicchu",
+      "q": null,
+      "lat": -13.163,
+      "lon": -72.546,
+      "orderGroup": "1",
+      "file": "hero-machupicchu.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/machupicchu/hero-machupicchu.png",
+      "r2Key": "julisteet/herokoe/hero-machupicchu.png",
+      "sha256": "a16aca59add971ae87865a893117e6efcbc9752ddcab273226e16256d4015ec9",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural hero. Completely NEW CURRENT archaeological remains of MACHU PICCHU Peru,1536x1024opaque landscape3:2PNG.\nThree independent genuine photos by DiegoDelso, Draceane(2023) and ChristophSträssler anchor the SAME conserved site from different angles: exact ashlar/rubble stone walls with trapezoidal openings and roofless triangular gables, green stepped retaining terraces and central plaza, true steep forested Andean ridges and HuaynaPicchu placement. Preserve their actual plan and relative heights; do not combine another archaeological city's temples or invent completed Inca palaces.\nCamera: actual modest upper quarry/terrace-path view similar to the2023photo, gently15degrees downward, natural45mmperspective. Ruined stone buildings, central lawn and cliff-edge terraces large/dominant, HuaynaPicchu and true adjoining ridge profiles behind with enough sky. Use the wider Intipunku view only to check site position, not its very distant camera. A little actual foreground granite outcrop and thin protective route ropes/wood posts as in2023; retain real safety structures in correct positions.\nLight: clear early morning after low clouds part, warm touches on weathered stone, green terraces, cool forest shadows and restrained low valley mist. Natural photographic detail and scale, no painterly miniature, manicured fantasy symmetry or excessive HDR.\nCurrent conserved ruins, not restored1500s city: roofless buildings remain roofless, only existing small conservation thatch shelters if genuinely in view. No new visitorfacilities/masterplan, battle/historic humans, identifiable tourists, readable signs/digits, text, logos, watermark, frame or border. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Machu Picchu, Perú, 2015-07-30, DD 47.JPG",
+          "tekija": "Diego Delso",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Machu_Picchu%2C_Per%C3%BA%2C_2015-07-30%2C_DD_47.JPG"
+        },
+        {
+          "nimi": "File:Machu Picchu, 2023 (035).jpg",
+          "tekija": "Draceane",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Machu_Picchu%2C_2023_(035).jpg"
+        },
+        {
+          "nimi": "File:Machu Picchu seen from Intipunku (the Gate of the Sun), Peru.jpg",
+          "tekija": "Christoph Strässler",
+          "lisenssi": "CC BY-SA 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Machu_Picchu_seen_from_Intipunku_(the_Gate_of_the_Sun)%2C_Peru.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/machupicchu/originals/hero-machupicchu-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Machu Picchun säilyneet kivirakennukset ja rinteeseen porrastetut terassit Perussa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "Kolme samanMachuPicchu conservedruinsn eri kuvaajan1280pxphotoa katsottu, myösDraceane2023. Todellinenintihuatana/centralplaza/greenterraces/rooflessstonegables/Huayna- jaadjoiningridgegeometria; valittuactualupperquarry/terracecam. Woodposts/protectiveropes jaexistingsmallthatchshelter säilyvät, ei completed1500spalaces tai modernfuturevisitorfacilities. PeruCulture/SERNANP2026conservation jaWaynapicchu1.7.2026reopenvarmennettu. Natiivi+480QA, ei tunnistettavia ihmisiä tai tekstiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 3,
+          "differentPhotographers": 3,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "a16aca59add971ae87865a893117e6efcbc9752ddcab273226e16256d4015ec9"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Machu Picchu, Perú, 2015-07-30, DD 47.JPG",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/machupicchu/viitteet/prior-823f3ded26-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/machupicchu/viitteet/prior-823f3ded26.receipt.json",
+            "referenceRole": "primary_landmark_or_terrain_anchor"
+          },
+          {
+            "reference": "File:Machu Picchu, 2023 (035).jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/machupicchu/viitteet/prior-32cd342284-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/machupicchu/viitteet/prior-32cd342284.receipt.json",
+            "referenceRole": "independent_same_subject_or_regional_context_pending_visual_review"
+          },
+          {
+            "reference": "File:Machu Picchu seen from Intipunku (the Gate of the Sun), Peru.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/machupicchu/viitteet/prior-e52be1a35e-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/machupicchu/viitteet/prior-e52be1a35e.receipt.json",
+            "referenceRole": "independent_same_subject_or_regional_context_pending_visual_review"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-machupicchu.png",
+      "bytes": 3265488,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 147
+    },
+    {
+      "cityId": "madagaskar",
+      "q": null,
+      "lat": -19.426,
+      "lon": 48.902,
+      "orderGroup": "1",
+      "file": "hero-madagaskar.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/madagaskar/hero-madagaskar.png",
+      "r2Key": "julisteet/herokoe/hero-madagaskar.png",
+      "sha256": "0662d31c561066e930874828cd5692ded0b7f091b76723a2065e348c6bf9db33",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural regional hero. Completely NEW real TSINGY DE BEMARAHA limestone landscape in WESTERN MADAGASCAR.1536x1024opaque3:2PNG.\nASMaloney's photograph is the EXACT terrain anchor: dense grey limestone blades and needle pinnacles, the real tall slanted blade mass on LEFT, deep irregular dark clefts through the centre, jagged rear wall toward RIGHT, strongly fluted weathered stone and a restrained dry-deciduous forest horizon. Preserve actual relative blade heights, ridge/gorge layout and geological grain; not a fantasy crystal field.\nCactus0625's independently photographed BaobabAvenue is ONLY regional dry-forest/light/climate support from the same WESTERN MADAGASCAR dry-forest area. Do NOT transplant its baobab trees, road, soil plain, fence, coastline or any other landform into Bemaraha. Keep only the native sparse vegetation genuinely shown between/beyond primary limestone.\nCamera: actual modest natural limestone lookout at about mid-pinnacle height, gently15degrees down across near crevices, natural40mmperspective. Razor-like pinnacles dominant/large over most frame, narrow forest horizon and soft sky. No high aerial, giant mountain chain, cave reconstruction, extra bridge or new tourist facility.\nLight: clear soft late-morning sunlight after clouds part, photographic grey stone with gentle warm edge highlights, deep cool cleft shadows, muted green canopy beyond and small pale clouds. Fine limestone texture, not polished marble, metallic needles, miniature or HDR fantasy.\nCurrent protected natural geological site. No identifiable people, animals added from zoo photos, readable words/digits, signs, text, logos, watermark or border. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Tsingy de Bemaraha Strict Nature Reserve.jpg",
+          "tekija": "ASMaloney",
+          "lisenssi": "PD",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Tsingy_de_Bemaraha_Strict_Nature_Reserve.jpg"
+        },
+        {
+          "nimi": "File:Allée des baobabs Morondava Madagascar.jpg",
+          "tekija": "Cactus0625",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:All%C3%A9e_des_baobabs_Morondava_Madagascar.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/madagaskar/originals/hero-madagaskar-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Bemarahan tsingy-kalkkikivipiikit Madagaskarin läntisellä kuivametsäalueella.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "ASMaloneynexactBemaraha greyLimestoneblades/clefts/ridgemassing/flutedgeologyanker säilyy. Cactus0625Morondava onindependent sameWESTERNMadagascardryforest-region light/climateenvironmentonly, eiBaobabtree/road/plain/fence/terrain-siirtoa karstiin.2eri kuvaajaa1280px/photo/sourcecacheketju katsottu. UNESCOcurrentAndrefanaDryForests/Tsingycomponent/greykarstbristles+dryforest ecoidentityvarmennettu. Loivamidpinnaclelookout,photographicgreytexture,notglowingcrystals/newbridge, natiivi+480QA, ei ihmisiä/tekstiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "0662d31c561066e930874828cd5692ded0b7f091b76723a2065e348c6bf9db33"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Tsingy de Bemaraha Strict Nature Reserve.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/madagaskar/viitteet/prior-442770bb41-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/madagaskar/viitteet/prior-442770bb41.receipt.json",
+            "referenceRole": "exact_Bemaraha_limestone_blades_clefts_and_ridge_terrain_anchor"
+          },
+          {
+            "reference": "File:Allée des baobabs Morondava Madagascar.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/madagaskar/viitteet/prior-a2da6db706-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/madagaskar/viitteet/prior-a2da6db706.receipt.json",
+            "referenceRole": "independent_Western_Madagascar_dry_forest_region_light_climate_only_no_baobabs_road_or_terrain_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-madagaskar.png",
+      "bytes": 3506126,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 148
+    },
+    {
+      "cityId": "sahara",
+      "q": null,
+      "lat": 26.561,
+      "lon": 8.501,
+      "orderGroup": "1",
+      "file": "hero-sahara.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sahara/hero-sahara.png",
+      "r2Key": "julisteet/herokoe/hero-sahara.png",
+      "sha256": "7e184c6bcec953a9e50f74db95530a7fa81761b8aeed37659f52bfa9c6085d23",
+      "width": 1536,
+      "height": 1024,
+      "generationPrompt": "Photorealistic-natural regional hero for SAHARA. Completely NEW authentic ERG CHEBBI dunes near Merzouga, MOROCCO.1536x1024opaque landscape3:2PNG.\nThomasFuhrmann's ground photograph is the EXACT local dune-view anchor: nearest low rounded dune crest and delicate wind-rippled orange sand across foreground, actual successive low sinuous crescent dunes in middle distance, restrained dark nearly flat hamada horizon. Preserve its real scale, ridge relationships and visible desert extent, not giant fantasy sand mountains.\nThe independent NASA ISS CREW photograph verifies the SAME ErgChebbi dune field's genuine shape, dense wind-formed dune structures and finite boundary against surrounding arid plain. It is a natural astronaut photograph, not a false-colour map. Use as geography/environment support ONLY; never import its orbital camera, roads, settlements, wadis or field boundary into this close ground view.\nCamera: actual modest dune-crest terrain viewpoint, gently15degrees down over near ripple texture, natural50mmperspective. Foreground crest/ripples dominant but distant dunes remain clear, level natural horizon and comfortable sky. No high aerial, dunes stretched endlessly to all horizons, transplanted Acacus rock arches, snow/alpine mountains, palm oasis or fake ruins.\nLight: a few minutes before sunset, warm low side-light defining ripples and smooth shadow curves, delicate cool shaded sand, pale blue and warm peach sky. Clear modern photographic texture and restrained saturation, no decorative neon-orange painting, HDR fantasy or lens-flare graphic.\nCurrent natural shifting dunes; not a geological survey of a particular day. No copied camels/tourist groups, identifiable humans, readable words/digits, signs, brands, logos, watermark, frame or overlay. Entire image opaque.",
+      "viitteet": [
+        {
+          "nimi": "File:Erg Chebbi sunset.jpg",
+          "tekija": "Thomas Fuhrmann",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Erg_Chebbi_sunset.jpg"
+        },
+        {
+          "nimi": "File:Erg Chebbi dunes Morocco iss070e105480 lrg.jpg",
+          "tekija": "NASA (ISS-miehistön valokuva)",
+          "lisenssi": "PD",
+          "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Erg_Chebbi_dunes_Morocco_iss070e105480_lrg.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sahara/originals/hero-sahara-original.png",
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "caption": "Erg Chebbin tuulen muovaamat dyyniharjanteet Marokon Saharassa.",
+      "QA": {
+        "result": "production_review_pass",
+        "viewedAtNativeSize": true,
+        "previewWidths": [
+          384,
+          480
+        ],
+        "subjectIdentification": "Tiedostokohtainen hyväksytty aiempi projektirekordi, alkuperäismoduulin SHA ja tietuekatkelma, nimetty oma valokuvakopio HTTP200/MIME/byte- ja pixelSHA sekä nyt katsottu sisältö; freshAPI=false, ei uutta Commons-kategoriahakua.",
+        "visualReview": "ThomasFuhrmannexactErgChebbi-grounddunecrest/ripple/horizonanker säilyy. NASAISS-miehistöon independent naturalastronautphoto SAMANErgChebbifieldshape/geographicextent/lightenvironment-tuki, ei orbitalcamera/roads/settlements/wadigeometrian siirtoa.2kuvaajaa1280px/sourcecacheketju katsottu, ei falsecolormap. ONMTcurrentMerzouga/ErgChebbiSaharaarea-varmennus. Todellinenloiva dunecrestterrainview, ei endlesshugefakedunes/Acacusarchoasis/palmlake/historicalruin. Natiivi+480QA,ei ihmisiä/tekstiä.",
+        "referenceGate": {
+          "certainty": "accepted_prior_project_record",
+          "category": null,
+          "count": 2,
+          "differentPhotographers": 2,
+          "freshAPI": false
+        },
+        "technical": {
+          "format": "PNG",
+          "size": [
+            1536,
+            1024
+          ],
+          "mode": "RGB",
+          "opaque": true,
+          "iccProfile": "sRGB built-in",
+          "sourceSize": [
+            1536,
+            1024
+          ],
+          "pixelsUnchangedInTechnicalExport": true,
+          "sha256": "7e184c6bcec953a9e50f74db95530a7fa81761b8aeed37659f52bfa9c6085d23"
+        },
+        "approvalStatus": "awaiting_parent_review_and_chief_editor_approval",
+        "sourceProvenance": [
+          {
+            "reference": "File:Erg Chebbi sunset.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sahara/viitteet/prior-9306836395-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sahara/viitteet/prior-9306836395.receipt.json",
+            "referenceRole": "exact_Erg_Chebbi_ground_dune_ripple_crest_horizon_anchor"
+          },
+          {
+            "reference": "File:Erg Chebbi dunes Morocco iss070e105480 lrg.jpg",
+            "snapshotPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sahara/viitteet/prior-801efd9509-record.json",
+            "cacheReceiptPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/sahara/viitteet/prior-801efd9509.receipt.json",
+            "referenceRole": "independent_same_Erg_Chebbi_ISS_crew_natural_photo_geographic_environment_support_no_orbital_layout_transfer"
+          }
+        ]
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-sahara.png",
+      "bytes": 2380554,
+      "http": 200,
+      "mime": "image/png",
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 149
     }
   ],
   "preview": {
-    "file": "kuvatoimitus-oppaan-kaupunkinakymat-06-osatoimitus-20261006-esikatselu-b1a71b025eeb.jpg",
-    "r2Key": "julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-06-osatoimitus-20261006-esikatselu-b1a71b025eeb.jpg",
-    "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-06-osatoimitus-20261006-esikatselu-b1a71b025eeb.jpg",
-    "sha256": "4beabe62c84151e1225cc7dd70f79153488096b135fedae9a3eb9846d2eadb2e",
-    "bytes": 1091421,
+    "file": "kuvatoimitus-oppaan-kaupunkinakymat-06-osatoimitus-20261006-esikatselu-b7e6a1231d9d.jpg",
+    "r2Key": "julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-06-osatoimitus-20261006-esikatselu-b7e6a1231d9d.jpg",
+    "url": "https://media.matkakirja.app/julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-06-osatoimitus-20261006-esikatselu-b7e6a1231d9d.jpg",
+    "sha256": "42245692c94019f047cd30d783290c32aa90712579b52775e628cb6fe272ac43",
+    "bytes": 1260427,
     "http": 200,
     "mime": "image/jpeg",
     "cors": "https://matkakirja.app",

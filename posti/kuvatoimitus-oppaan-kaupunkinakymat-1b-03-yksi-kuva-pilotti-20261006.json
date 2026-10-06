@@ -3,10 +3,10 @@
   "sourceCommit": "93aa2ab1e1151ab29d744d508bf8260fd21e9cab",
   "batch": 3,
   "orderGroup": "1b",
-  "pilot": false,
+  "pilot": true,
   "instructionsVersion": 2,
   "imagesPerPlace": 1,
-  "createdAt": "2026-10-06T23:21:54.351735+00:00",
+  "createdAt": "2026-10-06T23:21:54.306696+00:00",
   "cityIds": [
     "biskek",
     "bandarseribegawan",
@@ -17,188 +17,11 @@
   "requestedCityIds": [
     "biskek",
     "bandarseribegawan",
-    "male",
-    "niamey",
-    "dusanbe",
-    "asmara",
-    "djibouti",
-    "bissau",
-    "majuro",
-    "georgetown",
-    "vientiane",
-    "monrovia",
-    "thimphu",
-    "pjongjang",
-    "yaounde",
-    "portauprince",
-    "yaren",
-    "apia",
-    "banjul",
-    "ouagadougou",
-    "abuja",
-    "praia",
-    "yamoussoukro",
-    "kingston",
-    "libreville"
+    "male"
   ],
-  "requestedCityCount": 25,
+  "requestedCityCount": 3,
   "blockedPlaces": [],
-  "pendingPlaces": [
-    {
-      "cityId": "niamey",
-      "orderIndex": 54,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "dusanbe",
-      "orderIndex": 55,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "asmara",
-      "orderIndex": 56,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "djibouti",
-      "orderIndex": 57,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "bissau",
-      "orderIndex": 58,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "majuro",
-      "orderIndex": 59,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "georgetown",
-      "orderIndex": 60,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "vientiane",
-      "orderIndex": 61,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "monrovia",
-      "orderIndex": 62,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "thimphu",
-      "orderIndex": 63,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "pjongjang",
-      "orderIndex": 64,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "yaounde",
-      "orderIndex": 65,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "portauprince",
-      "orderIndex": 66,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "yaren",
-      "orderIndex": 67,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "apia",
-      "orderIndex": 68,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "banjul",
-      "orderIndex": 69,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "ouagadougou",
-      "orderIndex": 70,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "abuja",
-      "orderIndex": 71,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "praia",
-      "orderIndex": 72,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "yamoussoukro",
-      "orderIndex": 73,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "kingston",
-      "orderIndex": 74,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    },
-    {
-      "cityId": "libreville",
-      "orderIndex": 75,
-      "state": "production-or-review-pending",
-      "evidence": null,
-      "imageDelivered": false
-    }
-  ],
+  "pendingPlaces": [],
   "batchComplete": false,
   "productionDimensions": {
     "width": 1536,

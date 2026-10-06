@@ -169,3 +169,27 @@ ERÄ1B / 02 sisältää nyt myös Bamakon ja Lusakan. ERÄ1B / 03 sisältää to
 Wikimedia-hakujen yhteinen tauko on päättynyt: pieni valittujen tiedostojen metatietopyyntö ja alkuperäiset lataukset onnistuivat. Jatkossa vain root ja nimetty lähdebrokeri tekevät tahdistetut valittujen 2–3 tiedoston kyselyt; ensimmäinen 429 keskeyttää kaikki uudet pyynnöt. Bamakon alkuperäiset sekä Lusakan ja Bandar Seri Begawanin tuoreesti varmennetut viitteet on saatu. Aikaisempi 8×404-välimuistihavainto ei enää ole Bamakon tuotantoeste.
 
 Pyydän päätoimittajan katselmusta ja vastaanottokuittausta yllä oleville erille. R2, Git-postitoimitus, päätoimittajan hyväksyntä ja todellinen pelikytkentä ovat erillisiä vaiheita. Vastaanottoa, hyväksyntää tai pelikytkentää ei ole vielä todennettu. Codex ei mergeä mainiin, nosta versiota tai julkaise peliä.
+
+## 180 kohdetta toimitettu: kolmas lisäkaupunkikolmikko katsottavaksi
+
+2026-10-06T23:22:48.841232+00:00
+
+R2:ssa on nyt180/318 kohteen kuva varmennettuna:138 alkuperäistä paikkaa,35 lisäkaupunkia ja7 linssiä.179 erillistä kuvatiivistettä; Angola/Luanda on kirjattu alias. Uudet kuvat edellisen174 kohteen postin jälkeen: Machu Picchu, Madagaskar, Sahara, Manama, Biškek ja Malé.
+
+ERÄ1 / 06:23/24 toimitettu, vain Ouro Preto puuttuu. ERÄ1B / 02:7/25 toimitettu (Manama lisätty). ERÄ1B / 03:3/25 toimitettu, ja kaikki alkuperäisen ensimmäisen kolmikon kuvat ovat katsottavissa: Biškek, Bandar Seri Begawan ja Malé. Pilotin manifesti: posti/kuvatoimitus-oppaan-kaupunkinakymat-1b-03-yksi-kuva-pilotti-20261006.json
+
+https://media.matkakirja.app/julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-1b-03-yksi-kuva-pilotti-20261006-esikatselu-e9fcf959771d.jpg
+
+Biškek on dokumentoitu LAHI-varakulmana, ei VAKIO-läpäisynä. Lähderunko hero-kuvakulmat.mjs sallii tämän varakulman toistuvien ympäristön sijoitusvirheiden jälkeen. Kaksi ensimmäistä kokonaista ehdokasta hylättiin tukemattomasta minareetista/piha-asettelusta, ja kolmas näyttää vain oikean museon kapeine lähiympäristöineen. Nykyinen muuttunut Manas-aukio ja lipputanko jäävät aidosti rajauksen ulkopuolelle. Kolmannen kuvan kaikki lähteet, args ja alkuperäiset säilyvät; kuvaa ei retusoitu eikä neljättä yritystä tehty. Pyydän tämän varakulman päätoimittajakatselmusta samalla kuin koko kolmikon.
+
+Malen nykyviite on maaliskuulta2026; malliin ei siirretty uudempaa Islamic Centreä, jonka kuva oli Commonsissa väärässä Hukuru-kategoriassa. Tekoälykuva näyttää todellisen korallikivisen vanhan FridayMosquen, kolmikerroksisen metallikaton ja pienen lieriöminareetin. Kaikki kolme tämän pilotin lopputiedostoa on katsottu natiivina ja korttikoossa sekä varmennettu tavuntarkasti R2:ssa.
+
+Päivitettyjen osatoimitusten esikatselut:
+
+- https://media.matkakirja.app/julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-06-osatoimitus-20261006-esikatselu-b7e6a1231d9d.jpg
+- https://media.matkakirja.app/julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-1b-02-osatoimitus-20261006-esikatselu-def4fdc7ac13.jpg
+- https://media.matkakirja.app/julisteet/herokoe/20261006/kuvatoimitus-oppaan-kaupunkinakymat-1b-03-yksi-kuva-pilotti-20261006-esikatselu-e9fcf959771d.jpg
+
+Alkuperäisen listan11 puuttuvaa paikkaa säilyvät jonossa: Sansibar, Kap Palmas, Kamerun, Suakin, Darfur, Tšad-järvi, Ras Hafun, Orjarannikko, San Ambrosio, Nome ja Ouro Preto. Selvitys ja korjaus jatkuvat. Muista kaupungeista toimivat lähdeparit löytyvät tahdistetulla brokerityöllä; tuotanto jatkuu rinnakkain.
+
+Fablen vastaanotto, katselmus ja pelikytkentä odottavat edelleen erillistä todentamista. Mediatoimitus ei ole pelikytkentä tai julkaisu. Ei main-mergeä, versionnostoa tai julkaisemista Codexilta.
