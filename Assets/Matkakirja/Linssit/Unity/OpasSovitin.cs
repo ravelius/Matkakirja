@@ -1087,6 +1087,21 @@ namespace Matkakirja.Natiivi
         {
             string a = PisteAvain(lat, lon);
             var pinta = kaupunki.Pinta;
+            // Vapaa lento (LS1 6.10.): pitkässä lennossa yli 2 km:n päässä olevat vanhat näytteet pois, kun niitä on yli 1 500.
+            if (silmukka != null && silmukka.VapaaTila && pisteKorkeudet.Count > 1500)
+            {
+                var poistettavat = new List<string>();
+                foreach (var avain in pisteKorkeudet.Keys)
+                {
+                    // Avain "lat,lon" F4:llä laitteen kulttuurissa: fi-FI:ssä desimaalipilkku → neljä osaa.
+                    var o2 = avain.Split(',');
+                    string sl = o2.Length == 4 ? o2[0] + "." + o2[1] : o2.Length == 2 ? o2[0] : null, so = o2.Length == 4 ? o2[2] + "." + o2[3] : o2.Length == 2 ? o2[1] : null;
+                    if (sl != null && double.TryParse(sl, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double pl)
+                        && double.TryParse(so, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out double po)
+                        && KierrosLento.EtaisyysM(pl, po, lat, lon) > 2000) poistettavat.Add(avain);
+                }
+                foreach (var avain in poistettavat) pisteKorkeudet.Remove(avain);
+            }
             // Vapaa lento (LS1 6.10.): enintään 2 näytettä kesken, muut pyydetään seuraavalla kierroksella.
             if (pinta == null || pisteKorkeudet.ContainsKey(a) || (silmukka != null && silmukka.VapaaTila && pisteNaytteet.Count >= 2) || !pisteNaytteet.Add(a)) yield break;
             float t0 = Time.realtimeSinceStartup;
