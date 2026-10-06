@@ -1,4 +1,4 @@
-// HUULISYNKKA (FACEIT, Päätoimittaja 6.10.2026, juna 150): puheen merkkikohdistuksesta (Aani.Kohdistus) viiden ARKit-suumuodon
+// HUULISYNKKA (FACEIT, Päätoimittaja 6.10.2026, juna 150): puheen merkkikohdistuksesta (Aani.Kohdistus) seitsemän ARKit-suumuodon
 // painot hetkellä t. Suomen kirjain → tavoitepainot (avoimet vokaalit jawOpen, o funnel, u/y pucker, m/p/b close, f/v
 // rollLower, muut konsonantit pieni jawOpen); kukin merkki nousee 60 ms ennen alkuaan ja laskee 90 ms loppunsa jälkeen,
 // ja kunkin muodon paino on lähimpien merkkien maksimi (ei summaa → ei yliavautumista). Puhdas ja kehysnopeudesta riippumaton.
@@ -9,25 +9,26 @@ namespace Matkakirja.Linssit.Dioraama
 {
     public static class Visemit
     {
-        public const string Leuka = "jawOpen", Suppu = "mouthFunnel", Pyorea = "mouthPucker", Kiinni = "mouthClose", Alahuuli = "mouthRollLower";
-        public static readonly string[] Nimet = { Leuka, Suppu, Pyorea, Kiinni, Alahuuli };
+        public const string Leuka = "jawOpen", Suppu = "mouthFunnel", Pyorea = "mouthPucker", Kiinni = "mouthClose", Alahuuli = "mouthRollLower",
+            VenytysV = "mouthStretchLeft", VenytysO = "mouthStretchRight";
+        public static readonly string[] Nimet = { Leuka, Suppu, Pyorea, Kiinni, Alahuuli, VenytysV, VenytysO };
         public const double NousuS = 0.06, LaskuS = 0.09;
 
         /// <summary>Merkin tavoitepainot (Nimet-järjestyksessä, 0–1).</summary>
         public static void Tavoite(char c, float[] p)
         {
             Array.Clear(p, 0, p.Length);
+            // Linnanrakentajan arvot 6.10.2026 (Faceit-peili 94a0df22): välilyönti ja välimerkit 0 (lasku hoitaa häivytyksen).
             switch (char.ToLowerInvariant(c))
             {
-                case 'a': case 'ä': p[0] = 0.7f; break;
-                case 'o': case 'ö': p[0] = 0.45f; p[1] = 0.6f; break;
-                case 'u': case 'y': case 'w': p[0] = 0.15f; p[2] = 0.7f; break;
-                case 'e': p[0] = 0.45f; break;
-                case 'i': case 'j': p[0] = 0.25f; break;
-                case 'm': case 'p': case 'b': p[3] = 0.9f; break;
-                case 'f': case 'v': p[0] = 0.1f; p[4] = 0.6f; break;
+                case 'a': case 'ä': p[0] = 0.6f; break;
+                case 'o': case 'ö': p[0] = 0.35f; p[1] = 0.8f; break;
+                case 'u': case 'y': case 'w': p[2] = 0.9f; break;
+                case 'e': case 'i': p[0] = 0.25f; p[5] = p[6] = 0.4f; break;
+                case 'm': case 'p': case 'b': p[3] = 1f; break;
+                case 'f': case 'v': p[4] = 0.6f; break;
                 default:
-                    if (char.IsLetter(c)) p[0] = 0.2f;
+                    if (char.IsLetter(c)) p[0] = 0.15f;
                     break;
             }
         }

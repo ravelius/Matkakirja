@@ -22,11 +22,11 @@ namespace Matkakirja.Linssit.Testit
             Visemit.Laske(k, 0.05, w);
             Oleta.Tosi(w[3] > 0.8f && w[0] < 0.3f, $"m: suu kiinni ({w[3]:F2}), leuka pieni ({w[0]:F2})");
             Visemit.Laske(k, 0.15, w);
-            Oleta.Tosi(w[0] >= 0.69f, $"a: leuka auki ({w[0]:F2})");
+            Oleta.Tosi(w[0] >= 0.59f, $"a: leuka auki ({w[0]:F2})");
             Visemit.Laske(k, 0.35, w);
-            Oleta.Tosi(w[2] >= 0.69f, $"u: pyöreä ({w[2]:F2})");
+            Oleta.Tosi(w[2] >= 0.89f, $"u: pyöreä ({w[2]:F2})");
             Visemit.Laske(k, 0.45, w);
-            Oleta.Tosi(w[1] >= 0.59f, $"o: suppu ({w[1]:F2})");
+            Oleta.Tosi(w[1] >= 0.79f, $"o: suppu ({w[1]:F2})");
             Visemit.Laske(k, 2.0, w);
             Oleta.Tosi(Array.TrueForAll(w, x => x == 0f), "puheen jälkeen kiinni");
             Visemit.Laske(k, -0.2, w);
@@ -38,9 +38,9 @@ namespace Matkakirja.Linssit.Testit
             var w = new float[Visemit.Nimet.Length];
             var k = new Kohdistus { Merkit = "a", Alut = new[] { 1.0 }, Loput = new[] { 1.2 } };
             Visemit.Laske(k, 1.0 - Visemit.NousuS / 2, w);
-            Oleta.Tosi(w[0] > 0.3f && w[0] < 0.4f, $"nousun puolivälissä ~0,35 ({w[0]:F2})");
+            Oleta.Tosi(w[0] > 0.25f && w[0] < 0.35f, $"nousun puolivälissä ~0,3 ({w[0]:F2})");
             Visemit.Laske(k, 1.2 + Visemit.LaskuS / 2, w);
-            Oleta.Tosi(w[0] > 0.3f && w[0] < 0.4f, $"laskun puolivälissä ~0,35 ({w[0]:F2})");
+            Oleta.Tosi(w[0] > 0.25f && w[0] < 0.35f, $"laskun puolivälissä ~0,3 ({w[0]:F2})");
         }
 
         [Testi] static void RapaytysHarvaJaLyhyt()
@@ -69,7 +69,7 @@ namespace Matkakirja.Linssit.Testit
             var nimet = new HashSet<string>();
             int osia = 0;
             foreach (var s in m.Solmut) foreach (var o in s.Osat) if (o.Muodot.Count > 0) { osia++; foreach (var (n, d) in o.Muodot) { nimet.Add(n); Oleta.Sama(o.Paikat.Length, d.Length); } }
-            foreach (var n in Visemit.Nimet) Oleta.Tosi(nimet.Contains(n), "muoto " + n);
+            foreach (var n in Visemit.Nimet) Oleta.Tosi(nimet.Contains(n), "muoto " + n);   // ml. mouthStretchLeft/Right
             Oleta.Tosi(nimet.Contains("eyeBlinkLeft") && nimet.Contains("eyeBlinkRight"), "räpäytysmuodot");
             Oleta.Tosi(osia >= 4, $"muodollisia primitiivejä {osia}");
         }
