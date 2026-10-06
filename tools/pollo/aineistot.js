@@ -13,5 +13,5 @@ export const OPAS_AINEISTOT = Object.freeze({
   // Poikkeavat polut (ämpäri on muuttumaton): 6 km:n säde isoille kaupungeille (Linssiseppä 6.10.), paketti
   // kartta-tiet-vienti-20261006b. Natiivi käyttää tätä polkua, jos id on tässä, muuten kartta/tiet-v1/<id>.json.
   tiet_polut: { pariisi: 'kartta/tiet-v2/pariisi.json', lontoo: 'kartta/tiet-v2/lontoo.json', rooma: 'kartta/tiet-v2/rooma.json' },
-  aanikartta: [],
+  aanikartta: ['pariisi'],   // kartta 7.10. 00.30 (aanimaisema-vienti-20261006), silmukat 00.47 (-20261007)
 });
