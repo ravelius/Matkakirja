@@ -87,6 +87,46 @@ namespace Matkakirja.Natiivi
         /// jossa pitkä kategoria lyhenee …-merkillä).</summary>
         const float KapeaRivi = 360f;
 
+        /// <summary>Ylärivin tiivistys 0–3 (1: askelnapit kapeat, 2: lisäksi AUTO ja NOSTOT ilman harvennusta, ryhmävälit pienemmiksi,
+        /// 3: askelnapit 22 pt ja avaajan sivuvälit pois, 4: avaajan ▾ pois; juna 155 iPhonen vaakakortti 304 pt: MAAKUNNAT-rivillä
+        /// › ja AUTO jäivät portaalla 3 päällekkäin −11 pt, ▾ vapauttaa ~15 pt; avaaja aukeaa yhä napautuksesta).</summary>
+        int tiivis;
+        float tiivisLeveys;
+
+        /// <summary>Pienin väli (pt) peräkkäisten ylärivin osien välillä (negatiivinen = päällekkäin); testit ja loki.</summary>
+        public float PieninVali()
+        {
+            var osat = new List<VisualElement>();
+            foreach (var c in Vasen.Children()) if (c.resolvedStyle.display != DisplayStyle.None && c.worldBound.width > 0) osat.Add(c);
+            osat.Add(edellinen); osat.Add(avaaja); osat.Add(seuraava);
+            foreach (var c in Oikea.Children()) if (c.resolvedStyle.display != DisplayStyle.None && c.worldBound.width > 0) osat.Add(c);
+            float pienin = float.MaxValue;
+            for (int i = 0; i + 1 < osat.Count; i++) pienin = Mathf.Min(pienin, osat[i + 1].worldBound.xMin - osat[i].worldBound.xMax);
+            // Oikean reunan osa ei saa mennä rivin yli.
+            if (osat.Count > 0) pienin = Mathf.Min(pienin, rivi.worldBound.xMax - osat[osat.Count - 1].worldBound.xMax);
+            return pienin == float.MaxValue ? 0f : pienin;
+        }
+
+        void TarkistaLeveys()
+        {
+            if (rivi.panel == null || rivi.resolvedStyle.display == DisplayStyle.None) return;
+            float lev = rivi.layout.width;
+            if (float.IsNaN(lev) || lev <= 0) return;
+            float vali = PieninVali();
+            int ennen = tiivis;
+            if (vali < -0.5f && tiivis < 4) { tiivis++; tiivisLeveys = lev; }
+            else if (tiivis > 0 && lev > tiivisLeveys + 40f) tiivis = 0;   // rivi leveni selvästi: takaisin väljäksi ja uusi tarkistus
+            if (tiivis == ennen) return;
+            rivi.EnableInClassList("mk-nostoselain--tiivis1", tiivis >= 1);
+            rivi.EnableInClassList("mk-nostoselain--tiivis2", tiivis >= 2);
+            rivi.EnableInClassList("mk-nostoselain--tiivis3", tiivis >= 3);
+            rivi.EnableInClassList("mk-nostoselain--tiivis4", tiivis >= 4);
+            Debug.Log($"MATKAKIRJA nostoselain: ylärivi tiivis {tiivis} (pienin väli {vali:0.0} pt, leveys {lev:0} pt)");
+        }
+
+        /// <summary>Testi: ylärivin leveys, tiivistys ja pienin väli.</summary>
+        public string YlariviKuvaus() => $"ylärivi {rivi.layout.width:0} pt, tiivis {tiivis}, pienin väli {PieninVali():0.0} pt";
+
         public Nostoselain(VisualElement kortti, VisualElement ennen, Action<string> avaa, Action autoVaihtui)
         {
             this.kortti = kortti;
@@ -113,6 +153,12 @@ namespace Matkakirja.Natiivi
             // Puhelimella rivi ei mahdu kokonaan (5fc4be80: HISTORIA katkesi ja ≡ meni päälle): kapealla kategoriasta vain symboli.
             // Luokka riippuu vain kortin leveydestä (ei rivin sisällöstä), joten asettelu ei kierrä.
             rivi.RegisterCallback<GeometryChangedEvent>(e => rivi.EnableInClassList("mk-nostoselain--kapea", e.newRect.width < KapeaRivi));
+            // LEVEYSBUDJETTI (omistaja TF 154 6.10. 22.x, iPadin vaakapaneeli: "Noston yläpalkki vielä sekaisin", › AUTO-tekstin
+            // päällä): osat eivät kutistu eivätkä mene päällekkäin; jos jokin väli jää negatiiviseksi, rivi tiivistyy portaittain.
+            rivi.RegisterCallback<GeometryChangedEvent>(_ => rivi.schedule.Execute(TarkistaLeveys));
+            // Rivin leveys ei muutu, kun avaajan teksti (NOSTOT → MAAKUNNAT) tai oikean ryhmän sisältö vaihtuu: tarkistus myös niistä.
+            avaaja.RegisterCallback<GeometryChangedEvent>(_ => rivi.schedule.Execute(TarkistaLeveys));
+            Oikea.RegisterCallback<GeometryChangedEvent>(_ => rivi.schedule.Execute(TarkistaLeveys));
             edellinen.tooltip = "Edellinen nosto";
             seuraava.tooltip = "Seuraava nosto";
             Kirjasimet.Aseta(avaaja, Kirjasin.Kone);
@@ -186,7 +232,15 @@ namespace Matkakirja.Natiivi
             nykyinen = valoId;
             jarjestys.Clear();
             muu = valoId != null ? MuuLista?.Invoke(valoId) : null;
-            avaajaTeksti.text = muu?.Avaaja ?? "NOSTOT";
+            string avaajaUusi = muu?.Avaaja ?? "NOSTOT";
+            if (avaajaTeksti.text != avaajaUusi)
+            {
+                avaajaTeksti.text = avaajaUusi;
+                // Uusi teksti: leveysbudjetti alusta (GeometryChanged tiivistää uudelleen tarvittaessa).
+                tiivis = 0;
+                rivi.RemoveFromClassList("mk-nostoselain--tiivis1"); rivi.RemoveFromClassList("mk-nostoselain--tiivis2"); rivi.RemoveFromClassList("mk-nostoselain--tiivis3");
+                rivi.RemoveFromClassList("mk-nostoselain--tiivis4");
+            }
             if (muu != null)
             {
                 foreach (var r in muu.Rivit) jarjestys.Add(new NostoKerros.Nosto { Id = r.Id, Nimi = r.Nimi, Aihe = MuuAihe });
@@ -403,6 +457,7 @@ namespace Matkakirja.Natiivi
         public string Testaa(string nappi)
         {
             if (nappi == "selain") { VaihdaPaneeli(); return null; }
+            if (nappi == "selain-ylarivi") return YlariviKuvaus();   // ui nosto <id> selain-ylarivi: leveysbudjetti lokiin
             if (nappi == "selain-seuraava") return Askel(1) ? null : "ei seuraavaa nostoa";
             if (nappi == "selain-edellinen") return Askel(-1) ? null : "ei edellistä nostoa";
             if (nappi == "auto") { AsetaAuto(true); return null; }

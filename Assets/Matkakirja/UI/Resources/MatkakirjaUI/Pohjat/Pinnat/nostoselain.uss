@@ -369,3 +369,91 @@
 .mk-nostoselain__sivu--oikea > .mk-nostoselain__auto {
     margin-right: var(--tk-vali-s);
 }
+
+/* LEVEYSBUDJETTI (omistaja TF 154 6.10. 22.x, iPadin vaakapaneeli "Noston yläpalkki vielä sekaisin": TEKNIIKKA-teksti vei tilan
+ * ja › meni AUTO:n päälle): kategoria ylärivillä aina vain kuvakkeena (kuten pystykortissa); osat eivät kutistu; Nostoselain
+ * tiivistää rivin portaittain, jos osat menisivät päällekkäin (tiivis1: askelnapit kapeat, tiivis2: harvennus pois ja pienemmät
+ * välit). */
+.mk-nostoselain .mk-nostoselain__sivu .mk-nosto__ylarivi-teksti {
+    display: none;
+}
+
+.mk-nostoselain .mk-nostoselain__askel,
+.mk-nostoselain .mk-nostoselain__avaaja,
+.mk-nostoselain .mk-lukija.mk-nosto__pin,
+.mk-nostoselain .mk-nosto__ylarivi-symboli {
+    flex-shrink: 0;
+}
+
+.mk-nostoselain--tiivis1 .mk-nostoselain__askel {
+    width: 26px;
+}
+
+.mk-nostoselain--tiivis2 .mk-nostoselain__avaaja > Label,
+.mk-nostoselain--tiivis2 .mk-nostoselain__autoteksti {
+    letter-spacing: 0;
+}
+
+.mk-nostoselain.mk-nostoselain--tiivis2 .mk-nostoselain__auto {
+    padding: 0 var(--tk-vali-s);
+}
+
+.mk-nostoselain--tiivis2 .mk-nostoselain__sivu--oikea > .mk-nostoselain__auto,
+.mk-nostoselain--tiivis2 .mk-nostoselain__sivu--oikea > .mk-lukija,
+.mk-nostoselain--tiivis2 .mk-nostoselain__sivu--oikea > .mk-nosto__lukijapaikka {
+    margin-right: 0;
+    margin-left: var(--tk-vali-xs);
+}
+
+/* JUNA 155 (omistaja 6.10. 22.x): selaimen rivi ilman kategoriaa ~8 pt vetokahvan alle (kortin yläreuna 22 − 2 = 20; kahva
+ * päättyy 13 pt:ssä); kategoria omana rivinään otsikon yläpuolella NOSTOT-tekstin tyylillä toissijaisella musteella,
+ * otsikkoon ~5 pt. Sama asettelu kaikissa leveyksissä. */
+.mk-nostoselain {
+    margin-top: -2px;
+}
+
+.mk-nosto__ylarivi.mk-nosto__ylarivi--kategoria {
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 5px 0;
+    letter-spacing: 6.98px; /* NOSTOT-tekstin harvennus */
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-nosto__ylarivi--kategoria .mk-nosto__ylarivi-teksti {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mk-nosto__ylarivi--kategoria .mk-nosto__ylarivi-symboli {
+    -unity-background-image-tint-color: var(--tk-paperi-muste-pehmea);
+}
+
+/* Kolme oikeinta samalle keskilinjalle ja samaan näkyvään korkeuteen (omistaja 6.10. 22.x; Päätoimittajan mittaus @2x: pin 33 px
+ * ja 2 pt muita ylempänä, ≡ 21 px, kaiutin 29 px). ≡ ja kaiutin piirretään paikkavarauksen kohdalle: varaus nappien korkuiseksi
+ * (34 → 38), jolloin keskikohdat osuvat samaan viivaan. Pin 20 pt (muste ~14,5 pt), viiva 2,2 (sama näkyvä paksuus kuin 22 pt:n
+ * 2,0); ≡ väljemmillä viivaväleillä (KortinLukija.ValikkoIkoni). */
+.mk-nostoselain .mk-nosto__lukijapaikka {
+    height: var(--tk-nappi-korkeus);
+}
+
+.mk-nostoselain .mk-lukija.mk-nosto__pin > .mk-ikoni {
+    width: 20px;
+    height: 20px;
+    --mk-ikoni-viiva: 2.2;
+}
+
+/* Kolmas porras: askelnapit nappi.ohjaus-kuvakkeen levyisiksi ja avaajan sivuvälit pois (kirjasinkoko pysyy tyylikirjan). */
+.mk-nostoselain--tiivis3 .mk-nostoselain__askel {
+    width: var(--tk-nappi-ohjaus-kuvake);
+}
+
+.mk-nostoselain--tiivis3 .mk-nostoselain__avaaja {
+    padding: 0;
+}
+
+/* Tiivistysporras 4 (juna 155, iPhonen vaakakortti 304 pt, MAAKUNNAT: › ja AUTO päällekkäin portaalla 3): avaajan ▾ pois. */
+.mk-nostoselain--tiivis4 .mk-nostoselain__avaajaikoni {
+    display: none;
+}
