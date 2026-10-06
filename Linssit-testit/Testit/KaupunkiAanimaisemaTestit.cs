@@ -74,6 +74,20 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(m.Kokonais == 0 && m.Soivia == 0, "kytkin pois hiljentää");
         }
 
+        [Testi] static void AaniKarttaBilineaarinen()
+        {
+            // 2×2-ruudukko: tori lounaassa 0, kaakossa 255 (sarake 1), pohjoisrivi 0 / 255.
+            string b64 = Convert.ToBase64String(new byte[] { 0, 255, 0, 255 });
+            string json = "{\"versio\":1,\"kaupunki\":\"testi\",\"lounas\":{\"lat\":48.0,\"lon\":2.0},\"askel\":{\"lat\":0.001,\"lon\":0.002}," +
+                "\"rivit\":2,\"sarakkeet\":2,\"painot\":{\"tori\":\"" + b64 + "\"},\"kirkot\":[{\"lat\":48.0005,\"lon\":2.001,\"nimi\":\"K\"}]}";
+            var k = AaniKartta.Lue(json);
+            Oleta.Tosi(Math.Abs(k.Painot(48.0, 2.0)["tori"]) < 1e-9, "lounaiskulma 0");
+            Oleta.Tosi(Math.Abs(k.Painot(48.0005, 2.001)["tori"] - 0.5) < 1e-6, "keskellä puolet");
+            Oleta.Tosi(Math.Abs(k.Painot(49, 3)["tori"] - 1) < 1e-9, "ulkopuolella reunan arvo");
+            Oleta.Sama(1, k.KirkkojaLahella(48.0005, 2.001));
+            Oleta.Sama(0, k.KirkkojaLahella(48.1, 2.1));
+        }
+
         [Testi] static void KirkonkellotHajautettuina()
         {
             var l = KaupunkiAanimaisema.TasatunninLyonnit(15, 3, 42);

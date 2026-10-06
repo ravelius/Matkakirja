@@ -17,10 +17,10 @@ namespace Matkakirja.Linssit.Aanet
     {
         public const string LiikenneHiljainen = "liikenne_hiljainen", LiikenneVilkas = "liikenne_vilkas", Raitiovaunu = "raitiovaunu",
             Satama = "satama", Aallot = "aallot", Kanava = "kanava", Puisto = "puisto", Suihkulahde = "suihkulahde", Tori = "tori",
-            Kahvila = "kahvila", Vakijoukko = "vakijoukko", Sade = "sade", Tuuli = "tuuli";
+            Kahvila = "kahvila", Vakijoukko = "vakijoukko", Rautatie = "rautatie", Sade = "sade", Tuuli = "tuuli";
         /// <summary>Silmukkakerrokset (kirkonkellot ovat kertasoittoja, suhina proseduraalinen).</summary>
         public static readonly string[] Kerrokset =
-            { LiikenneHiljainen, LiikenneVilkas, Raitiovaunu, Satama, Aallot, Kanava, Puisto, Suihkulahde, Tori, Kahvila, Vakijoukko, Sade, Tuuli };
+            { LiikenneHiljainen, LiikenneVilkas, Raitiovaunu, Satama, Aallot, Kanava, Puisto, Suihkulahde, Tori, Kahvila, Vakijoukko, Rautatie, Sade, Tuuli };
         public const int MaxSoivat = 8;
         public const double HaivytysS = 2.5, KuuluvuusRaja = 0.02;
         public const double MaaKorkeusM = 120, YlaKorkeusM = 3000, YlaKaupunki = 0.15, AlipaastoMaaHz = 22000, AlipaastoYlaHz = 900;
@@ -100,7 +100,7 @@ namespace Matkakirja.Linssit.Aanet
             bool yo = tunti >= 23 || tunti < 5, ilta = tunti >= 20 && tunti < 23, aamu = tunti >= 5 && tunti < 9;
             switch (kerros)
             {
-                case LiikenneVilkas: case Raitiovaunu: return yo ? 0.25 : ilta ? 0.7 : 1;
+                case LiikenneVilkas: case Raitiovaunu: case Rautatie: return yo ? 0.25 : ilta ? 0.7 : 1;
                 case LiikenneHiljainen: return yo ? 0.5 : 1;
                 case Tori: return yo || ilta ? 0.1 : aamu ? 0.6 : 1;
                 case Kahvila: return yo ? 0.1 : aamu ? 0.5 : 1;

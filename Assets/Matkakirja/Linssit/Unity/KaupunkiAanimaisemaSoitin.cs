@@ -24,7 +24,11 @@ namespace Matkakirja.Natiivi
         public static Func<double, double, int> KirkkojaLahella;
         public static Func<string, string> SilmukanUrl;
         public static Func<double> Sade;
-        public static string KelloUrl;
+        public static string KelloUrl = Juuri + "aanimaisema-v1/kello-01.mp3";
+        /// <summary>Kaupungin tunnus (LS1: oppaan kaupunki); äänikartta ladataan Juuri + "aanikartta-v1/&lt;id&gt;.json" (Pelikoodari).</summary>
+        public static Func<string> KaupunkiId;
+        public const string Juuri = "https://media.matkakirja.app/aanet/";
+        AaniKartta kartta; string karttaId, karttaLadataan;
         public const float Taso = 0.55f, KelloTaso = 0.35f, VapautusS = 5f;
 
         static KaupunkiAanimaisemaSoitin instanssi;
@@ -62,12 +66,14 @@ namespace Matkakirja.Natiivi
         void Update()
         {
             var k = Kamera?.Invoke();
+            string id = KaupunkiId?.Invoke();
+            if (!string.IsNullOrEmpty(id) && id != karttaId && id != karttaLadataan) StartCoroutine(LataaKartta(id));
             var tila = Aanisoitin.Instanssi?.Tila;
             bool paalla = (tila?.Aanimaisema ?? Asetukset.Paalla(Kytkin.Aanimaisema)) && !(TestiMykistys.Paalla && !AaniKaappaus.Kaynnissa);
             if (k.HasValue && (double.IsNaN(karttaLat) || Etaisyys(k.Value.Lat, k.Value.Lon, karttaLat, karttaLon) > 80))
             {
                 karttaLat = k.Value.Lat; karttaLon = k.Value.Lon;
-                painot = Aanikartta?.Invoke(karttaLat, karttaLon);
+                painot = Aanikartta != null ? Aanikartta(karttaLat, karttaLon) : kartta?.Painot(karttaLat, karttaLon);
             }
             double tunti = k.HasValue ? Matkakirja.Linssit.Kierros.KaupunkiValo.PaikallinenTunti(DateTime.UtcNow, k.Value.Lon) : 12;
             mikseri.Paivita(new KaupunkiAanimaisema.Syote
@@ -92,11 +98,22 @@ namespace Matkakirja.Natiivi
             int h = (int)Math.Floor(tunti);
             if (edellinenTunti >= 0 && h != edellinenTunti && kello != null && paalla && k.HasValue)
             {
-                int kirkkoja = KirkkojaLahella?.Invoke(k.Value.Lat, k.Value.Lon) ?? 0;
+                int kirkkoja = KirkkojaLahella?.Invoke(k.Value.Lat, k.Value.Lon) ?? kartta?.KirkkojaLahella(k.Value.Lat, k.Value.Lon) ?? 0;
                 foreach (var (viive, kirkko) in KaupunkiAanimaisema.TasatunninLyonnit(h, Math.Min(kirkkoja, 3), (int)(karttaLat * 1000)))
                     StartCoroutine(Lyo(viive, KelloTaso * (kirkko == 0 ? 1f : 0.6f) * kokonais));
             }
             edellinenTunti = h;
+        }
+
+        IEnumerator LataaKartta(string id)
+        {
+            karttaLadataan = id;
+            using var r = UnityWebRequest.Get(Juuri + "aanikartta-v1/" + id + ".json");
+            yield return r.SendWebRequest();
+            karttaLadataan = null;
+            if (r.result != UnityWebRequest.Result.Success) { Debug.Log($"MATKAKIRJA äänimaisema: äänikartta {id}: {r.error}"); karttaId = id; yield break; }
+            try { kartta = AaniKartta.Lue(r.downloadHandler.text); karttaId = id; karttaLat = double.NaN; Debug.Log($"MATKAKIRJA äänimaisema: äänikartta {id} {kartta.Rivit}×{kartta.Sarakkeet}, {kartta.Ruudut.Count} kerrosta, {kartta.Kirkot.Count} kirkkoa"); }
+            catch (Exception e) { Debug.Log($"MATKAKIRJA äänimaisema: äänikartta {id} virheellinen: {e.Message}"); karttaId = id; }
         }
 
         IEnumerator Lyo(double viive, float taso)
@@ -109,7 +126,8 @@ namespace Matkakirja.Natiivi
         void Avaa(int i)
         {
             string kerros = KaupunkiAanimaisema.Kerrokset[i];
-            string url = SilmukanUrl?.Invoke(kerros);
+            // Oletus: Pelikoodarin nimeäminen aanimaisema-v1/<kerros>-01.mp3 (aanimaisema.json korvaa, kun se on).
+            string url = SilmukanUrl != null ? SilmukanUrl(kerros) : Juuri + "aanimaisema-v1/" + kerros + "-01.mp3";
             if (string.IsNullOrEmpty(url) || !ladataan.Add(kerros)) return;
             StartCoroutine(Lataa(url, c =>
             {
