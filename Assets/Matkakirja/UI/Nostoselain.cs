@@ -87,7 +87,8 @@ namespace Matkakirja.Natiivi
         /// jossa pitkä kategoria lyhenee …-merkillä).</summary>
         const float KapeaRivi = 360f;
 
-        /// <summary>Ylärivin tiivistys 0–2 (1: askelnapit kapeat, 2: lisäksi AUTO ja NOSTOT ilman harvennusta, ryhmävälit pienemmiksi).</summary>
+        /// <summary>Ylärivin tiivistys 0–3 (1: askelnapit kapeat, 2: lisäksi AUTO ja NOSTOT ilman harvennusta, ryhmävälit pienemmiksi,
+        /// 3: AUTO- ja avaajateksti 85 %).</summary>
         int tiivis;
         float tiivisLeveys;
 
@@ -112,11 +113,12 @@ namespace Matkakirja.Natiivi
             if (float.IsNaN(lev) || lev <= 0) return;
             float vali = PieninVali();
             int ennen = tiivis;
-            if (vali < -0.5f && tiivis < 2) { tiivis++; tiivisLeveys = lev; }
+            if (vali < -0.5f && tiivis < 3) { tiivis++; tiivisLeveys = lev; }
             else if (tiivis > 0 && lev > tiivisLeveys + 40f) tiivis = 0;   // rivi leveni selvästi: takaisin väljäksi ja uusi tarkistus
             if (tiivis == ennen) return;
             rivi.EnableInClassList("mk-nostoselain--tiivis1", tiivis >= 1);
             rivi.EnableInClassList("mk-nostoselain--tiivis2", tiivis >= 2);
+            rivi.EnableInClassList("mk-nostoselain--tiivis3", tiivis >= 3);
             Debug.Log($"MATKAKIRJA nostoselain: ylärivi tiivis {tiivis} (pienin väli {vali:0.0} pt, leveys {lev:0} pt)");
         }
 
@@ -152,6 +154,9 @@ namespace Matkakirja.Natiivi
             // LEVEYSBUDJETTI (omistaja TF 154 6.10. 22.x, iPadin vaakapaneeli: "Noston yläpalkki vielä sekaisin", › AUTO-tekstin
             // päällä): osat eivät kutistu eivätkä mene päällekkäin; jos jokin väli jää negatiiviseksi, rivi tiivistyy portaittain.
             rivi.RegisterCallback<GeometryChangedEvent>(_ => rivi.schedule.Execute(TarkistaLeveys));
+            // Rivin leveys ei muutu, kun avaajan teksti (NOSTOT → MAAKUNNAT) tai oikean ryhmän sisältö vaihtuu: tarkistus myös niistä.
+            avaaja.RegisterCallback<GeometryChangedEvent>(_ => rivi.schedule.Execute(TarkistaLeveys));
+            Oikea.RegisterCallback<GeometryChangedEvent>(_ => rivi.schedule.Execute(TarkistaLeveys));
             edellinen.tooltip = "Edellinen nosto";
             seuraava.tooltip = "Seuraava nosto";
             Kirjasimet.Aseta(avaaja, Kirjasin.Kone);
@@ -225,7 +230,14 @@ namespace Matkakirja.Natiivi
             nykyinen = valoId;
             jarjestys.Clear();
             muu = valoId != null ? MuuLista?.Invoke(valoId) : null;
-            avaajaTeksti.text = muu?.Avaaja ?? "NOSTOT";
+            string avaajaUusi = muu?.Avaaja ?? "NOSTOT";
+            if (avaajaTeksti.text != avaajaUusi)
+            {
+                avaajaTeksti.text = avaajaUusi;
+                // Uusi teksti: leveysbudjetti alusta (GeometryChanged tiivistää uudelleen tarvittaessa).
+                tiivis = 0;
+                rivi.RemoveFromClassList("mk-nostoselain--tiivis1"); rivi.RemoveFromClassList("mk-nostoselain--tiivis2"); rivi.RemoveFromClassList("mk-nostoselain--tiivis3");
+            }
             if (muu != null)
             {
                 foreach (var r in muu.Rivit) jarjestys.Add(new NostoKerros.Nosto { Id = r.Id, Nimi = r.Nimi, Aihe = MuuAihe });
