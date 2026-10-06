@@ -5,6 +5,9 @@
 //   Reunat    URP Lens Distortion (tynnyri, keskusta ennallaan) + Chromatic Aberration (vain reunoilla) + säteittäinen
 //             liike-epäterävyys reunoilla (Varjostimet/Reunasumennus: koko ruudun neliö, joka näytteistää kameran läpinäkymättömän
 //             kuvan; kamerakohtainen värikuva vain kun Voima > 0, mobiilin URP-asetus ennallaan)
+//   Heilunta  omistaja 6.10. 09.3x: "avaruusalus voisi alkaa jo hieman heilua, kun saavutetaan oranssi teksti, ja sitten heiluminen
+//             lisääntyy, kun saavutetaan punainen" → TarinaVoima 0 alle 250×, hienovarainen 0,25 oranssissa (300×), 1 punaisessa
+//             (1000×); hidas heilunta (~0,8 Hz) ja sen päällä pieni tärinä (~9 Hz), joka kasvaa punaista kohti.
 //   Tärinä    kameran projektion siirto (ei muuta kameran asentoa eikä Cupolan kehyksen paikkaa kehykseen nähden): kaksi Perlin-
 //             taajuutta, amplitudi ~0,12 % ruudun korkeudesta. Tarina (−1…1) ja Voima ovat julkisia: Natiivi-UI siirtää paneelia
 //             samalla arvolla (sama ajastus).
@@ -22,8 +25,26 @@ namespace Matkakirja.Linssit
         public static float Voima { get; private set; }
         /// <summary>Tärinä tässä kehyksessä, kumpikin akseli −1…1 (kerro omalla amplitudilla; 0 kun Voima = 0).</summary>
         public static Vector2 Tarina { get; private set; }
-        /// <summary>Kameran tärinän amplitudi osuutena ruudun korkeudesta täydellä voimalla.</summary>
-        public static float TarinaAmplitudi = 0.0012f;
+        /// <summary>Heilunnan voima 0…1: 0 alle 250×, 0,25 oranssissa (300×), 1 punaisessa (1000×).</summary>
+        public static float TarinaVoima { get; private set; }
+        /// <summary>Kameran heilunnan amplitudi osuutena ruudun korkeudesta täydellä voimalla.</summary>
+        public static float TarinaAmplitudi = 0.0025f;
+
+        /// <summary>
+        /// Ruudun siirto tässä kehyksessä pikseleinä UI:n suunnissa (x oikealle, y alas): kameran kuva (maa, Cupolan 3D-kehys,
+        /// siluetti) siirtyy juuri tämän verran. Natiivi-UI siirtää paneelia samalla arvolla (px → pt jakamalla skaalalla),
+        /// jolloin ohjaamo ja kuva heiluvat samassa tahdissa. Täydellä heilunnalla enintään ~TarinaAmplitudi · ruudun korkeus.
+        /// </summary>
+        public static Vector2 RuudunSiirtoPx => new Vector2(-Tarina.x, Tarina.y) * (TarinaAmplitudi * Screen.height);
+
+        /// <summary>Heilunnan voima kertoimesta (oranssi 300×, punainen 1000×; Natiivi-UI:n LCD-värit).</summary>
+        public static float TarinaKertoimesta(double kerroin)
+        {
+            if (kerroin < 250) return 0f;
+            if (kerroin < 300) return 0.25f * (float)((kerroin - 250) / 50);
+            float t = Mathf.Clamp01(((float)System.Math.Log10(kerroin) - 2.4771f) / 0.5229f);
+            return 0.25f + 0.75f * t;
+        }
         public static float VaaristymaMax = 0.10f, VarivuotoMax = 0.45f;
 
         static Volume volyymi;
@@ -47,14 +68,16 @@ namespace Matkakirja.Linssit
         /// <summary>Joka kehys (AstronauttiKerros.LateUpdate) kyytipinon jälkeen.</summary>
         public static void Paivita(Camera kamera, bool kyydissa, double kerroin, bool kuvaKaynnissa)
         {
-            float tavoite = !Pois && kyydissa && kamera != null && !kuvaKaynnissa ? VoimaKertoimesta(kerroin) : 0f;
-            Voima = Mathf.MoveTowards(Voima, tavoite, Time.unscaledDeltaTime * 2f);
-            if (kuvaKaynnissa) Voima = 0f;
-            float t = Time.unscaledTime;
-            Tarina = Voima <= 0f ? Vector2.zero : new Vector2(
-                (Mathf.PerlinNoise(t * 9f, 0.37f) - 0.5f) * 1.6f + (Mathf.PerlinNoise(t * 2.1f, 5.1f) - 0.5f) * 0.8f,
-                (Mathf.PerlinNoise(0.71f, t * 9f) - 0.5f) * 1.6f + (Mathf.PerlinNoise(3.3f, t * 2.1f) - 0.5f) * 0.8f) * Voima;
-            if (Voima <= 0f && volyymi == null) return;
+            bool sallittu = !Pois && kyydissa && kamera != null && !kuvaKaynnissa;
+            Voima = Mathf.MoveTowards(Voima, sallittu ? VoimaKertoimesta(kerroin) : 0f, Time.unscaledDeltaTime * 2f);
+            TarinaVoima = Mathf.MoveTowards(TarinaVoima, sallittu ? TarinaKertoimesta(kerroin) : 0f, Time.unscaledDeltaTime * 1.5f);
+            if (kuvaKaynnissa) { Voima = 0f; TarinaVoima = 0f; }
+            float t = Time.unscaledTime, tv = TarinaVoima;
+            // Hidas heilunta + tärinä, joka kasvaa punaista kohti (−1…1).
+            Tarina = tv <= 0f ? Vector2.zero : new Vector2(
+                (Mathf.PerlinNoise(t * 0.8f, 5.1f) - 0.5f) * 1.6f + (Mathf.PerlinNoise(t * 9f, 0.37f) - 0.5f) * 0.6f * tv,
+                (Mathf.PerlinNoise(3.3f, t * 0.8f) - 0.5f) * 1.6f + (Mathf.PerlinNoise(0.71f, t * 9f) - 0.5f) * 0.6f * tv) * tv;
+            if (Voima <= 0f && tv <= 0f && volyymi == null) return;
             if (volyymi == null) Luo();
             volyymi.weight = Voima;
             volyymi.enabled = Voima > 0f;
@@ -116,7 +139,7 @@ namespace Matkakirja.Linssit
 
         static void EnnenPiirtoa(ScriptableRenderContext _, Camera c)
         {
-            if (c != kohde || Voima <= 0f) return;
+            if (c != kohde || (Voima <= 0f && TarinaVoima <= 0f)) return;
             if (nelio != null && nelio.gameObject.activeSelf)
             {
                 // Neliö kameran eteen tämän kehyksen lähitason ja kenttäkulman mukaan (kuten CupolaKerros), hieman ruutua suurempi.
@@ -139,6 +162,6 @@ namespace Matkakirja.Linssit
             if (c == kohde) c.ResetProjectionMatrix();
         }
 
-        public static string Tila() => $"nopeustehoste {(Pois ? "pois" : "päällä")}, voima {Voima:0.00}, tärinä ({Tarina.x:0.00}, {Tarina.y:0.00})";
+        public static string Tila() => $"nopeustehoste {(Pois ? "pois" : "päällä")}, reunat {Voima:0.00}, heilunta {TarinaVoima:0.00} ({Tarina.x:0.00}, {Tarina.y:0.00})";
     }
 }

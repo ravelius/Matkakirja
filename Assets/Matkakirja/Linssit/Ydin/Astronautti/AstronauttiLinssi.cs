@@ -700,6 +700,10 @@ namespace Matkakirja.Linssit.Astronautti
 
         /// <summary>Kaasun portaaton kerroin 1…1000 (AsetaKaasuPortaaton; pykälillä sama kuin Kaasu).</summary>
         public double KaasuKerroin { get; private set; } = 1;
+        /// <summary>Natiivi-UI:n nimellä: sama kuin KaasuKerroin.</summary>
+        public double KaasuArvo => KaasuKerroin;
+        /// <summary>Natiivi-UI:n nimellä: portaaton kaasu (sama kuin AsetaKaasuPortaaton; int-pykälä menee AsetaKaasu(int):lle).</summary>
+        public bool AsetaKaasu(double kerroin) => AsetaKaasuPortaaton(kerroin);
         /// <summary>Portaaton kerroin vaihtui (Natiivi-UI: LCD:n kerroin ja nopeus).</summary>
         public event Action<double> KaasuKerroinVaihtui;
 
