@@ -16,7 +16,7 @@ namespace Matkakirja.Linssit.IssKamera
         public const string Polku = "linssit/astronautin-kamera/s2-maailma/" + Versio + "/";
         /// <summary>Korjaussarja (Karttaseppä: v2-korjaus/ + korjaus.json, sama bittikartta; 1 = laatta korjaussarjasta).</summary>
         /// Kansio on vakio: Karttasepän uusi tasaus tulee uuteen polkuun (v2-korjaus2/), jolloin vaihto on tämä yksi rivi.
-        public const string KorjausKansio = "v2-korjaus";
+        public const string KorjausKansio = "v2-korjaus2";   // Karttaseppä 6.10. 11.01: WorldCover-tasaus, järvet, rengas, 4 aluetta
         public const string KorjausJuuri = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/" + KorjausKansio + "/";
         public const string KorjausPolku = "linssit/astronautin-kamera/s2-maailma/" + KorjausKansio + "/";
         public readonly int ZMin, ZMax;

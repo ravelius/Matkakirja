@@ -49,7 +49,7 @@ namespace Matkakirja.Linssit.Testit
                 Oleta.Sama("https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/v2/8/85/130.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 85, 130));
                 Oleta.Sama("E/2/37/22.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 145, 74), "Eurooppa rajatulla jaolla");
                 KuvanTyosto.Maailma.Korjaus = S2MaailmaLaatat.Jasenna(Json(6, 10, (z, x, y) => z == 8 && x == 85 && y == 130));
-                Oleta.Sama("https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/v2-korjaus/8/85/130.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 85, 130), "korjaussarjasta");
+                Oleta.Sama("https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/v2-korjaus2/8/85/130.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 85, 130), "korjaussarjasta");
                 Oleta.Sama("https://media.matkakirja.app/linssit/astronautin-kamera/s2-maailma/v2/8/86/130.jpg", KuvanTyosto.MosaiikinOsoite("E/", 8, 86, 130), "korjaamaton v2:sta");
             }
             finally { KuvanTyosto.Maailma = ennen; }
