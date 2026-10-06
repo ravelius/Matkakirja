@@ -171,3 +171,8 @@ TYÖTAPA (Päätoimittaja 23.1x): vika toistetaan ennen korjausta, sitten sama a
   sormen veto oli estetty jo ennen (CupolaVeto: YhdenSormenVetoMuualla = cupola) → vika on kahden sormen eleessä (nipistys/kierto)
   ohjaamossa. Tilarivit ristissä = ruudun viive (EleetMuualla päivittyy seuraavassa ruudussa) → korjattu 7cc8f2be
   (linssiseppa2/ohjaamo-kosketus). Kerrottava Pelikoodarille: kahden sormen nipistys pallon päällä ohjaamossa.
+- Cupola-palaute (omistaja 08.3x, juna 147): kehys iss-cupola-kokonainen-{iphone-1206x2622,ipad-1536x2732}.png + heijastus on
+  Codexin kuvatoimitus 26.9. (bf8a6101d, posti/kuvatoimitus-iss-cupola-20260926.json, NASA-viitekuvat iss035e010551 ym.), ämpäri
+  karttanostot/20260926/. LasiZoom 1,3 (IssKyyti.cs, LS1:n tiedosto) suurentaa sen → pehmeä. Tarkempi (≥ 2,6× = 3136 × 6817 /
+  3994 × 7103) vaatii Codexin uuden toimituksen tai uudelleenpiirron (generointi omistajan luvalla). iPad: LasiZoom pienemmäksi
+  (esim. 1,15) vain iPadilla (CupolaKerros.HaeKuvat ipad-tunnistus) – LS1:n kuittaus.
