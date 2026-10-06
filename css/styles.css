@@ -90,7 +90,7 @@ body.paivittyy .app { visibility: hidden; }
   .paivitysruutu.latausruutu-haipyy { transition: none; }
 }
 
-/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 1678319c1f14 */
+/* TYYLIKIRJA ALKU — generoitu tiedostosta tyylikirja/tyylikirja.json (node tools/tyylikirja.mjs); ÄLÄ MUOKKAA KÄSIN. lähde 0df885514511 */
 :root {
   --bg: #1d1610;
   --panel: #2a1f16;
@@ -167,6 +167,8 @@ body.paivittyy .app { visibility: hidden; }
   --tk-lcd-korostus: #84ffa0;
   --tk-lcd-reunus: rgba(124, 255, 158, 0.28);
   --tk-lcd-toiminto: #84ffa0;
+  --tk-lcd-varoitus: #ffb347;
+  --tk-lcd-vaara: #ff5a4a;
   --tk-himmennys-tumma: rgba(14, 9, 4, 0.72);
   --tk-himmennys-kevyt: rgba(14, 9, 4, 0.35);
   --tk-himmennys-kuva: rgba(14, 9, 4, 0.92);
@@ -280,6 +282,8 @@ body.paivittyy .app { visibility: hidden; }
   --tk-korostus: var(--tk-lcd-korostus);
   --tk-reunus: var(--tk-lcd-reunus);
   --tk-toiminto: var(--tk-lcd-toiminto);
+  --tk-varoitus: var(--tk-lcd-varoitus);
+  --tk-vaara: var(--tk-lcd-vaara);
 }
 /* TYYLIKIRJA LOPPU */
 
