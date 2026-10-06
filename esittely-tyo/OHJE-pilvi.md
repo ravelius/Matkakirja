@@ -19,4 +19,4 @@ sellaisenaan. Sessio tekee tekstit; ääniä se EI tee (ne tehdään omistajan m
 
 Kun sessio on valmis, Pelikoodari ajaa koneellisen tarkistuksen uudelleen Macilla, koostaa tekstit Päätoimittajalle
 (`tools/opas/koosta-esittely.mjs`) ja vie ne pakettina ämpäriin. Äänet tehdään vasta omistajan määräluvalla
-(arvio noin 400 000 merkkiä ≈ 200 000 ElevenLabs-krediittiä 31 kaupungille).
+(arvio noin 316 000 merkkiä ≈ 158 000 ElevenLabs-krediittiä: 397 kohdetta + 247 kierrosversiota).
