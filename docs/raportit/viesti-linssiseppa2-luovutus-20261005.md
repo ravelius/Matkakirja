@@ -158,3 +158,16 @@ TYÖTAPA (Päätoimittaja 23.1x): vika toistetaan ennen korjausta, sitten sama a
      pidon aikana (komento kesken pidon): vika = kameran lat/lon/km/kall muuttuu selvästi (yli ISS:n oman liikkeen,
      ~0,07°/s 1×:llä); korjaus = ennallaan. Korjauksen läsnäolo: `astro kyyti pallolukko` → "pallo (lukittu|auki)" (vain 146:ssa).
   3) Veto + pito riittää; kahden sormen ele vain lisävarmistukseksi.
+
+## 6.10. klo 08.3x — juliste E v3 ja pallolukko (viestit taas tauolla)
+- Juliste proto-haara linssiseppa2/iss-kamera-juliste @ a3fd4d94 (EI käännetty): E v3 -asettelu (41658bec), tarkka aineisto
+  (b45dd8b2: budjettiarvio mosaiikin jälkeen, raja 100 Mt; filmi + ilmavoima 3,5; ohjaamo näkyviin haun ajaksi), kehitys
+  (81cedf76: paikallinen kontrasti, sinisyys, hehku; halo kaarisini 1,2 + syvä 1), a3fd4d94: SUOMENLAHTI polygonista, nimen varjo,
+  GIBS-pilvet kuvan hetkeltä. Stillit d06ffe2c:llä (b45dd8b2): lokit/linssiseppa2-juliste-b45dd8b2/kuvat/20261006-052215.jpg
+  (Helsinki 21.6. 17 UTC, z6–9 mosaiikista, 1,1 Mt; 52 mm, 869 km → ~220 m/px, eli 10 m ei näy tällä etäisyydellä) ja 052429.jpg
+  (Manaus 202 Mt: haku 100 + datattomien kiilojen varakuvat 102 → raja ylittyy, ehdotus: varakuvat budjettiin).
+  Helsingissä lokakuun GIBS-pilvet harmaana laattana → a3fd4d94 hakee pilvet kuvan päivältä. Seuraavaksi käännös + Helsinki ~5 min.
+- Pallolukko 2c2ad7ac → juna 147 (Päätoimittaja). Pelikoodarin A/B ei toistanut vikaa yhdellä sormella: Cupolassa (Ikkuna) yhden
+  sormen veto oli estetty jo ennen (CupolaVeto: YhdenSormenVetoMuualla = cupola) → vika on kahden sormen eleessä (nipistys/kierto)
+  ohjaamossa. Tilarivit ristissä = ruudun viive (EleetMuualla päivittyy seuraavassa ruudussa) → korjattu 7cc8f2be
+  (linssiseppa2/ohjaamo-kosketus). Kerrottava Pelikoodarille: kahden sormen nipistys pallon päällä ohjaamossa.
