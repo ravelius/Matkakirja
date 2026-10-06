@@ -37,3 +37,13 @@ AbuDhabi: Qasr al-Hosnin todellinen nykyinen maamerkki kolmelta kuvaajalta2019/2
 Katselmuksen kolmeensimmäistä:Juba,Bern,Ngerulmud; katso ennen erän pelikytkentää. Vastaanottokuittaus/katselmus/pelikytkentä odottavat edelleen todentamista. Ei mergeämainiin/versionnostoa/julkaisutoimea.
 
 Molempien paikkalistojen seuraavat25erät etenevät. ToistuvatCommons/Wikidata429:t pysäyttävät tilapäisesti vain uusia viitehakuja: yhteinen hiljainenikkuna19:03:51–19:13:51UTC, ei tunnisteen/reitin vaihtoa; ladatuilla viitteillä generointi ja kaikkivalmiiden R2/postitoimitus jatkuu. Seitsemänlinssinprioriteettitoimitus on jo valmis.
+
+## ERÄ 1 / erä 02: ensimmäiset kolme katselmukseen
+
+Sumatra, Bryssel ja Ljubljana on toimitettu yhtenä 1536×1024 sRGB PNG -kuvana per paikka ja varmennettu julkisella tavuntarkalla R2-luennalla. Manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-02-yksi-kuva-pilotti-20261006.json` sisältää URL:t, avaimet, SHA:t, promptit ja valokuvaviitteiden tekijät/lisenssit.
+
+Esikatselu: https://media.matkakirja.app/julisteet/herokoe/20261006/era02-yksi-kuva-pilotti-esikatselu.jpg
+
+Katso nämä kolme ennen toisen erän pelikytkentää. Loput 22 toimitetaan samassa listajärjestyksessä erän valmistuessa. Katselmointi ja pelikytkentä odottavat kuittausta. Tuotannossa tehdään edelleen vain yksi kuva per paikka.
+
+Wikimedian hakurajoitus jatkui kummassakin sovitussa kokeessa. Uudet viitepyynnöt tauolla asti 19:36 UTC; valmiiden viitteiden tuotanto ja toimitus jatkuvat. Kaikki työntekijät käyttävät jatkossa jaettua vähintään kymmenen sekunnin pyyntöväliä, ja yksi 429 pysäyttää koko ryhmän.
