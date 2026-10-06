@@ -260,7 +260,9 @@ namespace Matkakirja.Natiivi
             if (silmukka == null || Virhe != null || paivitetty == Time.frameCount) return;
             paivitetty = Time.frameCount;
             if (kaupunkiOdottaa) return;   // aloitusvalikko: ei kameraa eikä laattoja (puhetta ei vielä ole)
-            bool loppui = !tauolla && (pcmNyt != null ? pcmNyt.Loppui : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying));
+            // PCM: loppu = kaikki ladattu ja soitettu; varmistus: klippi pysähtyi (ei saa jäädä odottamaan ikuisesti, toisto 16.4x).
+            bool pcmPysahtyi = pcmNyt != null && puhe != null && !puhe.isPlaying && Time.unscaledTime - puheAlkoi > 1f;
+            bool loppui = !tauolla && (pcmNyt != null ? pcmNyt.Loppui || pcmPysahtyi : Time.unscaledTime >= puheLoppuu && (puhe == null || !puhe.isPlaying));
             if (puhuu && loppui)
             {
                 if (pcmNyt != null) { if (pcmNyt.Katkoja > 0) o.Kirjaa($"opas: PCM-virrassa {pcmNyt.Katkoja} katkoa"); pcmNyt = null; if (puhe != null) puhe.Stop(); }
@@ -967,7 +969,7 @@ namespace Matkakirja.Natiivi
         readonly Dictionary<string, PcmVirta> pcmVirrat = new Dictionary<string, PcmVirta>(StringComparer.Ordinal);
         PcmVirta pcmNyt;
         /// <summary>Toisto alkaa, kun virrassa on näin paljon puskuria (s) tai lataus on valmis.</summary>
-        const float PcmPuskuriS = 0.5f;
+        const float PcmPuskuriS = 1.0f;   // Päätoimittaja 16.5x: alku ~1 s varalla (nopea alku), alivuodossa PcmVirta puskuroi ~2 s
 
         /// <summary>PCM-virran lataus: klippi valmiina (klipit[avain]), kun puskuria on PcmPuskuriS; lataus jatkuu taustalla loppuun.</summary>
         IEnumerator LataaPcm(OpasKohde k)
@@ -1065,7 +1067,7 @@ namespace Matkakirja.Natiivi
             if (kertoja && !string.IsNullOrEmpty(avain) && klipit.TryGetValue(avain, out var klippi) && klippi != null && puhe != null)
             {
                 puhe.clip = klippi; puhe.volume = 1f; puhe.Play();
-                puhuu = true; y.Repliikki(true);
+                puhuu = true; y.Repliikki(true); puheAlkoi = Time.unscaledTime;
                 pelaajanToimi = -1f;   // kerronta alkoi: odotus-lausetta ei tarvita
                 pcmNyt = pcmVirrat.TryGetValue(avain, out var v) ? v : null;
                 puheLoppuu = pcmNyt != null ? float.MaxValue : Time.unscaledTime + klippi.length;
@@ -1077,6 +1079,7 @@ namespace Matkakirja.Natiivi
             o.StartCoroutine(TekstiLoppuu(s, k));
         }
         OpasKohde tekstina, aaniOdotus;
+        float puheAlkoi;
         const float AaniOdotusS = 10f;   // #4018: mp3 valmistuu GETissä ~8–9 s tekstin jälkeen (toiveen polku)
 
         IEnumerator OdotaAani(OpasKohde k)

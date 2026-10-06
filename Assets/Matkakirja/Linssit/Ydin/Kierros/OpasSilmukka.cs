@@ -537,7 +537,12 @@ namespace Matkakirja.Linssit.Kierros
         bool virhe;
 
         /// <summary>Puhe loppui (tai sitä ei voitu soittaa).</summary>
-        public void AaniLoppui() => aaniLoppui = true;
+        public void AaniLoppui() { if (!aaniLoppui) hiljaS = 0; aaniLoppui = true; }
+
+        /// <summary>Kertojan äänen lopusta vähintään näin kauan ennen seuraavaa lentoa (Päätoimittaja 16.3x: "+ ~1 s tauko";
+        /// omistaja TF 149: kamera ei saa lähteä ennen kuin lukija on lopettanut).</summary>
+        public const double LoppuTaukoS = 1.0;
+        double hiljaS = double.MaxValue;
 
         /// <summary>
         /// Kerran kehyksessä. aika = monotoninen s; maaKorkeus(kohde) palauttaa maaston korkeuden ellipsoidista (tai NaN,
@@ -547,6 +552,7 @@ namespace Matkakirja.Linssit.Kierros
         {
             if (Vaihe == OpasVaihe.Valmis || Tauolla) return;   // tauko: kerronta, lento ja kierto seis (omistaja TF 144)
             VaiheAika += Math.Max(0, dt);
+            if (hiljaS < double.MaxValue) hiljaS += Math.Max(0, dt);
             if (Luovutti) return;
             ohjausLepoS = PelaajaOhjaa ? 0 : (ohjausLepoS == double.MaxValue ? ohjausLepoS : ohjausLepoS + Math.Max(0, dt));
             if (odotettu != 0) { if (odotusAlku < 0) odotusAlku = 0; odotusAlku += dt; if (odotusAlku > VastausMaxS) { odotettu = 0; Virhe(0, 0); } }
@@ -572,7 +578,7 @@ namespace Matkakirja.Linssit.Kierros
                     break;
                 case OpasVaihe.Puhuu:
                     PysahdysAsento(dt);
-                    if (aaniLoppui && VaiheAika >= TaukoS && Seuraava != null && !OhjausPitaa) AloitaLento(maaKorkeus);
+                    if (aaniLoppui && VaiheAika >= TaukoS && hiljaS >= LoppuTaukoS && Seuraava != null && !OhjausPitaa) AloitaLento(maaKorkeus);
                     else if (aaniLoppui && Seuraava == null && odotettu == 0) { Vaihe = OpasVaihe.Odottaa; VaiheAika = 0; }
                     break;
                 case OpasVaihe.Lentaa:

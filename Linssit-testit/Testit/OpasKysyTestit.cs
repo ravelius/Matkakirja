@@ -186,5 +186,23 @@ namespace Matkakirja.Linssit.Testit
             k.VaihdaPaikka(55.6761, 12.5683, "Kööpenhamina");
             Oleta.Tosi(k.Siirtymassa, "kaupungin valinta samassa kaupungissa: siirtoruutu");
         }
+        // Omistaja TF 149 "lukijan teksti jää kesken": seuraava lento vasta LoppuTaukoS äänen lopun jälkeen, ei kesken äänen.
+        [Testi] static void LentoVastaAanenJaTauonJalkeen()
+        {
+            var s = new OpasSilmukka(new Kuvakulma(55.68, 12.57, 1500, 50, 0, 40));
+            var p = new List<(int n, string t)>();
+            s.Pyyda += (n, t) => p.Add((n, t));
+            s.Aloita("Kööpenhamina");
+            s.Vastaus(p[^1].n, K("A", 55.6760, 12.5700));
+            for (int i = 0; i < 300 && s.Vaihe != OpasVaihe.Puhuu; i++) s.Paivita(0.1, _ => 5);
+            s.Vastaus(p[^1].n, K("B", 55.6800, 12.5900));   // esihaku saapuneelle
+            for (int i = 0; i < 100; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Vaihe == OpasVaihe.Puhuu && s.Nykyinen?.Id == "A", "ääni soi: ei lähdetä, vaikka seuraava on valmis");
+            s.AaniLoppui();
+            for (int i = 0; i < 8; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Vaihe == OpasVaihe.Puhuu, $"alle 1 s äänen lopusta: odotetaan ({s.Vaihe} {s.Nykyinen?.Id})");
+            for (int i = 0; i < 4; i++) s.Paivita(0.1, _ => 5);
+            Oleta.Tosi(s.Vaihe == OpasVaihe.Lentaa && s.Nykyinen?.Id == "B", "tauon jälkeen lento");
+        }
     }
 }
