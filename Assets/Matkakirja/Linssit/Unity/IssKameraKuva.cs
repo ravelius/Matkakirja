@@ -63,7 +63,9 @@ namespace Matkakirja.Natiivi
         // Omistaja 6.10.: "Voisiko tuon ilmakehän halon värjätä voimakkaammin siniseksi"; Päätoimittaja 65fe6316: paksu ylivalottunut
         // valkoinen vyö ja sinertävä maa → sinisyys ennallaan (1; se sinersi myös maan utua ja teki Viron punaruskeista magentaa),
         // ytimen kerroin 0,55 (valkoinen viiva ohuemmaksi) ja syvänsininen hehku 1,5 (vain taivasta vasten, 5–45 km).
-        const float KaariVoima = 6f, KaariHr = 1f, KaariSini = 1f, KaariUtu = 0.8f, KaariYdin = 0.55f, KaariSyva = 1.5f;
+        // Omistajan viite 6.10. (Cupola-kuva): ei valkoista vyötä, ohut vaaleansininen–syaani reuna ja laaja pehmeä sininen mustaan
+        // → kaarivoima 4, ydin 0,3 (maan utu reunalla ~1,8×, ei 5×), syvänsininen 3; valojen katto pitää sävyn (A/B 13.1x).
+        const float KaariVoima = 4f, KaariHr = 1f, KaariSini = 1f, KaariUtu = 0.8f, KaariYdin = 0.3f, KaariSyva = 3f;
 
         static bool KaariOletuksissa() => Avaruus.KuvanKaariVoima == 1f && Avaruus.KuvanHrKerroin == 1f && Avaruus.KuvanSiniKerroin == 1f
             && Avaruus.KuvanUtuKerroin == 1f && Avaruus.KuvanKaariYdin == 1f && Avaruus.KuvanKaariSyva == 0f;
@@ -826,6 +828,7 @@ namespace Matkakirja.Natiivi
                     Valota(kuva);
                     Kehita(kuva);
                     Kontrasti(kuva, KuvanKontrasti);
+                    ValojenKatto(kuva);
                     byte[] j = null;
                     if (k == 0 && IssJuliste.Kaytossa)
                     {
@@ -997,6 +1000,7 @@ namespace Matkakirja.Natiivi
                 Valota(kuva);
                 Kehita(kuva);
                 Kontrasti(kuva, KuvanKontrasti);
+                ValojenKatto(kuva);
                 byte[] jpg = null;
                 if (IssJuliste.Kaytossa)
                 {
@@ -1086,6 +1090,14 @@ namespace Matkakirja.Natiivi
 
         /// <summary>A/B `astro kyyti kuvaa kehitys 0|1`: Kuvankasittely.Kehita (omistaja 6.10.: sinisempi, enemmän wow-efektiä).</summary>
         public static bool Kehitys = true;
+
+        static void ValojenKatto(Texture2D kuva)
+        {
+            if (!Kehitys) return;
+            var data = kuva.GetPixelData<byte>(0); var t = data.ToArray();
+            Kuvankasittely.ValojenKatto(t);
+            data.CopyFrom(t); kuva.Apply(false);
+        }
 
         static void Kehita(Texture2D kuva)
         {

@@ -112,6 +112,23 @@ namespace Matkakirja.Linssit.IssKamera
             }
         }
 
+        /// <summary>
+        /// Valojen pehmeä katto (omistaja 6.10.: "puhkipalaneeseen valkoiseen haloon … upean sinisen gradienttisävyn"; Päätoimittaja:
+        /// kirkkain kohta alle 100 %): suurin kanava yli polven puristetaan tanh-käyrällä ja kaikki kanavat samassa suhteessa, jolloin
+        /// sävy säilyy (sininen kaari ei valkene). Ajetaan viimeisenä S-käyrän jälkeen.
+        /// </summary>
+        public static void ValojenKatto(byte[] rgba, float polvi = 200f, float katto = 250f)
+        {
+            float vara = katto - polvi;
+            for (int o = 0; o < rgba.Length; o += 4)
+            {
+                float m = Math.Max(rgba[o], Math.Max(rgba[o + 1], rgba[o + 2]));
+                if (m <= polvi) continue;
+                float k = (polvi + vara * (float)Math.Tanh((m - polvi) / vara)) / m;
+                rgba[o] = Tavu(rgba[o] * k); rgba[o + 1] = Tavu(rgba[o + 1] * k); rgba[o + 2] = Tavu(rgba[o + 2] * k);
+            }
+        }
+
         /// <summary>Hehku: luminanssi yli kynnyksen sumennetaan säteellä ja lisätään lämpimänä valkoisena.</summary>
         public static void Hehku(byte[] rgba, int w, int h, int kynnys, int sade, float voima)
         {

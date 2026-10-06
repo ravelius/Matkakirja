@@ -44,5 +44,15 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(k[(15 * w + 17) * 4] > 60, "kimalluksen viereen hehku");
             Oleta.Sama((byte)60, k[(2 * w + 2) * 4], "kaukana ei hehkua");
         }
+
+        [Testi]
+        static void ValojenKattoSailyttaaSavyn()
+        {
+            var k = Tasainen(1, 1, 180, 230, 255); Kuvankasittely.ValojenKatto(k);
+            Oleta.Tosi(k[2] < 250 && k[2] > 225, $"kirkkain alle katon: {k[2]}");
+            Oleta.Tosi(k[0] < k[1] && k[1] < k[2], $"sininen sävy säilyy: {k[0]},{k[1]},{k[2]}");
+            var t = Tasainen(1, 1, 60, 90, 150); Kuvankasittely.ValojenKatto(t);
+            Oleta.Sama((byte)150, t[2], "tummat ennallaan");
+        }
     }
 }
