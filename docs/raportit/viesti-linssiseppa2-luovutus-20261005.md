@@ -176,3 +176,8 @@ TYÖTAPA (Päätoimittaja 23.1x): vika toistetaan ennen korjausta, sitten sama a
   karttanostot/20260926/. LasiZoom 1,3 (IssKyyti.cs, LS1:n tiedosto) suurentaa sen → pehmeä. Tarkempi (≥ 2,6× = 3136 × 6817 /
   3994 × 7103) vaatii Codexin uuden toimituksen tai uudelleenpiirron (generointi omistajan luvalla). iPad: LasiZoom pienemmäksi
   (esim. 1,15) vain iPadilla (CupolaKerros.HaeKuvat ipad-tunnistus) – LS1:n kuittaus.
+- Täysi vauhti (omistaja 09.0x, juna 147/148): proto-haara linssiseppa2/iss-nopeus @ 7a995ada (worktree wt/proto-linssiseppa2-nopeus,
+  masterin 9544a1b4 päällä; ei käännetty). AstronauttiLinssi.AsetaKaasuPortaaton(double) + KaasuKerroin (Natiivi-UI:n kahva);
+  Nopeustehoste: Voima 0 (< ~160×) … 1 (1000×), Lens Distortion 0,10 + Chromatic Aberration 0,45 (vain reunat), tärinä
+  projektion siirtona ~0,12 % ruudusta; Natiivi-UI lukee Nopeustehoste.Tarina (−1…1) ja Voima paneelitärinään (sama ajastus).
+  Testit 696/444/415, unity-tarkistus 0. Video 1× → 1000× Päätoimittajalle käännöksen ja simuvuoron jälkeen.
