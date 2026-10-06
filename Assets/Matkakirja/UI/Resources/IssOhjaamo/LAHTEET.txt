@@ -1,4 +1,4 @@
-# ISS-ohjaamon ohjauspaneeli v3 (Linnanrakentaja 6.10.2026)
+# ISS-ohjaamon ohjauspaneeli v3b (Linnanrakentaja 6.10.2026)
 
 Omistajan palaute 6.10. klo 08.3x (Päätoimittajan välittämä): rummun laatikko pois, kaasun vipu ja asteikko leveämmiksi niin,
 että 1000× ei ole reunassa, kameranapille enemmän tilaa, LCD selvästi isommaksi ja kaikki välit äärireunat mukaan lukien yhtä
@@ -18,3 +18,12 @@ leveiksi. Lisäys klo 08.4x: joystick oikean käden puolelle ja nopeuskahva vase
   {x,y,w,h} on tyhjä pinta LAAJA/TELE-LCD-napeille kameranapin yläpuolella.
 - **Toisto:** lahde/tekstuurit.py → lahde/tuotanto.py (blender -b --python tuotanto.py -- ulos.png osa:asento; osa mitat → mitat.json)
   → lahde/jalki.py <kansio>. tarkistus-kooste.png = pohja + osat + simuloitu LCD-teksti (ei peliin).
+
+## v3b (omistaja 6.10. klo 11.1x)
+- Numerot 1×–1000× poistettu, ja pykäläasteikko jää. Pykälät ovat vivun JUUREN paikassa uralla, eivät nupin (tuotanto.py DY = 0).
+- LCD on vielä isompi: lasi 1,162 × 0,58 (v3 0,92 × 0,54), lcd 135,8 × 51,6 pt.
+- Kulmaruuvit ovat 0,10 yksikön päässä reunoista (v3 0,07). Ison LCD:n kehys on ruuvien sisäpuolella. Kuvaan lisättiin 1,5 %:n marginaali
+  joka reunaan, joten koko on 374 × 129,33 pt (v3 374 × 122). KIIHDYTYS-otsikko on hieman oikealla, ettei kulmaruuvi osu siihen.
+- Välit ovat 28–29 px @3x uloimmista näkyvistä osista (tarkistus-kooste.png, mittakaista alimpana).
+- ohjaamo.json: kaasu.pykalat ja uusi kaasu.ura {yla, ala} ovat vivun juuren y-arvoja pt:nä kaasu-laatikon yläreunasta (Natiivi-UI 6.10.:
+  portaaton kahva liikkuu ura.yla–ura.ala logaritmisesti).

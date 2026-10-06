@@ -484,7 +484,7 @@ namespace Matkakirja.Natiivi
         // valinnainen "sauvaKeski":{x,y} piirretyn sauvan keskipiste osuutena sauvan laatikosta (oletus 0.36, 0.5)}. Paneeli skaalautuu
         // leveyden mukaan (korkeus koon suhteessa) ja osat sijoitetaan ankkureihin; ilman tiedostoa piirretty asettelu kuten ennen.
 
-        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, RumpuKolo, Kaasu, LcdIso, LcdIsoKuva; public float[] Pykalat; public float MiniSlice; public Rect Objektiivi; public Vector2? SauvaKeski; }
+        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, RumpuKolo, Kaasu, LcdIso, LcdIsoKuva; public float[] Pykalat; public float MiniSlice; public Rect Objektiivi; public Vector2? SauvaKeski; public Vector2? Ura; }
         Ankkurit ankkurit;
 
         static Rect LueRect(Dictionary<string, object> o, string avain)
@@ -514,6 +514,10 @@ namespace Matkakirja.Natiivi
                 var sk = Rakenne.Olio(MiniJson.Kentta(o, "sauvaKeski"));
                 if (sk != null && MiniJson.Kentta(sk, "x") is object sx && MiniJson.Kentta(sk, "y") is object sy)
                     a.SauvaKeski = new Vector2(Convert.ToSingle(sx, System.Globalization.CultureInfo.InvariantCulture), Convert.ToSingle(sy, System.Globalization.CultureInfo.InvariantCulture));
+                // v3b (Linnanrakentaja 6.10.): kaasu.ura {yla, ala} = vivun juuren liikealue (portaaton kahva, juna 148).
+                var ura = Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "kaasu")), "ura"));
+                if (ura != null && MiniJson.Kentta(ura, "yla") is object uy && MiniJson.Kentta(ura, "ala") is object ua)
+                    a.Ura = new Vector2(Convert.ToSingle(uy, System.Globalization.CultureInfo.InvariantCulture), Convert.ToSingle(ua, System.Globalization.CultureInfo.InvariantCulture));
                 var p = Rakenne.Lista(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "kaasu")), "pykalat"));
                 if (p != null && p.Count == Kertoimet.Length) { a.Pykalat = new float[p.Count]; for (int i = 0; i < p.Count; i++) a.Pykalat[i] = Convert.ToSingle(p[i]); }
                 return a.Koko.width > 0 && a.Koko.height > 0 ? a : null;

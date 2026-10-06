@@ -1,61 +1,66 @@
 {
  "koko": {
   "w": 374.0,
-  "h": 122.0
+  "h": 129.33
  },
- "huom": "Linnanrakentaja 6.10.2026, ISS-ohjaamo v3 (omistaja 6.10. klo 08.3x: rumpu pois, kaasu leveämpi ja vasemmalle, LCD isompi, kaasu vasemmalla ja sauva oikealla, tasaiset välit 9,6 pt). Laatikot pt:nä pohja.png:n vasemmasta yläkulmasta; kuvat @3x samassa mittakaavassa. Osuma-alat koodissa.",
+ "huom": "Linnanrakentaja 6.10.2026, ISS-ohjaamo v3b (omistaja 11.1x: numerot pois, asteikko vivun juureen, LCD isompi, ruuvit sisemmäs, kuvaan marginaali; v3 08.3x: rumpu pois, kaasu leveämpi ja vasemmalle, LCD isompi, kaasu vasemmalla ja sauva oikealla, tasaiset välit 9,6 pt). Laatikot pt:nä pohja.png:n vasemmasta yläkulmasta; kuvat @3x samassa mittakaavassa. Osuma-alat koodissa.",
  "sauva": {
-  "x": 280.67,
-  "y": 22.0,
-  "w": 93.33,
-  "h": 84.0
+  "x": 278.0,
+  "y": 26.67,
+  "w": 91.33,
+  "h": 81.67
  },
  "kamera": {
-  "x": 226.0,
-  "y": 42.33,
-  "w": 66.0,
-  "h": 42.0
+  "x": 224.67,
+  "y": 46.67,
+  "w": 64.33,
+  "h": 40.67
  },
  "kaasu": {
-  "x": 7.67,
-  "y": 30.0,
-  "w": 49.0,
-  "h": 78.67,
+  "x": 12.67,
+  "y": 28.33,
+  "w": 48.0,
+  "h": 75.67,
   "pykalat": [
-   57.75,
-   40.72,
-   23.69,
-   6.66
-  ]
+   62.3,
+   45.77,
+   29.24,
+   12.7
+  ],
+  "ura": {
+   "yla": 12.7,
+   "ala": 62.3
+  },
+  "huom": "pykalat ja ura = vivun juuren y (pt kaasu-laatikon yläreunasta); portaaton kahva liikkuu ura.yla–ura.ala logaritmisesti"
  },
  "lcd": {
-  "x": 92.91,
-  "y": 38.09,
-  "w": 109.71,
-  "h": 49.17
+  "x": 66.33,
+  "y": 40.52,
+  "w": 135.8,
+  "h": 51.55
  },
  "lcdIso": {
-  "x": 21.19,
-  "y": 12.68,
-  "w": 331.61,
-  "h": 92.97
+  "x": 33.28,
+  "y": 20.61,
+  "w": 307.43,
+  "h": 84.54
  },
  "lcdIsoKuva": {
-  "x": 0.0,
-  "y": 0.0,
-  "w": 374.0,
-  "h": 122.0
+  "x": 4.33,
+  "y": 4.0,
+  "w": 365.33,
+  "h": 121.0
  },
  "sauvaKeski": {
-  "x": 0.455,
-  "y": 0.463,
+  "x": 0.451,
+  "y": 0.464,
   "huom": "piirretyn sauvan keskipiste osuutena sauva-laatikosta"
  },
  "objektiivi": {
-  "x": 220.12,
-  "y": 17.01,
-  "w": 52.36,
-  "h": 22.59,
+  "x": 219.13,
+  "y": 21.96,
+  "w": 50.83,
+  "h": 21.94,
   "huom": "tyhjä pinta LAAJA/TELE-LCD-napeille kameranapin yläpuolella"
  },
  "mini": {
