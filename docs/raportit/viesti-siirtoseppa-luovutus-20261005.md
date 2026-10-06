@@ -1,6 +1,48 @@
-# Siirtosepän luovutus 5.–6.10.2026 — TILA KLO 16.2x (Opus 5.5, high)
+# Siirtosepän luovutus 5.–6.10.2026 — TILA KLO 22.xx, TILINVAIHTO (Opus 5.5, high)
 
-## Nyt (6.10. 16.2x)
+## ALOITUSVIESTI SEURAAJALLE
+
+Olet Siirtoseppä (Unity-proto: linna, opas-kuva, ääni). Lue tämä osio, sitten CLAUDE.md ja Raamatun Ydinajatus kohta 2.
+Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisijan "KÄÄNNÖS NYT", simu vain "SIMU NYT"
+(oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
+Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
+
+## Nyt (6.10. 22.xx) — avoimet erät
+
+1. **Linna-149** (wt/proto-siirtoseppa-l149, siirtoseppa/linna-149 **183866ed**, juna 152, EI todennettu): saapuminen.loppu
+   "kertoja" (testi), esittelyn tauko II/▶, jakso.nimet nimilappuina, panorointi käännetty, iPad-vaaka + AutoRotation, Codex-
+   kasvot pois, kanto/kanto_idle. Käännös 7c62beca lokit/siirtoseppa-alo/app-183866ed. Todennus: ajo-linna-esittely.sh
+   (ENNEN = lokit/natiiviseppa-app-150-ea457278 tuotannon peilillä, JÄLKEEN = 7c62beca + PEILI feea163c4ed34d5f; tauko-tap II
+   ☰:n vieressä, panorointiveto kierroksen jälkeen), sitten Linnanrakentajan ajo-esineet.sh (peili bba43057) samalla vuorolla.
+   jakso.kuva luetaan, näyttö tekemättä (kuva puuttuu Codexilta).
+2. **FACEIT** (wt/proto-siirtoseppa-face, siirtoseppa/faceit **55ad6594**, linna-149:n päällä, juna 152, HYVÄKSYTTY, ei
+   todennettu): glb morph → blend shapes, Visemit (Linnanrakentajan arvot), räpäytys, aanet[id].kohdistus. Käännös 0960214b
+   (app-55ad6594). Video: peili 94a0df22044155fa, kappeli (vouti 9,4–16,1 s ja 25,2–29,0 s) Päätoimittajalle; sitten
+   Natiiviseppä iPad ABAB (raja 0,3 ms/kehys).
+3. **Kaupunkiäänimaisema** (wt/proto-siirtoseppa-aani, siirtoseppa/aanimaisema **c2f93576**, masterin 3ac88234 + LS1:n silta
+   73a0379f mergettynä): Ydin KaupunkiAanimaisema (14 kerrosta ml. rautatie, max 8, 2,5 s liuku, korkeus/alipäästö/tuuli,
+   suhina, vuorokausi, väistö −9 dB, kellot) + AaniKartta (Pelikoodarin aanikartta-v1/<id>.json, bilineaarinen, kirkot) +
+   Unity KaupunkiAanimaisemaSoitin (vahti lukee OpasSovitin.KaupunkiNakyvissa/KaupunkiKamera/OpasAaniSoi; silmukat
+   aanimaisema-v1/<kerros>-01.mp3 file://-suoratoistona; /opas/aineistot-indeksi). Testit 767/767, Unity 0. ODOTTAA:
+   Pelikoodarin Pariisin kartta + silmukat → todistustallenne (lento, nousu, nopea siirto, natiivikaappaus) Päätoimittajalle →
+   yhteinen merge-pyyntö Natiivisepälle (+73a0379f). Vaihda Tunnus → Kierros.KaupunkiTiet.Tunnus, kun LS1:n 12053ccc on masterissa.
+4. **COZY: Stylized Weather 3** (wt/proto-siirtoseppa-cozy, siirtoseppa/cozy **e9729420**, masterin päällä): paketti
+   Packages/com.distantlands.cozy.core v3.6.23 ilman Samples~/Content/Demo, LAHTEET.md; lähde _lahteet/unity-paketit-siirtoseppa/.
+   EI käännetty (ensimmäinen tuonti + shaderit). Sovittu LS1:n kanssa: yksi tuonti, profiilit Assets/Matkakirja/Saa/ ("linna",
+   "kaupunki"), vuorokausi KaupunkiValosta. Linnan sää/pilvet tekemättä; iPad-mittaus + kuvapari ennen junaa.
+5. **Katselmoinnit LS1:lle:** kuva-150 e59c9ca0 hyväksytty; ecd0ea94 (kehys lähemmäs) hyväksytty ehdoin (kuvaparit Praha);
+   b8b1da9f (korostus + vinjetti) 3 huomiota (post-ketju junan oletuksen ohi, jaettu vinjetti välkkyy, Find-haku).
+6. **Muut:** Steam Audio keittiö/piha (wt/proto-siirtoseppa-steam, peili 2147deefd414e4b6) ja Final IK (fik) ennallaan.
+   Lupajärjestelmä esti lokien poiston: lokit/siirtoseppa-opas-144d, -opas-jalkeen, -kap143…145pk, siirtoseppa-alo/ennen/t-*.png.
+
+## Valmiit tänään (6.10.)
+
+- Aloitus/Pulu (b6d02f9a juna 147, fcc69f41 ohjeet + valintavihje ilmoitusriviksi), Pulu-chat 7d35f7d9 (juna 149: nosto ei
+  sulje, matala Kysy, II/▶, pin yläreunaan). Kuvaparit lokit/siirtoseppa-alo/parit/1–10.
+
+## Aiempi tila 16.2x
+
+### (vanha) 16.2x
 
 - **Odottaa hiljaista D5900D45-vuoroa ~17.10** (TF 150 ensin): käännökset valmiina lokit/siirtoseppa-alo/app-183866ed (7c62beca,
   linna-149) ja app-55ad6594 (0960214b, FACEIT). Ajo: tyokalut/siirtoseppa-ajot/ajo-linna-esittely.sh (UDID APP L N PEILI KESTO).
