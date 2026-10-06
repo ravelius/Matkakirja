@@ -114,7 +114,7 @@ namespace Matkakirja.Linssit.IssKamera
     public sealed class S2Maailma
     {
         /// <summary>Indeksin versio (polku ja laitteen välimuistin tiedostonimet): vaihto vain tästä, vanha välimuisti ei jää käyttöön.</summary>
-        public const string Versio = "v2e";
+        public const string Versio = "v2f";   // Karttaseppä 6.10.: Meksikon 11RQQ:n varakuvan sävy, vino meriraja (vasta junan 147 VIE:n jälkeen)
         public const string Osoite = "https://media.matkakirja.app/linssit/astronautin-kamera/s2-indeksi/" + Versio + "/maailma.json";
         public string Juuri, Merkinta;
         public readonly List<string> Etusija = new List<string>();
