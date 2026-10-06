@@ -40,7 +40,7 @@ export async function generate(input,{dryRun=false}={}){
   await put('.planned.json','textdesk-output/planned.json','application/json');
   const response=await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${p.voiceId}?output_format=${p.outputFormat}`,{
     method:'POST',headers:{'xi-api-key':process.env.ELEVEN_API_KEY,'Content-Type':'application/json',Accept:'audio/mpeg'},
-    body:JSON.stringify({text:p.ttsText,model_id:p.model,voice_settings:{stability:p.stability}}),signal:AbortSignal.timeout(180000),redirect:'error',
+    body:JSON.stringify({text:p.ttsText,model_id:p.model,...(String(p.model).includes('multilingual')?{}:{language_code:'fi'}),voice_settings:{stability:p.stability}}),signal:AbortSignal.timeout(180000),redirect:'error',
   });
   assert.ok(response.ok,`Speech generation HTTP ${response.status}; no automatic retry`);
   const bytes=Buffer.from(await response.arrayBuffer());assert.ok(bytes.length>1000&&bytes.length<25000000,'Invalid audio size');

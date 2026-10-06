@@ -1296,6 +1296,7 @@ async function haeApista(puhe, aani, avain, kohde) {
     body: JSON.stringify({
       text: puhe + LOPPUTAUKO,
       model_id: MALLI,
+      ...(String(MALLI).includes('multilingual') ? {} : { language_code: 'fi' }),   // suomi pakotettuna (omistaja 6.10.)
       /*
        * ELEVENLABSIN OMAT OLETUKSET (omistaja 14.9.2026). Vain
        * stability annetaan; similarity_boost, style ja

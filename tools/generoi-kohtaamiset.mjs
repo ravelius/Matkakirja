@@ -126,7 +126,7 @@ for (const id of kaupungit) {
       {
         method: 'POST',
         headers: { 'xi-api-key': avain, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ inputs, model_id: MALLI, settings: { stability: STABILITY } }),
+        body: JSON.stringify({ inputs, model_id: MALLI, ...(String(MALLI).includes('multilingual') ? {} : { language_code: 'fi' }), settings: { stability: STABILITY } }),
         signal: AbortSignal.timeout(180000),
       },
     );

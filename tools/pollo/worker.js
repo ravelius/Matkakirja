@@ -291,6 +291,9 @@ async function kutsuElevenPuhetta(env, { teksti, malli, nopeus, aani = PULU_ELEV
       body: JSON.stringify({
         text: teksti,
         model_id: malli,
+        // Suomi pakotettuna (omistaja 6.10.: lyhyet leikkeet ääntyivät väärin, kun malli arvasi kielen). Dokumentaatio:
+        // ei-tuettu kielikoodi ohitetaan; multilingual_v2 ei tue kenttää lainkaan, joten sille sitä ei lähetetä.
+        ...(String(malli).includes('multilingual') ? {} : { language_code: 'fi' }),
         voice_settings: {
           ...(vakaus !== null ? { stability: vakaus } : {}),
           ...(tyyli !== undefined ? { style: tyyli } : {}),
