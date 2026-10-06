@@ -423,6 +423,9 @@ namespace Matkakirja.Natiivi
             float w = Mathf.Min(Enintaan, turvanLeveys - 24f);
             paneeli.style.width = w;
             Juuri.style.left = 0; Juuri.style.right = 0;
+            // VAAKA (omistaja 6.10. 08.3x: "vaaka-asennossa koko ohjain saisi olla ihan kiinni alareunassa"): ei väliä turva-alueen
+            // alareunaan (pystyssä USS:n --tk-vali-s).
+            Juuri.style.bottom = Screen.width > Screen.height ? 0f : StyleKeyword.Null;
             if (ankkurit != null) AsetteleKuvat(w);
             else
             {
