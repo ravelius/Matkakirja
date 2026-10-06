@@ -596,6 +596,8 @@ namespace Matkakirja.Linssit.Kierros
         public readonly OpasOhjaus Ohjaus = new OpasOhjaus();
         public (double kierto, double korkeus, double etaisyys) Tapit;
         public bool PelaajaOhjaa;
+        /// <summary>Kuva koko ruudulla (Kuvasuurennos): pysähdyksen kierto ja dolly seis; puhe jatkuu.</summary>
+        public bool KameraSeis;
         /// <summary>Seuraava lento on pelaajan toiveen tai paikan vaihdon seuraus (siltalause soitettiin jo valinnasta).</summary>
         bool toiveesta;
         public const double OhjausTaukoS = 4;
@@ -606,7 +608,7 @@ namespace Matkakirja.Linssit.Kierros
         void PysahdysAsento(double dt)
         {
             Ohjaus.Paivita(dt, Tapit.kierto, Tapit.korkeus, Tapit.etaisyys);
-            if (!Ohjaus.Aktiivinen) kierto += dt;   // aika saapumisesta: ei nollaudu Puhuu ↔ Odottaa eikä "kerro lisää" -kappaleessa
+            if (!Ohjaus.Aktiivinen && !KameraSeis) kierto += dt;   // kuvasuurennoksen ajan kamera seis (omistaja 12.1x)   // aika saapumisesta: ei nollaudu Puhuu ↔ Odottaa eikä "kerro lisää" -kappaleessa
             // Ohjauksen etäisyysrajat ovat perusasennon suhteisia (Siirtoseppä bfd0b8af), joten kaupungin 5 km:n yläkuva säilyy.
             Asento = Ohjaus.Sovella(OpasKuvaus.Pysahdyksella(NykyinenKehys, kierto), NykyinenKehys.MaaM);
         }
