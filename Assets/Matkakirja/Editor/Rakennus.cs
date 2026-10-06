@@ -882,6 +882,35 @@ namespace Matkakirja.Editori
             projekti.WriteToFile(projektiPolku);
         }
 
+        /// <summary>Laitekäännösten oikeustiedosto Xcode-projektissa (Unity-iPhone-kohteen CODE_SIGN_ENTITLEMENTS).</summary>
+        const string OikeusTiedosto = "Unity-iPhone/Matkakirja.entitlements";
+
+        /// <summary>
+        /// MUISTIKATTO (omistajan iPad Pro iPad17,1 6.10.2026: opas kaatui jetsamiin, per-process-limit 5,36 Gt;
+        /// lokit/JetsamEvent-2026-10-06-143323.ips): com.apple.developer.kernel.increased-memory-limit nostaa iPadOS:n
+        /// prosessikohtaista muistirajaa laitteilla, joilla muistia on enemmän (Cesiumin oma katto on Linssisepän).
+        /// Vain laitekäännöksiin (simulaattoria ei allekirjoiteta). App ID:llä pitää olla sama capability (Increased Memory
+        /// Limit; Developer-portaali tai ASC-API bundleIdCapabilities INCREASED_MEMORY_LIMIT), muuten allekirjoitus hylkää profiilin.
+        /// </summary>
+        [UnityEditor.Callbacks.PostProcessBuild(196)]
+        static void MuistiOikeus(BuildTarget kohde, string polku)
+        {
+            if (kohde != BuildTarget.iOS || PlayerSettings.iOS.sdkVersion != iOSSdkVersion.DeviceSDK) return;
+            string tPolku = Path.Combine(polku, OikeusTiedosto);
+            var oikeudet = new UnityEditor.iOS.Xcode.PlistDocument();
+            if (File.Exists(tPolku)) oikeudet.ReadFromFile(tPolku);
+            oikeudet.root.SetBoolean("com.apple.developer.kernel.increased-memory-limit", true);
+            Directory.CreateDirectory(Path.GetDirectoryName(tPolku));
+            oikeudet.WriteToFile(tPolku);
+            string projektiPolku = UnityEditor.iOS.Xcode.PBXProject.GetPBXProjectPath(polku);
+            var projekti = new UnityEditor.iOS.Xcode.PBXProject();
+            projekti.ReadFromFile(projektiPolku);
+            if (projekti.FindFileGuidByProjectPath(OikeusTiedosto) == null) projekti.AddFile(OikeusTiedosto, OikeusTiedosto);
+            projekti.SetBuildProperty(projekti.GetUnityMainTargetGuid(), "CODE_SIGN_ENTITLEMENTS", OikeusTiedosto);
+            projekti.WriteToFile(projektiPolku);
+            Debug.Log("MATKAKIRJA: oikeus increased-memory-limit → " + OikeusTiedosto);
+        }
+
         [UnityEditor.Callbacks.PostProcessBuild(200)]
         static void TestFlightPlist(BuildTarget kohde, string polku)
         {
