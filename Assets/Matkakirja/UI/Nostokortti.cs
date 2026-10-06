@@ -57,6 +57,7 @@ namespace Matkakirja.Natiivi
         string pinId;
         bool pienennetaan;
         string PinOmistaja => nosto?.Id == null ? null : "nosto:" + nosto.Id;
+        static string PinOmistajaNostolle(Nosto n) => n?.Id == null ? null : "nosto:" + n.Id;
         /// <summary>Tämä kortti näyttää pinnatun noston täysikokoisena.</summary>
         bool PinNakyvissa => Auki && Pinnaus.Nykyinen != null && Pinnaus.Nykyinen.Omistaja == PinOmistaja && !Pinnaus.Pienena;
 
@@ -416,7 +417,9 @@ namespace Matkakirja.Natiivi
             Mitoita();
             // Kohdekortti (omistaja 1.10.2026 kokeiluun, loki f344f1034): suoraan koko korttiin ilman kuva edellä -vaihetta.
             // AUTO: suoraan koko korttiin ja luentaan (kuva edellä -vaihe ohitetaan).
-            if (n.Kuvat.Count > 0 && n.Laji != NostoLaji.Kohde && !Nostoselain.Auto) Vaihe1(); else Vaihe2();
+            // Pinnatun noston palautus suoraan koko korttiin: luenta kiinnittyy takaisin samaan kohtaan (KortinLukija.Aseta).
+            bool pinnattu = Puhe.Instanssi?.Pinnattu != null && Puhe.Instanssi.Pinnattu == PinOmistajaNostolle(n);
+            if (n.Kuvat.Count > 0 && n.Laji != NostoLaji.Kohde && !Nostoselain.Auto && !pinnattu) Vaihe1(); else Vaihe2();
             AvaaKerros();
             EsihaeLuennanAlku(n);
             selain.Paivita(valo);
@@ -782,7 +785,7 @@ namespace Matkakirja.Natiivi
                 : n.Laji == NostoLaji.Takynosto ? "Kuuntele kortti"
                 : n.Laji == NostoLaji.Syvennys ? "Kuuntele tarina"
                 : n.Laji == NostoLaji.Maakunta ? "Kuuntele: " + (n.Otsikko ?? "")
-                : "Kuuntele hetki");
+                : "Kuuntele hetki", PinOmistajaNostolle(n));
 
             // Löydös 133: kaiutin ylärivin oikeaan päähän (oikean yläkulman ✕ ja sen viereinen kaiutin poistuivat).
             // NAPIT NÄKYVÄT HETI (omistaja 28.9.2026, TF 1.0.34: "käyttäjän pitää vierittää lappua hieman alaspäin, jotta

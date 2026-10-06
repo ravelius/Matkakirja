@@ -120,6 +120,12 @@
     justify-content: center;
 }
 
+/* Aina vaalea (omistaja 6.10. 23.0x: "muuttui jostain syystä tummaksi. Saisi olla aina vaalea"): palkki on nappi, ja
+ * .mk-nappi:active värjäsi sen tummaksi (#43331f) painalluksen ajaksi tai jäi päälle; painallus vain pergamenttina. */
+.mk-nappi.mk-pinpalkki:active {
+    background-color: var(--tk-pergamentti);
+}
+
 .mk-pinpalkki__rivi {
     flex-direction: row;
     align-items: center;
