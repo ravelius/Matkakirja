@@ -93,7 +93,7 @@ namespace Matkakirja.Natiivi
             public string EleNimi; public double EleAlku; // kertaeleen (ele_<ele>) vuoro ja alkuhetki
             // Eleet puheen tahdissa (7.10.): ajoitettu kertaele, kuulijan nyökkäys, puhujan katseen kohde, vakaa siemen.
             public string AjoitettuEle; public double AjoitettuAlku = double.NegativeInfinity; public int EleLaskuri;
-            public double NyokkaysAlku = double.NegativeInfinity; public int NyokkaysLaskuri;
+            public double NyokkaysAlku = double.NegativeInfinity; public int NyokkaysLaskuri; public string KuulijaEle;
             public string KatseKohde;
             public int Siemen = int.MinValue;
         }
@@ -167,8 +167,11 @@ namespace Matkakirja.Natiivi
                         if (m == puhuja || m.TilaId != PuhujanTila || m.Sekoitin == null || !m.Nakyvissa || m.Hahmo.Reitti != null) continue;
                         int h = (Siemen(m) * 7919 + m.NyokkaysLaskuri++ * 104729) & 0x7fffffff;
                         if (h % 100 >= 65) continue;   // ~2/3 kuulijoista nyökkää, ei kaikki yhtä aikaa
-                        m.NyokkaysAlku = t + 0.1 + (h % 7) * 0.05;
-                        Debug.Log($"MATKAKIRJA linssit: nyökkäys {m.HahmoId} ({(m.Malli.Glb.Animaatio("ele_nyokkays") != null ? "leike" : "pää")}, {lahde})");
+                        // Reaktio: kysymykseen pään kallistus, muuten nyökkäys (2/3) tai kuuntelu (1/3); puuttuva leike → pään nyökkäys.
+                        string r = x.Kysymys ? "ele_kallistus" : h / 100 % 3 == 0 ? "ele_kuuntelu" : "ele_nyokkays";
+                        if (m.Malli.Glb.Animaatio(r) == null) r = "ele_nyokkays";
+                        m.KuulijaEle = r; m.NyokkaysAlku = t + 0.1 + (h % 7) * 0.05;
+                        Debug.Log($"MATKAKIRJA linssit: nyökkäys {m.HahmoId} {(m.Malli.Glb.Animaatio(r) != null ? r : "pää")} ({lahde}{(x.Kysymys ? ", kysymys" : "")})");
                     }
             }
         }
@@ -746,12 +749,13 @@ namespace Matkakirja.Natiivi
                 var aa = e.Malli.Glb.Animaatio(e.AjoitettuEle);
                 if (aa != null && t >= e.AjoitettuAlku && t - e.AjoitettuAlku < aa.Kesto - PuheHaivytysS) leike = e.AjoitettuEle;
             }
-            // Kuulijan nyökkäys leikkeenä (ele_nyokkays), kun hahmo seisoo idlessä; muuten pään nyökkäys PaaKatsessa.
-            if (EleetPaalla && tavoite == "idle" && e.NyokkaysAlku > double.NegativeInfinity)
+            // Kuulijan reaktio leikkeenä (ele_nyokkays/kallistus/kuuntelu), kun hahmo seisoo idlessä; muuten pään nyökkäys PaaKatsessa.
+            if (EleetPaalla && tavoite == "idle" && e.KuulijaEle != null)
             {
-                var na = e.Malli.Glb.Animaatio("ele_nyokkays");
-                if (na != null && t >= e.NyokkaysAlku && t - e.NyokkaysAlku < na.Kesto - HaivytysS) leike = "ele_nyokkays";
+                var na = e.Malli.Glb.Animaatio(e.KuulijaEle);
+                if (na != null && t >= e.NyokkaysAlku && t - e.NyokkaysAlku < na.Kesto - PuheHaivytysS) leike = e.KuulijaEle;
             }
+            if (e.KuulijaEle != null && !ensimmainen && (leike == e.KuulijaEle || e.Sekoitin.Nykyinen == e.KuulijaEle)) haivytys = PuheHaivytysS;
             // Ele (vuorot[].ele) → puhe → idle: puuttuva eleleike ei pysäytä puhetta.
             if (!e.Sekoitin.Toista(leike, haivytys) && !(puheTaiEle && e.Sekoitin.Toista(Leike(m3, "puhe"), haivytys)))
                 e.Sekoitin.Toista(Leike(m3, "idle"), haivytys);
@@ -776,7 +780,7 @@ namespace Matkakirja.Natiivi
                 tr.localScale = new Vector3(s.S[i * 3], s.S[i * 3 + 1], s.S[i * 3 + 2]);
             }
             PaivitaSijainti(e, t);
-            PaaKatse(e, t, e.Sekoitin.Nykyinen == "ele_nyokkays");
+            PaaKatse(e, t, e.KuulijaEle != null && e.Sekoitin.Nykyinen == e.KuulijaEle);
         }
 
         /// <summary>
