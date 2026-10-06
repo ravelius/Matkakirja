@@ -174,6 +174,7 @@ namespace Matkakirja.Natiivi
             y.MusiikkiPitoon(true);
             y.Peite(true);
             if (!kaupunkiOdottaa) o.StartCoroutine(PeitePois());   // simu 18.39: peite jäi päälle ja tummensi koko näkymän
+            else y.Peite(false);   // aloitusvalikko piirtää oman tumman pintansa; peite himmensi sen ja esti napautukset (simu 6.10. 17.2x, juna 151)
             if (puhe == null)
             {
                 puhe = o.gameObject.AddComponent<AudioSource>();
@@ -869,8 +870,9 @@ namespace Matkakirja.Natiivi
                 yield return null;
             }
             o.Kirjaa($"opas: siltalauseet {ok}/{siltalauseet.Maara} ladattu {Time.realtimeSinceStartup - t0:F1} s:ssa");
-            // Avauksen lause, jos kerronta ei vielä soi (worker suunnittelee ensimmäistä pysähdystä).
-            if (silmukka != null && !puhuu) Silta(OpasSiltalauseet.Aloitus, false);
+            // Avauksen lause, jos kerronta ei vielä soi (worker suunnittelee ensimmäistä pysähdystä). Ei aloitusvalikossa: kertoja
+            // puhuu vasta kaupungin tai suosikin valinnasta (omistaja TF 149, simu 17.2x: "Lähdetään kierrokselle" valikossa).
+            if (silmukka != null && !puhuu && !kaupunkiOdottaa && silmukka.Aloitettu) Silta(OpasSiltalauseet.Aloitus, false);
         }
 
         /// <summary>
