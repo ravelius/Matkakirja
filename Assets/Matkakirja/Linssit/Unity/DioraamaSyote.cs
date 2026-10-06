@@ -147,8 +147,10 @@ namespace Matkakirja.Natiivi
                 if (liikeSitenAlusta >= NapautusKynnysPx)
                 {
                     Vector2 d = p - aloitusKohta;
-                    kokonaisDa = RajaaDa(vetoAlkuDa - d.x / Mathf.Max(1, Screen.width) * AstettaLeveydella);
-                    kokonaisDk = Mathf.Clamp((float)vetoAlkuDk + d.y / Mathf.Max(1, Screen.height) * AstettaKorkeudella, -10f, 10f);
+                    // Maisema seuraa sormea (omistaja 6.10.2026: "linnan panorointi menee sormea liikuttaessa juuri väärään suuntaan …
+                    // sekä sivuille että ylös-alas"): molemmat akselit käännetty.
+                    kokonaisDa = RajaaDa(vetoAlkuDa + d.x / Mathf.Max(1, Screen.width) * AstettaLeveydella);
+                    kokonaisDk = Mathf.Clamp((float)vetoAlkuDk - d.y / Mathf.Max(1, Screen.height) * AstettaKorkeudella, -10f, 10f);
                     // Irrotusnopeus (°/s) pehmennettynä muutaman kehyksen yli; atsimuutin kääre ei hyppää (pieni ero).
                     float dtv = Mathf.Max(Time.unscaledDeltaTime, 1e-3f);
                     double muutos = Math.IEEERemainder(kokonaisDa - edellinenDa, 360.0);
