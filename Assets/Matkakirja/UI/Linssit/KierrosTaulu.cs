@@ -36,7 +36,8 @@ namespace Matkakirja.Natiivi
 
             otsikko = Rakenne.El("mk-astroavaus__otsikko--haipyy", yla, PickingMode.Ignore);
             otsikko.style.position = Position.Absolute;
-            otsikko.style.left = 28; otsikko.style.top = 24;
+            // Vasemman yläkulman vuorokausinapin alle (Natiivi-UI juna 152: otsikko osui napin päälle): 24 + nappi 44 + väli 8.
+            otsikko.style.left = 28; otsikko.style.top = 76;
             otsikko.style.right = 110;   // oikean yläkulman napit (kuvakytkin, ☰) ~100 pt (Natiivi-UI 5.10.)
             otsikko.style.alignItems = Align.FlexStart;
             otsikko.style.opacity = 0f;

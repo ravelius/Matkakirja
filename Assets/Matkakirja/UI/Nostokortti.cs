@@ -899,9 +899,9 @@ namespace Matkakirja.Natiivi
             // Edellisen kortin ylärivi pois sivuilta.
             foreach (var paikka in new[] { selain.Vasen, selain.Oikea })
                 for (int i = paikka.childCount - 1; i >= 0; i--)
-                    if (paikka[i] != ylarivi && paikka[i] != lukijaPaikka && paikka[i] != pinNappi) paikka.RemoveAt(i);
+                    if (paikka[i] != ylarivi && paikka[i] != lukijaPaikka && paikka[i] != pinNappi && paikka[i] != selain.AutoNappi) paikka.RemoveAt(i);
             if (ylarivi == null || lukijaPaikka == null || !selain.Nakyvissa) { if (ylarivi != null) ylarivi.Add(pinNappi); return; }
-            selain.Oikea.Insert(0, pinNappi); // pin ennen ≡:tä ja kaiutinta
+            selain.Oikea.Insert(selain.AutoNappi != null && selain.AutoNappi.parent == selain.Oikea ? selain.Oikea.IndexOf(selain.AutoNappi) + 1 : 0, pinNappi); // AUTO, pin, ≡, kaiutin
             selain.Vasen.Add(ylarivi);       // kategoria (symboli ja nimi) vasemmalle
             selain.Oikea.Add(lukijaPaikka);  // ≡ ja kaiutin oikeaan reunaan
         }

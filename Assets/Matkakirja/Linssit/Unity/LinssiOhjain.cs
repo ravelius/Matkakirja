@@ -2135,6 +2135,12 @@ namespace Matkakirja.Natiivi
                     if (osat.Length > 2 && osat[1] == "testi") OpasSovitin.Testi = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "testiotsake") OpasSovitin.Testiotsake = osat[2] == "1";
                     else if (osat.Length > 2 && osat[1] == "pysayta") OpasSovitin.Pysaytetty = osat[2] == "1";
+                    else if (osat.Length > 2 && osat[1] == "kamera" && osat[2] == "pois") OpasSovitin.KiinteaKamera = null;
+                    else if (osat.Length > 7 && osat[1] == "kamera")
+                    {
+                        OpasSovitin.KiinteaKamera = new Kuvakulma(Luku(osat[2]), Luku(osat[3]), Luku(osat[4]), Luku(osat[5]), Luku(osat[6]), Luku(osat[7]));
+                        Kirjaa($"opas: kamera kiinteä {OpasSovitin.KiinteaKamera}");
+                    }
                     else if (osat.Length > 2 && osat[1] == "pcm") OpasSovitin.PcmKaytossa = osat[2] == "1";
                     // Laitekokeet ilman kosketusta (juna 151): kierros, Liiku-kohde, lopetus, jatko ja kysymys kuten napeista.
                     else if (osat.Length > 1 && osat[1] == "testi429") OpasSovitin.TestiGoogle429();
@@ -2164,6 +2170,10 @@ namespace Matkakirja.Natiivi
                         && double.TryParse(osat[4], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var te)
                         && float.TryParse(osat[5], System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var ts))
                         OpasSovitin.TestiTapit(tk, th, te, ts);
+                    else if (osat.Length > 6 && osat[1] == "vapaa" && LukuOk(osat[2], out double vvx) && LukuOk(osat[3], out double vvy)
+                        && LukuOk(osat[4], out double vox) && LukuOk(osat[5], out double voy) && LukuOk(osat[6], out double vs))
+                        OpasSovitin.TestiVapaa(vvx, vvy, vox, voy, (float)vs);
+                    else if (osat.Length > 1 && osat[1] == "vapaa") Kirjaa("opas " + (OpasSovitin.VapaanTila ?? "vapaa: ei vapaassa tilassa"));
                     else if (osat.Length > 1 && osat[1] == "muisti") Kirjaa(opas?.Muisti() ?? "opas: ei sovitinta");
                     else if (osat.Length > 2 && osat[1] == "kaupunki") OpasSovitin.Aloituskaupunki = string.Join(" ", osat.Skip(2));
                     else if (osat.Length > 2 && osat[1] == "toive") OpasSovitin.Toive(string.Join(" ", osat.Skip(2)));

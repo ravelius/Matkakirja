@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: CesiumForUnity::CesiumForUnity.CesiumRuntimeSettings
   _defaultIonAccessTokenID: 
   _defaultIonAccessToken: 
-  _requestsPerCachePrune: 10000
-  _maxItems: 4096
+  _requestsPerCachePrune: 1000
+  _maxItems: 1024
