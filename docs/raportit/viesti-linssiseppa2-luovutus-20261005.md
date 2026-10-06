@@ -3,7 +3,14 @@
 Edellinen: viesti-linssiseppa2-luovutus-20261004.md. Päätoimittaja local_5df52e10-10e4-4b72-9554-0049db300dfe.
 VUOROT: käännös- ja simuvuoro aina Julkaisijalta ("NYT käännös", "SIMU NYT"). Ilmoita: "KÄÄNNETTY <sha>, lukko vapaa" ja "simu vapaa".
 
-## TILA 6.10. 22.4x (uusin)
+## TILA 6.10. 23.3x (uusin)
+- KUITATTU junaan 155: gibs-pehmea 640eb7b4 (merisumun pinnanmuoto 5adaf326 + valotuksen olkapää 8f2db691 + A/B 640eb7b4), worktree wt/proto-linssiseppa2-pilvet.
+  - Saman näkymän pari kiinteällä kellolla tarvitaan vasta omistajan Helsinki-julisteeseen (ajo147 laskee kellon kuvakohtaisesti: korjaa ensin).
+- POIS: opas-vapaa-lataus 5683ffaf (vauhtirajaus ei poista sumeutta). Sumeus kirjataan suoratoiston normaaliksi viiveeksi: +5 s:ssa tarkentuu. Haara jää, worktree poistettu.
+- KUITATTU junaan 154: s2-meri 0f6e4e89 (worktree wt/proto-linssiseppa2-meri).
+- Tulokset: lokit/linssiseppa2-155b-3ac7ce47 ja todistus-tarkentuminen155-3ac7ce47-20261006-2324.
+
+## TILA 6.10. 22.4x
 - Juna 155, merisumu: juurisyy on Valota (×1,35), joka leikkasi pilvet 255:een.
   - gibs-pehmea 8f2db691 lisää pehmeän olkapään (polvi 160), 640eb7b4 A/B-komennon `astro kyyti kuvaa olkapaa 0|1`.
   - Päätoimittaja hyväksyy, jos pilvikansi saa muotoa eivätkä lumi ja jää harmaannu.
