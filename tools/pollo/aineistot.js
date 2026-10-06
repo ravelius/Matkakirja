@@ -9,6 +9,6 @@
  * Lista päivitetään tähän jokaisen viennin jälkeen (Pelikoodari).
  */
 export const OPAS_AINEISTOT = Object.freeze({
-  tiet: [],
+  tiet: ['pariisi', 'venetsia', 'koopenhamina', 'ateena', 'rooma', 'lontoo', 'amsterdam'],   // vienti 6.10. (kartta-tiet-vienti-20261006)
   aanikartta: [],
 });
