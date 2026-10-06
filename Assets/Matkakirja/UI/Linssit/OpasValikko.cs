@@ -182,7 +182,7 @@ namespace Matkakirja.Natiivi
             // Googlen ja Cesiumin krediitit (logot muuttamattomina, Googlen ehdot): sirurivi niiden yläpuolelle, tarkistus 2 × s.
             sirurivi.schedule.Execute(SovitaKrediitteihin).Every(500);
 
-            RakennaSiirtyma();
+            RakennaSiirtyma(kerros.Juuri(kerrosNro));
             RakennaKirjoitus();
             kuvaKortti = Rakenne.El("mk-nosto tk-teema-harmaa", Juuri, PickingMode.Position);
             kuvaKortti.style.position = Position.Absolute;
@@ -295,14 +295,22 @@ namespace Matkakirja.Natiivi
         Latauspalkki siirtymaPalkki;
         IVisualElementScheduledItem siirtymaKierros;
 
-        void RakennaSiirtyma()
+        VisualElement siirtymaIon;
+
+        // Koko ruutu (simu 6.10.: turva-alueen ulkopuolelle jäi kartta ja krediitit), kuten DioraamaTaulun nimiruutu.
+        void RakennaSiirtyma(VisualElement kerrosJuuri)
         {
-            siirtyma = Rakenne.El("mk-astroavaus tk-teema-tumma", Juuri, PickingMode.Position);
+            siirtyma = Rakenne.El("mk-astroavaus tk-teema-tumma", kerrosJuuri, PickingMode.Position);
             siirtyma.style.display = DisplayStyle.None;
             var otsikko = Rakenne.Teksti("Siirrytään", "mk-ajattelija__vuodet", siirtyma);
             siirtymaNimi = Rakenne.Teksti("", "mk-ajattelija__nimi", siirtyma);
             foreach (var t in new[] { otsikko, siirtymaNimi }) { t.pickingMode = PickingMode.Ignore; t.style.unityTextAlign = TextAnchor.MiddleCenter; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
             siirtymaPalkki = new Latauspalkki(siirtyma);
+            // Cesium ion -logo vasemmassa alakulmassa latauksen ajan (omistaja 6.10. 12.2x): Cesiumin oma kuva muuttamattomana,
+            // samassa koossa ja paikassa kuin krediiteissä (musta ruutu peittää Cesiumin krediittikerroksen).
+            siirtymaIon = Rakenne.El(null, siirtyma, PickingMode.Ignore);
+            siirtymaIon.style.position = Position.Absolute;
+            siirtymaIon.style.unityBackgroundScaleMode = ScaleMode.ScaleToFit;
             OpasSovitin.SiirtymaAlkaa += n => UiKerros.PaaSaikeessa(() => SiirtymaAlkaa(n));
             OpasSovitin.SiirtymaValmis += () => UiKerros.PaaSaikeessa(SiirtymaValmis);
         }
@@ -319,10 +327,23 @@ namespace Matkakirja.Natiivi
             siirtyma.style.display = DisplayStyle.Flex;
             siirtyma.BringToFront();
             siirtymaPalkki.Nayta(true);
-            KrediititTiivis.CesiumNakyviin = true;   // Cesium ion -logo Siirrytään-ruudulla (omistaja 6.10.)
+            KrediititTiivis.CesiumNakyviin = true;
+            AsetaSiirtymaIon();
             Debug.Log("MATKAKIRJA opas: siirtymä alkaa → " + nimi);
             siirtymaKierros?.Pause();
             siirtymaKierros = siirtyma.schedule.Execute(() => siirtymaPalkki.Arvo = testiEdistyminen ?? OpasSovitin.SiirtymaEdistyminen).Every(100);
+        }
+
+        void AsetaSiirtymaIon()
+        {
+            var t = KrediititTiivis.IonLogoKuva;
+            siirtymaIon.style.display = t != null && t.height > 0 ? DisplayStyle.Flex : DisplayStyle.None;
+            if (t == null || t.height <= 0) return;
+            float h = KrediititTiivis.LogoPt;
+            siirtymaIon.style.backgroundImage = new StyleBackground(t as Texture2D);
+            siirtymaIon.style.height = h; siirtymaIon.style.width = h * t.width / t.height;
+            siirtymaIon.style.left = KrediititTiivis.TyhjaSivuPt;   // Cesiumin krediittien tapaan ruudun alakulmasta
+            siirtymaIon.style.bottom = KrediititTiivis.TyhjaAlaPt;
         }
 
         /// <summary>Kohde ladattu: musta ruutu häipyy (Cupolan häivytys) ja näkymä aukeaa.</summary>
@@ -551,6 +572,7 @@ namespace Matkakirja.Natiivi
                 float alaVara = juuriH - Juuri.worldBound.yMax; // turva-alueen alareuna ruudun alareunasta
                 ala = Mathf.Max(ala, Mathf.Round(k / ch * juuriH - alaVara + KuvaRako));
             }
+            if (KrediititTiivis.KaikkiAuki && ala > krediittiAla) return;   // napautuksella avattu koko lähdelista ei nosta siruja
             if (krediittiAla != ala) Debug.Log($"MATKAKIRJA opas: sirut krediittien yläpuolelle {ala:0} pt (krediitit {k:0}/{ch:0})");
             krediittiAla = ala;
         }

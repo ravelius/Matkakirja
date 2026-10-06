@@ -6,7 +6,9 @@
 // tämä kutsutaan joka kehys kaupunkinäkymän ajan: OnScreenCreditsin tekstit (datantuottajat, erottimet) siirretään logon alle omaan
 // riviinsä. Logot (kuvaelementit) jäävät paikalleen muuttamattomina; sisältöä ei muuteta eikä poisteta. Pakettiin (com.cesium.unity)
 // ei kosketa.
+using System.Collections;
 using System.Linq;
+using System.Reflection;
 using CesiumForUnity;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -54,14 +56,42 @@ namespace Matkakirja.Natiivi
         public const float RiviPt = 9f;
 
         /// <summary>☰ Tietoja ja lähteet: koko lista rivitettynä ja Cesium ion -logo hetkeksi.</summary>
+        /// <summary>Koko lista auki (oppaan sirut eivät nouse sen yläpuolelle).</summary>
+        public static bool KaikkiAuki => Time.unscaledTime < kaikkiAsti;
+
         public static void NaytaKaikki() { kaikkiAsti = Time.unscaledTime + KaikkiS; cesiumAsti = kaikkiAsti; }
 
         /// <summary>
-        /// Cesium ion -logo tunnistetaan kuvasuhteesta: Google Maps -logo on leveä (noin 5,5:1), ion-logo kapeampi. Testi `ui krediitit`
-        /// listaa logot kokoineen tunnistuksen todentamiseksi.
+        /// Cesium ion -logo tunnistetaan krediittilistasta (simu 6.10.: kuvasuhde ei erota, ion 138×28 ja Google 98×18): Cesium for Unity
+        /// rakentaa OnScreenCreditsin kuvat CesiumCreditSystem.images[imageId]:stä, ja ion-krediitin linkissä on "cesium.com". Jäsenet
+        /// ovat paketissa internal, joten heijastuksella; pakettiin ei kosketa.
         /// </summary>
-        public const float CesiumSuhdeMax = 4.5f;
-        static bool OnCesium(Texture t) => t != null && t.height > 0 && (float)t.width / t.height < CesiumSuhdeMax;
+        static Texture IonLogo(CesiumCreditSystem cs)
+        {
+            try
+            {
+                const BindingFlags L = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic;
+                if (!(cs.GetType().GetProperty("onScreenCredits", L)?.GetValue(cs) is IList krediitit)) return null;
+                if (!(cs.GetType().GetProperty("images", L)?.GetValue(cs) is IList kuvat)) return null;
+                foreach (var k in krediitit)
+                {
+                    if (k == null || !(k.GetType().GetProperty("components", L)?.GetValue(k) is IList osat)) continue;
+                    foreach (var o in osat)
+                    {
+                        if (o == null) continue;
+                        var t = o.GetType();
+                        var linkki = t.GetProperty("link", L)?.GetValue(o) as string;
+                        if (linkki == null || !linkki.Contains("cesium.com")) continue;
+                        if (t.GetProperty("imageId", L)?.GetValue(o) is int id && id >= 0 && id < kuvat.Count) return kuvat[id] as Texture;
+                    }
+                }
+            }
+            catch (System.Exception e) { if (!ionVirhe) { ionVirhe = true; Debug.LogWarning("MATKAKIRJA krediitit: ion-logon tunnistus: " + e.GetType().Name); } }
+            return null;
+        }
+        static bool ionVirhe;
+        /// <summary>Viimeksi tunnistettu Cesium ion -logo (Siirrytään-ruutu piirtää sen itse mustan ruudun päälle).</summary>
+        public static Texture IonLogoKuva { get; private set; }
 
         /// <summary>Testi: logot ja niiden tunnistus.</summary>
         public static string Kuvaus()
@@ -69,10 +99,11 @@ namespace Matkakirja.Natiivi
             var cs = CesiumCreditSystem.GetDefaultCreditSystem();
             var on = cs != null ? cs.GetComponent<UIDocument>()?.rootVisualElement?.Q("OnScreenCredits") : null;
             if (on == null) return "krediitit: ei ruutukrediittejä";
+            var ion = IonLogo(cs);
             var osat = on.Children().Select(c =>
             {
                 var t = c.style.backgroundImage.value.texture;
-                if (t != null) return $"kuva {t.width}×{t.height} ({(OnCesium(t) ? "Cesium" : "Google")}, {(c.resolvedStyle.display == DisplayStyle.None ? "piilossa" : "näkyy")}, {c.worldBound.width:0}×{c.worldBound.height:0})";
+                if (t != null) return $"kuva {t.width}×{t.height} ({(t == ion ? "Cesium ion" : "Google")}, {(c.resolvedStyle.display == DisplayStyle.None ? "piilossa" : "näkyy")}, {c.worldBound.width:0}×{c.worldBound.height:0})";
                 return c is Label l ? $"\"{l.text}\"" : c.name;
             });
             return "krediitit: " + string.Join(" | ", osat) + (lahteet != null ? $" | lähteet {lahteet.childCount} kpl, {(Time.unscaledTime < kaikkiAsti ? "kaikki" : "rivi")}, {lahteet.worldBound.width:0}×{lahteet.worldBound.height:0}" : "");
@@ -104,6 +135,8 @@ namespace Matkakirja.Natiivi
             }
             // Cesium rakentaa puun uudelleen krediittien muuttuessa: rivi takaisin logon alle ja uudet tekstit riviin.
             if (lahteet.parent != on) { lahteet.RemoveFromHierarchy(); on.Add(lahteet); }
+            var ion = IonLogo(cs);
+            if (ion != null) IonLogoKuva = ion;
             bool cesium = CesiumNakyviin || AvausLatautuu || Time.unscaledTime < cesiumAsti;
             foreach (var lapsi in on.Children().ToList())
             {
@@ -112,7 +145,7 @@ namespace Matkakirja.Natiivi
                 var kuva = lapsi.style.backgroundImage.value.texture;
                 if (!(lapsi is Label) && kuva != null && kuva.height > 0)
                 {
-                    bool nayta = !OnCesium(kuva) || cesium;
+                    bool nayta = kuva != ion || cesium;
                     lapsi.style.display = nayta ? DisplayStyle.Flex : DisplayStyle.None;
                     if (!nayta) continue;
                     float h = LogoPt * pt;
@@ -134,8 +167,12 @@ namespace Matkakirja.Natiivi
             bool kaikki = Time.unscaledTime < kaikkiAsti;
             lahteet.style.flexWrap = kaikki ? Wrap.Wrap : Wrap.NoWrap;
             lahteet.style.maxWidth = juuri.worldBound.width - 2 * TyhjaSivuPt * pt;
+            var ws = kaikki ? WhiteSpace.Normal : WhiteSpace.NoWrap;
             foreach (var t in lahteet.Query<Label>().ToList())
+            {
                 if (Mathf.Abs(t.resolvedStyle.fontSize - RiviPt * pt) > 0.5f) t.style.fontSize = RiviPt * pt;
+                if (t.style.whiteSpace != ws) { t.style.whiteSpace = ws; t.style.flexShrink = kaikki ? 1 : 0; }
+            }
         }
 
         /// <summary>Lähdeteksti riviin: kevein moderni, vaalea, ei alleviivausta; napautus riville (koko lista), ei Cesiumin linkkeihin.</summary>
