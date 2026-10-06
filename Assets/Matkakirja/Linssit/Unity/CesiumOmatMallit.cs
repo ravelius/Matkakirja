@@ -39,6 +39,8 @@ namespace Matkakirja.Linssit
 
         public CesiumOmatMallit(Action<string> kirjaa) { this.kirjaa = kirjaa; }
 
+        static bool Leikkaa => !File.Exists(Path.Combine(Application.persistentDataPath, "omat-mallit", "leikkaus-pois"));
+
         public int Maara => mallit.Count;
         string avattu;   // avattujen kohteiden id:t (Paivita avaa uudelleen vain, jos joukko vaihtuu)
         Transform vanhempi0; int kerros0;
@@ -122,6 +124,7 @@ namespace Matkakirja.Linssit
             if (google == null || juuri == null) return;
             if (laatta != null) laatta.layer = juuri.layer;
             Tekijat = tekija;
+            if (!Leikkaa) return;   // testi: Documents/omat-mallit/leikkaus-pois (mallit ilman Googlen leikkausta)
             if (leikkaus == null)
             {
                 leikkaus = google.gameObject.AddComponent<CesiumPolygonRasterOverlay>();
@@ -135,6 +138,24 @@ namespace Matkakirja.Linssit
                 leikkaus.polygons = lista;
                 leikkaus.Refresh();
                 kirjaa?.Invoke($"omat mallit: {k.Id} ladattu, Googlen tiilet leikattu {lista.Count} alueelta");
+                // Diagnostiikka (simu 7.10. 01.07: koko Googlen tileset katosi): polygonin ensimmäinen ja kolmas solmu
+                // maailmasta → tilesetin paikallinen → ECEF → lat/lon, kuten CesiumCartographicPolygon.GetCartographicPoints.
+                var georef = google.GetComponentInParent<CesiumGeoreference>();
+                foreach (var pg in lista)
+                {
+                    var sc = pg.GetComponent<SplineContainer>();
+                    if (georef == null || sc == null || sc.Splines.Count == 0) continue;
+                    var sp = sc.Splines[0]; var w2t = google.transform.worldToLocalMatrix;
+                    string Piste(int i)
+                    {
+                        if (i >= sp.Count) return "-";
+                        Vector3 w = pg.transform.TransformPoint((Vector3)sp[i].Position);
+                        var ecef = georef.TransformUnityPositionToEarthCenteredEarthFixed((double3)(float3)w2t.MultiplyPoint3x4(w));
+                        var llh = CesiumWgs84Ellipsoid.EarthCenteredEarthFixedToLongitudeLatitudeHeight(ecef);
+                        return $"{llh.y:F5}, {llh.x:F5}";
+                    }
+                    kirjaa?.Invoke($"omat mallit: leikkaus {pg.name}: {sp.Count} solmua, 0 = {Piste(0)}, 2 = {Piste(2)}, ankkuri {pg.GetComponent<CesiumGlobeAnchor>().longitudeLatitudeHeight}");
+                }
             }
         }
 
