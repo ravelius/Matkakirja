@@ -26,11 +26,12 @@ namespace Matkakirja.Linssit.Testit
             if (string.IsNullOrEmpty(ppm) || string.IsNullOrEmpty(xy) || string.IsNullOrEmpty(ulos)) return;
             var (w, h, rgb) = LuePpm(ppm); var o = xy.Split(' ');
             int x0 = int.Parse(o[0]), y0 = int.Parse(o[1]);
-            var g = GibsPilvet.Kokoa(x0, y0, w, h, new List<(DateTime, byte[][])> { (DateTime.Today, new[] { rgb, null, null, null }) });
+            int taso = int.TryParse(Environment.GetEnvironmentVariable("GIBS_TASO"), out var gt) ? gt : GibsPilvet.Z;   // laaja kuva: 8
+            var g = GibsPilvet.Kokoa(x0, y0, w, h, new List<(DateTime, byte[][])> { (DateTime.Today, new[] { rgb, null, null, null }) }, taso);
             g.AurinkoAz = 150; g.AurinkoKorkeus = 50; g.Yksityiskohta = Environment.GetEnvironmentVariable("ESI_RAAKA") == "1" ? null : new Pilvikentta();
-            int z = int.TryParse(Environment.GetEnvironmentVariable("ESI_Z"), out var ez) ? ez : 11, k = 1 << (z - GibsPilvet.Z);
+            int z = int.TryParse(Environment.GetEnvironmentVariable("ESI_Z"), out var ez) ? ez : 11; double k = Math.Pow(2, z - taso);
             // Alueen keskeltä 4 × 4 laattaa z:lla.
-            int cx = (x0 + w / 2) * k / 256, cy = (y0 + h / 2) * k / 256, L = 4, S = 256 * L;
+            int cx = (int)((x0 + w / 2) * k / 256), cy = (int)((y0 + h / 2) * k / 256), L = 4, S = 256 * L;
             var kuva = new byte[S * S * 3];
             for (int ty = 0; ty < L; ty++)
                 for (int tx = 0; tx < L; tx++)
