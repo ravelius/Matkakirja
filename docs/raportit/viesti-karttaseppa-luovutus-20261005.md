@@ -1,3 +1,15 @@
+# TILANNE 6.10. klo 11.0x
+
+- **VIETY 5.–6.10.:** S2-maailma v2 kaikki alueet + laatat.json (tropiikki 5.10. 18.04); v2-korjaus (rengas) 5.10. 19.04;
+  s2-eurooppa/v2 (rengas) 5.10. 19.42; **s2-maailma/v2-korjaus2** 6.10. 11.01 (4 aluetta, 303 496 laattaa: WorldCover-tasaus,
+  järvisääntö, rengas + PIKKU). S2-indeksi v2b, v2c, v2d, v2e (Meksikon suisto rata X).
+- **Paikalliset:** v2-korjaus2b/ (viety sarja), v2t2/ (tasaus 2), v2-rengas3/; tasaus.mjs, tasaus-kentta.mjs, rengas.mjs.
+  Vanha kesken jäänyt kansio v2-korjaus2/ jäi T7:lle, ja sen poisto odottaa lupaa (turvatarkistus esti rm:n).
+- **SEURAAVA ERÄ (odottaa PT:n lupaa):** Madeiran itäosan pilvi (Euroopan mosaiikki, selkeä otto) ja Eyren tummin vesi (MERI-sininen).
+- **Tunnetut jäännökset:** Amazonin itäkaista, Sumbawan maasauma, 11SQR:n ja 11RQQ:n mieto vino sävyraja (Meksiko v2e).
+
+---
+
 # TILANNE 5.10. klo 06.5x (LOPULLINEN, tilinvaihto 99 %)
 
 - **Tropiikki v2e:** osa-ajot PID 45738/45742/45745/45748, kukin noin 12/47 lohkoa (yhteensä 8 + 47 = 55/196). Noin 14 min per lohko per osa → valmis noin klo 15–16.
