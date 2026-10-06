@@ -1,4 +1,4 @@
-# Elävä opas (EI vakiosarjassa: generoi maksullista ääntä): avaus (Kööpenhamina) → tervetulo + 2 sirua → "Esittele kaupunki" (oikea tap) → 1. kohde saapuu →
+# Elävä opas (EI vakiosarjassa; ajetaan ilman ääntä): avaus (Kööpenhamina) → tervetulo + 2 sirua → "Esittele kaupunki" (oikea tap) → 1. kohde saapuu →
 # ☰ → Vaihda kohde → Eurooppa → Alankomaat → Amsterdam → Amsterdamin vastaus. Oikea worker (Pöllö), mutta ILMAN ääntä
 # (omistaja 6.10.: "Ei, ilman ääntä"): testiotsake x-matkakirja-testi → worker ei anna ääni-urlia eikä kutsu ElevenLabsia.
 # Valmiit (jo tuotetut) silta-/maaleikkeet saavat soida. Kohteiden ääni = ei-testattu.
