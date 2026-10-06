@@ -63,3 +63,12 @@ extern "C" void MatkakirjaMacSyote_Lue(float* ulos)
     mkVetoX = mkVetoY = mkRullaX = mkRullaY = 0.0f;
     mkNipistys = 1.0f;
 }
+
+// Näytön pistetiheys (Natiivi-UI:n UiKerros.PikseliaPisteessa Macilla): avainikkunan tai päänäytön backingScaleFactor
+// (Retina 2, muuten 1). Screen.dpi ei kerro Macin pistettä luotettavasti.
+extern "C" float MatkakirjaMacSyote_Skaala(void)
+{
+    NSWindow* w = [NSApp keyWindow] ?: [NSApp mainWindow];
+    CGFloat s = w != nil ? w.backingScaleFactor : [NSScreen mainScreen].backingScaleFactor;
+    return s > 0 ? (float)s : 1.0f;
+}
