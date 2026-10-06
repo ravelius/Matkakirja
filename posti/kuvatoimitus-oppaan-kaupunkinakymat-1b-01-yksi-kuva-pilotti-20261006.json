@@ -1,0 +1,459 @@
+{
+  "source": "posti/fable-codex-oppaan-kuvat-linssivalikko-20261006.md",
+  "sourceCommit": "93aa2ab1e1151ab29d744d508bf8260fd21e9cab",
+  "batch": 1,
+  "orderGroup": "1b",
+  "pilot": true,
+  "instructionsVersion": 2,
+  "imagesPerPlace": 1,
+  "createdAt": "2026-10-06T18:17:26.393415+00:00",
+  "cityIds": [
+    "juba",
+    "bern",
+    "ngerulmud"
+  ],
+  "cityCount": 3,
+  "imageCount": 3,
+  "productionDimensions": {
+    "width": 1536,
+    "height": 1024,
+    "aspectRatio": "3:2",
+    "format": "PNG",
+    "colorSpace": "sRGB",
+    "alpha": "opaque"
+  },
+  "sampleSeriesVerification": [
+    {
+      "city": "petra",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3303791,
+      "sha256": "102f5c115c82b3d031cc11abbb02719f1b57cc82dc56fb1a607714e0d516dd15"
+    },
+    {
+      "city": "petra",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3353858,
+      "sha256": "694ac4c78c74ea3d4989eca0ae1becca3d5e4772bc27bf3189c71b31cd050be6"
+    },
+    {
+      "city": "petra",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-petra-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-petra-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3400112,
+      "sha256": "d9f25f596e3103de9c60fbb6cfb60b10d2291b8a48c4f853495ffd84c8efd4ba"
+    },
+    {
+      "city": "adelaide",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3403905,
+      "sha256": "a95a5118e3be1c8a20830e56a29d4e3bbd3bcdc306dbd45fec6c6b7510cccc60"
+    },
+    {
+      "city": "adelaide",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3212483,
+      "sha256": "b350e1619355b41a265d006f1d3aa5bb935f2181319683c0b49c91a47130d2ce"
+    },
+    {
+      "city": "adelaide",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-adelaide-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-adelaide-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3200990,
+      "sha256": "5785b042bda03b0ffdfbb88f268b3f6637378cee52a4f06f2d0e2dbd16d9fc8f"
+    },
+    {
+      "city": "tampere",
+      "time": "aamu",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-aamu.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-aamu.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 2901348,
+      "sha256": "2ab40418138cc6abd27a6fd76db13ff7622e1c4673b3c68eac25d3e51828a2a4"
+    },
+    {
+      "city": "tampere",
+      "time": "keskipaiva",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-keskipaiva.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-keskipaiva.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3358624,
+      "sha256": "92386c3c9a1ea07d507c701c3996a830d4534b01f6459f660338dd865f23b98d"
+    },
+    {
+      "city": "tampere",
+      "time": "ilta",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/sources/valmiit-sarjat/hero-tampere-ilta.png",
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-tampere-ilta.png",
+      "width": 1536,
+      "height": 1024,
+      "mode": "RGB",
+      "mime": "image/png",
+      "bytes": 3365770,
+      "sha256": "2d36abe2539bed4a2f9d7e11dae30884d285178127cc6333c809b438a5cc7dd5"
+    }
+  ],
+  "cameraRule": "Yksi paikan mielenkiintoisin tunnuskuva, fotorealistinen nykymaailma; hetki ja kuvakulma valitaan paikalle.",
+  "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+  "originalsPreserved": true,
+  "generationMethod": "built-in image_gen; one call per asset",
+  "review": {
+    "primaryVisualReview": "passed",
+    "editorFirstThree": "pending",
+    "gameIntegrationVerified": false,
+    "published": false
+  },
+  "assets": [
+    {
+      "cityId": "juba",
+      "city": "juba",
+      "q": "Q1947",
+      "lat": 4.8539,
+      "lon": 31.5825,
+      "orderGroup": "1B",
+      "file": "hero-juba.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/juba/final/hero-juba.png",
+      "r2Key": "julisteet/herokoe/hero-juba.png",
+      "sha256": "46318ac85f122ee72799b302ac95992709527ea4c89523f25b03903b38a6df84",
+      "bytes": 2746072,
+      "width": 1536,
+      "height": 1024,
+      "mime": "image/png",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": "Juban vanha teräsristikkosilta ylittää Valkoisen Niilin Etelä-Sudanin pääkaupungissa.",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: living travel-guide hero for Juba, South Sudan (WikidataQ1947, city near4.8539N31.5825E). Create one spectacular but truthful present-day landscape photograph, horizontal3:2,1536x1024pixels.\nThree Commons photos are separate architecture and river-setting references, not compositions to copy: 2022Zamwan,2019RodWaddington,2006DEMOSH. They show the same actual Juba Nile Bridge over the White Nile, with its repeated low grey/brown modular steel lattice truss, several straight spans on broad rectangular open-frame steel piers, and low tree-covered riverbanks. Preserve the bridge structure from these references; this is NOT the newer Freedom Bridge and not a suspension or cable-stayed bridge.\nPhotograph the authentic older Juba Nile Bridge from a LOW ELEVATED riverside viewpoint, roughly roof height12metres, a little oblique so its long deck and repeated trusses recede across the wide White Nile. Gentle downward camera angle about15degrees, level horizon, natural35mmfull-frame perspective. Bridge large and dominant across the middle/lower half with complete visible main spans, broad moving river in foreground and simple actual green riverbanks behind. Two closely adjacent narrow road decks may be visible as in the real structure; no tall towers, arches or bridge pylons invented. Just the near low-rise riverbank buildings and trees evident in the photographs, not an imagined dense capital skyline. No hills, mountains, sea or exotic monuments. The physical place must be Juba in South Sudan, never Somalia's Jubba River.\nBest light: early golden morning after a clear tropical night, sunlight glinting along the worn steel lattice and subtly in the blue-brown flowing river; soft green trees and clear pale blue sky. Realistic tropical river surface, authentic working bridge, attractive natural color and crisp photographic detail, no fantasy beautification, no stylization, no miniature or exaggeratedHDR. Today's bridge scene, not a historical reconstruction. Entire image opaque PNG. No added text, lettering, logos, billboards, watermarks or borders. No identifiable people; any extremely small distant traffic is unbranded and secondary. No large foreground person or vehicle.",
+      "generationArguments": {
+        "prompt": "Use case: photorealistic-natural. Asset: living travel-guide hero for Juba, South Sudan (WikidataQ1947, city near4.8539N31.5825E). Create one spectacular but truthful present-day landscape photograph, horizontal3:2,1536x1024pixels.\nThree Commons photos are separate architecture and river-setting references, not compositions to copy: 2022Zamwan,2019RodWaddington,2006DEMOSH. They show the same actual Juba Nile Bridge over the White Nile, with its repeated low grey/brown modular steel lattice truss, several straight spans on broad rectangular open-frame steel piers, and low tree-covered riverbanks. Preserve the bridge structure from these references; this is NOT the newer Freedom Bridge and not a suspension or cable-stayed bridge.\nPhotograph the authentic older Juba Nile Bridge from a LOW ELEVATED riverside viewpoint, roughly roof height12metres, a little oblique so its long deck and repeated trusses recede across the wide White Nile. Gentle downward camera angle about15degrees, level horizon, natural35mmfull-frame perspective. Bridge large and dominant across the middle/lower half with complete visible main spans, broad moving river in foreground and simple actual green riverbanks behind. Two closely adjacent narrow road decks may be visible as in the real structure; no tall towers, arches or bridge pylons invented. Just the near low-rise riverbank buildings and trees evident in the photographs, not an imagined dense capital skyline. No hills, mountains, sea or exotic monuments. The physical place must be Juba in South Sudan, never Somalia's Jubba River.\nBest light: early golden morning after a clear tropical night, sunlight glinting along the worn steel lattice and subtly in the blue-brown flowing river; soft green trees and clear pale blue sky. Realistic tropical river surface, authentic working bridge, attractive natural color and crisp photographic detail, no fantasy beautification, no stylization, no miniature or exaggeratedHDR. Today's bridge scene, not a historical reconstruction. Entire image opaque PNG. No added text, lettering, logos, billboards, watermarks or borders. No identifiable people; any extremely small distant traffic is unbranded and secondary. No large foreground person or vehicle.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/juba/references/reference-1.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/juba/references/reference-2.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/juba/references/reference-3.jpg"
+        ],
+        "transparent_background": false
+      },
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/juba/prompts/hero-arguments.json",
+      "generationTool": "built-in image_gen",
+      "viitteet": [
+        {
+          "nimi": "File:Juba Bridge.jpg",
+          "tekija": "Zamwan",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Juba_Bridge.jpg"
+        },
+        {
+          "nimi": "File:Juba Nile Bridge.jpg",
+          "tekija": "Rod Waddington",
+          "lisenssi": "CC BY-SA 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Juba_Nile_Bridge.jpg"
+        },
+        {
+          "nimi": "File:Sudan Juba bridge.jpg",
+          "tekija": "User DEMOSH on flickr.com",
+          "lisenssi": "CC BY 2.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Sudan_Juba_bridge.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/juba/originals/hero.png",
+      "toolOriginalPath": "/Users/samireivinen/.codex/generated_images/01a11231-0d49-7ed3-ad77-a02d5972ea41/exec-3cc3f183-dd91-4b06-b139-4ea961718d51.png",
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "originalSha256": "07eb68bd81ef1d8cbc51067cae8eb23059d8023a3367b68fb085e6e387e53410",
+      "technicalExport": "RGB PNG with sRGB ICC; no artistic image edits. Native 1536x1024 pixels retained exactly when source has that size.",
+      "QA": {
+        "format": true,
+        "dimensions": true,
+        "sRGB": "sRGB built-in",
+        "opaque": true,
+        "viewedLarge": true,
+        "viewed480": true,
+        "viewed384": false,
+        "referenceGate": {
+          "identification": "kategoria",
+          "category": "Category:Juba Nile Bridge",
+          "count": 3,
+          "authors": 3
+        },
+        "geographicIdentity": {
+          "q": "Q1947",
+          "nimi": "Juba",
+          "en": "Juba",
+          "maa": "Etelä-Sudan",
+          "iso": "SS",
+          "lat": 4.8539,
+          "lon": 31.5825,
+          "peruste": "pääkaupunki",
+          "id": "juba",
+          "index": 1,
+          "subject": "Juba Bridge",
+          "wiki": "Juba Bridge",
+          "category": "Category:Juba Nile Bridge"
+        },
+        "observations": "Teräsristikot ja avorakenteiset tukipilarit vastaavat viitteitä; jokimaisema pysyy matalana eikä siihen ole keksitty pilvenpiirtäjiä, vuoristoa tai riippusiltaa. Kuva katsottu täysikokoisena ja480px."
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-juba.png",
+      "http": 200,
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 1,
+      "nimi": "Juba",
+      "maa": "Etelä-Sudan"
+    },
+    {
+      "cityId": "bern",
+      "city": "bern",
+      "q": "Q70",
+      "lat": 46.948,
+      "lon": 7.4474,
+      "orderGroup": "1B",
+      "file": "hero-bern.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bern/final/hero-bern.png",
+      "r2Key": "julisteet/herokoe/hero-bern.png",
+      "sha256": "989a41dbfe4be8ef0124028732618bf1039218409c2b2c70e989e57ca31d2070",
+      "bytes": 2916607,
+      "width": 1536,
+      "height": 1024,
+      "mime": "image/png",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": "Bernin liittopalatsin vihreät kuparikupolit kohoavat Aarejoen yläpuolisella rinteellä.",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: living travel-guide hero for Bern, Switzerland (Q70,46.948N7.4474E), one present-day photograph, horizontal3:2,1536x1024.\nCreate an authentic spectacular BLUE-HOUR view of the Swiss Federal Palace/Bundeshaus overlooking the Aare. Three independent Commons photographs show: Image1 JoachimKohler the correct southern curved facade high on the wooded riverbank, its central green copper dome and two smaller domed corner towers; Image2 KarlheinzKlingbeil2025 the southern terrace and true hillside/city relationship; Image3 Traumrune the northern entrance facade to clarify the building's architecture, NOT to transplant that north entrance onto this south facade. Use all three as factual architectural evidence, not a single-photo copy.\nNew camera position: LOW ELEVATED roughly rooftop-height viewpoint across the Aare south of the palace, looking north, around level with the upper hillside and the building's lower/middle floors, gently downward about15degrees, level horizon and natural35mmfull-frame architectural perspective. The Federal Palace large in the center/top foreground with its correctly rounded SOUTH facade, central patinated green dome and two smaller symmetrical flanking domes fully visible, a green wooded slope descending to the actual turquoise Aare along the lower foreground. Genuine compact red-tiled Bern roofs recede behind the palace. The palace is on the northern riverbank's elevated ridge, NOT on flat paving at river level. Retain actual terraced retaining walls and greenery. No north-facing main entrance or fountain plaza visible from this river-facing side. No invented Alps behind a NORTH-facing view, no colossal castle, no extra churches/skyscrapers/domes/bridges. Keep the existing building silhouette and warm beige stone details faithful.\nTime: early twilight blue hour, deep clear indigo-blue sky with fading warm edge, subtle warm architectural illumination and some lit windows making the green domes and stone facade legible. Aare retains believable blue-green color with restrained light reflections; lush dry late-spring greenery. Natural photograph, not pitch-black night. No fictional uplights or lavish neon show. Modern city, no historical reconstruction. Real materials, crisp detail, no illustration/miniature/cartoon or exaggeratedHDR. Fully opaque PNG, no added lettering,logos,signage,watermarks or borders. No readable architectural inscription. No identifiable people or large foreground vehicles.",
+      "generationArguments": {
+        "prompt": "Use case: photorealistic-natural. Asset: living travel-guide hero for Bern, Switzerland (Q70,46.948N7.4474E), one present-day photograph, horizontal3:2,1536x1024.\nCreate an authentic spectacular BLUE-HOUR view of the Swiss Federal Palace/Bundeshaus overlooking the Aare. Three independent Commons photographs show: Image1 JoachimKohler the correct southern curved facade high on the wooded riverbank, its central green copper dome and two smaller domed corner towers; Image2 KarlheinzKlingbeil2025 the southern terrace and true hillside/city relationship; Image3 Traumrune the northern entrance facade to clarify the building's architecture, NOT to transplant that north entrance onto this south facade. Use all three as factual architectural evidence, not a single-photo copy.\nNew camera position: LOW ELEVATED roughly rooftop-height viewpoint across the Aare south of the palace, looking north, around level with the upper hillside and the building's lower/middle floors, gently downward about15degrees, level horizon and natural35mmfull-frame architectural perspective. The Federal Palace large in the center/top foreground with its correctly rounded SOUTH facade, central patinated green dome and two smaller symmetrical flanking domes fully visible, a green wooded slope descending to the actual turquoise Aare along the lower foreground. Genuine compact red-tiled Bern roofs recede behind the palace. The palace is on the northern riverbank's elevated ridge, NOT on flat paving at river level. Retain actual terraced retaining walls and greenery. No north-facing main entrance or fountain plaza visible from this river-facing side. No invented Alps behind a NORTH-facing view, no colossal castle, no extra churches/skyscrapers/domes/bridges. Keep the existing building silhouette and warm beige stone details faithful.\nTime: early twilight blue hour, deep clear indigo-blue sky with fading warm edge, subtle warm architectural illumination and some lit windows making the green domes and stone facade legible. Aare retains believable blue-green color with restrained light reflections; lush dry late-spring greenery. Natural photograph, not pitch-black night. No fictional uplights or lavish neon show. Modern city, no historical reconstruction. Real materials, crisp detail, no illustration/miniature/cartoon or exaggeratedHDR. Fully opaque PNG, no added lettering,logos,signage,watermarks or borders. No readable architectural inscription. No identifiable people or large foreground vehicles.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bern/references/reference-1.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bern/references/reference-2.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bern/references/reference-3.jpg"
+        ],
+        "transparent_background": false
+      },
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bern/prompts/hero-arguments.json",
+      "generationTool": "built-in image_gen",
+      "viitteet": [
+        {
+          "nimi": "File:Aare und Bundeshaus in Bern (2014).jpg",
+          "tekija": "JoachimKohler-HB",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Aare_und_Bundeshaus_in_Bern_(2014).jpg"
+        },
+        {
+          "nimi": "File:Bern 19 Juni 2025 1.jpg",
+          "tekija": "Karlheinz Klingbeil",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Bern_19_Juni_2025_1.jpg"
+        },
+        {
+          "nimi": "File:Bern Bundeshaus 01.jpg",
+          "tekija": "Traumrune",
+          "lisenssi": "CC BY-SA 3.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Bern_Bundeshaus_01.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/bern/originals/hero.png",
+      "toolOriginalPath": "/Users/samireivinen/.codex/generated_images/01a11231-0d49-7ed3-ad77-a02d5972ea41/exec-cc9755ba-201d-4767-a999-01958712c6ba.png",
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "originalSha256": "c1cfd690292be90bae55b5cb108e01840baac93414da838b69cd9a79f46459de",
+      "technicalExport": "RGB PNG with sRGB ICC; no artistic image edits. Native 1536x1024 pixels retained exactly when source has that size.",
+      "QA": {
+        "format": true,
+        "dimensions": true,
+        "sRGB": "sRGB built-in",
+        "opaque": true,
+        "viewedLarge": true,
+        "viewed480": true,
+        "viewed384": false,
+        "referenceGate": {
+          "identification": "kategoria",
+          "category": "Category:Bundeshaus Bern",
+          "count": 3,
+          "authors": 3
+        },
+        "geographicIdentity": {
+          "q": "Q70",
+          "nimi": "Bern",
+          "en": "Bern",
+          "maa": "Sveitsi",
+          "iso": "CH",
+          "lat": 46.948,
+          "lon": 7.4474,
+          "peruste": "pääkaupunki",
+          "id": "bern",
+          "index": 2,
+          "subject": "Federal Palace of Switzerland",
+          "wiki": null,
+          "category": "Category:Bundeshaus Bern"
+        },
+        "observations": "Etelän kaarevaa julkisivua ei saa sekoittaa pohjoisen pääsisäänkäyntiin; palatsi sijaitsee todellisella korkealla jokirinteellä."
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-bern.png",
+      "http": 200,
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 2,
+      "nimi": "Bern",
+      "maa": "Sveitsi"
+    },
+    {
+      "cityId": "ngerulmud",
+      "city": "ngerulmud",
+      "q": "Q515229",
+      "lat": 7.5006,
+      "lon": 134.6242,
+      "orderGroup": "1B",
+      "file": "hero-ngerulmud.png",
+      "path": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/ngerulmud/final/hero-ngerulmud.png",
+      "r2Key": "julisteet/herokoe/hero-ngerulmud.png",
+      "sha256": "7ab89f0cd50c0840636fe8634d3116ed6b956b983828b881ca0cc9653b555e6e",
+      "bytes": 2959912,
+      "width": 1536,
+      "height": 1024,
+      "mime": "image/png",
+      "colorSpace": "sRGB",
+      "opaque": true,
+      "sourceLine": "Tekoälyllä tuotettu havainnekuva.",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "caption": "Ngerulmudin hallintokorttelin valkoinen kupoli nousee Babeldaobin trooppisen metsän keskeltä.",
+      "generationPrompt": "Use case: photorealistic-natural. Asset: living guide hero for Ngerulmud, Palau, Q515229 near7.5006N134.6242E. ONE present-day landscape3:2photograph,1536x1024.\nGenerate the authentic Palau Capitol GOVERNMENT COMPLEX at Ngerulmud on Babeldaob, NOT Koror and not an invented metropolis. Three architectural Commons references show the same government campus: Images1 and2 Zykasaa2026 show its pale cream/yellow neoclassical Executive Building pillars, windows and real local Palauan relief patterns from two angles; Image3 BenShoshana2022 shows the actual full domed national Capitol/legislative complex with a tall white ribbed dome, low cream-yellow gabled wings and rounded colonnaded end, together with tropical greenery. Combine the evidence; do not add the Executive Building signage or photographer watermark and do not combine buildings into a new symmetrical fantasy palace.\nNew view from a LOW ELEVATED gently downward camera at tree-canopy/roof height about15metres on the approaching hillside, framing the ACTUAL domed Capitol large in center-right with its true attached cream-yellow porticoed wings and curved end as in the wide reference, in a correctly sparse landscaped government campus. Full white dome including its lantern is visible against a bright lightly clouded tropical sky, grey/light roofs and lush green lawns, palms and dense tropical forest filling the foreground and immediate environment. Ngerulmud is a small isolated administrative settlement, so do NOT put a dense city, apartment skyline or skyscrapers behind it. No mountains or invented waterfront. Follow the existing overall building silhouette and authentic scale from the three photographs, no extra domes, no USCapitol clone and no fantasy grand stairs.\nTime/light: brilliant clear tropical morning shortly after a rain shower, natural sunlight on cream stone and white dome, vibrant believable foliage and a clean pale-cyan blue sky with soft fair-weather clouds. Attractive but entirely photographic, realistic materials and fine detail, natural35mmfull-frame lens and a level horizon, VAKIO low-rooftop perspective with only a gentle15degree downward angle. No overhead high-drone map view. Fully opaque PNG. No added text, lettering, logos, watermarks or borders, no readable inscriptions on architecture. No recognizable people; any distant people remain tiny and secondary. Current-day scene, no historical reconstruction, no stylization or exaggeratedHDR.",
+      "generationArguments": {
+        "prompt": "Use case: photorealistic-natural. Asset: living guide hero for Ngerulmud, Palau, Q515229 near7.5006N134.6242E. ONE present-day landscape3:2photograph,1536x1024.\nGenerate the authentic Palau Capitol GOVERNMENT COMPLEX at Ngerulmud on Babeldaob, NOT Koror and not an invented metropolis. Three architectural Commons references show the same government campus: Images1 and2 Zykasaa2026 show its pale cream/yellow neoclassical Executive Building pillars, windows and real local Palauan relief patterns from two angles; Image3 BenShoshana2022 shows the actual full domed national Capitol/legislative complex with a tall white ribbed dome, low cream-yellow gabled wings and rounded colonnaded end, together with tropical greenery. Combine the evidence; do not add the Executive Building signage or photographer watermark and do not combine buildings into a new symmetrical fantasy palace.\nNew view from a LOW ELEVATED gently downward camera at tree-canopy/roof height about15metres on the approaching hillside, framing the ACTUAL domed Capitol large in center-right with its true attached cream-yellow porticoed wings and curved end as in the wide reference, in a correctly sparse landscaped government campus. Full white dome including its lantern is visible against a bright lightly clouded tropical sky, grey/light roofs and lush green lawns, palms and dense tropical forest filling the foreground and immediate environment. Ngerulmud is a small isolated administrative settlement, so do NOT put a dense city, apartment skyline or skyscrapers behind it. No mountains or invented waterfront. Follow the existing overall building silhouette and authentic scale from the three photographs, no extra domes, no USCapitol clone and no fantasy grand stairs.\nTime/light: brilliant clear tropical morning shortly after a rain shower, natural sunlight on cream stone and white dome, vibrant believable foliage and a clean pale-cyan blue sky with soft fair-weather clouds. Attractive but entirely photographic, realistic materials and fine detail, natural35mmfull-frame lens and a level horizon, VAKIO low-rooftop perspective with only a gentle15degree downward angle. No overhead high-drone map view. Fully opaque PNG. No added text, lettering, logos, watermarks or borders, no readable inscriptions on architecture. No recognizable people; any distant people remain tiny and secondary. Current-day scene, no historical reconstruction, no stylization or exaggeratedHDR.",
+        "referenced_image_paths": [
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/ngerulmud/references/ref-1.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/ngerulmud/references/ref-7.jpg",
+          "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/ngerulmud/references/ref-16.jpg"
+        ],
+        "transparent_background": false
+      },
+      "generationArgumentsPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/ngerulmud/prompts/hero-arguments.json",
+      "generationTool": "built-in image_gen",
+      "viitteet": [
+        {
+          "nimi": "File:Ngerulmud 01.jpg",
+          "tekija": "Zykasaa",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Ngerulmud_01.jpg"
+        },
+        {
+          "nimi": "File:Ngerulmud 07.jpg",
+          "tekija": "Zykasaa",
+          "lisenssi": "CC BY 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:Ngerulmud_07.jpg"
+        },
+        {
+          "nimi": "File:בניין הקפיטול בבירת פלאו נגרולומוד 01530.jpg",
+          "tekija": "Ben Shoshana",
+          "lisenssi": "CC BY-SA 4.0",
+          "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+          "sivu": "https://commons.wikimedia.org/wiki/File:%D7%91%D7%A0%D7%99%D7%99%D7%9F_%D7%94%D7%A7%D7%A4%D7%99%D7%98%D7%95%D7%9C_%D7%91%D7%91%D7%99%D7%A8%D7%AA_%D7%A4%D7%9C%D7%90%D7%95_%D7%A0%D7%92%D7%A8%D7%95%D7%9C%D7%95%D7%9E%D7%95%D7%93_01530.jpg"
+        }
+      ],
+      "originalPath": "/Volumes/T7 4TB/ChatGPT-Codex-active/ChatGPT/Matkakirja 2/output/oppaan-kuvat-20261006/kaupungit/ngerulmud/originals/hero.png",
+      "toolOriginalPath": "/Users/samireivinen/.codex/generated_images/01a11231-0d49-7ed3-ad77-a02d5972ea41/exec-24794c1d-b7e3-4d22-972c-876e206dbd1f.png",
+      "originalWidth": 1536,
+      "originalHeight": 1024,
+      "originalSha256": "efe9979be8cbc317e00e4db2293e8384c176ef13a1793f60c388b90694588fee",
+      "technicalExport": "RGB PNG with sRGB ICC; no artistic image edits. Native 1536x1024 pixels retained exactly when source has that size.",
+      "QA": {
+        "format": true,
+        "dimensions": true,
+        "sRGB": "sRGB built-in",
+        "opaque": true,
+        "viewedLarge": true,
+        "viewed480": true,
+        "viewed384": false,
+        "referenceGate": {
+          "identification": "kategoria",
+          "category": "Category:Ngerulmud",
+          "count": 3,
+          "authors": 2
+        },
+        "geographicIdentity": {
+          "q": "Q515229",
+          "nimi": "Ngerulmud",
+          "en": "Ngerulmud",
+          "maa": "Palau",
+          "iso": "PW",
+          "lat": 7.5006,
+          "lon": 134.6242,
+          "peruste": "pääkaupunki",
+          "id": "ngerulmud",
+          "index": 3,
+          "subject": "Capitol of Palau",
+          "wiki": null,
+          "category": "Category:Ngerulmud"
+        },
+        "observations": "Kaksi2026ExecutiveBuilding-ulkoasukuvaa sekä2022koko kupolirakennuksen näkymä,2eri kuvaajaa; ei keksittyä kaupunkiskylineä."
+      },
+      "url": "https://media.matkakirja.app/julisteet/herokoe/hero-ngerulmud.png",
+      "http": 200,
+      "cors": "https://matkakirja.app",
+      "byteExactReadback": true,
+      "gameIntegrated": false,
+      "editorReview": "pending",
+      "instructionsVersion": 2,
+      "orderIndex": 3,
+      "nimi": "Ngerulmud",
+      "maa": "Palau"
+    }
+  ]
+}

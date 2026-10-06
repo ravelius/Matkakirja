@@ -19,3 +19,9 @@ Kokoerän esikatselu: https://media.matkakirja.app/julisteet/herokoe/20261006/er
 Katselmuksen kolme ensimmäistä: Lontoo,Praha,Wien. Katso nämä ennen pelikytkentää. Käytä kunkin manifestirivin uutta aihekuvatekstiä ja URL:ää (Pariisi/Helsinki uudessa päivätyssä avaimessa). Vastaanottokuittaus/katselmus/pelikytkentä edelleen odottavat todentamista.
 
 Alkuperäisen149paikan erän seuraava12paikan osapaketti26–37 on työnalla.162lisäkaupungin erän ensimmäiset25on jaettu kahdelle agentille, seitsemänlinssin mediatoimitus valmistui ennen1B:n alkua. Ei main-mergeä/julkaisua.
+
+## ERÄ1B / ensimmäiset kolme katselmukseen
+
+Juba,Bern,Ngerulmud ovat valmiit ja julkisesti R2-varmennettu, yksi1536×1024sRGBPNG kustakin. Manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-1b-01-yksi-kuva-pilotti-20261006.json` sisältää3kuvaa sekä tunnukset,WikidataQ,koordinaatit,URL/r2Key/SHA,promptit ja Commons-viitteet. Katso nämä ennen1B-erän kytkentää.
+
+162paikan uusi lista säilyy lähdejärjestyksessä, ensimmäiset25työnalla. Alkuperäisen149paikan seuraava25paikan erä etenee, eikä uusia vuorokausiversioita tehdä. Seitsemänlinssin prioriteettitoimitus on jo valmis; pelikytkentää tai julkaisutulosta ei vieläväitetä.
