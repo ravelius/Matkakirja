@@ -192,7 +192,10 @@ namespace Matkakirja.Linssit.IssKamera
             return r;
         }
 
-        public HashSet<(int taso, int tx, int ty)> HaettavatLaatat(S2Ruutu ru, CogOtsake o, Func<(int z, int x, int y), bool> suodin = null)
+        /// <param name="mosaiikkiKattaa">Budjettiarvio ennen mosaiikin hakua: mosaiikin lehdet lasketaan katetuiksi (juliste 6.10.:
+        /// arvio sisälsi kaukoalueen, jonka mosaiikki kattaa, ja Helsingin kuva karkeutui 32-kertaiseksi).</param>
+        public HashSet<(int taso, int tx, int ty)> HaettavatLaatat(S2Ruutu ru, CogOtsake o, Func<(int z, int x, int y), bool> suodin = null,
+            bool mosaiikkiKattaa = false)
         {
             var r = new HashSet<(int, int, int)>(); int v = ru.Vyohyke;
             foreach (var (z, x, y) in Lehdet())
@@ -201,7 +204,7 @@ namespace Matkakirja.Linssit.IssKamera
                 bool sisarus = nakyvat != null && !nakyvat.Contains((z, x, y));   // näkymän ulkopuolinen sisarus: vain karkein taso
                 var (n0, w0) = Uudelleenprojisointi.Pikseli(z, x, y, 0, 0); var (s0, e0) = Uudelleenprojisointi.Pikseli(z, x, y, 256, 256);
                 if (e0 < ru.W || w0 > ru.E || n0 < ru.S || s0 > ru.N) continue;
-                if (Mosaiikki != null && MosaiikinLaatta(z, x, y) && Mosaiikki(z, x, y) != null) continue;   // kaukoalue mosaiikista (haettu)
+                if (MosaiikinLaatta(z, x, y) && (mosaiikkiKattaa || Mosaiikki != null && Mosaiikki(z, x, y) != null)) continue;   // kaukoalue mosaiikista
                 if (Ensisijainen && ru.Valinta == 0)   // varakuva haetaan aina suodatetuille lehdille
                 {
                     // Ensimmäinen ruutu (Data.Ruudut-järjestys), joka kattaa lehden kokonaan, ottaa sen; muut ohittavat.

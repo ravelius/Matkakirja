@@ -274,6 +274,13 @@ namespace Matkakirja.Natiivi
         /// </summary>
         public static double BudjettiMt = 30, MaxKentta = 14;
         /// <summary>
+        /// Julisteen (laaja kuva) budjetti: omistaja 1.10. "enintään ~100 Mt kuvaa kohden"; 6.10.: "Kuva siis haettiin tarkimmasta
+        /// mahdollisesta aineistosta ja taivutettiin pallon muotoon". Testi `astro kyyti kuvaa julistebudjetti <Mt>`.
+        /// </summary>
+        public static double JulisteBudjettiMt = 100;
+        /// <summary>Julisteen kuvaputki (E v3:n vedos 1.10.: `astro kyyti filmi 1` ja ilmavoima 3,5): vinjetti, filmirae ja ilmakehä kuvan ajaksi.</summary>
+        public static float JulisteIlmanVoima = 3.5f;
+        /// <summary>
         /// OBJEKTIIVI (omistaja 6.10.: "kuva otetaan myös liian tele linssillä tai ainakin jostain pitäisi pystyä valitsemaan myös se
         /// laajempi versio"): oletus LAAJA (pystykenttä enintään LaajaKentta ≈ 55 mm kinoa 4:5-pystykuvassa), TELE = MaxKentta
         /// (14°, ≈ 122 mm). Valitsimen tekee Natiivi-UI ohjaamon pohjilla; testikomento `astro kyyti kuvaa laaja 0|1`. Budjetti
@@ -320,6 +327,8 @@ namespace Matkakirja.Natiivi
             Yokuori.Aallokko = 0.008f; Yokuori.KiillonVoima = 3.5f;
             bool kaariAsetettu = KaariOletuksissa();
             if (kaariAsetettu) AsetaKaari(KaariVoima, KaariHr, KaariSini, KaariUtu, KaariYdin, KaariSyva);
+            bool filmi0 = Matkakirja.Linssit.Kyytipino.Filmi; float ilma0 = Avaruus.IlmanVoima;
+            if (IssJuliste.Kaytossa) { Matkakirja.Linssit.Kyytipino.Filmi = true; Avaruus.IlmanVoima = JulisteIlmanVoima; }
             var utc = IssNyt.Kello();
             RenderTexture rt = null;
             bool kenttaRajattu = false;
@@ -343,15 +352,7 @@ namespace Matkakirja.Natiivi
                     // Kamera uuteen asentoon ennen kuvasuunnitelmaa: odota, kunnes asento ei enää muutu (Manaus 2504ef45: kahden ruudun
                     // jälkeen kamera oli vielä matkalla, joten suunnitelma ei kattanut vasenta alakulmaa → pilvetön kaista ja venyneet
                     // pilviläikät sen reunalla). Enintään 3 s.
-                    Vector3 ep = kamera.transform.position; Quaternion eq = kamera.transform.rotation; int vakaat = 0;
-                    for (float alku0 = Time.realtimeSinceStartup; Time.realtimeSinceStartup - alku0 < 3f && vakaat < 4;)
-                    {
-                        yield return null;
-                        var tp = kamera.transform.position; var tq = kamera.transform.rotation;
-                        vakaat = (tp - ep).sqrMagnitude < 1f && Quaternion.Angle(tq, eq) < 0.01f ? vakaat + 1 : 0;
-                        ep = tp; eq = tq;
-                    }
-                    Loki($"kamera asettui ({(vakaat >= 4 ? "vakaa" : "aikaraja")})");
+                    yield return KameraAsettuu(kamera);
                 }
                 // 1) kamera ECEF:ksi (pystykenttä kuten näkymässä; kuvan muoto rajaa leveyden)
                 var gt = g.transform;
@@ -369,6 +370,10 @@ namespace Matkakirja.Natiivi
                 var naytteet = Kuvasuunnitelma.Naytteet(kk);
                 if (naytteet.Count == 0) { Loki("näkymässä ei maata"); loppuTila = "ei maata"; yield break; }
                 Tila = "indeksi"; Loki($"laukaisu {id} {muoto} {W}×{H}, kenttä {kamera.fieldOfView:0.0}°, {naytteet.Count} solua, {utc:yyyy-MM-dd HH:mm:ss} UTC, vapaata {VapaaMuistiMt()} Mt");
+                // Ohjaamo näkyviin haun ja työstön ajaksi (Natiivi-UI 6.10.: IssKyytiNakyma piilottaa ohjaamon, kun Vertailu on päällä,
+                // ja KEHITETÄÄN-palkki jäi näkymättä koko kuvauksen ajan); kuvan asento palautetaan juuri ennen renderöintiä.
+                var kuvanAsento = AstronauttiLinssi.Vertailu; double kuvanKentta = AstronauttiLinssi.VertailuKentta;
+                if (kenttaRajattu) AstronauttiLinssi.Vertailu = null;
 
                 // 2) indeksi: KOKO MAAILMA (omistaja 4.10.2026 klo 14.0x, loki #3936): maailma.json → näkymän alueet etusijassa,
                 // vain niiden indeksit ladataan (2,7–9 Mt kukin, välimuisti Documents/iss-kamera/), ja ne yhdistetään (sama MGRS:
@@ -469,7 +474,7 @@ namespace Matkakirja.Natiivi
                 }
                 foreach (var ru in ruudut) if (tci.TryGetValue(ru.Tunnus, out var o)) ty.Data.Ruudut.Add((ru, o));
                 // Budjetti: suunnitelma karkeammaksi, kunnes arvioitu COG-haku (TCI + SCL, ennen mosaiikin säästöä) ≤ BudjettiMt.
-                double karkeus = 1; long arvio = 0;
+                double karkeus = 1; long arvio = 0, budjetti = (long)(Laaja && IssJuliste.Kaytossa ? JulisteBudjettiMt : BudjettiMt);
                 for (int kierros = 0; ; kierros++)
                 {
                     ty.Suunnittele(naytteet.Select(n =>
@@ -482,13 +487,13 @@ namespace Matkakirja.Natiivi
                     arvio = 0;
                     foreach (var (ru, o) in ty.Data.Ruudut)
                     {
-                        foreach (var (taso, tx, tyy) in ty.HaettavatLaatat(ru, o, null)) arvio += o.Tasot[taso].Alue(tx, tyy).Item2;
-                        if (scl.TryGetValue(ru.Tunnus, out var so)) foreach (var (taso, tx, tyy) in ty.HaettavatLaatat(ru, so, null)) arvio += so.Tasot[taso].Alue(tx, tyy).Item2;
+                        foreach (var (taso, tx, tyy) in ty.HaettavatLaatat(ru, o, null, mosaiikkiKattaa: true)) arvio += o.Tasot[taso].Alue(tx, tyy).Item2;
+                        if (scl.TryGetValue(ru.Tunnus, out var so)) foreach (var (taso, tx, tyy) in ty.HaettavatLaatat(ru, so, null, mosaiikkiKattaa: true)) arvio += so.Tasot[taso].Alue(tx, tyy).Item2;
                     }
-                    if (arvio <= BudjettiMt * 1e6 || kierros >= 5) break;
+                    if (arvio <= budjetti * 1e6 || kierros >= 5) break;
                     karkeus *= 2;
                 }
-                Loki($"budjetti: karkeus {karkeus:0}× (reunoilla +{ReunaKarkeus:0}×), arvio {arvio / 1e6:0.0} Mt (raja {BudjettiMt:0} Mt), kenttä {kamera.fieldOfView:0.0}°{(kenttaRajattu ? " (rajattu)" : "")}");
+                Loki($"budjetti: karkeus {karkeus:0}× (reunoilla +{ReunaKarkeus:0}×), arvio {arvio / 1e6:0.0} Mt (raja {budjetti:0} Mt), kenttä {kamera.fieldOfView:0.0}°{(kenttaRajattu ? " (rajattu)" : "")}");
 
                 // 3b) kaukoalue S2-mosaiikista (lehdet z ≤ 10; 50 mm: ~100 Mt COG:ia → ~10–20 Mt): ladataan ja puretaan ensin,
                 // jotta COG-haku ohittaa vain onnistuneet (404 tai mosaiikin ulkopuolella → COG).
@@ -751,6 +756,11 @@ namespace Matkakirja.Natiivi
 
                 // 6) pinta S2:n paikalle ja kamera kuvan kokoiseen tekstuuriin; odotus kunnes pallo on ladattu
                 Tila = "renderöinti";
+                if (kenttaRajattu)
+                {
+                    AstronauttiLinssi.Vertailu = kuvanAsento; AstronauttiLinssi.VertailuKentta = kuvanKentta;
+                    yield return KameraAsettuu(kamera);
+                }
                 AstronauttiKerros.KuvanPinta = new AstronauttiKerros.Pinta { Url = "file://" + laatat + "/{z}/{x}/{reverseY}.png",
                     W = ty.W, S = ty.S, E = ty.E, N = ty.N, Rx = ty.Rx, Ry = ty.Ry, MaxTaso = zmax - KuvanTyosto.JuuriZ };
                 rt = new RenderTexture(W, H, 24, RenderTextureFormat.ARGB32, RenderTextureReadWrite.sRGB) { name = "IssKameraKuva", antiAliasing = 1 };
@@ -816,6 +826,7 @@ namespace Matkakirja.Natiivi
             {
                 if (kenttaRajattu) AstronauttiLinssi.Vertailu = null;
                 IssJuliste.SiluettiPois();
+                Matkakirja.Linssit.Kyytipino.Filmi = filmi0; Avaruus.IlmanVoima = ilma0;
                 if (rt != null) { kamera.targetTexture = null; kamera.ResetAspect(); rt.Release(); Destroy(rt); }
                 GC.Collect(); Resources.UnloadUnusedAssets();
                 Loki($"muisti kuvan jälkeen: vapaata {VapaaMuistiMt()} Mt");
@@ -1254,6 +1265,21 @@ namespace Matkakirja.Natiivi
             double kulma = Math.Acos(Math.Max(-1, Math.Min(1, Math.Sin(f1) * Math.Sin(f2) + Math.Cos(f1) * Math.Cos(f2) * Math.Cos(dl))));
             double az = Math.Atan2(Math.Sin(dl) * Math.Cos(f2), Math.Cos(f1) * Math.Sin(f2) - Math.Sin(f1) * Math.Cos(f2) * Math.Cos(dl));
             return ((az * 180 / Math.PI + 360) % 360, 90 - kulma * 180 / Math.PI);
+        }
+
+        /// <summary>Odota, kunnes kamera ei enää liiku (4 peräkkäistä ruutua alle 1 m ja 0,01°), enintään 3 s.</summary>
+        IEnumerator KameraAsettuu(Camera kamera)
+        {
+            // Manaus 2504ef45: kahden ruudun jälkeen kamera oli vielä matkalla → suunnitelma ei kattanut vasenta alakulmaa.
+            Vector3 ep = kamera.transform.position; Quaternion eq = kamera.transform.rotation; int vakaat = 0;
+            for (float alku = Time.realtimeSinceStartup; Time.realtimeSinceStartup - alku < 3f && vakaat < 4;)
+            {
+                yield return null;
+                var tp = kamera.transform.position; var tq = kamera.transform.rotation;
+                vakaat = (tp - ep).sqrMagnitude < 1f && Quaternion.Angle(tq, eq) < 0.01f ? vakaat + 1 : 0;
+                ep = tp; eq = tq;
+            }
+            Loki($"kamera asettui ({(vakaat >= 4 ? "vakaa" : "aikaraja")})");
         }
 
         /// <summary>
