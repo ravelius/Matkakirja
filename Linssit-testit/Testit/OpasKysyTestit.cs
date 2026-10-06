@@ -23,6 +23,22 @@ namespace Matkakirja.Linssit.Testit
             return (s, p, puhe);
         }
 
+        [Testi] static void KysyVastausLuetaanSallivasti()
+        {
+            OpasKysyVastaus L(string j) => OpasKysyVastaus.Lue((Dictionary<string, object>)MiniJson.Jasenna(j));
+            var a = L("{\"vastaus\":{\"teksti\":\"Koska…\",\"aani\":\"https://x/a.mp3\",\"kesto_s\":6},\"jatkokysymykset\":[\"Entä?\",\"Miksi?\"],\"toiminto\":null}");
+            Oleta.Tosi(a.Teksti == "Koska…" && a.Aani != null && a.KestoS == 6 && a.Jatkokysymykset.Length == 2 && a.Toiminto == OpasToiminto.Ei);
+            var b = L("{\"teksti\":\"Lennetään.\",\"toiminto\":{\"tyyppi\":\"siirry\",\"nimi\":\"Nyhavn\",\"lat\":55.6797,\"lon\":12.5906}}");
+            Oleta.Tosi(b.Toiminto == OpasToiminto.Siirry && b.ToimintoNimi == "Nyhavn" && Math.Abs(b.ToimintoLat - 55.6797) < 1e-9);
+            var c = L("{\"vastaus\":\"Kierros alkaa.\",\"toiminto\":\"kierros\"}");
+            Oleta.Tosi(c.Teksti == "Kierros alkaa." && c.Toiminto == OpasToiminto.Kierros);
+            var d = L("{\"toiminto\":{\"tyyppi\":\"kohde\",\"id\":\"Q1\"}}");
+            Oleta.Tosi(d.Toiminto == OpasToiminto.Kohde && d.ToimintoId == "Q1");
+            Oleta.Tosi(L("{}") == null);
+            var y = OpasKysyVastaus.Yhdista(new[] { "Entä?", "Miksi?" }, new[] { "Miksi?", "Milloin?", "Kuka?" });
+            Oleta.Tosi(y.Length == 4 && y[0] == "Entä?" && y[2] == "Milloin?");
+        }
+
         [Testi] static void KysymyksetLuetaan()
         {
             var k = OpasKohde.Lue((Dictionary<string, object>)MiniJson.Jasenna("{\"nimi\":\"N\",\"lat\":55.68,\"lon\":12.59,\"kysymykset\":[\"Miksi?\",\" \",\"Milloin?\"]}"));
