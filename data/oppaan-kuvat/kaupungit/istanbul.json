@@ -1,0 +1,963 @@
+{
+ "kaupunki": "istanbul",
+ "kaupunkiQ": "Q406",
+ "kohteet": [
+  {
+   "q": "Q12506",
+   "nimi": "Hagia Sofia",
+   "peruste": "UNESCO",
+   "koko_m": 150,
+   "lat": 41.00833,
+   "lon": 28.98,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Hagia Sophia Mars 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hagia_Sophia_Mars_2013.jpg?width=1280",
+     "tekija": "Arild Vågen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia_Mars_2013.jpg",
+     "selite": "Hagia Sofia on 500-luvulla rakennettu kupolikirkko, josta tuli moskeija ja nykyään jälleen moskeija.",
+     "leveys": 5514,
+     "korkeus": 3681,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Istanbul Hagia Sophia IMG 8615 2050.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul_Hagia_Sophia_IMG_8615_2050.jpg?width=1280",
+     "tekija": "Alexxx1979",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Istanbul_Hagia_Sophia_IMG_8615_2050.jpg",
+     "selite": "Illalla valaistu Hagia Sofia ja sen minareetit hallitsevat Sultanahmetin aukion siluettia.",
+     "leveys": 3016,
+     "korkeus": 2050,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Hagia Sophia February 2013 02.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hagia_Sophia_February_2013_02.jpg?width=1280",
+     "tekija": "Arild Vågen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia_February_2013_02.jpg",
+     "selite": "Rakennuksen valtava kupoli ja sen ympärille lisätyt minareetit näkyvät hämärässä selvästi.",
+     "leveys": 3461,
+     "korkeus": 2310,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Hagia Sophia Mars 2013 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hagia_Sophia_Mars_2013_01.jpg?width=1280",
+     "tekija": "Arild Vågen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Hagia_Sophia_Mars_2013_01.jpg",
+     "selite": "Hagia Sofian edustan aukio yhdistää Sultanahmetin vanhankaupungin kohteet.",
+     "leveys": 5478,
+     "korkeus": 3657,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q80541",
+   "nimi": "Sulttaani Ahmedin moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 41.00539,
+   "lon": 28.97682,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Blue Mosque Courtyard Dusk Wikimedia Commons.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Mosque_Courtyard_Dusk_Wikimedia_Commons.jpg?width=1280",
+     "tekija": "Benh LIEU SONG (Flickr)",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_Mosque_Courtyard_Dusk_Wikimedia_Commons.jpg",
+     "selite": "Sininen moskeija on 1600-luvun alun moskeija, jonka pihaa kehystävät holvikäytävät.",
+     "leveys": 7937,
+     "korkeus": 5580,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Exterior of Sultan Ahmed I Mosque in Istanbul, Turkey 002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Exterior_of_Sultan_Ahmed_I_Mosque_in_Istanbul%2C_Turkey_002.jpg?width=1280",
+     "tekija": "Moonik",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Exterior_of_Sultan_Ahmed_I_Mosque_in_Istanbul%2C_Turkey_002.jpg",
+     "selite": "Moskeijan kuusi minareettia erottavat sen muista Istanbulin moskeijoista.",
+     "leveys": 4238,
+     "korkeus": 2766,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Blue Mosque (Istanbul).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Mosque_(Istanbul).jpg?width=1280",
+     "tekija": "Bernard Gagnon",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Blue_Mosque_(Istanbul).jpg",
+     "selite": "Sininen moskeija kohoaa vanhankaupungin kattojen yläpuolelle.",
+     "leveys": 4363,
+     "korkeus": 2926,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Sultan Ahmed Mosque(Blue Mosque), Istanbul, Turkey (Ank Kumar) 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sultan_Ahmed_Mosque(Blue_Mosque)%2C_Istanbul%2C_Turkey_(Ank_Kumar)_07.jpg?width=1280",
+     "tekija": "Ank Kumar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sultan_Ahmed_Mosque(Blue_Mosque)%2C_Istanbul%2C_Turkey_(Ank_Kumar)_07.jpg",
+     "selite": "Moskeijan sisäpihalla on peseytymiseen tarkoitettu kaivo ja avoin kaariholvisto.",
+     "leveys": 3993,
+     "korkeus": 4127,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q170495",
+   "nimi": "Topkapın palatsi",
+   "peruste": "pelin nosto",
+   "koko_m": 600,
+   "lat": 41.013,
+   "lon": 28.984,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Topkapı - 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Topkap%C4%B1_-_01.jpg?width=1280",
+     "tekija": "Carlos Delgado",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Topkap%C4%B1_-_01.jpg",
+     "selite": "Topkapın palatsi oli ottomaanisulttaanien hallinnollinen keskus Bosporin ja Kultaisen sarven risteyksessä.",
+     "leveys": 3635,
+     "korkeus": 1817,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Topkapi Palace Seen From Harem.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Topkapi_Palace_Seen_From_Harem.JPG?width=1280",
+     "tekija": "Bjørn Christian Tørrissen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Topkapi_Palace_Seen_From_Harem.JPG",
+     "selite": "Palatsin muurit ja tornit näkyvät merelle päin matalana siluettina.",
+     "leveys": 3454,
+     "korkeus": 1530,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Third Courtyard garden (Topkapı Palace).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Third_Courtyard_garden_(Topkap%C4%B1_Palace).jpg?width=1280",
+     "tekija": "Radosław Botev",
+     "lisenssi": "CC BY 3.0 pl",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0/pl/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Third_Courtyard_garden_(Topkap%C4%B1_Palace).jpg",
+     "selite": "Palatsi muodostuu peräkkäisistä pihoista, joiden ympärillä on paviljonkeja.",
+     "leveys": 1840,
+     "korkeus": 1232,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Grand Kiosk of Topkapı Palace in Istanbul, Turkey 002.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Grand_Kiosk_of_Topkap%C4%B1_Palace_in_Istanbul%2C_Turkey_002.jpg?width=1280",
+     "tekija": "Moonik",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Grand_Kiosk_of_Topkap%C4%B1_Palace_in_Istanbul%2C_Turkey_002.jpg",
+     "selite": "Palatsin terasseilta avautuu näkymä Bosporille ja Marmaranmerelle.",
+     "leveys": 4011,
+     "korkeus": 2606,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q505954",
+   "nimi": "Suuri basaari",
+   "peruste": "pelin nosto",
+   "koko_m": 300,
+   "lat": 41.01058,
+   "lon": 28.96793,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "2013-01-02 Grand Bazaar, Istanbul 01.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2013-01-02_Grand_Bazaar%2C_Istanbul_01.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2013-01-02_Grand_Bazaar%2C_Istanbul_01.jpg",
+     "selite": "Suuri basaari on katettu kauppakortteli, jossa on kymmeniä holvikattoisia katuja.",
+     "leveys": 2700,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2013-01-02 Grand Bazaar, Istanbul 06.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2013-01-02_Grand_Bazaar%2C_Istanbul_06.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2013-01-02_Grand_Bazaar%2C_Istanbul_06.jpg",
+     "selite": "Basaarin holvit on koristeltu maalauksin, ja jokaisella kujalla on oma erikoisalansa.",
+     "leveys": 2700,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "2013-01-02 Grand Bazaar, Istanbul 07.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2013-01-02_Grand_Bazaar%2C_Istanbul_07.jpg?width=1280",
+     "tekija": "Maksym Kozlenko",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2013-01-02_Grand_Bazaar%2C_Istanbul_07.jpg",
+     "selite": "Keraamiikkaa ja posliinia myydään basaarin ahtaissa kauppakäytävissä.",
+     "leveys": 2700,
+     "korkeus": 1800,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q91274",
+   "nimi": "Galatan torni",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 41.02563,
+   "lon": 28.97415,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Istanbul Galata Tower IMG 8211 1920.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul_Galata_Tower_IMG_8211_1920.jpg?width=1280",
+     "tekija": "Alexxx1979",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Istanbul_Galata_Tower_IMG_8211_1920.jpg",
+     "selite": "Galatan torni kohoaa Beyoğlun kattojen yläpuolelle kartiomaisena silhuettina.",
+     "leveys": 2924,
+     "korkeus": 1920,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Istanbul Galata Tower IMG 7475 1800.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul_Galata_Tower_IMG_7475_1800.jpg?width=1280",
+     "tekija": "Alexxx1979",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Istanbul_Galata_Tower_IMG_7475_1800.jpg",
+     "selite": "Valaistu torni erottuu Kultaisen sarven rannalta pimeässä kaupunkia hallitsevana kohteena.",
+     "leveys": 2700,
+     "korkeus": 1800,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Galata Tower January 2015.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Galata_Tower_January_2015.JPG?width=1280",
+     "tekija": "Martin Falbisoner",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Galata_Tower_January_2015.JPG",
+     "selite": "Keskiaikainen kivitorni on yksi Istanbulin tunnetuimmista näköalapaikoista.",
+     "leveys": 2565,
+     "korkeus": 5036,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "At Istanbul - Wikimedia hackathon boat tour 2025 807.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Istanbul_-_Wikimedia_hackathon_boat_tour_2025_807.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Istanbul_-_Wikimedia_hackathon_boat_tour_2025_807.jpg",
+     "selite": "Galatan torni näkyy Kultaisen sarven yli kaukaa tummuvan illan sinisessä valossa.",
+     "leveys": 6960,
+     "korkeus": 4640,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q178643",
+   "nimi": "Süleymaniyen moskeija",
+   "peruste": "pelin nosto",
+   "koko_m": 250,
+   "lat": 41.01611,
+   "lon": 28.96389,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "SüleymaniyeMosqueIstanbul (cropped).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/S%C3%BCleymaniyeMosqueIstanbul_(cropped).jpg?width=1280",
+     "tekija": "Hunanuk",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:S%C3%BCleymaniyeMosqueIstanbul_(cropped).jpg",
+     "selite": "Süleymaniyen moskeija on Sinanin suunnittelema suuri moskeijakompleksi vanhankaupungin kukkulalla.",
+     "leveys": 4063,
+     "korkeus": 3039,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Mezquita de Solimán, Estambul, Turquía, 2024-09-28, DD 147-149 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mezquita_de_Solim%C3%A1n%2C_Estambul%2C_Turqu%C3%ADa%2C_2024-09-28%2C_DD_147-149_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mezquita_de_Solim%C3%A1n%2C_Estambul%2C_Turqu%C3%ADa%2C_2024-09-28%2C_DD_147-149_HDR.jpg",
+     "selite": "Moskeijan kupolit ja minareetit erottuvat Kultaisen sarven yli illan valossa.",
+     "leveys": 8315,
+     "korkeus": 5543,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Süleymaniye Mosque exterior view.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/S%C3%BCleymaniye_Mosque_exterior_view.JPG?width=1280",
+     "tekija": "İhsan Deniz Kılıçoğlu",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:S%C3%BCleymaniye_Mosque_exterior_view.JPG",
+     "selite": "Moskeijaa ympäröivät puistomaiset pihat ja rakennukset, jotka kuuluivat samaan kompleksiin.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "At Istanbul - Wikimedia hackathon boat tour 2025 799.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/At_Istanbul_-_Wikimedia_hackathon_boat_tour_2025_799.jpg?width=1280",
+     "tekija": "Photograph by Mike Peel (www.mikepeel.net).",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:At_Istanbul_-_Wikimedia_hackathon_boat_tour_2025_799.jpg",
+     "selite": "Rannalta katsottuna moskeija hallitsee vanhankaupungin kolmatta kukkulaa.",
+     "leveys": 6960,
+     "korkeus": 4640,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q216511",
+   "nimi": "Yerebatanin vesisäiliö",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 41.0084,
+   "lon": 28.97792,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Cisterna Basílica, Estambul, Turquía, 2024-09-28, DD 58-60 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cisterna_Bas%C3%ADlica%2C_Estambul%2C_Turqu%C3%ADa%2C_2024-09-28%2C_DD_58-60_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cisterna_Bas%C3%ADlica%2C_Estambul%2C_Turqu%C3%ADa%2C_2024-09-28%2C_DD_58-60_HDR.jpg",
+     "selite": "Yerebatan on bysanttilainen maanalainen vesisäiliö, jonka pylväsmetsä heijastuu veteen.",
+     "leveys": 5495,
+     "korkeus": 8505,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A medusa head at the basilica cistern.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_medusa_head_at_the_basilica_cistern.jpg?width=1280",
+     "tekija": "Tcyagizefem",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_medusa_head_at_the_basilica_cistern.jpg",
+     "selite": "Kahden pylvään jalustana on uudelleenkäytetty Medusan pää.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q81523",
+   "nimi": "Galatan silta",
+   "peruste": "pelin nosto",
+   "koko_m": 500,
+   "lat": 41.02,
+   "lon": 28.97306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Galata Bridge From Tower.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Galata_Bridge_From_Tower.JPG?width=1280",
+     "tekija": "Bjørn Christian Tørrissen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Galata_Bridge_From_Tower.JPG",
+     "selite": "Galatan silta yhdistää Kultaisen sarven eri puolet ja liikennöi sekä jalankulku- että autoliikenteelle.",
+     "leveys": 2898,
+     "korkeus": 2079,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "-i---i- (34821321651).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/-i---i-_(34821321651).jpg?width=1280",
+     "tekija": "Thomas Woodtli from Zürich, Switzerland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:-i---i-_(34821321651).jpg",
+     "selite": "Sillalta avautuu näkymä Eminönün moskeijoihin ja vanhankaupungin siluettiin.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "20131205 Istanbul 170.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20131205_Istanbul_170.jpg?width=1280",
+     "tekija": "Mark Ahsmann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20131205_Istanbul_170.jpg",
+     "selite": "Sillan takana kohoaa Beyoğlun rinne ja Galatan torni.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q848397",
+   "nimi": "Neitsyttorni",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 41.02111,
+   "lon": 29.00417,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Maiden tower, Istanbul (P1100207).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maiden_tower%2C_Istanbul_(P1100207).jpg?width=1280",
+     "tekija": "Matti Blume",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Maiden_tower%2C_Istanbul_(P1100207).jpg",
+     "selite": "Neitsyttorni on pieni majakkatorni saarella Bosporinsalmen eteläisessä suuaukossa.",
+     "leveys": 3760,
+     "korkeus": 2820,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Maiden tower, Istanbul (P1100204).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Maiden_tower%2C_Istanbul_(P1100204).jpg?width=1280",
+     "tekija": "Matti Blume",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Maiden_tower%2C_Istanbul_(P1100204).jpg",
+     "selite": "Torni näkyy kaukaa Üsküdarin ja Istanbulin Euroopan puolen välissä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "7 Tepeli Şehrin Semboli.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/7_Tepeli_%C5%9Eehrin_Semboli.jpg?width=1280",
+     "tekija": "Yasinornek13",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:7_Tepeli_%C5%9Eehrin_Semboli.jpg",
+     "selite": "Täysikuun valaisema Neitsyttorni on yksi kaupungin romanttisimmista maamerkeistä.",
+     "leveys": 4288,
+     "korkeus": 2848,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q274141",
+   "nimi": "Dolmabahçen palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 41.03944,
+   "lon": 29.00167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palacio de Dolmabahçe, Estambul, Turquía, 2024-09-29, DD 24.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palacio_de_Dolmabah%C3%A7e%2C_Estambul%2C_Turqu%C3%ADa%2C_2024-09-29%2C_DD_24.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palacio_de_Dolmabah%C3%A7e%2C_Estambul%2C_Turqu%C3%ADa%2C_2024-09-29%2C_DD_24.jpg",
+     "selite": "Dolmabahçen palatsi on 1800-luvun barokkipalatsi Bosporin rannalla.",
+     "leveys": 7129,
+     "korkeus": 3784,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "03356-Istanbul-DolmabahcePalace (3446008069).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/03356-Istanbul-DolmabahcePalace_(3446008069).jpg?width=1280",
+     "tekija": "xiquinhosilva",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:03356-Istanbul-DolmabahcePalace_(3446008069).jpg",
+     "selite": "Palatsin portit aukeavat suoraan Bosporin rannalle.",
+     "leveys": 1536,
+     "korkeus": 2048,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Gate of the Sultan at the Dolmabahçe Palace in Istanbul, Turkey 001.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gate_of_the_Sultan_at_the_Dolmabah%C3%A7e_Palace_in_Istanbul%2C_Turkey_001.JPG?width=1280",
+     "tekija": "Moonik",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gate_of_the_Sultan_at_the_Dolmabah%C3%A7e_Palace_in_Istanbul%2C_Turkey_001.JPG",
+     "selite": "Sulttaanin portti on palatsin koristeellinen sisäänkäynti.",
+     "leveys": 2626,
+     "korkeus": 4212,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q4484",
+   "nimi": "Bosporinsalmen silta",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 41.04556,
+   "lon": 29.03403,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bosphorus Bridge (1973) in Istanbul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bosphorus_Bridge_(1973)_in_Istanbul.jpg?width=1280",
+     "tekija": "Huseyinakbas63",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bosphorus_Bridge_(1973)_in_Istanbul.jpg",
+     "selite": "Bosporinsalmen silta yhdistää Euroopan ja Aasian ja valaistaan öisin eri väreillä.",
+     "leveys": 4000,
+     "korkeus": 2571,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Bosphorus Bridge(15 July Martyrs Bridge), Istanbul, Turkey (Ank Kumar) 04.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bosphorus_Bridge(15_July_Martyrs_Bridge)%2C_Istanbul%2C_Turkey_(Ank_Kumar)_04.jpg?width=1280",
+     "tekija": "Ank Kumar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bosphorus_Bridge(15_July_Martyrs_Bridge)%2C_Istanbul%2C_Turkey_(Ank_Kumar)_04.jpg",
+     "selite": "Riippusilta ylittää salmen ja yhdistää kaksi mannerta.",
+     "leveys": 3781,
+     "korkeus": 2521,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "15 Temmuz Şehitler Köprüsü.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/15_Temmuz_%C5%9Eehitler_K%C3%B6pr%C3%BCs%C3%BC.jpg?width=1280",
+     "tekija": "g",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:15_Temmuz_%C5%9Eehitler_K%C3%B6pr%C3%BCs%C3%BC.jpg",
+     "selite": "Sillan kaari ulottuu Bosporinsalmen yli Euroopan ja Aasian välillä.",
+     "leveys": 3264,
+     "korkeus": 2448,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q176380",
+   "nimi": "Ortaköyn moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 41.04733,
+   "lon": 29.02681,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Ortaköy Mosque, Istanbul 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ortak%C3%B6y_Mosque%2C_Istanbul_2019.jpg?width=1280",
+     "tekija": "Moataz1997",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ortak%C3%B6y_Mosque%2C_Istanbul_2019.jpg",
+     "selite": "Ortaköyn moskeija seisoo aivan Bosporin rannalla, ja sen taustalla näkyy silta.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Ortaköy Mosque from the Bosporus, Istanbul, 20260606 1425 1509.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Ortak%C3%B6y_Mosque_from_the_Bosporus%2C_Istanbul%2C_20260606_1425_1509.jpg?width=1280",
+     "tekija": "Jakub Hałun",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Ortak%C3%B6y_Mosque_from_the_Bosporus%2C_Istanbul%2C_20260606_1425_1509.jpg",
+     "selite": "Moskeijan barokkihenkinen julkisivu avautuu salmen suuntaan.",
+     "leveys": 3027,
+     "korkeus": 4541,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Büyük Mecidiye Camii - Ortaköy Mosque.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/B%C3%BCy%C3%BCk_Mecidiye_Camii_-_Ortak%C3%B6y_Mosque.jpg?width=1280",
+     "tekija": "Eusebius",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:B%C3%BCy%C3%BCk_Mecidiye_Camii_-_Ortak%C3%B6y_Mosque.jpg",
+     "selite": "Valkoinen moskeija ja sen kaksi minareettia heijastuvat Bosporin sinisessä vedessä.",
+     "leveys": 3228,
+     "korkeus": 4841,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q588892",
+   "nimi": "Käärmepylväs",
+   "peruste": "pelin nosto",
+   "koko_m": 40,
+   "lat": 41.00562,
+   "lon": 28.97512,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Snake column Hippodrome Constantinople 2007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Snake_column_Hippodrome_Constantinople_2007.jpg?width=1280",
+     "tekija": "Gryffindor This panoramic image was created with Autostitch (stitched images may differ from reality).",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Snake_column_Hippodrome_Constantinople_2007.jpg",
+     "selite": "Käärmepylväs on antiikin pronssipylväs Konstantinopolin hippodromin alueella.",
+     "leveys": 1521,
+     "korkeus": 3061,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20180114 SultanAhmet 7706 (26272938878).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20180114_SultanAhmet_7706_(26272938878).jpg?width=1280",
+     "tekija": "Ray Swi-hymn from Sijhih-Taipei, Taiwan",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20180114_SultanAhmet_7706_(26272938878).jpg",
+     "selite": "Pylväs seisoo upotettuna Sultanahmetin aukion kuoppaan.",
+     "leveys": 5304,
+     "korkeus": 7952,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q90801",
+   "nimi": "Rumelihisarin linnake",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 41.08472,
+   "lon": 29.05611,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Fortress Rumeli hisarı as seen from a Bosphorus boat.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fortress_Rumeli_hisar%C4%B1_as_seen_from_a_Bosphorus_boat.jpg?width=1280",
+     "tekija": "Mustafa-trit20",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Fortress_Rumeli_hisar%C4%B1_as_seen_from_a_Bosphorus_boat.jpg",
+     "selite": "Rumelihisarin linnake rakennettiin Bosporin rannalle ennen Konstantinopolin valtausta.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Rumeli Hisari Istanbul.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rumeli_Hisari_Istanbul.JPG?width=1280",
+     "tekija": "Helge Høifødt",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Rumeli_Hisari_Istanbul.JPG",
+     "selite": "Linnakkeen tornit ja muurit kohoavat jyrkkään rinteeseen salmen äärellä.",
+     "leveys": 3834,
+     "korkeus": 2458,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q849489",
+   "nimi": "Chora-kirkko",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 41.03111,
+   "lon": 28.93917,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Chora Church 2024.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chora_Church_2024.jpg?width=1280",
+     "tekija": "Tadam",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chora_Church_2024.jpg",
+     "selite": "Chora-kirkko on bysanttilainen kirkko, joka tunnetaan mosaiikeistaan ja freskoistaan.",
+     "leveys": 4000,
+     "korkeus": 2250,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2012 Fall in Istanbul Chora Church (1).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2012_Fall_in_Istanbul_Chora_Church_(1).jpg?width=1280",
+     "tekija": "PlanetKorriban",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2012_Fall_in_Istanbul_Chora_Church_(1).jpg",
+     "selite": "Kirkon ulkoseinät on rakennettu kerroksittain tiilestä ja kivestä.",
+     "leveys": 1200,
+     "korkeus": 900,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Anastasis fresco, Chora Church, Istanbul.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Anastasis_fresco%2C_Chora_Church%2C_Istanbul.jpg?width=1280",
+     "tekija": "Till Niermann",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Anastasis_fresco%2C_Chora_Church%2C_Istanbul.jpg",
+     "selite": "Anastasis-freskossa Kristus nostaa Aatamin ja Eevan haudasta.",
+     "leveys": 5184,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q911720",
+   "nimi": "Uusi moskeija",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 41.01687,
+   "lon": 28.97214,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Mezquita Nueva, Estambul, Turquía, 2024-09-29, DD 39-41 HDR.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mezquita_Nueva%2C_Estambul%2C_Turqu%C3%ADa%2C_2024-09-29%2C_DD_39-41_HDR.jpg?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Mezquita_Nueva%2C_Estambul%2C_Turqu%C3%ADa%2C_2024-09-29%2C_DD_39-41_HDR.jpg",
+     "selite": "Uusi moskeija kohoaa Eminönün rannalla Kultaisen sarven eteläpuolella.",
+     "leveys": 7026,
+     "korkeus": 4684,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Eminönü-İstanbul - panoramio - HALUK COMERTEL.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Emin%C3%B6n%C3%BC-%C4%B0stanbul_-_panoramio_-_HALUK_COMERTEL.jpg?width=1280",
+     "tekija": "HALUK COMERTEL",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Emin%C3%B6n%C3%BC-%C4%B0stanbul_-_panoramio_-_HALUK_COMERTEL.jpg",
+     "selite": "Moskeijan edustalla on Eminönün suuri aukio, jolta lähtee lauttoja ja raitiovaunuja.",
+     "leveys": 2270,
+     "korkeus": 1513,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q668641",
+   "nimi": "Mausteiden basaari",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 41.01639,
+   "lon": 28.97056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "18 Basar Egipci d'Istanbul (Mısır Çarşısı), parada d'espècies.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/18_Basar_Egipci_d'Istanbul_(M%C4%B1s%C4%B1r_%C3%87ar%C5%9F%C4%B1s%C4%B1)%2C_parada_d'esp%C3%A8cies.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:18_Basar_Egipci_d'Istanbul_(M%C4%B1s%C4%B1r_%C3%87ar%C5%9F%C4%B1s%C4%B1)%2C_parada_d'esp%C3%A8cies.jpg",
+     "selite": "Mausteiden basaarissa myydään mausteita, teetä ja kuivattuja hedelmiä.",
+     "leveys": 3456,
+     "korkeus": 2592,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "20 Basar Egipci d'Istanbul (Mısır Çarşısı), bitxos, nyores i esponges.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20_Basar_Egipci_d'Istanbul_(M%C4%B1s%C4%B1r_%C3%87ar%C5%9F%C4%B1s%C4%B1)%2C_bitxos%2C_nyores_i_esponges.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20_Basar_Egipci_d'Istanbul_(M%C4%B1s%C4%B1r_%C3%87ar%C5%9F%C4%B1s%C4%B1)%2C_bitxos%2C_nyores_i_esponges.jpg",
+     "selite": "Kojuissa roikkuu kuivattuja hedelmiä ja sieniä aivan kauppiaiden päiden yläpuolella.",
+     "leveys": 3456,
+     "korkeus": 2592,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q794349",
+   "nimi": "Beylerbeyin palatsi",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 41.0426,
+   "lon": 29.0399,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Beylerbeyi Palace, Istanbul - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beylerbeyi_Palace%2C_Istanbul_-_panoramio.jpg?width=1280",
+     "tekija": "Akrep Scorpion",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beylerbeyi_Palace%2C_Istanbul_-_panoramio.jpg",
+     "selite": "Beylerbeyin palatsi oli ottomaanisulttaanien kesäasuntona Bosporin Aasian puolella.",
+     "leveys": 4224,
+     "korkeus": 3168,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Beylerbeyi Palace 8920.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beylerbeyi_Palace_8920.jpg?width=1280",
+     "tekija": "Dosseman",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beylerbeyi_Palace_8920.jpg",
+     "selite": "Palatsin marmorinen julkisivu on koristeltu pylväin ja veistoksin.",
+     "leveys": 4928,
+     "korkeus": 3280,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Beylerbeyi Palace - wide.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beylerbeyi_Palace_-_wide.jpg?width=1280",
+     "tekija": "Eusebius",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Beylerbeyi_Palace_-_wide.jpg",
+     "selite": "Palatsi seisoo salmen rannalla rinteen juurella.",
+     "leveys": 4595,
+     "korkeus": 1622,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q952924",
+   "nimi": "Valensin akvedukti",
+   "peruste": "sitelinks",
+   "koko_m": 300,
+   "lat": 41.01599,
+   "lon": 28.95557,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Unkapanı -İstanbul - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Unkapan%C4%B1_-%C4%B0stanbul_-_panoramio.jpg?width=1280",
+     "tekija": "HALUK COMERTEL",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Unkapan%C4%B1_-%C4%B0stanbul_-_panoramio.jpg",
+     "selite": "Valensin akvedukti oli roomalaisaikainen vesijohto, jonka kaaret ylittävät nykyisin kaupunkikadun.",
+     "leveys": 3072,
+     "korkeus": 1576,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q800974",
+   "nimi": "Sirkecin asema",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 41.01497,
+   "lon": 28.97646,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Bahnhofsfront-Istanbul-Sirkeci retouched.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Bahnhofsfront-Istanbul-Sirkeci_retouched.jpg?width=1280",
+     "tekija": "Bahnhofsfront-Istanbul-Sirkeci.jpg: Martin Dürrschnabel derivative work: Dha (talk)",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Bahnhofsfront-Istanbul-Sirkeci_retouched.jpg",
+     "selite": "Sirkecin asema oli Orient-Expressin päätepysäkki Istanbulin Euroopan puolella.",
+     "leveys": 2712,
+     "korkeus": 996,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Istanbul panorama from Galata tower - 1.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Istanbul_panorama_from_Galata_tower_-_1.jpg?width=1280",
+   "tekija": "Ilya saffarian Tousi",
+   "lisenssi": "CC0",
+   "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Istanbul_panorama_from_Galata_tower_-_1.jpg",
+   "selite": "Istanbulin keskusta ulottuu Kultaisen sarven ympärille Galatan tornin näköalalta katsottuna.",
+   "leveys": 8334,
+   "korkeus": 3798,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Cuerno de Oro, Estambul, Turquía, 2024-09-28, DD 141-143 HDR.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cuerno_de_Oro%2C_Estambul%2C_Turqu%C3%ADa%2C_2024-09-28%2C_DD_141-143_HDR.jpg?width=1280",
+   "tekija": "Diego Delso",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Cuerno_de_Oro%2C_Estambul%2C_Turqu%C3%ADa%2C_2024-09-28%2C_DD_141-143_HDR.jpg",
+   "selite": "Illan hämärässä Kultaisen sarven rannat ja Süleymaniyen moskeijan siluetti erottuvat vanhankaupungin kukkulalla.",
+   "leveys": 8268,
+   "korkeus": 3574,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

@@ -33,3 +33,5 @@ Vientitiedosto `oppaan-kuvat.json` (`node tools/oppaan-kuvat.mjs kokoa`): `{"ske
 Lisäkentät: kohteella valinnaiset `koko_m` (halkaisija metreinä kameraa varten, oletus 150) ja `aliakset` (muut Q-tunnukset). `kaupunginKuvat` 1–2 kuvaa
 (kaupungin oma kuva, Pelikoodarin kaupunkipysähdystä varten). `kokoa` kirjoittaa vientitiedostoon `kaupungit.<id> = {nimi, Q, lat, lon, kohteet:[12 Q tärkeysjärjestyksessä], kuvat:[kaupungin kuvat]}`;
 kuvakentissä säilyy `tiedosto` (Commonsin tiedostonimi), ja Pelikoodarin vientityökalu peilaa kuvan ja kirjoittaa `url`-kenttään media.matkakirja.app-osoitteen.
+
+Kuvattomat kohteet (eiKuvaa) ovat vientitiedostossa mukana kohteet-osiossa tyhjällä `kuvat`-listalla (koordinaatit ja järjestys säilyvät); lisäksi ei-kuvaa.json Codexille.

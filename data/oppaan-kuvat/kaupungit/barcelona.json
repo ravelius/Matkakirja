@@ -1,0 +1,601 @@
+{
+ "kaupunki": "barcelona",
+ "kaupunkiQ": "Q1492",
+ "kohteet": [
+  {
+   "q": "Q48435",
+   "nimi": "Sagrada Família",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 41.40369,
+   "lon": 2.17433,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "SF maig 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/SF_maig_2026.jpg?width=1280",
+     "tekija": "Canaan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:SF_maig_2026.jpg",
+     "selite": "Gaudín keskeneräinen basilika kohoaa Eixamplen kortteleiden yläpuolelle, ja sen rakentaminen on kestänyt yli sata vuotta.",
+     "leveys": 2588,
+     "korkeus": 1786,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Temple Expiatori de la Sagrada Familia de Barcelona.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temple_Expiatori_de_la_Sagrada_Familia_de_Barcelona.jpg?width=1280",
+     "tekija": "Manel Subirats Ferrer",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temple_Expiatori_de_la_Sagrada_Familia_de_Barcelona.jpg",
+     "selite": "Ylhäältä näkyy basilikan ristinmuotoinen pohja keskellä Barcelonan ruutukaavaa.",
+     "leveys": 3500,
+     "korkeus": 5250,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Apsis Sagrada Familia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Apsis_Sagrada_Familia.jpg?width=1280",
+     "tekija": "Triptychon",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Apsis_Sagrada_Familia.jpg",
+     "selite": "Sisällä puiden oksia muistuttavat pylväät kannattavat holvia ja värilliset lasit värjäävät valon.",
+     "leveys": 4010,
+     "korkeus": 5346,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q461371",
+   "nimi": "Casa Batlló",
+   "peruste": "pelin nosto",
+   "koko_m": 50,
+   "lat": 41.39158,
+   "lon": 2.16492,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa Batlló (53593604536).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Batll%C3%B3_(53593604536).jpg?width=1280",
+     "tekija": "Nan Palmero from San Antonio, TX, USA",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Batll%C3%B3_(53593604536).jpg",
+     "selite": "Gaudín muokkaama julkisivu erottuu Passeig de Gràcian rakennusrivistä lähes elävän näköisenä.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Casa Batllo Overview Barcelona Spain cut.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Batllo_Overview_Barcelona_Spain_cut.jpg?width=1280",
+     "tekija": "ChristianSchd",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Batllo_Overview_Barcelona_Spain_cut.jpg",
+     "selite": "Talon katto muistuttaa lohikäärmeen selkää ja torni miekkaa.",
+     "leveys": 2244,
+     "korkeus": 2765,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "Casa Batllo, Barcelona (40897276590).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Batllo%2C_Barcelona_(40897276590).jpg?width=1280",
+     "tekija": "Mike McBey",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Batllo%2C_Barcelona_(40897276590).jpg",
+     "selite": "Parvekkeet näyttävät luurankomaisilta naamioilta mosaiikkipinnan keskellä.",
+     "leveys": 3579,
+     "korkeus": 2708,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 4,
+     "tiedosto": "Casa Batlló (50257834956).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Batll%C3%B3_(50257834956).jpg?width=1280",
+     "tekija": "Jose Ramirez from Barcelona.",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Batll%C3%B3_(50257834956).jpg",
+     "selite": "Katolla savupiiput on koristeltu värikkäillä keraamisilla paloilla.",
+     "leveys": 4928,
+     "korkeus": 3264,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q212867",
+   "nimi": "Güellin puisto",
+   "peruste": "UNESCO",
+   "koko_m": 600,
+   "lat": 41.41361,
+   "lon": 2.15278,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Güell BCN edited.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/G%C3%BCell_BCN_edited.jpg?width=1280",
+     "tekija": "Canaan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:G%C3%BCell_BCN_edited.jpg",
+     "selite": "Gaudín suunnittelema puisto on täynnä mosaiikkia ja aaltoilevia rakenteita Barcelonan yläpuolella.",
+     "leveys": 6000,
+     "korkeus": 4000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Reptil Parc Guell Barcelona.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Reptil_Parc_Guell_Barcelona.jpg?width=1280",
+     "tekija": "Baikonur",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Reptil_Parc_Guell_Barcelona.jpg",
+     "selite": "Mosaiikkilisko portaiden keskellä on puiston tunnetuin hahmo.",
+     "leveys": 2288,
+     "korkeus": 1247,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 3,
+     "tiedosto": "ParcGuell.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ParcGuell.JPG?width=1280",
+     "tekija": "მოცარტი",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ParcGuell.JPG",
+     "selite": "Kivipylväät ja holvikäytävät sulautuvat puiston rinteeseen luonnonmuotojen tavoin.",
+     "leveys": 2304,
+     "korkeus": 1536,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q207870",
+   "nimi": "Casa Milà",
+   "peruste": "UNESCO",
+   "koko_m": 60,
+   "lat": 41.39528,
+   "lon": 2.16167,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Casa Milà, general view.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Casa_Mil%C3%A0%2C_general_view.jpg?width=1280",
+     "tekija": "Thomas Ledl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Casa_Mil%C3%A0%2C_general_view.jpg",
+     "selite": "Casa Milàn aaltoileva kivijulkisivu sai kansan suussa lempinimen La Pedrera, kivilouhos.",
+     "leveys": 4299,
+     "korkeus": 3348,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q850593",
+   "nimi": "La Rambla",
+   "peruste": "sitelinks",
+   "koko_m": 1200,
+   "lat": 41.38139,
+   "lon": 2.17306,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "La Rambla Barcelona 2004.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/La_Rambla_Barcelona_2004.JPG?width=1280",
+     "tekija": "Djm1279 at English Wikipedia",
+     "lisenssi": "Public domain",
+     "lisenssiUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:La_Rambla_Barcelona_2004.JPG",
+     "selite": "Plataanien reunustama kävelykatu johtaa vanhankaupungin halki kohti satamaa.",
+     "leveys": 1280,
+     "korkeus": 960,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "02006 44570082 La Rambla From The Cable Car.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/02006_44570082_La_Rambla_From_The_Cable_Car.jpg?width=1280",
+     "tekija": "Silar",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:02006_44570082_La_Rambla_From_The_Cable_Car.jpg",
+     "selite": "Ramblan päässä avautuu Port Vell ja Kolumbuksen patsaan satama-alue.",
+     "leveys": 1544,
+     "korkeus": 1024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q17155",
+   "nimi": "Pyhän Ristin ja Pyhän Eulalian katedraali",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 41.38389,
+   "lon": 2.17639,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Barcelona Cathedral Saint Eulalia.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barcelona_Cathedral_Saint_Eulalia.jpg?width=1280",
+     "tekija": "Fernando",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barcelona_Cathedral_Saint_Eulalia.jpg",
+     "selite": "Goottilaisen katedraalin pääjulkisivu ja suippokaariset tornit hallitsevat Barri Gòticin aukiota.",
+     "leveys": 3335,
+     "korkeus": 5002,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "2019 03 16 AIDA Barcelona (66).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2019_03_16_AIDA_Barcelona_(66).jpg?width=1280",
+     "tekija": "Bewahrerderwerte",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:2019_03_16_AIDA_Barcelona_(66).jpg",
+     "selite": "Sivulta näkyy katedraalin kivinen kylki vanhankaupungin kapeiden katujen ympäröimänä.",
+     "leveys": 4000,
+     "korkeus": 3000,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q327940",
+   "nimi": "Palau de la Música Catalana",
+   "peruste": "pelin nosto",
+   "koko_m": 80,
+   "lat": 41.38767,
+   "lon": 2.17528,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palau música catalana exterior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palau_m%C3%BAsica_catalana_exterior.jpg?width=1280",
+     "tekija": "Doomuu",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palau_m%C3%BAsica_catalana_exterior.jpg",
+     "selite": "Lluís Domènech i Montanerin konserttitalon punatiilinen julkisivu on täynnä mosaiikkeja ja veistoksia.",
+     "leveys": 3024,
+     "korkeus": 4032,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "ES-BCN-palau-cat-mus-03.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/ES-BCN-palau-cat-mus-03.jpg?width=1280",
+     "tekija": "Balou46",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:ES-BCN-palau-cat-mus-03.jpg",
+     "selite": "Julkisivun kaarien ja pylväiden koristeet kuuluvat katalonialaisen jugendin tunnetuimpiin.",
+     "leveys": 3264,
+     "korkeus": 4928,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q631075",
+   "nimi": "Arc de Triomf",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 41.39111,
+   "lon": 2.18056,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Arc de Triomf Barcelona.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arc_de_Triomf_Barcelona.jpg?width=1280",
+     "tekija": "Bajajvikram",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Arc_de_Triomf_Barcelona.jpg",
+     "selite": "Punatiilinen riemukaari rakennettiin vuoden 1888 maailmannäyttelyn sisäänkäynniksi.",
+     "leveys": 2406,
+     "korkeus": 1737,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "140 Arc de Triomf, pg. Lluís Companys (Barcelona), cara nord.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/140_Arc_de_Triomf%2C_pg._Llu%C3%ADs_Companys_(Barcelona)%2C_cara_nord.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:140_Arc_de_Triomf%2C_pg._Llu%C3%ADs_Companys_(Barcelona)%2C_cara_nord.jpg",
+     "selite": "Kaaren eteen levittäytyy leveä Passeig de Lluís Companys, jota reunustavat palmut ja lyhtypylväät.",
+     "leveys": 3120,
+     "korkeus": 4160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1334899",
+   "nimi": "La Boqueria",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 41.3818,
+   "lon": 2.17155,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Front of Mercat de Boqueria.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Front_of_Mercat_de_Boqueria.jpg?width=1280",
+     "tekija": "Thingstodoinbarcelona",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Front_of_Mercat_de_Boqueria.jpg",
+     "selite": "Ramblan varrella sijaitseva kauppahalli on yksi Euroopan tunnetuimmista tuoreen ruoan toreista.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "012 Mercat de la Boqueria, la Rambla 91 (Barcelona), interior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/012_Mercat_de_la_Boqueria%2C_la_Rambla_91_(Barcelona)%2C_interior.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:012_Mercat_de_la_Boqueria%2C_la_Rambla_91_(Barcelona)%2C_interior.jpg",
+     "selite": "Rautarakenteisen hallin katon alla kaupitellaan hedelmiä, kalaa ja leikkeleitä.",
+     "leveys": 3120,
+     "korkeus": 4160,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q507282",
+   "nimi": "Sant Pau -sairaala",
+   "peruste": "UNESCO",
+   "koko_m": 300,
+   "lat": 41.41278,
+   "lon": 2.17444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "San Pau Hospital.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/San_Pau_Hospital.jpg?width=1280",
+     "tekija": "Matinibz",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:San_Pau_Hospital.jpg",
+     "selite": "Domènech i Montanerin modernistinen sairaalakompleksi on koristeltu tiilellä, mosaiikeilla ja torneilla.",
+     "leveys": 2233,
+     "korkeus": 1451,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q336246",
+   "nimi": "Torre Glòries",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 41.40349,
+   "lon": 2.18952,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Torre Agbar - Barcelona, Spain - Jan 2007.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_Agbar_-_Barcelona%2C_Spain_-_Jan_2007.jpg?width=1280",
+     "tekija": "Diliff",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Torre_Agbar_-_Barcelona%2C_Spain_-_Jan_2007.jpg",
+     "selite": "Luodinmuotoinen Jean Nouvelin pilvenpiirtäjä erottuu Barcelonan siluetissa värikkäine lasipaneeleineen.",
+     "leveys": 2004,
+     "korkeus": 4962,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "076 Torre Glòries, av. Diagonal 209-211 (Barcelona), des del c. Àvila.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/076_Torre_Gl%C3%B2ries%2C_av._Diagonal_209-211_(Barcelona)%2C_des_del_c._%C3%80vila.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:076_Torre_Gl%C3%B2ries%2C_av._Diagonal_209-211_(Barcelona)%2C_des_del_c._%C3%80vila.jpg",
+     "selite": "Tornin julkisivu vaihtaa väriä, ja illalla sen ikkunat valaistaan.",
+     "leveys": 2112,
+     "korkeus": 2816,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1122701",
+   "nimi": "Montjuïc",
+   "peruste": "sitelinks",
+   "koko_m": 1500,
+   "lat": 41.36417,
+   "lon": 2.15806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palau Nacional Quatre Columnes Barcelona 2013.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palau_Nacional_Quatre_Columnes_Barcelona_2013.jpg?width=1280",
+     "tekija": "Felix König",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palau_Nacional_Quatre_Columnes_Barcelona_2013.jpg",
+     "selite": "Montjuïcin rinteellä Palau Nacional ja neljä pylvästä muistuttavat vuoden 1929 maailmannäyttelystä.",
+     "leveys": 3000,
+     "korkeus": 2047,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Κάστρο Μονζουίκ 3231 - 3233.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9A%CE%AC%CF%83%CF%84%CF%81%CE%BF_%CE%9C%CE%BF%CE%BD%CE%B6%CE%BF%CF%85%CE%AF%CE%BA_3231_-_3233.jpg?width=1280",
+     "tekija": "C messier",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:%CE%9A%CE%AC%CF%83%CF%84%CF%81%CE%BF_%CE%9C%CE%BF%CE%BD%CE%B6%CE%BF%CF%85%CE%AF%CE%BA_3231_-_3233.jpg",
+     "selite": "Kukkulan huipulla Montjuïcin linnoitus on katsonut Barcelonan satamaa 1600-luvulta lähtien.",
+     "leveys": 6436,
+     "korkeus": 4625,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q597051",
+   "nimi": "Palau Güell",
+   "peruste": "UNESCO",
+   "koko_m": 50,
+   "lat": 41.37882,
+   "lon": 2.17439,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Palau Güell, Antoni Gaudi, Barcelona 2.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palau_G%C3%BCell%2C_Antoni_Gaudi%2C_Barcelona_2.jpg?width=1280",
+     "tekija": "Thomas Ledl",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Palau_G%C3%BCell%2C_Antoni_Gaudi%2C_Barcelona_2.jpg",
+     "selite": "Gaudín varhainen kaupunkipalatsi kätkee kapean julkisivunsa taakse yllättävän runsaan sisätilan.",
+     "leveys": 2829,
+     "korkeus": 4243,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "038 Palau Güell.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/038_Palau_G%C3%BCell.jpg?width=1280",
+     "tekija": "Enfo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:038_Palau_G%C3%BCell.jpg",
+     "selite": "Julkisivun kiviset ja rautaiset yksityiskohdat ennakoivat Gaudín myöhempää tyyliä.",
+     "leveys": 2272,
+     "korkeus": 1704,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q746333",
+   "nimi": "Casa Vicens",
+   "peruste": "UNESCO",
+   "koko_m": 50,
+   "lat": 41.40349,
+   "lon": 2.15064,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Gaudí - Casa Vicens.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Gaud%C3%AD_-_Casa_Vicens.JPG?width=1280",
+     "tekija": "Canaan",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Gaud%C3%AD_-_Casa_Vicens.JPG",
+     "selite": "Gaudín ensimmäinen merkittävä talo yhdistää punaista tiiltä, kiveä ja keraamisia laattoja.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "01 Casa Vicens, c. Carolines 18-24 (Barcelona), façana nord.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/01_Casa_Vicens%2C_c._Carolines_18-24_(Barcelona)%2C_fa%C3%A7ana_nord.jpg?width=1280",
+     "tekija": "Enric",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:01_Casa_Vicens%2C_c._Carolines_18-24_(Barcelona)%2C_fa%C3%A7ana_nord.jpg",
+     "selite": "Talon koristeelliset torni- ja kattoyksityiskohdat sekoittavat mausta ja goottia.",
+     "leveys": 4160,
+     "korkeus": 3120,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q807915",
+   "nimi": "Barcelona-paviljonki",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 41.37056,
+   "lon": 2.15,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "The Barcelona Pavilion, Barcelona, 2010.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Barcelona_Pavilion%2C_Barcelona%2C_2010.jpg?width=1280",
+     "tekija": "Ashley Pomeroy at English Wikipedia",
+     "lisenssi": "CC BY 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:The_Barcelona_Pavilion%2C_Barcelona%2C_2010.jpg",
+     "selite": "Mies van der Rohen paviljonki vuoden 1929 maailmannäyttelyyn on modernin arkkitehtuurin merkkiteos.",
+     "leveys": 5466,
+     "korkeus": 3658,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "015 Pavelló Mies van der Rohe.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/015_Pavell%C3%B3_Mies_van_der_Rohe.jpg?width=1280",
+     "tekija": "Enfo",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:015_Pavell%C3%B3_Mies_van_der_Rohe.jpg",
+     "selite": "Marmori- ja lasiseinät sekä matala katto rakentavat kevyen, avoimen tilan.",
+     "leveys": 2272,
+     "korkeus": 1545,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Barcelona in evening light (49598614983).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barcelona_in_evening_light_(49598614983).jpg?width=1280",
+   "tekija": "Mike McBey",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Barcelona_in_evening_light_(49598614983).jpg",
+   "selite": "Barcelonan satama ja kaupunki levittäytyvät vuorten ja meren väliin.",
+   "leveys": 5936,
+   "korkeus": 3337,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Aerial view of La Sagrada Familia, Barcelona, Spain (51227006134).jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_view_of_La_Sagrada_Familia%2C_Barcelona%2C_Spain_(51227006134).jpg?width=1280",
+   "tekija": "dronepicr",
+   "lisenssi": "CC BY 2.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_La_Sagrada_Familia%2C_Barcelona%2C_Spain_(51227006134).jpg",
+   "selite": "Ruutukaavainen Eixample jatkuu ilmasta katsottuna horisonttiin asti.",
+   "leveys": 4677,
+   "korkeus": 3116,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}

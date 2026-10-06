@@ -1,0 +1,484 @@
+{
+ "kaupunki": "helsinki",
+ "kaupunkiQ": "Q1757",
+ "kohteet": [
+  {
+   "q": "Q738015",
+   "nimi": "Helsingin tuomiokirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 100,
+   "lat": 60.17039,
+   "lon": 24.95212,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Lutheran Cathedral Helsinki.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lutheran_Cathedral_Helsinki.jpg?width=1280",
+     "tekija": "Hans Hillewaert",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Lutheran_Cathedral_Helsinki.jpg",
+     "selite": "Valkoinen uusklassinen tuomiokirkko kohoaa Senaatintorin portaiden päällä Helsingin tunnetuimpana maamerkkinä.",
+     "leveys": 5786,
+     "korkeus": 6440,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Helsinki Senate Square and Helsinki Cathedral in May 2026.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Helsinki_Senate_Square_and_Helsinki_Cathedral_in_May_2026.jpg?width=1280",
+     "tekija": "JIP",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Helsinki_Senate_Square_and_Helsinki_Cathedral_in_May_2026.jpg",
+     "selite": "Laajat portaat johtavat Senaatintorilta kirkon pylväsjulkisivulle.",
+     "leveys": 4608,
+     "korkeus": 3456,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1292442",
+   "nimi": "Suomenlinna",
+   "peruste": "pelin nosto",
+   "koko_m": 1500,
+   "lat": 60.14361,
+   "lon": 24.98444,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Suomenlinna.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Suomenlinna.jpg?width=1280",
+     "tekija": "Michal Pise, Michal.Pise",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Suomenlinna.jpg",
+     "selite": "Merilinnoitus levittäytyy useille saarille Helsingin edustalla ja kuuluu UNESCOn maailmanperintöön.",
+     "leveys": 1810,
+     "korkeus": 1360,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Suomenlinna from air.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Suomenlinna_from_air.jpg?width=1280",
+     "tekija": "Henri Bergius from Finland",
+     "lisenssi": "CC BY-SA 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Suomenlinna_from_air.jpg",
+     "selite": "Ilmasta näkyvät linnoituksen muurit, kanavat ja saarten väliset yhteydet.",
+     "leveys": 1200,
+     "korkeus": 1600,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1355001",
+   "nimi": "Uspenskin katedraali",
+   "peruste": "pelin nosto",
+   "koko_m": 70,
+   "lat": 60.16833,
+   "lon": 24.96,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "500px photo (59193510).jpeg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/500px_photo_(59193510).jpeg?width=1280",
+     "tekija": "Dorron",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:500px_photo_(59193510).jpeg",
+     "selite": "Punatiilinen ortodoksikatedraali kultaisine kupoleineen on Länsi-Euroopan suurimpia ortodoksisia kirkkoja.",
+     "leveys": 1303,
+     "korkeus": 1766,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Chram vecneho spanku panny Marie.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Chram_vecneho_spanku_panny_Marie.jpg?width=1280",
+     "tekija": "User Miraceti on cs.wikipedia",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Chram_vecneho_spanku_panny_Marie.jpg",
+     "selite": "Katedraali kohoaa Katajanokan kalliolla kaupungin ja meren yläpuolella.",
+     "leveys": 1224,
+     "korkeus": 1632,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1329554",
+   "nimi": "Senaatintori",
+   "peruste": "sitelinks",
+   "koko_m": 200,
+   "lat": 60.16947,
+   "lon": 24.95228,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "20240415 05 Helsinki - Senaatintori (Senate Square) (53671054707).jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/20240415_05_Helsinki_-_Senaatintori_(Senate_Square)_(53671054707).jpg?width=1280",
+     "tekija": "Sjaak Kempe from Groningen, The Netherlands",
+     "lisenssi": "CC BY 2.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:20240415_05_Helsinki_-_Senaatintori_(Senate_Square)_(53671054707).jpg",
+     "selite": "Empire-tyylinen aukio on Helsingin historiallisen keskustan sydän, jota reunustavat valtioneuvosto ja yliopisto.",
+     "leveys": 5472,
+     "korkeus": 3648,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q541933",
+   "nimi": "Kauppatori",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 60.167,
+   "lon": 24.955,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Market Square in Helsinki, Finland, 2024 May.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Market_Square_in_Helsinki%2C_Finland%2C_2024_May.jpg?width=1280",
+     "tekija": "Tuula Sipilä",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Market_Square_in_Helsinki%2C_Finland%2C_2024_May.jpg",
+     "selite": "Satamaan rajoittuvalla torilla myydään kalaa, marjoja ja matkamuistoja, ja lauttalaiturit ovat vieressä.",
+     "leveys": 5098,
+     "korkeus": 3241,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1132809",
+   "nimi": "Temppeliaukion kirkko",
+   "peruste": "pelin nosto",
+   "koko_m": 60,
+   "lat": 60.17298,
+   "lon": 24.92524,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Interior of Temppeliaukio Church 2019.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Interior_of_Temppeliaukio_Church_2019.jpg?width=1280",
+     "tekija": "Link",
+     "lisenssi": "CC BY 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Interior_of_Temppeliaukio_Church_2019.jpg",
+     "selite": "Kirkko on louhittu suoraan kallioon, ja kattoa kehystää kuparikupolin alla kiertävä ikkunarivi.",
+     "leveys": 3000,
+     "korkeus": 2000,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Temppeliaukio church interior.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Temppeliaukio_church_interior.jpg?width=1280",
+     "tekija": "Ypsilon from Finland",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Temppeliaukio_church_interior.jpg",
+     "selite": "Paljas kalliopinta toimii kirkon seininä ja luo poikkeuksellisen akustiikan.",
+     "leveys": 4032,
+     "korkeus": 3024,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1044613",
+   "nimi": "Helsingin päärautatieasema",
+   "peruste": "pelin nosto",
+   "koko_m": 150,
+   "lat": 60.17105,
+   "lon": 24.94145,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Estación central de FF.CC. de Helsinki, Finlandia, 2012-08-14, DD 05.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estaci%C3%B3n_central_de_FF.CC._de_Helsinki%2C_Finlandia%2C_2012-08-14%2C_DD_05.JPG?width=1280",
+     "tekija": "Diego Delso",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Estaci%C3%B3n_central_de_FF.CC._de_Helsinki%2C_Finlandia%2C_2012-08-14%2C_DD_05.JPG",
+     "selite": "Eliel Saarisen suunnittelema graniittiasema tunnetaan kupukatoksesta ja lyhtyjä kantavista kivimiehistä.",
+     "leveys": 4528,
+     "korkeus": 3379,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q18659999",
+   "nimi": "Oodi",
+   "peruste": "sitelinks",
+   "koko_m": 120,
+   "lat": 60.17382,
+   "lon": 24.93806,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Helsingin keskustakirjasto Oodi 2022-09-16 08.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Helsingin_keskustakirjasto_Oodi_2022-09-16_08.jpg?width=1280",
+     "tekija": "Leonhard Lenz",
+     "lisenssi": "CC0",
+     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Helsingin_keskustakirjasto_Oodi_2022-09-16_08.jpg",
+     "selite": "Keskustakirjasto Oodin aaltomainen puinen julkisivu avautuu Kansalaistorille Eduskuntatalon vastapäätä.",
+     "leveys": 8368,
+     "korkeus": 5584,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Central Library Oodi in Helsinki, Finland, 2019 September.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Library_Oodi_in_Helsinki%2C_Finland%2C_2019_September.jpg?width=1280",
+     "tekija": "ALA Architects",
+     "lisenssi": "CC BY 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Central_Library_Oodi_in_Helsinki%2C_Finland%2C_2019_September.jpg",
+     "selite": "Lasi- ja puujulkisivu tekevät kirjastosta uudenaikaisen maamerkin Helsingin keskustassa.",
+     "leveys": 8000,
+     "korkeus": 4174,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1633361",
+   "nimi": "Kiasma",
+   "peruste": "sitelinks",
+   "koko_m": 80,
+   "lat": 60.17167,
+   "lon": 24.93694,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Kiasmamodernartmuseum.JPG",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kiasmamodernartmuseum.JPG?width=1280",
+     "tekija": "Paasikivi",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kiasmamodernartmuseum.JPG",
+     "selite": "Steven Hollin suunnittelema nykytaiteen museo erottuu kaarevilla muodoillaan Mannerheimintien varrella.",
+     "leveys": 3968,
+     "korkeus": 2976,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2744984",
+   "nimi": "Eduskuntatalo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 60.1726,
+   "lon": 24.933,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Helsinki July 2013-21.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Helsinki_July_2013-21.jpg?width=1280",
+     "tekija": "Alvesgaspar",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Helsinki_July_2013-21.jpg",
+     "selite": "Punagraniittinen eduskuntatalo on Suomen lainsäädäntöelimen koti, ja sen pylväsrivi hallitsee Mannerheimintietä.",
+     "leveys": 4996,
+     "korkeus": 3135,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Eduskuntatalo 2 2020-03-23.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Eduskuntatalo_2_2020-03-23.jpg?width=1280",
+     "tekija": "Joneikifi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Eduskuntatalo_2_2020-03-23.jpg",
+     "selite": "Ilmasta näkyy talon massiivinen symmetrinen muoto ja sen edessä avautuva portaikko.",
+     "leveys": 3000,
+     "korkeus": 1688,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q332219",
+   "nimi": "Helsingin olympiastadion",
+   "peruste": "sitelinks",
+   "koko_m": 250,
+   "lat": 60.18689,
+   "lon": 24.92606,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Olympiastadion 2 2020-08-12.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Olympiastadion_2_2020-08-12.jpg?width=1280",
+     "tekija": "Joneikifi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Olympiastadion_2_2020-08-12.jpg",
+     "selite": "Vuoden 1952 olympialaisten stadion on funktionalismin merkkiteos, jonka torni näkyy kauas.",
+     "leveys": 2395,
+     "korkeus": 1347,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1635596",
+   "nimi": "Linnanmäki",
+   "peruste": "pelin nosto",
+   "koko_m": 400,
+   "lat": 60.18833,
+   "lon": 24.94028,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Linnanmäki ilmasta 27.5.2017.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Linnanm%C3%A4ki_ilmasta_27.5.2017.jpg?width=1280",
+     "tekija": "Simbe",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Linnanm%C3%A4ki_ilmasta_27.5.2017.jpg",
+     "selite": "Huvipuisto sijaitsee Alppilan kukkulalla, ja sen vuoristoradat näkyvät kauas kaupungille.",
+     "leveys": 5472,
+     "korkeus": 3078,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "A view to Linnanmäki amusement park - panoramio.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/A_view_to_Linnanm%C3%A4ki_amusement_park_-_panoramio.jpg?width=1280",
+     "tekija": "kaistadius",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:A_view_to_Linnanm%C3%A4ki_amusement_park_-_panoramio.jpg",
+     "selite": "Huvipuiston tornit ja radat erottuvat puiden takaa Helsingin pohjoispuolella.",
+     "leveys": 3648,
+     "korkeus": 2736,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q2584017",
+   "nimi": "Sibelius-monumentti",
+   "peruste": "sitelinks",
+   "koko_m": 60,
+   "lat": 60.18206,
+   "lon": 24.91334,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Sibelius park3.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sibelius_park3.jpg?width=1280",
+     "tekija": "Tappinen",
+     "lisenssi": "CC BY-SA 3.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Sibelius_park3.jpg",
+     "selite": "Eila Hiltusen teräsputkista tehty monumentti seisoo Sibelius-puistossa kalliolla puiden keskellä.",
+     "leveys": 3008,
+     "korkeus": 2073,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q1418136",
+   "nimi": "Suomen kansallismuseo",
+   "peruste": "sitelinks",
+   "koko_m": 150,
+   "lat": 60.17498,
+   "lon": 24.93156,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "FinlandNationalMuseum.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/FinlandNationalMuseum.jpg?width=1280",
+     "tekija": "No machine-readable author provided. Thermos assumed (based on copyright claims).",
+     "lisenssi": "CC BY-SA 2.5",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/2.5",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:FinlandNationalMuseum.jpg",
+     "selite": "Kansallisromanttinen kivinen rakennus esittelee Suomen historiaa esihistoriasta nykypäivään.",
+     "leveys": 3272,
+     "korkeus": 2181,
+     "tarkistettu": true
+    },
+    {
+     "jarjestys": 2,
+     "tiedosto": "Kansallismuseo 2020-04-19.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kansallismuseo_2020-04-19.jpg?width=1280",
+     "tekija": "Joneikifi",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Kansallismuseo_2020-04-19.jpg",
+     "selite": "Ilmasta näkyvät museon torni ja kivijulkisivu Mannerheimintien varressa.",
+     "leveys": 3000,
+     "korkeus": 1687,
+     "tarkistettu": true
+    }
+   ]
+  },
+  {
+   "q": "Q754507",
+   "nimi": "Ateneum",
+   "peruste": "sitelinks",
+   "koko_m": 100,
+   "lat": 60.17008,
+   "lon": 24.94398,
+   "kuvat": [
+    {
+     "jarjestys": 1,
+     "tiedosto": "Art museum Ateneum in Kluuvi, Helsinki, Finland, 2014.jpg",
+     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Art_museum_Ateneum_in_Kluuvi%2C_Helsinki%2C_Finland%2C_2014.jpg?width=1280",
+     "tekija": "Finnish National Gallery",
+     "lisenssi": "CC BY-SA 4.0",
+     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Art_museum_Ateneum_in_Kluuvi%2C_Helsinki%2C_Finland%2C_2014.jpg",
+     "selite": "Neorenessanssirakennus Rautatientorin laidalla kätkee Suomen klassisen taiteen suurimman kokoelman.",
+     "leveys": 2362,
+     "korkeus": 1610,
+     "tarkistettu": true
+    }
+   ]
+  }
+ ],
+ "kaupunginKuvat": [
+  {
+   "jarjestys": 1,
+   "tiedosto": "Suomen Ilmakuva - Aerial photograph from the center of Helsinki to the sea in 2015.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Suomen_Ilmakuva_-_Aerial_photograph_from_the_center_of_Helsinki_to_the_sea_in_2015.jpg?width=1280",
+   "tekija": "Suomen Ilmakuva Oy, Valokuvaaja 2015",
+   "lisenssi": "CC BY 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Suomen_Ilmakuva_-_Aerial_photograph_from_the_center_of_Helsinki_to_the_sea_in_2015.jpg",
+   "selite": "Helsingin keskusta kohtaa meren, ja edustalla siintävät saaret.",
+   "leveys": 3840,
+   "korkeus": 2560,
+   "tarkistettu": true
+  },
+  {
+   "jarjestys": 2,
+   "tiedosto": "Helsinki aerial 2022.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Helsinki_aerial_2022.jpg?width=1280",
+   "tekija": "kallerna",
+   "lisenssi": "CC BY-SA 4.0",
+   "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Helsinki_aerial_2022.jpg",
+   "selite": "Helsinki sijaitsee niemellä ja saarilla Suomenlahden rannalla.",
+   "leveys": 3000,
+   "korkeus": 2000,
+   "tarkistettu": true
+  }
+ ],
+ "eiKuvaa": []
+}
