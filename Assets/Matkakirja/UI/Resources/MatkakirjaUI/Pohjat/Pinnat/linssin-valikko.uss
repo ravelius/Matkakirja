@@ -163,3 +163,62 @@
 .mk-opas-nimilappu--nakyy {
     opacity: 1;
 }
+
+/* OPPAAN NELJÄ NAPPIA (omistaja 6.10.2026 klo 11.5x): Kysy, Liiku, mikrofoni ja näppäimistö keskellä alhaalla krediittien
+ * yläpuolella. Pohja LIIKU-nappi (.mk-liiku__nappi, pyöristetty neliö), teema rivin tk-teema-harmaasta; teksti ja kuvake
+ * keskitettyinä. VAIN --tk-*-tokenit. */
+.mk-opas-napit {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+}
+
+.mk-liiku__nappi.mk-opas-nappi {
+    height: 44px;
+    min-width: 88px;
+    margin: 0 4px;
+    padding: 0 14px;
+    border-width: 1px;
+    border-radius: var(--tk-kulma-nappi);
+    border-color: var(--tk-reunus);
+    background-color: var(--tk-pinta-peitto);
+    color: var(--tk-korostus);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mk-liiku__nappi.mk-opas-nappi:active,
+.mk-liiku__nappi.mk-opas-nappi.mk-valittu {
+    background-color: var(--tk-toiminto);
+}
+
+.mk-liiku__nappi.mk-opas-nappi--ikoni {
+    min-width: 44px;
+    width: 44px;
+    padding: 0;
+}
+
+.mk-liiku__nappi.mk-opas-nappi > .mk-ikoni.mk-opas-nappi__ikoni {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.mk-liiku__nappi.mk-opas-nappi .mk-nappi__teksti.mk-opas-nappi__teksti {
+    margin: 0 0 0 6px;
+    padding: 0;
+    font-size: var(--tk-koko-leipa);
+    letter-spacing: 0;
+    text-shadow: none;
+    color: var(--tk-korostus);
+    -unity-text-align: middle-center;
+}
