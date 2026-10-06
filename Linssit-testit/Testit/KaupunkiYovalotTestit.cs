@@ -64,9 +64,9 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Sama("koopenhamina", KaupunkiTiet.Tunnus("Kööpenhamina"));
             Oleta.Sama("pariisi", KaupunkiTiet.Tunnus("Pariisi"));
             Oleta.Sama("rio-de-janeiro", KaupunkiTiet.Tunnus("Rio de Janeiro"));
-            var i = KaupunkiTiet.LueIndeksi(Matkakirja.Peli.MiniJson.Jasenna("{\"kaupungit\":[\"pariisi\",\"venetsia\"]}"));
-            Oleta.Tosi(i.Contains("pariisi") && i.Contains("venetsia") && i.Count == 2);
-            Oleta.Sama(1, KaupunkiTiet.LueIndeksi(Matkakirja.Peli.MiniJson.Jasenna("[\"rooma\"]")).Count);
+            var i = KaupunkiTiet.LueIndeksi(Matkakirja.Peli.MiniJson.Jasenna("{\"tiet\":[\"pariisi\",\"venetsia\"],\"aanikartta\":[\"rooma\"]}"));
+            Oleta.Tosi(i.Contains("pariisi") && i.Contains("venetsia") && i.Count == 2, "vain tiet");
+            Oleta.Sama(0, KaupunkiTiet.LueIndeksi(Matkakirja.Peli.MiniJson.Jasenna("[\"rooma\"]")).Count, "väärä muoto = tyhjä");
             var a = KaupunkiTiet.Alue((System.Collections.Generic.Dictionary<string, object>)Matkakirja.Peli.MiniJson.Jasenna("{\"keskus\":[48.85,2.35],\"r\":4000,\"tiet\":[]}"));
             Oleta.Tosi(a != null && Math.Abs(a.Value.lat - 48.85) < 1e-9 && a.Value.r == 4000);
         }

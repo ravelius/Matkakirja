@@ -128,7 +128,7 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Kadut: esilaskettu ämpäritiedosto (KaupunkiTiet.Juuri, Pelikoodari) kaupungin tunnuksella, jos tunnus on
-        /// index.json:ssa (CDN välimuistittaa 404:n), tai testitiedosto Documents/kaupunki-tiet.json. Rasterointi taustasäikeessä
+        /// Pöllön /opas/aineistot-luettelossa (CDN välimuistittaa 404:n), tai testitiedosto Documents/kaupunki-tiet.json. Rasterointi taustasäikeessä
         /// (puhdas C#) tiedoston keskipisteen ympärille, sitten R8-tekstuuri mipeillä (kaukana keskiarvo = katujen tiheys).</summary>
         static IEnumerator LataaTiet(string id, double lat, double lon)
         {
@@ -140,8 +140,11 @@ namespace Matkakirja.Natiivi
             {
                 if (tieIndeksi == null)
                 {
-                    using var ri = UnityWebRequest.Get(KaupunkiTiet.Juuri + "index.json");
+                    using var ri = UnityWebRequest.Get(PuluChat.Palvelin + "/opas/aineistot");
                     ri.timeout = 15;
+                    ri.SetRequestHeader("x-matkakirja-natiivi", Application.identifier);
+                    ri.SetRequestHeader("User-Agent", "Matkakirja/" + Application.version + " (" + Application.identifier + ")");
+                    PolloTestitunnus.Lisaa(ri);
                     yield return ri.SendWebRequest();
                     tieIndeksi = ri.result == UnityWebRequest.Result.Success ? KaupunkiTiet.LueIndeksi(Matkakirja.Peli.MiniJson.Jasenna(ri.downloadHandler.text)) : new HashSet<string>();
                 }

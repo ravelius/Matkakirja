@@ -12,8 +12,9 @@ namespace Matkakirja.Linssit.Kierros
         public struct Tie { public string Tyyppi; public List<(double lat, double lon)> Pisteet; }
 
         /// <summary>Esilasketut kadut (Pelikoodari 6.10. 22.4x: Overpass ruuhkautuu, joten ei ajonaikaista hakua): ämpärin
-        /// kartta/tiet-v1/{id}.json = {"keskus":[lat,lon],"r":4000,"tiet":[…]} ja index.json (valmiit id:t; muita ei pyydetä,
-        /// koska CDN välimuistittaa 404:n).</summary>
+        /// kartta/tiet-v1/{id}.json = {"keskus":[lat,lon],"r":4000,"tiet":[…]}. Valmiit id:t Pöllöstä (GET /opas/aineistot →
+        /// {"tiet":[…],"aanikartta":[…]}, lyhyt välimuisti; ämpärin objektit ovat muuttumattomia, joten luettelo ei voi olla siellä);
+        /// muita ei pyydetä, koska CDN välimuistittaa 404:n.</summary>
         public const string Juuri = "https://media.matkakirja.app/kartta/tiet-v1/";
 
         /// <summary>Kaupungin tunnus nimestä (Kööpenhamina → koopenhamina), sama kaava kuin Siirtosepän äänimaisemassa
@@ -30,13 +31,12 @@ namespace Matkakirja.Linssit.Kierros
             return sb.ToString();
         }
 
-        /// <summary>index.json: lista tai olio, jonka jossakin listassa ovat id:t.</summary>
-        public static HashSet<string> LueIndeksi(object j)
+        /// <summary>Pöllön /opas/aineistot: avaimen (esim. "tiet") lista id:istä; puuttuessa tyhjä.</summary>
+        public static HashSet<string> LueIndeksi(object j, string avain = "tiet")
         {
             var l = new HashSet<string>();
-            void Lisaa(IList<object> x) { foreach (var o in x) if (o is string s) l.Add(s); }
-            if (j is IList<object> lista) Lisaa(lista);
-            else if (j is IDictionary<string, object> d) foreach (var v in d.Values) if (v is IList<object> vl) Lisaa(vl);
+            if (j is IDictionary<string, object> d && d.TryGetValue(avain, out var v) && v is IList<object> vl)
+                foreach (var o in vl) if (o is string s) l.Add(s);
             return l;
         }
 
