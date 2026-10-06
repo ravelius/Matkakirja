@@ -1,0 +1,29 @@
+# 04 Linna (Olavinlinna): avaus, ≡ → Huoneet → Keittiö (oikeat tapit), kuunnelma kerran, orbit 4 × 200 pt = 360°.
+# iPhone-simu 402×874: vaakalinna on kierretty pystyruudulle → pisteet portrait-koordinaatteina (Laitetestaaja 5.10.:
+# x = 402 − y_vaaka, y = x_vaaka). Huonerivi y=682: Laituri 264, Fatab. 232, Kierrep. 199, Muurinh. 168, Kappeli 135, Keskush. 105, Keittiö 74.
+linssi poikki orbit 0
+linssi linssi poikkileikkaus
+oleta 120 poikki.*(valmis|auki|saapuminen) -- linna latautui
+odota 15
+kuva 04a-linna Linna auki (saapuminen)
+tap 374 784
+odota 2
+kuva 04b-valikko Linnan valikko auki (≡)
+tap 317 650
+odota 2
+kuva 04c-huoneet Huoneet-näkymä
+tap 74 682
+oleta 20 kuunnelma .*alkaa -- Keittiö: kuunnelma alkaa
+odota 6
+kuva 04d-keittio Keittiö (huoneen napautus)
+linssi poikki mittaus
+oleta 5 kamera -- kameran paikka ennen kierrosta
+veto 120 437 120 237 0.5
+veto 120 437 120 237 0.5
+veto 120 437 120 237 0.5
+veto 120 437 120 237 0.5
+odota 2
+linssi poikki mittaus
+oleta 5 kamera -- kameran paikka kierroksen jälkeen (vertaa edelliseen ≈ sama)
+kuva 04e-orbit-kierros Orbit 4 vetoa = 360°
+ei-testattu linnan vaaka-asento oikeana vaakana: portrait-simu kiertää näkymän (1141 kohta 1) → laitteella

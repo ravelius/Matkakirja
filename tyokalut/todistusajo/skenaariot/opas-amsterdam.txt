@@ -1,0 +1,29 @@
+# Elävä opas (EI vakiosarjassa: generoi maksullista ääntä): avaus (Kööpenhamina) → tervetulo + 2 sirua → "Esittele kaupunki" (oikea tap) → 1. kohde saapuu ääni soi →
+# ☰ → Vaihda kohde → Eurooppa → Alankomaat → Amsterdam → Amsterdamin vastaus. Oikea worker (Pöllö): ElevenLabs-ääni
+# generoituu kohteille (~1–2 k merkkiä/ajo, päiväkatto 50 000) → aja vain kun opasta tai sen polkua on muutettu.
+linssi linssi opas
+oleta 30 opas: auki -- elävä opas aukesi
+oleta 60 opas: vastaus 1 -- tervetulo workerilta
+nakyy 40 Esittele kaupunki -- tervetulon sirut näkyvät (kertoja hiljaa)
+kuva 11a-tervetulo Elävä opas: tervetulo ja sirut
+tap-teksti Esittele kaupunki
+oleta 5 opas: valinta "Esittele kaupunki" -- sirun napautus välittyi
+oleta 90 opas: saapui -- 1. kohde saapui
+odota 4
+kuva 11b-kohde1 Elävä opas: 1. kohde
+tap-teksti mk-ohjausnappi
+nakyy 6 Vaihda kohde -- oppaan ☰ avasi valikon
+tap-teksti Vaihda kohde
+nakyy 6 Eurooppa -- maanosat
+tap-teksti Eurooppa
+nakyy 6 Alankomaat -- Euroopan maat
+tap-teksti Alankomaat
+nakyy 6 Amsterdam -- Alankomaiden kaupungit
+kuva 11c-kaupungit Vaihda kohde: Alankomaiden kaupungit
+tap-teksti Amsterdam
+oleta 10 kaupunki vaihtuu → Amsterdam -- kaupunki vaihtui Amsterdamiin
+oleta 90 opas: vastaus -- Amsterdamin vastaus workerilta
+odota 6
+kuva 11d-amsterdam Elävä opas: Amsterdam
+linssi linssi pois
+odota 3
