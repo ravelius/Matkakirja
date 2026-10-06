@@ -296,7 +296,12 @@ namespace Matkakirja.Natiivi
                 {
                     if (kaupunki.Latausaste < CesiumKaupunki.ValmisProsentti) kiinteaLaski = true;
                     else if ((kiinteaLaski || Time.realtimeSinceStartup - kiinteaAlku > 3f) && !kaupunki.KarkeaKaytossa)
-                    { o.Kirjaa($"opas: kiinteä kamera: laatat 99 % {Time.realtimeSinceStartup - kiinteaAlku:F1} s:ssa (kerroin {CesiumKaupunki.SseKerroin:F2})"); kiinteaAlku = -1f; }
+                    {
+                        o.Kirjaa($"opas: kiinteä kamera: laatat 99 % {Time.realtimeSinceStartup - kiinteaAlku:F1} s:ssa (kerroin {CesiumKaupunki.SseKerroin:F2})"); kiinteaAlku = -1f;
+                        // Kulma ei toistunut istunnosta toiseen (6.10. kolmikko 1,71/1,3/1,0): kameran todellinen asento vertailuun.
+                        var kam = kierto != null ? kierto.GetComponent<Camera>() : null;
+                        if (kam != null) o.Kirjaa($"opas: kiinteä kamera: fov {kam.fieldOfView:F2}, aspect {kam.aspect:F3}, paikka {kam.transform.position}, kulmat {kam.transform.eulerAngles}, korkeuskerroin {Matkakirja.KorkeusKerroin.Arvo:F3}, origo {kaupunki.OrigoTeksti}");
+                    }
                 }
                 if (kaupunki.KarkeaKaytossa && kaupunki.Latausaste >= CesiumKaupunki.ValmisProsentti) kaupunki.Tarkenna();
                 return;

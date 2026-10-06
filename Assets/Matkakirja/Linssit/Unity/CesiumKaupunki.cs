@@ -286,6 +286,8 @@ namespace Matkakirja.Natiivi
         public Lahde Kaytossa { get; private set; }
         public string Virhe { get; private set; }
         public CesiumGeoreference Georef => georef;
+        /// <summary>Georeferenssin origo lokiin (kiinteän kameran vertailu).</summary>
+        public string OrigoTeksti => georef == null ? "-" : $"{georef.latitude:F5}, {georef.longitude:F5}, {georef.height:F0} m, skaala {georef.transform.localScale.x:F4}";
         /// <summary>Tileset korkeuden näytteenottoon (Google tai maasto).</summary>
         public Cesium3DTileset Pinta => maasto;
         /// <summary>Laattojen latausaste 0–100 (pienempi kahdesta tilesetistä).</summary>
