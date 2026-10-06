@@ -192,7 +192,10 @@ namespace Matkakirja.Linssit.IssKamera
             return r;
         }
 
-        public HashSet<(int taso, int tx, int ty)> HaettavatLaatat(S2Ruutu ru, CogOtsake o, Func<(int z, int x, int y), bool> suodin = null)
+        /// <param name="mosaiikkiKattaa">Budjettiarvio ennen mosaiikin hakua: mosaiikin lehdet lasketaan katetuiksi (juliste 6.10.:
+        /// arvio sisälsi kaukoalueen, jonka mosaiikki kattaa, ja Helsingin kuva karkeutui 32-kertaiseksi).</param>
+        public HashSet<(int taso, int tx, int ty)> HaettavatLaatat(S2Ruutu ru, CogOtsake o, Func<(int z, int x, int y), bool> suodin = null,
+            bool mosaiikkiKattaa = false)
         {
             var r = new HashSet<(int, int, int)>(); int v = ru.Vyohyke;
             foreach (var (z, x, y) in Lehdet())
@@ -201,7 +204,7 @@ namespace Matkakirja.Linssit.IssKamera
                 bool sisarus = nakyvat != null && !nakyvat.Contains((z, x, y));   // näkymän ulkopuolinen sisarus: vain karkein taso
                 var (n0, w0) = Uudelleenprojisointi.Pikseli(z, x, y, 0, 0); var (s0, e0) = Uudelleenprojisointi.Pikseli(z, x, y, 256, 256);
                 if (e0 < ru.W || w0 > ru.E || n0 < ru.S || s0 > ru.N) continue;
-                if (Mosaiikki != null && MosaiikinLaatta(z, x, y) && Mosaiikki(z, x, y) != null) continue;   // kaukoalue mosaiikista (haettu)
+                if (MosaiikinLaatta(z, x, y) && (mosaiikkiKattaa || Mosaiikki != null && Mosaiikki(z, x, y) != null)) continue;   // kaukoalue mosaiikista
                 if (Ensisijainen && ru.Valinta == 0)   // varakuva haetaan aina suodatetuille lehdille
                 {
                     // Ensimmäinen ruutu (Data.Ruudut-järjestys), joka kattaa lehden kokonaan, ottaa sen; muut ohittavat.
@@ -502,7 +505,20 @@ namespace Matkakirja.Linssit.IssKamera
                 for (int px = 0; px < 256; px++)
                 {
                     int o = (py * 256 + px) * 4;
-                    if (rgba[o + 3] == 0) continue;   // ei S2-dataa: alempi kerros näkyy, pilviä ei (avomeri)
+                    if (rgba[o + 3] == 0)
+                    {
+                        // Ei S2-dataa (rataväli, avomeri): alempi kerros näkyy. GIBS-pilvet jatkuvat silti sen päälle läpikuultavina
+                        // (Manaus 2504ef45: datattomassa kiilassa pilvetön kaista ja venyneet pilviläikät sen reunalla); Pilvikenttä ei.
+                        if (!(Pilvet is GibsPilvet)) continue;
+                        var (la0, lo0) = Uudelleenprojisointi.Pikseli(z, x, y, px + 0.5, py + 0.5);
+                        var (pa0, pk0) = Pilvet.Lahi(la0, lo0, PeittoK(la0, lo0), pm);
+                        float a0 = (float)pa0 * haivytys;
+                        if (a0 <= 0.004f) continue;
+                        float k0 = 246f * (float)pk0;
+                        rgba[o] = (byte)Math.Min(255f, k0 + 0.5f); rgba[o + 1] = (byte)Math.Min(255f, k0 * 0.975f + 0.5f);
+                        rgba[o + 2] = (byte)Math.Min(255f, k0 * 0.94f + 0.5f); rgba[o + 3] = (byte)Math.Min(255f, 255f * a0 + 0.5f);
+                        continue;
+                    }
                     float gx = px * G / 256f, gy = py * G / 256f; int ix = Math.Min(G - 1, (int)gx), iy = Math.Min(G - 1, (int)gy);
                     float tx = gx - ix, ty = gy - iy;
                     float H(float[] f) { int q = iy * (G + 1) + ix; return (f[q] * (1 - tx) + f[q + 1] * tx) * (1 - ty) + (f[q + G + 1] * (1 - tx) + f[q + G + 2] * tx) * ty; }

@@ -1983,6 +1983,7 @@ namespace Matkakirja.Natiivi
                                     + (lahin == null ? "-" : $"{lahin.Tunniste} {Matkakirja.Linssit.Iss.Ylilennot.MaaEtaisyysKm(a0.Lat, a0.Lon, lahin.Lat, lahin.Lon):0.0} km")
                                     + $", paikkoja {Matkakirja.Linssit.Iss.Kuvauspaikat.Nykyiset.Count}, kuvia jäljellä {Matkakirja.Natiivi.IssKameraKuva.KuviaJaljella}");
                             }
+                            else if (osat.Length > 4 && osat[3] == "julistebudjetti") { Matkakirja.Natiivi.IssKameraKuva.JulisteBudjettiMt = Luku(osat[4]); Kirjaa("astro kyyti kuvaa julistebudjetti: " + osat[4] + " Mt"); }
                             else if (osat.Length > 4 && osat[3] == "budjetti") { Matkakirja.Natiivi.IssKameraKuva.BudjettiMt = Luku(osat[4]); Kirjaa("astro kyyti kuvaa budjetti: " + osat[4] + " Mt"); }
                             else if (osat.Length > 4 && osat[3] == "valotus")
                             {
@@ -1994,7 +1995,9 @@ namespace Matkakirja.Natiivi
                             else if (osat.Length > 4 && osat[3] == "kontrasti") { Matkakirja.Natiivi.IssKameraKuva.KuvanKontrasti = (float)Luku(osat[4]); Kirjaa($"astro kyyti kuvaa kontrasti {Matkakirja.Natiivi.IssKameraKuva.KuvanKontrasti:0.00}"); }
                             else if (osat.Length > 4 && osat[3] == "siluetti") { Matkakirja.Natiivi.IssJuliste.Siluetti = osat[4] != "0"; Kirjaa($"astro kyyti kuvaa siluetti {(Matkakirja.Natiivi.IssJuliste.Siluetti ? "päällä" : "pois")}"); }
                             else if (osat.Length > 4 && osat[3] == "juliste") { Matkakirja.Natiivi.IssJuliste.Kaytossa = osat[4] != "0"; Kirjaa($"astro kyyti kuvaa juliste {(Matkakirja.Natiivi.IssJuliste.Kaytossa ? "päällä" : "pois")}"); }
-                            else if (osat.Length > 4 && osat[3] == "kallistus") { Matkakirja.Natiivi.IssKameraKuva.LaajaKallistus = Luku(osat[4]); Kirjaa($"astro kyyti kuvaa kallistus {Matkakirja.Natiivi.IssKameraKuva.LaajaKallistus:0}°"); }
+                            else if (osat.Length > 5 && osat[3] == "sommittelu") { Matkakirja.Natiivi.IssKameraKuva.LaajaKaari = Luku(osat[4]); Matkakirja.Natiivi.IssKameraKuva.LaajaKohde = Luku(osat[5]); Kirjaa($"astro kyyti kuvaa sommittelu: kaari {Matkakirja.Natiivi.IssKameraKuva.LaajaKaari:0.00}, kohde {Matkakirja.Natiivi.IssKameraKuva.LaajaKohde:0.00} yläreunasta"); }
+                            else if (osat.Length > 4 && osat[3] == "suunta") { Matkakirja.Natiivi.IssKameraKuva.KuvanSuunta = LukuOk(osat[4], out double ks) ? ks : (double?)null; Kirjaa($"astro kyyti kuvaa suunta {(Matkakirja.Natiivi.IssKameraKuva.KuvanSuunta is double d ? d.ToString("0") + "°" : "aluksen mukaan")}"); }
+                            else if (osat.Length > 5 && osat[3] == "kohde" && LukuOk(osat[4], out double kkLat) && LukuOk(osat[5], out double kkLon)) { Matkakirja.Natiivi.IssKameraKuva.KuvanKohde = (kkLat, kkLon); Kirjaa($"astro kyyti kuvaa kohde {kkLat:0.000}, {kkLon:0.000} (seuraava kuva)"); }
                             else if (osat.Length > 4 && osat[3] == "laaja") { Matkakirja.Natiivi.IssKameraKuva.Laaja = osat[4] != "0"; Kirjaa($"astro kyyti kuvaa laaja {(Matkakirja.Natiivi.IssKameraKuva.Laaja ? "päällä" : "pois (tele)")}, kenttä ≤ {Matkakirja.Natiivi.IssKameraKuva.KuvanMaxKentta:0}°"); }
                             else if (osat.Length > 4 && osat[3] == "kentta") { Matkakirja.Natiivi.IssKameraKuva.MaxKentta = Luku(osat[4]); Kirjaa("astro kyyti kuvaa kentta: " + osat[4] + "°"); }
                             else if (osat.Length > 3 && osat[3] == "albumi")

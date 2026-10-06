@@ -670,6 +670,31 @@ namespace Matkakirja.Linssit.Astronautti
             return Iss.IssKuvakulma.KohteenKulma(new Iss.IssHetki(new LatLon(plat, plon), h.KorkeusM, h.Suuntima), lat, lon);
         }
 
+        /// <summary>
+        /// Laajan julistekuvan sommittelu (Päätoimittaja 6.10.: "maapallon kaari noin 20–25 % kuvan yläreunasta ja logo mustassa
+        /// avaruudessa kaaren yllä"). Kamera radalla kohteen suunnassa niin, että pystykentässä pystyKentta (°) horisontti on
+        /// osuudella kaariYlhaalta ja kohde osuudella kohdeYlhaalta kuvan yläreunasta; kamera tähtää kuvan keskipisteen maapisteeseen.
+        /// </summary>
+        public Kuvakulma LaajaKuvakulma(double lat, double lon, double pystyKentta, double kaariYlhaalta = 0.22, double kohdeYlhaalta = 0.62,
+            double? suunta = null)
+        {
+            var h = AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000);
+            const double R = 6_371_000, D = Math.PI / 180;
+            double H = Math.Max(1000, h.KorkeusM), k = R / (R + H), puoli = Math.Tan(pystyKentta * D / 2);
+            // Kulmat aluksesta alapisteestä mitattuna (nadiiri); horisontti + 0,3° (ilmakehän kaari näkyy kiinteän reunan yllä).
+            double horisontti = Math.Asin(k) + 0.3 * D;
+            double keskus = horisontti - Math.Atan((1 - 2 * kaariYlhaalta) * puoli);
+            double kohde = keskus - Math.Atan((2 * kohdeYlhaalta - 1) * puoli);
+            double Kaari(double nadiiri) => Math.Asin(Math.Min(1, Math.Sin(nadiiri) / k)) - nadiiri;   // maakaari alapisteestä (rad)
+            // Kamera kohteesta katsottuna aluksen suunnassa (tai annetussa suunnassa, testi `astro kyyti kuvaa suunta`).
+            double s = suunta ?? Iss.IssKuvakulma.Suunta(lat, lon, h.Paikka.Lat, h.Paikka.Lon);
+            Iss.IssKuvakulma.Kohde(lat, lon, s, Kaari(kohde) / D, out double plat, out double plon, out _);
+            var iss = new Iss.IssHetki(new LatLon(plat, plon), h.KorkeusM, h.Suuntima);
+            double takaisin = Iss.IssKuvakulma.Suunta(plat, plon, lat, lon);
+            Iss.IssKuvakulma.Kohde(plat, plon, takaisin, Kaari(keskus) / D, out double tlat, out double tlon, out _);
+            return Iss.IssKuvakulma.KohteenKulma(iss, tlat, tlon);
+        }
+
         /// <summary>Tarkan kuvan kamera kuvauspaikkaan aluksen nykyisestä paikasta (Iss.Kuvauspaikat.Rajaus).</summary>
         public (Kuvakulma Asento, double Pystykentta) KuvausRajaus(Iss.Kuvauspaikka p, double leveysPerKorkeus) =>
             Iss.Kuvauspaikat.Rajaus(AlusHetki(Iss.IssNyt.Kello(), Nyt / 1000), p, leveysPerKorkeus);

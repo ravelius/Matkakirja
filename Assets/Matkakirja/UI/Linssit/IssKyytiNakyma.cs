@@ -788,7 +788,9 @@ namespace Matkakirja.Natiivi
             bool oliAuki = Tila != KyydinTila.Kauko;
             Tila = tila;
             bool auki = tila != KyydinTila.Kauko;
-            juuri.style.display = auki && !Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu.HasValue ? DisplayStyle.Flex : DisplayStyle.None;
+            // Kuvauksen ajan ohjaamo näkyy myös renderöinnissä (LCD:n KEHITETÄÄN-segmentit, omistaja 6.10.): kuva renderöidään omaan
+            // tekstuuriinsa, joten UI ei tule kuvaan; Cupolan näkymä on renderöinnin ajan pysähdyksissä (LS2 b45dd8b2).
+            juuri.style.display = auki && (!Matkakirja.Linssit.Astronautti.AstronauttiLinssi.Vertailu.HasValue || IssKameraKuva.Kaynnissa) ? DisplayStyle.Flex : DisplayStyle.None;
             // Nopeutettuna (web tietorivi kertoimella): "● 100× · ISS · …" ilman LIVE-sanaa, piste harmaa eikä syki.
             var rivi = KyydinTeksti.Tietorivi(korkeusKm, nopeusKmh, arvio, aika.Nopeutettu ? aika.Nopeus : (double?)null);
             if (auki) { tieto.text = rivi.Teksti; live.text = rivi.Merkki ?? ""; }
