@@ -18,6 +18,17 @@ AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
   AVOIN: LCD "KEHITETÄÄN…"-palkki ja "KUVA VALMIS" eivät näkyneet (UI piilossa renderöinnin ajan, meri ilman maata):
   odottaa LS2:n vastausta (nopein onnistuva kuva ja missä vaiheessa palkki näkyy).
 
+## TILA 6.10. klo 09.2x (uusin)
+
+- Juna 147 LÄHETETTY Natiivisepälle: natiivi-ui/koe-147 38100de1 + web-PR #4035 (tyylikirja: PINNATTU PALKKI, --tk-lcd-varoitus
+  #ffb347 / --tk-lcd-vaara #ff5a4a). Päätoimittaja kuittasi. Sisältö: ohjaamo v3 (Linnanrakentaja), segmenttipalkki, LCD:n
+  nopeuslukema 3 s (kerroin, oikea nopeus, % valon nopeudesta, värit), tärinä 1000×, alkuteksti kirjoittuen (VT323), LCD-
+  matriisi, mikseri Pulun valikon Äänet-riviin, vaaka 30 %, Pulun kuvasirut, maakuntakortin väistö, Liiku-nimiöväistö.
+  Todisteet lokit/natiivi-ui-1035/juna147/.
+- Juna 148: portaaton nopeus 1–1000× (odottaa LS2:n AsetaKaasu(double); kaasu-1-kuva siirretään y-akselilla pykälien välillä),
+  Pulun ilmeet kertoimen mukaan (Codexin kuvat, posti b2736fa9c).
+- Proto-worktreet siivottu 9.00 (20 kpl); jäljellä proto-natiivi-ui-koe147. Web: wt/natiivi-ui-tyylikirja-sirurivi (#4035).
+
 ## TILA 6.10. klo 08.4x (uusin)
 
 - Juna 147: natiivi-ui/koe-147 ad4b7b35 (Natiivisepällä viimeksi 6de35578; lähetä uusin, kun v3 on sovitettu). Todennettu:
