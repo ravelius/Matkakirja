@@ -2,6 +2,11 @@
  "kuvaus": "Natiivin \"Mitä uutta\" -rivit uusin ensin. Julkaisija lisää rivin jokaisesta App Store Connectiin ladatusta TestFlight-buildista: node tools/vienti/muutosloki-natiivi.mjs --versio \"1.0.0 (<CFBundleVersion>)\" --teksti \"…\" (1–3 lausetta suomeksi pelaajalle). Sisältöpäivitysten rivit tulevat automaattisesti osoittimeen (uusin.json muutos).",
  "rivit": [
   {
+   "versio": "1.1 (149)",
+   "paiva": "2026-10-06",
+   "teksti": "Elävä opas ei enää kaadu suurilla iPadeilla. Nostojen Kysy avaa Pulun chatin matalana kohteen omiin kysymyksiin, pin nostaa chatin yläreunaan, ja Pulun luennan voi pysäyttää. Noston tekstiä voi napauttaa ilman, että kortti sulkeutuu."
+  },
+  {
    "versio": "1.1 (148)",
    "paiva": "2026-10-06",
    "teksti": "Elävän oppaan kanssa voi nyt jutella puhumalla tai kirjoittamalla, ja toiseen kaupunkiin siirrytään latausruudun kautta. Kysy tarjoaa valmiita kysymyksiä, ja Liiku näyttää kaupungin tärkeimmät kohteet ja kaupunkikierroksen. ISS-ohjaamossa on uusi paneeli ja portaaton nopeus."
