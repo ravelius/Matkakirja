@@ -1,0 +1,775 @@
+{
+ "kaupunki": "Pariisi",
+ "id": "pariisi",
+ "versio": 1,
+ "kohteet": [
+  {
+   "id": "Q243",
+   "nimi": "Eiffel-torni",
+   "kuvaus": "Maailmannäyttelyn rautatorni",
+   "luokka": "torni",
+   "koko_m": 125,
+   "korkeus_m": 330,
+   "teksti": "Eiffel-torni pystytettiin vuoden 1889 maailmannäyttelyyn, eikä sen ollut tarkoitus jäädä pysyväksi. Silti se oli maailman korkein rakennelma yli neljäkymmentä vuotta, kunnes New Yorkin Chrysler Building ohitti sen vuonna 1930. Torni oli määrä purkaa vuonna 1909, mutta langaton lennätin pelasti sen: huipun antennit osoittautuivat niin hyödyllisiksi, että rautatorni sai jäädä. Gustave Eiffel kaiverrutti torniin seitsemänkymmenenkahden ranskalaisen tiedemiehen, insinöörin ja matemaatikon nimet ja maalautti ne kullalla. Nimet näkyvät yhä tornin kyljissä ensimmäisen kerroksen parvekkeen alla.",
+   "lyhyt": "Eiffel-torni koottiin runsaassa kahdessa vuodessa yli kahdeksastatoistatuhannesta rautaosasta, jotka liitettiin toisiinsa kahdella ja puolella miljoonalla niitillä. Ruoste on tornin pahin vihollinen, joten se maalataan seitsemän vuoden välein, ja yhteen maalauskertaan kuluu noin kuusikymmentä tonnia maalia.",
+   "syventava": "Kuka vastusti tornin rakentamista?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Torni rakennettiin väliaikaiseksi vuoden 1889 maailmannäyttelyyn ja oli määrä purkaa vuonna 1909.",
+     "url": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+    },
+    {
+     "vaite": "Torni oli maailman korkein rakennelma vuoteen 1930, jolloin Chrysler Building valmistui.",
+     "url": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+    },
+    {
+     "vaite": "Torni säästyi, koska se osoittautui hyödylliseksi radiolennättimelle.",
+     "url": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+    },
+    {
+     "vaite": "Eiffel kaiverrutti torniin 72 ranskalaisen tiedemiehen nimet.",
+     "url": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+    },
+    {
+     "vaite": "Nimet ovat tornin kyljissä ensimmäisen parvekkeen alla, ja ne oli alun perin maalattu kullalla; kultaus palautettiin 2010–2011.",
+     "url": "https://en.wikipedia.org/wiki/List_of_the_72_names_on_the_Eiffel_Tower"
+    },
+    {
+     "vaite": "Rakentaminen kesti 28.1.1887–31.3.1889; 18 038 osaa liitettiin 2,5 miljoonalla niitillä.",
+     "url": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+    },
+    {
+     "vaite": "Torni maalataan seitsemän vuoden välein ruostumisen estämiseksi, ja maalia kuluu 60 tonnia.",
+     "url": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+    },
+    {
+     "vaite": "Syventävä: taiteilijoiden protestikirje tornia vastaan julkaistiin 14.2.1887 (Garnier, Maupassant, Gounod ym.).",
+     "url": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+    }
+   ]
+  },
+  {
+   "id": "Q19675",
+   "nimi": "Louvre",
+   "kuvaus": "Entinen kuninkaanlinna ja taidemuseo",
+   "luokka": "rakennus",
+   "koko_m": 700,
+   "teksti": "Louvre on maailman suosituin museo, ja ylhäältä sen pitkät siivet muodostavat hevosenkengän, jonka keskellä hohtaa lasipyramidi. Hevosenkenkä on avoin länteen, koska aukon sulkenut Tuileries'n palatsi poltettiin toukokuussa 1871 Pariisin kommuunin viimeisinä päivinä, ja palomiehet ja museon väki saivat pelastettua Louvren liekeiltä. Isoisäsi asetti kameransa puutarhan puiden alle vuonna 1873 ja etsi ensin kulmaa, josta palatsin rauniot eivät näkyisi, mutta käänsi lopulta kameran suoraan niihin. Rauniot purettiin vasta vuonna 1883, ja nyt pyramidin takaa aukeaa suora näkymä Tuileries'n puutarhaan.",
+   "lyhyt": "Louvren lasipyramidin suunnitteli kiinalaissyntyinen amerikkalainen arkkitehti Ieoh Ming Pei, ja se avattiin vuonna 1989. Moni pariisilainen vastusti aluksi modernia lasirakennelmaa vanhan palatsin pihalla, ja pilkkaajat kutsuivat sitä faarao Françoisin pyramidiksi presidentti Mitterrandin mukaan.",
+   "syventava": "Mitä Louvren kellarista löytyy?",
+   "isoisa": true,
+   "lahteet": [
+    {
+     "vaite": "Louvre on maailman vierailluin museo.",
+     "url": "https://en.wikipedia.org/wiki/Louvre"
+    },
+    {
+     "vaite": "Tuileries'n palatsi sulki Louvren pihan länsipään, ja palon jälkeen piha on ollut avoin länteen.",
+     "url": "https://en.wikipedia.org/wiki/Tuileries_Palace"
+    },
+    {
+     "vaite": "Kommunardit sytyttivät Tuileries'n palatsin 23.5.1871 kommuunin kukistamisen aikana.",
+     "url": "https://en.wikipedia.org/wiki/Tuileries_Palace"
+    },
+    {
+     "vaite": "Pariisin palomiehet ja museon henkilökunta kuraattori Barbet de Jouyn johdolla pelastivat Louvren.",
+     "url": "https://en.wikipedia.org/wiki/Louvre"
+    },
+    {
+     "vaite": "Rauniot seisoivat paikalla yksitoista vuotta ja purettiin vuonna 1883.",
+     "url": "https://en.wikipedia.org/wiki/Tuileries_Palace"
+    },
+    {
+     "vaite": "Isoisä asetti kameran puutarhan puiden alle, etsi kulmaa jossa rauniot eivät näkyisi, ja käänsi lopulta kameran suoraan palatsiin.",
+     "url": "kaanon:js/packs/fokusvirta-pariisi.js:110"
+    },
+    {
+     "vaite": "Lasipyramidin suunnitteli kiinalais-amerikkalainen I. M. Pei; valmistui 1989; herätti vastustusta, pilkkanimi Pharaoh François' Pyramid.",
+     "url": "https://en.wikipedia.org/wiki/Louvre_Pyramid"
+    },
+    {
+     "vaite": "Syventävä: keskiaikaisen Louvren linnoituksen jäänteet näkyvät yhä kryptassa.",
+     "url": "https://en.wikipedia.org/wiki/Louvre"
+    }
+   ]
+  },
+  {
+   "id": "Q2981",
+   "nimi": "Notre-Dame",
+   "kuvaus": "Pariisin goottilainen katedraali",
+   "luokka": "kirkko",
+   "koko_m": 128,
+   "korkeus_m": 96,
+   "teksti": "Notre-Dame seisoo Cité-saarella, ja ylhäältä sen katto piirtää ristin, jonka keskeltä nousee hoikka tornihuippu. Huippu romahti vuoden 2019 tulipalossa, kun vanha tamminen kattotuoli paloi, ja se rakennettiin uudelleen entisen näköiseksi. Kirvesmiehet veistivät uudet palkit vastakaadetusta tammesta käsin kirveillä, samaan tapaan kuin keskiajalla, jolloin katedraalia alettiin rakentaa vuonna 1163. Kirkko avattiin jälleen joulukuussa 2024. Aukion kivetyksessä on pieni pronssinen tuuliruusu, josta mitataan Ranskan maanteiden etäisyydet Pariisiin.",
+   "lyhyt": "Notre-Damen pelasti rappiolta Victor Hugon romaani Notre-Damen kellonsoittaja vuonna 1831, sillä se herätti pariisilaiset huomaamaan katedraalin surkean kunnon. Arkkitehti Viollet-le-Duc johti sen jälkeen laajaa entisöintiä ja lisäsi kattoon korkean tornihuipun ja gallerialle tarunomaisia kiviolentoja.",
+   "syventava": "Mitä palosta saatiin pelastettua?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Katedraalin pohja on ristinmuotoinen.",
+     "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris"
+    },
+    {
+     "vaite": "Vuoden 2019 palo tuhosi tornihuipun ja tammisen kattotuolin, ja huippu romahti.",
+     "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris"
+    },
+    {
+     "vaite": "Tornihuippu rakennettiin uudelleen Viollet-le-Ducin 1800-luvun suunnitelman mukaisena.",
+     "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris"
+    },
+    {
+     "vaite": "Kirvesmiehet työstivät vastakaadettua tammea käsin kirveillä perinteisin menetelmin.",
+     "url": "https://www.theartnewspaper.com/2024/12/02/green-wood-axes-and-oaks-how-ancient-skills-helped-to-raise-notre-dames-new-roof"
+    },
+    {
+     "vaite": "Rakentaminen alkoi 1163; uudelleenavajaiset pidettiin 7.–8.12.2024.",
+     "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris"
+    },
+    {
+     "vaite": "Aukion Point zéro on pronssinen kahdeksankulmainen medaljonki, jossa on tuuliruusu; siitä mitataan etäisyydet Pariisista.",
+     "url": "https://fr.wikipedia.org/wiki/Point_z%C3%A9ro_des_routes_de_France"
+    },
+    {
+     "vaite": "Victor Hugon vuoden 1831 romaani herätti huomion katedraalin rapistumiseen ja johti entisöintiin; Viollet-le-Duc lisäsi korkeamman tornihuipun ja tarunomaisia veistoksia galleriaan.",
+     "url": "https://en.wikipedia.org/wiki/Notre-Dame_de_Paris"
+    }
+   ]
+  },
+  {
+   "id": "Q64436",
+   "nimi": "Riemukaari",
+   "kuvaus": "Napoleonin sotien muistomerkki",
+   "luokka": "muu",
+   "koko_m": 50,
+   "korkeus_m": 50,
+   "teksti": "Riemukaari seisoo tähdenmuotoisen aukion keskellä, ja ylhäältä näkee, miten kaksitoista leveää katua säteilee siitä joka suuntaan. Kaari pystytettiin vallankumouksen ja Napoleonin sodissa taistelleiden kunniaksi, ja sen sisäseiniin on hakattu satojen upseerien nimet. Alleviivatut nimet kuuluvat niille, jotka kaatuivat taistelussa. Kaaren alla on ensimmäisen maailmansodan tuntemattoman sotilaan hauta, jolla palaa ikuinen tuli. Elokuussa 1919, kolme viikkoa sodan päättymistä juhlistaneen voitonparaatin jälkeen, lentäjä Charles Godefroy lensi kaksitasollaan holvin läpi, ja temppu tallentui uutisfilmille.",
+   "lyhyt": "Riemukaaren tilasi keisari Napoleon vuonna 1806 Austerlitzin voiton jälkeen, mutta kaari valmistui vasta vuonna 1836, kauan hänen kukistumisensa jälkeen. Kun Napoleonin jäännökset tuotiin Pariisiin vuonna 1840, kaaren huipulle pystytettiin häntä esittävä väliaikainen patsasryhmä.",
+   "syventava": "Kuka on tuntematon sotilas?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Place Charles de Gaulle on nimetty kahdentoista säteittäisen avenuen muodostaman tähden mukaan.",
+     "url": "https://en.wikipedia.org/wiki/Arc_de_Triomphe"
+    },
+    {
+     "vaite": "Kaari kunnioittaa vallankumous- ja Napoleonin sodissa taistelleita ja kaatuneita.",
+     "url": "https://en.wikipedia.org/wiki/Arc_de_Triomphe"
+    },
+    {
+     "vaite": "Sisäseinissä on 660 upseerin nimet; alleviivatut kaatuivat taistelussa.",
+     "url": "https://en.wikipedia.org/wiki/Arc_de_Triomphe"
+    },
+    {
+     "vaite": "Kaaren alla on ensimmäisen maailmansodan tuntemattoman sotilaan hauta ja ikuinen tuli.",
+     "url": "https://en.wikipedia.org/wiki/Arc_de_Triomphe"
+    },
+    {
+     "vaite": "Charles Godefroy lensi Nieuport-kaksitasolla kaaren läpi 7.8.1919, kolme viikkoa Pariisin voitonparaatin jälkeen, ja lento tallentui uutisfilmille.",
+     "url": "https://en.wikipedia.org/wiki/Arc_de_Triomphe"
+    },
+    {
+     "vaite": "Napoleon tilasi kaaren 1806 Austerlitzin jälkeen; valmistui 1836 Ludvig Filipin aikana; 1840 keisarin jäännösten paluuta varten kaaren päälle asennettiin väliaikainen Napoleonia esittävä veistosryhmä.",
+     "url": "https://en.wikipedia.org/wiki/Arc_de_Triomphe"
+    }
+   ]
+  },
+  {
+   "id": "Q28785",
+   "nimi": "Sacré-Cœur",
+   "kuvaus": "Montmartren valkoinen basilika",
+   "luokka": "kirkko",
+   "koko_m": 85,
+   "korkeus_m": 83,
+   "teksti": "Sacré-Cœur kohoaa Montmartren kukkulalla, kaupungin korkeimmalla kohdalla, ja sen valkoiset kupolit näkyvät kauas. Väri säilyy, koska travertiinikivestä erittyy sadeveden vaikutuksesta kalsiittia, joka pitää seinät valkoisina. Basilikaa rakennettiin vuodesta 1875 vuoteen 1914, mutta ensimmäisen maailmansodan vuoksi se vihittiin vasta vuonna 1919. Kukkulan nimi tarkoittaa luultavasti marttyyrien vuorta, sillä perimätiedon mukaan Pariisin ensimmäinen piispa, pyhä Dionysios, mestattiin täällä. Legendan mukaan hän nosti päänsä maasta ja käveli sitä kantaen kilometrien matkan saarnaten koko ajan.",
+   "lyhyt": "Sacré-Cœurin kellotornissa riippuu Ranskan suurin kello, lähes yhdeksäntoista tonnia painava Savoyarde, jonka Savoijin hiippakunnat lahjoittivat vuonna 1895. Kupolin ulkoparvekkeelle johtavat kierreportaat, ja sieltä näkee kirkkaalla säällä noin kolmenkymmenen kilometrin päähän.",
+   "syventava": "Miksi basilika rakennettiin?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Basilika on Montmartren huipulla, kaupungin korkeimmalla kohdalla.",
+     "url": "https://en.wikipedia.org/wiki/Sacr%C3%A9-C%C5%93ur,_Paris"
+    },
+    {
+     "vaite": "Travertiinikivi erittää sadeveden kanssa kalsiittia, mikä pitää sen erityisen valkoisena.",
+     "url": "https://en.wikipedia.org/wiki/Sacr%C3%A9-C%C5%93ur,_Paris"
+    },
+    {
+     "vaite": "Rakentaminen 1875–1914; vihittiin ensimmäisen maailmansodan jälkeen 1919.",
+     "url": "https://en.wikipedia.org/wiki/Sacr%C3%A9-C%C5%93ur,_Paris"
+    },
+    {
+     "vaite": "Montmartre tulee todennäköisesti nimestä Mons Martyrum; Pariisin ensimmäinen piispa Denis mestattiin kukkulalla.",
+     "url": "https://en.wikipedia.org/wiki/Saint_Denis_of_Paris"
+    },
+    {
+     "vaite": "Legendan mukaan Denis nosti päänsä ja käveli useita maileja saarnaten koko matkan.",
+     "url": "https://en.wikipedia.org/wiki/Saint_Denis_of_Paris"
+    },
+    {
+     "vaite": "Savoyarde on Ranskan suurin kello, 18 835 kg; valettu Annecyssa 1895 ja Savoijin neljän hiippakunnan lahjoittama.",
+     "url": "https://fr.wikipedia.org/wiki/Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre"
+    },
+    {
+     "vaite": "Kupolin galleriaan johtaa kierreportaikko; ulkogalleriasta näkee kirkkaalla säällä noin 30 km:n päähän.",
+     "url": "https://fr.wikipedia.org/wiki/Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre"
+    },
+    {
+     "vaite": "Syventävä: basilikan rakentaminen sai alkunsa vuoden 1870 tappion jälkeisestä kansallisesta lupauksesta.",
+     "url": "https://fr.wikipedia.org/wiki/Basilique_du_Sacr%C3%A9-C%C5%93ur_de_Montmartre"
+    }
+   ]
+  },
+  {
+   "id": "Q23402",
+   "nimi": "Orsayn taidemuseo",
+   "kuvaus": "Taidemuseo entisellä rautatieasemalla",
+   "luokka": "rakennus",
+   "koko_m": 190,
+   "teksti": "Orsayn taidemuseon pitkä lasikatto paljastaa ylhäältäkin, että rakennus oli alun perin rautatieasema, joka valmistui vuoden 1900 maailmannäyttelyyn. Junat kuitenkin pitenivät, eivätkä aseman lyhyet laiturit enää riittäneet, joten kaukoliikenne loppui jo vuonna 1939. Hiljentyneelle asemalle myönnettiin purkulupa ja tilalle kaavailtiin hotellia, mutta rakennus suojeltiin 1970-luvulla. Nykyään siellä on maailman suurin impressionistien ja heidän seuraajiensa kokoelma, Monet'sta Van Goghiin. Kun tulet paikalle, nouse ylimpään kerrokseen: suuren kellotaulun läpi näkee Seinen yli aina Montmartrelle asti.",
+   "lyhyt": "Orsayn taidemuseon keskikäytävä on rakennettu entisten laiturien paikalle, ja asemahallin kaarevan lasiholvin alla on esillä veistoksia. Sisätilat suunnitteli italialainen arkkitehti Gae Aulenti, museo avattiin joulukuussa 1986, ja entisen asemahotellin tiloissa toimii nyt museon ravintola.",
+   "syventava": "Mistä impressionismi sai nimensä?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rakennus valmistui rautatieasemaksi vuosina 1898–1900 vuoden 1900 maailmannäyttelyyn.",
+     "url": "https://en.wikipedia.org/wiki/Mus%C3%A9e_d%27Orsay"
+    },
+    {
+     "vaite": "Laitureita ei voitu pidentää pidemmille junille, ja kaukoliikenne lopetettiin 1939.",
+     "url": "https://en.wikipedia.org/wiki/Gare_d%27Orsay"
+    },
+    {
+     "vaite": "Purkaminen hyväksyttiin 1970, mutta kulttuuriministeri esti hotellisuunnitelman; suojelu 1973/1978.",
+     "url": "https://en.wikipedia.org/wiki/Mus%C3%A9e_d%27Orsay"
+    },
+    {
+     "vaite": "Hotellin rakennuslupa myönnettiin, mutta kulttuuriministeri Duhamel puuttui asiaan 1971 ja rakennus suojeltiin 1973.",
+     "url": "https://en.wikipedia.org/wiki/Gare_d%27Orsay"
+    },
+    {
+     "vaite": "Museossa on maailman suurin impressionistien ja postimpressionistien mestariteosten kokoelma, mukana Monet ja Van Gogh.",
+     "url": "https://en.wikipedia.org/wiki/Mus%C3%A9e_d%27Orsay"
+    },
+    {
+     "vaite": "Viidennen kerroksen kellojen läpi näkyy Seinen yli Sacré-Cœuriin asti.",
+     "url": "https://www.insightguides.com/inspire-me/blog/visual/view-paris-orsay-museum"
+    },
+    {
+     "vaite": "Gae Aulenti suunnitteli sisätilat; keskikäytävä entisten laiturien paikalla; noin 2 200 veistosta; museo avattiin joulukuussa 1986; aseman hotelli on nyt museon ravintola.",
+     "url": "https://en.wikipedia.org/wiki/Mus%C3%A9e_d%27Orsay"
+    }
+   ]
+  },
+  {
+   "id": "Q550",
+   "nimi": "Champs-Élysées",
+   "kuvaus": "Pääkatu Concordelta Riemukaarelle",
+   "luokka": "katu",
+   "koko_m": 1900,
+   "teksti": "Champs-Élysées piirtää ylhäältä suoran viivan Concorden aukiolta Riemukaarelle, ja samaa akselia voi seurata Louvren pihalta aina La Défensen jättimäiselle kaarelle asti, jonka taakse aurinko laskee kahdesti vuodessa. Nimi tarkoittaa Elysionin kenttiä, kreikkalaisen tarun kuolleiden sankarien olinpaikkaa. Katu sai alkunsa vuonna 1667, kun puutarha-arkkitehti André Le Nôtre jatkoi Tuileries'n puutarhaa länteen puiden reunustamana kävelytienä. Joka heinäkuu sitä pitkin kulkee kansallispäivän sotilasparaati, ja Tour de Francen viimeinen etappi päättyy yleensä tänne.",
+   "lyhyt": "Champs-Élysées on lähes kaksi kilometriä pitkä ja seitsemänkymmentä metriä leveä. Ennen hienostunut kävelykatu on nykyään täynnä kansainvälisten ketjujen myymälöitä, ja kaupunki suunnittelee muuttavansa sen vuoteen 2030 mennessä vehreäksi puutarhakaduksi, jolla on vähemmän autoja.",
+   "syventava": "Miksi Tour de France päättyy tänne?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Historiallinen akseli kulkee Louvrelta Concorden ja Riemukaaren kautta La Défensen Grande Archelle.",
+     "url": "https://en.wikipedia.org/wiki/Axe_historique"
+    },
+    {
+     "vaite": "Aurinko laskee Grande Archen taakse kahdesti vuodessa.",
+     "url": "https://en.wikipedia.org/wiki/Axe_historique"
+    },
+    {
+     "vaite": "Nimi viittaa kreikkalaisen mytologian kuolleiden sankarien paikkaan, Elysionin kenttiin.",
+     "url": "https://en.wikipedia.org/wiki/Champs-%C3%89lys%C3%A9es"
+    },
+    {
+     "vaite": "André Le Nôtre suunnitteli 1667 Tuileries'n puutarhan jatkeeksi.",
+     "url": "https://en.wikipedia.org/wiki/Champs-%C3%89lys%C3%A9es"
+    },
+    {
+     "vaite": "Kansallispäivän 14. heinäkuuta sotilasparaati kulkee avenueta pitkin.",
+     "url": "https://en.wikipedia.org/wiki/Champs-%C3%89lys%C3%A9es"
+    },
+    {
+     "vaite": "Tour de France päättyi Champs-Élysées'lle 1975–2023; vuonna 2024 maali oli Nizzassa.",
+     "url": "https://en.wikipedia.org/wiki/Champs-%C3%89lys%C3%A9es"
+    },
+    {
+     "vaite": "Vuoden 2025 viimeinen etappi päättyi taas Champs-Élysées'lle.",
+     "url": "https://en.wikipedia.org/wiki/2025_Tour_de_France"
+    },
+    {
+     "vaite": "Vuoden 2026 viimeinen etappi päättyi Champs-Élysées'lle.",
+     "url": "https://en.wikipedia.org/wiki/2026_Tour_de_France"
+    },
+    {
+     "vaite": "Avenue on 1,9 km pitkä ja 70 m leveä; vuoden 2021 suunnitelma muuttaa siitä puutarhamaisen ja vähäliikenteisemmän vuoteen 2030 mennessä; nykyään kaupallistunut ketjuliikkeillä.",
+     "url": "https://en.wikipedia.org/wiki/Champs-%C3%89lys%C3%A9es"
+    }
+   ]
+  },
+  {
+   "id": "Q189503",
+   "nimi": "Concorden aukio",
+   "kuvaus": "Pariisin suurin aukio",
+   "luokka": "aukio",
+   "koko_m": 360,
+   "teksti": "Concorden aukio on Pariisin suurin, ja ylhäältä sen keskipisteen erottaa helposti: kultakärkinen obeliski, joka seisoi aikoinaan Luxorin temppelin portilla Egyptissä. Egyptin käskynhaltija Muhammad Ali lahjoitti sen Ranskalle, ja se pystytettiin aukiolle vuonna 1836. Kauan sitten kadonneen kärjen tilalle lisättiin kullattu huippu vasta vuonna 1998. Vallankumouksen aikana paikka oli nimeltään Vallankumouksen aukio, ja täällä seisoi giljotiini, jolla mestattiin muun muassa kuningas Ludvig kuudestoista ja kuningatar Marie Antoinette. Nykyinen, sopua tarkoittava nimi annettiin sovinnon eleeksi vuonna 1795.",
+   "lyhyt": "Concorden aukion obeliski on yli kolmetuhatta vuotta vanha, ja se veistettiin punaisesta graniitista faarao Ramses toisen aikana. Sen kaksoisveli seisoo yhä Luxorin temppelin portilla Egyptissä, ja parin kivet tehtiin hieman eripituisiksi, jotta ne näyttäisivät kaukaa yhtä korkeilta.",
+   "syventava": "Miten obeliski kuljetettiin Pariisiin?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Concorden aukio on Pariisin suurin aukio.",
+     "url": "https://en.wikipedia.org/wiki/Place_de_la_Concorde"
+    },
+    {
+     "vaite": "Obeliski seisoi Luxorin temppelin sisäänkäynnillä; Muhammad Ali lahjoitti sen; pystytettiin 1836.",
+     "url": "https://en.wikipedia.org/wiki/Place_de_la_Concorde"
+    },
+    {
+     "vaite": "Vuonna 1998 lisättiin kullattu huippu kadonneen alkuperäisen tilalle.",
+     "url": "https://en.wikipedia.org/wiki/Place_de_la_Concorde"
+    },
+    {
+     "vaite": "Vallankumouksen aikana Place de la Révolution; Ludvig XVI ja Marie Antoinette mestattiin siellä; nimi Concorde 1795 sovinnon eleenä.",
+     "url": "https://en.wikipedia.org/wiki/Place_de_la_Concorde"
+    },
+    {
+     "vaite": "Obeliskit ovat yli 3 000 vuotta vanhoja, Ramses II:n ajalta, punaista Assuanin graniittia; kaksoisveli on yhä Luxorissa; kivet tehtiin eripituisiksi, jotta ne näyttäisivät kaukaa yhtä korkeilta.",
+     "url": "https://en.wikipedia.org/wiki/Luxor_Obelisk"
+    }
+   ]
+  },
+  {
+   "id": "Q178065",
+   "nimi": "Pompidou-keskus",
+   "kuvaus": "Nurin käännetty taidekeskus",
+   "luokka": "rakennus",
+   "koko_m": 170,
+   "teksti": "Pompidou-keskus näyttää ylhäältä nurin käännetyltä tehtaalta, sillä putket, portaat ja kantavat rakenteet on viety ulkoseinille. Värit kertovat tehtävän: vihreissä putkissa kulkee vesi, sinisissä ilmastointi ja keltaisissa sähkö, ja punaiset osat liittyvät kulkemiseen ja turvallisuuteen. Suunnitelma voitti lähes seitsemänsadan ehdotuksen kilpailun, ja sen tekijöihin kuuluivat arkkitehdit Renzo Piano ja Richard Rogers. Keskus suljettiin syyskuussa 2025 laajaan peruskorjaukseen, ja sen on määrä avautua uudelleen vuonna 2030. Viereisellä aukiolla Stravinsky-suihkulähteen värikkäät, liikkuvat veistokset suihkuttavat vettä.",
+   "lyhyt": null,
+   "syventava": "Kenen mukaan keskus on nimetty?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rakenteet, tekniikka ja kulkureitit on tuotu ulkopuolelle.",
+     "url": "https://en.wikipedia.org/wiki/Centre_Pompidou"
+    },
+    {
+     "vaite": "Vihreä vesi, sininen ilmastointi, keltainen sähkö, punainen turvalaitteet.",
+     "url": "https://en.wikipedia.org/wiki/Centre_Pompidou"
+    },
+    {
+     "vaite": "Punaiset ovat hissejä.",
+     "url": "https://fr.wikipedia.org/wiki/Centre_Pompidou"
+    },
+    {
+     "vaite": "Rogers ja Piano voittivat 681 ehdotuksen kilpailun.",
+     "url": "https://en.wikipedia.org/wiki/Centre_Pompidou"
+    },
+    {
+     "vaite": "Rakennus sulkeutui 22.9.2025, ja tavoitteena on avata se uudelleen 2030.",
+     "url": "https://www.centrepompidou.fr/en/visit"
+    },
+    {
+     "vaite": "Stravinsky-suihkulähteessä on Tinguelyn ja Niki de Saint Phallen liikkuvia, vettä suihkuttavia veistoksia.",
+     "url": "https://en.wikipedia.org/wiki/Centre_Pompidou"
+    }
+   ]
+  },
+  {
+   "id": "Q309458",
+   "nimi": "Luxembourgin puisto",
+   "kuvaus": "Senaatin palatsin puutarha",
+   "luokka": "puisto",
+   "koko_m": 800,
+   "teksti": "Luxembourgin puiston keskellä kimaltaa kahdeksankulmainen allas, jolla lapset perinteisesti uittavat pienoispurjeveneitä. Puiston ja sen laidan palatsin rakennutti 1600-luvun alussa leskikuningatar Maria de’ Medici, joka halusi jäljitellä kotikaupunkinsa Firenzen Pitti-palatsia. Palatsissa kokoontuu nykyään Ranskan senaatti, joka myös omistaa puiston. Victor Hugon Kurjissa nuoret Marius ja Cosette kohtaavat juuri täällä. Altaan ympärillä seisoo kaksikymmentä Ranskan kuningattarien ja kuuluisien naisten patsasta, ja puistossa on myös Vapaudenpatsaan tekijän Frédéric Auguste Bartholdin pienoismalli patsaasta.",
+   "lyhyt": null,
+   "syventava": "Mikä on Medicin suihkulähde?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Puistossa on kahdeksankulmainen allas, jolla lapset uittavat pienoisveneitä.",
+     "url": "https://en.wikipedia.org/wiki/Jardin_du_Luxembourg"
+    },
+    {
+     "vaite": "Henrik IV:n leski Maria de' Medici aloitti 1612 Pitti-palatsin mallin mukaan.",
+     "url": "https://en.wikipedia.org/wiki/Jardin_du_Luxembourg"
+    },
+    {
+     "vaite": "Ranskan senaatti kokoontuu palatsissa ja omistaa puiston.",
+     "url": "https://en.wikipedia.org/wiki/Jardin_du_Luxembourg"
+    },
+    {
+     "vaite": "Kurjissa puisto on Mariuksen ja Cosetten kohtaamispaikka.",
+     "url": "https://en.wikipedia.org/wiki/Jardin_du_Luxembourg"
+    },
+    {
+     "vaite": "Altaan ympärillä on kaksikymmentä Ranskan kuningattarien ja kuuluisien naisten patsasta; puistossa on Bartholdin pienoismalli Vapaudenpatsaasta.",
+     "url": "https://en.wikipedia.org/wiki/Jardin_du_Luxembourg"
+    }
+   ]
+  },
+  {
+   "id": "Q188856",
+   "nimi": "Panthéon",
+   "kuvaus": "Ranskan suurmiesten hautapaikka",
+   "luokka": "rakennus",
+   "koko_m": 110,
+   "korkeus_m": 83,
+   "teksti": "Panthéonin suuri kupoli hallitsee Latinalaiskorttelin kukkulaa. Rakennus aloitettiin kirkkona, jonka kuningas Ludvig viidestoista oli luvannut rakennuttaa, jos hän paranisi sairaudestaan, mutta vallankumous teki siitä kansakunnan suurmiesten hautapaikan. Kupolin alla fyysikko Léon Foucault osoitti vuonna 1851 pitkällä heilurilla, että maapallo pyörii, ja heilurin kopio heilahtelee siellä yhä. Kryptassa lepäävät muun muassa Voltaire, Victor Hugo sekä Marie ja Pierre Curie. Marie Curie oli ensimmäinen nainen, joka haudattiin tänne omien ansioidensa vuoksi, ja pariskunnan vuotava laboratoriovaja oli vain muutaman korttelin päässä.",
+   "lyhyt": null,
+   "syventava": "Miten heiluri todistaa maan pyörimisen?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Panthéon on Montagne Sainte-Genevièvellä Latinalaiskorttelissa.",
+     "url": "https://en.wikipedia.org/wiki/Panth%C3%A9on"
+    },
+    {
+     "vaite": "Ludvig XV lupasi 1744 rakentaa uuden kirkon, jos paranisi sairaudesta.",
+     "url": "https://en.wikipedia.org/wiki/Panth%C3%A9on"
+    },
+    {
+     "vaite": "Vuonna 1791 kirkko muutettiin suurmiesten mausoleumiksi.",
+     "url": "https://en.wikipedia.org/wiki/Panth%C3%A9on"
+    },
+    {
+     "vaite": "Foucault osoitti 1851 heilurilla maan pyörimisen; kopio on yhä esillä.",
+     "url": "https://en.wikipedia.org/wiki/Panth%C3%A9on"
+    },
+    {
+     "vaite": "Kryptassa ovat Voltaire, Victor Hugo sekä Marie ja Pierre Curie; Marie Curie ensimmäinen omien ansioidensa vuoksi haudattu nainen 1995.",
+     "url": "https://en.wikipedia.org/wiki/Panth%C3%A9on"
+    },
+    {
+     "vaite": "Curiet työskentelivät ESPCI:n vieressä vajassa, joka oli entinen lääketieteellisen koulun ruumiinavaussali, huonosti tuuletettu ja vuotava.",
+     "url": "https://en.wikipedia.org/wiki/Marie_Curie"
+    },
+    {
+     "vaite": "Rue Lhomond alkaa Place de l'Estrapadelta Panthéonin vierestä.",
+     "url": "https://fr.wikipedia.org/wiki/Rue_Lhomond"
+    },
+    {
+     "vaite": "ESPCI, jonka hangaarissa radium löydettiin, oli osoitteessa 12 rue Lhomond.",
+     "url": "https://sites.chemistry.unt.edu/~jimm/rediscovery%207-09-2018/Photos/France/Paris/Paris%20F%20folder/index.htm"
+    }
+   ]
+  },
+  {
+   "id": "Q187840",
+   "nimi": "Palais Garnier",
+   "kuvaus": "Pariisin vanha oopperatalo",
+   "luokka": "rakennus",
+   "koko_m": 170,
+   "teksti": "Palais Garnierin vihreän kupolin juurella on pidetty mehiläispesiä jo yli kolmekymmentä vuotta, ja katolla syntynyttä hunajaa myydään oopperan omassa myymälässä. Rakennuksen alla on vielä erikoisempi salaisuus: kun työmaa osui pohjaveteen, näyttämön alle rakennettiin vesiallas, jossa vain Pariisin palomiehet käyvät harjoittelemassa. Maanalainen järvi ja onnettomuus, jossa kattokruunun vastapaino putosi katsomoon vuonna 1896, innoittivat Gaston Lerouxin romaania Oopperan kummitus. Katsomon kattomaalauksen teki vuonna 1964 Marc Chagall, eivätkä kaikki pitäneet sitä Garnierin loisteliaaseen saliin sopivana.",
+   "lyhyt": null,
+   "syventava": "Mitä Chagallin katossa näkyy?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Suuren kupolin juurella on ollut yli 30 vuotta viisi mehiläispesää; altaaseen liittyvät palomiesten harjoitukset.",
+     "url": "https://www.france.fr/fr/article/opera-garnier-anecdotes/"
+    },
+    {
+     "vaite": "Kupolin juurella on mehiläispesiä; maanalainen allas syntyi, kun työmaa osui pohjaveteen, ja toimii palovesivarastona.",
+     "url": "https://www.france.fr/en/article/unusual-stories-opera-garnier/"
+    },
+    {
+     "vaite": "Oopperan hunajaa tuotetaan ja myydään Pariisin oopperan omassa myymälässä.",
+     "url": "https://www.operadeparis.fr/services-et-infos-pratiques/mugo"
+    },
+    {
+     "vaite": "Allas toimi rakentamisen jälkeen palomiesten varastona; Lerouxin maanalaisen järven lähde.",
+     "url": "https://fr.wikipedia.org/wiki/Palais_Garnier"
+    },
+    {
+     "vaite": "Kattokruunun vastapaino putosi katsomoon 20.5.1896 ja innoitti Lerouxin romaania.",
+     "url": "https://en.wikipedia.org/wiki/Palais_Garnier"
+    },
+    {
+     "vaite": "Chagallin katto asennettiin 1964, ja osa piti sitä Garnierin sisustukseen sopimattomana.",
+     "url": "https://en.wikipedia.org/wiki/Palais_Garnier"
+    },
+    {
+     "vaite": "Syventävä: Chagallin katto kunnioittaa neljäätoista säveltäjää ja heidän pääteoksiaan.",
+     "url": "https://www.centrepompidou.fr/en/magazine/article/lhistoire-secrete-du-plafond-de-lopera-signe-chagall"
+    }
+   ]
+  },
+  {
+   "id": "Q193193",
+   "nimi": "Sainte-Chapelle",
+   "kuvaus": "Lasimaalausten kuninkaallinen kappeli",
+   "luokka": "kirkko",
+   "koko_m": 36,
+   "teksti": "Sainte-Chapelle piiloutuu oikeuspalatsin sisäpihalle Cité-saarella, ja ylhäältä sen erottaa ympäröivien rakennusten keskeltä jyrkästä katosta ja hoikasta tornihuipusta. Kuningas Ludvig yhdeksäs rakennutti kappelin orjantappurakruunulle, jota pidettiin Kristuksen kruununa, ja muille Konstantinopolista hankkimilleen pyhäinjäännöksille. Kappeli vihittiin vuonna 1248, ja jäännökset olivat maksaneet yli kolme kertaa enemmän kuin koko rakennus. Yläkappelin seinät ovat lähes kokonaan lasimaalauksia, ja ne hehkuvat kirkkaimmin aurinkoisena päivänä. Kruunua säilytetään nykyään Notre-Damessa, ja se pelastettiin vuoden 2019 palosta.",
+   "lyhyt": null,
+   "syventava": "Miten kruunu pelastettiin palosta?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kappeli on Palais de la Citén sisäpihalla Cité-saarella.",
+     "url": "https://en.wikipedia.org/wiki/Sainte-Chapelle"
+    },
+    {
+     "vaite": "Ludvig IX rakennutti kappelin orjantappurakruunulle; vihittiin 26.4.1248.",
+     "url": "https://en.wikipedia.org/wiki/Sainte-Chapelle"
+    },
+    {
+     "vaite": "Pyhäinjäännökset maksoivat 135 000 livreä, koko kappeli 40 000 livreä.",
+     "url": "https://en.wikipedia.org/wiki/Sainte-Chapelle"
+    },
+    {
+     "vaite": "Yläkappelin seinät näyttävät olevan lähes kokonaan lasimaalauksia.",
+     "url": "https://en.wikipedia.org/wiki/Sainte-Chapelle"
+    },
+    {
+     "vaite": "Kruunu pelastettiin Notre-Damen palosta 2019 ja palautettiin katedraaliin joulukuussa 2024.",
+     "url": "https://en.wikipedia.org/wiki/Sainte-Chapelle"
+    }
+   ]
+  },
+  {
+   "id": "Q188977",
+   "nimi": "Les Invalides",
+   "kuvaus": "Napoleonin hauta ja sotilaskoti",
+   "luokka": "rakennus",
+   "koko_m": 450,
+   "korkeus_m": 107,
+   "teksti": "Les Invalides erottuu ylhäältä kullatusta kupolistaan, joka valmistui vuonna 1706 Jules Hardouin-Mansartin suunnitelmien mukaan ja kohoaa sataanseitsemään metriin. Kuningas Ludvig neljästoista perusti laitoksen vuonna 1670 vanhoille ja haavoittuneille sotilaille, ja täällä hoidetaan yhä sotaveteraaneja. Bastiljin valtauspäivänä vuonna 1789 väkijoukko vei ensin laitoksen kellareista kiväärit ja tykit. Napoleonin jäännökset tuotiin Invalideihin vuonna 1840, mutta hänen hautansa kupolin alla valmistui vasta vuonna 1861. Kupoli kullattiin viimeksi vuonna 1989, ja siihen kului lähes kolmetoista kiloa lehtikultaa.",
+   "lyhyt": null,
+   "syventava": "Mitä armeijan museossa on nähtävänä?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Kupolin suunnitteli Jules Hardouin-Mansart; 107 metriä; 12,65 kg lehtikultaa vuoden 1989 entisöinnissä.",
+     "url": "https://en.wikipedia.org/wiki/Les_Invalides"
+    },
+    {
+     "vaite": "Ludvig XIV perusti laitoksen 1670 vanhoille ja invalidisoituneille sotilaille; toimii yhä veteraanien laitoksena.",
+     "url": "https://en.wikipedia.org/wiki/Les_Invalides"
+    },
+    {
+     "vaite": "14.7.1789 väkijoukko vei aseet varastoista ja käytti niitä samana päivänä Bastiljin valtaukseen.",
+     "url": "https://en.wikipedia.org/wiki/Les_Invalides"
+    },
+    {
+     "vaite": "Napoleonin jäännökset siirrettiin Invalideihin 1840; hauta valmistui 1861.",
+     "url": "https://en.wikipedia.org/wiki/Les_Invalides"
+    }
+   ]
+  },
+  {
+   "id": "Q390418",
+   "nimi": "Pont Alexandre III",
+   "kuvaus": "Tsaarin mukaan nimetty silta",
+   "luokka": "silta",
+   "koko_m": 160,
+   "teksti": "Pont Alexandre III ylittää Seinen yhdellä matalalla teräskaarella, ja sen päissä korkeiden pylväiden huipulla kimaltavat kullatut patsaat. Kaari pidettiin tarkoituksella matalana, jotta silta ei peittäisi näkymää Champs-Élysées'n ja Invalidien välillä. Silta valmistui vuoden 1900 maailmannäyttelyyn, ja se nimettiin Venäjän tsaari Aleksanteri kolmannen mukaan, joka oli solminut liiton Ranskan kanssa. Peruskiven laski vuonna 1896 hänen poikansa, tsaari Nikolai toinen. Kaaren keskikohdassa sillan toista kylkeä koristavat Seinen nymfit ja vastakkaista Nevan nymfit, Pariisin ja Pietarin jokien vertauskuvat.",
+   "lyhyt": null,
+   "syventava": "Mitä kullatut patsaat esittävät?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Yksiaukkoinen matala teräskaari, jonka korkeutta rajoitti vaatimus olla peittämättä näkymiä.",
+     "url": "https://en.wikipedia.org/wiki/Pont_Alexandre_III"
+    },
+    {
+     "vaite": "Neljä kullattua pronssista Fama-patsasta korkeiden kivipylväiden päällä.",
+     "url": "https://en.wikipedia.org/wiki/Pont_Alexandre_III"
+    },
+    {
+     "vaite": "Silta vihittiin vuoden 1900 maailmannäyttelyyn ja nimettiin Aleksanteri III:n mukaan, joka solmi ranskalais-venäläisen liiton 1892.",
+     "url": "https://en.wikipedia.org/wiki/Pont_Alexandre_III"
+    },
+    {
+     "vaite": "Peruskiven laski Nikolai II lokakuussa 1896.",
+     "url": "https://en.wikipedia.org/wiki/Pont_Alexandre_III"
+    },
+    {
+     "vaite": "Nikolai II oli Aleksanteri III:n poika.",
+     "url": "https://en.wikipedia.org/wiki/Nicholas_II"
+    },
+    {
+     "vaite": "Kaarien keskellä Seinen nymfit ovat vastapäätä Nevan nymfejä ranskalais-venäläisen ystävyyden muistoksi.",
+     "url": "https://en.wikipedia.org/wiki/Pont_Alexandre_III"
+    }
+   ],
+   "puhe_teksti": "Pont Alexandre Trois ylittää Seinen yhdellä matalalla teräskaarella, ja sen päissä korkeiden pylväiden huipulla kimaltavat kullatut patsaat. Kaari pidettiin tarkoituksella matalana, jotta silta ei peittäisi näkymää Champs-Élysées'n ja Invalidien välillä. Silta valmistui vuoden 1900 maailmannäyttelyyn, ja se nimettiin Venäjän tsaari Aleksanteri kolmannen mukaan, joka oli solminut liiton Ranskan kanssa. Peruskiven laski vuonna 1896 hänen poikansa, tsaari Nikolai toinen. Kaaren keskikohdassa sillan toista kylkeä koristavat Seinen nymfit ja vastakkaista Nevan nymfit, Pariisin ja Pietarin jokien vertauskuvat."
+  },
+  {
+   "id": "Q335277",
+   "nimi": "Pont Neuf",
+   "kuvaus": "Pariisin vanhin silta",
+   "luokka": "silta",
+   "koko_m": 232,
+   "teksti": "Pont Neuf tarkoittaa uutta siltaa, mutta se on Pariisin vanhin yhä pystyssä oleva silta Seinen yli. Ylhäältä näkee, miten se ylittää joen Cité-saaren läntisen kärjen kautta, ja saaren kohdalla sillalla seisoo kuningas Henrik neljännen ratsastajapatsas. Valmistuessaan vuonna 1607 silta oli kaupungin ensimmäinen kivisilta, jolle ei rakennettu taloja, ja jalankulkijoita varten siinä oli jalkakäytävät. Siitä tuli katuesiintyjien, kauppiaiden ja kaikkien säätyjen kohtauspaikka. Taiteilijat Christo ja Jeanne-Claude käärivät koko sillan kankaaseen vuonna 1985.",
+   "lyhyt": null,
+   "syventava": "Keitä sillan kivinaamiot esittävät?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Pont Neuf on Pariisin vanhin pystyssä oleva silta Seinen yli; valmistui 1607.",
+     "url": "https://en.wikipedia.org/wiki/Pont_Neuf"
+    },
+    {
+     "vaite": "Silta ylittää Cité-saaren länsikärjen; Henrik IV:n ratsastajapatsas on sillan keskikohdassa.",
+     "url": "https://en.wikipedia.org/wiki/Pont_Neuf"
+    },
+    {
+     "vaite": "Ensimmäinen kivisilta Pariisissa ilman taloja; jalkakäytävät suojasivat jalankulkijoita.",
+     "url": "https://en.wikipedia.org/wiki/Pont_Neuf"
+    },
+    {
+     "vaite": "Sillalla kokoontuivat katuesiintyjät, kauppiaat ja kaikenlainen väki.",
+     "url": "https://en.wikipedia.org/wiki/Pont_Neuf"
+    },
+    {
+     "vaite": "Christo ja Jeanne-Claude käärivät sillan 1985.",
+     "url": "https://en.wikipedia.org/wiki/Pont_Neuf"
+    },
+    {
+     "vaite": "Syventävä: 381 kivinaamiota esittää metsän ja peltojen jumaluuksia ja satyyreja.",
+     "url": "https://en.wikipedia.org/wiki/Pont_Neuf"
+    }
+   ]
+  },
+  {
+   "id": "Q311",
+   "nimi": "Père-Lachaise",
+   "kuvaus": "Pariisin suurin hautausmaa",
+   "luokka": "muu",
+   "koko_m": 1000,
+   "teksti": "Père-Lachaise näyttää ylhäältä metsältä, jonka puiden alla hautakujat risteilevät kuin kokonaisen kaupungin kadut. Se on Pariisin suurin hautausmaa, mutta avautuessaan vuonna 1804 sitä pidettiin liian kaukaisena, eikä sinne juuri haluttu haudata vainajia. Hallinto keksi keinon: vuonna 1817 hautausmaalle siirrettiin näytelmäkirjailija Molièren ja runoilija Jean de La Fontainen jäännökset, ja suosio alkoi kasvaa. Nykyään täällä lepäävät muun muassa Frédéric Chopin, Édith Piaf, Oscar Wilde ja Jim Morrison. Kommunardien muurin edessä teloitettiin vuonna 1871 sataneljäkymmentäseitsemän Pariisin kommuunin kapinallista.",
+   "lyhyt": null,
+   "syventava": "Miksi Wilden haudalla on lasiseinä?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Pariisin suurin hautausmaa; avattiin 1804; pidettiin liian kaukaisena.",
+     "url": "https://en.wikipedia.org/wiki/P%C3%A8re_Lachaise_Cemetery"
+    },
+    {
+     "vaite": "Vuonna 1817 sinne siirrettiin La Fontainen ja Molièren jäännökset.",
+     "url": "https://en.wikipedia.org/wiki/P%C3%A8re_Lachaise_Cemetery"
+    },
+    {
+     "vaite": "Haudattuina Chopin, Jim Morrison, Édith Piaf ja Oscar Wilde.",
+     "url": "https://en.wikipedia.org/wiki/P%C3%A8re_Lachaise_Cemetery"
+    },
+    {
+     "vaite": "Kommunardien muurilla teloitettiin 147 kommunardia vuonna 1871.",
+     "url": "https://en.wikipedia.org/wiki/P%C3%A8re_Lachaise_Cemetery"
+    },
+    {
+     "vaite": "Syventävä: Wilden haudan ympärille asennettiin 2011 lasiseinä huulipunasuudelmien aiheuttamien vaurioiden estämiseksi.",
+     "url": "https://francerevisited.com/2011/12/oscar-wilde-saved-from-adoring-fans-in-paris-pere-lachaise-cemetery/"
+    }
+   ]
+  },
+  {
+   "id": "Q898629",
+   "nimi": "Place des Vosges",
+   "kuvaus": "Kuninkaallinen aukio Marais'ssa",
+   "luokka": "aukio",
+   "koko_m": 140,
+   "teksti": "Place des Vosges on Pariisin vanhin suunniteltu aukio, ja ylhäältä sen neliön ympärillä erottuu yhtenäinen rivi punatiilisiä taloja jyrkkine kattoineen. Kuningas Henrik neljäs aloitti aukion rakentamisen vuonna 1605, mutta hän ei ehtinyt nähdä avajaisia, joissa vuonna 1612 juhlittiin suurella ratsastusnäytöksellä Ludvig kolmannentoista ja Itävallan Annan kihlausta. Alkuperäinen nimi oli Kuninkaallinen aukio. Nykyisen nimensä se sai vuonna 1800 Vosges'n departementilta, joka oli ensimmäisenä maksanut veronsa vallankumousarmeijan hyväksi. Kirjailija Victor Hugo asui aukion laidalla kuusitoista vuotta, ja hänen kotinsa on nyt museo.",
+   "lyhyt": null,
+   "syventava": "Mitä Hugon kotimuseossa näkee?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Pariisin vanhin suunniteltu aukio; punatiilitalot ja jyrkät liuskekivikatot; Henrik IV 1605–1612, Place Royale.",
+     "url": "https://en.wikipedia.org/wiki/Place_des_Vosges"
+    },
+    {
+     "vaite": "Vihittiin 1612 suurella ratsastusnäytöksellä Ludvig XIII:n ja Itävallan Annan kihlauksen kunniaksi.",
+     "url": "https://en.wikipedia.org/wiki/Place_des_Vosges"
+    },
+    {
+     "vaite": "Henrik IV murhattiin 14.5.1610.",
+     "url": "https://en.wikipedia.org/wiki/Henry_IV_of_France"
+    },
+    {
+     "vaite": "Nimi Vosges'n departementin mukaan 1800, koska se maksoi ensimmäisenä vallankumousarmeijan hyväksi.",
+     "url": "https://en.wikipedia.org/wiki/Place_des_Vosges"
+    },
+    {
+     "vaite": "Victor Hugo asui aukiolla 1832–1848, ja koti on museo.",
+     "url": "https://en.wikipedia.org/wiki/Place_des_Vosges"
+    }
+   ]
+  },
+  {
+   "id": "Q151030",
+   "nimi": "Moulin Rouge",
+   "kuvaus": "Punaisen myllyn kabaree",
+   "luokka": "rakennus",
+   "koko_m": 50,
+   "teksti": "Moulin Rougen tunnistaa ylhäältä katolla seisovasta punaisesta tuulimyllystä Clichyn bulevardin varrella Pigallessa. Joseph Oller ja Charles Zidler avasivat kabareen vuonna 1889, samana vuonna kuin Eiffel-torni valmistui, ja siitä tuli nykyaikaisen cancanin syntysija. Taidemaalari Henri de Toulouse-Lautrecin julisteet ja maalaukset levittivät sen tanssijoiden mainetta maailmalle. Alkuperäinen rakennus tuhoutui tulipalossa vuonna 1915, ja kabaree oli suljettuna lähes kymmenen vuotta. Huhtikuussa 2024 myllyn siivet irtosivat ja putosivat kadulle, mutta uudet siivet nostettiin paikoilleen ennen kuin olympiasoihtu kulki ohi saman vuoden heinäkuussa.",
+   "lyhyt": null,
+   "syventava": "Mistä cancan-tanssi on peräisin?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Moulin Rouge on Boulevard de Clichyllä Pigallessa, ja sen katolla on punainen tuulimylly.",
+     "url": "https://en.wikipedia.org/wiki/Moulin_Rouge"
+    },
+    {
+     "vaite": "Charles Zidler ja Joseph Oller perustivat kabareen 1889; nykyaikaisen cancanin syntysija.",
+     "url": "https://en.wikipedia.org/wiki/Moulin_Rouge"
+    },
+    {
+     "vaite": "Eiffel-torni valmistui 31.3.1889.",
+     "url": "https://en.wikipedia.org/wiki/Eiffel_Tower"
+    },
+    {
+     "vaite": "Toulouse-Lautrec teki kabareelle julisteita ja maalauksia.",
+     "url": "https://en.wikipedia.org/wiki/Moulin_Rouge"
+    },
+    {
+     "vaite": "Rakennus tuhoutui tulipalossa 27.2.1915, ja kabaree oli suljettuna yhdeksän vuotta.",
+     "url": "https://en.wikipedia.org/wiki/Moulin_Rouge"
+    },
+    {
+     "vaite": "Siivet putosivat 25.4.2024; uudet väliaikaiset siivet asennettiin kesäkuun lopussa; olympiasoihtu ohitti Moulin Rougen 15.7.2024.",
+     "url": "https://www.arabnews.com/node/2536556/offbeat"
+    }
+   ]
+  },
+  {
+   "id": "Q457318",
+   "nimi": "Grand Palais",
+   "kuvaus": "Lasiholvinen näyttelypalatsi",
+   "luokka": "rakennus",
+   "koko_m": 240,
+   "teksti": "Grand Palais'n valtava lasi- ja teräsholvi kimaltaa ylhäältä Champs-Élysées'n kupeessa kuin jättimäinen kasvihuone. Halli rakennettiin vuoden 1900 maailmannäyttelyyn puretun Teollisuuspalatsin paikalle, ja se on viimeisiä Lontoon Kristallipalatsin innoittamia suuria lasirakennuksia. Pääjulkisivun kummassakin päässä ryntäävät kupariset nelivaljakot, joista toinen kuvaa kuolemattomuuden voittoa ajasta ja toinen sopusoinnun voittoa riidasta. Rakennus suljettiin vuonna 2021 perusteelliseen korjaukseen, ja vuoden 2024 olympialaisissa sen holvin alla kilpailivat miekkailijat ja taekwondon ottelijat. Kokonaan se avattiin uudelleen kesäkuussa 2025.",
+   "lyhyt": null,
+   "syventava": "Mitä maailmannäyttelystä jäi jäljelle?",
+   "isoisa": false,
+   "lahteet": [
+    {
+     "vaite": "Rakennettiin vuoden 1900 maailmannäyttelyyn puretun Palais de l'Industrien paikalle.",
+     "url": "https://en.wikipedia.org/wiki/Grand_Palais"
+    },
+    {
+     "vaite": "Lasikatto noin 14 000 m²; viimeisiä Kristallipalatsin innoittamia suuria läpinäkyviä rakennuksia.",
+     "url": "https://en.wikipedia.org/wiki/Grand_Palais"
+    },
+    {
+     "vaite": "Kupariset nelivaljakot: Kuolemattomuus voittaa ajan ja Sopusointu voittaa riidan.",
+     "url": "https://en.wikipedia.org/wiki/Grand_Palais"
+    },
+    {
+     "vaite": "Suljettiin maaliskuussa 2021, avattiin uudelleen kesäkuussa 2025; olympialaisissa 2024 miekkailu ja taekwondo.",
+     "url": "https://en.wikipedia.org/wiki/Grand_Palais"
+    }
+   ]
+  }
+ ],
+ "tarkistettu": "2026-10-07"
+}

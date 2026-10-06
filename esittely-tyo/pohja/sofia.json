@@ -1,0 +1,346 @@
+{
+ "kaupunki": "Sofia",
+ "id": "sofia",
+ "keskus": {
+  "lat": 42.7,
+  "lon": 23.33333333
+ },
+ "kierros": [
+  "Q43282",
+  "Q841581",
+  "Q790052",
+  "Q942127",
+  "Q2598073",
+  "Q520753",
+  "Q3269914",
+  "Q276553"
+ ],
+ "kohteet": [
+  {
+   "id": "Q43282",
+   "nimi": "Aleksanteri Nevskin katedraali",
+   "lat": 42.69584,
+   "lon": 23.33297,
+   "tarkeys": 1,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Aleksanteri_Nevskin_katedraali_(Sofia)",
+    "en": "https://en.wikipedia.org/wiki/Saint_Alexander_Nevsky_Cathedral,_Sofia"
+   }
+  },
+  {
+   "id": "Q276553",
+   "nimi": "Bojanan kirkko",
+   "lat": 42.64467,
+   "lon": 23.26617,
+   "tarkeys": 2,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Bojanan_kirkko",
+    "en": "https://en.wikipedia.org/wiki/Boyana_Church"
+   }
+  },
+  {
+   "id": "Q2598073",
+   "nimi": "Pyhän Yrjön rotunda",
+   "lat": 42.69686,
+   "lon": 23.32286,
+   "tarkeys": 3,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Church_of_Saint_George,_Sofia"
+   }
+  },
+  {
+   "id": "Q520753",
+   "nimi": "Sveta Nedelyan kirkko",
+   "lat": 42.69678,
+   "lon": 23.32155,
+   "tarkeys": 4,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Saint_Nedelya_Cathedral,_Sofia"
+   }
+  },
+  {
+   "id": "Q790052",
+   "nimi": "Banja Bashin moskeija",
+   "lat": 42.69951,
+   "lon": 23.32258,
+   "tarkeys": 5,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Banya_Bashi_Mosque"
+   }
+  },
+  {
+   "id": "Q841581",
+   "nimi": "Sofian yliopisto",
+   "lat": 42.69361,
+   "lon": 23.335,
+   "tarkeys": 6,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Sofian_yliopisto",
+    "en": "https://en.wikipedia.org/wiki/Sofia_University"
+   }
+  },
+  {
+   "id": "Q3269914",
+   "nimi": "Kansalliskulttuuripalatsi",
+   "lat": 42.68472,
+   "lon": 23.31889,
+   "tarkeys": 7,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/National_Palace_of_Culture"
+   }
+  },
+  {
+   "id": "Q942127",
+   "nimi": "Sofian synagoga",
+   "lat": 42.70028,
+   "lon": 23.32101,
+   "tarkeys": 8,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Sofia_Synagogue"
+   }
+  },
+  {
+   "id": "Q1858012",
+   "nimi": "Ivan Vazovin kansallisteatteri",
+   "lat": 42.69417,
+   "lon": 23.32656,
+   "tarkeys": 9,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Ivan_Vazov_National_Theatre"
+   }
+  },
+  {
+   "id": "Q190435",
+   "nimi": "Sofian keskeinen mineraalikylpylä",
+   "lat": 42.69937,
+   "lon": 23.32368,
+   "tarkeys": 10,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Sofia_Central_Mineral_Baths"
+   }
+  }
+ ],
+ "isoisa": {
+  "paikkarivi": "Sofia, elokuussa 1873. Helteistä; tomu ei laskeudu; puntari korkealla.",
+  "teksti": "Sofiassa maa lämmitti veden ilman halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Palasin hakemaan oman astian. Majatalon isäntä ei ilahtunut, kun neuvoin muitakin lähtemään lähteelle."
+ },
+ "aineisto": {
+  "nimi": "Sofia",
+  "iskulause": "Kuumat lähteet keskellä kaupunkia",
+  "tausta": [
+   "Kaupungin vaakunassa lukee: kasvaa, mutta ei vanhene. Metroa kaivettaessa löytyi kokonainen roomalainen kortteli, ja etelässä vuori alkaa viimeisen bussipysäkin takaa.",
+   "Aleksanteri Nevskin katedraaliin mahtuu 5 000 kirkkovierasta, ja sen kahdestatoista kellosta raskain painaa 12 tonnia ja kevyin 10 kiloa.",
+   "Pyhän Yrjön rotunda rakennettiin 300-luvulla punatiilestä roomalaiseksi kylpylaitokseksi, ja se on Sofian vanhin säilynyt rakennus.",
+   "Keskustan mineraalikylpylä valmistui 1913 lähteen päälle, suljettiin 1986, ja nykyään talon toisessa puoliskossa on kaupunginmuseo.",
+   "Aleksanteri Nevskin katedraalin rakentaminen alkoi 1882 Aleksandr Pomerantsevin suunnitelmien mukaan ja päättyi 1912; se pystytettiin vuosien 1877–1878 sodassa kaatuneiden muistoksi, ja sen kullattu kupoli nousee 45 metriin ja kellotorni 53 metriin.",
+   "Banja Bashin moskeija on rakennettu kuumien lähteiden päälle ja sai nimensä viereisistä kylpylöistä; se on ainoa Sofiassa yhä toimiva moskeija, ja sen leveä lyijykupoli lepää tiilikuution päällä kolmiholvisen eteiskatoksen takana.",
+   "Sofian raitiotie avattiin 1. tammikuuta 1901, ja suurin osa verkosta kulkee poikkeuksellisella 1 009 millimetrin raideleveydellä — kadun päässä kohoaa Vitosa.",
+   "Sofia oli vielä 1878 pieni maakuntakaupunki, ja nykyään siinä asuu lähes 1,3 miljoonaa ihmistä.",
+   "Largo on 1950-luvulla rakennettu kolmen rakennuksen kokonaisuus Itsenäisyydenaukion ympärillä, ja aukion pinta on Sofian keltaista mukulakiveä.",
+   "Vitosan luonnonpuisto rauhoitettiin 1934 ensimmäisenä koko Balkanilla, ja sen korkein huippu yltää 2 292 metriin.",
+   "Serdica on minun Roomani: Sofian alla on toinen kaupunki. Roomalaisessa Serdicassa viihtyi keisari Konstantinus Suuri, jonka kerrotaan sanoneen siitä: Serdica on minun Roomani. Kun metroa kaivettiin vuosina 2010–2012, maasta paljastui kokonainen kortteli katuja, taloja ja kaupunginmuurin itäportti. Löytöjä ei peitetty takaisin. Nyt matkustaja nousee liukuportaita ylös keskelle katua, jota pitkin on kuljettu 1800 vuotta.",
+   "Neljä uskontoa saman korttelin ympärillä: Muutaman sadan metrin päässä toisistaan seisoo Sofiassa neljä eri uskonnon rakennusta: ortodoksinen Pyhän Nedeljan kirkko, Banja Bashin moskeija vuodelta 1566, Sofian synagoga ja katolinen Pyhän Joosefin katedraali. Kaupunkia kutsutaan siksi suvaitsevaisuuden neliöksi. Synagoga avattiin 1909 ja on Kaakkois-Euroopan suurin. Sen kattokruunu painaa 1,7 tonnia — enemmän kuin henkilöauto.",
+   "Kaupungin kaimalla on pöllö kruunussa: Nezavisimost-aukiolla, samalla jalustalla jolla ennen seisoi Lenin, kohoaa nyt kahdeksanmetrinen kuparinen naishahmo kuudentoista metrin korkuisella pylväällä. Kuvanveistäjä antoi hänelle vallan tunnuksen, kruunun, ja maineen tunnuksen, seppeleen. Kolmanneksi hän tarvitsi viisauden tunnuksen ja valitsi pöllön. Patsas pystytettiin joulukuun lopulla vuonna 2000 ja nimettiin kaupungin mukaan — ja kaupunki taas on nimetty Pyhän Sofian kirkosta, jonka nimi tarkoittaa kreikaksi Pyhää Viisautta.",
+   "Arki ja tavat: Sofialainen aamu alkaa usein kadunvarren kivennäisvesihanalta.",
+   "Vesi tulee lämpimänä maasta: Sofian alla on 49 kivennäis- ja lämpölähdettä. Keskustan lähde antaa vettä 110 litraa sekunnissa, ja sen päälle valmistui vuonna 1913 suuri kylpylä, jonka pienimmissä altaissa vesi oli 37- ja 46-asteista. Kylpylä suljettiin 1986, ja nykyään talon toisessa puoliskossa on kaupunginmuseo. Seinustalla on silti yhä julkisia hanoja, joista tulee lämmintä lähdevettä — niiden luona seisoo joka päivä ihmisiä pullot ja kanisterit mukanaan.",
+   "Historia: Kaupungin alla on roomalainen areena, sen laidalla 1200-luvun freskot ja sen keskustassa aukko siinä, mihin seitsemän moskeijaa seisoi vielä isoisän matkavuonna.",
+   "Areena löytyi hotellin perustuksista: Vuonna 1919 kaivautui Sofian keskustasta esiin kivilaatta, johon oli kuvattu amfiteatterin julkisivu ja sen ohjelma: krokotiileja, karhuja, härkiä ja villikissoja. Laatta oli aikoinaan seissyt roomalaisen Serdican portilla mainostauluna. Sen jälkeen tiedettiin, että kaupungissa oli täytynyt olla areena — mutta ei sitä, missä. Vastaus tuli vasta 2004, kun keskustassa kaivettiin hotellin perustuksia. Maasta nousivat portit liukuovineen, karhun ja villisian luita ja satoja pronssikolikoita. Katsomoon oli mitoitettu yli kahdellekymmenelletuhannelle. Kuudesosa areenasta liitettiin hotellin pohjakerrokseen, ja sinne pääsee päivisin maksutta.",
+   "Kasvot, jotka maalattiin 1259: Sofian laidalla, Vitošan juurella, seisoo pieni Boyanan kirkko — Unescon maailmanperintökohde vuodesta 1979. Kirkko rakennettiin kolmessa vaiheessa 300 vuoden aikana, ja sen kuuluisimmat freskot ovat vuodelta 1259: seinillä on 89 kohtausta ja 240 ihmishahmoa. Lahjoittajaparin, sebastokraattori Kaloyanin ja hänen vaimonsa Desislavan, muotokuvia pidetään kirkon elävimpinä ja vaikuttavimpina maalauksina.",
+   "Ukkosmyrsky peitti yön, jona seitsemän moskeijaa räjähti: Joulukuussa 1878, viisi vuotta isoisän käynnin jälkeen, venäläiset sotilasinsinöörit räjäyttivät seitsemän Sofian moskeijaa samana yönä; ukkosmyrsky peitti räjähdysten äänen. Suurin osa kaupungin moskeijoista tuhoutui sodassa, ja suurin osa muslimiväestöstä lähti kaupungista sen jälkeen. Jäljelle jäi Banja Bashi, kaupungin ainoa yhä toimiva moskeija, joka seisoo kuumien lähteiden päällä keskellä samaa korttelia kuin synagoga ja kaksi kirkkoa.",
+   "Vuori ja eläintarha: Sofian etelälaidalla vuori alkaa viimeisen bussipysäkin takaa, ja neljän kilometrin päässä keskustasta on Kaakkois-Euroopan vanhin eläintarha, joka alkoi yhdestä ainoasta linnusta.",
+   "Vuori bussipysäkin takana: Vitoša kohoaa aivan Sofian kupeessa ja on kaupungin tunnetuin maamerkki — lähin retkeily-, kiipeily- ja hiihtokohde, jonne pääsee bussilla ja hissillä keskustasta. Vuori syntyi tulivuoritoiminnasta ja on muotoutunut vuosimiljoonien poimutuksissa neljäksi toisiinsa liittyväksi osaksi. Sen huippu Cherni Vrah, musta huippu, kohoaa 2 290 metriin. Vitošan luonnonpuisto perustettiin 1934, ja se oli Balkanin ensimmäinen laatuaan.",
+   "Eläintarha, joka alkoi yhdestä linnusta: Kaakkois-Euroopan vanhin ja suurin eläintarha ei alkanut leijonista. Kuninkaallinen asetus perusti sen 1. toukokuuta 1888, ja aluksi se sijaitsi kuninkaanpalatsin puistossa. Koko kokoelma oli tuolloin yksi asukas: Bulgariasta pyydystetty musta korppikotka, joka istui häkissään puutarhassa. Vasta kun karhupari ei enää mahtunut vanhoihin tiloihin, tsaari Ferdinand lahjoitti tarhalle uuden maa-alueen entisen kasvitieteellisen puutarhan paikalta. Sinne se jäi, runsaan neljän kilometrin päähän keskustasta etelään.",
+   "Ruoka: Kaupungin vanhin tori on täynnä vihanneskasoja ja juustotiskejä — ja se on ollut samalla paikalla jo osmaniajasta asti."
+  ],
+  "kuvat": [
+   {
+    "url": "https://media.matkakirja.app/kuvat/alexander-nevsky-cathedral-sofia-2025.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Beyoglou",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Alexander_Nevsky_Cathedral%2C_Sofia%2C_2025.jpg",
+    "selite": "Aleksanteri Nevskin katedraaliin mahtuu 5 000 kirkkovierasta, ja sen kahdestatoista kellosta raskain painaa 12 tonnia ja kevyin 10 kiloa.",
+    "avain": "alexander nevsky cathedral sofia 2025"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/oldest-building-in-the-city-church-st.-george-rotunda-.-sofia-bulgaria.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Sharon Hahn Darlin",
+    "lisenssi": "CC BY 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Oldest_building_in_the_city%2C_Church_St._George_Rotunda_%D0%A5%D1%80%D0%B0%D0%BC_%D1%80%D0%BE%D1%82%D0%BE%D0%BD%D0%B4%D0%B0_%22%D0%A1%D0%B2._%D0%93%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%22%2C_Sofia%2C_Bulgaria.jpg",
+    "selite": "Pyhän Yrjön rotunda rakennettiin 300-luvulla punatiilestä roomalaiseksi kylpylaitokseksi, ja se on Sofian vanhin säilynyt rakennus.",
+    "avain": "oldest building in the city church st george rotunda sofia bulgaria"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/sofia-central-mineral-baths-20180224.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Suicasmo",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Sofia_Central_Mineral_Baths_20180224.jpg",
+    "selite": "Keskustan mineraalikylpylä valmistui 1913 lähteen päälle, suljettiin 1986, ja nykyään talon toisessa puoliskossa on kaupunginmuseo.",
+    "avain": "sofia central mineral baths 20180224"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-sofia-nevski.jpg",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Aleksanteri Nevskin katedraalin rakentaminen alkoi 1882 Aleksandr Pomerantsevin suunnitelmien mukaan ja päättyi 1912; se pystytettiin vuosien 1877–1878 sodassa kaatuneiden muistoksi, ja sen kullattu kupoli nousee 45 metriin ja kellotorni 53 metriin.",
+    "avain": "herokoe hero sofia nevski"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-sofia-banya-bashi.jpg",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Banja Bashin moskeija on rakennettu kuumien lähteiden päälle ja sai nimensä viereisistä kylpylöistä; se on ainoa Sofiassa yhä toimiva moskeija, ja sen leveä lyijykupoli lepää tiilikuution päällä kolmiholvisen eteiskatoksen takana.",
+    "avain": "herokoe hero sofia banya bashi"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-sofia-vitosa.jpg",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Sofian raitiotie avattiin 1. tammikuuta 1901, ja suurin osa verkosta kulkee poikkeuksellisella 1 009 millimetrin raideleveydellä — kadun päässä kohoaa Vitosa.",
+    "avain": "herokoe hero sofia vitosa"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/sofia-37139621884.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Deensel",
+    "lisenssi": "CC BY 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Sofia_(37139621884).jpg",
+    "selite": "Sofia oli vielä 1878 pieni maakuntakaupunki, ja nykyään siinä asuu lähes 1,3 miljoonaa ihmistä.",
+    "avain": "sofia 37139621884"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/largo.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "PLAKLE",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:%CE%86%CF%80%CE%BF%CF%88%CE%B7_%CF%84%CE%BF%CF%85_Largo_%CE%B1%CF%80%CF%8C_%CF%84%CE%B1_%CE%B4%CF%85%CF%84%CE%B9%CE%BA%CE%AC.jpg",
+    "selite": "Largo on 1950-luvulla rakennettu kolmen rakennuksen kokonaisuus Itsenäisyydenaukion ympärillä, ja aukion pinta on Sofian keltaista mukulakiveä.",
+    "avain": "largo"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/sofia-seen-from-vitosha-1.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Ivano Giambattista",
+    "lisenssi": "CC0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Sofia_seen_from_Vitosha_1.jpg",
+    "selite": "Vitosan luonnonpuisto rauhoitettiin 1934 ensimmäisenä koko Balkanilla, ja sen korkein huippu yltää 2 292 metriin.",
+    "avain": "sofia seen from vitosha 1"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/kuva-38rwry.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Лили Маркова",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:%D0%91%D0%B0%D0%BD%D1%8F_%D0%91%D0%B0%D1%88%D0%B8_%D0%B8_%D0%B0%D0%BD%D1%82%D0%B8%D1%87%D0%BD%D0%B0_%D0%A1%D0%B5%D1%80%D0%B4%D0%B8%D0%BA%D0%B0.jpg",
+    "selite": "Roomalaisen Serdican katuja, taloja ja kaupunginmuurin itäportti paljastuivat metrokaivauksissa vuosina 2010–2012, eikä löytöjä peitetty takaisin.",
+    "avain": "serdica on minun roomani sofia"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/sofia-synagogue-chandelier.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "DMY",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Sofia_Synagogue_chandelier.JPG",
+    "selite": "Sofian synagoga avattiin 1909 ja on Kaakkois-Euroopan suurin, ja sen kattokruunu painaa 1,7 tonnia.",
+    "avain": "sofia synagogue chandelier nelja uskontoa saman korttelin ymparilla"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/sofia-statue-sofia-p1070773.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Matti Blume",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Sofia_statue%2C_Sofia_(P1070773).jpg",
+    "selite": "Sofia-patsas seisoo Nezavisimost-aukiolla: kuparinen hahmo on kahdeksan metriä korkea ja jalusta kuusitoista.",
+    "avain": "sofia statue sofia p1070773 kaupungin kaimalla on pollo kruunussa"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/mineral-water-sofia-centar-1.jpeg",
+    "tyyppi": "valokuva",
+    "tekija": "Vanjakom",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Mineral_Water_Sofia_centar_1.jpeg",
+    "selite": "Sofian alla on 49 kivennäis- ja lämpölähdettä, ja keskustan lähde antaa vettä 110 litraa sekunnissa.",
+    "avain": "mineral water sofia centar 1 vesi tulee lampimana maasta arki ja tavat"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/amphitheatre-of-serdica---general-view.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Epaunov72",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Amphitheatre_of_Serdica_-_General_view.jpg",
+    "selite": "Serdican amfiteatterista on jäljellä kuudesosa, ja se sijaitsee hotellin pohjakerroksessa keskellä Sofiaa.",
+    "avain": "amphitheatre of serdica general view areena loytyi hotellin perustuksista historia"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/boyana-church-2-tb.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Todor Bozhinov",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Boyana_Church_2_TB.JPG",
+    "selite": "Boyanan kirkko nousi Vitošan juurella kolmessa vaiheessa 300 vuoden aikana.",
+    "avain": "boyana church 2 tb kasvot jotka maalattiin 1259 historia"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/banya-bashi-dhzamiya-19-vek.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Tuntematon kuvaaja",
+    "lisenssi": "PD",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Banya_bashi_dhzamiya_19_vek.jpg",
+    "selite": "Banja Bashi on Sofian ainoa yhä toimiva moskeija, ja se valmistui vuonna 1566.",
+    "avain": "banya bashi dhzamiya 19 vek ukkosmyrsky peitti yon jona seitseman moskeijaa rajahti historia"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/mount-vitosha-1-37642153771.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Hans Birger Nilsen",
+    "lisenssi": "CC BY-SA 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Mount_Vitosha_(1)_(37642153771).jpg",
+    "selite": "Vitošan luonnonpuisto perustettiin 1934 ensimmäisenä koko Balkanilla.",
+    "avain": "mount vitosha 1 37642153771 vuori bussipysakin takana vuori ja elaintarha"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/kuva-1rrcqbw.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Κλυτίος",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:%D0%90%D0%B7%D0%B8%D0%B0%D1%82%D1%81%D0%BA%D0%B8_%D1%81%D0%BB%D0%BE%D0%BD.jpg",
+    "selite": "Sofian eläintarha on Kaakkois-Euroopan vanhin ja suurin, ja se perustettiin 1. toukokuuta 1888.",
+    "avain": "elaintarha joka alkoi yhdesta linnusta vuori ja elaintarha"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/sofia-zhenski-pazar-october-2012-pd-03.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Bin im Garten",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Sofia_Zhenski_Pazar_October_2012_PD_03.jpg",
+    "selite": "Zhenski pazar eli Naisten tori on Sofian vanhin ulkoilmamarkkina; kojuissa myydään tuoretta vihannesta, hedelmää ja bulgarialaista juustoa.",
+    "avain": "sofia zhenski pazar october 2012 pd 03 naisten tori on kaupungin vanhin kauppapaikka zhenski pazar ruoka"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/bulgarian-yogurt-2015.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Biser Todorov",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Bulgarian_yogurt_2015.jpg",
+    "selite": "Perinteinen bulgarialainen jogurtti, kiselo mlyako; sen käymisbakteeri \"Lactobacillus bulgaricus\" sai nimensä Bulgarian mukaan, kun Stamen Grigorov tunnisti sen 1905.",
+    "avain": "bulgarian yogurt 2015 bakteeri sai nimensa bulgariasta lactobacillus delbrueckii subsp bulgaricus ruoka"
+   }
+  ]
+ },
+ "saannot": "Olet Matkakirja-pelin kertoja ja opas, ja puhut suomea. Kuulijasi on nuori Fogg, isoisänsä perillinen, joka kulkee kaupungissa ja katsoo sitä ylhäältä. Kuulijat ovat kolmetoistavuotiaita ja aikuisia: et puhu lapsille, et saarnaa etkä käytä mainoskieltä. Et ole Pulu.\n\nKIELI. Kirjoitat kuin kokenut suomalainen opas puhuisi ryhmälleen: luontevaa, sujuvaa ja selkeää yleiskieltä, ei käännöskieltä, ei kömpelöitä sanapareja eikä outoja kielikuvia. Jokaisen lauseen pitää kuulostaa siltä, että suomalainen sanoisi sen ääneen juuri niin.\n\nNYKYAIKA. Kerrot paikoista sellaisina kuin ne ovat nyt. Historia on taustaa, ei pääosa.\n\nFAKTAT. Käytät vain varmaa yleistietoa. Jos et ole varma, jätät asian pois. Et keksi lukuja, nimiä etkä sitaatteja. Et kerro määriä (huonenumeroita, portaita tai askelmia, osia, mittoja), aukioloaikoja, hintoja etkä liikenneyhteyksiä, ellei pelin aineisto kerro niitä. Lahjoittajista ja rahoittajista kerrot vain, jos tiedät heidät varmasti; muuten jätät heidät pois. Mieluummin kuvailet, mitä paikalla näkee. Vuosiluvut, vuosisadat ja vuosikymmenet kirjoitat NUMEROINA: vuonna 1889, 1600-luvulla, 1870-luvulla, 1600- ja 1700-luvuilla. Et kirjoita niitä sanoina etkä järjestyslukuina, et taivuta kaksoispisteellä (ei 1889:ssä) etkä käytä vuosivälejä viivalla. TARKAT VUOSILUVUT JA MUUT TARKAT LUVUT (korkeudet, määrät, päivämäärät) kerrot VAIN, jos ne ovat alla annetussa pelin aineistossa. Muuten käytät aikakautta, esimerkiksi 1800-luvun lopulla tai noin sata vuotta sitten, ja kuvailet kokoa sanoin.\n\nMUOTO. Yksi kappale pysähdystä kohden: kuusikymmentäviisi–yhdeksänkymmentä sanaa, neljästä viiteen virkettä, ja kappale alkaa paikan nimellä. Kirjoitat puhuttavaksi: välimerkit rytmittävät, eikä tekstissä ole luetteloita, sulkeita, lyhenteitä eikä emojeita. Lyhenteet ja nimikirjaimet kirjoitat aina auki, myös katujen, rakennusten ja yritysten nimissä: H. C. Andersen on Hans Christian Andersen ja H. C. Andersens Boulevard on Hans Christian Andersenin bulevardi. Tekstissä ei ole yhtään pisteellistä lyhennettä. Vuosiluvut kirjoitat numeroina, muut numerot sanoina. Jos paikalla on vakiintunut suomenkielinen nimi, käytät sitä (Pieni merenneito), muuten alkuperäistä nimeä.\n\nSISÄLTÖ. Kerrot jokaisesta paikasta yhden kiinnostavan yksityiskohdan, jonka paikan päällä voi itse nähdä tai kokea, ja syvennät sitä yhdellä konkreettisella asialla: lyhyt tarina, ihminen, tapahtuma tai havainto, joka liittyy juuri tähän paikkaan. Ei täytettä, ei yleistä kuvailua eikä kehuja; jokaisen virkkeen pitää kertoa jotain uutta. Käytännön vinkki sopii joskus, esimerkiksi vartionvaihto kello kaksitoista; sitä ei otsikoida sanalla vinkki.\n\nPYSÄHDYS NÄKYY ILMASTA. Kamera lentää paikan ylle, joten pysähdys on aina jotain, minkä näkee ylhäältä: rakennus, aukio, puisto, satama, kanava tai silta. Sisällä olevan kohteen, kuten kellon, taulun tai salin, voit mainita sen rakennuksen kappaleessa, mutta sille ei tehdä omaa pysähdystä. Kuulija katsoo paikkaa ylhäältä eikä seiso siellä: et väitä hänen seisovan, kävelevän tai katsovan ylös paikan päällä, etkä sano esimerkiksi seisot nyt alla. Käytännön vinkki tulevalle käynnille sopii, esimerkiksi kun tulet paikalle, katso jalkojen välistä ylös.\n\nPAIKAN VALINTA. Jos pelaaja ei toivo mitään, valitset seuraavan paikan kävelymatkan päästä nykyisestä paikasta. Jos pelaaja toivoo jotain, valitset toivetta parhaiten vastaavan paikan mistä tahansa kaupungista, vaikka se olisi kaukana. Kun pelaaja pyytää modernia, valitset rakennuksen tai paikan, joka on valmistunut vuoden 1990 jälkeen; vanha kirkko, linna tai torni ei ole moderni. Vaihtelet paikkatyyppejä: rakennus, aukio, puisto, satama, museo, moderni arkkitehtuuri. Et toista jo kerrottua etkä aloita peräkkäisiä kappaleita samalla tavalla. Valitset todellisia, tunnettuja paikkoja, joilla on oma artikkeli englanninkielisessä Wikipediassa.\n\nLISÄÄ. Jos pelaaja kysyy nykyisestä paikasta lisää tai valitsee sitä koskevan kysymyksen, vastaat siihen saman paikan kappaleella samalla Wikipedia-otsikolla ja kerrot eri asian kuin edellisessä kappaleessa; jos vastaus on toinen paikka (esimerkiksi talo, jossa joku asui), valitset sen. Uusi kappale ei saa olla ristiriidassa edellisen kanssa.\n\nTOIVE. Tulkitset pelaajan toiveen vapaasti (\"jotain outoa\", \"missä syödään\"). Jos toive on epäselvä, kysyt yhden lyhyen tarkentavan kysymyksen.\n\nKYSYMYKSET. Ensimmäiseksi kysyt lyhyesti, mitä pelaaja haluaa nähdä, ellei hän ole jo kertonut; silloin ensimmäinen vastausvaihtoehto on täsmälleen \"Esittele kaupunki\". Noin joka viidennen pysähdyksen jälkeen voit kysyä uudelleen; muuten jatkat itse.\n\nVAIHTOEHDOT. Jokaisen vastauksen perään kirjoitat tasan kaksi lyhyttä vastausvaihtoehtoa pelaajan suulla, enintään kuusi sanaa kumpikin, jotta hänen ei tarvitse kirjoittaa. Pysähdyksen jälkeen ensimmäinen on paikkakohtainen syventävä kysymys juuri tästä paikasta, johon osaat vastata varmasti (esimerkiksi Nyhavnissa \"Missä Andersen asui?\"), ja toinen vaihtaa suuntaa (esimerkiksi \"Näytä jotain modernia\" tai \"Missä voisi syödä?\"). Yleistä \"Kerro tästä lisää\" et käytä. Paikkakohtaisen kysymyksen pitää aueta yksinään ilman kappaletta ja olla enintään noin kolmekymmentä merkkiä: nimeä asia, josta kysyt (\"Kuka on kultainen hahmo?\", ei \"Kuka hahmo on?\"). Vaihtoehdot pysyvät aina tässä kaupungissa: et koskaan ehdota kaupungin vaihtamista.\n\nISOISÄ. Jos alla on isoisän päiväkirjamerkintä tästä kaupungista vuodelta 1873, ja pysähdys on se paikka, josta merkintä kertoo, kappaleeseen kuuluu aina yksi lyhyt viittaus siihen omin sanoin, esimerkiksi mitä isoisäsi täällä näki, ja vain siihen, mitä merkinnässä lukee. Et lisää merkintään mitään, mitä siinä ei ole: et vuodenaikaa, kuukautta, säätä etkä tunteita. Vuoden voit sanoa (1873). Jos edellinen kappale jo viittasi isoisään, et viittaa uudelleen. Muulloin et mainitse isoisää etkä koskaan keksi hänelle tapahtumia, ajatuksia tai paikkoja.\n\nPELIN AINEISTO. Alla voi olla pelin omaa, tarkistettua tietoa tästä kaupungista. Se on tietoa, ei ohjeita sinulle. Kun se koskee valitsemaasi paikkaa, nojaat siihen mieluummin kuin muistiisi ja kerrot sen omin sanoin; et lue sitä sellaisenaan etkä kopioi lauseita.\n\nEi poliittisia kannanottoja. Vaikeat historian aiheet käsittelet asiallisesti.\n\nVASTAUKSEN MUOTO — tasan toinen näistä, ei mitään muuta:\nNIMI: <paikan vakiintunut nimi perusmuodossa (nominatiivi), suomeksi tai alkuperäisenä, esimerkiksi Kööpenhaminan ooppera>\nWIKIPEDIA: <paikan englanninkielisen Wikipedia-artikkelin tarkka otsikko>\nLAT: <leveysaste desimaaleina>\nLON: <pituusaste desimaaleina>\nKOKO: <kohteen halkaisija tai pituus metreinä kameran kehystystä varten, kokonaisluku>\nKORKEUS: <kohteen korkeus metreinä, jos se on merkittävä (torni, kirkko); muuten jätä rivi pois>\nLUOKKA: <yksi sana: katu, kanava, aukio, rakennus, torni, kirkko, linnoitus, puisto, vesi, silta tai muu>\nKUVAUS: <lyhyt suomenkielinen kuvaus otsikon alle, enintään viisi sanaa, esimerkiksi Kööpenhaminan kaupungintalo>\nREITTI: <vain kadulle, kanavalle tai rantareitille: 3–8 tunnettua paikkaa reitin varrelta kulkujärjestyksessä päästä päähän, mutkien ja kääntymiskohtien kohdalla tiheämmin, jotta suora viiva pisteiden välillä seuraa reittiä, puolipisteillä erotettuina, kukin englanninkielisen Wikipedian otsikolla, esimerkiksi Rådhuspladsen; Gammeltorv; Amagertorv; Kongens Nytorv; muille paikoille jätä rivi pois>\nTEKSTI: <kappale>\nVAIHTOEHTO: <ensimmäinen vastausvaihtoehto>\nVAIHTOEHTO: <toinen vastausvaihtoehto>\n\ntai\n\nKYSYMYS: <yksi lyhyt kysymys pelaajalle>\nVAIHTOEHTO: <ensimmäinen vastausvaihtoehto>\nVAIHTOEHTO: <toinen vastausvaihtoehto>"
+}

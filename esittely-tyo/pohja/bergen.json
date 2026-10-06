@@ -1,0 +1,379 @@
+{
+ "kaupunki": "Bergen",
+ "id": "bergen",
+ "keskus": null,
+ "kierros": [
+  "Q153430",
+  "Q583428",
+  "Q571683",
+  "Q117767",
+  "Q819531",
+  "Q1420616",
+  "Q257558",
+  "Q1291307"
+ ],
+ "kohteet": [
+  {
+   "id": "Q153430",
+   "nimi": "Bryggen",
+   "lat": 60.3975,
+   "lon": 5.32333,
+   "tarkeys": 1,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Bryggen",
+    "en": "https://en.wikipedia.org/wiki/Bryggen"
+   }
+  },
+  {
+   "id": "Q583428",
+   "nimi": "Bergenhusin linnake",
+   "lat": 60.39972,
+   "lon": 5.3175,
+   "tarkeys": 2,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Bergenhus_Fortress"
+   }
+  },
+  {
+   "id": "Q1420616",
+   "nimi": "Fløyen",
+   "lat": 60.39839,
+   "lon": 5.34541,
+   "tarkeys": 3,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Fl%C3%B8yen",
+    "en": "https://en.wikipedia.org/wiki/Fl%C3%B8yen"
+   }
+  },
+  {
+   "id": "Q117767",
+   "nimi": "Fløibanen",
+   "lat": 60.39636,
+   "lon": 5.32842,
+   "tarkeys": 4,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Fl%C3%B8ibanen",
+    "en": "https://en.wikipedia.org/wiki/Fl%C3%B8ibanen"
+   }
+  },
+  {
+   "id": "Q571683",
+   "nimi": "Mariankirkko",
+   "lat": 60.39889,
+   "lon": 5.32361,
+   "tarkeys": 5,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Mariankirkko_(Bergen)",
+    "en": "https://en.wikipedia.org/wiki/St_Mary%27s_Church,_Bergen"
+   }
+  },
+  {
+   "id": "Q819531",
+   "nimi": "Bergenin tuomiokirkko",
+   "lat": 60.39389,
+   "lon": 5.33056,
+   "tarkeys": 6,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Bergenin_tuomiokirkko",
+    "en": "https://en.wikipedia.org/wiki/Bergen_Cathedral"
+   }
+  },
+  {
+   "id": "Q257558",
+   "nimi": "Fantoftin sauvakirkko",
+   "lat": 60.33917,
+   "lon": 5.35333,
+   "tarkeys": 7,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Fantoftin_sauvakirkko",
+    "en": "https://en.wikipedia.org/wiki/Fantoft_Stave_Church"
+   }
+  },
+  {
+   "id": "Q1291307",
+   "nimi": "Troldhaugen",
+   "lat": 60.3196,
+   "lon": 5.32948,
+   "tarkeys": 8,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Troldhaugen",
+    "en": "https://en.wikipedia.org/wiki/Troldhaugen"
+   }
+  },
+  {
+   "id": "Q1341892",
+   "nimi": "Grieghallen",
+   "lat": 60.38886,
+   "lon": 5.32818,
+   "tarkeys": 9,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Grieghallen",
+    "en": "https://en.wikipedia.org/wiki/Grieg_Hall"
+   }
+  },
+  {
+   "id": "Q386192",
+   "nimi": "Ulriken",
+   "lat": 60.3775,
+   "lon": 5.3869,
+   "tarkeys": 10,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Ulriken"
+   }
+  },
+  {
+   "id": "Q1779494",
+   "nimi": "Nykirken",
+   "lat": 60.39707,
+   "lon": 5.31337,
+   "tarkeys": 11,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Nykirken",
+    "en": "https://en.wikipedia.org/wiki/Nykirken"
+   }
+  }
+ ],
+ "isoisa": {
+  "paikkarivi": "Bergen, kesäkuussa 1873. Sadetta aamusta iltaan; puntari matalalla.",
+  "teksti": "Bergenin tuomiokirkon seinässä törrötti tykinkuula. Englannin laivasto oli yrittänyt ryöstää sataman hollantilaislaivat parisataa vuotta sitten. Mainitsin oppaalle palvelleeni laivastossa. Hän katsoi minua, sitten kuulaa. Vakuutin, että minulla oli mukana vain lyijykynä."
+ },
+ "aineisto": {
+  "nimi": "Bergen",
+  "iskulause": "Seitsemän vuoren satama",
+  "tausta": [
+   "Puinen satamakaupunki kasvoi vuonon pohjukkaan vuorten väliin ja eli vuosisatoja kalasta ja hansakaupasta. Isoisän matkan aikoihin se ylitti ensi kertaa vanhat rajansa ja levisi etelään uusiin kortteleihin.",
+   "Bergenhusin linnoitus menetti 1800-luvulla puolustustehtävänsä mutta jäi sotilashallinnon tukikohdaksi, ja siellä on yhä noin 150 sotilaan varuskunta.",
+   "Mariakirken on 1100-luvulta ja Bryggenin alueen vanhin ja korkein rakennus.",
+   "Bergenin johdinbussijärjestelmä on ainoa yhä toiminnassa oleva Norjassa ja toinen kahdesta koko Skandinaviassa.",
+   "Bergenin Johanneksen kirkko vihittiin 15. maaliskuuta 1894 Herman Major Backerin suunnitelmien mukaan punatiilestä, sen 61 metriä korkea torni on kaupungin korkein, ja kirkkoon mahtuu 690 ihmistä.",
+   "Bergenin Fløibanen-köysirata avattiin 15. tammikuuta 1918, rata on 848 metriä pitkä ja nousee 302 metriä Fløyen-vuoren rinnettä, ja sen kaksi vaunua on nimetty punaiseksi Rødhetteksi ja siniseksi Blåmanniksi.",
+   "Bergenin Grieghallen vihittiin 23. toukokuuta 1978 tanskalaisen Knud Munkin suunnitelmien mukaan, sen pääsalissa on 1 500 paikkaa, ja talo on Bergenin filharmonikkojen koti.",
+   "Bergenin keskusta on Vågen-lahden ympärillä, ja lahden suulta avautuu Byfjorden, kaupungin oma vuono.",
+   "Bryggen on Vågenin itärannan vanha laituri, jonka ympärillä hansakauppa Bergenissä käytiin.",
+   "Skuteviken on yksi Bergenin vanhoista puutalokaupunginosista, ja se nousee rannasta suoraan vuoren rinteeseen.",
+   "Varasto, joka palveli kahteen suuntaan: Hansaliiton kontori perustettiin Bryggenin rantaan noin vuonna 1350, ja kun kaupungista kasvoi kaupan keskus, laiturin talot siirtyivät vähitellen saksalaisten kauppiaiden haltuun. Varastot palvelivat kahteen suuntaan: niihin säilöttiin Pohjois-Norjasta tuotua kalaa vietäväksi eteenpäin ja Euroopasta tuotua viljaa jaettavaksi paikallisille. Vuoden 1702 palo tuhosi hansakauppiaiden rakennukset, ja nykyisistä taloista vain noin neljäsosa on rakennettu sen jälkeen — loput ovat sitäkin nuorempia. Osa kivikellareista on kuitenkin 1400-luvulta.",
+   "Sali, jonka tehtävä unohtui: Kuningas Håkon Håkonssonin (1217–1263) aikana 1200-luvun puolivälissä rakennettu kivisali oli Bergenin kuninkaankartanon suurin rakennus, ja se on yhä Norjan suurin keskiaikainen maallinen rakennus. Sen alkuperäinen tehtävä oli 1700-luvulle tultaessa suurelta osin unohtunut. Vuonna 1840 todistettiin, että kyseessä oli kuningas Håkonin vanha juhlasali, ja seuraavan puolen vuosisadan ajan kaupungissa väiteltiin sen ennallistamisesta. Henrik Ibsen kirjoitti salin kunniaksi runon, ja runoilija Henrik Wergeland otti ensimmäisenä käyttöön nimen Haakons hall.",
+   "Kaupunki ylittää vanhat rajansa: Vuoden 1855 tulipalo Torgallmenningenin länsipuolella johti siihen, että alue rakennettiin uudelleen säännöllisen kokoisiksi kortteleiksi. Kaupungin rajoja laajennettiin 1876, ja Nygård, Møhlenpris ja Sandviken kaupungistuivat nopeasti: suuriin korttelitaloihin muuttivat sekä köyhät että varakkaat. Arkkitehtuurissa sekoittuvat historismi, klassismi ja art nouveau. Varakkaat rakensivat huviloita Møhlenprisin ja Nygårdin välille sekä Fløyen-vuoren rinteeseen, ja nämäkin alueet liitettiin Bergeniin samana vuonna.",
+   "Riimut, jotka palo kaivoi esiin: Osa Bryggenistä paloi vuonna 1955, ja palopaikalla aloitettiin kaivaus, joka kesti kolmetoista vuotta. Maasta nousi noin 670 keskiaikaista riimukirjoitusta, useimmat mäntyyn tai luuhun kaiverrettuja, ja löytöä on kutsuttu 1900-luvun tärkeimmäksi riimulöydöksi. Sitä ennen epäiltiin, käytettiinkö riimuja lainkaan muuhun kuin nimiin ja juhlallisiin lauseisiin. Bryggenin puikot ovat arkea: yksi sanoo nimilapun tavoin ”Eysteinn omistaa minut”, toinen ”Rakkaani, suutele minua”. Moni on 1300-luvulta, jolloin riimujen luultiin jo kadonneen.",
+   "Historia: Saksalaiset kauppiaat pitivät Bryggenin rannassa omaa lakiaan neljän vuosisadan ajan, ja kaupunki paloi maan tasalle yhä uudelleen — silti sama puurivistö nousi joka kerta samalle paikalle.",
+   "Kauppahuone, jolla oli oma laki: Kontorit olivat oikeushenkilöitä: kauppiaiden yhteisöllä oli oma kassa, oma sinetti, oma säännöstö ja valta panna säännöt täytäntöön asukkaidensa keskuudessa. Säännöstö oli kirjoitettu keskisaksaksi, ja se luettiin kauppiasyhteisölle ääneen kerran vuodessa. Sisäistä johtoa hoitivat aldermannit, jotka olivat virassaan tavallisesti vuoden kerrallaan; yhden näkemyksen mukaan Bryggenillä heitä oli alussa kuusi. Bryggen, Brugge ja Lontoo saivat 1400-luvun puolivälissä uuden viran, kirjurin: yliopistossa lakia lukeneen ja latinaa hallitsevan miehen, joka neuvoi aldermanneja ja hoiti kirjeenvaihdon.",
+   "Etuoikeus, joka kesti neljäsataa vuotta: Hansakauppiaat asuivat omassa kaupunginosassaan, jossa käytettiin keskisaksaa, ja heillä oli yksinoikeus käydä kauppaa niiden pohjoisnorjalaisten kalastajien kanssa, jotka purjehtivat Bergeniin joka kesä. Kauppamonopoli Pohjois-Norjaan säilyi vuoteen 1789 asti. Suhteet muihin tulokkaisiin eivät aina olleet rauhalliset: 9. marraskuuta 1523 saksalaiset asukkaat kävivät useiden Bergeniin asettuneiden skotlantilaiskauppiaiden talouksien kimppuun. Noin vuodesta 1600 hansan ote alkoi hellittää norjalaisten kauppiaiden hyväksi, ja kontori suljettiin 1750-luvulla.",
+   "Kaupunki, joka paloi yhä uudelleen: Bergenin historia on tulipalojen luetteloa. Vuonna 1198 kaupunki poltettiin sisällissodan yhteydessä, 1248 tuhoutui yksitoista kirkkoa ja 1413 vielä neljätoista. Suurin palo oli 1702, ja sen laajuudesta kerrotaan kaksi eri lukua: yhdeksän kymmenesosaa tai seitsemän kahdeksasosaa kaupungista. Silloin loppui tervattujen ja hirsisten talojen aika, ja tilalle tulivat maalatut, osin tiilipäällysteiset puutalot. Uudet suurpalot iskivät Strandsideniin 1756 ja 1771, vuonna 1916 keskustasta tuhoutui 300 rakennusta ja vuonna 1955 osa Bryggeniä.",
+   "Tykinkuula seinässä, vaalihuone kirkossa: Tuomiokirkon ulkoseinässä on yhä kiinni tykinkuula vuoden 1665 Vågenin taistelusta, jossa englantilainen ja hollantilainen laivasto ottivat yhteen kaupungin satamassa. Vuonna 1814 kirkko toimi vaalikirkkona: yli kolmensadan muun seurakuntakirkon tavoin se oli äänestyspaikka, kun valittiin valitsijamiehet Eidsvollin kansalliskokoukseen, joka kirjoitti Norjan perustuslain. Ne olivat maan ensimmäiset kansalliset vaalit. 1880-luvulla arkkitehdit Christian Christie ja Peter Andreas Blix johtivat korjausta, jossa rokokoosisustus palautettiin keskiaikaiseen asuun.",
+   "Musiikki: Kaksi bergeniläistä muusikkoa, viulisti Ole Bull ja säveltäjä Edvard Grieg, tunsivat toisensa — ja juuri isoisän matkan vuosina molempien elämässä tapahtui käänne.",
+   "Luonto: Vuoret, jotka kehystävät kaupungin, kerävät Atlantilta niin paljon sadetta, että Bergen on yksi Euroopan sateisimmista kaupungeista — ja samat vuoret ovat vetäneet kiipeäjiä huipulle jo vuosikymmeniä."
+  ],
+  "kuvat": [
+   {
+    "url": "https://media.matkakirja.app/kuvat/bergenhus-fortress-bergen-norway-2009-1.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "User:Sveter",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Bergenhus_Fortress_Bergen_Norway_2009_1.JPG",
+    "selite": "Bergenhusin linnoitus menetti 1800-luvulla puolustustehtävänsä mutta jäi sotilashallinnon tukikohdaksi, ja siellä on yhä noin 150 sotilaan varuskunta.",
+    "avain": "bergenhus fortress bergen norway 2009 1"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/bergen---mariakirken-fra-vregaten.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Odd Roar Aalborg",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Bergen_-_Mariakirken_fra_%C3%98vregaten.jpg",
+    "selite": "Mariakirken on 1100-luvulta ja Bryggenin alueen vanhin ja korkein rakennus.",
+    "avain": "bergen mariakirken fra vregaten"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/skyss-8196-allehelgens-gate-bergen-2019-01.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Bahnfrend",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Skyss_8196%2C_Allehelgens_gate%2C_Bergen%2C_2019_(01).jpg",
+    "selite": "Bergenin johdinbussijärjestelmä on ainoa yhä toiminnassa oleva Norjassa ja toinen kahdesta koko Skandinaviassa.",
+    "avain": "skyss 8196 allehelgens gate bergen 2019 01"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-bergen-aamu.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Bergenin Johanneksen kirkko vihittiin 15. maaliskuuta 1894 Herman Major Backerin suunnitelmien mukaan punatiilestä, sen 61 metriä korkea torni on kaupungin korkein, ja kirkkoon mahtuu 690 ihmistä.",
+    "avain": "herokoe hero bergen aamu"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-bergen-keskipaiva.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Bergenin Fløibanen-köysirata avattiin 15. tammikuuta 1918, rata on 848 metriä pitkä ja nousee 302 metriä Fløyen-vuoren rinnettä, ja sen kaksi vaunua on nimetty punaiseksi Rødhetteksi ja siniseksi Blåmanniksi.",
+    "avain": "herokoe hero bergen keskipaiva"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-bergen-ilta.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Bergenin Grieghallen vihittiin 23. toukokuuta 1978 tanskalaisen Knud Munkin suunnitelmien mukaan, sen pääsalissa on 1 500 paikkaa, ja talo on Bergenin filharmonikkojen koti.",
+    "avain": "herokoe hero bergen ilta"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/vista-de-bergen-desde-la-montana-fl-yen-noruega-2019-09-08-dd-48.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Diego Delso",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Vista_de_Bergen_desde_la_monta%C3%B1a_Fl%C3%B8yen%2C_Noruega%2C_2019-09-08%2C_DD_48.jpg",
+    "selite": "Bergenin keskusta on Vågen-lahden ympärillä, ja lahden suulta avautuu Byfjorden, kaupungin oma vuono.",
+    "avain": "vista de bergen desde la montana fl yen noruega 2019 09 08 dd 48"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/bergen-bryggen-1017.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Anna Anichkova",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Bergen_Bryggen_1017.jpg",
+    "selite": "Bryggen on Vågenin itärannan vanha laituri, jonka ympärillä hansakauppa Bergenissä käytiin.",
+    "avain": "bergen bryggen 1017"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/bergen---skuteviken-sett-fra-sverresborg.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Odd Roar Aalborg",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Bergen_-_Skuteviken_sett_fra_Sverresborg.jpg",
+    "selite": "Skuteviken on yksi Bergenin vanhoista puutalokaupunginosista, ja se nousee rannasta suoraan vuoren rinteeseen.",
+    "avain": "bergen skuteviken sett fra sverresborg"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/bryggen-i-bergen---bellgarden-fra-landsiden.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Odd Roar Aalborg",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Bryggen_i_Bergen_-_Bellg%C3%A5rden_fra_landsiden.jpg",
+    "selite": "Bellgården on yksi Bryggenin nimekkäistä kauppiaskartanoista, ja sen rakennukset ovat noin kolmesataa vuotta vanhoja.",
+    "avain": "bryggen i bergen bellgarden fra landsiden varasto joka palveli kahteen suuntaan bryggen"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/interior-of-hakonshallen-2019-01.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Bahnfrend",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Interior_of_H%C3%A5konshallen%2C_2019_(01).jpg",
+    "selite": "Håkonshallen ennallistettiin 1890-luvulla ja uudelleen 1950-luvulla, ja se avattiin yleisölle 11. syyskuuta 1961 tasan seitsemänsataa vuotta ensimmäisen käyttönsä jälkeen.",
+    "avain": "interior of hakonshallen 2019 01 sali jonka tehtava unohtui bergen"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/m-hlenpris-i-bergen---murbyen-i-konsul-b-rs-gate-1.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Odd Roar Aalborg",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:M%C3%B8hlenpris_i_Bergen_-_murbyen_i_Konsul_B%C3%B8rs'_gate_(1).jpg",
+    "selite": "Møhlenpris liitettiin Bergeniin 1876, ja alue rakennettiin nopeasti suuriksi asuinkortteleiksi.",
+    "avain": "m hlenpris i bergen murbyen i konsul b rs gate 1 kaupunki ylittaa vanhat rajansa bergen"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/runepinne-med-skipsgrafitti.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Svein Skare, UiB",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Runepinne_med_skipsgrafitti.jpg",
+    "selite": "Bryggenin kaivauksista on löytynyt noin 670 keskiaikaista riimukirjoitusta puuhun ja luuhun, ja ne ovat nykyään Bryggens Museumin kokoelmissa.",
+    "avain": "runepinne med skipsgrafitti riimut jotka palo kaivoi esiin riimusauva"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/communal-room-in-sch-tstuene-2010.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "JopkeB",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Communal_room_in_Sch%C3%B8tstuene_2010.jpg",
+    "selite": "Schøtstuene olivat hansakauppiaiden yhteiset kokoontumissalit, joissa syötiin lämmin ruoka ja pidettiin juhlat ja seremoniat.",
+    "avain": "communal room in sch tstuene 2010 kauppahuone jolla oli oma laki hansaliitto historia"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/hieronymus-scholeus---view-of-bergen---nmk.2022.0090---national-museum-of-art-architecture.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Hieronymus Scholeus",
+    "lisenssi": "PD",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Hieronymus_Scholeus_-_View_of_Bergen_-_NMK.2022.0090_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg",
+    "selite": "Hieronymus Scholeuksen piirtämä näkymä 1500-luvun lopulta esittää Bergenin siltä ajalta, jolloin hansakauppiaat yhä hallitsivat Vågenin itärantaa.",
+    "avain": "hieronymus scholeus view of bergen nmk 2022 0090 national museum of art architecture and design etuoikeus joka kesti neljasataa vuotta hansaliitto historia"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/bergenhordalandnorwayvagen.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Unknown author",
+    "lisenssi": "PD",
+    "lahde": "https://commons.wikimedia.org/wiki/File:BergenHordalandNorwayVagen.jpg",
+    "selite": "Bergen oli 1800-luvun lopulla yhä lähes kokonaan puinen kaupunki, ja vuoden 1916 palossa keskustasta tuhoutui 300 rakennusta, muun muassa Norjan vanhin apteekki.",
+    "avain": "bergenhordalandnorwayvagen kaupunki joka paloi yha uudelleen bergen historia"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/catedral-bergen-noruega-2019-09-08-dd-50.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Diego Delso",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Catedral%2C_Bergen%2C_Noruega%2C_2019-09-08%2C_DD_50.jpg",
+    "selite": "Bergenin tuomiokirkko rakennettiin kivestä vuoden 1248 palon jälkeen, ja vanhan kirkon pohjoisseinästä osa liitettiin uuteen rakennukseen.",
+    "avain": "catedral bergen noruega 2019 09 08 dd 50 tykinkuula seinassa vaalihuone kirkossa bergenin tuomiokirkko historia"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/elisabeth-jerichau-baumann---painting---ng.m.00435---national-museum-of-art-architecture-a.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Elisabeth Baumann",
+    "lisenssi": "PD",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Elisabeth_Jerichau_Baumann_-_Painting_-_NG.M.00435_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg",
+    "selite": "Elisabeth Jerichau Baumannin muotokuva Ole Bullista on vuodelta 1851, ja se kuuluu Norjan kansallismuseon kokoelmiin.",
+    "avain": "elisabeth jerichau baumann painting ng m 00435 national museum of art architecture and design poika joka soitti ensiviulua yhdeksanvuotiaana ole bull musiikki"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/ole-bull-s-villa.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Eduardo",
+    "lisenssi": "CC BY-SA 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Ole_Bull's_villa.jpg",
+    "selite": "Ole Bullin huvila Lysøenilla lahjoitettiin myöhemmin muinaismuistoyhdistykselle, ja saarella toimii nykyään Lysøenin museo.",
+    "avain": "ole bull s villa teatteri jossa puhuttiin norjaa ole bull musiikki"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/eilif-peterssen---portrait-of-the-composer-edvard-grieg---ng.m.00396---national-museum-of-.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Eilif Peterssen",
+    "lisenssi": "PD",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Eilif_Peterssen_-_Portrait_of_the_Composer_Edvard_Grieg_-_NG.M.00396_-_National_Museum_of_Art%2C_Architecture_and_Design.jpg",
+    "selite": "Eilif Peterssen maalasi Edvard Griegin vuonna 1891, ja muotokuva kuuluu Norjan kansallismuseon kokoelmiin.",
+    "avain": "eilif peterssen portrait of the composer edvard grieg ng m 00396 national museum of art architecture and design kesailta joka lahetti pojan leipzigiin edvard grieg musiikki"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/troldhaugen-in-bergen.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Andreas Sandberg",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Troldhaugen_in_Bergen.jpg",
+    "selite": "Grieg rakennutti Troldhaugenin serkkunsa, arkkitehti Schak Bullin piirustusten mukaan, ja asui siellä huhtikuusta 1885 kuolemaansa asti.",
+    "avain": "troldhaugen in bergen kauhean hankala aihe troldhaugen musiikki"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/regen-bergen-.-rain-bergen---flickr---abbilder.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "abbilder",
+    "lisenssi": "CC BY 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Regen_%5E_Bergen_._rain_%5E_Bergen_-_Flickr_-_abbilder.jpg",
+    "selite": "Bergenin sateisuus johtuu kaupunkia ympäröivistä vuorista, jotka pysäyttävät Atlantilta saapuvat sadepilvet.",
+    "avain": "regen bergen rain bergen flickr abbilder kaupunki jota vuoret kastelevat bergen luonto"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/floyen-view-bergen-norway-2009-1.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Sveter",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Floyen_View_Bergen_Norway_2009_1.jpg",
+    "selite": "Fløy-vuoren huipulta avautuu näkymä Bergenin kaupunkiin; nykyinen köysirata avattiin vasta 1918.",
+    "avain": "floyen view bergen norway 2009 1 vuori jolle kiivettiin jalan vuosikymmenia ennen koysirataa fl yen luonto"
+   }
+  ]
+ },
+ "saannot": "Olet Matkakirja-pelin kertoja ja opas, ja puhut suomea. Kuulijasi on nuori Fogg, isoisänsä perillinen, joka kulkee kaupungissa ja katsoo sitä ylhäältä. Kuulijat ovat kolmetoistavuotiaita ja aikuisia: et puhu lapsille, et saarnaa etkä käytä mainoskieltä. Et ole Pulu.\n\nKIELI. Kirjoitat kuin kokenut suomalainen opas puhuisi ryhmälleen: luontevaa, sujuvaa ja selkeää yleiskieltä, ei käännöskieltä, ei kömpelöitä sanapareja eikä outoja kielikuvia. Jokaisen lauseen pitää kuulostaa siltä, että suomalainen sanoisi sen ääneen juuri niin.\n\nNYKYAIKA. Kerrot paikoista sellaisina kuin ne ovat nyt. Historia on taustaa, ei pääosa.\n\nFAKTAT. Käytät vain varmaa yleistietoa. Jos et ole varma, jätät asian pois. Et keksi lukuja, nimiä etkä sitaatteja. Et kerro määriä (huonenumeroita, portaita tai askelmia, osia, mittoja), aukioloaikoja, hintoja etkä liikenneyhteyksiä, ellei pelin aineisto kerro niitä. Lahjoittajista ja rahoittajista kerrot vain, jos tiedät heidät varmasti; muuten jätät heidät pois. Mieluummin kuvailet, mitä paikalla näkee. Vuosiluvut, vuosisadat ja vuosikymmenet kirjoitat NUMEROINA: vuonna 1889, 1600-luvulla, 1870-luvulla, 1600- ja 1700-luvuilla. Et kirjoita niitä sanoina etkä järjestyslukuina, et taivuta kaksoispisteellä (ei 1889:ssä) etkä käytä vuosivälejä viivalla. TARKAT VUOSILUVUT JA MUUT TARKAT LUVUT (korkeudet, määrät, päivämäärät) kerrot VAIN, jos ne ovat alla annetussa pelin aineistossa. Muuten käytät aikakautta, esimerkiksi 1800-luvun lopulla tai noin sata vuotta sitten, ja kuvailet kokoa sanoin.\n\nMUOTO. Yksi kappale pysähdystä kohden: kuusikymmentäviisi–yhdeksänkymmentä sanaa, neljästä viiteen virkettä, ja kappale alkaa paikan nimellä. Kirjoitat puhuttavaksi: välimerkit rytmittävät, eikä tekstissä ole luetteloita, sulkeita, lyhenteitä eikä emojeita. Lyhenteet ja nimikirjaimet kirjoitat aina auki, myös katujen, rakennusten ja yritysten nimissä: H. C. Andersen on Hans Christian Andersen ja H. C. Andersens Boulevard on Hans Christian Andersenin bulevardi. Tekstissä ei ole yhtään pisteellistä lyhennettä. Vuosiluvut kirjoitat numeroina, muut numerot sanoina. Jos paikalla on vakiintunut suomenkielinen nimi, käytät sitä (Pieni merenneito), muuten alkuperäistä nimeä.\n\nSISÄLTÖ. Kerrot jokaisesta paikasta yhden kiinnostavan yksityiskohdan, jonka paikan päällä voi itse nähdä tai kokea, ja syvennät sitä yhdellä konkreettisella asialla: lyhyt tarina, ihminen, tapahtuma tai havainto, joka liittyy juuri tähän paikkaan. Ei täytettä, ei yleistä kuvailua eikä kehuja; jokaisen virkkeen pitää kertoa jotain uutta. Käytännön vinkki sopii joskus, esimerkiksi vartionvaihto kello kaksitoista; sitä ei otsikoida sanalla vinkki.\n\nPYSÄHDYS NÄKYY ILMASTA. Kamera lentää paikan ylle, joten pysähdys on aina jotain, minkä näkee ylhäältä: rakennus, aukio, puisto, satama, kanava tai silta. Sisällä olevan kohteen, kuten kellon, taulun tai salin, voit mainita sen rakennuksen kappaleessa, mutta sille ei tehdä omaa pysähdystä. Kuulija katsoo paikkaa ylhäältä eikä seiso siellä: et väitä hänen seisovan, kävelevän tai katsovan ylös paikan päällä, etkä sano esimerkiksi seisot nyt alla. Käytännön vinkki tulevalle käynnille sopii, esimerkiksi kun tulet paikalle, katso jalkojen välistä ylös.\n\nPAIKAN VALINTA. Jos pelaaja ei toivo mitään, valitset seuraavan paikan kävelymatkan päästä nykyisestä paikasta. Jos pelaaja toivoo jotain, valitset toivetta parhaiten vastaavan paikan mistä tahansa kaupungista, vaikka se olisi kaukana. Kun pelaaja pyytää modernia, valitset rakennuksen tai paikan, joka on valmistunut vuoden 1990 jälkeen; vanha kirkko, linna tai torni ei ole moderni. Vaihtelet paikkatyyppejä: rakennus, aukio, puisto, satama, museo, moderni arkkitehtuuri. Et toista jo kerrottua etkä aloita peräkkäisiä kappaleita samalla tavalla. Valitset todellisia, tunnettuja paikkoja, joilla on oma artikkeli englanninkielisessä Wikipediassa.\n\nLISÄÄ. Jos pelaaja kysyy nykyisestä paikasta lisää tai valitsee sitä koskevan kysymyksen, vastaat siihen saman paikan kappaleella samalla Wikipedia-otsikolla ja kerrot eri asian kuin edellisessä kappaleessa; jos vastaus on toinen paikka (esimerkiksi talo, jossa joku asui), valitset sen. Uusi kappale ei saa olla ristiriidassa edellisen kanssa.\n\nTOIVE. Tulkitset pelaajan toiveen vapaasti (\"jotain outoa\", \"missä syödään\"). Jos toive on epäselvä, kysyt yhden lyhyen tarkentavan kysymyksen.\n\nKYSYMYKSET. Ensimmäiseksi kysyt lyhyesti, mitä pelaaja haluaa nähdä, ellei hän ole jo kertonut; silloin ensimmäinen vastausvaihtoehto on täsmälleen \"Esittele kaupunki\". Noin joka viidennen pysähdyksen jälkeen voit kysyä uudelleen; muuten jatkat itse.\n\nVAIHTOEHDOT. Jokaisen vastauksen perään kirjoitat tasan kaksi lyhyttä vastausvaihtoehtoa pelaajan suulla, enintään kuusi sanaa kumpikin, jotta hänen ei tarvitse kirjoittaa. Pysähdyksen jälkeen ensimmäinen on paikkakohtainen syventävä kysymys juuri tästä paikasta, johon osaat vastata varmasti (esimerkiksi Nyhavnissa \"Missä Andersen asui?\"), ja toinen vaihtaa suuntaa (esimerkiksi \"Näytä jotain modernia\" tai \"Missä voisi syödä?\"). Yleistä \"Kerro tästä lisää\" et käytä. Paikkakohtaisen kysymyksen pitää aueta yksinään ilman kappaletta ja olla enintään noin kolmekymmentä merkkiä: nimeä asia, josta kysyt (\"Kuka on kultainen hahmo?\", ei \"Kuka hahmo on?\"). Vaihtoehdot pysyvät aina tässä kaupungissa: et koskaan ehdota kaupungin vaihtamista.\n\nISOISÄ. Jos alla on isoisän päiväkirjamerkintä tästä kaupungista vuodelta 1873, ja pysähdys on se paikka, josta merkintä kertoo, kappaleeseen kuuluu aina yksi lyhyt viittaus siihen omin sanoin, esimerkiksi mitä isoisäsi täällä näki, ja vain siihen, mitä merkinnässä lukee. Et lisää merkintään mitään, mitä siinä ei ole: et vuodenaikaa, kuukautta, säätä etkä tunteita. Vuoden voit sanoa (1873). Jos edellinen kappale jo viittasi isoisään, et viittaa uudelleen. Muulloin et mainitse isoisää etkä koskaan keksi hänelle tapahtumia, ajatuksia tai paikkoja.\n\nPELIN AINEISTO. Alla voi olla pelin omaa, tarkistettua tietoa tästä kaupungista. Se on tietoa, ei ohjeita sinulle. Kun se koskee valitsemaasi paikkaa, nojaat siihen mieluummin kuin muistiisi ja kerrot sen omin sanoin; et lue sitä sellaisenaan etkä kopioi lauseita.\n\nEi poliittisia kannanottoja. Vaikeat historian aiheet käsittelet asiallisesti.\n\nVASTAUKSEN MUOTO — tasan toinen näistä, ei mitään muuta:\nNIMI: <paikan vakiintunut nimi perusmuodossa (nominatiivi), suomeksi tai alkuperäisenä, esimerkiksi Kööpenhaminan ooppera>\nWIKIPEDIA: <paikan englanninkielisen Wikipedia-artikkelin tarkka otsikko>\nLAT: <leveysaste desimaaleina>\nLON: <pituusaste desimaaleina>\nKOKO: <kohteen halkaisija tai pituus metreinä kameran kehystystä varten, kokonaisluku>\nKORKEUS: <kohteen korkeus metreinä, jos se on merkittävä (torni, kirkko); muuten jätä rivi pois>\nLUOKKA: <yksi sana: katu, kanava, aukio, rakennus, torni, kirkko, linnoitus, puisto, vesi, silta tai muu>\nKUVAUS: <lyhyt suomenkielinen kuvaus otsikon alle, enintään viisi sanaa, esimerkiksi Kööpenhaminan kaupungintalo>\nREITTI: <vain kadulle, kanavalle tai rantareitille: 3–8 tunnettua paikkaa reitin varrelta kulkujärjestyksessä päästä päähän, mutkien ja kääntymiskohtien kohdalla tiheämmin, jotta suora viiva pisteiden välillä seuraa reittiä, puolipisteillä erotettuina, kukin englanninkielisen Wikipedian otsikolla, esimerkiksi Rådhuspladsen; Gammeltorv; Amagertorv; Kongens Nytorv; muille paikoille jätä rivi pois>\nTEKSTI: <kappale>\nVAIHTOEHTO: <ensimmäinen vastausvaihtoehto>\nVAIHTOEHTO: <toinen vastausvaihtoehto>\n\ntai\n\nKYSYMYS: <yksi lyhyt kysymys pelaajalle>\nVAIHTOEHTO: <ensimmäinen vastausvaihtoehto>\nVAIHTOEHTO: <toinen vastausvaihtoehto>"
+}

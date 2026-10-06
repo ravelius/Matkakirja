@@ -1,0 +1,380 @@
+{
+ "kaupunki": "Dublin",
+ "id": "dublin",
+ "keskus": {
+  "lat": 53.33333333,
+  "lon": -6.25
+ },
+ "kierros": [
+  "Q258464",
+  "Q1134365",
+  "Q1034624",
+  "Q742767",
+  "Q1067803",
+  "Q846365",
+  "Q261012",
+  "Q1049842"
+ ],
+ "kohteet": [
+  {
+   "id": "Q258464",
+   "nimi": "Trinity College",
+   "lat": 53.3444,
+   "lon": -6.2577,
+   "tarkeys": 1,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Trinity_College_(Dublin)",
+    "en": "https://en.wikipedia.org/wiki/Trinity_College_Dublin"
+   }
+  },
+  {
+   "id": "Q261012",
+   "nimi": "Guinness Storehouse",
+   "lat": 53.34187,
+   "lon": -6.28671,
+   "tarkeys": 2,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Guinness_Storehouse",
+    "en": "https://en.wikipedia.org/wiki/Guinness_Storehouse"
+   }
+  },
+  {
+   "id": "Q742767",
+   "nimi": "Dublinin linna",
+   "lat": 53.34311,
+   "lon": -6.26739,
+   "tarkeys": 3,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Dublin_Castle"
+   }
+  },
+  {
+   "id": "Q846365",
+   "nimi": "Pyhän Patrickin katedraali",
+   "lat": 53.33944,
+   "lon": -6.27139,
+   "tarkeys": 4,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Pyh%C3%A4n_Patrickin_katedraali_(Dublin)",
+    "en": "https://en.wikipedia.org/wiki/St_Patrick%27s_Cathedral,_Dublin"
+   }
+  },
+  {
+   "id": "Q1034624",
+   "nimi": "Ha'penny-silta",
+   "lat": 53.3461,
+   "lon": -6.263,
+   "tarkeys": 5,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Ha%27penny_Bridge"
+   }
+  },
+  {
+   "id": "Q1067803",
+   "nimi": "Christ Church -katedraali",
+   "lat": 53.34306,
+   "lon": -6.27139,
+   "tarkeys": 6,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Christ_Church_Cathedral_(Dublin)",
+    "en": "https://en.wikipedia.org/wiki/Christ_Church_Cathedral,_Dublin"
+   }
+  },
+  {
+   "id": "Q1134365",
+   "nimi": "Spire",
+   "lat": 53.34972,
+   "lon": -6.26028,
+   "tarkeys": 7,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Spire_of_Dublin",
+    "en": "https://en.wikipedia.org/wiki/Spire_of_Dublin"
+   }
+  },
+  {
+   "id": "Q1049842",
+   "nimi": "Kilmainhamin vankila",
+   "lat": 53.34167,
+   "lon": -6.30944,
+   "tarkeys": 8,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Kilmainhamin_vankila",
+    "en": "https://en.wikipedia.org/wiki/Kilmainham_Gaol"
+   }
+  },
+  {
+   "id": "Q1339254",
+   "nimi": "Dublinin pääpostitalo",
+   "lat": 53.34933,
+   "lon": -6.26107,
+   "tarkeys": 9,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/General_Post_Office,_Dublin"
+   }
+  },
+  {
+   "id": "Q1193916",
+   "nimi": "Samuel Beckettin silta",
+   "lat": 53.34694,
+   "lon": -6.24111,
+   "tarkeys": 10,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Samuel_Beckett_Bridge"
+   }
+  },
+  {
+   "id": "Q2300561",
+   "nimi": "Custom House",
+   "lat": 53.34854,
+   "lon": -6.25315,
+   "tarkeys": 11,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/The_Custom_House"
+   }
+  },
+  {
+   "id": "Q377937",
+   "nimi": "Phoenix Park",
+   "lat": 53.35579,
+   "lon": -6.32979,
+   "tarkeys": 12,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Phoenix_Park"
+   }
+  },
+  {
+   "id": "Q1432605",
+   "nimi": "St Stephen's Green",
+   "lat": 53.33806,
+   "lon": -6.25917,
+   "tarkeys": 13,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/St_Stephen%27s_Green"
+   }
+  },
+  {
+   "id": "Q920229",
+   "nimi": "Temple Bar",
+   "lat": 53.34559,
+   "lon": -6.26278,
+   "tarkeys": 14,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Temple_Bar,_Dublin"
+   }
+  }
+ ],
+ "isoisa": {
+  "paikkarivi": "Dublin, syyskuussa 1873. Tihkusadetta; puntari putoaa.",
+  "teksti": "Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin."
+ },
+ "aineisto": {
+  "nimi": "Dublin",
+  "iskulause": "Tarinoiden ja tumman oluen kaupunki",
+  "tausta": [
+   "Kaupunki, jossa yhden kesäkuisen päivän tapahtumia juhlitaan joka vuosi uudestaan ja jonka valtiontunnus seisoo lasikaapissa yliopiston kirjastossa.",
+   "Trinity College perustettiin vuonna 1592 kuningatar Elisabet I:n peruskirjalla, ja se on yhä Dublinin yliopiston ainoa college.",
+   "Santiago Calatravan suunnittelema Samuel Beckettin silta kääntyy sivuun laivojen tieltä, ja sen muoto viittaa harppuun, joka on ollut Irlannin tunnus jo 1200-luvulta.",
+   "Ruostumattomasta teräksestä tehty Spire pystytettiin O'Connell Streetille Nelsonin pylvään paikalle vuonna 1998 järjestetyn suunnittelukilpailun pohjalta.",
+   "Ha’penny Bridge avattiin 1816 Liffeyn ensimmäisenä jalankulkusiltana, sen valurautainen 43 metrin kaari valettiin Coalbrookdalessa, ja nimensä silta sai puolen pennyn tiemaksusta, jota perittiin vuoteen 1919.",
+   "Trinity Collegen kellotorni valmistui 1853 Charles Lanyonin suunnitelmien mukaan: 30,5 metriä korkean tornin alaosa on Wicklowin sinertävää graniittia ja kupoli Portlandin kiveä, ja kellohuoneen juurella istuu neljä veistosta — jumaluusoppi, tiede, lääketiede ja laki.",
+   "Pyhän Patrickin katedraali perustettiin 1191, ja ulkoa 91 metriä pitkänä se on Irlannin suurin kirkko — graniittinen torninhuippu nostettiin tornin päälle vasta 1749 George Semplen suunnitelmien mukaan.",
+   "James Gandonin tullitalo valmistui 7. marraskuuta 1791, ja kun se poltettiin 1921 vapaussodan aikana, sisätilat tuhoutuivat ja kupoli romahti — se muurattiin uudelleen tummemmasta Ardbraccanin kalkkikivestä kuin muu Portlandin kivestä tehty talo.",
+   "Guinnessin panimon käymislaitos rakennettiin vuonna 1902 ja oli Irlannin ensimmäinen monikerroksinen teräsrunkoinen rakennus.",
+   "Four Courts sai nimensä neljästä alkuperäisestä ylimmästä oikeusistuimestaan, ja se on yhä Irlannin korkeimman oikeuden istuntopaikka.",
+   "James Gandonin suunnittelema tullitalo rakennettiin 1700-luvun lopulla suolle, jota kaupungin kauppiaat pitivät kelvottomana paikkana.",
+   "Romaani, joka kestää yhden päivän: James Joycen romaani Odysseus kertoo yhden ainoan päivän: torstain 16. kesäkuuta 1904 Dublinissa. Joyce valitsi juuri sen päivän, koska silloin hän oli ollut ensi kertaa kävelyllä tulevan vaimonsa Nora Barnaclen kanssa. Nyt joka 16. kesäkuuta dublinilaiset pukeutuvat vuoden 1904 vaatteisiin ja kulkevat kirjan reitit läpi. Ensimmäinen sellainen retki tehtiin 1954 vanhanaikaisilla hevosvaunuilla, ja se jäi kesken. Vuonna 1982 Irlannin radio luki koko kirjan yhteen menoon: siihen meni 30 tuntia.",
+   "Coddle on tähteiden pata: Coddle on dublinilaisten oma pata: makkarat, pekoni, perunat ja sipuli haudutetaan samassa liemessä tiiviin kannen alla. Mausteina on yleensä vain suola ja pippuri, eikä mitään ruskisteta — siksi ruoka näyttää paljon vaaleammalta kuin maistuu. Coddlea keitettiin, jotta viikon tähteet saatiin syödyksi, eikä sitä juuri tunneta muualla Irlannissa. Myös James Joyce mainitsee sen teksteissään.",
+   "Täysi stadion, palkaton joukkue: Hurlingissa lyödään saarnipuisella mailalla nahkaista sliotar-palloa maalin ylitse tai sisään. Peli on irlantilainen ja hyvin vanha: siitä kerrotaan jo 600-luvun lakiteksteissä. Croke Parkiin Dublinissa mahtuu 82 300 katsojaa, mikä on Euroopan neljänneksi eniten, mutta yksikään pelaaja ei saa ottelusta palkkaa — kaikki ovat amatöörejä ja käyvät arkena töissä.",
+   "Säkkipilli, johon ei puhalleta: Uilleann-pilli on Irlannin oma säkkipilli, eikä siihen puhalleta lainkaan: ilma pumpataan palkeella, joka on hihnoilla kiinni vyötäröllä ja oikeassa käsivarressa. Nimi tulee irlannin sanasta uillinn eli kyynärpää, sillä juuri kyynärpää painaa paljetta kokoon. Soittaja istuu ja painaa melodiapillin pään reittään vasten: kun kaikki sormireiät ovat peitettyinä, ääni vaikenee kokonaan. Unesco otti uilleann-pillin perinneluetteloonsa vuonna 2017.",
+   "Tiede: Kaksi asiaa keksittiin Dublinissa kävelymatkan päässä toisistaan: kaava, joka raapustettiin sillan kiveen, ja luento, joka johti dna:n jäljille.",
+   "Kaava, joka raapustettiin sillan kiveen: Matemaatikko William Rowan Hamilton käveli 16. lokakuuta 1843 vaimonsa kanssa Kuninkaankanavan vartta kohti kokousta, kun hänen päässään ratkesi pulma, jota hän oli miettinyt vuosia. Hän ei malttanut odottaa paperia vaan kaiversi kaavan taskuveitsellään Broom Bridgen kiveen. Kaava kuvaa kvaternioita, ja niillä käännellään nykyään esineitä kolmiulotteisesti: peliruudulla, roboteissa ja satelliiteissa. Joka 16. lokakuuta matka kävellään uudestaan: Dunsinkin observatoriolta, jossa Hamilton asui, samalle sillalle.",
+   "Luento, joka johti dna:n jäljille: Irlannin pääministeri Éamon de Valera oli koulutukseltaan matematiikan opettaja. Vuonna 1940 hän perusti Dublinin tutkimusinstituutin ja kutsui sen fysiikan johtajaksi itävaltalaisen Erwin Schrödingerin, joka oli paennut natseja. Helmikuussa 1943 Schrödinger piti Trinity Collegessa kolme yleisöluentoa otsikolla Mitä elämä on? Saliin mahtui 150 kuulijaa mutta tulijoita oli 400, joten luennot pidettiin kahteen kertaan. Watson ja Crick kertoivat molemmat, että luennoista tehty kirja pani heidät dna:n jäljille.",
+   "Historia: Kaksi dublinilaista laitosta alkoi paperista ja häkistä: panimo yhdeksäntuhannen vuoden vuokrasopimuksella ja eläintarha, jonka leijona päätyi Hollywoodin tunnukseen.",
+   "Vuokrasopimus yhdeksäksitoista vuosisadaksi: Uudenvuodenaattona 1759 Arthur Guinness allekirjoitti vuokrasopimuksen käyttämättömästä panimosta St James’s Gaten portin luona. Vuokra oli 45 puntaa vuodessa, tontti neljä eekkeriä ja sopimuskausi yhdeksäntuhatta vuotta. Kun Benjamin Lee Guinness kuoli 1868, sama tontti oli kasvanut yli kuudenkymmenenneljän eekkerin laajuiseksi ja yritys oli yli miljoonan punnan arvoinen. Panimo myi vuonna 1868 kolmesataaviisikymmentätuhatta tynnyriä ja vuonna 1876 jo seitsemänsataaseitsemänkymmentäyhdeksäntuhatta. Yhdeksäntuhatta vuotta ei kuitenkaan tullut täyteen: yhtiö osti tontin lopulta omakseen, ja sopimus raukesi.",
+   "Dublinin leijona Hollywoodissa: Phoenix Parkin eläintarha avattiin yleisölle 1. syyskuuta 1831. Ensimmäinen leijonapari ostettiin 1855 ja se sai poikasia 1857. Siitä alkoi maine: Dublinin leijonat olivat 1800-luvulla maailmankuuluja. Maaliskuun 20. päivänä 1919 siellä syntyi poikanen, jolle annettiin nimeksi Cairbre, iiriksi vaunumies. Amerikassa hänet nimettiin uudestaan Slatsiksi, ja hänestä tuli vastaperustetun Metro-Goldwyn-Mayerin ensimmäinen tunnusleijona vuosina 1924–1928. Kausi osui mykkäelokuvan aikaan: toisin kuin yksikään seuraajansa hän ei tunnuksessa karjaise, vaan katselee ympärilleen.",
+   "Luonto: Kaupungin laidalla leviää muuriaidattu puisto, jossa vaeltaa vapaana villejä kuusipeuroja ja jonka halkaisee Euroopan korkein obeliski."
+  ],
+  "kuvat": [
+   {
+    "url": "https://media.matkakirja.app/kuvat/front-square-of-trinity-college-dublin.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Adam McGrath",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Front_Square_of_Trinity_College_Dublin.jpg",
+    "selite": "Trinity College perustettiin vuonna 1592 kuningatar Elisabet I:n peruskirjalla, ja se on yhä Dublinin yliopiston ainoa college.",
+    "avain": "front square of trinity college dublin"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/samuel-beckett-bridge-dublin-20150807-1.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "DXR",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Samuel_Beckett_Bridge%2C_Dublin_20150807_1.jpg",
+    "selite": "Santiago Calatravan suunnittelema Samuel Beckettin silta kääntyy sivuun laivojen tieltä, ja sen muoto viittaa harppuun, joka on ollut Irlannin tunnus jo 1200-luvulta.",
+    "avain": "samuel beckett bridge dublin 20150807 1"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/dublin---o-connell-street---20200305192622.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Jonjobaker",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Dublin_-_O'Connell_Street_-_20200305192622.jpg",
+    "selite": "Ruostumattomasta teräksestä tehty Spire pystytettiin O'Connell Streetille Nelsonin pylvään paikalle vuonna 1998 järjestetyn suunnittelukilpailun pohjalta.",
+    "avain": "dublin o connell street 20200305192622"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-dublin-hapenny.jpg",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Ha’penny Bridge avattiin 1816 Liffeyn ensimmäisenä jalankulkusiltana, sen valurautainen 43 metrin kaari valettiin Coalbrookdalessa, ja nimensä silta sai puolen pennyn tiemaksusta, jota perittiin vuoteen 1919.",
+    "avain": "herokoe hero dublin hapenny"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-dublin-aamu.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Trinity Collegen kellotorni valmistui 1853 Charles Lanyonin suunnitelmien mukaan: 30,5 metriä korkean tornin alaosa on Wicklowin sinertävää graniittia ja kupoli Portlandin kiveä, ja kellohuoneen juurella istuu neljä veistosta — jumaluusoppi, tiede, lääketiede ja laki.",
+    "avain": "herokoe hero dublin aamu"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-dublin-keskipaiva.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Pyhän Patrickin katedraali perustettiin 1191, ja ulkoa 91 metriä pitkänä se on Irlannin suurin kirkko — graniittinen torninhuippu nostettiin tornin päälle vasta 1749 George Semplen suunnitelmien mukaan.",
+    "avain": "herokoe hero dublin keskipaiva"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-dublin-ilta.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "James Gandonin tullitalo valmistui 7. marraskuuta 1791, ja kun se poltettiin 1921 vapaussodan aikana, sisätilat tuhoutuivat ja kupoli romahti — se muurattiin uudelleen tummemmasta Ardbraccanin kalkkikivestä kuin muu Portlandin kivestä tehty talo.",
+    "avain": "herokoe hero dublin ilta"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/dublin-varoskep-a-guinness-toronybol.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Kiss Tamás ( Kit36a at Hungarian Wikipedia )",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Dublin%2C_v%C3%A1rosk%C3%A9p_a_Guinness-toronyb%C3%B3l.jpg",
+    "selite": "Guinnessin panimon käymislaitos rakennettiin vuonna 1902 ja oli Irlannin ensimmäinen monikerroksinen teräsrunkoinen rakennus.",
+    "avain": "dublin varoskep a guinness toronybol"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/the-four-courts-and-river-liffey-dublin---geograph.org.uk---2776535.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Richard Humphrey",
+    "lisenssi": "CC BY-SA 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:The_Four_Courts_and_River_Liffey%2C_Dublin_-_geograph.org.uk_-_2776535.jpg",
+    "selite": "Four Courts sai nimensä neljästä alkuperäisestä ylimmästä oikeusistuimestaan, ja se on yhä Irlannin korkeimman oikeuden istuntopaikka.",
+    "avain": "the four courts and river liffey dublin geograph org uk 2776535"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/the-sunset---dublin-ireland---cityscape-photography.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Giuseppe Milo",
+    "lisenssi": "CC BY 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:The_sunset_-_Dublin%2C_Ireland_-_Cityscape_photography.jpg",
+    "selite": "James Gandonin suunnittelema tullitalo rakennettiin 1700-luvun lopulla suolle, jota kaupungin kauppiaat pitivät kelvottomana paikkana.",
+    "avain": "the sunset dublin ireland cityscape photography"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/james-joyce-by-alex-ehrenzweig-1915-cropped.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Alex Ehrenzweig",
+    "lisenssi": "PD",
+    "lahde": "https://commons.wikimedia.org/wiki/File:James_Joyce_by_Alex_Ehrenzweig%2C_1915_cropped.jpg",
+    "selite": "James Joyce asui Zürichissä, kun tämä muotokuva otettiin vuonna 1915, seitsemän vuotta ennen Odysseuksen ilmestymistä.",
+    "avain": "james joyce by alex ehrenzweig 1915 cropped romaani joka kestaa yhden paivan james joyce"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/coddle-and-irish-soda-bread.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Kari Haley",
+    "lisenssi": "CC BY-SA 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Coddle_and_Irish_Soda_bread.jpg",
+    "selite": "Coddlessa ei ruskisteta mitään, joten ruoka näyttää paljon vaaleammalta kuin maistuu.",
+    "avain": "coddle and irish soda bread coddle on tahteiden pata irlantilainen keittio"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/parade-hurling-match.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Sheila1988",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Parade%2C_hurling_match.jpg",
+    "selite": "Joukkueiden marssi soittokunnan perässä ennen hurlingin All-Ireland-välierää Croke Parkissa 2017.",
+    "avain": "parade hurling match taysi stadion palkaton joukkue hurling"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/uilleann-pipes-practice-set.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Pmcd90 at English Wikipedia",
+    "lisenssi": "PD",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Uilleann_pipes-practice_set.jpg",
+    "selite": "Uilleann-pilliin ei puhalleta lainkaan, vaan kyynärpäällä painettava palje pumppaa ilman säkkiin ja siitä melodiapilliin.",
+    "avain": "uilleann pipes practice set sakkipilli johon ei puhalleta irlantilainen kansanmusiikki"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/sir-william-rowan-hamilton-head-and-shoulders-portrait-facing-slightly-right-lccn90713420-.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Library of Congress",
+    "lisenssi": "PD",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Sir_William_Rowan_Hamilton%2C_head-and-shoulders_portrait%2C_facing_slightly_right_LCCN90713420_(cropped).jpg",
+    "selite": "William Rowan Hamilton (1805–1865) asui Dunsinkin observatoriossa Dublinin laidalla.",
+    "avain": "sir william rowan hamilton head and shoulders portrait facing slightly right lccn90713420 cropped kaava joka raapustettiin sillan kiveen william rowan hamilton tiede"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/guinness-brewery-dublin.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Metro Centric",
+    "lisenssi": "CC BY 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Guinness_brewery%2C_Dublin.jpg",
+    "selite": "Panimo toimii yhä samalla tontilla St James’s Gaten portin luona, jonka Arthur Guinness vuokrasi vuonna 1759.",
+    "avain": "guinness brewery dublin vuokrasopimus yhdeksaksitoista vuosisadaksi historia"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/metro-goldwyn-mayer-slats-the-lion-1926.png",
+    "tyyppi": "valokuva",
+    "tekija": "Metro-Goldwyn-Mayer 1926",
+    "lisenssi": "PD",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Metro-Goldwyn-Mayer_%E2%80%94_Slats_the_Lion_(1926).png",
+    "selite": "Dublinissa syntynyt Slats oli MGM:n ensimmäinen tunnusleijona, eikä se karjaise tunnuksessa kertaakaan.",
+    "avain": "metro goldwyn mayer slats the lion 1926 dublinin leijona hollywoodissa historia"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/deer-in-phoenix-park-dublin.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Barry",
+    "lisenssi": "CC BY 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Deer_in_Phoenix_Park%2C_Dublin.jpg",
+    "selite": "Phoenix Parkissa vaeltaa vapaana villi kuusipeuralauma; ensimmäiset peurat tuotiin puistoon 1660-luvulla metsästysriistaksi.",
+    "avain": "deer in phoenix park dublin villit peurat jotka asuivat puistossa ennen puistoa phoenix park luonto"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/the-wellington-monument-phoenix-park-dublin---geograph.org.uk---7877426.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Marathon",
+    "lisenssi": "CC BY-SA 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:The_Wellington_Monument%2C_Phoenix_Park%2C_Dublin_-_geograph.org.uk_-_7877426.jpg",
+    "selite": "Wellingtonin muistomerkki Phoenix Parkissa on 62 metriä korkea obeliski, Euroopan korkein; se valmistui vasta 1861.",
+    "avain": "the wellington monument phoenix park dublin geograph org uk 7877426 euroopan korkein obeliski juuri valmistunut wellington monument dublin luonto"
+   }
+  ]
+ },
+ "saannot": "Olet Matkakirja-pelin kertoja ja opas, ja puhut suomea. Kuulijasi on nuori Fogg, isoisänsä perillinen, joka kulkee kaupungissa ja katsoo sitä ylhäältä. Kuulijat ovat kolmetoistavuotiaita ja aikuisia: et puhu lapsille, et saarnaa etkä käytä mainoskieltä. Et ole Pulu.\n\nKIELI. Kirjoitat kuin kokenut suomalainen opas puhuisi ryhmälleen: luontevaa, sujuvaa ja selkeää yleiskieltä, ei käännöskieltä, ei kömpelöitä sanapareja eikä outoja kielikuvia. Jokaisen lauseen pitää kuulostaa siltä, että suomalainen sanoisi sen ääneen juuri niin.\n\nNYKYAIKA. Kerrot paikoista sellaisina kuin ne ovat nyt. Historia on taustaa, ei pääosa.\n\nFAKTAT. Käytät vain varmaa yleistietoa. Jos et ole varma, jätät asian pois. Et keksi lukuja, nimiä etkä sitaatteja. Et kerro määriä (huonenumeroita, portaita tai askelmia, osia, mittoja), aukioloaikoja, hintoja etkä liikenneyhteyksiä, ellei pelin aineisto kerro niitä. Lahjoittajista ja rahoittajista kerrot vain, jos tiedät heidät varmasti; muuten jätät heidät pois. Mieluummin kuvailet, mitä paikalla näkee. Vuosiluvut, vuosisadat ja vuosikymmenet kirjoitat NUMEROINA: vuonna 1889, 1600-luvulla, 1870-luvulla, 1600- ja 1700-luvuilla. Et kirjoita niitä sanoina etkä järjestyslukuina, et taivuta kaksoispisteellä (ei 1889:ssä) etkä käytä vuosivälejä viivalla. TARKAT VUOSILUVUT JA MUUT TARKAT LUVUT (korkeudet, määrät, päivämäärät) kerrot VAIN, jos ne ovat alla annetussa pelin aineistossa. Muuten käytät aikakautta, esimerkiksi 1800-luvun lopulla tai noin sata vuotta sitten, ja kuvailet kokoa sanoin.\n\nMUOTO. Yksi kappale pysähdystä kohden: kuusikymmentäviisi–yhdeksänkymmentä sanaa, neljästä viiteen virkettä, ja kappale alkaa paikan nimellä. Kirjoitat puhuttavaksi: välimerkit rytmittävät, eikä tekstissä ole luetteloita, sulkeita, lyhenteitä eikä emojeita. Lyhenteet ja nimikirjaimet kirjoitat aina auki, myös katujen, rakennusten ja yritysten nimissä: H. C. Andersen on Hans Christian Andersen ja H. C. Andersens Boulevard on Hans Christian Andersenin bulevardi. Tekstissä ei ole yhtään pisteellistä lyhennettä. Vuosiluvut kirjoitat numeroina, muut numerot sanoina. Jos paikalla on vakiintunut suomenkielinen nimi, käytät sitä (Pieni merenneito), muuten alkuperäistä nimeä.\n\nSISÄLTÖ. Kerrot jokaisesta paikasta yhden kiinnostavan yksityiskohdan, jonka paikan päällä voi itse nähdä tai kokea, ja syvennät sitä yhdellä konkreettisella asialla: lyhyt tarina, ihminen, tapahtuma tai havainto, joka liittyy juuri tähän paikkaan. Ei täytettä, ei yleistä kuvailua eikä kehuja; jokaisen virkkeen pitää kertoa jotain uutta. Käytännön vinkki sopii joskus, esimerkiksi vartionvaihto kello kaksitoista; sitä ei otsikoida sanalla vinkki.\n\nPYSÄHDYS NÄKYY ILMASTA. Kamera lentää paikan ylle, joten pysähdys on aina jotain, minkä näkee ylhäältä: rakennus, aukio, puisto, satama, kanava tai silta. Sisällä olevan kohteen, kuten kellon, taulun tai salin, voit mainita sen rakennuksen kappaleessa, mutta sille ei tehdä omaa pysähdystä. Kuulija katsoo paikkaa ylhäältä eikä seiso siellä: et väitä hänen seisovan, kävelevän tai katsovan ylös paikan päällä, etkä sano esimerkiksi seisot nyt alla. Käytännön vinkki tulevalle käynnille sopii, esimerkiksi kun tulet paikalle, katso jalkojen välistä ylös.\n\nPAIKAN VALINTA. Jos pelaaja ei toivo mitään, valitset seuraavan paikan kävelymatkan päästä nykyisestä paikasta. Jos pelaaja toivoo jotain, valitset toivetta parhaiten vastaavan paikan mistä tahansa kaupungista, vaikka se olisi kaukana. Kun pelaaja pyytää modernia, valitset rakennuksen tai paikan, joka on valmistunut vuoden 1990 jälkeen; vanha kirkko, linna tai torni ei ole moderni. Vaihtelet paikkatyyppejä: rakennus, aukio, puisto, satama, museo, moderni arkkitehtuuri. Et toista jo kerrottua etkä aloita peräkkäisiä kappaleita samalla tavalla. Valitset todellisia, tunnettuja paikkoja, joilla on oma artikkeli englanninkielisessä Wikipediassa.\n\nLISÄÄ. Jos pelaaja kysyy nykyisestä paikasta lisää tai valitsee sitä koskevan kysymyksen, vastaat siihen saman paikan kappaleella samalla Wikipedia-otsikolla ja kerrot eri asian kuin edellisessä kappaleessa; jos vastaus on toinen paikka (esimerkiksi talo, jossa joku asui), valitset sen. Uusi kappale ei saa olla ristiriidassa edellisen kanssa.\n\nTOIVE. Tulkitset pelaajan toiveen vapaasti (\"jotain outoa\", \"missä syödään\"). Jos toive on epäselvä, kysyt yhden lyhyen tarkentavan kysymyksen.\n\nKYSYMYKSET. Ensimmäiseksi kysyt lyhyesti, mitä pelaaja haluaa nähdä, ellei hän ole jo kertonut; silloin ensimmäinen vastausvaihtoehto on täsmälleen \"Esittele kaupunki\". Noin joka viidennen pysähdyksen jälkeen voit kysyä uudelleen; muuten jatkat itse.\n\nVAIHTOEHDOT. Jokaisen vastauksen perään kirjoitat tasan kaksi lyhyttä vastausvaihtoehtoa pelaajan suulla, enintään kuusi sanaa kumpikin, jotta hänen ei tarvitse kirjoittaa. Pysähdyksen jälkeen ensimmäinen on paikkakohtainen syventävä kysymys juuri tästä paikasta, johon osaat vastata varmasti (esimerkiksi Nyhavnissa \"Missä Andersen asui?\"), ja toinen vaihtaa suuntaa (esimerkiksi \"Näytä jotain modernia\" tai \"Missä voisi syödä?\"). Yleistä \"Kerro tästä lisää\" et käytä. Paikkakohtaisen kysymyksen pitää aueta yksinään ilman kappaletta ja olla enintään noin kolmekymmentä merkkiä: nimeä asia, josta kysyt (\"Kuka on kultainen hahmo?\", ei \"Kuka hahmo on?\"). Vaihtoehdot pysyvät aina tässä kaupungissa: et koskaan ehdota kaupungin vaihtamista.\n\nISOISÄ. Jos alla on isoisän päiväkirjamerkintä tästä kaupungista vuodelta 1873, ja pysähdys on se paikka, josta merkintä kertoo, kappaleeseen kuuluu aina yksi lyhyt viittaus siihen omin sanoin, esimerkiksi mitä isoisäsi täällä näki, ja vain siihen, mitä merkinnässä lukee. Et lisää merkintään mitään, mitä siinä ei ole: et vuodenaikaa, kuukautta, säätä etkä tunteita. Vuoden voit sanoa (1873). Jos edellinen kappale jo viittasi isoisään, et viittaa uudelleen. Muulloin et mainitse isoisää etkä koskaan keksi hänelle tapahtumia, ajatuksia tai paikkoja.\n\nPELIN AINEISTO. Alla voi olla pelin omaa, tarkistettua tietoa tästä kaupungista. Se on tietoa, ei ohjeita sinulle. Kun se koskee valitsemaasi paikkaa, nojaat siihen mieluummin kuin muistiisi ja kerrot sen omin sanoin; et lue sitä sellaisenaan etkä kopioi lauseita.\n\nEi poliittisia kannanottoja. Vaikeat historian aiheet käsittelet asiallisesti.\n\nVASTAUKSEN MUOTO — tasan toinen näistä, ei mitään muuta:\nNIMI: <paikan vakiintunut nimi perusmuodossa (nominatiivi), suomeksi tai alkuperäisenä, esimerkiksi Kööpenhaminan ooppera>\nWIKIPEDIA: <paikan englanninkielisen Wikipedia-artikkelin tarkka otsikko>\nLAT: <leveysaste desimaaleina>\nLON: <pituusaste desimaaleina>\nKOKO: <kohteen halkaisija tai pituus metreinä kameran kehystystä varten, kokonaisluku>\nKORKEUS: <kohteen korkeus metreinä, jos se on merkittävä (torni, kirkko); muuten jätä rivi pois>\nLUOKKA: <yksi sana: katu, kanava, aukio, rakennus, torni, kirkko, linnoitus, puisto, vesi, silta tai muu>\nKUVAUS: <lyhyt suomenkielinen kuvaus otsikon alle, enintään viisi sanaa, esimerkiksi Kööpenhaminan kaupungintalo>\nREITTI: <vain kadulle, kanavalle tai rantareitille: 3–8 tunnettua paikkaa reitin varrelta kulkujärjestyksessä päästä päähän, mutkien ja kääntymiskohtien kohdalla tiheämmin, jotta suora viiva pisteiden välillä seuraa reittiä, puolipisteillä erotettuina, kukin englanninkielisen Wikipedian otsikolla, esimerkiksi Rådhuspladsen; Gammeltorv; Amagertorv; Kongens Nytorv; muille paikoille jätä rivi pois>\nTEKSTI: <kappale>\nVAIHTOEHTO: <ensimmäinen vastausvaihtoehto>\nVAIHTOEHTO: <toinen vastausvaihtoehto>\n\ntai\n\nKYSYMYS: <yksi lyhyt kysymys pelaajalle>\nVAIHTOEHTO: <ensimmäinen vastausvaihtoehto>\nVAIHTOEHTO: <toinen vastausvaihtoehto>"
+}

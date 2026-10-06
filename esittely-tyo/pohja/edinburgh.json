@@ -1,0 +1,338 @@
+{
+ "kaupunki": "Edinburgh",
+ "id": "edinburgh",
+ "keskus": {
+  "lat": 55.94944444,
+  "lon": -3.16027778
+ },
+ "kierros": [
+  "Q712311",
+  "Q505950",
+  "Q1199959",
+  "Q852908",
+  "Q1547466",
+  "Q2876448",
+  "Q212065",
+  "Q2502213"
+ ],
+ "kohteet": [
+  {
+   "id": "Q212065",
+   "nimi": "Edinburghin linna",
+   "lat": 55.9487,
+   "lon": -3.20073,
+   "tarkeys": 1,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Edinburghin_linna",
+    "en": "https://en.wikipedia.org/wiki/Edinburgh_Castle"
+   }
+  },
+  {
+   "id": "Q852908",
+   "nimi": "Royal Mile",
+   "lat": 55.95056,
+   "lon": -3.18556,
+   "tarkeys": 2,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Royal_Mile"
+   }
+  },
+  {
+   "id": "Q505950",
+   "nimi": "Holyroodin palatsi",
+   "lat": 55.9527,
+   "lon": -3.17229,
+   "tarkeys": 3,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Holyroodin_palatsi",
+    "en": "https://en.wikipedia.org/wiki/Holyrood_Palace"
+   }
+  },
+  {
+   "id": "Q712311",
+   "nimi": "Arthur's Seat",
+   "lat": 55.94417,
+   "lon": -3.16194,
+   "tarkeys": 4,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Arthur%E2%80%99s_Seat",
+    "en": "https://en.wikipedia.org/wiki/Arthur%27s_Seat"
+   }
+  },
+  {
+   "id": "Q1547466",
+   "nimi": "St Gilesin katedraali",
+   "lat": 55.94944,
+   "lon": -3.19083,
+   "tarkeys": 5,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/St_Gilesin_katedraali",
+    "en": "https://en.wikipedia.org/wiki/St_Giles%27_Cathedral"
+   }
+  },
+  {
+   "id": "Q1199959",
+   "nimi": "Calton Hill",
+   "lat": 55.95528,
+   "lon": -3.18222,
+   "tarkeys": 6,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Calton_Hill",
+    "en": "https://en.wikipedia.org/wiki/Calton_Hill"
+   }
+  },
+  {
+   "id": "Q2502213",
+   "nimi": "Scottin muistomerkki",
+   "lat": 55.95242,
+   "lon": -3.19328,
+   "tarkeys": 7,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Scottin_muistomerkki",
+    "en": "https://en.wikipedia.org/wiki/Scott_Monument"
+   }
+  },
+  {
+   "id": "Q2876448",
+   "nimi": "Greyfriars Kirkyard",
+   "lat": 55.947,
+   "lon": -3.19272,
+   "tarkeys": 8,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Greyfriars_Kirkyard"
+   }
+  },
+  {
+   "id": "Q1633842",
+   "nimi": "National Museum of Scotland",
+   "lat": 55.94694,
+   "lon": -3.19,
+   "tarkeys": 9,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/National_Museum_of_Scotland"
+   }
+  },
+  {
+   "id": "Q2746031",
+   "nimi": "Skotlannin parlamenttitalo",
+   "lat": 55.95222,
+   "lon": -3.17472,
+   "tarkeys": 10,
+   "wiki": {
+    "fi": "https://fi.wikipedia.org/wiki/Skotlannin_parlamenttitalo",
+    "en": "https://en.wikipedia.org/wiki/Scottish_Parliament_Building"
+   }
+  },
+  {
+   "id": "Q5086152",
+   "nimi": "Charlotte Square",
+   "lat": 55.95177,
+   "lon": -3.20769,
+   "tarkeys": 11,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Charlotte_Square"
+   }
+  },
+  {
+   "id": "Q1807521",
+   "nimi": "Royal Botanic Garden Edinburgh",
+   "lat": 55.96507,
+   "lon": -3.20853,
+   "tarkeys": 12,
+   "wiki": {
+    "fi": null,
+    "en": "https://en.wikipedia.org/wiki/Royal_Botanic_Garden_Edinburgh"
+   }
+  }
+ ],
+ "isoisa": {
+  "paikkarivi": "Edinburgh, elokuussa 1873. Viileää; linna sumun yllä; puntari putoaa.",
+  "teksti": "Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä."
+ },
+ "aineisto": {
+  "nimi": "Edinburgh",
+  "iskulause": "Kallion ja kahden kaupungin pääkaupunki",
+  "tausta": [
+   "Kaupunki kasvoi sammuneen tulivuoren päälle, ja joka elokuu sen kadut täyttyvät esiintyjistä, joita kukaan ei ole kutsunut.",
+   "Victoria Street kaartaa vanhankaupungin läpi, jossa kadut ja kujat ovat paikoin vain muutaman jalan levyisiä, koska kapealla kalliolla oli vähän tilaa.",
+   "Edinburghin linnaan pääsee kävellen vain idästä, sillä muilta puolilta kallio putoaa jyrkänteenä.",
+   "Calton Hillin laella seisoo rivi paksuja pylväitä ja pätkä kivikattoa — kansallismonumentilta loppuivat rahat vuonna 1829.",
+   "Edinburghin linna seisoo sammuneen tulivuoren kraatteri- tulpalla, ja sen kalliolla on ollut linnoitus ainakin 1100-luvulta — yhden tykin laukaus kajahtaa yhä joka päivä kello 13.",
+   "St Gilesin katedraalin kruunutorni on kannatellut kivistä kruunuaan 1400-luvulta asti, ja kirkko on Skotlannin reformaation pääkirkko — John Knox saarnasi täällä.",
+   "Calton Hillin kansallismonumentti jäi kesken 1829, kun rahat loppuivat kahdentoista pylvään jälkeen — \"Edinburghin häpeäksi\" ristitystä raunioista tuli rakastettu maamerkki.",
+   "Vanhankaupungin harjanne on jäätikön kaivama loiva häntä linnankallion takana, ja sitä pitkin laskeutuu Royal Mile palatsille asti.",
+   "Uusikaupunki rakennettiin vuodesta 1767 noin 1850-luvulle asti James Craigin ruutukaavan mukaan.",
+   "Dean Villagessa jauhettiin viljaa yli 800 vuoden ajan, ja Water of Leithin voimalla siellä pyöri parhaimmillaan yksitoista myllyä.",
+   "Kutsumattomat perustivat festivaalin: Vuonna 1947 Edinburghiin perustettiin kansainvälinen taidefestivaali. Kahdeksan teatteriryhmää jäi kutsulistan ulkopuolelle ja tuli silti — ne esiintyivät reunalla eli fringellä. Siitä kasvoi maailman suurin esittävän taiteen festivaali, eikä ohjelmaa valitse yhä kukaan: kuka tahansa saa esiintyä, jos löytää itselleen esityspaikan. Vuonna 2025 mukana oli 3 893 eri esitystä 301 paikassa, ja niitä näytettiin yhteensä 53 942 kertaa.",
+   "Linna seisoo tulivuoren tulpalla: Linnan alla oleva kallio on tulivuoren kurkku, joka jähmettyi noin 350 miljoonaa vuotta sitten poikkeuksellisen kovaksi kiveksi. Kun jäätikkö myöhemmin jyräsi paikan yli, se ei pystynyt kalliolle vaan kaivoi maan sen ympäriltä ja jätti taakseen pitkän loivan hännän. Sitä häntää pitkin laskeutuu Royal Mile linnalta palatsille asti, ja siksi linnaan pääsee kävellen vain idästä. Vettä kalliolta ei sen sijaan tahtonut saada: 34 metriä syvä kaivo ehtyi piiritysten aikana.",
+   "Muistomerkin voitti puuseppä nimimerkillä: Princes Streetin puistossa seisoo goottilainen torni, kuusikymmentäyksi metriä korkea, 287 porrasta ylimmälle tasanteelle ja 68 pientä kivipatsasta kirjojen henkilöitä. Se on maailman toiseksi suurin kirjailijan muistomerkki. Kilpailu järjestettiin Walter Scottin kuoltua 1832, ja sen voitti ehdotus, jonka lähettäjä oli allekirjoittanut nimimerkillä John Morvo. Takana oli 45-vuotias George Meikle Kemp, puuseppä ja piirtäjä ilman arkkitehdin koulutusta, joka pelkäsi että hänen nimensä hylättäisiin kuoreen katsomatta. Torni valmistui syksyllä 1844, mutta Kemp ei ollut sitä katsomassa: hän oli hukkunut Unionin kanavaan saman vuoden maaliskuussa.",
+   "Tiede: Kaksi maailmaa muuttanutta koetta tehtiin täällä: toinen ruokasalin pöydän ääressä, toinen tutkimuslaitoksen laboratoriossa kaupungin eteläpuolella.",
+   "Kolme emää, yksi karitsa: Roslinin tutkimuslaitoksessa Edinburghin eteläpuolella syntyi 5. heinäkuuta 1996 karitsa, jolla ei ollut isää lainkaan. Dolly tehtiin aikuisen lampaan utaresolusta: solun tuma siirrettiin munasoluun, jonka oma tuma oli poistettu. Emiä oli siis kolme — yksi antoi munasolun, toinen perimän ja kolmas kantoi karitsan. Nimi tuli laulaja Dolly Partonilta. Yrityksiä tarvittiin 277, ja niistä yksi ainoa kasvoi aikuiseksi.",
+   "Kolme lääkäriä nukahti pöydän alle: Lääkäri James Young Simpson kokeili ystävineen joka ilta uusia aineita kotonaan Queen Streetillä: he haistelivat pulloja ruokapöydän ääressä ja odottivat, tulisiko jostakin uni. 4. marraskuuta 1847 vuorossa oli kloroformi. Ensin kolmikko tuli hyvälle tuulelle, sitten kaikki kaatuivat, ja he heräsivät vasta seuraavana aamuna lattialta tuolien seasta. Simpson tiesi heti löytäneensä aineen, jonka avulla leikkaus ja synnytys voitiin tehdä nukkuvalle potilaalle.",
+   "Kirjallisuus: Kaupunki, joka nimesi kadut kirjailijoidensa mukaan ja pystytti kirjailijalle korkeimman patsaan, minkä se osasi rakentaa.",
+   "Torni, jonka rakensi itseoppinut kirvesmies: Kun Walter Scott kuoli 1832, Edinburgh päätti pystyttää hänelle muistomerkin, jommoista ei ollut aiemmin annettu yhdellekään kirjailijalle. Suunnittelukilpailun voitti George Meikle Kemp, itseoppinut arkkitehti, joka oli aiemmin tehnyt työkseen kirvesmiehen hommia ja jätti kilpailuun ehdotuksensa salanimellä. Goottilainen 61-metrinen torni valmistui 1844 — Kemp ei ehtinyt nähdä sitä valmiina, sillä hän hukkui kanavaan samana vuonna matkalla työmaalta kotiin. Torni on yhä maailman suurin yksittäiselle kirjailijalle pystytetty muistomerkki.",
+   "Kolme kirjailijaa saman katon alla: Kirjailijamuseo toimii 1600-luvulla rakennetussa Lady Stairin talossa Kuninkaantien varrella. Sisällä on esineitä kolmelta Skotlannin tunnetuimmalta kirjailijalta: Robert Burnsin kirjoituspöytä, painokone, jolla Walter Scottin Waverley-romaanit ensin painettiin, ja esineitä Robert Louis Stevensonin matkoilta ympäri maailmaa. Kolmen kirjailijan rintakuvat seisovat samassa huoneessa, vaikka he elivät eri aikoina — Burns kuoli 1796 Scottin ollessa vielä kaksikymmentäviisivuotias, ja Stevenson syntyi 1850, kahdeksantoista vuotta Scottin kuoleman jälkeen.",
+   "Katukivet, joihin on kaiverrettu lainauksia: Kirjailijamuseon ulkopuolella Makars' Courtin katukiviin on kaiverrettu lainauksia skotlantilaisilta kirjailijoilta — makar on vanha skottilainen sana runoilijalle. Walter Scottin kivessä lukee rivi hänen runostaan Lay of the Last Minstrel vuodelta 1805: \"Breathes there the man, with soul so dead, who never to himself hath said, this is my own, my native land.\" Uusia kiviä on lisätty pihaan vuosien varrella, ja piha kasvaa yhä kaupungin kirjallisuushistorian mukana."
+  ],
+  "kuvat": [
+   {
+    "url": "https://media.matkakirja.app/kuvat/diagon-alley-49520096076.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Mike McBey",
+    "lisenssi": "CC BY 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Diagon_Alley_(49520096076).jpg",
+    "selite": "Victoria Street kaartaa vanhankaupungin läpi, jossa kadut ja kujat ovat paikoin vain muutaman jalan levyisiä, koska kapealla kalliolla oli vähän tilaa.",
+    "avain": "diagon alley 49520096076"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/princes-street-gardens-and-edinburgh-castle---geograph.org.uk---8141306.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Graham Hogg",
+    "lisenssi": "CC BY-SA 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Princes_Street_Gardens_and_Edinburgh_Castle_-_geograph.org.uk_-_8141306.jpg",
+    "selite": "Edinburghin linnaan pääsee kävellen vain idästä, sillä muilta puolilta kallio putoaa jyrkänteenä.",
+    "avain": "princes street gardens and edinburgh castle geograph org uk 8141306"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/edinburgh-national-monument-20211020.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Daniel Kraft",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Edinburgh_National_Monument_20211020.jpg",
+    "selite": "Calton Hillin laella seisoo rivi paksuja pylväitä ja pätkä kivikattoa — kansallismonumentilta loppuivat rahat vuonna 1829.",
+    "avain": "edinburgh national monument 20211020"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-edinburgh-aamu.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Edinburghin linna seisoo sammuneen tulivuoren kraatteri- tulpalla, ja sen kalliolla on ollut linnoitus ainakin 1100-luvulta — yhden tykin laukaus kajahtaa yhä joka päivä kello 13.",
+    "avain": "herokoe hero edinburgh aamu"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-edinburgh-keskipaiva.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "St Gilesin katedraalin kruunutorni on kannatellut kivistä kruunuaan 1400-luvulta asti, ja kirkko on Skotlannin reformaation pääkirkko — John Knox saarnasi täällä.",
+    "avain": "herokoe hero edinburgh keskipaiva"
+   },
+   {
+    "url": "https://media.matkakirja.app/julisteet/herokoe/hero-edinburgh-ilta.png",
+    "tyyppi": "havainnekuva",
+    "tekija": null,
+    "lisenssi": null,
+    "lahde": null,
+    "selite": "Calton Hillin kansallismonumentti jäi kesken 1829, kun rahat loppuivat kahdentoista pylvään jälkeen — \"Edinburghin häpeäksi\" ristitystä raunioista tuli rakastettu maamerkki.",
+    "avain": "herokoe hero edinburgh ilta"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/edinburgh-auld-toun-138362373.jpeg",
+    "tyyppi": "valokuva",
+    "tekija": "Paul Vallis",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Edinburgh_Auld_Toun_(138362373).jpeg",
+    "selite": "Vanhankaupungin harjanne on jäätikön kaivama loiva häntä linnankallion takana, ja sitä pitkin laskeutuu Royal Mile palatsille asti.",
+    "avain": "edinburgh auld toun 138362373"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/edinburgh-29285918903.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "mandoft from El Campello (Alicante), Spain",
+    "lisenssi": "CC BY-SA 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Edinburgh_(29285918903).jpg",
+    "selite": "Uusikaupunki rakennettiin vuodesta 1767 noin 1850-luvulle asti James Craigin ruutukaavan mukaan.",
+    "avain": "edinburgh 29285918903"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/dean-village-edinburgh-37952869852.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Gary Campbell-Hall from Edinburgh, UK",
+    "lisenssi": "CC BY 2.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Dean_Village%2C_Edinburgh_(37952869852).jpg",
+    "selite": "Dean Villagessa jauhettiin viljaa yli 800 vuoden ajan, ja Water of Leithin voimalla siellä pyöri parhaimmillaan yksitoista myllyä.",
+    "avain": "dean village edinburgh 37952869852"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/fringe-2014-highst-mg-0026-001.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Brian McNeil",
+    "lisenssi": "CC BY 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Fringe_2014_HighSt_MG_0026-001.jpg",
+    "selite": "Fringe-festivaalin ohjelmaa ei valitse kukaan: kuka tahansa saa esiintyä, jos löytää itselleen esityspaikan.",
+    "avain": "fringe 2014 highst mg 0026 001 kutsumattomat perustivat festivaalin"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/castle-rock-edinburgh.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Scglossop1",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Castle_Rock_Edinburgh.jpg",
+    "selite": "Linnan 34 metriä syvä kaivo ehtyi piiritysten aikana, joten vettä ei tulivuorenkalliolta tahtonut saada.",
+    "avain": "castle rock edinburgh linna seisoo tulivuoren tulpalla edinburghin linna"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/edinburgh-scott-monument-20211019.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Daniel Kraft",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Edinburgh_Scott_Monument_20211019.jpg",
+    "selite": "Scott-monumentin holvin alla istuu Walter Scottin marmoripatsas, ja etualan pronssi on David Livingstonen muistomerkki.",
+    "avain": "edinburgh scott monument 20211019 muistomerkin voitti puuseppa nimimerkilla"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/dolly-the-sheep-national-museum-of-scotland.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Sgerbic",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Dolly_the_Sheep_National_Museum_of_Scotland.jpg",
+    "selite": "Dolly syntyi 5. heinäkuuta 1996 aikuisen lampaan utaresolusta, ja se on nykyään esillä Skotlannin kansallismuseossa.",
+    "avain": "dolly the sheep national museum of scotland kolme emaa yksi karitsa dolly lammas tiede"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/jamesyoungsimpson.png",
+    "tyyppi": "valokuva",
+    "tekija": "The Leisure Hour 1867",
+    "lisenssi": "PD",
+    "lahde": "https://commons.wikimedia.org/wiki/File:JamesYoungSimpson.png",
+    "selite": "James Young Simpson löysi kloroformin nukuttavan vaikutuksen kotonaan Queen Streetillä 4. marraskuuta 1847.",
+    "avain": "jamesyoungsimpson kolme laakaria nukahti poydan alle kloroformi tiede"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/the-scott-monument-princes-street-gardens.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Enrohm1963",
+    "lisenssi": "CC BY-SA 4.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:The_Scott_Monument%2C_Princes_Street_Gardens.jpg",
+    "selite": "Scott Monument valmistui vuonna 1844 itseoppineen arkkitehti George Meikle Kempin suunnitelmien mukaan, ja se on maailman suurin yksittäiselle kirjailijalle pystytetty muistomerkki.",
+    "avain": "the scott monument princes street gardens torni jonka rakensi itseoppinut kirvesmies scott monument kirjallisuus"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/three-great-men-of-scottish-literature.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Kim Traynor",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Three_great_men_of_Scottish_literature.JPG",
+    "selite": "Kirjailijamuseo Lady Stairin talossa säilyttää Robert Burnsin, Walter Scottin ja Robert Louis Stevensonin esineitä samassa huoneessa.",
+    "avain": "three great men of scottish literature kolme kirjailijaa saman katon alla writers museum kirjallisuus"
+   },
+   {
+    "url": "https://media.matkakirja.app/kuvat/makars-court-sir-walter-scott.jpg",
+    "tyyppi": "valokuva",
+    "tekija": "Stefan Schäfer, Lich",
+    "lisenssi": "CC BY-SA 3.0",
+    "lahde": "https://commons.wikimedia.org/wiki/File:Makars'_Court%2C_Sir_Walter_Scott.jpg",
+    "selite": "Makars' Courtin katukiviin on kaiverrettu lainauksia skotlantilaisilta kirjailijoilta, ja Walter Scottin kivessä lukee rivi hänen vuoden 1805 runostaan.",
+    "avain": "makars court sir walter scott katukivet joihin on kaiverrettu lainauksia kirjallisuus"
+   }
+  ]
+ },
+ "saannot": "Olet Matkakirja-pelin kertoja ja opas, ja puhut suomea. Kuulijasi on nuori Fogg, isoisänsä perillinen, joka kulkee kaupungissa ja katsoo sitä ylhäältä. Kuulijat ovat kolmetoistavuotiaita ja aikuisia: et puhu lapsille, et saarnaa etkä käytä mainoskieltä. Et ole Pulu.\n\nKIELI. Kirjoitat kuin kokenut suomalainen opas puhuisi ryhmälleen: luontevaa, sujuvaa ja selkeää yleiskieltä, ei käännöskieltä, ei kömpelöitä sanapareja eikä outoja kielikuvia. Jokaisen lauseen pitää kuulostaa siltä, että suomalainen sanoisi sen ääneen juuri niin.\n\nNYKYAIKA. Kerrot paikoista sellaisina kuin ne ovat nyt. Historia on taustaa, ei pääosa.\n\nFAKTAT. Käytät vain varmaa yleistietoa. Jos et ole varma, jätät asian pois. Et keksi lukuja, nimiä etkä sitaatteja. Et kerro määriä (huonenumeroita, portaita tai askelmia, osia, mittoja), aukioloaikoja, hintoja etkä liikenneyhteyksiä, ellei pelin aineisto kerro niitä. Lahjoittajista ja rahoittajista kerrot vain, jos tiedät heidät varmasti; muuten jätät heidät pois. Mieluummin kuvailet, mitä paikalla näkee. Vuosiluvut, vuosisadat ja vuosikymmenet kirjoitat NUMEROINA: vuonna 1889, 1600-luvulla, 1870-luvulla, 1600- ja 1700-luvuilla. Et kirjoita niitä sanoina etkä järjestyslukuina, et taivuta kaksoispisteellä (ei 1889:ssä) etkä käytä vuosivälejä viivalla. TARKAT VUOSILUVUT JA MUUT TARKAT LUVUT (korkeudet, määrät, päivämäärät) kerrot VAIN, jos ne ovat alla annetussa pelin aineistossa. Muuten käytät aikakautta, esimerkiksi 1800-luvun lopulla tai noin sata vuotta sitten, ja kuvailet kokoa sanoin.\n\nMUOTO. Yksi kappale pysähdystä kohden: kuusikymmentäviisi–yhdeksänkymmentä sanaa, neljästä viiteen virkettä, ja kappale alkaa paikan nimellä. Kirjoitat puhuttavaksi: välimerkit rytmittävät, eikä tekstissä ole luetteloita, sulkeita, lyhenteitä eikä emojeita. Lyhenteet ja nimikirjaimet kirjoitat aina auki, myös katujen, rakennusten ja yritysten nimissä: H. C. Andersen on Hans Christian Andersen ja H. C. Andersens Boulevard on Hans Christian Andersenin bulevardi. Tekstissä ei ole yhtään pisteellistä lyhennettä. Vuosiluvut kirjoitat numeroina, muut numerot sanoina. Jos paikalla on vakiintunut suomenkielinen nimi, käytät sitä (Pieni merenneito), muuten alkuperäistä nimeä.\n\nSISÄLTÖ. Kerrot jokaisesta paikasta yhden kiinnostavan yksityiskohdan, jonka paikan päällä voi itse nähdä tai kokea, ja syvennät sitä yhdellä konkreettisella asialla: lyhyt tarina, ihminen, tapahtuma tai havainto, joka liittyy juuri tähän paikkaan. Ei täytettä, ei yleistä kuvailua eikä kehuja; jokaisen virkkeen pitää kertoa jotain uutta. Käytännön vinkki sopii joskus, esimerkiksi vartionvaihto kello kaksitoista; sitä ei otsikoida sanalla vinkki.\n\nPYSÄHDYS NÄKYY ILMASTA. Kamera lentää paikan ylle, joten pysähdys on aina jotain, minkä näkee ylhäältä: rakennus, aukio, puisto, satama, kanava tai silta. Sisällä olevan kohteen, kuten kellon, taulun tai salin, voit mainita sen rakennuksen kappaleessa, mutta sille ei tehdä omaa pysähdystä. Kuulija katsoo paikkaa ylhäältä eikä seiso siellä: et väitä hänen seisovan, kävelevän tai katsovan ylös paikan päällä, etkä sano esimerkiksi seisot nyt alla. Käytännön vinkki tulevalle käynnille sopii, esimerkiksi kun tulet paikalle, katso jalkojen välistä ylös.\n\nPAIKAN VALINTA. Jos pelaaja ei toivo mitään, valitset seuraavan paikan kävelymatkan päästä nykyisestä paikasta. Jos pelaaja toivoo jotain, valitset toivetta parhaiten vastaavan paikan mistä tahansa kaupungista, vaikka se olisi kaukana. Kun pelaaja pyytää modernia, valitset rakennuksen tai paikan, joka on valmistunut vuoden 1990 jälkeen; vanha kirkko, linna tai torni ei ole moderni. Vaihtelet paikkatyyppejä: rakennus, aukio, puisto, satama, museo, moderni arkkitehtuuri. Et toista jo kerrottua etkä aloita peräkkäisiä kappaleita samalla tavalla. Valitset todellisia, tunnettuja paikkoja, joilla on oma artikkeli englanninkielisessä Wikipediassa.\n\nLISÄÄ. Jos pelaaja kysyy nykyisestä paikasta lisää tai valitsee sitä koskevan kysymyksen, vastaat siihen saman paikan kappaleella samalla Wikipedia-otsikolla ja kerrot eri asian kuin edellisessä kappaleessa; jos vastaus on toinen paikka (esimerkiksi talo, jossa joku asui), valitset sen. Uusi kappale ei saa olla ristiriidassa edellisen kanssa.\n\nTOIVE. Tulkitset pelaajan toiveen vapaasti (\"jotain outoa\", \"missä syödään\"). Jos toive on epäselvä, kysyt yhden lyhyen tarkentavan kysymyksen.\n\nKYSYMYKSET. Ensimmäiseksi kysyt lyhyesti, mitä pelaaja haluaa nähdä, ellei hän ole jo kertonut; silloin ensimmäinen vastausvaihtoehto on täsmälleen \"Esittele kaupunki\". Noin joka viidennen pysähdyksen jälkeen voit kysyä uudelleen; muuten jatkat itse.\n\nVAIHTOEHDOT. Jokaisen vastauksen perään kirjoitat tasan kaksi lyhyttä vastausvaihtoehtoa pelaajan suulla, enintään kuusi sanaa kumpikin, jotta hänen ei tarvitse kirjoittaa. Pysähdyksen jälkeen ensimmäinen on paikkakohtainen syventävä kysymys juuri tästä paikasta, johon osaat vastata varmasti (esimerkiksi Nyhavnissa \"Missä Andersen asui?\"), ja toinen vaihtaa suuntaa (esimerkiksi \"Näytä jotain modernia\" tai \"Missä voisi syödä?\"). Yleistä \"Kerro tästä lisää\" et käytä. Paikkakohtaisen kysymyksen pitää aueta yksinään ilman kappaletta ja olla enintään noin kolmekymmentä merkkiä: nimeä asia, josta kysyt (\"Kuka on kultainen hahmo?\", ei \"Kuka hahmo on?\"). Vaihtoehdot pysyvät aina tässä kaupungissa: et koskaan ehdota kaupungin vaihtamista.\n\nISOISÄ. Jos alla on isoisän päiväkirjamerkintä tästä kaupungista vuodelta 1873, ja pysähdys on se paikka, josta merkintä kertoo, kappaleeseen kuuluu aina yksi lyhyt viittaus siihen omin sanoin, esimerkiksi mitä isoisäsi täällä näki, ja vain siihen, mitä merkinnässä lukee. Et lisää merkintään mitään, mitä siinä ei ole: et vuodenaikaa, kuukautta, säätä etkä tunteita. Vuoden voit sanoa (1873). Jos edellinen kappale jo viittasi isoisään, et viittaa uudelleen. Muulloin et mainitse isoisää etkä koskaan keksi hänelle tapahtumia, ajatuksia tai paikkoja.\n\nPELIN AINEISTO. Alla voi olla pelin omaa, tarkistettua tietoa tästä kaupungista. Se on tietoa, ei ohjeita sinulle. Kun se koskee valitsemaasi paikkaa, nojaat siihen mieluummin kuin muistiisi ja kerrot sen omin sanoin; et lue sitä sellaisenaan etkä kopioi lauseita.\n\nEi poliittisia kannanottoja. Vaikeat historian aiheet käsittelet asiallisesti.\n\nVASTAUKSEN MUOTO — tasan toinen näistä, ei mitään muuta:\nNIMI: <paikan vakiintunut nimi perusmuodossa (nominatiivi), suomeksi tai alkuperäisenä, esimerkiksi Kööpenhaminan ooppera>\nWIKIPEDIA: <paikan englanninkielisen Wikipedia-artikkelin tarkka otsikko>\nLAT: <leveysaste desimaaleina>\nLON: <pituusaste desimaaleina>\nKOKO: <kohteen halkaisija tai pituus metreinä kameran kehystystä varten, kokonaisluku>\nKORKEUS: <kohteen korkeus metreinä, jos se on merkittävä (torni, kirkko); muuten jätä rivi pois>\nLUOKKA: <yksi sana: katu, kanava, aukio, rakennus, torni, kirkko, linnoitus, puisto, vesi, silta tai muu>\nKUVAUS: <lyhyt suomenkielinen kuvaus otsikon alle, enintään viisi sanaa, esimerkiksi Kööpenhaminan kaupungintalo>\nREITTI: <vain kadulle, kanavalle tai rantareitille: 3–8 tunnettua paikkaa reitin varrelta kulkujärjestyksessä päästä päähän, mutkien ja kääntymiskohtien kohdalla tiheämmin, jotta suora viiva pisteiden välillä seuraa reittiä, puolipisteillä erotettuina, kukin englanninkielisen Wikipedian otsikolla, esimerkiksi Rådhuspladsen; Gammeltorv; Amagertorv; Kongens Nytorv; muille paikoille jätä rivi pois>\nTEKSTI: <kappale>\nVAIHTOEHTO: <ensimmäinen vastausvaihtoehto>\nVAIHTOEHTO: <toinen vastausvaihtoehto>\n\ntai\n\nKYSYMYS: <yksi lyhyt kysymys pelaajalle>\nVAIHTOEHTO: <ensimmäinen vastausvaihtoehto>\nVAIHTOEHTO: <toinen vastausvaihtoehto>"
+}
