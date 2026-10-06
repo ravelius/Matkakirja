@@ -100,7 +100,11 @@ namespace Matkakirja.Natiivi
             paneeliNostot.Add(vieritys);
             paneeliMaakunnat = Rakenne.El("mk-selite__paneeli", paneeli, PickingMode.Ignore);
             Maakunnat = new Maakunnat(kerros, paneeliMaakunnat);
-            MaakuntaKortti.VaistoMuuttui += v => paneeli.style.visibility = v ? Visibility.Hidden : StyleKeyword.Null;
+            // Maakuntalappu piiloon aina, kun PINNATTU PALKKI näkyy (maakuntakortin väistö tai pinnattu ikkuna pienenä; junan 146
+            // video 6.10.: palkki osui lapun päälle). Lappu palaa palkin poistuessa.
+            void PalkkiLapunTilalle() => paneeli.style.visibility = Pinnaus.Pienena ? Visibility.Hidden : StyleKeyword.Null;
+            MaakuntaKortti.VaistoMuuttui += _ => PalkkiLapunTilalle();
+            Pinnaus.Muuttui += PalkkiLapunTilalle;
             maakunnatAuki = MaakuntaKartta || PlayerPrefs.GetString(ValilehtiAvain, "") == "maakunnat";
             if (MaakuntaKartta)
             {

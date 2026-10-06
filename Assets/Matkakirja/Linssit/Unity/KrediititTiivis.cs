@@ -22,7 +22,7 @@ namespace Matkakirja.Natiivi
         public const string NapinTeksti = "Data sources";
         /// <summary>Logojen korkeus (pt; Googlen policy 16–19 dp, simu 5.10.: ~23 pt liian suuri), tyhjä logon sivuilla ja yllä (10 dp)
         /// ja alla (5 dp), sekä "Data sources" -napin kirjainkoko (pt) — Päätoimittaja 5.10. 20.5x.</summary>
-        public const float LogoPt = 18f, TyhjaSivuPt = 10f, TyhjaAlaPt = 5f, NappiPt = 11.5f;
+        public const float LogoPt = 18f, TyhjaSivuPt = 10f, TyhjaAlaPt = 5f, NappiPt = 11.5f, PopupPt = 11f;
 
         /// <summary>Paneelin yksikköä per iOS-piste: ruudun pikselit / paneelin korkeus ja pikseliä per piste dpi:stä (iPhone 3, iPad 2).</summary>
         static float YksikkoaPerPt(VisualElement juuri)
@@ -110,6 +110,11 @@ namespace Matkakirja.Natiivi
             }
             nappi.style.fontSize = NappiPt * pt;
             if (nappi.parent != on) on.Add(nappi);
+            // POPUPIN KIRJASINKOKO (LS1 junan 146 video 6.10.: Data sources -paneelin tekijätiedot hyvin suurella kirjasimella, peitti
+            // puolet ruudusta): Cesiumin paneeli on eri mittakaavassa kuin pelin UI, joten paneelin tekstit samaan pt-kokoon kuin nappi.
+            if (pop.resolvedStyle.display == DisplayStyle.Flex)
+                foreach (var t in pop.Query<Label>().ToList())
+                    if (Mathf.Abs(t.resolvedStyle.fontSize - PopupPt * pt) > 0.5f) t.style.fontSize = PopupPt * pt;
         }
     }
 }
