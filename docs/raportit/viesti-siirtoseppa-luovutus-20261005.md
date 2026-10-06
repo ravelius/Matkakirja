@@ -7,7 +7,7 @@ Worktreet: /Users/Shared/Claude/wt/proto-siirtoseppa-*. Käännös vain Julkaisi
 (oma UDID D5900D45 = siirtoseppa-iPad13, TYHJENNETTY 19.0x, appit asennettava uudelleen). Ei detachia simupaneelista.
 Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyokalut/todistusajo/simkosketus.m).
 
-## TILA 7.10. 00.4x (uusi tili, Opus 5.5 high)
+## TILA 7.10. 00.3x (uusi tili, Opus 5.5 high)
 
 - **Linna-149 183866ed + FACEIT 55ad6594 TODENNETTU** (D5900D45 00.16–00.29, A/V ±1 ms, 0 Exceptionia) → ehdotettu junaan 156,
   tulos Päätoimittajalle. Todisteet: proto-3d/lokit/siirtoseppa-l149v/{ennen,jalkeen}/tallenne-aanella.mp4 (+ tauko.png, veto.png),
