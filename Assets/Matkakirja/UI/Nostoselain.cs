@@ -88,7 +88,8 @@ namespace Matkakirja.Natiivi
         const float KapeaRivi = 360f;
 
         /// <summary>Ylärivin tiivistys 0–3 (1: askelnapit kapeat, 2: lisäksi AUTO ja NOSTOT ilman harvennusta, ryhmävälit pienemmiksi,
-        /// 3: askelnapit 22 pt ja avaajan sivuvälit pois).</summary>
+        /// 3: askelnapit 22 pt ja avaajan sivuvälit pois, 4: avaajan ▾ pois; juna 155 iPhonen vaakakortti 304 pt: MAAKUNNAT-rivillä
+        /// › ja AUTO jäivät portaalla 3 päällekkäin −11 pt, ▾ vapauttaa ~15 pt; avaaja aukeaa yhä napautuksesta).</summary>
         int tiivis;
         float tiivisLeveys;
 
@@ -113,12 +114,13 @@ namespace Matkakirja.Natiivi
             if (float.IsNaN(lev) || lev <= 0) return;
             float vali = PieninVali();
             int ennen = tiivis;
-            if (vali < -0.5f && tiivis < 3) { tiivis++; tiivisLeveys = lev; }
+            if (vali < -0.5f && tiivis < 4) { tiivis++; tiivisLeveys = lev; }
             else if (tiivis > 0 && lev > tiivisLeveys + 40f) tiivis = 0;   // rivi leveni selvästi: takaisin väljäksi ja uusi tarkistus
             if (tiivis == ennen) return;
             rivi.EnableInClassList("mk-nostoselain--tiivis1", tiivis >= 1);
             rivi.EnableInClassList("mk-nostoselain--tiivis2", tiivis >= 2);
             rivi.EnableInClassList("mk-nostoselain--tiivis3", tiivis >= 3);
+            rivi.EnableInClassList("mk-nostoselain--tiivis4", tiivis >= 4);
             Debug.Log($"MATKAKIRJA nostoselain: ylärivi tiivis {tiivis} (pienin väli {vali:0.0} pt, leveys {lev:0} pt)");
         }
 
@@ -237,6 +239,7 @@ namespace Matkakirja.Natiivi
                 // Uusi teksti: leveysbudjetti alusta (GeometryChanged tiivistää uudelleen tarvittaessa).
                 tiivis = 0;
                 rivi.RemoveFromClassList("mk-nostoselain--tiivis1"); rivi.RemoveFromClassList("mk-nostoselain--tiivis2"); rivi.RemoveFromClassList("mk-nostoselain--tiivis3");
+                rivi.RemoveFromClassList("mk-nostoselain--tiivis4");
             }
             if (muu != null)
             {

@@ -452,3 +452,8 @@
 .mk-nostoselain--tiivis3 .mk-nostoselain__avaaja {
     padding: 0;
 }
+
+/* Tiivistysporras 4 (juna 155, iPhonen vaakakortti 304 pt, MAAKUNNAT: › ja AUTO päällekkäin portaalla 3): avaajan ▾ pois. */
+.mk-nostoselain--tiivis4 .mk-nostoselain__avaajaikoni {
+    display: none;
+}
