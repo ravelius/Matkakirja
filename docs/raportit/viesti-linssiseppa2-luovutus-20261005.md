@@ -3,6 +3,20 @@
 Edellinen: viesti-linssiseppa2-luovutus-20261004.md. Päätoimittaja local_5df52e10-10e4-4b72-9554-0049db300dfe.
 VUOROT: käännös- ja simuvuoro aina Julkaisijalta ("NYT käännös", "SIMU NYT"). Ilmoita: "KÄÄNNETTY <sha>, lukko vapaa" ja "simu vapaa".
 
+## TILA 6.10. 18.4x (uusin)
+- Juliste 4bac4faa ja lasizoom e0b5f049 on kuitattu junaan 152. Juliste meni omistajalle, ja hänen OK:llaan se lähtee 152:ssa.
+- Vapaa tila, Eiffel: haara linssiseppa2/opas-vapaa-2 2be5ec83 (worktree wt/proto-linssiseppa2-vapaa2, mika-152 d3d7104e:n
+  päällä).
+  - Syvyysluotain: OpasLahiluotain + Varjostimet/OpasSyvyys.
+  - Lähin este < 40 m → nousu, vaakavauhti enintään (este − 20) m/s, ja näytteiden ollessa kesken ei laskeuduta.
+  - Testit 744 ja unity-tarkistus 0. Merge-pyyntö on LS1:llä.
+  - Käännös odottaa T7-siirron levyvapautusta (Päätoimittaja). Sen jälkeen pyydetään käännös ja Pelikoodarin Eiffel-toisto
+    (skenaario 14). Todennäköisesti juna 153.
+- S2-pari, juliste ja ISS-still ajetaan koeappista 7e91ce76: scratchpad/aja-152c.sh, ulostulo lokit/linssiseppa2-koe152c/{s2,juliste}.
+  - Ajo odottaa lupaa: `touch scratchpad/simu-lupa-152c` vasta Julkaisijan SIMU NYT -viestin jälkeen.
+  - Sen jälkeen tehdään montaasi b151 (lokit/linssiseppa2-koe152/b151) vs. koe152c Päätoimittajalle ja ilmoitetaan "simu vapaa".
+- Pallolukko pysyy ulkona: Pelikoodari ei saanut vikaa toistumaan, joten se odottaa omistajan toistoa.
+
 ## ISS-ohjaamo, proto-haara linssiseppa2/iss-ohjaamo (worktree /Users/Shared/Claude/wt/proto-linssiseppa2-ohjaamo)
 Ohjaamo siirtyy junaan 143 (Päätoimittaja 02.36). Sen ehtona on, että kuusi maailmakuvaa hyväksytään.
 Kuvat lähtevät Päätoimittajalle vasta, kun olen tyytyväinen niihin: ei sumeutta, kiiloja eikä saumoja. Mukana Meksiko täysikokoisena.
