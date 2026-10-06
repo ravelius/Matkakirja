@@ -13,7 +13,7 @@ kuva 11a-takyt Elävä opas: täkynäkymä
 tap-teksti mk-linssirivi__nimi
 oleta 5 opas: täky [^0-9] -- täkyn napautus välittyi (1. täkyrivi; rivin säiliö ei piirry ui-puuhun)
 oleta 90 opas: saapui -- 1. kohde saapui
-oleta 30 opas: vastaus .*ääni ei|opas: saapui .*ääni ei -- kohde ilman ääni-urlia (ei generointia)
+oleta 30 opas: vastaus [0-9]+ -- kohteen vastaus workerilta (testiotsake: ääni vain R2:ssa valmiina, ei generointia, #4043)
 odota 4
 kuva 11b-kohde1 Elävä opas: 1. kohde
 tap-teksti mk-ohjausnappi#-1
@@ -32,7 +32,7 @@ kuva 11c-kaupungit Vaihda kohde: Alankomaiden kaupungit
 tap-teksti Amsterdam
 oleta 5 opas: kohde Amsterdam -- Amsterdam ENSIMMÄISELLÄ napautuksella (juna 144 FAIL)
 oleta 10 kaupunki vaihtuu → Amsterdam -- kaupunki vaihtui Amsterdamiin
-oleta 90 opas: vastaus .*ääni ei -- Amsterdamin vastaus workerilta ilman ääntä
+oleta 90 opas: vastaus [0-9]+ -- Amsterdamin vastaus workerilta (ääni vain valmiina R2:ssa, ei generointia)
 odota 6
 kuva 11d-amsterdam Elävä opas: Amsterdam
 linssi linssi pois
