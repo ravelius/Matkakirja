@@ -130,7 +130,7 @@ namespace Matkakirja.Linssit.IssKamera
                         a[i] = (float)MaskiAlfa(r, g, bl);
                         // Sävy GIBS:n omasta kirkkaudesta (0,55…1): pilven sisälle tekstuuri (Päätoimittaja 6.10.). Venytys 165…245
                         // (juliste 7e91ce76 Suomenlahti: pilvikansi on GIBS:ssä 208…235, vanha 120…240 jätti sen tasavalkoiseksi).
-                        b[i] = (byte)Math.Round(255 * Math.Max(0.55, Math.Min(1.0, 0.55 + 0.45 * ((0.3 * r + 0.55 * g + 0.15 * bl) - 165) / 80)));
+                        b[i] = (byte)Math.Round(255 * Math.Max(0.45, Math.Min(1.0, 0.45 + 0.55 * ((0.3 * r + 0.55 * g + 0.15 * bl) - 165) / 80)));
                         break;
                     }
                     if (a[i] >= 0)
@@ -257,7 +257,7 @@ namespace Matkakirja.Linssit.IssKamera
         (double alfa, double kirkkaus) OmaLahi(double lat, double lon, double pikseliM)
         {
             var (gx, gy) = Pikseli(lat, lon, Taso);
-            double a = Arvo(Alfa, gx, gy), k = Math.Max(0.55, Arvo(Kirkkaus, gx, gy));
+            double a = Arvo(Alfa, gx, gy), k = Math.Max(0.45, Arvo(Kirkkaus, gx, gy));
             if (a <= 0.01) return (a, k);
             // Laaja kuva (kuvan pikseli > 100 m; juliste 65fe6316: litteät terävärajaiset läntit): ei fraktaaliterävöintiä, vaan
             // pehmeä alfa GIBS-tiheydestä ja sävy auringon suunnasta koko pilven alalla (aurinkoa kohti kirkkaampi, varjopuoli tummempi).
@@ -269,14 +269,14 @@ namespace Matkakirja.Linssit.IssKamera
                 // Pinnanmuoto pilvikannen sisällä (Päätoimittaja 6.10. ilta, juliste 7e91ce76: merisumu tasainen valkoinen läntti):
                 // GIBS-kirkkaus korkeuskenttänä, aurinkoa kohti laskeva rinne valaistu ja poispäin varjossa.
                 double kohtiK = Arvo(Kirkkaus, gx + sx, gy + sy), takaK = Arvo(Kirkkaus, gx - sx, gy - sy);
-                double kuvio = Askel(0.2, 0.7, a) * Math.Max(-0.14, Math.Min(0.10, 1.6 * (takaK - kohtiK)));
+                double kuvio = Askel(0.2, 0.7, a) * Math.Max(-0.20, Math.Min(0.14, 2.6 * (takaK - kohtiK)));
                 // Sulkareuna (Päätoimittaja 6.10.: keskiosan pilvet teräväreunaisia; ilta: pehmeä reuna, ei tasaista maskia): alfa
                 // painotettuna keskiarvona kolmelta kehältä (0,8, 1,8 ja 3 px; juliste noin 2 kuvapikseliä → 5–6).
                 double r1 = Arvo(Alfa, gx + 0.8, gy) + Arvo(Alfa, gx - 0.8, gy) + Arvo(Alfa, gx, gy + 0.8) + Arvo(Alfa, gx, gy - 0.8);
                 double r2 = Arvo(Alfa, gx + 1.3, gy + 1.3) + Arvo(Alfa, gx - 1.3, gy + 1.3) + Arvo(Alfa, gx + 1.3, gy - 1.3) + Arvo(Alfa, gx - 1.3, gy - 1.3);
                 double r3 = Arvo(Alfa, gx + 3, gy) + Arvo(Alfa, gx - 3, gy) + Arvo(Alfa, gx, gy + 3) + Arvo(Alfa, gx, gy - 3);
                 double ka = (2 * a + r1 + 0.75 * r2 + 0.5 * r3) / 11;
-                return (Askel(0.0, 1.0, ka) * (0.7 + 0.3 * ka), Math.Max(0.5, Math.Min(1.0, k * (0.93 + 0.07 * a) + valoL + kuvio)));
+                return (Askel(0.0, 1.0, ka) * (0.7 + 0.3 * ka), Math.Max(0.42, Math.Min(1.0, k * (0.93 + 0.07 * a) + valoL + kuvio)));
             }
             if (Yksityiskohta == null) return (a, k);
             // GIBS-maski (~150–300 m/px) on kuvassa sumea möykky (simu 8eea083c Amazonia): reuna terävöitetään fraktaalikohinalla,
