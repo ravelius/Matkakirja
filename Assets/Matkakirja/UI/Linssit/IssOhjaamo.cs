@@ -43,7 +43,9 @@ namespace Matkakirja.Natiivi
         readonly VisualElement nopeusRivi;
         readonly Label kerroinT, nopeusT, valoT;
         float nopeusAsti = -1f;
-        public const float NopeusS = 3f, NopeusPt = 13f, ValoOsuus = 0.62f, VaroitusKerroin = 300f, TaysiKerroin = 1000f;
+        public const float NopeusS = 3f, NopeusPt = 13f, ValoOsuus = 0.70f, VaroitusKerroin = 300f, TaysiKerroin = 1000f;
+        /// <summary>LCD:n ×: 70 % koko ja hieman alemmas (VT323:n × on piirretty korotettuna).</summary>
+        public const string KertaMerkki = "<size=70%><voffset=-0.06em>×</voffset></size>";
         /// <summary>Valon nopeus km/h (c = 299 792,458 km/s).</summary>
         public const double ValoKmh = 299792.458 * 3600.0;
         /// <summary>Suomalainen lukumuoto ilman kulttuuritietoja (IL2CPP:ssä fi-FI voi puuttua): pilkku, tuhaterotin välilyönti.</summary>
@@ -824,7 +826,9 @@ namespace Matkakirja.Natiivi
         {
             var hetki = IssNyt.Kello();
             double kmh = IssNyt.NopeusKmh(IssNyt.KorkeusKm(hetki)) * kerroin;
-            kerroinT.text = Math.Round(kerroin).ToString("0", Fi) + "×";
+            // ×-merkki kuten asteikossa (Päätoimittaja 6.10.: VT323:n × näkyi isona korotettuna X:nä): pienempänä ja rivin
+            // keskilinjalla.
+            kerroinT.text = Math.Round(kerroin).ToString("0", Fi) + KertaMerkki;
             nopeusT.text = NopeusTeksti(kmh);
             string valo = ValoTeksti(kmh);
             valoT.text = valo ?? "";
@@ -832,7 +836,7 @@ namespace Matkakirja.Natiivi
             nopeusRivi.EnableInClassList("mk-issohjaamo__nopeusrivi--varoitus", kerroin >= VaroitusKerroin && kerroin < TaysiKerroin);
             nopeusRivi.EnableInClassList("mk-issohjaamo__nopeusrivi--vaara", kerroin >= TaysiKerroin);
             nopeusAsti = Time.unscaledTime + NopeusS;
-            Debug.Log($"MATKAKIRJA linssit: ohjaamon LCD {kerroinT.text} {nopeusT.text}{(valo != null ? " / " + valo : "")}");
+            Debug.Log($"MATKAKIRJA linssit: ohjaamon LCD {Math.Round(kerroin)}× {nopeusT.text}{(valo != null ? " / " + valo : "")}");
             PaivitaNopeusrivi();
             SovitaNopeus();
         }
@@ -861,7 +865,8 @@ namespace Matkakirja.Natiivi
             }
             for (int i = 0; i < 12; i++)
             {
-                float tarve = Lev(kerroinT, koko) + Lev(nopeusT, koko) + 6f * mittakaava;
+                float oikea = Mathf.Max(Lev(nopeusT, koko), valoT.style.display == DisplayStyle.None ? 0f : Lev(valoT, koko * ValoOsuus));
+                float tarve = Lev(kerroinT, koko) + oikea + 6f * mittakaava;
                 if (tarve <= leveys * 0.96f) break;
                 koko *= 0.92f;
             }
