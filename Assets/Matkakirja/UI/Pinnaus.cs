@@ -249,7 +249,7 @@ namespace Matkakirja.Natiivi
                 if (palkki.style.top.value.value != top) palkki.style.top = top;
                 if (palkki.style.right.value.value != oikea) palkki.style.right = oikea;
                 if (palkki.style.maxWidth.value.value != lev) palkki.style.maxWidth = lev;
-                palkki.style.minHeight = Tyylikirja.Nappi.Ohjaus;
+                if (palkki.style.minHeight.value.value != Tyylikirja.Nappi.Ohjaus) palkki.style.minHeight = Tyylikirja.Nappi.Ohjaus;
                 SovitaOtsikko(lev);
                 return;
             }
