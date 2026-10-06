@@ -715,12 +715,49 @@ namespace Matkakirja.Linssit.Astronautti
             lento = null;
             Iss.IssNyt.Simu.AsetaKerroin(kerroin);
             tietoAika = -1;
+            if (KaasuKerroin != kerroin) { KaasuKerroin = kerroin; KaasuKerroinVaihtui?.Invoke(kerroin); }
             if (kerroin != Kaasu)
             {
                 Kaasu = kerroin;
                 y?.Tehoste(KaasuTehoste, 1f);   // vivun pykälän aito naksahdus (Sisältökirjuri, Tehostetaulu)
                 KaasuVaihtui?.Invoke(kerroin);
             }
+            return true;
+        }
+
+        /// <summary>Kaasun portaaton kerroin 1…1000 (AsetaKaasuPortaaton; pykälillä sama kuin Kaasu).</summary>
+        public double KaasuKerroin { get; private set; } = 1;
+        /// <summary>Natiivi-UI:n nimellä: sama kuin KaasuKerroin.</summary>
+        public double KaasuArvo => KaasuKerroin;
+        /// <summary>Natiivi-UI:n nimellä: portaaton kaasu (sama kuin AsetaKaasuPortaaton; int-pykälä menee AsetaKaasu(int):lle).</summary>
+        public bool AsetaKaasu(double kerroin) => AsetaKaasuPortaaton(kerroin);
+        /// <summary>Portaaton kerroin vaihtui (Natiivi-UI: LCD:n kerroin ja nopeus).</summary>
+        public event Action<double> KaasuKerroinVaihtui;
+
+        /// <summary>
+        /// Portaaton kaasu (omistaja 6.10.: portaaton nopeuskahva 1×–1000×, Natiivi-UI): kerroin 1…1000 tästä hetkestä ilman hyppyä.
+        /// Kaasu (int) on suurin ylitetty pykälä (KaasuVaihtui); naksahdus soi vain pykälän ylityksessä.
+        /// </summary>
+        public bool AsetaKaasuPortaaton(double kerroin)
+        {
+            if (!Auki || double.IsNaN(kerroin)) return false;
+            var p = Iss.Simukello.Nopeudet;
+            kerroin = Math.Max(p[0], Math.Min(p[p.Length - 1], kerroin));
+            lento = null;
+            Iss.IssNyt.Simu.AsetaKerroin(kerroin);
+            tietoAika = -1;
+            bool muuttui = Math.Abs(kerroin - KaasuKerroin) > 1e-9;
+            KaasuKerroin = kerroin;
+            // Pykälä = suurin 1/10/100/1000, jonka kerroin on ylittänyt: naksahdus vain pykälän ylityksessä (Natiivi-UI 6.10.).
+            int pykala = p[0];
+            foreach (int x in p) if (kerroin >= x - 1e-6) pykala = x;
+            if (pykala != Kaasu)
+            {
+                Kaasu = pykala;
+                y?.Tehoste(KaasuTehoste, 1f);
+                KaasuVaihtui?.Invoke(pykala);
+            }
+            if (muuttui) KaasuKerroinVaihtui?.Invoke(kerroin);
             return true;
         }
 
@@ -952,7 +989,7 @@ namespace Matkakirja.Linssit.Astronautti
             kyyti.Katse.Ohjaa(Iss.JoystickSuunta.Ei, y?.Aika ?? 0);
             suhina?.Lopeta(SuhinaLiukuS);
             suhina = null;
-            Kaasu = 1;
+            Kaasu = 1; KaasuKerroin = 1;
             // Web pura: linssi suljetaan, aika heti todelliseksi (testikellon siirto säilyy).
             lento = null;
             Iss.IssNyt.Simu.PalaaLive(vahennetty: true);
