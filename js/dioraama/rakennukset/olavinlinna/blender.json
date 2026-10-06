@@ -1,12 +1,12 @@
 {
   "rakennus": "olavinlinna",
-  "hash": "d1865adbc8c956dc",
-  "kansio": "dioraama/olavinlinna/blender/d1865adbc8c956dc/",
+  "hash": "e4c6abb04c926293",
+  "kansio": "dioraama/olavinlinna/blender/e4c6abb04c926293/",
   "tiedostot": [
     {
       "polku": "hahmot/apulainen-1500.glb",
-      "sha256": "c331a6bec5d8e3f47209ff8d845a1702b719f5b1d1897d2b30af067dfff41980",
-      "tavuja": 1551916
+      "sha256": "876c209cf5582b93f3aa94ba70786c99a973832e73fb7b211ab64c47e95d0852",
+      "tavuja": 2280812
     },
     {
       "polku": "hahmot/kappalainen-1500.glb",
@@ -20,8 +20,8 @@
     },
     {
       "polku": "hahmot/kokki-1500.glb",
-      "sha256": "e5ed42b00346c7e2130cc44b6345f1a09c3d5e98ae304ccf975f68403d01b17a",
-      "tavuja": 1651004
+      "sha256": "23be3d04daae9107a412e7a8c4dd7441ec557bcf0c6cf0633d6eba5c27ff4f44",
+      "tavuja": 1831224
     },
     {
       "polku": "hahmot/portinvartija-1500.glb",
@@ -30,8 +30,8 @@
     },
     {
       "polku": "hahmot/renki-1500.glb",
-      "sha256": "7b5ee4d000a7cbdec08f21ece9da1e9ed242a6bbdf224708680f08aaf300e25b",
-      "tavuja": 1234728
+      "sha256": "1f222f006dd47e9767685894ffcf21f9b313f8d161f6073f823e9486b76a9d0a",
+      "tavuja": 1480916
     },
     {
       "polku": "hahmot/soutaja-1500.glb",
