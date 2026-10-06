@@ -107,7 +107,8 @@ namespace Matkakirja.Natiivi
         readonly VisualElement kahva, kahvaAlue;
         bool laajennettu, kahvaVeto;
         Vector2 kahvaAlku;
-        const float KahvaVyohyke = 28f, KahvaYlos = 20f, KahvaAlas = 40f;
+        // Vyöhyke 20 pt (juna 155: selaimen rivi nousi ~8 pt kahvan alle; ennen 28 pt, joka olisi peittänyt nappien yläosan).
+        const float KahvaVyohyke = 20f, KahvaYlos = 20f, KahvaAlas = 40f;
         const float HeroSuhde = 0.5f; // tyylikirja mitat.kuva.hero-kortti 2:1
 
         Nosto nosto;
@@ -902,7 +903,9 @@ namespace Matkakirja.Natiivi
                     if (paikka[i] != ylarivi && paikka[i] != lukijaPaikka && paikka[i] != pinNappi && paikka[i] != selain.AutoNappi) paikka.RemoveAt(i);
             if (ylarivi == null || lukijaPaikka == null || !selain.Nakyvissa) { if (ylarivi != null) ylarivi.Add(pinNappi); return; }
             selain.Oikea.Insert(selain.AutoNappi != null && selain.AutoNappi.parent == selain.Oikea ? selain.Oikea.IndexOf(selain.AutoNappi) + 1 : 0, pinNappi); // AUTO, pin, ≡, kaiutin
-            selain.Vasen.Add(ylarivi);       // kategoria (symboli ja nimi) vasemmalle
+            // Juna 155 (omistaja 6.10. 22.x: "kategorian voisi siirtää omalle rivilleen otsikon läheisyyteen sen yläpuolelle ja
+            // nämä napit vähän ylemmäs"): kategoria (symboli ja nimi) jää kortin sisältöön otsikon yläpuolelle omaksi rivikseen.
+            ylarivi.AddToClassList("mk-nosto__ylarivi--kategoria");
             selain.Oikea.Add(lukijaPaikka);  // ≡ ja kaiutin oikeaan reunaan
         }
 

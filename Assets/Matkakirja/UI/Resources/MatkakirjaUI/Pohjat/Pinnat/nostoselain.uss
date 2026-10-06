@@ -404,3 +404,28 @@
     margin-right: 0;
     margin-left: var(--tk-vali-xs);
 }
+
+/* JUNA 155 (omistaja 6.10. 22.x): selaimen rivi ilman kategoriaa ~8 pt vetokahvan alle (kortin yläreuna 22 − 2 = 20; kahva
+ * päättyy 13 pt:ssä); kategoria omana rivinään otsikon yläpuolella NOSTOT-tekstin tyylillä toissijaisella musteella,
+ * otsikkoon ~5 pt. Sama asettelu kaikissa leveyksissä. */
+.mk-nostoselain {
+    margin-top: -2px;
+}
+
+.mk-nosto__ylarivi.mk-nosto__ylarivi--kategoria {
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 5px 0;
+    letter-spacing: 6.98px; /* NOSTOT-tekstin harvennus */
+    color: var(--tk-paperi-muste-pehmea);
+}
+
+.mk-nosto__ylarivi--kategoria .mk-nosto__ylarivi-teksti {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mk-nosto__ylarivi--kategoria .mk-nosto__ylarivi-symboli {
+    -unity-background-image-tint-color: var(--tk-paperi-muste-pehmea);
+}
