@@ -174,3 +174,15 @@ Brotli (haara linnanrakentaja-zstd, worktree olemassa), akustiikka #3979 (Steam 
 - GIZA: LS1:n kulmamittaus Sfinksi NE +6,9 m (malli Googlea korkeampi), SE −1,8, SW +1,7, NW +3,6; Mykerinos ±1,4.
   Korjaus jatkokierroksella avoimilla korkeuksilla (ei Googlen arvoilla). LS1:n leikkausvika (piilotti koko tilesetin) korjautuu
   heidän seuraavassa käännöksessään → pelikuvat sen jälkeen.
+
+## Päivitys 7.10. klo 02.0x
+- OMISTAJA 01.3x: Euroopan kartan parannukset SEIS (Tallinna/Visby tallessa _valmiit/tallinna-koe/, LUEMINUT.md). Linna loppuun
+  (eleet yms., Siirtoseppä vetää: Matkakirja-siirtoseppa docs/raportit/siirtoseppa-linna-valmiiksi-20261007.md) + KIELLETTY KAUPUNKI.
+- LINNA: PR #4093 (Faceit v39 + kohdistukset.json 18 puheelle + eleet: puhe1-3, nyokkays, kallistus, kuuntelu kaikille 11) =
+  blender v40 44261260a941b61b (_valmiit/olavinlinna-blender-v40, hahmot → linna-hahmot/faceit-v2 ← mixamo-v5), peili
+  dfab929f0f6d3576. Odottaa Siirtosepän todennusta (natiivin morph-tuki + eleajoitus) → juna → osoitin. Worktreet poistettu.
+- KIELLETTY KAUPUNKI (omistajan poikkeus, oma dioraama ilman Cesiumia, Qing 1873): pilotti _valmiit/kielletty-kaupunki-v1/
+  (LAHTEET.md alusta asti). lahde/: kk_geom.py (katot rengastasoina juzhe + 起翘, 歇山, sumeru-jalustat, portaat), kk_osat.py
+  (instanssit), kk_halli.py, kokoa.py (Blender → pilotti/kielletty.blend, --glb EXT_mesh_gpu_instancing), mitat.py (V/A
+  datasta kielletty-kaupunki-data.md + OSM osm_alue.py → kk-alue.json), kk_tekstuurit.py (venv), esik.py. Taihedian 35,05 m ja
+  Taihemen 23,72 m täsmäävät lähteisiin. SEURAAVA: esikatselu Päätoimittajalle (pilotti/arkki.jpg), sitten aukion galleriat.
