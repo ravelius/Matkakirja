@@ -8,7 +8,7 @@ oleta 5 opas: -- testiotsake päällä
 linssi linssi opas
 oleta 30 opas: auki -- elävä opas aukesi
 oleta 30 opas: täkyt [1-9] -- täkyt workerilta
-nakyy 20 MIHIN LENNETÄÄN -- valikko aukesi itse täkynäkymään
+nakyy 20 SUOSIKIT -- valikko aukesi itse täkynäkymään (juna 153: otsikot VALITSE PAIKKA / SUOSIKIT)
 kuva 11a-takyt Elävä opas: täkynäkymä
 tap-teksti mk-linssirivi__nimi
 oleta 5 opas: täky [^0-9] -- täkyn napautus välittyi (1. täkyrivi; rivin säiliö ei piirry ui-puuhun)

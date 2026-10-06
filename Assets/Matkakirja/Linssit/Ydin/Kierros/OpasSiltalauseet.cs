@@ -156,6 +156,8 @@ namespace Matkakirja.Linssit.Kierros
     {
         public string Id, Nimi, Koukku, Kaupunki, Iso2, Alarivi, KuvaUrl, KuvaTekija, KuvaLisenssi;
         public double Lat, Lon;
+        /// <summary>Etäisyys katsepisteestä (GET /opas/lahella "etaisyys_m"; muuten NaN).</summary>
+        public double EtaisyysM = double.NaN;
 
         /// <summary>{"paiva", "kohteet": [{id, nimi, koukku, kaupunki, maa, lat, lon, alarivi, kuva: {url, tekija, lisenssi} | null}]}</summary>
         public static List<OpasTaky> Lue(Dictionary<string, object> j)
@@ -168,7 +170,7 @@ namespace Matkakirja.Linssit.Kierros
                 string S(Dictionary<string, object> dd, string k) => dd != null && dd.TryGetValue(k, out var v) ? v as string : null;
                 double D(string k) => d.TryGetValue(k, out var v) && v != null ? Convert.ToDouble(v, System.Globalization.CultureInfo.InvariantCulture) : double.NaN;
                 var t = new OpasTaky { Id = S(d, "id"), Nimi = S(d, "nimi"), Koukku = S(d, "koukku"), Kaupunki = S(d, "kaupunki"), Iso2 = S(d, "iso") ?? S(d, "maa"),
-                    Alarivi = S(d, "alarivi"), Lat = D("lat"), Lon = D("lon") };
+                    Alarivi = S(d, "alarivi"), Lat = D("lat"), Lon = D("lon"), EtaisyysM = D("etaisyys_m") };
                 if (d.TryGetValue("kuva", out var ku) && ku is Dictionary<string, object> kd) { t.KuvaUrl = S(kd, "url"); t.KuvaTekija = S(kd, "tekija"); t.KuvaLisenssi = S(kd, "lisenssi"); }
                 if (string.IsNullOrEmpty(t.Nimi) || double.IsNaN(t.Lat) || double.IsNaN(t.Lon) || Math.Abs(t.Lat) > 90 || Math.Abs(t.Lon) > 180) continue;
                 r.Add(t);

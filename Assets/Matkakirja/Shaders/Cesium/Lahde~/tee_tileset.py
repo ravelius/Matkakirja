@@ -23,6 +23,8 @@
 # (Kartta/Paivanvalo.cs). w = 0 → ennallaan.
 # S2-reuna (Linssiseppä 1.10.2026): paikan 2 sekoituspaino liukuu nollaan _s2Reuna-suorakulmion (länsi, etelä, itä, pohjoinen)
 # 1,5°:n reunalla (S2-mosaiikki sulautuu BMNG:hen, peiton ulkopuolen venyneet reunatekselit eivät näy). pohjoinen = 0 → ennallaan.
+# BMNG:n meri S2:n meriväriin (Linssiseppä 2, 6.10.2026, Päätoimittaja: Labradorinmeren S2-meriruudut erottuivat BMNG:stä):
+# paikan 2 _s2MeriVari.a > 1,5 → pohjan (BMNG) tumma sinertävä meri värjätään _s2MeriVari.rgb:ksi (KarttaKerrokset.KyydinMeri).
 # S2-sävy (Linssiseppä 1.10.2026, S2-erä): _s2Savy sävyttää perusvärin (kontrasti, kylläisyys, lämpö) vain Euroopan
 # S2-mosaiikin suorakulmiossa 1,5°:n pehmeällä reunalla (Kyytipino.AsetaS2Savy, vain kyydissä S2:n ollessa päällä). w = 0 → ennallaan.
 # Käyttö: python3 tee_tileset.py <Cesium-paketin Resources-kansio> <kohdekansio>
@@ -90,6 +92,16 @@ def reuna(a, a_slot, b, b_slot):
 # varakartan UV (molemmat Mercatorissa lineaarisia), joten z = log2(|d ouv|) − log2(|d uv_vara|). Varakartan
 # derivaatta tulee varaVari.a:ssa koodattuna (VaraVari). Derivaatat ennen haarautumista (tasainen ohjausvuo).
 SEKOITUS_RUNKO = (
+    "// BMNG sea to the S2 sea colour (Paatoimittaja 6.10.2026, Labrador Sea: single S2 sea tiles stood out from BMNG as light\n"
+    "// rectangles): meriVari.a > 1.5 -> dark bluish base pixels (BMNG open sea: sRGB luma < 0.10...0.16, b >= r) take meriVari.rgb;\n"
+    "// land (r > b), sea ice and glaciers (bright) stay. meriVari reaches slot 2 only, whose base is BMNG (slot 1).\n"
+    "if (meriVari.a > 1.5)\n"
+    "{\n"
+    "    float3 pb = pow(max(base.rgb, 1e-5), 0.4545);\n"
+    "    float lb = dot(pb, float3(0.2126, 0.7152, 0.0722));\n"
+    "    float mb = (1.0 - smoothstep(0.10, 0.16, lb)) * smoothstep(-0.01, 0.03, pb.b - pb.r);\n"
+    "    base.rgb = lerp(base.rgb, meriVari.rgb, mb.xxx);\n"
+    "}\n"
     "float4 s = nayte;\n"
     "float dr = length(ddx(ouv)) + length(ddy(ouv));\n"
     "float z = log2(max(dr, 1e-12)) - (varaVari.a - 64.0);\n"

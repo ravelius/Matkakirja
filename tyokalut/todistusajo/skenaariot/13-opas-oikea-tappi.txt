@@ -7,7 +7,7 @@ oleta 5 opas: -- testiotsake päällä
 linssi linssi opas
 oleta 30 opas: auki -- elävä opas aukesi
 oleta 30 opas: täkyt [1-9] -- täkyt workerilta
-nakyy 20 MIHIN LENNETÄÄN -- täkynäkymä
+nakyy 20 SUOSIKIT -- täkynäkymä (juna 153: otsikot VALITSE PAIKKA / SUOSIKIT)
 tap-teksti mk-linssirivi__nimi
 oleta 90 opas: saapui -- 1. kohde saapui
 oleta 30 opas: vastaus [0-9]+ -- kohteen vastaus
