@@ -57,6 +57,15 @@ namespace Matkakirja.Natiivi
         /// <summary>Prosessin vapaa muisti ennen jetsam-rajaa (tavua); −1 = ei tiedossa (editori, simu palauttaa 0).</summary>
         public static long VapaaMuisti()
         {
+            // VAIN TESTIKÄYTTÖÖN (Päätoimittaja 6.10. 17.1x: still-pari simulla, kehityskäännös ei saa muistioikeutta):
+            // Documents/kaupunki-vapaa-muisti.txt "7.0" = vapaa muisti 7 Gt (simu palauttaa muuten 0 → ei tiedossa).
+            try
+            {
+                var p = Path.Combine(Application.persistentDataPath, "kaupunki-vapaa-muisti.txt");
+                if (File.Exists(p) && double.TryParse(File.ReadAllText(p).Trim(), System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out var gt) && gt > 0)
+                    return (long)(gt * 1e9);
+            }
+            catch (Exception) { }
 #if UNITY_IOS && !UNITY_EDITOR
             long v = (long)os_proc_available_memory();
             return v > 0 ? v : -1;
