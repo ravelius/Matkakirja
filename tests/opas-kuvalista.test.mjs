@@ -75,3 +75,16 @@ test('kierros: lukitusta listasta 8 tärkeintä listan järjestyksessä, ensimm�
     assert.equal(toka.id, 'Q101'); assert.deepEqual(toka.kierros, { numero: 2, maara: 8 });
   } finally { globalThis.fetch = vanha; }
 });
+
+test('kaupunkitila: lukitsemattoman kaupungin kohde pitää entisen kuvan; lukitun kaupungin kohde ilman listan kuvaa → null', async () => {
+  const { listanKuvin } = await import('../tools/pollo/opas-kuvat.js');
+  const L = { ...LISTA, kohteet: { ...KOHTEET, Q7: { nimi: 'Muu', kaupunki: 'muuala', lat: 1, lon: 1, kuvat: [kuva('muu', 1)] } },
+    kaupungit: { ...LISTA.kaupungit, muuala: { nimi: 'Muuala', kohteet: ['Q7'] } } };
+  const vanha = { url: 'https://upload/vanha.jpg' };
+  const t = listanKuvin({ kohteet: [{ id: 'Q7', kaupunki: 'Muuala', kuva: vanha }, { id: 'Q100', kaupunki: 'Testilä', kuva: vanha },
+    { id: 'Q5', kaupunki: 'Testilä', kuva: vanha }, { id: 'Q6', kaupunki: 'Jossain', kuva: vanha }] }, L);
+  assert.equal(t.kohteet[0].kuva, vanha, 'lukitsematon (1 kohde) → ennallaan');
+  assert.match(t.kohteet[1].kuva.url, /k0-6/, 'lukittu → listan kuva');
+  assert.equal(t.kohteet[2].kuva, null, 'lukittu, ei listalla → ei kuvaa');
+  assert.equal(t.kohteet[3].kuva, vanha, 'ei listalla, lukitsematon → ennallaan');
+});

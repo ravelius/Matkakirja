@@ -260,7 +260,9 @@ if (import.meta.url === pathToFileURL(process.argv[1]).href) {
     writeFileSync(join(ulos, 'LAHTEET.md'), `# Elävän oppaan kuvalista v1 (${tulos.versio})\n\nTuotettu: node tools/pollo/tee-opas-kuvat.mjs (Pelikoodari).\n`
       + `Pelin nykyiset kuvat (Wikimedia Commons, vapaat lisenssit; tekijä, lisenssi ja lähde kuvakohtaisesti listassa) sekä `
       + `Matkakirjan omat havainnekuvat. Kohteen Wikidata-tunnus Commonsin "esittää"-tiedosta (P180, CC0).\n\n`
-      + `- ${KUVALISTA_POLKU}: ${kohteita} kohdetta ja ${Object.keys(tulos.kaupungit).length} kaupunkia, ${kuvia} kuvaa. Kuvat ovat peilissä (media.matkakirja.app/kuvat/…).\n`);
+      + `- ${KUVALISTA_POLKU}: ${kohteita} kohdetta ja ${Object.keys(tulos.kaupungit).length} kaupunkia, ${kuvia} kuvaa. Pelin kuvat ovat peilissä (media.matkakirja.app/kuvat/…).\n`
+      + `- ${dirname(KUVALISTA_POLKU)}/kuvat/: Sisältökirjurin kohdelistojen kuvat (Wikimedia Commons, 1 280 px), tekijä, lisenssi ja `
+      + `lähde kuvakohtaisesti listassa. Lukitut kaupungit: ${Object.entries(tulos.kaupungit).filter(([, k]) => (k.kohteet?.length ?? 0) >= 6).map(([id]) => id).join(', ') || '–'}.\n`);
   }
   console.log(`kirjoitettu ${polku} (${(JSON.stringify(tulos).length / 1e6).toFixed(2)} Mt)`);
 }

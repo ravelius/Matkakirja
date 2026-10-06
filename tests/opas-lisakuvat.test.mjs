@@ -1,5 +1,5 @@
-// OPPAAN KUVAT: 6.10.2026 20.0x alkaen vain oppaan kuvalistasta (opas-kuvat.js). yhdistaKuvat ja siistiTekija ovat yhä
-// käytössä kuvalistan koonnissa ja vanhoissa poluissa.
+// OPPAAN LISÄKUVAT (omistaja 5.10.2026 klo 23.5x; muoto Natiivi-UI:n kanssa): enintään 6 kuvaa per pysähdys, paras ensin:
+// pelin omat → Wikidatan P18 → kohteen Commons-luokka (P373); vain vapaat lisenssit, ei karttoja/logoja/svg:tä.
 import test, { beforeEach } from 'node:test';
 import { tyhjennaReunamuisti } from '../tools/pollo/reuna.js';
 import assert from 'node:assert/strict';
@@ -30,30 +30,23 @@ const verkko = async (u) => {
   return new Response(JSON.stringify({ query: { pages: {} }, search: [], claims: {}, entities: {} }));
 };
 
-// KUVAT VAIN KUVALISTASTA (omistaja 6.10.2026 20.0x): pysähdyksen kuvat tulevat oppaan kuvalistasta Q:lla (1–5, järjestys),
-// ei Wikidatan P18:aa eikä Commons-luokkaa lennossa. Ei osumaa → kuvat [].
-const LISTA = { kohteet: { Q943946: { nimi: 'Nyhavn', kaupunki: 'koopenhamina', lat: 55.6797, lon: 12.5906, kuvat: [
-  { url: 'https://media.matkakirja.app/kuvat/nyhavn-2.jpg', tyyppi: 'valokuva', tekija: 'B', lisenssi: 'CC BY 4.0', lahdeUrl: 'https://commons/File:2', jarjestys: 2 },
-  { url: 'https://media.matkakirja.app/kuvat/nyhavn-1.jpg', tyyppi: 'valokuva', tekija: 'A', lisenssi: 'CC BY-SA 4.0', lahdeUrl: 'https://commons/File:1', jarjestys: 1 },
-] } }, kaupungit: {}, aliakset: {} };
-test('kuvat vain kuvalistasta Q:lla järjestyksessä; ei P18- eikä Commons-hakua lennossa', async () => {
-  const kv = new Map(); const kutsut = [];
-  const env = { ANTHROPIC_API_KEY: 'a', POLLO_ORIGINIT: 'https://matkakirja.app', OPAS_AINEISTO_TESTI: {}, OPAS_KUVALISTA_TESTI: LISTA,
+test('lisäkuvat: P18 ensin, sitten Commons-luokka, enintään 6, vain vapaat jpg/png vaakakuvat ensin, ei karttoja/logoja/pieniä/NC', async () => {
+  const kv = new Map();
+  const env = { ANTHROPIC_API_KEY: 'a', POLLO_ORIGINIT: 'https://matkakirja.app', OPAS_AINEISTO_TESTI: {},
     POLLO_KV: { get: async (k) => kv.get(k) ?? null, put: async (k, v) => { kv.set(k, v); } } };
-  const vanha = globalThis.fetch; globalThis.fetch = (u, init) => { kutsut.push(decodeURIComponent(String(u))); return verkko(u, init); };
+  const vanha = globalThis.fetch; globalThis.fetch = verkko;
   try {
     const v = await worker.fetch(new Request('https://pollo.example/opas/seuraava', { method: 'POST',
       headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'x-matkakirja-testi': '1' },
-      body: JSON.stringify({ kaupunki: 'Kööpenhamina', toive: 'Nyhavn' }) }), env, { waitUntil() {} });
+      body: JSON.stringify({ kaupunki: 'Kööpenhamina', toive: 'Nyhavn' }) }), env, {});
     const d = await v.json();
-    assert.deepEqual(d.kuvat.map((k) => k.url), ['https://media.matkakirja.app/kuvat/nyhavn-1.jpg', 'https://media.matkakirja.app/kuvat/nyhavn-2.jpg']);
-    assert.equal(d.kuvat[0].lahde, 'https://commons/File:1', 'lahde vanhoille natiiveille');
-    assert.ok(!kutsut.some((s) => s.includes('property=P18') || s.includes('property=P373') || s.includes('commons.wikimedia.org')),
-      'ei kuvahakua lennossa');
-    const ilman = await (await worker.fetch(new Request('https://pollo.example/opas/seuraava', { method: 'POST',
-      headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'x-matkakirja-testi': '1' },
-      body: JSON.stringify({ kaupunki: 'Kööpenhamina', toive: 'Nyhavn' }) }), { ...env, OPAS_KUVALISTA_TESTI: { kohteet: {}, kaupungit: {} } }, { waitUntil() {} })).json();
-    assert.deepEqual(ilman.kuvat, [], 'ei listalla → ei kuvia');
+    const nimet = d.kuvat.map((k) => k.lahde.replace('https://commons/File:', ''));
+    assert.equal(d.kuvat.length, 7, `kuvia ${d.kuvat.length}: ${nimet}`);   // P18 + 6 kelvollista luokasta (yläraja 8)
+    assert.equal(nimet[0], 'Nyhavn paa.jpg', 'P18 ensin (vanhat asiakkaat näyttävät tämän)');
+    for (const huono of ['Nyhavn map.png', 'Nyhavn 2.jpg', 'Nyhavn logo.svg', 'Nyhavn pieni.jpg']) assert.ok(!nimet.includes(huono), huono);
+    assert.equal(new Set(nimet).size, nimet.length, 'ei kaksoiskappaleita');
+    assert.ok(!nimet.slice(0, 5).includes('Nyhavn pysty.jpg') || nimet.indexOf('Nyhavn pysty.jpg') > nimet.indexOf('Nyhavn 3.jpg'), 'vaakakuvat ensin');
+    assert.ok(d.kuvat.every((k) => k.tekija && k.lisenssi && k.url.startsWith('https://upload/1280px-')));
   } finally { globalThis.fetch = vanha; }
 });
 
@@ -62,6 +55,30 @@ test('tekijärivi luettavaksi', async () => {
   assert.equal(siistiTekija('No machine-readable author provided. Thue assumed (based on copyright claims).'), 'Thue');
   assert.equal(siistiTekija('No machine-readable author provided. Bjoerna~commonswiki assumed (based on copyright claims).'), 'Bjoerna');
   assert.equal(siistiTekija('<a href="x">Julian Herzog</a> ( Website )'), 'Julian Herzog');
+});
+
+test('aikaraja: hidas Commons ei hidasta vastausta; haku valmistuu taustalla välimuistiin, seuraava saa kuvat', async () => {
+  const kv = new Map();
+  const odotukset = [];
+  const env = { ANTHROPIC_API_KEY: 'a', POLLO_ORIGINIT: 'https://matkakirja.app', OPAS_AINEISTO_TESTI: {},
+    POLLO_KV: { get: async (k) => kv.get(k) ?? null, put: async (k, v) => { kv.set(k, v); } } };
+  const hidas = async (u, init) => {
+    if (String(u).includes('commons.wikimedia.org')) await new Promise((r) => setTimeout(r, 1500));
+    return verkko(u, init);
+  };
+  const vanha = globalThis.fetch; globalThis.fetch = hidas;
+  try {
+    const pyynto = () => worker.fetch(new Request('https://pollo.example/opas/seuraava', { method: 'POST',
+      headers: { 'content-type': 'application/json', origin: 'https://matkakirja.app', 'x-matkakirja-testi': '1' },
+      body: JSON.stringify({ kaupunki: 'Kööpenhamina', toive: 'Nyhavn' }) }), env, { waitUntil: (p) => odotukset.push(p) });
+    const t0 = Date.now();
+    const eka = await (await pyynto()).json();
+    assert.ok(Date.now() - t0 < 3500, `vastaus odotti vain P18:n kuten ennen (${Date.now() - t0} ms)`);
+    assert.equal(eka.kuvat.length, 1, 'ei ehtinyt → P18 kuten ennen (ei jää ilman kuvaa)');
+    await Promise.all(odotukset);
+    const toka = await (await pyynto()).json();
+    assert.equal(toka.kuvat.length, 7, 'välimuistista');
+  } finally { globalThis.fetch = vanha; }
 });
 
 // TEKIJÄTIETO PAKOLLINEN (Linssiseppä 6.10.: natiivi näki Canal Granden kuvat ilman tekijää/lisenssiä; CC BY vaatii

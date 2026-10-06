@@ -36,7 +36,6 @@ function verkko(keskus, kohteet) {
 function ymparisto() {
   const r2 = new Map();
   return { env: { ANTHROPIC_API_KEY: 'a', POLLO_ORIGINIT: 'https://matkakirja.app',
-    OPAS_KUVALISTA_TESTI: { kohteet: { Q1: { nimi: 'Helsingin tuomiokirkko', kuvat: [{ url: 'https://media.matkakirja.app/kuvat/x.jpg', tyyppi: 'valokuva', tekija: 'Kuvaaja', lisenssi: 'CC BY-SA 4.0', lahdeUrl: 'https://commons/File:X.jpg', jarjestys: 1 }] } }, kaupungit: {} },
     PUHE_R2: { get: async (k) => (r2.has(k) ? { text: async () => r2.get(k) } : null), put: async (k, v) => { r2.set(k, v); } } } };
 }
 const hae = (env, q) => worker.fetch(new Request(`https://pollo.example/opas/lahella?${q}`, { headers: { origin: 'https://matkakirja.app' } }), env, {});

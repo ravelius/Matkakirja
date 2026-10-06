@@ -85,7 +85,24 @@ export function kaupunginKohteet(lista, kaupunki) {
   }).filter(Boolean);
 }
 
-/** Vastauksen kohteiden kuva listasta (myös R2:ssa olevat vanhat listat): kuva = kohteen 1. kuva tai null. */
-export const listanKuvin = (tulos, lista) => (Array.isArray(tulos?.kohteet)
-  ? { ...tulos, kohteet: tulos.kohteet.map((k) => (k ? { ...k, kuva: kohteenKuvat(lista, k.id)[0] ?? null } : k)) }
+/**
+ * KÄYTTÖÖNOTTO KAUPUNKI KERRALLAAN (Päätoimittaja 6.10. 20.3x): kaupunki on "lukittu", kun sen kohdelistassa on vähintään
+ * LUKITTU_VAHINTAAN kohdetta. Lukittu kaupunki käyttää vain listan kohteita ja kuvia; muut toimivat entiseen tapaan
+ * (lennossa haetut kuvat), kunnes niiden lista yhdistetään. Yksikään kaupunki ei huonone.
+ */
+export const LUKITTU_VAHINTAAN = 6;
+export const onLukittu = (lista, kaupunki) => (listanKaupunki(lista, kaupunki)?.kohteet?.length ?? 0) >= LUKITTU_VAHINTAAN;
+
+/**
+ * Kohteen kuva kaupunkitilan mukaan: lukitun kaupungin kohde (pyynnön kaupunki, listan kohteen kaupunki tai kohteen oma)
+ * → listan 1. kuva tai null; muuten entinen kuva sellaisenaan (lukitsemattomat kaupungit eivät muutu).
+ */
+export function kuvaKaupunkitilassa(lista, id, vanha, kaupunki = null) {
+  const lukittu = [kaupunki, listanKohde(lista, id)?.kaupunki].some((x) => x && onLukittu(lista, x));
+  return lukittu ? kohteenKuvat(lista, id)[0] ?? null : vanha ?? null;
+}
+
+/** Vastauksen kohteiden kuva (myös R2:ssa olevat vanhat listat) kaupunkitilan mukaan. */
+export const listanKuvin = (tulos, lista, kaupunki = null) => (Array.isArray(tulos?.kohteet)
+  ? { ...tulos, kohteet: tulos.kohteet.map((k) => (k ? { ...k, kuva: kuvaKaupunkitilassa(lista, k.id, k.kuva, kaupunki ?? k.kaupunki) } : k)) }
   : tulos);
