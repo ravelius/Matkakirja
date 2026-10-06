@@ -6,7 +6,31 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 6.10. klo 21.0x (uusin)
+## TILA 6.10. klo 23.4x (uusin, TILINVAIHTO)
+
+ALOITUSVIESTI uudelle sessiolle: "Olet Natiivi-UI (Opus, high). Lue docs/raportit/viesti-natiivi-ui-luovutus-20261005.md
+(TILA 23.4x) ja jatka junan 155 todisteista. Käännös vain Julkaisijan KÄÄNNÖS NYT -viestistä, simu vain SIMU NYT -viestistä."
+
+- JUNA 155 (omistaja: kaikki 155:een, yksi SHA Natiivisepälle): proto natiivi-ui/ylarivi-155 kärki f1f455e7 (worktree
+  wt/proto-natiivi-ui-taulu148). Sisältö: pinnatun luennan juurisyy (Puhe.LueJatkona, toisto TF 154: "pinnattu korvattiin uudella
+  luennalla" 1. palan jälkeen), KortinLukijan irrotettava ketju (jatkuu samasta kohdasta), koko luennan etenemisjana, taustatila
+  (kartan valinta/AUTO vaihtaa palkin ja luennan, ensimmäinen kuva 3 s), palkki hakunapin rivillä / pitkä otsikko hakunapin alle,
+  aina vaalea (.mk-nappi:active), otsikko kokonaan (85 %, rivitys), kategoria otsikon yläpuolelle, rivi ~8 pt kahvan alle, kolme
+  oikeinta kuvaketta samalle linjalle (paikkavaraus 38), leveysbudjetti tiivis1–3 (maakuntakortti MAAKUNNAT).
+  TODENNETTU app 2fadc15c (= b2b3eae5): luenta jatkuu palasta 3/4, taustatila ja kuva 3 s toimivat (lokit/natiivi-ui-1035/
+  pin-luenta/pin-jalkeen-*), ylärivi ja maakunta iPhone/iPad pysty/vaaka (ylarivi-155/*-j-*, maakunnassa tiivis 2, väli 0).
+  AVOIN: f1f455e7:n pitkän otsikon korjaus (stilleissä "elohopeakaiv/okset" 3 riviä 44 pt:n palkissa) → käännös + still
+  (skriptit/vuoro-155.sh <app>, pin-luenta2.sh, ylarivi155.sh), sitten stillit + kuvakemittaus (skriptit/mittaa-ylarivi.py)
+  Päätoimittajalle ja SHA Natiivisepälle. Puhe.cs:n LueJatkona kerrottava Pelikoodarille/Siirtosepälle.
+- JUNA 156 (ei aloitettu): (1) oppaan tapit iPadilla sisemmäs ja ylemmäs (~15–20 % reunasta, 1/3 alhaalta), iPhone tarkistus;
+  (2) Seuraava kohde -nappi ›| → LS1 linssiseppa/esilataus-156 fb677d83: OpasSovitin.Seuraava(), SeuraavaKaytettavissa, testi
+  "opas seuraava"; (3) play/pause + Seuraava oikean tapin alle, ylänurkan tauko pois jos päällekkäinen (ehdota); (4) VIKA oikean
+  yläkulman ≡/‖ huono osuma: toista simkosketuksella iPhone+iPad, tarkista osuma 44 pt / turva-alue / Cesium-syöte / vetokynnys,
+  20 napautusta ennen/jälkeen; (5) LS1:n OpasSovitin.LatausKuva + LatausKuvaVaihtui → kuva Kuvasuurennoksen pohjalla 80 %.
+- Muut haarat: ylarivi-154 850c34f6 (juna 154, Päätoimittajan kuittaama AUTO-korjaus), opas-valmis-153 68e50ae8, linssikuvat-154
+  ee1764ce, nappirivi-154 98d13652 (kaikki ylarivi-155:ssä).
+
+## TILA 6.10. klo 21.0x
 
 - Juna 153 (Natiivisepälle, Päätoimittaja kuittasi): natiivi-ui/opas-valmis-153 68e50ae8 = ylarivi-153 b0db26db (ylärivi
   c5c1a24e, krediitit omina kopioina fc535e4a + testi `ui opasvalikko krediittivertailu`, ISS-jalka v3e d68a6b7f) + elävä opas
