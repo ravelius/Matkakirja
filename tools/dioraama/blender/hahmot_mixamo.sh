@@ -35,4 +35,10 @@ tee soutaja-1500 "$BI" "$GC" "$M/Paddling.fbx=melonta:12" ${(f)"$(E M puhe1 pudi
 tee kokki-1500 "$BO" "$AR" ${(f)"$(E M puhe1 puhe3)"} -- idle=hengitys,puhe=puhe_m
 tee renki-1500 "$UI" "$OH" ${(f)"$(E M puhe2 kumarrus)"} -- idle=hengitys,puhe=puhe_m
 tee apulainen-1500 "$BI" "$GC" ${(f)"$(E F puhe3)"} -- idle=hengitys,puhe=puhe_m
+# Esineet ja työliikkeet (hahmo_esineet.py, 6.10.): kokin kauha ja hämmennys (pata keittio.js [13.3, 0.9, 4.9] kokin kehyksessä
+# oikealle 0,2 m, eteen 1,2 m, kauhan kärki 1,12 m; jaettu skaalalla 0,969), apulaisen vati (kanto) ja luuta (tyo), rengin säkki.
+es() { local n=$1; shift; nice -n 15 $B -b --factory-startup -P $H/hahmo_esineet.py -- $U/$n.glb $U/$n.glb "$@" 2>&1 | grep -E "^ESINEET valmis|Error|Traceback" | sed "s#^#$n: #" | cut -c1-160; }
+es kokki-1500 kauha=-0.206,-1.238,1.156
+es apulainen-1500 tarjotin luuta
+es renki-1500 olka
 echo "HAHMOT_VALMIS $(ls $U/*.glb | wc -l | tr -d ' ') glb, $(du -sh $U | cut -f1)"

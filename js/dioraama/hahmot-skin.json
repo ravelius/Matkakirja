@@ -8,7 +8,7 @@
    "kaanto": null,
    "puhe": "puhe",
    "tyo": "tyo",
-   "kanto": "kavely"
+   "kanto": "kanto"
   },
   "kavely_sykli_m": 1.254,
   "kavely_kesto_s": 1.333,
@@ -93,7 +93,7 @@
    "kaanto": null,
    "puhe": "puhe",
    "tyo": "tyo",
-   "kanto": "kavely"
+   "kanto": "kanto"
   },
   "kavely_sykli_m": 1.273,
   "kavely_kesto_s": 1.333,
