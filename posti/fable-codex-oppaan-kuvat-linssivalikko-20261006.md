@@ -177,9 +177,19 @@ Lista (järjestys = toimitusjärjestys):
 148. madagaskar
 149. sahara
 
-## ERÄ 2 (heti kun lista tulee): linssivalikon kuvat kaikkiin natiivin linsseihin
+## ERÄ 2: linssivalikon kuvat, 7 puuttuvaa (lista Natiivi-UI 6.10.2026, lokit/natiivi-ui-1035/linssilista-20261006.md)
 
-Kaikki natiivin linssivalikon linssit, myös keskeneräiset. Valmiit linssikatalogin kuvat (`linssikatalogi/<id>-havainne.jpg`, 166 kpl) käytetään ensin; sinä teet vain puuttuvat, samalla tyylillä ja koolla kuin linssikatalogin kuvat. Natiivi-UI lähettää listan (linssi, tunnus, onko katalogikuva) tähän tiedostoon täydennyksenä.
+Natiivin linssivalikossa on 17 linssiä; 10:lle on jo linssikatalogin kuva (X2, Q1, X3, B1, C7, X4, X5, X6, X7, E11), ja ne kytketään junaan 154. Tee puuttuvat 7 SAMALLA tyylillä, koolla ja rajauksella kuin valmiit `linssikatalogi/<id>-havainne.jpg`-kuvat (katso esim. X2, X4, X5 ja E11 ennen aloitusta). Tiedostonimi `linssikatalogi/natiivi-<tunnus>-havainne.jpg`. Yksi kuva per linssi. Tee ERÄ 2 ennen ERÄ 1B:tä, koska se on pieni ja menee junaan 154.
+
+| tunnus | nimi | aihe kuvaan |
+|---|---|---|
+| opas | Elävä opas | kaupunki ylhäältä viistosti kultaisessa valossa, tunnistettava kaupunkinäkymä ja yksi korostettu maamerkki; tunnelma: matkaopas vie kierrokselle (ÄLÄ käytä mitään todellista karttapalvelun ulkoasua tai logoa) |
+| ihmisen-matka-2 | Ihmisen matka II | ihmiskunnan matkan jatko-osa: kaupunkien ja kulkuvälineiden aika (laivat, rautatiet, lentokoneet) yhtenä panoraamana |
+| maapallon-vuosi | Maapallon vuosi | maapallo avaruudesta, jossa vuodenajat näkyvät vyöhykkeinä (lumi pohjoisessa, vihreä kesä etelämpänä), tähtitaivas taustalla |
+| ajattelijat | Ajattelijat | antiikin pylväskäytävä (stoa) iltavalossa, marmoripäät tai kaksi viittaan pukeutunutta ajattelijaa keskustelemassa selin tai sivuttain; ei tunnistettavia todellisia kasvoja |
+| yokartta | Yökartta | Eurooppa yöllä avaruudesta: kaupunkien valot verkostoina, kuun valaisema pilviharso |
+| tahdet | Tähtitaivas | tumma maisema ja Linnunrata sekä tähtikuviot kirkkaana; pieni ihminen kaukoputken kanssa siluettina |
+| lontoo | Lontoo | viktoriaaninen Lontoo 1873: Thames, höyrylaivoja, Westminsterin siluetti sumussa kaasulyhtyjen valossa |
 
 ## ERÄ 3 (lista tulee Sisältökirjurilta erissä): oppaan kohteiden havainnekuvat
 
