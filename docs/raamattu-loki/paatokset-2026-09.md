@@ -11158,3 +11158,7 @@ Omistaja samaan aikaan sanatarkasti: "pyramiidit ja kohteet siinä ympärillä n
 Omistaja 6.10.2026 klo 23.34 (chat) sanatarkasti: "joo linssejä voi tehdä euroopan ulkopuolelta myös." → Giza-pilotti (Linnanrakentaja: kolme pyramidia + Sfinksi Blenderissä avoimesta datasta, LOD, glTF; LS1: Googlen ehdot clippingistä ensin, sitten sijoitus CesiumGlobeAnchor + piilotusalue). RAAMATTU: VAIN EUROOPPA -tarkennus — linssien sisältö, myös 3D-mallit linsseissä (kuten elävän oppaan kohteet), saa olla Euroopan ulkopuolelta (omistaja 23.5x).
 
 Raamattu päivitetty: VAIN EUROOPPA -kohdan linssipoikkeus kattaa myös linssien 3D-mallit ja kohdekohtaisen työn; ELÄVÄ OPAS -kohdan lennot pehmeiksi ja kierros lyhimmäksi reitiksi.
+
+## OMISTAJA: OPPAAN LENNOISSA PEHMEYS ENNEN KESTOA (6.10.2026 klo 23.35)
+
+Omistaja 6.10.2026 klo 23.4x (chat) sanatarkasti: "lennon mitan sijaan tärkeämpää on että kamera ei syöksy luonnottomasti vaan etenee pehmeästi. jos matka on pitkä niin vauhtia voi kyllä kiihdyttää mutta se pitää tehdä pehmeästi. siirtymä voi siis olla nopeakin, varsinkin jos kohde on lähellä" → kiinteä 5–7 s pois; kesto matkan mukaan, jatkuva nopeus ja kiihtyvyys, ei syöksyä; LS1 junaan 156 (mittarit: suurin kiihtyvyys ja laskun pystynopeus). Raamatun ELÄVÄ OPAS -kohta korjattu.
