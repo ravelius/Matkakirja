@@ -484,7 +484,7 @@ namespace Matkakirja.Natiivi
         // valinnainen "sauvaKeski":{x,y} piirretyn sauvan keskipiste osuutena sauvan laatikosta (oletus 0.36, 0.5)}. Paneeli skaalautuu
         // leveyden mukaan (korkeus koon suhteessa) ja osat sijoitetaan ankkureihin; ilman tiedostoa piirretty asettelu kuten ennen.
 
-        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, RumpuKolo, Kaasu, LcdIso, LcdIsoKuva; public float[] Pykalat; public float MiniSlice; public Rect Objektiivi; public Vector2? SauvaKeski; }
+        sealed class Ankkurit { public Rect Koko, Sauva, Lcd, Kamera, Rumpu, RumpuKolo, Kaasu, LcdIso, LcdIsoKuva; public float[] Pykalat; public float MiniSlice; public Rect Objektiivi; public Vector2? SauvaKeski; public Vector2? Ura; }
         Ankkurit ankkurit;
 
         static Rect LueRect(Dictionary<string, object> o, string avain)
@@ -514,6 +514,10 @@ namespace Matkakirja.Natiivi
                 var sk = Rakenne.Olio(MiniJson.Kentta(o, "sauvaKeski"));
                 if (sk != null && MiniJson.Kentta(sk, "x") is object sx && MiniJson.Kentta(sk, "y") is object sy)
                     a.SauvaKeski = new Vector2(Convert.ToSingle(sx, System.Globalization.CultureInfo.InvariantCulture), Convert.ToSingle(sy, System.Globalization.CultureInfo.InvariantCulture));
+                // v3b (Linnanrakentaja 6.10.): kaasu.ura {yla, ala} = vivun juuren liikealue (portaaton kahva, juna 148).
+                var ura = Rakenne.Olio(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "kaasu")), "ura"));
+                if (ura != null && MiniJson.Kentta(ura, "yla") is object uy && MiniJson.Kentta(ura, "ala") is object ua)
+                    a.Ura = new Vector2(Convert.ToSingle(uy, System.Globalization.CultureInfo.InvariantCulture), Convert.ToSingle(ua, System.Globalization.CultureInfo.InvariantCulture));
                 var p = Rakenne.Lista(MiniJson.Kentta(Rakenne.Olio(MiniJson.Kentta(o, "kaasu")), "pykalat"));
                 if (p != null && p.Count == Kertoimet.Length) { a.Pykalat = new float[p.Count]; for (int i = 0; i < p.Count; i++) a.Pykalat[i] = Convert.ToSingle(p[i]); }
                 return a.Koko.width > 0 && a.Koko.height > 0 ? a : null;
@@ -746,35 +750,15 @@ namespace Matkakirja.Natiivi
 
         /// <summary>Kameranappi: tarkka ISS-kuva (omistaja 4.10. klo 15.2x: ostot pois, kuvia rajattomasti; LS2 IssKameraKuva).</summary>
         /// <summary>
-        /// LCD-MATRIISI (omistaja 6.10. 08.3x: "aavistusvihreää LCD-matriisiä taustassa näkyvissä"): hento pisteruudukko näytön
-        /// taustalla tekstin alla. Väri USS:stä (.mk-issohjaamo__matriisi color = --tk-lcd-reunus, opacity), ei värivakioita.
+        /// LCD:N TAUSTAHEHKU (omistaja 6.10. 08.3x "aavistusvihreää LCD-matriisiä", 11.1x tarkennus: ei erillisiä pisteitä vaan
+        /// "melkein tasainen, hyvin haalea vihreä laatta"): tasainen vihreä kerros tekstin alla, väri USS:stä (.mk-issohjaamo__matriisi).
         /// </summary>
-        public const float MatriisiVali = 3f, MatriisiPiste = 1.2f;
-
         static void Matriisi(VisualElement isa)
         {
             var m = Rakenne.El("mk-issohjaamo__matriisi", isa, PickingMode.Ignore);
             m.style.position = Position.Absolute;
             m.style.left = 0; m.style.top = 0; m.style.right = 0; m.style.bottom = 0;
             m.SendToBack();
-            m.generateVisualContent += mgc =>
-            {
-                var r = m.contentRect;
-                if (r.width <= 0 || r.height <= 0) return;
-                var p = mgc.painter2D;
-                p.fillColor = m.resolvedStyle.color;
-                p.BeginPath();
-                float x0 = (r.width % MatriisiVali) * 0.5f, y0 = (r.height % MatriisiVali) * 0.5f;
-                for (float y = y0; y + MatriisiPiste <= r.height; y += MatriisiVali)
-                    for (float x = x0; x + MatriisiPiste <= r.width; x += MatriisiVali)
-                    {
-                        p.MoveTo(new Vector2(x, y)); p.LineTo(new Vector2(x + MatriisiPiste, y));
-                        p.LineTo(new Vector2(x + MatriisiPiste, y + MatriisiPiste)); p.LineTo(new Vector2(x, y + MatriisiPiste));
-                        p.ClosePath();
-                    }
-                p.Fill();
-            };
-            m.RegisterCallback<GeometryChangedEvent>(_ => m.MarkDirtyRepaint());
         }
 
         /// <summary>Oikea nopeus tekstinä: alle miljoonan "275 700 km/h", sitten "9,37 milj. km/h" / "27,6 milj. km/h".</summary>

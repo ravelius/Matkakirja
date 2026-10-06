@@ -504,6 +504,9 @@
  * omina kuvaelementteinään tilan mukaan, piirretyt varret, napa, ura ja kahva piiloon. Ilman kuvia mikään näistä ei vaikuta. */
 .mk-issohjaamo--kuva {
     border-width: 0;
+    /* Kuvan kulmat kuvasta (omistaja 6.10. 11.1x: "paneeli leikkautuu oudosti, varsinkin vasemmassa alakulmassa"):
+     * piirretyn paneelin 18 pt:n pyöristys leikkasi pohjakuvan kulmat. */
+    border-radius: 0;
     background-color: initial;
     -unity-background-scale-mode: stretch-to-fill;
 }
@@ -610,8 +613,10 @@
 /* LCD-MATRIISI (omistaja 6.10.2026: "aavistusvihreää LCD-matriisiä taustassa"): pisteruudukko näytön taustalla, väri piirtoon
  * color-ominaisuudesta (IssOhjaamo.Matriisi); hento, jotta teksti pysyy luettavana. */
 .mk-issohjaamo__matriisi {
-    color: var(--tk-lcd-reunus);
-    opacity: 0.35;
+    /* Omistaja 6.10. 11.1x: ei erillisiä pisteitä, "melkein tasainen, hyvin haalea vihreä laatta" kuin vanhan LCD:n valaistu tausta. */
+    /* Simu f9d71a57: muuttujan alfa ei periydy, joten 0,22 antoi RGB 17,76,44 (pohja 17,25,21) = liian vihreä; 0,06 ≈ 24,39,30. */
+    background-color: var(--tk-lcd-reunus);
+    opacity: 0.06;
 }
 
 /* NOPEUSLUKEMA (omistaja 6.10.2026): kaasua muutettaessa 3 s LCD:ssä kerroin vasemmalla, oikea nopeus oikealla ja sen alla

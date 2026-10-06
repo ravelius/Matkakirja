@@ -460,7 +460,7 @@ namespace Matkakirja.Natiivi
         {
             var k = naytettyKuva;
             if (k == null) return;
-            if (suurennos == null) suurennos = new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true };
+            if (suurennos == null) suurennos = new Kuvasuurennos(UiKerros.Hae().Juuri(UiKerros.Valikot)) { Tayteen = true, Kokoruutu = true, LahdeKokoruudussa = true };
             var l = OpasSovitin.Viimeisin?.Silmukka?.Nykyinen;
             // Kokoruutuselaus: nostojen Kuvasuurennos sarjana (pyyhkäisy ja ‹ ›), lähderivi ja selite kuvakohtaisesti.
             var kaikki = NykyisetKuvat();
@@ -820,6 +820,7 @@ namespace Matkakirja.Natiivi
                     return "opas: testikuva" + (testiKuva.Havainnekuva ? " (havainnekuva)" : "");
                 case "kuvat": VaihdaKuvat(); return "opas: kuvat " + (KuvatPaalla ? "päällä" : "pois");
                 case "suurenna": SuurennaKuva(); return "opas: suurennos " + (naytettyKuva != null ? "auki" : "ei kuvaa");
+                case "suurennos": return "opas: " + (suurennos?.Tausta() ?? "suurennos ei luotu");
                 case "kuvasarja":
                     testiKuvat = new[]
                     {

@@ -64,13 +64,16 @@ namespace Matkakirja.Natiivi
         {
             if (nosto == null) return;
             string id = nosto.Id;
+            // Palautus avaa saman valon (Avaa ottaa valon tunnuksen, ei noston id:tä; junan 146 video 6.10.: palkin napautus
+            // ei palauttanut korttia, kun Avaa sai noston id:n).
+            string palautus = valo ?? id;
             pinId = id;
             Pinnaus.Vaihda(new Pinnaus.Kohde
             {
                 Omistaja = PinOmistaja, Otsikko = nosto.Otsikko,
                 // Pienennys sulkee kortin vain, jos se yhä näyttää pinnattua nostoa (karttanapautus voi avata uuden ensin).
                 Pienenna = () => { if (Auki && nosto?.Id == id) { pienennetaan = true; Sulje(); pienennetaan = false; } },
-                Palauta = () => Avaa(id),
+                Palauta = () => { Debug.Log($"MATKAKIRJA ui pinnaus: palautus {palautus}"); Avaa(palautus); },
                 Irti = PaivitaPin,
             });
         }
@@ -157,6 +160,15 @@ namespace Matkakirja.Natiivi
             // PIN-KUVAKE (omistaja 5.10.2026 klo 23.3x): ylärivillä kaiuttimen kokoisena (mk-lukija 34 pt), pinnattuna korostettu.
             pinNappi = Rakenne.Nappi(null, "mk-lukija mk-nosto__pin", VaihdaPin, null, Ikonit.Viiva["pin"]);
             pinNappi.tooltip = "Pinnaa";
+            // OSUMA ERILLEEN (junan 146 video 6.10.: kaksi napautusta pinnin keskelle avasi ≡-valikon): lukijan rivi (≡ ja kaiutin)
+            // on kortin päällä omana kerroksenaan ja peitti pinnin. Pinnin näkyvä alue voittaa: kortin tasolla ennen lukijaa.
+            kortti.RegisterCallback<PointerDownEvent>(e =>
+            {
+                if (pinNappi.panel == null || pinNappi.resolvedStyle.display == DisplayStyle.None) return;
+                if (!pinNappi.worldBound.Contains((Vector2)e.position)) return;
+                e.StopImmediatePropagation();
+                VaihdaPin();
+            }, TrickleDown.TrickleDown);
             Pinnaus.Muuttui += PaivitaPin;
             lukija.Juuri.RegisterCallback<GeometryChangedEvent>(_ => SijoitaLukija());
             // Napit näkyvät heti (omistaja 28.9.2026, TF 1.0.34, Korintin kanava): kiinni kortissa, ei vierityksessä.
