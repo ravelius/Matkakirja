@@ -44,7 +44,13 @@ namespace Matkakirja.Natiivi
         /// <summary>Cupolan avauksen musta ruutu (ISS ja radan arvot) ja sen ajastukset.</summary>
         readonly VisualElement cupolaMusta;
         readonly Label cupolaKorkeus, cupolaNopeus, cupolaAika;
-        IVisualElementScheduledItem cupolaHaivytys, cupolaPiilotus;
+        IVisualElementScheduledItem cupolaHaivytys, cupolaPiilotus, kirjoitus;
+        // ALKUTEKSTI KIRJOITTUEN (omistaja 6.10. 09.0x: "keskellä ruutua ja keskitettynä ... kahdessa osassa ... ihan kuin tietokone
+        // kirjoittaisi sen tekstin näytölle"): osa 1 "ISS", tauko, osa 2 radan arvot rivi kerrallaan; kirjain kerrallaan LCD-
+        // kirjasimella (VT323) ja vilkkuva kursori. Häivytys (Cupola valmis) keskeyttää ja näyttää loput.
+        Label cupolaNimi;
+        public const int KirjainMs = 28, OsienValiMs = 350, KursoriMs = 450;
+        const string Kursori = "_";
         /// <summary>Musta ruutu näkyy näin kauan ennen häivytystä (omistaja: "feidaa oikeaan näkymään 2sek jälkeen").</summary>
         public const int CupolanMustaMs = 2000;
         /// <summary>
@@ -118,11 +124,19 @@ namespace Matkakirja.Natiivi
             cupolaMusta.style.display = DisplayStyle.None;
             var lohko = Rakenne.El("mk-ajattelija__teksti mk-ajattelija__nimilohko", cupolaMusta, PickingMode.Ignore);
             lohko.style.opacity = 1f;
-            Kirjasimet.Aseta(Rakenne.Teksti("ISS", "mk-ajattelija__nimi", lohko), Kirjasin.Luku);
+            // Keskelle ruutua ja keskitettynä (ei ajattelijan vasen 6 % / 58 %): mustan ruudun flex keskittää.
+            lohko.style.position = Position.Relative; lohko.style.left = StyleKeyword.Auto; lohko.style.bottom = StyleKeyword.Auto;
+            lohko.style.alignItems = Align.Center;
+            cupolaNimi = Rakenne.Teksti("ISS", "mk-ajattelija__nimi", lohko);
+            Kirjasimet.Aseta(cupolaNimi, Kirjasin.Lcd);
             cupolaKorkeus = Rakenne.Teksti("", "mk-ajattelija__vuodet", lohko);
             cupolaNopeus = Rakenne.Teksti("", "mk-ajattelija__vuodet", lohko);
             cupolaAika = Rakenne.Teksti("", "mk-ajattelija__vuodet", lohko);
-            foreach (var t in new[] { cupolaKorkeus, cupolaNopeus, cupolaAika }) Kirjasimet.Aseta(t, Kirjasin.LukuKursiivi);
+            foreach (var t in new[] { cupolaNimi, cupolaKorkeus, cupolaNopeus, cupolaAika })
+            {
+                if (t != cupolaNimi) Kirjasimet.Aseta(t, Kirjasin.Lcd);
+                t.style.unityTextAlign = TextAnchor.MiddleCenter;
+            }
             AstronauttiLinssi.CupolaAvautuu += a => UiKerros.PaaSaikeessa(() => CupolaAvaus(a));
 
             AstronauttiKerros.AvausKasittelija = Avaus;
@@ -185,6 +199,7 @@ namespace Matkakirja.Natiivi
             cupolaNopeus.text = $"Nopeus {KyydinTeksti.Nopeus(a.NopeusKmh).Replace('\u00a0', ' ')} km/h";
             var d = TimeZoneInfo.ConvertTimeFromUtc(DateTime.SpecifyKind(a.Utc, DateTimeKind.Utc), TimeZoneInfo.Local);
             cupolaAika.text = $"{d.Day}.{d.Month}.{d.Year} klo {d.Hour}.{d.Minute:00}";
+            Kirjoita();
             cupolaMusta.RemoveFromClassList("mk-astroavaus--haipyy");
             cupolaMusta.style.opacity = 1f;
             cupolaMusta.pickingMode = PickingMode.Position;
@@ -215,6 +230,7 @@ namespace Matkakirja.Natiivi
                 bool laatat = puuttuu < 0 || (nakyy > 0 && puuttuu == 0 && karkeat == 0 && lataus >= 90f);
                 if (ms < CupolanMustaMaxMs && (!kehys || !karkein || !laatat)) return;
                 cupolaHaivytys.Pause();
+                KirjoitaLoppuun();
                 Debug.Log($"MATKAKIRJA linssit: cupolan musta häivyy {ms:0} ms (kehys {(kehys ? "valmis" : "kesken")}, karkein taso {(karkein ? "valmis" : "kesken")}, lataamattomia laattoja {puuttuu}/{nakyy}, karkeita {karkeat}, lataus {lataus:0} %)");
                 // Jälkitarkistus: lataamattomat laatat 0,5, 1, 2 ja 4 s häivytyksen alusta (todiste, ettei harmaata näy).
                 foreach (int jalkeen in new[] { 500, 1000, 2000, 4000 })
@@ -233,8 +249,64 @@ namespace Matkakirja.Natiivi
             }).Every(100);
         }
 
+        Label[] kirjoitusRivit;
+        string[] kirjoitusTekstit;
+
+        /// <summary>Alkuteksti kirjain kerrallaan: osa 1 (ISS), tauko, osa 2 (kolme riviä); kursori kirjoittavan rivin perässä.</summary>
+        void Kirjoita()
+        {
+            kirjoitus?.Pause();
+            kirjoitusRivit = new[] { cupolaNimi, cupolaKorkeus, cupolaNopeus, cupolaAika };
+            kirjoitusTekstit = new string[kirjoitusRivit.Length];
+            for (int i = 0; i < kirjoitusRivit.Length; i++) { kirjoitusTekstit[i] = kirjoitusRivit[i].text; kirjoitusRivit[i].text = Osittain(kirjoitusTekstit[i], 0, false); }
+            // Rivit varaavat tilansa heti (ei hyppelyä): näkymätön loppuosa alfalla 0.
+            int rivi = 0, merkki = 0;
+            float tauko = 0f, kursoriAika = 0f;
+            float edellinen = Time.realtimeSinceStartup;
+            kirjoitus = cupolaMusta.schedule.Execute(() =>
+            {
+                float nyt = Time.realtimeSinceStartup, dt = (nyt - edellinen) * 1000f;
+                edellinen = nyt;
+                kursoriAika += dt;
+                bool kursori = (int)(kursoriAika / KursoriMs) % 2 == 0;
+                if (rivi >= kirjoitusRivit.Length)
+                {
+                    // Valmis: kursori vilkkuu viimeisen rivin perässä, kunnes musta häivytetään.
+                    var v = kirjoitusRivit[kirjoitusRivit.Length - 1];
+                    v.text = kirjoitusTekstit[kirjoitusRivit.Length - 1] + (kursori ? Kursori : "<alpha=#00>" + Kursori + "</alpha>");
+                    return;
+                }
+                if (tauko > 0f) { tauko -= dt; kirjoitusRivit[rivi].text = Osittain(kirjoitusTekstit[rivi], merkki, kursori); return; }
+                merkki = Mathf.Min(kirjoitusTekstit[rivi].Length, merkki + Mathf.Max(1, Mathf.RoundToInt(dt / KirjainMs)));
+                kirjoitusRivit[rivi].text = Osittain(kirjoitusTekstit[rivi], merkki, true);
+                if (merkki < kirjoitusTekstit[rivi].Length) return;
+                kirjoitusRivit[rivi].text = kirjoitusTekstit[rivi];
+                rivi++; merkki = 0;
+                if (rivi == 1) tauko = OsienValiMs;   // kaksi osaa: nimi, sitten radan arvot
+            }).Every(KirjainMs);
+        }
+
+        /// <summary>
+        /// Keskitetty rivi ei liiku kirjoitettaessa: kirjoittamaton loppu läpinäkyvänä (rich text), kursori seuraavan merkin paikalla.
+        /// </summary>
+        static string Osittain(string koko, int n, bool kursori)
+        {
+            if (n >= koko.Length) return koko;
+            string loppu = koko.Substring(n + 1);
+            return koko.Substring(0, n) + (kursori ? Kursori : "<alpha=#00>" + koko[n] + "</alpha>") + (loppu.Length > 0 ? "<alpha=#00>" + loppu + "</alpha>" : "");
+        }
+
+        /// <summary>Häivytys alkaa: loput tekstit kerralla, ei kursoria.</summary>
+        void KirjoitaLoppuun()
+        {
+            kirjoitus?.Pause();
+            if (kirjoitusRivit == null) return;
+            for (int i = 0; i < kirjoitusRivit.Length; i++) kirjoitusRivit[i].text = kirjoitusTekstit[i];
+        }
+
         void CupolaPois()
         {
+            KirjoitaLoppuun();
             cupolaHaivytys?.Pause();
             cupolaPiilotus?.Pause();
             cupolaMusta.pickingMode = PickingMode.Ignore;
