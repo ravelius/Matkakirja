@@ -327,42 +327,6 @@
    ]
   },
   {
-   "q": "Q378943",
-   "nimi": "Vitosha",
-   "peruste": "sitelinks",
-   "koko_m": 3000,
-   "lat": 42.56667,
-   "lon": 23.28333,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Vitosha Mountains.JPG",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vitosha_Mountains.JPG?width=1280",
-     "tekija": "Julian Nyča",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vitosha_Mountains.JPG",
-     "selite": "Vitosha on Sofian eteläpuolella kohoava vuoristo, joka tarjoaa kaupunkilaisille retkeilymaastoa.",
-     "leveys": 2655,
-     "korkeus": 1770,
-     "tarkistettu": true
-    },
-    {
-     "jarjestys": 2,
-     "tiedosto": "Vitosha Mountain TV Tower.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Vitosha_Mountain_TV_Tower.jpg?width=1280",
-     "tekija": "Ivano Giambattista",
-     "lisenssi": "CC0",
-     "lisenssiUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Vitosha_Mountain_TV_Tower.jpg",
-     "selite": "Vuoren rinteet ovat metsäisiä, ja huipulla näkyy televisiotorni.",
-     "leveys": 2992,
-     "korkeus": 3713,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q190435",
    "nimi": "Sofian keskeinen mineraalikylpylä",
    "peruste": "pelin nosto",

@@ -350,29 +350,6 @@
    ]
   },
   {
-   "q": "Q764547",
-   "nimi": "Tukholman saaristo",
-   "peruste": "sitelinks",
-   "koko_m": 2000,
-   "lat": 59.38333,
-   "lon": 18.73333,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Söderarms skärgård.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/S%C3%B6derarms_sk%C3%A4rg%C3%A5rd.jpg?width=1280",
-     "tekija": "Esquilo",
-     "lisenssi": "CC BY-SA 3.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:S%C3%B6derarms_sk%C3%A4rg%C3%A5rd.jpg",
-     "selite": "Tukholman saaristo ulottuu Itämerelle tuhansien pienten saarien muodossa.",
-     "leveys": 4000,
-     "korkeus": 1000,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q844426",
    "nimi": "Sergelin tori",
    "peruste": "pelin nosto",

@@ -402,29 +402,6 @@
    ]
   },
   {
-   "q": "Q52439",
-   "nimi": "Burano",
-   "peruste": "sitelinks",
-   "koko_m": 600,
-   "lat": 45.48556,
-   "lon": 12.4175,
-   "kuvat": [
-    {
-     "jarjestys": 1,
-     "tiedosto": "Burano Vendig Aug 2021 4.jpg",
-     "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Burano_Vendig_Aug_2021_4.jpg?width=1280",
-     "tekija": "Kasa Fue",
-     "lisenssi": "CC BY-SA 4.0",
-     "lisenssiUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-     "lahdeUrl": "https://commons.wikimedia.org/wiki/File:Burano_Vendig_Aug_2021_4.jpg",
-     "selite": "Burano on kalastajasaari, jonka talot on maalattu kirkkaan värisiksi.",
-     "leveys": 5452,
-     "korkeus": 3513,
-     "tarkistettu": true
-    }
-   ]
-  },
-  {
    "q": "Q223942",
    "nimi": "La Fenicen oopperatalo",
    "peruste": "pelin nosto",
