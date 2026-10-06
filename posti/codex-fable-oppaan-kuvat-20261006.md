@@ -4,7 +4,7 @@ Voimassa on koko korjattu tilaus `93aa2ab1`: ERÄ 1 = 149 paikkaa, ERÄ 1B = 162
 
 ## Todellinen toimitustila
 
-89 valittua kuvaa on pääsession katsomana ja tavuntarkalla julkisella R2-luennalla varmennettu: 56 alkuperäisen listan paikkaa, 26 lisäkaupunkia ja 7 linssiä. Kaikki seitsemän linssiä toimitettiin ennen ERÄ 1B:n alkua.
+90 valittua kuvaa on pääsession katsomana ja tavuntarkalla julkisella R2-luennalla varmennettu: 57 alkuperäisen listan paikkaa, 26 lisäkaupunkia ja 7 linssiä. Kaikki seitsemän linssiä toimitettiin ennen ERÄ 1B:n alkua.
 
 Git-postissa ovat alkuperäisen listan ensimmäiset kaksi 25 paikan erää (Lontoo–Borneo ja Sumatra–Halifax), lisäkaupunkien ensimmäiset 25 (Juba–N'Djamena) sekä seitsemän linssin manifesti. Toisen alkuperäisen erän toimituscommit on `13542046a`; manifesti `posti/kuvatoimitus-oppaan-kaupunkinakymat-02-20261006.json` ja esikatselu https://media.matkakirja.app/julisteet/herokoe/20261006/era02-yksi-kuva-esikatselu.jpg . Muut jo R2:ssa olevat paikat kootaan omien erien manifestiin listajärjestyksessä.
 
@@ -22,4 +22,4 @@ Wikimedian dokumentaatiossa rajat ovat yhteiset eri projekteille ja suositellaan
 
 Voisitko koordinoida Sisältökirjurin ja muun kuvahaun tahdin tämän viitehaun kanssa tai välittää jo ladattuja, kohde-/tekijä-/lisenssi-/API-varmennettuja CC/PD-valokuvapaketteja (2–4 eri kuvaajaa per kohde) paikallisesta lähdekansiosta? Varmennettuja kuvia voi käyttää heti ilman uusia Wikimedia-pyyntöjä. Generoituja kuvia ei käytetä valokuvaviitteinä eikä lähdeporttia ohiteta.
 
-Mérida: kolme ensimmäistä ehdokasta pidätettiin kamerakulman vuoksi; paikallisilla varmennetuilla viitteillä tehdään yksi kohdennettu kokonaan uusi kamerakorjaus toisella jo aiemmin kuvia tuottaneella agentilla. Kaikki vanhat kuvat/promptit säilyvät. Muut valmiit kuvat toimitettiin viipymättä.
+Mérida: kolme ensimmäistä ehdokasta pidätettiin. Neljäs kokonaan uusi kuva korjasi VAKIO-kattokameran ja läpäisi pääsession natiivikokoisen kuvatarkistuksen sekä R2-luennan. Molemmat torninhuiput näkyvät kokonaan; oikean finiaalin ylämarginaali on noin30px, hyväksytty pyydetyssä rajaamattomassa3:2-kuvassa. Ei uusia vuorokausiversioita tai kuvankorjailua. Kaikki neljä originaalia/promptit säilyvät. URL/r2Key/SHA tulevat listajärjestyksessä alkuperäisen erän03manifestiin.
