@@ -109,9 +109,24 @@ namespace Matkakirja.Natiivi
         void AsetaAuki(bool auki)
         {
             Auki = auki;
+            AsetaPulunPeitto(auki);
             if (AloitusAuki == auki) return;
             AloitusAuki = auki;
             AukiMuuttui?.Invoke(auki);
+        }
+
+        /// <summary>
+        /// Pulu ei näy ennen lähtövalintaa (omistaja 6.10.2026: "pulu ei saisi näkyä näytöllä ennen tätä kohtausta"):
+        /// hahmo piilossa portissa ja avauksessa; valinnan alkaessa Livia liitää sisään (LivianAvaus). UiNakymat peittää.
+        /// </summary>
+        public static event Action<bool> PulunPeittoMuuttui;
+        public static bool PeittaaPulun { get; private set; }
+
+        static void AsetaPulunPeitto(bool peittaa)
+        {
+            if (PeittaaPulun == peittaa) return;
+            PeittaaPulun = peittaa;
+            PulunPeittoMuuttui?.Invoke(peittaa);
         }
 
         /// <summary>
@@ -224,6 +239,8 @@ namespace Matkakirja.Natiivi
             Kaynti.Laheta("avaus");
             var linkki = porttiLinkki = Rakenne.Nappi("Oppiminen on hauskaa", "mk-aloitus__linkki", () => Rakenne.Nayta(periaatteet, true, 250), portti);
             Kirjasimet.Aseta(linkki, Kirjasin.Kone);
+            portti.RegisterCallback<GeometryChangedEvent>(_ => SovitaKeskus());
+            keskus.RegisterCallback<GeometryChangedEvent>(_ => SovitaKeskus());
 
             periaatteet = Periaatteet(juuri);
 
@@ -504,6 +521,31 @@ namespace Matkakirja.Natiivi
             NaytaAvausteksti();
         }
 
+        /// <summary>
+        /// Portin napit eivät mene alalinkin päälle (omistaja 6.10.2026, Macin iPad-ikkuna: Apuraha "Oppiminen on hauskaa"
+        /// -linkin päällä). Keskus keskittää napit portin alaosaan (top 44 %) ja linkki on alareunassa absoluuttisesti; jos
+        /// keskitetty sisältö ulottuisi linkkiin, keskuksen alareuna nousee linkin yläpuolelle. Muuten asettelu ennallaan.
+        /// Päätös ei riipu keskuksen omasta alareunasta (sisällön korkeus, portin korkeus, linkin paikka), joten ei heilu.
+        /// </summary>
+        void SovitaKeskus()
+        {
+            if (porttiKeskus == null || porttiLinkki == null || portti == null) return;
+            float h = portti.layout.height, linkkiYla = porttiLinkki.layout.y, yla = porttiKeskus.layout.y;
+            if (float.IsNaN(h) || float.IsNaN(linkkiYla) || h <= 0) return;
+            float min = float.MaxValue, max = float.MinValue;
+            foreach (var c in porttiKeskus.Children())
+            {
+                if (c.resolvedStyle.display == DisplayStyle.None || float.IsNaN(c.layout.height)) continue;
+                min = Mathf.Min(min, c.layout.y - c.resolvedStyle.marginTop);
+                max = Mathf.Max(max, c.layout.yMax + c.resolvedStyle.marginBottom);
+            }
+            if (max < min) return;
+            const float Vara = 10f;
+            bool ahdas = yla + (h - yla + (max - min)) / 2f + Vara > linkkiYla;
+            var ala = ahdas ? new StyleLength(h - linkkiYla + Vara) : new StyleLength(StyleKeyword.Null);
+            if (porttiKeskus.style.bottom != ala) porttiKeskus.style.bottom = ala;
+        }
+
         /// <summary>Löydös 118: avausteksti portin päällä (true) tai omalla ruudullaan verhon kanssa (false, Uusi matka).</summary>
         void AvausPortissa(bool paalla)
         {
@@ -780,6 +822,7 @@ namespace Matkakirja.Natiivi
                         Kirjasimet.Aseta(m, Kirjasin.Kone);
                     }
                 }
+                AsetaPulunPeitto(false);
                 Rakenne.Nayta(valinta, true, 250);
             });
         }
@@ -940,6 +983,7 @@ namespace Matkakirja.Natiivi
             // laattoihin nyt, joten musta verho vain kytkee sen näkyviin. Vapautus LopetaPallovalinnassa.
             kk.LentoPohjaValmiiksi();
             // Web naytaLivianAvaus: Livia liitää sisään ja esittelee valinnan (kerran laitteella).
+            AsetaPulunPeitto(false);
             LivianAvaus.Nayta(() => ValitseePallolla, valintaIdt.Count);
             return true;
         }

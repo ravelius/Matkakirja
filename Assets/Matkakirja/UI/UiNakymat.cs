@@ -490,6 +490,9 @@ namespace Matkakirja.Natiivi
             // läpi (Linssiseppä 29.9., laitekuva 6 kuva-minipulu-taulu; web: iso Pulu ei näy). Vain näkyvyys: puhe ja
             // luenta jatkuvat (Pulu.Nayta(false) pysäyttäisi puhekanavan).
             Linssit.Astronautti.Kuva.AukiMuuttui += auki => { kuvaPeittaaPulun = auki; PaivitaPulunPeitto(); };
+            // Aloitus ennen lähtövalintaa (omistaja 6.10.2026): Pulu ei näy portissa eikä avauksessa.
+            Aloitusnakyma.PulunPeittoMuuttui += _ => PaivitaPulunPeitto();
+            PaivitaPulunPeitto();
             Karttaselite.AukiMuuttui += auki => { Linssit.Valitsin.Vaista(auki); Matkakirja.SeliteVaisto(auki); };
             // Linssit-karttanappi avaa valitsimen: ohi-napautus ei saa sulkea sitä samasta napautuksesta (savuke 1128: simulaattorin
             // tap painuu ja nousee samassa ruudussa, joten Avaa ja TarkistaOhiNapautus osuivat samaan ruutuun).
@@ -874,7 +877,7 @@ namespace Matkakirja.Natiivi
         bool lehtiAuki, arkkiAuki, chatNostonPaalla, valikkoAuki, kuvaPeittaaPulun, valikkoPeittaaPulun;
 
         /// <summary>Pulun hahmo piilossa astronautin kuvaselaimen tai vaakavalikon ajan (Pulu.Peita: puhe ja kuplat jatkuvat).</summary>
-        void PaivitaPulunPeitto() => Pulu.Peita(kuvaPeittaaPulun || valikkoPeittaaPulun || opasPeittaaPulun);
+        void PaivitaPulunPeitto() => Pulu.Peita(kuvaPeittaaPulun || valikkoPeittaaPulun || opasPeittaaPulun || Aloitusnakyma.PeittaaPulun);
 
         bool opasPeittaaPulun;
         /// <summary>Elävä opas (Päätoimittaja 5.10.: kaupunki koko ruudulla): Pulun hahmo piiloon oppaan ajaksi (OpasValikko.Nayta).</summary>
