@@ -1,6 +1,6 @@
 /*
  * ELÄVÄN OPPAAN KUVALISTA (omistaja 6.10.2026 20.0x, Päätoimittaja): opas näyttää VAIN valmiiksi speksattuja kuvia
- * listasta media.matkakirja.app/opas/kuvat-v1/kuvat.json (tools/pollo/tee-opas-kuvat.mjs + Sisältökirjurin kohdelistat).
+ * listasta media.matkakirja.app/opas/kuvat-vN/kuvat.json (KUVALISTA_URL; erä kerrallaan uusi polku) (tools/pollo/tee-opas-kuvat.mjs + Sisältökirjurin kohdelistat).
  * Avain on Wikidatan Q (aliakset erikseen). Kuvia ei haeta lennossa Wikidatasta eikä Commonsista; jos kohdetta ei ole
  * listalla, kuvat on tyhjä.
  *
@@ -10,7 +10,9 @@
  * Kuva: { url (vain peili), tyyppi, tekija, lisenssi, lisenssiUrl, lahdeUrl, selite, leveys, korkeus, jarjestys, tarkistettu }.
  */
 
-export const KUVALISTA_URL = 'https://media.matkakirja.app/opas/kuvat-v1/kuvat.json';
+// Ämpärin objektit ovat muuttumattomia (vie-paketti.sh ei ylikirjoita, Cache-Control immutable 1 v): jokainen kuvaerä
+// saa oman polun (kuvat-v2, kuvat-v3 …). Polku vaihdetaan wranglerin muuttujalla OPAS_KUVALISTA_URL ilman koodimuutosta.
+export const KUVALISTA_URL = 'https://media.matkakirja.app/opas/kuvat-v2/kuvat.json';
 const KUVALISTA_TUORE_MS = 10 * 60 * 1000;
 const UUSINTA_VIRHEESTA_MS = 60 * 1000;
 export const KUVIA_ENINTAAN = 5;
@@ -29,7 +31,7 @@ export async function kuvalista(env, haku = fetch, nyt = Date.now()) {
   if (muisti.kaynnissa) return muisti.kaynnissa;
   muisti.kaynnissa = (async () => {
     try {
-      const v = await haku(KUVALISTA_URL, { headers: { accept: 'application/json' } });
+      const v = await haku(env?.OPAS_KUVALISTA_URL || KUVALISTA_URL, { headers: { accept: 'application/json' } });
       if (!v.ok) throw new Error(`kuvalista ${v.status}`);
       const d = await v.json();
       muisti.lista = { kohteet: d?.kohteet ?? {}, kaupungit: d?.kaupungit ?? {}, aliakset: d?.aliakset ?? {}, versio: d?.versio ?? null };
