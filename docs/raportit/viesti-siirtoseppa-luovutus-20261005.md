@@ -16,8 +16,12 @@ Oikeat tapit: lokit/siirtoseppa-alo/.sk (simkosketus, käännä tarvittaessa tyo
 - **lokit/siirtoseppa-alo** siivottu: jäljellä .sk, app-183866ed, app-55ad6594, parit.
 - **Äänimaisema:** Pariisin kartta ämpärissä (aanet/aanikartta-v1/pariisi.json, yhteensopiva AaniKartta.Lue:n kanssa); silmukat
   aanimaisema-v1/<kerros>-01.mp3 puuttuvat (404) → kysytty Pelikoodarilta (sopimuksen mukaan hänen).
-- **COZY e9729420:** Julkaisijan käännösjonossa (NUI f1f455e7 ja LS1 koe-156 ensin), odottaa KÄÄNNÖS NYT. Päätoimittaja: COZY
-  linnaan vasta LS1:n COZY_URP-haaran jälkeen (yksi tuonti).
+- **COZY:** oma e9729420-käännös peruttu; LS1:n linssiseppa/cozy-kaupunki (sis. e9729420 + COZY_URP + KaupunkiSaa) kääntyi Metalille,
+  kevennys a010dc9a (äänet/Luxury-pilvet pois, +140 Mt → mitataan). **Linnan sää: wt/proto-siirtoseppa-cozy, siirtoseppa/cozy-linna
+  24eacd5a** (LinnaSaa.cs, koe oletuksena pois, Documents/linna-saa.txt "saa 1 taivas 0 sumu 0 tila Partly Cloudy"; csc ios+COZY_URP 0
+  virhettä). EI käännetty eikä simussa. Csc-ansa: COZYn polkujen välilyönnit → käytä vastaustiedostoa ja laske "error CS".
+- **Simuvuoroon valmiina:** tyokalut/siirtoseppa-ajot/ajo-peili-todennus.sh (linnapeili a0e537492bff2189: TF 154 787db464 + 55ad6594)
+  ja ajo-aanimaisema.sh (Pariisi, vaatii käännöksen c2f93576 ja Pöllön aanikartta-listan #4090).
 - **KUITATTU junaan 156** (Päätoimittaja 00.4x): 55ad6594 (sis. 183866ed) → merge-pyyntö Natiivisepälle + ABAB (A 183866ed, B 55ad6594).
   Ennen VIE:tä: #4051 + #4052 mainiin, yhdistetty peili (Linnanrakentaja) ja uusin.json-osoitinvaihto (Julkaisija); nyt osoitin db8630b0.
 
