@@ -6,9 +6,9 @@ worktreet /Users/Shared/Claude/wt/proto-natiivi-ui-<aihe>. Käännös: lokit/nat
 Simu vain Julkaisijan "SIMU NYT" -viestistä, oma iPhone FB234D08-4693-4496-9C7A-6C7C15B03963, iPad
 AD119F7B-A2A2-43EE-8769-7326DD757F89; lopuksi sammutus ja "simu vapaa".
 
-## TILA 7.10. klo 01.4x (uusin)
+## TILA 7.10. klo 01.3x (uusin)
 
-- JUNA 155 KUITATTU (Päätoimittaja 01.4x) → SHA natiivi-ui/ylarivi-155 73cac46a lähetetty Natiivisepälle. Käännös f84f11bf, stillit
+- JUNA 155 KUITATTU (Päätoimittaja 01.3x) → SHA natiivi-ui/ylarivi-155 73cac46a lähetetty Natiivisepälle. Käännös f84f11bf, stillit
   lokit/natiivi-ui-1035/ylarivi-155/arkki-m-{iphone,iphonevaaka,ipad,ipadvaaka}.jpg (skriptit/vuoro-155b.sh; ylarivi155.sh sulkee
   kortin ennen palkkia). Lisäkorjaus: Nostoselain tiivistysporras 4 (▾ pois; iPhonen vaakakortti 304 pt, MAAKUNNAT › AUTO −11 pt).
 - JUNA 156: natiivi-ui/opas-156 9595d33c (wt/proto-natiivi-ui-opas156) = 155 + LS1 esilataus-156 + ohjainrivi ‖/▶ + ›| (Seuraava)
