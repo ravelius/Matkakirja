@@ -362,6 +362,20 @@ jobs:
           fi
           printf '%s' "$POLLO_TESTITUNNUS" | "$WRANGLER" secret put POLLO_TESTITUNNUS --config "$POLLO_ASETUS"
 
+      # Äänilupalippu (omistaja 6.10.2026): testitunnus/testiotsake ei tuota ääntä ilman tätä. Käytetään vain omistajan luvalla
+      # tarkalle määrälle; ilman salaisuutta testit eivät koskaan generoi ääntä.
+      - name: Aseta äänilupalippu workerin salaisuudeksi (jos on)
+        env:
+          POLLO_AANILUPA: ${{ secrets.POLLO_AANILUPA }}
+        run: |
+          set -euo pipefail
+          set +x
+          if [ -z "${POLLO_AANILUPA:-}" ]; then
+            echo "POLLO_AANILUPA ei ole asetettu — testit eivät tuota ääntä."
+            exit 0
+          fi
+          printf '%s' "$POLLO_AANILUPA" | "$WRANGLER" secret put POLLO_AANILUPA --config "$POLLO_ASETUS"
+
       - name: Aseta Cesium ion -tunnus workerin salaisuudeksi (jos on)
         env:
           CESIUM_ION_TOKEN: ${{ secrets.CESIUM_ION_TOKEN }}

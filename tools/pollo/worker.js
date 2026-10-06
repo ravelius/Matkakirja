@@ -1162,6 +1162,22 @@ function testitunnusOhitus(pyynto, env) {
   return vertaaSalaisuus(pyynto.headers.get(TESTITUNNUS_OTSAKE), env.POLLO_TESTITUNNUS);
 }
 
+/*
+ * TESTIT EIVÄT TUOTA ÄÄNTÄ (omistaja 6.10.2026 08.4x, sitova: "Mikäli striimi-äännellä halutaan jotain testata, niin siitä
+ * pitää kysyä lupa minulta erikseen myös, koska sekin on maksullista."). Roolien testitunnus (TESTITUNNUS_OTSAKE) ja
+ * testiotsake (TESTI_OTSAKE) eivät koskaan kutsu puhemoottoria (ElevenLabs, xAI, OpenAI): valmis ääni (reunavälimuisti/R2)
+ * saa soida, muuten ääntä ei ole. Ohitus vain äänilupalipulla (AANILUPA_OTSAKE = env.POLLO_AANILUPA), jota käytetään
+ * omistajan luvalla tarkalle määrälle.
+ */
+const AANILUPA_OTSAKE = 'x-matkakirja-aanilupa';
+function testiIlmanAanta(pyynto, env) {
+  const testi = testitunnusOhitus(pyynto, env) || pyynto.headers.get(TESTI_OTSAKE) === '1';
+  if (!testi) return false;
+  const lupa = Boolean(env.POLLO_AANILUPA) && vertaaSalaisuus(pyynto.headers.get(AANILUPA_OTSAKE), env.POLLO_AANILUPA);
+  if (lupa) console.log('puhe: testi äänilupalipulla → generointi sallittu');
+  return !lupa;
+}
+
 function kehittajaOhitus(pyynto, env) {
   if (!env.POLLO_KEHITTAJAKOODI) return false;
   return vertaaSalaisuus(pyynto.headers.get(KEHITTAJA_OTSAKE), env.POLLO_KEHITTAJAKOODI);
@@ -1173,7 +1189,7 @@ function korsOtsakkeet(origin, sallitut) {
     'access-control-allow-methods': 'POST, OPTIONS',
     // Kehittäjäotsake on sallittava erikseen, tai selain ei päästä
     // esilentoa (OPTIONS) läpi eikä pyyntö lähde lainkaan.
-    'access-control-allow-headers': `content-type, ${KEHITTAJA_OTSAKE}, ${TESTI_OTSAKE}`,
+    'access-control-allow-headers': `content-type, ${KEHITTAJA_OTSAKE}, ${TESTI_OTSAKE}, ${TESTITUNNUS_OTSAKE}, ${AANILUPA_OTSAKE}`,
     'access-control-max-age': '86400',
     vary: 'Origin',
   };
@@ -1554,6 +1570,12 @@ async function hoidaPuhe(pyynto, env, kors, runko, ctx) {
       avain = null;
       r2Avain = null;
     }
+  }
+
+  // Testi ilman äänilupaa (ks. testiIlmanAanta): valmis ääni palautui yllä säilöistä, uutta ei tuoteta.
+  if (testiIlmanAanta(pyynto, env)) {
+    console.log('puhe: testi → ei generointia (vain valmis ääni)');
+    return new Response(null, { status: 204, headers: puheOtsakkeet(kors, 'testi', 'testi') });
   }
 
   // Rajat lasketaan merkkeinä (ks. rajat.js). Kehittäjäkoodi ohittaa
@@ -2696,7 +2718,21 @@ async function oppaanAaniTunniste(teksti) {
 
 /** POST: ääni-url heti (teksti KV:hen, katto lasketaan nyt) → { aani, kesto_s } tai null. */
 async function oppaanAani(pyynto, env, ctx, teksti, kehittaja) {
-  if (!env.ELEVEN_API_KEY || pyynto.headers.get(TESTI_OTSAKE) === '1' || !teksti) return null;
+  if (!teksti) return null;
+  // Testi ilman äänilupaa: vain R2:ssa jo valmiina oleva ääni (mp3/pcm erikseen), ei tekstiä talteen → GET ei voi tuottaa.
+  if (testiIlmanAanta(pyynto, env)) {
+    const sha = await oppaanAaniTunniste(teksti);
+    const onko = async (k) => {
+      if (!env.PUHE_R2) return false;
+      try { return Boolean(await (env.PUHE_R2.head ? env.PUHE_R2.head(k) : env.PUHE_R2.get(k))); } catch { return false; }
+    };
+    const [mp3, pcm] = await Promise.all([onko(`opas/${sha}.mp3`), onko(`opas/${sha}.pcm`)]);
+    if (!mp3 && !pcm) return null;
+    const juuri = `${new URL(pyynto.url).origin}/opas/aani/${sha}`;
+    return { aani: mp3 ? `${juuri}.mp3` : null, aani_pcm: pcm ? `${juuri}.pcm` : null, aani_taajuus: OPAS_PCM_TAAJUUS,
+      kesto_s: Math.round((teksti.length / OPAS_MERKKIA_SEKUNNISSA) * 10) / 10 };
+  }
+  if (!env.ELEVEN_API_KEY) return null;
   const kv = env.POLLO_KV ?? null;
   if (!kv && !env.PUHE_R2) return null;
   const nyt = new Date();
@@ -2792,6 +2828,7 @@ async function hoidaOppaanAani(pyynto, env, ctx) {
   };
   const loytyi = await valmis();
   if (loytyi) return loytyi;
+  if (testiIlmanAanta(pyynto, env)) return new Response('Ei löydy', { status: 404 });
   const tietue = await lueOppaanTeksti(env, sha);
   const teksti = tietue?.teksti;
   if (!teksti || !env.ELEVEN_API_KEY) return new Response('Ei löydy', { status: 404 });
@@ -2846,6 +2883,7 @@ async function hoidaOppaanPcm(pyynto, env, ctx, sha) {
   const r2 = async () => (env.PUHE_R2 ? env.PUHE_R2.get(avain) : null);
   const valmis = await r2();
   if (valmis) return new Response(valmis.body, { headers: PCM_OTSAKKEET });
+  if (testiIlmanAanta(pyynto, env)) return new Response('Ei löydy', { status: 404 });
   const tietue = await lueOppaanTeksti(env, sha);
   const teksti = tietue?.teksti;
   if (!teksti || !env.ELEVEN_API_KEY) return new Response('Ei löydy', { status: 404 });
