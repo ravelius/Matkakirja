@@ -1308,6 +1308,9 @@ namespace Matkakirja.Natiivi
             var lohko = Rakenne.El("mk-nosto__kuvasarja", isa, PickingMode.Ignore);
             var kehysPaikka = Rakenne.El("mk-nosto__kuvapaikka", lohko, PickingMode.Ignore);
             var teksti = Kuvateksti(lohko, "", null); // web .nostokuva-selite: Iowan pysty, keskitetty
+            // TEKIJÄRIVI SUUREN KORTIN KUVAN ALLE (Päätoimittaja 6.10. 16.25, löydös 150: ei kokoruudussa, Commons-tekijärivi
+            // korttiin; CC BY-SA vaatii nimeämisen): kaikille nostoille ja maakunnille, sama pohja kuin lisäkaupungin herokuvassa.
+            var lahde = Rakenne.Teksti("", "mk-kansikuva__lahde", lohko);
             Label laskuri = null;
             void Nayta(int i)
             {
@@ -1319,6 +1322,8 @@ namespace Matkakirja.Natiivi
                 var kehys = Kuvakehys(kehysPaikka, k, () => Suurenna(kohta), suhde: HeroSuhde,
                     puuttui: kuvat.Count == 1 ? () => lohko.style.display = DisplayStyle.None : (Action)null);
                 AsetaKuvateksti(teksti, k.Lyhyt, k);
+                lahde.text = k.LahdeRivi ?? "";
+                lahde.style.display = string.IsNullOrEmpty(k.LahdeRivi) ? DisplayStyle.None : DisplayStyle.Flex;
                 if (kuvat.Count > 1)
                 {
                     laskuri = Rakenne.Teksti($"{kuvaIndeksi + 1} / {kuvat.Count}", "mk-nosto__laskuri", kehys);
