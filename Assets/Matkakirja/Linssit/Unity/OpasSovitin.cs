@@ -462,12 +462,12 @@ namespace Matkakirja.Natiivi
             switch (v.Toiminto)
             {
                 case OpasToiminto.Siirry:
-                    if (!double.IsNaN(v.ToimintoLat)) { SoitaKuittaus(v); silmukka.Liiku(v.ToimintoNimi ?? kysymys, v.ToimintoLat, v.ToimintoLon); }
+                    if (!double.IsNaN(v.ToimintoLat)) LiikuVastauksesta(v, vastaus, v.ToimintoNimi ?? kysymys, v.ToimintoLat, v.ToimintoLon);
                     break;
                 case OpasToiminto.Kohde:
                 {
                     var t = kohteet?.Find(x => x.Id == v.ToimintoId);
-                    if (t != null) { SoitaKuittaus(v); silmukka.Liiku(t.Nimi, t.Lat, t.Lon); }
+                    if (t != null) LiikuVastauksesta(v, vastaus, t.Nimi, t.Lat, t.Lon);
                     else if (!string.IsNullOrWhiteSpace(v.Teksti)) { Valmistele(vastaus); silmukka.Esita(vastaus); }
                     break;
                 }
@@ -476,7 +476,7 @@ namespace Matkakirja.Natiivi
                     break;
                 case OpasToiminto.Kierros: SoitaKuittaus(v); Kaupunkikierros(); break;
                 case OpasToiminto.Tauko: Tauko(true); break;
-                case OpasToiminto.Jatka: Tauko(false); break;
+                case OpasToiminto.Jatka: if (silmukka.KierrosKeskeytetty) JatkaKierrosta(); else Tauko(false); break;
                 default:
                     if (!string.IsNullOrWhiteSpace(v.Teksti)) { Valmistele(vastaus); silmukka.Esita(vastaus); }
                     break;
@@ -484,6 +484,18 @@ namespace Matkakirja.Natiivi
         }
 
         /// <summary>Toiminnon kuittaus ("Lennetään Nyhavniin.") siltalauseen kanavalla; pysähdyksen kerronta jatkaa sen perään.</summary>
+        /// <summary>Vastauksen siirto: alle LahiVastausM nykyisestä kohteesta = sama paikka → vastaus kerrotaan tässä (ei uutta lentoa
+        /// eikä toista kerrontaa); kauempana lento, ja keskeytetty kierros säilyy jatkettavana.</summary>
+        void LiikuVastauksesta(OpasKysyVastaus v, OpasKohde vastaus, string nimi, double lat, double lon)
+        {
+            var k = silmukka.NykyinenKehys;
+            double et = k != null ? KierrosLento.EtaisyysM(k.Lat, k.Lon, lat, lon) : KierrosLento.EtaisyysM(silmukka.Asento.Lat, silmukka.Asento.Lon, lat, lon);
+            if (et < LahiVastausM && !string.IsNullOrWhiteSpace(v.Teksti)) { Valmistele(vastaus); silmukka.Esita(vastaus); return; }
+            SoitaKuittaus(v);
+            silmukka.LiikuVastauksesta(nimi, lat, lon);
+        }
+        const double LahiVastausM = 300;
+
         void SoitaKuittaus(OpasKysyVastaus v)
         {
             if (string.IsNullOrEmpty(v.Aani) || silta == null || !Asetukset.Paalla(Kytkin.Kertoja)) return;
