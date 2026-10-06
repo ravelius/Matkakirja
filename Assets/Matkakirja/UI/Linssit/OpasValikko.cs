@@ -1659,6 +1659,9 @@ namespace Matkakirja.Natiivi
                 case "maanosat": Avaa(Nakyma.Maanosat); return "opas: maanosat";
                 case "takyt": Avaa(Nakyma.Takyt); return $"opas: täkyt ({OpasSovitin.Takyt?.Count.ToString() ?? "latautuu"})";
                 case "tauko": OpasSovitin.Tauko(!OpasSovitin.Tauolla); return "opas: tauolla " + OpasSovitin.Tauolla;
+                case "otsikko":
+                    KierrosTaulu.Testiotsikko = o.Length > 1 && o[1] != "pois" ? o[1] : null;
+                    return "opas: " + KierrosTaulu.OtsikkoKuvaus;
                 case "seuraava":
                     // `ui opasvalikko seuraava on|off|auto`: napin näkyvyys testissä; ilman argumenttia kuten napin painallus.
                     if (o.Length > 1) { testiSeuraava = o[1] == "on" ? true : o[1] == "off" ? false : (bool?)null; return "opas: seuraava-testi " + o[1]; }
