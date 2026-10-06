@@ -896,6 +896,14 @@ namespace Matkakirja.Editori
         static void MuistiOikeus(BuildTarget kohde, string polku)
         {
             if (kohde != BuildTarget.iOS || PlayerSettings.iOS.sdkVersion != iOSSdkVersion.DeviceSDK) return;
+            // Kehityskäännös (fi.matkakirja.peli.kehitys) allekirjoitetaan tiimin wildcard-profiililla "iOS Team Provisioning
+            // Profile: *", johon oikeutta ei voi lisätä (laitekäännös 6.10. 17.10: "doesn't include the Increased Memory Limit
+            // capability"). Oikeus vain TestFlight- ja App Store -käännöksiin (fi.matkakirja.peli, capability portaalissa).
+            if (PlayerSettings.GetApplicationIdentifier(UnityEditor.Build.NamedBuildTarget.iOS) == LaiteBundleId)
+            {
+                Debug.Log("MATKAKIRJA: oikeus increased-memory-limit ohitettu kehityskäännöksessä (" + LaiteBundleId + ")");
+                return;
+            }
             string tPolku = Path.Combine(polku, OikeusTiedosto);
             var oikeudet = new UnityEditor.iOS.Xcode.PlistDocument();
             if (File.Exists(tPolku)) oikeudet.ReadFromFile(tPolku);
