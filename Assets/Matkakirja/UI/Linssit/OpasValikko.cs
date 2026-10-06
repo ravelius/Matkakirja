@@ -572,21 +572,14 @@ namespace Matkakirja.Natiivi
         VisualElement jatkaRivi;
         bool? testiJatka;
 
-        /// <summary>LS1 (OpasSovitin.KierrosJatkettavissa, heijastuksella): kierros keskeytetty kysymykseen ja vastaus kuultu.</summary>
-        static bool KierrosKeskeytetty
-        {
-            get
-            {
-                try { return typeof(OpasSovitin).GetProperty("KierrosJatkettavissa", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) is bool b && b; }
-                catch { return false; }
-            }
-        }
+        /// <summary>LS1: kierros keskeytetty kysymykseen ja vastaus kuultu.</summary>
+        static bool KierrosKeskeytetty => OpasSovitin.KierrosJatkettavissa;
 
         void JatkaKierrosta()
         {
             Debug.Log("MATKAKIRJA opas: jatka kierrosta");
             testiJatka = null;
-            if (!Sano("JatkaKierrosta", Type.EmptyTypes)) Debug.LogWarning("MATKAKIRJA opas: JatkaKierrosta puuttuu (LS1)");
+            OpasSovitin.JatkaKierrosta();
         }
 
         void PaivitaJatka()
@@ -1212,7 +1205,7 @@ namespace Matkakirja.Natiivi
         {
             Debug.Log("MATKAKIRJA opas: lopeta kierros");
             testiLopeta = null;
-            if (!Sano("LopetaKierros", Type.EmptyTypes)) Debug.LogWarning("MATKAKIRJA opas: LopetaKierros puuttuu (LS1)");
+            OpasSovitin.LopetaKierros();
         }
 
         /// <summary>Pause-nappi II ↔ ▶ oppaan tauon mukaan (Linssisepän OpasSovitin.Tauolla).</summary>
