@@ -909,6 +909,28 @@ namespace Matkakirja.Editori
             Debug.Log("MATKAKIRJA: oikeus increased-memory-limit → " + OikeusTiedosto);
         }
 
+        /// <summary>
+        /// MUSTA LAUNCHSCREEN varmistettuna (6.10.2026: iPad-laitekäännöksen LaunchScreen-iPad/-iPhone.storyboardien
+        /// backgroundColor oli valkoinen 1,1,1, vaikka Aloitusruutu asettaa värin PlayerSettingsiin, ja kylmäkäynnistyksessä näkyi
+        /// harmaa ruutu ennen Aloitusverhoa). Unityn generoimien storyboardien taustaväri kirjoitetaan mustaksi viennin jälkeen.
+        /// </summary>
+        [UnityEditor.Callbacks.PostProcessBuild(197)]
+        static void MustaLaunchScreen(BuildTarget kohde, string polku)
+        {
+            if (kohde != BuildTarget.iOS) return;
+            foreach (var nimi in new[] { "LaunchScreen-iPhone.storyboard", "LaunchScreen-iPad.storyboard" })
+            {
+                string sb = Path.Combine(polku, nimi);
+                if (!File.Exists(sb)) continue;
+                string teksti = File.ReadAllText(sb);
+                string uusi = System.Text.RegularExpressions.Regex.Replace(teksti,
+                    "<color key=\"backgroundColor\"[^>]*/>",
+                    "<color key=\"backgroundColor\" red=\"0\" green=\"0\" blue=\"0\" alpha=\"1\" colorSpace=\"custom\" customColorSpace=\"sRGB\"/>");
+                if (uusi != teksti) File.WriteAllText(sb, uusi);
+                Debug.Log($"MATKAKIRJA: {nimi} tausta musta ({(uusi != teksti ? "korjattu" : "ennallaan")})");
+            }
+        }
+
         [UnityEditor.Callbacks.PostProcessBuild(200)]
         static void TestFlightPlist(BuildTarget kohde, string polku)
         {
