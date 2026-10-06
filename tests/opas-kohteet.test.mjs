@@ -16,9 +16,11 @@ function verkko(malliteksti) {
   const fetch = async (u, init) => {
     const s = decodeURIComponent(String(u));
     if (s.includes('api.anthropic.com')) { k.malli += 1; k.viesti = JSON.parse(init.body).messages.at(-1).content; return new Response(JSON.stringify({ content: [{ type: 'text', text: malliteksti }], stop_reason: 'end_turn' })); }
-    if (s.includes('titles=Grand Canal (Venice)')) return new Response(JSON.stringify({ query: { pages: { 1: { title: 'Grand Canal (Venice)', pageprops: { wikibase_item: 'Q189193' }, coordinates: [{ lat: 45.4375, lon: 12.3358 }] } } } }));
-    if (s.includes('titles=Acropolis of Athens')) return new Response(JSON.stringify({ query: { pages: { 2: { title: 'Acropolis of Athens', pageprops: { wikibase_item: 'Q131013' }, coordinates: [{ lat: 37.9715, lon: 23.7257 }] } } } }));
-    if (s.includes('titles=Central Park')) return new Response(JSON.stringify({ query: { pages: { 3: { title: 'Central Park', pageprops: { wikibase_item: 'Q160409' }, coordinates: [{ lat: 40.7825, lon: -73.9656 }] } } } }));
+    // Erähaku (6.10.): useampi otsikko samassa kyselyssä (titles=A|B|C).
+    const SIVUT = { 'Grand Canal (Venice)': ['Q189193', 45.4375, 12.3358], 'Acropolis of Athens': ['Q131013', 37.9715, 23.7257], 'Central Park': ['Q160409', 40.7825, -73.9656] };
+    const t = /en\.wikipedia\.org.*titles=([^&]+)/.exec(s)?.[1];
+    if (t) return new Response(JSON.stringify({ query: { pages: Object.fromEntries(t.split('|').filter((x) => SIVUT[x]).map((x, i) => [String(i + 1),
+      { title: x, pageprops: { wikibase_item: SIVUT[x][0] }, coordinates: [{ lat: SIVUT[x][1], lon: SIVUT[x][2] }] }])) } }));
     if (s.includes('property=P18')) return new Response(JSON.stringify({ claims: {} }));
     return new Response(JSON.stringify({ query: { pages: {} }, search: [], claims: {}, entities: {} }));
   };

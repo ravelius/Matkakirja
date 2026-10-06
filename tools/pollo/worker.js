@@ -2697,6 +2697,7 @@ async function hoidaSahke(pyynto, env, kors, runko) {
  */
 const OPAS_MALLI_OLETUS = 'claude-sonnet-5-5';
 const KOHTEITA_OLETUS = 8;
+const OPAS_KAUPUNGIN_SADE_KM = 40;
 /** Lisäkuvien aikaraja koordinaateista laskien: haku kulkee korostuksen ja äänen rinnalla eikä saa pidentää vastausta. */
 const OPAS_KUVA_AIKARAJA_MS = 900;
 /** Kuvia odotetaan muun työn (ääni, korostus) valmistuttua enintään näin kauan. */
@@ -3021,14 +3022,11 @@ async function hoidaOppaanKohteet(pyynto, env, kors, ctx) {
       viestit: [{ role: 'user', content: kohteidenViesti({ kaupunki, eiNaita: (eilinen?.kohteet ?? []).map((k) => k.nimi) }) }],
       maxTokens: 900, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS,
     })).teksti);
-    const kohteet = (await Promise.all(ehdokkaat.map(async (k) => {
-      const paikka = await paikanKoordinaatit(fetch, k, viite);
-      if (!paikka) return null;
-      const ehdokas = /^Q\d+$/.test(paikka.id ?? '') ? (await wikidataKuva(fetch, paikka.id))[0] ?? null : null;
-      const kuva = ehdokas && kuvallaTekijatiedot(ehdokas) ? ehdokas : null;   // CC BY vaatii tekijän (6.10.)
-      return { id: paikka.id, nimi: paikanNimi(paikka, k.nimi), koukku: k.koukku, kaupunki: k.kaupunki ?? kaupunki, iso: k.iso,
-        lat: paikka.lat, lon: paikka.lon, alarivi: paikka.alarivi ?? null, kuva };
-    }))).filter(Boolean);
+    // Erähaku (6.10.): yksittäiset haut per kohde (2–6 alipyyntöä kukin) ylittivät Cloudflaren 50 alipyynnön rajan.
+    const kohteet = (await kohteetErana(fetch, ehdokkaat))
+      .filter((k) => !viite || etaisyysKm(viite, k) <= OPAS_KAUPUNGIN_SADE_KM)
+      .map((k) => ({ id: k.id, nimi: k.nimi, koukku: k.koukku, kaupunki: k.kaupunki ?? kaupunki, iso: k.iso,
+        lat: k.lat, lon: k.lon, alarivi: k.alarivi ?? null, kuva: k.kuva }));
     if (kohteet.length < 3) {
       return vastaa({ virhe: 'palvelin', viesti: 'Kohteita ei saatu juuri nyt. Yritä hetken päästä.' }, { status: 502, ...kors });
     }
@@ -3104,12 +3102,11 @@ async function oppaanLiikuLista(env, kaupunki, viite) {
         const v = await kysyMallitiedot(env, { jarjestelma: LIIKU_KEHOTE, viestit: [{ role: 'user', content: `Kaupunki: ${kaupunki}.` }],
           maxTokens: 900, malliOhitus: env.OPAS_MALLI || OPAS_MALLI_OLETUS });
         const ehdokkaat = jasennaLiiku(v.teksti);
-        const kohteet = (await Promise.all(ehdokkaat.map(async (k) => {
-          const paikka = await paikanKoordinaatit(fetch, k, viite).catch(() => null);
-          if (!paikka) return null;
-          return { id: paikka.id, nimi: paikanNimi(paikka, k.nimi), lat: paikka.lat, lon: paikka.lon,
-            alarivi: k.alarivi ?? paikka.alarivi ?? null, luokka: k.luokka };
-        }))).filter(Boolean).map((k, i) => ({ ...k, tarkeys: i + 1 }));
+        // Erähaku (6.10., Ateena 502 14.32): yksittäiset haut ylittivät Cloudflaren 50 alipyynnön rajan; kauempana kuin
+        // kaupungin säde oleva samanniminen paikka pois.
+        const kohteet = (await kohteetErana(fetch, ehdokkaat))
+          .filter((k) => !viite || etaisyysKm(viite, k) <= OPAS_KAUPUNGIN_SADE_KM)
+          .map((k, i) => ({ id: k.id, nimi: k.nimi, lat: k.lat, lon: k.lon, alarivi: k.alarivi ?? null, luokka: k.luokka, tarkeys: i + 1 }));
         if (kohteet.length) {
           if (kohteet.length >= 8) await pysyvaKirjoita(env.PUHE_R2, avain, JSON.stringify(kohteet), KESKUSTELU_TTL_S);
           return kohteet;
