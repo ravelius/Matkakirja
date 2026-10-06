@@ -236,6 +236,7 @@ namespace Matkakirja.Natiivi
                 puhuu = false; y.Repliikki(false); silmukka.AaniLoppui();
             }
             kaupunki.PidaMaski();
+            kaupunki.PaivitaAvauslataus();   // ion-logo avauslatauksen ajan (Natiivi-UI KrediititTiivis)
             // OSM-tekijätieto aina oppaan ajan: worker käyttää Nominatimia koordinaatteihin ja reittiviivoihin (ODbL, juna 146).
             KrediititTiivis.OsmNakyvissa = true;
             KrediititTiivis.Paivita(true);   // kapealla ruudulla logot + "Data sources" (Googlen policy)
