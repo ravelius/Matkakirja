@@ -70,5 +70,15 @@ namespace Matkakirja.Linssit.Testit
             Oleta.Tosi(k[Px(160)] < 200, "maan reuna himmenee");
             Oleta.Sama((byte)200, k[Px(190)], "syvemmällä maa ennallaan");
         }
+
+        [Testi]
+        static void ValotusEiLeikkaaPilvea()
+        {
+            // Juliste 59dc1f55: kerroin 1,35 leikkasi pilvikannen 200–240 tasaiseksi 255:ksi. Olkapää: sävyerot säilyvät, järjestys säilyy.
+            var a = Tasainen(1, 1, 200, 200, 205); var b = Tasainen(1, 1, 240, 240, 245); var tumma = Tasainen(1, 1, 40, 60, 90);
+            Kuvankasittely.Valota(a, 1.35f); Kuvankasittely.Valota(b, 1.35f); Kuvankasittely.Valota(tumma, 1.35f);
+            Oleta.Tosi(b[2] - a[2] >= 6 && b[2] < 255, $"pilvi 200 vs 240 erottuu: {a[2]} vs {b[2]}");
+            Oleta.Tosi(tumma[0] == 54 && tumma[2] == 122, $"tumma kerrotaan suoraan: {tumma[0]},{tumma[1]},{tumma[2]}");
+        }
     }
 }
