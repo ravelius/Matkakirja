@@ -1983,6 +1983,7 @@ namespace Matkakirja.Natiivi
                                     + (lahin == null ? "-" : $"{lahin.Tunniste} {Matkakirja.Linssit.Iss.Ylilennot.MaaEtaisyysKm(a0.Lat, a0.Lon, lahin.Lat, lahin.Lon):0.0} km")
                                     + $", paikkoja {Matkakirja.Linssit.Iss.Kuvauspaikat.Nykyiset.Count}, kuvia jäljellä {Matkakirja.Natiivi.IssKameraKuva.KuviaJaljella}");
                             }
+                            else if (osat.Length > 4 && osat[3] == "kupolakehys") { Matkakirja.Natiivi.IssJuliste.KupolaKehys = osat[4] != "0"; Kirjaa($"astro kyyti kuvaa kupolakehys {(Matkakirja.Natiivi.IssJuliste.KupolaKehys ? "päällä" : "pois")}, valmis {Matkakirja.Natiivi.IssJuliste.KehysValmis}"); }
                             else if (osat.Length > 4 && osat[3] == "kehitys") { Matkakirja.Natiivi.IssKameraKuva.Kehitys = osat[4] != "0"; Kirjaa($"astro kyyti kuvaa kehitys {(Matkakirja.Natiivi.IssKameraKuva.Kehitys ? "päällä" : "pois")}"); }
                             else if (osat.Length > 4 && osat[3] == "julistebudjetti") { Matkakirja.Natiivi.IssKameraKuva.JulisteBudjettiMt = Luku(osat[4]); Kirjaa("astro kyyti kuvaa julistebudjetti: " + osat[4] + " Mt"); }
                             else if (osat.Length > 4 && osat[3] == "budjetti") { Matkakirja.Natiivi.IssKameraKuva.BudjettiMt = Luku(osat[4]); Kirjaa("astro kyyti kuvaa budjetti: " + osat[4] + " Mt"); }

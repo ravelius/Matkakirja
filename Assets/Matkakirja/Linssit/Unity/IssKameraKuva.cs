@@ -1088,6 +1088,9 @@ namespace Matkakirja.Natiivi
             kuva.Apply(false);
         }
 
+        /// <summary>Julisteen Cupola-kehys ladataan valmiiksi (kuvan koko riippuu sen aukosta).</summary>
+        void Start() => StartCoroutine(IssJuliste.EsilataaKehys());
+
         /// <summary>A/B `astro kyyti kuvaa kehitys 0|1`: Kuvankasittely.Kehita (omistaja 6.10.: sinisempi, enemmän wow-efektiä).</summary>
         public static bool Kehitys = true;
 
