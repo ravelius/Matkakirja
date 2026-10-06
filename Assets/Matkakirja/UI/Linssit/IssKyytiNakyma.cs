@@ -525,6 +525,7 @@ namespace Matkakirja.Natiivi
             else if (k == "sijainti") { if (!n.sijaintiIkkuna.Auki) n.ohjaamo.AvaaSijainti?.Invoke(); return n.sijaintiIkkuna.Testaa(a.Length > 1 ? string.Join(" ", a, 1, a.Length - 1) : null); }
             else if (k == "sijainti-pois") n.sijaintiIkkuna.Sulje("testi");
             else if (k == "kamera") n.ohjaamo.PainaKamera();
+            else if (k == "kehitys" && a.Length > 1) n.ohjaamo.TestaaKehitys(a[1]);
             else if (k == "nahka" && a.Length > 1) { IssOhjaamo.NahkaKaytossa = a[1] != "0"; n.ohjaamo.KaytaNahka(); }
             else if (k == "kuvat") return n.omatKuvat.Testaa(a.Length > 1 ? a[1] : "tila");
             return n.ohjaamo.Tila();

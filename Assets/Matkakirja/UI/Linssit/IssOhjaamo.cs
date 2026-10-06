@@ -36,9 +36,14 @@ namespace Matkakirja.Natiivi
         // (laajennuksen .mk-issohjaamo__lcdnappi, valittu käänteisenä); osuma-ala 48 pt korkea, päättyy kameranapin yläreunaan.
         readonly VisualElement objektiivi;
         readonly Button laajaNappi, teleNappi;
-        // KUVAUS LCD:SSÄ (omistaja 6.10.): kuvauksen ajan "KEHITETÄÄN…" ja LATAUSPALKKI LCD-väreissä (tk-teema-lcd),
-        // valmiin kuvan jälkeen "KUVA VALMIS" 2 s; sitten sijainti takaisin.
-        readonly Latauspalkki kehitys;
+        // KUVAUS LCD:SSÄ (omistaja 6.10.): kuvauksen ajan "KEHITETÄÄN…" ja alla SEGMENTTIPALKKI (omistaja 6.10. 08.1x: "Saisi olla
+        // pienistä neliöistä koostuva"): rivi LCD-neliöitä, jotka syttyvät edistymisen mukaan, sammuneet himmeinä kuten LCD:n
+        // sammuneet segmentit. Valmiin kuvan jälkeen "KUVA VALMIS" 2 s; sitten sijainti takaisin.
+        public const int Segmentteja = 12;
+        readonly VisualElement segmentit;
+        readonly VisualElement[] segmentti = new VisualElement[Segmentteja];
+        /// <summary>Testi (`astro ohjaamo kehitys 0–1|valmis|pois`): edistyminen ilman kuvausta stilliä varten.</summary>
+        public static float? TestiEdistyminen;
         float valmisAsti = -1f, syyAsti = -1f;
         string syy;
         bool oliKaynnissa;
@@ -123,12 +128,10 @@ namespace Matkakirja.Natiivi
             kohde = Rakenne.Teksti("", "mk-issohjaamo__kohde", lcd);
             maa = Rakenne.Teksti("", "mk-issohjaamo__maa", lcd);
             foreach (var t in new[] { kohde, maa }) { t.pickingMode = PickingMode.Ignore; Kirjasimet.Aseta(t, Kirjasin.Lcd); }
-            kehitys = new Latauspalkki(lcd);
-            kehitys.Juuri.AddToClassList("tk-teema-lcd");
-            kehitys.Juuri.style.width = Length.Percent(78);
-            kehitys.Juuri.style.alignSelf = Align.Center;
-            kehitys.Juuri.style.display = DisplayStyle.None;
-            IssKameraKuva.Aloitettu += () => UiKerros.PaaSaikeessa(() => { valmisAsti = -1f; kehitys.Nollaa(); Paivita(); });
+            segmentit = Rakenne.El("mk-issohjaamo__segmentit", lcd, PickingMode.Ignore);
+            for (int i = 0; i < Segmentteja; i++) segmentti[i] = Rakenne.El("mk-issohjaamo__segmentti", segmentit, PickingMode.Ignore);
+            segmentit.style.display = DisplayStyle.None;
+            IssKameraKuva.Aloitettu += () => UiKerros.PaaSaikeessa(() => { valmisAsti = -1f; Paivita(); });
             IssKameraKuva.Valmis += _ => UiKerros.PaaSaikeessa(() => { valmisAsti = Time.unscaledTime + ValmisS; Paivita(); });
             lcd.RegisterCallback<GeometryChangedEvent>(_ => SovitaKohde());
             lcd.tooltip = "Näytön asetukset";
@@ -691,10 +694,19 @@ namespace Matkakirja.Natiivi
         public void PainaKamera() => Laukaise();
 
         /// <summary>Kameranappi: tarkka ISS-kuva (omistaja 4.10. klo 15.2x: ostot pois, kuvia rajattomasti; LS2 IssKameraKuva).</summary>
+        /// <summary>Testi: kehitys 0–1 (segmentit), "valmis" (KUVA VALMIS 2 s) tai "pois".</summary>
+        public void TestaaKehitys(string arvo)
+        {
+            if (arvo == "pois") TestiEdistyminen = null;
+            else if (arvo == "valmis") { TestiEdistyminen = null; oliKaynnissa = false; valmisAsti = Time.unscaledTime + ValmisS; }
+            else if (float.TryParse(arvo, System.Globalization.NumberStyles.Float, System.Globalization.CultureInfo.InvariantCulture, out float f)) TestiEdistyminen = f;
+            Paivita();
+        }
+
         /// <summary>LCD:n kuvausrivi: "KEHITETÄÄN…" palkin kanssa kuvauksen ajan, "KUVA VALMIS" 2 s; muuten null (sijainti).</summary>
         string KuvausTeksti()
         {
-            bool kaynnissa = IssKameraKuva.Kaynnissa;
+            bool kaynnissa = IssKameraKuva.Kaynnissa || TestiEdistyminen.HasValue;
             // Kuva ei valmistunut (LS2 6.10.: Tila kertoo syyn, kun Kaynnissa → false): syy LCD:hen 2 s.
             if (oliKaynnissa && !kaynnissa)
             {
@@ -708,9 +720,13 @@ namespace Matkakirja.Natiivi
                 if (syy != null) { syyAsti = Time.unscaledTime + ValmisS; Debug.Log("MATKAKIRJA linssit: ohjaamon LCD " + syy); }
             }
             oliKaynnissa = kaynnissa;
-            if (kaynnissa) kehitys.Arvo = IssKameraKuva.Edistyminen;
-            kehitys.Juuri.style.display = kaynnissa ? DisplayStyle.Flex : DisplayStyle.None;
-            kehitys.Nayta(kaynnissa);
+            segmentit.style.display = kaynnissa ? DisplayStyle.Flex : DisplayStyle.None;
+            if (kaynnissa)
+            {
+                float e = Mathf.Clamp01(TestiEdistyminen ?? IssKameraKuva.Edistyminen);
+                int paalla = Mathf.CeilToInt(e * Segmentteja - 0.001f);
+                for (int i = 0; i < Segmentteja; i++) segmentti[i].EnableInClassList("mk-issohjaamo__segmentti--paalla", i < paalla);
+            }
             if (kaynnissa) return "KEHITETÄÄN…";
             if (Time.unscaledTime < valmisAsti) return "KUVA VALMIS";
             if (syy != null && Time.unscaledTime < syyAsti) return syy;
@@ -808,7 +824,7 @@ namespace Matkakirja.Natiivi
                 + $"{r.xMin:0},{r.yMin:0}–{r.xMax:0},{r.yMax:0}, joystick {suunta}, kaasu {kaasuNyt}×, kamera {(kamera.enabledSelf ? "aktiivinen" : "himmeä")}, "
                 + $"LCD \"{kohde.text}\" / \"{maa.text}\" ({kohde.resolvedStyle.fontSize:0} pt)"
                 + $", objektiivi {(IssKameraKuva.Laaja ? "LAAJA" : "TELE")} @ {objektiivi.worldBound.xMin:0},{objektiivi.worldBound.yMin:0} {objektiivi.worldBound.width:0}×{objektiivi.worldBound.height:0}"
-                + (kehitys.Nakyy ? $", kehitys {kehitys.Arvo:0.00}" : "")
+                + (segmentit.resolvedStyle.display == DisplayStyle.Flex ? $", kehitys {segmentit.Query(className: "mk-issohjaamo__segmentti--paalla").ToList().Count}/{Segmentteja}" : "")
                 + (Laajennettu ? $", laajennettu: kausi {KausiNyt?.Invoke()}, vuorokausi {VuorokausiNyt?.Invoke()}" : "");
         }
 

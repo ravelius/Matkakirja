@@ -579,3 +579,22 @@
 .mk-issohjaamo--asettelu > .mk-issohjaamo__lcd > .mk-issohjaamo__maa {
     letter-spacing: 2px; /* web 0.02em: konseptin lukemarivi lähes harventamatta (UITK em/100) */
 }
+
+/* KEHITYKSEN SEGMENTTIPALKKI (omistaja 6.10.2026: "pienistä neliöistä koostuva"): rivi LCD-neliöitä kohdenimen alla, syttyvät
+ * edistymisen mukaan; sammuneet himmeinä kuten LCD:n sammuneet segmentit (--tk-lcd-reunus), palavat --tk-lcd-muste. */
+.mk-issohjaamo__segmentit {
+    flex-direction: row;
+    align-self: center;
+    margin: 3px 0 0 0;
+}
+
+.mk-issohjaamo__segmentti {
+    width: 4px;
+    height: 4px;
+    margin: 0 0.75px;
+    background-color: var(--tk-lcd-reunus);
+}
+
+.mk-issohjaamo__segmentti--paalla {
+    background-color: var(--tk-lcd-muste);
+}
