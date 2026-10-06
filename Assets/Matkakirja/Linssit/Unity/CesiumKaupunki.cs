@@ -90,16 +90,21 @@ namespace Matkakirja.Natiivi
             return -1f;
         }
 
-        float muistiTarkistettu;
+        float muistiTarkistettu, muistiKirjattu;
         bool hataKaytetty;
+        long minVapaa = long.MaxValue;
 
         /// <summary>Kerran 2 s:ssa näkymän aikana: vapaa muisti alle HataGt → kerroin ×1,3 kerran (Cesium lataa laatat uudelleen).</summary>
         void Muistivahti()
         {
-            if (!auki || maasto == null || hataKaytetty || Time.realtimeSinceStartup - muistiTarkistettu < 2f) return;
+            if (!auki || maasto == null || Time.realtimeSinceStartup - muistiTarkistettu < 2f) return;
             muistiTarkistettu = Time.realtimeSinceStartup;
             long v = VapaaMuisti();
-            if (v <= 0 || v / 1e9 >= HataGt) return;
+            if (v > 0 && v < minVapaa) minVapaa = v;
+            // Laitemittaus (Päätoimittaja: huippu ja vapaa muisti ennen/jälkeen): vapaa nyt ja pienin 15 s välein.
+            if (v > 0 && Time.realtimeSinceStartup - muistiKirjattu > 15f)
+            { muistiKirjattu = Time.realtimeSinceStartup; kirjaa($"kaupunki: vapaa muisti {v / 1e9:F2} Gt (pienin {minVapaa / 1e9:F2} Gt), kerroin {SseKerroin:F2}, laatat {Latausaste:F0} %"); }
+            if (hataKaytetty || v <= 0 || v / 1e9 >= HataGt) return;
             hataKaytetty = true;
             kerroin = SseKerroin * 1.3f;
             maasto.maximumScreenSpaceError = (Kaytossa == Lahde.Google ? GoogleSse : MaastoSse) * kerroin;
@@ -267,7 +272,7 @@ namespace Matkakirja.Natiivi
             long vapaa = VapaaMuisti();
             float pakotettu = PakotettuKerroin();
             kerroin = pakotettu > 0 ? pakotettu : KerroinMuistille(vapaa / 1e9, NayttoKerroin);
-            hataKaytetty = false; muistiTarkistettu = 0f;
+            hataKaytetty = false; muistiTarkistettu = 0f; muistiKirjattu = 0f; minVapaa = long.MaxValue;
             kirjaa($"kaupunki: muisti vapaa {(vapaa > 0 ? (vapaa / 1e9).ToString("F2") + " Gt" : "ei tiedossa")}, näyttö {Screen.width}×{Screen.height} (kerroin {NayttoKerroin:F2}) → SSE-kerroin {kerroin:F2}{(pakotettu > 0 ? " (pakotettu)" : "")}");
 
             // Pallon tileset: ei SetActivea (pallo on samassa oliossa kuin georeferenssi → SetOrigin heitti "Initialize"-poikkeuksen, simu 18.0x).
