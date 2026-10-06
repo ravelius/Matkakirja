@@ -682,7 +682,19 @@ export function kuvallaTekijatiedot(k) {
   return Boolean(k.tekija) || /^(PD|CC0|public domain)/i.test(k.lisenssi);
 }
 
+/**
+ * Näytettävä kuva (Päätoimittaja 6.10., lisenssi): valokuvalla aina lisenssi ja tekijä (PD/CC0 ilman tekijääkin), muuten
+ * kuva jätetään pois; havainnekuvan lähderivi on "HAVAINNEKUVA" (natiivi kokoaa rivin tekija · lisenssi). Koskee myös pelin
+ * omia kuvia (aineiston valokuvan tekijä voi puuttua lähderiviltä).
+ */
+export function naytettavaKuva(k) {
+  if (k?.tyyppi === 'havainnekuva') return { ...k, tekija: null, lisenssi: 'HAVAINNEKUVA' };
+  if (!k?.lisenssi) return null;
+  return k.tekija || /^(PD|CC0|public domain)/i.test(k.lisenssi) ? k : null;
+}
+
 export function yhdistaKuvat(omat, lisat) {
+  omat = (omat ?? []).map(naytettavaKuva).filter(Boolean);
   const nahty = new Set(omat.map((k) => tiedostonimi(k.lahde)).filter(Boolean));
   const tulos = [...omat];
   for (const k of lisat ?? []) {

@@ -95,3 +95,18 @@ test('yhdistaKuvat: lisäkuva ilman tekijää tai lisenssiä pudotetaan (CC BY v
   ]);
   assert.deepEqual(tulos.map((k) => k.url), ['a', 'd'], 'toisto: tekijätön CC-kuva tai lisenssitön kuva meni läpi');
 });
+
+test('yhdistaKuvat: pelin omat valokuvat ilman tekijää pois, havainnekuvan lähderivi HAVAINNEKUVA (kylmä ja lämmin polku)', async () => {
+  const { yhdistaKuvat } = await import('../tools/pollo/opas.js');
+  const omat = [
+    { url: 'o1', tyyppi: 'valokuva', tekija: null, lisenssi: 'CC BY-SA 4.0', lahde: null },
+    { url: 'o2', tyyppi: 'havainnekuva', tekija: null, lisenssi: null, lahde: null },
+    { url: 'o3', tyyppi: 'valokuva', tekija: 'Didier Descouens', lisenssi: 'CC BY-SA 4.0', lahde: null },
+  ];
+  for (const lisat of [[], null]) {   // kylmä: lisäkuvat eivät ehtineet; lämmin: tyhjä lista
+    const tulos = yhdistaKuvat(omat, lisat);
+    assert.deepEqual(tulos.map((k) => k.url), ['o2', 'o3'], 'toisto: tekijätön oma valokuva näytettiin');
+    assert.equal(tulos[0].lisenssi, 'HAVAINNEKUVA');
+    assert.ok(tulos.every((k) => k.lisenssi && (k.tekija || k.lisenssi === 'HAVAINNEKUVA')));
+  }
+});
