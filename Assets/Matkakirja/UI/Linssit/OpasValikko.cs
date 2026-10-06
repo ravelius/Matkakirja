@@ -250,7 +250,9 @@ namespace Matkakirja.Natiivi
             // Linssi avautuu täkyluetteloon (valikko auki täkynäkymässä); sulkeutuu valinnasta.
             // Varapolku (Päätoimittaja 6.10. 00.2x, junan 146 VIE-ehto): valikko avautuu vain, kun täkyjä on; jos ne eivät tule
             // (GET /opas/kohteet puuttuu tai epäonnistuu) 4 s:ssa, opas avautuu kuten ennen ilman valikkoa.
-            if (nakyy && OpasSovitin.TakyAvaus)
+            // Linssisepän avausvalikko (juna 149): opas auki ilman paikkaa ja ilman karttaa → aloitus heti (suosikit täyttyvät perässä).
+            if (nakyy && Avausvalikko) { aloitus = true; Avaa(Nakyma.Takyt); }
+            else if (nakyy && OpasSovitin.TakyAvaus)
             {
                 float raja = Time.realtimeSinceStartup + 4f;
                 IVisualElementScheduledItem odotus = null;
@@ -1005,6 +1007,16 @@ namespace Matkakirja.Natiivi
         /// </summary>
         static bool OnTakyja => OpasSovitin.Takyt != null && OpasSovitin.Takyt.Count > 0;
 
+        /// <summary>OpasSovitin.Avausvalikko (Linssiseppä, juna 149) heijastuksella: opas auki, paikkaa ei valittu, karttaa ei ladata.</summary>
+        static bool Avausvalikko
+        {
+            get
+            {
+                try { return typeof(OpasSovitin).GetProperty("Avausvalikko", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null) is bool b && b; }
+                catch { return false; }
+            }
+        }
+
         /// <summary>Aloituksen teema ja koko ruutu päälle/pois (harmaa lasi ↔ tumma, ponnahdusvalikko ↔ koko ruutu).</summary>
         void AsetaAloitusTyyli()
         {
@@ -1052,7 +1064,18 @@ namespace Matkakirja.Natiivi
             Kirjasimet.Aseta(Rakenne.Teksti("SUOSIKIT", "mk-linssivalitsin__valiotsikko", aloitusOikea), Kirjasin.ModerniLihava);
             aloitusSuosikit = Lista(aloitusOikea);
             if (OnTakyja) foreach (var t in OpasSovitin.Takyt.Take(SuosikitMax)) TakyRivi(t, aloitusSuosikit);
-            else Kirjasimet.Aseta(Rakenne.Teksti("Suosikit latautuvat…", "mk-linssivalikko__lahde", aloitusSuosikit), Kirjasin.Moderni);
+            else
+            {
+                Kirjasimet.Aseta(Rakenne.Teksti("Suosikit latautuvat…", "mk-linssivalikko__lahde", aloitusSuosikit), Kirjasin.Moderni);
+                // Täkyt saapuvat: vain suosikkisarake täyttyy (paikkasarake ja sen vieritys pysyvät).
+                var sarake = aloitusSuosikit;
+                sarake.schedule.Execute(() =>
+                {
+                    if (!aloitus || aloitusSuosikit != sarake || !OnTakyja) return;
+                    sarake.Clear();
+                    foreach (var t in OpasSovitin.Takyt.Take(SuosikitMax)) TakyRivi(t, sarake);
+                }).Every(500).Until(() => !aloitus || aloitusSuosikit != sarake || OnTakyja && sarake.childCount > 1);
+            }
             AsetteleAloitus();
         }
 
