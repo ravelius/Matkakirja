@@ -252,8 +252,9 @@ export async function tarkistaKaupunki(id) {
   if (d.kaupunki !== id) virheet.push(`${id}: kaupunki-kenttä ${d.kaupunki}`);
   if (!/^Q\d+$/.test(d.kaupunkiQ ?? '')) virheet.push(`${id}: kaupunkiQ puuttuu tai on virheellinen`);
   const yht = kohteet.length + eiKuvaa.length;
-  if (yht < 6 || yht > 20) virheet.push(`${id}: kohteita ${kohteet.length} + eiKuvaa ${eiKuvaa.length} = ${yht}, pitää olla 6–20`);
-  if (kohteet.length < 6) virheet.push(`${id}: kuvallisia kohteita ${kohteet.length} < 6 (etsi korvaavia kohteita)`);
+  if (yht < (d.pieniAlue === true ? 3 : 6) || yht > 20) virheet.push(`${id}: kohteita ${kohteet.length} + eiKuvaa ${eiKuvaa.length} = ${yht}, pitää olla 6–20`);
+  const minKuv = d.pieniAlue === true ? 3 : 6;
+  if (kohteet.length < minKuv) virheet.push(`${id}: kuvallisia kohteita ${kohteet.length} < ${minKuv} (etsi korvaavia kohteita${d.pieniAlue === true ? '' : '; vain aidosti harvan alueen spec saa sisältää pieniAlue: true, jolloin riittää 3'})`);
   const qt = [...kohteet, ...eiKuvaa].map((k) => k.q);
   if (new Set(qt).size !== qt.length) virheet.push(`${id}: kaksoiskappale-Q`);
   const ent = await entiteetit([...new Set([...qt, d.kaupunkiQ].filter((x) => /^Q\d+$/.test(x ?? '')))]);
@@ -335,7 +336,7 @@ async function rakenna(tiedosto) {
   const qt = [...sp.kohteet, ...(sp.eiKuvaa ?? [])].map((k) => k.q);
   const ent = await entiteetit(qt);
   const sij = (k) => { const e = ent[k.q]; if (!e || e.lat == null) throw new Error(`${k.q} ${k.nimi}: ei P625-koordinaattia`); return { lat: +e.lat.toFixed(5), lon: +e.lon.toFixed(5) }; };
-  const ulos = { kaupunki: sp.kaupunki, kaupunkiQ: sp.kaupunkiQ, ...(sp.jarjestys ? { jarjestys: sp.jarjestys } : {}), kohteet: [], kaupunginKuvat: await rakennaKuvat(sp.kaupunginKuvat), eiKuvaa: [] };
+  const ulos = { kaupunki: sp.kaupunki, kaupunkiQ: sp.kaupunkiQ, ...(sp.pieniAlue === true ? { pieniAlue: true } : {}), ...(sp.jarjestys ? { jarjestys: sp.jarjestys } : {}), kohteet: [], kaupunginKuvat: await rakennaKuvat(sp.kaupunginKuvat), eiKuvaa: [] };
   for (const k of sp.kohteet) {
     ulos.kohteet.push({ q: k.q, nimi: k.nimi, peruste: k.peruste, ...(k.koko_m ? { koko_m: k.koko_m } : {}), ...(k.aliakset?.length ? { aliakset: k.aliakset } : {}), ...sij(k), kuvat: await rakennaKuvat(k.kuvat) });
   }
