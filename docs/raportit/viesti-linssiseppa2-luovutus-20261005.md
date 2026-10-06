@@ -17,7 +17,16 @@ Avoimet työt:
    Vauhtirajaus opas-vapaa-lataus 5683ffaf jäi pois junasta. Ei uutta työtä tähän.
 4. s2-meri 0f6e4e89 on KUITATTU junaan 154 (BMNG:n meri S2:n meriväriin).
 
-## TILA 7.10. 00.3x (uusin)
+## TILA 7.10. 01.2x (uusin)
+- Helsinki-olkapääpari VALMIS ja lähetetty Päätoimittajalle: lokit/linssiseppa2-helsinki-olkapaa-11d043c75/ (pari + pilvet 1:1),
+  kello kiinteä 21.6. 17.00.00 UTC molemmissa. Ero hienovarainen (pilvissä enemmän sävyä).
+- SALLITUT 3D-KAUPUNGIT (omistaja 7.10. 00.4x): proto-3d/lokit/linssiseppa2-3d-kattavuus/sallitut-3d.json (36 sallittua, 5 rajaa,
+  10 pois; r_m 2–20 km), lähetetty LS1:lle (natiivi OpasSallitut, sallitut-157 824af089, katselmoitu) ja Pelikoodarille (Pöllö).
+  Uudelleenlaskenta: sallitut.py <kansio> renkaat-tulokset.json. Venetsia mitattu San Marcosta (pelin piste 10 km idässä).
+- 3D-stillit (RAJA-kaupungit + Helsinki + Tallinna) odottavat Julkaisijan SIMU NYT (~01.40): touch scratchpad(b02a8297)/simu-lupa-3d,
+  ketju-3d.sh → tyokalut/linssiseppa-ajot/ajo-3d-stillit.sh (opas kamera kiinteä), kuvat lokit/linssiseppa2-3d-kattavuus/stillit-11d043c75.
+
+## TILA 7.10. 00.3x
 - Helsinki-olkapääpari: ajo147 korjattu kiinteäksi kelloksi (kohdehetki kerran per paikka) → pysyvä proto-3d/tyokalut/linssiseppa-ajot/ajo-iss-kamera.sh.
   155b-appi oli poistunut → ketju scratchpad(b02a8297)/ketju-hp.sh (perl setsid) kääntää gibs-pehmean ja ottaa parin o0/o1
   (KELLO_helsinki 2026-06-21T17:00, suunta 170, 2017 px). Luvat: touch kaannos-lupa-hp (KÄÄNNÖS NYT ~00.28) ja simu-lupa-hp (SIMU NYT ~01.30).
