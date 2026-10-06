@@ -897,7 +897,9 @@ namespace Matkakirja.Natiivi
             }
             if (tapVasen == null || tapOikea == null || tapKosketaan == null) { silmukka.Tapit = default; silmukka.PelaajaOhjaa = false; return; }
             var v = (Vector2)tapVasen.GetValue(null); var o2 = (Vector2)tapOikea.GetValue(null);
-            silmukka.Tapit = (o2.x, o2.y, -v.y);
+            // Oikean tapin vaakasuunta käännetty (omistaja 6.10. TF 149 iPad: "oikeanpuoleinen joystick toimii väärinpäin
+            // panoroitaessa vasemmalle ja oikealle"): tappi oikealle → näkymä panoroi oikealle. Pystysuunta ennallaan.
+            silmukka.Tapit = (-o2.x, o2.y, -v.y);
             silmukka.PelaajaOhjaa = (bool)tapKosketaan.GetValue(null);
         }
         bool tapitHaettu;
