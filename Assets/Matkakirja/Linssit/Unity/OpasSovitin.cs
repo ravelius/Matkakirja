@@ -290,6 +290,9 @@ namespace Matkakirja.Natiivi
             return true;
         }
 
+        /// <summary>Sama kuin Siirry (Natiivi-UI:n nimi Liiku-listalle).</summary>
+        public static bool Liiku(OpasTaky t) => Siirry(t);
+
         /// <summary>Kaupunkikierros: Liiku-listan kohteet järjestyksessä, lyhyt kerronta kullekin.</summary>
         public static bool Kaupunkikierros()
         {
@@ -465,6 +468,8 @@ namespace Matkakirja.Natiivi
         // ---- KUVASUURENNOKSEN SUMENNUS (omistaja 12.1x): kevyt Gaussian-syväterävyys koko kuvalle ja kamera seis ----
         UnityEngine.Rendering.Volume sumennus;
         bool vanhaJalkikasittely, sumeana;
+        /// <summary>Natiivi-UI: Kuvasuurennoksen AukiMuuttui → KuvaSumennus = auki (sama kuin Sumenna).</summary>
+        public static bool KuvaSumennus { get => Viimeisin != null && Viimeisin.sumeana; set => Sumenna(value); }
         public static void Sumenna(bool paalle)
         {
             var v = Viimeisin;
