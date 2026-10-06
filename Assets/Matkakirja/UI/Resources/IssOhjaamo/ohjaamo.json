@@ -3,7 +3,7 @@
   "w": 374.0,
   "h": 129.33
  },
- "huom": "Linnanrakentaja 6.10.2026, ISS-ohjaamo v3d (= v3b + yksinkertainen jalkatanko, omistaja 19.2x) (omistaja 11.1x: numerot pois, asteikko vivun juureen, LCD isompi, ruuvit sisemmäs, kuvaan marginaali; v3 08.3x: rumpu pois, kaasu leveämpi ja vasemmalle, LCD isompi, kaasu vasemmalla ja sauva oikealla, tasaiset välit 9,6 pt). Laatikot pt:nä pohja.png:n vasemmasta yläkulmasta; kuvat @3x samassa mittakaavassa. Osuma-alat koodissa.",
+ "huom": "Linnanrakentaja 6.10.2026, ISS-ohjaamo v3e (= v3b + jämäkkä jalkapylväs, omistaja 19.4x) (omistaja 11.1x: numerot pois, asteikko vivun juureen, LCD isompi, ruuvit sisemmäs, kuvaan marginaali; v3 08.3x: rumpu pois, kaasu leveämpi ja vasemmalle, LCD isompi, kaasu vasemmalla ja sauva oikealla, tasaiset välit 9,6 pt). Laatikot pt:nä pohja.png:n vasemmasta yläkulmasta; kuvat @3x samassa mittakaavassa. Osuma-alat koodissa.",
  "sauva": {
   "x": 278.0,
   "y": 26.67,
@@ -77,11 +77,11 @@
  "jalka": {
   "yla": {
    "kuva": "jalka-yla.png",
-   "w": 17.33,
-   "h": 380.0,
+   "w": 94.33,
+   "h": 406.67,
    "x": 187.0,
    "y": 119.25,
-   "huom": "yksi pyöreä tanko + kapea kaulus; yläreunan keskikohta = (x, y) pt pohja.png:ssä = paneelin alareunan keskikohta; rajataan ruudun alareunaan"
+   "huom": "pylväs 75 pt (1/5 paneelista) + kiinnityslevy 95 pt; yläreunan keskikohta = (x, y) pt pohja.png:ssä = paneelin alareunan keskikohta; rajataan ruudun alareunaan"
   },
   "ala": {
    "kuva": "jalka-ala.png",
@@ -91,6 +91,6 @@
   },
   "kerrokset": "tanko paneelin alla (paneeli päällimmäisenä)",
   "nakyvyys": "vain pystyasennossa (iPad ja iPhone)",
-  "maxRako": 375
+  "maxRako": 400
  }
 }
